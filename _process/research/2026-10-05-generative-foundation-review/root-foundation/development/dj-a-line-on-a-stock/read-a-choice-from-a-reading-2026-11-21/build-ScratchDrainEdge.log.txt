@@ -1,0 +1,24 @@
+start 01:55:32
+{
+  "tree": "/Users/ren/tmp/dj/batch25",
+  "modules": 157,
+  "ran": [
+    "Becoming.ScratchDrainEdge",
+    "BecomingScratchDrainEdgeAxiomAudit"
+  ],
+  "reused": 156,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchDrainEdge": {
+      "theorems": 29,
+      "declarations": 43,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchDrainEdge": 5.919,
+    "BecomingScratchDrainEdgeAxiomAudit": 0.386
+  }
+}
+exit 0 build 2
+end 01:55:42

@@ -1,0 +1,41 @@
+# Every sentence of this row that says something was not found, set against the listing as it now stands: what is asked, fixed before any reader ran
+
+*AI-written (Claude Fable, board row DJ), 22 November 2026, 01:49 WIB, before any reader ran. Frozen: nothing above the line "After" is changed later. A read. No Lean is written and nothing is proposed.*
+
+## Why
+
+Until 22 November the listing of places held 158 places, 104 of them modules of the package. This row's notes of 20 to 22 November and the direction page say "not found" of many things, each of the places its read was given. On the night of 21 November refuters of another row found, in modules no read of this row had opened, things those sentences said were not found; and one such sentence is already corrected (`ReadingLoop.keeps_continues_iff`). Since 22 November every module of the package has a page in the listing, read twice by fixed questions, with a third pass where the two differed. This pass was said on the board's row as owed.
+
+## What is asked
+
+By program, 114 sentences were taken from the direction page and from eleven notes of this row (`negatives.json` beside this file: the file, the line, the sentence), each matching a pattern of "not found", "no statement", "no law", "no theorem", "no module" and the like. Some are not negatives about the Lean (a quotation, a sentence about a test, a count); the reader says so and leaves them.
+
+For each sentence that says of the Lean that something is not there, the reader:
+
+1. Says in one line what it says is absent, and of what (the places a read was given; the package; the repository).
+2. Looks for it in the listing: the index's letters for the question that bears on it (the third pass's settled letter first, then both passes), then the pages of the candidate places; and the declarations another row's refuters named (given in the brief).
+3. Opens each candidate at its statement in the Lean, with the definitions it stands on, and copies the statement.
+4. Gives one verdict: **stands as worded** (nothing found against it, in what was opened, which it lists); **stands, to be narrowed** (true of what that read was given, but a named declaration elsewhere states part of it); **overturned** (a named declaration states what the sentence says is absent: file, line, the statement copied, its premises, and exactly what it states and does not); **not a negative about the Lean**.
+
+## What counts
+
+- **Overturned** needs a statement opened and copied, not a letter in the index, a docstring, or a reader's return. A built case does not overturn a sentence about a law, and a law under premises does not overturn a sentence about a law with none; say which.
+- A letter N in the index is one reader's not found in what was read and overturns nothing and confirms nothing. A cell both passes left as N was tried by nobody else; the reader says where a "stands" rests on such cells.
+- Every **overturned** or **to be narrowed** is then tried by a second reader who did not make it, at the Lean, told to refute it.
+
+## What is done with it
+
+Sentences that stand are left. For each that is overturned or to be narrowed, a dated correction is appended to its note (the sentence is left as written), and where the direction page carries the sentence, it is mended there with the law named and its premises. The writer opens every overturning statement himself before writing its correction. Nothing is told as what makes a course better.
+
+## What would count as the pass having shown little
+
+Fewer than five sentences overturned or narrowed after the second reader. Then the notes' negatives were mostly right as worded, and that is said in one paragraph.
+
+## How it is read, and what it costs
+
+Twelve AI readers (the direction page in two halves; one reader for each note), each capped at 45 tool calls, each alone. Then, for each file with a finding, one AI reader who did not make it, capped at 30, at the statements. Then one checker of the corrections as written. The ceiling is 3.0 million tokens. No build, no gate, until the corrections land.
+
+---
+
+## After
+

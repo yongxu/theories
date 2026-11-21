@@ -1,0 +1,90 @@
+*An AI checker's findings (run as Claude Opus), word for word from the run's journal (wf_d631e308-424), on the section as it was before the check.*
+
+1. **MUST.** "How it came out, by the frozen file's own words. … Of the two starts, nothing is gained."
+   - The frozen file has two tests of nothing gained (FROZEN-DRAIN-ON-THE-EDGE.md.txt lines 25–26). The second one, "the law is put in and taken out", fits only the first half of D3.
+   - For the second half the reader says the law is "used, not put in and taken out" (RETURN-refuter line 140). That nothing is gained about the starts is the reader's further judgment, because the statement "was within easy reach without it" (lines 139–140, 178). The frozen file's words do not say it.
+   - Exact: "By the frozen file's second test, the first half of D3 gains nothing, since the law is put in and taken out. The second half passes that test, since the law is used. The reader adds that its statement was within easy reach without it, so about the starts it adds no new fact."
+
+2. **LESSER.** "the first in one line, from `keptFor_of_closed`; the second in 17 lines, with a family written out."
+   - The two figures are counted in different ways. The proof of `starts_in_no_closed_family_none_direct` takes two lines (ScratchDrainEdge.lean.txt 169–170), and the declaration takes four (167–170). "One line" is the reader's and the worker's figure (RETURN-refuter 133, RETURN-worker 115).
+   - "17" counts the whole declaration 426–442 with its signature. Its proof is 15 lines (428–442).
+   - Lines 436–442 copy the closure step of the filed `Drain.lane_kept` (ScratchKeptForViable.lean.txt 304–311; reader's finding 9). The note does not say so.
+   - Exact: "the first in a two-line proof, from `keptFor_of_closed`; the second in a declaration of 17 lines, with a family written out and its closure step copied from the filed `lane_kept` (the reader)."
+
+3. **LESSER.** "So the fifth guess holds in its second half, of the starts: the codes are written by hand, and no theorem says they are the classes reached from the starts."
+   - The clause after "and" is the worker's: "no theorem says they are the classes reachable by closure" (RETURN-worker 108).
+   - The reader's reason, which the head note says is followed where the two differ, is "of the two starts the instance says nothing that `together_not_kept_none`, `together_kept_level` and `keptFor_of_closed` had not said" (RETURN-refuter 12).
+   - Exact: use the reader's clause, or mark the worker's clause as the worker's.
+
+4. **LESSER.** "A reading that keeps only the lane also keeps the pair, so nothing here says that the level has to be registered."
+   - No reading that keeps only the lane is defined or proved, in this module or in `Drain`. The readings in `Drain` are only `noneRead`, `keepsLevel` and `endRead` (ScratchKeptForViable.lean.txt 261–428).
+   - The sentence comes from the frozen file, which credits the other row's readers (line 30). Only the sentence before it carries "not tested here".
+   - Exact: "A reading that keeps only the lane also keeps the pair (the law's readers; not tested here). Nothing in this module or in the returns says that the level has to be registered (RETURN-refuter 173)."
+
+5. **LESSER.** "not the number of configurations (here without end)".
+   - That `Bool × Nat` has no end is not proved here. The reader's own words add "that is not proved" (RETURN-refuter 17).
+   - Exact: "(here `Bool × Nat`, which has no end; that is not proved here)".
+
+6. **LESSER.** "What was tested": "a finite type of codes", and "kept for as many steps as there are codes".
+   - The law takes any type `C` (as-built-against-ScratchViableEdge.lean.txt 128). Finiteness enters only through the premise `every : ∀ c, c ∈ all` (155).
+   - The horizon is `all.length` (162), the length of the list, which is not the count of codes when the list repeats a code.
+   - Exact: "a type of codes and a decoding to classes: under two premises (a list holds every code; …), a coded class is kept for as many steps as that list is long …". The section's own later sentence, "the length of the code list", is already exact.
+
+7. **LESSER.** "Its own readers had said that no Lean declaration met the two premises", and in the head note "left standing by two readers of its own".
+   - Neither of the law's readers' returns is filed here. Both sentences rest on the frozen file's account (line 7), which puts it as a thing untested.
+   - Exact: "By the frozen file's account of them, its own readers had said it was untested whether any Lean declaration met the two premises."
+
+8. **LESSER.** Item 1: "no code for an empty class is needed, since what is seen from a class that is not empty is not empty (`everyNone`, `updatesNone`, `starts_code`)".
+   - None of the three cited theorems states the reason. It is the reader's and the worker's argument: every move has a step and the value is always `()` (RETURN-refuter 70–71, RETURN-worker 11). It holds under `noneRead` only.
+   - Exact: "no code for an empty class is needed: under this reading, by the reader's argument and not by a theorem, what is seen from a class that is not empty is not empty."
+
+9. **LESSER.** The `propext` sentence: "a `nomatch` on an equation between numbers brought the axiom `propext` into five declarations in the first build", credited to "(the reader)".
+   - The first build's log does name five declarations (build1.log). Only `eqv_false` and `decode_pickB2` held the `nomatch` cases on numbers, by the worker's account (RETURN-worker 106). The other three depend on them.
+   - The reader names only `eqv_false` (RETURN-refuter 165). The figure "five" is from the worker and the log, not from the reader.
+   - Exact: "in the first build a `nomatch` on equations between numbers, in `eqv_false` and `decode_pickB2`, brought `propext` into them and through them into five declarations (the first build's log; the worker)…"
+
+10. **LESSER.** Head note: "cut off, when the writer's session restarted, after writing 190 lines and before any build".
+    - The worker gives "190 lines" (RETURN-worker 7). That the restart cut the first worker off, and that this came before any build, is in no filed source I read.
+    - The worker also says it kept "lines 1–203" (line 9).
+    - Exact: mark those two clauses as the writer's own account.
+
+11. **LESSER.** Item 1: "(the reader, who checked it by hand for three codes)".
+    - The reader checked three codes under each reading: (2,2), (0,0) and (1,0) under `noneRead`, and `both`, `single true l1` and `empty` under `keepsLevel` (RETURN-refuter 59–85).
+    - Exact: "for three codes under each reading".
+
+**Confirmed:**
+- **Figures in the head note:**
+  - The file was frozen at 01:36 WIB.
+  - The worker: 9 tool calls and 2 builds.
+  - The reader: 17 tool calls.
+  - Two sentences marked MUST and seven lesser (findings 3–9).
+  - The log: exit 0, `with_axioms {}`, 29 theorems. I counted 29 `theorem`s in the file.
+- **The hash.** The frozen file and the as-frozen copy are byte-identical, and both give the shasum in the hash file, which records the name `FROZEN-DRAIN-ON-THE-EDGE.as-frozen.md`.
+- **The links.** All nine link targets exist.
+- **The law.** Its statement, its two premises and the meaning of `InClosedFamily` (docstring at line 149) are told as "What was tested" says.
+- **Items 1–4 against the module:**
+  - Nine codes, each decoding to two configurations; `starts_code` is `Iff.rfl`.
+  - Eight codes: both, empty and six singles.
+  - Both `updates` premises are proved for every code and every value.
+  - The two iffs hold at `allNone.length` (9) and `allLevel.length` (8), each one call of the law.
+  - The two statements of the starts cite `together_not_kept_none` and `together_kept_level` unchanged.
+  - The starts are kept for 2 steps and not for 3, and `allNone.length = 9`.
+  - `KeptFor.shorter` is a package lemma (Keeping.lean:280).
+  - The fifth guess's first half fails, and seven codes were not tried.
+- **Quotations.** The quotations from the reader are word for word. One capital letter is lowered.
+- **Cost.** The ceiling of 0.5 million matches the frozen file.
+- **Your three questions:**
+  - Nothing tells this built case as a law.
+  - The number of codes is nowhere told as the case's edge: item 4 and the "must carry" section keep 2 and 9 apart.
+  - Nothing says the level must be registered.
+- **"Not tested here"** is said on the converse of `code_horizon_of_kept`, and should also be said on the sentence about a reading that keeps only the lane (finding 4).
+
+**Not read:**
+- The law's readers' returns in `tmp/fm`.
+- Row FM's statement about the law's final form.
+- The run journal `wf_881fe824-e22`, so the figure of 239,181 tokens is not checked.
+- as-built-against-ScratchComparison.lean.txt.
+- ScratchKeptForViable outside the `Drain` declarations listed and lines 299–312 and 400–410.
+- Keeping.lean beyond a grep.
+
+Tool calls: 10.

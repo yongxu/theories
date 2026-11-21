@@ -59,6 +59,9 @@ READS = [
     {'tag': 'whole-edge', 'title': '22 November, the third pass on an exact edge between both outcomes', 'returns': WHOLE + 'returns/whole-edge.json',
      'folder': WHOLE, 'reports': 'reports/',
      'fields': ['edge', 'region_side', 'rank_side', 'moves_in_it', 'reading_in_it', 'carrier', 'handed_in', 'links', 'standing', 'note'], 'letters': E3},
+    {'tag': 'whole-edge', 'title': '22 November, the third pass on an exact edge, twenty modules read later', 'returns': WHOLE + 'returns/whole-edge3.json',
+     'folder': WHOLE, 'reports': 'reports/',
+     'fields': ['edge', 'region_side', 'rank_side', 'moves_in_it', 'reading_in_it', 'carrier', 'handed_in', 'links', 'standing', 'note'], 'letters': E3},
 ]
 LETTERS = 'SDBNU'
 LEGEND = ('**S** from a statement read; **D** from a docstring or the opening account only; **B** only in a built case; **N** one reader\'s '
@@ -456,6 +459,7 @@ if __name__ == '__main__':
          'The table\'s letters (20 November, [its note](../two-ways-table-2026-11-20/NOTE.md)): **a** multiplies; **b** a level that can run down; **c** gives at a cost; **d** the source is said; **e** what comes back; **f** a rule set again from a share; **g** both outcomes, boundary exact; **h** no return, or a turn. Y yes, P in part, N no.', '',
          'The read of every module (22 November, [its note](%sNOTE.md)): thirteen letters for each of pass a and pass b, in this order: %s. Then, under *settled*, the third pass\'s letter for each of the thirteen it settled where the two differed; and under *edge*, three letters: %s. %s. %s.' % (
              WHOLE, '; '.join(WHEAD[f] for f in W13), '; '.join(WHEAD[f] for f in E3), LEGEND, TRUST), '',
+         'Of the edge read\'s three letters, the second and third are not uniform: most readers gave them of the edge statement, and one reader of the twenty modules read later gave them of the strongest thing anywhere in the module ([row FM\'s note](%sNOTE.md) says which).' % WHOLE, '',
          'A place is keyed by a Lean file\'s base name. Where several tracked files carry that name, or none does (a namespace inside a file, a program, a scratch module, a folder, a page), the row says so, since two places can then share a row; the readers\' own names for the place are kept on its page.', '',
          'The reads: ' + '; '.join('**%s** %s ([note](%sNOTE.md))' % (rd['tag'], rd['title'], rd['folder']) for rd in READS) + '.', '',
          '| place | file | table | read in | pass a | pass b | settled | edge | check in scratch |', '|---|---|---|---|---|---|---|---|---|']

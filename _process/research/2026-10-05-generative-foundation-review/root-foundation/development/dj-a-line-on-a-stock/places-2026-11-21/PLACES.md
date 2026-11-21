@@ -6,9 +6,11 @@ The table's letters (20 November, [its note](../two-ways-table-2026-11-20/NOTE.m
 
 The read of every module (22 November, [its note](../../fm-whole-read-2026-11-22/NOTE.md)): thirteen letters for each of pass a and pass b, in this order: moves; a reading; a share; a level that runs down; a giving that is itself a going-on; a cost to the one that keeps or gives; multiplying; a point of no return; both outcomes; a comparison between two; a rank (an ending within a bound); a closed region; forms change while the going on continues, or more can go on after. Then, under *settled*, the third pass's letter for each of the thirteen it settled where the two differed; and under *edge*, three letters: an exact statement of both outcomes; moves in that statement; a reading in that statement. **S** from a statement read; **D** from a docstring or the opening account only; **B** only in a built case; **N** one reader's "not found in what was read"; **U** not reached; a `+` after a letter: the answer goes on with another lettered part, which is on the place's page (an `N+` is not an absence); two letters in brackets, as `[D/S]`: the reader gave both; `·` the read has no answer for that field at this place; `?` the answer does not begin with one of the five. The third pass tried only the cells where the two passes differed; a cell that both passes left as not found was tried by nobody else. An S says where a statement is and what it concludes; it is not a list of its premises.
 
+Of the edge read's three letters, the second and third are not uniform: most readers gave them of the edge statement, and one reader of the twenty modules read later gave them of the strongest thing anywhere in the module ([row FM's note](../../fm-whole-read-2026-11-22/NOTE.md) says which).
+
 A place is keyed by a Lean file's base name. Where several tracked files carry that name, or none does (a namespace inside a file, a program, a scratch module, a folder, a page), the row says so, since two places can then share a row; the readers' own names for the place are kept on its page.
 
-The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-by-goings-on-2026-11-20/NOTE.md)); **future** 21 November, a future opening or closing ([note](../read-a-future-2026-11-21/NOTE.md)); **register** 21 November, how a registering comes to be ([note](../read-registering-2026-11-21/NOTE.md)); **choice** 21 November, a choice made from a reading ([note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md)); **whole-a** 22 November, every module by fifteen questions, pass a ([note](../../fm-whole-read-2026-11-22/NOTE.md)); **whole-b** 22 November, every module by fifteen questions, pass b ([note](../../fm-whole-read-2026-11-22/NOTE.md)); **whole-c** 22 November, every module, the third pass settling where the two differed ([note](../../fm-whole-read-2026-11-22/NOTE.md)); **whole-edge** 22 November, the third pass on an exact edge between both outcomes ([note](../../fm-whole-read-2026-11-22/NOTE.md)).
+The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-by-goings-on-2026-11-20/NOTE.md)); **future** 21 November, a future opening or closing ([note](../read-a-future-2026-11-21/NOTE.md)); **register** 21 November, how a registering comes to be ([note](../read-registering-2026-11-21/NOTE.md)); **choice** 21 November, a choice made from a reading ([note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md)); **whole-a** 22 November, every module by fifteen questions, pass a ([note](../../fm-whole-read-2026-11-22/NOTE.md)); **whole-b** 22 November, every module by fifteen questions, pass b ([note](../../fm-whole-read-2026-11-22/NOTE.md)); **whole-c** 22 November, every module, the third pass settling where the two differed ([note](../../fm-whole-read-2026-11-22/NOTE.md)); **whole-edge** 22 November, the third pass on an exact edge between both outcomes ([note](../../fm-whole-read-2026-11-22/NOTE.md)); **whole-edge** 22 November, the third pass on an exact edge, twenty modules read later ([note](../../fm-whole-read-2026-11-22/NOTE.md)).
 
 | place | file | table | read in | pass a | pass b | settled | edge | check in scratch |
 |---|---|---|---|---|---|---|---|---|
@@ -18,7 +20,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
 | [ActivationCapacity](place/ActivationCapacity.md) | `ActivationCapacity.lean` |  |  | `BBNNBNNBBBNNB` | `BBNNNNNBBBBNN` | `····B·····N·B` |  |  |
 | [ActiveReading](place/ActiveReading.md) | `ActiveReading.lean` |  | register | `NSNDDNNNNS+NSN` | `NSNSSNNSNSNNN` | `·······N···S·` |  |  |
 | [Actuation](place/Actuation.md) | `Actuation.lean` |  |  | `BBNBNBNBBBBBB` | `BBNBNBNNBSBSB` | `·······N·····` |  |  |
-| [Admission](place/Admission.md) | several Lean files of this name | NYPPPNYY |  | `NSNSSNNSSSSSS+` | `NSNSS+NNS+SS+N+SS+` | `··········S··` |  |  |
+| [Admission](place/Admission.md) | several Lean files of this name | NYPPPNYY |  | `NSNSSNNSSSSSS+` | `NSNSS+NNS+SS+N+SS+` | `··········S··` | `SNN` |  |
 | [AdmissionRevision](place/AdmissionRevision.md) | `AdmissionRevision.lean` | NYYYPPPP | kept |  |  |  |  |  |
 | [AlignmentInquiry](place/AlignmentInquiry.md) | `AlignmentInquiry.lean` |  | register |  |  |  |  |  |
 | [AlignmentSuccession](place/AlignmentSuccession.md) | `AlignmentSuccession.lean` | PYPPPPPY |  |  |  |  |  |  |
@@ -75,11 +77,11 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
 | [ContextArrivalTraces](place/ContextArrivalTraces.md) | `ContextArrivalTraces.lean` |  |  | `SSNNNNNSSSNSB` | `SSNNNNNN+NSNNS+` | `·······NN··S·` |  |  |
 | [ContextualRuns](place/ContextualRuns.md) | `ContextualRuns.lean` |  |  | `SSNNNNNNSNNNN` | `NSS+NNNNNNNNNN` | `N·N·····N····` |  |  |
 | [ContingentPlans](place/ContingentPlans.md) | `ContingentPlans.lean` |  |  | `SSNNNNNNSNSNN` | `SSNNNNNNNNNNN` | `········N·S··` |  |  |
-| [Continuation](place/Continuation.md) | `Continuation.lean` | PYPPYNPY | kept | `NNNSS+BNSBBSSB` | `NN+NSSN+NSN+NS+SB` | `·····B··SN···` |  |  |
+| [Continuation](place/Continuation.md) | `Continuation.lean` | PYPPYNPY | kept | `NNNSS+BNSBBSSB` | `NN+NSSN+NSN+NS+SB` | `·····B··SN···` | `SNN` |  |
 | [ContinuedClasses](place/ContinuedClasses.md) | `ContinuedClasses.lean` |  |  | `NS+NBNNBBSSNSB` | `NS+NS+NNS+S+S+S+NSS+` |  | `N+NN` |  |
 | [ContinuingRevision](place/ContinuingRevision.md) | `ContinuingRevision.lean` | NYYPYPPP | kept, register | `SBNSSSBS+SSSSB` | `SS+NS+S+SNSSS+SS+B` | `······B······` | `SNN+` |  |
 | [ContinuingRuns](place/ContinuingRuns.md) | `ContinuingRuns.lean` |  |  | `BBNBDBBBB+BBBB` | `S+BNBBBNBBS+NBB` | `······B···B··` |  |  |
-| [Continuity](place/Continuity.md) | `Continuity.lean` |  |  | `NSNBNSNNSSNSB` | `NS+NNNNNNN+S+NSN` | `···N·S··N···N` |  |  |
+| [Continuity](place/Continuity.md) | `Continuity.lean` |  |  | `NSNBNSNNSSNSB` | `NS+NNNNNNN+S+NSN` | `···N·S··N···N` | `NNS` |  |
 | [ConveyanceBoundaries](place/ConveyanceBoundaries.md) | `ConveyanceBoundaries.lean` |  |  | `NNNNNNNNNSNSN` | `NNNS+NNNNN+SNS+N` | `···N·········` |  |  |
 | [CopyCourses](place/CopyCourses.md) | `CopyCourses.lean` |  |  | `SSNSNSSSSSSSS` | `SSNS+NS+SNSSS+SN` | `·······N····S` |  |  |
 | [Copying](place/Copying.md) | `Copying.lean` | YYPYNNYY |  | `SSNSNSSSSSSSS` | `SSNS+NS+S+SSSNSS+` | `··········S··` |  |  |
@@ -124,7 +126,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
 | [EventualWidening](place/EventualWidening.md) | `EventualWidening.lean` |  | future | `NSNNNNNSNSNSS` | `NSNNN+NNNN+SNNS+` | `·······S···S·` |  |  |
 | [EventualWideningInstances](place/EventualWideningInstances.md) | `EventualWideningInstances.lean` |  |  | `SS+NBS+BNB+S+BSBB` | `SSNN+S+BBS+N+S+NB+B+` | `···N··B·B·N··` |  |  |
 | [Evolution](place/Evolution.md) | `Evolution.lean` | PYPNNNPP | future | `NNNBS+NS+BS+SBSB` | `NNNS+S+N+S+S+S+NNSS+` | `·········NB··` |  |  |
-| [ExchangePremises](place/ExchangePremises.md) | `ExchangePremises.lean` |  |  | `SSNS+BNBNSSNBB` | `S+SNS+BNBNN+SNNB` | `········N··B·` |  |  |
+| [ExchangePremises](place/ExchangePremises.md) | `ExchangePremises.lean` |  |  | `SSNS+BNBNSSNBB` | `S+SNS+BNBNN+SNNB` | `········N··B·` | `NSS` |  |
 | [Exclusion](place/Exclusion.md) | `Exclusion.lean` |  |  | `SSNSSNNSBBSSB` | `S+S+NSSN+NSBS+SSB` |  | `NN+N+` |  |
 | [Exhaustion](place/Exhaustion.md) | `Exhaustion.lean` |  |  | `NNNSSNNSBNSBB` | `NNNSSNNSBNSNB` | `···········S+·` |  |  |
 | [ExpandingInquiry](place/ExpandingInquiry.md) | `ExpandingInquiry.lean` | NYYYPPPP | register |  |  |  |  |  |
@@ -164,10 +166,10 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
 | [GrammarCrossing](place/GrammarCrossing.md) | `GrammarCrossing.lean` |  |  | `NSNNNNNBNSNSS` | `NNNNNNNNNS+NS+N` | `·N·····B····S` |  |  |
 | [GrammarLaws](place/GrammarLaws.md) | `GrammarLaws.lean` |  |  | `SSSSNNSSSSSSS` | `NS+SS+NNSSSSS+S+S` | `S············` | `SNN` |  |
 | [GrammarMap](place/GrammarMap.md) | `GrammarMap.lean` |  |  | `BSNNNNNS+SSBSS+` | `S+S+NNN+NNSS+SNSS+` | `··········B··` |  |  |
-| [GrammarPath](place/GrammarPath.md) | `GrammarPath.lean` |  |  | `SS+NNBNNBSSBSB` | `NS+NNBNN+SS+S+N+SB+` | `N·········B··` |  |  |
+| [GrammarPath](place/GrammarPath.md) | `GrammarPath.lean` |  |  | `SS+NNBNNBSSBSB` | `NS+NNBNN+SS+S+N+SB+` | `N·········B··` | `SNS` |  |
 | [GrammarReadings](place/GrammarReadings.md) | `GrammarReadings.lean` |  | register | `NSNNSNNNNS+NNS+` | `NSNNNNNS+SNNSS+` | `····N··NS+N·S·` |  |  |
 | [GrammarRegularity](place/GrammarRegularity.md) | `GrammarRegularity.lean` |  |  | `SSS+SNNNSS+S+S+SS` | `SS+SSNNNSS+SSSS` |  | `S+NS` |  |
-| [GrammarScope](place/GrammarScope.md) | `GrammarScope.lean` |  |  | `NSNNBNBS+SSBSS+` | `NS+NNBNN+S+S+SN+SS+` | `······B···B··` |  |  |
+| [GrammarScope](place/GrammarScope.md) | `GrammarScope.lean` |  |  | `NSNNBNBS+SSBSS+` | `NS+NNBNN+S+S+SN+SS+` | `······B···B··` | `SNS` |  |
 | [GrammarTesting](place/GrammarTesting.md) | `GrammarTesting.lean` |  |  | `BSNNNNNBBS+NBB` | `NS+NN+BNNNBSNS+N` | `N···N··B····B` | `NNB+` |  |
 | [GrammarTransport](place/GrammarTransport.md) | `GrammarTransport.lean` |  |  | `SSNNNNNSNSSSS` | `SNNDNNNNNSSSS` | `·S·D···S·····` |  |  |
 | [Granularity](place/Granularity.md) | `Granularity.lean` |  |  | `SS+NNNNSBBSNSS+` | `S+S+NNNNNB+BSNS+S+` | `······S······` | `NN+B+` |  |
@@ -176,7 +178,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
 | [GuardedStep](place/GuardedStep.md) | `GuardedStep.lean` |  |  | `NSNNNNNSSSSSN` | `NS+NNNNNSSSNS+N` | `··········S··` |  |  |
 | [GuardHorizon](place/GuardHorizon.md) | `GuardHorizon.lean` | NNNNYPPP | choice, future | `SS+NNNNNSS+SNSB` | `SS+NNNNNNS+SNSB` | `·······N·····` | `S+SN` |  |
 | [Handoff](place/Handoff.md) | `Handoff.lean` |  | register | `BBNNNNNBBS+S+BS+` | `S+NNNNNNB+B+S+S+B+S+` | `·N···········` | `NBN` |  |
-| [HeldForReading](place/HeldForReading.md) | `HeldForReading.lean` |  | register | `SSNNNSNBBSBBB` | `S+S+N+NNSNBS+SN+BB` | `··········B··` |  |  |
+| [HeldForReading](place/HeldForReading.md) | `HeldForReading.lean` |  | register | `SSNNNSNBBSBBB` | `S+S+N+NNSNBS+SN+BB` | `··········B··` | `BNB` |  |
 | [HeldPossible](place/HeldPossible.md) | `HeldPossible.lean` |  | register | `SSNNNNNSS+SNSS+` | `SSNNNNNS+S+S+NSS` |  | `SSN` |  |
 | [HexagramCommuting](place/HexagramCommuting.md) | `HexagramCommuting.lean` |  |  | `BNNNNNNBNBNBB` | `BNNNNNNBNBNBB` |  |  |  |
 | [HexagramLaws](place/HexagramLaws.md) | `HexagramLaws.lean` |  |  | `NBNNNNNBBBBBB` | `NBNNNNNBBBBBB` |  | `BNN+` |  |
@@ -197,7 +199,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
 | [Identity](place/Identity.md) | `Identity.lean` |  |  | `NSNBBNS+S+SSNSB+` | `NS+NS+B+NS+S+S+S+NSS+` |  | `SNS` |  |
 | [IdleRemoval](place/IdleRemoval.md) | `IdleRemoval.lean` |  |  | `NSNSSNNNNSSNN` | `NS+NS+NNNNNSNNN` | `····S·····N··` |  |  |
 | [Imbalance](place/Imbalance.md) | `Imbalance.lean` |  |  | `NSNSSNNNNSNNN` | `NNNS+S+NNNNSNNN` | `·N···········` |  |  |
-| [InAmounts](place/InAmounts.md) | `InAmounts.lean` |  |  | `NSNS+BBNSSSSBB` | `NS+NS+S+S+NN+SSSSB+` | `·······S·····` |  |  |
+| [InAmounts](place/InAmounts.md) | `InAmounts.lean` |  |  | `NSNS+BBNSSSSBB` | `NS+NS+S+S+NN+SSSSB+` | `·······S·····` | `SNN` |  |
 | [Inquiry](place/Inquiry.md) | `Inquiry.lean` |  | choice, register | `SSNNNNNNNSNNN` | `SSNNNNNNNSNNN` |  |  |  |
 | [InquirySufficiency](place/InquirySufficiency.md) | `InquirySufficiency.lean` |  | choice |  |  |  |  |  |
 | [IntegerOrder](place/IntegerOrder.md) | `IntegerOrder.lean` |  |  | `NNNNNNNNNSNNN` | `NNNNNNNNNNNNN` | `·········N···` |  |  |
@@ -230,7 +232,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
 | [Laws](place/Laws.md) | `Laws.lean` |  |  | `SSNNNNNSSSNNN` | `SSNNNNNNNSNDN` | `·······NN··N·` |  |  |
 | [Learnable](place/Learnable.md) | `Learnable.lean` |  | register | `NSNNNNNNNSSSN` | `NS+NNNNNNNSSNN` | `···········S·` |  |  |
 | [LearnableRuns](place/LearnableRuns.md) | `LearnableRuns.lean` |  | register | `NSNNNNNBNSSSN` | `NS+NNNNNNNSSSN+` | `·······B·····` |  |  |
-| [LearnedGrouping](place/LearnedGrouping.md) | `LearnedGrouping.lean` |  | register | `BBBBNBNBBBBBB` | `S[S/B]B+S+N[S/B]NS+N+B+N+SB` | `········B·B··` |  |  |
+| [LearnedGrouping](place/LearnedGrouping.md) | `LearnedGrouping.lean` |  | register | `BBBBNBNBBBBBB` | `S[S/B]B+S+N[S/B]NS+N+B+N+SB` | `········B·B··` | `NBB` |  |
 | [Learning](place/Learning.md) | `Learning.lean` |  | register | `NSNNNNNSNSSSB` | `SSNNNNNSSSS+S+S+` | `N·······N····` |  |  |
 | [LearningRuns](place/LearningRuns.md) | `LearningRuns.lean` |  | register | `SSNNNNNNNSSSB` | `SS+NNNNNN+NSS+NS+` | `···········S·` |  |  |
 | [LeastLoss](place/LeastLoss.md) | `LeastLoss.lean` |  |  | `SSNBNNBBNSS+BB` | `SSNS+N+NBS+D+S+S+N[S/B]` | `········D··B·` |  |  |
@@ -238,7 +240,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
 | [LevelCoupling](place/LevelCoupling.md) | `LevelCoupling.lean` |  |  | `NSNSSNNNSSNNN` | `NSNS+S+NNNNSNNN` | `········N····` |  |  |
 | [Lexical](place/Lexical.md) | `Lexical.lean` |  |  | `NSNNNBNNNSNNN` | `NS+NN+NN+NNNSNNN` | `·····N·······` |  |  |
 | [Lifting](place/Lifting.md) | `Lifting.lean` |  |  | `SNNNNNNNSS+NNS` | `SSNNNNNN+NS+NNN+` | `·S······N···N` |  |  |
-| [Likeness](place/Likeness.md) | `Likeness.lean` |  |  | `SSNSNNNS+S+SSSB` | `S+S+NSNNNN+S+SS+SN` | `·······S+····N` |  |  |
+| [Likeness](place/Likeness.md) | `Likeness.lean` |  |  | `SSNSNNNS+S+SSSB` | `S+S+NSNNNN+S+SS+SN` | `·······S+····N` | `NSS` |  |
 | [LimitVerification](place/LimitVerification.md) | `LimitVerification.lean` |  |  | `BSNNNNNSBS+NSB` | `SSNNNNNNNSNNS` | `·······SB··N·` |  |  |
 | [LineageDrawdown](place/LineageDrawdown.md) | `LineageDrawdown.lean` | PYPPYNPY | kept | `NSBB+BBS+SBBSBB` | `SSB+S+S+BS+S+S+BS+S+B` | `S············` | `NN+N` |  |
 | [LineageRegimes](place/LineageRegimes.md) | `LineageRegimes.lean` | PYPYPNPY | kept | `NSNBBBS+SB+BSBB` | `NSNS+S+B+S+S+B+B+SS+B+` |  | `NNN` |  |
@@ -257,14 +259,14 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
 | [Loops](place/Loops.md) | `Loops.lean` |  |  | `NSNNBNNSSSNSN` | `NSNNNNNSSSSSD+` | `····N·····N·B+` |  |  |
 | [LossMatching](place/LossMatching.md) | `LossMatching.lean` |  |  | `NSNNNNNSSSNNS` | `NSNNNNNSNS+NNN` | `········S···S` |  |  |
 | [LumpedSeeking](place/LumpedSeeking.md) | `LumpedSeeking.lean` |  |  | `SSNNNNNSBSNSN` | `S+S+SNNNNSNSNNN+` | `··S·····B··S·` |  |  |
-| [MapInstances](place/MapInstances.md) | `MapInstances.lean` |  |  | `NSNSDNNSSSSSS+` | `SSNSN+NS+SN+SSSS+` | `S···D+·S+·S····` |  |  |
+| [MapInstances](place/MapInstances.md) | `MapInstances.lean` |  |  | `NSNSDNNSSSSSS+` | `SSNSN+NS+SN+SSSS+` | `S···D+·S+·S····` | `NNS` |  |
 | [MapRegions](place/MapRegions.md) | `MapRegions.lean` |  |  | `NSNNNNNBSSNSS+` | `SSNNNNNNS+NNS+S+` | `S······B·S···` | `SSS` |  |
 | [MarketDiagnosis](place/MarketDiagnosis.md) | `MarketDiagnosis.lean` | PPPPYPPN |  |  |  |  |  |  |
 | [MarketGenerativity](place/MarketGenerativity.md) | `MarketGenerativity.lean` | YYYYYYPP |  |  |  |  |  |  |
 | [MarketInstances](place/MarketInstances.md) | `MarketInstances.lean` | YYPPYYYY |  |  |  |  |  |  |
 | [MatchedCourses](place/MatchedCourses.md) | `MatchedCourses.lean` |  |  | `BBNNNNNBBBNBN` | `BBNN+NNNB+NBNNN` | `········B··B·` |  |  |
 | [Mechanism](place/Mechanism.md) | `Mechanism.lean` |  |  | `SSNNNNNSNSNSB` | `SSNNNNNNNSNNS+` | `·······S···S·` |  |  |
-| [Metaethics](place/Metaethics.md) | `Metaethics.lean` |  |  | `NSNB+NNNBBSNBD` | `NSNS+NNNN+N+NNNN` | `·······BBS·BD` |  |  |
+| [Metaethics](place/Metaethics.md) | `Metaethics.lean` |  |  | `NSNB+NNNBBSNBD` | `NSNS+NNNN+N+NNNN` | `·······BBS·BD` | `NNS` |  |
 | [ModelStatements](place/ModelStatements.md) | `ModelStatements.lean` |  |  | `SS+NSSNNNSSNSS` | `SSNSS+NNNSSNSS+` |  | `SNN` |  |
 | [MoveFormation](place/MoveFormation.md) | `MoveFormation.lean` |  | register | `SS+NNNNNNNSSSB` | `SSNNNNNNNS+NS+S+` | `··········S··` |  |  |
 | [MoveOutcomeProcesses](place/MoveOutcomeProcesses.md) | `MoveOutcomeProcesses.lean` |  | choice | `SS+NNNNNBSSNNB` | `SS+NNNNNN+SS+NNS+` | `·······B·····` | `SSN+` |  |
@@ -301,12 +303,12 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
 | [PlaceTransitionNets](place/PlaceTransitionNets.md) | `PlaceTransitionNets.lean` |  |  | `SSNSSSSS+NSSSB` | `SNNSS+NNS+NSSSB+` | `·N···NS······` |  |  |
 | [PoolCourse](place/PoolCourse.md) | `PoolCourse.lean` |  |  | `NSNBNNNSNSNSB` | `NSNB+NNNNS+SNSB+` | `·······SS+····` |  |  |
 | [PooledEnvelopes](place/PooledEnvelopes.md) | `PooledEnvelopes.lean` |  |  | `BS+NBBBNBBSS+BN` | `S+S+NS+NBNS+B+SBSN` | `····B········` | `BBN+` |  |
-| [PoolFromCourse](place/PoolFromCourse.md) | `PoolFromCourse.lean` | YPPNYYPY | choice, register | `SSS+SS+SSSBSSSB` | `NSSS+SS+S+S+B+S+N+SB+` | `S·········S+··` |  |  |
+| [PoolFromCourse](place/PoolFromCourse.md) | `PoolFromCourse.lean` | YPPNYYPY | choice, register | `SSS+SS+SSSBSSSB` | `NSSS+SS+S+S+B+S+N+SB+` | `S·········S+··` | `BSS` |  |
 | [PoolResponse](place/PoolResponse.md) | `PoolResponse.lean` |  |  | `NSNBNNNNBSSNN` | `S+S+NBN+BNNBS+NNN` | `S····B····N··` |  |  |
 | [Population](place/Population.md) | `Population.lean` |  |  | `NSNNBNSNSSSBB` | `NNNS+N+NS+N+S+S+S+NS+` | `·N·S+B······B·` |  |  |
 | [PopulationCorrection](place/PopulationCorrection.md) | `PopulationCorrection.lean` | YYYYYYYY | kept |  |  |  |  |  |
 | [PopulationRealization](place/PopulationRealization.md) | `PopulationRealization.lean` | PYPPPPPY |  |  |  |  |  |  |
-| [Postponement](place/Postponement.md) | `Postponement.lean` |  |  | `SSNNNNNNSSNSN` | `SS+NNNNNNN+SNSN` | `········N····` |  |  |
+| [Postponement](place/Postponement.md) | `Postponement.lean` |  |  | `SSNNNNNNSSNSN` | `SS+NNNNNNN+SNSN` | `········N····` | `NSS` |  |
 | [Prelude](place/Prelude.md) | `Prelude.lean` |  |  | `NNNSNNNNNSSNN` | `NNNSNNNNNNNNN` | `·········SS··` |  |  |
 | [Premises](place/Premises.md) | `Premises.lean` |  |  | `NSNBBBBBBBBBB` | `NNNS+S+BBS+NNSSB` | `·N······NN···` |  |  |
 | [PremisesTogether](place/PremisesTogether.md) | `PremisesTogether.lean` |  |  | `BBNBNNNBNBBBB` | `BBNS+BNNNNBNN+B` | `····B··B··BN·` |  |  |
@@ -328,7 +330,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
 | [Readings](place/Readings.md) | `Readings.lean` |  | register | `SSNSNNNNNSNNN` | `NS+NNNNNNN+SNNN` | `S··N·········` |  |  |
 | [ReadingSchedule](place/ReadingSchedule.md) | `ReadingSchedule.lean` |  | register | `SSNSNSNNSSSNN` | `SSS+S+NNNNSSSNN` | `··S··S·······` |  |  |
 | [ReadingsPersist](place/ReadingsPersist.md) | `ReadingsPersist.lean` | YYPPYPPP | register | `BSNS+BBSS+BSBSB` | `S+S+NS+S+NS+S+S+SS+S+B+` | `·····N·······` | `N+NN` |  |
-| [ReadingsSpread](place/ReadingsSpread.md) | `ReadingsSpread.lean` | YYPPYPPY | kept, register | `BSSSBBS+S+BSBSB` | `S+SS+S+BBS+S+B+SN+SB+` | `··········B··` |  |  |
+| [ReadingsSpread](place/ReadingsSpread.md) | `ReadingsSpread.lean` | YYPPYPPY | kept, register | `BSSSBBS+S+BSBSB` | `S+SS+S+BBS+S+B+SN+SB+` | `··········B··` | `BSS` |  |
 | [ReadInTime](place/ReadInTime.md) | `ReadInTime.lean` | YPPNYYYY | register | `SSSSNNSSS+SSSN` | `N+SSNNS+SSS+SS+SS+` | `S··N·S······S+` | `SNS` |  |
 | [ReadOffInTime](place/ReadOffInTime.md) | `ReadOffInTime.lean` | PYPPPPYY | choice, future, register | `S+SNBBNNS+S+SBSB` | `S+SNS+B+NNS+S+SS+S+N` | `············B` | `S+SN+` |  |
 | [Readout](place/Readout.md) | `Readout.lean` |  | register | `SSNNNNNSSSNSN` | `SSNNNNNSNSNS+N` | `········S····` |  |  |
@@ -351,7 +353,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
 | [Rejoining](place/Rejoining.md) | `Rejoining.lean` |  |  | `NSNBBNNSB+SNSN` | `N+S+NS+N+N+NSNSNSN+` | `····B···N····` |  |  |
 | [RelationalRenewal](place/RelationalRenewal.md) | `RelationalRenewal.lean` | PYPPYNPP | kept |  |  |  |  |  |
 | [RelativePosition](place/RelativePosition.md) | `RelativePosition.lean` |  |  | `NSNSBNNSB+SSSB` | `NS+S+SS+NNS+B+S+SSB+` | `··S+··········` | `N+NS+` |  |
-| [Relevance](place/Relevance.md) | `Relevance.lean` |  |  | `SSNSS+NNNSSNSS` | `S+SNS+SNNSN+S+NNS+` | `·······NS··S·` |  |  |
+| [Relevance](place/Relevance.md) | `Relevance.lean` |  |  | `SSNSS+NNNSSNSS` | `S+SNS+SNNSN+S+NNS+` | `·······NS··S·` | `NSS` |  |
 | [Remainder](place/Remainder.md) | `Remainder.lean` |  |  | `NSNNNNNSSSSSN` | `NNNNNNNNNSSNS+` | `·S·····SS··SS+` |  |  |
 | [Renewable](place/Renewable.md) | no Lean file of this name | NYPPPNPP |  |  |  |  |  |  |
 | [Renewal](place/Renewal.md) | `Renewal.lean` |  |  | `DS+NBBNNNDNSNB` | `N+D+NS+BNNNDNS+ND` | `D+············` |  |  |
@@ -360,11 +362,11 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
 | [RenewalFlow](place/RenewalFlow.md) | `RenewalFlow.lean` |  |  | `NBNSSNSSBSSSB` | `N+NN+SSN+NS+B+B+SS+B+` | `·B····N······` | `BNN` |  |
 | [RenewingFormation](place/RenewingFormation.md) | `RenewingFormation.lean` | PYPPYNYY | kept |  |  |  |  |  |
 | [Reordering](place/Reordering.md) | `Reordering.lean` |  |  | `SSNSBNNNNSSSB` | `SSNS+S+NNNN+SNS+N` | `··········S·B+` |  |  |
-| [ReorderingGrowth](place/ReorderingGrowth.md) | `ReorderingGrowth.lean` |  |  | `SSNNNNNNBSNNB` | `SSNN+N+NNNN+SNNS+` | `········N····` |  |  |
+| [ReorderingGrowth](place/ReorderingGrowth.md) | `ReorderingGrowth.lean` |  |  | `SSNNNNNNBSNNB` | `SSNN+N+NNNN+SNNS+` | `········N····` | `SSN` |  |
 | [Reproduction](place/Reproduction.md) | `Reproduction.lean` | YYPYNNYY |  | `NSSSS+S+SSS+SSSB` | `NSSSS+NSS+S+S+SS+B+` | `·····B+·······` | `NNN` |  |
 | [ReproductionNetwork](place/ReproductionNetwork.md) | `ReproductionNetwork.lean` | PYYYYPPP | kept |  |  |  |  |  |
 | [Reserve](place/Reserve.md) | `Reserve.lean` |  |  | `NS+NSS+SNSBSSSB` | `NS+NS+S+S+NSNS+SS+B+` | `········N····` |  |  |
-| [Resolution](place/Resolution.md) | `Resolution.lean` |  |  | `NSNBBBBSBSS+SB` | `NNNS+S+N+B+N+BSSSB` | `·N···B+·S·····` |  |  |
+| [Resolution](place/Resolution.md) | `Resolution.lean` |  |  | `NSNBBBBSBSS+SB` | `NNNS+S+N+B+N+BSSSB` | `·N···B+·S·····` | `BNN` |  |
 | [Response](place/Response.md) | `Response.lean` |  |  | `NSNBNNNBBSNSB` | `NSNN+N+BNNB+SNS+N` | `···B·B·B····N` | `NNB` |  |
 | [ResponseCapacity](place/ResponseCapacity.md) | `ResponseCapacity.lean` | PYYYYPYY | kept |  |  |  |  |  |
 | [ResponseLearning](place/ResponseLearning.md) | `ResponseLearning.lean` |  | register | `SSNSBSNSS+SNSB` | `S+S+NS+S+S+NBBSNS+B` |  | `NBB` |  |
@@ -409,7 +411,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
 | [SelectionTerm](place/SelectionTerm.md) | `SelectionTerm.lean` |  |  | `NSBS+S+NSSSNBSB` | `NS+S+NSNSSNNNSN+` | `···N····S·B·N` |  |  |
 | [Sensitivity](place/Sensitivity.md) | `Sensitivity.lean` |  | register | `NS+NNNNNSNSNNN` | `NS+NNNNNNNS+NNN` | `·······N·····` |  |  |
 | [SensitivityWebs](place/SensitivityWebs.md) | `SensitivityWebs.lean` |  |  | `NSNNNNNNNSNNN` | `NS+NSNNNNNSNNN` | `···S·········` |  |  |
-| [SetPointOptimum](place/SetPointOptimum.md) | `SetPointOptimum.lean` | PYPYYNPY |  | `SBNSBSNSS+SSBN` | `S+S+NSS+NNS+S+SSN+N` | `·····N·····B·` |  |  |
+| [SetPointOptimum](place/SetPointOptimum.md) | `SetPointOptimum.lean` | PYPYYNPY |  | `SBNSBSNSS+SSBN` | `S+S+NSS+NNS+S+SSN+N` | `·····N·····B·` | `SSN` |  |
 | [Settling](place/Settling.md) | `Settling.lean` |  |  | `SBNNNNNSS+SNBS` | `SNNNNNNS+S+NNNS` | `·B·······N·B·` | `SSN` |  |
 | [SharedCodes](place/SharedCodes.md) | `SharedCodes.lean` |  | register | `SSS+NSBNSSSNSB+` | `SSS+NNNNSSSN+SS+` | `····SB·······` | `SSN` |  |
 | [SharedStockInstances](place/SharedStockInstances.md) | `SharedStockInstances.lean` | PPNNNNYN |  |  |  |  |  |  |
@@ -429,7 +431,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
 | [Succession](place/Succession.md) | `Succession.lean` |  |  | `NNNBBBNBNNNNB` | `NNNBBBNNNNNNB` | `·······B·····` |  |  |
 | [SummaryFutures](place/SummaryFutures.md) | `SummaryFutures.lean` |  |  | `BBNNNNNNNBNNN` | `BBNNNNNNNBNNN` |  |  |  |
 | [Tail](place/Tail.md) | `Tail.lean` |  |  | `NSNNNNNNSSNNN` | `NS+NNNNNNSNNNN` | `·········S···` | `NNS` |  |
-| [Tasks](place/Tasks.md) | `Tasks.lean` |  |  | `SBNNBBNBS+SBBS+` | `S+S+NN+S+B+NS+N+S+N+B+S+` | `········B·B··` |  |  |
+| [Tasks](place/Tasks.md) | `Tasks.lean` |  |  | `SBNNBBNBS+SBBS+` | `S+S+NN+S+B+NS+N+S+N+B+S+` | `········B·B··` | `NSS` |  |
 | [Testing](place/Testing.md) | `Testing.lean` |  |  | `NS+NBNNNS+B+SBSN` | `N+SNS+N+N+NS+S+SNS+N+` | `··········B··` |  |  |
 | [TestingReorganization](place/TestingReorganization.md) | `TestingReorganization.lean` | NYPYPPPP | register |  |  |  |  |  |
 | [The market program (experiments/market-generativity/model.py](place/The-market-program-experiments-market-generativity-model-py.md) | no Lean file of this name | YYYYYYPY |  |  |  |  |  |  |

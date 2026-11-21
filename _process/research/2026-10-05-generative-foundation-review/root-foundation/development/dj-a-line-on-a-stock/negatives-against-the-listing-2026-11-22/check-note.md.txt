@@ -1,0 +1,98 @@
+*An AI checker's findings (run as Claude Opus), word for word from the run's journal (wf_d631e308-424), on the note, the direction page's paragraph and the appended corrections as they were before the check.*
+
+**Report: the negatives pass of 22 November (NOTE.md, the DIRECTION.md paragraphs, the appended corrections)**
+
+**Findings**
+
+1. **MUST.** NOTE.md line 11 says "from the direction page and eleven notes". DIRECTION.md line 122 says the same: "of this page and of eleven notes". `negatives.json` has 11 files, and one of them is `_process/DIRECTION.md`. So it is the direction page and ten notes. The frozen file, line 11, has the same slip. Exact: "from the direction page and ten notes".
+
+2. **MUST.** NOTE.md line 16 says "Each correction is appended … to the note its sentence is in". DIRECTION.md line 122 says "each of those has a dated correction in its note".
+   - Only 23 of the 25 are appended. A Python count of the nine sections gives 1+3+6+4+3+1+2+2+1 = 23 bullets.
+   - The other two are checked.json[0] and [1] (unit DIRECTION-b, line 118). They are not appended in the second reader's words. The `git diff --cached` of DIRECTION.md shows only a parenthetical in the writer's words at line 118 and the new paragraph at line 122.
+   - Exact: "23 are appended to their notes in the second reader's words; the two on the direction page are told there in the writer's words."
+
+3. **MUST.** DIRECTION.md line 118 says "Both halves of that sentence said more than the package bears". The second reader on that sentence (checked.json[1], "holds in a weaker form") wrote that "the sentence stands for a level that runs down and is narrowed only to this: a law of a choice from a reading with a level kept within a band stands in the package". `Regulation.no_narrower_band` (Regulation.lean 886) has no level that runs down. Exact: "The first half was narrowed (a rule that reads late and a level kept in a band stand in `Regulation`; for a level that runs down it stands), and the second said more than was found: the lock's laws hold over every schedule of reading steps (`RuleCapture.locked_stays`)."
+
+4. **MUST.** DIRECTION.md line 122 says "the reads behind this page had opened 104 of the package's 407 modules" and "that was a quarter of the package". The source of 104 is NOTE.md line 7 and the frozen file line 7: "the listing of places held 158 places, 104 of them modules of the package". That counts the listing's pages, not the modules the reads opened. The 407 is right: `ls Becoming/*.lean` gives 407. Exact: "until 22 November the listing of places, which the reads used, held pages for 104 of the package's 407 modules".
+
+5. **MUST.** DIRECTION.md line 122 says "None of these places the two ways either". Only one reader judged this, and only for `locked_turns_in_time_share_iff` (checked.json[23] why: "It does not place the two ways"). DIRECTION-b line 110 "stands" is of the places the 20 November meeting read, with other candidates. No reader asked the two-ways question of `Optimum`, `Stock`, `Growth`, `PairFlow`, `ReadingLoop` or `Regulation`. Exact: "A second reader found that `locked_turns_in_time_share_iff` does not place the two ways; the writer reads the others the same way, and no reader tried them."
+
+6. **MUST.** NOTE.md line 22 says `keeps_continues_iff` "keeps a task at everything reached, exactly under a condition of one step".
+   - ReadingLoop.lean 231–234: the left side is `Keeps … ∧ Continues …`. It keeps the task at every configuration reached by one step or more from a sound one, and it has a successor from every sound one.
+   - The right side is `∀ m, LeadsIntoEnabled …`. The premise is `KeptBy` (line 166): the reading is kept under every act.
+   - The note drops "and goes on". Keeps alone has its own law, `keeps_iff`, whose condition is `LeadsInto`, not `LeadsIntoEnabled`.
+   - Exact: "a rule from the state, with the reading kept by the update under every act, keeps a task at every configuration reached from one where the state reads the world, and has a next step from each, exactly where at every world each state's reading admits, its act can be taken and leads only into the task".
+   - The `keeping_policy_iff` account (line 247) is exact.
+
+7. **MUST.** NOTE.md line 22 says "Three sentences said this side of the Lean was not found, or had no level". The findings naming ReadingLoop or Regulation are checked.json[0], [1], [7], [8], [10], [11] and [12]. They are seven sentences: DIRECTION line 118 (two), and the choice note at line 23 (two), line 30, line 54 and line 65. No file has "three". Exact: "Seven sentences, in the direction page and the note on a choice from a reading, …".
+
+8. **MUST.** NOTE.md line 23 says "the correcting rule and the share it sets are read at a window of the level". The docstring at TurningInTime.lean 1852–1875 says the correction "reaches the share because the window's reading sets it (`sets`, given), not because the share falls under the corrected rule". The statement at line 1876 has `sA`/`hL` and `sets` as premises. Exact: "where a window on the level (`[N, K)`) sets both a `Low` share and a `kept` rule, that setting being handed in (`sets`), with the overdraw given (`draws`, `below`)".
+
+9. **MUST.** NOTE.md line 24 says `Optimum.kept_iff_within` holds where a level "stays at its need for ever exactly where `k` is at most `r`". Optimum.lean 2342 concludes `(∀ t, m ≤ x t) ↔ k ≤ r`, under these premises: `renewing`, `renews : ∀ t, g t ≤ r`, `draws`, `needs : 0 < m`, and `start : m ≤ x 0`. Exact: "given exactly `r` while at or above a positive need, at most `r` always, drawn `k` each step and starting at or above the need, stays at or above its need at every step exactly where `k ≤ r`".
+
+10. **MUST.** NOTE.md line 26 says "that a point of no return exists was already stated in the package (`noReturnAt_of_past`)". ReadOffInTime.lean 632 has two premises:
+    - `decided : ∀ n, Recoverable … ∨ ¬ Recoverable …`
+    - `past : ¬ Recoverable … n`
+
+    It concludes `∃ N, N ≤ n ∧ NoReturnAt …`. It is one direction, in terms of recoverable, with nothing of keepable. checked.json[5] (holds) says what is not stated is "J2's clause in its keepable form", so the note's sentence stands, narrowed. Exact: "a point of no return exists, where recoverability is decided at every step and fails at some, was already stated in terms of recoverable (`noReturnAt_of_past`); J2's clause in its keepable form is not".
+
+11. **MUST.** NOTE.md line 26 says the step law of keeping "is what two notes of 20 and 21 November said was not stated". For the 21 November note (no-return line 22), checked.json[4] says "the sentence is of ScratchNoReturn and stands there". The package has the one-step form only (`keepable_step_iff`, KeepableStep.lean 50, no premise). No run form without a premise was found: `not_keepable_run` (line 94) needs `closed`. `not_keepable_step` (line 83) also has the premise `closed`. That it landed by FM on 21 November is borne: commit 2adf24fd5, 20:28. Exact: "states for one step what the note of 20 November said was not stated (`not_keepable_step` under `closed`), and part of what the note of 21 November said: along a run with no premise it is still not found".
+
+12. **MUST.** NOTE.md line 27 says a cost of supporting "is in `PairFlow.WhileStanding` (a formation that gives takes the gift from its own standing)". checked.json[25] says it is "a constructed pair of standings with a balance law, the cost lying in its definitions, not a law of every process". Its why adds that `member_net` (687) and `runs_agree_until` (724) say mutual giving while both are active leaves the same levels as no giving. PairFlow.lean 493 confirms `ownTake` is a `def`, and 637 confirms `member_balance` is a balance identity. DIRECTION.md 122 ("a cost of supporting (`PairFlow`)") carries the same fault. Exact: "is built in the definitions of one constructed pair (`PairFlow.WhileStanding.ownTake`), with a balance law over it (`member_balance`); no theorem states the cost".
+
+13. **LESSER.** NOTE.md line 23 says "the lock's laws hold over every schedule of reading steps (`RuleCapture.turn_locked`)". `turn_locked` (RuleCapture.lean 169) is one turn, for each `b : Bool`. The every-schedule law is `locked_stays` (182). The premises `Raises`, `ReadsShare` and `upper` are dropped. The words "what was not found there is …" also drop the correction's "by a search of names and in the statements opened".
+
+14. **LESSER.** NOTE.md line 25 says `CausalGrowth.keepsWidening` holds "on every course of one built process". CausalGrowth.lean 454 has the premise `start : (r.state 0).Ordered`. Exact: "on every course from a causal set …".
+
+15. **LESSER.** NOTE.md line 25 says "`Flow.More` … is a 'more' that asks nothing kept". Flow.lean 323 is a count of takers: `∀ K, ∃ T, ∀ t, T ≤ t → K ≤ L.takers cs t`. `More.grows` (Population.lean 1219) needs `census`, `distinct` and `taking`. Exact: "more takers without end, which asks nothing kept; under a census … the active formations pass every number".
+
+16. **LESSER.** NOTE.md line 25 sets `grow_widensAlong_iff` against "new kinds were not found". DIRECTION.md 122 calls it "a web that widens by formations of a new type". checked.json[13] says the law "does not state that any course, birth or descent brings a new formation or a new kind about; 'kind' is its account's word". The type `N` is a second type, and the growth `X` is handed in as data. Exact: "of a second type handed in".
+
+17. **LESSER.** NOTE.md line 31 says "nothing found places the two ways with respect to each other". Its verdict (DIRECTION-b line 110, stands as worded) is of "the places the 20 November meeting read". The recoverable-and-keepable "stands" (DIRECTION-b line 116) rests on a name grep only. Both should carry their scope. DIRECTION.md 122 repeats the first unscoped.
+
+18. **LESSER.** NOTE.md line 14 puts "the pass has shown little" in quotation marks. The frozen file (line 30) reads "What would count as the pass having shown little". Drop the quotation marks or quote it exactly.
+
+19. **LESSER.** Head note: "Twelve AI readers … each alone with one file's sentences". Two of them each had half of one file (DIRECTION-a and DIRECTION-b; frozen line 36). Exact: "one for each note and two for the halves of the direction page".
+
+20. **LESSER.** Head note: the 20 modules "were not looked at again …; that is owed when their returns are in the listing".
+    - The same staged change adds those returns to their place pages, for example `place/Tasks.md`: "the third pass on an exact edge, twenty modules read later".
+    - The frozen 01:52 item 1 said the writer would look "before taking the verdict, and says so in the correction or in the paragraph that says it stands".
+    - So it is owed now, and it departs from the frozen plan. Both should be said.
+
+21. **LESSER.** NOTE.md line 35 says "499 tool calls for the twenty-two readers". The 22 returns' own `tool_calls` fields in results.json sum to 459 (267 first readers, 192 second readers). The note does say the journal is not filed, but the filed counts differ by 40, and that should be said.
+
+22. **LESSER.** The correction in read-kept-by-goings-on (checked.json[18]), on `Optimum.kept_iff_within`, says "starting at the need". The premise is `start : m ≤ x 0`, so exact is "at or above it". The words follow the docstring.
+
+23. **LESSER.** DIRECTION.md 122 says "going on derived exactly from amounts". It drops checked.json[18]'s limit: "each is of one level or stock with the giving handed in". The frozen file (line 28) also said a mended direction sentence would carry "the law named and its premises". The 118 paragraph's "the update, the reading and that it is kept are handed in" is not mended for `history_keeps_iff` / `history_continues_iff` (ReadingLoop 394/410, nothing handed in), which checked.json[0] raised.
+
+24. **LESSER.** In the choice note, the bullet "Of the sentence beginning "**One rule from …" nests `**` inside `**`, which breaks the bold.
+
+**Confirmed**
+- Every figure but the token figure, recomputed from the JSON files with Python:
+  - 114 sentences.
+  - 35 / 52 / 25 / 2 for the first readers.
+  - 12 / 13 / 2 for the second readers, on 27.
+  - 79 = 114 − 35, and 25 = 12 + 13.
+  - 12 readers plus 10 second readers = 22. The ten "files with a finding" are the ten units with a narrowed or overturned verdict.
+  - 407 `.lean` files in the package.
+- The token figure (3,059,278) cannot be recomputed. It comes from the journal, which is not filed, and NOTE.md line 35 says so.
+- The `Stock.repeat_covered_iff` (319) and `Onward.run_iff_continues` (164) accounts are exact.
+- The `Regulation.no_narrower_band` (886) / `lateReturn_band` (1152) / `ReadsLate` (678) account is close. It only drops "under every rest moving the level by at most d" and the start's room.
+- The KeepableStep commit by FM on 21 November.
+- "What stands": all three sentences are in results.json as "stands as worded" (DIRECTION-a line 42; DIRECTION-b lines 116 and 110).
+- The corrections in the nine notes:
+  - All 23 bullets are word for word the `exact_correction` of checked.json.
+  - The two that do not hold (meeting line 66, reads line 43) are absent; their `exact_correction` is empty.
+  - Each "Of the sentence beginning …" is found at the checked.json line of its note.
+  - The verdict brackets match.
+- The staged diff of each of the nine notes is additions only, at the end. The choice note also takes an unrelated section added before the corrections. DIRECTION.md line 118 changes only by the inserted parenthetical.
+- Four corrections read against the Lean are exact: checked.json[5] (`noReturnAt_of_past`), [24] (`keepable_step_iff` / `not_keepable_step`), [26] (`turn_locked` / `locked_stays`) and [14] (`CausalGrowth.keepsWidening`). [13] and [16] were also checked and are exact.
+
+**Not read**
+- Lean: `history_keeps_iff`, `Web.lost_iff`, `relay_threshold`, `ReadingSchedule.keeps_iff_within`, `recoverable_iff_above`, `member_net`, and the Lean behind the other corrections.
+- The full text of most corrections beyond the ones named.
+- The journal `wf_e18fa61e-848`.
+- Whether the writer opened each statement, and which models ran the readers: neither can be checked from the files.
+- The 20 later place pages, except `Tasks.md`.
+
+Tool calls: 21.

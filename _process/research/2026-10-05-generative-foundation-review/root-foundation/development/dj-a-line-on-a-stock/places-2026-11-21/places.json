@@ -196,6 +196,29 @@
     "moves_in_it",
     "reading_in_it"
    ]
+  },
+  {
+   "tag": "whole-edge",
+   "title": "22 November, the third pass on an exact edge, twenty modules read later",
+   "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+   "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+   "fields": [
+    "edge",
+    "region_side",
+    "rank_side",
+    "moves_in_it",
+    "reading_in_it",
+    "carrier",
+    "handed_in",
+    "links",
+    "standing",
+    "note"
+   ],
+   "letters_of": [
+    "edge",
+    "moves_in_it",
+    "reading_in_it"
+   ]
   }
  ],
  "same_statements": [
@@ -2134,6 +2157,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "S·········S+··"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-04",
+     "place": "PoolFromCourse.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-04.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "BSS"
     }
    ],
    "files": [
@@ -2723,6 +2757,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "·····B··SN···"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-01",
+     "place": "Continuation.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-01.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "SNN"
     }
    ],
    "files": [
@@ -3679,6 +3724,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "··········S··"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-01",
+     "place": "Admission.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-01.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "SNN"
     }
    ],
    "files": [
@@ -4462,6 +4518,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "··········B··"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-04",
+     "place": "ReadingsSpread.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-04.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "BSS"
     }
    ],
    "files": [
@@ -5256,6 +5323,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "·····N·····B·"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-05",
+     "place": "SetPointOptimum.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-05.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "SSN"
     }
    ],
    "files": [
@@ -7756,6 +7834,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "········B·B··"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-03",
+     "place": "LearnedGrouping.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-03.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "NBB"
     }
    ],
    "files": [
@@ -8945,6 +9034,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "··········B··"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-02",
+     "place": "HeldForReading.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-02.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "BNB"
     }
    ],
    "files": [
@@ -12636,6 +12736,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "···N·S··N···N"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-01",
+     "place": "Continuity.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-01.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "NNS"
     }
    ],
    "files": [
@@ -14166,6 +14277,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "········N··B·"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-01",
+     "place": "ExchangePremises.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-01.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "NSS"
     }
    ],
    "files": [
@@ -15721,6 +15843,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "N·········B··"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-02",
+     "place": "GrammarPath.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-02.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "SNS"
     }
    ],
    "files": [
@@ -15830,6 +15963,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "······B···B··"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-02",
+     "place": "GrammarScope.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-02.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "SNS"
     }
    ],
    "files": [
@@ -17099,6 +17243,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "·······S·····"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-02",
+     "place": "InAmounts.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-02.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "SNN"
     }
    ],
    "files": [
@@ -18690,6 +18845,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "·······S+····N"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-03",
+     "place": "Likeness.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-03.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "NSS"
     }
    ],
    "files": [
@@ -19451,6 +19617,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "S···D+·S+·S····"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-03",
+     "place": "MapInstances.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-03.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "NNS"
     }
    ],
    "files": [
@@ -19699,6 +19876,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "·······BBS·BD"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-03",
+     "place": "Metaethics.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-03.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "NNS"
     }
    ],
    "files": [
@@ -21146,6 +21334,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "········N····"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-04",
+     "place": "Postponement.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-04.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "NSS"
     }
    ],
    "files": [
@@ -22765,6 +22964,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "·······NS··S·"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-04",
+     "place": "Relevance.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-04.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "NSS"
     }
    ],
    "files": [
@@ -23098,6 +23308,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "········N····"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-05",
+     "place": "ReorderingGrowth.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-05.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "SSN"
     }
    ],
    "files": [
@@ -23208,6 +23429,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "·N···B+·S·····"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-05",
+     "place": "Resolution.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-05.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "BNN"
     }
    ],
    "files": [
@@ -25587,6 +25819,17 @@
      "returns": "../../fm-whole-read-2026-11-22/returns/whole-c.json",
      "caution": "a reader's return, unchecked; what the note mended is in the note",
      "letters": "········B·B··"
+    },
+    {
+     "read": "whole-edge",
+     "title": "22 November, the third pass on an exact edge, twenty modules read later",
+     "reader": "whole-c-edge3-05",
+     "place": "Tasks.lean: the edge",
+     "note": "../../fm-whole-read-2026-11-22/NOTE.md",
+     "report": "../../fm-whole-read-2026-11-22/reports/read-whole-c-edge3-05.md.txt",
+     "returns": "../../fm-whole-read-2026-11-22/returns/whole-edge3.json",
+     "caution": "a reader's return, unchecked; what the note mended is in the note",
+     "letters": "NSS"
     }
    ],
    "files": [

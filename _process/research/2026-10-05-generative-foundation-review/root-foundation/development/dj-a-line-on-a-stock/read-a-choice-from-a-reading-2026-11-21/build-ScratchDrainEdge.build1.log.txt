@@ -1,0 +1,40 @@
+start 01:55:03
+{
+  "tree": "/Users/ren/tmp/dj/batch25",
+  "modules": 157,
+  "ran": [
+    "Becoming.ScratchDrainEdge",
+    "BecomingScratchDrainEdgeAxiomAudit"
+  ],
+  "reused": 156,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchDrainEdge": {
+      "theorems": 29,
+      "declarations": 43,
+      "with_axioms": {
+        "Becoming.ScratchDrainEdge.eqv_false": [
+          "propext"
+        ],
+        "Becoming.ScratchDrainEdge.decode_pickB2": [
+          "propext"
+        ],
+        "Becoming.ScratchDrainEdge.updatesLevel": [
+          "propext"
+        ],
+        "Becoming.ScratchDrainEdge.level_kept_iff_closed": [
+          "propext"
+        ],
+        "Becoming.ScratchDrainEdge.starts_in_closed_family_level": [
+          "propext"
+        ]
+      }
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchDrainEdge": 3.207,
+    "BecomingScratchDrainEdgeAxiomAudit": 0.374
+  }
+}
+exit 0 build 1
+end 01:55:11

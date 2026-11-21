@@ -1,0 +1,199 @@
+*An AI reader who took no part's return (run as Claude Opus), word for word from the run's journal (wf_881fe824-e22); agents could not write report files, so this return is its report.*
+
+**Reader's report on /Users/ren/tmp/dj/batch25/Becoming/ScratchDrainEdge.lean (AI-written, Claude, 22 November 2026; read-only)**
+
+I found no false statement in the Lean. The coding meets both premises in the edge module's exact form, the build log is of this file, and the axiom report is empty. Two sentences in the worker's report say more than the Lean (findings 1 and 2). The rest are LESSER.
+
+## Findings
+
+**1. MUST. The verdict on D5 is wrong.**
+- Where: the worker's report, heading "D5: fails, as a guess against the step".
+- D5 is a disjunction: `updates` cannot be met without deciding something the logic leaves open, OR it is met only by a coding so hand-made that the instance says nothing new. The first arm fails. The worker then writes that the second is "partly true", and that applied to the starts the instance "gives nothing that the filed case analysis and `keptFor_of_closed` did not already give". By the worker's own account, then, D5 holds in its second arm.
+- Exact words: "D5: its first arm fails (`updates` is met under both readings with no axiom and nothing left undecided); its second arm holds of the starts: the codes are written by hand, and of the two starts the instance says nothing that `together_not_kept_none`, `together_kept_level` and `keptFor_of_closed` had not said."
+
+**2. MUST (loose). One telling note gives the number of codes as an edge.**
+- Where: the worker's report, "Telling notes": "The edge through a reading is the number of codes, not the number of configurations: 9 or 8 here".
+- Next to D4, where the pair's edge is 2, this can be read as the case's edge being 9. The frozen file's own wording invites the same reading.
+- Exact words: "The horizon at which `coded_kept_iff_closed` makes kept equal to closed is the length of the code list (9 under `noneRead`, 8 under `keepsLevel`), not the number of configurations (here `Bool × Nat`, which has no end; that is not proved). The pair's own edge under `noneRead` is 2: kept for 2 steps (`together_kept_two_none`, line 186) and not for 3 (filed `together_not_kept_none`). Not kept for any n ≥ 3 follows by `KeptFor.shorter` but is not stated."
+
+**3. LESSER. Two of the four carries the frozen file asks for are missing from the telling notes.**
+- Where: frozen file line 30.
+- Missing: "The converse of `code_horizon_of_kept` is false without `updates`" and "A reading that keeps only the lane also keeps the pair, so nothing is said of the level having to be registered."
+- Neither the module nor the report says the level must be registered, so nothing is wrong. The carries are simply absent and should be added.
+
+**4. LESSER. The count of 8 under D2 differs from the frozen guess of 7, and the report says nothing about it.**
+- Where: module lines 208–222, 240.
+- The 8 codes are: `both`, `empty`, and six singles.
+- By hand, under `codeProcess` (the code steps need `Usable` only, not the guard), every one of them is needed once `single b l1` is present. The reason: the move that does not match lane b takes (b,1) to (b,0) with value 0.
+- Exact words: "D2 holds with 8 hand-made codes, against 7 in the frozen guess. Whether a coding of 7 meets `updates` was not tested."
+
+**5. LESSER. The worker's explanation of the 9-code difference is a guess.**
+- Where: report, "This coding gets 9 without the empty class, because the class {(true,0),(false,0)} is a class of its own here".
+- No Lean and nothing I read checks why the other row's program counted the empty class. Exact words: "This coding has 9 codes and no empty code. The class seen under `noneRead` from a non-empty class is never empty, so none is needed."
+
+**6. LESSER. Two other sentences in the report go beyond what is shown.**
+- "The law's kept-to-closed direction is the only general road from a finite horizon to a closed family" claims more than any theorem. Exact words: "the one general road from a finite horizon to a closed family found in what was read".
+- "The filed 'kept for every n' was itself got from a family" is loose. `together_kept_level` (ScratchKeptForViable lines 406–409) takes one move `true`, then uses `lane_kept`, which is `keptFor_of_closed` with the lane family. No family holding the starts is built there. Exact words: "got from one step and the lane family".
+
+**7. LESSER. The description of `empty` is too narrow.**
+- Where: report, "`empty` ... is the code for a value that no configuration reaches".
+- It is also the code for a value the step from that class does not keep. For example, o = 0 after any move from the starts, even though level 0 is reached elsewhere.
+- Exact words: "the code of what is seen when no configuration of the class, under that move, ends at a level equal to o".
+
+**8. LESSER. The law's second form is not used.**
+- `coded_kept_iff_every_horizon` is not instanced, though it costs one line per reading. Example: under `noneRead`, every code class kept for 9 steps is kept for every n.
+- No claim is made of it, so nothing is wrong.
+
+**9. LESSER. Part of a filed proof is copied into the comparison theorem.**
+- Where: lines 436–442 of `starts_in_closed_family_level_direct`.
+- These lines copy the closure step of `Drain.lane_kept` (ScratchKeptForViable lines 304–311). The report says so ("a copy of the closure step"). This is a copied proof step, not a filed theorem proved again. The through-the-law theorems re-prove nothing.
+
+## Item 1: the coding, checked by hand
+
+**Codes under `noneRead`.**
+- `Lv` has three constructors. `Code := Lv × Lv`, so there are 9 codes.
+- `everyNone` (line 71) is a match over all 9 constructor pairs, so Lean checks that it covers every code. `allNone_length` is `rfl`.
+- `decode c` is {(true, c.1.val), (false, c.2.val)}, two configurations as the worker says.
+- `Drain.starts` is `s = (true,2) ∨ s = (false,2)`. `decode (l2,l2) s` unfolds to the same term, so `starts_code` is `Iff.rfl` (line 136). The two-starts code is `Drain.starts`, configuration by configuration.
+
+**`updatesNone` checked for three codes.** The value is always (), and `Drain.next` gives:
+
+| Code | Move | Configurations after the move | Code named by the proof | Matches |
+|---|---|---|---|---|
+| (2,2) | `true` | (true,2) stays (true,2); (false,2) goes to (false,1) | `move (2,2) true` = (2,1), decoding to {(true,2),(false,1)} | yes |
+| (2,2) | `false` | (true,1) and (false,2) | (1,2) | yes |
+| (0,0) | `true` | (true,0) and (false,0−1=0) | (0,0) | yes |
+| (0,0) | `false` | (true,0) and (false,0) | (0,0) | yes |
+| (1,0) | `false` | (true,0) and (false,0) | (0,0) | yes |
+| (1,0) | `true` | (true,1) and (false,0) | (1,0) | yes |
+
+- The class seen is never empty: from a non-empty class, every move has a step and the value is always ().
+- No empty code is needed. The quantifier is over codes only, and each code's class is non-empty.
+
+**Codes under `keepsLevel`.** The value is the level reached, any `Nat`.
+
+From `both` (the starts), under move a:
+
+| Value o | What is seen | Code named | Matches |
+|---|---|---|---|
+| 2 | {(a,2)} | `eqv l2 2 = true` gives `single a l2` | yes |
+| 1 | {(!a,1)} | `eqv l2 1 = false`, then `eqv l1 1 = true`, gives `single (!a) l1` | yes |
+| 0, 3, 7, … | nothing | both tests are false, giving `empty` (decodes to `False`) | yes |
+
+- `seen_starts` (line 326) states exactly this, and `decode_pickB2` matches it.
+- From `single true l1` under move `false`: `next (true,1) false` is (true,0), and `after true l1 false` is `l0`. The code named is `pickB true l0 (eqv l0 o)`: {(true,0)} at o = 0 and `empty` otherwise. That is right.
+- From `empty`, the code named is `empty`. Nothing is seen from `False`, which is right.
+- The empty class is handled by its own code.
+
+**Exact form, no weakening.** Both `updatesNone` (lines 127–128) and `updatesLevel` (lines 393–394) are stated as `∀ c a, Usable Drain.process everyMove (decode c) a → ∀ o, ∃ d, ∀ s, decode d s ↔ Seen Drain.process sense (decode c) a o s`. This is the edge module's `updates` (ScratchViableEdge lines 156–157), with P, allowed and sense filled in. It covers every code and every o, including the values that never occur, with no restriction to reachable codes. That the law accepts them unchanged is confirmed by `coded_kept_iff_closed (decode := …) every… updates…` compiling at lines 144 and 411.
+
+## Item 2: the theorems relied on
+
+**`coded_kept_iff_closed`** (ScratchViableEdge lines 161–182)
+- Statement, under `every : ∀ c, c ∈ all` and `updates`: `KeptFor P sense guard allowed all.length (decode c) ↔ InClosedFamily P sense guard allowed (decode c)`.
+- `.mp` is the new direction. It builds the family "classes inside some code class that has a `codeProcess` horizon of `all.length`".
+- `.mpr` is literally `keptFor_of_closed F within closed all.length held` (line 182).
+
+**`none_kept_iff_closed c`** (line 141)
+- What it states, for every code c: under `noneRead`, with every move allowed and the guard `above`, `decode c` is kept for 9 steps exactly when it lies in a closed family. No premise.
+- The report's sentence is exact.
+
+**`level_kept_iff_closed c`** (line 408)
+- The same under `keepsLevel`, for every one of the 8 `LCode`s, at 8 steps. No premise.
+- Exact.
+
+**`starts_in_no_closed_family_none`** (line 159) and `…_direct` (line 167)
+- Both state `¬ InClosedFamily Drain.process noneRead Drain.above everyMove Drain.starts`.
+- The report's sentences on both are exact.
+
+**`starts_in_closed_family_level`** (line 417) and `…_direct` (line 426)
+- Both state `InClosedFamily … keepsLevel … Drain.starts`.
+- Exact. The report's "About 18 lines" is 17.
+
+**`together_kept_two_none`** (line 186)
+- States `KeptFor … noneRead … 2 Drain.starts`. The route is move `true`, which keeps within the class of (2,1), then move `false`, which keeps within the class of (1,1). Both are inside the guard.
+- Exact.
+
+**`edge_two_codes_nine`** (line 198)
+- A conjunction: kept for 2, not kept for 3, and `allNone.length = 9`.
+- Exact.
+
+**`down_nine_three`** (line 148): six uses of `KeptFor.shorter`, which takes `n+1` to `n`. Exact.
+
+**Old theorems used**, statements as filed:
+- `together_not_kept_none`: `¬ KeptFor process noneRead above everyMove 3 starts`.
+- `together_kept_level`: `∀ n, KeptFor process keepsLevel above everyMove n starts`.
+- `keptFor_of_closed` (Keeping.lean line 311): a family within the guard and closed gives each member kept for every n.
+
+## Item 3: does the law do work in D3?
+
+**First half (no closed family under `noneRead`).**
+- It uses `.mpr`, and `.mpr` is `keptFor_of_closed` at horizon 9, by the law's own proof text (line 182). `down_nine_three` then brings 9 back to 3.
+- Strongest case that the law works: the theorem is written through the law's statement, so it shows the statement composes with the filed refutation.
+- Strongest case that it does not: `…_direct` is one line, with no codes, no `every` and no `updates`, and it proves the identical statement.
+- Answer: here the law is put in and taken out. "Lies in no closed family" is shorter without it.
+
+**Second half (a closed family under `keepsLevel`).**
+- It uses `.mp`, the new converse. That direction does real work: the family is produced by the law from the codes' horizons, and no one names it.
+- Strongest case that it works: this is the only half where a family has to be built, and the law builds it from a filed fact about steps.
+- Strongest case that it does not: `…_direct` writes the family in 17 lines from filed lemmas ("inside the starts, or one lane above zero"). That costs less than the roughly 200 lines of coding and `updates` the law needs. The filed `together_kept_level` already rested on `lane_kept`, which is `keptFor_of_closed`.
+- Answer: here the law is used, not put in and taken out. The statement it gives was within easy reach without it, so about the starts it adds no new fact.
+
+**What the instance shows that the filed case analysis did not:**
+- the two iffs for every coded class: 9 classes under `noneRead`, 8 under `keepsLevel`;
+- that both premises of the law can be met, with no axiom, on a concrete process whose configurations are `Bool × Nat` and whose values under `keepsLevel` are all of `Nat`.
+
+## Item 4: are the old theorems unchanged?
+
+Yes. The batch25 copy of ScratchKeptForViable.lean is byte-identical to batch24's copy and to the filed `ScratchKeptForViable.lean.txt` in the study `read-a-choice-from-a-reading-2026-11-21`. The batch25 copy of ScratchViableEdge.lean is identical to `tmp/fm/whole/lean-edge/ScratchViableEdge.lean.txt`. `together_not_kept_none`, `together_kept_level`, `starts_within`, `level_lane` and `next_own` are cited, not proved again.
+
+## Item 5: the build log
+
+**The log's result.** /Users/ren/tmp/dj/batch25/build-ScratchDrainEdge.log is identical to the build2 copy and shows:
+- `exit 0 build 2`;
+- `"unclean": []`;
+- `Becoming.ScratchDrainEdge` in `ran`, not reused;
+- 29 theorems and 43 declarations;
+- `"with_axioms": {}`.
+
+**Counts.** I count 29 `theorem`s in the file. The definitions and types are `Lv`, `val`, `lower`, `Code`, `decode`, `move`, `allNone`, `LCode`, `decodeL`, `allLevel`, `after`, `eqv`, `pickB` and `pickB2`: 14. That makes 29 + 14 = 43, matching the log.
+
+**What an empty axiom report means here.** `scratch_build.py` (lines 123–134) reads the list of declarations from the source at build time. It needs the explicit line "does not depend on any axioms" for each one, and puts "not reported" otherwise. So the empty report covers all 43. Because the report is transitive, it also covers `coded_kept_iff_closed` and its `rintro`/`rcases`/`refine` proof.
+
+**Timing.**
+- The file was last modified at 01:55:32.59. The log starts at 01:55:32 and ends at 01:55:42.
+- Build 1 started at 01:55:03 and named `propext` in `eqv_false`. Build 2 names nothing, so it compiled the fixed text.
+- An edit after the build began is excluded only to within that sub-second window. I take the log to be of the file as it stands.
+
+**Forbidden words.** A search for sorry, axiom, native_decide, decide, simp, omega, unsafe, Classical, propext, funext, admit, implemented_by and extern found only the word `propext` inside the docstring at line 284. The tactics used are `constructor`, `intro`, `obtain`, `subst`, `cases`, `exact` and `have`, plus `nomatch` on Boolean equations. The axiom report stays empty with them.
+
+## Item 6: told as a law, or the level made necessary?
+
+- Neither the module nor the report tells this built case as a law, or as what makes a course better.
+- Nothing says the level must be registered. The report also does not carry that a reading keeping only the lane keeps the pair (finding 3).
+- The number of codes is given as an edge in one loose sentence (finding 2).
+
+## Item 7: is anything gained, by the frozen file's own words?
+
+Neither D1 nor D2 fails, so by the frozen file's first test something holds: both premises of `coded_kept_iff_closed` are met with no axiom on a concrete process, with 9 and 8 hand-made codes. By its second test, D3's first half is the law put in and taken out, since its `.mpr` is `keptFor_of_closed`. The second half uses the new converse for real work, but the same statement follows directly from filed lemmas in 17 lines, so nothing is gained about the two starts themselves. D5 therefore holds in its second arm, not "fails". The gain is the law's first instance, and that the law's two iffs hold for every coded class.
+
+**Kept whatever the verdict:**
+- the premises can be met on a concrete process with no axiom;
+- `nomatch` on equations of numbers brings `propext`, and `Nat.noConfusion` through `succ_not_zero` avoids it;
+- `nomatch` on Boolean equations brings none;
+- under `noneRead` the codes number 9 and no empty code is needed;
+- under `keepsLevel` the codes number 8 (the frozen guess was 7);
+- under `noneRead` the pair is kept for 2 steps and not for 3;
+- under `keepsLevel` the starts lie in a closed family.
+
+## What I did not read
+
+- The two readers' returns in tmp/fm/whole/lean-edge/, and its PROMPT, REPORT and break/.
+- ScratchViableEdge lines 1–119.
+- ScratchKeptForViable lines 81–254 and 430–495.
+- Keeping.lean outside lines 70–99 and 262–319.
+- The rest of `scratch_build.py` beyond lines 72–141.
+
+I made no claim from any of these.
+
+Tool calls: 17.

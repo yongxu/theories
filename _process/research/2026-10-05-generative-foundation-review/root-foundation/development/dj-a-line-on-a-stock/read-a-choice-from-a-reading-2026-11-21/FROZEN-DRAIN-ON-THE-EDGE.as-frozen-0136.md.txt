@@ -1,0 +1,39 @@
+# A built case set on the edge law: can its premises be met with no axiom, and what does it then say? Fixed before any Lean is written
+
+*AI-written (Claude Fable, board row DJ), 22 November 2026, 01:36 WIB, before any agent ran and before any Lean was written for it. Frozen: nothing above the line "After" is changed later. Kept for, seen, usable, closed family are the Lean's names; code, lane, level are working words. A built case in scratch, outside the package; nothing general is claimed by it.*
+
+## What we are doing
+
+One map of how things come to be, go on, change and end. On 22 November the session that holds row FM had a scratch module written, `ScratchViableEdge` (text and two readers' returns in `tmp/fm/whole/lean-edge/`): where the classes a reading can tell apart are finitely coded, a class is kept for as many steps as there are codes exactly where it lies in a closed family, and exactly where it is kept for every number of steps (`coded_kept_iff_closed`, `coded_kept_iff_every_horizon`). Two readers who took no part left it standing. Both said one thing is untested: no Lean declaration meets its two premises (`every`: a list of every code; `updates`: from a coded class, after a usable move and any value kept, some code decodes exactly to what is seen), so whether they can be met for a concrete process with no axiom is not known.
+
+This row has a built case that fits (`Drain`, in `ScratchKeptForViable`, filed in the study `read-a-choice-from-a-reading-2026-11-21`): two lanes and a level; the move that matches the lane keeps the level and the other lowers it by one, stopping at zero; the guard is that the level is not zero; the two starts are the two lanes at level 2. Proved there by case analysis: each start alone is kept for every number of steps under the reading that keeps nothing; the two together are not kept for 3 steps under it; they are kept for every number of steps under the reading that keeps the level reached, and under the one that keeps where the step ended.
+
+## The choice, set against the direction
+
+It tests a law that another row means to claim for the package, on the one built case this row kept from last night. If the premises cannot be met with no axiom on so small a case, the law is narrower than its statement looks, and that is worth knowing before it is claimed. If they can, the case becomes the first instance, and the law says of it something the case analysis did not: where its edge is, exactly. It places nothing between the two ways, and it has no share and no lock. This try differs from what the direction page already says is missing in that it adds nothing to that list; it is a test of one law's premises.
+
+## The guesses (each may be false)
+
+- **D1.** For the reading that keeps nothing: a finite type of codes, a list of every code and a decoding can be given for which `every` and `updates` hold, with no axiom, the two starts together being one of the codes. A program of the other row's reader counted 9 codes by closure, the empty class among them.
+- **D2.** The same for the reading that keeps the level reached (7 codes by that count). Here the values kept are numbers, without end; `updates` asks a code for every value, the ones that never come included.
+- **D3.** Through the law: under the reading that keeps nothing the two starts lie in no closed family; under the reading that keeps the level reached they lie in one. Each is got from `coded_kept_iff_closed` and the theorems already filed (`together_not_kept_none`, `together_kept_level`), with their statements unchanged and not proved again.
+- **D4.** The law's number is not the case's edge: under the reading that keeps nothing the pair is kept for 2 steps and not for 3, while the codes are 9. So "kept for as many steps as there are codes" is exact as a test and loose as a count. Stated as theorems: kept for 2, not for 3.
+- **D5 (against the step).** `updates` cannot be met here without deciding something the package's logic does not decide (as last night, where one empty class cost a premise), or only by a coding so hand-made that the instance says nothing the case analysis had not said. Then the instance is told as that.
+
+## What would count as nothing gained
+
+- D1 or D2 fails: the premises are not met with no axiom. That is the result, with the exact place.
+- D3 holds only by proving the old theorems again inside the instance, or the law is put in and taken out (a reader who took no part judges: does `coded_kept_iff_closed` do work in the proof of D3, and would "lies in no closed family" be as short without it?).
+
+## What a telling must carry (from the other row's two readers)
+
+Through a reading the edge is at the number of codes, not of configurations. The converse of `code_horizon_of_kept` is false without `updates`. A reading that keeps only the lane also keeps the pair, so nothing is said of the level having to be registered. The level in this case runs down only under the move that does not match the lane.
+
+## How it is done, and what it costs
+
+One AI worker (capped at 45 tool calls) writes one scratch module outside the package, in this row's own scratch tree (a copy of the other row's two modules beside this row's), built one module at a time. One AI reader who took no part (capped at 25) reads it and answers the question above. The writer adds a section to the note of the study that holds `Drain`, and one checker (capped at 25) sets it against the module. The ceiling is 0.5 million tokens. The claim is on the board's row DJ before the worker starts. Nothing enters the package.
+
+---
+
+## After
+

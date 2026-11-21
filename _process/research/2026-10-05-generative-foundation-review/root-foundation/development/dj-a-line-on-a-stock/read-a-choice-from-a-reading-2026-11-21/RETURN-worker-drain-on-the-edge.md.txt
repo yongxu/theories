@@ -1,0 +1,142 @@
+*An AI worker's return (run as Claude Opus), word for word from the run's journal (wf_881fe824-e22); agents could not write report files, so this return is its report.*
+
+Module: /Users/ren/tmp/dj/batch25/Becoming/ScratchDrainEdge.lean (446 lines). Last build log line: `exit 0 build 2`, with `"unclean": []` and `"with_axioms": {}`. The module has 29 theorems and 43 declarations. The full log is /Users/ren/tmp/dj/batch25/build-ScratchDrainEdge.log, with a copy at /Users/ren/tmp/dj/batch25/build-ScratchDrainEdge.build2.log.
+
+Build 1 also exited 0 with nothing unclean. Its axiom report named `propext` in five declarations: `eqv_false`, `decode_pickB2`, `updatesLevel`, `level_kept_iff_closed` and `starts_in_closed_family_level`. The cause was `nomatch` on equations between numbers, such as `1 = n+2` and `2 = 1`. I replaced those with `succ_not_zero` (from ScratchKeptForViable, written with `Nat.noConfusion`), applied through `congrArg Nat.pred` where needed. `nomatch` on Boolean equations (`true = false`) brought no axiom.
+
+## Judgement of the earlier worker's 190 lines
+
+Its coding is sound, and I kept it (lines 1–203), changing only the `everyNone` proof.
+
+The coding is a pair of levels, one for each lane, with `decode (i, j) = {(true, i), (false, j)}`. It meets `updates` as the edge module states it. Under `noneRead` the value kept is the unit. A move from a non-empty class gives its image under `next`, and that image is exactly `decode (move c a)`. So the class seen is never empty, and no empty code is needed.
+
+The closure from the starts reaches all nine pairs:
+- (2,2)
+- (2,1) and (1,2)
+- (1,1), (2,0) and (0,2)
+- (1,0) and (0,1)
+- (0,0)
+
+That is nine classes and no empty class. The frozen file's count was 9 "the empty class among them". This coding gets 9 without the empty class, because the class {(true,0),(false,0)} is a class of its own here.
+
+I replaced `everyNone`'s `cases <;> repeat (first …)` with nine membership terms written out, because the tactic form was unverified.
+
+## Codes in plain words
+
+- **Under noneRead (9 codes, type `Lv × Lv`, with `Lv` = levels 0, 1, 2).** Each code is a pair: the level of lane `true`, then the level of lane `false`. The pairs are (0,0), (0,1), (0,2), (1,0), (1,1), (1,2), (2,0), (2,1) and (2,2). The code decodes to the two configurations "lane true at the first level" and "lane false at the second level". The two starts are the code (2,2).
+- **Under keepsLevel (8 codes, type `LCode`):**
+  - `both`: the two starts together, decoding to `Drain.starts`.
+  - `empty`: decodes to False. It is the code for a value that no configuration reaches.
+  - `single b k`: one configuration, lane b at level k. There are six of these: true at 0, 1 and 2, and false at 0, 1 and 2.
+
+## D1: holds
+
+- **`everyNone`** (line 71): `∀ c : Code, c ∈ allNone`. No premise. It is proved by nine `List.Mem` terms.
+- **`updatesNone`** (line 127):
+  ```
+  ∀ c a, Usable Drain.process everyMove (decode c) a → ∀ o, ∃ d, ∀ s, decode d s ↔ Seen Drain.process noneRead (decode c) a o s
+  ```
+  No premise. The usability hypothesis is not used. The witness is `d = move c a`. It is proved from `decode_move` (line 103) and `seen_in` (line 115), and those from `Lv.val_lower`.
+- **`starts_code`** (line 136): `∀ s, Drain.starts s ↔ decode (l2, l2) s`. The proof is `Iff.rfl`, so the two starts together are one code by definition.
+- **`none_kept_iff_closed`** (line 141):
+  ```
+  KeptFor Drain.process noneRead Drain.above everyMove allNone.length (decode c) ↔ InClosedFamily Drain.process noneRead Drain.above everyMove (decode c)
+  ```
+  This holds for every code c. It is `coded_kept_iff_closed (decode := decode) everyNone updatesNone`.
+
+## D2: holds
+
+- **`everyLevel`** (line 225): `∀ c : LCode, c ∈ allLevel`. No premise.
+- **`allLevel_length`** (line 240): `allLevel.length = 8`, by `rfl`.
+- **`updatesLevel`** (line 393):
+  ```
+  ∀ c a, Usable Drain.process everyMove (decodeL c) a → ∀ o, ∃ d, ∀ s, decodeL d s ↔ Seen Drain.process Drain.keepsLevel (decodeL c) a o s
+  ```
+  No premise. The usability hypothesis is not used. It covers every `o : Nat`, including the values no configuration reaches. The witness depends on the code:
+  - For `both`, the witness is `pickB2 a o (eqv l2 o)`. That is lane a at level 2 where o = 2, the other lane at level 1 where o = 1, and `empty` otherwise.
+  - For `empty`, the witness is `empty`.
+  - For `single b k`, the witness is `pickB b (after b k a) (eqv (after b k a) o)`. That is the single code where o is the level reached, and `empty` otherwise.
+
+  It is proved from:
+  - `seen_starts` (line 326), by case analysis on the move and on the two starts, using `subst`.
+  - `seen_single` (line 310).
+  - `next_single` (line 252).
+  - `decode_pickB` (line 303) and `decode_pickB2` (line 375).
+  - `eqv_true` (line 272) and `eqv_false` (line 285).
+- **`level_kept_iff_closed`** (line 408):
+  ```
+  KeptFor Drain.process Drain.keepsLevel Drain.above everyMove allLevel.length (decodeL c) ↔ InClosedFamily Drain.process Drain.keepsLevel Drain.above everyMove (decodeL c)
+  ```
+  It is `coded_kept_iff_closed (decode := decodeL) everyLevel updatesLevel`.
+
+Values are unbounded, yet `updates` needed no decision the logic leaves open. The Boolean `eqv k o` is written by explicit cases (0, 1, 2 and `n+3`). Its two lemmas give `k.val = o` or `k.val ≠ o`, and the code is chosen by a function on that Boolean (`pickB`, `pickB2`). That removes any need for `Decidable` instances, `if`, or excluded middle.
+
+## D3: holds, both halves
+
+- **First half, `starts_in_no_closed_family_none`** (line 159):
+  ```
+  ¬ InClosedFamily Drain.process noneRead Drain.above everyMove Drain.starts
+  ```
+  No premise. A closed family gives, through `(none_kept_iff_closed (l2, l2)).mpr`, kept for `allNone.length` (9) steps. `down_nine_three` (line 148, `KeptFor.shorter` six times) brings that to 3 steps, and the filed `Drain.together_not_kept_none` refutes it. The filed theorem's statement is unchanged and not proved again. The class `decode (l2, l2)` is `Drain.starts` by definition, so the theorem is stated directly on `Drain.starts`.
+- **First half without the codes, `starts_in_no_closed_family_none_direct`** (line 167): the same statement, proved by `fun ⟨F, held, within, closed⟩ => Drain.together_not_kept_none (keptFor_of_closed F within closed 3 held)`. Neither `every` nor `updates` is used.
+- **Second half, `starts_in_closed_family_level`** (line 417):
+  ```
+  InClosedFamily Drain.process Drain.keepsLevel Drain.above everyMove Drain.starts
+  ```
+  No premise. It is `(level_kept_iff_closed .both).mp (Drain.together_kept_level allLevel.length)`, using the filed theorem unchanged.
+- **Second half without the codes, `starts_in_closed_family_level_direct`** (line 426): the same statement. The family is written out as "the classes within the starts, or the classes in one lane above zero". It is proved from the filed `Drain.starts_within`, `Drain.level_lane` and `Drain.next_own`, plus `Seen.mono` and `usable_all`. About 18 lines, most of them a copy of the closure step in `lane_kept`.
+
+## D4: holds
+
+- **`together_kept_two_none`** (line 186):
+  ```
+  KeptFor Drain.process noneRead Drain.above everyMove 2 Drain.starts
+  ```
+  No premise. The moves are `true` then `false`, through the codes (2,1) and then (1,1). It is proved from `code_within`, `usable_all`, `seen_in`, `KeptFor.mono` and `succ_not_zero`.
+- **`edge_two_codes_nine`** (line 198):
+  ```
+  KeptFor … 2 Drain.starts ∧ ¬ KeptFor … 3 Drain.starts ∧ allNone.length = 9
+  ```
+  The dots stand for `Drain.process noneRead Drain.above everyMove`. It combines `together_kept_two_none`, the filed `together_not_kept_none` and `allNone_length` (line 88, by `rfl`).
+
+So the case's edge is 2 steps, and the law's count is 9. Under keepsLevel the count is 8, and the pair is kept for every horizon.
+
+## D5: fails, as a guess against the step
+
+`updates` is met under both readings with no axiom and nothing left undecided. The one place that came near it was the cases of numbers in `eqv_false` and `decode_pickB2`. There `nomatch` brought `propext`, and `Nat.noConfusion` (through `succ_not_zero` and `Nat.pred`) removed it.
+
+The guess's second half, "a coding so hand-made that the instance says nothing new", is partly true. The codes are written by hand. They are not computed, and no theorem says they are the classes reachable by closure. They are only a cover that `updates` holds for. The instance gives an exact, checked statement about every coded class at once (D1's iff for all 9 codes, and D2's for all 8). Applied to the starts, it gives nothing that the filed case analysis and `keptFor_of_closed` did not already give.
+
+## Does `coded_kept_iff_closed` do work in D3?
+
+My answer is no for the first half, and only nominally for the second.
+
+**Case that it does no work.**
+- First half: `starts_in_no_closed_family_none_direct` is one line, with no codes, `every` or `updates`. The law's closed-to-kept direction is `keptFor_of_closed`, which works at any horizon, including 3. Going through the law adds 9 steps of horizon only to shorten them again with `down_nine_three`. That is the law put in and taken out.
+- Second half: the law's kept-to-closed direction is the one with content. But the filed `together_kept_level` was itself proved by `keptFor_of_closed` with a lane family, and the direct family costs about 18 lines, against about 200 lines of codes and the `updates` proof.
+
+**Strongest case that it does work.** The law's kept-to-closed direction is the only general road from a finite horizon to a closed family. In the second half it turns a filed fact about steps (kept for 8) into the closed family without anyone naming a family. And `none_kept_iff_closed` / `level_kept_iff_closed` speak of every coded class, not only the starts.
+
+That is a real gain where kept-for-n is easy and the family is hard to find. Here it is the other way round. The filed "kept for every n" was itself got from a family, so on this case the gain is not shown.
+
+So "lies in no closed family" is as short without the law (shorter, in fact). "Lies in a closed family" is about as short without it, given the lane family already filed.
+
+## Telling notes from the frozen file (true of this case, not proved as new theorems)
+
+- The edge through a reading is the number of codes, not the number of configurations: 9 or 8 here, and the configurations are infinite.
+- The case's own edge under noneRead is 2.
+- The level runs down only under the move that does not match the lane (`next_single`, `after`).
+
+## What I did not read, and counts
+
+I did not read:
+- The two readers' returns in /Users/ren/theories/tmp/fm/whole/lean-edge/.
+- The rest of `ScratchViableEdge` beyond its header and the Readings section (I read lines 1–40 and 100–end).
+- The middle of `ScratchKeptForViable` (lines 81–254, apart from `noneRead`, `endRead` and `everyMove` at the top).
+- Keeping.lean outside lines 60–100 and 260–320.
+
+I made no claim from any of these.
+
+Tool calls: 9 (this report included as none). Builds: 2.
+
+I edited no file under /Users/ren/theories and no other file in batch25, and made no git action. Per the machine rule, I ran only the one-module build. The full suite and the gate were deliberately not run.

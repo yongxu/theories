@@ -28,6 +28,8 @@ The script removes, by name, the pages it wrote at its last run and no other fil
 
 At that run: 461 places, 447 of them one file, 3 a name several files carry, 11 no file; 85 with a row in the table; 436 in at least one read. Every module of the package has a page. Lean outside the package was not read by the whole read.
 
+*Added later on 22 November.* Row FM found that twenty modules belonging to an edge batch had been read by no edge reader, because its counts went by the first letter of each answer; they were read by five more readers, and their returns are in the listing as the same read (149 places now have an edge return). Its figures of agreement between the two passes, quoted below, are counted by the first letter only; counted by any part of an answer the passes differ in 665 cells, not 658 (the coordinating session's recount).
+
 What row FM's note says of how far a letter can be trusted, which a user of this listing needs: neither pass's "not found" stands by itself (the third pass, at the statements, found the thing there in 312 of the 503 cells where pass b said not found and pass a did not, and in 85 of the 155 the other way); a cell that both passes agreed was not found was tried by nobody again; and an S says where a statement is and what it concludes, and is not a list of its premises.
 
 ## What it is not
