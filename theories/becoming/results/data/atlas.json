@@ -3845,6 +3845,7 @@
       "chain": [
        "Becoming.TurningInTime.turned_meets_iff",
        "Becoming.TurningInTime.turned_meets_of_above",
+       "Becoming.TurningInTime.turned_meets_of_above_of_stays_below",
        "Becoming.RegimeMargin.holds"
       ]
      },
@@ -3856,6 +3857,20 @@
        "Becoming.TurningInTime.recoverable_iff_above",
        "Becoming.TurningInTime.recoverable_of_above",
        "Becoming.TurningInTime.turned_meets_of_above",
+       "Becoming.TurningInTime.turned_meets_of_above_of_stays_below",
+       "Becoming.RegimeMargin.holds"
+      ]
+     },
+     {
+      "dynamics": [
+       "margin-of-a-regime"
+      ],
+      "chain": [
+       "Becoming.TurningInTime.noReturnAt_iff_first_below",
+       "Becoming.TurningInTime.noReturnAt_iff_first_below_of_stays_below",
+       "Becoming.TurningInTime.recoverable_iff_above_of_stays_below",
+       "Becoming.TurningInTime.recoverable_of_above_of_stays_below",
+       "Becoming.TurningInTime.turned_meets_of_above_of_stays_below",
        "Becoming.RegimeMargin.holds"
       ]
      },
@@ -3866,8 +3881,9 @@
       "chain": [
        "Becoming.TurningInTime.noReturnAt_of_below",
        "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.recoverable_decided",
-       "Becoming.TurningInTime.recoverable_of_above",
-       "Becoming.TurningInTime.turned_meets_of_above",
+       "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.recoverable_decided_of_stays_below",
+       "Becoming.TurningInTime.recoverable_of_above_of_stays_below",
+       "Becoming.TurningInTime.turned_meets_of_above_of_stays_below",
        "Becoming.RegimeMargin.holds"
       ]
      },
@@ -3878,8 +3894,9 @@
       "chain": [
        "Becoming.TurningInTime.noReturn_exists",
        "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.recoverable_decided",
-       "Becoming.TurningInTime.recoverable_of_above",
-       "Becoming.TurningInTime.turned_meets_of_above",
+       "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.recoverable_decided_of_stays_below",
+       "Becoming.TurningInTime.recoverable_of_above_of_stays_below",
+       "Becoming.TurningInTime.turned_meets_of_above_of_stays_below",
        "Becoming.RegimeMargin.holds"
       ]
      },
@@ -3890,6 +3907,7 @@
       "chain": [
        "Becoming.TurningInTime.turns_in_time_iff_before",
        "Becoming.TurningInTime.turned_meets_of_above",
+       "Becoming.TurningInTime.turned_meets_of_above_of_stays_below",
        "Becoming.RegimeMargin.holds"
       ]
      },
@@ -193434,18 +193452,18 @@
   "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
   "toolchain": "leanprover/lean4:v4.29.1",
   "printed_from": {
-   "commit": "44b7d93930b3e2835e40b098b8a329ec4d8da02f",
-   "core_run": "20261122T194452.040858Z"
+   "commit": "c9f7a506393259d54714a7e966fb12b2426ee7c4",
+   "core_run": "20261122T223138.659438Z"
   },
-  "core_sources_sha256": "c895f22fb4b732be9270ea3200ea2ac72ce336f7f95b2ca74453a2c234164503",
+  "core_sources_sha256": "4b3737f00b30c00d883b4941e59148cadcbabaa80ebfff42b1dc8b9e56bd1484",
   "counts": {
    "modules": 414,
-   "theorems": 20765,
+   "theorems": 20774,
    "uses_without_row": 20
   },
   "counted": {
    "modules": 414,
-   "theorems": 20765,
+   "theorems": 20774,
    "uses_without_row": 20
   },
   "binds_receipt": true,

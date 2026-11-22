@@ -205,6 +205,7 @@ Reading (AI-written, from the study note): falls_to_unmet is this model's form o
 | review | [11-map-card-refuter.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/readers/11-map-card-refuter.md) | — |
 | review | [12-sweep-of-the-registering-texts.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/readers/12-sweep-of-the-registering-texts.md) | — |
 | provenance | [2026-11-13-the-map-one-model.md](../../../../sources/15-codex-theory-conversations/2026-11-13-the-map-one-model.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T223138.659438Z/verification.json) | — |
 
 Aliases: `a line on a stock`, `units that leave offspring on a renewed level`, `Becoming.LineOnAStock.need_unmet`, `Becoming.LineOnAStock.falls_to_unmet`, `Becoming.LineOnAStock.unending_iff_holds`, `Becoming.LineOnAStock.ways_alike`
 

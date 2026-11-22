@@ -128,6 +128,7 @@ Cooperative (monotone) dynamical systems keep the order of states and their exti
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T003431.870467Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T010039.815631Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T223138.659438Z/verification.json) | — |
 
 Aliases: `coupled regimes`, `a margin that is not its own`, `the point of no return of a coupled condition`, `coextinction under a draw`, `耦合的体制`, `Becoming.RegimeMargin.Coupled.ends_iff_below`, `Becoming.RegimeMargin.Coupled.threshold_falls`, `Becoming.RegimeMargin.Coupled.ends_after`
 

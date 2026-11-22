@@ -11622,7 +11622,7 @@
    "type": "module",
    "name": "Becoming.TurningInTime",
    "level": "L2",
-   "theorems": 81,
+   "theorems": 89,
    "region": "map",
    "base": "general",
    "on_grammar": true,
