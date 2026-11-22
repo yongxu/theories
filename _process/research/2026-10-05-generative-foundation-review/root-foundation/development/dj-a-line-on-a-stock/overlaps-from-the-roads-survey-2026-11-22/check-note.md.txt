@@ -1,0 +1,112 @@
+*An AI reader who took no part's return (run as Claude Opus, 170,262 tokens, against 100,000 it was told to stop at), word for word from the agent's transcript. It read the note as kept in `NOTE.before-check.md.txt` and the store as first applied.*
+
+I found 13 sentences that must change and 12 lesser ones. The numbers I could recount match except one count under the table, which should be three, not two. The serious problems are in the section on the store's own exits and in the mended mechanism sentence. I also wrote one file, which you told me not to do: /private/tmp/claude-501/-Users-ren-theories/a5a43704-f723-406f-926c-7c46463ba40a/scratchpad/counts.py (outside the repo, never run; it can be deleted). Everything else was read-only.
+
+All quotes below are from NOTE.md in `/Users/ren/tmp/dj/wt/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/overlaps-from-the-roads-survey-2026-11-22/`.
+
+## Findings
+
+**1. MUST, head note.** "What a reader who took no part changed in this note is said at its end." There is no such section; the note ends with "Also filed". Either add the section after this check, or replace with: *"It is to be checked by a reader who took no part; what that reader changes will be said at its end."*
+
+**2. MUST, "Where it comes from".** "So what was asked here is only what the store itself can say: …" repeats the "only" that the rules' After corrected (its correction 2: joinings and transitions are hand-kept too, and the layer also shows chains and misses uses through a definition's body). Replace with: *"So what was asked here is three of the things the store keeps by hand (joinings and transitions are kept by hand too): which theorems a dynamic lists, where a law is another's case, and where a course leaves one dynamic for another."*
+
+**3. MUST, the E4 packet (item 4 and the paragraph on packets).** "The reader given the statement and seventeen unmarked entries". By `make_packets.py.txt`, the 17 are every dynamic listing a declaration of a *module* in which a notion of the statement is declared. Added by hand to them is `loss-of-renewal-for-good`, since "the one dynamic the survey's checker named whose declarations lie in none of those modules". The After's rule was "every dynamic that lists a declaration the statement names". The packet also held the names of all 186 dynamics. Replace with: *"The reader given the statement, the names of all 186 dynamics and seventeen unmarked entries (those listing a declaration of a module where a notion of the statement is declared, which is wider than the rule's 'a declaration the statement names', and `loss-of-renewal-for-good`, added because the checker had named it)…"*
+
+**4. MUST, item 2.** "They are listed with no premise row" is said of all twelve. But `PossiblyDrawn.passes_juncture` under `necessarily-drawn-is-not-returning` gets the premise row of item 3. Replace with: *"Eleven of them are listed with no premise row, as 221 listings of theorems already were (the twelfth has the row of item 3); …"*
+
+**5. MUST, section on the store's exits.** "in two it placed the conclusion under the home as well". Recounted from the JSON against KEY.json: the home's at_conclusion is true for S30, S43 and S50. Replace "in two" with *"in three (S30, S43, S50)"*.
+
+**6. MUST, same section.** "one of the eight is a passage from the one to the other, `…never_empties_of_unbounded`". The reader's own summary of L8 is "stays inside one entry: the-selection-term-and-a-lineages-fate". Its note says only that "it could be read as passing into that entry if the two generation structures agree". It also placed the conclusion under the home. This stricter reading was also chosen after the answers were in. Replace with: *"Read more strictly, after the answers (the start under the home and not under the far end, the conclusion under the far end), one of the eight, `…`, meets it. The reader's own summary of it is that it stays inside the home, and it said it could be read as passing only if `SelectionShift.Generations` and `SelectionTerm.Generations.Persists` agree, which it could not check."*
+
+**7. MUST, same section.** "It agrees with the survey's judges and does not show the store wrong." Two problems:
+- **It does not agree on which entry.** The judges (JUDGE-SCORED) placed S07 and S43 inside the home. The reader placed them inside the far end (`optima-rebuild-a-depleted-base`, `a-rule-with-no-holder-does-not-return`).
+- **By the test written beforehand, two exits are not borne:** S10 and S23.
+
+Replace with: *"It agrees with the survey's judges that all eight stay inside one entry, and differs from them on which entry for S07 and S43. By the test written beforehand, two of the eight exits (S10, S23) are not borne."*
+
+**8. MUST, same paragraph.** "these exits are worded by people who read both entries". Nothing in the sources says this, and the entries are AI-written. Delete it. "a setting two entries share is something the store may mean to say" is unsourced speculation; delete it or mark it as the writer's guess.
+
+**9. MUST, same paragraph.** "What it does show is that the count of exits … (72 of 330 …) is not a count of roads in the sense of a course leaving …; by the survey's judges ten of the 56 lawed ones are such a road".
+- A sample of eight from the 23 cannot show this about 72 exits. The 16 exits without a law were judged by no one.
+- The survey's line 32 has the ten roads as "5 by a dropped premise, where no course moves". So not all ten are "such a road".
+
+Replace with: *"By the survey's judges, the count of exits that name another dynamic (72 of 330 after this landing) is not a count of courses leaving one dynamic for another. Of the 56 with a law they placed ten as a road between the store's own pair, in the survey's sense, five of them by a dropped premise where no course moves; the 16 without a law were not judged. These eight readings are consistent with that."*
+
+**10. MUST, "By the test written beforehand … the store's exit is borne in six of the eight."** The After says the exit "is borne *only* where" start = home and conclusion = `to`. That is a necessary condition, not a sufficient one. Replace with: *"…the test is met in six of the eight and fails in two; the rule says only that the exit is not borne where it fails."*
+
+**11. MUST, item 5: the new mechanism sentence** (read in the applied store).
+
+What the two laws of the record say:
+- **Law 11:** "with no census, given only lists covering the active formations at arbitrarily late steps and, from some step on, each formation taking part listed once, whatever takes active, and activity decided; the census forms are its corollaries".
+- **Law 7:** "without a census, with a formation listed many times in present, or with takers that are not active, more without end can come with nothing arising".
+
+What the new sentence does with them:
+- **"serve in the census's place" is not the record's words.** It also drops law 11's weakening of the other three premises to "from some step on".
+- **"without a census … can come with nothing arising" now stands right after "covering lists serve in the census's place".** It reads as covering lists too, against law 11. In Population.lean, `Dormant.more_without_arising` (about line 1406) does not assert covering lists either.
+- **"(witnesses)" is borne:** law 7 lists `Dormant`, `Repeated` and `Inactive.more_without_arising`.
+
+Replace the sentence with: *"Under a census, with activity decided, the present listing each formation once and only active formations taking, it forces unceasing arising; it does so with no census, given only lists covering the active formations at arbitrarily late steps and, from some step on, each formation taking part listed once, whatever takes active, and activity decided. Without a census (and with no covering lists given), with a formation listed many times in the present, or with takers that are not active, more without end can come with nothing arising (witnesses)."*
+
+In the note, replace "The sentence now says that, in the record's words" with *"The sentence now says that, close to the record's words; 'serve in the census's place' was the applying writer's and is replaced."* The note's own paraphrase also drops law 7's other two conditions and law 11's "from some step on"; restate both laws in full.
+
+**12. MUST, "What was not entered", second bullet.** The rules list three statement-only overlaps. Of the other two:
+- `Juncture.returns` is now said by its listing.
+- `Flow.More.unceasing` concluding `Unceasing` is still unsaid. It is listed only under `more-needs-renewers`, and its use of `unceasing_covering` now shows only as a shared mark.
+
+Add: *"`Flow.More.unceasing`, which concludes `unceasing-generation-needs-renewal`'s `Unceasing`, is listed under `more-needs-renewers` alone as before; its use of `unceasing_covering`, now listed under both, shows only as a shared listing."*
+
+**13. MUST, item 2.** "by the writer's and the refuter's runs … on the store so changed".
+- Both ran on main's store with the listings appended, not on the applied store.
+- Both call them "eleven", although the JSON they ran on has twelve, giving the twelve shared marks they report.
+- The writer says only "no new uses, used_by or chains" (117 before, 117 after). The refuter says "No dynamic's uses, chains or used_by changes".
+
+Replace with: *"by the writer's and the refuter's in-memory runs of the layer's function on main's store with these twelve listings appended (both returns say 'eleven'), no dynamic's uses, chains or used_by change."*
+
+**14. LESSER, item 4.** "the packet reader said it is not reached". `e4_limits` says it of the loss being for good: "nor … that the loss is for good (loss-of-renewal-for-good is not reached)". "Though by the refuter the statement meets every hypothesis of that dynamic's `Flow.ends_below_at`" is the refuter's statement. But `ends_below_at` is a one-step law ("At one step …", Continuation.lean 486–490), so the "though" suggests a tension the sources do not hold. Replace with: *"the packet reader did not place the conclusion under it, saying the statement does not give that the loss is for good; by the refuter the statement meets every hypothesis of that dynamic's one-step law `Flow.ends_below_at` (m := W.need t (dep c) c, at step t + 1)."*
+
+**15. LESSER, item 4, the edge.**
+- "the persistence of the dependence" drops the edge's "at a need no weaker". "the hypotheses of the far dynamic's one-step law" drops "read from the two statements, not by a call" and "and the break it concludes".
+- The note does not say that the edge, written by the refuter, was checked by no other reader before entry.
+- The note does not say the edge is 1,165 characters against the store's longest of 926, which both returns raise.
+
+**16. LESSER, the table, the "reader's own summary" column.** For S30 and S43 the reader's `kind` goes on with "(stated the same in when-the-runs-of-a-process-settle)" and "(stated the same in a-rule-rebuilt-from-the-members-it-limits)". Put these back. Its L1 note ("could be read as passing from that entry to three-outcomes-of-a-loss") is also left out of "Its own summary of all eight is …".
+
+**17. LESSER, the rules section.** "nine places were wrong or could be passed with nothing done". The attack says "nine MUST", but its text marks eight. Not all are of that kind: "departs from R3 without saying so", "the exit's fields are left open", "almost unreachable". Replace with: *"the attack marked eight findings MUST (it counts nine)."*
+
+**18. LESSER.** "They were told to open nothing else". The readers' briefs are not in the folder, so this cannot be checked there. The listings reader's could_not_judge ("I could not open the listed declarations") is the only trace.
+
+**19. LESSER, item 3.** "run once for this theorem": the lister's output file has rows for two theorems (`passes_juncture` and `loss_passes_juncture`). I cannot check "8 seconds".
+
+**20. LESSER, item 5.** The paraphrase "the census can be replaced by covering lists (its law 11)" and the one-condition version of law 7: see finding 11.
+
+**21. LESSER, "Also filed".** "it was never put to him": the page's head note says "this page is not put to him as a question" and that it "is to be read again against those three records before anyone uses it". "Row FM reads it as material" should carry that caveat. Its claim about what row FM does is not sourced.
+
+**22. LESSER.** The worktree also has an uncommitted change to `_process/DIRECTION.md`, a sentence about the lines being computed from lists kept by hand. The note does not mention it; it may belong to another landing.
+
+**23. LESSER, item 1.** Right as far as it goes (refuter finding 1: "Four of the law's five explicit hypotheses are discharged"); the "five" could be added.
+
+## Checked and found right
+
+- **The eight-exits table:** all eight rows, recomputed from the reader's answers and KEY.json.
+- **The counts under the table** apart from finding 5: six of eight, five of the six, one of eight under the stricter reading, and two with no start under the home.
+- **The store before and after**, recounted from HEAD and the worktree:
+  - exits 329→330, of which naming a dynamic 71→72;
+  - case rows 137→140;
+  - listings 2,785→2,797;
+  - names listed under two or more dynamics 104→110;
+  - dynamics linked to no other 81→78 of 186, newly linked exactly `closed-capture`, `every-loss-passes-a-juncture`, `necessarily-drawn-is-not-returning`.
+- **Other numbers:** 221 listings without a premise row (recounted: 112, 98, 11); 23 of 56 (N1 alone) and the sample S01…S50; twelve of thirteen pairs; seventeen entries; the token arithmetic.
+- **Item by item against the diff:** the two E1 case rows with the refuter's tail; the twelve listings under exactly the named dynamics; the premise row, its case row and the new ledger premise; the exit's fields, with the edge exactly the refuter's text; the mechanism change.
+- **The other "What was not entered" bullets:** the first (the validator's rule as the returns quote it) and the walls bullet.
+- **The rules files:** both hashes match their files, and the times 21:13:01 and 21:20:36 match.
+- **The E5 packet:** nothing in it marks the home or the far end. The entries come in the store's order with a family letter, though their declaration lists show which entries list the law.
+- **The links:** both relative links resolve from the note's folder.
+
+## Not checked or not read
+
+- The token figures other than 152,480 (in the attack's header), the 8 seconds, and that both sessions were told before the checker ran.
+- The validator source past its error line, the tests and the generated pages.
+- The survey's checker file (CHECK-overlaps-and-walls-fable.md.txt, "The two lists").
+- `Optimum.lean`, `ChoiceCountCapture.lean` and `Identity.lean` themselves; I relied on the returns for them.
+- Packet E2.
+- Whether the case row and exit change the layer's computed lines; I reasoned this from the function's docstring and did not run it.

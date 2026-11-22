@@ -1,0 +1,96 @@
+#!/usr/bin/env python3
+"""Apply what the readers of 22 November left of row FM's survey to the atlas's stores, in the worktree given.
+
+usage: python3 -B apply_overlaps22.py WORKTREE
+
+AI-written (Claude Fable, board row DJ). Texts are the writer's as the refuter left them (RETURN-writer.md,
+RETURN-refuter.md beside this file). One thing is this script's writer's own and is marked OWN: the mended sentence of
+one mechanism, in the words of its record's laws 7 and 11."""
+import json, re, sys
+from pathlib import Path
+W = Path(sys.argv[1]); HERE = Path(__file__).resolve().parent
+ATLAS = W / 'theories/becoming/results/atlas/entries'
+
+def load(p):
+    raw = p.read_text(encoding='utf-8'); data = json.loads(raw)
+    for indent in (1, 2):
+        if json.dumps(data, ensure_ascii=False, indent=indent) + '\n' == raw: return data, indent
+    raise SystemExit(f'{p}: formatting not reproduced')
+def dump(p, data, indent): p.write_text(json.dumps(data, ensure_ascii=False, indent=indent) + '\n', encoding='utf-8')
+
+writer = (HERE / 'RETURN-writer.md').read_text(encoding='utf-8')
+def block_after(head, n=0):
+    part = writer[writer.index(head):]
+    return re.findall(r'```json\n(.*?)```', part, re.S)[n]
+
+# ---- the ledger: one premise
+premises, pind = load(ATLAS / 'premises.json')
+ids = {p['id'] for p in premises}
+new_p = json.loads(block_after('- **`drawn : PossiblyDrawn P s`**'))
+assert new_p['id'] == 'branching-possibly-drawn' and new_p['id'] not in ids and 'branching-returns' in ids
+premises.append(new_p)
+by_p = {p['id']: p for p in premises}
+dump(ATLAS / 'premises.json', premises, pind)
+
+dynamics, dind = load(ATLAS / 'dynamics.json')
+by = {e['id']: e for e in dynamics}
+
+# ---- E1: a case row on the existing premise row, on both dynamics that list the law
+e1 = json.loads('{' + block_after('To add to that row, the same on both dynamics:') + '}')['case_of']
+tail = 'The general law is listed under family C\'s closed-capture.'
+assert e1[0]['how']['en'].endswith(tail)
+e1[0]['how']['en'] = e1[0]['how']['en'][:-len(tail)] + 'lock_outlives_loss is listed under closed-capture (C).'   # the refuter's finding 1
+for i in ('capture-by-counted-choices', 'habit-lock-in-active-inference'):
+    rows = [h for h in by[i]['premises'] if h['law'] == 'Becoming.ChoiceCountCapture.counted_outlives_loss']
+    assert len(rows) == 1 and 'case_of' not in rows[0] and e1[0]['law'] not in by[i]['declarations']
+    rows[0]['case_of'] = json.loads(json.dumps(e1))
+
+# ---- E2: twelve listings (the writer and the refuter both wrote "eleven"; the reader's yes answers and the
+# writer's own JSON are twelve), each where the packet reader and the refuter both said the theorem belongs
+listings = json.loads(block_after('Append to `declarations`:'))
+n = 0
+for i, names in listings.items():
+    for name in names:
+        assert name not in by[i]['declarations'], (i, name)
+        by[i]['declarations'].append(name); n += 1
+assert n == 12
+
+# ---- E3a: a premise row with a case row, on the dynamic that does not list the general law
+row = json.loads(block_after('Row to add to `premises` of `necessarily-drawn-is-not-returning`:'))
+tail = 'The general law is listed under family A\'s every-loss-passes-a-juncture, which lists this theorem too.'
+assert row['case_of'][0]['how']['en'].endswith(tail)
+row['case_of'][0]['how']['en'] = row['case_of'][0]['how']['en'][:-len(tail)] + 'loss_passes_juncture is listed under every-loss-passes-a-juncture (A).'   # finding 3
+e = by['necessarily-drawn-is-not-returning']
+assert row['law'] in e['declarations'] and row['case_of'][0]['law'] not in e['declarations'] and all(t in by_p for t in row['takes'])
+e['premises'].append(row)
+
+# ---- E4: one exit, with the refuter's edge
+ex = json.loads(block_after('Exit to add to `what-an-optimum-does-beyond-what-couples-in`'))
+ref = (HERE / 'RETURN-refuter.md').read_text(encoding='utf-8')
+edge = re.search(r'Suggested replacement `edge.en`:\n\n\s*> (.*?)\n', ref, re.S).group(1).strip()
+assert edge.startswith('Under Web.optimum_broken_iff') and edge.endswith('takes the last step in place.')
+ex['edge'] = {'en': edge}
+h = by['what-an-optimum-does-beyond-what-couples-in']
+assert ex['to'] == 'three-outcomes-of-a-loss' and ex['law'] in h['declarations'] and not any(x.get('law') == ex['law'] for x in h['exits'])
+assert set(ex) == set(h['exits'][0]) | {'to_law'} or set(ex) == set(h['exits'][0]), (sorted(ex), sorted(h['exits'][0]))
+h['exits'].append(ex)
+
+# ---- OWN: one sentence of a mechanism that the new listing would stand beside and that said more than its record
+m = by['more-needs-renewers']['mechanism']
+old = ('Under a census, with activity decided, the present listing each formation once and only active formations '
+       'taking, it forces unceasing arising; without these it does not.')
+assert m['en'].count(old) == 1
+m['en'] = m['en'].replace(old, 'Under a census, with activity decided, the present listing each formation once and only '
+    'active formations taking, it forces unceasing arising, and lists covering the active formations at arbitrarily late '
+    'steps serve in the census\'s place; without a census, with a formation listed many times in the present, or with '
+    'takers that are not active, more without end can come with nothing arising (witnesses).')
+dump(ATLAS / 'dynamics.json', dynamics, dind)
+
+# ---- the assignment for add_rows.py, with the lister's output
+ADDED = W / ('_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/six/added')
+assign = json.loads(block_after('Assignment, in the shape `add_rows.py` reads:'))
+assign['note'] = ('AI-written, 22 November 2026 (board row DJ). Binder names as lister.py\'s aaRow printed them '
+                  '(2026-11-22-passes-juncture.lister.txt), run once against the modules compiled at the Lean of main cc3b2559c.')
+(ADDED / '2026-11-22-passes-juncture.json').write_text(json.dumps(assign, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+(ADDED / '2026-11-22-passes-juncture.lister.txt').write_text(Path('/Users/ren/tmp/dj/batch29/overlaps22.lister.txt').read_text(encoding='utf-8'), encoding='utf-8')
+print('applied: 1 ledger premise; case rows on 2 dynamics (E1) and 1 (E3a); 12 listings; 1 exit; 1 mechanism sentence')

@@ -1,0 +1,327 @@
+{
+ "answers": [
+  {
+   "theorem": "L1",
+   "entry": "loss-of-renewal-for-good",
+   "at_start": true,
+   "at_conclusion": false,
+   "reason": "The hypothesis `below : ∀ t, T < t → W.level t c < W.need T g c` assumes a level that stays below a need from T on, which is the entry's \"a level below m stays below\". The theorem takes that as given and does not derive it. The conclusion, a weakened or dissolved dependence, is not this entry's notion."
+  },
+  {
+   "theorem": "L1",
+   "entry": "three-outcomes-of-a-loss",
+   "at_start": true,
+   "at_conclusion": true,
+   "reason": "The hypotheses `Dependent`, a loss without return and `active t g` are the entry's \"still active after a loss without return\". The conclusion ¬(requires ∧ need not weakened) is its \"means transformed\". The entry lists Web.consumed_continues_transformed."
+  },
+  {
+   "theorem": "L1",
+   "entry": "margin-of-a-regime",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has no giving law, standing draw H or point of no return. It is about a dependence after a loss."
+  },
+  {
+   "theorem": "L1",
+   "entry": "turning-in-time",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has no configuration of way and level, no net and no line that ends. It concerns `requires` and `need` on a web."
+  },
+  {
+   "theorem": "L1",
+   "entry": "a-line-on-a-stock",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has no units with kids, uses or generations."
+  },
+  {
+   "theorem": "L2",
+   "entry": "others-drawing-first-end-the-base",
+   "at_start": true,
+   "at_conclusion": false,
+   "reason": "The hypotheses `front : Frontier (Open G k s) better ...` with `rising` in `weighted w G` are this entry's named model: \"an optimum (of that weighted draw ...) every order rising with the weighted draw\". Others drawing first and the stock ending are absent. The conclusion is rebuilding and restoring, not ending."
+  },
+  {
+   "theorem": "L2",
+   "entry": "drawers-in-turn",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has a single optimum over open courses, with no k drawers, floors or perfect profiles."
+  },
+  {
+   "theorem": "L2",
+   "entry": "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has no coupling value c for each step and no several drawers."
+  },
+  {
+   "theorem": "L2",
+   "entry": "a-race-for-position-draws-everything",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement ranks nothing by position, and its conclusion is rebuilding, not drawing everything."
+  },
+  {
+   "theorem": "L2",
+   "entry": "optima-rebuild-a-depleted-base",
+   "at_start": true,
+   "at_conclusion": true,
+   "reason": "The hypotheses `low : s ≤ y`, `grows`, `rises`/`strictly`/`top` on the weighted gain and the frontier of a rising order are the entry's \"From a start s ≤ y, where z + R z rises ... every optimum\". The conclusions, a level equal to the rising course and `RestoredWithin`, are its \"draws nothing while the rising level is below y ... and restores every dependence\". The entry lists Web.frontier_rebuilds; this theorem is the Web.Next form, which the other entry lists."
+  },
+  {
+   "theorem": "L3",
+   "entry": "horizon-optima-hold-the-greatest-renewal",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The setting is shared: renewal at most r (`renews`) and optima over open courses. But the order here rises with a coupled `worth`, not with the draw, and the conclusion `Keeps m n x` is keeping a need. It is not holding a level of greatest renewal."
+  },
+  {
+   "theorem": "L3",
+   "entry": "keeping-forgoes-the-renewal-at-the-need",
+   "at_start": true,
+   "at_conclusion": true,
+   "reason": "The hypotheses `coupled`/`uncoupled` with `beyond : r * n + e < w + q * n` are the entry's \"one with r n + e < w + q n\". The conclusion `Keeps m n x` is its \"only optima keeping it\". The entry lists Optimum.frontier_keeps_above."
+  },
+  {
+   "theorem": "L3",
+   "entry": "what-a-rise-draws-from-beyond",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has no family rise drawn from conditions beyond and no balance."
+  },
+  {
+   "theorem": "L3",
+   "entry": "risk-minimization-on-a-shared-renewal",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has no chooser minimizing predicted risk."
+  },
+  {
+   "theorem": "L3",
+   "entry": "where-a-rising-take-ends",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has no take rising at every step and no seeker ending."
+  },
+  {
+   "theorem": "L4",
+   "entry": "a-pair-tolerates-only-within-a-window",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The setting is shared: a pair, with errors that only withhold. But `KeepsWithheld` and two consecutive errors by both are not this entry's notion of answering or absorbing within a window. The conclusion, withholding forever, is near its \"no window restores from total withholding\", which it does not state of a burst."
+  },
+  {
+   "theorem": "L4",
+   "entry": "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "at_start": true,
+   "at_conclusion": true,
+   "reason": "The hypotheses `KeepsWithheld f`, `KeepsWithheld g` and both erring at t+1 and t+2 are the entry's \"Where both formations err at two consecutive steps, a pair of such laws\". The conclusion is its \"withholds at every step from the first of them on\". The entry lists PairChance.burst_absorbs."
+  },
+  {
+   "theorem": "L4",
+   "entry": "offspring-read-from-giving-that-waits",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has no offspring reading by β and γ and no cohort."
+  },
+  {
+   "theorem": "L4",
+   "entry": "what-decides-giving-against-keeping-on-a-flow",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has no balanced flow, levels or standings."
+  },
+  {
+   "theorem": "L4",
+   "entry": "what-giving-that-waits-draws-on",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has no balanced web, needs or renewal from outside."
+  },
+  {
+   "theorem": "L5",
+   "entry": "a-run-round-a-loop-keeps-changing",
+   "at_start": true,
+   "at_conclusion": true,
+   "reason": "The premise `world : ∀ x, x ∈ l` is the entry's \"In a world that a list holds\". The iff, a run with `ChangeRecurs` ↔ a reachable change that can be undone, is its stated law. The entry lists Settling.keeps_changing_iff."
+  },
+  {
+   "theorem": "L5",
+   "entry": "when-the-runs-of-a-process-settle",
+   "at_start": true,
+   "at_conclusion": true,
+   "reason": "This entry also says \"In a world a list holds, some run from a configuration keeps changing exactly where a reachable change can be undone\" and lists Settling.keeps_changing_iff. It repeats the same notion."
+  },
+  {
+   "theorem": "L5",
+   "entry": "where-the-possible-grows",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement says nothing about the possible widening or what is held. `Reach` appears, but not as possibility growing."
+  },
+  {
+   "theorem": "L5",
+   "entry": "what-keeping-widening-needs",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has no stocks, formations or keeping widening."
+  },
+  {
+   "theorem": "L5",
+   "entry": "closing-needs-net-draw",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has no withheld part and no net draw."
+  },
+  {
+   "theorem": "L6",
+   "entry": "late-relay-oscillates",
+   "at_start": true,
+   "at_conclusion": true,
+   "reason": "The hypotheses `RelaysLate`, balance, a start held at a−1 and `room : b + 2 ≤ a + (ℓ + 1) * M` are the entry's \"the start held at a - 1 ... where b + 2 <= a + (l + 1)M\". The conclusion, above b and below a at arbitrarily late steps, is its \"passes both ends without end\". It lists Regulation.held_oscillates."
+  },
+  {
+   "theorem": "L6",
+   "entry": "two-sided-regulation-and-late-reading",
+   "at_start": true,
+   "at_conclusion": false,
+   "reason": "The hypotheses, a balanced relay reading ℓ steps late from a start held below a, are within this entry's last clause. Its mechanism tells only settling in the band, not crossing without end. The conclusion is not its own notion, though the entry lists held_oscillates."
+  },
+  {
+   "theorem": "L6",
+   "entry": "kind-relay-keeps-widening-within-kinds",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "Only the word \"relay\" is shared. The statement has no kinds, passings or widening."
+  },
+  {
+   "theorem": "L6",
+   "entry": "rule-raised-every-other-step",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has no raised rule and no held possible."
+  },
+  {
+   "theorem": "L6",
+   "entry": "restraint-within-the-joint-slack",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has no several drawers, joint slack or broken dependence."
+  },
+  {
+   "theorem": "L7",
+   "entry": "a-rule-with-no-holder-does-not-return",
+   "at_start": true,
+   "at_conclusion": true,
+   "reason": "The hypotheses `source = .members`, `tenure ≤ teachingAge` and holders of at most s cohorts are the entry's \"Taught by members, holders of at most s cohorts: at s ≤ l\". The conclusion, zero holders after s steps under any revision, is its \"no holder is left after s steps, from every level\". The entry lists «不及任则持尽»."
+  },
+  {
+   "theorem": "L7",
+   "entry": "a-rule-rebuilt-from-the-members-it-limits",
+   "at_start": true,
+   "at_conclusion": true,
+   "reason": "The entry states the same law: \"Taught by members, holders of at most s cohorts: at s ≤ l ... no holder is left after s steps ... from every level\". It also lists «不及任则持尽»."
+  },
+  {
+   "theorem": "L7",
+   "entry": "the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "That entry is the ReaderRebuilding model, with readers rebuilt from supply or level. The statement is about holders taught by members under tenure."
+  },
+  {
+   "theorem": "L7",
+   "entry": "a-revision-that-opens-a-correction",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has no uniform policy, correctability or opening. \"Revision\" occurs only as the move sequence c."
+  },
+  {
+   "theorem": "L7",
+   "entry": "recurring-reference-revision",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has no cycles of draw and replenishment."
+  },
+  {
+   "theorem": "L8",
+   "entry": "the-selection-term-and-a-lineages-fate",
+   "at_start": true,
+   "at_conclusion": true,
+   "reason": "The hypothesis `pos` (concordAt or discordAt positive past every step) is the entry's \"terms positive at unboundedly many steps\". The conclusion `0 < G.size t` for all t is its \"keep every cohort nonempty\". The entry lists never_empties_of_unbounded."
+  },
+  {
+   "theorem": "L8",
+   "entry": "persisting-filters-what-was-chosen",
+   "at_start": false,
+   "at_conclusion": true,
+   "reason": "The conclusion that every generation is nonempty gives members in arbitrarily late cohorts, the entry's \"A line of descent persists\". I judged this from the name SelectionTerm.Generations.Persists. The structure here is SelectionShift.Generations, so they may not be the same notion. The hypothesis, a positive selection term, is not this entry's notion."
+  },
+  {
+   "theorem": "L8",
+   "entry": "readings-carried-and-filtered",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has no readings, flow or coupling closure. Its nonempty cohorts are not the entry's standing late of a line read off a flow."
+  },
+  {
+   "theorem": "L8",
+   "entry": "readings-revised-spread-and-locked",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has no reading revised at descent and no share or region."
+  },
+  {
+   "theorem": "L8",
+   "entry": "formed-goal-revision-continuation",
+   "at_start": false,
+   "at_conclusion": false,
+   "reason": "The statement has no practices, goals or operations."
+  }
+ ],
+ "per_theorem": [
+  {
+   "theorem": "L1",
+   "kind": "stays inside one entry: three-outcomes-of-a-loss",
+   "note": "It starts and concludes under three-outcomes (a loss without return, then transformed). Its premise of a level kept below a need also reads as loss-of-renewal-for-good, so it could be read as passing from that entry to three-outcomes."
+  },
+  {
+   "theorem": "L2",
+   "kind": "stays inside one entry: optima-rebuild-a-depleted-base",
+   "note": "It goes from optima of a rising weighted draw under a rising renewal to rebuilding and restoring. The premise setting is shared with others-drawing-first-end-the-base, which also lists this declaration but concludes ending."
+  },
+  {
+   "theorem": "L3",
+   "kind": "stays inside one entry: keeping-forgoes-the-renewal-at-the-need",
+   "note": "It goes from a coupling beyond what keeping forgoes (r n + e < w + q n) to optima keeping the need."
+  },
+  {
+   "theorem": "L4",
+   "kind": "stays inside one entry: errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "note": "It goes from KeepsWithheld laws and a two-step burst to withholding forever, as that entry states."
+  },
+  {
+   "theorem": "L5",
+   "kind": "stays inside one entry: a-run-round-a-loop-keeps-changing (stated the same in when-the-runs-of-a-process-settle)",
+   "note": "The iff between keeping changing and a reachable undoable change is told word for word in two entries, an overlap."
+  },
+  {
+   "theorem": "L6",
+   "kind": "stays inside one entry: late-relay-oscillates",
+   "note": "It goes from a late relay with a start held at a−1 and room to crossing both ends without end. two-sided-regulation shares the premises but tells only settling."
+  },
+  {
+   "theorem": "L7",
+   "kind": "stays inside one entry: a-rule-with-no-holder-does-not-return (stated the same in a-rule-rebuilt-from-the-members-it-limits)",
+   "note": "From teaching by members with tenure at most teaching age to no holder after tenure steps; both entries state it."
+  },
+  {
+   "theorem": "L8",
+   "kind": "stays inside one entry: the-selection-term-and-a-lineages-fate",
+   "note": "It goes from a term positive at unboundedly many steps to every cohort nonempty. The conclusion also gives persistence in the sense of persisting-filters-what-was-chosen, so it could be read as passing into that entry if the two generation structures agree."
+  }
+ ],
+ "could_not_judge": "Definitions not shown were judged from their names and docstrings only: Dependent, KeepsWithheld, ChangeRecurs, RelaysLate, Keeps, Frontier, RestoredWithin, G.size and concordAt/discordAt. For L8, whether SelectionShift.Generations' nonempty cohorts are the same notion as SelectionTerm.Generations.Persists could not be checked. For L4, whether \"absorbing\" in the window entry covers a two-step burst is unclear."
+}

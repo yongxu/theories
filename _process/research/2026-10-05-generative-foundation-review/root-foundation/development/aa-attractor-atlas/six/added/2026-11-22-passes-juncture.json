@@ -1,0 +1,17 @@
+{
+ "family": "A",
+ "note": "AI-written, 22 November 2026 (board row DJ). Binder names as lister.py's aaRow printed them (2026-11-22-passes-juncture.lister.txt), run once against the modules compiled at the Lean of main cc3b2559c.",
+ "laws": {
+  "Becoming.Branching.PossiblyDrawn.passes_juncture": {
+   "binders": {
+    "returns": [
+     "branching-returns"
+    ],
+    "drawn": [
+     "branching-possibly-drawn"
+    ]
+   },
+   "takes_unbound": {}
+  }
+ }
+}

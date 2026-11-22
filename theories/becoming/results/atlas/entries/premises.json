@@ -35438,5 +35438,24 @@
   "seeded_from": [
    "Lean"
   ]
+ },
+ {
+  "id": "branching-possibly-drawn",
+  "name": {
+   "en": "possibly drawn, under a process"
+  },
+  "statement": {
+   "en": "the configuration s is possibly drawn under the process P: some region the process never leaves possibly draws it in, s lying outside the region and some course from s entering it (Branching.PossiblyDrawn P s)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Branching.PossiblyDrawn"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/necessarily-drawn-is-not-returning.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
  }
 ]

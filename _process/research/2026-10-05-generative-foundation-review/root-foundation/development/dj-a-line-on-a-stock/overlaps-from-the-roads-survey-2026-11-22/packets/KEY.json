@@ -1,0 +1,226 @@
+{
+ "E2-T1": {
+  "theorem": "Becoming.Branching.Juncture.possiblyDrawn",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean",
+  "line": 110,
+  "entries": [
+   "necessarily-drawn-is-not-returning",
+   "every-loss-passes-a-juncture"
+  ],
+  "already_listed_under": []
+ },
+ "E2-T2": {
+  "theorem": "Becoming.Branching.Juncture.returns",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean",
+  "line": 116,
+  "entries": [
+   "every-loss-passes-a-juncture",
+   "returning-where-the-course-branches"
+  ],
+  "already_listed_under": []
+ },
+ "E2-T3": {
+  "theorem": "Becoming.Branching.PossiblyDrawn.passes_juncture",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean",
+  "line": 153,
+  "entries": [
+   "necessarily-drawn-is-not-returning",
+   "every-loss-passes-a-juncture",
+   "returning-where-the-course-branches"
+  ],
+  "already_listed_under": []
+ },
+ "E2-T4": {
+  "theorem": "Becoming.Flow.More.unceasing_covering",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+  "line": 1262,
+  "entries": [
+   "unceasing-generation-needs-renewal",
+   "more-needs-renewers"
+  ],
+  "already_listed_under": []
+ },
+ "E2-T5": {
+  "theorem": "Becoming.Flow.More.unceasing_reidentified",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
+  "line": 405,
+  "entries": [
+   "unceasing-generation-needs-renewal",
+   "more-needs-renewers"
+  ],
+  "already_listed_under": []
+ },
+ "E2-T6": {
+  "theorem": "Becoming.Flow.More.unceasing_reidentified_covering",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
+  "line": 388,
+  "entries": [
+   "unceasing-generation-needs-renewal",
+   "more-needs-renewers"
+  ],
+  "already_listed_under": []
+ },
+ "E4": {
+  "theorem": "Becoming.Web.optimum_ends_beyond",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+  "line": 740,
+  "entries": [
+   "loss-of-renewal-for-good",
+   "three-outcomes-of-a-loss",
+   "joint-difference-making",
+   "what-an-optimum-does-beyond-what-couples-in",
+   "others-drawing-first-end-the-base",
+   "drawers-in-turn",
+   "a-race-for-position-draws-everything",
+   "several-optimizers-drain-by-their-joint-capacity",
+   "re-optimizing-above-a-renewal-ends-it",
+   "a-weighting-faster-than-renewal-ends-the-base",
+   "horizon-optima-hold-the-greatest-renewal",
+   "keeping-forgoes-the-renewal-at-the-need",
+   "what-a-rise-draws-from-beyond",
+   "unselected-beyond-the-coupling-closure",
+   "a-break-read-only-by-threshold",
+   "a-step-coupling-keeps-at-every-horizon",
+   "optima-rebuild-a-depleted-base"
+  ],
+  "listed_under": [
+   "what-an-optimum-does-beyond-what-couples-in"
+  ],
+  "modules": [
+   "Becoming.Dependence",
+   "Becoming.DrawnBeyond",
+   "Becoming.Frontier",
+   "Becoming.Optimum",
+   "Becoming.Testing",
+   "Becoming.World"
+  ]
+ },
+ "E5-L1": {
+  "survey_key": "S01",
+  "law": "Becoming.Web.consumed_continues_transformed",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+  "line": 269,
+  "home": "loss-of-renewal-for-good",
+  "to": "three-outcomes-of-a-loss",
+  "strength": "necessary",
+  "entries": [
+   "loss-of-renewal-for-good",
+   "three-outcomes-of-a-loss",
+   "margin-of-a-regime",
+   "turning-in-time",
+   "a-line-on-a-stock"
+  ]
+ },
+ "E5-L2": {
+  "survey_key": "S07",
+  "law": "Becoming.Web.Next.frontier_rebuilds",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+  "line": 7106,
+  "home": "others-drawing-first-end-the-base",
+  "to": "optima-rebuild-a-depleted-base",
+  "strength": "sufficient",
+  "entries": [
+   "others-drawing-first-end-the-base",
+   "drawers-in-turn",
+   "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+   "a-race-for-position-draws-everything",
+   "optima-rebuild-a-depleted-base"
+  ]
+ },
+ "E5-L3": {
+  "survey_key": "S10",
+  "law": "Becoming.Optimum.frontier_keeps_above",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+  "line": 4614,
+  "home": "horizon-optima-hold-the-greatest-renewal",
+  "to": "keeping-forgoes-the-renewal-at-the-need",
+  "strength": "sufficient",
+  "entries": [
+   "horizon-optima-hold-the-greatest-renewal",
+   "keeping-forgoes-the-renewal-at-the-need",
+   "what-a-rise-draws-from-beyond",
+   "risk-minimization-on-a-shared-renewal",
+   "where-a-rising-take-ends"
+  ]
+ },
+ "E5-L4": {
+  "survey_key": "S23",
+  "law": "Becoming.PairChance.burst_absorbs",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairChance.lean",
+  "line": 93,
+  "home": "a-pair-tolerates-only-within-a-window",
+  "to": "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+  "strength": "sufficient",
+  "entries": [
+   "a-pair-tolerates-only-within-a-window",
+   "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "offspring-read-from-giving-that-waits",
+   "what-decides-giving-against-keeping-on-a-flow",
+   "what-giving-that-waits-draws-on"
+  ]
+ },
+ "E5-L5": {
+  "survey_key": "S30",
+  "law": "Becoming.Settling.keeps_changing_iff",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Settling.lean",
+  "line": 302,
+  "home": "when-the-runs-of-a-process-settle",
+  "to": "a-run-round-a-loop-keeps-changing",
+  "strength": "exact",
+  "entries": [
+   "a-run-round-a-loop-keeps-changing",
+   "when-the-runs-of-a-process-settle",
+   "where-the-possible-grows",
+   "what-keeping-widening-needs",
+   "closing-needs-net-draw"
+  ]
+ },
+ "E5-L6": {
+  "survey_key": "S40",
+  "law": "Becoming.Regulation.held_oscillates",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regulation.lean",
+  "line": 1759,
+  "home": "two-sided-regulation-and-late-reading",
+  "to": "late-relay-oscillates",
+  "strength": "sufficient",
+  "entries": [
+   "late-relay-oscillates",
+   "two-sided-regulation-and-late-reading",
+   "kind-relay-keeps-widening-within-kinds",
+   "rule-raised-every-other-step",
+   "restraint-within-the-joint-slack"
+  ]
+ },
+ "E5-L7": {
+  "survey_key": "S43",
+  "law": "Becoming.RuleRebuilding.«不及任则持尽»",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean",
+  "line": 658,
+  "home": "a-rule-rebuilt-from-the-members-it-limits",
+  "to": "a-rule-with-no-holder-does-not-return",
+  "strength": "sufficient",
+  "entries": [
+   "a-rule-with-no-holder-does-not-return",
+   "a-rule-rebuilt-from-the-members-it-limits",
+   "the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "a-revision-that-opens-a-correction",
+   "recurring-reference-revision"
+  ]
+ },
+ "E5-L8": {
+  "survey_key": "S50",
+  "law": "Becoming.SelectionShift.Generations.never_empties_of_unbounded",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionShift.lean",
+  "line": 337,
+  "home": "the-selection-term-and-a-lineages-fate",
+  "to": "persisting-filters-what-was-chosen",
+  "strength": "sufficient",
+  "entries": [
+   "the-selection-term-and-a-lineages-fate",
+   "persisting-filters-what-was-chosen",
+   "readings-carried-and-filtered",
+   "readings-revised-spread-and-locked",
+   "formed-goal-revision-continuation"
+  ]
+ }
+}

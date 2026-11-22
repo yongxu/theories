@@ -1,0 +1,105 @@
+{
+ "e2": [
+  {
+   "theorem": "T1",
+   "entry": "necessarily-drawn-is-not-returning",
+   "belongs": true,
+   "reason": "The conclusion is \"PossiblyDrawn P x\", the entry's own notion (\"possibly drawn where some reachable configuration lies in it\", \"possibly drawn is losing oneself on some course\"). The theorem gives a case of being possibly drawn, which is what the entry is about, so a reader would expect it there.",
+   "same_as_listed": ""
+  },
+  {
+   "theorem": "T1",
+   "entry": "every-loss-passes-a-juncture",
+   "belongs": true,
+   "reason": "The hypothesis is a \"Juncture P s x\", and the docstring says \"after its losing step it cannot be had again\". That is a property of the entry's subject, a juncture \"with one step after which s cannot\" be had. It states what a juncture is in the entry's terms, so it belongs here as well as under the drawn entry.",
+   "same_as_listed": ""
+  },
+  {
+   "theorem": "T2",
+   "entry": "every-loss-passes-a-juncture",
+   "belongs": true,
+   "reason": "\"On the course of s, a juncture returns\" is a statement about junctures, the entry's subject, and it fits the entry's setting \"Where s returns ... passes ... a juncture\". A reader of the entry would expect a basic property of a juncture on the course of s.",
+   "same_as_listed": ""
+  },
+  {
+   "theorem": "T2",
+   "entry": "returning-where-the-course-branches",
+   "belongs": true,
+   "reason": "The conclusion \"Returns P x\" is the entry's notion, and the entry lists sufficient conditions and properties of returning (Branching.Returns.reachable, Lossless.comes_back). A juncture on the course of s returning is one more such condition, though a narrow one. It is a weaker fit than under the juncture entry.",
+   "same_as_listed": ""
+  },
+  {
+   "theorem": "T3",
+   "entry": "necessarily-drawn-is-not-returning",
+   "belongs": true,
+   "reason": "The hypotheses are \"Returns P s\" and \"PossiblyDrawn P s\", which is exactly the entry's case \"possibly drawn is losing oneself on some course, allowing return on another\". The theorem says what such a configuration has on its course, so it is about the entry's notion of possibly drawn.",
+   "same_as_listed": ""
+  },
+  {
+   "theorem": "T3",
+   "entry": "every-loss-passes-a-juncture",
+   "belongs": true,
+   "reason": "\"A returning configuration possibly drawn has, not not, a juncture on its course\" is the entry's central claim: \"Where s returns, every course from s to where s cannot be had again passes, up to double negation, a juncture\". It concludes the entry's subject.",
+   "same_as_listed": "Branching.loss_passes_juncture (a guess from the name)"
+  },
+  {
+   "theorem": "T3",
+   "entry": "returning-where-the-course-branches",
+   "belongs": false,
+   "reason": "\"Returns P s\" appears only as a premise. The conclusion is a juncture, not anything about when or whether a configuration returns, which is what the entry is about (\"what returns can be had at every step\").",
+   "same_as_listed": ""
+  },
+  {
+   "theorem": "T4",
+   "entry": "unceasing-generation-needs-renewal",
+   "belongs": true,
+   "reason": "The conclusion \"W.Unceasing\" is the entry's subject, and the entry lists sufficient conditions for it (Recycle.closed_unceasing, \"a closed cycle sustains it\"). That \"more without end makes arising unceasing\" with no census is one more route to unceasing arising. The entry never mentions More, though, so its more natural home is H.",
+   "same_as_listed": ""
+  },
+  {
+   "theorem": "T4",
+   "entry": "more-needs-renewers",
+   "belongs": true,
+   "reason": "The entry says \"Under a census, with activity decided, the present listing each formation once and only active formations taking, it forces unceasing arising\". T4 is the same law with the census replaced by covering lists and activity \"decided from some step on\". It is about More forcing Unceasing, the entry's own claim. Note that the entry's \"without these it does not\" would need rewording if this landed.",
+   "same_as_listed": "Flow.More.unceasing (a guess from the name: the census version)"
+  },
+  {
+   "theorem": "T5",
+   "entry": "unceasing-generation-needs-renewal",
+   "belongs": true,
+   "reason": "The conclusion \"(W.reidentify σ).Unceasing\" is unceasing arising, and the theorem speaks to the entry's caveat that unceasing \"depends on identity across steps\". It shows that this route to unceasing holds under every re-identification, which a reader of that caveat would expect to find there.",
+   "same_as_listed": ""
+  },
+  {
+   "theorem": "T5",
+   "entry": "more-needs-renewers",
+   "belongs": true,
+   "reason": "\"Under a census, with each formation taking part listed once and only active formations taking, more without end makes arising unceasing\": these are the entry's own premises and conclusion, strengthened to hold under every re-identification. It is about More forcing unceasing arising.",
+   "same_as_listed": "Flow.More.unceasing (a guess from the name; T5 adds re-identification)"
+  },
+  {
+   "theorem": "T6",
+   "entry": "unceasing-generation-needs-renewal",
+   "belongs": true,
+   "reason": "It concludes \"(W.reidentify σ).Unceasing\", the entry's subject, and addresses its remark that unceasing \"depends on identity across steps\". The grounds are the same as for T4 and T5. Its primary home is H.",
+   "same_as_listed": ""
+  },
+  {
+   "theorem": "T6",
+   "entry": "more-needs-renewers",
+   "belongs": true,
+   "reason": "\"More without end makes arising unceasing under every re-identification, with no census\" is the entry's claim that More \"forces unceasing arising\", with the census replaced by covering and activity decided from some step on. The entry's \"without these it does not\" would need care.",
+   "same_as_listed": "Flow.More.unceasing (a guess from the name)"
+  }
+ ],
+ "e4_start": [
+  "what-an-optimum-does-beyond-what-couples-in"
+ ],
+ "e4_conclusion": [
+  "what-an-optimum-does-beyond-what-couples-in",
+  "three-outcomes-of-a-loss"
+ ],
+ "e4_reason": "The hypotheses place the course at one step of an optimum taken beyond a family: \"Optimum.Rising\", \"Optimum.Room\", \"Frontier eligible better\" at t+1, the beyond \\\"rest\\\" apart from the family \\\"ds\\\", and a dependence on each condition beyond met at t (\\\"W.MetOn dep rest t\\\"). That is the setting of what-an-optimum-does-beyond-what-couples-in, which already lists Web.optimum_ends_beyond and Web.optimum_broken_iff. The conclusion \\\"W.Broken t (dep c) c\\\" is that entry's own subject (\\\"every optimum breaks exactly the dependences beyond that some eligible outcome breaks\\\"), so start and conclusion share an entry. The added \\\"¬ W.active (t+1) (dep c)\\\", under \\\"W.Dependent\\\" and the \\\"fixed\\\" premise (the dependence still required at t+1 at a need no lower), is the \\\"fixed dependence means ended\\\" outcome of three-outcomes-of-a-loss (Web.consumed_ends_when_fixed). The last conjuncts (the formation is no member, and no member couples into c) echo what-a-rise-draws-from-beyond (\\\"a formation outside the group has its dependence broken on a condition no member couples into\\\"). They also echo, by name and that phrase alone, unselected-beyond-the-coupling-closure. I do not place the conclusion under either, because nothing about a rise or about selection is concluded.",
+ "e4_limits": "The statement covers one step only (t to t+1). It does not say the formation stays inactive at later steps, that the level stays below the need, or that the loss is for good (loss-of-renewal-for-good is not reached). It gives no course of re-optimizing. It concludes the break and the end of activity for one condition c, picked by an eligible outcome below the need. It does not give the exactness of Web.optimum_broken_iff (that every optimum breaks exactly these). Of three-outcomes-of-a-loss it gives only the \\\"ended\\\" outcome, under the premises Dependent and fixed dependence; restored and transformed are not concluded. It says only that no member couples into c. It says nothing of a selection being blind to the loss, and nothing of the coupling closure or of a selection through members' couplings, so the selection-blindness side (unselected-beyond-the-coupling-closure) is not concluded. On the start side, room, rising, frontier, the met dependences and the coupling listing are all supplied premises. The statement asserts none of them of an actual optimizer, so the start is narrower than any actual optimizing course: an optimum at the next step, with room.",
+ "could_not_judge": "I could not open the listed declarations, so every same_as_listed entry is a guess from the name. Whether T2 belongs under returning-where-the-course-branches, and T4 to T6 under unceasing-generation-needs-renewal, depends on whether those entries collect sufficient conditions for their notion. I judged that they do, from Returns.reachable and Recycle.closed_unceasing."
+}

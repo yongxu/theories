@@ -1,0 +1,267 @@
+**Report of the writer of rows (AI-written, Claude Fable, read only; no file written, nothing built or run but in-memory python over the store and the print).**
+
+Paths: `LEAN` = `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming`, `STORE` = `/Users/ren/theories/theories/becoming/results/atlas/entries/dynamics.json`, `LEDGER` = `.../entries/premises.json`, `PRINT` = `/Users/ren/theories/theories/becoming/results/atlas/proof-uses/`, validator = `/Users/ren/theories/tools/research/atlas.py`.
+
+Three things the applier should know first:
+- **E2 draws no line.** With all eleven listings entered, the computed layer adds no use and no chain, only twelve "shared" marks.
+- **The `unceasing` case row cannot be entered** while `unceasing_covering` is also listed under `more-needs-renewers`: the validator refuses it.
+- **E1, the `passes_juncture` case row and the E4 exit can be entered.** The texts are below.
+
+---
+
+## E1. `counted_outlives_loss` a case of `lock_outlives_loss`: can be entered
+
+OPENED: `LEAN/ChoiceCountCapture.lean` 414–432 and `LEAN/ClosedCapture.lean` 307–330. The whole proof is one term: `ClosedCapture.lock_outlives_loss choose_raises weighted_reads upper accrues (start_locked (pos := pos) above) t`. There is no step after the law's conclusion and no case split, and the conclusion is the law's own with the roles substituted.
+
+Existing row, identical on `capture-by-counted-choices` and `habit-lock-in-active-inference`:
+
+```json
+{"law": "Becoming.ChoiceCountCapture.counted_outlives_loss", "takes": ["choicecountcapture-choose", "choicecountcapture-weighted", "choicecountcapture-in-sync-start", "closedcapture-accrues", "closedcapture-unread", "card-natural-number-amounts", "choicecountcapture-pos", "choicecountcapture-above", "rulecapture-others-present"]}
+```
+
+To add to that row, the same on both dynamics:
+
+```json
+"case_of": [
+ {
+  "law": "Becoming.ClosedCapture.lock_outlives_loss",
+  "how": {
+   "en": "lock_outlives_loss with the share and the rule both fixed to pairs of counts under the share order (P and M := CarrierCounts.order), favouring fixed to the rule weighing the first policy at least as much as the second (CarrierCounts.favours), the selection fixed to the choice by the rule (fA := choose), the reading fixed to the counts weighted by the standing score (hA := weighted κc κo pos), and the start fixed to counts x with the rule in force read from them (a := x, g := weighted κc κo pos x x). Four of its hypotheses are discharged: raises by choose_raises, monotone by weighted_reads, upper by CarrierCounts.upper, and locked by start_locked from the threshold κo · other ≤ κc · carrier. Accrues, the coordinate beyond (fB, b), the schedule of reading and the step are passed on as they come, and the conclusion is the general law's with these roles; the proof is that one call. The general law is listed under family C's closed-capture."
+  }
+ }
+]
+```
+
+Sources, sentence by sentence:
+- **Roles fixed:** the theorem's statement, `ChoiceCountCapture.lean` 419–431, against the law's binders, `ClosedCapture.lean` 307–316. `order` and `favours` are `CarrierCounts.order` and `CarrierCounts.favours` (`RuleCapture.lean` 478, 491, opened by `open Pace RuleCapture CarrierCounts` at `ChoiceCountCapture.lean` 222); `choose` is at 227 and `weighted` at 261.
+- **Hypotheses discharged:** the proof term at 431–432; `choose_raises` at 241, `weighted_reads` at 265, `upper` at `RuleCapture.lean` 523, `start_locked` at 281–284, which takes `above`.
+- **Passed on:** `accrues`, `reads` and `t` are the theorem's own binders, and `fB`, `b` are its implicits.
+- **The print:** `PRINT/Becoming.ChoiceCountCapture.jsonl` line 23 has uses `choose_raises`, `start_locked`, `weighted_reads`, `ClosedCapture.lock_outlives_loss`, `RuleCapture.CarrierCounts.upper`.
+- **"Listed under family C's closed-capture":** the store; `closed-capture` is family C and is the only dynamic that lists the law.
+- **Validator:** neither dynamic lists `lock_outlives_loss`, so the check at `atlas.py` 1011–1012 does not fire.
+
+Register read from three existing `how` texts: `Law.drawn_iff_not_returns`, `«内至外之线有出步»`, and `Flow.uptake_needs_replenishment` on `more-needs-renewers`.
+
+---
+
+## E2. Listings
+
+OPENED: `LEAN/Junctures.lean` 92–118 and 143–158, `LEAN/Population.lean` 1225–1291, `LEAN/Identity.lean` 386–412, and the definitions in `LEAN/Branching.lean` 361–370, 408, `LEAN/Recurrence.lean` 128, `LEAN/Flow.lean` 323, `LEAN/Arising.lean` 97. None of the six is listed anywhere now (store; KEY.json).
+
+The reader answered yes for eleven pairs. No entry already lists a declaration with the same statement:
+- The reader's three "same as listed" guesses were opened and all differ. `loss_passes_juncture` takes a trace and a loss and concludes the losing step as well. `Flow.More.unceasing` takes a census and decidability everywhere. `unceasing_reidentified` concludes for `W.reidentify σ`.
+- Other candidates were compared by name and docstring only, not by opened statement: `lost_necessarily_drawn`, `losing_not_returns`, `no_juncture_of_keeps`, `Returns.reachable`, `Web.unceasing_of_growth`.
+
+Append to `declarations`:
+
+```json
+{
+ "necessarily-drawn-is-not-returning": [
+  "Becoming.Branching.Juncture.possiblyDrawn",
+  "Becoming.Branching.PossiblyDrawn.passes_juncture"
+ ],
+ "every-loss-passes-a-juncture": [
+  "Becoming.Branching.Juncture.possiblyDrawn",
+  "Becoming.Branching.Juncture.returns",
+  "Becoming.Branching.PossiblyDrawn.passes_juncture"
+ ],
+ "returning-where-the-course-branches": [
+  "Becoming.Branching.Juncture.returns"
+ ],
+ "unceasing-generation-needs-renewal": [
+  "Becoming.Flow.More.unceasing_covering",
+  "Becoming.Flow.More.unceasing_reidentified",
+  "Becoming.Flow.More.unceasing_reidentified_covering"
+ ],
+ "more-needs-renewers": [
+  "Becoming.Flow.More.unceasing_covering",
+  "Becoming.Flow.More.unceasing_reidentified",
+  "Becoming.Flow.More.unceasing_reidentified_covering"
+ ]
+}
+```
+
+Not listed: `PossiblyDrawn.passes_juncture` under `returning-where-the-course-branches`, where the reader answered no.
+
+**What the layer would draw.** I ran `uses_between` and `_first_listed` (`atlas.py` 1953–2040) in memory on the store with these appended, against the print.
+- **All eleven together:** no new `uses`, `used_by` or `chains` on any dynamic. Twelve new `shared` marks appear, one each way for each doubly listed theorem. A theorem listed under both ends is, by the function's rule (docstring 1994–1996), no use between them.
+- **Dynamics with any computed line:** 117 before, 117 after.
+- **Each listing alone** would draw the following:
+
+| Listing alone | Line drawn |
+|---|---|
+| `Juncture.possiblyDrawn` under `every-loss-passes-a-juncture` | uses `possiblyDrawn_iff` of `necessarily-drawn-is-not-returning` |
+| `Juncture.possiblyDrawn` under `necessarily-drawn-is-not-returning` | none |
+| `Juncture.returns` under either | none (its only use is `Reach.trans`, listed nowhere) |
+| `passes_juncture` under `necessarily-drawn-is-not-returning` | uses `loss_passes_juncture` of `every-loss-passes-a-juncture` |
+| `passes_juncture` under `every-loss-passes-a-juncture` | uses `possiblyDrawn_iff` of `necessarily-drawn-is-not-returning` |
+| `unceasing_covering` under `unceasing-generation-needs-renewal` | `more-needs-renewers` uses it, in `Flow.More.unceasing` |
+| `unceasing_covering` under `more-needs-renewers` | none |
+| `unceasing_reidentified`, `unceasing_reidentified_covering` under either | none |
+
+The print's uses (PRINT, by name):
+- `Juncture.possiblyDrawn`: `Juncture.reach`, `possiblyDrawn_iff`, `Reach.of_step`, `Reach.trans`.
+- `passes_juncture`: `loss_passes_juncture`, `possiblyDrawn_iff`.
+- `unceasing_covering`: `came_between_from`, `count_le_of_sub`, `search`, `total_pos`, none listed.
+- `unceasing_reidentified_covering`: `unceasing_covering` and four unlisted lemmas.
+- `unceasing_reidentified`: `unceasing_reidentified_covering`.
+
+Two things found beside the question:
+- **Records.** Eight of the eleven listings put a theorem under an entry none of whose records names it. They are `Juncture.possiblyDrawn` and `passes_juncture` under `necessarily-drawn-is-not-returning`, `Juncture.returns` under `returning-where-the-course-branches`, `unceasing_covering` under `unceasing-generation-needs-renewal`, and both reidentified theorems under both entries (only `identity-across-steps.md` names them, and no dynamic cites that record). The validator does not ask for this; today 24 of 2,785 listings are so, counted by a script over the records' text.
+- **A mechanism sentence.** `more-needs-renewers` says "Under a census … it forces unceasing arising; without these it does not". The listing would put a theorem that needs no census (`unceasing_covering`) beside that sentence. The reader raised it (TOLD); I opened the mechanism text only, not the witnesses the sentence rests on. The frozen file changes no mechanism sentence.
+
+---
+
+## E3a. `PossiblyDrawn.passes_juncture` a case of `loss_passes_juncture`: yes, on `necessarily-drawn-is-not-returning` only
+
+OPENED: `LEAN/Junctures.lean` 146–158. The proof takes from `possiblyDrawn_iff.mp drawn` a configuration `t`, a trace `path` and `lost`, calls `loss_passes_juncture returns path lost`, and maps the witness under the double negation to `⟨y, from_s, juncture⟩`. It has no other step and no case split. By the frozen file's "After" (a projection counts if the `how` says what is dropped) I judge it a case.
+
+One thing for the refuter: `t`, the acts, `path` and `lost` are not fixed to terms. They are taken out of the hypothesis `drawn` through the iff.
+
+No row on `every-loss-passes-a-juncture`: it lists `loss_passes_juncture`, the validator refuses a case there, and E2 gives a listing no row.
+
+Row to add to `premises` of `necessarily-drawn-is-not-returning`:
+
+```json
+{
+ "law": "Becoming.Branching.PossiblyDrawn.passes_juncture",
+ "takes": ["branching-returns", "branching-possibly-drawn"],
+ "case_of": [
+  {
+   "law": "Becoming.Branching.loss_passes_juncture",
+   "how": {
+    "en": "loss_passes_juncture with its end t, its list of acts and its two hypotheses path and lost not fixed to terms but taken from the hypothesis that s is possibly drawn, read through possiblyDrawn_iff (a law of this dynamic) as some t reached from s from which s cannot be reached again, the reaching being a trace by definition; returns is passed on. The conclusion is projected under the double negation: of the law's y, a, z with Reach P s y, P.step y a z, Reach P z t, ¬ Reach P z s and Juncture P s y, only y, Reach P s y and Juncture P s y are kept. Dropped: that the course takes its losing step at the juncture, and that the step leads on to t. The proof has no other step. The general law is listed under family A's every-loss-passes-a-juncture, which lists this theorem too."
+   }
+  }
+ ]
+}
+```
+
+Binders and premises:
+- **`returns : Returns P s`** takes the existing `branching-returns`. Ledger: "the configuration s returns under the process P: some step from s leads to a configuration from which s can be reached (Branching.Returns P s)". Lean, `Recurrence.lean` 128: `Returns P s := ∃ a t, P.step s a t ∧ Reach P t s`. They say the same.
+- **`drawn : PossiblyDrawn P s`** has no ledger premise (searched for "PossiblyDrawn" and "possibly drawn"; none). New premise:
+
+```json
+{
+ "id": "branching-possibly-drawn",
+ "name": {"en": "possibly drawn, under a process"},
+ "statement": {"en": "the configuration s is possibly drawn under the process P: some region the process never leaves possibly draws it in, s lying outside the region and some course from s entering it (Branching.PossiblyDrawn P s)"},
+ "kind": "hypothesis of a law",
+ "lean": ["Becoming.Branching.PossiblyDrawn"],
+ "holds_in": [],
+ "fails_in": [],
+ "home": "theories/becoming/results/records/necessarily-drawn-is-not-returning.md#laws--规律",
+ "seeded_from": ["Lean"]
+}
+```
+
+- **Statement source:** `Branching.lean` 361–362 (`PossiblyDrawnInto := ¬ R s ∧ ∃ t, Reach P s t ∧ R t`) and 369–370 (`PossiblyDrawn := ∃ R, Invariant P R ∧ PossiblyDrawnInto P R s`). "A region the process never leaves" is the docstring's phrase for `Invariant`; I did not open its definition.
+- **Home:** the anchor is the one `branching-not-reachable` already uses; law 1 of that record (line 13) defines possibly drawn.
+- **`holds_in`:** left empty. The record names a OneWay witness that I did not open.
+
+Assignment, in the shape `add_rows.py` reads:
+
+```json
+{
+ "family": "A",
+ "note": "AI-written, 22 November 2026 (board row DJ). Binder names as the source writes them (Junctures.lean 153); to be checked against lister.py's aaRow before the run.",
+ "laws": {
+  "Becoming.Branching.PossiblyDrawn.passes_juncture": {
+   "binders": {
+    "returns": ["branching-returns"],
+    "drawn": ["branching-possibly-drawn"]
+   },
+   "takes_unbound": {}
+  }
+ }
+}
+```
+
+The binder names come from the source, not from a lister run. The mapping row of `loss_passes_juncture` (binders `returns`, `path`, `lost` only) shows the lister gives no hygienic binder for a `¬¬` conclusion.
+
+Sources for the `how`:
+- **Roles and identification:** `Junctures.lean` 155–156 and `Branching.lean` 408.
+- **"A trace by definition":** `Frame.lean` 215, `Reach P s t := ∃ as, Trace P s as t`.
+- **Kept and dropped:** conclusions at `Junctures.lean` 148–149 against 154, and the map at 157.
+- **"A law of this dynamic", "listed under family A's …":** the store.
+- **The print:** uses are `loss_passes_juncture` and `possiblyDrawn_iff`.
+
+## E3b. `Flow.More.unceasing` a case of `unceasing_covering`: a case in the Lean, not enterable as E2 stands
+
+OPENED: `LEAN/Population.lean` 1283–1290. The proof is one call, `Flow.More.unceasing_covering (S := 0) …`, and the conclusion is unchanged. The print gives `unceasing` the single use `unceasing_covering`.
+
+It cannot be entered. `unceasing` has its row on `more-needs-renewers` only, and E2 lists `unceasing_covering` there too. The validator (`atlas.py` 1011–1012) then fails with "is a law of this dynamic: a step within it, not a general law it is a case of".
+
+If the applier lists `unceasing_covering` under `unceasing-generation-needs-renewal` only, a departure from E2's rule that is not mine to make, this would be added to the existing row `{"law": "Becoming.Flow.More.unceasing", "takes": ["k3-a-census", "card-listed", "k3-only-active-relata-take", "flow-more", "k3-decided"]}`:
+
+```json
+"case_of": [
+ {
+  "law": "Becoming.Flow.More.unceasing_covering",
+  "how": {
+   "en": "unceasing_covering with the step from which its hypotheses are asked fixed to the first (S := 0). Decided is discharged by the instance deciding activity at every step; covered by the census, each step N covered at N itself by the census's list, which holds every formation active then; distinct by the present listing each formation once at every step; taking by the first part of Taking, that whatever takes is active; more is passed on. The conclusion, unceasing arising, is the general law's unchanged; the proof is that one call. The general law is listed under family G's unceasing-generation-needs-renewal."
+  }
+ }
+]
+```
+
+Sources: `Population.lean` 1287–1290, argument by argument (`fun _ _ _ => inferInstance`; `⟨N, alive N, Nat.le_refl N, … (census N).2 f).mp active⟩`; `fun t _ => distinct t`; `(taking t f c mem takes).1`; `more`). The last sentence would be true only under that single listing.
+
+---
+
+## E4. The exit: condition met; `to` = `three-outcomes-of-a-loss`
+
+TOLD (the reader): at the start it named `what-an-optimum-does-beyond-what-couples-in`; at the conclusion it named that entry and `three-outcomes-of-a-loss`; it said `loss-of-renewal-for-good` is not reached. So one far end is named, and the edge carries no clause on the other.
+
+OPENED: `LEAN/Optimum.lean` 727–756, `LEAN/Dependence.lean` 276–289 with `Broken` (146–147) and `Dependent` (138–139), `LEAN/Continuation.lean` 478–491.
+
+Exit to add to `what-an-optimum-does-beyond-what-couples-in`, with the keys of its three existing exits plus `to_law`:
+
+```json
+{
+ "to": "three-outcomes-of-a-loss",
+ "law": "Becoming.Web.optimum_ends_beyond",
+ "edge": {
+  "en": "Where the levels after a step are an optimum of an order rising with the family, with room beyond, each condition beyond is depended on at a need met at the step, the beyond lies apart from the family, every condition a member of a group couples into is in the family, activity needs support, some eligible outcome leaves a condition beyond below the need of the dependence on it, and that dependence persists after the step at a need no weaker: the dependence is broken across the step, and its formation is not active after it, is no member, and no member couples into the condition. The break is this dynamic's own; a formation not active after a loss, its dependence fixed, is the ended outcome of a loss, here at that one step. It does not give the far law of every later step (Web.consumed_ends_when_fixed asks the dependence fixed and the level below the need at every later step), nor that the loss is without return. Among this dynamic's laws only this one takes that the dependence persists at a need no weaker; no premise is dropped, the course leaves within them. The proof calls no law of the far dynamic: it uses Web.optimum_broken_iff and takes the last step in place."
+ },
+ "strength": "sufficient",
+ "records": ["what-an-optimum-does-beyond-what-couples-in"],
+ "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+ "to_law": "Becoming.Web.optimum_ends_beyond",
+ "drops": []
+}
+```
+
+Sources, clause by clause:
+- **Premises:** `Optimum.lean` 740–746, binders `rising`, `room`, `optimum`, `met`, `apart`, `listed`, `dependent`, `mem`, `eligibleO`, `below`, `fixed`; docstring 735–739.
+- **Conclusion:** 747–748, four conjuncts.
+- **"The break is this dynamic's own":** the home's mechanism in the store ("every optimum breaks exactly the dependences beyond that some eligible outcome breaks"); the reader named the home at the conclusion too.
+- **"The ended outcome of a loss … at that one step":** the far entry's mechanism ("fixed dependence means ended"; "Each holds at a single step"). By my reading of the two statements, not by any call: at `T := t`, step `t + 1`, `g := dep c`, the statement's `dependent`, `fixed` and the third part of `Broken` are the three hypotheses of `Web.consumed_ends_when_fixed_at` (`Dependence.lean` 276–280), which concludes the same `¬ W.active`. The edge does not name that law.
+- **"Not the far law of every later step":** `Dependence.lean` 284–289 (`fixed` and `below` under `∀ t, T < t →`). The statement speaks of `t` and `t + 1` only.
+- **"Nor that the loss is without return":** the statement gives `level (t+1) c < need` at the one step, inside `Broken`.
+- **"Among this dynamic's laws only this one takes …":** in LEDGER, `web-dependence-persists` and `web-need-no-weaker` each have `lean: ["Becoming.Web.optimum_ends_beyond"]`. A scan of every `takes` in STORE finds them on this law's row only, and no exit drops them. This is a fact about ledger ids: the far entry's one-step law takes the same content under `web-requires` and `web-need-not-lower`, and the edge claims nothing across dynamics.
+- **"No premise is dropped":** `drops` is `[]`; the page will render "Drops no premise: it leaves within them" (`atlas.py` 1391).
+- **"The proof calls no law of the far dynamic":** `PRINT/Becoming.Optimum.jsonl` gives the single use `Becoming.Web.optimum_broken_iff`, listed under the home only. The last step is in place at `Optimum.lean` 753–755.
+- **Source anchor:** `05-COLLECTIVES.md` line 180 holds the anchor and line 181 tells `Web.optimum_ends_beyond`. The record names it at line 19.
+
+The edge is about 1,330 characters; the longest in the store is 926. I found no cap in the validator.
+
+Not in the edge, for the refuter: the statement also gives every hypothesis of `Flow.ends_below_at` (`Continuation.lean` 488–491, with `m := W.need t (dep c) c`, at `t + 1`), a law of `loss-of-renewal-for-good`. The reader did not name that dynamic, so by the frozen rule the edge is silent on it.
+
+---
+
+## What cannot be entered, and why
+
+- **`unceasing` as a case of `unceasing_covering`,** while the latter is listed under `more-needs-renewers`: validator, `atlas.py` 1011–1012.
+- **A case row for `passes_juncture` on `every-loss-passes-a-juncture`:** the same rule; it is a listing only there.
+- **Any line from E2:** nothing forbids the listings, but with every theorem listed at both ends the computed layer draws none.
+- **`passes_juncture` under `returning-where-the-course-branches`:** the reader said no.
+- **A second far end for the E4 exit:** the reader named one.
+
+## What I did not read
+
+- The packets `E2.md` and `E4.md` themselves, `RETURN-attack.md`, and `all-statements.jsonl` (comparisons were made on the opened sources).
+- The bodies of `lost_necessarily_drawn`, `losing_not_returns`, `no_juncture_of_keeps`, `Returns.reachable`, `Web.unceasing_of_growth`; the definition of `Invariant`; the OneWay witness; `Taking`, `Listed`, `Web.CoupledInto`; the witnesses behind "without these it does not".
+- The survey beyond section 1 of `CHECK-roads-and-sample-opus.md.txt`; the tests in `tools/research/tests/test_atlas.py`; `gate.py`; the generated pages.
+- No lister run: the binder names in E3a are from the source.
+- No Chinese text is written for any row; the existing rows and exits compared carry `en` only.

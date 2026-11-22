@@ -1,0 +1,187 @@
+# Packet E2
+
+Six theorems of a Lean package, each with the entries of an atlas of dynamics that list a declaration the theorem's statement names. Answer for every (theorem, entry) pair, one at a time.
+
+
+## Theorem T1: `Becoming.Branching.Juncture.possiblyDrawn`
+
+```lean
+/-- A juncture is possibly drawn: after its losing step it cannot be had again. -/
+theorem Juncture.possiblyDrawn {x : S} (juncture : Juncture P s x) : PossiblyDrawn P x := (proof cut)
+```
+
+### Entries for T1
+
+#### `necessarily-drawn-is-not-returning` (family A)
+
+**Name.** Necessarily drawn exactly what does not return
+
+**Mechanism.** Where courses branch, a configuration is necessarily drawn into a region where every run from it enters, possibly drawn where some reachable configuration lies in it. Every process necessarily draws exactly what does not return, a returning configuration having a run round to it for ever, built constructively; possibly drawn is losing oneself on some course, allowing return on another (OneWay, a witness). Runs are infinite, so a dead end, having no run, is necessarily drawn vacuously: the theorem quantifies over runs and does not say a course entering the region exists. Under every process what can be had n steps on is a region the process never leaves. Failing to return is failing to keep: every configuration reachable from s is reachable from t exactly where t leads back to s; return belongs to the law, not to the change, and a reading that omits the configuration reached can hide the loss (a witness). With configurations of a state and a self-keeping rule on which alone the next depends, a perturbed state is drawn back at once. "Necessarily" and "possibly" quantify over runs and weigh none.
+
+**Declarations it lists.** Branching.NecessarilyDrawn, Branching.PossiblyDrawn, Branching.necessarilyDrawn_iff_not_returns, Branching.possiblyDrawn_iff, Branching.reachable_invariant, Branching.lost_necessarily_drawn, Law.perturbation_drawnInto, keeps_reach_iff_returns, same_reach_iff_returns, not_returns_iff_loses, Irreversibility.constant_reading_hides_loss
+
+#### `every-loss-passes-a-juncture` (family A)
+
+**Name.** Every loss passes a juncture
+
+**Mechanism.** A juncture for s is a configuration with one step after which s can still be had and one after which it cannot. Where s returns, every course from s to where s cannot be had again passes, up to double negation, a juncture at which it takes its losing step. Keeping only the steps after which s can still be had keeps s, holds every sub-process keeping s on its course, and removes exactly the losing steps; a process keeping s has no juncture for s on its course, however many options it has (witness Many). At a configuration with a step keeping s that is no juncture, no step can be refuted to keep it: a choice matters only at a juncture. Where a list holds the configurations, steps are decided and s returns, the juncture is found by search; with the list alone, what can have s has it within the count of configurations; finding the juncture of every loss of every process gives LPO. World, with a process, under the premises its transition states: to turn a reader at a juncture, a source must, not not, have reached it before. Reading [AI reading, D25, D32, D43, D52]: keeping and losing at a juncture are one operation with no valuation.
+
+**Declarations it lists.** Branching.Juncture, Branching.loss_passes_juncture, Branching.loss_passes_juncture_listed, Branching.lpo_of_junctures_found, Branching.keeping, Branching.keeping_keeps, Branching.keeping_greatest, Branching.keeping_removes_at_juncture, Branching.losing_not_returns, Branching.no_juncture_of_keeps, Branching.reach_within_listed, Branching.keeps_before_juncture, TimedResponse.same_step_unreached, TimedResponse.turned_at_juncture
+
+
+## Theorem T2: `Becoming.Branching.Juncture.returns`
+
+```lean
+/-- On the course of `s`, a juncture returns. -/
+theorem Juncture.returns {x : S} (from_s : Reach P s x) (juncture : Juncture P s x) : Returns P x := (proof cut)
+```
+
+### Entries for T2
+
+#### `every-loss-passes-a-juncture` (family A)
+
+**Name.** Every loss passes a juncture
+
+**Mechanism.** A juncture for s is a configuration with one step after which s can still be had and one after which it cannot. Where s returns, every course from s to where s cannot be had again passes, up to double negation, a juncture at which it takes its losing step. Keeping only the steps after which s can still be had keeps s, holds every sub-process keeping s on its course, and removes exactly the losing steps; a process keeping s has no juncture for s on its course, however many options it has (witness Many). At a configuration with a step keeping s that is no juncture, no step can be refuted to keep it: a choice matters only at a juncture. Where a list holds the configurations, steps are decided and s returns, the juncture is found by search; with the list alone, what can have s has it within the count of configurations; finding the juncture of every loss of every process gives LPO. World, with a process, under the premises its transition states: to turn a reader at a juncture, a source must, not not, have reached it before. Reading [AI reading, D25, D32, D43, D52]: keeping and losing at a juncture are one operation with no valuation.
+
+**Declarations it lists.** Branching.Juncture, Branching.loss_passes_juncture, Branching.loss_passes_juncture_listed, Branching.lpo_of_junctures_found, Branching.keeping, Branching.keeping_keeps, Branching.keeping_greatest, Branching.keeping_removes_at_juncture, Branching.losing_not_returns, Branching.no_juncture_of_keeps, Branching.reach_within_listed, Branching.keeps_before_juncture, TimedResponse.same_step_unreached, TimedResponse.turned_at_juncture
+
+#### `returning-where-the-course-branches` (family F)
+
+**Name.** Returning where the course branches
+
+**Mechanism.** Where courses branch, what returns can be had at every step, and every configuration returns exactly where each region the process never leaves keeps every possibility of its own. Keeping every possibility no longer gives returning (three configurations, a witness). Merging nothing gives it along a run whose configurations a list holds, the run taken as given: building one needs a choice at each step. Within listed configurations merging nothing need not give a configuration its return without a run from it (the fork, a witness).
+
+**Declarations it lists.** Branching.Returns, Branching.Returns.reachable, Branching.returns_iff_keepsWithin, Branching.Lossless.comes_back, Branching.Lossless.recurs, Branching.Transit.keeps_not_returns, Branching.fork_lossless_not_returns
+
+
+## Theorem T3: `Becoming.Branching.PossiblyDrawn.passes_juncture`
+
+```lean
+/-- A returning configuration possibly drawn has, not not, a juncture on its course. -/
+theorem PossiblyDrawn.passes_juncture (returns : Returns P s) (drawn : PossiblyDrawn P s) :
+    ¬¬ ∃ y, Reach P s y ∧ Juncture P s y := (proof cut)
+```
+
+### Entries for T3
+
+#### `necessarily-drawn-is-not-returning` (family A)
+
+**Name.** Necessarily drawn exactly what does not return
+
+**Mechanism.** Where courses branch, a configuration is necessarily drawn into a region where every run from it enters, possibly drawn where some reachable configuration lies in it. Every process necessarily draws exactly what does not return, a returning configuration having a run round to it for ever, built constructively; possibly drawn is losing oneself on some course, allowing return on another (OneWay, a witness). Runs are infinite, so a dead end, having no run, is necessarily drawn vacuously: the theorem quantifies over runs and does not say a course entering the region exists. Under every process what can be had n steps on is a region the process never leaves. Failing to return is failing to keep: every configuration reachable from s is reachable from t exactly where t leads back to s; return belongs to the law, not to the change, and a reading that omits the configuration reached can hide the loss (a witness). With configurations of a state and a self-keeping rule on which alone the next depends, a perturbed state is drawn back at once. "Necessarily" and "possibly" quantify over runs and weigh none.
+
+**Declarations it lists.** Branching.NecessarilyDrawn, Branching.PossiblyDrawn, Branching.necessarilyDrawn_iff_not_returns, Branching.possiblyDrawn_iff, Branching.reachable_invariant, Branching.lost_necessarily_drawn, Law.perturbation_drawnInto, keeps_reach_iff_returns, same_reach_iff_returns, not_returns_iff_loses, Irreversibility.constant_reading_hides_loss
+
+#### `every-loss-passes-a-juncture` (family A)
+
+**Name.** Every loss passes a juncture
+
+**Mechanism.** A juncture for s is a configuration with one step after which s can still be had and one after which it cannot. Where s returns, every course from s to where s cannot be had again passes, up to double negation, a juncture at which it takes its losing step. Keeping only the steps after which s can still be had keeps s, holds every sub-process keeping s on its course, and removes exactly the losing steps; a process keeping s has no juncture for s on its course, however many options it has (witness Many). At a configuration with a step keeping s that is no juncture, no step can be refuted to keep it: a choice matters only at a juncture. Where a list holds the configurations, steps are decided and s returns, the juncture is found by search; with the list alone, what can have s has it within the count of configurations; finding the juncture of every loss of every process gives LPO. World, with a process, under the premises its transition states: to turn a reader at a juncture, a source must, not not, have reached it before. Reading [AI reading, D25, D32, D43, D52]: keeping and losing at a juncture are one operation with no valuation.
+
+**Declarations it lists.** Branching.Juncture, Branching.loss_passes_juncture, Branching.loss_passes_juncture_listed, Branching.lpo_of_junctures_found, Branching.keeping, Branching.keeping_keeps, Branching.keeping_greatest, Branching.keeping_removes_at_juncture, Branching.losing_not_returns, Branching.no_juncture_of_keeps, Branching.reach_within_listed, Branching.keeps_before_juncture, TimedResponse.same_step_unreached, TimedResponse.turned_at_juncture
+
+#### `returning-where-the-course-branches` (family F)
+
+**Name.** Returning where the course branches
+
+**Mechanism.** Where courses branch, what returns can be had at every step, and every configuration returns exactly where each region the process never leaves keeps every possibility of its own. Keeping every possibility no longer gives returning (three configurations, a witness). Merging nothing gives it along a run whose configurations a list holds, the run taken as given: building one needs a choice at each step. Within listed configurations merging nothing need not give a configuration its return without a run from it (the fork, a witness).
+
+**Declarations it lists.** Branching.Returns, Branching.Returns.reachable, Branching.returns_iff_keepsWithin, Branching.Lossless.comes_back, Branching.Lossless.recurs, Branching.Transit.keeps_not_returns, Branching.fork_lossless_not_returns
+
+
+## Theorem T4: `Becoming.Flow.More.unceasing_covering`
+
+```lean
+/-- More without end makes arising unceasing with no census, where activity is decided
+from some step on: where lists cover the active formations at arbitrarily late steps, and
+from that step on each formation taking part is listed once, whatever takes is active, and
+activity is decided. Some taker late enough lies beyond the covering list of an earlier
+step, so it came to be active between; only steps from `S` on are decided. -/
+theorem Flow.More.unceasing_covering {W : Web F C} {L : Flow F C} {cs : List C} {S : Nat}
+    (decided : ∀ s f, S ≤ s → Decidable (W.active s f))
+    (covered : ∀ N, ∃ M, ∃ l : List F, N ≤ M ∧ ∀ f, W.active M f → f ∈ l)
+    (distinct : ∀ t, S ≤ t → Distinct (L.present t))
+    (taking : ∀ t f c, S ≤ t → f ∈ L.present t → 0 < L.take t f c → W.active t f)
+    (more : L.More cs) : W.Unceasing := (proof cut)
+```
+
+### Entries for T4
+
+#### `unceasing-generation-needs-renewal` (family G)
+
+**Name.** Unceasing arising needs renewal
+
+**Mechanism.** Where, at a step at which no condition of a finite family rises, each arising goes with a fall in one of them (a supplied premise, not a conclusion; it asks only that some condition of the family change and does not involve the arising formation), unceasing arising leaves the family still from no step on, and where every rise is an active renewer's, renewing stops from no step on. Under balance, uptake at arbitrarily late steps needs replenishment at arbitrarily late steps. Where a quantity never rises and every arising lowers it, arising is not unceasing; a closed cycle sustains it, and a tide renews with nothing arising: unceasing arising is strictly stronger than recurring renewal. Formations can arise one after another while drawing an unrenewed condition, and arising does not recur (a witness). A formation active exactly where supported, at a step and the next, does not arise across the step where every condition it required before is still required, its needs stay and every level stays: arising needs a change in what is read. Unceasing reads only that arising recurs at arbitrarily late steps, not more, diversity or complexity, and it depends on identity across steps.
+
+**Declarations it lists.** Web.Unceasing, Web.Depletes, Tide.unrelated_depletion, Web.Unceasing.rises, Web.Unceasing.activeRenewer_recurs, Flow.uptake_needs_replenishment, Flow.replenishment_recurs, Flow.renewing_recurs, Flow.uptake_needs_replenishment_from, Web.dissipation_arising_not_recurring, Recycle.closed_unceasing, Tide.renewal_without_arising, Growth.ceases, Web.not_arises_of_unchanged
+
+#### `more-needs-renewers` (family H)
+
+**Name.** More needs more renewers; unceasing arising needs renewal
+
+**Mechanism.** Where, at each arising at which no condition of a finite family rises, one of them falls (a supplied premise, which does not involve the arising formation), unceasing arising leaves the family still from no step on, and where every rise is an active renewer's, renewing stops from no step on. Under balance, uptake at arbitrarily late steps needs replenishment at arbitrarily late steps. Read more as: for every number, from some step on at least that many formations take at every step. Under balance, more without end needs replenishment with no eventual bound and, each formation giving at most a fixed amount, renewers with no eventual bound, though they can be absent at infinitely many steps. Under a census, with activity decided, the present listing each formation once and only active formations taking, it forces unceasing arising; without these it does not. The least take of one whole unit is needed (Halving). A closed cycle sustains unceasing arising, and a tide renews with nothing arising. None ranks more above less.
+
+**Declarations it lists.** Web.Unceasing.rises, Web.Unceasing.activeRenewer_recurs, Flow.uptake_needs_replenishment, Flow.replenishment_recurs, Web.dissipation_arising_not_recurring, Flow.More, Flow.More.replenishment_unbounded, Flow.More.renewers_unbounded, Flow.More.unceasing, Web.unceasing_of_growth, Halving.takes_halve, Pulse.pulsed, Oscillation.not_more, Recycle.closed_unceasing, Tide.renewal_without_arising
+
+
+## Theorem T5: `Becoming.Flow.More.unceasing_reidentified`
+
+```lean
+/-- Under a census, with each formation taking part listed once and only active formations
+taking, more without end makes arising unceasing under every re-identification. -/
+theorem Flow.More.unceasing_reidentified {W : Web F C} [decide : ∀ t f, Decidable (W.active t f)]
+    {L : Flow F C} {cs : List C} {alive : Nat → List F} (census : W.Census alive)
+    (distinct : ∀ t, Distinct (L.present t)) (taking : L.Taking W) (more : L.More cs)
+    (σ : Reidentify F F') : (W.reidentify σ).Unceasing := (proof cut)
+```
+
+### Entries for T5
+
+#### `unceasing-generation-needs-renewal` (family G)
+
+**Name.** Unceasing arising needs renewal
+
+**Mechanism.** Where, at a step at which no condition of a finite family rises, each arising goes with a fall in one of them (a supplied premise, not a conclusion; it asks only that some condition of the family change and does not involve the arising formation), unceasing arising leaves the family still from no step on, and where every rise is an active renewer's, renewing stops from no step on. Under balance, uptake at arbitrarily late steps needs replenishment at arbitrarily late steps. Where a quantity never rises and every arising lowers it, arising is not unceasing; a closed cycle sustains it, and a tide renews with nothing arising: unceasing arising is strictly stronger than recurring renewal. Formations can arise one after another while drawing an unrenewed condition, and arising does not recur (a witness). A formation active exactly where supported, at a step and the next, does not arise across the step where every condition it required before is still required, its needs stay and every level stays: arising needs a change in what is read. Unceasing reads only that arising recurs at arbitrarily late steps, not more, diversity or complexity, and it depends on identity across steps.
+
+**Declarations it lists.** Web.Unceasing, Web.Depletes, Tide.unrelated_depletion, Web.Unceasing.rises, Web.Unceasing.activeRenewer_recurs, Flow.uptake_needs_replenishment, Flow.replenishment_recurs, Flow.renewing_recurs, Flow.uptake_needs_replenishment_from, Web.dissipation_arising_not_recurring, Recycle.closed_unceasing, Tide.renewal_without_arising, Growth.ceases, Web.not_arises_of_unchanged
+
+#### `more-needs-renewers` (family H)
+
+**Name.** More needs more renewers; unceasing arising needs renewal
+
+**Mechanism.** Where, at each arising at which no condition of a finite family rises, one of them falls (a supplied premise, which does not involve the arising formation), unceasing arising leaves the family still from no step on, and where every rise is an active renewer's, renewing stops from no step on. Under balance, uptake at arbitrarily late steps needs replenishment at arbitrarily late steps. Read more as: for every number, from some step on at least that many formations take at every step. Under balance, more without end needs replenishment with no eventual bound and, each formation giving at most a fixed amount, renewers with no eventual bound, though they can be absent at infinitely many steps. Under a census, with activity decided, the present listing each formation once and only active formations taking, it forces unceasing arising; without these it does not. The least take of one whole unit is needed (Halving). A closed cycle sustains unceasing arising, and a tide renews with nothing arising. None ranks more above less.
+
+**Declarations it lists.** Web.Unceasing.rises, Web.Unceasing.activeRenewer_recurs, Flow.uptake_needs_replenishment, Flow.replenishment_recurs, Web.dissipation_arising_not_recurring, Flow.More, Flow.More.replenishment_unbounded, Flow.More.renewers_unbounded, Flow.More.unceasing, Web.unceasing_of_growth, Halving.takes_halve, Pulse.pulsed, Oscillation.not_more, Recycle.closed_unceasing, Tide.renewal_without_arising
+
+
+## Theorem T6: `Becoming.Flow.More.unceasing_reidentified_covering`
+
+```lean
+/-- More without end makes arising unceasing under every re-identification, with no
+census, where activity is decided from some step on. -/
+theorem Flow.More.unceasing_reidentified_covering {W : Web F C} {L : Flow F C} {cs : List C}
+    {S : Nat} (decided : ∀ s f, S ≤ s → Decidable (W.active s f))
+    (covered : ∀ N, ∃ M, ∃ l : List F, N ≤ M ∧ ∀ f, W.active M f → f ∈ l)
+    (distinct : ∀ t, S ≤ t → Distinct (L.present t))
+    (taking : ∀ t f c, S ≤ t → f ∈ L.present t → 0 < L.take t f c → W.active t f)
+    (more : L.More cs) (σ : Reidentify F F') : (W.reidentify σ).Unceasing := (proof cut)
+```
+
+### Entries for T6
+
+#### `unceasing-generation-needs-renewal` (family G)
+
+**Name.** Unceasing arising needs renewal
+
+**Mechanism.** Where, at a step at which no condition of a finite family rises, each arising goes with a fall in one of them (a supplied premise, not a conclusion; it asks only that some condition of the family change and does not involve the arising formation), unceasing arising leaves the family still from no step on, and where every rise is an active renewer's, renewing stops from no step on. Under balance, uptake at arbitrarily late steps needs replenishment at arbitrarily late steps. Where a quantity never rises and every arising lowers it, arising is not unceasing; a closed cycle sustains it, and a tide renews with nothing arising: unceasing arising is strictly stronger than recurring renewal. Formations can arise one after another while drawing an unrenewed condition, and arising does not recur (a witness). A formation active exactly where supported, at a step and the next, does not arise across the step where every condition it required before is still required, its needs stay and every level stays: arising needs a change in what is read. Unceasing reads only that arising recurs at arbitrarily late steps, not more, diversity or complexity, and it depends on identity across steps.
+
+**Declarations it lists.** Web.Unceasing, Web.Depletes, Tide.unrelated_depletion, Web.Unceasing.rises, Web.Unceasing.activeRenewer_recurs, Flow.uptake_needs_replenishment, Flow.replenishment_recurs, Flow.renewing_recurs, Flow.uptake_needs_replenishment_from, Web.dissipation_arising_not_recurring, Recycle.closed_unceasing, Tide.renewal_without_arising, Growth.ceases, Web.not_arises_of_unchanged
+
+#### `more-needs-renewers` (family H)
+
+**Name.** More needs more renewers; unceasing arising needs renewal
+
+**Mechanism.** Where, at each arising at which no condition of a finite family rises, one of them falls (a supplied premise, which does not involve the arising formation), unceasing arising leaves the family still from no step on, and where every rise is an active renewer's, renewing stops from no step on. Under balance, uptake at arbitrarily late steps needs replenishment at arbitrarily late steps. Read more as: for every number, from some step on at least that many formations take at every step. Under balance, more without end needs replenishment with no eventual bound and, each formation giving at most a fixed amount, renewers with no eventual bound, though they can be absent at infinitely many steps. Under a census, with activity decided, the present listing each formation once and only active formations taking, it forces unceasing arising; without these it does not. The least take of one whole unit is needed (Halving). A closed cycle sustains unceasing arising, and a tide renews with nothing arising. None ranks more above less.
+
+**Declarations it lists.** Web.Unceasing.rises, Web.Unceasing.activeRenewer_recurs, Flow.uptake_needs_replenishment, Flow.replenishment_recurs, Web.dissipation_arising_not_recurring, Flow.More, Flow.More.replenishment_unbounded, Flow.More.renewers_unbounded, Flow.More.unceasing, Web.unceasing_of_growth, Halving.takes_halve, Pulse.pulsed, Oscillation.not_more, Recycle.closed_unceasing, Tide.renewal_without_arising

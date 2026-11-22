@@ -47755,5 +47755,28 @@
    }
   ],
   "takes_unbound": {}
+ },
+ "Becoming.Branching.PossiblyDrawn.passes_juncture": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 5,
+    "name": "returns",
+    "type": "Becoming.Branching.Returns P s",
+    "premises": [
+     "branching-returns"
+    ]
+   },
+   {
+    "position": 6,
+    "name": "drawn",
+    "type": "Becoming.Branching.PossiblyDrawn P s",
+    "premises": [
+     "branching-possibly-drawn"
+    ]
+   }
+  ],
+  "takes_unbound": {}
  }
 }

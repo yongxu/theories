@@ -1,0 +1,72 @@
+**Refutation of the rows for overlaps22: E1, E2, E3a, E3b and E4 (AI-written, Claude Opus, read only: no file written, nothing built or run except in-memory python over the store and the print)**
+
+None of the five survived as a MUST. One finding (2) was refuted when checked; the other five are LESSER.
+
+## Findings
+
+**1. LESSER, E1. OPENED.**
+- The theorem is at `ChoiceCountCapture.lean` 414–432 and the law at `ClosedCapture.lean` 307–330.
+- The proof is one call, `ClosedCapture.lock_outlives_loss choose_raises weighted_reads upper accrues (start_locked (pos := pos) above) t`. There is no step after the law's conclusion and no case split.
+- The roles in the `how` match the statement: `P` and `M` are `order`; `favours` is `g.other ≤ g.carrier` (`RuleCapture.lean` 491); `fA` is `choose`; `hA` is `weighted κc κo pos`; `a` is `x`; `g` is `weighted κc κo pos x x`.
+- Four of the law's five explicit hypotheses are discharged, as the `how` says, and `accrues` is passed on. `upper` resolves to `CarrierCounts.upper`, as the print line 23 confirms.
+- Only `closed-capture` lists the law.
+- The one fault is register. The store's case rows end "X is listed under <id> (F)", and the renderer already prints where the law is listed (`_case`, `atlas.py` 1349–1351). Replace the last sentence with: `lock_outlives_loss is listed under closed-capture (C).`
+
+**2. Checked and refuted: E3a's identification is not a second argument. OPENED.**
+- `Junctures.lean` 153–157 matches on `possiblyDrawn_iff.mp drawn` (one case, before the call).
+- It then maps the law's `¬¬∃` conclusion to a narrower one. This is the identification the frozen file names, plus a projection that the `how` says it drops, which is allowed under After E3.
+- The `how` is accurate clause by clause, including "the reaching being a trace by definition" (`Frame.lean` 215).
+
+**3. LESSER, E3a `how`, last sentence.** "which lists this theorem too" repeats the computed owners, and would only become true once E2 lands. Replace with: `loss_passes_juncture is listed under every-loss-passes-a-juncture (A).`
+
+**4. LESSER, new premise `branching-possibly-drawn`. OPENED.**
+- The binder is `drawn : PossiblyDrawn P s` (`Junctures.lean` 153). The definition is at `Branching.lean` 369–370; `PossiblyDrawnInto` is at 361–362, and `Invariant` (`Frame.lean` 265) is `∀ s a t, P.step s a t → I s → I t`.
+- The statement as written matches the binder: no mismatch.
+- The binder `returns : Returns P s` (`Recurrence.lean` 128, in namespace `Branching`) matches the ledger's `branching-returns`.
+- `holds_in` may stay empty. If filled, the precedent (`branching-keeps` names `keeping_keeps`) points to `["Becoming.Branching.Juncture.possiblyDrawn"]`, whose conclusion is `PossiblyDrawn P x` (line 110).
+- The assignment's keys (`family`, `note`, `laws`) are the ones `add_rows.py` reads. The binder names still have to be checked against the lister, as the writer says.
+
+**5. LESSER, E4 edge: one omission, nothing claimed beyond the Lean. OPENED.**
+- `Optimum.lean` 735–756 and `Dependence.lean` 276–289 show each clause of the edge is borne by the statement, the print and the ledger:
+  - The premises and the four conjuncts of the conclusion are in the statement.
+  - The print gives the single use `Web.optimum_broken_iff`, listed under the home only.
+  - `web-dependence-persists` and `web-need-no-weaker` are taken on this law's row alone; no other home declaration states such a hypothesis.
+- What the edge leaves out: the far dynamic also lists the one-step law `Web.consumed_ends_when_fixed_at`.
+  - Its three hypotheses are this statement's `dependent (t+1) (dep c)`, `fixed`, and the third part of `Broken`, with `T := t`, step `t + 1` and `g := dep c`.
+  - The second conjunct's proof (`Optimum.lean` 753–754) is that law's body inlined, almost token for token.
+  - A reader told only "does not give the far law of every later step" cannot see that the far end is met by its own one-step law.
+- The edge is also about 1,330 characters against a store maximum of 926. No validator or test cap was found. Its "no premise is dropped, the course leaves within them" repeats the rendered line "Drops no premise: it leaves within them" (`atlas.py` 1391).
+- Suggested replacement `edge.en`:
+
+  > Under Web.optimum_broken_iff's conditions (an order rising with the family, room beyond, the levels after the step an optimum, each condition beyond depended on at a need met at the step), with activity needing support, the beyond apart from the family, every condition a member of a group couples into in the family, an eligible outcome leaving a condition beyond below the need of the dependence on it, and that dependence still required after the step at a need no weaker: the dependence is broken across the step, and its formation is not active after it, is no member, and no member couples into the condition. That the dependence persists at a need no weaker is taken by this law alone among this dynamic's, and with it the formation reaches the ended outcome of a loss at the one step t + 1: read from the two statements, not by a call, its hypotheses and the break it concludes are those of Web.consumed_ends_when_fixed_at there (T := t), not of Web.consumed_ends_when_fixed at every later step, and it does not give that the loss is without return. The proof calls no law of the far dynamic: it uses Web.optimum_broken_iff and takes the last step in place.
+
+- The fields pass the validator: `to` is a known other entry; `to_law` is declared and `to` is a string; `strength` is `sufficient`; `records` and `source` match the home's other three exits; the anchor is at `05-COLLECTIVES.md` 180.
+- The frozen condition is met: the reader named the home at the start and, at the conclusion, the home and `three-outcomes-of-a-loss`.
+- The statement also meets every hypothesis of `Flow.ends_below_at` (`Continuation.lean` 488–491, with `m := W.need t (dep c) c`, at step `t + 1`). Because the reader did not name `loss-of-renewal-for-good`, the frozen rule keeps the edge silent on it. That is right, but it should be filed.
+
+**6. LESSER, E2: mechanism tension, to be filed.** The `more-needs-renewers` mechanism says "Under a census … it forces unceasing arising; without these it does not". Its own record names `unceasing_covering` (`more-needs-renewers.md` law 11: "the census forms are its corollaries"). The witnesses for "without these" (law 7, Dormant) drop the covering too. The frozen file changes no mechanism, so this is not a bar to the listing. It is a sentence for a later landing to reword: the census is sufficient, not necessary.
+
+**7. LESSER, E2: listings checked, no fault. OPENED.**
+- **The reader's answers:** all eleven pairs were answered yes, and the one no (T3 under `returning-where-the-course-branches`) is left out. `KEY.json` maps T1 to T6 to the six theorems as the writer assumed.
+- **My own judgement of the statements:** they agree, opened at `Junctures.lean` 110–118 and 153, `Population.lean` 1262, and `Identity.lean` 387 and 405.
+- **No same statement already listed:**
+  - The three "same as listed" guesses differ: `loss_passes_juncture`, `Flow.More.unceasing` (census) and `Web.unceasing_of_growth` (census plus growth of `alive`).
+  - The writer's other name-only candidates also differ: `Returns.reachable` concludes `Reachable P n s`, and `lost_necessarily_drawn`, `losing_not_returns` and `no_juncture_of_keeps` state other things.
+- **Computed lines:** I ran `atlas.uses_between` in memory on the store with the eleven listings appended, against every print file. No dynamic's `uses`, `chains` or `used_by` changes. The `shared` marks are 12 by count: three junctures × 2 + three unceasing × 2. The writer said this rightly.
+- **Uses that come into the six:**
+  - `Expansion.unceasing_reidentified` uses `unceasing_reidentified`; it is unlisted, so no line is drawn.
+  - `Flow.More.unceasing` uses `unceasing_covering`. That would be a line only if `unceasing_covering` were listed under `unceasing-generation-needs-renewal` alone, as the writer's table says.
+
+**8. E3b: agreed it cannot be entered. TOLD from validator lines 1011–1013, which I opened.** E2 lists `unceasing_covering` under `more-needs-renewers`, the only dynamic carrying `Flow.More.unceasing`'s row, so the case row is refused there.
+
+## Verdicts
+- **E1 case row:** enter, with the change in finding 1.
+- **E2, the eleven listings:** enter as written.
+- **E3a:** enter with the change in finding 3 (an optional `holds_in`, finding 4). The new premise and the assignment can be entered as written, once the lister confirms the binders `returns` and `drawn`.
+- **E3b:** do not enter.
+- **E4 exit:** enter. The current edge is not false; I recommend replacing it with the text in finding 5.
+
+## What I did not read
+- The packets `E2.md` and `E4.md`, `RETURN-attack.md`, `all-statements.jsonl`, `test_atlas.py` and `gate.py`; no lister run.
+- The bodies or definitions of `Flow.More.unceasing` (`Population.lean` 1283–1290), Dormant and the other witnesses, `Room`, `Rising`, `Frontier`, `CoupledInto`, `Taking` and `Census`.
+- `RuleCapture` beyond lines 470–530, and the far entry's records.

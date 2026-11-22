@@ -1,0 +1,134 @@
+*An AI reader who took no part's return (run as Claude Opus, 152,480 tokens), word for word from the agent's transcript. It attacked the file as first written at 21:13, before anything ran.*
+
+I count nine MUST and eight LESSER findings. The worst problems: E2 as worded will enter nothing; E5's question checks only the far end of an exit, while the judges' "inside one dynamic" verdict is mostly about the near end; and the sentence about the four `exact` exits is false. E1 and the E5 sample rule check out.
+
+## 1. Rule by rule
+
+**E1 (`counted_outlives_loss` a case of `lock_outlives_loss`)**
+- **LESSER.** The work is sound. The proof term is one application: `ClosedCapture.lock_outlives_loss choose_raises weighted_reads upper accrues (start_locked …) t` (ChoiceCountCapture.lean ~430). The print shows that direct use.
+- But "a second argument of its own" is open to reading. A strict refuter could count discharging `locked` by `start_locked` as a second argument, and so fail sound work.
+- The third "Against" clause can never fire: neither `capture-by-counted-choices` nor `habit-lock-in-active-inference` lists `lock_outlives_loss`. Only `closed-capture` does.
+- Close with: *"Hypotheses discharged by other theorems are roles fixed. A second argument is a step taken after the law's conclusion, or a case split around it."*
+
+**E2 (listing six theorems)**
+- **MUST: it can be passed empty by design.** The checker found all six only because each statement carries two dynamics' notions. Its list "Not true of 12 (the statement alone shows it)" includes C12, C13, C25, C26, C10 and C11. So the blind reader will name two dynamics, and "names … two" is an Against. Nothing gets listed.
+- The ban on two names is also stricter than the store: 104 names are listed under two or more dynamics today, `counted_outlives_loss` among them.
+- Close with: *"The reader is shown one dynamic's entry at a time and answers yes or no. A theorem is listed under each dynamic that gets a yes."* (This was the morning's R3 form.)
+- **MUST: it departs from R3 without saying so.** R3 says a newly listed theorem gets "its premise row and its mapping row". E2 says "nothing else is typed". The validator and tests allow it (see 2a), but the file claims to follow the morning's rules.
+- Close with either: *"Departing from R3: listed without premise rows, as 221 listings already are"*, or by requiring the rows.
+- **LESSER.** "No theorem is listed in order to carry a link" is an intent nobody can check.
+- **LESSER.** "Nothing else is typed" forbids a case row the store's own form can carry. `Flow.More.unceasing` is literally `unceasing_covering (S := 0) …`. If `unceasing_covering` is listed under another dynamic, that is a case row by the morning's rules.
+- **LESSER.** "Already lists a theorem that says the same" is vague: does `Flow.More.unceasing` say the same as `unceasing_covering`? Name the test, e.g. "same statement up to renaming".
+
+**E3 (`passes_juncture` a case of `loss_passes_juncture`)**
+- **MUST: it is almost unreachable.** It needs E2 to list the theorem under a dynamic other than `every-loss-passes-a-juncture`. But the juncture dynamic is the natural home, and by E2's letter the theorem is not listed at all.
+- **LESSER: the word "case" is undefined.** The proof unpacks `possiblyDrawn_iff`, applies `loss_passes_juncture`, then weakens the conclusion (it drops `a`, `z` and three conjuncts). A refuter can call that "a use, not a case".
+- Close with: *"A projection of the conclusion counts as a case if the `how` says so."*
+
+**E4 (the one road, as an exit)**
+- **MUST: the first judge was not blind to the far end.** J01's queue named `Web.consumed_ends_when_fixed_at`, a law of `three-outcomes-of-a-loss`, among C21's theorems (JUDGE-KEY J01; JUDGE-1 "OPENED"). So "both blind readers name it" would rest on one steered reading.
+- Close with: *"J01 was shown the far law. The second reader is shown only `optimum_ends_beyond`'s statement, and all 186 entries with exits and transitions removed."* All entries, not three, or the choice is forced.
+- **MUST: the exit's fields are left open.**
+  - Store practice: all 56 lawed exits to a dynamic carry both `to_law` and `drops`. Each is set on 56 of 56, and 19 have `drops: []`.
+  - The file fixes neither.
+  - `source` must be a `path#anchor` that resolves. The existing exits of this dynamic cite `theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in`, and 05-COLLECTIVES l.181 tells `optimum_ends_beyond`.
+  - `records` must be live record ids. The existing exits use `["what-an-optimum-does-beyond-what-couples-in"]`.
+  - Close with: *"to_law = Becoming.Web.optimum_ends_beyond; drops = [] (no premise of the near dynamic is shown failing), argued in the edge; records and source as the dynamic's other exits."* Or argue a different `drops`.
+- **LESSER: the edge fails its own test.** The prescribed edge says the proof calls no far law and that a hypothesis is this law's alone in its dynamic. Those are facts about the proof and the store, not the statement. So "the edge says more than the statement" fails it by letter.
+- Close with: *"The refuter checks each clause against its own source: statement, print, ledger."*
+- **LESSER.** "If they differ, none is entered" turns away a reader who names only `loss-of-renewal-for-good`. The checker found that dynamic fully given (`Flow.ends_below_at`). Say whether two exits may be entered.
+
+**"Not entered" paragraph**
+- **MUST: one sentence is false** (see 2f).
+- **LESSER.** The store does have a form for "stated": a `compose` joining with standing `stated`. It is ruled out only because its roles are rule, reading or pool. Say that, rather than "no form".
+
+**E5 (the sample of 8 of 23)**
+- **MUST: it asks half the question.**
+  - The judges placed four of the eight inside the far dynamic: S01, S10, S23 and S40.
+  - S30 was placed in both; S07, S43 and S50 inside the near dynamic.
+  - For the first four, "is the far end in the statement?" comes out yes trivially, and the "store right" side wins. What the N1 verdict signals there is that the near end is not borne.
+  - Close with: *"For each: which dynamic(s) the statement places the course under at its start, and at its conclusion. The store is borne only where the start is the home and the conclusion is the `to`."*
+- **MUST: the reader is shown the answer.** "The exit as the store has it, … both entries" gives the reader the `to` and a choice of two.
+- Close with: *"The reader is shown the statement and the home's and far end's entries among others, without the exit."*
+- **LESSER.** The sampling rule was fixed while the scored table was already on file. Say so.
+
+## 2. What the file takes for granted, checked
+
+**(a) Theorems listed with no premise row**
+- The validator allows it: `premises` is optional, and only rows present are checked.
+- So do the tests. `test_every_listing_holds_its_binders` iterates premise rows only and asks that the rows' laws equal the mapping's keys. There is no listed-implies-row test.
+- Today, counting theorems the print has a row for: 221 listings have no premise row. They are in three dynamics: `turning-in-time` 98, `a-line-on-a-stock` 112, `kept-at-the-length-of-a-list` 11.
+- Of 2,785 declaration listings in all, 595 have no row; that figure includes definitions.
+
+**(b) Case rows on a law listed under two dynamics**
+- The validator does not require the row on both. Of 14 multi-listed laws with case rows, 7 have them on one side only.
+  - 6 of those 7 are forced: the general law is listed on the other side.
+  - `Flow.excess_bounded` on `own-count-misses-joint-excess` is not forced. It is an inconsistency in the store.
+- The validator does refuse a `case_of.law` that equals the row's law or is in the same dynamic's `declarations` (atlas.py ~1012).
+- `lock_outlives_loss` is listed only under `closed-capture`. Neither of E1's two dynamics lists it, so rows on both pass.
+
+**(c) The listings E3 depends on**
+- `loss_passes_juncture` is listed only under `every-loss-passes-a-juncture`.
+- `possiblyDrawn_iff` is listed only under `necessarily-drawn-is-not-returning`.
+- So a case row on `passes_juncture` can sit under any dynamic except `every-loss-passes-a-juncture`, e.g. `necessarily-drawn-is-not-returning` or `returning-where-the-course-branches`.
+- A premise row also needs a mapping row: the test asks that the rows' laws equal the mapping's keys. The file is right on that.
+
+**(d) The optimum dynamic's exits, and the strength vocabulary**
+- `what-an-optimum-does-beyond-what-couples-in` has 3 exits, all with `to` in words.
+  - Laws: `keeping_optimum_takes_slack` (sufficient), `Drain.room_needed` (witness), `Drain.satisficing_either` (witness).
+  - Each has `records` = [the dynamic's own record], a 05-COLLECTIVES source, and a `drops`.
+- Required exit fields: `to`, `law`, `edge`, `strength`, `records`, `source`. Optional: `drops`, `to_law`, `standing_without_law`.
+- `necessary` is in `exit_strengths`. The judges' table has two such exits (S01, S46), not one.
+
+**(e) The E5 sample**
+- Correct. Exactly 23 rows have verdicts `["N1"]`. Sorted, every third from the first is S01, S07, S10, S23, S30, S40, S43, S50.
+- All 56 rows are S-keys.
+- Verdict counts: N1 alone 23; N3 alone 10; ROAD alone 9; N1 with another verdict 9; N0 alone 2; one each of N5a+N3, ROAD+N3, N0+N5b. N1 appears anywhere in 32 rows.
+
+**(f) "The survey itself found that the four `exact` exits … are identifications" — false**
+- This was the definition attacker's reading before the run: "All four `exact` exits the store draws to a dynamic are of this form" (ATTACK-the-definition l.104). It was then written into the frozen questions' N3: "its four `exact` exits to a dynamic are of it".
+- The blind judges did not find it. The note's checker: "the judges answered one N3 (J40) and three N1 (J07, J26, J52)".
+- Close with: *"The survey's questions took the four exact exits to be of N3's form; blind judges placed one as N3 and three inside one dynamic."*
+
+**Also: "what the store must still say by hand is only …"**
+- **LESSER, overstated.** Joinings (`compose`) and transitions are hand-kept too.
+- The computed layer also draws chains through unlisted theorems. Per the printer's own notes, it misses uses that pass through a definition's body.
+
+## 3. Can E2's question be answered blind?
+
+Only in part.
+- The statements name the notions: `Juncture`, `PossiblyDrawn`, `Returns`, `Flow.More`, `W.Unceasing`. Each is a declaration listed under a dynamic, and the theorem names are dot-notation on them. With `declarations` shown, placement is a name lookup.
+- Withholding `declarations` does not fix this, because the mechanisms name the same notions.
+- Call it what it is: a reading of which dynamics' notions the statement carries. That is the survey's own rule (QUESTIONS l.21: a declaration on a list does not by itself make the notion that entry's).
+
+What the reader should be given:
+- the statement and docstring only, as text, with the proof body cut (E2 says "not told what it uses", but the Lean file shows it);
+- all 186 entries with exits, transitions and case rows removed;
+- for the morning's R3 form, one entry at a time, judged yes or no.
+
+What the reader must not be given:
+- the repo, or any free grep of it;
+- the survey's folder (ITEMS, INDEX, astra, judge, readers);
+- the print `proof-uses/`;
+- this frozen file (its "Not entered" paragraph and E4 name the answers);
+- the board's row FM and DJ lines, PLACES.md, and the module file (Junctures.lean sits beside `loss_passes_juncture`).
+
+## 4. Ranking, aims, overclaims
+
+- **LESSER.** "Told after, as a count" restates R8. I reproduce 81 of 186 unlinked by R8's measure. E1 would link `closed-capture`; E3 would link `every-loss-passes-a-juncture`. Keep the count out of every success sentence.
+- No ranking found.
+- The overclaims are 2f and the "only" sentence above.
+
+## 5. Not read
+
+- QUESTIONS-ROADS beyond lines 7–33 and 69.
+- The checker's items C02–C38 beyond "The two lists".
+- Judges 2–4, and Judge 1 beyond J01.
+- The note's check beyond l.23, and the morning's RETURN-attack.
+- `premises.json` and the mapping files. Whether `passes_juncture`'s binders map to existing premise ids is not checked.
+- Whether the record `what-an-optimum-does-beyond-what-couples-in` lists `optimum_ends_beyond`.
+- Identity.lean's statements of `unceasing_reidentified` and `unceasing_reidentified_covering`.
+- atlas.py outside 811–1063, except the vocabulary and anchor helpers.
+- RESULT-WORKFLOW and the board.
+
+I wrote nothing, built nothing and ran no tests: only small read-only python and grep. About 75k tokens used.

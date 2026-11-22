@@ -1,0 +1,349 @@
+# Packet E4
+
+One theorem, the names of all the dynamics of an atlas, and the entries of those that list a declaration of a module in which a notion of the theorem's statement is declared.
+
+## The theorem: `Becoming.Web.optimum_ends_beyond`
+
+```lean
+/-- **The formations beyond end, unseen.** Under the conditions of `Web.optimum_broken_iff`, where
+activity needs support, some eligible outcome leaves a condition beyond below the need of the
+dependence on it, and that dependence is as it was across the step, the dependence is broken and
+its formation is not active after the step; where every condition a member of a group couples
+into is in the family, that formation is no member, and no member couples into the condition. -/
+theorem optimum_ends_beyond {obs : F → C → Prop} {members : F → Prop}
+    (rising : Optimum.Rising ds better) (room : Optimum.Room ds rest eligible)
+    (optimum : Frontier eligible better (W.level (t + 1))) (met : W.MetOn dep rest t)
+    (dependent : W.Dependent) (apart : ∀ c, c ∈ rest → ¬ c ∈ ds)
+    (listed : ∀ h c, members h → W.CoupledInto obs h c → c ∈ ds) {c : C} (mem : c ∈ rest)
+    {o : C → Nat} (eligibleO : eligible o) (below : o c < W.need t (dep c) c)
+    (fixed : W.requires (t + 1) (dep c) c ∧ W.need t (dep c) c ≤ W.need (t + 1) (dep c) c) :
+    W.Broken t (dep c) c ∧ ¬ W.active (t + 1) (dep c) ∧ ¬ members (dep c) ∧
+      ∀ h, members h → ¬ W.CoupledInto obs h c := (proof cut)
+```
+
+## The names of all 186 dynamics
+
+- `attraction-is-not-returning`: Drawn exactly where it does not return
+- `basins-of-a-determined-law`: Basins of a determined law, one cycle each
+- `necessarily-drawn-is-not-returning`: Necessarily drawn exactly what does not return
+- `every-loss-passes-a-juncture`: Every loss passes a juncture
+- `not-going-out-of-a-region`: Not going out of a region
+- `degeneration-from-a-horizon`: Degeneration from a horizon
+- `loss-of-renewal-for-good`: Loss of renewal for good
+- `three-outcomes-of-a-loss`: Three outcomes of a loss: restored, transformed, or ended where dependence is fixed
+- `margin-of-a-regime`: The point of no return of a regime
+- `turning-in-time`: A line that ends where the net ends, or while the net goes on
+- `a-line-on-a-stock`: A line on a stock: units that leave offspring on a renewed level
+- `threshold-in-the-state-plane`: One law of exact thresholds, and the threshold in the plane of level and recent giving
+- `exit-from-a-margin`: The exit from a margin
+- `consumption-ends-with-feeders`: Consumption ends with its feeders
+- `substitution-preserves-consumption`: A consumer that switches stays consuming, on the whole-run reading
+- `a-cascade-along-total-dependence`: An end cascading along total dependence
+- `co-ending-along-dependence`: Co-ending along dependence
+- `a-whole-of-every-part`: A whole of every part ends with one part; the grade between it and a whole of some part
+- `confined-rise-within-a-whole`: A confined rise within a whole
+- `ending-laws-as-regimes-on-a-lineage`: Ending laws as regimes on a lineage
+- `fixation-by-drift`: The ends of drift absorb; fixation, with and without selection in the draw
+- `a-rule-with-no-holder-does-not-return`: The ends of a rule rebuilt from its members: no holder, and the end, do not return
+- `a-reader-rebuilt-from-its-stock-ends-with-it`: A reader rebuilt from the level it reads: its end does not come back
+- `what-a-gate-keeps`: What ungated steps keep; an empty pool stays empty
+- `selection-among-groups-by-ending`: Groups with less leave nothing; groups on one family end together
+- `market-finite-support-obstruction`: Draining: below a drained level no history lasts
+- `four-routes-of-transition`: Four routes of transition, none a proved phase transition
+- `slowing-down-before-an-own-end`: Slowing down before a condition's own end
+- `reserve-defers-ending`: A reserve defers the end
+- `dormancy-over-a-stretch`: Dormancy over a stretch, and an ending that is final
+- `market-model-share-margin-and-ends`: The market model's share, margin and ends
+- `own-count-misses-joint-excess`: Own count misses joint excess
+- `joint-difference-making`: A loss made only together
+- `the-rest-outruns-the-renewal`: The rest outruns the renewal
+- `what-taking-all-excludes`: What taking all that is given excludes
+- `what-an-optimum-does-beyond-what-couples-in`: What an optimum does beyond what couples in
+- `what-a-set-point-optimum-does-beyond`: An order with a set point
+- `others-drawing-first-end-the-base`: Others drawing first end the base
+- `drawers-in-turn`: Several drawers: drawers in turn and at once
+- `coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it`: Coupled for each step
+- `a-race-for-position-draws-everything`: A race for position
+- `several-optimizers-drain-by-their-joint-capacity`: Several optimizers
+- `re-optimizing-above-a-renewal-ends-it`: Re-optimizing at every step
+- `a-weighting-faster-than-renewal-ends-the-base`: Weighting later draws less
+- `horizon-optima-hold-the-greatest-renewal`: Courses over a horizon
+- `keeping-forgoes-the-renewal-at-the-need`: What keeping forgoes, and a coupling against it
+- `what-a-rise-draws-from-beyond`: What a rise draws from beyond
+- `risk-minimization-on-a-shared-renewal`: Risk minimization on a shared renewal
+- `where-a-rising-take-ends`: Where a rising take ends
+- `position-does-not-protect`: Position does not protect
+- `no-finite-part-bears-taking`: No finite part bears taking
+- `whole-drawing-beyond-renewal-ends`: A whole drawing beyond renewal ends
+- `loss-beyond-a-region`: Loss beyond a region
+- `the-test-season-meets-the-optimum-laws`: LA4's season
+- `unselected-beyond-the-coupling-closure`: Selection blind beyond the coupling closure
+- `selection-read-off-its-own-survivors`: A selection read off the pool its own course gives registers no removal
+- `reading-a-loss-in-time`: Reading in time: a selection read off continuation reads a loss before its point of no return, or too late
+- `target-capture`: The capture of a target
+- `capture-through-the-rule`: Capture through the rule
+- `closed-capture`: Closed capture (meta-attractor, in the glossary's sense)
+- `readers-drawn-from-the-selected`: Readers drawn from the selected
+- `shaping-the-rule-selected-by-what-comes-back`: The capacity to shape the rule, selected by what comes back to it
+- `shaping-read-by-readers-drawn-from-the-selected`: The critical mass: what comes back to the shapers, read by readers drawn from the selected
+- `loss-read-in-time-by-the-others`: The loss read in time by the others, joined to the critical mass
+- `capture-by-counted-choices`: A chooser's rule read from the count of its choices
+- `self-reproducing-selection-across-carriers`: Self-reproducing selection across carriers (the corpus's meta-attractor)
+- `capture-reaching-the-routes-of-correction`: Capture reaching the routes of 明 (the second order)
+- `selection-for-narrowing-what-couples-in`: Rewarding those who break the routes of correction (the third order)
+- `habit-lock-in-active-inference`: A habit read as capture by counted choices
+- `a-counter-rule-read-from-its-own-share`: A counter-rule read from the share it selects
+- `a-code-formed-between-formations`: A code formed between formations
+- `a-code-held-as-counts`: A code held as counts, learned from what is heard
+- `a-reading-against-the-share-does-not-ratchet`: A reading against the share does not ratchet
+- `the-lock-draws-its-readers-out`: The lock draws its readers out
+- `seeking-boundary`: Where seeking rests: more than now never does, above all others never for two
+- `locked-seeking`: Locked seeking
+- `obscuration-and-reopening`: Obscuration and reopening
+- `what-a-course-chosen-through-its-model-does-not-test`: What a course chosen through its model does not test
+- `what-seeking-cannot-separate`: What seeking cannot separate
+- `a-stop-passed-by-a-listing-that-fixes-the-sign`: What holding an act for a reading is worth: a listing that fixes the sign and never meets the stop
+- `a-prediction-read-by-what-it-predicts`: A prediction read by what it predicts
+- `a-break-read-only-by-threshold`: Runaway, and the distance to the break that does not couple in
+- `a-reading-kept-by-its-update`: A reading kept by its update, and the reading its own history carries
+- `what-training-installs`: What training installs
+- `what-a-commuting-law-keeps-apart`: What a commuting law keeps apart, and what a learner's symmetry fixes
+- `readings-within-what-they-read`: A family of readings within what it reads
+- `adaptive-closure-cannot-resolve`: Adaptive closure: a reference changed outside what is retained is not resolved from the view
+- `correction-is-not-calibration`: Correction is not calibration: references recover the report, and later change defeats it
+- `learning-by-refutation`: Extrapolation by elimination
+- `a-cascade-at-the-histories-reached`: A cascade at the histories reached, and readers reading readers
+- `a-pool-that-recruits-through-itself`: A pool that recruits through itself
+- `selection-when-the-lumping-changes`: Which selections survive and remain executable when the lumping changes
+- `a-wrong-projection-admitted-at-every-step`: A wrong projection admitted at every step while the move goes in step with what it leaves out
+- `evidence-through-change`: Evidence through change: readings propagated through admitted changes, and a change recorded as none
+- `encounter-selection-and-revision`: Chosen encounters: records only narrow the candidates, and a wrong unique binding can meet the stopping rule
+- `a-reading-informed-and-revalued`: A reading informed and revalued along one law: the updates commute, the courses do not
+- `giving-that-waits-on-giving`: Giving that waits on giving
+- `restoring-giving-from-the-worst-start`: Restoring giving from total withholding
+- `thresholds-of-waiting`: Thresholds of waiting
+- `a-pair-tolerates-only-within-a-window`: A pair tolerates only within a window
+- `errors-by-chance-in-a-pair-keeping-mutual-withholding`: Errors by chance in a pair keeping mutual withholding
+- `offspring-read-from-giving-that-waits`: Offspring read from giving that waits
+- `what-decides-giving-against-keeping-on-a-flow`: What decides giving against keeping on a flow
+- `what-giving-that-waits-draws-on`: What giving that waits draws on
+- `a-circular-wait-needs-a-reserve-present`: A circular dependence: maintenance running or a wait no one can begin
+- `cooperation-read-as-giving-that-waits`: Cooperation read as giving that waits on giving
+- `overcompensating-giving-cycles`: Overcompensating giving can cycle for ever
+- `support-beyond-a-band-can-cycle`: Beyond a band, support can sustain a cycle
+- `overshoot-beyond-the-gap`: Beyond the gap an opposing exchange crosses and can oscillate for ever
+- `late-relay-oscillates`: A relay reading late settles or leaves both ends without end
+- `overshooting-thermostat-alternates`: The overshooting thermostat with the window open
+- `threshold-reading-read-late-alternates`: A threshold reading, read one step late, from a start against it
+- `publication-under-negation-alternates`: Repeated publication under negation
+- `a-map-moving-every-value-never-rests`: A map moving every value never rests along its run
+- `revision-with-an-undecided-value`: The liar's revision never rests with two values; with three, from all undecided, it rests undecided
+- `withholding-returns-around-a-loop`: Without memory, a withholding returns around every loop of waits
+- `a-run-round-a-loop-keeps-changing`: A run round a loop keeps changing
+- `recurrence-without-premise`: Recurrence under every law of change
+- `recurrence-without-decidedness`: Recurrence without decidedness
+- `returning-where-the-course-branches`: Returning where the course branches
+- `recurrence-without-selector-revision`: Recurrence without revision of the selector
+- `a-course-that-only-returns`: A course that only returns
+- `recurring-at-fine-steps-quiet-at-coarser`: What recurs at fine steps can read as quiet at coarser ones
+- `closed-cycle-without-dissipation`: A closed cycle sustains unceasing arising, without dissipation
+- `lossless-exchange-continues-and-returns`: Lossless exchange can continue and return
+- `a-token-moved-back-and-forth-on-a-net`: One token moved back and forth: the conservative cycle of a net
+- `becoming-return-grades`: Return grades renewal
+- `waxing-and-waning-returns`: The law of waxing and waning
+- `how-loops-form`: How loops form within the unfolding
+- `whether-a-loop-closes-a-difference`: Whether a loop closes, keeps or widens a difference
+- `falls-that-end-do-not-recur`: The grammar's law of rest: falls that end do not recur
+- `the-last-change-of-a-run`: The last change of a run
+- `when-the-runs-of-a-process-settle`: When the runs of a process settle
+- `where-the-possible-grows`: Where the possible grows
+- `what-keeping-widening-needs`: What keeping widening needs, and what carries it
+- `closing-needs-net-draw`: What closes what can form: a net draw on a required condition
+- `returning-novelty-forgetting-on-levels`: Revisiting, novelty and forgetting on the levels alone
+- `continued-change-needs-openness`: The rest theorem
+- `an-arrow-leaves-change-not-recurring`: An arrow leaves change not recurring
+- `rest-at-every-resolution`: Rest at every resolution
+- `rest-exactly-where-falls-stop`: Rest exactly where the total stops falling
+- `least-loss-rest`: The least loss as a premise of rest
+- `laws-with-noise`: Laws path by path, and rest not in expectation
+- `where-a-run-of-a-regime-comes-to-rest`: Where a run of a regime comes to rest
+- `a-coupling-saturated-by-what-it-has-carried`: A coupling saturated by what it has carried
+- `unceasing-generation-needs-renewal`: Unceasing arising needs renewal
+- `ceasing-needs-arising`: Ceasing needs arising; under a bounded list the two keep pace
+- `merged-distinctions-stay-merged`: A merged distinction returns only from a form held outside, or by coining
+- `generation-and-degeneration-at-two-grains`: Generation, keeping and degeneration at two grains
+- `supported-renewal-recovery`: Supported repair and reformation of a sustaining relation
+- `support-passed-on`: Support passed on by later gainers
+- `whole-persists-through-generation`: A whole persists through the arising of its parts
+- `a-pattern-lasts-through-passing`: A pattern outlasting its carriers lasts through passing
+- `two-sided-regulation-and-late-reading`: Two-sided regulation, and regulation that reads late
+- `kind-relay-keeps-widening-within-kinds`: The kind relay: widening within kinds, what it can form by name only returning
+- `rule-raised-every-other-step`: Growth relative to what is held with renewal without end: the rule raised every other step
+- `restraint-within-the-joint-slack`: Restraint within the joint slack keeps the need
+- `division-by-exclusive-footprints`: Division by exclusive footprints
+- `a-step-coupling-keeps-at-every-horizon`: A coupling for each step kept
+- `a-rule-rebuilt-from-the-members-it-limits`: A rule rebuilt from the members it limits
+- `the-stock-buys-time-where-the-rebuild-draws-on-it`: The stock buys time where the rebuild draws on it
+- `a-revision-that-opens-a-correction`: A revision of a reading that opens a correction, along one process
+- `recurring-reference-revision`: Activity forms reference revision and makes it recur
+- `mutation-and-the-balance-it-sets`: Mutation and the balance it sets
+- `mutual-dependence-and-its-pace`: Mutual dependence, and the exponential pace that loops of couplings give
+- `more-needs-renewers`: More needs more renewers; unceasing arising needs renewal
+- `continuing-self-fed-from-beyond`: A continuing family cannot go unfed from beyond
+- `renewing-consuming-formation`: Renewing and consuming formation
+- `a-regularity-kept-and-changed`: A regularity kept and left along its own line
+- `never-leaving-a-guard`: Never leaving a guard, conditions kept together, and lasting
+- `kept-at-the-length-of-a-list`: The largest class a step preserves, reached at a list's length
+- `succession-on-a-funded-carrier`: Succession on a carrier provided for migration
+- `joint-practice-forms-continuation`: Joint practice forms further participation and continuation
+- `copying-from-a-stock`: Copying from a stock: recurrent formation and inherited arrangement
+- `regime-in-any-amounts`: The regime in any amounts, and its runs over the reals
+- `recoverable-mediated-change`: Recovery after interrupted change
+- `optima-rebuild-a-depleted-base`: Every optimum rebuilds a depleted base
+- `what-a-lineage-carries`: A goal along a lineage, need drift along a lineage, and what descent can form
+- `the-selection-term-and-a-lineages-fate`: The selection term and a lineage's fate
+- `persisting-filters-what-was-chosen`: Persisting is a filter on what was chosen: keeping above ending, on the occasions met
+- `readings-carried-and-filtered`: Readings carried along a line, told apart by its standing late only within its coupling closure
+- `readings-revised-spread-and-locked`: Readings revised at descent: a share moving by selection and revision, locked where closed under revision
+- `formed-goal-revision-continuation`: A formed goal revised, and the operations it goes on through
+- `what-a-regularity-takes-in`: What a line must hold, and what a regularity takes in
+- `growth-constrained-fragmentation`: Growth by attachment, and what a cut returns
+- `becoming-renewal-reading`: Renewal and consumption classify runs
+
+## Entries
+
+#### `loss-of-renewal-for-good` (family A)
+
+**Name.** Loss of renewal for good
+
+**Mechanism.** Loss for good is a law of every balanced flow: where whatever gives to a condition depends on it at a need of at least m and is supported where it gives, a level below m stays below; where activity needs support every formation depending at such a need is inactive at each such step, so from then on. With balance, where the joint exchange gives no more than it takes below m, a level below m never returns to it, gated renewal being the case. In the support-gated family (one shared condition, natural-number levels), drawing beyond renewal ends the renewal for good, and two drawers each within renewal can together consume it (joint drawing represented as one law with the summed draw, exact where they share a support level); a dependent drawer then ends itself with bounded formation, an independent one can persist (a witness). Forming new organization at every step, or the drawer's own course, leaves the class undecided. Renewing and consuming exclude each other and do not exhaust the cases.
+
+**Declarations it lists.** Flow.stays_below_at, Flow.ends_below_at, Flow.ends_below, Flow.never_returns_below, SupportGated.below_for_good, SupportGated.ends_for_good, SupportGated.overdraw_ends, SupportGated.jointly_ends, RelationalRenewal.Law.no_return_below_support, RelationalRenewal.Law.dependent_overdraw_ends_itself, RelationalRenewal.Law.independent_overdraw_persists, RelationalRenewal.Law.jointly_consuming, RelationalRenewal.Law.escalation_consumes, RelationalRenewal.Law.formation_does_not_decide, RelationalRenewal.Law.own_trajectory_does_not_decide, RelationalRenewal.renewing_not_consuming, RelationalRenewal.fluctuating_neither
+
+#### `three-outcomes-of-a-loss` (family A)
+
+**Name.** Three outcomes of a loss: restored, transformed, or ended where dependence is fixed
+
+**Mechanism.** Read as observables of the configuration, dependence makes every run a web; each step keeps, breaks, forms or dissolves each dependence. Of a dependence holding at one step and not at a later one, it cannot be that no step between dissolves it (constructive, naming no step; found where the dependence is decided at each step). Where activity needs support (Dependent, which leaves out buffers, reserves and lags), three outcomes of a loss are constrained, not exhaustive or exclusive: continuing unweakened means restored, still active after a loss without return means transformed, and fixed dependence means ended. Each holds at a single step of any web with its local condition inside the law. In Crossing all three follow one break, the move that makes the break selecting the outcome (a witness). That it is the same break depends on reading the fall against the dependence at the step's start: at the step's end only the restoring run has a break. A formation's identity across steps is given by the index F, not derived here.
+
+**Declarations it lists.** Web.Kept, Web.Broken, Web.Forms, Web.Dissolves, Web.kept_or_broken, ceases_at_a_step, arises_at_a_step, Web.continuing_restores, Web.consumed_continues_transformed, Web.consumed_ends_when_fixed, Web.continuing_restores_at, Web.consumed_continues_transformed_at, Web.consumed_ends_when_fixed_at, Crossing.loss_does_not_decide
+
+#### `joint-difference-making` (family B)
+
+**Name.** A loss made only together
+
+**Mechanism.** Any process; withholding a supplied map on configurations; the move taken held fixed. A part makes the difference where the step by the move taken breaks a dependence and, the part withheld, the same move can be taken and every step by it keeps it. Where the move determines the step and, any single member's part withheld, can be taken with the dependence holding and met, the parts make the difference together while no member alone does exactly where they make it together and withholding any one leaves the same move breaking it. In the witness Pool, with two other drawers the loss is overdetermined: the first drawer's part makes no difference, the first two make it only together, and the whole-run relational reading still counts the first drawer as consuming. Across one formation's own events, in the renewable witness (one unit renewed a step), two units drawn at every step consume the condition; with any one event's draw, or every draw before any step, withheld, it is still consumed: the tail fixes the run-level outcome, while the breaking event makes the step-level difference. It yields no causal theory, responsibility, duty or ranking.
+
+**Declarations it lists.** Dependence.MakesDifference, Dependence.MakesDifferenceTogether, Dependence.makesDifference_iff, Dependence.Overdetermined, Dependence.Overdetermined.no_difference, Dependence.Overdetermined.only_together, Dependence.DifferenceOnlyTogether, Dependence.differenceOnlyTogether_iff, Dependence.DifferenceOnlyTogether.two_le_length, Pool.difference_only_together, Pool.all_overdetermined, Pool.first_two_only_together, Web.ConsumingIn, Renewable.depleting, Renewable.withheld, Renewable.overdraw_consumes, Renewable.depletion_is_joint, Renewable.no_finite_segment_makes_difference, Renewable.breaking_event_makes_step_difference
+
+#### `what-an-optimum-does-beyond-what-couples-in` (family B)
+
+**Name.** What an optimum does beyond what couples in
+
+**Mechanism.** An optimum here is that field's frame: an eligible outcome no eligible outcome ranks above under a supplied order, taken over any supplied set of eligible outcomes. One step. Every order rising with a family has its optima at the least level beyond, condition by condition, among the eligible outcomes, exactly where no eligible outcome standing above another at a condition beyond goes unbeaten on the family; so with room every optimum is there, and, with equality of conditions decided, the beyond apart from the family and the family holding a condition, shared units (outcomes closed under moving a unit from beyond into the family) give room. A lexicographic order counting the beyond after what couples in drains all the same. With room, on a web (World) with each condition beyond depended on at a need met at the step, every optimum breaks exactly the dependences beyond that some eligible outcome breaks. Room is a premise; over one step of exchange (World) it holds where a part's members take at most their capacity and give at most what they take, the rest exchanging as it does, and every optimum stands beyond at what the rest leaves less the capacity, or at nothing. The core asserts none of this of an actual optimizer.
+
+**Declarations it lists.** Optimum.Rising, Optimum.Room, Optimum.least_iff, Optimum.least_of_room, Optimum.Shared.room, Optimum.Rising.mono, Web.optimum_broken_iff, Web.optimum_ends_beyond, Flow.Balances.family_le_iff, Flow.keeping_optimum_takes_slack, Optimum.rising_optimum_iff, Optimum.optima_lack_iff, Optimum.optima_lack_of_bound, Optimum.optima_lack_iff_bounded, Optimum.Drain.drained_optimum, Optimum.Drain.counted_after_drains, Optimum.Drain.room_needed, Optimum.Drain.satisficing_either, ModelStatements.optimum_broken_reading, Optimum.Above.room, Optimum.optimum_beyond, Optimum.optimum_lowers_iff, Web.optimum_broken_iff_capacity, Weighted.Commutes, Weighted.Commutes.carried, Weighted.Commutes.fixed_expect, Weighted.Commutes.start_expect, Weighted.Commutes.of_samples, Weighted.Reinforcing.expect_equal, Weighted.Reinforcing.oneSided, Weighted.Pooling.share_rises
+
+#### `others-drawing-first-end-the-base` (family B)
+
+**Name.** Others drawing first end the base
+
+**Mechanism.** A named model: any law G of what stands, natural amounts and weights; the breaks on the World. A level z at the step from t gives G t z to be drawn at the next, and the draw of the step from t is weighted by w t. A course gaining the most against every open course and leaving nothing is an optimum (of that weighted draw, that field's frame, over the open courses), and every optimum of every order rising with the weighted draw stands below a need above every level of greatest gain, breaking at the first step a dependence there met at the start. Where others first draw from what an optimizer leaves, leaving K t z, and what stands for it, K t z + R (K t z), is at most the level, with a capacity covering what stands at the start and at nothing, over a horizon of at least two steps, every optimum of every order whose weighting falls at every step, however slightly, ends the stock at once and breaks every dependence on it with a positive need met at the start. The others' rule is supplied. In a witness: the discrete form of open access dissipating what a sole owner would keep (Gordon 1954).
+
+**Declarations it lists.** Optimum.Next.frontier_of_gainsMost, Optimum.Next.frontier_below, Web.Next.frontier_broken, Optimum.Next.exhausting_frontier, Optimum.Next.frontier_exhausts, Optimum.Next.leftBy, Optimum.Next.frontier_ends_of_le, Optimum.Next.frontier_ends_drawn_first, Optimum.Next.frontier_ends_drawn_more, Web.Next.frontier_ends_drawn_first, Web.Next.frontier_ends_drawn_more, Optimum.Holding.doubling_drawn_first, Optimum.Holding.doubling_drawn_first_linear, Optimum.Next.frontier_leaves, Optimum.Next.frontier_rebuilds, Web.Next.frontier_rebuilds
+
+#### `drawers-in-turn` (family B)
+
+**Name.** Several drawers: drawers in turn and at once
+
+**Mechanism.** A named model: any law G of what stands, natural amounts; the breaks on the World. k drawers draw in turn, each leaving at least its floor; a profile is perfect where every drawer's rule is a best response (that field's frame, among what it may leave, over the steps that remain) at every step from every level. What a best response keeps above its floor returns to it at least one for one, so a drawer draws to its floor wherever what it draws later does not depend on what it leaves, and every drawer does at the last step. Where two drawers have no floor, whatever the others' floors, every perfect profile is the floor profile, which is perfect, and every sequence of revisions from any profile reaches it; with no floor anywhere that is drawing everything, and a dependence above what stands at nothing breaks at the first step. Drawing at once from portions, with no floor, where each portion returns less than one for one on what its drawer leaves, every perfect profile and every revision draws everything. Revision that is not a best response is not stated.
+
+**Declarations it lists.** Optimum.InTurn.kept_returns, Optimum.InTurn.leaves_floor, Optimum.InTurn.last_at_floor, Optimum.InTurn.revisions_reach_floors, Optimum.InTurn.perfect_at_floors, Optimum.InTurn.floors_perfect, Web.drained_broken, Optimum.AtOnce.revisions_drain, Optimum.AtOnce.drains, Web.at_once_broken, Optimum.AtOnce.drain_perfect_iff, Optimum.AtOnce.last_draws, Web.drain_perfect_broken, Optimum.AtOnce.drain_most, Optimum.AtOnce.holding_draws_more, Web.at_once_beyond, Optimum.AtOnce.whole_not_drained, Optimum.AtOnce.whole_perfect_iff, Web.whole_drain_broken, Optimum.Holding.gated_in_turn, Optimum.Holding.keepsFirst_best, Optimum.Holding.doubling_capacity, Optimum.Holding.halves_held, Optimum.Holding.halves_race
+
+#### `a-race-for-position-draws-everything` (family B)
+
+**Name.** A race for position
+
+**Mechanism.** A named model: any law G of what stands next, natural amounts; the break on the World. k drawers draw in turn with no floor, each ranking what it leaves by its position over the steps that remain: k times its own draw against what all draw. Where its own later draw is the same, keeping lowers k times its draw by k times what it keeps and what all draw by at most once that, so among two drawers or more a best response for position (that field's frame) keeps nothing. Where what stands from nothing is at most what stands from anything left, and there are at least two drawers, every profile perfect for position draws everything at every step before the horizon, a dependence above what stands at nothing met at the start breaks at the first step, and drawing everything is perfect. With one drawer every profile is perfect. It does not show that actual races are so played.
+
+**Declarations it lists.** Optimum.InTurn.position_keeps_nothing, Optimum.InTurn.position_nothing_best, Optimum.InTurn.position_last, Optimum.InTurn.position_perfect_ends, Optimum.InTurn.position_perfect_draws, Optimum.InTurn.position_levels, Optimum.InTurn.zero_position_perfect, Web.position_broken, Web.drain_position_broken, Optimum.InTurn.position_one, Optimum.InTurn.Stopping.zero_not_perfect, Optimum.InTurn.Stopping.perfect_keeps
+
+#### `several-optimizers-drain-by-their-joint-capacity` (family B)
+
+**Name.** Several optimizers
+
+**Mechanism.** One step, World. At a mutual best response (that field's frame: each optimizer acting within its capacity, the levels after an optimum of its own rising order among the outcomes open to it alone, the others exchanging as they do; each optimizer's family and beyond set apart; the step balancing into the levels after), where something stands beyond an optimizer's family, it takes its whole capacity there and gives nothing: restraint is no mutual best response. A condition beyond every one's family stands at what the formations outside them leave less their joint capacity, or at nothing, as under one optimizer of that capacity. Which formations optimize, by which order and with which capacity, is supplied, and the core asserts a mutual best response of no actual group; its existence is not shown in general.
+
+**Declarations it lists.** Optimum.MutualBest, Optimum.MutualBest.full, Optimum.mutual_beyond, Optimum.mutual_as_one, Optimum.mutual_lowers_iff, Web.mutual_broken_iff_capacity, Optimum.TwoTakers.joint_best, Optimum.TwoTakers.joint_drains, Optimum.TwoTakers.within_slack_jointly_below, Optimum.TwoTakers.restrained_not_mutual
+
+#### `re-optimizing-above-a-renewal-ends-it` (family B)
+
+**Name.** Re-optimizing at every step
+
+**Mechanism.** A course of steps, World: each step an optimum of the part's rising order among the outcomes open to it (that field's frame, taken step by step, not over courses), the rest exchanging as it does, or a balanced course of mutual best responses. Where the rest renews a condition beyond by exactly r a step at or above a positive need and by at most r below, and the withdrawal k (the rest's taking with the part's capacity) is the same at every step, a formation depending on it at that need at every step, met at the start, loses the dependence for good exactly where r < k, and never where k ≤ r; several optimizers whose withdrawal with the rest's exceeds r at every step lose it however small each capacity. Gated, with nothing given below the need, a draw above the renewal draws at most the start with r for each of its units, however long; ungated, with at least a and at most r given every step however low the level, at least a a step, without bound for a positive a. Where nothing is given below the need, a level below it stays below whatever is drawn, so a later re-reading restores nothing. The core asserts no course of any actual optimizer.
+
+**Declarations it lists.** Optimum.Reoptimizes, Optimum.course_beyond, Optimum.mutual_course_beyond, Web.lost_iff, Web.course_lost_iff, Web.course_kept_iff, Web.mutual_course_lost, Optimum.drawn_bounded_iff, Optimum.drawn_unbounded, Optimum.keeping_draws_more, Optimum.gated_stays_below, Optimum.reread_kept_iff, Optimum.reread_deadline_iff, Web.course_ended_drawn, Web.course_drawn_unbounded, Optimum.Renewing.lost_iff, Optimum.Renewing.joint_course_lost, Optimum.Renewing.alone_kept, Optimum.Renewing.restrained_course_not_best, Optimum.Renewing.restraint_holds_more
+
+#### `a-weighting-faster-than-renewal-ends-the-base` (family B)
+
+**Name.** Weighting later draws less
+
+**Mechanism.** A named model: any renewal law R on natural amounts, natural weights, the breaks on the World. Over the courses open from s, where w (t + 1) (z + R z) < w t z for every positive z, with a capacity covering s + R s and R 0, over at least two steps, every optimum of every order rising with the weighted draw (that field's frame, over the open courses) stands at nothing at every step to the n-th, ending its own stock at the first step and breaking every dependence on it with a positive need met at the start; at ≤ the course ending the base at the first step is an optimum. The home reads it as the discrete form of a discount rate above the greatest rate of renewal making extinction optimal, a frame of that field. Which formation optimizes, by which order, weighting, capacity and horizon, and the renewal law are supplied; the core asserts no course of any actual optimizer.
+
+**Declarations it lists.** Optimum.Next.outpaced_greatest, Optimum.exhausting_frontier, Optimum.frontier_exhausts, Web.frontier_exhausts, Optimum.frontier_below_weighted, Web.frontier_broken_weighted, Optimum.frontier_leaves, Web.frontier_leaves, Optimum.Holding.logistic_weighted
+
+#### `horizon-optima-hold-the-greatest-renewal` (family B)
+
+**Name.** Courses over a horizon
+
+**Mechanism.** A named model: any renewal law R on natural amounts, at most r, the breaks on the World. What a course draws, leaves and forgoes adds to the start with r a step. Over the courses open from s, with reach and y + r ≤ k, every optimum of every order rising with the draw (that field's frame, over the open courses, no discount) holds a level of greatest renewal to the n-th step and leaves nothing: a need above every such level breaks at the first step, and one every such level meets is kept and broken at the end. With what is left valued one for one with what is drawn, every optimum stands at a level of greatest renewal at every step to the horizon, and the optima of that order are exactly the open courses doing so: keeping and draining at the end are both optima. At worth v > 1, where no open course leaves more than y + r, r ≤ k and at least two steps, every optimum holds a level of greatest renewal to the horizon and regrows only at the last step. At every such worth a dependence above every such level is broken at the first step. The core asserts no course of any actual optimizer.
+
+**Declarations it lists.** Optimum.most_iff, Optimum.holding_frontier, Optimum.frontier_holds, Web.frontier_broken, Web.frontier_kept, Optimum.Holding.logistic_broken, Optimum.Holding.gated_alike, Optimum.frontier_holds_left, Optimum.frontier_left_iff, Optimum.keeping_not_frontier, Web.frontier_kept_left, Web.frontier_broken_left, Optimum.Holding.gated_left, Optimum.Holding.logistic_left, Optimum.frontier_holds_valued, Optimum.frontier_valued_iff, Optimum.frontier_breaks_valued, Web.frontier_rebuilt_valued, Web.frontier_breaks_valued, Optimum.Holding.logistic_valued, Optimum.drawn_add_shortfall, Optimum.holding_most
+
+#### `keeping-forgoes-the-renewal-at-the-need` (family B)
+
+**Name.** What keeping forgoes, and a coupling against it
+
+**Mechanism.** A named model: any renewal law R on natural amounts, r the greatest renewal a step, q the greatest at or above a need m, the breaks on the World; n + 1 steps (0 < n), a start meeting m, e the end the capacity reaches. Among keeping courses every optimum (of an order rising with the draw, that field's frame, over the open keeping courses) holds where q is given and leaves exactly m; against the course ending at nothing, keeping forgoes (r − q) n + m. A coupling w of keeping, fixed in total, with w + q n + e < r n + m leaves only optima breaking the dependence within the horizon; one with r n + e < w + q n only optima keeping it; the tie is not stated. Where q < r the amount forgone grows with the horizon. Which formation optimizes, by which order, capacity and horizon, the renewal law and the coupling are supplied; the core asserts no course of any actual optimizer. A coupling counted for each step met is a-step-coupling-keeps-at-every-horizon's.
+
+**Declarations it lists.** Optimum.frontier_keeps, Web.frontier_keeps, Optimum.frontier_breaks_below, Optimum.frontier_keeps_above, Web.frontier_breaks_below, Web.frontier_keeps_above, Optimum.forgone_grows, Web.frontier_breaks_long, Optimum.Holding.logistic_coupled
+
+#### `what-a-rise-draws-from-beyond` (family B)
+
+**Name.** What a rise draws from beyond
+
+**Mechanism.** World: balance; the family with the conditions beyond it gaining nothing across the step (or graded by a containing family's inflow), and on each condition beyond a formation named that depends on it at a need met at the step. A rise of a family's stock has a formation giving it more than it takes and taking from the containing family more than from the risen one; the two stocks after the step with what the whole loses are the two before, so the beyond falls by at least the rise. The slack is what the conditions beyond stand above those needs. Where the rise exceeds the slack one of the named dependences is broken, and where activity needs support and it persists at a need no weaker, its formation is not active after the step. Where every condition a group couples into is in the family and the beyond lies outside it, every selection holding only where the family rises above the slack holds only where a formation outside the group has its dependence broken on a condition no member couples into. Over generations, where more offspring go only to raisers (a premise, not derived from the flow), the share reaching beyond is never selected against; carried on, it does not fall over the stretch. Closed, the beyond bounds the rise.
+
+**Declarations it lists.** Flow.Balances.gives_more_of_rise, Flow.Balances.rise_draws_beyond, Flow.Balances.rise_paid_from_beyond, Flow.favours_reaching_beyond, Flow.Balances.rise_draws_beyond_inflow, Flow.favours_reaching_beyond_inflow, Flow.Balances.rise_breaks_beyond_inflow, Flow.Balances.beyond_falls_exactly, Flow.Balances.rise_lowers_beyond, Flow.Balances.rise_breaks_beyond, Flow.Balances.breaks_beyond_ends, Flow.favours_breaking_beyond, Flow.RaisesOn.reaches, Flow.share_not_against, Flow.share_not_lower, Flow.share_moved_rises, Flow.Balances.rise_bounded_by_beyond, Flow.Balances.broken_iff, Flow.Balances.broken_shared, Flow.Balances.kept_of_restrained, DrawnBeyond.Dweller.rise_ends_dweller, DrawnBeyond.Spreading.share_rises, DrawnBeyond.Lapsing.share_falls, TwoDrawers.broken, TwoDrawers.restrained_kept
+
+#### `unselected-beyond-the-coupling-closure` (family B)
+
+**Name.** Selection blind beyond the coupling closure
+
+**Mechanism.** World. Every selection through a selector's couplings selects two histories alike exactly when they are alike through those couplings (near-definitional); that an actual selection goes through them is supplied. With a part withheld and the rest of the exchange fixed, balance at each step on what couples into members of a formation's coupling closure, and every member of the part beyond it, every selection through the couplings of a formation within the closure treats the levels with and without the part alike. Where the rest instead follows one law of exchange reading through coupling (supplied), in two balanced flows with the same formations present and a common start, an act whose difference stays beyond the actor's closure is selected alike by every selection through any member of the closure, the actor among them. A group's closure is the union of its members'; an act differing only beyond the union, the pool's joint act included, is selected alike by every group within it, and what a pool outside the acting part decides by its acts, under laws reading through its members' couplings, is a selection through its pooled coupling. Coupling bounds response and does not fix it: the law exchanging nothing reads through every coupling too. For a significance read as each center's own closure: where a center's own closure lies within its coupling closure, what lies beyond the coupling closure has no significance from its standpoint at any step, and the significance is a rival; so along every relation within coupling in, and along affecting at a center whose acts return. In Clearing the dweller lies beyond the clearer's coupling closure for every coupling by level, though within its reach. The bound has content only for a pool that leaves some returning formation out: on a finite flow with reach decided every formation lies within the influence closure of a formation whose acts return, so within their pooled coupling closure; in Clearing the clearer alone leaves out the dweller. Near-definitional compositions, the relation and the centers supplied. The group and the pool are fixed across the two courses, and the selection is read over the whole run.
+
+**Declarations it lists.** Web.selects_alike_iff, Web.separates, Web.selects_alike_all_iff, Flow.uncoupled_beyond_coupling, Flow.unselected_beyond_coupling, Flow.unselected_beyond_coupling_responsive, Clearing.unselected, Diversion.favours, Diversion.blind_to_source, Flow.act_unselected, Flow.consequence_unselected, act_courses_unselected, withinClosureOf_iff, Flow.unselected_beyond_pool, Flow.act_unselected_pool, Flow.consequence_unselected_pool, Flow.act_selected_by_pool, Flow.apart_beyond_pool, Web.separates_all_iff_member, Clearing.pool_closes_gap, Clearing.within_closure_unseparated, ExchangeLaw.Through.selectsThroughAll, ExchangeLaw.acts_alike_all_iff, ExchangeLaw.response_not_fixed_by_coupling, Flow.response_alike_pool, Flow.act_unselected_by_acts_pool, Clearing.separated_unresponded, Flow.exchange_apart_of_change, Flow.gap_made_up, Flow.closes_through_coupling_apart, Flow.stays_beyond_response, Replenishing.closes_through, act_courses_unselected_throughout, significance_courses_unselected, Diversion.counting_selected_against, Web.readOffCouplings_alike_iff, Clearing.read_not_direction, routeB_universal_closed, Flow.ownClosure_rival_of_within, Flow.couplingIn_ownClosure_rival, Flow.reachReturns_ownClosure_rival, Clearing.couplingIn_leaves_dweller, Clearing.dweller_beyond_every_coupling, Flow.covered_by_returning, Flow.returning_pool_covers, Flow.returning_beyond_coupling
+
+#### `a-break-read-only-by-threshold` (family D)
+
+**Name.** Runaway, and the distance to the break that does not couple in
+
+**Mechanism.** World: for every policy through a formation's couplings, the rest of the exchange fixed and balance on what couples in, starts differing only in a stock coupled in by threshold only stay alike through the couplings while the first supports the formation; one that has used the larger stock has already lost support. Where that stock is unobserved and the only requirement that may fail up to a horizon, some raise of it is alike through the couplings and supports the formation to the horizon: how far off the break is does not couple in. On a blanketed law (any type; a determined law of four parts), the agent is driven by its sensory course; in a witness, with any model and policy, an agent reading its supply only by threshold, no action changing the supply, has every reading of its internal course alike up to step four from a supply of three and from every supply of four or more, the sensory parts differing first at step four, when the break registers. Near-definitional; the stock is unobserved by hypothesis, and that the rest is fixed is needed: where others respond to the stock itself a higher stock can end the formation first. A runaway remains a reading.
+
+**Declarations it lists.** Flow.PolicyThrough, Flow.OthersFixed, Flow.policy_keeps_difference, Flow.policy_uses_after_failure, Web.alikeThrough_raise, Web.observed_raise_couples, Web.break_not_bounded, SupportDrawn.break_uncoupled, Attracting.higher_breaks_first, Blanket.Blanketed.agent_through_sensory, Blanket.Blanketed.through_reading, Blanket.ThresholdDrain.any_model, Blanket.ThresholdDrain.sensory_apart_at_four, Blanket.ThresholdDrain.blanket_iff_through
+
+#### `a-step-coupling-keeps-at-every-horizon` (family H)
+
+**Name.** A coupling for each step kept
+
+**Mechanism.** Any renewal law R on natural amounts (the model; the breaks are on the World), one optimizer, an optimum in that optimizer's order: n + 1 steps, 0 < n, m ≤ s, r the greatest renewal a step, q the greatest at or above m, y' a level at or above m renewing by q, k the capacity, y' ≤ s + R s ≤ y' + k, e the end the capacity reaches (m ≤ e ≤ y'), y' + q ≤ e + k. For a worth bounded by the draw and c for each step m stays met from the start: where r ≤ q + c and e < c, every optimum of every order rising with the worth keeps the need at every horizon; where c + e < m, every optimum breaks it within the horizon; where r < q + c and c < m, every optimum meets it to the n-th step and breaks it at the last; where q + c < r, a long horizon outweighs the coupling. For a worth adding exactly c for each step met, an optimum exists in each case, given c ≤ m where q + c < r. For a worth adding at least c a step to a keeping course and at most c for each step met, wherever, every optimum keeps the need where r + e < q + c + m and e < c (one direction in the Lean, not an exactness); at r + e = q + c + m a fall met again can tie (a witness). The optimizer, its order, capacity and horizon, the renewal law and the coupling are supplied; no course of any actual optimizer is asserted.
+
+**Declarations it lists.** Optimum.frontier_keeps_stepwise, Web.frontier_keeps_stepwise, Optimum.frontier_met_before_end, Optimum.frontier_breaks_at_end, Web.frontier_breaks_at_end, Web.frontier_breaks_last, Optimum.outweighed_stepwise, Web.frontier_breaks_stepwise_long, Optimum.Holding.logistic_stepwise, Optimum.continued_stepwise_frontier, Optimum.continued_ending_stepwise_frontier, Optimum.continued_holding_stepwise_frontier, Optimum.shortfall_count_ge, Optimum.falls_met_le, Optimum.frontier_keeps_met, Optimum.continued_met_frontier, Web.frontier_met_kept, Optimum.Holding.burst_met
+
+#### `optima-rebuild-a-depleted-base` (family H)
+
+**Name.** Every optimum rebuilds a depleted base
+
+**Mechanism.** Any renewal law on natural amounts and natural weights (the model; the restoring of a dependence on the World), an optimum in the frame of a weighted draw and every order rising with it. From a start s ≤ y, where z + R z rises with z up to y, the weighted gain rises strictly with the level up to y, and the weighted gain at y is at least that at every level, every optimum draws nothing while the rising level is below y, the stock regrowing, and restores every dependence, as it stands at the start, whose need the rising level meets. Capacity covers y + R y and R 0. Under an overcompensating renewal this is not shown. In a witness, a source doubling up to eight, from one, capacity sixteen, over n + 3 steps: where w (t + 1) ≤ w t < 2 w (t + 1) every optimum rebuilds, where w t = 2 w (t + 1) ending at once is an optimum too, and where 2 w (t + 1) < w t every optimum ends it. Which formation optimizes, by which order, and the renewal law are supplied.
+
+**Declarations it lists.** Optimum.rebuilding_frontier, Optimum.frontier_rebuilds, Optimum.frontier_rebuilt, Web.frontier_rebuilds, Optimum.Holding.doubling_rebuilds

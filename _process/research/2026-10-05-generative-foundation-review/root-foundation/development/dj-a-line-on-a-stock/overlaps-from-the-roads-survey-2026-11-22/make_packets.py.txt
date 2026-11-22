@@ -1,0 +1,114 @@
+#!/usr/bin/env python3
+"""Packets for the readers of 22 November's small atlas landing (AI-written, Claude Fable, row DJ).
+Run from the repository root. Writes packets/E2.md, packets/E4.md, packets/E5.md and packets/KEY.json (the key is
+not given to any reader). A packet holds statements with their docstrings (proofs cut) and entries of the atlas
+with exits, transitions, premise rows and case rows removed."""
+import json, os, re, glob
+HERE = 'tmp/r7/one-model/check/overlaps22/'
+PKG = 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming/'
+LEAN = 'experiments/integrated-correction/general-framework/generative-basis/lean/'
+SURVEY = '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-roads-the-atlas-tells-2026-11-22/'
+d = json.load(open('theories/becoming/results/atlas/entries/dynamics.json'))
+by = {e['id']: e for e in d}; order = [e['id'] for e in d]
+receipt = json.load(open(PKG + 'becoming-verification.json'))
+mod_of = {}
+for f in glob.glob('theories/becoming/results/atlas/proof-uses/*.jsonl'):
+    m = os.path.basename(f)[:-6]
+    for l in open(f): mod_of[json.loads(l)['name']] = m
+stm = {}
+for l in open('/Users/ren/tmp/dj/batch29/all-statements.jsonl'):
+    r = json.loads(l); stm[r['name']] = r
+listing = {}
+for e in d:
+    for n in e['declarations']:
+        if isinstance(n, str): listing.setdefault(n, []).append(e['id'])
+
+def statement(name):
+    """The docstring and statement of a theorem as text, up to the := that opens its proof."""
+    path = LEAN + receipt['source_paths'][mod_of[name]]  # the receipt's paths are from the Lean tree's root
+    lines = open(path).read().split('\n')
+    last = name.split('.')[-1]
+    hits = [i for i, l in enumerate(lines) if re.match(r'\s*(?:private\s+|protected\s+)?(?:theorem|lemma)\s+(?:[\w«».\']*\.)?' + re.escape(last) + r'(?=[\s:({\[]|$)', l)]
+    assert len(hits) >= 1, (name, path)
+    if len(hits) > 1:  # several namespaces declare that last name: follow `namespace` and `end` to each hit's full name
+        full = []
+        for i in hits:
+            stack = []
+            for l in lines[:i]:
+                m = re.match(r'\s*namespace\s+(\S+)', l)
+                if m: stack.append(m.group(1)); continue
+                m = re.match(r'\s*end\s+(\S+)\s*$', l)
+                if m and stack and stack[-1].split('.')[-1] == m.group(1).split('.')[-1]: stack.pop()
+            decl = re.match(r'\s*(?:private\s+|protected\s+)?(?:theorem|lemma)\s+(\S+)', lines[i]).group(1)
+            full.append('.'.join(stack + [decl]))
+        hits = [i for i, f in zip(hits, full) if f == name or name.endswith('.' + f)]
+    assert len(hits) == 1, (name, path, hits)
+    i = hits[0]; j = i
+    while ':=' not in lines[j] and j < i + 40: j += 1
+    body = lines[i:j + 1]; body[-1] = body[-1].split(':=')[0].rstrip() + ' := (proof cut)'
+    k = i - 1; doc = []
+    if k >= 0 and lines[k].rstrip().endswith('-/'):
+        while k >= 0 and '/--' not in lines[k]: k -= 1
+        doc = lines[k:i]
+    return path, i + 1, '\n'.join(doc + body)
+
+def named_by(name):
+    s = stm.get(name) or {'in_binders': [], 'in_conclusion': []}
+    out = []
+    for n in s['in_binders'] + s['in_conclusion']:
+        for x in listing.get(n, []):
+            if x not in out: out.append(x)
+    return sorted(out, key=order.index)
+
+def entry(i):
+    e = by[i]
+    return (f"#### `{i}` (family {e['family']})\n\n**Name.** {e['name']['en']}\n\n**Mechanism.** {e['mechanism']['en']}\n\n"
+            f"**Declarations it lists.** {', '.join(x.replace('Becoming.', '') for x in e['declarations'] if isinstance(x, str))}\n")
+
+os.makedirs(HERE + 'packets', exist_ok=True)
+key = {}
+# E2
+E2 = ['Becoming.Branching.Juncture.possiblyDrawn', 'Becoming.Branching.Juncture.returns', 'Becoming.Branching.PossiblyDrawn.passes_juncture',
+      'Becoming.Flow.More.unceasing_covering', 'Becoming.Flow.More.unceasing_reidentified', 'Becoming.Flow.More.unceasing_reidentified_covering']
+out = ["# Packet E2\n\nSix theorems of a Lean package, each with the entries of an atlas of dynamics that list a declaration the theorem's statement names. Answer for every (theorem, entry) pair, one at a time.\n"]
+for n, name in enumerate(E2, 1):
+    path, line, text = statement(name); cands = named_by(name)
+    key[f'E2-T{n}'] = {'theorem': name, 'file': path, 'line': line, 'entries': cands, 'already_listed_under': listing.get(name, [])}
+    out.append(f"\n## Theorem T{n}: `{name}`\n\n```lean\n{text}\n```\n\n### Entries for T{n}\n\n" + '\n'.join(entry(c) for c in cands))
+open(HERE + 'packets/E2.md', 'w').write('\n'.join(out))
+# E4
+name = 'Becoming.Web.optimum_ends_beyond'
+path, line, text = statement(name)
+# For E4 the two dynamics that list a notion the statement names would force the choice, so the entries are those of
+# every dynamic that lists a declaration of a module in which a notion of the statement is declared (by the receipt).
+decl_mod = {}
+for m in receipt['modules']:
+    for x in m.get('declarations') or []:
+        decl_mod[x['name'] if isinstance(x, dict) else x] = m['module']
+s = stm[name]; mods = {decl_mod[n] for n in s['in_binders'] + s['in_conclusion'] if n in decl_mod}
+cands = [i for i in order if any(isinstance(x, str) and decl_mod.get(x) in mods for x in by[i]['declarations'])]
+# and, unmarked among them, the one dynamic the survey's checker named whose declarations lie in none of those modules
+cands = sorted(set(cands) | {'loss-of-renewal-for-good'}, key=order.index)
+E4_MODULES = sorted(mods)
+key['E4'] = {'theorem': name, 'file': path, 'line': line, 'entries': cands, 'listed_under': listing.get(name, []), 'modules': E4_MODULES}
+out = [f"# Packet E4\n\nOne theorem, the names of all the dynamics of an atlas, and the entries of those that list a declaration of a module in which a notion of the theorem's statement is declared.\n\n## The theorem: `{name}`\n\n```lean\n{text}\n```\n\n## The names of all {len(order)} dynamics\n\n" + '\n'.join(f"- `{i}`: {by[i]['name']['en']}" for i in order) + "\n\n## Entries\n\n" + '\n'.join(entry(c) for c in cands)]
+open(HERE + 'packets/E4.md', 'w').write('\n'.join(out))
+# E5
+jk = json.load(open(SURVEY + 'JUDGE-KEY.json.txt'))
+bykey = {v['key']: v for v in jk.values()}
+out = ["# Packet E5\n\nEight theorems, each with five or fewer entries of an atlas of dynamics. Answer for every (theorem, entry) pair.\n"]
+for n, k in enumerate(['S01', 'S07', 'S10', 'S23', 'S30', 'S40', 'S43', 'S50'], 1):
+    st = bykey[k]['store']; name = st['law']; home, to = st['home'], st['to']
+    path, line, text = statement(name)
+    others = [c for c in named_by(name) if c not in (home, to)][:3]
+    i = order.index(home)
+    while len(others) < 3:
+        i = (i + 1) % len(order)
+        if order[i] not in (home, to) and order[i] not in others: others.append(order[i])
+    cands = sorted([home, to] + others, key=order.index)
+    key[f'E5-L{n}'] = {'survey_key': k, 'law': name, 'file': path, 'line': line, 'home': home, 'to': to, 'strength': st['strength'], 'entries': cands}
+    out.append(f"\n## Theorem L{n}: `{name}`\n\n```lean\n{text}\n```\n\n### Entries for L{n}\n\n" + '\n'.join(entry(c) for c in cands))
+open(HERE + 'packets/E5.md', 'w').write('\n'.join(out))
+json.dump(key, open(HERE + 'packets/KEY.json', 'w'), ensure_ascii=False, indent=1)
+for k, v in key.items(): print(k, v.get('theorem') or v.get('law'), '| entries', len(v['entries']), v['entries'] if k.startswith('E2') or k == 'E4' else (v['home'], '->', v['to']))
+for f in ('E2', 'E4', 'E5'): print(f, os.path.getsize(HERE + f'packets/{f}.md'))
