@@ -1,0 +1,10 @@
+{"name": "Becoming.Bisimulation.agrees", "uses": ["Becoming.Alike.sameBranchingTests", "Becoming.SameBranchingTests.functional"]}
+{"name": "Becoming.SameBranchingTests.bisimulation_of_em", "uses": ["Becoming.SameBranchingTests.step_of_em", "Becoming.SameBranchingTests.symm"]}
+{"name": "Becoming.SameBranchingTests.correspondence_of_em", "uses": ["Becoming.SameBranchingTests.functional", "Becoming.SameBranchingTests.inverse_functional", "Becoming.SameBranchingTests.symm", "Becoming.SameBranchingTests.total_of_reachable_of_em"]}
+{"name": "Becoming.SameBranchingTests.inverse_functional", "uses": ["Becoming.SameBranchingTests.symm", "Becoming.SameBranchingTests.trans"]}
+{"name": "Becoming.SameBranchingTests.refl", "uses": []}
+{"name": "Becoming.SameBranchingTests.step_iff_of_em", "uses": ["Becoming.SameBranchingTests.functional", "Becoming.SameBranchingTests.inverse_functional", "Becoming.SameBranchingTests.step_of_em", "Becoming.SameBranchingTests.symm"]}
+{"name": "Becoming.SameBranchingTests.symm", "uses": []}
+{"name": "Becoming.SameBranchingTests.total_of_reachable_of_em", "uses": ["Becoming.Bisimulation.trace", "Becoming.SameBranchingTests.bisimulation_of_em"]}
+{"name": "Becoming.SameBranchingTests.trans", "uses": []}
+{"name": "Becoming.alike_of_equal_codes_of_em", "uses": ["Becoming.Presentations.equal_codes_same_answers", "Becoming.alike_of_sameBranchingTests_of_em"]}

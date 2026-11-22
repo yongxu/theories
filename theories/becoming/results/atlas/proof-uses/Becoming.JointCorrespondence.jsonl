@@ -1,0 +1,10 @@
+{"name": "Becoming.JointBisimulation.reach", "uses": []}
+{"name": "Becoming.JointFrame.Reach.brecOn", "uses": []}
+{"name": "Becoming.JointPlan.realizes_code_iff", "uses": ["Becoming.JointPlan.realizes_image_iff", "Becoming.matchesParts_of_exact"]}
+{"name": "Becoming.JointPlan.supports_of_code", "uses": ["Becoming.JointPlan.supports_of_image", "Becoming.matchesParts_of_exact"]}
+{"name": "Becoming.SameJointTests.correspondence", "uses": ["Becoming.JointBisimulation.reach", "Becoming.SameJointTests.inverse_functional", "Becoming.SameTestsWith.functional", "Becoming.SameTestsWith.symm", "Becoming.sameJointTests_bisimulation"]}
+{"name": "Becoming.SameJointTests.inverse_functional", "uses": ["Becoming.SameTestsWith.symm", "Becoming.SameTestsWith.trans"]}
+{"name": "Becoming.SameJointTests.joint_iff", "uses": ["Becoming.SameJointTests.inverse_functional", "Becoming.SameJointTests.parts", "Becoming.SameTestsWith.functional", "Becoming.SameTestsWith.symm"]}
+{"name": "Becoming.SameJointTests.step_iff", "uses": ["Becoming.SameJointTests.inverse_functional", "Becoming.SameJointTests.step", "Becoming.SameTestsWith.functional", "Becoming.SameTestsWith.symm"]}
+{"name": "Becoming.liftsFromEach_of_exact", "uses": ["Becoming.Presentations.reduced_exact_kernel", "Becoming.liftsFromEach_of_sameJointTests"]}
+{"name": "Becoming.matchesParts_of_exact", "uses": ["Becoming.liftsFromEach_iff", "Becoming.liftsFromEach_of_exact"]}

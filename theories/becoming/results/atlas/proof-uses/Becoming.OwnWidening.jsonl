@@ -1,0 +1,15 @@
+{"name": "Becoming.Flow.Balances.includes_iff_beyond_within", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.supported_iff_within_margin_at"]}
+{"name": "Becoming.Flow.Balances.mixed_iff_other_beyond", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.supported_iff_within_margin_at", "Becoming.Web.WidensWithin.exceeds"]}
+{"name": "Becoming.Flow.Balances.mixed_of_tight", "uses": ["Becoming.Flow.Balances.mixed_iff_other_beyond", "Becoming.Naturals.le_of_add_le_add_left"]}
+{"name": "Becoming.Flow.Balances.widens_iff_others_within", "uses": ["Becoming.Flow.Balances.includes_iff_beyond_within", "Becoming.Web.WidensWithin.exceeds"]}
+{"name": "Becoming.Flow.Balances.widens_of_untaken_beyond", "uses": ["Becoming.Flow.Balances.widens_iff_others_within"]}
+{"name": "Becoming.Flow.Balances.widens_yet_own_changed", "uses": ["Becoming.Flow.Balances.widens_iff_others_within"]}
+{"name": "Becoming.OwnDrawing.ample_widens", "uses": ["Becoming.OwnDrawing.own_widens", "Becoming.Web.WidensWithin.exceeds"]}
+{"name": "Becoming.OwnDrawing.balances", "uses": []}
+{"name": "Becoming.OwnDrawing.own_widens", "uses": []}
+{"name": "Becoming.OwnDrawing.tight_mixed", "uses": ["Becoming.Flow.Balances.mixed_of_tight", "Becoming.OwnDrawing.balances", "Becoming.OwnDrawing.own_widens", "Becoming.OwnDrawing.withheld"]}
+{"name": "Becoming.OwnDrawing.withheld", "uses": []}
+{"name": "Becoming.Web.WidensWithin.exceeds", "uses": []}
+{"name": "Becoming.Web.WidensWithin.not_keeps", "uses": ["Becoming.Web.Includes.not_exceeded", "Becoming.Web.WidensWithin.exceeds"]}
+{"name": "Becoming.Web.WidensWithin.not_narrowed", "uses": ["Becoming.Web.Includes.not_exceeded", "Becoming.Web.WidensWithin.exceeds"]}
+{"name": "Becoming.Web.admits_reachWeb_iff", "uses": []}

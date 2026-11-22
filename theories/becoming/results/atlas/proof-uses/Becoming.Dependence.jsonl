@@ -1,0 +1,44 @@
+{"name": "Becoming.Dip.renewing_at_each_step_not_in_run", "uses": []}
+{"name": "Becoming.FallingNeed.need_late", "uses": []}
+{"name": "Becoming.FallingNeed.need_pos", "uses": []}
+{"name": "Becoming.FallingNeed.never_met_not_undermining", "uses": ["Becoming.FallingNeed.need_late", "Becoming.FallingNeed.unmet"]}
+{"name": "Becoming.FallingNeed.unmet", "uses": ["Becoming.FallingNeed.need_pos"]}
+{"name": "Becoming.Gap.lapse_starts_afresh", "uses": ["Becoming.Gap.levels_high", "Becoming.Gap.levels_low"]}
+{"name": "Becoming.Gap.levels_high", "uses": []}
+{"name": "Becoming.Gap.levels_low", "uses": []}
+{"name": "Becoming.NewNeed.level_late", "uses": []}
+{"name": "Becoming.NewNeed.never_met_not_undermining", "uses": ["Becoming.NewNeed.level_late"]}
+{"name": "Becoming.RisingNeed.grown_need_not_met", "uses": ["Becoming.RisingNeed.level_late", "Becoming.RisingNeed.level_pos", "Becoming.RisingNeed.need_early", "Becoming.RisingNeed.need_grown"]}
+{"name": "Becoming.RisingNeed.level_late", "uses": []}
+{"name": "Becoming.RisingNeed.level_pos", "uses": []}
+{"name": "Becoming.RisingNeed.need_early", "uses": []}
+{"name": "Becoming.RisingNeed.need_grown", "uses": []}
+{"name": "Becoming.Stunted.level_le_one", "uses": []}
+{"name": "Becoming.Stunted.stunting_undermines", "uses": ["Becoming.Stunted.level_le_one"]}
+{"name": "Becoming.Unmet.consumed_without_loss", "uses": []}
+{"name": "Becoming.Web.BreakingOn.undermining", "uses": ["Becoming.Web.MetAbove.now"]}
+{"name": "Becoming.Web.MetAbove.now", "uses": []}
+{"name": "Becoming.Web.RenewingAt.not_breaking", "uses": ["Becoming.Web.BreakingOn.undermining", "Becoming.Web.RenewingAt.not_undermining"]}
+{"name": "Becoming.Web.RenewingAt.not_undermining", "uses": []}
+{"name": "Becoming.Web.consumed_continues_transformed", "uses": ["Becoming.Web.consumed_continues_transformed_at"]}
+{"name": "Becoming.Web.consumed_continues_transformed_at", "uses": ["Becoming.Web.continuing_restores_at"]}
+{"name": "Becoming.Web.consumed_ends_when_fixed", "uses": ["Becoming.Web.consumed_ends_when_fixed_at"]}
+{"name": "Becoming.Web.consumed_ends_when_fixed_at", "uses": []}
+{"name": "Becoming.Web.continuing_restores", "uses": ["Becoming.Web.continuing_restores_at"]}
+{"name": "Becoming.Web.continuing_restores_at", "uses": []}
+{"name": "Becoming.Web.kept_not_broken", "uses": []}
+{"name": "Becoming.Web.kept_or_broken", "uses": []}
+{"name": "Becoming.Web.lost_consumed", "uses": []}
+{"name": "Becoming.Web.not_renewing_at_of_broken", "uses": ["Becoming.Web.kept_not_broken"]}
+{"name": "Becoming.Web.renewed_not_consumed", "uses": []}
+{"name": "Becoming.Web.renewing_at_active", "uses": []}
+{"name": "Becoming.Web.renewing_keeps_support", "uses": []}
+{"name": "Becoming.Web.renewing_not_consuming", "uses": ["Becoming.Web.renewed_not_consumed"]}
+{"name": "Becoming.Web.static_consumed", "uses": []}
+{"name": "Becoming.Web.static_consumingIn", "uses": ["Becoming.Web.static_consumed"]}
+{"name": "Becoming.Web.static_dependent", "uses": []}
+{"name": "Becoming.Web.static_renewed", "uses": []}
+{"name": "Becoming.Web.static_renewingIn", "uses": ["Becoming.Web.static_renewed"]}
+{"name": "Becoming.Web.static_supported", "uses": []}
+{"name": "Becoming.arises_at_a_step", "uses": []}
+{"name": "Becoming.ceases_at_a_step", "uses": []}

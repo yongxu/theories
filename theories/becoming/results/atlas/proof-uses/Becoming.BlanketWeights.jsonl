@@ -1,0 +1,45 @@
+{"name": "Becoming.BlanketWeights.Cycle.not_crossForm", "uses": []}
+{"name": "Becoming.BlanketWeights.Cycle.periodic", "uses": []}
+{"name": "Becoming.BlanketWeights.LagRelay.circulates", "uses": ["Becoming.BlanketWeights.LagRelay.not_independentGiven", "Becoming.BlanketWeights.independentGiven_of_detailedBalance", "Becoming.«所闭之自反»"]}
+{"name": "Becoming.BlanketWeights.LagRelay.not_independentGiven", "uses": []}
+{"name": "Becoming.BlanketWeights.LagRelay.steady", "uses": []}
+{"name": "Becoming.BlanketWeights.MovesReadExternal.balanced", "uses": []}
+{"name": "Becoming.BlanketWeights.MovesReadExternal.joined", "uses": []}
+{"name": "Becoming.BlanketWeights.MovesReadExternal.not_crossForm", "uses": []}
+{"name": "Becoming.BlanketWeights.MovesReadExternal.ratio", "uses": []}
+{"name": "Becoming.BlanketWeights.ReadsDirectly.balanced", "uses": []}
+{"name": "Becoming.BlanketWeights.ReadsDirectly.crossForm", "uses": []}
+{"name": "Becoming.BlanketWeights.ReadsDirectly.reads_external", "uses": []}
+{"name": "Becoming.BlanketWeights.SynchronousCopy.exact_independentGiven", "uses": ["Becoming.BlanketWeights.crossFormOn_of_crossForm", "Becoming.BlanketWeights.independentGiven_of_crossFormOn"]}
+{"name": "Becoming.BlanketWeights.SynchronousCopy.exact_steady", "uses": []}
+{"name": "Becoming.BlanketWeights.SynchronousCopy.noisy_not_independentGiven", "uses": []}
+{"name": "Becoming.BlanketWeights.SynchronousCopy.noisy_steady", "uses": []}
+{"name": "Becoming.BlanketWeights.Turning.circulates", "uses": []}
+{"name": "Becoming.BlanketWeights.Turning.independentGiven", "uses": ["Becoming.BlanketWeights.crossFormOn_of_crossForm", "Becoming.BlanketWeights.independentGiven_of_crossFormOn"]}
+{"name": "Becoming.BlanketWeights.Turning.steady", "uses": []}
+{"name": "Becoming.BlanketWeights.Uncovered.crossFormOn", "uses": []}
+{"name": "Becoming.BlanketWeights.Uncovered.not_crossForm", "uses": []}
+{"name": "Becoming.BlanketWeights.crossFormOn_of_crossForm", "uses": []}
+{"name": "Becoming.BlanketWeights.crossFormOn_of_factorsGiven", "uses": ["Becoming.BlanketWeights.whole_zero_entry", "Becoming.Naturals.mul_mul_mul_comm"]}
+{"name": "Becoming.BlanketWeights.crossFormOn_of_independentGiven", "uses": ["Becoming.BlanketWeights.crossFormOn_of_factorsGiven", "Becoming.BlanketWeights.factorsGiven_of_independentGiven"]}
+{"name": "Becoming.BlanketWeights.crossForm_of_crossFormOn", "uses": []}
+{"name": "Becoming.BlanketWeights.crossForm_of_detailedBalance", "uses": ["Becoming.BlanketWeights.cross_of_closure"]}
+{"name": "Becoming.BlanketWeights.crossForm_of_detailedBalance_unread", "uses": ["Becoming.BlanketWeights.crossForm_of_detailedBalance"]}
+{"name": "Becoming.BlanketWeights.crossForm_product", "uses": ["Becoming.Naturals.mul_mul_mul_comm"]}
+{"name": "Becoming.BlanketWeights.cross_of_closure", "uses": ["Becoming.BlanketWeights.cross_of_move", "Becoming.BlanketWeights.cross_trans", "Becoming.BlanketWeights.pos_of_mul_eq"]}
+{"name": "Becoming.BlanketWeights.cross_of_move", "uses": ["Becoming.Naturals.mul_mul_mul_comm"]}
+{"name": "Becoming.BlanketWeights.cross_trans", "uses": ["Becoming.Naturals.mul_mul_mul_comm"]}
+{"name": "Becoming.BlanketWeights.factorsGiven_of_crossFormOn", "uses": ["Becoming.BlanketWeights.total_mul_total", "Becoming.total_congr", "Becoming.total_congr_on", "Becoming.total_mul"]}
+{"name": "Becoming.BlanketWeights.factorsGiven_of_independentGiven", "uses": ["Becoming.BlanketWeights.mass_atBlanket", "Becoming.BlanketWeights.mass_whole", "Becoming.ConditionalWeights.mass_and_true", "Becoming.ConditionalWeights.mass_congr", "Becoming.ConditionalWeights.mass_restrict", "Becoming.ConditionalWeights.mass_single", "Becoming.ConditionalWeights.whole_restrict"]}
+{"name": "Becoming.BlanketWeights.independentGiven_of_crossFormOn", "uses": ["Becoming.BlanketWeights.factorsGiven_of_crossFormOn", "Becoming.BlanketWeights.independentGiven_of_factorsGiven"]}
+{"name": "Becoming.BlanketWeights.independentGiven_of_detailedBalance", "uses": ["Becoming.BlanketWeights.crossFormOn_of_crossForm", "Becoming.BlanketWeights.crossForm_of_detailedBalance", "Becoming.BlanketWeights.independentGiven_of_crossFormOn"]}
+{"name": "Becoming.BlanketWeights.independentGiven_of_factorsGiven", "uses": ["Becoming.BlanketWeights.mass_atBlanket", "Becoming.BlanketWeights.mass_whole", "Becoming.BlanketWeights.scaled_of_factorsGiven", "Becoming.ConditionalWeights.entry_test_le", "Becoming.ConditionalWeights.mass_and_true", "Becoming.ConditionalWeights.mass_congr", "Becoming.ConditionalWeights.mass_le_of_entries", "Becoming.ConditionalWeights.mass_restrict", "Becoming.ConditionalWeights.whole_restrict"]}
+{"name": "Becoming.BlanketWeights.mass_atBlanket", "uses": ["Becoming.ConditionalWeights.mass_congr", "Becoming.ConditionalWeights.mass_pairs"]}
+{"name": "Becoming.BlanketWeights.mass_whole", "uses": []}
+{"name": "Becoming.BlanketWeights.pos_of_mul_eq", "uses": []}
+{"name": "Becoming.BlanketWeights.ratio_of_cross", "uses": ["Becoming.Naturals.mul_mul_mul_comm"]}
+{"name": "Becoming.BlanketWeights.ratio_of_crossForm", "uses": ["Becoming.BlanketWeights.ratio_of_cross"]}
+{"name": "Becoming.BlanketWeights.restrict_independent_case", "uses": ["Becoming.BlanketWeights.crossFormOn_of_crossForm", "Becoming.BlanketWeights.crossForm_product", "Becoming.BlanketWeights.independentGiven_of_crossFormOn"]}
+{"name": "Becoming.BlanketWeights.scaled_of_factorsGiven", "uses": ["Becoming.ConditionalWeights.mass_congr_mem", "Becoming.ConditionalWeights.mass_mul_left", "Becoming.ConditionalWeights.mass_mul_right"]}
+{"name": "Becoming.BlanketWeights.total_mul_total", "uses": ["Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.BlanketWeights.whole_zero_entry", "uses": ["Becoming.le_total_of_mem"]}

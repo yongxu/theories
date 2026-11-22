@@ -1,0 +1,15 @@
+{"name": "Becoming.ContingentPlans.branch_congr", "uses": []}
+{"name": "Becoming.ContingentPlans.branch_incompatible", "uses": []}
+{"name": "Becoming.ContingentPlans.chosen_sound", "uses": ["Becoming.ContingentPlans.valid_iff_passes", "Becoming.ListTests.find_some", "Becoming.ListTests.mem_of_find_some", "Becoming.ListTests.option_any_true_iff"]}
+{"name": "Becoming.ContingentPlans.empty_belief_none", "uses": ["Becoming.ListTests.find_none_iff"]}
+{"name": "Becoming.ContingentPlans.mem_repertoire", "uses": ["Becoming.ListTests.mem_flatMap_iff", "Becoming.ListTests.mem_map_of"]}
+{"name": "Becoming.ContingentPlans.none_selected_iff", "uses": ["Becoming.ContingentPlans.valid_iff", "Becoming.ListTests.false_iff_not", "Becoming.ListTests.find_none_iff"]}
+{"name": "Becoming.ContingentPlans.passes_iff_completes", "uses": ["Becoming.ContingentPlans.run_iff_trace", "Becoming.ListTests.option_any_true_iff"]}
+{"name": "Becoming.ContingentPlans.run_iff_trace", "uses": ["Becoming.ContingentPlans.run_none", "Becoming.ContingentPlans.run_some"]}
+{"name": "Becoming.ContingentPlans.run_none", "uses": []}
+{"name": "Becoming.ContingentPlans.run_some", "uses": []}
+{"name": "Becoming.ContingentPlans.selected_completes", "uses": ["Becoming.ContingentPlans.chosen_sound", "Becoming.ContingentPlans.run_iff_trace"]}
+{"name": "Becoming.ContingentPlans.selected_executes", "uses": ["Becoming.ContingentPlans.chosen_sound", "Becoming.ContingentPlans.run_none", "Becoming.ContingentPlans.run_some"]}
+{"name": "Becoming.ContingentPlans.selected_iff_completes", "uses": ["Becoming.ContingentPlans.valid_iff", "Becoming.ListTests.find_isSome_iff"]}
+{"name": "Becoming.ContingentPlans.valid_iff", "uses": ["Becoming.ContingentPlans.passes_iff_completes", "Becoming.ListTests.all_true_iff", "Becoming.ListTests.and_true_iff", "Becoming.ListTests.not_isEmpty_true_iff"]}
+{"name": "Becoming.ContingentPlans.valid_iff_passes", "uses": ["Becoming.ListTests.all_true_iff", "Becoming.ListTests.and_true_iff", "Becoming.ListTests.not_isEmpty_true_iff"]}

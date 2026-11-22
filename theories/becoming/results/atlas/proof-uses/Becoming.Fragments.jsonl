@@ -1,0 +1,23 @@
+{"name": "Becoming.Fragment.exact_codes_keep_ends", "uses": ["Becoming.Fragment.same_probes_iff_ends", "Becoming.Presentations.equal_codes_same_answers"]}
+{"name": "Becoming.Fragment.idle_ends_apart", "uses": ["Becoming.Fragment.idle_traced", "Becoming.Fragment.same_probes_iff_ends"]}
+{"name": "Becoming.Fragment.idle_joint_left", "uses": ["Becoming.Fragment.idle_traced"]}
+{"name": "Becoming.Fragment.idle_joint_right", "uses": ["Becoming.Fragment.idle_traced"]}
+{"name": "Becoming.Fragment.idle_traced", "uses": []}
+{"name": "Becoming.Fragment.joined_assoc", "uses": ["Becoming.Fragment.joint_chain_left", "Becoming.Fragment.joint_chain_right", "Becoming.Fragment.merge_assoc"]}
+{"name": "Becoming.Fragment.joined_functional", "uses": []}
+{"name": "Becoming.Fragment.joined_idle_left", "uses": ["Becoming.Fragment.idle_traced"]}
+{"name": "Becoming.Fragment.joined_idle_right", "uses": ["Becoming.Fragment.idle_traced", "Becoming.ListTests.append_nil"]}
+{"name": "Becoming.Fragment.joined_traced", "uses": ["Becoming.Fragment.merge_traced"]}
+{"name": "Becoming.Fragment.joint_chain_left", "uses": ["Becoming.Fragment.merge_traced"]}
+{"name": "Becoming.Fragment.joint_chain_right", "uses": ["Becoming.Fragment.merge_traced"]}
+{"name": "Becoming.Fragment.joint_iff_joined", "uses": []}
+{"name": "Becoming.Fragment.joint_iff_of_same_probes", "uses": ["Becoming.Fragment.same_probes_iff_ends"]}
+{"name": "Becoming.Fragment.joint_iff_probes", "uses": ["Becoming.Fragment.idle_joint_left", "Becoming.Fragment.idle_joint_right"]}
+{"name": "Becoming.Fragment.loop_traced", "uses": ["Generative.trace_singleton_iff"]}
+{"name": "Becoming.Fragment.merge_assoc", "uses": ["Becoming.ListTests.append_assoc"]}
+{"name": "Becoming.Fragment.merge_traced", "uses": ["Generative.trace_append_iff"]}
+{"name": "Becoming.Fragment.passage_not_self_joint", "uses": []}
+{"name": "Becoming.Fragment.passage_traced", "uses": ["Generative.trace_singleton_iff"]}
+{"name": "Becoming.Fragment.probes_miss_course", "uses": ["Becoming.Fragment.loop_traced", "Becoming.Fragment.same_probes_iff_ends"]}
+{"name": "Becoming.Fragment.readJoint_iff", "uses": ["Becoming.Fragment.joint_iff_probes"]}
+{"name": "Becoming.Fragment.same_probes_iff_ends", "uses": ["Becoming.Fragment.idle_joint_left", "Becoming.Fragment.idle_joint_right"]}

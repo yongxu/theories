@@ -1,0 +1,70 @@
+{"name": "Becoming.Clearing.clearer_spared", "uses": []}
+{"name": "Becoming.Clearing.dweller_alike_gone", "uses": []}
+{"name": "Becoming.Clearing.dweller_spared", "uses": []}
+{"name": "Becoming.Clearing.dweller_within_reach", "uses": ["Becoming.Clearing.reach_middle", "Becoming.Clearing.resource_of_clearer", "Becoming.Flow.withinCoupling_thresholdOnly"]}
+{"name": "Becoming.Clearing.selected_by_dweller", "uses": ["Becoming.Clearing.dweller_spared", "Becoming.Clearing.unsupported_with", "Becoming.Web.admits_through"]}
+{"name": "Becoming.Clearing.selected_pooled", "uses": ["Becoming.Clearing.alike_for_clearer", "Becoming.Clearing.clearer_spared", "Becoming.Clearing.dweller_alike_gone", "Becoming.Clearing.dweller_spared", "Becoming.Clearing.unsupported_with", "Becoming.Web.SelectsThrough.all", "Becoming.Web.SelectsThroughAll.and", "Becoming.Web.admits_through"]}
+{"name": "Becoming.Clearing.unselected", "uses": ["Becoming.Clearing.alike_for_clearer", "Becoming.Clearing.tested_by_dweller", "Becoming.Web.Excludes.not_meets"]}
+{"name": "Becoming.Diversion.blind_to_source", "uses": ["Becoming.Diversion.dependent", "Becoming.Diversion.supplied_closed", "Becoming.Diversion.supplying_balances"]}
+{"name": "Becoming.Diversion.dependent", "uses": []}
+{"name": "Becoming.Diversion.diverting_acting", "uses": []}
+{"name": "Becoming.Diversion.diverting_balances", "uses": []}
+{"name": "Becoming.Diversion.diverting_taking", "uses": []}
+{"name": "Becoming.Diversion.favours", "uses": ["Becoming.Diversion.dependent", "Becoming.Diversion.diverting_acting", "Becoming.Diversion.diverting_balances", "Becoming.Diversion.diverting_taking", "Becoming.Diversion.takerAlone_closed", "Becoming.Diversion.undiverted_balances", "Becoming.Web.ScoresThrough.atLeast", "Becoming.Web.observed_scores", "Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.Diversion.supplied_closed", "uses": []}
+{"name": "Becoming.Diversion.supplying_balances", "uses": []}
+{"name": "Becoming.Diversion.takerAlone_closed", "uses": []}
+{"name": "Becoming.Diversion.undiverted_balances", "uses": []}
+{"name": "Becoming.Flow.beyond_pool_coupling", "uses": ["Becoming.closedUnder_withinClosureOf"]}
+{"name": "Becoming.Flow.uncoupled_beyond_pool", "uses": ["Becoming.Flow.uncoupled_beyond_coupling", "Becoming.WithinClosureOf.of_member"]}
+{"name": "Becoming.Flow.unscored_beyond_coupling", "uses": ["Becoming.Flow.uncoupled_beyond_coupling"]}
+{"name": "Becoming.Flow.unselected_beyond_coupling", "uses": ["Becoming.Flow.uncoupled_beyond_coupling"]}
+{"name": "Becoming.Flow.unselected_beyond_coupling_all", "uses": ["Becoming.Flow.unselected_beyond_pool", "Becoming.withinClosureOf_single"]}
+{"name": "Becoming.Flow.unselected_beyond_coupling_responsive", "uses": ["Becoming.Flow.alike_within_coupling"]}
+{"name": "Becoming.Flow.unselected_beyond_pool", "uses": ["Becoming.Flow.uncoupled_beyond_pool"]}
+{"name": "Becoming.Relabel.Equivariant.none_of_full_tie", "uses": ["Becoming.Relabel.Equivariant.untied"]}
+{"name": "Becoming.Relabel.Equivariant.tied", "uses": ["Becoming.Relabel.fixed_of_tied", "Becoming.Relabel.swap_left"]}
+{"name": "Becoming.Relabel.Equivariant.untied", "uses": ["Becoming.Relabel.Equivariant.tied"]}
+{"name": "Becoming.Relabel.EquivariantChoice.selects", "uses": ["Becoming.Relabel.map_swap_eq_some"]}
+{"name": "Becoming.Relabel.EquivariantChoice.single", "uses": []}
+{"name": "Becoming.Relabel.EquivariantChoice.untied", "uses": ["Becoming.Relabel.Equivariant.untied", "Becoming.Relabel.EquivariantChoice.selects", "Becoming.Relabel.EquivariantChoice.single"]}
+{"name": "Becoming.Relabel.EquivariantChoice.withholds_of_full_tie", "uses": ["Becoming.Relabel.Equivariant.none_of_full_tie", "Becoming.Relabel.EquivariantChoice.selects", "Becoming.Relabel.EquivariantChoice.single"]}
+{"name": "Becoming.Relabel.EquivariantValue.const", "uses": []}
+{"name": "Becoming.Relabel.EquivariantValue.full_tie", "uses": ["Becoming.Relabel.EquivariantValue.tied"]}
+{"name": "Becoming.Relabel.EquivariantValue.level", "uses": []}
+{"name": "Becoming.Relabel.EquivariantValue.tied", "uses": ["Becoming.Relabel.fixed_of_tied", "Becoming.Relabel.swap_left"]}
+{"name": "Becoming.Relabel.alone_equivariant", "uses": ["Becoming.Relabel.swap_inj", "Becoming.Relabel.swap_swap"]}
+{"name": "Becoming.Relabel.alone_single", "uses": []}
+{"name": "Becoming.Relabel.entry_equivariant", "uses": []}
+{"name": "Becoming.Relabel.fixed_of_tied", "uses": ["Becoming.Relabel.swap_left", "Becoming.Relabel.swap_other", "Becoming.Relabel.swap_right"]}
+{"name": "Becoming.Relabel.map_swap_eq_some", "uses": ["Becoming.Relabel.swap_swap"]}
+{"name": "Becoming.Relabel.selected_alike_iff", "uses": ["Becoming.Relabel.Equivariant.tied"]}
+{"name": "Becoming.Relabel.singled_iff_untied", "uses": ["Becoming.Relabel.Equivariant.untied", "Becoming.Relabel.alone_equivariant", "Becoming.Relabel.alone_single"]}
+{"name": "Becoming.Relabel.swap_inj", "uses": ["Becoming.Relabel.swap_swap"]}
+{"name": "Becoming.Relabel.swap_left", "uses": []}
+{"name": "Becoming.Relabel.swap_other", "uses": []}
+{"name": "Becoming.Relabel.swap_right", "uses": []}
+{"name": "Becoming.Relabel.swap_swap", "uses": ["Becoming.Relabel.swap_left", "Becoming.Relabel.swap_other", "Becoming.Relabel.swap_right"]}
+{"name": "Becoming.Relabel.valued_alike_iff", "uses": ["Becoming.Relabel.EquivariantValue.tied", "Becoming.Relabel.entry_equivariant"]}
+{"name": "Becoming.Web.AlikeThrough.trans", "uses": []}
+{"name": "Becoming.Web.AlikeThroughAll.refl", "uses": ["Becoming.Web.AlikeThrough.refl"]}
+{"name": "Becoming.Web.AlikeThroughAll.symm", "uses": ["Becoming.Web.AlikeThroughUpTo.symm"]}
+{"name": "Becoming.Web.AlikeThroughAll.trans", "uses": ["Becoming.Web.AlikeThroughUpTo.trans"]}
+{"name": "Becoming.Web.AlikeThroughUpTo.trans", "uses": ["Becoming.Web.AlikeThrough.trans"]}
+{"name": "Becoming.Web.ScoresThrough.atLeast", "uses": []}
+{"name": "Becoming.Web.SelectsThrough.all", "uses": []}
+{"name": "Becoming.Web.SelectsThrough.and", "uses": []}
+{"name": "Becoming.Web.SelectsThrough.excludes_iff", "uses": ["Becoming.Web.Excludes.not_meets"]}
+{"name": "Becoming.Web.SelectsThrough.later", "uses": ["Becoming.Web.AlikeThroughUpTo.earlier"]}
+{"name": "Becoming.Web.SelectsThrough.not", "uses": []}
+{"name": "Becoming.Web.SelectsThrough.widen", "uses": ["Becoming.Web.AlikeThroughUpTo.of_obs"]}
+{"name": "Becoming.Web.SelectsThroughAll.and", "uses": []}
+{"name": "Becoming.Web.admits_through", "uses": []}
+{"name": "Becoming.Web.class_selects", "uses": ["Becoming.Web.AlikeThroughUpTo.symm", "Becoming.Web.AlikeThroughUpTo.trans"]}
+{"name": "Becoming.Web.observed_scores", "uses": []}
+{"name": "Becoming.Web.scores_alike_iff", "uses": ["Becoming.Web.AlikeThrough.refl", "Becoming.Web.AlikeThroughUpTo.symm", "Becoming.Web.AlikeThroughUpTo.trans", "Becoming.mark_cases"]}
+{"name": "Becoming.Web.selects_alike_all_iff", "uses": ["Becoming.Web.AlikeThroughAll.refl", "Becoming.Web.AlikeThroughAll.symm", "Becoming.Web.AlikeThroughAll.trans"]}
+{"name": "Becoming.Web.selects_alike_iff", "uses": ["Becoming.Web.AlikeThrough.refl", "Becoming.Web.class_selects"]}
+{"name": "Becoming.Web.separates", "uses": ["Becoming.Web.AlikeThrough.refl", "Becoming.Web.class_selects"]}
+{"name": "Becoming.Web.separates_all", "uses": ["Becoming.Web.AlikeThroughAll.refl", "Becoming.Web.AlikeThroughAll.symm", "Becoming.Web.AlikeThroughAll.trans"]}
+{"name": "Becoming.share_rises_through", "uses": ["Becoming.share_rises"]}

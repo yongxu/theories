@@ -1,0 +1,69 @@
+{"name": "Becoming.BlanketCouplings.Alternating.admitted", "uses": ["Becoming.BlanketCouplings.Alternating.agentConsistent", "Becoming.BlanketCouplings.stepExternal_admitted_iff"]}
+{"name": "Becoming.BlanketCouplings.Alternating.agentConsistent", "uses": ["Becoming.BlanketCouplings.Alternating.gLevel_inj"]}
+{"name": "Becoming.BlanketCouplings.Alternating.balance_g", "uses": []}
+{"name": "Becoming.BlanketCouplings.Alternating.balance_h", "uses": []}
+{"name": "Becoming.BlanketCouplings.Alternating.balances", "uses": ["Becoming.BlanketCouplings.Alternating.balance_g", "Becoming.BlanketCouplings.Alternating.balance_h"]}
+{"name": "Becoming.BlanketCouplings.Alternating.gLevel_inj", "uses": ["Becoming.Naturals.succ_ne_zero"]}
+{"name": "Becoming.BlanketCouplings.Alternating.presence_decides", "uses": ["Becoming.BlanketCouplings.TwoRelata.g_not_mem_h"]}
+{"name": "Becoming.BlanketCouplings.Alternating.recurs", "uses": []}
+{"name": "Becoming.BlanketCouplings.Alternating.uncoupled", "uses": []}
+{"name": "Becoming.BlanketCouplings.Alternating.values", "uses": []}
+{"name": "Becoming.BlanketCouplings.BlanketConsistentFamily.mono", "uses": ["Becoming.BlanketCouplings.PartConsistentFamily.mono"]}
+{"name": "Becoming.BlanketCouplings.BlanketDetermined.determined", "uses": ["Becoming.BlanketCouplings.parts_eq"]}
+{"name": "Becoming.BlanketCouplings.BlanketDetermined.of_le", "uses": ["Becoming.BlanketCouplings.PartDependsOnlyOn.of_le"]}
+{"name": "Becoming.BlanketCouplings.PartConsistentFamily.mono", "uses": []}
+{"name": "Becoming.BlanketCouplings.PartDependsOnlyOn.of_le", "uses": []}
+{"name": "Becoming.BlanketCouplings.PhasedDrain.balance_g", "uses": []}
+{"name": "Becoming.BlanketCouplings.PhasedDrain.balance_h", "uses": []}
+{"name": "Becoming.BlanketCouplings.PhasedDrain.balances", "uses": ["Becoming.BlanketCouplings.PhasedDrain.balance_g", "Becoming.BlanketCouplings.PhasedDrain.balance_h"]}
+{"name": "Becoming.BlanketCouplings.PhasedDrain.not_admitted", "uses": ["Becoming.BlanketCouplings.PhasedDrain.one_value", "Becoming.BlanketCouplings.stepExternal_admitted_iff", "Becoming.Naturals.succ_ne_zero"]}
+{"name": "Becoming.BlanketCouplings.PhasedDrain.one_value", "uses": []}
+{"name": "Becoming.BlanketCouplings.PhasedDrain.presence_decides", "uses": ["Becoming.BlanketCouplings.TwoRelata.g_not_mem_h"]}
+{"name": "Becoming.BlanketCouplings.PhasedDrain.uncoupled", "uses": []}
+{"name": "Becoming.BlanketCouplings.PhasedDrain.values", "uses": []}
+{"name": "Becoming.BlanketCouplings.ReadsExternal.internal_course", "uses": []}
+{"name": "Becoming.BlanketCouplings.ReadsExternal.not_blanketed", "uses": ["Becoming.BlanketCouplings.BlanketConsistentFamily.mono", "Becoming.BlanketCouplings.ReadsExternal.not_consistent", "Becoming.BlanketCouplings.blanketed_courses_consistent"]}
+{"name": "Becoming.BlanketCouplings.ReadsExternal.not_consistent", "uses": []}
+{"name": "Becoming.BlanketCouplings.ReadsExternal.whole_consistent", "uses": ["Becoming.BlanketCouplings.whole_iff"]}
+{"name": "Becoming.BlanketCouplings.ThresholdCase.admits_iff", "uses": []}
+{"name": "Becoming.BlanketCouplings.ThresholdCase.corr", "uses": ["Becoming.Limit.and_congr2"]}
+{"name": "Becoming.BlanketCouplings.ThresholdCase.own_eq", "uses": ["Becoming.Blanket.ThresholdDrain.external_course", "Becoming.BlanketCouplings.ThresholdCase.corr"]}
+{"name": "Becoming.BlanketCouplings.ThresholdCase.threshold_case", "uses": ["Becoming.BlanketCouplings.ThresholdCase.corr", "Becoming.BlanketCouplings.ThresholdCase.own_eq", "Becoming.BlanketCouplings.ThresholdCase.values", "Becoming.BlanketCouplings.blanket_iff_through", "Becoming.Web.alikeThrough_iff"]}
+{"name": "Becoming.BlanketCouplings.ThresholdCase.values", "uses": ["Becoming.BlanketCouplings.ThresholdCase.admits_iff", "Becoming.bool_eq_of_iff"]}
+{"name": "Becoming.BlanketCouplings.TwoRelata.g_not_mem_h", "uses": []}
+{"name": "Becoming.BlanketCouplings.ValuesAcross.through", "uses": []}
+{"name": "Becoming.BlanketCouplings.admitted_iff", "uses": ["Becoming.BlanketCouplings.BlanketDetermined.of_le", "Becoming.BlanketCouplings.shownBy_blanketDetermined_iff", "Becoming.ShownBy.admits", "Becoming.shownBy_le_iff"]}
+{"name": "Becoming.BlanketCouplings.agentConsistent_iff_exchange", "uses": ["Becoming.BlanketCouplings.next_level_alike_iff"]}
+{"name": "Becoming.BlanketCouplings.blanket_iff_through", "uses": ["Becoming.Blanket.Blanketed.agent_through_sensory", "Becoming.BlanketCouplings.sensory_course", "Becoming.Web.alikeThrough_iff"]}
+{"name": "Becoming.BlanketCouplings.blanketed_courses_consistent", "uses": ["Becoming.BlanketCouplings.blanketed_step_alike"]}
+{"name": "Becoming.BlanketCouplings.blanketed_determined", "uses": ["Becoming.Blanket.congr3", "Becoming.BlanketCouplings.pair_eq"]}
+{"name": "Becoming.BlanketCouplings.blanketed_step_alike", "uses": ["Becoming.BlanketCouplings.blanketed_determined"]}
+{"name": "Becoming.BlanketCouplings.clock", "uses": []}
+{"name": "Becoming.BlanketCouplings.clock_only_fails", "uses": []}
+{"name": "Becoming.BlanketCouplings.clocked_consistent", "uses": ["Becoming.BlanketCouplings.BlanketConsistentFamily.mono", "Becoming.BlanketCouplings.blanketed_courses_consistent", "Becoming.BlanketCouplings.clocked_course"]}
+{"name": "Becoming.BlanketCouplings.clocked_course", "uses": []}
+{"name": "Becoming.BlanketCouplings.clocked_witness", "uses": ["Becoming.BlanketCouplings.clocked_consistent"]}
+{"name": "Becoming.BlanketCouplings.const_consistent", "uses": ["Becoming.BlanketCouplings.pair_eq", "Becoming.BlanketCouplings.unit_eq"]}
+{"name": "Becoming.BlanketCouplings.future_course", "uses": ["Becoming.BlanketCouplings.suffix_zero"]}
+{"name": "Becoming.BlanketCouplings.injective_consistent", "uses": ["Becoming.BlanketCouplings.parts_eq"]}
+{"name": "Becoming.BlanketCouplings.injective_converse_fails", "uses": ["Becoming.BlanketCouplings.ReadsExternal.not_consistent", "Becoming.BlanketCouplings.ReadsExternal.whole_consistent", "Becoming.BlanketCouplings.whole_iff"]}
+{"name": "Becoming.BlanketCouplings.internal_selectsThrough", "uses": ["Becoming.BlanketCouplings.internal_through_couplings", "Becoming.BlanketCouplings.open_levels", "Becoming.Web.alikeThrough_iff"]}
+{"name": "Becoming.BlanketCouplings.internal_through_couplings", "uses": ["Becoming.Blanket.Blanketed.internal_through_blanket", "Becoming.BlanketCouplings.blanket_iff_through"]}
+{"name": "Becoming.BlanketCouplings.levelParts_admitted_iff", "uses": ["Becoming.BlanketCouplings.agentConsistent_iff_exchange", "Becoming.BlanketCouplings.stepExternal_admitted_iff"]}
+{"name": "Becoming.BlanketCouplings.listed_valuesAcross", "uses": ["Becoming.bool_eq_of_iff", "Becoming.map_eq_at", "Becoming.map_eq_on"]}
+{"name": "Becoming.BlanketCouplings.next_level_alike_iff", "uses": ["Becoming.Naturals.add_left_cancel", "Becoming.add_right_cancel"]}
+{"name": "Becoming.BlanketCouplings.open_external", "uses": []}
+{"name": "Becoming.BlanketCouplings.open_levels", "uses": ["Becoming.BlanketCouplings.open_external"]}
+{"name": "Becoming.BlanketCouplings.pair_eq", "uses": []}
+{"name": "Becoming.BlanketCouplings.partDependsOnlyOn_id_iff", "uses": []}
+{"name": "Becoming.BlanketCouplings.parts_eq", "uses": []}
+{"name": "Becoming.BlanketCouplings.sensory_course", "uses": ["Becoming.BlanketCouplings.clock"]}
+{"name": "Becoming.BlanketCouplings.shownBy_blanketDetermined_iff", "uses": ["Becoming.BlanketCouplings.shownBy_partDependsOnlyOn_iff"]}
+{"name": "Becoming.BlanketCouplings.shownBy_partDependsOnlyOn_iff", "uses": []}
+{"name": "Becoming.BlanketCouplings.stepExternal_admitted_iff", "uses": ["Becoming.BlanketCouplings.admitted_iff", "Becoming.BlanketCouplings.stepExternal_consistent_iff"]}
+{"name": "Becoming.BlanketCouplings.stepExternal_consistent_iff", "uses": ["Becoming.BlanketCouplings.pair_eq"]}
+{"name": "Becoming.BlanketCouplings.stepLaw_course", "uses": ["Becoming.BlanketCouplings.parts_eq"]}
+{"name": "Becoming.BlanketCouplings.suffix_apply", "uses": []}
+{"name": "Becoming.BlanketCouplings.suffix_zero", "uses": ["Becoming.BlanketCouplings.suffix_apply"]}
+{"name": "Becoming.BlanketCouplings.unit_eq", "uses": []}
+{"name": "Becoming.BlanketCouplings.whole_iff", "uses": ["Becoming.BlanketCouplings.injective_consistent", "Becoming.BlanketCouplings.pair_eq", "Becoming.BlanketCouplings.unit_eq"]}

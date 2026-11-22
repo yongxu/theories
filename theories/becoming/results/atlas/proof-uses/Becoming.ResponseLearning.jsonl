@@ -1,0 +1,62 @@
+{"name": "Becoming.ResponseLearning.basic_course_records", "uses": ["Becoming.ResponseLearning.trace_iff"]}
+{"name": "Becoming.ResponseLearning.basic_lesson_records", "uses": ["Becoming.RouteFormation.mem_two_socket", "Becoming.exists_add_of_le"]}
+{"name": "Becoming.ResponseLearning.course_record_fits_departing", "uses": ["Becoming.ResponseLearning.basic_course_records", "Becoming.RouteFormation.old_records_admit_duplicate"]}
+{"name": "Becoming.ResponseLearning.course_records_follow_sender", "uses": ["Becoming.ResponseLearning.teacher_changes_evidence", "Becoming.ResponseLearning.trace_iff"]}
+{"name": "Becoming.ResponseLearning.course_reversed_composite", "uses": ["Becoming.ResponseLearning.trace_iff"]}
+{"name": "Becoming.ResponseLearning.course_stock", "uses": ["Becoming.ResponseLearning.lesson_stock", "Becoming.ResponseLearning.trace_iff"]}
+{"name": "Becoming.ResponseLearning.course_without_composite", "uses": ["Becoming.ResponseLearning.trace_iff"]}
+{"name": "Becoming.ResponseLearning.distinction_lost_every_cohort", "uses": ["Becoming.ResponseLearning.every_cohort_holds"]}
+{"name": "Becoming.ResponseLearning.duplicate_reconstructed", "uses": ["Becoming.ResponseLearning.basic_lesson_records", "Becoming.ResponseLearning.learn_through_interface"]}
+{"name": "Becoming.ResponseLearning.every_cohort_corresponds", "uses": ["Becoming.ResponseLearning.every_cohort_holds", "Becoming.ResponseLearning.routeFor_generated", "Becoming.RouteFormation.programFor_operates"]}
+{"name": "Becoming.ResponseLearning.every_cohort_holds", "uses": ["Becoming.ResponseLearning.successor_keeps"]}
+{"name": "Becoming.ResponseLearning.execution_stock_interrupts", "uses": []}
+{"name": "Becoming.ResponseLearning.execution_stock_succession_blocked", "uses": ["Becoming.ResponseLearning.execution_stock_interrupts", "Becoming.ResponseLearning.trace_iff", "Becoming.RouteFormation.trace_iff", "Becoming.Run.step"]}
+{"name": "Becoming.ResponseLearning.extended_course_records", "uses": ["Becoming.ResponseLearning.trace_iff"]}
+{"name": "Becoming.ResponseLearning.extended_course_separates", "uses": ["Becoming.ResponseLearning.extended_course_records", "Becoming.RouteFormation.novel_record_separates"]}
+{"name": "Becoming.ResponseLearning.faithful_loses_distinction", "uses": []}
+{"name": "Becoming.ResponseLearning.formed_succession_second", "uses": ["Becoming.ResponseLearning.reconstruction_teaches_later", "Becoming.RouteFormation.trace_iff", "Becoming.Run.step"]}
+{"name": "Becoming.ResponseLearning.formed_succession_teaches", "uses": ["Becoming.ResponseLearning.formed_teacher_teaches", "Becoming.RouteFormation.trace_iff", "Becoming.Run.step"]}
+{"name": "Becoming.ResponseLearning.formed_teacher_teaches", "uses": []}
+{"name": "Becoming.ResponseLearning.learn_through_interface", "uses": ["Becoming.ResponseLearning.lesson_interface"]}
+{"name": "Becoming.ResponseLearning.learned_blocked_short", "uses": ["Becoming.ResponseLearning.short_receiver_not_repaired", "Becoming.ResponseLearning.trace_iff", "Becoming.RouteFormation.trace_iff"]}
+{"name": "Becoming.ResponseLearning.learned_depends_on_course", "uses": ["Becoming.ResponseLearning.lessons_change_program", "Becoming.ResponseLearning.trace_iff", "Becoming.RouteFormation.trace_iff"]}
+{"name": "Becoming.ResponseLearning.learned_selective_loses_distinction", "uses": ["Becoming.ResponseLearning.faithful_loses_distinction", "Becoming.ResponseLearning.trace_iff", "Becoming.RouteFormation.trace_iff"]}
+{"name": "Becoming.ResponseLearning.learned_selective_stock", "uses": ["Becoming.ResponseLearning.stock_keeps_content", "Becoming.ResponseLearning.trace_iff", "Becoming.RouteFormation.trace_iff"]}
+{"name": "Becoming.ResponseLearning.lesson_foldl", "uses": []}
+{"name": "Becoming.ResponseLearning.lesson_interface", "uses": ["Becoming.ResponseLearning.send_interface"]}
+{"name": "Becoming.ResponseLearning.lesson_stock", "uses": ["Becoming.ResponseLearning.send_stock"]}
+{"name": "Becoming.ResponseLearning.lesson_trace", "uses": []}
+{"name": "Becoming.ResponseLearning.lessons_change_program", "uses": []}
+{"name": "Becoming.ResponseLearning.limited_changes_then_stays", "uses": ["Becoming.ResponseLearning.duplicate_reconstructed"]}
+{"name": "Becoming.ResponseLearning.limited_fails_task", "uses": ["Becoming.ResponseLearning.limited_changes_then_stays"]}
+{"name": "Becoming.ResponseLearning.orbit_cohort", "uses": []}
+{"name": "Becoming.ResponseLearning.orbit_limited", "uses": []}
+{"name": "Becoming.ResponseLearning.peer_keeps_error", "uses": ["Becoming.ResponseLearning.peer_keeps_error_example", "Becoming.ResponseLearning.trace_iff", "Becoming.RouteFormation.trace_iff", "Becoming.Run.step"]}
+{"name": "Becoming.ResponseLearning.peer_keeps_error_example", "uses": []}
+{"name": "Becoming.ResponseLearning.peer_repair", "uses": ["Becoming.ResponseLearning.peer_repairs", "Becoming.ResponseLearning.trace_iff", "Becoming.RouteFormation.trace_iff", "Becoming.Run.step"]}
+{"name": "Becoming.ResponseLearning.peer_repairs", "uses": []}
+{"name": "Becoming.ResponseLearning.reconstruction_teaches_later", "uses": []}
+{"name": "Becoming.ResponseLearning.reconstructs_program", "uses": ["Becoming.ResponseLearning.basic_lesson_records", "Becoming.RouteFormation.mem_two_socket"]}
+{"name": "Becoming.ResponseLearning.regroup", "uses": []}
+{"name": "Becoming.ResponseLearning.respond_congr", "uses": []}
+{"name": "Becoming.ResponseLearning.response_within_stock", "uses": []}
+{"name": "Becoming.ResponseLearning.routeFor_generated", "uses": []}
+{"name": "Becoming.ResponseLearning.run_cohort", "uses": ["Becoming.Branching.law_run_state", "Becoming.ResponseLearning.orbit_cohort"]}
+{"name": "Becoming.ResponseLearning.sendWith_interface", "uses": []}
+{"name": "Becoming.ResponseLearning.sendWith_stock", "uses": ["Becoming.ResponseLearning.regroup", "Becoming.ResponseLearning.sender_kept"]}
+{"name": "Becoming.ResponseLearning.send_delivers", "uses": []}
+{"name": "Becoming.ResponseLearning.send_interface", "uses": ["Becoming.ResponseLearning.respond_congr", "Becoming.ResponseLearning.sendWith_interface"]}
+{"name": "Becoming.ResponseLearning.send_no_response", "uses": []}
+{"name": "Becoming.ResponseLearning.send_stock", "uses": ["Becoming.ResponseLearning.response_within_stock", "Becoming.ResponseLearning.sendWith_stock"]}
+{"name": "Becoming.ResponseLearning.sender_kept", "uses": ["Becoming.add_sub_of_le"]}
+{"name": "Becoming.ResponseLearning.short_receiver_not_repaired", "uses": []}
+{"name": "Becoming.ResponseLearning.step_delivers", "uses": ["Becoming.ResponseLearning.send_delivers"]}
+{"name": "Becoming.ResponseLearning.step_no_response", "uses": ["Becoming.ResponseLearning.send_no_response"]}
+{"name": "Becoming.ResponseLearning.stock_keeps_content", "uses": []}
+{"name": "Becoming.ResponseLearning.succession_keeps_correspondence", "uses": ["Becoming.ResponseLearning.every_cohort_corresponds", "Becoming.ResponseLearning.run_cohort"]}
+{"name": "Becoming.ResponseLearning.succession_keeps_lost_distinction", "uses": ["Becoming.ResponseLearning.distinction_lost_every_cohort", "Becoming.ResponseLearning.run_cohort"]}
+{"name": "Becoming.ResponseLearning.succession_stabilizes_change", "uses": ["Becoming.Branching.law_run_state", "Becoming.ResponseLearning.limited_fails_task", "Becoming.ResponseLearning.orbit_limited"]}
+{"name": "Becoming.ResponseLearning.succession_step_keeps", "uses": ["Becoming.ResponseLearning.successor_keeps", "Becoming.Run.step"]}
+{"name": "Becoming.ResponseLearning.successor_keeps", "uses": ["Becoming.ResponseLearning.learn_through_interface", "Becoming.ResponseLearning.reconstructs_program"]}
+{"name": "Becoming.ResponseLearning.teacher_changes_evidence", "uses": []}
+{"name": "Becoming.ResponseLearning.trace_iff", "uses": ["Becoming.ReducedRuns.trace_foldl", "Becoming.ResponseLearning.lesson_foldl", "Becoming.ResponseLearning.lesson_trace"]}

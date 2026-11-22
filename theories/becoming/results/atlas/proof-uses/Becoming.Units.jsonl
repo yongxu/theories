@@ -1,0 +1,32 @@
+{"name": "Becoming.DependenceWebs.chain_ends_at_once", "uses": ["Becoming.Web.Carries.chain_ends", "Becoming.Web.chainEnd_zero"]}
+{"name": "Becoming.DependenceWebs.continuing_restores_fixed_unit", "uses": ["Becoming.Web.continuing_restores_in_unit", "Becoming.unitFactor_one"]}
+{"name": "Becoming.Doubling.double_pos", "uses": []}
+{"name": "Becoming.Doubling.raw_reading_fails", "uses": ["Becoming.Doubling.double_pos", "Becoming.Naturals.two_mul"]}
+{"name": "Becoming.Doubling.runsDown", "uses": ["Becoming.Naturals.two_mul"]}
+{"name": "Becoming.Feeding.endless", "uses": []}
+{"name": "Becoming.Flow.BalancesAt.on", "uses": []}
+{"name": "Becoming.Flow.BalancesAtOn.arises_given", "uses": ["Becoming.Flow.BalancesAtOn.comesToStand_iff", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.BalancesAtOn.ceasesToStand_iff", "uses": ["Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.Flow.BalancesAtOn.comesToStand_iff", "uses": ["Becoming.eq_zero_of_not_pos", "Becoming.pos_iff_lt"]}
+{"name": "Becoming.Flow.BalancesAtOn.comes_from_standing", "uses": ["Becoming.Flow.BalancesAtOn.rise_lowers", "Becoming.Flow.risesAt_of_comesToStand"]}
+{"name": "Becoming.Flow.BalancesAtOn.fall_lowers", "uses": ["Becoming.Flow.BalancesAtOn.fall_taken", "Becoming.Flow.BalancesAtOn.taking_lowers", "Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.BalancesAtOn.fall_taken", "uses": []}
+{"name": "Becoming.Flow.BalancesAtOn.lowers", "uses": ["Becoming.Flow.BalancesAtOn.over", "Becoming.Flow.DissipatesOn.replenishment_takers", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Flow.BalancesAtOn.over", "uses": []}
+{"name": "Becoming.Flow.BalancesAtOn.rise_given", "uses": []}
+{"name": "Becoming.Flow.BalancesAtOn.rise_given_by_supported", "uses": ["Becoming.Flow.BalancesAtOn.rise_given", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.BalancesAtOn.rise_lowers", "uses": ["Becoming.Flow.BalancesAtOn.rise_given", "Becoming.Flow.BalancesAtOn.taking_lowers", "Becoming.Flow.DissipatesOn.takes_of_gives", "Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.BalancesAtOn.rises_iff_gives", "uses": ["Becoming.le_total_of_mem", "Becoming.lt_iff_pos", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.BalancesAtOn.taking_lowers", "uses": ["Becoming.Flow.BalancesAtOn.lowers", "Becoming.sign_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.DissipatesOn.still_untaken_at", "uses": ["Becoming.Flow.BalancesAtOn.rises_iff_gives", "Becoming.Flow.DissipatesOn.takes_of_gives", "Becoming.le_total_of_mem", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.RunsDownOnAt.changes_iff", "uses": ["Becoming.Flow.BalancesAtOn.fall_lowers", "Becoming.Flow.BalancesAtOn.rise_lowers", "Becoming.exists_lt_of_total_lt", "Becoming.total_mul"]}
+{"name": "Becoming.Flow.balancesAtOn_one", "uses": []}
+{"name": "Becoming.Flow.risesAt_of_comesToStand", "uses": ["Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.Flow.runsDownOnAt_one", "uses": ["Becoming.Flow.balancesAtOn_one"]}
+{"name": "Becoming.Web.consumed_continues_transformed_in_unit", "uses": ["Becoming.Web.continuing_restores_in_unit"]}
+{"name": "Becoming.Web.continuing_restores_in_unit", "uses": []}
+{"name": "Becoming.Web.fallsAt_one", "uses": []}
+{"name": "Becoming.Web.inactive_below_in_unit", "uses": []}
+{"name": "Becoming.Web.risesAt_one", "uses": []}
+{"name": "Becoming.Web.supported_unchanged_by_split", "uses": []}
+{"name": "Becoming.unitFactor_one", "uses": []}

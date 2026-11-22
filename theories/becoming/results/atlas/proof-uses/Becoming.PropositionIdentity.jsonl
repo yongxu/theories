@@ -1,0 +1,13 @@
+{"name": "Becoming.PropositionIdentity.Formula.brecOn.eq", "uses": []}
+{"name": "Becoming.PropositionIdentity.Formula.eval_congr", "uses": []}
+{"name": "Becoming.PropositionIdentity.Formula.read_congr", "uses": ["Becoming.PropositionIdentity.Formula.eval_congr"]}
+{"name": "Becoming.PropositionIdentity.byName_lumped_iff", "uses": ["Becoming.PropositionIdentity.lumped_iff"]}
+{"name": "Becoming.PropositionIdentity.derivation_unique", "uses": []}
+{"name": "Becoming.PropositionIdentity.extensional_iff_lumped", "uses": ["Becoming.PropositionIdentity.lumped_iff"]}
+{"name": "Becoming.PropositionIdentity.iff_witness_unique", "uses": []}
+{"name": "Becoming.PropositionIdentity.lumped_iff", "uses": []}
+{"name": "Becoming.PropositionIdentity.lumped_of_byName", "uses": ["Becoming.PropositionIdentity.byName_lumped_iff", "Becoming.PropositionIdentity.lumped_of_extensional"]}
+{"name": "Becoming.PropositionIdentity.lumped_of_extensional", "uses": ["Becoming.PropositionIdentity.lumped_iff"]}
+{"name": "Becoming.PropositionIdentity.transport_const", "uses": []}
+{"name": "Becoming.PropositionIdentity.transport_refl", "uses": []}
+{"name": "Becoming.PropositionIdentity.two_equivalences", "uses": []}

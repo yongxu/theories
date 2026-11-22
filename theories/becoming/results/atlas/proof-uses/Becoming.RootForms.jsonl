@@ -1,0 +1,30 @@
+{"name": "Becoming.RootForms.all_end_at_model", "uses": ["Becoming.RootForms.outside_leaves_no_offspring"]}
+{"name": "Becoming.RootForms.all_end_certified", "uses": ["Becoming.GroupEnding.Flow.all_end"]}
+{"name": "Becoming.RootForms.descent_forms_no_dependence", "uses": []}
+{"name": "Becoming.RootForms.descent_forms_no_dependence.given_needed", "uses": ["Becoming.RootForms.descent_forms_no_dependence", "Becoming.RootForms.inherits_vacuous", "Becoming.RootForms.some_depends", "Becoming.RootForms.undepended_vacuous"]}
+{"name": "Becoming.RootForms.descent_forms_no_dependence.inherits_needed", "uses": ["Becoming.RootForms.descent_forms_no_dependence", "Becoming.RootForms.given_everywhere", "Becoming.RootForms.some_depends", "Becoming.RootForms.undepended_nowhere"]}
+{"name": "Becoming.RootForms.descent_forms_no_dependence.needs_given", "uses": ["Becoming.RootForms.inherits_vacuous", "Becoming.RootForms.some_depends", "Becoming.RootForms.undepended_vacuous"]}
+{"name": "Becoming.RootForms.descent_forms_no_dependence.needs_inherits", "uses": ["Becoming.RootForms.given_everywhere", "Becoming.RootForms.some_depends", "Becoming.RootForms.undepended_nowhere"]}
+{"name": "Becoming.RootForms.descent_forms_no_dependence.needs_undepended", "uses": ["Becoming.RootForms.given_everywhere", "Becoming.RootForms.inherits_everywhere", "Becoming.RootForms.some_depends"]}
+{"name": "Becoming.RootForms.descent_forms_no_dependence.undepended_needed", "uses": ["Becoming.RootForms.descent_forms_no_dependence", "Becoming.RootForms.given_everywhere", "Becoming.RootForms.inherits_everywhere", "Becoming.RootForms.some_depends"]}
+{"name": "Becoming.RootForms.given_everywhere", "uses": []}
+{"name": "Becoming.RootForms.gives_from_everywhere", "uses": []}
+{"name": "Becoming.RootForms.gives_from_vacuous", "uses": []}
+{"name": "Becoming.RootForms.inherits_everywhere", "uses": []}
+{"name": "Becoming.RootForms.inherits_vacuous", "uses": []}
+{"name": "Becoming.RootForms.length_zero_of_none", "uses": []}
+{"name": "Becoming.RootForms.listed_within_all", "uses": []}
+{"name": "Becoming.RootForms.no_new_dependence_at_model", "uses": ["Becoming.Flow.descends_of_comes", "Becoming.RootForms.descent_forms_no_dependence"]}
+{"name": "Becoming.RootForms.no_new_dependence_certified", "uses": ["Becoming.Flow.no_new_dependence"]}
+{"name": "Becoming.RootForms.one_offspring", "uses": ["Becoming.Naturals.succ_ne_zero"]}
+{"name": "Becoming.RootForms.outside_leaves_no_offspring", "uses": ["Becoming.ListTests.mem_flatMap_iff", "Becoming.RootForms.length_zero_of_none"]}
+{"name": "Becoming.RootForms.outside_leaves_no_offspring.descent_needed", "uses": ["Becoming.RootForms.gives_from_vacuous", "Becoming.RootForms.one_offspring", "Becoming.RootForms.outside_leaves_no_offspring", "Becoming.RootForms.outside_nowhere"]}
+{"name": "Becoming.RootForms.outside_leaves_no_offspring.gate_needed", "uses": ["Becoming.RootForms.listed_within_all", "Becoming.RootForms.one_offspring", "Becoming.RootForms.outside_leaves_no_offspring", "Becoming.RootForms.outside_nowhere"]}
+{"name": "Becoming.RootForms.outside_leaves_no_offspring.needs_descent", "uses": ["Becoming.RootForms.gives_from_vacuous", "Becoming.RootForms.one_offspring", "Becoming.RootForms.outside_nowhere"]}
+{"name": "Becoming.RootForms.outside_leaves_no_offspring.needs_gate", "uses": ["Becoming.RootForms.listed_within_all", "Becoming.RootForms.one_offspring", "Becoming.RootForms.outside_nowhere"]}
+{"name": "Becoming.RootForms.outside_leaves_no_offspring.needs_outside", "uses": ["Becoming.RootForms.gives_from_everywhere", "Becoming.RootForms.listed_within_all", "Becoming.RootForms.one_offspring"]}
+{"name": "Becoming.RootForms.outside_leaves_no_offspring.outside_needed", "uses": ["Becoming.RootForms.gives_from_everywhere", "Becoming.RootForms.listed_within_all", "Becoming.RootForms.one_offspring", "Becoming.RootForms.outside_leaves_no_offspring"]}
+{"name": "Becoming.RootForms.outside_nowhere", "uses": []}
+{"name": "Becoming.RootForms.some_depends", "uses": []}
+{"name": "Becoming.RootForms.undepended_nowhere", "uses": []}
+{"name": "Becoming.RootForms.undepended_vacuous", "uses": []}

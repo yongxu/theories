@@ -1,0 +1,27 @@
+{"name": "Becoming.Flow.BalancesOn.of_same", "uses": []}
+{"name": "Becoming.Flow.FedFromBeyond.of_within", "uses": []}
+{"name": "Becoming.Flow.More.opens_listing", "uses": ["Becoming.Flow.ClosedAt.widen", "Becoming.Flow.More.opens", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.boundary_crossed_listing", "uses": ["Becoming.Flow.Around.of_same", "Becoming.Flow.boundary_crossed", "Becoming.Flow.takers_pos_of_sub", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.cut_of_same", "uses": []}
+{"name": "Becoming.Flow.fed_from_beyond_from_listing", "uses": ["Becoming.Flow.Around.of_same", "Becoming.Flow.BalancesOn.of_same", "Becoming.Flow.FedFromBeyond.of_within", "Becoming.Flow.fed_from_beyond_from", "Becoming.Flow.takers_pos_of_sub", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.fed_from_beyond_listing", "uses": ["Becoming.Flow.Around.of_same", "Becoming.Flow.FedFromBeyond.of_within", "Becoming.Flow.fed_from_beyond", "Becoming.Flow.takers_pos_of_sub", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.opens_of_arising_listing", "uses": ["Becoming.Flow.ClosedAt.widen", "Becoming.Flow.opens_of_arising", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.region_not_a_cut_listing", "uses": ["Becoming.Flow.Around.of_same", "Becoming.Flow.cut_of_same", "Becoming.Flow.region_not_a_cut", "Becoming.Flow.takers_pos_of_sub", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.rise_alone_opens_listing", "uses": ["Becoming.Flow.ClosedAt.widen", "Becoming.Flow.rise_alone_opens", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.rising_draws_in_from_listing", "uses": ["Becoming.Flow.Around.of_same", "Becoming.Flow.BalancesOn.of_same", "Becoming.Flow.Inward.of_same", "Becoming.Flow.rising_draws_in_from", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.rising_draws_in_listing", "uses": ["Becoming.Flow.Around.of_same", "Becoming.Flow.Inward.of_same", "Becoming.Flow.rising_draws_in", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.rising_fed_from_beyond_from_listing", "uses": ["Becoming.Flow.Around.of_same", "Becoming.Flow.BalancesOn.of_same", "Becoming.Flow.FedFromBeyond.of_within", "Becoming.Flow.rising_fed_from_beyond_from", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.rising_fed_from_beyond_listing", "uses": ["Becoming.Flow.Around.of_same", "Becoming.Flow.FedFromBeyond.of_within", "Becoming.Flow.rising_fed_from_beyond", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.rising_not_recurring_listing", "uses": ["Becoming.Flow.rising_not_recurring", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.rising_opens_listing", "uses": ["Becoming.Flow.ClosedAt.widen", "Becoming.Flow.rising_opens", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.standing_draws_in_listing", "uses": ["Becoming.Flow.Around.of_same", "Becoming.Flow.Inward.of_same", "Becoming.Flow.standing_draws_in", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.standing_not_recurring_listing", "uses": ["Becoming.Flow.standing_not_recurring", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.standing_opens_listing", "uses": ["Becoming.Flow.ClosedAt.widen", "Becoming.Flow.standing_opens", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.taking_draws_in_from_listing", "uses": ["Becoming.Flow.Around.of_same", "Becoming.Flow.BalancesOn.of_same", "Becoming.Flow.Inward.of_same", "Becoming.Flow.takers_pos_of_sub", "Becoming.Flow.taking_draws_in_from", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.taking_needs_refinement_listing", "uses": ["Becoming.Flow.ClosedAt.widen", "Becoming.Flow.takers_pos_of_sub", "Becoming.Flow.taking_needs_refinement", "Becoming.mul_zero_of", "Becoming.not_of_listsOnce", "Becoming.total_zero_of_within"]}
+{"name": "Becoming.Web.embodiedArising_draws_in_from_listing", "uses": ["Becoming.Flow.Around.of_same", "Becoming.Flow.BalancesOn.of_same", "Becoming.Flow.Inward.of_same", "Becoming.Web.embodiedArising_draws_in_from", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Web.embodiedArising_draws_in_listing", "uses": ["Becoming.Flow.Around.of_same", "Becoming.Flow.Inward.of_same", "Becoming.Web.embodiedArising_draws_in", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Web.embodiedArising_fed_from_beyond_listing", "uses": ["Becoming.Flow.Around.of_same", "Becoming.Flow.FedFromBeyond.of_within", "Becoming.Web.embodiedArising_fed_from_beyond", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Web.embodiedArising_opens_listing", "uses": ["Becoming.Flow.ClosedAt.widen", "Becoming.Web.embodiedArising_opens", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.mul_zero_of", "uses": []}
+{"name": "Becoming.total_zero_of_within", "uses": ["Becoming.Flow.total_pos_of_within"]}

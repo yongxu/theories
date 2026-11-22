@@ -1,0 +1,107 @@
+{"name": "Becoming.Branching.Determined.moves_decide", "uses": ["Becoming.GoAlike.runs_agree", "Becoming.goAlike_id_iff"]}
+{"name": "Becoming.Branching.Determined.stays_merged", "uses": ["Becoming.GoAlike.runs_agree", "Becoming.goAlike_id_iff"]}
+{"name": "Becoming.Branching.FedWithin.keeps", "uses": []}
+{"name": "Becoming.Branching.NecessarilyDrawn.not_lossless", "uses": ["Becoming.Branching.Lossless.returns", "Becoming.Branching.necessarilyDrawn_iff_not_returns"]}
+{"name": "Becoming.Branching.NecessarilyDrawnInto.not_returns", "uses": ["Becoming.Branching.Returns.run", "Becoming.Invariant.reach"]}
+{"name": "Becoming.Branching.NecessarilyDrawnInto.possibly", "uses": ["Becoming.Run.possiblyDrawnInto"]}
+{"name": "Becoming.Branching.OneWay.atTrue_invariant", "uses": []}
+{"name": "Becoming.Branching.OneWay.determined", "uses": []}
+{"name": "Becoming.Branching.OneWay.merge_keeps", "uses": ["Becoming.Branching.OneWay.merges", "Becoming.Branching.OneWay.returns", "Becoming.Branching.keeps_of_returns"]}
+{"name": "Becoming.Branching.OneWay.merges", "uses": []}
+{"name": "Becoming.Branching.OneWay.moves_decide", "uses": ["Becoming.Branching.Determined.moves_decide", "Becoming.Branching.OneWay.determined"]}
+{"name": "Becoming.Branching.OneWay.possibly_not_necessarily", "uses": ["Becoming.Branching.OneWay.returns", "Becoming.Run.possiblyDrawnInto"]}
+{"name": "Becoming.Branching.OneWay.returns", "uses": ["Becoming.Reach.refl"]}
+{"name": "Becoming.Branching.Reachable.one", "uses": []}
+{"name": "Becoming.Branching.Returns.run", "uses": ["Becoming.Branching.lap_le", "Becoming.Branching.lap_succ", "Becoming.Branching.positions_reach", "Becoming.Branching.trace_positions", "Becoming.le_dest"]}
+{"name": "Becoming.Branching.Transit.atAfter_invariant", "uses": []}
+{"name": "Becoming.Branching.Transit.before_returns", "uses": ["Becoming.Reach.refl"]}
+{"name": "Becoming.Branching.Transit.between_never", "uses": ["Becoming.Branching.Transit.atAfter_invariant", "Becoming.Invariant.locks_out"]}
+{"name": "Becoming.Branching.Transit.determined", "uses": []}
+{"name": "Becoming.Branching.Transit.every", "uses": []}
+{"name": "Becoming.Branching.Transit.fed", "uses": []}
+{"name": "Becoming.Branching.Transit.keeps_not_returns", "uses": ["Becoming.Branching.Transit.between_never", "Becoming.Branching.Transit.every", "Becoming.Branching.Transit.fed", "Becoming.Branching.Transit.total", "Becoming.Branching.keeps_iff_fed", "Becoming.Run.step"]}
+{"name": "Becoming.Branching.Transit.returning_not_invariant", "uses": ["Becoming.Branching.Transit.before_returns", "Becoming.Branching.Transit.between_never"]}
+{"name": "Becoming.Branching.Transit.total", "uses": []}
+{"name": "Becoming.Branching.fed_keeps", "uses": []}
+{"name": "Becoming.Branching.fork_left_invariant", "uses": ["Becoming.Branching.fork_source"]}
+{"name": "Becoming.Branching.fork_lossless", "uses": []}
+{"name": "Becoming.Branching.fork_lossless_not_returns", "uses": ["Becoming.Branching.fork_left_invariant", "Becoming.Branching.fork_lossless", "Becoming.Branching.fork_origin_never", "Becoming.Reach.of_step"]}
+{"name": "Becoming.Branching.fork_origin_never", "uses": ["Becoming.Branching.fork_source", "Becoming.Branching.fork_target", "Becoming.Reach.of_dead_end"]}
+{"name": "Becoming.Branching.fork_source", "uses": []}
+{"name": "Becoming.Branching.fork_target", "uses": []}
+{"name": "Becoming.Branching.invariant_ahead", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.Branching.keepsWithin_iff_fedWithin", "uses": ["Becoming.Branching.FedWithin.keeps"]}
+{"name": "Becoming.Branching.keeps_iff_fed", "uses": ["Becoming.Branching.Reachable.one", "Becoming.Branching.fed_keeps"]}
+{"name": "Becoming.Branching.keeps_of_returns", "uses": ["Becoming.Branching.Returns.reachable"]}
+{"name": "Becoming.Branching.lap_le", "uses": ["Becoming.Branching.lap_succ"]}
+{"name": "Becoming.Branching.lap_succ", "uses": []}
+{"name": "Becoming.Branching.law_drawn_iff", "uses": ["Becoming.Branching.law_necessarily_iff", "Becoming.Law.absorbing_iff_invariant"]}
+{"name": "Becoming.Branching.law_keeps_iff", "uses": []}
+{"name": "Becoming.Branching.law_lossless_iff", "uses": []}
+{"name": "Becoming.Branching.law_merges_iff", "uses": []}
+{"name": "Becoming.Branching.law_necessarily_iff", "uses": ["Becoming.Branching.law_run_state"]}
+{"name": "Becoming.Branching.law_possibly_iff", "uses": ["Becoming.Branching.law_reach_iff"]}
+{"name": "Becoming.Branching.law_reachable_iff", "uses": []}
+{"name": "Becoming.Branching.law_returns_iff", "uses": []}
+{"name": "Becoming.Branching.law_run_state", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Branching.length_append_one", "uses": []}
+{"name": "Becoming.Branching.lost_necessarily_drawn", "uses": ["Becoming.Run.window_length", "Becoming.Run.window_trace"]}
+{"name": "Becoming.Branching.necessarilyDrawnInto_ahead", "uses": ["Becoming.Reach.refl", "Becoming.Run.step"]}
+{"name": "Becoming.Branching.necessarilyDrawn_iff_not_returns", "uses": ["Becoming.Branching.NecessarilyDrawnInto.not_returns", "Becoming.Branching.invariant_ahead", "Becoming.Branching.necessarilyDrawnInto_ahead"]}
+{"name": "Becoming.Branching.necessarilyDrawn_of_lost", "uses": ["Becoming.Branching.lost_necessarily_drawn", "Becoming.Branching.reachable_invariant"]}
+{"name": "Becoming.Branching.positions_reach", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans"]}
+{"name": "Becoming.Branching.possiblyDrawnInto_ahead", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl"]}
+{"name": "Becoming.Branching.possiblyDrawn_iff", "uses": ["Becoming.Invariant.locks_out", "Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans"]}
+{"name": "Becoming.Branching.reachable_invariant", "uses": ["Becoming.Branching.Reachable.earlier", "Becoming.Branching.length_append_one", "Generative.trace_append_iff"]}
+{"name": "Becoming.Branching.returns_iff_ahead", "uses": []}
+{"name": "Becoming.Branching.returns_iff_fedWithin", "uses": ["Becoming.Branching.returns_iff_fed_ahead", "Becoming.Invariant.reach", "Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans"]}
+{"name": "Becoming.Branching.returns_iff_fed_ahead", "uses": ["Becoming.Branching.trace_last", "Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans", "Generative.trace_append_iff"]}
+{"name": "Becoming.Branching.returns_iff_keepsWithin", "uses": ["Becoming.Branching.keepsWithin_iff_fedWithin", "Becoming.Branching.returns_iff_fedWithin"]}
+{"name": "Becoming.Branching.trace_positions", "uses": []}
+{"name": "Becoming.Captured.held_absorbing", "uses": ["Becoming.Captured.byRule", "Becoming.Captured.keeps", "Becoming.Law.held_absorbing"]}
+{"name": "Becoming.Captured.keeps", "uses": []}
+{"name": "Becoming.Captured.rule_perturbation_drawn", "uses": ["Becoming.Captured.byRule", "Becoming.Captured.held_absorbing", "Becoming.Law.Drawn.not_returns", "Becoming.Law.perturbation_drawnInto", "Becoming.ListTests.not_ne_self"]}
+{"name": "Becoming.Captured.rule_region_absorbing", "uses": ["Becoming.Captured.keeps", "Becoming.Law.rule_absorbing"]}
+{"name": "Becoming.Captured.state_perturbation_drawn", "uses": ["Becoming.Captured.byRule", "Becoming.Captured.held_absorbing", "Becoming.Law.Drawn.not_returns", "Becoming.Law.perturbation_drawnInto", "Becoming.ListTests.not_ne_self"]}
+{"name": "Becoming.Coarse.first_bisimulation", "uses": []}
+{"name": "Becoming.Coarse.first_determinedAt", "uses": ["Becoming.Coarse.first_bisimulation"]}
+{"name": "Becoming.Coarse.meet_and_part", "uses": ["Becoming.Coarse.first_bisimulation", "Becoming.Coarse.first_determinedAt"]}
+{"name": "Becoming.Confound.refutes_registered", "uses": ["Becoming.Confound.varied_refutes", "Becoming.anything_alike", "Becoming.determined_iff_named"]}
+{"name": "Becoming.DependsOnlyOn.alike", "uses": ["Becoming.Alike.refl"]}
+{"name": "Becoming.DependsOnlyOnAlike.determinedAt", "uses": []}
+{"name": "Becoming.DependsOnlyOnAlike.reabsorbed", "uses": ["Becoming.DependsOnlyOnAlike.determinedAt", "Becoming.DeterminedAt.stays_alike", "Becoming.Run.step"]}
+{"name": "Becoming.DeterminedAt.stays_alike", "uses": ["Becoming.DeterminedAt.goAlike", "Becoming.Run.step"]}
+{"name": "Becoming.Law.held_absorbing", "uses": []}
+{"name": "Becoming.Law.perturbation_drawnInto", "uses": []}
+{"name": "Becoming.Law.rule_absorbing", "uses": []}
+{"name": "Becoming.Reach.of_dead_end", "uses": []}
+{"name": "Becoming.RecurrenceRuns.keptRun_present", "uses": ["Becoming.Branching.law_run_state", "Becoming.Law.present_orbit"]}
+{"name": "Becoming.RecurrenceRuns.kept_loses_beginning", "uses": ["Becoming.Branching.law_reachable_iff", "Becoming.Law.withHistory_loses_beginning"]}
+{"name": "Becoming.RecurrenceRuns.kept_lossless", "uses": ["Becoming.Branching.law_lossless_iff", "Becoming.Law.withHistory_lossless"]}
+{"name": "Becoming.RecurrenceRuns.kept_never_returns", "uses": ["Becoming.Branching.law_returns_iff", "Becoming.Law.withHistory_never_returns"]}
+{"name": "Becoming.RecurrenceRuns.kept_unlisted", "uses": ["Becoming.Branching.law_run_state", "Becoming.Law.withHistory_unlisted"]}
+{"name": "Becoming.RecurrenceRuns.lossless_iff_returns", "uses": ["Becoming.Branching.law_lossless_iff", "Becoming.Branching.law_returns_iff", "Becoming.Law.lossless_iff_returns"]}
+{"name": "Becoming.RecurrenceRuns.merges_loses", "uses": ["Becoming.Branching.law_merges_iff", "Becoming.Branching.law_reachable_iff", "Becoming.Law.Merges.loses"]}
+{"name": "Becoming.RecurrenceRuns.return_keeps_history", "uses": ["Becoming.Branching.law_run_state", "Becoming.Law.return_keeps_history"]}
+{"name": "Becoming.Run.enters_returning", "uses": ["Becoming.Run.reach", "Becoming.Run.step", "Becoming.gap_of_lt", "Becoming.revisits_within"]}
+{"name": "Becoming.Run.fixesAlike_of_takes", "uses": []}
+{"name": "Becoming.Run.generalizesAlike", "uses": ["Becoming.Run.stepsThrough_of_factors"]}
+{"name": "Becoming.Run.not_fixesAlike_of_untaken", "uses": ["Becoming.Alike.realized", "Becoming.Run.step", "Becoming.retargetAlike_determinedAt", "Becoming.retargetAlike_step"]}
+{"name": "Becoming.Run.possiblyDrawnInto", "uses": ["Becoming.Run.reach"]}
+{"name": "Becoming.Run.window_length", "uses": []}
+{"name": "Becoming.Twins.determinedAt", "uses": ["Becoming.Twins.alike_one"]}
+{"name": "Becoming.Twins.retarget_breaks", "uses": ["Becoming.Alike.step", "Becoming.Twins.determinedAt", "Becoming.retargetAlike_determinedAt"]}
+{"name": "Becoming.alike_configurations", "uses": ["Becoming.Alike.realized"]}
+{"name": "Becoming.anything_alike", "uses": []}
+{"name": "Becoming.carries_unregistered", "uses": ["Becoming.anything_alike"]}
+{"name": "Becoming.determined_iff_named", "uses": ["Becoming.Determined.at", "Becoming.alike_configurations"]}
+{"name": "Becoming.forget_inputs_determinedAt_iff", "uses": []}
+{"name": "Becoming.goesAlike_iff", "uses": ["Becoming.Alike.refl", "Becoming.DeterminedAt.goAlike"]}
+{"name": "Becoming.keepFrame_alike_iff", "uses": ["Becoming.keepFrame_bisimulation", "Becoming.keepFrame_present"]}
+{"name": "Becoming.keepFrame_bisimulation", "uses": ["Becoming.Alike.realized", "Becoming.Alike.step", "Becoming.Alike.symm"]}
+{"name": "Becoming.keepFrame_present", "uses": ["Becoming.Alike.realized", "Becoming.Alike.step", "Becoming.Alike.symm"]}
+{"name": "Becoming.keepHistory_new_named", "uses": ["Becoming.alike_configurations", "Becoming.keepHistory_new"]}
+{"name": "Becoming.keepHistory_returns_alike", "uses": ["Becoming.keepFrame_alike_iff", "Becoming.keepHistory_new"]}
+{"name": "Becoming.retargetAlike_bisimulation", "uses": ["Becoming.Alike.realized", "Becoming.Alike.refl", "Becoming.Alike.step", "Becoming.Alike.symm", "Becoming.Alike.trans"]}
+{"name": "Becoming.retargetAlike_determinedAt", "uses": ["Becoming.Alike.refl", "Becoming.retargetAlike_bisimulation"]}
+{"name": "Becoming.retargetAlike_step", "uses": ["Becoming.Alike.refl"]}

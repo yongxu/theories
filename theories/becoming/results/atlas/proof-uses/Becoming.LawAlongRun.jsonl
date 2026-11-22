@@ -1,0 +1,59 @@
+{"name": "Becoming.Changing.determined", "uses": []}
+{"name": "Becoming.Changing.dissolves", "uses": []}
+{"name": "Becoming.Changing.dissolving_admits_succ", "uses": []}
+{"name": "Becoming.Changing.dissolving_consistent", "uses": ["Becoming.Changing.dissolving_admits_succ", "Becoming.Changing.dissolving_not_admits_zero", "Becoming.Dependence.alikeAt_equivalence"]}
+{"name": "Becoming.Changing.dissolving_fixed_inconsistent", "uses": []}
+{"name": "Becoming.Changing.dissolving_fixed_no_law", "uses": ["Becoming.Changing.dissolving_fixed_inconsistent", "Becoming.Run.ConsistentUnder.earlier", "Becoming.Run.law_through_coupling_iff"]}
+{"name": "Becoming.Changing.dissolving_not_admits_zero", "uses": []}
+{"name": "Becoming.Changing.forming_admits_three", "uses": []}
+{"name": "Becoming.Changing.forming_admits_zero", "uses": []}
+{"name": "Becoming.Changing.forming_fixed_consistent", "uses": []}
+{"name": "Becoming.Changing.forming_inconsistent", "uses": ["Becoming.Changing.forming_admits_three", "Becoming.Changing.forming_admits_zero", "Becoming.Changing.forming_not_admits_one"]}
+{"name": "Becoming.Changing.forming_no_law", "uses": ["Becoming.Changing.forming_inconsistent", "Becoming.Run.ConsistentUnder.earlier", "Becoming.Run.law_through_dependence_iff"]}
+{"name": "Becoming.Changing.forming_not_admits_one", "uses": []}
+{"name": "Becoming.Changing.forms", "uses": []}
+{"name": "Becoming.Coarse.exact_law", "uses": ["Becoming.Coarse.goAlike", "Becoming.Coarse.matching", "Becoming.exact_law_iff"]}
+{"name": "Becoming.Coarse.matching", "uses": []}
+{"name": "Becoming.Conditions.alikeAt_equivalence", "uses": ["Becoming.Dependence.alikeAt_equivalence"]}
+{"name": "Becoming.Conditions.alikeAt_iff_alikeThrough", "uses": []}
+{"name": "Becoming.Conditions.alikeThrough_iff", "uses": []}
+{"name": "Becoming.Constant.consistent", "uses": []}
+{"name": "Becoming.Constant.not_goAlike", "uses": []}
+{"name": "Becoming.Dependence.admitsAt_fixedAt_iff", "uses": []}
+{"name": "Becoming.Dependence.alikeAt_equivalence", "uses": []}
+{"name": "Becoming.Dependence.alikeAt_iff_alikeAcross", "uses": []}
+{"name": "Becoming.Dependence.alikeThrough_iff_fixedAt", "uses": []}
+{"name": "Becoming.Dependence.conditions_alikeAt_iff", "uses": []}
+{"name": "Becoming.Run.ConsistentThrough.earlier", "uses": ["Becoming.Run.ConsistentUnder.earlier"]}
+{"name": "Becoming.Run.ConsistentUnder.earlier", "uses": []}
+{"name": "Becoming.Run.consistentUnder_congr", "uses": []}
+{"name": "Becoming.Run.consistentUnder_eq_iff", "uses": []}
+{"name": "Becoming.Run.consistentUnder_of_goAlikeUnder", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Run.consistent_conditions_iff", "uses": ["Becoming.Dependence.conditions_alikeAt_iff", "Becoming.Run.consistentUnder_congr"]}
+{"name": "Becoming.Run.consistent_id_iff", "uses": []}
+{"name": "Becoming.Run.consistent_of_goAlike", "uses": ["Becoming.Run.consistentUnder_of_goAlikeUnder"]}
+{"name": "Becoming.Run.consistent_unchanged_iff", "uses": ["Becoming.Dependence.admitsAt_fixedAt_iff", "Becoming.Run.consistentUnder_congr"]}
+{"name": "Becoming.Run.law_through_coupling_iff", "uses": ["Becoming.Run.law_through_dependence_iff"]}
+{"name": "Becoming.Run.law_through_dependence_iff", "uses": ["Becoming.Dependence.alikeAt_equivalence", "Becoming.Run.law_under_iff"]}
+{"name": "Becoming.Run.law_through_iff", "uses": ["Becoming.Run.law_under_iff", "Becoming.image_determined_iff"]}
+{"name": "Becoming.Run.law_under_iff", "uses": ["Becoming.Run.recordUnder_goAlike", "Becoming.Run.recordUnder_steps"]}
+{"name": "Becoming.Run.no_law_later", "uses": ["Becoming.Run.ConsistentThrough.earlier", "Becoming.Run.law_through_iff"]}
+{"name": "Becoming.Run.no_law_under_later", "uses": ["Becoming.Run.ConsistentUnder.earlier", "Becoming.Run.law_under_iff"]}
+{"name": "Becoming.Run.recordUnder_goAlike", "uses": []}
+{"name": "Becoming.Run.recordUnder_steps", "uses": []}
+{"name": "Becoming.Run.record_determined_iff", "uses": []}
+{"name": "Becoming.Run.record_least", "uses": []}
+{"name": "Becoming.Run.stepsThrough_record", "uses": []}
+{"name": "Becoming.Stuck.goAlike_not_matches", "uses": ["Becoming.goAlike_const"]}
+{"name": "Becoming.Switching.inconsistent", "uses": []}
+{"name": "Becoming.Unseen.admits", "uses": []}
+{"name": "Becoming.Unseen.consistent_observing", "uses": ["Becoming.Conditions.alikeAt_equivalence", "Becoming.Unseen.first_apart"]}
+{"name": "Becoming.Unseen.determined", "uses": []}
+{"name": "Becoming.Unseen.first_apart", "uses": []}
+{"name": "Becoming.Unseen.inconsistent", "uses": ["Becoming.Unseen.admits", "Becoming.Unseen.not_admits_zero"]}
+{"name": "Becoming.Unseen.no_law", "uses": ["Becoming.Run.ConsistentUnder.earlier", "Becoming.Run.law_through_coupling_iff", "Becoming.Unseen.inconsistent"]}
+{"name": "Becoming.Unseen.not_admits_zero", "uses": []}
+{"name": "Becoming.Web.admits_own_iff", "uses": []}
+{"name": "Becoming.Web.alikeAcross_iff_alikeThrough", "uses": ["Becoming.Web.admits_own_iff"]}
+{"name": "Becoming.exact_law_iff", "uses": ["Becoming.carries_law_iff", "Becoming.factors_image", "Becoming.image_determined_iff"]}
+{"name": "Becoming.image_exact_iff", "uses": ["Becoming.factors_image", "Generative.projection_exact_iff"]}

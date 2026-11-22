@@ -1,0 +1,116 @@
+{"name": "Becoming.ChangeBound.from_zero", "uses": ["Becoming.le_total_of_mem", "Becoming.occurrences_le", "Becoming.occurrences_zero_le", "Becoming.steps_of_within"]}
+{"name": "Becoming.ChangeBound.joins", "uses": ["Becoming.mark_one", "Becoming.occurrences_succ", "Becoming.steps_last"]}
+{"name": "Becoming.ChangeBound.lpo_of_ends", "uses": ["Becoming.Swap.at_first", "Becoming.Swap.change_bound", "Becoming.Swap.decide_of_end", "Becoming.Swap.tally"]}
+{"name": "Becoming.ChangeBound.not_recurring", "uses": ["Becoming.mark_one", "Becoming.occurrences_mono", "Becoming.occurrences_succ"]}
+{"name": "Becoming.ChangeBound.reach", "uses": ["Becoming.ChangeBound.joins", "Becoming.Queue.reached"]}
+{"name": "Becoming.Cycle.census", "uses": ["Becoming.Cycle.distinct", "Becoming.Cycle.listed", "Becoming.Cycle.present_lt"]}
+{"name": "Becoming.Cycle.counted", "uses": ["Becoming.Cycle.census", "Becoming.Cycle.closed_more", "Becoming.Cycle.distinct"]}
+{"name": "Becoming.Cycle.distinct", "uses": ["Becoming.Cycle.present_lt"]}
+{"name": "Becoming.Cycle.listed", "uses": []}
+{"name": "Becoming.Dormant.more_without_arising", "uses": ["Becoming.Expansion.more", "Becoming.Expansion.present_active"]}
+{"name": "Becoming.Expansion.census", "uses": ["Becoming.Expansion.distinct", "Becoming.Expansion.listed", "Becoming.Expansion.present_active"]}
+{"name": "Becoming.Expansion.counted", "uses": ["Becoming.Expansion.census", "Becoming.Expansion.distinct", "Becoming.Expansion.growers_take", "Becoming.Expansion.more"]}
+{"name": "Becoming.Expansion.distinct", "uses": ["Becoming.Expansion.present_active", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Expansion.listed", "uses": []}
+{"name": "Becoming.Flow.More.arising_never_stops_covering", "uses": ["Becoming.count_le_of_sub", "Becoming.not_not_all", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.More.grows", "uses": ["Becoming.Flow.More.grows_covering"]}
+{"name": "Becoming.Flow.More.grows_covering", "uses": ["Becoming.Flow.takers_le_covering"]}
+{"name": "Becoming.Flow.More.unceasing", "uses": ["Becoming.Flow.More.unceasing_covering"]}
+{"name": "Becoming.Flow.More.unceasing_covering", "uses": ["Becoming.came_between_from", "Becoming.count_le_of_sub", "Becoming.search", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.takers_le_covering", "uses": ["Becoming.count_le_of_sub", "Becoming.total_pos"]}
+{"name": "Becoming.Inactive.distinct", "uses": ["Becoming.Inactive.present_le"]}
+{"name": "Becoming.Inactive.gives", "uses": []}
+{"name": "Becoming.Inactive.more_without_arising", "uses": ["Becoming.Inactive.distinct", "Becoming.Inactive.gives", "Becoming.Inactive.ones"]}
+{"name": "Becoming.Inactive.ones", "uses": []}
+{"name": "Becoming.Inactive.present_le", "uses": []}
+{"name": "Becoming.Listed.across", "uses": ["Becoming.Listed.across_at"]}
+{"name": "Becoming.Listed.across_at", "uses": ["Becoming.total_mark_eq_count", "Becoming.«定前之逐点»", "Becoming.«定前则前并生不过后并亡»", "Becoming.«定后之逐点»", "Becoming.«定后则后并亡不过前并生»"]}
+{"name": "Becoming.Listed.ceasing_iff_shortfall", "uses": ["Becoming.Listed.ceasing_iff_shortfall_from"]}
+{"name": "Becoming.Listed.ceasing_iff_shortfall_from", "uses": ["Becoming.Listed.over_stretch_on", "Becoming.le_dest", "Becoming.mark_pos", "Becoming.pos_of_exceeds", "Becoming.steps_last", "Becoming.steps_mem", "Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Listed.ceasing_of_coming", "uses": ["Becoming.Listed.ceasing_of_returning"]}
+{"name": "Becoming.Listed.ceasing_of_outpacing", "uses": ["Becoming.Listed.ceasing_iff_shortfall"]}
+{"name": "Becoming.Listed.ceasing_of_returning", "uses": ["Becoming.Listed.ceasing_iff_shortfall", "Becoming.le_dest", "Becoming.mark_pos", "Becoming.recurring_accumulates", "Becoming.steps_mono", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Listed.ceasings_within", "uses": ["Becoming.Listed.over_stretch"]}
+{"name": "Becoming.Listed.coming_iff_ceasing", "uses": ["Becoming.Listed.ceasing_of_coming", "Becoming.Listed.coming_of_ceasing"]}
+{"name": "Becoming.Listed.coming_iff_excess", "uses": ["Becoming.Listed.coming_iff_excess_from"]}
+{"name": "Becoming.Listed.coming_iff_excess_from", "uses": ["Becoming.Listed.over_stretch_on", "Becoming.le_dest", "Becoming.mark_pos", "Becoming.pos_of_exceeds", "Becoming.steps_last", "Becoming.steps_mem", "Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Listed.coming_of_ceasing", "uses": ["Becoming.Steps.along_fixed", "Becoming.ceasesToBe_iff_wang_along", "Becoming.comesToBe_iff_sheng_along", "Becoming.mem_map_prodMk", "Becoming.not_decide_iff", "Becoming.prodMk_mem_map", "Becoming.«定后前者在前则亡屡者生屡»"]}
+{"name": "Becoming.Listed.comings_within", "uses": ["Becoming.Listed.over_stretch"]}
+{"name": "Becoming.Listed.keeps", "uses": ["Becoming.Listed.keeps_at"]}
+{"name": "Becoming.Listed.keeps_at", "uses": ["Becoming.mark_add_not", "Becoming.marks_le_of_sub", "Becoming.total_add", "Becoming.total_congr_on", "Becoming.total_ones"]}
+{"name": "Becoming.Listed.over_stretch", "uses": ["Becoming.Listed.over_stretch_on"]}
+{"name": "Becoming.Listed.over_stretch_on", "uses": ["Becoming.Listed.across_at", "Becoming.balance_over_stretch_on"]}
+{"name": "Becoming.Listed.tally", "uses": ["Becoming.Listed.keeps"]}
+{"name": "Becoming.Oscillation.census", "uses": ["Becoming.Oscillation.pair"]}
+{"name": "Becoming.Oscillation.counted", "uses": ["Becoming.Oscillation.census", "Becoming.Oscillation.not_more", "Becoming.Oscillation.pair", "Becoming.Oscillation.takes"]}
+{"name": "Becoming.Oscillation.pair", "uses": []}
+{"name": "Becoming.Queue.ceasings_eq", "uses": ["Becoming.Queue.gone_succ", "Becoming.Queue.kept_end", "Becoming.mark_iff", "Becoming.steps_below", "Becoming.steps_mem", "Becoming.steps_within", "Becoming.total_congr_on"]}
+{"name": "Becoming.Queue.comings_eq", "uses": ["Becoming.Queue.gone_succ", "Becoming.Queue.kept_end", "Becoming.mark_iff", "Becoming.steps_above", "Becoming.steps_mem", "Becoming.steps_within", "Becoming.total_congr_on"]}
+{"name": "Becoming.Queue.counts", "uses": ["Becoming.Queue.ceasings_eq", "Becoming.Queue.comings_eq", "Becoming.steps_length"]}
+{"name": "Becoming.Queue.gone_succ", "uses": ["Becoming.steps_last"]}
+{"name": "Becoming.Queue.kept_end", "uses": ["Becoming.Queue.gone_succ"]}
+{"name": "Becoming.Queue.listed", "uses": ["Becoming.steps_distinct", "Becoming.steps_mem", "Becoming.steps_of_within", "Becoming.steps_within"]}
+{"name": "Becoming.Queue.reached", "uses": ["Becoming.Queue.kept_end", "Becoming.steps_last"]}
+{"name": "Becoming.Repeated.census", "uses": []}
+{"name": "Becoming.Repeated.more_without_arising", "uses": ["Becoming.Repeated.census", "Becoming.Repeated.ones"]}
+{"name": "Becoming.Repeated.ones", "uses": []}
+{"name": "Becoming.Swap.at_first", "uses": ["Becoming.bool_and_true"]}
+{"name": "Becoming.Swap.change_bound", "uses": ["Becoming.Swap.counted"]}
+{"name": "Becoming.Swap.counted", "uses": ["Becoming.Swap.mark_split", "Becoming.Swap.mark_twice", "Becoming.occurrences_succ"]}
+{"name": "Becoming.Swap.decide_of_end", "uses": ["Becoming.Clear.false_before", "Becoming.Clear.false_of_not", "Becoming.Clear.first_of_true", "Becoming.Clear.not_both", "Becoming.Clear.or_first"]}
+{"name": "Becoming.Swap.mark_split", "uses": []}
+{"name": "Becoming.Swap.mark_twice", "uses": []}
+{"name": "Becoming.Swap.tally", "uses": ["Becoming.Clear.cases"]}
+{"name": "Becoming.Tally.balance", "uses": []}
+{"name": "Becoming.Tally.ceasing_le", "uses": []}
+{"name": "Becoming.Tally.congr", "uses": []}
+{"name": "Becoming.Unrecorded.drawing_without_taking", "uses": ["Becoming.total_zero"]}
+{"name": "Becoming.Web.Census.over_stretch", "uses": ["Becoming.Listed.over_stretch_on"]}
+{"name": "Becoming.Web.DependenceCensus.forming_iff_dissolving", "uses": ["Becoming.Listed.ceasing_of_coming", "Becoming.Web.DependenceCensus.forming_of_dissolving"]}
+{"name": "Becoming.Web.DependenceCensus.forming_of_dissolving", "uses": ["Becoming.Listed.coming_of_ceasing"]}
+{"name": "Becoming.Web.DependenceCensus.over_stretch", "uses": ["Becoming.Listed.over_stretch_on"]}
+{"name": "Becoming.Web.arises_of_more", "uses": ["Becoming.length_le_of_sub", "Becoming.search"]}
+{"name": "Becoming.Web.unceasing_iff_bounded", "uses": ["Becoming.Listed.coming_iff_ceasing"]}
+{"name": "Becoming.Web.unceasing_of_growth", "uses": ["Becoming.Web.arises_of_more", "Becoming.rises_between"]}
+{"name": "Becoming.balance_not_tally", "uses": ["Becoming.Tally.ceasing_le"]}
+{"name": "Becoming.came_between", "uses": ["Becoming.came_between_from"]}
+{"name": "Becoming.came_between_from", "uses": []}
+{"name": "Becoming.ceasesToBe_iff_wang_along", "uses": ["Becoming.Steps.along_hasSucc_iff"]}
+{"name": "Becoming.changeBound_iff_zero", "uses": ["Becoming.ChangeBound.from_zero"]}
+{"name": "Becoming.comesToBe_iff_sheng_along", "uses": ["Becoming.Steps.along_hasPred_iff"]}
+{"name": "Becoming.count_le_of_sub", "uses": ["Becoming.ListTests.length_append", "Becoming.mem_remove"]}
+{"name": "Becoming.counting_laws", "uses": ["Becoming.Listed.tally", "Becoming.Queue.counts", "Becoming.Queue.listed"]}
+{"name": "Becoming.distinct_map", "uses": ["Becoming.mem_of_map"]}
+{"name": "Becoming.distinct_remove", "uses": ["Becoming.mem_insert"]}
+{"name": "Becoming.falls_by_occurrences", "uses": ["Becoming.occurrences_before", "Becoming.occurrences_succ"]}
+{"name": "Becoming.length_le_count", "uses": ["Becoming.mem_remove", "Becoming.total_append"]}
+{"name": "Becoming.length_le_of_sub", "uses": ["Becoming.length_le_count", "Becoming.total_ones"]}
+{"name": "Becoming.mark_add_not", "uses": ["Becoming.mark_one", "Becoming.mark_zero"]}
+{"name": "Becoming.mark_le_total", "uses": ["Becoming.mark_cases", "Becoming.mark_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.mark_one", "uses": ["Becoming.mark_le_one", "Becoming.mark_pos"]}
+{"name": "Becoming.mark_turn", "uses": ["Becoming.mark_add_not", "Becoming.mark_iff", "Becoming.mark_one", "Becoming.mark_zero"]}
+{"name": "Becoming.mark_zero", "uses": ["Becoming.eq_zero_of_not_pos", "Becoming.mark_pos"]}
+{"name": "Becoming.marks_le_of_sub", "uses": ["Becoming.distinct_remove", "Becoming.mark_one", "Becoming.mark_zero", "Becoming.mem_remove", "Becoming.total_append"]}
+{"name": "Becoming.mem_insert", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.mem_map_of", "uses": []}
+{"name": "Becoming.mem_of_map", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.occurrences_before", "uses": ["Becoming.mark_zero"]}
+{"name": "Becoming.occurrences_le", "uses": ["Becoming.mark_le_one"]}
+{"name": "Becoming.occurrences_mono", "uses": []}
+{"name": "Becoming.occurrences_succ", "uses": ["Becoming.mark_iff"]}
+{"name": "Becoming.occurrences_zero_le", "uses": ["Becoming.occurrences_le", "Becoming.occurrences_succ"]}
+{"name": "Becoming.rises_between", "uses": []}
+{"name": "Becoming.search", "uses": []}
+{"name": "Becoming.steps_above", "uses": ["Becoming.mark_one", "Becoming.steps_above_none", "Becoming.steps_last"]}
+{"name": "Becoming.steps_above_none", "uses": ["Becoming.mark_zero", "Becoming.steps_last"]}
+{"name": "Becoming.steps_below", "uses": ["Becoming.mark_zero", "Becoming.steps_below_all", "Becoming.steps_last"]}
+{"name": "Becoming.steps_below_all", "uses": ["Becoming.mark_one", "Becoming.steps_last"]}
+{"name": "Becoming.steps_distinct", "uses": ["Becoming.steps_mem"]}
+{"name": "Becoming.steps_length", "uses": []}
+{"name": "Becoming.steps_of_within", "uses": []}
+{"name": "Becoming.steps_within", "uses": []}
+{"name": "Becoming.tally_iff", "uses": ["Becoming.Tally.balance", "Becoming.Tally.ceasing_le", "Becoming.add_right_cancel", "Becoming.le_dest"]}
+{"name": "Becoming.tally_iff_counted", "uses": ["Becoming.Listed.tally", "Becoming.Queue.counts", "Becoming.Queue.listed", "Becoming.Tally.congr"]}
+{"name": "Becoming.total_congr_on", "uses": []}
+{"name": "Becoming.total_le_mark", "uses": ["Becoming.mark_one", "Becoming.mark_zero", "Becoming.marks_le_of_sub"]}
+{"name": "Becoming.total_mark_eq_count", "uses": ["Becoming.mark_cases"]}

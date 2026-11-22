@@ -1,0 +1,56 @@
+{"name": "Becoming.Flow.Balances.admits_of_net_draw", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.admits_of_net_draw_at"]}
+{"name": "Becoming.Flow.Balances.changes_nothing", "uses": ["Becoming.Flow.Balances.closes_nothing", "Becoming.Flow.Balances.opens_nothing"]}
+{"name": "Becoming.Flow.Balances.closes_nothing", "uses": ["Becoming.Flow.Balances.supported_of_net_give", "Becoming.total_le"]}
+{"name": "Becoming.Flow.Balances.opens_nothing", "uses": ["Becoming.Flow.Balances.admits_of_net_draw", "Becoming.total_le"]}
+{"name": "Becoming.Flow.Balances.supported_iff_within_margin", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.supported_iff_within_margin_at"]}
+{"name": "Becoming.Flow.Balances.supported_of_net_give", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.supported_of_net_give_at"]}
+{"name": "Becoming.Flow.Balances.withheld", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.withheld_at"]}
+{"name": "Becoming.Flow.WithheldLevels.unique", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.Flow.admits_of_net_draw_at", "uses": ["Becoming.Flow.withheld_at", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Flow.comes_within_not_not", "uses": []}
+{"name": "Becoming.Flow.fitsBand_iff_within_margins_at", "uses": ["Becoming.Flow.withheld_at", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Flow.gain_given_by_recent_gainer", "uses": ["Becoming.Flow.Acting.giversSupported", "Becoming.Flow.Balances.on", "Becoming.Flow.gain_given_by_recent_gainer_at"]}
+{"name": "Becoming.Flow.gain_given_by_recent_gainer_at", "uses": ["Becoming.Flow.comes_within_not_not", "Becoming.Flow.gain_given_by_supported_at"]}
+{"name": "Becoming.Flow.gain_given_by_supported_at", "uses": ["Becoming.Flow.rise_given_by_supported_at", "Becoming.Web.GainsSupport.rises"]}
+{"name": "Becoming.Flow.gains_from_supported", "uses": ["Becoming.Flow.Acting.giversSupported", "Becoming.Flow.Balances.on", "Becoming.Flow.gains_from_supported_at"]}
+{"name": "Becoming.Flow.gains_from_supported_at", "uses": ["Becoming.Flow.gain_given_by_supported_at"]}
+{"name": "Becoming.Flow.given_withhold", "uses": ["Becoming.Flow.split_at", "Becoming.total_add", "Becoming.total_congr"]}
+{"name": "Becoming.Flow.nothing_supported_stays", "uses": ["Becoming.Flow.Acting.giversSupported", "Becoming.Flow.Balances.on", "Becoming.Flow.nothing_supported_stays_at"]}
+{"name": "Becoming.Flow.nothing_supported_stays_at", "uses": ["Becoming.Flow.unsupported_stays_at"]}
+{"name": "Becoming.Flow.rise_given_by_supported", "uses": ["Becoming.Flow.Acting.giversSupported", "Becoming.Flow.Balances.on", "Becoming.Flow.rise_given_by_supported_at"]}
+{"name": "Becoming.Flow.rise_given_by_supported_at", "uses": ["Becoming.Flow.BalancesOn.rise_given", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.split_at", "uses": []}
+{"name": "Becoming.Flow.support_passes_on", "uses": ["Becoming.Flow.gain_given_by_recent_gainer", "Becoming.le_dest"]}
+{"name": "Becoming.Flow.supported_iff_within_margin_at", "uses": ["Becoming.Flow.withheld_at", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Flow.supported_of_net_give_at", "uses": ["Becoming.Flow.withheld_at", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Flow.taken_withhold", "uses": ["Becoming.Flow.split_at", "Becoming.total_add", "Becoming.total_congr"]}
+{"name": "Becoming.Flow.unsupported_stays", "uses": ["Becoming.Flow.Acting.giversSupported", "Becoming.Flow.Balances.on", "Becoming.Flow.unsupported_stays_at"]}
+{"name": "Becoming.Flow.unsupported_stays_at", "uses": ["Becoming.Flow.gains_from_supported_at"]}
+{"name": "Becoming.Flow.withheld_at", "uses": ["Becoming.Flow.given_withhold", "Becoming.Flow.taken_withhold", "Becoming.rebalance", "Becoming.steps_last"]}
+{"name": "Becoming.Restoring.Adapting.restores", "uses": []}
+{"name": "Becoming.Restoring.Carried.restores", "uses": ["Becoming.Restoring.balances_unitStep"]}
+{"name": "Becoming.Restoring.Idle.restores", "uses": ["Becoming.Restoring.balances_unitStep", "Becoming.unitStep_pos"]}
+{"name": "Becoming.Restoring.Inflow.restores", "uses": ["Becoming.Restoring.balances_unitStep", "Becoming.unitStep_pos"]}
+{"name": "Becoming.Restoring.Inflow.widens", "uses": ["Becoming.Flow.Balances.closes_nothing", "Becoming.Flow.WithheldLevels.unique", "Becoming.Restoring.Inflow.withheld", "Becoming.Restoring.balances_unitStep"]}
+{"name": "Becoming.Restoring.Inflow.withheld", "uses": []}
+{"name": "Becoming.Restoring.Spontaneous.restores", "uses": ["Becoming.unitStep_pos"]}
+{"name": "Becoming.Restoring.balances_unitStep", "uses": []}
+{"name": "Becoming.Transfer.acting", "uses": []}
+{"name": "Becoming.Transfer.balances", "uses": []}
+{"name": "Becoming.Transfer.dependent", "uses": ["Becoming.unitStep_pos"]}
+{"name": "Becoming.Transfer.mixed", "uses": ["Becoming.Flow.WithheldLevels.unique", "Becoming.Transfer.withheld"]}
+{"name": "Becoming.Transfer.taking", "uses": []}
+{"name": "Becoming.Transfer.withheld", "uses": []}
+{"name": "Becoming.Web.Admits.mono", "uses": []}
+{"name": "Becoming.Web.FitsBand.admits", "uses": []}
+{"name": "Becoming.Web.GainsSupport.rises", "uses": ["Becoming.Web.supported_of"]}
+{"name": "Becoming.Web.Includes.not_exceeded", "uses": ["Becoming.Web.exceeds_iff", "Becoming.Web.includes_iff", "Becoming.«逾则不则»"]}
+{"name": "Becoming.Web.Includes.refl", "uses": ["Becoming.Web.includes_iff", "Becoming.«则之自反»"]}
+{"name": "Becoming.Web.Includes.trans", "uses": ["Becoming.Web.includes_iff", "Becoming.«则之传递»"]}
+{"name": "Becoming.Web.LosesSupport.falls", "uses": ["Becoming.Web.supported_of"]}
+{"name": "Becoming.Web.exceeds_iff", "uses": []}
+{"name": "Becoming.Web.includes_iff", "uses": []}
+{"name": "Becoming.Web.not_arises_of_unchanged", "uses": []}
+{"name": "Becoming.Web.supported_iff_admits", "uses": []}
+{"name": "Becoming.rebalance", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.unitStep_pos", "uses": []}

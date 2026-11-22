@@ -1,0 +1,17 @@
+{"name": "Becoming.Branching.Symmetric.juncture", "uses": ["Becoming.Branching.Symmetric.reach"]}
+{"name": "Becoming.Branching.Symmetric.reach", "uses": ["Becoming.Reach.map"]}
+{"name": "Becoming.Branching.Symmetric.returns", "uses": ["Becoming.Branching.Symmetric.reach"]}
+{"name": "Becoming.Branching.law_symmetric", "uses": []}
+{"name": "Becoming.Branching.mirror_apart", "uses": []}
+{"name": "Becoming.Law.Commutes.apart", "uses": ["Becoming.Law.Commutes.iterate"]}
+{"name": "Becoming.Law.Commutes.breaks", "uses": ["Becoming.Law.Commutes.apart"]}
+{"name": "Becoming.Law.Commutes.halfway_returns", "uses": ["Becoming.Law.Commutes.paired_halfway", "Becoming.Law.returns_iff"]}
+{"name": "Becoming.Law.Commutes.iterate", "uses": []}
+{"name": "Becoming.Law.Commutes.keeps_fixed", "uses": []}
+{"name": "Becoming.Law.Commutes.not_drawn_to_one", "uses": ["Becoming.Law.Commutes.apart"]}
+{"name": "Becoming.Law.Commutes.paired_halfway", "uses": ["Becoming.Law.Commutes.iterate", "Becoming.Law.orbit_add"]}
+{"name": "Becoming.Law.Commutes.pairs_goAlike", "uses": ["Becoming.Law.Commutes.pairs_lumped", "Becoming.Learning.goAlike_iff_lumped"]}
+{"name": "Becoming.Law.Commutes.pairs_lumped", "uses": []}
+{"name": "Becoming.Law.Commutes.rest_paired", "uses": ["Becoming.Law.Commutes.iterate"]}
+{"name": "Becoming.Law.Commutes.returns_paired", "uses": ["Becoming.Branching.Symmetric.returns", "Becoming.Branching.law_symmetric"]}
+{"name": "Becoming.Law.Commutes.self_apart", "uses": ["Becoming.Law.Commutes.apart", "Becoming.Law.orbit_shift"]}

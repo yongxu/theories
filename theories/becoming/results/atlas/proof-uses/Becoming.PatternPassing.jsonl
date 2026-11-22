@@ -1,0 +1,33 @@
+{"name": "Becoming.PatternRelay.brief", "uses": ["Becoming.Generations.brief"]}
+{"name": "Becoming.PatternRelay.fire_shape", "uses": ["Becoming.PatternRelay.shifted_fire", "Becoming.Web.carrierClass_finer"]}
+{"name": "Becoming.PatternRelay.half_odd", "uses": ["Becoming.Shifts.odd_two"]}
+{"name": "Becoming.PatternRelay.relay", "uses": ["Becoming.Generations.ends", "Becoming.PatternRelay.brief"]}
+{"name": "Becoming.PatternRelay.shifted_fire", "uses": ["Becoming.PatternRelay.half_odd", "Becoming.Web.passing_fire"]}
+{"name": "Becoming.PatternRelay.shifts", "uses": ["Becoming.PatternRelay.half_odd", "Becoming.Shifts.half_even"]}
+{"name": "Becoming.PatternRelay.stopped_brief", "uses": ["Becoming.PatternRelay.brief"]}
+{"name": "Becoming.PatternRelay.stopped_by_passing", "uses": []}
+{"name": "Becoming.PatternRelay.stopped_quiet", "uses": []}
+{"name": "Becoming.PatternRelay.stopped_relay", "uses": ["Becoming.PatternRelay.stopped_brief", "Becoming.PatternRelay.stopped_by_passing", "Becoming.PatternRelay.stopped_quiet", "Becoming.Web.ByPassing.ends_within", "Becoming.Web.ByPassing.present_of_le"]}
+{"name": "Becoming.Web.ByPassing.begins_passed", "uses": ["Becoming.Web.arises_iff_sheng_carrier", "Becoming.Web.byPassing_iff_hasPred", "Becoming.«生于细而续于粗则异»"]}
+{"name": "Becoming.Web.ByPassing.empty_stays", "uses": ["Becoming.Web.ByPassing.present_of_le"]}
+{"name": "Becoming.Web.ByPassing.ends_within", "uses": ["Becoming.Web.ByPassing.line_back", "Becoming.Web.activityClass_class", "Becoming.Web.carrierClass_class", "Becoming.Web.line_advances", "Becoming.le_dest", "Becoming.«两端分则中有标»", "Becoming.«类».trans", "Becoming.«线内同类»"]}
+{"name": "Becoming.Web.ByPassing.line_back", "uses": ["Becoming.kept_onward", "Becoming.«及之传递»"]}
+{"name": "Becoming.Web.ByPassing.passes_within", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.Web.ByPassing.line_back", "Becoming.Web.activityClass_class", "Becoming.Web.carrierClass_class", "Becoming.Web.line_advances", "Becoming.le_dest", "Becoming.«两端分则中有标»", "Becoming.«类».trans", "Becoming.«线内同类»"]}
+{"name": "Becoming.Web.ByPassing.present_back", "uses": []}
+{"name": "Becoming.Web.ByPassing.present_earlier", "uses": ["Becoming.Web.ByPassing.present_back", "Becoming.kept_onward"]}
+{"name": "Becoming.Web.ByPassing.present_of_le", "uses": ["Becoming.Web.ByPassing.present_earlier", "Becoming.le_dest"]}
+{"name": "Becoming.Web.ByPassing.trace", "uses": ["Becoming.kept_onward"]}
+{"name": "Becoming.Web.alters_of_passes", "uses": []}
+{"name": "Becoming.Web.arises_iff_sheng_carrier", "uses": ["Becoming.Web.begins_of_arises"]}
+{"name": "Becoming.Web.begins_of_arises", "uses": []}
+{"name": "Becoming.Web.begins_within", "uses": ["Becoming.Web.Covered.arises_within"]}
+{"name": "Becoming.Web.byPassing_iff_continues", "uses": []}
+{"name": "Becoming.Web.byPassing_iff_hasPred", "uses": ["Becoming.Web.byPassing_iff_continues", "Becoming.Web.hasPred_iff_continues"]}
+{"name": "Becoming.Web.carrierClass_class", "uses": []}
+{"name": "Becoming.Web.carrierClass_finer", "uses": []}
+{"name": "Becoming.Web.carrying_active", "uses": []}
+{"name": "Becoming.Web.carrying_iff", "uses": []}
+{"name": "Becoming.Web.ceases_iff_wang_carrier", "uses": []}
+{"name": "Becoming.Web.ceases_of_pattern_ends", "uses": ["Becoming.Web.carrierClass_finer", "Becoming.Web.ceases_iff_wang_carrier", "Becoming.«亡于粗则亡于细»"]}
+{"name": "Becoming.Web.passesAt_of_alters", "uses": []}
+{"name": "Becoming.Web.passing_fire", "uses": ["Becoming.Web.alters_of_passes", "Becoming.Web.ceases_iff_wang_carrier"]}

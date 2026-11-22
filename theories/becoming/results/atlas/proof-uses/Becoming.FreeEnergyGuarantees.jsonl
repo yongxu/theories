@@ -1,0 +1,67 @@
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.alike_energy", "uses": ["Becoming.Naturals.add_sub_cancel_left"]}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.alike_never_least", "uses": ["Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.alike_energy", "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.pair_of_alike", "Becoming.FreeEnergyGuarantees.IdenticalCells.run_length", "Becoming.FreeEnergyGuarantees.IdenticalCells.two_alike_stay_alike"]}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.alike_rests", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.exchanged_parts", "uses": ["Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.parts", "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.step_commutes", "Becoming.Law.Commutes.iterate"]}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.minima", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.other_minima", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.pair_of_alike", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.parts", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.step_commutes", "uses": ["Becoming.FreeEnergyGuarantees.IdenticalCells.descent_commutes", "Becoming.FreeEnergyGuarantees.IdenticalCells.othersField_exchangeable"]}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.alike_of_fixed", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.all_alike_stay_alike", "uses": ["Becoming.FreeEnergyGuarantees.IdenticalCells.nth_replicate", "Becoming.FreeEnergyGuarantees.IdenticalCells.two_alike_stay_alike"]}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.apart_not_unique", "uses": ["Becoming.FreeEnergyGuarantees.IdenticalCells.unique_minimum_alike"]}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.descent_commutes", "uses": ["Becoming.FreeEnergyGuarantees.IdenticalCells.map_exchangeAt", "Becoming.map_eq_of"]}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.exchanged_run", "uses": ["Becoming.Law.Commutes.iterate"]}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.fixed_of_alike", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy_symmetric", "uses": ["Becoming.FreeEnergyGuarantees.IdenticalCells.total_exchangeAt", "Becoming.total_congr"]}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.keeps_exchange_fixed", "uses": ["Becoming.Law.Commutes.keeps_fixed"]}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.length_exchangeAt", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.map_exchangeAt", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.minimum_exchanged", "uses": ["Becoming.FreeEnergyGuarantees.IdenticalCells.length_exchangeAt"]}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.nth_map", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.nth_replicate", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.othersField_exchangeable", "uses": ["Becoming.FreeEnergyGuarantees.IdenticalCells.total_exchangeAt"]}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.rests_exchanged", "uses": ["Becoming.Law.Commutes.iterate"]}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.run_length", "uses": ["Becoming.length_map"]}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.total_exchangeAt", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.two_alike_stay_alike", "uses": ["Becoming.FreeEnergyGuarantees.IdenticalCells.nth_map"]}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.unique_across_sizes_empty", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.IdenticalCells.unique_minimum_alike", "uses": ["Becoming.FreeEnergyGuarantees.IdenticalCells.length_exchangeAt"]}
+{"name": "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.chosen_mem", "uses": ["Becoming.FreeEnergyGuarantees.firstMin_mem"]}
+{"name": "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.chosen_minimizes", "uses": ["Becoming.FreeEnergyGuarantees.firstMin_le"]}
+{"name": "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.restraint_chosen", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.acting", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.balances", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.dependent", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.distinct", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.ends_either_way", "uses": ["Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.acting", "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.balances", "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.dependent", "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.distinct", "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.gated", "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.outside", "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.rest_present", "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained_acting", "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained_balances", "Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager_choice", "Becoming.FreeEnergyGuarantees.RiskAndNeeds.need_ends"]}
+{"name": "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.gated", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.outside", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.rest_present", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained_acting", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained_balances", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.RiskAndNeeds.expectation_not_course", "uses": ["Becoming.Flow.outrun_below", "Becoming.gap_eq_zero_iff"]}
+{"name": "Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager_choice", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.RiskAndNeeds.need_ends", "uses": ["Becoming.Flow.outrun_below", "Becoming.Flow.outrun_ends"]}
+{"name": "Becoming.FreeEnergyGuarantees.RiskAndNeeds.outside_takes_nothing", "uses": ["Becoming.Flow.rest_le_taken", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.FreeEnergyGuarantees.RiskAndNeeds.restraint_unread", "uses": ["Becoming.Flow.outrun_reading_alike"]}
+{"name": "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.acting", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.balances", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.continues", "uses": ["Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.acting", "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.balances", "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.dependent", "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.gated"]}
+{"name": "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.dependent", "uses": ["Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.level_two"]}
+{"name": "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.gated", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.level_two", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.regulator_choice", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeActing", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeBalances", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeDependent", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeGated", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.three_end", "uses": ["Becoming.Flow.ends_below", "Becoming.Flow.stays_below", "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeActing", "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeBalances", "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeDependent", "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeGated"]}
+{"name": "Becoming.FreeEnergyGuarantees.SharedModels.alike_not_one", "uses": ["Becoming.Alone.all_continue", "Becoming.Exceeding.all_end", "Becoming.Exceeding.own_not_joint", "Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager_choice", "Becoming.FreeEnergyGuarantees.SharedModels.exceeding_choices"]}
+{"name": "Becoming.FreeEnergyGuarantees.SharedModels.exceeding_choices", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.SharedModels.heldPair_choices", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.SharedModels.held_not_one", "uses": ["Becoming.FreeEnergyGuarantees.SharedModels.heldPair_choices", "Becoming.Optimum.HeldPair.held", "Becoming.Optimum.HeldPair.held_end"]}
+{"name": "Becoming.FreeEnergyGuarantees.SharedModels.store_kept", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.firstMin_le", "uses": ["Becoming.FreeEnergyGuarantees.le_of_blt_false"]}
+{"name": "Becoming.FreeEnergyGuarantees.firstMin_mem", "uses": []}
+{"name": "Becoming.FreeEnergyGuarantees.le_of_blt_false", "uses": []}

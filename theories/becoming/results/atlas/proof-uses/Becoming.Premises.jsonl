@@ -1,0 +1,61 @@
+{"name": "Becoming.World.Dependent.carried", "uses": ["Becoming.Web.carries_zero"]}
+{"name": "Becoming.World.Finite.acting", "uses": ["Becoming.World.Finite.enclosed", "Becoming.World.acting_of_enclosed"]}
+{"name": "Becoming.World.Finite.counted", "uses": ["Becoming.World.keep_lists"]}
+{"name": "Becoming.World.Finite.enclosed", "uses": []}
+{"name": "Becoming.World.Finite.not_binds", "uses": []}
+{"name": "Becoming.World.FiniteHatch.closed", "uses": ["Becoming.World.FiniteHatch.taking_part"]}
+{"name": "Becoming.World.FiniteHatch.kin_distinct", "uses": []}
+{"name": "Becoming.World.FiniteHatch.taking_part", "uses": []}
+{"name": "Becoming.World.Hatch.closed", "uses": ["Becoming.World.Hatch.taking_part"]}
+{"name": "Becoming.World.Hatch.kin_distinct", "uses": []}
+{"name": "Becoming.World.Hatch.outside", "uses": ["Becoming.beyond_not_mem", "Becoming.mem_map_of"]}
+{"name": "Becoming.World.Hatch.taking_part", "uses": []}
+{"name": "Becoming.World.MeetsAllBut.of", "uses": []}
+{"name": "Becoming.World.Novel.fuel_mem_or", "uses": []}
+{"name": "Becoming.World.Premised.meets", "uses": []}
+{"name": "Becoming.World.Premised.of", "uses": []}
+{"name": "Becoming.World.Scatter.outside", "uses": ["Becoming.beyond_not_mem", "Becoming.mem_map_of"]}
+{"name": "Becoming.World.acting_across", "uses": ["Becoming.World.acting_across_on"]}
+{"name": "Becoming.World.acting_across_on", "uses": ["Becoming.Flow.DissipatesOn.gives_less_closed", "Becoming.total_pos"]}
+{"name": "Becoming.World.acting_of_enclosed", "uses": ["Becoming.World.acting_across"]}
+{"name": "Becoming.World.counted_of_ever", "uses": ["Becoming.listed_of_ever"]}
+{"name": "Becoming.World.draining_but", "uses": ["Becoming.ListTests.mem_bools", "Becoming.Shuttle.dependent", "Becoming.Shuttle.distinct", "Becoming.World.Finite.counted", "Becoming.World.MeetsAllBut.of", "Becoming.World.SelfDrawing.taking", "Becoming.World.leaking_world"]}
+{"name": "Becoming.World.finiteHatch_balanced", "uses": []}
+{"name": "Becoming.World.finiteHatch_binds_but_census", "uses": ["Becoming.World.Finite.not_binds", "Becoming.World.FiniteHatch.closed", "Becoming.World.FiniteHatch.kin_distinct", "Becoming.World.finiteHatch_finite", "Becoming.World.finiteHatch_premised", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.World.finiteHatch_dissipative", "uses": ["Becoming.World.FiniteHatch.taking_part", "Becoming.le_total_of_mem", "Becoming.sign_le_one", "Becoming.total_le_at"]}
+{"name": "Becoming.World.finiteHatch_finite", "uses": ["Becoming.World.FiniteHatch.kin_distinct"]}
+{"name": "Becoming.World.finiteHatch_premised", "uses": ["Becoming.World.Finite.counted", "Becoming.World.FiniteHatch.taking_part", "Becoming.World.Premised.of", "Becoming.World.finiteHatch_balanced", "Becoming.World.finiteHatch_dissipative", "Becoming.World.finiteHatch_finite"]}
+{"name": "Becoming.World.follows", "uses": ["Becoming.World.Dependent.carried", "Becoming.World.Embodied.arising", "Becoming.World.Finite.counted", "Becoming.World.Finite.enclosed", "Becoming.World.acting_of_enclosed"]}
+{"name": "Becoming.World.hatch_balanced", "uses": []}
+{"name": "Becoming.World.hatch_binds", "uses": ["Becoming.World.Hatch.closed", "Becoming.World.Hatch.kin_distinct", "Becoming.World.Hatch.outside", "Becoming.World.Hatch.taking_part", "Becoming.World.Premised.of", "Becoming.World.hatch_balanced", "Becoming.World.hatch_counted", "Becoming.World.hatch_dissipative", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.World.hatch_counted", "uses": []}
+{"name": "Becoming.World.hatch_dissipative", "uses": ["Becoming.World.Hatch.taking_part", "Becoming.le_total_of_mem", "Becoming.sign_le_one", "Becoming.total_le_at"]}
+{"name": "Becoming.World.hatch_ever", "uses": []}
+{"name": "Becoming.World.hatch_idle", "uses": []}
+{"name": "Becoming.World.independent", "uses": ["Becoming.World.latent_but", "Becoming.World.lossless_but", "Becoming.World.morsel_but", "Becoming.World.multitude_but", "Becoming.World.novel_but", "Becoming.World.scatter_but", "Becoming.World.strained_but", "Becoming.World.unbalanced_but"]}
+{"name": "Becoming.World.keep_lists", "uses": ["Becoming.keep_distinct", "Becoming.mem_keep"]}
+{"name": "Becoming.World.latent_but", "uses": ["Becoming.World.Finite.counted", "Becoming.World.MeetsAllBut.of", "Becoming.World.latent_finite", "Becoming.World.still_vacuous"]}
+{"name": "Becoming.World.latent_finite", "uses": []}
+{"name": "Becoming.World.lossless_but", "uses": ["Becoming.World.Finite.counted", "Becoming.World.MeetsAllBut.of", "Becoming.World.lossless_finite", "Becoming.World.steady_transmitting"]}
+{"name": "Becoming.World.lossless_finite", "uses": []}
+{"name": "Becoming.World.morsel_but", "uses": ["Becoming.World.Finite.counted", "Becoming.World.MeetsAllBut.of", "Becoming.World.morsel_finite", "Becoming.gives_nothing", "Becoming.total_zero"]}
+{"name": "Becoming.World.morsel_finite", "uses": []}
+{"name": "Becoming.World.multitude_but", "uses": ["Becoming.World.MeetsAllBut.of", "Becoming.World.still_vacuous", "Becoming.beyond_not_mem"]}
+{"name": "Becoming.World.mutualism_premised", "uses": ["Becoming.Mutualism.dependent", "Becoming.World.Finite.counted", "Becoming.World.Premised.of", "Becoming.World.mutualism_finite", "Becoming.World.mutualism_world", "Becoming.World.still_vacuous"]}
+{"name": "Becoming.World.none_follows", "uses": ["Becoming.World.latent_but", "Becoming.World.lossless_but", "Becoming.World.morsel_but", "Becoming.World.multitude_but", "Becoming.World.novel_but", "Becoming.World.scatter_but", "Becoming.World.strained_but", "Becoming.World.unbalanced_but"]}
+{"name": "Becoming.World.novel_but", "uses": ["Becoming.World.Finite.counted", "Becoming.World.MeetsAllBut.of", "Becoming.World.novel_dissipative", "Becoming.World.novel_finite"]}
+{"name": "Becoming.World.novel_dissipative", "uses": ["Becoming.World.Novel.fuel_mem_or", "Becoming.gives_nothing", "Becoming.le_total_of_mem", "Becoming.sign_le_one", "Becoming.total_eq_zero", "Becoming.total_le_at"]}
+{"name": "Becoming.World.novel_finite", "uses": []}
+{"name": "Becoming.World.premised_rests_unrefuted", "uses": ["Becoming.World.Embodied.arising", "Becoming.World.rests_unrefuted"]}
+{"name": "Becoming.World.scatter_but", "uses": ["Becoming.World.MeetsAllBut.of", "Becoming.World.Scatter.outside", "Becoming.World.steady_transmitting"]}
+{"name": "Becoming.World.steady_transmitting", "uses": []}
+{"name": "Becoming.World.still_vacuous", "uses": ["Becoming.Flow.still_dissipative"]}
+{"name": "Becoming.World.strained_but", "uses": ["Becoming.World.Finite.counted", "Becoming.World.MeetsAllBut.of", "Becoming.World.still_vacuous", "Becoming.World.strained_finite"]}
+{"name": "Becoming.World.strained_finite", "uses": []}
+{"name": "Becoming.World.unbalanced_but", "uses": ["Becoming.Shuttle.dependent", "Becoming.World.Finite.counted", "Becoming.World.MeetsAllBut.of", "Becoming.World.still_vacuous", "Becoming.World.unbalanced_world"]}
+{"name": "Becoming.beyond_not_mem", "uses": ["Becoming.lt_beyond"]}
+{"name": "Becoming.gives_nothing", "uses": ["Becoming.sign_le"]}
+{"name": "Becoming.keep_distinct", "uses": ["Becoming.mem_keep"]}
+{"name": "Becoming.listed_of_ever", "uses": ["Becoming.keep_distinct", "Becoming.mem_keep"]}
+{"name": "Becoming.lt_beyond", "uses": []}
+{"name": "Becoming.mem_keep", "uses": []}

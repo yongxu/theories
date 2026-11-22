@@ -1,0 +1,33 @@
+{"name": "Becoming.ChoiceOccasions.selfConcerned_above_iff_reach", "uses": ["Becoming.ChoiceOccasions.above_in_every_containing_iff_reach", "Becoming.ChoiceOccasions.contains_iff_increasingInOwnOn"]}
+{"name": "Becoming.Flow.returning_beyond_coupling", "uses": ["Becoming.Flow.reachReturns_ownClosure_rival"]}
+{"name": "Becoming.Flow.returning_downstream_iff_mutuallyDependent", "uses": ["Becoming.Flow.returning_unrestricted_iff_mutuallyDependent", "Becoming.ownClosure_unrestricted_iff_noOutside", "Becoming.«各后类续无外即一之续无外»", "Becoming.«返则后类本类常闭»"]}
+{"name": "Becoming.FromTheDynamics.Alternating.acting", "uses": []}
+{"name": "Becoming.FromTheDynamics.Alternating.balances", "uses": ["Becoming.FromTheDynamics.Alternating.balances_at"]}
+{"name": "Becoming.FromTheDynamics.Alternating.balances_at", "uses": []}
+{"name": "Becoming.FromTheDynamics.Alternating.coupled", "uses": ["Becoming.FromTheDynamics.Alternating.family_eq", "Becoming.FromTheDynamics.Alternating.mem_both"]}
+{"name": "Becoming.FromTheDynamics.Alternating.crossed_joined", "uses": ["Becoming.Flow.persisting_consistent_with_selfConcern", "Becoming.FromTheDynamics.Alternating.acting", "Becoming.FromTheDynamics.Alternating.balances", "Becoming.FromTheDynamics.Alternating.coupled", "Becoming.FromTheDynamics.Alternating.crossed_noCycle", "Becoming.FromTheDynamics.Alternating.crossed_stake", "Becoming.FromTheDynamics.Alternating.dependent", "Becoming.FromTheDynamics.Alternating.descended", "Becoming.FromTheDynamics.Alternating.gated", "Becoming.FromTheDynamics.Alternating.persists", "Becoming.PersistingChoices.Crossed.not_selfConcerned"]}
+{"name": "Becoming.FromTheDynamics.Alternating.crossed_noCycle", "uses": ["Becoming.ChoiceOccasions.accorded_iff_noCycle", "Becoming.PersistingChoices.Crossed.b₁_ne_a₁", "Becoming.PersistingChoices.Crossed.b₂_ne_a₂"]}
+{"name": "Becoming.FromTheDynamics.Alternating.crossed_stake", "uses": ["Becoming.Weighting.WidensOn.ne"]}
+{"name": "Becoming.FromTheDynamics.Alternating.dependent", "uses": ["Becoming.FromTheDynamics.Alternating.unit_self"]}
+{"name": "Becoming.FromTheDynamics.Alternating.dependsOn_self", "uses": []}
+{"name": "Becoming.FromTheDynamics.Alternating.descended", "uses": ["Becoming.FromTheDynamics.Alternating.descends_at", "Becoming.FromTheDynamics.Alternating.family_eq"]}
+{"name": "Becoming.FromTheDynamics.Alternating.descends_at", "uses": []}
+{"name": "Becoming.FromTheDynamics.Alternating.drain_ne_keep", "uses": []}
+{"name": "Becoming.FromTheDynamics.Alternating.exchanges", "uses": []}
+{"name": "Becoming.FromTheDynamics.Alternating.family_eq", "uses": []}
+{"name": "Becoming.FromTheDynamics.Alternating.gated", "uses": ["Becoming.FromTheDynamics.Alternating.mem_both"]}
+{"name": "Becoming.FromTheDynamics.Alternating.joined", "uses": ["Becoming.Flow.persisting_consistent_with_selfConcern", "Becoming.Flow.persists_never_overdraws", "Becoming.Flow.persists_not_listsAdmitted", "Becoming.Flow.returning_downstream_iff_mutuallyDependent", "Becoming.FromTheDynamics.Alternating.acting", "Becoming.FromTheDynamics.Alternating.balances", "Becoming.FromTheDynamics.Alternating.coupled", "Becoming.FromTheDynamics.Alternating.dependent", "Becoming.FromTheDynamics.Alternating.descended", "Becoming.FromTheDynamics.Alternating.drain_ne_keep", "Becoming.FromTheDynamics.Alternating.gated", "Becoming.FromTheDynamics.Alternating.mem_both", "Becoming.FromTheDynamics.Alternating.member_stands", "Becoming.FromTheDynamics.Alternating.mutuallyDependent", "Becoming.FromTheDynamics.Alternating.noCycle", "Becoming.FromTheDynamics.Alternating.persists", "Becoming.FromTheDynamics.Alternating.realized", "Becoming.FromTheDynamics.Alternating.recurs", "Becoming.FromTheDynamics.Alternating.returns", "Becoming.FromTheDynamics.Alternating.stake"]}
+{"name": "Becoming.FromTheDynamics.Alternating.kept", "uses": []}
+{"name": "Becoming.FromTheDynamics.Alternating.mem_both", "uses": []}
+{"name": "Becoming.FromTheDynamics.Alternating.member_stands", "uses": ["Becoming.FromTheDynamics.Alternating.family_eq"]}
+{"name": "Becoming.FromTheDynamics.Alternating.mutuallyDependent", "uses": ["Becoming.FromTheDynamics.Alternating.dependsOn_self", "Becoming.FromTheDynamics.Alternating.exchanges", "Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.FromTheDynamics.Alternating.noCycle", "uses": ["Becoming.ChoiceOccasions.accorded_iff_noCycle", "Becoming.FromTheDynamics.Alternating.drain_ne_keep"]}
+{"name": "Becoming.FromTheDynamics.Alternating.persists", "uses": ["Becoming.FromTheDynamics.Alternating.family_eq"]}
+{"name": "Becoming.FromTheDynamics.Alternating.realized", "uses": ["Becoming.FromTheDynamics.Alternating.kept"]}
+{"name": "Becoming.FromTheDynamics.Alternating.recurs", "uses": []}
+{"name": "Becoming.FromTheDynamics.Alternating.returns", "uses": ["Becoming.Flow.MutuallyDependent.reachReturns", "Becoming.FromTheDynamics.Alternating.mutuallyDependent"]}
+{"name": "Becoming.FromTheDynamics.Alternating.stake", "uses": ["Becoming.Weighting.WidensOn.ne"]}
+{"name": "Becoming.FromTheDynamics.Alternating.unit_other", "uses": []}
+{"name": "Becoming.FromTheDynamics.Alternating.unit_self", "uses": []}
+{"name": "Becoming.Web.extension_met_keeps_above_ending", "uses": ["Becoming.Web.extension_ownWidens"]}
+{"name": "Becoming.Web.extension_reached_of_met", "uses": ["Becoming.ChoiceOccasions.shown_withPairs_iff", "Becoming.Web.extension_ownWidens", "Becoming.Weighting.WidensOn.ne"]}

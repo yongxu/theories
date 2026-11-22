@@ -1,0 +1,49 @@
+{"name": "Becoming.counting_reach_lt", "uses": []}
+{"name": "Becoming.«不依之例»", "uses": []}
+{"name": "Becoming.«不有常而不穷之例»", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.«不有常而异且通之例»", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.«不有常而通之例»", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.«不穷与亡不同核之例»", "uses": ["Becoming.«亡于核下不变»"]}
+{"name": "Becoming.«不返而有限则非不穷»", "uses": ["Becoming.«相续之续»", "Becoming.«线不返则短于所列»", "Becoming.«遍后则有线»"]}
+{"name": "Becoming.«两向有常而无前不通之例»", "uses": []}
+{"name": "Becoming.«亡于静而住于一之例»", "uses": ["Becoming.«四相俱时»"]}
+{"name": "Becoming.«亡者异当且仅当有后»", "uses": []}
+{"name": "Becoming.«亡而两向有常则异当且仅当通»", "uses": ["Becoming.«亡而通则异»", "Becoming.«异而两向有常则通»"]}
+{"name": "Becoming.«亡而息之例»", "uses": ["Becoming.«自不复生则息»"]}
+{"name": "Becoming.«亡而通则异»", "uses": ["Becoming.«亡者异当且仅当有后»"]}
+{"name": "Becoming.«依之传»", "uses": []}
+{"name": "Becoming.«依于无始而有始之例»", "uses": []}
+{"name": "Becoming.«像不保之例»", "uses": []}
+{"name": "Becoming.«异而不通之例»", "uses": []}
+{"name": "Becoming.«异而两向有常则通»", "uses": ["Becoming.«有后而两向有常则通»"]}
+{"name": "Becoming.«异而未亡之例»", "uses": []}
+{"name": "Becoming.«所依无则依者无»", "uses": []}
+{"name": "Becoming.«无始而有终之例»", "uses": []}
+{"name": "Becoming.«无异当且仅当不分续»", "uses": []}
+{"name": "Becoming.«无环则无俱有»", "uses": ["Becoming.«及之传递»"]}
+{"name": "Becoming.«无环而不穷之例»", "uses": ["Becoming.counting_reach_lt"]}
+{"name": "Becoming.«无相而非亦无相之例»", "uses": ["Becoming.«遍而无相»"]}
+{"name": "Becoming.«无缘不住而他有后之例»", "uses": []}
+{"name": "Becoming.«无能无所之例»", "uses": []}
+{"name": "Becoming.«昼夜全生成»", "uses": ["Becoming.«皆有后而步皆分则全生成»"]}
+{"name": "Becoming.«有亡而不全生成之例»", "uses": ["Becoming.Map.Short.reaches_end", "Becoming.Map.short_end", "Becoming.«全生成有终不并»"]}
+{"name": "Becoming.«有前不有常而亡之例»", "uses": ["Becoming.Map.short_end", "Becoming.«有亡之续则不有常»"]}
+{"name": "Becoming.«有后而两向有常则通»", "uses": ["Becoming.«两向有常有前则通»", "Becoming.«有常则续不尽»", "Becoming.«类».symm"]}
+{"name": "Becoming.«有限遍后而不返之例»", "uses": ["Becoming.«定前之逐点»"]}
+{"name": "Becoming.«核同则同不穷»", "uses": ["Becoming.«有常之逐点»", "Becoming.«类».trans", "Becoming.«类内有常则线相随»"]}
+{"name": "Becoming.«步不分而不全生成之例»", "uses": ["Becoming.Map.Still.keeping", "Becoming.«全生成全守不并»"]}
+{"name": "Becoming.«步皆分则皆亡»", "uses": []}
+{"name": "Becoming.«生于核下可变之例»", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.«生亡并之例»", "uses": []}
+{"name": "Becoming.«皆不生当且仅当皆非无缘»", "uses": []}
+{"name": "Becoming.«皆有后而步皆分则全生成»", "uses": []}
+{"name": "Becoming.«相须之例»", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.«类内有常则线相随»", "uses": ["Becoming.«有常之逐点»", "Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«线不返则短于所列»", "uses": ["Becoming.gap_of_lt", "Becoming.revisits_within", "Becoming.«线则及»"]}
+{"name": "Becoming.«自缘而不生之例»", "uses": ["Becoming.«生住不并»", "Becoming.«自缘则常»"]}
+{"name": "Becoming.«返而不穷之例»", "uses": ["Becoming.«昼夜往来不穷»"]}
+{"name": "Becoming.«逆核不含于核之例»", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.«通而不异之例»", "uses": []}
+{"name": "Becoming.«遍后定前而无环之例»", "uses": ["Becoming.counting_reach_lt", "Becoming.«定前之逐点»"]}
+{"name": "Becoming.«静分续而有异之例»", "uses": []}
+{"name": "Becoming.«非有常之类不含于核之例»", "uses": ["Becoming.«有常之逐点»"]}

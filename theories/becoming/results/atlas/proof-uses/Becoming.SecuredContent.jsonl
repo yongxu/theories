@@ -1,0 +1,30 @@
+{"name": "Becoming.SecuredContent.acquired_evidence_secures_content_and_leaves_both_opennesses", "uses": ["Becoming.SecuredContent.barren_not_live", "Becoming.SecuredContent.live_one", "Becoming.SecuredContent.live_two"]}
+{"name": "Becoming.SecuredContent.barren_not_live", "uses": []}
+{"name": "Becoming.SecuredContent.certified_integral_reason", "uses": ["Becoming.SecuredContent.contingent_newContent", "Becoming.SecuredContent.positive_integral_has_positive_occurrence"]}
+{"name": "Becoming.SecuredContent.certified_reason_on_scope", "uses": ["Becoming.SecuredContent.certified_integral_reason"]}
+{"name": "Becoming.SecuredContent.contingent_newContent", "uses": []}
+{"name": "Becoming.SecuredContent.contingent_newContent_of_unrestricted", "uses": ["Becoming.SecuredContent.contingent_newContent", "Becoming.livingSignificance_of_unrestricted"]}
+{"name": "Becoming.SecuredContent.endorsement_independence_is_supplied_by_articulation", "uses": ["Becoming.SecuredContent.livingSignificance_holds", "Becoming.SecuredContent.respond_formation"]}
+{"name": "Becoming.SecuredContent.endorsement_without_access_gets_no_route_reason", "uses": []}
+{"name": "Becoming.SecuredContent.every_situated_position_has_reason", "uses": ["Becoming.SecuredContent.contingent_newContent"]}
+{"name": "Becoming.SecuredContent.every_situated_position_has_reason_of_unrestricted", "uses": ["Becoming.SecuredContent.every_situated_position_has_reason", "Becoming.livingSignificance_of_unrestricted"]}
+{"name": "Becoming.SecuredContent.fullDomain_nodup", "uses": []}
+{"name": "Becoming.SecuredContent.live_one", "uses": []}
+{"name": "Becoming.SecuredContent.live_productive", "uses": ["Becoming.SecuredContent.barren_not_live"]}
+{"name": "Becoming.SecuredContent.live_two", "uses": []}
+{"name": "Becoming.SecuredContent.livingSignificance_holds", "uses": []}
+{"name": "Becoming.SecuredContent.nonendorsing_position_with_access_has_reason", "uses": ["Becoming.SecuredContent.every_situated_position_has_reason", "Becoming.SecuredContent.livingSignificance_holds", "Becoming.SecuredContent.respond_formation", "Becoming.SecuredContent.route_reason_is_least"]}
+{"name": "Becoming.SecuredContent.not_pos_negSucc", "uses": []}
+{"name": "Becoming.SecuredContent.one_sub_succ", "uses": []}
+{"name": "Becoming.SecuredContent.pos_or_pos", "uses": ["Becoming.SecuredContent.not_pos_negSucc", "Becoming.SecuredContent.pos_succ"]}
+{"name": "Becoming.SecuredContent.pos_succ", "uses": ["Becoming.SecuredContent.one_sub_succ"]}
+{"name": "Becoming.SecuredContent.positiveDomain_nodup", "uses": []}
+{"name": "Becoming.SecuredContent.positive_integral_and_adverse_full_change", "uses": ["Becoming.SecuredContent.fullDomain_nodup", "Becoming.SecuredContent.positiveDomain_nodup"]}
+{"name": "Becoming.SecuredContent.positive_integral_has_positive_occurrence", "uses": ["Becoming.SecuredContent.pos_or_pos"]}
+{"name": "Becoming.SecuredContent.positive_occurrence_correspondence", "uses": []}
+{"name": "Becoming.SecuredContent.respond_formation", "uses": ["Becoming.SecuredContent.live_productive"]}
+{"name": "Becoming.SecuredContent.response_preserves_joint_openness", "uses": ["Becoming.preserves_of_transport"]}
+{"name": "Becoming.SecuredContent.route_reason_depends_only_on_access", "uses": []}
+{"name": "Becoming.SecuredContent.route_reason_is_least", "uses": []}
+{"name": "Becoming.SecuredContent.same_response_without_fixed_form", "uses": []}
+{"name": "Becoming.SecuredContent.wider_scope_can_require_certificate_retraction", "uses": []}

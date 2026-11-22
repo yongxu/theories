@@ -1,0 +1,34 @@
+{"name": "Becoming.Viability.Answering.answered", "uses": ["Becoming.Viability.Answering.related"]}
+{"name": "Becoming.Viability.Answering.kept", "uses": []}
+{"name": "Becoming.Viability.Answering.related", "uses": ["Becoming.Viability.Plan.Keeps.rest", "Becoming.Viability.Plan.Keeps.usable_first"]}
+{"name": "Becoming.Viability.Certificate.keptFor", "uses": ["Becoming.Viability.Certificate.closed", "Becoming.Viability.Certificate.within", "Becoming.Viability.keptFor_of_closed"]}
+{"name": "Becoming.Viability.KeptFor.finer", "uses": ["Becoming.Viability.KeptFor.mono"]}
+{"name": "Becoming.Viability.KeptFor.mono", "uses": ["Becoming.Viability.Seen.mono"]}
+{"name": "Becoming.Viability.KeptFor.plan_of_choice", "uses": []}
+{"name": "Becoming.Viability.KeptFor.shorter", "uses": []}
+{"name": "Becoming.Viability.Kernel.keptFor", "uses": ["Becoming.Viability.Certificate.keptFor", "Becoming.Viability.kernel_certificate"]}
+{"name": "Becoming.Viability.Matching.keeping_matters", "uses": ["Becoming.Viability.Matching.keepsBit_kept", "Becoming.Viability.Matching.keepsNothing_not_kept"]}
+{"name": "Becoming.Viability.Matching.keepsBit_kept", "uses": ["Becoming.Viability.Matching.seen_start", "Becoming.Viability.Matching.step_matched"]}
+{"name": "Becoming.Viability.Matching.keepsNothing_not_kept", "uses": ["Becoming.Viability.Matching.step_unmatched"]}
+{"name": "Becoming.Viability.Matching.seen_start", "uses": []}
+{"name": "Becoming.Viability.Matching.step_matched", "uses": []}
+{"name": "Becoming.Viability.Matching.step_unmatched", "uses": []}
+{"name": "Becoming.Viability.Plan.Keeps.keptFor", "uses": []}
+{"name": "Becoming.Viability.Plan.Keeps.rest", "uses": []}
+{"name": "Becoming.Viability.Plan.Keeps.usable_first", "uses": []}
+{"name": "Becoming.Viability.Plan.Keeps.within", "uses": []}
+{"name": "Becoming.Viability.Plan.brecOn.eq", "uses": []}
+{"name": "Becoming.Viability.Plan.compatible_of_zip_keeps", "uses": []}
+{"name": "Becoming.Viability.Plan.zip_keeps", "uses": []}
+{"name": "Becoming.Viability.Seen.mono", "uses": []}
+{"name": "Becoming.Viability.choiceOver_fin", "uses": ["Generative.InquirySufficiency.finite_choice"]}
+{"name": "Becoming.Viability.coded_kept_iff_closed", "uses": ["Becoming.Iteration.iter_postfixed", "Becoming.Viability.Seen.mono", "Becoming.Viability.iter_iff_kept", "Becoming.Viability.keptFor_of_closed", "Becoming.Viability.reading_mono"]}
+{"name": "Becoming.Viability.get_of_eq_some", "uses": []}
+{"name": "Becoming.Viability.iter_iff_kept", "uses": ["Becoming.Iteration.iter_iff_stages", "Becoming.Viability.KeptFor.mono", "Becoming.Viability.reading_mono"]}
+{"name": "Becoming.Viability.keptFor_empty", "uses": ["Becoming.Viability.KeptFor.mono"]}
+{"name": "Becoming.Viability.keptFor_iff_plan", "uses": ["Becoming.Viability.choiceOver_fin", "Becoming.Viability.keptFor_iff_plan_of_choice"]}
+{"name": "Becoming.Viability.keptFor_iff_plan_of_choice", "uses": ["Becoming.Viability.KeptFor.plan_of_choice", "Becoming.Viability.Plan.Keeps.keptFor"]}
+{"name": "Becoming.Viability.keptFor_of_closed", "uses": []}
+{"name": "Becoming.Viability.plans_iff_choice", "uses": ["Becoming.Viability.Answering.answered", "Becoming.Viability.Answering.kept", "Becoming.Viability.Answering.related", "Becoming.Viability.KeptFor.plan_of_choice", "Becoming.Viability.get_of_eq_some"]}
+{"name": "Becoming.Viability.reading_mono", "uses": []}
+{"name": "Becoming.Viability.seen_eq_after", "uses": []}

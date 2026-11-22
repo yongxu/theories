@@ -1,0 +1,6 @@
+{"name": "Becoming.WeightedTraces.kept_traces", "uses": ["Becoming.Memory.of_kept", "Becoming.WeightedTraces.lands_eq", "Becoming.bool_and_true", "Becoming.bool_of_and_true", "Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.WeightedTraces.lands_eq", "uses": []}
+{"name": "Becoming.WeightedTraces.lumped_iff", "uses": ["Becoming.Weights.lumped_iff", "Becoming.bool_eq_of_iff", "Becoming.possibility_transfer_iff"]}
+{"name": "Becoming.WeightedTraces.memory_not_steps", "uses": ["Becoming.Memory.not_of_steps", "Becoming.bool_and_true", "Becoming.bool_eq_of_iff", "Becoming.bool_of_and_true", "Generative.trace_cons_iff"]}
+{"name": "Becoming.counting_transfer_iff", "uses": ["Becoming.Weights.Hom.transfer", "Becoming.possibility_transfer_iff"]}
+{"name": "Becoming.possibility_transfer_iff", "uses": ["Becoming.bool_and_true", "Becoming.bool_of_and_true", "Becoming.mem_openSteps", "Becoming.possibility_sum_of_mem", "Becoming.possibility_sum_true", "Generative.trace_cons_iff", "Generative.trace_nil_iff"]}

@@ -1,0 +1,21 @@
+{"name": "Becoming.Readout.agree_iff_parts", "uses": []}
+{"name": "Becoming.Readout.commonWitness_or_covered", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Readout.decoder_pair_iff", "uses": []}
+{"name": "Becoming.Readout.decodes_iff_of_section", "uses": ["Becoming.Readout.lumped_of_decodes"]}
+{"name": "Becoming.Readout.feasible_of_image", "uses": []}
+{"name": "Becoming.Readout.firstJudge_judges", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Readout.foldl_semiconj", "uses": []}
+{"name": "Becoming.Readout.futures_through_iff", "uses": ["Becoming.Readout.feasible_of_image", "Becoming.Readout.image_feasible"]}
+{"name": "Becoming.Readout.image_feasible", "uses": ["Generative.trace_map"]}
+{"name": "Becoming.Readout.judges_iff_lumpedOn", "uses": ["Becoming.Readout.firstJudge_judges", "Becoming.Readout.lumpedOn_of_judges"]}
+{"name": "Becoming.Readout.law_through_iff", "uses": ["Becoming.carries_law_iff"]}
+{"name": "Becoming.Readout.lumpedOn_of_judges", "uses": []}
+{"name": "Becoming.Readout.lumped_of_decodes", "uses": []}
+{"name": "Becoming.Readout.no_common_report_envelopes_iff", "uses": ["Becoming.Readout.no_common_report_iff"]}
+{"name": "Becoming.Readout.no_common_report_iff", "uses": ["Becoming.Readout.commonWitness_or_covered", "Becoming.Readout.pick_of", "Becoming.Readout.pick_of_not"]}
+{"name": "Becoming.Readout.no_judge_of_merged", "uses": ["Becoming.Readout.lumpedOn_of_judges"]}
+{"name": "Becoming.Readout.no_restore", "uses": ["Becoming.Readout.decoder_pair_iff"]}
+{"name": "Becoming.Readout.pick_of", "uses": []}
+{"name": "Becoming.Readout.pick_of_not", "uses": []}
+{"name": "Becoming.Readout.reading_single_iff", "uses": []}
+{"name": "Becoming.Readout.supplied_agree_iff_parts", "uses": ["Becoming.Readout.agree_iff_parts"]}

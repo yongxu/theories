@@ -1,0 +1,33 @@
+{"name": "Becoming.RevisionPlans.Example.hold_four_below", "uses": ["Becoming.RevisionPlans.reading_not_below_iff", "Becoming.RevisionPlans.splits_goOn"]}
+{"name": "Becoming.RevisionPlans.Example.hold_three_not_below", "uses": ["Becoming.RevisionPlans.reading_not_below_iff", "Becoming.RevisionPlans.splits_goOn"]}
+{"name": "Becoming.RevisionPlans.Example.no_excess_reading_gain_eq_goOn", "uses": ["Becoming.RevisionPlans.gainOf_reading_eq_iff", "Becoming.RevisionPlans.splits_goOn"]}
+{"name": "Becoming.RevisionPlans.above_iff", "uses": ["Becoming.RevisionPlans.balance", "Becoming.RevisionPlans.le_iff_of_balance"]}
+{"name": "Becoming.RevisionPlans.above_iff_routes", "uses": ["Becoming.RevisionPlans.gainOf_ofRoutes", "Becoming.RevisionPlans.loss_ofRoutes"]}
+{"name": "Becoming.RevisionPlans.balance", "uses": ["Becoming.RevisionPlans.gainOf_reading"]}
+{"name": "Becoming.RevisionPlans.cond_turn_split", "uses": []}
+{"name": "Becoming.RevisionPlans.eq_zero_of_add_eq_zero_left", "uses": []}
+{"name": "Becoming.RevisionPlans.eq_zero_of_add_eq_zero_right", "uses": []}
+{"name": "Becoming.RevisionPlans.excess_ofRoutes", "uses": []}
+{"name": "Becoming.RevisionPlans.excess_reading", "uses": ["Becoming.Naturals.add_left_cancel", "Becoming.RevisionPlans.gainOf_reading", "Becoming.RevisionPlans.splits_held"]}
+{"name": "Becoming.RevisionPlans.excess_zero_iff", "uses": ["Becoming.RevisionPlans.eq_zero_of_add_eq_zero_left", "Becoming.RevisionPlans.eq_zero_of_add_eq_zero_right", "Becoming.RevisionPlans.total_eq_zero_iff"]}
+{"name": "Becoming.RevisionPlans.gainOf_move", "uses": ["Becoming.RevisionPlans.move_term", "Becoming.total_add", "Becoming.total_congr_on"]}
+{"name": "Becoming.RevisionPlans.gainOf_ofRoutes", "uses": []}
+{"name": "Becoming.RevisionPlans.gainOf_reading", "uses": ["Becoming.RevisionPlans.reading_term", "Becoming.total_add", "Becoming.total_congr_on"]}
+{"name": "Becoming.RevisionPlans.gainOf_reading_eq_iff", "uses": ["Becoming.Naturals.add_left_cancel", "Becoming.RevisionPlans.gainOf_reading"]}
+{"name": "Becoming.RevisionPlans.held_plan_term", "uses": []}
+{"name": "Becoming.RevisionPlans.le_iff_of_balance", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.RevisionPlans.loss_ofRoutes", "uses": []}
+{"name": "Becoming.RevisionPlans.move_ge_of", "uses": ["Becoming.RevisionPlans.gainOf_move", "Becoming.sub_eq_zero_of_le", "Becoming.total_eq_zero"]}
+{"name": "Becoming.RevisionPlans.move_le_of", "uses": ["Becoming.RevisionPlans.gainOf_move", "Becoming.sub_eq_zero_of_le", "Becoming.total_eq_zero"]}
+{"name": "Becoming.RevisionPlans.move_term", "uses": ["Becoming.add_mul_split", "Becoming.add_sub_turn"]}
+{"name": "Becoming.RevisionPlans.not_above_iff", "uses": ["Becoming.RevisionPlans.balance", "Becoming.RevisionPlans.le_iff_of_balance"]}
+{"name": "Becoming.RevisionPlans.ofRoutes_goOn_excess", "uses": []}
+{"name": "Becoming.RevisionPlans.reading_above_iff", "uses": ["Becoming.RevisionPlans.above_iff", "Becoming.RevisionPlans.excess_reading", "Becoming.RevisionPlans.splits_held"]}
+{"name": "Becoming.RevisionPlans.reading_not_below_iff", "uses": ["Becoming.RevisionPlans.excess_reading", "Becoming.RevisionPlans.not_above_iff", "Becoming.RevisionPlans.splits_held"]}
+{"name": "Becoming.RevisionPlans.reading_term", "uses": ["Becoming.add_mul_split", "Becoming.add_sub_of_le", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.RevisionPlans.routes_above_iff", "uses": ["Becoming.RevisionPlans.above_iff", "Becoming.RevisionPlans.above_iff_routes", "Becoming.RevisionPlans.excess_ofRoutes", "Becoming.RevisionPlans.loss_ofRoutes", "Becoming.RevisionPlans.splits_ofRoutes"]}
+{"name": "Becoming.RevisionPlans.splits_goOn", "uses": []}
+{"name": "Becoming.RevisionPlans.splits_held", "uses": ["Becoming.RevisionPlans.cond_turn_split"]}
+{"name": "Becoming.RevisionPlans.splits_ofRoutes", "uses": ["Becoming.add_sub_of_le"]}
+{"name": "Becoming.RevisionPlans.splits_off", "uses": []}
+{"name": "Becoming.RevisionPlans.total_eq_zero_iff", "uses": ["Becoming.RevisionPlans.eq_zero_of_add_eq_zero_left", "Becoming.RevisionPlans.eq_zero_of_add_eq_zero_right", "Becoming.total_eq_zero"]}

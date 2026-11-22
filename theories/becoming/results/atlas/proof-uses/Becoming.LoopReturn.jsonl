@@ -1,0 +1,77 @@
+{"name": "Becoming.LoopReturn.Ring.amount_eq", "uses": ["Becoming.LoopReturn.Ring.gives", "Becoming.LoopReturn.Ring.pred_mem", "Becoming.LoopReturn.ring_even"]}
+{"name": "Becoming.LoopReturn.Ring.bound_strict", "uses": ["Becoming.LoopReturn.Ring.coupled", "Becoming.LoopReturn.Ring.cycle_back", "Becoming.LoopReturn.Ring.cycle_start", "Becoming.LoopReturn.Ring.exceeds_course", "Becoming.LoopReturn.carried_around_course"]}
+{"name": "Becoming.LoopReturn.Ring.coupled", "uses": ["Becoming.LoopReturn.Ring.cycle_mem", "Becoming.LoopReturn.Ring.pred_cycle"]}
+{"name": "Becoming.LoopReturn.Ring.cycle_back", "uses": []}
+{"name": "Becoming.LoopReturn.Ring.cycle_mem", "uses": ["Becoming.Propagation.mem_steps_upto"]}
+{"name": "Becoming.LoopReturn.Ring.cycle_start", "uses": []}
+{"name": "Becoming.LoopReturn.Ring.exceeds_course", "uses": ["Becoming.LoopReturn.Ring.amount_eq", "Becoming.LoopReturn.one_add_pow_lt", "Becoming.LoopReturn.product_const", "Becoming.Naturals.mul_lt_mul_of_pos", "Becoming.Propagation.mem_steps_upto"]}
+{"name": "Becoming.LoopReturn.Ring.gives", "uses": ["Becoming.LoopReturn.Ring.pred_mem", "Becoming.LoopReturn.Ring.total_at", "Becoming.Propagation.total_steps_at", "Becoming.carriedGive_of_rest", "Becoming.steps_distinct", "Becoming.total_eq_zero"]}
+{"name": "Becoming.LoopReturn.Ring.givesExactly", "uses": ["Becoming.LoopReturn.Ring.cycle_mem", "Becoming.LoopReturn.Ring.gives", "Becoming.LoopReturn.Ring.pred_cycle"]}
+{"name": "Becoming.LoopReturn.Ring.pred_cycle", "uses": []}
+{"name": "Becoming.LoopReturn.Ring.pred_mem", "uses": ["Becoming.Propagation.le_of_mem_steps_upto", "Becoming.Propagation.mem_steps_upto"]}
+{"name": "Becoming.LoopReturn.Ring.total_at", "uses": ["Becoming.le_total_of_mem", "Becoming.total_le_at"]}
+{"name": "Becoming.LoopReturn.around_course_iff", "uses": ["Becoming.LoopReturn.carried_around_excess", "Becoming.Naturals.add_left_cancel", "Becoming.add_sub_of_le", "Becoming.carried_mono_steps"]}
+{"name": "Becoming.LoopReturn.below_of_falls", "uses": []}
+{"name": "Becoming.LoopReturn.carried_along_exact", "uses": ["Becoming.LoopReturn.link_rearranged", "Becoming.carried_succ"]}
+{"name": "Becoming.LoopReturn.carried_around_course", "uses": ["Becoming.LoopReturn.factor_single", "Becoming.LoopReturn.orbit_scaling", "Becoming.carried_runaway"]}
+{"name": "Becoming.LoopReturn.carried_around_exact", "uses": ["Becoming.LoopReturn.carried_along_exact"]}
+{"name": "Becoming.LoopReturn.carried_around_excess", "uses": ["Becoming.LoopReturn.carried_around_exact", "Becoming.Loops.one_add_mul", "Becoming.add_sub_of_le", "Becoming.carried_mono_steps"]}
+{"name": "Becoming.LoopReturn.closes_within", "uses": ["Becoming.Lasting.Variant.reaches", "Becoming.Lasting.reaches_iff_orbit", "Becoming.LoopReturn.difference_variant", "Becoming.LoopReturn.stays_from_fixed"]}
+{"name": "Becoming.LoopReturn.closes_within_exact", "uses": ["Becoming.Law.pred_orbit", "Becoming.le_dest"]}
+{"name": "Becoming.LoopReturn.closing_merges", "uses": ["Becoming.Law.merges_iff", "Becoming.LoopReturn.last_positive"]}
+{"name": "Becoming.LoopReturn.closing_needs_less", "uses": ["Becoming.LoopReturn.below_of_falls", "Becoming.LoopReturn.link_below_of_below"]}
+{"name": "Becoming.LoopReturn.closing_not_lossless", "uses": ["Becoming.Branching.Merges.not_lossless", "Becoming.LoopReturn.closing_merges"]}
+{"name": "Becoming.LoopReturn.cut_closes", "uses": ["Becoming.LoopReturn.returnMap_cut"]}
+{"name": "Becoming.LoopReturn.cut_reopened", "uses": []}
+{"name": "Becoming.LoopReturn.difference_variant", "uses": []}
+{"name": "Becoming.LoopReturn.doubling_exact", "uses": ["Becoming.LoopReturn.orbit_doubling"]}
+{"name": "Becoming.LoopReturn.empty_loop_kept", "uses": ["Becoming.LoopReturn.kept_of_identity"]}
+{"name": "Becoming.LoopReturn.eq_zero_of_add_le", "uses": []}
+{"name": "Becoming.LoopReturn.factor_single", "uses": []}
+{"name": "Becoming.LoopReturn.gap_add_right", "uses": ["Becoming.Naturals.add_congr"]}
+{"name": "Becoming.LoopReturn.gap_course", "uses": ["Becoming.LoopReturn.gap_succ"]}
+{"name": "Becoming.LoopReturn.gap_scaling", "uses": ["Becoming.LoopReturn.gap_course", "Becoming.LoopReturn.orbit_scaling"]}
+{"name": "Becoming.LoopReturn.gap_succ", "uses": ["Becoming.LoopReturn.gap_add_right", "Becoming.Naturals.add_congr"]}
+{"name": "Becoming.LoopReturn.geomBound_eq_course", "uses": ["Becoming.Loops.one_add_mul"]}
+{"name": "Becoming.LoopReturn.gradual_needs_another_link", "uses": ["Becoming.LoopReturn.nothing_between"]}
+{"name": "Becoming.LoopReturn.kept_of_identity", "uses": ["Becoming.LoopReturn.orbit_of_fixed"]}
+{"name": "Becoming.LoopReturn.last_positive", "uses": []}
+{"name": "Becoming.LoopReturn.link_below_of_below", "uses": []}
+{"name": "Becoming.LoopReturn.link_rearranged", "uses": ["Becoming.Loops.mul_swap"]}
+{"name": "Becoming.LoopReturn.loop_kept", "uses": ["Becoming.LoopReturn.kept_of_identity", "Becoming.LoopReturn.returnMap_of_identity"]}
+{"name": "Becoming.LoopReturn.lt_two_pow_mul", "uses": ["Becoming.Naturals.lt_two_pow"]}
+{"name": "Becoming.LoopReturn.never_closes_of_no_less", "uses": ["Becoming.LoopReturn.orbit_ge_of_ge", "Becoming.LoopReturn.returnMap_ge"]}
+{"name": "Becoming.LoopReturn.never_falls", "uses": ["Becoming.Lasting.orbit_mono", "Becoming.Law.orbit_shift"]}
+{"name": "Becoming.LoopReturn.never_rises", "uses": ["Becoming.Lasting.orbit_mono", "Becoming.Law.orbit_shift"]}
+{"name": "Becoming.LoopReturn.nothing_between", "uses": ["Becoming.LoopReturn.returnMap_scaling", "Becoming.LoopReturn.whole_factors"]}
+{"name": "Becoming.LoopReturn.one_add_pow_lt", "uses": []}
+{"name": "Becoming.LoopReturn.one_pow", "uses": []}
+{"name": "Becoming.LoopReturn.orbit_doubling", "uses": ["Becoming.LoopReturn.two_pow_succ_mul"]}
+{"name": "Becoming.LoopReturn.orbit_ge_of_ge", "uses": ["Becoming.never_falls_over"]}
+{"name": "Becoming.LoopReturn.orbit_of_fixed", "uses": []}
+{"name": "Becoming.LoopReturn.orbit_scaling", "uses": ["Becoming.LoopReturn.returnMap_scaling", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.LoopReturn.orbit_sub_const", "uses": ["Becoming.Naturals.sub_sub"]}
+{"name": "Becoming.LoopReturn.product_const", "uses": []}
+{"name": "Becoming.LoopReturn.replenishing_course", "uses": ["Becoming.Flow.Balances.on", "Becoming.LoopReturn.gap_course", "Becoming.LoopReturn.replenishing_responds", "Becoming.Replenishing.balances"]}
+{"name": "Becoming.LoopReturn.replenishing_no_return", "uses": []}
+{"name": "Becoming.LoopReturn.replenishing_responds", "uses": []}
+{"name": "Becoming.LoopReturn.responds_iff", "uses": ["Becoming.LoopReturn.gap_succ"]}
+{"name": "Becoming.LoopReturn.returnMap_cut", "uses": ["Becoming.LoopReturn.returnMap_zero"]}
+{"name": "Becoming.LoopReturn.returnMap_doubles", "uses": ["Becoming.LoopReturn.returnMap_ge"]}
+{"name": "Becoming.LoopReturn.returnMap_ge", "uses": []}
+{"name": "Becoming.LoopReturn.returnMap_of_identity", "uses": []}
+{"name": "Becoming.LoopReturn.returnMap_scaling", "uses": ["Becoming.mul_assoc_nat"]}
+{"name": "Becoming.LoopReturn.returnMap_zero", "uses": []}
+{"name": "Becoming.LoopReturn.ring_even", "uses": ["Becoming.Loops.mul_swap", "Becoming.Loops.one_add_mul", "Becoming.Naturals.add_congr", "Becoming.carried_succ"]}
+{"name": "Becoming.LoopReturn.runs_away", "uses": ["Becoming.LoopReturn.returnMap_doubles", "Becoming.LoopReturn.two_pow_succ_mul"]}
+{"name": "Becoming.LoopReturn.runs_away_unbounded", "uses": ["Becoming.LoopReturn.lt_two_pow_mul", "Becoming.LoopReturn.runs_away"]}
+{"name": "Becoming.LoopReturn.selfLoop_carried", "uses": ["Becoming.LoopReturn.geomBound_eq_course", "Becoming.Loops.SelfLoop.carried_eq"]}
+{"name": "Becoming.LoopReturn.selfLoop_gap", "uses": ["Becoming.LoopReturn.selfLoop_carried", "Becoming.carried_attained"]}
+{"name": "Becoming.LoopReturn.settled_or_fallen", "uses": ["Becoming.LoopReturn.never_rises"]}
+{"name": "Becoming.LoopReturn.settles_within", "uses": ["Becoming.LoopReturn.eq_zero_of_add_le", "Becoming.LoopReturn.never_rises", "Becoming.LoopReturn.settled_or_fallen", "Becoming.LoopReturn.stays_from_fixed"]}
+{"name": "Becoming.LoopReturn.settles_within_exact", "uses": ["Becoming.LoopReturn.closes_within_exact"]}
+{"name": "Becoming.LoopReturn.stays_from_fixed", "uses": []}
+{"name": "Becoming.LoopReturn.sub_const_closes", "uses": ["Becoming.LoopReturn.orbit_sub_const", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.LoopReturn.sub_const_open", "uses": ["Becoming.LoopReturn.orbit_sub_const", "Becoming.SupportGated.sub_pos_of_lt"]}
+{"name": "Becoming.LoopReturn.two_pow_succ_mul", "uses": ["Becoming.mul_assoc_nat"]}
+{"name": "Becoming.LoopReturn.whole_factors", "uses": ["Becoming.LoopReturn.lt_two_pow_mul", "Becoming.LoopReturn.one_pow", "Becoming.LoopReturn.orbit_scaling", "Becoming.LoopReturn.returnMap_scaling", "Becoming.Loops.pow_le_pow_base"]}

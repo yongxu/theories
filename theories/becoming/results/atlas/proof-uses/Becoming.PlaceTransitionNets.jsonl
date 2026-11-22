@@ -1,0 +1,62 @@
+{"name": "Becoming.Net.Fires.balances", "uses": ["Becoming.Net.balance_at_iff'", "Becoming.Net.flow_given", "Becoming.Net.flow_taken"]}
+{"name": "Becoming.Net.Fires.course_balances", "uses": ["Becoming.ExchangeLaw.course_balances_iff", "Becoming.Net.Fires.feasible", "Becoming.Net.law_nonanticipating"]}
+{"name": "Becoming.Net.Fires.dependent", "uses": ["Becoming.le_total_of_mem"]}
+{"name": "Becoming.Net.Fires.feasible", "uses": ["Becoming.Net.Fires.levels_eq", "Becoming.Net.flow_taken"]}
+{"name": "Becoming.Net.Fires.levels_eq", "uses": ["Becoming.Net.levels_eq_of_enabled"]}
+{"name": "Becoming.Net.Fires.world_balanced", "uses": ["Becoming.Net.Fires.balances", "Becoming.Net.world_given", "Becoming.Net.world_taken"]}
+{"name": "Becoming.Net.Gated.gates", "uses": ["Becoming.Net.one_pos_of"]}
+{"name": "Becoming.Net.Loses.of_lt", "uses": ["Becoming.sign_le_one"]}
+{"name": "Becoming.Net.StrictSubinvariant.dissipative", "uses": ["Becoming.Net.StrictSubinvariant.loses", "Becoming.Net.dissipative_iff"]}
+{"name": "Becoming.Net.StrictSubinvariant.loses", "uses": ["Becoming.Net.Loses.of_lt"]}
+{"name": "Becoming.Net.acting", "uses": []}
+{"name": "Becoming.Net.balance_at_iff", "uses": ["Becoming.Naturals.sub_add_refill", "Becoming.Net.le_of_fire_add_back"]}
+{"name": "Becoming.Net.balance_at_iff'", "uses": ["Becoming.Naturals.sub_add_refill"]}
+{"name": "Becoming.Net.balances_iff", "uses": ["Becoming.Net.Fires.balances", "Becoming.Net.balance_at_iff", "Becoming.Net.flow_given", "Becoming.Net.flow_taken"]}
+{"name": "Becoming.Net.catalyst_feasible_not_fires", "uses": ["Becoming.Net.catalyst_levels"]}
+{"name": "Becoming.Net.catalyst_levels", "uses": ["Becoming.ExchangeLaw.levels_succ"]}
+{"name": "Becoming.Net.change_stops_unrefuted", "uses": ["Becoming.Flow.change_stops_unrefuted_around", "Becoming.Net.Fires.balances", "Becoming.Net.dissipative_iff", "Becoming.Net.marked_census"]}
+{"name": "Becoming.Net.course_eq", "uses": []}
+{"name": "Becoming.Net.cycle_changes", "uses": ["Becoming.Net.cycle_flips"]}
+{"name": "Becoming.Net.cycle_fires", "uses": ["Becoming.Net.cycle_marking"]}
+{"name": "Becoming.Net.cycle_flips", "uses": ["Becoming.Net.cycle_marking"]}
+{"name": "Becoming.Net.cycle_marking", "uses": ["Becoming.Net.cycle_step"]}
+{"name": "Becoming.Net.cycle_never_rests", "uses": ["Becoming.Net.cycle_flips"]}
+{"name": "Becoming.Net.cycle_not_dissipative", "uses": ["Becoming.ListTests.mem_bools", "Becoming.Net.dissipative_iff", "Becoming.Shuttle.distinct"]}
+{"name": "Becoming.Net.cycle_premises", "uses": ["Becoming.ListTests.mem_bools", "Becoming.Net.Fires.world_balanced", "Becoming.Net.cycle_fires", "Becoming.Net.world_counted", "Becoming.Net.world_embodied", "Becoming.Net.world_enclosed", "Becoming.Shuttle.distinct"]}
+{"name": "Becoming.Net.cycle_step", "uses": []}
+{"name": "Becoming.Net.dissipative_iff", "uses": ["Becoming.Net.total_eq_closed"]}
+{"name": "Becoming.Net.enabled_of_within", "uses": []}
+{"name": "Becoming.Net.enclosed", "uses": []}
+{"name": "Becoming.Net.fed_fires", "uses": []}
+{"name": "Becoming.Net.fed_refills", "uses": ["Becoming.Net.Fires.balances", "Becoming.Net.fed_fires"]}
+{"name": "Becoming.Net.fire_scaled", "uses": ["Becoming.Naturals.add_sub_cancel", "Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.Net.fires_iff_feasible", "uses": ["Becoming.Net.Fires.feasible", "Becoming.Net.enabled_of_within", "Becoming.Net.flow_given", "Becoming.Net.flow_taken", "Becoming.Net.levels_eq_of_enabled"]}
+{"name": "Becoming.Net.flow_given", "uses": ["Becoming.total_mul"]}
+{"name": "Becoming.Net.flow_taken", "uses": ["Becoming.total_mul"]}
+{"name": "Becoming.Net.gated_ends", "uses": ["Becoming.Flow.joint_excess_ends", "Becoming.Net.Fires.balances", "Becoming.Net.Fires.dependent", "Becoming.Net.Gated.gates", "Becoming.Net.acting", "Becoming.Net.flow_given", "Becoming.Net.flow_taken"]}
+{"name": "Becoming.Net.inl_not_mem_inr", "uses": ["Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.Net.law_nonanticipating", "uses": []}
+{"name": "Becoming.Net.le_of_fire_add_back", "uses": ["Becoming.ExchangeLaw.sub_add_back_iff", "Becoming.add_right_cancel"]}
+{"name": "Becoming.Net.levels_eq_of_enabled", "uses": ["Becoming.ExchangeLaw.levels_succ", "Becoming.Net.fire_scaled", "Becoming.Net.flow_given", "Becoming.Net.flow_taken"]}
+{"name": "Becoming.Net.marked_census", "uses": ["Becoming.keep_distinct", "Becoming.mem_keep"]}
+{"name": "Becoming.Net.marking_stops_unrefuted", "uses": ["Becoming.Net.change_stops_unrefuted"]}
+{"name": "Becoming.Net.one_pos_of", "uses": []}
+{"name": "Becoming.Net.relay_feasible_not_fires", "uses": ["Becoming.Net.relay_levels", "Becoming.Net.relay_pure"]}
+{"name": "Becoming.Net.relay_levels", "uses": ["Becoming.ExchangeLaw.levels_succ"]}
+{"name": "Becoming.Net.relay_pure", "uses": []}
+{"name": "Becoming.Net.rests_unrefuted", "uses": ["Becoming.Net.Fires.world_balanced", "Becoming.Net.world_counted", "Becoming.Net.world_dissipative", "Becoming.Net.world_embodied", "Becoming.Net.world_enclosed", "Becoming.World.rests_unrefuted_enclosed"]}
+{"name": "Becoming.Net.rise_with_fall", "uses": ["Becoming.Flow.rise_with_fall", "Becoming.Net.Fires.balances"]}
+{"name": "Becoming.Net.rise_with_fall_tokens", "uses": ["Becoming.Net.rise_with_fall"]}
+{"name": "Becoming.Net.siphon_empty", "uses": ["Becoming.Flow.stays_below", "Becoming.Net.Fires.balances", "Becoming.Net.Fires.dependent", "Becoming.Net.Gated.gates", "Becoming.Net.acting", "Becoming.Net.gated_ends", "Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.Net.takers_eq", "uses": []}
+{"name": "Becoming.Net.takers_within", "uses": ["Becoming.Flow.Balances.takers_within", "Becoming.Net.Fires.balances"]}
+{"name": "Becoming.Net.taking", "uses": []}
+{"name": "Becoming.Net.taking_not_recurring", "uses": ["Becoming.Flow.Dissipative.finite_taking_not_recurring", "Becoming.Net.Fires.balances", "Becoming.Net.dissipative_iff"]}
+{"name": "Becoming.Net.total_eq_closed", "uses": ["Becoming.total_le_of_support"]}
+{"name": "Becoming.Net.world_counted", "uses": ["Becoming.Net.inl_not_mem_inr", "Becoming.distinct_append", "Becoming.distinct_map", "Becoming.inl_injective", "Becoming.inr_injective", "Becoming.inr_not_mem", "Becoming.keep_distinct", "Becoming.mem_append_cases", "Becoming.mem_append_of_left", "Becoming.mem_append_of_right", "Becoming.mem_keep", "Becoming.mem_map_of", "Becoming.mem_of_map", "Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.Net.world_dissipative", "uses": ["Becoming.Net.world_total_eq", "Becoming.mem_map_of", "Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.Net.world_embodied", "uses": []}
+{"name": "Becoming.Net.world_enclosed", "uses": ["Becoming.distinct_map", "Becoming.inr_injective", "Becoming.mem_map_of", "Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.Net.world_given", "uses": ["Becoming.total_map", "Becoming.total_zero"]}
+{"name": "Becoming.Net.world_taken", "uses": ["Becoming.total_map", "Becoming.total_zero"]}
+{"name": "Becoming.Net.world_total_eq", "uses": ["Becoming.distinct_map", "Becoming.inr_injective", "Becoming.mem_map_of", "Becoming.total_le_of_support", "Becoming.total_map"]}

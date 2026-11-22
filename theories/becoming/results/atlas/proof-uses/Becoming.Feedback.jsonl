@@ -1,0 +1,84 @@
+{"name": "Becoming.Clearing.alongDependence_closed", "uses": []}
+{"name": "Becoming.Clearing.clearerReach_closed", "uses": []}
+{"name": "Becoming.Clearing.clearer_own", "uses": []}
+{"name": "Becoming.Clearing.clearer_system", "uses": ["Becoming.Clearing.levels", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Clearing.levels", "uses": ["Becoming.Clearing.alongDependence_closed", "Becoming.Clearing.dependenceRegion_iff", "Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.Clearing.no_levels_without_source", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.Clearing.reach_centred", "uses": []}
+{"name": "Becoming.Clearing.reach_middle", "uses": ["Becoming.Clearing.clearerReach_closed", "Becoming.Clearing.clearer_system", "Becoming.Clearing.levels", "Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.Clearing.reaches_dweller", "uses": []}
+{"name": "Becoming.Clearing.resource_of_clearer", "uses": []}
+{"name": "Becoming.Clearing.spared_balances", "uses": ["Becoming.Frontier.burns"]}
+{"name": "Becoming.Clearing.spared_dependent", "uses": []}
+{"name": "Becoming.Clearing.system_counts_dweller", "uses": ["Becoming.Clearing.admitted_without", "Becoming.Clearing.alongDependence_closed", "Becoming.Clearing.levels", "Becoming.Clearing.loses_beyond", "Becoming.Clearing.unsupported_with", "Becoming.Web.AdmitsWithin.narrow", "Becoming.Web.Retains.not_added", "Becoming.Web.retains_bounded_iff"]}
+{"name": "Becoming.Clearing.uncoupled", "uses": ["Becoming.Clearing.balances", "Becoming.Clearing.dependent", "Becoming.Clearing.resource_of_clearer", "Becoming.Clearing.spared_balances", "Becoming.Clearing.spared_dependent", "Becoming.Flow.Balances.support_agrees"]}
+{"name": "Becoming.Flow.Balances.adds_iff_exceeds_of_decidable", "uses": ["Becoming.Flow.Balances.admits_unreached_before", "Becoming.Web.Adds.exceeds"]}
+{"name": "Becoming.Flow.Balances.admits_unreached", "uses": ["Becoming.Flow.Balances.admits_unreached_before", "Becoming.Flow.ReachesBefore.reaches"]}
+{"name": "Becoming.Flow.Balances.admits_unreached_before", "uses": ["Becoming.Flow.Balances.agrees_or_reaches_before"]}
+{"name": "Becoming.Flow.Balances.admits_without_taker", "uses": ["Becoming.Flow.Balances.le_withheld"]}
+{"name": "Becoming.Flow.Balances.agrees_iff_even", "uses": ["Becoming.Flow.Balances.withheld", "Becoming.add_right_cancel"]}
+{"name": "Becoming.Flow.Balances.agrees_of_quiet", "uses": ["Becoming.Flow.Balances.agrees_iff_even", "Becoming.Flow.ite_part_zero", "Becoming.eq_zero_of_not_pos", "Becoming.total_congr", "Becoming.total_eq_zero", "Becoming.total_zero"]}
+{"name": "Becoming.Flow.Balances.agrees_or_reaches", "uses": ["Becoming.Flow.Balances.agrees_or_reaches_before", "Becoming.Flow.ReachesBefore.reaches"]}
+{"name": "Becoming.Flow.Balances.agrees_or_reaches_before", "uses": ["Becoming.Flow.Balances.exchanges_before_of_differs"]}
+{"name": "Becoming.Flow.Balances.closed_comparison", "uses": ["Becoming.Flow.Balances.comparison_within_reach", "Becoming.Flow.ReachesBefore.reaches", "Becoming.Flow.reaches_within_closed"]}
+{"name": "Becoming.Flow.Balances.comparison_local", "uses": ["Becoming.Flow.Balances.not_adds_transfer", "Becoming.Flow.Balances.retains_transfer"]}
+{"name": "Becoming.Flow.Balances.comparison_within_difference", "uses": ["Becoming.Flow.Balances.differs_before", "Becoming.Web.Adds.exceeds", "Becoming.Web.Includes.retains"]}
+{"name": "Becoming.Flow.Balances.comparison_within_reach", "uses": ["Becoming.Flow.Balances.comparison_local", "Becoming.Web.Adds.exceeds", "Becoming.Web.Includes.retains"]}
+{"name": "Becoming.Flow.Balances.differs_before", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.Flow.Balances.exchanges_before_of_differs", "uses": ["Becoming.Flow.Balances.agrees_iff_even", "Becoming.Flow.part_of_ite_pos", "Becoming.eq_zero_of_not_pos", "Becoming.steps_within", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.Balances.exchanges_of_differs", "uses": ["Becoming.Flow.Balances.exchanges_before_of_differs"]}
+{"name": "Becoming.Flow.Balances.le_withheld", "uses": ["Becoming.Flow.Balances.withheld", "Becoming.total_congr", "Becoming.total_zero"]}
+{"name": "Becoming.Flow.Balances.levels_agree", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.Flow.Balances.not_adds_transfer", "uses": ["Becoming.Flow.Balances.agrees_or_reaches_before"]}
+{"name": "Becoming.Flow.Balances.not_not_adds_of_exceeds", "uses": ["Becoming.Flow.Balances.comparison_within_reach"]}
+{"name": "Becoming.Flow.Balances.retains_transfer", "uses": ["Becoming.Flow.Balances.agrees_or_reaches_before"]}
+{"name": "Becoming.Flow.Balances.support_agrees", "uses": ["Becoming.Flow.Balances.levels_agree"]}
+{"name": "Becoming.Flow.Balances.uncoupled_beyond_influence", "uses": ["Becoming.Flow.Balances.admits_unreached", "Becoming.Flow.unreached_within_influence"]}
+{"name": "Becoming.Flow.ReachesBefore.reaches", "uses": []}
+{"name": "Becoming.Flow.WithinSystem.symm", "uses": ["Becoming.Flow.shares_symm", "Becoming.WithinClosure.symm"]}
+{"name": "Becoming.Flow.affectedBy_of_fedFrom", "uses": []}
+{"name": "Becoming.Flow.beyond_influence", "uses": ["Becoming.WithinClosure.not_rel"]}
+{"name": "Becoming.Flow.feeding_whole_of_common", "uses": ["Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.Flow.ite_part_zero", "uses": []}
+{"name": "Becoming.Flow.own_within_reach", "uses": ["Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Flow.own_within_system", "uses": ["Becoming.Flow.own_within_reach", "Becoming.Flow.withinSystem_of_withinReach"]}
+{"name": "Becoming.Flow.part_of_ite_pos", "uses": []}
+{"name": "Becoming.Flow.reach_whole_of_common", "uses": ["Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.Flow.reaches_withinReach", "uses": ["Becoming.Flow.reaches_within_closed", "Becoming.closedUnder_withinClosure"]}
+{"name": "Becoming.Flow.reaches_withinSystem", "uses": ["Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Flow.reaches_within_closed", "uses": []}
+{"name": "Becoming.Flow.shares_of_affectedBy", "uses": []}
+{"name": "Becoming.Flow.shares_symm", "uses": []}
+{"name": "Becoming.Flow.system_whole_of_common", "uses": ["Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.Flow.unreached_within_influence", "uses": ["Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Flow.unreached_within_system", "uses": ["Becoming.Flow.shares_of_affectedBy", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Flow.withinInfluence_of_withinFeeding", "uses": ["Becoming.Flow.affectedBy_of_fedFrom", "Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Flow.withinSystem_closed", "uses": ["Becoming.Flow.shares_of_affectedBy", "Becoming.Flow.shares_symm", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Flow.withinSystem_of_withinInfluence", "uses": ["Becoming.Flow.shares_of_affectedBy", "Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Flow.withinSystem_of_withinReach", "uses": ["Becoming.Flow.shares_of_affectedBy", "Becoming.Flow.shares_symm", "Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Late.affected_without_effect", "uses": ["Becoming.Flow.Balances.admits_unreached_before", "Becoming.Late.balances"]}
+{"name": "Becoming.Late.balances", "uses": []}
+{"name": "Becoming.Late.withheld", "uses": []}
+{"name": "Becoming.Margin.balances", "uses": []}
+{"name": "Becoming.Margin.reach_without_misjudgment", "uses": ["Becoming.Flow.Balances.opens_nothing", "Becoming.Margin.balances"]}
+{"name": "Becoming.Margin.withheld", "uses": []}
+{"name": "Becoming.Static.shares_unaffected", "uses": ["Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.Trophic.acting", "uses": []}
+{"name": "Becoming.Trophic.balances", "uses": []}
+{"name": "Becoming.Trophic.deer_without_wolves", "uses": ["Becoming.Flow.WithheldLevels.unique", "Becoming.Trophic.wolves_withheld"]}
+{"name": "Becoming.Trophic.den_of_far", "uses": []}
+{"name": "Becoming.Trophic.dependent", "uses": []}
+{"name": "Becoming.Trophic.difference_reaches_forest", "uses": ["Becoming.Trophic.wolves_unreached"]}
+{"name": "Becoming.Trophic.farWolves_withheld", "uses": []}
+{"name": "Becoming.Trophic.far_of_den", "uses": []}
+{"name": "Becoming.Trophic.far_system", "uses": ["Becoming.Trophic.den_of_far", "Becoming.Trophic.far_of_den"]}
+{"name": "Becoming.Trophic.fed_closed", "uses": []}
+{"name": "Becoming.Trophic.mediates", "uses": ["Becoming.Trophic.acting", "Becoming.Trophic.balances", "Becoming.Trophic.dependent", "Becoming.Trophic.fed_closed", "Becoming.Trophic.near_closed", "Becoming.Trophic.responsive_acting", "Becoming.Trophic.responsive_balances", "Becoming.Trophic.responsive_dependent", "Becoming.Trophic.responsive_taking", "Becoming.Trophic.taking", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Trophic.near_closed", "uses": ["Becoming.Trophic.den_of_far", "Becoming.Trophic.far_of_den"]}
+{"name": "Becoming.Trophic.responsive_acting", "uses": []}
+{"name": "Becoming.Trophic.responsive_balances", "uses": []}
+{"name": "Becoming.Trophic.responsive_dependent", "uses": []}
+{"name": "Becoming.Trophic.responsive_taking", "uses": []}
+{"name": "Becoming.Trophic.taking", "uses": []}
+{"name": "Becoming.Trophic.wolves_unreached", "uses": []}
+{"name": "Becoming.Trophic.wolves_withheld", "uses": []}

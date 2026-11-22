@@ -1,0 +1,53 @@
+{"name": "Becoming.FreeEnergyCounting.Witness.duplicate_share", "uses": []}
+{"name": "Becoming.FreeEnergyCounting.Witness.nothing_record_reach", "uses": []}
+{"name": "Becoming.FreeEnergyCounting.Witness.off_support", "uses": []}
+{"name": "Becoming.FreeEnergyCounting.Witness.scaled_reach", "uses": []}
+{"name": "Becoming.FreeEnergyCounting.Witness.strict_off_proportion", "uses": []}
+{"name": "Becoming.FreeEnergyCounting.Witness.total_two_unreached", "uses": []}
+{"name": "Becoming.FreeEnergyCounting.base_zero_of_pow_zero", "uses": []}
+{"name": "Becoming.FreeEnergyCounting.bernoulli", "uses": ["Becoming.FreeEnergyCounting.bernoulli_close", "Becoming.FreeEnergyCounting.bernoulli_regroup", "Becoming.FreeEnergyCounting.bernoulli_split", "Becoming.FreeEnergyCounting.powers_rearrange"]}
+{"name": "Becoming.FreeEnergyCounting.bernoulli_close", "uses": ["Becoming.add_mul_split"]}
+{"name": "Becoming.FreeEnergyCounting.bernoulli_regroup", "uses": ["Becoming.add_mul_split", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.FreeEnergyCounting.bernoulli_split", "uses": ["Becoming.add_mul_split", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.FreeEnergyCounting.bernoulli_strict", "uses": ["Becoming.FreeEnergyCounting.bernoulli", "Becoming.FreeEnergyCounting.bernoulli_close", "Becoming.FreeEnergyCounting.bernoulli_regroup", "Becoming.FreeEnergyCounting.bernoulli_split", "Becoming.FreeEnergyCounting.powers_rearrange_strict"]}
+{"name": "Becoming.FreeEnergyCounting.bound", "uses": ["Becoming.FreeEnergyCounting.cons_left", "Becoming.FreeEnergyCounting.cons_mid", "Becoming.FreeEnergyCounting.cons_right", "Becoming.FreeEnergyCounting.self_pow_pos", "Becoming.FreeEnergyCounting.two_parts"]}
+{"name": "Becoming.FreeEnergyCounting.bound_eq_iff", "uses": ["Becoming.FreeEnergyCounting.bound_eq_of_proportional", "Becoming.FreeEnergyCounting.proportional_of_bound_eq"]}
+{"name": "Becoming.FreeEnergyCounting.bound_eq_of_proportional", "uses": ["Becoming.FreeEnergyCounting.powerProduct_scaled"]}
+{"name": "Becoming.FreeEnergyCounting.bound_given_record", "uses": ["Becoming.FreeEnergyCounting.bound", "Becoming.FreeEnergyCounting.record_total"]}
+{"name": "Becoming.FreeEnergyCounting.bound_lt_of_not_proportional", "uses": ["Becoming.FreeEnergyCounting.bound", "Becoming.FreeEnergyCounting.bound_eq_iff"]}
+{"name": "Becoming.FreeEnergyCounting.cons_left", "uses": ["Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.FreeEnergyCounting.cons_mid", "uses": ["Becoming.mul_assoc_nat"]}
+{"name": "Becoming.FreeEnergyCounting.cons_right", "uses": ["Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.FreeEnergyCounting.given_record_eq_iff", "uses": ["Becoming.FreeEnergyCounting.bound_eq_iff", "Becoming.FreeEnergyCounting.record_total"]}
+{"name": "Becoming.FreeEnergyCounting.given_record_eq_iff_share", "uses": ["Becoming.ConditionalWeights.evidence", "Becoming.ConditionalWeights.posterior_single", "Becoming.FreeEnergyCounting.given_record_eq_iff"]}
+{"name": "Becoming.FreeEnergyCounting.lt_cancel_mul_left", "uses": []}
+{"name": "Becoming.FreeEnergyCounting.mean_step", "uses": ["Becoming.FreeEnergyCounting.bernoulli", "Becoming.FreeEnergyCounting.mean_step_lhs", "Becoming.FreeEnergyCounting.mean_step_rhs", "Becoming.Naturals.le_of_add_le_add_left"]}
+{"name": "Becoming.FreeEnergyCounting.mean_step_identity", "uses": ["Becoming.Naturals.mul_mul_mul_comm", "Becoming.Naturals.mul_pow_eq", "Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.FreeEnergyCounting.mean_step_lhs", "uses": ["Becoming.FreeEnergyCounting.mean_step_identity", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.FreeEnergyCounting.mean_step_rhs", "uses": ["Becoming.Naturals.mul_pow_eq", "Becoming.Naturals.mul_right_comm", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.FreeEnergyCounting.mean_step_strict", "uses": ["Becoming.FreeEnergyCounting.bernoulli_strict", "Becoming.FreeEnergyCounting.lt_cancel_mul_left", "Becoming.FreeEnergyCounting.mean_step_lhs", "Becoming.FreeEnergyCounting.mean_step_rhs", "Becoming.Naturals.add_left_cancel", "Becoming.add_mul_split"]}
+{"name": "Becoming.FreeEnergyCounting.mean_two", "uses": ["Becoming.FreeEnergyCounting.mean_step", "Becoming.FreeEnergyCounting.mean_two_ident", "Becoming.FreeEnergyCounting.mean_two_sum", "Becoming.FreeEnergyCounting.self_pow_pos", "Becoming.Naturals.mul_pow_eq"]}
+{"name": "Becoming.FreeEnergyCounting.mean_two_ident", "uses": ["Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.FreeEnergyCounting.mean_two_strict", "uses": ["Becoming.FreeEnergyCounting.lt_cancel_mul_left", "Becoming.FreeEnergyCounting.mean_step_strict", "Becoming.FreeEnergyCounting.mean_two", "Becoming.FreeEnergyCounting.mean_two_ident", "Becoming.FreeEnergyCounting.mean_two_sum", "Becoming.add_mul_split", "Becoming.add_right_cancel"]}
+{"name": "Becoming.FreeEnergyCounting.mean_two_sum", "uses": ["Becoming.add_mul_split"]}
+{"name": "Becoming.FreeEnergyCounting.no_counts_reach", "uses": ["Becoming.FreeEnergyCounting.bound_eq_iff", "Becoming.total_zero"]}
+{"name": "Becoming.FreeEnergyCounting.nothing_record_reach_all", "uses": ["Becoming.FreeEnergyCounting.given_record_eq_iff", "Becoming.FreeEnergyCounting.record_total", "Becoming.FreeEnergyCounting.zero_of_total_zero"]}
+{"name": "Becoming.FreeEnergyCounting.posterior_counts_reach", "uses": ["Becoming.FreeEnergyCounting.record_total"]}
+{"name": "Becoming.FreeEnergyCounting.pow_succ_lt_pow_succ", "uses": []}
+{"name": "Becoming.FreeEnergyCounting.powerProduct_scaled", "uses": ["Becoming.Naturals.mul_mul_mul_comm", "Becoming.Naturals.mul_pow_eq", "Becoming.Naturals.pow_add"]}
+{"name": "Becoming.FreeEnergyCounting.powerProduct_self_pos", "uses": ["Becoming.FreeEnergyCounting.self_pow_pos"]}
+{"name": "Becoming.FreeEnergyCounting.powers_rearrange", "uses": ["Becoming.FreeEnergyCounting.rearrange"]}
+{"name": "Becoming.FreeEnergyCounting.powers_rearrange_strict", "uses": ["Becoming.FreeEnergyCounting.pow_succ_lt_pow_succ", "Becoming.FreeEnergyCounting.rearrange_strict"]}
+{"name": "Becoming.FreeEnergyCounting.proportional_cons", "uses": ["Becoming.FreeEnergyCounting.zero_of_total_zero", "Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.FreeEnergyCounting.proportional_of_bound_eq", "uses": ["Becoming.FreeEnergyCounting.base_zero_of_pow_zero", "Becoming.FreeEnergyCounting.bound", "Becoming.FreeEnergyCounting.cons_left", "Becoming.FreeEnergyCounting.cons_mid", "Becoming.FreeEnergyCounting.cons_right", "Becoming.FreeEnergyCounting.powerProduct_self_pos", "Becoming.FreeEnergyCounting.proportional_cons", "Becoming.FreeEnergyCounting.proportional_of_two_parts_eq", "Becoming.FreeEnergyCounting.self_pow_pos", "Becoming.FreeEnergyCounting.two_parts", "Becoming.FreeEnergyCounting.zero_of_total_zero"]}
+{"name": "Becoming.FreeEnergyCounting.proportional_of_two_parts_eq", "uses": ["Becoming.FreeEnergyCounting.pow_succ_lt_pow_succ", "Becoming.FreeEnergyCounting.self_pow_pos", "Becoming.FreeEnergyCounting.two_parts_strict"]}
+{"name": "Becoming.FreeEnergyCounting.rearrange", "uses": ["Becoming.add_mul_split", "Becoming.exists_add_of_le"]}
+{"name": "Becoming.FreeEnergyCounting.rearrange_strict", "uses": ["Becoming.add_mul_split", "Becoming.exists_add_of_le"]}
+{"name": "Becoming.FreeEnergyCounting.record_total", "uses": ["Becoming.ConditionalWeights.evidence", "Becoming.ConditionalWeights.mass_eq_total"]}
+{"name": "Becoming.FreeEnergyCounting.self_pow_pos", "uses": []}
+{"name": "Becoming.FreeEnergyCounting.two_parts", "uses": ["Becoming.FreeEnergyCounting.mean_two", "Becoming.FreeEnergyCounting.two_parts_lhs", "Becoming.FreeEnergyCounting.two_parts_rhs"]}
+{"name": "Becoming.FreeEnergyCounting.two_parts_lhs", "uses": ["Becoming.Naturals.mul_mul_mul_comm", "Becoming.Naturals.mul_pow_eq", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.FreeEnergyCounting.two_parts_rhs", "uses": ["Becoming.Naturals.mul_mul_mul_comm", "Becoming.Naturals.mul_pow_eq", "Becoming.Naturals.pow_add", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.FreeEnergyCounting.two_parts_strict", "uses": ["Becoming.FreeEnergyCounting.mean_two_strict", "Becoming.FreeEnergyCounting.two_parts_lhs", "Becoming.FreeEnergyCounting.two_parts_rhs", "Becoming.Naturals.lt_of_mul_lt_mul_right"]}
+{"name": "Becoming.FreeEnergyCounting.zero_of_total_zero", "uses": []}
+{"name": "Becoming.FreeEnergyCounting.zero_weights_reach", "uses": ["Becoming.FreeEnergyCounting.bound_eq_iff", "Becoming.total_zero"]}

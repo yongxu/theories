@@ -1,0 +1,44 @@
+{"name": "Becoming.LineageDrawdown.Drain.acting", "uses": ["Becoming.LineageDrawdown.Drain.active_of_give"]}
+{"name": "Becoming.LineageDrawdown.Drain.active_of_give", "uses": ["Becoming.ListTests.and_left", "Becoming.ListTests.true_of_cond_pos"]}
+{"name": "Becoming.LineageDrawdown.Drain.balances_P", "uses": ["Becoming.LineageDrawdown.Drain.stepP"]}
+{"name": "Becoming.LineageDrawdown.Drain.dependent", "uses": ["Becoming.LineageDrawdown.Drain.right_of_gate", "Becoming.ListTests.and_right"]}
+{"name": "Becoming.LineageDrawdown.Drain.depends_pool", "uses": ["Becoming.LineageDrawdown.Drain.reach_org"]}
+{"name": "Becoming.LineageDrawdown.Drain.descended_P", "uses": ["Becoming.LineageDrawdown.Drain.descends_atP", "Becoming.LineageDrawdown.Drain.familyP_eq"]}
+{"name": "Becoming.LineageDrawdown.Drain.descendsP", "uses": []}
+{"name": "Becoming.LineageDrawdown.Drain.descends_atP", "uses": ["Becoming.LineageDrawdown.Drain.descendsP"]}
+{"name": "Becoming.LineageDrawdown.Drain.draws_past_P", "uses": []}
+{"name": "Becoming.LineageDrawdown.Drain.ends_P", "uses": ["Becoming.LineageDrawdown.Drain.acting", "Becoming.LineageDrawdown.Drain.balances_P", "Becoming.LineageDrawdown.Drain.dependent", "Becoming.LineageDrawdown.Drain.descended_P", "Becoming.LineageDrawdown.Drain.draws_past_P", "Becoming.LineageDrawdown.Drain.members_need_P", "Becoming.LineageDrawdown.ends_of_drawdown"]}
+{"name": "Becoming.LineageDrawdown.Drain.every_active_degenerates_P", "uses": ["Becoming.LineageDrawdown.Drain.dependent", "Becoming.LineageDrawdown.Drain.depends_pool", "Becoming.LineageDrawdown.degeneration_of_unmet"]}
+{"name": "Becoming.LineageDrawdown.Drain.excess_P", "uses": []}
+{"name": "Becoming.LineageDrawdown.Drain.familyP_eq", "uses": ["Becoming.LineageDrawdown.Drain.familyP_step"]}
+{"name": "Becoming.LineageDrawdown.Drain.familyP_step", "uses": []}
+{"name": "Becoming.LineageDrawdown.Drain.from_outside", "uses": []}
+{"name": "Becoming.LineageDrawdown.Drain.gated", "uses": []}
+{"name": "Becoming.LineageDrawdown.Drain.gated_ends", "uses": ["Becoming.LineageDrawdown.Drain.balances_P", "Becoming.LineageDrawdown.Drain.dependent", "Becoming.LineageDrawdown.Drain.depends_pool", "Becoming.LineageDrawdown.Drain.excess_P", "Becoming.LineageDrawdown.Drain.start_P", "Becoming.LineageRegimes.degeneration_of_family_excess"]}
+{"name": "Becoming.LineageDrawdown.Drain.kids_one_P", "uses": []}
+{"name": "Becoming.LineageDrawdown.Drain.length_two_P", "uses": []}
+{"name": "Becoming.LineageDrawdown.Drain.line_org", "uses": ["Becoming.LineageDrawdown.Drain.step_org", "Becoming.«及».brecOn"]}
+{"name": "Becoming.LineageDrawdown.Drain.members_need_P", "uses": ["Becoming.LineageDrawdown.Drain.familyP_eq"]}
+{"name": "Becoming.LineageDrawdown.Drain.no_excess_first_P", "uses": []}
+{"name": "Becoming.LineageDrawdown.Drain.not_gated", "uses": ["Becoming.LineageDrawdown.Drain.from_outside"]}
+{"name": "Becoming.LineageDrawdown.Drain.org_of_give", "uses": []}
+{"name": "Becoming.LineageDrawdown.Drain.outside_ends", "uses": ["Becoming.LineageDrawdown.Drain.balances_P", "Becoming.LineageDrawdown.Drain.dependent", "Becoming.LineageDrawdown.Drain.depends_pool", "Becoming.LineageDrawdown.Drain.excess_P", "Becoming.LineageDrawdown.Drain.start_P", "Becoming.LineageRegimes.degeneration_of_family_excess"]}
+{"name": "Becoming.LineageDrawdown.Drain.reach_org", "uses": ["Becoming.LineageDrawdown.Drain.line_org"]}
+{"name": "Becoming.LineageDrawdown.Drain.renewer_goes_on_outside", "uses": []}
+{"name": "Becoming.LineageDrawdown.Drain.right_of_gate", "uses": []}
+{"name": "Becoming.LineageDrawdown.Drain.selection_P", "uses": []}
+{"name": "Becoming.LineageDrawdown.Drain.selection_after_P", "uses": ["Becoming.LineageDrawdown.Drain.ends_P", "Becoming.LineageDrawdown.Drain.uniform_P"]}
+{"name": "Becoming.LineageDrawdown.Drain.share_P", "uses": []}
+{"name": "Becoming.LineageDrawdown.Drain.sizes_P", "uses": ["Becoming.LineageDrawdown.Drain.familyP_eq", "Becoming.LineageDrawdown.Drain.length_two_P"]}
+{"name": "Becoming.LineageDrawdown.Drain.start_P", "uses": []}
+{"name": "Becoming.LineageDrawdown.Drain.stepP", "uses": []}
+{"name": "Becoming.LineageDrawdown.Drain.step_org", "uses": ["Becoming.LineageDrawdown.Drain.org_of_give"]}
+{"name": "Becoming.LineageDrawdown.Drain.uniform_P", "uses": ["Becoming.LineageDrawdown.Drain.familyP_eq", "Becoming.LineageDrawdown.Drain.kids_one_P", "Becoming.SelectionTerm.concord_uniform", "Becoming.SelectionTerm.discord_uniform"]}
+{"name": "Becoming.LineageDrawdown.below_iff", "uses": ["Becoming.Flow.Balances.accumulates"]}
+{"name": "Becoming.LineageDrawdown.degeneration_of_drawdown", "uses": ["Becoming.LineageDrawdown.below_iff", "Becoming.LineageDrawdown.degeneration_of_unmet"]}
+{"name": "Becoming.LineageDrawdown.degeneration_of_unmet", "uses": ["Becoming.Flow.family_ends_below_at", "Becoming.Web.kind_every_branch_ends_of_gone"]}
+{"name": "Becoming.LineageDrawdown.degeneration_of_unmet_listed", "uses": ["Becoming.LineageDrawdown.degeneration_of_unmet", "Becoming.LineageRegions.reached_listed"]}
+{"name": "Becoming.LineageDrawdown.ends_of_drawdown", "uses": ["Becoming.LineageDrawdown.below_iff", "Becoming.LineageDrawdown.ends_of_unmet"]}
+{"name": "Becoming.LineageDrawdown.ends_of_unmet", "uses": ["Becoming.LineageDrawdown.next_empty_of_unmet", "Becoming.Reproduction.Generations.empty_from", "Becoming.SelectionShift.Generations.last_term_zero"]}
+{"name": "Becoming.LineageDrawdown.next_empty_of_unmet", "uses": ["Becoming.Flow.DescendsAt.active", "Becoming.Flow.family_ends_below_at", "Becoming.LineageRegions.length_zero_of_no_mem", "Becoming.Reproduction.mem_flatMap_cases"]}
+{"name": "Becoming.LineageDrawdown.no_term_of_drawdown", "uses": ["Becoming.LineageDrawdown.ends_of_drawdown"]}

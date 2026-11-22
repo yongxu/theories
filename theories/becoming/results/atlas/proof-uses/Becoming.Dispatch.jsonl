@@ -1,0 +1,33 @@
+{"name": "Becoming.Dispatch.absent_route_fails", "uses": ["Becoming.Dispatch.dispatch_absent"]}
+{"name": "Becoming.Dispatch.acquire_exact", "uses": ["Becoming.Dispatch.acquire_some", "Becoming.Naturals.sub_add_cancel", "Becoming.TreeSearch.scan_fuel"]}
+{"name": "Becoming.Dispatch.acquire_reads_run", "uses": ["Becoming.Dispatch.acquire_exact", "Becoming.TreeSearch.run_reads_discover"]}
+{"name": "Becoming.Dispatch.acquire_some", "uses": ["Becoming.Actuation.draw_some", "Becoming.TreeSearch.scan_fuel"]}
+{"name": "Becoming.Dispatch.acquired_execution", "uses": ["Becoming.Dispatch.acquire_some", "Becoming.Dispatch.dispatch_completes", "Becoming.Naturals.le_of_add_le_right", "Becoming.Naturals.le_sub_of_add_le", "Becoming.Naturals.sub_add_cancel", "Becoming.TreeSearch.discover_sound", "Becoming.TreeSearch.scan_fuel"]}
+{"name": "Becoming.Dispatch.acquired_step_stops", "uses": ["Becoming.Dispatch.acquired_then_shutdown", "Becoming.ListTests.map_eq_some"]}
+{"name": "Becoming.Dispatch.acquired_then_shutdown", "uses": []}
+{"name": "Becoming.Dispatch.act_of_accept", "uses": []}
+{"name": "Becoming.Dispatch.act_of_none", "uses": []}
+{"name": "Becoming.Dispatch.act_of_reject", "uses": []}
+{"name": "Becoming.Dispatch.act_succeeded", "uses": ["Becoming.Dispatch.act_of_none", "Becoming.Dispatch.act_of_reject"]}
+{"name": "Becoming.Dispatch.add_three_assoc", "uses": []}
+{"name": "Becoming.Dispatch.captured_epoch_passes", "uses": []}
+{"name": "Becoming.Dispatch.captured_passes", "uses": ["Becoming.Dispatch.captured_epoch_passes"]}
+{"name": "Becoming.Dispatch.changed_epoch_step_fails", "uses": ["Becoming.Dispatch.revoked_keeps_drawn", "Becoming.ListTests.map_eq_some"]}
+{"name": "Becoming.Dispatch.changed_route_rejects_stale_ticket", "uses": []}
+{"name": "Becoming.Dispatch.discovery_then_dispatch", "uses": ["Becoming.Dispatch.acquired_execution", "Becoming.Naturals.two_mul", "Becoming.TreeSearch.inhabited_discovered", "Becoming.TreeSearch.located_depth_le"]}
+{"name": "Becoming.Dispatch.dispatch_absent", "uses": ["Becoming.Dispatch.act_of_none", "Becoming.Dispatch.dispatch_of_none", "Becoming.Dispatch.dispatch_of_some"]}
+{"name": "Becoming.Dispatch.dispatch_completes", "uses": ["Becoming.Actuation.draw_some", "Becoming.Actuation.protocol_exact", "Becoming.Dispatch.act_of_accept", "Becoming.Dispatch.dispatch_of_some", "Becoming.Naturals.le_of_add_le_right", "Becoming.Naturals.le_sub_of_add_le", "Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.Dispatch.dispatch_of_none", "uses": []}
+{"name": "Becoming.Dispatch.dispatch_of_some", "uses": []}
+{"name": "Becoming.Dispatch.dispatch_revoked", "uses": ["Becoming.Actuation.draw_eq_some", "Becoming.Dispatch.act_succeeded", "Becoming.Dispatch.dispatch_of_none", "Becoming.Dispatch.dispatch_of_some"]}
+{"name": "Becoming.Dispatch.dispatch_succeeded_current", "uses": ["Becoming.Actuation.draw_eq_some", "Becoming.Dispatch.act_succeeded", "Becoming.Dispatch.dispatch_of_none", "Becoming.Dispatch.dispatch_of_some"]}
+{"name": "Becoming.Dispatch.found_short_of_reserve", "uses": []}
+{"name": "Becoming.Dispatch.renewed_epoch_recovers", "uses": []}
+{"name": "Becoming.Dispatch.renewed_search_step_succeeds", "uses": ["Becoming.Dispatch.renewed_epoch_recovers", "Becoming.ListTests.map_eq_some"]}
+{"name": "Becoming.Dispatch.revoked_fails", "uses": ["Becoming.Dispatch.dispatch_revoked"]}
+{"name": "Becoming.Dispatch.revoked_keeps_drawn", "uses": []}
+{"name": "Becoming.Dispatch.search_then_dispatch", "uses": ["Becoming.Dispatch.discovery_then_dispatch", "Becoming.TreeSearch.run_reads_discover"]}
+{"name": "Becoming.Dispatch.short_step_fails", "uses": ["Becoming.Dispatch.found_short_of_reserve", "Becoming.ListTests.map_eq_some"]}
+{"name": "Becoming.Dispatch.stale_ticket_fails", "uses": ["Becoming.Dispatch.changed_route_rejects_stale_ticket"]}
+{"name": "Becoming.Dispatch.step_iff", "uses": []}
+{"name": "Becoming.Dispatch.succeeded_current", "uses": ["Becoming.Dispatch.dispatch_succeeded_current"]}

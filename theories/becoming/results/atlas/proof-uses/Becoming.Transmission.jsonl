@@ -1,0 +1,88 @@
+{"name": "Becoming.Drawdown.carried", "uses": ["Becoming.Drawdown.acting", "Becoming.Drawdown.dependent", "Becoming.Drawdown.descends_same", "Becoming.Drawdown.same_unsupported", "Becoming.Drawdown.transmits", "Becoming.Flow.transmitted_supported"]}
+{"name": "Becoming.Flow.DependsOnDrawn.drop", "uses": []}
+{"name": "Becoming.Flow.DependsOnDrawn.formsAnew", "uses": ["Becoming.Web.formsAnew_iff_drawn_unheld"]}
+{"name": "Becoming.Flow.DependsOnDrawn.none_formsAnew", "uses": ["Becoming.Flow.inherits_of_drawn"]}
+{"name": "Becoming.Flow.DependsOnFed.drop", "uses": []}
+{"name": "Becoming.Flow.Inherits.formsFromDrawn", "uses": []}
+{"name": "Becoming.Flow.Inherits.from_giver", "uses": ["Becoming.Flow.inherited_from_giver"]}
+{"name": "Becoming.Flow.TransmitsWithin.fromSome", "uses": ["Becoming.Flow.descends_of_comes"]}
+{"name": "Becoming.Flow.dependsOnDrawn_iff", "uses": ["Becoming.Flow.inherits_of_drawn"]}
+{"name": "Becoming.Flow.dependsOnDrawn_iff_at", "uses": []}
+{"name": "Becoming.Flow.dependsOnDrawn_iff_split", "uses": ["Becoming.Web.dependsOnDrawnAt_iff"]}
+{"name": "Becoming.Flow.dependsOnDrawn_of_fed", "uses": []}
+{"name": "Becoming.Flow.descendant_supported_at", "uses": []}
+{"name": "Becoming.Flow.descends_of_comes", "uses": ["Becoming.Flow.BalancesOn.rise_given", "Becoming.Web.ComesToStand.rises", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.drawn_by_giver", "uses": ["Becoming.Flow.descends_of_comes"]}
+{"name": "Becoming.Flow.drop_untransmitted", "uses": ["Becoming.Web.drop_not_inherits"]}
+{"name": "Becoming.Flow.embodied_descendant", "uses": ["Becoming.Flow.descendant_supported_at"]}
+{"name": "Becoming.Flow.formed_from_drawing", "uses": ["Becoming.Flow.drawn_by_giver"]}
+{"name": "Becoming.Flow.forms_from_giver", "uses": ["Becoming.Flow.inherited_from_giver"]}
+{"name": "Becoming.Flow.fromSome_supported", "uses": ["Becoming.Flow.DescendsAt.supported", "Becoming.Flow.transmitted_supported_at"]}
+{"name": "Becoming.Flow.fromSome_within", "uses": ["Becoming.Flow.DescendsAt.supported", "Becoming.Flow.transmitted_within_at"]}
+{"name": "Becoming.Flow.inherited_from_giver", "uses": ["Becoming.Flow.descends_of_comes"]}
+{"name": "Becoming.Flow.inherited_supported", "uses": ["Becoming.Flow.DescendsAt.supported", "Becoming.Flow.inherited_supported_at"]}
+{"name": "Becoming.Flow.inherited_supported_at", "uses": ["Becoming.Flow.transmitted_supported_at", "Becoming.Web.transmits_at_iff"]}
+{"name": "Becoming.Flow.inherited_within", "uses": ["Becoming.Flow.DescendsAt.supported", "Becoming.Flow.inherited_within_at"]}
+{"name": "Becoming.Flow.inherited_within_at", "uses": ["Becoming.Flow.transmitted_within_at", "Becoming.Web.transmits_at_iff"]}
+{"name": "Becoming.Flow.inherits_iff_none_undrawn", "uses": ["Becoming.Flow.dependsOnDrawn_iff", "Becoming.Flow.inherits_of_drawn", "Becoming.Web.formsAnew_iff_undrawn", "Becoming.Web.inheritsAt_iff_not_formsAnew"]}
+{"name": "Becoming.Flow.inherits_of_drawn", "uses": []}
+{"name": "Becoming.Flow.inherits_of_fed", "uses": ["Becoming.Flow.dependsOnDrawn_of_fed", "Becoming.Flow.inherits_of_drawn"]}
+{"name": "Becoming.Flow.needsWithin_of_embodied", "uses": ["Becoming.Web.needsWithinAt_of_supported"]}
+{"name": "Becoming.Flow.no_dependence_undrawn", "uses": ["Becoming.Flow.drawn_by_giver"]}
+{"name": "Becoming.Flow.no_new_dependence", "uses": ["Becoming.Flow.inherited_from_giver"]}
+{"name": "Becoming.Flow.transmitsWithin_iff", "uses": ["Becoming.Web.transmits_at_iff"]}
+{"name": "Becoming.Flow.transmitsWithin_iff_forming", "uses": ["Becoming.Flow.transmitsWithin_iff", "Becoming.Web.inheritsAt_iff_forming"]}
+{"name": "Becoming.Flow.transmitsWithin_iff_split", "uses": ["Becoming.Flow.transmitsWithin_iff", "Becoming.Web.InheritsAt.split", "Becoming.Web.inheritsAt_of_split"]}
+{"name": "Becoming.Split.descends", "uses": []}
+{"name": "Becoming.TwoGivers.acting", "uses": []}
+{"name": "Becoming.TwoGivers.balances", "uses": []}
+{"name": "Becoming.TwoGivers.comes_child", "uses": []}
+{"name": "Becoming.TwoGivers.dependent", "uses": []}
+{"name": "Becoming.TwoGivers.descends_first", "uses": []}
+{"name": "Becoming.TwoGivers.descends_second", "uses": []}
+{"name": "Becoming.TwoGivers.passed_undrawn", "uses": ["Becoming.TwoGivers.acting", "Becoming.TwoGivers.balances", "Becoming.TwoGivers.dependent", "Becoming.TwoGivers.descends_first"]}
+{"name": "Becoming.TwoGivers.twofold", "uses": ["Becoming.Flow.fromSome_supported", "Becoming.TwoGivers.acting", "Becoming.TwoGivers.balances", "Becoming.TwoGivers.comes_child", "Becoming.TwoGivers.dependent", "Becoming.TwoGivers.descends_first", "Becoming.TwoGivers.descends_second"]}
+{"name": "Becoming.Web.DependsOnDrawnAt.not_formsAnew", "uses": []}
+{"name": "Becoming.Web.DependsOnDrawnAt.not_undrawn", "uses": []}
+{"name": "Becoming.Web.InheritsAt.split", "uses": []}
+{"name": "Becoming.Web.dependsOnDrawnAt_iff", "uses": []}
+{"name": "Becoming.Web.drawn_necessary_iff", "uses": []}
+{"name": "Becoming.Web.drop_dependent", "uses": ["Becoming.Web.drop_supported"]}
+{"name": "Becoming.Web.drop_keeps_next", "uses": []}
+{"name": "Becoming.Web.drop_not_inherits", "uses": ["Becoming.Web.drop_keeps_next"]}
+{"name": "Becoming.Web.drop_supported", "uses": []}
+{"name": "Becoming.Web.formsAnew_iff_drawn_or_neither", "uses": []}
+{"name": "Becoming.Web.formsAnew_iff_drawn_unheld", "uses": []}
+{"name": "Becoming.Web.formsAnew_iff_neither", "uses": []}
+{"name": "Becoming.Web.formsAnew_iff_undrawn", "uses": []}
+{"name": "Becoming.Web.four_cases", "uses": []}
+{"name": "Becoming.Web.inheritsAt_iff_forming", "uses": []}
+{"name": "Becoming.Web.inheritsAt_iff_held", "uses": []}
+{"name": "Becoming.Web.inheritsAt_iff_not_formsAnew", "uses": []}
+{"name": "Becoming.Web.inheritsAt_not_not", "uses": []}
+{"name": "Becoming.Web.inheritsAt_of_split", "uses": []}
+{"name": "Becoming.Web.needsWithinAt_of_supported", "uses": []}
+{"name": "Becoming.Web.transmits_at_iff", "uses": []}
+{"name": "Becoming.World.Finite.level_le", "uses": ["Becoming.World.stock_le_start", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.World.bearingHatch_derived", "uses": ["Becoming.World.FiniteHatch.taking_part", "Becoming.World.finiteHatch_balanced", "Becoming.World.finiteHatch_dissipative", "Becoming.World.finiteHatch_finite", "Becoming.World.transmitting_of_drawn"]}
+{"name": "Becoming.World.drawn_and_link_needed", "uses": ["Becoming.World.drawn_without_link", "Becoming.World.link_without_drawn", "Becoming.World.novel_but", "Becoming.World.novel_finite"]}
+{"name": "Becoming.World.drawn_not_enough", "uses": ["Becoming.Flow.DependsOnDrawn.drop", "Becoming.World.Premised.meets", "Becoming.World.drop_finite", "Becoming.World.drop_holds", "Becoming.World.finiteHatch_binds_but_census", "Becoming.World.finiteHatch_drawn", "Becoming.World.finiteHatch_finite", "Becoming.World.finiteHatch_premised", "Becoming.World.vacuous_of_drop_invariant"]}
+{"name": "Becoming.World.drawn_without_link", "uses": ["Becoming.Flow.DependsOnDrawn.drop", "Becoming.Web.drop_not_inherits", "Becoming.World.finiteHatch_descends", "Becoming.World.finiteHatch_drawn", "Becoming.World.finiteHatch_pair"]}
+{"name": "Becoming.World.drop_but", "uses": ["Becoming.World.MeetsAllBut.of", "Becoming.World.drop_holds", "Becoming.World.drop_untransmitting"]}
+{"name": "Becoming.World.drop_finite", "uses": []}
+{"name": "Becoming.World.drop_holds", "uses": ["Becoming.Web.drop_dependent"]}
+{"name": "Becoming.World.drop_untransmitting", "uses": ["Becoming.Flow.drop_untransmitted"]}
+{"name": "Becoming.World.droppedHatch_formed", "uses": ["Becoming.Web.drop_keeps_next", "Becoming.World.drawn_without_link", "Becoming.World.finiteHatch_descends"]}
+{"name": "Becoming.World.finiteHatch_descends", "uses": []}
+{"name": "Becoming.World.finiteHatch_drawn", "uses": ["Becoming.World.FiniteHatch.taking_part"]}
+{"name": "Becoming.World.finiteHatch_pair", "uses": ["Becoming.World.MeetsAllBut.of", "Becoming.World.Premised.meets", "Becoming.World.drop_holds", "Becoming.World.drop_untransmitting", "Becoming.World.finiteHatch_descends", "Becoming.World.finiteHatch_finite", "Becoming.World.finiteHatch_premised"]}
+{"name": "Becoming.World.link_without_drawn", "uses": ["Becoming.World.novel_but", "Becoming.World.novel_finite"]}
+{"name": "Becoming.World.novel_formed_undrawn", "uses": ["Becoming.World.novel_but", "Becoming.World.novel_finite"]}
+{"name": "Becoming.World.stock_le_start", "uses": ["Becoming.Flow.Balances.runs_down"]}
+{"name": "Becoming.World.transmitting_iff_inherits", "uses": ["Becoming.World.Finite.level_le", "Becoming.World.transmitting_iff_inherits_bounded"]}
+{"name": "Becoming.World.transmitting_iff_inherits_bounded", "uses": ["Becoming.Flow.needsWithin_of_embodied", "Becoming.Flow.transmitsWithin_iff"]}
+{"name": "Becoming.World.transmitting_of_drawn", "uses": ["Becoming.Flow.inherits_of_drawn", "Becoming.World.transmitting_iff_inherits"]}
+{"name": "Becoming.World.transmitting_of_fed", "uses": ["Becoming.Flow.dependsOnDrawn_of_fed", "Becoming.World.transmitting_of_drawn"]}
+{"name": "Becoming.World.vacuous_of_drop_invariant", "uses": ["Becoming.World.drop_untransmitting"]}
+{"name": "Becoming.split_iff_em", "uses": ["Becoming.Split.descends", "Becoming.split_of_em"]}
+{"name": "Becoming.split_of_em", "uses": []}

@@ -1,0 +1,17 @@
+{"name": "Becoming.Clearing.reach_counts_dweller", "uses": ["Becoming.Clearing.admitted_without", "Becoming.Clearing.balances", "Becoming.Clearing.clearer_own", "Becoming.Clearing.reach_middle", "Becoming.Clearing.unsupported_with", "Becoming.Flow.Balances.comparison_within_reach", "Becoming.Flow.ReachesBefore.reaches", "Becoming.Flow.own_within_reach", "Becoming.Flow.reaches_withinReach", "Becoming.Web.Retains.not_added"]}
+{"name": "Becoming.Clearing.system_whole", "uses": ["Becoming.Clearing.clearer_system", "Becoming.Flow.WithinSystem.symm", "Becoming.Flow.bounded_system_whole", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Clearing.within_closure_yet_loses", "uses": ["Becoming.Clearing.admitted_without", "Becoming.Clearing.clearer_loses_dweller", "Becoming.Clearing.fedClosed", "Becoming.Clearing.loses_beyond", "Becoming.Clearing.unsupported_with", "Becoming.Flow.WithinFeeding.refl", "Becoming.Web.AdmitsWithin.narrow", "Becoming.Web.retains_bounded_iff"]}
+{"name": "Becoming.Flow.WithinFeedingFrom.earlier", "uses": ["Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Flow.bounded_system_whole", "uses": []}
+{"name": "Becoming.Flow.feedingFrom_parts", "uses": ["Becoming.Flow.feedingFrom_permits"]}
+{"name": "Becoming.Flow.feedingFrom_permits", "uses": ["Becoming.Flow.not_withinFeedingFrom"]}
+{"name": "Becoming.Flow.feeding_unrestricted_of_common", "uses": ["Becoming.Flow.feeding_whole_of_common"]}
+{"name": "Becoming.Flow.not_withinFeedingFrom", "uses": []}
+{"name": "Becoming.Flow.withinFeedingFrom_zero", "uses": ["Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Flow.within_closure_iff_retains", "uses": ["Becoming.Web.retains_bounded_iff_retains"]}
+{"name": "Becoming.Overshoot.within_closure_iff_retains", "uses": ["Becoming.Flow.within_closure_iff_retains", "Becoming.Overshoot.closure_whole"]}
+{"name": "Becoming.Trophic.mediated_uncoupled", "uses": ["Becoming.Flow.Balances.admits_unreached", "Becoming.Flow.Balances.opens_nothing", "Becoming.Trophic.balances", "Becoming.Trophic.deer_without_wolves", "Becoming.Trophic.mediates", "Becoming.Trophic.wolves_unreached", "Becoming.Web.Retains.not_added"]}
+{"name": "Becoming.Trophic.mixed_part", "uses": ["Becoming.Flow.WithheldLevels.unique", "Becoming.Trophic.farWolves_withheld", "Becoming.Trophic.far_system", "Becoming.Web.Retains.not_added"]}
+{"name": "Becoming.Trophic.responsive_mixed", "uses": ["Becoming.Web.Retains.not_added", "Becoming.Web.adds_iff_exceeds"]}
+{"name": "Becoming.Web.retains_bounded_iff_retains", "uses": ["Becoming.Web.retains_bounded_iff_includes", "Becoming.Web.retains_iff_includes"]}
+{"name": "Becoming.bounded_whole", "uses": []}

@@ -1,0 +1,127 @@
+{"name": "Becoming.LineageRegions.Chain.acting", "uses": ["Becoming.LineageRegions.Chain.give_other", "Becoming.LineageRegions.Chain.one_le_self"]}
+{"name": "Becoming.LineageRegions.Chain.chain", "uses": ["Becoming.LineageRegions.Chain.acting", "Becoming.LineageRegions.Chain.childless_degenerates", "Becoming.LineageRegions.Chain.dependent", "Becoming.LineageRegions.Chain.descended", "Becoming.LineageRegions.Chain.embodied", "Becoming.LineageRegions.Chain.exact", "Becoming.LineageRegions.Chain.family_succ", "Becoming.LineageRegions.Chain.first_supported", "Becoming.LineageRegions.Chain.number", "Becoming.LineageRegions.Chain.reproduces_from_one", "Becoming.LineageRegions.generation_of_positive_term", "Becoming.LineageRegions.generation_of_reproducing_supported", "Becoming.LineageRegions.unsupportedBefore_of_first", "Becoming.mem_cons_cases", "Becoming.«延尽不并»", "Becoming.«生成则延»"]}
+{"name": "Becoming.LineageRegions.Chain.childless_degenerates", "uses": ["Becoming.Naturals.succ_ne_zero", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.LineageRegions.Chain.children_other", "uses": []}
+{"name": "Becoming.LineageRegions.Chain.children_self", "uses": []}
+{"name": "Becoming.LineageRegions.Chain.dependent", "uses": []}
+{"name": "Becoming.LineageRegions.Chain.descended", "uses": ["Becoming.LineageRegions.Chain.descends", "Becoming.LineageRegions.Chain.kid_eq"]}
+{"name": "Becoming.LineageRegions.Chain.descends", "uses": ["Becoming.LineageRegions.Chain.give_self", "Becoming.LineageRegions.Chain.level_next", "Becoming.LineageRegions.Chain.one_le_self"]}
+{"name": "Becoming.LineageRegions.Chain.embodied", "uses": []}
+{"name": "Becoming.LineageRegions.Chain.exact", "uses": ["Becoming.LineageRegions.Chain.children_self", "Becoming.LineageRegions.Chain.kid_eq"]}
+{"name": "Becoming.LineageRegions.Chain.family_succ", "uses": ["Becoming.LineageRegions.Chain.children_self"]}
+{"name": "Becoming.LineageRegions.Chain.first_supported", "uses": ["Becoming.LineageRegions.Chain.first_supported_from_zero", "Becoming.LineageRegions.Chain.kid_eq"]}
+{"name": "Becoming.LineageRegions.Chain.first_supported_from_zero", "uses": ["Becoming.LineageRegions.Chain.one_le_self"]}
+{"name": "Becoming.LineageRegions.Chain.give_other", "uses": []}
+{"name": "Becoming.LineageRegions.Chain.give_self", "uses": []}
+{"name": "Becoming.LineageRegions.Chain.kid_eq", "uses": ["Becoming.LineageRegions.Chain.children_other", "Becoming.LineageRegions.Chain.children_self", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.LineageRegions.Chain.kinds_apart", "uses": ["Becoming.Flow.DescendsAt.active", "Becoming.LineageRegions.Chain.acting", "Becoming.LineageRegions.Chain.family_succ", "Becoming.LineageRegions.Chain.stands_once"]}
+{"name": "Becoming.LineageRegions.Chain.level_next", "uses": ["Becoming.Naturals.succ_ne_zero"]}
+{"name": "Becoming.LineageRegions.Chain.level_self", "uses": []}
+{"name": "Becoming.LineageRegions.Chain.number", "uses": []}
+{"name": "Becoming.LineageRegions.Chain.one_le_self", "uses": ["Becoming.LineageRegions.Chain.level_self"]}
+{"name": "Becoming.LineageRegions.Chain.reproduces_from_one", "uses": ["Becoming.LineageRegions.Chain.children_self", "Becoming.LineageRegions.Chain.family_succ", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.LineageRegions.Chain.stands_once", "uses": ["Becoming.Naturals.succ_ne_zero"]}
+{"name": "Becoming.LineageRegions.Courses.acting", "uses": ["Becoming.LineageRegions.Courses.born_on", "Becoming.LineageRegions.Courses.fst_of_mem", "Becoming.LineageRegions.Courses.give_pos", "Becoming.LineageRegions.Courses.level_own"]}
+{"name": "Becoming.LineageRegions.Courses.always_down", "uses": []}
+{"name": "Becoming.LineageRegions.Courses.born_off", "uses": []}
+{"name": "Becoming.LineageRegions.Courses.born_on", "uses": []}
+{"name": "Becoming.LineageRegions.Courses.descended", "uses": ["Becoming.LineageRegions.Courses.descends", "Becoming.LineageRegions.Courses.fst_of_mem", "Becoming.LineageRegions.Courses.mem_cond", "Becoming.LineageRegions.Courses.member_of", "Becoming.bool_of_and_true"]}
+{"name": "Becoming.LineageRegions.Courses.descends", "uses": ["Becoming.LineageRegions.Courses.born_on", "Becoming.LineageRegions.Courses.level_other", "Becoming.LineageRegions.Courses.level_own"]}
+{"name": "Becoming.LineageRegions.Courses.embodied", "uses": []}
+{"name": "Becoming.LineageRegions.Courses.family_of", "uses": ["Becoming.LineageRegions.Courses.kids_marked"]}
+{"name": "Becoming.LineageRegions.Courses.fst_of_mem", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.LineageRegions.Courses.give_pos", "uses": ["Becoming.Thresholds.cond_pos", "Becoming.bool_of_and_true"]}
+{"name": "Becoming.LineageRegions.Courses.kids_marked", "uses": []}
+{"name": "Becoming.LineageRegions.Courses.kids_off", "uses": []}
+{"name": "Becoming.LineageRegions.Courses.level_other", "uses": []}
+{"name": "Becoming.LineageRegions.Courses.level_own", "uses": []}
+{"name": "Becoming.LineageRegions.Courses.marked_generates", "uses": ["Becoming.LineageRegions.Courses.acting", "Becoming.LineageRegions.Courses.always_down", "Becoming.LineageRegions.Courses.descends", "Becoming.LineageRegions.Courses.embodied", "Becoming.LineageRegions.descent_carries", "Becoming.LineageRegions.generation_of_carrying"]}
+{"name": "Becoming.LineageRegions.Courses.mem_cond", "uses": []}
+{"name": "Becoming.LineageRegions.Courses.mem_of_fst", "uses": []}
+{"name": "Becoming.LineageRegions.Courses.member_of", "uses": ["Becoming.LineageRegions.Courses.born_on", "Becoming.LineageRegions.Courses.fst_of_mem", "Becoming.LineageRegions.Courses.mem_cond", "Becoming.ListTests.mem_flatMap_iff", "Becoming.bool_of_and_true"]}
+{"name": "Becoming.LineageRegions.Courses.only_kids", "uses": ["Becoming.LineageRegions.Courses.give_pos", "Becoming.LineageRegions.Courses.kids_marked", "Becoming.LineageRegions.Courses.level_other", "Becoming.LineageRegions.Courses.level_own", "Becoming.LineageRegions.Courses.mem_of_fst", "Becoming.LineageRegions.Courses.member_of", "Becoming.LineageRegions.kids_of_census"]}
+{"name": "Becoming.LineageRegions.Courses.positive_and_degenerate_at_own_kind", "uses": ["Becoming.LineageRegions.Courses.fst_of_mem", "Becoming.LineageRegions.Courses.mem_cond", "Becoming.LineageRegions.Courses.member_of", "Becoming.LineageRegions.Courses.only_kids", "Becoming.LineageRegions.Courses.positive_throughout"]}
+{"name": "Becoming.LineageRegions.Courses.positive_but_last", "uses": ["Becoming.LineageRegions.Courses.acting", "Becoming.LineageRegions.Courses.descended", "Becoming.LineageRegions.Courses.descends", "Becoming.LineageRegions.Courses.embodied", "Becoming.LineageRegions.Courses.family_of", "Becoming.LineageRegions.Courses.only_kids", "Becoming.LineageRegions.Courses.terms_off", "Becoming.LineageRegions.Courses.terms_on", "Becoming.LineageRegions.Courses.upTo_degenerates", "Becoming.LineageRegions.Courses.upTo_down", "Becoming.LineageRegions.Courses.upTo_empty", "Becoming.LineageRegions.Courses.upTo_off", "Becoming.LineageRegions.Courses.upTo_on", "Becoming.LineageRegions.descent_carries", "Becoming.LineageRegions.kids_continue"]}
+{"name": "Becoming.LineageRegions.Courses.positive_throughout", "uses": ["Becoming.LineageRegions.Courses.acting", "Becoming.LineageRegions.Courses.always_down", "Becoming.LineageRegions.Courses.descended", "Becoming.LineageRegions.Courses.embodied", "Becoming.LineageRegions.Courses.terms_on", "Becoming.LineageRegions.kids_continue"]}
+{"name": "Becoming.LineageRegions.Courses.same_terms_two_fates", "uses": ["Becoming.LineageRegions.Courses.acting", "Becoming.LineageRegions.Courses.always_down", "Becoming.LineageRegions.Courses.descended", "Becoming.LineageRegions.Courses.embodied", "Becoming.LineageRegions.Courses.family_of", "Becoming.LineageRegions.Courses.marked_generates", "Becoming.LineageRegions.Courses.terms_on", "Becoming.LineageRegions.Courses.upTo_degenerates", "Becoming.LineageRegions.Courses.upTo_down", "Becoming.LineageRegions.Courses.upTo_on"]}
+{"name": "Becoming.LineageRegions.Courses.terms_off", "uses": ["Becoming.LineageRegions.Courses.kids_off", "Becoming.SelectionTerm.concord_uniform", "Becoming.SelectionTerm.discord_uniform"]}
+{"name": "Becoming.LineageRegions.Courses.terms_on", "uses": ["Becoming.LineageRegions.Courses.family_of"]}
+{"name": "Becoming.LineageRegions.Courses.upTo_degenerates", "uses": ["Becoming.LineageRegions.Courses.only_kids", "Becoming.LineageRegions.Courses.upTo_empty", "Becoming.LineageRegions.degeneration_of_empty", "Becoming.LineageRegions.listed_of_kids"]}
+{"name": "Becoming.LineageRegions.Courses.upTo_down", "uses": []}
+{"name": "Becoming.LineageRegions.Courses.upTo_empty", "uses": ["Becoming.LineageRegions.Courses.born_off", "Becoming.LineageRegions.Courses.member_of", "Becoming.LineageRegions.Courses.upTo_off", "Becoming.LineageRegions.length_zero_of_no_mem"]}
+{"name": "Becoming.LineageRegions.Courses.upTo_off", "uses": []}
+{"name": "Becoming.LineageRegions.Courses.upTo_on", "uses": []}
+{"name": "Becoming.LineageRegions.Lasting.acting", "uses": []}
+{"name": "Becoming.LineageRegions.Lasting.balances", "uses": []}
+{"name": "Becoming.LineageRegions.Lasting.descended", "uses": ["Becoming.LineageRegions.OneBirth.listed_birth"]}
+{"name": "Becoming.LineageRegions.Lasting.dissipates", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.LineageRegions.Lasting.goes_on", "uses": ["Becoming.LineageRegions.Lasting.acting", "Becoming.LineageRegions.descent_continues"]}
+{"name": "Becoming.LineageRegions.Lasting.lasting", "uses": ["Becoming.LineageRegions.Lasting.acting", "Becoming.LineageRegions.Lasting.balances", "Becoming.LineageRegions.Lasting.descended", "Becoming.LineageRegions.Lasting.dissipates", "Becoming.LineageRegions.Lasting.goes_on", "Becoming.LineageRegions.OneBirth.listed_birth", "Becoming.LineageRegions.degeneration_of_dissipation", "Becoming.Reproduction.Flow.lineage_ends", "Becoming.«延尽不并»"]}
+{"name": "Becoming.LineageRegions.ListedDescendant.brecOn", "uses": []}
+{"name": "Becoming.LineageRegions.ListedDescendant.of_succ", "uses": []}
+{"name": "Becoming.LineageRegions.ListedDescendant.snoc", "uses": ["Becoming.LineageRegions.ListedDescendant.brecOn"]}
+{"name": "Becoming.LineageRegions.OneBirth.acting", "uses": []}
+{"name": "Becoming.LineageRegions.OneBirth.balances", "uses": []}
+{"name": "Becoming.LineageRegions.OneBirth.descended", "uses": ["Becoming.LineageRegions.OneBirth.descends", "Becoming.LineageRegions.OneBirth.listed_birth"]}
+{"name": "Becoming.LineageRegions.OneBirth.descends", "uses": []}
+{"name": "Becoming.LineageRegions.OneBirth.dissipates", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.LineageRegions.OneBirth.dormant_goes_on_at_support", "uses": []}
+{"name": "Becoming.LineageRegions.OneBirth.embodied", "uses": []}
+{"name": "Becoming.LineageRegions.OneBirth.family_two", "uses": []}
+{"name": "Becoming.LineageRegions.OneBirth.listed", "uses": ["Becoming.LineageRegions.OneBirth.family_two", "Becoming.LineageRegions.listed_of_census", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.LineageRegions.OneBirth.listed_birth", "uses": ["Becoming.LineageRegions.OneBirth.family_two", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.LineageRegions.OneBirth.one_birth", "uses": ["Becoming.LineageRegions.OneBirth.acting", "Becoming.LineageRegions.OneBirth.balances", "Becoming.LineageRegions.OneBirth.descended", "Becoming.LineageRegions.OneBirth.dissipates", "Becoming.LineageRegions.OneBirth.embodied", "Becoming.LineageRegions.OneBirth.listed", "Becoming.LineageRegions.OneBirth.listed_birth", "Becoming.LineageRegions.OneBirth.stock", "Becoming.LineageRegions.degeneration_of_dissipation", "Becoming.LineageRegions.descended_carries"]}
+{"name": "Becoming.LineageRegions.OneBirth.stock", "uses": []}
+{"name": "Becoming.LineageRegions.RelayRead.acting", "uses": []}
+{"name": "Becoming.LineageRegions.RelayRead.dependent", "uses": ["Becoming.LineageRegions.RelayRead.supported"]}
+{"name": "Becoming.LineageRegions.RelayRead.descent_not_birth", "uses": ["Becoming.LineageRegions.RelayRead.acting", "Becoming.LineageRegions.RelayRead.dependent", "Becoming.LineageRegions.RelayRead.supported", "Becoming.LineageRegions.carries_iff", "Becoming.LineageRegions.descent_continues", "Becoming.LineageRegions.descent_continues_supported", "Becoming.LineageRegions.nothing_carries_of_always_supported", "Becoming.Reproduction.Relay.descended", "Becoming.Reproduction.Relay.descends"]}
+{"name": "Becoming.LineageRegions.RelayRead.supported", "uses": []}
+{"name": "Becoming.LineageRegions.StandingRelay.acting", "uses": ["Becoming.SelectionTerm.pos_of_mul_pos"]}
+{"name": "Becoming.LineageRegions.StandingRelay.dependent", "uses": ["Becoming.LineageRegions.StandingRelay.supported"]}
+{"name": "Becoming.LineageRegions.StandingRelay.descended", "uses": ["Becoming.Reproduction.Relay.descended"]}
+{"name": "Becoming.LineageRegions.StandingRelay.embodied", "uses": []}
+{"name": "Becoming.LineageRegions.StandingRelay.grain_decides_region", "uses": ["Becoming.LineageRegions.StandingRelay.acting", "Becoming.LineageRegions.StandingRelay.dependent", "Becoming.LineageRegions.StandingRelay.descended", "Becoming.LineageRegions.StandingRelay.embodied", "Becoming.LineageRegions.StandingRelay.supported", "Becoming.LineageRegions.descent_continues_supported", "Becoming.LineageRegions.generation_of_reproducing", "Becoming.LineageRegions.nothing_carries_of_always_supported", "Becoming.ListTests.mem_flatMap_iff"]}
+{"name": "Becoming.LineageRegions.StandingRelay.supported", "uses": []}
+{"name": "Becoming.LineageRegions.active_along_kind", "uses": ["Becoming.Web.active_along_line", "Becoming.«及之单调»"]}
+{"name": "Becoming.LineageRegions.carries_iff", "uses": []}
+{"name": "Becoming.LineageRegions.carries_iff_via_base", "uses": []}
+{"name": "Becoming.LineageRegions.carrying_descends", "uses": ["Becoming.LineageRegions.carries_iff"]}
+{"name": "Becoming.LineageRegions.common_bound", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.LineageRegions.degenerates_iff_line_ends", "uses": ["Becoming.LineageRegions.ends_of_line_ends", "Becoming.LineageRegions.line_ends"]}
+{"name": "Becoming.LineageRegions.degeneration_of_dissipation", "uses": ["Becoming.LineageRegions.degeneration_of_empty", "Becoming.Reproduction.Flow.lineage_ends"]}
+{"name": "Becoming.LineageRegions.degeneration_of_empty", "uses": ["Becoming.LineageRegions.reached_listed", "Becoming.Web.ends_of_ends_at", "Becoming.nil_of_length_zero"]}
+{"name": "Becoming.LineageRegions.descended_carries", "uses": ["Becoming.LineageRegions.descent_carries"]}
+{"name": "Becoming.LineageRegions.descended_carries_supported", "uses": ["Becoming.LineageRegions.descent_carries_supported"]}
+{"name": "Becoming.LineageRegions.descent_carries", "uses": ["Becoming.Flow.DescendsAt.active", "Becoming.LineageRegions.carries_iff"]}
+{"name": "Becoming.LineageRegions.descent_carries_supported", "uses": ["Becoming.Flow.DescendsAt.supported", "Becoming.LineageRegions.supported_carries_iff"]}
+{"name": "Becoming.LineageRegions.descent_continues", "uses": ["Becoming.Flow.DescendsAt.active"]}
+{"name": "Becoming.LineageRegions.descent_continues_supported", "uses": ["Becoming.Flow.DescendsAt.supported"]}
+{"name": "Becoming.LineageRegions.empty_of_degenerates", "uses": ["Becoming.LineageRegions.common_bound", "Becoming.LineageRegions.family_descendant", "Becoming.LineageRegions.length_zero_of_no_mem", "Becoming.LineageRegions.line_ends"]}
+{"name": "Becoming.LineageRegions.ends_of_line_ends", "uses": ["Becoming.ListTests.mem_flatMap_iff"]}
+{"name": "Becoming.LineageRegions.family_descendant", "uses": ["Becoming.LineageRegions.ListedDescendant.snoc", "Becoming.ListTests.mem_flatMap_iff"]}
+{"name": "Becoming.LineageRegions.firstSupported_iff_step", "uses": []}
+{"name": "Becoming.LineageRegions.generation_degenerates_iff", "uses": ["Becoming.LineageRegions.degeneration_of_empty", "Becoming.LineageRegions.empty_of_degenerates"]}
+{"name": "Becoming.LineageRegions.generation_of_carrying", "uses": []}
+{"name": "Becoming.LineageRegions.generation_of_exact", "uses": ["Becoming.LineageRegions.descended_carries", "Becoming.LineageRegions.generation_of_carrying", "Becoming.ListTests.mem_flatMap_iff", "Becoming.Reproduction.exists_mem_of_length_pos"]}
+{"name": "Becoming.LineageRegions.generation_of_positive_term", "uses": ["Becoming.LineageRegions.generation_of_exact", "Becoming.SelectionShift.pos_weight_of_concord"]}
+{"name": "Becoming.LineageRegions.generation_of_reproducing", "uses": ["Becoming.LineageRegions.descended_carries", "Becoming.LineageRegions.generation_of_carrying", "Becoming.ListTests.mem_flatMap_iff"]}
+{"name": "Becoming.LineageRegions.generation_of_reproducing_supported", "uses": ["Becoming.LineageRegions.descended_carries_supported", "Becoming.LineageRegions.generation_of_carrying", "Becoming.ListTests.mem_flatMap_iff"]}
+{"name": "Becoming.LineageRegions.kids_continue", "uses": ["Becoming.LineageRegions.descent_continues"]}
+{"name": "Becoming.LineageRegions.kids_continue_supported", "uses": ["Becoming.LineageRegions.descent_continues_supported"]}
+{"name": "Becoming.LineageRegions.kids_of_census", "uses": []}
+{"name": "Becoming.LineageRegions.length_zero_of_no_mem", "uses": []}
+{"name": "Becoming.LineageRegions.line_ends", "uses": ["Becoming.LineageRegions.ListedDescendant.of_succ", "Becoming.LineageRegions.common_bound", "Becoming.ListTests.mem_flatMap_iff", "Becoming.le_dest"]}
+{"name": "Becoming.LineageRegions.line_listed", "uses": ["Becoming.«及».brecOn"]}
+{"name": "Becoming.LineageRegions.listed_of_census", "uses": ["Becoming.LineageRegions.kids_of_census", "Becoming.LineageRegions.listed_of_kids"]}
+{"name": "Becoming.LineageRegions.listed_of_kids", "uses": ["Becoming.ListTests.mem_flatMap_iff"]}
+{"name": "Becoming.LineageRegions.nonempty_of_positive", "uses": ["Becoming.LineageRegions.reproducing_of_term", "Becoming.ListTests.mem_flatMap_iff", "Becoming.le_dest", "Becoming.length_pos_of_mem"]}
+{"name": "Becoming.LineageRegions.nonempty_while", "uses": ["Becoming.LineageRegions.reproducing_of_term", "Becoming.ListTests.mem_flatMap_iff", "Becoming.length_pos_of_mem"]}
+{"name": "Becoming.LineageRegions.not_all_degenerate_of_nonempty", "uses": ["Becoming.LineageRegions.empty_of_degenerates"]}
+{"name": "Becoming.LineageRegions.not_all_degenerate_of_positive", "uses": ["Becoming.LineageRegions.nonempty_of_positive", "Becoming.LineageRegions.not_all_degenerate_of_nonempty"]}
+{"name": "Becoming.LineageRegions.not_all_degenerate_while", "uses": ["Becoming.LineageRegions.nonempty_while", "Becoming.LineageRegions.not_all_degenerate_of_nonempty", "Becoming.le_dest"]}
+{"name": "Becoming.LineageRegions.nothing_carries_of_always_supported", "uses": []}
+{"name": "Becoming.LineageRegions.reached_listed", "uses": ["Becoming.LineageRegions.line_listed"]}
+{"name": "Becoming.LineageRegions.reproducing_of_term", "uses": ["Becoming.Reproduction.exists_mem_of_length_pos", "Becoming.SelectionShift.Generations.reproducing_of_selection"]}
+{"name": "Becoming.LineageRegions.supportedAfter_of_unsupportedBefore", "uses": []}
+{"name": "Becoming.LineageRegions.supported_carries_iff", "uses": ["Becoming.LineageRegions.carries_iff"]}
+{"name": "Becoming.LineageRegions.unsupportedBefore_of_first", "uses": ["Becoming.LineageRegions.firstSupported_iff_step"]}

@@ -1,0 +1,42 @@
+{"name": "Becoming.Continuity.Teleport.balanced_together", "uses": ["Becoming.Continuity.Teleport.conserves", "Becoming.Continuity.Teleport.distinct", "Becoming.Continuity.Teleport.reads", "Becoming.Continuity.conservedOn_of_law", "Becoming.Continuity.route_balancing"]}
+{"name": "Becoming.Continuity.Teleport.conserves", "uses": []}
+{"name": "Becoming.Continuity.Teleport.distinct", "uses": ["Becoming.ListTests.not_mem_nil"]}
+{"name": "Becoming.Continuity.Teleport.no_transfers_apart", "uses": ["Becoming.Continuity.conserved_of_balancing"]}
+{"name": "Becoming.Continuity.Teleport.reads", "uses": []}
+{"name": "Becoming.Continuity.adj_symm", "uses": []}
+{"name": "Becoming.Continuity.balancesOn_iff_conserved", "uses": ["Becoming.Continuity.balancing_iff", "Becoming.Continuity.route_balancing"]}
+{"name": "Becoming.Continuity.balancesOn_of_law", "uses": ["Becoming.Continuity.conservedOn_of_law", "Becoming.Continuity.route_balancing", "Becoming.total_congr_on"]}
+{"name": "Becoming.Continuity.balances_of_conserved", "uses": ["Becoming.Continuity.route_balancing"]}
+{"name": "Becoming.Continuity.balancing_iff", "uses": ["Becoming.Continuity.conserved_of_balancing", "Becoming.Continuity.route_balancing"]}
+{"name": "Becoming.Continuity.conservedOn_of_law", "uses": ["Becoming.Continuity.within_false", "Becoming.Continuity.within_true", "Becoming.eq_zero_of_not_pos", "Becoming.total_congr_on", "Becoming.total_pos_of_mem", "Becoming.total_zero"]}
+{"name": "Becoming.Continuity.conservedOn_rest", "uses": ["Becoming.Continuity.adj_symm", "Becoming.Continuity.joined_of_adj", "Becoming.Continuity.joined_of_both", "Becoming.Continuity.not_eq_of_mem_rest", "Becoming.Continuity.shift", "Becoming.Continuity.total_within_edge", "Becoming.Continuity.within_add", "Becoming.Continuity.within_false", "Becoming.Continuity.within_true", "Becoming.ListTests.find_none_iff", "Becoming.ListTests.find_some", "Becoming.ListTests.mem_cons_iff", "Becoming.ListTests.mem_of_find_some", "Becoming.add_sub_turn", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_congr_on", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Continuity.conserved_of_balancing", "uses": ["Becoming.Continuity.within_received", "Becoming.Continuity.within_sent", "Becoming.add_right_cancel", "Becoming.total_add", "Becoming.total_congr_on", "Becoming.total_swap"]}
+{"name": "Becoming.Continuity.direct_add_via", "uses": []}
+{"name": "Becoming.Continuity.edge_pos", "uses": []}
+{"name": "Becoming.Continuity.expand_along", "uses": ["Becoming.Continuity.adj_symm", "Becoming.Continuity.edge_pos", "Becoming.Continuity.via_through", "Becoming.ListTests.find_some", "Becoming.ListTests.mem_of_find_some", "Becoming.Naturals.pos_or_of_add_pos", "Becoming.total_pos"]}
+{"name": "Becoming.Continuity.expand_received", "uses": ["Becoming.Continuity.direct_add_via", "Becoming.Continuity.not_eq_of_mem_rest", "Becoming.Continuity.rearrange", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_congr_on"]}
+{"name": "Becoming.Continuity.expand_received_x", "uses": ["Becoming.Continuity.not_eq_of_mem_rest", "Becoming.total_add", "Becoming.total_congr_on"]}
+{"name": "Becoming.Continuity.expand_sent", "uses": ["Becoming.Continuity.direct_add_via", "Becoming.Continuity.not_eq_of_mem_rest", "Becoming.Continuity.rearrange", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_congr_on"]}
+{"name": "Becoming.Continuity.expand_sent_x", "uses": ["Becoming.Continuity.not_eq_of_mem_rest", "Becoming.total_add", "Becoming.total_congr_on"]}
+{"name": "Becoming.Continuity.inside_of_false", "uses": ["Becoming.Continuity.within_false"]}
+{"name": "Becoming.Continuity.inside_of_true", "uses": ["Becoming.Continuity.within_true"]}
+{"name": "Becoming.Continuity.joined_apart", "uses": ["Becoming.Continuity.adj_symm"]}
+{"name": "Becoming.Continuity.joined_of_adj", "uses": []}
+{"name": "Becoming.Continuity.joined_of_both", "uses": []}
+{"name": "Becoming.Continuity.kept_alone", "uses": ["Becoming.Continuity.adj_symm", "Becoming.Continuity.not_eq_of_mem_rest", "Becoming.Continuity.within_false", "Becoming.Continuity.within_true", "Becoming.ListTests.mem_cons_iff", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Continuity.mid", "uses": []}
+{"name": "Becoming.Continuity.mid2", "uses": []}
+{"name": "Becoming.Continuity.not_eq_of_mem_rest", "uses": []}
+{"name": "Becoming.Continuity.rearrange", "uses": []}
+{"name": "Becoming.Continuity.route_balancing", "uses": ["Becoming.Continuity.conservedOn_rest", "Becoming.Continuity.expand_along", "Becoming.Continuity.expand_received", "Becoming.Continuity.expand_received_x", "Becoming.Continuity.expand_sent", "Becoming.Continuity.expand_sent_x", "Becoming.Continuity.kept_alone", "Becoming.Continuity.mid", "Becoming.Continuity.mid2", "Becoming.Continuity.route_cons", "Becoming.Continuity.total_edge", "Becoming.ListTests.find_none_iff", "Becoming.ListTests.mem_cons_iff", "Becoming.ListTests.mem_of_find_some", "Becoming.ListTests.not_mem_nil", "Becoming.add_sub_turn", "Becoming.total_eq_zero", "Becoming.total_swap"]}
+{"name": "Becoming.Continuity.route_cons", "uses": []}
+{"name": "Becoming.Continuity.shift", "uses": ["Becoming.Naturals.add_left_cancel"]}
+{"name": "Becoming.Continuity.total_edge", "uses": ["Becoming.ListTests.not_mem_nil", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Continuity.total_within_edge", "uses": ["Becoming.Continuity.total_edge", "Becoming.Continuity.within_edge_off", "Becoming.Continuity.within_false", "Becoming.Continuity.within_true", "Becoming.total_congr_on", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Continuity.via_through", "uses": ["Becoming.Continuity.joined_apart"]}
+{"name": "Becoming.Continuity.within_add", "uses": []}
+{"name": "Becoming.Continuity.within_edge_off", "uses": []}
+{"name": "Becoming.Continuity.within_false", "uses": []}
+{"name": "Becoming.Continuity.within_received", "uses": ["Becoming.Continuity.inside_of_false", "Becoming.Continuity.inside_of_true", "Becoming.Continuity.within_false", "Becoming.Continuity.within_true", "Becoming.eq_zero_of_not_pos", "Becoming.total_congr_on", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Continuity.within_sent", "uses": ["Becoming.Continuity.inside_of_false", "Becoming.Continuity.inside_of_true", "Becoming.Continuity.within_false", "Becoming.Continuity.within_true", "Becoming.eq_zero_of_not_pos", "Becoming.total_congr_on", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Continuity.within_true", "uses": []}

@@ -1,0 +1,176 @@
+{"name": "Becoming.ChanceFloors.or_true", "uses": []}
+{"name": "Becoming.CrossSituational.mem_singleton", "uses": []}
+{"name": "Becoming.Hexagram.and_false_of_true", "uses": []}
+{"name": "Becoming.Integers.zero_add", "uses": []}
+{"name": "Becoming.Integers.zero_mul", "uses": []}
+{"name": "Becoming.ListTests.all_complete", "uses": ["Becoming.ListTests.all_true_iff"]}
+{"name": "Becoming.ListTests.all_mem", "uses": ["Becoming.ListTests.all_true_iff"]}
+{"name": "Becoming.ListTests.all_sound", "uses": ["Becoming.ListTests.all_true_iff"]}
+{"name": "Becoming.ListTests.all_true_iff", "uses": ["Becoming.ListTests.and_true_iff", "Becoming.ListTests.mem_cons_iff", "Becoming.ListTests.not_mem_nil"]}
+{"name": "Becoming.ListTests.and_left", "uses": ["Becoming.ListTests.and_true_iff"]}
+{"name": "Becoming.ListTests.and_right", "uses": ["Becoming.ListTests.and_true_iff"]}
+{"name": "Becoming.ListTests.and_true_iff", "uses": []}
+{"name": "Becoming.ListTests.any_true_iff", "uses": ["Becoming.ListTests.mem_cons_iff", "Becoming.ListTests.not_mem_nil", "Becoming.ListTests.or_true_iff"]}
+{"name": "Becoming.ListTests.append_assoc", "uses": []}
+{"name": "Becoming.ListTests.append_nil", "uses": []}
+{"name": "Becoming.ListTests.beq_false_iff", "uses": ["Becoming.ListTests.decide_true_iff", "Becoming.ListTests.false_iff_not"]}
+{"name": "Becoming.ListTests.beq_false_of_ne", "uses": []}
+{"name": "Becoming.ListTests.bif_le", "uses": []}
+{"name": "Becoming.ListTests.bind_eq_some", "uses": []}
+{"name": "Becoming.ListTests.bool_absurd", "uses": []}
+{"name": "Becoming.ListTests.cond_zero_le", "uses": []}
+{"name": "Becoming.ListTests.contains_false_iff", "uses": ["Becoming.ListTests.contains_true_iff", "Becoming.ListTests.false_iff_not"]}
+{"name": "Becoming.ListTests.contains_true_iff", "uses": ["Becoming.ListTests.beq_false_iff", "Becoming.ListTests.decide_true_iff", "Becoming.ListTests.mem_cons_iff", "Becoming.ListTests.not_mem_nil"]}
+{"name": "Becoming.ListTests.decide_true_iff", "uses": []}
+{"name": "Becoming.ListTests.false_iff_not", "uses": []}
+{"name": "Becoming.ListTests.false_of_not", "uses": []}
+{"name": "Becoming.ListTests.false_of_not_true", "uses": []}
+{"name": "Becoming.ListTests.filter_of_all", "uses": []}
+{"name": "Becoming.ListTests.find_isSome_iff", "uses": ["Becoming.ListTests.find_none_iff", "Becoming.ListTests.find_some", "Becoming.ListTests.mem_of_find_some"]}
+{"name": "Becoming.ListTests.find_none_iff", "uses": ["Becoming.ListTests.mem_cons_iff", "Becoming.ListTests.not_mem_nil"]}
+{"name": "Becoming.ListTests.find_some", "uses": []}
+{"name": "Becoming.ListTests.isEmpty_false_iff", "uses": []}
+{"name": "Becoming.ListTests.isSome_iff", "uses": []}
+{"name": "Becoming.ListTests.length_append", "uses": []}
+{"name": "Becoming.ListTests.map_eq_some", "uses": []}
+{"name": "Becoming.ListTests.mem_append_iff", "uses": ["Becoming.ListTests.mem_cons_iff", "Becoming.ListTests.not_mem_nil"]}
+{"name": "Becoming.ListTests.mem_bools", "uses": []}
+{"name": "Becoming.ListTests.mem_cons_iff", "uses": []}
+{"name": "Becoming.ListTests.mem_filter_iff", "uses": ["Becoming.ListTests.mem_cons_iff", "Becoming.ListTests.not_mem_nil"]}
+{"name": "Becoming.ListTests.mem_flatMap_iff", "uses": ["Becoming.ListTests.mem_flatten_iff", "Becoming.ListTests.mem_map_iff", "Becoming.ListTests.mem_map_of"]}
+{"name": "Becoming.ListTests.mem_flatten_iff", "uses": ["Becoming.ListTests.mem_append_iff", "Becoming.ListTests.mem_cons_iff", "Becoming.ListTests.not_mem_nil"]}
+{"name": "Becoming.ListTests.mem_map_iff", "uses": ["Becoming.ListTests.mem_cons_iff", "Becoming.ListTests.not_mem_nil"]}
+{"name": "Becoming.ListTests.mem_map_of", "uses": ["Becoming.ListTests.mem_map_iff"]}
+{"name": "Becoming.ListTests.mem_of_find_some", "uses": []}
+{"name": "Becoming.ListTests.mem_singleton_iff", "uses": ["Becoming.ListTests.mem_cons_iff", "Becoming.ListTests.not_mem_nil"]}
+{"name": "Becoming.ListTests.ne_not", "uses": []}
+{"name": "Becoming.ListTests.none_ne_some", "uses": []}
+{"name": "Becoming.ListTests.none_not_mem_map_some", "uses": []}
+{"name": "Becoming.ListTests.not_eq_true_of_false", "uses": []}
+{"name": "Becoming.ListTests.not_false_of_true", "uses": []}
+{"name": "Becoming.ListTests.not_isEmpty_true_iff", "uses": ["Becoming.ListTests.isEmpty_false_iff", "Becoming.ListTests.not_true_iff"]}
+{"name": "Becoming.ListTests.not_mem_nil", "uses": []}
+{"name": "Becoming.ListTests.not_ne_self", "uses": []}
+{"name": "Becoming.ListTests.not_not", "uses": []}
+{"name": "Becoming.ListTests.not_true_iff", "uses": []}
+{"name": "Becoming.ListTests.option_any_true_iff", "uses": []}
+{"name": "Becoming.ListTests.or_cases", "uses": []}
+{"name": "Becoming.ListTests.or_left", "uses": []}
+{"name": "Becoming.ListTests.or_right", "uses": []}
+{"name": "Becoming.ListTests.or_true_iff", "uses": []}
+{"name": "Becoming.ListTests.some_inj", "uses": []}
+{"name": "Becoming.ListTests.true_of_cond_pos", "uses": []}
+{"name": "Becoming.Naturals.add_congr", "uses": []}
+{"name": "Becoming.Naturals.add_le_of_le_sub", "uses": ["Becoming.Naturals.add_sub_of_le"]}
+{"name": "Becoming.Naturals.add_left_cancel", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.Naturals.add_lt_add_left_iff", "uses": ["Becoming.Naturals.le_of_add_le_add_left"]}
+{"name": "Becoming.Naturals.add_regroup", "uses": []}
+{"name": "Becoming.Naturals.add_sub_cancel", "uses": ["Becoming.Naturals.succ_sub_succ"]}
+{"name": "Becoming.Naturals.add_sub_cancel_left", "uses": ["Becoming.Naturals.add_sub_cancel"]}
+{"name": "Becoming.Naturals.add_sub_of_le", "uses": ["Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.Naturals.ble_false_of_lt", "uses": []}
+{"name": "Becoming.Naturals.le_of_add_le_add_left", "uses": ["Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Naturals.le_of_add_le_left", "uses": []}
+{"name": "Becoming.Naturals.le_of_add_le_right", "uses": []}
+{"name": "Becoming.Naturals.le_sub_of_add_le", "uses": ["Becoming.Naturals.add_sub_of_le", "Becoming.Naturals.le_of_add_le_add_left", "Becoming.Naturals.le_of_add_le_right"]}
+{"name": "Becoming.Naturals.lt_irrefl", "uses": []}
+{"name": "Becoming.Naturals.lt_of_add_lt_add_left", "uses": ["Becoming.Naturals.le_of_add_le_add_left"]}
+{"name": "Becoming.Naturals.lt_of_mul_lt_mul_left", "uses": []}
+{"name": "Becoming.Naturals.lt_of_mul_lt_mul_right", "uses": []}
+{"name": "Becoming.Naturals.lt_two_pow", "uses": ["Becoming.Naturals.two_pow_pos"]}
+{"name": "Becoming.Naturals.mul_lt_mul_of_pos", "uses": []}
+{"name": "Becoming.Naturals.mul_mul_mul_comm", "uses": ["Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.Naturals.mul_pow_eq", "uses": ["Becoming.Naturals.mul_mul_mul_comm"]}
+{"name": "Becoming.Naturals.mul_right_comm", "uses": ["Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Naturals.ne_of_lt", "uses": ["Becoming.Naturals.lt_irrefl"]}
+{"name": "Becoming.Naturals.pos_or_of_add_pos", "uses": []}
+{"name": "Becoming.Naturals.pow_add", "uses": ["Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Naturals.sub_add_add", "uses": ["Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.Naturals.sub_add_cancel", "uses": ["Becoming.Naturals.succ_sub_succ"]}
+{"name": "Becoming.Naturals.sub_add_refill", "uses": ["Becoming.Naturals.add_sub_of_le"]}
+{"name": "Becoming.Naturals.sub_antitone", "uses": []}
+{"name": "Becoming.Naturals.sub_le_of_le_add", "uses": []}
+{"name": "Becoming.Naturals.sub_sub", "uses": []}
+{"name": "Becoming.Naturals.succ_ne_self", "uses": ["Becoming.Naturals.lt_irrefl"]}
+{"name": "Becoming.Naturals.succ_ne_zero", "uses": []}
+{"name": "Becoming.Naturals.succ_sub_succ", "uses": []}
+{"name": "Becoming.Naturals.twice_le", "uses": ["Becoming.Naturals.twice_le_of_le"]}
+{"name": "Becoming.Naturals.twice_le_of_le", "uses": ["Becoming.add_mul_split", "Becoming.le_dest"]}
+{"name": "Becoming.Naturals.two_mul", "uses": []}
+{"name": "Becoming.Naturals.two_pow_pos", "uses": []}
+{"name": "Becoming.RouteTraces.nonzero_of_le", "uses": []}
+{"name": "Becoming.SupportGated.sub_pos_of_lt", "uses": []}
+{"name": "Becoming.TreeSearch.append_nil", "uses": []}
+{"name": "Becoming.Undecided.mem_upto", "uses": []}
+{"name": "Becoming.add_mul_split", "uses": []}
+{"name": "Becoming.add_right_cancel", "uses": []}
+{"name": "Becoming.add_sub_of_le", "uses": []}
+{"name": "Becoming.add_sub_turn", "uses": []}
+{"name": "Becoming.add_sub_turn_add", "uses": ["Becoming.add_sub_turn"]}
+{"name": "Becoming.balance_over_stretch", "uses": ["Becoming.balance_over_stretch_on"]}
+{"name": "Becoming.balance_over_stretch_on", "uses": []}
+{"name": "Becoming.beq_self", "uses": []}
+{"name": "Becoming.between_of_mem_steps", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.bool_and_true", "uses": []}
+{"name": "Becoming.bool_eq_of_iff", "uses": []}
+{"name": "Becoming.bool_of_and_true", "uses": []}
+{"name": "Becoming.cond_le_one", "uses": []}
+{"name": "Becoming.distinct_append", "uses": ["Becoming.ListTests.mem_append_iff"]}
+{"name": "Becoming.distinct_map_on", "uses": ["Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.distinct_of_map", "uses": ["Becoming.ListTests.mem_map_of"]}
+{"name": "Becoming.exists_add_of_le", "uses": []}
+{"name": "Becoming.exists_pairs_over", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.gaining_of_losing", "uses": ["Becoming.le_over_stretch", "Becoming.pos_of_exceeds", "Becoming.recurring_accumulates", "Becoming.steps_mem", "Becoming.total_pos"]}
+{"name": "Becoming.gaining_of_losing_from", "uses": ["Becoming.gaining_of_losing", "Becoming.recurs_shift", "Becoming.recurs_unshift"]}
+{"name": "Becoming.gap_of_lt", "uses": ["Becoming.le_dest"]}
+{"name": "Becoming.ge_over_stretch", "uses": []}
+{"name": "Becoming.le_dest", "uses": []}
+{"name": "Becoming.le_of_add_le_add_right", "uses": []}
+{"name": "Becoming.le_of_mem_downFrom", "uses": []}
+{"name": "Becoming.le_of_sub_eq_zero", "uses": []}
+{"name": "Becoming.le_over_stretch", "uses": []}
+{"name": "Becoming.le_succ_cases", "uses": []}
+{"name": "Becoming.length_le_of_matched", "uses": ["Becoming.ListTests.length_append", "Becoming.mem_remove"]}
+{"name": "Becoming.length_map", "uses": []}
+{"name": "Becoming.length_pos_of_mem", "uses": []}
+{"name": "Becoming.losing_of_gaining", "uses": ["Becoming.ge_over_stretch", "Becoming.pos_of_exceeds", "Becoming.recurring_accumulates", "Becoming.steps_mem", "Becoming.total_pos"]}
+{"name": "Becoming.losing_of_gaining_from", "uses": ["Becoming.losing_of_gaining", "Becoming.recurs_shift", "Becoming.recurs_unshift"]}
+{"name": "Becoming.map_comp_eq", "uses": []}
+{"name": "Becoming.map_eq_of", "uses": []}
+{"name": "Becoming.map_eq_singleton", "uses": []}
+{"name": "Becoming.mem_append_cases", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.mem_append_of_left", "uses": []}
+{"name": "Becoming.mem_append_of_right", "uses": []}
+{"name": "Becoming.mem_appended_left", "uses": []}
+{"name": "Becoming.mem_cons_cases", "uses": []}
+{"name": "Becoming.mem_downFrom", "uses": []}
+{"name": "Becoming.mem_map_prodMk", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.mem_middle", "uses": []}
+{"name": "Becoming.mem_remove", "uses": ["Becoming.ListTests.mem_cons_iff"]}
+{"name": "Becoming.mul_assoc_nat", "uses": []}
+{"name": "Becoming.mul_turn", "uses": ["Becoming.mul_assoc_nat"]}
+{"name": "Becoming.nil_of_length_zero", "uses": []}
+{"name": "Becoming.not_decide_iff", "uses": []}
+{"name": "Becoming.not_mem_of_middle", "uses": ["Becoming.mem_cons_cases", "Becoming.mem_middle"]}
+{"name": "Becoming.not_not_all", "uses": ["Becoming.ListTests.mem_cons_iff"]}
+{"name": "Becoming.pos_of_exceeds", "uses": []}
+{"name": "Becoming.preimage_of_mem_map", "uses": []}
+{"name": "Becoming.prodMk_mem_map", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.recurring_accumulates", "uses": ["Becoming.le_dest", "Becoming.steps_last", "Becoming.steps_mono"]}
+{"name": "Becoming.recurs_shift", "uses": ["Becoming.le_dest", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.recurs_unshift", "uses": []}
+{"name": "Becoming.revisits_within", "uses": ["Becoming.mem_cons_cases", "Becoming.skipAt_le", "Becoming.skipAt_lt", "Becoming.skipAt_ne", "Becoming.split_at_head"]}
+{"name": "Becoming.skipAt_le", "uses": []}
+{"name": "Becoming.skipAt_lt", "uses": []}
+{"name": "Becoming.skipAt_ne", "uses": []}
+{"name": "Becoming.split_at_head", "uses": ["Becoming.le_succ_cases"]}
+{"name": "Becoming.steps_last", "uses": []}
+{"name": "Becoming.steps_mem", "uses": []}
+{"name": "Becoming.steps_mono", "uses": ["Becoming.steps_last"]}
+{"name": "Becoming.sub_eq_zero_of_le", "uses": []}
+{"name": "Becoming.succ_sub_self", "uses": []}
+{"name": "Becoming.total_congr", "uses": ["Becoming.Naturals.add_congr"]}
+{"name": "Becoming.total_eq_zero", "uses": []}
+{"name": "Becoming.total_pos", "uses": []}
+{"name": "Becoming.total_steps_add", "uses": []}
+{"name": "Becoming.total_steps_succ", "uses": []}

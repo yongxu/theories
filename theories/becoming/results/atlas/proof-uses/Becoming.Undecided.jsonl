@@ -1,0 +1,64 @@
+{"name": "Becoming.Undecided.Le.decided", "uses": []}
+{"name": "Becoming.Undecided.Le.same_or_rises", "uses": []}
+{"name": "Becoming.Undecided.Le.trans", "uses": []}
+{"name": "Becoming.Undecided.Steady.next", "uses": ["Becoming.Undecided.eval_congr"]}
+{"name": "Becoming.Undecided.Term.brecOn.eq", "uses": []}
+{"name": "Becoming.Undecided.chain_closed", "uses": []}
+{"name": "Becoming.Undecided.chain_decided", "uses": ["Becoming.Undecided.neg_decided"]}
+{"name": "Becoming.Undecided.chain_exact", "uses": ["Becoming.Undecided.chain_closed", "Becoming.Undecided.chain_decided", "Becoming.Undecided.chain_undecided", "Becoming.Undecided.settles"]}
+{"name": "Becoming.Undecided.chain_undecided", "uses": []}
+{"name": "Becoming.Undecided.conj_embed", "uses": []}
+{"name": "Becoming.Undecided.conj_mono", "uses": []}
+{"name": "Becoming.Undecided.disj_embed", "uses": []}
+{"name": "Becoming.Undecided.disj_mono", "uses": []}
+{"name": "Becoming.Undecided.each_or_some", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Undecided.embed_asBool", "uses": []}
+{"name": "Becoming.Undecided.embed_inj", "uses": []}
+{"name": "Becoming.Undecided.eval_congr", "uses": []}
+{"name": "Becoming.Undecided.eval_embed", "uses": ["Becoming.Undecided.conj_embed", "Becoming.Undecided.disj_embed", "Becoming.Undecided.neg_embed"]}
+{"name": "Becoming.Undecided.eval_mono", "uses": ["Becoming.Undecided.conj_mono", "Becoming.Undecided.disj_mono", "Becoming.Undecided.neg_mono"]}
+{"name": "Becoming.Undecided.eval_mono_below", "uses": ["Becoming.Undecided.conj_mono", "Becoming.Undecided.disj_mono", "Becoming.Undecided.neg_mono"]}
+{"name": "Becoming.Undecided.eval_undecided", "uses": []}
+{"name": "Becoming.Undecided.incomplete", "uses": ["Becoming.Diagonal.fixed_of_complete", "Becoming.Undecided.rotate_moves"]}
+{"name": "Becoming.Undecided.kept_from", "uses": []}
+{"name": "Becoming.Undecided.least_fixed", "uses": ["Becoming.Undecided.stage_fixed", "Becoming.Undecided.stage_le_fixed"]}
+{"name": "Becoming.Undecided.least_undecided", "uses": ["Becoming.Undecided.stage_fixed", "Becoming.Undecided.undecided_of_moves"]}
+{"name": "Becoming.Undecided.liar_both_sides", "uses": ["Becoming.Undecided.liar_rests", "Becoming.Undecided.liar_two_valued_never_rests", "Becoming.Undecided.neg_not_moves"]}
+{"name": "Becoming.Undecided.liar_closed", "uses": []}
+{"name": "Becoming.Undecided.liar_rests", "uses": []}
+{"name": "Becoming.Undecided.liar_rests_iff", "uses": ["Becoming.Undecided.neg_fixed_iff"]}
+{"name": "Becoming.Undecided.liar_two_valued_moves", "uses": ["Becoming.Diagonal.flip_moves"]}
+{"name": "Becoming.Undecided.liar_two_valued_never_rests", "uses": ["Becoming.Diagonal.flip_moves", "Becoming.Diagonal.revision_never_rests", "Becoming.Undecided.liar_two_valued_run"]}
+{"name": "Becoming.Undecided.liar_two_valued_run", "uses": []}
+{"name": "Becoming.Undecided.liar_undecided", "uses": ["Becoming.Undecided.liar_closed", "Becoming.Undecided.liar_two_valued_moves", "Becoming.Undecided.rest_undecided"]}
+{"name": "Becoming.Undecided.marked_le", "uses": []}
+{"name": "Becoming.Undecided.marked_mono", "uses": []}
+{"name": "Becoming.Undecided.marked_rises", "uses": ["Becoming.Undecided.marked_mono", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Undecided.monotone_fixed", "uses": ["Becoming.Undecided.monotone_settles"]}
+{"name": "Becoming.Undecided.monotone_not_moves", "uses": ["Becoming.Undecided.monotone_fixed"]}
+{"name": "Becoming.Undecided.monotone_run_rests", "uses": ["Becoming.Undecided.monotone_settles"]}
+{"name": "Becoming.Undecided.monotone_settles", "uses": ["Becoming.Undecided.Le.decided"]}
+{"name": "Becoming.Undecided.moves_not_monotone", "uses": ["Becoming.Diagonal.revision_never_rests", "Becoming.Undecided.never_rests_not_monotone"]}
+{"name": "Becoming.Undecided.neg_decided", "uses": []}
+{"name": "Becoming.Undecided.neg_embed", "uses": []}
+{"name": "Becoming.Undecided.neg_fixed_iff", "uses": []}
+{"name": "Becoming.Undecided.neg_mono", "uses": []}
+{"name": "Becoming.Undecided.neg_monotone", "uses": ["Becoming.Undecided.neg_mono"]}
+{"name": "Becoming.Undecided.neg_not_moves", "uses": ["Becoming.Undecided.monotone_not_moves", "Becoming.Undecided.neg_monotone"]}
+{"name": "Becoming.Undecided.never_rests_not_monotone", "uses": ["Becoming.Undecided.monotone_run_rests"]}
+{"name": "Becoming.Undecided.rest_undecided", "uses": ["Becoming.Undecided.undecided_of_moves"]}
+{"name": "Becoming.Undecided.rotate_moves", "uses": []}
+{"name": "Becoming.Undecided.settled_from", "uses": ["Becoming.Undecided.Steady.next", "Becoming.Undecided.kept_from", "Becoming.Undecided.settles"]}
+{"name": "Becoming.Undecided.settles", "uses": ["Becoming.Undecided.Le.decided", "Becoming.Undecided.Steady.next", "Becoming.Undecided.settles_within", "Becoming.Undecided.stage_up", "Becoming.Undecided.steady_or_rises", "Becoming.Undecided.upto_length"]}
+{"name": "Becoming.Undecided.settles_within", "uses": ["Becoming.Undecided.kept_from", "Becoming.Undecided.marked_le", "Becoming.Undecided.marked_rises"]}
+{"name": "Becoming.Undecided.some_undecided_or_none", "uses": []}
+{"name": "Becoming.Undecided.stage_fixed", "uses": ["Becoming.Undecided.settles"]}
+{"name": "Becoming.Undecided.stage_le_fixed", "uses": ["Becoming.Undecided.eval_mono_below"]}
+{"name": "Becoming.Undecided.stage_mono", "uses": ["Becoming.Undecided.Le.trans", "Becoming.Undecided.stage_up"]}
+{"name": "Becoming.Undecided.stage_up", "uses": ["Becoming.Undecided.eval_mono"]}
+{"name": "Becoming.Undecided.stays_undecided", "uses": ["Becoming.Undecided.eval_undecided"]}
+{"name": "Becoming.Undecided.steady_or_rises", "uses": ["Becoming.Undecided.Le.same_or_rises", "Becoming.Undecided.each_or_some", "Becoming.Undecided.mem_upto", "Becoming.Undecided.stage_up"]}
+{"name": "Becoming.Undecided.truthTeller_keeps", "uses": []}
+{"name": "Becoming.Undecided.truthTeller_rests", "uses": []}
+{"name": "Becoming.Undecided.undecided_of_moves", "uses": ["Becoming.Undecided.embed_asBool", "Becoming.Undecided.embed_inj", "Becoming.Undecided.eval_congr", "Becoming.Undecided.eval_embed", "Becoming.Undecided.some_undecided_or_none"]}
+{"name": "Becoming.Undecided.upto_length", "uses": []}

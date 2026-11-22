@@ -1,0 +1,75 @@
+{"name": "Becoming.CHSH.inPair_support", "uses": []}
+{"name": "Becoming.CHSH.indexed_met", "uses": ["Becoming.CHSH.inPair_support", "Becoming.ParitySystem.indexed_met"]}
+{"name": "Becoming.CHSH.mixture_le", "uses": ["Becoming.CHSH.pairs_contradict", "Becoming.ParitySystem.mixture_le"]}
+{"name": "Becoming.CHSH.pairs_contradict", "uses": []}
+{"name": "Becoming.CHSH.support_iff", "uses": ["Becoming.CHSH.two_iff"]}
+{"name": "Becoming.CHSH.two_iff", "uses": []}
+{"name": "Becoming.Gluing.Cycle.contradicts", "uses": ["Becoming.Gluing.Cycle.counts_even", "Becoming.oddOver_map"]}
+{"name": "Becoming.Gluing.Cycle.counts_even", "uses": ["Becoming.Gluing.Cycle.cross", "Becoming.Gluing.Cycle.telescope", "Becoming.oddOver_map"]}
+{"name": "Becoming.Gluing.Cycle.cross", "uses": []}
+{"name": "Becoming.Gluing.Cycle.eq_of_even", "uses": []}
+{"name": "Becoming.Gluing.Cycle.length_edges", "uses": []}
+{"name": "Becoming.Gluing.Cycle.lt_of_mem_down", "uses": []}
+{"name": "Becoming.Gluing.Cycle.met_iff_even", "uses": ["Becoming.Gluing.Cycle.contradicts", "Becoming.Gluing.Cycle.walk_meets", "Becoming.ParitySystem.unmet_of_contradicts"]}
+{"name": "Becoming.Gluing.Cycle.miss", "uses": ["Becoming.ListTests.beq_false_of_ne"]}
+{"name": "Becoming.Gluing.Cycle.mixture_le", "uses": ["Becoming.Gluing.Cycle.contradicts", "Becoming.Gluing.Cycle.length_edges", "Becoming.ParitySystem.mixture_le"]}
+{"name": "Becoming.Gluing.Cycle.pick", "uses": ["Becoming.Gluing.Cycle.miss", "Becoming.ListTests.beq_false_of_ne", "Becoming.addParity_false", "Becoming.beq_self"]}
+{"name": "Becoming.Gluing.Cycle.returns", "uses": []}
+{"name": "Becoming.Gluing.Cycle.shift", "uses": []}
+{"name": "Becoming.Gluing.Cycle.telescope", "uses": ["Becoming.Gluing.Cycle.shift", "Becoming.addParity_self"]}
+{"name": "Becoming.Gluing.Cycle.value_pair", "uses": ["Becoming.Gluing.Cycle.pick", "Becoming.addParity_and", "Becoming.oddOver_add", "Becoming.oddOver_congr"]}
+{"name": "Becoming.Gluing.Cycle.walk_meets", "uses": ["Becoming.Gluing.Cycle.eq_of_even", "Becoming.Gluing.Cycle.lt_of_mem_down", "Becoming.Gluing.Cycle.returns", "Becoming.Gluing.Cycle.value_pair", "Becoming.addParity_false", "Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.ParityConstraint.counts_after", "uses": []}
+{"name": "Becoming.ParityConstraint.eliminate_counts", "uses": ["Becoming.ParityConstraint.counts_after"]}
+{"name": "Becoming.ParityConstraint.met_after", "uses": ["Becoming.ParityConstraint.value_add", "Becoming.addParity_cancel", "Becoming.addParity_solve"]}
+{"name": "Becoming.ParityConstraint.met_or_contradicts", "uses": ["Becoming.ParityConstraint.eliminate_counts", "Becoming.ParityConstraint.met_after", "Becoming.ParityConstraint.pull_back", "Becoming.addParity_false", "Becoming.mem_map_of", "Becoming.oddOver_congr", "Becoming.oddOver_false", "Becoming.preimage_of_mem_map", "Becoming.search", "Becoming.true_of_ne_false"]}
+{"name": "Becoming.ParityConstraint.pull_back", "uses": ["Becoming.ParityConstraint.pulled", "Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.ParityConstraint.pulled", "uses": ["Becoming.addParity_assoc"]}
+{"name": "Becoming.ParityConstraint.unmet_odd", "uses": ["Becoming.ParityConstraint.value_even", "Becoming.oddOver_add"]}
+{"name": "Becoming.ParityConstraint.value_add", "uses": ["Becoming.addParity_and", "Becoming.oddOver_add", "Becoming.oddOver_congr"]}
+{"name": "Becoming.ParityConstraint.value_even", "uses": ["Becoming.oddOver_and", "Becoming.oddOver_congr", "Becoming.oddOver_false", "Becoming.oddOver_swap"]}
+{"name": "Becoming.ParitySystem.contradicts_iff", "uses": ["Becoming.oddOver_map"]}
+{"name": "Becoming.ParitySystem.contradicts_noGlobal", "uses": ["Becoming.ParitySystem.unmet_of_contradicts"]}
+{"name": "Becoming.ParitySystem.global_or_contradicts", "uses": ["Becoming.ParityConstraint.met_or_contradicts", "Becoming.ParitySystem.contradicts_iff", "Becoming.ParitySystem.lift_selection", "Becoming.mem_map_of"]}
+{"name": "Becoming.ParitySystem.glues_iff", "uses": ["Becoming.Contextual.not_glues", "Becoming.ParitySystem.contradicts_noGlobal", "Becoming.ParitySystem.global_or_contradicts", "Becoming.ParitySystem.local_"]}
+{"name": "Becoming.ParitySystem.indexed_met", "uses": ["Becoming.addParity_self", "Becoming.count_all"]}
+{"name": "Becoming.ParitySystem.lift_selection", "uses": ["Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.ParitySystem.local_", "uses": ["Becoming.and_congr_of", "Becoming.oddOver_congr"]}
+{"name": "Becoming.ParitySystem.met_le", "uses": ["Becoming.ParitySystem.unmet_odd", "Becoming.even_le_of_odd"]}
+{"name": "Becoming.ParitySystem.mixture_le", "uses": ["Becoming.ParitySystem.met_le", "Becoming.total_add", "Becoming.total_le", "Becoming.total_ones"]}
+{"name": "Becoming.ParitySystem.noGlobal_iff", "uses": ["Becoming.ParitySystem.contradicts_noGlobal", "Becoming.ParitySystem.global_or_contradicts"]}
+{"name": "Becoming.ParitySystem.unmet_odd", "uses": ["Becoming.ParityConstraint.unmet_odd", "Becoming.ParitySystem.contradicts_iff", "Becoming.oddOver_map"]}
+{"name": "Becoming.ParitySystem.unmet_of_contradicts", "uses": ["Becoming.ParitySystem.unmet_odd", "Becoming.addParity_self", "Becoming.oddOver_false", "Becoming.search"]}
+{"name": "Becoming.Specker.indexed_met", "uses": ["Becoming.ParitySystem.indexed_met", "Becoming.Specker.respects", "Becoming.Specker.support_iff"]}
+{"name": "Becoming.Specker.mixture_le", "uses": ["Becoming.ParitySystem.mixture_le", "Becoming.Specker.openings_contradict"]}
+{"name": "Becoming.Specker.openings_contradict", "uses": []}
+{"name": "Becoming.Specker.support_iff", "uses": ["Becoming.Specker.two_iff", "Becoming.Specker.two_iff_swap"]}
+{"name": "Becoming.Specker.two_iff", "uses": []}
+{"name": "Becoming.Specker.two_iff_swap", "uses": []}
+{"name": "Becoming.Square.cells_even", "uses": ["Becoming.Square.i0._proof_1", "Becoming.Square.i1._proof_1", "Becoming.Square.i2._proof_1"]}
+{"name": "Becoming.Square.inLine_support", "uses": ["Becoming.Square.fill_parity", "Becoming.Square.pos_at"]}
+{"name": "Becoming.Square.indexed_met", "uses": ["Becoming.ParitySystem.indexed_met", "Becoming.Square.inLine_support", "Becoming.Square.support_iff"]}
+{"name": "Becoming.Square.lines_contradict", "uses": ["Becoming.Square.cells_even"]}
+{"name": "Becoming.Square.mixture_le", "uses": ["Becoming.ParitySystem.mixture_le", "Becoming.Square.lines_contradict"]}
+{"name": "Becoming.Square.not_beyond", "uses": []}
+{"name": "Becoming.Square.support_iff", "uses": ["Becoming.Square.not_beyond", "Becoming.Square.three_iff"]}
+{"name": "Becoming.Square.three_iff", "uses": []}
+{"name": "Becoming.addParity_and", "uses": []}
+{"name": "Becoming.addParity_assoc", "uses": []}
+{"name": "Becoming.addParity_cancel", "uses": []}
+{"name": "Becoming.addParity_false", "uses": []}
+{"name": "Becoming.addParity_self", "uses": []}
+{"name": "Becoming.addParity_solve", "uses": []}
+{"name": "Becoming.addParity_swap", "uses": []}
+{"name": "Becoming.and_congr_of", "uses": []}
+{"name": "Becoming.count_all", "uses": []}
+{"name": "Becoming.count_le_length", "uses": ["Becoming.cond_le_one"]}
+{"name": "Becoming.even_le_of_odd", "uses": ["Becoming.count_le_length", "Becoming.met_step"]}
+{"name": "Becoming.met_step", "uses": []}
+{"name": "Becoming.oddOver_add", "uses": ["Becoming.addParity_swap"]}
+{"name": "Becoming.oddOver_and", "uses": ["Becoming.addParity_and"]}
+{"name": "Becoming.oddOver_congr", "uses": []}
+{"name": "Becoming.oddOver_false", "uses": []}
+{"name": "Becoming.oddOver_map", "uses": []}
+{"name": "Becoming.oddOver_swap", "uses": ["Becoming.oddOver_add", "Becoming.oddOver_false"]}
+{"name": "Becoming.true_of_ne_false", "uses": []}

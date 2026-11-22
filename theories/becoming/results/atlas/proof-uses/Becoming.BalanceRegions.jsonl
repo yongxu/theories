@@ -1,0 +1,39 @@
+{"name": "Becoming.Continuity.PathOfThree.counts_kept_not_along_step", "uses": ["Becoming.Continuity.PathOfThree.not_paired_along_step", "Becoming.Continuity.PathOfThree.paired_within", "Becoming.Continuity.pairing_iff_closures"]}
+{"name": "Becoming.Continuity.PathOfThree.not_paired_along_step", "uses": ["Becoming.GrammarLaws.paired_single"]}
+{"name": "Becoming.Continuity.PathOfThree.paired_within", "uses": ["Becoming.«所闭之传递»", "Becoming.«缘在所闭»"]}
+{"name": "Becoming.Continuity.adjacentListed_symm", "uses": ["Becoming.Continuity.adj_symm"]}
+{"name": "Becoming.Continuity.balancesOn_iff_closures", "uses": ["Becoming.Continuity.balancesOn_iff_conserved", "Becoming.Continuity.conservedOn_iff_closures"]}
+{"name": "Becoming.Continuity.balancesOn_iff_notGoingOut", "uses": ["Becoming.Continuity.balancesOn_iff_conserved", "Becoming.Continuity.closes_iff_notGoingOut"]}
+{"name": "Becoming.Continuity.balancesOn_iff_units_paired", "uses": ["Becoming.Continuity.balancesOn_iff_conserved", "Becoming.Continuity.conservedOn_iff_units_paired"]}
+{"name": "Becoming.Continuity.balancing_iff_closures", "uses": ["Becoming.Continuity.balancing_iff", "Becoming.Continuity.conservedOn_iff_closures"]}
+{"name": "Becoming.Continuity.balancing_iff_notGoingOut", "uses": ["Becoming.Continuity.balancing_iff", "Becoming.Continuity.closes_iff_notGoingOut"]}
+{"name": "Becoming.Continuity.balancing_iff_units_paired", "uses": ["Becoming.Continuity.balancing_iff", "Becoming.Continuity.conservedOn_iff_units_paired"]}
+{"name": "Becoming.Continuity.closes_and_not", "uses": []}
+{"name": "Becoming.Continuity.closes_iff_closed", "uses": ["Becoming.Continuity.adjacentListed_symm", "Becoming.GrammarLaws.uncrossed_of_closed"]}
+{"name": "Becoming.Continuity.closes_iff_notComingIn", "uses": ["Becoming.Continuity.adjacentListed_symm", "Becoming.Continuity.closes_iff_notGoingOut", "Becoming.«对称则不出当且仅当逆不出»"]}
+{"name": "Becoming.Continuity.closes_iff_notGoingOut", "uses": ["Becoming.Continuity.closes_iff_closed", "Becoming.«不外者内则不出当且仅当闭»"]}
+{"name": "Becoming.Continuity.closureListed_closed", "uses": ["Becoming.Continuity.counted_of_count", "Becoming.Continuity.reachedListed_add", "Becoming.Continuity.reachedListed_grows_or_stays", "Becoming.Continuity.reachedListed_stays", "Becoming.ListTests.and_true_iff", "Becoming.ListTests.any_true_iff", "Becoming.ListTests.contains_true_iff", "Becoming.ListTests.or_true_iff", "Becoming.Naturals.le_of_add_le_right"]}
+{"name": "Becoming.Continuity.closureListed_closes", "uses": ["Becoming.Continuity.closes_iff_closed", "Becoming.Continuity.closureListed_closed"]}
+{"name": "Becoming.Continuity.closureListed_iff", "uses": ["Becoming.Continuity.closureListed_closed", "Becoming.Continuity.closureListed_self", "Becoming.Continuity.reachedListed_within"]}
+{"name": "Becoming.Continuity.closureListed_inside", "uses": ["Becoming.Continuity.closes_iff_closed", "Becoming.Continuity.closureListed_iff", "Becoming.«闭含所闭»"]}
+{"name": "Becoming.Continuity.closureListed_self", "uses": ["Becoming.Continuity.reachedListed_add", "Becoming.ListTests.decide_true_iff"]}
+{"name": "Becoming.Continuity.closureListed_unlisted", "uses": ["Becoming.Continuity.closureListed_iff"]}
+{"name": "Becoming.Continuity.closures_iff_unit_counts", "uses": ["Becoming.Continuity.closureListed_unlisted", "Becoming.Continuity.conserved_of_absent", "Becoming.Continuity.count_unitsOn", "Becoming.ListTests.contains_false_iff", "Becoming.ListTests.contains_true_iff"]}
+{"name": "Becoming.Continuity.cond_le_cond", "uses": []}
+{"name": "Becoming.Continuity.conservedOn_iff_closures", "uses": ["Becoming.Continuity.closureListed_closes", "Becoming.Continuity.conserved_of_closures"]}
+{"name": "Becoming.Continuity.conservedOn_iff_units_paired", "uses": ["Becoming.Continuity.closures_iff_unit_counts", "Becoming.Continuity.conservedOn_iff_closures", "Becoming.Continuity.pairing_iff_closures"]}
+{"name": "Becoming.Continuity.conserved_of_absent", "uses": ["Becoming.Continuity.within_false", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Continuity.conserved_of_closures", "uses": ["Becoming.Continuity.conserved_of_fewer"]}
+{"name": "Becoming.Continuity.conserved_of_fewer", "uses": ["Becoming.Continuity.closes_and_not", "Becoming.Continuity.closureListed_closes", "Becoming.Continuity.closureListed_inside", "Becoming.Continuity.closureListed_self", "Becoming.Continuity.conserved_of_absent", "Becoming.Continuity.count_lt_count", "Becoming.Continuity.within_split", "Becoming.ListTests.and_true_iff", "Becoming.ListTests.any_true_iff", "Becoming.Naturals.add_congr", "Becoming.total_add", "Becoming.total_congr"]}
+{"name": "Becoming.Continuity.count_le_count", "uses": ["Becoming.Continuity.cond_le_cond"]}
+{"name": "Becoming.Continuity.count_lt_count", "uses": ["Becoming.Continuity.cond_le_cond", "Becoming.Continuity.count_le_count"]}
+{"name": "Becoming.Continuity.count_true", "uses": []}
+{"name": "Becoming.Continuity.count_unitsOn", "uses": ["Becoming.Continuity.within_false", "Becoming.Continuity.within_true", "Becoming.GrammarLaws.count_append", "Becoming.GrammarLaws.count_replicate_false", "Becoming.GrammarLaws.count_replicate_true", "Becoming.Naturals.add_congr"]}
+{"name": "Becoming.Continuity.counted_of_count", "uses": ["Becoming.Continuity.count_lt_count", "Becoming.Continuity.count_true"]}
+{"name": "Becoming.Continuity.pairing_iff_closure_counts", "uses": ["Becoming.«所闭之传递»", "Becoming.«所闭之对称»", "Becoming.«所闭之自反»", "Becoming.«类之对当且仅当类类等数»"]}
+{"name": "Becoming.Continuity.pairing_iff_closures", "uses": ["Becoming.Continuity.adjacentListed_symm", "Becoming.Continuity.closureListed_iff", "Becoming.Continuity.pairing_iff_closure_counts"]}
+{"name": "Becoming.Continuity.reachedListed_add", "uses": ["Becoming.ListTests.or_true_iff"]}
+{"name": "Becoming.Continuity.reachedListed_grows_or_stays", "uses": ["Becoming.Continuity.count_lt_count", "Becoming.Continuity.reachedListed_add", "Becoming.ListTests.and_true_iff", "Becoming.ListTests.contains_true_iff", "Becoming.ListTests.or_true_iff"]}
+{"name": "Becoming.Continuity.reachedListed_stays", "uses": ["Becoming.ListTests.and_true_iff", "Becoming.ListTests.any_true_iff", "Becoming.ListTests.or_true_iff"]}
+{"name": "Becoming.Continuity.reachedListed_within", "uses": ["Becoming.ListTests.and_true_iff", "Becoming.ListTests.any_true_iff", "Becoming.ListTests.contains_true_iff", "Becoming.ListTests.decide_true_iff", "Becoming.ListTests.or_true_iff", "Becoming.«所闭之传递»", "Becoming.«所闭之自反»", "Becoming.«缘在所闭»"]}
+{"name": "Becoming.Continuity.within_split", "uses": ["Becoming.Continuity.within_false", "Becoming.Continuity.within_true", "Becoming.Naturals.add_congr"]}

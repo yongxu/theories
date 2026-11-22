@@ -1,0 +1,19 @@
+{"name": "Becoming.DrawnReplacement.Strong.other_first", "uses": ["Becoming.DrawnReplacement.one_each"]}
+{"name": "Becoming.DrawnReplacement.Weak.shapers_first", "uses": ["Becoming.DrawnReplacement.one_each"]}
+{"name": "Becoming.DrawnReplacement.Weak.shared_decides", "uses": ["Becoming.DrawnReplacement.one_each"]}
+{"name": "Becoming.DrawnReplacement.a_le_whole", "uses": []}
+{"name": "Becoming.DrawnReplacement.drawn_carrier", "uses": []}
+{"name": "Becoming.DrawnReplacement.drawn_other", "uses": ["Becoming.DrawnReplacement.sub_split", "Becoming.add_mul_split"]}
+{"name": "Becoming.DrawnReplacement.favours_iff", "uses": ["Becoming.DrawnReplacement.drawn_carrier", "Becoming.DrawnReplacement.drawn_other"]}
+{"name": "Becoming.DrawnReplacement.fixation", "uses": ["Becoming.DrawnReplacement.a_le_whole", "Becoming.DrawnReplacement.steps", "Becoming.DrawnReplacement.up_ge", "Becoming.Drift.Replacement.fixationBy"]}
+{"name": "Becoming.DrawnReplacement.fixed_below", "uses": ["Becoming.DrawnReplacement.steps", "Becoming.DrawnReplacement.up_mono", "Becoming.DrawnReplacement.up_pos", "Becoming.Drift.Replacement.fixedBy_disfavoured", "Becoming.Drift.Replacement.ups_const"]}
+{"name": "Becoming.DrawnReplacement.fixed_ge", "uses": ["Becoming.DrawnReplacement.a_le_whole", "Becoming.DrawnReplacement.up_ge", "Becoming.Drift.Replacement.climbsBy"]}
+{"name": "Becoming.DrawnReplacement.lost_above", "uses": ["Becoming.DrawnReplacement.steps", "Becoming.DrawnReplacement.up_mono", "Becoming.DrawnReplacement.up_pos", "Becoming.Drift.Replacement.lostBy_favoured", "Becoming.Drift.Replacement.ups_const"]}
+{"name": "Becoming.DrawnReplacement.lost_ge", "uses": ["Becoming.Drift.Replacement.lost_geBy"]}
+{"name": "Becoming.DrawnReplacement.one_each", "uses": ["Becoming.Drift.Replacement.downs_const", "Becoming.Drift.Replacement.riseBy_ends"]}
+{"name": "Becoming.DrawnReplacement.risk_dominant_iff", "uses": ["Becoming.DrawnShaping.drawn_split", "Becoming.Naturals.lt_of_mul_lt_mul_left"]}
+{"name": "Becoming.DrawnReplacement.steps", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.add_mul_split", "Becoming.le_dest"]}
+{"name": "Becoming.DrawnReplacement.sub_split", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.le_dest"]}
+{"name": "Becoming.DrawnReplacement.up_ge", "uses": []}
+{"name": "Becoming.DrawnReplacement.up_mono", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.add_mul_split", "Becoming.le_dest"]}
+{"name": "Becoming.DrawnReplacement.up_pos", "uses": ["Becoming.DrawnReplacement.up_ge"]}

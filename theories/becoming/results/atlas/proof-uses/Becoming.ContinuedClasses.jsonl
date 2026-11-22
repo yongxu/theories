@@ -1,0 +1,74 @@
+{"name": "Becoming.Bud.bud_adds_nothing", "uses": ["Becoming.Bud.old_admitted"]}
+{"name": "Becoming.Bud.fission", "uses": ["Becoming.Web.split_fission"]}
+{"name": "Becoming.Bud.fresh_later", "uses": []}
+{"name": "Becoming.Bud.fresh_not_first", "uses": []}
+{"name": "Becoming.Bud.old_admitted", "uses": []}
+{"name": "Becoming.Bud.readings", "uses": ["Becoming.Bud.bud_adds_nothing", "Becoming.Bud.widens_by_name"]}
+{"name": "Becoming.Bud.widens_by_name", "uses": ["Becoming.Bud.fresh_later", "Becoming.Bud.fresh_not_first", "Becoming.Bud.old_admitted", "Becoming.Web.exceedsAcross_itself_iff", "Becoming.Web.includesAcross_itself_iff"]}
+{"name": "Becoming.MergeClass.both_consume_along", "uses": ["Becoming.MergeClass.spent_consumed", "Becoming.Web.ConsumingAlong.merged_candles"]}
+{"name": "Becoming.MergeClass.candles", "uses": ["Becoming.Web.merge_candles"]}
+{"name": "Becoming.MergeClass.first_consumes_along", "uses": ["Becoming.MergeClass.spent_consumed", "Becoming.Web.ConsumingAlong.merged"]}
+{"name": "Becoming.MergeClass.first_renews", "uses": ["Becoming.MergeClass.kept_renewed"]}
+{"name": "Becoming.MergeClass.kept_renewed", "uses": []}
+{"name": "Becoming.MergeClass.readings", "uses": ["Becoming.MergeClass.first_consumes_along", "Becoming.MergeClass.first_renews", "Becoming.Web.renewingAlong_not_consumingAlong"]}
+{"name": "Becoming.MergeClass.spent_consumed", "uses": []}
+{"name": "Becoming.Web.ConsumingAlong.merged", "uses": ["Becoming.Web.consumingAlong_iff"]}
+{"name": "Becoming.Web.ConsumingAlong.merged_candles", "uses": ["Becoming.Web.consumingAlong_iff_line", "Becoming.Web.merge_candles"]}
+{"name": "Becoming.Web.Continuing.brecOn", "uses": []}
+{"name": "Becoming.Web.Continuing.itself_from_zero", "uses": ["Becoming.Web.Continuing.itself_onward"]}
+{"name": "Becoming.Web.Continuing.itself_onward", "uses": []}
+{"name": "Becoming.Web.Continuing.itself_same", "uses": ["Becoming.Web.Continuing.brecOn"]}
+{"name": "Becoming.Web.Continuing.line", "uses": ["Becoming.Web.Continuing.brecOn"]}
+{"name": "Becoming.Web.Continuing.mono", "uses": ["Becoming.Web.continuing_iff_line", "Becoming.«及之单调»"]}
+{"name": "Becoming.Web.Continuing.of_reidentify", "uses": ["Becoming.Web.Continuing.brecOn"]}
+{"name": "Becoming.Web.Continuing.to_reidentify", "uses": ["Becoming.Reidentify.old_new", "Becoming.Web.Continuing.brecOn"]}
+{"name": "Becoming.Web.ExceedsAcross.anti", "uses": ["Becoming.Web.Linked.mono"]}
+{"name": "Becoming.Web.IncludesAcross.mono", "uses": ["Becoming.Web.Linked.mono"]}
+{"name": "Becoming.Web.Linked.brecOn", "uses": []}
+{"name": "Becoming.Web.Linked.held_line", "uses": ["Becoming.Web.Linked.brecOn"]}
+{"name": "Becoming.Web.Linked.itself_held", "uses": ["Becoming.Web.Linked.brecOn"]}
+{"name": "Becoming.Web.Linked.itself_of_le", "uses": ["Becoming.Web.Linked.itself_steps", "Becoming.le_dest"]}
+{"name": "Becoming.Web.Linked.itself_onward", "uses": []}
+{"name": "Becoming.Web.Linked.itself_same", "uses": ["Becoming.Web.Linked.brecOn"]}
+{"name": "Becoming.Web.Linked.itself_steps", "uses": []}
+{"name": "Becoming.Web.Linked.line", "uses": ["Becoming.Web.Linked.brecOn"]}
+{"name": "Becoming.Web.Linked.mono", "uses": ["Becoming.Web.Linked.brecOn"]}
+{"name": "Becoming.Web.Linked.of_carry", "uses": ["Becoming.Web.Linked.brecOn"]}
+{"name": "Becoming.Web.Linked.to_carry", "uses": ["Becoming.Reidentify.old_new", "Becoming.Web.Linked.brecOn"]}
+{"name": "Becoming.Web.RenewingAlong.branch", "uses": ["Becoming.Web.renewingAlong_iff"]}
+{"name": "Becoming.Web.RenewingAlong.branches", "uses": ["Becoming.Web.renewingAlong_iff_line", "Becoming.Web.split_fission", "Becoming.«及之传递»"]}
+{"name": "Becoming.Web.carry_step_iff", "uses": []}
+{"name": "Becoming.Web.consumingAlong_iff", "uses": []}
+{"name": "Becoming.Web.consumingAlong_iff_line", "uses": ["Becoming.Web.continuing_iff_line"]}
+{"name": "Becoming.Web.consumingAlong_itself_iff", "uses": ["Becoming.Web.Continuing.itself_from_zero", "Becoming.Web.Continuing.itself_same"]}
+{"name": "Becoming.Web.consumingAlong_mono", "uses": ["Becoming.Web.Continuing.mono"]}
+{"name": "Becoming.Web.consumingAlong_reidentify", "uses": ["Becoming.Reidentify.new_old", "Becoming.Reidentify.old_new", "Becoming.Web.Continuing.of_reidentify", "Becoming.Web.Continuing.to_reidentify", "Becoming.Web.reidentify_consumed"]}
+{"name": "Becoming.Web.continuing_iff_line", "uses": ["Becoming.Web.Continuing.line", "Becoming.Web.line_continuing"]}
+{"name": "Becoming.Web.continuing_reidentify", "uses": ["Becoming.Reidentify.new_old", "Becoming.Web.Continuing.of_reidentify", "Becoming.Web.Continuing.to_reidentify"]}
+{"name": "Becoming.Web.dependenceClass_class", "uses": ["Becoming.Web.alikeBy_class"]}
+{"name": "Becoming.Web.exceedsAcross_itself_iff", "uses": ["Becoming.Web.Linked.itself_of_le", "Becoming.Web.Linked.itself_same"]}
+{"name": "Becoming.Web.exceedsAcross_of_unlinked", "uses": []}
+{"name": "Becoming.Web.exceedsAcross_reidentify", "uses": ["Becoming.Reidentify.new_old", "Becoming.Reidentify.old_new", "Becoming.Web.Linked.of_carry", "Becoming.Web.Linked.to_carry"]}
+{"name": "Becoming.Web.held_iff_line", "uses": ["Becoming.Web.Linked.held_line", "Becoming.Web.line_held"]}
+{"name": "Becoming.Web.includesAcross_itself_iff", "uses": ["Becoming.Web.Linked.itself_of_le", "Becoming.Web.Linked.itself_same"]}
+{"name": "Becoming.Web.includesAcross_reidentify", "uses": ["Becoming.Reidentify.new_old", "Becoming.Reidentify.old_new", "Becoming.Web.Linked.of_carry", "Becoming.Web.Linked.to_carry"]}
+{"name": "Becoming.Web.line_continuing", "uses": []}
+{"name": "Becoming.Web.line_held", "uses": []}
+{"name": "Becoming.Web.line_image", "uses": []}
+{"name": "Becoming.Web.line_linked", "uses": []}
+{"name": "Becoming.Web.line_reidentify", "uses": ["Becoming.Reidentify.new_old", "Becoming.Reidentify.old_new", "Becoming.Web.carry_step_iff", "Becoming.Web.line_image", "Becoming.Web.occurrence_eq"]}
+{"name": "Becoming.Web.linked_iff_line", "uses": ["Becoming.Web.Linked.line", "Becoming.Web.line_linked"]}
+{"name": "Becoming.Web.metAboveAlong_iff_line", "uses": ["Becoming.Web.held_iff_line"]}
+{"name": "Becoming.Web.metAboveAlong_itself_iff", "uses": ["Becoming.Web.Linked.itself_held", "Becoming.Web.Linked.itself_onward", "Becoming.le_dest"]}
+{"name": "Becoming.Web.metAboveAlong_reidentify", "uses": ["Becoming.Reidentify.new_old", "Becoming.Reidentify.old_new", "Becoming.Web.Linked.of_carry", "Becoming.Web.Linked.to_carry"]}
+{"name": "Becoming.Web.renewingAlong_iff", "uses": []}
+{"name": "Becoming.Web.renewingAlong_iff_line", "uses": ["Becoming.Web.continuing_iff_line"]}
+{"name": "Becoming.Web.renewingAlong_itself_iff", "uses": ["Becoming.Web.Continuing.itself_from_zero", "Becoming.Web.Continuing.itself_same"]}
+{"name": "Becoming.Web.renewingAlong_mono", "uses": ["Becoming.Web.Continuing.mono"]}
+{"name": "Becoming.Web.renewingAlong_not_consumingAlong", "uses": ["Becoming.Web.renewed_not_consumed"]}
+{"name": "Becoming.Web.renewingAlong_reidentify", "uses": ["Becoming.Reidentify.new_old", "Becoming.Reidentify.old_new", "Becoming.Web.Continuing.of_reidentify", "Becoming.Web.Continuing.to_reidentify", "Becoming.Web.reidentify_renewed"]}
+{"name": "Becoming.Web.underminingAlong_itself_iff", "uses": ["Becoming.Web.metAboveAlong_itself_iff"]}
+{"name": "Becoming.Web.underminingAlong_mono", "uses": ["Becoming.Web.Linked.mono"]}
+{"name": "Becoming.Web.underminingAlong_reidentify", "uses": ["Becoming.Reidentify.old_new", "Becoming.Web.metAboveAlong_reidentify"]}
+{"name": "Becoming.Web.widensAcross_reidentify", "uses": ["Becoming.Web.exceedsAcross_reidentify", "Becoming.Web.includesAcross_reidentify"]}
+{"name": "Becoming.World.continues_as_alike", "uses": ["Becoming.Reidentify.exchangeAfter_across", "Becoming.World.exchangeAfter_balanced", "Becoming.transpose_left"]}

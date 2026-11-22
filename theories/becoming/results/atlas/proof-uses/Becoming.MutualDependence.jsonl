@@ -1,0 +1,30 @@
+{"name": "Becoming.Clearing.shares_not_mutual", "uses": ["Becoming.Clearing.levels", "Becoming.Clearing.system_whole"]}
+{"name": "Becoming.CoupledAlways.chainInTime", "uses": []}
+{"name": "Becoming.CoupledThroughout.exponential", "uses": ["Becoming.carried_pow_downstream"]}
+{"name": "Becoming.DoublingDraw.balances", "uses": []}
+{"name": "Becoming.DoublingDraw.exceeds", "uses": []}
+{"name": "Becoming.DoublingDraw.half_then_none", "uses": ["Becoming.DoublingDraw.balances", "Becoming.DoublingDraw.exceeds", "Becoming.Flow.Balances.half_stands"]}
+{"name": "Becoming.Drawing.affected", "uses": []}
+{"name": "Becoming.Drawing.balances", "uses": []}
+{"name": "Becoming.Drawing.mutual_not_fed", "uses": ["Becoming.Drawing.balances", "Becoming.Drawing.mutuallyDependent"]}
+{"name": "Becoming.Drawing.mutuallyDependent", "uses": ["Becoming.Drawing.affected", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Flow.Balances.doubling_needs", "uses": ["Becoming.Flow.Balances.drawn_within", "Becoming.pow_le_drawnBefore"]}
+{"name": "Becoming.Flow.Balances.drawn_within", "uses": ["Becoming.Flow.Balances.level_add_drawn"]}
+{"name": "Becoming.Flow.Balances.half_stands", "uses": ["Becoming.Flow.Balances.level_add_drawn"]}
+{"name": "Becoming.Flow.Balances.level_add_drawn", "uses": []}
+{"name": "Becoming.Flow.MutuallyDependent.sharesThroughout", "uses": ["Becoming.Flow.withinSystem_of_withinInfluence"]}
+{"name": "Becoming.Flow.MutuallyDependent.unrestricted", "uses": []}
+{"name": "Becoming.Flow.MutuallyFed.mutuallyDependent", "uses": ["Becoming.Flow.withinInfluence_of_withinFeeding"]}
+{"name": "Becoming.Flow.MutuallyFed.unrestricted", "uses": []}
+{"name": "Becoming.Flow.SharesThroughout.unrestricted", "uses": []}
+{"name": "Becoming.Flow.mutuallyDependent_iff_reach", "uses": ["Becoming.WithinClosure.converse"]}
+{"name": "Becoming.Flow.mutuallyDependent_of_common", "uses": ["Becoming.Flow.mutuallyDependent_iff_reach", "Becoming.Flow.reach_whole_of_common"]}
+{"name": "Becoming.carried_le_pow_always", "uses": ["Becoming.Frequency.count_always", "Becoming.carried_le_count"]}
+{"name": "Becoming.carried_pow_around", "uses": ["Becoming.carried_roundTrip", "Becoming.roundTrip_of_coupledAlways"]}
+{"name": "Becoming.carried_pow_downstream", "uses": ["Becoming.CoupledAlways.chainInTime", "Becoming.carried_along_in_time", "Becoming.carried_pow_around"]}
+{"name": "Becoming.carriers_grow", "uses": ["Becoming.le_offspringCount", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.exponential_around", "uses": ["Becoming.carried_le_pow_always", "Becoming.carried_pow_around"]}
+{"name": "Becoming.others_bounded", "uses": ["Becoming.mul_assoc_nat", "Becoming.offspringCount_le"]}
+{"name": "Becoming.pow_le_drawnBefore", "uses": []}
+{"name": "Becoming.roundTrip_of_coupledAlways", "uses": ["Becoming.CoupledAlways.chainInTime"]}
+{"name": "Becoming.share_ratio_pow", "uses": ["Becoming.carriers_grow", "Becoming.others_bounded"]}

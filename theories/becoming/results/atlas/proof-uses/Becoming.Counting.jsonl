@@ -1,0 +1,249 @@
+{"name": "Becoming.EnclosedQueue.busy", "uses": ["Becoming.EnclosedQueue.idle", "Becoming.EnclosedQueue.still"]}
+{"name": "Becoming.EnclosedQueue.closed", "uses": ["Becoming.EnclosedQueue.moving_within", "Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.EnclosedQueue.empty_stays", "uses": ["Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.EnclosedQueue.held_outside", "uses": ["Becoming.EnclosedQueue.place_zero", "Becoming.EnclosedQueue.spare_zero", "Becoming.EnclosedQueue.within_span", "Becoming.OpenQueue.front", "Becoming.mark_zero"]}
+{"name": "Becoming.EnclosedQueue.idle", "uses": ["Becoming.EnclosedQueue.empty_stays", "Becoming.EnclosedQueue.outside_empty", "Becoming.EnclosedQueue.place_zero", "Becoming.EnclosedQueue.still_flows"]}
+{"name": "Becoming.EnclosedQueue.level_le", "uses": ["Becoming.EnclosedQueue.place_le"]}
+{"name": "Becoming.EnclosedQueue.moving_within", "uses": ["Becoming.EnclosedQueue.place_zero", "Becoming.EnclosedQueue.still", "Becoming.EnclosedQueue.still_flows", "Becoming.EnclosedQueue.within_span"]}
+{"name": "Becoming.EnclosedQueue.outside_empty", "uses": ["Becoming.OpenQueue.occupied"]}
+{"name": "Becoming.EnclosedQueue.place_le", "uses": []}
+{"name": "Becoming.EnclosedQueue.place_pos", "uses": []}
+{"name": "Becoming.EnclosedQueue.place_zero", "uses": []}
+{"name": "Becoming.EnclosedQueue.quiet_same", "uses": ["Becoming.Queue.gone_succ", "Becoming.mark_zero", "Becoming.occurrences_succ"]}
+{"name": "Becoming.EnclosedQueue.shedding_closed", "uses": ["Becoming.EnclosedQueue.held_outside", "Becoming.mark_zero"]}
+{"name": "Becoming.EnclosedQueue.shedding_flows", "uses": ["Becoming.EnclosedQueue.spare_zero", "Becoming.mark_zero"]}
+{"name": "Becoming.EnclosedQueue.span_distinct", "uses": ["Becoming.steps_distinct"]}
+{"name": "Becoming.EnclosedQueue.spare_zero", "uses": ["Becoming.mark_zero"]}
+{"name": "Becoming.EnclosedQueue.still", "uses": []}
+{"name": "Becoming.EnclosedQueue.still_flows", "uses": []}
+{"name": "Becoming.EnclosedQueue.store_succ_le", "uses": ["Becoming.EnclosedQueue.sub_add_le"]}
+{"name": "Becoming.EnclosedQueue.sub_add_le", "uses": []}
+{"name": "Becoming.EnclosedQueue.total_place", "uses": ["Becoming.steps_length", "Becoming.steps_mem", "Becoming.steps_within", "Becoming.total_congr_on", "Becoming.total_ones"]}
+{"name": "Becoming.EnclosedQueue.total_place_le", "uses": ["Becoming.EnclosedQueue.total_place"]}
+{"name": "Becoming.EnclosedQueue.total_place_pos", "uses": ["Becoming.EnclosedQueue.total_place"]}
+{"name": "Becoming.EnclosedQueue.within_span", "uses": ["Becoming.Queue.gone_succ", "Becoming.Queue.kept_end", "Becoming.steps_of_within"]}
+{"name": "Becoming.FiniteQueue.front_val", "uses": ["Becoming.ChangeBound.reach", "Becoming.FiniteQueue.front._proof_1"]}
+{"name": "Becoming.FiniteQueue.placed", "uses": ["Becoming.ChangeBound.reach"]}
+{"name": "Becoming.Flow.transmits_saturated", "uses": []}
+{"name": "Becoming.LossyQueue.moving", "uses": ["Becoming.mark_zero"]}
+{"name": "Becoming.LossyRing.moving", "uses": ["Becoming.mark_zero"]}
+{"name": "Becoming.OnceClosedQueue.busy", "uses": ["Becoming.EnclosedQueue.empty_stays", "Becoming.OnceClosedQueue.idle", "Becoming.OnceClosedQueue.still"]}
+{"name": "Becoming.OnceClosedQueue.closed", "uses": ["Becoming.OnceClosedQueue.moving_within", "Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.OnceClosedQueue.dependent_any_activity", "uses": []}
+{"name": "Becoming.OnceClosedQueue.excess_le", "uses": []}
+{"name": "Becoming.OnceClosedQueue.idle", "uses": ["Becoming.EnclosedQueue.outside_empty", "Becoming.EnclosedQueue.place_zero", "Becoming.OnceClosedQueue.still_flows", "Becoming.mark_zero"]}
+{"name": "Becoming.OnceClosedQueue.level_le", "uses": ["Becoming.EnclosedQueue.place_le", "Becoming.OnceClosedQueue.excess_le"]}
+{"name": "Becoming.OnceClosedQueue.moving_within", "uses": ["Becoming.EnclosedQueue.place_zero", "Becoming.EnclosedQueue.within_span", "Becoming.OnceClosedQueue.still", "Becoming.OnceClosedQueue.still_flows"]}
+{"name": "Becoming.OnceClosedQueue.not_closed", "uses": ["Becoming.beyond_not_mem", "Becoming.mark_one"]}
+{"name": "Becoming.OnceClosedQueue.still", "uses": []}
+{"name": "Becoming.OnceClosedQueue.still_flows", "uses": []}
+{"name": "Becoming.OnceClosedQueue.transmits_any_flow", "uses": ["Becoming.OnceClosedQueue.level_le"]}
+{"name": "Becoming.OpenQueue.front", "uses": []}
+{"name": "Becoming.OpenQueue.ground_not_member", "uses": []}
+{"name": "Becoming.OpenQueue.joined", "uses": ["Becoming.Queue.comings_eq", "Becoming.mark_pos", "Becoming.steps_of_within", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.OpenQueue.level_le", "uses": ["Becoming.mark_le_one"]}
+{"name": "Becoming.OpenQueue.member_inj", "uses": []}
+{"name": "Becoming.OpenQueue.occupied", "uses": []}
+{"name": "Becoming.OpenQueue.outside", "uses": ["Becoming.beyond_not_mem", "Becoming.mem_map_of"]}
+{"name": "Becoming.Queue.lone_settles", "uses": ["Becoming.mark_zero"]}
+{"name": "Becoming.Queue.lone_tally", "uses": []}
+{"name": "Becoming.RelayQueue.after", "uses": ["Becoming.mark_one", "Becoming.mark_zero"]}
+{"name": "Becoming.RelayQueue.up_to", "uses": ["Becoming.mark_one", "Becoming.mark_zero"]}
+{"name": "Becoming.Ring.census", "uses": ["Becoming.Ring.slot_inj", "Becoming.distinct_map_on", "Becoming.steps_distinct", "Becoming.steps_mem", "Becoming.steps_within"]}
+{"name": "Becoming.Ring.counts", "uses": ["Becoming.EnclosedQueue.within_span", "Becoming.Queue.ceasings_eq", "Becoming.Queue.comings_eq", "Becoming.Ring.holds_iff", "Becoming.ceasesToBe_congr", "Becoming.comesToBe_congr", "Becoming.mark_iff", "Becoming.steps_length", "Becoming.steps_mem", "Becoming.steps_within", "Becoming.total_congr_on", "Becoming.total_map", "Becoming.total_ones"]}
+{"name": "Becoming.Ring.front_holds", "uses": ["Becoming.OpenQueue.front", "Becoming.mem_map_of", "Becoming.steps_of_within"]}
+{"name": "Becoming.Ring.given_held", "uses": ["Becoming.mark_pos"]}
+{"name": "Becoming.Ring.holds_iff", "uses": ["Becoming.Ring.slot_inj", "Becoming.Ring.span_fits", "Becoming.mem_map_of", "Becoming.preimage_of_mem_map", "Becoming.steps_mem", "Becoming.steps_of_within", "Becoming.steps_within"]}
+{"name": "Becoming.Ring.occupied", "uses": ["Becoming.OpenQueue.occupied", "Becoming.preimage_of_mem_map", "Becoming.steps_mem", "Becoming.steps_within"]}
+{"name": "Becoming.Ring.slot_add", "uses": ["Becoming.Ring.slot_lt", "Becoming.Ring.slot_step"]}
+{"name": "Becoming.Ring.slot_apart", "uses": ["Becoming.Ring.slot_ne", "Becoming.le_dest"]}
+{"name": "Becoming.Ring.slot_inj", "uses": ["Becoming.Ring.slot_apart"]}
+{"name": "Becoming.Ring.slot_lt", "uses": ["Becoming.Ring.slot_step"]}
+{"name": "Becoming.Ring.slot_ne", "uses": ["Becoming.Ring.slot_add"]}
+{"name": "Becoming.Ring.slot_step", "uses": []}
+{"name": "Becoming.Ring.span_fits", "uses": []}
+{"name": "Becoming.Ring.taken_held", "uses": ["Becoming.mark_pos"]}
+{"name": "Becoming.Tally.after_pos", "uses": []}
+{"name": "Becoming.Tally.occupied_from", "uses": ["Becoming.Tally.after_pos", "Becoming.last_positive"]}
+{"name": "Becoming.TallyWorlds.balance_not_shown", "uses": ["Becoming.TallyWorlds.shown_iff_tally", "Becoming.balance_not_tally"]}
+{"name": "Becoming.TallyWorlds.lpo_of_census_ends", "uses": ["Becoming.ChangeBound.lpo_of_ends", "Becoming.Queue.counts", "Becoming.Queue.listed", "Becoming.TallyWorlds.occurrences_congr"]}
+{"name": "Becoming.TallyWorlds.occurrences_congr", "uses": ["Becoming.mark_iff"]}
+{"name": "Becoming.TallyWorlds.shown_iff_balance", "uses": ["Becoming.TallyWorlds.shown_iff_tally", "Becoming.tally_iff"]}
+{"name": "Becoming.TallyWorlds.shown_iff_tally", "uses": ["Becoming.Queue.counts", "Becoming.Queue.listed", "Becoming.tally_iff_counted"]}
+{"name": "Becoming.Web.saturated_dependent", "uses": []}
+{"name": "Becoming.World.CountsOf.active_pos", "uses": ["Becoming.World.counts_active"]}
+{"name": "Becoming.World.CountsOf.acts_of_binding", "uses": ["Becoming.World.CountsOf.active_pos"]}
+{"name": "Becoming.World.CountsOf.arising_pos", "uses": ["Becoming.Counts.pos_of_mem"]}
+{"name": "Becoming.World.CountsOf.company_binding", "uses": ["Becoming.FamilyCounts.company", "Becoming.World.Embodied.arising", "Becoming.World.active_of_coming_jointly", "Becoming.World.active_of_coming_taking"]}
+{"name": "Becoming.World.CountsOf.joint_of_binding", "uses": ["Becoming.World.CountsOf.active_pos", "Becoming.World.CountsOf.arising_pos"]}
+{"name": "Becoming.World.Premised.saturated", "uses": ["Becoming.Flow.transmits_saturated", "Becoming.Web.saturated_dependent", "Becoming.World.Premised.of"]}
+{"name": "Becoming.World.active_of_coming_enclosed", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.Balances.rise_given", "Becoming.Flow.BalancesOn.comes_from_standing", "Becoming.Web.ComesToStand.rises", "Becoming.eq_zero_of_not_pos", "Becoming.total_eq_zero", "Becoming.total_ones", "Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.World.active_of_coming_jointly", "uses": ["Becoming.Web.Embodied.arises_given", "Becoming.total_ones", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.World.active_of_coming_taking", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.DissipatesOn.still_untaken", "Becoming.eq_zero_of_not_pos", "Becoming.le_total_of_mem", "Becoming.total_congr_on", "Becoming.total_ones", "Becoming.total_pos_of_mem", "Becoming.total_zero"]}
+{"name": "Becoming.World.balancedRing_acting", "uses": ["Becoming.EnclosedQueue.empty_stays", "Becoming.Ring.front_holds", "Becoming.Ring.given_held", "Becoming.Ring.occupied"]}
+{"name": "Becoming.World.balancedRing_holds", "uses": ["Becoming.Ring.census", "Becoming.Ring.front_holds", "Becoming.Ring.occupied", "Becoming.Ring.taken_held", "Becoming.add_sub_turn", "Becoming.mark_pos"]}
+{"name": "Becoming.World.balancedRing_meets", "uses": ["Becoming.World.balancedRing_acting", "Becoming.World.balancedRing_holds"]}
+{"name": "Becoming.World.binding_activity_iff", "uses": ["Becoming.Tally.after_pos", "Becoming.World.binding_counting_under"]}
+{"name": "Becoming.World.binding_arising_iff", "uses": ["Becoming.World.binding_counting_under"]}
+{"name": "Becoming.World.binding_contingent", "uses": ["Becoming.Queue.ceasings_eq", "Becoming.Queue.comings_eq", "Becoming.World.hatch_binds", "Becoming.World.hatch_rests_unrefuted", "Becoming.World.not_recurring_of_rests_unrefuted", "Becoming.World.onceClosedQueue_binds", "Becoming.World.onceClosedQueue_premised", "Becoming.mark_pos", "Becoming.total_pos"]}
+{"name": "Becoming.World.binding_counting", "uses": ["Becoming.World.binding_counting_sound", "Becoming.World.binding_counting_witnessed", "Becoming.World.census_table_marks_hold₂"]}
+{"name": "Becoming.World.binding_counting_sound", "uses": ["Becoming.World.binds_arising_counted", "Becoming.World.premised_counting_sound"]}
+{"name": "Becoming.World.binding_counting_under", "uses": ["Becoming.World.binding_counting_under_sound", "Becoming.World.binding_counting_under_witnessed", "Becoming.World.census_table_marks_hold"]}
+{"name": "Becoming.World.binding_counting_under_sound", "uses": ["Becoming.World.CountsOf.acts_of_binding", "Becoming.World.CountsOf.joint_of_binding", "Becoming.World.binds_arising_counted", "Becoming.World.counting_under_sound"]}
+{"name": "Becoming.World.binding_counting_under_witnessed", "uses": ["Becoming.OpenQueue.front", "Becoming.Queue.counts", "Becoming.Tally.after_pos", "Becoming.World.Premised.meets", "Becoming.World.lossyQueue_binding", "Becoming.World.onceClosedQueue_binding", "Becoming.World.onceClosedQueue_binds", "Becoming.World.onceClosedQueue_census", "Becoming.World.onceClosedQueue_premised", "Becoming.World.openQueue_census", "Becoming.World.openQueue_counts", "Becoming.World.openQueue_saturated_binding", "Becoming.World.relayQueue_binding", "Becoming.mark_pos", "Becoming.mark_zero"]}
+{"name": "Becoming.World.binding_counting_witnessed", "uses": ["Becoming.Queue.counts", "Becoming.World.onceClosedQueue_binds", "Becoming.World.onceClosedQueue_census", "Becoming.World.onceClosedQueue_premised"]}
+{"name": "Becoming.World.binding_joint_iff", "uses": ["Becoming.Queue.lone_tally", "Becoming.World.binding_counting_under"]}
+{"name": "Becoming.World.binds_adds", "uses": ["Becoming.World.premised_counting"]}
+{"name": "Becoming.World.binds_arising", "uses": ["Becoming.le_total_of_mem", "Becoming.mark_pos"]}
+{"name": "Becoming.World.binds_arising_counted", "uses": ["Becoming.World.CountsOf.arising_pos"]}
+{"name": "Becoming.World.closingQueue_balanced", "uses": ["Becoming.add_sub_turn"]}
+{"name": "Becoming.World.closingQueue_dissipative", "uses": ["Becoming.World.closing_flows", "Becoming.World.enclosedQueue_dissipatesOn", "Becoming.beyond_not_mem", "Becoming.mark_pos", "Becoming.occurrences_zero_le", "Becoming.total_congr", "RelationalRenewal.le_sub_from_add"]}
+{"name": "Becoming.World.closingQueue_enclosed", "uses": ["Becoming.EnclosedQueue.closed", "Becoming.EnclosedQueue.span_distinct", "Becoming.World.closing_flows"]}
+{"name": "Becoming.World.closing_flows", "uses": ["Becoming.mark_zero"]}
+{"name": "Becoming.World.counting_binds_iff", "uses": ["Becoming.Queue.lone_tally", "Becoming.World.counting_under"]}
+{"name": "Becoming.World.counting_binds_jointly", "uses": ["Becoming.Queue.comings_eq", "Becoming.Queue.counts", "Becoming.Queue.listed", "Becoming.Queue.lone_tally", "Becoming.Web.Embodied.arises_given", "Becoming.mark_pos", "Becoming.total_ones", "Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.World.counting_free", "uses": ["Becoming.World.census_table_marks_hold_free", "Becoming.World.counting_free_witnessed"]}
+{"name": "Becoming.World.counting_free_witnessed", "uses": ["Becoming.Queue.counts", "Becoming.Queue.listed", "Becoming.World.embodiedQueue_premised", "Becoming.World.queue_premised"]}
+{"name": "Becoming.World.counting_under", "uses": ["Becoming.World.census_table_marks_hold", "Becoming.World.counting_under_sound", "Becoming.World.counting_under_witnessed"]}
+{"name": "Becoming.World.counting_under_sound", "uses": ["Becoming.Counts.exists_of_pos", "Becoming.World.Embodied.arising", "Becoming.World.active_of_coming_jointly", "Becoming.World.active_of_coming_taking"]}
+{"name": "Becoming.World.counting_under_witnessed", "uses": ["Becoming.Queue.counts", "Becoming.Queue.listed", "Becoming.World.Premised.meets", "Becoming.World.drivenQueue_meets", "Becoming.World.embodiedQueue_meets", "Becoming.World.openQueue_census", "Becoming.World.openQueue_counts", "Becoming.World.openQueue_meets", "Becoming.World.openQueue_premised", "Becoming.World.queue_meets"]}
+{"name": "Becoming.World.counts_active", "uses": ["Becoming.total_ones", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.World.counts_arising", "uses": ["Becoming.le_total_of_mem", "Becoming.mark_pos"]}
+{"name": "Becoming.World.drivenQueue_holds", "uses": ["Becoming.OpenQueue.outside", "Becoming.World.openQueue_holds", "Becoming.mark_turn"]}
+{"name": "Becoming.World.drivenQueue_meets", "uses": ["Becoming.World.drivenQueue_holds"]}
+{"name": "Becoming.World.embodiedQueue_meets", "uses": ["Becoming.World.embodiedQueue_premised"]}
+{"name": "Becoming.World.embodiedQueue_premised", "uses": ["Becoming.Queue.listed", "Becoming.World.still_vacuous", "Becoming.mark_pos"]}
+{"name": "Becoming.World.embodiedRing_meets", "uses": ["Becoming.World.embodiedRing_premised"]}
+{"name": "Becoming.World.embodiedRing_premised", "uses": ["Becoming.Ring.census", "Becoming.World.still_vacuous", "Becoming.mark_pos"]}
+{"name": "Becoming.World.enclosedQueue_acting", "uses": ["Becoming.EnclosedQueue.busy", "Becoming.OpenQueue.front"]}
+{"name": "Becoming.World.enclosedQueue_balanced", "uses": ["Becoming.add_sub_turn"]}
+{"name": "Becoming.World.enclosedQueue_census", "uses": ["Becoming.Queue.listed"]}
+{"name": "Becoming.World.enclosedQueue_dissipatesOn", "uses": ["Becoming.EnclosedQueue.idle", "Becoming.EnclosedQueue.moving_within", "Becoming.EnclosedQueue.quiet_same", "Becoming.EnclosedQueue.span_distinct", "Becoming.EnclosedQueue.still_flows", "Becoming.EnclosedQueue.within_span", "Becoming.Flow.Balances.over", "Becoming.Web.StandingCensus.stock_eq", "Becoming.World.enclosedQueue_balanced", "Becoming.World.enclosedQueue_census", "Becoming.World.enclosedQueue_embodied", "Becoming.World.enclosedQueue_stock", "Becoming.World.standingCensus", "Becoming.le_of_add_le_add_right", "Becoming.mark_one", "Becoming.occurrences_succ", "Becoming.sign_le_one", "Becoming.total_eq_zero", "Becoming.total_le_of_support"]}
+{"name": "Becoming.World.enclosedQueue_dissipative", "uses": ["Becoming.World.enclosedQueue_dissipatesOn", "RelationalRenewal.le_sub_from_add"]}
+{"name": "Becoming.World.enclosedQueue_embodied", "uses": ["Becoming.EnclosedQueue.place_pos"]}
+{"name": "Becoming.World.enclosedQueue_enclosed", "uses": ["Becoming.EnclosedQueue.closed", "Becoming.EnclosedQueue.span_distinct"]}
+{"name": "Becoming.World.enclosedQueue_premised", "uses": ["Becoming.World.Premised.of", "Becoming.World.enclosedQueue_acting", "Becoming.World.enclosedQueue_balanced", "Becoming.World.enclosedQueue_census", "Becoming.World.enclosedQueue_dissipative", "Becoming.World.enclosedQueue_embodied", "Becoming.World.enclosedQueue_taking"]}
+{"name": "Becoming.World.enclosedQueue_saturated_binds", "uses": ["Becoming.EnclosedQueue.closed", "Becoming.EnclosedQueue.place_pos", "Becoming.EnclosedQueue.place_zero", "Becoming.EnclosedQueue.span_distinct", "Becoming.EnclosedQueue.within_span", "Becoming.Queue.comings_eq", "Becoming.World.enclosedQueue_dissipative", "Becoming.beyond_not_mem", "Becoming.le_total_of_mem", "Becoming.mark_pos", "Becoming.total_pos"]}
+{"name": "Becoming.World.enclosedQueue_stock", "uses": ["Becoming.EnclosedQueue.total_place", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.World.enclosedQueue_taking", "uses": ["Becoming.EnclosedQueue.place_pos", "Becoming.OpenQueue.front", "Becoming.OpenQueue.occupied"]}
+{"name": "Becoming.World.enclosed_binding_activity_iff", "uses": ["Becoming.Tally.after_pos", "Becoming.World.enclosed_binding_counting_under"]}
+{"name": "Becoming.World.enclosed_binding_arising_iff", "uses": ["Becoming.World.enclosed_binding_counting_under"]}
+{"name": "Becoming.World.enclosed_binding_counting", "uses": ["Becoming.World.census_table_marks_hold", "Becoming.World.enclosed_binding_counting_sound", "Becoming.World.enclosed_binding_counting_witnessed"]}
+{"name": "Becoming.World.enclosed_binding_counting_sound", "uses": ["Becoming.ChangeBound.from_zero", "Becoming.FamilyCounts.company", "Becoming.World.Embodied.arising", "Becoming.World.active_of_coming_jointly", "Becoming.World.binds_arising_counted", "Becoming.World.enclosure_bounds_change_counted"]}
+{"name": "Becoming.World.enclosed_binding_counting_under", "uses": ["Becoming.World.census_table_marks_hold", "Becoming.World.enclosed_binding_counting_under_sound", "Becoming.World.enclosed_binding_counting_under_witnessed"]}
+{"name": "Becoming.World.enclosed_binding_counting_under_sound", "uses": ["Becoming.FamilyCounts.company", "Becoming.World.CountsOf.acts_of_binding", "Becoming.World.CountsOf.company_binding", "Becoming.World.CountsOf.joint_of_binding", "Becoming.World.active_of_coming_enclosed", "Becoming.World.binds_arising_counted", "Becoming.World.enclosure_bounds_change_counted"]}
+{"name": "Becoming.World.enclosed_binding_counting_under_witnessed", "uses": ["Becoming.ChangeBound.from_zero", "Becoming.EnclosedQueue.level_le", "Becoming.OpenQueue.front", "Becoming.Queue.counts", "Becoming.Queue.listed", "Becoming.Tally.after_pos", "Becoming.Tally.occupied_from", "Becoming.World.Premised.meets", "Becoming.World.Premised.saturated", "Becoming.World.enclosedQueue_census", "Becoming.World.enclosedQueue_enclosed", "Becoming.World.enclosedQueue_premised", "Becoming.World.enclosedQueue_saturated_binds", "Becoming.World.exchangingQueue_binding", "Becoming.World.exchangingQueue_enclosed", "Becoming.World.lossyQueue_binding", "Becoming.World.lossyQueue_enclosed", "Becoming.World.openQueue_census", "Becoming.World.openQueue_counts", "Becoming.World.relayQueue_binding", "Becoming.World.relayQueue_enclosed", "Becoming.World.sheddingQueue_binding", "Becoming.World.sheddingQueue_enclosed", "Becoming.changeBound_iff_zero", "Becoming.mark_pos", "Becoming.mark_zero"]}
+{"name": "Becoming.World.enclosed_binding_counting_witnessed", "uses": ["Becoming.EnclosedQueue.level_le", "Becoming.Queue.counts", "Becoming.World.Premised.saturated", "Becoming.World.enclosedQueue_census", "Becoming.World.enclosedQueue_enclosed", "Becoming.World.enclosedQueue_premised", "Becoming.World.enclosedQueue_saturated_binds"]}
+{"name": "Becoming.World.enclosed_binding_joint_iff", "uses": ["Becoming.Queue.lone_settles", "Becoming.Queue.lone_tally", "Becoming.World.enclosed_binding_counting_under"]}
+{"name": "Becoming.World.enclosed_binds_counting", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.Balances.rise_given", "Becoming.Flow.BalancesOn.comes_from_standing", "Becoming.Web.ComesToStand.rises", "Becoming.eq_zero_of_not_pos", "Becoming.mark_pos", "Becoming.total_eq_zero", "Becoming.total_ones", "Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.World.enclosed_change_bound_iff", "uses": ["Becoming.World.enclosed_counting_under", "Becoming.World.enclosure_bounds_change"]}
+{"name": "Becoming.World.enclosed_counting", "uses": ["Becoming.World.census_table_marks_hold₂", "Becoming.World.enclosed_counting_sound", "Becoming.World.enclosed_counting_witnessed"]}
+{"name": "Becoming.World.enclosed_counting_sound", "uses": ["Becoming.ChangeBound.from_zero", "Becoming.FamilyCounts.company", "Becoming.World.Embodied.arising", "Becoming.World.active_of_coming_jointly", "Becoming.World.enclosure_bounds_change_counted"]}
+{"name": "Becoming.World.enclosed_counting_under", "uses": ["Becoming.World.census_table_marks_hold₂", "Becoming.World.enclosed_counting_under_sound", "Becoming.World.enclosed_counting_under_witnessed"]}
+{"name": "Becoming.World.enclosed_counting_under_sound", "uses": ["Becoming.FamilyCounts.company", "Becoming.World.active_of_coming_enclosed", "Becoming.World.counting_under_sound", "Becoming.World.enclosure_bounds_change_counted"]}
+{"name": "Becoming.World.enclosed_counting_under_witnessed", "uses": ["Becoming.ChangeBound.from_zero", "Becoming.Queue.counts", "Becoming.Queue.listed", "Becoming.World.Premised.meets", "Becoming.World.closingQueue_balanced", "Becoming.World.closingQueue_dissipative", "Becoming.World.closingQueue_enclosed", "Becoming.World.embodiedQueue_meets", "Becoming.World.enclosedQueue_acting", "Becoming.World.enclosedQueue_balanced", "Becoming.World.enclosedQueue_census", "Becoming.World.enclosedQueue_embodied", "Becoming.World.enclosedQueue_enclosed", "Becoming.World.enclosedQueue_premised", "Becoming.World.enclosedQueue_taking", "Becoming.World.queue_meets", "Becoming.World.still_enclosed"]}
+{"name": "Becoming.World.enclosed_counting_witnessed", "uses": ["Becoming.Queue.counts", "Becoming.World.enclosedQueue_census", "Becoming.World.enclosedQueue_enclosed", "Becoming.World.enclosedQueue_premised"]}
+{"name": "Becoming.World.enclosed_iff_finite_counting", "uses": ["Becoming.World.enclosed_counting", "Becoming.World.finite_counting"]}
+{"name": "Becoming.World.enclosed_iff_finite_counting_under", "uses": ["Becoming.World.enclosed_counting_under", "Becoming.World.enclosed_iff_finite_tally", "Becoming.World.finite_counting_under"]}
+{"name": "Becoming.World.enclosed_iff_finite_tally", "uses": ["Becoming.ChangeBound.from_zero", "Becoming.Queue.lone_settles", "Becoming.Queue.lone_tally"]}
+{"name": "Becoming.World.enclosure_bounds_change", "uses": ["Becoming.Flow.AroundStanding.runsDownClosed", "Becoming.Flow.Enclosed.aroundStanding_not_not", "Becoming.Flow.RunsDownClosed.runsDown", "Becoming.Flow.runsDown_change_bound", "Becoming.World.falls_of_ceases", "Becoming.World.length_le_stock", "Becoming.World.rises_of_arises", "Becoming.World.standingCensus", "Becoming.mark_pos", "Becoming.total_pos"]}
+{"name": "Becoming.World.enclosure_bounds_change_counted", "uses": ["Becoming.Counts.exists_of_pos", "Becoming.Flow.AroundStanding.runsDownClosed", "Becoming.Flow.Enclosed.aroundStanding_not_not", "Becoming.Flow.RunsDownClosed.runsDown", "Becoming.Flow.runsDown_change_bound", "Becoming.World.falls_of_ceases", "Becoming.World.length_le_stock", "Becoming.World.rises_of_arises", "Becoming.World.standingCensus"]}
+{"name": "Becoming.World.exchangingQueue_acting", "uses": ["Becoming.OpenQueue.front", "Becoming.World.enclosedQueue_acting", "Becoming.mark_pos"]}
+{"name": "Becoming.World.exchangingQueue_balanced", "uses": ["Becoming.add_sub_turn_add"]}
+{"name": "Becoming.World.exchangingQueue_binding", "uses": ["Becoming.EnclosedQueue.level_le", "Becoming.EnclosedQueue.place_pos", "Becoming.Flow.transmits_saturated", "Becoming.Queue.listed", "Becoming.Tally.after_pos", "Becoming.Web.saturated_dependent", "Becoming.World.exchangingQueue_acting", "Becoming.World.exchangingQueue_balanced", "Becoming.World.exchangingQueue_binds", "Becoming.World.exchangingQueue_taking"]}
+{"name": "Becoming.World.exchangingQueue_binds", "uses": ["Becoming.EnclosedQueue.place_pos", "Becoming.EnclosedQueue.place_zero", "Becoming.Queue.comings_eq", "Becoming.beyond_not_mem", "Becoming.mark_pos", "Becoming.total_pos"]}
+{"name": "Becoming.World.exchangingQueue_enclosed", "uses": ["Becoming.EnclosedQueue.closed", "Becoming.EnclosedQueue.span_distinct", "Becoming.EnclosedQueue.within_span", "Becoming.OpenQueue.front", "Becoming.mark_zero"]}
+{"name": "Becoming.World.exchangingQueue_taking", "uses": ["Becoming.OpenQueue.front", "Becoming.World.enclosedQueue_taking", "Becoming.mark_pos"]}
+{"name": "Becoming.World.exchangingRing_acting", "uses": ["Becoming.EnclosedQueue.empty_stays", "Becoming.Ring.front_holds", "Becoming.Ring.given_held", "Becoming.Ring.occupied", "Becoming.mark_pos"]}
+{"name": "Becoming.World.exchangingRing_balanced", "uses": ["Becoming.add_sub_turn_add"]}
+{"name": "Becoming.World.exchangingRing_binding", "uses": ["Becoming.Flow.transmits_saturated", "Becoming.Tally.after_pos", "Becoming.Web.saturated_dependent", "Becoming.World.exchangingRing_acting", "Becoming.World.exchangingRing_balanced", "Becoming.World.exchangingRing_binds", "Becoming.World.exchangingRing_taking", "Becoming.mark_le_one", "Becoming.mark_pos"]}
+{"name": "Becoming.World.exchangingRing_binds", "uses": ["Becoming.Ring.counts", "Becoming.mark_pos", "Becoming.mark_zero", "Becoming.total_pos"]}
+{"name": "Becoming.World.exchangingRing_taking", "uses": ["Becoming.Ring.front_holds", "Becoming.Ring.occupied", "Becoming.Ring.taken_held", "Becoming.mark_pos"]}
+{"name": "Becoming.World.finiteQueue_census", "uses": ["Becoming.mem_placesBelow", "Becoming.placesBelow_distinct", "Becoming.steps_distinct", "Becoming.steps_mem", "Becoming.steps_of_within", "Becoming.steps_within"]}
+{"name": "Becoming.World.finiteQueue_counts", "uses": ["Becoming.FiniteQueue.placed", "Becoming.Queue.ceasings_eq", "Becoming.Queue.comings_eq", "Becoming.steps_length", "Becoming.steps_mem", "Becoming.steps_within", "Becoming.total_ones", "Becoming.total_placesBelow"]}
+{"name": "Becoming.World.finiteQueue_finite", "uses": ["Becoming.places_listed"]}
+{"name": "Becoming.World.finiteQueue_premised", "uses": ["Becoming.EnclosedQueue.busy", "Becoming.EnclosedQueue.place_pos", "Becoming.EnclosedQueue.place_zero", "Becoming.EnclosedQueue.still_flows", "Becoming.FiniteQueue.front_val", "Becoming.FiniteQueue.placed", "Becoming.OpenQueue.front", "Becoming.World.Premised.of", "Becoming.World.enclosedQueue_balanced", "Becoming.World.enclosedQueue_dissipative", "Becoming.World.finiteQueue_census", "Becoming.distinct_map", "Becoming.mem_map_of", "Becoming.total_map"]}
+{"name": "Becoming.World.finiteQueue_saturated_binds", "uses": ["Becoming.EnclosedQueue.place_pos", "Becoming.EnclosedQueue.place_zero", "Becoming.FiniteQueue.placed", "Becoming.Queue.comings_eq", "Becoming.World.finiteQueue_finite", "Becoming.World.finiteQueue_premised", "Becoming.le_total_of_mem", "Becoming.mark_pos", "Becoming.total_pos"]}
+{"name": "Becoming.World.finite_binding_activity_iff", "uses": ["Becoming.Tally.after_pos", "Becoming.World.finite_binding_counting_under"]}
+{"name": "Becoming.World.finite_binding_arising_iff", "uses": ["Becoming.World.finite_binding_counting_under"]}
+{"name": "Becoming.World.finite_binding_census", "uses": []}
+{"name": "Becoming.World.finite_binding_counting", "uses": ["Becoming.World.census_table_marks_hold", "Becoming.World.finite_binding_counting_sound", "Becoming.World.finite_binding_counting_witnessed"]}
+{"name": "Becoming.World.finite_binding_counting_sound", "uses": ["Becoming.ChangeBound.from_zero", "Becoming.FamilyCounts.company", "Becoming.World.Embodied.arising", "Becoming.World.Finite.enclosed", "Becoming.World.active_of_coming_jointly", "Becoming.World.binds_arising_counted", "Becoming.World.enclosure_bounds_change_counted"]}
+{"name": "Becoming.World.finite_binding_counting_under", "uses": ["Becoming.World.census_table_marks_hold", "Becoming.World.finite_binding_counting_under_sound", "Becoming.World.finite_binding_counting_under_witnessed"]}
+{"name": "Becoming.World.finite_binding_counting_under_sound", "uses": ["Becoming.FamilyCounts.company", "Becoming.World.CountsOf.acts_of_binding", "Becoming.World.CountsOf.joint_of_binding", "Becoming.World.Embodied.arising", "Becoming.World.Finite.acting", "Becoming.World.Finite.census_bounded", "Becoming.World.Finite.enclosed", "Becoming.World.active_of_coming_enclosed", "Becoming.World.active_of_coming_jointly", "Becoming.World.binds_arising_counted", "Becoming.World.enclosure_bounds_change_counted"]}
+{"name": "Becoming.World.finite_binding_counting_under_witnessed", "uses": ["Becoming.EnclosedQueue.level_le", "Becoming.Ring.census", "Becoming.Ring.counts", "Becoming.Ring.front_holds", "Becoming.Tally.after_pos", "Becoming.World.Premised.meets", "Becoming.World.Premised.saturated", "Becoming.World.exchangingRing_binding", "Becoming.World.finiteQueue_census", "Becoming.World.finiteQueue_counts", "Becoming.World.finiteQueue_finite", "Becoming.World.finiteQueue_premised", "Becoming.World.finiteQueue_saturated_binds", "Becoming.World.lossyRing_binding", "Becoming.World.relayRing_binding", "Becoming.places_listed"]}
+{"name": "Becoming.World.finite_binding_counting_witnessed", "uses": ["Becoming.EnclosedQueue.level_le", "Becoming.World.Premised.saturated", "Becoming.World.finiteQueue_census", "Becoming.World.finiteQueue_counts", "Becoming.World.finiteQueue_finite", "Becoming.World.finiteQueue_premised", "Becoming.World.finiteQueue_saturated_binds"]}
+{"name": "Becoming.World.finite_binding_joint_iff", "uses": ["Becoming.Queue.lone_tally", "Becoming.World.finite_binding_counting_under"]}
+{"name": "Becoming.World.finite_change_bound_iff", "uses": ["Becoming.ChangeBound.not_recurring", "Becoming.Ring.census", "Becoming.Ring.counts", "Becoming.World.Finite.enclosed", "Becoming.World.balancedRing_meets", "Becoming.World.embodiedRing_meets", "Becoming.World.enclosure_bounds_change", "Becoming.World.ring_meets", "Becoming.places_listed"]}
+{"name": "Becoming.World.finite_counting", "uses": ["Becoming.World.census_table_marks_hold₂", "Becoming.World.finite_counting_sound", "Becoming.World.finite_counting_witnessed"]}
+{"name": "Becoming.World.finite_counting_binds_iff", "uses": ["Becoming.Queue.lone_tally", "Becoming.World.finite_counting_under"]}
+{"name": "Becoming.World.finite_counting_sound", "uses": ["Becoming.World.Finite.enclosed", "Becoming.World.enclosed_counting_sound"]}
+{"name": "Becoming.World.finite_counting_under", "uses": ["Becoming.World.census_table_marks_hold₃", "Becoming.World.finite_counting_under_sound", "Becoming.World.finite_counting_under_witnessed"]}
+{"name": "Becoming.World.finite_counting_under_sound", "uses": ["Becoming.FamilyCounts.company", "Becoming.World.Embodied.arising", "Becoming.World.Finite.census_bounded", "Becoming.World.Finite.enclosed", "Becoming.World.active_of_coming_enclosed", "Becoming.World.active_of_coming_jointly", "Becoming.World.enclosure_bounds_change_counted"]}
+{"name": "Becoming.World.finite_counting_under_witnessed", "uses": ["Becoming.Ring.census", "Becoming.Ring.counts", "Becoming.World.Premised.meets", "Becoming.World.balancedRing_meets", "Becoming.World.embodiedRing_meets", "Becoming.World.finiteQueue_census", "Becoming.World.finiteQueue_counts", "Becoming.World.finiteQueue_finite", "Becoming.World.finiteQueue_premised", "Becoming.World.ring_meets", "Becoming.places_listed"]}
+{"name": "Becoming.World.finite_counting_witnessed", "uses": ["Becoming.World.finiteQueue_census", "Becoming.World.finiteQueue_counts", "Becoming.World.finiteQueue_finite", "Becoming.World.finiteQueue_premised"]}
+{"name": "Becoming.World.finite_dissipation_binds", "uses": ["Becoming.World.finiteQueue_finite", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.World.length_le_stock", "uses": ["Becoming.total_le", "Becoming.total_ones"]}
+{"name": "Becoming.World.lossyQueue_acting", "uses": ["Becoming.LossyQueue.moving", "Becoming.OpenQueue.front"]}
+{"name": "Becoming.World.lossyQueue_binding", "uses": ["Becoming.Flow.transmits_saturated", "Becoming.OpenQueue.level_le", "Becoming.Web.saturated_dependent", "Becoming.World.lossyQueue_acting", "Becoming.World.lossyQueue_binds", "Becoming.World.lossyQueue_dissipative", "Becoming.World.lossyQueue_taking", "Becoming.World.openQueue_census", "Becoming.World.openQueue_holds"]}
+{"name": "Becoming.World.lossyQueue_binds", "uses": ["Becoming.EnclosedQueue.span_distinct", "Becoming.EnclosedQueue.within_span", "Becoming.OpenQueue.front", "Becoming.OpenQueue.member_inj", "Becoming.OpenQueue.outside", "Becoming.Queue.comings_eq", "Becoming.distinct_map", "Becoming.le_total_of_mem", "Becoming.mark_pos", "Becoming.mark_zero", "Becoming.mem_map_of", "Becoming.total_pos"]}
+{"name": "Becoming.World.lossyQueue_dissipative", "uses": ["Becoming.OpenQueue.outside", "Becoming.gives_nothing", "Becoming.le_total_of_mem", "Becoming.mark_one", "Becoming.mark_zero", "Becoming.sign_le_one", "Becoming.total_add", "Becoming.total_eq_zero"]}
+{"name": "Becoming.World.lossyQueue_enclosed", "uses": ["Becoming.EnclosedQueue.span_distinct", "Becoming.EnclosedQueue.within_span", "Becoming.OpenQueue.front", "Becoming.OpenQueue.member_inj", "Becoming.distinct_map", "Becoming.mark_zero", "Becoming.mem_map_of"]}
+{"name": "Becoming.World.lossyQueue_taking", "uses": ["Becoming.LossyQueue.moving", "Becoming.OpenQueue.front"]}
+{"name": "Becoming.World.lossyRing_acting", "uses": ["Becoming.LossyRing.moving", "Becoming.Ring.front_holds"]}
+{"name": "Becoming.World.lossyRing_binding", "uses": ["Becoming.Flow.transmits_saturated", "Becoming.Web.saturated_dependent", "Becoming.World.lossyRing_acting", "Becoming.World.lossyRing_binds", "Becoming.World.lossyRing_dissipative", "Becoming.World.lossyRing_taking", "Becoming.mark_le_one", "Becoming.mark_pos"]}
+{"name": "Becoming.World.lossyRing_binds", "uses": ["Becoming.Ring.counts", "Becoming.le_total_of_mem", "Becoming.mark_pos", "Becoming.mark_zero", "Becoming.places_listed", "Becoming.total_pos"]}
+{"name": "Becoming.World.lossyRing_dissipative", "uses": ["Becoming.gives_nothing", "Becoming.le_total_of_mem", "Becoming.mark_one", "Becoming.mark_zero", "Becoming.sign_le_one", "Becoming.total_add", "Becoming.total_eq_zero"]}
+{"name": "Becoming.World.lossyRing_taking", "uses": ["Becoming.LossyRing.moving", "Becoming.Ring.front_holds"]}
+{"name": "Becoming.World.lpo_of_finite_ends", "uses": ["Becoming.Swap.at_first", "Becoming.Swap.change_bound", "Becoming.Swap.decide_of_end", "Becoming.Swap.tally", "Becoming.World.finiteQueue_counts", "Becoming.World.finiteQueue_finite", "Becoming.World.finiteQueue_premised", "Becoming.mark_pos", "Becoming.total_pos"]}
+{"name": "Becoming.World.onceClosedQueue_acting", "uses": ["Becoming.OnceClosedQueue.busy", "Becoming.OpenQueue.front"]}
+{"name": "Becoming.World.onceClosedQueue_balanced", "uses": ["Becoming.add_sub_turn_add"]}
+{"name": "Becoming.World.onceClosedQueue_binding", "uses": ["Becoming.OnceClosedQueue.dependent_any_activity", "Becoming.OnceClosedQueue.transmits_any_flow", "Becoming.World.onceClosedQueue_balanced", "Becoming.World.onceClosedQueue_binds", "Becoming.World.onceClosedQueue_census", "Becoming.World.onceClosedQueue_dissipative", "Becoming.World.onceClosedQueue_embodied"]}
+{"name": "Becoming.World.onceClosedQueue_binds", "uses": ["Becoming.EnclosedQueue.place_pos", "Becoming.EnclosedQueue.place_zero", "Becoming.EnclosedQueue.span_distinct", "Becoming.OnceClosedQueue.closed", "Becoming.OpenQueue.front", "Becoming.Queue.comings_eq", "Becoming.World.onceClosedQueue_exceeds", "Becoming.beyond_not_mem", "Becoming.mark_pos", "Becoming.mark_zero", "Becoming.total_pos"]}
+{"name": "Becoming.World.onceClosedQueue_census", "uses": ["Becoming.Queue.listed"]}
+{"name": "Becoming.World.onceClosedQueue_dissipative", "uses": ["Becoming.EnclosedQueue.empty_stays", "Becoming.EnclosedQueue.span_distinct", "Becoming.OnceClosedQueue.idle", "Becoming.OnceClosedQueue.moving_within", "Becoming.OnceClosedQueue.not_closed", "Becoming.World.onceClosedQueue_exceeds", "Becoming.gives_nothing", "Becoming.mark_zero", "Becoming.sign_le_one", "Becoming.total_eq_zero", "Becoming.total_le_of_support"]}
+{"name": "Becoming.World.onceClosedQueue_embodied", "uses": ["Becoming.EnclosedQueue.place_pos"]}
+{"name": "Becoming.World.onceClosedQueue_exceeds", "uses": ["Becoming.EnclosedQueue.span_distinct", "Becoming.EnclosedQueue.total_place_le", "Becoming.EnclosedQueue.total_place_pos", "Becoming.EnclosedQueue.within_span", "Becoming.Flow.Balances.over", "Becoming.Tally.balance", "Becoming.Web.StandingCensus.stock_eq", "Becoming.World.onceClosedQueue_balanced", "Becoming.World.onceClosedQueue_census", "Becoming.World.onceClosedQueue_embodied", "Becoming.World.standingCensus", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.World.onceClosedQueue_premised", "uses": ["Becoming.OnceClosedQueue.dependent_any_activity", "Becoming.OnceClosedQueue.transmits_any_flow", "Becoming.World.Premised.of", "Becoming.World.onceClosedQueue_acting", "Becoming.World.onceClosedQueue_balanced", "Becoming.World.onceClosedQueue_census", "Becoming.World.onceClosedQueue_dissipative", "Becoming.World.onceClosedQueue_embodied", "Becoming.World.onceClosedQueue_taking"]}
+{"name": "Becoming.World.onceClosedQueue_taking", "uses": ["Becoming.OnceClosedQueue.busy", "Becoming.OpenQueue.front"]}
+{"name": "Becoming.World.openQueue_census", "uses": ["Becoming.OpenQueue.ground_not_member", "Becoming.OpenQueue.member_inj", "Becoming.distinct_map", "Becoming.mem_map_of", "Becoming.mem_of_map", "Becoming.steps_distinct", "Becoming.steps_mem", "Becoming.steps_of_within", "Becoming.steps_within"]}
+{"name": "Becoming.World.openQueue_counts", "uses": ["Becoming.Queue.ceasings_eq", "Becoming.Queue.comings_eq", "Becoming.steps_length", "Becoming.total_map", "Becoming.total_ones"]}
+{"name": "Becoming.World.openQueue_holds", "uses": ["Becoming.OpenQueue.front", "Becoming.OpenQueue.occupied", "Becoming.World.openQueue_census", "Becoming.mark_pos", "Becoming.mark_turn"]}
+{"name": "Becoming.World.openQueue_meets", "uses": ["Becoming.World.openQueue_holds"]}
+{"name": "Becoming.World.openQueue_not_binds", "uses": ["Becoming.OpenQueue.front", "Becoming.OpenQueue.occupied", "Becoming.OpenQueue.outside", "Becoming.mark_one", "Becoming.mark_pos", "Becoming.total_pos"]}
+{"name": "Becoming.World.openQueue_premised", "uses": ["Becoming.OpenQueue.front", "Becoming.OpenQueue.joined", "Becoming.OpenQueue.outside", "Becoming.World.Premised.of", "Becoming.World.openQueue_holds", "Becoming.gives_nothing", "Becoming.mark_one", "Becoming.mark_pos", "Becoming.mark_zero", "Becoming.total_congr_on", "Becoming.total_zero"]}
+{"name": "Becoming.World.openQueue_saturated_binding", "uses": ["Becoming.Flow.transmits_saturated", "Becoming.OpenQueue.front", "Becoming.OpenQueue.level_le", "Becoming.OpenQueue.outside", "Becoming.Queue.comings_eq", "Becoming.Tally.after_pos", "Becoming.Web.saturated_dependent", "Becoming.World.openQueue_holds", "Becoming.mark_pos", "Becoming.mark_zero", "Becoming.total_pos"]}
+{"name": "Becoming.World.premised_counting", "uses": ["Becoming.World.census_table_marks_hold", "Becoming.World.premised_counting_sound", "Becoming.World.premised_counting_witnessed"]}
+{"name": "Becoming.World.premised_counting_sound", "uses": ["Becoming.Counts.exists_of_pos", "Becoming.World.Embodied.arising", "Becoming.World.active_of_coming_jointly"]}
+{"name": "Becoming.World.premised_counting_witnessed", "uses": ["Becoming.World.openQueue_census", "Becoming.World.openQueue_counts", "Becoming.World.openQueue_premised"]}
+{"name": "Becoming.World.queue_meets", "uses": ["Becoming.World.queue_premised"]}
+{"name": "Becoming.World.queue_premised", "uses": ["Becoming.Queue.listed", "Becoming.World.still_vacuous"]}
+{"name": "Becoming.World.relayQueue_acts", "uses": ["Becoming.mark_pos"]}
+{"name": "Becoming.World.relayQueue_balanced", "uses": ["Becoming.RelayQueue.after", "Becoming.RelayQueue.up_to"]}
+{"name": "Becoming.World.relayQueue_binding", "uses": ["Becoming.Flow.transmits_saturated", "Becoming.Web.saturated_dependent", "Becoming.World.openQueue_census", "Becoming.World.relayQueue_acts", "Becoming.World.relayQueue_balanced", "Becoming.World.relayQueue_binds", "Becoming.World.relayQueue_dissipative", "Becoming.mark_le_one"]}
+{"name": "Becoming.World.relayQueue_binds", "uses": ["Becoming.OpenQueue.outside", "Becoming.mark_pos", "Becoming.mark_zero"]}
+{"name": "Becoming.World.relayQueue_dissipative", "uses": ["Becoming.gives_nothing", "Becoming.le_total_of_mem", "Becoming.mark_le_one", "Becoming.mark_one", "Becoming.mark_zero", "Becoming.sign_le_one", "Becoming.total_eq_zero", "Becoming.total_le_at"]}
+{"name": "Becoming.World.relayQueue_enclosed", "uses": []}
+{"name": "Becoming.World.relayRing_acts", "uses": ["Becoming.mark_pos"]}
+{"name": "Becoming.World.relayRing_balanced", "uses": ["Becoming.RelayQueue.after", "Becoming.RelayQueue.up_to"]}
+{"name": "Becoming.World.relayRing_binding", "uses": ["Becoming.Flow.transmits_saturated", "Becoming.Web.saturated_dependent", "Becoming.World.relayRing_acts", "Becoming.World.relayRing_balanced", "Becoming.World.relayRing_binds", "Becoming.World.relayRing_dissipative", "Becoming.mark_le_one"]}
+{"name": "Becoming.World.relayRing_binds", "uses": ["Becoming.RelayRing.sink._proof_1", "Becoming.RelayRing.source._proof_1", "Becoming.mark_pos", "Becoming.mark_zero"]}
+{"name": "Becoming.World.relayRing_dissipative", "uses": ["Becoming.gives_nothing", "Becoming.le_total_of_mem", "Becoming.mark_le_one", "Becoming.mark_one", "Becoming.mark_zero", "Becoming.sign_le_one", "Becoming.total_eq_zero", "Becoming.total_le_at"]}
+{"name": "Becoming.World.replaced_attains", "uses": ["Becoming.ListTests.and_right", "Becoming.Swap.change_bound", "Becoming.Swap.counted", "Becoming.Swap.tally", "Becoming.World.finiteQueue_counts", "Becoming.mark_zero"]}
+{"name": "Becoming.World.ring_meets", "uses": ["Becoming.World.ring_premised"]}
+{"name": "Becoming.World.ring_premised", "uses": ["Becoming.Ring.census", "Becoming.World.still_vacuous"]}
+{"name": "Becoming.World.sheddingQueue_balanced", "uses": ["Becoming.add_sub_turn_add"]}
+{"name": "Becoming.World.sheddingQueue_binding", "uses": ["Becoming.Flow.transmits_saturated", "Becoming.Queue.listed", "Becoming.Web.saturated_dependent", "Becoming.World.sheddingQueue_balanced", "Becoming.World.sheddingQueue_binds", "Becoming.World.sheddingQueue_dissipative", "Becoming.World.sheddingQueue_embodied", "Becoming.World.sheddingQueue_level_le"]}
+{"name": "Becoming.World.sheddingQueue_binds", "uses": ["Becoming.EnclosedQueue.place_pos", "Becoming.EnclosedQueue.shedding_closed", "Becoming.EnclosedQueue.span_distinct", "Becoming.Queue.comings_eq", "Becoming.World.sheddingQueue_embodied", "Becoming.World.sheddingQueue_exceeds", "Becoming.beyond_not_mem", "Becoming.eq_zero_of_not_pos", "Becoming.mark_pos", "Becoming.total_pos", "RelationalRenewal.le_sub_from_add"]}
+{"name": "Becoming.World.sheddingQueue_dissipative", "uses": ["Becoming.EnclosedQueue.shedding_closed", "Becoming.EnclosedQueue.shedding_flows", "Becoming.EnclosedQueue.span_distinct", "Becoming.World.enclosedQueue_dissipatesOn", "Becoming.World.sheddingQueue_exceeds", "Becoming.beyond_not_mem", "Becoming.mark_pos", "Becoming.sign_le_one", "Becoming.total_congr", "Becoming.total_le_of_support", "RelationalRenewal.le_sub_from_add"]}
+{"name": "Becoming.World.sheddingQueue_embodied", "uses": ["Becoming.EnclosedQueue.place_pos", "Becoming.OpenQueue.front", "Becoming.mark_pos"]}
+{"name": "Becoming.World.sheddingQueue_enclosed", "uses": ["Becoming.EnclosedQueue.shedding_closed", "Becoming.EnclosedQueue.span_distinct"]}
+{"name": "Becoming.World.sheddingQueue_exceeds", "uses": ["Becoming.EnclosedQueue.span_distinct", "Becoming.EnclosedQueue.spare_zero", "Becoming.EnclosedQueue.store_succ_le", "Becoming.EnclosedQueue.within_span", "Becoming.Flow.Balances.over", "Becoming.OpenQueue.front", "Becoming.Web.StandingCensus.stock_eq", "Becoming.World.enclosedQueue_census", "Becoming.World.enclosedQueue_embodied", "Becoming.World.enclosedQueue_stock", "Becoming.World.sheddingQueue_balanced", "Becoming.World.standingCensus", "Becoming.le_of_add_le_add_right", "Becoming.le_total_of_mem", "Becoming.mark_one", "Becoming.total_add", "Becoming.total_eq_zero"]}
+{"name": "Becoming.World.sheddingQueue_level_le", "uses": ["Becoming.EnclosedQueue.level_le", "Becoming.mark_le_one"]}
+{"name": "Becoming.World.still_enclosed", "uses": []}
+{"name": "Becoming.World.taking_binds_counting", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.DissipatesOn.still_untaken", "Becoming.eq_zero_of_not_pos", "Becoming.le_total_of_mem", "Becoming.mark_pos", "Becoming.total_congr_on", "Becoming.total_ones", "Becoming.total_pos", "Becoming.total_pos_of_mem", "Becoming.total_zero"]}
+{"name": "Becoming.last_positive", "uses": []}
+{"name": "Becoming.mem_placesBelow", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.placesBelow_distinct", "uses": ["Becoming.mem_placesBelow"]}
+{"name": "Becoming.places_listed", "uses": ["Becoming.mem_placesBelow", "Becoming.placesBelow_distinct", "Becoming.steps_distinct", "Becoming.steps_of_within"]}
+{"name": "Becoming.total_placesBelow", "uses": []}

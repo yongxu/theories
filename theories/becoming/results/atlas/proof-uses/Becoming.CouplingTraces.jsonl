@@ -1,0 +1,33 @@
+{"name": "Becoming.CouplingTraces.chainInTime_trace", "uses": []}
+{"name": "Becoming.CouplingTraces.chain_iff_trace", "uses": ["Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.CouplingTraces.coupledIntoBy_iff_trace", "uses": ["Generative.trace_cons_iff"]}
+{"name": "Becoming.CouplingTraces.draw_loop", "uses": ["Becoming.CouplingTraces.onLoop_iff_trace", "Becoming.Thresholds.Draw.forms_at_break"]}
+{"name": "Becoming.CouplingTraces.loop_forms_by_closing", "uses": ["Becoming.CouplingTraces.onLoop_iff_trace", "Becoming.CouplingTraces.upstream_iff_reach", "Becoming.forms_by_closing"]}
+{"name": "Becoming.CouplingTraces.loop_iff_formed", "uses": ["Becoming.CouplingTraces.onLoop_iff_trace", "Becoming.onLoop_iff_formed"]}
+{"name": "Becoming.CouplingTraces.loop_succ_reads", "uses": ["Becoming.CouplingTraces.onLoop_iff_trace", "Becoming.CouplingTraces.upstream_iff_reach", "Becoming.onLoop_succ_reads"]}
+{"name": "Becoming.CouplingTraces.measure_loop_at", "uses": ["Becoming.CouplingTraces.onLoop_iff_trace", "Becoming.Observation.Measure.loop_at"]}
+{"name": "Becoming.CouplingTraces.measure_no_loop_before", "uses": ["Becoming.CouplingTraces.onLoop_iff_trace", "Becoming.Observation.Measure.no_loop_before"]}
+{"name": "Becoming.CouplingTraces.measure_reach_before", "uses": ["Becoming.CouplingTraces.upstream_iff_reach", "Becoming.Observation.Measure.downstream_before"]}
+{"name": "Becoming.CouplingTraces.onLoop_iff_trace", "uses": ["Becoming.CouplingTraces.chain_iff_trace", "Becoming.couples_iff_couplesAt"]}
+{"name": "Becoming.CouplingTraces.once_no_retrace_of_two", "uses": ["Becoming.CouplingTraces.coupledIntoBy_iff_trace", "Becoming.Loops.Once.no_chain_of_two"]}
+{"name": "Becoming.CouplingTraces.once_settled", "uses": ["Becoming.CouplingTraces.settled_iff_steps", "Becoming.Loops.Once.settled"]}
+{"name": "Becoming.CouplingTraces.onset_forms", "uses": ["Becoming.Closing.Onset.forms", "Becoming.CouplingTraces.onLoop_iff_trace"]}
+{"name": "Becoming.CouplingTraces.onset_not_formed", "uses": ["Becoming.Closing.Onset.not_formed", "Becoming.CouplingTraces.onLoop_iff_trace"]}
+{"name": "Becoming.CouplingTraces.reach_iff_formed", "uses": ["Becoming.CouplingTraces.upstream_iff_reach", "Becoming.upstream_iff_formed"]}
+{"name": "Becoming.CouplingTraces.reach_readCouplings", "uses": ["Becoming.CouplingTraces.upstream_iff_reach", "Becoming.upstream_readCouplings"]}
+{"name": "Becoming.CouplingTraces.recurs_iff_steps", "uses": ["Becoming.couples_iff_couplesAt", "Becoming.couplingRecurs_iff"]}
+{"name": "Becoming.CouplingTraces.retrace_later", "uses": ["Becoming.CoupledIntoBy.later", "Becoming.CouplingTraces.coupledIntoBy_iff_trace"]}
+{"name": "Becoming.CouplingTraces.retrace_shorten", "uses": ["Becoming.CoupledIntoBy.shorten", "Becoming.CouplingTraces.coupledIntoBy_iff_trace"]}
+{"name": "Becoming.CouplingTraces.returns_trace", "uses": ["Becoming.CouplingTraces.chainInTime_trace"]}
+{"name": "Becoming.CouplingTraces.route_forms_by_closing", "uses": ["Becoming.CouplingTraces.upstream_iff_reach", "Becoming.route_forms_by_closing"]}
+{"name": "Becoming.CouplingTraces.scheduleWorld_always", "uses": ["Becoming.Frequency.SelfLoop.always"]}
+{"name": "Becoming.CouplingTraces.scheduleWorld_onset", "uses": ["Becoming.Frequency.SelfLoop.onset"]}
+{"name": "Becoming.CouplingTraces.selfLoop_retrace_iff", "uses": ["Becoming.Frequency.SelfLoop.couplesAt_iff"]}
+{"name": "Becoming.CouplingTraces.selfLoop_returns", "uses": ["Becoming.CouplingTraces.returns_trace", "Becoming.Frequency.SelfLoop.roundTrip"]}
+{"name": "Becoming.CouplingTraces.self_step_reads", "uses": ["Becoming.couples_iff_couplesAt", "Becoming.self_coupling_reads"]}
+{"name": "Becoming.CouplingTraces.settled_every_iff_steps", "uses": ["Becoming.CouplingTraces.settled_iff_steps", "Becoming.settled_every_iff"]}
+{"name": "Becoming.CouplingTraces.settled_iff_steps", "uses": ["Becoming.CouplingTraces.recurs_iff_steps", "Becoming.couples_iff_couplesAt"]}
+{"name": "Becoming.CouplingTraces.settled_zero_of_always", "uses": ["Becoming.CouplingTraces.settled_iff_steps", "Becoming.couples_iff_couplesAt", "Becoming.settledFrom_zero_of_always"]}
+{"name": "Becoming.CouplingTraces.standing_no_loop_traces", "uses": ["Becoming.CouplingTraces.onLoop_iff_trace", "Becoming.CouplingTraces.upstream_iff_reach", "Becoming.ExchangeLaw.ReadsBelow.standing_no_loop"]}
+{"name": "Becoming.CouplingTraces.stops_not_recurs", "uses": ["Becoming.CouplingTraces.recurs_iff_steps", "Becoming.StopsBy.not_recurs"]}
+{"name": "Becoming.CouplingTraces.upstream_iff_reach", "uses": ["Becoming.CouplingTraces.chain_iff_trace", "Becoming.couples_iff_couplesAt"]}

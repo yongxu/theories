@@ -1,0 +1,11 @@
+{"name": "Becoming.Law.agree_bisimulation", "uses": ["Becoming.Law.orbit_shift"]}
+{"name": "Becoming.Law.alikeTo_labelled_iff", "uses": ["Becoming.Law.orbit_shift"]}
+{"name": "Becoming.Law.alike_iff_agree", "uses": ["Becoming.Alike.alikeTo", "Becoming.Law.agree_bisimulation", "Becoming.alikeTo_frameBy_iff"]}
+{"name": "Becoming.Law.labelled_finite", "uses": []}
+{"name": "Becoming.Law.orbit_fin", "uses": []}
+{"name": "Becoming.Law.realized_within", "uses": ["Becoming.Identification.statesBelow_iff_lasso", "Becoming.Law.orbit_fin", "Becoming.Learning.lasso_realized"]}
+{"name": "Becoming.Law.sameTests_iff_below_across", "uses": ["Becoming.Determined.at", "Becoming.Identification.bounded_agree", "Becoming.Law.alike_iff_agree", "Becoming.Law.frameBy_determined", "Becoming.Law.statesBelow_held", "Becoming.alike_iff_sameTests"]}
+{"name": "Becoming.Law.sameTests_iff_within", "uses": ["Becoming.Determined.alike_iff_sameTests", "Becoming.Law.alike_iff_sameFuture", "Becoming.Law.frameBy_determined", "Becoming.Law.sameFuture_iff_within"]}
+{"name": "Becoming.frameBy_across_exact", "uses": ["Becoming.Determined.at", "Becoming.Identification.bounded_agree_exact", "Becoming.Identification.prefix_eq_iff", "Becoming.Law.alike_iff_agree", "Becoming.Law.frameBy_determined", "Becoming.Law.realized_within", "Becoming.alike_iff_sameTests"]}
+{"name": "Becoming.frameBy_within_exact", "uses": ["Becoming.Identification.lassoPos_early", "Becoming.Law.orbit_fin", "Becoming.Law.orbit_shift", "Becoming.Law.sameTests_iff_within", "Becoming.length_finBelow", "Becoming.mem_finBelow"]}
+{"name": "Becoming.labelled_across_exact", "uses": ["Becoming.Alike.alikeTo", "Becoming.Identification.bounded_agree_exact", "Becoming.Identification.prefix_eq_iff", "Becoming.Law.alikeTo_labelled_iff", "Becoming.Law.labelled_finite", "Becoming.Law.realized_within", "Becoming.length_finBelow", "Becoming.mem_finBelow"]}

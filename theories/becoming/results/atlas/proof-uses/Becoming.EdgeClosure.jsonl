@@ -1,0 +1,4 @@
+{"name": "Becoming.Closure.base", "uses": ["Becoming.Reach.refl"]}
+{"name": "Becoming.Closure.induction", "uses": ["Becoming.Invariant.reach"]}
+{"name": "Becoming.Closure.step", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.withinClosure_iff_closure", "uses": ["Becoming.WithinClosure.mono", "Becoming.reach_iff_withinClosure"]}

@@ -1,0 +1,9 @@
+{"name": "Becoming.«不出当且仅当不外者闭»", "uses": []}
+{"name": "Becoming.«不出皆闭当且仅当排中»", "uses": []}
+{"name": "Becoming.«不外者内则不出当且仅当闭»", "uses": ["Becoming.«闭则不出»"]}
+{"name": "Becoming.«内至外之线则非不出»", "uses": ["Becoming.«不出当且仅当不外者闭»", "Becoming.«相续含于及»", "Becoming.«闭之及»"]}
+{"name": "Becoming.«内至外之线有出步»", "uses": ["Becoming.«两端分则中有标»"]}
+{"name": "Becoming.«定则内至外之线有出步»", "uses": ["Becoming.«内至外之线有出步»"]}
+{"name": "Becoming.«对称则不出当且仅当逆不出»", "uses": []}
+{"name": "Becoming.«逆之不出当且仅当外者不出»", "uses": []}
+{"name": "Becoming.«闭而有入之例»", "uses": []}

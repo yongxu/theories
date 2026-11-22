@@ -1,0 +1,115 @@
+{"name": "Becoming.Ideals.AdheresBy.adheres", "uses": []}
+{"name": "Becoming.Ideals.AdheresBy.closed", "uses": []}
+{"name": "Becoming.Ideals.AdheresBy.mono", "uses": []}
+{"name": "Becoming.Ideals.AdheresBy.of", "uses": []}
+{"name": "Becoming.Ideals.CompactBasis.approximants", "uses": []}
+{"name": "Becoming.Ideals.CompactBasis.below_extend", "uses": ["Becoming.Ideals.CompactBasis.compact", "Becoming.Ideals.CompactBasis.embedding", "Becoming.Ideals.CompactBasis.monotone", "Becoming.Ideals.Ideal.lower", "Becoming.Ideals.extend._proof_1", "Becoming.Ideals.extend_upper"]}
+{"name": "Becoming.Ideals.CompactBasis.below_monotone", "uses": ["Becoming.Ideals.Preorder.trans"]}
+{"name": "Becoming.Ideals.CompactBasis.compact", "uses": []}
+{"name": "Becoming.Ideals.CompactBasis.embedding", "uses": []}
+{"name": "Becoming.Ideals.CompactBasis.equivalence_backward_unique", "uses": ["Becoming.Ideals.CompactBasis.equivalence_unique", "Becoming.Ideals.Ideal.LE.trans", "Becoming.Ideals.Ideal.same_of_le", "Becoming.Ideals.OrderEquivalence.backward_forward", "Becoming.Ideals.OrderEquivalence.backward_monotone", "Becoming.Ideals.OrderEquivalence.forward_backward", "Becoming.Ideals.Preorder.trans"]}
+{"name": "Becoming.Ideals.CompactBasis.equivalence_principal", "uses": ["Becoming.Ideals.CompactBasis.monotone", "Becoming.Ideals.extend_principal"]}
+{"name": "Becoming.Ideals.CompactBasis.equivalence_unique", "uses": ["Becoming.Ideals.CompactBasis.monotone", "Becoming.Ideals.OrderEquivalence.continuous", "Becoming.Ideals.extend_unique"]}
+{"name": "Becoming.Ideals.CompactBasis.extend_below", "uses": ["Becoming.Ideals.CompactBasis.generates", "Becoming.Ideals.CompactBasis.monotone", "Becoming.Ideals.extend_least"]}
+{"name": "Becoming.Ideals.CompactBasis.generates", "uses": []}
+{"name": "Becoming.Ideals.CompactBasis.monotone", "uses": ["Becoming.Ideals.CompactBasis.embedding"]}
+{"name": "Becoming.Ideals.Continuous.monotone", "uses": []}
+{"name": "Becoming.Ideals.Continuous.preserves", "uses": []}
+{"name": "Becoming.Ideals.Directed.directed", "uses": []}
+{"name": "Becoming.Ideals.Directed.nonempty", "uses": []}
+{"name": "Becoming.Ideals.DirectedComplete.least", "uses": []}
+{"name": "Becoming.Ideals.DirectedComplete.upper", "uses": []}
+{"name": "Becoming.Ideals.Ideal.LE.refl", "uses": []}
+{"name": "Becoming.Ideals.Ideal.LE.trans", "uses": []}
+{"name": "Becoming.Ideals.Ideal.Same.ge", "uses": []}
+{"name": "Becoming.Ideals.Ideal.Same.le", "uses": []}
+{"name": "Becoming.Ideals.Ideal.Same.refl", "uses": []}
+{"name": "Becoming.Ideals.Ideal.Same.symm", "uses": []}
+{"name": "Becoming.Ideals.Ideal.Same.trans", "uses": []}
+{"name": "Becoming.Ideals.Ideal.directed", "uses": []}
+{"name": "Becoming.Ideals.Ideal.directed_mem", "uses": ["Becoming.Ideals.Ideal.directed", "Becoming.Ideals.Ideal.nonempty"]}
+{"name": "Becoming.Ideals.Ideal.lower", "uses": []}
+{"name": "Becoming.Ideals.Ideal.nonempty", "uses": []}
+{"name": "Becoming.Ideals.Ideal.same_of_le", "uses": []}
+{"name": "Becoming.Ideals.OrderEquivalence.backward_forward", "uses": []}
+{"name": "Becoming.Ideals.OrderEquivalence.backward_monotone", "uses": []}
+{"name": "Becoming.Ideals.OrderEquivalence.continuous", "uses": ["Becoming.Ideals.DirectedComplete.least", "Becoming.Ideals.DirectedComplete.upper", "Becoming.Ideals.OrderEquivalence.backward_forward", "Becoming.Ideals.OrderEquivalence.backward_monotone", "Becoming.Ideals.OrderEquivalence.forward_backward", "Becoming.Ideals.OrderEquivalence.forward_monotone", "Becoming.Ideals.Preorder.trans", "Becoming.Ideals.image_directed"]}
+{"name": "Becoming.Ideals.OrderEquivalence.forward_backward", "uses": []}
+{"name": "Becoming.Ideals.OrderEquivalence.forward_monotone", "uses": []}
+{"name": "Becoming.Ideals.Preorder.Equiv.refl", "uses": ["Becoming.Ideals.Preorder.refl"]}
+{"name": "Becoming.Ideals.Preorder.Equiv.symm", "uses": []}
+{"name": "Becoming.Ideals.Preorder.Equiv.trans", "uses": ["Becoming.Ideals.Preorder.trans"]}
+{"name": "Becoming.Ideals.Preorder.refl", "uses": []}
+{"name": "Becoming.Ideals.Preorder.trans", "uses": []}
+{"name": "Becoming.Ideals.Refutable.closed", "uses": ["Becoming.Ideals.Refutable.lower_not_not", "Becoming.Ideals.Refutable.unions_not_not"]}
+{"name": "Becoming.Ideals.Refutable.lower_not_not", "uses": ["Becoming.Ideals.RefutableBy.not_not"]}
+{"name": "Becoming.Ideals.Refutable.unions_not_not", "uses": ["Becoming.Ideals.RefutableBy.not_not"]}
+{"name": "Becoming.Ideals.RefutableBy.adheres_iff", "uses": ["Becoming.Ideals.AdheresBy.of", "Becoming.Ideals.RefutableBy.not_not"]}
+{"name": "Becoming.Ideals.RefutableBy.adheres_least", "uses": ["Becoming.Ideals.AdheresBy.mono", "Becoming.Ideals.RefutableBy.not_not"]}
+{"name": "Becoming.Ideals.RefutableBy.congr", "uses": []}
+{"name": "Becoming.Ideals.RefutableBy.not_not", "uses": []}
+{"name": "Becoming.Ideals.ScottClosed.hull_iff", "uses": ["Becoming.Ideals.AdheresBy.of", "Becoming.Ideals.hull_least"]}
+{"name": "Becoming.Ideals.ScottClosed.lower", "uses": []}
+{"name": "Becoming.Ideals.ScottClosed.principal_of_mem", "uses": ["Becoming.Ideals.ScottClosed.lower", "Becoming.Ideals.principal_le_iff"]}
+{"name": "Becoming.Ideals.ScottClosed.refutable_iff", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.Ideals.ScottClosed.principal_of_mem"]}
+{"name": "Becoming.Ideals.ScottClosed.same", "uses": ["Becoming.Ideals.Ideal.Same.ge", "Becoming.Ideals.ScottClosed.lower"]}
+{"name": "Becoming.Ideals.ScottClosed.unions", "uses": []}
+{"name": "Becoming.Ideals.above_monotone", "uses": ["Becoming.Ideals.Preorder.trans"]}
+{"name": "Becoming.Ideals.above_readings_separate", "uses": ["Becoming.Ideals.above_monotone", "Becoming.Ideals.extend_above_iff"]}
+{"name": "Becoming.Ideals.avoids_closed", "uses": ["Becoming.Ideals.avoids_iff_within", "Becoming.Ideals.closed_of_iff", "Becoming.Ideals.within_closed"]}
+{"name": "Becoming.Ideals.avoids_iff_within", "uses": ["Becoming.Ideals.Ideal.lower", "Becoming.Ideals.Preorder.refl"]}
+{"name": "Becoming.Ideals.avoids_principal_iff", "uses": []}
+{"name": "Becoming.Ideals.avoids_refutable_of_found", "uses": []}
+{"name": "Becoming.Ideals.avoids_unique", "uses": ["Becoming.Ideals.avoids_iff_within", "Becoming.Ideals.closed_iff_within_principal"]}
+{"name": "Becoming.Ideals.closed_iff_lower", "uses": ["Becoming.Ideals.closed_iff_within_principal", "Becoming.Ideals.closed_of_iff", "Becoming.Ideals.principal_lower", "Becoming.Ideals.within_closed"]}
+{"name": "Becoming.Ideals.closed_iff_within_principal", "uses": ["Becoming.Ideals.Ideal.Same.symm", "Becoming.Ideals.ScottClosed.principal_of_mem", "Becoming.Ideals.ScottClosed.same", "Becoming.Ideals.ScottClosed.unions", "Becoming.Ideals.principalFamily_directed", "Becoming.Ideals.union_principalFamily"]}
+{"name": "Becoming.Ideals.closed_of_iff", "uses": ["Becoming.Ideals.ScottClosed.lower", "Becoming.Ideals.ScottClosed.unions"]}
+{"name": "Becoming.Ideals.closed_refutable_iff", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.Ideals.ScottClosed.refutable_iff", "Becoming.Ideals.closed_iff_within_principal", "Becoming.Ideals.within_closed"]}
+{"name": "Becoming.Ideals.compact_iff_principal", "uses": ["Becoming.Ideals.Ideal.LE.trans", "Becoming.Ideals.Ideal.Same.ge", "Becoming.Ideals.Ideal.Same.le", "Becoming.Ideals.Ideal.same_of_le", "Becoming.Ideals.principalFamily_directed", "Becoming.Ideals.principal_compact", "Becoming.Ideals.principal_le_iff", "Becoming.Ideals.union_principalFamily"]}
+{"name": "Becoming.Ideals.content_false", "uses": []}
+{"name": "Becoming.Ideals.content_lower", "uses": ["Becoming.Ideals.Ideal.lower"]}
+{"name": "Becoming.Ideals.extend_above_iff", "uses": ["Becoming.Ideals.Ideal.lower", "Becoming.Ideals.Preorder.refl", "Becoming.Ideals.above_monotone"]}
+{"name": "Becoming.Ideals.extend_continuous", "uses": ["Becoming.Ideals.DirectedComplete.least", "Becoming.Ideals.DirectedComplete.upper", "Becoming.Ideals.Preorder.trans", "Becoming.Ideals.extend_least", "Becoming.Ideals.extend_monotone", "Becoming.Ideals.extend_upper", "Becoming.Ideals.image_directed"]}
+{"name": "Becoming.Ideals.extend_least", "uses": ["Becoming.Ideals.DirectedComplete.least", "Becoming.Ideals.extend._proof_1"]}
+{"name": "Becoming.Ideals.extend_monotone", "uses": ["Becoming.Ideals.extend_least", "Becoming.Ideals.extend_upper"]}
+{"name": "Becoming.Ideals.extend_principal", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.Ideals.extend_least", "Becoming.Ideals.extend_upper"]}
+{"name": "Becoming.Ideals.extend_unique", "uses": ["Becoming.Ideals.Continuous.monotone", "Becoming.Ideals.Continuous.preserves", "Becoming.Ideals.DirectedComplete.least", "Becoming.Ideals.Ideal.Same.ge", "Becoming.Ideals.Ideal.Same.le", "Becoming.Ideals.Preorder.trans", "Becoming.Ideals.extend_least", "Becoming.Ideals.extend_upper", "Becoming.Ideals.image_directed", "Becoming.Ideals.principalFamily_directed", "Becoming.Ideals.principal_le_iff", "Becoming.Ideals.union_principalFamily"]}
+{"name": "Becoming.Ideals.extend_upper", "uses": ["Becoming.Ideals.DirectedComplete.upper", "Becoming.Ideals.extend._proof_1"]}
+{"name": "Becoming.Ideals.false_closed", "uses": ["Becoming.Ideals.Directed.nonempty"]}
+{"name": "Becoming.Ideals.false_refutable", "uses": ["Becoming.Ideals.Ideal.nonempty"]}
+{"name": "Becoming.Ideals.hull_closed", "uses": ["Becoming.Ideals.closed_of_iff", "Becoming.Ideals.within_closed"]}
+{"name": "Becoming.Ideals.hull_content", "uses": ["Becoming.Ideals.AdheresBy.of"]}
+{"name": "Becoming.Ideals.hull_iff_within_content", "uses": []}
+{"name": "Becoming.Ideals.hull_joint", "uses": ["Becoming.Ideals.Ideal.directed"]}
+{"name": "Becoming.Ideals.hull_least", "uses": ["Becoming.Ideals.ScottClosed.principal_of_mem", "Becoming.Ideals.closed_iff_within_principal"]}
+{"name": "Becoming.Ideals.hull_unique", "uses": ["Becoming.Ideals.AdheresBy.of", "Becoming.Ideals.hull_closed", "Becoming.Ideals.hull_least"]}
+{"name": "Becoming.Ideals.idealOrder_equiv_iff", "uses": ["Becoming.Ideals.Ideal.Same.ge", "Becoming.Ideals.Ideal.Same.le", "Becoming.Ideals.Ideal.same_of_le"]}
+{"name": "Becoming.Ideals.image_directed", "uses": ["Becoming.Ideals.Directed.directed", "Becoming.Ideals.Directed.nonempty"]}
+{"name": "Becoming.Ideals.le_union", "uses": []}
+{"name": "Becoming.Ideals.lift_le_iff", "uses": []}
+{"name": "Becoming.Ideals.lift_restrict", "uses": []}
+{"name": "Becoming.Ideals.lift_within", "uses": []}
+{"name": "Becoming.Ideals.lower_iff_content", "uses": ["Becoming.Ideals.closed_iff_lower", "Becoming.Ideals.lower_unique", "Becoming.Ideals.principal_iff_content"]}
+{"name": "Becoming.Ideals.lower_unique", "uses": ["Becoming.Ideals.within_principal_iff"]}
+{"name": "Becoming.Ideals.lower_unique_of_two", "uses": ["Becoming.Ideals.lower_unique"]}
+{"name": "Becoming.Ideals.not_refutableBy_of_adheres", "uses": ["Becoming.Ideals.RefutableBy.not_not"]}
+{"name": "Becoming.Ideals.principalFamily_directed", "uses": ["Becoming.Ideals.Ideal.LE.trans", "Becoming.Ideals.Ideal.Same.le", "Becoming.Ideals.Ideal.Same.refl", "Becoming.Ideals.Ideal.directed", "Becoming.Ideals.Ideal.nonempty", "Becoming.Ideals.principal_le_iff"]}
+{"name": "Becoming.Ideals.principal_basis", "uses": ["Becoming.Ideals.Ideal.directed", "Becoming.Ideals.Ideal.nonempty", "Becoming.Ideals.Preorder.refl", "Becoming.Ideals.principal_compact", "Becoming.Ideals.principal_le_iff"]}
+{"name": "Becoming.Ideals.principal_compact", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.Ideals.principal_le_iff"]}
+{"name": "Becoming.Ideals.principal_iff_content", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.Ideals.ScottClosed.principal_of_mem"]}
+{"name": "Becoming.Ideals.principal_le_iff", "uses": ["Becoming.Ideals.Ideal.lower", "Becoming.Ideals.Preorder.refl"]}
+{"name": "Becoming.Ideals.principal_lower", "uses": ["Becoming.Ideals.ScottClosed.lower", "Becoming.Ideals.principal_le_iff"]}
+{"name": "Becoming.Ideals.refutableBy_adheres_iff", "uses": ["Becoming.Ideals.AdheresBy.closed", "Becoming.Ideals.AdheresBy.of"]}
+{"name": "Becoming.Ideals.refutable_closed_iff", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.Ideals.Refutable.closed", "Becoming.Ideals.ScottClosed.lower", "Becoming.Ideals.principal_le_iff"]}
+{"name": "Becoming.Ideals.restrict_false_none", "uses": ["Becoming.Ideals.Ideal.nonempty"]}
+{"name": "Becoming.Ideals.restrict_lift", "uses": ["Becoming.Ideals.lift_within"]}
+{"name": "Becoming.Ideals.sup_congr", "uses": ["Becoming.Ideals.DirectedComplete.least", "Becoming.Ideals.DirectedComplete.upper"]}
+{"name": "Becoming.Ideals.sup_mono", "uses": ["Becoming.Ideals.DirectedComplete.least", "Becoming.Ideals.DirectedComplete.upper"]}
+{"name": "Becoming.Ideals.union_le", "uses": []}
+{"name": "Becoming.Ideals.union_principalFamily", "uses": ["Becoming.Ideals.Ideal.Same.refl", "Becoming.Ideals.Ideal.lower", "Becoming.Ideals.Preorder.refl", "Becoming.Ideals.principalFamily_directed"]}
+{"name": "Becoming.Ideals.unique_basis_representation", "uses": ["Becoming.Ideals.CompactBasis.equivalence_backward_unique", "Becoming.Ideals.CompactBasis.equivalence_principal", "Becoming.Ideals.CompactBasis.equivalence_unique"]}
+{"name": "Becoming.Ideals.unique_continuous_extension", "uses": ["Becoming.Ideals.extend_continuous", "Becoming.Ideals.extend_principal", "Becoming.Ideals.extend_unique"]}
+{"name": "Becoming.Ideals.within_closed", "uses": []}
+{"name": "Becoming.Ideals.within_false", "uses": ["Becoming.Ideals.Ideal.nonempty"]}
+{"name": "Becoming.Ideals.within_principal_iff", "uses": ["Becoming.Ideals.Preorder.refl"]}
+{"name": "Becoming.Ideals.within_refutable_iff", "uses": ["Becoming.Ideals.ScottClosed.refutable_iff", "Becoming.Ideals.within_closed", "Becoming.Ideals.within_principal_iff"]}

@@ -1,0 +1,23 @@
+{"name": "Becoming.Alone.takes_all", "uses": []}
+{"name": "Becoming.Flow.beyond_given_bounded", "uses": ["Becoming.Flow.excess_bounded", "Becoming.Flow.take_le_taken"]}
+{"name": "Becoming.Flow.exceeds_of_more", "uses": ["Becoming.more_accumulates"]}
+{"name": "Becoming.Flow.excess_of_more", "uses": ["Becoming.Flow.exceeds_of_more", "Becoming.Flow.take_le_taken"]}
+{"name": "Becoming.Flow.seeking_bounded", "uses": ["Becoming.Flow.beyond_given_bounded", "Becoming.Flow.exceeds_of_more"]}
+{"name": "Becoming.Flow.seeking_ends", "uses": ["Becoming.Flow.seeking_bounded", "Becoming.Web.active_before"]}
+{"name": "Becoming.Flow.seeking_exhausts", "uses": ["Becoming.Flow.ends_below", "Becoming.Flow.seeking_bounded", "Becoming.Flow.stays_below", "Becoming.all_or_below"]}
+{"name": "Becoming.Flow.seeking_not_continues", "uses": ["Becoming.Flow.seeking_bounded"]}
+{"name": "Becoming.Flow.take_le_taken", "uses": ["Becoming.le_total_of_mem"]}
+{"name": "Becoming.Flow.takesAll_of_more", "uses": ["Becoming.Flow.exceeds_of_more"]}
+{"name": "Becoming.Seeker.balances", "uses": []}
+{"name": "Becoming.Seeker.bounded", "uses": []}
+{"name": "Becoming.Seeker.course", "uses": ["Becoming.Seeker.balances", "Becoming.Seeker.dependent", "Becoming.Seeker.ends", "Becoming.Seeker.takes_all"]}
+{"name": "Becoming.Seeker.dependent", "uses": ["Becoming.Seeker.level_pos"]}
+{"name": "Becoming.Seeker.ends", "uses": []}
+{"name": "Becoming.Seeker.ends_by_law", "uses": ["Becoming.Flow.seeking_ends", "Becoming.Seeker.balances", "Becoming.Seeker.bounded", "Becoming.Seeker.lasting", "Becoming.Seeker.seeks"]}
+{"name": "Becoming.Seeker.lasting", "uses": []}
+{"name": "Becoming.Seeker.level_pos", "uses": []}
+{"name": "Becoming.Seeker.present_first", "uses": []}
+{"name": "Becoming.Seeker.seeks", "uses": ["Becoming.Seeker.present_first"]}
+{"name": "Becoming.Seeker.takes_all", "uses": ["Becoming.Seeker.present_first"]}
+{"name": "Becoming.all_or_below", "uses": []}
+{"name": "Becoming.more_accumulates", "uses": []}

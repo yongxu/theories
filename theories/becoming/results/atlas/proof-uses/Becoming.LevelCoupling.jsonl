@@ -1,0 +1,56 @@
+{"name": "Becoming.Complement.admits_iff", "uses": []}
+{"name": "Becoming.Complement.admitted_iff", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.Naturals.add_sub_of_le"]}
+{"name": "Becoming.Complement.carry", "uses": ["Becoming.Complement.admitted_iff", "Becoming.ble_and_iff", "Becoming.total_steps_only"]}
+{"name": "Becoming.Complement.dependsOn", "uses": []}
+{"name": "Becoming.Complement.law_needsSupport", "uses": ["Becoming.Complement.admits_iff", "Becoming.ble_and_iff"]}
+{"name": "Becoming.Complement.law_through", "uses": ["Becoming.Complement.admits_iff", "Becoming.ble_and_iff", "Becoming.eq_of_true_iff"]}
+{"name": "Becoming.ExchangeLaw.RespondsByCrossing.requires_pos", "uses": []}
+{"name": "Becoming.ExchangeLaw.RespondsByCrossing.respondsTo", "uses": []}
+{"name": "Becoming.ExchangeLaw.RespondsByLevel.respondsTo", "uses": []}
+{"name": "Becoming.ExchangeLaw.RespondsTo.couples", "uses": ["Becoming.ExchangeLaw.RespondsTo.strength_pos"]}
+{"name": "Becoming.ExchangeLaw.RespondsTo.strength_pos", "uses": ["Becoming.ExchangeLaw.respondsWithin_zero_iff"]}
+{"name": "Becoming.ExchangeLaw.RespondsTo.upstream", "uses": ["Becoming.ExchangeLaw.RespondsTo.couples", "Becoming.Upstream.single"]}
+{"name": "Becoming.ExchangeLaw.Through.admission_changes_of_unobserved", "uses": ["Becoming.ExchangeLaw.exchangeGap_of_alike", "Becoming.Web.alikeThrough_of_levels"]}
+{"name": "Becoming.ExchangeLaw.Through.carried_fall_needs_fall", "uses": ["Becoming.ExchangeLaw.Through.carried_rises"]}
+{"name": "Becoming.ExchangeLaw.Through.carried_rises", "uses": ["Becoming.ExchangeLaw.Through.rises_at_step", "Becoming.total_le"]}
+{"name": "Becoming.ExchangeLaw.Through.couples_of_respondsTo", "uses": ["Becoming.ExchangeLaw.Through.respondsWithin_uncoupled", "Becoming.ExchangeLaw.respondsWithin_zero_iff"]}
+{"name": "Becoming.ExchangeLaw.Through.couples_readCouplings", "uses": ["Becoming.ExchangeLaw.Through.reads_of_respondsTo"]}
+{"name": "Becoming.ExchangeLaw.Through.crosses_of_unobserved", "uses": ["Becoming.ExchangeLaw.Through.not_respondsByLevel"]}
+{"name": "Becoming.ExchangeLaw.Through.not_respondsByLevel", "uses": ["Becoming.ExchangeLaw.exchangeGap_of_alike", "Becoming.Web.alikeThrough_of_levels", "Becoming.Web.alike_of_threshold"]}
+{"name": "Becoming.ExchangeLaw.Through.others_met_of_unobserved", "uses": ["Becoming.ExchangeLaw.Through.admission_changes_of_unobserved"]}
+{"name": "Becoming.ExchangeLaw.Through.reads_of_respondsTo", "uses": ["Becoming.ExchangeLaw.ReadsAt.respondsWithin_unread", "Becoming.ExchangeLaw.Through.readsAt", "Becoming.ExchangeLaw.respondsWithin_zero_iff"]}
+{"name": "Becoming.ExchangeLaw.Through.respondsWithin_uncoupled", "uses": ["Becoming.ExchangeLaw.exchangeGap_of_alike", "Becoming.ExchangeLaw.respondsWithin_zero_iff"]}
+{"name": "Becoming.ExchangeLaw.Through.rises_at_step", "uses": ["Becoming.Web.Admits.mono", "Becoming.Web.alikeThrough_of_levels"]}
+{"name": "Becoming.ExchangeLaw.Through.upstream_restrictInto", "uses": ["Becoming.ExchangeLaw.ReadsInto.restrict", "Becoming.ExchangeLaw.RespondsTo.upstream", "Becoming.ExchangeLaw.Through.readsInto"]}
+{"name": "Becoming.ExchangeLaw.respondsWithin_zero_iff", "uses": []}
+{"name": "Becoming.Layers.admits_iff", "uses": []}
+{"name": "Becoming.Layers.carry", "uses": ["Becoming.Layers.rises_add", "Becoming.Layers.rises_stop", "Becoming.Naturals.add_sub_of_le", "Becoming.total_steps_succ"]}
+{"name": "Becoming.Layers.dependsOn", "uses": []}
+{"name": "Becoming.Layers.law_needsSupport", "uses": ["Becoming.Layers.admits_iff"]}
+{"name": "Becoming.Layers.law_through", "uses": ["Becoming.Layers.admits_iff", "Becoming.ble_eq_of_iff"]}
+{"name": "Becoming.Layers.rises_add", "uses": ["Becoming.Naturals.add_sub_of_le", "Becoming.total_steps_add"]}
+{"name": "Becoming.Layers.rises_stop", "uses": ["Becoming.total_steps_add"]}
+{"name": "Becoming.Web.admits_iff_of_sole", "uses": []}
+{"name": "Becoming.Web.alikeThrough_of_levels", "uses": []}
+{"name": "Becoming.admissionLaw_respondsByCrossing", "uses": ["Becoming.gap_zero"]}
+{"name": "Becoming.admissionLaw_through", "uses": ["Becoming.decide_eq_of_iff"]}
+{"name": "Becoming.ble_and_iff", "uses": []}
+{"name": "Becoming.ble_eq_of_iff", "uses": []}
+{"name": "Becoming.carried_iff_rising", "uses": ["Becoming.ExchangeLaw.Through.carried_rises", "Becoming.Layers.carry", "Becoming.Layers.law_needsSupport", "Becoming.Layers.law_through", "Becoming.onlyAt_noLower", "Becoming.onlyAt_self"]}
+{"name": "Becoming.crossing_passes", "uses": ["Becoming.thresholdLaw_respondsByCrossing", "Becoming.thresholdLaw_through"]}
+{"name": "Becoming.crossing_passes_iff", "uses": ["Becoming.ExchangeLaw.RespondsByCrossing.requires_pos", "Becoming.admissionLaw_respondsByCrossing", "Becoming.admissionLaw_through"]}
+{"name": "Becoming.crossing_passes_of_support", "uses": ["Becoming.crossing_passes_iff"]}
+{"name": "Becoming.decide_eq_of_iff", "uses": []}
+{"name": "Becoming.eq_of_true_iff", "uses": []}
+{"name": "Becoming.levelLaw_respondsByLevel", "uses": ["Becoming.gap_add_self", "Becoming.gap_comm"]}
+{"name": "Becoming.levelLaw_through", "uses": []}
+{"name": "Becoming.not_not_obs_iff_respondsByLevel", "uses": ["Becoming.ExchangeLaw.Through.not_respondsByLevel", "Becoming.levelLaw_respondsByLevel", "Becoming.levelLaw_through"]}
+{"name": "Becoming.onlyAt_noLower", "uses": []}
+{"name": "Becoming.onlyAt_self", "uses": []}
+{"name": "Becoming.supplyLaw_through", "uses": []}
+{"name": "Becoming.supply_carried_by_complement", "uses": ["Becoming.Complement.carry", "Becoming.Complement.law_needsSupport", "Becoming.Complement.law_through"]}
+{"name": "Becoming.supply_not_carried", "uses": ["Becoming.carried_iff_rising"]}
+{"name": "Becoming.thresholdLaw_respondsByCrossing", "uses": ["Becoming.beq_self", "Becoming.gap_zero"]}
+{"name": "Becoming.thresholdLaw_through", "uses": ["Becoming.Web.admits_iff_of_sole", "Becoming.ble_eq_of_iff"]}
+{"name": "Becoming.total_steps_nothing", "uses": ["Becoming.total_steps_add"]}
+{"name": "Becoming.total_steps_only", "uses": ["Becoming.total_steps_add", "Becoming.total_steps_nothing"]}

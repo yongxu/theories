@@ -1,0 +1,7 @@
+{"name": "Becoming.FormedLoops.onsetWorld_course", "uses": ["Becoming.Closing.Onset.amount_after", "Becoming.Closing.Onset.amount_before", "Becoming.Closing.Onset.unforeseen", "Becoming.carriedWorld_balanced"]}
+{"name": "Becoming.FormedLoops.onsetWorld_level", "uses": []}
+{"name": "Becoming.FormedLoops.scheduleWorld_course", "uses": ["Becoming.Frequency.SelfLoop.carried_eq", "Becoming.Frequency.SelfLoop.polynomial_iff", "Becoming.carriedWorld_balanced"]}
+{"name": "Becoming.FormedLoops.sparseWorld_course", "uses": ["Becoming.Frequency.Sparse.inexact", "Becoming.Frequency.Sparse.polynomial", "Becoming.Frequency.Sparse.recurs", "Becoming.carriedWorld_balanced"]}
+{"name": "Becoming.FormedLoops.thresholdWorld_course", "uses": ["Becoming.Closing.Threshold.forms", "Becoming.Closing.Threshold.level_after", "Becoming.Closing.Threshold.level_before", "Becoming.Closing.Threshold.not_formed", "Becoming.Closing.Threshold.reads", "Becoming.Closing.Threshold.unforeseen", "Becoming.formedWorld_balanced"]}
+{"name": "Becoming.FormedLoops.thresholdWorld_level", "uses": []}
+{"name": "Becoming.formedWorld_before", "uses": ["Becoming.carriedWorld_balanced", "Becoming.carried_before", "Becoming.formedCourse_eq_carried"]}

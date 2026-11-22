@@ -1,0 +1,23 @@
+{"name": "Becoming.ChangingContext.arrives", "uses": ["Becoming.ChangingContext.joins"]}
+{"name": "Becoming.ChangingContext.erased_not_lifted", "uses": ["Generative.trace_singleton_iff"]}
+{"name": "Becoming.ChangingContext.joins", "uses": []}
+{"name": "Becoming.ContextArrivalTraces.changed_context_arrives", "uses": ["Becoming.ContextArrivalTraces.step_arrives"]}
+{"name": "Becoming.ContextArrivalTraces.empty_support_no_arrival", "uses": []}
+{"name": "Becoming.ContextArrivalTraces.step_arrives", "uses": ["Becoming.arrives_singleton"]}
+{"name": "Becoming.Contextual.fitsFree_iff", "uses": []}
+{"name": "Becoming.Contextual.indexed_fits", "uses": []}
+{"name": "Becoming.Contextual.no_free_frame", "uses": ["Becoming.Contextual.fitsFree_iff", "Becoming.Contextual.not_glues"]}
+{"name": "Becoming.CrossingContexts.not_inOne", "uses": ["Generative.trace_cons_iff"]}
+{"name": "Becoming.CrossingContexts.not_joinClosed", "uses": ["Becoming.CrossingContexts.not_inOne", "Becoming.CrossingContexts.pooled_crosses", "Becoming.pooledLaw_exact_iff_joinClosed"]}
+{"name": "Becoming.CrossingContexts.pooled_crosses", "uses": []}
+{"name": "Becoming.CrossingContexts.retained_excludes", "uses": ["Becoming.CrossingContexts.not_inOne", "Becoming.retainedLaw_realizes_inOne"]}
+{"name": "Becoming.InOne.pooled", "uses": ["Generative.trace_map"]}
+{"name": "Becoming.JoinClosed.inOne", "uses": ["Generative.Trace.brecOn"]}
+{"name": "Becoming.arrives_append", "uses": ["Generative.trace_append_iff"]}
+{"name": "Becoming.arrives_singleton", "uses": ["Generative.trace_singleton_iff"]}
+{"name": "Becoming.arrives_snoc", "uses": ["Becoming.arrives_append", "Becoming.arrives_singleton"]}
+{"name": "Becoming.erasedLaw_exact_iff_lifts", "uses": ["Generative.projection_exact_iff"]}
+{"name": "Becoming.pooledLaw_exact_iff_joinClosed", "uses": ["Becoming.InOne.pooled", "Becoming.JoinClosed.inOne", "Generative.trace_append_iff"]}
+{"name": "Becoming.retainedLaw_realizes_inOne", "uses": ["Becoming.retainedLaw_trace_iff"]}
+{"name": "Becoming.retainedLaw_trace", "uses": ["Generative.Trace.brecOn"]}
+{"name": "Becoming.retainedLaw_trace_iff", "uses": ["Becoming.retainedLaw_trace", "Generative.trace_map"]}

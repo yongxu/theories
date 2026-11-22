@@ -1,0 +1,10 @@
+{"name": "Becoming.Viability.ChoicePoint.keepable_gained", "uses": ["Becoming.Viability.Keepable.start"]}
+{"name": "Becoming.Viability.ChoicePoint.keepable_gained_along_run", "uses": ["Becoming.Viability.ChoicePoint.keepable_gained"]}
+{"name": "Becoming.Viability.Successor.not_keepable_kept_complement_not", "uses": ["Becoming.Viability.Successor.nowhere_keepable"]}
+{"name": "Becoming.Viability.Successor.nowhere_keepable", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Viability.keep_mono", "uses": ["Becoming.Parting.course_mono"]}
+{"name": "Becoming.Viability.keepable_iff_count", "uses": ["Becoming.Iteration.iter_largest", "Becoming.Onward.KeepsMoving.run", "Becoming.Viability.Keepable.start", "Becoming.Viability.keep_mono", "Becoming.Viability.keepable_step_iff"]}
+{"name": "Becoming.Viability.keepable_step_iff", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Viability.not_keepable_invariant_iff", "uses": ["Becoming.Viability.Keepable.start", "Becoming.Viability.keepable_step_iff"]}
+{"name": "Becoming.Viability.not_keepable_run", "uses": ["Becoming.Invariant.run", "Becoming.Viability.not_keepable_step"]}
+{"name": "Becoming.Viability.not_keepable_step", "uses": ["Becoming.Viability.Keepable.start", "Becoming.Viability.not_keepable_invariant_iff"]}

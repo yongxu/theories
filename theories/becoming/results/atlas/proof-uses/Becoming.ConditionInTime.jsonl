@@ -1,0 +1,49 @@
+{"name": "Becoming.Drawing.lapses", "uses": ["Becoming.Drawing.mutuallyDependent", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Flow.MutuallyDependentFrom.earlier", "uses": ["Becoming.Flow.withinTime_onward", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Flow.MutuallyDependentFrom.mutuallyDependent", "uses": ["Becoming.Flow.WithinTime.withinReach", "Becoming.Flow.mutuallyDependent_iff_reach"]}
+{"name": "Becoming.Flow.MutuallyDependentFrom.returning_unrestricted", "uses": ["Becoming.Flow.MutuallyDependentFrom.mutuallyDependent", "Becoming.Flow.returning_unrestricted_iff_mutuallyDependent"]}
+{"name": "Becoming.Flow.WithinTime.later", "uses": ["Becoming.Flow.withinTime_onward", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Flow.WithinTime.le", "uses": ["Becoming.Flow.stepInTime_advances", "Becoming.«及则后»", "Becoming.«所闭当且仅当同一或及»"]}
+{"name": "Becoming.Flow.WithinTime.withinReach", "uses": []}
+{"name": "Becoming.Flow.affectsBefore_acyclic", "uses": ["Becoming.«后则无环»"]}
+{"name": "Becoming.Flow.not_returnsAlong_stepInTime", "uses": ["Becoming.Flow.stepInTime_acyclic", "Becoming.returnsAlong_iff_sink"]}
+{"name": "Becoming.Flow.not_unrestricted_inTime", "uses": ["Becoming.Flow.WithinTime.le"]}
+{"name": "Becoming.Flow.reachesBefore_iff", "uses": []}
+{"name": "Becoming.Flow.returningInTime_unrestricted", "uses": ["Becoming.Flow.not_returnsAlong_stepInTime", "Becoming.ownClosure_unrestricted_of_none"]}
+{"name": "Becoming.Flow.returnsAlong_affectsBefore_iff", "uses": ["Becoming.Flow.affectsBefore_acyclic", "Becoming.returnsAlong_iff_sink"]}
+{"name": "Becoming.Flow.stepInTime_acyclic", "uses": ["Becoming.Flow.stepInTime_advances", "Becoming.«后则无环»"]}
+{"name": "Becoming.Flow.stepInTime_advances", "uses": []}
+{"name": "Becoming.Flow.unrestrictedAfter_iff_coupledEachStep", "uses": ["Becoming.Flow.WithinTime.later", "Becoming.Flow.stepInTime_advances", "Becoming.WithinClosure.of_rel", "Becoming.«及则后»", "Becoming.«及当且仅当一步而所闭»", "Becoming.«所闭当且仅当同一或及»"]}
+{"name": "Becoming.Flow.unrestrictedEventually_iff_mutuallyDependentInTime", "uses": ["Becoming.Flow.WithinTime.later"]}
+{"name": "Becoming.Flow.withinTime_onward", "uses": ["Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.LatePair.affected", "uses": []}
+{"name": "Becoming.LatePair.apart", "uses": ["Becoming.Flow.MutuallyDependent.reachReturns", "Becoming.Flow.returning_unrestricted_iff_mutuallyDependent", "Becoming.Flow.unrestrictedEventually_iff_mutuallyDependentInTime", "Becoming.LatePair.balances", "Becoming.LatePair.mutuallyDependent", "Becoming.LatePair.not_affectsBefore"]}
+{"name": "Becoming.LatePair.balances", "uses": []}
+{"name": "Becoming.LatePair.mutuallyDependent", "uses": ["Becoming.LatePair.affected", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl"]}
+{"name": "Becoming.LatePair.not_affectsBefore", "uses": []}
+{"name": "Becoming.Recurring.balances", "uses": []}
+{"name": "Becoming.Recurring.coupled", "uses": []}
+{"name": "Becoming.Recurring.inTime", "uses": ["Becoming.Flow.unrestrictedAfter_iff_coupledEachStep", "Becoming.Flow.unrestrictedEventually_iff_mutuallyDependentInTime", "Becoming.Recurring.balances", "Becoming.Recurring.coupled", "Becoming.UnrestrictedAfter.eventually"]}
+{"name": "Becoming.Recurring.oneCenter_counts", "uses": ["Becoming.Flow.stepInTime_acyclic", "Becoming.Recurring.inTime", "Becoming.unrestrictedAfter_iff_forward", "Becoming.«续无外则同一中心»"]}
+{"name": "Becoming.RingOfThree.a_not_c", "uses": []}
+{"name": "Becoming.RingOfThree.affects_next", "uses": ["Becoming.RingOfThree.mem_a", "Becoming.RingOfThree.mem_b", "Becoming.RingOfThree.mem_c"]}
+{"name": "Becoming.RingOfThree.apart", "uses": ["Becoming.Flow.unrestrictedAfter_iff_coupledEachStep", "Becoming.Flow.unrestrictedEventually_iff_mutuallyDependentInTime", "Becoming.RingOfThree.a_not_c", "Becoming.RingOfThree.balances", "Becoming.RingOfThree.reach", "Becoming.WithinClosure.refl"]}
+{"name": "Becoming.RingOfThree.balances", "uses": []}
+{"name": "Becoming.RingOfThree.mem_a", "uses": []}
+{"name": "Becoming.RingOfThree.mem_b", "uses": []}
+{"name": "Becoming.RingOfThree.mem_c", "uses": []}
+{"name": "Becoming.RingOfThree.reach", "uses": ["Becoming.RingOfThree.affects_next", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.TwoSources.apart", "uses": ["Becoming.TwoSources.center_ne_z", "Becoming.TwoSources.forward", "Becoming.«后则无环»", "Becoming.«续无外则同一中心»"]}
+{"name": "Becoming.TwoSources.center_ne_z", "uses": []}
+{"name": "Becoming.TwoSources.forward", "uses": []}
+{"name": "Becoming.UnrestrictedAfter.eventually", "uses": []}
+{"name": "Becoming.Web.continuationStep_returns_iff", "uses": ["Becoming.Web.continuationStep_acyclic", "Becoming.returnsAlong_iff_sink"]}
+{"name": "Becoming.ownClosure_unrestricted_atReturning_acyclic_iff", "uses": ["Becoming.WithinClosure.refl", "Becoming.ownClosure_unrestricted_atReturning_iff", "Becoming.ownClosure_unrestricted_iff", "Becoming.returnsAlong_iff_sink", "Becoming.returnsAlong_of_sink", "Becoming.«及之传递»", "Becoming.«所闭当且仅当同一或及»"]}
+{"name": "Becoming.returnsAlong_iff_sink", "uses": ["Becoming.WithinClosure.of_rel", "Becoming.returnsAlong_of_sink", "Becoming.«及当且仅当一步而所闭»"]}
+{"name": "Becoming.returnsAlong_of_sink", "uses": ["Becoming.WithinClosure.refl", "Becoming.«及当且仅当一步而所闭»", "Becoming.«所闭当且仅当同一或及»"]}
+{"name": "Becoming.unrestrictedAfter_iff_forward", "uses": ["Becoming.withinClosure_iff_reached"]}
+{"name": "Becoming.«及则后»", "uses": []}
+{"name": "Becoming.«后则无环»", "uses": ["Becoming.«及则后»"]}
+{"name": "Becoming.«独则同一中心»", "uses": []}
+{"name": "Becoming.«续无外则续无外于后»", "uses": []}
+{"name": "Becoming.«续无外当且仅当后与独»", "uses": ["Becoming.«及则后»", "Becoming.«相续含于及»"]}

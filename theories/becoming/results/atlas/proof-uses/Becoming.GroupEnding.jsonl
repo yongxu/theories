@@ -1,0 +1,39 @@
+{"name": "Becoming.GroupEnding.Assorted.first_listed", "uses": []}
+{"name": "Becoming.GroupEnding.Assorted.kept", "uses": []}
+{"name": "Becoming.GroupEnding.Assorted.uniform", "uses": []}
+{"name": "Becoming.GroupEnding.Exhausted.alike", "uses": []}
+{"name": "Becoming.GroupEnding.Exhausted.first_listed", "uses": []}
+{"name": "Becoming.GroupEnding.Exhausted.first_step", "uses": []}
+{"name": "Becoming.GroupEnding.Exhausted.next_listed", "uses": []}
+{"name": "Becoming.GroupEnding.Exhausted.next_step", "uses": ["Becoming.GroupEnding.Exhausted.alike"]}
+{"name": "Becoming.GroupEnding.Flow.all_end", "uses": ["Becoming.GroupEnding.Flow.offspring_zero", "Becoming.SelectionTerm.Generations.born_eq", "Becoming.total_eq_zero"]}
+{"name": "Becoming.GroupEnding.Flow.coupled_end_together", "uses": ["Becoming.Flow.family_excess_ends", "Becoming.GroupEnding.Flow.group_childless", "Becoming.SelectionTerm.concord_uniform", "Becoming.SelectionTerm.discord_uniform"]}
+{"name": "Becoming.GroupEnding.Flow.coupled_generation_childless", "uses": ["Becoming.GroupEnding.Flow.family_childless", "Becoming.ListTests.mem_flatMap_iff"]}
+{"name": "Becoming.GroupEnding.Flow.endedBy_of_inactive", "uses": ["Becoming.GroupEnding.Flow.group_childless", "Becoming.GroupEnding.mem_whole"]}
+{"name": "Becoming.GroupEnding.Flow.ended_of_family", "uses": ["Becoming.Flow.family_excess_ends", "Becoming.GroupEnding.Flow.ended_of_inactive"]}
+{"name": "Becoming.GroupEnding.Flow.ended_of_inactive", "uses": ["Becoming.GroupEnding.Flow.group_childless", "Becoming.GroupEnding.mem_whole"]}
+{"name": "Becoming.GroupEnding.Flow.excess_childless", "uses": ["Becoming.Flow.gate_single", "Becoming.GroupEnding.Flow.family_childless"]}
+{"name": "Becoming.GroupEnding.Flow.family_childless", "uses": ["Becoming.Flow.family_excess_ends", "Becoming.GroupEnding.Flow.inactive_childless"]}
+{"name": "Becoming.GroupEnding.Flow.group_childless", "uses": ["Becoming.GroupEnding.Flow.offspring_zero", "Becoming.total_eq_zero"]}
+{"name": "Becoming.GroupEnding.Flow.inactive_childless", "uses": []}
+{"name": "Becoming.GroupEnding.Flow.lineages_none_against", "uses": ["Becoming.GroupEnding.Flow.offspring_zero", "Becoming.ListTests.mem_flatMap_iff", "Becoming.SelectionLevels.lineage_value", "Becoming.SelectionLevels.lineages_family", "Becoming.SelectionTerm.discord_zero_of_below"]}
+{"name": "Becoming.GroupEnding.Flow.lineages_not_lower", "uses": ["Becoming.GroupEnding.Flow.lineages_none_against", "Becoming.SelectionTerm.Generations.not_lower", "Becoming.SelectionTerm.Generations.not_lower_step", "Becoming.SelectionTerm.lowered_exact"]}
+{"name": "Becoming.GroupEnding.Flow.lineages_raises", "uses": ["Becoming.GroupEnding.Flow.lineages_none_against", "Becoming.GroupEnding.Flow.offspring_zero", "Becoming.GroupEnding.excess_pos_of_lt", "Becoming.GroupEnding.pairs_pos", "Becoming.ListTests.mem_flatMap_iff", "Becoming.SelectionLevels.lineage_value", "Becoming.SelectionLevels.lineages_family", "Becoming.SelectionTerm.Generations.raises_exact_iff"]}
+{"name": "Becoming.GroupEnding.Flow.offspring_zero", "uses": ["Becoming.GroupEnding.Flow.inactive_childless"]}
+{"name": "Becoming.GroupEnding.Flow.raises_of_inactive", "uses": ["Becoming.GroupEnding.Flow.ended_of_inactive", "Becoming.GroupEnding.rises_of_ended", "Becoming.SelectionTerm.Generations.raises_exact_iff"]}
+{"name": "Becoming.GroupEnding.Flow.rises_iff_inactive", "uses": ["Becoming.GroupEnding.Flow.ended_of_inactive", "Becoming.GroupEnding.among_not_against", "Becoming.SelectionLevels.rises_exact_iff_levels"]}
+{"name": "Becoming.GroupEnding.Flow.rises_iff_inactive_sized", "uses": ["Becoming.GroupEnding.Flow.endedBy_of_inactive", "Becoming.GroupEnding.means_not_against", "Becoming.SelectionLevels.rises_exact_iff_sized"]}
+{"name": "Becoming.GroupEnding.Outweighed.keeping_rises", "uses": ["Becoming.GroupEnding.equal", "Becoming.GroupEnding.rises_of_ended", "Becoming.GroupEnding.uniform"]}
+{"name": "Becoming.GroupEnding.Outweighed.outweighed", "uses": []}
+{"name": "Becoming.GroupEnding.Outweighs.outweighs", "uses": []}
+{"name": "Becoming.GroupEnding.among_not_against", "uses": ["Becoming.SelectionTerm.discord_zero_of_below"]}
+{"name": "Becoming.GroupEnding.equal", "uses": ["Becoming.SelectionLevels.equal"]}
+{"name": "Becoming.GroupEnding.excess_pos_of_lt", "uses": ["Becoming.SelectionTerm.excess_add_left", "Becoming.le_dest"]}
+{"name": "Becoming.GroupEnding.means_not_against", "uses": ["Becoming.SelectionLevels.mem_of_mem_context", "Becoming.SelectionTerm.discord_zero_of_below"]}
+{"name": "Becoming.GroupEnding.mem_whole", "uses": []}
+{"name": "Becoming.GroupEnding.not_against_of_ended", "uses": ["Becoming.GroupEnding.among_not_against", "Becoming.SelectionLevels.levels_of_uniform"]}
+{"name": "Becoming.GroupEnding.pairs_pos", "uses": ["Becoming.total_pos_of_mem"]}
+{"name": "Becoming.GroupEnding.rises_iff_ended", "uses": ["Becoming.GroupEnding.among_not_against", "Becoming.SelectionLevels.rises_iff"]}
+{"name": "Becoming.GroupEnding.rises_iff_ended_sized", "uses": ["Becoming.GroupEnding.means_not_against", "Becoming.SelectionLevels.rises_iff_sized"]}
+{"name": "Becoming.GroupEnding.rises_of_ended", "uses": ["Becoming.GroupEnding.among_not_against", "Becoming.GroupEnding.excess_pos_of_lt", "Becoming.GroupEnding.pairs_pos", "Becoming.SelectionLevels.levels_of_uniform"]}
+{"name": "Becoming.GroupEnding.uniform", "uses": []}

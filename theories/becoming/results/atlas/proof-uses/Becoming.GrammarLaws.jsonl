@@ -1,0 +1,218 @@
+{"name": "Becoming.GrammarLaws.any_false_mem", "uses": []}
+{"name": "Becoming.GrammarLaws.any_false_of", "uses": []}
+{"name": "Becoming.GrammarLaws.any_remove", "uses": []}
+{"name": "Becoming.GrammarLaws.any_split", "uses": []}
+{"name": "Becoming.GrammarLaws.any_true_of_mem", "uses": []}
+{"name": "Becoming.GrammarLaws.census_count", "uses": ["Becoming.GrammarLaws.any_false_mem", "Becoming.GrammarLaws.any_split", "Becoming.GrammarLaws.census_le", "Becoming.GrammarLaws.census_le_converse", "Becoming.GrammarLaws.eq_true_of_not_false", "Becoming.GrammarLaws.length_keep", "Becoming.GrammarLaws.mem_middle", "Becoming.ListTests.not_true_iff"]}
+{"name": "Becoming.GrammarLaws.census_le", "uses": ["Becoming.GrammarLaws.count_add_not", "Becoming.GrammarLaws.distinct_keep", "Becoming.GrammarLaws.length_keep", "Becoming.GrammarLaws.mem_keep", "Becoming.ListTests.not_true_iff", "Becoming.length_le_of_matched", "Becoming.not_not_all"]}
+{"name": "Becoming.GrammarLaws.census_le_converse", "uses": ["Becoming.GrammarLaws.census_le"]}
+{"name": "Becoming.GrammarLaws.census_pairs", "uses": ["Becoming.GrammarLaws.any_false_mem", "Becoming.GrammarLaws.any_remove", "Becoming.GrammarLaws.any_split", "Becoming.GrammarLaws.distinct_removed", "Becoming.GrammarLaws.keep_all", "Becoming.GrammarLaws.keep_append", "Becoming.GrammarLaws.keep_congr", "Becoming.GrammarLaws.mem_middle", "Becoming.GrammarLaws.mem_of_removed", "Becoming.ListTests.append_assoc", "Becoming.ListTests.append_nil", "Becoming.«对之自反»"]}
+{"name": "Becoming.GrammarLaws.census_run", "uses": ["Becoming.GrammarLaws.found", "Becoming.GrammarLaws.pair_eq", "Becoming.GrammarLaws.stage_search", "Becoming.ListTests.mem_map_of", "Becoming.le_dest", "Becoming.«间无生则间亡不过所覆»"]}
+{"name": "Becoming.GrammarLaws.class_test_congr", "uses": ["Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.GrammarLaws.count_add_not", "uses": []}
+{"name": "Becoming.GrammarLaws.count_append", "uses": []}
+{"name": "Becoming.GrammarLaws.count_eq_countP", "uses": ["Becoming.GrammarLaws.count_go"]}
+{"name": "Becoming.GrammarLaws.count_go", "uses": []}
+{"name": "Becoming.GrammarLaws.count_insert", "uses": []}
+{"name": "Becoming.GrammarLaws.count_pos_of_mem", "uses": ["Becoming.GrammarLaws.count_insert"]}
+{"name": "Becoming.GrammarLaws.count_replicate_false", "uses": []}
+{"name": "Becoming.GrammarLaws.count_replicate_true", "uses": []}
+{"name": "Becoming.GrammarLaws.distinct_keep", "uses": ["Becoming.GrammarLaws.mem_keep"]}
+{"name": "Becoming.GrammarLaws.distinct_removed", "uses": ["Becoming.GrammarLaws.mem_middle", "Becoming.GrammarLaws.mem_of_removed"]}
+{"name": "Becoming.GrammarLaws.eq_true_of_not_false", "uses": []}
+{"name": "Becoming.GrammarLaws.fixed_of_noSplit", "uses": ["Becoming.«所闭之逆»", "Becoming.«闭含所闭»"]}
+{"name": "Becoming.GrammarLaws.found", "uses": ["Becoming.GrammarLaws.found_cons"]}
+{"name": "Becoming.GrammarLaws.found_cons", "uses": ["Becoming.ListTests.mem_cons_iff"]}
+{"name": "Becoming.GrammarLaws.found_or_all", "uses": ["Becoming.ListTests.mem_cons_iff"]}
+{"name": "Becoming.GrammarLaws.found_unrefuted", "uses": ["Becoming.GrammarLaws.found_cons"]}
+{"name": "Becoming.GrammarLaws.keep_all", "uses": []}
+{"name": "Becoming.GrammarLaws.keep_append", "uses": []}
+{"name": "Becoming.GrammarLaws.keep_congr", "uses": []}
+{"name": "Becoming.GrammarLaws.length_insert", "uses": []}
+{"name": "Becoming.GrammarLaws.length_keep", "uses": []}
+{"name": "Becoming.GrammarLaws.length_replicate", "uses": []}
+{"name": "Becoming.GrammarLaws.line_ends_unrefuted", "uses": ["Becoming.not_not_all", "Becoming.«线终不过所列»"]}
+{"name": "Becoming.GrammarLaws.mem_keep", "uses": []}
+{"name": "Becoming.GrammarLaws.mem_middle", "uses": []}
+{"name": "Becoming.GrammarLaws.mem_of_removed", "uses": []}
+{"name": "Becoming.GrammarLaws.onward_within", "uses": ["Becoming.GrammarLaws.stage_steps", "Becoming.«或有后则或迭»", "Becoming.«所闭当且仅当有迭»", "Becoming.«闭含所闭»"]}
+{"name": "Becoming.GrammarLaws.pair_eq", "uses": []}
+{"name": "Becoming.GrammarLaws.pair_of_class_counts", "uses": ["Becoming.GrammarLaws.class_test_congr", "Becoming.GrammarLaws.count_insert", "Becoming.GrammarLaws.split_of_count_pos", "Becoming.Naturals.add_left_cancel", "Becoming.«类».refl"]}
+{"name": "Becoming.GrammarLaws.paired_single", "uses": ["Becoming.«对之长»"]}
+{"name": "Becoming.GrammarLaws.reorder", "uses": []}
+{"name": "Becoming.GrammarLaws.replicate_add_append", "uses": []}
+{"name": "Becoming.GrammarLaws.replicate_succ_append", "uses": []}
+{"name": "Becoming.GrammarLaws.reverseAux_append", "uses": []}
+{"name": "Becoming.GrammarLaws.reverse_cons_append", "uses": ["Becoming.GrammarLaws.reverseAux_append"]}
+{"name": "Becoming.GrammarLaws.reverse_replicate", "uses": ["Becoming.GrammarLaws.replicate_succ_append", "Becoming.GrammarLaws.reverse_cons_append"]}
+{"name": "Becoming.GrammarLaws.split_append", "uses": []}
+{"name": "Becoming.GrammarLaws.split_of_count_pos", "uses": []}
+{"name": "Becoming.GrammarLaws.stage_search", "uses": ["Becoming.GrammarLaws.count_pos_of_mem", "Becoming.GrammarLaws.mem_middle", "Becoming.GrammarLaws.split_of_count_pos"]}
+{"name": "Becoming.GrammarLaws.stage_steps", "uses": []}
+{"name": "Becoming.GrammarLaws.trace", "uses": ["Becoming.«所闭之传递»", "Becoming.«所闭之自反»", "Becoming.«缘在所闭»"]}
+{"name": "Becoming.GrammarLaws.trace_on", "uses": []}
+{"name": "Becoming.GrammarLaws.trace_unrefuted", "uses": ["Becoming.«所闭之传递»", "Becoming.«所闭之自反»", "Becoming.«缘在所闭»"]}
+{"name": "Becoming.GrammarLaws.uncrossed_iff_closed", "uses": ["Becoming.GrammarLaws.uncrossed_of_closed"]}
+{"name": "Becoming.GrammarLaws.uncrossed_iff_notGoingOut", "uses": []}
+{"name": "Becoming.GrammarLaws.uncrossed_of_closed", "uses": []}
+{"name": "Becoming.kept_onward", "uses": ["Becoming.le_dest", "Becoming.«线则所闭»", "Becoming.«闭含所闭»"]}
+{"name": "Becoming.strictJoin_irrefl", "uses": []}
+{"name": "Becoming.strictJoin_trans", "uses": []}
+{"name": "Becoming.«一之对»", "uses": ["Becoming.«对之长»", "Becoming.«等长则一对»"]}
+{"name": "Becoming.«一对而静不对之例»", "uses": ["Becoming.«对则不越域守数»", "Becoming.«等长则一对»"]}
+{"name": "Becoming.«不穷则迭»", "uses": ["Becoming.«迭之末步»", "Becoming.«迭则同一或及»"]}
+{"name": "Becoming.«二所闭在借步之所闭»", "uses": ["Becoming.«所闭之传递»", "Becoming.«所闭之单调»"]}
+{"name": "Becoming.«亡者不在长迭»", "uses": ["Becoming.GrammarLaws.reorder", "Becoming.le_dest", "Becoming.«分处定后则迭之定于»", "Becoming.«所闭之传递»", "Becoming.«所闭当且仅当有迭»", "Becoming.«迭之分»"]}
+{"name": "Becoming.«保之像»", "uses": []}
+{"name": "Becoming.«借步之所闭在二所闭»", "uses": ["Becoming.«所闭之传递»", "Becoming.«所闭之自反»", "Becoming.«缘在所闭»"]}
+{"name": "Becoming.«像定后当且仅当同行»", "uses": ["Becoming.«同行之逐点»"]}
+{"name": "Becoming.«入当且仅当有不返»", "uses": ["Becoming.«及之传递»", "Becoming.«闭之及»"]}
+{"name": "Becoming.«入而屡之例»", "uses": ["Becoming.«有后不返则入»"]}
+{"name": "Becoming.«入而返之例»", "uses": []}
+{"name": "Becoming.«分处定后则迭之定于»", "uses": ["Becoming.«所闭之传递»", "Becoming.«所闭之自反»", "Becoming.«所闭当且仅当有迭»", "Becoming.«缘在所闭»"]}
+{"name": "Becoming.«则逾之定当且仅当排中»", "uses": []}
+{"name": "Becoming.«前者在前则所列生者生»", "uses": ["Becoming.GrammarLaws.any_false_of", "Becoming.GrammarLaws.any_true_of_mem", "Becoming.GrammarLaws.mem_keep", "Becoming.ListTests.not_true_iff"]}
+{"name": "Becoming.«历之定前»", "uses": []}
+{"name": "Becoming.«历之接»", "uses": []}
+{"name": "Becoming.«历之末步»", "uses": ["Becoming.«历之接»"]}
+{"name": "Becoming.«历之逆»", "uses": ["Becoming.GrammarLaws.reverse_cons_append", "Becoming.«历之末步»"]}
+{"name": "Becoming.«及之所闭»", "uses": ["Becoming.«闭之及»"]}
+{"name": "Becoming.«及即迭»", "uses": ["Becoming.«迭则及»"]}
+{"name": "Becoming.«及当且仅当一步而所闭»", "uses": ["Becoming.«及之所闭»", "Becoming.«所闭之自反»", "Becoming.«所闭当且仅当同一或及»"]}
+{"name": "Becoming.«同行之历»", "uses": ["Becoming.«同行之逐点»"]}
+{"name": "Becoming.«同行之迭»", "uses": ["Becoming.«同行之历»", "Becoming.«迭即历»"]}
+{"name": "Becoming.«同行之逐点»", "uses": []}
+{"name": "Becoming.«同行于迭»", "uses": ["Becoming.«同行之迭»", "Becoming.«同行之逐点»"]}
+{"name": "Becoming.«同行可续则有常»", "uses": ["Becoming.«同行之逐点»", "Becoming.«有常之逐点»"]}
+{"name": "Becoming.«同行当且仅当有常»", "uses": ["Becoming.«同行遍后则有常»", "Becoming.«有常定后则同行»"]}
+{"name": "Becoming.«同行遍后则有常»", "uses": ["Becoming.«同行可续则有常»"]}
+{"name": "Becoming.«后不定则核可不同行»", "uses": ["Becoming.«静有常»"]}
+{"name": "Becoming.«后者在后则所列亡者亡»", "uses": ["Becoming.GrammarLaws.any_false_of", "Becoming.GrammarLaws.any_true_of_mem", "Becoming.GrammarLaws.mem_keep", "Becoming.ListTests.not_true_iff"]}
+{"name": "Becoming.«四比之周»", "uses": []}
+{"name": "Becoming.«存承之迭»", "uses": ["Becoming.«承之迭»", "Becoming.«迭内即静或缘之迭»"]}
+{"name": "Becoming.«守数当且仅当可对»", "uses": ["Becoming.GrammarLaws.length_replicate", "Becoming.ListTests.length_append", "Becoming.Naturals.add_congr", "Becoming.«一之对»", "Becoming.«对则守数»"]}
+{"name": "Becoming.«定前之逐点»", "uses": []}
+{"name": "Becoming.«定前则前并生不过后并亡»", "uses": ["Becoming.GrammarLaws.census_le_converse", "Becoming.«定前之逐点»"]}
+{"name": "Becoming.«定前则线不并»", "uses": []}
+{"name": "Becoming.«定前则线可退»", "uses": ["Becoming.«定前则线不并»", "Becoming.«线不并则可退»"]}
+{"name": "Becoming.«定前即逆之定后»", "uses": []}
+{"name": "Becoming.«定后之逐点»", "uses": []}
+{"name": "Becoming.«定后于之后»", "uses": ["Becoming.«所闭之传递»"]}
+{"name": "Becoming.«定后于二返则不并»", "uses": ["Becoming.«及即迭»", "Becoming.«定后于之后»", "Becoming.«所闭之自反»", "Becoming.«缘在所闭»", "Becoming.«迭之周»", "Becoming.«迭之定于»"]}
+{"name": "Becoming.«定后于则返者不入»", "uses": ["Becoming.«入当且仅当有不返»", "Becoming.«定后于环则所及皆返»"]}
+{"name": "Becoming.«定后于有后则入当且仅当不返»", "uses": ["Becoming.«定后于则返者不入»", "Becoming.«有后不返则入»"]}
+{"name": "Becoming.«定后于环则所及皆返»", "uses": ["Becoming.«所闭之传递»", "Becoming.«所闭之自反»", "Becoming.«缘在所闭»", "Becoming.«闭之及»"]}
+{"name": "Becoming.«定后于线有限则末返»", "uses": ["Becoming.gap_of_lt", "Becoming.le_dest", "Becoming.revisits_within", "Becoming.«及之传递»", "Becoming.«定后于之后»", "Becoming.«定后于环则所及皆返»", "Becoming.«线则及»", "Becoming.«线则所闭»"]}
+{"name": "Becoming.«定后则后并亡不过前并生»", "uses": ["Becoming.GrammarLaws.census_le", "Becoming.«定后之逐点»"]}
+{"name": "Becoming.«定后则定后于»", "uses": []}
+{"name": "Becoming.«定后则类之核同行»", "uses": ["Becoming.«有常定后则同行»", "Becoming.«核为类»", "Becoming.«根»"]}
+{"name": "Becoming.«定后则线至多一亡»", "uses": ["Becoming.«亡者不在长迭»", "Becoming.«分处定后则迭之定于»", "Becoming.«所闭当且仅当有迭»"]}
+{"name": "Becoming.«定后则返者不入»", "uses": ["Becoming.«定后于则返者不入»", "Becoming.«定后则定后于»"]}
+{"name": "Becoming.«定后前者在前则亡屡者生屡»", "uses": ["Becoming.GrammarLaws.census_run", "Becoming.«定后之逐点»"]}
+{"name": "Becoming.«定后定前则前并生与后并亡同数»", "uses": ["Becoming.GrammarLaws.census_count", "Becoming.«定前之逐点»", "Becoming.«定后之逐点»"]}
+{"name": "Becoming.«定后定前则前并生对后并亡»", "uses": ["Becoming.GrammarLaws.census_pairs", "Becoming.«定前之逐点»", "Becoming.«定后之逐点»", "Becoming.«对之单调»"]}
+{"name": "Becoming.«定后有后则入当且仅当不返»", "uses": ["Becoming.«定后于有后则入当且仅当不返»", "Becoming.«定后则定后于»"]}
+{"name": "Becoming.«定后环则所及皆返»", "uses": ["Becoming.«定后于环则所及皆返»", "Becoming.«定后则定后于»"]}
+{"name": "Becoming.«定后遍后则核为其内最粗同行之类»", "uses": ["Becoming.«定后则类之核同行»", "Becoming.«遍后则其内同行之类含于核»"]}
+{"name": "Becoming.«对».brecOn", "uses": []}
+{"name": "Becoming.«对之传»", "uses": ["Becoming.«对之单调»", "Becoming.«对之接»"]}
+{"name": "Becoming.«对之单调»", "uses": []}
+{"name": "Becoming.«对之取»", "uses": ["Becoming.GrammarLaws.split_append", "Becoming.ListTests.append_assoc"]}
+{"name": "Becoming.«对之左插»", "uses": []}
+{"name": "Becoming.«对之并»", "uses": ["Becoming.ListTests.append_assoc"]}
+{"name": "Becoming.«对之换»", "uses": ["Becoming.ListTests.append_nil", "Becoming.«对之自反»"]}
+{"name": "Becoming.«对之接»", "uses": ["Becoming.«对之取»"]}
+{"name": "Becoming.«对之族»", "uses": ["Becoming.«对之并»"]}
+{"name": "Becoming.«对之程»", "uses": ["Becoming.ListTests.append_assoc", "Becoming.«对之传»", "Becoming.«对之单调»", "Becoming.«对之并»", "Becoming.«对之换»", "Becoming.«对之自反»", "Becoming.«所闭之传递»", "Becoming.«所闭之自反»", "Becoming.«缘在所闭»"]}
+{"name": "Becoming.«对之自反»", "uses": []}
+{"name": "Becoming.«对之逆»", "uses": ["Becoming.«对之左插»"]}
+{"name": "Becoming.«对之长»", "uses": ["Becoming.GrammarLaws.length_insert"]}
+{"name": "Becoming.«对则不越域守数»", "uses": ["Becoming.GrammarLaws.count_insert"]}
+{"name": "Becoming.«对则双闭域守数»", "uses": ["Becoming.GrammarLaws.uncrossed_of_closed", "Becoming.«对则不越域守数»"]}
+{"name": "Becoming.«对则守数»", "uses": ["Becoming.ListTests.length_append", "Becoming.«对之长»"]}
+{"name": "Becoming.«对而单闭域不守数之例»", "uses": []}
+{"name": "Becoming.«尽则不屡»", "uses": ["Becoming.«尽则不或屡»", "Becoming.«屡则或屡»"]}
+{"name": "Becoming.«尽则不或屡»", "uses": ["Becoming.le_dest", "Becoming.«线或在所闭»"]}
+{"name": "Becoming.«局定后则有常当且仅当同行可续»", "uses": ["Becoming.«同行可续则有常»", "Becoming.«有常则可续»", "Becoming.«有常局定后则同行»"]}
+{"name": "Becoming.«屡则或屡»", "uses": []}
+{"name": "Becoming.«广不可逆»", "uses": ["Becoming.«逾则不则»"]}
+{"name": "Becoming.«广之传递»", "uses": ["Becoming.«则之传递»"]}
+{"name": "Becoming.«广则不则»", "uses": ["Becoming.«逾则不则»"]}
+{"name": "Becoming.«广则非杂»", "uses": ["Becoming.«逾则不则»"]}
+{"name": "Becoming.«广则非齐»", "uses": ["Becoming.«逾则不则»"]}
+{"name": "Becoming.«广非自»", "uses": ["Becoming.«则之自反»", "Becoming.«逾则不则»"]}
+{"name": "Becoming.«或有后则或迭»", "uses": ["Becoming.«迭之末步»"]}
+{"name": "Becoming.«所覆后亡屡则有生»", "uses": ["Becoming.GrammarLaws.fixed_of_noSplit", "Becoming.GrammarLaws.found", "Becoming.GrammarLaws.found_or_all", "Becoming.GrammarLaws.trace", "Becoming.le_dest", "Becoming.«线亡不过所列»"]}
+{"name": "Becoming.«所覆后亡屡则生未否»", "uses": ["Becoming.GrammarLaws.found_unrefuted", "Becoming.«间无生则间亡不过所覆»"]}
+{"name": "Becoming.«所闭不出»", "uses": ["Becoming.«所闭之界»"]}
+{"name": "Becoming.«所闭之传递»", "uses": []}
+{"name": "Becoming.«所闭之单调»", "uses": []}
+{"name": "Becoming.«所闭之对称»", "uses": ["Becoming.«所闭之传递»", "Becoming.«所闭之自反»", "Becoming.«缘在所闭»"]}
+{"name": "Becoming.«所闭之界»", "uses": ["Becoming.«所闭之传递»", "Becoming.«缘在所闭»"]}
+{"name": "Becoming.«所闭之自反»", "uses": []}
+{"name": "Becoming.«所闭之证»", "uses": ["Becoming.«所闭之传递»", "Becoming.«所闭之自反»", "Becoming.«缘在所闭»"]}
+{"name": "Becoming.«所闭之逆»", "uses": ["Becoming.«所闭之传递»", "Becoming.«所闭之自反»", "Becoming.«缘在所闭»"]}
+{"name": "Becoming.«所闭之闭»", "uses": ["Becoming.«所闭之传递»", "Becoming.«缘在所闭»"]}
+{"name": "Becoming.«所闭当且仅当同一或及»", "uses": ["Becoming.«及之传递»", "Becoming.«及之所闭»", "Becoming.«所闭之自反»"]}
+{"name": "Becoming.«所闭当且仅当有迭»", "uses": ["Becoming.«及即迭»", "Becoming.«所闭当且仅当同一或及»", "Becoming.«迭则同一或及»"]}
+{"name": "Becoming.«承之迭»", "uses": ["Becoming.«迭之末步»"]}
+{"name": "Becoming.«无后者不入亦不返»", "uses": []}
+{"name": "Becoming.«有后不返则入»", "uses": ["Becoming.«入当且仅当有不返»"]}
+{"name": "Becoming.«有常则可续»", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.«有常定后则同行»", "uses": ["Becoming.«有常局定后则同行»"]}
+{"name": "Becoming.«有常局定后则同行»", "uses": ["Becoming.«同行之逐点»", "Becoming.«有常之逐点»"]}
+{"name": "Becoming.«有界覆而生屡则亡不止»", "uses": ["Becoming.GrammarLaws.found", "Becoming.«间无亡则间生不过所覆»"]}
+{"name": "Becoming.«有界覆而生屡则亡屡»", "uses": ["Becoming.GrammarLaws.found", "Becoming.GrammarLaws.found_or_all", "Becoming.GrammarLaws.stage_steps", "Becoming.GrammarLaws.trace_on", "Becoming.le_dest", "Becoming.«所闭当且仅当有迭»", "Becoming.«线生不过所列»", "Becoming.«闭含所闭»"]}
+{"name": "Becoming.«有覆而亡屡则生不止»", "uses": ["Becoming.«所覆后亡屡则生未否»"]}
+{"name": "Becoming.«有覆而亡屡则生屡»", "uses": ["Becoming.«所覆后亡屡则有生»"]}
+{"name": "Becoming.«有限遍后定前则皆返»", "uses": ["Becoming.«线有限定前则返»", "Becoming.«遍后则有线»"]}
+{"name": "Becoming.«有限遍后定后则定前当且仅当皆返»", "uses": ["Becoming.«有限遍后定前则皆返»", "Becoming.«皆返定后则定前»"]}
+{"name": "Becoming.«杂之对称»", "uses": []}
+{"name": "Becoming.«止而不入之例»", "uses": ["Becoming.«定后则返者不入»", "Becoming.«尽则不屡»"]}
+{"name": "Becoming.«皆返定后则定前»", "uses": ["Becoming.«定后于二返则不并»", "Becoming.«定后则定后于»"]}
+{"name": "Becoming.«程守数当且仅当可对»", "uses": ["Becoming.GrammarLaws.length_replicate", "Becoming.ListTests.length_append", "Becoming.Naturals.add_congr", "Becoming.total_congr", "Becoming.«一之对»", "Becoming.«对之长»", "Becoming.«聚之长»"]}
+{"name": "Becoming.«等长则一对»", "uses": []}
+{"name": "Becoming.«等长而不对之例»", "uses": []}
+{"name": "Becoming.«类之对当且仅当类类等数»", "uses": ["Becoming.GrammarLaws.class_test_congr", "Becoming.GrammarLaws.pair_of_class_counts", "Becoming.«对则不越域守数»"]}
+{"name": "Becoming.«类同行遍后则含于核»", "uses": ["Becoming.«同行遍后则有常»", "Becoming.«类有常当且仅当含于核»"]}
+{"name": "Becoming.«线不并则可退»", "uses": []}
+{"name": "Becoming.«线亡不过所列»", "uses": ["Becoming.«线终不过所列»"]}
+{"name": "Becoming.«线亡不过所列之未否»", "uses": ["Becoming.GrammarLaws.line_ends_unrefuted"]}
+{"name": "Becoming.«线则及»", "uses": ["Becoming.«及之传递»"]}
+{"name": "Becoming.«线则所闭»", "uses": ["Becoming.«所闭之传递»", "Becoming.«所闭之自反»", "Becoming.«缘在所闭»"]}
+{"name": "Becoming.«线或在所闭»", "uses": ["Becoming.«所闭之传递»", "Becoming.«所闭之自反»", "Becoming.«缘在所闭»"]}
+{"name": "Becoming.«线有限不并则回»", "uses": ["Becoming.gap_of_lt", "Becoming.revisits_within", "Becoming.«线不并则可退»"]}
+{"name": "Becoming.«线有限不并则返»", "uses": ["Becoming.«线则及»", "Becoming.«线有限不并则回»"]}
+{"name": "Becoming.«线有限定前则返»", "uses": ["Becoming.«定前则线不并»", "Becoming.«线有限不并则返»"]}
+{"name": "Becoming.«线生不过所列»", "uses": ["Becoming.«所闭之逆»", "Becoming.«线终不过所列»"]}
+{"name": "Becoming.«线生不过所列之未否»", "uses": ["Becoming.GrammarLaws.line_ends_unrefuted", "Becoming.«所闭之逆»"]}
+{"name": "Becoming.«线终不过所列»", "uses": ["Becoming.length_le_of_matched", "Becoming.«定后则线至多一亡»"]}
+{"name": "Becoming.«续之对则类类等数»", "uses": ["Becoming.«对之单调»", "Becoming.«类之对当且仅当类类等数»"]}
+{"name": "Becoming.«缘在所闭»", "uses": []}
+{"name": "Becoming.«聚之长»", "uses": ["Becoming.ListTests.length_append"]}
+{"name": "Becoming.«迭之分»", "uses": ["Becoming.GrammarLaws.replicate_add_append", "Becoming.«历之接»", "Becoming.«迭即历»"]}
+{"name": "Becoming.«迭之周»", "uses": ["Becoming.«迭之接»"]}
+{"name": "Becoming.«迭之定»", "uses": ["Becoming.«定后则定后于»", "Becoming.«迭之定于»"]}
+{"name": "Becoming.«迭之定于»", "uses": ["Becoming.«分处定后则迭之定于»"]}
+{"name": "Becoming.«迭之定前»", "uses": ["Becoming.«历之定前»", "Becoming.«迭即历»"]}
+{"name": "Becoming.«迭之接»", "uses": ["Becoming.GrammarLaws.replicate_add_append", "Becoming.«历之接»", "Becoming.«迭即历»"]}
+{"name": "Becoming.«迭之末步»", "uses": ["Becoming.GrammarLaws.replicate_succ_append", "Becoming.«历之末步»", "Becoming.«迭即历»"]}
+{"name": "Becoming.«迭之逆»", "uses": ["Becoming.GrammarLaws.reverse_replicate", "Becoming.«历之逆»", "Becoming.«迭即历»"]}
+{"name": "Becoming.«迭内之接»", "uses": ["Becoming.«迭之接»"]}
+{"name": "Becoming.«迭内即静或缘之迭»", "uses": []}
+{"name": "Becoming.«迭则及»", "uses": []}
+{"name": "Becoming.«迭则同一或及»", "uses": ["Becoming.«迭则及»"]}
+{"name": "Becoming.«迭即历»", "uses": []}
+{"name": "Becoming.«逾则不则»", "uses": []}
+{"name": "Becoming.«遍后则其内同行之类含于核»", "uses": ["Becoming.«同行遍后则有常»", "Becoming.«根»", "Becoming.«类».symm"]}
+{"name": "Becoming.«遍后则有线»", "uses": []}
+{"name": "Becoming.«闭之及»", "uses": []}
+{"name": "Becoming.«闭则不出»", "uses": []}
+{"name": "Becoming.«闭含所闭»", "uses": []}
+{"name": "Becoming.«闭而外则不所闭»", "uses": []}
+{"name": "Becoming.«间无亡则间生不过所覆»", "uses": ["Becoming.GrammarLaws.onward_within", "Becoming.GrammarLaws.stage_steps", "Becoming.le_dest", "Becoming.«所闭当且仅当有迭»", "Becoming.«线生不过所列之未否»", "Becoming.«闭含所闭»"]}
+{"name": "Becoming.«间无生则间亡不过所覆»", "uses": ["Becoming.GrammarLaws.fixed_of_noSplit", "Becoming.GrammarLaws.trace_unrefuted", "Becoming.le_dest", "Becoming.«线亡不过所列之未否»"]}
+{"name": "Becoming.«非定后返而不入之例»", "uses": ["Becoming.«定后于则返者不入»"]}
+{"name": "Becoming.«齐之对称»", "uses": []}
+{"name": "Becoming.«齐则非杂»", "uses": ["Becoming.«逾则不则»"]}
+{"name": "Becoming.«齐即谓»", "uses": []}

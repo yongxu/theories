@@ -1,0 +1,80 @@
+{"name": "Becoming.Learning.Alternate.index_three", "uses": []}
+{"name": "Becoming.Learning.Alternate.repeats", "uses": []}
+{"name": "Becoming.Learning.Alternate.rests", "uses": ["Becoming.Learning.Alternate.index_three", "Becoming.Learning.Alternate.repeats", "Becoming.Learning.back_prefix", "Becoming.Learning.index_mono_le", "Becoming.Learning.lasso_byElimination_bounded", "Becoming.Learning.lasso_claims", "Becoming.le_dest"]}
+{"name": "Becoming.Learning.Shift.determines", "uses": ["Becoming.Learning.lumped_determines"]}
+{"name": "Becoming.Learning.Shift.every_nothing", "uses": ["Becoming.Learning.every_determines_nothing"]}
+{"name": "Becoming.Learning.Shift.right_same", "uses": ["Becoming.Learning.lumped_world_right"]}
+{"name": "Becoming.Learning.Shift.wrong_both", "uses": ["Becoming.Learning.lumped_right_iff"]}
+{"name": "Becoming.Learning.Training.fit_right_iff", "uses": []}
+{"name": "Becoming.Learning.Training.loss_through", "uses": []}
+{"name": "Becoming.Learning.Training.unselected_beyond_data", "uses": []}
+{"name": "Becoming.Learning.Training.web_selectsThrough_iff", "uses": []}
+{"name": "Becoming.Learning.answer_orbit_length", "uses": []}
+{"name": "Becoming.Learning.back_made", "uses": ["Becoming.Learning.back_prefix", "Becoming.gap_of_lt"]}
+{"name": "Becoming.Learning.back_prefix", "uses": []}
+{"name": "Becoming.Learning.byElimination_through_prefix", "uses": []}
+{"name": "Becoming.Learning.claim_missed_on_one", "uses": ["Becoming.Learning.holdFrom_after", "Becoming.Learning.holdFrom_before", "Becoming.Learning.prefix_congr"]}
+{"name": "Becoming.Learning.determines_lumped_iff", "uses": ["Becoming.Learning.lumped_determines"]}
+{"name": "Becoming.Learning.diag_le", "uses": ["Becoming.Learning.diag_mono", "Becoming.le_dest"]}
+{"name": "Becoming.Learning.diag_mono", "uses": ["Becoming.Learning.diag_next"]}
+{"name": "Becoming.Learning.diag_next", "uses": []}
+{"name": "Becoming.Learning.diagonal_misses", "uses": ["Becoming.Learning.prefix_diagonal"]}
+{"name": "Becoming.Learning.diagonal_not_lasso", "uses": ["Becoming.Learning.diagonal_unrested", "Becoming.Learning.rest_unrefuted"]}
+{"name": "Becoming.Learning.diagonal_open", "uses": ["Becoming.Learning.answer_orbit_length", "Becoming.unlisted_of_new"]}
+{"name": "Becoming.Learning.diagonal_unrested", "uses": ["Becoming.Learning.diagonal_misses"]}
+{"name": "Becoming.Learning.eq_of_not_missed", "uses": []}
+{"name": "Becoming.Learning.every_determines_nothing", "uses": ["Becoming.Learning.every_free", "Becoming.Learning.free_determines_iff"]}
+{"name": "Becoming.Learning.every_free", "uses": []}
+{"name": "Becoming.Learning.free_determines_iff", "uses": []}
+{"name": "Becoming.Learning.held_byElimination_bounded", "uses": ["Becoming.Learning.lasso_byElimination_bounded", "Becoming.Learning.lasso_of_held", "Becoming.Learning.place_lt", "Becoming.Learning.tri_mono", "Becoming.le_dest"]}
+{"name": "Becoming.Learning.held_rest_unrefuted", "uses": ["Becoming.Learning.lasso_of_held", "Becoming.Learning.rest_unrefuted"]}
+{"name": "Becoming.Learning.holdFrom_after", "uses": []}
+{"name": "Becoming.Learning.holdFrom_before", "uses": []}
+{"name": "Becoming.Learning.holdFrom_lasso", "uses": ["Becoming.Learning.holdFrom_after"]}
+{"name": "Becoming.Learning.index_kept", "uses": []}
+{"name": "Becoming.Learning.index_le_of_accords", "uses": ["Becoming.Learning.index_kept", "Becoming.Learning.index_succ_le"]}
+{"name": "Becoming.Learning.index_le_succ", "uses": ["Becoming.Learning.index_kept", "Becoming.Learning.index_missed"]}
+{"name": "Becoming.Learning.index_missed", "uses": []}
+{"name": "Becoming.Learning.index_mono", "uses": ["Becoming.Learning.index_le_succ"]}
+{"name": "Becoming.Learning.index_mono_le", "uses": ["Becoming.Learning.index_mono", "Becoming.le_dest"]}
+{"name": "Becoming.Learning.index_succ_le", "uses": ["Becoming.Learning.index_kept", "Becoming.Learning.index_missed"]}
+{"name": "Becoming.Learning.index_unbounded", "uses": ["Becoming.Learning.index_missed", "Becoming.Learning.index_mono_le"]}
+{"name": "Becoming.Learning.lasso_accords", "uses": ["Becoming.Learning.back_prefix", "Becoming.Learning.lasso_claims", "Becoming.Learning.lasso_silent", "Becoming.le_dest"]}
+{"name": "Becoming.Learning.lasso_byElimination_bounded", "uses": ["Becoming.Learning.back_made", "Becoming.Learning.diag_le", "Becoming.Learning.index_le_of_accords", "Becoming.Learning.lasso_accords", "Becoming.Learning.lasso_claims", "Becoming.Learning.misses_not_recurring", "Becoming.Learning.pairAt_place"]}
+{"name": "Becoming.Learning.lasso_claims", "uses": ["Becoming.Learning.prefix_length"]}
+{"name": "Becoming.Learning.lasso_of_held", "uses": ["Becoming.Law.orbit_add", "Becoming.Law.step_fixed", "Becoming.Law.steps_orbit", "Becoming.gap_of_lt", "Becoming.le_dest", "Becoming.revisits_within", "Becoming.«迭之定»", "Becoming.«迭之接»"]}
+{"name": "Becoming.Learning.lasso_of_rest", "uses": ["Becoming.Learning.back_prefix", "Becoming.Learning.index_kept", "Becoming.Learning.lasso_claims", "Becoming.Learning.not_missed_self", "Becoming.le_dest"]}
+{"name": "Becoming.Learning.lasso_positions", "uses": []}
+{"name": "Becoming.Learning.lasso_realized", "uses": ["Becoming.Learning.lasso_positions", "Becoming.mem_downFrom"]}
+{"name": "Becoming.Learning.lasso_silent", "uses": ["Becoming.Learning.prefix_length"]}
+{"name": "Becoming.Learning.lumped_determines", "uses": []}
+{"name": "Becoming.Learning.lumped_right_iff", "uses": []}
+{"name": "Becoming.Learning.lumped_world_right", "uses": ["Becoming.Learning.lumped_right_iff"]}
+{"name": "Becoming.Learning.merged_bound", "uses": ["Becoming.Learning.index_le_of_accords", "Becoming.Learning.pairAt_place"]}
+{"name": "Becoming.Learning.merged_unrested", "uses": ["Becoming.Learning.diagonal_unrested"]}
+{"name": "Becoming.Learning.missed_before", "uses": ["Becoming.Learning.index_kept", "Becoming.Learning.index_missed"]}
+{"name": "Becoming.Learning.misses_not_recurring", "uses": ["Becoming.Learning.index_le_of_accords", "Becoming.Learning.index_unbounded"]}
+{"name": "Becoming.Learning.no_prefix_fixes_next", "uses": ["Becoming.Learning.holdFrom_after", "Becoming.Learning.holdFrom_before", "Becoming.Learning.prefix_congr"]}
+{"name": "Becoming.Learning.no_prefix_fixes_next_finite", "uses": ["Becoming.Learning.holdFrom_lasso", "Becoming.Learning.no_prefix_fixes_next"]}
+{"name": "Becoming.Learning.not_missed_self", "uses": []}
+{"name": "Becoming.Learning.pairAt_place", "uses": ["Becoming.Learning.pairAt_tri", "Becoming.Learning.pairAt_walk"]}
+{"name": "Becoming.Learning.pairAt_tri", "uses": ["Becoming.Learning.pairAt_walk"]}
+{"name": "Becoming.Learning.pairAt_walk", "uses": []}
+{"name": "Becoming.Learning.place_lt", "uses": []}
+{"name": "Becoming.Learning.prefix_congr", "uses": []}
+{"name": "Becoming.Learning.prefix_diagonal", "uses": []}
+{"name": "Becoming.Learning.prefix_length", "uses": []}
+{"name": "Becoming.Learning.rest_unrefuted", "uses": ["Becoming.Learning.eq_of_not_missed", "Becoming.Learning.index_le_succ", "Becoming.Learning.index_missed", "Becoming.Learning.lasso_byElimination_bounded", "Becoming.Learning.stable_unrefuted"]}
+{"name": "Becoming.Learning.selects_not_right_of_parted", "uses": ["Becoming.Learning.selects_right_through"]}
+{"name": "Becoming.Learning.selects_right_iff", "uses": ["Becoming.Learning.selects_right_of_reads", "Becoming.Learning.selects_right_through", "Becoming.Learning.through_iff_reads"]}
+{"name": "Becoming.Learning.selects_right_of_reads", "uses": []}
+{"name": "Becoming.Learning.selects_right_through", "uses": ["Becoming.Relabel.Equivariant.tied"]}
+{"name": "Becoming.Learning.selects_through_lumping", "uses": ["Becoming.Relabel.Equivariant.tied"]}
+{"name": "Becoming.Learning.stable_unrefuted", "uses": ["Becoming.le_dest"]}
+{"name": "Becoming.Learning.swapTo_moves", "uses": []}
+{"name": "Becoming.Learning.through_iff_reads", "uses": []}
+{"name": "Becoming.Learning.tri_mono", "uses": []}
+{"name": "Becoming.Learning.values_lumped", "uses": ["Becoming.Relabel.EquivariantValue.tied"]}
+{"name": "Becoming.Learning.values_not_right_of_parted", "uses": ["Becoming.Learning.values_right_lumped"]}
+{"name": "Becoming.Learning.values_right_lumped", "uses": ["Becoming.Relabel.EquivariantValue.tied"]}
+{"name": "Becoming.Learning.values_right_of_reads", "uses": []}

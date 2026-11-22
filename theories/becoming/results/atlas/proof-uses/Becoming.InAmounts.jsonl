@@ -1,0 +1,89 @@
+{"name": "Becoming.Amounts.add_add_add_comm", "uses": ["Becoming.Amounts.add_assoc", "Becoming.Amounts.add_comm"]}
+{"name": "Becoming.Amounts.add_left_comm", "uses": ["Becoming.Amounts.add_assoc", "Becoming.Amounts.add_comm"]}
+{"name": "Becoming.Amounts.extend_falls", "uses": []}
+{"name": "Becoming.Amounts.fallsStop_congr", "uses": []}
+{"name": "Becoming.Amounts.fallsStop_iff", "uses": []}
+{"name": "Becoming.Amounts.fallsStop_of_ends", "uses": ["Becoming.«尽则不或屡»"]}
+{"name": "Becoming.Amounts.falls_within_reading", "uses": ["Becoming.Amounts.from_start", "Becoming.Amounts.rising_apart", "Becoming.Amounts.still_le", "Becoming.gap_of_lt", "Becoming.le_dest", "Becoming.revisits_within"]}
+{"name": "Becoming.Amounts.from_start", "uses": ["Becoming.Amounts.rising_apart"]}
+{"name": "Becoming.Amounts.le_of_totalOf_le", "uses": ["Becoming.Amounts.add_comm", "Becoming.Amounts.add_le_add_left", "Becoming.Amounts.add_le_add_right", "Becoming.Amounts.le_of_add_le_add_right", "Becoming.Amounts.le_of_eq", "Becoming.Amounts.le_trans", "Becoming.Amounts.totalOf_le"]}
+{"name": "Becoming.Amounts.le_totalOf", "uses": ["Becoming.Amounts.le_add_left", "Becoming.Amounts.le_add_right", "Becoming.Amounts.le_trans"]}
+{"name": "Becoming.Amounts.mem_insert_cases", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Amounts.noEndlessFall_of_fallsAtLeast", "uses": ["Becoming.Amounts.rests_unrefuted"]}
+{"name": "Becoming.Amounts.not_endlessFall_of_worldsRest", "uses": ["Becoming.Pass.endless_keeps_from_rest"]}
+{"name": "Becoming.Amounts.not_not_totalOf_le", "uses": ["Becoming.Amounts.add_le_add_left", "Becoming.Amounts.add_le_add_right", "Becoming.Amounts.le_refl", "Becoming.Amounts.le_trans"]}
+{"name": "Becoming.Amounts.rests_of_finite_reading", "uses": ["Becoming.Amounts.rests_unrefuted_of_finite_reading"]}
+{"name": "Becoming.Amounts.rests_unrefuted_of_finite_reading", "uses": ["Becoming.Amounts.extend_falls", "Becoming.Amounts.falls_within_reading", "Becoming.Amounts.from_start"]}
+{"name": "Becoming.Amounts.rising_apart", "uses": []}
+{"name": "Becoming.Amounts.totalOf_add", "uses": ["Becoming.Amounts.add_add_add_comm", "Becoming.Amounts.zero_add"]}
+{"name": "Becoming.Amounts.totalOf_congr", "uses": []}
+{"name": "Becoming.Amounts.totalOf_insert", "uses": ["Becoming.Amounts.add_left_comm"]}
+{"name": "Becoming.Amounts.totalOf_le", "uses": ["Becoming.Amounts.add_le_add_left", "Becoming.Amounts.add_le_add_right", "Becoming.Amounts.le_refl", "Becoming.Amounts.le_trans"]}
+{"name": "Becoming.Amounts.totalOf_le_zero", "uses": ["Becoming.Amounts.le_of_eq", "Becoming.Amounts.le_trans", "Becoming.Amounts.totalOf_le", "Becoming.Amounts.totalOf_zero"]}
+{"name": "Becoming.Amounts.totalOf_single", "uses": ["Becoming.Amounts.add_zero", "Becoming.Amounts.totalOf_congr", "Becoming.Amounts.totalOf_zero", "Becoming.Amounts.zero_add", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Amounts.totalOf_support", "uses": ["Becoming.Amounts.add_le_add_left", "Becoming.Amounts.add_le_add_right", "Becoming.Amounts.le_add_left", "Becoming.Amounts.le_of_eq", "Becoming.Amounts.le_refl", "Becoming.Amounts.le_trans", "Becoming.Amounts.mem_insert_cases", "Becoming.Amounts.totalOf_insert", "Becoming.Amounts.zero_add", "Becoming.distinct_remove", "Becoming.mem_cons_cases", "Becoming.mem_insert", "Becoming.not_mem_of_middle"]}
+{"name": "Becoming.Amounts.totalOf_swap", "uses": ["Becoming.Amounts.totalOf_add", "Becoming.Amounts.totalOf_zero"]}
+{"name": "Becoming.Amounts.totalOf_whole", "uses": []}
+{"name": "Becoming.Amounts.totalOf_zero", "uses": ["Becoming.Amounts.zero_add"]}
+{"name": "Becoming.Amounts.whole_fallsAtLeast", "uses": []}
+{"name": "Becoming.Amounts.whole_noEndlessFall", "uses": ["Becoming.Amounts.noEndlessFall_of_fallsAtLeast", "Becoming.Amounts.whole_archimedean", "Becoming.Amounts.whole_fallsAtLeast"]}
+{"name": "Becoming.Amounts.whole_worldsRest", "uses": ["Becoming.Amounts.whole_noEndlessFall", "Becoming.Amounts.worldsRest_of_noEndlessFall"]}
+{"name": "Becoming.Amounts.worldsRest_of_noEndlessFall", "uses": ["Becoming.World.InAmounts.rests_unrefuted_enclosed_of_noEndlessFall"]}
+{"name": "Becoming.Pass.arises", "uses": ["Becoming.Pass.not_self"]}
+{"name": "Becoming.Pass.at_other", "uses": []}
+{"name": "Becoming.Pass.at_self", "uses": []}
+{"name": "Becoming.Pass.balanced", "uses": ["Becoming.Amounts.add_comm", "Becoming.Amounts.add_zero", "Becoming.Amounts.le_of_eq", "Becoming.Pass.at_self"]}
+{"name": "Becoming.Pass.ceases", "uses": ["Becoming.Pass.not_self"]}
+{"name": "Becoming.Pass.census", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Pass.closed", "uses": ["Becoming.ListTests.mem_bools"]}
+{"name": "Becoming.Pass.decide_eq", "uses": []}
+{"name": "Becoming.Pass.decide_mem", "uses": ["Becoming.Pass.decide_eq", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Pass.dissipative", "uses": ["Becoming.Amounts.totalOf_congr", "Becoming.Amounts.totalOf_single", "Becoming.Pass.at_other", "Becoming.Pass.at_self", "Becoming.Pass.decide_eq", "Becoming.Pass.decide_mem", "Becoming.Pass.give_of_present", "Becoming.Pass.positive", "Becoming.Pass.take_of_present"]}
+{"name": "Becoming.Pass.embodied", "uses": ["Becoming.Pass.positive", "Becoming.Pass.stands_iff"]}
+{"name": "Becoming.Pass.enclosed", "uses": ["Becoming.Pass.closed", "Becoming.Pass.pair_distinct"]}
+{"name": "Becoming.Pass.endless_keeps_from_rest", "uses": ["Becoming.Pass.balanced", "Becoming.Pass.census", "Becoming.Pass.dissipative", "Becoming.Pass.embodied", "Becoming.Pass.enclosed", "Becoming.Pass.never_rests"]}
+{"name": "Becoming.Pass.give_of_present", "uses": ["Becoming.Pass.at_self", "Becoming.Pass.present_holder"]}
+{"name": "Becoming.Pass.levels_unlisted", "uses": ["Becoming.ListTests.mem_bools", "Becoming.Pass.balanced", "Becoming.Pass.closed", "Becoming.Pass.dissipative", "Becoming.Pass.embodied", "Becoming.Pass.never_rests", "Becoming.Pass.pair_distinct", "Becoming.World.InAmounts.rests_unrefuted_reading"]}
+{"name": "Becoming.Pass.never_rests", "uses": ["Becoming.Pass.arises"]}
+{"name": "Becoming.Pass.not_self", "uses": []}
+{"name": "Becoming.Pass.pair_distinct", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Pass.positive", "uses": ["Becoming.Amounts.le_trans", "Becoming.Amounts.zero_le"]}
+{"name": "Becoming.Pass.present_holder", "uses": []}
+{"name": "Becoming.Pass.stands_iff", "uses": ["Becoming.Amounts.le_refl"]}
+{"name": "Becoming.Pass.take_of_present", "uses": ["Becoming.Pass.at_self", "Becoming.Pass.present_holder"]}
+{"name": "Becoming.World.Embodied.arising", "uses": []}
+{"name": "Becoming.World.InAmounts.Enclosed.around_census", "uses": ["Becoming.World.InAmounts.Enclosed.around_not_not", "Becoming.mem_append_of_left", "Becoming.mem_append_of_right"]}
+{"name": "Becoming.World.InAmounts.Enclosed.around_not_not", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.World.InAmounts.balance_total", "uses": ["Becoming.Amounts.le_of_eq", "Becoming.Amounts.le_trans", "Becoming.Amounts.totalOf_add", "Becoming.Amounts.totalOf_le"]}
+{"name": "Becoming.World.InAmounts.census_falls", "uses": ["Becoming.Amounts.le_trans", "Becoming.World.InAmounts.Enclosed.around_census", "Becoming.World.InAmounts.change_lowers", "Becoming.World.InAmounts.stock_census"]}
+{"name": "Becoming.World.InAmounts.census_still", "uses": ["Becoming.Amounts.le_trans", "Becoming.World.InAmounts.Enclosed.around_census", "Becoming.World.InAmounts.stock_census", "Becoming.World.InAmounts.stock_still"]}
+{"name": "Becoming.World.InAmounts.change_lowers", "uses": ["Becoming.World.InAmounts.steady_of_stock_le"]}
+{"name": "Becoming.World.InAmounts.change_stops_iff", "uses": ["Becoming.Amounts.not_not_totalOf_le", "Becoming.World.InAmounts.change_lowers"]}
+{"name": "Becoming.World.InAmounts.change_stops_unrefuted", "uses": ["Becoming.World.InAmounts.change_stops_iff", "Becoming.World.InAmounts.stops_of_reading"]}
+{"name": "Becoming.World.InAmounts.falls_of_ceases", "uses": ["Becoming.Amounts.le_trans"]}
+{"name": "Becoming.World.InAmounts.given_total", "uses": ["Becoming.Amounts.totalOf_swap"]}
+{"name": "Becoming.World.InAmounts.rests_unrefuted", "uses": ["Becoming.World.InAmounts.rests_unrefuted_reading"]}
+{"name": "Becoming.World.InAmounts.rests_unrefuted_covering", "uses": ["Becoming.World.InAmounts.rests_unrefuted_of_stops", "Becoming.World.InAmounts.stops_of_reading"]}
+{"name": "Becoming.World.InAmounts.rests_unrefuted_enclosed", "uses": ["Becoming.Amounts.fallsStop_congr", "Becoming.Amounts.rests_unrefuted_of_finite_reading", "Becoming.World.InAmounts.census_still", "Becoming.World.InAmounts.rests_unrefuted_enclosed_of_stops"]}
+{"name": "Becoming.World.InAmounts.rests_unrefuted_enclosed_of_noEndlessFall", "uses": ["Becoming.World.InAmounts.census_still", "Becoming.World.InAmounts.rests_unrefuted_enclosed_of_stops"]}
+{"name": "Becoming.World.InAmounts.rests_unrefuted_enclosed_of_stops", "uses": ["Becoming.World.InAmounts.census_falls", "Becoming.World.InAmounts.falls_of_ceases", "Becoming.World.InAmounts.rises_of_arises", "Becoming.World.rests_unrefuted_iff"]}
+{"name": "Becoming.World.InAmounts.rests_unrefuted_of_stops", "uses": ["Becoming.World.InAmounts.change_stops_iff", "Becoming.World.InAmounts.rises_of_arises", "Becoming.World.arising_unrefuted_covering", "Becoming.World.rests_unrefuted_iff"]}
+{"name": "Becoming.World.InAmounts.rests_unrefuted_reading", "uses": ["Becoming.Amounts.totalOf_congr", "Becoming.World.InAmounts.rests_unrefuted_covering"]}
+{"name": "Becoming.World.InAmounts.rises_of_arises", "uses": ["Becoming.Amounts.le_trans"]}
+{"name": "Becoming.World.InAmounts.steady_of_stock_le", "uses": ["Becoming.Amounts.add_comm", "Becoming.Amounts.add_le_add_left", "Becoming.Amounts.add_le_add_right", "Becoming.Amounts.add_zero", "Becoming.Amounts.le_add_right", "Becoming.Amounts.le_of_add_le_add_right", "Becoming.Amounts.le_of_eq", "Becoming.Amounts.le_of_totalOf_le", "Becoming.Amounts.le_totalOf", "Becoming.Amounts.le_trans", "Becoming.Amounts.totalOf_le_zero", "Becoming.World.InAmounts.balance_total", "Becoming.World.InAmounts.given_total", "Becoming.World.InAmounts.taken_total"]}
+{"name": "Becoming.World.InAmounts.stock_census", "uses": ["Becoming.Amounts.totalOf_support"]}
+{"name": "Becoming.World.InAmounts.stock_still", "uses": ["Becoming.Amounts.add_le_add_left", "Becoming.Amounts.le_of_add_le_add_right", "Becoming.Amounts.le_of_eq", "Becoming.Amounts.le_trans", "Becoming.Amounts.totalOf_le", "Becoming.World.InAmounts.balance_total", "Becoming.World.InAmounts.given_total", "Becoming.World.InAmounts.taken_total"]}
+{"name": "Becoming.World.InAmounts.stops_of_reading", "uses": ["Becoming.Amounts.fallsStop_congr", "Becoming.Amounts.rests_unrefuted_of_finite_reading", "Becoming.World.InAmounts.stock_still"]}
+{"name": "Becoming.World.InAmounts.taken_total", "uses": ["Becoming.Amounts.totalOf_swap"]}
+{"name": "Becoming.World.arisingEmbodied_whole", "uses": []}
+{"name": "Becoming.World.arising_unrefuted_covering", "uses": ["Becoming.Covers.not_not_coming_from"]}
+{"name": "Becoming.World.balanced_whole", "uses": ["Becoming.Amounts.totalOf_whole"]}
+{"name": "Becoming.World.balancesOn_whole", "uses": ["Becoming.Amounts.totalOf_whole"]}
+{"name": "Becoming.World.dissipatesOn_whole", "uses": ["Becoming.Amounts.totalOf_whole", "Becoming.World.nothing_of_sign"]}
+{"name": "Becoming.World.dissipative_whole", "uses": ["Becoming.World.dissipatesOn_whole"]}
+{"name": "Becoming.World.embodied_whole", "uses": []}
+{"name": "Becoming.World.enclosed_whole", "uses": []}
+{"name": "Becoming.World.nothing_of_sign", "uses": []}
+{"name": "Becoming.World.rests_unrefuted", "uses": ["Becoming.Amounts.whole_noEndlessFall", "Becoming.World.InAmounts.rests_unrefuted_of_stops", "Becoming.World.InAmounts.stock_still", "Becoming.World.arisingEmbodied_whole", "Becoming.World.balanced_whole", "Becoming.World.dissipative_whole"]}
+{"name": "Becoming.World.rests_unrefuted_enclosed", "uses": ["Becoming.Amounts.whole_noEndlessFall", "Becoming.World.InAmounts.rests_unrefuted_enclosed_of_noEndlessFall", "Becoming.World.balanced_whole", "Becoming.World.dissipative_whole", "Becoming.World.embodied_whole", "Becoming.World.enclosed_whole"]}
+{"name": "Becoming.World.rests_unrefuted_iff", "uses": []}

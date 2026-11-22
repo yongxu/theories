@@ -1,0 +1,30 @@
+{"name": "Becoming.Learning.goAlike_iff_at", "uses": []}
+{"name": "Becoming.Learning.goAlike_iff_lumped", "uses": ["Becoming.Learning.lumped_iff_fixed_image", "Becoming.goAlikeUnder_iff_alike", "Becoming.«像定后当且仅当同行»"]}
+{"name": "Becoming.Learning.lumped_iff_fixed_image", "uses": []}
+{"name": "Becoming.Learning.transfer_right_iff", "uses": []}
+{"name": "Becoming.LearningRuns.alternate_rests", "uses": ["Becoming.LearnableRuns.predictsFrom_iff", "Becoming.Learning.Alternate.rests"]}
+{"name": "Becoming.LearningRuns.answer_course", "uses": ["Becoming.Branching.law_run_state"]}
+{"name": "Becoming.LearningRuns.answer_misses", "uses": ["Becoming.Learning.diagonal_misses", "Becoming.Learning.swapTo_moves", "Becoming.LearningRuns.answer_course", "Becoming.LearningRuns.answer_prefix", "Becoming.LearningRuns.missedAt_of_same"]}
+{"name": "Becoming.LearningRuns.answer_open", "uses": ["Becoming.Branching.law_run_state", "Becoming.Learning.diagonal_open"]}
+{"name": "Becoming.LearningRuns.answer_prefix", "uses": ["Becoming.Learning.prefix_congr", "Becoming.LearningRuns.answer_course"]}
+{"name": "Becoming.LearningRuns.byElimination_through_prefix", "uses": ["Becoming.Learning.byElimination_through_prefix", "Becoming.Learning.prefix_congr"]}
+{"name": "Becoming.LearningRuns.claim_not_right_on_both", "uses": ["Becoming.Branching.law_run_state", "Becoming.Law.alike_iff_sameFuture", "Becoming.Learnable.claim_not_right_on_both", "Becoming.LearnableRuns.prefix_eq"]}
+{"name": "Becoming.LearningRuns.course_mem", "uses": []}
+{"name": "Becoming.LearningRuns.fit_right_iff_runs", "uses": ["Becoming.Learning.Training.fit_right_iff", "Becoming.LearningRuns.course_mem"]}
+{"name": "Becoming.LearningRuns.free_prefix_fixes_nothing", "uses": ["Becoming.Learning.every_determines_nothing"]}
+{"name": "Becoming.LearningRuns.held_byElimination_bounded", "uses": ["Becoming.Branching.law_run_state", "Becoming.LearnableRuns.prefix_eq", "Becoming.Learning.held_byElimination_bounded", "Becoming.LearningRuns.missedAt_of_same"]}
+{"name": "Becoming.LearningRuns.held_rest_unrefuted", "uses": ["Becoming.Branching.law_run_state", "Becoming.LearnableRuns.predictsFrom_iff", "Becoming.Learning.held_rest_unrefuted"]}
+{"name": "Becoming.LearningRuns.holdFrom_missed", "uses": ["Becoming.Learning.holdFrom_after", "Becoming.Learning.holdFrom_before", "Becoming.Learning.prefix_congr", "Becoming.LearningRuns.missedAt_of_same"]}
+{"name": "Becoming.LearningRuns.loss_through_prefix", "uses": ["Becoming.Learning.Training.loss_through"]}
+{"name": "Becoming.LearningRuns.merged_unrested", "uses": ["Becoming.Learning.merged_unrested", "Becoming.LearningRuns.answer_course", "Becoming.LearningRuns.answer_prefix"]}
+{"name": "Becoming.LearningRuns.missedAt_of_same", "uses": ["Becoming.LearningRuns.missed_congr"]}
+{"name": "Becoming.LearningRuns.missed_congr", "uses": []}
+{"name": "Becoming.LearningRuns.missed_on_one", "uses": ["Becoming.Branching.law_run_state", "Becoming.Law.alike_iff_sameFuture", "Becoming.Learnable.missed_on_one", "Becoming.LearnableRuns.prefix_eq", "Becoming.LearningRuns.missedAt_of_same"]}
+{"name": "Becoming.LearningRuns.missed_on_one_of_part", "uses": ["Becoming.Learning.claim_missed_on_one", "Becoming.LearningRuns.holdFrom_missed"]}
+{"name": "Becoming.LearningRuns.negation_never_rests", "uses": ["Becoming.ListTests.not_ne_self", "Becoming.Run.step"]}
+{"name": "Becoming.LearningRuns.pair_first_not_predicts", "uses": ["Becoming.Learnable.Pair.first_not_predicts", "Becoming.LearnableRuns.predicts_iff"]}
+{"name": "Becoming.LearningRuns.pair_not_learnable", "uses": ["Becoming.Learnable.Pair.not_lumped", "Becoming.LearnableRuns.still_learnable_iff_lumped", "Becoming.LearningRuns.pair_world"]}
+{"name": "Becoming.LearningRuns.pair_whole_predicts", "uses": ["Becoming.Learnable.Pair.whole_predicts", "Becoming.LearnableRuns.predictsFrom_iff"]}
+{"name": "Becoming.LearningRuns.pair_world", "uses": []}
+{"name": "Becoming.LearningRuns.prefix_fixes_no_next", "uses": ["Becoming.Learning.holdFrom_after", "Becoming.Learning.no_prefix_fixes_next_finite"]}
+{"name": "Becoming.LearningRuns.unselected_beyond_prefix", "uses": ["Becoming.Learning.Training.unselected_beyond_data", "Becoming.LearningRuns.course_mem"]}

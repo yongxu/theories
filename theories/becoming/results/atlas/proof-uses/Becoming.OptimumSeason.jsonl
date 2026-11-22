@@ -1,0 +1,63 @@
+{"name": "Becoming.Optimum.Season.after_drained", "uses": ["Becoming.Optimum.Season.after_iff", "Becoming.Optimum.Season.bay_drained", "Becoming.Optimum.Season.lex_rising"]}
+{"name": "Becoming.Optimum.Season.after_iff", "uses": ["Becoming.Optimum.Season.bay_le", "Becoming.Optimum.Season.seven_lt"]}
+{"name": "Becoming.Optimum.Season.bay_catch", "uses": ["Becoming.Naturals.add_congr", "Becoming.Naturals.sub_add_cancel", "Becoming.Optimum.Season.eligible_parts"]}
+{"name": "Becoming.Optimum.Season.bay_catch_le", "uses": ["Becoming.Optimum.Season.bay_catch", "Becoming.Optimum.Season.eligible_parts"]}
+{"name": "Becoming.Optimum.Season.bay_drained", "uses": ["Becoming.ListTests.mem_singleton_iff", "Becoming.Optimum.Season.drained_eligible", "Becoming.Optimum.Season.shared", "Becoming.Optimum.least_of_shared"]}
+{"name": "Becoming.Optimum.Season.bay_le", "uses": ["Becoming.Optimum.Season.eligible_parts"]}
+{"name": "Becoming.Optimum.Season.bellman", "uses": []}
+{"name": "Becoming.Optimum.Season.best_ten", "uses": []}
+{"name": "Becoming.Optimum.Season.cap_lt", "uses": ["Becoming.Optimum.Season.least_le_right"]}
+{"name": "Becoming.Optimum.Season.catch_kept_le", "uses": ["Becoming.Optimum.Season.catch_le", "Becoming.Optimum.Season.kept_catch_le"]}
+{"name": "Becoming.Optimum.Season.catch_le", "uses": ["Becoming.Optimum.Season.eligible_parts"]}
+{"name": "Becoming.Optimum.Season.catch_rising", "uses": ["Becoming.ListTests.mem_singleton_iff"]}
+{"name": "Becoming.Optimum.Season.caught_le", "uses": ["Becoming.Optimum.Season.bellman", "Becoming.Optimum.Season.cap_lt", "Becoming.Optimum.Season.renew_le"]}
+{"name": "Becoming.Optimum.Season.drained_eligible", "uses": ["Becoming.Optimum.Season.eligible_of", "Becoming.Optimum.Season.topTakes_length", "Becoming.Optimum.Season.top_caught"]}
+{"name": "Becoming.Optimum.Season.eligible_of", "uses": ["Becoming.Optimum.Season.flagged_asked", "Becoming.Optimum.Season.flagged_caught", "Becoming.Optimum.Season.flagged_landings", "Becoming.Optimum.Season.flagged_length", "Becoming.Optimum.Season.least_of_ge", "Becoming.Optimum.Season.least_of_le", "Becoming.Optimum.Season.outcome_bay", "Becoming.Optimum.Season.outcome_catch", "Becoming.Optimum.Season.outcome_ground", "Becoming.Optimum.Season.outcome_site"]}
+{"name": "Becoming.Optimum.Season.eligible_parts", "uses": ["Becoming.Optimum.Season.ground_le", "Becoming.Optimum.Season.landings_le", "Becoming.Optimum.Season.least_le_left", "Becoming.Optimum.Season.outcome_bay", "Becoming.Optimum.Season.outcome_catch", "Becoming.Optimum.Season.outcome_ground", "Becoming.Optimum.Season.outcome_site"]}
+{"name": "Becoming.Optimum.Season.flagged_asked", "uses": ["Becoming.Optimum.Season.least_zero_right"]}
+{"name": "Becoming.Optimum.Season.flagged_caught", "uses": []}
+{"name": "Becoming.Optimum.Season.flagged_landings", "uses": ["Becoming.Optimum.Season.least_zero_right"]}
+{"name": "Becoming.Optimum.Season.flagged_length", "uses": []}
+{"name": "Becoming.Optimum.Season.ground_bound", "uses": ["Becoming.Optimum.Season.eligible_parts"]}
+{"name": "Becoming.Optimum.Season.ground_frontier", "uses": ["Becoming.Optimum.Season.ground_bound"]}
+{"name": "Becoming.Optimum.Season.ground_le", "uses": ["Becoming.Optimum.Season.best_ten", "Becoming.Optimum.Season.caught_le"]}
+{"name": "Becoming.Optimum.Season.ground_rising", "uses": ["Becoming.ListTests.mem_singleton_iff"]}
+{"name": "Becoming.Optimum.Season.kept_catch_le", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.Naturals.sub_add_cancel", "Becoming.Optimum.Season.eligible_parts"]}
+{"name": "Becoming.Optimum.Season.landings_le", "uses": []}
+{"name": "Becoming.Optimum.Season.least_le_left", "uses": []}
+{"name": "Becoming.Optimum.Season.least_le_right", "uses": []}
+{"name": "Becoming.Optimum.Season.least_of_ge", "uses": []}
+{"name": "Becoming.Optimum.Season.least_of_le", "uses": []}
+{"name": "Becoming.Optimum.Season.least_zero_right", "uses": []}
+{"name": "Becoming.Optimum.Season.lex_rising", "uses": ["Becoming.Optimum.Rising.mono", "Becoming.Optimum.Season.catch_rising"]}
+{"name": "Becoming.Optimum.Season.mass_add", "uses": []}
+{"name": "Becoming.Optimum.Season.mass_const", "uses": []}
+{"name": "Becoming.Optimum.Season.mass_le", "uses": []}
+{"name": "Becoming.Optimum.Season.mix_bay_catch", "uses": ["Becoming.Optimum.Season.bay_catch_le", "Becoming.Optimum.Season.mass_add", "Becoming.Optimum.Season.mass_const", "Becoming.Optimum.Season.mass_le"]}
+{"name": "Becoming.Optimum.Season.mix_kept", "uses": ["Becoming.Optimum.Season.catch_kept_le", "Becoming.Optimum.Season.mass_add", "Becoming.Optimum.Season.mass_const", "Becoming.Optimum.Season.mass_le"]}
+{"name": "Becoming.Optimum.Season.outcome_bay", "uses": ["Becoming.Optimum.Season.run_bay", "Becoming.Optimum.Season.takes_eq"]}
+{"name": "Becoming.Optimum.Season.outcome_catch", "uses": ["Becoming.Naturals.add_congr", "Becoming.Optimum.Season.run_caught", "Becoming.Optimum.Season.run_taken", "Becoming.Optimum.Season.takes_eq"]}
+{"name": "Becoming.Optimum.Season.outcome_ground", "uses": ["Becoming.Optimum.Season.run_caught"]}
+{"name": "Becoming.Optimum.Season.outcome_site", "uses": ["Becoming.Optimum.Season.run_landed"]}
+{"name": "Becoming.Optimum.Season.plateau_frontier", "uses": ["Becoming.Optimum.Season.least_le_right", "Becoming.Optimum.Season.least_of_ge"]}
+{"name": "Becoming.Optimum.Season.plateau_not_rising", "uses": ["Becoming.ListTests.mem_singleton_iff"]}
+{"name": "Becoming.Optimum.Season.plateau_optima", "uses": ["Becoming.Optimum.Season.plateau_frontier", "Becoming.Optimum.Season.topBayKept_eligible", "Becoming.Optimum.Season.topSiteKept_eligible"]}
+{"name": "Becoming.Optimum.Season.renew_le", "uses": []}
+{"name": "Becoming.Optimum.Season.run_bay", "uses": ["Becoming.Naturals.sub_sub"]}
+{"name": "Becoming.Optimum.Season.run_caught", "uses": []}
+{"name": "Becoming.Optimum.Season.run_landed", "uses": []}
+{"name": "Becoming.Optimum.Season.run_taken", "uses": []}
+{"name": "Becoming.Optimum.Season.seven_lt", "uses": []}
+{"name": "Becoming.Optimum.Season.shared", "uses": ["Becoming.ListTests.mem_singleton_iff", "Becoming.Naturals.sub_sub", "Becoming.Optimum.Season.eligible_of", "Becoming.Optimum.Season.landings_le", "Becoming.Optimum.Season.outcome_bay", "Becoming.Optimum.Season.outcome_catch", "Becoming.Optimum.Season.outcome_ground", "Becoming.Optimum.Season.outcome_site", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.Optimum.Season.site_no_room", "uses": ["Becoming.ListTests.mem_singleton_iff", "Becoming.Optimum.Season.catch_le", "Becoming.Optimum.Season.topSiteFull_eligible", "Becoming.Optimum.Season.topSiteKept_eligible"]}
+{"name": "Becoming.Optimum.Season.site_not_least", "uses": ["Becoming.Optimum.Season.topSiteFull_eligible"]}
+{"name": "Becoming.Optimum.Season.site_optima", "uses": ["Becoming.Optimum.Season.topSiteFull_eligible", "Becoming.Optimum.Season.topSiteKept_eligible", "Becoming.Optimum.Season.top_frontier"]}
+{"name": "Becoming.Optimum.Season.takes_eq", "uses": ["Becoming.Optimum.Season.least_zero_right"]}
+{"name": "Becoming.Optimum.Season.topBayKept_eligible", "uses": ["Becoming.Optimum.Season.eligible_of", "Becoming.Optimum.Season.topTakes_length", "Becoming.Optimum.Season.top_caught"]}
+{"name": "Becoming.Optimum.Season.topSiteFull_eligible", "uses": ["Becoming.Optimum.Season.eligible_of", "Becoming.Optimum.Season.topTakes_length", "Becoming.Optimum.Season.top_caught"]}
+{"name": "Becoming.Optimum.Season.topSiteKept_eligible", "uses": ["Becoming.Optimum.Season.drained_eligible"]}
+{"name": "Becoming.Optimum.Season.topTakes_length", "uses": []}
+{"name": "Becoming.Optimum.Season.top_caught", "uses": []}
+{"name": "Becoming.Optimum.Season.top_frontier", "uses": ["Becoming.Optimum.Season.catch_le"]}
+{"name": "Becoming.Optimum.Season.unshared_no_room", "uses": ["Becoming.ListTests.mem_singleton_iff", "Becoming.Optimum.Season.ground_bound", "Becoming.Optimum.Season.topBayKept_eligible", "Becoming.Optimum.Season.topSiteKept_eligible"]}
+{"name": "Becoming.Optimum.Season.unshared_optima", "uses": ["Becoming.Optimum.Season.ground_frontier", "Becoming.Optimum.Season.topBayKept_eligible", "Becoming.Optimum.Season.topSiteKept_eligible"]}

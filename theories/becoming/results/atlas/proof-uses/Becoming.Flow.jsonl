@@ -1,0 +1,105 @@
+{"name": "Becoming.Cycle.closed_more", "uses": ["Becoming.Cycle.ones", "Becoming.Cycle.present_lt"]}
+{"name": "Becoming.Cycle.ones", "uses": []}
+{"name": "Becoming.Cycle.present_lt", "uses": []}
+{"name": "Becoming.Expansion.given_eq", "uses": []}
+{"name": "Becoming.Expansion.growers_take", "uses": ["Becoming.Expansion.present_active"]}
+{"name": "Becoming.Expansion.more", "uses": ["Becoming.Expansion.given_eq", "Becoming.Expansion.present_active", "Becoming.Expansion.taken_eq", "Becoming.Expansion.takers_eq"]}
+{"name": "Becoming.Expansion.present_active", "uses": []}
+{"name": "Becoming.Expansion.taken_eq", "uses": []}
+{"name": "Becoming.Expansion.takers_eq", "uses": []}
+{"name": "Becoming.Expansion.undepleted", "uses": ["Becoming.Expansion.more"]}
+{"name": "Becoming.Flow.Acting.giversSupported", "uses": []}
+{"name": "Becoming.Flow.Balances.accumulates", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.accumulates_on"]}
+{"name": "Becoming.Flow.Balances.fall_taken", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.BalancesOn.fall_taken"]}
+{"name": "Becoming.Flow.Balances.on", "uses": []}
+{"name": "Becoming.Flow.Balances.over", "uses": []}
+{"name": "Becoming.Flow.Balances.renewedBy", "uses": ["Becoming.Flow.Balances.rise_given", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.Balances.renewers_over", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.renewers_over_on"]}
+{"name": "Becoming.Flow.Balances.replenished_over", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.replenished_over_on"]}
+{"name": "Becoming.Flow.Balances.rise_given", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.BalancesOn.rise_given"]}
+{"name": "Becoming.Flow.Balances.rise_replenishes", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.BalancesOn.rise_replenishes"]}
+{"name": "Becoming.Flow.Balances.standing_given", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.BalancesOn.standing_given"]}
+{"name": "Becoming.Flow.Balances.standing_replenishes", "uses": ["Becoming.Flow.Balances.rise_replenishes", "Becoming.Web.ComesToStand.rises"]}
+{"name": "Becoming.Flow.Balances.takenBy", "uses": ["Becoming.Flow.Balances.fall_taken", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.BalancesOn.fall_taken", "uses": []}
+{"name": "Becoming.Flow.BalancesOn.over", "uses": []}
+{"name": "Becoming.Flow.BalancesOn.rise_given", "uses": []}
+{"name": "Becoming.Flow.BalancesOn.rise_replenishes", "uses": ["Becoming.Flow.BalancesOn.rise_given", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.BalancesOn.rises_iff_gives", "uses": ["Becoming.le_total_of_mem", "Becoming.lt_iff_pos", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.BalancesOn.standing_given", "uses": ["Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.Flow.BalancesOn.units_over", "uses": ["Becoming.GrammarLaws.length_replicate", "Becoming.ListTests.length_append", "Becoming.Naturals.add_congr", "Becoming.«一之对»", "Becoming.«对之族»"]}
+{"name": "Becoming.Flow.More.renewers_unbounded", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.More.renewers_unbounded_from"]}
+{"name": "Becoming.Flow.More.renewers_unbounded_from", "uses": ["Becoming.Flow.More.replenishment_unbounded_from", "Becoming.Flow.replenishment_le"]}
+{"name": "Becoming.Flow.More.replenishment_unbounded", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.More.replenishment_unbounded_from"]}
+{"name": "Becoming.Flow.More.replenishment_unbounded_from", "uses": ["Becoming.Amounts.replenishment_unbounded", "Becoming.Amounts.whole_archimedean", "Becoming.Amounts.whole_times_one", "Becoming.Flow.BalancesOn.over", "Becoming.Flow.takers_le_uptake"]}
+{"name": "Becoming.Flow.accumulates_on", "uses": ["Becoming.Flow.BalancesOn.over", "Becoming.balance_over_stretch_on"]}
+{"name": "Becoming.Flow.balancesOn_iff_units", "uses": ["Becoming.«守数当且仅当可对»"]}
+{"name": "Becoming.Flow.balances_iff_between", "uses": []}
+{"name": "Becoming.Flow.balances_iff_on", "uses": ["Becoming.Flow.Balances.on"]}
+{"name": "Becoming.Flow.balances_iff_units", "uses": ["Becoming.«守数当且仅当可对»"]}
+{"name": "Becoming.Flow.balances_of_matched", "uses": ["Becoming.«对则守数»"]}
+{"name": "Becoming.Flow.over_iff_units", "uses": ["Becoming.GrammarLaws.length_replicate", "Becoming.ListTests.length_append", "Becoming.Naturals.add_congr", "Becoming.total_congr", "Becoming.«一之对»", "Becoming.«对之长»", "Becoming.«聚之长»"]}
+{"name": "Becoming.Flow.renewers_over_on", "uses": ["Becoming.Flow.replenished_over_on", "Becoming.Flow.replenishment_le", "Becoming.total_le", "Becoming.total_mul"]}
+{"name": "Becoming.Flow.renewing_recurs", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.renewing_recurs_from"]}
+{"name": "Becoming.Flow.renewing_recurs_from", "uses": ["Becoming.Flow.replenishment_recurs_from", "Becoming.Flow.replenishment_zero"]}
+{"name": "Becoming.Flow.replenished_over_on", "uses": ["Becoming.Flow.accumulates_on", "Becoming.Flow.takers_le_uptake", "Becoming.steps_ge"]}
+{"name": "Becoming.Flow.replenishment_le", "uses": ["Becoming.total_le_count", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.replenishment_recurs", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.replenishment_recurs_from"]}
+{"name": "Becoming.Flow.replenishment_recurs_from", "uses": ["Becoming.Flow.uptake_needs_replenishment_from", "Becoming.Flow.uptake_pos"]}
+{"name": "Becoming.Flow.replenishment_zero", "uses": ["Becoming.total_swap", "Becoming.total_zero_of_count"]}
+{"name": "Becoming.Flow.rising_needs_replenishment", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.rising_needs_replenishment_from"]}
+{"name": "Becoming.Flow.rising_needs_replenishment_from", "uses": ["Becoming.Flow.BalancesOn.rise_replenishes"]}
+{"name": "Becoming.Flow.standing_needs_replenishment", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.standing_needs_replenishment_from"]}
+{"name": "Becoming.Flow.standing_needs_replenishment_from", "uses": ["Becoming.Flow.rising_needs_replenishment_from", "Becoming.Web.rising_of_coming"]}
+{"name": "Becoming.Flow.takers_le_uptake", "uses": ["Becoming.count_le", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.uptake_needs_replenishment", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.uptake_needs_replenishment_from"]}
+{"name": "Becoming.Flow.uptake_needs_replenishment_from", "uses": ["Becoming.Flow.BalancesOn.over", "Becoming.falls_not_recurring"]}
+{"name": "Becoming.Flow.uptake_pos", "uses": ["Becoming.total_pos_of_mem", "Becoming.total_swap"]}
+{"name": "Becoming.Growing.balances", "uses": []}
+{"name": "Becoming.Growing.growing", "uses": ["Becoming.Flow.Balances.rise_given", "Becoming.Growing.balances"]}
+{"name": "Becoming.Oscillation.active_when_taking", "uses": []}
+{"name": "Becoming.Oscillation.balances", "uses": []}
+{"name": "Becoming.Oscillation.not_more", "uses": ["Becoming.Oscillation.balances", "Becoming.Oscillation.takers_le", "Becoming.Oscillation.unceasing"]}
+{"name": "Becoming.Oscillation.takers_le", "uses": ["Becoming.sign_le_one"]}
+{"name": "Becoming.Oscillation.takes", "uses": ["Becoming.Oscillation.active_when_taking", "Becoming.Oscillation.takes_when_active"]}
+{"name": "Becoming.Oscillation.takes_when_active", "uses": []}
+{"name": "Becoming.Pulse.balances", "uses": ["Becoming.Pulse.even_even", "Becoming.Pulse.even_odd", "Becoming.Pulse.given_eq", "Becoming.Pulse.half_even", "Becoming.Pulse.half_odd", "Becoming.Pulse.parity", "Becoming.Pulse.taken_eq"]}
+{"name": "Becoming.Pulse.even_even", "uses": []}
+{"name": "Becoming.Pulse.even_odd", "uses": []}
+{"name": "Becoming.Pulse.given_eq", "uses": ["Becoming.Pulse.total_kind", "Becoming.total_append"]}
+{"name": "Becoming.Pulse.half_even", "uses": []}
+{"name": "Becoming.Pulse.half_ge", "uses": []}
+{"name": "Becoming.Pulse.half_odd", "uses": []}
+{"name": "Becoming.Pulse.parity", "uses": []}
+{"name": "Becoming.Pulse.pulsed", "uses": ["Becoming.Flow.replenishment_zero", "Becoming.Pulse.balances", "Becoming.Pulse.even_odd", "Becoming.Pulse.half_ge", "Becoming.Pulse.renewers_eq", "Becoming.Pulse.takers_eq"]}
+{"name": "Becoming.Pulse.renewers_eq", "uses": ["Becoming.Pulse.total_kind", "Becoming.total_append"]}
+{"name": "Becoming.Pulse.taken_eq", "uses": ["Becoming.Pulse.total_kind", "Becoming.total_append"]}
+{"name": "Becoming.Pulse.takers_eq", "uses": ["Becoming.Pulse.total_kind", "Becoming.total_append"]}
+{"name": "Becoming.Pulse.total_kind", "uses": []}
+{"name": "Becoming.Steady.steady", "uses": ["Becoming.Flow.uptake_needs_replenishment"]}
+{"name": "Becoming.Web.ComesToStand.rises", "uses": ["Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.Web.rising_of_coming", "uses": ["Becoming.Web.ComesToStand.rises"]}
+{"name": "Becoming.count_le", "uses": ["Becoming.sign_le", "Becoming.total_le"]}
+{"name": "Becoming.eq_zero_of_not_pos", "uses": []}
+{"name": "Becoming.le_mul_sign", "uses": []}
+{"name": "Becoming.le_total_of_mem", "uses": []}
+{"name": "Becoming.lt_iff_pos", "uses": []}
+{"name": "Becoming.sign_eq_one", "uses": []}
+{"name": "Becoming.sign_le", "uses": []}
+{"name": "Becoming.sign_le_of_pos", "uses": []}
+{"name": "Becoming.sign_le_one", "uses": []}
+{"name": "Becoming.steps_ge", "uses": []}
+{"name": "Becoming.steps_le", "uses": []}
+{"name": "Becoming.total_add", "uses": []}
+{"name": "Becoming.total_append", "uses": []}
+{"name": "Becoming.total_le", "uses": []}
+{"name": "Becoming.total_le_count", "uses": ["Becoming.le_mul_sign", "Becoming.total_le", "Becoming.total_mul"]}
+{"name": "Becoming.total_lt_of_mem", "uses": ["Becoming.total_le"]}
+{"name": "Becoming.total_map", "uses": []}
+{"name": "Becoming.total_mul", "uses": []}
+{"name": "Becoming.total_ones", "uses": []}
+{"name": "Becoming.total_pos_of_mem", "uses": []}
+{"name": "Becoming.total_replicate", "uses": []}
+{"name": "Becoming.total_swap", "uses": ["Becoming.total_add", "Becoming.total_zero"]}
+{"name": "Becoming.total_zero", "uses": []}
+{"name": "Becoming.total_zero_of_count", "uses": []}

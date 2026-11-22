@@ -1,0 +1,94 @@
+{"name": "Becoming.SelectionLevels.AmongWins.among_wins", "uses": []}
+{"name": "Becoming.SelectionLevels.ByMeans.by_means", "uses": []}
+{"name": "Becoming.SelectionLevels.ByMeans.common", "uses": []}
+{"name": "Becoming.SelectionLevels.Founding.assorted_equal", "uses": []}
+{"name": "Becoming.SelectionLevels.Founding.assorted_returns", "uses": []}
+{"name": "Becoming.SelectionLevels.Founding.either_verdict", "uses": ["Becoming.SelectionLevels.Founding.assorted_equal", "Becoming.SelectionLevels.Founding.assorted_returns", "Becoming.SelectionLevels.rises_iff_returns"]}
+{"name": "Becoming.SelectionLevels.Founding.mixed_equal", "uses": []}
+{"name": "Becoming.SelectionLevels.Founding.mixed_returns", "uses": []}
+{"name": "Becoming.SelectionLevels.Partly.below_one", "uses": ["Becoming.SelectionLevels.Partly.equal", "Becoming.SelectionLevels.Partly.returns", "Becoming.SelectionLevels.rises_iff_returns"]}
+{"name": "Becoming.SelectionLevels.Partly.equal", "uses": []}
+{"name": "Becoming.SelectionLevels.Partly.returns", "uses": []}
+{"name": "Becoming.SelectionLevels.Sized.apart_common", "uses": []}
+{"name": "Becoming.SelectionLevels.Sized.apart_returns", "uses": []}
+{"name": "Becoming.SelectionLevels.Sized.divided_one_verdict", "uses": ["Becoming.SelectionLevels.Sized.apart_common", "Becoming.SelectionLevels.Sized.together_common", "Becoming.SelectionLevels.rises_iff_divided_sized"]}
+{"name": "Becoming.SelectionLevels.Sized.either_verdict", "uses": ["Becoming.SelectionLevels.Sized.together_common", "Becoming.SelectionLevels.Sized.together_returns", "Becoming.SelectionLevels.rises_iff_kept_sized"]}
+{"name": "Becoming.SelectionLevels.Sized.together_common", "uses": []}
+{"name": "Becoming.SelectionLevels.Sized.together_returns", "uses": []}
+{"name": "Becoming.SelectionLevels.WithinWins.within_wins", "uses": []}
+{"name": "Becoming.SelectionLevels.among_by_one", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.SelectionLevels.among_for_iff", "uses": ["Becoming.SelectionLevels.among_returns", "Becoming.SelectionTerm.lt_iff_of_balance"]}
+{"name": "Becoming.SelectionLevels.among_for_of_raises", "uses": ["Becoming.SelectionLevels.rises_exact_iff_levels"]}
+{"name": "Becoming.SelectionLevels.among_for_of_rises", "uses": ["Becoming.SelectionLevels.rises_iff"]}
+{"name": "Becoming.SelectionLevels.among_kept", "uses": ["Becoming.Reproduction.discord_self", "Becoming.SelectionLevels.returns_balance", "Becoming.SelectionLevels.returns_total", "Becoming.add_mul_split", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.SelectionLevels.among_none_of_alike", "uses": ["Becoming.SelectionTerm.concord_alike", "Becoming.SelectionTerm.discord_alike"]}
+{"name": "Becoming.SelectionLevels.among_returns", "uses": ["Becoming.SelectionLevels.among_kept"]}
+{"name": "Becoming.SelectionLevels.balance_add", "uses": ["Becoming.Naturals.add_congr"]}
+{"name": "Becoming.SelectionLevels.balance_mul", "uses": []}
+{"name": "Becoming.SelectionLevels.cancel_two", "uses": ["Becoming.Naturals.add_left_cancel"]}
+{"name": "Becoming.SelectionLevels.combination_balance", "uses": ["Becoming.Naturals.add_congr", "Becoming.Reproduction.variation", "Becoming.SelectionLevels.cancel_two", "Becoming.SelectionTerm.covariation", "Becoming.add_mul_split", "Becoming.mul_assoc_nat", "Becoming.mul_turn", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.SelectionLevels.context_length", "uses": ["Becoming.SelectionLevels.context_total", "Becoming.SelectionLevels.whole_length", "Becoming.total_congr", "Becoming.total_ones"]}
+{"name": "Becoming.SelectionLevels.context_total", "uses": ["Becoming.Naturals.add_congr", "Becoming.total_append", "Becoming.total_const", "Becoming.total_map"]}
+{"name": "Becoming.SelectionLevels.equal", "uses": []}
+{"name": "Becoming.SelectionLevels.flatMap_flatMap", "uses": ["Becoming.ListTests.append_assoc"]}
+{"name": "Becoming.SelectionLevels.flatMap_flatMap.flatMap_join", "uses": ["Becoming.ListTests.append_assoc"]}
+{"name": "Becoming.SelectionLevels.kept_balance", "uses": ["Becoming.SelectionLevels.cancel_two", "Becoming.SelectionLevels.combination_balance", "Becoming.SelectionLevels.returns_balance"]}
+{"name": "Becoming.SelectionLevels.levels", "uses": ["Becoming.SelectionLevels.among_by_one", "Becoming.SelectionLevels.levels_sized", "Becoming.SelectionLevels.pairs_context", "Becoming.SelectionLevels.whole_length_of_equal", "Becoming.SelectionLevels.whole_nil", "Becoming.SelectionLevels.within_by_one", "Becoming.SelectionTerm.concord_uniform", "Becoming.SelectionTerm.discord_uniform", "Becoming.SelectionTerm.le_of_mul_le_mul", "Becoming.mul_assoc_nat", "Becoming.nil_of_length_zero", "Becoming.total_eq_zero"]}
+{"name": "Becoming.SelectionLevels.levels_of_alike", "uses": ["Becoming.SelectionLevels.among_none_of_alike", "Becoming.SelectionLevels.levels"]}
+{"name": "Becoming.SelectionLevels.levels_of_uniform", "uses": ["Becoming.SelectionLevels.levels", "Becoming.SelectionLevels.within_none_of_uniform"]}
+{"name": "Becoming.SelectionLevels.levels_sized", "uses": ["Becoming.Naturals.add_congr", "Becoming.SelectionLevels.context_length", "Becoming.SelectionLevels.context_total", "Becoming.SelectionLevels.meet", "Becoming.SelectionLevels.square_split", "Becoming.SelectionLevels.whole_total", "Becoming.SelectionLevels.whole_weighted", "Becoming.SelectionTerm.covariation", "Becoming.mul_assoc_nat", "Becoming.total_add", "Becoming.total_congr_on", "Becoming.total_mul"]}
+{"name": "Becoming.SelectionLevels.lineage_keeps", "uses": ["Becoming.ListTests.mem_flatMap_iff", "Becoming.SelectionLevels.lineage_within"]}
+{"name": "Becoming.SelectionLevels.lineage_total", "uses": ["Becoming.SelectionLevels.lineage_keeps", "Becoming.total_congr_on", "Becoming.total_const"]}
+{"name": "Becoming.SelectionLevels.lineage_value", "uses": ["Becoming.ListTests.mem_flatMap_iff", "Becoming.SelectionLevels.lineage_keeps"]}
+{"name": "Becoming.SelectionLevels.lineage_within", "uses": ["Becoming.ListTests.mem_flatMap_iff"]}
+{"name": "Becoming.SelectionLevels.lineages_family", "uses": ["Becoming.SelectionLevels.flatMap_flatMap"]}
+{"name": "Becoming.SelectionLevels.lineages_uniform", "uses": ["Becoming.ListTests.mem_flatMap_iff", "Becoming.SelectionLevels.lineage_keeps", "Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.SelectionLevels.lineages_whole", "uses": ["Becoming.SelectionLevels.lineages_family", "Becoming.SelectionLevels.whole_map"]}
+{"name": "Becoming.SelectionLevels.lineages_within_none", "uses": ["Becoming.SelectionLevels.lineages_uniform", "Becoming.SelectionLevels.within_none_of_uniform"]}
+{"name": "Becoming.SelectionLevels.means_none_of_alike", "uses": ["Becoming.SelectionLevels.mem_of_mem_context", "Becoming.SelectionTerm.concord_alike", "Becoming.SelectionTerm.discord_alike"]}
+{"name": "Becoming.SelectionLevels.means_shared", "uses": ["Becoming.SelectionLevels.kept_balance", "Becoming.SelectionLevels.mem_of_mem_context", "Becoming.SelectionLevels.returns_total", "Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.SelectionLevels.meet", "uses": ["Becoming.Naturals.add_congr", "Becoming.SelectionLevels.shuffle_left", "Becoming.SelectionLevels.shuffle_right", "Becoming.add_right_cancel"]}
+{"name": "Becoming.SelectionLevels.mem_of_mem_context", "uses": ["Becoming.mem_append_cases", "Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.SelectionLevels.none_iff", "uses": ["Becoming.SelectionLevels.levels", "Becoming.SelectionTerm.eq_iff_of_balance"]}
+{"name": "Becoming.SelectionLevels.none_iff_sized", "uses": ["Becoming.SelectionLevels.levels_sized", "Becoming.SelectionLevels.square_eq_iff", "Becoming.SelectionTerm.eq_iff_of_balance"]}
+{"name": "Becoming.SelectionLevels.not_rises_of_alike", "uses": ["Becoming.SelectionLevels.among_none_of_alike", "Becoming.SelectionLevels.rises_iff_returns"]}
+{"name": "Becoming.SelectionLevels.pairs_context", "uses": ["Becoming.SelectionLevels.context_total", "Becoming.mul_assoc_nat", "Becoming.total_congr", "Becoming.total_congr_on", "Becoming.total_mul"]}
+{"name": "Becoming.SelectionLevels.returns_balance", "uses": ["Becoming.Naturals.add_congr", "Becoming.Naturals.add_left_cancel", "Becoming.Reproduction.variation", "Becoming.SelectionLevels.balance_add", "Becoming.SelectionLevels.balance_mul", "Becoming.SelectionLevels.returns_total", "Becoming.SelectionLevels.returns_weighted", "Becoming.SelectionTerm.covariation", "Becoming.add_mul_split", "Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.SelectionLevels.returns_total", "uses": ["Becoming.Naturals.add_congr", "Becoming.total_add", "Becoming.total_congr_on", "Becoming.total_const", "Becoming.total_mul"]}
+{"name": "Becoming.SelectionLevels.returns_weighted", "uses": ["Becoming.Naturals.add_congr", "Becoming.add_mul_split", "Becoming.mul_assoc_nat", "Becoming.total_add", "Becoming.total_congr_on", "Becoming.total_mul"]}
+{"name": "Becoming.SelectionLevels.rises_exact_iff_levels", "uses": ["Becoming.SelectionLevels.rises_iff", "Becoming.SelectionTerm.Generations.raises_exact_iff"]}
+{"name": "Becoming.SelectionLevels.rises_exact_iff_returns", "uses": ["Becoming.SelectionLevels.rises_iff_returns", "Becoming.SelectionTerm.Generations.raises_exact_iff"]}
+{"name": "Becoming.SelectionLevels.rises_exact_iff_sized", "uses": ["Becoming.SelectionLevels.rises_iff_sized", "Becoming.SelectionTerm.Generations.raises_exact_iff"]}
+{"name": "Becoming.SelectionLevels.rises_exact_iff_within_of_alike", "uses": ["Becoming.SelectionLevels.rises_iff_within_of_alike", "Becoming.SelectionTerm.Generations.raises_exact_iff"]}
+{"name": "Becoming.SelectionLevels.rises_iff", "uses": ["Becoming.SelectionLevels.levels", "Becoming.SelectionTerm.lt_iff_of_balance"]}
+{"name": "Becoming.SelectionLevels.rises_iff_divided_sized", "uses": ["Becoming.Reproduction.discord_self", "Becoming.SelectionLevels.rises_iff_shared_sized"]}
+{"name": "Becoming.SelectionLevels.rises_iff_kept", "uses": ["Becoming.SelectionLevels.among_kept", "Becoming.SelectionLevels.balance_add", "Becoming.SelectionLevels.balance_mul", "Becoming.SelectionLevels.rises_iff", "Becoming.SelectionLevels.spread_levels", "Becoming.SelectionLevels.within_kept", "Becoming.SelectionTerm.lt_iff_of_balance", "Becoming.add_mul_split", "Becoming.mul_turn"]}
+{"name": "Becoming.SelectionLevels.rises_iff_kept_sized", "uses": ["Becoming.SelectionLevels.rises_iff_shared_sized"]}
+{"name": "Becoming.SelectionLevels.rises_iff_lineages", "uses": ["Becoming.SelectionLevels.lineages_uniform", "Becoming.SelectionLevels.lineages_whole", "Becoming.SelectionLevels.rises_iff_means_of_uniform", "Becoming.SelectionTerm.Generations.raises_exact_iff"]}
+{"name": "Becoming.SelectionLevels.rises_iff_means_of_uniform", "uses": ["Becoming.SelectionLevels.rises_iff_sized", "Becoming.SelectionLevels.within_by_none_of_uniform"]}
+{"name": "Becoming.SelectionLevels.rises_iff_reading", "uses": ["Becoming.SelectionLevels.returns_balance", "Becoming.SelectionTerm.lt_iff_of_balance"]}
+{"name": "Becoming.SelectionLevels.rises_iff_returns", "uses": ["Becoming.SelectionLevels.rises_iff_kept"]}
+{"name": "Becoming.SelectionLevels.rises_iff_returns_of_uniform", "uses": ["Becoming.Naturals.lt_of_mul_lt_mul_left", "Becoming.SelectionLevels.rises_iff_returns", "Becoming.SelectionLevels.spread_levels", "Becoming.SelectionLevels.within_none_of_uniform"]}
+{"name": "Becoming.SelectionLevels.rises_iff_shared_sized", "uses": ["Becoming.Naturals.lt_of_mul_lt_mul_left", "Becoming.Reproduction.discord_self", "Becoming.SelectionLevels.cancel_two", "Becoming.SelectionLevels.levels_sized", "Becoming.SelectionLevels.means_shared", "Becoming.SelectionLevels.square_lt_iff", "Becoming.SelectionLevels.within_shared_by", "Becoming.SelectionTerm.lt_iff_of_balance", "Becoming.mul_assoc_nat", "Becoming.mul_turn", "Becoming.total_eq_zero"]}
+{"name": "Becoming.SelectionLevels.rises_iff_sized", "uses": ["Becoming.SelectionLevels.levels_sized", "Becoming.SelectionLevels.square_lt_iff", "Becoming.SelectionTerm.lt_iff_of_balance"]}
+{"name": "Becoming.SelectionLevels.rises_iff_within_of_alike", "uses": ["Becoming.Naturals.lt_of_mul_lt_mul_left", "Becoming.SelectionLevels.means_none_of_alike", "Becoming.SelectionLevels.rises_iff_sized", "Becoming.SelectionTerm.pos_of_mul_pos"]}
+{"name": "Becoming.SelectionLevels.shuffle_left", "uses": ["Becoming.Naturals.add_congr"]}
+{"name": "Becoming.SelectionLevels.shuffle_right", "uses": []}
+{"name": "Becoming.SelectionLevels.spread_levels", "uses": ["Becoming.Reproduction.discord_self", "Becoming.SelectionLevels.levels", "Becoming.total_eq_zero"]}
+{"name": "Becoming.SelectionLevels.square_eq_iff", "uses": []}
+{"name": "Becoming.SelectionLevels.square_lt_iff", "uses": ["Becoming.Naturals.lt_of_mul_lt_mul_left"]}
+{"name": "Becoming.SelectionLevels.square_split", "uses": ["Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.SelectionLevels.whole_length", "uses": ["Becoming.SelectionLevels.whole_total", "Becoming.total_congr", "Becoming.total_ones"]}
+{"name": "Becoming.SelectionLevels.whole_length_of_equal", "uses": ["Becoming.SelectionLevels.whole_length", "Becoming.total_congr_on", "Becoming.total_const"]}
+{"name": "Becoming.SelectionLevels.whole_map", "uses": []}
+{"name": "Becoming.SelectionLevels.whole_nil", "uses": ["Becoming.nil_of_length_zero"]}
+{"name": "Becoming.SelectionLevels.whole_total", "uses": ["Becoming.total_append"]}
+{"name": "Becoming.SelectionLevels.whole_weighted", "uses": ["Becoming.SelectionLevels.whole_total"]}
+{"name": "Becoming.SelectionLevels.within_against", "uses": ["Becoming.SelectionLevels.within_returns"]}
+{"name": "Becoming.SelectionLevels.within_by_none_of_uniform", "uses": ["Becoming.SelectionTerm.concord_alike", "Becoming.SelectionTerm.discord_alike", "Becoming.total_eq_zero"]}
+{"name": "Becoming.SelectionLevels.within_by_one", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.SelectionLevels.within_for_of_rises", "uses": ["Becoming.Naturals.lt_of_mul_lt_mul_left", "Becoming.SelectionLevels.rises_iff"]}
+{"name": "Becoming.SelectionLevels.within_kept", "uses": ["Becoming.Naturals.add_congr", "Becoming.Reproduction.discord_self", "Becoming.SelectionLevels.returns_balance", "Becoming.total_add", "Becoming.total_congr_on", "Becoming.total_mul"]}
+{"name": "Becoming.SelectionLevels.within_none_of_uniform", "uses": ["Becoming.SelectionTerm.concord_alike", "Becoming.SelectionTerm.discord_alike", "Becoming.total_eq_zero"]}
+{"name": "Becoming.SelectionLevels.within_returns", "uses": ["Becoming.SelectionLevels.within_kept"]}
+{"name": "Becoming.SelectionLevels.within_shared_by", "uses": ["Becoming.Naturals.add_congr", "Becoming.Reproduction.discord_self", "Becoming.SelectionLevels.returns_balance", "Becoming.mul_turn", "Becoming.total_add", "Becoming.total_congr_on", "Becoming.total_mul"]}

@@ -1,0 +1,21 @@
+{"name": "Becoming.Apart.not_enough", "uses": []}
+{"name": "Becoming.Clearing.center_not_derived", "uses": ["Becoming.Clearing.fedBy_source", "Becoming.Web.held_by_formations"]}
+{"name": "Becoming.Clearing.clearer_not_living", "uses": ["Becoming.Clearing.undermines_within_renewal"]}
+{"name": "Becoming.Clearing.conveyance_only", "uses": ["Becoming.Clearing.crossed", "Becoming.Flow.roles_conditions_unrelated"]}
+{"name": "Becoming.Clearing.crossed", "uses": ["Becoming.Frontier.burning_self"]}
+{"name": "Becoming.Clearing.resource_not_cut", "uses": ["Becoming.Clearing.crossed"]}
+{"name": "Becoming.Clearing.resource_not_cut_living_on", "uses": []}
+{"name": "Becoming.Flow.boundary_crossed", "uses": ["Becoming.Flow.fed_from_beyond"]}
+{"name": "Becoming.Flow.conveyance_idle", "uses": []}
+{"name": "Becoming.Flow.region_not_a_cut", "uses": ["Becoming.Flow.boundary_crossed"]}
+{"name": "Becoming.Flow.roles_conditions_unrelated", "uses": ["Becoming.inr_not_mem"]}
+{"name": "Becoming.Flow.roles_conveyance", "uses": ["Becoming.mem_map_of"]}
+{"name": "Becoming.Flow.valuing_reaches_source", "uses": []}
+{"name": "Becoming.Relayed.transmission_is_needed", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl"]}
+{"name": "Becoming.Unclaimed.held_is_needed", "uses": []}
+{"name": "Becoming.Valuation.own_transmission", "uses": []}
+{"name": "Becoming.Valuation.significant_iff_held", "uses": []}
+{"name": "Becoming.Valuation.significant_iff_reached", "uses": ["Becoming.Invariant.reach"]}
+{"name": "Becoming.Valuation.significant_of_transmits", "uses": ["Becoming.Valuation.reaches"]}
+{"name": "Becoming.Web.held_by_formations", "uses": []}
+{"name": "Becoming.Web.significant_iff_self", "uses": ["Becoming.Valuation.significant_iff_held", "Becoming.Web.held_by_formations"]}

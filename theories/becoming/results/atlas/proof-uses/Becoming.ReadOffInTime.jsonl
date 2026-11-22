@@ -1,0 +1,77 @@
+{"name": "Becoming.Flow.AffectsBeforeEither.coupledFrom", "uses": []}
+{"name": "Becoming.Flow.AffectsBeforeEither.touches", "uses": []}
+{"name": "Becoming.Flow.ReachedInTime.withinCoupling", "uses": ["Becoming.Flow.AffectsBeforeEither.coupledFrom", "Becoming.Flow.WithinTimeEither.coupled", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Flow.WithinTimeEither.coupled", "uses": ["Becoming.Flow.AffectsBeforeEither.coupledFrom", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Flow.WithinTimeEither.later", "uses": ["Becoming.Flow.withinTimeEither_onward", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Flow.affectsBeforeBy_thresholdOnly", "uses": []}
+{"name": "Becoming.Flow.affectsBeforeEither_of_touches", "uses": []}
+{"name": "Becoming.Flow.stepInTimeEither_self", "uses": ["Becoming.Flow.affectsBeforeBy_thresholdOnly"]}
+{"name": "Becoming.Flow.withinTimeEither_onward", "uses": ["Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Flow.withinTimeEither_self", "uses": ["Becoming.Flow.stepInTimeEither_self", "Becoming.WithinClosure.mono"]}
+{"name": "Becoming.FourReaders.admits_one", "uses": []}
+{"name": "Becoming.FourReaders.affects_exchange", "uses": []}
+{"name": "Becoming.FourReaders.at_point_iff", "uses": []}
+{"name": "Becoming.FourReaders.balances", "uses": []}
+{"name": "Becoming.FourReaders.coupled_listener", "uses": []}
+{"name": "Becoming.FourReaders.coupled_relay'", "uses": []}
+{"name": "Becoming.FourReaders.dweller_firstApart", "uses": ["Becoming.FourReaders.admits_one", "Becoming.FourReaders.only_habitat_dweller"]}
+{"name": "Becoming.FourReaders.dweller_late", "uses": ["Becoming.FourReaders.admits_one", "Becoming.FourReaders.dweller_firstApart", "Becoming.FourReaders.only_habitat_dweller", "Becoming.Web.too_late_of_own"]}
+{"name": "Becoming.FourReaders.early_step", "uses": ["Becoming.FourReaders.affects_exchange", "Becoming.FourReaders.coupled_listener", "Becoming.FourReaders.coupled_relay'", "Becoming.FourReaders.exchanges_news", "Becoming.FourReaders.exchanges_news'"]}
+{"name": "Becoming.FourReaders.exchanges_news", "uses": []}
+{"name": "Becoming.FourReaders.exchanges_news'", "uses": []}
+{"name": "Becoming.FourReaders.giving_le_one", "uses": []}
+{"name": "Becoming.FourReaders.habitat_le_four", "uses": []}
+{"name": "Becoming.FourReaders.listener_firstApart", "uses": ["Becoming.FourReaders.admits_one", "Becoming.FourReaders.only_news'_listener"]}
+{"name": "Becoming.FourReaders.listener_late", "uses": ["Becoming.FourReaders.listener_firstApart", "Becoming.FourReaders.listener_not_reached", "Becoming.FourReaders.listener_reached", "Becoming.FourReaders.noReturn", "Becoming.Web.readableInTime_iff"]}
+{"name": "Becoming.FourReaders.listener_not_reached", "uses": ["Becoming.FourReaders.early_step"]}
+{"name": "Becoming.FourReaders.listener_reached", "uses": ["Becoming.FourReaders.mem_clearer", "Becoming.FourReaders.mem_relay", "Becoming.FourReaders.mem_relay'", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.FourReaders.mem_clearer", "uses": []}
+{"name": "Becoming.FourReaders.mem_relay", "uses": []}
+{"name": "Becoming.FourReaders.mem_relay'", "uses": []}
+{"name": "Becoming.FourReaders.mid_atThePoint", "uses": ["Becoming.FourReaders.mid_firstApart", "Becoming.FourReaders.noReturn", "Becoming.Web.readableInTime_iff"]}
+{"name": "Becoming.FourReaders.mid_firstApart", "uses": ["Becoming.FourReaders.admits_one", "Becoming.FourReaders.only_habitat_mid"]}
+{"name": "Becoming.FourReaders.near_firstApart", "uses": ["Becoming.FourReaders.admits_one", "Becoming.FourReaders.only_habitat_near"]}
+{"name": "Becoming.FourReaders.near_inTime", "uses": ["Becoming.FourReaders.near_firstApart", "Becoming.FourReaders.noReturn", "Becoming.Web.readableInTime_iff"]}
+{"name": "Becoming.FourReaders.near_reached", "uses": ["Becoming.FourReaders.mem_clearer", "Becoming.WithinClosure.refl"]}
+{"name": "Becoming.FourReaders.noReturn", "uses": ["Becoming.FourReaders.admits_one", "Becoming.FourReaders.only_habitat_dweller", "Becoming.FourReaders.recoverable_iff"]}
+{"name": "Becoming.FourReaders.only_habitat_dweller", "uses": []}
+{"name": "Becoming.FourReaders.only_habitat_mid", "uses": []}
+{"name": "Becoming.FourReaders.only_habitat_near", "uses": []}
+{"name": "Becoming.FourReaders.only_news'_listener", "uses": []}
+{"name": "Becoming.FourReaders.orbit_of_fixed", "uses": []}
+{"name": "Becoming.FourReaders.orbit_one", "uses": []}
+{"name": "Becoming.FourReaders.recoverable_iff", "uses": ["Becoming.FourReaders.admits_one", "Becoming.FourReaders.only_habitat_dweller"]}
+{"name": "Becoming.FourReaders.recoverable_iff_regime", "uses": ["Becoming.FourReaders.at_point_iff", "Becoming.FourReaders.habitat_le_four", "Becoming.FourReaders.recoverable_iff", "Becoming.FourReaders.regime_point"]}
+{"name": "Becoming.FourReaders.regime_point", "uses": ["Becoming.FourReaders.giving_le_one", "Becoming.RegimeMargin.ends_iff_below"]}
+{"name": "Becoming.FourReaders.stopped_is_regime", "uses": ["Becoming.FourReaders.orbit_of_fixed", "Becoming.FourReaders.orbit_one"]}
+{"name": "Becoming.NoReturnAt.parts", "uses": []}
+{"name": "Becoming.NoReturnAt.recoverable_iff", "uses": ["Becoming.Recoverable.earlier"]}
+{"name": "Becoming.NoReturnAt.unique", "uses": []}
+{"name": "Becoming.Recoverable.earlier", "uses": []}
+{"name": "Becoming.TimedResponse.ReachedBy.reachedInTime", "uses": ["Becoming.Flow.affectsBeforeEither_of_touches", "Becoming.TimedResponse.Spread.withinTime"]}
+{"name": "Becoming.TimedResponse.SourceOrReached.affects", "uses": ["Becoming.Flow.AffectsBeforeEither.touches", "Becoming.TimedResponse.Spread.later"]}
+{"name": "Becoming.TimedResponse.Spread.later", "uses": ["Becoming.TimedResponse.Spread.onward"]}
+{"name": "Becoming.TimedResponse.Spread.onward", "uses": []}
+{"name": "Becoming.TimedResponse.Spread.withinTime", "uses": ["Becoming.Flow.WithinTimeEither.later", "Becoming.Flow.affectsBeforeEither_of_touches", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.TimedResponse.reachedBy_iff_reachedInTime", "uses": ["Becoming.TimedResponse.ReachedBy.reachedInTime", "Becoming.TimedResponse.reachedBy_of_reachedInTime"]}
+{"name": "Becoming.TimedResponse.reachedBy_of_reachedInTime", "uses": ["Becoming.TimedResponse.SourceOrReached.affects"]}
+{"name": "Becoming.TimedResponse.reachedBy_self_iff", "uses": ["Becoming.Flow.affectsBeforeBy_thresholdOnly", "Becoming.Flow.withinTimeEither_self", "Becoming.TimedResponse.reachedBy_iff_reachedInTime"]}
+{"name": "Becoming.Web.FirstApart.alike_before", "uses": ["Becoming.Web.alikeThroughAll_thresholdOnly_iff"]}
+{"name": "Becoming.Web.FirstApart.not_unreached", "uses": ["Becoming.Web.FirstApart.separates", "Becoming.Web.selectsAlike_unreached"]}
+{"name": "Becoming.Web.FirstApart.separates", "uses": ["Becoming.Web.alikeThroughAll_thresholdOnly_iff", "Becoming.Web.separates_all"]}
+{"name": "Becoming.Web.FirstApart.unique", "uses": []}
+{"name": "Becoming.Web.ReadsInTime.readable", "uses": ["Becoming.Recoverable.earlier", "Becoming.Web.TellsApartAt.not_before"]}
+{"name": "Becoming.Web.TellsApartAt.not_before", "uses": ["Becoming.Web.FirstApart.alike_before"]}
+{"name": "Becoming.Web.admits_congr", "uses": []}
+{"name": "Becoming.Web.admits_iff_gap_within_margin", "uses": ["Becoming.Naturals.sub_sub", "Becoming.Web.admits_of_gap_within_margin", "Becoming.le_dest", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.Web.admits_of_gap_within_margin", "uses": ["Becoming.Naturals.add_sub_of_le", "Becoming.gap_le_iff", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Web.alikeThroughAll_thresholdOnly_iff", "uses": []}
+{"name": "Becoming.Web.firstApart_of_apart", "uses": ["Becoming.first_of_decided"]}
+{"name": "Becoming.Web.readableInTime_iff", "uses": ["Becoming.NoReturnAt.recoverable_iff", "Becoming.Web.FirstApart.unique"]}
+{"name": "Becoming.Web.selectsAlike_unreached", "uses": ["Becoming.TimedResponse.ReachedBy.reachedInTime", "Becoming.TimedResponse.coupling_alike_before", "Becoming.Web.alikeThroughAll_thresholdOnly_iff"]}
+{"name": "Becoming.Web.too_late_of_alike", "uses": ["Becoming.Recoverable.earlier", "Becoming.Web.alikeThroughAll_thresholdOnly_iff"]}
+{"name": "Becoming.Web.too_late_of_own", "uses": ["Becoming.Web.admits_congr", "Becoming.Web.alikeThroughAll_thresholdOnly_iff"]}
+{"name": "Becoming.Web.too_late_of_unreached", "uses": ["Becoming.TimedResponse.ReachedBy.reachedInTime", "Becoming.TimedResponse.coupling_alike_before", "Becoming.Web.too_late_of_alike"]}
+{"name": "Becoming.Web.too_late_within_margin", "uses": ["Becoming.Web.admits_of_gap_within_margin", "Becoming.Web.too_late_of_alike"]}
+{"name": "Becoming.first_of_decided", "uses": []}
+{"name": "Becoming.noReturnAt_of_past", "uses": ["Becoming.first_of_decided"]}

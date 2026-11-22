@@ -1,0 +1,80 @@
+{"name": "Becoming.SelectionShift.Alternating.course_family", "uses": ["Becoming.SelectionShift.Alternating.step_family"]}
+{"name": "Becoming.SelectionShift.Alternating.course_terms", "uses": ["Becoming.SelectionShift.Alternating.course_family", "Becoming.SelectionShift.Alternating.step_terms"]}
+{"name": "Becoming.SelectionShift.Alternating.even_double", "uses": []}
+{"name": "Becoming.SelectionShift.Alternating.le_double", "uses": []}
+{"name": "Becoming.SelectionShift.Alternating.odd_double", "uses": []}
+{"name": "Becoming.SelectionShift.Alternating.step_family", "uses": []}
+{"name": "Becoming.SelectionShift.Alternating.step_terms", "uses": []}
+{"name": "Becoming.SelectionShift.Alternating.unbounded_not_every", "uses": ["Becoming.SelectionShift.Alternating.course_terms", "Becoming.SelectionShift.Alternating.even_double", "Becoming.SelectionShift.Alternating.le_double", "Becoming.SelectionShift.Alternating.odd_double", "Becoming.SelectionShift.Generations.never_empties_of_unbounded"]}
+{"name": "Becoming.SelectionShift.ExactOnce.concord_first", "uses": []}
+{"name": "Becoming.SelectionShift.ExactOnce.exact_first", "uses": ["Becoming.ListTests.mem_singleton_iff"]}
+{"name": "Becoming.SelectionShift.ExactOnce.exact_once_ends", "uses": ["Becoming.Reproduction.Generations.empty_from", "Becoming.SelectionShift.ExactOnce.concord_first", "Becoming.SelectionShift.ExactOnce.exact_first", "Becoming.SelectionShift.ExactOnce.not_exact_second", "Becoming.SelectionShift.ExactOnce.size_three"]}
+{"name": "Becoming.SelectionShift.ExactOnce.not_exact_second", "uses": []}
+{"name": "Becoming.SelectionShift.ExactOnce.size_three", "uses": []}
+{"name": "Becoming.SelectionShift.Generations.goes_on", "uses": ["Becoming.SelectionShift.Generations.line_kept", "Becoming.SelectionShift.Generations.next_of_reproducing", "Becoming.SelectionShift.Generations.reproducing_of_selection"]}
+{"name": "Becoming.SelectionShift.Generations.goes_on_iff", "uses": ["Becoming.Reproduction.exists_mem_of_length_pos", "Becoming.Reproduction.mem_flatMap_cases", "Becoming.SelectionShift.Generations.line_kept", "Becoming.SelectionShift.Generations.next_of_reproducing", "Becoming.length_pos_of_mem"]}
+{"name": "Becoming.SelectionShift.Generations.last_term_zero", "uses": ["Becoming.SelectionShift.Generations.next_of_selection", "Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.SelectionShift.Generations.line_kept", "uses": ["Becoming.Reproduction.exists_mem_of_length_pos", "Becoming.SelectionShift.mem_flatMap_of"]}
+{"name": "Becoming.SelectionShift.Generations.never_empties", "uses": ["Becoming.SelectionShift.Generations.next_of_selection"]}
+{"name": "Becoming.SelectionShift.Generations.never_empties_of_unbounded", "uses": ["Becoming.SelectionShift.Generations.next_of_selection", "Becoming.SelectionShift.Generations.nonempty_before"]}
+{"name": "Becoming.SelectionShift.Generations.never_empties_while", "uses": ["Becoming.SelectionShift.Generations.next_of_selection"]}
+{"name": "Becoming.SelectionShift.Generations.next_of_reproducing", "uses": ["Becoming.Reproduction.exists_mem_of_length_pos", "Becoming.SelectionShift.mem_flatMap_of", "Becoming.length_pos_of_mem"]}
+{"name": "Becoming.SelectionShift.Generations.next_of_selection", "uses": ["Becoming.SelectionShift.Generations.next_of_reproducing", "Becoming.SelectionShift.Generations.reproducing_of_selection"]}
+{"name": "Becoming.SelectionShift.Generations.nonempty_before", "uses": ["Becoming.Reproduction.Generations.empty_from"]}
+{"name": "Becoming.SelectionShift.Generations.reproducing_of_selection", "uses": ["Becoming.SelectionShift.Generations.varies_of_selection", "Becoming.SelectionShift.pos_weight_of_varies"]}
+{"name": "Becoming.SelectionShift.Generations.shift_step", "uses": ["Becoming.SelectionShift.concord_shifted", "Becoming.SelectionShift.discord_shifted", "Becoming.SelectionShift.total_shifted", "Becoming.SelectionTerm.Generations.born_eq"]}
+{"name": "Becoming.SelectionShift.Generations.varies_of_selection", "uses": ["Becoming.SelectionShift.weight_varies_of_concord", "Becoming.SelectionShift.weight_varies_of_discord"]}
+{"name": "Becoming.SelectionShift.Horizon.ending_empty", "uses": ["Becoming.Reproduction.Generations.empty_from", "Becoming.SelectionShift.Horizon.keep_family", "Becoming.SelectionShift.Horizon.keep_kids_after", "Becoming.SelectionShift.Horizon.not_le_after", "Becoming.SelectionShift.flatMap_empty"]}
+{"name": "Becoming.SelectionShift.Horizon.eventually_zero_two_fates", "uses": ["Becoming.Reproduction.Generations.empty_from", "Becoming.SelectionShift.Generations.last_term_zero", "Becoming.SelectionShift.Horizon.zero_after_two_fates_shifted", "Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.SelectionShift.Horizon.going_family", "uses": ["Becoming.SelectionShift.Horizon.keep_family", "Becoming.SelectionShift.Horizon.keep_kids_after", "Becoming.SelectionShift.Horizon.not_le_after", "Becoming.SelectionShift.flatMap_singleton"]}
+{"name": "Becoming.SelectionShift.Horizon.going_goes_on", "uses": ["Becoming.SelectionShift.Horizon.going_family"]}
+{"name": "Becoming.SelectionShift.Horizon.going_goes_on_of_selection", "uses": ["Becoming.SelectionShift.Generations.next_of_selection", "Becoming.SelectionShift.Horizon.going_goes_on"]}
+{"name": "Becoming.SelectionShift.Horizon.keep_family", "uses": ["Becoming.SelectionShift.Horizon.keep_kids"]}
+{"name": "Becoming.SelectionShift.Horizon.keep_kids", "uses": []}
+{"name": "Becoming.SelectionShift.Horizon.keep_kids_after", "uses": []}
+{"name": "Becoming.SelectionShift.Horizon.keep_terms", "uses": ["Becoming.SelectionShift.Horizon.keep_family", "Becoming.SelectionShift.Horizon.keep_kids"]}
+{"name": "Becoming.SelectionShift.Horizon.keep_terms_after", "uses": ["Becoming.SelectionShift.Horizon.keep_kids_after", "Becoming.SelectionTerm.concord_uniform", "Becoming.SelectionTerm.discord_uniform"]}
+{"name": "Becoming.SelectionShift.Horizon.not_le_after", "uses": []}
+{"name": "Becoming.SelectionShift.Horizon.same_terms_everywhere_of_zero_after", "uses": ["Becoming.SelectionShift.Horizon.keep_terms", "Becoming.SelectionShift.Horizon.keep_terms_after"]}
+{"name": "Becoming.SelectionShift.Horizon.same_terms_two_fates", "uses": ["Becoming.SelectionShift.Horizon.ending_empty", "Becoming.SelectionShift.Horizon.going_family", "Becoming.SelectionShift.Horizon.keep_family", "Becoming.SelectionShift.Horizon.keep_kids", "Becoming.SelectionShift.Horizon.keep_terms", "Becoming.SelectionShift.Horizon.keep_terms_after"]}
+{"name": "Becoming.SelectionShift.Horizon.shiftAt_family", "uses": []}
+{"name": "Becoming.SelectionShift.Horizon.shiftAt_step", "uses": ["Becoming.ListTests.length_append", "Becoming.SelectionShift.Generations.shift_step", "Becoming.SelectionShift.Horizon.shiftAt_family"]}
+{"name": "Becoming.SelectionShift.Horizon.shiftAt_terms", "uses": ["Becoming.SelectionShift.Horizon.shiftAt_family", "Becoming.SelectionShift.Horizon.shiftAt_step"]}
+{"name": "Becoming.SelectionShift.Horizon.steady_family", "uses": []}
+{"name": "Becoming.SelectionShift.Horizon.steady_terms", "uses": ["Becoming.SelectionShift.Horizon.steady_family"]}
+{"name": "Becoming.SelectionShift.Horizon.steady_two_fates", "uses": ["Becoming.SelectionShift.Generations.never_empties", "Becoming.SelectionShift.Horizon.keep_terms", "Becoming.SelectionShift.Horizon.same_terms_two_fates", "Becoming.SelectionShift.Horizon.steady_family", "Becoming.SelectionShift.Horizon.steady_terms"]}
+{"name": "Becoming.SelectionShift.Horizon.terms_boundary", "uses": ["Becoming.SelectionShift.Generations.never_empties_of_unbounded", "Becoming.SelectionShift.Horizon.eventually_zero_two_fates"]}
+{"name": "Becoming.SelectionShift.Horizon.two_fates_of_nonempty", "uses": ["Becoming.SelectionShift.Generations.nonempty_before", "Becoming.SelectionShift.Horizon.ending_empty", "Becoming.SelectionShift.Horizon.going_family", "Becoming.SelectionShift.Horizon.keep_family", "Becoming.SelectionShift.Horizon.keep_terms", "Becoming.SelectionShift.Horizon.keep_terms_after", "Becoming.SelectionShift.Horizon.shiftAt_family", "Becoming.SelectionShift.Horizon.shiftAt_step", "Becoming.SelectionShift.Horizon.shiftAt_terms"]}
+{"name": "Becoming.SelectionShift.Horizon.zero_after_premises", "uses": ["Becoming.SelectionShift.Horizon.keep_terms", "Becoming.SelectionShift.Horizon.keep_terms_after", "Becoming.SelectionShift.Horizon.steady_terms", "Becoming.SelectionShift.Horizon.steady_two_fates"]}
+{"name": "Becoming.SelectionShift.Horizon.zero_after_two_fates", "uses": ["Becoming.SelectionShift.Horizon.ending_empty", "Becoming.SelectionShift.Horizon.going_goes_on", "Becoming.SelectionShift.Horizon.same_terms_everywhere_of_zero_after"]}
+{"name": "Becoming.SelectionShift.Horizon.zero_after_two_fates_shifted", "uses": ["Becoming.SelectionShift.Horizon.same_terms_everywhere_of_zero_after", "Becoming.SelectionShift.Horizon.two_fates_of_nonempty"]}
+{"name": "Becoming.SelectionShift.OneLine.goes_on_premises", "uses": ["Becoming.ListTests.mem_singleton_iff", "Becoming.SelectionShift.Generations.goes_on"]}
+{"name": "Becoming.SelectionShift.OneLine.shift_step_premises", "uses": ["Becoming.SelectionShift.Generations.shift_step"]}
+{"name": "Becoming.SelectionShift.Shrinking.course_concord", "uses": ["Becoming.SelectionShift.Shrinking.course_family", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.SelectionShift.Shrinking.course_family", "uses": ["Becoming.SelectionShift.Shrinking.line_step"]}
+{"name": "Becoming.SelectionShift.Shrinking.course_size", "uses": ["Becoming.SelectionShift.Shrinking.course_family", "Becoming.SelectionShift.Shrinking.replicate_length"]}
+{"name": "Becoming.SelectionShift.Shrinking.course_sum", "uses": ["Becoming.SelectionShift.Shrinking.course_family", "Becoming.SelectionShift.Shrinking.unmarked_mark"]}
+{"name": "Becoming.SelectionShift.Shrinking.line_step", "uses": ["Becoming.ListTests.append_nil", "Becoming.SelectionShift.Shrinking.unmarked_flatMap"]}
+{"name": "Becoming.SelectionShift.Shrinking.positive_then_empty", "uses": ["Becoming.Reproduction.Generations.empty_from", "Becoming.SelectionShift.Generations.last_term_zero", "Becoming.SelectionShift.Shrinking.course_concord", "Becoming.SelectionShift.Shrinking.course_family", "Becoming.SelectionShift.Shrinking.course_size", "Becoming.SelectionShift.Shrinking.course_sum", "Becoming.exists_add_of_le"]}
+{"name": "Becoming.SelectionShift.Shrinking.replicate_length", "uses": []}
+{"name": "Becoming.SelectionShift.Shrinking.unmarked_flatMap", "uses": []}
+{"name": "Becoming.SelectionShift.Shrinking.unmarked_mark", "uses": []}
+{"name": "Becoming.SelectionShift.ZeroTerm.decides_nothing", "uses": ["Becoming.Reproduction.Generations.empty_from", "Becoming.SelectionShift.ZeroTerm.oneEach_family", "Becoming.SelectionTerm.concord_uniform", "Becoming.SelectionTerm.discord_uniform"]}
+{"name": "Becoming.SelectionShift.ZeroTerm.oneEach_family", "uses": []}
+{"name": "Becoming.SelectionShift.concord_shift", "uses": ["Becoming.SelectionShift.concord_shifted"]}
+{"name": "Becoming.SelectionShift.concord_shift_amount", "uses": ["Becoming.excess_add_right", "Becoming.total_congr"]}
+{"name": "Becoming.SelectionShift.concord_shifted", "uses": ["Becoming.SelectionShift.mul_excess_congr", "Becoming.excess_add_right", "Becoming.total_congr_on"]}
+{"name": "Becoming.SelectionShift.discord_shift", "uses": ["Becoming.SelectionShift.discord_shifted"]}
+{"name": "Becoming.SelectionShift.discord_shift_amount", "uses": ["Becoming.excess_add_right", "Becoming.total_congr"]}
+{"name": "Becoming.SelectionShift.discord_shifted", "uses": ["Becoming.SelectionShift.mul_excess_congr", "Becoming.excess_add_right", "Becoming.total_congr_on"]}
+{"name": "Becoming.SelectionShift.flatMap_empty", "uses": []}
+{"name": "Becoming.SelectionShift.flatMap_singleton", "uses": []}
+{"name": "Becoming.SelectionShift.mem_flatMap_of", "uses": ["Becoming.mem_append_of_left", "Becoming.mem_append_of_right"]}
+{"name": "Becoming.SelectionShift.mul_excess_congr", "uses": []}
+{"name": "Becoming.SelectionShift.pos_weight_of_concord", "uses": ["Becoming.SelectionShift.pos_weight_of_varies", "Becoming.SelectionShift.weight_varies_of_concord"]}
+{"name": "Becoming.SelectionShift.pos_weight_of_discord", "uses": ["Becoming.SelectionShift.pos_weight_of_varies", "Becoming.SelectionShift.weight_varies_of_discord"]}
+{"name": "Becoming.SelectionShift.pos_weight_of_varies", "uses": []}
+{"name": "Becoming.SelectionShift.total_shifted", "uses": ["Becoming.total_add", "Becoming.total_congr_on", "Becoming.total_const"]}
+{"name": "Becoming.SelectionShift.weight_varies_of_concord", "uses": ["Becoming.SelectionTerm.pos_of_mul_pos", "Becoming.excess_pos", "Becoming.total_pos"]}
+{"name": "Becoming.SelectionShift.weight_varies_of_discord", "uses": ["Becoming.SelectionTerm.pos_of_mul_pos", "Becoming.excess_pos", "Becoming.total_pos"]}
+{"name": "Becoming.SelectionShift.weighted_shift", "uses": ["Becoming.add_mul_split", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_mul"]}

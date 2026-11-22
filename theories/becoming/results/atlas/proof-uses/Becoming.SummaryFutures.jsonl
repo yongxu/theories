@@ -1,0 +1,3 @@
+{"name": "Becoming.SummaryFutures.endpoint_moved", "uses": []}
+{"name": "Becoming.SummaryFutures.every_word", "uses": []}
+{"name": "Becoming.SummaryFutures.futures_through", "uses": ["Becoming.Readout.futures_through_iff", "Becoming.SummaryFutures.every_word"]}

@@ -1,0 +1,35 @@
+{"name": "Becoming.PresentationFrames.canonical_exact", "uses": ["Becoming.Presentations.canonical_exact"]}
+{"name": "Becoming.PresentationFrames.canonical_kernel", "uses": ["Becoming.PresentationFrames.canonical_exact", "Becoming.Presentations.canonical_reduced", "Becoming.Presentations.reduced_exact_kernel"]}
+{"name": "Becoming.Presentations.Tests.aligned_iff", "uses": ["Becoming.Presentations.matches_iff_equal_answers", "Becoming.Presentations.unique_matching"]}
+{"name": "Becoming.Presentations.Tests.alike_one_code", "uses": ["Becoming.Alike.sameBranchingTests"]}
+{"name": "Becoming.Presentations.all_predicates_automatically_reduced", "uses": ["Becoming.Presentations.all_predicates_separate"]}
+{"name": "Becoming.Presentations.all_predicates_every_relation", "uses": ["Becoming.Presentations.all_predicates_separate"]}
+{"name": "Becoming.Presentations.all_predicates_force_injective", "uses": ["Becoming.Presentations.all_predicates_separate", "Becoming.Presentations.equal_codes_same_answers"]}
+{"name": "Becoming.Presentations.all_predicates_relation_recoverable", "uses": ["Becoming.Presentations.all_predicates_every_relation", "Becoming.Presentations.saturation_gives_exact_lift"]}
+{"name": "Becoming.Presentations.all_predicates_separate", "uses": []}
+{"name": "Becoming.Presentations.all_predicates_unique_correspondence", "uses": ["Becoming.Presentations.all_predicates_automatically_reduced", "Becoming.Presentations.relative_unique_correspondence"]}
+{"name": "Becoming.Presentations.canonical_exact", "uses": []}
+{"name": "Becoming.Presentations.canonical_factor", "uses": ["Becoming.Presentations.canonical_factor_answers", "Becoming.Presentations.canonical_reduced", "Becoming.Presentations.matches_functional", "Becoming.Presentations.matches_total_on_used"]}
+{"name": "Becoming.Presentations.canonical_factor_answers", "uses": ["Becoming.Presentations.equal_codes_same_answers", "Becoming.Presentations.matches_total_on_used"]}
+{"name": "Becoming.Presentations.canonical_reduced", "uses": []}
+{"name": "Becoming.Presentations.equal_codes_same_answers", "uses": []}
+{"name": "Becoming.Presentations.exact_relation_forces_saturation", "uses": []}
+{"name": "Becoming.Presentations.first_summary_cannot_answer_both", "uses": ["Becoming.Presentations.equal_codes_same_answers"]}
+{"name": "Becoming.Presentations.full_exact", "uses": []}
+{"name": "Becoming.Presentations.full_not_reduced", "uses": []}
+{"name": "Becoming.Presentations.lift_contains", "uses": []}
+{"name": "Becoming.Presentations.lift_exact_iff_saturated", "uses": ["Becoming.Presentations.exact_relation_forces_saturation", "Becoming.Presentations.saturation_gives_exact_lift"]}
+{"name": "Becoming.Presentations.matches_functional", "uses": ["Becoming.Presentations.equal_codes_same_answers"]}
+{"name": "Becoming.Presentations.matches_iff_equal_answers", "uses": []}
+{"name": "Becoming.Presentations.matches_inverse_functional", "uses": ["Becoming.Presentations.equal_codes_same_answers"]}
+{"name": "Becoming.Presentations.matches_total_on_used", "uses": []}
+{"name": "Becoming.Presentations.reduced_exact_kernel", "uses": ["Becoming.Presentations.equal_codes_same_answers"]}
+{"name": "Becoming.Presentations.reduced_presentations_same_kernel", "uses": ["Becoming.Presentations.reduced_exact_kernel"]}
+{"name": "Becoming.Presentations.relation_descends_iff_saturated", "uses": ["Becoming.Presentations.exact_relation_forces_saturation", "Becoming.Presentations.saturation_gives_exact_lift"]}
+{"name": "Becoming.Presentations.relational_reading_unique_on_used", "uses": []}
+{"name": "Becoming.Presentations.relative_unique_correspondence", "uses": ["Becoming.Presentations.matches_functional", "Becoming.Presentations.matches_inverse_functional", "Becoming.Presentations.matches_total_on_used"]}
+{"name": "Becoming.Presentations.saturation_gives_exact_lift", "uses": ["Becoming.Presentations.equal_codes_same_answers", "Becoming.Presentations.lift_contains"]}
+{"name": "Becoming.Presentations.separating_relation_blocks_descent", "uses": ["Becoming.Presentations.exact_relation_forces_saturation"]}
+{"name": "Becoming.Presentations.short_exact", "uses": []}
+{"name": "Becoming.Presentations.short_reduced", "uses": []}
+{"name": "Becoming.Presentations.unique_matching", "uses": []}

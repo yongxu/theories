@@ -1,0 +1,47 @@
+{"name": "Becoming.Covers.ceasing_not_recurring", "uses": ["Becoming.Covers.ceasing_stops_unrefuted"]}
+{"name": "Becoming.Covers.ceasing_steps_within", "uses": ["Becoming.Covers.occurrences", "Becoming.Steps.along_back", "Becoming.Steps.along_noSplit", "Becoming.Steps.along_stage", "Becoming.ceasesToBe_iff_wang_along", "Becoming.comesToBe_iff_sheng_along", "Becoming.distinct_of_map", "Becoming.exists_pairs_over", "Becoming.length_map", "Becoming.«间无生则间亡不过所覆»"]}
+{"name": "Becoming.Covers.ceasing_stops_unrefuted", "uses": ["Becoming.Covers.not_not_coming_from"]}
+{"name": "Becoming.Covers.coming_from_of_ceasing", "uses": ["Becoming.Covers.occurrences", "Becoming.Steps.along_back", "Becoming.Steps.along_decided", "Becoming.Steps.along_ending", "Becoming.Steps.along_noSplit", "Becoming.Steps.along_stage", "Becoming.comesToBe_iff_sheng_along", "Becoming.«所覆后亡屡则有生»"]}
+{"name": "Becoming.Covers.not_not_coming_from", "uses": ["Becoming.Covers.occurrences", "Becoming.Steps.along_back", "Becoming.Steps.along_noSplit", "Becoming.Steps.along_stage", "Becoming.ceasesToBe_iff_wang_along", "Becoming.comesToBe_iff_sheng_along", "Becoming.«所覆后亡屡则生未否»"]}
+{"name": "Becoming.Covers.occurrences", "uses": ["Becoming.ListTests.mem_map_of"]}
+{"name": "Becoming.Covers.within", "uses": ["Becoming.came_between"]}
+{"name": "Becoming.Flow.BalancesOn.arises_given", "uses": ["Becoming.Flow.BalancesOn.arises_iff", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.BalancesOn.arises_iff", "uses": ["Becoming.Flow.BalancesOn.comesToStand_iff"]}
+{"name": "Becoming.Flow.BalancesOn.ceasesToStand_iff", "uses": ["Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.Flow.BalancesOn.comesToStand_iff", "uses": ["Becoming.eq_zero_of_not_pos", "Becoming.pos_iff_lt"]}
+{"name": "Becoming.Flow.RunsDown.changes_iff", "uses": ["Becoming.Flow.RunsDownOn.changes_iff", "Becoming.Flow.RunsDownOn.stock_eq"]}
+{"name": "Becoming.Flow.RunsDown.fall_pos_iff", "uses": ["Becoming.Flow.RunsDown.changes_iff", "Becoming.excess_pos"]}
+{"name": "Becoming.Flow.RunsDown.lowers_mark", "uses": ["Becoming.Flow.RunsDown.changes_iff", "Becoming.Flow.RunsDown.standing_le", "Becoming.mark_cases"]}
+{"name": "Becoming.Flow.RunsDown.rise_zero", "uses": ["Becoming.Flow.RunsDown.standing_le", "Becoming.eq_zero_of_not_pos", "Becoming.excess_pos"]}
+{"name": "Becoming.Flow.RunsDown.standing_le", "uses": ["Becoming.Flow.BalancesOn.runs_down", "Becoming.Flow.RunsDownOn.stock_eq"]}
+{"name": "Becoming.Flow.RunsDownClosed.exchanges_iff", "uses": ["Becoming.Flow.RunsDownOn.exchanges_iff", "Becoming.Flow.RunsDownOn.stock_eq"]}
+{"name": "Becoming.Flow.RunsDownClosed.runsDown", "uses": []}
+{"name": "Becoming.Flow.RunsDownOn.changes_iff", "uses": ["Becoming.Flow.BalancesOn.fall_lowers", "Becoming.Flow.BalancesOn.rise_lowers", "Becoming.exists_lt_of_total_lt"]}
+{"name": "Becoming.Flow.RunsDownOn.exchanges_iff", "uses": ["Becoming.Flow.BalancesOn.fall_taken", "Becoming.Flow.BalancesOn.taking_lowers", "Becoming.Flow.DissipatesOn.takes_of_gives", "Becoming.exists_lt_of_total_lt", "Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.RunsDownOn.stock_eq", "uses": ["Becoming.Web.StandingCensus.stock_eq"]}
+{"name": "Becoming.Flow.RunsDownOn.takers_le_fall", "uses": ["Becoming.Flow.BalancesOn.runs_down", "Becoming.Flow.RunsDownOn.stock_eq", "Becoming.across", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Flow.change_recurs_iff", "uses": ["Becoming.Flow.RunsDown.changes_iff", "Becoming.Flow.RunsDown.standing_le", "Becoming.Flow.rise_of_standing", "Becoming.recurs_iff_unmet"]}
+{"name": "Becoming.Flow.exchange_recurs_iff", "uses": ["Becoming.Flow.RunsDown.changes_iff", "Becoming.Flow.RunsDown.standing_le", "Becoming.Flow.RunsDownClosed.exchanges_iff", "Becoming.Flow.RunsDownClosed.runsDown", "Becoming.Flow.rise_of_standing", "Becoming.recurs_iff_unmet"]}
+{"name": "Becoming.Flow.rise_of_standing", "uses": ["Becoming.exists_lt_of_total_lt", "Becoming.total_le_of_support"]}
+{"name": "Becoming.Flow.runsDown_bounds_change", "uses": ["Becoming.Flow.RunsDown.rise_zero", "Becoming.Flow.standing_bounds_change", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.runsDown_change_bound", "uses": ["Becoming.Flow.RunsDown.lowers_mark", "Becoming.falls_by_occurrences"]}
+{"name": "Becoming.Flow.standing_bounds_change", "uses": ["Becoming.Web.StandingCensus.length_le_stock", "Becoming.count_le", "Becoming.over_stretch"]}
+{"name": "Becoming.Listed.covered", "uses": []}
+{"name": "Becoming.Steps.along_back", "uses": []}
+{"name": "Becoming.Steps.along_decided", "uses": ["Becoming.Steps.along_hasPred_iff", "Becoming.Steps.along_sheng_zero", "Becoming.comesToBe_iff_sheng_along"]}
+{"name": "Becoming.Steps.along_ending", "uses": ["Becoming.ceasesToBe_iff_wang_along"]}
+{"name": "Becoming.Steps.along_noSplit", "uses": ["Becoming.Steps.along_fixed", "Becoming.«定后之逐点»"]}
+{"name": "Becoming.Steps.along_stage", "uses": []}
+{"name": "Becoming.Web.StandingCensus.length_le_stock", "uses": ["Becoming.total_le", "Becoming.total_ones"]}
+{"name": "Becoming.Web.StandingCensus.stock_eq", "uses": ["Becoming.total_le_of_support"]}
+{"name": "Becoming.ceasing_needs_arising", "uses": ["Becoming.Covers.within", "Becoming.cohort_closes_iff", "Becoming.le_dest", "Becoming.mark_one", "Becoming.steps_mem", "Becoming.steps_within", "Becoming.total_congr_on", "Becoming.total_ones"]}
+{"name": "Becoming.ceasing_steps_found", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.cohort_closes_iff", "uses": ["Becoming.held_over_stretch", "Becoming.mark_pos", "Becoming.mark_zero", "Becoming.total_congr_on", "Becoming.total_pos_of_mem", "Becoming.total_zero"]}
+{"name": "Becoming.coming_of_ceasing_covered", "uses": ["Becoming.Covers.coming_from_of_ceasing"]}
+{"name": "Becoming.exists_lt_of_total_lt", "uses": []}
+{"name": "Becoming.pos_iff_lt", "uses": []}
+{"name": "Becoming.recurs_iff_unmet", "uses": ["Becoming.unmet_from"]}
+{"name": "Becoming.rises_or_le", "uses": []}
+{"name": "Becoming.stays_failing_within", "uses": []}
+{"name": "Becoming.unmet_from", "uses": ["Becoming.unmet_or_lower"]}
+{"name": "Becoming.unmet_or_lower", "uses": ["Becoming.le_dest", "Becoming.rises_or_le"]}

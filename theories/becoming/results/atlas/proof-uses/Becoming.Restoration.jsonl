@@ -1,0 +1,27 @@
+{"name": "Becoming.Dip.renewing_within_two", "uses": ["Becoming.Dip.renewing_at_each_step_not_in_run"]}
+{"name": "Becoming.LateMet.within_one_not_renewing", "uses": []}
+{"name": "Becoming.Slowing.met_at_return", "uses": ["Becoming.Slowing.level.eq_1"]}
+{"name": "Becoming.Slowing.phase_after_return", "uses": ["Becoming.Slowing.phase.eq_2"]}
+{"name": "Becoming.Slowing.phase_count", "uses": ["Becoming.Slowing.phase_counts_down"]}
+{"name": "Becoming.Slowing.phase_counts_down", "uses": ["Becoming.Slowing.phase.eq_2"]}
+{"name": "Becoming.Slowing.phase_next_return", "uses": ["Becoming.Slowing.phase_after_return", "Becoming.Slowing.phase_count"]}
+{"name": "Becoming.Slowing.phase_reaches", "uses": ["Becoming.Slowing.phase_next_return"]}
+{"name": "Becoming.Slowing.restored", "uses": ["Becoming.Slowing.met_at_return", "Becoming.Slowing.phase_count"]}
+{"name": "Becoming.Slowing.slowing_recovery", "uses": ["Becoming.Slowing.restored", "Becoming.Slowing.unbounded", "Becoming.Web.Restored.not_consumed"]}
+{"name": "Becoming.Slowing.unbounded", "uses": ["Becoming.Slowing.phase_after_return", "Becoming.Slowing.phase_count", "Becoming.Slowing.phase_reaches", "Becoming.Slowing.unmet_before_return"]}
+{"name": "Becoming.Slowing.unmet_before_return", "uses": ["Becoming.Slowing.level.eq_1"]}
+{"name": "Becoming.Web.RenewedWithin.mono", "uses": []}
+{"name": "Becoming.Web.RenewedWithin.restored", "uses": []}
+{"name": "Becoming.Web.RenewingIn.within_one", "uses": ["Becoming.Web.renewed_within_one"]}
+{"name": "Becoming.Web.RenewingInWithin.mono", "uses": ["Becoming.Web.RenewedWithin.mono"]}
+{"name": "Becoming.Web.RenewingInWithin.not_consuming", "uses": ["Becoming.Web.RenewedWithin.restored", "Becoming.Web.Restored.not_consumed"]}
+{"name": "Becoming.Web.RenewingInWithin.not_undermining_for", "uses": []}
+{"name": "Becoming.Web.Restored.not_consumed", "uses": []}
+{"name": "Becoming.Web.UnderminingFor.anti", "uses": []}
+{"name": "Becoming.Web.consumed_iff", "uses": []}
+{"name": "Becoming.Web.renewedWithin_zero", "uses": []}
+{"name": "Becoming.Web.renewed_within_one", "uses": []}
+{"name": "Becoming.Web.undermining_for_one", "uses": []}
+{"name": "Becoming.Web.undermining_for_zero", "uses": []}
+{"name": "Becoming.alternating_turns", "uses": []}
+{"name": "Becoming.seasonal_renewed_within_two", "uses": ["Becoming.alternating_turns"]}

@@ -1,0 +1,28 @@
+{"name": "Becoming.Onward.KeepsMoving.continues", "uses": []}
+{"name": "Becoming.Onward.KeepsMoving.returns", "uses": ["Becoming.Branching.Lossless.returns", "Becoming.Onward.KeepsMoving.run"]}
+{"name": "Becoming.Onward.KeepsMoving.run", "uses": ["Becoming.Onward.KeepsMoving.continues", "Becoming.Onward.ofWithin_within", "Becoming.Onward.run_of_continues"]}
+{"name": "Becoming.Onward.acc_below", "uses": []}
+{"name": "Becoming.Onward.continues_of_run", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Onward.decidedTest_finds", "uses": ["Becoming.bool_and_true", "Becoming.bool_of_and_true"]}
+{"name": "Becoming.Onward.fan_no_run", "uses": ["Becoming.Lasting.Fan.no_unbounded_step", "Becoming.Onward.continues_of_run", "Becoming.Run.step"]}
+{"name": "Becoming.Onward.lossless_no_rise", "uses": ["Becoming.Branching.Lossless.no_rise", "Becoming.Onward.KeepsMoving.run", "Becoming.Run.step"]}
+{"name": "Becoming.Onward.lossless_returns_iff", "uses": ["Becoming.Branching.Lossless.returns", "Becoming.Branching.Returns.run", "Becoming.Onward.continues_of_run", "Becoming.Onward.run_of_continues"]}
+{"name": "Becoming.Onward.lossless_unlisted", "uses": ["Becoming.Onward.lossless_returns_iff"]}
+{"name": "Becoming.Onward.moveOf_eq", "uses": []}
+{"name": "Becoming.Onward.ofWithin_within", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Onward.reach_along", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans"]}
+{"name": "Becoming.Onward.reach_of_run", "uses": ["Becoming.Run.reach"]}
+{"name": "Becoming.Onward.returning_of_continues", "uses": ["Becoming.Onward.reach_along", "Becoming.Parting.path_of_continues", "Becoming.gap_of_lt", "Becoming.revisits_within"]}
+{"name": "Becoming.Onward.rise_needs_merge", "uses": ["Becoming.Onward.lossless_no_rise"]}
+{"name": "Becoming.Onward.run_decided", "uses": ["Becoming.Lasting.Continues.decided", "Becoming.Onward.run_iff_continues", "Becoming.Onward.run_of_continues"]}
+{"name": "Becoming.Onward.run_iff_continues", "uses": ["Becoming.Onward.continues_of_run", "Becoming.Onward.run_of_continues"]}
+{"name": "Becoming.Onward.run_iff_returning", "uses": ["Becoming.Onward.continues_of_run", "Becoming.Onward.returning_of_continues", "Becoming.Onward.run_of_returning"]}
+{"name": "Becoming.Onward.run_iff_unbounded", "uses": ["Becoming.Onward.run_of_continues", "Becoming.Onward.unbounded_of_run"]}
+{"name": "Becoming.Onward.run_of_continues", "uses": ["Becoming.Onward.returning_of_continues", "Becoming.Onward.run_of_returning"]}
+{"name": "Becoming.Onward.run_of_reach", "uses": ["Becoming.Onward.run_of_trace"]}
+{"name": "Becoming.Onward.run_of_returning", "uses": ["Becoming.Branching.Returns.run", "Becoming.Onward.run_of_reach"]}
+{"name": "Becoming.Onward.run_of_trace", "uses": ["Generative.Trace.brecOn"]}
+{"name": "Becoming.Onward.runs_iff_dependentChoice", "uses": ["Becoming.Onward.moveOf_eq", "Becoming.Run.step"]}
+{"name": "Becoming.Onward.searchedRun_start", "uses": []}
+{"name": "Becoming.Onward.searchedRun_within", "uses": ["Becoming.Lasting.runOf_within"]}
+{"name": "Becoming.Onward.unbounded_of_run", "uses": ["Becoming.Onward.continues_of_run"]}

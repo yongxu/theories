@@ -1,0 +1,54 @@
+{"name": "Becoming.Conveyed.later", "uses": []}
+{"name": "Becoming.ConveyedThrough.coupledIntoBy", "uses": []}
+{"name": "Becoming.ConveyedThrough.later", "uses": ["Becoming.Conveyed.later"]}
+{"name": "Becoming.CoupledIntoBy.conveyedThrough_ones", "uses": ["Becoming.conveyed_ones"]}
+{"name": "Becoming.CoupledIntoBy.coupledInto", "uses": ["Becoming.CoupledInto.succ", "Becoming.coupledInto_zero"]}
+{"name": "Becoming.CoupledIntoBy.later", "uses": []}
+{"name": "Becoming.CoupledIntoBy.le_steps", "uses": []}
+{"name": "Becoming.CoupledIntoBy.shorten", "uses": []}
+{"name": "Becoming.CoupledIntoBy.tail", "uses": ["Becoming.CoupledIntoBy.le_steps", "Becoming.couplesAt_strengthsFrom"]}
+{"name": "Becoming.CouplesAlways.recurs", "uses": []}
+{"name": "Becoming.Loops.Once.no_chain_of_two", "uses": ["Becoming.CoupledIntoBy.le_steps", "Becoming.Loops.Once.reads_first"]}
+{"name": "Becoming.Loops.Once.none_from_one", "uses": ["Becoming.Loops.Once.reads_first", "Becoming.couples_strengthsFrom_iff"]}
+{"name": "Becoming.Loops.Once.reads_first", "uses": []}
+{"name": "Becoming.Loops.Once.settled", "uses": ["Becoming.Loops.Once.none_from_one"]}
+{"name": "Becoming.Loops.SelfLoop.responses_eq", "uses": ["Becoming.Loops.SelfLoop.attained", "Becoming.Naturals.add_left_cancel", "Becoming.carried_eq_carriedWithin_add"]}
+{"name": "Becoming.Remainder.finite_order_iff_no_loop", "uses": ["Becoming.bounded_iff_no_loop", "Becoming.finite_order_iff_bounded"]}
+{"name": "Becoming.Remainder.mul_pos_nat", "uses": ["Becoming.Naturals.mul_lt_mul_of_pos"]}
+{"name": "Becoming.bounded_iff_no_loop", "uses": ["Becoming.CouplesAlways.recurs", "Becoming.no_chain_of_no_loop", "Becoming.unbounded_of_recurring_loop"]}
+{"name": "Becoming.bounded_iff_no_loop_from", "uses": ["Becoming.no_chain_of_no_loop_from", "Becoming.unbounded_of_recurring_loop"]}
+{"name": "Becoming.carriedFrom_add", "uses": ["Becoming.Naturals.add_congr", "Becoming.carriedGive_add", "Becoming.total_add", "Becoming.total_congr_on"]}
+{"name": "Becoming.carriedGive_add", "uses": ["Becoming.Naturals.add_congr", "Becoming.carriedGive_of_part", "Becoming.carriedGive_of_rest", "Becoming.total_add", "Becoming.total_congr_on"]}
+{"name": "Becoming.carriedWithin_eq_iff", "uses": ["Becoming.carriedWithin_le_carried", "Becoming.carriedWithin_lt_iff"]}
+{"name": "Becoming.carriedWithin_lt_iff", "uses": ["Becoming.orderBelow_lt_iff"]}
+{"name": "Becoming.carriedWithin_lt_of_recurring_loop", "uses": ["Becoming.Loops.le_mul_of_pos", "Becoming.conveyedThrough_along", "Becoming.conveyedThrough_around", "Becoming.orderBelow_lt_iff", "Becoming.orderBelow_mono"]}
+{"name": "Becoming.carriedWorld_within_cut", "uses": ["Becoming.carriedWorld_level", "Becoming.carried_eq_carriedWithin_add", "Becoming.responses_le_missBound"]}
+{"name": "Becoming.carried_eq_carriedWithin_add", "uses": ["Becoming.carried_eq_orderBelow_add"]}
+{"name": "Becoming.carried_eq_orderBelow_add", "uses": ["Becoming.carriedFrom_add", "Becoming.carriedFrom_carried", "Becoming.carriedFrom_congr", "Becoming.carriedWithin_eq_carriedFrom"]}
+{"name": "Becoming.carried_le_polynomial_from", "uses": ["Becoming.Loops.withinBound_eq", "Becoming.carriedWithin_le_withinBound", "Becoming.exact_every_start_iff", "Becoming.no_chain_of_no_loop_from"]}
+{"name": "Becoming.conveyedThrough_along", "uses": ["Becoming.ConveyedThrough.later"]}
+{"name": "Becoming.conveyedThrough_around", "uses": ["Becoming.conveyedThrough_along"]}
+{"name": "Becoming.conveyed_ones", "uses": []}
+{"name": "Becoming.couplesAt_strengthsFrom", "uses": []}
+{"name": "Becoming.couples_iff_couplesAt", "uses": []}
+{"name": "Becoming.couples_strengthsFrom_iff", "uses": ["Becoming.couplesAt_strengthsFrom", "Becoming.couples_iff_couplesAt"]}
+{"name": "Becoming.couplingRecurs_iff", "uses": ["Becoming.couples_strengthsFrom_iff"]}
+{"name": "Becoming.exact_every_start_iff", "uses": ["Becoming.ConveyedThrough.coupledIntoBy", "Becoming.CoupledIntoBy.conveyedThrough_ones", "Becoming.carriedWithin_eq_iff"]}
+{"name": "Becoming.exact_of_reading_before", "uses": ["Becoming.CoupledIntoBy.le_steps", "Becoming.exact_every_start_iff"]}
+{"name": "Becoming.finite_order_iff_bounded", "uses": ["Becoming.ConveyedThrough.coupledIntoBy", "Becoming.CoupledIntoBy.conveyedThrough_ones", "Becoming.carriedWithin_eq_iff"]}
+{"name": "Becoming.finite_order_iff_no_loop_from", "uses": ["Becoming.bounded_iff_no_loop_from", "Becoming.finite_order_iff_bounded"]}
+{"name": "Becoming.finite_order_uniform_iff", "uses": ["Becoming.exact_every_start_iff"]}
+{"name": "Becoming.gap_within_order_iff", "uses": ["Becoming.carriedWithin_le_carried", "Becoming.exact_every_start_iff", "Becoming.most_difference_arrives"]}
+{"name": "Becoming.loop_of_coupledInto_succ", "uses": ["Becoming.gap_of_lt", "Becoming.le_dest", "Becoming.revisits_within"]}
+{"name": "Becoming.no_chain_of_no_loop", "uses": ["Becoming.CoupledInto.shorten", "Becoming.CoupledIntoBy.coupledInto", "Becoming.loop_of_coupledInto_succ"]}
+{"name": "Becoming.no_chain_of_no_loop_from", "uses": ["Becoming.CoupledIntoBy.tail", "Becoming.no_chain_of_no_loop"]}
+{"name": "Becoming.no_chain_of_no_loop_listed", "uses": ["Becoming.CoupledInto.shorten", "Becoming.CoupledIntoBy.coupledInto", "Becoming.loop_of_coupledInto"]}
+{"name": "Becoming.orderBelow_lt_iff", "uses": ["Becoming.carried_eq_orderBelow_add", "Becoming.lt_iff_pos", "Becoming.responses_pos_iff"]}
+{"name": "Becoming.responded_pos_iff", "uses": ["Becoming.Loops.zero_or_pos", "Becoming.Propagation.le_of_mem_steps_upto", "Becoming.Propagation.mem_steps_upto", "Becoming.Propagation.pos_of_mul_pos", "Becoming.Remainder.mul_pos_nat", "Becoming.carriedGive_of_part", "Becoming.carriedGive_of_rest", "Becoming.responded_succ", "Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.responded_succ", "uses": []}
+{"name": "Becoming.responded_zero", "uses": []}
+{"name": "Becoming.responses_antitone", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.carried_eq_orderBelow_add", "Becoming.orderBelow_mono"]}
+{"name": "Becoming.responses_le_missBound", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.carried_eq_carriedWithin_add", "Becoming.carried_le_carriedWithin_add"]}
+{"name": "Becoming.responses_pos_iff", "uses": ["Becoming.carried_pos_iff", "Becoming.responded_pos_iff"]}
+{"name": "Becoming.settledFrom_zero_of_always", "uses": ["Becoming.CouplesAlways.recurs", "Becoming.couples_iff_couplesAt", "Becoming.couples_strengthsFrom_iff"]}
+{"name": "Becoming.unbounded_of_recurring_loop", "uses": ["Becoming.ConveyedThrough.coupledIntoBy", "Becoming.carriedWithin_lt_iff", "Becoming.carriedWithin_lt_of_recurring_loop"]}

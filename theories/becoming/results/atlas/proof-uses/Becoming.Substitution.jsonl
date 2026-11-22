@@ -1,0 +1,12 @@
+{"name": "Becoming.Substitution.Lone.own_witness_lost", "uses": []}
+{"name": "Becoming.Substitution.consuming_through_sustaining", "uses": ["Becoming.Web.consumingIn_kept_iff", "RelationalRenewal.Law.overdraw_crosses_support", "RelationalRenewal.Law.permanently_below"]}
+{"name": "Becoming.Substitution.extracting_low", "uses": ["RelationalRenewal.Law.level_succ"]}
+{"name": "Becoming.Substitution.extracting_persists_consuming", "uses": ["Becoming.Substitution.persists_consuming"]}
+{"name": "Becoming.Substitution.persists_consuming", "uses": ["Becoming.Substitution.web_dependent", "Becoming.ceasing_step", "RelationalRenewal.Law.dependent_overdraw_ends_itself", "RelationalRenewal.Law.overdraw_crosses_support", "RelationalRenewal.Law.permanently_below"]}
+{"name": "Becoming.Substitution.slow_withheld_two_steps", "uses": ["Becoming.Substitution.persists_consuming"]}
+{"name": "Becoming.Substitution.stepwise_includes_substitution", "uses": ["Becoming.Substitution.extracting_low", "Becoming.Substitution.extracting_persists_consuming"]}
+{"name": "Becoming.Substitution.web_dependent", "uses": []}
+{"name": "Becoming.Web.ConsumingThrough.consumingIn", "uses": []}
+{"name": "Becoming.Web.consumingIn_kept_iff", "uses": []}
+{"name": "Becoming.Web.consuming_survives_iff", "uses": ["Becoming.Web.consumingIn_kept_iff"]}
+{"name": "Becoming.ceasing_step", "uses": []}

@@ -1,0 +1,23 @@
+{"name": "Becoming.AssurancePlans.Open.some_not_every", "uses": []}
+{"name": "Becoming.AssurancePlans.Regulation.Move.ofNat_ctorIdx", "uses": []}
+{"name": "Becoming.AssurancePlans.Regulation.kept_along", "uses": ["Becoming.AssurancePlans.Regulation.respond_keeps", "Becoming.AssurancePlans.completes_itinerary"]}
+{"name": "Becoming.AssurancePlans.Regulation.next_move_changes", "uses": ["Becoming.Assurance.completes_ofMap_iff", "Becoming.AssurancePlans.Regulation.opposite_moves"]}
+{"name": "Becoming.AssurancePlans.Regulation.no_merged_move", "uses": ["Becoming.Assurance.completes_ofMap_single"]}
+{"name": "Becoming.AssurancePlans.Regulation.opposite_moves", "uses": ["Becoming.Assurance.completes_ofMap_single"]}
+{"name": "Becoming.AssurancePlans.Regulation.respond_keeps", "uses": []}
+{"name": "Becoming.AssurancePlans.Routes.adequate_merges_outcomes", "uses": ["Becoming.AssurancePlans.Routes.completes_iff", "Becoming.AssurancePlans.Routes.left_adequate"]}
+{"name": "Becoming.AssurancePlans.Routes.cases3", "uses": []}
+{"name": "Becoming.AssurancePlans.Routes.common_coarsening_constant", "uses": ["Becoming.AssurancePlans.Routes.cases3"]}
+{"name": "Becoming.AssurancePlans.Routes.common_coarsening_inadequate", "uses": ["Becoming.AssurancePlans.Routes.common_coarsening_constant", "Becoming.AssurancePlans.Routes.completes_iff"]}
+{"name": "Becoming.AssurancePlans.Routes.completes_iff", "uses": ["Becoming.Assurance.completes_ofMap_single"]}
+{"name": "Becoming.AssurancePlans.Routes.left_adequate", "uses": ["Becoming.AssurancePlans.Routes.cases3", "Becoming.AssurancePlans.Routes.completes_iff"]}
+{"name": "Becoming.AssurancePlans.Routes.no_coarsest_adequate", "uses": ["Becoming.AssurancePlans.Routes.common_coarsening_inadequate", "Becoming.AssurancePlans.Routes.left_adequate", "Becoming.AssurancePlans.Routes.right_adequate"]}
+{"name": "Becoming.AssurancePlans.Routes.no_common", "uses": ["Becoming.AssurancePlans.Routes.completes_iff"]}
+{"name": "Becoming.AssurancePlans.Routes.pairwise_common", "uses": ["Becoming.AssurancePlans.Routes.cases3", "Becoming.AssurancePlans.Routes.completes_iff"]}
+{"name": "Becoming.AssurancePlans.Routes.right_adequate", "uses": ["Becoming.AssurancePlans.Routes.cases3", "Becoming.AssurancePlans.Routes.completes_iff"]}
+{"name": "Becoming.AssurancePlans.Shut.every_end_vacuous", "uses": []}
+{"name": "Becoming.AssurancePlans.Shut.no_end", "uses": ["Becoming.AssurancePlans.Shut.no_trace"]}
+{"name": "Becoming.AssurancePlans.Shut.no_trace", "uses": []}
+{"name": "Becoming.AssurancePlans.completes_congr", "uses": []}
+{"name": "Becoming.AssurancePlans.completes_itinerary", "uses": []}
+{"name": "Becoming.AssurancePlans.every_end_of_some_end", "uses": ["Becoming.Trace.determined_end"]}

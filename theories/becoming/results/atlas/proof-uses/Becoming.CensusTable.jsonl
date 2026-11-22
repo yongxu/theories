@@ -1,0 +1,30 @@
+{"name": "Becoming.Counts.congr", "uses": ["Becoming.Indicates.congr"]}
+{"name": "Becoming.FamilyCounts.company", "uses": ["Becoming.Counts.exists_of_pos"]}
+{"name": "Becoming.FamilyCounts.congr", "uses": ["Becoming.Counts.congr", "Becoming.ceasesToBe_congr", "Becoming.comesToBe_congr"]}
+{"name": "Becoming.FamilyCounts.of_eq", "uses": []}
+{"name": "Becoming.FamilyCounts.tally", "uses": ["Becoming.Counts.le_length", "Becoming.Counts.listed_across", "Becoming.tally_step"]}
+{"name": "Becoming.Indicates.congr", "uses": []}
+{"name": "Becoming.Listed.congr", "uses": []}
+{"name": "Becoming.World.CountsHold.marks", "uses": ["Becoming.World.countsOf_decided"]}
+{"name": "Becoming.World.CountsOf.tally", "uses": ["Becoming.FamilyCounts.tally"]}
+{"name": "Becoming.World.WitnessedAt.congr", "uses": ["Becoming.World.witnessedAt_of"]}
+{"name": "Becoming.World.census_table_holds₂", "uses": ["Becoming.World.table_holds"]}
+{"name": "Becoming.World.census_table_holds₃", "uses": ["Becoming.World.table_holds"]}
+{"name": "Becoming.World.census_table_marks_hold", "uses": ["Becoming.World.table_marks_hold"]}
+{"name": "Becoming.World.census_table_marks_hold_free", "uses": ["Becoming.World.census_table_marks_hold"]}
+{"name": "Becoming.World.census_table_marks_hold₂", "uses": ["Becoming.World.census_table_marks_hold"]}
+{"name": "Becoming.World.census_table_marks_hold₃", "uses": ["Becoming.World.census_table_marks_hold"]}
+{"name": "Becoming.World.countsHold_of_marks", "uses": ["Becoming.Counts.unique", "Becoming.World.countsOf_decided"]}
+{"name": "Becoming.World.countsOf_decided", "uses": ["Becoming.familyCounts_decided"]}
+{"name": "Becoming.World.listingMarksHold_of_marksHold", "uses": ["Becoming.ceasings_congr", "Becoming.comings_congr"]}
+{"name": "Becoming.World.table_holds", "uses": ["Becoming.FamilyCounts.of_eq", "Becoming.FamilyCounts.tally", "Becoming.familyCounts_decided"]}
+{"name": "Becoming.World.table_holds_free", "uses": ["Becoming.World.table_holds"]}
+{"name": "Becoming.World.table_marks_hold", "uses": ["Becoming.FamilyCounts.tally", "Becoming.familyCounts_decided"]}
+{"name": "Becoming.World.table_marks_hold_free", "uses": ["Becoming.World.table_marks_hold"]}
+{"name": "Becoming.World.witnessedAt_of", "uses": ["Becoming.Listed.congr", "Becoming.ceasings_congr", "Becoming.comings_congr"]}
+{"name": "Becoming.ceasesToBe_congr", "uses": []}
+{"name": "Becoming.ceasings_congr", "uses": ["Becoming.ceasesToBe_congr", "Becoming.mark_iff", "Becoming.total_congr"]}
+{"name": "Becoming.comesToBe_congr", "uses": []}
+{"name": "Becoming.comings_congr", "uses": ["Becoming.comesToBe_congr", "Becoming.mark_iff", "Becoming.total_congr"]}
+{"name": "Becoming.familyCounts_decided", "uses": ["Becoming.counts_total"]}
+{"name": "Becoming.tally_step", "uses": ["Becoming.add_right_cancel", "Becoming.exists_add_of_le"]}

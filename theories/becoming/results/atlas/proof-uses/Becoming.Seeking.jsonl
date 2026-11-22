@@ -1,0 +1,13 @@
+{"name": "Becoming.Flow.more_exhausted", "uses": ["Becoming.Flow.more_needs_unrun"]}
+{"name": "Becoming.Flow.more_needs_unrun", "uses": ["Becoming.Flow.change_recurs_iff"]}
+{"name": "Becoming.Law.aboveAll_never_rests", "uses": ["Becoming.aboveAll_unique"]}
+{"name": "Becoming.Law.fixed_rests", "uses": []}
+{"name": "Becoming.Law.more_never_rests", "uses": ["Becoming.more_not_at_rest"]}
+{"name": "Becoming.Law.rests_iff", "uses": ["Becoming.Law.fixed_rests", "Becoming.Law.orbit_add", "Becoming.le_dest"]}
+{"name": "Becoming.aboveAll_not_two", "uses": ["Becoming.aboveAll_unique"]}
+{"name": "Becoming.aboveAll_unique", "uses": []}
+{"name": "Becoming.more_needs_open", "uses": ["Becoming.more_new", "Becoming.unlisted_of_new"]}
+{"name": "Becoming.more_new", "uses": ["Becoming.gap_of_lt", "Becoming.more_rises"]}
+{"name": "Becoming.more_not_at_rest", "uses": []}
+{"name": "Becoming.more_rises", "uses": []}
+{"name": "Becoming.succ_more", "uses": ["Becoming.Law.succ_open"]}

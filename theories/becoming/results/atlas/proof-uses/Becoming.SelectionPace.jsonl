@@ -1,0 +1,103 @@
+{"name": "Becoming.SelectionPace.Displacement.arise", "uses": []}
+{"name": "Becoming.SelectionPace.Displacement.balances", "uses": []}
+{"name": "Becoming.SelectionPace.Displacement.capped", "uses": []}
+{"name": "Becoming.SelectionPace.Displacement.capped_later", "uses": []}
+{"name": "Becoming.SelectionPace.Displacement.closed", "uses": ["Becoming.SelectionPace.Displacement.every"]}
+{"name": "Becoming.SelectionPace.Displacement.displacement", "uses": ["Becoming.SelectionPace.Displacement.closed", "Becoming.SelectionPace.Displacement.dissipates"]}
+{"name": "Becoming.SelectionPace.Displacement.dissipates", "uses": []}
+{"name": "Becoming.SelectionPace.Displacement.every", "uses": []}
+{"name": "Becoming.SelectionPace.Displacement.exact", "uses": []}
+{"name": "Becoming.SelectionPace.Displacement.factor", "uses": ["Becoming.Flow.Balances.on", "Becoming.SelectionPace.Displacement.arise", "Becoming.SelectionPace.Displacement.balances", "Becoming.SelectionPace.Displacement.capped", "Becoming.SelectionPace.Displacement.exact", "Becoming.SelectionPace.Displacement.fedEach", "Becoming.SelectionPace.Displacement.stands", "Becoming.SelectionPace.total_within_factor"]}
+{"name": "Becoming.SelectionPace.Displacement.fedEach", "uses": []}
+{"name": "Becoming.SelectionPace.Displacement.least", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.SelectionPace.response_within_carried", "Becoming.SelectionTerm.le_of_mul_le_mul"]}
+{"name": "Becoming.SelectionPace.Displacement.natural_fails", "uses": []}
+{"name": "Becoming.SelectionPace.Displacement.premises", "uses": ["Becoming.Flow.Balances.on", "Becoming.SelectionPace.Displacement.arise", "Becoming.SelectionPace.Displacement.balances", "Becoming.SelectionPace.Displacement.capped", "Becoming.SelectionPace.Displacement.exact", "Becoming.SelectionPace.Displacement.stands"]}
+{"name": "Becoming.SelectionPace.Displacement.rest_falls", "uses": ["Becoming.Flow.Balances.on", "Becoming.SelectionPace.Displacement.arise", "Becoming.SelectionPace.Displacement.balances", "Becoming.SelectionPace.Displacement.capped", "Becoming.SelectionPace.Displacement.exact", "Becoming.SelectionPace.Displacement.stands", "Becoming.SelectionPace.Displacement.unit", "Becoming.SelectionPace.mem_carriers", "Becoming.SelectionPace.share_within_rest"]}
+{"name": "Becoming.SelectionPace.Displacement.spread_needs_inheritance", "uses": ["Becoming.Flow.Balances.on", "Becoming.SelectionPace.Displacement.balances", "Becoming.SelectionPace.Displacement.capped_later"]}
+{"name": "Becoming.SelectionPace.Displacement.stands", "uses": []}
+{"name": "Becoming.SelectionPace.Displacement.unit", "uses": []}
+{"name": "Becoming.SelectionPace.Fed.arise", "uses": []}
+{"name": "Becoming.SelectionPace.Fed.balances", "uses": []}
+{"name": "Becoming.SelectionPace.Fed.capped", "uses": []}
+{"name": "Becoming.SelectionPace.Fed.exact", "uses": []}
+{"name": "Becoming.SelectionPace.Fed.fed", "uses": []}
+{"name": "Becoming.SelectionPace.Fed.least", "uses": ["Becoming.SelectionPace.number_spread_within_inflow", "Becoming.SelectionTerm.le_of_mul_le_mul"]}
+{"name": "Becoming.SelectionPace.Fed.number", "uses": []}
+{"name": "Becoming.SelectionPace.Fed.premises", "uses": ["Becoming.Flow.Balances.on", "Becoming.SelectionPace.Fed.arise", "Becoming.SelectionPace.Fed.balances", "Becoming.SelectionPace.Fed.capped", "Becoming.SelectionPace.Fed.exact", "Becoming.SelectionPace.Fed.number", "Becoming.SelectionPace.Fed.stands"]}
+{"name": "Becoming.SelectionPace.Fed.stands", "uses": []}
+{"name": "Becoming.SelectionPace.Inherited.ariseBoth", "uses": ["Becoming.SelectionPace.Inherited.ariseFirst", "Becoming.SelectionPace.Inherited.ariseSecond"]}
+{"name": "Becoming.SelectionPace.Inherited.ariseFirst", "uses": []}
+{"name": "Becoming.SelectionPace.Inherited.ariseSecond", "uses": []}
+{"name": "Becoming.SelectionPace.Inherited.balances", "uses": []}
+{"name": "Becoming.SelectionPace.Inherited.cappedBoth", "uses": ["Becoming.SelectionPace.Inherited.cappedFirst", "Becoming.SelectionPace.Inherited.cappedSecond"]}
+{"name": "Becoming.SelectionPace.Inherited.cappedFirst", "uses": []}
+{"name": "Becoming.SelectionPace.Inherited.cappedSecond", "uses": []}
+{"name": "Becoming.SelectionPace.Inherited.closedFirst", "uses": ["Becoming.SelectionPace.Inherited.every"]}
+{"name": "Becoming.SelectionPace.Inherited.closedSecond", "uses": ["Becoming.SelectionPace.Inherited.every"]}
+{"name": "Becoming.SelectionPace.Inherited.dissipatesFirst", "uses": []}
+{"name": "Becoming.SelectionPace.Inherited.dissipatesSecond", "uses": []}
+{"name": "Becoming.SelectionPace.Inherited.every", "uses": []}
+{"name": "Becoming.SelectionPace.Inherited.exactBoth", "uses": ["Becoming.SelectionPace.Inherited.exactFirst", "Becoming.SelectionPace.Inherited.exactSecond"]}
+{"name": "Becoming.SelectionPace.Inherited.exactFirst", "uses": []}
+{"name": "Becoming.SelectionPace.Inherited.exactSecond", "uses": []}
+{"name": "Becoming.SelectionPace.Inherited.inherited", "uses": []}
+{"name": "Becoming.SelectionPace.Inherited.next_step_attained", "uses": ["Becoming.Flow.Balances.on", "Becoming.SelectionPace.Inherited.ariseSecond", "Becoming.SelectionPace.Inherited.balances", "Becoming.SelectionPace.Inherited.cappedSecond", "Becoming.SelectionPace.Inherited.exactFirst", "Becoming.SelectionPace.Inherited.inherited", "Becoming.SelectionPace.Inherited.standsSecond", "Becoming.SelectionPace.response_sq_within_inflow"]}
+{"name": "Becoming.SelectionPace.Inherited.same_step_fails", "uses": ["Becoming.SelectionPace.Inherited.closedFirst", "Becoming.SelectionPace.Inherited.closedSecond", "Becoming.SelectionPace.Inherited.dissipatesFirst", "Becoming.SelectionPace.Inherited.dissipatesSecond", "Becoming.SelectionPace.Inherited.inherited"]}
+{"name": "Becoming.SelectionPace.Inherited.standsBoth", "uses": ["Becoming.SelectionPace.Inherited.standsFirst", "Becoming.SelectionPace.Inherited.standsSecond"]}
+{"name": "Becoming.SelectionPace.Inherited.standsFirst", "uses": []}
+{"name": "Becoming.SelectionPace.Inherited.standsSecond", "uses": []}
+{"name": "Becoming.SelectionPace.Inherited.stretch_attained", "uses": ["Becoming.Flow.Balances.on", "Becoming.SelectionPace.Inherited.ariseBoth", "Becoming.SelectionPace.Inherited.balances", "Becoming.SelectionPace.Inherited.cappedBoth", "Becoming.SelectionPace.Inherited.exactBoth", "Becoming.SelectionPace.Inherited.standsBoth", "Becoming.SelectionPace.stretch_within_carried"]}
+{"name": "Becoming.SelectionPace.Shrink.arise", "uses": []}
+{"name": "Becoming.SelectionPace.Shrink.balances", "uses": []}
+{"name": "Becoming.SelectionPace.Shrink.capped", "uses": []}
+{"name": "Becoming.SelectionPace.Shrink.exact", "uses": []}
+{"name": "Becoming.SelectionPace.Shrink.shrink", "uses": ["Becoming.Flow.Balances.on", "Becoming.SelectionPace.Shrink.arise", "Becoming.SelectionPace.Shrink.balances", "Becoming.SelectionPace.Shrink.capped", "Becoming.SelectionPace.Shrink.exact", "Becoming.SelectionPace.Shrink.stands", "Becoming.SelectionPace.unfed_rise_shrinks"]}
+{"name": "Becoming.SelectionPace.Shrink.stands", "uses": []}
+{"name": "Becoming.SelectionPace.Swap.balances", "uses": []}
+{"name": "Becoming.SelectionPace.Swap.swap", "uses": []}
+{"name": "Becoming.SelectionPace.Uncapped.arise", "uses": []}
+{"name": "Becoming.SelectionPace.Uncapped.balances", "uses": []}
+{"name": "Becoming.SelectionPace.Uncapped.exact", "uses": []}
+{"name": "Becoming.SelectionPace.Uncapped.stands", "uses": []}
+{"name": "Becoming.SelectionPace.Uncapped.uncapped", "uses": ["Becoming.Flow.Balances.on", "Becoming.SelectionPace.Uncapped.arise", "Becoming.SelectionPace.Uncapped.balances", "Becoming.SelectionPace.Uncapped.exact", "Becoming.SelectionPace.Uncapped.stands"]}
+{"name": "Becoming.SelectionPace.born_within_inflow", "uses": ["Becoming.Flow.BalancesOn.over", "Becoming.Flow.replenishment_le_inflow", "Becoming.SelectionPace.fresh_total", "Becoming.SelectionPace.standing_total", "Becoming.le_of_add_le_add_right", "Becoming.total_append"]}
+{"name": "Becoming.SelectionPace.excess_add_le", "uses": ["Becoming.excess_le_of_le_add", "Becoming.le_add_excess"]}
+{"name": "Becoming.SelectionPace.excess_total_le", "uses": ["Becoming.SelectionPace.excess_add_le"]}
+{"name": "Becoming.SelectionPace.fresh_total", "uses": ["Becoming.Reproduction.mem_flatMap_cases", "Becoming.eq_zero_of_not_pos", "Becoming.total_eq_zero"]}
+{"name": "Becoming.SelectionPace.generation_within_inflow", "uses": ["Becoming.SelectionPace.born_within_inflow", "Becoming.SelectionTerm.Generations.born_eq"]}
+{"name": "Becoming.SelectionPace.inflow_lineage_le", "uses": ["Becoming.SelectionPace.excess_total_le", "Becoming.SelectionPace.total_lineage", "Becoming.total_le", "Becoming.total_swap"]}
+{"name": "Becoming.SelectionPace.joint_within_carried", "uses": ["Becoming.SelectionPace.inflow_lineage_le", "Becoming.SelectionPace.total_carriers_le"]}
+{"name": "Becoming.SelectionPace.lineage_mono", "uses": ["Becoming.ListTests.mem_flatMap_iff", "Becoming.Reproduction.mem_flatMap_cases", "Becoming.mem_append_cases", "Becoming.mem_append_of_left", "Becoming.mem_append_of_right"]}
+{"name": "Becoming.SelectionPace.lineage_sub", "uses": ["Becoming.SelectionPace.lineage_mono", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.SelectionPace.mean_step_exact", "uses": ["Becoming.SelectionTerm.Generations.mean_step", "Becoming.SelectionTerm.lowered_exact", "Becoming.SelectionTerm.raised_exact"]}
+{"name": "Becoming.SelectionPace.mem_carriers", "uses": ["Becoming.ListTests.mem_filter_iff"]}
+{"name": "Becoming.SelectionPace.moved_within_carried", "uses": ["Becoming.SelectionPace.stretch_within_carried", "Becoming.mul_turn"]}
+{"name": "Becoming.SelectionPace.number_spread_within_inflow", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.SelectionPace.number_step_within_inflow", "Becoming.mul_turn", "Becoming.total_const", "Becoming.total_le"]}
+{"name": "Becoming.SelectionPace.number_step_within_inflow", "uses": ["Becoming.Reproduction.Generations.ByNumber.step", "Becoming.SelectionPace.generation_within_inflow", "Becoming.SelectionTerm.lowered_exact", "Becoming.SelectionTerm.raised_exact", "Becoming.mul_turn"]}
+{"name": "Becoming.SelectionPace.number_unfed_uniform", "uses": ["Becoming.Reproduction.Generations.ByNumber.concord_eq", "Becoming.Reproduction.concord_self_zero_iff", "Becoming.SelectionPace.number_spread_within_inflow", "Becoming.SelectionTerm.le_of_mul_le_mul"]}
+{"name": "Becoming.SelectionPace.numbered_family", "uses": []}
+{"name": "Becoming.SelectionPace.numbered_number", "uses": []}
+{"name": "Becoming.SelectionPace.offspring_within_carried", "uses": ["Becoming.SelectionPace.lineage_sub", "Becoming.SelectionPace.parent_within_inflow", "Becoming.SelectionPace.sum_exact", "Becoming.mul_turn", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_le", "Becoming.total_mul"]}
+{"name": "Becoming.SelectionPace.parent_within_factor", "uses": ["Becoming.SelectionPace.parent_within_inflow", "Becoming.SelectionTerm.le_of_mul_le_mul"]}
+{"name": "Becoming.SelectionPace.parent_within_inflow", "uses": ["Becoming.SelectionPace.born_within_inflow", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.SelectionPace.response_sq_within_inflow", "uses": ["Becoming.Reproduction.Generations.response_sq_le", "Becoming.SelectionPace.number_spread_within_inflow", "Becoming.SelectionPace.numbered_family", "Becoming.SelectionPace.numbered_number", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.SelectionPace.response_within_carried", "uses": ["Becoming.SelectionPace.total_within_carried", "Becoming.mul_turn"]}
+{"name": "Becoming.SelectionPace.selection_within_carried", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.SelectionPace.mean_step_exact", "Becoming.SelectionPace.response_within_carried"]}
+{"name": "Becoming.SelectionPace.share_within_joint", "uses": ["Becoming.ListTests.append_nil", "Becoming.SelectionPace.share_within_rest"]}
+{"name": "Becoming.SelectionPace.share_within_power", "uses": ["Becoming.SelectionPace.total_within_power", "Becoming.mul_turn"]}
+{"name": "Becoming.SelectionPace.share_within_rest", "uses": ["Becoming.SelectionPace.born_within_inflow", "Becoming.SelectionPace.sum_exact", "Becoming.SelectionPace.total_carriers_unit", "Becoming.total_append", "Becoming.total_congr", "Becoming.total_const", "Becoming.total_le", "Becoming.total_ones"]}
+{"name": "Becoming.SelectionPace.standing_pinned", "uses": ["Becoming.Reproduction.mem_flatMap_cases"]}
+{"name": "Becoming.SelectionPace.standing_total", "uses": ["Becoming.Reproduction.born_flatMap", "Becoming.Reproduction.mem_flatMap_cases", "Becoming.total_const", "Becoming.total_le"]}
+{"name": "Becoming.SelectionPace.stands_of_need", "uses": []}
+{"name": "Becoming.SelectionPace.steps_to_move", "uses": ["Becoming.SelectionPace.moved_within_carried", "Becoming.between_of_mem_steps", "Becoming.steps_length", "Becoming.total_const", "Becoming.total_le"]}
+{"name": "Becoming.SelectionPace.stretch_within_carried", "uses": ["Becoming.SelectionPace.total_within_carried", "Becoming.steps_last"]}
+{"name": "Becoming.SelectionPace.sum_exact", "uses": ["Becoming.SelectionTerm.Generations.offspring_eq", "Becoming.SelectionTerm.lowered_exact", "Becoming.SelectionTerm.raised_exact", "Becoming.price"]}
+{"name": "Becoming.SelectionPace.total_carriers_le", "uses": []}
+{"name": "Becoming.SelectionPace.total_carriers_unit", "uses": []}
+{"name": "Becoming.SelectionPace.total_lineage", "uses": ["Becoming.SelectionPace.total_lineage_one", "Becoming.SelectionTerm.Generations.total_flatMap", "Becoming.total_add", "Becoming.total_append", "Becoming.total_congr"]}
+{"name": "Becoming.SelectionPace.total_lineage_one", "uses": ["Becoming.total_append"]}
+{"name": "Becoming.SelectionPace.total_within_carried", "uses": ["Becoming.SelectionPace.offspring_within_carried", "Becoming.total_congr", "Becoming.total_le", "Becoming.total_mul"]}
+{"name": "Becoming.SelectionPace.total_within_factor", "uses": ["Becoming.SelectionPace.lineage_sub", "Becoming.SelectionPace.parent_within_factor", "Becoming.SelectionPace.sum_exact", "Becoming.total_le", "Becoming.total_mul"]}
+{"name": "Becoming.SelectionPace.total_within_power", "uses": ["Becoming.SelectionPace.total_within_factor", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.SelectionPace.unfed_rise_shrinks", "uses": ["Becoming.SelectionPace.total_within_carried", "Becoming.SelectionTerm.le_of_mul_le_mul"]}
+{"name": "Becoming.SelectionPace.whole_within_power", "uses": ["Becoming.SelectionPace.total_within_power"]}

@@ -1,0 +1,56 @@
+{"name": "Becoming.Cuts.Attaches.brecOn", "uses": []}
+{"name": "Becoming.Cuts.Attaches.distinct", "uses": ["Becoming.Cuts.Attaches.brecOn"]}
+{"name": "Becoming.Cuts.Attaches.listed_once", "uses": ["Becoming.Cuts.links_of_mem", "Becoming.Cuts.links_split"]}
+{"name": "Becoming.Cuts.Attaches.suffix", "uses": []}
+{"name": "Becoming.Cuts.append_cons_assoc", "uses": []}
+{"name": "Becoming.Cuts.attached_link_separates", "uses": ["Becoming.Cuts.links_split", "Becoming.Cuts.not_within_unlinked", "Becoming.Cuts.within_attached_iff"]}
+{"name": "Becoming.Cuts.closure_unchanged_iff_bypassed", "uses": ["Becoming.WithinClosure.mono", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Cuts.exists_split", "uses": []}
+{"name": "Becoming.Cuts.joined_bypass_iff", "uses": ["Becoming.Cuts.attached_link_separates", "Becoming.Cuts.within_link_iff"]}
+{"name": "Becoming.Cuts.joined_cut_unchanged_iff", "uses": ["Becoming.Cuts.joined_bypass_iff", "Becoming.Cuts.link_cut_unchanged_iff_of_symm", "Becoming.Cuts.link_symm", "Becoming.Cuts.links_split", "Becoming.Cuts.links_symm", "Becoming.Cuts.within_congr"]}
+{"name": "Becoming.Cuts.link_cut_unchanged_iff", "uses": ["Becoming.Cuts.closure_unchanged_iff_bypassed"]}
+{"name": "Becoming.Cuts.link_cut_unchanged_iff_of_symm", "uses": ["Becoming.Cuts.link_cut_unchanged_iff", "Becoming.WithinClosure.symm"]}
+{"name": "Becoming.Cuts.link_symm", "uses": []}
+{"name": "Becoming.Cuts.links_mem", "uses": []}
+{"name": "Becoming.Cuts.links_of_link", "uses": ["Becoming.Cuts.links_of_mem", "Becoming.Cuts.links_symm"]}
+{"name": "Becoming.Cuts.links_of_mem", "uses": []}
+{"name": "Becoming.Cuts.links_split", "uses": []}
+{"name": "Becoming.Cuts.links_symm", "uses": ["Becoming.Cuts.link_symm"]}
+{"name": "Becoming.Cuts.mem_append_cases", "uses": []}
+{"name": "Becoming.Cuts.mem_append_right", "uses": []}
+{"name": "Becoming.Cuts.mem_set_apart", "uses": []}
+{"name": "Becoming.Cuts.mem_split", "uses": []}
+{"name": "Becoming.Cuts.mem_widen", "uses": []}
+{"name": "Becoming.Cuts.not_within_unlinked", "uses": []}
+{"name": "Becoming.Cuts.within_attached_iff", "uses": ["Becoming.Cuts.not_within_unlinked", "Becoming.Cuts.within_link_iff", "Becoming.Cuts.within_of_unlinked"]}
+{"name": "Becoming.Cuts.within_congr", "uses": ["Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Cuts.within_link_iff", "uses": ["Becoming.WithinClosure.mono", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Cuts.within_of_steps", "uses": ["Becoming.WithinClosure.refl", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Cuts.within_of_unlinked", "uses": []}
+{"name": "Becoming.Flow.GrownBy.attached_only", "uses": ["Becoming.Cuts.Attaches.suffix", "Becoming.Cuts.links_of_mem", "Becoming.Cuts.mem_append_cases", "Becoming.Cuts.mem_split", "Becoming.Flow.GrownBy.attaches", "Becoming.Flow.GrownBy.listed", "Becoming.Flow.GrownBy.takers"]}
+{"name": "Becoming.Flow.GrownBy.attaches", "uses": []}
+{"name": "Becoming.Flow.GrownBy.beside_iff", "uses": ["Becoming.Cuts.mem_set_apart", "Becoming.Cuts.within_of_steps", "Becoming.Flow.GrownBy.fresh", "Becoming.Flow.GrownBy.outside_of_link", "Becoming.Flow.GrownBy.outside_step", "Becoming.Flow.within_of_two_takers", "Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Flow.GrownBy.bypass_iff", "uses": ["Becoming.Cuts.joined_bypass_iff", "Becoming.Flow.GrownBy.attaches", "Becoming.Flow.GrownBy.beside_iff", "Becoming.Flow.GrownBy.within_outside_iff"]}
+{"name": "Becoming.Flow.GrownBy.cond_ne", "uses": ["Becoming.Cuts.Attaches.distinct", "Becoming.Cuts.Attaches.listed_once", "Becoming.Cuts.attached_link_separates", "Becoming.Cuts.links_of_link", "Becoming.Cuts.mem_append_cases", "Becoming.Cuts.mem_set_apart", "Becoming.Cuts.mem_widen", "Becoming.Flow.GrownBy.attaches", "Becoming.Flow.GrownBy.link_of_takers", "Becoming.Flow.GrownBy.takers", "Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.Flow.GrownBy.condition_needed", "uses": ["Becoming.Cuts.attached_link_separates", "Becoming.Cuts.mem_set_apart", "Becoming.Flow.GrownBy.attaches", "Becoming.Flow.GrownBy.takers", "Becoming.Flow.GrownBy.within_outside_iff", "Becoming.WithinClosure.mono", "Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.Flow.GrownBy.cut_unchanged_iff", "uses": ["Becoming.Cuts.joined_cut_unchanged_iff", "Becoming.Flow.GrownBy.attaches", "Becoming.Flow.GrownBy.beside_iff", "Becoming.Flow.GrownBy.system_iff", "Becoming.Flow.GrownBy.within_outside_iff"]}
+{"name": "Becoming.Flow.GrownBy.every_condition_needed", "uses": ["Becoming.Cuts.exists_split", "Becoming.Flow.GrownBy.condition_needed", "Becoming.Flow.GrownBy.listed"]}
+{"name": "Becoming.Flow.GrownBy.fresh", "uses": []}
+{"name": "Becoming.Flow.GrownBy.latest_alone", "uses": ["Becoming.Flow.GrownBy.attached_only", "Becoming.Flow.alone_beside_of_only"]}
+{"name": "Becoming.Flow.GrownBy.link_of_takers", "uses": ["Becoming.Flow.GrownBy.takers"]}
+{"name": "Becoming.Flow.GrownBy.listed", "uses": []}
+{"name": "Becoming.Flow.GrownBy.outside_of_link", "uses": ["Becoming.Cuts.links_mem", "Becoming.Cuts.mem_widen", "Becoming.Flow.GrownBy.cond_ne", "Becoming.Flow.GrownBy.fresh", "Becoming.Flow.GrownBy.takes_part_of_link"]}
+{"name": "Becoming.Flow.GrownBy.outside_step", "uses": ["Becoming.Cuts.links_of_link", "Becoming.Cuts.mem_split", "Becoming.Flow.GrownBy.link_of_takers", "Becoming.Flow.GrownBy.listed", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Flow.GrownBy.suffix", "uses": ["Becoming.Cuts.Attaches.suffix", "Becoming.Cuts.append_cons_assoc", "Becoming.Cuts.exists_split", "Becoming.Cuts.mem_append_cases", "Becoming.Cuts.mem_append_right", "Becoming.Flow.GrownBy.attaches", "Becoming.Flow.GrownBy.cond_ne", "Becoming.Flow.GrownBy.fresh", "Becoming.Flow.GrownBy.listed", "Becoming.Flow.GrownBy.takers"]}
+{"name": "Becoming.Flow.GrownBy.system_iff", "uses": ["Becoming.Cuts.links_mem", "Becoming.Cuts.within_of_steps", "Becoming.Flow.GrownBy.takes_part_of_link", "Becoming.Flow.GrownBy.within_outside_added_iff", "Becoming.Flow.within_of_two_takers", "Becoming.WithinClosure.mono", "Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.Flow.GrownBy.takers", "uses": []}
+{"name": "Becoming.Flow.GrownBy.takes_part_of_link", "uses": ["Becoming.Flow.GrownBy.takers"]}
+{"name": "Becoming.Flow.GrownBy.within_outside_added_iff", "uses": ["Becoming.Cuts.links_mem", "Becoming.Cuts.links_of_link", "Becoming.Cuts.within_of_steps", "Becoming.Flow.GrownBy.fresh", "Becoming.Flow.GrownBy.link_of_takers", "Becoming.Flow.GrownBy.listed", "Becoming.Flow.GrownBy.takes_part_of_link", "Becoming.WithinClosure.mono", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Flow.GrownBy.within_outside_iff", "uses": ["Becoming.Cuts.within_of_steps", "Becoming.Flow.GrownBy.outside_of_link", "Becoming.Flow.GrownBy.outside_step", "Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Flow.alone_beside_of_only", "uses": ["Becoming.Cuts.not_within_unlinked", "Becoming.Cuts.within_of_unlinked", "Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Flow.shares_iff_beside", "uses": []}
+{"name": "Becoming.Flow.system_unchanged_of_single", "uses": ["Becoming.Flow.system_unchanged_without_iff", "Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Flow.system_unchanged_without_iff", "uses": ["Becoming.Cuts.closure_unchanged_iff_bypassed", "Becoming.Cuts.within_congr", "Becoming.Flow.shares_iff_beside"]}
+{"name": "Becoming.Flow.withinSystem_of_no_part", "uses": ["Becoming.Cuts.not_within_unlinked", "Becoming.Cuts.within_of_unlinked", "Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Flow.withinSystem_two_takers_iff", "uses": ["Becoming.Cuts.within_link_iff", "Becoming.Cuts.within_of_steps", "Becoming.Flow.shares_iff_beside", "Becoming.WithinClosure.mono", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Flow.within_of_two_takers", "uses": ["Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl"]}

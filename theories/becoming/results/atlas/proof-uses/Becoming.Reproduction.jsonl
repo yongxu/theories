@@ -1,0 +1,110 @@
+{"name": "Becoming.Reproduction.Additive.additive", "uses": ["Becoming.Reproduction.Additive.normal"]}
+{"name": "Becoming.Reproduction.Additive.normal", "uses": ["Becoming.Reproduction.Breeding.normal_append"]}
+{"name": "Becoming.Reproduction.Breeding.additive_part_le", "uses": ["Becoming.Reproduction.Breeding.breeding_balance", "Becoming.Reproduction.additive_le", "Becoming.Reproduction.square_mul", "Becoming.SelectionTerm.le_of_mul_le_mul", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Reproduction.Breeding.breeding_balance", "uses": ["Becoming.Integers.Same.add", "Becoming.Integers.Same.of_eq", "Becoming.Integers.Same.swap", "Becoming.Integers.Same.symm", "Becoming.Integers.Same.trans", "Becoming.Reproduction.Breeding.combined_normal", "Becoming.Reproduction.Breeding.covPair_combination", "Becoming.Reproduction.Breeding.same_scale", "Becoming.Reproduction.Breeding.scale_plus", "Becoming.Reproduction.discord_self"]}
+{"name": "Becoming.Reproduction.Breeding.combined_normal", "uses": ["Becoming.Integers.Same.add", "Becoming.Integers.Same.of_eq", "Becoming.Integers.Same.trans", "Becoming.Reproduction.Breeding.same_scale", "Becoming.Reproduction.Breeding.scale_plus", "Becoming.Reproduction.Breeding.scale_scale"]}
+{"name": "Becoming.Reproduction.Breeding.concord_mul", "uses": ["Becoming.Reproduction.Breeding.excess_mul", "Becoming.mul_turn", "Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.Reproduction.Breeding.covPair_add", "uses": ["Becoming.Reproduction.Breeding.covariance_add"]}
+{"name": "Becoming.Reproduction.Breeding.covPair_combination", "uses": ["Becoming.Integers.Same.add", "Becoming.Integers.Same.of_eq", "Becoming.Integers.Same.refl", "Becoming.Integers.Same.symm", "Becoming.Integers.Same.trans", "Becoming.Reproduction.Breeding.covPair_add", "Becoming.Reproduction.Breeding.covPair_combine", "Becoming.Reproduction.Breeding.covPair_congr", "Becoming.Reproduction.Breeding.covPair_const", "Becoming.Reproduction.Breeding.same_move", "Becoming.Reproduction.Breeding.same_zero_plus"]}
+{"name": "Becoming.Reproduction.Breeding.covPair_combine", "uses": ["Becoming.Integers.Same.add", "Becoming.Integers.Same.of_eq", "Becoming.Integers.Same.trans", "Becoming.Reproduction.Breeding.covPair_add", "Becoming.Reproduction.Breeding.covPair_const", "Becoming.Reproduction.Breeding.covPair_mul"]}
+{"name": "Becoming.Reproduction.Breeding.covPair_congr", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.Reproduction.Breeding.covPair_const", "uses": ["Becoming.SelectionTerm.concord_alike", "Becoming.SelectionTerm.discord_alike"]}
+{"name": "Becoming.Reproduction.Breeding.covPair_mul", "uses": ["Becoming.Reproduction.Breeding.concord_mul", "Becoming.Reproduction.Breeding.discord_mul"]}
+{"name": "Becoming.Reproduction.Breeding.covPair_same", "uses": ["Becoming.SelectionTerm.covariation"]}
+{"name": "Becoming.Reproduction.Breeding.covariance_add", "uses": ["Becoming.Integers.Same.add", "Becoming.Integers.Same.of_eq", "Becoming.Integers.Same.symm", "Becoming.Integers.Same.trans", "Becoming.Reproduction.Breeding.covPair_same", "Becoming.total_add", "Becoming.total_congr"]}
+{"name": "Becoming.Reproduction.Breeding.discord_mul", "uses": ["Becoming.Reproduction.Breeding.excess_mul", "Becoming.mul_turn", "Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.Reproduction.Breeding.excess_mul", "uses": ["Becoming.Flow.excess_zero_of_le", "Becoming.SelectionTerm.excess_add_left", "Becoming.le_dest"]}
+{"name": "Becoming.Reproduction.Breeding.normal_append", "uses": ["Becoming.mem_append_cases"]}
+{"name": "Becoming.Reproduction.Breeding.one_amount", "uses": ["Becoming.Reproduction.Breeding.additive_part_le", "Becoming.Reproduction.Breeding.breeding_balance", "Becoming.Reproduction.Breeding.normal_append"]}
+{"name": "Becoming.Reproduction.Breeding.response", "uses": ["Becoming.Reproduction.Breeding.breeding_balance", "Becoming.SelectionTerm.Generations.mean_step", "Becoming.SelectionTerm.lowered_exact", "Becoming.SelectionTerm.raised_exact", "Becoming.add_right_cancel"]}
+{"name": "Becoming.Reproduction.Breeding.response_rises_iff", "uses": ["Becoming.Naturals.lt_of_mul_lt_mul_left", "Becoming.Reproduction.Breeding.response", "Becoming.SelectionTerm.le_of_mul_le_mul", "Becoming.SelectionTerm.lt_iff_of_balance"]}
+{"name": "Becoming.Reproduction.Breeding.same_move", "uses": []}
+{"name": "Becoming.Reproduction.Breeding.same_scale", "uses": []}
+{"name": "Becoming.Reproduction.Breeding.same_zero_plus", "uses": []}
+{"name": "Becoming.Reproduction.Breeding.scale_plus", "uses": []}
+{"name": "Becoming.Reproduction.Breeding.scale_scale", "uses": ["Becoming.mul_turn"]}
+{"name": "Becoming.Reproduction.Flow.born_le_given", "uses": ["Becoming.total_le", "Becoming.total_ones"]}
+{"name": "Becoming.Reproduction.Flow.born_le_given_family", "uses": ["Becoming.Reproduction.Flow.born_le_given", "Becoming.total_le"]}
+{"name": "Becoming.Reproduction.Flow.born_within_stock", "uses": ["Becoming.Flow.BalancesOn.runs_down", "Becoming.Reproduction.born_flatMap", "Becoming.Reproduction.mem_flatMap_cases", "Becoming.total_le", "Becoming.total_le_of_support", "Becoming.total_ones"]}
+{"name": "Becoming.Reproduction.Flow.closed_lineage_lowered", "uses": ["Becoming.Reproduction.Flow.last_reproducing", "Becoming.Reproduction.Flow.lineage_ends", "Becoming.Reproduction.Generations.ByNumber.discord_none", "Becoming.Reproduction.Generations.ByNumber.sum_eq", "Becoming.Reproduction.Generations.falls_step_iff", "Becoming.Reproduction.Generations.fell_step", "Becoming.SelectionTerm.Generations.empty_after"]}
+{"name": "Becoming.Reproduction.Flow.closed_not_exact", "uses": ["Becoming.Reproduction.Flow.closed_lineage_lowered", "Becoming.SelectionTerm.lowered_exact"]}
+{"name": "Becoming.Reproduction.Flow.last_reproducing", "uses": ["Becoming.Reproduction.search"]}
+{"name": "Becoming.Reproduction.Flow.lineage_ends", "uses": ["Becoming.Reproduction.Flow.reproducing_within", "Becoming.Reproduction.Generations.empty_from", "Becoming.between_of_mem_steps", "Becoming.le_dest", "Becoming.steps_ge", "Becoming.total_le"]}
+{"name": "Becoming.Reproduction.Flow.number_within_take", "uses": ["Becoming.Flow.DissipatesOn.takes_of_gives", "Becoming.Reproduction.Flow.born_le_given", "Becoming.Reproduction.exists_mem_of_length_pos", "Becoming.sign_le_one", "Becoming.sign_pos", "Becoming.total_le_of_support", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Reproduction.Flow.reproducing_le_takers", "uses": ["Becoming.Reproduction.Flow.takers_pos_of_born", "Becoming.SelectionTerm.Generations.born_eq", "Becoming.sign_le", "Becoming.sign_le_one"]}
+{"name": "Becoming.Reproduction.Flow.reproducing_within", "uses": ["Becoming.Flow.takers_within_on", "Becoming.Reproduction.Flow.reproducing_le_takers", "Becoming.between_of_mem_steps", "Becoming.total_le"]}
+{"name": "Becoming.Reproduction.Flow.takers_pos_of_born", "uses": ["Becoming.Flow.DissipatesOn.takes_of_gives", "Becoming.Reproduction.born_flatMap", "Becoming.Reproduction.exists_mem_of_length_pos", "Becoming.Reproduction.mem_flatMap_cases", "Becoming.sign_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Reproduction.Generations.ByNumber.concord_eq", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.Reproduction.Generations.ByNumber.discord_none", "uses": ["Becoming.Reproduction.excess_cross", "Becoming.SelectionTerm.pairs_zero"]}
+{"name": "Becoming.Reproduction.Generations.ByNumber.kept_exact_iff", "uses": ["Becoming.Reproduction.Generations.ByNumber.concord_eq", "Becoming.Reproduction.Generations.ByNumber.discord_none", "Becoming.Reproduction.Generations.ByNumber.sum_eq", "Becoming.Reproduction.concord_self_zero_iff", "Becoming.SelectionTerm.Generations.balanced_exact_iff", "Becoming.SelectionTerm.Generations.kept_step_iff"]}
+{"name": "Becoming.Reproduction.Generations.ByNumber.not_lower_step", "uses": ["Becoming.Reproduction.Generations.ByNumber.step"]}
+{"name": "Becoming.Reproduction.Generations.ByNumber.rises_exact_iff", "uses": ["Becoming.Reproduction.Generations.ByNumber.discord_none", "Becoming.Reproduction.Generations.ByNumber.sum_eq", "Becoming.SelectionTerm.Generations.raises_exact_iff", "Becoming.SelectionTerm.Generations.rises_step_iff"]}
+{"name": "Becoming.Reproduction.Generations.ByNumber.step", "uses": ["Becoming.Reproduction.Generations.ByNumber.discord_none", "Becoming.Reproduction.Generations.ByNumber.sum_eq", "Becoming.SelectionTerm.Generations.mean_step"]}
+{"name": "Becoming.Reproduction.Generations.ByNumber.sum_eq", "uses": ["Becoming.SelectionTerm.Generations.born_eq", "Becoming.total_congr"]}
+{"name": "Becoming.Reproduction.Generations.empty_from", "uses": ["Becoming.SelectionTerm.Generations.empty_after"]}
+{"name": "Becoming.Reproduction.Generations.falls_step_iff", "uses": ["Becoming.SelectionTerm.Generations.mean_step", "Becoming.SelectionTerm.lt_iff_of_balance"]}
+{"name": "Becoming.Reproduction.Generations.fell_step", "uses": ["Becoming.Reproduction.search", "Becoming.SelectionTerm.Generations.not_lower"]}
+{"name": "Becoming.Reproduction.Generations.response_sq_le", "uses": ["Becoming.Naturals.sub_le_of_le_add", "Becoming.Reproduction.additive_le", "Becoming.SelectionTerm.Generations.mean_step", "Becoming.SelectionTerm.lowered_exact", "Becoming.SelectionTerm.raised_exact"]}
+{"name": "Becoming.Reproduction.Interaction.interaction", "uses": ["Becoming.Reproduction.Interaction.normal"]}
+{"name": "Becoming.Reproduction.Interaction.normal", "uses": ["Becoming.Reproduction.Breeding.normal_append"]}
+{"name": "Becoming.Reproduction.Mutation.above_always", "uses": ["Becoming.Reproduction.Mutation.above_stays"]}
+{"name": "Becoming.Reproduction.Mutation.above_stays", "uses": ["Becoming.Naturals.add_congr", "Becoming.Naturals.mul_right_comm", "Becoming.add_mul_split"]}
+{"name": "Becoming.Reproduction.Mutation.balanced_iff", "uses": ["Becoming.Reproduction.Mutation.kept_iff", "Becoming.Reproduction.Mutation.size_first", "Becoming.Reproduction.Mutation.size_next", "Becoming.Reproduction.Mutation.sum_first", "Becoming.Reproduction.Mutation.sum_next", "Becoming.SelectionTerm.Generations.kept_step_iff"]}
+{"name": "Becoming.Reproduction.Mutation.below_always", "uses": ["Becoming.Reproduction.Mutation.below_stays"]}
+{"name": "Becoming.Reproduction.Mutation.below_stays", "uses": ["Becoming.Naturals.add_congr", "Becoming.Naturals.mul_right_comm", "Becoming.add_mul_split"]}
+{"name": "Becoming.Reproduction.Mutation.falls_iff", "uses": ["Becoming.Naturals.lt_of_mul_lt_mul_left", "Becoming.Reproduction.Mutation.step_balance", "Becoming.SelectionTerm.lt_iff_of_balance"]}
+{"name": "Becoming.Reproduction.Mutation.falls_of_outrun", "uses": ["Becoming.Reproduction.Mutation.falls_iff"]}
+{"name": "Becoming.Reproduction.Mutation.kept_iff", "uses": ["Becoming.Reproduction.Mutation.step_balance", "Becoming.SelectionTerm.eq_iff_of_balance"]}
+{"name": "Becoming.Reproduction.Mutation.kept_share", "uses": ["Becoming.Naturals.add_left_cancel", "Becoming.add_mul_split", "Becoming.add_right_cancel"]}
+{"name": "Becoming.Reproduction.Mutation.lowered_count", "uses": ["Becoming.Reproduction.Mutation.total_kinds", "Becoming.total_congr", "Becoming.total_replicate"]}
+{"name": "Becoming.Reproduction.Mutation.never_rises", "uses": ["Becoming.Reproduction.Mutation.step_balance", "Becoming.SelectionTerm.lt_iff_of_balance"]}
+{"name": "Becoming.Reproduction.Mutation.not_falls_below", "uses": ["Becoming.Reproduction.Mutation.below_always", "Becoming.Reproduction.Mutation.step_balance", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Reproduction.Mutation.rises_iff", "uses": ["Becoming.Naturals.lt_of_mul_lt_mul_left", "Becoming.Reproduction.Mutation.step_balance", "Becoming.SelectionTerm.lt_iff_of_balance"]}
+{"name": "Becoming.Reproduction.Mutation.size_first", "uses": ["Becoming.Naturals.add_congr", "Becoming.Reproduction.Mutation.total_kinds", "Becoming.total_ones"]}
+{"name": "Becoming.Reproduction.Mutation.size_next", "uses": ["Becoming.Reproduction.Mutation.total_kinds", "Becoming.SelectionTerm.Generations.total_flatMap", "Becoming.total_ones", "Becoming.total_replicate"]}
+{"name": "Becoming.Reproduction.Mutation.step_balance", "uses": ["Becoming.Naturals.add_congr", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Reproduction.Mutation.sum_first", "uses": ["Becoming.Reproduction.Mutation.total_kinds"]}
+{"name": "Becoming.Reproduction.Mutation.sum_next", "uses": ["Becoming.Reproduction.Mutation.total_kinds", "Becoming.SelectionTerm.Generations.total_flatMap", "Becoming.total_replicate"]}
+{"name": "Becoming.Reproduction.Mutation.total_kinds", "uses": ["Becoming.Naturals.add_congr", "Becoming.total_append", "Becoming.total_replicate"]}
+{"name": "Becoming.Reproduction.OnePool.balances", "uses": []}
+{"name": "Becoming.Reproduction.OnePool.descended", "uses": []}
+{"name": "Becoming.Reproduction.OnePool.descended.family_late", "uses": []}
+{"name": "Becoming.Reproduction.OnePool.dissipates", "uses": []}
+{"name": "Becoming.Reproduction.OnePool.one_pool", "uses": ["Becoming.Flow.Balances.on", "Becoming.Reproduction.Flow.closed_lineage_lowered", "Becoming.Reproduction.Flow.lineage_ends", "Becoming.Reproduction.OnePool.balances", "Becoming.Reproduction.OnePool.descended", "Becoming.Reproduction.OnePool.dissipates", "Becoming.Reproduction.OnePool.within"]}
+{"name": "Becoming.Reproduction.OnePool.within", "uses": []}
+{"name": "Becoming.Reproduction.Relay.balances", "uses": ["Becoming.Reproduction.Relay.exchange"]}
+{"name": "Becoming.Reproduction.Relay.descended", "uses": ["Becoming.Reproduction.Relay.descends", "Becoming.Reproduction.Relay.family_eq", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Reproduction.Relay.descends", "uses": []}
+{"name": "Becoming.Reproduction.Relay.exchange", "uses": []}
+{"name": "Becoming.Reproduction.Relay.family_eq", "uses": []}
+{"name": "Becoming.Reproduction.Relay.not_dissipates", "uses": []}
+{"name": "Becoming.Reproduction.Relay.relay", "uses": ["Becoming.Reproduction.Relay.balances", "Becoming.Reproduction.Relay.descended", "Becoming.Reproduction.Relay.family_eq", "Becoming.Reproduction.Relay.not_dissipates"]}
+{"name": "Becoming.Reproduction.Spread.spread", "uses": []}
+{"name": "Becoming.Reproduction.Threshold.at_threshold", "uses": ["Becoming.Reproduction.Mutation.balanced_iff"]}
+{"name": "Becoming.Reproduction.Unrelated.unrelated", "uses": []}
+{"name": "Becoming.Reproduction.additive_le", "uses": ["Becoming.Reproduction.bound_sq", "Becoming.Reproduction.discord_self", "Becoming.Reproduction.total_dist", "Becoming.Reproduction.total_pairsOf", "Becoming.Reproduction.twice_mul", "Becoming.SelectionTerm.le_of_mul_le_mul"]}
+{"name": "Becoming.Reproduction.additive_self", "uses": ["Becoming.Reproduction.discord_self"]}
+{"name": "Becoming.Reproduction.born_flatMap", "uses": ["Becoming.SelectionTerm.Generations.total_flatMap", "Becoming.total_congr", "Becoming.total_ones"]}
+{"name": "Becoming.Reproduction.bound_sq", "uses": ["Becoming.Naturals.twice_le", "Becoming.Reproduction.cross_mul", "Becoming.Reproduction.square_mul", "Becoming.SelectionTerm.le_of_mul_le_mul", "Becoming.SelectionTerm.pairs_add", "Becoming.SelectionTerm.pairs_cross", "Becoming.SelectionTerm.pairs_cross'", "Becoming.total_congr", "Becoming.total_le", "Becoming.total_mul"]}
+{"name": "Becoming.Reproduction.concord_self", "uses": []}
+{"name": "Becoming.Reproduction.concord_self_zero_iff", "uses": ["Becoming.Reproduction.le_of_excess_zero", "Becoming.SelectionTerm.pairs_zero", "Becoming.excess_self", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.Reproduction.covariance_sq_le", "uses": ["Becoming.Reproduction.additive_le"]}
+{"name": "Becoming.Reproduction.cross_mul", "uses": ["Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Reproduction.discord_self", "uses": ["Becoming.Reproduction.excess_cross", "Becoming.SelectionTerm.pairs_zero"]}
+{"name": "Becoming.Reproduction.dist_mul", "uses": ["Becoming.Naturals.add_congr", "Becoming.add_mul_split"]}
+{"name": "Becoming.Reproduction.excess_cross", "uses": ["Becoming.Flow.excess_zero_of_le"]}
+{"name": "Becoming.Reproduction.exists_mem_of_length_pos", "uses": []}
+{"name": "Becoming.Reproduction.le_of_excess_zero", "uses": ["Becoming.excess_pos"]}
+{"name": "Becoming.Reproduction.mem_flatMap_cases", "uses": ["Becoming.mem_append_cases"]}
+{"name": "Becoming.Reproduction.never_against", "uses": ["Becoming.Reproduction.variation"]}
+{"name": "Becoming.Reproduction.none_iff_uniform", "uses": ["Becoming.Naturals.add_left_cancel", "Becoming.Reproduction.concord_self_zero_iff", "Becoming.Reproduction.variation"]}
+{"name": "Becoming.Reproduction.number_never_against", "uses": ["Becoming.Reproduction.never_against"]}
+{"name": "Becoming.Reproduction.number_none_iff", "uses": ["Becoming.Reproduction.none_iff_uniform"]}
+{"name": "Becoming.Reproduction.number_variation", "uses": ["Becoming.Reproduction.variation"]}
+{"name": "Becoming.Reproduction.search", "uses": []}
+{"name": "Becoming.Reproduction.square_mul", "uses": ["Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.Reproduction.total_bind", "uses": ["Becoming.total_append"]}
+{"name": "Becoming.Reproduction.total_dist", "uses": ["Becoming.Reproduction.dist_mul", "Becoming.SelectionTerm.concord_swap", "Becoming.SelectionTerm.discord_swap", "Becoming.SelectionTerm.pairs_add", "Becoming.total_congr"]}
+{"name": "Becoming.Reproduction.total_pairsOf", "uses": ["Becoming.Reproduction.total_bind", "Becoming.total_congr", "Becoming.total_map"]}
+{"name": "Becoming.Reproduction.twice_mul", "uses": ["Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.Reproduction.variation", "uses": ["Becoming.Reproduction.discord_self", "Becoming.SelectionTerm.covariation"]}

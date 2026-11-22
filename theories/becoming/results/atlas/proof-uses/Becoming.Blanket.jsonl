@@ -1,0 +1,32 @@
+{"name": "Becoming.Blanket.Blanketed.agent_through_sensory", "uses": ["Becoming.Blanket.congr3"]}
+{"name": "Becoming.Blanket.Blanketed.external_through_blanket", "uses": ["Becoming.Blanket.congr3"]}
+{"name": "Becoming.Blanket.Blanketed.internal_through_blanket", "uses": ["Becoming.Blanket.Blanketed.agent_through_sensory"]}
+{"name": "Becoming.Blanket.Blanketed.reads_through_blanket", "uses": ["Becoming.Blanket.Blanketed.internal_through_blanket"]}
+{"name": "Becoming.Blanket.Blanketed.through_reading", "uses": ["Becoming.Blanket.congr3"]}
+{"name": "Becoming.Blanket.Blanketed.world_through_active", "uses": ["Becoming.Blanket.congr3"]}
+{"name": "Becoming.Blanket.Deaf.lumps", "uses": []}
+{"name": "Becoming.Blanket.ThresholdDrain.alike_before_four", "uses": []}
+{"name": "Becoming.Blanket.ThresholdDrain.any_model", "uses": ["Becoming.Blanket.Blanketed.reads_through_blanket", "Becoming.Blanket.ThresholdDrain.blanket_alike"]}
+{"name": "Becoming.Blanket.ThresholdDrain.blanket_alike", "uses": ["Becoming.Blanket.Blanketed.agent_through_sensory", "Becoming.Blanket.ThresholdDrain.sensed_alike"]}
+{"name": "Becoming.Blanket.ThresholdDrain.blanket_iff_through", "uses": ["Becoming.Blanket.ThresholdDrain.sensory_is_admission", "Becoming.Blanket.ThresholdDrain.sensory_succ", "Becoming.bool_eq_of_iff"]}
+{"name": "Becoming.Blanket.ThresholdDrain.ended_rests", "uses": []}
+{"name": "Becoming.Blanket.ThresholdDrain.external_course", "uses": []}
+{"name": "Becoming.Blanket.ThresholdDrain.reads_threshold", "uses": []}
+{"name": "Becoming.Blanket.ThresholdDrain.sensed_alike", "uses": []}
+{"name": "Becoming.Blanket.ThresholdDrain.sensed_at_break", "uses": []}
+{"name": "Becoming.Blanket.ThresholdDrain.sensory_apart_at_four", "uses": []}
+{"name": "Becoming.Blanket.ThresholdDrain.sensory_is_admission", "uses": []}
+{"name": "Becoming.Blanket.ThresholdDrain.sensory_succ", "uses": ["Becoming.Blanket.ThresholdDrain.external_course"]}
+{"name": "Becoming.Blanket.ThresholdDrain.short_rests", "uses": ["Becoming.Blanket.ThresholdDrain.ended_rests"]}
+{"name": "Becoming.Blanket.congr3", "uses": []}
+{"name": "Becoming.Blanket.forbids_iff", "uses": ["Becoming.Blanket.le_mass_of_mem", "Becoming.Blanket.unweighted_share"]}
+{"name": "Becoming.Blanket.le_mass_of_mem", "uses": []}
+{"name": "Becoming.Blanket.least_surprisal", "uses": ["Becoming.Blanket.le_mass_of_mem", "Becoming.Blanket.point_whole", "Becoming.ConditionalWeights.share_within"]}
+{"name": "Becoming.Blanket.point_forbids_rest", "uses": []}
+{"name": "Becoming.Blanket.point_is_restrict", "uses": []}
+{"name": "Becoming.Blanket.point_whole", "uses": ["Becoming.ConditionalWeights.mass_congr"]}
+{"name": "Becoming.Blanket.read_off_admits", "uses": ["Becoming.Blanket.le_mass_of_mem", "Becoming.Blanket.visits_pos"]}
+{"name": "Becoming.Blanket.unweighted_share", "uses": ["Becoming.ConditionalWeights.mass_congr", "Becoming.ConditionalWeights.mass_none"]}
+{"name": "Becoming.Blanket.visits_le_succ", "uses": []}
+{"name": "Becoming.Blanket.visits_pos", "uses": ["Becoming.Blanket.visits_le_succ"]}
+{"name": "Becoming.Blanket.visits_zero", "uses": []}

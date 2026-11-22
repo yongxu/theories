@@ -1,0 +1,17 @@
+{"name": "Becoming.PoolCourse.admits_alike", "uses": []}
+{"name": "Becoming.PoolCourse.alone_never_apart", "uses": ["Becoming.PoolCourse.keeper_alike"]}
+{"name": "Becoming.PoolCourse.alone_through", "uses": []}
+{"name": "Becoming.PoolCourse.called_apart", "uses": ["Becoming.PoolCourse.reader_apart", "Becoming.Web.apart_while_member"]}
+{"name": "Becoming.PoolCourse.called_not_through", "uses": ["Becoming.PoolCourse.keeper_alike"]}
+{"name": "Becoming.PoolCourse.keeper_alike", "uses": ["Becoming.PoolCourse.admits_alike"]}
+{"name": "Becoming.PoolCourse.reader_apart", "uses": []}
+{"name": "Becoming.PoolCourse.scheduled_apart", "uses": ["Becoming.PoolCourse.keeper_alike", "Becoming.PoolCourse.reader_apart", "Becoming.Web.apart_while_member"]}
+{"name": "Becoming.PoolCourse.scheduled_through", "uses": []}
+{"name": "Becoming.Web.AlikeThroughAll.of_same", "uses": []}
+{"name": "Becoming.Web.RecruitsThrough.alike_iff", "uses": ["Becoming.Web.AlikeThroughAll.of_same", "Becoming.Web.RecruitsThrough.members_alike", "Becoming.Web.RecruitsThrough.members_alike_always"]}
+{"name": "Becoming.Web.RecruitsThrough.first_apart", "uses": ["Becoming.Web.AlikeThroughAll.of_same", "Becoming.Web.RecruitsThrough.members_alike"]}
+{"name": "Becoming.Web.RecruitsThrough.members_alike", "uses": []}
+{"name": "Becoming.Web.RecruitsThrough.members_alike_always", "uses": ["Becoming.Web.AlikeThroughAll.of_same"]}
+{"name": "Becoming.Web.RecruitsThrough.selects_alike", "uses": ["Becoming.Web.RecruitsThrough.alike_iff"]}
+{"name": "Becoming.Web.apart_while_member", "uses": []}
+{"name": "Becoming.Web.selects_alike_of_members", "uses": []}

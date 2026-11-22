@@ -1,0 +1,49 @@
+{"name": "Becoming.ChoiceOccasions.above_in_every_containing_iff_reach", "uses": ["Becoming.ChoiceOccasions.above_in_every_iff_reach", "Becoming.ChoiceOccasions.accords_withPairs_iff"]}
+{"name": "Becoming.ChoiceOccasions.above_in_some_containing_of_unreached", "uses": ["Becoming.ChoiceOccasions.above_in_some_of_unreached", "Becoming.ChoiceOccasions.accords_withPairs_iff"]}
+{"name": "Becoming.ChoiceOccasions.accorded_containing_iff", "uses": ["Becoming.ChoiceOccasions.accorded_iff_noCycle", "Becoming.ChoiceOccasions.accords_withPairs_iff"]}
+{"name": "Becoming.ChoiceOccasions.accords_withPairs_iff", "uses": []}
+{"name": "Becoming.ChoiceOccasions.contains_iff_increasingInOwnOn", "uses": ["Becoming.Weighting.WidensOn.ne"]}
+{"name": "Becoming.ChoiceOccasions.increasingInOwnOn_of_keeping", "uses": []}
+{"name": "Becoming.ChoiceOccasions.keeping_above_ending", "uses": ["Becoming.ChoiceOccasions.accorded_containing_iff", "Becoming.ChoiceOccasions.noCycle_withPairs_of_kept"]}
+{"name": "Becoming.ChoiceOccasions.noCycle_withPairs_of_kept", "uses": ["Becoming.ChoiceOccasions.reach_withPairs_of_kept", "Becoming.ChoiceOccasions.shown_withPairs_iff", "Becoming.«及之首步»"]}
+{"name": "Becoming.ChoiceOccasions.not_reach_of_unmet", "uses": ["Becoming.ChoiceOccasions.shown_withPairs_iff", "Becoming.«及之首步»"]}
+{"name": "Becoming.ChoiceOccasions.reach_withPairs_of_kept", "uses": ["Becoming.ChoiceOccasions.shown_withPairs_iff", "Becoming.«及之首步»"]}
+{"name": "Becoming.ChoiceOccasions.reversed_off_met", "uses": ["Becoming.ChoiceOccasions.above_in_some_containing_of_unreached", "Becoming.ChoiceOccasions.contains_iff_increasingInOwnOn", "Becoming.ChoiceOccasions.not_reach_of_unmet", "Becoming.Weighting.WidensOn.ne"]}
+{"name": "Becoming.ChoiceOccasions.selfConcerned_consistent_iff", "uses": ["Becoming.ChoiceOccasions.accorded_containing_iff", "Becoming.ChoiceOccasions.contains_iff_increasingInOwnOn"]}
+{"name": "Becoming.ChoiceOccasions.selfConcerned_consistent_of_allOrNone", "uses": ["Becoming.ChoiceOccasions.selfConcerned_consistent_of_kept", "Becoming.Weighting.adds_ends_of_allOrNone"]}
+{"name": "Becoming.ChoiceOccasions.selfConcerned_consistent_of_kept", "uses": ["Becoming.ChoiceOccasions.increasingInOwnOn_of_keeping", "Becoming.ChoiceOccasions.keeping_above_ending"]}
+{"name": "Becoming.ChoiceOccasions.shown_withPairs_iff", "uses": []}
+{"name": "Becoming.Flow.member_after_never_overdrew", "uses": ["Becoming.GroupEnding.Flow.coupled_generation_childless"]}
+{"name": "Becoming.Flow.persisting_consistent_with_selfConcern", "uses": ["Becoming.ChoiceOccasions.selfConcerned_consistent_of_kept", "Becoming.Flow.persists_never_overdraws"]}
+{"name": "Becoming.Flow.persisting_keeping_above_ending", "uses": ["Becoming.ChoiceOccasions.keeping_above_ending", "Becoming.Flow.persists_never_overdraws"]}
+{"name": "Becoming.Flow.persists_never_overdraws", "uses": ["Becoming.Flow.member_after_never_overdrew"]}
+{"name": "Becoming.Flow.persists_not_listsAdmitted", "uses": ["Becoming.ListTests.mem_flatMap_iff", "Becoming.Web.lt_stepBound"]}
+{"name": "Becoming.PersistingChoices.Crossed.b₁_ne_a₁", "uses": []}
+{"name": "Becoming.PersistingChoices.Crossed.b₂_ne_a₂", "uses": []}
+{"name": "Becoming.PersistingChoices.Crossed.not_selfConcerned", "uses": ["Becoming.PersistingChoices.Crossed.b₁_ne_a₁", "Becoming.PersistingChoices.Crossed.b₂_ne_a₂", "Becoming.PersistingChoices.Crossed.widens₁", "Becoming.PersistingChoices.Crossed.widens₂"]}
+{"name": "Becoming.PersistingChoices.Crossed.widens₁", "uses": []}
+{"name": "Becoming.PersistingChoices.Crossed.widens₂", "uses": []}
+{"name": "Becoming.PersistingChoices.Forgoing.acting", "uses": []}
+{"name": "Becoming.PersistingChoices.Forgoing.adds", "uses": []}
+{"name": "Becoming.PersistingChoices.Forgoing.balances", "uses": ["Becoming.PersistingChoices.Forgoing.beq_self"]}
+{"name": "Becoming.PersistingChoices.Forgoing.beq_self", "uses": []}
+{"name": "Becoming.PersistingChoices.Forgoing.beq_succ", "uses": []}
+{"name": "Becoming.PersistingChoices.Forgoing.coupled", "uses": ["Becoming.PersistingChoices.Forgoing.family_eq"]}
+{"name": "Becoming.PersistingChoices.Forgoing.dependent", "uses": []}
+{"name": "Becoming.PersistingChoices.Forgoing.descended", "uses": ["Becoming.PersistingChoices.Forgoing.beq_self", "Becoming.PersistingChoices.Forgoing.beq_succ", "Becoming.PersistingChoices.Forgoing.family_eq"]}
+{"name": "Becoming.PersistingChoices.Forgoing.family_eq", "uses": []}
+{"name": "Becoming.PersistingChoices.Forgoing.gated", "uses": []}
+{"name": "Becoming.PersistingChoices.Forgoing.keeping_above_drain", "uses": ["Becoming.ChoiceOccasions.keeping_above_ending", "Becoming.PersistingChoices.Forgoing.kept", "Becoming.PersistingChoices.Forgoing.noCycle"]}
+{"name": "Becoming.PersistingChoices.Forgoing.kept", "uses": []}
+{"name": "Becoming.PersistingChoices.Forgoing.met", "uses": []}
+{"name": "Becoming.PersistingChoices.Forgoing.more_ne_fewer", "uses": []}
+{"name": "Becoming.PersistingChoices.Forgoing.never_overdraws", "uses": ["Becoming.Flow.persists_never_overdraws", "Becoming.PersistingChoices.Forgoing.acting", "Becoming.PersistingChoices.Forgoing.balances", "Becoming.PersistingChoices.Forgoing.coupled", "Becoming.PersistingChoices.Forgoing.dependent", "Becoming.PersistingChoices.Forgoing.descended", "Becoming.PersistingChoices.Forgoing.gated", "Becoming.PersistingChoices.Forgoing.persists"]}
+{"name": "Becoming.PersistingChoices.Forgoing.noCycle", "uses": ["Becoming.ChoiceOccasions.accorded_iff_noCycle", "Becoming.PersistingChoices.Forgoing.order_accords", "Becoming.PersistingChoices.Forgoing.order_strict"]}
+{"name": "Becoming.PersistingChoices.Forgoing.not_selfConcerned", "uses": ["Becoming.PersistingChoices.Forgoing.adds", "Becoming.PersistingChoices.Forgoing.met", "Becoming.PersistingChoices.Forgoing.more_ne_fewer", "Becoming.PersistingChoices.Forgoing.widens"]}
+{"name": "Becoming.PersistingChoices.Forgoing.order_accords", "uses": []}
+{"name": "Becoming.PersistingChoices.Forgoing.order_strict", "uses": []}
+{"name": "Becoming.PersistingChoices.Forgoing.persists", "uses": ["Becoming.PersistingChoices.Forgoing.family_eq"]}
+{"name": "Becoming.PersistingChoices.Forgoing.persists_not_selfConcerned", "uses": ["Becoming.PersistingChoices.Forgoing.acting", "Becoming.PersistingChoices.Forgoing.balances", "Becoming.PersistingChoices.Forgoing.dependent", "Becoming.PersistingChoices.Forgoing.descended", "Becoming.PersistingChoices.Forgoing.kept", "Becoming.PersistingChoices.Forgoing.not_selfConcerned", "Becoming.PersistingChoices.Forgoing.order_accords", "Becoming.PersistingChoices.Forgoing.persists"]}
+{"name": "Becoming.PersistingChoices.Forgoing.widens", "uses": []}
+{"name": "Becoming.Weighting.WidensOn.ne", "uses": []}
+{"name": "Becoming.Weighting.adds_ends_of_allOrNone", "uses": []}

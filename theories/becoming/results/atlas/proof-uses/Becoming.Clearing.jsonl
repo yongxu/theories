@@ -1,0 +1,14 @@
+{"name": "Becoming.Clearing.admitted_all_without", "uses": ["Becoming.Clearing.admitted_without", "Becoming.Clearing.withheld", "Becoming.Flow.WithheldLevels.unique"]}
+{"name": "Becoming.Clearing.admitted_without", "uses": ["Becoming.Clearing.withheld", "Becoming.Flow.WithheldLevels.unique"]}
+{"name": "Becoming.Clearing.balances", "uses": ["Becoming.Frontier.burns"]}
+{"name": "Becoming.Clearing.centers_disagree", "uses": ["Becoming.Clearing.admitted_without", "Becoming.Clearing.loses_beyond", "Becoming.Clearing.unsupported_with", "Becoming.Web.retains_bounded_iff"]}
+{"name": "Becoming.Clearing.dependent", "uses": []}
+{"name": "Becoming.Clearing.dissipative", "uses": ["Becoming.Frontier.burning_self", "Becoming.le_total_of_mem", "Becoming.sign_le", "Becoming.sign_le_one", "Becoming.total_le_at", "Becoming.total_zero"]}
+{"name": "Becoming.Clearing.fed", "uses": ["Becoming.Frontier.burning_self"]}
+{"name": "Becoming.Clearing.fedBy_source", "uses": []}
+{"name": "Becoming.Clearing.loses_beyond", "uses": ["Becoming.Clearing.admitted_without", "Becoming.Clearing.dependent", "Becoming.Clearing.unsupported_with"]}
+{"name": "Becoming.Clearing.narrows", "uses": ["Becoming.Clearing.admitted_without", "Becoming.Clearing.balances", "Becoming.Clearing.unsupported_with", "Becoming.Flow.Balances.opens_nothing"]}
+{"name": "Becoming.Clearing.renewing_over_resource", "uses": ["Becoming.Clearing.undermines_within_renewal", "Becoming.Web.RenewingAt.not_undermining"]}
+{"name": "Becoming.Clearing.undermines_within_renewal", "uses": ["Becoming.Clearing.balances", "Becoming.Clearing.dependent", "Becoming.Clearing.dissipative", "Becoming.Clearing.fed", "Becoming.Web.MetAbove.now"]}
+{"name": "Becoming.Clearing.unsupported_with", "uses": []}
+{"name": "Becoming.Clearing.withheld", "uses": ["Becoming.Frontier.burns"]}

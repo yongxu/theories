@@ -1,0 +1,17 @@
+{"name": "Becoming.Learnable.Pair.first_not_predicts", "uses": ["Becoming.Learnable.still_not_predicts_on_both"]}
+{"name": "Becoming.Learnable.Pair.not_lumped", "uses": []}
+{"name": "Becoming.Learnable.Pair.stays", "uses": ["Becoming.Learnable.orbit_of_still"]}
+{"name": "Becoming.Learnable.Pair.whole_predicts", "uses": ["Becoming.Learnable.Pair.stays", "Becoming.Learnable.predicts_through"]}
+{"name": "Becoming.Learnable.agree_of_predicts_both", "uses": ["Becoming.Learnable.prefixes_same"]}
+{"name": "Becoming.Learnable.claim_not_right_on_both", "uses": ["Becoming.Learnable.prefixes_same"]}
+{"name": "Becoming.Learnable.firstFit_congr", "uses": []}
+{"name": "Becoming.Learnable.learnable_iff", "uses": ["Becoming.Identification.firstFit_found", "Becoming.Identification.firstFit_sound", "Becoming.Identification.prefix_eq_iff", "Becoming.Law.sameFuture_iff_below", "Becoming.Learnable.agree_of_predicts_both", "Becoming.Learnable.firstFit_congr", "Becoming.Learning.prefix_length"]}
+{"name": "Becoming.Learnable.learnable_of_lumped", "uses": ["Becoming.Learnable.learnable_iff"]}
+{"name": "Becoming.Learnable.missed_on_one", "uses": ["Becoming.Learnable.prefixes_same"]}
+{"name": "Becoming.Learnable.not_predicts_on_both", "uses": ["Becoming.Learnable.agree_of_predicts_both"]}
+{"name": "Becoming.Learnable.orbit_of_still", "uses": ["Becoming.Law.fixed_rests"]}
+{"name": "Becoming.Learnable.predicts_through", "uses": ["Becoming.Identification.held_byElimination_rests"]}
+{"name": "Becoming.Learnable.prefixes_same", "uses": ["Becoming.Learning.prefix_congr"]}
+{"name": "Becoming.Learnable.still_learnable_iff_lumped", "uses": ["Becoming.Learnable.learnable_of_lumped", "Becoming.Learnable.still_lumped_of_predicts"]}
+{"name": "Becoming.Learnable.still_lumped_of_predicts", "uses": ["Becoming.Learnable.agree_of_predicts_both", "Becoming.Learnable.orbit_of_still"]}
+{"name": "Becoming.Learnable.still_not_predicts_on_both", "uses": ["Becoming.Learnable.not_predicts_on_both", "Becoming.Learnable.orbit_of_still"]}

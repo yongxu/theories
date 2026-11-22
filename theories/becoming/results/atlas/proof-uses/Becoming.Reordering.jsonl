@@ -1,0 +1,173 @@
+{"name": "Becoming.EachStep.always", "uses": []}
+{"name": "Becoming.EachStep.append", "uses": []}
+{"name": "Becoming.EachStep.mono", "uses": []}
+{"name": "Becoming.Exchanged.balance_first", "uses": ["Becoming.Exchanged.fall_first", "Becoming.Exchanged.rise_first", "Becoming.balance_iff_change", "Becoming.eq_iff_of_sides"]}
+{"name": "Becoming.Exchanged.balance_second", "uses": ["Becoming.Exchanged.fall_second", "Becoming.Exchanged.rise_second", "Becoming.balance_iff_change", "Becoming.eq_iff_of_sides"]}
+{"name": "Becoming.Exchanged.fall_away", "uses": ["Becoming.ne_succ_of_ne"]}
+{"name": "Becoming.Exchanged.fall_count", "uses": ["Becoming.Exchanged.fall_away", "Becoming.Exchanged.fall_first", "Becoming.Exchanged.fall_second", "Becoming.total_swapped"]}
+{"name": "Becoming.Exchanged.fall_first", "uses": ["Becoming.excess_of_sum", "Becoming.ne_first"]}
+{"name": "Becoming.Exchanged.fall_second", "uses": ["Becoming.excess_of_sum", "Becoming.ne_last"]}
+{"name": "Becoming.Exchanged.fallen", "uses": ["Becoming.Exchanged.fall_away", "Becoming.Exchanged.fall_first", "Becoming.Exchanged.fall_second", "Becoming.total_swapped"]}
+{"name": "Becoming.Exchanged.rise_away", "uses": ["Becoming.ne_succ_of_ne"]}
+{"name": "Becoming.Exchanged.rise_count", "uses": ["Becoming.Exchanged.rise_away", "Becoming.Exchanged.rise_first", "Becoming.Exchanged.rise_second", "Becoming.total_swapped"]}
+{"name": "Becoming.Exchanged.rise_first", "uses": ["Becoming.excess_of_sum", "Becoming.ne_first"]}
+{"name": "Becoming.Exchanged.rise_second", "uses": ["Becoming.excess_of_sum", "Becoming.ne_last"]}
+{"name": "Becoming.Exchanged.risen", "uses": ["Becoming.Exchanged.rise_away", "Becoming.Exchanged.rise_first", "Becoming.Exchanged.rise_second", "Becoming.total_swapped"]}
+{"name": "Becoming.Exchanged.sum", "uses": ["Becoming.total_add", "Becoming.total_congr_on"]}
+{"name": "Becoming.Flow.Commuted.acting", "uses": ["Becoming.Flow.SameExchange.mem", "Becoming.Moved.at_first"]}
+{"name": "Becoming.Flow.Commuted.balancesOn_away", "uses": ["Becoming.Flow.SameExchange.given", "Becoming.Flow.SameExchange.taken", "Becoming.Moved.away", "Becoming.eq_iff_of_sides"]}
+{"name": "Becoming.Flow.Commuted.balancesOn_first", "uses": ["Becoming.Exchanged.balance_first", "Becoming.Flow.SameExchange.given", "Becoming.Flow.SameExchange.taken", "Becoming.Moved.exchanged"]}
+{"name": "Becoming.Flow.Commuted.balancesOn_second", "uses": ["Becoming.Exchanged.balance_second", "Becoming.Flow.SameExchange.given", "Becoming.Flow.SameExchange.taken", "Becoming.Moved.exchanged"]}
+{"name": "Becoming.Flow.Commuted.balances_iff", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.Commuted.balancesOn_away", "Becoming.Flow.Commuted.balancesOn_first", "Becoming.Flow.Commuted.balancesOn_second", "Becoming.Flow.Commuted.symm", "Becoming.Flow.balances_iff_on", "Becoming.Web.Commuted.symm"]}
+{"name": "Becoming.Flow.Commuted.dissipative_iff", "uses": ["Becoming.Flow.Commuted.symm", "Becoming.Flow.SameExchange.closedAt_iff", "Becoming.Flow.SameExchange.dissipatesOn_iff"]}
+{"name": "Becoming.Flow.Commuted.runsDownOn_first", "uses": ["Becoming.Flow.Commuted.balancesOn_first", "Becoming.Flow.SameExchange.dissipatesOn_iff", "Becoming.Moved.at_first", "Becoming.Web.Commuted.stands_between"]}
+{"name": "Becoming.Flow.Commuted.runsDownOn_second", "uses": ["Becoming.Flow.Commuted.balancesOn_second", "Becoming.Flow.SameExchange.dissipatesOn_iff", "Becoming.Moved.at_last", "Becoming.Web.Commuted.stands_between"]}
+{"name": "Becoming.Flow.Commuted.symm", "uses": ["Becoming.Flow.SameExchange.symm"]}
+{"name": "Becoming.Flow.SameExchange.closedAt_iff", "uses": ["Becoming.Flow.SameExchange.mem"]}
+{"name": "Becoming.Flow.SameExchange.dissipatesOn_iff", "uses": ["Becoming.Flow.SameExchange.mem", "Becoming.total_congr"]}
+{"name": "Becoming.Flow.SameExchange.given", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.Flow.SameExchange.mem", "uses": []}
+{"name": "Becoming.Flow.SameExchange.symm", "uses": []}
+{"name": "Becoming.Flow.SameExchange.taken", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.Flow.SameExchange.takers", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.Flow.SameExchange.trans", "uses": []}
+{"name": "Becoming.Flow.swap_commuted", "uses": ["Becoming.swapAt_away", "Becoming.swapAt_first", "Becoming.swapAt_second"]}
+{"name": "Becoming.Footprinted.Contains.mono", "uses": []}
+{"name": "Becoming.Footprinted.Independent.append", "uses": []}
+{"name": "Becoming.Footprinted.Independent.keeps", "uses": ["Becoming.Footprinted.Precedes.lt", "Becoming.Footprinted.precedes_place"]}
+{"name": "Becoming.Footprinted.Joined.mono", "uses": []}
+{"name": "Becoming.Footprinted.Joined.symm", "uses": []}
+{"name": "Becoming.Footprinted.Precedes.asymm", "uses": ["Becoming.Footprinted.Precedes.lt"]}
+{"name": "Becoming.Footprinted.Precedes.brecOn", "uses": []}
+{"name": "Becoming.Footprinted.Precedes.irrefl", "uses": ["Becoming.Footprinted.Precedes.lt"]}
+{"name": "Becoming.Footprinted.Precedes.lt", "uses": ["Becoming.Footprinted.Precedes.brecOn"]}
+{"name": "Becoming.Footprinted.Precedes.mono", "uses": ["Becoming.Footprinted.Joined.mono", "Becoming.Footprinted.Precedes.brecOn"]}
+{"name": "Becoming.Footprinted.acting_of_shows", "uses": ["Becoming.Flow.SameExchange.mem", "Becoming.Footprinted.touched_of_mem"]}
+{"name": "Becoming.Footprinted.commute_acting_iff", "uses": ["Becoming.Footprinted.acting_of_shows", "Becoming.Footprinted.commute_back_flows", "Becoming.Footprinted.commute_back_shows", "Becoming.Footprinted.commute_contains", "Becoming.Footprinted.commute_flows", "Becoming.Footprinted.commute_shows"]}
+{"name": "Becoming.Footprinted.commute_apart", "uses": ["Becoming.Footprinted.Joined.symm", "Becoming.Footprinted.commute_joined", "Becoming.swapAt_first", "Becoming.swapAt_second"]}
+{"name": "Becoming.Footprinted.commute_back_flows", "uses": ["Becoming.swapAt_swapAt"]}
+{"name": "Becoming.Footprinted.commute_back_shows", "uses": ["Becoming.Footprinted.commute_shows", "Becoming.Web.SameAt.symm", "Becoming.swapAt_swapAt"]}
+{"name": "Becoming.Footprinted.commute_contains", "uses": ["Becoming.Web.SameAt.symm", "Becoming.Web.SameAt.trans", "Becoming.Web.commute_sameAt_away", "Becoming.Web.commute_sameAt_false", "Becoming.Web.commute_sameAt_true", "Becoming.ne_first", "Becoming.ne_last", "Becoming.ne_succ_of_ne", "Becoming.swapAt_away", "Becoming.swapAt_first", "Becoming.swapAt_second"]}
+{"name": "Becoming.Footprinted.commute_dependent", "uses": ["Becoming.Web.SameAt.trans", "Becoming.Web.commute_sameAt_away", "Becoming.Web.commute_sameAt_false", "Becoming.Web.commute_sameAt_true"]}
+{"name": "Becoming.Footprinted.commute_dependent_iff", "uses": ["Becoming.Footprinted.commute_apart", "Becoming.Footprinted.commute_contains", "Becoming.Footprinted.commute_dependent", "Becoming.Footprinted.commute_twice", "Becoming.Web.SameAt.symm", "Becoming.Web.dependent_of_sameAt"]}
+{"name": "Becoming.Footprinted.commute_flows", "uses": []}
+{"name": "Becoming.Footprinted.commute_joined", "uses": ["Becoming.Footprinted.commute_shows"]}
+{"name": "Becoming.Footprinted.commute_precedes", "uses": ["Becoming.Footprinted.commute_precedes_of", "Becoming.Footprinted.precedes_of_commute", "Becoming.swapAt_swapAt"]}
+{"name": "Becoming.Footprinted.commute_precedes_of", "uses": ["Becoming.Footprinted.Precedes.brecOn", "Becoming.Footprinted.commute_joined", "Becoming.swapAt_lt", "Becoming.swapAt_swapAt"]}
+{"name": "Becoming.Footprinted.commute_shows", "uses": ["Becoming.Footprinted.commute_shows_first", "Becoming.Footprinted.commute_shows_second", "Becoming.Web.commute_sameAt_away", "Becoming.ne_succ_of_ne", "Becoming.swapAt_away", "Becoming.swapAt_first", "Becoming.swapAt_second"]}
+{"name": "Becoming.Footprinted.commute_shows_first", "uses": ["Becoming.Footprinted.disjoint", "Becoming.Web.SameAt.symm", "Becoming.Web.SameAt.trans", "Becoming.Web.commute_sameAt_away", "Becoming.Web.commute_sameAt_false", "Becoming.ne_first"]}
+{"name": "Becoming.Footprinted.commute_shows_second", "uses": ["Becoming.Footprinted.disjoint", "Becoming.Web.SameAt.trans", "Becoming.Web.commute_sameAt_away", "Becoming.Web.commute_sameAt_true", "Becoming.ne_last"]}
+{"name": "Becoming.Footprinted.commute_taking_iff", "uses": ["Becoming.Footprinted.commute_back_flows", "Becoming.Footprinted.commute_back_shows", "Becoming.Footprinted.commute_contains", "Becoming.Footprinted.commute_flows", "Becoming.Footprinted.commute_shows", "Becoming.Footprinted.taking_of_shows"]}
+{"name": "Becoming.Footprinted.commute_transmits_iff", "uses": ["Becoming.Footprinted.commute_back_flows", "Becoming.Footprinted.commute_back_shows", "Becoming.Footprinted.commute_contains", "Becoming.Footprinted.commute_flows", "Becoming.Footprinted.commute_shows", "Becoming.Footprinted.transmits_of_shows"]}
+{"name": "Becoming.Footprinted.commute_twice", "uses": ["Becoming.Footprinted.disjoint", "Becoming.Web.SameAt.symm", "Becoming.Web.SameAt.trans", "Becoming.Web.commute_sameAt_away", "Becoming.Web.commute_sameAt_false", "Becoming.Web.commute_sameAt_true", "Becoming.ne_first", "Becoming.ne_last", "Becoming.swapAt_first"]}
+{"name": "Becoming.Footprinted.contains_everything", "uses": []}
+{"name": "Becoming.Footprinted.converse", "uses": ["Becoming.Flow.SameExchange.symm", "Becoming.Flow.SameExchange.trans", "Becoming.Footprinted.converse_webs", "Becoming.Footprinted.reorder_exchange", "Becoming.Footprinted.sorts", "Becoming.Naturals.le_of_add_le_add_left", "Becoming.le_dest", "Becoming.origin_place"]}
+{"name": "Becoming.Footprinted.converse_webs", "uses": ["Becoming.Footprinted.reorder_before", "Becoming.Footprinted.reorder_contains", "Becoming.Footprinted.reorder_shows", "Becoming.Footprinted.reorder_touch", "Becoming.Web.SameAt.symm", "Becoming.Web.SameAt.trans"]}
+{"name": "Becoming.Footprinted.disjoint", "uses": []}
+{"name": "Becoming.Footprinted.first_free", "uses": []}
+{"name": "Becoming.Footprinted.lowered_keeps", "uses": ["Becoming.Footprinted.Joined.symm", "Becoming.Footprinted.Precedes.lt", "Becoming.Footprinted.lowered_origin", "Becoming.Footprinted.precedes_place", "Becoming.Footprinted.reorder_joined", "Becoming.place_origin"]}
+{"name": "Becoming.Footprinted.lowered_origin", "uses": ["Becoming.place_lowering_outside", "Becoming.place_lowering_top", "Becoming.place_origin"]}
+{"name": "Becoming.Footprinted.lowered_place", "uses": ["Becoming.lt_of_le_ne", "Becoming.place_lowering_below", "Becoming.place_lowering_outside"]}
+{"name": "Becoming.Footprinted.lowered_reindexes", "uses": ["Becoming.Footprinted.lowered_origin", "Becoming.Footprinted.lowered_place", "Becoming.lt_of_le_ne", "Becoming.origin_place", "Becoming.place_origin"]}
+{"name": "Becoming.Footprinted.lowering_independent", "uses": ["Becoming.Footprinted.commute_contains", "Becoming.Footprinted.commute_joined", "Becoming.swapAt_first", "Becoming.swapAt_of_lt"]}
+{"name": "Becoming.Footprinted.precedes_of_commute", "uses": ["Becoming.Footprinted.Precedes.brecOn", "Becoming.Footprinted.commute_apart", "Becoming.Footprinted.commute_joined", "Becoming.swapAt_lt"]}
+{"name": "Becoming.Footprinted.precedes_place", "uses": ["Becoming.Footprinted.reorder_precedes", "Becoming.origin_place"]}
+{"name": "Becoming.Footprinted.reorder_acting_iff", "uses": ["Becoming.Footprinted.commute_acting_iff", "Becoming.Footprinted.commute_contains"]}
+{"name": "Becoming.Footprinted.reorder_append", "uses": []}
+{"name": "Becoming.Footprinted.reorder_before", "uses": ["Becoming.Web.SameAt.refl", "Becoming.Web.SameAt.trans", "Becoming.Web.commute_sameAt_away"]}
+{"name": "Becoming.Footprinted.reorder_contains", "uses": ["Becoming.Footprinted.commute_contains"]}
+{"name": "Becoming.Footprinted.reorder_dependent_iff", "uses": ["Becoming.Footprinted.commute_contains", "Becoming.Footprinted.commute_dependent_iff"]}
+{"name": "Becoming.Footprinted.reorder_exchange", "uses": ["Becoming.Flow.SameExchange.trans"]}
+{"name": "Becoming.Footprinted.reorder_joined", "uses": ["Becoming.Footprinted.commute_contains", "Becoming.Footprinted.commute_joined"]}
+{"name": "Becoming.Footprinted.reorder_precedes", "uses": ["Becoming.Footprinted.commute_contains", "Becoming.Footprinted.commute_precedes"]}
+{"name": "Becoming.Footprinted.reorder_premises", "uses": ["Becoming.EachStep.always", "Becoming.Footprinted.reorder_acting_iff", "Becoming.Footprinted.reorder_dependent_iff", "Becoming.Footprinted.reorder_reorders", "Becoming.Footprinted.reorder_taking_iff", "Becoming.Footprinted.reorder_transmits_iff", "Becoming.Reorders.laws"]}
+{"name": "Becoming.Footprinted.reorder_reorders", "uses": ["Becoming.Footprinted.commute_contains", "Becoming.Footprinted.split"]}
+{"name": "Becoming.Footprinted.reorder_shows", "uses": ["Becoming.Footprinted.commute_contains", "Becoming.Footprinted.commute_shows", "Becoming.Web.SameAt.refl", "Becoming.Web.SameAt.trans"]}
+{"name": "Becoming.Footprinted.reorder_taking_iff", "uses": ["Becoming.Footprinted.commute_contains", "Becoming.Footprinted.commute_taking_iff"]}
+{"name": "Becoming.Footprinted.reorder_touch", "uses": []}
+{"name": "Becoming.Footprinted.reorder_transmits_iff", "uses": ["Becoming.Footprinted.commute_contains", "Becoming.Footprinted.commute_transmits_iff"]}
+{"name": "Becoming.Footprinted.sorts", "uses": ["Becoming.Footprinted.sorts_step", "Becoming.le_dest"]}
+{"name": "Becoming.Footprinted.sorts_iff", "uses": ["Becoming.Footprinted.Independent.keeps", "Becoming.Footprinted.sorts"]}
+{"name": "Becoming.Footprinted.sorts_step", "uses": ["Becoming.EachStep.append", "Becoming.EachStep.mono", "Becoming.Footprinted.Independent.append", "Becoming.Footprinted.first_free", "Becoming.Footprinted.lowered_keeps", "Becoming.Footprinted.lowered_place", "Becoming.Footprinted.lowered_reindexes", "Becoming.Footprinted.lowering_independent", "Becoming.Footprinted.reorder_contains", "Becoming.Naturals.le_of_add_le_add_left", "Becoming.lowering_within", "Becoming.origin_place", "Becoming.place_append", "Becoming.place_fixed", "Becoming.place_lowering_top"]}
+{"name": "Becoming.Footprinted.split", "uses": ["Becoming.Footprinted.disjoint"]}
+{"name": "Becoming.Footprinted.taking_of_shows", "uses": ["Becoming.Flow.SameExchange.mem", "Becoming.Footprinted.touched_of_mem"]}
+{"name": "Becoming.Footprinted.touched_of_mem", "uses": []}
+{"name": "Becoming.Footprinted.transmits_of_shows", "uses": ["Becoming.Flow.SameExchange.mem", "Becoming.Footprinted.touched_of_mem"]}
+{"name": "Becoming.Moved.at_first", "uses": ["Becoming.ne_first"]}
+{"name": "Becoming.Moved.at_last", "uses": ["Becoming.ne_last"]}
+{"name": "Becoming.Moved.away", "uses": ["Becoming.ne_succ_of_ne"]}
+{"name": "Becoming.Moved.ceasesToBe_away", "uses": ["Becoming.Moved.away"]}
+{"name": "Becoming.Moved.ceasesToBe_first", "uses": ["Becoming.Moved.at_first"]}
+{"name": "Becoming.Moved.ceasesToBe_second", "uses": ["Becoming.Moved.ceasesToBe_first", "Becoming.Moved.symm"]}
+{"name": "Becoming.Moved.comesToBe_away", "uses": ["Becoming.Moved.away"]}
+{"name": "Becoming.Moved.comesToBe_first", "uses": ["Becoming.Moved.at_first"]}
+{"name": "Becoming.Moved.comesToBe_second", "uses": ["Becoming.Moved.comesToBe_first", "Becoming.Moved.symm"]}
+{"name": "Becoming.Moved.exchanged", "uses": []}
+{"name": "Becoming.Moved.symm", "uses": ["Becoming.Moved.at_first", "Becoming.Moved.at_last"]}
+{"name": "Becoming.Order.Arising.acting", "uses": []}
+{"name": "Becoming.Order.Arising.balances", "uses": []}
+{"name": "Becoming.Order.Arising.joined", "uses": []}
+{"name": "Becoming.Order.Arising.order_registers", "uses": ["Becoming.Order.Arising.acting", "Becoming.Order.Arising.balances", "Becoming.Order.Arising.split", "Becoming.Web.commute_active_away", "Becoming.World.commute_laws", "Becoming.swapAt_first"]}
+{"name": "Becoming.Order.Arising.reorders_joined", "uses": ["Becoming.Order.Arising.acting", "Becoming.Order.Arising.joined", "Becoming.Order.Arising.order_registers", "Becoming.Order.Arising.split"]}
+{"name": "Becoming.Order.Arising.split", "uses": []}
+{"name": "Becoming.Order.Crossing.balances", "uses": []}
+{"name": "Becoming.Order.Crossing.dependent", "uses": []}
+{"name": "Becoming.Order.Crossing.joined", "uses": []}
+{"name": "Becoming.Order.Crossing.order_registers", "uses": ["Becoming.Order.Crossing.balances", "Becoming.Order.Crossing.dependent", "Becoming.Order.Crossing.split", "Becoming.Web.commute_active_true", "Becoming.Web.commute_level_false", "Becoming.Web.commute_requires_true", "Becoming.World.commute_laws"]}
+{"name": "Becoming.Order.Crossing.reorders_joined", "uses": ["Becoming.Order.Crossing.dependent", "Becoming.Order.Crossing.joined", "Becoming.Order.Crossing.order_registers", "Becoming.Order.Crossing.split"]}
+{"name": "Becoming.Order.Crossing.split", "uses": []}
+{"name": "Becoming.Reorders.brecOn", "uses": []}
+{"name": "Becoming.Reorders.counts", "uses": ["Becoming.Reorders.brecOn", "Becoming.Web.commute_commuted", "Becoming.ceasings_moved", "Becoming.ceasings_of_iff", "Becoming.comings_moved", "Becoming.comings_of_iff", "Becoming.total_congr"]}
+{"name": "Becoming.Reorders.laws", "uses": ["Becoming.Reorders.brecOn", "Becoming.World.commute_laws"]}
+{"name": "Becoming.Reorders.totals", "uses": ["Becoming.Exchanged.fall_count", "Becoming.Exchanged.fallen", "Becoming.Exchanged.risen", "Becoming.Reorders.brecOn", "Becoming.Web.Commuted.stock", "Becoming.Web.commute_commuted"]}
+{"name": "Becoming.Web.Commuted.changes_first", "uses": ["Becoming.Exchanged.fall_first", "Becoming.Exchanged.rise_first", "Becoming.Moved.exchanged", "Becoming.excess_pos"]}
+{"name": "Becoming.Web.Commuted.changes_second", "uses": ["Becoming.Web.Commuted.changes_first", "Becoming.Web.Commuted.symm"]}
+{"name": "Becoming.Web.Commuted.embodied", "uses": []}
+{"name": "Becoming.Web.Commuted.stands_between", "uses": []}
+{"name": "Becoming.Web.Commuted.stock", "uses": ["Becoming.Exchanged.sum", "Becoming.Moved.exchanged"]}
+{"name": "Becoming.Web.Commuted.symm", "uses": ["Becoming.Moved.symm"]}
+{"name": "Becoming.Web.SameAt.refl", "uses": []}
+{"name": "Becoming.Web.SameAt.symm", "uses": []}
+{"name": "Becoming.Web.SameAt.trans", "uses": []}
+{"name": "Becoming.Web.commute_active_away", "uses": []}
+{"name": "Becoming.Web.commute_active_true", "uses": ["Becoming.cond_of_true"]}
+{"name": "Becoming.Web.commute_commuted", "uses": ["Becoming.moved_of_side"]}
+{"name": "Becoming.Web.commute_dependent", "uses": ["Becoming.cond_of_false", "Becoming.cond_of_true"]}
+{"name": "Becoming.Web.commute_level_false", "uses": ["Becoming.cond_of_false"]}
+{"name": "Becoming.Web.commute_level_true", "uses": ["Becoming.cond_of_true"]}
+{"name": "Becoming.Web.commute_requires_true", "uses": ["Becoming.cond_of_true"]}
+{"name": "Becoming.Web.commute_sameAt_away", "uses": []}
+{"name": "Becoming.Web.commute_sameAt_false", "uses": ["Becoming.cond_of_false"]}
+{"name": "Becoming.Web.commute_sameAt_true", "uses": ["Becoming.cond_of_true"]}
+{"name": "Becoming.Web.dependent_of_sameAt", "uses": []}
+{"name": "Becoming.World.commute_counts", "uses": ["Becoming.Exchanged.fall_count", "Becoming.Exchanged.fallen", "Becoming.Exchanged.risen", "Becoming.Web.Commuted.stock", "Becoming.Web.commute_commuted", "Becoming.ceasings_moved", "Becoming.comings_moved"]}
+{"name": "Becoming.World.commute_laws", "uses": ["Becoming.Flow.Commuted.acting", "Becoming.Flow.Commuted.balances_iff", "Becoming.Flow.Commuted.dissipative_iff", "Becoming.Flow.swap_commuted", "Becoming.Web.Commuted.embodied", "Becoming.Web.Commuted.symm", "Becoming.Web.commute_commuted", "Becoming.Web.commute_dependent"]}
+{"name": "Becoming.balance_iff_change", "uses": ["Becoming.Naturals.add_left_cancel", "Becoming.across", "Becoming.add_right_cancel"]}
+{"name": "Becoming.ceasings_moved", "uses": ["Becoming.Moved.ceasesToBe_away", "Becoming.Moved.ceasesToBe_first", "Becoming.Moved.ceasesToBe_second", "Becoming.mark_iff", "Becoming.total_congr_on", "Becoming.total_swapped"]}
+{"name": "Becoming.ceasings_of_iff", "uses": ["Becoming.mark_iff", "Becoming.total_congr"]}
+{"name": "Becoming.comings_moved", "uses": ["Becoming.Moved.comesToBe_away", "Becoming.Moved.comesToBe_first", "Becoming.Moved.comesToBe_second", "Becoming.mark_iff", "Becoming.total_congr_on", "Becoming.total_swapped"]}
+{"name": "Becoming.comings_of_iff", "uses": ["Becoming.mark_iff", "Becoming.total_congr"]}
+{"name": "Becoming.cond_of_false", "uses": []}
+{"name": "Becoming.cond_of_true", "uses": []}
+{"name": "Becoming.eq_iff_of_sides", "uses": []}
+{"name": "Becoming.lowering_within", "uses": []}
+{"name": "Becoming.lt_of_le_ne", "uses": []}
+{"name": "Becoming.moved_of_side", "uses": []}
+{"name": "Becoming.ne_first", "uses": []}
+{"name": "Becoming.ne_last", "uses": []}
+{"name": "Becoming.ne_succ_of_ne", "uses": []}
+{"name": "Becoming.origin_place", "uses": ["Becoming.swapAt_swapAt"]}
+{"name": "Becoming.place_append", "uses": []}
+{"name": "Becoming.place_fixed", "uses": ["Becoming.swapAt_away"]}
+{"name": "Becoming.place_lowering_below", "uses": ["Becoming.lt_of_le_ne", "Becoming.place_lowering_outside", "Becoming.swapAt_first", "Becoming.swapAt_of_lt"]}
+{"name": "Becoming.place_lowering_outside", "uses": ["Becoming.swapAt_away"]}
+{"name": "Becoming.place_lowering_top", "uses": ["Becoming.swapAt_second"]}
+{"name": "Becoming.place_origin", "uses": ["Becoming.swapAt_swapAt"]}
+{"name": "Becoming.swapAt_away", "uses": []}
+{"name": "Becoming.swapAt_first", "uses": []}
+{"name": "Becoming.swapAt_lt", "uses": ["Becoming.lt_of_le_ne", "Becoming.swapAt_away", "Becoming.swapAt_first", "Becoming.swapAt_of_gt", "Becoming.swapAt_second"]}
+{"name": "Becoming.swapAt_of_gt", "uses": ["Becoming.swapAt_away"]}
+{"name": "Becoming.swapAt_of_lt", "uses": ["Becoming.swapAt_away"]}
+{"name": "Becoming.swapAt_second", "uses": ["Becoming.ne_first"]}
+{"name": "Becoming.swapAt_swapAt", "uses": ["Becoming.swapAt_away", "Becoming.swapAt_first", "Becoming.swapAt_second"]}
+{"name": "Becoming.total_swapped", "uses": ["Becoming.add_right_cancel", "Becoming.le_dest", "Becoming.steps_mem", "Becoming.steps_within", "Becoming.total_congr_on", "Becoming.total_steps_add"]}

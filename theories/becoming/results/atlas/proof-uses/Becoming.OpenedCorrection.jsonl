@@ -1,0 +1,12 @@
+{"name": "Becoming.OpenedCorrection.Linked.linked_correctable", "uses": []}
+{"name": "Becoming.OpenedCorrection.Linked.opens", "uses": ["Becoming.OpenedCorrection.Linked.linked_correctable", "Becoming.OpenedCorrection.Linked.unlinked_uncorrectable"]}
+{"name": "Becoming.OpenedCorrection.Linked.opens_after_replenishing", "uses": ["Becoming.OpenedCorrection.Linked.linked_correctable", "Becoming.OpenedCorrection.Linked.unlinked_uncorrectable"]}
+{"name": "Becoming.OpenedCorrection.Linked.opens_by_support", "uses": ["Becoming.OpenedCorrection.Linked.linked_correctable", "Becoming.OpenedCorrection.Linked.starved_uncorrectable"]}
+{"name": "Becoming.OpenedCorrection.Linked.rebuilt_starved", "uses": ["Becoming.OpenedCorrection.Linked.starved_uncorrectable"]}
+{"name": "Becoming.OpenedCorrection.Linked.starved_uncorrectable", "uses": []}
+{"name": "Becoming.OpenedCorrection.Linked.unlinked_uncorrectable", "uses": []}
+{"name": "Becoming.OpenedCorrection.Linked.widened_unlinked", "uses": ["Becoming.OpenedCorrection.widened_correctable"]}
+{"name": "Becoming.OpenedCorrection.coarser_opens_nothing", "uses": ["Becoming.OpenedCorrection.finer_keeps"]}
+{"name": "Becoming.OpenedCorrection.correctable_iff", "uses": ["Becoming.GuardHorizon.uniform_policy_iff_fiber_feasible"]}
+{"name": "Becoming.OpenedCorrection.finer_keeps", "uses": []}
+{"name": "Becoming.OpenedCorrection.widened_correctable", "uses": []}

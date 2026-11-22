@@ -1,0 +1,25 @@
+{"name": "Becoming.Clearing.closure_supported", "uses": ["Becoming.Clearing.dependent", "Becoming.Clearing.dweller_beyond", "Becoming.Clearing.fedClosed", "Becoming.Clearing.unsupported_with"]}
+{"name": "Becoming.Clearing.dependenceRegion_closed", "uses": ["Becoming.Clearing.fedBy_source", "Becoming.Clearing.fedClosed"]}
+{"name": "Becoming.Clearing.dependenceRegion_iff", "uses": ["Becoming.Clearing.dependenceRegion_closed", "Becoming.Clearing.dependenceRegion_self", "Becoming.Flow.WithinFeeding.of_fedBy", "Becoming.Flow.WithinFeeding.refl"]}
+{"name": "Becoming.Clearing.dependenceRegion_self", "uses": []}
+{"name": "Becoming.Clearing.dweller_beyond", "uses": ["Becoming.Clearing.fedClosed"]}
+{"name": "Becoming.Clearing.fedClosed", "uses": ["Becoming.Clearing.fedBy_source"]}
+{"name": "Becoming.Flow.Balances.consumption_ends_with_feeders", "uses": ["Becoming.Flow.Balances.unfed_consumption_ends", "Becoming.Flow.unfed_of_feeders_unsupported"]}
+{"name": "Becoming.Flow.Balances.unfed_consumption_ends", "uses": ["Becoming.Flow.Acting.giversSupported", "Becoming.Flow.Balances.on", "Becoming.Flow.unfed_consumption_ends_at"]}
+{"name": "Becoming.Flow.Balances.unfed_consumption_not_continuing", "uses": ["Becoming.Flow.Balances.unfed_consumption_ends"]}
+{"name": "Becoming.Flow.WithinFeeding.of_fedBy", "uses": ["Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.Flow.WithinFeeding.refl", "uses": ["Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Flow.WithinFeeding.trans", "uses": ["Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Flow.beyond_gives_nothing", "uses": ["Becoming.WithinClosure.not_rel", "Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.Flow.consumption_ends_with_feeders_at", "uses": ["Becoming.Flow.unfed_consumption_ends_at", "Becoming.Flow.unfed_of_feeders_unsupported"]}
+{"name": "Becoming.Flow.fedClosed_within", "uses": ["Becoming.closedUnder_withinClosure"]}
+{"name": "Becoming.Flow.unfed_consumption_ends_at", "uses": ["Becoming.Flow.excess_bounded_at", "Becoming.eq_zero_of_not_pos", "Becoming.le_total_of_mem", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.unfed_of_feeders_unsupported", "uses": ["Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.Overshoot.acting", "uses": []}
+{"name": "Becoming.Overshoot.balances", "uses": []}
+{"name": "Becoming.Overshoot.closure_whole", "uses": ["Becoming.Flow.WithinFeeding.of_fedBy", "Becoming.Flow.WithinFeeding.refl"]}
+{"name": "Becoming.Overshoot.dependent", "uses": []}
+{"name": "Becoming.Overshoot.ends_through_feeder", "uses": ["Becoming.Flow.Balances.consumption_ends_with_feeders", "Becoming.Overshoot.acting", "Becoming.Overshoot.balances", "Becoming.Overshoot.dependent", "Becoming.Overshoot.taking"]}
+{"name": "Becoming.Overshoot.steady_continues", "uses": []}
+{"name": "Becoming.Overshoot.taking", "uses": []}
+{"name": "Becoming.Web.retains_bounded_iff_includes", "uses": ["Becoming.Web.Includes.retains"]}

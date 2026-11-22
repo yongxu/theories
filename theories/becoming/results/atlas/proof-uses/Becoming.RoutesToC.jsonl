@@ -1,0 +1,74 @@
+{"name": "Becoming.ReadsNoOrder.iff_of_weaker", "uses": ["Becoming.ReadsNoOrder.implies_comparison"]}
+{"name": "Becoming.ReadsNoOrder.implies_comparison", "uses": []}
+{"name": "Becoming.ReadsNoOrder.not_strictly_weaker", "uses": ["Becoming.ReadsNoOrder.implies_comparison"]}
+{"name": "Becoming.Weighting.AboveNothing.first_step", "uses": []}
+{"name": "Becoming.Weighting.AboveNothing.further_step", "uses": []}
+{"name": "Becoming.Weighting.AboveNothing.not_alike", "uses": ["Becoming.Weighting.AboveNothing.first_step", "Becoming.Weighting.AboveNothing.further_step", "Becoming.Weighting.AboveNothing.not_ranks_further", "Becoming.Weighting.AboveNothing.ranks_first"]}
+{"name": "Becoming.Weighting.AboveNothing.not_increasing", "uses": ["Becoming.Weighting.AboveNothing.further_step", "Becoming.Weighting.AboveNothing.not_ranks_further", "Becoming.Weighting.widensOn_of_widensBy"]}
+{"name": "Becoming.Weighting.AboveNothing.not_ranks_further", "uses": []}
+{"name": "Becoming.Weighting.AboveNothing.ranks_first", "uses": []}
+{"name": "Becoming.Weighting.AboveNothing.transitive", "uses": []}
+{"name": "Becoming.Weighting.AnotherReads.chooser_gains", "uses": []}
+{"name": "Becoming.Weighting.AnotherReads.comparison_ranks_wide", "uses": ["Becoming.Weighting.AnotherReads.widens", "Becoming.Weighting.comparison_listingFrame_iff"]}
+{"name": "Becoming.Weighting.AnotherReads.reading_falls", "uses": []}
+{"name": "Becoming.Weighting.AnotherReads.takes_narrow", "uses": []}
+{"name": "Becoming.Weighting.AnotherReads.takes_wide", "uses": []}
+{"name": "Becoming.Weighting.AnotherReads.widens", "uses": []}
+{"name": "Becoming.Weighting.EachItsOwn.covers", "uses": []}
+{"name": "Becoming.Weighting.EachItsOwn.not_increasing", "uses": ["Becoming.Weighting.exists_selfConcerned_notBelow_not_increasing"]}
+{"name": "Becoming.Weighting.EachItsOwn.not_total", "uses": []}
+{"name": "Becoming.Weighting.Increasing.stepAlike", "uses": ["Becoming.Weighting.widensOn_of_widensBy"]}
+{"name": "Becoming.Weighting.OnlyMany.not_increasing", "uses": []}
+{"name": "Becoming.Weighting.OnlyMany.ranked", "uses": []}
+{"name": "Becoming.Weighting.Refusing.comparison_ranks_wide", "uses": ["Becoming.Weighting.Refusing.widens", "Becoming.Weighting.comparison_listingFrame_iff"]}
+{"name": "Becoming.Weighting.Refusing.imposed_below", "uses": []}
+{"name": "Becoming.Weighting.Refusing.refused_unchanged", "uses": []}
+{"name": "Becoming.Weighting.Refusing.widens", "uses": []}
+{"name": "Becoming.Weighting.Restraint.comparison_ranks_wide", "uses": ["Becoming.Weighting.Restraint.widens", "Becoming.Weighting.comparison_listingFrame_iff"]}
+{"name": "Becoming.Weighting.Restraint.each_falls", "uses": []}
+{"name": "Becoming.Weighting.Restraint.narrow_best", "uses": []}
+{"name": "Becoming.Weighting.Restraint.wide_best_iff", "uses": []}
+{"name": "Becoming.Weighting.Restraint.widens", "uses": []}
+{"name": "Becoming.Weighting.ZeroWeight.counted_step", "uses": []}
+{"name": "Becoming.Weighting.ZeroWeight.not_alike", "uses": ["Becoming.Weighting.ZeroWeight.counted_step", "Becoming.Weighting.ZeroWeight.not_ranks_uncounted", "Becoming.Weighting.ZeroWeight.ranks_counted", "Becoming.Weighting.ZeroWeight.uncounted_step"]}
+{"name": "Becoming.Weighting.ZeroWeight.not_increasing", "uses": ["Becoming.Weighting.ZeroWeight.not_ranks_uncounted", "Becoming.Weighting.ZeroWeight.uncounted_step", "Becoming.Weighting.widensOn_of_widensBy"]}
+{"name": "Becoming.Weighting.ZeroWeight.not_ranks_uncounted", "uses": []}
+{"name": "Becoming.Weighting.ZeroWeight.ranks_counted", "uses": []}
+{"name": "Becoming.Weighting.ZeroWeight.uncounted_step", "uses": []}
+{"name": "Becoming.Weighting.byOne_not_increasing", "uses": []}
+{"name": "Becoming.Weighting.choosers_mixed", "uses": ["Becoming.Weighting.lt_reach_of_exceeds"]}
+{"name": "Becoming.Weighting.comparison_listingFrame_iff", "uses": ["Becoming.Weighting.extension_listingFrame_iff"]}
+{"name": "Becoming.Weighting.every_pareto_iff", "uses": ["Becoming.Weighting.WidensOn.not_reverse"]}
+{"name": "Becoming.Weighting.exists_selfConcerned_notBelow_not_increasing", "uses": ["Becoming.Weighting.WidensOn.not_reverse", "Becoming.Weighting.not_adds_unmarked", "Becoming.Weighting.widens_unmarked"]}
+{"name": "Becoming.Weighting.extension_listingFrame_iff", "uses": []}
+{"name": "Becoming.Weighting.gains_every_widening_iff", "uses": ["Becoming.Weighting.le_reach", "Becoming.Weighting.reach_attained", "Becoming.Weighting.refusal_le_reach"]}
+{"name": "Becoming.Weighting.higher_cases", "uses": []}
+{"name": "Becoming.Weighting.increasingInOwn_iff_comparison", "uses": ["Becoming.ReadsNoOrder.iff_of_weaker", "Becoming.Weighting.comparison_listingFrame_iff", "Becoming.Weighting.increasingInOwn_iff_increasing", "Becoming.Weighting.increasingInOwn_of_increasing"]}
+{"name": "Becoming.Weighting.increasing_iff_one_step", "uses": ["Becoming.Weighting.Increasing.stepAlike", "Becoming.Weighting.increasing_iff_by_one", "Becoming.Weighting.widensOn_of_widensBy"]}
+{"name": "Becoming.Weighting.increasing_iff_ranks_noneWorseSomeBetter", "uses": ["Becoming.Weighting.widens_iff_noneWorseSomeBetter"]}
+{"name": "Becoming.Weighting.increasing_on_downstream", "uses": ["Becoming.Weighting.increasingInOwn_iff_increasing", "Becoming.«后皆续当且仅当后皆同类»"]}
+{"name": "Becoming.Weighting.increasing_on_downstream_of_regularity", "uses": ["Becoming.Weighting.increasing_on_downstream", "Becoming.«本类常闭则后皆续»", "Becoming.«类».refl", "Becoming.«类».symm"]}
+{"name": "Becoming.Weighting.le_higher_left", "uses": []}
+{"name": "Becoming.Weighting.le_higher_right", "uses": []}
+{"name": "Becoming.Weighting.le_reach", "uses": ["Becoming.Weighting.le_higher_left", "Becoming.Weighting.le_higher_right"]}
+{"name": "Becoming.Weighting.lt_reach_of_exceeds", "uses": ["Becoming.Weighting.le_reach", "Becoming.Weighting.outside_of_not", "Becoming.Weighting.reach_outside"]}
+{"name": "Becoming.Weighting.notOwnBelow_stops", "uses": ["Becoming.Weighting.not_adds_unmarked", "Becoming.Weighting.widens_unmarked"]}
+{"name": "Becoming.Weighting.not_adds_unmarked", "uses": []}
+{"name": "Becoming.Weighting.not_lowered_of_no_bearing", "uses": []}
+{"name": "Becoming.Weighting.outside_of_not", "uses": []}
+{"name": "Becoming.Weighting.pareto_increasing_iff_covers", "uses": ["Becoming.Weighting.every_pareto_iff"]}
+{"name": "Becoming.Weighting.ranksLighter_alike", "uses": ["Becoming.Weighting.weighed_lt_of_widens", "Becoming.Weighting.widensOn_of_widensBy"]}
+{"name": "Becoming.Weighting.ranksLighter_reverses", "uses": ["Becoming.Weighting.weighed_lt_of_widens"]}
+{"name": "Becoming.Weighting.ranksLighter_transitive", "uses": []}
+{"name": "Becoming.Weighting.ranksNotOwnBelow_selfConcerned", "uses": []}
+{"name": "Becoming.Weighting.ranksOnlyMany_alike", "uses": []}
+{"name": "Becoming.Weighting.ranksOnlyMany_transitive", "uses": []}
+{"name": "Becoming.Weighting.reach_attained", "uses": ["Becoming.Weighting.higher_cases"]}
+{"name": "Becoming.Weighting.reach_eq_of_refused", "uses": ["Becoming.Weighting.le_reach", "Becoming.Weighting.reach_le", "Becoming.Weighting.reach_le_of_includes", "Becoming.Weighting.refusal_le_reach"]}
+{"name": "Becoming.Weighting.reach_le", "uses": ["Becoming.Weighting.reach_attained"]}
+{"name": "Becoming.Weighting.reach_le_of_includes", "uses": ["Becoming.Weighting.le_reach", "Becoming.Weighting.reach_le", "Becoming.Weighting.refusal_le_reach"]}
+{"name": "Becoming.Weighting.reach_outside", "uses": ["Becoming.Weighting.reach_le"]}
+{"name": "Becoming.Weighting.refusal_le_reach", "uses": ["Becoming.Weighting.le_higher_right"]}
+{"name": "Becoming.Weighting.widening_is_no_weighting", "uses": []}
+{"name": "Becoming.Weighting.widens_iff_noneWorseSomeBetter", "uses": ["Becoming.Weighting.le_reach", "Becoming.Weighting.lt_reach_of_exceeds", "Becoming.Weighting.outside_of_not", "Becoming.Weighting.reach_attained", "Becoming.Weighting.reach_le_of_includes", "Becoming.Weighting.reach_outside", "Becoming.Weighting.refusal_le_reach"]}
+{"name": "Becoming.Weighting.widens_unmarked", "uses": []}

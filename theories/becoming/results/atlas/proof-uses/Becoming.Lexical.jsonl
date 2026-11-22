@@ -1,0 +1,46 @@
+{"name": "Becoming.Lexical.Above.adjoin_basic_reverses", "uses": ["Becoming.Lexical.strictIncluded_adjoin_of_fresh"]}
+{"name": "Becoming.Lexical.Above.adjoin_fresh_gain", "uses": ["Becoming.Lexical.Above.not_of_included", "Becoming.Lexical.strictIncluded_adjoin_of_fresh"]}
+{"name": "Becoming.Lexical.Above.adjoin_gain_iff", "uses": ["Becoming.Lexical.strictIncluded_adjoin_iff"]}
+{"name": "Becoming.Lexical.Above.agent_adjoined", "uses": ["Becoming.Lexical.strictIncluded_adjoin_of_fresh"]}
+{"name": "Becoming.Lexical.Above.anchor", "uses": ["Becoming.Lexical.StrictIncluded.of_witness"]}
+{"name": "Becoming.Lexical.Above.congr_left", "uses": ["Becoming.Lexical.Included.congr", "Becoming.Lexical.StrictIncluded.congr"]}
+{"name": "Becoming.Lexical.Above.congr_right", "uses": ["Becoming.Lexical.Included.congr", "Becoming.Lexical.StrictIncluded.congr"]}
+{"name": "Becoming.Lexical.Above.decided", "uses": []}
+{"name": "Becoming.Lexical.Above.irrefl", "uses": ["Becoming.Lexical.StrictIncluded.irrefl"]}
+{"name": "Becoming.Lexical.Above.no_trade", "uses": []}
+{"name": "Becoming.Lexical.Above.not_of_included", "uses": []}
+{"name": "Becoming.Lexical.Above.trans", "uses": ["Becoming.Lexical.Included.trans", "Becoming.Lexical.StrictIncluded.trans"]}
+{"name": "Becoming.Lexical.BasicPriority.above", "uses": []}
+{"name": "Becoming.Lexical.BasicPriority.anchor", "uses": ["Becoming.Lexical.Above.anchor", "Becoming.Lexical.BasicPriority.iff"]}
+{"name": "Becoming.Lexical.BasicPriority.iff", "uses": []}
+{"name": "Becoming.Lexical.BasicPriority.irrefl", "uses": ["Becoming.Lexical.Above.irrefl", "Becoming.Lexical.BasicPriority.iff"]}
+{"name": "Becoming.Lexical.BasicPriority.no_trade", "uses": ["Becoming.Lexical.Above.no_trade", "Becoming.Lexical.BasicPriority.iff"]}
+{"name": "Becoming.Lexical.BasicPriority.same_claims_alike", "uses": ["Becoming.Lexical.Above.congr_left", "Becoming.Lexical.Above.congr_right", "Becoming.Lexical.Above.irrefl", "Becoming.Lexical.BasicPriority.iff"]}
+{"name": "Becoming.Lexical.BasicPriority.trans", "uses": ["Becoming.Lexical.Above.trans", "Becoming.Lexical.BasicPriority.iff"]}
+{"name": "Becoming.Lexical.Ceiling.above", "uses": ["Becoming.Lexical.Above.anchor"]}
+{"name": "Becoming.Lexical.Crossed.incomparable", "uses": ["Becoming.Lexical.Above.no_trade"]}
+{"name": "Becoming.Lexical.Included.congr", "uses": []}
+{"name": "Becoming.Lexical.Included.refl", "uses": []}
+{"name": "Becoming.Lexical.Included.trans", "uses": []}
+{"name": "Becoming.Lexical.Reorganizing.classification_matters", "uses": ["Becoming.Lexical.classified_none_above"]}
+{"name": "Becoming.Lexical.Repair.above", "uses": ["Becoming.Lexical.Above.anchor"]}
+{"name": "Becoming.Lexical.Repair.loss_retained", "uses": []}
+{"name": "Becoming.Lexical.StrictIncluded.congr", "uses": ["Becoming.Lexical.Included.congr"]}
+{"name": "Becoming.Lexical.StrictIncluded.irrefl", "uses": []}
+{"name": "Becoming.Lexical.StrictIncluded.of_witness", "uses": []}
+{"name": "Becoming.Lexical.StrictIncluded.trans", "uses": ["Becoming.Lexical.Included.trans"]}
+{"name": "Becoming.Lexical.adjoin_crossed", "uses": ["Becoming.Lexical.included_adjoin_iff"]}
+{"name": "Becoming.Lexical.classified_all_retains", "uses": []}
+{"name": "Becoming.Lexical.classified_extremes_iff_of_decided", "uses": ["Becoming.Lexical.classified_all_retains", "Becoming.Lexical.classified_none_above", "Becoming.Lexical.classified_robust_iff_of_decided"]}
+{"name": "Becoming.Lexical.classified_none_above", "uses": []}
+{"name": "Becoming.Lexical.classified_none_iff", "uses": ["Becoming.Lexical.classified_none_above"]}
+{"name": "Becoming.Lexical.classified_of_basic", "uses": []}
+{"name": "Becoming.Lexical.classified_of_decided", "uses": []}
+{"name": "Becoming.Lexical.classified_of_fresh", "uses": ["Becoming.Lexical.classified_of_decided", "Becoming.Lexical.strictIncluded_adjoin_of_fresh"]}
+{"name": "Becoming.Lexical.classified_robust_iff_iff_em", "uses": ["Becoming.Lexical.classified_robust_iff_of_em"]}
+{"name": "Becoming.Lexical.classified_robust_iff_of_decided", "uses": ["Becoming.Lexical.classified_all_retains", "Becoming.Lexical.classified_none_above", "Becoming.Lexical.classified_of_decided"]}
+{"name": "Becoming.Lexical.classified_robust_iff_of_em", "uses": ["Becoming.Lexical.classified_robust_iff_of_decided"]}
+{"name": "Becoming.Lexical.included_adjoin_iff", "uses": []}
+{"name": "Becoming.Lexical.strictIncluded_adjoin_iff", "uses": ["Becoming.Lexical.included_adjoin_iff"]}
+{"name": "Becoming.Lexical.strictIncluded_adjoin_of_fresh", "uses": ["Becoming.Lexical.included_adjoin_iff"]}
+{"name": "Becoming.Lexical.strict_iff", "uses": []}

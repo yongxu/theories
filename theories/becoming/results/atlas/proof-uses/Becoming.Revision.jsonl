@@ -1,0 +1,33 @@
+{"name": "Becoming.Learning.Training.keeps_through_iff", "uses": []}
+{"name": "Becoming.Learning.Training.lost_choice", "uses": []}
+{"name": "Becoming.Registration.Keeps.refl", "uses": []}
+{"name": "Becoming.Registration.Keeps.trans", "uses": []}
+{"name": "Becoming.Registration.alikeUpTo_keeps", "uses": []}
+{"name": "Becoming.Registration.retained_gains", "uses": ["Becoming.Learning.Training.lost_choice"]}
+{"name": "Becoming.Registration.retained_keeps", "uses": []}
+{"name": "Becoming.Registration.run_keeps", "uses": ["Becoming.Registration.trace_keeps", "Becoming.Run.window_trace"]}
+{"name": "Becoming.Registration.through_alikeUpTo_later", "uses": ["Becoming.Registration.alikeUpTo_keeps"]}
+{"name": "Becoming.Registration.trace_keeps", "uses": ["Becoming.Registration.Keeps.refl", "Becoming.Registration.Keeps.trans"]}
+{"name": "Becoming.Registration.web_keeps_iff", "uses": ["Becoming.Learning.Training.keeps_through_iff", "Becoming.Web.AlikeThrough.refl", "Becoming.Web.AlikeThroughUpTo.symm", "Becoming.Web.AlikeThroughUpTo.trans"]}
+{"name": "Becoming.Revising.chosen_step", "uses": []}
+{"name": "Becoming.Revising.closed_loses", "uses": []}
+{"name": "Becoming.Revising.closes_choice", "uses": ["Becoming.Revising.closed_loses", "Becoming.Revising.correction_enabled_iff", "Becoming.Revising.opened_choice"]}
+{"name": "Becoming.Revising.controlled_revision", "uses": ["Becoming.Revising.closed_loses", "Becoming.Revising.opened_choice", "Becoming.Revising.opens_without_correction", "Becoming.Run.step"]}
+{"name": "Becoming.Revising.correction_enabled_iff", "uses": []}
+{"name": "Becoming.Revising.covered_not_enacted", "uses": []}
+{"name": "Becoming.Revising.determined", "uses": []}
+{"name": "Becoming.Revising.feasible_iff", "uses": ["Becoming.Revising.trace_iff", "Becoming.Stock.product_feasible_iff"]}
+{"name": "Becoming.Revising.linked_not_enacted", "uses": []}
+{"name": "Becoming.Revising.old_cannot_select_rebuild", "uses": []}
+{"name": "Becoming.Revising.opened_choice", "uses": []}
+{"name": "Becoming.Revising.opened_keeps", "uses": []}
+{"name": "Becoming.Revising.opens_with_correction", "uses": ["Becoming.Revising.opened_choice"]}
+{"name": "Becoming.Revising.opens_without_correction", "uses": ["Becoming.Revising.correction_enabled_iff", "Becoming.Revising.opened_choice"]}
+{"name": "Becoming.Revising.rebuild_enabled_iff", "uses": []}
+{"name": "Becoming.Revising.rebuild_then_close", "uses": []}
+{"name": "Becoming.Revising.step_iff", "uses": []}
+{"name": "Becoming.Revising.stock_balanced_held", "uses": ["Becoming.Revising.step_iff"]}
+{"name": "Becoming.Revising.trace_iff", "uses": ["Becoming.Revising.step_iff", "Generative.trace_map"]}
+{"name": "Becoming.RevisionRuns.history_gains", "uses": ["Becoming.Registration.retained_gains", "Becoming.Registration.through_alikeUpTo_later", "Becoming.RevisionRuns.history_retained_iff"]}
+{"name": "Becoming.RevisionRuns.history_retained_iff", "uses": []}
+{"name": "Becoming.RevisionRuns.rebuild_opens_keeps", "uses": ["Becoming.Revising.opened_keeps"]}

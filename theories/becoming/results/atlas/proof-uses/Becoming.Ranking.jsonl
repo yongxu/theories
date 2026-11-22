@@ -1,0 +1,52 @@
+{"name": "Becoming.Ranking.Immediate.focal_withheld", "uses": ["Becoming.Ranking.Immediate.law_low"]}
+{"name": "Becoming.Ranking.Immediate.law_low", "uses": ["RelationalRenewal.Law.level_succ"]}
+{"name": "Becoming.Ranking.Immediate.stepwise_ranks_absence", "uses": ["Becoming.Ranking.Immediate.focal_withheld", "Becoming.Ranking.Immediate.law_low", "Becoming.Ranking.absent_sustains"]}
+{"name": "Becoming.Ranking.ThirdParty.dependent", "uses": []}
+{"name": "Becoming.Ranking.ThirdParty.focal_three", "uses": ["Becoming.Ranking.ThirdParty.over_below_seven"]}
+{"name": "Becoming.Ranking.ThirdParty.over_below_seven", "uses": []}
+{"name": "Becoming.Ranking.ThirdParty.over_le_stops", "uses": []}
+{"name": "Becoming.Ranking.ThirdParty.renewal_needed", "uses": ["Becoming.Ranking.ThirdParty.over_below_seven", "Becoming.Ranking.ThirdParty.restraint_unranked_stepwise", "Becoming.Ranking.ThirdParty.stops_supports"]}
+{"name": "Becoming.Ranking.ThirdParty.restraint_unranked_stepwise", "uses": ["Becoming.Ranking.ThirdParty.dependent", "Becoming.Ranking.ThirdParty.focal_three", "Becoming.Ranking.ThirdParty.over_below_seven", "Becoming.Ranking.ThirdParty.stops_supports"]}
+{"name": "Becoming.Ranking.ThirdParty.stepwise_not_monotone", "uses": ["Becoming.Ranking.ThirdParty.dependent", "Becoming.Ranking.ThirdParty.focal_three", "Becoming.Ranking.ThirdParty.over_le_stops", "Becoming.Ranking.ThirdParty.stops_supports", "Becoming.Ranking.wholeRun_extends_iff_of_eases"]}
+{"name": "Becoming.Ranking.ThirdParty.stops_supports", "uses": []}
+{"name": "Becoming.Ranking.ThirdParty.undermines_included", "uses": ["Becoming.Ranking.ThirdParty.focal_three", "Becoming.Ranking.ThirdParty.stepwise_not_monotone", "Becoming.Ranking.stepwise_extends_iff_of_eases"]}
+{"name": "Becoming.Ranking.absent_renews", "uses": ["Becoming.Ranking.absent_sustains"]}
+{"name": "Becoming.Ranking.absent_sustains", "uses": ["Becoming.Ranking.undisturbed_sustains"]}
+{"name": "Becoming.Ranking.active_of_eases", "uses": []}
+{"name": "Becoming.Ranking.active_of_renewed", "uses": []}
+{"name": "Becoming.Ranking.admits_occurrence", "uses": ["Becoming.Ranking.preferOccurs_only"]}
+{"name": "Becoming.Ranking.basic_first_ranks", "uses": ["Becoming.Lexical.BasicPriority.iff", "Becoming.Ranking.basic_first_relational", "Becoming.Ranking.basic_first_stepwise"]}
+{"name": "Becoming.Ranking.basic_first_relational", "uses": ["Becoming.Lexical.Above.anchor", "Becoming.Ranking.absent_sustains", "RelationalRenewal.Law.overdraw_consuming"]}
+{"name": "Becoming.Ranking.basic_first_stepwise", "uses": ["Becoming.Lexical.Above.anchor", "Becoming.Ranking.absent_sustains", "RelationalRenewal.Law.overdraw_consuming"]}
+{"name": "Becoming.Ranking.extendsUnder_iff_of_exact", "uses": []}
+{"name": "Becoming.Ranking.included_before_loss", "uses": []}
+{"name": "Becoming.Ranking.level_never_falls", "uses": []}
+{"name": "Becoming.Ranking.malignant_ranking", "uses": ["Becoming.Ranking.readings_rank_differently"]}
+{"name": "Becoming.Ranking.malignant_restraint", "uses": ["Becoming.Ranking.included_before_loss", "Becoming.Ranking.restraint_ranks", "Becoming.Ranking.stoppingMalignant_level", "Becoming.Ranking.stops_included"]}
+{"name": "Becoming.Ranking.not_undermining_of_rising", "uses": ["Becoming.Ranking.level_never_falls", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.Ranking.preferOccurs_only", "uses": []}
+{"name": "Becoming.Ranking.readings_rank_differently", "uses": ["Becoming.Ranking.admits_occurrence", "Becoming.Ranking.included_before_loss", "Becoming.Ranking.stepwise_unranked", "Becoming.Ranking.whole_run_ranks"]}
+{"name": "Becoming.Ranking.relational_extends_iff_of_eases", "uses": ["Becoming.Ranking.relational_kept_iff"]}
+{"name": "Becoming.Ranking.relational_extends_iff_of_rising", "uses": ["Becoming.Ranking.not_undermining_of_rising", "Becoming.Ranking.relational_extends_iff_of_eases"]}
+{"name": "Becoming.Ranking.relational_kept_iff", "uses": ["Becoming.Ranking.active_of_eases"]}
+{"name": "Becoming.Ranking.relational_unranked", "uses": ["Becoming.Ranking.absent_sustains", "RelationalRenewal.Law.overdraw_consuming"]}
+{"name": "Becoming.Ranking.renewed_active_extends_iff", "uses": ["Becoming.Ranking.renewed_extends_iff"]}
+{"name": "Becoming.Ranking.renewed_extends_iff", "uses": ["Becoming.Ranking.extendsUnder_iff_of_exact", "Becoming.Ranking.stepwise_of_renewed", "Becoming.Ranking.wholeRun_of_renewed"]}
+{"name": "Becoming.Ranking.restraint_ranks", "uses": ["Becoming.Ranking.renewed_active_extends_iff", "RelationalRenewal.Law.overdraw_consuming"]}
+{"name": "Becoming.Ranking.sharing_included", "uses": ["RelationalRenewal.Law.within_renewal_sustains"]}
+{"name": "Becoming.Ranking.stepwise_contest", "uses": ["Becoming.Ranking.included_before_loss", "Becoming.Ranking.renewed_active_extends_iff", "Becoming.Ranking.sharing_included", "RelationalRenewal.Law.overdraw_consuming"]}
+{"name": "Becoming.Ranking.stepwise_extends_iff_of_eases", "uses": ["Becoming.Ranking.stepwise_kept_iff"]}
+{"name": "Becoming.Ranking.stepwise_extends_iff_of_rising", "uses": ["Becoming.Ranking.not_undermining_of_rising", "Becoming.Ranking.stepwise_extends_iff_of_eases"]}
+{"name": "Becoming.Ranking.stepwise_kept_iff", "uses": ["Becoming.Ranking.active_of_eases"]}
+{"name": "Becoming.Ranking.stepwise_of_renewed", "uses": []}
+{"name": "Becoming.Ranking.stepwise_unranked", "uses": ["Becoming.Ranking.absent_sustains", "Becoming.Ranking.withheld_of_extends", "RelationalRenewal.Law.overdraw_consuming"]}
+{"name": "Becoming.Ranking.stoppingMalignant_level", "uses": ["RelationalRenewal.Law.level_succ"]}
+{"name": "Becoming.Ranking.stops_included", "uses": []}
+{"name": "Becoming.Ranking.undisturbed_sustains", "uses": []}
+{"name": "Becoming.Ranking.wholeRun_extends_iff_of_eases", "uses": ["Becoming.Ranking.wholeRun_mono"]}
+{"name": "Becoming.Ranking.wholeRun_mono", "uses": ["Becoming.Ranking.active_of_eases"]}
+{"name": "Becoming.Ranking.wholeRun_of_renewed", "uses": ["Becoming.Web.renewed_not_consumed"]}
+{"name": "Becoming.Ranking.whole_run_extends", "uses": ["Becoming.Ranking.absent_renews", "Becoming.Ranking.absent_sustains", "Becoming.Ranking.renewed_extends_iff", "Becoming.Web.static_consumingIn", "RelationalRenewal.Law.overdraw_consuming"]}
+{"name": "Becoming.Ranking.whole_run_ranks", "uses": ["Becoming.Ranking.whole_run_extends"]}
+{"name": "Becoming.Ranking.winning_ranking", "uses": ["Becoming.Ranking.readings_rank_differently"]}
+{"name": "Becoming.Ranking.withheld_of_extends", "uses": []}

@@ -1,0 +1,43 @@
+{"name": "Becoming.Parting.Unparted.along", "uses": ["Becoming.Parting.joinAt_after"]}
+{"name": "Becoming.Parting.after_eq_onward", "uses": []}
+{"name": "Becoming.Parting.anyOf_of_mem", "uses": []}
+{"name": "Becoming.Parting.anyOf_true", "uses": []}
+{"name": "Becoming.Parting.candidates_run", "uses": ["Becoming.Parting.anyOf_true", "Becoming.Parting.mem_keepIf", "Becoming.bool_of_and_true", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Parting.continues_any", "uses": ["Becoming.Iteration.iter_iff_all", "Becoming.Parting.course_mono", "Becoming.Parting.iter_iff_continues"]}
+{"name": "Becoming.Parting.continues_persists", "uses": ["Becoming.Iteration.iter_persists", "Becoming.Parting.course_mono", "Becoming.Parting.iter_iff_continues"]}
+{"name": "Becoming.Parting.course_mono", "uses": []}
+{"name": "Becoming.Parting.course_statesBelow", "uses": ["Becoming.Identification.statesBelow_mono", "Becoming.Parting.Unparted.along", "Becoming.revisits_within", "Becoming.statesBelow_of_same"]}
+{"name": "Becoming.Parting.firstLive_found", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Parting.firstLive_spec", "uses": []}
+{"name": "Becoming.Parting.freeRun_course", "uses": []}
+{"name": "Becoming.Parting.free_held", "uses": []}
+{"name": "Becoming.Parting.free_never_right", "uses": ["Becoming.Learning.diagonal_misses", "Becoming.ListTests.not_ne_self"]}
+{"name": "Becoming.Parting.free_open", "uses": ["Becoming.Parting.free_parts_after", "Becoming.Parting.not_right_on_both"]}
+{"name": "Becoming.Parting.free_parts_after", "uses": ["Becoming.Learning.holdFrom_after", "Becoming.Learning.holdFrom_before", "Becoming.Learning.prefix_congr"]}
+{"name": "Becoming.Parting.free_unbounded", "uses": ["Becoming.Identification.statesBelow_iff_lasso", "Becoming.Learning.diagonal_not_lasso", "Becoming.ListTests.not_ne_self"]}
+{"name": "Becoming.Parting.free_unparted_const", "uses": []}
+{"name": "Becoming.Parting.iter_iff_continues", "uses": ["Becoming.Iteration.iter_iff_stages", "Becoming.Parting.course_mono"]}
+{"name": "Becoming.Parting.joinAt_after", "uses": []}
+{"name": "Becoming.Parting.joinAt_before", "uses": []}
+{"name": "Becoming.Parting.late_right", "uses": ["Becoming.Identification.leastBound_exact", "Becoming.Parting.late_statesBelow"]}
+{"name": "Becoming.Parting.late_statesBelow", "uses": ["Becoming.Parting.course_statesBelow", "Becoming.Parting.statesBelow_shift", "Becoming.Parting.unparted_at_of_late"]}
+{"name": "Becoming.Parting.leastBound_right", "uses": ["Becoming.Identification.leastBound_exact", "Becoming.Parting.course_statesBelow"]}
+{"name": "Becoming.Parting.live_iff_continues", "uses": ["Becoming.Parting.live_succ_iff"]}
+{"name": "Becoming.Parting.live_of_run", "uses": ["Becoming.Parting.live_succ_iff", "Becoming.Run.step"]}
+{"name": "Becoming.Parting.live_persists", "uses": ["Becoming.Parting.continues_persists", "Becoming.Parting.live_iff_continues"]}
+{"name": "Becoming.Parting.live_succ_iff", "uses": ["Becoming.Parting.anyOf_of_mem", "Becoming.Parting.anyOf_true", "Becoming.bool_and_true", "Becoming.bool_of_and_true"]}
+{"name": "Becoming.Parting.mem_keepIf", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Parting.not_parting_of_right", "uses": ["Becoming.Parting.not_right_on_both"]}
+{"name": "Becoming.Parting.not_right_on_both", "uses": ["Becoming.Learning.prefix_congr"]}
+{"name": "Becoming.Parting.path_of_continues", "uses": []}
+{"name": "Becoming.Parting.rest_earliest_runs", "uses": ["Becoming.Identification.rest_earliest", "Becoming.Law.realized_within", "Becoming.Learning.prefix_congr", "Becoming.Parting.unparted_of_determined"]}
+{"name": "Becoming.Parting.run_in_candidates", "uses": ["Becoming.Parting.anyOf_of_mem", "Becoming.Parting.mem_keepIf", "Becoming.Run.step", "Becoming.bool_and_true"]}
+{"name": "Becoming.Parting.some_right_iff", "uses": ["Becoming.Parting.not_right_on_both", "Becoming.Parting.world_right"]}
+{"name": "Becoming.Parting.statesBelow_shift", "uses": ["Becoming.Identification.statesBelow_iff_lasso", "Becoming.le_dest"]}
+{"name": "Becoming.Parting.states_agree", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Parting.unbounded_of_continues", "uses": ["Becoming.Parting.continues_any"]}
+{"name": "Becoming.Parting.unparted_at_of_late", "uses": ["Becoming.Identification.below_all", "Becoming.Parting.joinAt_after", "Becoming.Parting.joinAt_before"]}
+{"name": "Becoming.Parting.unparted_iff", "uses": ["Becoming.Identification.below_all"]}
+{"name": "Becoming.Parting.unparted_of_determined", "uses": ["Becoming.Parting.states_agree"]}
+{"name": "Becoming.Parting.world_right", "uses": ["Becoming.Identification.prefix_eq_iff", "Becoming.Learning.prefix_length", "Becoming.Parting.candidates_run", "Becoming.Parting.firstLive_found", "Becoming.Parting.firstLive_spec", "Becoming.Parting.live_of_run", "Becoming.Parting.run_in_candidates"]}
+{"name": "Becoming.Parting.world_right_iff", "uses": ["Becoming.Parting.not_right_on_both", "Becoming.Parting.world_right"]}

@@ -1,0 +1,58 @@
+{"name": "Becoming.Narrowing.acquired_answers_correct", "uses": ["Becoming.Narrowing.acquired_evidence_faithful", "Becoming.Narrowing.known_rule_makes_answer_correct"]}
+{"name": "Becoming.Narrowing.acquired_evidence_faithful", "uses": []}
+{"name": "Becoming.Narrowing.actual_retained", "uses": ["Becoming.Narrowing.mem_learn"]}
+{"name": "Becoming.Narrowing.after_congr", "uses": []}
+{"name": "Becoming.Narrowing.after_observe_iff", "uses": []}
+{"name": "Becoming.Narrowing.all_map", "uses": []}
+{"name": "Becoming.Narrowing.answer_iff", "uses": ["Becoming.Narrowing.answer_of_settles", "Becoming.Narrowing.answer_some"]}
+{"name": "Becoming.Narrowing.answer_maximal", "uses": ["Becoming.Narrowing.safe_definite_requires_agreement"]}
+{"name": "Becoming.Narrowing.answer_none", "uses": ["Becoming.ListTests.all_complete", "Becoming.Narrowing.beq_true_iff"]}
+{"name": "Becoming.Narrowing.answer_of_settles", "uses": ["Becoming.ListTests.all_complete", "Becoming.Narrowing.beq_true_iff"]}
+{"name": "Becoming.Narrowing.answer_safe", "uses": ["Becoming.Narrowing.answer_iff"]}
+{"name": "Becoming.Narrowing.answer_some", "uses": ["Becoming.ListTests.all_sound", "Becoming.Narrowing.beq_true_iff"]}
+{"name": "Becoming.Narrowing.answer_transport", "uses": ["Becoming.Narrowing.all_map"]}
+{"name": "Becoming.Narrowing.before_acquisition_abstains", "uses": []}
+{"name": "Becoming.Narrowing.beq_true_iff", "uses": []}
+{"name": "Becoming.Narrowing.contradiction_settles_nothing", "uses": ["Becoming.Narrowing.answer_none", "Becoming.Narrowing.inconsistent_evidence_yields_no_answer", "Becoming.Narrowing.settles_learn_iff"]}
+{"name": "Becoming.Narrowing.contrasting_acquisition_settles_both", "uses": []}
+{"name": "Becoming.Narrowing.contrasting_settles_both", "uses": ["Becoming.Narrowing.answer_some", "Becoming.Narrowing.contrasting_acquisition_settles_both", "Becoming.Narrowing.settles_learn_iff"]}
+{"name": "Becoming.Narrowing.counterevidence_of_dropped", "uses": ["Becoming.Narrowing.counterevidence_of_eliminated", "Becoming.Narrowing.mem_learn_iff"]}
+{"name": "Becoming.Narrowing.counterevidence_of_eliminated", "uses": ["Becoming.Narrowing.counterevidence_of_not_fits", "Becoming.Narrowing.mem_learn"]}
+{"name": "Becoming.Narrowing.counterevidence_of_not_fits", "uses": ["Becoming.Narrowing.beq_true_iff"]}
+{"name": "Becoming.Narrowing.encode_inj", "uses": []}
+{"name": "Becoming.Narrowing.filter_cons_false", "uses": []}
+{"name": "Becoming.Narrowing.filter_cons_true", "uses": []}
+{"name": "Becoming.Narrowing.filter_filter_self", "uses": ["Becoming.Narrowing.filter_cons_false", "Becoming.Narrowing.filter_cons_true"]}
+{"name": "Becoming.Narrowing.filter_map_comm", "uses": []}
+{"name": "Becoming.Narrowing.full_repertoire_correct", "uses": ["Becoming.Narrowing.acquired_evidence_faithful", "Becoming.Narrowing.known_rule_makes_answer_correct", "Becoming.Narrowing.repertoire_complete"]}
+{"name": "Becoming.Narrowing.full_repertoire_settles_actual", "uses": ["Becoming.Narrowing.answer_of_settles", "Becoming.Narrowing.full_repertoire_correct", "Becoming.Narrowing.settles_learn_iff"]}
+{"name": "Becoming.Narrowing.inconsistent_evidence_yields_no_answer", "uses": []}
+{"name": "Becoming.Narrowing.insufficient_support_retains_ambiguity", "uses": []}
+{"name": "Becoming.Narrowing.known_rule_makes_answer_correct", "uses": ["Becoming.Narrowing.actual_retained", "Becoming.Narrowing.answer_safe"]}
+{"name": "Becoming.Narrowing.learned_response_differs_from_last_report", "uses": []}
+{"name": "Becoming.Narrowing.learning_transport", "uses": ["Becoming.Narrowing.filter_map_comm"]}
+{"name": "Becoming.Narrowing.mem_filter", "uses": []}
+{"name": "Becoming.Narrowing.mem_learn", "uses": ["Becoming.Narrowing.mem_revise"]}
+{"name": "Becoming.Narrowing.mem_learn_iff", "uses": ["Becoming.Narrowing.narrowed_congr", "Becoming.Narrowing.revise_is_after"]}
+{"name": "Becoming.Narrowing.mem_revise", "uses": ["Becoming.Narrowing.beq_true_iff", "Becoming.Narrowing.mem_filter"]}
+{"name": "Becoming.Narrowing.narrow_class_settles_wrongly", "uses": ["Becoming.Narrowing.answer_some", "Becoming.Narrowing.settles_learn_iff", "Becoming.Narrowing.wrong_model_class_can_be_confidently_wrong"]}
+{"name": "Becoming.Narrowing.narrow_once_iff", "uses": ["Becoming.Narrowing.mem_revise", "Becoming.Narrowing.revise_is_after"]}
+{"name": "Becoming.Narrowing.narrowed_congr", "uses": ["Becoming.Narrowing.after_congr"]}
+{"name": "Becoming.Narrowing.narrowed_iff_fits", "uses": ["Becoming.Narrowing.mem_learn", "Becoming.Narrowing.mem_learn_iff"]}
+{"name": "Becoming.Narrowing.narrowing_transport", "uses": ["Becoming.Narrowing.learning_transport", "Becoming.Narrowing.mem_learn_iff"]}
+{"name": "Becoming.Narrowing.one_sample_leaves_other_case_unsettled", "uses": []}
+{"name": "Becoming.Narrowing.one_sample_settles_one", "uses": ["Becoming.Narrowing.answer_none", "Becoming.Narrowing.answer_some", "Becoming.Narrowing.one_sample_leaves_other_case_unsettled", "Becoming.Narrowing.settles_learn_iff"]}
+{"name": "Becoming.Narrowing.repeated_case_leaves_other", "uses": ["Becoming.Narrowing.answer_none", "Becoming.Narrowing.repeated_same_case_does_not_settle_other", "Becoming.Narrowing.settles_learn_iff"]}
+{"name": "Becoming.Narrowing.repeated_observation_idle", "uses": ["Becoming.Narrowing.mem_learn_iff", "Becoming.Narrowing.revise_revise"]}
+{"name": "Becoming.Narrowing.repeated_same_case_does_not_settle_other", "uses": []}
+{"name": "Becoming.Narrowing.repertoire_complete", "uses": []}
+{"name": "Becoming.Narrowing.repertoire_complete_of_ext", "uses": ["Becoming.Narrowing.repertoire_complete"]}
+{"name": "Becoming.Narrowing.revise_is_after", "uses": ["Becoming.Narrowing.after_observe_iff", "Becoming.Narrowing.encode_inj", "Becoming.Narrowing.mem_revise"]}
+{"name": "Becoming.Narrowing.revise_revise", "uses": ["Becoming.Narrowing.filter_filter_self"]}
+{"name": "Becoming.Narrowing.safe_definite_requires_agreement", "uses": ["Becoming.Narrowing.answer_iff"]}
+{"name": "Becoming.Narrowing.settled_differs_from_last", "uses": ["Becoming.Narrowing.answer_some", "Becoming.Narrowing.learned_response_differs_from_last_report", "Becoming.Narrowing.settles_learn_iff"]}
+{"name": "Becoming.Narrowing.settles_learn_iff", "uses": ["Becoming.Narrowing.mem_learn_iff"]}
+{"name": "Becoming.Narrowing.unique_maximal_safe", "uses": ["Becoming.Narrowing.answer_safe", "Becoming.Narrowing.safe_definite_requires_agreement"]}
+{"name": "Becoming.Narrowing.unique_maximal_safe_of_ext", "uses": ["Becoming.Narrowing.unique_maximal_safe"]}
+{"name": "Becoming.Narrowing.wrong_model_class_can_be_confidently_wrong", "uses": []}
+{"name": "Becoming.Narrowing.wrong_reencoding_breaks_transfer", "uses": []}

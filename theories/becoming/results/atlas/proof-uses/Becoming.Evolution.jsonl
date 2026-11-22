@@ -1,0 +1,35 @@
+{"name": "Becoming.Drawdown.acting", "uses": []}
+{"name": "Becoming.Drawdown.balances", "uses": []}
+{"name": "Becoming.Drawdown.dependent", "uses": []}
+{"name": "Becoming.Drawdown.descends_same", "uses": []}
+{"name": "Becoming.Drawdown.descends_varied", "uses": []}
+{"name": "Becoming.Drawdown.drawdown", "uses": ["Becoming.Drawdown.acting", "Becoming.Drawdown.balances", "Becoming.Drawdown.dependent", "Becoming.Drawdown.descends_same", "Becoming.Drawdown.descends_varied", "Becoming.Drawdown.same_unsupported", "Becoming.Drawdown.taking", "Becoming.Drawdown.transmits"]}
+{"name": "Becoming.Drawdown.same_unsupported", "uses": []}
+{"name": "Becoming.Drawdown.taking", "uses": []}
+{"name": "Becoming.Drawdown.transmits", "uses": []}
+{"name": "Becoming.Flow.DescendsAt.active", "uses": []}
+{"name": "Becoming.Flow.DescendsAt.supported", "uses": ["Becoming.Flow.DescendsAt.supported_at"]}
+{"name": "Becoming.Flow.DescendsAt.supported_at", "uses": []}
+{"name": "Becoming.Flow.goal_along", "uses": []}
+{"name": "Becoming.Flow.goal_descends_iff", "uses": ["Becoming.Flow.goal_along"]}
+{"name": "Becoming.Flow.never_supported_childless", "uses": ["Becoming.Flow.DescendsAt.supported"]}
+{"name": "Becoming.Flow.selected_le", "uses": ["Becoming.Flow.selected_le_at"]}
+{"name": "Becoming.Flow.selected_le_at", "uses": ["Becoming.Flow.DescendsAt.supported_at", "Becoming.length_mul_le", "Becoming.total_le"]}
+{"name": "Becoming.Flow.selection_within", "uses": ["Becoming.Flow.selected_le", "Becoming.price"]}
+{"name": "Becoming.Flow.selection_within_at", "uses": ["Becoming.Flow.selected_le_at", "Becoming.price"]}
+{"name": "Becoming.Flow.transmitted_along", "uses": []}
+{"name": "Becoming.Flow.transmitted_along_supported", "uses": ["Becoming.Flow.transmitted_along"]}
+{"name": "Becoming.Flow.transmitted_supported", "uses": ["Becoming.Flow.DescendsAt.supported", "Becoming.Flow.transmitted_supported_at"]}
+{"name": "Becoming.Flow.transmitted_supported_at", "uses": []}
+{"name": "Becoming.Flow.transmitted_within", "uses": ["Becoming.Flow.DescendsAt.supported", "Becoming.Flow.transmitted_within_at"]}
+{"name": "Becoming.Flow.transmitted_within_at", "uses": ["Becoming.Flow.transmitted_supported_at", "Becoming.balance_over_stretch_on"]}
+{"name": "Becoming.Flow.unsupported_childless", "uses": ["Becoming.Flow.unsupported_childless_at"]}
+{"name": "Becoming.Flow.unsupported_childless_at", "uses": ["Becoming.Flow.DescendsAt.supported_at"]}
+{"name": "Becoming.Slack.dependent", "uses": []}
+{"name": "Becoming.Slack.slack", "uses": ["Becoming.Slack.dependent"]}
+{"name": "Becoming.Unchecked.unchecked", "uses": []}
+{"name": "Becoming.length_mul_le", "uses": []}
+{"name": "Becoming.price", "uses": ["Becoming.excess_balance", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_const"]}
+{"name": "Becoming.selected_uniform", "uses": ["Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.total_const", "uses": ["Becoming.total_congr", "Becoming.total_mul", "Becoming.total_ones"]}
+{"name": "Becoming.unselected", "uses": []}

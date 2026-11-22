@@ -1,0 +1,91 @@
+{"name": "Becoming.Alike.blocks", "uses": ["Becoming.Frame.blocks_bisimulation"]}
+{"name": "Becoming.Alike.of_stuck", "uses": []}
+{"name": "Becoming.BranchingTest.finer_rename", "uses": []}
+{"name": "Becoming.BranchingTest.holds_along", "uses": ["Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.BranchingTest.holds_either", "uses": []}
+{"name": "Becoming.Frame.blocks_bisimulation", "uses": ["Becoming.Alike.realized", "Becoming.Alike.symm", "Becoming.Alike.trace"]}
+{"name": "Becoming.Frame.blocks_history_matches_of_em", "uses": ["Becoming.Frame.blocks_outcomes", "Becoming.Frame.blocks_trace_iff", "Becoming.Frame.blocks_translates", "Becoming.Translates.history_matches_of_em"]}
+{"name": "Becoming.Frame.blocks_kernel_iff", "uses": ["Becoming.Frame.blocks_sameBranchingTests_iff"]}
+{"name": "Becoming.Frame.blocks_outcomes", "uses": ["Becoming.outcomes_of_trace"]}
+{"name": "Becoming.Frame.blocks_sameBranchingTests_iff", "uses": ["Becoming.Frame.holds_rename_blocks", "Becoming.SameBranchingTests.blocks"]}
+{"name": "Becoming.Frame.blocks_step_iff_word", "uses": ["Becoming.Recipe.leads_word_iff"]}
+{"name": "Becoming.Frame.blocks_trace_iff", "uses": ["Generative.trace_append_iff", "Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.Frame.blocks_translates", "uses": ["Becoming.Frame.holds_blocks"]}
+{"name": "Becoming.Frame.byRecipes_history_matches_of_em", "uses": ["Becoming.Frame.byRecipes_translates", "Becoming.Recipe.outcomes", "Becoming.TestsDecided.of_em", "Becoming.Translates.history_matches_of_em"]}
+{"name": "Becoming.Frame.byRecipes_trace", "uses": ["Becoming.Recipe.Leads.trace", "Generative.trace_append_iff"]}
+{"name": "Becoming.Frame.byRecipes_translates", "uses": ["Becoming.Frame.holds_byRecipes"]}
+{"name": "Becoming.Frame.holds_blocks", "uses": ["Becoming.BranchingTest.holds_along"]}
+{"name": "Becoming.Frame.holds_byRecipes", "uses": ["Becoming.Recipe.holds_after"]}
+{"name": "Becoming.Frame.holds_rename_blocks", "uses": ["Generative.trace_singleton_iff"]}
+{"name": "Becoming.Granularity.listed_through", "uses": ["Becoming.Granularity.mem_joined_right", "Becoming.ListTests.mem_append_iff", "Becoming.mem_appended_left", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Granularity.mem_encode", "uses": ["Becoming.Granularity.mem_joined_right", "Becoming.ListTests.mem_append_iff", "Becoming.mem_appended_left", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Granularity.mem_joined_right", "uses": []}
+{"name": "Becoming.Joining.retained_blocks_extend", "uses": ["Becoming.Frame.blocks_trace_iff", "Becoming.Joining.retained_extends", "Becoming.ListTests.length_append"]}
+{"name": "Becoming.Midway.blocked_stuck", "uses": []}
+{"name": "Becoming.Midway.codes_apart", "uses": ["Becoming.Midway.internal_loss"]}
+{"name": "Becoming.Midway.completed_bisimulation", "uses": ["Becoming.Midway.completed_done", "Becoming.Midway.completes"]}
+{"name": "Becoming.Midway.completed_done", "uses": []}
+{"name": "Becoming.Midway.completes", "uses": []}
+{"name": "Becoming.Midway.exists_phase", "uses": []}
+{"name": "Becoming.Midway.formation_changes_guard", "uses": []}
+{"name": "Becoming.Midway.inserted_can_disable_resumption", "uses": []}
+{"name": "Becoming.Midway.inserted_changes_tests", "uses": []}
+{"name": "Becoming.Midway.internal_loss", "uses": []}
+{"name": "Becoming.Midway.no_prefix_reading", "uses": ["Becoming.Midway.internal_loss", "Becoming.Midway.same_prefix_tests"]}
+{"name": "Becoming.Midway.prefix_bisimulation", "uses": ["Becoming.Midway.blocked_stuck", "Becoming.Midway.prefixes_stuck", "Becoming.Midway.ready_stuck", "Becoming.Midway.risky_prefix_steps", "Becoming.Midway.risky_prefixes", "Becoming.Midway.safe_prefix_steps", "Becoming.Midway.safe_prefixes"]}
+{"name": "Becoming.Midway.prefixes_stuck", "uses": []}
+{"name": "Becoming.Midway.ready_no_begin", "uses": []}
+{"name": "Becoming.Midway.ready_stuck", "uses": ["Becoming.Midway.ready_no_begin"]}
+{"name": "Becoming.Midway.reduced_prefix_cannot_extend", "uses": ["Becoming.Midway.internal_loss", "Becoming.Midway.same_prefix_tests"]}
+{"name": "Becoming.Midway.remainder_changes_continuation", "uses": []}
+{"name": "Becoming.Midway.remainder_codes_apart", "uses": ["Becoming.Midway.remainder_changes_continuation", "Becoming.Recipe.Resumes.codes_apart"]}
+{"name": "Becoming.Midway.resumption_recovers_loss", "uses": ["Becoming.Frame.holds_blocks", "Becoming.Midway.internal_loss"]}
+{"name": "Becoming.Midway.risky_prefix_steps", "uses": ["Becoming.Midway.completed_done"]}
+{"name": "Becoming.Midway.risky_prefixes", "uses": []}
+{"name": "Becoming.Midway.safe_prefix_steps", "uses": ["Becoming.Midway.completed_done"]}
+{"name": "Becoming.Midway.safe_prefixes", "uses": []}
+{"name": "Becoming.Midway.same_completed_tests", "uses": ["Becoming.Alike.sameBranchingTests", "Becoming.Midway.completed_bisimulation"]}
+{"name": "Becoming.Midway.same_prefix_tests", "uses": ["Becoming.Alike.sameBranchingTests", "Becoming.Midway.prefix_bisimulation"]}
+{"name": "Becoming.Midway.same_start_distinct_remainders", "uses": ["Becoming.Reach.trans", "Becoming.Recipe.Advance.leaves"]}
+{"name": "Becoming.Midway.shared_origin", "uses": []}
+{"name": "Becoming.Midway.testing_before_formation_changes_results", "uses": ["Becoming.Midway.formation_changes_guard", "Becoming.Recipe.leads_branch_iff"]}
+{"name": "Becoming.OutcomesListed.holds_decided", "uses": ["Becoming.Decided.and", "Becoming.Decided.exists_listed", "Becoming.Decided.not", "Becoming.OutcomesListed.outcomes", "Becoming.OutcomesListed.realized"]}
+{"name": "Becoming.OutcomesListed.testsDecided", "uses": ["Becoming.OutcomesListed.holds_decided"]}
+{"name": "Becoming.Recipe.Advance.alike", "uses": ["Becoming.Alike.holds_iff", "Becoming.Alike.step"]}
+{"name": "Becoming.Recipe.Advance.brecOn", "uses": []}
+{"name": "Becoming.Recipe.Advance.leaves", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Recipe.Advance.resume", "uses": []}
+{"name": "Becoming.Recipe.Advance.same_of_em", "uses": ["Becoming.SameBranchingTests.step_of_em"]}
+{"name": "Becoming.Recipe.Advance.trace", "uses": []}
+{"name": "Becoming.Recipe.Leads.leaves", "uses": ["Becoming.Reach.refl", "Becoming.Reach.trans", "Becoming.Recipe.Advance.leaves", "Becoming.Recipe.Leaves.seq"]}
+{"name": "Becoming.Recipe.Leads.trace", "uses": ["Generative.trace_append_iff"]}
+{"name": "Becoming.Recipe.Leaves.alike", "uses": ["Becoming.Recipe.trace_alike"]}
+{"name": "Becoming.Recipe.Leaves.inserted", "uses": ["Becoming.Recipe.Leads.trace", "Becoming.Recipe.Leaves.trace", "Generative.trace_append_iff"]}
+{"name": "Becoming.Recipe.Leaves.resume", "uses": ["Becoming.Recipe.trace_resume"]}
+{"name": "Becoming.Recipe.Leaves.same_of_em", "uses": ["Becoming.Recipe.trace_same_of_em"]}
+{"name": "Becoming.Recipe.Leaves.seq", "uses": ["Generative.trace_map"]}
+{"name": "Becoming.Recipe.Leaves.trace", "uses": ["Becoming.Recipe.trace_native"]}
+{"name": "Becoming.Recipe.Resumes.codes_apart", "uses": []}
+{"name": "Becoming.Recipe.branch_earlier_iff", "uses": ["Becoming.Recipe.leads_branch_iff"]}
+{"name": "Becoming.Recipe.brecOn.eq", "uses": []}
+{"name": "Becoming.Recipe.holds_after", "uses": ["Becoming.Recipe.holds_after_of_leads"]}
+{"name": "Becoming.Recipe.holds_after_iff_em", "uses": ["Becoming.Recipe.holds_after", "Becoming.TestsDecided.of_em"]}
+{"name": "Becoming.Recipe.holds_after_of_leads", "uses": []}
+{"name": "Becoming.Recipe.leads_branch_iff", "uses": []}
+{"name": "Becoming.Recipe.leads_iff_afterAny", "uses": ["Becoming.CrossSituational.mem_singleton", "Becoming.Granularity.mem_encode", "Becoming.Granularity.mem_joined_right", "Becoming.ListTests.mem_append_iff", "Becoming.mem_appended_left"]}
+{"name": "Becoming.Recipe.leads_iff_leaves", "uses": ["Becoming.Recipe.Leads.leaves", "Becoming.Recipe.Leaves.resume"]}
+{"name": "Becoming.Recipe.leads_word_iff", "uses": ["Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.Recipe.outcomes", "uses": ["Becoming.CrossSituational.mem_singleton", "Becoming.Granularity.listed_through", "Becoming.Granularity.mem_joined_right", "Becoming.ListTests.mem_append_iff", "Becoming.mem_appended_left"]}
+{"name": "Becoming.Recipe.trace_alike", "uses": ["Becoming.Recipe.Advance.alike"]}
+{"name": "Becoming.Recipe.trace_native", "uses": ["Becoming.Recipe.Advance.trace", "Generative.trace_append_iff"]}
+{"name": "Becoming.Recipe.trace_resume", "uses": ["Becoming.Recipe.Advance.resume"]}
+{"name": "Becoming.Recipe.trace_same_of_em", "uses": ["Becoming.Recipe.Advance.same_of_em"]}
+{"name": "Becoming.SameBranchingTests.blocks", "uses": ["Becoming.Frame.blocks_translates", "Becoming.Translates.sameBranchingTests_iff"]}
+{"name": "Becoming.SameBranchingTests.leads_iff", "uses": ["Becoming.Recipe.leads_iff_afterAny"]}
+{"name": "Becoming.SameBranchingTests.of_stuck", "uses": ["Becoming.Alike.of_stuck", "Becoming.Alike.sameBranchingTests"]}
+{"name": "Becoming.SameBranchingTests.step_of_em", "uses": ["Becoming.BranchingTest.apart_from_list", "Becoming.apart_of_not_sameBranchingTests"]}
+{"name": "Becoming.SameBranchingTests.trace_of_em", "uses": ["Becoming.SameBranchingTests.step_of_em"]}
+{"name": "Becoming.TestsDecided.of_em", "uses": []}
+{"name": "Becoming.Translates.history_matches_of_em", "uses": ["Becoming.SameBranchingTests.trace_of_em", "Becoming.Translates.sameBranchingTests_iff"]}
+{"name": "Becoming.Translates.sameBranchingTests_iff", "uses": []}
+{"name": "Becoming.outcomes_of_trace", "uses": ["Becoming.CrossSituational.mem_singleton", "Becoming.Granularity.listed_through", "Generative.trace_cons_iff", "Generative.trace_nil_iff"]}

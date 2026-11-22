@@ -1,0 +1,102 @@
+{"name": "Becoming.Coupled.extend", "uses": []}
+{"name": "Becoming.CoupledInto.shorten", "uses": ["Becoming.le_dest"]}
+{"name": "Becoming.CoupledInto.succ", "uses": ["Becoming.Coupled.extend", "Becoming.Loops.extend_below", "Becoming.Loops.extend_next"]}
+{"name": "Becoming.Loops.Once.exact", "uses": ["Becoming.Loops.Once.give_succ", "Becoming.Loops.Once.give_zero", "Becoming.Naturals.add_congr", "Becoming.carried_succ"]}
+{"name": "Becoming.Loops.Once.give_succ", "uses": ["Becoming.total_eq_zero"]}
+{"name": "Becoming.Loops.Once.give_zero", "uses": []}
+{"name": "Becoming.Loops.Once.not_always", "uses": ["Becoming.Loops.Once.exact", "Becoming.Loops.Once.onLoop"]}
+{"name": "Becoming.Loops.Once.onLoop", "uses": []}
+{"name": "Becoming.Loops.SelfLoop.attained", "uses": ["Becoming.Loops.SelfLoop.carriedWithin_eq", "Becoming.Loops.SelfLoop.carried_eq", "Becoming.Loops.missBound_add_withinBound"]}
+{"name": "Becoming.Loops.SelfLoop.carriedWithin_eq", "uses": ["Becoming.Loops.SelfLoop.give", "Becoming.Loops.withinBound_zero", "Becoming.Naturals.add_congr", "Becoming.carriedWithin_zero_quiet"]}
+{"name": "Becoming.Loops.SelfLoop.carried_eq", "uses": ["Becoming.Loops.SelfLoop.give", "Becoming.Naturals.add_congr", "Becoming.carried_succ"]}
+{"name": "Becoming.Loops.SelfLoop.give", "uses": ["Becoming.Propagation.total_steps_at", "Becoming.beq_self"]}
+{"name": "Becoming.Loops.SelfLoop.inflow_eq", "uses": ["Becoming.Propagation.total_steps_at", "Becoming.beq_self"]}
+{"name": "Becoming.Loops.binom_le_pow", "uses": ["Becoming.Loops.binom_zero", "Becoming.Loops.pow_le_pow_base"]}
+{"name": "Becoming.Loops.binom_zero", "uses": []}
+{"name": "Becoming.Loops.ble_succ_self", "uses": []}
+{"name": "Becoming.Loops.extend_below", "uses": []}
+{"name": "Becoming.Loops.extend_next", "uses": ["Becoming.Loops.ble_succ_self"]}
+{"name": "Becoming.Loops.geomBound_eq", "uses": ["Becoming.Loops.one_add_mul", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Loops.geomBound_mono", "uses": []}
+{"name": "Becoming.Loops.le_mul_of_pos", "uses": []}
+{"name": "Becoming.Loops.linear_lt_two_pow", "uses": ["Becoming.Loops.sq_lt_two_pow", "Becoming.add_mul_split"]}
+{"name": "Becoming.Loops.missBound_add_withinBound", "uses": ["Becoming.Loops.withinBound_zero", "Becoming.Naturals.add_congr"]}
+{"name": "Becoming.Loops.missBound_le_succ", "uses": []}
+{"name": "Becoming.Loops.missBound_mono", "uses": ["Becoming.Loops.missBound_le_succ"]}
+{"name": "Becoming.Loops.mul_swap", "uses": ["Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Loops.not_poly_of_doubling", "uses": ["Becoming.Loops.poly_lt_two_pow", "Becoming.Loops.pow_le_pow_base", "Becoming.Naturals.mul_pow_eq", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Loops.odd_lt_two_pow", "uses": ["Becoming.Loops.pow_le_pow_exp", "Becoming.Loops.two_pow_succ"]}
+{"name": "Becoming.Loops.one_add_mul", "uses": ["Becoming.add_mul_split"]}
+{"name": "Becoming.Loops.orderSum_le_poly", "uses": ["Becoming.Loops.binom_le_pow", "Becoming.Loops.pow_le_pow_base", "Becoming.Loops.pow_le_pow_exp", "Becoming.between_of_mem_steps", "Becoming.mul_assoc_nat", "Becoming.steps_length", "Becoming.total_congr", "Becoming.total_le", "Becoming.total_mul", "Becoming.total_ones"]}
+{"name": "Becoming.Loops.orderSum_start", "uses": ["Becoming.Loops.orderSum_succ", "Becoming.total_congr", "Becoming.total_zero"]}
+{"name": "Becoming.Loops.orderSum_step", "uses": ["Becoming.Loops.orderSum_succ", "Becoming.Loops.pow_step", "Becoming.add_mul_split", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.Loops.orderSum_succ", "uses": ["Becoming.Loops.binom_zero", "Becoming.total_steps_succ"]}
+{"name": "Becoming.Loops.orderSum_zero", "uses": ["Becoming.Loops.binom_zero"]}
+{"name": "Becoming.Loops.poly_lt_two_pow", "uses": ["Becoming.Loops.linear_lt_two_pow", "Becoming.Loops.pow_le_pow_exp", "Becoming.Loops.pow_mul_nat", "Becoming.Naturals.lt_two_pow", "Becoming.Naturals.pow_add", "Becoming.Naturals.two_pow_pos", "Becoming.le_dest"]}
+{"name": "Becoming.Loops.pow_le_pow_base", "uses": []}
+{"name": "Becoming.Loops.pow_le_pow_exp", "uses": []}
+{"name": "Becoming.Loops.pow_mul_nat", "uses": ["Becoming.Naturals.pow_add"]}
+{"name": "Becoming.Loops.pow_step", "uses": ["Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Loops.product_ones", "uses": []}
+{"name": "Becoming.Loops.sq_lt_two_pow", "uses": ["Becoming.Loops.odd_lt_two_pow", "Becoming.Loops.two_pow_succ", "Becoming.Naturals.add_congr", "Becoming.add_mul_split"]}
+{"name": "Becoming.Loops.total_lt", "uses": ["Becoming.total_le"]}
+{"name": "Becoming.Loops.total_mul_const", "uses": ["Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.Loops.two_pow_succ", "uses": []}
+{"name": "Becoming.Loops.withinBound_eq", "uses": ["Becoming.Loops.orderSum_start", "Becoming.Loops.orderSum_step", "Becoming.Loops.orderSum_zero", "Becoming.Loops.withinBound_zero", "Becoming.Naturals.add_congr", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Loops.withinBound_le_succ", "uses": ["Becoming.Loops.withinBound_zero"]}
+{"name": "Becoming.Loops.withinBound_mono", "uses": ["Becoming.Loops.withinBound_le_succ"]}
+{"name": "Becoming.Loops.withinBound_zero", "uses": []}
+{"name": "Becoming.Loops.zero_or_pos", "uses": []}
+{"name": "Becoming.carriedFrom_carried", "uses": ["Becoming.carried_succ"]}
+{"name": "Becoming.carriedFrom_congr", "uses": ["Becoming.Naturals.add_congr", "Becoming.carriedGive_congr", "Becoming.total_congr_on"]}
+{"name": "Becoming.carriedFrom_eq_carried", "uses": ["Becoming.Naturals.add_congr", "Becoming.carried_succ", "Becoming.total_congr_on"]}
+{"name": "Becoming.carriedFrom_lt", "uses": ["Becoming.Loops.total_lt", "Becoming.Naturals.mul_lt_mul_of_pos", "Becoming.Propagation.mem_steps_upto", "Becoming.carriedFrom_carried", "Becoming.carriedFrom_mono", "Becoming.carriedFrom_succ", "Becoming.carriedGive_mono", "Becoming.carriedGive_of_rest", "Becoming.carried_succ", "Becoming.total_le"]}
+{"name": "Becoming.carriedFrom_mono", "uses": ["Becoming.carriedGive_mono", "Becoming.total_le"]}
+{"name": "Becoming.carriedFrom_succ", "uses": []}
+{"name": "Becoming.carriedGive_congr", "uses": ["Becoming.Loops.zero_or_pos", "Becoming.Propagation.le_of_mem_steps_upto", "Becoming.carriedGive_of_part", "Becoming.carriedGive_of_rest", "Becoming.total_congr_on"]}
+{"name": "Becoming.carriedGive_mono", "uses": ["Becoming.Propagation.le_of_mem_steps_upto", "Becoming.carriedGive_of_part", "Becoming.carriedGive_of_rest", "Becoming.total_le"]}
+{"name": "Becoming.carriedGive_of_part", "uses": []}
+{"name": "Becoming.carriedGive_of_rest", "uses": []}
+{"name": "Becoming.carriedWithin_eq_carriedFrom", "uses": []}
+{"name": "Becoming.carriedWithin_exact", "uses": ["Becoming.carriedFrom_carried", "Becoming.carriedFrom_congr"]}
+{"name": "Becoming.carriedWithin_exact_of_no_loop", "uses": ["Becoming.CoupledInto.shorten", "Becoming.carriedWithin_exact_of_not_coupledInto", "Becoming.loop_of_coupledInto"]}
+{"name": "Becoming.carriedWithin_exact_of_not_coupledInto", "uses": ["Becoming.CoupledInto.succ", "Becoming.carriedFrom_eq_carried", "Becoming.carriedGive_congr", "Becoming.coupledInto_zero"]}
+{"name": "Becoming.carriedWithin_le_carried", "uses": ["Becoming.carriedFrom_carried", "Becoming.carriedFrom_mono"]}
+{"name": "Becoming.carriedWithin_le_succ", "uses": ["Becoming.carriedFrom_mono"]}
+{"name": "Becoming.carriedWithin_le_withinBound", "uses": ["Becoming.Loops.withinBound_mono", "Becoming.Loops.withinBound_zero", "Becoming.carriedWithin_zero_quiet", "Becoming.total_give_le_inflow"]}
+{"name": "Becoming.carriedWithin_lt_of_loop", "uses": ["Becoming.Loops.le_mul_of_pos", "Becoming.orderBelow_lt_along", "Becoming.orderBelow_lt_around", "Becoming.orderBelow_mono"]}
+{"name": "Becoming.carriedWithin_mono", "uses": ["Becoming.carriedWithin_le_succ"]}
+{"name": "Becoming.carriedWithin_zero_quiet", "uses": ["Becoming.carriedGive_of_part", "Becoming.carriedGive_of_rest", "Becoming.total_eq_zero"]}
+{"name": "Becoming.carried_along", "uses": ["Becoming.Loops.mul_swap", "Becoming.carried_step_ge"]}
+{"name": "Becoming.carried_along_stationary", "uses": ["Becoming.Loops.product_ones", "Becoming.carried_along", "Becoming.couplesAlways_of_stationary"]}
+{"name": "Becoming.carried_around", "uses": ["Becoming.Loops.mul_swap", "Becoming.Loops.one_add_mul", "Becoming.carried_along", "Becoming.carried_le_add", "Becoming.carried_step_ge"]}
+{"name": "Becoming.carried_doubles_around", "uses": ["Becoming.Loops.product_ones", "Becoming.carried_runaway", "Becoming.stationary_now"]}
+{"name": "Becoming.carried_doubles_into", "uses": ["Becoming.carried_along_stationary", "Becoming.carried_doubles_around", "Becoming.strength_of_couples"]}
+{"name": "Becoming.carried_eq_carriedWithin", "uses": ["Becoming.carriedWithin_exact"]}
+{"name": "Becoming.carried_le_add", "uses": ["Becoming.carried_le_succ"]}
+{"name": "Becoming.carried_le_carriedWithin_add", "uses": ["Becoming.Loops.missBound_mono", "Becoming.carriedWithin_zero_quiet", "Becoming.carried_le_geomBound", "Becoming.carried_mono_steps", "Becoming.carried_succ", "Becoming.total_give_le_add", "Becoming.total_give_le_inflow"]}
+{"name": "Becoming.carried_le_geomBound", "uses": ["Becoming.carried_mono_steps", "Becoming.carried_succ", "Becoming.total_give_le_inflow"]}
+{"name": "Becoming.carried_le_polynomial", "uses": ["Becoming.Loops.withinBound_eq", "Becoming.carriedWithin_exact_of_no_loop", "Becoming.carriedWithin_le_withinBound"]}
+{"name": "Becoming.carried_mono_steps", "uses": ["Becoming.carried_le_add", "Becoming.le_dest"]}
+{"name": "Becoming.carried_runaway", "uses": ["Becoming.Loops.mul_swap", "Becoming.carried_around"]}
+{"name": "Becoming.carried_step_ge", "uses": ["Becoming.Propagation.mem_steps_upto", "Becoming.carriedGive_of_rest", "Becoming.carried_succ", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.coupledInto_zero", "uses": []}
+{"name": "Becoming.couplesAlways_of_stationary", "uses": ["Becoming.stationary_now"]}
+{"name": "Becoming.finite_order_iff_no_loop", "uses": ["Becoming.carriedWithin_exact_of_no_loop", "Becoming.carriedWithin_lt_of_loop"]}
+{"name": "Becoming.finite_order_iff_no_loop_stationary", "uses": ["Becoming.couplesAlways_of_stationary", "Becoming.finite_order_iff_no_loop"]}
+{"name": "Becoming.gap_le_polynomial", "uses": ["Becoming.carried_le_polynomial", "Becoming.gap_le_carried"]}
+{"name": "Becoming.gap_polynomial_iff_no_loop", "uses": ["Becoming.most_difference_arrives", "Becoming.polynomial_iff_no_loop"]}
+{"name": "Becoming.inflow_stationary", "uses": ["Becoming.Propagation.total_steps_at", "Becoming.stationary_now", "Becoming.total_congr_on", "Becoming.total_swap"]}
+{"name": "Becoming.loop_of_coupledInto", "uses": ["Becoming.gap_of_lt", "Becoming.le_dest", "Becoming.revisits_within"]}
+{"name": "Becoming.most_difference_within", "uses": ["Becoming.carriedWithin_exact_of_no_loop", "Becoming.most_difference_arrives"]}
+{"name": "Becoming.orderBelow_le_carried", "uses": ["Becoming.carriedWithin_le_carried"]}
+{"name": "Becoming.orderBelow_lt_along", "uses": ["Becoming.orderBelow_lt_succ"]}
+{"name": "Becoming.orderBelow_lt_around", "uses": ["Becoming.orderBelow_lt_along"]}
+{"name": "Becoming.orderBelow_lt_later", "uses": ["Becoming.carriedGive_mono", "Becoming.carriedWithin_eq_carriedFrom", "Becoming.carried_le_succ", "Becoming.carried_succ", "Becoming.orderBelow_le_carried", "Becoming.total_le"]}
+{"name": "Becoming.orderBelow_lt_succ", "uses": ["Becoming.carriedFrom_lt", "Becoming.carriedWithin_eq_carriedFrom", "Becoming.orderBelow_le_carried"]}
+{"name": "Becoming.orderBelow_mono", "uses": ["Becoming.carriedWithin_mono"]}
+{"name": "Becoming.polynomial_iff_no_loop", "uses": ["Becoming.Loops.not_poly_of_doubling", "Becoming.Loops.orderSum_le_poly", "Becoming.carried_doubles_into", "Becoming.carried_le_polynomial", "Becoming.inflow_stationary", "Becoming.le_total_of_mem", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.stationary_now", "uses": ["Becoming.beq_self"]}
+{"name": "Becoming.strength_of_couples", "uses": ["Becoming.couplesAlways_of_stationary", "Becoming.stationary_now"]}
+{"name": "Becoming.total_give_le_add", "uses": ["Becoming.Loops.total_mul_const", "Becoming.Propagation.le_of_mem_steps_upto", "Becoming.carriedGive_of_part", "Becoming.carriedGive_of_rest", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_le"]}
+{"name": "Becoming.total_give_le_inflow", "uses": ["Becoming.carriedGive_of_part", "Becoming.carriedGive_of_rest", "Becoming.total_eq_zero", "Becoming.total_give_le_add"]}

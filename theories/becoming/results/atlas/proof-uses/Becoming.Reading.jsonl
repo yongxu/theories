@@ -1,0 +1,27 @@
+{"name": "Becoming.ExchangeLaw.readWeb_dependent", "uses": ["Becoming.ExchangeLaw.supported_of_responds"]}
+{"name": "Becoming.ExchangeLaw.readWorld_closed_iff", "uses": ["Becoming.ExchangeLaw.course_balances_iff", "Becoming.World.withRest_closed_iff"]}
+{"name": "Becoming.ExchangeLaw.readWorld_glue", "uses": ["Becoming.ExchangeLaw.readWeb_dependent", "Becoming.Flow.readOff_acting", "Becoming.Flow.readOff_taking", "Becoming.World.withRest_balanced", "Becoming.World.withRest_dependent_iff"]}
+{"name": "Becoming.ExchangeLaw.reading_glue", "uses": ["Becoming.ExchangeLaw.readWeb_dependent", "Becoming.Flow.adopt_dependent_iff", "Becoming.Flow.readOff_acting", "Becoming.Flow.readOff_taking", "Becoming.Flow.withImbalance_balances"]}
+{"name": "Becoming.ExchangeLaw.requirement_beyond_course", "uses": ["Becoming.ExchangeLaw.responsive_levels", "Becoming.ExchangeLaw.responsive_requires", "Becoming.ExchangeLaw.unresponsive_levels", "Becoming.ExchangeLaw.unresponsive_unrequired"]}
+{"name": "Becoming.ExchangeLaw.responsive_levels", "uses": ["Becoming.ExchangeLaw.levels_succ", "Becoming.Naturals.add_sub_cancel"]}
+{"name": "Becoming.ExchangeLaw.responsive_requires", "uses": []}
+{"name": "Becoming.ExchangeLaw.rest_idle_iff_feasible", "uses": ["Becoming.ExchangeLaw.course_balances_iff", "Becoming.Flow.rest_idle_iff"]}
+{"name": "Becoming.ExchangeLaw.supported_of_responds", "uses": []}
+{"name": "Becoming.ExchangeLaw.unresponsive_levels", "uses": ["Becoming.ExchangeLaw.levels_succ", "Becoming.Naturals.add_sub_cancel"]}
+{"name": "Becoming.ExchangeLaw.unresponsive_unrequired", "uses": ["Becoming.ExchangeLaw.unresponsive_levels"]}
+{"name": "Becoming.Flow.acting_taking_iff_wider", "uses": []}
+{"name": "Becoming.Flow.adopt_census", "uses": ["Becoming.Flow.present_distinct", "Becoming.Flow.readOff_census"]}
+{"name": "Becoming.Flow.adopt_dependent_iff", "uses": ["Becoming.Flow.exchanging_some_iff"]}
+{"name": "Becoming.Flow.exchanging_some_iff", "uses": ["Becoming.Flow.some_mem_present"]}
+{"name": "Becoming.Flow.present_distinct", "uses": ["Becoming.ListTests.none_not_mem_map_some", "Becoming.distinct_map"]}
+{"name": "Becoming.Flow.readOff_acting", "uses": []}
+{"name": "Becoming.Flow.readOff_census", "uses": ["Becoming.keep_distinct", "Becoming.mem_keep"]}
+{"name": "Becoming.Flow.readOff_taking", "uses": []}
+{"name": "Becoming.Flow.rest_idle_at_iff", "uses": ["Becoming.eq_zero_of_not_pos", "Becoming.le_of_sub_eq_zero", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.Flow.rest_idle_iff", "uses": ["Becoming.Flow.rest_idle_at_iff"]}
+{"name": "Becoming.Flow.some_mem_present", "uses": ["Becoming.mem_map_some", "Becoming.mem_of_some_mem"]}
+{"name": "Becoming.World.withRest_balanced", "uses": ["Becoming.Flow.withImbalance_balances"]}
+{"name": "Becoming.World.withRest_closed_iff", "uses": ["Becoming.Flow.rest_idle_iff", "Becoming.World.withRest_rest_iff"]}
+{"name": "Becoming.World.withRest_dependent_iff", "uses": ["Becoming.World.withRest_exchanging_iff"]}
+{"name": "Becoming.World.withRest_exchanging_iff", "uses": ["Becoming.Flow.some_mem_present"]}
+{"name": "Becoming.World.withRest_rest_iff", "uses": []}

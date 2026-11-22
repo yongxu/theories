@@ -1,0 +1,9 @@
+{"name": "Becoming.ListFootprints.nodup_of_perm", "uses": ["Becoming.Coverage.Perm.mem"]}
+{"name": "Becoming.ListFootprints.nodup_split", "uses": ["Becoming.mem_appended_left", "Becoming.mem_appended_right"]}
+{"name": "Becoming.ListFootprints.parts_apart", "uses": []}
+{"name": "Becoming.ListFootprints.parts_within", "uses": []}
+{"name": "Becoming.ListFootprints.realizes_iff_of_draws", "uses": ["Becoming.ListFootprints.realizes_iff_supports"]}
+{"name": "Becoming.ListFootprints.realizes_iff_of_perm", "uses": ["Becoming.Coverage.Perm.mem", "Becoming.ListFootprints.nodup_of_perm", "Becoming.ListFootprints.realizes_iff_supports"]}
+{"name": "Becoming.ListFootprints.realizes_iff_supports", "uses": ["Becoming.JointPlan.supports_of_realizes", "Becoming.ListFootprints.parts_apart", "Becoming.ListFootprints.parts_within", "Becoming.ListFootprints.realizes_of_supports"]}
+{"name": "Becoming.ListFootprints.realizes_of_supports", "uses": ["Becoming.ListFootprints.nodup_split", "Becoming.mem_appended_left", "Becoming.mem_appended_right"]}
+{"name": "Becoming.ListFootprints.realizes_reassociate", "uses": ["Becoming.ListFootprints.realizes_iff_of_draws", "Becoming.ListTests.append_assoc"]}

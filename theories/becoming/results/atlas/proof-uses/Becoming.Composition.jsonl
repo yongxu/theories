@@ -1,0 +1,40 @@
+{"name": "Becoming.Compact.exclusions", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Compact.of_empty", "uses": []}
+{"name": "Becoming.Compact.of_greatest", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Compact.of_listed", "uses": ["Becoming.Compact.exclusions", "Becoming.Decided.of_not_not"]}
+{"name": "Becoming.DoubleNegation.jointCompact", "uses": ["Becoming.Compact.of_empty", "Becoming.Compact.of_greatest", "Becoming.DoubleNegation.plain_doubled"]}
+{"name": "Becoming.DoubleNegation.plain_doubled", "uses": []}
+{"name": "Becoming.DoubleNegation.sameJointTests", "uses": ["Becoming.DoubleNegation.plain_doubled"]}
+{"name": "Becoming.DoubleNegation.stable_of_parts", "uses": []}
+{"name": "Becoming.DoubleNegation.stepCompact", "uses": ["Becoming.Compact.of_empty"]}
+{"name": "Becoming.IdentifiesJointAlike.lifts", "uses": ["Becoming.AlikeWith.matchesParts", "Becoming.liftsFromEach_iff_of_kernel"]}
+{"name": "Becoming.JointFrame.TestsStable.of_em", "uses": ["Becoming.Decided.of_not_not"]}
+{"name": "Becoming.JointPlan.matchesParts_of_lifts", "uses": []}
+{"name": "Becoming.JointPlan.plans_lift_iff", "uses": ["Becoming.JointPlan.matchesParts_of_lifts", "Becoming.JointPlan.realizes_image_iff"]}
+{"name": "Becoming.JointPlan.realizes_image_iff", "uses": ["Becoming.liftsFromEach_iff"]}
+{"name": "Becoming.JointPlan.supports_of_image", "uses": ["Becoming.JointPlan.realizes_image_iff", "Becoming.JointPlan.supports_of_realizes"]}
+{"name": "Becoming.JointPlanFrames.plans_lift_iff_of_kernel", "uses": ["Becoming.JointPlan.plans_lift_iff", "Becoming.MatchesParts.transport"]}
+{"name": "Becoming.JointPlanFrames.plans_lift_of_jointAlike", "uses": ["Becoming.AlikeWith.matchesParts", "Becoming.JointPlanFrames.plans_lift_iff_of_kernel"]}
+{"name": "Becoming.JointPlanFrames.plans_lift_of_sameJointTests", "uses": ["Becoming.JointPlanFrames.plans_lift_iff_of_kernel", "Becoming.SameJointTests.matchesParts"]}
+{"name": "Becoming.JointTest.holds_all", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.JointTest.holds_firsts", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.JointTest.holds_seconds", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Pairing.alike", "uses": []}
+{"name": "Becoming.Pairing.apart", "uses": []}
+{"name": "Becoming.Pairing.not_jointAlike", "uses": ["Becoming.AlikeWith.holds_iff", "Becoming.Pairing.apart"]}
+{"name": "Becoming.SameJointTests.matchesParts", "uses": ["Becoming.SameJointTests.parts"]}
+{"name": "Becoming.SameJointTests.of_passes", "uses": []}
+{"name": "Becoming.SameJointTests.parts", "uses": ["Becoming.SameJointTests.of_passes", "Becoming.SameJointTests.parts_passing"]}
+{"name": "Becoming.SameJointTests.parts_passing", "uses": ["Becoming.JointTest.holds_firsts", "Becoming.JointTest.holds_seconds"]}
+{"name": "Becoming.SameJointTests.step", "uses": ["Becoming.SameJointTests.of_passes", "Becoming.SameJointTests.step_passing"]}
+{"name": "Becoming.SameJointTests.step_passing", "uses": ["Becoming.JointTest.holds_all"]}
+{"name": "Becoming.Unjoined.supports_not_realizes", "uses": []}
+{"name": "Becoming.jointAlike_iff_sameJointTests", "uses": ["Becoming.AlikeWith.sameTestsWith", "Becoming.sameJointTests_bisimulation"]}
+{"name": "Becoming.jointAlike_iff_sameJointTests_of_listed", "uses": ["Becoming.Compact.of_listed", "Becoming.JointFrame.TestsStable.of_em", "Becoming.jointAlike_iff_sameJointTests"]}
+{"name": "Becoming.jointAlike_of_sameJointTests_iff_em", "uses": ["Becoming.AlikeWith.parts", "Becoming.AlikeWith.sameTestsWith", "Becoming.DoubleNegation.jointCompact", "Becoming.DoubleNegation.sameJointTests", "Becoming.DoubleNegation.stable_of_parts", "Becoming.DoubleNegation.stepCompact", "Becoming.JointFrame.TestsStable.of_em", "Becoming.jointAlike_iff_sameJointTests", "Becoming.not_not_decided"]}
+{"name": "Becoming.liftsFromEach_iff", "uses": []}
+{"name": "Becoming.liftsFromEach_iff_of_kernel", "uses": ["Becoming.MatchesParts.transport", "Becoming.liftsFromEach_iff"]}
+{"name": "Becoming.liftsFromEach_of_sameJointTests", "uses": ["Becoming.SameJointTests.matchesParts", "Becoming.liftsFromEach_iff_of_kernel"]}
+{"name": "Becoming.matchesParts_of_compact_iff_em", "uses": ["Becoming.DoubleNegation.jointCompact", "Becoming.DoubleNegation.sameJointTests", "Becoming.DoubleNegation.stable_of_parts", "Becoming.JointFrame.TestsStable.of_em", "Becoming.SameJointTests.matchesParts", "Becoming.not_not_decided"]}
+{"name": "Becoming.nodup_iff_distinct", "uses": []}
+{"name": "Becoming.sameJointTests_bisimulation", "uses": ["Becoming.SameJointTests.parts", "Becoming.SameJointTests.step", "Becoming.SameTestsWith.symm"]}

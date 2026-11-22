@@ -1,0 +1,78 @@
+{"name": "Becoming.ModelStatements.adds_iff", "uses": []}
+{"name": "Becoming.ModelStatements.agreeUpTo_iff", "uses": ["Becoming.ModelStatements.before_iff_lt", "Becoming.ModelStatements.withinSteps_iff_le"]}
+{"name": "Becoming.ModelStatements.before_iff_lt", "uses": ["Becoming.le_dest", "Becoming.«及之传递»"]}
+{"name": "Becoming.ModelStatements.broken_iff", "uses": []}
+{"name": "Becoming.ModelStatements.dependent_iff", "uses": []}
+{"name": "Becoming.ModelStatements.descends_iff", "uses": []}
+{"name": "Becoming.ModelStatements.descent_neutral_iff", "uses": ["Becoming.ModelStatements.descent_related_iff", "Becoming.ModelStatements.living_iff", "Becoming.ModelStatements.neutral_transmits_iff"]}
+{"name": "Becoming.ModelStatements.descent_reaches_reading", "uses": ["Becoming.Flow.descent_reaches", "Becoming.ModelStatements.descends_iff", "Becoming.ModelStatements.descent_neutral_iff", "Becoming.ModelStatements.living_iff"]}
+{"name": "Becoming.ModelStatements.descent_related_iff", "uses": ["Becoming.ModelStatements.descends_iff", "Becoming.ModelStatements.interacts_iff"]}
+{"name": "Becoming.ModelStatements.differenceOnlyTogether_iff_model", "uses": ["Becoming.ModelStatements.makesDifferenceTogether_iff", "Becoming.ModelStatements.makesDifference_iff"]}
+{"name": "Becoming.ModelStatements.differenceOnlyTogether_reading", "uses": ["Becoming.Dependence.differenceOnlyTogether_iff", "Becoming.ModelStatements.differenceOnlyTogether_iff_model", "Becoming.ModelStatements.makesDifferenceTogether_iff", "Becoming.determined_iff_fixed"]}
+{"name": "Becoming.ModelStatements.finite_reading_iff", "uses": []}
+{"name": "Becoming.ModelStatements.finite_reading_not_exact", "uses": ["Becoming.ModelStatements.agreeUpTo_iff", "Becoming.ModelStatements.renewing_iff_along", "Becoming.Renewable.no_exact_finite_reading"]}
+{"name": "Becoming.ModelStatements.fixes_iff", "uses": ["Becoming.ModelStatements.before_iff_lt", "Becoming.determined_iff_fixed"]}
+{"name": "Becoming.ModelStatements.free_iff", "uses": []}
+{"name": "Becoming.ModelStatements.frontier_iff", "uses": []}
+{"name": "Becoming.ModelStatements.held_iff_reading", "uses": ["Becoming.ModelStatements.partialIdentity_le_iff"]}
+{"name": "Becoming.ModelStatements.identifies_iff_reading", "uses": ["Becoming.Limit.identifies_iff_tracks", "Becoming.ModelStatements.tracks_iff"]}
+{"name": "Becoming.ModelStatements.inheritsAt_iff", "uses": []}
+{"name": "Becoming.ModelStatements.interacts_iff", "uses": []}
+{"name": "Becoming.ModelStatements.interiorBy_iff", "uses": []}
+{"name": "Becoming.ModelStatements.kept_iff", "uses": []}
+{"name": "Becoming.ModelStatements.kernel_and_reading", "uses": ["Becoming.ModelStatements.kernel_iff", "Becoming.Viability.kernel_and_iff"]}
+{"name": "Becoming.ModelStatements.kernel_iff", "uses": ["Becoming.reach_iff_withinClosure"]}
+{"name": "Becoming.ModelStatements.livesOn_iff", "uses": []}
+{"name": "Becoming.ModelStatements.living_iff", "uses": ["Becoming.ModelStatements.underminingAt_iff"]}
+{"name": "Becoming.ModelStatements.living_on_reaches_reading", "uses": ["Becoming.ModelStatements.livesOn_iff", "Becoming.ModelStatements.living_iff", "Becoming.ModelStatements.sustenance_neutral_iff", "Becoming.Web.living_on_reaches"]}
+{"name": "Becoming.ModelStatements.makesDifferenceTogether_iff", "uses": ["Becoming.ModelStatements.withholdAll_iff_li"]}
+{"name": "Becoming.ModelStatements.makesDifference_iff", "uses": []}
+{"name": "Becoming.ModelStatements.metOn_iff", "uses": []}
+{"name": "Becoming.ModelStatements.needsWithinAt_iff", "uses": []}
+{"name": "Becoming.ModelStatements.neutral_transmits_iff", "uses": ["Becoming.Valuation.transmits_iff_closed"]}
+{"name": "Becoming.ModelStatements.not_fixes_reading", "uses": ["Becoming.ModelStatements.fixes_iff", "Becoming.ModelStatements.takes_iff", "Becoming.Run.not_fixes_of_untaken", "Becoming.determined_iff_fixed"]}
+{"name": "Becoming.ModelStatements.only_together_reading", "uses": ["Becoming.Dependence.Overdetermined.only_together", "Becoming.ModelStatements.differenceOnlyTogether_iff_model", "Becoming.ModelStatements.makesDifferenceTogether_iff", "Becoming.ModelStatements.overdetermined_iff"]}
+{"name": "Becoming.ModelStatements.optimum_broken_reading", "uses": ["Becoming.ModelStatements.broken_iff", "Becoming.ModelStatements.frontier_iff", "Becoming.ModelStatements.metOn_iff", "Becoming.ModelStatements.rising_iff", "Becoming.ModelStatements.room_iff", "Becoming.Web.optimum_broken_iff"]}
+{"name": "Becoming.ModelStatements.origin_iff_li", "uses": []}
+{"name": "Becoming.ModelStatements.overdetermined_iff", "uses": []}
+{"name": "Becoming.ModelStatements.partialIdentity_le_iff", "uses": []}
+{"name": "Becoming.ModelStatements.reached_iff", "uses": []}
+{"name": "Becoming.ModelStatements.renewingAt_iff", "uses": []}
+{"name": "Becoming.ModelStatements.renewingAt_iff_over_all_reading", "uses": ["Becoming.ModelStatements.renewingAt_reading", "Becoming.ModelStatements.renewingOver_reading", "Becoming.Web.renewingAt_iff_over_all"]}
+{"name": "Becoming.ModelStatements.renewingAt_reading", "uses": ["Becoming.ModelStatements.renewingAt_iff", "Becoming.ModelStatements.roles_renewingAt"]}
+{"name": "Becoming.ModelStatements.renewingIn_iff", "uses": []}
+{"name": "Becoming.ModelStatements.renewingOver_iff", "uses": []}
+{"name": "Becoming.ModelStatements.renewingOver_reading", "uses": ["Becoming.ModelStatements.renewingOver_iff", "Becoming.ModelStatements.roles_renewingOver"]}
+{"name": "Becoming.ModelStatements.renewing_iff_along", "uses": ["Becoming.ModelStatements.renewingIn_iff", "Becoming.Web.roles_renewingIn"]}
+{"name": "Becoming.ModelStatements.renewing_not_closed", "uses": ["Becoming.ModelStatements.finite_reading_iff", "Becoming.ModelStatements.finite_reading_not_exact"]}
+{"name": "Becoming.ModelStatements.response_not_fixed_reading", "uses": ["Becoming.ExchangeLaw.response_not_fixed_by_coupling", "Becoming.ModelStatements.through_iff_inclusion"]}
+{"name": "Becoming.ModelStatements.retains_iff", "uses": []}
+{"name": "Becoming.ModelStatements.rising_iff", "uses": []}
+{"name": "Becoming.ModelStatements.roles_alive_reading", "uses": ["Becoming.ModelStatements.living_iff", "Becoming.Web.roles_alive"]}
+{"name": "Becoming.ModelStatements.roles_dependent_reading", "uses": ["Becoming.ModelStatements.dependent_iff", "Becoming.Web.roles_dependent"]}
+{"name": "Becoming.ModelStatements.roles_renewingAt", "uses": []}
+{"name": "Becoming.ModelStatements.roles_renewingOver", "uses": []}
+{"name": "Becoming.ModelStatements.roles_supported_reading", "uses": ["Becoming.ModelStatements.supported_iff", "Becoming.Web.roles_supported"]}
+{"name": "Becoming.ModelStatements.room_iff", "uses": []}
+{"name": "Becoming.ModelStatements.run_agrees_every_start_reading", "uses": ["Becoming.ModelStatements.origin_iff_li", "Becoming.ModelStatements.runs_agree_iff_reached", "Becoming.SharedCodes.run_agrees_every_start_iff"]}
+{"name": "Becoming.ModelStatements.runs_agree_iff_reached", "uses": ["Becoming.ModelStatements.reached_iff", "Becoming.SharedCodes.state_hearings"]}
+{"name": "Becoming.ModelStatements.selfSignificance_iff_reading", "uses": []}
+{"name": "Becoming.ModelStatements.shares_iff_reading", "uses": []}
+{"name": "Becoming.ModelStatements.significance_undetermined_reading", "uses": ["Becoming.ModelStatements.adds_iff", "Becoming.ModelStatements.retains_iff", "Becoming.ModelStatements.roles_alive_reading", "Becoming.ModelStatements.significant_iff_livingClaim", "Becoming.Web.significance_undetermined"]}
+{"name": "Becoming.ModelStatements.significant_iff_held_reading", "uses": ["Becoming.ModelStatements.held_iff_reading", "Becoming.ModelStatements.selfSignificance_iff_reading", "Becoming.ModelStatements.shares_iff_reading", "Becoming.ModelStatements.significant_iff_reading", "Becoming.Valuation.significant_iff_held"]}
+{"name": "Becoming.ModelStatements.significant_iff_livingClaim", "uses": ["Becoming.ModelStatements.partialIdentity_le_iff", "Becoming.ModelStatements.roles_alive_reading", "Becoming.ModelStatements.significant_iff_reading"]}
+{"name": "Becoming.ModelStatements.significant_iff_reading", "uses": ["Becoming.ModelStatements.partialIdentity_le_iff"]}
+{"name": "Becoming.ModelStatements.supported_iff", "uses": []}
+{"name": "Becoming.ModelStatements.sustenance_neutral_iff", "uses": ["Becoming.ModelStatements.living_iff", "Becoming.ModelStatements.neutral_transmits_iff", "Becoming.ModelStatements.sustenance_related_iff"]}
+{"name": "Becoming.ModelStatements.sustenance_related_iff", "uses": ["Becoming.ModelStatements.interacts_iff", "Becoming.ModelStatements.livesOn_iff"]}
+{"name": "Becoming.ModelStatements.takes_iff", "uses": ["Becoming.ModelStatements.before_iff_lt"]}
+{"name": "Becoming.ModelStatements.through_iff_inclusion", "uses": []}
+{"name": "Becoming.ModelStatements.through_of_closed", "uses": []}
+{"name": "Becoming.ModelStatements.tracks_iff", "uses": ["Becoming.ModelStatements.withinSteps_iff_le"]}
+{"name": "Becoming.ModelStatements.transmits_at_one_kind", "uses": ["Becoming.ModelStatements.inheritsAt_iff", "Becoming.ModelStatements.needsWithinAt_iff", "Becoming.Web.transmits_at_iff"]}
+{"name": "Becoming.ModelStatements.transmits_at_reading", "uses": ["Becoming.ModelStatements.transmits_at_one_kind"]}
+{"name": "Becoming.ModelStatements.underminingAt_iff", "uses": []}
+{"name": "Becoming.ModelStatements.unselected_beyond_data_reading", "uses": ["Becoming.Learning.Training.unselected_beyond_data", "Becoming.ModelStatements.free_iff", "Becoming.ModelStatements.through_of_closed"]}
+{"name": "Becoming.ModelStatements.verifiableBy_reading", "uses": ["Becoming.Ideals.verifiableBy_iff_interior", "Becoming.ModelStatements.interiorBy_iff"]}
+{"name": "Becoming.ModelStatements.withholdAll_iff_li", "uses": []}
+{"name": "Becoming.ModelStatements.withinSteps_iff_le", "uses": ["Becoming.le_dest", "Becoming.«所闭之传递»", "Becoming.«所闭之自反»", "Becoming.«缘在所闭»"]}

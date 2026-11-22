@@ -1,0 +1,28 @@
+{"name": "Becoming.SupportGated.add_sub_assoc_of_le", "uses": []}
+{"name": "Becoming.SupportGated.add_sub_le", "uses": []}
+{"name": "Becoming.SupportGated.balances", "uses": ["Becoming.SupportGated.level_succ_le", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.SupportGated.below_for_good", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.stays_below_at", "Becoming.SupportGated.balances", "Becoming.SupportGated.givers_supported", "Becoming.SupportGated.netGive_active"]}
+{"name": "Becoming.SupportGated.ends_for_good", "uses": ["Becoming.Flow.ends_below_at", "Becoming.SupportGated.below_for_good", "Becoming.Web.static_dependent", "RelationalRenewal.Law.unfolding_dependent"]}
+{"name": "Becoming.SupportGated.givers_supported", "uses": ["Becoming.SupportGated.netGive_active", "Becoming.SupportGated.renewal_supported"]}
+{"name": "Becoming.SupportGated.jointly_ends", "uses": ["Becoming.SupportGated.ends_for_good", "RelationalRenewal.Law.overdraw_crosses_support"]}
+{"name": "Becoming.SupportGated.level_succ_le", "uses": ["Becoming.SupportGated.add_sub_le"]}
+{"name": "Becoming.SupportGated.netGive_active", "uses": ["Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.SupportGated.netGive_step", "uses": ["Becoming.SupportGated.add_sub_assoc_of_le", "Becoming.SupportGated.sub_pos_of_lt"]}
+{"name": "Becoming.SupportGated.overdraw_ends", "uses": ["Becoming.SupportGated.ends_for_good", "RelationalRenewal.Law.overdraw_crosses_support"]}
+{"name": "Becoming.SupportGated.renewal_supported", "uses": []}
+{"name": "Becoming.SupportGated.repair_restores", "uses": ["Becoming.Flow.restores", "Becoming.SupportGated.balances", "Becoming.SupportGated.netGive_step"]}
+{"name": "Becoming.SupportGatedWebs.escalation_consumes", "uses": ["Becoming.Web.static_consumingIn", "RelationalRenewal.Law.escalation_consumes"]}
+{"name": "Becoming.SupportGatedWebs.fluctuating_dependent", "uses": ["Becoming.Web.static_dependent", "RelationalRenewal.fluctuating_dependent"]}
+{"name": "Becoming.SupportGatedWebs.fluctuating_neither", "uses": ["Becoming.Web.static_consumingIn", "Becoming.Web.static_renewingIn", "RelationalRenewal.fluctuating_neither"]}
+{"name": "Becoming.SupportGatedWebs.formation_does_not_decide", "uses": ["Becoming.Web.static_consumingIn", "Becoming.Web.static_renewingIn", "RelationalRenewal.Law.formation_does_not_decide"]}
+{"name": "Becoming.SupportGatedWebs.jointly_consuming", "uses": ["Becoming.Web.static_consumingIn", "Becoming.Web.static_renewingIn", "RelationalRenewal.Law.jointly_consuming"]}
+{"name": "Becoming.SupportGatedWebs.own_trajectory_does_not_decide", "uses": ["Becoming.Web.static_consumingIn", "Becoming.Web.static_renewingIn", "RelationalRenewal.Law.own_trajectory_does_not_decide"]}
+{"name": "Becoming.SupportRecovery.absorbs", "uses": ["RelationalRenewal.Law.level_succ"]}
+{"name": "Becoming.SupportRecovery.pulse_levels", "uses": []}
+{"name": "Becoming.SupportRecovery.recovered_neither", "uses": ["Becoming.SupportRecovery.supported_pulse_recovers"]}
+{"name": "Becoming.SupportRecovery.recovered_web_neither", "uses": ["Becoming.SupportRecovery.recovered_neither", "Becoming.Web.static_consumingIn", "Becoming.Web.static_renewingIn"]}
+{"name": "Becoming.SupportRecovery.repair_step", "uses": ["Becoming.SupportGated.add_sub_assoc_of_le", "Becoming.SupportGated.sub_pos_of_lt", "RelationalRenewal.Law.level_succ"]}
+{"name": "Becoming.SupportRecovery.same_later_inputs", "uses": []}
+{"name": "Becoming.SupportRecovery.supported_pulse_recovers", "uses": ["Becoming.SupportRecovery.window_progress"]}
+{"name": "Becoming.SupportRecovery.unsupported_pulse_ends", "uses": ["Becoming.SupportRecovery.absorbs"]}
+{"name": "Becoming.SupportRecovery.window_progress", "uses": ["Becoming.SupportRecovery.repair_step"]}

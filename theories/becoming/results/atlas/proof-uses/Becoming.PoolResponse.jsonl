@@ -1,0 +1,18 @@
+{"name": "Becoming.Clearing.separated_unresponded", "uses": ["Becoming.Clearing.dweller_spared", "Becoming.Clearing.rest_follows_spared", "Becoming.Clearing.unsupported_with", "Becoming.Web.admission_separates_all"]}
+{"name": "Becoming.ExchangeLaw.Through.acts_alike_all", "uses": ["Becoming.Web.AlikeThroughUpTo.earlier"]}
+{"name": "Becoming.ExchangeLaw.Through.acts_separate", "uses": ["Becoming.ExchangeLaw.Through.selectsThroughAll", "Becoming.Web.separates_all_iff"]}
+{"name": "Becoming.ExchangeLaw.Through.acts_separate_member", "uses": ["Becoming.ExchangeLaw.Through.selectsThroughAll", "Becoming.Web.separates_all_iff_member"]}
+{"name": "Becoming.ExchangeLaw.Through.apart_of_acts", "uses": []}
+{"name": "Becoming.ExchangeLaw.Through.selectsThroughAll", "uses": ["Becoming.ExchangeLaw.Through.acts_alike_all"]}
+{"name": "Becoming.ExchangeLaw.acts_alike_all_iff", "uses": ["Becoming.ExchangeLaw.ofClass_take_iff", "Becoming.ExchangeLaw.ofClass_through"]}
+{"name": "Becoming.ExchangeLaw.ofClass_take_iff", "uses": ["Becoming.Web.AlikeThrough.refl", "Becoming.mark_cases", "Becoming.mark_iff", "Becoming.mark_pos"]}
+{"name": "Becoming.ExchangeLaw.ofClass_through", "uses": ["Becoming.Web.AlikeThroughUpTo.symm", "Becoming.Web.AlikeThroughUpTo.trans", "Becoming.mark_iff"]}
+{"name": "Becoming.ExchangeLaw.response_not_fixed_by_coupling", "uses": ["Becoming.ExchangeLaw.ofClass_take_iff", "Becoming.ExchangeLaw.ofClass_through", "Becoming.ExchangeLaw.zero_through"]}
+{"name": "Becoming.ExchangeLaw.zero_through", "uses": []}
+{"name": "Becoming.Flow.act_unselected_by_acts_pool", "uses": ["Becoming.ExchangeLaw.Through.selectsThroughAll", "Becoming.Flow.act_unselected_pool"]}
+{"name": "Becoming.Flow.pool_alike_beyond_response", "uses": ["Becoming.Flow.alike_beyond_response", "Becoming.Flow.exchange_alike_beyond_response"]}
+{"name": "Becoming.Flow.pool_within_response_iff", "uses": ["Becoming.Flow.withinResponse_iff_coupling"]}
+{"name": "Becoming.Flow.response_alike_pool", "uses": ["Becoming.ExchangeLaw.Through.responds", "Becoming.Flow.act_alike_pool"]}
+{"name": "Becoming.Loop.response_returns", "uses": ["Becoming.Loop.escalation_follows", "Becoming.Loop.quiet_follows", "Becoming.Loop.replyLaw_through", "Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.TimedResponse.pool_alike_before", "uses": ["Becoming.TimedResponse.coupling_alike_before", "Becoming.Web.AlikeThroughUpTo.earlier"]}
+{"name": "Becoming.act_courses_response_alike_pool", "uses": ["Becoming.ExchangeLaw.withAct_follows", "Becoming.Web.selects_alike_iff", "Becoming.WithinClosureOf.of_member", "Becoming.act_courses_unselected"]}

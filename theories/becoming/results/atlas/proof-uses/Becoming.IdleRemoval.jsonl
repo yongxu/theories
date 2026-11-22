@@ -1,0 +1,13 @@
+{"name": "Becoming.Stutter.every_step", "uses": ["Becoming.Stutter.moving_eq"]}
+{"name": "Becoming.Stutter.idle_before_moving", "uses": ["Becoming.Stutter.le_succ", "Becoming.Stutter.mono"]}
+{"name": "Becoming.Stutter.le_moving", "uses": ["Becoming.Stutter.mono"]}
+{"name": "Becoming.Stutter.moving_eq", "uses": ["Becoming.Stutter.moving_unique"]}
+{"name": "Becoming.Stutter.moving_unique", "uses": ["Becoming.Stutter.mono"]}
+{"name": "Becoming.Web.sameAt_of_unmoved", "uses": ["Becoming.Web.SameAt.refl", "Becoming.Web.SameAt.trans"]}
+{"name": "Becoming.World.withoutIdle_after", "uses": ["Becoming.World.withoutIdle_sameAt"]}
+{"name": "Becoming.World.withoutIdle_counted", "uses": ["Becoming.World.withoutIdle_sameAt"]}
+{"name": "Becoming.World.withoutIdle_counts", "uses": ["Becoming.World.withoutIdle_sameAt", "Becoming.ceasings_of_iff", "Becoming.comings_of_iff", "Becoming.stutter_ceasings", "Becoming.stutter_comings", "Becoming.total_congr"]}
+{"name": "Becoming.World.withoutIdle_premises", "uses": ["Becoming.Flow.given_nil", "Becoming.Flow.taken_nil", "Becoming.Stutter.every_step", "Becoming.Web.sample_dependent", "Becoming.Web.sample_embodied", "Becoming.World.withoutIdle_after", "Becoming.World.withoutIdle_sameAt"]}
+{"name": "Becoming.World.withoutIdle_sameAt", "uses": ["Becoming.Stutter.idle_before_moving", "Becoming.Stutter.le_moving", "Becoming.Web.sameAt_of_unmoved", "Becoming.le_dest"]}
+{"name": "Becoming.World.withoutIdle_totals", "uses": ["Becoming.Flow.given_nil", "Becoming.Flow.taken_nil", "Becoming.Stutter.moving_eq", "Becoming.World.withoutIdle_sameAt", "Becoming.stutter_fall_count", "Becoming.stutter_fallen", "Becoming.stutter_rise_count", "Becoming.stutter_risen", "Becoming.stutter_total", "Becoming.total_congr", "Becoming.total_congr_on"]}
+{"name": "Becoming.World.withoutIdle_transmits", "uses": ["Becoming.Stutter.every_step", "Becoming.World.withoutIdle_after"]}

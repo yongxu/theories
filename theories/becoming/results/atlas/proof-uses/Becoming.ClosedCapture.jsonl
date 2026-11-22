@@ -1,0 +1,62 @@
+{"name": "Becoming.ClosedCapture.Beyond.closed_locked", "uses": ["Becoming.ClosedCapture.lock_outlives_loss", "Becoming.Ideals.Preorder.refl", "Becoming.RuleCapture.CarrierCounts.raises", "Becoming.RuleCapture.CarrierCounts.upper"]}
+{"name": "Becoming.ClosedCapture.Beyond.lossRead_turns", "uses": []}
+{"name": "Becoming.ClosedCapture.Beyond.open_falls", "uses": []}
+{"name": "Becoming.ClosedCapture.Beyond.open_reads", "uses": ["Becoming.ClosedCapture.reads_beyond_of_apart", "Becoming.Ideals.Preorder.refl", "Becoming.RuleCapture.CarrierCounts.hi_not_le_lo"]}
+{"name": "Becoming.ClosedCapture.Beyond.open_turned", "uses": ["Becoming.ClosedCapture.Beyond.lossRead_turns", "Becoming.ClosedCapture.turned_by_loss"]}
+{"name": "Becoming.ClosedCapture.Drawn.cross", "uses": ["Becoming.Naturals.add_regroup", "Becoming.Naturals.mul_mul_mul_comm", "Becoming.add_mul_split"]}
+{"name": "Becoming.ClosedCapture.Drawn.le_of_disfavours", "uses": []}
+{"name": "Becoming.ClosedCapture.Drawn.mirror_disfavours_iff", "uses": ["Becoming.ClosedCapture.Drawn.rearrange", "Becoming.ClosedCapture.Drawn.rearrange_lt"]}
+{"name": "Becoming.ClosedCapture.Drawn.mirror_favours_iff", "uses": ["Becoming.ClosedCapture.Drawn.rearrange", "Becoming.ClosedCapture.Drawn.rearrange_lt"]}
+{"name": "Becoming.ClosedCapture.Drawn.mirror_le", "uses": ["Becoming.ClosedCapture.Drawn.le_of_disfavours"]}
+{"name": "Becoming.ClosedCapture.Drawn.pool_against", "uses": ["Becoming.ClosedCapture.Drawn.pool_mono_against"]}
+{"name": "Becoming.ClosedCapture.Drawn.pool_favours", "uses": []}
+{"name": "Becoming.ClosedCapture.Drawn.pool_mono", "uses": ["Becoming.ClosedCapture.Drawn.cross", "Becoming.ClosedCapture.Drawn.rearrange"]}
+{"name": "Becoming.ClosedCapture.Drawn.pool_mono_against", "uses": ["Becoming.ClosedCapture.Drawn.cross", "Becoming.ClosedCapture.Drawn.rearrange"]}
+{"name": "Becoming.ClosedCapture.Drawn.pool_not_rising", "uses": ["Becoming.ClosedCapture.Drawn.pool_against", "Becoming.RuleCapture.CarrierCounts.raises", "Becoming.RuleCapture.against_not_rising"]}
+{"name": "Becoming.ClosedCapture.Drawn.pool_reads", "uses": ["Becoming.ClosedCapture.Drawn.pool_reads_iff"]}
+{"name": "Becoming.ClosedCapture.Drawn.pool_reads_iff", "uses": ["Becoming.ClosedCapture.Drawn.pool_mono", "Becoming.add_mul_split", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.ClosedCapture.Drawn.pool_through", "uses": ["Becoming.ClosedCapture.Drawn.pool_mono"]}
+{"name": "Becoming.ClosedCapture.Drawn.rearrange", "uses": ["Becoming.ClosedCapture.Drawn.rearrange_eq"]}
+{"name": "Becoming.ClosedCapture.Drawn.rearrange_eq", "uses": ["Becoming.add_mul_split"]}
+{"name": "Becoming.ClosedCapture.Drawn.rearrange_lt", "uses": ["Becoming.ClosedCapture.Drawn.rearrange_eq"]}
+{"name": "Becoming.ClosedCapture.Drawn.through_locks", "uses": ["Becoming.ClosedCapture.Drawn.pool_favours", "Becoming.ClosedCapture.Drawn.pool_through", "Becoming.RuleCapture.CarrierCounts.raises", "Becoming.RuleCapture.uniform_locks"]}
+{"name": "Becoming.ClosedCapture.Proportional.formed", "uses": []}
+{"name": "Becoming.ClosedCapture.Proportional.readMono", "uses": []}
+{"name": "Becoming.ClosedCapture.Proportional.reform_absorbed", "uses": ["Becoming.ClosedCapture.Proportional.formed", "Becoming.ClosedCapture.Proportional.readMono", "Becoming.ClosedCapture.Proportional.start_locked", "Becoming.ClosedCapture.reading_absorbed", "Becoming.RuleCapture.CarrierCounts.raises", "Becoming.RuleCapture.CarrierCounts.upper"]}
+{"name": "Becoming.ClosedCapture.Proportional.start_locked", "uses": ["Becoming.Ideals.Preorder.refl"]}
+{"name": "Becoming.ClosedCapture.Thinned.inTime_majority", "uses": []}
+{"name": "Becoming.ClosedCapture.Thinned.inTime_turned", "uses": ["Becoming.ClosedCapture.Thinned.inTime_majority", "Becoming.ClosedCapture.Thinned.lossStep_accrues", "Becoming.ClosedCapture.Thinned.read_in_time_turns", "Becoming.RuleCapture.CarrierCounts.lo_le_hi"]}
+{"name": "Becoming.ClosedCapture.Thinned.kept_iff", "uses": ["Becoming.ClosedCapture.Drawn.mirror_favours_iff", "Becoming.ClosedCapture.Drawn.mirror_le", "Becoming.ClosedCapture.Thinned.read_late_kept", "Becoming.ClosedCapture.Thinned.rule_read"]}
+{"name": "Becoming.ClosedCapture.Thinned.late_kept", "uses": ["Becoming.ClosedCapture.Thinned.late_majority", "Becoming.ClosedCapture.Thinned.lossStep_accrues", "Becoming.ClosedCapture.Thinned.read_late_kept", "Becoming.RuleCapture.CarrierCounts.lo_le_hi"]}
+{"name": "Becoming.ClosedCapture.Thinned.late_majority", "uses": []}
+{"name": "Becoming.ClosedCapture.Thinned.late_reads_loss", "uses": ["Becoming.ClosedCapture.reads_beyond_of_apart"]}
+{"name": "Becoming.ClosedCapture.Thinned.lossPool_past", "uses": ["Becoming.Naturals.ble_false_of_lt"]}
+{"name": "Becoming.ClosedCapture.Thinned.lossStep_accrues", "uses": []}
+{"name": "Becoming.ClosedCapture.Thinned.past_course", "uses": ["Becoming.ClosedCapture.Thinned.lossPool_past", "Becoming.ClosedCapture.course_past", "Becoming.ClosedCapture.join_course", "Becoming.Pace.paced_shift"]}
+{"name": "Becoming.ClosedCapture.Thinned.read_in_time_turns", "uses": ["Becoming.ClosedCapture.Drawn.pool_reads", "Becoming.ClosedCapture.Thinned.past_course", "Becoming.ClosedCapture.agreeing_stays", "Becoming.RuleCapture.CarrierCounts.lower", "Becoming.RuleCapture.CarrierCounts.lowers", "Becoming.RuleCapture.ReadsShare.reverse"]}
+{"name": "Becoming.ClosedCapture.Thinned.read_late_kept", "uses": ["Becoming.ClosedCapture.Drawn.pool_reads", "Becoming.ClosedCapture.Thinned.past_course", "Becoming.ClosedCapture.agreeing_stays", "Becoming.ClosedCapture.loss_grows", "Becoming.RuleCapture.CarrierCounts.raises", "Becoming.RuleCapture.CarrierCounts.upper"]}
+{"name": "Becoming.ClosedCapture.Thinned.rule_read", "uses": ["Becoming.ClosedCapture.Thinned.past_course", "Becoming.Pace.paced_succ"]}
+{"name": "Becoming.ClosedCapture.Thinned.turned_iff", "uses": ["Becoming.ClosedCapture.Drawn.mirror_disfavours_iff", "Becoming.ClosedCapture.Drawn.mirror_le", "Becoming.ClosedCapture.Thinned.read_in_time_turns", "Becoming.ClosedCapture.Thinned.rule_read"]}
+{"name": "Becoming.ClosedCapture.agreeing_locks", "uses": ["Becoming.Pace.paced_succ"]}
+{"name": "Becoming.ClosedCapture.agreeing_stays", "uses": ["Becoming.ClosedCapture.agreeing_locks", "Becoming.RuleCapture.locked_not_below", "Becoming.RuleCapture.locked_stays"]}
+{"name": "Becoming.ClosedCapture.both_reads", "uses": []}
+{"name": "Becoming.ClosedCapture.both_upper", "uses": []}
+{"name": "Becoming.ClosedCapture.byRule_raises", "uses": []}
+{"name": "Becoming.ClosedCapture.course_past", "uses": ["Becoming.ClosedCapture.loss_grows", "Becoming.ClosedCapture.turn_agree", "Becoming.Pace.paced_succ"]}
+{"name": "Becoming.ClosedCapture.courses_alike_iff_unread", "uses": ["Becoming.ClosedCapture.unread_course"]}
+{"name": "Becoming.ClosedCapture.goAlike_of_unread", "uses": ["Becoming.ClosedCapture.turn_unread", "Becoming.Learning.goAlike_iff_lumped"]}
+{"name": "Becoming.ClosedCapture.identifiesAlike_iff_unread", "uses": ["Becoming.ClosedCapture.goAlike_of_unread", "Becoming.Law.now_identifiesAlike_iff_goAlike", "Becoming.Learning.goAlike_iff_lumped"]}
+{"name": "Becoming.ClosedCapture.join_alike", "uses": ["Becoming.ClosedCapture.join_unread", "Becoming.ClosedCapture.unread_course"]}
+{"name": "Becoming.ClosedCapture.join_course", "uses": ["Becoming.ClosedCapture.turn_join", "Becoming.Pace.paced_succ"]}
+{"name": "Becoming.ClosedCapture.join_unread", "uses": []}
+{"name": "Becoming.ClosedCapture.lock_outlives_loss", "uses": ["Becoming.ClosedCapture.join_course", "Becoming.ClosedCapture.loss_grows", "Becoming.RuleCapture.locked_not_below", "Becoming.RuleCapture.locked_stays"]}
+{"name": "Becoming.ClosedCapture.loss_grows", "uses": ["Becoming.Pace.paced_fast_succ"]}
+{"name": "Becoming.ClosedCapture.readers_not_below", "uses": ["Becoming.ClosedCapture.both_reads", "Becoming.ClosedCapture.both_upper", "Becoming.ClosedCapture.byRule_raises", "Becoming.RuleCapture.locked_not_below"]}
+{"name": "Becoming.ClosedCapture.readers_uniform_locks", "uses": ["Becoming.ClosedCapture.both_reads", "Becoming.ClosedCapture.byRule_raises", "Becoming.RuleCapture.uniform_locks"]}
+{"name": "Becoming.ClosedCapture.reading_absorbed", "uses": ["Becoming.ClosedCapture.both_reads", "Becoming.ClosedCapture.both_upper", "Becoming.ClosedCapture.byRule_raises", "Becoming.RuleCapture.perturbation_absorbed"]}
+{"name": "Becoming.ClosedCapture.reads_beyond_of_apart", "uses": ["Becoming.ClosedCapture.unread_course"]}
+{"name": "Becoming.ClosedCapture.turn_agree", "uses": []}
+{"name": "Becoming.ClosedCapture.turn_join", "uses": []}
+{"name": "Becoming.ClosedCapture.turn_unread", "uses": []}
+{"name": "Becoming.ClosedCapture.turned_by_loss", "uses": ["Becoming.ClosedCapture.loss_grows", "Becoming.Pace.paced_succ"]}
+{"name": "Becoming.ClosedCapture.unread_course", "uses": ["Becoming.ClosedCapture.goAlike_of_unread", "Becoming.Law.sameFuture_of_goAlike", "Becoming.Pace.paced_run"]}

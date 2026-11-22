@@ -1,0 +1,38 @@
+{"name": "Becoming.ExchangeLaw.Nonanticipating.through_all", "uses": []}
+{"name": "Becoming.ExchangeLaw.Nonanticipating.through_of_observed", "uses": ["Becoming.alike_of_sensitive_agree", "Becoming.nat_eq_of_not_not"]}
+{"name": "Becoming.ExchangeLaw.Nonanticipating.through_sensitive", "uses": ["Becoming.ExchangeLaw.Nonanticipating.through_of_observed"]}
+{"name": "Becoming.ExchangeLaw.Through.couples_of_sensitive", "uses": []}
+{"name": "Becoming.ExchangeLaw.Through.responds", "uses": []}
+{"name": "Becoming.ExchangeLaw.course_balances_iff", "uses": ["Becoming.ExchangeLaw.levels_succ", "Becoming.ExchangeLaw.sub_add_back_iff", "Becoming.ExchangeLaw.totals_under"]}
+{"name": "Becoming.ExchangeLaw.course_follows", "uses": []}
+{"name": "Becoming.ExchangeLaw.course_trajectory", "uses": []}
+{"name": "Becoming.ExchangeLaw.course_unique", "uses": ["Becoming.ExchangeLaw.course_balances_iff", "Becoming.ExchangeLaw.course_follows", "Becoming.counterfactual_fixed"]}
+{"name": "Becoming.ExchangeLaw.history_agree", "uses": ["Becoming.ExchangeLaw.history_stable", "Becoming.le_dest"]}
+{"name": "Becoming.ExchangeLaw.history_orbit", "uses": []}
+{"name": "Becoming.ExchangeLaw.history_stable", "uses": ["Becoming.ExchangeLaw.history_succ_of_le"]}
+{"name": "Becoming.ExchangeLaw.history_succ_of_le", "uses": []}
+{"name": "Becoming.ExchangeLaw.levels_succ", "uses": []}
+{"name": "Becoming.ExchangeLaw.levels_zero", "uses": []}
+{"name": "Becoming.ExchangeLaw.sub_add_back_iff", "uses": ["Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.ExchangeLaw.totals_under", "uses": ["Becoming.ExchangeLaw.history_agree", "Becoming.total_congr_on"]}
+{"name": "Becoming.ExchangeLaw.withAct_follows", "uses": []}
+{"name": "Becoming.ExchangeLaw.withAct_nonanticipating", "uses": []}
+{"name": "Becoming.Flow.totals_alike_of_each", "uses": ["Becoming.total_congr_on"]}
+{"name": "Becoming.Loop.courses_fixed", "uses": ["Becoming.Loop.balances", "Becoming.Loop.escalation_follows", "Becoming.Loop.quiet_balances", "Becoming.Loop.quiet_follows", "Becoming.Loop.replyLaw_nonanticipating", "Becoming.counterfactual_fixed"]}
+{"name": "Becoming.Loop.escalation_follows", "uses": []}
+{"name": "Becoming.Loop.quiet_follows", "uses": []}
+{"name": "Becoming.Loop.replyLaw_nonanticipating", "uses": []}
+{"name": "Becoming.Loop.replyLaw_through", "uses": []}
+{"name": "Becoming.alike_of_sensitive_agree", "uses": ["Becoming.mixIn_alike", "Becoming.mixIn_listed"]}
+{"name": "Becoming.comparison_of_courses", "uses": ["Becoming.ExchangeLaw.Through.responds", "Becoming.Flow.Balances.comparison_within_response"]}
+{"name": "Becoming.comparison_through_sensitivity", "uses": ["Becoming.ExchangeLaw.Nonanticipating.through_sensitive", "Becoming.comparison_of_courses"]}
+{"name": "Becoming.comparison_with_act", "uses": ["Becoming.ExchangeLaw.course_balances_iff", "Becoming.ExchangeLaw.withAct_follows", "Becoming.ExchangeLaw.withAct_nonanticipating", "Becoming.comparison_of_courses"]}
+{"name": "Becoming.counterfactual_fixed", "uses": ["Becoming.exchange_alike_of_agree", "Becoming.levels_fixed"]}
+{"name": "Becoming.counterfactual_is_course", "uses": ["Becoming.ExchangeLaw.course_balances_iff", "Becoming.ExchangeLaw.withAct_follows", "Becoming.ExchangeLaw.withAct_nonanticipating", "Becoming.counterfactual_fixed"]}
+{"name": "Becoming.exchange_alike_of_agree", "uses": []}
+{"name": "Becoming.levels_fixed", "uses": ["Becoming.Flow.totals_alike_of_each", "Becoming.add_right_cancel", "Becoming.exchange_alike_of_agree", "Becoming.le_succ_cases"]}
+{"name": "Becoming.mixIn_alike", "uses": ["Becoming.mixIn_either", "Becoming.swap_alike"]}
+{"name": "Becoming.mixIn_either", "uses": []}
+{"name": "Becoming.mixIn_listed", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.nat_eq_of_not_not", "uses": []}
+{"name": "Becoming.swap_alike", "uses": ["Becoming.nat_eq_of_not_not"]}

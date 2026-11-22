@@ -1,0 +1,129 @@
+{"name": "Becoming.Hexagram.Marked.settle_of_stays", "uses": []}
+{"name": "Becoming.Hexagram.Marked.settle_settle", "uses": []}
+{"name": "Becoming.Hexagram.Marked.stays_of_settle", "uses": ["Becoming.Hexagram.Marked.turning_ne_staying"]}
+{"name": "Becoming.Hexagram.Marked.stays_settle", "uses": []}
+{"name": "Becoming.Hexagram.Marked.turning_ne_staying", "uses": []}
+{"name": "Becoming.Hexagram.MarkedLines.all_nines", "uses": ["Becoming.Hexagram.MarkedLines.run_settled"]}
+{"name": "Becoming.Hexagram.MarkedLines.all_sixes", "uses": ["Becoming.Hexagram.MarkedLines.run_settled"]}
+{"name": "Becoming.Hexagram.MarkedLines.drawn", "uses": ["Becoming.Hexagram.MarkedLines.staysAll_settle"]}
+{"name": "Becoming.Hexagram.MarkedLines.onward_goAlike", "uses": ["Becoming.Hexagram.MarkedLines.onward_lumped", "Becoming.Learning.goAlike_iff_lumped"]}
+{"name": "Becoming.Hexagram.MarkedLines.onward_lumped", "uses": ["Becoming.Hexagram.MarkedLines.settle_settle"]}
+{"name": "Becoming.Hexagram.MarkedLines.process_returns_iff", "uses": ["Becoming.Branching.law_returns_iff", "Becoming.Hexagram.MarkedLines.returns_iff"]}
+{"name": "Becoming.Hexagram.MarkedLines.returns_iff", "uses": ["Becoming.Hexagram.MarkedLines.drawn", "Becoming.Hexagram.MarkedLines.settle_fixed_iff", "Becoming.Hexagram.MarkedLines.staysAll_settle", "Becoming.Law.Drawn.not_returns", "Becoming.Law.returns_iff"]}
+{"name": "Becoming.Hexagram.MarkedLines.run_rests", "uses": ["Becoming.Hexagram.MarkedLines.run_settled"]}
+{"name": "Becoming.Hexagram.MarkedLines.run_settled", "uses": ["Becoming.Hexagram.MarkedLines.settle_settle"]}
+{"name": "Becoming.Hexagram.MarkedLines.settle_fixed_iff", "uses": ["Becoming.Hexagram.Marked.settle_of_stays", "Becoming.Hexagram.Marked.stays_of_settle", "Becoming.bool_of_and_true"]}
+{"name": "Becoming.Hexagram.MarkedLines.settle_merges", "uses": ["Becoming.Hexagram.Marked.turning_ne_staying", "Becoming.Law.merges_iff"]}
+{"name": "Becoming.Hexagram.MarkedLines.settle_process_merges", "uses": ["Becoming.Branching.law_merges_iff", "Becoming.Hexagram.MarkedLines.settle_merges"]}
+{"name": "Becoming.Hexagram.MarkedLines.settle_settle", "uses": ["Becoming.Hexagram.Marked.settle_settle"]}
+{"name": "Becoming.Hexagram.MarkedLines.shown_not_goAlike", "uses": ["Becoming.Hexagram.MarkedLines.shown_not_lumped", "Becoming.Learning.goAlike_iff_lumped"]}
+{"name": "Becoming.Hexagram.MarkedLines.shown_not_lumped", "uses": ["Becoming.Hexagram.ne_of_eqb"]}
+{"name": "Becoming.Hexagram.MarkedLines.staysAll_settle", "uses": ["Becoming.Hexagram.Marked.stays_settle"]}
+{"name": "Becoming.Hexagram.Symmetry.act_comp", "uses": ["Becoming.Hexagram.complement_complement", "Becoming.Hexagram.complement_reverse", "Becoming.Hexagram.reverse_complement_reverse", "Becoming.Hexagram.reverse_reverse"]}
+{"name": "Becoming.Hexagram.Symmetry.act_self", "uses": ["Becoming.Hexagram.Symmetry.act_comp", "Becoming.Hexagram.Symmetry.comp_self"]}
+{"name": "Becoming.Hexagram.Symmetry.comp_comm", "uses": []}
+{"name": "Becoming.Hexagram.Symmetry.comp_self", "uses": []}
+{"name": "Becoming.Hexagram.addOne_first_return", "uses": ["Becoming.Hexagram.backWithin_addOne", "Becoming.Hexagram.not_back"]}
+{"name": "Becoming.Hexagram.addOne_lossless", "uses": ["Becoming.Hexagram.subOne_addOne", "Becoming.Law.lossless_iff"]}
+{"name": "Becoming.Hexagram.addOne_one_orbit", "uses": ["Becoming.Branching.law_lossless_iff", "Becoming.Hexagram.addOne_first_return", "Becoming.Hexagram.addOne_lossless", "Becoming.Hexagram.addOne_reach", "Becoming.Hexagram.addOne_sixtyfour", "Becoming.Law.run_state"]}
+{"name": "Becoming.Hexagram.addOne_reach", "uses": ["Becoming.Branching.law_reach_iff", "Becoming.Hexagram.from_allBroken", "Becoming.Hexagram.to_allBroken", "Becoming.Reach.trans"]}
+{"name": "Becoming.Hexagram.addOne_sixtyfour", "uses": []}
+{"name": "Becoming.Hexagram.and_of_both", "uses": []}
+{"name": "Becoming.Hexagram.any_sound", "uses": ["Becoming.ListTests.or_cases"]}
+{"name": "Becoming.Hexagram.attractor_absorbing", "uses": ["Becoming.Hexagram.nuclear_allBroken", "Becoming.Hexagram.nuclear_allUnbroken", "Becoming.Hexagram.nuclear_jiJi", "Becoming.Hexagram.nuclear_weiJi"]}
+{"name": "Becoming.Hexagram.attractor_of_attractorb", "uses": ["Becoming.Hexagram.eq_of_eqb", "Becoming.ListTests.or_cases"]}
+{"name": "Becoming.Hexagram.attractor_returns", "uses": ["Becoming.Law.returns_iff"]}
+{"name": "Becoming.Hexagram.backWithin_addOne", "uses": []}
+{"name": "Becoming.Hexagram.basin_counts", "uses": []}
+{"name": "Becoming.Hexagram.basin_iff", "uses": ["Becoming.Hexagram.nuclear_two", "Becoming.Hexagram.thrice_inj"]}
+{"name": "Becoming.Hexagram.both_fixed_iff", "uses": ["Becoming.Hexagram.complement_complement", "Becoming.Hexagram.ne_of_eqb", "Becoming.Hexagram.pairedByBoth_sound", "Becoming.Hexagram.reverse_reverse"]}
+{"name": "Becoming.Hexagram.carryAt_below", "uses": []}
+{"name": "Becoming.Hexagram.carryAt_turns", "uses": []}
+{"name": "Becoming.Hexagram.changesAround_counts", "uses": []}
+{"name": "Becoming.Hexagram.changesAround_invariant", "uses": ["Becoming.Hexagram.changesAround_waxWane"]}
+{"name": "Becoming.Hexagram.changesAround_run", "uses": ["Becoming.Hexagram.changesAround_waxWane"]}
+{"name": "Becoming.Hexagram.changesAround_values", "uses": []}
+{"name": "Becoming.Hexagram.changesAround_waxWane", "uses": []}
+{"name": "Becoming.Hexagram.classOf_act", "uses": []}
+{"name": "Becoming.Hexagram.classOf_eq_iff", "uses": ["Becoming.Hexagram.Symmetry.act_comp", "Becoming.Hexagram.Symmetry.act_self", "Becoming.Hexagram.classOf_act", "Becoming.Hexagram.classOf_member"]}
+{"name": "Becoming.Hexagram.classOf_mem", "uses": ["Becoming.Hexagram.mem_of_memb"]}
+{"name": "Becoming.Hexagram.classOf_member", "uses": []}
+{"name": "Becoming.Hexagram.class_census", "uses": ["Becoming.Hexagram.classOf_mem", "Becoming.Hexagram.nodup_of_distinctb"]}
+{"name": "Becoming.Hexagram.classes_goAlike", "uses": ["Becoming.Hexagram.classes_lumped", "Becoming.Learning.goAlike_iff_lumped"]}
+{"name": "Becoming.Hexagram.classes_lumped", "uses": ["Becoming.Hexagram.classOf_eq_iff", "Becoming.Hexagram.nuclear_act"]}
+{"name": "Becoming.Hexagram.classes_not_goAlike_waxWane", "uses": ["Becoming.Hexagram.classes_not_lumped_waxWane", "Becoming.Learning.goAlike_iff_lumped"]}
+{"name": "Becoming.Hexagram.classes_not_lumped_waxWane", "uses": ["Becoming.Hexagram.ne_of_eqb"]}
+{"name": "Becoming.Hexagram.complement_reverse", "uses": []}
+{"name": "Becoming.Hexagram.cycle_basin", "uses": ["Becoming.Hexagram.ne_of_eqb"]}
+{"name": "Becoming.Hexagram.entry_counts", "uses": []}
+{"name": "Becoming.Hexagram.first_return_of", "uses": ["Becoming.Hexagram.not_back"]}
+{"name": "Becoming.Hexagram.from_allBroken", "uses": []}
+{"name": "Becoming.Hexagram.innerPair_goAlike", "uses": ["Becoming.Hexagram.innerPair_lumped", "Becoming.Learning.goAlike_iff_lumped"]}
+{"name": "Becoming.Hexagram.innerPair_lumped", "uses": ["Becoming.Hexagram.innerPair_nuclear", "Becoming.Hexagram.swap_eq"]}
+{"name": "Becoming.Hexagram.innerPair_nuclear", "uses": []}
+{"name": "Becoming.Hexagram.kun_basin", "uses": ["Becoming.Hexagram.ne_of_eqb", "Becoming.Hexagram.or_of_neither"]}
+{"name": "Becoming.Hexagram.line_turns", "uses": ["Becoming.Hexagram.carryAt_below", "Becoming.Hexagram.carryAt_turns", "Becoming.Hexagram.orbit_period", "Becoming.Hexagram.period_pow", "Becoming.Law.orbit_add"]}
+{"name": "Becoming.Hexagram.nodup_of_distinctb", "uses": ["Becoming.Hexagram.not_mem_of_memb", "Becoming.ListTests.false_of_not", "Becoming.bool_of_and_true"]}
+{"name": "Becoming.Hexagram.not_attractor_of_attractorb", "uses": ["Becoming.Hexagram.ne_of_eqb", "Becoming.Hexagram.neither"]}
+{"name": "Becoming.Hexagram.not_back", "uses": ["Becoming.Hexagram.ne_of_eqb", "Becoming.Hexagram.neither", "Becoming.Law.orbit_shift"]}
+{"name": "Becoming.Hexagram.not_mem_of_memb", "uses": ["Becoming.Hexagram.eqb_self", "Becoming.Hexagram.neither"]}
+{"name": "Becoming.Hexagram.nuclear_act", "uses": ["Becoming.Hexagram.nuclear_complement", "Becoming.Hexagram.nuclear_reverse"]}
+{"name": "Becoming.Hexagram.nuclear_allBroken", "uses": []}
+{"name": "Becoming.Hexagram.nuclear_allUnbroken", "uses": []}
+{"name": "Becoming.Hexagram.nuclear_complement", "uses": []}
+{"name": "Becoming.Hexagram.nuclear_fixed_iff", "uses": ["Becoming.Hexagram.ne_of_eqb"]}
+{"name": "Becoming.Hexagram.nuclear_inner", "uses": []}
+{"name": "Becoming.Hexagram.nuclear_jiJi", "uses": []}
+{"name": "Becoming.Hexagram.nuclear_loses", "uses": ["Becoming.Branching.law_keeps_iff", "Becoming.Hexagram.mem_order", "Becoming.Hexagram.nuclear_merges", "Becoming.Law.Merges.loses"]}
+{"name": "Becoming.Hexagram.nuclear_merges", "uses": ["Becoming.Hexagram.ne_of_eqb", "Becoming.Law.merges_iff"]}
+{"name": "Becoming.Hexagram.nuclear_process_merges", "uses": ["Becoming.Branching.law_merges_iff", "Becoming.Hexagram.nuclear_merges"]}
+{"name": "Becoming.Hexagram.nuclear_process_returns_iff", "uses": ["Becoming.Branching.law_returns_iff", "Becoming.Hexagram.returns_iff_attractor"]}
+{"name": "Becoming.Hexagram.nuclear_rests_iff", "uses": ["Becoming.Hexagram.nuclear_fixed_iff", "Becoming.Hexagram.orbit_still"]}
+{"name": "Becoming.Hexagram.nuclear_reverse", "uses": []}
+{"name": "Becoming.Hexagram.nuclear_run_act", "uses": ["Becoming.Hexagram.nuclear_act", "Becoming.Law.Commutes.iterate"]}
+{"name": "Becoming.Hexagram.nuclear_two", "uses": []}
+{"name": "Becoming.Hexagram.nuclear_two_attractor", "uses": ["Becoming.Hexagram.nuclear_two", "Becoming.Hexagram.thrice_attractor"]}
+{"name": "Becoming.Hexagram.nuclear_two_fixed_one_cycle", "uses": ["Becoming.Hexagram.ne_of_eqb", "Becoming.Hexagram.nuclear_allBroken", "Becoming.Hexagram.nuclear_allUnbroken", "Becoming.Hexagram.nuclear_jiJi", "Becoming.Hexagram.nuclear_weiJi", "Becoming.Hexagram.orbit_still", "Becoming.Law.orbit_mul"]}
+{"name": "Becoming.Hexagram.nuclear_two_lumped", "uses": ["Becoming.Hexagram.nuclear_two"]}
+{"name": "Becoming.Hexagram.nuclear_weiJi", "uses": []}
+{"name": "Becoming.Hexagram.nuclear_yang_not_goAlike", "uses": ["Becoming.Hexagram.nuclear_yang_not_lumped", "Becoming.Learning.goAlike_iff_lumped"]}
+{"name": "Becoming.Hexagram.nuclear_yang_not_lumped", "uses": []}
+{"name": "Becoming.Hexagram.onOrbit_all", "uses": []}
+{"name": "Becoming.Hexagram.onOrbit_sound", "uses": ["Becoming.Hexagram.visits_sound", "Becoming.ListTests.or_cases"]}
+{"name": "Becoming.Hexagram.on_an_orbit", "uses": ["Becoming.Hexagram.onOrbit_all", "Becoming.Hexagram.onOrbit_sound"]}
+{"name": "Becoming.Hexagram.or_of_neither", "uses": []}
+{"name": "Becoming.Hexagram.orbitIndex_goAlike", "uses": ["Becoming.Hexagram.orbitIndex_lumped", "Becoming.Learning.goAlike_iff_lumped"]}
+{"name": "Becoming.Hexagram.orbitIndex_invariant", "uses": ["Becoming.Hexagram.orbitIndex_waxWane"]}
+{"name": "Becoming.Hexagram.orbitIndex_lumped", "uses": ["Becoming.Hexagram.orbitIndex_waxWane"]}
+{"name": "Becoming.Hexagram.orbitIndex_waxWane", "uses": []}
+{"name": "Becoming.Hexagram.orbit_census", "uses": []}
+{"name": "Becoming.Hexagram.orbit_period", "uses": []}
+{"name": "Becoming.Hexagram.orbit_still", "uses": []}
+{"name": "Becoming.Hexagram.order_nodup", "uses": ["Becoming.Hexagram.nodup_of_distinctb"]}
+{"name": "Becoming.Hexagram.outside_drawn", "uses": ["Becoming.Hexagram.nuclear_two_attractor"]}
+{"name": "Becoming.Hexagram.outside_not_returns", "uses": ["Becoming.Hexagram.attractor_absorbing", "Becoming.Hexagram.outside_drawn", "Becoming.Law.Drawn.not_returns"]}
+{"name": "Becoming.Hexagram.pairedByBoth_sound", "uses": ["Becoming.Hexagram.any_sound", "Becoming.Hexagram.eq_of_eqb", "Becoming.ListTests.or_cases", "Becoming.bool_of_and_true"]}
+{"name": "Becoming.Hexagram.pairedByChange_sound", "uses": ["Becoming.Hexagram.any_sound", "Becoming.Hexagram.eq_of_eqb", "Becoming.ListTests.or_cases", "Becoming.bool_of_and_true"]}
+{"name": "Becoming.Hexagram.period_pow", "uses": []}
+{"name": "Becoming.Hexagram.process_returns_iff_ends", "uses": ["Becoming.Hexagram.nuclear_process_returns_iff"]}
+{"name": "Becoming.Hexagram.qian_basin", "uses": ["Becoming.Hexagram.and_of_both", "Becoming.Hexagram.ne_of_eqb"]}
+{"name": "Becoming.Hexagram.qian_not_reach_jiJi", "uses": ["Becoming.Hexagram.changesAround_invariant", "Becoming.Invariant.reach"]}
+{"name": "Becoming.Hexagram.reach_keeps_orbit", "uses": ["Becoming.Hexagram.orbitIndex_invariant", "Becoming.Invariant.reach"]}
+{"name": "Becoming.Hexagram.returns_iff_attractor", "uses": ["Becoming.Hexagram.attractor_of_attractorb", "Becoming.Hexagram.attractor_returns", "Becoming.Hexagram.not_attractor_of_attractorb", "Becoming.Hexagram.outside_not_returns"]}
+{"name": "Becoming.Hexagram.reverse_complement_reverse", "uses": []}
+{"name": "Becoming.Hexagram.reverse_reverse", "uses": []}
+{"name": "Becoming.Hexagram.run_complement_apart", "uses": ["Becoming.Hexagram.complement_moves", "Becoming.Hexagram.nuclear_complement", "Becoming.Law.Commutes.apart"]}
+{"name": "Becoming.Hexagram.run_in_attractor", "uses": ["Becoming.Hexagram.attractor_absorbing", "Becoming.Hexagram.nuclear_two_attractor", "Becoming.Law.Absorbing.orbit"]}
+{"name": "Becoming.Hexagram.run_inner", "uses": ["Becoming.Hexagram.nuclear_inner", "Becoming.Law.orbit_shift"]}
+{"name": "Becoming.Hexagram.run_rests_at", "uses": ["Becoming.Hexagram.nuclear_two", "Becoming.Hexagram.thrice_back", "Becoming.Law.orbit_add", "Becoming.Law.orbit_mul"]}
+{"name": "Becoming.Hexagram.run_two_middle", "uses": ["Becoming.Hexagram.nuclear_two_lumped", "Becoming.Law.orbit_add"]}
+{"name": "Becoming.Hexagram.starts_return", "uses": ["Becoming.Hexagram.first_return_of"]}
+{"name": "Becoming.Hexagram.subOne_addOne", "uses": []}
+{"name": "Becoming.Hexagram.swap_eq", "uses": []}
+{"name": "Becoming.Hexagram.thrice_attractor", "uses": []}
+{"name": "Becoming.Hexagram.thrice_back", "uses": []}
+{"name": "Becoming.Hexagram.thrice_inj", "uses": []}
+{"name": "Becoming.Hexagram.to_allBroken", "uses": []}
+{"name": "Becoming.Hexagram.turn_fixed_iff", "uses": ["Becoming.Hexagram.complement_reverse", "Becoming.Hexagram.ne_of_eqb", "Becoming.Hexagram.pairedByChange_sound"]}
+{"name": "Becoming.Hexagram.visits_sound", "uses": ["Becoming.Hexagram.eq_of_eqb", "Becoming.Law.orbit_shift", "Becoming.ListTests.or_cases"]}
+{"name": "Becoming.Hexagram.waxWane_not_reach_every", "uses": ["Becoming.Hexagram.qian_not_reach_jiJi"]}

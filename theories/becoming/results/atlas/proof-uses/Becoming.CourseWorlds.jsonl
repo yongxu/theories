@@ -1,0 +1,33 @@
+{"name": "Becoming.CourseWorlds.cond_left", "uses": []}
+{"name": "Becoming.CourseWorlds.cond_of_true", "uses": []}
+{"name": "Becoming.CourseWorlds.cond_right", "uses": []}
+{"name": "Becoming.ExchangeLaw.ReadsAt.withMoves_nonanticipating", "uses": []}
+{"name": "Becoming.ExchangeLaw.ReadsInto.withMoves_nonanticipating", "uses": []}
+{"name": "Becoming.ExchangeLaw.actWorld_balanced", "uses": ["Becoming.ExchangeLaw.courseWorld_balanced_iff", "Becoming.ExchangeLaw.withAct_nonanticipating"]}
+{"name": "Becoming.ExchangeLaw.moves_actsAlike", "uses": ["Becoming.CourseWorlds.cond_left"]}
+{"name": "Becoming.ExchangeLaw.ofMoves_nonanticipating", "uses": []}
+{"name": "Becoming.TwoActs.balanced", "uses": ["Becoming.ExchangeLaw.actWorld_balanced"]}
+{"name": "Becoming.TwoActs.gap_le_carried", "uses": ["Becoming.ExchangeLaw.course_balances_iff", "Becoming.ExchangeLaw.withAct_follows", "Becoming.ExchangeLaw.withAct_nonanticipating", "Becoming.gap_le_carried"]}
+{"name": "Becoming.TwoActs.gap_le_carried_read", "uses": ["Becoming.ExchangeLaw.ReadsAt.restrict", "Becoming.TwoActs.gap_le_carried"]}
+{"name": "Becoming.TwoActs.gap_le_count", "uses": ["Becoming.TwoActs.gap_le_carried", "Becoming.carried_le_count"]}
+{"name": "Becoming.TwoActs.gap_le_polynomial", "uses": ["Becoming.TwoActs.gap_le_carried", "Becoming.carried_le_polynomial"]}
+{"name": "Becoming.TwoActs.gap_le_polynomial_before", "uses": ["Becoming.TwoActs.gap_le_carried", "Becoming.carried_le_polynomial_before"]}
+{"name": "Becoming.TwoActs.gap_le_polynomial_from", "uses": ["Becoming.TwoActs.gap_le_carried", "Becoming.carried_le_polynomial_from"]}
+{"name": "Becoming.apart_only_downstream_worlds", "uses": ["Becoming.ExchangeLaw.ReadsInto.withMoves_nonanticipating", "Becoming.ExchangeLaw.course_balances_iff", "Becoming.ExchangeLaw.moves_actsAlike", "Becoming.ExchangeLaw.withAct_follows", "Becoming.apart_only_downstream"]}
+{"name": "Becoming.break_carried_nowhere_worlds", "uses": ["Becoming.ExchangeLaw.course_balances_iff", "Becoming.ExchangeLaw.moves_actsAlike", "Becoming.ExchangeLaw.ofMoves_nonanticipating", "Becoming.ExchangeLaw.withAct_follows", "Becoming.ExchangeLaw.withAct_nonanticipating", "Becoming.break_carried_nowhere"]}
+{"name": "Becoming.carrying_act_levels", "uses": ["Becoming.CourseWorlds.cond_left", "Becoming.ExchangeLaw.carrying_nonanticipating", "Becoming.ExchangeLaw.course_balances_iff", "Becoming.ExchangeLaw.course_follows", "Becoming.ExchangeLaw.withAct_follows", "Becoming.Propagation.cond_same", "Becoming.carrying_balances", "Becoming.carrying_moves_feasible", "Becoming.carrying_moves_nonanticipating", "Becoming.counterfactual_fixed"]}
+{"name": "Becoming.carrying_moves_feasible", "uses": ["Becoming.carrying_moves_taken"]}
+{"name": "Becoming.carrying_moves_nonanticipating", "uses": ["Becoming.ExchangeLaw.carrying_nonanticipating", "Becoming.ExchangeLaw.ofMoves_nonanticipating", "Becoming.ExchangeLaw.withAct_nonanticipating"]}
+{"name": "Becoming.carrying_moves_taken", "uses": ["Becoming.Propagation.cond_same", "Becoming.total_congr", "Becoming.total_zero"]}
+{"name": "Becoming.carrying_twoActs", "uses": ["Becoming.CourseWorlds.cond_of_true", "Becoming.ExchangeLaw.carrying_nonanticipating", "Becoming.ExchangeLaw.carrying_respondsWithin", "Becoming.ExchangeLaw.ofMoves_nonanticipating", "Becoming.Naturals.add_congr", "Becoming.Propagation.cond_same", "Becoming.carrying_moves_feasible", "Becoming.gap_eq_zero_iff", "Becoming.gap_zero"]}
+{"name": "Becoming.formedWorld_balanced", "uses": ["Becoming.ExchangeLaw.carryingRead_nonanticipating", "Becoming.ExchangeLaw.courseWorld_balanced_iff", "Becoming.total_zero"]}
+{"name": "Becoming.formedWorld_le_polynomial_before", "uses": ["Becoming.carried_le_polynomial_before", "Becoming.formedCourse_eq_carried"]}
+{"name": "Becoming.gap_polynomial_iff_no_loop_worlds", "uses": ["Becoming.most_difference_worlds", "Becoming.polynomial_iff_no_loop"]}
+{"name": "Becoming.gap_within_order_iff_worlds", "uses": ["Becoming.carriedWithin_le_carried", "Becoming.exact_every_start_iff", "Becoming.most_difference_worlds"]}
+{"name": "Becoming.most_difference_courses_worlds", "uses": ["Becoming.carried_eq_courses", "Becoming.most_difference_worlds"]}
+{"name": "Becoming.most_difference_within_worlds", "uses": ["Becoming.carriedWithin_exact_of_no_loop", "Becoming.most_difference_worlds"]}
+{"name": "Becoming.most_difference_worlds", "uses": ["Becoming.TwoActs.gap_le_carried", "Becoming.carried_attained", "Becoming.carrying_act_levels", "Becoming.carrying_twoActs", "Becoming.quiet_act_levels"]}
+{"name": "Becoming.quiet_act_levels", "uses": ["Becoming.CourseWorlds.cond_left", "Becoming.CourseWorlds.cond_right", "Becoming.ExchangeLaw.carrying_nonanticipating", "Becoming.ExchangeLaw.course_balances_iff", "Becoming.ExchangeLaw.withAct_follows", "Becoming.Propagation.cond_same", "Becoming.carrying_balances", "Becoming.carrying_moves_feasible", "Becoming.carrying_moves_nonanticipating", "Becoming.counterfactual_fixed"]}
+{"name": "Becoming.runaway_worlds", "uses": ["Becoming.most_difference_worlds", "Becoming.runaway_of_roundTrip"]}
+{"name": "Becoming.unread_carried_nowhere_worlds", "uses": ["Becoming.ExchangeLaw.ReadsAt.withMoves_nonanticipating", "Becoming.ExchangeLaw.course_balances_iff", "Becoming.ExchangeLaw.moves_actsAlike", "Becoming.ExchangeLaw.withAct_follows", "Becoming.unread_carried_nowhere"]}
+{"name": "Becoming.worlds_iff_flows", "uses": ["Becoming.most_difference_arrives", "Becoming.most_difference_worlds"]}

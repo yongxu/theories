@@ -1,0 +1,108 @@
+{"name": "Becoming.CleanStep.ends_where_net_ends", "uses": ["Becoming.CleanStep.own_class", "Becoming.«线内同类»"]}
+{"name": "Becoming.CleanStep.not_constant_at", "uses": ["Becoming.CleanStep.own_class", "Becoming.«出类不随则本类不至终有常»"]}
+{"name": "Becoming.CleanStep.not_constant_to_end", "uses": ["Becoming.CleanStep.not_constant_at", "Becoming.CleanStep.own_class", "Becoming.«至终有常则本类至终有常»"]}
+{"name": "Becoming.CleanStep.own_class", "uses": []}
+{"name": "Becoming.FinerOutside.finer_class", "uses": []}
+{"name": "Becoming.FinerOutside.finer_not_constant_at", "uses": []}
+{"name": "Becoming.FinerOutside.not_held", "uses": []}
+{"name": "Becoming.FinerOutside.same_class", "uses": []}
+{"name": "Becoming.FinerOutside.split_constant_at", "uses": []}
+{"name": "Becoming.FinerWake.both", "uses": []}
+{"name": "Becoming.FinerWake.finer_class", "uses": []}
+{"name": "Becoming.FinerWake.finer_not_constant_at", "uses": []}
+{"name": "Becoming.FinerWake.same_class", "uses": []}
+{"name": "Becoming.FinerWake.split_constant_at", "uses": ["Becoming.FinerWake.both", "Becoming.«内外皆缘则二分本类常»"]}
+{"name": "Becoming.FiniteFamilies.family_class", "uses": []}
+{"name": "Becoming.FiniteFamilies.family_constant_to_end", "uses": []}
+{"name": "Becoming.FiniteFamilies.family_narrower", "uses": []}
+{"name": "Becoming.FiniteFamilies.family_takes_in_all", "uses": ["Becoming.FiniteFamilies.family_class", "Becoming.FiniteFamilies.family_constant_to_end", "Becoming.FiniteFamilies.first_birth_held", "Becoming.«类».refl", "Becoming.«至终常闭则所及皆及»"]}
+{"name": "Becoming.FiniteFamilies.first_birth_held", "uses": []}
+{"name": "Becoming.FiniteFamilies.member_class", "uses": []}
+{"name": "Becoming.FiniteFamilies.member_no_reach", "uses": ["Becoming.FiniteFamilies.member_class", "Becoming.«亡而网续则后不皆续»"]}
+{"name": "Becoming.FiniteFamilies.member_not_constant_at", "uses": ["Becoming.«亡而网续则本类不至终有常»"]}
+{"name": "Becoming.FiniteFamilies.member_not_constant_to_end", "uses": ["Becoming.FiniteFamilies.member_class", "Becoming.FiniteFamilies.member_not_constant_at", "Becoming.«至终有常则本类至终有常»"]}
+{"name": "Becoming.FiniteFamilies.one_not_constant", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.FiniteFamilies.other_family_outside", "uses": []}
+{"name": "Becoming.FiniteSharedCondition.first_birth_held", "uses": ["Becoming.FiniteSharedCondition.link_joined"]}
+{"name": "Becoming.FiniteSharedCondition.fourth_outside", "uses": ["Becoming.FiniteSharedCondition.held_class", "Becoming.«线内同类»"]}
+{"name": "Becoming.FiniteSharedCondition.held_class", "uses": []}
+{"name": "Becoming.FiniteSharedCondition.held_constant_to_end", "uses": ["Becoming.FiniteSharedCondition.link_joined", "Becoming.FiniteSharedCondition.link_self"]}
+{"name": "Becoming.FiniteSharedCondition.held_narrower", "uses": []}
+{"name": "Becoming.FiniteSharedCondition.link_joined", "uses": []}
+{"name": "Becoming.FiniteSharedCondition.link_self", "uses": []}
+{"name": "Becoming.FiniteSharedCondition.member_class", "uses": []}
+{"name": "Becoming.FiniteSharedCondition.member_not_constant_at", "uses": ["Becoming.«亡而网续则本类不至终有常»"]}
+{"name": "Becoming.FiniteSharedCondition.member_not_constant_to_end", "uses": ["Becoming.FiniteSharedCondition.member_class", "Becoming.FiniteSharedCondition.member_not_constant_at", "Becoming.«至终有常则本类至终有常»"]}
+{"name": "Becoming.FiniteSharedCondition.one_not_constant", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.FiniteSharedCondition.reaches_other_past_end", "uses": ["Becoming.FiniteSharedCondition.first_birth_held", "Becoming.FiniteSharedCondition.held_class", "Becoming.FiniteSharedCondition.held_constant_to_end", "Becoming.«至终常闭则所及皆及»"]}
+{"name": "Becoming.FiniteWake.constant_to_end", "uses": []}
+{"name": "Becoming.FiniteWake.not_constant", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.FiniteWake.not_held", "uses": []}
+{"name": "Becoming.FiniteWake.own_class", "uses": []}
+{"name": "Becoming.FiniteWake.wake_follows", "uses": ["Becoming.FiniteWake.constant_to_end", "Becoming.FiniteWake.own_class", "Becoming.«出类随线»"]}
+{"name": "Becoming.Inconstant.not_all_follow", "uses": ["Becoming.Inconstant.not_constant_at", "Becoming.Inconstant.same_class", "Becoming.«有常则至终有常»", "Becoming.«至终有常则本类至终有常»"]}
+{"name": "Becoming.Inconstant.not_constant_at", "uses": ["Becoming.Inconstant.same_class", "Becoming.«本类常则闭当且仅当后皆同类»"]}
+{"name": "Becoming.Inconstant.same_class", "uses": []}
+{"name": "Becoming.OtherLeaves.all_alike", "uses": ["Becoming.OtherLeaves.reached_after"]}
+{"name": "Becoming.OtherLeaves.not_constant_at", "uses": []}
+{"name": "Becoming.OtherLeaves.other_not_held", "uses": []}
+{"name": "Becoming.OtherLeaves.other_off_line", "uses": ["Becoming.OtherLeaves.reached_after"]}
+{"name": "Becoming.OtherLeaves.reach_without_condition", "uses": ["Becoming.OtherLeaves.all_alike", "Becoming.OtherLeaves.not_constant_at", "Becoming.«二分为类»", "Becoming.«后皆续则所缘同于»", "Becoming.«后皆续当且仅当后皆同类»"]}
+{"name": "Becoming.OtherLeaves.reached_after", "uses": ["Becoming.OtherLeaves.reached_step"]}
+{"name": "Becoming.OtherLeaves.reached_step", "uses": []}
+{"name": "Becoming.Unclosed.constant", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.Unclosed.not_taken_in", "uses": ["Becoming.Unclosed.same_class", "Becoming.«线内同类»"]}
+{"name": "Becoming.Unclosed.same_class", "uses": []}
+{"name": "Becoming.UnevenOutside.finer_class", "uses": []}
+{"name": "Becoming.UnevenOutside.finer_constant_to_end", "uses": []}
+{"name": "Becoming.UnevenOutside.held", "uses": []}
+{"name": "Becoming.UnevenOutside.same_class", "uses": []}
+{"name": "Becoming.UnevenOutside.split_constant_at", "uses": []}
+{"name": "Becoming.UnevenOutside.split_not_constant_to_end", "uses": []}
+{"name": "Becoming.«二分为类»", "uses": []}
+{"name": "Becoming.«二分本类常当且仅当内外皆随»", "uses": ["Becoming.«异三则同»"]}
+{"name": "Becoming.«亡而网续则不至终有常»", "uses": []}
+{"name": "Becoming.«亡而网续则后不皆续»", "uses": ["Becoming.«后皆续当且仅当自与线皆闭»"]}
+{"name": "Becoming.«亡而网续则本类不至终有常»", "uses": []}
+{"name": "Becoming.«内外皆缘则二分本类常»", "uses": ["Becoming.«二分本类常当且仅当内外皆随»"]}
+{"name": "Becoming.«出类不随则不至终有常»", "uses": ["Becoming.«出类不随则本类不至终有常»", "Becoming.«至终有常则本类至终有常»"]}
+{"name": "Becoming.«出类不随则本类不至终有常»", "uses": ["Becoming.«本类出类随行»"]}
+{"name": "Becoming.«出类随线»", "uses": ["Becoming.«本类出类随线»", "Becoming.«至终有常则本类至终有常»"]}
+{"name": "Becoming.«出类随行»", "uses": ["Becoming.«本类出类随行»", "Becoming.«至终有常则本类至终有常»"]}
+{"name": "Becoming.«同行可决则至终有常»", "uses": ["Becoming.«同行之逐点»"]}
+{"name": "Becoming.«后不定则至终有常可不同行»", "uses": ["Becoming.«同行之逐点»", "Becoming.«有常则至终有常»", "Becoming.«静有常»"]}
+{"name": "Becoming.«后皆同类则后皆续»", "uses": ["Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«后皆续则所缘同于»", "uses": ["Becoming.«后皆续当且仅当后皆同类»"]}
+{"name": "Becoming.«后皆续当且仅当后皆同类»", "uses": ["Becoming.«后皆同类则后皆续»", "Becoming.«类».refl", "Becoming.«线内同类»"]}
+{"name": "Becoming.«后皆续当且仅当自与线皆闭»", "uses": ["Becoming.«及之传递»", "Becoming.«后皆续则所缘同于»", "Becoming.«后皆续当且仅当后皆同类»", "Becoming.«相续含于及»", "Becoming.«类».symm", "Becoming.«类».trans", "Becoming.«线内同类»"]}
+{"name": "Becoming.«外分唯系出类之同»", "uses": ["Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«外分唯系己出之同»", "uses": ["Becoming.«本类常当且仅当与己相随»", "Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«外合不失本类之常»", "uses": []}
+{"name": "Becoming.«局定后则至终有常当且仅当同行可决»", "uses": ["Becoming.«同行可决则至终有常»", "Becoming.«至终有常则可决»", "Becoming.«至终有常局定后则同行»"]}
+{"name": "Becoming.«常类之闭当且仅当后皆同类»", "uses": ["Becoming.«有常则至终有常»", "Becoming.«至终常类之闭当且仅当后皆同类»"]}
+{"name": "Becoming.«常闭则后皆续»", "uses": ["Becoming.«有常则可续»", "Becoming.«有常则至终有常»", "Becoming.«至终常闭则后皆续»"]}
+{"name": "Becoming.«常闭则所及皆及»", "uses": ["Becoming.«常闭则后皆续»", "Becoming.«所及之传递»"]}
+{"name": "Becoming.«常闭则所缘同类»", "uses": ["Becoming.«有常则可续»", "Becoming.«有常则至终有常»", "Becoming.«至终常闭则所缘同类»"]}
+{"name": "Becoming.«异三则同»", "uses": []}
+{"name": "Becoming.«所经不同则不及»", "uses": ["Becoming.«所经必同»"]}
+{"name": "Becoming.«所经必同»", "uses": ["Becoming.«及之传递»", "Becoming.«定则内至外之线有出步»", "Becoming.«线内同类»"]}
+{"name": "Becoming.«有常则至终有常»", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.«有常当且仅当至终有常可续»", "uses": ["Becoming.«有常则可续»", "Becoming.«有常则至终有常»", "Becoming.«至终有常可续则有常»"]}
+{"name": "Becoming.«本类之常至二分»", "uses": ["Becoming.«外合不失本类之常»", "Becoming.«异三则同»", "Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«本类出类随线»", "uses": ["Becoming.«本类出类随行»", "Becoming.«类».refl", "Becoming.«类».symm", "Becoming.«线内同类»"]}
+{"name": "Becoming.«本类出类随行»", "uses": ["Becoming.«类».refl", "Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«本类常则闭当且仅当后皆同类»", "uses": ["Becoming.«本类常闭则后皆续»", "Becoming.«类».refl", "Becoming.«类».symm"]}
+{"name": "Becoming.«本类常当且仅当与己相随»", "uses": ["Becoming.«类».refl", "Becoming.«类».trans"]}
+{"name": "Becoming.«本类常闭则后皆续»", "uses": ["Becoming.«后皆同类则后皆续»", "Becoming.«本类常闭则所缘同类»", "Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«本类常闭则所及皆及»", "uses": ["Becoming.«所及之传递»", "Becoming.«本类常闭则后皆续»"]}
+{"name": "Becoming.«本类常闭则所缘同类»", "uses": ["Becoming.«类».refl", "Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«至终常类之闭当且仅当后皆同类»", "uses": ["Becoming.«本类常则闭当且仅当后皆同类»", "Becoming.«至终有常则本类至终有常»"]}
+{"name": "Becoming.«至终常闭则后皆续»", "uses": ["Becoming.«本类常闭则后皆续»", "Becoming.«至终有常则本类至终有常»"]}
+{"name": "Becoming.«至终常闭则所及皆及»", "uses": ["Becoming.«本类常闭则所及皆及»", "Becoming.«至终有常则本类至终有常»"]}
+{"name": "Becoming.«至终常闭则所缘同类»", "uses": ["Becoming.«本类常闭则所缘同类»", "Becoming.«至终有常则本类至终有常»"]}
+{"name": "Becoming.«至终有常之逐类»", "uses": ["Becoming.«类».refl", "Becoming.«至终有常则本类至终有常»"]}
+{"name": "Becoming.«至终有常则可决»", "uses": []}
+{"name": "Becoming.«至终有常则本类至终有常»", "uses": ["Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«至终有常可续则有常»", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.«至终有常局定后则同行»", "uses": ["Becoming.«同行之逐点»"]}
+{"name": "Becoming.«闭则外分无关»", "uses": ["Becoming.«外分唯系己出之同»"]}

@@ -1,0 +1,12 @@
+{"name": "Becoming.ContinuingRuns.none_ne_some", "uses": []}
+{"name": "Becoming.ContinuingRuns.run_at", "uses": ["Becoming.ContinuingRevision.clock_cycles", "Becoming.Law.orbit_add"]}
+{"name": "Becoming.ContinuingRuns.run_cut_renewal", "uses": ["Becoming.ContinuingRevision.cut_return", "Becoming.ContinuingRuns.none_ne_some", "Becoming.ContinuingRuns.run_at"]}
+{"name": "Becoming.ContinuingRuns.run_cut_stops", "uses": ["Becoming.ContinuingRevision.cut_stops_next", "Becoming.ContinuingRuns.none_ne_some", "Becoming.ContinuingRuns.run_at"]}
+{"name": "Becoming.ContinuingRuns.run_cycle_amounts", "uses": ["Becoming.ContinuingRevision.all_cycles_amounts", "Becoming.ContinuingRevision.run_at_cycle"]}
+{"name": "Becoming.ContinuingRuns.run_frozen_no_return", "uses": ["Becoming.ContinuingRevision.frozen_plan_no_return", "Becoming.ContinuingRuns.none_ne_some", "Becoming.ContinuingRuns.run_of_trace"]}
+{"name": "Becoming.ContinuingRuns.run_method_changed", "uses": ["Becoming.ContinuingRevision.method_changed", "Becoming.ContinuingRevision.run_at_cycle", "Becoming.ContinuingRuns.run_at"]}
+{"name": "Becoming.ContinuingRuns.run_new_available_choice", "uses": ["Becoming.ContinuingRevision.new_available_choice", "Becoming.ContinuingRevision.run_at_cycle", "Becoming.ContinuingRevision.run_installs"]}
+{"name": "Becoming.ContinuingRuns.run_no_renewal_at_cycle", "uses": ["Becoming.ContinuingRevision.no_return_without_success", "Becoming.ContinuingRevision.run_at_cycle", "Becoming.ContinuingRuns.none_ne_some"]}
+{"name": "Becoming.ContinuingRuns.run_of_trace", "uses": ["Generative.Trace.brecOn"]}
+{"name": "Becoming.ContinuingRuns.run_reserve_consumed", "uses": ["Becoming.ContinuingRevision.reserve_consumed", "Becoming.ContinuingRuns.none_ne_some", "Becoming.ContinuingRuns.run_of_trace"]}
+{"name": "Becoming.ContinuingRuns.run_retired_choice", "uses": ["Becoming.ContinuingRevision.retired_choice", "Becoming.ContinuingRevision.run_at_cycle", "Becoming.ContinuingRevision.run_installs"]}

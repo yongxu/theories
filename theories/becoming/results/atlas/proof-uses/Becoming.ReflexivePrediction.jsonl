@@ -1,0 +1,20 @@
+{"name": "Becoming.ReflexivePrediction.Negating.alternates", "uses": ["Becoming.ReflexivePrediction.Negating.none_right"]}
+{"name": "Becoming.ReflexivePrediction.Negating.none_right", "uses": ["Becoming.ListTests.not_ne_self", "Becoming.ReflexivePrediction.none_right_of_moves"]}
+{"name": "Becoming.ReflexivePrediction.Reflecting.middle_right", "uses": []}
+{"name": "Becoming.ReflexivePrediction.Reflecting.reverses", "uses": ["Becoming.Naturals.sub_antitone"]}
+{"name": "Becoming.ReflexivePrediction.ThresholdResponse.both_right", "uses": []}
+{"name": "Becoming.ReflexivePrediction.ThresholdResponse.keeps", "uses": []}
+{"name": "Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start", "uses": ["Becoming.ReflexivePrediction.ThresholdResponse.both_right", "Becoming.ReflexivePrediction.reached_rests", "Becoming.ReflexivePrediction.right_rests"]}
+{"name": "Becoming.ReflexivePrediction.ThresholdResponse.within", "uses": []}
+{"name": "Becoming.ReflexivePrediction.again_or_risen", "uses": ["Becoming.ReflexivePrediction.rises"]}
+{"name": "Becoming.ReflexivePrediction.below_right", "uses": []}
+{"name": "Becoming.ReflexivePrediction.bottom_rests", "uses": ["Becoming.ReflexivePrediction.again_or_risen", "Becoming.ReflexivePrediction.below_right", "Becoming.ReflexivePrediction.on_chain", "Becoming.ReflexivePrediction.stays_from"]}
+{"name": "Becoming.ReflexivePrediction.no_predictor_right", "uses": []}
+{"name": "Becoming.ReflexivePrediction.none_right_of_moves", "uses": []}
+{"name": "Becoming.ReflexivePrediction.on_chain", "uses": []}
+{"name": "Becoming.ReflexivePrediction.predictor_iff", "uses": []}
+{"name": "Becoming.ReflexivePrediction.reached_rests", "uses": []}
+{"name": "Becoming.ReflexivePrediction.rests_iff_right", "uses": []}
+{"name": "Becoming.ReflexivePrediction.right_rests", "uses": []}
+{"name": "Becoming.ReflexivePrediction.rises", "uses": ["Becoming.ReflexivePrediction.on_chain"]}
+{"name": "Becoming.ReflexivePrediction.stays_from", "uses": []}

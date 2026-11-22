@@ -1,0 +1,38 @@
+{"name": "Becoming.IntegerOrder.add_le_add", "uses": ["Becoming.IntegerOrder.nonneg_add", "Becoming.IntegerOrder.sub_add_add"]}
+{"name": "Becoming.IntegerOrder.add_le_add_left", "uses": ["Becoming.IntegerOrder.add_le_add", "Becoming.IntegerOrder.le_refl"]}
+{"name": "Becoming.IntegerOrder.add_le_add_right", "uses": ["Becoming.IntegerOrder.add_le_add", "Becoming.IntegerOrder.le_refl"]}
+{"name": "Becoming.IntegerOrder.add_lt_add_left", "uses": ["Becoming.IntegerOrder.add_le_add_left", "Becoming.Integers.add_assoc"]}
+{"name": "Becoming.IntegerOrder.add_sub_add_left", "uses": ["Becoming.Integers.add_add_add_comm", "Becoming.Integers.add_right_neg", "Becoming.Integers.neg_add", "Becoming.Integers.zero_add"]}
+{"name": "Becoming.IntegerOrder.add_sub_cancel_right", "uses": ["Becoming.Integers.add_assoc", "Becoming.Integers.add_right_neg", "Becoming.Integers.add_zero"]}
+{"name": "Becoming.IntegerOrder.eq_zero_of_nonneg_neg", "uses": []}
+{"name": "Becoming.IntegerOrder.le_add_of_nonneg_right", "uses": ["Becoming.IntegerOrder.add_le_add_left", "Becoming.Integers.add_zero"]}
+{"name": "Becoming.IntegerOrder.le_antisymm", "uses": ["Becoming.IntegerOrder.eq_zero_of_nonneg_neg", "Becoming.IntegerOrder.neg_sub", "Becoming.Integers.add_right_cancel", "Becoming.Integers.add_right_neg"]}
+{"name": "Becoming.IntegerOrder.le_iff", "uses": []}
+{"name": "Becoming.IntegerOrder.le_of_add_le_add_left", "uses": ["Becoming.IntegerOrder.add_sub_add_left"]}
+{"name": "Becoming.IntegerOrder.le_of_add_le_add_right", "uses": ["Becoming.IntegerOrder.le_of_add_le_add_left", "Becoming.Integers.add_comm"]}
+{"name": "Becoming.IntegerOrder.le_of_lt", "uses": ["Becoming.IntegerOrder.le_trans", "Becoming.IntegerOrder.nonneg_one", "Becoming.Integers.add_assoc", "Becoming.Integers.add_comm", "Becoming.Integers.add_left_neg", "Becoming.Integers.zero_add"]}
+{"name": "Becoming.IntegerOrder.le_of_not_lt", "uses": ["Becoming.IntegerOrder.lt_or_le"]}
+{"name": "Becoming.IntegerOrder.le_refl", "uses": ["Becoming.IntegerOrder.nonneg_zero", "Becoming.Integers.add_right_neg"]}
+{"name": "Becoming.IntegerOrder.le_total", "uses": ["Becoming.IntegerOrder.le_of_lt", "Becoming.IntegerOrder.lt_or_le"]}
+{"name": "Becoming.IntegerOrder.le_trans", "uses": ["Becoming.IntegerOrder.nonneg_add", "Becoming.IntegerOrder.sub_add_sub"]}
+{"name": "Becoming.IntegerOrder.lt_add_one", "uses": ["Becoming.IntegerOrder.le_refl"]}
+{"name": "Becoming.IntegerOrder.lt_iff", "uses": []}
+{"name": "Becoming.IntegerOrder.lt_irrefl", "uses": ["Becoming.IntegerOrder.not_nonneg_neg_one", "Becoming.IntegerOrder.sub_succ", "Becoming.Integers.add_right_neg", "Becoming.Integers.zero_add"]}
+{"name": "Becoming.IntegerOrder.lt_of_le_of_lt", "uses": ["Becoming.IntegerOrder.add_sub_add_left", "Becoming.IntegerOrder.le_trans", "Becoming.Integers.add_comm"]}
+{"name": "Becoming.IntegerOrder.lt_of_lt_of_le", "uses": ["Becoming.IntegerOrder.le_trans"]}
+{"name": "Becoming.IntegerOrder.lt_or_le", "uses": ["Becoming.IntegerOrder.neg_sub", "Becoming.IntegerOrder.nonneg_pred_or", "Becoming.IntegerOrder.sub_succ"]}
+{"name": "Becoming.IntegerOrder.neg_nonpos_of_nonneg", "uses": ["Becoming.Integers.add_zero", "Becoming.Integers.neg_neg", "Becoming.Integers.zero_add"]}
+{"name": "Becoming.IntegerOrder.neg_sub", "uses": ["Becoming.Integers.add_comm", "Becoming.Integers.neg_add", "Becoming.Integers.neg_neg"]}
+{"name": "Becoming.IntegerOrder.nonneg_add", "uses": []}
+{"name": "Becoming.IntegerOrder.nonneg_one", "uses": []}
+{"name": "Becoming.IntegerOrder.nonneg_or_neg", "uses": []}
+{"name": "Becoming.IntegerOrder.nonneg_pred_or", "uses": []}
+{"name": "Becoming.IntegerOrder.nonneg_zero", "uses": []}
+{"name": "Becoming.IntegerOrder.not_lt_of_le", "uses": ["Becoming.IntegerOrder.lt_irrefl", "Becoming.IntegerOrder.lt_of_lt_of_le"]}
+{"name": "Becoming.IntegerOrder.not_nonneg_neg_one", "uses": []}
+{"name": "Becoming.IntegerOrder.sub_add_add", "uses": ["Becoming.Integers.add_add_add_comm", "Becoming.Integers.neg_add"]}
+{"name": "Becoming.IntegerOrder.sub_add_cancel", "uses": ["Becoming.Integers.add_assoc", "Becoming.Integers.add_left_neg", "Becoming.Integers.add_zero"]}
+{"name": "Becoming.IntegerOrder.sub_add_sub", "uses": ["Becoming.Integers.add_assoc", "Becoming.Integers.add_left_neg", "Becoming.Integers.zero_add"]}
+{"name": "Becoming.IntegerOrder.sub_le_sub_left", "uses": ["Becoming.Integers.add_add_add_comm", "Becoming.Integers.add_comm", "Becoming.Integers.add_right_neg", "Becoming.Integers.neg_add", "Becoming.Integers.neg_neg", "Becoming.Integers.zero_add"]}
+{"name": "Becoming.IntegerOrder.sub_nonneg_of_le", "uses": ["Becoming.Integers.add_zero"]}
+{"name": "Becoming.IntegerOrder.sub_succ", "uses": ["Becoming.Integers.add_assoc", "Becoming.Integers.neg_add"]}

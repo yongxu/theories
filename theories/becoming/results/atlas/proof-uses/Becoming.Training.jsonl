@@ -1,0 +1,63 @@
+{"name": "Becoming.ExchangeLaw.exchange_along", "uses": ["Becoming.ExchangeLaw.history_agree"]}
+{"name": "Becoming.ExchangeLaw.levels_agree_of_along", "uses": ["Becoming.ExchangeLaw.exchange_along", "Becoming.ExchangeLaw.levels_succ", "Becoming.le_succ_cases", "Becoming.total_congr_on"]}
+{"name": "Becoming.Training.Commons.couples_into_stock", "uses": []}
+{"name": "Becoming.Training.Commons.drawing_responds", "uses": []}
+{"name": "Becoming.Training.Commons.one_le_of_le", "uses": []}
+{"name": "Becoming.Training.Commons.outrun_drawing_reward", "uses": ["Becoming.Training.Commons.outrun_drawing_stock", "Becoming.Training.Commons.outrun_drawing_store"]}
+{"name": "Becoming.Training.Commons.outrun_drawing_settles", "uses": ["Becoming.Training.Commons.outrun_drawing_reward", "Becoming.Training.Commons.outrun_restraint_reward"]}
+{"name": "Becoming.Training.Commons.outrun_drawing_stock", "uses": []}
+{"name": "Becoming.Training.Commons.outrun_drawing_store", "uses": []}
+{"name": "Becoming.Training.Commons.outrun_neighbourhood_decides", "uses": ["Becoming.Training.Commons.outrun_restraint_unsettled", "Becoming.Training.LocalSearch.rests_iff_settles"]}
+{"name": "Becoming.Training.Commons.outrun_restraint_reward", "uses": ["Becoming.Training.Commons.outrun_restraint_stock", "Becoming.Training.Commons.outrun_restraint_store"]}
+{"name": "Becoming.Training.Commons.outrun_restraint_stock", "uses": []}
+{"name": "Becoming.Training.Commons.outrun_restraint_store", "uses": []}
+{"name": "Becoming.Training.Commons.outrun_restraint_unsettled", "uses": ["Becoming.Training.Commons.outrun_drawing_reward", "Becoming.Training.Commons.outrun_restraint_reward"]}
+{"name": "Becoming.Training.Commons.renewed_both_settle", "uses": ["Becoming.Training.Commons.renewed_drawing_reward", "Becoming.Training.Commons.renewed_restraint_reward"]}
+{"name": "Becoming.Training.Commons.renewed_drawing_reward", "uses": ["Becoming.Training.Commons.renewed_drawing_stock", "Becoming.Training.Commons.renewed_drawing_store"]}
+{"name": "Becoming.Training.Commons.renewed_drawing_stock", "uses": []}
+{"name": "Becoming.Training.Commons.renewed_drawing_store", "uses": []}
+{"name": "Becoming.Training.Commons.renewed_restraint_reward", "uses": ["Becoming.Training.Commons.renewed_restraint_stock", "Becoming.Training.Commons.renewed_restraint_store"]}
+{"name": "Becoming.Training.Commons.renewed_restraint_settles_iff", "uses": ["Becoming.Training.Commons.one_le_of_le", "Becoming.Training.Commons.renewed_drawing_reward", "Becoming.Training.Commons.renewed_restraint_reward"]}
+{"name": "Becoming.Training.Commons.renewed_restraint_stock", "uses": []}
+{"name": "Becoming.Training.Commons.renewed_restraint_store", "uses": []}
+{"name": "Becoming.Training.Commons.reward_through", "uses": ["Becoming.Training.score_rewards"]}
+{"name": "Becoming.Training.Commons.start_decides", "uses": ["Becoming.Training.Commons.renewed_both_settle", "Becoming.Training.settled_stays"]}
+{"name": "Becoming.Training.LocalSearch.improving", "uses": []}
+{"name": "Becoming.Training.LocalSearch.rests_iff", "uses": []}
+{"name": "Becoming.Training.LocalSearch.rests_iff_settles", "uses": ["Becoming.Training.LocalSearch.rests_iff"]}
+{"name": "Becoming.Training.Lumping.of_agree", "uses": []}
+{"name": "Becoming.Training.Lumping.refl", "uses": []}
+{"name": "Becoming.Training.Lumping.symm", "uses": []}
+{"name": "Becoming.Training.Lumping.trans", "uses": []}
+{"name": "Becoming.Training.ReadsThrough.of_nonanticipating", "uses": []}
+{"name": "Becoming.Training.ReadsThrough.of_through", "uses": []}
+{"name": "Becoming.Training.ReadsThrough.through", "uses": []}
+{"name": "Becoming.Training.TrainsThrough.reads", "uses": ["Becoming.Training.alike_of_agree"]}
+{"name": "Becoming.Training.agree_symm", "uses": []}
+{"name": "Becoming.Training.alike_of_agree", "uses": []}
+{"name": "Becoming.Training.comes_to_rest", "uses": ["Becoming.Training.rested_or_risen"]}
+{"name": "Becoming.Training.explore_nonanticipating", "uses": []}
+{"name": "Becoming.Training.explored_same_courses", "uses": ["Becoming.Training.explore_nonanticipating", "Becoming.Training.same_courses_of_along"]}
+{"name": "Becoming.Training.free_where_unlumped", "uses": ["Becoming.Training.setOn_lumped", "Becoming.Training.setOn_take_at"]}
+{"name": "Becoming.Training.installed_where_alike", "uses": ["Becoming.Training.ReadsThrough.of_through", "Becoming.Training.installed_where_lumped"]}
+{"name": "Becoming.Training.installed_where_lumped", "uses": ["Becoming.ExchangeLaw.withAct_give_of_part", "Becoming.ExchangeLaw.withAct_take_of_part", "Becoming.Training.Lumping.of_agree", "Becoming.Training.Lumping.trans"]}
+{"name": "Becoming.Training.outrun_reading_same", "uses": ["Becoming.Flow.outrun_reading_alike"]}
+{"name": "Becoming.Training.outrun_settles_iff", "uses": ["Becoming.Training.outrun_reading_same", "Becoming.Training.settles_weighted_iff"]}
+{"name": "Becoming.Training.response_free_off_courses", "uses": ["Becoming.Training.ReadsThrough.of_nonanticipating", "Becoming.Training.response_free_where_unlumped"]}
+{"name": "Becoming.Training.response_free_where_apart", "uses": ["Becoming.Training.ReadsThrough.of_through", "Becoming.Training.ReadsThrough.through", "Becoming.Training.response_free_where_unlumped"]}
+{"name": "Becoming.Training.response_free_where_unlumped", "uses": ["Becoming.Training.Lumping.refl", "Becoming.Training.setOn_lumped", "Becoming.Training.setOn_take_at", "Becoming.Training.setOn_take_off"]}
+{"name": "Becoming.Training.rested_or_risen", "uses": []}
+{"name": "Becoming.Training.same_courses_of_along", "uses": ["Becoming.ExchangeLaw.levels_agree_of_along", "Becoming.ExchangeLaw.withAct_nonanticipating"]}
+{"name": "Becoming.Training.score_rewards", "uses": []}
+{"name": "Becoming.Training.setOn_lumped", "uses": ["Becoming.Training.Lumping.of_agree", "Becoming.Training.Lumping.symm", "Becoming.Training.Lumping.trans", "Becoming.Training.agree_symm", "Becoming.Training.same_courses_of_along", "Becoming.Training.setOn_respects", "Becoming.Training.setOn_take_off"]}
+{"name": "Becoming.Training.setOn_respects", "uses": ["Becoming.Training.setOn_take_at", "Becoming.Training.setOn_take_off"]}
+{"name": "Becoming.Training.setOn_take_at", "uses": []}
+{"name": "Becoming.Training.setOn_take_off", "uses": []}
+{"name": "Becoming.Training.settled_rests", "uses": []}
+{"name": "Becoming.Training.settled_stays", "uses": ["Becoming.Training.settled_rests"]}
+{"name": "Becoming.Training.settles_apart", "uses": ["Becoming.Web.AlikeThrough.refl", "Becoming.Web.AlikeThroughUpTo.symm", "Becoming.Web.AlikeThroughUpTo.trans"]}
+{"name": "Becoming.Training.settles_through", "uses": []}
+{"name": "Becoming.Training.settles_weighted_iff", "uses": ["Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Training.trained_alike_beyond_closure", "uses": ["Becoming.Web.AlikeThrough.refl", "Becoming.Web.class_selects", "Becoming.WithinClosure.refl", "Becoming.act_courses_unselected"]}
+{"name": "Becoming.Training.trained_alike_iff", "uses": ["Becoming.Web.AlikeThrough.refl", "Becoming.Web.AlikeThroughUpTo.symm", "Becoming.Web.AlikeThroughUpTo.trans"]}
+{"name": "Becoming.Training.trained_alike_of_along", "uses": ["Becoming.Training.same_courses_of_along"]}

@@ -1,0 +1,23 @@
+{"name": "Becoming.TimedResponse.Delayed.answers_before_and_after", "uses": []}
+{"name": "Becoming.TimedResponse.Delayed.balanced", "uses": []}
+{"name": "Becoming.TimedResponse.Delayed.constant_read_ignores", "uses": []}
+{"name": "Becoming.TimedResponse.Delayed.not_reached_at_one", "uses": ["Becoming.TimedResponse.not_reached_before_source"]}
+{"name": "Becoming.TimedResponse.Delayed.reached_at_two", "uses": []}
+{"name": "Becoming.TimedResponse.Delayed.read_through", "uses": []}
+{"name": "Becoming.TimedResponse.Delayed.responds", "uses": []}
+{"name": "Becoming.TimedResponse.Delayed.structurally_connected", "uses": ["Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.TimedResponse.Spread.brecOn", "uses": []}
+{"name": "Becoming.TimedResponse.Spread.has_earlier_source", "uses": []}
+{"name": "Becoming.TimedResponse.Spread.within_response", "uses": ["Becoming.TimedResponse.coupledIntoAt_coupledInto", "Becoming.TimedResponse.touches_coupled_edge", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.TimedResponse.answer_alike_before", "uses": ["Becoming.TimedResponse.coupling_alike_before"]}
+{"name": "Becoming.TimedResponse.coupledIntoAt_coupledInto", "uses": []}
+{"name": "Becoming.TimedResponse.coupling_alike_before", "uses": ["Becoming.TimedResponse.coupling_of_levels", "Becoming.TimedResponse.levels_alike_before"]}
+{"name": "Becoming.TimedResponse.coupling_of_levels", "uses": []}
+{"name": "Becoming.TimedResponse.different_answers_not_unreached", "uses": ["Becoming.TimedResponse.answer_alike_before"]}
+{"name": "Becoming.TimedResponse.different_answers_require_reached", "uses": ["Becoming.TimedResponse.different_answers_not_unreached"]}
+{"name": "Becoming.TimedResponse.levels_alike_before", "uses": ["Becoming.TimedResponse.coupling_of_levels", "Becoming.add_right_cancel", "Becoming.eq_zero_of_not_pos", "Becoming.total_congr_on"]}
+{"name": "Becoming.TimedResponse.not_reached_before_source", "uses": ["Becoming.TimedResponse.Spread.has_earlier_source"]}
+{"name": "Becoming.TimedResponse.not_spread_zero", "uses": []}
+{"name": "Becoming.TimedResponse.reachedBy_mono", "uses": []}
+{"name": "Becoming.TimedResponse.reachedBy_within_response", "uses": ["Becoming.TimedResponse.Spread.within_response", "Becoming.TimedResponse.coupledIntoAt_coupledInto"]}
+{"name": "Becoming.TimedResponse.touches_coupled_edge", "uses": []}

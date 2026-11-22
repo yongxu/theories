@@ -1,0 +1,24 @@
+{"name": "Becoming.JointPhase.Event.ofNat_ctorIdx", "uses": []}
+{"name": "Becoming.JointPhase.actual_phase_preserves_basis_masses", "uses": []}
+{"name": "Becoming.JointPhase.actual_phase_preserves_both_local_states", "uses": []}
+{"name": "Becoming.JointPhase.every_finite_control_response_exact", "uses": ["Becoming.JointPhase.every_finite_word_exact", "Becoming.JointPhase.summary_recovers_control"]}
+{"name": "Becoming.JointPhase.every_finite_word_exact", "uses": ["Becoming.JointPhase.summary_update_exact", "Becoming.Readout.foldl_semiconj"]}
+{"name": "Becoming.JointPhase.evolve_trace", "uses": ["Becoming.ProjectedLaws.trace_iff"]}
+{"name": "Becoming.JointPhase.formation_from_blank", "uses": []}
+{"name": "Becoming.JointPhase.interaction_forms_joined", "uses": ["Becoming.JointPhase.formation_from_blank", "Becoming.JointPhase.step_iff"]}
+{"name": "Becoming.JointPhase.interaction_tells_apart", "uses": ["Becoming.JointPhase.same_interaction_distinguishes_relation", "Becoming.JointPhase.trace_end"]}
+{"name": "Becoming.JointPhase.local_pair_carries_no_law", "uses": ["Becoming.Readout.law_through_iff"]}
+{"name": "Becoming.JointPhase.no_local_pair_update", "uses": ["Becoming.Readout.decoder_pair_iff"]}
+{"name": "Becoming.JointPhase.no_local_update", "uses": ["Becoming.JointPhase.no_local_pair_update", "Becoming.JointPhase.step_iff"]}
+{"name": "Becoming.JointPhase.phase_changes_cross", "uses": ["Becoming.JointPhase.retained_cross_distinguishes_change", "Becoming.JointPhase.step_iff"]}
+{"name": "Becoming.JointPhase.phase_keeps_local_states", "uses": ["Becoming.JointPhase.actual_phase_preserves_both_local_states", "Becoming.JointPhase.step_iff"]}
+{"name": "Becoming.JointPhase.phase_keeps_masses", "uses": ["Becoming.JointPhase.actual_phase_preserves_basis_masses", "Becoming.JointPhase.step_iff"]}
+{"name": "Becoming.JointPhase.retained_cross_distinguishes_change", "uses": []}
+{"name": "Becoming.JointPhase.same_interaction_distinguishes_relation", "uses": []}
+{"name": "Becoming.JointPhase.step_iff", "uses": []}
+{"name": "Becoming.JointPhase.summary_omits_other_relations", "uses": []}
+{"name": "Becoming.JointPhase.summary_omits_register", "uses": ["Becoming.JointPhase.every_finite_word_exact", "Becoming.JointPhase.summary_omits_other_relations", "Becoming.JointPhase.trace_end"]}
+{"name": "Becoming.JointPhase.summary_recovers_control", "uses": ["Becoming.Integers.mul_comm"]}
+{"name": "Becoming.JointPhase.summary_response", "uses": ["Becoming.JointPhase.every_finite_control_response_exact", "Becoming.JointPhase.trace_end"]}
+{"name": "Becoming.JointPhase.summary_update_exact", "uses": ["Becoming.Integers.add_comm", "Becoming.Integers.mul_neg", "Becoming.Integers.neg_add", "Becoming.Integers.neg_mul_neg"]}
+{"name": "Becoming.JointPhase.trace_end", "uses": ["Becoming.ProjectedLaws.trace_iff"]}

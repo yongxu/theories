@@ -1,0 +1,34 @@
+{"name": "Becoming.ReadInTime.Between.turned", "uses": ["Becoming.ClosedCapture.Thinned.lossStep_accrues", "Becoming.ReadInTime.turned_iff"]}
+{"name": "Becoming.ReadInTime.Tie.both", "uses": ["Becoming.ReadInTime.kept_early_iff", "Becoming.ReadInTime.turned_early_iff"]}
+{"name": "Becoming.ReadInTime.Window.between", "uses": ["Becoming.ReadInTime.at_most_one_between"]}
+{"name": "Becoming.ReadInTime.Window.by_deadline", "uses": ["Becoming.ReadInTime.deadline"]}
+{"name": "Becoming.ReadInTime.Window.in_time", "uses": ["Becoming.ClosedCapture.Thinned.lossStep_accrues", "Becoming.ReadInTime.turned_iff"]}
+{"name": "Becoming.ReadInTime.Window.late_kept", "uses": ["Becoming.ReadInTime.kept_past_least"]}
+{"name": "Becoming.ReadInTime.Window.scaled", "uses": ["Becoming.ReadInTime.kept_past_least"]}
+{"name": "Becoming.ReadInTime.Window.too_late", "uses": ["Becoming.ClosedCapture.Thinned.lossStep_accrues", "Becoming.ReadInTime.kept_iff", "Becoming.ReadInTime.turned_iff"]}
+{"name": "Becoming.ReadInTime.at_most_one_between", "uses": ["Becoming.ClosedCapture.Drawn.pool_against", "Becoming.ClosedCapture.Drawn.pool_reads", "Becoming.DrawnShaping.drawn_from_below", "Becoming.DrawnShaping.drawn_locks", "Becoming.DrawnShaping.drawn_reads_iff", "Becoming.DrawnShaping.shaped_le_iff", "Becoming.ReadInTime.at_most_one_between_up", "Becoming.ReadInTime.late_never_falls", "Becoming.ReadInTime.none_between_down", "Becoming.RuleCapture.CarrierCounts.lower", "Becoming.RuleCapture.CarrierCounts.lowers", "Becoming.RuleCapture.CarrierCounts.raises", "Becoming.RuleCapture.CarrierCounts.upper", "Becoming.RuleCapture.ReadsShare.reverse", "Becoming.RuleCapture.locked_not_below"]}
+{"name": "Becoming.ReadInTime.at_most_one_between_up", "uses": ["Becoming.RuleCapture.CarrierCounts.upper", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.ReadInTime.covers_of_strict", "uses": []}
+{"name": "Becoming.ReadInTime.deadline", "uses": ["Becoming.ClosedCapture.Drawn.pool_reads", "Becoming.DrawnShaping.shaped_le_iff", "Becoming.ReadInTime.covers_of_strict", "Becoming.ReadInTime.held_le", "Becoming.ReadInTime.held_past", "Becoming.ReadInTime.kept_early_iff", "Becoming.ReadInTime.least", "Becoming.ReadInTime.least_iff", "Becoming.RuleCapture.CarrierCounts.upper"]}
+{"name": "Becoming.ReadInTime.early", "uses": ["Becoming.Pace.paced_succ", "Becoming.ReadInTime.turn_before"]}
+{"name": "Becoming.ReadInTime.held_counts", "uses": ["Becoming.ReadInTime.powers_eq_pow", "Becoming.RuleShaping.orbit_held"]}
+{"name": "Becoming.ReadInTime.held_le", "uses": ["Becoming.DrawnShaping.drawn_locks", "Becoming.Ideals.Preorder.refl", "Becoming.Pace.paced_fast_succ", "Becoming.RuleCapture.CarrierCounts.select_mono"]}
+{"name": "Becoming.ReadInTime.held_past", "uses": ["Becoming.Naturals.mul_right_comm", "Becoming.ReadInTime.held_counts", "Becoming.ReadInTime.powers_base_le", "Becoming.RuleCapture.CarrierCounts.other_pos", "Becoming.SupportGated.sub_pos_of_lt", "Becoming.bernoulli_powers", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.ReadInTime.in_time_earlier", "uses": ["Becoming.ReadInTime.late_never_falls", "Becoming.RuleCapture.CarrierCounts.lower", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.ReadInTime.kept_early_iff", "uses": ["Becoming.ClosedCapture.Thinned.lossStep_accrues", "Becoming.DrawnShaping.drawn_favours_iff", "Becoming.DrawnShaping.drawn_locks", "Becoming.ReadInTime.early", "Becoming.ReadInTime.kept_iff"]}
+{"name": "Becoming.ReadInTime.kept_iff", "uses": ["Becoming.ClosedCapture.Thinned.read_late_kept", "Becoming.ClosedCapture.Thinned.rule_read", "Becoming.DrawnShaping.drawn_favours_iff", "Becoming.DrawnShaping.shaped_le_iff"]}
+{"name": "Becoming.ReadInTime.kept_next_round_iff", "uses": ["Becoming.ClosedCapture.Thinned.lossStep_accrues", "Becoming.ClosedCapture.Thinned.rule_read", "Becoming.ClosedCapture.loss_grows", "Becoming.DrawnShaping.drawn_favours_iff", "Becoming.ReadInTime.kept_iff", "Becoming.ReadInTime.next_share"]}
+{"name": "Becoming.ReadInTime.kept_once_favoured", "uses": ["Becoming.ClosedCapture.Thinned.lossStep_accrues", "Becoming.ClosedCapture.Thinned.read_late_kept", "Becoming.DrawnShaping.drawn_locks", "Becoming.DrawnShaping.shaped_le_iff", "Becoming.ReadInTime.early", "Becoming.ReadInTime.late_never_falls", "Becoming.RuleCapture.CarrierCounts.upper"]}
+{"name": "Becoming.ReadInTime.kept_past_least", "uses": ["Becoming.ClosedCapture.Drawn.pool_reads", "Becoming.DrawnShaping.drawn_from_below", "Becoming.DrawnShaping.shaped_le_iff", "Becoming.ReadInTime.kept_once_favoured", "Becoming.ReadInTime.least", "Becoming.RuleCapture.CarrierCounts.upper"]}
+{"name": "Becoming.ReadInTime.late_never_falls", "uses": ["Becoming.ClosedCapture.Drawn.pool_reads", "Becoming.DrawnShaping.drawn_locks", "Becoming.DrawnShaping.drawn_reads_iff", "Becoming.DrawnShaping.shaped_le_iff", "Becoming.RuleCapture.CarrierCounts.raises", "Becoming.RuleCapture.CarrierCounts.upper", "Becoming.RuleCapture.locked_not_below"]}
+{"name": "Becoming.ReadInTime.least", "uses": ["Becoming.DrawnShaping.drawn_favours_iff"]}
+{"name": "Becoming.ReadInTime.least_iff", "uses": ["Becoming.DrawnShaping.critical_iff"]}
+{"name": "Becoming.ReadInTime.loss_next", "uses": ["Becoming.Pace.paced_fast_succ"]}
+{"name": "Becoming.ReadInTime.next_share", "uses": ["Becoming.Pace.paced_fast_succ", "Becoming.ReadInTime.early"]}
+{"name": "Becoming.ReadInTime.none_between_down", "uses": ["Becoming.RuleCapture.CarrierCounts.upper"]}
+{"name": "Becoming.ReadInTime.powers_base_le", "uses": []}
+{"name": "Becoming.ReadInTime.powers_eq_pow", "uses": []}
+{"name": "Becoming.ReadInTime.shapedLossPool_before", "uses": []}
+{"name": "Becoming.ReadInTime.turn_before", "uses": ["Becoming.ReadInTime.shapedLossPool_before"]}
+{"name": "Becoming.ReadInTime.turned_early_iff", "uses": ["Becoming.ClosedCapture.Thinned.lossStep_accrues", "Becoming.ClosedCapture.Thinned.rule_read", "Becoming.ReadInTime.early", "Becoming.ReadInTime.late_never_falls", "Becoming.ReadInTime.loss_next", "Becoming.ReadInTime.next_share", "Becoming.ReadInTime.turned_iff", "Becoming.RuleCapture.CarrierCounts.lower"]}
+{"name": "Becoming.ReadInTime.turned_iff", "uses": ["Becoming.ClosedCapture.Thinned.read_in_time_turns", "Becoming.ClosedCapture.Thinned.rule_read", "Becoming.DrawnShaping.shaped_le_iff", "Becoming.ReadInTime.loss_next"]}

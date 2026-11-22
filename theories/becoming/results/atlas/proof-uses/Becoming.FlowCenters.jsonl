@@ -1,0 +1,33 @@
+{"name": "Becoming.Clearing.clearer_beyond_returning_feeding", "uses": ["Becoming.Clearing.dweller_feeding_closed", "Becoming.Clearing.reachReturns_iff"]}
+{"name": "Becoming.Clearing.clearer_not_returns", "uses": ["Becoming.Clearing.reach_centred", "Becoming.Clearing.reach_middle"]}
+{"name": "Becoming.Clearing.dweller_feeding_closed", "uses": []}
+{"name": "Becoming.Clearing.dweller_influence_whole", "uses": ["Becoming.Clearing.reach_middle", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Clearing.dweller_reach_closed", "uses": []}
+{"name": "Becoming.Clearing.dweller_returns", "uses": ["Becoming.Clearing.dweller_reach_closed", "Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Clearing.not_unrestricted_ownClosure", "uses": ["Becoming.Clearing.shares_not_mutual", "Becoming.Flow.mutuallyDependent_iff_unrestricted"]}
+{"name": "Becoming.Clearing.reachReturns_iff", "uses": ["Becoming.Clearing.clearer_not_returns", "Becoming.Clearing.dweller_returns", "Becoming.Clearing.source_not_returns"]}
+{"name": "Becoming.Clearing.returning_apart", "uses": ["Becoming.Clearing.dweller_influence_whole", "Becoming.Clearing.dweller_returns", "Becoming.Clearing.levels", "Becoming.Clearing.reachReturns_iff", "Becoming.Clearing.reach_centred", "Becoming.Clearing.shares_not_mutual", "Becoming.ownClosure_unrestricted_iff"]}
+{"name": "Becoming.Clearing.returning_loses_dweller", "uses": ["Becoming.Clearing.alongDependence_closed", "Becoming.Clearing.clearer_loses_dweller", "Becoming.Clearing.dweller_returns", "Becoming.Clearing.loses_beyond", "Becoming.Clearing.returning_apart", "Becoming.Web.AdmitsWithin.narrow", "Becoming.Web.retains_bounded_iff"]}
+{"name": "Becoming.Clearing.source_not_returns", "uses": ["Becoming.Clearing.reach_middle", "Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.Drawing.returning_feeding_apart", "uses": ["Becoming.Drawing.mutual_not_fed", "Becoming.Drawing.mutuallyDependent", "Becoming.Flow.MutuallyDependent.reachReturns", "Becoming.Flow.returning_unrestricted_iff_mutuallyDependent", "Becoming.Flow.unrestricted_of_mutuallyDependent", "Becoming.ownClosure_unrestricted_iff"]}
+{"name": "Becoming.Flow.MutuallyDependent.reachReturns", "uses": ["Becoming.Flow.mutuallyDependent_iff_reach", "Becoming.returnsAlong_of_whole"]}
+{"name": "Becoming.Flow.atReturning_unrestricted_iff", "uses": ["Becoming.unrestricted_atCenters_iff"]}
+{"name": "Becoming.Flow.covered_by_returning", "uses": ["Becoming.Flow.exists_reachReturns", "Becoming.Flow.withinReach_iff_influence"]}
+{"name": "Becoming.Flow.covering_of_acting", "uses": ["Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Flow.mutuallyDependent_iff_unrestricted", "uses": ["Becoming.Flow.mutuallyDependent_iff_reach", "Becoming.ownClosure_unrestricted_iff_of_onto"]}
+{"name": "Becoming.Flow.mutuallyDependent_of_returning_noOutside", "uses": ["Becoming.Flow.mutuallyDependent_of_returning_unrestricted", "Becoming.ownClosure_unrestricted_iff_noOutside"]}
+{"name": "Becoming.Flow.mutuallyDependent_of_returning_unrestricted", "uses": ["Becoming.Flow.mutuallyDependent_iff_reach", "Becoming.ownClosure_unrestricted_atReturning_iff"]}
+{"name": "Becoming.Flow.mutuallyFed_iff_unrestricted", "uses": ["Becoming.ownClosure_unrestricted_iff_of_onto"]}
+{"name": "Becoming.Flow.reachReturns_iff_returnsAlong", "uses": []}
+{"name": "Becoming.Flow.returning_influence_unrestricted_iff", "uses": ["Becoming.Flow.exists_reachReturns", "Becoming.Flow.withinReach_iff_influence", "Becoming.WithinClosure.trans", "Becoming.ownClosure_unrestricted_iff"]}
+{"name": "Becoming.Flow.returning_influence_unrestricted_iff_invariant", "uses": ["Becoming.Flow.returning_influence_unrestricted_iff", "Becoming.ownClosure_standpointInvariant_atReturning_iff"]}
+{"name": "Becoming.Flow.returning_unrestricted_iff_mutuallyDependent", "uses": ["Becoming.Flow.mutuallyDependent_of_returning_unrestricted", "Becoming.Flow.unrestricted_of_mutuallyDependent"]}
+{"name": "Becoming.Flow.unrestricted_of_mutuallyDependent", "uses": ["Becoming.Flow.MutuallyDependent.unrestricted", "Becoming.Flow.mutuallyDependent_iff_reach", "Becoming.ownClosure_unrestricted_of_whole"]}
+{"name": "Becoming.Flow.unrestricted_of_returning_standpointInvariant", "uses": ["Becoming.Flow.covered_by_returning", "Becoming.unrestricted_of_standpointInvariant"]}
+{"name": "Becoming.Unexchanged.apart", "uses": ["Becoming.Flow.atReturning_unrestricted_iff", "Becoming.Flow.mutuallyDependent_iff_reach", "Becoming.Unexchanged.every_returns", "Becoming.Unexchanged.reach_self", "Becoming.ownClosure_unrestricted_iff"]}
+{"name": "Becoming.Unexchanged.every_returns", "uses": ["Becoming.Unexchanged.reach_self", "Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Unexchanged.not_affects", "uses": []}
+{"name": "Becoming.Unexchanged.reach_self", "uses": ["Becoming.Unexchanged.not_affects"]}
+{"name": "Becoming.ownClosure_standpointInvariant_atReturning_iff", "uses": ["Becoming.ownClosure_standpointInvariant_iff_centersWithin"]}
+{"name": "Becoming.ownClosure_unrestricted_atReturning_iff", "uses": ["Becoming.ownClosure_unrestricted_iff_of_returning"]}
+{"name": "Becoming.ownClosure_unrestricted_of_none", "uses": []}

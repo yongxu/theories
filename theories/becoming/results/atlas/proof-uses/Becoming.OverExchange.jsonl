@@ -1,0 +1,50 @@
+{"name": "Becoming.ExchangeLaw.readWorld_readOffExchange", "uses": ["Becoming.ExchangeLaw.course_runs", "Becoming.ExchangeLaw.relation_responds_iff"]}
+{"name": "Becoming.ExchangeRelation.Runs.readOffExchange", "uses": []}
+{"name": "Becoming.ExchangeRelation.mayRespond_not_supports", "uses": ["Becoming.ExchangeRelation.free_unsupported"]}
+{"name": "Becoming.ExchangeRelation.respondsBelow_local", "uses": []}
+{"name": "Becoming.ExchangeRelation.respondsBelow_supports", "uses": []}
+{"name": "Becoming.ExchangeRelation.respondsBelow_weakest", "uses": []}
+{"name": "Becoming.NoisyLaw.course_runs", "uses": []}
+{"name": "Becoming.NoisyLaw.readOffExchange", "uses": ["Becoming.ExchangeRelation.Runs.readOffExchange", "Becoming.NoisyLaw.course_runs"]}
+{"name": "Becoming.World.ReadOffExchange.consumption_ends_with_feeders", "uses": ["Becoming.Flow.Balances.consumption_ends_with_feeders", "Becoming.World.ReadOffExchange.dependent", "Becoming.World.withRest_acting", "Becoming.World.withRest_balanced"]}
+{"name": "Becoming.World.ReadOffExchange.continuing_excludes", "uses": ["Becoming.Flow.continuing_excludes", "Becoming.World.ReadOffExchange.dependent", "Becoming.World.withRest_acting", "Becoming.World.withRest_balanced"]}
+{"name": "Becoming.World.ReadOffExchange.coupled_end_together", "uses": ["Becoming.GroupEnding.Flow.coupled_end_together", "Becoming.World.ReadOffExchange.dependent", "Becoming.World.withRest_acting", "Becoming.World.withRest_balanced"]}
+{"name": "Becoming.World.ReadOffExchange.dependent", "uses": ["Becoming.World.withRest_dependent_iff"]}
+{"name": "Becoming.World.ReadOffExchange.family_childless", "uses": ["Becoming.GroupEnding.Flow.family_childless", "Becoming.World.ReadOffExchange.dependent", "Becoming.World.withRest_acting", "Becoming.World.withRest_balanced"]}
+{"name": "Becoming.World.ReadOffExchange.family_excess_ends", "uses": ["Becoming.Web.Whole.family_excess_ends", "Becoming.World.ReadOffExchange.dependent", "Becoming.World.withRest_acting", "Becoming.World.withRest_balanced"]}
+{"name": "Becoming.World.ReadOffExchange.outrun_below", "uses": ["Becoming.Flow.outrun_below", "Becoming.World.ReadOffExchange.dependent", "Becoming.World.withRest_acting", "Becoming.World.withRest_balanced"]}
+{"name": "Becoming.World.ReadOffExchange.roles_dependent", "uses": ["Becoming.Web.roles_dependent", "Becoming.World.ReadOffExchange.dependent"]}
+{"name": "Becoming.World.ReadOffExchange.selected_le", "uses": ["Becoming.Flow.selected_le", "Becoming.World.ReadOffExchange.dependent", "Becoming.World.withRest_acting"]}
+{"name": "Becoming.World.ReadOffExchange.selection_within", "uses": ["Becoming.Flow.selection_within", "Becoming.World.ReadOffExchange.dependent", "Becoming.World.withRest_acting"]}
+{"name": "Becoming.World.ReadOffExchange.support_moved_rises", "uses": ["Becoming.SelectionTerm.Flow.support_moved_rises", "Becoming.World.ReadOffExchange.dependent", "Becoming.World.withRest_acting"]}
+{"name": "Becoming.World.ReadOffExchange.support_not_lower", "uses": ["Becoming.SelectionTerm.Flow.support_not_lower", "Becoming.World.ReadOffExchange.dependent", "Becoming.World.withRest_acting"]}
+{"name": "Becoming.World.ReadOffExchange.transmitted_supported", "uses": ["Becoming.Flow.transmitted_supported", "Becoming.World.ReadOffExchange.dependent", "Becoming.World.withRest_acting"]}
+{"name": "Becoming.World.takingUnsupported_not_readOff", "uses": ["Becoming.World.ReadOffExchange.dependent", "Becoming.World.withRest_exchanging_iff"]}
+{"name": "Becoming.World.withRest_act_selected_by_pool", "uses": ["Becoming.Flow.act_selected_by_pool", "Becoming.World.withRest_balanced", "Becoming.World.withRest_present", "Becoming.World.withRest_start"]}
+{"name": "Becoming.World.withRest_act_unselected", "uses": ["Becoming.Flow.act_unselected", "Becoming.World.withRest_balanced", "Becoming.World.withRest_present", "Becoming.World.withRest_start"]}
+{"name": "Becoming.World.withRest_acting", "uses": ["Becoming.Flow.readOff_acting"]}
+{"name": "Becoming.World.withRest_all_end", "uses": ["Becoming.GroupEnding.Flow.all_end", "Becoming.World.withRest_acting"]}
+{"name": "Becoming.World.withRest_apart_only_downstream", "uses": ["Becoming.World.withRest_balanced", "Becoming.World.withRest_present", "Becoming.apart_only_downstream"]}
+{"name": "Becoming.World.withRest_closed_lineage_lowered", "uses": ["Becoming.Flow.Balances.on", "Becoming.Reproduction.Flow.closed_lineage_lowered", "Becoming.World.withRest_balanced"]}
+{"name": "Becoming.World.withRest_comes_to_rest_unrefuted", "uses": ["Becoming.World.comes_to_rest_unrefuted", "Becoming.World.withRest_balanced", "Becoming.World.withRest_counted"]}
+{"name": "Becoming.World.withRest_comparison_within_response", "uses": ["Becoming.Flow.Balances.comparison_within_response", "Becoming.World.withRest_balanced", "Becoming.World.withRest_present", "Becoming.World.withRest_start"]}
+{"name": "Becoming.World.withRest_counterfactual_is_course", "uses": ["Becoming.World.withRest_balanced", "Becoming.counterfactual_is_course"]}
+{"name": "Becoming.World.withRest_lineage_ends", "uses": ["Becoming.Flow.Balances.on", "Becoming.Reproduction.Flow.lineage_ends", "Becoming.World.withRest_balanced"]}
+{"name": "Becoming.World.withRest_opens", "uses": ["Becoming.Flow.Dissipative.opens", "Becoming.World.withRest_balanced"]}
+{"name": "Becoming.World.withRest_present", "uses": []}
+{"name": "Becoming.World.withRest_renewedBy", "uses": ["Becoming.Flow.Balances.renewedBy", "Becoming.World.withRest_acting", "Becoming.World.withRest_balanced"]}
+{"name": "Becoming.World.withRest_replenishes", "uses": ["Becoming.Web.Embodied.replenishes", "Becoming.World.withRest_balanced"]}
+{"name": "Becoming.World.withRest_replenishment_unbounded", "uses": ["Becoming.Flow.More.replenishment_unbounded", "Becoming.World.withRest_balanced"]}
+{"name": "Becoming.World.withRest_rest_idle", "uses": []}
+{"name": "Becoming.World.withRest_restores", "uses": ["Becoming.Flow.restores", "Becoming.World.withRest_balanced"]}
+{"name": "Becoming.World.withRest_retains_iff_within_margin", "uses": ["Becoming.Flow.Balances.retains_iff_within_margin", "Becoming.World.withRest_balanced"]}
+{"name": "Becoming.World.withRest_rises_iff_inactive", "uses": ["Becoming.GroupEnding.Flow.rises_iff_inactive", "Becoming.World.withRest_acting"]}
+{"name": "Becoming.World.withRest_some", "uses": []}
+{"name": "Becoming.World.withRest_start", "uses": []}
+{"name": "Becoming.World.withRest_taking", "uses": ["Becoming.Flow.readOff_taking"]}
+{"name": "Becoming.World.withRest_unexcluded_beyond_coupling", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.unexcluded_beyond_coupling", "Becoming.World.withRest_balanced"]}
+{"name": "Becoming.World.withRest_unselected_beyond_coupling", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.unselected_beyond_coupling", "Becoming.World.withRest_balanced"]}
+{"name": "Becoming.World.withRest_unselected_beyond_pool", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.unselected_beyond_pool", "Becoming.World.withRest_balanced"]}
+{"name": "Becoming.World.withRest_uptake_needs_replenishment", "uses": ["Becoming.Flow.uptake_needs_replenishment", "Becoming.World.withRest_balanced"]}
+{"name": "Becoming.World.withRest_widening_selected_by_pool", "uses": ["Becoming.Direction.widening_selected_by_pool", "Becoming.World.withRest_balanced", "Becoming.World.withRest_present", "Becoming.World.withRest_start"]}
+{"name": "Becoming.World.withRest_widens_iff_others_within", "uses": ["Becoming.Flow.Balances.widens_iff_others_within", "Becoming.World.withRest_balanced"]}

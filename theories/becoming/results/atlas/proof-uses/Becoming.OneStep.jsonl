@@ -1,0 +1,304 @@
+{"name": "Becoming.Flow.ActingAt.roles", "uses": ["Becoming.inl_injective", "Becoming.mem_of_map"]}
+{"name": "Becoming.Flow.BalancesOn.roles", "uses": ["Becoming.Flow.roles_given", "Becoming.Flow.roles_taken", "Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.Flow.BalancesOn.taken_le", "uses": []}
+{"name": "Becoming.Flow.CapacityAt.replenishment_le", "uses": ["Becoming.total_le_count", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.CapacityAt.roles", "uses": ["Becoming.preimage_of_mem_map", "Becoming.total_map"]}
+{"name": "Becoming.Flow.ClosedAt.roles", "uses": ["Becoming.inl_injective", "Becoming.mem_map_of", "Becoming.mem_of_map"]}
+{"name": "Becoming.Flow.DissipatesOn.renewers_le_takers", "uses": ["Becoming.Flow.DissipatesOn.takes_of_gives", "Becoming.sign_le_of_pos", "Becoming.total_le"]}
+{"name": "Becoming.Flow.DissipatesOn.roles", "uses": ["Becoming.preimage_of_mem_map", "Becoming.total_map"]}
+{"name": "Becoming.Flow.ExchangesAt.closed", "uses": ["Becoming.le_total_of_mem"]}
+{"name": "Becoming.Flow.Realizes.balance", "uses": ["Becoming.Flow.Realizes.every", "Becoming.Flow.Realizes.member"]}
+{"name": "Becoming.Flow.Realizes.closed", "uses": ["Becoming.Flow.ExchangesAt.closed", "Becoming.Flow.Realizes.every", "Becoming.Flow.Realizes.replenishment", "Becoming.Flow.Realizes.uptake"]}
+{"name": "Becoming.Flow.Realizes.every", "uses": ["Becoming.Flow.Realizes.replenishment", "Becoming.Flow.Realizes.uptake", "Becoming.Flow.exchangesAt_of_replenishment", "Becoming.Flow.exchangesAt_of_uptake", "Becoming.Flow.sign_uptake_le_takers", "Becoming.Flow.takers_le_uptake"]}
+{"name": "Becoming.Flow.Realizes.member", "uses": ["Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.Flow.Realizes.replenishment", "uses": ["Becoming.Flow.Realizes.total_eq"]}
+{"name": "Becoming.Flow.Realizes.roles", "uses": ["Becoming.Flow.roles_exchangesAt", "Becoming.Flow.roles_passage", "Becoming.Flow.roles_takers", "Becoming.map_comp_eq", "Becoming.map_eq_of"]}
+{"name": "Becoming.Flow.Realizes.runsDown", "uses": ["Becoming.Flow.BalancesOn.runs_down", "Becoming.Flow.Realizes.balance", "Becoming.Flow.Realizes.stock_after", "Becoming.Flow.Realizes.stock_before"]}
+{"name": "Becoming.Flow.Realizes.runsDownClosed", "uses": ["Becoming.Flow.Realizes.closed", "Becoming.Flow.Realizes.runsDown"]}
+{"name": "Becoming.Flow.Realizes.stock_after", "uses": ["Becoming.Flow.Realizes.total_eq"]}
+{"name": "Becoming.Flow.Realizes.stock_before", "uses": ["Becoming.Flow.Realizes.total_eq"]}
+{"name": "Becoming.Flow.Realizes.total_eq", "uses": ["Becoming.total_map"]}
+{"name": "Becoming.Flow.Realizes.uptake", "uses": ["Becoming.Flow.Realizes.total_eq"]}
+{"name": "Becoming.Flow.RealizesGivers.capacity", "uses": ["Becoming.Flow.CapacityAt.replenishment_le", "Becoming.Flow.Realizes.replenishment"]}
+{"name": "Becoming.Flow.RealizesGivers.exchange", "uses": []}
+{"name": "Becoming.Flow.RealizesGivers.givers", "uses": ["Becoming.Flow.Realizes.replenishment", "Becoming.Flow.renewers_le_replenishment", "Becoming.Flow.sign_replenishment_le_renewers"]}
+{"name": "Becoming.Flow.RealizesGivers.roles", "uses": ["Becoming.Flow.Realizes.roles", "Becoming.Flow.roles_renewers"]}
+{"name": "Becoming.Flow.RealizesGivers.takers", "uses": ["Becoming.Flow.DissipatesOn.renewers_le_takers"]}
+{"name": "Becoming.Flow.RunsDownOn.roles", "uses": ["Becoming.Flow.BalancesOn.roles", "Becoming.Flow.DissipatesOn.roles", "Becoming.distinct_map", "Becoming.inr_injective", "Becoming.mem_map_of"]}
+{"name": "Becoming.Flow.RunsDownOn.taken_iff", "uses": ["Becoming.Flow.BalancesOn.fall_taken", "Becoming.Flow.BalancesOn.taking_lowers", "Becoming.exists_lt_of_total_lt", "Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.TakingAt.roles", "uses": ["Becoming.inl_injective", "Becoming.mem_of_map"]}
+{"name": "Becoming.Flow.acting_iff_at", "uses": []}
+{"name": "Becoming.Flow.capacity_iff_at", "uses": []}
+{"name": "Becoming.Flow.exchangesAt_of_replenishment", "uses": ["Becoming.total_pos"]}
+{"name": "Becoming.Flow.exchangesAt_of_uptake", "uses": ["Becoming.total_pos"]}
+{"name": "Becoming.Flow.renewers_le_replenishment", "uses": ["Becoming.count_le", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.roles_exchangesAt", "uses": ["Becoming.mem_map_of", "Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.Flow.roles_passage", "uses": ["Becoming.Flow.roles_given", "Becoming.Flow.roles_taken", "Becoming.Passage.ext_of"]}
+{"name": "Becoming.Flow.sign_replenishment_le_renewers", "uses": ["Becoming.sign_total_le", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.sign_uptake_le_takers", "uses": ["Becoming.sign_total_le", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.taking_iff_at", "uses": []}
+{"name": "Becoming.OneStep.Chain.Links.back", "uses": []}
+{"name": "Becoming.OneStep.Chain.Links.forth", "uses": []}
+{"name": "Becoming.OneStep.Chain.Links.keeps", "uses": []}
+{"name": "Becoming.OneStep.Chain.actingAt", "uses": []}
+{"name": "Becoming.OneStep.Chain.add_excess", "uses": ["Becoming.Flow.excess_zero_of_le", "Becoming.excess_balance"]}
+{"name": "Becoming.OneStep.Chain.balancesOn", "uses": ["Becoming.OneStep.Chain.of_mem_family", "Becoming.OneStep.Chain.passage_member", "Becoming.OneStep.Witness.pick_mem"]}
+{"name": "Becoming.OneStep.Chain.beforeAt_pos", "uses": []}
+{"name": "Becoming.OneStep.Chain.below_lt_tally", "uses": ["Becoming.OneStep.Chain.below_succ", "Becoming.OneStep.Chain.hit_of_eq"]}
+{"name": "Becoming.OneStep.Chain.below_succ", "uses": ["Becoming.total_steps_shift"]}
+{"name": "Becoming.OneStep.Chain.beyond_moves", "uses": ["Becoming.OneStep.Witness.hit_pos"]}
+{"name": "Becoming.OneStep.Chain.blocks", "uses": ["Becoming.OneStep.Chain.within_add", "Becoming.OneStep.Chain.within_lt", "Becoming.steps_length", "Becoming.steps_within", "Becoming.total_congr", "Becoming.total_congr_on", "Becoming.total_const", "Becoming.total_steps_add", "Becoming.total_steps_shift", "Becoming.total_zero"]}
+{"name": "Becoming.OneStep.Chain.capacityAt", "uses": ["Becoming.OneStep.Chain.give_family", "Becoming.OneStep.Chain.give_family_outer"]}
+{"name": "Becoming.OneStep.Chain.cellAt_outside", "uses": ["Becoming.OneStep.Chain.cell_beyond", "Becoming.OneStep.Chain.node_mem", "Becoming.length_map"]}
+{"name": "Becoming.OneStep.Chain.cellAt_total", "uses": ["Becoming.OneStep.Chain.cell_columns", "Becoming.OneStep.Chain.entry_map", "Becoming.total_zero"]}
+{"name": "Becoming.OneStep.Chain.cell_beyond", "uses": ["Becoming.OneStep.Chain.hit_lt", "Becoming.OneStep.Chain.slot_lt", "Becoming.steps_within", "Becoming.total_eq_zero"]}
+{"name": "Becoming.OneStep.Chain.cell_columns", "uses": ["Becoming.OneStep.Chain.blocks", "Becoming.OneStep.Chain.slot_lt", "Becoming.OneStep.Chain.total_hit", "Becoming.steps_within", "Becoming.total_congr", "Becoming.total_congr_on", "Becoming.total_mul", "Becoming.total_swap"]}
+{"name": "Becoming.OneStep.Chain.cell_rows", "uses": ["Becoming.OneStep.Chain.blocks", "Becoming.OneStep.Chain.slot_lt", "Becoming.OneStep.Chain.total_hit", "Becoming.steps_within", "Becoming.total_congr_on", "Becoming.total_mul", "Becoming.total_swap"]}
+{"name": "Becoming.OneStep.Chain.closedAt", "uses": ["Becoming.OneStep.Chain.cellAt_outside", "Becoming.OneStep.Witness.hit_pos", "Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.OneStep.Chain.count_lift", "uses": ["Becoming.sign_eq_one", "Becoming.steps_length", "Becoming.total_congr", "Becoming.total_map", "Becoming.total_ones"]}
+{"name": "Becoming.OneStep.Chain.covered_tally", "uses": ["Becoming.OneStep.Witness.hit_pos", "Becoming.total_le_of_support"]}
+{"name": "Becoming.OneStep.Chain.dissipatesOn", "uses": ["Becoming.OneStep.Chain.give_family", "Becoming.OneStep.Chain.give_family_outer", "Becoming.OneStep.Chain.take_family", "Becoming.OneStep.Chain.take_family_outer"]}
+{"name": "Becoming.OneStep.Chain.distinct_family", "uses": ["Becoming.ListTests.some_inj", "Becoming.OneStep.Chain.Links.forth", "Becoming.OneStep.Chain.Site.node.inj", "Becoming.OneStep.Chain.track_origin", "Becoming.distinct_map_on", "Becoming.steps_distinct"]}
+{"name": "Becoming.OneStep.Chain.distinct_present", "uses": ["Becoming.OneStep.Chain.numbered_injective", "Becoming.distinct_append", "Becoming.distinct_map", "Becoming.mem_cons_cases", "Becoming.preimage_of_mem_map", "Becoming.steps_distinct"]}
+{"name": "Becoming.OneStep.Chain.entry_beyond", "uses": []}
+{"name": "Becoming.OneStep.Chain.entry_map", "uses": []}
+{"name": "Becoming.OneStep.Chain.entry_steps", "uses": ["Becoming.total_congr", "Becoming.total_steps_shift", "Becoming.total_zero"]}
+{"name": "Becoming.OneStep.Chain.entry_steps_map", "uses": ["Becoming.steps_succ_map"]}
+{"name": "Becoming.OneStep.Chain.excess_of_zero", "uses": []}
+{"name": "Becoming.OneStep.Chain.exchangesAt_iff", "uses": ["Becoming.Flow.exchangesAt_of_replenishment", "Becoming.Flow.exchangesAt_of_uptake", "Becoming.OneStep.Chain.beyond_moves", "Becoming.OneStep.Chain.given_node", "Becoming.OneStep.Chain.outer_mem", "Becoming.OneStep.Chain.readAt_pos", "Becoming.OneStep.Chain.replenishment_family", "Becoming.OneStep.Chain.taken_node", "Becoming.OneStep.Chain.total_pos_of_read", "Becoming.OneStep.Chain.uptake_family", "Becoming.OneStep.Witness.hit_self", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.OneStep.Chain.family_identical", "uses": ["Becoming.OneStep.Chain.origin_identical", "Becoming.OneStep.Chained.lengths", "Becoming.map_eq_of"]}
+{"name": "Becoming.OneStep.Chain.fill_entry_le", "uses": ["Becoming.OneStep.Chain.fill_spec"]}
+{"name": "Becoming.OneStep.Chain.fill_length", "uses": []}
+{"name": "Becoming.OneStep.Chain.fill_spec", "uses": ["Becoming.Flow.eq_zero_of_le_zero", "Becoming.OneStep.Chain.add_excess", "Becoming.OneStep.Chain.least_cases", "Becoming.OneStep.Chain.least_le_left", "Becoming.OneStep.Chain.least_le_right", "Becoming.OneStep.Chain.least_pos", "Becoming.add_right_cancel", "Becoming.excess_pos", "Becoming.le_of_add_le_add_right", "Becoming.sign_eq_one"]}
+{"name": "Becoming.OneStep.Chain.give_family", "uses": ["Becoming.OneStep.Chain.Links.forth", "Becoming.OneStep.Chain.cell_rows", "Becoming.OneStep.Chain.total_family", "Becoming.OneStep.Chain.track_origin", "Becoming.length_map", "Becoming.total_congr", "Becoming.total_map"]}
+{"name": "Becoming.OneStep.Chain.give_family_outer", "uses": ["Becoming.OneStep.Chain.total_family", "Becoming.total_zero"]}
+{"name": "Becoming.OneStep.Chain.given_node", "uses": ["Becoming.OneStep.Chain.cellAt_total", "Becoming.OneStep.Chain.total_present", "Becoming.total_map"]}
+{"name": "Becoming.OneStep.Chain.guard_pos", "uses": []}
+{"name": "Becoming.OneStep.Chain.guard_some", "uses": ["Becoming.ListTests.some_inj", "Becoming.OneStep.Chain.none_ne_some"]}
+{"name": "Becoming.OneStep.Chain.hit_cases", "uses": []}
+{"name": "Becoming.OneStep.Chain.hit_lt", "uses": ["Becoming.OneStep.Witness.hit_pos", "Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.OneStep.Chain.hit_of_eq", "uses": ["Becoming.OneStep.Witness.hit_self"]}
+{"name": "Becoming.OneStep.Chain.identical_links", "uses": ["Becoming.ListTests.some_inj", "Becoming.OneStep.Witness.pick_map"]}
+{"name": "Becoming.OneStep.Chain.later_add", "uses": []}
+{"name": "Becoming.OneStep.Chain.later_lt", "uses": []}
+{"name": "Becoming.OneStep.Chain.later_self", "uses": []}
+{"name": "Becoming.OneStep.Chain.least_cases", "uses": []}
+{"name": "Becoming.OneStep.Chain.least_le_left", "uses": []}
+{"name": "Becoming.OneStep.Chain.least_le_right", "uses": []}
+{"name": "Becoming.OneStep.Chain.least_pos", "uses": []}
+{"name": "Becoming.OneStep.Chain.levelAt_origin", "uses": ["Becoming.OneStep.Chain.Links.forth", "Becoming.OneStep.Chain.levelAt_originStep", "Becoming.OneStep.Chain.track_origin"]}
+{"name": "Becoming.OneStep.Chain.levelAt_originStep", "uses": ["Becoming.OneStep.Chain.Links.forth", "Becoming.OneStep.Chain.Links.keeps", "Becoming.OneStep.Chain.track_lt", "Becoming.OneStep.Chain.track_origin", "Becoming.OneStep.Chain.track_self"]}
+{"name": "Becoming.OneStep.Chain.levelAt_origin_succ", "uses": ["Becoming.OneStep.Chain.Links.forth", "Becoming.OneStep.Chain.track_origin"]}
+{"name": "Becoming.OneStep.Chain.lift_dissipates", "uses": ["Becoming.OneStep.Chain.entry_beyond", "Becoming.OneStep.Chain.entry_steps_map", "Becoming.OneStep.Chain.lift_length", "Becoming.sign_le_one"]}
+{"name": "Becoming.OneStep.Chain.lift_length", "uses": ["Becoming.length_map", "Becoming.steps_length"]}
+{"name": "Becoming.OneStep.Chain.match_back", "uses": ["Becoming.OneStep.Chain.below_lt_tally", "Becoming.OneStep.Chain.guard_pos", "Becoming.OneStep.Chain.guard_some", "Becoming.OneStep.Chain.nth_below", "Becoming.OneStep.Chain.nth_spec", "Becoming.OneStep.Witness.pick_lt"]}
+{"name": "Becoming.OneStep.Chain.mem_family", "uses": ["Becoming.mem_map_of", "Becoming.steps_of_within"]}
+{"name": "Becoming.OneStep.Chain.node_mem", "uses": ["Becoming.OneStep.Chain.Links.back", "Becoming.OneStep.Chain.mem_family", "Becoming.OneStep.Chain.origin_of_track"]}
+{"name": "Becoming.OneStep.Chain.none_ne_some", "uses": []}
+{"name": "Becoming.OneStep.Chain.nth_below", "uses": ["Becoming.OneStep.Chain.below_succ", "Becoming.OneStep.Chain.hit_cases", "Becoming.OneStep.Chain.hit_of_eq"]}
+{"name": "Becoming.OneStep.Chain.nth_spec", "uses": ["Becoming.OneStep.Chain.below_succ", "Becoming.OneStep.Chain.hit_cases", "Becoming.OneStep.Witness.hit_pos"]}
+{"name": "Becoming.OneStep.Chain.numbered_injective", "uses": []}
+{"name": "Becoming.OneStep.Chain.numbered_mem", "uses": ["Becoming.mem_append_of_left", "Becoming.mem_map_of", "Becoming.steps_of_within"]}
+{"name": "Becoming.OneStep.Chain.of_mem_family", "uses": ["Becoming.preimage_of_mem_map", "Becoming.steps_within"]}
+{"name": "Becoming.OneStep.Chain.openGiven_spec", "uses": ["Becoming.OneStep.Chain.fill_spec", "Becoming.OneStep.Chain.self_le_mul"]}
+{"name": "Becoming.OneStep.Chain.openTaken_spec", "uses": ["Becoming.OneStep.Chain.taking_shares"]}
+{"name": "Becoming.OneStep.Chain.originStep_le", "uses": []}
+{"name": "Becoming.OneStep.Chain.origin_born", "uses": ["Becoming.ListTests.some_inj", "Becoming.OneStep.Chain.none_ne_some"]}
+{"name": "Becoming.OneStep.Chain.origin_identical", "uses": []}
+{"name": "Becoming.OneStep.Chain.origin_le", "uses": ["Becoming.OneStep.Chain.originStep_le"]}
+{"name": "Becoming.OneStep.Chain.origin_of_run", "uses": ["Becoming.OneStep.Chain.origin_start", "Becoming.OneStep.Chain.origin_step"]}
+{"name": "Becoming.OneStep.Chain.origin_of_track", "uses": ["Becoming.OneStep.Chain.origin_of_run", "Becoming.OneStep.Chain.track_add", "Becoming.OneStep.Chain.tracked_from", "Becoming.le_dest"]}
+{"name": "Becoming.OneStep.Chain.origin_start", "uses": ["Becoming.ListTests.some_inj", "Becoming.OneStep.Chain.origin_born"]}
+{"name": "Becoming.OneStep.Chain.origin_step", "uses": ["Becoming.OneStep.Chain.none_ne_some"]}
+{"name": "Becoming.OneStep.Chain.outer_mem", "uses": ["Becoming.mem_append_of_right"]}
+{"name": "Becoming.OneStep.Chain.passage_member", "uses": ["Becoming.OneStep.Chain.Links.forth", "Becoming.OneStep.Chain.given_node", "Becoming.OneStep.Chain.levelAt_origin", "Becoming.OneStep.Chain.levelAt_origin_succ", "Becoming.OneStep.Chain.taken_node", "Becoming.OneStep.Chain.track_origin", "Becoming.Passage.ext_of"]}
+{"name": "Becoming.OneStep.Chain.passages", "uses": ["Becoming.OneStep.Chain.passage_member", "Becoming.OneStep.Witness.pick_steps", "Becoming.map_comp_eq", "Becoming.map_eq_of"]}
+{"name": "Becoming.OneStep.Chain.pos_or_none", "uses": ["Becoming.eq_zero_of_not_pos", "Becoming.sign_pos"]}
+{"name": "Becoming.OneStep.Chain.rankNext_onward", "uses": ["Becoming.OneStep.Chain.guard_pos"]}
+{"name": "Becoming.OneStep.Chain.rankPrev_backward", "uses": ["Becoming.OneStep.Chain.guard_pos"]}
+{"name": "Becoming.OneStep.Chain.rank_links", "uses": ["Becoming.OneStep.Chain.match_back"]}
+{"name": "Becoming.OneStep.Chain.readAt_pos", "uses": []}
+{"name": "Becoming.OneStep.Chain.realizedOnce", "uses": ["Becoming.OneStep.Chain.solo_shows"]}
+{"name": "Becoming.OneStep.Chain.realizedOpen", "uses": ["Becoming.OneStep.Chain.fill_spec", "Becoming.OneStep.Chain.realizedOnce", "Becoming.OneStep.Chain.taking_shares"]}
+{"name": "Becoming.OneStep.Chain.realizedRun", "uses": ["Becoming.OneStep.Chain.family_identical", "Becoming.OneStep.Chain.identical_links", "Becoming.OneStep.Chain.showsAll"]}
+{"name": "Becoming.OneStep.Chain.realizedRunning", "uses": ["Becoming.OneStep.Chain.fill_length", "Becoming.OneStep.Chain.fill_spec", "Becoming.OneStep.Chain.realizedOnce", "Becoming.OneStep.Chain.running_shares", "Becoming.OneStep.fall_iff_given"]}
+{"name": "Becoming.OneStep.Chain.realizedSteps", "uses": ["Becoming.OneStep.Chain.showsAll"]}
+{"name": "Becoming.OneStep.Chain.renewers_family", "uses": ["Becoming.OneStep.Chain.entry_steps", "Becoming.OneStep.Chain.give_family", "Becoming.OneStep.Chain.give_family_outer", "Becoming.OneStep.Chain.total_present", "Becoming.total_congr"]}
+{"name": "Becoming.OneStep.Chain.replenishment_family", "uses": ["Becoming.OneStep.Chain.Links.forth", "Becoming.OneStep.Chain.given_node", "Becoming.OneStep.Chain.total_family", "Becoming.OneStep.Chain.track_origin", "Becoming.OneStep.Witness.total_pick", "Becoming.total_congr"]}
+{"name": "Becoming.OneStep.Chain.runningTaken_spec", "uses": ["Becoming.OneStep.Chain.fill_length", "Becoming.OneStep.Chain.openGiven_spec", "Becoming.OneStep.Chain.running_shares", "Becoming.OneStep.fall_iff_given"]}
+{"name": "Becoming.OneStep.Chain.running_shares", "uses": ["Becoming.OneStep.Chain.add_excess", "Becoming.OneStep.Chain.count_lift", "Becoming.OneStep.Chain.excess_of_zero", "Becoming.OneStep.Chain.lift_dissipates", "Becoming.OneStep.Chain.pos_or_none", "Becoming.OneStep.Chain.total_lift"]}
+{"name": "Becoming.OneStep.Chain.runsDownOn", "uses": ["Becoming.OneStep.Chain.balancesOn", "Becoming.OneStep.Chain.dissipatesOn", "Becoming.OneStep.Chain.distinct_family", "Becoming.OneStep.Chain.stands_after"]}
+{"name": "Becoming.OneStep.Chain.self_le_mul", "uses": []}
+{"name": "Becoming.OneStep.Chain.shows", "uses": ["Becoming.Flow.RealizesGivers.roles", "Becoming.Flow.roles_distinct", "Becoming.OneStep.Chain.distinct_present", "Becoming.OneStep.Chain.exchangesAt_iff", "Becoming.OneStep.Chain.passages", "Becoming.OneStep.Chain.renewers_family", "Becoming.OneStep.Chain.takers_family"]}
+{"name": "Becoming.OneStep.Chain.showsAll", "uses": ["Becoming.OneStep.Chain.shows"]}
+{"name": "Becoming.OneStep.Chain.slot_lt", "uses": ["Becoming.OneStep.Chain.within_bound"]}
+{"name": "Becoming.OneStep.Chain.solo_active", "uses": ["Becoming.Flow.ActingAt.roles", "Becoming.Flow.TakingAt.roles", "Becoming.OneStep.Chain.actingAt", "Becoming.OneStep.Chain.takingAt"]}
+{"name": "Becoming.OneStep.Chain.solo_balancesOn", "uses": ["Becoming.Flow.BalancesOn.roles", "Becoming.OneStep.Chain.balancesOn", "Becoming.OneStep.Chain.unlinked_links"]}
+{"name": "Becoming.OneStep.Chain.solo_capacityAt", "uses": ["Becoming.Flow.CapacityAt.roles", "Becoming.OneStep.Chain.capacityAt", "Becoming.OneStep.Chain.unlinked_links"]}
+{"name": "Becoming.OneStep.Chain.solo_closedAt", "uses": ["Becoming.Flow.ClosedAt.roles", "Becoming.OneStep.Chain.closedAt", "Becoming.OneStep.Chain.unlinked_links"]}
+{"name": "Becoming.OneStep.Chain.solo_runsDownOn", "uses": ["Becoming.Flow.RunsDownOn.roles", "Becoming.OneStep.Chain.runsDownOn", "Becoming.OneStep.Chain.stands_before_zero", "Becoming.OneStep.Chain.unlinked_links"]}
+{"name": "Becoming.OneStep.Chain.solo_shows", "uses": ["Becoming.OneStep.Chain.shows", "Becoming.OneStep.Chain.unlinked_links"]}
+{"name": "Becoming.OneStep.Chain.stands_after", "uses": ["Becoming.OneStep.Chain.stands_after_step"]}
+{"name": "Becoming.OneStep.Chain.stands_after_step", "uses": ["Becoming.OneStep.Chain.Links.back", "Becoming.OneStep.Chain.Links.forth", "Becoming.OneStep.Chain.beforeAt_pos", "Becoming.OneStep.Chain.node_mem", "Becoming.OneStep.Chain.none_ne_some", "Becoming.OneStep.Chain.origin_of_track", "Becoming.OneStep.Chain.track_origin", "Becoming.OneStep.Witness.pick_lt"]}
+{"name": "Becoming.OneStep.Chain.stands_before", "uses": ["Becoming.OneStep.Chain.stands_before_succ", "Becoming.OneStep.Chain.stands_before_zero"]}
+{"name": "Becoming.OneStep.Chain.stands_before_step", "uses": ["Becoming.OneStep.Chain.Links.keeps", "Becoming.OneStep.Chain.beforeAt_pos", "Becoming.OneStep.Chain.node_mem", "Becoming.OneStep.Chain.track_succ", "Becoming.OneStep.Chain.tracked_from", "Becoming.OneStep.Witness.pick_lt"]}
+{"name": "Becoming.OneStep.Chain.stands_before_succ", "uses": ["Becoming.OneStep.Chain.stands_before_step"]}
+{"name": "Becoming.OneStep.Chain.stands_before_zero", "uses": ["Becoming.OneStep.Chain.beforeAt_pos", "Becoming.OneStep.Chain.node_mem", "Becoming.OneStep.Witness.pick_lt"]}
+{"name": "Becoming.OneStep.Chain.take_family", "uses": ["Becoming.OneStep.Chain.Links.forth", "Becoming.OneStep.Chain.cell_rows", "Becoming.OneStep.Chain.total_family", "Becoming.OneStep.Chain.track_origin", "Becoming.length_map", "Becoming.total_congr", "Becoming.total_map"]}
+{"name": "Becoming.OneStep.Chain.take_family_outer", "uses": ["Becoming.OneStep.Chain.total_family", "Becoming.total_zero"]}
+{"name": "Becoming.OneStep.Chain.taken_node", "uses": ["Becoming.OneStep.Chain.cellAt_total", "Becoming.OneStep.Chain.total_present", "Becoming.total_map"]}
+{"name": "Becoming.OneStep.Chain.takers_family", "uses": ["Becoming.OneStep.Chain.entry_steps", "Becoming.OneStep.Chain.take_family", "Becoming.OneStep.Chain.take_family_outer", "Becoming.OneStep.Chain.total_present", "Becoming.total_congr"]}
+{"name": "Becoming.OneStep.Chain.takingAt", "uses": []}
+{"name": "Becoming.OneStep.Chain.taking_shares", "uses": ["Becoming.OneStep.Chain.add_excess", "Becoming.OneStep.Chain.count_lift", "Becoming.OneStep.Chain.excess_of_zero", "Becoming.OneStep.Chain.pos_or_none", "Becoming.OneStep.Chain.total_lift"]}
+{"name": "Becoming.OneStep.Chain.total_entry_one", "uses": ["Becoming.OneStep.Chain.entry_steps"]}
+{"name": "Becoming.OneStep.Chain.total_family", "uses": ["Becoming.total_map"]}
+{"name": "Becoming.OneStep.Chain.total_hit", "uses": ["Becoming.total_steps_shift", "Becoming.total_zero"]}
+{"name": "Becoming.OneStep.Chain.total_lift", "uses": ["Becoming.OneStep.Chain.entry_steps", "Becoming.OneStep.Chain.total_entry_one", "Becoming.steps_length", "Becoming.total_add", "Becoming.total_map", "Becoming.total_ones"]}
+{"name": "Becoming.OneStep.Chain.total_pos_of_read", "uses": ["Becoming.OneStep.Witness.pick_lt", "Becoming.OneStep.Witness.pick_mem", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.OneStep.Chain.total_present", "uses": ["Becoming.total_append", "Becoming.total_map"]}
+{"name": "Becoming.OneStep.Chain.track_add", "uses": ["Becoming.OneStep.Chain.later_add"]}
+{"name": "Becoming.OneStep.Chain.track_lt", "uses": ["Becoming.OneStep.Chain.later_lt"]}
+{"name": "Becoming.OneStep.Chain.track_origin", "uses": ["Becoming.OneStep.Chain.track_originStep"]}
+{"name": "Becoming.OneStep.Chain.track_originStep", "uses": ["Becoming.OneStep.Chain.origin_le", "Becoming.OneStep.Chain.track_self", "Becoming.OneStep.Chain.track_succ"]}
+{"name": "Becoming.OneStep.Chain.track_self", "uses": ["Becoming.OneStep.Chain.later_self"]}
+{"name": "Becoming.OneStep.Chain.track_succ", "uses": ["Becoming.OneStep.Chain.track_succ_add", "Becoming.le_dest"]}
+{"name": "Becoming.OneStep.Chain.track_succ_add", "uses": ["Becoming.OneStep.Chain.track_add"]}
+{"name": "Becoming.OneStep.Chain.tracked_from", "uses": ["Becoming.OneStep.Chain.none_ne_some", "Becoming.OneStep.Chain.track_lt"]}
+{"name": "Becoming.OneStep.Chain.unlinked_links", "uses": ["Becoming.OneStep.Chain.none_ne_some"]}
+{"name": "Becoming.OneStep.Chain.uptake_family", "uses": ["Becoming.OneStep.Chain.Links.forth", "Becoming.OneStep.Chain.taken_node", "Becoming.OneStep.Chain.total_family", "Becoming.OneStep.Chain.track_origin", "Becoming.OneStep.Witness.total_pick", "Becoming.total_congr"]}
+{"name": "Becoming.OneStep.Chain.within_add", "uses": []}
+{"name": "Becoming.OneStep.Chain.within_bound", "uses": []}
+{"name": "Becoming.OneStep.Chain.within_lt", "uses": []}
+{"name": "Becoming.OneStep.Chained.continues", "uses": ["Becoming.total_map"]}
+{"name": "Becoming.OneStep.Chained.lengths", "uses": ["Becoming.length_map"]}
+{"name": "Becoming.OneStep.RealizedGivers.weaken", "uses": []}
+{"name": "Becoming.OneStep.RunRealized.chained", "uses": ["Becoming.map_comp_eq"]}
+{"name": "Becoming.OneStep.RunRealized.exchange", "uses": []}
+{"name": "Becoming.OneStep.RunRealizedGivers.run", "uses": []}
+{"name": "Becoming.OneStep.RunRealizedGivers.steps", "uses": []}
+{"name": "Becoming.OneStep.RunsDown.sign_given_le", "uses": ["Becoming.OneStep.fall_iff_given", "Becoming.sign_le_of_pos"]}
+{"name": "Becoming.OneStep.StepRealized.continues", "uses": ["Becoming.OneStep.Chain.covered_tally", "Becoming.total_map"]}
+{"name": "Becoming.OneStep.Witness.balancesOn", "uses": ["Becoming.OneStep.Witness.given_member", "Becoming.OneStep.Witness.level_after", "Becoming.OneStep.Witness.of_mem_family", "Becoming.OneStep.Witness.pick_mem", "Becoming.OneStep.Witness.taken_member"]}
+{"name": "Becoming.OneStep.Witness.beyond_moves", "uses": ["Becoming.OneStep.Witness.hit_pos"]}
+{"name": "Becoming.OneStep.Witness.closedAt", "uses": ["Becoming.Flow.eq_zero_of_le_zero", "Becoming.OneStep.Witness.beyond_moves", "Becoming.OneStep.Witness.given_member", "Becoming.OneStep.Witness.member_mem", "Becoming.OneStep.Witness.pick_beyond", "Becoming.OneStep.Witness.taken_member", "Becoming.eq_zero_of_not_pos", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.OneStep.Witness.dissipatesOn", "uses": ["Becoming.OneStep.Witness.total_family", "Becoming.OneStep.Witness.total_pick", "Becoming.OneStep.Witness.whole_bound", "Becoming.OneStep.Witness.whole_total", "Becoming.sign_le", "Becoming.total_congr", "Becoming.total_zero"]}
+{"name": "Becoming.OneStep.Witness.distinct_family", "uses": ["Becoming.OneStep.Witness.member_injective", "Becoming.distinct_map", "Becoming.steps_distinct"]}
+{"name": "Becoming.OneStep.Witness.distinct_present", "uses": ["Becoming.OneStep.Witness.distinct_unitList", "Becoming.OneStep.Witness.unitList_units", "Becoming.distinct_append", "Becoming.mem_append_cases", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.OneStep.Witness.distinct_unitList", "uses": ["Becoming.OneStep.Witness.unitList_units", "Becoming.OneStep.Witness.unit_injective", "Becoming.OneStep.Witness.up_unit_injective", "Becoming.distinct_append", "Becoming.distinct_map", "Becoming.distinct_map_on", "Becoming.preimage_of_mem_map", "Becoming.steps_distinct"]}
+{"name": "Becoming.OneStep.Witness.excess_zero", "uses": []}
+{"name": "Becoming.OneStep.Witness.exchangesAt_iff", "uses": ["Becoming.Flow.exchangesAt_of_replenishment", "Becoming.Flow.exchangesAt_of_uptake", "Becoming.OneStep.Witness.beyond_moves", "Becoming.OneStep.Witness.given_member", "Becoming.OneStep.Witness.hit_self", "Becoming.OneStep.Witness.outer_mem", "Becoming.OneStep.Witness.pick_lt", "Becoming.OneStep.Witness.pick_mem", "Becoming.OneStep.Witness.replenishment_family", "Becoming.OneStep.Witness.taken_member", "Becoming.OneStep.Witness.uptake_family", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.OneStep.Witness.give_units", "uses": ["Becoming.OneStep.Witness.unitList_units", "Becoming.total_congr_on", "Becoming.total_zero"]}
+{"name": "Becoming.OneStep.Witness.given_member", "uses": ["Becoming.OneStep.Witness.give_units", "Becoming.total_append"]}
+{"name": "Becoming.OneStep.Witness.hit_pos", "uses": []}
+{"name": "Becoming.OneStep.Witness.hit_self", "uses": []}
+{"name": "Becoming.OneStep.Witness.least_excess", "uses": []}
+{"name": "Becoming.OneStep.Witness.least_excess_other", "uses": ["Becoming.OneStep.Witness.excess_zero"]}
+{"name": "Becoming.OneStep.Witness.level_after", "uses": ["Becoming.OneStep.Witness.pick_map"]}
+{"name": "Becoming.OneStep.Witness.member_injective", "uses": []}
+{"name": "Becoming.OneStep.Witness.member_mem", "uses": ["Becoming.mem_map_of", "Becoming.steps_of_within"]}
+{"name": "Becoming.OneStep.Witness.of_mem_family", "uses": ["Becoming.preimage_of_mem_map", "Becoming.steps_within"]}
+{"name": "Becoming.OneStep.Witness.once_chain", "uses": ["Becoming.map_comp_eq"]}
+{"name": "Becoming.OneStep.Witness.outer_mem", "uses": ["Becoming.mem_append_of_right"]}
+{"name": "Becoming.OneStep.Witness.passage_member", "uses": ["Becoming.OneStep.Witness.given_member", "Becoming.OneStep.Witness.level_after", "Becoming.OneStep.Witness.taken_member", "Becoming.Passage.ext_of"]}
+{"name": "Becoming.OneStep.Witness.passages", "uses": ["Becoming.OneStep.Witness.passage_member", "Becoming.OneStep.Witness.pick_steps", "Becoming.map_comp_eq", "Becoming.map_eq_of"]}
+{"name": "Becoming.OneStep.Witness.pick_beyond", "uses": []}
+{"name": "Becoming.OneStep.Witness.pick_lt", "uses": []}
+{"name": "Becoming.OneStep.Witness.pick_map", "uses": []}
+{"name": "Becoming.OneStep.Witness.pick_mem", "uses": []}
+{"name": "Becoming.OneStep.Witness.pick_steps", "uses": ["Becoming.map_eq_of", "Becoming.steps_succ_map"]}
+{"name": "Becoming.OneStep.Witness.realizedOnce", "uses": ["Becoming.OneStep.Witness.once_chain", "Becoming.OneStep.Witness.shows"]}
+{"name": "Becoming.OneStep.Witness.replenishment_family", "uses": ["Becoming.OneStep.Witness.given_member", "Becoming.OneStep.Witness.total_family", "Becoming.OneStep.Witness.total_pick", "Becoming.total_congr"]}
+{"name": "Becoming.OneStep.Witness.rest_units", "uses": ["Becoming.OneStep.Witness.least_excess"]}
+{"name": "Becoming.OneStep.Witness.runsDownOn", "uses": ["Becoming.OneStep.Witness.balancesOn", "Becoming.OneStep.Witness.dissipatesOn", "Becoming.OneStep.Witness.distinct_family", "Becoming.OneStep.Witness.stands_after", "Becoming.OneStep.Witness.stands_before"]}
+{"name": "Becoming.OneStep.Witness.shows", "uses": ["Becoming.Flow.Realizes.roles", "Becoming.Flow.roles_distinct", "Becoming.OneStep.Witness.distinct_present", "Becoming.OneStep.Witness.exchangesAt_iff", "Becoming.OneStep.Witness.passages", "Becoming.OneStep.Witness.takers_count"]}
+{"name": "Becoming.OneStep.Witness.showsRun", "uses": ["Becoming.OneStep.Chained.lengths", "Becoming.OneStep.Witness.shows"]}
+{"name": "Becoming.OneStep.Witness.stands_after", "uses": ["Becoming.OneStep.Witness.level_after", "Becoming.OneStep.Witness.member_mem", "Becoming.OneStep.Witness.pick_lt"]}
+{"name": "Becoming.OneStep.Witness.stands_before", "uses": ["Becoming.OneStep.Witness.member_mem", "Becoming.OneStep.Witness.pick_lt"]}
+{"name": "Becoming.OneStep.Witness.take_units", "uses": ["Becoming.OneStep.Witness.total_unitTake", "Becoming.OneStep.Witness.unitList_units", "Becoming.total_congr_on"]}
+{"name": "Becoming.OneStep.Witness.taken_member", "uses": ["Becoming.OneStep.Witness.rest_units", "Becoming.OneStep.Witness.take_units", "Becoming.total_append"]}
+{"name": "Becoming.OneStep.Witness.takers_count", "uses": ["Becoming.OneStep.Witness.takers_eq", "Becoming.OneStep.Witness.whole_count", "Becoming.OneStep.Witness.whole_total"]}
+{"name": "Becoming.OneStep.Witness.takers_eq", "uses": ["Becoming.OneStep.Witness.hit_self", "Becoming.OneStep.Witness.member_mem", "Becoming.OneStep.Witness.total_family", "Becoming.OneStep.Witness.unitList_length", "Becoming.OneStep.Witness.unitList_units", "Becoming.le_total_of_mem", "Becoming.sign_eq_one", "Becoming.total_append", "Becoming.total_congr_on", "Becoming.total_ones", "Becoming.total_zero"]}
+{"name": "Becoming.OneStep.Witness.total_family", "uses": ["Becoming.total_map"]}
+{"name": "Becoming.OneStep.Witness.total_pick", "uses": ["Becoming.OneStep.Witness.pick_steps", "Becoming.total_map"]}
+{"name": "Becoming.OneStep.Witness.total_rest_units", "uses": ["Becoming.OneStep.Witness.rest_units", "Becoming.OneStep.Witness.total_pick", "Becoming.total_add", "Becoming.total_congr"]}
+{"name": "Becoming.OneStep.Witness.total_unitTake", "uses": ["Becoming.OneStep.Witness.unitTake_up_succ", "Becoming.OneStep.Witness.unitTake_up_zero", "Becoming.steps_length", "Becoming.total_append", "Becoming.total_congr", "Becoming.total_map", "Becoming.total_ones", "Becoming.total_zero"]}
+{"name": "Becoming.OneStep.Witness.total_units", "uses": ["Becoming.Flow.eq_zero_of_le_zero", "Becoming.OneStep.Witness.least_excess_other", "Becoming.excess_le_of_le_add", "Becoming.total_steps_succ"]}
+{"name": "Becoming.OneStep.Witness.unitList_length", "uses": ["Becoming.Flow.eq_zero_of_le_zero", "Becoming.ListTests.length_append", "Becoming.OneStep.Witness.least_excess_other", "Becoming.excess_le_of_le_add", "Becoming.length_map", "Becoming.steps_length"]}
+{"name": "Becoming.OneStep.Witness.unitList_units", "uses": ["Becoming.mem_append_cases", "Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.OneStep.Witness.unitTake_up_succ", "uses": []}
+{"name": "Becoming.OneStep.Witness.unitTake_up_zero", "uses": []}
+{"name": "Becoming.OneStep.Witness.unit_injective", "uses": []}
+{"name": "Becoming.OneStep.Witness.up_unit_injective", "uses": []}
+{"name": "Becoming.OneStep.Witness.uptake_family", "uses": ["Becoming.OneStep.Witness.taken_member", "Becoming.OneStep.Witness.total_family", "Becoming.OneStep.Witness.total_pick", "Becoming.total_congr"]}
+{"name": "Becoming.OneStep.Witness.whole_bound", "uses": ["Becoming.eq_zero_of_not_pos", "Becoming.le_of_add_le_add_right", "Becoming.sign_le", "Becoming.sign_le_one", "Becoming.sign_pos"]}
+{"name": "Becoming.OneStep.Witness.whole_count", "uses": ["Becoming.Flow.eq_zero_of_le_zero", "Becoming.sign_eq_one"]}
+{"name": "Becoming.OneStep.Witness.whole_total", "uses": ["Becoming.OneStep.Witness.total_rest_units", "Becoming.OneStep.Witness.total_units"]}
+{"name": "Becoming.OneStep.balance_active_iff", "uses": ["Becoming.OneStep.Chain.realizedOpen", "Becoming.OneStep.Chain.self_le_mul", "Becoming.OneStep.Chain.solo_active", "Becoming.OneStep.Chain.solo_balancesOn", "Becoming.OneStep.RealizedGivers.weaken", "Becoming.OneStep.balance_givers_iff", "Becoming.OneStep.exchange_open"]}
+{"name": "Becoming.OneStep.balance_capacity_iff", "uses": ["Becoming.Flow.Realizes.balance", "Becoming.Flow.RealizesGivers.capacity", "Becoming.Flow.RealizesGivers.givers", "Becoming.OneStep.Chain.realizedOpen", "Becoming.OneStep.Chain.solo_balancesOn", "Becoming.OneStep.Chain.solo_capacityAt", "Becoming.OneStep.exchange_open"]}
+{"name": "Becoming.OneStep.balance_givers_iff", "uses": ["Becoming.Flow.Realizes.balance", "Becoming.Flow.RealizesGivers.givers", "Becoming.OneStep.Chain.realizedOpen", "Becoming.OneStep.Chain.self_le_mul", "Becoming.OneStep.Chain.solo_balancesOn", "Becoming.OneStep.exchange_open"]}
+{"name": "Becoming.OneStep.balance_iff", "uses": ["Becoming.Flow.BalancesOn.roles", "Becoming.Flow.Realizes.balance", "Becoming.OneStep.Witness.balancesOn", "Becoming.OneStep.Witness.once_chain", "Becoming.OneStep.Witness.realizedOnce", "Becoming.OneStep.exchange_open"]}
+{"name": "Becoming.OneStep.closed_active_iff", "uses": ["Becoming.OneStep.Chain.realizedOpen", "Becoming.OneStep.Chain.self_le_mul", "Becoming.OneStep.Chain.solo_active", "Becoming.OneStep.Chain.solo_closedAt", "Becoming.OneStep.RealizedGivers.weaken", "Becoming.OneStep.closed_givers_iff", "Becoming.OneStep.exchange_closed"]}
+{"name": "Becoming.OneStep.closed_capacity_iff", "uses": ["Becoming.Flow.Realizes.closed", "Becoming.Flow.RealizesGivers.capacity", "Becoming.Flow.RealizesGivers.givers", "Becoming.OneStep.Chain.realizedOpen", "Becoming.OneStep.Chain.solo_capacityAt", "Becoming.OneStep.Chain.solo_closedAt", "Becoming.OneStep.exchange_closed"]}
+{"name": "Becoming.OneStep.closed_givers_iff", "uses": ["Becoming.Flow.Realizes.closed", "Becoming.Flow.RealizesGivers.givers", "Becoming.OneStep.Chain.realizedOpen", "Becoming.OneStep.Chain.self_le_mul", "Becoming.OneStep.Chain.solo_closedAt", "Becoming.OneStep.exchange_closed"]}
+{"name": "Becoming.OneStep.closed_iff", "uses": ["Becoming.Flow.ClosedAt.roles", "Becoming.Flow.Realizes.closed", "Becoming.OneStep.Witness.closedAt", "Becoming.OneStep.Witness.realizedOnce", "Becoming.OneStep.exchange_closed"]}
+{"name": "Becoming.OneStep.every_active_iff", "uses": ["Becoming.OneStep.Chain.realizedOpen", "Becoming.OneStep.Chain.self_le_mul", "Becoming.OneStep.Chain.solo_active", "Becoming.OneStep.RealizedGivers.weaken", "Becoming.OneStep.every_givers_iff", "Becoming.OneStep.exchange_open"]}
+{"name": "Becoming.OneStep.every_capacity_iff", "uses": ["Becoming.Flow.Realizes.every", "Becoming.Flow.RealizesGivers.capacity", "Becoming.Flow.RealizesGivers.givers", "Becoming.OneStep.Chain.realizedOpen", "Becoming.OneStep.Chain.solo_capacityAt", "Becoming.OneStep.exchange_open"]}
+{"name": "Becoming.OneStep.every_givers_iff", "uses": ["Becoming.Flow.Realizes.every", "Becoming.Flow.RealizesGivers.givers", "Becoming.OneStep.Chain.realizedOpen", "Becoming.OneStep.Chain.self_le_mul", "Becoming.OneStep.exchange_open"]}
+{"name": "Becoming.OneStep.every_iff", "uses": ["Becoming.Flow.Realizes.every", "Becoming.OneStep.Witness.realizedOnce", "Becoming.OneStep.exchange_open"]}
+{"name": "Becoming.OneStep.exchange_closed", "uses": []}
+{"name": "Becoming.OneStep.exchange_open", "uses": []}
+{"name": "Becoming.OneStep.fall_iff_given", "uses": ["Becoming.Passage.balanced_total", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.OneStep.givers_sign", "uses": ["Becoming.sign_le"]}
+{"name": "Becoming.OneStep.laws", "uses": []}
+{"name": "Becoming.OneStep.laws_givers", "uses": []}
+{"name": "Becoming.OneStep.realized_iff_givers", "uses": []}
+{"name": "Becoming.OneStep.run_balance_givers_iff", "uses": ["Becoming.Flow.BalancesOn.roles", "Becoming.Flow.Realizes.balance", "Becoming.Flow.RealizesGivers.givers", "Becoming.OneStep.Chain.balancesOn", "Becoming.OneStep.Chain.identical_links", "Becoming.OneStep.Chain.openGiven_spec", "Becoming.OneStep.Chain.openTaken_spec", "Becoming.OneStep.Chain.realizedRun", "Becoming.OneStep.RunRealized.chained", "Becoming.OneStep.RunRealizedGivers.run", "Becoming.OneStep.exchange_open"]}
+{"name": "Becoming.OneStep.run_balance_iff", "uses": ["Becoming.Flow.BalancesOn.roles", "Becoming.Flow.Realizes.balance", "Becoming.OneStep.RunRealized.chained", "Becoming.OneStep.RunRealized.exchange", "Becoming.OneStep.Witness.balancesOn", "Becoming.OneStep.Witness.showsRun", "Becoming.OneStep.exchange_open"]}
+{"name": "Becoming.OneStep.run_closed_givers_iff", "uses": ["Becoming.Flow.ClosedAt.roles", "Becoming.Flow.Realizes.closed", "Becoming.Flow.RealizesGivers.givers", "Becoming.OneStep.Chain.closedAt", "Becoming.OneStep.Chain.identical_links", "Becoming.OneStep.Chain.openGiven_spec", "Becoming.OneStep.Chain.openTaken_spec", "Becoming.OneStep.Chain.realizedRun", "Becoming.OneStep.RunRealized.chained", "Becoming.OneStep.RunRealizedGivers.run", "Becoming.OneStep.exchange_closed"]}
+{"name": "Becoming.OneStep.run_closed_iff", "uses": ["Becoming.Flow.ClosedAt.roles", "Becoming.Flow.Realizes.closed", "Becoming.OneStep.RunRealized.chained", "Becoming.OneStep.RunRealized.exchange", "Becoming.OneStep.Witness.closedAt", "Becoming.OneStep.Witness.showsRun", "Becoming.OneStep.exchange_closed"]}
+{"name": "Becoming.OneStep.run_every_givers_iff", "uses": ["Becoming.Flow.Realizes.every", "Becoming.Flow.RealizesGivers.givers", "Becoming.OneStep.Chain.openGiven_spec", "Becoming.OneStep.Chain.openTaken_spec", "Becoming.OneStep.Chain.realizedRun", "Becoming.OneStep.RunRealized.chained", "Becoming.OneStep.RunRealizedGivers.run", "Becoming.OneStep.exchange_open"]}
+{"name": "Becoming.OneStep.run_every_iff", "uses": ["Becoming.Flow.Realizes.every", "Becoming.OneStep.RunRealized.chained", "Becoming.OneStep.RunRealized.exchange", "Becoming.OneStep.Witness.showsRun", "Becoming.OneStep.exchange_open"]}
+{"name": "Becoming.OneStep.run_laws", "uses": []}
+{"name": "Becoming.OneStep.run_runsDownClosed_givers_iff", "uses": ["Becoming.Flow.ClosedAt.roles", "Becoming.Flow.Realizes.runsDownClosed", "Becoming.Flow.RealizesGivers.givers", "Becoming.Flow.RealizesGivers.takers", "Becoming.Flow.RunsDownOn.roles", "Becoming.OneStep.Chain.closedAt", "Becoming.OneStep.Chain.identical_links", "Becoming.OneStep.Chain.openGiven_spec", "Becoming.OneStep.Chain.realizedRun", "Becoming.OneStep.Chain.runningTaken_spec", "Becoming.OneStep.Chain.runsDownOn", "Becoming.OneStep.Chain.stands_before", "Becoming.OneStep.RunRealized.chained", "Becoming.OneStep.RunRealizedGivers.run", "Becoming.OneStep.exchange_closed"]}
+{"name": "Becoming.OneStep.run_runsDownClosed_iff", "uses": ["Becoming.Flow.ClosedAt.roles", "Becoming.Flow.Realizes.runsDownClosed", "Becoming.Flow.RunsDownOn.roles", "Becoming.OneStep.RunRealized.chained", "Becoming.OneStep.RunRealized.exchange", "Becoming.OneStep.Witness.closedAt", "Becoming.OneStep.Witness.runsDownOn", "Becoming.OneStep.Witness.showsRun", "Becoming.OneStep.exchange_closed", "Becoming.OneStep.fall_iff_given"]}
+{"name": "Becoming.OneStep.run_runsDown_givers_iff", "uses": ["Becoming.Flow.Realizes.runsDown", "Becoming.Flow.RealizesGivers.givers", "Becoming.Flow.RealizesGivers.takers", "Becoming.Flow.RunsDownOn.roles", "Becoming.OneStep.Chain.identical_links", "Becoming.OneStep.Chain.openGiven_spec", "Becoming.OneStep.Chain.realizedRun", "Becoming.OneStep.Chain.runningTaken_spec", "Becoming.OneStep.Chain.runsDownOn", "Becoming.OneStep.Chain.stands_before", "Becoming.OneStep.RunRealized.chained", "Becoming.OneStep.RunRealizedGivers.run", "Becoming.OneStep.exchange_open"]}
+{"name": "Becoming.OneStep.run_runsDown_iff", "uses": ["Becoming.Flow.Realizes.runsDown", "Becoming.Flow.RunsDownOn.roles", "Becoming.OneStep.RunRealized.chained", "Becoming.OneStep.RunRealized.exchange", "Becoming.OneStep.Witness.runsDownOn", "Becoming.OneStep.Witness.showsRun", "Becoming.OneStep.exchange_open", "Becoming.OneStep.fall_iff_given"]}
+{"name": "Becoming.OneStep.runsDownClosed_active_iff", "uses": ["Becoming.OneStep.Chain.realizedRunning", "Becoming.OneStep.Chain.self_le_mul", "Becoming.OneStep.Chain.solo_active", "Becoming.OneStep.Chain.solo_closedAt", "Becoming.OneStep.Chain.solo_runsDownOn", "Becoming.OneStep.RealizedGivers.weaken", "Becoming.OneStep.exchange_closed", "Becoming.OneStep.runsDownClosed_givers_iff"]}
+{"name": "Becoming.OneStep.runsDownClosed_capacity_iff", "uses": ["Becoming.Flow.Realizes.runsDownClosed", "Becoming.Flow.RealizesGivers.capacity", "Becoming.Flow.RealizesGivers.givers", "Becoming.Flow.RealizesGivers.takers", "Becoming.OneStep.Chain.realizedRunning", "Becoming.OneStep.Chain.solo_capacityAt", "Becoming.OneStep.Chain.solo_closedAt", "Becoming.OneStep.Chain.solo_runsDownOn", "Becoming.OneStep.exchange_closed"]}
+{"name": "Becoming.OneStep.runsDownClosed_givers_iff", "uses": ["Becoming.Flow.Realizes.runsDownClosed", "Becoming.Flow.RealizesGivers.givers", "Becoming.Flow.RealizesGivers.takers", "Becoming.OneStep.Chain.realizedRunning", "Becoming.OneStep.Chain.self_le_mul", "Becoming.OneStep.Chain.solo_closedAt", "Becoming.OneStep.Chain.solo_runsDownOn", "Becoming.OneStep.exchange_closed"]}
+{"name": "Becoming.OneStep.runsDownClosed_iff", "uses": ["Becoming.Flow.ClosedAt.roles", "Becoming.Flow.Realizes.runsDownClosed", "Becoming.Flow.RunsDownOn.roles", "Becoming.OneStep.Witness.closedAt", "Becoming.OneStep.Witness.once_chain", "Becoming.OneStep.Witness.realizedOnce", "Becoming.OneStep.Witness.runsDownOn", "Becoming.OneStep.exchange_closed", "Becoming.OneStep.fall_iff_given"]}
+{"name": "Becoming.OneStep.runsDownClosed_iff_stated", "uses": ["Becoming.OneStep.fall_iff_given", "Becoming.Passage.Balanced.given_pos", "Becoming.Passage.Balanced.taken_pos", "Becoming.Passage.balanced_total", "Becoming.exists_lt_of_total_lt", "Becoming.le_total_of_mem", "Becoming.pos_of_sign_le"]}
+{"name": "Becoming.OneStep.runsDown_active_iff", "uses": ["Becoming.OneStep.Chain.realizedRunning", "Becoming.OneStep.Chain.self_le_mul", "Becoming.OneStep.Chain.solo_active", "Becoming.OneStep.Chain.solo_runsDownOn", "Becoming.OneStep.RealizedGivers.weaken", "Becoming.OneStep.exchange_open", "Becoming.OneStep.runsDown_givers_iff"]}
+{"name": "Becoming.OneStep.runsDown_capacity_iff", "uses": ["Becoming.Flow.Realizes.runsDown", "Becoming.Flow.RealizesGivers.capacity", "Becoming.Flow.RealizesGivers.givers", "Becoming.Flow.RealizesGivers.takers", "Becoming.OneStep.Chain.realizedRunning", "Becoming.OneStep.Chain.solo_capacityAt", "Becoming.OneStep.Chain.solo_runsDownOn", "Becoming.OneStep.exchange_open"]}
+{"name": "Becoming.OneStep.runsDown_givers_iff", "uses": ["Becoming.Flow.Realizes.runsDown", "Becoming.Flow.RealizesGivers.givers", "Becoming.Flow.RealizesGivers.takers", "Becoming.OneStep.Chain.realizedRunning", "Becoming.OneStep.Chain.self_le_mul", "Becoming.OneStep.Chain.solo_runsDownOn", "Becoming.OneStep.exchange_open"]}
+{"name": "Becoming.OneStep.runsDown_iff", "uses": ["Becoming.Flow.Realizes.runsDown", "Becoming.Flow.RunsDownOn.roles", "Becoming.OneStep.Witness.once_chain", "Becoming.OneStep.Witness.realizedOnce", "Becoming.OneStep.Witness.runsDownOn", "Becoming.OneStep.exchange_open", "Becoming.OneStep.fall_iff_given"]}
+{"name": "Becoming.OneStep.runsDown_passages_iff", "uses": ["Becoming.OneStep.runsDown_iff", "Becoming.sign_le"]}
+{"name": "Becoming.OneStep.standing_bound_needed", "uses": ["Becoming.OneStep.standing_iff"]}
+{"name": "Becoming.OneStep.standing_iff", "uses": ["Becoming.Flow.BalancesOn.ceasesToStand_iff", "Becoming.Flow.BalancesOn.comesToStand_iff", "Becoming.Flow.BalancesOn.taken_le", "Becoming.OneStep.balance_iff", "Becoming.eq_zero_of_not_pos", "Becoming.excess_balance", "Becoming.excess_pos", "Becoming.map_eq_singleton", "Becoming.mem_cons_cases", "Becoming.sign_le"]}
+{"name": "Becoming.OneStep.stated_not_realized", "uses": ["Becoming.Flow.Realizes.every", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.OneStep.stepRun_balance_iff", "uses": ["Becoming.OneStep.givers_sign", "Becoming.OneStep.stepRun_iff_givers", "Becoming.OneStep.step_balance_iff"]}
+{"name": "Becoming.OneStep.stepRun_iff_givers", "uses": []}
+{"name": "Becoming.OneStep.stepRun_runsDownClosed_iff", "uses": ["Becoming.OneStep.RunsDown.sign_given_le", "Becoming.OneStep.givers_sign", "Becoming.OneStep.stepRun_iff_givers", "Becoming.OneStep.step_runsDownClosed_iff"]}
+{"name": "Becoming.OneStep.stepRun_runsDown_iff", "uses": ["Becoming.OneStep.RunsDown.sign_given_le", "Becoming.OneStep.givers_sign", "Becoming.OneStep.stepRun_iff_givers", "Becoming.OneStep.step_runsDown_iff"]}
+{"name": "Becoming.OneStep.step_balance_iff", "uses": ["Becoming.Flow.BalancesOn.roles", "Becoming.Flow.Realizes.balance", "Becoming.Flow.RealizesGivers.givers", "Becoming.OneStep.Chain.balancesOn", "Becoming.OneStep.Chain.openGiven_spec", "Becoming.OneStep.Chain.openTaken_spec", "Becoming.OneStep.Chain.realizedSteps", "Becoming.OneStep.Chain.unlinked_links", "Becoming.OneStep.exchange_open"]}
+{"name": "Becoming.OneStep.step_closed_iff", "uses": ["Becoming.Flow.ClosedAt.roles", "Becoming.Flow.Realizes.closed", "Becoming.Flow.RealizesGivers.givers", "Becoming.OneStep.Chain.closedAt", "Becoming.OneStep.Chain.openGiven_spec", "Becoming.OneStep.Chain.openTaken_spec", "Becoming.OneStep.Chain.realizedSteps", "Becoming.OneStep.Chain.unlinked_links", "Becoming.OneStep.exchange_closed"]}
+{"name": "Becoming.OneStep.step_every_iff", "uses": ["Becoming.Flow.Realizes.every", "Becoming.Flow.RealizesGivers.givers", "Becoming.OneStep.Chain.openGiven_spec", "Becoming.OneStep.Chain.openTaken_spec", "Becoming.OneStep.Chain.realizedSteps", "Becoming.OneStep.Chain.unlinked_links", "Becoming.OneStep.exchange_open"]}
+{"name": "Becoming.OneStep.step_runsDownClosed_iff", "uses": ["Becoming.Flow.ClosedAt.roles", "Becoming.Flow.Realizes.runsDownClosed", "Becoming.Flow.RealizesGivers.givers", "Becoming.Flow.RealizesGivers.takers", "Becoming.Flow.RunsDownOn.roles", "Becoming.OneStep.Chain.closedAt", "Becoming.OneStep.Chain.openGiven_spec", "Becoming.OneStep.Chain.rankNext_onward", "Becoming.OneStep.Chain.rankPrev_backward", "Becoming.OneStep.Chain.rank_links", "Becoming.OneStep.Chain.realizedSteps", "Becoming.OneStep.Chain.runningTaken_spec", "Becoming.OneStep.Chain.runsDownOn", "Becoming.OneStep.Chain.stands_before", "Becoming.OneStep.StepRealized.continues", "Becoming.OneStep.exchange_closed"]}
+{"name": "Becoming.OneStep.step_runsDown_iff", "uses": ["Becoming.Flow.Realizes.runsDown", "Becoming.Flow.RealizesGivers.givers", "Becoming.Flow.RealizesGivers.takers", "Becoming.Flow.RunsDownOn.roles", "Becoming.OneStep.Chain.openGiven_spec", "Becoming.OneStep.Chain.rankNext_onward", "Becoming.OneStep.Chain.rankPrev_backward", "Becoming.OneStep.Chain.rank_links", "Becoming.OneStep.Chain.realizedSteps", "Becoming.OneStep.Chain.runningTaken_spec", "Becoming.OneStep.Chain.runsDownOn", "Becoming.OneStep.Chain.stands_before", "Becoming.OneStep.StepRealized.continues", "Becoming.OneStep.exchange_open"]}
+{"name": "Becoming.OneStep.steps_not_run", "uses": ["Becoming.OneStep.run_runsDown_givers_iff", "Becoming.OneStep.step_runsDown_iff", "Becoming.OneStep.swapped_continues", "Becoming.OneStep.swapped_runsDown"]}
+{"name": "Becoming.OneStep.swapped_continues", "uses": []}
+{"name": "Becoming.OneStep.swapped_runsDown", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.OneStep.vanishing_not_continues", "uses": []}
+{"name": "Becoming.OneStep.vanishing_steps", "uses": ["Becoming.OneStep.step_balance_iff", "Becoming.OneStep.step_runsDown_iff", "Becoming.OneStep.vanishing_not_continues", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Passage.Balanced.given_pos", "uses": []}
+{"name": "Becoming.Passage.Balanced.taken_pos", "uses": []}
+{"name": "Becoming.Passage.balanced_total", "uses": ["Becoming.total_add", "Becoming.total_congr_on"]}
+{"name": "Becoming.Passage.ext_of", "uses": []}
+{"name": "Becoming.PassageWorlds.RunRealized.continues", "uses": ["Becoming.OneStep.Chained.continues", "Becoming.OneStep.RunRealized.chained"]}
+{"name": "Becoming.PassageWorlds.passages_continue", "uses": ["Becoming.OneStep.Chained.continues", "Becoming.map_comp_eq"]}
+{"name": "Becoming.PassageWorlds.runsDownClosed_realized_iff", "uses": ["Becoming.OneStep.runsDownClosed_iff", "Becoming.OneStep.runsDownClosed_iff_stated"]}
+{"name": "Becoming.PassageWorlds.stated_of_runsDownClosed", "uses": ["Becoming.Flow.Realizes.runsDownClosed", "Becoming.OneStep.runsDownClosed_iff_stated"]}
+{"name": "Becoming.pos_of_sign_le", "uses": ["Becoming.sign_pos"]}
+{"name": "Becoming.sign_total_le", "uses": ["Becoming.Flow.sign_add_le"]}
+{"name": "Becoming.steps_succ_map", "uses": []}
+{"name": "Becoming.total_steps_shift", "uses": []}

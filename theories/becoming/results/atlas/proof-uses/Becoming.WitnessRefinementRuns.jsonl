@@ -1,0 +1,25 @@
+{"name": "Becoming.WitnessRefinementRuns.all_append", "uses": []}
+{"name": "Becoming.WitnessRefinementRuns.and_absorbed", "uses": []}
+{"name": "Becoming.WitnessRefinementRuns.and_self'", "uses": []}
+{"name": "Becoming.WitnessRefinementRuns.any_congr", "uses": []}
+{"name": "Becoming.WitnessRefinementRuns.any_congr_on", "uses": []}
+{"name": "Becoming.WitnessRefinementRuns.complete_run_agrees", "uses": ["Becoming.Run.step", "Becoming.WitnessRefinementRuns.complete_step_agrees", "Becoming.WitnessRefinementRuns.run_narrows"]}
+{"name": "Becoming.WitnessRefinementRuns.complete_step_agrees", "uses": ["Becoming.ListTests.false_iff_not", "Becoming.WitnessRefinement.cross_separation_excludes", "Becoming.WitnessRefinementRuns.mem_step"]}
+{"name": "Becoming.WitnessRefinementRuns.copied_witnesses_same", "uses": ["Becoming.FaultEnvelopes.copied_roster_same", "Becoming.ListTests.all_true_iff", "Becoming.ListTests.mem_flatMap_iff", "Becoming.WitnessRefinementRuns.all_append", "Becoming.WitnessRefinementRuns.and_absorbed", "Becoming.WitnessRefinementRuns.any_congr_on", "Becoming.WitnessRefinementRuns.filter_congr", "Becoming.WitnessRefinementRuns.witnessed_copy"]}
+{"name": "Becoming.WitnessRefinementRuns.covering_step_keeps_both", "uses": ["Becoming.FaultEnvelopes.covering_faults_reject", "Becoming.ListTests.any_true_iff", "Becoming.ListTests.mem_flatMap_iff", "Becoming.WitnessRefinement.covering_faults_same_transcript", "Becoming.WitnessRefinementRuns.mem_step"]}
+{"name": "Becoming.WitnessRefinementRuns.diagnosable_iff", "uses": ["Becoming.ListTests.false_iff_not", "Becoming.ListTests.mem_filter_iff", "Becoming.WitnessRefinement.complete_diagnosability_iff_cross_separation", "Becoming.WitnessRefinementRuns.mem_step"]}
+{"name": "Becoming.WitnessRefinementRuns.doubled_roster_same", "uses": ["Becoming.WitnessRefinementRuns.copied_witnesses_same"]}
+{"name": "Becoming.WitnessRefinementRuns.filter_congr", "uses": []}
+{"name": "Becoming.WitnessRefinementRuns.inquiry_step_testing", "uses": ["Becoming.PooledEnvelopes.probe_some"]}
+{"name": "Becoming.WitnessRefinementRuns.mem_step", "uses": ["Becoming.ListTests.mem_filter_iff"]}
+{"name": "Becoming.WitnessRefinementRuns.responsive_step_excludes", "uses": ["Becoming.ListTests.false_iff_not", "Becoming.WitnessRefinement.responsive_survivors_exclude", "Becoming.WitnessRefinementRuns.mem_step"]}
+{"name": "Becoming.WitnessRefinementRuns.run_narrows", "uses": ["Becoming.Run.step", "Becoming.WitnessRefinementRuns.mem_step"]}
+{"name": "Becoming.WitnessRefinementRuns.silent_step", "uses": ["Becoming.ListTests.not_isEmpty_true_iff", "Becoming.WitnessRefinement.silence_keeps_models", "Becoming.WitnessRefinementRuns.mem_step"]}
+{"name": "Becoming.WitnessRefinementRuns.step_admits", "uses": ["Becoming.ListTests.not_mem_nil", "Becoming.WitnessRefinement.compatible_iff", "Becoming.WitnessRefinementRuns.mem_step"]}
+{"name": "Becoming.WitnessRefinementRuns.step_certificate_candidate", "uses": ["Becoming.FaultEnvelopes.empty_envelope_rejects", "Becoming.WitnessRefinementRuns.step_pool_empty_iff"]}
+{"name": "Becoming.WitnessRefinementRuns.step_pool_empty_iff", "uses": ["Becoming.ListTests.mem_flatMap_iff", "Becoming.ListTests.not_mem_nil", "Becoming.WitnessRefinementRuns.step_admits"]}
+{"name": "Becoming.WitnessRefinementRuns.test_emptied", "uses": ["Becoming.ListTests.not_mem_nil", "Becoming.PooledEnvelopes.empty_family_rejects", "Becoming.PooledEnvelopes.retained_truth"]}
+{"name": "Becoming.WitnessRefinementRuns.test_step_completes", "uses": ["Becoming.PooledEnvelopes.pooled_completes"]}
+{"name": "Becoming.WitnessRefinementRuns.total_fault_blocks", "uses": ["Becoming.FaultEnvelopes.total_fault_rejects", "Becoming.ListTests.mem_flatMap_iff", "Becoming.Run.step", "Becoming.WitnessRefinementRuns.total_fault_kept"]}
+{"name": "Becoming.WitnessRefinementRuns.total_fault_kept", "uses": ["Becoming.WitnessRefinement.compatible_iff", "Becoming.WitnessRefinementRuns.mem_step"]}
+{"name": "Becoming.WitnessRefinementRuns.witnessed_copy", "uses": ["Becoming.ListTests.contains_false_iff", "Becoming.ListTests.contains_true_iff"]}

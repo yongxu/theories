@@ -1,0 +1,15 @@
+{"name": "Becoming.SeedReach.conditional_not_separated", "uses": []}
+{"name": "Becoming.SeedReach.conditional_reach", "uses": ["Becoming.Invariant.reach"]}
+{"name": "Becoming.SeedReachProcesses.FromSeed.step", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.SeedReachProcesses.covers_iff_invariant", "uses": ["Becoming.SeedReachProcesses.fromSeed_iff_invariant"]}
+{"name": "Becoming.SeedReachProcesses.fromSeed_iff_closure", "uses": ["Becoming.Closure.base", "Becoming.Closure.induction", "Becoming.Closure.step", "Becoming.Invariant.reach", "Becoming.SeedReachProcesses.FromSeed.step", "Becoming.SeedReachProcesses.fromSeed_invariant"]}
+{"name": "Becoming.SeedReachProcesses.fromSeed_iff_invariant", "uses": ["Becoming.Invariant.reach", "Becoming.SeedReachProcesses.fromSeed_invariant"]}
+{"name": "Becoming.SeedReachProcesses.fromSeed_iff_not_separated_of_decidable", "uses": ["Becoming.SeedReachProcesses.not_not_fromSeed_of_not_separated", "Becoming.SeedReachProcesses.separated_iff_not_fromSeed"]}
+{"name": "Becoming.SeedReachProcesses.fromSeed_iff_seed_of_no_moves", "uses": ["Becoming.Invariant.reach", "Becoming.SeedReachProcesses.fromSeed_invariant"]}
+{"name": "Becoming.SeedReachProcesses.fromSeed_invariant", "uses": ["Becoming.Reach.refl", "Becoming.SeedReachProcesses.FromSeed.step"]}
+{"name": "Becoming.SeedReachProcesses.fromSeed_of_not_separated_iff_dne", "uses": ["Becoming.SeedReach.conditional_not_separated", "Becoming.SeedReach.conditional_reach", "Becoming.SeedReachProcesses.not_not_fromSeed_of_not_separated"]}
+{"name": "Becoming.SeedReachProcesses.not_not_fromSeed_of_not_separated", "uses": ["Becoming.SeedReachProcesses.separated_iff_not_fromSeed"]}
+{"name": "Becoming.SeedReachProcesses.not_separated_iff", "uses": ["Becoming.SeedReachProcesses.not_not_fromSeed_of_not_separated", "Becoming.SeedReachProcesses.separated_iff_not_fromSeed"]}
+{"name": "Becoming.SeedReachProcesses.separated_iff_not_fromSeed", "uses": ["Becoming.SeedReachProcesses.fromSeed_iff_invariant", "Becoming.SeedReachProcesses.unreached_has_invariant"]}
+{"name": "Becoming.SeedReachProcesses.substitute_seeds", "uses": ["Becoming.Reach.trans"]}
+{"name": "Becoming.SeedReachProcesses.unreached_has_invariant", "uses": ["Becoming.SeedReachProcesses.fromSeed_invariant"]}

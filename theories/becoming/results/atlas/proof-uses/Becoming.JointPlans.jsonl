@@ -1,0 +1,5 @@
+{"name": "Becoming.JointPlan.brecOn.eq", "uses": []}
+{"name": "Becoming.JointPlan.nodup_of_realizes", "uses": ["Becoming.JointPlan.within_of_realizes", "Becoming.nodup_append_of_apart"]}
+{"name": "Becoming.JointPlan.supports_of_realizes", "uses": ["Becoming.JointPlan.nodup_of_realizes", "Becoming.JointPlan.within_of_realizes"]}
+{"name": "Becoming.JointPlan.within_of_realizes", "uses": ["Becoming.ListTests.mem_append_iff"]}
+{"name": "Becoming.nodup_append_of_apart", "uses": ["Becoming.ListTests.mem_append_iff"]}

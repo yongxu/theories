@@ -1,0 +1,8 @@
+{"name": "Becoming.Learning.Cue.apart_with_content_alike", "uses": []}
+{"name": "Becoming.Learning.Cue.seen_twin", "uses": ["Becoming.Learning.twin_selected"]}
+{"name": "Becoming.Learning.Cue.unseen_fixed", "uses": ["Becoming.Learning.lumped_determines"]}
+{"name": "Becoming.Learning.coupling_apart_of_state_apart", "uses": []}
+{"name": "Becoming.Learning.determines_iff_not_not", "uses": []}
+{"name": "Becoming.Learning.free_lumped", "uses": []}
+{"name": "Becoming.Learning.state_apart_of_acts_apart", "uses": []}
+{"name": "Becoming.Learning.twin_selected", "uses": ["Becoming.Learning.Training.unselected_beyond_data", "Becoming.Learning.free_lumped"]}

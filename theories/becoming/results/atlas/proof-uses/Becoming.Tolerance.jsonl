@@ -1,0 +1,67 @@
+{"name": "Becoming.Tolerance.AllBut.brecOn", "uses": []}
+{"name": "Becoming.Tolerance.AllBut.found", "uses": ["Becoming.Tolerance.AllBut.brecOn"]}
+{"name": "Becoming.Tolerance.AllBut.mono_count", "uses": ["Becoming.Tolerance.AllBut.brecOn"]}
+{"name": "Becoming.Tolerance.AllBut.mono_set", "uses": ["Becoming.Tolerance.AllBut.brecOn"]}
+{"name": "Becoming.Tolerance.AllBut.of_length", "uses": []}
+{"name": "Becoming.Tolerance.AllBut.of_length_le", "uses": ["Becoming.Tolerance.AllBut.mono_count", "Becoming.Tolerance.AllBut.of_length"]}
+{"name": "Becoming.Tolerance.AllBut.withheld_iff", "uses": ["Becoming.Tolerance.AllBut.found", "Becoming.Tolerance.AllBut.of_length_le"]}
+{"name": "Becoming.Tolerance.AllBut.zero_all", "uses": []}
+{"name": "Becoming.Tolerance.AllBut.zero_iff", "uses": ["Becoming.Tolerance.AllBut.zero_all"]}
+{"name": "Becoming.Tolerance.Clear.append", "uses": ["Becoming.Tolerance.Clear.brecOn"]}
+{"name": "Becoming.Tolerance.Clear.brecOn", "uses": []}
+{"name": "Becoming.Tolerance.Clear.chain", "uses": ["Becoming.Tolerance.Clear.brecOn"]}
+{"name": "Becoming.Tolerance.Clear.iterate", "uses": ["Becoming.Tolerance.Clear.append"]}
+{"name": "Becoming.Tolerance.Clear.last", "uses": ["Becoming.Tolerance.Clear.last_of_eq"]}
+{"name": "Becoming.Tolerance.Clear.last_of_eq", "uses": []}
+{"name": "Becoming.Tolerance.KeepsInclusion.course", "uses": ["Becoming.Tolerance.KeepsInclusionInto.course"]}
+{"name": "Becoming.Tolerance.KeepsInclusion.course_iff", "uses": ["Becoming.Tolerance.KeepsInclusion.course"]}
+{"name": "Becoming.Tolerance.KeepsInclusionInto.course", "uses": []}
+{"name": "Becoming.Tolerance.Ring.isFirst_decided", "uses": []}
+{"name": "Becoming.Tolerance.Ring.no_clear_three", "uses": ["Becoming.Tolerance.Clear.last"]}
+{"name": "Becoming.Tolerance.Ring.restores_from_three", "uses": ["Becoming.Tolerance.Ring.isFirst_decided", "Becoming.Tolerance.Ring.no_clear_three", "Becoming.Tolerance.restores_from"]}
+{"name": "Becoming.Tolerance.Triad.absorbed", "uses": ["Becoming.Tolerance.thin_absorbed"]}
+{"name": "Becoming.Tolerance.Triad.spreads", "uses": ["Becoming.Tolerance.Triad.tol0_spares_none", "Becoming.Tolerance.Triad.total_at_two", "Becoming.Tolerance.total_stays", "Becoming.le_dest"]}
+{"name": "Becoming.Tolerance.Triad.step_first", "uses": ["Becoming.Tolerance.AllBut.zero_all"]}
+{"name": "Becoming.Tolerance.Triad.step_second", "uses": ["Becoming.Tolerance.AllBut.zero_all"]}
+{"name": "Becoming.Tolerance.Triad.step_third", "uses": ["Becoming.Tolerance.AllBut.zero_all"]}
+{"name": "Becoming.Tolerance.Triad.tol0_spares_none", "uses": []}
+{"name": "Becoming.Tolerance.Triad.tol1_spares_none", "uses": []}
+{"name": "Becoming.Tolerance.Triad.total_at_two", "uses": ["Becoming.Tolerance.Triad.step_first", "Becoming.Tolerance.Triad.step_second", "Becoming.Tolerance.Triad.step_third"]}
+{"name": "Becoming.Tolerance.Triad.total_kept", "uses": ["Becoming.Tolerance.AllBut.withheld_iff", "Becoming.Tolerance.Triad.tol1_spares_none", "Becoming.Tolerance.tolerating_keeps", "Becoming.Tolerance.withheld_kept"]}
+{"name": "Becoming.Tolerance.allBut_iff_count", "uses": []}
+{"name": "Becoming.Tolerance.allBut_sub_iff", "uses": ["Becoming.Naturals.add_le_of_le_sub", "Becoming.Naturals.le_sub_of_add_le", "Becoming.Tolerance.allBut_iff_count", "Becoming.Tolerance.countTrue_add_not", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Tolerance.answers_keeps", "uses": []}
+{"name": "Becoming.Tolerance.answers_restores_iff", "uses": ["Becoming.Tolerance.answers_keeps", "Becoming.Tolerance.worst_start", "Becoming.Withholding.answers_closed"]}
+{"name": "Becoming.Tolerance.certified_available_iff", "uses": ["Becoming.FaultEnvelopes.availability_iff_separated"]}
+{"name": "Becoming.Tolerance.certified_blocked", "uses": ["Becoming.FaultEnvelopes.correlated_three_blocks"]}
+{"name": "Becoming.Tolerance.certified_kept", "uses": ["Becoming.FaultEnvelopes.certificate_available"]}
+{"name": "Becoming.Tolerance.clear_loop_withholds", "uses": ["Becoming.Tolerance.Clear.iterate", "Becoming.Tolerance.clear_withholds", "Becoming.Tolerance.givesFirst_keeps", "Becoming.Tolerance.rises_le"]}
+{"name": "Becoming.Tolerance.clear_withholds", "uses": ["Becoming.Tolerance.Clear.brecOn"]}
+{"name": "Becoming.Tolerance.countTrue_add_not", "uses": []}
+{"name": "Becoming.Tolerance.giftWeb_tolerating", "uses": ["Becoming.Tolerance.web_activity_tolerating"]}
+{"name": "Becoming.Tolerance.givesFirst_keeps", "uses": []}
+{"name": "Becoming.Tolerance.givesFirst_restores_of_answers", "uses": ["Becoming.Tolerance.Clear.chain", "Becoming.Tolerance.answers_restores_iff", "Becoming.Tolerance.restores_iff"]}
+{"name": "Becoming.Tolerance.gives_needs_sparing", "uses": ["Becoming.Tolerance.AllBut.found"]}
+{"name": "Becoming.Tolerance.gives_of_no_clear", "uses": []}
+{"name": "Becoming.Tolerance.iter_eq_orbit", "uses": []}
+{"name": "Becoming.Tolerance.kept_set", "uses": ["Becoming.Iteration.postfixed_in_iter", "Becoming.Tolerance.iter_eq_orbit", "Becoming.Tolerance.monotone_iff_keepsInclusion", "Becoming.Tolerance.tolerating_keeps"]}
+{"name": "Becoming.Tolerance.monotone_iff_keepsInclusion", "uses": []}
+{"name": "Becoming.Tolerance.restored_stays", "uses": ["Becoming.Tolerance.rises_le", "Becoming.Tolerance.worst_start", "Becoming.le_dest"]}
+{"name": "Becoming.Tolerance.restores_from", "uses": ["Becoming.Tolerance.givesFirst_keeps", "Becoming.Tolerance.restored_stays", "Becoming.Tolerance.restores_iff"]}
+{"name": "Becoming.Tolerance.restores_iff", "uses": ["Becoming.Tolerance.clear_withholds", "Becoming.Tolerance.givesFirst_keeps", "Becoming.Tolerance.gives_of_no_clear", "Becoming.Tolerance.worst_start"]}
+{"name": "Becoming.Tolerance.rises_from_withheld", "uses": []}
+{"name": "Becoming.Tolerance.rises_le", "uses": ["Becoming.Tolerance.rises_from_withheld"]}
+{"name": "Becoming.Tolerance.sparing_gives", "uses": ["Becoming.Tolerance.AllBut.of_length_le"]}
+{"name": "Becoming.Tolerance.thin_absorbed", "uses": ["Becoming.Tolerance.AllBut.mono_set"]}
+{"name": "Becoming.Tolerance.tolerating_into", "uses": ["Becoming.Tolerance.AllBut.mono_count", "Becoming.Tolerance.AllBut.mono_set"]}
+{"name": "Becoming.Tolerance.tolerating_keeps", "uses": ["Becoming.Tolerance.tolerating_into"]}
+{"name": "Becoming.Tolerance.tolerating_mono", "uses": ["Becoming.Tolerance.KeepsInclusionInto.course", "Becoming.Tolerance.tolerating_into"]}
+{"name": "Becoming.Tolerance.tolerating_zero", "uses": ["Becoming.Tolerance.AllBut.zero_all", "Becoming.Tolerance.AllBut.zero_iff"]}
+{"name": "Becoming.Tolerance.total_stays", "uses": ["Becoming.Tolerance.AllBut.found"]}
+{"name": "Becoming.Tolerance.waitsAll_keeps", "uses": []}
+{"name": "Becoming.Tolerance.waitsAll_never_restores", "uses": ["Becoming.Tolerance.waitsAll_keeps", "Becoming.Tolerance.withheld_kept"]}
+{"name": "Becoming.Tolerance.web_activity_tolerating", "uses": ["Becoming.Tolerance.KeepsInclusion.course_iff", "Becoming.Tolerance.tolerating_keeps", "Becoming.Tolerance.web_tolerating"]}
+{"name": "Becoming.Tolerance.web_answers", "uses": ["Becoming.Tolerance.AllBut.mono_set", "Becoming.Tolerance.tolerating_zero", "Becoming.Tolerance.web_tolerating"]}
+{"name": "Becoming.Tolerance.web_tolerating", "uses": ["Becoming.Tolerance.AllBut.mono_set", "Becoming.Tolerance.allBut_sub_iff"]}
+{"name": "Becoming.Tolerance.withheld_kept", "uses": []}
+{"name": "Becoming.Tolerance.worst_start", "uses": ["Becoming.Tolerance.KeepsInclusion.course"]}

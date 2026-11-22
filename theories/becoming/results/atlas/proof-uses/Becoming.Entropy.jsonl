@@ -1,0 +1,186 @@
+{"name": "Becoming.Entropy.Settling.balances", "uses": []}
+{"name": "Becoming.Entropy.Settling.changed", "uses": ["Becoming.Passing.every", "Becoming.Passing.one_ne_zero", "Becoming.Web.level_of_config"]}
+{"name": "Becoming.Entropy.Settling.closed", "uses": ["Becoming.Passing.every"]}
+{"name": "Becoming.Entropy.Settling.conserving", "uses": ["Becoming.Passing.holds_side", "Becoming.Passing.total_at"]}
+{"name": "Becoming.Entropy.Settling.merges", "uses": ["Becoming.Entropy.Settling.changed"]}
+{"name": "Becoming.Entropy.Settling.settles", "uses": ["Becoming.Entropy.Settling.balances", "Becoming.Entropy.Settling.changed", "Becoming.Entropy.Settling.closed", "Becoming.Entropy.Settling.conserving", "Becoming.Flow.Conserving.gainless", "Becoming.Passing.distinct", "Becoming.Passing.every", "Becoming.Passing.one_ne_zero", "Becoming.Web.level_of_config", "Becoming.World.rests_of_never_revisits"]}
+{"name": "Becoming.EntropyLists.distinct_append", "uses": ["Becoming.EntropyLists.mem_append_cases"]}
+{"name": "Becoming.EntropyLists.mem_append_cases", "uses": []}
+{"name": "Becoming.EntropyLists.mem_joinMap", "uses": ["Becoming.mem_append_of_left", "Becoming.mem_append_of_right"]}
+{"name": "Becoming.Flow.Balances.arrow_of_carries", "uses": ["Becoming.Flow.Balances.exchanges_of_change", "Becoming.Flow.history_mono", "Becoming.Web.changes_member", "Becoming.le_dest", "Becoming.steps_last"]}
+{"name": "Becoming.Flow.Balances.arrow_stops", "uses": ["Becoming.Flow.Balances.held", "Becoming.Marks.change_not_recurring", "Becoming.Web.Arrow.marks"]}
+{"name": "Becoming.Flow.Balances.changes_within", "uses": ["Becoming.Flow.Balances.nonrising", "Becoming.Web.changes_within", "Becoming.Web.config_within", "Becoming.nonrising_between"]}
+{"name": "Becoming.Flow.Balances.changes_within_conserving", "uses": ["Becoming.Flow.Balances.stock_dissipated", "Becoming.Flow.ConservingOn.gainlessOn", "Becoming.Flow.dissipated_zero", "Becoming.Web.changes_within", "Becoming.Web.config_exact", "Becoming.le_dest"]}
+{"name": "Becoming.Flow.Balances.dissipated_le", "uses": ["Becoming.Flow.Balances.stock_dissipated"]}
+{"name": "Becoming.Flow.Balances.exchange_stops_of_carries", "uses": ["Becoming.Flow.Balances.exchanges_within_of_carries", "Becoming.mark_pos", "Becoming.recurring_accumulates"]}
+{"name": "Becoming.Flow.Balances.exchanges_of_change", "uses": ["Becoming.Flow.Balances.fall_taken", "Becoming.Flow.Balances.rise_given", "Becoming.sign_pos", "Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.Balances.exchanges_within_of_carries", "uses": ["Becoming.Flow.Balances.changes_within", "Becoming.Flow.Balances.never_revisits_of_carries", "Becoming.Flow.CarriesHistory.changes", "Becoming.le_dest", "Becoming.mark_mono", "Becoming.steps_mem", "Becoming.total_le"]}
+{"name": "Becoming.Flow.Balances.falls_by_record", "uses": ["Becoming.Flow.Balances.lowered_by", "Becoming.Flow.gainlessOn_withRecord_iff"]}
+{"name": "Becoming.Flow.Balances.held", "uses": ["Becoming.Flow.Balances.nonrising", "Becoming.Web.config_within", "Becoming.nonrising_between"]}
+{"name": "Becoming.Flow.Balances.history_within", "uses": ["Becoming.Flow.Balances.dissipated_le", "Becoming.Flow.DissipatesOn.exchanges_le_takers", "Becoming.Flow.DissipatesOn.gainlessOn", "Becoming.Flow.DissipatesOn.takers_le_lost", "Becoming.steps_mem", "Becoming.total_le"]}
+{"name": "Becoming.Flow.Balances.loss_ceases", "uses": ["Becoming.Flow.Balances.stock_lost", "Becoming.falls_not_recurring"]}
+{"name": "Becoming.Flow.Balances.lowered_by", "uses": ["Becoming.Flow.Balances.over", "Becoming.le_of_add_le_add_right", "Becoming.total_add", "Becoming.total_le", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.Balances.merges_of_arrow", "uses": ["Becoming.Flow.Balances.merges_of_never_revisits", "Becoming.Web.never_revisits_of_arrow"]}
+{"name": "Becoming.Flow.Balances.merges_of_dissipates", "uses": ["Becoming.Flow.Balances.merges_of_never_revisits", "Becoming.Flow.Balances.never_revisits", "Becoming.Flow.DissipatesOn.gainlessOn"]}
+{"name": "Becoming.Flow.Balances.merges_of_never_revisits", "uses": ["Becoming.Flow.Balances.revisits_of_apart"]}
+{"name": "Becoming.Flow.Balances.never_revisits", "uses": ["Becoming.Flow.Balances.nonrising", "Becoming.Flow.DissipatesOn.gainlessOn", "Becoming.Flow.fall_lowers_on", "Becoming.Flow.rise_lowers_on", "Becoming.Web.changes_member", "Becoming.Web.config_total", "Becoming.nonrising_between"]}
+{"name": "Becoming.Flow.Balances.never_revisits_of_carries", "uses": ["Becoming.Flow.Balances.exchanges_of_change", "Becoming.Flow.history_mono", "Becoming.Naturals.le_of_add_le_add_left", "Becoming.Web.changes_member", "Becoming.le_dest", "Becoming.steps_last"]}
+{"name": "Becoming.Flow.Balances.no_arrow", "uses": ["Becoming.Flow.Balances.rests_of_arrow"]}
+{"name": "Becoming.Flow.Balances.nonrising", "uses": ["Becoming.Flow.Balances.lowered_by", "Becoming.total_zero"]}
+{"name": "Becoming.Flow.Balances.not_conserving_of_arrow", "uses": ["Becoming.Branching.Merges.not_lossless", "Becoming.Flow.Balances.merges_of_arrow", "Becoming.Web.Merges.law"]}
+{"name": "Becoming.Flow.Balances.not_conserving_of_dissipates", "uses": ["Becoming.Branching.Merges.not_lossless", "Becoming.Flow.Balances.merges_of_dissipates", "Becoming.Web.Merges.law"]}
+{"name": "Becoming.Flow.Balances.orbit_held", "uses": ["Becoming.Flow.Balances.held", "Becoming.Web.Determined.orbit"]}
+{"name": "Becoming.Flow.Balances.present_forgets", "uses": ["Becoming.Flow.Balances.orbit_held", "Becoming.Law.present_forgets"]}
+{"name": "Becoming.Flow.Balances.recurs", "uses": ["Becoming.Flow.Balances.held", "Becoming.revisits_from"]}
+{"name": "Becoming.Flow.Balances.restores_levels_not_history", "uses": ["Becoming.Flow.Balances.reverse_restores", "Becoming.Flow.Reverses.exchanges_eq"]}
+{"name": "Becoming.Flow.Balances.rests_of_arrow", "uses": ["Becoming.Flow.Balances.rests_of_never_revisits", "Becoming.Web.never_revisits_of_arrow"]}
+{"name": "Becoming.Flow.Balances.rests_of_never_revisits", "uses": ["Becoming.Flow.Balances.nonrising", "Becoming.Web.config_within", "Becoming.Web.rests_of_never_revisits", "Becoming.nonrising_between"]}
+{"name": "Becoming.Flow.Balances.returns_of_conserving", "uses": ["Becoming.Flow.Balances.orbit_held", "Becoming.Law.Lossless.cancel", "Becoming.Law.orbit_add", "Becoming.Law.returns_iff", "Becoming.gap_of_lt", "Becoming.revisits_of_held"]}
+{"name": "Becoming.Flow.Balances.reverse_restores", "uses": ["Becoming.Flow.Reverses.given", "Becoming.Flow.Reverses.taken", "Becoming.add_right_cancel"]}
+{"name": "Becoming.Flow.Balances.revisits_of_apart", "uses": ["Becoming.Flow.Balances.unending_change_revisits", "Becoming.Web.changes_persist"]}
+{"name": "Becoming.Flow.Balances.stock_dissipated", "uses": ["Becoming.Flow.Balances.stock_lost", "Becoming.Flow.dissipated_succ"]}
+{"name": "Becoming.Flow.Balances.stock_gained", "uses": ["Becoming.Flow.Balances.over", "Becoming.add_right_cancel", "Becoming.excess_balance"]}
+{"name": "Becoming.Flow.Balances.stock_inflow", "uses": ["Becoming.Flow.Balances.stock_gained", "Becoming.Flow.gained_le_inflow"]}
+{"name": "Becoming.Flow.Balances.stock_lost", "uses": ["Becoming.Flow.Balances.stock_gained", "Becoming.Flow.GainlessOn.replenishment_le", "Becoming.Flow.excess_zero_of_le"]}
+{"name": "Becoming.Flow.Balances.stock_over_inflow", "uses": ["Becoming.Flow.Balances.stock_inflow", "Becoming.total_steps_add"]}
+{"name": "Becoming.Flow.Balances.unending_change_revisits", "uses": ["Becoming.Flow.Balances.rests_of_never_revisits"]}
+{"name": "Becoming.Flow.CarriesHistory.changes", "uses": ["Becoming.steps_last"]}
+{"name": "Becoming.Flow.Conserving.gainless", "uses": ["Becoming.Flow.ConservingOn.gainlessOn"]}
+{"name": "Becoming.Flow.ConservingOn.gainlessOn", "uses": []}
+{"name": "Becoming.Flow.ConservingOn.lost_zero", "uses": ["Becoming.Flow.excess_zero_of_le", "Becoming.total_le", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.DissipatesBy.uptake_le_lost", "uses": ["Becoming.Flow.DissipatesBy.replenishment_le", "Becoming.Flow.replenishment_lost_of_le", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Flow.DissipatesOn.dissipated_rises", "uses": ["Becoming.Flow.DissipatesOn.takers_le_lost", "Becoming.Flow.dissipated_succ"]}
+{"name": "Becoming.Flow.DissipatesOn.exchanges_le_takers", "uses": ["Becoming.Flow.DissipatesOn.takes_of_gives", "Becoming.eq_zero_of_not_pos", "Becoming.sign_le_of", "Becoming.sign_pos", "Becoming.total_le"]}
+{"name": "Becoming.Flow.DissipatesOn.gainlessOn", "uses": []}
+{"name": "Becoming.Flow.DissipatesOn.idle_of_conserving", "uses": ["Becoming.Flow.eq_zero_of_add_sign_le"]}
+{"name": "Becoming.Flow.DissipatesOn.of_recorded", "uses": ["Becoming.Flow.gainlessOn_withRecord_iff", "Becoming.sign_le_of"]}
+{"name": "Becoming.Flow.DissipatesOn.takers_le_lost", "uses": ["Becoming.Flow.DissipatesOn.gainlessOn", "Becoming.Flow.DissipatesOn.replenishment_takers", "Becoming.Flow.GainlessOn.replenishment_lost", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Flow.Dissipative.gainless", "uses": ["Becoming.Flow.DissipatesOn.gainlessOn"]}
+{"name": "Becoming.Flow.Dissipative.irreversible", "uses": ["Becoming.Flow.Reverses.closedAt", "Becoming.Flow.Reverses.idle_of_dissipates", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.Dissipative.of_recorded", "uses": ["Becoming.Flow.DissipatesOn.of_recorded", "Becoming.Flow.closedAt_withRecord", "Becoming.distinct_withRecord"]}
+{"name": "Becoming.Flow.GainlessOn.conserves_residue", "uses": ["Becoming.Flow.excess_zero_of_le", "Becoming.excess_balance"]}
+{"name": "Becoming.Flow.GainlessOn.replenishment_le", "uses": ["Becoming.Flow.gainlessOn_iff_inflow", "Becoming.Flow.replenishment_le_inflow"]}
+{"name": "Becoming.Flow.GainlessOn.replenishment_lost", "uses": ["Becoming.Flow.GainlessOn.replenishment_le", "Becoming.Flow.excess_zero_of_le", "Becoming.excess_balance"]}
+{"name": "Becoming.Flow.GainlessOn.residues_lost", "uses": ["Becoming.Flow.GainlessOn.conserves_residue", "Becoming.Flow.GainlessOn.replenishment_lost", "Becoming.add_right_cancel", "Becoming.total_add", "Becoming.total_le", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.RecordsOn.exchanges_le", "uses": ["Becoming.sign_le_of", "Becoming.total_le"]}
+{"name": "Becoming.Flow.Reverses.closedAt", "uses": ["Becoming.Flow.Reverses.mem_back"]}
+{"name": "Becoming.Flow.Reverses.exchanges_eq", "uses": ["Becoming.Flow.Reverses.give_total", "Becoming.Flow.Reverses.take_total", "Becoming.total_congr"]}
+{"name": "Becoming.Flow.Reverses.gainlessOn_iff", "uses": ["Becoming.Flow.Reverses.give_total", "Becoming.Flow.Reverses.mem", "Becoming.Flow.Reverses.mem_back", "Becoming.Flow.Reverses.take_total"]}
+{"name": "Becoming.Flow.Reverses.give_total", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.Flow.Reverses.given", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.Flow.Reverses.idle_of_dissipates", "uses": ["Becoming.Flow.DissipatesOn.gainlessOn", "Becoming.Flow.DissipatesOn.idle_of_conserving", "Becoming.Flow.Reverses.gainlessOn_iff"]}
+{"name": "Becoming.Flow.Reverses.mem", "uses": []}
+{"name": "Becoming.Flow.Reverses.mem_back", "uses": []}
+{"name": "Becoming.Flow.Reverses.take_total", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.Flow.Reverses.taken", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.Flow.balancesOn_withRecord", "uses": ["Becoming.Flow.recorded_succ", "Becoming.mem_cons_cases", "Becoming.mem_map_some", "Becoming.mem_of_map", "Becoming.total_zero"]}
+{"name": "Becoming.Flow.balances_withRecord", "uses": ["Becoming.Flow.recorded_succ", "Becoming.total_zero"]}
+{"name": "Becoming.Flow.closedAt_withRecord", "uses": ["Becoming.mem_cons_cases", "Becoming.mem_map_of", "Becoming.mem_of_map"]}
+{"name": "Becoming.Flow.conservingOn_withRecord_iff", "uses": ["Becoming.total_withRecord"]}
+{"name": "Becoming.Flow.dissipated_mono", "uses": ["Becoming.Flow.dissipated_succ"]}
+{"name": "Becoming.Flow.dissipated_succ", "uses": ["Becoming.steps_last"]}
+{"name": "Becoming.Flow.dissipated_zero", "uses": ["Becoming.Flow.ConservingOn.lost_zero", "Becoming.steps_mem", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.dissipatesOn_iff_conserved", "uses": ["Becoming.Flow.ConservingOn.gainlessOn", "Becoming.Flow.DissipatesOn.gainlessOn", "Becoming.Flow.DissipatesOn.of_recorded", "Becoming.Flow.GainlessOn.conserves_residue", "Becoming.Flow.conservingOn_withRecord_iff", "Becoming.excess_pos", "Becoming.sign_exchange_iff", "Becoming.sign_pos"]}
+{"name": "Becoming.Flow.dissipatesOn_iff_recorded", "uses": ["Becoming.Flow.DissipatesOn.of_recorded", "Becoming.Flow.dissipatesOn_iff_unitRecord", "Becoming.Flow.unitRecord_records"]}
+{"name": "Becoming.Flow.dissipatesOn_iff_unitRecord", "uses": ["Becoming.Flow.gainlessOn_withRecord_iff", "Becoming.sign_exchange_iff"]}
+{"name": "Becoming.Flow.dissipative_iff_unitRecord", "uses": ["Becoming.Flow.dissipatesOn_iff_unitRecord"]}
+{"name": "Becoming.Flow.eq_zero_of_add_sign_le", "uses": []}
+{"name": "Becoming.Flow.exchanges_pos", "uses": ["Becoming.sign_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.gained_le_inflow", "uses": ["Becoming.Flow.replenishment_le_inflow", "Becoming.excess_le_of_le_add"]}
+{"name": "Becoming.Flow.gainlessOn_iff_inflow", "uses": ["Becoming.Flow.excess_zero_of_le", "Becoming.excess_pos", "Becoming.le_total_of_mem", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.gainlessOn_withRecord_iff", "uses": ["Becoming.total_withRecord"]}
+{"name": "Becoming.Flow.history_mono", "uses": ["Becoming.le_dest", "Becoming.steps_mono"]}
+{"name": "Becoming.Flow.recorded_succ", "uses": ["Becoming.steps_last"]}
+{"name": "Becoming.Flow.replenishment_le_inflow", "uses": ["Becoming.le_add_excess", "Becoming.total_add", "Becoming.total_le", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.replenishment_lost_of_le", "uses": ["Becoming.Flow.excess_zero_of_le", "Becoming.excess_balance"]}
+{"name": "Becoming.Flow.unitRecord_records", "uses": ["Becoming.sign_pos"]}
+{"name": "Becoming.Flow.uptake_within_dissipated", "uses": ["Becoming.Flow.DissipatesBy.uptake_le_lost", "Becoming.steps_mem", "Becoming.total_le", "Becoming.total_mul"]}
+{"name": "Becoming.Gathering.balances", "uses": ["Becoming.Gathering.succ_not_zero", "Becoming.Gathering.sums_eq", "Becoming.Gathering.unit_off", "Becoming.Gathering.unit_self", "Becoming.mark_one", "Becoming.mark_zero"]}
+{"name": "Becoming.Gathering.conserving", "uses": ["Becoming.Gathering.total_unit", "Becoming.Gathering.unit_mem"]}
+{"name": "Becoming.Gathering.enclosed", "uses": ["Becoming.Gathering.unit_off"]}
+{"name": "Becoming.Gathering.gathers", "uses": ["Becoming.Gathering.balances", "Becoming.Gathering.conserving", "Becoming.Gathering.enclosed", "Becoming.Gathering.succ_not_zero", "Becoming.Gathering.unit_off", "Becoming.Gathering.unit_self", "Becoming.beyond_not_mem"]}
+{"name": "Becoming.Gathering.succ_not_zero", "uses": []}
+{"name": "Becoming.Gathering.sums_eq", "uses": []}
+{"name": "Becoming.Gathering.total_unit", "uses": ["Becoming.Gathering.unit_self", "Becoming.le_total_of_mem", "Becoming.mark_pos", "Becoming.total_le_at"]}
+{"name": "Becoming.Gathering.unit_mem", "uses": ["Becoming.Gathering.unit_self", "Becoming.Passing.one_ne_zero"]}
+{"name": "Becoming.Gathering.unit_off", "uses": ["Becoming.mark_zero"]}
+{"name": "Becoming.Gathering.unit_self", "uses": ["Becoming.mark_one"]}
+{"name": "Becoming.LevelWebs.Balances.level_over_stretch", "uses": ["Becoming.balance_over_stretch"]}
+{"name": "Becoming.LevelWebs.config_mem_iff", "uses": ["Becoming.Web.config_total", "Becoming.configurations_exact", "Becoming.length_map"]}
+{"name": "Becoming.LevelWebs.level_falls_not_recurring", "uses": ["Becoming.falls_not_recurring"]}
+{"name": "Becoming.LevelWebs.level_still_unrefuted", "uses": ["Becoming.amount_still_unrefuted"]}
+{"name": "Becoming.Passing.apart", "uses": ["Becoming.Passing.config_back", "Becoming.Passing.determined"]}
+{"name": "Becoming.Passing.balances", "uses": []}
+{"name": "Becoming.Passing.changes", "uses": ["Becoming.Passing.every", "Becoming.Passing.holds_self", "Becoming.Passing.holds_to_not", "Becoming.Passing.one_ne_zero", "Becoming.Web.level_of_config"]}
+{"name": "Becoming.Passing.closed", "uses": ["Becoming.Passing.every"]}
+{"name": "Becoming.Passing.config_back", "uses": ["Becoming.ListTests.not_not", "Becoming.map_eq_of"]}
+{"name": "Becoming.Passing.conserving", "uses": ["Becoming.Passing.holds_side", "Becoming.Passing.total_at"]}
+{"name": "Becoming.Passing.counted", "uses": ["Becoming.Passing.holds_pos", "Becoming.Passing.holds_self", "Becoming.Passing.mem_alive"]}
+{"name": "Becoming.Passing.determined", "uses": ["Becoming.Passing.swap_side"]}
+{"name": "Becoming.Passing.distinct", "uses": []}
+{"name": "Becoming.Passing.embodied", "uses": []}
+{"name": "Becoming.Passing.every", "uses": []}
+{"name": "Becoming.Passing.exchanges_one", "uses": ["Becoming.Passing.total_at_all"]}
+{"name": "Becoming.Passing.history_grows", "uses": ["Becoming.Passing.exchanges_one", "Becoming.steps_length", "Becoming.total_congr", "Becoming.total_ones"]}
+{"name": "Becoming.Passing.history_without_arrow", "uses": ["Becoming.Passing.apart", "Becoming.Passing.conserving", "Becoming.Passing.determined", "Becoming.Passing.history_grows", "Becoming.Passing.no_arrow", "Becoming.Passing.reverses", "Becoming.Passing.revisits"]}
+{"name": "Becoming.Passing.holds_not", "uses": []}
+{"name": "Becoming.Passing.holds_pos", "uses": []}
+{"name": "Becoming.Passing.holds_self", "uses": []}
+{"name": "Becoming.Passing.holds_side", "uses": ["Becoming.Passing.holds_self", "Becoming.Passing.one_ne_zero"]}
+{"name": "Becoming.Passing.holds_to_not", "uses": []}
+{"name": "Becoming.Passing.mem_alive", "uses": []}
+{"name": "Becoming.Passing.no_arrow", "uses": ["Becoming.Passing.revisits", "Becoming.Web.never_revisits_of_arrow"]}
+{"name": "Becoming.Passing.one_ne_zero", "uses": []}
+{"name": "Becoming.Passing.passes", "uses": ["Becoming.Flow.dissipated_zero", "Becoming.Passing.balances", "Becoming.Passing.closed", "Becoming.Passing.conserving", "Becoming.Passing.counted", "Becoming.Passing.distinct", "Becoming.Passing.embodied", "Becoming.Passing.every", "Becoming.Passing.exchanges_one", "Becoming.Passing.holds_not", "Becoming.Passing.holds_self", "Becoming.Passing.holds_to_not", "Becoming.Passing.reverses", "Becoming.Passing.revisits"]}
+{"name": "Becoming.Passing.record_needs_both", "uses": ["Becoming.Flow.gainlessOn_withRecord_iff", "Becoming.Passing.total_at_all"]}
+{"name": "Becoming.Passing.reverses", "uses": ["Becoming.ListTests.not_not"]}
+{"name": "Becoming.Passing.revisits", "uses": ["Becoming.Passing.changes", "Becoming.Passing.config_back"]}
+{"name": "Becoming.Passing.swap_side", "uses": []}
+{"name": "Becoming.Passing.total_at", "uses": ["Becoming.Passing.holds_pos", "Becoming.Passing.holds_self", "Becoming.le_total_of_mem", "Becoming.total_le_at"]}
+{"name": "Becoming.Passing.total_at_all", "uses": []}
+{"name": "Becoming.Web.Arrow.marks", "uses": []}
+{"name": "Becoming.Web.Determined.orbit", "uses": []}
+{"name": "Becoming.Web.Merges.law", "uses": ["Becoming.Law.merges_iff"]}
+{"name": "Becoming.Web.Revisits.recurs", "uses": ["Becoming.le_dest"]}
+{"name": "Becoming.Web.changes_member", "uses": []}
+{"name": "Becoming.Web.changes_of_member", "uses": ["Becoming.Web.level_of_config"]}
+{"name": "Becoming.Web.changes_persist", "uses": ["Becoming.Web.merges_of_settles"]}
+{"name": "Becoming.Web.changes_within", "uses": ["Becoming.Web.seen_changes", "Becoming.length_le_of_sub"]}
+{"name": "Becoming.Web.config_exact", "uses": ["Becoming.Web.config_total", "Becoming.length_map", "Becoming.mem_configurations"]}
+{"name": "Becoming.Web.config_total", "uses": ["Becoming.total_map"]}
+{"name": "Becoming.Web.config_within", "uses": ["Becoming.Web.config_total", "Becoming.length_map", "Becoming.mem_configurationsWithin"]}
+{"name": "Becoming.Web.level_of_config", "uses": []}
+{"name": "Becoming.Web.merges_of_settles", "uses": []}
+{"name": "Becoming.Web.never_revisits_of_arrow", "uses": ["Becoming.nonfalling_between"]}
+{"name": "Becoming.Web.rests_of_never_revisits", "uses": ["Becoming.Web.changes_within", "Becoming.mark_pos", "Becoming.recurring_accumulates"]}
+{"name": "Becoming.Web.seen_changes", "uses": ["Becoming.mark_one", "Becoming.mark_zero", "Becoming.mem_cons_cases", "Becoming.steps_last"]}
+{"name": "Becoming.World.arising_revisits", "uses": ["Becoming.World.rests_of_never_revisits"]}
+{"name": "Becoming.World.forgets", "uses": ["Becoming.Flow.Balances.exchange_stops_of_carries", "Becoming.Flow.exchanges_pos"]}
+{"name": "Becoming.World.never_revisits", "uses": ["Becoming.Flow.Balances.never_revisits"]}
+{"name": "Becoming.World.no_arrow", "uses": ["Becoming.Web.never_revisits_of_arrow", "Becoming.World.arising_revisits"]}
+{"name": "Becoming.World.rests_of_never_revisits", "uses": ["Becoming.Flow.Balances.rests_of_never_revisits", "Becoming.Web.changes_of_member", "Becoming.World.falls_of_ceases", "Becoming.World.rises_of_arises"]}
+{"name": "Becoming.configurations_exact", "uses": ["Becoming.distinct_configurations", "Becoming.length_of_mem_configurations", "Becoming.mem_configurations", "Becoming.total_of_mem_configurations"]}
+{"name": "Becoming.configurations_examples", "uses": []}
+{"name": "Becoming.distinct_configurations", "uses": ["Becoming.distinct_joinMap", "Becoming.distinct_map", "Becoming.distinct_splits", "Becoming.preimage_of_mem_map", "Becoming.splits_apart"]}
+{"name": "Becoming.distinct_configurationsWithin", "uses": ["Becoming.distinct_configurations", "Becoming.distinct_downFrom", "Becoming.distinct_joinMap", "Becoming.total_of_mem_configurations"]}
+{"name": "Becoming.distinct_downFrom", "uses": ["Becoming.le_of_mem_downFrom"]}
+{"name": "Becoming.distinct_joinMap", "uses": ["Becoming.EntropyLists.distinct_append", "Becoming.mem_joinMap_cases"]}
+{"name": "Becoming.distinct_splits", "uses": ["Becoming.distinct_map", "Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.distinct_withRecord", "uses": ["Becoming.ListTests.none_not_mem_map_some", "Becoming.distinct_map"]}
+{"name": "Becoming.head_splits", "uses": []}
+{"name": "Becoming.length_of_mem_configurations", "uses": ["Becoming.mem_joinMap_cases", "Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.mark_mono", "uses": ["Becoming.mark_cases", "Becoming.mark_one"]}
+{"name": "Becoming.mem_configurations", "uses": ["Becoming.EntropyLists.mem_joinMap", "Becoming.mem_map_of", "Becoming.mem_splits"]}
+{"name": "Becoming.mem_configurationsWithin", "uses": ["Becoming.EntropyLists.mem_joinMap", "Becoming.mem_configurations", "Becoming.mem_downFrom"]}
+{"name": "Becoming.mem_joinMap_cases", "uses": ["Becoming.EntropyLists.mem_append_cases"]}
+{"name": "Becoming.mem_splits", "uses": ["Becoming.head_splits", "Becoming.mem_map_of"]}
+{"name": "Becoming.nonfalling_between", "uses": ["Becoming.le_dest", "Becoming.nonfalling_from"]}
+{"name": "Becoming.nonfalling_from", "uses": []}
+{"name": "Becoming.nonrising_between", "uses": ["Becoming.le_dest", "Becoming.nonrising_from"]}
+{"name": "Becoming.nonrising_from", "uses": []}
+{"name": "Becoming.sign_exchange_iff", "uses": []}
+{"name": "Becoming.sign_le_of", "uses": []}
+{"name": "Becoming.splits_apart", "uses": ["Becoming.add_right_cancel", "Becoming.sum_of_mem_splits"]}
+{"name": "Becoming.sum_of_mem_splits", "uses": ["Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.total_of_mem_configurations", "uses": ["Becoming.mem_joinMap_cases", "Becoming.preimage_of_mem_map", "Becoming.sum_of_mem_splits"]}
+{"name": "Becoming.total_withRecord", "uses": ["Becoming.total_map"]}

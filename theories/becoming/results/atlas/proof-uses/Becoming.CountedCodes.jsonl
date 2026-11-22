@@ -1,0 +1,32 @@
+{"name": "Becoming.CountedCodes.Witness.added_tie", "uses": ["Becoming.CountedCodes.Witness.opposite_symmetric", "Becoming.CountedCodes.addSpeaker_tied", "Becoming.ListTests.not_ne_self", "Becoming.ListTests.not_not"]}
+{"name": "Becoming.CountedCodes.Witness.asymmetric_shared", "uses": []}
+{"name": "Becoming.CountedCodes.Witness.lead_not_symmetric", "uses": []}
+{"name": "Becoming.CountedCodes.Witness.opposite_symmetric", "uses": []}
+{"name": "Becoming.CountedCodes.Witness.sayFirst_not_alike", "uses": []}
+{"name": "Becoming.CountedCodes.Witness.sayFirst_shared", "uses": []}
+{"name": "Becoming.CountedCodes.Witness.zero_symmetric", "uses": []}
+{"name": "Becoming.CountedCodes.addHeard_keeps", "uses": ["Becoming.CountedCodes.hear_keeps"]}
+{"name": "Becoming.CountedCodes.addSpeaker_keeps", "uses": ["Becoming.CountedCodes.addHeard_keeps"]}
+{"name": "Becoming.CountedCodes.addSpeaker_shares", "uses": []}
+{"name": "Becoming.CountedCodes.addSpeaker_shares_run", "uses": ["Becoming.CountedCodes.addSpeaker_shares"]}
+{"name": "Becoming.CountedCodes.addSpeaker_tied", "uses": ["Becoming.CountedCodes.addSpeaker_keeps", "Becoming.CountedCodes.addSpeaker_shares_run", "Becoming.CountedCodes.shared_no_unique_greatest"]}
+{"name": "Becoming.CountedCodes.bound_invariant", "uses": ["Becoming.CountedCodes.powerProduct_map", "Becoming.CountedCodes.powerProduct_perm", "Becoming.CountedCodes.total_perm", "Becoming.total_map"]}
+{"name": "Becoming.CountedCodes.fixed_no_unique_greatest", "uses": []}
+{"name": "Becoming.CountedCodes.gatedHear_keeps", "uses": []}
+{"name": "Becoming.CountedCodes.hear_keeps", "uses": []}
+{"name": "Becoming.CountedCodes.keeps_both", "uses": []}
+{"name": "Becoming.CountedCodes.minimizer_no_unique_greatest", "uses": ["Becoming.CountedCodes.fixed_no_unique_greatest", "Becoming.FreeEnergyCounting.proportional_of_bound_eq"]}
+{"name": "Becoming.CountedCodes.never_shared", "uses": ["Becoming.CountedCodes.unique_greatest_exchanged_run", "Becoming.CountedCodes.unique_greatest_not_two"]}
+{"name": "Becoming.CountedCodes.never_shared_of_involution", "uses": ["Becoming.Law.KeepsRelation.run"]}
+{"name": "Becoming.CountedCodes.powerProduct_map", "uses": []}
+{"name": "Becoming.CountedCodes.powerProduct_perm", "uses": ["Becoming.mul_turn"]}
+{"name": "Becoming.CountedCodes.read_relabels", "uses": ["Becoming.CountedCodes.unique_greatest_eq", "Becoming.CountedCodes.unique_greatest_exchanged"]}
+{"name": "Becoming.CountedCodes.shared_minimizer_no_unique_greatest", "uses": ["Becoming.CountedCodes.minimizer_no_unique_greatest", "Becoming.Law.KeepsRelation.run"]}
+{"name": "Becoming.CountedCodes.shared_no_unique_greatest", "uses": ["Becoming.CountedCodes.fixed_no_unique_greatest", "Becoming.Law.KeepsRelation.run"]}
+{"name": "Becoming.CountedCodes.tied_hears_tied", "uses": []}
+{"name": "Becoming.CountedCodes.total_perm", "uses": []}
+{"name": "Becoming.CountedCodes.unique_greatest_eq", "uses": ["Becoming.CountedCodes.unique_greatest_not_two"]}
+{"name": "Becoming.CountedCodes.unique_greatest_exchanged", "uses": ["Becoming.CountedCodes.unique_greatest_rename"]}
+{"name": "Becoming.CountedCodes.unique_greatest_exchanged_run", "uses": ["Becoming.CountedCodes.unique_greatest_exchanged", "Becoming.Law.KeepsRelation.run"]}
+{"name": "Becoming.CountedCodes.unique_greatest_not_two", "uses": []}
+{"name": "Becoming.CountedCodes.unique_greatest_rename", "uses": []}

@@ -1,0 +1,5 @@
+{"name": "Becoming.ChanceFloors.fulfillment_gives_chance_floor", "uses": ["Becoming.mass_mono"]}
+{"name": "Becoming.ChanceFloors.mass_dirac_pos_iff", "uses": ["Becoming.mass_dirac_pos", "Becoming.mem_of_mass_dirac_pos"]}
+{"name": "Becoming.ChanceFloors.positive_chance_can_miss_due_protection", "uses": []}
+{"name": "Becoming.ChanceFloors.repair_adds_new_protection", "uses": ["Becoming.ChanceFloors.or_true", "Becoming.ChanceFloors.repair_covers_target_and_candidate", "Becoming.mass_lt_of_added"]}
+{"name": "Becoming.ChanceFloors.repair_covers_target_and_candidate", "uses": ["Becoming.ChanceFloors.or_true"]}

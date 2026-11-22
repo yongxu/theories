@@ -1,0 +1,16 @@
+{"name": "Becoming.ScoreRepresentation.above_iff", "uses": ["Becoming.Lexical.Above.anchor", "Becoming.Lexical.Above.irrefl", "Becoming.Lexical.Above.no_trade", "Becoming.Naturals.succ_ne_zero"]}
+{"name": "Becoming.ScoreRepresentation.above_satisfies_comparison", "uses": ["Becoming.ScoreRepresentation.above_iff", "Becoming.ScoreRepresentation.extension_shape"]}
+{"name": "Becoming.ScoreRepresentation.bounded_score_represents", "uses": ["Becoming.ScoreRepresentation.above_satisfies_comparison", "Becoming.ScoreRepresentation.never_outranked", "Becoming.ScoreRepresentation.ratio_agrees"]}
+{"name": "Becoming.ScoreRepresentation.comparison_does_not_yield_priority", "uses": ["Becoming.ScoreRepresentation.never_outranked", "Becoming.ScoreRepresentation.weighted_satisfies_comparison"]}
+{"name": "Becoming.ScoreRepresentation.cross_iff", "uses": []}
+{"name": "Becoming.ScoreRepresentation.every_nat_score_outranks", "uses": ["Becoming.Comparison.outgrows", "Becoming.ScoreRepresentation.successor_extends"]}
+{"name": "Becoming.ScoreRepresentation.extension_shape", "uses": []}
+{"name": "Becoming.ScoreRepresentation.livingSignificance_leaves_ordering_open", "uses": ["Becoming.ScoreRepresentation.above_satisfies_comparison", "Becoming.ScoreRepresentation.never_outranked", "Becoming.ScoreRepresentation.weighted_satisfies_comparison"]}
+{"name": "Becoming.ScoreRepresentation.livingSignificance_recognizes_gains", "uses": []}
+{"name": "Becoming.ScoreRepresentation.never_outranked", "uses": ["Becoming.Lexical.Above.no_trade", "Becoming.Naturals.succ_ne_zero"]}
+{"name": "Becoming.ScoreRepresentation.no_nat_score_represents", "uses": ["Becoming.ScoreRepresentation.every_nat_score_outranks"]}
+{"name": "Becoming.ScoreRepresentation.ratio_agrees", "uses": ["Becoming.Lexical.Above.irrefl", "Becoming.Naturals.succ_ne_zero", "Becoming.ScoreRepresentation.above_iff", "Becoming.ScoreRepresentation.cross_iff", "Becoming.ScoreRepresentation.never_outranked"]}
+{"name": "Becoming.ScoreRepresentation.ratio_bounded", "uses": []}
+{"name": "Becoming.ScoreRepresentation.successor_extends", "uses": ["Becoming.Naturals.succ_ne_zero"]}
+{"name": "Becoming.ScoreRepresentation.weighted_outranks", "uses": []}
+{"name": "Becoming.ScoreRepresentation.weighted_satisfies_comparison", "uses": ["Becoming.ScoreRepresentation.extension_shape"]}

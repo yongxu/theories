@@ -1,0 +1,55 @@
+{"name": "Becoming.ReferencePlanTraces.actualWord_rounds", "uses": []}
+{"name": "Becoming.ReferencePlanTraces.checked_drives", "uses": ["Becoming.ReferencePlan.checked_pair_correct", "Becoming.ReferencePlan.checked_pair_iff", "Becoming.ReferencePlanTraces.perform_enabled", "Becoming.ReferencePlanTraces.perform_response"]}
+{"name": "Becoming.ReferencePlanTraces.constant_channel_no_repair", "uses": ["Becoming.ReferencePlan.constant_channel_rejected", "Becoming.ReferencePlanTraces.no_repair_of"]}
+{"name": "Becoming.ReferencePlanTraces.constant_channel_uses_fuel", "uses": ["Becoming.ReferencePlan.constant_channel_contacts_use_fuel", "Becoming.ReferencePlanTraces.map_some", "Becoming.ReferencePlanTraces.repair_iff"]}
+{"name": "Becoming.ReferencePlanTraces.drift_control_fails", "uses": ["Becoming.ReferencePlan.drift_after_check_can_fail", "Becoming.ReferencePlanTraces.map_some", "Becoming.ReferencePlanTraces.run_iff"]}
+{"name": "Becoming.ReferencePlanTraces.drift_misses", "uses": ["Becoming.ReferencePlan.drift_fails", "Becoming.ReferencePlanTraces.drift_step", "Becoming.ReferencePlanTraces.perform_response"]}
+{"name": "Becoming.ReferencePlanTraces.drift_step", "uses": ["Becoming.ReferencePlanTraces.step_iff"]}
+{"name": "Becoming.ReferencePlanTraces.enabled_iff", "uses": ["Becoming.ReferencePlanTraces.step_iff"]}
+{"name": "Becoming.ReferencePlanTraces.erased_no_repair", "uses": ["Becoming.ReferencePlan.erased_mismatch_cannot_activate", "Becoming.ReferencePlanTraces.repair_iff"]}
+{"name": "Becoming.ReferencePlanTraces.exhausted_not_enabled", "uses": ["Becoming.ReferencePlan.no_action_after_exhaustion"]}
+{"name": "Becoming.ReferencePlanTraces.finished_trace", "uses": ["Becoming.ReferencePlan.both_revised_contacts_used", "Becoming.ReferencePlanTraces.trace_iff_of_run"]}
+{"name": "Becoming.ReferencePlanTraces.firstRound_trace", "uses": ["Becoming.ReferencePlanTraces.trace_iff_of_run"]}
+{"name": "Becoming.ReferencePlanTraces.first_mismatch_step", "uses": ["Becoming.ReferencePlan.first_mismatch_acquired", "Becoming.ReferencePlanTraces.step_iff_of_execute"]}
+{"name": "Becoming.ReferencePlanTraces.first_repair", "uses": ["Becoming.ReferencePlan.first_policy_repair", "Becoming.ReferencePlanTraces.repairs_iff_of_repair"]}
+{"name": "Becoming.ReferencePlanTraces.first_round_installs_contact", "uses": ["Becoming.ReferencePlan.first_candidate_unavailable_before", "Becoming.ReferencePlanTraces.firstRound_trace"]}
+{"name": "Becoming.ReferencePlanTraces.first_round_meets", "uses": ["Becoming.ReferencePlan.installed_response_correct", "Becoming.ReferencePlanTraces.firstRound_trace", "Becoming.ReferencePlanTraces.perform_response"]}
+{"name": "Becoming.ReferencePlanTraces.first_round_registers", "uses": ["Becoming.ReferencePlan.first_new_selection", "Becoming.ReferencePlanTraces.firstRound_trace"]}
+{"name": "Becoming.ReferencePlanTraces.first_use_meets", "uses": ["Becoming.ReferencePlan.first_use_succeeds", "Becoming.ReferencePlanTraces.map_some"]}
+{"name": "Becoming.ReferencePlanTraces.frozen_control_fails", "uses": ["Becoming.ReferencePlan.frozen_method_still_fails", "Becoming.ReferencePlanTraces.run_iff"]}
+{"name": "Becoming.ReferencePlanTraces.frozen_leaves_unregistered", "uses": ["Becoming.ReferencePlan.frozen_misses", "Becoming.ReferencePlanTraces.frozen_plan"]}
+{"name": "Becoming.ReferencePlanTraces.frozen_plan", "uses": ["Becoming.ReferencePlan.frozen_reads_method", "Becoming.ReferencePlanTraces.step_reads"]}
+{"name": "Becoming.ReferencePlanTraces.frozen_second_control_fails", "uses": ["Becoming.ReferencePlan.frozen_second_method_still_fails", "Becoming.ReferencePlanTraces.run_iff"]}
+{"name": "Becoming.ReferencePlanTraces.history_rounds", "uses": ["Becoming.ReferencePlanTraces.actualWord_rounds", "Generative.trace_append_iff"]}
+{"name": "Becoming.ReferencePlanTraces.history_uses_fuel", "uses": ["Becoming.ReferencePlan.complete_history", "Becoming.ReferencePlan.fuel_used_without_reset", "Becoming.ReferencePlanTraces.trace_unique"]}
+{"name": "Becoming.ReferencePlanTraces.install_binds", "uses": ["Becoming.ReferencePlan.install_binds_fresh", "Becoming.ReferencePlanTraces.step_reads"]}
+{"name": "Becoming.ReferencePlanTraces.map_some", "uses": []}
+{"name": "Becoming.ReferencePlanTraces.no_repair_of", "uses": ["Becoming.ReferencePlanTraces.repair_iff"]}
+{"name": "Becoming.ReferencePlanTraces.perform_enabled", "uses": ["Becoming.ReferencePlanTraces.enabled_iff"]}
+{"name": "Becoming.ReferencePlanTraces.perform_response", "uses": ["Becoming.ReferencePlanTraces.step_iff"]}
+{"name": "Becoming.ReferencePlanTraces.probe_binds", "uses": ["Becoming.ReferencePlan.probe_binds_both_references", "Becoming.ReferencePlanTraces.step_reads"]}
+{"name": "Becoming.ReferencePlanTraces.repair_iff", "uses": ["Becoming.ReferencePlanTraces.repair_of_trace", "Becoming.ReferencePlanTraces.trace_of_repair"]}
+{"name": "Becoming.ReferencePlanTraces.repair_of_trace", "uses": []}
+{"name": "Becoming.ReferencePlanTraces.repairs_iff_of_repair", "uses": ["Becoming.ReferencePlanTraces.repair_iff"]}
+{"name": "Becoming.ReferencePlanTraces.revise_binds_plan", "uses": ["Becoming.ReferencePlan.revision_binds_plan", "Becoming.ReferencePlanTraces.step_reads"]}
+{"name": "Becoming.ReferencePlanTraces.revise_gains_contact", "uses": ["Becoming.ReferencePlan.new_contact_choice", "Becoming.ReferencePlanTraces.revise_binds_plan"]}
+{"name": "Becoming.ReferencePlanTraces.revise_keeps", "uses": ["Becoming.ReferencePlan.added_keeps", "Becoming.ReferencePlanTraces.revise_step"]}
+{"name": "Becoming.ReferencePlanTraces.revise_keeps_selections", "uses": ["Becoming.ReferencePlan.old_selections_remain", "Becoming.ReferencePlanTraces.revise_step"]}
+{"name": "Becoming.ReferencePlanTraces.revise_registers", "uses": ["Becoming.ReferencePlan.propose_from_mismatch", "Becoming.ReferencePlan.revise_registers_failure", "Becoming.ReferencePlanTraces.revise_binds_plan"]}
+{"name": "Becoming.ReferencePlanTraces.revise_step", "uses": ["Becoming.ReferencePlanTraces.revise_binds_plan", "Becoming.ReferencePlanTraces.step_iff"]}
+{"name": "Becoming.ReferencePlanTraces.rounds_change_method", "uses": ["Becoming.ReferencePlan.methods_change_twice", "Becoming.ReferencePlanTraces.firstRound_trace", "Becoming.ReferencePlanTraces.secondRound_trace"]}
+{"name": "Becoming.ReferencePlanTraces.run_iff", "uses": ["Becoming.ReferencePlan.run_trace"]}
+{"name": "Becoming.ReferencePlanTraces.secondRound_trace", "uses": ["Becoming.ReferencePlanTraces.trace_iff_of_run"]}
+{"name": "Becoming.ReferencePlanTraces.second_mismatch_trace", "uses": ["Becoming.ReferencePlan.first_repair_used_then_second_mismatch", "Becoming.ReferencePlanTraces.trace_iff_of_run"]}
+{"name": "Becoming.ReferencePlanTraces.second_repair", "uses": ["Becoming.ReferencePlan.second_policy_repair", "Becoming.ReferencePlanTraces.repairs_iff_of_repair"]}
+{"name": "Becoming.ReferencePlanTraces.second_round_meets", "uses": ["Becoming.ReferencePlan.installed_response_correct", "Becoming.ReferencePlanTraces.perform_response", "Becoming.ReferencePlanTraces.secondRound_trace"]}
+{"name": "Becoming.ReferencePlanTraces.second_round_registers", "uses": ["Becoming.ReferencePlan.second_installed_choice", "Becoming.ReferencePlanTraces.secondRound_trace"]}
+{"name": "Becoming.ReferencePlanTraces.second_use_meets", "uses": ["Becoming.ReferencePlan.second_use_succeeds", "Becoming.ReferencePlanTraces.map_some"]}
+{"name": "Becoming.ReferencePlanTraces.small_support_no_repair", "uses": ["Becoming.ReferencePlan.support_too_small_to_build", "Becoming.ReferencePlanTraces.no_repair_of"]}
+{"name": "Becoming.ReferencePlanTraces.small_support_uses_fuel", "uses": ["Becoming.ReferencePlan.references_use_fuel_before_exhaustion", "Becoming.ReferencePlanTraces.map_some", "Becoming.ReferencePlanTraces.repair_iff"]}
+{"name": "Becoming.ReferencePlanTraces.step_iff", "uses": []}
+{"name": "Becoming.ReferencePlanTraces.step_iff_of_execute", "uses": []}
+{"name": "Becoming.ReferencePlanTraces.step_reads", "uses": ["Becoming.ReferencePlanTraces.step_iff"]}
+{"name": "Becoming.ReferencePlanTraces.trace_iff_of_run", "uses": ["Becoming.ReferencePlanTraces.run_iff"]}
+{"name": "Becoming.ReferencePlanTraces.trace_of_repair", "uses": []}
+{"name": "Becoming.ReferencePlanTraces.trace_unique", "uses": ["Becoming.ReferencePlanTraces.run_iff"]}

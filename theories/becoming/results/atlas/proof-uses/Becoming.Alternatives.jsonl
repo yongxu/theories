@@ -1,0 +1,17 @@
+{"name": "Becoming.Alternatives.articulation_iff_lifted", "uses": ["Becoming.Alternatives.enabled_iff", "Becoming.Alternatives.lift_iff"]}
+{"name": "Becoming.Alternatives.enabled_iff", "uses": []}
+{"name": "Becoming.Alternatives.lift_iff", "uses": []}
+{"name": "Becoming.Alternatives.no_survivor", "uses": []}
+{"name": "Becoming.Alternatives.reason_of_extension", "uses": []}
+{"name": "Becoming.Alternatives.restricted_survives", "uses": ["Becoming.Alternatives.survives_iff_lifted", "Becoming.Alternatives.survives_restrict"]}
+{"name": "Becoming.Alternatives.survives_iff_lifted", "uses": ["Becoming.Alternatives.enabled_iff", "Becoming.Alternatives.lift_iff"]}
+{"name": "Becoming.Alternatives.survives_of_coherent", "uses": []}
+{"name": "Becoming.Alternatives.survives_restrict", "uses": []}
+{"name": "Becoming.Extension.new_relevance", "uses": ["Becoming.LivingSignificance.new_realization", "Becoming.livingSignificance_of_unrestricted"]}
+{"name": "Becoming.LivingSignificance.new_realization", "uses": []}
+{"name": "Becoming.Profiles.both_respect", "uses": ["Becoming.Profiles.respects"]}
+{"name": "Becoming.Profiles.both_survive", "uses": ["Becoming.Extension.irrefl", "Becoming.Profiles.lost"]}
+{"name": "Becoming.Profiles.different_selections", "uses": []}
+{"name": "Becoming.Profiles.lost", "uses": []}
+{"name": "Becoming.Profiles.opposite", "uses": []}
+{"name": "Becoming.Profiles.respects", "uses": ["Becoming.Extension.irrefl", "Becoming.Profiles.lost"]}

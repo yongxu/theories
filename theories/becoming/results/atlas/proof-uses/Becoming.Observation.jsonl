@@ -1,0 +1,27 @@
+{"name": "Becoming.ExchangeLaw.ReadsAt.readsInto", "uses": []}
+{"name": "Becoming.ExchangeLaw.ReadsInto.respondsWithin_unread", "uses": ["Becoming.gap_eq_zero_iff"]}
+{"name": "Becoming.ExchangeLaw.ReadsInto.restrict", "uses": ["Becoming.ExchangeLaw.ReadsInto.respondsWithin_unread"]}
+{"name": "Becoming.ExchangeLaw.Through.alike_off_downstream", "uses": ["Becoming.ExchangeLaw.Through.readsInto", "Becoming.exchange_alike_off_downstream"]}
+{"name": "Becoming.ExchangeLaw.Through.readsInto", "uses": ["Becoming.ExchangeLaw.ReadsAt.readsInto", "Becoming.ExchangeLaw.Through.readsAt"]}
+{"name": "Becoming.Observation.Measure.couples_after", "uses": ["Becoming.Naturals.ble_false_of_lt", "Becoming.held_while"]}
+{"name": "Becoming.Observation.Measure.downstream_before", "uses": ["Becoming.Observation.Measure.no_coupling_from_stock", "Becoming.couples_before_iff"]}
+{"name": "Becoming.Observation.Measure.draw_responds", "uses": ["Becoming.Naturals.ble_false_of_lt"]}
+{"name": "Becoming.Observation.Measure.listed", "uses": []}
+{"name": "Becoming.Observation.Measure.loop_at", "uses": ["Becoming.Observation.Measure.record_into_stock", "Becoming.Observation.Measure.route_at", "Becoming.Upstream.refl", "Becoming.Upstream.single", "Becoming.onLoop_of_closing"]}
+{"name": "Becoming.Observation.Measure.no_coupling_from_stock", "uses": ["Becoming.Naturals.ble_false_of_lt", "Becoming.Thresholds.cond_pos"]}
+{"name": "Becoming.Observation.Measure.no_loop_before", "uses": ["Becoming.Observation.Measure.no_coupling_from_stock", "Becoming.couples_before_iff"]}
+{"name": "Becoming.Observation.Measure.readsInto", "uses": ["Becoming.beq_self"]}
+{"name": "Becoming.Observation.Measure.record_into_stock", "uses": ["Becoming.beq_self", "Becoming.couples_before_of_couplesAt"]}
+{"name": "Becoming.Observation.Measure.route_at", "uses": ["Becoming.beq_self", "Becoming.couples_before_of_couplesAt"]}
+{"name": "Becoming.Upstream.before_mono", "uses": ["Becoming.Upstream.lift", "Becoming.couples_before_mono"]}
+{"name": "Becoming.Upstream.single", "uses": ["Becoming.Coupled.one"]}
+{"name": "Becoming.Upstream.snoc", "uses": ["Becoming.Upstream.single", "Becoming.Upstream.trans"]}
+{"name": "Becoming.Upstream.trans", "uses": ["Becoming.Closing.join_below", "Becoming.Closing.join_from", "Becoming.Coupled.append"]}
+{"name": "Becoming.apart_only_downstream", "uses": ["Becoming.Thresholds.pos_cond", "Becoming.Thresholds.same_step", "Becoming.Upstream.before_mono", "Becoming.Upstream.refl", "Becoming.Upstream.snoc", "Becoming.couples_before_of_couplesAt", "Becoming.le_succ_cases", "Becoming.total_congr_on"]}
+{"name": "Becoming.carried_zero_off_downstream", "uses": ["Becoming.carried_pos_iff", "Becoming.conveyed_upstream", "Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.conveyed_upstream", "uses": ["Becoming.Upstream.before_mono", "Becoming.Upstream.refl", "Becoming.Upstream.snoc", "Becoming.couples_before_of_couplesAt"]}
+{"name": "Becoming.couplesAt_readCouplings", "uses": ["Becoming.Thresholds.cond_pos", "Becoming.Thresholds.pos_cond"]}
+{"name": "Becoming.exchange_alike_off_downstream", "uses": ["Becoming.apart_only_downstream"]}
+{"name": "Becoming.route_forms_by_closing", "uses": ["Becoming.upstream_succ_iff"]}
+{"name": "Becoming.upstream_readCouplings", "uses": ["Becoming.Upstream.lift", "Becoming.couplesAt_readCouplings", "Becoming.couples_before_iff"]}
+{"name": "Becoming.upstream_succ_iff", "uses": ["Becoming.Closing.split", "Becoming.Upstream.before_mono", "Becoming.Upstream.snoc", "Becoming.Upstream.trans", "Becoming.couples_before_iff", "Becoming.gap_of_lt"]}

@@ -1,0 +1,30 @@
+{"name": "Becoming.DrawnShaping.Against.not_locked", "uses": []}
+{"name": "Becoming.DrawnShaping.CriticalMass.at_mass", "uses": []}
+{"name": "Becoming.DrawnShaping.CriticalMass.at_mass_stays", "uses": ["Becoming.DrawnShaping.CriticalMass.at_mass", "Becoming.DrawnShaping.drawn_from_below", "Becoming.DrawnShaping.drawn_locks"]}
+{"name": "Becoming.DrawnShaping.CriticalMass.even_favours", "uses": []}
+{"name": "Becoming.DrawnShaping.CriticalMass.even_locks", "uses": ["Becoming.DrawnShaping.CriticalMass.even_favours", "Becoming.DrawnShaping.drawn_locks"]}
+{"name": "Becoming.DrawnShaping.CriticalMass.even_rises", "uses": ["Becoming.DrawnShaping.CriticalMass.even_favours", "Becoming.DrawnShaping.drawn_rises"]}
+{"name": "Becoming.DrawnShaping.CriticalMass.few_disfavours", "uses": []}
+{"name": "Becoming.DrawnShaping.CriticalMass.few_falls", "uses": ["Becoming.DrawnShaping.CriticalMass.few_disfavours", "Becoming.DrawnShaping.drawn_falls"]}
+{"name": "Becoming.DrawnShaping.CriticalMass.few_locks", "uses": ["Becoming.DrawnShaping.CriticalMass.few_disfavours", "Becoming.DrawnShaping.drawn_from_below"]}
+{"name": "Becoming.DrawnShaping.alike_favours_iff", "uses": ["Becoming.DrawnShaping.drawn_favours_iff", "Becoming.RuleCapture.CarrierCounts.other_pos", "Becoming.add_mul_split"]}
+{"name": "Becoming.DrawnShaping.critical_iff", "uses": ["Becoming.DrawnShaping.drawn_favours_iff", "Becoming.Naturals.add_sub_cancel_left", "Becoming.Naturals.le_of_add_le_add_left", "Becoming.le_dest"]}
+{"name": "Becoming.DrawnShaping.critical_mass_iff", "uses": ["Becoming.DrawnShaping.critical_iff", "Becoming.DrawnShaping.disfavours_strictly_everywhere_iff", "Becoming.DrawnShaping.drawn_lt_iff", "Becoming.DrawnShaping.favours_everywhere_iff", "Becoming.Naturals.le_sub_of_add_le"]}
+{"name": "Becoming.DrawnShaping.disfavours_strictly_everywhere_iff", "uses": ["Becoming.DrawnShaping.drawn_lt_iff", "Becoming.RuleCapture.CarrierCounts.other_pos"]}
+{"name": "Becoming.DrawnShaping.drawn_against", "uses": ["Becoming.ClosedCapture.Drawn.pool_against", "Becoming.DrawnShaping.shaped_le_iff"]}
+{"name": "Becoming.DrawnShaping.drawn_carrier_pos", "uses": ["Becoming.RuleCapture.CarrierCounts.other_pos"]}
+{"name": "Becoming.DrawnShaping.drawn_falls", "uses": ["Becoming.ChoiceCountCapture.lower_strict", "Becoming.DrawnShaping.drawn_carrier_pos", "Becoming.DrawnShaping.drawn_from_below", "Becoming.DrawnShaping.present_along_course", "Becoming.Pace.paced_fast_succ", "Becoming.RuleShaping.falls_strictly"]}
+{"name": "Becoming.DrawnShaping.drawn_favours_alike", "uses": ["Becoming.DrawnShaping.drawn_favours_iff"]}
+{"name": "Becoming.DrawnShaping.drawn_favours_iff", "uses": ["Becoming.DrawnShaping.drawn_split", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.DrawnShaping.drawn_from_below", "uses": ["Becoming.DrawnShaping.drawn_reads_iff", "Becoming.Ideals.Preorder.refl", "Becoming.RuleCapture.CarrierCounts.lower", "Becoming.RuleCapture.CarrierCounts.lowers", "Becoming.RuleCapture.ReadsShare.reverse", "Becoming.RuleCapture.locked_not_below", "Becoming.RuleCapture.locked_stays"]}
+{"name": "Becoming.DrawnShaping.drawn_locked_either", "uses": ["Becoming.DrawnShaping.drawn_from_below", "Becoming.DrawnShaping.drawn_locks"]}
+{"name": "Becoming.DrawnShaping.drawn_locks", "uses": ["Becoming.DrawnShaping.drawn_reads_iff", "Becoming.Ideals.Preorder.refl", "Becoming.RuleCapture.CarrierCounts.raises", "Becoming.RuleCapture.CarrierCounts.upper", "Becoming.RuleCapture.locked_not_below", "Becoming.RuleCapture.locked_stays"]}
+{"name": "Becoming.DrawnShaping.drawn_lt_iff", "uses": ["Becoming.DrawnShaping.drawn_split"]}
+{"name": "Becoming.DrawnShaping.drawn_reads_iff", "uses": ["Becoming.ClosedCapture.Drawn.pool_reads_iff", "Becoming.DrawnShaping.shaped_le_iff"]}
+{"name": "Becoming.DrawnShaping.drawn_rises", "uses": ["Becoming.DrawnShaping.drawn_locks", "Becoming.DrawnShaping.upper_strictly", "Becoming.RuleCapture.CarrierCounts.rises_strictly_along", "Becoming.RuleShaping.present_of_le"]}
+{"name": "Becoming.DrawnShaping.drawn_split", "uses": ["Becoming.DrawnShaping.mul_split"]}
+{"name": "Becoming.DrawnShaping.favours_everywhere_iff", "uses": ["Becoming.DrawnShaping.drawn_favours_iff"]}
+{"name": "Becoming.DrawnShaping.mul_split", "uses": []}
+{"name": "Becoming.DrawnShaping.present_along_course", "uses": ["Becoming.Pace.paced_fast_succ", "Becoming.Pace.paced_succ"]}
+{"name": "Becoming.DrawnShaping.shaped_le_iff", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.RuleCapture.CarrierCounts.other_pos", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.DrawnShaping.upper_strictly", "uses": ["Becoming.RuleCapture.CarrierCounts.other_pos"]}

@@ -1,0 +1,18 @@
+{"name": "Becoming.DrawHistory.Loop.below_four", "uses": []}
+{"name": "Becoming.DrawHistory.Loop.bounds", "uses": ["Becoming.DrawHistory.Loop.below_four", "Becoming.DrawHistory.Loop.keeps_three", "Becoming.DrawHistory.Loop.meets_three", "Becoming.DrawHistory.collapses", "Becoming.RegimeMargin.holds"]}
+{"name": "Becoming.DrawHistory.Loop.keeps_three", "uses": []}
+{"name": "Becoming.DrawHistory.Loop.keeps_two", "uses": []}
+{"name": "Becoming.DrawHistory.Loop.meets_three", "uses": []}
+{"name": "Becoming.DrawHistory.Loop.meets_two", "uses": []}
+{"name": "Becoming.DrawHistory.Loop.two_paths", "uses": ["Becoming.DrawHistory.Loop.below_four", "Becoming.DrawHistory.Loop.keeps_two", "Becoming.DrawHistory.Loop.meets_two", "Becoming.DrawHistory.history_decides", "Becoming.DrawHistory.inflow_stays"]}
+{"name": "Becoming.DrawHistory.collapses", "uses": ["Becoming.DrawHistory.inflow_from", "Becoming.RegimeMargin.Adjusted.orbit_regime", "Becoming.RegimeMargin.Adjusted.regime_staysShort", "Becoming.RegimeMargin.Adjusted.taken_whole", "Becoming.le_dest"]}
+{"name": "Becoming.DrawHistory.histories_differ", "uses": ["Becoming.DrawHistory.history_decides"]}
+{"name": "Becoming.DrawHistory.history_decides", "uses": ["Becoming.DrawHistory.collapses", "Becoming.DrawHistory.inflow_kept", "Becoming.DrawHistory.two_levels", "Becoming.DrawHistory.underDraws_constant"]}
+{"name": "Becoming.DrawHistory.inflow_from", "uses": ["Becoming.DrawHistory.inflow_rests", "Becoming.DrawHistory.to_inflow"]}
+{"name": "Becoming.DrawHistory.inflow_kept", "uses": ["Becoming.DrawHistory.inflow_rests"]}
+{"name": "Becoming.DrawHistory.inflow_rests", "uses": ["Becoming.DrawHistory.to_inflow"]}
+{"name": "Becoming.DrawHistory.inflow_stays", "uses": ["Becoming.DrawHistory.inflow_rests"]}
+{"name": "Becoming.DrawHistory.leaving_needs_a_lower_draw", "uses": ["Becoming.DrawHistory.inflow_rests"]}
+{"name": "Becoming.DrawHistory.to_inflow", "uses": ["Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.DrawHistory.two_levels", "uses": ["Becoming.DrawHistory.inflow_stays", "Becoming.RegimeMargin.holds"]}
+{"name": "Becoming.DrawHistory.underDraws_constant", "uses": []}

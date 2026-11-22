@@ -1,0 +1,25 @@
+{"name": "Becoming.ChangingContext.ends", "uses": []}
+{"name": "Becoming.Contextual.Glues.agree", "uses": []}
+{"name": "Becoming.Contextual.glues_iff_agree", "uses": ["Becoming.Contextual.Glues.agree"]}
+{"name": "Becoming.Contextual.not_glues", "uses": []}
+{"name": "Becoming.Specker.local_", "uses": []}
+{"name": "Becoming.Specker.marks_other", "uses": []}
+{"name": "Becoming.Specker.marks_self", "uses": []}
+{"name": "Becoming.Specker.noGlobal", "uses": ["Becoming.Specker.three_do_not"]}
+{"name": "Becoming.Specker.no_whole", "uses": ["Becoming.Specker.noGlobal", "Becoming.Specker.unforced", "Becoming.no_whole"]}
+{"name": "Becoming.Specker.not_glues", "uses": ["Becoming.Contextual.not_glues", "Becoming.Specker.local_", "Becoming.Specker.noGlobal", "Becoming.Specker.respects"]}
+{"name": "Becoming.Specker.respects", "uses": ["Becoming.Specker.marks_other", "Becoming.Specker.marks_self"]}
+{"name": "Becoming.Specker.three_do_not", "uses": []}
+{"name": "Becoming.Specker.unforced", "uses": ["Becoming.ListTests.ne_not", "Becoming.Specker.marks_other", "Becoming.Specker.marks_self"]}
+{"name": "Becoming.Square.at_pos", "uses": []}
+{"name": "Becoming.Square.fill_parity", "uses": []}
+{"name": "Becoming.Square.local_", "uses": ["Becoming.Square.within_at"]}
+{"name": "Becoming.Square.nine", "uses": []}
+{"name": "Becoming.Square.noGlobal", "uses": ["Becoming.Square.nine"]}
+{"name": "Becoming.Square.no_whole", "uses": ["Becoming.Square.noGlobal", "Becoming.Square.unforced", "Becoming.no_whole"]}
+{"name": "Becoming.Square.pos_at", "uses": []}
+{"name": "Becoming.Square.unforced", "uses": ["Becoming.Square.fill_parity", "Becoming.Square.pos_at"]}
+{"name": "Becoming.Square.within_at", "uses": []}
+{"name": "Becoming.glued_of_whole", "uses": []}
+{"name": "Becoming.no_whole", "uses": []}
+{"name": "Becoming.restrict_local", "uses": []}

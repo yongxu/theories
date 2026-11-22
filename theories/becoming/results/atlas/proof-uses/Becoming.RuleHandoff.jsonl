@@ -1,0 +1,68 @@
+{"name": "Becoming.RuleHandoff.Rule.ofNat_ctorIdx", "uses": []}
+{"name": "Becoming.RuleHandoff.admitted_requires_review", "uses": ["Becoming.ListTests.and_left", "Becoming.ListTests.and_right", "Becoming.RuleHandoff.cond_of_ite", "Becoming.RuleHandoff.step.eq_2"]}
+{"name": "Becoming.RuleHandoff.adoption_uses_recorded_proposal", "uses": ["Becoming.RuleHandoff.cond_of_ite", "Becoming.RuleHandoff.some_of_ite", "Becoming.RuleHandoff.step.eq_4"]}
+{"name": "Becoming.RuleHandoff.adopts_of_nonAdopting", "uses": []}
+{"name": "Becoming.RuleHandoff.authorized_revision_is_actual", "uses": []}
+{"name": "Becoming.RuleHandoff.boundary_is_not_exclusive_membership", "uses": []}
+{"name": "Becoming.RuleHandoff.branch_revises", "uses": ["Becoming.RuleHandoff.common_history_can_branch_with_different_rules", "Becoming.RuleHandoff.handoff_step_eq", "Becoming.RuleHandoff.trace_iff_run"]}
+{"name": "Becoming.RuleHandoff.changed_rule_requires_adoption", "uses": ["Becoming.RuleHandoff.adoption_uses_recorded_proposal", "Becoming.RuleHandoff.nonadopting_step_preserves"]}
+{"name": "Becoming.RuleHandoff.common_history_can_branch_with_different_rules", "uses": []}
+{"name": "Becoming.RuleHandoff.cond_of_ite", "uses": []}
+{"name": "Becoming.RuleHandoff.copied_rule_without_participation_fails", "uses": []}
+{"name": "Becoming.RuleHandoff.counts_no_integration_reading", "uses": ["Becoming.RuleHandoff.integrate_enabled_iff", "Becoming.RuleHandoff.no_count_only_decision", "Becoming.bool_eq_of_iff"]}
+{"name": "Becoming.RuleHandoff.duplicate_votes_do_not_create_mandates", "uses": []}
+{"name": "Becoming.RuleHandoff.enabling_one_operation_need_not_enable_revision", "uses": []}
+{"name": "Becoming.RuleHandoff.entry_step_requires", "uses": ["Becoming.RuleHandoff.admitted_requires_review"]}
+{"name": "Becoming.RuleHandoff.entry_without_review_disabled", "uses": ["Becoming.ListTests.none_ne_some", "Becoming.RuleHandoff.office_without_review_fails"]}
+{"name": "Becoming.RuleHandoff.extend_case", "uses": []}
+{"name": "Becoming.RuleHandoff.filter_absent", "uses": []}
+{"name": "Becoming.RuleHandoff.fork_retains_source", "uses": []}
+{"name": "Becoming.RuleHandoff.fork_shares_position", "uses": ["Becoming.RuleHandoff.boundary_is_not_exclusive_membership", "Becoming.RuleHandoff.handoff_step_eq"]}
+{"name": "Becoming.RuleHandoff.fork_step", "uses": ["Becoming.RuleHandoff.fork_retains_source"]}
+{"name": "Becoming.RuleHandoff.formation_trace", "uses": ["Becoming.RuleHandoff.relations_form_through_work", "Becoming.RuleHandoff.trace_iff_run"]}
+{"name": "Becoming.RuleHandoff.handoff_access", "uses": ["Becoming.RuleHandoff.handoff_step_eq", "Becoming.RuleHandoff.inherited_rules_change_access", "Becoming.RuleHandoff.integrate_enabled_iff"]}
+{"name": "Becoming.RuleHandoff.handoff_does_not_invent_participation", "uses": ["Becoming.Narrowing.mem_filter", "Becoming.RuleHandoff.mem_of_contains"]}
+{"name": "Becoming.RuleHandoff.handoff_preserves_record", "uses": []}
+{"name": "Becoming.RuleHandoff.handoff_step_eq", "uses": []}
+{"name": "Becoming.RuleHandoff.handoff_step_keeps", "uses": ["Becoming.RuleHandoff.handoff_preserves_record", "Becoming.RuleHandoff.handoff_step_eq"]}
+{"name": "Becoming.RuleHandoff.handoff_step_present", "uses": ["Becoming.RuleHandoff.handoff_does_not_invent_participation", "Becoming.RuleHandoff.handoff_step_eq"]}
+{"name": "Becoming.RuleHandoff.handoff_without_participation", "uses": ["Becoming.ListTests.none_ne_some", "Becoming.RuleHandoff.copied_rule_without_participation_fails", "Becoming.RuleHandoff.handoff_step_eq"]}
+{"name": "Becoming.RuleHandoff.handoffs_trace_eq", "uses": ["Becoming.RuleHandoff.handoff_step_eq", "Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.RuleHandoff.handoffs_trace_keeps", "uses": ["Becoming.RuleHandoff.handoffs_trace_eq", "Becoming.RuleHandoff.repeated_handoff_inherits"]}
+{"name": "Becoming.RuleHandoff.inherited_course_trace", "uses": ["Becoming.RuleHandoff.inherited_revision_continues", "Becoming.RuleHandoff.trace_iff_run"]}
+{"name": "Becoming.RuleHandoff.inherited_revision_continues", "uses": []}
+{"name": "Becoming.RuleHandoff.inherited_rules_change_access", "uses": []}
+{"name": "Becoming.RuleHandoff.integrate_enabled_iff", "uses": ["Becoming.ListTests.none_ne_some"]}
+{"name": "Becoming.RuleHandoff.integration_without_revision", "uses": ["Becoming.ListTests.none_ne_some", "Becoming.RuleHandoff.enabling_one_operation_need_not_enable_revision", "Becoming.RuleHandoff.handoff_step_eq", "Becoming.RuleHandoff.trace_iff_run"]}
+{"name": "Becoming.RuleHandoff.low_support_cannot_revise", "uses": []}
+{"name": "Becoming.RuleHandoff.low_support_infeasible", "uses": ["Becoming.ListTests.none_ne_some", "Becoming.RuleHandoff.low_support_cannot_revise", "Becoming.RuleHandoff.trace_iff_run"]}
+{"name": "Becoming.RuleHandoff.majority_acceptance_survives_extension", "uses": ["Becoming.RuleHandoff.extend_case"]}
+{"name": "Becoming.RuleHandoff.majority_integration_extends", "uses": ["Becoming.RuleHandoff.integrate_enabled_iff", "Becoming.RuleHandoff.majority_acceptance_survives_extension"]}
+{"name": "Becoming.RuleHandoff.mem_of_contains", "uses": []}
+{"name": "Becoming.RuleHandoff.no_count_only_decision", "uses": []}
+{"name": "Becoming.RuleHandoff.no_participation_no_integration", "uses": ["Becoming.RuleHandoff.voters_absent"]}
+{"name": "Becoming.RuleHandoff.no_presence_no_integration", "uses": ["Becoming.RuleHandoff.integrate_enabled_iff", "Becoming.RuleHandoff.no_participation_no_integration"]}
+{"name": "Becoming.RuleHandoff.nonadopting_history_inherits", "uses": ["Becoming.RuleHandoff.nonadopting_trace_keeps_rule", "Becoming.RuleHandoff.trace_iff_run"]}
+{"name": "Becoming.RuleHandoff.nonadopting_step_preserves", "uses": ["Becoming.RuleHandoff.adopts_of_nonAdopting", "Becoming.RuleHandoff.rule_kept"]}
+{"name": "Becoming.RuleHandoff.nonadopting_trace_keeps_rule", "uses": ["Becoming.RuleHandoff.nonadopting_step_preserves", "Generative.Trace.brecOn"]}
+{"name": "Becoming.RuleHandoff.office_without_review_fails", "uses": []}
+{"name": "Becoming.RuleHandoff.proposal_alone_does_not_change_rule", "uses": []}
+{"name": "Becoming.RuleHandoff.proposal_step_keeps_rule", "uses": ["Becoming.RuleHandoff.proposal_alone_does_not_change_rule"]}
+{"name": "Becoming.RuleHandoff.relations_form_through_work", "uses": []}
+{"name": "Becoming.RuleHandoff.repeated_handoff_inherits", "uses": []}
+{"name": "Becoming.RuleHandoff.repeated_votes_disabled", "uses": ["Becoming.RuleHandoff.duplicate_votes_do_not_create_mandates", "Becoming.RuleHandoff.integrate_enabled_iff"]}
+{"name": "Becoming.RuleHandoff.review_alone_does_not_confer_office", "uses": []}
+{"name": "Becoming.RuleHandoff.review_step_keeps_roster", "uses": ["Becoming.RuleHandoff.review_alone_does_not_confer_office"]}
+{"name": "Becoming.RuleHandoff.revision_trace", "uses": ["Becoming.RuleHandoff.authorized_revision_is_actual", "Becoming.RuleHandoff.trace_iff_run"]}
+{"name": "Becoming.RuleHandoff.rule_change_located", "uses": ["Becoming.Gated.change_located", "Becoming.RuleHandoff.rule_kept"]}
+{"name": "Becoming.RuleHandoff.rule_inherited", "uses": ["Becoming.Gated.kept_along", "Becoming.RuleHandoff.rule_kept"]}
+{"name": "Becoming.RuleHandoff.rule_kept", "uses": ["Becoming.RuleHandoff.some_of_ite"]}
+{"name": "Becoming.RuleHandoff.same_enacted_relations_same_decision", "uses": []}
+{"name": "Becoming.RuleHandoff.same_relations_same_integration", "uses": ["Becoming.RuleHandoff.integrate_enabled_iff", "Becoming.RuleHandoff.same_enacted_relations_same_decision"]}
+{"name": "Becoming.RuleHandoff.some_of_ite", "uses": []}
+{"name": "Becoming.RuleHandoff.successor_can_revise_inherited_rule", "uses": []}
+{"name": "Becoming.RuleHandoff.successor_revision_trace", "uses": ["Becoming.RuleHandoff.successor_can_revise_inherited_rule", "Becoming.RuleHandoff.trace_iff_run"]}
+{"name": "Becoming.RuleHandoff.trace_iff_run", "uses": ["Becoming.Assurance.trace_ofPartial_iff"]}
+{"name": "Becoming.RuleHandoff.voters_absent", "uses": ["Becoming.RuleHandoff.filter_absent"]}
+{"name": "Becoming.RuleHandoff.wait_and_objection", "uses": ["Becoming.RuleHandoff.integrate_enabled_iff", "Becoming.RuleHandoff.wait_and_objection_matter"]}
+{"name": "Becoming.RuleHandoff.wait_and_objection_matter", "uses": []}

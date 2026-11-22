@@ -1,0 +1,20 @@
+{"name": "Becoming.SituationTraces.cancels_counts", "uses": ["Becoming.Asymptote.distinct", "Becoming.Interference.cancels", "Becoming.Shuttle.distinct", "Becoming.SituationTraces.signed_traces"]}
+{"name": "Becoming.SituationTraces.cancels_traces", "uses": ["Becoming.Asymptote.distinct", "Becoming.Shuttle.distinct", "Becoming.SituationTraces.finer_traces", "Becoming.Situations.cancels_situations", "Becoming.TypicalRuns.length_listed"]}
+{"name": "Becoming.SituationTraces.course_traces", "uses": ["Becoming.SituationTraces.finer_twoTraces", "Becoming.Situations.situations_of_course", "Becoming.TypicalRuns.sum_listed"]}
+{"name": "Becoming.SituationTraces.course_traces_listed", "uses": ["Becoming.SituationTraces.distinct_of_occ", "Becoming.SituationTraces.finer_traces", "Becoming.Situations.situations_of_course_listed", "Becoming.TypicalRuns.sum_listed"]}
+{"name": "Becoming.SituationTraces.distinct_finer", "uses": ["Becoming.ListTests.mem_map_iff", "Becoming.SituationTraces.distinct_finerSteps", "Becoming.SituationTraces.distinct_joinMap", "Becoming.SituationTraces.distinct_map"]}
+{"name": "Becoming.SituationTraces.distinct_finerSteps", "uses": ["Becoming.ListTests.mem_map_iff", "Becoming.SituationTraces.distinct_joinMap", "Becoming.SituationTraces.distinct_map", "Becoming.SituationTraces.distinct_openSteps", "Becoming.SituationTraces.distinct_upto"]}
+{"name": "Becoming.SituationTraces.distinct_joinMap", "uses": ["Becoming.FinerTraces.of_mem_joinMap", "Becoming.distinct_append"]}
+{"name": "Becoming.SituationTraces.distinct_map", "uses": ["Becoming.ListTests.mem_map_iff"]}
+{"name": "Becoming.SituationTraces.distinct_of_occ", "uses": ["Becoming.SituationTraces.occ_pos"]}
+{"name": "Becoming.SituationTraces.distinct_openSteps", "uses": ["Becoming.ListTests.mem_map_iff", "Becoming.SituationTraces.distinct_joinMap", "Becoming.SituationTraces.distinct_map"]}
+{"name": "Becoming.SituationTraces.distinct_upto", "uses": ["Becoming.FinerTraces.lt_of_mem_upto"]}
+{"name": "Becoming.SituationTraces.event_traces_concentrated", "uses": ["Becoming.Asymptote.distinct", "Becoming.SituationTraces.finer_traces", "Becoming.Situations.event_concentrated", "Becoming.TypicalRuns.sum_listed"]}
+{"name": "Becoming.SituationTraces.event_traces_count", "uses": ["Becoming.Asymptote.distinct", "Becoming.SituationTraces.finer_traces", "Becoming.Situations.event_count", "Becoming.TypicalRuns.length_listed"]}
+{"name": "Becoming.SituationTraces.event_traces_typical", "uses": ["Becoming.Asymptote.distinct", "Becoming.SituationTraces.finer_traces", "Becoming.Situations.event_typical", "Becoming.TypicalRuns.sum_listed"]}
+{"name": "Becoming.SituationTraces.finer_traces", "uses": ["Becoming.FinerTraces.mem_finer_iff", "Becoming.SituationTraces.distinct_finer"]}
+{"name": "Becoming.SituationTraces.finer_twoTraces", "uses": ["Becoming.Asymptote.distinct", "Becoming.FinerTraces.two_values_mem_iff", "Becoming.Shuttle.distinct", "Becoming.SituationTraces.distinct_finer"]}
+{"name": "Becoming.SituationTraces.occ_pos", "uses": []}
+{"name": "Becoming.SituationTraces.signed_traces", "uses": ["Becoming.SituationTraces.finer_traces", "Becoming.Situations.signed_counts", "Becoming.TypicalRuns.sum_listed"]}
+{"name": "Becoming.SituationTraces.traces_count", "uses": ["Becoming.SituationTraces.finer_twoTraces", "Becoming.Situations.situations_count", "Becoming.TypicalRuns.length_listed"]}
+{"name": "Becoming.SituationTraces.traces_typical", "uses": ["Becoming.SituationTraces.finer_twoTraces", "Becoming.Situations.situations_typical", "Becoming.TypicalRuns.sum_listed"]}

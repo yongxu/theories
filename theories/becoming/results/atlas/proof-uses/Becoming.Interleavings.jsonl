@@ -1,0 +1,163 @@
+{"name": "Becoming.Interleavings.LocalLaw.Apart.symm", "uses": ["Becoming.Interleavings.bool_absurd"]}
+{"name": "Becoming.Interleavings.LocalLaw.Touching.remove", "uses": ["Becoming.Interleavings.LocalLaw.exchangeAt_append", "Becoming.Interleavings.LocalLaw.exchangeAt_append_lt", "Becoming.le_dest"]}
+{"name": "Becoming.Interleavings.LocalLaw.Touching.tail", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.act_agree", "uses": ["Becoming.Interleavings.LocalLaw.keeps", "Becoming.Interleavings.LocalLaw.reads"]}
+{"name": "Becoming.Interleavings.LocalLaw.act_comm", "uses": ["Becoming.Interleavings.LocalLaw.Apart.symm", "Becoming.Interleavings.LocalLaw.keeps", "Becoming.Interleavings.LocalLaw.reads"]}
+{"name": "Becoming.Interleavings.LocalLaw.afterOwn_zero", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.apart_of_shares", "uses": ["Becoming.Interleavings.LocalLaw.shares_of_mem", "Becoming.Interleavings.bool_absurd"]}
+{"name": "Becoming.Interleavings.LocalLaw.around_contains", "uses": ["Becoming.Interleavings.LocalLaw.bool_or_false_left", "Becoming.Interleavings.LocalLaw.bool_or_false_right", "Becoming.Interleavings.LocalLaw.untouched_unmoved"]}
+{"name": "Becoming.Interleavings.LocalLaw.around_joined", "uses": ["Becoming.Interleavings.LocalLaw.exchangeAt_some", "Becoming.Interleavings.LocalLaw.touchAt_some", "Becoming.ListTests.or_left", "Becoming.ListTests.or_right"]}
+{"name": "Becoming.Interleavings.LocalLaw.around_keeps_identity", "uses": ["Becoming.Interleavings.LocalLaw.around_joined", "Becoming.Interleavings.LocalLaw.keeps_consecutive"]}
+{"name": "Becoming.Interleavings.LocalLaw.bool_or_false_left", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.bool_or_false_right", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.change_renumber", "uses": ["Becoming.Interleavings.LocalLaw.runUpTo_renumber", "Becoming.Interleavings.LocalLaw.runUpTo_untouched", "Becoming.Interleavings.LocalLaw.touchAt_iff", "Becoming.Interleavings.LocalLaw.touchAt_renumber"]}
+{"name": "Becoming.Interleavings.LocalLaw.done_nil", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Interleavings.LocalLaw.eq_of_courses", "uses": ["Becoming.Interleavings.LocalLaw.ownCourse_false", "Becoming.Interleavings.LocalLaw.ownCourse_true", "Becoming.Interleavings.cons_heads", "Becoming.Interleavings.cons_ne_nil", "Becoming.Interleavings.cons_tails"]}
+{"name": "Becoming.Interleavings.LocalLaw.exchangeAt_append", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.exchangeAt_append_lt", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.exchangeAt_beyond", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.exchangeAt_lt", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.exchangeAt_mem", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.exchangeAt_none", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.exchangeAt_own", "uses": ["Becoming.Interleavings.LocalLaw.ownCount_false", "Becoming.Interleavings.LocalLaw.ownCount_true", "Becoming.Interleavings.LocalLaw.ownCount_zero", "Becoming.Interleavings.LocalLaw.ownCourse_false", "Becoming.Interleavings.LocalLaw.ownCourse_true"]}
+{"name": "Becoming.Interleavings.LocalLaw.exchangeAt_some", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.exists_of_shares", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.fall_of_change", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.firstAt_after", "uses": ["Becoming.Interleavings.LocalLaw.exchangeAt_own", "Becoming.Interleavings.LocalLaw.firstAt_least", "Becoming.Interleavings.LocalLaw.ownCount_firstAt", "Becoming.Interleavings.LocalLaw.ownCount_le", "Becoming.Interleavings.LocalLaw.ownCount_mono"]}
+{"name": "Becoming.Interleavings.LocalLaw.firstAt_false", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.firstAt_least", "uses": ["Becoming.Interleavings.LocalLaw.firstAt_false", "Becoming.Interleavings.LocalLaw.firstAt_true", "Becoming.Interleavings.LocalLaw.ownCount_false", "Becoming.Interleavings.LocalLaw.ownCount_true"]}
+{"name": "Becoming.Interleavings.LocalLaw.firstAt_succ_step", "uses": ["Becoming.Interleavings.LocalLaw.firstAt_false", "Becoming.Interleavings.LocalLaw.firstAt_true", "Becoming.Interleavings.LocalLaw.ownCourse_false", "Becoming.Interleavings.LocalLaw.ownCourse_true"]}
+{"name": "Becoming.Interleavings.LocalLaw.firstAt_true", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.heads_cons", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.heads_eq", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.index_matches", "uses": ["Becoming.Interleavings.LocalLaw.exchangeAt_lt", "Becoming.Interleavings.LocalLaw.exchangeAt_own", "Becoming.Interleavings.LocalLaw.firstAt_succ_step"]}
+{"name": "Becoming.Interleavings.LocalLaw.keeps", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.keeps_consecutive", "uses": ["Becoming.le_dest"]}
+{"name": "Becoming.Interleavings.LocalLaw.length_insert", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.length_of_courses", "uses": ["Becoming.Interleavings.LocalLaw.Touching.remove", "Becoming.Interleavings.LocalLaw.Touching.tail", "Becoming.Interleavings.LocalLaw.length_insert", "Becoming.Interleavings.LocalLaw.ownCourse_false", "Becoming.Interleavings.LocalLaw.ownCourse_true", "Becoming.Interleavings.LocalLaw.split_heads", "Becoming.Interleavings.cons_ne_nil", "Becoming.Interleavings.cons_tails"]}
+{"name": "Becoming.Interleavings.LocalLaw.length_of_interleavings", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.not_done", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.occurrence_matches", "uses": ["Becoming.Interleavings.LocalLaw.Apart.symm", "Becoming.Interleavings.LocalLaw.exchangeAt_append", "Becoming.Interleavings.LocalLaw.exchangeAt_append_lt", "Becoming.Interleavings.LocalLaw.exchangeAt_mem", "Becoming.Interleavings.LocalLaw.exists_of_shares", "Becoming.Interleavings.LocalLaw.ownCount_append", "Becoming.Interleavings.LocalLaw.ownCount_append_le", "Becoming.Interleavings.LocalLaw.ownCount_false", "Becoming.Interleavings.LocalLaw.ownCount_true", "Becoming.Interleavings.LocalLaw.ownCount_untouched", "Becoming.Interleavings.LocalLaw.ownCourse_false", "Becoming.Interleavings.LocalLaw.ownCourse_true", "Becoming.Interleavings.LocalLaw.split_heads", "Becoming.Interleavings.LocalLaw.untouched_of_shares", "Becoming.Interleavings.bool_absurd", "Becoming.Interleavings.cons_tails", "Becoming.le_dest"]}
+{"name": "Becoming.Interleavings.LocalLaw.ownCount_append", "uses": ["Becoming.Interleavings.LocalLaw.ownCount_false", "Becoming.Interleavings.LocalLaw.ownCount_true"]}
+{"name": "Becoming.Interleavings.LocalLaw.ownCount_append_le", "uses": ["Becoming.Interleavings.LocalLaw.ownCount_false", "Becoming.Interleavings.LocalLaw.ownCount_true"]}
+{"name": "Becoming.Interleavings.LocalLaw.ownCount_false", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.ownCount_firstAt", "uses": ["Becoming.Interleavings.LocalLaw.firstAt_false", "Becoming.Interleavings.LocalLaw.firstAt_true", "Becoming.Interleavings.LocalLaw.ownCount_false", "Becoming.Interleavings.LocalLaw.ownCount_true", "Becoming.Interleavings.LocalLaw.ownCourse_false", "Becoming.Interleavings.LocalLaw.ownCourse_true"]}
+{"name": "Becoming.Interleavings.LocalLaw.ownCount_index", "uses": ["Becoming.Interleavings.LocalLaw.length_of_interleavings", "Becoming.Interleavings.LocalLaw.ownCount_firstAt", "Becoming.Interleavings.LocalLaw.ownCount_le"]}
+{"name": "Becoming.Interleavings.LocalLaw.ownCount_le", "uses": ["Becoming.Interleavings.LocalLaw.ownCount_false", "Becoming.Interleavings.LocalLaw.ownCount_true", "Becoming.Interleavings.LocalLaw.ownCourse_false", "Becoming.Interleavings.LocalLaw.ownCourse_true"]}
+{"name": "Becoming.Interleavings.LocalLaw.ownCount_mono", "uses": ["Becoming.Interleavings.LocalLaw.ownCount_false", "Becoming.Interleavings.LocalLaw.ownCount_true"]}
+{"name": "Becoming.Interleavings.LocalLaw.ownCount_true", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.ownCount_untouched", "uses": ["Becoming.Interleavings.LocalLaw.ownCount_le", "Becoming.Interleavings.LocalLaw.ownCourse_untouched"]}
+{"name": "Becoming.Interleavings.LocalLaw.ownCount_zero", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.ownCourse_append", "uses": ["Becoming.Interleavings.LocalLaw.ownCourse_false", "Becoming.Interleavings.LocalLaw.ownCourse_true"]}
+{"name": "Becoming.Interleavings.LocalLaw.ownCourse_false", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.ownCourse_true", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.ownCourse_untouched", "uses": ["Becoming.Interleavings.LocalLaw.ownCourse_false"]}
+{"name": "Becoming.Interleavings.LocalLaw.pick_cons", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.pick_cons_head", "uses": ["Becoming.Interleavings.LocalLaw.pick_cons"]}
+{"name": "Becoming.Interleavings.LocalLaw.pick_nil_head", "uses": ["Becoming.Interleavings.LocalLaw.pick_cons"]}
+{"name": "Becoming.Interleavings.LocalLaw.pick_some", "uses": ["Becoming.Interleavings.LocalLaw.pick_cons_head", "Becoming.Interleavings.LocalLaw.pick_nil_head", "Becoming.Interleavings.cons_heads", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Interleavings.LocalLaw.pick_spec", "uses": ["Becoming.Interleavings.LocalLaw.pick_cons_head", "Becoming.Interleavings.LocalLaw.pick_nil_head"]}
+{"name": "Becoming.Interleavings.LocalLaw.pop_false", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.pop_interleaves", "uses": ["Becoming.Interleavings.LocalLaw.heads_eq", "Becoming.Interleavings.LocalLaw.pop_false", "Becoming.Interleavings.LocalLaw.pop_true", "Becoming.Interleavings.LocalLaw.ready_heads", "Becoming.Interleavings.LocalLaw.split_heads"]}
+{"name": "Becoming.Interleavings.LocalLaw.pop_true", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.reads", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.reads_renumber", "uses": ["Becoming.Interleavings.LocalLaw.runUpTo_renumber"]}
+{"name": "Becoming.Interleavings.LocalLaw.ready_heads", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Interleavings.LocalLaw.ready_of_heads", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.renumber_beyond", "uses": ["Becoming.Interleavings.LocalLaw.exchangeAt_beyond", "Becoming.Interleavings.LocalLaw.renumber_none"]}
+{"name": "Becoming.Interleavings.LocalLaw.renumber_count", "uses": ["Becoming.Interleavings.LocalLaw.renumber_spec"]}
+{"name": "Becoming.Interleavings.LocalLaw.renumber_exchange", "uses": ["Becoming.Interleavings.LocalLaw.exchangeAt_beyond", "Becoming.Interleavings.LocalLaw.exchangeAt_none", "Becoming.Interleavings.LocalLaw.length_of_courses", "Becoming.Interleavings.LocalLaw.renumber_none", "Becoming.Interleavings.LocalLaw.renumber_spec"]}
+{"name": "Becoming.Interleavings.LocalLaw.renumber_index", "uses": ["Becoming.Interleavings.LocalLaw.renumber_spec"]}
+{"name": "Becoming.Interleavings.LocalLaw.renumber_keeps", "uses": ["Becoming.Interleavings.LocalLaw.exchangeAt_own", "Becoming.Interleavings.LocalLaw.ownCount_mono", "Becoming.Interleavings.LocalLaw.renumber_count", "Becoming.Interleavings.LocalLaw.touchAt_iff"]}
+{"name": "Becoming.Interleavings.LocalLaw.renumber_lead", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.renumber_lt", "uses": ["Becoming.Interleavings.LocalLaw.exchangeAt_lt", "Becoming.Interleavings.LocalLaw.exchangeAt_some", "Becoming.Interleavings.LocalLaw.renumber_exchange"]}
+{"name": "Becoming.Interleavings.LocalLaw.renumber_none", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.renumber_reindexes", "uses": ["Becoming.Interleavings.LocalLaw.length_of_courses", "Becoming.Interleavings.LocalLaw.renumber_lt", "Becoming.Interleavings.LocalLaw.renumber_renumber"]}
+{"name": "Becoming.Interleavings.LocalLaw.renumber_renumber", "uses": ["Becoming.Interleavings.LocalLaw.exchangeAt_beyond", "Becoming.Interleavings.LocalLaw.exchangeAt_none", "Becoming.Interleavings.LocalLaw.length_of_courses", "Becoming.Interleavings.LocalLaw.renumber_none", "Becoming.Interleavings.LocalLaw.renumber_spec", "Becoming.Interleavings.LocalLaw.step_of_ownCount"]}
+{"name": "Becoming.Interleavings.LocalLaw.renumber_spec", "uses": ["Becoming.Interleavings.LocalLaw.exchangeAt_own", "Becoming.Interleavings.LocalLaw.firstAt_after", "Becoming.Interleavings.LocalLaw.occurrence_matches", "Becoming.Interleavings.LocalLaw.renumber_lead", "Becoming.Interleavings.LocalLaw.touchedIn_mem", "Becoming.Interleavings.LocalLaw.touches_of_touchedIn"]}
+{"name": "Becoming.Interleavings.LocalLaw.rise_of_change", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.runUpTo_agree", "uses": ["Becoming.Interleavings.LocalLaw.act_agree"]}
+{"name": "Becoming.Interleavings.LocalLaw.runUpTo_append", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.runUpTo_append_le", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.runUpTo_index", "uses": ["Becoming.Interleavings.LocalLaw.ownCount_index", "Becoming.Interleavings.LocalLaw.runUpTo_of_own"]}
+{"name": "Becoming.Interleavings.LocalLaw.runUpTo_of_own", "uses": ["Becoming.Interleavings.LocalLaw.runUpTo_own", "Becoming.Interleavings.LocalLaw.standingAfter_of_interleavings"]}
+{"name": "Becoming.Interleavings.LocalLaw.runUpTo_own", "uses": ["Becoming.Interleavings.LocalLaw.afterOwn_zero", "Becoming.Interleavings.LocalLaw.keeps", "Becoming.Interleavings.LocalLaw.ownCount_false", "Becoming.Interleavings.LocalLaw.ownCount_true", "Becoming.Interleavings.LocalLaw.standings_false", "Becoming.Interleavings.LocalLaw.standings_true"]}
+{"name": "Becoming.Interleavings.LocalLaw.runUpTo_renumber", "uses": ["Becoming.Interleavings.LocalLaw.exchangeAt_own", "Becoming.Interleavings.LocalLaw.renumber_spec", "Becoming.Interleavings.LocalLaw.runUpTo_of_own"]}
+{"name": "Becoming.Interleavings.LocalLaw.runUpTo_succ", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.runUpTo_untouched", "uses": ["Becoming.Interleavings.LocalLaw.keeps", "Becoming.Interleavings.LocalLaw.runUpTo_succ", "Becoming.Interleavings.LocalLaw.touchAt_some"]}
+{"name": "Becoming.Interleavings.LocalLaw.runUpTo_whole", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.run_agree", "uses": ["Becoming.Interleavings.LocalLaw.act_agree"]}
+{"name": "Becoming.Interleavings.LocalLaw.run_idle", "uses": ["Becoming.Interleavings.LocalLaw.keeps", "Becoming.Interleavings.LocalLaw.ownCourse_false", "Becoming.Interleavings.LocalLaw.ownCourse_true", "Becoming.Interleavings.LocalLaw.run_agree", "Becoming.Interleavings.cons_ne_nil"]}
+{"name": "Becoming.Interleavings.LocalLaw.run_move", "uses": ["Becoming.Interleavings.LocalLaw.act_comm", "Becoming.Interleavings.LocalLaw.run_agree"]}
+{"name": "Becoming.Interleavings.LocalLaw.run_of_courses", "uses": ["Becoming.Interleavings.LocalLaw.exists_of_shares", "Becoming.Interleavings.LocalLaw.keeps", "Becoming.Interleavings.LocalLaw.ownCourse_false", "Becoming.Interleavings.LocalLaw.ownCourse_true", "Becoming.Interleavings.LocalLaw.run_agree", "Becoming.Interleavings.LocalLaw.run_idle", "Becoming.Interleavings.LocalLaw.run_move", "Becoming.Interleavings.LocalLaw.split_heads", "Becoming.Interleavings.LocalLaw.untouched_of_shares", "Becoming.Interleavings.cons_tails"]}
+{"name": "Becoming.Interleavings.LocalLaw.run_trace", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.schedule_iff", "uses": ["Becoming.Interleavings.LocalLaw.schedule_interleaves", "Becoming.Interleavings.LocalLaw.schedule_some"]}
+{"name": "Becoming.Interleavings.LocalLaw.schedule_interleaves", "uses": ["Becoming.Interleavings.LocalLaw.done_nil", "Becoming.Interleavings.LocalLaw.heads_eq", "Becoming.Interleavings.LocalLaw.ownCourse_false", "Becoming.Interleavings.LocalLaw.ownCourse_true", "Becoming.Interleavings.LocalLaw.pick_spec", "Becoming.Interleavings.LocalLaw.pop_false", "Becoming.Interleavings.LocalLaw.pop_true", "Becoming.Interleavings.LocalLaw.ready_heads", "Becoming.Interleavings.LocalLaw.schedule_succ", "Becoming.Interleavings.LocalLaw.schedule_zero"]}
+{"name": "Becoming.Interleavings.LocalLaw.schedule_some", "uses": ["Becoming.Interleavings.LocalLaw.exists_of_shares", "Becoming.Interleavings.LocalLaw.heads_cons", "Becoming.Interleavings.LocalLaw.not_done", "Becoming.Interleavings.LocalLaw.ownCourse_append", "Becoming.Interleavings.LocalLaw.ownCourse_true", "Becoming.Interleavings.LocalLaw.ownCourse_untouched", "Becoming.Interleavings.LocalLaw.pick_some", "Becoming.Interleavings.LocalLaw.pick_spec", "Becoming.Interleavings.LocalLaw.pop_interleaves", "Becoming.Interleavings.LocalLaw.ready_of_heads", "Becoming.Interleavings.LocalLaw.schedule_succ", "Becoming.Interleavings.LocalLaw.schedule_zero", "Becoming.Interleavings.LocalLaw.total_pop", "Becoming.Interleavings.LocalLaw.total_pos", "Becoming.Interleavings.LocalLaw.untouched_of_shares", "Becoming.Interleavings.cons_ne_nil", "Becoming.Interleavings.split_first"]}
+{"name": "Becoming.Interleavings.LocalLaw.schedule_succ", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.schedule_zero", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.shares_of_mem", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Interleavings.LocalLaw.split_heads", "uses": ["Becoming.Interleavings.LocalLaw.apart_of_shares", "Becoming.Interleavings.LocalLaw.exists_of_shares", "Becoming.Interleavings.LocalLaw.ownCourse_append", "Becoming.Interleavings.LocalLaw.ownCourse_false", "Becoming.Interleavings.LocalLaw.ownCourse_true", "Becoming.Interleavings.LocalLaw.ownCourse_untouched", "Becoming.Interleavings.cons_heads", "Becoming.Interleavings.cons_ne_nil", "Becoming.Interleavings.split_first"]}
+{"name": "Becoming.Interleavings.LocalLaw.standingAfter_of_interleavings", "uses": ["Becoming.Interleavings.LocalLaw.standings_of_interleavings"]}
+{"name": "Becoming.Interleavings.LocalLaw.standings_agree", "uses": ["Becoming.Interleavings.LocalLaw.act_agree", "Becoming.Interleavings.LocalLaw.standings_false", "Becoming.Interleavings.LocalLaw.standings_true"]}
+{"name": "Becoming.Interleavings.LocalLaw.standings_false", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.standings_idle", "uses": ["Becoming.Interleavings.LocalLaw.ownCourse_false", "Becoming.Interleavings.LocalLaw.ownCourse_true", "Becoming.Interleavings.LocalLaw.standings_false", "Becoming.Interleavings.cons_ne_nil"]}
+{"name": "Becoming.Interleavings.LocalLaw.standings_move", "uses": ["Becoming.Interleavings.LocalLaw.Apart.symm", "Becoming.Interleavings.LocalLaw.act_comm", "Becoming.Interleavings.LocalLaw.keeps", "Becoming.Interleavings.LocalLaw.reads", "Becoming.Interleavings.LocalLaw.standings_agree", "Becoming.Interleavings.LocalLaw.standings_false", "Becoming.Interleavings.LocalLaw.standings_true"]}
+{"name": "Becoming.Interleavings.LocalLaw.standings_of_courses", "uses": ["Becoming.Interleavings.LocalLaw.exists_of_shares", "Becoming.Interleavings.LocalLaw.keeps", "Becoming.Interleavings.LocalLaw.ownCourse_false", "Becoming.Interleavings.LocalLaw.ownCourse_true", "Becoming.Interleavings.LocalLaw.split_heads", "Becoming.Interleavings.LocalLaw.standings_agree", "Becoming.Interleavings.LocalLaw.standings_false", "Becoming.Interleavings.LocalLaw.standings_idle", "Becoming.Interleavings.LocalLaw.standings_move", "Becoming.Interleavings.LocalLaw.standings_true", "Becoming.Interleavings.LocalLaw.untouched_of_shares", "Becoming.Interleavings.cons_tails"]}
+{"name": "Becoming.Interleavings.LocalLaw.standings_of_interleavings", "uses": ["Becoming.Interleavings.LocalLaw.standings_of_courses"]}
+{"name": "Becoming.Interleavings.LocalLaw.standings_true", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.step_of_ownCount", "uses": ["Becoming.Interleavings.LocalLaw.exchangeAt_own", "Becoming.Interleavings.LocalLaw.ownCount_mono"]}
+{"name": "Becoming.Interleavings.LocalLaw.swap_courses", "uses": ["Becoming.Interleavings.LocalLaw.ownCourse_false", "Becoming.Interleavings.LocalLaw.ownCourse_true"]}
+{"name": "Becoming.Interleavings.LocalLaw.total_absent", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.total_le", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.total_lt", "uses": ["Becoming.Interleavings.LocalLaw.total_le", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Interleavings.LocalLaw.total_pop", "uses": ["Becoming.Interleavings.LocalLaw.pop_false", "Becoming.Interleavings.LocalLaw.pop_true", "Becoming.Interleavings.LocalLaw.total_lt", "Becoming.Interleavings.length_tail_le"]}
+{"name": "Becoming.Interleavings.LocalLaw.total_pos", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Interleavings.LocalLaw.total_single", "uses": ["Becoming.Interleavings.LocalLaw.total_zero_of", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Interleavings.LocalLaw.total_zero_of", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.touchAt_iff", "uses": ["Becoming.Interleavings.LocalLaw.touchAt_none", "Becoming.Interleavings.LocalLaw.touchAt_some", "Becoming.Interleavings.bool_absurd"]}
+{"name": "Becoming.Interleavings.LocalLaw.touchAt_none", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.touchAt_renumber", "uses": ["Becoming.Interleavings.LocalLaw.renumber_exchange"]}
+{"name": "Becoming.Interleavings.LocalLaw.touchAt_some", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.touch_contains_iff", "uses": ["Becoming.Interleavings.LocalLaw.untouched_unmoved", "Becoming.Interleavings.bool_absurd"]}
+{"name": "Becoming.Interleavings.LocalLaw.touchedIn_mem", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Interleavings.LocalLaw.touchedIn_mem_of", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Interleavings.LocalLaw.touchedIn_not_mem", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Interleavings.LocalLaw.touchedIn_pairwise", "uses": ["Becoming.Interleavings.LocalLaw.touchedIn_mem_of"]}
+{"name": "Becoming.Interleavings.LocalLaw.touches_of_touchedIn", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Interleavings.LocalLaw.trace_of_courses", "uses": ["Becoming.Interleavings.LocalLaw.run_of_courses", "Becoming.Interleavings.LocalLaw.trace_run"]}
+{"name": "Becoming.Interleavings.LocalLaw.trace_of_interleavings", "uses": ["Becoming.Interleavings.LocalLaw.trace_of_courses"]}
+{"name": "Becoming.Interleavings.LocalLaw.trace_run", "uses": ["Becoming.Interleavings.LocalLaw.run_agree", "Generative.Trace.brecOn"]}
+{"name": "Becoming.Interleavings.LocalLaw.trace_swap", "uses": ["Becoming.Interleavings.LocalLaw.swap_courses", "Becoming.Interleavings.LocalLaw.trace_of_courses"]}
+{"name": "Becoming.Interleavings.LocalLaw.traced_iff", "uses": ["Becoming.Interleavings.LocalLaw.run_trace", "Becoming.Interleavings.LocalLaw.schedule_iff"]}
+{"name": "Becoming.Interleavings.LocalLaw.traced_unique_iff", "uses": ["Becoming.Interleavings.LocalLaw.run_trace", "Becoming.Interleavings.LocalLaw.unique_iff"]}
+{"name": "Becoming.Interleavings.LocalLaw.unique_iff", "uses": ["Becoming.Interleavings.LocalLaw.apart_of_shares", "Becoming.Interleavings.LocalLaw.eq_of_courses", "Becoming.Interleavings.LocalLaw.exists_of_shares", "Becoming.Interleavings.LocalLaw.ownCourse_false", "Becoming.Interleavings.LocalLaw.swap_courses", "Becoming.Interleavings.LocalLaw.untouched_of_shares", "Becoming.Interleavings.cons_heads", "Becoming.Interleavings.cons_ne_nil"]}
+{"name": "Becoming.Interleavings.LocalLaw.untouched_of_shares", "uses": ["Becoming.Interleavings.LocalLaw.shares_of_mem", "Becoming.Interleavings.bool_absurd"]}
+{"name": "Becoming.Interleavings.LocalLaw.untouched_unmoved", "uses": ["Becoming.Interleavings.LocalLaw.runUpTo_untouched", "Becoming.Interleavings.LocalLaw.touchAt_some", "Becoming.Interleavings.LocalLaw.touchedIn_not_mem"]}
+{"name": "Becoming.Interleavings.LocalLaw.world_active_iff", "uses": ["Becoming.Interleavings.LocalLaw.touchAt_iff"]}
+{"name": "Becoming.Interleavings.LocalLaw.world_balances", "uses": ["Becoming.Interleavings.LocalLaw.keeps", "Becoming.Interleavings.LocalLaw.runUpTo_succ", "Becoming.Interleavings.LocalLaw.total_absent", "Becoming.Interleavings.LocalLaw.total_single", "Becoming.Interleavings.LocalLaw.touchedIn_mem", "Becoming.Interleavings.LocalLaw.touchedIn_not_mem", "Becoming.Interleavings.LocalLaw.touchedIn_pairwise", "Becoming.add_sub_turn"]}
+{"name": "Becoming.Interleavings.LocalLaw.world_final", "uses": ["Becoming.Interleavings.LocalLaw.runUpTo_whole", "Becoming.Interleavings.LocalLaw.run_of_courses"]}
+{"name": "Becoming.Interleavings.LocalLaw.world_index", "uses": ["Becoming.Interleavings.LocalLaw.runUpTo_index"]}
+{"name": "Becoming.Interleavings.LocalLaw.world_level", "uses": []}
+{"name": "Becoming.Interleavings.LocalLaw.world_of_own", "uses": ["Becoming.Interleavings.LocalLaw.runUpTo_of_own"]}
+{"name": "Becoming.Interleavings.LocalLaw.world_own", "uses": ["Becoming.Interleavings.LocalLaw.runUpTo_own"]}
+{"name": "Becoming.Interleavings.LocalLaw.world_reads_alike", "uses": ["Becoming.Interleavings.LocalLaw.world_index"]}
+{"name": "Becoming.Interleavings.LocalLaw.world_renumber_active", "uses": ["Becoming.Interleavings.LocalLaw.touchAt_renumber"]}
+{"name": "Becoming.Interleavings.LocalLaw.world_renumber_correspondence", "uses": ["Becoming.Interleavings.LocalLaw.renumber_beyond", "Becoming.Interleavings.LocalLaw.renumber_keeps", "Becoming.Interleavings.LocalLaw.renumber_reindexes", "Becoming.Interleavings.LocalLaw.touchAt_renumber", "Becoming.Interleavings.LocalLaw.world_renumber_flow"]}
+{"name": "Becoming.Interleavings.LocalLaw.world_renumber_flow", "uses": ["Becoming.Interleavings.LocalLaw.change_renumber", "Becoming.Interleavings.LocalLaw.fall_of_change", "Becoming.Interleavings.LocalLaw.renumber_exchange", "Becoming.Interleavings.LocalLaw.rise_of_change"]}
+{"name": "Becoming.Interleavings.LocalLaw.world_renumber_level", "uses": ["Becoming.Interleavings.LocalLaw.renumber_index", "Becoming.Interleavings.LocalLaw.runUpTo_renumber"]}
+{"name": "Becoming.Interleavings.LocalLaw.world_renumber_reads", "uses": ["Becoming.Interleavings.LocalLaw.reads_renumber"]}
+{"name": "Becoming.Interleavings.LocalLaw.world_swap", "uses": ["Becoming.Interleavings.LocalLaw.act_comm", "Becoming.Interleavings.LocalLaw.runUpTo_agree", "Becoming.Interleavings.LocalLaw.runUpTo_append", "Becoming.Interleavings.LocalLaw.runUpTo_append_le", "Becoming.le_dest"]}
+{"name": "Becoming.Interleavings.LocalLaw.world_swap_between", "uses": ["Becoming.Interleavings.LocalLaw.Apart.symm", "Becoming.Interleavings.LocalLaw.keeps", "Becoming.Interleavings.LocalLaw.reads", "Becoming.Interleavings.LocalLaw.runUpTo_append"]}
+{"name": "Becoming.Interleavings.Pair.apart_differs", "uses": []}
+{"name": "Becoming.Interleavings.Pair.idle_unmatched", "uses": []}
+{"name": "Becoming.Interleavings.Pair.keeps", "uses": []}
+{"name": "Becoming.Interleavings.Pair.reads", "uses": []}
+{"name": "Becoming.Interleavings.Pair.touch_not_contains", "uses": ["Becoming.Interleavings.LocalLaw.touch_contains_iff"]}
+{"name": "Becoming.Interleavings.Shared.order_matters", "uses": []}
+{"name": "Becoming.Interleavings.bool_absurd", "uses": []}
+{"name": "Becoming.Interleavings.cons_heads", "uses": []}
+{"name": "Becoming.Interleavings.cons_ne_nil", "uses": []}
+{"name": "Becoming.Interleavings.cons_tails", "uses": []}
+{"name": "Becoming.Interleavings.length_tail_le", "uses": []}
+{"name": "Becoming.Interleavings.split_first", "uses": ["Becoming.mem_cons_cases"]}

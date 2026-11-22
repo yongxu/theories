@@ -1,0 +1,20 @@
+{"name": "Becoming.World.balancedRing_countsOf", "uses": ["Becoming.FamilyCounts.of_eq", "Becoming.Ring.counts", "Becoming.World.countsOf_decided"]}
+{"name": "Becoming.World.ceasings_exist_iff_listed", "uses": ["Becoming.counts_iff_decided"]}
+{"name": "Becoming.World.comings_exist_iff", "uses": ["Becoming.counts_iff_decided"]}
+{"name": "Becoming.World.comings_exist_iff_listed", "uses": ["Becoming.World.comings_exist_iff"]}
+{"name": "Becoming.World.counting_binds_iff_counted", "uses": ["Becoming.World.counting_binds_iff", "Becoming.World.counting_under", "Becoming.World.counting_under_counted"]}
+{"name": "Becoming.World.counting_free_counted", "uses": ["Becoming.World.counting_free_witnessed", "Becoming.World.table_holds_free"]}
+{"name": "Becoming.World.counting_under_counted", "uses": ["Becoming.World.counting_under_sound", "Becoming.World.counting_under_witnessed", "Becoming.World.table_holds"]}
+{"name": "Becoming.World.embodiedQueue_countsOf", "uses": ["Becoming.FamilyCounts.of_eq", "Becoming.Queue.counts", "Becoming.World.countsOf_decided"]}
+{"name": "Becoming.World.embodiedRing_countsOf", "uses": ["Becoming.FamilyCounts.of_eq", "Becoming.Ring.counts", "Becoming.World.countsOf_decided"]}
+{"name": "Becoming.World.enclosed_change_bound_iff_counted", "uses": ["Becoming.TallyWorlds.occurrences_congr", "Becoming.World.enclosed_change_bound_iff", "Becoming.World.enclosed_counting_under", "Becoming.World.enclosed_counting_under_counted"]}
+{"name": "Becoming.World.enclosed_counting_counted", "uses": ["Becoming.World.census_table_holds₂", "Becoming.World.enclosed_counting_sound", "Becoming.World.enclosed_counting_witnessed"]}
+{"name": "Becoming.World.enclosed_counting_under_counted", "uses": ["Becoming.World.census_table_holds₂", "Becoming.World.enclosed_counting_under_sound", "Becoming.World.enclosed_counting_under_witnessed"]}
+{"name": "Becoming.World.finite_change_bound_iff_counted", "uses": ["Becoming.TallyWorlds.occurrences_congr", "Becoming.World.finite_change_bound_iff", "Becoming.World.finite_counting_under", "Becoming.World.finite_counting_under_counted"]}
+{"name": "Becoming.World.finite_counting_binds_iff_counted", "uses": ["Becoming.World.finite_counting_binds_iff", "Becoming.World.finite_counting_under", "Becoming.World.finite_counting_under_counted"]}
+{"name": "Becoming.World.finite_counting_counted", "uses": ["Becoming.World.census_table_holds₂", "Becoming.World.finite_counting_sound", "Becoming.World.finite_counting_witnessed"]}
+{"name": "Becoming.World.finite_counting_under_counted", "uses": ["Becoming.World.census_table_holds₃", "Becoming.World.finite_counting_under_sound", "Becoming.World.finite_counting_under_witnessed"]}
+{"name": "Becoming.World.premised_counting_counted", "uses": ["Becoming.World.premised_counting_sound", "Becoming.World.premised_counting_witnessed", "Becoming.World.table_holds"]}
+{"name": "Becoming.World.queue_countsOf", "uses": ["Becoming.FamilyCounts.of_eq", "Becoming.Queue.counts", "Becoming.World.countsOf_decided"]}
+{"name": "Becoming.World.ring_countsOf", "uses": ["Becoming.FamilyCounts.of_eq", "Becoming.Ring.counts", "Becoming.World.countsOf_decided"]}
+{"name": "Becoming.counted_laws", "uses": ["Becoming.FamilyCounts.of_eq", "Becoming.FamilyCounts.tally", "Becoming.Queue.counts", "Becoming.Queue.listed", "Becoming.familyCounts_decided"]}

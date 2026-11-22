@@ -1,0 +1,3 @@
+{"name": "Becoming.ContactCourses.blind_answers_steps_iff", "uses": ["Becoming.Contacts.blind_answers_iff"]}
+{"name": "Becoming.ContactCourses.finite_blind_answers_steps", "uses": ["Becoming.Contacts.finite_blind_answers"]}
+{"name": "Becoming.ContactCourses.run_stays_iff", "uses": ["Becoming.References.stays_iff"]}

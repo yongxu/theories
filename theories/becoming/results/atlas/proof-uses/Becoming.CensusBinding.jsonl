@@ -1,0 +1,22 @@
+{"name": "Becoming.World.binding_activity_iff_counted", "uses": ["Becoming.World.binding_activity_iff", "Becoming.World.binding_counting_under", "Becoming.World.binding_counting_under_counted"]}
+{"name": "Becoming.World.binding_arising_iff_counted", "uses": ["Becoming.World.binding_arising_iff", "Becoming.World.binding_counting_under", "Becoming.World.binding_counting_under_counted"]}
+{"name": "Becoming.World.binding_counting_counted", "uses": ["Becoming.World.binding_counting_sound", "Becoming.World.binding_counting_witnessed", "Becoming.World.census_table_holds₂"]}
+{"name": "Becoming.World.binding_counting_under_counted", "uses": ["Becoming.World.binding_counting_under_sound", "Becoming.World.binding_counting_under_witnessed", "Becoming.World.table_holds"]}
+{"name": "Becoming.World.binding_joint_iff_counted", "uses": ["Becoming.World.binding_counting_under", "Becoming.World.binding_counting_under_counted", "Becoming.World.binding_joint_iff"]}
+{"name": "Becoming.World.binds_adds_counted", "uses": ["Becoming.World.premised_counting_counted"]}
+{"name": "Becoming.World.counting_binds_jointly_counted", "uses": ["Becoming.FamilyCounts.company", "Becoming.Queue.listed", "Becoming.Queue.lone_tally", "Becoming.World.active_of_coming_jointly", "Becoming.World.embodiedQueue_countsOf", "Becoming.World.queue_countsOf"]}
+{"name": "Becoming.World.counting_free_parts_counted", "uses": ["Becoming.Queue.listed", "Becoming.World.counting_free_counted", "Becoming.World.embodiedQueue_countsOf", "Becoming.World.embodiedQueue_premised", "Becoming.World.queue_countsOf", "Becoming.World.queue_premised"]}
+{"name": "Becoming.World.enclosed_binding_activity_iff_counted", "uses": ["Becoming.World.enclosed_binding_activity_iff", "Becoming.World.enclosed_binding_counting_under", "Becoming.World.enclosed_binding_counting_under_counted"]}
+{"name": "Becoming.World.enclosed_binding_arising_iff_counted", "uses": ["Becoming.World.enclosed_binding_arising_iff", "Becoming.World.enclosed_binding_counting_under", "Becoming.World.enclosed_binding_counting_under_counted"]}
+{"name": "Becoming.World.enclosed_binding_counting_counted", "uses": ["Becoming.World.enclosed_binding_counting_sound", "Becoming.World.enclosed_binding_counting_witnessed", "Becoming.World.table_holds"]}
+{"name": "Becoming.World.enclosed_binding_counting_under_counted", "uses": ["Becoming.World.enclosed_binding_counting_under_sound", "Becoming.World.enclosed_binding_counting_under_witnessed", "Becoming.World.table_holds"]}
+{"name": "Becoming.World.enclosed_binding_joint_iff_counted", "uses": ["Becoming.World.enclosed_binding_counting_under", "Becoming.World.enclosed_binding_counting_under_counted", "Becoming.World.enclosed_binding_joint_iff"]}
+{"name": "Becoming.World.enclosed_iff_finite_counting_counted", "uses": ["Becoming.World.enclosed_counting_counted", "Becoming.World.finite_counting_counted"]}
+{"name": "Becoming.World.enclosed_iff_finite_counting_under_counted", "uses": ["Becoming.World.enclosed_counting_under_counted", "Becoming.World.enclosed_iff_finite_tally", "Becoming.World.finite_counting_under_counted"]}
+{"name": "Becoming.World.finite_binding_activity_iff_counted", "uses": ["Becoming.World.finite_binding_activity_iff", "Becoming.World.finite_binding_counting_under", "Becoming.World.finite_binding_counting_under_counted"]}
+{"name": "Becoming.World.finite_binding_arising_iff_counted", "uses": ["Becoming.World.finite_binding_arising_iff", "Becoming.World.finite_binding_counting_under", "Becoming.World.finite_binding_counting_under_counted"]}
+{"name": "Becoming.World.finite_binding_census_counted", "uses": []}
+{"name": "Becoming.World.finite_binding_counting_counted", "uses": ["Becoming.World.finite_binding_counting_sound", "Becoming.World.finite_binding_counting_witnessed", "Becoming.World.table_holds"]}
+{"name": "Becoming.World.finite_binding_counting_under_counted", "uses": ["Becoming.World.finite_binding_counting_under_sound", "Becoming.World.finite_binding_counting_under_witnessed", "Becoming.World.table_holds"]}
+{"name": "Becoming.World.finite_binding_joint_iff_counted", "uses": ["Becoming.World.finite_binding_counting_under", "Becoming.World.finite_binding_counting_under_counted", "Becoming.World.finite_binding_joint_iff"]}
+{"name": "Becoming.World.standing_iff_counting_counted", "uses": ["Becoming.World.counting_under_counted", "Becoming.World.standing_counting_under"]}

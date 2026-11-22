@@ -1,0 +1,89 @@
+{"name": "Becoming.Adheres.not_verified_compl", "uses": ["Becoming.Ideals.AdheresBy.not_interior_compl", "Becoming.adheres_iff_adheresBy", "Becoming.verified_iff_interiorBy"]}
+{"name": "Becoming.Dense.noStretchRefutes", "uses": []}
+{"name": "Becoming.Ideals.AdheresBy.not_interior_compl", "uses": []}
+{"name": "Becoming.Ideals.InteriorBy.holds", "uses": []}
+{"name": "Becoming.Ideals.InteriorBy.not_adheres_compl", "uses": []}
+{"name": "Becoming.Ideals.Open.compl_closed", "uses": ["Becoming.Ideals.avoids_closed", "Becoming.Ideals.avoids_iff_not_meets", "Becoming.Ideals.closed_of_iff", "Becoming.Ideals.open_iff_meets_principal"]}
+{"name": "Becoming.Ideals.Open.inaccessible", "uses": []}
+{"name": "Becoming.Ideals.Open.interior_iff", "uses": ["Becoming.Ideals.Open.verifiable", "Becoming.Ideals.VerifiableBy.interior_iff"]}
+{"name": "Becoming.Ideals.Open.principal_of_mem", "uses": ["Becoming.Ideals.Ideal.Same.symm", "Becoming.Ideals.Open.inaccessible", "Becoming.Ideals.Open.same", "Becoming.Ideals.principalFamily_directed", "Becoming.Ideals.union_principalFamily"]}
+{"name": "Becoming.Ideals.Open.same", "uses": ["Becoming.Ideals.Ideal.Same.le", "Becoming.Ideals.Open.upper"]}
+{"name": "Becoming.Ideals.Open.upper", "uses": []}
+{"name": "Becoming.Ideals.Open.verifiable", "uses": ["Becoming.Ideals.Open.principal_of_mem", "Becoming.Ideals.Open.upper", "Becoming.Ideals.principal_le_iff"]}
+{"name": "Becoming.Ideals.OrNotAdheresBy.remainder", "uses": []}
+{"name": "Becoming.Ideals.VerifiableBy.compl_refutable", "uses": []}
+{"name": "Becoming.Ideals.VerifiableBy.interior_iff", "uses": ["Becoming.Ideals.InteriorBy.holds"]}
+{"name": "Becoming.Ideals.avoids_iff_not_meets", "uses": []}
+{"name": "Becoming.Ideals.interiorBy_largest", "uses": []}
+{"name": "Becoming.Ideals.interiorBy_verifiable", "uses": []}
+{"name": "Becoming.Ideals.interior_iff_meets", "uses": []}
+{"name": "Becoming.Ideals.interior_largest", "uses": ["Becoming.Ideals.Open.verifiable", "Becoming.Ideals.interiorBy_largest"]}
+{"name": "Becoming.Ideals.interior_open", "uses": ["Becoming.Ideals.interiorBy_verifiable", "Becoming.Ideals.verifiable_open"]}
+{"name": "Becoming.Ideals.meets_open", "uses": []}
+{"name": "Becoming.Ideals.meets_principal_iff", "uses": ["Becoming.Ideals.Preorder.refl"]}
+{"name": "Becoming.Ideals.open_and", "uses": ["Becoming.Ideals.Directed.directed", "Becoming.Ideals.Open.inaccessible", "Becoming.Ideals.Open.upper"]}
+{"name": "Becoming.Ideals.open_exists", "uses": ["Becoming.Ideals.Open.inaccessible", "Becoming.Ideals.Open.upper"]}
+{"name": "Becoming.Ideals.open_false", "uses": []}
+{"name": "Becoming.Ideals.open_iff_meets_principal", "uses": ["Becoming.Ideals.Open.principal_of_mem", "Becoming.Ideals.Open.upper", "Becoming.Ideals.principal_le_iff"]}
+{"name": "Becoming.Ideals.open_iff_upper", "uses": ["Becoming.Ideals.meets_open", "Becoming.Ideals.open_iff_meets_principal", "Becoming.Ideals.open_of_iff", "Becoming.Ideals.principal_upper"]}
+{"name": "Becoming.Ideals.open_iff_verifiable", "uses": ["Becoming.Ideals.Open.verifiable", "Becoming.Ideals.verifiable_open"]}
+{"name": "Becoming.Ideals.open_of_iff", "uses": ["Becoming.Ideals.Open.inaccessible", "Becoming.Ideals.Open.upper"]}
+{"name": "Becoming.Ideals.open_true", "uses": ["Becoming.Ideals.Directed.nonempty"]}
+{"name": "Becoming.Ideals.orNotAdheresBy_meets_of_decided", "uses": ["Becoming.Ideals.AdheresBy.closed"]}
+{"name": "Becoming.Ideals.principal_upper", "uses": ["Becoming.Ideals.Open.upper", "Becoming.Ideals.principal_le_iff"]}
+{"name": "Becoming.Ideals.refutableBy_iff_compl", "uses": []}
+{"name": "Becoming.Ideals.refutable_iff_compl_open", "uses": ["Becoming.Ideals.open_iff_verifiable", "Becoming.Ideals.refutableBy_iff_compl"]}
+{"name": "Becoming.Ideals.remainderBy_iff_of_adheres", "uses": []}
+{"name": "Becoming.Ideals.remainderBy_largest", "uses": ["Becoming.Ideals.AdheresBy.mono"]}
+{"name": "Becoming.Ideals.remainderBy_meets_not_not", "uses": ["Becoming.Ideals.remainderBy_not_refuted"]}
+{"name": "Becoming.Ideals.remainderBy_meets_of_decided", "uses": ["Becoming.Ideals.AdheresBy.closed"]}
+{"name": "Becoming.Ideals.remainderBy_not_refuted", "uses": ["Becoming.Ideals.AdheresBy.closed"]}
+{"name": "Becoming.Ideals.splitBy", "uses": ["Becoming.Ideals.AdheresBy.of"]}
+{"name": "Becoming.Ideals.splitBy_or", "uses": ["Becoming.Ideals.AdheresBy.of"]}
+{"name": "Becoming.Ideals.upper_unique", "uses": ["Becoming.Ideals.meets_principal_iff"]}
+{"name": "Becoming.Ideals.verifiableBy_iff_interior", "uses": []}
+{"name": "Becoming.Ideals.verifiable_compl_refutable_iff", "uses": ["Becoming.Ideals.Open.verifiable", "Becoming.Ideals.Preorder.refl", "Becoming.Ideals.VerifiableBy.compl_refutable", "Becoming.Ideals.meets_open"]}
+{"name": "Becoming.Ideals.verifiable_open", "uses": []}
+{"name": "Becoming.Insulates.refutable_not_not", "uses": ["Becoming.Dense.noStretchRefutes", "Becoming.Refutable.noStretchRefutes_not_not"]}
+{"name": "Becoming.OrNotAdheres.remainder", "uses": ["Becoming.Ideals.OrNotAdheresBy.remainder", "Becoming.adheres_iff_adheresBy", "Becoming.remainder_iff_remainderBy"]}
+{"name": "Becoming.Refutable.noStretchRefutes_not_not", "uses": []}
+{"name": "Becoming.Refutable.remainder_not_not", "uses": ["Becoming.Refutable.noStretchRefutes_not_not", "Becoming.remainder_not_refuted"]}
+{"name": "Becoming.Sequences.eventually_dense", "uses": ["Becoming.Sequences.splice_after"]}
+{"name": "Becoming.Sequences.eventually_verifiable", "uses": []}
+{"name": "Becoming.Sequences.recurs_dense", "uses": ["Becoming.Sequences.splice_after"]}
+{"name": "Becoming.Sequences.recurs_not_verifiable", "uses": ["Becoming.Sequences.splice_after", "Becoming.Sequences.splice_agree", "Becoming.not_verifiable_of_adheres"]}
+{"name": "Becoming.Stretches.closed_iff_remainder", "uses": []}
+{"name": "Becoming.Stretches.open_compl_adheres", "uses": ["Becoming.Ideals.Open.compl_closed", "Becoming.Stretches.adheres_iff_closed"]}
+{"name": "Becoming.Stretches.open_iff_upper", "uses": ["Becoming.Ideals.open_iff_upper", "Becoming.Ideals.upper_unique"]}
+{"name": "Becoming.Stretches.open_runs", "uses": ["Becoming.Ideals.open_iff_meets_principal"]}
+{"name": "Becoming.Stretches.refutable_of_compl_open", "uses": ["Becoming.Ideals.refutable_iff_compl_open", "Becoming.Stretches.refutable_of_class"]}
+{"name": "Becoming.Stretches.refutable_or", "uses": ["Becoming.Stretches.verifiable_and", "Becoming.refutable_iff_compl_verifiable"]}
+{"name": "Becoming.Stretches.verifiable_and", "uses": ["Becoming.Ideals.meets_open", "Becoming.Ideals.open_and", "Becoming.Stretches.verifiable_iff_class", "Becoming.Stretches.verifiable_iff_open"]}
+{"name": "Becoming.Stretches.verifiable_exists", "uses": ["Becoming.Ideals.meets_open", "Becoming.Ideals.open_exists", "Becoming.Stretches.verifiable_iff_class", "Becoming.Stretches.verifiable_iff_open"]}
+{"name": "Becoming.Stretches.verifiable_iff_class", "uses": ["Becoming.Ideals.meets_open", "Becoming.Stretches.verifiable_iff_open", "Becoming.Verified.holds", "Becoming.verified_iff_interiorBy"]}
+{"name": "Becoming.Stretches.verifiable_iff_open", "uses": ["Becoming.Ideals.InteriorBy.holds", "Becoming.Ideals.meets_open", "Becoming.Stretches.verifiable_of_class", "Becoming.verifiable_iff_verifiableBy", "Becoming.verified_iff_interiorBy"]}
+{"name": "Becoming.Stretches.verifiable_of_class", "uses": ["Becoming.Ideals.Open.verifiable", "Becoming.verifiable_iff_verifiableBy"]}
+{"name": "Becoming.Stretches.verifiable_true_false", "uses": ["Becoming.Ideals.open_false", "Becoming.Ideals.open_true", "Becoming.Stretches.verifiable_iff_open"]}
+{"name": "Becoming.Verifiable.compl_refutable", "uses": ["Becoming.Ideals.VerifiableBy.compl_refutable", "Becoming.refutable_iff_refutableBy", "Becoming.verifiable_iff_verifiableBy"]}
+{"name": "Becoming.Verified.holds", "uses": ["Becoming.Ideals.InteriorBy.holds", "Becoming.verified_iff_interiorBy"]}
+{"name": "Becoming.Verified.not_adheres_compl", "uses": ["Becoming.Ideals.InteriorBy.not_adheres_compl", "Becoming.adheres_iff_adheresBy", "Becoming.verified_iff_interiorBy"]}
+{"name": "Becoming.decided_at_stretch", "uses": []}
+{"name": "Becoming.insulates_iff_dense", "uses": []}
+{"name": "Becoming.orNotAdheres_dense_iff_em", "uses": ["Becoming.Adheres.of", "Becoming.Ideals.orNotAdheresBy_meets_of_decided", "Becoming.Run.AgreeUpTo.refl", "Becoming.adheres_iff_adheresBy"]}
+{"name": "Becoming.refutable_iff_compl_verifiable", "uses": ["Becoming.Ideals.refutableBy_iff_compl", "Becoming.refutable_iff_refutableBy", "Becoming.verifiable_iff_verifiableBy"]}
+{"name": "Becoming.refutes_iff_refutes_hull", "uses": ["Becoming.Adheres.closed", "Becoming.Adheres.of"]}
+{"name": "Becoming.remainder_dense_of_decided", "uses": ["Becoming.Ideals.remainderBy_meets_of_decided", "Becoming.Run.AgreeUpTo.refl", "Becoming.remainder_iff_remainderBy"]}
+{"name": "Becoming.remainder_iff_of_adheres", "uses": ["Becoming.Ideals.remainderBy_iff_of_adheres", "Becoming.adheres_iff_adheresBy", "Becoming.remainder_iff_remainderBy"]}
+{"name": "Becoming.remainder_iff_remainderBy", "uses": ["Becoming.adheres_iff_adheresBy"]}
+{"name": "Becoming.remainder_largest", "uses": ["Becoming.Ideals.remainderBy_largest", "Becoming.adheres_iff_adheresBy", "Becoming.remainder_iff_remainderBy"]}
+{"name": "Becoming.remainder_meets_not_not", "uses": ["Becoming.Ideals.remainderBy_meets_not_not", "Becoming.Run.AgreeUpTo.refl", "Becoming.remainder_iff_remainderBy"]}
+{"name": "Becoming.remainder_not_refuted", "uses": ["Becoming.Ideals.remainderBy_not_refuted", "Becoming.Run.AgreeUpTo.refl", "Becoming.remainder_iff_remainderBy"]}
+{"name": "Becoming.same_hull_same_refutations", "uses": ["Becoming.refutes_iff_refutes_hull"]}
+{"name": "Becoming.split", "uses": ["Becoming.Ideals.splitBy", "Becoming.adheres_iff_adheresBy", "Becoming.remainder_iff_remainderBy"]}
+{"name": "Becoming.split_or", "uses": ["Becoming.Ideals.splitBy_or", "Becoming.adheres_iff_adheresBy"]}
+{"name": "Becoming.verifiable_compl_refutable_markov", "uses": ["Becoming.Sequences.splice_after", "Becoming.Sequences.splice_agree", "Becoming.false_below_or_true"]}
+{"name": "Becoming.verifiable_iff_verifiableBy", "uses": ["Becoming.Run.AgreeUpTo.refl", "Becoming.Run.AgreeUpTo.trans"]}
+{"name": "Becoming.verifiable_iff_verified", "uses": ["Becoming.Ideals.verifiableBy_iff_interior", "Becoming.verifiable_iff_verifiableBy", "Becoming.verified_iff_interiorBy"]}
+{"name": "Becoming.verified_iff_interiorBy", "uses": ["Becoming.Run.AgreeUpTo.refl", "Becoming.Run.AgreeUpTo.trans"]}
+{"name": "Becoming.verified_largest", "uses": ["Becoming.Ideals.interiorBy_largest", "Becoming.verifiable_iff_verifiableBy", "Becoming.verified_iff_interiorBy"]}
+{"name": "Becoming.verified_verifiable", "uses": ["Becoming.Ideals.interiorBy_verifiable", "Becoming.verifiable_iff_verifiableBy", "Becoming.verified_iff_interiorBy"]}

@@ -1,0 +1,55 @@
+{"name": "Becoming.ExchangeLaw.ofMoves_lumped_stage", "uses": []}
+{"name": "Becoming.MoveFormation.alt_ne", "uses": ["Becoming.ListTests.ne_not"]}
+{"name": "Becoming.MoveRuns.both_one_move", "uses": ["Becoming.partForms_and_restForms_iff"]}
+{"name": "Becoming.MoveRuns.coupled_formed", "uses": ["Becoming.lumped_id"]}
+{"name": "Becoming.MoveRuns.formed_of_finer", "uses": ["Becoming.lumped_of_finer"]}
+{"name": "Becoming.MoveRuns.ofMoves_formed_stage", "uses": ["Becoming.ExchangeLaw.ofMoves_lumped_stage", "Becoming.Run.step"]}
+{"name": "Becoming.MoveRuns.parity_neither_alone", "uses": ["Becoming.Parity.neither_alone"]}
+{"name": "Becoming.MoveRuns.part_policy", "uses": ["Becoming.partForms_iff"]}
+{"name": "Becoming.MoveRuns.rest_differs", "uses": ["Becoming.rest_differs_of_varied"]}
+{"name": "Becoming.MoveRuns.rest_policy", "uses": ["Becoming.restForms_iff"]}
+{"name": "Becoming.MoveRuns.still_driven", "uses": ["Becoming.Still.driven"]}
+{"name": "Becoming.Parity.neither_alone", "uses": ["Becoming.Readout.lumped_of_decodes", "Becoming.not_lumped_of_varied"]}
+{"name": "Becoming.PartForms.goAlike", "uses": []}
+{"name": "Becoming.PartForms.parts_agree", "uses": ["Becoming.GoAlike.runs_agree", "Becoming.PartForms.goAlike"]}
+{"name": "Becoming.Run.keepHistory_formed", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.keepHistory_length"]}
+{"name": "Becoming.Run.moves_lasso_of_part_held", "uses": ["Becoming.Learning.lasso_of_held", "Becoming.Run.part_orbit"]}
+{"name": "Becoming.Run.moves_lasso_of_rest_held", "uses": ["Becoming.Learning.lasso_of_held", "Becoming.Run.rest_orbit"]}
+{"name": "Becoming.Run.moves_lasso_of_whole_held", "uses": ["Becoming.Learning.lasso_of_held", "Becoming.Run.whole_orbit"]}
+{"name": "Becoming.Run.ofClosedBy_toClosedBy", "uses": []}
+{"name": "Becoming.Run.part_act_eq_rest_act", "uses": []}
+{"name": "Becoming.Run.part_orbit", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Run.part_trajectory", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Run.part_unheld_of_never_cycles", "uses": ["Becoming.Run.moves_lasso_of_part_held"]}
+{"name": "Becoming.Run.rest_driven_by_part", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Run.rest_orbit", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Run.rest_trajectory", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Run.rest_unheld_of_never_cycles", "uses": ["Becoming.Run.moves_lasso_of_rest_held"]}
+{"name": "Becoming.Run.whole_orbit", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Run.whole_unheld_of_never_cycles", "uses": ["Becoming.Run.moves_lasso_of_whole_held"]}
+{"name": "Becoming.Run.withClock_part", "uses": []}
+{"name": "Becoming.Run.withClock_restForms", "uses": []}
+{"name": "Becoming.Run.withLasso_held", "uses": ["Becoming.Learning.lasso_positions", "Becoming.mem_downFrom"]}
+{"name": "Becoming.Run.withLasso_part", "uses": ["Becoming.Learning.lasso_positions"]}
+{"name": "Becoming.Still.driven", "uses": ["Becoming.MoveFormation.alt_ne", "Becoming.lumped_of_new", "Becoming.not_lumped_of_varied"]}
+{"name": "Becoming.TwoClocks.closed_not_own", "uses": ["Becoming.MoveFormation.alt_ne"]}
+{"name": "Becoming.TwoClocks.one_course_two_laws", "uses": ["Becoming.MoveFormation.alt_ne"]}
+{"name": "Becoming.clock_determined", "uses": []}
+{"name": "Becoming.closedBy_formed", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.coupled_determined", "uses": []}
+{"name": "Becoming.lumped_const_iff", "uses": []}
+{"name": "Becoming.lumped_id", "uses": []}
+{"name": "Becoming.lumped_iff_singleValued", "uses": ["Becoming.Readout.reading_single_iff"]}
+{"name": "Becoming.lumped_of_finer", "uses": []}
+{"name": "Becoming.lumped_of_new", "uses": []}
+{"name": "Becoming.lumped_upto_iff", "uses": ["Becoming.policyUpto_agrees"]}
+{"name": "Becoming.no_policy_upto_iff", "uses": ["Becoming.policyUpto_taken", "Becoming.throughout_or_fails"]}
+{"name": "Becoming.not_lumped_of_varied", "uses": []}
+{"name": "Becoming.partForms_and_restForms_iff", "uses": []}
+{"name": "Becoming.partForms_iff", "uses": []}
+{"name": "Becoming.policyUpto_agrees", "uses": []}
+{"name": "Becoming.policyUpto_taken", "uses": []}
+{"name": "Becoming.reading_le", "uses": []}
+{"name": "Becoming.restForms_iff", "uses": []}
+{"name": "Becoming.rest_differs_of_varied", "uses": []}
+{"name": "Becoming.throughout_or_fails", "uses": []}

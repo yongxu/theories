@@ -1,0 +1,16 @@
+{"name": "Becoming.Choosing.early_not_alike_postponed", "uses": ["Becoming.Alike.step", "Becoming.DeterminedAt.of_alike_postponed"]}
+{"name": "Becoming.Choosing.postponed_alike", "uses": ["Becoming.Choosing.sameTests", "Becoming.sameTests_iff_postponed_alike"]}
+{"name": "Becoming.DeterminedAt.of_alike_postponed", "uses": ["Becoming.Alike.step", "Becoming.Alike.symm", "Becoming.Alike.trans", "Becoming.Frame.postponed_members"]}
+{"name": "Becoming.Frame.postponed_determinedAt", "uses": ["Becoming.Frame.postponed_members"]}
+{"name": "Becoming.Frame.postponed_members", "uses": []}
+{"name": "Becoming.Frame.postponed_tests_iff", "uses": ["Becoming.Frame.postponed_trace_members", "Becoming.Frame.postponed_trace_of"]}
+{"name": "Becoming.Frame.postponed_tests_one", "uses": ["Becoming.Frame.postponed_tests_iff"]}
+{"name": "Becoming.Frame.postponed_trace_iff", "uses": ["Becoming.Frame.postponed_trace_inhabited", "Becoming.Frame.postponed_trace_members", "Becoming.Frame.postponed_trace_of"]}
+{"name": "Becoming.Frame.postponed_trace_inhabited", "uses": []}
+{"name": "Becoming.Frame.postponed_trace_members", "uses": ["Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.Frame.postponed_trace_of", "uses": ["Generative.trace_cons_iff"]}
+{"name": "Becoming.Frame.postponed_trace_one", "uses": ["Becoming.Frame.postponed_trace_iff"]}
+{"name": "Becoming.alike_postponed_iff_determined", "uses": ["Becoming.DeterminedAt.of_alike_postponed", "Becoming.Frame.postponed_determinedAt", "Becoming.alike_iff_sameTests", "Becoming.sameTests_postponed"]}
+{"name": "Becoming.sameTests_iff_postponed_alike", "uses": ["Becoming.Frame.postponed_determinedAt", "Becoming.alike_iff_sameTests", "Becoming.sameTests_postponed_iff"]}
+{"name": "Becoming.sameTests_postponed", "uses": ["Becoming.Frame.postponed_tests_one", "Becoming.Frame.postponed_trace_one"]}
+{"name": "Becoming.sameTests_postponed_iff", "uses": ["Becoming.Frame.postponed_tests_one", "Becoming.Frame.postponed_trace_one"]}

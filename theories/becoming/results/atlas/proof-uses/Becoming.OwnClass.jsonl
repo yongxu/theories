@@ -1,0 +1,66 @@
+{"name": "Becoming.Flow.ReachReturns.couplingClass_reach", "uses": ["Becoming.Flow.ReachReturns.represented", "Becoming.Flow.couplingClass_reach_iff"]}
+{"name": "Becoming.Flow.couplingClass_class", "uses": ["Becoming.Web.alikeBy_class"]}
+{"name": "Becoming.Flow.couplingClass_closed", "uses": ["Becoming.Flow.couplingClass_class", "Becoming.«所闭之自反»", "Becoming.«本类常闭则类闭»"]}
+{"name": "Becoming.Flow.couplingClass_held_iff", "uses": ["Becoming.«内外之所缘同于»", "Becoming.«所闭之自反»"]}
+{"name": "Becoming.Flow.couplingClass_held_iff_back", "uses": ["Becoming.Flow.couplingClass_held_iff", "Becoming.Flow.withinCoupling_thresholdOnly", "Becoming.Flow.withinReach_iff_influence"]}
+{"name": "Becoming.Flow.couplingClass_line_iff_loop", "uses": ["Becoming.Flow.couplingClass_line_within", "Becoming.Flow.withinCoupling_thresholdOnly", "Becoming.Flow.withinReach_iff_influence", "Becoming.«及之单调»", "Becoming.«返之所及即环»"]}
+{"name": "Becoming.Flow.couplingClass_line_within", "uses": ["Becoming.«内外之线不出»", "Becoming.«及之所闭»", "Becoming.«所闭之自反»", "Becoming.«相续含于及»"]}
+{"name": "Becoming.Flow.couplingClass_reach_iff", "uses": ["Becoming.«内外之后皆续当且仅当后皆在内»", "Becoming.«及之所闭»", "Becoming.«所闭之自反»", "Becoming.«所闭当且仅当同一或及»"]}
+{"name": "Becoming.Flow.couplingClass_reach_iff_returns", "uses": ["Becoming.Flow.couplingClass_reach_iff", "Becoming.Flow.reachReturns_iff_represented"]}
+{"name": "Becoming.JoinBreaks.E_class", "uses": []}
+{"name": "Becoming.JoinBreaks.E_le_J", "uses": []}
+{"name": "Becoming.JoinBreaks.E_meets", "uses": ["Becoming.JoinBreaks.E_class", "Becoming.JoinBreaks.decided", "Becoming.«类闭则本类常闭»"]}
+{"name": "Becoming.JoinBreaks.F_class", "uses": []}
+{"name": "Becoming.JoinBreaks.F_le_J", "uses": []}
+{"name": "Becoming.JoinBreaks.F_meets", "uses": ["Becoming.JoinBreaks.F_class", "Becoming.JoinBreaks.decided", "Becoming.«类闭则本类常闭»"]}
+{"name": "Becoming.JoinBreaks.J_class", "uses": []}
+{"name": "Becoming.JoinBreaks.J_fails", "uses": ["Becoming.JoinBreaks.J_class", "Becoming.JoinBreaks.m_goes", "Becoming.«本类常闭则所缘同类»"]}
+{"name": "Becoming.JoinBreaks.J_least", "uses": ["Becoming.«类».refl", "Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.JoinBreaks.decided", "uses": []}
+{"name": "Becoming.JoinBreaks.m_goes", "uses": []}
+{"name": "Becoming.MeetBreaks.E_class", "uses": []}
+{"name": "Becoming.MeetBreaks.E_constant", "uses": []}
+{"name": "Becoming.MeetBreaks.F_class", "uses": []}
+{"name": "Becoming.MeetBreaks.F_constant", "uses": []}
+{"name": "Becoming.MeetBreaks.idle_both", "uses": ["Becoming.MeetBreaks.E_constant", "Becoming.MeetBreaks.F_constant"]}
+{"name": "Becoming.MeetBreaks.idle_meet_not_constant", "uses": ["Becoming.MeetBreaks.meet_not_constant"]}
+{"name": "Becoming.MeetBreaks.meet_not_constant", "uses": []}
+{"name": "Becoming.MeetBreaks.meet_not_constant_at", "uses": ["Becoming.MeetBreaks.E_constant", "Becoming.MeetBreaks.F_constant", "Becoming.MeetBreaks.meet_not_constant"]}
+{"name": "Becoming.MeetBreaks.not_held", "uses": []}
+{"name": "Becoming.ReturnsAlong.downstreamClass_regular", "uses": ["Becoming.«后类为类»", "Becoming.«后类最细»", "Becoming.«返则后类本类常闭»"]}
+{"name": "Becoming.ReturnsNotRegular.g_back", "uses": ["Becoming.«及之所闭»"]}
+{"name": "Becoming.ReturnsNotRegular.h_not_back", "uses": []}
+{"name": "Becoming.ReturnsNotRegular.k_back", "uses": ["Becoming.«及之所闭»"]}
+{"name": "Becoming.ReturnsNotRegular.reach_without_regularity", "uses": ["Becoming.ReturnsNotRegular.g_back", "Becoming.ReturnsNotRegular.h_not_back", "Becoming.ReturnsNotRegular.k_back", "Becoming.ReturnsNotRegular.returns", "Becoming.Web.alikeBy_class", "Becoming.«后皆续则所缘同于»", "Becoming.«所闭之自反»", "Becoming.«所闭之逆»", "Becoming.«类».refl", "Becoming.«返之后皆续当且仅当皆返»"]}
+{"name": "Becoming.ReturnsNotRegular.returns", "uses": ["Becoming.ReturnsNotRegular.k_back", "Becoming.ReturnsNotRegular.within_f", "Becoming.«所闭之自反»"]}
+{"name": "Becoming.ReturnsNotRegular.within_f", "uses": []}
+{"name": "Becoming.«内外之后皆续当且仅当后皆在内»", "uses": ["Becoming.Web.alikeBy_class", "Becoming.«后皆续当且仅当后皆同类»"]}
+{"name": "Becoming.«内外之所缘同于»", "uses": []}
+{"name": "Becoming.«内外之线不出»", "uses": ["Becoming.Web.alikeBy_class", "Becoming.«线内同类»"]}
+{"name": "Becoming.«判则后类本类常闭»", "uses": ["Becoming.«后类为类»", "Becoming.«后类之本»", "Becoming.«所闭之闭»", "Becoming.«类闭则本类常闭»"]}
+{"name": "Becoming.«各后类续无外即一之续无外»", "uses": ["Becoming.«后类之所及即一之所及»"]}
+{"name": "Becoming.«各本类常闭则续无外即一之续无外»", "uses": ["Becoming.«本类常闭则所及即一之所及»"]}
+{"name": "Becoming.«合为类»", "uses": ["Becoming.«类».refl", "Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«后类为类»", "uses": []}
+{"name": "Becoming.«后类之所及即一之所及»", "uses": ["Becoming.eq_or_reach_iff_reached", "Becoming.«及之单调»", "Becoming.«及之所闭»", "Becoming.«后皆同类则后皆续»", "Becoming.«后类为类»", "Becoming.«后类之本»"]}
+{"name": "Becoming.«后类之本»", "uses": ["Becoming.«所闭之自反»"]}
+{"name": "Becoming.«后类最细»", "uses": ["Becoming.«后类本类常闭»", "Becoming.«本类常闭则含后类»"]}
+{"name": "Becoming.«后类本类常闭»", "uses": ["Becoming.«及之所闭»", "Becoming.«后类之本»", "Becoming.«所闭之闭»", "Becoming.«本类常闭则后皆同»"]}
+{"name": "Becoming.«无环则返之所及唯己»", "uses": ["Becoming.«及之传递»", "Becoming.«所闭当且仅当同一或及»", "Becoming.«返之所及即环»"]}
+{"name": "Becoming.«本类常则闭当且仅当所及即一之所及»", "uses": ["Becoming.eq_or_reach_iff_reached", "Becoming.«后皆续则所缘同于»", "Becoming.«本类常闭则所及即一之所及»"]}
+{"name": "Becoming.«本类常闭之交»", "uses": ["Becoming.«本类常闭则类闭»", "Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«本类常闭之遍交»", "uses": ["Becoming.«本类常闭则类闭»", "Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«本类常闭则后皆同»", "uses": ["Becoming.«本类常闭则所缘同类»", "Becoming.«类».refl", "Becoming.«类».symm"]}
+{"name": "Becoming.«本类常闭则含后类»", "uses": ["Becoming.«本类常闭则后皆同»", "Becoming.«类».refl", "Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«本类常闭则所及即一之所及»", "uses": ["Becoming.eq_or_reach_iff_reached", "Becoming.«及之单调»", "Becoming.«及之首步»", "Becoming.«本类常闭则后皆续»", "Becoming.«类».refl"]}
+{"name": "Becoming.«本类常闭则类闭»", "uses": ["Becoming.«本类常闭则所缘同类»", "Becoming.«类».symm"]}
+{"name": "Becoming.«本类常闭当且仅当类闭»", "uses": ["Becoming.«本类常闭则类闭»", "Becoming.«类闭则本类常闭»"]}
+{"name": "Becoming.«皆为类»", "uses": ["Becoming.«类».refl", "Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«类闭则本类常闭»", "uses": ["Becoming.«类».refl", "Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«返之后皆续当且仅当皆返»", "uses": ["Becoming.«内外之后皆续当且仅当后皆在内»", "Becoming.«及之所闭»", "Becoming.«所闭之自反»", "Becoming.«所闭之逆»", "Becoming.«所闭当且仅当同一或及»"]}
+{"name": "Becoming.«返之所及即环»", "uses": ["Becoming.«内外之线不出»", "Becoming.«及之所闭»", "Becoming.«所闭之自反»", "Becoming.«所闭之逆»", "Becoming.«所闭当且仅当同一或及»", "Becoming.«相续含于及»", "Becoming.«返之线»"]}
+{"name": "Becoming.«返之线»", "uses": ["Becoming.«及之所闭»", "Becoming.«所闭之传递»", "Becoming.«所闭之逆»"]}
+{"name": "Becoming.«返则后类本类常闭»", "uses": ["Becoming.«及之所闭»", "Becoming.«及之首步»", "Becoming.«后类之本»", "Becoming.«所闭之闭»", "Becoming.«所闭当且仅当同一或及»"]}
+{"name": "Becoming.«静不闭»", "uses": []}
+{"name": "Becoming.«静之本类至终有常»", "uses": []}
+{"name": "Becoming.«静最细»", "uses": ["Becoming.«类».refl", "Becoming.«静之本类至终有常»"]}

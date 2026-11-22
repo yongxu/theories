@@ -1,0 +1,81 @@
+{"name": "Becoming.Flame.alike_class", "uses": []}
+{"name": "Becoming.Flame.joint_eq", "uses": []}
+{"name": "Becoming.Flame.not_core_f₀", "uses": ["Becoming.Flame.not_core_f₁", "Becoming.«有常之逐点»"]}
+{"name": "Becoming.Flame.not_core_f₁", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.«一为类»", "uses": []}
+{"name": "Becoming.«一之下无复生»", "uses": []}
+{"name": "Becoming.«一之下无生生»", "uses": ["Becoming.«生生之展»"]}
+{"name": "Becoming.«一之下皆息»", "uses": []}
+{"name": "Becoming.«一之生»", "uses": []}
+{"name": "Becoming.«一之续»", "uses": []}
+{"name": "Becoming.«不复生则息»", "uses": ["Becoming.«自不复生则息»"]}
+{"name": "Becoming.«两火以薪定理»", "uses": ["Becoming.Flame.joint_eq", "Becoming.«有常之逐点»"]}
+{"name": "Becoming.«两火同火不足以定理»", "uses": ["Becoming.Flame.not_core_f₀", "Becoming.«有常之逐点»"]}
+{"name": "Becoming.«两火火薪相须»", "uses": ["Becoming.Flame.joint_eq", "Becoming.«合有常则足以定核»", "Becoming.«有亡之续则不有常»", "Becoming.«有常之逐点»"]}
+{"name": "Becoming.«两端分则中有标»", "uses": []}
+{"name": "Becoming.«亡于核下不变»", "uses": ["Becoming.«有常之逐点»", "Becoming.«类».trans"]}
+{"name": "Becoming.«亡于粗则亡于细»", "uses": ["Becoming.«粗化»"]}
+{"name": "Becoming.«亡于细者不必亡于粗»", "uses": []}
+{"name": "Becoming.«以核为判据则火无续»", "uses": ["Becoming.Flame.not_core_f₀", "Becoming.Flame.not_core_f₁"]}
+{"name": "Becoming.«任一缘可为续»", "uses": []}
+{"name": "Becoming.«位同则住同»", "uses": ["Becoming.«有常之逐点»", "Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«位同则生亡同»", "uses": ["Becoming.«亡于核下不变»", "Becoming.«位核含于核»", "Becoming.«生于位核下不变»"]}
+{"name": "Becoming.«位核含于核»", "uses": []}
+{"name": "Becoming.«位核含于逆核»", "uses": []}
+{"name": "Becoming.«位根»", "uses": []}
+{"name": "Becoming.«住于细则住于粗»", "uses": ["Becoming.«粗化»"]}
+{"name": "Becoming.«住亡不并»", "uses": []}
+{"name": "Becoming.«分叉»", "uses": []}
+{"name": "Becoming.«则之传递»", "uses": []}
+{"name": "Becoming.«则之自反»", "uses": []}
+{"name": "Becoming.«及».brecOn", "uses": []}
+{"name": "Becoming.«及之传递»", "uses": []}
+{"name": "Becoming.«及之单调»", "uses": []}
+{"name": "Becoming.«及之首步»", "uses": []}
+{"name": "Becoming.«合有常则足以定核»", "uses": ["Becoming.«核之单调»", "Becoming.«类».refl", "Becoming.«类».symm", "Becoming.«类».trans", "Becoming.«类有常当且仅当含于核»"]}
+{"name": "Becoming.«同族».brecOn", "uses": []}
+{"name": "Becoming.«同族为类»", "uses": []}
+{"name": "Becoming.«四相之定当且仅当排中»", "uses": []}
+{"name": "Becoming.«四相俱时»", "uses": []}
+{"name": "Becoming.«四相无自立»", "uses": ["Becoming.«四相俱时»"]}
+{"name": "Becoming.«因于则因于核»", "uses": ["Becoming.«合有常则足以定核»"]}
+{"name": "Becoming.«复生则粗复生»", "uses": ["Becoming.«类».refl"]}
+{"name": "Becoming.«息».brecOn", "uses": []}
+{"name": "Becoming.«无环则及为序»", "uses": ["Becoming.«及之传递»"]}
+{"name": "Becoming.«无自相须»", "uses": ["Becoming.«有常之同谓»"]}
+{"name": "Becoming.«有亡之续则不有常»", "uses": ["Becoming.«有常则续不尽»"]}
+{"name": "Becoming.«有常之同谓»", "uses": []}
+{"name": "Becoming.«有常之逐点»", "uses": []}
+{"name": "Becoming.«有常则相续不尽»", "uses": ["Becoming.«有常则续不尽»"]}
+{"name": "Becoming.«有常则续不尽»", "uses": []}
+{"name": "Becoming.«有常可复合»", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.«核为类»", "uses": ["Becoming.«有常之逐点»", "Becoming.«有常可复合»", "Becoming.«类».refl", "Becoming.«类».trans", "Becoming.«静有常»"]}
+{"name": "Becoming.«核之单调»", "uses": []}
+{"name": "Becoming.«根»", "uses": []}
+{"name": "Becoming.«火之见证不择类»", "uses": ["Becoming.«静有常»"]}
+{"name": "Becoming.«火薪相须»", "uses": ["Becoming.Flame.joint_eq", "Becoming.«有亡之续则不有常»", "Becoming.«静有常»"]}
+{"name": "Becoming.«生于位核下不变»", "uses": ["Becoming.«位核含于逆核»", "Becoming.«生于逆核下不变»"]}
+{"name": "Becoming.«生于粗则生于细»", "uses": ["Becoming.«粗化»"]}
+{"name": "Becoming.«生于细而续于粗则异»", "uses": []}
+{"name": "Becoming.«生于逆核下不变»", "uses": ["Becoming.«有常之逐点»", "Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«生住不并»", "uses": []}
+{"name": "Becoming.«生生不息»", "uses": ["Becoming.«生生之展»"]}
+{"name": "Becoming.«生生之展»", "uses": []}
+{"name": "Becoming.«生生则复生»", "uses": ["Becoming.«及之首步»", "Becoming.«生生之展»"]}
+{"name": "Becoming.«生生最大»", "uses": []}
+{"name": "Becoming.«相续含于及»", "uses": ["Becoming.«及之单调»", "Becoming.«续含于缘»"]}
+{"name": "Becoming.«相须之对称»", "uses": ["Becoming.«有常之同谓»"]}
+{"name": "Becoming.«相须则相须核»", "uses": ["Becoming.«合有常则足以定核»"]}
+{"name": "Becoming.«类».refl", "uses": []}
+{"name": "Becoming.«类».symm", "uses": []}
+{"name": "Becoming.«类».trans", "uses": []}
+{"name": "Becoming.«类内之缘成环»", "uses": ["Becoming.«类».refl", "Becoming.«类».symm"]}
+{"name": "Becoming.«类有常当且仅当含于核»", "uses": ["Becoming.«则之自反»", "Becoming.«根»", "Becoming.«类».symm"]}
+{"name": "Becoming.«粗化»", "uses": []}
+{"name": "Becoming.«粗只连异类»", "uses": ["Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«线内同类»", "uses": ["Becoming.«类».trans"]}
+{"name": "Becoming.«续含于缘»", "uses": []}
+{"name": "Becoming.«自不复生则息»", "uses": ["Becoming.«及之首步»"]}
+{"name": "Becoming.«蜡烛之合»", "uses": []}
+{"name": "Becoming.«闭合当且仅当有常»", "uses": ["Becoming.«有常之逐点»", "Becoming.«类».refl", "Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«静有常»", "uses": []}

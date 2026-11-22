@@ -1,0 +1,12 @@
+{"name": "Becoming.ActiveReading.absent_dependent", "uses": []}
+{"name": "Becoming.ActiveReading.absent_included", "uses": ["Becoming.ActiveReading.absent_not_consuming", "Becoming.Ranking.absent_sustains"]}
+{"name": "Becoming.ActiveReading.absent_not_consuming", "uses": []}
+{"name": "Becoming.ActiveReading.contest_extends_active", "uses": ["Becoming.Ranking.sharing_included", "RelationalRenewal.Law.overdraw_consuming"]}
+{"name": "Becoming.ActiveReading.contest_readings", "uses": ["Becoming.ActiveReading.contest_extends_active", "Becoming.ActiveReading.winning_active", "Becoming.ActiveReading.winning_withheld", "Becoming.Ranking.renewed_active_extends_iff", "Becoming.Ranking.sharing_included", "RelationalRenewal.Law.overdraw_consuming", "RelationalRenewal.Law.within_renewal_sustains"]}
+{"name": "Becoming.ActiveReading.livingSignificance_wholeRun_iff", "uses": []}
+{"name": "Becoming.ActiveReading.malignant_readings", "uses": ["Becoming.ActiveReading.overdraw_admits_occurrence", "Becoming.Ranking.malignant_ranking"]}
+{"name": "Becoming.ActiveReading.overdraw_admits_occurrence", "uses": ["Becoming.ActiveReading.overdraw_unranked", "Becoming.Ranking.admits_occurrence"]}
+{"name": "Becoming.ActiveReading.overdraw_unranked", "uses": ["Becoming.Ranking.absent_sustains", "Becoming.Ranking.withheld_of_extends", "RelationalRenewal.Law.overdraw_consuming"]}
+{"name": "Becoming.ActiveReading.wholeRun_withholds_consuming", "uses": []}
+{"name": "Becoming.ActiveReading.winning_active", "uses": ["RelationalRenewal.Law.independent_overdraw_persists"]}
+{"name": "Becoming.ActiveReading.winning_withheld", "uses": ["Becoming.ActiveReading.wholeRun_withholds_consuming", "Becoming.Web.static_consumingIn", "RelationalRenewal.Law.independent_overdraw_persists"]}

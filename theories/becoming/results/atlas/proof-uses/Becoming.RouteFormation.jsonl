@@ -1,0 +1,67 @@
+{"name": "Becoming.RouteFormation.accepted_transfers", "uses": ["Becoming.RouteFormation.fits_agrees", "Becoming.RouteFormation.probe_identifies_route", "Becoming.RouteFormation.programFor_operates"]}
+{"name": "Becoming.RouteFormation.assemble_stock", "uses": ["Becoming.RouteFormation.place_stock"]}
+{"name": "Becoming.RouteFormation.attempt_stock", "uses": ["Becoming.RouteFormation.assemble_stock", "Becoming.RouteFormation.discard_stock", "Becoming.RouteFormation.inspect_stock"]}
+{"name": "Becoming.RouteFormation.course_of_moves", "uses": []}
+{"name": "Becoming.RouteFormation.course_stock", "uses": ["Becoming.RouteFormation.step_stock", "Generative.Trace.brecOn"]}
+{"name": "Becoming.RouteFormation.develop_course_account", "uses": ["Becoming.RouteFormation.example_account", "Becoming.RouteFormation.trace_iff"]}
+{"name": "Becoming.RouteFormation.develop_course_collapsed", "uses": ["Becoming.RouteFormation.repertoire_forms_failing_route", "Becoming.RouteFormation.trace_iff"]}
+{"name": "Becoming.RouteFormation.develop_course_executes", "uses": ["Becoming.RouteFormation.formed_answers_novel", "Becoming.RouteFormation.trace_iff"]}
+{"name": "Becoming.RouteFormation.develop_course_no_parts", "uses": ["Becoming.RouteFormation.no_parts_blocks", "Becoming.RouteFormation.trace_iff"]}
+{"name": "Becoming.RouteFormation.develop_course_partial", "uses": ["Becoming.RouteFormation.partial_assembly", "Becoming.RouteFormation.trace_iff"]}
+{"name": "Becoming.RouteFormation.develop_course_records", "uses": ["Becoming.RouteFormation.develop_keeps_records", "Becoming.RouteFormation.trace_iff"]}
+{"name": "Becoming.RouteFormation.develop_course_removed", "uses": ["Becoming.RouteFormation.trace_iff", "Becoming.RouteFormation.verdict_not_program"]}
+{"name": "Becoming.RouteFormation.develop_course_replaces", "uses": ["Becoming.RouteFormation.trace_iff", "Becoming.RouteFormation.wrong_route_replaced"]}
+{"name": "Becoming.RouteFormation.develop_course_short", "uses": ["Becoming.RouteFormation.formed_short", "Becoming.RouteFormation.trace_iff"]}
+{"name": "Becoming.RouteFormation.develop_course_switched", "uses": ["Becoming.RouteFormation.switched_third_route", "Becoming.RouteFormation.trace_iff"]}
+{"name": "Becoming.RouteFormation.develop_course_unobserved", "uses": ["Becoming.RouteFormation.trace_iff", "Becoming.RouteFormation.unobserved_keeps_wrong"]}
+{"name": "Becoming.RouteFormation.develop_keeps_records", "uses": []}
+{"name": "Becoming.RouteFormation.develop_stock", "uses": ["Becoming.RouteFormation.search_stock"]}
+{"name": "Becoming.RouteFormation.discard_stock", "uses": []}
+{"name": "Becoming.RouteFormation.discrepancy_no_parts", "uses": []}
+{"name": "Becoming.RouteFormation.encounter_stock", "uses": ["Becoming.RouteFormation.sub_add_add"]}
+{"name": "Becoming.RouteFormation.equal_primitives_repeat", "uses": ["Becoming.RouteFormation.replicate_append"]}
+{"name": "Becoming.RouteFormation.example_account", "uses": []}
+{"name": "Becoming.RouteFormation.extended_inspection_transfers", "uses": ["Becoming.RouteFormation.extended_transfers", "Becoming.RouteFormation.inspect_installed", "Becoming.RouteFormation.installed_of_test"]}
+{"name": "Becoming.RouteFormation.extended_transfers", "uses": ["Becoming.RouteFormation.equal_primitives_repeat", "Becoming.RouteFormation.mem_two_socket", "Becoming.RouteFormation.programFor_operates"]}
+{"name": "Becoming.RouteFormation.fits_agrees", "uses": ["Becoming.ListTests.and_left", "Becoming.ListTests.and_right"]}
+{"name": "Becoming.RouteFormation.formed_answers_novel", "uses": []}
+{"name": "Becoming.RouteFormation.formed_short", "uses": []}
+{"name": "Becoming.RouteFormation.fresh_record_rebuilds", "uses": []}
+{"name": "Becoming.RouteFormation.inspect_installed", "uses": []}
+{"name": "Becoming.RouteFormation.inspect_stock", "uses": []}
+{"name": "Becoming.RouteFormation.inspection_installs_own", "uses": ["Becoming.RouteFormation.inspect_installed", "Becoming.RouteFormation.own_program_fits"]}
+{"name": "Becoming.RouteFormation.inspection_transfers", "uses": ["Becoming.RouteFormation.accepted_transfers", "Becoming.RouteFormation.inspect_installed", "Becoming.RouteFormation.installed_of_test"]}
+{"name": "Becoming.RouteFormation.installed_of_test", "uses": []}
+{"name": "Becoming.RouteFormation.interpretation_no_route", "uses": []}
+{"name": "Becoming.RouteFormation.mem_two_socket", "uses": []}
+{"name": "Becoming.RouteFormation.no_parts_blocks", "uses": []}
+{"name": "Becoming.RouteFormation.not_mem_of_all", "uses": ["Becoming.ListTests.and_left", "Becoming.ListTests.and_right"]}
+{"name": "Becoming.RouteFormation.novel_record_separates", "uses": []}
+{"name": "Becoming.RouteFormation.old_records_admit_duplicate", "uses": []}
+{"name": "Becoming.RouteFormation.own_program_fits", "uses": []}
+{"name": "Becoming.RouteFormation.partial_assembly", "uses": []}
+{"name": "Becoming.RouteFormation.place_parts", "uses": []}
+{"name": "Becoming.RouteFormation.place_step_parts", "uses": ["Becoming.RouteFormation.place_parts"]}
+{"name": "Becoming.RouteFormation.place_stock", "uses": []}
+{"name": "Becoming.RouteFormation.probe_identifies_route", "uses": ["Becoming.RouteFormation.mem_two_socket"]}
+{"name": "Becoming.RouteFormation.programFor_operates", "uses": ["Becoming.TreeSearch.append_nil"]}
+{"name": "Becoming.RouteFormation.reconsider_stock", "uses": ["Becoming.RouteFormation.develop_stock", "Becoming.RouteFormation.discard_stock", "Becoming.RouteFormation.inspect_stock"]}
+{"name": "Becoming.RouteFormation.repair_account", "uses": []}
+{"name": "Becoming.RouteFormation.repair_course_account", "uses": ["Becoming.RouteFormation.repair_account", "Becoming.RouteFormation.trace_iff"]}
+{"name": "Becoming.RouteFormation.repair_course_further", "uses": ["Becoming.RouteFormation.repaired_answers_further", "Becoming.RouteFormation.trace_iff"]}
+{"name": "Becoming.RouteFormation.repair_course_no_parts", "uses": ["Becoming.RouteFormation.discrepancy_no_parts", "Becoming.RouteFormation.trace_iff"]}
+{"name": "Becoming.RouteFormation.repair_course_rebuilds", "uses": ["Becoming.RouteFormation.fresh_record_rebuilds", "Becoming.RouteFormation.trace_iff"]}
+{"name": "Becoming.RouteFormation.repaired_answers_further", "uses": ["Becoming.RouteFormation.not_mem_of_all"]}
+{"name": "Becoming.RouteFormation.repertoire_forms_failing_route", "uses": []}
+{"name": "Becoming.RouteFormation.replicate_append", "uses": []}
+{"name": "Becoming.RouteFormation.reversal_unseen", "uses": ["Becoming.RouteFormation.equal_primitives_repeat"]}
+{"name": "Becoming.RouteFormation.search_stock", "uses": ["Becoming.RouteFormation.attempt_stock", "Becoming.RouteFormation.search.eq_def"]}
+{"name": "Becoming.RouteFormation.step_stock", "uses": ["Becoming.RouteFormation.develop_stock", "Becoming.RouteFormation.discard_stock", "Becoming.RouteFormation.encounter_stock", "Becoming.RouteFormation.inspect_stock", "Becoming.RouteFormation.place_stock", "Becoming.RouteFormation.reconsider_stock"]}
+{"name": "Becoming.RouteFormation.sub_add_add", "uses": ["Becoming.CodeAcquisition.sub_add_of_le"]}
+{"name": "Becoming.RouteFormation.switched_third_route", "uses": []}
+{"name": "Becoming.RouteFormation.trace_iff", "uses": ["Becoming.ReducedRuns.trace_foldl", "Becoming.RouteFormation.course_of_moves"]}
+{"name": "Becoming.RouteFormation.training_no_route", "uses": ["Becoming.RouteFormation.interpretation_no_route"]}
+{"name": "Becoming.RouteFormation.two_socket_routes", "uses": []}
+{"name": "Becoming.RouteFormation.unobserved_keeps_wrong", "uses": []}
+{"name": "Becoming.RouteFormation.verdict_not_program", "uses": []}
+{"name": "Becoming.RouteFormation.wrong_route_replaced", "uses": []}

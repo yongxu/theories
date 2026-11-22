@@ -1,0 +1,24 @@
+{"name": "Generative.Trace.brecOn", "uses": []}
+{"name": "Generative.enabled_difference_implies_state_difference", "uses": []}
+{"name": "Generative.enabled_iff_singleton_trace", "uses": ["Generative.trace_cons_iff"]}
+{"name": "Generative.enabled_product_iff", "uses": []}
+{"name": "Generative.enabled_projection_iff", "uses": []}
+{"name": "Generative.feasible_append_iff", "uses": ["Generative.trace_append_iff"]}
+{"name": "Generative.feasible_difference_implies_projection_difference", "uses": []}
+{"name": "Generative.feasible_prefix", "uses": ["Generative.feasible_append_iff"]}
+{"name": "Generative.feasible_product_iff", "uses": ["Generative.trace_product_left", "Generative.trace_product_mk", "Generative.trace_product_right"]}
+{"name": "Generative.feasible_projection_iff", "uses": ["Generative.trace_lift", "Generative.trace_map"]}
+{"name": "Generative.local_exact_iff_trace_exact", "uses": ["Generative.projection_exact_iff", "Generative.trace_singleton_iff"]}
+{"name": "Generative.projected_trace_iff", "uses": ["Generative.trace_lift", "Generative.trace_map"]}
+{"name": "Generative.projection_exact_iff", "uses": ["Generative.projected_trace_iff", "Generative.trace_singleton_iff"]}
+{"name": "Generative.trace_append_iff", "uses": ["Generative.trace_cons_iff"]}
+{"name": "Generative.trace_cons_iff", "uses": []}
+{"name": "Generative.trace_faithful_iff", "uses": ["Generative.trace_lift", "Generative.trace_map"]}
+{"name": "Generative.trace_lift", "uses": ["Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Generative.trace_map", "uses": []}
+{"name": "Generative.trace_nil_iff", "uses": []}
+{"name": "Generative.trace_product_iff", "uses": ["Generative.trace_product_left", "Generative.trace_product_mk", "Generative.trace_product_right"]}
+{"name": "Generative.trace_product_left", "uses": []}
+{"name": "Generative.trace_product_mk", "uses": ["Generative.trace_cons_iff"]}
+{"name": "Generative.trace_product_right", "uses": []}
+{"name": "Generative.trace_singleton_iff", "uses": ["Generative.trace_cons_iff", "Generative.trace_nil_iff"]}

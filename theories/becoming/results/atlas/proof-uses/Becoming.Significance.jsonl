@@ -1,0 +1,30 @@
+{"name": "Becoming.Clearing.admits_early", "uses": []}
+{"name": "Becoming.Clearing.clearer_loses_dweller", "uses": ["Becoming.Clearing.admitted_all_without", "Becoming.Clearing.admitted_without", "Becoming.Clearing.dependent", "Becoming.Clearing.unsupported_with", "Becoming.Web.Retains.not_added"]}
+{"name": "Becoming.Clearing.time_bounded_permits", "uses": ["Becoming.Clearing.admits_early", "Becoming.Clearing.clearer_loses_dweller"]}
+{"name": "Becoming.Preemption.not_undermining_yet_loses", "uses": ["Becoming.Flow.Balances.opens_nothing", "Becoming.Flow.WithheldLevels.unique", "Becoming.Preemption.withheld", "Becoming.Web.Retains.not_added"]}
+{"name": "Becoming.ReadsOnlyDynamics.admits_rival", "uses": ["Becoming.bounded_is_rival", "Becoming.bounded_rival"]}
+{"name": "Becoming.ReadsOnlyDynamics.not_entails", "uses": []}
+{"name": "Becoming.Restoring.Inflow.retains_adds", "uses": ["Becoming.Restoring.Inflow.widens", "Becoming.Web.Includes.retains", "Becoming.Web.adds_iff_exceeds"]}
+{"name": "Becoming.Transfer.unordered", "uses": ["Becoming.Transfer.mixed", "Becoming.Web.Retains.not_added", "Becoming.Web.adds_iff_exceeds"]}
+{"name": "Becoming.Unrestricted.not_rival", "uses": ["Becoming.rival_iff_lacks"]}
+{"name": "Becoming.Valuation.premises_of_unrestricted", "uses": []}
+{"name": "Becoming.Web.Retains.within", "uses": ["Becoming.Web.Retains.of_fewer"]}
+{"name": "Becoming.Web.UnderminingOn.not_retains_unrestricted", "uses": ["Becoming.Web.UnderminingOn.not_retains"]}
+{"name": "Becoming.Web.adds_iff_exceeds", "uses": ["Becoming.Web.Adds.exceeds"]}
+{"name": "Becoming.Web.keeps_iff_retains", "uses": ["Becoming.Web.retains_iff_includes"]}
+{"name": "Becoming.Web.mixed_iff_adds", "uses": ["Becoming.Web.Adds.exceeds", "Becoming.Web.adds_iff_exceeds"]}
+{"name": "Becoming.Web.retains_agree", "uses": ["Becoming.Web.retains_iff_includes"]}
+{"name": "Becoming.Web.retains_iff_includes", "uses": ["Becoming.Web.Includes.retains"]}
+{"name": "Becoming.Web.significance_undetermined", "uses": []}
+{"name": "Becoming.Web.significant_of_unrestricted", "uses": []}
+{"name": "Becoming.Web.widens_iff_retains_adds", "uses": ["Becoming.Web.Adds.exceeds", "Becoming.Web.adds_iff_exceeds", "Becoming.Web.retains_iff_includes"]}
+{"name": "Becoming.bounded_in_time_rival", "uses": ["Becoming.rival_of_outside"]}
+{"name": "Becoming.bounded_is_rival", "uses": ["Becoming.rival_iff_lacks"]}
+{"name": "Becoming.bounded_rival", "uses": ["Becoming.rival_of_outside"]}
+{"name": "Becoming.excludes_rivals_iff", "uses": ["Becoming.not_rival_iff"]}
+{"name": "Becoming.not_rival_iff", "uses": ["Becoming.rival_iff_lacks"]}
+{"name": "Becoming.not_rival_unrestricted_iff_stable", "uses": ["Becoming.not_rival_iff"]}
+{"name": "Becoming.readsOnlyDynamics_of", "uses": []}
+{"name": "Becoming.rival_iff_lacks", "uses": []}
+{"name": "Becoming.rival_of_outside", "uses": []}
+{"name": "Becoming.unrestricted_iff_not_rival", "uses": ["Becoming.Unrestricted.not_rival", "Becoming.not_rival_iff"]}

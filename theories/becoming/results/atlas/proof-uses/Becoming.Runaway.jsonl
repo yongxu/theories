@@ -1,0 +1,13 @@
+{"name": "Becoming.Flow.BalancesOn.raise", "uses": []}
+{"name": "Becoming.Flow.exchangeFollows_of_policy", "uses": ["Becoming.total_congr_on"]}
+{"name": "Becoming.Flow.policy_keeps_difference", "uses": ["Becoming.Flow.exchangeFollows_of_policy", "Becoming.Flow.subthreshold_alike_always"]}
+{"name": "Becoming.Flow.policy_uses_after_failure", "uses": ["Becoming.Flow.difference_changes_after_divergence", "Becoming.Flow.exchangeFollows_of_policy"]}
+{"name": "Becoming.SupportDrawn.break_uncoupled", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.BalancesOn.raise", "Becoming.SupportDrawn.lower_balances", "Becoming.Web.break_not_bounded"]}
+{"name": "Becoming.Web.Dependent.raise", "uses": ["Becoming.Web.Supported.raise"]}
+{"name": "Becoming.Web.Supported.raise", "uses": ["Becoming.Web.le_raise"]}
+{"name": "Becoming.Web.alikeThrough_raise", "uses": ["Becoming.Web.le_raise", "Becoming.Web.raise_other"]}
+{"name": "Becoming.Web.break_not_bounded", "uses": ["Becoming.Web.alikeThrough_raise", "Becoming.Web.le_raise", "Becoming.Web.need_le_needUpTo"]}
+{"name": "Becoming.Web.le_raise", "uses": []}
+{"name": "Becoming.Web.need_le_needUpTo", "uses": []}
+{"name": "Becoming.Web.observed_raise_couples", "uses": ["Becoming.Web.observed_level_couples"]}
+{"name": "Becoming.Web.raise_other", "uses": []}

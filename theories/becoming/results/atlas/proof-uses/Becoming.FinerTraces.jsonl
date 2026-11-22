@@ -1,0 +1,11 @@
+{"name": "Becoming.FinerTraces.finer_exists_iff", "uses": ["Becoming.FinerTraces.nonzero_iff", "Becoming.Situations.finer_count", "Becoming.counting_transfer_iff"]}
+{"name": "Becoming.FinerTraces.lt_of_mem_upto", "uses": ["Becoming.ListTests.mem_cons_iff"]}
+{"name": "Becoming.FinerTraces.mem_finerSteps", "uses": ["Becoming.ListTests.mem_map_of", "Becoming.Undecided.mem_upto", "Becoming.mem_joinMap", "Becoming.mem_openSteps"]}
+{"name": "Becoming.FinerTraces.mem_finer_iff", "uses": ["Becoming.FinerTraces.mem_finerSteps", "Becoming.FinerTraces.of_mem_finerSteps", "Becoming.FinerTraces.of_mem_joinMap", "Becoming.ListTests.mem_cons_iff", "Becoming.ListTests.mem_map_iff", "Becoming.ListTests.mem_map_of", "Becoming.mem_joinMap", "Generative.trace_cons_iff"]}
+{"name": "Becoming.FinerTraces.nonzero_iff", "uses": []}
+{"name": "Becoming.FinerTraces.of_mem_finerSteps", "uses": ["Becoming.FinerTraces.lt_of_mem_upto", "Becoming.FinerTraces.of_mem_joinMap", "Becoming.FinerTraces.of_mem_openSteps", "Becoming.ListTests.mem_map_iff"]}
+{"name": "Becoming.FinerTraces.of_mem_joinMap", "uses": ["Becoming.ListTests.mem_append_iff"]}
+{"name": "Becoming.FinerTraces.of_mem_openSteps", "uses": ["Becoming.FinerTraces.of_mem_joinMap", "Becoming.ListTests.mem_map_iff"]}
+{"name": "Becoming.FinerTraces.trace_forget", "uses": ["Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.FinerTraces.trace_lift", "uses": ["Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.FinerTraces.two_values_mem_iff", "uses": ["Becoming.FinerTraces.mem_finer_iff", "Becoming.ListTests.mem_bools"]}

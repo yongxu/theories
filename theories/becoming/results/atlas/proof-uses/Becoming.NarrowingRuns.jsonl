@@ -1,0 +1,11 @@
+{"name": "Becoming.NarrowingRuns.inhabited_iff", "uses": ["Becoming.Narrowing.mem_learn_iff"]}
+{"name": "Becoming.NarrowingRuns.narrowed_answer_greatest", "uses": ["Becoming.Narrowing.answer_maximal", "Becoming.Narrowing.answer_safe", "Becoming.NarrowingRuns.inhabited_iff", "Becoming.NarrowingRuns.safeFor_iff"]}
+{"name": "Becoming.NarrowingRuns.narrowed_answer_unique", "uses": ["Becoming.Narrowing.unique_maximal_safe", "Becoming.NarrowingRuns.inhabited_iff", "Becoming.NarrowingRuns.safeFor_iff"]}
+{"name": "Becoming.NarrowingRuns.narrowed_answer_unique_of_ext", "uses": ["Becoming.Narrowing.unique_maximal_safe_of_ext", "Becoming.NarrowingRuns.inhabited_iff", "Becoming.NarrowingRuns.safeFor_iff"]}
+{"name": "Becoming.NarrowingRuns.run_answer_correct", "uses": ["Becoming.Narrowing.acquired_answers_correct", "Becoming.NarrowingRuns.run_constant"]}
+{"name": "Becoming.NarrowingRuns.run_answer_greatest", "uses": ["Becoming.NarrowingRuns.narrowed_answer_greatest", "Becoming.NarrowingRuns.run_answer_correct", "Becoming.NarrowingRuns.run_kept"]}
+{"name": "Becoming.NarrowingRuns.run_constant", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.NarrowingRuns.run_kept", "uses": ["Becoming.Narrowing.acquired_evidence_faithful", "Becoming.Narrowing.actual_retained", "Becoming.Narrowing.mem_learn_iff"]}
+{"name": "Becoming.NarrowingRuns.safeFor_iff", "uses": ["Becoming.Narrowing.mem_learn_iff"]}
+{"name": "Becoming.NarrowingRuns.settles_iff_answer", "uses": ["Becoming.Narrowing.answer_of_settles", "Becoming.Narrowing.answer_some", "Becoming.Narrowing.settles_learn_iff"]}
+{"name": "Becoming.NarrowingRuns.transport_settles_iff", "uses": ["Becoming.Narrowing.answer_transport", "Becoming.Narrowing.learning_transport", "Becoming.NarrowingRuns.settles_iff_answer"]}

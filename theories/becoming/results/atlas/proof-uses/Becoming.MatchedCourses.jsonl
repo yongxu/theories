@@ -1,0 +1,36 @@
+{"name": "Becoming.MatchedCourses.Claim.ofNat_ctorIdx", "uses": []}
+{"name": "Becoming.MatchedCourses.Move.ofNat_ctorIdx", "uses": []}
+{"name": "Becoming.MatchedCourses.Position.ofNat_ctorIdx", "uses": []}
+{"name": "Becoming.MatchedCourses.a_b1_not_extension", "uses": []}
+{"name": "Becoming.MatchedCourses.a_matches_b1", "uses": []}
+{"name": "Becoming.MatchedCourses.allClaims_distinct", "uses": []}
+{"name": "Becoming.MatchedCourses.allClaims_every", "uses": []}
+{"name": "Becoming.MatchedCourses.b2_a_neither", "uses": ["Becoming.MatchedCourses.matches_iff"]}
+{"name": "Becoming.MatchedCourses.b2_correspondence_involutive", "uses": []}
+{"name": "Becoming.MatchedCourses.b2_loss_correspondence", "uses": []}
+{"name": "Becoming.MatchedCourses.b3_matches_a", "uses": []}
+{"name": "Becoming.MatchedCourses.claim_iff_support", "uses": []}
+{"name": "Becoming.MatchedCourses.common_start", "uses": []}
+{"name": "Becoming.MatchedCourses.conditional_lower_anchor", "uses": ["Becoming.MatchedCourses.a_matches_b1"]}
+{"name": "Becoming.MatchedCourses.conditional_outer_order", "uses": ["Becoming.MatchedCourses.conditional_lower_anchor", "Becoming.MatchedCourses.conditional_upper_anchor", "Becoming.StrictTransport.strict_above_trans"]}
+{"name": "Becoming.MatchedCourses.conditional_upper_anchor", "uses": ["Becoming.MatchedCourses.b3_matches_a"]}
+{"name": "Becoming.MatchedCourses.first_losses_retained", "uses": ["Becoming.Frame.ReadsAt.loss_retained", "Becoming.MatchedCourses.reads_at_time"]}
+{"name": "Becoming.MatchedCourses.fragile_a_keeps_base", "uses": []}
+{"name": "Becoming.MatchedCourses.fragile_b3_loses_base", "uses": []}
+{"name": "Becoming.MatchedCourses.fragile_b3_matches_nothing", "uses": ["Becoming.Frame.not_strictLossMatch_of_base_lost", "Becoming.MatchedCourses.allClaims_distinct", "Becoming.MatchedCourses.allClaims_every", "Becoming.MatchedCourses.fragile_b3_loses_base"]}
+{"name": "Becoming.MatchedCourses.fragile_b3_not_matching", "uses": ["Becoming.MatchedCourses.fragile_a_keeps_base", "Becoming.MatchedCourses.fragile_b3_loses_base"]}
+{"name": "Becoming.MatchedCourses.generated_trace", "uses": ["Becoming.Run.window_trace"]}
+{"name": "Becoming.MatchedCourses.listed", "uses": ["Becoming.Frame.lossesListed_lostOf", "Becoming.MatchedCourses.allClaims_distinct", "Becoming.MatchedCourses.allClaims_every"]}
+{"name": "Becoming.MatchedCourses.losses_alike", "uses": ["Becoming.MatchedCourses.lost_not_base"]}
+{"name": "Becoming.MatchedCourses.lost_counts", "uses": []}
+{"name": "Becoming.MatchedCourses.lost_not_base", "uses": []}
+{"name": "Becoming.MatchedCourses.matches_iff", "uses": ["Becoming.Frame.strictLossMatch_iff_length_of_alike", "Becoming.MatchedCourses.listed", "Becoming.MatchedCourses.losses_alike"]}
+{"name": "Becoming.MatchedCourses.reads_at_time", "uses": ["Becoming.MatchedCourses.claim_iff_support", "Becoming.MatchedCourses.realized_succ", "Becoming.MatchedCourses.time_le_four", "Becoming.MatchedCourses.time_pos"]}
+{"name": "Becoming.MatchedCourses.realized_succ", "uses": ["Becoming.MatchedCourses.states_succ"]}
+{"name": "Becoming.MatchedCourses.recovery_retains_loss", "uses": []}
+{"name": "Becoming.MatchedCourses.separated_same_position", "uses": []}
+{"name": "Becoming.MatchedCourses.states_succ", "uses": []}
+{"name": "Becoming.MatchedCourses.support_between", "uses": []}
+{"name": "Becoming.MatchedCourses.support_restored", "uses": []}
+{"name": "Becoming.MatchedCourses.time_le_four", "uses": []}
+{"name": "Becoming.MatchedCourses.time_pos", "uses": []}

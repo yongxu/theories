@@ -1,0 +1,163 @@
+{"name": "Becoming.Budding.growth_without_arising", "uses": ["Becoming.Cycle.closed_more"]}
+{"name": "Becoming.Confluence.confluence", "uses": ["Becoming.Confluence.ended", "Becoming.Confluence.noSplit"]}
+{"name": "Becoming.Confluence.ended", "uses": []}
+{"name": "Becoming.Confluence.noSplit", "uses": ["Becoming.Confluence.ended"]}
+{"name": "Becoming.Dormancy.active_once", "uses": []}
+{"name": "Becoming.Dormancy.classes", "uses": ["Becoming.Dormancy.consumed", "Becoming.Web.reidentify_consumed", "Becoming.Web.reidentify_renewed"]}
+{"name": "Becoming.Dormancy.consumed", "uses": []}
+{"name": "Becoming.Dormancy.dependent", "uses": []}
+{"name": "Becoming.Dormancy.first_only", "uses": []}
+{"name": "Becoming.Dormancy.joined_once", "uses": ["Becoming.Dormancy.active_once"]}
+{"name": "Becoming.Dormancy.keeps_both", "uses": ["Becoming.Dormancy.active_once", "Becoming.Dormancy.first_only", "Becoming.Dormancy.joined_once"]}
+{"name": "Becoming.Dormancy.swap_swap", "uses": []}
+{"name": "Becoming.Dormant.no_split_without_arising", "uses": ["Becoming.Dormant.more_without_arising", "Becoming.Expansion.distinct", "Becoming.Web.unceasingFrom_self"]}
+{"name": "Becoming.Expansion.unceasing_reidentified", "uses": ["Becoming.Expansion.census", "Becoming.Expansion.counted", "Becoming.Expansion.distinct", "Becoming.Expansion.growers_take", "Becoming.Flow.More.unceasing_reidentified"]}
+{"name": "Becoming.Flow.More.arising_never_stops_reidentified_covering", "uses": ["Becoming.Flow.More.arising_never_stops_covering", "Becoming.Flow.reidentify_more", "Becoming.Reidentify.mem_map", "Becoming.Reidentify.new_injective", "Becoming.distinct_map"]}
+{"name": "Becoming.Flow.More.unceasingFrom", "uses": ["Becoming.Flow.More.grows", "Becoming.Web.unceasingFrom_of_growth"]}
+{"name": "Becoming.Flow.More.unceasing_reidentified", "uses": ["Becoming.Flow.More.unceasing_reidentified_covering"]}
+{"name": "Becoming.Flow.More.unceasing_reidentified_covering", "uses": ["Becoming.Flow.More.unceasing_covering", "Becoming.Flow.reidentify_more", "Becoming.Reidentify.mem_map", "Becoming.Reidentify.new_injective", "Becoming.distinct_map"]}
+{"name": "Becoming.Flow.Taking.reidentify", "uses": ["Becoming.Reidentify.mem_map"]}
+{"name": "Becoming.Flow.reidentify_amounts", "uses": ["Becoming.total_reidentify"]}
+{"name": "Becoming.Flow.reidentify_balances", "uses": ["Becoming.Flow.reidentify_amounts"]}
+{"name": "Becoming.Flow.reidentify_counts", "uses": ["Becoming.total_reidentify"]}
+{"name": "Becoming.Flow.reidentify_more", "uses": ["Becoming.Flow.reidentify_counts"]}
+{"name": "Becoming.Identity.Fork.fission", "uses": ["Becoming.Web.split_fission"]}
+{"name": "Becoming.Identity.Fork.split_unceasing", "uses": []}
+{"name": "Becoming.Layered.both", "uses": []}
+{"name": "Becoming.Lineage.arises", "uses": []}
+{"name": "Becoming.Lineage.one_way", "uses": ["Becoming.Lineage.readings", "Becoming.Web.unceasing_iff_of_keepsActive_both"]}
+{"name": "Becoming.Lineage.readings", "uses": ["Becoming.Lineage.arises"]}
+{"name": "Becoming.Lineage.swap_swap", "uses": []}
+{"name": "Becoming.Merge.idle", "uses": []}
+{"name": "Becoming.Merge.merging", "uses": ["Becoming.Expansion.census", "Becoming.Expansion.counted", "Becoming.Expansion.distinct", "Becoming.Expansion.growers_take", "Becoming.Flow.More.unceasingFrom", "Becoming.Merge.noSplit"]}
+{"name": "Becoming.Merge.noSplit", "uses": []}
+{"name": "Becoming.Reidentify.every", "uses": ["Becoming.Reidentify.old_new"]}
+{"name": "Becoming.Reidentify.mem_map", "uses": ["Becoming.Reidentify.new_injective", "Becoming.Reidentify.new_old", "Becoming.mem_map_of", "Becoming.mem_of_map"]}
+{"name": "Becoming.Reidentify.new_injective", "uses": ["Becoming.Reidentify.old_new"]}
+{"name": "Becoming.Reidentify.new_old", "uses": []}
+{"name": "Becoming.Reidentify.old_new", "uses": []}
+{"name": "Becoming.Reidentify.some", "uses": ["Becoming.Reidentify.old_new"]}
+{"name": "Becoming.Reidentify.steady", "uses": []}
+{"name": "Becoming.Succession.drawer_named", "uses": ["Becoming.turn_fixed"]}
+{"name": "Becoming.Succession.one_way", "uses": ["Becoming.Succession.drawer_named", "Becoming.Succession.readings", "Becoming.Web.undermining_of_back_keepsTenure"]}
+{"name": "Becoming.Succession.readings", "uses": ["Becoming.Succession.drawer_named", "Becoming.Turnover.pool_late", "Becoming.Web.MetAbove.now"]}
+{"name": "Becoming.Succession.swap_swap", "uses": []}
+{"name": "Becoming.Tandem.apart", "uses": []}
+{"name": "Becoming.Tandem.budding", "uses": ["Becoming.Tandem.apart", "Becoming.Tandem.census"]}
+{"name": "Becoming.Tandem.budding_fission", "uses": ["Becoming.Tandem.apart", "Becoming.Web.split_fission"]}
+{"name": "Becoming.Tandem.census", "uses": ["Becoming.Tandem.apart", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Tandem.joining", "uses": ["Becoming.Tandem.apart"]}
+{"name": "Becoming.Tandem.joining_candles", "uses": ["Becoming.Web.merge_candles"]}
+{"name": "Becoming.Tandem.kept", "uses": ["Becoming.Tandem.apart"]}
+{"name": "Becoming.TideFlip.arises", "uses": []}
+{"name": "Becoming.TideFlip.naming_meets_premises", "uses": ["Becoming.Reidentify.old_new", "Becoming.Tide.renewal_without_arising", "Becoming.TideFlip.arises", "Becoming.TideFlip.tide_changes", "Becoming.Web.Unceasing.activeRenewer_recurs", "Becoming.Web.depletes_iff", "Becoming.Web.reidentify_dependent"]}
+{"name": "Becoming.TideFlip.swap_swap", "uses": []}
+{"name": "Becoming.TideFlip.tide_changes", "uses": []}
+{"name": "Becoming.Turnover.identified", "uses": []}
+{"name": "Becoming.Turnover.needs_pool", "uses": []}
+{"name": "Becoming.Turnover.needs_spring", "uses": []}
+{"name": "Becoming.Turnover.not_both", "uses": []}
+{"name": "Becoming.Turnover.pool_late", "uses": []}
+{"name": "Becoming.Turnover.pool_not_renewed", "uses": []}
+{"name": "Becoming.Turnover.reidentified", "uses": ["Becoming.Turnover.identified", "Becoming.Turnover.needs_pool", "Becoming.Turnover.needs_spring", "Becoming.Turnover.not_both", "Becoming.Turnover.pool_late", "Becoming.Turnover.pool_not_renewed", "Becoming.Web.reidentify_dependent", "Becoming.Web.reidentify_renewed"]}
+{"name": "Becoming.Turnover.swap_swap", "uses": []}
+{"name": "Becoming.Web.Census.arisingFrom_of_ceasingFrom", "uses": ["Becoming.Web.Census.arisingFrom_of_ceasingFrom_from"]}
+{"name": "Becoming.Web.Census.arisingFrom_of_ceasingFrom_from", "uses": ["Becoming.Web.arisingFrom_of_ceasingFrom_covered"]}
+{"name": "Becoming.Web.Census.balanceFrom", "uses": ["Becoming.Web.Census.balanceFrom_at"]}
+{"name": "Becoming.Web.Census.balanceFrom_at", "uses": ["Becoming.total_mark_eq_count", "Becoming.«定前之逐点»", "Becoming.«定前则前并生不过后并亡»", "Becoming.«定后之逐点»", "Becoming.«定后则后并亡不过前并生»"]}
+{"name": "Becoming.Web.Census.balanceFrom_eq", "uses": ["Becoming.Web.Census.balanceFrom"]}
+{"name": "Becoming.Web.Census.balanceFrom_eq_at", "uses": ["Becoming.Web.Census.balanceFrom_at"]}
+{"name": "Becoming.Web.Census.ceasingFrom_of_arisingFrom", "uses": ["Becoming.Web.Census.ceasingFrom_of_arisingFrom_from"]}
+{"name": "Becoming.Web.Census.ceasingFrom_of_arisingFrom_from", "uses": ["Becoming.Web.ceasingFrom_of_arisingFrom_covered"]}
+{"name": "Becoming.Web.Census.reidentify", "uses": ["Becoming.Reidentify.mem_map", "Becoming.Reidentify.new_injective", "Becoming.distinct_map"]}
+{"name": "Becoming.Web.Lineage.active", "uses": []}
+{"name": "Becoming.Web.Lineage.back", "uses": ["Becoming.Web.lineage_of_steps", "Becoming.Web.steps_advance", "Becoming.Web.steps_start_active", "Becoming.add_right_cancel", "Becoming.le_dest", "Becoming.le_of_add_le_add_right", "Becoming.«或有后则或迭»", "Becoming.«迭之逆»"]}
+{"name": "Becoming.Web.Lineage.line", "uses": ["Becoming.Web.steps_iff_lineage", "Becoming.«及之单调»", "Becoming.«迭则及»"]}
+{"name": "Becoming.Web.Lineage.onward", "uses": ["Becoming.Web.Lineage.active", "Becoming.Web.lineage_of_steps", "Becoming.Web.steps_advance", "Becoming.«或有后则或迭»"]}
+{"name": "Becoming.Web.Lineage.origin", "uses": ["Becoming.Web.occurrence_eq", "Becoming.Web.steps_iff_lineage", "Becoming.«定前之逐点»", "Becoming.«迭之定前»"]}
+{"name": "Becoming.Web.Lineage.split", "uses": ["Becoming.Web.lineage_of_steps", "Becoming.Web.steps_advance", "Becoming.Web.steps_iff_lineage", "Becoming.«迭之分»"]}
+{"name": "Becoming.Web.Lineage.through", "uses": ["Becoming.Web.Lineage.split"]}
+{"name": "Becoming.Web.Lineage.unique", "uses": ["Becoming.Web.occurrence_eq", "Becoming.Web.steps_iff_lineage", "Becoming.«定后之逐点»", "Becoming.«迭之定»"]}
+{"name": "Becoming.Web.abides_iff", "uses": ["Becoming.Web.hasPred_iff_continues", "Becoming.Web.hasSucc_iff_continued"]}
+{"name": "Becoming.Web.alikeBy_class", "uses": []}
+{"name": "Becoming.Web.arisesFrom_iff_sheng", "uses": ["Becoming.Web.hasPred_iff_continues"]}
+{"name": "Becoming.Web.arisesFrom_of_more", "uses": ["Becoming.length_le_of_matched", "Becoming.search"]}
+{"name": "Becoming.Web.arisesFrom_self", "uses": []}
+{"name": "Becoming.Web.arises_iff_of_keepsActive_both", "uses": ["Becoming.Reidentify.new_old", "Becoming.Web.arises_of_back_keepsActive", "Becoming.Web.arises_of_keepsActive"]}
+{"name": "Becoming.Web.arises_iff_sheng_itself", "uses": ["Becoming.Web.arisesFrom_iff_sheng", "Becoming.Web.arisesFrom_self"]}
+{"name": "Becoming.Web.arises_of_back_keepsActive", "uses": ["Becoming.Reidentify.old_new"]}
+{"name": "Becoming.Web.arises_of_keepsActive", "uses": ["Becoming.Reidentify.new_old", "Becoming.Reidentify.old_new"]}
+{"name": "Becoming.Web.arisingFrom_not_stopping_covered", "uses": ["Becoming.Web.continuation_arises", "Becoming.Web.continuation_back", "Becoming.Web.continuation_covers", "Becoming.Web.continuation_ending", "Becoming.Web.continuation_noSplit", "Becoming.Web.continuation_stage", "Becoming.«有覆而亡屡则生不止»"]}
+{"name": "Becoming.Web.arisingFrom_of_ceasingFrom_covered", "uses": ["Becoming.Web.continuation_arises", "Becoming.Web.continuation_back", "Becoming.Web.continuation_covers", "Becoming.Web.continuation_decided_begin", "Becoming.Web.continuation_ending", "Becoming.Web.continuation_noSplit", "Becoming.Web.continuation_stage", "Becoming.«有覆而亡屡则生屡»"]}
+{"name": "Becoming.Web.begins_at_zero", "uses": []}
+{"name": "Becoming.Web.ceasesFrom_iff_wang", "uses": ["Becoming.Web.hasSucc_iff_continued"]}
+{"name": "Becoming.Web.ceasesFrom_of_unconditioned", "uses": ["Becoming.Web.ceasesFrom_iff_wang", "Becoming.«亡于粗则亡于细»"]}
+{"name": "Becoming.Web.ceasesFrom_self", "uses": []}
+{"name": "Becoming.Web.ceases_iff_wang_itself", "uses": ["Becoming.Web.ceasesFrom_iff_wang", "Becoming.Web.ceasesFrom_self"]}
+{"name": "Becoming.Web.ceasingFrom_not_stopping_covered", "uses": ["Becoming.Web.continuation_begins", "Becoming.Web.continuation_ceases", "Becoming.Web.continuation_covers", "Becoming.Web.continuation_noMerge", "Becoming.Web.continuation_on", "Becoming.Web.continuation_stage", "Becoming.length_map", "Becoming.«有界覆而生屡则亡不止»"]}
+{"name": "Becoming.Web.ceasingFrom_of_arisingFrom_covered", "uses": ["Becoming.Web.continuation_begins", "Becoming.Web.continuation_ceases", "Becoming.Web.continuation_covers", "Becoming.Web.continuation_decided_end", "Becoming.Web.continuation_noMerge", "Becoming.Web.continuation_on", "Becoming.Web.continuation_stage", "Becoming.length_map", "Becoming.«有界覆而生屡则亡屡»"]}
+{"name": "Becoming.Web.continuationStep_acyclic", "uses": ["Becoming.Web.reach_advances"]}
+{"name": "Becoming.Web.continuationStep_irrefl", "uses": []}
+{"name": "Becoming.Web.continuation_arises", "uses": []}
+{"name": "Becoming.Web.continuation_back", "uses": []}
+{"name": "Becoming.Web.continuation_begins", "uses": []}
+{"name": "Becoming.Web.continuation_ceases", "uses": []}
+{"name": "Becoming.Web.continuation_covers", "uses": ["Becoming.ListTests.mem_map_of"]}
+{"name": "Becoming.Web.continuation_decided_begin", "uses": ["Becoming.Web.continuation_begins"]}
+{"name": "Becoming.Web.continuation_decided_end", "uses": []}
+{"name": "Becoming.Web.continuation_ending", "uses": []}
+{"name": "Becoming.Web.continuation_noMerge", "uses": ["Becoming.Web.occurrence_eq"]}
+{"name": "Becoming.Web.continuation_noSplit", "uses": ["Becoming.Web.occurrence_eq"]}
+{"name": "Becoming.Web.continuation_on", "uses": []}
+{"name": "Becoming.Web.continuation_reidentify", "uses": ["Becoming.Reidentify.new_injective", "Becoming.Reidentify.new_old", "Becoming.Reidentify.old_new"]}
+{"name": "Becoming.Web.continuation_stage", "uses": []}
+{"name": "Becoming.Web.hasPred_iff_continues", "uses": []}
+{"name": "Becoming.Web.hasSucc_iff_continued", "uses": []}
+{"name": "Becoming.Web.line_advances", "uses": ["Becoming.Web.reach_advances", "Becoming.«相续含于及»"]}
+{"name": "Becoming.Web.line_lineage", "uses": ["Becoming.Web.line_advances", "Becoming.Web.steps_iff_lineage", "Becoming.«及即迭»", "Becoming.«所闭之传递»", "Becoming.«所闭之自反»", "Becoming.«所闭当且仅当同一或及»", "Becoming.«缘在所闭»", "Becoming.«闭之及»"]}
+{"name": "Becoming.Web.lineage_iff_line", "uses": ["Becoming.Naturals.add_left_cancel", "Becoming.Web.Lineage.line", "Becoming.Web.line_lineage"]}
+{"name": "Becoming.Web.lineage_of_steps", "uses": ["Becoming.Web.steps_advance", "Becoming.«迭之末步»"]}
+{"name": "Becoming.Web.merge_candles", "uses": ["Becoming.«蜡烛之合»"]}
+{"name": "Becoming.Web.metAbove_of_back_keepsTenure", "uses": ["Becoming.Reidentify.steady"]}
+{"name": "Becoming.Web.metAbove_of_keepsTenure", "uses": ["Becoming.Reidentify.old_new", "Becoming.Reidentify.steady"]}
+{"name": "Becoming.Web.noMerge_iff", "uses": ["Becoming.Web.occurrence_eq"]}
+{"name": "Becoming.Web.noSplit_iff", "uses": ["Becoming.Web.occurrence_eq"]}
+{"name": "Becoming.Web.no_join", "uses": ["Becoming.Reidentify.old_new"]}
+{"name": "Becoming.Web.not_not_arisingFrom_covered", "uses": ["Becoming.Web.continuation_arises", "Becoming.Web.continuation_back", "Becoming.Web.continuation_covers", "Becoming.Web.continuation_ending", "Becoming.Web.continuation_noSplit", "Becoming.Web.continuation_stage", "Becoming.«所覆后亡屡则生未否»"]}
+{"name": "Becoming.Web.nothing_continues_under_identity", "uses": ["Becoming.Web.continuationStep_irrefl"]}
+{"name": "Becoming.Web.occurrence_eq", "uses": []}
+{"name": "Becoming.Web.positions_not_self_standing", "uses": ["Becoming.Web.continuationStep_irrefl", "Becoming.«四相无自立»"]}
+{"name": "Becoming.Web.reach_advances", "uses": []}
+{"name": "Becoming.Web.reach_strict_order", "uses": ["Becoming.Web.continuationStep_acyclic", "Becoming.«无环则及为序»"]}
+{"name": "Becoming.Web.reidentify_breakingOn", "uses": ["Becoming.Reidentify.some"]}
+{"name": "Becoming.Web.reidentify_consumed", "uses": ["Becoming.Reidentify.some"]}
+{"name": "Becoming.Web.reidentify_dependent", "uses": ["Becoming.Reidentify.every"]}
+{"name": "Becoming.Web.reidentify_lost", "uses": ["Becoming.Reidentify.some"]}
+{"name": "Becoming.Web.reidentify_renewed", "uses": ["Becoming.Reidentify.every"]}
+{"name": "Becoming.Web.reidentify_renewingAt", "uses": ["Becoming.Reidentify.every"]}
+{"name": "Becoming.Web.reidentify_step", "uses": []}
+{"name": "Becoming.Web.rename_consumingIn", "uses": ["Becoming.Web.reidentify_consumed"]}
+{"name": "Becoming.Web.rename_renewingIn", "uses": ["Becoming.Web.reidentify_renewed"]}
+{"name": "Becoming.Web.rename_tenure", "uses": []}
+{"name": "Becoming.Web.rename_unceasing", "uses": ["Becoming.Reidentify.some"]}
+{"name": "Becoming.Web.rename_undermining", "uses": ["Becoming.Reidentify.some"]}
+{"name": "Becoming.Web.self_one_to_one", "uses": []}
+{"name": "Becoming.Web.split_fission", "uses": ["Becoming.Web.line_advances"]}
+{"name": "Becoming.Web.steps_advance", "uses": []}
+{"name": "Becoming.Web.steps_iff_lineage", "uses": ["Becoming.Web.lineage_of_steps", "Becoming.Web.occurrence_eq", "Becoming.Web.steps_advance", "Becoming.«迭之末步»"]}
+{"name": "Becoming.Web.steps_start_active", "uses": []}
+{"name": "Becoming.Web.unceasingFrom_of_growth", "uses": ["Becoming.Web.arisesFrom_of_more", "Becoming.rises_between"]}
+{"name": "Becoming.Web.unceasingFrom_self", "uses": ["Becoming.Web.arisesFrom_self"]}
+{"name": "Becoming.Web.unceasing_iff_of_keepsActive_both", "uses": ["Becoming.Web.arises_of_back_keepsActive", "Becoming.Web.unceasing_of_keepsActive"]}
+{"name": "Becoming.Web.unceasing_of_keepsActive", "uses": ["Becoming.Web.arises_of_keepsActive"]}
+{"name": "Becoming.Web.undermining_iff_of_keepsTenure_both", "uses": ["Becoming.Reidentify.new_old", "Becoming.Web.undermining_of_back_keepsTenure", "Becoming.Web.undermining_of_keepsTenure"]}
+{"name": "Becoming.Web.undermining_of_back_keepsTenure", "uses": ["Becoming.Web.metAbove_of_back_keepsTenure"]}
+{"name": "Becoming.Web.undermining_of_keepsTenure", "uses": ["Becoming.Reidentify.old_new", "Becoming.Web.metAbove_of_keepsTenure"]}
+{"name": "Becoming.forced_iff_more", "uses": ["Becoming.length_le_of_matched", "Becoming.paired_covers", "Becoming.paired_noSplit"]}
+{"name": "Becoming.forces_iff_noSplit", "uses": ["Becoming.length_le_of_matched", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.paired_covers", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.paired_mem", "uses": []}
+{"name": "Becoming.paired_noSplit", "uses": ["Becoming.paired_mem"]}
+{"name": "Becoming.total_reidentify", "uses": ["Becoming.Reidentify.old_new"]}
+{"name": "Becoming.turn_fixed", "uses": []}
+{"name": "Becoming.turn_turn", "uses": []}

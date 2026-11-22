@@ -1,0 +1,10 @@
+{"name": "Becoming.Contextual.glues_iff_freeAt", "uses": ["Becoming.Contextual.world_active"]}
+{"name": "Becoming.ParitySystem.freeFrame_iff", "uses": ["Becoming.Contextual.fitsFree_iff", "Becoming.Contextual.not_glues", "Becoming.ParitySystem.contradicts_noGlobal", "Becoming.ParitySystem.global_or_contradicts", "Becoming.ParitySystem.local_"]}
+{"name": "Becoming.ParitySystem.met_congr", "uses": ["Becoming.and_congr_of", "Becoming.oddOver_congr"]}
+{"name": "Becoming.ParitySystem.world_free_iff", "uses": ["Becoming.Contextual.glues_iff_freeAt", "Becoming.Contextual.not_glues", "Becoming.ParitySystem.contradicts_noGlobal", "Becoming.ParitySystem.global_or_contradicts", "Becoming.ParitySystem.local_"]}
+{"name": "Becoming.ParitySystem.world_met_le", "uses": ["Becoming.Contextual.glues_iff_freeAt", "Becoming.ParitySystem.met_congr", "Becoming.ParitySystem.met_le", "Becoming.total_congr"]}
+{"name": "Becoming.Square.QuantumAt.no_free_frame", "uses": ["Becoming.Contextual.fitsFree_iff", "Becoming.Square.QuantumAt.not_glues"]}
+{"name": "Becoming.Square.QuantumAt.not_freeAt", "uses": ["Becoming.Contextual.glues_iff_freeAt", "Becoming.Square.QuantumAt.not_glues"]}
+{"name": "Becoming.Square.QuantumAt.not_glues", "uses": ["Becoming.Square.no_context_free_values"]}
+{"name": "Becoming.Square.quantum_at", "uses": ["Becoming.Square.inLine_support", "Becoming.Square.support_shown", "Becoming.Square.within_at"]}
+{"name": "Becoming.Square.quantum_readings", "uses": ["Becoming.Square.QuantumAt.no_free_frame", "Becoming.Square.QuantumAt.not_freeAt", "Becoming.Square.quantum_at"]}

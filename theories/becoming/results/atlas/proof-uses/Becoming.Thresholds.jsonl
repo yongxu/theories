@@ -1,0 +1,38 @@
+{"name": "Becoming.ExchangeLaw.Nonanticipating.readsAt_all", "uses": []}
+{"name": "Becoming.ExchangeLaw.Nonanticipating.standing_alike", "uses": ["Becoming.standAt_of_stands"]}
+{"name": "Becoming.ExchangeLaw.ReadsAt.respondsWithin_unread", "uses": ["Becoming.ExchangeLaw.exchangeGap_of_alike"]}
+{"name": "Becoming.ExchangeLaw.ReadsAt.restrict", "uses": ["Becoming.ExchangeLaw.ReadsAt.respondsWithin_unread"]}
+{"name": "Becoming.ExchangeLaw.ReadsBelow.standing_no_loop", "uses": ["Becoming.ExchangeLaw.ReadsAt.restrict", "Becoming.ExchangeLaw.ReadsBelow.standing_readsAt", "Becoming.not_onLoop_unread", "Becoming.offStock_stock", "Becoming.upstream_unread"]}
+{"name": "Becoming.ExchangeLaw.ReadsBelow.standing_readsAt", "uses": ["Becoming.offStock_other", "Becoming.standAt_stock", "Becoming.standAt_unmarked"]}
+{"name": "Becoming.ExchangeLaw.ReadsBelow.standing_unread", "uses": ["Becoming.ExchangeLaw.ReadsAt.respondsWithin_unread", "Becoming.ExchangeLaw.ReadsBelow.standing_readsAt", "Becoming.offStock_stock"]}
+{"name": "Becoming.ExchangeLaw.Through.policyThrough", "uses": []}
+{"name": "Becoming.ExchangeLaw.Through.readsAt", "uses": []}
+{"name": "Becoming.ExchangeLaw.Through.readsBelow", "uses": ["Becoming.Thresholds.le_of_not_not"]}
+{"name": "Becoming.Flow.follows_standing_before", "uses": ["Becoming.ExchangeLaw.Nonanticipating.standing_alike"]}
+{"name": "Becoming.Thresholds.Draw.diverges_at_break", "uses": ["Becoming.Naturals.ble_false_of_lt"]}
+{"name": "Becoming.Thresholds.Draw.forms_at_break", "uses": ["Becoming.ExchangeLaw.Nonanticipating.standing_alike", "Becoming.ExchangeLaw.ReadsBelow.standing_unread", "Becoming.Thresholds.Draw.nonanticipating", "Becoming.Thresholds.Draw.onLoop", "Becoming.Thresholds.Draw.only", "Becoming.Thresholds.Draw.reads"]}
+{"name": "Becoming.Thresholds.Draw.nonanticipating", "uses": []}
+{"name": "Becoming.Thresholds.Draw.onLoop", "uses": ["Becoming.Thresholds.Draw.strength_pos"]}
+{"name": "Becoming.Thresholds.Draw.only", "uses": []}
+{"name": "Becoming.Thresholds.Draw.reads", "uses": []}
+{"name": "Becoming.Thresholds.Draw.strength_pos", "uses": ["Becoming.Loops.ble_succ_self", "Becoming.beq_self", "Becoming.gap_add_self"]}
+{"name": "Becoming.Thresholds.cond_pos", "uses": []}
+{"name": "Becoming.Thresholds.le_of_not_not", "uses": []}
+{"name": "Becoming.Thresholds.pos_cond", "uses": []}
+{"name": "Becoming.Thresholds.raise_step", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.Thresholds.same_step", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.break_carried_nowhere", "uses": ["Becoming.held_while"]}
+{"name": "Becoming.couplesAt_of_reads", "uses": ["Becoming.Thresholds.pos_cond"]}
+{"name": "Becoming.couplesAt_reads", "uses": ["Becoming.Thresholds.cond_pos"]}
+{"name": "Becoming.couples_reads", "uses": ["Becoming.couplesAt_reads", "Becoming.couples_iff_couplesAt"]}
+{"name": "Becoming.held_while", "uses": ["Becoming.Flow.totals_alike_of_each", "Becoming.Thresholds.raise_step", "Becoming.Thresholds.same_step", "Becoming.le_succ_cases"]}
+{"name": "Becoming.not_onLoop_unread", "uses": ["Becoming.couples_reads"]}
+{"name": "Becoming.offStock_other", "uses": []}
+{"name": "Becoming.offStock_stock", "uses": []}
+{"name": "Becoming.onLoop_succ_reads", "uses": ["Becoming.couplesAt_of_reads", "Becoming.couplesAt_reads", "Becoming.onLoop_succ_iff"]}
+{"name": "Becoming.self_coupling_reads", "uses": ["Becoming.couples_reads"]}
+{"name": "Becoming.standAt_of_stands", "uses": ["Becoming.Thresholds.le_of_not_not"]}
+{"name": "Becoming.standAt_stock", "uses": []}
+{"name": "Becoming.standAt_unmarked", "uses": []}
+{"name": "Becoming.unread_carried_nowhere", "uses": ["Becoming.held_while"]}
+{"name": "Becoming.upstream_unread", "uses": ["Becoming.couples_reads"]}

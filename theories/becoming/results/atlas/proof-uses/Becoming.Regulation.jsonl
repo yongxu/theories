@@ -1,0 +1,120 @@
+{"name": "Becoming.Flow.accumulates_at", "uses": ["Becoming.Naturals.add_sub_of_le", "Becoming.balance_over_stretch_on"]}
+{"name": "Becoming.Flow.crosses_of_above", "uses": ["Becoming.Flow.withinGap_iff_of_above"]}
+{"name": "Becoming.Flow.crosses_of_below", "uses": ["Becoming.Flow.withinGap_iff_of_below"]}
+{"name": "Becoming.Flow.gap_falls", "uses": ["Becoming.Flow.excess_lowers_at", "Becoming.Flow.net_give_raises_at", "Becoming.Flow.withinGap_iff_between", "Becoming.Regulation.Between.gap_falls"]}
+{"name": "Becoming.Flow.gap_le_of_within", "uses": ["Becoming.Flow.withinGap_iff_between", "Becoming.Regulation.Between.gap_le"]}
+{"name": "Becoming.Flow.never_at_of_beyond", "uses": ["Becoming.Flow.not_at_of_beyond"]}
+{"name": "Becoming.Flow.not_at_of_beyond", "uses": ["Becoming.Flow.withinGap_iff_between"]}
+{"name": "Becoming.Flow.opposes_of_each", "uses": ["Becoming.total_lt_of_mem"]}
+{"name": "Becoming.Flow.regulates", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.regulates_at"]}
+{"name": "Becoming.Flow.regulates_at", "uses": ["Becoming.Flow.gap_falls", "Becoming.Flow.withinGap_iff_between", "Becoming.Regulation.Between.stays", "Becoming.gap_self"]}
+{"name": "Becoming.Flow.restores_exactly", "uses": ["Becoming.Flow.settles", "Becoming.Regulation.gap_of_ge"]}
+{"name": "Becoming.Flow.settles", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.settles_from"]}
+{"name": "Becoming.Flow.settles_at", "uses": ["Becoming.Flow.regulates_at", "Becoming.Flow.withinGap_iff_between", "Becoming.Regulation.Between.stays", "Becoming.gap_eq_zero_iff"]}
+{"name": "Becoming.Flow.settles_from", "uses": ["Becoming.Flow.settles_at"]}
+{"name": "Becoming.Flow.stays_between_at", "uses": ["Becoming.Flow.withinGap_iff_between", "Becoming.Regulation.Between.refl", "Becoming.Regulation.Between.trans"]}
+{"name": "Becoming.Flow.stock_settles", "uses": ["Becoming.Flow.settles", "Becoming.total_congr_on"]}
+{"name": "Becoming.Flow.withinGap_iff_between", "uses": ["Becoming.Regulation.within_iff_between"]}
+{"name": "Becoming.Flow.withinGap_iff_of_above", "uses": ["Becoming.Flow.excess_lowers_at", "Becoming.Flow.withinGap_iff_between"]}
+{"name": "Becoming.Flow.withinGap_iff_of_at", "uses": ["Becoming.Flow.withinGap_iff_between", "Becoming.Regulation.Between.refl", "Becoming.Regulation.Between.stays"]}
+{"name": "Becoming.Flow.withinGap_iff_of_below", "uses": ["Becoming.Flow.net_give_raises_at", "Becoming.Flow.withinGap_iff_between"]}
+{"name": "Becoming.Flow.withinGap_of_shares", "uses": ["Becoming.total_add", "Becoming.total_le"]}
+{"name": "Becoming.Regulation.Between.at_level", "uses": []}
+{"name": "Becoming.Regulation.Between.gap_falls", "uses": ["Becoming.Regulation.gap_of_ge", "Becoming.Regulation.gap_of_le", "Becoming.Regulation.sub_succ_le_of_gt", "Becoming.Regulation.sub_succ_le_of_lt"]}
+{"name": "Becoming.Regulation.Between.gap_le", "uses": ["Becoming.gap_comm", "Becoming.gap_le_of", "Becoming.le_add_gap"]}
+{"name": "Becoming.Regulation.Between.refl", "uses": []}
+{"name": "Becoming.Regulation.Between.stays", "uses": ["Becoming.Regulation.Between.at_level"]}
+{"name": "Becoming.Regulation.Between.trans", "uses": []}
+{"name": "Becoming.Regulation.OneSided.above", "uses": []}
+{"name": "Becoming.Regulation.OneSided.balances", "uses": []}
+{"name": "Becoming.Regulation.OneSided.not_opposes", "uses": []}
+{"name": "Becoming.Regulation.OneSided.opposes_below", "uses": []}
+{"name": "Becoming.Regulation.OneSided.restores_premise", "uses": []}
+{"name": "Becoming.Regulation.OneSided.within", "uses": []}
+{"name": "Becoming.Regulation.Overshooting.balances", "uses": ["Becoming.Regulation.Overshooting.given_eq", "Becoming.Regulation.Overshooting.taken_eq"]}
+{"name": "Becoming.Regulation.Overshooting.beyond", "uses": ["Becoming.Regulation.Overshooting.given_eq", "Becoming.Regulation.Overshooting.taken_eq"]}
+{"name": "Becoming.Regulation.Overshooting.given_eq", "uses": []}
+{"name": "Becoming.Regulation.Overshooting.high_even", "uses": []}
+{"name": "Becoming.Regulation.Overshooting.never_at", "uses": []}
+{"name": "Becoming.Regulation.Overshooting.opposes", "uses": ["Becoming.Regulation.Overshooting.given_eq", "Becoming.Regulation.Overshooting.taken_eq"]}
+{"name": "Becoming.Regulation.Overshooting.oscillates", "uses": ["Becoming.Regulation.Overshooting.high_even"]}
+{"name": "Becoming.Regulation.Overshooting.taken_eq", "uses": []}
+{"name": "Becoming.Regulation.ReadsLate.alike", "uses": []}
+{"name": "Becoming.Regulation.courseFlow_follows", "uses": []}
+{"name": "Becoming.Regulation.course_balances", "uses": ["Becoming.add_sub_of_le"]}
+{"name": "Becoming.Regulation.course_balances_of_pos", "uses": ["Becoming.Regulation.course_balances", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.Regulation.cross_cancel", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.Regulation.crossing_oscillates", "uses": ["Becoming.Regulation.downCrossing_next", "Becoming.Regulation.upCrossing_later", "Becoming.Regulation.upCrossing_next"]}
+{"name": "Becoming.Regulation.downCrossing_next", "uses": ["Becoming.Regulation.first_index", "Becoming.Regulation.le_succ_mul", "Becoming.Regulation.pull_ramp", "Becoming.Regulation.rest_ramp", "Becoming.Regulation.rise_run", "Becoming.Web.DownCrossing.above", "Becoming.Web.DownCrossing.beyond", "Becoming.Web.DownCrossing.enters", "Becoming.Web.DownCrossing.near", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Regulation.fall_run", "uses": ["Becoming.Regulation.pull_ramp"]}
+{"name": "Becoming.Regulation.first_index", "uses": ["Becoming.Regulation.first_or_nowhere"]}
+{"name": "Becoming.Regulation.first_or_nowhere", "uses": []}
+{"name": "Becoming.Regulation.gap_le_of_add_eq", "uses": ["Becoming.gap_comm", "Becoming.gap_le_of", "Becoming.le_add_gap", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Regulation.gap_of_ge", "uses": ["Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.Regulation.gap_of_le", "uses": ["Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.Regulation.held_below_settles", "uses": ["Becoming.Regulation.first_index", "Becoming.Regulation.held_settles", "Becoming.add_mul_split"]}
+{"name": "Becoming.Regulation.held_crosses", "uses": ["Becoming.Regulation.held_rise", "Becoming.add_mul_split"]}
+{"name": "Becoming.Regulation.held_leaves", "uses": ["Becoming.Regulation.held_rise"]}
+{"name": "Becoming.Regulation.held_oscillates", "uses": ["Becoming.Regulation.crossing_oscillates", "Becoming.Regulation.held_crosses", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Regulation.held_rise", "uses": ["Becoming.Regulation.step_below"]}
+{"name": "Becoming.Regulation.held_settles", "uses": ["Becoming.Regulation.held_rise", "Becoming.Regulation.step_inside"]}
+{"name": "Becoming.Regulation.lateReturn_band", "uses": ["Becoming.Regulation.courseFlow_follows", "Becoming.Regulation.lateReturn_course_balances", "Becoming.Regulation.lateReturn_keeps", "Becoming.Regulation.lateReturn_readsLate", "Becoming.gap_le_iff"]}
+{"name": "Becoming.Regulation.lateReturn_course_balances", "uses": ["Becoming.Regulation.courseFlow_follows", "Becoming.Regulation.course_balances", "Becoming.Regulation.lateReturn_early", "Becoming.Regulation.lateReturn_early_sum", "Becoming.Regulation.lateReturn_late", "Becoming.Regulation.lateReturn_window", "Becoming.Regulation.reversal_evens", "Becoming.Regulation.total_steps_le", "Becoming.gap_comm", "Becoming.gap_total", "Becoming.le_add_gap", "Becoming.le_of_add_le_add_right", "Becoming.steps_last"]}
+{"name": "Becoming.Regulation.lateReturn_early", "uses": []}
+{"name": "Becoming.Regulation.lateReturn_early_sum", "uses": ["Becoming.Flow.accumulates_at", "Becoming.Regulation.lateReturn_early", "Becoming.Regulation.total_steps_congr"]}
+{"name": "Becoming.Regulation.lateReturn_keeps", "uses": ["Becoming.Regulation.gap_le_of_add_eq", "Becoming.Regulation.lateReturn_early_sum", "Becoming.Regulation.lateReturn_window", "Becoming.Regulation.total_steps_le", "Becoming.gap_comm", "Becoming.gap_total"]}
+{"name": "Becoming.Regulation.lateReturn_late", "uses": ["Becoming.Naturals.add_sub_cancel_left"]}
+{"name": "Becoming.Regulation.lateReturn_readsLate", "uses": ["Becoming.Regulation.lateReturn_early", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.Regulation.lateReturn_reads_levels", "uses": ["Becoming.Regulation.lateReturn_late", "Becoming.Regulation.reversal_of_levels"]}
+{"name": "Becoming.Regulation.lateReturn_window", "uses": ["Becoming.Regulation.lateReturn_early_sum", "Becoming.Regulation.lateReturn_late", "Becoming.Regulation.reversal_evens", "Becoming.Regulation.window_step", "Becoming.steps_last"]}
+{"name": "Becoming.Regulation.late_band", "uses": ["Becoming.Regulation.late_spread", "Becoming.Regulation.total_steps_congr", "Becoming.Regulation.total_steps_const"]}
+{"name": "Becoming.Regulation.late_spread", "uses": ["Becoming.Flow.accumulates_at", "Becoming.Regulation.ReadsLate.alike", "Becoming.Regulation.cross_cancel", "Becoming.Regulation.levels_alike", "Becoming.Regulation.total_steps_congr", "Becoming.total_add"]}
+{"name": "Becoming.Regulation.le_sub_add", "uses": ["Becoming.add_sub_of_le"]}
+{"name": "Becoming.Regulation.le_succ_mul", "uses": []}
+{"name": "Becoming.Regulation.levels_alike", "uses": ["Becoming.Regulation.ReadsLate.alike", "Becoming.add_right_cancel"]}
+{"name": "Becoming.Regulation.no_narrower_band", "uses": ["Becoming.Regulation.courseFlow_follows", "Becoming.Regulation.course_balances_of_pos", "Becoming.Regulation.late_band", "Becoming.gap_comm", "Becoming.gap_zero"]}
+{"name": "Becoming.Regulation.overshoot", "uses": ["Becoming.Regulation.push_ramp"]}
+{"name": "Becoming.Regulation.pull_ramp", "uses": ["Becoming.Regulation.step_above"]}
+{"name": "Becoming.Regulation.push_ramp", "uses": ["Becoming.Regulation.step_below"]}
+{"name": "Becoming.Regulation.relayFlow_late", "uses": ["Becoming.Naturals.add_sub_cancel_left"]}
+{"name": "Becoming.Regulation.relayLevel_drop", "uses": ["Becoming.Regulation.le_sub_add", "Becoming.Regulation.relayLevel_held", "Becoming.Regulation.relayLevel_step", "Becoming.Regulation.relay_take_le"]}
+{"name": "Becoming.Regulation.relayLevel_drops", "uses": ["Becoming.Regulation.relayLevel_drop"]}
+{"name": "Becoming.Regulation.relayLevel_held", "uses": ["Becoming.Regulation.relayWindow_shift"]}
+{"name": "Becoming.Regulation.relayLevel_step", "uses": ["Becoming.Regulation.relayWindow_shift"]}
+{"name": "Becoming.Regulation.relayWindow_shift", "uses": []}
+{"name": "Becoming.Regulation.relay_above", "uses": []}
+{"name": "Becoming.Regulation.relay_balances", "uses": ["Becoming.Regulation.relayFlow_late", "Becoming.Regulation.relayLevel_held", "Becoming.Regulation.relayLevel_step", "Becoming.Regulation.relay_room", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.Regulation.relay_below", "uses": []}
+{"name": "Becoming.Regulation.relay_inside", "uses": []}
+{"name": "Becoming.Regulation.relay_room", "uses": ["Becoming.Regulation.relayLevel_drops", "Becoming.Regulation.relay_take_of_le", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Regulation.relay_runs", "uses": ["Becoming.Regulation.relayFlow_late", "Becoming.Regulation.relayLevel_held", "Becoming.Regulation.relay_balances"]}
+{"name": "Becoming.Regulation.relay_step", "uses": []}
+{"name": "Becoming.Regulation.relay_take_le", "uses": []}
+{"name": "Becoming.Regulation.relay_take_of_le", "uses": []}
+{"name": "Becoming.Regulation.relay_threshold", "uses": ["Becoming.Regulation.held_below_settles", "Becoming.Regulation.held_oscillates", "Becoming.Regulation.relay_runs"]}
+{"name": "Becoming.Regulation.rest_ramp", "uses": ["Becoming.Regulation.step_inside"]}
+{"name": "Becoming.Regulation.reversal_evens", "uses": ["Becoming.add_sub_of_le", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.Regulation.reversal_of_levels", "uses": ["Becoming.Regulation.sub_eq_of_add_eq"]}
+{"name": "Becoming.Regulation.rise_run", "uses": ["Becoming.Regulation.push_ramp"]}
+{"name": "Becoming.Regulation.step_above", "uses": ["Becoming.Regulation.relay_above", "Becoming.Regulation.relay_step"]}
+{"name": "Becoming.Regulation.step_below", "uses": ["Becoming.Regulation.relay_below", "Becoming.Regulation.relay_step"]}
+{"name": "Becoming.Regulation.step_inside", "uses": ["Becoming.Regulation.relay_inside", "Becoming.Regulation.relay_step"]}
+{"name": "Becoming.Regulation.sub_eq_of_add_eq", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.add_right_cancel", "Becoming.add_sub_of_le", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.Regulation.sub_succ_le_of_gt", "uses": ["Becoming.add_sub_of_le", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Regulation.sub_succ_le_of_lt", "uses": ["Becoming.add_sub_of_le", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Regulation.total_steps_congr", "uses": []}
+{"name": "Becoming.Regulation.total_steps_const", "uses": []}
+{"name": "Becoming.Regulation.total_steps_le", "uses": []}
+{"name": "Becoming.Regulation.undershoot", "uses": ["Becoming.Regulation.pull_ramp"]}
+{"name": "Becoming.Regulation.upCrossing_later", "uses": ["Becoming.Regulation.downCrossing_next", "Becoming.Regulation.upCrossing_next"]}
+{"name": "Becoming.Regulation.upCrossing_next", "uses": ["Becoming.Regulation.fall_run", "Becoming.Regulation.first_index", "Becoming.Regulation.le_succ_mul", "Becoming.Regulation.push_ramp", "Becoming.Regulation.rest_ramp", "Becoming.Web.UpCrossing.below", "Becoming.Web.UpCrossing.beyond", "Becoming.Web.UpCrossing.enters", "Becoming.Web.UpCrossing.near", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Regulation.window_step", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.Regulation.within_iff_between", "uses": ["Becoming.add_sub_of_le", "Becoming.le_of_add_le_add_right", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.Web.DownCrossing.above", "uses": []}
+{"name": "Becoming.Web.DownCrossing.beyond", "uses": []}
+{"name": "Becoming.Web.DownCrossing.enters", "uses": []}
+{"name": "Becoming.Web.DownCrossing.near", "uses": []}
+{"name": "Becoming.Web.UpCrossing.below", "uses": []}
+{"name": "Becoming.Web.UpCrossing.beyond", "uses": []}
+{"name": "Becoming.Web.UpCrossing.enters", "uses": []}
+{"name": "Becoming.Web.UpCrossing.near", "uses": []}

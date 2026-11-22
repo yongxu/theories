@@ -1,0 +1,15 @@
+{"name": "Becoming.ScopedReach.alternating_beyond_scopes", "uses": ["Becoming.ScopedReach.first_scope_stays_inside", "Becoming.ScopedReach.second_scope_stays_at_seed"]}
+{"name": "Becoming.ScopedReach.alternating_inside", "uses": []}
+{"name": "Becoming.ScopedReach.alternating_steps", "uses": []}
+{"name": "Becoming.ScopedReach.domain_covers", "uses": []}
+{"name": "Becoming.ScopedReach.first_scope_stays_inside", "uses": ["Becoming.ScopedReach.alternating_inside", "Becoming.SeedReachProcesses.fromSeed_iff_invariant"]}
+{"name": "Becoming.ScopedReach.fromSeed_within_iff", "uses": ["Becoming.Invariant.reach", "Becoming.Reach.refl", "Becoming.SeedReachProcesses.FromSeed.step", "Becoming.SeedReachProcesses.fromSeed_iff_invariant"]}
+{"name": "Becoming.ScopedReach.glued_iff_local", "uses": []}
+{"name": "Becoming.ScopedReach.glued_invariant", "uses": ["Becoming.ScopedReach.glued_iff_local"]}
+{"name": "Becoming.ScopedReach.glued_on_reach", "uses": ["Becoming.ScopedReach.glued_invariant", "Becoming.SeedReachProcesses.fromSeed_iff_invariant"]}
+{"name": "Becoming.ScopedReach.halted_coverage_insufficient", "uses": ["Becoming.SeedReachProcesses.fromSeed_iff_seed_of_no_moves"]}
+{"name": "Becoming.ScopedReach.invariant_iff_only", "uses": []}
+{"name": "Becoming.ScopedReach.invariant_on_within_reach", "uses": ["Becoming.Invariant.reach", "Becoming.ScopedReach.fromSeed_within_iff"]}
+{"name": "Becoming.ScopedReach.only_reach", "uses": ["Becoming.Invariant.reach", "Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans"]}
+{"name": "Becoming.ScopedReach.second_scope_stays_at_seed", "uses": ["Becoming.SeedReachProcesses.fromSeed_iff_invariant"]}
+{"name": "Becoming.ScopedReach.within_keeps", "uses": ["Becoming.Invariant.reach"]}

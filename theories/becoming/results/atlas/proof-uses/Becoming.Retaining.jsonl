@@ -1,0 +1,35 @@
+{"name": "Becoming.ArisingDrawer.arises_narrows", "uses": ["Becoming.ArisingDrawer.withheld", "Becoming.Flow.Balances.opens_nothing", "Becoming.Flow.WithheldLevels.unique"]}
+{"name": "Becoming.ArisingDrawer.withheld", "uses": []}
+{"name": "Becoming.ArisingGiver.arises_widens", "uses": ["Becoming.ArisingGiver.withheld", "Becoming.Flow.Balances.closes_nothing", "Becoming.Flow.WithheldLevels.unique"]}
+{"name": "Becoming.ArisingGiver.withheld", "uses": []}
+{"name": "Becoming.Flow.Balances.adds_iff_within_margin", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.adds_iff_within_margin_at"]}
+{"name": "Becoming.Flow.Balances.includes_of_renewed", "uses": ["Becoming.Flow.Balances.withheld", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.Balances.includes_of_renewingIn", "uses": ["Becoming.Flow.Balances.includes_of_renewed"]}
+{"name": "Becoming.Flow.Balances.keeps_of_inactive", "uses": ["Becoming.Flow.Balances.changes_nothing"]}
+{"name": "Becoming.Flow.Balances.keeps_of_inactive.zero", "uses": []}
+{"name": "Becoming.Flow.Balances.keeps_of_not_arising", "uses": ["Becoming.Flow.Balances.keeps_of_inactive", "Becoming.Web.inactive_of_not_arising"]}
+{"name": "Becoming.Flow.Balances.loses_iff_beyond_margin", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.loses_iff_beyond_margin_at"]}
+{"name": "Becoming.Flow.Balances.narrows_of_consumed", "uses": ["Becoming.Flow.Balances.opens_nothing", "Becoming.Web.exceeded_of_below"]}
+{"name": "Becoming.Flow.Balances.not_narrows_of_renewed", "uses": ["Becoming.Flow.Balances.includes_of_renewed", "Becoming.Web.Includes.not_exceeded"]}
+{"name": "Becoming.Flow.Balances.retains_iff_within_margin", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.retains_iff_within_margin_at"]}
+{"name": "Becoming.Flow.Balances.widens_iff_within_margin", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.widens_iff_within_margin_at"]}
+{"name": "Becoming.Flow.adds_iff_within_margin_at", "uses": ["Becoming.Flow.supported_iff_within_margin_at"]}
+{"name": "Becoming.Flow.loses_iff_beyond_margin_at", "uses": ["Becoming.Flow.supported_iff_within_margin_at"]}
+{"name": "Becoming.Flow.retains_iff_within_margin_at", "uses": ["Becoming.Flow.supported_iff_within_margin_at"]}
+{"name": "Becoming.Flow.widens_iff_within_margin_at", "uses": ["Becoming.Flow.supported_iff_within_margin_at"]}
+{"name": "Becoming.Preemption.renewingAt_consuming_narrows", "uses": ["Becoming.Flow.Balances.opens_nothing", "Becoming.Flow.WithheldLevels.unique", "Becoming.Preemption.withheld", "Becoming.Preemption.within_renewal_yet_loses"]}
+{"name": "Becoming.Preemption.withheld", "uses": []}
+{"name": "Becoming.Preemption.within_renewal_yet_loses", "uses": ["Becoming.Flow.WithheldLevels.unique", "Becoming.Preemption.withheld"]}
+{"name": "Becoming.Untaken.consuming_keeps", "uses": ["Becoming.Flow.WithheldLevels.unique"]}
+{"name": "Becoming.Web.Adds.exceeds", "uses": []}
+{"name": "Becoming.Web.Includes.not_undermining", "uses": ["Becoming.Web.Includes.not_exceeded", "Becoming.Web.UnderminingOn.exceeded"]}
+{"name": "Becoming.Web.Includes.retains", "uses": []}
+{"name": "Becoming.Web.Retains.not_added", "uses": []}
+{"name": "Becoming.Web.Retains.of_fewer", "uses": []}
+{"name": "Becoming.Web.Retains.refl", "uses": []}
+{"name": "Becoming.Web.Retains.trans", "uses": []}
+{"name": "Becoming.Web.UnderminingOn.exceeded", "uses": ["Becoming.Web.exceeded_of_below"]}
+{"name": "Becoming.Web.UnderminingOn.not_retains", "uses": []}
+{"name": "Becoming.Web.exceeded_of_below", "uses": []}
+{"name": "Becoming.Web.inactive_of_not_arising", "uses": ["Becoming.kept_onward"]}
+{"name": "Becoming.Web.retains_bounded_iff", "uses": []}

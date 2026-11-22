@@ -1,0 +1,25 @@
+{"name": "Becoming.Flow.Balances.breaks_beyond_drawn", "uses": ["Becoming.Flow.Balances.breaks_beyond", "Becoming.Flow.Balances.broken_drawn"]}
+{"name": "Becoming.Flow.Balances.broken_drawn", "uses": ["Becoming.Flow.Balances.takenBy"]}
+{"name": "Becoming.Flow.Balances.broken_iff", "uses": []}
+{"name": "Becoming.Flow.Balances.broken_shared", "uses": ["Becoming.Flow.Balances.broken_iff"]}
+{"name": "Becoming.Flow.Balances.eases_of_restrained", "uses": ["Becoming.Flow.Balances.level_le_of_restrained"]}
+{"name": "Becoming.Flow.Balances.kept_iff", "uses": ["Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Flow.Balances.kept_of_restrained", "uses": ["Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Flow.Balances.level_le_of_restrained", "uses": ["Becoming.Flow.Balances.level_succ_le"]}
+{"name": "Becoming.Flow.Balances.level_succ_le", "uses": ["Becoming.Flow.Balances.kept_of_restrained"]}
+{"name": "Becoming.Ranking.restraint_extends_iff", "uses": ["Becoming.Flow.Balances.eases_of_restrained", "Becoming.Ranking.wholeRun_extends_iff_of_eases"]}
+{"name": "Becoming.Ranking.restraint_extends_iff_relational", "uses": ["Becoming.Flow.Balances.eases_of_restrained", "Becoming.Ranking.relational_extends_iff_of_rising", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Ranking.restraint_extends_iff_stepwise", "uses": ["Becoming.Flow.Balances.eases_of_restrained", "Becoming.Ranking.stepwise_extends_iff_of_rising", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Ranking.restraint_ranks_over_drawers", "uses": ["Becoming.Ranking.restraint_extends_iff"]}
+{"name": "Becoming.Ranking.restraint_ranks_stepwise", "uses": ["Becoming.Ranking.restraint_extends_iff_stepwise"]}
+{"name": "Becoming.TwoDrawers.balances", "uses": []}
+{"name": "Becoming.TwoDrawers.broken", "uses": []}
+{"name": "Becoming.TwoDrawers.dependent", "uses": []}
+{"name": "Becoming.TwoDrawers.gated", "uses": []}
+{"name": "Becoming.TwoDrawers.restrained_kept", "uses": []}
+{"name": "Becoming.TwoDrawers.restrained_less", "uses": []}
+{"name": "Becoming.TwoDrawers.restraint_ranks", "uses": ["Becoming.Ranking.restraint_ranks_over_drawers", "Becoming.TwoDrawers.balances", "Becoming.TwoDrawers.broken", "Becoming.TwoDrawers.dependent", "Becoming.TwoDrawers.gated", "Becoming.TwoDrawers.restrained_less", "Becoming.TwoDrawers.start"]}
+{"name": "Becoming.TwoDrawers.shared", "uses": ["Becoming.Flow.Balances.broken_shared", "Becoming.TwoDrawers.balances", "Becoming.TwoDrawers.broken"]}
+{"name": "Becoming.TwoDrawers.start", "uses": []}
+{"name": "Becoming.Web.Broken.of_need_le", "uses": []}
+{"name": "Becoming.Web.kept_of_need_le", "uses": []}

@@ -1,0 +1,40 @@
+{"name": "Becoming.PoolFromCourse.Borne.locked_hi", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.RuleCapture.CarrierCounts.threshold_above"]}
+{"name": "Becoming.PoolFromCourse.Borne.others_locked", "uses": ["Becoming.PoolFromCourse.borne_by_others_raises", "Becoming.PoolFromCourse.closed_stays_closed", "Becoming.RuleCapture.Alternating.before_locked", "Becoming.RuleCapture.CarrierCounts.lo_le_hi", "Becoming.RuleCapture.CarrierCounts.threshold_reads", "Becoming.RuleCapture.CarrierCounts.upper"]}
+{"name": "Becoming.PoolFromCourse.Borne.shapers_left", "uses": ["Becoming.PoolFromCourse.Borne.locked_hi", "Becoming.RuleCapture.CarrierCounts.hi_not_le_lo", "Becoming.RuleCapture.CarrierCounts.threshold_below"]}
+{"name": "Becoming.PoolFromCourse.Borne.shapers_turned", "uses": []}
+{"name": "Becoming.PoolFromCourse.Drained.clock_accrues", "uses": []}
+{"name": "Becoming.PoolFromCourse.Drained.clock_turned", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.PoolFromCourse.Drained.clock_accrues", "Becoming.PoolFromCourse.window_locked_after_removal", "Becoming.RuleCapture.CarrierCounts.lo_le_hi", "Becoming.RuleCapture.CarrierCounts.lower", "Becoming.RuleCapture.CarrierCounts.lowers", "Becoming.RuleCapture.CarrierCounts.threshold_below", "Becoming.RuleCapture.CarrierCounts.threshold_reads", "Becoming.RuleCapture.ReadsShare.reverse"]}
+{"name": "Becoming.PoolFromCourse.Drained.drain_accrues", "uses": []}
+{"name": "Becoming.PoolFromCourse.Drained.drain_mono", "uses": ["Becoming.PoolFromCourse.Drained.drawn_mono"]}
+{"name": "Becoming.PoolFromCourse.Drained.drawn_mono", "uses": ["Becoming.PoolFromCourse.Drained.outnumber_mono"]}
+{"name": "Becoming.PoolFromCourse.Drained.lo_below", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.RuleCapture.CarrierCounts.lo_le_hi", "Becoming.RuleCapture.CarrierCounts.threshold_above", "Becoming.RuleCapture.CarrierCounts.threshold_below"]}
+{"name": "Becoming.PoolFromCourse.Drained.outnumber_mono", "uses": ["Becoming.Naturals.mul_right_comm", "Becoming.RuleCapture.CarrierCounts.other_pos"]}
+{"name": "Becoming.PoolFromCourse.Drained.premises", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.PoolFromCourse.Drained.drain_mono", "Becoming.PoolFromCourse.Drained.lo_below", "Becoming.RuleCapture.CarrierCounts.lo_le_hi", "Becoming.RuleCapture.CarrierCounts.select_mono", "Becoming.RuleCapture.CarrierCounts.threshold_reads"]}
+{"name": "Becoming.PoolFromCourse.Drained.strong_not_below", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.PoolFromCourse.Drained.premises", "Becoming.PoolFromCourse.window_order_kept"]}
+{"name": "Becoming.PoolFromCourse.Drained.strong_undone", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.PoolFromCourse.Drained.drain_accrues", "Becoming.PoolFromCourse.window_locked_after_removal", "Becoming.RuleCapture.CarrierCounts.lo_le_hi", "Becoming.RuleCapture.CarrierCounts.raises", "Becoming.RuleCapture.CarrierCounts.threshold_above", "Becoming.RuleCapture.CarrierCounts.threshold_reads", "Becoming.RuleCapture.CarrierCounts.upper"]}
+{"name": "Becoming.PoolFromCourse.Drained.weak_turned", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.PoolFromCourse.Drained.drain_accrues", "Becoming.PoolFromCourse.window_locked_after_removal", "Becoming.RuleCapture.CarrierCounts.lo_le_hi", "Becoming.RuleCapture.CarrierCounts.lower", "Becoming.RuleCapture.CarrierCounts.lowers", "Becoming.RuleCapture.CarrierCounts.threshold_below", "Becoming.RuleCapture.CarrierCounts.threshold_reads", "Becoming.RuleCapture.ReadsShare.reverse"]}
+{"name": "Becoming.PoolFromCourse.bear_shaped_others", "uses": ["Becoming.RuleShaping.eq_of_counts"]}
+{"name": "Becoming.PoolFromCourse.bear_shaped_shapers", "uses": ["Becoming.RuleShaping.eq_of_counts"]}
+{"name": "Becoming.PoolFromCourse.borne_by_others_favours_iff", "uses": ["Becoming.PoolFromCourse.bear_shaped_others", "Becoming.RuleShaping.favours_iff"]}
+{"name": "Becoming.PoolFromCourse.borne_by_others_raises", "uses": ["Becoming.RuleCapture.CarrierCounts.raises"]}
+{"name": "Becoming.PoolFromCourse.borne_by_shapers_favours_iff", "uses": ["Becoming.PoolFromCourse.bear_shaped_shapers", "Becoming.RuleShaping.favours_iff"]}
+{"name": "Becoming.PoolFromCourse.borne_falls", "uses": ["Becoming.RuleShaping.falls_strictly"]}
+{"name": "Becoming.PoolFromCourse.boundRead_reads", "uses": []}
+{"name": "Becoming.PoolFromCourse.bound_course", "uses": ["Becoming.Pace.paced_succ"]}
+{"name": "Becoming.PoolFromCourse.closed_stays_closed", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.Ideals.Preorder.trans", "Becoming.Pace.paced_fast_succ", "Becoming.PoolFromCourse.locked_step"]}
+{"name": "Becoming.PoolFromCourse.joint_raises", "uses": []}
+{"name": "Becoming.PoolFromCourse.locked_along", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.Ideals.Preorder.trans", "Becoming.PoolFromCourse.locked_step"]}
+{"name": "Becoming.PoolFromCourse.locked_step", "uses": ["Becoming.PoolFromCourse.rule_after", "Becoming.PoolFromCourse.turn_locked_at"]}
+{"name": "Becoming.PoolFromCourse.read_absent", "uses": []}
+{"name": "Becoming.PoolFromCourse.rule_after", "uses": ["Becoming.Pace.paced_succ"]}
+{"name": "Becoming.PoolFromCourse.stands_not_readmitted", "uses": []}
+{"name": "Becoming.PoolFromCourse.turn_locked_at", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.RuleCapture.turn_locked"]}
+{"name": "Becoming.PoolFromCourse.window_locked_after_removal", "uses": ["Becoming.ClosedCapture.loss_grows", "Becoming.PoolFromCourse.closed_stays_closed", "Becoming.PoolFromCourse.joint_raises", "Becoming.PoolFromCourse.stands_not_readmitted", "Becoming.PoolFromCourse.window_through"]}
+{"name": "Becoming.PoolFromCourse.window_never_read", "uses": ["Becoming.ClosedCapture.loss_grows", "Becoming.PoolFromCourse.closed_stays_closed", "Becoming.PoolFromCourse.joint_raises", "Becoming.PoolFromCourse.window_unread"]}
+{"name": "Becoming.PoolFromCourse.window_order_kept", "uses": ["Becoming.PoolFromCourse.boundRead_reads", "Becoming.PoolFromCourse.bound_course", "Becoming.RuleCapture.order_kept"]}
+{"name": "Becoming.PoolFromCourse.window_past", "uses": ["Becoming.PoolFromCourse.window_through"]}
+{"name": "Becoming.PoolFromCourse.window_past_course", "uses": ["Becoming.ClosedCapture.course_past", "Becoming.ClosedCapture.join_course", "Becoming.Pace.paced_shift", "Becoming.PoolFromCourse.window_past"]}
+{"name": "Becoming.PoolFromCourse.window_removed_unregistered", "uses": ["Becoming.ClosedCapture.course_past", "Becoming.PoolFromCourse.window_past"]}
+{"name": "Becoming.PoolFromCourse.window_standing_thinned", "uses": ["Becoming.Naturals.ble_false_of_lt"]}
+{"name": "Becoming.PoolFromCourse.window_through", "uses": []}
+{"name": "Becoming.PoolFromCourse.window_unread", "uses": []}

@@ -1,0 +1,26 @@
+{"name": "Becoming.Settling.OneWay.lpo_of_settles", "uses": ["Becoming.Enough.settled_at", "Becoming.Settling.OneWay.seen_stays", "Becoming.Settling.OneWay.seen_witness", "Becoming.le_dest"]}
+{"name": "Becoming.Settling.OneWay.never_keeps_changing", "uses": ["Becoming.Reach.refl", "Becoming.Settling.OneWay.no_undoable", "Becoming.Settling.keeps_changing_iff"]}
+{"name": "Becoming.Settling.OneWay.no_undoable", "uses": ["Becoming.Invariant.reach"]}
+{"name": "Becoming.Settling.OneWay.seen_stays", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Settling.OneWay.seen_witness", "uses": []}
+{"name": "Becoming.Settling.assured_no_undoable", "uses": ["Becoming.Enough.assured_iff", "Becoming.Settling.settles_no_undoable"]}
+{"name": "Becoming.Settling.changes_at", "uses": ["Becoming.Settling.extend_gt", "Becoming.Settling.extend_le"]}
+{"name": "Becoming.Settling.extend_gt", "uses": []}
+{"name": "Becoming.Settling.extend_le", "uses": []}
+{"name": "Becoming.Settling.keeps_changing_iff", "uses": ["Becoming.Settling.loop_of_recurs", "Becoming.Settling.recurs_of_undoable", "Becoming.Settling.undoable_of_loop"]}
+{"name": "Becoming.Settling.keeps_changing_iff_loop", "uses": ["Becoming.Settling.loop_of_recurs", "Becoming.Settling.recurs_of_loop"]}
+{"name": "Becoming.Settling.loop_of_recurs", "uses": ["Becoming.Settling.changes_at", "Becoming.Settling.rising", "Becoming.gap_of_lt", "Becoming.revisits_within"]}
+{"name": "Becoming.Settling.not_settles_of_recurs", "uses": []}
+{"name": "Becoming.Settling.path_then", "uses": []}
+{"name": "Becoming.Settling.recurs_of_loop", "uses": ["Becoming.Run.step", "Becoming.Settling.round_recurs"]}
+{"name": "Becoming.Settling.recurs_of_undoable", "uses": ["Becoming.Branching.trace_positions", "Becoming.Settling.path_then", "Becoming.Settling.round_recurs"]}
+{"name": "Becoming.Settling.rising", "uses": []}
+{"name": "Becoming.Settling.roundIndex_back", "uses": ["Becoming.Settling.roundIndex_last", "Becoming.Settling.roundIndex_lt"]}
+{"name": "Becoming.Settling.roundIndex_from", "uses": ["Becoming.Settling.roundIndex_lt"]}
+{"name": "Becoming.Settling.roundIndex_hits", "uses": ["Becoming.Settling.roundIndex_back", "Becoming.Settling.roundIndex_from", "Becoming.Settling.roundIndex_le", "Becoming.le_dest"]}
+{"name": "Becoming.Settling.roundIndex_last", "uses": []}
+{"name": "Becoming.Settling.roundIndex_le", "uses": ["Becoming.Settling.roundIndex_last", "Becoming.Settling.roundIndex_lt"]}
+{"name": "Becoming.Settling.roundIndex_lt", "uses": []}
+{"name": "Becoming.Settling.round_recurs", "uses": ["Becoming.Settling.roundIndex_hits", "Becoming.Settling.roundIndex_last", "Becoming.Settling.roundIndex_lt"]}
+{"name": "Becoming.Settling.settles_no_undoable", "uses": ["Becoming.Settling.not_settles_of_recurs", "Becoming.Settling.recurs_of_undoable"]}
+{"name": "Becoming.Settling.undoable_of_loop", "uses": ["Becoming.Reach.trans", "Becoming.Run.reach", "Becoming.Run.step", "Becoming.le_dest"]}

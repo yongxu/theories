@@ -1,0 +1,89 @@
+{"name": "Becoming.AdjacentHeld.differs", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.Branching.keeping_eq_heldMoves", "uses": []}
+{"name": "Becoming.CopyDown.ceases", "uses": ["Becoming.CopyDown.not_renews", "Becoming.«自不复生则息»"]}
+{"name": "Becoming.CopyDown.changes_iff", "uses": ["Becoming.CopyDown.rule_above", "Becoming.CopyDown.rule_below", "Becoming.Run.step"]}
+{"name": "Becoming.CopyDown.held_iff", "uses": ["Becoming.CopyDown.rule_above", "Becoming.CopyDown.rule_below", "Becoming.CopyDown.rule_next", "Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.same_of_heldMoves", "Becoming.RuleTower.SameFrom.mono", "Becoming.RuleTower.sameFrom_class", "Becoming.RuleTower.step_sameFrom"]}
+{"name": "Becoming.CopyDown.held_keeps_widening", "uses": ["Becoming.CopyDown.held_iff"]}
+{"name": "Becoming.CopyDown.not_renews", "uses": ["Becoming.CopyDown.changes_iff", "Becoming.Run.step"]}
+{"name": "Becoming.CopyDown.rule_above", "uses": []}
+{"name": "Becoming.CopyDown.rule_below", "uses": []}
+{"name": "Becoming.CopyDown.rule_next", "uses": ["Becoming.CopyDown.rule_above", "Becoming.CopyDown.rule_below"]}
+{"name": "Becoming.CopyDown.whole_every", "uses": ["Becoming.CopyDown.held_iff", "Becoming.Reaching.PossibleHeld.possible"]}
+{"name": "Becoming.Onward.within_eq_heldMoves", "uses": []}
+{"name": "Becoming.OrderHeld.differs", "uses": ["Becoming.OrderHeld.held_ends", "Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.OrderHeld.held_ends", "uses": ["Becoming.OrderHeld.not_five_le_three", "Generative.Trace.brecOn"]}
+{"name": "Becoming.OrderHeld.not_five_le_three", "uses": []}
+{"name": "Becoming.Oscillating.comes_back", "uses": ["Becoming.Oscillating.returns"]}
+{"name": "Becoming.Oscillating.cond_not_ne", "uses": []}
+{"name": "Becoming.Oscillating.converse_fails", "uses": ["Becoming.Oscillating.every", "Becoming.Oscillating.held_zero", "Becoming.Oscillating.rule_changes", "Becoming.Reach.of_step", "Becoming.Reaching.KeepsWidening.not_listed"]}
+{"name": "Becoming.Oscillating.every", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.Oscillating.exceeds_now", "uses": ["Becoming.Oscillating.every"]}
+{"name": "Becoming.Oscillating.generation", "uses": ["Becoming.Oscillating.rule_changes", "Becoming.Run.generation_of_held_changes"]}
+{"name": "Becoming.Oscillating.generation_without_widening", "uses": ["Becoming.Oscillating.converse_fails", "Becoming.Oscillating.generation"]}
+{"name": "Becoming.Oscillating.held_widens", "uses": ["Becoming.Oscillating.held_zero", "Becoming.Reach.of_step", "Becoming.Reach.refl"]}
+{"name": "Becoming.Oscillating.held_zero", "uses": ["Generative.Trace.brecOn"]}
+{"name": "Becoming.Oscillating.returning_has_both", "uses": ["Becoming.Oscillating.comes_back", "Becoming.Oscillating.exceeds_now", "Becoming.Oscillating.held_widens", "Becoming.Oscillating.returns", "Becoming.Run.not_keepsWidening_of_returns"]}
+{"name": "Becoming.Oscillating.returns", "uses": []}
+{"name": "Becoming.Oscillating.rule_changes", "uses": ["Becoming.Oscillating.cond_not_ne"]}
+{"name": "Becoming.RaisedEveryOther.begins_after_even", "uses": ["Becoming.RaisedEveryOther.step_cases", "Becoming.Steps.hasPred_iff"]}
+{"name": "Becoming.RaisedEveryOther.both", "uses": ["Becoming.RaisedEveryOther.held_keeps_widening", "Becoming.RaisedEveryOther.renews_without_end", "Becoming.RaisedEveryOther.whole_every", "Becoming.«生生不息»"]}
+{"name": "Becoming.RaisedEveryOther.generation", "uses": ["Becoming.RaisedEveryOther.begins_after_even", "Becoming.Steps.generation_iff_begins"]}
+{"name": "Becoming.RaisedEveryOther.held_iff", "uses": ["Becoming.RaisedRule.held_iff"]}
+{"name": "Becoming.RaisedEveryOther.held_keeps_widening", "uses": ["Becoming.RaisedEveryOther.held_iff", "Becoming.RaisedEveryOther.rule_le"]}
+{"name": "Becoming.RaisedEveryOther.renews_without_end", "uses": ["Becoming.RaisedEveryOther.step_cases", "Becoming.Steps.hasPred_iff"]}
+{"name": "Becoming.RaisedEveryOther.rule_le", "uses": ["Becoming.RaisedEveryOther.step_cases"]}
+{"name": "Becoming.RaisedEveryOther.step_cases", "uses": []}
+{"name": "Becoming.RaisedEveryOther.whole_every", "uses": ["Becoming.RaisedRule.whole_every"]}
+{"name": "Becoming.RaisedRule.ceases", "uses": ["Becoming.RaisedRule.not_renews", "Becoming.«自不复生则息»"]}
+{"name": "Becoming.RaisedRule.generation", "uses": ["Becoming.RaisedRule.rule_changes", "Becoming.Run.generation_of_held_changes"]}
+{"name": "Becoming.RaisedRule.held_iff", "uses": ["Becoming.RaisedRule.held_trace", "Becoming.Reach.of_step"]}
+{"name": "Becoming.RaisedRule.held_keeps_widening", "uses": ["Becoming.RaisedRule.held_iff"]}
+{"name": "Becoming.RaisedRule.held_trace", "uses": ["Generative.Trace.brecOn"]}
+{"name": "Becoming.RaisedRule.not_renews", "uses": []}
+{"name": "Becoming.RaisedRule.reach_raise", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans"]}
+{"name": "Becoming.RaisedRule.rule_changes", "uses": []}
+{"name": "Becoming.RaisedRule.whole_every", "uses": ["Becoming.RaisedRule.reach_raise", "Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.Reach.heldMoves_iff_sameAsStart", "uses": ["Becoming.Trace.heldMoves_sameAsStart", "Becoming.Trace.sameAsStart_heldMoves", "Becoming.«类».refl"]}
+{"name": "Becoming.Reach.heldMoves_mono", "uses": ["Becoming.Reach.map"]}
+{"name": "Becoming.Reach.of_heldMoves", "uses": ["Becoming.Reach.map"]}
+{"name": "Becoming.Reach.same_of_heldMoves", "uses": ["Becoming.Reaching.reach_heldMoves_iff", "Becoming.«类».refl", "Becoming.«线内同类»"]}
+{"name": "Becoming.Reaching.PossibleHeld.possible", "uses": ["Becoming.Reach.of_heldMoves"]}
+{"name": "Becoming.Reaching.not_reach_of_grows", "uses": ["Becoming.Reaching.Possible.of_reach"]}
+{"name": "Becoming.Reaching.not_step_of_grows", "uses": ["Becoming.Reach.of_step", "Becoming.Reaching.not_reach_of_grows"]}
+{"name": "Becoming.Reaching.possibleHeld_iff_line", "uses": ["Becoming.Reach.refl", "Becoming.Reaching.reach_heldMoves_iff"]}
+{"name": "Becoming.Reaching.possible_iff_held_of_sequence", "uses": ["Becoming.Reaching.PossibleHeld.possible", "Becoming.Reaching.reach_held_of_sequence"]}
+{"name": "Becoming.Reaching.reach_heldMoves_iff", "uses": ["Becoming.Reaching.steps_heldMoves_iff", "Becoming.reach_iff_withinClosure", "Becoming.«及之单调»", "Becoming.«所闭当且仅当同一或及»"]}
+{"name": "Becoming.Reaching.reach_held_of_sequence", "uses": ["Becoming.Reach.refl", "Becoming.Reaching.reach_heldMoves_iff", "Becoming.reach_iff_withinClosure", "Becoming.«及在渐粗列之相续»", "Becoming.«所闭当且仅当同一或及»"]}
+{"name": "Becoming.Reaching.steps_heldMoves_iff", "uses": []}
+{"name": "Becoming.RuleTower.SameFrom.mono", "uses": []}
+{"name": "Becoming.RuleTower.held_origin", "uses": ["Becoming.Gated.origin", "Becoming.RuleTower.reflected"]}
+{"name": "Becoming.RuleTower.possible_iff_held", "uses": ["Becoming.Reaching.possible_iff_held_of_sequence", "Becoming.RuleTower.SameFrom.mono", "Becoming.RuleTower.step_sameFrom"]}
+{"name": "Becoming.RuleTower.reflected", "uses": ["Becoming.Reach.of_step", "Becoming.Reaching.Possible.of_reach", "Becoming.RuleTower.SameFrom.mono", "Becoming.RuleTower.step_sameFrom"]}
+{"name": "Becoming.RuleTower.sameFrom_class", "uses": []}
+{"name": "Becoming.RuleTower.step_sameFrom", "uses": []}
+{"name": "Becoming.Run.adaptive_rule_change_recurs_of_keepsWidening", "uses": ["Becoming.Run.held_change_recurs_of_keepsWidening", "Becoming.Run.step", "Becoming.adaptive_keeps_rule_iff"]}
+{"name": "Becoming.Run.adaptive_rule_changes_of_keepsWidening", "uses": ["Becoming.Run.changes_of_heldKeepsWidening", "Becoming.Run.step", "Becoming.adaptive_keeps_rule_iff"]}
+{"name": "Becoming.Run.begins_of_heldKeepsWidening", "uses": ["Becoming.Run.held_change_recurs_of_keepsWidening", "Becoming.Steps.hasPred_iff"]}
+{"name": "Becoming.Run.changes_of_heldGrows", "uses": ["Becoming.Reaching.not_step_of_grows", "Becoming.Run.step"]}
+{"name": "Becoming.Run.changes_of_heldKeepsWidening", "uses": ["Becoming.Run.departs_of_keepsWidening", "Becoming.Run.step"]}
+{"name": "Becoming.Run.departs_of_keepsWidening", "uses": ["Becoming.Run.possible_of_stretch"]}
+{"name": "Becoming.Run.generation_of_heldKeepsWidening", "uses": ["Becoming.Run.begins_of_heldKeepsWidening", "Becoming.Steps.generation_iff_begins"]}
+{"name": "Becoming.Run.generation_of_held_changes", "uses": ["Becoming.Steps.generation_iff_begins", "Becoming.Steps.hasPred_iff"]}
+{"name": "Becoming.Run.held_change_located", "uses": ["Becoming.Amounts.unmarked_or_marked", "Becoming.Run.possible_of_stretch", "Becoming.Run.step"]}
+{"name": "Becoming.Run.held_change_recurs_of_keepsWidening", "uses": ["Becoming.Run.held_change_located"]}
+{"name": "Becoming.Run.not_heldKeepsWidening_of_listed", "uses": ["Becoming.Reaching.KeepsWidening.not_listed", "Becoming.Reaching.PossibleHeld.possible", "Becoming.Run.possible_from_start"]}
+{"name": "Becoming.Run.not_heldKeepsWidening_of_stays", "uses": ["Becoming.Run.not_keepsWidening_of_within", "Becoming.Run.step"]}
+{"name": "Becoming.Run.not_keepsWidening_of_returns", "uses": []}
+{"name": "Becoming.Run.not_keepsWidening_of_within", "uses": ["Becoming.Run.departs_of_keepsWidening"]}
+{"name": "Becoming.Run.not_unending_of_heldKeepsWidening", "uses": ["Becoming.Run.changes_of_heldKeepsWidening", "Becoming.Steps.buqiong_iff"]}
+{"name": "Becoming.Run.possibleHeld_of_stays", "uses": ["Becoming.Run.possible_of_stretch", "Becoming.Run.step"]}
+{"name": "Becoming.Run.possible_of_stretch", "uses": ["Becoming.Reach.of_step", "Becoming.Reaching.Possible.of_reach"]}
+{"name": "Becoming.Run.ruleTower_move_above_recurs_of_keepsWidening", "uses": ["Becoming.Amounts.unmarked_or_marked", "Becoming.RuleTower.SameFrom.mono", "Becoming.RuleTower.step_sameFrom", "Becoming.Run.changes_of_heldKeepsWidening", "Becoming.Run.step"]}
+{"name": "Becoming.Steps.generation_iff_begins", "uses": ["Becoming.Map.step_reached_le", "Becoming.Map.step_reaches_of_le", "Becoming.Steps.buqiong_iff"]}
+{"name": "Becoming.Synchronous.not_held", "uses": []}
+{"name": "Becoming.Synchronous.possible_two", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Synchronous.tower_law_fails", "uses": ["Becoming.Synchronous.not_held", "Becoming.Synchronous.possible_two"]}
+{"name": "Becoming.Trace.heldMoves_sameAsStart", "uses": ["Becoming.«类».trans", "Generative.Trace.brecOn"]}
+{"name": "Becoming.Trace.sameAsStart_heldMoves", "uses": ["Becoming.«类».symm", "Becoming.«类».trans", "Generative.Trace.brecOn"]}
+{"name": "Becoming.adaptive_keeps_rule_iff", "uses": []}
+{"name": "Becoming.«及在渐粗列之相续»", "uses": ["Becoming.«及».brecOn", "Becoming.«及之单调»", "Becoming.«粗化»"]}

@@ -1,0 +1,6 @@
+{"name": "Becoming.Scope.antitone", "uses": []}
+{"name": "Becoming.Scope.nonempty", "uses": ["Generative.InquirySufficiency.sound_has_actual_execution"]}
+{"name": "Becoming.Scope.reached", "uses": ["Generative.InquirySufficiency.execution_is_actual_trace"]}
+{"name": "Becoming.Scope.secures", "uses": ["Generative.InquirySufficiency.sound_execution_meets_goal"]}
+{"name": "Becoming.commonResponse_antitone", "uses": []}
+{"name": "Becoming.commonResponse_judge_iff", "uses": []}

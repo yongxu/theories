@@ -1,0 +1,52 @@
+{"name": "Becoming.Closing.Onset.amount_after", "uses": ["Becoming.Closing.Onset.amount_before", "Becoming.Closing.Onset.amount_succ_late", "Becoming.Loops.two_pow_succ", "Becoming.Naturals.add_congr"]}
+{"name": "Becoming.Closing.Onset.amount_before", "uses": ["Becoming.Closing.Onset.amount_succ_early"]}
+{"name": "Becoming.Closing.Onset.amount_succ_early", "uses": ["Becoming.Closing.Onset.strengths_early", "Becoming.Loops.SelfLoop.give", "Becoming.carriedGive_congr_strength", "Becoming.carried_succ", "Becoming.total_congr"]}
+{"name": "Becoming.Closing.Onset.amount_succ_late", "uses": ["Becoming.Closing.Onset.strengths_late", "Becoming.Loops.SelfLoop.give", "Becoming.carriedGive_congr_strength", "Becoming.carried_succ", "Becoming.total_congr"]}
+{"name": "Becoming.Closing.Onset.forms", "uses": ["Becoming.Closing.Onset.strengths_late", "Becoming.beq_self", "Becoming.responds_to_own_level"]}
+{"name": "Becoming.Closing.Onset.not_formed", "uses": ["Becoming.Closing.Onset.strengths_early", "Becoming.Propagation.cond_same", "Becoming.couples_before_iff"]}
+{"name": "Becoming.Closing.Onset.strengths_early", "uses": ["Becoming.Naturals.ble_false_of_lt", "Becoming.Propagation.cond_same"]}
+{"name": "Becoming.Closing.Onset.strengths_late", "uses": []}
+{"name": "Becoming.Closing.Onset.unforeseen", "uses": ["Becoming.Closing.Onset.amount_before"]}
+{"name": "Becoming.Closing.Threshold.forms", "uses": ["Becoming.Closing.Threshold.level_before", "Becoming.Closing.Threshold.strengths_eq", "Becoming.beq_self", "Becoming.responds_to_own_level"]}
+{"name": "Becoming.Closing.Threshold.level_after", "uses": ["Becoming.Closing.Threshold.level_before", "Becoming.Closing.Threshold.level_ge", "Becoming.Closing.Threshold.level_succ", "Becoming.Loops.two_pow_succ", "Becoming.Naturals.add_congr"]}
+{"name": "Becoming.Closing.Threshold.level_before", "uses": ["Becoming.Closing.Threshold.level_succ", "Becoming.Naturals.ble_false_of_lt"]}
+{"name": "Becoming.Closing.Threshold.level_ge", "uses": ["Becoming.Closing.Threshold.level_before", "Becoming.Closing.Threshold.level_le_succ"]}
+{"name": "Becoming.Closing.Threshold.level_le_succ", "uses": ["Becoming.Closing.Threshold.level_succ"]}
+{"name": "Becoming.Closing.Threshold.level_succ", "uses": ["Becoming.Closing.Threshold.reads", "Becoming.Propagation.total_steps_at", "Becoming.beq_self", "Becoming.formedCourse_succ"]}
+{"name": "Becoming.Closing.Threshold.not_formed", "uses": ["Becoming.Closing.Threshold.level_before", "Becoming.Naturals.ble_false_of_lt", "Becoming.couples_before_iff"]}
+{"name": "Becoming.Closing.Threshold.reads", "uses": []}
+{"name": "Becoming.Closing.Threshold.strengths_eq", "uses": []}
+{"name": "Becoming.Closing.Threshold.unforeseen", "uses": ["Becoming.Closing.Threshold.level_before"]}
+{"name": "Becoming.Closing.join_below", "uses": []}
+{"name": "Becoming.Closing.join_from", "uses": ["Becoming.Closing.join_below", "Becoming.Naturals.add_sub_cancel_left", "Becoming.Naturals.ble_false_of_lt"]}
+{"name": "Becoming.Closing.split", "uses": ["Becoming.couples_before_iff"]}
+{"name": "Becoming.Coupled.append", "uses": ["Becoming.Closing.join_below", "Becoming.Closing.join_from", "Becoming.Naturals.le_of_add_le_add_left", "Becoming.le_dest"]}
+{"name": "Becoming.Coupled.lift", "uses": []}
+{"name": "Becoming.Coupled.of_reach", "uses": ["Becoming.Closing.join_below", "Becoming.Closing.join_from", "Becoming.Coupled.append", "Becoming.Coupled.one", "Becoming.«及».brecOn"]}
+{"name": "Becoming.Coupled.one", "uses": []}
+{"name": "Becoming.ExchangeLaw.carryingRead_nonanticipating", "uses": ["Becoming.carriedGive_congr", "Becoming.carriedGive_congr_strength"]}
+{"name": "Becoming.OnLoop.lift", "uses": ["Becoming.Coupled.lift"]}
+{"name": "Becoming.Upstream.lift", "uses": ["Becoming.Coupled.lift"]}
+{"name": "Becoming.Upstream.refl", "uses": []}
+{"name": "Becoming.Upstream.within", "uses": ["Becoming.«线则所闭»"]}
+{"name": "Becoming.carriedGive_congr_strength", "uses": ["Becoming.carriedGive_of_part", "Becoming.carriedGive_of_rest", "Becoming.total_congr"]}
+{"name": "Becoming.carried_before", "uses": ["Becoming.Naturals.add_congr", "Becoming.carriedGive_congr", "Becoming.carriedGive_congr_strength", "Becoming.carried_succ", "Becoming.le_succ_cases", "Becoming.strengthsBefore_before", "Becoming.total_congr"]}
+{"name": "Becoming.carried_le_polynomial_before", "uses": ["Becoming.carried_before", "Becoming.carried_le_polynomial", "Becoming.inflow_before_le"]}
+{"name": "Becoming.coupled_formed", "uses": ["Becoming.couples_before_mono", "Becoming.couples_before_of_couplesAt", "Becoming.couples_iff_couplesAt"]}
+{"name": "Becoming.couplesAt_before_iff", "uses": ["Becoming.strengthsBefore_before", "Becoming.strengthsBefore_from"]}
+{"name": "Becoming.couples_before_iff", "uses": ["Becoming.couplesAt_before_iff", "Becoming.couples_iff_couplesAt"]}
+{"name": "Becoming.couples_before_mono", "uses": ["Becoming.couples_before_iff"]}
+{"name": "Becoming.couples_before_of_couplesAt", "uses": ["Becoming.couples_before_iff"]}
+{"name": "Becoming.couples_of_before", "uses": ["Becoming.couples_before_iff", "Becoming.couples_iff_couplesAt"]}
+{"name": "Becoming.formedCourse_eq_carried", "uses": ["Becoming.Naturals.add_congr", "Becoming.carriedGive_congr", "Becoming.carried_succ", "Becoming.formedCourse_succ", "Becoming.le_succ_cases", "Becoming.total_congr"]}
+{"name": "Becoming.formedCourse_succ", "uses": ["Becoming.ExchangeLaw.carryingRead_nonanticipating", "Becoming.ExchangeLaw.levels_succ", "Becoming.ExchangeLaw.totals_under", "Becoming.total_zero"]}
+{"name": "Becoming.forms_by_closing", "uses": ["Becoming.onLoop_succ_iff"]}
+{"name": "Becoming.inflow_before_le", "uses": ["Becoming.strengthsBefore_le", "Becoming.total_le"]}
+{"name": "Becoming.onLoop_iff_formed", "uses": ["Becoming.OnLoop.lift", "Becoming.coupled_formed", "Becoming.couples_of_before"]}
+{"name": "Becoming.onLoop_of_closing", "uses": ["Becoming.Coupled.of_reach", "Becoming.Upstream.within", "Becoming.«及之传递»", "Becoming.«及当且仅当一步而所闭»", "Becoming.«所闭当且仅当同一或及»"]}
+{"name": "Becoming.onLoop_succ_iff", "uses": ["Becoming.Closing.split", "Becoming.OnLoop.lift", "Becoming.couples_before_iff", "Becoming.couples_before_mono", "Becoming.gap_of_lt", "Becoming.onLoop_of_closing"]}
+{"name": "Becoming.responds_to_own_level", "uses": ["Becoming.Upstream.refl", "Becoming.onLoop_succ_iff"]}
+{"name": "Becoming.strengthsBefore_before", "uses": ["Becoming.Naturals.ble_false_of_lt"]}
+{"name": "Becoming.strengthsBefore_from", "uses": []}
+{"name": "Becoming.strengthsBefore_le", "uses": ["Becoming.strengthsBefore_before", "Becoming.strengthsBefore_from"]}
+{"name": "Becoming.upstream_iff_formed", "uses": ["Becoming.Upstream.lift", "Becoming.coupled_formed", "Becoming.couples_of_before"]}

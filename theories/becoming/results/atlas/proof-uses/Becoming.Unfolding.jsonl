@@ -1,0 +1,31 @@
+{"name": "Becoming.Determined.at", "uses": ["Becoming.Alike.refl"]}
+{"name": "Becoming.Fork.label_couples", "uses": []}
+{"name": "Becoming.Frame.arises_iff", "uses": []}
+{"name": "Becoming.Frame.claims_recur_iff", "uses": ["Becoming.coming_recurs_iff"]}
+{"name": "Becoming.Frame.novel_iff_arises", "uses": []}
+{"name": "Becoming.IdentifiesAlike.carries", "uses": ["Becoming.DeterminedAt.goAlike", "Becoming.carries_law_iff"]}
+{"name": "Becoming.Law.IdentifiesAlike.carries", "uses": ["Becoming.Determined.at", "Becoming.IdentifiesAlike.carries", "Becoming.Law.frameBy_determined"]}
+{"name": "Becoming.Law.alike_future", "uses": ["Becoming.Alike.realized", "Becoming.Alike.step", "Becoming.Law.orbit_shift"]}
+{"name": "Becoming.Law.alike_iff_sameFuture", "uses": ["Becoming.Law.alike_future", "Becoming.Law.sameFuture_bisimulation"]}
+{"name": "Becoming.Law.frameBy_determined", "uses": []}
+{"name": "Becoming.Law.sameFuture_bisimulation", "uses": ["Becoming.Law.orbit_shift"]}
+{"name": "Becoming.Run.keepHistory_shown", "uses": ["Becoming.Shown.runs_of_new", "Becoming.keepHistory_new"]}
+{"name": "Becoming.Shown.agrees", "uses": ["Becoming.shown_le_iff"]}
+{"name": "Becoming.Twins.alike_one", "uses": ["Becoming.Alike.symm", "Becoming.Determined.at", "Becoming.DeterminedAt.transfer", "Becoming.Twins.bisimulation_one", "Becoming.Twins.not_determined", "Becoming.Twins.one_determined"]}
+{"name": "Becoming.Twins.bisimulation", "uses": []}
+{"name": "Becoming.Twins.bisimulation_one", "uses": ["Becoming.Twins.successor_not_start"]}
+{"name": "Becoming.Twins.left_alike_right", "uses": ["Becoming.Twins.bisimulation"]}
+{"name": "Becoming.Twins.naming_not_identifiesAlike", "uses": ["Becoming.Twins.left_alike_right", "Becoming.identifiesAlike_id_iff"]}
+{"name": "Becoming.Twins.not_determined", "uses": []}
+{"name": "Becoming.Twins.one_determined", "uses": []}
+{"name": "Becoming.Twins.successor_not_start", "uses": []}
+{"name": "Becoming.World.balances_iff_exchange", "uses": []}
+{"name": "Becoming.World.exchange_step_iff", "uses": []}
+{"name": "Becoming.closedBy_determined", "uses": []}
+{"name": "Becoming.closedBy_runs_agree", "uses": ["Becoming.GoAlike.runs_agree", "Becoming.closedBy_determined", "Becoming.goAlike_id_iff"]}
+{"name": "Becoming.exchange_agrees", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.exchange_determinedAt", "uses": ["Becoming.exchange_agrees", "Becoming.exchange_alike_of_pointwise"]}
+{"name": "Becoming.exchange_runs_agree", "uses": ["Becoming.Run.step", "Becoming.add_right_cancel"]}
+{"name": "Becoming.exists_law_iff", "uses": ["Becoming.carries_law_iff", "Becoming.goAlike_id_iff", "Becoming.shown_determined_iff", "Becoming.shown_le_iff"]}
+{"name": "Becoming.shown_determined_iff", "uses": []}
+{"name": "Becoming.withMove_determined_iff", "uses": []}

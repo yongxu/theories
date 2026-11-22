@@ -1,0 +1,63 @@
+{"name": "Becoming.Dephasing.branch_weights_unchanged", "uses": []}
+{"name": "Becoming.Dephasing.coherent_control_embedding", "uses": []}
+{"name": "Becoming.Dephasing.coherent_matrix", "uses": []}
+{"name": "Becoming.Dephasing.coherent_reading", "uses": ["Becoming.Dephasing.coherent_control_embedding", "Becoming.Dephasing.control_returns"]}
+{"name": "Becoming.Dephasing.coherent_response", "uses": []}
+{"name": "Becoming.Dephasing.coherent_run", "uses": ["Becoming.Dephasing.coherent_matrix", "Becoming.Dephasing.degraded_matrix", "Becoming.Dephasing.run_settles"]}
+{"name": "Becoming.Dephasing.coherent_run_diagonal", "uses": ["Becoming.Dephasing.branch_weights_unchanged", "Becoming.Dephasing.diagonal_along"]}
+{"name": "Becoming.Dephasing.coherent_run_response", "uses": ["Becoming.Dephasing.coherent_response", "Becoming.Dephasing.degraded_response", "Becoming.Dephasing.run_settles"]}
+{"name": "Becoming.Dephasing.control_returns", "uses": ["Becoming.Branching.law_run_state", "Becoming.Dephasing.joint_reversal_restores_control"]}
+{"name": "Becoming.Dephasing.degraded_matrix", "uses": []}
+{"name": "Becoming.Dephasing.degraded_response", "uses": []}
+{"name": "Becoming.Dephasing.dephase_dephase", "uses": []}
+{"name": "Becoming.Dephasing.dephase_keeps_response_iff", "uses": ["Becoming.Integers.add_assoc", "Becoming.Integers.add_left_cancel", "Becoming.Integers.add_right_comm", "Becoming.Integers.add_zero"]}
+{"name": "Becoming.Dephasing.dephase_merges_preparations", "uses": []}
+{"name": "Becoming.Dephasing.dephase_preserves_diagonal", "uses": []}
+{"name": "Becoming.Dephasing.dephase_preserves_mass", "uses": []}
+{"name": "Becoming.Dephasing.dephase_response", "uses": ["Becoming.Integers.add_zero", "Becoming.Integers.sub_zero"]}
+{"name": "Becoming.Dephasing.diagonal_along", "uses": ["Becoming.Dephasing.diagonal_invariant", "Becoming.Invariant.run"]}
+{"name": "Becoming.Dephasing.diagonal_invariant", "uses": ["Becoming.Dephasing.dephase_preserves_diagonal"]}
+{"name": "Becoming.Dephasing.hadamard_prepares", "uses": ["Becoming.Dephasing.operations_trace_iff", "Becoming.Dephasing.preparation_from_blank", "Becoming.Dephasing.prepared_density"]}
+{"name": "Becoming.Dephasing.joint_reversal_restores_control", "uses": ["Becoming.Dephasing.recordBranch_involution"]}
+{"name": "Becoming.Dephasing.mass_along", "uses": ["Becoming.Dephasing.mass_invariant", "Becoming.Invariant.run"]}
+{"name": "Becoming.Dephasing.mass_invariant", "uses": ["Becoming.Dephasing.dephase_preserves_mass"]}
+{"name": "Becoming.Dephasing.merges", "uses": ["Becoming.Dephasing.dephase_merges_preparations", "Becoming.Dephasing.prepared_ne_coherent", "Becoming.Law.merges_iff"]}
+{"name": "Becoming.Dephasing.no_diagonal_decoder_along", "uses": ["Becoming.Dephasing.no_diagonal_response_decoder", "Becoming.Dephasing.run_settles"]}
+{"name": "Becoming.Dephasing.no_diagonal_response_decoder", "uses": ["Becoming.Readout.decoder_pair_iff"]}
+{"name": "Becoming.Dephasing.no_restore_along", "uses": ["Becoming.Dephasing.prepared_ne_coherent", "Becoming.Dephasing.runs_meet"]}
+{"name": "Becoming.Dephasing.no_uniform_dephase_inverse", "uses": ["Becoming.Dephasing.dephase_merges_preparations", "Becoming.Readout.no_restore"]}
+{"name": "Becoming.Dephasing.not_lossless", "uses": ["Becoming.Branching.Merges.not_lossless", "Becoming.Branching.law_lossless_iff", "Becoming.Dephasing.merges"]}
+{"name": "Becoming.Dephasing.operations_trace_iff", "uses": ["Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.Dephasing.orders_negate", "uses": ["Becoming.Dephasing.operations_trace_iff", "Becoming.Dephasing.xz_anticommute"]}
+{"name": "Becoming.Dephasing.plus_kept_iff", "uses": ["Becoming.Dephasing.dephase_keeps_response_iff", "Becoming.Dephasing.settles"]}
+{"name": "Becoming.Dephasing.plus_minus_along", "uses": ["Becoming.Dephasing.mass_along", "Becoming.Dephasing.response_mass_conserved"]}
+{"name": "Becoming.Dephasing.preparation_from_blank", "uses": ["Becoming.Integers.add_zero", "Becoming.Integers.sub_zero"]}
+{"name": "Becoming.Dephasing.prepared_control_embedding", "uses": []}
+{"name": "Becoming.Dephasing.prepared_density", "uses": []}
+{"name": "Becoming.Dephasing.prepared_matrix", "uses": []}
+{"name": "Becoming.Dephasing.prepared_ne_coherent", "uses": []}
+{"name": "Becoming.Dephasing.prepared_reading", "uses": ["Becoming.Dephasing.control_returns", "Becoming.Dephasing.prepared_control_embedding"]}
+{"name": "Becoming.Dephasing.prepared_response", "uses": []}
+{"name": "Becoming.Dephasing.prepared_run", "uses": ["Becoming.Dephasing.degraded_matrix", "Becoming.Dephasing.dephase_merges_preparations", "Becoming.Dephasing.prepared_matrix", "Becoming.Dephasing.run_settles"]}
+{"name": "Becoming.Dephasing.prepared_run_diagonal", "uses": ["Becoming.Dephasing.branch_weights_unchanged", "Becoming.Dephasing.diagonal_along"]}
+{"name": "Becoming.Dephasing.prepared_run_response", "uses": ["Becoming.Dephasing.degraded_response", "Becoming.Dephasing.dephase_merges_preparations", "Becoming.Dephasing.prepared_response", "Becoming.Dephasing.run_settles"]}
+{"name": "Becoming.Dephasing.process_merges", "uses": ["Becoming.Branching.law_merges_iff", "Becoming.Dephasing.merges"]}
+{"name": "Becoming.Dephasing.recordBranch_involution", "uses": []}
+{"name": "Becoming.Dephasing.recording_dephases", "uses": ["Becoming.Dephasing.recording_reduces_to_dephase", "Becoming.Run.step"]}
+{"name": "Becoming.Dephasing.recording_reduces_to_dephase", "uses": ["Becoming.Integers.add_zero", "Becoming.Integers.mul_zero", "Becoming.Integers.zero_add", "Becoming.Integers.zero_mul"]}
+{"name": "Becoming.Dephasing.response_mass_conserved", "uses": ["Becoming.Integers.add_add_add_comm", "Becoming.Integers.add_assoc", "Becoming.Integers.add_right_comm", "Becoming.Integers.add_right_neg", "Becoming.Integers.add_zero", "Becoming.Integers.neg_add", "Becoming.Integers.two_mul"]}
+{"name": "Becoming.Dephasing.response_settles", "uses": ["Becoming.Dephasing.dephase_response", "Becoming.Dephasing.settles"]}
+{"name": "Becoming.Dephasing.retained_response_exact", "uses": ["Becoming.Integers.add_assoc"]}
+{"name": "Becoming.Dephasing.returns", "uses": ["Becoming.Dephasing.recordBranch_involution", "Becoming.Law.returns_iff"]}
+{"name": "Becoming.Dephasing.run_settles", "uses": ["Becoming.Dephasing.dephase_dephase"]}
+{"name": "Becoming.Dephasing.runs_meet", "uses": ["Becoming.Dephasing.dephase_merges_preparations", "Becoming.Law.merged_stays"]}
+{"name": "Becoming.Dephasing.settles", "uses": ["Becoming.Branching.law_run_state", "Becoming.Dephasing.run_settles"]}
+{"name": "Becoming.Dephasing.switched_course", "uses": ["Becoming.Dephasing.operations_trace_iff", "Becoming.Dephasing.preparation_from_blank", "Becoming.Dephasing.switched_density"]}
+{"name": "Becoming.Dephasing.switched_density", "uses": ["Becoming.Integers.add_comm", "Becoming.Integers.mul_neg", "Becoming.Integers.neg_add", "Becoming.Integers.neg_mul", "Becoming.Integers.neg_mul_neg"]}
+{"name": "Becoming.Dephasing.x_norm_along", "uses": ["Becoming.Dephasing.x_norm_invariant", "Becoming.Invariant.run"]}
+{"name": "Becoming.Dephasing.x_norm_invariant", "uses": ["Becoming.Dephasing.x_preserves_norm"]}
+{"name": "Becoming.Dephasing.x_preserves_norm", "uses": ["Becoming.Integers.add_comm"]}
+{"name": "Becoming.Dephasing.xz_anticommute", "uses": ["Becoming.Integers.neg_neg"]}
+{"name": "Becoming.Dephasing.z_norm_along", "uses": ["Becoming.Dephasing.z_norm_invariant", "Becoming.Invariant.run"]}
+{"name": "Becoming.Dephasing.z_norm_invariant", "uses": ["Becoming.Dephasing.z_preserves_norm"]}
+{"name": "Becoming.Dephasing.z_preserves_norm", "uses": ["Becoming.Integers.neg_mul_neg"]}

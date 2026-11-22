@@ -1,0 +1,60 @@
+{"name": "Becoming.Limit.Free.after_agree", "uses": []}
+{"name": "Becoming.Limit.Free.after_step", "uses": []}
+{"name": "Becoming.Limit.Free.against_state", "uses": ["Becoming.Limit.built_eq", "Becoming.Limit.stage_eq"]}
+{"name": "Becoming.Limit.Free.agree_after", "uses": ["Becoming.Limit.Free.after_agree"]}
+{"name": "Becoming.Limit.Free.settles_dense", "uses": ["Becoming.Limit.Free.after_step", "Becoming.Limit.Free.agree_after"]}
+{"name": "Becoming.Limit.Free.settles_not_refutable", "uses": ["Becoming.Enough.Free.stays_meet_not_assured", "Becoming.Limit.Free.settles_dense", "Becoming.not_refutable_of_adheres"]}
+{"name": "Becoming.Limit.Free.settles_not_refuted", "uses": ["Becoming.Limit.Free.against_state", "Becoming.ListTests.not_ne_self", "Becoming.le_dest"]}
+{"name": "Becoming.Limit.Free.settles_not_verifiable", "uses": ["Becoming.Limit.Free.unsettled_dense", "Becoming.not_verifiable_of_adheres"]}
+{"name": "Becoming.Limit.Free.settles_verified", "uses": ["Becoming.Limit.still_verifies"]}
+{"name": "Becoming.Limit.Free.unsettled_dense", "uses": ["Becoming.Limit.Free.after_step", "Becoming.Limit.Free.agree_after", "Becoming.ListTests.not_ne_self"]}
+{"name": "Becoming.Limit.Refutes.outside_of_no", "uses": ["Becoming.Limit.not_recurs_of_no"]}
+{"name": "Becoming.Limit.Sequences.against_act", "uses": ["Becoming.Limit.built_eq", "Becoming.Limit.stage_eq", "Becoming.Sequences.agree_iff"]}
+{"name": "Becoming.Limit.Sequences.either_recurs_lpo", "uses": ["Becoming.Clear.false_before", "Becoming.Limit.Sequences.or_not_self", "Becoming.Limit.true_of_not_clear", "Becoming.ListTests.false_of_not"]}
+{"name": "Becoming.Limit.Sequences.eventuallyFalse_lpo", "uses": ["Becoming.Clear.false_before", "Becoming.Clear.first_of_true", "Becoming.Clear.first_unique", "Becoming.Clear.or_first", "Becoming.ListTests.and_left", "Becoming.ListTests.and_right", "Becoming.ListTests.bool_absurd", "Becoming.ListTests.false_of_not_true", "Becoming.bool_and_true"]}
+{"name": "Becoming.Limit.Sequences.lastMove_byRecord", "uses": []}
+{"name": "Becoming.Limit.Sequences.lastMove_refutes", "uses": []}
+{"name": "Becoming.Limit.Sequences.notLastMove_byRecord", "uses": ["Becoming.Limit.Sequences.lastMove_byRecord"]}
+{"name": "Becoming.Limit.Sequences.notLastMove_verifies", "uses": ["Becoming.ListTests.false_of_not", "Becoming.ListTests.not_eq_true_of_false"]}
+{"name": "Becoming.Limit.Sequences.not_recurs_of_eventuallyFalse", "uses": ["Becoming.ListTests.bool_absurd"]}
+{"name": "Becoming.Limit.Sequences.or_not_self", "uses": []}
+{"name": "Becoming.Limit.Sequences.recurs_not_verified", "uses": ["Becoming.Limit.Sequences.against_act", "Becoming.Limit.eq_true_of_not_false", "Becoming.ListTests.bool_absurd", "Becoming.le_dest"]}
+{"name": "Becoming.Limit.Tracks.agree", "uses": []}
+{"name": "Becoming.Limit.Verifies.outside_of_no", "uses": ["Becoming.Limit.converges_unique"]}
+{"name": "Becoming.Limit.and_congr2", "uses": []}
+{"name": "Becoming.Limit.both_byRecord", "uses": ["Becoming.Limit.and_congr2"]}
+{"name": "Becoming.Limit.both_verifies", "uses": ["Becoming.ListTests.and_left", "Becoming.ListTests.and_right", "Becoming.bool_and_true"]}
+{"name": "Becoming.Limit.built_eq", "uses": []}
+{"name": "Becoming.Limit.clear_congr", "uses": ["Becoming.Limit.and_congr2"]}
+{"name": "Becoming.Limit.clear_false_of_true", "uses": ["Becoming.Clear.false_before", "Becoming.Clear.false_of_not", "Becoming.ListTests.bool_absurd"]}
+{"name": "Becoming.Limit.clear_of_below", "uses": ["Becoming.bool_and_true"]}
+{"name": "Becoming.Limit.converges_unique", "uses": []}
+{"name": "Becoming.Limit.eq_true_of_not_false", "uses": []}
+{"name": "Becoming.Limit.identifies_iff_tracks", "uses": []}
+{"name": "Becoming.Limit.identifies_refutes", "uses": []}
+{"name": "Becoming.Limit.identifies_verifies", "uses": []}
+{"name": "Becoming.Limit.jointly_byRecord", "uses": ["Becoming.Limit.pending_byRecord"]}
+{"name": "Becoming.Limit.jointly_refutes", "uses": ["Becoming.Limit.mark_carried", "Becoming.Limit.mark_cleared", "Becoming.Limit.mark_kept", "Becoming.Limit.mark_origin", "Becoming.ListTests.and_left", "Becoming.ListTests.and_right", "Becoming.ListTests.bool_absurd", "Becoming.bool_and_true", "Becoming.false_below_or_true", "Becoming.le_dest"]}
+{"name": "Becoming.Limit.mark_carried", "uses": []}
+{"name": "Becoming.Limit.mark_cleared", "uses": []}
+{"name": "Becoming.Limit.mark_kept", "uses": ["Becoming.ListTests.or_left", "Becoming.ListTests.or_right"]}
+{"name": "Becoming.Limit.mark_origin", "uses": ["Becoming.ListTests.bool_absurd", "Becoming.ListTests.or_cases"]}
+{"name": "Becoming.Limit.noneFailed_byRecord", "uses": ["Becoming.Limit.clear_congr", "Becoming.Run.AgreeUpTo.mono"]}
+{"name": "Becoming.Limit.noneFailed_refutes", "uses": ["Becoming.Clear.false_before", "Becoming.Limit.clear_of_below"]}
+{"name": "Becoming.Limit.noneFailed_verifies", "uses": ["Becoming.Clear.false_before", "Becoming.Limit.clear_of_below"]}
+{"name": "Becoming.Limit.not_recurs_of_no", "uses": ["Becoming.ListTests.bool_absurd"]}
+{"name": "Becoming.Limit.pending_byRecord", "uses": ["Becoming.Run.AgreeUpTo.mono"]}
+{"name": "Becoming.Limit.refutes_iff_meet", "uses": []}
+{"name": "Becoming.Limit.says_byRecord", "uses": []}
+{"name": "Becoming.Limit.someSucceeded_byRecord", "uses": ["Becoming.Limit.clear_congr", "Becoming.Run.AgreeUpTo.mono"]}
+{"name": "Becoming.Limit.someSucceeded_of", "uses": ["Becoming.Limit.clear_false_of_true", "Becoming.ListTests.not_eq_true_of_false"]}
+{"name": "Becoming.Limit.someSucceeded_refutes", "uses": ["Becoming.Limit.someSucceeded_of", "Becoming.Limit.succeeds_of_some"]}
+{"name": "Becoming.Limit.someSucceeded_verifies", "uses": ["Becoming.Limit.someSucceeded_of", "Becoming.Limit.succeeds_of_some"]}
+{"name": "Becoming.Limit.stage_eq", "uses": []}
+{"name": "Becoming.Limit.still_byRecord", "uses": []}
+{"name": "Becoming.Limit.still_verifies", "uses": []}
+{"name": "Becoming.Limit.succeeds_of_some", "uses": ["Becoming.Limit.true_of_not_clear", "Becoming.ListTests.false_of_not"]}
+{"name": "Becoming.Limit.true_of_not_clear", "uses": ["Becoming.Clear.or_first", "Becoming.ListTests.bool_absurd"]}
+{"name": "Becoming.Limit.verifies_iff_union", "uses": []}
+{"name": "Becoming.Limit.yesAfter_verifiable", "uses": []}
+{"name": "Becoming.Limit.yesFrom_closed", "uses": []}

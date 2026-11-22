@@ -1,0 +1,58 @@
+{"name": "Becoming.ContinuingRevision.absent_key", "uses": ["Becoming.Naturals.succ_ne_self"]}
+{"name": "Becoming.ContinuingRevision.acquired_key", "uses": ["Becoming.Naturals.succ_ne_self"]}
+{"name": "Becoming.ContinuingRevision.all_cycles", "uses": ["Becoming.ContinuingRevision.one_cycle", "Generative.trace_append_iff"]}
+{"name": "Becoming.ContinuingRevision.all_cycles_amounts", "uses": []}
+{"name": "Becoming.ContinuingRevision.balanced", "uses": ["Becoming.ContinuingRevision.step_conserves"]}
+{"name": "Becoming.ContinuingRevision.clock_cycles", "uses": ["Becoming.Law.orbit_add"]}
+{"name": "Becoming.ContinuingRevision.clock_step", "uses": ["Becoming.ContinuingRevision.fail_step", "Becoming.ContinuingRevision.first_contact", "Becoming.ContinuingRevision.install_step", "Becoming.ContinuingRevision.plan_step", "Becoming.ContinuingRevision.renew_step", "Becoming.ContinuingRevision.second_contact", "Becoming.ContinuingRevision.use_step"]}
+{"name": "Becoming.ContinuingRevision.cut_return", "uses": []}
+{"name": "Becoming.ContinuingRevision.cut_stops_next", "uses": []}
+{"name": "Becoming.ContinuingRevision.cycles_at", "uses": ["Becoming.ContinuingRevision.one_cycle_at", "Generative.trace_append_iff"]}
+{"name": "Becoming.ContinuingRevision.cycles_need_yield", "uses": ["Becoming.ContinuingRevision.balanced", "Becoming.ContinuingRevision.history_cycles", "Becoming.ContinuingRevision.word_return", "Becoming.ContinuingRevision.word_use", "Becoming.Stock.cycles_need"]}
+{"name": "Becoming.ContinuingRevision.enabled_by_success", "uses": []}
+{"name": "Becoming.ContinuingRevision.fail_step", "uses": ["Becoming.ContinuingRevision.fail_step_at"]}
+{"name": "Becoming.ContinuingRevision.fail_step_at", "uses": ["Becoming.ContinuingRevision.absent_key"]}
+{"name": "Becoming.ContinuingRevision.first_contact", "uses": []}
+{"name": "Becoming.ContinuingRevision.first_contact_at", "uses": []}
+{"name": "Becoming.ContinuingRevision.forget_policy", "uses": []}
+{"name": "Becoming.ContinuingRevision.formation_enters", "uses": ["Becoming.ContinuingRevision.run_trace"]}
+{"name": "Becoming.ContinuingRevision.formation_to_run", "uses": ["Becoming.ContinuingRevision.formation_enters"]}
+{"name": "Becoming.ContinuingRevision.formed_and_continues", "uses": ["Becoming.ContinuingRevision.all_cycles", "Becoming.ContinuingRevision.forget_policy", "Becoming.ContinuingRevision.formation_enters", "Generative.trace_append_iff"]}
+{"name": "Becoming.ContinuingRevision.frozen_plan_no_return", "uses": []}
+{"name": "Becoming.ContinuingRevision.history_cycles", "uses": []}
+{"name": "Becoming.ContinuingRevision.install_step", "uses": []}
+{"name": "Becoming.ContinuingRevision.install_step_at", "uses": []}
+{"name": "Becoming.ContinuingRevision.method_changed", "uses": []}
+{"name": "Becoming.ContinuingRevision.new_available_choice", "uses": ["Becoming.ContinuingRevision.next_absent", "Becoming.ReferencePlan.choice_at_contact", "Becoming.ReferencePlan.new_contact_choice"]}
+{"name": "Becoming.ContinuingRevision.next_absent", "uses": ["Becoming.ContinuingRevision.singleton_member", "Becoming.Naturals.succ_ne_self"]}
+{"name": "Becoming.ContinuingRevision.no_return", "uses": []}
+{"name": "Becoming.ContinuingRevision.no_return_without_success", "uses": []}
+{"name": "Becoming.ContinuingRevision.no_run_without_return", "uses": ["Becoming.ContinuingRevision.no_return", "Becoming.ContinuingRevision.step_conserves", "Becoming.ContinuingRevision.use_pos", "Becoming.Run.not_of_depletion"]}
+{"name": "Becoming.ContinuingRevision.one_cycle", "uses": ["Becoming.ContinuingRevision.one_cycle_at"]}
+{"name": "Becoming.ContinuingRevision.one_cycle_at", "uses": ["Becoming.ContinuingRevision.fail_step_at", "Becoming.ContinuingRevision.first_contact_at", "Becoming.ContinuingRevision.install_step_at", "Becoming.ContinuingRevision.plan_step_at", "Becoming.ContinuingRevision.renew_step_at", "Becoming.ContinuingRevision.second_contact_at", "Becoming.ContinuingRevision.use_step_at"]}
+{"name": "Becoming.ContinuingRevision.plan_step", "uses": []}
+{"name": "Becoming.ContinuingRevision.plan_step_at", "uses": []}
+{"name": "Becoming.ContinuingRevision.renew_needs_enabled", "uses": []}
+{"name": "Becoming.ContinuingRevision.renew_of_returned", "uses": []}
+{"name": "Becoming.ContinuingRevision.renew_recurs", "uses": ["Becoming.ContinuingRevision.balanced", "Becoming.ContinuingRevision.renew_of_returned", "Becoming.ContinuingRevision.use_pos", "Becoming.Run.replenishes_of_draws"]}
+{"name": "Becoming.ContinuingRevision.renew_step", "uses": ["Becoming.ContinuingRevision.renew_step_at"]}
+{"name": "Becoming.ContinuingRevision.renew_step_at", "uses": ["Becoming.ContinuingRevision.retained_sample"]}
+{"name": "Becoming.ContinuingRevision.repeats_iff", "uses": ["Becoming.ContinuingRevision.cycles_at", "Becoming.ContinuingRevision.cycles_need_yield", "Becoming.ContinuingRevision.forget_policy", "Becoming.le_dest"]}
+{"name": "Becoming.ContinuingRevision.reserve_consumed", "uses": []}
+{"name": "Becoming.ContinuingRevision.retained_sample", "uses": ["Becoming.Naturals.succ_ne_self"]}
+{"name": "Becoming.ContinuingRevision.retired_choice", "uses": ["Becoming.ContinuingRevision.singleton_member", "Becoming.Naturals.succ_ne_self", "Becoming.ReferencePlan.choice_at_contact", "Becoming.ReferencePlan.new_contact_choice"]}
+{"name": "Becoming.ContinuingRevision.run_at_cycle", "uses": ["Becoming.ContinuingRevision.clock_cycles"]}
+{"name": "Becoming.ContinuingRevision.run_installs", "uses": ["Becoming.ContinuingRevision.clock_cycles", "Becoming.Law.orbit_add"]}
+{"name": "Becoming.ContinuingRevision.run_trace", "uses": []}
+{"name": "Becoming.ContinuingRevision.second_contact", "uses": []}
+{"name": "Becoming.ContinuingRevision.second_contact_at", "uses": []}
+{"name": "Becoming.ContinuingRevision.singleton_member", "uses": []}
+{"name": "Becoming.ContinuingRevision.step_conserves", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.ReferencePlan.step_conserves"]}
+{"name": "Becoming.ContinuingRevision.success_recurs", "uses": ["Becoming.ContinuingRevision.enabled_by_success", "Becoming.ContinuingRevision.renew_needs_enabled", "Becoming.ContinuingRevision.renew_recurs", "Becoming.Run.step"]}
+{"name": "Becoming.ContinuingRevision.trace_conserves", "uses": ["Becoming.ContinuingRevision.step_conserves", "Becoming.add_right_cancel"]}
+{"name": "Becoming.ContinuingRevision.unbounded_succession", "uses": ["Becoming.ContinuingRevision.run_at_cycle"]}
+{"name": "Becoming.ContinuingRevision.use_pos", "uses": []}
+{"name": "Becoming.ContinuingRevision.use_step", "uses": ["Becoming.ContinuingRevision.use_step_at"]}
+{"name": "Becoming.ContinuingRevision.use_step_at", "uses": ["Becoming.ContinuingRevision.acquired_key"]}
+{"name": "Becoming.ContinuingRevision.word_return", "uses": []}
+{"name": "Becoming.ContinuingRevision.word_use", "uses": []}

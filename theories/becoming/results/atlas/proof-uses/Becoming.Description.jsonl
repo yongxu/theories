@@ -1,0 +1,35 @@
+{"name": "Becoming.Law.Returns.states", "uses": ["Becoming.Law.orbit_add", "Becoming.Law.returns_iff"]}
+{"name": "Becoming.Motion.cancel", "uses": []}
+{"name": "Becoming.Motion.orbit_still", "uses": []}
+{"name": "Becoming.Motion.passing_alone", "uses": []}
+{"name": "Becoming.Negation.each_through_other", "uses": ["Becoming.Negation.zero_two", "Becoming.SameAhead.next", "Becoming.SameAhead.symm", "Becoming.SameAhead.trans"]}
+{"name": "Becoming.Negation.two_states", "uses": ["Becoming.Diagonal.flip_moves", "Becoming.Diagonal.revision_never_rests", "Becoming.Negation.zero_two", "Becoming.statesBelow_of_same"]}
+{"name": "Becoming.Negation.zero_two", "uses": ["Becoming.Law.orbit_add"]}
+{"name": "Becoming.Rectangular.image_of_separate", "uses": []}
+{"name": "Becoming.Rectangular.of_image_injective", "uses": []}
+{"name": "Becoming.SameAhead.new_each", "uses": []}
+{"name": "Becoming.SameAhead.next", "uses": []}
+{"name": "Becoming.SameAhead.refl", "uses": []}
+{"name": "Becoming.SameAhead.symm", "uses": []}
+{"name": "Becoming.SameAhead.trans", "uses": []}
+{"name": "Becoming.copy_relates", "uses": []}
+{"name": "Becoming.couple_couple", "uses": []}
+{"name": "Becoming.coupling_relates_and_unrelates", "uses": ["Becoming.couple_couple"]}
+{"name": "Becoming.evenBoxes_glued", "uses": ["Becoming.even_first", "Becoming.even_third", "Becoming.flipIf_self"]}
+{"name": "Becoming.evenBoxes_not_determined", "uses": ["Becoming.evenBoxes_glued"]}
+{"name": "Becoming.even_first", "uses": []}
+{"name": "Becoming.even_third", "uses": []}
+{"name": "Becoming.finitely_many_states_iff", "uses": ["Becoming.SameAhead.symm", "Becoming.SameAhead.trans", "Becoming.shared_below", "Becoming.statesBelow_of_same"]}
+{"name": "Becoming.finitely_many_states_iff_lasso", "uses": ["Becoming.finitely_many_states_iff", "Becoming.gap_of_lt", "Becoming.lasso_iff_sameAhead"]}
+{"name": "Becoming.flipIf_self", "uses": []}
+{"name": "Becoming.forgetting_unrelates", "uses": []}
+{"name": "Becoming.lasso_iff_sameAhead", "uses": ["Becoming.le_dest"]}
+{"name": "Becoming.relation_persists", "uses": ["Becoming.Rectangular.of_image_injective"]}
+{"name": "Becoming.sameAhead_orbit_iff", "uses": ["Becoming.Law.orbit_add"]}
+{"name": "Becoming.separated_of_whole", "uses": []}
+{"name": "Becoming.separation_admits_extra", "uses": []}
+{"name": "Becoming.separation_faithful_iff", "uses": []}
+{"name": "Becoming.shared_below", "uses": ["Becoming.skipAt_le", "Becoming.skipAt_lt", "Becoming.skipAt_ne", "Becoming.split_top"]}
+{"name": "Becoming.split_top", "uses": ["Becoming.le_succ_cases"]}
+{"name": "Becoming.statesBelow_of_same", "uses": ["Becoming.SameAhead.next", "Becoming.SameAhead.refl", "Becoming.SameAhead.symm", "Becoming.SameAhead.trans"]}
+{"name": "Becoming.whole_not_in_pairs", "uses": []}

@@ -1,0 +1,22 @@
+{"name": "Becoming.Renewable.kept_part_not_renewal", "uses": ["Becoming.Renewable.class_belongs_to_the_run", "Becoming.Viability.Kernel.run"]}
+{"name": "Becoming.Viability.ChoicePoint.decisions_exist", "uses": ["Becoming.Viability.ChoicePoint.each_not_joint", "Becoming.Viability.ChoicePoint.joint_keepable", "Becoming.Viability.Keepable.left", "Becoming.Viability.Keepable.right", "Becoming.Viability.Keepable.start"]}
+{"name": "Becoming.Viability.ChoicePoint.each_not_joint", "uses": ["Becoming.Run.step", "Becoming.Viability.ChoicePoint.split_leaves"]}
+{"name": "Becoming.Viability.ChoicePoint.first_closed", "uses": ["Becoming.Viability.keptFor_of_closed"]}
+{"name": "Becoming.Viability.ChoicePoint.joint_differs", "uses": ["Becoming.Viability.ChoicePoint.each_not_joint", "Becoming.Viability.ChoicePoint.joint_keepable", "Becoming.Viability.Keepable.left", "Becoming.Viability.Keepable.right"]}
+{"name": "Becoming.Viability.ChoicePoint.joint_keepable", "uses": []}
+{"name": "Becoming.Viability.ChoicePoint.keptFor_each_not_joint", "uses": ["Becoming.Viability.ChoicePoint.first_closed", "Becoming.Viability.ChoicePoint.second_closed"]}
+{"name": "Becoming.Viability.ChoicePoint.no_respecting_rule_decides_joint", "uses": ["Becoming.Viability.ChoicePoint.joint_differs"]}
+{"name": "Becoming.Viability.ChoicePoint.no_rule_decides_joint", "uses": ["Becoming.Viability.ChoicePoint.joint_differs"]}
+{"name": "Becoming.Viability.ChoicePoint.second_closed", "uses": ["Becoming.Viability.keptFor_of_closed"]}
+{"name": "Becoming.Viability.ChoicePoint.split_leaves", "uses": []}
+{"name": "Becoming.Viability.Keepable.each", "uses": ["Becoming.Viability.Keepable.left", "Becoming.Viability.Keepable.right"]}
+{"name": "Becoming.Viability.Keepable.left", "uses": ["Becoming.Viability.Keepable.mono"]}
+{"name": "Becoming.Viability.Keepable.mono", "uses": []}
+{"name": "Becoming.Viability.Keepable.right", "uses": ["Becoming.Viability.Keepable.mono"]}
+{"name": "Becoming.Viability.Keepable.start", "uses": []}
+{"name": "Becoming.Viability.KeptFor.each", "uses": ["Becoming.Viability.KeptFor.guard_mono"]}
+{"name": "Becoming.Viability.KeptFor.guard_mono", "uses": []}
+{"name": "Becoming.Viability.keepable_and_iff_of_kernel_left", "uses": ["Becoming.Viability.Keepable.right", "Becoming.Viability.Kernel.run"]}
+{"name": "Becoming.Viability.keepable_and_iff_of_kernel_right", "uses": ["Becoming.Viability.Keepable.left", "Becoming.Viability.Kernel.run"]}
+{"name": "Becoming.Viability.kernel_allOf_iff", "uses": ["Becoming.Viability.kernel_and_iff"]}
+{"name": "Becoming.Viability.kernel_and_iff", "uses": ["Becoming.Viability.Kernel.mono"]}

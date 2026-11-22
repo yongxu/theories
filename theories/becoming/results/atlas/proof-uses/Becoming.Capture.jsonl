@@ -1,0 +1,13 @@
+{"name": "Becoming.CaptureWorlds.length_le_zero", "uses": []}
+{"name": "Becoming.CaptureWorlds.share_not_lower_of_unsupported", "uses": ["Becoming.CaptureWorlds.unsupported_leave_none", "Becoming.share_not_lower"]}
+{"name": "Becoming.CaptureWorlds.share_rises_of_unsupported", "uses": ["Becoming.CaptureWorlds.unsupported_leave_none", "Becoming.share_rises"]}
+{"name": "Becoming.CaptureWorlds.unsupported_leave_none", "uses": ["Becoming.CaptureWorlds.length_le_zero", "Becoming.Flow.unsupported_childless"]}
+{"name": "Becoming.Captured.byRule", "uses": []}
+{"name": "Becoming.Captured.rule_perturbation_changes", "uses": []}
+{"name": "Becoming.Captured.state_perturbation_returns", "uses": []}
+{"name": "Becoming.Flow.descent_exhausted", "uses": ["Becoming.Flow.descent_needs_unrun"]}
+{"name": "Becoming.Flow.descent_needs_unrun", "uses": ["Becoming.Flow.change_recurs_iff", "Becoming.Web.ComesToStand.rises"]}
+{"name": "Becoming.le_offspringCount", "uses": []}
+{"name": "Becoming.offspringCount_le", "uses": []}
+{"name": "Becoming.share_not_lower", "uses": ["Becoming.le_offspringCount", "Becoming.mul_assoc_nat", "Becoming.offspringCount_le"]}
+{"name": "Becoming.share_rises", "uses": ["Becoming.le_offspringCount", "Becoming.mul_assoc_nat", "Becoming.offspringCount_le"]}

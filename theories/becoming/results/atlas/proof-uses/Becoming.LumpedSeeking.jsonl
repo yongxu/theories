@@ -1,0 +1,14 @@
+{"name": "Becoming.LumpedSeeking.Agree.distinct", "uses": []}
+{"name": "Becoming.LumpedSeeking.Agree.keeps_tails", "uses": ["Becoming.LumpedSeeking.Agree.distinct", "Becoming.LumpedSeeking.Agree.ties", "Becoming.LumpedSeeking.order_kept"]}
+{"name": "Becoming.LumpedSeeking.Agree.seeking_keeps_tails", "uses": ["Becoming.LumpedSeeking.Agree.distinct", "Becoming.LumpedSeeking.Agree.ties", "Becoming.LumpedSeeking.seeking_keeps_order"]}
+{"name": "Becoming.LumpedSeeking.Agree.seeking_turns_tails", "uses": ["Becoming.ConditionalWeights.posterior_le_iff"]}
+{"name": "Becoming.LumpedSeeking.Agree.ties", "uses": []}
+{"name": "Becoming.LumpedSeeking.Agree.totals", "uses": []}
+{"name": "Becoming.LumpedSeeking.Agree.turns_fair", "uses": ["Becoming.ConditionalWeights.posterior_le_iff"]}
+{"name": "Becoming.LumpedSeeking.order_kept", "uses": ["Becoming.LumpedSeeking.posterior_le_iff_prior", "Becoming.LumpedSeeking.tied_mass"]}
+{"name": "Becoming.LumpedSeeking.posterior_le_iff_prior", "uses": ["Becoming.ConditionalWeights.mass_single", "Becoming.ConditionalWeights.posterior_le_iff", "Becoming.ConditionalWeights.whole_restrict", "Becoming.LumpedSeeking.single_le_evidence", "Becoming.LumpedSeeking.tied_mass"]}
+{"name": "Becoming.LumpedSeeking.posterior_ratio_kept", "uses": ["Becoming.ConditionalWeights.posterior_single", "Becoming.LumpedSeeking.tied_mass", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.LumpedSeeking.seek_tied", "uses": []}
+{"name": "Becoming.LumpedSeeking.seeking_keeps_order", "uses": ["Becoming.LumpedSeeking.order_kept", "Becoming.LumpedSeeking.seek_tied"]}
+{"name": "Becoming.LumpedSeeking.single_le_evidence", "uses": ["Becoming.ConditionalWeights.evidence", "Becoming.ConditionalWeights.mass_single", "Becoming.mass_mono"]}
+{"name": "Becoming.LumpedSeeking.tied_mass", "uses": ["Becoming.ConditionalWeights.mass_congr"]}

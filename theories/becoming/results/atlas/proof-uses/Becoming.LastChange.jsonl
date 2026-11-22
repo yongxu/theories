@@ -1,0 +1,27 @@
+{"name": "Becoming.LastChange.Changes.add", "uses": ["Becoming.Settling.extend_gt", "Becoming.Settling.extend_le"]}
+{"name": "Becoming.LastChange.assured_iff_of_lpo", "uses": ["Becoming.Enough.assured_stays_meet", "Becoming.LastChange.rests_of_settles", "Becoming.LastChange.settles_of_no_undoable", "Becoming.Settling.assured_no_undoable"]}
+{"name": "Becoming.LastChange.atChanges_gt", "uses": []}
+{"name": "Becoming.LastChange.atChanges_le", "uses": []}
+{"name": "Becoming.LastChange.changes_lt", "uses": ["Becoming.LastChange.atChanges_gt", "Becoming.LastChange.atChanges_le", "Becoming.Settling.rising", "Becoming.gap_of_lt", "Becoming.le_dest", "Becoming.revisits_within"]}
+{"name": "Becoming.LastChange.decided_of_lpo", "uses": []}
+{"name": "Becoming.LastChange.decided_within", "uses": []}
+{"name": "Becoming.LastChange.lpo_iff_settles", "uses": ["Becoming.LastChange.settles_of_no_undoable", "Becoming.Reach.refl", "Becoming.Settling.OneWay.lpo_of_settles", "Becoming.Settling.OneWay.no_undoable"]}
+{"name": "Becoming.LastChange.noLoop_of_no_undoable", "uses": ["Becoming.Settling.undoable_of_loop"]}
+{"name": "Becoming.LastChange.not_not_decided", "uses": []}
+{"name": "Becoming.LastChange.not_not_rests", "uses": ["Becoming.LastChange.noLoop_of_no_undoable", "Becoming.LastChange.not_not_settles", "Becoming.LastChange.rests_of_settles"]}
+{"name": "Becoming.LastChange.not_not_settles", "uses": ["Becoming.LastChange.changes_lt", "Becoming.LastChange.not_not_settles_or_changes"]}
+{"name": "Becoming.LastChange.not_not_settles_or_changes", "uses": ["Becoming.LastChange.Changes.add", "Becoming.LastChange.not_not_decided", "Becoming.LastChange.settles_of_still"]}
+{"name": "Becoming.LastChange.rests_of_settles", "uses": ["Becoming.Enough.settled_at", "Becoming.Run.reach", "Becoming.Run.step", "Becoming.le_dest"]}
+{"name": "Becoming.LastChange.room_balance", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.add_right_cancel"]}
+{"name": "Becoming.LastChange.settles_iff_decided", "uses": ["Becoming.LastChange.decided_within", "Becoming.LastChange.settles_of_decided"]}
+{"name": "Becoming.LastChange.settles_of_decided", "uses": ["Becoming.LastChange.changes_lt", "Becoming.LastChange.settles_or_changes"]}
+{"name": "Becoming.LastChange.settles_of_lpo", "uses": ["Becoming.LastChange.decided_of_lpo", "Becoming.LastChange.settles_of_decided"]}
+{"name": "Becoming.LastChange.settles_of_no_undoable", "uses": ["Becoming.LastChange.noLoop_of_no_undoable", "Becoming.LastChange.settles_of_lpo"]}
+{"name": "Becoming.LastChange.settles_of_still", "uses": ["Becoming.le_dest"]}
+{"name": "Becoming.LastChange.settles_or_changes", "uses": ["Becoming.LastChange.Changes.add", "Becoming.LastChange.settles_of_still"]}
+{"name": "Becoming.LastChange.still_of_fixed", "uses": ["Becoming.Law.orbit_mul"]}
+{"name": "Becoming.LastChange.still_of_fixed_at", "uses": ["Becoming.Law.orbit_add", "Becoming.Law.orbit_mul"]}
+{"name": "Becoming.LastChange.still_same", "uses": ["Becoming.LastChange.still_stays"]}
+{"name": "Becoming.LastChange.still_stays", "uses": []}
+{"name": "Becoming.LastChange.still_succ", "uses": ["Becoming.Law.orbit_shift"]}
+{"name": "Becoming.LastChange.still_within", "uses": ["Becoming.Amounts.unmarked_within", "Becoming.LastChange.room_balance", "Becoming.LastChange.still_of_fixed_at", "Becoming.Naturals.le_sub_of_add_le", "Becoming.Naturals.sub_add_cancel", "Becoming.le_of_add_le_add_right"]}

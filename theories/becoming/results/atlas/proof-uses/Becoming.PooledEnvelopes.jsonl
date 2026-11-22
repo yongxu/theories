@@ -1,0 +1,46 @@
+{"name": "Becoming.PooledEnvelopes.Inspection.ofNat_ctorIdx", "uses": []}
+{"name": "Becoming.PooledEnvelopes.Model.ofNat_ctorIdx", "uses": []}
+{"name": "Becoming.PooledEnvelopes.actual_certificate_without_uniform_pool", "uses": []}
+{"name": "Becoming.PooledEnvelopes.actual_kept", "uses": ["Becoming.PooledEnvelopes.step_keeps_actual", "Becoming.Run.step"]}
+{"name": "Becoming.PooledEnvelopes.candidates_narrow", "uses": ["Becoming.PooledEnvelopes.step_narrows", "Becoming.Run.step"]}
+{"name": "Becoming.PooledEnvelopes.certificate_kept", "uses": ["Becoming.PooledEnvelopes.candidates_narrow", "Becoming.PooledEnvelopes.refinement_preserves_certificate"]}
+{"name": "Becoming.PooledEnvelopes.chosen_plan_completes", "uses": ["Becoming.PooledEnvelopes.selected_completes"]}
+{"name": "Becoming.PooledEnvelopes.diagnosis_not_identifying", "uses": []}
+{"name": "Becoming.PooledEnvelopes.empty_candidates_no_completion", "uses": []}
+{"name": "Becoming.PooledEnvelopes.empty_candidates_trace_fails", "uses": ["Becoming.PooledEnvelopes.empty_candidates_no_completion", "Becoming.PooledEnvelopes.final_of_trace", "Becoming.PooledEnvelopes.trace_of_final_ne"]}
+{"name": "Becoming.PooledEnvelopes.empty_family_rejects", "uses": []}
+{"name": "Becoming.PooledEnvelopes.every_candidate_ready_pool_not", "uses": []}
+{"name": "Becoming.PooledEnvelopes.evidence_short_of_reserve", "uses": []}
+{"name": "Becoming.PooledEnvelopes.evidence_then_shutdown", "uses": []}
+{"name": "Becoming.PooledEnvelopes.final_of_trace", "uses": ["Becoming.PooledEnvelopes.trace_iff_run"]}
+{"name": "Becoming.PooledEnvelopes.inspected_trace_completes", "uses": ["Becoming.PooledEnvelopes.evidence_then_shutdown", "Becoming.PooledEnvelopes.final_of_trace", "Becoming.PooledEnvelopes.trace_of_final_ne"]}
+{"name": "Becoming.PooledEnvelopes.inspected_trace_short_of_reserve", "uses": ["Becoming.PooledEnvelopes.evidence_short_of_reserve", "Becoming.PooledEnvelopes.final_of_trace", "Becoming.PooledEnvelopes.trace_of_final_ne"]}
+{"name": "Becoming.PooledEnvelopes.learned_envelope_reuses", "uses": []}
+{"name": "Becoming.PooledEnvelopes.listed_inspect_traces_complete", "uses": ["Becoming.PooledEnvelopes.chosen_plan_completes", "Becoming.PooledEnvelopes.pooled_unknowns_select_inspection"]}
+{"name": "Becoming.PooledEnvelopes.listed_reuse_traces_complete", "uses": ["Becoming.PooledEnvelopes.chosen_plan_completes", "Becoming.PooledEnvelopes.learned_envelope_reuses"]}
+{"name": "Becoming.PooledEnvelopes.member_completes", "uses": ["Becoming.PooledEnvelopes.model_faults_in_pool", "Becoming.Reconfiguration.induced_mem_envelope", "Becoming.Reconfiguration.outside_bound_survives", "Becoming.Transactions.certified_completes", "Becoming.Transactions.guard_keeps_success"]}
+{"name": "Becoming.PooledEnvelopes.misleading_diagnosis_accepts_compromised", "uses": []}
+{"name": "Becoming.PooledEnvelopes.model_faults_in_pool", "uses": ["Becoming.ListTests.mem_flatMap_iff"]}
+{"name": "Becoming.PooledEnvelopes.pooled_certificate_sound", "uses": ["Becoming.FaultEnvelopes.certificate_sound", "Becoming.PooledEnvelopes.model_faults_in_pool", "Becoming.Reconfiguration.induced_mem_envelope", "Becoming.Reconfiguration.outside_bound_survives"]}
+{"name": "Becoming.PooledEnvelopes.pooled_completes", "uses": ["Becoming.PooledEnvelopes.member_completes", "Becoming.PooledEnvelopes.retained_truth"]}
+{"name": "Becoming.PooledEnvelopes.pooled_subset", "uses": ["Becoming.ListTests.mem_flatMap_iff"]}
+{"name": "Becoming.PooledEnvelopes.pooled_unknowns_select_inspection", "uses": []}
+{"name": "Becoming.PooledEnvelopes.probe_keeps_actual", "uses": ["Becoming.PooledEnvelopes.probe_some", "Becoming.PooledEnvelopes.retained_truth"]}
+{"name": "Becoming.PooledEnvelopes.probe_some", "uses": ["Becoming.ListTests.map_eq_some"]}
+{"name": "Becoming.PooledEnvelopes.refinement_preserves_certificate", "uses": ["Becoming.FaultEnvelopes.stronger_envelope_no_new_acceptance", "Becoming.PooledEnvelopes.pooled_subset"]}
+{"name": "Becoming.PooledEnvelopes.refinement_preserves_separation", "uses": ["Becoming.PooledEnvelopes.pooled_subset"]}
+{"name": "Becoming.PooledEnvelopes.respond_some", "uses": []}
+{"name": "Becoming.PooledEnvelopes.retained_subset", "uses": ["Becoming.ListTests.mem_filter_iff"]}
+{"name": "Becoming.PooledEnvelopes.retained_truth", "uses": ["Becoming.ListTests.decide_true_iff", "Becoming.ListTests.mem_filter_iff"]}
+{"name": "Becoming.PooledEnvelopes.reuse_trace_completes_without_uniform_pool", "uses": ["Becoming.PooledEnvelopes.actual_certificate_without_uniform_pool", "Becoming.PooledEnvelopes.final_of_trace", "Becoming.PooledEnvelopes.trace_of_final_ne"]}
+{"name": "Becoming.PooledEnvelopes.selected_completes", "uses": ["Becoming.ContingentPlans.selected_executes"]}
+{"name": "Becoming.PooledEnvelopes.separation_kept", "uses": ["Becoming.PooledEnvelopes.candidates_narrow", "Becoming.PooledEnvelopes.refinement_preserves_separation"]}
+{"name": "Becoming.PooledEnvelopes.short_or_closed_no_plan", "uses": []}
+{"name": "Becoming.PooledEnvelopes.slow_misses_deadline", "uses": []}
+{"name": "Becoming.PooledEnvelopes.slow_trace_misses_deadline", "uses": ["Becoming.PooledEnvelopes.final_of_trace", "Becoming.PooledEnvelopes.slow_misses_deadline", "Becoming.PooledEnvelopes.trace_of_final_ne"]}
+{"name": "Becoming.PooledEnvelopes.step_keeps_actual", "uses": ["Becoming.PooledEnvelopes.probe_keeps_actual", "Becoming.PooledEnvelopes.respond_some"]}
+{"name": "Becoming.PooledEnvelopes.step_narrows", "uses": ["Becoming.PooledEnvelopes.probe_some", "Becoming.PooledEnvelopes.respond_some", "Becoming.PooledEnvelopes.retained_subset"]}
+{"name": "Becoming.PooledEnvelopes.survivors_insufficient_before_diagnosis", "uses": []}
+{"name": "Becoming.PooledEnvelopes.trace_iff_run", "uses": ["Becoming.ContingentPlans.run_none", "Becoming.ContingentPlans.run_some", "Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.PooledEnvelopes.trace_of_final_ne", "uses": ["Becoming.PooledEnvelopes.trace_iff_run"]}
+{"name": "Becoming.PooledEnvelopes.unobserved_change_invalidates", "uses": []}

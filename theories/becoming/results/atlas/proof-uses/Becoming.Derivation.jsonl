@@ -1,0 +1,27 @@
+{"name": "Becoming.Derivation.Derives.brecOn", "uses": []}
+{"name": "Becoming.Derivation.Derives.sound", "uses": []}
+{"name": "Becoming.Derivation.Scope.common_iff", "uses": ["Becoming.Derivation.pointwise_iff_common"]}
+{"name": "Becoming.Derivation.Scope.common_relative", "uses": ["Becoming.Derivation.pointwise_common_relative"]}
+{"name": "Becoming.Derivation.Scope.goal_closure", "uses": ["Becoming.Derivation.closed_throughout", "Becoming.Scope.secures"]}
+{"name": "Becoming.Derivation.basis_iff_relative", "uses": ["Becoming.Derivation.Derives.sound", "Becoming.Derivation.holds_nil"]}
+{"name": "Becoming.Derivation.claim_implies_itself", "uses": ["Becoming.Derivation.claim_under_itself"]}
+{"name": "Becoming.Derivation.claim_not_closed", "uses": ["Becoming.Derivation.countermodel_excludes"]}
+{"name": "Becoming.Derivation.claim_not_throughout", "uses": []}
+{"name": "Becoming.Derivation.claim_under_itself", "uses": []}
+{"name": "Becoming.Derivation.closed_throughout", "uses": ["Becoming.Derivation.Derives.sound", "Becoming.Derivation.holds_nil"]}
+{"name": "Becoming.Derivation.closure_throughout_iff", "uses": ["Becoming.Derivation.closed_throughout"]}
+{"name": "Becoming.Derivation.common_basis_iff_common_closure", "uses": ["Becoming.Derivation.Derives.sound", "Becoming.Derivation.holds_nil"]}
+{"name": "Becoming.Derivation.conjunction_derives", "uses": []}
+{"name": "Becoming.Derivation.conjunction_iff", "uses": []}
+{"name": "Becoming.Derivation.conjunction_iff_basis", "uses": ["Becoming.Derivation.conjunction_iff"]}
+{"name": "Becoming.Derivation.countermodel_excludes", "uses": ["Becoming.Derivation.no_countermodel"]}
+{"name": "Becoming.Derivation.discharged_throughout", "uses": ["Becoming.Derivation.Derives.sound"]}
+{"name": "Becoming.Derivation.holds_nil", "uses": []}
+{"name": "Becoming.Derivation.lemma_throughout", "uses": ["Becoming.Derivation.closed_throughout"]}
+{"name": "Becoming.Derivation.no_countermodel", "uses": ["Becoming.Derivation.closed_throughout"]}
+{"name": "Becoming.Derivation.pointwise_common_relative", "uses": ["Becoming.Derivation.basis_iff_relative", "Becoming.Derivation.pointwise_iff_common"]}
+{"name": "Becoming.Derivation.pointwise_iff_common", "uses": ["Becoming.Derivation.common_basis_iff_common_closure", "Becoming.Derivation.conjunction_derives", "Becoming.Derivation.conjunction_iff_basis"]}
+{"name": "Becoming.Derivation.relative_throughout", "uses": ["Becoming.Derivation.Derives.sound"]}
+{"name": "Becoming.Derivation.rows_each_met", "uses": []}
+{"name": "Becoming.Derivation.rows_not_pointwise", "uses": ["Becoming.Derivation.pointwise_iff_common", "Becoming.Derivation.rows_not_together"]}
+{"name": "Becoming.Derivation.rows_not_together", "uses": []}

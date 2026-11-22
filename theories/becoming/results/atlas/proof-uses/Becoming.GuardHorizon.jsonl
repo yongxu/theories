@@ -1,0 +1,53 @@
+{"name": "Becoming.GuardHorizon.Kept.brecOn", "uses": []}
+{"name": "Becoming.GuardHorizon.Kept.start", "uses": []}
+{"name": "Becoming.GuardHorizon.Kept.trace", "uses": ["Becoming.GuardHorizon.Kept.brecOn"]}
+{"name": "Becoming.GuardHorizon.bellman_bounds_safe", "uses": ["Becoming.GuardHorizon.pathSafe_dViable", "Becoming.IntegerOrder.add_le_add_left", "Becoming.IntegerOrder.le_refl", "Becoming.IntegerOrder.le_trans"]}
+{"name": "Becoming.GuardHorizon.certificate_closed", "uses": ["Becoming.Viability.Certificate.closed", "Becoming.Viability.Certificate.within"]}
+{"name": "Becoming.GuardHorizon.certificate_viable", "uses": ["Becoming.GuardHorizon.certificate_closed", "Becoming.GuardHorizon.closed_viable"]}
+{"name": "Becoming.GuardHorizon.choice_mono", "uses": []}
+{"name": "Becoming.GuardHorizon.closed_viable", "uses": ["Becoming.GuardHorizon.choice_mono", "Becoming.GuardHorizon.iter_iff_viable", "Becoming.Iteration.postfixed_in_iter"]}
+{"name": "Becoming.GuardHorizon.coverage_transports", "uses": []}
+{"name": "Becoming.GuardHorizon.dViable_iff", "uses": []}
+{"name": "Becoming.GuardHorizon.discriminating_reading_uniform", "uses": []}
+{"name": "Becoming.GuardHorizon.empty_requirement_hides_loss", "uses": []}
+{"name": "Becoming.GuardHorizon.endpoint_access_hides_gap", "uses": []}
+{"name": "Becoming.GuardHorizon.fiber_of_uniform", "uses": []}
+{"name": "Becoming.GuardHorizon.iter_iff_viable", "uses": ["Becoming.GuardHorizon.choice_mono", "Becoming.Iteration.iter_iff_stages"]}
+{"name": "Becoming.GuardHorizon.kept_return_le", "uses": ["Becoming.GuardHorizon.bellman_bounds_safe", "Becoming.GuardHorizon.pathSafe_iff"]}
+{"name": "Becoming.GuardHorizon.kernel_viable", "uses": ["Becoming.GuardHorizon.closed_viable", "Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans"]}
+{"name": "Becoming.GuardHorizon.lose_shortening_decides", "uses": ["Becoming.GuardHorizon.not_viable_of_loss"]}
+{"name": "Becoming.GuardHorizon.lose_shortening_decides_negations", "uses": []}
+{"name": "Becoming.GuardHorizon.lost_commutes", "uses": ["Becoming.gather_listed"]}
+{"name": "Becoming.GuardHorizon.lost_iff_lose", "uses": ["Becoming.GuardHorizon.lost_implies_lose"]}
+{"name": "Becoming.GuardHorizon.lost_implies_lose", "uses": []}
+{"name": "Becoming.GuardHorizon.lost_mono", "uses": []}
+{"name": "Becoming.GuardHorizon.lost_not_viable", "uses": ["Becoming.GuardHorizon.lost_implies_lose"]}
+{"name": "Becoming.GuardHorizon.lost_shortening_distributes", "uses": ["Becoming.GuardHorizon.lost_implies_lose", "Becoming.GuardHorizon.lost_mono", "Becoming.GuardHorizon.lost_not_viable", "Becoming.GuardHorizon.lost_start", "Becoming.Iteration.iter_succ"]}
+{"name": "Becoming.GuardHorizon.lost_shortens", "uses": ["Becoming.GuardHorizon.lost_commutes", "Becoming.GuardHorizon.lost_mono", "Becoming.GuardHorizon.lost_start", "Becoming.Iteration.iter_shortens"]}
+{"name": "Becoming.GuardHorizon.lost_start", "uses": []}
+{"name": "Becoming.GuardHorizon.lpo_of_distributes", "uses": []}
+{"name": "Becoming.GuardHorizon.not_enabled_not_admissible", "uses": []}
+{"name": "Becoming.GuardHorizon.not_viable_of_loss", "uses": []}
+{"name": "Becoming.GuardHorizon.overlapping_handoff_keeps_access", "uses": []}
+{"name": "Becoming.GuardHorizon.pathSafe_dViable", "uses": []}
+{"name": "Becoming.GuardHorizon.pathSafe_iff", "uses": []}
+{"name": "Becoming.GuardHorizon.recomputed_accepts", "uses": ["Becoming.GuardHorizon.dViable_iff", "Becoming.GuardHorizon.recomputed_choice_accepts"]}
+{"name": "Becoming.GuardHorizon.recomputed_choice_accepts", "uses": ["Becoming.Acceptance.acceptance_factorization"]}
+{"name": "Becoming.GuardHorizon.recomputed_composition", "uses": ["Becoming.Acceptance.acceptance_factorization", "Becoming.IntegerOrder.le_antisymm"]}
+{"name": "Becoming.GuardHorizon.recomputed_kept", "uses": ["Becoming.GuardHorizon.dViable_iff", "Becoming.GuardHorizon.pathSafe_iff", "Becoming.GuardHorizon.recomputed_composition"]}
+{"name": "Becoming.GuardHorizon.route_retirement_allowed", "uses": []}
+{"name": "Becoming.GuardHorizon.safe_path_viable", "uses": ["Becoming.GuardHorizon.dViable_iff", "Becoming.GuardHorizon.pathSafe_dViable"]}
+{"name": "Becoming.GuardHorizon.shielded_choice", "uses": ["Becoming.Acceptance.acceptance_factorization"]}
+{"name": "Becoming.GuardHorizon.statewise_not_uniform", "uses": ["Becoming.«依读而应则共应»", "Becoming.«共应之例».EachNotCommon.each", "Becoming.«共应之例».EachNotCommon.none", "Becoming.«共应之细»"]}
+{"name": "Becoming.GuardHorizon.ungiven_reading_not_uniform", "uses": []}
+{"name": "Becoming.GuardHorizon.uniform_finer", "uses": []}
+{"name": "Becoming.GuardHorizon.uniform_iff", "uses": ["Becoming.GuardHorizon.uniform_policy_iff_fiber_feasible"]}
+{"name": "Becoming.GuardHorizon.uniform_policy_iff_common", "uses": ["Becoming.GuardHorizon.uniform_policy_iff_fiber_feasible", "Becoming.«自反传递则共应当且仅当承遍»"]}
+{"name": "Becoming.GuardHorizon.uniform_policy_iff_fiber_feasible", "uses": ["Becoming.GuardHorizon.fiber_of_uniform"]}
+{"name": "Becoming.GuardHorizon.uniform_viable", "uses": []}
+{"name": "Becoming.GuardHorizon.viable_closed", "uses": ["Becoming.GuardHorizon.viable_guard", "Becoming.GuardHorizon.viable_persists"]}
+{"name": "Becoming.GuardHorizon.viable_guard", "uses": []}
+{"name": "Becoming.GuardHorizon.viable_iff_closed", "uses": ["Becoming.GuardHorizon.closed_viable", "Becoming.GuardHorizon.viable_closed"]}
+{"name": "Becoming.GuardHorizon.viable_iff_every_horizon", "uses": ["Becoming.GuardHorizon.closed_viable", "Becoming.GuardHorizon.viable_closed"]}
+{"name": "Becoming.GuardHorizon.viable_persists", "uses": ["Becoming.GuardHorizon.choice_mono", "Becoming.GuardHorizon.iter_iff_viable", "Becoming.Iteration.iter_persists"]}
+{"name": "Becoming.GuardHorizon.viable_succ_iff", "uses": []}

@@ -1,0 +1,36 @@
+{"name": "Becoming.Map.Once.endless", "uses": []}
+{"name": "Becoming.Map.Once.family", "uses": []}
+{"name": "Becoming.Map.Once.func", "uses": []}
+{"name": "Becoming.Map.Once.keeping", "uses": ["Becoming.Map.Once.endless", "Becoming.Map.Once.stays_third", "Becoming.Map.Once.third_not_renews"]}
+{"name": "Becoming.Map.Once.keepsAfter", "uses": ["Becoming.Map.Once.keeping", "Becoming.«全守则后守»"]}
+{"name": "Becoming.Map.Once.not_degenerates", "uses": ["Becoming.Map.Once.endless", "Becoming.«不穷则延»", "Becoming.«延尽不并»"]}
+{"name": "Becoming.Map.Once.not_generates", "uses": ["Becoming.Map.Once.family", "Becoming.Map.Once.stays_third", "Becoming.Map.Once.third_not_renews"]}
+{"name": "Becoming.Map.Once.not_keeps", "uses": ["Becoming.Map.Once.family", "Becoming.Map.Once.renews"]}
+{"name": "Becoming.Map.Once.renews", "uses": []}
+{"name": "Becoming.Map.Once.stays_third", "uses": ["Becoming.Map.Once.third_next"]}
+{"name": "Becoming.Map.Once.third_next", "uses": []}
+{"name": "Becoming.Map.Once.third_not_renews", "uses": []}
+{"name": "Becoming.Map.Settles.seen_of", "uses": []}
+{"name": "Becoming.Map.Settles.seen_of_le", "uses": ["Becoming.Map.Settles.seen_succ"]}
+{"name": "Becoming.Map.Settles.seen_succ", "uses": []}
+{"name": "Becoming.Map.Settles.seen_witness", "uses": []}
+{"name": "Becoming.Map.Settles.sequence_seen", "uses": []}
+{"name": "Becoming.Map.Settles.sequence_unseen", "uses": []}
+{"name": "Becoming.Map.Settles.turning_turns", "uses": []}
+{"name": "Becoming.Map.generates_iff_changes", "uses": ["Becoming.Map.step_family", "Becoming.Map.step_reached_le", "Becoming.Map.step_reaches_of_le"]}
+{"name": "Becoming.Map.keepsAfter_iff_settles", "uses": ["Becoming.Map.step_family", "Becoming.Map.step_reached_le", "Becoming.Map.step_reaches", "Becoming.Map.step_reaches_of_le"]}
+{"name": "Becoming.Map.step_family", "uses": ["Becoming.Map.step_func", "Becoming.Map.step_reaches", "Becoming.«单行则族含所及»"]}
+{"name": "Becoming.Map.step_func", "uses": []}
+{"name": "Becoming.Map.«后守之定则LPO»", "uses": ["Becoming.Map.Settles.seen_of", "Becoming.Map.Settles.seen_of_le", "Becoming.Map.Settles.seen_succ", "Becoming.Map.Settles.seen_witness", "Becoming.Map.Settles.sequence_seen", "Becoming.Map.Settles.sequence_unseen", "Becoming.Map.Settles.turning_turns", "Becoming.Map.keepsAfter_iff_settles"]}
+{"name": "Becoming.Map.«生成之定则WLPO»", "uses": ["Becoming.Map.Settles.seen_of", "Becoming.Map.Settles.seen_of_le", "Becoming.Map.Settles.seen_witness", "Becoming.Map.Settles.sequence_seen", "Becoming.Map.Settles.sequence_unseen", "Becoming.Map.Settles.turning_turns", "Becoming.Map.generates_iff_changes"]}
+{"name": "Becoming.Map.«生成后守之定则LPO»", "uses": ["Becoming.Map.step_func", "Becoming.Map.«后守之定则LPO»", "Becoming.«单行则生成后守不并»"]}
+{"name": "Becoming.«三域之周»", "uses": ["Becoming.«所及之传递»"]}
+{"name": "Becoming.«三域之定当且仅当排中»", "uses": ["Becoming.«三域之周»", "Becoming.«后守则延»", "Becoming.«延尽不并»", "Becoming.«生成则延»"]}
+{"name": "Becoming.«传则粗不生»", "uses": []}
+{"name": "Becoming.«全守则后守»", "uses": ["Becoming.«所及之传递»"]}
+{"name": "Becoming.«单行则生成后守不并»", "uses": ["Becoming.«单行则族含所及»"]}
+{"name": "Becoming.«后守则延»", "uses": []}
+{"name": "Becoming.«后守退化不并»", "uses": ["Becoming.«后守则延»", "Becoming.«延尽不并»"]}
+{"name": "Becoming.«守则后守»", "uses": []}
+{"name": "Becoming.«生则或粗生或传»", "uses": ["Becoming.«粗有前则生为传»"]}
+{"name": "Becoming.«粗有前则生为传»", "uses": []}

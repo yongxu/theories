@@ -1,0 +1,38 @@
+{"name": "Becoming.Situations.cancels_situations", "uses": []}
+{"name": "Becoming.Situations.event_concentrated", "uses": ["Becoming.Situations.mul_indicator", "Becoming.Situations.sum_event", "Becoming.Situations.sum_finer", "Becoming.Typicality.concentrated", "Becoming.Typicality.total_congr"]}
+{"name": "Becoming.Situations.event_count", "uses": ["Becoming.Situations.inside_add_outside", "Becoming.Situations.sum_event", "Becoming.Situations.sum_finer", "Becoming.Situations.sum_one", "Becoming.Typicality.total_congr", "Becoming.Typicality.total_weight"]}
+{"name": "Becoming.Situations.event_typical", "uses": ["Becoming.Situations.sum_event", "Becoming.Situations.sum_finer", "Becoming.Situations.weight_far", "Becoming.Typicality.total_congr", "Becoming.Typicality.typical"]}
+{"name": "Becoming.Situations.finerLaw_determined", "uses": []}
+{"name": "Becoming.Situations.finerLaw_step_iff", "uses": []}
+{"name": "Becoming.Situations.finer_count", "uses": ["Becoming.Situations.sum_finer", "Becoming.Situations.sum_one", "Becoming.Weights.sum_congr", "Becoming.Weights.sum_courses"]}
+{"name": "Becoming.Situations.inside_add_outside", "uses": []}
+{"name": "Becoming.Situations.keep_drop", "uses": []}
+{"name": "Becoming.Situations.move_underdetermines", "uses": []}
+{"name": "Becoming.Situations.mul_indicator", "uses": []}
+{"name": "Becoming.Situations.occ_courses", "uses": ["Becoming.Situations.occ_map_cons", "Becoming.Situations.sum_only", "Becoming.Weights.sum_congr", "Becoming.Weights.sum_joinMap"]}
+{"name": "Becoming.Situations.occ_courses_once", "uses": ["Becoming.Situations.occ_courses", "Becoming.Situations.occ_openSteps"]}
+{"name": "Becoming.Situations.occ_map_cons", "uses": []}
+{"name": "Becoming.Situations.occ_map_pair", "uses": []}
+{"name": "Becoming.Situations.occ_openSteps", "uses": ["Becoming.Situations.occ_map_pair", "Becoming.Situations.sum_only", "Becoming.Weights.sum_congr", "Becoming.Weights.sum_joinMap"]}
+{"name": "Becoming.Situations.signed_counts", "uses": ["Becoming.Situations.signed_situations", "Becoming.Situations.signs_unit", "Becoming.Situations.sum_units"]}
+{"name": "Becoming.Situations.signed_situations", "uses": ["Becoming.Situations.signed_sums", "Becoming.Situations.sum_finer_weights", "Becoming.Weights.mul_one", "Becoming.Weights.sum_congr", "Becoming.Weights.sum_courses"]}
+{"name": "Becoming.Situations.signed_sums", "uses": ["Becoming.Situations.sum_signed"]}
+{"name": "Becoming.Situations.signs_unit", "uses": []}
+{"name": "Becoming.Situations.situations_count", "uses": ["Becoming.Situations.finer_count", "Becoming.Typicality.transfer_weight"]}
+{"name": "Becoming.Situations.situations_of_course", "uses": ["Becoming.Situations.mul_indicator", "Becoming.Situations.sum_courses_values", "Becoming.Situations.sum_finer", "Becoming.Situations.total_only", "Becoming.Typicality.along_weight", "Becoming.Typicality.total_congr", "Becoming.Weights.sum_congr"]}
+{"name": "Becoming.Situations.situations_of_course_listed", "uses": ["Becoming.Situations.occ_courses_once", "Becoming.Situations.situations_take"]}
+{"name": "Becoming.Situations.situations_take", "uses": ["Becoming.Situations.mul_indicator", "Becoming.Situations.sum_finer", "Becoming.Situations.sum_only", "Becoming.Weights.sum_congr"]}
+{"name": "Becoming.Situations.situations_typical", "uses": ["Becoming.Situations.sum_courses_values", "Becoming.Situations.sum_finer", "Becoming.Situations.weight_far", "Becoming.Typicality.along_weight", "Becoming.Typicality.total_congr", "Becoming.Typicality.typical", "Becoming.Weights.sum_congr"]}
+{"name": "Becoming.Situations.sum_adding", "uses": ["Becoming.pair_eq"]}
+{"name": "Becoming.Situations.sum_courses_values", "uses": ["Becoming.Typicality.total_add", "Becoming.Typicality.total_extend", "Becoming.Weights.sum_joinMap", "Becoming.Weights.sum_map"]}
+{"name": "Becoming.Situations.sum_event", "uses": ["Becoming.Situations.sum_split", "Becoming.Typicality.total_add", "Becoming.Typicality.total_congr", "Becoming.Typicality.total_extend", "Becoming.Typicality.total_mul", "Becoming.Weights.mul_sum", "Becoming.Weights.sum_congr", "Becoming.Weights.sum_joinMap", "Becoming.Weights.sum_map", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Situations.sum_finer", "uses": ["Becoming.Situations.sum_upto", "Becoming.Weights.mul_sum", "Becoming.Weights.sum_congr", "Becoming.Weights.sum_joinMap", "Becoming.Weights.sum_map", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Situations.sum_finer_weights", "uses": ["Becoming.Situations.sum_mul_right", "Becoming.Weights.mul_assoc", "Becoming.Weights.mul_sum", "Becoming.Weights.sum_congr", "Becoming.Weights.sum_joinMap", "Becoming.Weights.sum_map"]}
+{"name": "Becoming.Situations.sum_mul_right", "uses": ["Becoming.Weights.right_distrib", "Becoming.Weights.zero_mul"]}
+{"name": "Becoming.Situations.sum_only", "uses": ["Becoming.Situations.mul_indicator", "Becoming.add_mul_split"]}
+{"name": "Becoming.Situations.sum_signed", "uses": ["Becoming.Situations.sum_adding", "Becoming.pair_eq"]}
+{"name": "Becoming.Situations.sum_split", "uses": ["Becoming.Situations.keep_drop", "Becoming.add_mul_split"]}
+{"name": "Becoming.Situations.sum_units", "uses": []}
+{"name": "Becoming.Situations.sum_upto", "uses": []}
+{"name": "Becoming.Situations.total_only", "uses": ["Becoming.Typicality.total_congr", "Becoming.Typicality.total_extend"]}
+{"name": "Becoming.Situations.weight_far", "uses": ["Becoming.Situations.mul_indicator"]}

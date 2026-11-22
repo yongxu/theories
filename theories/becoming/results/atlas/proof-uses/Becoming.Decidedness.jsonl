@@ -1,0 +1,74 @@
+{"name": "Becoming.Counts.across_step", "uses": ["Becoming.Indicates.eq_one", "Becoming.Indicates.eq_zero"]}
+{"name": "Becoming.Counts.eq_zero", "uses": ["Becoming.Counts.exists_of_pos"]}
+{"name": "Becoming.Counts.exists_of_pos", "uses": ["Becoming.Indicates.holds_of_pos"]}
+{"name": "Becoming.Counts.le_length", "uses": ["Becoming.Indicates.le_one"]}
+{"name": "Becoming.Counts.listed_across", "uses": ["Becoming.Counts.across_step", "Becoming.Counts.listing", "Becoming.Counts.of_all", "Becoming.Counts.of_none", "Becoming.counts_iff_decided", "Becoming.length_eq_of_same", "Becoming.not_not_all", "Becoming.not_not_decided"]}
+{"name": "Becoming.Counts.listed_over_stretch", "uses": ["Becoming.Counts.listed_across", "Becoming.shift_succ"]}
+{"name": "Becoming.Counts.listing", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Counts.of_all", "uses": []}
+{"name": "Becoming.Counts.of_none", "uses": []}
+{"name": "Becoming.Counts.over_stretch", "uses": ["Becoming.Counts.over_stretch_decided", "Becoming.not_not_all", "Becoming.not_not_decided"]}
+{"name": "Becoming.Counts.over_stretch_decided", "uses": ["Becoming.Counts.across_step", "Becoming.Counts.unique", "Becoming.CountsAcross.eq_total", "Becoming.Decided.ceases", "Becoming.Decided.comes", "Becoming.balance_over_stretch_on", "Becoming.between_of_mem_steps", "Becoming.counts_iff_decided", "Becoming.steps_choice", "Becoming.steps_of_within"]}
+{"name": "Becoming.Counts.pos_of_mem", "uses": ["Becoming.Indicates.eq_one", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Counts.unique", "uses": ["Becoming.Indicates.unique"]}
+{"name": "Becoming.CountsAcross.eq_total", "uses": ["Becoming.Counts.unique"]}
+{"name": "Becoming.CountsAcross.keep_pace", "uses": ["Becoming.Counts.le_length", "Becoming.Counts.over_stretch", "Becoming.counts_iff_decided", "Becoming.not_not_all", "Becoming.not_not_decided"]}
+{"name": "Becoming.Coverage.Perm.mem", "uses": []}
+{"name": "Becoming.Decided.and", "uses": []}
+{"name": "Becoming.Decided.cases_stable", "uses": ["Becoming.not_not_decided"]}
+{"name": "Becoming.Decided.ceases", "uses": []}
+{"name": "Becoming.Decided.comes", "uses": []}
+{"name": "Becoming.Decided.exists_below", "uses": []}
+{"name": "Becoming.Decided.exists_listed", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Decided.exists_mem", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Decided.exists_not_in", "uses": ["Becoming.Decided.exists_listed", "Becoming.Decided.not", "Becoming.Decided.of_not_not"]}
+{"name": "Becoming.Decided.not", "uses": []}
+{"name": "Becoming.Decided.of_not_not", "uses": []}
+{"name": "Becoming.Decided.weakly", "uses": []}
+{"name": "Becoming.Indicates.decided", "uses": ["Becoming.indicates_iff_decided"]}
+{"name": "Becoming.Indicates.eq_one", "uses": []}
+{"name": "Becoming.Indicates.eq_zero", "uses": []}
+{"name": "Becoming.Indicates.holds_of_pos", "uses": []}
+{"name": "Becoming.Indicates.le_one", "uses": []}
+{"name": "Becoming.Indicates.unique", "uses": ["Becoming.Indicates.eq_one", "Becoming.Indicates.eq_zero"]}
+{"name": "Becoming.Opposed.irreflexive", "uses": []}
+{"name": "Becoming.Opposed.transitive", "uses": []}
+{"name": "Becoming.Recurs.ceasing_found", "uses": ["Becoming.Decided.and", "Becoming.Decided.exists_below", "Becoming.Decided.exists_mem", "Becoming.Decided.not", "Becoming.Decided.of_not_not", "Becoming.Recurs.ceasing_within"]}
+{"name": "Becoming.Recurs.ceasing_not_stopping", "uses": ["Becoming.Recurs.ceasing_within"]}
+{"name": "Becoming.Recurs.ceasing_within", "uses": ["Becoming.Recurs.steps_found", "Becoming.coming_steps_within"]}
+{"name": "Becoming.Recurs.coming_found", "uses": ["Becoming.Decided.and", "Becoming.Decided.exists_below", "Becoming.Decided.exists_mem", "Becoming.Decided.not", "Becoming.Decided.of_not_not", "Becoming.Recurs.coming_within"]}
+{"name": "Becoming.Recurs.coming_not_stopping", "uses": ["Becoming.Recurs.coming_within"]}
+{"name": "Becoming.Recurs.coming_within", "uses": ["Becoming.Recurs.steps_found", "Becoming.ceasing_steps_within"]}
+{"name": "Becoming.Recurs.steps_found", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Steps.along_family_back", "uses": []}
+{"name": "Becoming.Steps.along_family_on", "uses": []}
+{"name": "Becoming.Steps.along_noMerge", "uses": ["Becoming.GrammarLaws.pair_eq"]}
+{"name": "Becoming.Steps.family_occurrences", "uses": ["Becoming.ListTests.mem_map_of"]}
+{"name": "Becoming.Undominated.not_not_has", "uses": []}
+{"name": "Becoming.Web.unceasing_iff_decided", "uses": ["Becoming.coming_recurs_iff_decided"]}
+{"name": "Becoming.World.arising_iff_ceasing_covered", "uses": ["Becoming.coming_recurs_iff_decided"]}
+{"name": "Becoming.World.arising_iff_ceasing_decided", "uses": ["Becoming.coming_recurs_iff_decided"]}
+{"name": "Becoming.World.arising_not_stopping", "uses": ["Becoming.Recurs.coming_not_stopping"]}
+{"name": "Becoming.World.arising_not_stopping_covered", "uses": ["Becoming.Recurs.coming_not_stopping"]}
+{"name": "Becoming.World.ceasing_not_stopping", "uses": ["Becoming.Recurs.ceasing_not_stopping"]}
+{"name": "Becoming.World.ceasing_not_stopping_covered", "uses": ["Becoming.Recurs.ceasing_not_stopping"]}
+{"name": "Becoming.bettered_of_undominated_has", "uses": ["Becoming.Decided.exists_mem"]}
+{"name": "Becoming.ceases_once_of", "uses": ["Becoming.le_dest", "Becoming.stays_failing_within"]}
+{"name": "Becoming.ceasing_steps_within", "uses": ["Becoming.Steps.along_family_back", "Becoming.Steps.along_noSplit", "Becoming.Steps.along_stage", "Becoming.Steps.family_occurrences", "Becoming.ceasesToBe_iff_wang_along", "Becoming.comesToBe_iff_sheng_along", "Becoming.distinct_of_map", "Becoming.exists_pairs_over", "Becoming.length_map", "Becoming.«间无生则间亡不过所覆»"]}
+{"name": "Becoming.comes_once", "uses": ["Becoming.holds_on", "Becoming.le_dest"]}
+{"name": "Becoming.coming_recurs_iff_decided", "uses": ["Becoming.Recurs.ceasing_found", "Becoming.Recurs.coming_found"]}
+{"name": "Becoming.coming_steps_within", "uses": ["Becoming.GrammarLaws.pair_eq", "Becoming.ListTests.mem_map_iff", "Becoming.Steps.along_family_on", "Becoming.Steps.along_noMerge", "Becoming.Steps.along_stage", "Becoming.Steps.family_occurrences", "Becoming.ceasesToBe_iff_wang_along", "Becoming.comesToBe_iff_sheng_along", "Becoming.distinct_map_on", "Becoming.distinct_of_map", "Becoming.exists_pairs_over", "Becoming.length_map", "Becoming.«间无亡则间生不过所覆»"]}
+{"name": "Becoming.counts_iff_decided", "uses": ["Becoming.Indicates.decided", "Becoming.indicates_iff_decided", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.counts_total", "uses": ["Becoming.indicates_mark"]}
+{"name": "Becoming.exists_undominated", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.exists_undominated_iff_weakly", "uses": ["Becoming.Opposed.irreflexive", "Becoming.Opposed.transitive", "Becoming.exists_undominated"]}
+{"name": "Becoming.holds_on", "uses": []}
+{"name": "Becoming.indicates_iff_decided", "uses": []}
+{"name": "Becoming.indicates_mark", "uses": ["Becoming.mark_cases"]}
+{"name": "Becoming.length_eq_of_same", "uses": ["Becoming.length_le_of_sub"]}
+{"name": "Becoming.not_not_decided", "uses": []}
+{"name": "Becoming.shift_succ", "uses": []}
+{"name": "Becoming.steps_choice", "uses": ["Becoming.Naturals.ble_false_of_lt", "Becoming.between_of_mem_steps", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.undominated_has", "uses": ["Becoming.Decided.of_not_not", "Becoming.Undominated.not_not_has"]}
+{"name": "Becoming.undominated_has_iff", "uses": ["Becoming.bettered_of_undominated_has", "Becoming.undominated_has"]}
+{"name": "Becoming.undominated_has_iff_em", "uses": ["Becoming.not_not_decided", "Becoming.undominated_has"]}

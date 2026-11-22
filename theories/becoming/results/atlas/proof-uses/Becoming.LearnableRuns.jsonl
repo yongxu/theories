@@ -1,0 +1,22 @@
+{"name": "Becoming.LearnableRuns.FixedThrough.byRecord", "uses": []}
+{"name": "Becoming.LearnableRuns.Merge.at_zero", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.LearnableRuns.Merge.learnable", "uses": ["Becoming.LearnableRuns.Merge.at_zero"]}
+{"name": "Becoming.LearnableRuns.Merge.learnable_not_identifies", "uses": ["Becoming.LearnableRuns.Merge.learnable", "Becoming.LearnableRuns.Merge.not_identifies"]}
+{"name": "Becoming.LearnableRuns.Merge.not_identifies", "uses": []}
+{"name": "Becoming.LearnableRuns.agree_of_predicts_both", "uses": ["Becoming.Branching.law_run_state", "Becoming.Law.alike_iff_sameFuture", "Becoming.Learnable.agree_of_predicts_both", "Becoming.LearnableRuns.predictsFrom_iff"]}
+{"name": "Becoming.LearnableRuns.agree_of_tracks", "uses": ["Becoming.LearnableRuns.course_same"]}
+{"name": "Becoming.LearnableRuns.course_same", "uses": ["Becoming.Branching.law_run_state", "Becoming.Law.alike_iff_sameFuture"]}
+{"name": "Becoming.LearnableRuns.guess_fixedThrough", "uses": ["Becoming.Learning.prefix_congr"]}
+{"name": "Becoming.LearnableRuns.learnable_iff", "uses": ["Becoming.Law.alike_iff_sameFuture", "Becoming.Learnable.learnable_iff", "Becoming.LearnableRuns.agree_of_predicts_both", "Becoming.LearnableRuns.predicts_iff"]}
+{"name": "Becoming.LearnableRuns.learnable_iff_identifies", "uses": ["Becoming.LearnableRuns.learnable_iff_tracks", "Becoming.LearnableRuns.val_invariant"]}
+{"name": "Becoming.LearnableRuns.learnable_iff_tracks", "uses": ["Becoming.LearnableRuns.agree_of_tracks", "Becoming.LearnableRuns.learnable_iff", "Becoming.LearnableRuns.tracks_of_learnable"]}
+{"name": "Becoming.LearnableRuns.not_predicts_on_both", "uses": ["Becoming.Branching.law_run_state", "Becoming.Law.alike_iff_sameFuture", "Becoming.Learnable.not_predicts_on_both", "Becoming.LearnableRuns.predicts_iff"]}
+{"name": "Becoming.LearnableRuns.predictsFrom_iff", "uses": ["Becoming.Branching.law_run_state", "Becoming.LearnableRuns.prefix_eq"]}
+{"name": "Becoming.LearnableRuns.predicts_iff", "uses": ["Becoming.LearnableRuns.predictsFrom_iff"]}
+{"name": "Becoming.LearnableRuns.predicts_iff_tracks", "uses": []}
+{"name": "Becoming.LearnableRuns.predicts_through", "uses": ["Becoming.Branching.law_run_state", "Becoming.Learnable.predicts_through", "Becoming.LearnableRuns.predictsFrom_iff"]}
+{"name": "Becoming.LearnableRuns.prefix_eq", "uses": ["Becoming.Branching.law_run_state", "Becoming.Learning.prefix_congr"]}
+{"name": "Becoming.LearnableRuns.prefixes_same", "uses": ["Becoming.LearnableRuns.course_same", "Becoming.Learning.prefix_congr"]}
+{"name": "Becoming.LearnableRuns.still_learnable_iff_lumped", "uses": ["Becoming.Learnable.still_learnable_iff_lumped", "Becoming.LearnableRuns.predicts_iff"]}
+{"name": "Becoming.LearnableRuns.tracks_of_learnable", "uses": ["Becoming.LearnableRuns.guess_fixedThrough"]}
+{"name": "Becoming.LearnableRuns.val_invariant", "uses": ["Becoming.Run.step"]}

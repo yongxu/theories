@@ -1,0 +1,11 @@
+{"name": "Becoming.Frame.constant_content_keeps_state_selections", "uses": []}
+{"name": "Becoming.Frame.literal_claims_separate_preservation", "uses": ["Becoming.Frame.constant_content_keeps_state_selections", "Becoming.Frame.regroup_keeps_claim_selections_iff"]}
+{"name": "Becoming.Frame.regroup_alike_iff", "uses": ["Becoming.Frame.regroup_bisimulation", "Becoming.Frame.regroup_bisimulation_iff"]}
+{"name": "Becoming.Frame.regroup_bisimulation", "uses": []}
+{"name": "Becoming.Frame.regroup_bisimulation_iff", "uses": ["Becoming.Frame.regroup_bisimulation", "Becoming.Frame.respectsAt_iff"]}
+{"name": "Becoming.Frame.regroup_keeps_claim_selections_iff", "uses": ["Becoming.Frame.respectsAt_iff_claims_through", "Becoming.Learning.Training.keeps_through_iff"]}
+{"name": "Becoming.Frame.regroup_same_realized_iff", "uses": ["Becoming.Frame.respectsAt_iff"]}
+{"name": "Becoming.Frame.regroup_through", "uses": ["Becoming.Frame.regroup_same_realized_iff"]}
+{"name": "Becoming.Frame.respectsAt_iff_claims_through", "uses": []}
+{"name": "Becoming.Web.group_keeps_selections_iff_faithful", "uses": ["Becoming.Learning.Training.keeps_through_iff", "Becoming.Web.regroup_faithful_iff_requiredLevel"]}
+{"name": "Becoming.Web.merged_requirement_loses_selection", "uses": ["Becoming.Learning.Training.lost_choice"]}

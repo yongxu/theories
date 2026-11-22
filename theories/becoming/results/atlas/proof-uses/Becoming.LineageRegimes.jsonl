@@ -1,0 +1,91 @@
+{"name": "Becoming.LineageRegimes.FromOutside.acting", "uses": []}
+{"name": "Becoming.LineageRegimes.FromOutside.balances", "uses": []}
+{"name": "Becoming.LineageRegimes.FromOutside.dependent", "uses": ["Becoming.LineageRegimes.FromOutside.supported"]}
+{"name": "Becoming.LineageRegimes.FromOutside.from_outside", "uses": ["Becoming.LineageRegimes.FromOutside.acting", "Becoming.LineageRegimes.FromOutside.balances", "Becoming.LineageRegimes.FromOutside.dependent", "Becoming.LineageRegimes.FromOutside.supported"]}
+{"name": "Becoming.LineageRegimes.FromOutside.not_gated", "uses": []}
+{"name": "Becoming.LineageRegimes.FromOutside.supported", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.acting", "uses": ["Becoming.LineageRegimes.Handover.pick_le", "Becoming.LineageRegimes.Handover.pick_pos_mono"]}
+{"name": "Becoming.LineageRegimes.Handover.balances", "uses": ["Becoming.LineageRegimes.Handover.exchange"]}
+{"name": "Becoming.LineageRegimes.Handover.both_fates", "uses": ["Becoming.LineageRegimes.Handover.relay_descended", "Becoming.LineageRegimes.Handover.relay_generates", "Becoming.LineageRegimes.Handover.relay_no_excess", "Becoming.LineageRegimes.Handover.relay_not_dissipates", "Becoming.LineageRegimes.Handover.runDown_degenerates", "Becoming.LineageRegimes.Handover.runDown_descended", "Becoming.LineageRegimes.Handover.runDown_dissipates", "Becoming.LineageRegimes.Handover.runDown_excess", "Becoming.LineageRegimes.Handover.stock_eq", "Becoming.Reproduction.Relay.family_eq"]}
+{"name": "Becoming.LineageRegimes.Handover.dependent", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.descends", "uses": ["Becoming.LineageRegimes.Handover.pick_other", "Becoming.LineageRegimes.Handover.pick_self"]}
+{"name": "Becoming.LineageRegimes.Handover.draw_not_doubling", "uses": ["Becoming.LineageRegimes.Handover.pick_back", "Becoming.LineageRegimes.Handover.pick_pos", "Becoming.LineageRegimes.Handover.taken_eq"]}
+{"name": "Becoming.LineageRegimes.Handover.embodied", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.exchange", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.gated", "uses": ["Becoming.LineageRegimes.Handover.mem_family"]}
+{"name": "Becoming.LineageRegimes.Handover.give_total", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.mem_family", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.none_active", "uses": ["Becoming.LineageRegimes.Handover.pick_zero"]}
+{"name": "Becoming.LineageRegimes.Handover.not_draw_regime", "uses": ["Becoming.LineageRegimes.Handover.draw_not_doubling"]}
+{"name": "Becoming.LineageRegimes.Handover.one_le_sign", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.pick_back", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.pick_le", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.pick_other", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.pick_pos", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.pick_pos_mono", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.pick_self", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.pick_zero", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.pred_sign", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.relay_descended", "uses": ["Becoming.LineageRegimes.Handover.descends", "Becoming.Reproduction.Relay.family_eq", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.LineageRegimes.Handover.relay_generates", "uses": ["Becoming.LineageRegimes.Handover.acting", "Becoming.LineageRegimes.Handover.embodied", "Becoming.LineageRegimes.Handover.relay_descended", "Becoming.LineageRegions.generation_of_reproducing"]}
+{"name": "Becoming.LineageRegimes.Handover.relay_no_excess", "uses": ["Becoming.LineageRegimes.Handover.replenishment_eq", "Becoming.LineageRegimes.Handover.uptake_eq"]}
+{"name": "Becoming.LineageRegimes.Handover.relay_not_dissipates", "uses": ["Becoming.LineageRegimes.Handover.give_total", "Becoming.LineageRegimes.Handover.one_le_sign", "Becoming.LineageRegimes.Handover.take_total"]}
+{"name": "Becoming.LineageRegimes.Handover.relay_one_flow", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.replenish_pick", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.replenishment_eq", "uses": ["Becoming.LineageRegimes.Handover.replenish_pick"]}
+{"name": "Becoming.LineageRegimes.Handover.runDown_degenerates", "uses": ["Becoming.LineageRegimes.Handover.balances", "Becoming.LineageRegimes.Handover.dependent", "Becoming.LineageRegimes.Handover.mem_family", "Becoming.LineageRegimes.Handover.runDown_excess", "Becoming.LineageRegimes.Handover.stock_eq", "Becoming.LineageRegimes.degeneration_at_stock_horizon"]}
+{"name": "Becoming.LineageRegimes.Handover.runDown_descended", "uses": ["Becoming.LineageRegimes.Handover.descends", "Becoming.LineageRegimes.Handover.run_kid", "Becoming.LineageRegimes.Handover.run_turn", "Becoming.SupportGated.sub_pos_of_lt"]}
+{"name": "Becoming.LineageRegimes.Handover.runDown_dissipates", "uses": ["Becoming.LineageRegimes.Handover.give_total", "Becoming.LineageRegimes.Handover.pred_sign", "Becoming.LineageRegimes.Handover.take_total", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.LineageRegimes.Handover.runDown_every_regime", "uses": ["Becoming.Flow.Balances.on", "Becoming.LineageRegimes.Handover.balances", "Becoming.LineageRegimes.Handover.dependent", "Becoming.LineageRegimes.Handover.mem_family", "Becoming.LineageRegimes.Handover.not_draw_regime", "Becoming.LineageRegimes.Handover.runDown_descended", "Becoming.LineageRegimes.Handover.runDown_dissipates", "Becoming.LineageRegimes.Handover.runDown_excess", "Becoming.LineageRegimes.Handover.runDown_listed", "Becoming.LineageRegimes.Handover.run_empty", "Becoming.LineageRegimes.Handover.stock_eq", "Becoming.LineageRegimes.degeneration_of_family_excess_listed", "Becoming.LineageRegimes.dissipation_degenerates_every_member", "Becoming.Reproduction.Flow.lineage_ends"]}
+{"name": "Becoming.LineageRegimes.Handover.runDown_excess", "uses": ["Becoming.LineageRegimes.Handover.replenishment_eq", "Becoming.LineageRegimes.Handover.uptake_eq", "Becoming.SupportGated.sub_pos_of_lt"]}
+{"name": "Becoming.LineageRegimes.Handover.runDown_falls", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.runDown_listed", "uses": ["Becoming.LineageRegimes.Handover.pick_back", "Becoming.LineageRegimes.Handover.pick_pos", "Becoming.LineageRegimes.Handover.pick_self", "Becoming.LineageRegimes.Handover.run_turn", "Becoming.LineageRegions.listed_of_census", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.LineageRegimes.Handover.run_empty", "uses": ["Becoming.LineageRegimes.Handover.run_member_before"]}
+{"name": "Becoming.LineageRegimes.Handover.run_kid", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.LineageRegimes.Handover.run_member_before", "uses": ["Becoming.LineageRegimes.Handover.run_kid", "Becoming.ListTests.mem_flatMap_iff"]}
+{"name": "Becoming.LineageRegimes.Handover.run_turn", "uses": ["Becoming.LineageRegimes.Handover.run_kid", "Becoming.ListTests.mem_flatMap_iff", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.LineageRegimes.Handover.stock_eq", "uses": ["Becoming.LineageRegimes.Handover.total_pick"]}
+{"name": "Becoming.LineageRegimes.Handover.take_total", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.taken_eq", "uses": ["Becoming.LineageRegimes.Handover.pick_self"]}
+{"name": "Becoming.LineageRegimes.Handover.total_pick", "uses": []}
+{"name": "Becoming.LineageRegimes.Handover.uptake_eq", "uses": ["Becoming.LineageRegimes.Handover.uptake_pick"]}
+{"name": "Becoming.LineageRegimes.Handover.uptake_pick", "uses": []}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.acting", "uses": []}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.balances", "uses": []}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.degenerates", "uses": ["Becoming.LineageRegimes.MultiplyingTakers.inactive", "Becoming.Web.kind_every_branch_ends_of_gone"]}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.dependent", "uses": ["Becoming.LineageRegimes.MultiplyingTakers.pool_of_needs"]}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.descended", "uses": []}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.distinct", "uses": ["Becoming.LineageRegimes.MultiplyingTakers.distinct_first", "Becoming.LineageRegimes.MultiplyingTakers.distinct_second", "Becoming.LineageRegimes.MultiplyingTakers.distinct_third"]}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.distinct_first", "uses": ["Becoming.steps_distinct"]}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.distinct_second", "uses": ["Becoming.steps_distinct"]}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.distinct_third", "uses": ["Becoming.steps_distinct"]}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.draws", "uses": []}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.family_three", "uses": []}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.family_two", "uses": []}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.inactive", "uses": []}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.multiplies", "uses": []}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.multiplying", "uses": ["Becoming.LineageRegimes.MultiplyingTakers.acting", "Becoming.LineageRegimes.MultiplyingTakers.balances", "Becoming.LineageRegimes.MultiplyingTakers.degenerates", "Becoming.LineageRegimes.MultiplyingTakers.dependent", "Becoming.LineageRegimes.MultiplyingTakers.descended", "Becoming.LineageRegimes.MultiplyingTakers.distinct", "Becoming.LineageRegimes.MultiplyingTakers.draws", "Becoming.LineageRegimes.MultiplyingTakers.inactive", "Becoming.LineageRegimes.MultiplyingTakers.multiplies", "Becoming.LineageRegimes.MultiplyingTakers.needs", "Becoming.LineageRegimes.MultiplyingTakers.pool_required", "Becoming.LineageRegimes.MultiplyingTakers.unfed", "Becoming.LineageRegimes.MultiplyingTakers.unsupported", "Becoming.LineageRegimes.multiplying_takers_need", "Becoming.LineageRegimes.multiplying_takers_stop"]}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.needs", "uses": []}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.pool_of_needs", "uses": []}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.pool_required", "uses": []}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.stops_of_need", "uses": ["Becoming.LineageRegimes.MultiplyingTakers.balances", "Becoming.LineageRegimes.MultiplyingTakers.distinct", "Becoming.LineageRegimes.MultiplyingTakers.multiplies", "Becoming.LineageRegimes.MultiplyingTakers.takesNeed", "Becoming.LineageRegimes.MultiplyingTakers.unfed", "Becoming.LineageRegimes.multiplying_takers_stop_of_need"]}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.takesNeed", "uses": ["Becoming.LineageRegimes.MultiplyingTakers.pool_required"]}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.unfed", "uses": []}
+{"name": "Becoming.LineageRegimes.MultiplyingTakers.unsupported", "uses": []}
+{"name": "Becoming.LineageRegimes.degeneration_at_stock_horizon", "uses": ["Becoming.LineageRegimes.degeneration_of_family_excess"]}
+{"name": "Becoming.LineageRegimes.degeneration_of_family_excess", "uses": ["Becoming.Flow.below_of_excess", "Becoming.Flow.family_ends_below_at", "Becoming.Web.kind_every_branch_ends_of_gone"]}
+{"name": "Becoming.LineageRegimes.degeneration_of_family_excess_listed", "uses": ["Becoming.LineageRegimes.degeneration_of_family_excess", "Becoming.LineageRegions.reached_listed"]}
+{"name": "Becoming.LineageRegimes.dissipation_degenerates_every_member", "uses": ["Becoming.LineageRegions.degeneration_of_dissipation", "Becoming.Reproduction.Flow.lineage_ends", "Becoming.Reproduction.Generations.empty_from", "Becoming.le_dest", "Becoming.nil_of_length_zero"]}
+{"name": "Becoming.LineageRegimes.doubling_needs_of_draw", "uses": ["Becoming.LineageRegimes.draw_doubling_needs", "Becoming.LineageRegimes.exceeds_doubles"]}
+{"name": "Becoming.LineageRegimes.draw_doubling_needs", "uses": ["Becoming.Flow.Balances.drawn_within", "Becoming.LineageRegimes.pow_le_drawnBefore_of_ge"]}
+{"name": "Becoming.LineageRegimes.exceeds_doubles", "uses": ["Becoming.pow_le_drawnBefore"]}
+{"name": "Becoming.LineageRegimes.excess_within_level", "uses": ["Becoming.Flow.excess_bounded"]}
+{"name": "Becoming.LineageRegimes.family_excess_not_past_stock", "uses": ["Becoming.LineageRegimes.family_excess_within_stock"]}
+{"name": "Becoming.LineageRegimes.family_excess_within_stock", "uses": ["Becoming.Flow.family_excess_bounded"]}
+{"name": "Becoming.LineageRegimes.multiplying_takers_need", "uses": ["Becoming.LineageRegimes.draw_doubling_needs", "Becoming.LineageRegimes.sizes_double"]}
+{"name": "Becoming.LineageRegimes.multiplying_takers_stop", "uses": ["Becoming.LineageRegimes.multiplying_takers_need", "Becoming.LineageRegimes.size_le_taken"]}
+{"name": "Becoming.LineageRegimes.multiplying_takers_stop_of_need", "uses": ["Becoming.LineageRegimes.multiplying_takers_stop"]}
+{"name": "Becoming.LineageRegimes.pow_le_drawnBefore_of_ge", "uses": []}
+{"name": "Becoming.LineageRegimes.size_le_taken", "uses": ["Becoming.count_le", "Becoming.length_le_count"]}
+{"name": "Becoming.LineageRegimes.sizes_double", "uses": []}
+{"name": "Becoming.LineageRegimes.stock_forces_neither", "uses": ["Becoming.LineageRegimes.Handover.acting", "Becoming.LineageRegimes.Handover.balances", "Becoming.LineageRegimes.Handover.dependent", "Becoming.LineageRegimes.Handover.embodied", "Becoming.LineageRegimes.Handover.gated", "Becoming.LineageRegimes.Handover.relay_descended", "Becoming.LineageRegimes.Handover.relay_generates", "Becoming.LineageRegimes.Handover.runDown_degenerates", "Becoming.LineageRegimes.Handover.runDown_descended", "Becoming.LineageRegimes.Handover.runDown_falls", "Becoming.LineageRegimes.Handover.stock_eq", "Becoming.«生成退化不并»"]}

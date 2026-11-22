@@ -1,0 +1,28 @@
+{"name": "Becoming.ChoiceOccasions.Untried.aboveFirst_strict", "uses": ["Becoming.ChoiceOccasions.Untried.noTrue"]}
+{"name": "Becoming.ChoiceOccasions.Untried.aboveThird_strict", "uses": ["Becoming.ChoiceOccasions.Untried.noTrue"]}
+{"name": "Becoming.ChoiceOccasions.Untried.both_accord", "uses": []}
+{"name": "Becoming.ChoiceOccasions.Untried.first_ne_second", "uses": []}
+{"name": "Becoming.ChoiceOccasions.Untried.first_ne_third", "uses": []}
+{"name": "Becoming.ChoiceOccasions.Untried.met_fixed", "uses": []}
+{"name": "Becoming.ChoiceOccasions.Untried.noCycle", "uses": ["Becoming.ChoiceOccasions.Untried.first_ne_second", "Becoming.ChoiceOccasions.Untried.reach_first_second"]}
+{"name": "Becoming.ChoiceOccasions.Untried.noTrue", "uses": []}
+{"name": "Becoming.ChoiceOccasions.Untried.reach_first_second", "uses": ["Becoming.ChoiceOccasions.Untried.first_ne_second", "Becoming.ChoiceOccasions.Untried.shown_from_first", "Becoming.ChoiceOccasions.Untried.shown_to_second"]}
+{"name": "Becoming.ChoiceOccasions.Untried.same_search_after", "uses": []}
+{"name": "Becoming.ChoiceOccasions.Untried.same_search_met", "uses": []}
+{"name": "Becoming.ChoiceOccasions.Untried.shown_from_first", "uses": []}
+{"name": "Becoming.ChoiceOccasions.Untried.shown_to_second", "uses": []}
+{"name": "Becoming.ChoiceOccasions.Untried.untried_free", "uses": ["Becoming.ChoiceOccasions.Untried.first_ne_third", "Becoming.ChoiceOccasions.Untried.noCycle", "Becoming.ChoiceOccasions.Untried.reach_first_second", "Becoming.ChoiceOccasions.both_ways_of_unreached"]}
+{"name": "Becoming.ChoiceOccasions.above_in_class_of_every", "uses": []}
+{"name": "Becoming.ChoiceOccasions.above_in_every_iff_reach", "uses": ["Becoming.ChoiceOccasions.reach_accords", "Becoming.ChoiceOccasions.reach_within", "Becoming.«及之传递»"]}
+{"name": "Becoming.ChoiceOccasions.above_in_some_of_unreached", "uses": ["Becoming.ChoiceOccasions.noCycle_withPair", "Becoming.ChoiceOccasions.shown_accords", "Becoming.«及之传递»"]}
+{"name": "Becoming.ChoiceOccasions.accorded_iff_noCycle", "uses": ["Becoming.ChoiceOccasions.reach_accords", "Becoming.ChoiceOccasions.reach_within", "Becoming.«及之传递»"]}
+{"name": "Becoming.ChoiceOccasions.both_ways_of_unreached", "uses": ["Becoming.ChoiceOccasions.above_in_some_of_unreached"]}
+{"name": "Becoming.ChoiceOccasions.noCycle_withPair", "uses": ["Becoming.ChoiceOccasions.reach_withPair", "Becoming.«及之传递»"]}
+{"name": "Becoming.ChoiceOccasions.noCycle_withPair_iff", "uses": ["Becoming.ChoiceOccasions.noCycle_withPair", "Becoming.«及之单调»"]}
+{"name": "Becoming.ChoiceOccasions.reach_accords", "uses": ["Becoming.ChoiceOccasions.shown_accords"]}
+{"name": "Becoming.ChoiceOccasions.reach_withPair", "uses": []}
+{"name": "Becoming.ChoiceOccasions.reach_withPair_iff", "uses": ["Becoming.ChoiceOccasions.reach_withPair", "Becoming.«及之传递»", "Becoming.«及之单调»"]}
+{"name": "Becoming.ChoiceOccasions.reach_within", "uses": []}
+{"name": "Becoming.ChoiceOccasions.shown_accords", "uses": []}
+{"name": "Becoming.ChoiceOccasions.top_in_every_iff_reach", "uses": ["Becoming.ChoiceOccasions.reach_accords", "Becoming.ChoiceOccasions.reach_within", "Becoming.«及之传递»"]}
+{"name": "Becoming.ChoiceOccasions.weakly_forces_no_comparison", "uses": []}

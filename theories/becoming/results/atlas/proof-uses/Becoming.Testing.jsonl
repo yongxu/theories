@@ -1,0 +1,85 @@
+{"name": "Becoming.Attracting.dependent_web", "uses": []}
+{"name": "Becoming.Attracting.higher_balances", "uses": []}
+{"name": "Becoming.Attracting.higher_breaks_first", "uses": ["Becoming.Attracting.dependent_web", "Becoming.Attracting.higher_balances", "Becoming.Attracting.lower_balances"]}
+{"name": "Becoming.Attracting.lower_balances", "uses": []}
+{"name": "Becoming.Clearing.alike_for_clearer", "uses": ["Becoming.Clearing.balances", "Becoming.Clearing.clearerSide_closed", "Becoming.Clearing.couples_resource", "Becoming.Clearing.spared_balances", "Becoming.Flow.Balances.on", "Becoming.Flow.alike_within_closed"]}
+{"name": "Becoming.Clearing.clearerSide_closed", "uses": ["Becoming.Clearing.couples_resource"]}
+{"name": "Becoming.Clearing.couples_resource", "uses": []}
+{"name": "Becoming.Clearing.model_idles_coupling", "uses": ["Becoming.Clearing.balances", "Becoming.Flow.BalancedHistory.agree"]}
+{"name": "Becoming.Clearing.pooled", "uses": ["Becoming.Clearing.alike_for_clearer", "Becoming.Web.AlikeThroughUpTo.symm"]}
+{"name": "Becoming.Clearing.tested_by_dweller", "uses": ["Becoming.Clearing.alike_for_clearer", "Becoming.Clearing.spared_dependent", "Becoming.Clearing.unsupported_with", "Becoming.Web.AlikeThroughUpTo.symm", "Becoming.Web.Excludes.not_of_alike", "Becoming.Web.admits_iff_supported_of_agree"]}
+{"name": "Becoming.Flow.BalancedHistory.agree", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.Flow.alike_while_supported", "uses": ["Becoming.Flow.levelsAtLeast_while_alike", "Becoming.Web.alikeThrough_iff_of_levelsAtLeast"]}
+{"name": "Becoming.Flow.alike_within_closed", "uses": ["Becoming.Flow.exchange_agrees_within", "Becoming.add_right_cancel", "Becoming.total_congr_on"]}
+{"name": "Becoming.Flow.alike_within_coupling", "uses": ["Becoming.Flow.alike_within_closed", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Flow.balancedHistory_iff", "uses": []}
+{"name": "Becoming.Flow.beyond_coupling", "uses": ["Becoming.WithinClosure.not_rel"]}
+{"name": "Becoming.Flow.beyond_needs_model", "uses": ["Becoming.Flow.uncoupled_beyond_coupling"]}
+{"name": "Becoming.Flow.difference_changes_after_divergence", "uses": ["Becoming.Flow.difference_kept", "Becoming.Flow.levelsAtLeast_while_alike", "Becoming.Web.alikeThrough_iff_of_levelsAtLeast"]}
+{"name": "Becoming.Flow.difference_kept", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.Flow.exchange_agrees_within", "uses": ["Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.Flow.excludes_tail_within", "uses": ["Becoming.Flow.BalancedHistory.agree"]}
+{"name": "Becoming.Flow.levelsAtLeast_while_alike", "uses": ["Becoming.Flow.difference_kept", "Becoming.eq_of_add_eq_of_eq", "Becoming.le_of_add_eq_of_le"]}
+{"name": "Becoming.Flow.pos_of_withheld_pos", "uses": []}
+{"name": "Becoming.Flow.subthreshold_alike", "uses": ["Becoming.Flow.alike_while_supported", "Becoming.Flow.difference_kept", "Becoming.add_right_cancel", "Becoming.eq_of_add_eq_of_eq"]}
+{"name": "Becoming.Flow.subthreshold_alike_always", "uses": ["Becoming.Flow.subthreshold_alike"]}
+{"name": "Becoming.Flow.uncoupled_beyond_coupling", "uses": ["Becoming.Flow.alike_within_closed", "Becoming.Flow.withheld_eq_of_false", "Becoming.Flow.withhold_exchanges", "Becoming.closedUnder_withinClosure"]}
+{"name": "Becoming.Flow.unexcluded_beyond_coupling", "uses": ["Becoming.Flow.uncoupled_beyond_coupling", "Becoming.Web.Excludes.not_of_alike"]}
+{"name": "Becoming.Flow.withheld_eq_of_false", "uses": []}
+{"name": "Becoming.Flow.withhold_exchanges", "uses": ["Becoming.Flow.pos_of_withheld_pos"]}
+{"name": "Becoming.Flow.withinCoupling_mono_flow", "uses": ["Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Flow.withinCoupling_mono_obs", "uses": ["Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Flow.withinCoupling_of_withinInfluence", "uses": ["Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Flow.withinCoupling_thresholdOnly", "uses": ["Becoming.Flow.withinCoupling_of_withinInfluence", "Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Gauged.balances", "uses": []}
+{"name": "Becoming.Gauged.dependent", "uses": ["Becoming.Gauged.supported"]}
+{"name": "Becoming.Gauged.gauge_changes_difference", "uses": ["Becoming.Gauged.balances", "Becoming.Gauged.dependent", "Becoming.Gauged.supported"]}
+{"name": "Becoming.Gauged.own_is_stock", "uses": []}
+{"name": "Becoming.Gauged.supported", "uses": []}
+{"name": "Becoming.JointFailure.balances_three", "uses": []}
+{"name": "Becoming.JointFailure.balances_two", "uses": []}
+{"name": "Becoming.JointFailure.difference_kept", "uses": ["Becoming.JointFailure.balances_three", "Becoming.JointFailure.balances_two"]}
+{"name": "Becoming.Prey.balances", "uses": []}
+{"name": "Becoming.Prey.couples_taking", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.uncoupled_beyond_coupling", "Becoming.Flow.withinCoupling_thresholdOnly", "Becoming.Prey.balances", "Becoming.Prey.preyAlone_closed", "Becoming.Prey.withheld", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Prey.dependent", "uses": []}
+{"name": "Becoming.Prey.omits", "uses": []}
+{"name": "Becoming.Prey.preyAlone_closed", "uses": []}
+{"name": "Becoming.Prey.withheld", "uses": []}
+{"name": "Becoming.SelfPrey.admits_spared", "uses": []}
+{"name": "Becoming.SelfPrey.balances_one", "uses": []}
+{"name": "Becoming.SelfPrey.balances_two", "uses": []}
+{"name": "Becoming.SelfPrey.selfBearing", "uses": []}
+{"name": "Becoming.SelfPrey.threshold_on_oneself", "uses": ["Becoming.SelfPrey.admits_spared"]}
+{"name": "Becoming.SelfPrey.within_influence", "uses": ["Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.Stationary.model_error", "uses": []}
+{"name": "Becoming.Stationary.model_excluded", "uses": []}
+{"name": "Becoming.SupportDrawn.dependent", "uses": []}
+{"name": "Becoming.SupportDrawn.difference_waits", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.subthreshold_alike", "Becoming.SupportDrawn.dependent", "Becoming.SupportDrawn.follows", "Becoming.SupportDrawn.higher_balances", "Becoming.SupportDrawn.lower_balances"]}
+{"name": "Becoming.SupportDrawn.follows", "uses": []}
+{"name": "Becoming.SupportDrawn.higher_balances", "uses": []}
+{"name": "Becoming.SupportDrawn.lower_balances", "uses": []}
+{"name": "Becoming.Web.AlikeThrough.refl", "uses": []}
+{"name": "Becoming.Web.AlikeThrough.symm", "uses": []}
+{"name": "Becoming.Web.AlikeThroughUpTo.earlier", "uses": []}
+{"name": "Becoming.Web.AlikeThroughUpTo.of_obs", "uses": []}
+{"name": "Becoming.Web.AlikeThroughUpTo.symm", "uses": ["Becoming.Web.AlikeThrough.symm"]}
+{"name": "Becoming.Web.Excludes.later", "uses": ["Becoming.Web.AlikeThroughUpTo.earlier"]}
+{"name": "Becoming.Web.Excludes.not_meets", "uses": ["Becoming.Web.AlikeThrough.refl"]}
+{"name": "Becoming.Web.Excludes.not_of_alike", "uses": []}
+{"name": "Becoming.Web.Excludes.not_of_extension", "uses": ["Becoming.Web.Excludes.not_of_alike", "Becoming.Web.alikeThroughUpTo_of_agree"]}
+{"name": "Becoming.Web.Excludes.widen", "uses": ["Becoming.Web.AlikeThroughUpTo.of_obs"]}
+{"name": "Becoming.Web.ExcludesBy.of_member", "uses": []}
+{"name": "Becoming.Web.ExcludesWithin.narrow", "uses": []}
+{"name": "Becoming.Web.ExcludesWithin.not_meets", "uses": ["Becoming.Web.AlikeThrough.refl"]}
+{"name": "Becoming.Web.admits_iff_supported_of_agree", "uses": []}
+{"name": "Becoming.Web.alikeThroughUpTo_of_agree", "uses": []}
+{"name": "Becoming.Web.alikeThrough_iff_of_levelsAtLeast", "uses": []}
+{"name": "Becoming.Web.alike_of_threshold", "uses": []}
+{"name": "Becoming.Web.class_excludes_iff", "uses": []}
+{"name": "Becoming.Web.excludesWithin_iff_conjunction", "uses": []}
+{"name": "Becoming.Web.excludes_iff_excludesWithin_all", "uses": []}
+{"name": "Becoming.Web.observed_level_couples", "uses": []}
+{"name": "Becoming.Web.tail_unexcluded", "uses": ["Becoming.Web.Excludes.not_of_extension"]}
+{"name": "Becoming.eq_of_add_eq_of_eq", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.le_of_add_eq_of_le", "uses": ["Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.ownStanding_other", "uses": []}

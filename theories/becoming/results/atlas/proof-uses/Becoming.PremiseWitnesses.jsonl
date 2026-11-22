@@ -1,0 +1,37 @@
+{"name": "Becoming.LiftModel.met_and_failed", "uses": ["Becoming.LiftModel.lift_needs_live_middle"]}
+{"name": "Becoming.LineOfDescent.Endless.converse_later_outside", "uses": ["Becoming.LineOfDescent.Endless.converse_line_le"]}
+{"name": "Becoming.LineOfDescent.Endless.converse_line_le", "uses": ["Becoming.LineOfDescent.Endless.step_member_le"]}
+{"name": "Becoming.LineOfDescent.Endless.converse_outside", "uses": ["Becoming.LineOfDescent.Endless.converse_later_outside"]}
+{"name": "Becoming.LineOfDescent.Endless.later_outside", "uses": ["Becoming.LineOfDescent.Endless.line_member_le"]}
+{"name": "Becoming.LineOfDescent.Endless.line_member_le", "uses": ["Becoming.LineOfDescent.Endless.step_member_le"]}
+{"name": "Becoming.LineOfDescent.Endless.step_member_le", "uses": []}
+{"name": "Becoming.LineOfDescent.Last.converse_no_outside", "uses": []}
+{"name": "Becoming.ReadsNoOrder.not_entails", "uses": []}
+{"name": "Becoming.ThirdThing.first_member_outside", "uses": ["Becoming.ThirdThing.fixed_class"]}
+{"name": "Becoming.TwoLines.first_line_reach_iff", "uses": ["Becoming.TwoLines.first_line_reaches_both", "Becoming.TwoLines.line_in_family"]}
+{"name": "Becoming.TwoLines.first_line_reaches_both", "uses": ["Becoming.«相续之续»"]}
+{"name": "Becoming.TwoLines.other_center_outside", "uses": ["Becoming.TwoLines.other_line_outside"]}
+{"name": "Becoming.Web.admits_need", "uses": []}
+{"name": "Becoming.Web.admits_nothing_from_of_listed", "uses": ["Becoming.Web.lt_stepBound"]}
+{"name": "Becoming.Web.extension_ownWidens", "uses": ["Becoming.Web.paths_extension_iff_widens", "Becoming.Web.widens_iff_every_weighting", "Becoming.Weighting.widens_iff_every_positive", "Becoming.ownClosure_unrestricted_iff"]}
+{"name": "Becoming.Web.extension_ranked_of_increasing", "uses": ["Becoming.Web.paths_extension_iff_widens", "Becoming.Web.widens_iff_every_weighting", "Becoming.Weighting.widens_iff_every_positive"]}
+{"name": "Becoming.Web.extension_ranked_of_increasingInOwn", "uses": ["Becoming.Web.extension_ranked_of_increasingInOwnOn", "Becoming.Weighting.increasingInOwnOn_of_increasingInOwn"]}
+{"name": "Becoming.Web.extension_ranked_of_increasingInOwnOn", "uses": ["Becoming.Web.extension_ownWidens"]}
+{"name": "Becoming.Web.no_extension_of_listsAdmitted_every", "uses": ["Becoming.Web.not_listsAdmitted_every"]}
+{"name": "Becoming.Web.not_listsAdmitted_every", "uses": ["Becoming.Web.admits_need", "Becoming.Web.lt_stepBound"]}
+{"name": "Becoming.Weighting.exists_increasingInOwn_not_increasing", "uses": []}
+{"name": "Becoming.Weighting.exists_increasingInOwn_not_increasing_of_outside", "uses": ["Becoming.Weighting.exists_increasingInOwn_not_increasing"]}
+{"name": "Becoming.Weighting.increasingInOwn_iff_increasing_iff_all", "uses": ["Becoming.Weighting.increasingInOwn_iff_increasing", "Becoming.Weighting.increasingInOwn_iff_increasing_iff_marks"]}
+{"name": "Becoming.Weighting.increasingInOwn_iff_increasing_iff_marks", "uses": ["Becoming.Weighting.exists_increasingInOwn_not_increasing", "Becoming.Weighting.increasingInOwn_iff_increasing"]}
+{"name": "Becoming.Weighting.increasingInOwn_iff_increasing_iff_noOutside", "uses": ["Becoming.Weighting.increasingInOwn_iff_increasing_iff_all"]}
+{"name": "Becoming.Weighting.increasingInOwn_iff_increasing_iff_unrestricted", "uses": ["Becoming.Weighting.increasingInOwn_iff_increasing_iff_noOutside", "Becoming.ownClosure_unrestricted_iff_noOutside", "Becoming.withinClosure_iff_reached"]}
+{"name": "Becoming.Weighting.increasingInOwn_iff_increasing_of_noOutside", "uses": ["Becoming.Weighting.increasingInOwn_iff_increasing"]}
+{"name": "Becoming.Weighting.increasingInOwn_iff_increasing_of_unrestricted", "uses": ["Becoming.Weighting.increasingInOwn_iff_increasing", "Becoming.ownClosure_unrestricted_iff"]}
+{"name": "Becoming.Weighting.increasing_iff_by_one", "uses": ["Becoming.Weighting.widensOn_iff_reach", "Becoming.Weighting.widensOn_of_widensBy"]}
+{"name": "Becoming.Weighting.reach_of_beyond", "uses": ["Becoming.ListTests.or_true_iff", "Becoming.«及之传递»"]}
+{"name": "Becoming.Weighting.widensOn_iff_reach", "uses": ["Becoming.Weighting.WidensOn.trans", "Becoming.Weighting.reach_of_beyond", "Becoming.Weighting.widensOn_of_widensBy"]}
+{"name": "Becoming.increasingInOwn_with_net", "uses": ["Becoming.LineOfDescent.Endless.descent_no_outside", "Becoming.TwoLines.other_line_outside", "Becoming.Weighting.exists_increasingInOwn_not_increasing_of_outside", "Becoming.Weighting.increasingInOwn_iff_increasing_of_noOutside"]}
+{"name": "Becoming.increasingInOwn_with_net_converse", "uses": ["Becoming.LineOfDescent.Endless.converse_later_outside", "Becoming.LineOfDescent.Last.converse_no_outside", "Becoming.Weighting.exists_increasingInOwn_not_increasing_of_outside", "Becoming.Weighting.increasingInOwn_iff_increasing_of_noOutside"]}
+{"name": "Becoming.«族无外随网»", "uses": ["Becoming.LineOfDescent.Endless.descent_no_outside", "Becoming.ThirdThing.first_member_outside", "Becoming.«续无外则族无外»"]}
+{"name": "Becoming.«续无外随网»", "uses": ["Becoming.LineOfDescent.Endless.descent_no_outside", "Becoming.TwoLines.other_center_outside"]}
+{"name": "Becoming.«逆缘续无外随网»", "uses": ["Becoming.LineOfDescent.Endless.converse_outside", "Becoming.LineOfDescent.Last.converse_no_outside"]}

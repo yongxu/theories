@@ -1,0 +1,44 @@
+{"name": "Becoming.WitnessRefinement.absent_fifth_keeps_uncertainty", "uses": []}
+{"name": "Becoming.WitnessRefinement.candidates_narrow", "uses": ["Becoming.Run.step", "Becoming.WitnessRefinement.step_narrows"]}
+{"name": "Becoming.WitnessRefinement.common_survivor_same_answer", "uses": ["Becoming.WitnessRefinement.explains_iff"]}
+{"name": "Becoming.WitnessRefinement.compatible_complete_iff", "uses": ["Becoming.ListTests.any_true_iff", "Becoming.WitnessRefinement.explains_complete_iff"]}
+{"name": "Becoming.WitnessRefinement.compatible_iff", "uses": ["Becoming.ListTests.any_true_iff", "Becoming.WitnessRefinement.explains_iff"]}
+{"name": "Becoming.WitnessRefinement.complete_diagnosability_iff_cross_separation", "uses": ["Becoming.ListTests.false_iff_not", "Becoming.Readout.no_common_report_envelopes_iff", "Becoming.WitnessRefinement.compatible_complete_iff"]}
+{"name": "Becoming.WitnessRefinement.conflicting_models_self_certify", "uses": []}
+{"name": "Becoming.WitnessRefinement.covering_faults_same_transcript", "uses": ["Becoming.ListTests.contains_false_iff", "Becoming.ListTests.contains_true_iff", "Becoming.WitnessRefinement.explains_iff"]}
+{"name": "Becoming.WitnessRefinement.cross_separation_excludes", "uses": ["Becoming.ListTests.any_true_iff", "Becoming.ListTests.false_iff_not", "Becoming.WitnessRefinement.common_survivor_same_answer"]}
+{"name": "Becoming.WitnessRefinement.denied_no_run", "uses": []}
+{"name": "Becoming.WitnessRefinement.denied_no_trace", "uses": ["Becoming.WitnessRefinement.denied_no_run", "Becoming.WitnessRefinement.run_inspected"]}
+{"name": "Becoming.WitnessRefinement.diagnosis_needs_response_reserve", "uses": []}
+{"name": "Becoming.WitnessRefinement.duplicated_fifth_no_repair", "uses": []}
+{"name": "Becoming.WitnessRefinement.explains_complete_iff", "uses": ["Becoming.WitnessRefinement.explains_iff", "Becoming.WitnessRefinement.present_iff"]}
+{"name": "Becoming.WitnessRefinement.explains_iff", "uses": ["Becoming.ListTests.all_true_iff", "Becoming.WitnessRefinement.witnessed_iff"]}
+{"name": "Becoming.WitnessRefinement.extended_trace_completes", "uses": ["Becoming.WitnessRefinement.inspection_then_shutdown", "Becoming.WitnessRefinement.outcome_of_trace", "Becoming.WitnessRefinement.trace_of_outcome_ne"]}
+{"name": "Becoming.WitnessRefinement.extended_trace_short_of_reserve", "uses": ["Becoming.WitnessRefinement.diagnosis_needs_response_reserve", "Becoming.WitnessRefinement.outcome_of_trace", "Becoming.WitnessRefinement.trace_of_outcome_ne"]}
+{"name": "Becoming.WitnessRefinement.fifth_witness_fallible", "uses": []}
+{"name": "Becoming.WitnessRefinement.fifth_witness_resolves", "uses": []}
+{"name": "Becoming.WitnessRefinement.four_witness_trace_uncertified", "uses": ["Becoming.WitnessRefinement.inadequate_witnesses_uncertified", "Becoming.WitnessRefinement.outcome_of_trace", "Becoming.WitnessRefinement.trace_of_outcome_ne"]}
+{"name": "Becoming.WitnessRefinement.four_witnesses_inseparable", "uses": []}
+{"name": "Becoming.WitnessRefinement.inadequate_witnesses_uncertified", "uses": []}
+{"name": "Becoming.WitnessRefinement.inspect_some", "uses": ["Becoming.ListTests.map_eq_some"]}
+{"name": "Becoming.WitnessRefinement.inspection_keeps_actual", "uses": ["Becoming.ListTests.map_eq_some", "Becoming.WitnessRefinement.refine_keeps_actual"]}
+{"name": "Becoming.WitnessRefinement.inspection_then_shutdown", "uses": []}
+{"name": "Becoming.WitnessRefinement.outcome_of_trace", "uses": ["Becoming.WitnessRefinement.trace_iff_run"]}
+{"name": "Becoming.WitnessRefinement.present_iff", "uses": []}
+{"name": "Becoming.WitnessRefinement.refine_keeps_actual", "uses": ["Becoming.ListTests.mem_filter_iff", "Becoming.WitnessRefinement.compatible_iff"]}
+{"name": "Becoming.WitnessRefinement.refine_subset", "uses": ["Becoming.ListTests.mem_filter_iff"]}
+{"name": "Becoming.WitnessRefinement.refined_completes", "uses": ["Becoming.PooledEnvelopes.member_completes", "Becoming.WitnessRefinement.refine_keeps_actual"]}
+{"name": "Becoming.WitnessRefinement.refined_pool_sound", "uses": ["Becoming.PooledEnvelopes.pooled_certificate_sound", "Becoming.WitnessRefinement.refine_keeps_actual"]}
+{"name": "Becoming.WitnessRefinement.responsive_survivors_exclude", "uses": ["Becoming.ListTests.false_iff_not", "Becoming.WitnessRefinement.compatible_iff"]}
+{"name": "Becoming.WitnessRefinement.run_inspected", "uses": []}
+{"name": "Becoming.WitnessRefinement.run_uninspected", "uses": []}
+{"name": "Becoming.WitnessRefinement.silence_keeps_models", "uses": ["Becoming.ListTests.or_true_iff", "Becoming.WitnessRefinement.explains_iff"]}
+{"name": "Becoming.WitnessRefinement.step_candidates", "uses": ["Becoming.WitnessRefinement.inspect_some"]}
+{"name": "Becoming.WitnessRefinement.step_keeps_actual", "uses": ["Becoming.WitnessRefinement.inspection_keeps_actual"]}
+{"name": "Becoming.WitnessRefinement.step_narrows", "uses": ["Becoming.PooledEnvelopes.respond_some", "Becoming.WitnessRefinement.refine_subset", "Becoming.WitnessRefinement.step_candidates"]}
+{"name": "Becoming.WitnessRefinement.step_pool_sound", "uses": ["Becoming.WitnessRefinement.refined_pool_sound", "Becoming.WitnessRefinement.step_candidates"]}
+{"name": "Becoming.WitnessRefinement.step_then_completes", "uses": ["Becoming.WitnessRefinement.refined_completes", "Becoming.WitnessRefinement.step_candidates"]}
+{"name": "Becoming.WitnessRefinement.trace_iff_run", "uses": ["Becoming.WitnessRefinement.run_inspected", "Becoming.WitnessRefinement.run_uninspected", "Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.WitnessRefinement.trace_of_outcome_ne", "uses": ["Becoming.WitnessRefinement.trace_iff_run"]}
+{"name": "Becoming.WitnessRefinement.uncovered_correlation_deletes_actual", "uses": []}
+{"name": "Becoming.WitnessRefinement.witnessed_iff", "uses": ["Becoming.ListTests.contains_false_iff", "Becoming.ListTests.contains_true_iff", "Becoming.ListTests.decide_true_iff"]}

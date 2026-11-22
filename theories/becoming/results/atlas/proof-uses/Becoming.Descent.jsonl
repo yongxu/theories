@@ -1,0 +1,40 @@
+{"name": "Becoming.Brood.alive_of_stands", "uses": []}
+{"name": "Becoming.Brood.birth_next", "uses": []}
+{"name": "Becoming.Brood.descended", "uses": ["Becoming.Brood.descent_connected", "Becoming.Brood.not_coparticipating", "Becoming.Brood.not_interacting", "Becoming.Brood.self_alive", "Becoming.Valuation.significant_iff"]}
+{"name": "Becoming.Brood.descends", "uses": ["Becoming.Brood.arises", "Becoming.Brood.birth_next"]}
+{"name": "Becoming.Brood.descent_connected", "uses": ["Becoming.Brood.down", "Becoming.Brood.up", "Becoming.Reach.trans"]}
+{"name": "Becoming.Brood.down", "uses": ["Becoming.Brood.descends", "Becoming.Brood.self_alive", "Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.Brood.not_coparticipating", "uses": ["Becoming.Brood.participates", "Becoming.Brood.self_alive", "Becoming.Invariant.reach"]}
+{"name": "Becoming.Brood.not_descends", "uses": []}
+{"name": "Becoming.Brood.not_interacting", "uses": ["Becoming.Brood.self_alive", "Becoming.Invariant.reach"]}
+{"name": "Becoming.Brood.participates", "uses": []}
+{"name": "Becoming.Brood.self_alive", "uses": ["Becoming.Brood.alive_of_stands", "Becoming.Brood.standing_self"]}
+{"name": "Becoming.Brood.up", "uses": ["Becoming.Brood.descends", "Becoming.Brood.self_alive", "Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.Drowsy.dependent", "uses": []}
+{"name": "Becoming.Drowsy.down", "uses": ["Becoming.Drowsy.eater_alive", "Becoming.Drowsy.lives", "Becoming.Drowsy.sleeper_alive", "Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.Drowsy.drowsy", "uses": ["Becoming.Drowsy.dependent", "Becoming.Drowsy.lives", "Becoming.Drowsy.not_interacting", "Becoming.Drowsy.sustenance_connected", "Becoming.Web.LivesOn.stands"]}
+{"name": "Becoming.Drowsy.eater_alive", "uses": ["Becoming.Drowsy.not_undermining"]}
+{"name": "Becoming.Drowsy.lives", "uses": []}
+{"name": "Becoming.Drowsy.not_interacting", "uses": ["Becoming.Drowsy.not_undermining", "Becoming.Invariant.reach"]}
+{"name": "Becoming.Drowsy.not_undermining", "uses": []}
+{"name": "Becoming.Drowsy.sleeper_alive", "uses": ["Becoming.Drowsy.not_undermining"]}
+{"name": "Becoming.Drowsy.sustenance_connected", "uses": ["Becoming.Drowsy.down", "Becoming.Drowsy.up", "Becoming.Reach.trans"]}
+{"name": "Becoming.Drowsy.up", "uses": ["Becoming.Drowsy.lives", "Becoming.Drowsy.sleeper_alive", "Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.Flow.ancestry_reaches", "uses": []}
+{"name": "Becoming.Flow.descent_reaches", "uses": []}
+{"name": "Becoming.Flow.interaction_descent", "uses": ["Becoming.Valuation.Connected.transfer"]}
+{"name": "Becoming.Mutualism.apart_sustenance_connected", "uses": ["Becoming.Mutualism.apart_alive", "Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.Mutualism.relabel_sustenance", "uses": ["Becoming.Invariant.reach", "Becoming.Mutualism.apart_alive", "Becoming.Mutualism.apart_sustenance_connected", "Becoming.Mutualism.other_cancel", "Becoming.Mutualism.other_twice", "Becoming.Web.relabel_alive", "Becoming.Web.relabel_interaction_connected", "Becoming.Web.relabel_valuation_connected"]}
+{"name": "Becoming.Provisioned.descends", "uses": []}
+{"name": "Becoming.Sleeper.no_descent", "uses": ["Becoming.Sleeper.sleeper"]}
+{"name": "Becoming.Unrelated.absent", "uses": []}
+{"name": "Becoming.Unrelated.acting", "uses": []}
+{"name": "Becoming.Unrelated.balances", "uses": []}
+{"name": "Becoming.Unrelated.unrelated", "uses": ["Becoming.Unrelated.absent", "Becoming.Unrelated.acting", "Becoming.Unrelated.balances"]}
+{"name": "Becoming.Web.Embodied.descends", "uses": ["Becoming.Web.Embodied.arises_given", "Becoming.Web.Embodied.comesToStand"]}
+{"name": "Becoming.Web.LivesOn.active", "uses": ["Becoming.Web.Embodied.active_of_bearing"]}
+{"name": "Becoming.Web.LivesOn.stands", "uses": []}
+{"name": "Becoming.Web.arisen_reached", "uses": ["Becoming.Flow.descent_reaches", "Becoming.Web.Embodied.descends"]}
+{"name": "Becoming.Web.interaction_sustenance", "uses": ["Becoming.Valuation.Connected.transfer"]}
+{"name": "Becoming.Web.lived_on_reaches", "uses": []}
+{"name": "Becoming.Web.living_on_reaches", "uses": []}

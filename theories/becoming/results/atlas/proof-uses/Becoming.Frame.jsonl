@@ -1,0 +1,34 @@
+{"name": "Becoming.Invariant.reach", "uses": ["Becoming.invariant_iff_closedUnder", "Becoming.reach_iff_withinClosure"]}
+{"name": "Becoming.Invariant.run", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Invariant.trace", "uses": []}
+{"name": "Becoming.Novel.mono", "uses": []}
+{"name": "Becoming.Reach.lift", "uses": ["Generative.trace_lift"]}
+{"name": "Becoming.Reach.map", "uses": ["Generative.trace_map"]}
+{"name": "Becoming.Reach.of_step", "uses": []}
+{"name": "Becoming.Reach.refl", "uses": []}
+{"name": "Becoming.Reach.trans", "uses": ["Generative.trace_append_iff"]}
+{"name": "Becoming.ReturnsAlong.loop", "uses": []}
+{"name": "Becoming.ReturnsAlong.whole", "uses": ["Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Run.reach", "uses": ["Becoming.Run.window_trace"]}
+{"name": "Becoming.Run.step", "uses": []}
+{"name": "Becoming.Run.window_trace", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.WithinClosure.mono", "uses": ["Becoming.«所闭之单调»"]}
+{"name": "Becoming.WithinClosure.not_rel", "uses": ["Becoming.«所闭之界»"]}
+{"name": "Becoming.WithinClosure.of_rel", "uses": ["Becoming.«缘在所闭»"]}
+{"name": "Becoming.WithinClosure.refl", "uses": ["Becoming.«所闭之自反»"]}
+{"name": "Becoming.WithinClosure.symm", "uses": ["Becoming.«所闭之对称»"]}
+{"name": "Becoming.WithinClosure.trans", "uses": ["Becoming.«所闭之传递»"]}
+{"name": "Becoming.WithinClosureOf.least", "uses": []}
+{"name": "Becoming.WithinClosureOf.of_member", "uses": []}
+{"name": "Becoming.closedUnder_iff_closed", "uses": []}
+{"name": "Becoming.closedUnder_withinClosure", "uses": ["Becoming.«所闭之闭»"]}
+{"name": "Becoming.closedUnder_withinClosureOf", "uses": ["Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.closure_iff_certified", "uses": ["Becoming.«所闭之证»"]}
+{"name": "Becoming.invariant_iff_closedUnder", "uses": []}
+{"name": "Becoming.not_within_of_closed", "uses": ["Becoming.«闭而外则不所闭»"]}
+{"name": "Becoming.reach_iff_withinClosure", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans", "Becoming.withinClosure_of_trace"]}
+{"name": "Becoming.returnsAlong_of_whole", "uses": []}
+{"name": "Becoming.withinClosureOf_iff", "uses": []}
+{"name": "Becoming.withinClosureOf_single", "uses": []}
+{"name": "Becoming.withinClosure_iff_within", "uses": []}
+{"name": "Becoming.withinClosure_of_trace", "uses": ["Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl", "Becoming.WithinClosure.trans", "Generative.Trace.brecOn"]}

@@ -1,0 +1,32 @@
+{"name": "Becoming.Adheres.adheres", "uses": ["Becoming.Run.AgreeUpTo.trans"]}
+{"name": "Becoming.Adheres.closed", "uses": ["Becoming.Ideals.AdheresBy.closed", "Becoming.adheres_iff_adheresBy"]}
+{"name": "Becoming.Adheres.mono", "uses": []}
+{"name": "Becoming.Adheres.of", "uses": ["Becoming.Run.AgreeUpTo.refl"]}
+{"name": "Becoming.Refutable.adheres_iff", "uses": ["Becoming.Ideals.RefutableBy.adheres_iff", "Becoming.adheres_iff_adheresBy", "Becoming.refutable_iff_refutableBy"]}
+{"name": "Becoming.Refutable.adheres_least", "uses": ["Becoming.Ideals.RefutableBy.adheres_least", "Becoming.adheres_iff_adheresBy", "Becoming.refutable_iff_refutableBy"]}
+{"name": "Becoming.Refutable.not_not", "uses": ["Becoming.Ideals.RefutableBy.not_not", "Becoming.adheres_iff_adheresBy", "Becoming.refutable_iff_refutableBy"]}
+{"name": "Becoming.Renewable.amount_reading", "uses": ["Becoming.Renewable.prefix_does_not_decide"]}
+{"name": "Becoming.Renewable.cycle_reading_not_finite", "uses": ["Becoming.Renewable.finite_reading_includes_consumption", "Becoming.Web.RenewingIn.within_one", "Becoming.Web.RenewingInWithin.mono", "Becoming.Web.RenewingInWithin.not_consuming"]}
+{"name": "Becoming.Renewable.finite_reading_includes_consumption", "uses": ["Becoming.Renewable.prefix_does_not_decide"]}
+{"name": "Becoming.Renewable.prefix_does_not_decide", "uses": []}
+{"name": "Becoming.Renewable.whole_run_includes_overdraw", "uses": ["Becoming.Renewable.prefix_does_not_decide", "Becoming.Web.static_renewingIn", "RelationalRenewal.renewing_not_consuming"]}
+{"name": "Becoming.Run.AgreeUpTo.mono", "uses": []}
+{"name": "Becoming.Run.AgreeUpTo.refl", "uses": []}
+{"name": "Becoming.Run.AgreeUpTo.symm", "uses": []}
+{"name": "Becoming.Run.AgreeUpTo.trans", "uses": []}
+{"name": "Becoming.Sequences.agree_iff", "uses": []}
+{"name": "Becoming.Sequences.eventually_not_refutable", "uses": ["Becoming.Sequences.splice_after", "Becoming.Sequences.splice_agree", "Becoming.not_refutable_of_adheres"]}
+{"name": "Becoming.Sequences.never_not_verifiable", "uses": ["Becoming.Sequences.splice_after", "Becoming.Sequences.splice_agree", "Becoming.not_verifiable_of_adheres"]}
+{"name": "Becoming.Sequences.recurs_not_refutable", "uses": ["Becoming.Sequences.splice_after", "Becoming.Sequences.splice_agree", "Becoming.not_refutable_of_adheres"]}
+{"name": "Becoming.Sequences.splice_after", "uses": []}
+{"name": "Becoming.Sequences.splice_agree", "uses": ["Becoming.Sequences.agree_iff"]}
+{"name": "Becoming.adheres_iff_adheresBy", "uses": ["Becoming.Run.AgreeUpTo.refl", "Becoming.Run.AgreeUpTo.trans"]}
+{"name": "Becoming.adheres_passes", "uses": []}
+{"name": "Becoming.false_below_or_true", "uses": []}
+{"name": "Becoming.not_refutable_of_adheres", "uses": ["Becoming.Ideals.not_refutableBy_of_adheres", "Becoming.adheres_iff_adheresBy", "Becoming.refutable_iff_refutableBy"]}
+{"name": "Becoming.not_verifiable_of_adheres", "uses": []}
+{"name": "Becoming.refutable_adheres_iff", "uses": ["Becoming.Ideals.RefutableBy.congr", "Becoming.Ideals.refutableBy_adheres_iff", "Becoming.Run.AgreeUpTo.refl", "Becoming.Run.AgreeUpTo.trans", "Becoming.adheres_iff_adheresBy", "Becoming.refutable_iff_refutableBy"]}
+{"name": "Becoming.refutable_adheres_of_em", "uses": ["Becoming.refutable_adheres_iff"]}
+{"name": "Becoming.refutable_iff_refutableBy", "uses": ["Becoming.Run.AgreeUpTo.refl", "Becoming.Run.AgreeUpTo.trans"]}
+{"name": "Becoming.refutable_passes", "uses": []}
+{"name": "Becoming.refutable_passes_iff_markov", "uses": ["Becoming.Sequences.splice_after", "Becoming.Sequences.splice_agree", "Becoming.false_below_or_true", "Becoming.refutable_passes"]}

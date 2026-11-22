@@ -1,0 +1,58 @@
+{"name": "Becoming.IdentificationRuns.answer_exceeds_bound", "uses": ["Becoming.Identification.answer_exceeds_bound", "Becoming.IdentificationRuns.statesBelow_congr", "Becoming.LearningRuns.answer_course"]}
+{"name": "Becoming.IdentificationRuns.byElimination_rest_cubic", "uses": ["Becoming.Identification.byElimination_rest_cubic"]}
+{"name": "Becoming.IdentificationRuns.classes_exact_runs", "uses": ["Becoming.Law.sameFuture_classes_exact"]}
+{"name": "Becoming.IdentificationRuns.classes_unrefuted_runs", "uses": ["Becoming.Branching.law_run_state", "Becoming.Law.sameFuture_classes_unrefuted"]}
+{"name": "Becoming.IdentificationRuns.copy_separation_admits_extra", "uses": ["Becoming.Courses.copy_relates_course", "Becoming.IdentificationRuns.separated_congr", "Becoming.separation_admits_extra"]}
+{"name": "Becoming.IdentificationRuns.joint_agree", "uses": []}
+{"name": "Becoming.IdentificationRuns.negation_course", "uses": ["Becoming.Branching.law_run_state"]}
+{"name": "Becoming.IdentificationRuns.negation_derived", "uses": ["Becoming.Identification.negation_derived", "Becoming.IdentificationRuns.negation_course", "Becoming.Learning.prefix_congr"]}
+{"name": "Becoming.IdentificationRuns.negation_each_through_other", "uses": ["Becoming.IdentificationRuns.negation_course", "Becoming.IdentificationRuns.sameAhead_congr", "Becoming.Negation.each_through_other"]}
+{"name": "Becoming.IdentificationRuns.negation_two_states", "uses": ["Becoming.IdentificationRuns.negation_course", "Becoming.IdentificationRuns.sameAhead_congr", "Becoming.Negation.two_states"]}
+{"name": "Becoming.IdentificationRuns.parity_fixed", "uses": []}
+{"name": "Becoming.IdentificationRuns.parity_reached_iff", "uses": ["Becoming.Courses.reachedFrom_succ", "Becoming.Courses.reachedFrom_zero", "Becoming.IdentificationRuns.parity_fixed", "Becoming.even_first"]}
+{"name": "Becoming.IdentificationRuns.parity_whole_not_in_pairs", "uses": ["Becoming.IdentificationRuns.parity_reached_iff", "Becoming.whole_not_in_pairs"]}
+{"name": "Becoming.IdentificationRuns.prefix_fixes", "uses": ["Becoming.Identification.prefix_fixes", "Becoming.Learning.prefix_congr"]}
+{"name": "Becoming.IdentificationRuns.prefix_short", "uses": ["Becoming.Identification.prefix_eq_iff", "Becoming.Identification.prefix_short"]}
+{"name": "Becoming.IdentificationRuns.rest_without_bound_missed", "uses": ["Becoming.Identification.rest_without_bound_missed"]}
+{"name": "Becoming.IdentificationRuns.returns_states", "uses": ["Becoming.Branching.law_run_state", "Becoming.IdentificationRuns.sameAhead_congr", "Becoming.Law.Returns.states"]}
+{"name": "Becoming.IdentificationRuns.sameAhead_congr", "uses": []}
+{"name": "Becoming.IdentificationRuns.sameAhead_iff_alike", "uses": ["Becoming.Branching.law_run_state", "Becoming.IdentificationRuns.sameAhead_congr", "Becoming.Law.alike_iff_sameFuture", "Becoming.sameAhead_orbit_iff"]}
+{"name": "Becoming.IdentificationRuns.separated_congr", "uses": []}
+{"name": "Becoming.IdentificationRuns.statesBelow_congr", "uses": ["Becoming.IdentificationRuns.sameAhead_congr"]}
+{"name": "Becoming.IdentificationRuns.withBound_earliest", "uses": ["Becoming.Identification.withBound_earliest"]}
+{"name": "Becoming.Law.KeepsAndCarries.of_exact", "uses": ["Becoming.Law.sameFuture_coarsest", "Becoming.Learning.goAlike_iff_lumped"]}
+{"name": "Becoming.Law.KeepsRelation.run", "uses": []}
+{"name": "Becoming.Law.adaptive_identifiesAlike_iff", "uses": ["Becoming.Law.part_identifiesAlike_iff_step"]}
+{"name": "Becoming.Law.coarser_of_exact", "uses": ["Becoming.Law.sameFuture_of_law"]}
+{"name": "Becoming.Law.coarsest_class", "uses": ["Becoming.Law.KeepsAndCarries.of_exact", "Becoming.Law.alike_iff_sameFuture", "Becoming.Law.coarser_of_exact", "Becoming.Law.name_identifiesAlike", "Becoming.Law.sameFuture_of_law"]}
+{"name": "Becoming.Law.coarsest_iff", "uses": ["Becoming.Law.alike_iff_sameFuture", "Becoming.Law.sameFuture_coarsest", "Becoming.Law.sameFuture_of_law"]}
+{"name": "Becoming.Law.const_identifiesAlike_iff", "uses": ["Becoming.Law.alike_iff_sameFuture"]}
+{"name": "Becoming.Law.identifiesAlike_of_law", "uses": ["Becoming.Law.alike_iff_sameFuture", "Becoming.Law.kernel_bisimulation", "Becoming.identifiesAlike_iff"]}
+{"name": "Becoming.Law.kernel_bisimulation", "uses": ["Becoming.Learning.goAlike_iff_lumped"]}
+{"name": "Becoming.Law.name_carries", "uses": ["Becoming.Law.IdentifiesAlike.carries", "Becoming.Law.name_identifiesAlike"]}
+{"name": "Becoming.Law.name_identifiesAlike", "uses": ["Becoming.Identification.prefix_eq_iff", "Becoming.Law.alike_iff_sameFuture", "Becoming.Law.sameFuture_iff_below"]}
+{"name": "Becoming.Law.now_identifiesAlike_iff", "uses": ["Becoming.Law.alike_iff_sameFuture"]}
+{"name": "Becoming.Law.now_identifiesAlike_iff_goAlike", "uses": ["Becoming.Law.now_identifiesAlike_iff", "Becoming.Law.sameFuture_of_goAlike", "Becoming.Learning.goAlike_iff_lumped"]}
+{"name": "Becoming.Law.part_identifiesAlike_iff", "uses": ["Becoming.Law.now_identifiesAlike_iff"]}
+{"name": "Becoming.Law.part_identifiesAlike_iff_step", "uses": ["Becoming.Law.now_identifiesAlike_iff_goAlike", "Becoming.Learning.goAlike_iff_lumped"]}
+{"name": "Becoming.Law.sameFuture_coarsest", "uses": ["Becoming.Law.KeepsRelation.run", "Becoming.Law.orbit_shift"]}
+{"name": "Becoming.Law.sameFuture_of_goAlike", "uses": ["Becoming.Law.steps_orbit", "Becoming.goAlikeUnder_iff_alike", "Becoming.«同行之迭»"]}
+{"name": "Becoming.Law.sameFuture_of_law", "uses": ["Becoming.Law.alike_iff_sameFuture", "Becoming.Law.kernel_bisimulation"]}
+{"name": "Becoming.Law.whole_identifiesAlike", "uses": ["Becoming.Law.alike_iff_sameFuture", "Becoming.identifiesAlike_id_iff"]}
+{"name": "Becoming.Motion.move_adaptive", "uses": []}
+{"name": "Becoming.Motion.neither_alone", "uses": ["Becoming.Law.IdentifiesAlike.carries", "Becoming.Law.alike_iff_sameFuture", "Becoming.Motion.passing_alone", "Becoming.Motion.standing_alone", "Becoming.carries_law_iff"]}
+{"name": "Becoming.Motion.pair_identifiesAlike", "uses": ["Becoming.Alike.refl", "Becoming.Law.alike_iff_sameFuture", "Becoming.Motion.cancel"]}
+{"name": "Becoming.Motion.standing_alone", "uses": ["Becoming.Motion.move_adaptive", "Becoming.adaptive_state_law_iff"]}
+{"name": "Becoming.Motion.still_identifiesAlike", "uses": ["Becoming.Law.now_identifiesAlike_iff", "Becoming.Motion.orbit_still"]}
+{"name": "Becoming.Web.alikeThroughUpTo_iff_prefix", "uses": ["Becoming.Identification.prefix_eq_iff", "Becoming.Web.alikeThrough_iff"]}
+{"name": "Becoming.Web.alikeThrough_iff", "uses": []}
+{"name": "Becoming.Web.alike_of_bounded", "uses": ["Becoming.Identification.bounded_agree", "Becoming.Web.alikeThrough_iff"]}
+{"name": "Becoming.Web.alike_of_joint_bounded", "uses": ["Becoming.IdentificationRuns.joint_agree", "Becoming.Web.alikeThrough_iff"]}
+{"name": "Becoming.Web.bounded_exact", "uses": ["Becoming.Identification.bounded_agree_exact", "Becoming.Identification.prefix_eq_iff", "Becoming.Web.alikeThrough_iff", "Becoming.Web.oneCondition_values"]}
+{"name": "Becoming.Web.listed_values", "uses": ["Becoming.bool_eq_of_iff", "Becoming.map_eq_at", "Becoming.map_eq_on"]}
+{"name": "Becoming.Web.oneCondition_values", "uses": []}
+{"name": "Becoming.Web.selectsThrough_iff_prefix", "uses": ["Becoming.Web.alikeThroughUpTo_iff_prefix"]}
+{"name": "Becoming.Web.selects_alike_iff_prefix", "uses": ["Becoming.Web.alikeThroughUpTo_iff_prefix", "Becoming.Web.selects_alike_iff"]}
+{"name": "Becoming.Web.selects_alike_of_bounded", "uses": ["Becoming.Web.alike_of_bounded"]}
+{"name": "Becoming.Web.states_by_reading", "uses": []}
+{"name": "Becoming.alike_moments_iff", "uses": ["Becoming.Law.alike_iff_sameFuture", "Becoming.Law.succ_orbit"]}

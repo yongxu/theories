@@ -1,0 +1,23 @@
+{"name": "Becoming.Joining.Compatible.contextSame", "uses": ["Becoming.Joining.Compatible.realizes"]}
+{"name": "Becoming.Joining.Compatible.realizes", "uses": ["Becoming.Bisimulation.converse", "Becoming.Bisimulation.trace", "Becoming.Joining.bisimulation_iff_compatible"]}
+{"name": "Becoming.Joining.Context.brecOn.eq", "uses": []}
+{"name": "Becoming.Joining.Context.course_splice", "uses": ["Becoming.ListTests.append_assoc", "Becoming.ListTests.append_nil"]}
+{"name": "Becoming.Joining.Context.possible_left", "uses": ["Becoming.Joining.Context.realizes_left", "Generative.trace_nil_iff"]}
+{"name": "Becoming.Joining.Context.possible_right", "uses": ["Becoming.Joining.Context.realizes_right", "Generative.trace_nil_iff"]}
+{"name": "Becoming.Joining.Context.possible_splice", "uses": ["Becoming.Joining.Context.realizes_splice"]}
+{"name": "Becoming.Joining.Context.possible_splice_of_realizes", "uses": ["Becoming.Joining.Context.possible_splice", "Becoming.Joining.Context.realizes_functional"]}
+{"name": "Becoming.Joining.Context.realizes_extend", "uses": ["Becoming.Joining.Context.realizes_left", "Becoming.Joining.Context.realizes_right", "Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.Joining.Context.realizes_functional", "uses": ["Becoming.Joining.Functional.determined", "Becoming.Trace.determined_end"]}
+{"name": "Becoming.Joining.Context.realizes_hole", "uses": ["Generative.trace_nil_iff"]}
+{"name": "Becoming.Joining.Context.realizes_left", "uses": ["Generative.trace_append_iff", "Generative.trace_singleton_iff"]}
+{"name": "Becoming.Joining.Context.realizes_right", "uses": ["Generative.trace_append_iff", "Generative.trace_singleton_iff"]}
+{"name": "Becoming.Joining.Context.realizes_splice", "uses": ["Becoming.Joining.Context.course_splice", "Generative.trace_append_iff"]}
+{"name": "Becoming.Joining.ContextSame.compatible", "uses": ["Becoming.Joining.ContextSame.composable_iff", "Becoming.Joining.ContextSame.joined", "Becoming.Joining.ContextSame.refl"]}
+{"name": "Becoming.Joining.ContextSame.composable_iff", "uses": ["Becoming.Joining.Context.possible_left", "Becoming.Joining.Context.possible_right"]}
+{"name": "Becoming.Joining.ContextSame.iff_sameTests", "uses": ["Becoming.Joining.Context.realizes_extend", "Generative.trace_nil_iff"]}
+{"name": "Becoming.Joining.ContextSame.joined", "uses": ["Becoming.Joining.Context.realizes_left", "Becoming.Joining.Context.realizes_right", "Becoming.Joining.ContextSame.composable_iff", "Becoming.Joining.ContextSame.realized", "Becoming.Joining.ContextSame.refl", "Becoming.Joining.ContextSame.trans"]}
+{"name": "Becoming.Joining.ContextSame.realized", "uses": ["Becoming.Joining.Context.possible_splice_of_realizes"]}
+{"name": "Becoming.Joining.ContextSame.refl", "uses": []}
+{"name": "Becoming.Joining.ContextSame.symm", "uses": []}
+{"name": "Becoming.Joining.ContextSame.trans", "uses": []}
+{"name": "Becoming.Joining.contextSame_iff_compatible", "uses": ["Becoming.Joining.Compatible.contextSame", "Becoming.Joining.ContextSame.compatible"]}

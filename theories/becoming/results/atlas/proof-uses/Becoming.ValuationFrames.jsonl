@@ -1,0 +1,26 @@
+{"name": "Becoming.Conditions.connected_of_common", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Conditions.consumption_relates", "uses": []}
+{"name": "Becoming.Conditions.significant_iff_of_common", "uses": ["Becoming.Conditions.connected_of_common", "Becoming.Valuation.significant_iff"]}
+{"name": "Becoming.Conditions.significant_of_unrestricted", "uses": []}
+{"name": "Becoming.Conditions.stepwise_related", "uses": []}
+{"name": "Becoming.Conditions.valuing_consumption_reaches", "uses": ["Becoming.Conditions.consumption_relates"]}
+{"name": "Becoming.Model.connection_is_needed", "uses": ["Becoming.Model.isolated", "Becoming.Model.no_relation_into_beyond"]}
+{"name": "Becoming.Model.isolated", "uses": ["Becoming.Model.no_relation_into_beyond"]}
+{"name": "Becoming.Model.linked_connected", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl"]}
+{"name": "Becoming.Model.relational_neutrality_is_needed", "uses": ["Becoming.Model.linked_connected"]}
+{"name": "Becoming.Model.seed_is_needed", "uses": ["Becoming.Model.linked_connected"]}
+{"name": "Becoming.Model.standpoint_neutrality_is_needed", "uses": ["Becoming.Model.linked_connected"]}
+{"name": "Becoming.Renewable.readings_differ", "uses": ["Becoming.Renewable.broken_formation", "Becoming.Renewable.dip_breaks_without_consuming", "Becoming.Renewable.stepwise_includes_before_escalation", "Becoming.Web.RenewingAt.not_undermining", "Becoming.Web.static_consumingIn"]}
+{"name": "Becoming.Separate.not_connected", "uses": ["Becoming.Invariant.reach", "Becoming.Separate.stays"]}
+{"name": "Becoming.Valuation.forced_iff_reach", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans", "Becoming.Valuation.reaches"]}
+{"name": "Becoming.Valuation.forced_whole_iff_connected", "uses": ["Becoming.Valuation.forced_iff_reach"]}
+{"name": "Becoming.Valuation.livingSignificance", "uses": []}
+{"name": "Becoming.Valuation.reaches", "uses": ["Becoming.Invariant.reach", "Becoming.Valuation.transmits_invariant"]}
+{"name": "Becoming.Valuation.significant_iff", "uses": ["Becoming.Valuation.significant_of_grounds"]}
+{"name": "Becoming.Valuation.significant_of_grounds", "uses": ["Becoming.Valuation.forced_iff_reach"]}
+{"name": "Becoming.Valuation.transmits_iff_closed", "uses": []}
+{"name": "Becoming.Valuation.transmits_invariant", "uses": []}
+{"name": "Becoming.Web.connected_of_common", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Web.paths_livingSignificance_comparison", "uses": []}
+{"name": "Becoming.Web.significant_iff_of_common", "uses": ["Becoming.Valuation.significant_iff", "Becoming.Web.connected_of_common"]}
+{"name": "Becoming.universal_reason", "uses": ["Becoming.Scope.secures", "Becoming.Valuation.livingSignificance", "Becoming.Valuation.significant_of_grounds", "Becoming.positioned_articulation_of_articulates"]}

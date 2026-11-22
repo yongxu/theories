@@ -1,0 +1,168 @@
+{"name": "Becoming.CausalGrowth.Causet.Ordered.acyclic", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.CausalGrowth.labelled_of_reach"]}
+{"name": "Becoming.CausalGrowth.Causet.Ordered.irrefl", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled"]}
+{"name": "Becoming.CausalGrowth.Causet.Ordered.labelled", "uses": []}
+{"name": "Becoming.CausalGrowth.Causet.Ordered.trans", "uses": []}
+{"name": "Becoming.CausalGrowth.Causet.Ordered.within", "uses": []}
+{"name": "Becoming.CausalGrowth.Finer.classOf_class", "uses": []}
+{"name": "Becoming.CausalGrowth.Finer.continues", "uses": ["Becoming.CausalGrowth.grown_prec_iff"]}
+{"name": "Becoming.CausalGrowth.Finer.loses", "uses": ["Becoming.CausalGrowth.Finer.continues", "Becoming.CausalGrowth.antichain_prec", "Becoming.CausalGrowth.antichain_rangeWidens", "Becoming.CausalGrowth.grown_prec_iff"]}
+{"name": "Becoming.CausalGrowth.Finer.narrow_stems", "uses": ["Becoming.CausalGrowth.grown_prec_iff", "Becoming.CausalGrowth.grown_size"]}
+{"name": "Becoming.CausalGrowth.Finer.not_continues", "uses": ["Becoming.CausalGrowth.grown_prec_iff"]}
+{"name": "Becoming.CausalGrowth.Finer.not_continues.first_step", "uses": ["Becoming.CausalGrowth.grown_prec_iff"]}
+{"name": "Becoming.CausalGrowth.Finer.wide_stems", "uses": ["Becoming.CausalGrowth.grown_prec_iff", "Becoming.CausalGrowth.grown_size"]}
+{"name": "Becoming.CausalGrowth.Finer.widens", "uses": ["Becoming.CausalGrowth.grown_prec_iff", "Becoming.CausalGrowth.rangeWidens_of"]}
+{"name": "Becoming.CausalGrowth.Halves.double_succ", "uses": []}
+{"name": "Becoming.CausalGrowth.Halves.half_double", "uses": ["Becoming.CausalGrowth.Halves.double_succ"]}
+{"name": "Becoming.CausalGrowth.Halves.half_double_succ", "uses": ["Becoming.CausalGrowth.Halves.double_succ"]}
+{"name": "Becoming.CausalGrowth.Halves.half_lt", "uses": ["Becoming.CausalGrowth.Halves.double_succ"]}
+{"name": "Becoming.CausalGrowth.Halves.pairs_class", "uses": []}
+{"name": "Becoming.CausalGrowth.Kinds.antichain_two_stems_one_kind", "uses": ["Becoming.CausalGrowth.Kinds.swap_below", "Becoming.CausalGrowth.Kinds.swap_swap", "Becoming.CausalGrowth.antichain_prec"]}
+{"name": "Becoming.CausalGrowth.Kinds.included_at_zero", "uses": []}
+{"name": "Becoming.CausalGrowth.Kinds.not_included_antichain_chain", "uses": ["Becoming.CausalGrowth.antichain_prec", "Becoming.CausalGrowth.chain_prec_iff"]}
+{"name": "Becoming.CausalGrowth.Kinds.not_included_chain_antichain", "uses": ["Becoming.CausalGrowth.antichain_prec", "Becoming.CausalGrowth.chain_prec_iff", "Becoming.CausalGrowth.grown_size"]}
+{"name": "Becoming.CausalGrowth.Kinds.stems_carried_iff", "uses": ["Becoming.CausalGrowth.Causet.Ordered.irrefl", "Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.CausalGrowth.Stem.closed", "Becoming.CausalGrowth.stem_principal"]}
+{"name": "Becoming.CausalGrowth.Kinds.stems_carried_unequal", "uses": ["Becoming.CausalGrowth.Kinds.stems_carried_iff", "Becoming.CausalGrowth.antichain_prec", "Becoming.CausalGrowth.ordered_of_empty"]}
+{"name": "Becoming.CausalGrowth.Kinds.swap_below", "uses": ["Becoming.CausalGrowth.Kinds.swap_fixed"]}
+{"name": "Becoming.CausalGrowth.Kinds.swap_eq_one_iff", "uses": ["Becoming.CausalGrowth.Kinds.swap_fixed"]}
+{"name": "Becoming.CausalGrowth.Kinds.swap_eq_two_iff", "uses": ["Becoming.CausalGrowth.Kinds.swap_fixed"]}
+{"name": "Becoming.CausalGrowth.Kinds.swap_fixed", "uses": []}
+{"name": "Becoming.CausalGrowth.Kinds.swap_swap", "uses": ["Becoming.CausalGrowth.Kinds.swap_fixed"]}
+{"name": "Becoming.CausalGrowth.Kinds.swapped_two", "uses": []}
+{"name": "Becoming.CausalGrowth.Kinds.wide_prec_iff_swapped", "uses": ["Becoming.CausalGrowth.Kinds.swap_eq_one_iff", "Becoming.CausalGrowth.Kinds.swap_eq_two_iff", "Becoming.CausalGrowth.grown_prec_iff"]}
+{"name": "Becoming.CausalGrowth.Kinds.wide_swapped_isomorphic", "uses": ["Becoming.CausalGrowth.Kinds.swap_below", "Becoming.CausalGrowth.Kinds.swap_swap", "Becoming.CausalGrowth.Kinds.wide_prec_iff_swapped", "Becoming.CausalGrowth.size_of_run"]}
+{"name": "Becoming.CausalGrowth.Kinds.wide_swapped_mixed", "uses": ["Becoming.CausalGrowth.grown_prec_iff", "Becoming.CausalGrowth.rangeExceeds_of_pair"]}
+{"name": "Becoming.CausalGrowth.OmegaPlusOne.between", "uses": []}
+{"name": "Becoming.CausalGrowth.OmegaPlusOne.link_lands", "uses": ["Becoming.CausalGrowth.OmegaPlusOne.no_link_into_top"]}
+{"name": "Becoming.CausalGrowth.OmegaPlusOne.no_link_into_top", "uses": []}
+{"name": "Becoming.CausalGrowth.OmegaPlusOne.not_reach_top", "uses": ["Becoming.CausalGrowth.OmegaPlusOne.reach_lands"]}
+{"name": "Becoming.CausalGrowth.OmegaPlusOne.prec_irrefl", "uses": []}
+{"name": "Becoming.CausalGrowth.OmegaPlusOne.prec_trans", "uses": []}
+{"name": "Becoming.CausalGrowth.OmegaPlusOne.reach_lands", "uses": ["Becoming.CausalGrowth.OmegaPlusOne.link_lands"]}
+{"name": "Becoming.CausalGrowth.Starts.antichain_not_continuing", "uses": ["Becoming.CausalGrowth.antichain_prec"]}
+{"name": "Becoming.CausalGrowth.Starts.chainFromOne_labelled", "uses": ["Becoming.CausalGrowth.Starts.chainFromOne_prec_iff"]}
+{"name": "Becoming.CausalGrowth.Starts.chainFromOne_prec_iff", "uses": ["Becoming.CausalGrowth.Starts.grownFrom_prec_iff"]}
+{"name": "Becoming.CausalGrowth.Starts.continuation_of_rangeIncludes_needs_starts", "uses": ["Becoming.CausalGrowth.Starts.not_continuing_chain_one", "Becoming.CausalGrowth.Starts.prec_iff_of_both_needs_starts"]}
+{"name": "Becoming.CausalGrowth.Starts.fromOne_prec", "uses": ["Becoming.CausalGrowth.Starts.grownFrom_empty_prec"]}
+{"name": "Becoming.CausalGrowth.Starts.fromOne_size", "uses": ["Becoming.CausalGrowth.Starts.grownFrom_size"]}
+{"name": "Becoming.CausalGrowth.Starts.fromOne_stem_of_antichain", "uses": ["Becoming.CausalGrowth.Starts.fromOne_prec", "Becoming.CausalGrowth.Starts.fromOne_size", "Becoming.CausalGrowth.Stem.within", "Becoming.CausalGrowth.size_of_run"]}
+{"name": "Becoming.CausalGrowth.Starts.fromOne_stem_zero", "uses": ["Becoming.CausalGrowth.Starts.fromOne_prec"]}
+{"name": "Becoming.CausalGrowth.Starts.fromOne_widens", "uses": ["Becoming.CausalGrowth.Starts.fromOne_stem_of_antichain", "Becoming.CausalGrowth.Starts.fromOne_stem_zero", "Becoming.CausalGrowth.Starts.not_stem_antichain_zero"]}
+{"name": "Becoming.CausalGrowth.Starts.fromOne_widens_formsOrContinues", "uses": ["Becoming.CausalGrowth.Starts.antichain_not_continuing", "Becoming.CausalGrowth.Starts.fromOne_stem_of_antichain", "Becoming.CausalGrowth.Starts.fromOne_stem_zero", "Becoming.CausalGrowth.Starts.not_stem_antichain_zero"]}
+{"name": "Becoming.CausalGrowth.Starts.fromTwo_prec_iff", "uses": ["Becoming.CausalGrowth.Starts.grownFrom_empty_prec"]}
+{"name": "Becoming.CausalGrowth.Starts.fromTwo_stem_all", "uses": ["Becoming.CausalGrowth.Starts.fromTwo_prec_iff"]}
+{"name": "Becoming.CausalGrowth.Starts.full_stem_empty", "uses": ["Becoming.CausalGrowth.Starts.grownFrom_empty_prec", "Becoming.CausalGrowth.Stem.closed", "Becoming.CausalGrowth.Stem.within"]}
+{"name": "Becoming.CausalGrowth.Starts.grownFrom_empty_prec", "uses": []}
+{"name": "Becoming.CausalGrowth.Starts.grownFrom_prec_iff", "uses": ["Becoming.CausalGrowth.Starts.grownFrom_size"]}
+{"name": "Becoming.CausalGrowth.Starts.grownFrom_size", "uses": []}
+{"name": "Becoming.CausalGrowth.Starts.keepsWidening_needs_start", "uses": ["Becoming.CausalGrowth.Starts.full_stem_empty"]}
+{"name": "Becoming.CausalGrowth.Starts.mixed_of_pair_needs_starts", "uses": ["Becoming.CausalGrowth.Starts.fromTwo_prec_iff", "Becoming.CausalGrowth.Starts.grownFrom_size", "Becoming.CausalGrowth.Starts.oneAbove_prec", "Becoming.CausalGrowth.Stem.closed", "Becoming.CausalGrowth.Stem.within", "Becoming.CausalGrowth.grown_prec_iff", "Becoming.CausalGrowth.size_of_run", "Becoming.«及之单调»"]}
+{"name": "Becoming.CausalGrowth.Starts.not_above_antichain_needs_start", "uses": ["Becoming.CausalGrowth.Starts.fromTwo_stem_all", "Becoming.CausalGrowth.Starts.not_stem_antichain_all"]}
+{"name": "Becoming.CausalGrowth.Starts.not_continuing_chain_one", "uses": ["Becoming.CausalGrowth.chain_prec_iff"]}
+{"name": "Becoming.CausalGrowth.Starts.not_rangeWidens_formsOrContinues_needs_starts", "uses": ["Becoming.CausalGrowth.Starts.fromOne_widens_formsOrContinues"]}
+{"name": "Becoming.CausalGrowth.Starts.not_stem_antichain_all", "uses": ["Becoming.CausalGrowth.Stem.within"]}
+{"name": "Becoming.CausalGrowth.Starts.not_stem_antichain_zero", "uses": ["Becoming.CausalGrowth.Stem.within"]}
+{"name": "Becoming.CausalGrowth.Starts.not_widens_and_continues_needs_starts", "uses": ["Becoming.CausalGrowth.Starts.antichain_not_continuing", "Becoming.CausalGrowth.Starts.fromOne_widens"]}
+{"name": "Becoming.CausalGrowth.Starts.oneAbove_prec", "uses": ["Becoming.CausalGrowth.grown_prec_iff"]}
+{"name": "Becoming.CausalGrowth.Starts.onePast_stems", "uses": ["Becoming.CausalGrowth.grown_prec_iff", "Becoming.CausalGrowth.grown_size"]}
+{"name": "Becoming.CausalGrowth.Starts.prec_iff_of_both_needs_starts", "uses": ["Becoming.CausalGrowth.Starts.chainFromOne_labelled", "Becoming.CausalGrowth.Starts.chainFromOne_prec_iff", "Becoming.CausalGrowth.Starts.grownFrom_size", "Becoming.CausalGrowth.Stem.closed", "Becoming.CausalGrowth.Stem.within", "Becoming.CausalGrowth.chain_prec_iff", "Becoming.CausalGrowth.size_of_run", "Becoming.«及之单调»"]}
+{"name": "Becoming.CausalGrowth.Starts.rangeIncludes_continuing_iff_needs_starts", "uses": ["Becoming.CausalGrowth.Starts.antichain_not_continuing", "Becoming.CausalGrowth.Starts.fromOne_stem_zero", "Becoming.CausalGrowth.Starts.not_stem_antichain_zero"]}
+{"name": "Becoming.CausalGrowth.Starts.rangeWidens_of_needs_starts", "uses": ["Becoming.CausalGrowth.Starts.fromTwo_prec_iff", "Becoming.CausalGrowth.Starts.mixed_of_pair_needs_starts", "Becoming.CausalGrowth.Starts.oneAbove_prec"]}
+{"name": "Becoming.CausalGrowth.Starts.rangeWidens_stems_of_continuing_needs_starts", "uses": ["Becoming.CausalGrowth.Starts.chainFromOne_prec_iff", "Becoming.CausalGrowth.Starts.not_continuing_chain_one", "Becoming.CausalGrowth.Stem.within", "Becoming.CausalGrowth.chain_prec_iff", "Becoming.«及之单调»"]}
+{"name": "Becoming.CausalGrowth.Starts.strict_needs_starts", "uses": ["Becoming.CausalGrowth.Starts.fromOne_prec", "Becoming.CausalGrowth.Starts.fromOne_widens", "Becoming.CausalGrowth.Starts.rangeIncludes_continuing_iff_needs_starts", "Becoming.CausalGrowth.antichain_prec"]}
+{"name": "Becoming.CausalGrowth.Stem.after", "uses": ["Becoming.CausalGrowth.Stem.closed", "Becoming.CausalGrowth.Stem.within"]}
+{"name": "Becoming.CausalGrowth.Stem.closed", "uses": []}
+{"name": "Becoming.CausalGrowth.Stem.within", "uses": []}
+{"name": "Becoming.CausalGrowth.Undecided.antichain_exceeds_onlyIf", "uses": ["Becoming.CausalGrowth.Stem.closed", "Becoming.CausalGrowth.antichain_prec", "Becoming.CausalGrowth.grown_prec_iff"]}
+{"name": "Becoming.CausalGrowth.Undecided.em_of_reach_third", "uses": ["Becoming.CausalGrowth.Undecided.third_no_reach_from_two"]}
+{"name": "Becoming.CausalGrowth.Undecided.notNot_em", "uses": []}
+{"name": "Becoming.CausalGrowth.Undecided.onlyIf_prec", "uses": ["Becoming.CausalGrowth.grown_prec_iff"]}
+{"name": "Becoming.CausalGrowth.Undecided.onlyIf_two", "uses": []}
+{"name": "Becoming.CausalGrowth.Undecided.thirdCourse_prec_iff", "uses": ["Becoming.CausalGrowth.grown_prec_iff"]}
+{"name": "Becoming.CausalGrowth.Undecided.thirdPast_stems", "uses": ["Becoming.CausalGrowth.grown_prec_iff", "Becoming.CausalGrowth.grown_size"]}
+{"name": "Becoming.CausalGrowth.Undecided.third_no_reach_from_two", "uses": ["Becoming.CausalGrowth.Undecided.third_not_from_two"]}
+{"name": "Becoming.CausalGrowth.Undecided.third_not_from_two", "uses": []}
+{"name": "Becoming.CausalGrowth.Undecided.third_ordered", "uses": []}
+{"name": "Becoming.CausalGrowth.antichainLimit_not_renews", "uses": ["Becoming.CausalGrowth.antichain_prec", "Becoming.«生生之展»"]}
+{"name": "Becoming.CausalGrowth.antichain_begins_ends", "uses": ["Becoming.CausalGrowth.antichain_prec"]}
+{"name": "Becoming.CausalGrowth.antichain_prec", "uses": ["Becoming.CausalGrowth.grown_prec_iff"]}
+{"name": "Becoming.CausalGrowth.antichain_rangeIncludes", "uses": ["Becoming.CausalGrowth.antichain_prec", "Becoming.CausalGrowth.rangeIncludes_iff"]}
+{"name": "Becoming.CausalGrowth.antichain_rangeWidens", "uses": ["Becoming.CausalGrowth.antichain_prec", "Becoming.CausalGrowth.rangeWidens_of"]}
+{"name": "Becoming.CausalGrowth.birth_holds", "uses": []}
+{"name": "Becoming.CausalGrowth.birth_maximal", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.CausalGrowth.Stem.within"]}
+{"name": "Becoming.CausalGrowth.birth_ordered", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.CausalGrowth.Causet.Ordered.trans", "Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.CausalGrowth.Stem.closed", "Becoming.CausalGrowth.Stem.within"]}
+{"name": "Becoming.CausalGrowth.ceases_of_bounded", "uses": ["Becoming.CausalGrowth.labelled_of_reach"]}
+{"name": "Becoming.CausalGrowth.chainLimit_iff", "uses": ["Becoming.CausalGrowth.chain_prec_iff"]}
+{"name": "Becoming.CausalGrowth.chainLimit_renews", "uses": ["Becoming.CausalGrowth.Halves.double_succ", "Becoming.CausalGrowth.Halves.half_double", "Becoming.CausalGrowth.Halves.half_double_succ", "Becoming.CausalGrowth.Halves.half_lt", "Becoming.CausalGrowth.chainLimit_iff"]}
+{"name": "Becoming.CausalGrowth.chain_abides", "uses": ["Becoming.CausalGrowth.chain_link"]}
+{"name": "Becoming.CausalGrowth.chain_last_ends", "uses": ["Becoming.CausalGrowth.chain_prec_iff"]}
+{"name": "Becoming.CausalGrowth.chain_link", "uses": ["Becoming.CausalGrowth.chain_prec_iff"]}
+{"name": "Becoming.CausalGrowth.chain_not_above", "uses": ["Becoming.CausalGrowth.rangeWidens_chain"]}
+{"name": "Becoming.CausalGrowth.chain_prec_iff", "uses": ["Becoming.CausalGrowth.grown_prec_iff"]}
+{"name": "Becoming.CausalGrowth.chain_rangeWidens_continuing", "uses": ["Becoming.CausalGrowth.chain_prec_iff", "Becoming.CausalGrowth.rangeIncludes_chain", "Becoming.CausalGrowth.rangeIncludes_iff", "Becoming.CausalGrowth.rangeWidens_continuing_iff"]}
+{"name": "Becoming.CausalGrowth.continuation_le_chain", "uses": ["Becoming.CausalGrowth.continuation_of_rangeIncludes", "Becoming.CausalGrowth.rangeIncludes_chain"]}
+{"name": "Becoming.CausalGrowth.continuation_links_one_iff", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.CausalGrowth.Causet.Ordered.trans", "Becoming.CausalGrowth.reach_links", "Becoming.«及之单调»"]}
+{"name": "Becoming.CausalGrowth.continuation_links_one_of_rangeIncludes", "uses": ["Becoming.CausalGrowth.continuation_links_one_iff", "Becoming.CausalGrowth.ordered_of_empty", "Becoming.CausalGrowth.rangeIncludes_iff"]}
+{"name": "Becoming.CausalGrowth.continuation_of_rangeIncludes", "uses": ["Becoming.CausalGrowth.rangeIncludes_iff", "Becoming.«及之单调»"]}
+{"name": "Becoming.CausalGrowth.continuation_one_iff", "uses": ["Becoming.CausalGrowth.Causet.Ordered.trans"]}
+{"name": "Becoming.CausalGrowth.course_start", "uses": []}
+{"name": "Becoming.CausalGrowth.em_of_pair_converse", "uses": ["Becoming.CausalGrowth.Undecided.antichain_exceeds_onlyIf", "Becoming.CausalGrowth.Undecided.notNot_em", "Becoming.CausalGrowth.Undecided.onlyIf_prec"]}
+{"name": "Becoming.CausalGrowth.em_of_stems_converse", "uses": ["Becoming.CausalGrowth.Undecided.antichain_exceeds_onlyIf", "Becoming.CausalGrowth.Undecided.notNot_em", "Becoming.CausalGrowth.Undecided.onlyIf_prec", "Becoming.CausalGrowth.antichain_rangeIncludes", "Becoming.CausalGrowth.rangeWidens_continuing_iff"]}
+{"name": "Becoming.CausalGrowth.em_of_widening_pair_converse", "uses": ["Becoming.CausalGrowth.Undecided.antichain_exceeds_onlyIf", "Becoming.CausalGrowth.Undecided.notNot_em", "Becoming.CausalGrowth.Undecided.onlyIf_prec", "Becoming.CausalGrowth.antichain_rangeIncludes"]}
+{"name": "Becoming.CausalGrowth.empty_ordered", "uses": []}
+{"name": "Becoming.CausalGrowth.grown_prec_iff", "uses": ["Becoming.CausalGrowth.grown_size"]}
+{"name": "Becoming.CausalGrowth.grown_size", "uses": []}
+{"name": "Becoming.CausalGrowth.keepsWidening", "uses": ["Becoming.CausalGrowth.Stem.after", "Becoming.CausalGrowth.Stem.within", "Becoming.CausalGrowth.ordered_of_run", "Becoming.CausalGrowth.stem_all", "Becoming.Run.step"]}
+{"name": "Becoming.CausalGrowth.keepsWidening.kept", "uses": ["Becoming.CausalGrowth.Stem.after", "Becoming.Run.step"]}
+{"name": "Becoming.CausalGrowth.labelled_of_reach", "uses": []}
+{"name": "Becoming.CausalGrowth.link_of_reach", "uses": []}
+{"name": "Becoming.CausalGrowth.links_le", "uses": []}
+{"name": "Becoming.CausalGrowth.links_least", "uses": ["Becoming.CausalGrowth.link_of_reach"]}
+{"name": "Becoming.CausalGrowth.links_of_iff", "uses": []}
+{"name": "Becoming.CausalGrowth.mixed_of_pair", "uses": ["Becoming.CausalGrowth.continuation_one_iff", "Becoming.CausalGrowth.ordered_of_empty", "Becoming.CausalGrowth.rangeExceeds_of_pair"]}
+{"name": "Becoming.CausalGrowth.nat_reach_links", "uses": ["Becoming.CausalGrowth.reach_links"]}
+{"name": "Becoming.CausalGrowth.no_order_contains_both", "uses": ["Becoming.CausalGrowth.antichain_prec", "Becoming.CausalGrowth.antichain_rangeWidens", "Becoming.CausalGrowth.chain_prec_iff", "Becoming.CausalGrowth.rangeWidens_continuing_iff"]}
+{"name": "Becoming.CausalGrowth.not_above_antichain", "uses": ["Becoming.CausalGrowth.antichain_rangeWidens"]}
+{"name": "Becoming.CausalGrowth.not_included_of_rangeExceeds", "uses": ["Becoming.CausalGrowth.ordered_of_empty", "Becoming.CausalGrowth.size_of_run", "Becoming.CausalGrowth.stems_included_iff"]}
+{"name": "Becoming.CausalGrowth.not_rangeWidens_formsOrContinues", "uses": ["Becoming.CausalGrowth.rangeIncludes_continuing_iff"]}
+{"name": "Becoming.CausalGrowth.not_stem_all_birth", "uses": ["Becoming.CausalGrowth.Stem.within"]}
+{"name": "Becoming.CausalGrowth.not_widens_and_continues", "uses": ["Becoming.CausalGrowth.not_included_of_rangeExceeds", "Becoming.CausalGrowth.prec_iff_of_both"]}
+{"name": "Becoming.CausalGrowth.ordered_ceases", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.CausalGrowth.ceases_of_bounded"]}
+{"name": "Becoming.CausalGrowth.ordered_not_renews", "uses": ["Becoming.CausalGrowth.ordered_ceases", "Becoming.«生生不息»"]}
+{"name": "Becoming.CausalGrowth.ordered_of_empty", "uses": ["Becoming.CausalGrowth.empty_ordered", "Becoming.CausalGrowth.ordered_of_run"]}
+{"name": "Becoming.CausalGrowth.ordered_of_run", "uses": ["Becoming.CausalGrowth.birth_ordered", "Becoming.Run.step"]}
+{"name": "Becoming.CausalGrowth.ordered_reach_links_iff", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.CausalGrowth.Causet.Ordered.trans", "Becoming.CausalGrowth.reach_links_iff"]}
+{"name": "Becoming.CausalGrowth.pair_converse_iff_em", "uses": ["Becoming.CausalGrowth.em_of_pair_converse", "Becoming.CausalGrowth.pair_converse_of_em"]}
+{"name": "Becoming.CausalGrowth.pair_converse_of_em", "uses": ["Becoming.CausalGrowth.not_included_of_rangeExceeds"]}
+{"name": "Becoming.CausalGrowth.pair_of_not_included", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.CausalGrowth.ordered_of_empty", "Becoming.CausalGrowth.size_of_run"]}
+{"name": "Becoming.CausalGrowth.path_not_reach_of_links", "uses": []}
+{"name": "Becoming.CausalGrowth.possibleHeld_iff", "uses": ["Becoming.CausalGrowth.step_holdsPast", "Becoming.Reach.map", "Becoming.Reaching.PossibleHeld.possible"]}
+{"name": "Becoming.CausalGrowth.prec_iff_of_both", "uses": ["Becoming.CausalGrowth.continuation_one_iff", "Becoming.CausalGrowth.ordered_of_empty", "Becoming.CausalGrowth.rangeIncludes_iff"]}
+{"name": "Becoming.CausalGrowth.rangeExceeds_iff_pair", "uses": ["Becoming.CausalGrowth.not_included_of_rangeExceeds", "Becoming.CausalGrowth.pair_of_not_included", "Becoming.CausalGrowth.rangeExceeds_of_pair"]}
+{"name": "Becoming.CausalGrowth.rangeExceeds_of_pair", "uses": ["Becoming.CausalGrowth.Causet.Ordered.irrefl", "Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.CausalGrowth.Stem.closed", "Becoming.CausalGrowth.ordered_of_empty", "Becoming.CausalGrowth.size_of_run", "Becoming.CausalGrowth.stem_principal"]}
+{"name": "Becoming.CausalGrowth.rangeIncludes_chain", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.CausalGrowth.chain_prec_iff", "Becoming.CausalGrowth.ordered_of_empty", "Becoming.CausalGrowth.rangeIncludes_iff", "Becoming.CausalGrowth.size_of_run"]}
+{"name": "Becoming.CausalGrowth.rangeIncludes_continuing_iff", "uses": ["Becoming.CausalGrowth.continuation_one_iff", "Becoming.CausalGrowth.ordered_of_empty", "Becoming.CausalGrowth.rangeIncludes_iff"]}
+{"name": "Becoming.CausalGrowth.rangeIncludes_iff", "uses": ["Becoming.CausalGrowth.ordered_of_empty", "Becoming.CausalGrowth.size_of_run", "Becoming.CausalGrowth.stems_included_iff"]}
+{"name": "Becoming.CausalGrowth.rangeIncludes_strict_iff", "uses": ["Becoming.CausalGrowth.rangeIncludes_iff"]}
+{"name": "Becoming.CausalGrowth.rangeWidens_chain", "uses": ["Becoming.CausalGrowth.chain_prec_iff", "Becoming.CausalGrowth.rangeExceeds_of_pair", "Becoming.CausalGrowth.rangeIncludes_chain"]}
+{"name": "Becoming.CausalGrowth.rangeWidens_continuing_iff", "uses": ["Becoming.CausalGrowth.continuation_one_iff", "Becoming.CausalGrowth.ordered_of_empty", "Becoming.CausalGrowth.rangeIncludes_continuing_iff", "Becoming.CausalGrowth.rangeIncludes_iff"]}
+{"name": "Becoming.CausalGrowth.rangeWidens_of", "uses": ["Becoming.CausalGrowth.rangeExceeds_of_pair", "Becoming.CausalGrowth.rangeIncludes_iff"]}
+{"name": "Becoming.CausalGrowth.rangeWidens_stems_of_continuing", "uses": ["Becoming.CausalGrowth.rangeWidens_continuing_iff", "Becoming.CausalGrowth.rangeWidens_of"]}
+{"name": "Becoming.CausalGrowth.rangeWidens_strict", "uses": ["Becoming.CausalGrowth.rangeIncludes_strict_iff", "Becoming.Run.RangeExceeds.not_included"]}
+{"name": "Becoming.CausalGrowth.reach_links", "uses": ["Becoming.CausalGrowth.reach_links_within"]}
+{"name": "Becoming.CausalGrowth.reach_links_all_iff_em", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.CausalGrowth.Undecided.em_of_reach_third", "Becoming.CausalGrowth.Undecided.third_ordered", "Becoming.CausalGrowth.reach_links_of_decided"]}
+{"name": "Becoming.CausalGrowth.reach_links_courses_iff_em", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.CausalGrowth.Undecided.em_of_reach_third", "Becoming.CausalGrowth.Undecided.thirdCourse_prec_iff", "Becoming.CausalGrowth.links_of_iff", "Becoming.CausalGrowth.ordered_of_empty", "Becoming.CausalGrowth.reach_links_of_decided", "Becoming.«及之单调»"]}
+{"name": "Becoming.CausalGrowth.reach_links_iff", "uses": ["Becoming.CausalGrowth.reach_links", "Becoming.CausalGrowth.reach_links_le"]}
+{"name": "Becoming.CausalGrowth.reach_links_le", "uses": []}
+{"name": "Becoming.CausalGrowth.reach_links_of_decided", "uses": ["Becoming.CausalGrowth.reach_links_within_of_decided"]}
+{"name": "Becoming.CausalGrowth.reach_links_within", "uses": ["Becoming.«及之传递»"]}
+{"name": "Becoming.CausalGrowth.reach_links_within_of_decided", "uses": ["Becoming.CausalGrowth.searchBelow_or", "Becoming.«及之传递»"]}
+{"name": "Becoming.CausalGrowth.searchBelow_or", "uses": []}
+{"name": "Becoming.CausalGrowth.size_of_run", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.CausalGrowth.stem_all", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled"]}
+{"name": "Becoming.CausalGrowth.stem_possible_from_start", "uses": ["Becoming.Reach.refl", "Becoming.Run.possible_from_start"]}
+{"name": "Becoming.CausalGrowth.stem_principal", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.CausalGrowth.Causet.Ordered.trans"]}
+{"name": "Becoming.CausalGrowth.stems_converse_iff_em", "uses": ["Becoming.CausalGrowth.em_of_stems_converse", "Becoming.CausalGrowth.stems_converse_of_em"]}
+{"name": "Becoming.CausalGrowth.stems_converse_of_em", "uses": ["Becoming.CausalGrowth.pair_converse_of_em", "Becoming.CausalGrowth.rangeIncludes_iff", "Becoming.CausalGrowth.rangeWidens_continuing_iff"]}
+{"name": "Becoming.CausalGrowth.stems_included_iff", "uses": ["Becoming.CausalGrowth.Causet.Ordered.irrefl", "Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.CausalGrowth.Stem.closed", "Becoming.CausalGrowth.Stem.within", "Becoming.CausalGrowth.stem_principal"]}
+{"name": "Becoming.CausalGrowth.stems_of_two", "uses": ["Becoming.CausalGrowth.grown_prec_iff", "Becoming.CausalGrowth.grown_size"]}
+{"name": "Becoming.CausalGrowth.step_holdsPast", "uses": ["Becoming.CausalGrowth.birth_holds"]}

@@ -1,0 +1,22 @@
+{"name": "Becoming.Coverage.Perm.eq_nil", "uses": ["Becoming.Coverage.Perm.length_eq"]}
+{"name": "Becoming.Coverage.Perm.length_eq", "uses": []}
+{"name": "Becoming.Coverage.adjacent_opposite", "uses": []}
+{"name": "Becoming.Coverage.balance_does_not_determine_coverability", "uses": ["Becoming.Coverage.separated_balanced", "Becoming.Coverage.separated_not_coverable"]}
+{"name": "Becoming.Coverage.balance_perm", "uses": ["Becoming.Integers.add_left_comm"]}
+{"name": "Becoming.Coverage.complete_trace_iff", "uses": ["Becoming.Coverage.Perm.eq_nil", "Becoming.Coverage.global_realized", "Becoming.Coverage.trace_global"]}
+{"name": "Becoming.Coverage.first_or_fourth", "uses": []}
+{"name": "Becoming.Coverage.global_balance", "uses": ["Becoming.Coverage.balance_perm", "Becoming.Coverage.legal_balance"]}
+{"name": "Becoming.Coverage.global_realized", "uses": []}
+{"name": "Becoming.Coverage.legal_balance", "uses": ["Becoming.Coverage.opposite_pair_balance"]}
+{"name": "Becoming.Coverage.mutilated_balance", "uses": []}
+{"name": "Becoming.Coverage.mutilated_no_cover", "uses": ["Becoming.Coverage.adjacent_opposite", "Becoming.Coverage.mutilated_balance", "Becoming.Coverage.unbalanced_no_cover"]}
+{"name": "Becoming.Coverage.mutilated_no_history", "uses": ["Becoming.Coverage.mutilated_no_cover", "Becoming.Coverage.trace_global"]}
+{"name": "Becoming.Coverage.opposite_pair_balance", "uses": ["Becoming.Integers.add_assoc", "Becoming.Integers.add_left_neg", "Becoming.Integers.add_right_neg", "Becoming.Integers.zero_add"]}
+{"name": "Becoming.Coverage.realizes_iff_global", "uses": ["Becoming.Coverage.global_realized", "Becoming.Coverage.trace_global"]}
+{"name": "Becoming.Coverage.separated_apart", "uses": ["Becoming.Coverage.first_or_fourth"]}
+{"name": "Becoming.Coverage.separated_balanced", "uses": []}
+{"name": "Becoming.Coverage.separated_not_coverable", "uses": ["Becoming.Coverage.Perm.length_eq", "Becoming.Coverage.Perm.mem", "Becoming.Coverage.separated_apart"]}
+{"name": "Becoming.Coverage.trace_global", "uses": []}
+{"name": "Becoming.Coverage.two_tile_orders", "uses": []}
+{"name": "Becoming.Coverage.unbalanced_no_cover", "uses": ["Becoming.Coverage.global_balance"]}
+{"name": "Becoming.Coverage.unbalanced_no_placement_history", "uses": ["Becoming.Coverage.trace_global", "Becoming.Coverage.unbalanced_no_cover"]}

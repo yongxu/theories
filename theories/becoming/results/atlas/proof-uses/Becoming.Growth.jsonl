@@ -1,0 +1,12 @@
+{"name": "Becoming.Web.IncludesAlong.comp", "uses": []}
+{"name": "Becoming.Web.IncludesAlong.widensAlong_comp", "uses": ["Becoming.Web.IncludesAlong.comp"]}
+{"name": "Becoming.Web.WidensAlong.comp", "uses": ["Becoming.Web.IncludesAlong.comp"]}
+{"name": "Becoming.Web.attach_widensAlong_iff", "uses": ["Becoming.Web.grow_widensAlong_iff_new"]}
+{"name": "Becoming.Web.exceedsAlong_id_iff", "uses": []}
+{"name": "Becoming.Web.grow_admits_old", "uses": []}
+{"name": "Becoming.Web.grow_includesAlong_iff", "uses": ["Becoming.Web.grow_admits_old"]}
+{"name": "Becoming.Web.grow_widensAlong_iff", "uses": ["Becoming.Web.grow_admits_old", "Becoming.Web.grow_includesAlong_iff"]}
+{"name": "Becoming.Web.grow_widensAlong_iff_new", "uses": ["Becoming.Web.Includes.not_exceeded", "Becoming.Web.grow_widensAlong_iff"]}
+{"name": "Becoming.Web.grow_widens_unregistered", "uses": ["Becoming.Web.Includes.not_exceeded", "Becoming.Web.grow_widensAlong_iff_new"]}
+{"name": "Becoming.Web.includesAlong_id_iff", "uses": []}
+{"name": "Becoming.Web.widensAlong_id_iff", "uses": ["Becoming.Web.exceedsAlong_id_iff"]}

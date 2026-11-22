@@ -1,0 +1,99 @@
+{"name": "Becoming.Identification.answer_exceeds_bound", "uses": ["Becoming.Identification.withBound_exact", "Becoming.Learning.diagonal_unrested"]}
+{"name": "Becoming.Identification.below_all", "uses": ["Becoming.Identification.below_upto"]}
+{"name": "Becoming.Identification.below_upto", "uses": []}
+{"name": "Becoming.Identification.borneOut_prefix_iff", "uses": []}
+{"name": "Becoming.Identification.bounded_agree", "uses": ["Becoming.Identification.lassos_agree", "Becoming.Identification.statesBelow_iff_lasso"]}
+{"name": "Becoming.Identification.bounded_agree_exact", "uses": ["Becoming.Identification.lassoPos_early", "Becoming.Identification.lassoPos_period", "Becoming.Identification.periodic_whole", "Becoming.Identification.prefix_eq_iff", "Becoming.Identification.statesBelow_iff_lasso", "Becoming.Learning.holdFrom_after", "Becoming.Learning.holdFrom_before", "Becoming.Learning.holdFrom_lasso", "Becoming.le_dest"]}
+{"name": "Becoming.Identification.bounded_hypothesis", "uses": ["Becoming.Identification.statesBelow_iff_lasso", "Becoming.Learning.lasso_accords"]}
+{"name": "Becoming.Identification.bounded_induction", "uses": ["Becoming.Identification.fits_of_no_miss", "Becoming.Identification.lasso_of_fits", "Becoming.Learning.lasso_accords"]}
+{"name": "Becoming.Identification.byElimination_missed_late", "uses": ["Becoming.Identification.turn_diagonals", "Becoming.Identification.turn_pair", "Becoming.Identification.turn_walk"]}
+{"name": "Becoming.Identification.byElimination_rest_cubic", "uses": ["Becoming.Identification.byElimination_missed_late", "Becoming.Identification.oddCycle_below"]}
+{"name": "Becoming.Identification.byElimination_rests", "uses": ["Becoming.Identification.no_miss_persists", "Becoming.Identification.statesBelow_iff_lasso", "Becoming.Learning.diag_le", "Becoming.Learning.eq_of_not_missed", "Becoming.Learning.index_kept", "Becoming.Learning.index_le_succ", "Becoming.Learning.index_missed", "Becoming.Learning.index_mono_le", "Becoming.Learning.lasso_byElimination_bounded", "Becoming.Learning.pairAt_place", "Becoming.Learning.place_lt", "Becoming.Learning.tri_mono", "Becoming.le_dest"]}
+{"name": "Becoming.Identification.course_double", "uses": ["Becoming.Identification.course_two"]}
+{"name": "Becoming.Identification.course_even", "uses": ["Becoming.Identification.course_two"]}
+{"name": "Becoming.Identification.course_odd", "uses": ["Becoming.Identification.course_double"]}
+{"name": "Becoming.Identification.course_two", "uses": ["Becoming.ListTests.not_not"]}
+{"name": "Becoming.Identification.cyclePos_block", "uses": ["Becoming.Identification.lassoPos_early", "Becoming.Identification.lassoPos_period"]}
+{"name": "Becoming.Identification.even_shift_runs", "uses": ["Becoming.Identification.course_even", "Becoming.Identification.course_odd", "Becoming.Identification.four_assoc", "Becoming.Identification.lasso_back", "Becoming.Identification.missed_of", "Becoming.Identification.moved_on", "Becoming.Identification.not_missed_of", "Becoming.Identification.oddCycle_block", "Becoming.Identification.run_kept", "Becoming.Identification.shift_run"]}
+{"name": "Becoming.Identification.firstFit_found", "uses": []}
+{"name": "Becoming.Identification.firstFit_sound", "uses": []}
+{"name": "Becoming.Identification.fits_of_no_miss", "uses": ["Becoming.Learning.back_prefix", "Becoming.Learning.eq_of_not_missed", "Becoming.Learning.lasso_claims"]}
+{"name": "Becoming.Identification.four_assoc", "uses": []}
+{"name": "Becoming.Identification.held_byElimination_rests", "uses": ["Becoming.Identification.byElimination_rests", "Becoming.Identification.statesBelow_iff_lasso", "Becoming.Learning.lasso_of_held"]}
+{"name": "Becoming.Identification.lassoPos_early", "uses": []}
+{"name": "Becoming.Identification.lassoPos_period", "uses": ["Becoming.Identification.lassoPos_early"]}
+{"name": "Becoming.Identification.lasso_back", "uses": ["Becoming.Learning.back_prefix", "Becoming.Learning.lasso_claims"]}
+{"name": "Becoming.Identification.lasso_of_fits", "uses": ["Becoming.Identification.below_all", "Becoming.Identification.bounded_agree", "Becoming.Identification.lassoPos_early", "Becoming.Identification.lassoPos_period", "Becoming.Identification.statesBelow_iff_lasso", "Becoming.le_dest"]}
+{"name": "Becoming.Identification.lassos_agree", "uses": ["Becoming.Identification.period_extends", "Becoming.Identification.periodic_whole", "Becoming.Identification.residue", "Becoming.le_dest"]}
+{"name": "Becoming.Identification.le_twice_less_one", "uses": []}
+{"name": "Becoming.Identification.leastBound_exact", "uses": ["Becoming.Identification.borneOut_prefix_iff", "Becoming.Identification.bounded_hypothesis", "Becoming.Identification.bounded_induction", "Becoming.Identification.le_twice_less_one", "Becoming.Identification.leastFit_sound", "Becoming.Identification.leastFit_within", "Becoming.Identification.statesBelow_pos", "Becoming.Learning.back_made", "Becoming.Learning.eq_of_not_missed", "Becoming.Learning.lasso_claims", "Becoming.Learning.prefix_length"]}
+{"name": "Becoming.Identification.leastFit_sound", "uses": ["Becoming.Identification.firstFit_sound"]}
+{"name": "Becoming.Identification.leastFit_within", "uses": ["Becoming.Identification.firstFit_found", "Becoming.Identification.firstFit_sound", "Becoming.Identification.leastFit_sound", "Becoming.Identification.mem_grid", "Becoming.le_succ_cases"]}
+{"name": "Becoming.Identification.mem_column", "uses": []}
+{"name": "Becoming.Identification.mem_grid", "uses": ["Becoming.Identification.mem_column"]}
+{"name": "Becoming.Identification.missed_of", "uses": []}
+{"name": "Becoming.Identification.moved_on", "uses": ["Becoming.Learning.index_missed"]}
+{"name": "Becoming.Identification.negation_derived", "uses": ["Becoming.Identification.withBound_exact", "Becoming.Negation.zero_two", "Becoming.statesBelow_of_same"]}
+{"name": "Becoming.Identification.no_miss_persists", "uses": ["Becoming.Identification.lasso_of_fits", "Becoming.Identification.le_twice_less_one", "Becoming.Identification.statesBelow_pos", "Becoming.Identification.statesBelow_shift", "Becoming.Learning.back_prefix", "Becoming.Learning.eq_of_not_missed", "Becoming.Learning.lasso_accords", "Becoming.Learning.lasso_claims", "Becoming.le_dest"]}
+{"name": "Becoming.Identification.not_missed_of", "uses": ["Becoming.Learning.not_missed_self"]}
+{"name": "Becoming.Identification.oddCycle_below", "uses": ["Becoming.Identification.oddCycle_lasso", "Becoming.Identification.statesBelow_iff_lasso"]}
+{"name": "Becoming.Identification.oddCycle_block", "uses": ["Becoming.Identification.cyclePos_block"]}
+{"name": "Becoming.Identification.oddCycle_lasso", "uses": ["Becoming.Identification.lassoPos_period"]}
+{"name": "Becoming.Identification.odd_shift_runs", "uses": ["Becoming.Identification.course_even", "Becoming.Identification.course_odd", "Becoming.Identification.four_assoc", "Becoming.Identification.lasso_back", "Becoming.Identification.missed_of", "Becoming.Identification.moved_on", "Becoming.Identification.not_missed_of", "Becoming.Identification.oddCycle_block", "Becoming.Identification.run_kept", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Identification.period_extends", "uses": ["Becoming.Identification.periodic_whole", "Becoming.Identification.residue"]}
+{"name": "Becoming.Identification.periodic_whole", "uses": []}
+{"name": "Becoming.Identification.prefix_eq_iff", "uses": ["Becoming.Learning.prefix_congr"]}
+{"name": "Becoming.Identification.prefix_fixes", "uses": ["Becoming.Identification.bounded_agree", "Becoming.Identification.prefix_eq_iff"]}
+{"name": "Becoming.Identification.prefix_short", "uses": ["Becoming.Identification.statesBelow_iff_lasso", "Becoming.Learning.holdFrom_after", "Becoming.Learning.holdFrom_before", "Becoming.Learning.holdFrom_lasso", "Becoming.Learning.prefix_congr"]}
+{"name": "Becoming.Identification.prefix_short_twice", "uses": ["Becoming.Identification.lassoPos_early", "Becoming.Identification.lassoPos_period", "Becoming.Identification.prefix_eq_iff", "Becoming.Identification.statesBelow_iff_lasso", "Becoming.le_dest"]}
+{"name": "Becoming.Identification.residue", "uses": []}
+{"name": "Becoming.Identification.rest_earliest", "uses": ["Becoming.Identification.prefix_short_twice"]}
+{"name": "Becoming.Identification.rest_without_bound_missed", "uses": ["Becoming.Identification.statesBelow_iff_lasso", "Becoming.Learning.holdFrom_after", "Becoming.Learning.holdFrom_before", "Becoming.Learning.holdFrom_lasso"]}
+{"name": "Becoming.Identification.rests_of_lasso", "uses": ["Becoming.Identification.byElimination_rests", "Becoming.Identification.statesBelow_iff_lasso"]}
+{"name": "Becoming.Identification.run_kept", "uses": ["Becoming.Learning.index_kept"]}
+{"name": "Becoming.Identification.sameAhead_iff_below", "uses": ["Becoming.Identification.bounded_agree", "Becoming.Identification.statesBelow_shift"]}
+{"name": "Becoming.Identification.sameAhead_iff_classes", "uses": ["Becoming.Identification.statesBelow_iff_lasso", "Becoming.Law.orbit_add", "Becoming.Law.sameFuture_iff_classes", "Becoming.Law.upto_length", "Becoming.Learning.lasso_realized", "Becoming.le_pred_of_succ_le", "Becoming.mem_downFrom"]}
+{"name": "Becoming.Identification.sameAhead_iff_within", "uses": ["Becoming.Identification.statesBelow_iff_lasso", "Becoming.Law.orbit_add", "Becoming.Law.sameFuture_iff_within", "Becoming.Law.upto_length", "Becoming.Learning.lasso_realized", "Becoming.le_pred_of_succ_le", "Becoming.mem_downFrom"]}
+{"name": "Becoming.Identification.shift_run", "uses": []}
+{"name": "Becoming.Identification.start_turn", "uses": ["Becoming.Identification.even_shift_runs", "Becoming.Identification.unit_shift_missed"]}
+{"name": "Becoming.Identification.statesBelow_iff_lasso", "uses": ["Becoming.Identification.statesBelow_mono", "Becoming.SameAhead.symm", "Becoming.SameAhead.trans", "Becoming.gap_of_lt", "Becoming.lasso_iff_sameAhead", "Becoming.shared_below", "Becoming.statesBelow_of_same"]}
+{"name": "Becoming.Identification.statesBelow_mono", "uses": []}
+{"name": "Becoming.Identification.statesBelow_pos", "uses": []}
+{"name": "Becoming.Identification.statesBelow_shift", "uses": ["Becoming.Identification.statesBelow_iff_lasso"]}
+{"name": "Becoming.Identification.turn_diagonals", "uses": ["Becoming.Identification.start_turn", "Becoming.Identification.turn_double"]}
+{"name": "Becoming.Identification.turn_double", "uses": ["Becoming.Identification.turn_end", "Becoming.Identification.turn_pair", "Becoming.Identification.turn_walk"]}
+{"name": "Becoming.Identification.turn_end", "uses": ["Becoming.Identification.even_shift_runs", "Becoming.Identification.odd_shift_runs", "Becoming.Identification.turn_fit", "Becoming.Identification.turn_room", "Becoming.Identification.unit_shift_missed"]}
+{"name": "Becoming.Identification.turn_fit", "uses": ["Becoming.gap_of_lt"]}
+{"name": "Becoming.Identification.turn_pair", "uses": ["Becoming.Identification.even_shift_runs", "Becoming.Identification.odd_shift_runs", "Becoming.Identification.turn_fit"]}
+{"name": "Becoming.Identification.turn_room", "uses": []}
+{"name": "Becoming.Identification.turn_walk", "uses": ["Becoming.Identification.turn_pair"]}
+{"name": "Becoming.Identification.unit_shift_missed", "uses": ["Becoming.Identification.lasso_back", "Becoming.Identification.missed_of", "Becoming.Identification.moved_on", "Becoming.Identification.oddCycle_block", "Becoming.ListTests.not_ne_self"]}
+{"name": "Becoming.Identification.withBound_accords", "uses": ["Becoming.Identification.withBound_exact", "Becoming.Learning.not_missed_self", "Becoming.Learning.prefix_length"]}
+{"name": "Becoming.Identification.withBound_earliest", "uses": ["Becoming.Identification.prefix_short_twice"]}
+{"name": "Becoming.Identification.withBound_exact", "uses": ["Becoming.Identification.borneOut_prefix_iff", "Becoming.Identification.bounded_hypothesis", "Becoming.Identification.bounded_induction", "Becoming.Identification.firstFit_found", "Becoming.Identification.firstFit_sound", "Becoming.Identification.le_twice_less_one", "Becoming.Identification.mem_grid", "Becoming.Identification.statesBelow_pos", "Becoming.Learning.back_made", "Becoming.Learning.eq_of_not_missed", "Becoming.Learning.lasso_claims", "Becoming.Learning.prefix_length"]}
+{"name": "Becoming.Law.AgreeTo.decided", "uses": ["Becoming.Decided.and"]}
+{"name": "Becoming.Law.AgreeTo.of_succ", "uses": []}
+{"name": "Becoming.Law.AgreeTo.self", "uses": []}
+{"name": "Becoming.Law.AgreeTo.steady_on", "uses": []}
+{"name": "Becoming.Law.AgreeTo.symm", "uses": []}
+{"name": "Becoming.Law.AgreeTo.trans", "uses": []}
+{"name": "Becoming.Law.agreeTo_iff", "uses": ["Becoming.Law.orbit_shift"]}
+{"name": "Becoming.Law.agreeTo_refining", "uses": ["Becoming.Law.AgreeTo.of_succ", "Becoming.Law.AgreeTo.self", "Becoming.Law.AgreeTo.symm", "Becoming.Law.AgreeTo.trans"]}
+{"name": "Becoming.Law.choose_below", "uses": []}
+{"name": "Becoming.Law.joinOrbits_joins", "uses": ["Becoming.Law.merge_joins", "Becoming.Law.merge_keeps"]}
+{"name": "Becoming.Law.joinOrbits_sound", "uses": ["Becoming.Law.merge_sound"]}
+{"name": "Becoming.Law.lt_of_le_pred", "uses": []}
+{"name": "Becoming.Law.memberAt_mem", "uses": []}
+{"name": "Becoming.Law.merge_joins", "uses": []}
+{"name": "Becoming.Law.merge_keeps", "uses": []}
+{"name": "Becoming.Law.merge_sound", "uses": []}
+{"name": "Becoming.Law.orbit_held", "uses": []}
+{"name": "Becoming.Law.orbit_memberAt", "uses": []}
+{"name": "Becoming.Law.position_of_mem", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Law.sameFuture_classes_exact", "uses": ["Becoming.Identification.lassoPos_early", "Becoming.Law.orbit_shift", "Becoming.Law.upto_length", "Becoming.mem_downFrom"]}
+{"name": "Becoming.Law.sameFuture_classes_unrefuted", "uses": ["Becoming.Law.sameFuture_iff_classes", "Becoming.not_not_decided", "Becoming.not_not_within"]}
+{"name": "Becoming.Law.sameFuture_iff_below", "uses": ["Becoming.Identification.bounded_agree", "Becoming.Law.statesBelow_held"]}
+{"name": "Becoming.Law.sameFuture_iff_classes", "uses": ["Becoming.Decided.exists_listed", "Becoming.Decided.not", "Becoming.Decided.of_not_not", "Becoming.DistinctUnder.single", "Becoming.Law.AgreeTo.decided", "Becoming.Law.AgreeTo.steady_on", "Becoming.Law.agreeTo_iff", "Becoming.Law.agreeTo_refining", "Becoming.Law.orbit_held", "Becoming.Refining.steady_within", "Becoming.le_pred_of_succ_le", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Law.sameFuture_iff_within", "uses": ["Becoming.Law.choose_below", "Becoming.Law.joinOrbits_joins", "Becoming.Law.joinOrbits_sound", "Becoming.Law.lt_of_le_pred", "Becoming.Law.memberAt_mem", "Becoming.Law.orbit_memberAt", "Becoming.Law.position_of_mem", "Becoming.Law.sameFuture_iff_classes", "Becoming.Law.upto_length", "Becoming.le_of_mem_downFrom", "Becoming.le_pred_of_succ_le", "Becoming.mem_downFrom"]}
+{"name": "Becoming.Law.statesBelow_held", "uses": ["Becoming.Identification.statesBelow_iff_lasso", "Becoming.Law.orbit_held", "Becoming.Learning.lasso_of_held"]}
+{"name": "Becoming.Law.upto_length", "uses": []}

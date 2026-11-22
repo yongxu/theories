@@ -1,0 +1,45 @@
+{"name": "Becoming.ExchangeLaw.Nonanticipating.readsFinitely_of_every", "uses": ["Becoming.ExchangeLaw.Nonanticipating.readsWithin_of_every"]}
+{"name": "Becoming.ExchangeLaw.Nonanticipating.readsWithin_of_every", "uses": []}
+{"name": "Becoming.ExchangeLaw.ReadsFinitely.alike_of_insensitive", "uses": ["Becoming.ExchangeLaw.ReadsFinitely.nonanticipating", "Becoming.alike_of_sensitive_agree_within"]}
+{"name": "Becoming.ExchangeLaw.ReadsFinitely.least_coupling", "uses": ["Becoming.ExchangeLaw.ReadsFinitely.through_sensitive", "Becoming.ExchangeLaw.Through.couples_of_sensitive"]}
+{"name": "Becoming.ExchangeLaw.ReadsFinitely.nonanticipating", "uses": []}
+{"name": "Becoming.ExchangeLaw.ReadsFinitely.through_of_observed", "uses": ["Becoming.ExchangeLaw.ReadsFinitely.nonanticipating", "Becoming.alike_of_sensitive_agree_within", "Becoming.nat_eq_of_not_not"]}
+{"name": "Becoming.ExchangeLaw.ReadsFinitely.through_sensitive", "uses": ["Becoming.ExchangeLaw.ReadsFinitely.through_of_observed"]}
+{"name": "Becoming.Pointer.beyond_ne_zero", "uses": []}
+{"name": "Becoming.Pointer.lt_beyond", "uses": []}
+{"name": "Becoming.Pointer.no_list", "uses": ["Becoming.Pointer.beyond_ne_zero", "Becoming.Pointer.lt_beyond"]}
+{"name": "Becoming.Pointer.readsFinitely", "uses": ["Becoming.Pointer.readsWithin"]}
+{"name": "Becoming.Pointer.readsWithin", "uses": []}
+{"name": "Becoming.Sensitivity.cond_either", "uses": []}
+{"name": "Becoming.VanishFrom.of_agree", "uses": []}
+{"name": "Becoming.WLPO.of_lpo", "uses": []}
+{"name": "Becoming.alike_of_agree_from", "uses": []}
+{"name": "Becoming.alike_of_agree_from_sensitive", "uses": ["Becoming.swap_alike"]}
+{"name": "Becoming.alike_of_insensitiveAt_within", "uses": ["Becoming.mixIn_alike_of_insensitiveAt", "Becoming.mixIn_listed"]}
+{"name": "Becoming.alike_of_sensitive_agree_within", "uses": ["Becoming.mixIn_alike", "Becoming.mixIn_listed"]}
+{"name": "Becoming.comparison_through_sensitivity_of_readsFinitely", "uses": ["Becoming.ExchangeLaw.ReadsFinitely.through_sensitive", "Becoming.comparison_of_courses"]}
+{"name": "Becoming.lpo_of_vanish_decided", "uses": ["Becoming.seenBy_exists", "Becoming.seenBy_true"]}
+{"name": "Becoming.mixIn_alike_of_insensitiveAt", "uses": []}
+{"name": "Becoming.mixed_decides", "uses": []}
+{"name": "Becoming.seenBy_at", "uses": ["Becoming.ChanceFloors.or_true"]}
+{"name": "Becoming.seenBy_exists", "uses": []}
+{"name": "Becoming.seenBy_false", "uses": []}
+{"name": "Becoming.seenBy_from", "uses": ["Becoming.seenBy_at"]}
+{"name": "Becoming.seenBy_true", "uses": ["Becoming.seenBy_from"]}
+{"name": "Becoming.tailLaw_differs", "uses": ["Becoming.vanishIndicator_ones", "Becoming.vanishIndicator_zeros"]}
+{"name": "Becoming.tailLaw_insensitive", "uses": ["Becoming.tailLaw_reads_from"]}
+{"name": "Becoming.tailLaw_no_least_coupling", "uses": ["Becoming.tailLaw_differs", "Becoming.tailLaw_through_from"]}
+{"name": "Becoming.tailLaw_nonanticipating", "uses": ["Becoming.vanishIndicator_eq_of_agree"]}
+{"name": "Becoming.tailLaw_not_readsFinitely", "uses": ["Becoming.ExchangeLaw.ReadsFinitely.alike_of_insensitive", "Becoming.tailLaw_differs", "Becoming.tailLaw_not_sensitive"]}
+{"name": "Becoming.tailLaw_not_sensitive", "uses": ["Becoming.tailLaw_insensitive"]}
+{"name": "Becoming.tailLaw_not_through", "uses": ["Becoming.tailLaw_not_through_sensitive"]}
+{"name": "Becoming.tailLaw_not_through_sensitive", "uses": ["Becoming.tailLaw_differs", "Becoming.tailLaw_not_sensitive"]}
+{"name": "Becoming.tailLaw_reads_from", "uses": ["Becoming.vanishIndicator_eq_of_agree"]}
+{"name": "Becoming.tailLaw_through_from", "uses": ["Becoming.tailLaw_reads_from"]}
+{"name": "Becoming.vanishIndicator_eq_of_agree", "uses": ["Becoming.VanishFrom.of_agree", "Becoming.vanishIndicator_eq_one", "Becoming.vanishIndicator_eq_zero"]}
+{"name": "Becoming.vanishIndicator_eq_one", "uses": []}
+{"name": "Becoming.vanishIndicator_eq_zero", "uses": []}
+{"name": "Becoming.vanishIndicator_ones", "uses": ["Becoming.vanishIndicator_eq_zero"]}
+{"name": "Becoming.vanishIndicator_zeros", "uses": ["Becoming.vanishIndicator_eq_one"]}
+{"name": "Becoming.wlpo_of_insensitive_differs", "uses": ["Becoming.alike_of_agree_from", "Becoming.mixed_decides", "Becoming.seenBy_false", "Becoming.seenBy_true"]}
+{"name": "Becoming.wlpo_of_not_through_sensitive", "uses": ["Becoming.Sensitivity.cond_either", "Becoming.alike_of_agree_from_sensitive", "Becoming.mixed_decides", "Becoming.seenBy_false", "Becoming.seenBy_true"]}

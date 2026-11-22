@@ -1,0 +1,32 @@
+{"name": "Becoming.ReaderRebuilding.cons_present", "uses": []}
+{"name": "Becoming.ReaderRebuilding.cut_empty_end", "uses": ["Becoming.ReaderRebuilding.quiet_end"]}
+{"name": "Becoming.ReaderRebuilding.cut_level", "uses": ["Becoming.ReaderRebuilding.le_pred_succ", "Becoming.ReaderRebuilding.rebuild_level"]}
+{"name": "Becoming.ReaderRebuilding.cut_present", "uses": ["Becoming.ReaderRebuilding.rebuild_present"]}
+{"name": "Becoming.ReaderRebuilding.given_run", "uses": ["Becoming.ReaderRebuilding.length_replicate", "Becoming.ReaderRebuilding.rebuild_full"]}
+{"name": "Becoming.ReaderRebuilding.le_pred_succ", "uses": []}
+{"name": "Becoming.ReaderRebuilding.length_replicate", "uses": []}
+{"name": "Becoming.ReaderRebuilding.older_replicate", "uses": []}
+{"name": "Becoming.ReaderRebuilding.one_le_of_lt", "uses": []}
+{"name": "Becoming.ReaderRebuilding.pred_succ", "uses": []}
+{"name": "Becoming.ReaderRebuilding.quiet_empty", "uses": ["Becoming.ReaderRebuilding.quiet_step"]}
+{"name": "Becoming.ReaderRebuilding.quiet_end", "uses": ["Becoming.ReaderRebuilding.older_replicate", "Becoming.ReaderRebuilding.quiet_empty", "Becoming.ReaderRebuilding.quiet_step"]}
+{"name": "Becoming.ReaderRebuilding.quiet_step", "uses": ["Becoming.ReaderRebuilding.rebuild_none", "Becoming.ReaderRebuilding.rebuild_zero"]}
+{"name": "Becoming.ReaderRebuilding.read_pos", "uses": []}
+{"name": "Becoming.ReaderRebuilding.read_zero", "uses": []}
+{"name": "Becoming.ReaderRebuilding.rebuild_full", "uses": []}
+{"name": "Becoming.ReaderRebuilding.rebuild_level", "uses": []}
+{"name": "Becoming.ReaderRebuilding.rebuild_none", "uses": []}
+{"name": "Becoming.ReaderRebuilding.rebuild_present", "uses": ["Becoming.ReaderRebuilding.cons_present"]}
+{"name": "Becoming.ReaderRebuilding.rebuild_zero", "uses": []}
+{"name": "Becoming.ReaderRebuilding.«一元三期之时»", "uses": []}
+{"name": "Becoming.ReaderRebuilding.«一元二期之时»", "uses": []}
+{"name": "Becoming.ReaderRebuilding.«不复建者尽»", "uses": ["Becoming.ReaderRebuilding.quiet_end"]}
+{"name": "Becoming.ReaderRebuilding.«以储买时当且仅当取于储»", "uses": ["Becoming.ReaderRebuilding.cons_present", "Becoming.ReaderRebuilding.cut_empty_end", "Becoming.ReaderRebuilding.given_run", "Becoming.ReaderRebuilding.pred_succ", "Becoming.ReaderRebuilding.«不复建者尽»", "Becoming.ReaderRebuilding.«断则取于供者尽»", "Becoming.ReaderRebuilding.«断而有储则读者存»"]}
+{"name": "Becoming.ReaderRebuilding.«供则读者不绝»", "uses": ["Becoming.ReaderRebuilding.read_pos", "Becoming.ReaderRebuilding.rebuild_present"]}
+{"name": "Becoming.ReaderRebuilding.«供则读者之域闭»", "uses": ["Becoming.ReaderRebuilding.«供则读者不绝»"]}
+{"name": "Becoming.ReaderRebuilding.«取于供者之时»", "uses": []}
+{"name": "Becoming.ReaderRebuilding.«取于供者复»", "uses": ["Becoming.ReaderRebuilding.cons_present"]}
+{"name": "Becoming.ReaderRebuilding.«取于储者绝而不复»", "uses": ["Becoming.ReaderRebuilding.read_zero", "Becoming.ReaderRebuilding.rebuild_zero"]}
+{"name": "Becoming.ReaderRebuilding.«断则取于供者尽»", "uses": ["Becoming.ReaderRebuilding.quiet_end"]}
+{"name": "Becoming.ReaderRebuilding.«断而有储则读者存»", "uses": ["Becoming.ReaderRebuilding.cut_level", "Becoming.ReaderRebuilding.cut_present"]}
+{"name": "Becoming.ReaderRebuilding.«读者绝则无储»", "uses": ["Becoming.ReaderRebuilding.rebuild_present", "Becoming.ReaderRebuilding.rebuild_zero"]}

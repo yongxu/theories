@@ -1,0 +1,38 @@
+{"name": "Becoming.IdleStep.idle", "uses": []}
+{"name": "Becoming.IdleStep.moves", "uses": []}
+{"name": "Becoming.IdleStep.not_idle_later", "uses": []}
+{"name": "Becoming.IdleStep.premises_hold", "uses": ["Becoming.IdleStep.idle", "Becoming.IdleStep.moves", "Becoming.IdleStep.stutter"]}
+{"name": "Becoming.IdleStep.stutter", "uses": []}
+{"name": "Becoming.Joining.Once.connectedFrom", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans"]}
+{"name": "Becoming.Joining.Once.eq_of_mem_single", "uses": []}
+{"name": "Becoming.Joining.Once.finiteOutcomes", "uses": ["Becoming.Joining.Once.joins_of_mem", "Becoming.Joining.Once.mem_of_joins"]}
+{"name": "Becoming.Joining.Once.joins_of_mem", "uses": ["Becoming.Joining.Once.eq_of_mem_single"]}
+{"name": "Becoming.Joining.Once.locallyFinite", "uses": ["Becoming.Joining.Once.mem_occurrences", "Becoming.Joining.Once.same_iff", "Becoming.ListTests.mem_filter_iff"]}
+{"name": "Becoming.Joining.Once.mem_occurrences", "uses": []}
+{"name": "Becoming.Joining.Once.mem_of_joins", "uses": []}
+{"name": "Becoming.Joining.Once.same_iff", "uses": []}
+{"name": "Becoming.ListedPaths.concerned_counted", "uses": ["Becoming.ListedPaths.increasing", "Becoming.Weighting.increasingInOwn_of_increasing"]}
+{"name": "Becoming.ListedPaths.condition_reads_no_order", "uses": ["Becoming.ListedPaths.extension", "Becoming.ReadsNoOrder.not_entails", "Becoming.WithinClosure.refl", "Becoming.ownClosure_unrestricted_iff"]}
+{"name": "Becoming.ListedPaths.decides", "uses": []}
+{"name": "Becoming.ListedPaths.extension", "uses": []}
+{"name": "Becoming.ListedPaths.increasing", "uses": ["Becoming.Weighting.increasing_ranks"]}
+{"name": "Becoming.ListedPaths.never_listed", "uses": []}
+{"name": "Becoming.ListedPaths.not_listed", "uses": []}
+{"name": "Becoming.ListedPaths.once_listed", "uses": []}
+{"name": "Becoming.ListedPaths.premises_hold", "uses": ["Becoming.ListedPaths.decides", "Becoming.ListedPaths.extension", "Becoming.ListedPaths.increasing", "Becoming.ListedPaths.never_listed", "Becoming.ListedPaths.once_listed", "Becoming.Web.extension_ranked_of_increasing"]}
+{"name": "Becoming.ListedPaths.premises_hold_de_se", "uses": ["Becoming.ListedPaths.decides", "Becoming.ListedPaths.extension", "Becoming.ListedPaths.never_listed", "Becoming.ListedPaths.once_listed", "Becoming.Web.extension_ranked_of_increasingInOwn", "Becoming.WithinClosure.refl", "Becoming.ownClosure_unrestricted_iff"]}
+{"name": "Becoming.MatchedCourses.readings_hold_together", "uses": []}
+{"name": "Becoming.OneFeeding.not_mutuallyFed", "uses": []}
+{"name": "Becoming.Optimum.AtOnce.returnsLess_fails", "uses": []}
+{"name": "Becoming.Optimum.AtOnce.returnsLess_met", "uses": []}
+{"name": "Becoming.Reconfiguration.covered_and_not", "uses": []}
+{"name": "Becoming.Relabel.GreaterOfTwo.equivariant", "uses": ["Becoming.Relabel.GreaterOfTwo.map_not", "Becoming.Relabel.GreaterOfTwo.map_same", "Becoming.Relabel.GreaterOfTwo.pick_exchange"]}
+{"name": "Becoming.Relabel.GreaterOfTwo.map_not", "uses": []}
+{"name": "Becoming.Relabel.GreaterOfTwo.map_same", "uses": []}
+{"name": "Becoming.Relabel.GreaterOfTwo.pick_exchange", "uses": ["Becoming.Relabel.GreaterOfTwo.pick_gt", "Becoming.Relabel.GreaterOfTwo.pick_lt", "Becoming.Relabel.GreaterOfTwo.pick_tie"]}
+{"name": "Becoming.Relabel.GreaterOfTwo.pick_gt", "uses": []}
+{"name": "Becoming.Relabel.GreaterOfTwo.pick_lt", "uses": []}
+{"name": "Becoming.Relabel.GreaterOfTwo.pick_tie", "uses": []}
+{"name": "Becoming.Relabel.GreaterOfTwo.premises_hold", "uses": ["Becoming.Relabel.GreaterOfTwo.equivariant", "Becoming.Relabel.GreaterOfTwo.pick_gt", "Becoming.Relabel.GreaterOfTwo.pick_tie"]}
+{"name": "Becoming.TwoFeeding.mutuallyFed", "uses": ["Becoming.TwoFeeding.present", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl"]}
+{"name": "Becoming.TwoFeeding.present", "uses": []}

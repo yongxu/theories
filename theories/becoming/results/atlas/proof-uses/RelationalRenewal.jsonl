@@ -1,0 +1,35 @@
+{"name": "RelationalRenewal.Law.dependent_overdraw_ends_itself", "uses": ["RelationalRenewal.Law.formed_at_inactive", "RelationalRenewal.Law.formed_le", "RelationalRenewal.Law.level_succ", "RelationalRenewal.Law.permanently_below", "RelationalRenewal.accumulate", "RelationalRenewal.add_le_cancel", "RelationalRenewal.strict_loss"]}
+{"name": "RelationalRenewal.Law.escalation_consumes", "uses": ["RelationalRenewal.Law.dependent_overdraw_ends_itself", "RelationalRenewal.Law.overdraw_consuming"]}
+{"name": "RelationalRenewal.Law.formation_does_not_decide", "uses": ["RelationalRenewal.Law.dependent_overdraw_ends_itself", "RelationalRenewal.Law.formed_at_active", "RelationalRenewal.Law.overdraw_consuming", "RelationalRenewal.Law.within_renewal_renewing"]}
+{"name": "RelationalRenewal.Law.formed_at_active", "uses": []}
+{"name": "RelationalRenewal.Law.formed_at_inactive", "uses": []}
+{"name": "RelationalRenewal.Law.formed_le", "uses": ["RelationalRenewal.Law.formed_at_active", "RelationalRenewal.Law.formed_at_inactive"]}
+{"name": "RelationalRenewal.Law.formed_of_always", "uses": ["RelationalRenewal.Law.formed_at_active"]}
+{"name": "RelationalRenewal.Law.independent_overdraw_persists", "uses": ["RelationalRenewal.Law.formed_of_always", "RelationalRenewal.Law.overdraw_consuming"]}
+{"name": "RelationalRenewal.Law.jointly_consuming", "uses": ["RelationalRenewal.Law.dependent_overdraw_ends_itself", "RelationalRenewal.Law.overdraw_consuming", "RelationalRenewal.Law.within_renewal_renewing"]}
+{"name": "RelationalRenewal.Law.level_succ", "uses": []}
+{"name": "RelationalRenewal.Law.no_return_below_support", "uses": ["RelationalRenewal.Law.level_succ", "RelationalRenewal.no_gain"]}
+{"name": "RelationalRenewal.Law.overdraw_consuming", "uses": ["RelationalRenewal.Law.overdraw_crosses_support", "RelationalRenewal.Law.permanently_below", "RelationalRenewal.Law.unfolding_dependent", "RelationalRenewal.lost_support_ends"]}
+{"name": "RelationalRenewal.Law.overdraw_crosses_support", "uses": ["RelationalRenewal.Law.level_succ", "RelationalRenewal.accumulate", "RelationalRenewal.add_le_cancel", "RelationalRenewal.strict_loss"]}
+{"name": "RelationalRenewal.Law.own_trajectory_does_not_decide", "uses": ["RelationalRenewal.Law.independent_overdraw_persists", "RelationalRenewal.Law.within_renewal_renewing"]}
+{"name": "RelationalRenewal.Law.permanently_below", "uses": ["RelationalRenewal.Law.no_return_below_support"]}
+{"name": "RelationalRenewal.Law.unfolding_dependent", "uses": []}
+{"name": "RelationalRenewal.Law.within_renewal_renewing", "uses": ["RelationalRenewal.Law.formed_of_always", "RelationalRenewal.Law.within_renewal_sustains"]}
+{"name": "RelationalRenewal.Law.within_renewal_sustains", "uses": ["RelationalRenewal.Law.level_succ", "RelationalRenewal.keeps_level"]}
+{"name": "RelationalRenewal.accumulate", "uses": []}
+{"name": "RelationalRenewal.add_le_cancel", "uses": []}
+{"name": "RelationalRenewal.add_sub_self", "uses": []}
+{"name": "RelationalRenewal.alternating_even", "uses": []}
+{"name": "RelationalRenewal.fluctuating_dependent", "uses": []}
+{"name": "RelationalRenewal.fluctuating_neither", "uses": ["RelationalRenewal.alternating_even"]}
+{"name": "RelationalRenewal.keeps_level", "uses": ["RelationalRenewal.le_sub_from_add"]}
+{"name": "RelationalRenewal.le_sub_from_add", "uses": ["RelationalRenewal.add_sub_self"]}
+{"name": "RelationalRenewal.lost_support_ends", "uses": []}
+{"name": "RelationalRenewal.no_gain", "uses": ["RelationalRenewal.sub_le_from_add"]}
+{"name": "RelationalRenewal.renewed_not_consumed", "uses": []}
+{"name": "RelationalRenewal.renewing_keeps_support", "uses": []}
+{"name": "RelationalRenewal.renewing_not_consuming", "uses": ["RelationalRenewal.renewed_not_consumed"]}
+{"name": "RelationalRenewal.strict_loss", "uses": ["RelationalRenewal.sub_le_from_add"]}
+{"name": "RelationalRenewal.sub_le_from_add", "uses": ["RelationalRenewal.add_sub_self"]}
+{"name": "RelationalRenewal.unrenewed_drawdown_finite", "uses": ["RelationalRenewal.accumulate", "RelationalRenewal.unrenewed_monotone"]}
+{"name": "RelationalRenewal.unrenewed_monotone", "uses": []}

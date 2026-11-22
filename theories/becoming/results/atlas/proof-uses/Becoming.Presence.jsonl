@@ -1,0 +1,160 @@
+{"name": "Becoming.Presence.Diamond.auto_inj", "uses": []}
+{"name": "Becoming.Presence.Diamond.auto_middle", "uses": ["Becoming.Presence.Diamond.prec_below"]}
+{"name": "Becoming.Presence.Diamond.auto_middle_back", "uses": ["Becoming.Presence.Diamond.prec_below"]}
+{"name": "Becoming.Presence.Diamond.courses_disagree", "uses": ["Becoming.Presence.swap12_four"]}
+{"name": "Becoming.Presence.Diamond.future_one_two", "uses": []}
+{"name": "Becoming.Presence.Diamond.kept_not_agreed", "uses": ["Becoming.Presence.Diamond.pastOrPair_kept", "Becoming.Presence.Diamond.pastOrPair_pair", "Becoming.Presence.natural_identity"]}
+{"name": "Becoming.Presence.Diamond.middle_iff", "uses": []}
+{"name": "Becoming.Presence.Diamond.middle_of_pair", "uses": ["Becoming.Presence.Diamond.middle_iff"]}
+{"name": "Becoming.Presence.Diamond.ordered", "uses": ["Becoming.Presence.Diamond.prec_below", "Becoming.Presence.below_four"]}
+{"name": "Becoming.Presence.Diamond.pair_of_middle", "uses": ["Becoming.Presence.Diamond.middle_iff"]}
+{"name": "Becoming.Presence.Diamond.pastOrPair_below", "uses": ["Becoming.Presence.Diamond.prec_below"]}
+{"name": "Becoming.Presence.Diamond.pastOrPair_iff_together", "uses": ["Becoming.Presence.Diamond.future_one_two", "Becoming.Presence.Diamond.ordered", "Becoming.Presence.below_four", "Becoming.Presence.together_every_iff"]}
+{"name": "Becoming.Presence.Diamond.pastOrPair_kept", "uses": ["Becoming.Presence.Diamond.auto_inj", "Becoming.Presence.Diamond.auto_middle", "Becoming.Presence.Diamond.auto_middle_back", "Becoming.Presence.Diamond.middle_of_pair", "Becoming.Presence.Diamond.pair_of_middle"]}
+{"name": "Becoming.Presence.Diamond.pastOrPair_pair", "uses": []}
+{"name": "Becoming.Presence.Diamond.pastOrPair_refl", "uses": []}
+{"name": "Becoming.Presence.Diamond.pastOrPair_trans", "uses": ["Becoming.Presence.Diamond.pastOrPair_below", "Becoming.Presence.below_four"]}
+{"name": "Becoming.Presence.Diamond.pastOrTogether_iff", "uses": ["Becoming.Presence.Diamond.pastOrPair_iff_together"]}
+{"name": "Becoming.Presence.Diamond.prec_below", "uses": []}
+{"name": "Becoming.Presence.NaturalLabelling.at", "uses": ["Becoming.Presence.lt_zero_add", "Becoming.Presence.of_lt_zero_add"]}
+{"name": "Becoming.Presence.NaturalLabelling.back", "uses": ["Becoming.Presence.lt_zero_add", "Becoming.Presence.of_lt_zero_add"]}
+{"name": "Becoming.Presence.NaturalLabelling.before", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.Presence.lt_zero_add"]}
+{"name": "Becoming.Presence.SameFuture.future_one_two", "uses": []}
+{"name": "Becoming.Presence.SameFuture.ordered", "uses": ["Becoming.Presence.SameFuture.prec_below", "Becoming.Presence.below_four"]}
+{"name": "Becoming.Presence.SameFuture.pastOrTogether_not_trans", "uses": ["Becoming.Presence.SameFuture.future_one_two", "Becoming.Presence.SameFuture.ordered", "Becoming.Presence.together_every_iff"]}
+{"name": "Becoming.Presence.SameFuture.prec_below", "uses": []}
+{"name": "Becoming.Presence.SameFuture.together_different_pasts", "uses": ["Becoming.Presence.SameFuture.future_one_two", "Becoming.Presence.SameFuture.ordered", "Becoming.Presence.together_every_iff"]}
+{"name": "Becoming.Presence.Vee.link", "uses": ["Becoming.Presence.Vee.natural_swap", "Becoming.Presence.Vee.ordered", "Becoming.Presence.Vee.present_swap", "Becoming.Presence.link_of_present"]}
+{"name": "Becoming.Presence.Vee.maximal_after_two_identity", "uses": ["Becoming.Presence.below_three"]}
+{"name": "Becoming.Presence.Vee.maximal_after_two_swap", "uses": ["Becoming.Presence.below_three"]}
+{"name": "Becoming.Presence.Vee.natural_swap", "uses": ["Becoming.Presence.swap12_three"]}
+{"name": "Becoming.Presence.Vee.not_least", "uses": ["Becoming.Presence.Vee.not_present_identity", "Becoming.Presence.Vee.ordered", "Becoming.Presence.natural_identity", "Becoming.Presence.present_every_iff"]}
+{"name": "Becoming.Presence.Vee.not_present_identity", "uses": []}
+{"name": "Becoming.Presence.Vee.ordered", "uses": []}
+{"name": "Becoming.Presence.Vee.present_swap", "uses": []}
+{"name": "Becoming.Presence.above_of_every_not_not", "uses": ["Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.Presence.down_closed", "Becoming.Presence.front_true_lt_false", "Becoming.Presence.natural_identity", "Becoming.Presence.natural_of_table", "Becoming.Presence.table_false", "Becoming.Presence.table_not_not"]}
+{"name": "Becoming.Presence.above_of_only_not_not", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.CausalGrowth.Causet.Ordered.trans", "Becoming.not_not_decided"]}
+{"name": "Becoming.Presence.antichain_present", "uses": ["Becoming.CausalGrowth.Causet.Ordered.trans", "Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.ListTests.bool_absurd", "Becoming.Presence.maximalBorn_front", "Becoming.Presence.natural_of_table", "Becoming.Presence.table_false", "Becoming.Presence.table_of", "Becoming.Presence.weakly_above"]}
+{"name": "Becoming.Presence.antichain_present_course", "uses": ["Becoming.Presence.antichain_present", "Becoming.Presence.natural_iff_course"]}
+{"name": "Becoming.Presence.antichain_present_iff_weakly", "uses": ["Becoming.Presence.antichain_present", "Becoming.Presence.together_of_antichain", "Becoming.Presence.together_some_iff_weakly"]}
+{"name": "Becoming.Presence.apartIf_ordered", "uses": []}
+{"name": "Becoming.Presence.before_of_weakly", "uses": ["Becoming.CausalGrowth.Causet.Ordered.trans", "Becoming.Presence.front_true_lt_false", "Becoming.Presence.natural_of_table", "Becoming.Presence.table_false", "Becoming.Presence.table_of"]}
+{"name": "Becoming.Presence.before_some_course", "uses": ["Becoming.Presence.before_some_iff", "Becoming.Presence.some_course_iff"]}
+{"name": "Becoming.Presence.before_some_iff", "uses": ["Becoming.Presence.NaturalLabelling.before", "Becoming.Presence.before_of_weakly"]}
+{"name": "Becoming.Presence.before_some_iff_weakly", "uses": ["Becoming.Presence.before_of_weakly", "Becoming.Presence.either_order_iff_weakly"]}
+{"name": "Becoming.Presence.below_four", "uses": []}
+{"name": "Becoming.Presence.below_three", "uses": []}
+{"name": "Becoming.Presence.born_closed", "uses": ["Becoming.Presence.NaturalLabelling.before"]}
+{"name": "Becoming.Presence.born_stem", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.Presence.born_closed"]}
+{"name": "Becoming.Presence.comparable_symm", "uses": []}
+{"name": "Becoming.Presence.count_add_not", "uses": ["Becoming.ListTests.not_eq_true_of_false", "Becoming.ListTests.not_false_of_true", "Becoming.Presence.count_succ_of_false", "Becoming.Presence.count_succ_of_true"]}
+{"name": "Becoming.Presence.count_inj", "uses": ["Becoming.Presence.count_lt_of"]}
+{"name": "Becoming.Presence.count_le", "uses": ["Becoming.Presence.count_succ_of_false", "Becoming.Presence.count_succ_of_true"]}
+{"name": "Becoming.Presence.count_le_add", "uses": ["Becoming.Presence.count_le_succ"]}
+{"name": "Becoming.Presence.count_le_succ", "uses": ["Becoming.Presence.count_succ_of_false", "Becoming.Presence.count_succ_of_true"]}
+{"name": "Becoming.Presence.count_lt_of", "uses": ["Becoming.Presence.count_mono", "Becoming.Presence.count_succ_of_true"]}
+{"name": "Becoming.Presence.count_mono", "uses": ["Becoming.Presence.count_le_add", "Becoming.le_dest"]}
+{"name": "Becoming.Presence.count_reaches", "uses": ["Becoming.Presence.count_succ_of_false", "Becoming.Presence.count_succ_of_true"]}
+{"name": "Becoming.Presence.count_succ_of_false", "uses": []}
+{"name": "Becoming.Presence.count_succ_of_true", "uses": []}
+{"name": "Becoming.Presence.courseOf_grows", "uses": ["Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.CausalGrowth.grown_prec_iff", "Becoming.CausalGrowth.grown_size"]}
+{"name": "Becoming.Presence.courseOf_isomorphic", "uses": ["Becoming.Presence.courseOf_grows"]}
+{"name": "Becoming.Presence.downTo_before", "uses": ["Becoming.Presence.downTo_closed", "Becoming.Presence.downTo_other", "Becoming.Presence.downTo_self", "Becoming.Presence.front_natural", "Becoming.Presence.front_true_lt_false"]}
+{"name": "Becoming.Presence.downTo_closed", "uses": ["Becoming.Presence.down_closed"]}
+{"name": "Becoming.Presence.downTo_other", "uses": []}
+{"name": "Becoming.Presence.downTo_self", "uses": []}
+{"name": "Becoming.Presence.down_closed", "uses": ["Becoming.CausalGrowth.Causet.Ordered.trans"]}
+{"name": "Becoming.Presence.either_order", "uses": ["Becoming.Presence.before_of_weakly"]}
+{"name": "Becoming.Presence.either_order_course", "uses": ["Becoming.Presence.either_order", "Becoming.Presence.some_course_iff"]}
+{"name": "Becoming.Presence.either_order_deMorgan", "uses": ["Becoming.Presence.NaturalLabelling.before", "Becoming.Presence.middleIf_not_two_zero", "Becoming.Presence.middleIf_not_zero_two", "Becoming.Presence.middleIf_ordered"]}
+{"name": "Becoming.Presence.either_order_iff_weakly", "uses": ["Becoming.Presence.either_order", "Becoming.Presence.either_order_deMorgan", "Becoming.Presence.weakly_of_deMorgan"]}
+{"name": "Becoming.Presence.every_congr", "uses": ["Becoming.Presence.natural_congr"]}
+{"name": "Becoming.Presence.every_course_iff", "uses": ["Becoming.Presence.natural_iff_course"]}
+{"name": "Becoming.Presence.every_course_not_not", "uses": ["Becoming.Presence.every_course_iff", "Becoming.Presence.every_iff_not_not"]}
+{"name": "Becoming.Presence.every_iff_em", "uses": ["Becoming.Decided.of_not_not", "Becoming.Presence.every_needs_decision", "Becoming.Presence.every_not_not", "Becoming.not_not_decided"]}
+{"name": "Becoming.Presence.every_iff_not_not", "uses": ["Becoming.Presence.NaturalLabelling.before", "Becoming.Presence.every_not_not"]}
+{"name": "Becoming.Presence.every_needs_decision", "uses": ["Becoming.Presence.NaturalLabelling.at", "Becoming.Presence.NaturalLabelling.before", "Becoming.Presence.pairIf_ordered"]}
+{"name": "Becoming.Presence.every_not_not", "uses": ["Becoming.Presence.down_closed", "Becoming.Presence.front_true_lt_false", "Becoming.Presence.natural_identity", "Becoming.Presence.natural_of_table", "Becoming.Presence.table_false", "Becoming.Presence.table_not_not"]}
+{"name": "Becoming.Presence.front_inj", "uses": ["Becoming.ListTests.not_eq_true_of_false", "Becoming.Naturals.add_left_cancel", "Becoming.Presence.count_inj", "Becoming.Presence.front_of_false", "Becoming.Presence.front_of_true", "Becoming.Presence.front_true_lt_false"]}
+{"name": "Becoming.Presence.front_keeps", "uses": ["Becoming.ListTests.not_eq_true_of_false", "Becoming.Presence.count_lt_of", "Becoming.Presence.front_of_false", "Becoming.Presence.front_of_true", "Becoming.Presence.front_true_lt_false", "Becoming.Presence.of_lt_zero_add"]}
+{"name": "Becoming.Presence.front_lt", "uses": ["Becoming.ListTests.not_eq_true_of_false", "Becoming.Presence.count_add_not", "Becoming.Presence.count_le", "Becoming.Presence.count_lt_of", "Becoming.Presence.front_of_false", "Becoming.Presence.front_of_true"]}
+{"name": "Becoming.Presence.front_lt_count_iff", "uses": ["Becoming.Presence.count_lt_of", "Becoming.Presence.front_of_false", "Becoming.Presence.front_of_true"]}
+{"name": "Becoming.Presence.front_natural", "uses": ["Becoming.Presence.front_keeps", "Becoming.Presence.front_reindexes"]}
+{"name": "Becoming.Presence.front_of_false", "uses": []}
+{"name": "Becoming.Presence.front_of_true", "uses": []}
+{"name": "Becoming.Presence.front_onto", "uses": ["Becoming.ListTests.false_of_not", "Becoming.Naturals.le_of_add_le_add_left", "Becoming.Presence.count_add_not", "Becoming.Presence.count_reaches", "Becoming.Presence.front_of_false", "Becoming.Presence.front_of_true", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.Presence.front_reindexes", "uses": ["Becoming.Presence.front_inj", "Becoming.Presence.front_lt", "Becoming.Presence.front_onto", "Becoming.Presence.lt_zero_add", "Becoming.Presence.of_lt_zero_add", "Becoming.beq_self", "Becoming.firstWhere_found"]}
+{"name": "Becoming.Presence.front_true_lt_false", "uses": ["Becoming.Presence.count_lt_of", "Becoming.Presence.front_of_false", "Becoming.Presence.front_of_true"]}
+{"name": "Becoming.Presence.future_of_together_every", "uses": ["Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.Presence.downTo_before", "Becoming.Presence.maximalBorn_unrelated", "Becoming.Presence.natural_identity"]}
+{"name": "Becoming.Presence.leastIf_ordered", "uses": []}
+{"name": "Becoming.Presence.least_iff_only_link", "uses": ["Becoming.CausalGrowth.Causet.Ordered.trans", "Becoming.CausalGrowth.ordered_reach_links_iff", "Becoming.CausalGrowth.reach_links_le", "Becoming.Presence.link_of_least"]}
+{"name": "Becoming.Presence.linkIf_ordered", "uses": []}
+{"name": "Becoming.Presence.link_of_least", "uses": ["Becoming.CausalGrowth.Causet.Ordered.irrefl", "Becoming.CausalGrowth.Causet.Ordered.trans"]}
+{"name": "Becoming.Presence.link_of_present", "uses": ["Becoming.Presence.NaturalLabelling.before"]}
+{"name": "Becoming.Presence.lt_zero_add", "uses": []}
+{"name": "Becoming.Presence.maximalBorn_front", "uses": ["Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.ListTests.bool_absurd", "Becoming.Presence.front_lt_count_iff"]}
+{"name": "Becoming.Presence.maximalBorn_iff_ends", "uses": []}
+{"name": "Becoming.Presence.maximalBorn_unrelated", "uses": []}
+{"name": "Becoming.Presence.middleIf_not_two_zero", "uses": []}
+{"name": "Becoming.Presence.middleIf_not_zero_two", "uses": []}
+{"name": "Becoming.Presence.middleIf_ordered", "uses": []}
+{"name": "Becoming.Presence.natural_congr", "uses": []}
+{"name": "Becoming.Presence.natural_identity", "uses": ["Becoming.Reindexes.identity"]}
+{"name": "Becoming.Presence.natural_iff_course", "uses": ["Becoming.CausalGrowth.ordered_of_empty", "Becoming.CausalGrowth.size_of_run", "Becoming.Presence.courseOf_grows", "Becoming.Presence.natural_of_relabels", "Becoming.Presence.natural_relabels", "Becoming.Presence.relabel_ordered"]}
+{"name": "Becoming.Presence.natural_of_relabels", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.Presence.lt_zero_add", "Becoming.Presence.of_lt_zero_add"]}
+{"name": "Becoming.Presence.natural_of_table", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.Presence.front_natural"]}
+{"name": "Becoming.Presence.natural_orients", "uses": ["Becoming.Presence.NaturalLabelling.before"]}
+{"name": "Becoming.Presence.natural_relabels", "uses": ["Becoming.Presence.NaturalLabelling.at", "Becoming.Presence.NaturalLabelling.back"]}
+{"name": "Becoming.Presence.of_lt_zero_add", "uses": []}
+{"name": "Becoming.Presence.only_link_least_iff_em", "uses": ["Becoming.Decided.of_not_not", "Becoming.Presence.above_of_only_not_not", "Becoming.Presence.only_link_of_present_every", "Becoming.Presence.present_least_iff_em"]}
+{"name": "Becoming.Presence.only_link_of_present_every", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.Presence.down_closed", "Becoming.Presence.front_true_lt_false", "Becoming.Presence.natural_identity", "Becoming.Presence.natural_of_table", "Becoming.Presence.table_false", "Becoming.Presence.table_not_not"]}
+{"name": "Becoming.Presence.pairIf_ordered", "uses": []}
+{"name": "Becoming.Presence.pastIn_stem", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.CausalGrowth.Causet.Ordered.trans", "Becoming.CausalGrowth.grown_prec_iff", "Becoming.CausalGrowth.grown_size"]}
+{"name": "Becoming.Presence.past_every_course", "uses": ["Becoming.Presence.every_course_iff", "Becoming.Presence.past_every_iff"]}
+{"name": "Becoming.Presence.past_every_iff", "uses": ["Becoming.Presence.NaturalLabelling.at", "Becoming.Presence.NaturalLabelling.before", "Becoming.Presence.prec_iff_every"]}
+{"name": "Becoming.Presence.past_every_iff_em", "uses": ["Becoming.Presence.NaturalLabelling.at", "Becoming.Presence.every_iff_em", "Becoming.Presence.past_every_needs_decision"]}
+{"name": "Becoming.Presence.past_every_needs_decision", "uses": ["Becoming.Presence.every_iff_em", "Becoming.Presence.natural_identity"]}
+{"name": "Becoming.Presence.past_largest", "uses": ["Becoming.Presence.past_every_iff"]}
+{"name": "Becoming.Presence.past_largest_course", "uses": ["Becoming.Presence.every_course_iff", "Becoming.Presence.past_largest"]}
+{"name": "Becoming.Presence.prec_iff_every", "uses": ["Becoming.Presence.NaturalLabelling.before", "Becoming.Presence.downTo_before", "Becoming.Presence.natural_identity"]}
+{"name": "Becoming.Presence.prec_iff_every_course", "uses": ["Becoming.Presence.every_course_iff", "Becoming.Presence.prec_iff_every"]}
+{"name": "Becoming.Presence.present_every_course_only_link", "uses": ["Becoming.Presence.every_course_iff", "Becoming.Presence.present_every_iff_only_link"]}
+{"name": "Becoming.Presence.present_every_iff", "uses": ["Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.Presence.NaturalLabelling.before", "Becoming.Presence.downTo_before", "Becoming.Presence.natural_identity"]}
+{"name": "Becoming.Presence.present_every_iff_only_link", "uses": ["Becoming.Presence.only_link_of_present_every", "Becoming.Presence.present_every_of_only_link"]}
+{"name": "Becoming.Presence.present_every_needs_decision", "uses": ["Becoming.Presence.NaturalLabelling.at", "Becoming.Presence.NaturalLabelling.before", "Becoming.Presence.leastIf_ordered"]}
+{"name": "Becoming.Presence.present_every_of_only_link", "uses": ["Becoming.Presence.NaturalLabelling.before", "Becoming.Presence.above_of_only_not_not"]}
+{"name": "Becoming.Presence.present_iff_maximalBorn", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.Presence.NaturalLabelling.before"]}
+{"name": "Becoming.Presence.present_least_iff_em", "uses": ["Becoming.Decided.of_not_not", "Becoming.Presence.above_of_every_not_not", "Becoming.Presence.natural_identity", "Becoming.Presence.present_every_needs_decision", "Becoming.not_not_decided"]}
+{"name": "Becoming.Presence.present_some_course", "uses": ["Becoming.Presence.present_some_iff_link", "Becoming.Presence.some_course_iff"]}
+{"name": "Becoming.Presence.present_some_deMorgan", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled", "Becoming.Presence.NaturalLabelling.before", "Becoming.Presence.linkIf_ordered"]}
+{"name": "Becoming.Presence.present_some_iff_link", "uses": ["Becoming.CausalGrowth.Causet.Ordered.trans", "Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.Presence.front_true_lt_false", "Becoming.Presence.link_of_present", "Becoming.Presence.natural_of_table", "Becoming.Presence.table_of"]}
+{"name": "Becoming.Presence.present_some_iff_weakly", "uses": ["Becoming.Presence.present_some_deMorgan", "Becoming.Presence.present_some_iff_link", "Becoming.Presence.weakly_of_deMorgan"]}
+{"name": "Becoming.Presence.rearranges_iff_course", "uses": ["Becoming.Presence.natural_iff_course", "Becoming.Presence.rearranges_iff_natural"]}
+{"name": "Becoming.Presence.rearranges_iff_natural", "uses": ["Becoming.Presence.comparable_symm", "Becoming.Presence.natural_orients", "Becoming.Rearranges.orients", "Becoming.rearranges_iff"]}
+{"name": "Becoming.Presence.relabel_ordered", "uses": ["Becoming.CausalGrowth.Causet.Ordered.trans", "Becoming.Presence.NaturalLabelling.back", "Becoming.Presence.NaturalLabelling.before"]}
+{"name": "Becoming.Presence.some_congr", "uses": ["Becoming.Presence.natural_congr"]}
+{"name": "Becoming.Presence.some_course_iff", "uses": ["Becoming.Presence.natural_iff_course"]}
+{"name": "Becoming.Presence.stem_born_first", "uses": ["Becoming.CausalGrowth.Stem.closed", "Becoming.Presence.front_lt_count_iff", "Becoming.Presence.front_natural"]}
+{"name": "Becoming.Presence.stem_born_first_course", "uses": ["Becoming.Presence.natural_iff_course", "Becoming.Presence.stem_born_first"]}
+{"name": "Becoming.Presence.swap12_four", "uses": ["Becoming.Presence.below_four"]}
+{"name": "Becoming.Presence.swap12_three", "uses": ["Becoming.Presence.below_three"]}
+{"name": "Becoming.Presence.table_false", "uses": []}
+{"name": "Becoming.Presence.table_no", "uses": ["Becoming.ListTests.and_true_iff", "Becoming.ListTests.beq_false_of_ne", "Becoming.ListTests.bool_absurd", "Becoming.ListTests.false_of_not", "Becoming.ListTests.not_eq_true_of_false", "Becoming.beq_self", "Becoming.lt_of_le_ne"]}
+{"name": "Becoming.Presence.table_not_not", "uses": ["Becoming.Presence.table_no", "Becoming.Presence.table_yes", "Becoming.not_not_decided"]}
+{"name": "Becoming.Presence.table_of", "uses": ["Becoming.Presence.table_no", "Becoming.Presence.table_yes"]}
+{"name": "Becoming.Presence.table_yes", "uses": ["Becoming.ListTests.or_true_iff", "Becoming.beq_self", "Becoming.lt_of_le_ne"]}
+{"name": "Becoming.Presence.together_every_course", "uses": ["Becoming.Presence.every_course_iff", "Becoming.Presence.together_every_iff"]}
+{"name": "Becoming.Presence.together_every_course_not_not", "uses": ["Becoming.Presence.every_course_iff", "Becoming.Presence.together_every_iff_not_not"]}
+{"name": "Becoming.Presence.together_every_iff", "uses": ["Becoming.Presence.NaturalLabelling.before", "Becoming.Presence.future_of_together_every"]}
+{"name": "Becoming.Presence.together_every_iff_em", "uses": ["Becoming.Decided.of_not_not", "Becoming.Presence.together_every_needs_decision", "Becoming.Presence.together_not_not", "Becoming.not_not_decided"]}
+{"name": "Becoming.Presence.together_every_iff_not_not", "uses": ["Becoming.Presence.NaturalLabelling.before", "Becoming.Presence.together_not_not"]}
+{"name": "Becoming.Presence.together_every_needs_decision", "uses": ["Becoming.Presence.NaturalLabelling.at", "Becoming.Presence.NaturalLabelling.before", "Becoming.Presence.apartIf_ordered"]}
+{"name": "Becoming.Presence.together_not_not", "uses": ["Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.Presence.down_closed", "Becoming.Presence.front_true_lt_false", "Becoming.Presence.maximalBorn_unrelated", "Becoming.Presence.natural_identity", "Becoming.Presence.natural_of_table", "Becoming.Presence.table_false", "Becoming.Presence.table_not_not"]}
+{"name": "Becoming.Presence.together_of_antichain", "uses": ["Becoming.CausalGrowth.Causet.Ordered.irrefl", "Becoming.ListTests.or_true_iff", "Becoming.beq_self"]}
+{"name": "Becoming.Presence.together_some_course", "uses": ["Becoming.Presence.natural_iff_course", "Becoming.Presence.together_some_iff"]}
+{"name": "Becoming.Presence.together_some_deMorgan", "uses": ["Becoming.Presence.NaturalLabelling.before", "Becoming.Presence.middleIf_not_two_zero", "Becoming.Presence.middleIf_not_zero_two", "Becoming.Presence.middleIf_ordered"]}
+{"name": "Becoming.Presence.together_some_iff", "uses": ["Becoming.CausalGrowth.Causet.Ordered.irrefl", "Becoming.CausalGrowth.Causet.Ordered.trans", "Becoming.CausalGrowth.Causet.Ordered.within", "Becoming.Presence.maximalBorn_front", "Becoming.Presence.maximalBorn_unrelated", "Becoming.Presence.natural_of_table", "Becoming.Presence.table_false", "Becoming.Presence.table_of"]}
+{"name": "Becoming.Presence.together_some_iff_weakly", "uses": ["Becoming.Presence.together_some_deMorgan", "Becoming.Presence.together_some_iff", "Becoming.Presence.weakly_of_deMorgan"]}
+{"name": "Becoming.Presence.weakly_above", "uses": ["Becoming.LLPO.decided_true", "Becoming.Presence.weakly_exists_below"]}
+{"name": "Becoming.Presence.weakly_exists_below", "uses": []}
+{"name": "Becoming.Presence.weakly_of_deMorgan", "uses": []}

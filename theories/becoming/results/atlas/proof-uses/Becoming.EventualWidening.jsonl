@@ -1,0 +1,24 @@
+{"name": "Becoming.Web.EventuallyWidens.irrefl", "uses": ["Becoming.Web.Widens.not_reverse"]}
+{"name": "Becoming.Web.EventuallyWidens.not_included", "uses": ["Becoming.Web.Includes.after", "Becoming.Web.Includes.not_exceeded"]}
+{"name": "Becoming.Web.EventuallyWidens.not_reverse", "uses": ["Becoming.Web.EventuallyWidens.irrefl", "Becoming.Web.EventuallyWidens.trans"]}
+{"name": "Becoming.Web.EventuallyWidens.of_agree_left", "uses": []}
+{"name": "Becoming.Web.EventuallyWidens.of_agree_right", "uses": []}
+{"name": "Becoming.Web.EventuallyWidens.trans", "uses": ["Becoming.Web.Widens.trans"]}
+{"name": "Becoming.Web.EventuallyWidens.trans_includes", "uses": ["Becoming.Web.Includes.after", "Becoming.Web.Includes.trans"]}
+{"name": "Becoming.Web.ExceedsLate.exceeds", "uses": []}
+{"name": "Becoming.Web.Includes.after", "uses": []}
+{"name": "Becoming.Web.Includes.not_exceedsLate", "uses": ["Becoming.Web.ExceedsLate.exceeds", "Becoming.Web.Includes.not_exceeded"]}
+{"name": "Becoming.Web.Includes.trans_eventually", "uses": ["Becoming.Web.Includes.after", "Becoming.Web.Includes.trans"]}
+{"name": "Becoming.Web.KeepsOpening.eventually_widens", "uses": ["Becoming.Web.eventuallyWidens_iff", "Becoming.Web.exceedsAcross_itself_iff"]}
+{"name": "Becoming.Web.KeepsWidening.eventually_widens_of_within", "uses": ["Becoming.Web.KeepsOpening.eventually_widens", "Becoming.Web.includesAcross_itself_iff"]}
+{"name": "Becoming.Web.KeepsWidening.gathers", "uses": ["Becoming.Web.exceedsAcross_itself_iff", "Becoming.Web.includesAcross_itself_iff", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Web.KeepsWidening.later", "uses": []}
+{"name": "Becoming.Web.KeepsWidening.not_listed", "uses": ["Becoming.Web.KeepsWidening.gathers", "Becoming.length_le_of_sub"]}
+{"name": "Becoming.Web.Widens.not_eventually_reversed", "uses": ["Becoming.Web.EventuallyWidens.not_included"]}
+{"name": "Becoming.Web.WidensOrEventually.irrefl", "uses": ["Becoming.Web.EventuallyWidens.irrefl", "Becoming.Web.Widens.not_reverse"]}
+{"name": "Becoming.Web.WidensOrEventually.trans", "uses": ["Becoming.Web.EventuallyWidens.trans", "Becoming.Web.EventuallyWidens.trans_includes", "Becoming.Web.Includes.trans_eventually", "Becoming.Web.Widens.trans"]}
+{"name": "Becoming.Web.WidensWithoutEnd.eventually", "uses": ["Becoming.Web.eventuallyWidens_iff"]}
+{"name": "Becoming.Web.WidensWithoutEnd.widens", "uses": ["Becoming.Web.ExceedsLate.exceeds"]}
+{"name": "Becoming.Web.eventuallyWidens_iff", "uses": ["Becoming.le_dest"]}
+{"name": "Becoming.Web.eventually_of_vanishing", "uses": ["Becoming.Web.eventuallyWidens_iff"]}
+{"name": "Becoming.Web.keepsWidening_reidentify", "uses": ["Becoming.Web.exceedsAcross_reidentify", "Becoming.Web.includesAcross_reidentify"]}

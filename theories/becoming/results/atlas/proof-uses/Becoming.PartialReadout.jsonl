@@ -1,0 +1,25 @@
+{"name": "Becoming.PartialReadout.ExactWithin.lumped", "uses": []}
+{"name": "Becoming.PartialReadout.ExactWithin.ofSection", "uses": []}
+{"name": "Becoming.PartialReadout.ExactWithin.retained", "uses": []}
+{"name": "Becoming.PartialReadout.ExactWithin.sound", "uses": []}
+{"name": "Becoming.PartialReadout.LumpedWithin.finer", "uses": []}
+{"name": "Becoming.PartialReadout.Runs.exact_iff_predictsFrom", "uses": []}
+{"name": "Becoming.PartialReadout.Runs.finer_lumped", "uses": ["Becoming.PartialReadout.LumpedWithin.finer"]}
+{"name": "Becoming.PartialReadout.Runs.silent_not_exact", "uses": ["Becoming.PartialReadout.silent_not_exact"]}
+{"name": "Becoming.PartialReadout.Runs.silent_sound", "uses": ["Becoming.PartialReadout.silent_sound"]}
+{"name": "Becoming.PartialReadout.SoundWithin.mono", "uses": []}
+{"name": "Becoming.PartialReadout.SoundWithin.silent", "uses": []}
+{"name": "Becoming.PartialReadout.direct_exact_unreversed", "uses": []}
+{"name": "Becoming.PartialReadout.direct_not_sound", "uses": []}
+{"name": "Becoming.PartialReadout.direct_right_once", "uses": []}
+{"name": "Becoming.PartialReadout.exactWithin_univ_iff", "uses": []}
+{"name": "Becoming.PartialReadout.exact_exists_iff", "uses": ["Becoming.PartialReadout.ExactWithin.lumped", "Becoming.PartialReadout.ExactWithin.ofSection"]}
+{"name": "Becoming.PartialReadout.lumpedWithin_univ_iff", "uses": []}
+{"name": "Becoming.PartialReadout.negated_exact", "uses": []}
+{"name": "Becoming.PartialReadout.paired_exact", "uses": []}
+{"name": "Becoming.PartialReadout.safe_of_holds", "uses": []}
+{"name": "Becoming.PartialReadout.signal_no_exact", "uses": ["Becoming.PartialReadout.ExactWithin.lumped", "Becoming.PartialReadout.signal_not_lumped"]}
+{"name": "Becoming.PartialReadout.signal_not_lumped", "uses": []}
+{"name": "Becoming.PartialReadout.signal_sound_silent", "uses": ["Becoming.PartialReadout.SoundWithin.silent"]}
+{"name": "Becoming.PartialReadout.silent_not_exact", "uses": []}
+{"name": "Becoming.PartialReadout.silent_sound", "uses": []}

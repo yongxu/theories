@@ -1,0 +1,149 @@
+{"name": "Becoming.PairSelection.Needs.acting", "uses": []}
+{"name": "Becoming.PairSelection.Needs.asymmetric_within_slack", "uses": []}
+{"name": "Becoming.PairSelection.Needs.asymmetry_gains", "uses": ["Becoming.PairSelection.Needs.dependent", "Becoming.PairSelection.Needs.receiver_supported", "Becoming.PairSelection.Needs.receiver_unsupported"]}
+{"name": "Becoming.PairSelection.Needs.balances", "uses": []}
+{"name": "Becoming.PairSelection.Needs.childless", "uses": ["Becoming.Flow.unsupported_childless", "Becoming.PairSelection.Needs.acting", "Becoming.PairSelection.Needs.dependent", "Becoming.PairSelection.Needs.symmetry_moves"]}
+{"name": "Becoming.PairSelection.Needs.closed", "uses": []}
+{"name": "Becoming.PairSelection.Needs.dependent", "uses": []}
+{"name": "Becoming.PairSelection.Needs.receiver_supported", "uses": []}
+{"name": "Becoming.PairSelection.Needs.receiver_unsupported", "uses": []}
+{"name": "Becoming.PairSelection.Needs.symmetric_breaks", "uses": ["Becoming.Flow.Balances.breaks_beyond_inflow", "Becoming.PairSelection.Needs.balances"]}
+{"name": "Becoming.PairSelection.Needs.symmetry_moves", "uses": ["Becoming.PairSelection.Needs.dependent", "Becoming.PairSelection.Needs.receiver_supported", "Becoming.PairSelection.Needs.receiver_unsupported"]}
+{"name": "Becoming.PairSelection.Place.answerer_le", "uses": ["Becoming.PairSelection.Place.answering_le"]}
+{"name": "Becoming.PairSelection.Place.answering_le", "uses": ["Becoming.PairSelection.answering_sum_le", "Becoming.PairSelection.gives_answering_first", "Becoming.PairSelection.gives_answering_second"]}
+{"name": "Becoming.PairSelection.Place.received_factor_le", "uses": ["Becoming.PairSelection.mul_tally_le", "Becoming.PairSelection.rise_le_slack_inflow"]}
+{"name": "Becoming.PairSelection.Place.received_factor_zero", "uses": ["Becoming.PairSelection.Place.received_factor_le", "Becoming.PairSelection.tallyBy_zero"]}
+{"name": "Becoming.PairSelection.Place.withheld_factor_le", "uses": ["Becoming.PairSelection.mul_tally_le", "Becoming.PairSelection.rise_le_slack_inflow"]}
+{"name": "Becoming.PairSelection.Place.withheld_of_withholding", "uses": ["Becoming.PairSelection.gives_withholding_first", "Becoming.PairSelection.gives_withholding_second", "Becoming.PairSelection.tally_true"]}
+{"name": "Becoming.PairSelection.Place.withholder_ge", "uses": ["Becoming.PairSelection.Place.withheld_of_withholding"]}
+{"name": "Becoming.PairSelection.Renewed.acting", "uses": []}
+{"name": "Becoming.PairSelection.Renewed.balances", "uses": []}
+{"name": "Becoming.PairSelection.Renewed.dependent", "uses": []}
+{"name": "Becoming.PairSelection.Renewed.inflow_one", "uses": []}
+{"name": "Becoming.PairSelection.Renewed.renewal_carried", "uses": ["Becoming.PairSelection.Renewed.dependent", "Becoming.PairSelection.Renewed.total_steps_one"]}
+{"name": "Becoming.PairSelection.Renewed.renewer_free", "uses": []}
+{"name": "Becoming.PairSelection.Renewed.total_steps_one", "uses": []}
+{"name": "Becoming.PairSelection.alternator_beside_window", "uses": ["Becoming.PairSelection.counts_giving", "Becoming.PairSelection.counts_windowed_alternating"]}
+{"name": "Becoming.PairSelection.among_discord_witness", "uses": []}
+{"name": "Becoming.PairSelection.and_not_true", "uses": []}
+{"name": "Becoming.PairSelection.answering_never_rises", "uses": ["Becoming.PairSelection.Place.answerer_le", "Becoming.PairSelection.Place.withholder_ge", "Becoming.PairSelection.kind_not_rises_of_below"]}
+{"name": "Becoming.PairSelection.answering_rises_iff", "uses": ["Becoming.PairSelection.cases_ff", "Becoming.PairSelection.cases_ft", "Becoming.PairSelection.cases_tf", "Becoming.PairSelection.cases_tt", "Becoming.PairSelection.kind_rises_iff", "Becoming.PairSelection.offspring_answerPair", "Becoming.PairSelection.offspring_answerPair_other", "Becoming.PairSelection.offspring_mixedPair", "Becoming.PairSelection.offspring_mixedPair_other", "Becoming.PairSelection.offspring_withholdPair", "Becoming.PairSelection.offspring_withholdPair_other", "Becoming.PairSelection.total_cohort"]}
+{"name": "Becoming.PairSelection.answering_sum_le", "uses": ["Becoming.PairSelection.tally_congr", "Becoming.PairSelection.tally_head", "Becoming.PairSelection.tally_le_succ", "Becoming.PairSelection.tally_not"]}
+{"name": "Becoming.PairSelection.assorted_counts", "uses": ["Becoming.PairSelection.offspring_answerPair", "Becoming.PairSelection.offspring_withholdPair"]}
+{"name": "Becoming.PairSelection.assorted_disfavours_iff", "uses": ["Becoming.RuleShaping.disfavours_iff", "Becoming.SelectionTerm.le_of_mul_le_mul"]}
+{"name": "Becoming.PairSelection.assorted_favours_iff", "uses": ["Becoming.RuleShaping.favours_iff", "Becoming.SelectionTerm.le_of_mul_le_mul"]}
+{"name": "Becoming.PairSelection.assorted_lowers_iff", "uses": ["Becoming.Naturals.lt_of_mul_lt_mul_left", "Becoming.Naturals.mul_right_comm", "Becoming.RuleShaping.falls_strictly", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.PairSelection.assorted_neutral", "uses": ["Becoming.RuleCapture.CarrierCounts.lowers", "Becoming.RuleCapture.CarrierCounts.raises", "Becoming.RuleShaping.disfavours_iff", "Becoming.RuleShaping.favours_iff"]}
+{"name": "Becoming.PairSelection.assorted_raises_iff", "uses": ["Becoming.Naturals.lt_of_mul_lt_mul_left", "Becoming.RuleShaping.lt_select_iff"]}
+{"name": "Becoming.PairSelection.before_after", "uses": []}
+{"name": "Becoming.PairSelection.before_true", "uses": []}
+{"name": "Becoming.PairSelection.beq_false_eq", "uses": []}
+{"name": "Becoming.PairSelection.cases_ff", "uses": []}
+{"name": "Becoming.PairSelection.cases_ft", "uses": []}
+{"name": "Becoming.PairSelection.cases_tf", "uses": []}
+{"name": "Becoming.PairSelection.cases_tt", "uses": []}
+{"name": "Becoming.PairSelection.cohort_never_rises", "uses": ["Becoming.PairSelection.answering_never_rises", "Becoming.PairSelection.cohort_places"]}
+{"name": "Becoming.PairSelection.cohort_paired", "uses": ["Becoming.PairSelection.mem_replicate_eq", "Becoming.mem_append_cases"]}
+{"name": "Becoming.PairSelection.cohort_places", "uses": ["Becoming.ListTests.mem_flatMap_iff", "Becoming.PairSelection.mem_replicate_eq", "Becoming.mem_append_cases"]}
+{"name": "Becoming.PairSelection.counts_after", "uses": ["Becoming.PairSelection.counts_of", "Becoming.PairSelection.gives_of", "Becoming.PairSelection.meets_after", "Becoming.PairSelection.tally_after", "Becoming.PairSelection.tally_not_after"]}
+{"name": "Becoming.PairSelection.counts_agreeing_error", "uses": ["Becoming.PairSelection.counts_after", "Becoming.PairSelection.tally_all", "Becoming.PairSelection.tally_below", "Becoming.PairSelection.tally_congr", "Becoming.PairSelection.tally_none", "Becoming.PairSelection.tally_two_head"]}
+{"name": "Becoming.PairSelection.counts_agreeing_withholding", "uses": ["Becoming.PairSelection.beq_false_eq", "Becoming.PairSelection.counts_of", "Becoming.PairSelection.gives_of", "Becoming.PairSelection.keep", "Becoming.PairSelection.tally_even", "Becoming.PairSelection.tally_every", "Becoming.PairSelection.tally_odd", "Becoming.PairSelection.tally_zero"]}
+{"name": "Becoming.PairSelection.counts_alternating_alternating", "uses": ["Becoming.PairSelection.counts_of", "Becoming.PairSelection.gives_of", "Becoming.PairSelection.keep", "Becoming.PairSelection.not_not_tally", "Becoming.PairSelection.tally_even", "Becoming.PairSelection.tally_odd"]}
+{"name": "Becoming.PairSelection.counts_alternating_withholding", "uses": ["Becoming.PairSelection.counts_of", "Becoming.PairSelection.gives_of", "Becoming.PairSelection.keep", "Becoming.PairSelection.not_not_tally", "Becoming.PairSelection.tally_even", "Becoming.PairSelection.tally_every", "Becoming.PairSelection.tally_odd", "Becoming.PairSelection.tally_zero"]}
+{"name": "Becoming.PairSelection.counts_answering_alternating", "uses": ["Becoming.PairSelection.counts_of", "Becoming.PairSelection.gives_of", "Becoming.PairSelection.keep", "Becoming.PairSelection.not_not_tally", "Becoming.PairSelection.tally_even", "Becoming.PairSelection.tally_odd"]}
+{"name": "Becoming.PairSelection.counts_answering_error", "uses": ["Becoming.PairSelection.counts_after", "Becoming.PairSelection.keep", "Becoming.PairSelection.not_not_tally", "Becoming.PairSelection.tally_even", "Becoming.PairSelection.tally_odd"]}
+{"name": "Becoming.PairSelection.counts_answering_withholding", "uses": ["Becoming.PairSelection.counts_of", "Becoming.PairSelection.gives_of", "Becoming.PairSelection.tally_below", "Becoming.PairSelection.tally_every", "Becoming.PairSelection.tally_not_below", "Becoming.PairSelection.tally_zero"]}
+{"name": "Becoming.PairSelection.counts_giving", "uses": ["Becoming.PairSelection.before_true", "Becoming.PairSelection.gives_of", "Becoming.PairSelection.keep", "Becoming.PairSelection.tally_false", "Becoming.PairSelection.tally_true"]}
+{"name": "Becoming.PairSelection.counts_of", "uses": ["Becoming.PairSelection.tally_congr"]}
+{"name": "Becoming.PairSelection.counts_sparing_alternating", "uses": ["Becoming.PairSelection.counts_of", "Becoming.PairSelection.gives_of", "Becoming.PairSelection.keep", "Becoming.PairSelection.not_not_tally", "Becoming.PairSelection.tally_all", "Becoming.PairSelection.tally_even", "Becoming.PairSelection.tally_none", "Becoming.PairSelection.tally_odd"]}
+{"name": "Becoming.PairSelection.counts_sparing_withholding", "uses": ["Becoming.PairSelection.counts_of", "Becoming.PairSelection.gives_of", "Becoming.PairSelection.tally_all", "Becoming.PairSelection.tally_every", "Becoming.PairSelection.tally_none", "Becoming.PairSelection.tally_zero"]}
+{"name": "Becoming.PairSelection.counts_waitingBoth_alternating", "uses": ["Becoming.PairSelection.counts_of", "Becoming.PairSelection.gives_of", "Becoming.PairSelection.keep", "Becoming.PairSelection.not_not_tally", "Becoming.PairSelection.tally_below", "Becoming.PairSelection.tally_even", "Becoming.PairSelection.tally_not_below", "Becoming.PairSelection.tally_odd"]}
+{"name": "Becoming.PairSelection.counts_waitingBoth_error", "uses": ["Becoming.PairSelection.counts_after", "Becoming.PairSelection.tally_below", "Becoming.PairSelection.tally_every", "Becoming.PairSelection.tally_not_below", "Becoming.PairSelection.tally_zero"]}
+{"name": "Becoming.PairSelection.counts_waitingBoth_withholding", "uses": ["Becoming.PairSelection.counts_of", "Becoming.PairSelection.gives_of", "Becoming.PairSelection.tally_below", "Becoming.PairSelection.tally_every", "Becoming.PairSelection.tally_not_below", "Becoming.PairSelection.tally_zero"]}
+{"name": "Becoming.PairSelection.counts_windowed_alternating", "uses": ["Becoming.PairSelection.counts_of", "Becoming.PairSelection.gives_of", "Becoming.PairSelection.keep", "Becoming.PairSelection.not_not_tally", "Becoming.PairSelection.tally_all", "Becoming.PairSelection.tally_even", "Becoming.PairSelection.tally_none", "Becoming.PairSelection.tally_odd", "Becoming.PairSelection.window_alternates"]}
+{"name": "Becoming.PairSelection.counts_windowed_error", "uses": ["Becoming.PairSelection.counts_after", "Becoming.PairSelection.tally_all", "Becoming.PairSelection.tally_fromOne", "Becoming.PairSelection.tally_none", "Becoming.PairSelection.tally_not_fromOne"]}
+{"name": "Becoming.PairSelection.counts_windowed_spaced", "uses": ["Becoming.PairSelection.not_not_tally", "Becoming.PairSelection.tally_congr", "Becoming.PairSelection.tally_not", "Becoming.PairSelection.windowed_gives_spaced"]}
+{"name": "Becoming.PairSelection.counts_windowed_withholding", "uses": ["Becoming.PairSelection.counts_of", "Becoming.PairSelection.gives_of", "Becoming.PairSelection.tally_below", "Becoming.PairSelection.tally_every", "Becoming.PairSelection.tally_not_below", "Becoming.PairSelection.tally_zero"]}
+{"name": "Becoming.PairSelection.counts_withholding_alternating", "uses": ["Becoming.PairSelection.counts_of", "Becoming.PairSelection.gives_of", "Becoming.PairSelection.keep", "Becoming.PairSelection.not_not_tally", "Becoming.PairSelection.tally_even", "Becoming.PairSelection.tally_every", "Becoming.PairSelection.tally_odd", "Becoming.PairSelection.tally_zero"]}
+{"name": "Becoming.PairSelection.counts_withholding_withholding", "uses": ["Becoming.PairSelection.counts_of", "Becoming.PairSelection.gives_of", "Becoming.PairSelection.tally_every", "Becoming.PairSelection.tally_zero"]}
+{"name": "Becoming.PairSelection.course_of", "uses": []}
+{"name": "Becoming.PairSelection.echo_and_window_sums", "uses": ["Becoming.PairSelection.counts_answering_error", "Becoming.PairSelection.counts_windowed_error", "Becoming.PairSelection.half_add"]}
+{"name": "Becoming.PairSelection.echo_pair_sums", "uses": ["Becoming.PairSelection.echo_and_window_sums", "Becoming.PairSelection.pair_sum", "Becoming.PairSelection.window_arith"]}
+{"name": "Becoming.PairSelection.erring_answerer_exceeds", "uses": ["Becoming.PairSelection.and_not_true", "Becoming.PairSelection.counts_of", "Becoming.PairSelection.gives_of", "Becoming.PairSelection.offspring_withholdPair", "Becoming.PairSelection.tally_below", "Becoming.PairSelection.tally_every"]}
+{"name": "Becoming.PairSelection.erring_cohort_never_rises", "uses": ["Becoming.PairSelection.never_rises_in_pairs"]}
+{"name": "Becoming.PairSelection.error_table_twenty", "uses": []}
+{"name": "Becoming.PairSelection.gives_answering_first", "uses": ["Becoming.PairSelection.time"]}
+{"name": "Becoming.PairSelection.gives_answering_second", "uses": ["Becoming.PairSelection.time"]}
+{"name": "Becoming.PairSelection.gives_of", "uses": ["Becoming.PairSelection.course_of"]}
+{"name": "Becoming.PairSelection.gives_window", "uses": ["Becoming.PairSelection.windowed_course"]}
+{"name": "Becoming.PairSelection.gives_withholding_first", "uses": []}
+{"name": "Becoming.PairSelection.gives_withholding_second", "uses": []}
+{"name": "Becoming.PairSelection.half_add", "uses": []}
+{"name": "Becoming.PairSelection.half_succ_pos", "uses": []}
+{"name": "Becoming.PairSelection.keep", "uses": []}
+{"name": "Becoming.PairSelection.kind_not_rises_of_below", "uses": ["Becoming.Flow.excess_zero_of_le", "Becoming.SelectionTerm.pairs_zero"]}
+{"name": "Becoming.PairSelection.kind_not_rises_of_bound", "uses": ["Becoming.PairSelection.kind_rises_iff", "Becoming.mul_turn", "Becoming.total_le", "Becoming.total_mul"]}
+{"name": "Becoming.PairSelection.kind_rises_iff", "uses": ["Becoming.PairSelection.lt_iff_split", "Becoming.SelectionTerm.exceeds_iff", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_ones"]}
+{"name": "Becoming.PairSelection.lt_iff_split", "uses": ["Becoming.add_mul_split"]}
+{"name": "Becoming.PairSelection.meets_after", "uses": ["Becoming.PairSelection.before_after", "Becoming.PairSelection.keep"]}
+{"name": "Becoming.PairSelection.mem_replicate_eq", "uses": []}
+{"name": "Becoming.PairSelection.mem_whole", "uses": ["Becoming.ListTests.mem_flatMap_iff"]}
+{"name": "Becoming.PairSelection.mixed_exceeds_iff", "uses": ["Becoming.Naturals.lt_of_mul_lt_mul_left", "Becoming.PairSelection.offspring_answerPair", "Becoming.PairSelection.offspring_answerPair_other", "Becoming.PairSelection.offspring_mixedPair", "Becoming.PairSelection.offspring_mixedPair_other", "Becoming.PairSelection.pair_sum"]}
+{"name": "Becoming.PairSelection.mul_tally_le", "uses": []}
+{"name": "Becoming.PairSelection.neutral", "uses": ["Becoming.PairSelection.counts_giving", "Becoming.SelectionTerm.concord_uniform", "Becoming.SelectionTerm.discord_uniform"]}
+{"name": "Becoming.PairSelection.never_rises_in_pairs", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.PairSelection.Place.withholder_ge", "Becoming.PairSelection.cases_ff", "Becoming.PairSelection.cases_ft", "Becoming.PairSelection.cases_tf", "Becoming.PairSelection.cases_tt", "Becoming.PairSelection.kind_not_rises_of_bound", "Becoming.PairSelection.mem_whole", "Becoming.PairSelection.pair_le", "Becoming.SelectionLevels.whole_total", "Becoming.SelectionLevels.whole_weighted", "Becoming.total_le", "Becoming.total_mul"]}
+{"name": "Becoming.PairSelection.not_not_tally", "uses": ["Becoming.PairSelection.tally_congr"]}
+{"name": "Becoming.PairSelection.offspring_answerPair", "uses": ["Becoming.PairSelection.counts_giving"]}
+{"name": "Becoming.PairSelection.offspring_answerPair_other", "uses": ["Becoming.PairSelection.counts_giving"]}
+{"name": "Becoming.PairSelection.offspring_mixedPair", "uses": ["Becoming.PairSelection.counts_answering_withholding"]}
+{"name": "Becoming.PairSelection.offspring_mixedPair_other", "uses": ["Becoming.PairSelection.counts_answering_withholding"]}
+{"name": "Becoming.PairSelection.offspring_withholdPair", "uses": ["Becoming.PairSelection.counts_withholding_withholding"]}
+{"name": "Becoming.PairSelection.offspring_withholdPair_other", "uses": ["Becoming.PairSelection.counts_withholding_withholding"]}
+{"name": "Becoming.PairSelection.other_received_add_withheld", "uses": ["Becoming.PairSelection.partner_partner", "Becoming.PairSelection.tally_congr", "Becoming.PairSelection.tally_not"]}
+{"name": "Becoming.PairSelection.pair_le", "uses": ["Becoming.PairSelection.other_received_add_withheld", "Becoming.PairSelection.rearrange", "Becoming.PairSelection.received_add_withheld"]}
+{"name": "Becoming.PairSelection.pair_sum", "uses": ["Becoming.PairSelection.rearrange"]}
+{"name": "Becoming.PairSelection.pairs_rises_iff", "uses": ["Becoming.SelectionLevels.rises_iff_sized"]}
+{"name": "Becoming.PairSelection.partner_partner", "uses": []}
+{"name": "Becoming.PairSelection.rearrange", "uses": []}
+{"name": "Becoming.PairSelection.received_add_withheld", "uses": ["Becoming.PairSelection.tally_not"]}
+{"name": "Becoming.PairSelection.rise_le_slack_inflow", "uses": ["Becoming.Flow.Balances.breaks_beyond_inflow", "Becoming.Naturals.le_of_add_le_add_left"]}
+{"name": "Becoming.PairSelection.start_gives_iff", "uses": ["Becoming.PairSelection.window_gives_iff"]}
+{"name": "Becoming.PairSelection.table_twenty", "uses": []}
+{"name": "Becoming.PairSelection.tallyBy_zero", "uses": []}
+{"name": "Becoming.PairSelection.tally_after", "uses": ["Becoming.PairSelection.tally_congr", "Becoming.PairSelection.tally_head"]}
+{"name": "Becoming.PairSelection.tally_all", "uses": ["Becoming.PairSelection.tally_true"]}
+{"name": "Becoming.PairSelection.tally_below", "uses": ["Becoming.PairSelection.tally_false", "Becoming.PairSelection.tally_head"]}
+{"name": "Becoming.PairSelection.tally_congr", "uses": []}
+{"name": "Becoming.PairSelection.tally_even", "uses": []}
+{"name": "Becoming.PairSelection.tally_every", "uses": ["Becoming.PairSelection.tally_true"]}
+{"name": "Becoming.PairSelection.tally_false", "uses": []}
+{"name": "Becoming.PairSelection.tally_fromOne", "uses": ["Becoming.PairSelection.tally_all", "Becoming.PairSelection.tally_head"]}
+{"name": "Becoming.PairSelection.tally_head", "uses": []}
+{"name": "Becoming.PairSelection.tally_le_succ", "uses": []}
+{"name": "Becoming.PairSelection.tally_none", "uses": ["Becoming.PairSelection.tally_false"]}
+{"name": "Becoming.PairSelection.tally_not", "uses": []}
+{"name": "Becoming.PairSelection.tally_not_after", "uses": ["Becoming.PairSelection.tally_congr", "Becoming.PairSelection.tally_head"]}
+{"name": "Becoming.PairSelection.tally_not_below", "uses": ["Becoming.PairSelection.tally_below", "Becoming.PairSelection.tally_not_of"]}
+{"name": "Becoming.PairSelection.tally_not_fromOne", "uses": ["Becoming.PairSelection.tally_head", "Becoming.PairSelection.tally_none"]}
+{"name": "Becoming.PairSelection.tally_not_of", "uses": ["Becoming.Naturals.add_left_cancel", "Becoming.PairSelection.tally_not"]}
+{"name": "Becoming.PairSelection.tally_odd", "uses": []}
+{"name": "Becoming.PairSelection.tally_true", "uses": []}
+{"name": "Becoming.PairSelection.tally_two_head", "uses": ["Becoming.PairSelection.tally_head"]}
+{"name": "Becoming.PairSelection.tally_zero", "uses": ["Becoming.PairSelection.tally_false"]}
+{"name": "Becoming.PairSelection.time", "uses": []}
+{"name": "Becoming.PairSelection.total_cohort", "uses": ["Becoming.PairSelection.cohort.eq_1", "Becoming.SelectionLevels.whole_total", "Becoming.total_append", "Becoming.total_replicate"]}
+{"name": "Becoming.PairSelection.window_alternates", "uses": []}
+{"name": "Becoming.PairSelection.window_alternator_favours_iff", "uses": ["Becoming.PairSelection.assorted_favours_iff", "Becoming.PairSelection.half_succ_pos"]}
+{"name": "Becoming.PairSelection.window_alternator_shaped", "uses": ["Becoming.PairSelection.counts_alternating_alternating", "Becoming.PairSelection.counts_giving", "Becoming.PairSelection.half_add"]}
+{"name": "Becoming.PairSelection.window_arith", "uses": []}
+{"name": "Becoming.PairSelection.window_below_alternator", "uses": ["Becoming.PairSelection.counts_windowed_alternating", "Becoming.PairSelection.half_add", "Becoming.add_mul_split"]}
+{"name": "Becoming.PairSelection.window_beside_alternator", "uses": ["Becoming.PairSelection.counts_giving", "Becoming.PairSelection.counts_windowed_alternating", "Becoming.PairSelection.half_add"]}
+{"name": "Becoming.PairSelection.window_echo_favours_iff", "uses": ["Becoming.PairSelection.assorted_favours_iff"]}
+{"name": "Becoming.PairSelection.window_echo_lt_iff", "uses": ["Becoming.Naturals.lt_of_mul_lt_mul_left", "Becoming.PairSelection.echo_pair_sums"]}
+{"name": "Becoming.PairSelection.window_echo_select_iff", "uses": ["Becoming.PairSelection.assorted_lowers_iff", "Becoming.PairSelection.assorted_raises_iff"]}
+{"name": "Becoming.PairSelection.window_echo_shaped", "uses": ["Becoming.PairSelection.echo_and_window_sums", "Becoming.PairSelection.pair_sum", "Becoming.PairSelection.window_arith"]}
+{"name": "Becoming.PairSelection.window_gives_iff", "uses": ["Becoming.ListTests.and_true_iff", "Becoming.ListTests.false_iff_not", "Becoming.ListTests.not_true_iff", "Becoming.ListTests.or_true_iff"]}
+{"name": "Becoming.PairSelection.window_never_rises_beside_alternators", "uses": ["Becoming.ListTests.mem_flatMap_iff", "Becoming.PairSelection.kind_not_rises_of_below", "Becoming.PairSelection.mem_replicate_eq", "Becoming.PairSelection.window_below_alternator"]}
+{"name": "Becoming.PairSelection.windowed_course", "uses": ["Becoming.PairSelection.start_gives_iff", "Becoming.PairSelection.window_gives_iff", "Becoming.WindowedWaiting.Pair.within_first", "Becoming.WindowedWaiting.Pair.within_second", "Becoming.WindowedWaiting.course_rel", "Becoming.WindowedWaiting.or_congr_both"]}
+{"name": "Becoming.PairSelection.windowed_gives_spaced", "uses": ["Becoming.ListTests.false_iff_not", "Becoming.ListTests.not_true_iff", "Becoming.PairSelection.gives_window", "Becoming.WindowedWaiting.gives_unless_errs", "Becoming.bool_eq_of_iff"]}
+{"name": "Becoming.PairSelection.withholder_beside_window", "uses": ["Becoming.PairSelection.counts_answering_withholding", "Becoming.PairSelection.counts_windowed_withholding"]}

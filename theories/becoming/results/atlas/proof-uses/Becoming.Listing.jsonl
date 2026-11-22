@@ -1,0 +1,89 @@
+{"name": "Becoming.CensusWebs.indiscernible_numbers_unique", "uses": ["Becoming.NumbersBy.unique", "Becoming.World.indiscernible_equivalence"]}
+{"name": "Becoming.CensusWebs.keep_pace", "uses": ["Becoming.CountsAcross.keep_pace"]}
+{"name": "Becoming.CensusWebs.stock_eq", "uses": ["Becoming.ListsOnce.total_eq"]}
+{"name": "Becoming.CensusWebs.stock_le", "uses": ["Becoming.ListsOnce.total_le"]}
+{"name": "Becoming.Distinct.identityDecided", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Distinct.listsOnce", "uses": []}
+{"name": "Becoming.Distinct.numbers", "uses": ["Becoming.Distinct.listsOnce"]}
+{"name": "Becoming.DistinctUnder.decided", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.DistinctUnder.distinct", "uses": []}
+{"name": "Becoming.DistinctUnder.eq_of", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Doubled.balances", "uses": []}
+{"name": "Becoming.Doubled.closed", "uses": []}
+{"name": "Becoming.Doubled.comes", "uses": []}
+{"name": "Becoming.Doubled.dissipative", "uses": ["Becoming.le_total_of_mem", "Becoming.sign_le_one", "Becoming.total_le_at"]}
+{"name": "Becoming.Doubled.needs_once", "uses": ["Becoming.Doubled.balances", "Becoming.Doubled.closed", "Becoming.Doubled.comes", "Becoming.Doubled.dissipative"]}
+{"name": "Becoming.Flow.Around.of_same", "uses": []}
+{"name": "Becoming.Flow.BalancesOn.sample_byOccurrence", "uses": ["Becoming.Flow.BalancesOn.sample", "Becoming.Flow.byOccurrence_balancesOn", "Becoming.Flow.byOccurrence_once"]}
+{"name": "Becoming.Flow.ClosedAt.widen", "uses": []}
+{"name": "Becoming.Flow.DissipatesOn.of_same", "uses": ["Becoming.total_eq_of_same"]}
+{"name": "Becoming.Flow.Dissipative.finite_taking_not_recurring_listing", "uses": ["Becoming.Flow.Dissipative.finite_taking_not_recurring", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.Dissipative.listsOnce", "uses": ["Becoming.Flow.ClosedAt.widen"]}
+{"name": "Becoming.Flow.Dissipative.opens_listing", "uses": ["Becoming.Flow.ClosedAt.widen", "Becoming.Flow.Dissipative.opens", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.Inward.of_same", "uses": ["Becoming.Flow.total_pos_of_within"]}
+{"name": "Becoming.Flow.around_iff", "uses": ["Becoming.Distinct.identityDecided", "Becoming.Flow.ClosedAt.widen", "Becoming.listsOnce_of_decided"]}
+{"name": "Becoming.Flow.byOccurrence_acting", "uses": ["Becoming.mem_of_placed", "Becoming.placed_of_mem"]}
+{"name": "Becoming.Flow.byOccurrence_alike", "uses": []}
+{"name": "Becoming.Flow.byOccurrence_balances", "uses": ["Becoming.Flow.byOccurrence_balancesOn"]}
+{"name": "Becoming.Flow.byOccurrence_balancesOn", "uses": ["Becoming.Flow.byOccurrence_given", "Becoming.Flow.byOccurrence_taken"]}
+{"name": "Becoming.Flow.byOccurrence_closedAt", "uses": ["Becoming.mem_of_placed", "Becoming.placed_of_mem"]}
+{"name": "Becoming.Flow.byOccurrence_dissipatesOn", "uses": ["Becoming.mem_of_placed", "Becoming.placed_of_mem"]}
+{"name": "Becoming.Flow.byOccurrence_dissipative", "uses": ["Becoming.Flow.byOccurrence_closedAt", "Becoming.Flow.byOccurrence_dissipatesOn"]}
+{"name": "Becoming.Flow.byOccurrence_given", "uses": ["Becoming.total_placed"]}
+{"name": "Becoming.Flow.byOccurrence_more", "uses": ["Becoming.Flow.byOccurrence_takers"]}
+{"name": "Becoming.Flow.byOccurrence_once", "uses": ["Becoming.placed_distinct"]}
+{"name": "Becoming.Flow.byOccurrence_renewers", "uses": ["Becoming.total_placed"]}
+{"name": "Becoming.Flow.byOccurrence_taken", "uses": ["Becoming.total_placed"]}
+{"name": "Becoming.Flow.byOccurrence_takers", "uses": ["Becoming.total_placed"]}
+{"name": "Becoming.Flow.byOccurrence_taking", "uses": ["Becoming.mem_of_placed", "Becoming.placed_of_mem"]}
+{"name": "Becoming.Flow.byOccurrence_uncounted", "uses": ["Becoming.le_total_of_mem"]}
+{"name": "Becoming.Flow.dissipative_iff", "uses": ["Becoming.Distinct.listsOnce", "Becoming.Flow.Dissipative.listsOnce"]}
+{"name": "Becoming.Flow.enclosed_iff", "uses": ["Becoming.Distinct.identityDecided", "Becoming.Flow.ClosedAt.widen", "Becoming.listsOnce_of_decided"]}
+{"name": "Becoming.Flow.present_listsOnce_all_iff", "uses": ["Becoming.listsOnce_all_iff"]}
+{"name": "Becoming.Flow.present_repeated", "uses": ["Becoming.repeated_same"]}
+{"name": "Becoming.Flow.standing_lowers_decided", "uses": ["Becoming.Flow.standing_lowers_listing", "Becoming.listsOnce_of_decided"]}
+{"name": "Becoming.Flow.standing_lowers_listing", "uses": ["Becoming.Flow.ClosedAt.widen", "Becoming.Flow.standing_lowers"]}
+{"name": "Becoming.Flow.taking_draws_in_listing", "uses": ["Becoming.Flow.Around.of_same", "Becoming.Flow.Inward.of_same", "Becoming.Flow.takers_pos_of_sub", "Becoming.Flow.taking_draws_in", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.taking_not_recurring_listing", "uses": ["Becoming.Flow.ClosedAt.widen", "Becoming.Flow.takers_pos_of_sub", "Becoming.Flow.taking_not_recurring", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.Flow.total_pos_of_within", "uses": ["Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Listed.identityDecided", "uses": ["Becoming.Distinct.identityDecided"]}
+{"name": "Becoming.Listed.of_listing", "uses": ["Becoming.listOnce_listsOnce"]}
+{"name": "Becoming.ListsOnce.identityDecided", "uses": ["Becoming.Distinct.identityDecided"]}
+{"name": "Becoming.ListsOnce.length_eq", "uses": ["Becoming.length_eq_of_same"]}
+{"name": "Becoming.ListsOnce.total_eq", "uses": ["Becoming.total_eq_of_same"]}
+{"name": "Becoming.ListsOnce.total_le", "uses": ["Becoming.total_le_of_support"]}
+{"name": "Becoming.ListsOnceBy.decided", "uses": ["Becoming.DistinctUnder.decided"]}
+{"name": "Becoming.Numbers.le_length", "uses": ["Becoming.length_le_of_sub"]}
+{"name": "Becoming.Numbers.unique", "uses": ["Becoming.ListsOnce.length_eq"]}
+{"name": "Becoming.NumbersBy.unique", "uses": ["Becoming.DistinctUnder.distinct", "Becoming.DistinctUnder.eq_of", "Becoming.length_le_of_matched"]}
+{"name": "Becoming.Web.arising_of_ceasing_listing", "uses": ["Becoming.Listed.coming_of_ceasing", "Becoming.Listed.of_listing"]}
+{"name": "Becoming.Web.embodiedArising_not_recurring_listing", "uses": ["Becoming.Web.embodiedArising_not_recurring", "Becoming.not_of_listsOnce"]}
+{"name": "Becoming.World.Enumerated.not_not_finite", "uses": ["Becoming.not_not_listsOnce"]}
+{"name": "Becoming.World.Enumerated.not_recurring", "uses": ["Becoming.World.Enumerated.not_not_finite", "Becoming.World.not_recurring_of_rests_unrefuted", "Becoming.World.rests_unrefuted"]}
+{"name": "Becoming.World.finite_iff", "uses": ["Becoming.Distinct.identityDecided", "Becoming.listsOnce_of_decided"]}
+{"name": "Becoming.World.indiscernible_decided_iff_em", "uses": ["Becoming.World.probe_indiscernible"]}
+{"name": "Becoming.World.indiscernible_equivalence", "uses": []}
+{"name": "Becoming.World.numbers_indiscernible_iff_em", "uses": ["Becoming.World.indiscernible_decided_iff_em", "Becoming.World.indiscernible_equivalence", "Becoming.numbersBy_iff_decided"]}
+{"name": "Becoming.World.probe_indiscernible", "uses": []}
+{"name": "Becoming.World.probe_named_apart", "uses": ["Becoming.Distinct.numbers", "Becoming.World.indiscernible_equivalence", "Becoming.World.probe_indiscernible", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.distinctBy_eq_iff", "uses": []}
+{"name": "Becoming.keepFresh_spec", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.listOnce_listsOnce", "uses": ["Becoming.keepFresh_spec"]}
+{"name": "Becoming.listsOnceBy_of_decided", "uses": ["Becoming.Decided.exists_mem", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.listsOnce_all_iff", "uses": ["Becoming.listsOnce_iff_decided", "Becoming.listsOnce_of_decided"]}
+{"name": "Becoming.listsOnce_iff_decided", "uses": ["Becoming.ListsOnce.identityDecided", "Becoming.listsOnce_of_decided"]}
+{"name": "Becoming.listsOnce_of_decided", "uses": ["Becoming.Decided.exists_mem", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.mem_of_placed", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.not_not_identityDecided", "uses": ["Becoming.not_not_all", "Becoming.not_not_decided"]}
+{"name": "Becoming.not_not_listsOnce", "uses": ["Becoming.listsOnce_of_decided", "Becoming.not_not_identityDecided"]}
+{"name": "Becoming.not_of_listsOnce", "uses": ["Becoming.not_not_listsOnce"]}
+{"name": "Becoming.numbersBy_iff_decided", "uses": ["Becoming.ListsOnceBy.decided", "Becoming.listsOnceBy_of_decided"]}
+{"name": "Becoming.numbers_iff_decided", "uses": ["Becoming.ListsOnce.identityDecided", "Becoming.listsOnce_of_decided"]}
+{"name": "Becoming.numbers_iff_numbersBy_eq", "uses": ["Becoming.distinctBy_eq_iff"]}
+{"name": "Becoming.of_listsOnce", "uses": ["Becoming.listsOnce_of_decided"]}
+{"name": "Becoming.placed_distinct", "uses": ["Becoming.placed_ge"]}
+{"name": "Becoming.placed_ge", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.placed_of_mem", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.repeated_same", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.total_eq_of_same", "uses": ["Becoming.distinct_remove", "Becoming.mem_cons_cases", "Becoming.mem_insert", "Becoming.mem_remove", "Becoming.not_mem_of_middle", "Becoming.total_append"]}
+{"name": "Becoming.total_placed", "uses": []}

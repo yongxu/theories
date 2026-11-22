@@ -1,0 +1,34 @@
+{"name": "Becoming.Diagonal.no_injection_of_predicates", "uses": ["Becoming.Diagonal.claims_incomplete"]}
+{"name": "Becoming.Reidentify.partialIdentity_carried", "uses": ["Becoming.«部分恒等之像»"]}
+{"name": "Becoming.Reidentify.sameStep_carried", "uses": ["Becoming.«对应之像»"]}
+{"name": "Becoming.Reidentify.withinStep_carried", "uses": ["Becoming.«对应之像»"]}
+{"name": "Becoming.Steps.along_endless", "uses": []}
+{"name": "Becoming.Steps.along_iff_itself", "uses": []}
+{"name": "Becoming.Steps.later_iff", "uses": ["Becoming.Steps.along_iff_itself", "Becoming.Web.reach_advances", "Becoming.gap_of_lt", "Becoming.«及之传递»", "Becoming.«及之单调»"]}
+{"name": "Becoming.Steps.sameOrLater_iff", "uses": ["Becoming.le_dest"]}
+{"name": "Becoming.Web.sameStep_class", "uses": []}
+{"name": "Becoming.World.activityClass_reidentify", "uses": ["Becoming.«对应之像»"]}
+{"name": "Becoming.World.amounts_decided", "uses": []}
+{"name": "Becoming.World.arisingRecurs_iff", "uses": ["Becoming.Steps.later_iff", "Becoming.Web.unceasing_iff_late_beginnings"]}
+{"name": "Becoming.World.balance_needs_conservation", "uses": ["Becoming.World.idleTwice_unbalanced", "Becoming.World.idle_world"]}
+{"name": "Becoming.World.ceasingRecurs_iff", "uses": ["Becoming.Steps.sameOrLater_iff", "Becoming.Web.ceases_iff_wang"]}
+{"name": "Becoming.World.conservationStep_reidentify", "uses": ["Becoming.World.conserves_reidentify", "Becoming.«对应之像»"]}
+{"name": "Becoming.World.conservation_iff_decided", "uses": ["Becoming.World.conserves_decided"]}
+{"name": "Becoming.World.conserves_decided", "uses": []}
+{"name": "Becoming.World.conserves_difunctional", "uses": ["Becoming.World.conserves_iff_same_level"]}
+{"name": "Becoming.World.conserves_form", "uses": []}
+{"name": "Becoming.World.conserves_identity_injective", "uses": []}
+{"name": "Becoming.World.conserves_iff_same_level", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.World.conserves_reidentify", "uses": ["Becoming.World.reidentify_given", "Becoming.World.reidentify_taken"]}
+{"name": "Becoming.World.decides_activity_iff_em", "uses": []}
+{"name": "Becoming.World.falls_exhaust", "uses": ["Becoming.Amounts.falls_end", "Becoming.Amounts.whole_within", "Becoming.«尽之拉回»"]}
+{"name": "Becoming.World.falls_not_endless", "uses": ["Becoming.World.falls_exhaust", "Becoming.«尽则非不穷»"]}
+{"name": "Becoming.World.idleTwice_unbalanced", "uses": []}
+{"name": "Becoming.World.not_conserves_identity", "uses": ["Becoming.Diagonal.no_injection_of_predicates", "Becoming.World.conserves_identity_injective"]}
+{"name": "Becoming.World.not_falls_everywhere", "uses": ["Becoming.World.falls_not_endless"]}
+{"name": "Becoming.World.ofConservationForm_conserves", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.World.ofModel_model", "uses": []}
+{"name": "Becoming.World.ofRelations_relations", "uses": []}
+{"name": "Becoming.World.reidentify_carries", "uses": ["Becoming.Reidentify.mem_map", "Becoming.Reidentify.partialIdentity_carried", "Becoming.Reidentify.sameStep_carried", "Becoming.Reidentify.withinStep_carried", "Becoming.World.conservationStep_reidentify"]}
+{"name": "Becoming.World.sheng_conservation_reidentify", "uses": ["Becoming.World.activityClass_reidentify", "Becoming.World.conservationStep_reidentify", "Becoming.«生之对应»"]}
+{"name": "Becoming.World.standingAt_alike", "uses": []}

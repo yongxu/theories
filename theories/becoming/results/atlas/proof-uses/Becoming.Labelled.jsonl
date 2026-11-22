@@ -1,0 +1,69 @@
+{"name": "Becoming.Alike.realized", "uses": []}
+{"name": "Becoming.Alike.refl", "uses": ["Becoming.Bisimulation.eq"]}
+{"name": "Becoming.Alike.step", "uses": []}
+{"name": "Becoming.Alike.symm", "uses": ["Becoming.Bisimulation.converse"]}
+{"name": "Becoming.Alike.tests", "uses": ["Becoming.Alike.realized", "Becoming.Alike.symm", "Becoming.Alike.trace"]}
+{"name": "Becoming.Alike.trace", "uses": ["Becoming.Bisimulation.trace"]}
+{"name": "Becoming.Alike.trans", "uses": ["Becoming.Bisimulation.comp"]}
+{"name": "Becoming.Bisimulation.comp", "uses": []}
+{"name": "Becoming.Bisimulation.converse", "uses": []}
+{"name": "Becoming.Bisimulation.eq", "uses": []}
+{"name": "Becoming.Bisimulation.trace", "uses": []}
+{"name": "Becoming.Conditions.drawdown_not_recurring", "uses": ["RelationalRenewal.unrenewed_drawdown_finite"]}
+{"name": "Becoming.Crossing.ending_dependent", "uses": []}
+{"name": "Becoming.Crossing.loss_does_not_decide", "uses": []}
+{"name": "Becoming.Crossing.restoring_dependent", "uses": []}
+{"name": "Becoming.Crossing.transforming_dependent", "uses": []}
+{"name": "Becoming.DeadEnd.no_history", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.DeterminedAt.goAlike", "uses": ["Becoming.Alike.step", "Becoming.Alike.trans"]}
+{"name": "Becoming.DeterminedAt.transfer", "uses": ["Becoming.Alike.step", "Becoming.Alike.symm", "Becoming.Alike.trans"]}
+{"name": "Becoming.Frame.world_active", "uses": []}
+{"name": "Becoming.Frame.world_fixes_run", "uses": []}
+{"name": "Becoming.IdentifiesAlike.unique", "uses": []}
+{"name": "Becoming.Labelled.Circulation.standings_leave_exchange", "uses": []}
+{"name": "Becoming.Labelled.Circulation.start_needed", "uses": []}
+{"name": "Becoming.Pinned.undermining_without_effect", "uses": []}
+{"name": "Becoming.Reach.lost_stays", "uses": ["Becoming.Reach.trans"]}
+{"name": "Becoming.Renewable.broken_formation", "uses": ["Becoming.Web.not_renewing_at_of_broken"]}
+{"name": "Becoming.Renewable.class_belongs_to_the_run", "uses": []}
+{"name": "Becoming.Renewable.dip_breaks_without_consuming", "uses": ["Becoming.Web.not_renewing_at_of_broken"]}
+{"name": "Becoming.Renewable.dip_within_two", "uses": ["Becoming.Web.RenewingInWithin.not_undermining_for"]}
+{"name": "Becoming.Renewable.drawing_after_loss", "uses": []}
+{"name": "Becoming.Renewable.escalation_undermines_for_every_cycle", "uses": ["Becoming.Renewable.stepwise_includes_before_escalation", "Becoming.Web.RenewingAt.not_undermining", "Becoming.Web.undermining_for_one"]}
+{"name": "Becoming.Renewable.renewal_without_arising", "uses": []}
+{"name": "Becoming.Renewable.stepwise_includes_before_escalation", "uses": []}
+{"name": "Becoming.Run.change_not_recurring", "uses": ["Becoming.not_marks"]}
+{"name": "Becoming.Run.not_of_depletion", "uses": ["Becoming.Run.step", "Becoming.falls_not_recurring"]}
+{"name": "Becoming.Run.ofWithMove_toWithMove", "uses": []}
+{"name": "Becoming.Run.renewal_recurs", "uses": ["Becoming.falls_not_recurring"]}
+{"name": "Becoming.Run.revisits_from", "uses": ["Becoming.revisits_from"]}
+{"name": "Becoming.Run.shown_le", "uses": ["Becoming.Run.step", "Becoming.shown_le_iff"]}
+{"name": "Becoming.Run.toWithMove_ofWithMove", "uses": []}
+{"name": "Becoming.Shown.runs_of_new", "uses": ["Becoming.Run.step", "Becoming.eq_of_new"]}
+{"name": "Becoming.Splice.loop_step", "uses": []}
+{"name": "Becoming.Splice.spliced", "uses": ["Becoming.Splice.loop_step"]}
+{"name": "Becoming.Web.conditions_along", "uses": []}
+{"name": "Becoming.WithinMoves.after_course", "uses": ["Becoming.trace_steps", "Becoming.withinMoves_iff_withinSteps", "Becoming.«迭内之接»"]}
+{"name": "Becoming.WithinMoves.before", "uses": []}
+{"name": "Becoming.closedBy_withMove", "uses": []}
+{"name": "Becoming.eq_of_new", "uses": []}
+{"name": "Becoming.exchange_alike_iff", "uses": ["Becoming.exchange_alike_of_pointwise", "Becoming.exchange_pointwise_of_alike"]}
+{"name": "Becoming.exchange_alike_of_pointwise", "uses": ["Becoming.exchange_pointwise_bisimulation"]}
+{"name": "Becoming.exchange_pointwise_bisimulation", "uses": []}
+{"name": "Becoming.exchange_pointwise_of_alike", "uses": ["Becoming.Alike.realized"]}
+{"name": "Becoming.identifiesAlike_id_iff", "uses": ["Becoming.Alike.refl"]}
+{"name": "Becoming.identifiesAlike_iff", "uses": ["Becoming.Alike.realized", "Becoming.Alike.step", "Becoming.Alike.symm"]}
+{"name": "Becoming.keeps_reach_iff_returns", "uses": ["Becoming.Reach.refl", "Becoming.Reach.trans"]}
+{"name": "Becoming.lost_together_not_returns", "uses": ["Becoming.together_after_reach"]}
+{"name": "Becoming.no_execution_of_depletion", "uses": ["Becoming.Run.not_of_depletion"]}
+{"name": "Becoming.not_returns_iff_loses", "uses": ["Becoming.Reach.refl", "Becoming.Reach.trans"]}
+{"name": "Becoming.same_reach_iff_returns", "uses": ["Becoming.Reach.refl", "Becoming.Reach.trans"]}
+{"name": "Becoming.same_steps_iff_traces", "uses": ["Generative.trace_map", "Generative.trace_singleton_iff"]}
+{"name": "Becoming.shown_le_iff", "uses": []}
+{"name": "Becoming.together_after_reach", "uses": ["Becoming.WithinMoves.after_course"]}
+{"name": "Becoming.trace_iff_steps", "uses": ["Becoming.trace_steps"]}
+{"name": "Becoming.trace_steps", "uses": ["Generative.Trace.brecOn"]}
+{"name": "Becoming.unlabelled_product_le", "uses": []}
+{"name": "Becoming.withMove_open", "uses": []}
+{"name": "Becoming.withinMoves_iff_reach", "uses": []}
+{"name": "Becoming.withinMoves_iff_withinSteps", "uses": ["Becoming.trace_iff_steps", "Becoming.trace_steps"]}

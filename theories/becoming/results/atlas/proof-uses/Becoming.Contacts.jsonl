@@ -1,0 +1,23 @@
+{"name": "Becoming.Contacts.AgreeOn.refl", "uses": []}
+{"name": "Becoming.Contacts.agree_spot", "uses": ["Becoming.Contacts.spot_other"]}
+{"name": "Becoming.Contacts.answers_iff", "uses": ["Becoming.Contacts.through_at_iff"]}
+{"name": "Becoming.Contacts.blind_answers_iff", "uses": []}
+{"name": "Becoming.Contacts.blind_misses", "uses": ["Becoming.Contacts.through_at_iff"]}
+{"name": "Becoming.Contacts.finite_blind_answers", "uses": []}
+{"name": "Becoming.Contacts.keeps_data_iff", "uses": ["Becoming.Contacts.agree_spot", "Becoming.Contacts.spot_self"]}
+{"name": "Becoming.Contacts.keeps_iff_retains", "uses": ["Becoming.Contacts.keeps_data_iff", "Becoming.Contacts.mem_or_not"]}
+{"name": "Becoming.Contacts.mem_or_not", "uses": []}
+{"name": "Becoming.Contacts.nat_bound", "uses": []}
+{"name": "Becoming.Contacts.nat_unlisted", "uses": ["Becoming.Contacts.nat_bound"]}
+{"name": "Becoming.Contacts.retired_loses", "uses": ["Becoming.Contacts.through_at_iff"]}
+{"name": "Becoming.Contacts.selections_survive_iff", "uses": ["Becoming.Contacts.mem_or_not", "Becoming.Contacts.survive_data_iff"]}
+{"name": "Becoming.Contacts.spot_other", "uses": []}
+{"name": "Becoming.Contacts.spot_self", "uses": []}
+{"name": "Becoming.Contacts.survive_data_iff", "uses": ["Becoming.Contacts.keeps_data_iff", "Becoming.Learning.Training.keeps_through_iff"]}
+{"name": "Becoming.Contacts.through_at_iff", "uses": ["Becoming.Contacts.mem_or_not", "Becoming.Contacts.through_data_iff"]}
+{"name": "Becoming.Contacts.through_data_iff", "uses": ["Becoming.Contacts.agree_spot", "Becoming.Contacts.spot_self"]}
+{"name": "Becoming.Contacts.trace_keeps_of_retains", "uses": ["Becoming.Contacts.keeps_iff_retains", "Becoming.Contacts.selections_survive_iff", "Becoming.Registration.trace_keeps"]}
+{"name": "Becoming.References.bool_other", "uses": []}
+{"name": "Becoming.References.drives_iff", "uses": ["Becoming.References.bool_other"]}
+{"name": "Becoming.References.inverted_fails", "uses": []}
+{"name": "Becoming.References.stays_iff", "uses": []}

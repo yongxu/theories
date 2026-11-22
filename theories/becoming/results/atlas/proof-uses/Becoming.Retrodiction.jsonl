@@ -1,0 +1,16 @@
+{"name": "Becoming.Retrodiction.actual_candidate", "uses": []}
+{"name": "Becoming.Retrodiction.agreed_reading_actual", "uses": ["Becoming.Retrodiction.actual_candidate"]}
+{"name": "Becoming.Retrodiction.bracket", "uses": ["Becoming.Retrodiction.changes_split", "Becoming.Retrodiction.moved_changes"]}
+{"name": "Becoming.Retrodiction.bracket_settles_iff", "uses": ["Becoming.Retrodiction.bracket", "Becoming.Retrodiction.changes_le", "Becoming.Retrodiction.excursion_changes", "Becoming.le_dest"]}
+{"name": "Becoming.Retrodiction.change_unlocated", "uses": ["Becoming.Retrodiction.step_changes"]}
+{"name": "Becoming.Retrodiction.changes_const", "uses": []}
+{"name": "Becoming.Retrodiction.changes_le", "uses": []}
+{"name": "Becoming.Retrodiction.changes_split", "uses": []}
+{"name": "Becoming.Retrodiction.excursion_changes", "uses": []}
+{"name": "Becoming.Retrodiction.fits_iff_same", "uses": []}
+{"name": "Becoming.Retrodiction.fits_or_separated", "uses": []}
+{"name": "Becoming.Retrodiction.look_right_iff", "uses": ["Becoming.Retrodiction.fits_or_separated", "Becoming.Retrodiction.not_fits_of_separated"]}
+{"name": "Becoming.Retrodiction.moved_changes", "uses": []}
+{"name": "Becoming.Retrodiction.not_fits_of_separated", "uses": []}
+{"name": "Becoming.Retrodiction.reading_right_iff", "uses": ["Becoming.Retrodiction.fits_or_separated", "Becoming.Retrodiction.not_fits_of_separated"]}
+{"name": "Becoming.Retrodiction.step_changes", "uses": ["Becoming.Retrodiction.changes_const", "Becoming.Retrodiction.changes_split"]}

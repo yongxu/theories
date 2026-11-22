@@ -1,0 +1,16 @@
+{"name": "Becoming.ContextualRuns.along_le", "uses": ["Becoming.Learning.prefix_length", "Becoming.total_const"]}
+{"name": "Becoming.ContextualRuns.chsh_in_context_not_free", "uses": ["Becoming.CHSH.indexed_met", "Becoming.CHSH.pairs_contradict", "Becoming.ParitySystem.world_met_le"]}
+{"name": "Becoming.ContextualRuns.chsh_run_le", "uses": ["Becoming.CHSH.mixture_le", "Becoming.ContextualRuns.along_le"]}
+{"name": "Becoming.ContextualRuns.cycle_run_iff", "uses": ["Becoming.Gluing.Cycle.met_iff_even"]}
+{"name": "Becoming.ContextualRuns.cycle_run_le", "uses": ["Becoming.ContextualRuns.along_le", "Becoming.Gluing.Cycle.mixture_le"]}
+{"name": "Becoming.ContextualRuns.noGlobal_run_iff", "uses": ["Becoming.Contextual.glues_iff_freeAt", "Becoming.Contextual.not_glues", "Becoming.ParitySystem.local_", "Becoming.ParitySystem.noGlobal_iff"]}
+{"name": "Becoming.ContextualRuns.passes_glued", "uses": ["Becoming.glued_of_whole"]}
+{"name": "Becoming.ContextualRuns.passes_local", "uses": ["Becoming.restrict_local"]}
+{"name": "Becoming.ContextualRuns.specker_not_free", "uses": ["Becoming.Contextual.glues_iff_freeAt", "Becoming.Specker.not_glues"]}
+{"name": "Becoming.ContextualRuns.specker_not_passes", "uses": ["Becoming.Specker.no_whole"]}
+{"name": "Becoming.ContextualRuns.specker_respecting_not_free", "uses": ["Becoming.Contextual.glues_iff_freeAt", "Becoming.Contextual.not_glues", "Becoming.Specker.local_", "Becoming.Specker.noGlobal"]}
+{"name": "Becoming.ContextualRuns.specker_run_le", "uses": ["Becoming.ContextualRuns.along_le", "Becoming.Specker.mixture_le"]}
+{"name": "Becoming.ContextualRuns.square_in_context_not_free", "uses": ["Becoming.ParitySystem.world_met_le", "Becoming.Square.indexed_met", "Becoming.Square.lines_contradict"]}
+{"name": "Becoming.ContextualRuns.square_not_passes", "uses": ["Becoming.Square.no_whole"]}
+{"name": "Becoming.ContextualRuns.square_respecting_not_free", "uses": ["Becoming.Contextual.glues_iff_freeAt", "Becoming.Contextual.not_glues", "Becoming.Square.local_", "Becoming.Square.noGlobal"]}
+{"name": "Becoming.ContextualRuns.square_run_le", "uses": ["Becoming.ContextualRuns.along_le", "Becoming.Square.mixture_le"]}

@@ -1,0 +1,23 @@
+{"name": "Becoming.Omitted.loses_own", "uses": ["Becoming.Web.MetAbove.now"]}
+{"name": "Becoming.Web.AdmitsWithin.narrow", "uses": []}
+{"name": "Becoming.Web.AdmitsWithin.not_losesBeyond", "uses": []}
+{"name": "Becoming.Web.Keeps.not_mixed", "uses": ["Becoming.Web.keeps_iff", "Becoming.Web.mixed_iff", "Becoming.«齐则非杂»"]}
+{"name": "Becoming.Web.Keeps.symm", "uses": ["Becoming.Web.keeps_iff", "Becoming.«齐之对称»"]}
+{"name": "Becoming.Web.LosesBeyond.narrow", "uses": []}
+{"name": "Becoming.Web.Mixed.symm", "uses": ["Becoming.Web.mixed_iff", "Becoming.«杂之对称»"]}
+{"name": "Becoming.Web.RenewingAt.over", "uses": []}
+{"name": "Becoming.Web.RenewingOver.at", "uses": []}
+{"name": "Becoming.Web.RenewingOver.keeps_own", "uses": []}
+{"name": "Becoming.Web.RenewingOver.narrow", "uses": []}
+{"name": "Becoming.Web.Widens.not_keeps", "uses": ["Becoming.Web.keeps_iff", "Becoming.Web.widens_iff", "Becoming.«广则非齐»"]}
+{"name": "Becoming.Web.Widens.not_mixed", "uses": ["Becoming.Web.mixed_iff", "Becoming.Web.widens_iff", "Becoming.«广则非杂»"]}
+{"name": "Becoming.Web.Widens.not_reverse", "uses": ["Becoming.Web.widens_iff", "Becoming.«广不可逆»"]}
+{"name": "Becoming.Web.Widens.trans", "uses": ["Becoming.Web.widens_iff", "Becoming.«广之传递»"]}
+{"name": "Becoming.Web.admitsWithin_self", "uses": []}
+{"name": "Becoming.Web.includes_iff_within_every", "uses": []}
+{"name": "Becoming.Web.includes_iff_within_whole", "uses": []}
+{"name": "Becoming.Web.keeps_iff", "uses": ["Becoming.Web.includes_iff"]}
+{"name": "Becoming.Web.mixed_iff", "uses": ["Becoming.Web.exceeds_iff"]}
+{"name": "Becoming.Web.not_losesBeyond_whole", "uses": []}
+{"name": "Becoming.Web.renewingAt_iff_over_all", "uses": ["Becoming.Web.RenewingAt.over", "Becoming.Web.RenewingOver.at"]}
+{"name": "Becoming.Web.widens_iff", "uses": ["Becoming.Web.exceeds_iff", "Becoming.Web.includes_iff"]}

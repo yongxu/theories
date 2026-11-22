@@ -1,0 +1,41 @@
+{"name": "Becoming.Flow.ClosedAcross.fedClosed", "uses": ["Becoming.Flow.FedAcross.of_fedBy"]}
+{"name": "Becoming.Flow.FedAcross.of_fedBy", "uses": ["Becoming.Flow.fedBy_iff_fedAcross"]}
+{"name": "Becoming.Flow.FollowsGiven.antitone", "uses": []}
+{"name": "Becoming.Flow.WithinFeeding.across", "uses": ["Becoming.Flow.FedAcross.of_fedBy", "Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Flow.WithinFeedingAcross.of_fedAcross", "uses": ["Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.Flow.WithinFeedingAcross.refl", "uses": ["Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Flow.WithinFeedingAcross.trans", "uses": ["Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Flow.active_covered_at", "uses": ["Becoming.Flow.meets_over_iff_at"]}
+{"name": "Becoming.Flow.beyond_gives_nothing_across", "uses": ["Becoming.WithinClosure.not_rel", "Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.Flow.can_stand_iff", "uses": ["Becoming.Flow.FollowsGiven.antitone", "Becoming.le_dest"]}
+{"name": "Becoming.Flow.carriedTo_iff_stands", "uses": ["Becoming.Flow.can_stand_iff"]}
+{"name": "Becoming.Flow.carriedTo_of_le", "uses": []}
+{"name": "Becoming.Flow.carried_of_given_exceeds", "uses": ["Becoming.balance_over_stretch_on", "Becoming.le_dest", "Becoming.le_of_add_le_add_right", "Becoming.le_total_of_mem", "Becoming.steps_mono"]}
+{"name": "Becoming.Flow.closedAcross_within", "uses": ["Becoming.closedUnder_withinClosure"]}
+{"name": "Becoming.Flow.depleted_keeps_nothing", "uses": ["Becoming.Flow.can_stand_iff"]}
+{"name": "Becoming.Flow.fedBy_iff_fedAcross", "uses": ["Becoming.Flow.carriedTo_of_le"]}
+{"name": "Becoming.Flow.fedBy_of_fedAcross_unheld", "uses": []}
+{"name": "Becoming.Flow.fed_beyond_level_at", "uses": ["Becoming.balance_over_stretch_on", "Becoming.le_total_of_mem", "Becoming.steps_length", "Becoming.steps_mem", "Becoming.steps_within", "Becoming.total_le", "Becoming.total_ones", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.meets_after_iff_at", "uses": ["Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Flow.meets_over_iff_at", "uses": ["Becoming.balance_over_stretch_on", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Flow.meets_without_iff_at", "uses": ["Becoming.Flow.withheld_at", "Becoming.le_of_add_le_add_right", "Becoming.steps_within", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.stays_met_iff_at", "uses": ["Becoming.Flow.meets_after_iff_at"]}
+{"name": "Becoming.Flow.unfed_meets_iff_at", "uses": ["Becoming.Flow.meets_over_iff_at", "Becoming.eq_zero_of_not_pos", "Becoming.steps_mem", "Becoming.steps_within", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.withinFeedingAcross_iff_of_unheld", "uses": ["Becoming.Flow.WithinFeeding.across", "Becoming.Flow.fedBy_of_fedAcross_unheld", "Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Provision.acting", "uses": []}
+{"name": "Becoming.Provision.balances", "uses": []}
+{"name": "Becoming.Provision.carried", "uses": ["Becoming.Flow.Balances.on", "Becoming.Provision.balances"]}
+{"name": "Becoming.Provision.dependent", "uses": []}
+{"name": "Becoming.Provision.fed_across", "uses": ["Becoming.Provision.carried"]}
+{"name": "Becoming.Provision.parent_beyond", "uses": ["Becoming.Provision.young_alone"]}
+{"name": "Becoming.Provision.taking", "uses": []}
+{"name": "Becoming.Provision.through_store", "uses": ["Becoming.Flow.WithinFeedingAcross.of_fedAcross", "Becoming.Provision.acting", "Becoming.Provision.balances", "Becoming.Provision.dependent", "Becoming.Provision.fed_across", "Becoming.Provision.parent_beyond", "Becoming.Provision.taking"]}
+{"name": "Becoming.Provision.young_alone", "uses": []}
+{"name": "Becoming.Redundant.acting", "uses": []}
+{"name": "Becoming.Redundant.balances", "uses": []}
+{"name": "Becoming.Redundant.dependent", "uses": []}
+{"name": "Becoming.Redundant.either_suffices", "uses": ["Becoming.Redundant.dependent"]}
+{"name": "Becoming.Redundant.neither_ends", "uses": ["Becoming.Flow.Balances.consumption_ends_with_feeders", "Becoming.Redundant.acting", "Becoming.Redundant.balances", "Becoming.Redundant.dependent"]}
+{"name": "Becoming.Redundant.taking", "uses": []}
+{"name": "Becoming.Redundant.withheld_both", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.Redundant.withheld_either", "uses": []}

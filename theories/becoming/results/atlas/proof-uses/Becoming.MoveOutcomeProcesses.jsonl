@@ -1,0 +1,28 @@
+{"name": "Becoming.MoveOutcomeProcesses.Covers.ensures", "uses": ["Becoming.MoveOutcomeProcesses.ensures_iff"]}
+{"name": "Becoming.MoveOutcomeProcesses.common_completes", "uses": []}
+{"name": "Becoming.MoveOutcomeProcesses.common_goal", "uses": ["Becoming.MoveOutcomeProcesses.Covers.ensures", "Becoming.MoveOutcomeProcesses.ensures_true_iff"]}
+{"name": "Becoming.MoveOutcomeProcesses.completes_mono", "uses": ["Becoming.MoveOutcomeProcesses.completes_one_iff"]}
+{"name": "Becoming.MoveOutcomeProcesses.completes_one_iff", "uses": []}
+{"name": "Becoming.MoveOutcomeProcesses.covers_along", "uses": ["Becoming.MoveOutcomeProcesses.covers_refl", "Becoming.MoveOutcomeProcesses.covers_trans"]}
+{"name": "Becoming.MoveOutcomeProcesses.covers_iff", "uses": ["Becoming.MoveOutcomeProcesses.Covers.ensures", "Becoming.MoveOutcomeProcesses.ensures_iff"]}
+{"name": "Becoming.MoveOutcomeProcesses.covers_iff_moves", "uses": []}
+{"name": "Becoming.MoveOutcomeProcesses.covers_refl", "uses": []}
+{"name": "Becoming.MoveOutcomeProcesses.covers_trans", "uses": []}
+{"name": "Becoming.MoveOutcomeProcesses.ensures_iff", "uses": ["Becoming.MoveOutcomeProcesses.completes_one_iff"]}
+{"name": "Becoming.MoveOutcomeProcesses.ensures_true_iff", "uses": ["Becoming.MoveOutcomeProcesses.ensures_iff"]}
+{"name": "Becoming.MoveOutcomeProcesses.free_wider_not_covering", "uses": ["Becoming.MoveOutcomeProcesses.toFalse_not_true"]}
+{"name": "Becoming.MoveOutcomeProcesses.halted_ensures_nothing", "uses": ["Becoming.MoveOutcomeProcesses.ensures_iff"]}
+{"name": "Becoming.MoveOutcomeProcesses.law_covers_free_and_loses", "uses": ["Becoming.MoveOutcomeProcesses.toFalse_not_true"]}
+{"name": "Becoming.MoveOutcomeProcesses.lost_goal_of_not_covers_of_dne", "uses": ["Becoming.MoveOutcomeProcesses.ensures_iff"]}
+{"name": "Becoming.MoveOutcomeProcesses.no_strict_gain_everywhere", "uses": ["Becoming.MoveOutcomeProcesses.not_ensures_false"]}
+{"name": "Becoming.MoveOutcomeProcesses.not_covers_iff", "uses": ["Becoming.MoveOutcomeProcesses.covers_iff"]}
+{"name": "Becoming.MoveOutcomeProcesses.not_ensures_false", "uses": ["Becoming.MoveOutcomeProcesses.ensures_iff"]}
+{"name": "Becoming.MoveOutcomeProcesses.setting_covers_and_gains", "uses": ["Becoming.MoveOutcomeProcesses.ensures_iff", "Becoming.MoveOutcomeProcesses.setting_covers_toFalse"]}
+{"name": "Becoming.MoveOutcomeProcesses.setting_covers_and_opens", "uses": ["Becoming.MoveOutcomeProcesses.setting_covers_toFalse", "Becoming.MoveOutcomeProcesses.toFalse_not_true"]}
+{"name": "Becoming.MoveOutcomeProcesses.setting_covers_toFalse", "uses": []}
+{"name": "Becoming.MoveOutcomeProcesses.setting_ensures_each", "uses": ["Becoming.MoveOutcomeProcesses.ensures_iff"]}
+{"name": "Becoming.MoveOutcomeProcesses.setting_separate_not_joint", "uses": ["Becoming.MoveOutcomeProcesses.ensures_iff"]}
+{"name": "Becoming.MoveOutcomeProcesses.summary_ensures_iff", "uses": ["Becoming.MoveOutcomeProcesses.ensures_iff"]}
+{"name": "Becoming.MoveOutcomeProcesses.summary_hides_loss", "uses": ["Becoming.MoveOutcomeProcesses.ensures_iff"]}
+{"name": "Becoming.MoveOutcomeProcesses.toFalse_ensures_false", "uses": ["Becoming.MoveOutcomeProcesses.ensures_iff"]}
+{"name": "Becoming.MoveOutcomeProcesses.toFalse_not_true", "uses": []}

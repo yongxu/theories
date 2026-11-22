@@ -1,0 +1,52 @@
+{"name": "Becoming.IncludedOn.tail", "uses": []}
+{"name": "Becoming.Interference.cancels", "uses": []}
+{"name": "Becoming.Interference.truncation_misses_cancellation", "uses": []}
+{"name": "Becoming.Interference.unseen", "uses": []}
+{"name": "Becoming.Interference.unseen_balanced", "uses": ["Becoming.Interference.unseen"]}
+{"name": "Becoming.Lumping.loses", "uses": []}
+{"name": "Becoming.Memory.not_of_steps", "uses": ["Becoming.bool_of_and_true"]}
+{"name": "Becoming.Memory.of_kept", "uses": []}
+{"name": "Becoming.Situations.sum_one", "uses": []}
+{"name": "Becoming.Weighted.Loop.courses_double", "uses": []}
+{"name": "Becoming.Weights.Hom.map_add", "uses": []}
+{"name": "Becoming.Weights.Hom.map_mul", "uses": []}
+{"name": "Becoming.Weights.Hom.map_one", "uses": []}
+{"name": "Becoming.Weights.Hom.map_zero", "uses": []}
+{"name": "Becoming.Weights.Hom.sum", "uses": ["Becoming.Weights.Hom.map_add", "Becoming.Weights.Hom.map_zero"]}
+{"name": "Becoming.Weights.Hom.transfer", "uses": ["Becoming.Weights.Hom.map_mul", "Becoming.Weights.Hom.sum", "Becoming.Weights.sum_congr"]}
+{"name": "Becoming.Weights.add_assoc", "uses": []}
+{"name": "Becoming.Weights.add_zero", "uses": []}
+{"name": "Becoming.Weights.left_distrib", "uses": []}
+{"name": "Becoming.Weights.lumped_iff", "uses": ["Becoming.Weights.sum_congr"]}
+{"name": "Becoming.Weights.mul_assoc", "uses": []}
+{"name": "Becoming.Weights.mul_one", "uses": []}
+{"name": "Becoming.Weights.mul_sum", "uses": ["Becoming.Weights.left_distrib", "Becoming.Weights.mul_zero"]}
+{"name": "Becoming.Weights.mul_zero", "uses": []}
+{"name": "Becoming.Weights.one_mul", "uses": []}
+{"name": "Becoming.Weights.right_distrib", "uses": []}
+{"name": "Becoming.Weights.sum_append", "uses": ["Becoming.Weights.add_assoc", "Becoming.Weights.zero_add"]}
+{"name": "Becoming.Weights.sum_congr", "uses": []}
+{"name": "Becoming.Weights.sum_courses", "uses": ["Becoming.Weights.add_zero", "Becoming.Weights.mul_sum", "Becoming.Weights.sum_congr", "Becoming.Weights.sum_joinMap", "Becoming.Weights.sum_map"]}
+{"name": "Becoming.Weights.sum_joinMap", "uses": ["Becoming.Weights.sum_append"]}
+{"name": "Becoming.Weights.sum_map", "uses": []}
+{"name": "Becoming.Weights.zero_add", "uses": []}
+{"name": "Becoming.Weights.zero_mul", "uses": []}
+{"name": "Becoming.counting_truncation_le", "uses": ["Becoming.Weights.sum_append"]}
+{"name": "Becoming.entries_within_not_together", "uses": []}
+{"name": "Becoming.entry_le", "uses": []}
+{"name": "Becoming.every_event_within_iff", "uses": ["Becoming.mass_mono"]}
+{"name": "Becoming.every_weighting_iff", "uses": ["Becoming.mass_dirac_pos", "Becoming.mass_mono", "Becoming.mem_of_mass_dirac_pos"]}
+{"name": "Becoming.mass_dirac_pos", "uses": []}
+{"name": "Becoming.mass_lt_of_added", "uses": ["Becoming.IncludedOn.tail", "Becoming.entry_le", "Becoming.mass_mono"]}
+{"name": "Becoming.mass_mono", "uses": ["Becoming.IncludedOn.tail", "Becoming.entry_le"]}
+{"name": "Becoming.mem_appended_right", "uses": []}
+{"name": "Becoming.mem_joinMap", "uses": ["Becoming.mem_appended_left", "Becoming.mem_appended_right"]}
+{"name": "Becoming.mem_of_mass_dirac_pos", "uses": []}
+{"name": "Becoming.mem_openSteps", "uses": ["Becoming.ListTests.mem_map_of", "Becoming.mem_joinMap"]}
+{"name": "Becoming.pair_assoc", "uses": ["Becoming.add_mul_split", "Becoming.mul_assoc_nat", "Becoming.swap_middle"]}
+{"name": "Becoming.pair_eq", "uses": []}
+{"name": "Becoming.pair_spread", "uses": []}
+{"name": "Becoming.pair_spread_right", "uses": ["Becoming.add_mul_split"]}
+{"name": "Becoming.possibility_sum_of_mem", "uses": []}
+{"name": "Becoming.possibility_sum_true", "uses": []}
+{"name": "Becoming.swap_middle", "uses": []}

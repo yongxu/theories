@@ -1,0 +1,66 @@
+{"name": "Becoming.Flow.Balances.loses_of_unread", "uses": ["Becoming.Flow.Balances.loses_iff_beyond_margin", "Becoming.ReadingSchedule.total_le_of_inside", "Becoming.ReadingSchedule.total_steps_ge", "Becoming.Regulation.total_steps_congr", "Becoming.Regulation.total_steps_const", "Becoming.le_dest"]}
+{"name": "Becoming.Flow.Balances.retains_of_read", "uses": ["Becoming.Flow.Balances.retains_iff_within_margin", "Becoming.Flow.taken_of_read", "Becoming.Regulation.total_steps_le"]}
+{"name": "Becoming.Flow.taken_of_read", "uses": ["Becoming.ReadingSchedule.shift_lt", "Becoming.ReadingSchedule.total_of_stretch"]}
+{"name": "Becoming.ReadingSchedule.Code.At.brecOn", "uses": []}
+{"name": "Becoming.ReadingSchedule.Code.At.reads", "uses": ["Becoming.ReadingSchedule.Within.mono", "Becoming.ReadingSchedule.weave_left", "Becoming.ReadingSchedule.weave_right"]}
+{"name": "Becoming.ReadingSchedule.Code.brecOn.eq", "uses": []}
+{"name": "Becoming.ReadingSchedule.Drawer.balances", "uses": ["Becoming.ReadingSchedule.Drawer.sub_add_of_le", "Becoming.ReadingSchedule.Drawer.take_total", "Becoming.total_steps_add"]}
+{"name": "Becoming.ReadingSchedule.Drawer.partTaken_eq", "uses": []}
+{"name": "Becoming.ReadingSchedule.Drawer.sub_add_of_le", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.le_dest"]}
+{"name": "Becoming.ReadingSchedule.Drawer.take_le", "uses": ["Becoming.ReadingSchedule.ite_le"]}
+{"name": "Becoming.ReadingSchedule.Drawer.take_total", "uses": ["Becoming.ReadingSchedule.Drawer.take_le", "Becoming.ReadingSchedule.total_of_stretch"]}
+{"name": "Becoming.ReadingSchedule.Drawer.take_total_end", "uses": ["Becoming.Regulation.total_steps_congr", "Becoming.Regulation.total_steps_const", "Becoming.total_steps_add"]}
+{"name": "Becoming.ReadingSchedule.Drawer.withheld", "uses": []}
+{"name": "Becoming.ReadingSchedule.PoolWithin.count", "uses": ["Becoming.ReadingSchedule.one_le_times", "Becoming.ReadingSchedule.one_le_total_steps", "Becoming.total_steps_add"]}
+{"name": "Becoming.ReadingSchedule.Within.mono", "uses": []}
+{"name": "Becoming.ReadingSchedule.Within.pool", "uses": []}
+{"name": "Becoming.ReadingSchedule.Within.unread_lt", "uses": []}
+{"name": "Becoming.ReadingSchedule.build_holds", "uses": ["Becoming.ReadingSchedule.deeper_mem", "Becoming.ReadingSchedule.leaves_mem", "Becoming.ReadingSchedule.pair_lift", "Becoming.mem_append_of_left", "Becoming.mem_append_of_right"]}
+{"name": "Becoming.ReadingSchedule.build_length", "uses": ["Becoming.ListTests.length_append", "Becoming.ReadingSchedule.leaves_length", "Becoming.ReadingSchedule.pair_length", "Becoming.ReadingSchedule.weight_split", "Becoming.ReadingSchedule.weight_zero", "Becoming.add_mul_split", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.ReadingSchedule.cap_le", "uses": ["Becoming.ReadingSchedule.cap.eq_1"]}
+{"name": "Becoming.ReadingSchedule.climb_spec", "uses": []}
+{"name": "Becoming.ReadingSchedule.deeper_mem", "uses": []}
+{"name": "Becoming.ReadingSchedule.density", "uses": ["Becoming.ReadingSchedule.Within.pool", "Becoming.ReadingSchedule.pool_density"]}
+{"name": "Becoming.ReadingSchedule.double_lt", "uses": []}
+{"name": "Becoming.ReadingSchedule.even_add", "uses": []}
+{"name": "Becoming.ReadingSchedule.first_of_short", "uses": []}
+{"name": "Becoming.ReadingSchedule.half_suffices", "uses": ["Becoming.ListTests.mem_map_of", "Becoming.ReadingSchedule.Within.mono", "Becoming.ReadingSchedule.cap_le", "Becoming.ReadingSchedule.kraft_reads", "Becoming.ReadingSchedule.lg_spec", "Becoming.ReadingSchedule.two_pow_le", "Becoming.ReadingSchedule.weight_le", "Becoming.preimage_of_mem_map", "Becoming.total_le", "Becoming.total_map"]}
+{"name": "Becoming.ReadingSchedule.halves", "uses": []}
+{"name": "Becoming.ReadingSchedule.ite_le", "uses": []}
+{"name": "Becoming.ReadingSchedule.keeps_density", "uses": ["Becoming.ReadingSchedule.density", "Becoming.ReadingSchedule.within_of_keeps"]}
+{"name": "Becoming.ReadingSchedule.keeps_iff_within", "uses": ["Becoming.ReadingSchedule.keeps_of_within", "Becoming.ReadingSchedule.within_of_keeps"]}
+{"name": "Becoming.ReadingSchedule.keeps_of_half", "uses": ["Becoming.ReadingSchedule.half_suffices", "Becoming.ReadingSchedule.keeps_of_within"]}
+{"name": "Becoming.ReadingSchedule.keeps_of_within", "uses": ["Becoming.Flow.Balances.retains_of_read"]}
+{"name": "Becoming.ReadingSchedule.kraft_reads", "uses": ["Becoming.Naturals.lt_of_mul_lt_mul_right", "Becoming.ReadingSchedule.Code.At.reads", "Becoming.ReadingSchedule.Within.mono", "Becoming.ReadingSchedule.build_holds", "Becoming.ReadingSchedule.build_length", "Becoming.ReadingSchedule.first_of_short", "Becoming.ReadingSchedule.two_pow_le"]}
+{"name": "Becoming.ReadingSchedule.leaves_length", "uses": []}
+{"name": "Becoming.ReadingSchedule.leaves_mem", "uses": []}
+{"name": "Becoming.ReadingSchedule.lg_spec", "uses": ["Becoming.Naturals.lt_two_pow", "Becoming.Naturals.two_pow_pos", "Becoming.ReadingSchedule.climb_spec"]}
+{"name": "Becoming.ReadingSchedule.mul_lt_mul_left'", "uses": []}
+{"name": "Becoming.ReadingSchedule.no_two_three", "uses": []}
+{"name": "Becoming.ReadingSchedule.odd_add", "uses": ["Becoming.ReadingSchedule.even_add"]}
+{"name": "Becoming.ReadingSchedule.odd_add_odd", "uses": ["Becoming.ReadingSchedule.odd_add"]}
+{"name": "Becoming.ReadingSchedule.one_le_times", "uses": ["Becoming.le_total_of_mem"]}
+{"name": "Becoming.ReadingSchedule.one_le_total_steps", "uses": []}
+{"name": "Becoming.ReadingSchedule.pair_length", "uses": []}
+{"name": "Becoming.ReadingSchedule.pair_lift", "uses": []}
+{"name": "Becoming.ReadingSchedule.pool_density", "uses": ["Becoming.ReadingSchedule.PoolWithin.count", "Becoming.ReadingSchedule.total_is_le_one", "Becoming.ReadingSchedule.total_prefix_le", "Becoming.Regulation.total_steps_le", "Becoming.total_congr", "Becoming.total_le", "Becoming.total_map", "Becoming.total_ones", "Becoming.total_swap"]}
+{"name": "Becoming.ReadingSchedule.read_or_unread", "uses": []}
+{"name": "Becoming.ReadingSchedule.shift_le", "uses": []}
+{"name": "Becoming.ReadingSchedule.shift_lt", "uses": []}
+{"name": "Becoming.ReadingSchedule.spare_not_enough", "uses": ["Becoming.ReadingSchedule.no_two_three", "Becoming.ReadingSchedule.two_three_room", "Becoming.ReadingSchedule.within_of_keeps"]}
+{"name": "Becoming.ReadingSchedule.total_is_le_one", "uses": ["Becoming.total_eq_zero"]}
+{"name": "Becoming.ReadingSchedule.total_le_of_inside", "uses": ["Becoming.le_dest", "Becoming.total_steps_add"]}
+{"name": "Becoming.ReadingSchedule.total_of_stretch", "uses": ["Becoming.Regulation.total_steps_congr", "Becoming.Regulation.total_steps_const", "Becoming.Regulation.total_steps_le", "Becoming.total_steps_add"]}
+{"name": "Becoming.ReadingSchedule.total_prefix_le", "uses": ["Becoming.ReadingSchedule.total_le_of_inside"]}
+{"name": "Becoming.ReadingSchedule.total_steps_ge", "uses": []}
+{"name": "Becoming.ReadingSchedule.two_pow_le", "uses": []}
+{"name": "Becoming.ReadingSchedule.two_three_room", "uses": ["Becoming.Naturals.mul_right_comm", "Becoming.add_mul_split"]}
+{"name": "Becoming.ReadingSchedule.weave_even", "uses": []}
+{"name": "Becoming.ReadingSchedule.weave_left", "uses": ["Becoming.ReadingSchedule.double_lt", "Becoming.ReadingSchedule.even_add", "Becoming.ReadingSchedule.halves", "Becoming.ReadingSchedule.odd_add_odd", "Becoming.ReadingSchedule.weave_even"]}
+{"name": "Becoming.ReadingSchedule.weave_odd", "uses": []}
+{"name": "Becoming.ReadingSchedule.weave_right", "uses": ["Becoming.ReadingSchedule.double_lt", "Becoming.ReadingSchedule.even_add", "Becoming.ReadingSchedule.halves", "Becoming.ReadingSchedule.odd_add", "Becoming.ReadingSchedule.weave_odd"]}
+{"name": "Becoming.ReadingSchedule.weight_le", "uses": ["Becoming.Naturals.lt_of_mul_lt_mul_right", "Becoming.Naturals.pow_add", "Becoming.Naturals.sub_add_cancel", "Becoming.Naturals.two_pow_pos", "Becoming.ReadingSchedule.cap.eq_1", "Becoming.ReadingSchedule.lg_spec", "Becoming.ReadingSchedule.mul_lt_mul_left'"]}
+{"name": "Becoming.ReadingSchedule.weight_split", "uses": ["Becoming.Naturals.succ_sub_succ"]}
+{"name": "Becoming.ReadingSchedule.weight_zero", "uses": []}
+{"name": "Becoming.ReadingSchedule.within_iff", "uses": ["Becoming.ReadingSchedule.Within.unread_lt", "Becoming.ReadingSchedule.read_or_unread"]}
+{"name": "Becoming.ReadingSchedule.within_of_keeps", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.ReadingSchedule.Drawer.balances", "Becoming.ReadingSchedule.Drawer.partTaken_eq", "Becoming.ReadingSchedule.Drawer.take_le", "Becoming.ReadingSchedule.Drawer.take_total_end", "Becoming.ReadingSchedule.Drawer.withheld", "Becoming.ReadingSchedule.shift_le", "Becoming.ReadingSchedule.within_iff", "Becoming.le_dest"]}

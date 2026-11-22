@@ -1,0 +1,25 @@
+{"name": "Becoming.ClosedCapture.Beyond.closed_line", "uses": ["Becoming.ClosedCapture.Beyond.closed_locked", "Becoming.ClosedCapture.lock_line", "Becoming.Ideals.Preorder.refl", "Becoming.RuleCapture.CarrierCounts.raises", "Becoming.RuleCapture.CarrierCounts.upper"]}
+{"name": "Becoming.ClosedCapture.Beyond.open_line_ends", "uses": ["Becoming.Law.step_hasSucc_iff"]}
+{"name": "Becoming.ClosedCapture.constant_iff_unread", "uses": ["Becoming.ClosedCapture.goAlike_of_unread", "Becoming.ClosedCapture.identifiesAlike_iff_unread", "Becoming.Law.constant_iff_keeps", "Becoming.Law.now_identifiesAlike_iff_goAlike", "Becoming.Learning.goAlike_iff_lumped"]}
+{"name": "Becoming.ClosedCapture.favouredAlike_class", "uses": []}
+{"name": "Becoming.ClosedCapture.lock_line", "uses": ["Becoming.ClosedCapture.lock_outlives_loss", "Becoming.ClosedCapture.loss_alters", "Becoming.Law.unending_iff_steps"]}
+{"name": "Becoming.ClosedCapture.lockedAlike_class", "uses": []}
+{"name": "Becoming.ClosedCapture.loss_alters", "uses": ["Becoming.ClosedCapture.turn_fast"]}
+{"name": "Becoming.ClosedCapture.loss_ends_line", "uses": ["Becoming.ClosedCapture.favouredAlike_class", "Becoming.ClosedCapture.turned_by_loss", "Becoming.Law.unending_alike"]}
+{"name": "Becoming.ClosedCapture.orbit_paced", "uses": ["Becoming.Pace.paced_run"]}
+{"name": "Becoming.ClosedCapture.turn_fast", "uses": []}
+{"name": "Becoming.Law.unending_alike", "uses": ["Becoming.Law.unending_iff_steps", "Becoming.«类».refl", "Becoming.«类».trans"]}
+{"name": "Becoming.Law.unending_iff_steps", "uses": ["Becoming.Law.line_on_orbit", "Becoming.Law.step_hasSucc_iff", "Becoming.«及之传递»"]}
+{"name": "Becoming.adaptive_constant_iff", "uses": ["Becoming.adaptive_determined", "Becoming.adaptive_state_law_iff", "Becoming.goAlike_iff_constant"]}
+{"name": "Becoming.adaptive_core_apart", "uses": ["Becoming.«有常之逐点»", "Becoming.«根»"]}
+{"name": "Becoming.adaptive_core_iff", "uses": ["Becoming.adaptive_constant_iff", "Becoming.sameValue_class", "Becoming.«类有常当且仅当含于核»"]}
+{"name": "Becoming.constant_of_goAlike", "uses": ["Becoming.goAlikeUnder_iff_alike", "Becoming.«同行遍后则有常»"]}
+{"name": "Becoming.goAlike_iff_constant", "uses": ["Becoming.constant_of_goAlike", "Becoming.goAlike_of_constant"]}
+{"name": "Becoming.goAlike_of_constant", "uses": ["Becoming.determined_iff_fixed", "Becoming.goAlikeUnder_iff_alike", "Becoming.«有常定后则同行»"]}
+{"name": "Becoming.«亡前核变»", "uses": ["Becoming.«守核之线不亡»"]}
+{"name": "Becoming.«守核之线不亡»", "uses": ["Becoming.«有常则相续不尽»", "Becoming.«根»", "Becoming.«粗化»"]}
+{"name": "Becoming.«守核则不穷»", "uses": ["Becoming.«有常则相续不尽»", "Becoming.«有常则续不尽»", "Becoming.«根»"]}
+{"name": "Becoming.«有亡之线两端核异»", "uses": ["Becoming.«亡于核下不变»", "Becoming.«根»", "Becoming.«相续之始有后»"]}
+{"name": "Becoming.«有亡之线末步离核»", "uses": ["Becoming.«亡前核变»", "Becoming.«相续之末步»"]}
+{"name": "Becoming.«相续之始有后»", "uses": []}
+{"name": "Becoming.«相续之末步»", "uses": []}

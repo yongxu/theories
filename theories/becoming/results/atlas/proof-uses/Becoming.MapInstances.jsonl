@@ -1,0 +1,54 @@
+{"name": "Becoming.Map.Depleted.below", "uses": []}
+{"name": "Becoming.Map.Depleted.continues", "uses": []}
+{"name": "Becoming.Map.Depleted.degenerates", "uses": ["Becoming.Map.Depleted.below", "Becoming.Map.Depleted.dependent", "Becoming.Web.consumed_held_degenerates"]}
+{"name": "Becoming.Map.Depleted.dependent", "uses": []}
+{"name": "Becoming.Map.Undecided.degenerates", "uses": ["Becoming.Map.Undecided.inactive_two", "Becoming.Web.activity_every_branch_ends_of_gone"]}
+{"name": "Becoming.Map.Undecided.end_decides", "uses": ["Becoming.Map.Undecided.first_has_next_iff"]}
+{"name": "Becoming.Map.Undecided.first_continues", "uses": []}
+{"name": "Becoming.Map.Undecided.first_has_next_iff", "uses": ["Becoming.Map.Undecided.first_continues"]}
+{"name": "Becoming.Map.Undecided.inactive_two", "uses": []}
+{"name": "Becoming.Map.Undecided.last_ends", "uses": ["Becoming.Map.Undecided.inactive_two"]}
+{"name": "Becoming.Map.coupled_continues", "uses": []}
+{"name": "Becoming.Map.coupled_degenerates", "uses": ["Becoming.Coupled.balances", "Becoming.Coupled.dependent", "Becoming.Coupled.excess", "Becoming.Web.family_excess_degenerates"]}
+{"name": "Becoming.Map.end_of_gone_iff_excluded_middle", "uses": ["Becoming.Map.Undecided.degenerates", "Becoming.Map.Undecided.end_decides", "Becoming.Web.activity_every_branch_ends_of_gone", "Becoming.«尽而续可定则有终»"]}
+{"name": "Becoming.Map.outside_of_not_endless", "uses": []}
+{"name": "Becoming.Map.relay_after_two", "uses": []}
+{"name": "Becoming.Map.relay_renews_and_ends", "uses": ["Becoming.Map.relay_after_two", "Becoming.Web.passing_carries_iff"]}
+{"name": "Becoming.Map.renewal_undecided", "uses": ["Becoming.Map.relay_renews_and_ends", "Becoming.Map.shifted_generates"]}
+{"name": "Becoming.Map.shifted_carry", "uses": ["Becoming.Shifts.half_even"]}
+{"name": "Becoming.Map.shifted_generates", "uses": ["Becoming.Map.shifted_carry", "Becoming.Map.shifted_pass", "Becoming.Web.active_along_line"]}
+{"name": "Becoming.Map.shifted_pass", "uses": ["Becoming.PatternRelay.half_odd", "Becoming.Web.passing_carries_iff"]}
+{"name": "Becoming.Map.stopped_relay_continues", "uses": []}
+{"name": "Becoming.Map.stopped_relay_degenerates", "uses": ["Becoming.PatternRelay.stopped_brief", "Becoming.PatternRelay.stopped_by_passing", "Becoming.PatternRelay.stopped_quiet", "Becoming.Web.stopped_degenerates"]}
+{"name": "Becoming.Web.active_along_finer", "uses": ["Becoming.Web.active_along_line", "Becoming.Web.reached_coarser"]}
+{"name": "Becoming.Web.active_along_line", "uses": ["Becoming.Web.activityClass_class", "Becoming.«线内同类»"]}
+{"name": "Becoming.Web.activity_every_branch_ends_of_gone", "uses": ["Becoming.Web.every_branch_ends_of_gone", "Becoming.«则之自反»"]}
+{"name": "Becoming.Web.always_keeps", "uses": ["Becoming.Web.Continuing.itself_same", "Becoming.Web.continuing_iff_line", "Becoming.Web.itself_keeps", "Becoming.Web.reached_later"]}
+{"name": "Becoming.Web.carries_iff", "uses": []}
+{"name": "Becoming.Web.consumed_held_degenerates", "uses": ["Becoming.Web.activity_every_branch_ends_of_gone", "Becoming.Web.consumed_held_gone"]}
+{"name": "Becoming.Web.consumed_held_gone", "uses": []}
+{"name": "Becoming.Web.consumed_held_not_endless", "uses": ["Becoming.Web.consumed_held_degenerates", "Becoming.«尽则非不穷»"]}
+{"name": "Becoming.Web.end_of_gone", "uses": ["Becoming.Web.activity_every_branch_ends_of_gone", "Becoming.«尽而续可定则有终»"]}
+{"name": "Becoming.Web.ends_before", "uses": ["Becoming.«所及之传递»"]}
+{"name": "Becoming.Web.ends_of_ends_at", "uses": ["Becoming.Web.ends_before", "Becoming.le_dest"]}
+{"name": "Becoming.Web.ends_or_reaches", "uses": ["Becoming.«所及之传递»"]}
+{"name": "Becoming.Web.every_branch_ends_of_gone", "uses": ["Becoming.Web.active_along_finer", "Becoming.Web.ends_of_ends_at"]}
+{"name": "Becoming.Web.family_excess_degenerates", "uses": ["Becoming.Web.activity_every_branch_ends_of_gone", "Becoming.Web.family_excess_gone"]}
+{"name": "Becoming.Web.family_excess_gone", "uses": ["Becoming.Flow.below_of_excess", "Becoming.Flow.family_ends_below_at"]}
+{"name": "Becoming.Web.family_excess_not_endless", "uses": ["Becoming.Web.family_excess_degenerates", "Becoming.«尽则非不穷»"]}
+{"name": "Becoming.Web.generation_arises_late", "uses": ["Becoming.Web.active_along_line", "Becoming.Web.carries_iff", "Becoming.Web.generation_renews_late"]}
+{"name": "Becoming.Web.generation_renews_late", "uses": ["Becoming.Web.reached_later", "Becoming.Web.reaches_onward", "Becoming.«所及之传递»"]}
+{"name": "Becoming.Web.itself_carries_nothing", "uses": ["Becoming.Web.not_carries_of_within_itself"]}
+{"name": "Becoming.Web.itself_keeps", "uses": ["Becoming.Web.itself_carries_nothing"]}
+{"name": "Becoming.Web.itself_not_generation", "uses": ["Becoming.Web.not_generation_of_within_itself"]}
+{"name": "Becoming.Web.keeping_of_carried_on", "uses": ["Becoming.Web.active_along_line", "Becoming.Web.carries_iff", "Becoming.Web.reached_later", "Becoming.Web.reaches_onward", "Becoming.«所及之传递»"]}
+{"name": "Becoming.Web.not_carries_of_within_itself", "uses": []}
+{"name": "Becoming.Web.not_endless_of_gone", "uses": ["Becoming.Web.activity_every_branch_ends_of_gone", "Becoming.«尽则非不穷»"]}
+{"name": "Becoming.Web.not_generation_of_within_itself", "uses": ["Becoming.Web.not_carries_of_within_itself"]}
+{"name": "Becoming.Web.passing_carries_iff", "uses": ["Becoming.Web.carries_iff"]}
+{"name": "Becoming.Web.reached_coarser", "uses": ["Becoming.«及之单调»", "Becoming.«粗化»"]}
+{"name": "Becoming.Web.reached_later", "uses": ["Becoming.Web.line_advances"]}
+{"name": "Becoming.Web.reaches_onward", "uses": ["Becoming.Web.steps_advance", "Becoming.«不穷则迭»", "Becoming.«迭则同一或及»"]}
+{"name": "Becoming.Web.stopped_degenerates", "uses": ["Becoming.Web.activity_every_branch_ends_of_gone", "Becoming.Web.stopped_gone"]}
+{"name": "Becoming.Web.stopped_gone", "uses": ["Becoming.Web.ByPassing.ends_within"]}
+{"name": "Becoming.Web.stopped_not_endless", "uses": ["Becoming.Web.stopped_degenerates", "Becoming.«尽则非不穷»"]}

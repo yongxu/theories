@@ -1,0 +1,29 @@
+{"name": "Becoming.Flow.BalancesOn.rest_not_netGiver", "uses": ["Becoming.Flow.balancesOn_iff_idle", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.counting_given_by_rest", "uses": ["Becoming.sub_eq_zero_of_le", "Becoming.succ_sub_self"]}
+{"name": "Becoming.Flow.empty_gainless", "uses": []}
+{"name": "Becoming.Flow.netGiver_cases", "uses": ["Becoming.mem_of_some_mem", "Becoming.some_mem_tail"]}
+{"name": "Becoming.Flow.new_beyond_every", "uses": ["Becoming.Flow.new_from_rest_or_open", "Becoming.Web.new_of_sub"]}
+{"name": "Becoming.Flow.new_from_rest_or_open", "uses": ["Becoming.Flow.rise_from_rest_or_open", "Becoming.Web.rises_late_of_new"]}
+{"name": "Becoming.Flow.newly_supported_from_rest_or_open", "uses": ["Becoming.Flow.rise_from_rest_or_open", "Becoming.Web.rises_late_of_newly_supported"]}
+{"name": "Becoming.Flow.rest_netGiver_iff", "uses": []}
+{"name": "Becoming.Flow.rise_from_rest_or_open", "uses": ["Becoming.Flow.rise_given"]}
+{"name": "Becoming.Flow.rise_given", "uses": ["Becoming.Flow.netGiver_cases", "Becoming.Flow.rise_netGiver"]}
+{"name": "Becoming.Flow.rise_given_between", "uses": ["Becoming.Flow.rise_netGiver", "Becoming.rises_between"]}
+{"name": "Becoming.Flow.rise_netGiver", "uses": ["Becoming.Flow.Balances.nonrising", "Becoming.Flow.withImbalance_balances", "Becoming.search"]}
+{"name": "Becoming.Flow.whole_bounded_of_rest_idle", "uses": ["Becoming.Flow.whole_rise_from_rest", "Becoming.nonrising_between"]}
+{"name": "Becoming.Flow.whole_not_new_of_rest_idle", "uses": ["Becoming.Flow.whole_recurs_of_rest_idle"]}
+{"name": "Becoming.Flow.whole_recurs_of_rest_idle", "uses": ["Becoming.Flow.uncarried_of_bounded", "Becoming.Flow.whole_bounded_of_rest_idle", "Becoming.Web.revisits_of_bounded"]}
+{"name": "Becoming.Flow.whole_rise_from_rest", "uses": ["Becoming.Flow.rise_from_rest_or_open"]}
+{"name": "Becoming.Web.config_eq_of_sub", "uses": ["Becoming.map_eq_at", "Becoming.map_eq_on"]}
+{"name": "Becoming.Web.exceeds_of_firsts", "uses": ["Becoming.Web.distinct_configs_of_apart", "Becoming.Web.exceeds_of_distinct_configs", "Becoming.length_map", "Becoming.preimage_of_mem_map", "Becoming.steps_distinct", "Becoming.steps_length", "Becoming.steps_within"]}
+{"name": "Becoming.Web.newAt_of_first", "uses": ["Becoming.Web.supported_of_config"]}
+{"name": "Becoming.Web.new_of_sub", "uses": ["Becoming.Web.config_eq_of_sub"]}
+{"name": "Becoming.Web.rises_late_of_firsts", "uses": ["Becoming.Web.distinct_configs_of_apart", "Becoming.Web.unbounded_of_distinct_configs", "Becoming.le_of_increasing", "Becoming.length_map", "Becoming.preimage_of_mem_map", "Becoming.rises_between", "Becoming.steps_distinct", "Becoming.steps_length", "Becoming.steps_mem"]}
+{"name": "Becoming.Web.rises_late_of_new", "uses": ["Becoming.Web.rises_within_of_new"]}
+{"name": "Becoming.Web.rises_late_of_newly_supported", "uses": ["Becoming.Web.newAt_of_first", "Becoming.Web.rises_late_of_firsts"]}
+{"name": "Becoming.Web.rises_within_of_new", "uses": ["Becoming.Web.exceeds_of_new", "Becoming.rises_between"]}
+{"name": "Becoming.Web.supported_of_config", "uses": ["Becoming.map_eq_at"]}
+{"name": "Becoming.le_of_increasing", "uses": []}
+{"name": "Becoming.map_eq_at", "uses": []}
+{"name": "Becoming.map_eq_on", "uses": []}
+{"name": "Becoming.some_mem_tail", "uses": []}

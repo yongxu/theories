@@ -1,0 +1,34 @@
+{"name": "Becoming.BareSignificance.bare_forces_reason", "uses": []}
+{"name": "Becoming.Ranking.Pause.pause_ranked_below", "uses": []}
+{"name": "Becoming.Ranking.ThirdParty.possible_extends", "uses": ["Becoming.Ranking.ThirdParty.over_below_seven", "Becoming.Ranking.ThirdParty.stops_supports"]}
+{"name": "Becoming.Ranking.absent_admits_all", "uses": ["Becoming.Ranking.undisturbed_sustains"]}
+{"name": "Becoming.Ranking.malignant_possible", "uses": ["Becoming.Ranking.included_before_loss", "Becoming.Ranking.possible_extends", "Becoming.Web.static_consumingIn", "RelationalRenewal.Law.overdraw_consuming"]}
+{"name": "Becoming.Ranking.possibleFirst_order", "uses": []}
+{"name": "Becoming.Ranking.possibleFirst_overdraw", "uses": ["Becoming.Ranking.possible_extends"]}
+{"name": "Becoming.Ranking.possibleFirst_presence", "uses": ["Becoming.Ranking.possible_tie", "Becoming.Ranking.readings_rank_presence"]}
+{"name": "Becoming.Ranking.possible_contest", "uses": ["Becoming.Ranking.possible_of_active", "Becoming.Ranking.sharing_included", "Becoming.Web.static_dependent", "RelationalRenewal.Law.overdraw_consuming", "RelationalRenewal.Law.unfolding_dependent"]}
+{"name": "Becoming.Ranking.possible_course_iff", "uses": []}
+{"name": "Becoming.Ranking.possible_extends", "uses": ["Becoming.Ranking.absent_admits_all", "RelationalRenewal.Law.overdraw_consuming"]}
+{"name": "Becoming.Ranking.possible_extends_iff", "uses": ["Becoming.Ranking.possible_course_iff"]}
+{"name": "Becoming.Ranking.possible_of_active", "uses": []}
+{"name": "Becoming.Ranking.possible_ranks", "uses": ["Becoming.Ranking.possible_extends"]}
+{"name": "Becoming.Ranking.possible_restraint", "uses": ["RelationalRenewal.Law.overdraw_consuming"]}
+{"name": "Becoming.Ranking.possible_tie", "uses": ["Becoming.Ranking.undisturbed_sustains", "RelationalRenewal.Law.within_renewal_sustains"]}
+{"name": "Becoming.Ranking.readings_rank_presence", "uses": ["Becoming.Ranking.stops_included", "RelationalRenewal.Law.within_renewal_sustains"]}
+{"name": "Becoming.Ranking.relational_iff", "uses": []}
+{"name": "Becoming.Ranking.sharing_presence", "uses": ["Becoming.Ranking.possible_tie", "Becoming.Ranking.readings_rank_presence"]}
+{"name": "Becoming.Ranking.stepwise_iff", "uses": []}
+{"name": "Becoming.Web.Includes.of_le", "uses": ["Becoming.Web.Admits.mono"]}
+{"name": "Becoming.Web.not_added_of_le", "uses": ["Becoming.Web.Includes.of_le", "Becoming.Web.Includes.retains", "Becoming.Web.Retains.not_added"]}
+{"name": "Becoming.Web.paths_one_object", "uses": ["Becoming.Web.paths_extension_iff_widens", "Becoming.Web.unrestricted_iff_paths_livingSignificance", "Becoming.Web.widens_iff_retains_adds"]}
+{"name": "Becoming.Web.paths_somewhere", "uses": []}
+{"name": "Becoming.Web.unrestricted_iff_paths_livingSignificance", "uses": ["Becoming.Web.paths_somewhere", "Becoming.unrestricted_iff_livingSignificance"]}
+{"name": "Becoming.articulates_total", "uses": ["Becoming.securesNewContent_total"]}
+{"name": "Becoming.livingSignificance_of_unrestricted", "uses": []}
+{"name": "Becoming.livingSignificance_relevance_iff", "uses": []}
+{"name": "Becoming.positioned_articulation_of_articulatesLiving", "uses": []}
+{"name": "Becoming.relevance_least", "uses": []}
+{"name": "Becoming.securesNewContent_total", "uses": []}
+{"name": "Becoming.universal_reason_living", "uses": ["Becoming.Scope.secures"]}
+{"name": "Becoming.universal_reason_of_unrestricted", "uses": ["Becoming.Valuation.premises_of_unrestricted", "Becoming.universal_reason_living"]}
+{"name": "Becoming.unrestricted_iff_livingSignificance", "uses": []}

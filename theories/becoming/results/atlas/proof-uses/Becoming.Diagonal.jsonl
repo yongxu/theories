@@ -1,0 +1,41 @@
+{"name": "Becoming.Diagonal.Says.congr", "uses": []}
+{"name": "Becoming.Diagonal.Unfolds.chases", "uses": []}
+{"name": "Becoming.Diagonal.Unfolds.gap_new", "uses": ["Becoming.Diagonal.Unfolds.keeps_on", "Becoming.Diagonal.gap_unsaid"]}
+{"name": "Becoming.Diagonal.Unfolds.gaps_differ", "uses": ["Becoming.Diagonal.Says.congr", "Becoming.Diagonal.Unfolds.chases", "Becoming.Diagonal.Unfolds.keeps_on", "Becoming.Diagonal.gap_unsaid"]}
+{"name": "Becoming.Diagonal.Unfolds.incomplete", "uses": ["Becoming.Diagonal.gap_unsaid"]}
+{"name": "Becoming.Diagonal.Unfolds.keeps", "uses": []}
+{"name": "Becoming.Diagonal.Unfolds.keeps_on", "uses": ["Becoming.Diagonal.Unfolds.keeps"]}
+{"name": "Becoming.Diagonal.Unfolds.never_returns", "uses": ["Becoming.Diagonal.Unfolds.chases", "Becoming.Diagonal.Unfolds.keeps_on", "Becoming.Diagonal.gap_unsaid"]}
+{"name": "Becoming.Diagonal.Unfolds.unheld", "uses": ["Becoming.Diagonal.Unfolds.gaps_differ", "Becoming.Diagonal.stock_unheld", "Becoming.gap_of_lt"]}
+{"name": "Becoming.Diagonal.alike_of_complete", "uses": ["Becoming.Diagonal.fixed_of_complete"]}
+{"name": "Becoming.Diagonal.claims_gap", "uses": ["Becoming.Diagonal.gap_unsaid", "Becoming.Diagonal.moves_not"]}
+{"name": "Becoming.Diagonal.claims_incomplete", "uses": ["Becoming.Diagonal.fixed_of_complete", "Becoming.Diagonal.moves_not"]}
+{"name": "Becoming.Diagonal.complete_iff_alike", "uses": ["Becoming.Diagonal.alike_of_complete", "Becoming.Diagonal.complete_of_alike"]}
+{"name": "Becoming.Diagonal.complete_of_alike", "uses": []}
+{"name": "Becoming.Diagonal.fixed_of_complete", "uses": []}
+{"name": "Becoming.Diagonal.flip_moves", "uses": []}
+{"name": "Becoming.Diagonal.gap_unsaid", "uses": []}
+{"name": "Becoming.Diagonal.moves_not", "uses": []}
+{"name": "Becoming.Diagonal.negation_never_rests", "uses": ["Becoming.Diagonal.moves_not"]}
+{"name": "Becoming.Diagonal.negation_returns", "uses": ["Becoming.Law.returns_iff"]}
+{"name": "Becoming.Diagonal.revision_never_rests", "uses": []}
+{"name": "Becoming.Diagonal.stock_unheld", "uses": ["Becoming.Diagonal.two_ne_odd"]}
+{"name": "Becoming.Diagonal.two_ne_odd", "uses": []}
+{"name": "Becoming.Diagonal.unfolding_fresh", "uses": []}
+{"name": "Becoming.Diagonal.unfolding_open", "uses": ["Becoming.Diagonal.Unfolds.incomplete", "Becoming.Diagonal.Unfolds.never_returns", "Becoming.Diagonal.Unfolds.unheld", "Becoming.Diagonal.flip_moves", "Becoming.Diagonal.unfolding_unfolds"]}
+{"name": "Becoming.Diagonal.unfolding_unfolds", "uses": ["Becoming.Diagonal.unfolding_fresh", "Becoming.Diagonal.unfolding_zero"]}
+{"name": "Becoming.Diagonal.unfolding_zero", "uses": []}
+{"name": "Becoming.DiagonalRuns.complete_iff_alike", "uses": ["Becoming.Diagonal.complete_iff_alike"]}
+{"name": "Becoming.DiagonalRuns.frame_gap", "uses": ["Becoming.Diagonal.claims_gap"]}
+{"name": "Becoming.DiagonalRuns.gap_new", "uses": ["Becoming.Diagonal.Unfolds.gap_new", "Becoming.DiagonalRuns.run_unfolds"]}
+{"name": "Becoming.DiagonalRuns.gaps_differ", "uses": ["Becoming.Diagonal.Unfolds.gaps_differ", "Becoming.DiagonalRuns.run_unfolds"]}
+{"name": "Becoming.DiagonalRuns.incomplete", "uses": ["Becoming.Diagonal.Unfolds.incomplete", "Becoming.DiagonalRuns.run_unfolds"]}
+{"name": "Becoming.DiagonalRuns.negation_never_rests", "uses": ["Becoming.Branching.law_run_state", "Becoming.Diagonal.negation_never_rests"]}
+{"name": "Becoming.DiagonalRuns.negation_returns", "uses": ["Becoming.Branching.law_returns_iff", "Becoming.Diagonal.negation_returns"]}
+{"name": "Becoming.DiagonalRuns.never_returns", "uses": ["Becoming.Diagonal.Unfolds.never_returns", "Becoming.DiagonalRuns.run_unfolds"]}
+{"name": "Becoming.DiagonalRuns.revision_never_rests", "uses": ["Becoming.Branching.law_run_state", "Becoming.Diagonal.revision_never_rests"]}
+{"name": "Becoming.DiagonalRuns.run_unfolds", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.DiagonalRuns.unfoldingRun_open", "uses": ["Becoming.Diagonal.unfolding_open"]}
+{"name": "Becoming.DiagonalRuns.unfolds_iff", "uses": ["Becoming.Diagonal.Unfolds.chases", "Becoming.Diagonal.Unfolds.keeps", "Becoming.DiagonalRuns.run_unfolds"]}
+{"name": "Becoming.DiagonalRuns.unheld", "uses": ["Becoming.Diagonal.Unfolds.unheld", "Becoming.DiagonalRuns.run_unfolds"]}
+{"name": "Becoming.Frame.self_incomplete", "uses": ["Becoming.Diagonal.claims_incomplete"]}

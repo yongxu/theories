@@ -1,0 +1,18 @@
+{"name": "Becoming.StrictTransport.anchor_licenses_no_longer_repair", "uses": ["Becoming.StrictTransport.cutoff_priority_iff", "Becoming.StrictTransport.cutoff_rejection_iff"]}
+{"name": "Becoming.StrictTransport.continuation_first_above_every", "uses": []}
+{"name": "Becoming.StrictTransport.continuation_first_no_cutoff", "uses": []}
+{"name": "Becoming.StrictTransport.continuation_first_prefers_shorter", "uses": []}
+{"name": "Becoming.StrictTransport.continuation_first_transitive", "uses": []}
+{"name": "Becoming.StrictTransport.cutoff_priority_iff", "uses": []}
+{"name": "Becoming.StrictTransport.cutoff_rejection_iff", "uses": []}
+{"name": "Becoming.StrictTransport.cutoff_transitive", "uses": []}
+{"name": "Becoming.StrictTransport.cutoffs_disagree", "uses": ["Becoming.StrictTransport.cutoff_priority_iff", "Becoming.StrictTransport.cutoff_rejection_iff"]}
+{"name": "Becoming.StrictTransport.reason_of_strict_above", "uses": ["Becoming.StrictTransport.strict_above_trans"]}
+{"name": "Becoming.StrictTransport.shorter_interruption_no_worse", "uses": []}
+{"name": "Becoming.StrictTransport.strict_above_along", "uses": ["Becoming.StrictTransport.strict_above_of_compatible"]}
+{"name": "Becoming.StrictTransport.strict_above_of_compatible", "uses": ["Becoming.StrictTransport.strict_above_trans"]}
+{"name": "Becoming.StrictTransport.strict_above_trans", "uses": []}
+{"name": "Becoming.StrictTransport.strict_below_along", "uses": ["Becoming.StrictTransport.strict_below_of_compatible"]}
+{"name": "Becoming.StrictTransport.strict_below_of_compatible", "uses": ["Becoming.StrictTransport.strict_below_trans"]}
+{"name": "Becoming.StrictTransport.strict_below_trans", "uses": []}
+{"name": "Becoming.StrictTransport.strict_iff_of_faithful", "uses": []}

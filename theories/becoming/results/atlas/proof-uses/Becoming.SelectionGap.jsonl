@@ -1,0 +1,7 @@
+{"name": "Becoming.ExchangeLaw.withAct_give_of_part", "uses": []}
+{"name": "Becoming.ExchangeLaw.withAct_take_of_part", "uses": []}
+{"name": "Becoming.Flow.ActsAlikeOnCoupled.within", "uses": []}
+{"name": "Becoming.Flow.act_unselected", "uses": ["Becoming.ExchangeLaw.Through.responds", "Becoming.Flow.Balances.on", "Becoming.Flow.unselected_beyond_coupling_responsive"]}
+{"name": "Becoming.Flow.act_unselected_of_coupled", "uses": ["Becoming.Flow.ActsAlikeOnCoupled.within", "Becoming.Flow.act_unselected"]}
+{"name": "Becoming.Flow.consequence_unselected", "uses": ["Becoming.Flow.act_unselected"]}
+{"name": "Becoming.act_courses_unselected", "uses": ["Becoming.ExchangeLaw.course_balances_iff", "Becoming.ExchangeLaw.withAct_follows", "Becoming.ExchangeLaw.withAct_give_of_part", "Becoming.ExchangeLaw.withAct_nonanticipating", "Becoming.ExchangeLaw.withAct_take_of_part", "Becoming.Flow.act_unselected"]}

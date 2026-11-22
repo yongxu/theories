@@ -1,0 +1,128 @@
+{"name": "Becoming.WindowedWaiting.Line.relay_course", "uses": ["Becoming.WindowedWaiting.Line.source_out"]}
+{"name": "Becoming.WindowedWaiting.Line.source_out", "uses": []}
+{"name": "Becoming.WindowedWaiting.Line.withholder_answered_reached", "uses": ["Becoming.WindowedWaiting.Line.relay_course", "Becoming.WindowedWaiting.withholder_answered"]}
+{"name": "Becoming.WindowedWaiting.NeverAnswers.not", "uses": []}
+{"name": "Becoming.WindowedWaiting.NeverRestores.not", "uses": []}
+{"name": "Becoming.WindowedWaiting.Pair.absorbs_needs_two", "uses": ["Becoming.WindowedWaiting.errs_answered"]}
+{"name": "Becoming.WindowedWaiting.Pair.agrees_always", "uses": []}
+{"name": "Becoming.WindowedWaiting.Pair.agrees_both", "uses": []}
+{"name": "Becoming.WindowedWaiting.Pair.agrees_dnf", "uses": []}
+{"name": "Becoming.WindowedWaiting.Pair.agrees_either", "uses": []}
+{"name": "Becoming.WindowedWaiting.Pair.agrees_never", "uses": []}
+{"name": "Becoming.WindowedWaiting.Pair.agrees_own", "uses": []}
+{"name": "Becoming.WindowedWaiting.Pair.agrees_partner", "uses": []}
+{"name": "Becoming.WindowedWaiting.Pair.agrees_table", "uses": []}
+{"name": "Becoming.WindowedWaiting.Pair.all_agreeing_keeps_em", "uses": ["Becoming.WindowedWaiting.Pair.agrees_dnf", "Becoming.WindowedWaiting.Pair.dnf_keeps_em"]}
+{"name": "Becoming.WindowedWaiting.Pair.alternator_answered_one", "uses": ["Becoming.WindowedWaiting.errs_answered", "Becoming.WindowedWaiting.even_two_mul"]}
+{"name": "Becoming.WindowedWaiting.Pair.alternator_bridge", "uses": ["Becoming.ListTests.not_true_iff", "Becoming.WindowedWaiting.Pair.alternator_gives_odd", "Becoming.WindowedWaiting.Pair.alternator_received", "Becoming.WindowedWaiting.alternator_never_answered", "Becoming.WindowedWaiting.alternator_second"]}
+{"name": "Becoming.WindowedWaiting.Pair.alternator_gives_odd", "uses": ["Becoming.WindowedWaiting.Pair.alternator_gives_odd_within"]}
+{"name": "Becoming.WindowedWaiting.Pair.alternator_gives_odd_within", "uses": ["Becoming.WindowedWaiting.Pair.secondErrsEven_spaced", "Becoming.WindowedWaiting.gives_unless_errs", "Becoming.WindowedWaiting.spaced_mono"]}
+{"name": "Becoming.WindowedWaiting.Pair.alternator_received", "uses": ["Becoming.WindowedWaiting.Pair.alternator_received_within"]}
+{"name": "Becoming.WindowedWaiting.Pair.alternator_received_within", "uses": ["Becoming.WindowedWaiting.Pair.secondErrsEven_spaced", "Becoming.WindowedWaiting.gives_unless_errs", "Becoming.WindowedWaiting.spaced_mono"]}
+{"name": "Becoming.WindowedWaiting.Pair.answers_first", "uses": []}
+{"name": "Becoming.WindowedWaiting.Pair.answers_second", "uses": []}
+{"name": "Becoming.WindowedWaiting.Pair.dnf_keeps_em", "uses": ["Becoming.WindowedWaiting.Pair.dnf_keeps_iff_em"]}
+{"name": "Becoming.WindowedWaiting.Pair.dnf_keeps_iff_em", "uses": []}
+{"name": "Becoming.WindowedWaiting.Pair.echo", "uses": ["Becoming.WindowedWaiting.Pair.swap_first", "Becoming.WindowedWaiting.Pair.swap_second"]}
+{"name": "Becoming.WindowedWaiting.Pair.echo_returns", "uses": ["Becoming.WindowedWaiting.Pair.loop", "Becoming.Withholding.withholding_returns"]}
+{"name": "Becoming.WindowedWaiting.Pair.exactly_one", "uses": ["Becoming.WindowedWaiting.Pair.swap_first", "Becoming.WindowedWaiting.Pair.swap_second", "Becoming.WindowedWaiting.invariant"]}
+{"name": "Becoming.WindowedWaiting.Pair.firstAlwaysErrs_second", "uses": ["Becoming.WindowedWaiting.lag_below_two"]}
+{"name": "Becoming.WindowedWaiting.Pair.firstErrsOnce_spaced", "uses": []}
+{"name": "Becoming.WindowedWaiting.Pair.induced_keeps", "uses": []}
+{"name": "Becoming.WindowedWaiting.Pair.induced_partner", "uses": ["Becoming.WindowedWaiting.Pair.answers_first", "Becoming.WindowedWaiting.Pair.answers_second"]}
+{"name": "Becoming.WindowedWaiting.Pair.keeps_of_induced", "uses": []}
+{"name": "Becoming.WindowedWaiting.Pair.loop", "uses": []}
+{"name": "Becoming.WindowedWaiting.Pair.never_together", "uses": ["Becoming.WindowedWaiting.Pair.exactly_one"]}
+{"name": "Becoming.WindowedWaiting.Pair.not_absorbs_and_answers", "uses": ["Becoming.WindowedWaiting.Pair.not_absorbs_and_answers_spaced", "Becoming.WindowedWaiting.Pair.secondErrsEven_spaced"]}
+{"name": "Becoming.WindowedWaiting.Pair.not_absorbs_and_answers_spaced", "uses": ["Becoming.WindowedWaiting.Pair.absorbs_needs_two", "Becoming.WindowedWaiting.gives_unless_errs", "Becoming.WindowedWaiting.spaced_mono"]}
+{"name": "Becoming.WindowedWaiting.Pair.pairKeepsInclusion_iff_induced", "uses": ["Becoming.WindowedWaiting.Pair.agrees_always", "Becoming.WindowedWaiting.Pair.agrees_both", "Becoming.WindowedWaiting.Pair.agrees_either", "Becoming.WindowedWaiting.Pair.agrees_never", "Becoming.WindowedWaiting.Pair.agrees_own", "Becoming.WindowedWaiting.Pair.agrees_partner", "Becoming.WindowedWaiting.Pair.agrees_table", "Becoming.WindowedWaiting.Pair.induced_keeps", "Becoming.WindowedWaiting.Pair.keeps_of_induced", "Becoming.WindowedWaiting.eq_table_of"]}
+{"name": "Becoming.WindowedWaiting.Pair.partnerGave_course", "uses": ["Becoming.WindowedWaiting.Pair.answers_first", "Becoming.WindowedWaiting.Pair.answers_second", "Becoming.WindowedWaiting.course_rel", "Becoming.WindowedWaiting.partnerGave_eq"]}
+{"name": "Becoming.WindowedWaiting.Pair.partnerGave_never_restores_of_echo", "uses": ["Becoming.WindowedWaiting.Pair.never_together", "Becoming.WindowedWaiting.Pair.partnerGave_course"]}
+{"name": "Becoming.WindowedWaiting.Pair.secondErrsEven_spaced", "uses": []}
+{"name": "Becoming.WindowedWaiting.Pair.swap_first", "uses": ["Becoming.WindowedWaiting.Pair.answers_first", "Becoming.WindowedWaiting.Pair.answers_second"]}
+{"name": "Becoming.WindowedWaiting.Pair.swap_second", "uses": ["Becoming.WindowedWaiting.Pair.answers_first", "Becoming.WindowedWaiting.Pair.answers_second"]}
+{"name": "Becoming.WindowedWaiting.Pair.waited_on", "uses": ["Becoming.WindowedWaiting.Pair.waits_partner"]}
+{"name": "Becoming.WindowedWaiting.Pair.waits_partner", "uses": []}
+{"name": "Becoming.WindowedWaiting.Pair.windowAgainst_course", "uses": ["Becoming.ListTests.or_true_iff", "Becoming.WindowedWaiting.Pair.firstAlwaysErrs_second", "Becoming.WindowedWaiting.course_rel", "Becoming.WindowedWaiting.or_congr_both"]}
+{"name": "Becoming.WindowedWaiting.Pair.windowAgainst_withholds_of_clocked", "uses": ["Becoming.WindowedWaiting.Pair.windowAgainst_course", "Becoming.WindowedWaiting.Pair.withholder_answered_tight"]}
+{"name": "Becoming.WindowedWaiting.Pair.windowStep_course", "uses": ["Becoming.ListTests.or_true_iff", "Becoming.WindowedWaiting.Pair.within_first", "Becoming.WindowedWaiting.Pair.within_second", "Becoming.WindowedWaiting.course_rel", "Becoming.WindowedWaiting.or_congr_both"]}
+{"name": "Becoming.WindowedWaiting.Pair.window_absorbs", "uses": ["Becoming.WindowedWaiting.Pair.window_absorbs_within"]}
+{"name": "Becoming.WindowedWaiting.Pair.window_absorbs_within", "uses": ["Becoming.WindowedWaiting.Pair.firstErrsOnce_spaced", "Becoming.WindowedWaiting.gives_unless_errs", "Becoming.WindowedWaiting.spaced_mono"]}
+{"name": "Becoming.WindowedWaiting.Pair.window_restores", "uses": ["Becoming.WindowedWaiting.Pair.windowStep_course", "Becoming.WindowedWaiting.windowTwo_restored_stays"]}
+{"name": "Becoming.WindowedWaiting.Pair.withholder_answered_holds", "uses": ["Becoming.WindowedWaiting.Pair.waited_on", "Becoming.WindowedWaiting.window_withheld_kept", "Becoming.WindowedWaiting.withholder_answered"]}
+{"name": "Becoming.WindowedWaiting.Pair.withholder_answered_tight", "uses": ["Becoming.WindowedWaiting.withholder_answered_clocked"]}
+{"name": "Becoming.WindowedWaiting.Pair.within_first", "uses": ["Becoming.WindowedWaiting.lag_below_two"]}
+{"name": "Becoming.WindowedWaiting.Pair.within_second", "uses": ["Becoming.WindowedWaiting.lag_below_two"]}
+{"name": "Becoming.WindowedWaiting.agreement_against", "uses": []}
+{"name": "Becoming.WindowedWaiting.agreement_answers", "uses": ["Becoming.WindowedWaiting.agreement_answers_at_one"]}
+{"name": "Becoming.WindowedWaiting.agreement_answers_at_one", "uses": []}
+{"name": "Becoming.WindowedWaiting.agreement_eq", "uses": []}
+{"name": "Becoming.WindowedWaiting.agreement_not_keeps", "uses": []}
+{"name": "Becoming.WindowedWaiting.agreement_restores", "uses": ["Becoming.WindowedWaiting.agreement_restores_at_two"]}
+{"name": "Becoming.WindowedWaiting.agreement_restores_at_two", "uses": []}
+{"name": "Becoming.WindowedWaiting.alternator_course", "uses": []}
+{"name": "Becoming.WindowedWaiting.alternator_gives_half", "uses": ["Becoming.WindowedWaiting.alternator_course"]}
+{"name": "Becoming.WindowedWaiting.alternator_never_answered", "uses": ["Becoming.WindowedWaiting.invariant"]}
+{"name": "Becoming.WindowedWaiting.alternator_second", "uses": []}
+{"name": "Becoming.WindowedWaiting.alwaysGives_keeps", "uses": ["Becoming.WindowedWaiting.pairKeepsInclusion_iff"]}
+{"name": "Becoming.WindowedWaiting.alwaysGives_never_answers", "uses": ["Becoming.WindowedWaiting.never_answers_of"]}
+{"name": "Becoming.WindowedWaiting.answersWithholder_at_one", "uses": ["Becoming.WindowedWaiting.answersWithholder_iff"]}
+{"name": "Becoming.WindowedWaiting.answersWithholder_iff", "uses": ["Becoming.WindowedWaiting.never_answers_of"]}
+{"name": "Becoming.WindowedWaiting.answersWithin_into", "uses": []}
+{"name": "Becoming.WindowedWaiting.answersWithin_keeps", "uses": ["Becoming.WindowedWaiting.answersWithin_into"]}
+{"name": "Becoming.WindowedWaiting.bothGave_keeps", "uses": ["Becoming.WindowedWaiting.pairKeepsInclusion_iff"]}
+{"name": "Becoming.WindowedWaiting.bothGave_never_restores", "uses": ["Becoming.WindowedWaiting.never_restores_of"]}
+{"name": "Becoming.WindowedWaiting.clocked_state", "uses": []}
+{"name": "Becoming.WindowedWaiting.course_congr", "uses": []}
+{"name": "Becoming.WindowedWaiting.course_rel", "uses": []}
+{"name": "Becoming.WindowedWaiting.eitherGave_keeps", "uses": ["Becoming.WindowedWaiting.pairKeepsInclusion_iff"]}
+{"name": "Becoming.WindowedWaiting.eitherGave_never_answers", "uses": ["Becoming.WindowedWaiting.never_answers_of"]}
+{"name": "Becoming.WindowedWaiting.eq_table_of", "uses": []}
+{"name": "Becoming.WindowedWaiting.erringRun_no_error", "uses": []}
+{"name": "Becoming.WindowedWaiting.erring_history", "uses": []}
+{"name": "Becoming.WindowedWaiting.erring_keeps", "uses": []}
+{"name": "Becoming.WindowedWaiting.erring_shift", "uses": []}
+{"name": "Becoming.WindowedWaiting.errs_answered", "uses": ["Becoming.WindowedWaiting.clocked_state", "Becoming.WindowedWaiting.erringRun_no_error", "Becoming.WindowedWaiting.erring_shift", "Becoming.le_dest"]}
+{"name": "Becoming.WindowedWaiting.even_two_mul", "uses": []}
+{"name": "Becoming.WindowedWaiting.gap_le", "uses": []}
+{"name": "Becoming.WindowedWaiting.gives_unless_errs", "uses": ["Becoming.WindowedWaiting.clocked_state", "Becoming.WindowedWaiting.erringRun_no_error", "Becoming.WindowedWaiting.gives_unless_errs_le"]}
+{"name": "Becoming.WindowedWaiting.gives_unless_errs_le", "uses": ["Becoming.WindowedWaiting.gap_le", "Becoming.WindowedWaiting.window_of_gap"]}
+{"name": "Becoming.WindowedWaiting.invariant", "uses": []}
+{"name": "Becoming.WindowedWaiting.keeps_not_both", "uses": ["Becoming.WindowedWaiting.NeverAnswers.not", "Becoming.WindowedWaiting.NeverRestores.not", "Becoming.WindowedWaiting.keeps_split"]}
+{"name": "Becoming.WindowedWaiting.keeps_split", "uses": ["Becoming.WindowedWaiting.bothGave_never_restores", "Becoming.WindowedWaiting.eq_table_of", "Becoming.WindowedWaiting.neverRestores_congr", "Becoming.WindowedWaiting.never_answers_of", "Becoming.WindowedWaiting.partnerGave_never_restores"]}
+{"name": "Becoming.WindowedWaiting.lag_below_one", "uses": []}
+{"name": "Becoming.WindowedWaiting.lag_below_two", "uses": []}
+{"name": "Becoming.WindowedWaiting.lag_shift", "uses": []}
+{"name": "Becoming.WindowedWaiting.neverRestores_congr", "uses": ["Becoming.WindowedWaiting.course_congr", "Becoming.WindowedWaiting.pairStep_congr"]}
+{"name": "Becoming.WindowedWaiting.never_answers_of", "uses": ["Becoming.WindowedWaiting.invariant"]}
+{"name": "Becoming.WindowedWaiting.never_restores_of", "uses": ["Becoming.WindowedWaiting.invariant"]}
+{"name": "Becoming.WindowedWaiting.or_congr_both", "uses": []}
+{"name": "Becoming.WindowedWaiting.ownGave_keeps", "uses": ["Becoming.WindowedWaiting.pairKeepsInclusion_iff"]}
+{"name": "Becoming.WindowedWaiting.ownGave_never_answers", "uses": ["Becoming.WindowedWaiting.never_answers_of"]}
+{"name": "Becoming.WindowedWaiting.ownGave_never_restores", "uses": ["Becoming.WindowedWaiting.never_restores_of"]}
+{"name": "Becoming.WindowedWaiting.pairKeepsInclusion_iff", "uses": []}
+{"name": "Becoming.WindowedWaiting.pairKeepsInclusion_table_iff", "uses": ["Becoming.WindowedWaiting.alwaysGives_keeps", "Becoming.WindowedWaiting.bothGave_keeps", "Becoming.WindowedWaiting.eitherGave_keeps", "Becoming.WindowedWaiting.ownGave_keeps", "Becoming.WindowedWaiting.partnerGave_keeps"]}
+{"name": "Becoming.WindowedWaiting.pairStep_congr", "uses": []}
+{"name": "Becoming.WindowedWaiting.partnerGave_eq", "uses": []}
+{"name": "Becoming.WindowedWaiting.partnerGave_keeps", "uses": ["Becoming.WindowedWaiting.pairKeepsInclusion_iff"]}
+{"name": "Becoming.WindowedWaiting.partnerGave_never_restores", "uses": ["Becoming.WindowedWaiting.never_restores_of"]}
+{"name": "Becoming.WindowedWaiting.restores_and_answers_iff", "uses": ["Becoming.WindowedWaiting.NeverRestores.not", "Becoming.WindowedWaiting.agreement_eq", "Becoming.WindowedWaiting.agreement_restores", "Becoming.WindowedWaiting.answersWithholder_iff", "Becoming.WindowedWaiting.bothGave_never_restores", "Becoming.WindowedWaiting.eq_table_of", "Becoming.WindowedWaiting.never_restores_of", "Becoming.WindowedWaiting.partnerGave_never_restores", "Becoming.WindowedWaiting.restores_congr"]}
+{"name": "Becoming.WindowedWaiting.restores_congr", "uses": ["Becoming.WindowedWaiting.course_congr", "Becoming.WindowedWaiting.pairStep_congr"]}
+{"name": "Becoming.WindowedWaiting.ringTwoErrors_answered", "uses": ["Becoming.WindowedWaiting.errs_answered"]}
+{"name": "Becoming.WindowedWaiting.spaced_mono", "uses": []}
+{"name": "Becoming.WindowedWaiting.spaced_window_holds", "uses": ["Becoming.WindowedWaiting.gives_unless_errs", "Becoming.WindowedWaiting.window_holds_of_gaps"]}
+{"name": "Becoming.WindowedWaiting.windowTwo_answers", "uses": []}
+{"name": "Becoming.WindowedWaiting.windowTwo_answers_stays", "uses": []}
+{"name": "Becoming.WindowedWaiting.windowTwo_keeps", "uses": []}
+{"name": "Becoming.WindowedWaiting.windowTwo_restored_stays", "uses": []}
+{"name": "Becoming.WindowedWaiting.windowTwo_restores", "uses": ["Becoming.WindowedWaiting.windowTwo_restored_stays"]}
+{"name": "Becoming.WindowedWaiting.window_holds_of_gaps", "uses": ["Becoming.WindowedWaiting.clocked_state", "Becoming.WindowedWaiting.window_of_gap"]}
+{"name": "Becoming.WindowedWaiting.window_mono", "uses": ["Becoming.Tolerance.KeepsInclusionInto.course", "Becoming.WindowedWaiting.answersWithin_into"]}
+{"name": "Becoming.WindowedWaiting.window_of_gap", "uses": ["Becoming.WindowedWaiting.erring_history", "Becoming.WindowedWaiting.erring_shift", "Becoming.WindowedWaiting.window_turn", "Becoming.le_dest"]}
+{"name": "Becoming.WindowedWaiting.window_one", "uses": ["Becoming.WindowedWaiting.lag_below_one"]}
+{"name": "Becoming.WindowedWaiting.window_restored_stays", "uses": ["Becoming.Tolerance.restored_stays", "Becoming.WindowedWaiting.answersWithin_keeps"]}
+{"name": "Becoming.WindowedWaiting.window_turn", "uses": []}
+{"name": "Becoming.WindowedWaiting.window_withheld_kept", "uses": ["Becoming.Tolerance.withheld_kept", "Becoming.WindowedWaiting.answersWithin_keeps"]}
+{"name": "Becoming.WindowedWaiting.window_worst_start", "uses": ["Becoming.Tolerance.worst_start", "Becoming.WindowedWaiting.answersWithin_keeps"]}
+{"name": "Becoming.WindowedWaiting.withholder_answered", "uses": ["Becoming.WindowedWaiting.lag_shift", "Becoming.le_dest"]}
+{"name": "Becoming.WindowedWaiting.withholder_answered_clocked", "uses": ["Becoming.WindowedWaiting.errs_answered", "Becoming.le_dest"]}

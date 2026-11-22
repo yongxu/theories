@@ -1,0 +1,34 @@
+{"name": "Becoming.Law.Reachable.back", "uses": ["Becoming.Branching.Reachable.earlier"]}
+{"name": "Becoming.Pace.Copying.rule_parts", "uses": []}
+{"name": "Becoming.Pace.byRule_reabsorbed", "uses": ["Becoming.Law.perturbation_reabsorbed", "Becoming.Pace.turn_byRule"]}
+{"name": "Becoming.Pace.dissolving", "uses": ["Becoming.Identification.lassoPos_early", "Becoming.Identification.lassoPos_period", "Becoming.Pace.lasso_statesBelow", "Becoming.le_dest"]}
+{"name": "Becoming.Pace.held_fixed", "uses": ["Becoming.Identification.bounded_agree"]}
+{"name": "Becoming.Pace.held_realizes", "uses": ["Becoming.Identification.statesBelow_iff_lasso", "Becoming.Learning.lasso_realized"]}
+{"name": "Becoming.Pace.held_statesBelow", "uses": ["Becoming.Identification.statesBelow_iff_lasso", "Becoming.Learning.lasso_of_held"]}
+{"name": "Becoming.Pace.lasso_statesBelow", "uses": ["Becoming.Law.upto_length", "Becoming.Learning.lasso_positions", "Becoming.Pace.held_statesBelow", "Becoming.mem_downFrom"]}
+{"name": "Becoming.Pace.never_reads_course", "uses": ["Becoming.Pace.paced_succ"]}
+{"name": "Becoming.Pace.never_reads_loses", "uses": ["Becoming.Law.Merges.loses", "Becoming.Law.Reachable.back", "Becoming.Law.reachable_iff", "Becoming.Pace.never_reads_course"]}
+{"name": "Becoming.Pace.never_reads_lost", "uses": ["Becoming.Branching.lost_stays", "Becoming.Law.reachable_iff", "Becoming.Pace.never_reads_course"]}
+{"name": "Becoming.Pace.never_reads_merged", "uses": ["Becoming.Law.merged_stays", "Becoming.Pace.never_reads_course"]}
+{"name": "Becoming.Pace.pace_law", "uses": ["Becoming.Identification.bounded_agree", "Becoming.Identification.bounded_agree_exact", "Becoming.Identification.prefix_eq_iff", "Becoming.IdentificationRuns.statesBelow_congr", "Becoming.Pace.held_realizes"]}
+{"name": "Becoming.Pace.paced_count", "uses": []}
+{"name": "Becoming.Pace.paced_held", "uses": ["Becoming.Pace.never_reads_course"]}
+{"name": "Becoming.Pace.paced_run", "uses": ["Becoming.Pace.paced_count"]}
+{"name": "Becoming.Pace.paced_stretch", "uses": ["Becoming.Pace.paced_succ"]}
+{"name": "Becoming.Pace.paced_succ", "uses": ["Becoming.Pace.paced_count"]}
+{"name": "Becoming.Pace.paced_zero", "uses": []}
+{"name": "Becoming.Pace.rule_alike_until_reading", "uses": ["Becoming.Pace.rule_until_reading"]}
+{"name": "Becoming.Pace.rule_at_reading", "uses": ["Becoming.Pace.paced_succ"]}
+{"name": "Becoming.Pace.rule_kept", "uses": ["Becoming.Pace.paced_succ"]}
+{"name": "Becoming.Pace.rule_through_pool", "uses": ["Becoming.Pace.rule_at_reading"]}
+{"name": "Becoming.Pace.rule_unreached", "uses": ["Becoming.Pace.rule_kept"]}
+{"name": "Becoming.Pace.rule_until_reading", "uses": ["Becoming.Pace.paced_count", "Becoming.Pace.stays"]}
+{"name": "Becoming.Pace.stays", "uses": ["Becoming.Invariant.reach", "Becoming.Run.reach"]}
+{"name": "Becoming.Pace.stays_turned", "uses": ["Becoming.Pace.stays"]}
+{"name": "Becoming.Pace.stretch_fixed", "uses": ["Becoming.Identification.bounded_agree", "Becoming.Pace.paced_stretch"]}
+{"name": "Becoming.Pace.turn_byRule", "uses": []}
+{"name": "Becoming.Pace.whole_fixed", "uses": ["Becoming.Identification.below_all", "Becoming.Identification.statesBelow_iff_lasso", "Becoming.Law.orbit_add", "Becoming.le_dest"]}
+{"name": "Becoming.Pace.whole_fixed_exact", "uses": ["Becoming.Identification.lassoPos_early", "Becoming.Identification.lassoPos_period", "Becoming.Pace.lasso_statesBelow"]}
+{"name": "Becoming.Switching.back_at_four", "uses": ["Becoming.Pace.paced_succ"]}
+{"name": "Becoming.Switching.changing_regains", "uses": ["Becoming.Pace.paced_succ", "Becoming.Switching.back_at_four"]}
+{"name": "Becoming.Switching.fixed_loses", "uses": ["Becoming.Branching.lost_stays", "Becoming.Law.reachable_iff"]}

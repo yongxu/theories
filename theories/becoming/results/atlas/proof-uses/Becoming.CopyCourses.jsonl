@@ -1,0 +1,13 @@
+{"name": "Becoming.CopyCourses.doubling_course_iff", "uses": ["Becoming.Copying.doubling_iff", "Becoming.Copying.required_add"]}
+{"name": "Becoming.CopyCourses.exchangeAt_length", "uses": ["Becoming.CopyCourses.length_setAt", "Becoming.Copying.ite_cases"]}
+{"name": "Becoming.CopyCourses.inspectAt_length", "uses": ["Becoming.CopyCourses.exchangeAt_length", "Becoming.Copying.ite_cases"]}
+{"name": "Becoming.CopyCourses.inspection_course_keeps_counts", "uses": ["Becoming.Copying.inspect_keeps_counts", "Generative.Trace.brecOn"]}
+{"name": "Becoming.CopyCourses.inspection_course_keeps_template", "uses": ["Becoming.CopyCourses.inspection_course_length", "Becoming.Copying.defects_self", "Becoming.Copying.defects_zero_iff", "Becoming.Courses.inspection_course_le"]}
+{"name": "Becoming.CopyCourses.inspection_course_length", "uses": ["Becoming.CopyCourses.inspectAt_length", "Generative.Trace.brecOn"]}
+{"name": "Becoming.CopyCourses.inspection_step_matches_iff", "uses": ["Becoming.Copying.inspect_matches_iff"]}
+{"name": "Becoming.CopyCourses.length_setAt", "uses": []}
+{"name": "Becoming.CopyCourses.run_copies", "uses": ["Becoming.Branching.law_run_state", "Becoming.Copying.copies", "Becoming.Courses.steps_orbit"]}
+{"name": "Becoming.CopyCourses.run_drawn", "uses": ["Becoming.CopyCourses.run_copies"]}
+{"name": "Becoming.CopyCourses.runs_draw_lt_iff", "uses": ["Becoming.CopyCourses.run_drawn", "Becoming.Copying.use_lt_iff"]}
+{"name": "Becoming.CopyCourses.runs_draw_midpoint", "uses": ["Becoming.CopyCourses.run_drawn", "Becoming.Copying.use_midpoint"]}
+{"name": "Becoming.CopyCourses.swap_course_iff", "uses": ["Becoming.Copying.batch_all_swap", "Becoming.Courses.every_released_iff_course"]}

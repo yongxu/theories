@@ -1,0 +1,62 @@
+{"name": "Becoming.ReorderingGrowth.ByDependence.contains", "uses": []}
+{"name": "Becoming.ReorderingGrowth.ByDependence.dependent", "uses": []}
+{"name": "Becoming.ReorderingGrowth.ByDependence.joined_first_last", "uses": []}
+{"name": "Becoming.ReorderingGrowth.ByDependence.joined_first_middle", "uses": []}
+{"name": "Becoming.ReorderingGrowth.ByDependence.joined_middle_last", "uses": []}
+{"name": "Becoming.ReorderingGrowth.ByDependence.only_reordering", "uses": ["Becoming.ReorderingGrowth.ByDependence.joined_first_middle", "Becoming.ReorderingGrowth.ByDependence.joined_middle_last", "Becoming.ReorderingGrowth.reordering_nil"]}
+{"name": "Becoming.ReorderingGrowth.ByDependence.persists_not_present", "uses": ["Becoming.Presence.link_of_present", "Becoming.ReorderingGrowth.ByDependence.contains", "Becoming.ReorderingGrowth.ByDependence.joined_first_last", "Becoming.ReorderingGrowth.ByDependence.joined_first_middle", "Becoming.ReorderingGrowth.ByDependence.joined_middle_last", "Becoming.ReorderingGrowth.exchanges_ordered", "Becoming.ReorderingGrowth.reordering_natural"]}
+{"name": "Becoming.ReorderingGrowth.MovedBack.contains", "uses": []}
+{"name": "Becoming.ReorderingGrowth.MovedBack.joined", "uses": []}
+{"name": "Becoming.ReorderingGrowth.MovedBack.only_reordering", "uses": ["Becoming.ReorderingGrowth.MovedBack.joined", "Becoming.ReorderingGrowth.reordering_nil"]}
+{"name": "Becoming.ReorderingGrowth.MovedBack.persists_not_present", "uses": ["Becoming.Presence.link_of_present", "Becoming.ReorderingGrowth.MovedBack.contains", "Becoming.ReorderingGrowth.MovedBack.joined", "Becoming.ReorderingGrowth.MovedBack.touches_moved", "Becoming.ReorderingGrowth.exchanges_ordered", "Becoming.ReorderingGrowth.reordering_natural"]}
+{"name": "Becoming.ReorderingGrowth.MovedBack.touches_moved", "uses": []}
+{"name": "Becoming.ReorderingGrowth.VeeWorld.apart", "uses": []}
+{"name": "Becoming.ReorderingGrowth.VeeWorld.contains", "uses": []}
+{"name": "Becoming.ReorderingGrowth.VeeWorld.joined_first_second", "uses": []}
+{"name": "Becoming.ReorderingGrowth.VeeWorld.joined_first_third", "uses": []}
+{"name": "Becoming.ReorderingGrowth.VeeWorld.natural_iff_vee", "uses": ["Becoming.Presence.natural_congr", "Becoming.ReorderingGrowth.VeeWorld.prec_iff_vee"]}
+{"name": "Becoming.ReorderingGrowth.VeeWorld.not_second_third", "uses": ["Becoming.ReorderingGrowth.VeeWorld.apart", "Becoming.ReorderingGrowth.last_of_precedes"]}
+{"name": "Becoming.ReorderingGrowth.VeeWorld.one_course_two_numberings", "uses": ["Becoming.Presence.courseOf_grows", "Becoming.ReorderingGrowth.VeeWorld.prec_iff_vee", "Becoming.ReorderingGrowth.VeeWorld.swap_below", "Becoming.ReorderingGrowth.VeeWorld.vee_swap", "Becoming.ReorderingGrowth.exchanges_ordered", "Becoming.origin_place", "Becoming.place_origin"]}
+{"name": "Becoming.ReorderingGrowth.VeeWorld.prec_iff_vee", "uses": ["Becoming.ReorderingGrowth.VeeWorld.joined_first_second", "Becoming.ReorderingGrowth.VeeWorld.joined_first_third", "Becoming.ReorderingGrowth.VeeWorld.vee_of_precedes"]}
+{"name": "Becoming.ReorderingGrowth.VeeWorld.presence_varies", "uses": ["Becoming.ReorderingGrowth.VeeWorld.prec_iff_vee", "Becoming.ReorderingGrowth.VeeWorld.reordering"]}
+{"name": "Becoming.ReorderingGrowth.VeeWorld.reordering", "uses": ["Becoming.ReorderingGrowth.VeeWorld.apart"]}
+{"name": "Becoming.ReorderingGrowth.VeeWorld.swap_below", "uses": ["Becoming.Presence.below_three"]}
+{"name": "Becoming.ReorderingGrowth.VeeWorld.vee_of_precedes", "uses": ["Becoming.Footprinted.Precedes.lt", "Becoming.ReorderingGrowth.VeeWorld.not_second_third"]}
+{"name": "Becoming.ReorderingGrowth.VeeWorld.vee_swap", "uses": ["Becoming.Presence.below_three"]}
+{"name": "Becoming.ReorderingGrowth.antichain_present_reordering", "uses": ["Becoming.Presence.antichain_present", "Becoming.ReorderingGrowth.exchanges_ordered", "Becoming.ReorderingGrowth.exchanges_weakly", "Becoming.ReorderingGrowth.maximalBorn_stretch", "Becoming.ReorderingGrowth.natural_reordering"]}
+{"name": "Becoming.ReorderingGrowth.before_some_reordering", "uses": ["Becoming.Presence.before_some_iff", "Becoming.ReorderingGrowth.before_stretch", "Becoming.ReorderingGrowth.exchanges_ordered", "Becoming.ReorderingGrowth.exchanges_weakly", "Becoming.ReorderingGrowth.some_reordering_iff"]}
+{"name": "Becoming.ReorderingGrowth.before_stretch", "uses": []}
+{"name": "Becoming.ReorderingGrowth.course_converse", "uses": ["Becoming.Footprinted.converse", "Becoming.Presence.lt_zero_add", "Becoming.Presence.natural_iff_course", "Becoming.Presence.of_lt_zero_add", "Becoming.ReorderingGrowth.exchanges_ordered", "Becoming.ReorderingGrowth.natural_iff"]}
+{"name": "Becoming.ReorderingGrowth.either_order_reordering", "uses": ["Becoming.ReorderingGrowth.before_some_reordering"]}
+{"name": "Becoming.ReorderingGrowth.every_reordering_iff", "uses": ["Becoming.ReorderingGrowth.natural_reordering", "Becoming.ReorderingGrowth.reordering_natural"]}
+{"name": "Becoming.ReorderingGrowth.every_reordering_not_not", "uses": ["Becoming.Presence.every_iff_not_not", "Becoming.ReorderingGrowth.before_stretch", "Becoming.ReorderingGrowth.every_reordering_iff", "Becoming.ReorderingGrowth.exchanges_ordered"]}
+{"name": "Becoming.ReorderingGrowth.exchanges_ordered", "uses": ["Becoming.Footprinted.Precedes.lt"]}
+{"name": "Becoming.ReorderingGrowth.exchanges_weakly", "uses": []}
+{"name": "Becoming.ReorderingGrowth.first_of_precedes", "uses": ["Becoming.Footprinted.Precedes.brecOn", "Becoming.Footprinted.Precedes.lt"]}
+{"name": "Becoming.ReorderingGrowth.keeps_precedes", "uses": ["Becoming.Footprinted.Precedes.brecOn", "Becoming.Footprinted.Precedes.lt"]}
+{"name": "Becoming.ReorderingGrowth.last_of_precedes", "uses": ["Becoming.Footprinted.Precedes.brecOn", "Becoming.Footprinted.Precedes.lt"]}
+{"name": "Becoming.ReorderingGrowth.links_exchanges", "uses": ["Becoming.Footprinted.Precedes.lt"]}
+{"name": "Becoming.ReorderingGrowth.maximalBorn_stretch", "uses": []}
+{"name": "Becoming.ReorderingGrowth.natural_iff", "uses": ["Becoming.Presence.of_lt_zero_add", "Becoming.ReorderingGrowth.keeps_precedes"]}
+{"name": "Becoming.ReorderingGrowth.natural_reordering", "uses": ["Becoming.Footprinted.sorts", "Becoming.Presence.lt_zero_add", "Becoming.ReorderingGrowth.natural_iff"]}
+{"name": "Becoming.ReorderingGrowth.persists_of_present", "uses": ["Becoming.Footprinted.Precedes.lt", "Becoming.ReorderingGrowth.sameAt_of_unmoved", "Becoming.le_dest"]}
+{"name": "Becoming.ReorderingGrowth.persists_of_present_reordering", "uses": ["Becoming.Footprinted.precedes_place", "Becoming.Footprinted.reorder_contains", "Becoming.Footprinted.reorder_shows", "Becoming.Footprinted.reorder_touch", "Becoming.Presence.lt_zero_add", "Becoming.Presence.of_lt_zero_add", "Becoming.ReorderingGrowth.persists_of_present", "Becoming.Web.SameAt.trans", "Becoming.origin_place", "Becoming.origin_within", "Becoming.place_origin", "Becoming.place_within"]}
+{"name": "Becoming.ReorderingGrowth.precedes_decided", "uses": ["Becoming.ReorderingGrowth.precedes_decided_below"]}
+{"name": "Becoming.ReorderingGrowth.precedes_decided_below", "uses": ["Becoming.Decided.exists_below", "Becoming.ReorderingGrowth.last_of_precedes"]}
+{"name": "Becoming.ReorderingGrowth.precedes_iff_every_reordering", "uses": ["Becoming.Decided.of_not_not", "Becoming.ReorderingGrowth.every_reordering_not_not"]}
+{"name": "Becoming.ReorderingGrowth.precedes_iff_every_reordering_of_joined", "uses": ["Becoming.ReorderingGrowth.precedes_decided", "Becoming.ReorderingGrowth.precedes_iff_every_reordering"]}
+{"name": "Becoming.ReorderingGrowth.precedes_iff_last", "uses": ["Becoming.ReorderingGrowth.last_of_precedes"]}
+{"name": "Becoming.ReorderingGrowth.precedes_weakly", "uses": ["Becoming.ReorderingGrowth.precedes_weakly_below"]}
+{"name": "Becoming.ReorderingGrowth.precedes_weakly_below", "uses": ["Becoming.Presence.weakly_exists_below", "Becoming.ReorderingGrowth.last_of_precedes"]}
+{"name": "Becoming.ReorderingGrowth.presentAt_stretch", "uses": []}
+{"name": "Becoming.ReorderingGrowth.present_every_reordering", "uses": ["Becoming.Presence.present_every_iff_only_link", "Becoming.ReorderingGrowth.every_reordering_iff", "Becoming.ReorderingGrowth.exchanges_ordered", "Becoming.ReorderingGrowth.links_exchanges", "Becoming.ReorderingGrowth.presentAt_stretch"]}
+{"name": "Becoming.ReorderingGrowth.present_identity_iff", "uses": ["Becoming.ReorderingGrowth.first_of_precedes"]}
+{"name": "Becoming.ReorderingGrowth.present_some_reordering", "uses": ["Becoming.Presence.present_some_iff_link", "Becoming.ReorderingGrowth.exchanges_ordered", "Becoming.ReorderingGrowth.exchanges_weakly", "Becoming.ReorderingGrowth.links_exchanges", "Becoming.ReorderingGrowth.presentAt_stretch", "Becoming.ReorderingGrowth.some_reordering_iff"]}
+{"name": "Becoming.ReorderingGrowth.present_unrelated", "uses": ["Becoming.Presence.maximalBorn_unrelated"]}
+{"name": "Becoming.ReorderingGrowth.reordering_iff_course", "uses": ["Becoming.Footprinted.Independent.keeps", "Becoming.Presence.natural_iff_course", "Becoming.Presence.of_lt_zero_add", "Becoming.ReorderingGrowth.exchanges_ordered", "Becoming.ReorderingGrowth.natural_iff", "Becoming.ReorderingGrowth.natural_reordering"]}
+{"name": "Becoming.ReorderingGrowth.reordering_natural", "uses": ["Becoming.Footprinted.Independent.keeps", "Becoming.ReorderingGrowth.natural_iff", "Becoming.reindexes_of_within"]}
+{"name": "Becoming.ReorderingGrowth.reordering_nil", "uses": []}
+{"name": "Becoming.ReorderingGrowth.sameAt_of_unmoved", "uses": ["Becoming.Web.SameAt.refl", "Becoming.Web.SameAt.trans"]}
+{"name": "Becoming.ReorderingGrowth.some_reordering_iff", "uses": ["Becoming.ReorderingGrowth.natural_reordering", "Becoming.ReorderingGrowth.reordering_natural"]}
+{"name": "Becoming.ReorderingGrowth.together_every_reordering_not_not", "uses": ["Becoming.Presence.together_every_iff_not_not", "Becoming.ReorderingGrowth.every_reordering_iff", "Becoming.ReorderingGrowth.exchanges_ordered", "Becoming.ReorderingGrowth.maximalBorn_stretch"]}
+{"name": "Becoming.ReorderingGrowth.together_some_reordering", "uses": ["Becoming.Presence.together_some_iff", "Becoming.ReorderingGrowth.exchanges_ordered", "Becoming.ReorderingGrowth.exchanges_weakly", "Becoming.ReorderingGrowth.maximalBorn_stretch", "Becoming.ReorderingGrowth.natural_reordering", "Becoming.ReorderingGrowth.present_unrelated"]}

@@ -1,0 +1,142 @@
+{"name": "Becoming.Brood.arises", "uses": ["Becoming.Brood.standing_before", "Becoming.Brood.standing_self"]}
+{"name": "Becoming.Brood.birth_only", "uses": []}
+{"name": "Becoming.Brood.brood", "uses": ["Becoming.Brood.arises", "Becoming.Brood.grows", "Becoming.Brood.standing_self"]}
+{"name": "Becoming.Brood.grows", "uses": []}
+{"name": "Becoming.Brood.not_dissipative", "uses": []}
+{"name": "Becoming.Brood.rise_without_fall", "uses": ["Becoming.Brood.arises", "Becoming.Brood.birth_only", "Becoming.Brood.brood", "Becoming.Brood.grows", "Becoming.Web.Embodied.arising_with_fall", "Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.Brood.standing_before", "uses": []}
+{"name": "Becoming.Brood.standing_self", "uses": []}
+{"name": "Becoming.EmbodiedSource.acting", "uses": []}
+{"name": "Becoming.EmbodiedSource.balances", "uses": []}
+{"name": "Becoming.EmbodiedSource.embodied_source", "uses": ["Becoming.EmbodiedSource.acting", "Becoming.EmbodiedSource.balances", "Becoming.EmbodiedSource.gives_embodied", "Becoming.Web.Embodied.arises_from_embodied"]}
+{"name": "Becoming.EmbodiedSource.gives_embodied", "uses": []}
+{"name": "Becoming.Flicker.flicker", "uses": ["Becoming.Shuttle.recurs"]}
+{"name": "Becoming.Flow.roles_acting", "uses": ["Becoming.inl_injective", "Becoming.mem_map_of", "Becoming.mem_of_map"]}
+{"name": "Becoming.Flow.roles_balances", "uses": ["Becoming.Flow.roles_given", "Becoming.Flow.roles_given_formation", "Becoming.Flow.roles_taken", "Becoming.Flow.roles_taken_formation"]}
+{"name": "Becoming.Flow.roles_dissipative", "uses": ["Becoming.conditionsOf_of_mem", "Becoming.distinct_conditionsOf", "Becoming.distinct_map", "Becoming.inl_injective", "Becoming.inr_injective", "Becoming.inr_not_mem", "Becoming.mem_map_of", "Becoming.mem_of_map", "Becoming.total_conditionsOf", "Becoming.total_map"]}
+{"name": "Becoming.Flow.roles_distinct", "uses": ["Becoming.distinct_map", "Becoming.inl_injective"]}
+{"name": "Becoming.Flow.roles_given", "uses": ["Becoming.total_map"]}
+{"name": "Becoming.Flow.roles_given_formation", "uses": ["Becoming.total_map", "Becoming.total_zero"]}
+{"name": "Becoming.Flow.roles_more", "uses": ["Becoming.Flow.roles_takers"]}
+{"name": "Becoming.Flow.roles_renewers", "uses": ["Becoming.total_congr", "Becoming.total_map"]}
+{"name": "Becoming.Flow.roles_taken", "uses": ["Becoming.total_map"]}
+{"name": "Becoming.Flow.roles_taken_formation", "uses": ["Becoming.total_map", "Becoming.total_zero"]}
+{"name": "Becoming.Flow.roles_takers", "uses": ["Becoming.total_congr", "Becoming.total_map"]}
+{"name": "Becoming.Flow.roles_taking", "uses": ["Becoming.inl_injective", "Becoming.mem_map_of", "Becoming.mem_of_map"]}
+{"name": "Becoming.Mutualism.alive", "uses": ["Becoming.Mutualism.renewing", "Becoming.Web.RenewingAt.not_undermining", "Becoming.Web.renewing_at_active"]}
+{"name": "Becoming.Mutualism.apart_alive", "uses": ["Becoming.Mutualism.apart_renewing", "Becoming.Web.RenewingAt.not_undermining", "Becoming.Web.renewing_at_active"]}
+{"name": "Becoming.Mutualism.apart_not_selfBearing", "uses": ["Becoming.Mutualism.other_ne"]}
+{"name": "Becoming.Mutualism.apart_relabelled", "uses": ["Becoming.Mutualism.apart_not_selfBearing", "Becoming.Mutualism.other_twice", "Becoming.Web.relabel_dependent"]}
+{"name": "Becoming.Mutualism.apart_renewing", "uses": []}
+{"name": "Becoming.Mutualism.dependent", "uses": []}
+{"name": "Becoming.Mutualism.embodied", "uses": []}
+{"name": "Becoming.Mutualism.other_cancel", "uses": []}
+{"name": "Becoming.Mutualism.other_ne", "uses": []}
+{"name": "Becoming.Mutualism.other_twice", "uses": []}
+{"name": "Becoming.Mutualism.renewing", "uses": []}
+{"name": "Becoming.Mutualism.selfBearing", "uses": []}
+{"name": "Becoming.Predation.breaking", "uses": ["Becoming.Predation.dependent", "Becoming.Predation.embodied", "Becoming.Predation.hare_ends", "Becoming.Predation.selfBearing", "Becoming.Web.Embodied.ending_breaks"]}
+{"name": "Becoming.Predation.dependent", "uses": []}
+{"name": "Becoming.Predation.embodied", "uses": []}
+{"name": "Becoming.Predation.hare_ends", "uses": ["Becoming.Predation.uneaten_late"]}
+{"name": "Becoming.Predation.selfBearing", "uses": []}
+{"name": "Becoming.Predation.uneaten_late", "uses": []}
+{"name": "Becoming.Shuttle.acting", "uses": ["Becoming.Shuttle.holder_stands"]}
+{"name": "Becoming.Shuttle.arises", "uses": []}
+{"name": "Becoming.Shuttle.balances", "uses": []}
+{"name": "Becoming.Shuttle.dependent", "uses": []}
+{"name": "Becoming.Shuttle.distinct", "uses": []}
+{"name": "Becoming.Shuttle.embodied", "uses": []}
+{"name": "Becoming.Shuttle.holder_stands", "uses": ["Becoming.Shuttle.stands_two"]}
+{"name": "Becoming.Shuttle.next_off", "uses": ["Becoming.Shuttle.stands_two"]}
+{"name": "Becoming.Shuttle.recurs", "uses": ["Becoming.Shuttle.arises"]}
+{"name": "Becoming.Shuttle.shuttle", "uses": ["Becoming.ListTests.mem_bools", "Becoming.Shuttle.acting", "Becoming.Shuttle.balances", "Becoming.Shuttle.dependent", "Becoming.Shuttle.distinct", "Becoming.Shuttle.embodied", "Becoming.Shuttle.recurs"]}
+{"name": "Becoming.Shuttle.stands_two", "uses": []}
+{"name": "Becoming.SourceSeed.source_gives", "uses": []}
+{"name": "Becoming.SprayShuttle.acting", "uses": ["Becoming.Shuttle.holder_stands"]}
+{"name": "Becoming.SprayShuttle.balances", "uses": ["Becoming.Shuttle.balances"]}
+{"name": "Becoming.SprayShuttle.dependent", "uses": []}
+{"name": "Becoming.SprayShuttle.dissipative", "uses": ["Becoming.SprayShuttle.unenclosed"]}
+{"name": "Becoming.SprayShuttle.even_sum", "uses": []}
+{"name": "Becoming.SprayShuttle.fresh", "uses": ["Becoming.SprayShuttle.le_bound"]}
+{"name": "Becoming.SprayShuttle.le_bound", "uses": []}
+{"name": "Becoming.SprayShuttle.opens_anyway", "uses": ["Becoming.Shuttle.recurs", "Becoming.SprayShuttle.balances", "Becoming.SprayShuttle.dissipative", "Becoming.SprayShuttle.sides_distinct", "Becoming.SprayShuttle.unenclosed", "Becoming.Web.embodiedArising_opens"]}
+{"name": "Becoming.SprayShuttle.sides_distinct", "uses": []}
+{"name": "Becoming.SprayShuttle.spray_shuttle", "uses": ["Becoming.Shuttle.recurs", "Becoming.SprayShuttle.acting", "Becoming.SprayShuttle.balances", "Becoming.SprayShuttle.dependent", "Becoming.SprayShuttle.dissipative", "Becoming.SprayShuttle.even_sum", "Becoming.SprayShuttle.unenclosed"]}
+{"name": "Becoming.SprayShuttle.taking_opens_anyway", "uses": ["Becoming.Flow.Dissipative.opens", "Becoming.SprayShuttle.balances", "Becoming.SprayShuttle.dissipative", "Becoming.SprayShuttle.sides_distinct"]}
+{"name": "Becoming.SprayShuttle.unenclosed", "uses": ["Becoming.SprayShuttle.fresh"]}
+{"name": "Becoming.Throughput.acting", "uses": ["Becoming.Shuttle.holder_stands"]}
+{"name": "Becoming.Throughput.around", "uses": ["Becoming.Frontier.burning_at"]}
+{"name": "Becoming.Throughput.balances", "uses": ["Becoming.Frontier.burns", "Becoming.Shuttle.balances"]}
+{"name": "Becoming.Throughput.dependent", "uses": []}
+{"name": "Becoming.Throughput.dissipative", "uses": ["Becoming.Throughput.side_dissipates"]}
+{"name": "Becoming.Throughput.draws_in", "uses": ["Becoming.Shuttle.recurs", "Becoming.Throughput.around", "Becoming.Throughput.balances", "Becoming.Throughput.dissipative", "Becoming.Web.embodiedArising_draws_in"]}
+{"name": "Becoming.Throughput.frontier", "uses": ["Becoming.Shuttle.recurs", "Becoming.Throughput.balances", "Becoming.Throughput.dissipative", "Becoming.Web.embodiedArising_opens"]}
+{"name": "Becoming.Throughput.gives_one", "uses": []}
+{"name": "Becoming.Throughput.gives_other", "uses": []}
+{"name": "Becoming.Throughput.side_dissipates", "uses": ["Becoming.Frontier.burning_self", "Becoming.Throughput.gives_one", "Becoming.Throughput.gives_other", "Becoming.le_total_of_mem", "Becoming.sign_le_one", "Becoming.total_le_at"]}
+{"name": "Becoming.Throughput.throughput", "uses": ["Becoming.Shuttle.recurs", "Becoming.Throughput.acting", "Becoming.Throughput.balances", "Becoming.Throughput.dependent", "Becoming.Throughput.dissipative"]}
+{"name": "Becoming.Web.Dependent.ceases_below", "uses": ["Becoming.Web.ceases_below_at"]}
+{"name": "Becoming.Web.Dependent.inactive_below", "uses": ["Becoming.Web.inactive_below_at"]}
+{"name": "Becoming.Web.Embodied.active_of_bearing", "uses": []}
+{"name": "Becoming.Web.Embodied.arises_from_embodied", "uses": ["Becoming.Web.Embodied.arises_given"]}
+{"name": "Becoming.Web.Embodied.arises_given", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.BalancesOn.arises_given"]}
+{"name": "Becoming.Web.Embodied.arising_lowers", "uses": ["Becoming.Web.Embodied.arising_lowers_on"]}
+{"name": "Becoming.Web.Embodied.arising_lowers_at", "uses": ["Becoming.Flow.BalancesOn.rise_lowers", "Becoming.Web.ComesToStand.rises", "Becoming.Web.Embodied.comesToStand"]}
+{"name": "Becoming.Web.Embodied.arising_lowers_on", "uses": ["Becoming.Flow.Balances.on", "Becoming.Web.Embodied.arising_lowers_at"]}
+{"name": "Becoming.Web.Embodied.arising_with_fall", "uses": ["Becoming.Flow.Balances.on", "Becoming.Web.Embodied.arising_with_fall_at"]}
+{"name": "Becoming.Web.Embodied.arising_with_fall_at", "uses": ["Becoming.Flow.BalancesOn.rise_with_fall", "Becoming.Web.ComesToStand.rises", "Becoming.Web.Embodied.comesToStand"]}
+{"name": "Becoming.Web.Embodied.comesToStand", "uses": []}
+{"name": "Becoming.Web.Embodied.coming", "uses": ["Becoming.Web.Embodied.comesToStand"]}
+{"name": "Becoming.Web.Embodied.ending_breaks", "uses": []}
+{"name": "Becoming.Web.Embodied.ends_when_consumed", "uses": []}
+{"name": "Becoming.Web.Embodied.given_of_arises", "uses": ["Becoming.Flow.Balances.on", "Becoming.Web.Embodied.given_of_arises_at"]}
+{"name": "Becoming.Web.Embodied.given_of_arises_at", "uses": ["Becoming.Flow.BalancesOn.standing_given", "Becoming.Web.Embodied.comesToStand"]}
+{"name": "Becoming.Web.Embodied.replenishes", "uses": ["Becoming.Flow.Balances.on", "Becoming.Web.Embodied.replenishes_at"]}
+{"name": "Becoming.Web.Embodied.replenishes_at", "uses": ["Becoming.Flow.BalancesOn.rise_replenishes", "Becoming.Web.ComesToStand.rises", "Becoming.Web.Embodied.comesToStand"]}
+{"name": "Becoming.Web.SelfBearing.met_iff", "uses": []}
+{"name": "Becoming.Web.SelfBearing.stands", "uses": []}
+{"name": "Becoming.Web.ceases_below_at", "uses": ["Becoming.Web.inactive_below_at"]}
+{"name": "Becoming.Web.embodiedArising_draws_in", "uses": ["Becoming.Flow.standing_draws_in", "Becoming.Web.Embodied.coming"]}
+{"name": "Becoming.Web.embodiedArising_draws_in_from", "uses": ["Becoming.Flow.rising_draws_in_from", "Becoming.Web.Embodied.coming", "Becoming.Web.rising_of_coming"]}
+{"name": "Becoming.Web.embodiedArising_needs_replenishment", "uses": ["Becoming.Flow.Balances.on", "Becoming.Web.embodiedArising_needs_replenishment_from"]}
+{"name": "Becoming.Web.embodiedArising_needs_replenishment_from", "uses": ["Becoming.Flow.standing_needs_replenishment_from", "Becoming.Web.Embodied.coming"]}
+{"name": "Becoming.Web.embodiedArising_not_recurring", "uses": ["Becoming.Flow.standing_not_recurring", "Becoming.Web.Embodied.comesToStand"]}
+{"name": "Becoming.Web.embodiedArising_not_recurring_from", "uses": ["Becoming.Flow.standing_not_recurring_from", "Becoming.Web.Embodied.coming"]}
+{"name": "Becoming.Web.embodiedArising_not_recurring_on", "uses": ["Becoming.Flow.Balances.on", "Becoming.Web.embodiedArising_not_recurring_from"]}
+{"name": "Becoming.Web.embodiedArising_opens", "uses": ["Becoming.Flow.standing_opens", "Becoming.Web.Embodied.coming"]}
+{"name": "Becoming.Web.exists_of_onto", "uses": []}
+{"name": "Becoming.Web.inactive_below_at", "uses": []}
+{"name": "Becoming.Web.relabel_alive", "uses": ["Becoming.Web.relabel_undermining"]}
+{"name": "Becoming.Web.relabel_dependent", "uses": []}
+{"name": "Becoming.Web.relabel_undermining", "uses": ["Becoming.Web.exists_of_onto"]}
+{"name": "Becoming.Web.roles_alive", "uses": ["Becoming.Web.roles_undermining"]}
+{"name": "Becoming.Web.roles_arises", "uses": []}
+{"name": "Becoming.Web.roles_census", "uses": ["Becoming.distinct_map", "Becoming.inl_injective", "Becoming.inr_not_mem", "Becoming.mem_map_of", "Becoming.mem_of_map"]}
+{"name": "Becoming.Web.roles_consumed", "uses": []}
+{"name": "Becoming.Web.roles_consumingIn", "uses": ["Becoming.Web.roles_consumed"]}
+{"name": "Becoming.Web.roles_dependent", "uses": ["Becoming.Web.roles_supported"]}
+{"name": "Becoming.Web.roles_event_injective", "uses": []}
+{"name": "Becoming.Web.roles_event_onto", "uses": []}
+{"name": "Becoming.Web.roles_not_embodied", "uses": []}
+{"name": "Becoming.Web.roles_not_selfBearing", "uses": []}
+{"name": "Becoming.Web.roles_renewed", "uses": []}
+{"name": "Becoming.Web.roles_renewed_formation", "uses": []}
+{"name": "Becoming.Web.roles_renewingIn", "uses": ["Becoming.Web.roles_renewed", "Becoming.Web.roles_renewed_formation"]}
+{"name": "Becoming.Web.roles_supported", "uses": []}
+{"name": "Becoming.Web.roles_unceasing", "uses": []}
+{"name": "Becoming.Web.roles_undermining", "uses": []}
+{"name": "Becoming.Wilting.dependent", "uses": []}
+{"name": "Becoming.Wilting.embodied", "uses": []}
+{"name": "Becoming.Wilting.ends", "uses": []}
+{"name": "Becoming.Wilting.fade_active", "uses": []}
+{"name": "Becoming.Wilting.relabelled_not_embodied", "uses": ["Becoming.Wilting.embodied"]}
+{"name": "Becoming.Wilting.selfBearing", "uses": []}
+{"name": "Becoming.Wilting.wilting", "uses": ["Becoming.Web.BreakingOn.undermining", "Becoming.Web.Embodied.ending_breaks", "Becoming.Wilting.dependent", "Becoming.Wilting.embodied", "Becoming.Wilting.ends", "Becoming.Wilting.fade_active", "Becoming.Wilting.selfBearing"]}
+{"name": "Becoming.conditionsOf_of_mem", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.distinct_conditionsOf", "uses": ["Becoming.mem_of_conditionsOf"]}
+{"name": "Becoming.inl_injective", "uses": []}
+{"name": "Becoming.inr_injective", "uses": []}
+{"name": "Becoming.inr_not_mem", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.mem_of_conditionsOf", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.total_conditionsOf", "uses": []}

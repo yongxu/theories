@@ -1,0 +1,35 @@
+{"name": "Becoming.TreeSearch.Tree.brecOn.eq", "uses": []}
+{"name": "Becoming.TreeSearch.advance_empty", "uses": []}
+{"name": "Becoming.TreeSearch.advance_found", "uses": []}
+{"name": "Becoming.TreeSearch.append_assoc", "uses": []}
+{"name": "Becoming.TreeSearch.child_locate", "uses": ["Becoming.TreeSearch.append_assoc"]}
+{"name": "Becoming.TreeSearch.coherent_fork", "uses": ["Becoming.ListTests.mem_cons_iff", "Becoming.TreeSearch.child_locate"]}
+{"name": "Becoming.TreeSearch.coherent_tail", "uses": []}
+{"name": "Becoming.TreeSearch.discover_sound", "uses": ["Becoming.ListTests.mem_singleton_iff", "Becoming.TreeSearch.scan_sound"]}
+{"name": "Becoming.TreeSearch.example_discovered", "uses": []}
+{"name": "Becoming.TreeSearch.example_found", "uses": ["Becoming.TreeSearch.example_discovered", "Becoming.TreeSearch.run_reads_discover"]}
+{"name": "Becoming.TreeSearch.exhausted_dead", "uses": ["Becoming.TreeSearch.or_false_iff"]}
+{"name": "Becoming.TreeSearch.exhausted_dead_run", "uses": ["Becoming.TreeSearch.exhausted_dead", "Becoming.TreeSearch.run_reads_scan"]}
+{"name": "Becoming.TreeSearch.fork_burden", "uses": []}
+{"name": "Becoming.TreeSearch.found_located", "uses": ["Becoming.TreeSearch.run_reads_scan", "Becoming.TreeSearch.scan_sound"]}
+{"name": "Becoming.TreeSearch.found_real", "uses": ["Becoming.TreeSearch.discover_sound", "Becoming.TreeSearch.run_reads_discover"]}
+{"name": "Becoming.TreeSearch.found_without_complete_map", "uses": []}
+{"name": "Becoming.TreeSearch.found_without_reading_rest", "uses": ["Becoming.TreeSearch.found_without_complete_map", "Becoming.TreeSearch.run_reads_discover"]}
+{"name": "Becoming.TreeSearch.inhabited_discovered", "uses": ["Becoming.TreeSearch.discover_sound", "Becoming.TreeSearch.exhausted_dead", "Becoming.TreeSearch.or_false_iff", "Becoming.TreeSearch.scan_settles"]}
+{"name": "Becoming.TreeSearch.inhabited_found", "uses": ["Becoming.TreeSearch.inhabited_discovered", "Becoming.TreeSearch.run_reads_discover"]}
+{"name": "Becoming.TreeSearch.inspected_le_step", "uses": ["Becoming.TreeSearch.run_reads_scan", "Becoming.TreeSearch.scan_fuel"]}
+{"name": "Becoming.TreeSearch.interrupted_pending", "uses": []}
+{"name": "Becoming.TreeSearch.live_single", "uses": []}
+{"name": "Becoming.TreeSearch.located_depth_le", "uses": []}
+{"name": "Becoming.TreeSearch.nodes_pos", "uses": []}
+{"name": "Becoming.TreeSearch.or_false_iff", "uses": ["Becoming.ListTests.false_iff_not", "Becoming.ListTests.or_true_iff"]}
+{"name": "Becoming.TreeSearch.orbit_fixed", "uses": []}
+{"name": "Becoming.TreeSearch.orbit_reads_scan", "uses": ["Becoming.TreeSearch.orbit_reads_scan_from"]}
+{"name": "Becoming.TreeSearch.orbit_reads_scan_from", "uses": ["Becoming.Law.orbit_shift", "Becoming.TreeSearch.advance_empty", "Becoming.TreeSearch.advance_found", "Becoming.TreeSearch.orbit_fixed"]}
+{"name": "Becoming.TreeSearch.pending_then_found", "uses": ["Becoming.TreeSearch.interrupted_pending", "Becoming.TreeSearch.run_reads_discover"]}
+{"name": "Becoming.TreeSearch.run_reads_discover", "uses": ["Becoming.TreeSearch.run_reads_scan"]}
+{"name": "Becoming.TreeSearch.run_reads_scan", "uses": ["Becoming.Branching.law_run_state", "Becoming.TreeSearch.orbit_reads_scan"]}
+{"name": "Becoming.TreeSearch.scan_fuel", "uses": []}
+{"name": "Becoming.TreeSearch.scan_settles", "uses": ["Becoming.TreeSearch.fork_burden", "Becoming.TreeSearch.nodes_pos"]}
+{"name": "Becoming.TreeSearch.scan_sound", "uses": ["Becoming.TreeSearch.Verdict.found.inj", "Becoming.TreeSearch.append_nil", "Becoming.TreeSearch.coherent_fork", "Becoming.TreeSearch.coherent_tail"]}
+{"name": "Becoming.TreeSearch.steps_settle", "uses": ["Becoming.TreeSearch.run_reads_scan", "Becoming.TreeSearch.scan_settles"]}

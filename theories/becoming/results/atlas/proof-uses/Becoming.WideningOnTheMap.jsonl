@@ -1,0 +1,43 @@
+{"name": "Becoming.Steps.Arriving.early", "uses": []}
+{"name": "Becoming.Steps.Arriving.includes", "uses": []}
+{"name": "Becoming.Steps.Arriving.keepsWidening", "uses": ["Becoming.Steps.Arriving.early", "Becoming.Steps.Arriving.includes", "Becoming.Steps.Arriving.late", "Becoming.Steps.includesFrom_iff", "Becoming.Steps.le_twice"]}
+{"name": "Becoming.Steps.Arriving.late", "uses": []}
+{"name": "Becoming.Steps.Arriving.tells", "uses": []}
+{"name": "Becoming.Steps.Dawning.generation", "uses": ["Becoming.Steps.begins_iff", "Becoming.Steps.buqiong_includes_iff", "Becoming.Steps.generation_iff_begins", "Becoming.Steps.generation_includes_iff"]}
+{"name": "Becoming.Steps.Growing.generation", "uses": ["Becoming.Steps.Growing.keepsWidening", "Becoming.Steps.generation_of_keepsWidening"]}
+{"name": "Becoming.Steps.Growing.keepsWidening", "uses": []}
+{"name": "Becoming.Steps.Moving.generation", "uses": ["Becoming.Steps.begins_iff", "Becoming.Steps.generation_iff_begins"]}
+{"name": "Becoming.Steps.Moving.not_generation_includes", "uses": ["Becoming.Steps.buqiong_includes_iff", "Becoming.Steps.generation_includes_iff"]}
+{"name": "Becoming.Steps.Moving.not_keepsWidening", "uses": []}
+{"name": "Becoming.Steps.back_iff_em", "uses": ["Becoming.Steps.dne_of_keepsWidening_of_generation", "Becoming.Steps.found_of_em", "Becoming.Steps.keepsWidening_of_generation"]}
+{"name": "Becoming.Steps.begins_iff", "uses": ["Becoming.Steps.hasPred_iff"]}
+{"name": "Becoming.Steps.buqiong_includes_iff", "uses": ["Becoming.Steps.buqiong_iff", "Becoming.le_dest"]}
+{"name": "Becoming.Steps.change_located", "uses": []}
+{"name": "Becoming.Steps.dne_of_keepsWidening_of_generation", "uses": ["Becoming.Steps.Dawning.generation"]}
+{"name": "Becoming.Steps.forward_iff_wem", "uses": ["Becoming.Steps.generation_of_keepsWidening", "Becoming.Steps.wem_of_generation_of_keepsWidening"]}
+{"name": "Becoming.Steps.found_of_em", "uses": []}
+{"name": "Becoming.Steps.found_of_listed", "uses": ["Becoming.Steps.new_in_list_or_none"]}
+{"name": "Becoming.Steps.generation_iff_keepsWidening", "uses": ["Becoming.Steps.generation_of_keepsWidening", "Becoming.Steps.keepsWidening_of_generation"]}
+{"name": "Becoming.Steps.generation_includes_iff", "uses": ["Becoming.Steps.buqiong_includes_iff", "Becoming.Steps.generation_iff_begins", "Becoming.Steps.reached_le", "Becoming.Steps.reaches_of_buqiong", "Becoming.«所及之传递»"]}
+{"name": "Becoming.Steps.generation_of_keepsWidening", "uses": ["Becoming.Steps.begins_iff", "Becoming.Steps.buqiong_includes_iff", "Becoming.Steps.change_located", "Becoming.Steps.generation_iff_begins", "Becoming.Steps.generation_includes_iff", "Becoming.Steps.includesFrom_iff", "Becoming.le_dest"]}
+{"name": "Becoming.Steps.generation_of_reachingKeepsWidening", "uses": ["Becoming.Steps.generation_of_keepsWidening", "Becoming.Steps.keepsWidening_iff_from_zero"]}
+{"name": "Becoming.Steps.includesFrom_iff", "uses": ["Becoming.Steps.includes_refl", "Becoming.Steps.includes_trans", "Becoming.le_dest"]}
+{"name": "Becoming.Steps.includes_not_back_of_generation", "uses": ["Becoming.Steps.begins_iff", "Becoming.Steps.buqiong_includes_iff", "Becoming.Steps.generation_iff_begins", "Becoming.Steps.generation_includes_iff", "Becoming.Steps.includesFrom_iff"]}
+{"name": "Becoming.Steps.includes_refl", "uses": []}
+{"name": "Becoming.Steps.includes_trans", "uses": []}
+{"name": "Becoming.Steps.keepsWideningFrom_iff_shift", "uses": ["Becoming.le_dest"]}
+{"name": "Becoming.Steps.keepsWidening_iff_from_zero", "uses": ["Becoming.le_dest"]}
+{"name": "Becoming.Steps.keepsWidening_iff_generation_losing_nothing", "uses": ["Becoming.Steps.buqiong_includes_iff", "Becoming.Steps.generation_iff_keepsWidening", "Becoming.Steps.generation_includes_iff"]}
+{"name": "Becoming.Steps.keepsWidening_of_generation", "uses": ["Becoming.Steps.includes_not_back_of_generation"]}
+{"name": "Becoming.Steps.le_twice", "uses": []}
+{"name": "Becoming.Steps.markov_of_keepsWidening_of_generation", "uses": ["Becoming.Steps.begins_iff", "Becoming.Steps.buqiong_includes_iff", "Becoming.Steps.generation_iff_begins", "Becoming.Steps.generation_includes_iff"]}
+{"name": "Becoming.Steps.new_in_list_or_none", "uses": []}
+{"name": "Becoming.Steps.reached_le", "uses": ["Becoming.Map.step_reached_le"]}
+{"name": "Becoming.Steps.reaches_of_buqiong", "uses": ["Becoming.Steps.reached_of_buqiong", "Becoming.le_dest"]}
+{"name": "Becoming.Steps.same_class", "uses": []}
+{"name": "Becoming.Steps.same_includes", "uses": []}
+{"name": "Becoming.Steps.wem_of_generation_of_keepsWidening", "uses": ["Becoming.Steps.Arriving.keepsWidening", "Becoming.Steps.Arriving.tells", "Becoming.Steps.begins_iff", "Becoming.Steps.generation_iff_begins", "Becoming.Steps.generation_includes_iff"]}
+{"name": "Becoming.Web.generation_of_keepsWidening_byName", "uses": ["Becoming.Steps.generation_of_keepsWidening", "Becoming.Web.keepsWidening_itself_iff"]}
+{"name": "Becoming.Web.keepsWidening_byName_iff_generation", "uses": ["Becoming.Steps.generation_iff_keepsWidening", "Becoming.Web.keepsWidening_itself_iff"]}
+{"name": "Becoming.Web.keepsWidening_itself_iff", "uses": ["Becoming.Steps.keepsWideningFrom_iff_shift", "Becoming.Web.keepsWidening_iff_chain"]}
+{"name": "Becoming.Web.kept_by_name_and_generation_on_moments", "uses": ["Becoming.Web.generation_of_keepsWidening_byName", "Becoming.Web.kept_of_includes_by_name"]}

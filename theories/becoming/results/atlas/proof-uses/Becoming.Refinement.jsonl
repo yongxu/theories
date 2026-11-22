@@ -1,0 +1,13 @@
+{"name": "Becoming.DistinctUnder.length_le", "uses": ["Becoming.remove_mem"]}
+{"name": "Becoming.DistinctUnder.mono", "uses": []}
+{"name": "Becoming.DistinctUnder.single", "uses": []}
+{"name": "Becoming.DistinctUnder.unique", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Refining.finer", "uses": []}
+{"name": "Becoming.Refining.grow", "uses": ["Becoming.Decided.exists_listed", "Becoming.DistinctUnder.mono", "Becoming.DistinctUnder.unique", "Becoming.Refining.finer", "Becoming.Refining.symm", "Becoming.Refining.trans"]}
+{"name": "Becoming.Refining.refl", "uses": []}
+{"name": "Becoming.Refining.steady_or_grown", "uses": ["Becoming.Decided.and", "Becoming.Decided.exists_listed", "Becoming.Decided.not", "Becoming.Decided.of_not_not", "Becoming.DistinctUnder.length_le", "Becoming.Refining.grow", "Becoming.Refining.refl", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Refining.steady_within", "uses": ["Becoming.DistinctUnder.length_le", "Becoming.Refining.refl", "Becoming.Refining.steady_or_grown"]}
+{"name": "Becoming.Refining.symm", "uses": []}
+{"name": "Becoming.Refining.trans", "uses": []}
+{"name": "Becoming.le_pred_of_succ_le", "uses": []}
+{"name": "Becoming.not_not_within", "uses": ["Becoming.mem_cons_cases"]}

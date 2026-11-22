@@ -1,0 +1,86 @@
+{"name": "Becoming.Dormancy.held_both", "uses": ["Becoming.Dormancy.classes", "Becoming.Dormancy.first_only"]}
+{"name": "Becoming.Hibernation.exchanged_consuming", "uses": ["Becoming.Hibernation.pool_consumed", "Becoming.Web.reidentify_consumed"]}
+{"name": "Becoming.Hibernation.exchanged_not_renewing", "uses": ["Becoming.Hibernation.pool_not_renewed", "Becoming.Web.reidentify_renewed"]}
+{"name": "Becoming.Hibernation.holds_always", "uses": []}
+{"name": "Becoming.Hibernation.pool_consumed", "uses": []}
+{"name": "Becoming.Hibernation.pool_not_renewed", "uses": []}
+{"name": "Becoming.Hibernation.positions", "uses": ["Becoming.Hibernation.holds_always", "Becoming.Web.fallsDormant_alters", "Becoming.Web.sheng_state_of_change", "Becoming.Web.stateClass_finer", "Becoming.Web.unending_of_holds", "Becoming.Web.wang_state_of_change"]}
+{"name": "Becoming.Hibernation.readings", "uses": ["Becoming.Hibernation.exchanged_consuming", "Becoming.Hibernation.exchanged_not_renewing", "Becoming.Hibernation.holds_always", "Becoming.Hibernation.renewing", "Becoming.Web.renewingIn_held", "Becoming.Web.waking_not_arising"]}
+{"name": "Becoming.Hibernation.renewing", "uses": []}
+{"name": "Becoming.Hibernation.swap_swap", "uses": []}
+{"name": "Becoming.Hibernation.world_readings", "uses": ["Becoming.Flow.roles_balances", "Becoming.Hibernation.exchanged_consuming", "Becoming.Hibernation.exchanged_not_renewing", "Becoming.Hibernation.renewing", "Becoming.Web.roles_renewingIn", "Becoming.World.ofRoles_reidentify_balanced", "Becoming.World.ofRoles_reidentify_consumingIn", "Becoming.World.ofRoles_reidentify_renewingIn"]}
+{"name": "Becoming.Lineage.world_readings", "uses": ["Becoming.Flow.roles_balances", "Becoming.Lineage.readings", "Becoming.Web.roles_unceasing", "Becoming.World.ofRoles_reidentify_balanced"]}
+{"name": "Becoming.Reidentify.exchangeAfter_across", "uses": ["Becoming.stepBeyond_next", "Becoming.stepBeyond_self"]}
+{"name": "Becoming.Reidentify.exchangeAfter_at", "uses": ["Becoming.stepBeyond_self"]}
+{"name": "Becoming.Reidentify.exchangeAfter_elsewhere", "uses": ["Becoming.stepBeyond_step", "Becoming.transpose_transpose", "Becoming.turn_turn"]}
+{"name": "Becoming.Reidentify.exchangeAfter_next", "uses": ["Becoming.stepBeyond_next"]}
+{"name": "Becoming.Reidentify.old_still", "uses": []}
+{"name": "Becoming.Seed.held_classes", "uses": ["Becoming.Seed.held_readings", "Becoming.Web.ceases_iff_wang_itself", "Becoming.Web.unending_of_holds"]}
+{"name": "Becoming.Seed.held_readings", "uses": ["Becoming.Seed.seed"]}
+{"name": "Becoming.Shuttle.alternates", "uses": []}
+{"name": "Becoming.Shuttle.apart", "uses": ["Becoming.Shuttle.alternates"]}
+{"name": "Becoming.Shuttle.conserved", "uses": ["Becoming.Shuttle.balances", "Becoming.Shuttle.holder_only", "Becoming.Shuttle.holder_stands", "Becoming.Shuttle.next_off", "Becoming.World.arises_fixed_iff", "Becoming.World.balanced_reidentify_iff", "Becoming.World.conserves_iff"]}
+{"name": "Becoming.Shuttle.holder_only", "uses": ["Becoming.Shuttle.stands_two"]}
+{"name": "Becoming.Shuttle.named_as_themselves", "uses": ["Becoming.Reidentify.old_still", "Becoming.Shuttle.apart", "Becoming.Shuttle.balances", "Becoming.World.classes_fixed", "Becoming.World.still_of_apart"]}
+{"name": "Becoming.Sleeper.held_readings", "uses": ["Becoming.Shuttle.recurs", "Becoming.Shuttle.stands_two", "Becoming.Sleeper.sleeper"]}
+{"name": "Becoming.Web.arisesFrom_of_arises", "uses": []}
+{"name": "Becoming.Web.arises_iff_sheng_state", "uses": ["Becoming.Web.sheng_state_of_change"]}
+{"name": "Becoming.Web.arises_of_persisting_arises", "uses": ["Becoming.Web.arises_iff_sheng_itself", "Becoming.Web.arises_iff_sheng_state", "Becoming.Web.stateClass_finer", "Becoming.«生于粗则生于细»"]}
+{"name": "Becoming.Web.arises_persisting_iff", "uses": []}
+{"name": "Becoming.Web.ceases_iff_wang_state", "uses": ["Becoming.Web.wang_state_of_change"]}
+{"name": "Becoming.Web.ceases_of_persisting_ceases", "uses": ["Becoming.Web.ceases_iff_wang_itself", "Becoming.Web.ceases_iff_wang_state", "Becoming.Web.stateClass_finer", "Becoming.«亡于粗则亡于细»"]}
+{"name": "Becoming.Web.ceases_persisting_iff", "uses": []}
+{"name": "Becoming.Web.consumingIn_held", "uses": ["Becoming.Web.named_throughout", "Becoming.Web.reidentify_consumed"]}
+{"name": "Becoming.Web.fallsDormant_alters", "uses": ["Becoming.Web.wang_state_of_change"]}
+{"name": "Becoming.Web.keepsActive_of_held", "uses": []}
+{"name": "Becoming.Web.keepsTenure_of_held", "uses": []}
+{"name": "Becoming.Web.named_throughout", "uses": ["Becoming.Reidentify.old_new", "Becoming.Web.steady_held"]}
+{"name": "Becoming.Web.names_line_same", "uses": []}
+{"name": "Becoming.Web.persisting_census", "uses": ["Becoming.Web.Census.arisingFrom_of_ceasingFrom", "Becoming.Web.Census.ceasingFrom_of_arisingFrom"]}
+{"name": "Becoming.Web.renewingIn_held", "uses": ["Becoming.Web.named_throughout", "Becoming.Web.reidentify_renewed"]}
+{"name": "Becoming.Web.sheng_state_of_change", "uses": ["Becoming.«生于粗则生于细»"]}
+{"name": "Becoming.Web.stateClass_class", "uses": []}
+{"name": "Becoming.Web.stateClass_finer", "uses": []}
+{"name": "Becoming.Web.steady_held", "uses": ["Becoming.kept_onward"]}
+{"name": "Becoming.Web.unending_of_holds", "uses": ["Becoming.Web.names_line_same"]}
+{"name": "Becoming.Web.wakes_alters", "uses": ["Becoming.Web.sheng_state_of_change"]}
+{"name": "Becoming.Web.waking_not_arising", "uses": []}
+{"name": "Becoming.Web.wang_state_of_change", "uses": ["Becoming.«亡于粗则亡于细»"]}
+{"name": "Becoming.World.arises_fixed_iff", "uses": ["Becoming.Reidentify.exchangeAfter_at", "Becoming.Reidentify.exchangeAfter_next", "Becoming.Reidentify.new_old", "Becoming.Reidentify.old_new", "Becoming.World.balanced_reidentify_iff", "Becoming.World.conserves_iff", "Becoming.World.exchangeAfter_balanced", "Becoming.transpose_right"]}
+{"name": "Becoming.World.arises_fixed_iff_sheng", "uses": ["Becoming.Web.arisesFrom_iff_sheng", "Becoming.World.arises_fixed_iff"]}
+{"name": "Becoming.World.balanced_iff_conserves", "uses": []}
+{"name": "Becoming.World.balanced_reidentify_iff", "uses": ["Becoming.Reidentify.new_old", "Becoming.Reidentify.old_new", "Becoming.World.reidentify_given", "Becoming.World.reidentify_taken"]}
+{"name": "Becoming.World.balanced_reidentify_iff_alike", "uses": ["Becoming.World.balanced_reidentify_iff", "Becoming.World.conserves_iff", "Becoming.exchange_alike_iff"]}
+{"name": "Becoming.World.ceases_fixed_iff", "uses": ["Becoming.Reidentify.exchangeAfter_across", "Becoming.Reidentify.old_new", "Becoming.World.balanced_reidentify_iff", "Becoming.World.conserves_iff", "Becoming.World.exchangeAfter_balanced", "Becoming.transpose_left"]}
+{"name": "Becoming.World.ceases_fixed_iff_wang", "uses": ["Becoming.Web.ceasesFrom_iff_wang", "Becoming.World.ceases_fixed_iff"]}
+{"name": "Becoming.World.classes_fixed", "uses": ["Becoming.World.classes_still", "Becoming.World.still_of_apart"]}
+{"name": "Becoming.World.classes_still", "uses": ["Becoming.Reidentify.old_new", "Becoming.Reidentify.old_still", "Becoming.World.consumed_still", "Becoming.World.renewed_still"]}
+{"name": "Becoming.World.conserves_iff", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.World.conserves_noMerge", "uses": ["Becoming.World.conserves_iff"]}
+{"name": "Becoming.World.conserves_noSplit", "uses": ["Becoming.World.conserves_iff"]}
+{"name": "Becoming.World.consumed_still", "uses": ["Becoming.Reidentify.old_new", "Becoming.Reidentify.old_still"]}
+{"name": "Becoming.World.exchangeAfter_balanced", "uses": ["Becoming.Reidentify.exchangeAfter_across", "Becoming.Reidentify.exchangeAfter_elsewhere", "Becoming.World.balanced_reidentify_iff", "Becoming.World.conserves_iff", "Becoming.transpose_alike"]}
+{"name": "Becoming.World.fixed_iff", "uses": ["Becoming.Reidentify.exchangeAfter_across", "Becoming.World.balanced_reidentify_iff", "Becoming.World.conserves_iff", "Becoming.World.exchangeAfter_balanced", "Becoming.transpose_left"]}
+{"name": "Becoming.World.kept_broken_reidentify", "uses": ["Becoming.World.standing_after"]}
+{"name": "Becoming.World.ofRoles_reidentify_arises", "uses": []}
+{"name": "Becoming.World.ofRoles_reidentify_balanced", "uses": ["Becoming.Flow.roles_given", "Becoming.Flow.roles_given_formation", "Becoming.Flow.roles_taken", "Becoming.Flow.roles_taken_formation", "Becoming.World.balanced_reidentify_iff"]}
+{"name": "Becoming.World.ofRoles_reidentify_consumed", "uses": ["Becoming.Reidentify.old_new"]}
+{"name": "Becoming.World.ofRoles_reidentify_consumingIn", "uses": ["Becoming.Web.reidentify_consumed", "Becoming.World.ofRoles_reidentify_consumed"]}
+{"name": "Becoming.World.ofRoles_reidentify_renewed", "uses": ["Becoming.Reidentify.old_new"]}
+{"name": "Becoming.World.ofRoles_reidentify_renewed_formation", "uses": []}
+{"name": "Becoming.World.ofRoles_reidentify_renewingIn", "uses": ["Becoming.Web.reidentify_renewed", "Becoming.World.ofRoles_reidentify_renewed", "Becoming.World.ofRoles_reidentify_renewed_formation"]}
+{"name": "Becoming.World.ofRoles_reidentify_unceasing", "uses": []}
+{"name": "Becoming.World.reidentify_given", "uses": ["Becoming.total_reidentify"]}
+{"name": "Becoming.World.reidentify_taken", "uses": ["Becoming.total_reidentify"]}
+{"name": "Becoming.World.renewed_still", "uses": ["Becoming.Reidentify.old_new", "Becoming.Reidentify.old_still"]}
+{"name": "Becoming.World.standing_after", "uses": ["Becoming.Reidentify.new_old", "Becoming.World.balanced_reidentify_iff", "Becoming.World.conserves_iff"]}
+{"name": "Becoming.World.still_of_apart", "uses": ["Becoming.World.standing_after"]}
+{"name": "Becoming.stepBeyond_next", "uses": []}
+{"name": "Becoming.stepBeyond_self", "uses": []}
+{"name": "Becoming.stepBeyond_step", "uses": ["Becoming.stepBeyond_zero"]}
+{"name": "Becoming.stepBeyond_zero", "uses": []}
+{"name": "Becoming.transpose_alike", "uses": ["Becoming.transpose_other"]}
+{"name": "Becoming.transpose_left", "uses": []}
+{"name": "Becoming.transpose_other", "uses": []}
+{"name": "Becoming.transpose_right", "uses": []}
+{"name": "Becoming.transpose_transpose", "uses": ["Becoming.transpose_left", "Becoming.transpose_other", "Becoming.transpose_right"]}

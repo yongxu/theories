@@ -1,0 +1,28 @@
+{"name": "Becoming.Routes.SelfLoop.transfer_eq", "uses": []}
+{"name": "Becoming.Routes.SelfLoop.within_eq", "uses": ["Becoming.Loops.orderSum_start", "Becoming.Loops.orderSum_step", "Becoming.Loops.orderSum_zero", "Becoming.Naturals.add_congr"]}
+{"name": "Becoming.Routes.SelfLoop.within_exact", "uses": ["Becoming.Routes.SelfLoop.transfer_eq", "Becoming.Routes.SelfLoop.within_eq", "Becoming.Weights.within_exact"]}
+{"name": "Becoming.Routes.cond_mul", "uses": []}
+{"name": "Becoming.Routes.cond_zero_mul", "uses": []}
+{"name": "Becoming.Routes.counting_sum", "uses": []}
+{"name": "Becoming.Routes.total_cond", "uses": ["Becoming.total_zero"]}
+{"name": "Becoming.Routes.total_joinMap", "uses": ["Becoming.total_append"]}
+{"name": "Becoming.Routes.total_routeCells", "uses": ["Becoming.Routes.total_joinMap", "Becoming.total_congr", "Becoming.total_map"]}
+{"name": "Becoming.Routes.total_upto", "uses": ["Becoming.Naturals.ble_false_of_lt", "Becoming.Propagation.le_of_mem_steps_upto", "Becoming.steps_last", "Becoming.total_congr_on"]}
+{"name": "Becoming.Routes.total_upto_of_le", "uses": ["Becoming.Routes.total_upto", "Becoming.le_dest"]}
+{"name": "Becoming.Routes.transfer_unit", "uses": ["Becoming.Routes.counting_sum", "Becoming.total_append", "Becoming.total_map"]}
+{"name": "Becoming.Weights.Hom.within", "uses": ["Becoming.Weights.Hom.map_add", "Becoming.Weights.Hom.map_mul", "Becoming.Weights.Hom.sum", "Becoming.Weights.sum_congr"]}
+{"name": "Becoming.Weights.within_exact", "uses": ["Becoming.Weights.right_distrib", "Becoming.Weights.sum_congr"]}
+{"name": "Becoming.carriedFrom_eq_routes", "uses": ["Becoming.Naturals.add_congr", "Becoming.Routes.cond_mul", "Becoming.Routes.total_cond", "Becoming.Routes.total_upto_of_le", "Becoming.add_mul_split", "Becoming.give_split", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_eq_zero"]}
+{"name": "Becoming.carriedWithin_eq_courses", "uses": ["Becoming.Weights.sum_courses", "Becoming.routeSum_eq_carriedWithin"]}
+{"name": "Becoming.carried_eq_courses", "uses": ["Becoming.carriedWithin_eq_courses", "Becoming.carried_eq_carriedWithin"]}
+{"name": "Becoming.carried_le_routeSum_add", "uses": ["Becoming.carried_le_carriedWithin_add", "Becoming.routeSum_eq_carriedWithin"]}
+{"name": "Becoming.counting_within_le_succ", "uses": ["Becoming.Routes.counting_sum", "Becoming.total_le"]}
+{"name": "Becoming.counting_within_le_transfer", "uses": ["Becoming.Routes.counting_sum", "Becoming.add_mul_split", "Becoming.total_le"]}
+{"name": "Becoming.finite_horizon_iff_no_loop", "uses": ["Becoming.finite_order_iff_no_loop_stationary", "Becoming.routeSum_eq_carriedWithin"]}
+{"name": "Becoming.give_split", "uses": ["Becoming.Loops.total_mul_const", "Becoming.carriedGive_of_part", "Becoming.carriedGive_of_rest", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_eq_zero", "Becoming.total_swap"]}
+{"name": "Becoming.routeSum_eq_carriedWithin", "uses": ["Becoming.between_of_mem_steps", "Becoming.carriedFrom_eq_routes", "Becoming.routeSum_level", "Becoming.total_congr", "Becoming.total_congr_on", "Becoming.total_eq_zero"]}
+{"name": "Becoming.routeSum_exact", "uses": ["Becoming.carriedWithin_exact", "Becoming.routeSum_eq_carriedWithin"]}
+{"name": "Becoming.routeSum_le_carried", "uses": ["Becoming.carriedWithin_le_carried", "Becoming.routeSum_eq_carriedWithin"]}
+{"name": "Becoming.routeSum_level", "uses": ["Becoming.Naturals.add_congr", "Becoming.Routes.total_routeCells", "Becoming.Routes.transfer_unit", "Becoming.routeSum_source"]}
+{"name": "Becoming.routeSum_mono", "uses": ["Becoming.carriedWithin_mono", "Becoming.routeSum_eq_carriedWithin"]}
+{"name": "Becoming.routeSum_source", "uses": ["Becoming.Routes.total_routeCells", "Becoming.Routes.transfer_unit", "Becoming.total_eq_zero"]}

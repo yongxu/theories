@@ -1,0 +1,57 @@
+{"name": "Becoming.Optimum.Coupled.AtOnce.Shores.drain_perfect", "uses": ["Becoming.Naturals.add_sub_cancel", "Becoming.Optimum.Coupled.AtOnce.Shores.shore_le", "Becoming.Optimum.Coupled.AtOnce.Shores.shore_le_self", "Becoming.Optimum.Coupled.AtOnce.Shores.shore_zero", "Becoming.Optimum.Coupled.AtOnce.drained_unmet", "Becoming.Optimum.Coupled.AtOnce.unpivotal_drain_perfect"]}
+{"name": "Becoming.Optimum.Coupled.AtOnce.Shores.shore_le", "uses": ["Becoming.Optimum.Coupled.AtOnce.Shores.upTo_le"]}
+{"name": "Becoming.Optimum.Coupled.AtOnce.Shores.shore_le_self", "uses": ["Becoming.Optimum.Coupled.AtOnce.Shores.upTo_le_self"]}
+{"name": "Becoming.Optimum.Coupled.AtOnce.Shores.shore_zero", "uses": ["Becoming.Optimum.Coupled.AtOnce.Shores.upTo_zero"]}
+{"name": "Becoming.Optimum.Coupled.AtOnce.Shores.upTo_le", "uses": []}
+{"name": "Becoming.Optimum.Coupled.AtOnce.Shores.upTo_le_self", "uses": []}
+{"name": "Becoming.Optimum.Coupled.AtOnce.Shores.upTo_zero", "uses": []}
+{"name": "Becoming.Optimum.Coupled.AtOnce.cancel_left_sub", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.Optimum.Coupled.AtOnce.drain_perfect_iff", "uses": ["Becoming.Optimum.AtOnce.steps_after", "Becoming.Optimum.Coupled.AtOnce.cancel_left_sub", "Becoming.Optimum.Coupled.AtOnce.drawn_drained_step", "Becoming.Optimum.Coupled.AtOnce.leftWith_drained", "Becoming.Optimum.Coupled.AtOnce.uncancel", "Becoming.Optimum.Coupled.stepCoupling_of_lt", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.Coupled.AtOnce.drain_perfect_iff_reach", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.Optimum.Coupled.AtOnce.drain_perfect_iff", "Becoming.Optimum.Coupled.stepCoupling_of_le", "Becoming.Optimum.Coupled.stepCoupling_of_lt"]}
+{"name": "Becoming.Optimum.Coupled.AtOnce.drained_unmet", "uses": ["Becoming.Optimum.Coupled.AtOnce.pool_drained", "Becoming.Optimum.Coupled.stepCoupling_of_lt"]}
+{"name": "Becoming.Optimum.Coupled.AtOnce.drawn_drained_step", "uses": ["Becoming.Optimum.Coupled.AtOnce.pool_drained", "Becoming.Optimum.Coupled.stepCoupling_of_lt"]}
+{"name": "Becoming.Optimum.Coupled.AtOnce.leftWith_drained", "uses": ["Becoming.Optimum.AtOnce.sumTo_set", "Becoming.Optimum.AtOnce.sumTo_zero"]}
+{"name": "Becoming.Optimum.Coupled.AtOnce.pool_drained", "uses": ["Becoming.Optimum.AtOnce.sumTo_zeros"]}
+{"name": "Becoming.Optimum.Coupled.AtOnce.uncancel", "uses": ["Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.Optimum.Coupled.AtOnce.unpivotal_drain_perfect", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.Optimum.Coupled.AtOnce.drawn_drained_step", "Becoming.Optimum.Coupled.AtOnce.leftWith_drained", "Becoming.Optimum.Coupled.stepCoupling_of_lt"]}
+{"name": "Becoming.Optimum.Coupled.down", "uses": []}
+{"name": "Becoming.Optimum.Coupled.drain_perfect", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.Optimum.Coupled.drawn_drained", "Becoming.Optimum.Coupled.last_drawer", "Becoming.Optimum.Coupled.pass_after_last", "Becoming.Optimum.Coupled.stepCoupling_of_le", "Becoming.Optimum.Coupled.stepCoupling_of_lt", "Becoming.Optimum.InTurn.pass_through", "Becoming.SupportGated.sub_pos_of_lt", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.Optimum.Coupled.drains_at", "uses": ["Becoming.Optimum.Coupled.drawn_drained", "Becoming.Optimum.Coupled.last_drawer", "Becoming.Optimum.Coupled.leaves_nothing", "Becoming.Optimum.Coupled.pass_after_last", "Becoming.Optimum.InTurn.leaves_floor", "Becoming.Optimum.InTurn.pass_through", "Becoming.SupportGated.sub_pos_of_lt", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.Optimum.Coupled.drains_below", "uses": ["Becoming.Optimum.Coupled.drains_at"]}
+{"name": "Becoming.Optimum.Coupled.drawn_drained", "uses": ["Becoming.Optimum.Coupled.given_all", "Becoming.Optimum.Coupled.left_all", "Becoming.Optimum.Coupled.stepCoupling_of_lt"]}
+{"name": "Becoming.Optimum.Coupled.drawn_kept_first", "uses": ["Becoming.Naturals.le_sub_of_add_le", "Becoming.Optimum.Coupled.keep_keep", "Becoming.Optimum.Coupled.keep_of_le", "Becoming.Optimum.Coupled.keep_of_lt", "Becoming.Optimum.Coupled.left_all", "Becoming.Optimum.Coupled.stepCoupling_of_le", "Becoming.Optimum.Coupled.stepCoupling_of_lt"]}
+{"name": "Becoming.Optimum.Coupled.drawn_kept_late", "uses": ["Becoming.Optimum.Coupled.given_all", "Becoming.Optimum.Coupled.keep_keep", "Becoming.Optimum.Coupled.keep_of_le", "Becoming.Optimum.Coupled.keep_of_lt", "Becoming.Optimum.Coupled.left_all", "Becoming.Optimum.Coupled.stepCoupling_of_le", "Becoming.Optimum.Coupled.stepCoupling_of_lt"]}
+{"name": "Becoming.Optimum.Coupled.drawn_uncoupled", "uses": ["Becoming.Optimum.Coupled.stepCoupling_zero"]}
+{"name": "Becoming.Optimum.Coupled.gatedRenewal_gate", "uses": []}
+{"name": "Becoming.Optimum.Coupled.gatedRenewal_holds", "uses": []}
+{"name": "Becoming.Optimum.Coupled.gatedRenewal_regrows", "uses": []}
+{"name": "Becoming.Optimum.Coupled.gated_threshold", "uses": ["Becoming.Optimum.Coupled.drain_perfect", "Becoming.Optimum.Coupled.drains_below", "Becoming.Optimum.Coupled.gatedRenewal_gate", "Becoming.Optimum.Coupled.gatedRenewal_holds", "Becoming.Optimum.Coupled.gatedRenewal_regrows", "Becoming.Optimum.Coupled.keeping_perfect", "Becoming.Optimum.Coupled.kept_above", "Becoming.Optimum.Coupled.kept_levels"]}
+{"name": "Becoming.Optimum.Coupled.given_all", "uses": ["Becoming.Optimum.Coupled.pass_all"]}
+{"name": "Becoming.Optimum.Coupled.keep_keep", "uses": ["Becoming.Optimum.Coupled.keep_of_le", "Becoming.Optimum.Coupled.keep_of_lt"]}
+{"name": "Becoming.Optimum.Coupled.keep_le", "uses": ["Becoming.Optimum.Coupled.keep_of_le", "Becoming.Optimum.Coupled.keep_of_lt"]}
+{"name": "Becoming.Optimum.Coupled.keep_of_le", "uses": []}
+{"name": "Becoming.Optimum.Coupled.keep_of_lt", "uses": []}
+{"name": "Becoming.Optimum.Coupled.keeping_perfect", "uses": ["Becoming.Optimum.Coupled.drawn_kept_first", "Becoming.Optimum.Coupled.keep_le", "Becoming.Optimum.Coupled.later_kept_first", "Becoming.Optimum.Coupled.later_kept_late", "Becoming.Optimum.Coupled.need_best", "Becoming.Optimum.Coupled.stepCoupling_of_le", "Becoming.Optimum.Coupled.stepCoupling_of_lt"]}
+{"name": "Becoming.Optimum.Coupled.kept_above", "uses": ["Becoming.Optimum.Coupled.kept_at"]}
+{"name": "Becoming.Optimum.Coupled.kept_at", "uses": ["Becoming.Optimum.Coupled.down", "Becoming.Optimum.Coupled.drawn_kept_first", "Becoming.Optimum.Coupled.later_kept_first", "Becoming.Optimum.Coupled.later_kept_late", "Becoming.Optimum.Coupled.leaves_need", "Becoming.Optimum.Coupled.stepCoupling_of_le", "Becoming.Optimum.Coupled.stepCoupling_of_lt"]}
+{"name": "Becoming.Optimum.Coupled.kept_levels", "uses": ["Becoming.Optimum.Coupled.keep_keep", "Becoming.Optimum.Coupled.keep_of_le", "Becoming.Optimum.Coupled.left_all"]}
+{"name": "Becoming.Optimum.Coupled.last_drawer", "uses": ["Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.Optimum.Coupled.later_kept_first", "uses": ["Becoming.Optimum.Coupled.keep_keep", "Becoming.Optimum.Coupled.keep_of_le", "Becoming.Optimum.Coupled.keep_of_lt", "Becoming.Optimum.Coupled.pass_all", "Becoming.Optimum.Coupled.stepCoupling_of_le", "Becoming.Optimum.Coupled.stepCoupling_of_lt", "Becoming.SupportGated.sub_pos_of_lt", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.Optimum.Coupled.later_kept_late", "uses": ["Becoming.Optimum.Coupled.drawn_kept_late", "Becoming.Optimum.Coupled.keep_keep", "Becoming.Optimum.Coupled.keep_of_le", "Becoming.Optimum.Coupled.keep_of_lt", "Becoming.Optimum.Coupled.pass_after", "Becoming.Optimum.Coupled.stepCoupling_of_le", "Becoming.Optimum.Coupled.stepCoupling_of_lt"]}
+{"name": "Becoming.Optimum.Coupled.le_of_sub_le_sub", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.Optimum.Coupled.leaves_need", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.Optimum.Coupled.keep_of_le", "Becoming.Optimum.Coupled.keep_of_lt", "Becoming.Optimum.Coupled.le_of_sub_le_sub", "Becoming.Optimum.Coupled.zero_of_le_sub", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.Coupled.leaves_nothing", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.Optimum.Coupled.stepCoupling_of_le", "Becoming.Optimum.Coupled.stepCoupling_of_lt", "Becoming.Optimum.Coupled.zero_of_le_sub", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.Coupled.left_all", "uses": ["Becoming.Optimum.Coupled.pass_all"]}
+{"name": "Becoming.Optimum.Coupled.need_best", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.Optimum.Coupled.keep_of_le", "Becoming.Optimum.Coupled.keep_of_lt", "Becoming.Optimum.sub_le_sub_left_of_le"]}
+{"name": "Becoming.Optimum.Coupled.one_first_worth", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.Optimum.Coupled.stepCoupling_of_le", "Becoming.Optimum.Coupled.stepCoupling_of_lt"]}
+{"name": "Becoming.Optimum.Coupled.one_keeps_first", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.Optimum.Coupled.leaves_nothing", "Becoming.Optimum.Coupled.stepCoupling_of_le", "Becoming.Optimum.Coupled.stepCoupling_of_lt"]}
+{"name": "Becoming.Optimum.Coupled.one_keeps_several_drain", "uses": ["Becoming.Optimum.Coupled.drains_below", "Becoming.Optimum.Coupled.one_keeps_first"]}
+{"name": "Becoming.Optimum.Coupled.one_perfect", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.Optimum.Coupled.keep_le", "Becoming.Optimum.Coupled.keep_of_le", "Becoming.Optimum.Coupled.one_first_worth", "Becoming.Optimum.Coupled.stepCoupling_of_le", "Becoming.Optimum.Coupled.stepCoupling_of_lt", "Becoming.add_right_cancel"]}
+{"name": "Becoming.Optimum.Coupled.pass_after", "uses": ["Becoming.Optimum.Coupled.pass_after_last", "Becoming.Optimum.Coupled.pass_all", "Becoming.SupportGated.sub_pos_of_lt", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.Optimum.Coupled.pass_after_last", "uses": []}
+{"name": "Becoming.Optimum.Coupled.pass_all", "uses": []}
+{"name": "Becoming.Optimum.Coupled.perfect_uncoupled", "uses": ["Becoming.Optimum.Coupled.drawn_uncoupled", "Becoming.Optimum.Coupled.stepCoupling_zero"]}
+{"name": "Becoming.Optimum.Coupled.stepCoupling_of_le", "uses": []}
+{"name": "Becoming.Optimum.Coupled.stepCoupling_of_lt", "uses": []}
+{"name": "Becoming.Optimum.Coupled.stepCoupling_zero", "uses": ["Becoming.Optimum.Coupled.stepCoupling_of_le", "Becoming.Optimum.Coupled.stepCoupling_of_lt"]}
+{"name": "Becoming.Optimum.Coupled.zero_of_le_sub", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.Naturals.sub_add_cancel"]}

@@ -1,0 +1,18 @@
+{"name": "Becoming.Weighted.Commutes.carried", "uses": ["Becoming.Weighted.total_congr"]}
+{"name": "Becoming.Weighted.Commutes.fixed_expect", "uses": ["Becoming.Weighted.Commutes.carried"]}
+{"name": "Becoming.Weighted.Commutes.of_samples", "uses": ["Becoming.Weighted.over_congr", "Becoming.Weighted.total_map"]}
+{"name": "Becoming.Weighted.Commutes.start_expect", "uses": ["Becoming.Weighted.Commutes.carried", "Becoming.Weighted.total_congr"]}
+{"name": "Becoming.Weighted.Pooling.commutes", "uses": []}
+{"name": "Becoming.Weighted.Pooling.run_counts", "uses": []}
+{"name": "Becoming.Weighted.Pooling.share_below_half", "uses": []}
+{"name": "Becoming.Weighted.Pooling.share_rises", "uses": ["Becoming.add_mul_split"]}
+{"name": "Becoming.Weighted.Reinforcing.commutes", "uses": []}
+{"name": "Becoming.Weighted.Reinforcing.expect_equal", "uses": ["Becoming.Weighted.Commutes.fixed_expect", "Becoming.Weighted.Reinforcing.commutes"]}
+{"name": "Becoming.Weighted.Reinforcing.oneSided", "uses": ["Becoming.Weighted.Reinforcing.oneSidedRun_eq", "Becoming.Weighted.Reinforcing.oneSidedWeight_pos"]}
+{"name": "Becoming.Weighted.Reinforcing.oneSidedRun_eq", "uses": []}
+{"name": "Becoming.Weighted.Reinforcing.oneSidedWeight_pos", "uses": []}
+{"name": "Becoming.Weighted.add_congr", "uses": []}
+{"name": "Becoming.Weighted.law_commutes", "uses": []}
+{"name": "Becoming.Weighted.over_congr", "uses": ["Becoming.Weighted.add_congr"]}
+{"name": "Becoming.Weighted.total_congr", "uses": ["Becoming.Weighted.add_congr"]}
+{"name": "Becoming.Weighted.total_map", "uses": []}

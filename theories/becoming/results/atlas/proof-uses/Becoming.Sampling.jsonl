@@ -1,0 +1,88 @@
+{"name": "Becoming.Averaging.coarse_not_fine", "uses": []}
+{"name": "Becoming.Cancelling.coarse_not_fine", "uses": []}
+{"name": "Becoming.Delay.coarse_descends", "uses": ["Becoming.Flow.unionPresent_spec", "Becoming.Strobe.twice_strict", "Becoming.gate_mem", "Becoming.span_mem", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Delay.fine_transmitting", "uses": ["Becoming.Delay.no_descent"]}
+{"name": "Becoming.Delay.no_descent", "uses": []}
+{"name": "Becoming.Delay.transmitting_step_relative", "uses": ["Becoming.Delay.coarse_descends", "Becoming.Delay.fine_transmitting"]}
+{"name": "Becoming.ExchangeFlows.sample_give_absent", "uses": ["Becoming.gateBy_of_not", "Becoming.total_congr_on", "Becoming.total_zero"]}
+{"name": "Becoming.ExchangeFlows.sample_take_absent", "uses": ["Becoming.gateBy_of_not", "Becoming.total_congr_on", "Becoming.total_zero"]}
+{"name": "Becoming.ExchangeFlows.selected_le_uniform", "uses": ["Becoming.Flow.selected_le", "Becoming.selected_uniform", "Becoming.total_const"]}
+{"name": "Becoming.ExchangeFlows.selection_within_uniform", "uses": ["Becoming.Flow.selection_within", "Becoming.selected_uniform", "Becoming.total_const"]}
+{"name": "Becoming.Flow.BalancesOn.sample", "uses": ["Becoming.Flow.sample_given_on", "Becoming.Flow.sample_taken_on", "Becoming.add_sub_of_le", "Becoming.balance_over_stretch_on", "Becoming.steps_of_within"]}
+{"name": "Becoming.Flow.DissipatesOn.sample", "uses": ["Becoming.Flow.gateBy_dissipates", "Becoming.Flow.sample_give_total", "Becoming.Flow.sample_take_total", "Becoming.Flow.total_dissipates"]}
+{"name": "Becoming.Flow.RunsDownOn.sample", "uses": ["Becoming.Flow.BalancesOn.sample", "Becoming.Flow.DissipatesOn.sample"]}
+{"name": "Becoming.Flow.RunsDownOn.sample_of_fine", "uses": ["Becoming.Flow.RunsDownOn.sample", "Becoming.last_of_span", "Becoming.span_mem"]}
+{"name": "Becoming.Flow.eq_zero_of_le_zero", "uses": []}
+{"name": "Becoming.Flow.gateBy_dissipates", "uses": []}
+{"name": "Becoming.Flow.pos_of_gated", "uses": ["Becoming.gate_mem", "Becoming.mem_of_gate_pos", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.sample_acting", "uses": ["Becoming.Flow.sample_acting_on"]}
+{"name": "Becoming.Flow.sample_acting_on", "uses": ["Becoming.Flow.pos_of_gated", "Becoming.mem_span"]}
+{"name": "Becoming.Flow.sample_balances", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.BalancesOn.sample", "Becoming.Flow.balances_iff_on"]}
+{"name": "Becoming.Flow.sample_ceasesToStand_iff", "uses": ["Becoming.Flow.BalancesOn.ceasesToStand_iff", "Becoming.Flow.BalancesOn.sample", "Becoming.Flow.sample_given_on", "Becoming.Flow.sample_taken_on"]}
+{"name": "Becoming.Flow.sample_changes_iff", "uses": ["Becoming.Flow.RunsDownOn.changes_iff", "Becoming.Flow.RunsDownOn.sample"]}
+{"name": "Becoming.Flow.sample_closed", "uses": ["Becoming.Flow.eq_zero_of_le_zero", "Becoming.Flow.unionPresent_spec", "Becoming.gate_mem", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.Flow.sample_closedAt_iff", "uses": ["Becoming.Flow.sample_closed", "Becoming.gateBy_zero", "Becoming.total_congr_on", "Becoming.total_zero"]}
+{"name": "Becoming.Flow.sample_comesToStand_iff", "uses": ["Becoming.Flow.BalancesOn.comesToStand_iff", "Becoming.Flow.BalancesOn.sample", "Becoming.Flow.sample_given_on", "Becoming.Flow.sample_taken_on"]}
+{"name": "Becoming.Flow.sample_dissipative", "uses": ["Becoming.Flow.DissipatesOn.sample", "Becoming.Flow.sample_closed"]}
+{"name": "Becoming.Flow.sample_give_total", "uses": ["Becoming.total_congr", "Becoming.total_gateBy", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.sample_given", "uses": ["Becoming.Flow.sample_given_on"]}
+{"name": "Becoming.Flow.sample_given_on", "uses": ["Becoming.Flow.unionPresent_spec", "Becoming.total_congr_on", "Becoming.total_gate", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.sample_once", "uses": ["Becoming.Flow.unionPresent_spec"]}
+{"name": "Becoming.Flow.sample_take_total", "uses": ["Becoming.total_congr", "Becoming.total_gateBy", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.sample_taken", "uses": ["Becoming.Flow.sample_taken_on"]}
+{"name": "Becoming.Flow.sample_taken_on", "uses": ["Becoming.Flow.unionPresent_spec", "Becoming.total_congr_on", "Becoming.total_gate", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.sample_taking", "uses": ["Becoming.Flow.sample_taking_on"]}
+{"name": "Becoming.Flow.sample_taking_on", "uses": ["Becoming.Flow.pos_of_gated", "Becoming.mem_span"]}
+{"name": "Becoming.Flow.sign_add_le", "uses": ["Becoming.sign_le_one"]}
+{"name": "Becoming.Flow.total_dissipates", "uses": ["Becoming.Flow.sign_add_le"]}
+{"name": "Becoming.Flow.unionPresent_spec", "uses": ["Becoming.adjoin_spec", "Becoming.mem_adjoin", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Strict.comp", "uses": ["Becoming.Strict.lt"]}
+{"name": "Becoming.Strict.le_self", "uses": []}
+{"name": "Becoming.Strict.lt", "uses": []}
+{"name": "Becoming.Strobe.acting_taking_step_relative", "uses": ["Becoming.Strobe.coarse_gives", "Becoming.Strobe.flick_even"]}
+{"name": "Becoming.Strobe.alive_listed", "uses": []}
+{"name": "Becoming.Strobe.coarse_gives", "uses": ["Becoming.Flow.unionPresent_spec", "Becoming.Strobe.flick_odd", "Becoming.Strobe.twice_strict", "Becoming.gate_mem", "Becoming.span_mem", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Strobe.coarse_quiet", "uses": ["Becoming.Strobe.flick_even"]}
+{"name": "Becoming.Strobe.converse_fails", "uses": ["Becoming.Strict.le_self", "Becoming.Strobe.coarse_quiet", "Becoming.Strobe.fine_arises", "Becoming.Strobe.fine_ceases", "Becoming.Strobe.twice_strict"]}
+{"name": "Becoming.Strobe.fine", "uses": ["Becoming.Strobe.alive_listed", "Becoming.Strobe.on_of_bit"]}
+{"name": "Becoming.Strobe.fine_arises", "uses": ["Becoming.Strobe.flick_even", "Becoming.Strobe.flick_odd"]}
+{"name": "Becoming.Strobe.fine_ceases", "uses": ["Becoming.Strobe.flick_even", "Becoming.Strobe.flick_odd"]}
+{"name": "Becoming.Strobe.flick_even", "uses": []}
+{"name": "Becoming.Strobe.flick_odd", "uses": ["Becoming.Strobe.flick_even"]}
+{"name": "Becoming.Strobe.on_of_bit", "uses": []}
+{"name": "Becoming.Strobe.once", "uses": []}
+{"name": "Becoming.Strobe.twice_strict", "uses": []}
+{"name": "Becoming.Web.held_of_constant", "uses": []}
+{"name": "Becoming.Web.held_of_unit", "uses": []}
+{"name": "Becoming.Web.sample_arises", "uses": ["Becoming.arises_within"]}
+{"name": "Becoming.Web.sample_ceases", "uses": ["Becoming.ceases_within"]}
+{"name": "Becoming.Web.sample_ceasing", "uses": ["Becoming.Strict.le_self", "Becoming.Web.sample_ceases"]}
+{"name": "Becoming.Web.sample_census", "uses": []}
+{"name": "Becoming.Web.sample_dependent", "uses": []}
+{"name": "Becoming.Web.sample_embodied", "uses": []}
+{"name": "Becoming.Web.sample_sample", "uses": []}
+{"name": "Becoming.Web.sample_standingCensus", "uses": []}
+{"name": "Becoming.Web.sample_unceasing", "uses": ["Becoming.Strict.le_self", "Becoming.Web.sample_arises"]}
+{"name": "Becoming.World.sample_balanced", "uses": ["Becoming.Flow.sample_balances"]}
+{"name": "Becoming.World.sample_counted", "uses": ["Becoming.Web.sample_census"]}
+{"name": "Becoming.World.sample_dependent", "uses": ["Becoming.Web.sample_dependent"]}
+{"name": "Becoming.World.sample_dissipative", "uses": ["Becoming.Flow.sample_dissipative"]}
+{"name": "Becoming.World.sample_embodied", "uses": ["Becoming.Web.sample_embodied"]}
+{"name": "Becoming.World.sample_finite", "uses": []}
+{"name": "Becoming.World.sample_rests_unrefuted", "uses": ["Becoming.World.Embodied.arising", "Becoming.World.rests_unrefuted", "Becoming.World.sample_balanced", "Becoming.World.sample_dissipative", "Becoming.World.sample_embodied", "Becoming.World.sample_finite"]}
+{"name": "Becoming.World.sample_survives", "uses": ["Becoming.World.sample_balanced", "Becoming.World.sample_counted", "Becoming.World.sample_dependent", "Becoming.World.sample_dissipative", "Becoming.World.sample_embodied"]}
+{"name": "Becoming.arises_within", "uses": ["Becoming.Map.step_reached_le", "Becoming.Map.step_reaches_of_le", "Becoming.«两端分则中有标»"]}
+{"name": "Becoming.ceases_within", "uses": ["Becoming.arises_within"]}
+{"name": "Becoming.gateBy_of", "uses": []}
+{"name": "Becoming.gateBy_of_not", "uses": []}
+{"name": "Becoming.gateBy_zero", "uses": []}
+{"name": "Becoming.gate_mem", "uses": ["Becoming.gateBy_of"]}
+{"name": "Becoming.last_of_span", "uses": ["Becoming.le_dest", "Becoming.span_mem"]}
+{"name": "Becoming.mem_adjoin", "uses": ["Becoming.mem_insertNew"]}
+{"name": "Becoming.mem_insertNew", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.mem_of_gateBy_pos", "uses": []}
+{"name": "Becoming.mem_of_gate_pos", "uses": ["Becoming.mem_of_gateBy_pos"]}
+{"name": "Becoming.mem_span", "uses": ["Becoming.add_sub_of_le", "Becoming.between_of_mem_steps"]}
+{"name": "Becoming.span_mem", "uses": ["Becoming.add_sub_of_le", "Becoming.steps_of_within"]}
+{"name": "Becoming.total_gate", "uses": ["Becoming.gate_mem", "Becoming.mem_of_gate_pos", "Becoming.total_congr_on", "Becoming.total_le_of_support"]}
+{"name": "Becoming.total_gateBy", "uses": ["Becoming.total_zero"]}

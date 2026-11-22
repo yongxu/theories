@@ -1,0 +1,97 @@
+{"name": "Becoming.HeldForReading.SignLoop.both_goes_on", "uses": []}
+{"name": "Becoming.HeldForReading.SignLoop.both_off", "uses": ["Becoming.HeldForReading.SignLoop.both_turns_off"]}
+{"name": "Becoming.HeldForReading.SignLoop.both_on", "uses": ["Becoming.HeldForReading.SignLoop.both_goes_on"]}
+{"name": "Becoming.HeldForReading.SignLoop.both_released", "uses": []}
+{"name": "Becoming.HeldForReading.SignLoop.both_stopped", "uses": []}
+{"name": "Becoming.HeldForReading.SignLoop.both_turns_off", "uses": []}
+{"name": "Becoming.HeldForReading.SignLoop.choose_go_ties", "uses": ["Becoming.HeldForReading.SignLoop.offExcess_of_all_true", "Becoming.HeldForReading.held_eq_go_iff"]}
+{"name": "Becoming.HeldForReading.SignLoop.choose_hold_iff", "uses": ["Becoming.HeldForReading.SignLoop.choose_hold_iff_mem", "Becoming.HeldForReading.SignLoop.gains_of_lt", "Becoming.HeldForReading.SignLoop.loses_of_lt", "Becoming.HeldForReading.held_gains_iff"]}
+{"name": "Becoming.HeldForReading.SignLoop.choose_hold_iff_mem", "uses": ["Becoming.HeldForReading.SignLoop.gains_of_all_false", "Becoming.HeldForReading.SignLoop.loses_of_all_false", "Becoming.HeldForReading.SignLoop.not_gains_of_all_true", "Becoming.HeldForReading.SignLoop.not_loses_of_all_true"]}
+{"name": "Becoming.HeldForReading.SignLoop.choose_off_ties", "uses": ["Becoming.HeldForReading.SignLoop.goExcess_of_all_not", "Becoming.HeldForReading.held_eq_off_iff"]}
+{"name": "Becoming.HeldForReading.SignLoop.gains_of_all_false", "uses": []}
+{"name": "Becoming.HeldForReading.SignLoop.gains_of_lt", "uses": []}
+{"name": "Becoming.HeldForReading.SignLoop.goExcess_of_all_not", "uses": ["Becoming.HeldForReading.SignLoop.not_gains_of_all_true", "Becoming.total_eq_zero"]}
+{"name": "Becoming.HeldForReading.SignLoop.loses_of_all_false", "uses": []}
+{"name": "Becoming.HeldForReading.SignLoop.loses_of_lt", "uses": []}
+{"name": "Becoming.HeldForReading.SignLoop.never_senses_stop", "uses": ["Becoming.HeldForReading.SignLoop.rests_unread"]}
+{"name": "Becoming.HeldForReading.SignLoop.not_gains_of_all_true", "uses": ["Becoming.ListTests.all_mem"]}
+{"name": "Becoming.HeldForReading.SignLoop.not_loses_of_all_true", "uses": ["Becoming.ListTests.all_mem"]}
+{"name": "Becoming.HeldForReading.SignLoop.offExcess_of_all_true", "uses": ["Becoming.HeldForReading.SignLoop.not_loses_of_all_true", "Becoming.total_eq_zero"]}
+{"name": "Becoming.HeldForReading.SignLoop.refuted_drops", "uses": []}
+{"name": "Becoming.HeldForReading.SignLoop.refuted_goes_on", "uses": []}
+{"name": "Becoming.HeldForReading.SignLoop.refuted_senses_stop", "uses": []}
+{"name": "Becoming.HeldForReading.SignLoop.rests_unread", "uses": ["Becoming.ReadingLoop.Loop.rests_of_unrefuted"]}
+{"name": "Becoming.HeldForReading.across_le_iff", "uses": ["Becoming.RevisionPlans.le_iff_of_balance"]}
+{"name": "Becoming.HeldForReading.across_lt_iff", "uses": ["Becoming.HeldForReading.across_le_iff"]}
+{"name": "Becoming.HeldForReading.after_add_gap", "uses": ["Becoming.add_sub_of_le", "Becoming.total_add", "Becoming.total_congr_on"]}
+{"name": "Becoming.HeldForReading.after_add_shortfall", "uses": ["Becoming.HeldForReading.after_add_shortfall_go", "Becoming.HeldForReading.after_byReading"]}
+{"name": "Becoming.HeldForReading.after_add_shortfall_go", "uses": ["Becoming.HeldForReading.excess_goOn", "Becoming.HeldForReading.excess_held", "Becoming.HeldForReading.gainOf_goOn", "Becoming.HeldForReading.gainOf_held", "Becoming.RevisionPlans.balance", "Becoming.RevisionPlans.splits_goOn", "Becoming.RevisionPlans.splits_held"]}
+{"name": "Becoming.HeldForReading.after_add_shortfall_off", "uses": ["Becoming.HeldForReading.excess_held", "Becoming.HeldForReading.excess_off", "Becoming.HeldForReading.gainOf_held", "Becoming.HeldForReading.gainOf_off", "Becoming.RevisionPlans.balance", "Becoming.RevisionPlans.splits_held", "Becoming.RevisionPlans.splits_off"]}
+{"name": "Becoming.HeldForReading.after_byReading", "uses": ["Becoming.HeldForReading.excess_goOn", "Becoming.HeldForReading.excess_off", "Becoming.HeldForReading.gainOf_goOn", "Becoming.HeldForReading.gainOf_held", "Becoming.HeldForReading.gainOf_off", "Becoming.RevisionPlans.gainOf_reading", "Becoming.RevisionPlans.splits_goOn", "Becoming.RevisionPlans.splits_off"]}
+{"name": "Becoming.HeldForReading.after_eq_after_iff", "uses": ["Becoming.HeldForReading.after_le_after", "Becoming.HeldForReading.after_lt_after_iff"]}
+{"name": "Becoming.HeldForReading.after_le_after", "uses": ["Becoming.total_le"]}
+{"name": "Becoming.HeldForReading.after_lt_after_iff", "uses": ["Becoming.HeldForReading.after_add_gap", "Becoming.SupportGated.sub_pos_of_lt", "Becoming.sub_eq_zero_of_le", "Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.HeldForReading.after_offset", "uses": ["Becoming.total_add", "Becoming.total_congr"]}
+{"name": "Becoming.HeldForReading.after_offset_le_iff", "uses": ["Becoming.HeldForReading.after_offset", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.HeldForReading.after_rule", "uses": ["Becoming.total_add", "Becoming.total_congr"]}
+{"name": "Becoming.HeldForReading.after_rule_add_onLoss", "uses": ["Becoming.HeldForReading.after_rule", "Becoming.HeldForReading.offPart_add_onPart"]}
+{"name": "Becoming.HeldForReading.after_rule_le_iff", "uses": ["Becoming.HeldForReading.after_rule_add_onLoss", "Becoming.Naturals.le_of_add_le_add_left", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.HeldForReading.below_iff", "uses": ["Becoming.HeldForReading.after_lt_after_iff"]}
+{"name": "Becoming.HeldForReading.bestOf_best", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.HeldForReading.byReading_best", "uses": ["Becoming.HeldForReading.byReading_of_lt", "Becoming.HeldForReading.byReading_of_not_lt", "Becoming.HeldForReading.forall_pair", "Becoming.HeldForReading.go_open", "Becoming.HeldForReading.off_open"]}
+{"name": "Becoming.HeldForReading.byReading_of_lt", "uses": ["Becoming.HeldForReading.byRule_of_true"]}
+{"name": "Becoming.HeldForReading.byReading_of_not_lt", "uses": ["Becoming.HeldForReading.byRule_of_false"]}
+{"name": "Becoming.HeldForReading.byRule_of_false", "uses": []}
+{"name": "Becoming.HeldForReading.byRule_of_true", "uses": []}
+{"name": "Becoming.HeldForReading.cell_policy_iff", "uses": ["Becoming.HeldForReading.after_eq_after_iff"]}
+{"name": "Becoming.HeldForReading.cell_term", "uses": []}
+{"name": "Becoming.HeldForReading.committed_eq_after_iff", "uses": ["Becoming.HeldForReading.after_eq_after_iff"]}
+{"name": "Becoming.HeldForReading.committed_le_after", "uses": ["Becoming.HeldForReading.after_le_after"]}
+{"name": "Becoming.HeldForReading.committed_le_held", "uses": ["Becoming.HeldForReading.byReading_best", "Becoming.HeldForReading.committed_le_after", "Becoming.HeldForReading.go_open", "Becoming.HeldForReading.off_open"]}
+{"name": "Becoming.HeldForReading.cond_least_eq_zero_iff", "uses": []}
+{"name": "Becoming.HeldForReading.cond_least_le", "uses": []}
+{"name": "Becoming.HeldForReading.cond_split", "uses": []}
+{"name": "Becoming.HeldForReading.excess_goOn", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.HeldForReading.excess_held", "uses": ["Becoming.RevisionPlans.held_plan_term", "Becoming.total_congr"]}
+{"name": "Becoming.HeldForReading.excess_off", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.HeldForReading.excess_pos_iff", "uses": ["Becoming.HeldForReading.below_iff", "Becoming.HeldForReading.byReading_best", "Becoming.HeldForReading.forgone_below_excess_iff", "Becoming.HeldForReading.go_below_iff", "Becoming.HeldForReading.go_open", "Becoming.HeldForReading.off_below_iff", "Becoming.HeldForReading.off_open"]}
+{"name": "Becoming.HeldForReading.finer_least_le", "uses": ["Becoming.HeldForReading.least_through"]}
+{"name": "Becoming.HeldForReading.first_below_iff", "uses": []}
+{"name": "Becoming.HeldForReading.first_open", "uses": []}
+{"name": "Becoming.HeldForReading.forall_pair", "uses": []}
+{"name": "Becoming.HeldForReading.forgone_below_excess_iff", "uses": ["Becoming.HeldForReading.excess_goOn", "Becoming.HeldForReading.excess_off", "Becoming.HeldForReading.held_above_moves_iff", "Becoming.RevisionPlans.reading_above_iff", "Becoming.RevisionPlans.splits_goOn", "Becoming.RevisionPlans.splits_off"]}
+{"name": "Becoming.HeldForReading.forgone_within_excess_iff", "uses": ["Becoming.HeldForReading.excess_goOn", "Becoming.HeldForReading.excess_off", "Becoming.HeldForReading.moves_not_below_iff", "Becoming.RevisionPlans.reading_not_below_iff", "Becoming.RevisionPlans.splits_goOn", "Becoming.RevisionPlans.splits_off"]}
+{"name": "Becoming.HeldForReading.gainOf_goOn", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.HeldForReading.gainOf_held", "uses": ["Becoming.HeldForReading.held_term", "Becoming.RevisionPlans.held_plan_term", "Becoming.total_congr"]}
+{"name": "Becoming.HeldForReading.gainOf_off", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.HeldForReading.go_below_iff", "uses": ["Becoming.HeldForReading.byReading_of_lt", "Becoming.HeldForReading.byReading_of_not_lt"]}
+{"name": "Becoming.HeldForReading.go_open", "uses": []}
+{"name": "Becoming.HeldForReading.held_above_held_iff", "uses": ["Becoming.HeldForReading.gainOf_held"]}
+{"name": "Becoming.HeldForReading.held_above_moves_iff", "uses": ["Becoming.HeldForReading.gainOf_goOn", "Becoming.HeldForReading.gainOf_held", "Becoming.HeldForReading.gainOf_off"]}
+{"name": "Becoming.HeldForReading.held_eq_go_iff", "uses": ["Becoming.HeldForReading.excess_goOn", "Becoming.HeldForReading.gainOf_goOn", "Becoming.HeldForReading.gainOf_held", "Becoming.RevisionPlans.gainOf_reading_eq_iff", "Becoming.RevisionPlans.splits_goOn"]}
+{"name": "Becoming.HeldForReading.held_eq_off_iff", "uses": ["Becoming.HeldForReading.excess_off", "Becoming.HeldForReading.gainOf_held", "Becoming.HeldForReading.gainOf_off", "Becoming.RevisionPlans.gainOf_reading_eq_iff", "Becoming.RevisionPlans.splits_off"]}
+{"name": "Becoming.HeldForReading.held_gains_iff", "uses": ["Becoming.HeldForReading.below_iff", "Becoming.HeldForReading.byReading_best", "Becoming.HeldForReading.go_below_iff", "Becoming.HeldForReading.go_open", "Becoming.HeldForReading.off_below_iff", "Becoming.HeldForReading.off_open"]}
+{"name": "Becoming.HeldForReading.held_term", "uses": []}
+{"name": "Becoming.HeldForReading.least_through", "uses": ["Becoming.HeldForReading.cond_least_le", "Becoming.HeldForReading.shortfall_through", "Becoming.total_le"]}
+{"name": "Becoming.HeldForReading.least_zero_iff", "uses": ["Becoming.HeldForReading.cond_least_eq_zero_iff", "Becoming.HeldForReading.shortfall_through", "Becoming.le_total_of_mem", "Becoming.total_eq_zero"]}
+{"name": "Becoming.HeldForReading.moves_not_below_iff", "uses": ["Becoming.HeldForReading.gainOf_goOn", "Becoming.HeldForReading.gainOf_held", "Becoming.HeldForReading.gainOf_off"]}
+{"name": "Becoming.HeldForReading.offPart_add_onPart", "uses": ["Becoming.HeldForReading.cond_split", "Becoming.total_add", "Becoming.total_congr"]}
+{"name": "Becoming.HeldForReading.off_below_iff", "uses": ["Becoming.HeldForReading.byReading_of_lt", "Becoming.HeldForReading.byReading_of_not_lt"]}
+{"name": "Becoming.HeldForReading.off_open", "uses": []}
+{"name": "Becoming.HeldForReading.pairPolicy_best", "uses": ["Becoming.HeldForReading.first_open", "Becoming.HeldForReading.forall_pair", "Becoming.HeldForReading.second_open", "Becoming.cond_le_one"]}
+{"name": "Becoming.HeldForReading.pair_gains_iff", "uses": ["Becoming.HeldForReading.below_iff", "Becoming.HeldForReading.first_below_iff", "Becoming.HeldForReading.first_open", "Becoming.HeldForReading.pairPolicy_best", "Becoming.HeldForReading.second_below_iff", "Becoming.HeldForReading.second_open"]}
+{"name": "Becoming.HeldForReading.pair_gains_unreached", "uses": ["Becoming.ChoiceOccasions.reach_within", "Becoming.HeldForReading.committed_eq_after_iff", "Becoming.HeldForReading.pairPolicy_best", "Becoming.HeldForReading.reach_fixes", "Becoming.HeldForReading.second_open"]}
+{"name": "Becoming.HeldForReading.reach_fixes", "uses": ["Becoming.ChoiceOccasions.reach_within", "Becoming.HeldForReading.committed_eq_after_iff", "Becoming.HeldForReading.first_open", "Becoming.HeldForReading.pairPolicy_best"]}
+{"name": "Becoming.HeldForReading.reading_gains_iff", "uses": ["Becoming.HeldForReading.committed_eq_after_iff", "Becoming.HeldForReading.committed_le_after"]}
+{"name": "Becoming.HeldForReading.rule_not_below_go_iff", "uses": ["Becoming.HeldForReading.after_rule", "Becoming.HeldForReading.offPart_add_onPart", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.HeldForReading.rule_not_below_off_iff", "uses": ["Becoming.HeldForReading.after_rule", "Becoming.HeldForReading.offPart_add_onPart", "Becoming.Naturals.le_of_add_le_add_left"]}
+{"name": "Becoming.HeldForReading.second_below_iff", "uses": []}
+{"name": "Becoming.HeldForReading.second_open", "uses": []}
+{"name": "Becoming.HeldForReading.shortfall_byReading", "uses": ["Becoming.HeldForReading.excess_held", "Becoming.RevisionPlans.excess_reading"]}
+{"name": "Becoming.HeldForReading.shortfall_through", "uses": ["Becoming.HeldForReading.cell_term", "Becoming.HeldForReading.total_by_cells", "Becoming.HeldForReading.total_cond_both", "Becoming.total_congr"]}
+{"name": "Becoming.HeldForReading.threshold_go_iff", "uses": ["Becoming.HeldForReading.excess_goOn", "Becoming.HeldForReading.excess_held", "Becoming.HeldForReading.held_above_moves_iff", "Becoming.HeldForReading.moves_not_below_iff", "Becoming.RevisionPlans.above_iff", "Becoming.RevisionPlans.not_above_iff", "Becoming.RevisionPlans.splits_goOn", "Becoming.RevisionPlans.splits_held"]}
+{"name": "Becoming.HeldForReading.threshold_off_iff", "uses": ["Becoming.HeldForReading.excess_held", "Becoming.HeldForReading.excess_off", "Becoming.HeldForReading.held_above_moves_iff", "Becoming.HeldForReading.moves_not_below_iff", "Becoming.RevisionPlans.above_iff", "Becoming.RevisionPlans.not_above_iff", "Becoming.RevisionPlans.splits_held", "Becoming.RevisionPlans.splits_off"]}
+{"name": "Becoming.HeldForReading.through_threshold_iff", "uses": ["Becoming.HeldForReading.least_through", "Becoming.HeldForReading.threshold_go_iff", "Becoming.HeldForReading.threshold_off_iff"]}
+{"name": "Becoming.HeldForReading.total_by_cells", "uses": ["Becoming.HeldForReading.total_single", "Becoming.total_congr_on", "Becoming.total_swap"]}
+{"name": "Becoming.HeldForReading.total_cond_both", "uses": []}
+{"name": "Becoming.HeldForReading.total_single", "uses": ["Becoming.mem_cons_cases", "Becoming.total_eq_zero"]}

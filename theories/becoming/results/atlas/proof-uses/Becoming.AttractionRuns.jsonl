@@ -1,0 +1,15 @@
+{"name": "Becoming.AttractionRuns.captured_rule_drawn", "uses": ["Becoming.Branching.law_necessarily_iff", "Becoming.Branching.law_returns_iff", "Becoming.Captured.rule_perturbation_drawn"]}
+{"name": "Becoming.AttractionRuns.captured_rule_invariant", "uses": ["Becoming.Captured.rule_region_absorbing", "Becoming.Law.absorbing_iff_invariant"]}
+{"name": "Becoming.AttractionRuns.captured_state_drawn", "uses": ["Becoming.Branching.law_necessarily_iff", "Becoming.Branching.law_returns_iff", "Becoming.Captured.state_perturbation_drawn"]}
+{"name": "Becoming.AttractionRuns.drawnInto_returning", "uses": ["Becoming.Branching.law_necessarily_iff", "Becoming.Branching.law_returns_iff", "Becoming.Law.drawnInto_returning"]}
+{"name": "Becoming.AttractionRuns.drawn_iff_lost", "uses": ["Becoming.Branching.law_drawn_iff", "Becoming.Branching.law_reachable_iff", "Becoming.Law.drawn_iff_lost"]}
+{"name": "Becoming.AttractionRuns.drawn_not_keeps", "uses": ["Becoming.Branching.law_drawn_iff", "Becoming.Branching.law_keeps_iff", "Becoming.Law.Drawn.not_keeps"]}
+{"name": "Becoming.AttractionRuns.lossless_iff_none_drawn", "uses": ["Becoming.Branching.law_drawn_iff", "Becoming.Branching.law_lossless_iff", "Becoming.Law.lossless_iff_none_drawn"]}
+{"name": "Becoming.AttractionRuns.merges_draws", "uses": ["Becoming.Branching.law_drawn_iff", "Becoming.Branching.law_merges_iff", "Becoming.Law.Merges.draws"]}
+{"name": "Becoming.AttractionRuns.pred_drawn_keeps", "uses": ["Becoming.Branching.law_drawn_iff", "Becoming.Branching.law_keeps_iff", "Becoming.Law.pred_drawn_keeps"]}
+{"name": "Becoming.AttractionRuns.ratchet_false_lost", "uses": ["Becoming.Branching.law_reachable_iff", "Becoming.Ratchet.false_lost"]}
+{"name": "Becoming.AttractionRuns.ratchet_false_never_returns", "uses": ["Becoming.Branching.law_returns_iff", "Becoming.Ratchet.false_never_returns"]}
+{"name": "Becoming.AttractionRuns.ratchet_merges", "uses": ["Becoming.Branching.law_merges_iff", "Becoming.Ratchet.merges"]}
+{"name": "Becoming.AttractionRuns.ratchet_true_not_drawn", "uses": ["Becoming.Branching.law_drawn_iff", "Becoming.Ratchet.true_not_drawn"]}
+{"name": "Becoming.AttractionRuns.returning_invariant", "uses": ["Becoming.Branching.law_returns_iff", "Becoming.Law.returning_absorbing"]}
+{"name": "Becoming.AttractionRuns.succ_drawn_lossless", "uses": ["Becoming.Branching.law_drawn_iff", "Becoming.Branching.law_lossless_iff", "Becoming.Law.succ_drawn_lossless"]}

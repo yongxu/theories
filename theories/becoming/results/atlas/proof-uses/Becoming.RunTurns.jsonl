@@ -1,0 +1,10 @@
+{"name": "Becoming.RunTurns.ThreeCycle.cycle", "uses": []}
+{"name": "Becoming.RunTurns.ThreeCycle.keeps", "uses": []}
+{"name": "Becoming.RunTurns.ThreeCycle.neither", "uses": []}
+{"name": "Becoming.RunTurns.ThreeCycle.returns", "uses": ["Becoming.Law.orbit_mul", "Becoming.RunTurns.ThreeCycle.cycle"]}
+{"name": "Becoming.RunTurns.orbit_twice", "uses": []}
+{"name": "Becoming.RunTurns.regime_turn_overcompensates", "uses": ["Becoming.RunTurns.turns_names_levels"]}
+{"name": "Becoming.RunTurns.reversing_period_two", "uses": ["Becoming.BandRest.rests_on_band", "Becoming.Naturals.two_mul", "Becoming.ReadingSchedule.halves", "Becoming.RunTurns.orbit_twice", "Becoming.RunTurns.step_after_twice", "Becoming.le_dest"]}
+{"name": "Becoming.RunTurns.step_after_twice", "uses": []}
+{"name": "Becoming.RunTurns.turns_names_levels", "uses": ["Becoming.RunTurns.turns_where_order_breaks"]}
+{"name": "Becoming.RunTurns.turns_where_order_breaks", "uses": ["Becoming.Optimum.last_before"]}

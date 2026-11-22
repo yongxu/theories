@@ -1,0 +1,10 @@
+{"name": "Becoming.Joining.Context.holds_ask", "uses": ["Becoming.Joining.Context.realizes_left", "Becoming.Joining.Context.realizes_right", "Generative.trace_nil_iff"]}
+{"name": "Becoming.Joining.ContextSame.of_sameBranchingTests", "uses": ["Becoming.Joining.Context.holds_ask"]}
+{"name": "Becoming.Joining.FiniteOutcomes.joined_sameBranchingTests_of_em", "uses": ["Becoming.Joining.FiniteOutcomes.outcomes", "Becoming.SameBranchingTests.step_of_em", "Becoming.SameBranchingTests.trans"]}
+{"name": "Becoming.Joining.FiniteOutcomes.lifts_of_exact", "uses": ["Becoming.Joining.FiniteOutcomes.identifiesAlike", "Becoming.Joining.lifts_of_identifiesAlike", "Becoming.Presentations.reduced_exact_kernel"]}
+{"name": "Becoming.Joining.codes_apart_of_possible", "uses": ["Becoming.Presentations.equal_codes_same_answers"]}
+{"name": "Becoming.Joining.image_domain_iff", "uses": ["Becoming.Joining.ContextSame.composable_iff", "Becoming.Joining.image_of", "Becoming.Presentations.equal_codes_same_answers"]}
+{"name": "Becoming.Joining.image_functional", "uses": ["Becoming.Joining.image_realized_iff"]}
+{"name": "Becoming.Joining.image_iff_of_matches", "uses": ["Becoming.Joining.image_transport"]}
+{"name": "Becoming.Joining.image_realized_iff", "uses": ["Becoming.Joining.ContextSame.joined", "Becoming.Presentations.equal_codes_same_answers"]}
+{"name": "Becoming.Joining.image_transport", "uses": ["Becoming.Presentations.matches_functional"]}

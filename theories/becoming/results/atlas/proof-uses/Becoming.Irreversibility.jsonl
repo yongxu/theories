@@ -1,0 +1,3 @@
+{"name": "Becoming.Irreversibility.constant_reading_hides_loss", "uses": ["Becoming.Irreversibility.deadEnd_no_return", "Becoming.Reach.refl"]}
+{"name": "Becoming.Irreversibility.deadEnd_no_return", "uses": ["Becoming.Invariant.reach"]}
+{"name": "Becoming.Irreversibility.same_change_different_return", "uses": ["Becoming.Irreversibility.deadEnd_no_return", "Generative.trace_singleton_iff"]}

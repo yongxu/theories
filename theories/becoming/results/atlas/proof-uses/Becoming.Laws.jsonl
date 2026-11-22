@@ -1,0 +1,6 @@
+{"name": "Becoming.Assurance.ofMap_determined", "uses": []}
+{"name": "Becoming.Assurance.ofPartial_determined", "uses": []}
+{"name": "Becoming.Assurance.trace_ofPartial_iff", "uses": ["Becoming.ListTests.none_ne_some"]}
+{"name": "Becoming.Trace.determined_end", "uses": ["Generative.Trace.brecOn"]}
+{"name": "Becoming.determined_iff_fixed", "uses": []}
+{"name": "Becoming.goAlikeUnder_iff_alike", "uses": ["Becoming.«同行之逐点»"]}

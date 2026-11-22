@@ -1,0 +1,21 @@
+{"name": "Becoming.TypicalRuns.courses_records", "uses": ["Becoming.TypicalRuns.distinct_courses", "Becoming.TypicalRuns.mem_courses_iff"]}
+{"name": "Becoming.TypicalRuns.distinct_courses", "uses": ["Becoming.TypicalRuns.distinct_extend"]}
+{"name": "Becoming.TypicalRuns.distinct_drop", "uses": ["Becoming.TypicalRuns.mem_of_mem_drop", "Becoming.mem_appended_right"]}
+{"name": "Becoming.TypicalRuns.distinct_extend", "uses": ["Becoming.Typicality.of_mem_extend", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.TypicalRuns.histories_records", "uses": ["Becoming.TypicalRuns.courses_records", "Becoming.TypicalRuns.total_listing", "Becoming.Typicality.sum_courses_weight"]}
+{"name": "Becoming.TypicalRuns.length_listed", "uses": ["Becoming.Situations.sum_one", "Becoming.TypicalRuns.sum_listed"]}
+{"name": "Becoming.TypicalRuns.mem_courses_iff", "uses": ["Becoming.Learning.prefix_length", "Becoming.TypicalRuns.record_ofRecord", "Becoming.Typicality.mem_courses_iff"]}
+{"name": "Becoming.TypicalRuns.mem_drop_or", "uses": ["Becoming.ListTests.mem_append_iff", "Becoming.mem_appended_left", "Becoming.mem_appended_right"]}
+{"name": "Becoming.TypicalRuns.mem_of_mem_drop", "uses": ["Becoming.ListTests.mem_append_iff", "Becoming.mem_appended_left", "Becoming.mem_appended_right"]}
+{"name": "Becoming.TypicalRuns.record_ofRecord", "uses": ["Becoming.Learning.prefix_congr"]}
+{"name": "Becoming.TypicalRuns.records_concentrated", "uses": ["Becoming.TypicalRuns.courses_records", "Becoming.TypicalRuns.total_listing", "Becoming.Typicality.concentrated"]}
+{"name": "Becoming.TypicalRuns.records_count", "uses": ["Becoming.TypicalRuns.courses_records", "Becoming.TypicalRuns.length_listed", "Becoming.Typicality.courses_length"]}
+{"name": "Becoming.TypicalRuns.records_few_far_ahead", "uses": ["Becoming.TypicalRuns.courses_records", "Becoming.TypicalRuns.total_listing", "Becoming.Typicality.few_far_ahead"]}
+{"name": "Becoming.TypicalRuns.records_spread", "uses": ["Becoming.TypicalRuns.courses_records", "Becoming.TypicalRuns.total_listing", "Becoming.Typicality.spread"]}
+{"name": "Becoming.TypicalRuns.records_typical", "uses": ["Becoming.TypicalRuns.courses_records", "Becoming.TypicalRuns.total_listing", "Becoming.Typicality.typical"]}
+{"name": "Becoming.TypicalRuns.records_weight", "uses": ["Becoming.TypicalRuns.courses_records", "Becoming.TypicalRuns.total_listing", "Becoming.Typicality.total_weight"]}
+{"name": "Becoming.TypicalRuns.split_of_mem", "uses": []}
+{"name": "Becoming.TypicalRuns.sum_listed", "uses": ["Becoming.TypicalRuns.sum_listing"]}
+{"name": "Becoming.TypicalRuns.sum_listing", "uses": ["Becoming.TypicalRuns.distinct_drop", "Becoming.TypicalRuns.mem_drop_or", "Becoming.TypicalRuns.mem_of_mem_drop", "Becoming.TypicalRuns.split_of_mem", "Becoming.Weights.sum_append"]}
+{"name": "Becoming.TypicalRuns.total_eq_sum", "uses": []}
+{"name": "Becoming.TypicalRuns.total_listing", "uses": ["Becoming.TypicalRuns.sum_listed", "Becoming.TypicalRuns.total_eq_sum"]}

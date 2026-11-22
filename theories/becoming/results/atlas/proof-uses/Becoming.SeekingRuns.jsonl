@@ -1,0 +1,7 @@
+{"name": "Becoming.Law.perturbation_reabsorbed", "uses": ["Becoming.Law.reabsorbed"]}
+{"name": "Becoming.SeekingRuns.aboveAll_never_rests", "uses": ["Becoming.Law.aboveAll_never_rests"]}
+{"name": "Becoming.SeekingRuns.aboveAll_not_two", "uses": ["Becoming.aboveAll_not_two"]}
+{"name": "Becoming.SeekingRuns.captured_rule_changes", "uses": ["Becoming.Captured.rule_perturbation_changes", "Becoming.Captured.state_perturbation_returns"]}
+{"name": "Becoming.SeekingRuns.captured_state_returns", "uses": ["Becoming.Captured.state_perturbation_returns"]}
+{"name": "Becoming.SeekingRuns.more_never_rests", "uses": ["Becoming.Branching.law_run_state", "Becoming.Law.more_never_rests"]}
+{"name": "Becoming.SeekingRuns.rests_iff", "uses": ["Becoming.Branching.law_run_state", "Becoming.Law.rests_iff"]}

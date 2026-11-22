@@ -1,0 +1,45 @@
+{"name": "Becoming.Fragment.LeftUnit.of_joined", "uses": ["Becoming.Fragment.joining_assoc", "Becoming.Fragment.joining_functional", "Becoming.Joining.LeftUnit.of_joined"]}
+{"name": "Becoming.Fragment.RightUnit.of_joined", "uses": ["Becoming.Fragment.joining_assoc", "Becoming.Fragment.joining_functional", "Becoming.Joining.RightUnit.of_joined"]}
+{"name": "Becoming.Fragment.Traces.ext", "uses": []}
+{"name": "Becoming.Fragment.chainComplete", "uses": ["Becoming.Fragment.joint_chain_left", "Becoming.Fragment.merge_traced"]}
+{"name": "Becoming.Fragment.composable_iff_commonUnit", "uses": ["Becoming.Fragment.chainComplete", "Becoming.Fragment.has_units", "Becoming.Fragment.joining_assoc", "Becoming.Joining.composable_iff_commonUnit"]}
+{"name": "Becoming.Fragment.has_units", "uses": ["Becoming.Fragment.idle_twoSidedUnit", "Becoming.Fragment.joined_idle_left", "Becoming.Fragment.joined_idle_right"]}
+{"name": "Becoming.Fragment.idleTrace_injective", "uses": []}
+{"name": "Becoming.Fragment.idle_twoSidedUnit", "uses": ["Becoming.Fragment.Traces.ext", "Becoming.Fragment.joined_idle_left", "Becoming.Fragment.joined_idle_right"]}
+{"name": "Becoming.Fragment.joining_assoc", "uses": ["Becoming.Fragment.joined_assoc", "Becoming.Fragment.joined_traced"]}
+{"name": "Becoming.Fragment.joining_functional", "uses": ["Becoming.Fragment.Traces.ext", "Becoming.Fragment.joined_functional"]}
+{"name": "Becoming.Fragment.leftUnit_iff", "uses": ["Becoming.Fragment.idle_twoSidedUnit", "Becoming.Fragment.joined_idle_left", "Becoming.Fragment.joining_assoc", "Becoming.Joining.LeftUnit.unique"]}
+{"name": "Becoming.Fragment.once_trace_cases", "uses": []}
+{"name": "Becoming.Fragment.rightUnit_iff", "uses": ["Becoming.Fragment.idle_twoSidedUnit", "Becoming.Fragment.joined_idle_right", "Becoming.Fragment.joining_assoc", "Becoming.Joining.RightUnit.unique"]}
+{"name": "Becoming.Fragment.stepsImage_assoc", "uses": ["Becoming.Fragment.steps_reads", "Becoming.Joining.atMostOnce_assoc"]}
+{"name": "Becoming.Fragment.stepsImage_functional", "uses": ["Becoming.Fragment.steps_reads", "Becoming.Joining.atMostOnce_functional"]}
+{"name": "Becoming.Fragment.stepsImage_has_units", "uses": ["Becoming.Fragment.steps_reads", "Becoming.Joining.TwoSidedUnit.of_iff", "Becoming.Joining.atMostOnce_has_units"]}
+{"name": "Becoming.Fragment.stepsImage_not_chainComplete", "uses": ["Becoming.Fragment.steps_reads", "Becoming.Joining.atMostOnce_not_chainComplete"]}
+{"name": "Becoming.Fragment.steps_reads", "uses": ["Becoming.Fragment.steps_reads_mp", "Becoming.Fragment.steps_reads_mpr"]}
+{"name": "Becoming.Fragment.steps_reads_mp", "uses": ["Becoming.Fragment.once_trace_cases", "Becoming.ListTests.append_nil"]}
+{"name": "Becoming.Fragment.steps_reads_mpr", "uses": ["Becoming.Fragment.idle_traced", "Becoming.Fragment.passage_traced"]}
+{"name": "Becoming.Fragment.twoSidedUnit_iff_idle", "uses": ["Becoming.Fragment.has_units", "Becoming.Fragment.idle_twoSidedUnit", "Becoming.Fragment.leftUnit_iff", "Becoming.Joining.TwoSidedUnit.self"]}
+{"name": "Becoming.Fragment.twoSidedUnit_stays_once", "uses": ["Becoming.Fragment.idleTrace_injective", "Becoming.Fragment.twoSidedUnit_iff_idle"]}
+{"name": "Becoming.Fragment.units_unique", "uses": ["Becoming.Fragment.has_units", "Becoming.Fragment.joining_assoc", "Becoming.Joining.units_unique"]}
+{"name": "Becoming.Joining.ChainComplete.composable", "uses": []}
+{"name": "Becoming.Joining.LeftUnit.of_joined", "uses": []}
+{"name": "Becoming.Joining.LeftUnit.unique", "uses": []}
+{"name": "Becoming.Joining.RightUnit.of_joined", "uses": []}
+{"name": "Becoming.Joining.RightUnit.unique", "uses": []}
+{"name": "Becoming.Joining.TwoSidedUnit.of_iff", "uses": []}
+{"name": "Becoming.Joining.TwoSidedUnit.self", "uses": []}
+{"name": "Becoming.Joining.atMostOnce_assoc", "uses": []}
+{"name": "Becoming.Joining.atMostOnce_commonUnit_not_composable", "uses": ["Becoming.Joining.atMostOnce_twoSidedUnit"]}
+{"name": "Becoming.Joining.atMostOnce_functional", "uses": []}
+{"name": "Becoming.Joining.atMostOnce_has_units", "uses": ["Becoming.Joining.atMostOnce_twoSidedUnit"]}
+{"name": "Becoming.Joining.atMostOnce_not_chainComplete", "uses": ["Becoming.Joining.ChainComplete.composable", "Becoming.Joining.atMostOnce_commonUnit_not_composable"]}
+{"name": "Becoming.Joining.atMostOnce_twoSidedUnit", "uses": []}
+{"name": "Becoming.Joining.chainComplete_iff_commonUnit_suffices", "uses": ["Becoming.Joining.ChainComplete.composable", "Becoming.Joining.RightUnit.of_joined", "Becoming.Joining.commonUnit_of_composable"]}
+{"name": "Becoming.Joining.commonUnit_of_composable", "uses": ["Becoming.Joining.commonUnit_of_joined"]}
+{"name": "Becoming.Joining.commonUnit_of_joined", "uses": []}
+{"name": "Becoming.Joining.composable_iff_commonUnit", "uses": ["Becoming.Joining.ChainComplete.composable", "Becoming.Joining.commonUnit_of_composable"]}
+{"name": "Becoming.Joining.leftUnit_transport", "uses": ["Becoming.Joining.twoSidedUnit_transport"]}
+{"name": "Becoming.Joining.rightUnit_transport", "uses": ["Becoming.Joining.twoSidedUnit_transport"]}
+{"name": "Becoming.Joining.twoSidedUnit_transport", "uses": []}
+{"name": "Becoming.Joining.units_agree", "uses": ["Becoming.Joining.LeftUnit.unique", "Becoming.Joining.RightUnit.unique"]}
+{"name": "Becoming.Joining.units_unique", "uses": ["Becoming.Joining.LeftUnit.unique", "Becoming.Joining.RightUnit.unique"]}

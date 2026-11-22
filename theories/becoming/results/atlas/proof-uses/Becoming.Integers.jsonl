@@ -1,0 +1,33 @@
+{"name": "Becoming.Integers.Same.add", "uses": []}
+{"name": "Becoming.Integers.Same.of_eq", "uses": ["Becoming.Integers.Same.refl"]}
+{"name": "Becoming.Integers.Same.refl", "uses": []}
+{"name": "Becoming.Integers.Same.swap", "uses": []}
+{"name": "Becoming.Integers.Same.symm", "uses": []}
+{"name": "Becoming.Integers.Same.trans", "uses": ["Becoming.Integers.nat_rearrange", "Becoming.add_right_cancel"]}
+{"name": "Becoming.Integers.add_add_add_comm", "uses": ["Becoming.Integers.add_assoc", "Becoming.Integers.add_left_comm"]}
+{"name": "Becoming.Integers.add_assoc", "uses": ["Becoming.Integers.Same.add", "Becoming.Integers.Same.of_eq", "Becoming.Integers.Same.refl", "Becoming.Integers.Same.symm", "Becoming.Integers.Same.trans", "Becoming.Integers.eq_of_same", "Becoming.Integers.pair_add"]}
+{"name": "Becoming.Integers.add_comm", "uses": []}
+{"name": "Becoming.Integers.add_left_cancel", "uses": ["Becoming.Integers.add_assoc", "Becoming.Integers.add_left_neg", "Becoming.Integers.zero_add"]}
+{"name": "Becoming.Integers.add_left_comm", "uses": ["Becoming.Integers.add_assoc", "Becoming.Integers.add_comm"]}
+{"name": "Becoming.Integers.add_left_neg", "uses": ["Becoming.Integers.add_comm", "Becoming.Integers.add_right_neg"]}
+{"name": "Becoming.Integers.add_right_cancel", "uses": ["Becoming.Integers.add_comm", "Becoming.Integers.add_left_cancel"]}
+{"name": "Becoming.Integers.add_right_comm", "uses": ["Becoming.Integers.add_assoc", "Becoming.Integers.add_comm"]}
+{"name": "Becoming.Integers.add_right_neg", "uses": ["Becoming.Integers.Same.of_eq", "Becoming.Integers.Same.trans", "Becoming.Integers.eq_of_same", "Becoming.Integers.pair_add", "Becoming.Integers.pair_neg"]}
+{"name": "Becoming.Integers.add_zero", "uses": []}
+{"name": "Becoming.Integers.eq_of_same", "uses": []}
+{"name": "Becoming.Integers.mul_comm", "uses": []}
+{"name": "Becoming.Integers.mul_neg", "uses": ["Becoming.Integers.mul_zero", "Becoming.Integers.negOfNat_neg"]}
+{"name": "Becoming.Integers.mul_zero", "uses": []}
+{"name": "Becoming.Integers.nat_eq_add_of_sub_succ", "uses": []}
+{"name": "Becoming.Integers.nat_rearrange", "uses": []}
+{"name": "Becoming.Integers.nat_sub_add_of_sub_zero", "uses": []}
+{"name": "Becoming.Integers.negOfNat_neg", "uses": []}
+{"name": "Becoming.Integers.neg_add", "uses": ["Becoming.Integers.Same.of_eq", "Becoming.Integers.Same.swap", "Becoming.Integers.Same.symm", "Becoming.Integers.Same.trans", "Becoming.Integers.eq_of_same", "Becoming.Integers.pair_add", "Becoming.Integers.pair_neg"]}
+{"name": "Becoming.Integers.neg_mul", "uses": ["Becoming.Integers.mul_comm", "Becoming.Integers.mul_neg"]}
+{"name": "Becoming.Integers.neg_mul_neg", "uses": ["Becoming.Integers.mul_neg", "Becoming.Integers.neg_mul", "Becoming.Integers.neg_neg"]}
+{"name": "Becoming.Integers.neg_neg", "uses": []}
+{"name": "Becoming.Integers.pair_add", "uses": ["Becoming.Integers.Same.of_eq", "Becoming.Integers.Same.trans", "Becoming.Integers.pair_subNatNat"]}
+{"name": "Becoming.Integers.pair_neg", "uses": []}
+{"name": "Becoming.Integers.pair_subNatNat", "uses": ["Becoming.Integers.nat_eq_add_of_sub_succ", "Becoming.Integers.nat_sub_add_of_sub_zero"]}
+{"name": "Becoming.Integers.sub_zero", "uses": []}
+{"name": "Becoming.Integers.two_mul", "uses": []}

@@ -1,0 +1,27 @@
+{"name": "Becoming.Clearing.counting_dweller_unselected", "uses": ["Becoming.Clearing.pool_closes_gap", "Becoming.Clearing.tested_by_dweller", "Becoming.Web.readOffCouplings_alike_of_steps", "Becoming.not_tracks_of_alike"]}
+{"name": "Becoming.Clearing.couplingIn_leaves_dweller", "uses": ["Becoming.Clearing.dweller_beyond_every_coupling", "Becoming.Clearing.reach_middle", "Becoming.Flow.couplingIn_ownClosure_rival"]}
+{"name": "Becoming.Clearing.dweller_beyond_every_coupling", "uses": []}
+{"name": "Becoming.Clearing.read_not_direction", "uses": ["Becoming.Clearing.counting_dweller_unselected", "Becoming.Clearing.tested_by_dweller"]}
+{"name": "Becoming.Clearing.turned_by_dweller_read", "uses": ["Becoming.Clearing.counting_dweller_unselected", "Becoming.Clearing.tested_by_dweller", "Becoming.Web.ReadOffContinuations.couplings", "Becoming.Web.ReadOffCouplings.mono"]}
+{"name": "Becoming.Clearing.turned_by_habitat_gauge", "uses": ["Becoming.Clearing.dweller_beyond_every_coupling"]}
+{"name": "Becoming.Diversion.counting_selected_against", "uses": ["Becoming.Diversion.favours", "Becoming.Web.SelectsThrough.readOffCouplings"]}
+{"name": "Becoming.Flow.couplingIn_ownClosure_rival", "uses": ["Becoming.Flow.ownClosure_rival_of_within", "Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Flow.ownClosure_rival_of_within", "uses": ["Becoming.rival_iff_lacks"]}
+{"name": "Becoming.Flow.reachReturns_ownClosure_rival", "uses": ["Becoming.Flow.ReachReturns.represented", "Becoming.Flow.ownClosure_rival_of_within"]}
+{"name": "Becoming.Flow.returning_pool_covers", "uses": ["Becoming.Flow.covered_by_returning", "Becoming.Flow.withinCoupling_of_withinInfluence"]}
+{"name": "Becoming.Flow.returning_pool_covers_either", "uses": ["Becoming.Flow.returning_pool_covers", "Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Web.ReadOffContinuations.couplings", "uses": []}
+{"name": "Becoming.Web.ReadOffCouplings.mono", "uses": []}
+{"name": "Becoming.Web.SelectsThrough.readOffCouplings", "uses": []}
+{"name": "Becoming.Web.SelectsThroughAll.readOffCouplings", "uses": []}
+{"name": "Becoming.Web.continuationClass_reads", "uses": []}
+{"name": "Becoming.Web.readOffContinuations_alike_iff", "uses": ["Becoming.Web.readOffCouplings_alike_iff", "Becoming.Web.readOffCouplings_thresholdOnly_iff"]}
+{"name": "Becoming.Web.readOffCouplings_alike_iff", "uses": ["Becoming.Web.SelectsThroughAll.readOffCouplings", "Becoming.Web.selects_alike_all_iff"]}
+{"name": "Becoming.Web.readOffCouplings_alike_of_steps", "uses": ["Becoming.Web.selects_alike_all_iff"]}
+{"name": "Becoming.Web.readOffCouplings_thresholdOnly_iff", "uses": ["Becoming.Web.ReadOffContinuations.couplings"]}
+{"name": "Becoming.Web.separates_continuations", "uses": ["Becoming.Web.continuationClass_reads"]}
+{"name": "Becoming.act_courses_unselected_throughout", "uses": ["Becoming.Web.readOffCouplings_alike_of_steps", "Becoming.act_courses_unselected_pool"]}
+{"name": "Becoming.not_tracks_of_alike", "uses": []}
+{"name": "Becoming.ownClosure_not_unrestricted_of_acyclic", "uses": ["Becoming.ownClosure_unrestricted_iff_noOutside", "Becoming.«续无外则同一中心»"]}
+{"name": "Becoming.routeB_universal_closed", "uses": ["Becoming.Flow.ownClosure_rival_of_within", "Becoming.ownClosure_not_unrestricted_of_acyclic", "Becoming.ownClosure_unrestricted_iff"]}
+{"name": "Becoming.significance_courses_unselected", "uses": ["Becoming.act_courses_unselected_throughout"]}

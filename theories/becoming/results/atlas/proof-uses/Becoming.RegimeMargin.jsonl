@@ -1,0 +1,251 @@
+{"name": "Becoming.RegimeMargin.Adjusted.Between.ends_iff_below", "uses": ["Becoming.RegimeMargin.Adjusted.Between.staysMet", "Becoming.RegimeMargin.Adjusted.Between.staysShort", "Becoming.RegimeMargin.Adjusted.ends_iff_below"]}
+{"name": "Becoming.RegimeMargin.Adjusted.Between.restsAtDraw", "uses": []}
+{"name": "Becoming.RegimeMargin.Adjusted.Between.rests_iff", "uses": ["Becoming.RegimeMargin.Adjusted.Between.restsAtDraw", "Becoming.RegimeMargin.Adjusted.rests_iff"]}
+{"name": "Becoming.RegimeMargin.Adjusted.Between.staysMet", "uses": []}
+{"name": "Becoming.RegimeMargin.Adjusted.Between.staysShort", "uses": []}
+{"name": "Becoming.RegimeMargin.Adjusted.comes_to_rest", "uses": ["Becoming.LastChange.still_succ", "Becoming.RegimeMargin.Adjusted.fixed_iff", "Becoming.RegimeMargin.Adjusted.given_le_level", "Becoming.RegimeMargin.Adjusted.rests_from", "Becoming.RegimeMargin.Adjusted.unordered_le"]}
+{"name": "Becoming.RegimeMargin.Adjusted.draw_pos", "uses": []}
+{"name": "Becoming.RegimeMargin.Adjusted.ends_below", "uses": ["Becoming.RegimeMargin.Adjusted.orbit_bound"]}
+{"name": "Becoming.RegimeMargin.Adjusted.ends_iff_below", "uses": ["Becoming.RegimeMargin.Adjusted.ends_below", "Becoming.RegimeMargin.Adjusted.holds"]}
+{"name": "Becoming.RegimeMargin.Adjusted.falls_iff", "uses": ["Becoming.LastChange.still_same", "Becoming.LastChange.still_stays", "Becoming.Naturals.add_sub_of_le", "Becoming.RegimeMargin.Adjusted.comes_to_rest"]}
+{"name": "Becoming.RegimeMargin.Adjusted.falls_iff_below", "uses": ["Becoming.RegimeMargin.Adjusted.falls_of_below", "Becoming.RegimeMargin.Adjusted.rests_iff_falling", "Becoming.RegimeMargin.leading_exact"]}
+{"name": "Becoming.RegimeMargin.Adjusted.falls_of_below", "uses": ["Becoming.LastChange.still_stays", "Becoming.Lasting.orbit_mono", "Becoming.RegimeMargin.Adjusted.comes_to_rest", "Becoming.RegimeMargin.Adjusted.step_mono"]}
+{"name": "Becoming.RegimeMargin.Adjusted.fates", "uses": ["Becoming.LastChange.still_same", "Becoming.RegimeMargin.Adjusted.comes_to_rest", "Becoming.RegimeMargin.Adjusted.falls_iff_below"]}
+{"name": "Becoming.RegimeMargin.Adjusted.fixed_iff", "uses": ["Becoming.RegimeMargin.Adjusted.rest_iff", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.RegimeMargin.Adjusted.from_zero", "uses": []}
+{"name": "Becoming.RegimeMargin.Adjusted.frozen_between", "uses": []}
+{"name": "Becoming.RegimeMargin.Adjusted.frozen_rests", "uses": ["Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.RegimeMargin.Adjusted.given_le_level", "uses": []}
+{"name": "Becoming.RegimeMargin.Adjusted.holds", "uses": ["Becoming.RegimeMargin.Adjusted.step_holds"]}
+{"name": "Becoming.RegimeMargin.Adjusted.holds_from", "uses": ["Becoming.RegimeMargin.Adjusted.step_holds"]}
+{"name": "Becoming.RegimeMargin.Adjusted.in_band", "uses": ["Becoming.RegimeMargin.Adjusted.given_le_level"]}
+{"name": "Becoming.RegimeMargin.Adjusted.left_below", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.Naturals.sub_add_cancel", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.RegimeMargin.Adjusted.left_bound", "uses": ["Becoming.Naturals.sub_sub", "Becoming.RegimeMargin.Adjusted.left_below", "Becoming.RegimeMargin.Adjusted.left_falls"]}
+{"name": "Becoming.RegimeMargin.Adjusted.left_falls", "uses": ["Becoming.Naturals.le_sub_of_add_le", "Becoming.Naturals.sub_add_cancel", "Becoming.le_of_add_le_add_right", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.RegimeMargin.Adjusted.orbit_bound", "uses": ["Becoming.Amounts.falls_by_stretch", "Becoming.Amounts.unmarked_or_marked", "Becoming.Law.orbit_add", "Becoming.Naturals.add_sub_of_le", "Becoming.Naturals.le_sub_of_add_le", "Becoming.RegimeMargin.Adjusted.from_zero", "Becoming.RegimeMargin.Adjusted.orbit_inside", "Becoming.RegimeMargin.Adjusted.step_balances", "Becoming.RegimeMargin.Adjusted.step_below"]}
+{"name": "Becoming.RegimeMargin.Adjusted.orbit_inside", "uses": ["Becoming.RegimeMargin.Adjusted.step_below"]}
+{"name": "Becoming.RegimeMargin.Adjusted.orbit_regime", "uses": []}
+{"name": "Becoming.RegimeMargin.Adjusted.regime_fromNothing", "uses": []}
+{"name": "Becoming.RegimeMargin.Adjusted.regime_keeps", "uses": []}
+{"name": "Becoming.RegimeMargin.Adjusted.regime_staysMet", "uses": []}
+{"name": "Becoming.RegimeMargin.Adjusted.regime_staysShort", "uses": []}
+{"name": "Becoming.RegimeMargin.Adjusted.rest_iff", "uses": ["Becoming.Naturals.add_left_cancel", "Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.RegimeMargin.Adjusted.rests_falling", "uses": ["Becoming.LastChange.still_within", "Becoming.Optimum.sub_le_sub_left_of_le", "Becoming.RegimeMargin.Adjusted.run_falls", "Becoming.RegimeMargin.Adjusted.sum_lt_of_below", "Becoming.Requirement.Formation.sub_lt_sub_of_lt"]}
+{"name": "Becoming.RegimeMargin.Adjusted.rests_from", "uses": ["Becoming.LastChange.still_succ", "Becoming.RegimeMargin.Adjusted.given_le_level", "Becoming.RegimeMargin.Adjusted.rests_falling", "Becoming.RegimeMargin.Adjusted.rests_rising", "Becoming.RegimeMargin.Adjusted.unordered_falls"]}
+{"name": "Becoming.RegimeMargin.Adjusted.rests_iff", "uses": ["Becoming.Law.orbit_mul", "Becoming.RegimeMargin.Adjusted.rest_iff"]}
+{"name": "Becoming.RegimeMargin.Adjusted.rests_iff_falling", "uses": ["Becoming.RegimeMargin.Adjusted.falls_iff"]}
+{"name": "Becoming.RegimeMargin.Adjusted.rests_rising", "uses": ["Becoming.LastChange.still_within", "Becoming.Naturals.sub_add_cancel", "Becoming.RegimeMargin.Adjusted.in_band", "Becoming.RegimeMargin.Adjusted.run_rises", "Becoming.RegimeMargin.Adjusted.sum_lt_of_below"]}
+{"name": "Becoming.RegimeMargin.Adjusted.rests_short", "uses": ["Becoming.Law.orbit_mul", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.RegimeMargin.Adjusted.run_falls", "uses": ["Becoming.BandRest.keeps_one_way", "Becoming.RegimeMargin.Adjusted.step_mono"]}
+{"name": "Becoming.RegimeMargin.Adjusted.run_rises", "uses": ["Becoming.BandRest.keeps_one_way", "Becoming.RegimeMargin.Adjusted.step_mono"]}
+{"name": "Becoming.RegimeMargin.Adjusted.stays_ended", "uses": ["Becoming.Law.orbit_add", "Becoming.RegimeMargin.Adjusted.ends_below", "Becoming.RegimeMargin.Adjusted.from_zero"]}
+{"name": "Becoming.RegimeMargin.Adjusted.step_balances", "uses": ["Becoming.Naturals.add_sub_of_le"]}
+{"name": "Becoming.RegimeMargin.Adjusted.step_below", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.Naturals.sub_add_cancel", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.RegimeMargin.Adjusted.step_holds", "uses": ["Becoming.Naturals.le_sub_of_add_le", "Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.RegimeMargin.Adjusted.step_mono", "uses": []}
+{"name": "Becoming.RegimeMargin.Adjusted.sum_lt_of_below", "uses": []}
+{"name": "Becoming.RegimeMargin.Adjusted.taken_whole", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.RegimeMargin.Adjusted.left_bound", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.RegimeMargin.Adjusted.threshold_falls", "uses": ["Becoming.RegimeMargin.Adjusted.falls_of_below", "Becoming.RegimeMargin.Adjusted.rests_iff_falling", "Becoming.RegimeMargin.leading_falls"]}
+{"name": "Becoming.RegimeMargin.Adjusted.unordered_below", "uses": []}
+{"name": "Becoming.RegimeMargin.Adjusted.unordered_falls", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.RegimeMargin.Adjusted.unordered_below", "Becoming.Requirement.Formation.sub_lt_sub_of_lt", "Becoming.le_of_add_le_add_right", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.RegimeMargin.Adjusted.unordered_le", "uses": ["Becoming.RegimeMargin.Adjusted.unordered_below", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.RegimeMargin.Alternation.alternates", "uses": ["Becoming.Naturals.succ_ne_self", "Becoming.RegimeMargin.Adjusted.orbit_regime", "Becoming.RegimeMargin.Alternation.keeps", "Becoming.RegimeMargin.Alternation.returns"]}
+{"name": "Becoming.RegimeMargin.Alternation.keeps", "uses": []}
+{"name": "Becoming.RegimeMargin.Alternation.returns", "uses": ["Becoming.Law.orbit_mul", "Becoming.Naturals.two_mul"]}
+{"name": "Becoming.RegimeMargin.Concave.roots", "uses": ["Becoming.RegimeMargin.short_of_below"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.Chain.cascades", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.Chain.first_falls", "Becoming.RegimeMargin.Coupled.Indexed.ends_downstream", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.Chain.first_falls", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.Chain.stopped", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.Chain.first_falls", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.Downstream.brecOn", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.ends_from", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.rises", "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.set_at", "Becoming.RegimeMargin.Coupled.Indexed.Recent.keepsBelow", "Becoming.RegimeMargin.Coupled.Indexed.reads_of_keepsBelow", "Becoming.RegimeMargin.Coupled.Indexed.run_alike_of", "Becoming.RegimeMargin.Coupled.Indexed.stays_at"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.gives_rises", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.holds_from", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.rises", "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.set_at", "Becoming.RegimeMargin.Coupled.Indexed.Recent.keepsBelow", "Becoming.RegimeMargin.Coupled.Indexed.reads_of_keepsBelow", "Becoming.RegimeMargin.Coupled.Indexed.run_alike_of", "Becoming.RegimeMargin.Coupled.Indexed.stays_at"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.rises", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.gives_rises"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.set_at", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.threshold_falls_with_recent", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.ends_from", "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.holds_from", "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.rises", "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.set_at", "Becoming.RegimeMargin.Coupled.Indexed.Recent.covers_both", "Becoming.RegimeMargin.Coupled.Indexed.Recent.keepsBelow", "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within", "Becoming.RegimeMargin.Coupled.Indexed.reads_of_keepsBelow", "Becoming.RegimeMargin.Coupled.Indexed.run_alike_of", "Becoming.RegimeMargin.Coupled.Indexed.setAt_below", "Becoming.RegimeMargin.Coupled.Indexed.stays_at", "Becoming.RegimeMargin.Coupled.Indexed.within_below"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.Recent.adjusted", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.Recent.covers_both", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.Recent.mem_both"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.Recent.keepsBelow", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.Recent.mem_both", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.Recent.plain", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.alikeOn_false", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.alikeOn_true", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.below_of", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.leftOver_bound", "Becoming.RegimeMargin.Coupled.Indexed.rests_by"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.downstream_within", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.Downstream.brecOn", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.drains", "uses": ["Becoming.Amounts.add_zero", "Becoming.RegimeMargin.Drawn.sub_zero"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.ending_iff", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.below_of", "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_within", "Becoming.RegimeMargin.below_spec"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.endsUnder_of_below", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.run_below_of"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.ends_after", "uses": ["Becoming.Naturals.sub_sub", "Becoming.RegimeMargin.Coupled.Indexed.drains", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.ends_alike", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.run_alike"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.ends_downstream", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.downstream_within", "Becoming.RegimeMargin.Coupled.Indexed.ends_of_partner"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.ends_iff", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.ends_iff_ending", "Becoming.RegimeMargin.Coupled.Indexed.ends_of_below", "Becoming.RegimeMargin.Coupled.Indexed.setAt_below", "Becoming.RegimeMargin.leading_exact"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.ending_iff", "Becoming.RegimeMargin.Coupled.Indexed.endsUnder_of_below", "Becoming.RegimeMargin.Coupled.Indexed.reads_of_keepsBelow", "Becoming.RegimeMargin.Coupled.Indexed.setAt_below", "Becoming.RegimeMargin.Coupled.Indexed.within_below", "Becoming.RegimeMargin.leading_exact"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_ending", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.ends_iff", "Becoming.RegimeMargin.Coupled.Indexed.setAt_within"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_within", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.repeats", "Becoming.RegimeMargin.Coupled.Indexed.repeats_mul", "Becoming.RegimeMargin.Coupled.Indexed.returns_within", "Becoming.RegimeMargin.Coupled.Indexed.zero_from_window", "Becoming.SupportGated.sub_pos_of_lt", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.ends_of_below", "uses": ["Becoming.Amounts.le_of_eq", "Becoming.Amounts.le_trans", "Becoming.Amounts.zero_le", "Becoming.RegimeMargin.Coupled.Indexed.run_below", "Becoming.RegimeMargin.Drawn.antisymm"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.ends_of_partner", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.ends_after"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.ends_together", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.ends_downstream"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.fates", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest", "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below", "Becoming.RegimeMargin.Coupled.Indexed.setAt_within"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.leftOver_bound", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.leftOver_le", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.leftOver_lt", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.leftOver_le"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.left_falls", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.run_within", "Becoming.RegimeMargin.Coupled.Indexed.within_draw", "Becoming.RegimeMargin.Coupled.left_le"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.levelLists_length", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.withFirstUpTo_length"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.levels_alike", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.levels_mem", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.mem_withFirstUpTo"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.mem_withFirst", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.mem_withFirstUpTo", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.mem_withFirst"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.pointwise_of_rises", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.respects"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.pointwise_step", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.step_alike"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.reads_of_keepsBelow", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.repeats", "uses": ["Becoming.Law.orbit_add", "Becoming.RegimeMargin.Coupled.Indexed.run_alike_of"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.repeats_mul", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.respects", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.rests_by", "uses": ["Becoming.Amounts.unmarked_within", "Becoming.Naturals.add_sub_of_le", "Becoming.Naturals.le_sub_of_add_le", "Becoming.RegimeMargin.Coupled.Indexed.alikeOn_false", "Becoming.RegimeMargin.Coupled.Indexed.alikeOn_true", "Becoming.RegimeMargin.Coupled.Indexed.leftOver_le", "Becoming.RegimeMargin.Coupled.Indexed.leftOver_lt", "Becoming.RegimeMargin.Coupled.Indexed.left_falls", "Becoming.RegimeMargin.Coupled.Indexed.still_of_left"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.returns_within", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.levelLists_length", "Becoming.RegimeMargin.Coupled.Indexed.levels_alike", "Becoming.RegimeMargin.Coupled.Indexed.levels_mem", "Becoming.revisits_within"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.run_alike", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.pointwise_step", "Becoming.RegimeMargin.Coupled.Indexed.run_alike_of"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.run_alike_of", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.run_below", "uses": ["Becoming.Lasting.orbit_mono", "Becoming.RegimeMargin.Coupled.Indexed.step_mono"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.run_below_of", "uses": ["Becoming.Lasting.orbit_mono"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.run_shift", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.run_within", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.setAt_below", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.setAt_within", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.stays_at", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.step_alike", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.step_keepsBelow", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.step_mono"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.step_mono", "uses": ["Becoming.Amounts.add_le_add_left", "Becoming.Amounts.add_le_add_right", "Becoming.Amounts.le_trans", "Becoming.RegimeMargin.Drawn.sub_mono"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.still_of_left", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.pointwise_of_rises", "Becoming.RegimeMargin.Coupled.Indexed.step_alike"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.ends_iff_ending", "Becoming.RegimeMargin.Coupled.Indexed.ends_of_below", "Becoming.RegimeMargin.Coupled.Indexed.setAt_below", "Becoming.RegimeMargin.leading_falls"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls_within", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.ending_iff", "Becoming.RegimeMargin.Coupled.Indexed.endsUnder_of_below", "Becoming.RegimeMargin.Coupled.Indexed.reads_of_keepsBelow", "Becoming.RegimeMargin.Coupled.Indexed.setAt_below", "Becoming.RegimeMargin.Coupled.Indexed.within_below", "Becoming.RegimeMargin.leading_falls"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.withFirstUpTo_length", "uses": ["Becoming.ListTests.length_append", "Becoming.RegimeMargin.Coupled.Indexed.withFirst_length"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.withFirst_length", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.within_below", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.run_below_of"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.within_draw", "uses": ["Becoming.RegimeMargin.Coupled.given_within"]}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.zero_from_window", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.Optimum.sub_le_sub_left_of_le"]}
+{"name": "Becoming.RegimeMargin.Coupled.MutualActivation.band", "uses": ["Becoming.RegimeMargin.Coupled.MutualActivation.giving_le"]}
+{"name": "Becoming.RegimeMargin.Coupled.MutualActivation.giving_le", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.MutualActivation.giving_rises", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.MutualActivation.saves", "uses": ["Becoming.Naturals.succ_ne_zero", "Becoming.RegimeMargin.Coupled.MutualActivation.band", "Becoming.RegimeMargin.Coupled.MutualActivation.giving_rises", "Becoming.RegimeMargin.Coupled.stays", "Becoming.RegimeMargin.Coupled.stays_from"]}
+{"name": "Becoming.RegimeMargin.Coupled.MutualInhibition.band", "uses": ["Becoming.RegimeMargin.Coupled.MutualInhibition.first_le", "Becoming.RegimeMargin.Coupled.MutualInhibition.second_le"]}
+{"name": "Becoming.RegimeMargin.Coupled.MutualInhibition.breaks_order", "uses": ["Becoming.Naturals.succ_ne_zero", "Becoming.RegimeMargin.Coupled.MutualInhibition.band", "Becoming.RegimeMargin.Coupled.stays", "Becoming.RegimeMargin.Coupled.stays_from"]}
+{"name": "Becoming.RegimeMargin.Coupled.MutualInhibition.first_le", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.MutualInhibition.second_le", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Relay.between", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Relay.cycles", "uses": ["Becoming.Naturals.succ_ne_zero", "Becoming.RegimeMargin.Coupled.Relay.between", "Becoming.RegimeMargin.Coupled.Relay.first_alone", "Becoming.RegimeMargin.Coupled.Relay.first_rises", "Becoming.RegimeMargin.Coupled.Relay.first_zero", "Becoming.RegimeMargin.Coupled.Relay.second_alone", "Becoming.RegimeMargin.Coupled.Relay.second_of_zero", "Becoming.RegimeMargin.Coupled.Relay.second_rises", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.RegimeMargin.Coupled.Relay.ends_set", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.ends_alike", "Becoming.RegimeMargin.Coupled.Indexed.pointwise_of_rises", "Becoming.RegimeMargin.Coupled.Relay.first_rises", "Becoming.RegimeMargin.Coupled.Relay.second_rises", "Becoming.RegimeMargin.Coupled.ends_pair", "Becoming.RegimeMargin.Coupled.pair_rises", "Becoming.RegimeMargin.Coupled.setAt_pair"]}
+{"name": "Becoming.RegimeMargin.Coupled.Relay.first_alone", "uses": ["Becoming.RegimeMargin.Coupled.Relay.first_zero", "Becoming.RegimeMargin.Coupled.Relay.second_zero"]}
+{"name": "Becoming.RegimeMargin.Coupled.Relay.first_of_zero", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Relay.first_rises", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Relay.first_zero", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Relay.second_alone", "uses": ["Becoming.RegimeMargin.Coupled.Relay.first_of_zero", "Becoming.RegimeMargin.Coupled.Relay.second_of_zero", "Becoming.RegimeMargin.Coupled.drains"]}
+{"name": "Becoming.RegimeMargin.Coupled.Relay.second_of_zero", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Relay.second_rises", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Relay.second_zero", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Relay.threshold_beyond_band", "uses": ["Becoming.Law.orbit_add", "Becoming.ListTests.mem_bools", "Becoming.Naturals.le_sub_of_add_le", "Becoming.Naturals.sub_add_cancel", "Becoming.Naturals.succ_ne_zero", "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within", "Becoming.RegimeMargin.Coupled.Indexed.pointwise_of_rises", "Becoming.RegimeMargin.Coupled.Indexed.run_alike", "Becoming.RegimeMargin.Coupled.Indexed.setAt_below", "Becoming.RegimeMargin.Coupled.Indexed.step_keepsBelow", "Becoming.RegimeMargin.Coupled.Indexed.within_below", "Becoming.RegimeMargin.Coupled.Relay.between", "Becoming.RegimeMargin.Coupled.Relay.ends_set", "Becoming.RegimeMargin.Coupled.Relay.first_alone", "Becoming.RegimeMargin.Coupled.Relay.first_rises", "Becoming.RegimeMargin.Coupled.Relay.second_alone", "Becoming.RegimeMargin.Coupled.Relay.second_rises", "Becoming.RegimeMargin.Coupled.pair_rises", "Becoming.RegimeMargin.Coupled.pair_run", "Becoming.RegimeMargin.Coupled.setAt_pair", "Becoming.RegimeMargin.leading_le"]}
+{"name": "Becoming.RegimeMargin.Coupled.alternation_never_rests", "uses": ["Becoming.RegimeMargin.Alternation.alternates", "Becoming.RegimeMargin.Alternation.keeps", "Becoming.RegimeMargin.Coupled.first_regime"]}
+{"name": "Becoming.RegimeMargin.Coupled.band_web", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.comes_to_rest", "uses": ["Becoming.RegimeMargin.Coupled.rests_by"]}
+{"name": "Becoming.RegimeMargin.Coupled.drains", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.drains"]}
+{"name": "Becoming.RegimeMargin.Coupled.ends_after", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.ends_after", "Becoming.RegimeMargin.Coupled.pair_run"]}
+{"name": "Becoming.RegimeMargin.Coupled.ends_iff", "uses": ["Becoming.ListTests.mem_bools", "Becoming.RegimeMargin.Coupled.Indexed.ends_iff", "Becoming.RegimeMargin.Coupled.band_web", "Becoming.RegimeMargin.Coupled.ends_pair", "Becoming.RegimeMargin.Coupled.pair_at", "Becoming.RegimeMargin.Coupled.pair_rises", "Becoming.RegimeMargin.Coupled.pair_within"]}
+{"name": "Becoming.RegimeMargin.Coupled.ends_iff_below", "uses": ["Becoming.ListTests.mem_bools", "Becoming.RegimeMargin.Coupled.Indexed.ends_alike", "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below", "Becoming.RegimeMargin.Coupled.Indexed.pointwise_of_rises", "Becoming.RegimeMargin.Coupled.band_web", "Becoming.RegimeMargin.Coupled.ends_pair", "Becoming.RegimeMargin.Coupled.pair_rises", "Becoming.RegimeMargin.Coupled.pair_within", "Becoming.RegimeMargin.Coupled.setAt_pair", "Becoming.RegimeMargin.Coupled.threshold_pair"]}
+{"name": "Becoming.RegimeMargin.Coupled.ends_of_below", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.ends_of_below", "Becoming.RegimeMargin.Coupled.ends_pair", "Becoming.RegimeMargin.Coupled.pair_rises"]}
+{"name": "Becoming.RegimeMargin.Coupled.ends_of_partner", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.ends_of_partner", "Becoming.RegimeMargin.Coupled.ends_pair"]}
+{"name": "Becoming.RegimeMargin.Coupled.ends_pair", "uses": ["Becoming.RegimeMargin.Coupled.pair_run"]}
+{"name": "Becoming.RegimeMargin.Coupled.ends_swap", "uses": ["Becoming.RegimeMargin.Coupled.run_swap"]}
+{"name": "Becoming.RegimeMargin.Coupled.ends_together", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.ends_together", "Becoming.RegimeMargin.Coupled.ends_pair"]}
+{"name": "Becoming.RegimeMargin.Coupled.fates", "uses": ["Becoming.ListTests.mem_bools", "Becoming.RegimeMargin.Coupled.Indexed.fates", "Becoming.RegimeMargin.Coupled.Indexed.pointwise_of_rises", "Becoming.RegimeMargin.Coupled.Indexed.run_alike", "Becoming.RegimeMargin.Coupled.band_web", "Becoming.RegimeMargin.Coupled.pair_count", "Becoming.RegimeMargin.Coupled.pair_rises", "Becoming.RegimeMargin.Coupled.pair_run", "Becoming.RegimeMargin.Coupled.pair_still", "Becoming.RegimeMargin.Coupled.pair_within", "Becoming.RegimeMargin.Coupled.setAt_pair", "Becoming.RegimeMargin.Coupled.threshold_pair"]}
+{"name": "Becoming.RegimeMargin.Coupled.first_regime", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.given_within", "uses": ["Becoming.Amounts.add_comm", "Becoming.Amounts.le_of_eq", "Becoming.Amounts.le_trans", "Becoming.Amounts.zero_add", "Becoming.RegimeMargin.Drawn.add_cancel", "Becoming.RegimeMargin.Drawn.add_sub", "Becoming.RegimeMargin.Drawn.sub_zero", "Becoming.RegimeMargin.Drawn.total"]}
+{"name": "Becoming.RegimeMargin.Coupled.left_le", "uses": ["Becoming.Amounts.add_comm", "Becoming.Amounts.add_le_add_left", "Becoming.Amounts.le_of_eq", "Becoming.Amounts.le_trans", "Becoming.Amounts.zero_le", "Becoming.RegimeMargin.Drawn.add_cancel", "Becoming.RegimeMargin.Drawn.add_sub", "Becoming.RegimeMargin.Drawn.sub_zero", "Becoming.RegimeMargin.Drawn.total"]}
+{"name": "Becoming.RegimeMargin.Coupled.pair_at", "uses": ["Becoming.RegimeMargin.Coupled.pair_count", "Becoming.RegimeMargin.Coupled.pair_run"]}
+{"name": "Becoming.RegimeMargin.Coupled.pair_count", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.pair_rises", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.pair_run", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.pair_still", "uses": ["Becoming.RegimeMargin.Coupled.pair_run"]}
+{"name": "Becoming.RegimeMargin.Coupled.pair_within", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.rests_by", "uses": ["Becoming.ListTests.mem_bools", "Becoming.RegimeMargin.Coupled.Indexed.rests_by", "Becoming.RegimeMargin.Coupled.band_web", "Becoming.RegimeMargin.Coupled.pair_rises", "Becoming.RegimeMargin.Coupled.pair_still", "Becoming.RegimeMargin.Coupled.pair_within"]}
+{"name": "Becoming.RegimeMargin.Coupled.run_below", "uses": ["Becoming.Lasting.orbit_mono", "Becoming.RegimeMargin.Coupled.step_mono"]}
+{"name": "Becoming.RegimeMargin.Coupled.run_swap", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.setAt_pair", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.stays", "uses": ["Becoming.Law.orbit_mul"]}
+{"name": "Becoming.RegimeMargin.Coupled.stays_from", "uses": ["Becoming.Law.orbit_add", "Becoming.RegimeMargin.Coupled.stays"]}
+{"name": "Becoming.RegimeMargin.Coupled.step_mono", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.step_mono", "Becoming.RegimeMargin.Coupled.pair_rises"]}
+{"name": "Becoming.RegimeMargin.Coupled.threshold_falls", "uses": ["Becoming.ListTests.mem_bools", "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls", "Becoming.RegimeMargin.Coupled.band_web", "Becoming.RegimeMargin.Coupled.pair_rises", "Becoming.RegimeMargin.Coupled.pair_within", "Becoming.RegimeMargin.Coupled.threshold_pair"]}
+{"name": "Becoming.RegimeMargin.Coupled.threshold_pair", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.pointwise_of_rises", "Becoming.RegimeMargin.Coupled.Indexed.run_alike", "Becoming.RegimeMargin.Coupled.pair_at", "Becoming.RegimeMargin.Coupled.pair_rises", "Becoming.RegimeMargin.Coupled.setAt_pair", "Becoming.RegimeMargin.leading_congr"]}
+{"name": "Becoming.RegimeMargin.Crossing.climbs", "uses": ["Becoming.Naturals.add_sub_cancel"]}
+{"name": "Becoming.RegimeMargin.Crossing.crosses", "uses": ["Becoming.Law.orbit_add", "Becoming.Law.orbit_mul", "Becoming.RegimeMargin.Adjusted.Between.staysMet", "Becoming.RegimeMargin.Adjusted.holds_from", "Becoming.RegimeMargin.Adjusted.orbit_regime", "Becoming.RegimeMargin.Adjusted.regime_staysMet", "Becoming.RegimeMargin.Crossing.fromNothing", "Becoming.RegimeMargin.Crossing.meets_from", "Becoming.RegimeMargin.Crossing.root", "Becoming.RegimeMargin.Crossing.toward_between", "Becoming.RegimeMargin.Crossing.toward_settles", "Becoming.RegimeMargin.ends_below"]}
+{"name": "Becoming.RegimeMargin.Crossing.fromNothing", "uses": []}
+{"name": "Becoming.RegimeMargin.Crossing.frozen_stays", "uses": ["Becoming.Law.orbit_mul", "Becoming.RegimeMargin.Adjusted.frozen_between", "Becoming.RegimeMargin.Adjusted.frozen_rests", "Becoming.RegimeMargin.Crossing.fromNothing", "Becoming.RegimeMargin.Crossing.root", "Becoming.RegimeMargin.ends_below"]}
+{"name": "Becoming.RegimeMargin.Crossing.giving_rises", "uses": []}
+{"name": "Becoming.RegimeMargin.Crossing.meets_from", "uses": []}
+{"name": "Becoming.RegimeMargin.Crossing.rises_without_rest", "uses": ["Becoming.Naturals.succ_ne_self", "Becoming.RegimeMargin.Adjusted.orbit_regime", "Becoming.RegimeMargin.Crossing.climbs", "Becoming.RegimeMargin.Crossing.giving_rises"]}
+{"name": "Becoming.RegimeMargin.Crossing.root", "uses": []}
+{"name": "Becoming.RegimeMargin.Crossing.toward_between", "uses": ["Becoming.Naturals.le_sub_of_add_le"]}
+{"name": "Becoming.RegimeMargin.Crossing.toward_settles", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.Naturals.succ_ne_self"]}
+{"name": "Becoming.RegimeMargin.Drawn.add_cancel", "uses": ["Becoming.Amounts.add_comm", "Becoming.Amounts.le_of_add_le_add_right"]}
+{"name": "Becoming.RegimeMargin.Drawn.add_sub", "uses": []}
+{"name": "Becoming.RegimeMargin.Drawn.antisymm", "uses": []}
+{"name": "Becoming.RegimeMargin.Drawn.climbs_next", "uses": ["Becoming.Amounts.le_trans", "Becoming.RegimeMargin.Drawn.climbs_or_sinks", "Becoming.RegimeMargin.Drawn.given_le_level", "Becoming.RegimeMargin.Drawn.total"]}
+{"name": "Becoming.RegimeMargin.Drawn.climbs_or_sinks", "uses": ["Becoming.Amounts.le_of_eq", "Becoming.Amounts.le_trans", "Becoming.RegimeMargin.Drawn.level_down_iff", "Becoming.RegimeMargin.Drawn.level_of_low", "Becoming.RegimeMargin.Drawn.level_up_iff", "Becoming.RegimeMargin.Drawn.total"]}
+{"name": "Becoming.RegimeMargin.Drawn.falling_on", "uses": ["Becoming.BandRest.keeps_one_way", "Becoming.Law.orbit_add", "Becoming.RegimeMargin.Drawn.step_mono"]}
+{"name": "Becoming.RegimeMargin.Drawn.given_le_level", "uses": ["Becoming.Amounts.le_add_left"]}
+{"name": "Becoming.RegimeMargin.Drawn.level_down_iff", "uses": ["Becoming.Amounts.add_comm", "Becoming.Amounts.add_le_add_left", "Becoming.Amounts.le_of_eq", "Becoming.Amounts.le_trans", "Becoming.RegimeMargin.Drawn.add_cancel", "Becoming.RegimeMargin.Drawn.add_sub"]}
+{"name": "Becoming.RegimeMargin.Drawn.level_of_low", "uses": ["Becoming.Amounts.zero_add", "Becoming.RegimeMargin.Drawn.sub_zero"]}
+{"name": "Becoming.RegimeMargin.Drawn.level_up_iff", "uses": ["Becoming.Amounts.add_comm", "Becoming.Amounts.add_le_add_left", "Becoming.Amounts.le_of_eq", "Becoming.Amounts.le_trans", "Becoming.RegimeMargin.Drawn.add_cancel", "Becoming.RegimeMargin.Drawn.add_sub"]}
+{"name": "Becoming.RegimeMargin.Drawn.rest_iff", "uses": ["Becoming.Amounts.add_comm", "Becoming.Amounts.le_of_eq", "Becoming.Amounts.zero_add", "Becoming.RegimeMargin.Drawn.add_cancel", "Becoming.RegimeMargin.Drawn.add_sub", "Becoming.RegimeMargin.Drawn.antisymm", "Becoming.RegimeMargin.Drawn.sub_zero", "Becoming.RegimeMargin.Drawn.total"]}
+{"name": "Becoming.RegimeMargin.Drawn.rising_on", "uses": ["Becoming.BandRest.keeps_one_way", "Becoming.Law.orbit_add", "Becoming.RegimeMargin.Drawn.step_mono"]}
+{"name": "Becoming.RegimeMargin.Drawn.run_shape", "uses": ["Becoming.RegimeMargin.Drawn.climbs_next", "Becoming.RegimeMargin.Drawn.climbs_or_sinks", "Becoming.RegimeMargin.Drawn.falling_on", "Becoming.RegimeMargin.Drawn.given_le_level", "Becoming.RegimeMargin.Drawn.rising_on", "Becoming.RegimeMargin.Drawn.sinks_next"]}
+{"name": "Becoming.RegimeMargin.Drawn.run_within", "uses": ["Becoming.Amounts.le_trans", "Becoming.RegimeMargin.Drawn.given_le_level"]}
+{"name": "Becoming.RegimeMargin.Drawn.sinks_next", "uses": ["Becoming.Amounts.le_trans", "Becoming.RegimeMargin.Drawn.climbs_or_sinks", "Becoming.RegimeMargin.Drawn.given_le_level", "Becoming.RegimeMargin.Drawn.total"]}
+{"name": "Becoming.RegimeMargin.Drawn.step_mono", "uses": ["Becoming.Amounts.add_le_add_left", "Becoming.Amounts.add_le_add_right", "Becoming.Amounts.le_trans", "Becoming.RegimeMargin.Drawn.sub_mono"]}
+{"name": "Becoming.RegimeMargin.Drawn.still_iff", "uses": ["Becoming.Law.orbit_add", "Becoming.Law.orbit_mul", "Becoming.RegimeMargin.Drawn.rest_iff"]}
+{"name": "Becoming.RegimeMargin.Drawn.sub_mono", "uses": ["Becoming.Amounts.le_trans", "Becoming.Amounts.zero_le", "Becoming.RegimeMargin.Drawn.add_cancel", "Becoming.RegimeMargin.Drawn.add_sub", "Becoming.RegimeMargin.Drawn.sub_zero", "Becoming.RegimeMargin.Drawn.total"]}
+{"name": "Becoming.RegimeMargin.Drawn.sub_zero", "uses": []}
+{"name": "Becoming.RegimeMargin.Drawn.total", "uses": []}
+{"name": "Becoming.RegimeMargin.Drawn.whole_run", "uses": []}
+{"name": "Becoming.RegimeMargin.Notch.ends_four", "uses": ["Becoming.Law.orbit_add", "Becoming.Law.orbit_mul"]}
+{"name": "Becoming.RegimeMargin.Notch.keeps", "uses": []}
+{"name": "Becoming.RegimeMargin.Notch.no_threshold", "uses": ["Becoming.RegimeMargin.Notch.ends_four", "Becoming.RegimeMargin.Notch.keeps", "Becoming.RegimeMargin.Notch.stays_three"]}
+{"name": "Becoming.RegimeMargin.Notch.stays_three", "uses": ["Becoming.Law.orbit_mul", "Becoming.Law.orbit_shift"]}
+{"name": "Becoming.RegimeMargin.Peaked.atMost", "uses": ["Becoming.Naturals.sub_sub", "Becoming.RegimeMargin.Peaked.min_le_left'", "Becoming.RegimeMargin.Peaked.min_le_right'", "Becoming.le_dest"]}
+{"name": "Becoming.RegimeMargin.Peaked.each_holds", "uses": ["Becoming.RegimeMargin.holds", "Becoming.RegimeMargin.keeps_of_below", "Becoming.RegimeMargin.meets_of_below"]}
+{"name": "Becoming.RegimeMargin.Peaked.fromNothing", "uses": []}
+{"name": "Becoming.RegimeMargin.Peaked.min_le_left'", "uses": []}
+{"name": "Becoming.RegimeMargin.Peaked.min_le_right'", "uses": []}
+{"name": "Becoming.RegimeMargin.Peaked.together_ends", "uses": ["Becoming.RegimeMargin.Peaked.atMost", "Becoming.RegimeMargin.Peaked.fromNothing", "Becoming.RegimeMargin.ends_beyond_giving"]}
+{"name": "Becoming.RegimeMargin.below_spec", "uses": ["Becoming.ListTests.and_left", "Becoming.ListTests.and_right"]}
+{"name": "Becoming.RegimeMargin.beyond_draw_iff", "uses": ["Becoming.RegimeMargin.root_above_need"]}
+{"name": "Becoming.RegimeMargin.ends_below", "uses": ["Becoming.RegimeMargin.Adjusted.draw_pos", "Becoming.RegimeMargin.Adjusted.ends_below", "Becoming.RegimeMargin.Adjusted.orbit_regime", "Becoming.RegimeMargin.Adjusted.regime_fromNothing", "Becoming.RegimeMargin.Adjusted.regime_staysShort"]}
+{"name": "Becoming.RegimeMargin.ends_beyond_giving", "uses": ["Becoming.RegimeMargin.ends_below"]}
+{"name": "Becoming.RegimeMargin.ends_iff_below", "uses": ["Becoming.RegimeMargin.Adjusted.draw_pos", "Becoming.RegimeMargin.Adjusted.ends_iff_below", "Becoming.RegimeMargin.Adjusted.orbit_regime", "Becoming.RegimeMargin.Adjusted.regime_fromNothing", "Becoming.RegimeMargin.Adjusted.regime_keeps", "Becoming.RegimeMargin.Adjusted.regime_staysMet", "Becoming.RegimeMargin.Adjusted.regime_staysShort"]}
+{"name": "Becoming.RegimeMargin.falls_or_bound", "uses": ["Becoming.RegimeMargin.step_falls_by"]}
+{"name": "Becoming.RegimeMargin.falls_within", "uses": ["Becoming.RegimeMargin.falls_or_bound"]}
+{"name": "Becoming.RegimeMargin.holds", "uses": ["Becoming.RegimeMargin.Adjusted.holds", "Becoming.RegimeMargin.Adjusted.orbit_regime", "Becoming.RegimeMargin.Adjusted.regime_keeps", "Becoming.RegimeMargin.Adjusted.regime_staysMet"]}
+{"name": "Becoming.RegimeMargin.keeps_of_below", "uses": ["Becoming.RegimeMargin.below_spec"]}
+{"name": "Becoming.RegimeMargin.leading_congr", "uses": []}
+{"name": "Becoming.RegimeMargin.leading_eq", "uses": ["Becoming.RegimeMargin.leading_exact", "Becoming.RegimeMargin.leading_le"]}
+{"name": "Becoming.RegimeMargin.leading_exact", "uses": ["Becoming.RegimeMargin.leading_false", "Becoming.RegimeMargin.leading_true"]}
+{"name": "Becoming.RegimeMargin.leading_falls", "uses": ["Becoming.RegimeMargin.leading_false", "Becoming.RegimeMargin.leading_le", "Becoming.RegimeMargin.leading_true"]}
+{"name": "Becoming.RegimeMargin.leading_false", "uses": ["Becoming.RegimeMargin.leading_le"]}
+{"name": "Becoming.RegimeMargin.leading_le", "uses": []}
+{"name": "Becoming.RegimeMargin.leading_true", "uses": []}
+{"name": "Becoming.RegimeMargin.lowered_raises", "uses": ["Becoming.RegimeMargin.root_mono"]}
+{"name": "Becoming.RegimeMargin.lowered_raises_strictly", "uses": ["Becoming.RegimeMargin.lowered_raises"]}
+{"name": "Becoming.RegimeMargin.meets_of_below", "uses": ["Becoming.RegimeMargin.below_spec"]}
+{"name": "Becoming.RegimeMargin.not_before", "uses": ["Becoming.RegimeMargin.orbit_ge", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.RegimeMargin.orbit_ge", "uses": ["Becoming.RegimeMargin.step_ge"]}
+{"name": "Becoming.RegimeMargin.rests_within", "uses": ["Becoming.BandRest.rests_on_band", "Becoming.RegimeMargin.step_mono"]}
+{"name": "Becoming.RegimeMargin.rises_by_draw", "uses": ["Becoming.RegimeMargin.root_mono", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.RegimeMargin.rises_superadditive", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.RegimeMargin.root_mono", "Becoming.le_dest"]}
+{"name": "Becoming.RegimeMargin.root_above_need", "uses": []}
+{"name": "Becoming.RegimeMargin.root_mono", "uses": []}
+{"name": "Becoming.RegimeMargin.short_of_below", "uses": ["Becoming.RegimeMargin.below_spec"]}
+{"name": "Becoming.RegimeMargin.stays_ended", "uses": ["Becoming.RegimeMargin.Adjusted.draw_pos", "Becoming.RegimeMargin.Adjusted.orbit_regime", "Becoming.RegimeMargin.Adjusted.regime_fromNothing", "Becoming.RegimeMargin.Adjusted.regime_staysShort", "Becoming.RegimeMargin.Adjusted.stays_ended"]}
+{"name": "Becoming.RegimeMargin.step_falls_by", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.RegimeMargin.step_ge", "uses": ["Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.RegimeMargin.step_mono", "uses": []}
+{"name": "Becoming.RegimeMargin.threshold_regime", "uses": ["Becoming.Law.orbit_add", "Becoming.Law.orbit_mul", "Becoming.RegimeMargin.Adjusted.draw_pos", "Becoming.RegimeMargin.Adjusted.orbit_regime", "Becoming.RegimeMargin.Adjusted.rests_iff_falling", "Becoming.RegimeMargin.ends_below", "Becoming.RegimeMargin.holds", "Becoming.RegimeMargin.leading_eq"]}

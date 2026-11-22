@@ -1,0 +1,72 @@
+{"name": "Becoming.HistoryIdeals.append_eq_nil_left", "uses": []}
+{"name": "Becoming.HistoryIdeals.append_eq_self", "uses": []}
+{"name": "Becoming.HistoryIdeals.classification", "uses": ["Becoming.HistoryIdeals.goesOn_trace", "Becoming.HistoryIdeals.hasLongest_principal"]}
+{"name": "Becoming.HistoryIdeals.cut_decided_iff_lpo", "uses": ["Becoming.HistoryIdeals.least_true_or_below", "Becoming.HistoryIdeals.units_length"]}
+{"name": "Becoming.HistoryIdeals.eq_of_le_of_length_le", "uses": ["Becoming.ListTests.append_nil", "Becoming.ListTests.length_append"]}
+{"name": "Becoming.HistoryIdeals.finiteOr_hull", "uses": ["Becoming.Ideals.Ideal.Same.refl", "Becoming.Ideals.Preorder.refl"]}
+{"name": "Becoming.HistoryIdeals.finiteOr_not_refutable", "uses": ["Becoming.HistoryIdeals.finiteOr_hull", "Becoming.HistoryIdeals.trace_le_trace_iff", "Becoming.HistoryIdeals.trace_not_le_principal", "Becoming.Ideals.Ideal.Same.le", "Becoming.Ideals.RefutableBy.not_not"]}
+{"name": "Becoming.HistoryIdeals.finiteOr_recurs_not_refutable", "uses": ["Becoming.HistoryIdeals.finiteOr_not_refutable"]}
+{"name": "Becoming.HistoryIdeals.goesOn_trace", "uses": ["Becoming.HistoryIdeals.initial_iff_letter", "Becoming.HistoryIdeals.initial_le_of_length", "Becoming.HistoryIdeals.length_le_of_le", "Becoming.HistoryIdeals.letter_append", "Becoming.HistoryIdeals.letter_congr", "Becoming.Ideals.Ideal.directed", "Becoming.Ideals.Ideal.lower"]}
+{"name": "Becoming.HistoryIdeals.hasLongest_principal", "uses": ["Becoming.HistoryIdeals.eq_of_le_of_length_le", "Becoming.Ideals.Ideal.directed", "Becoming.Ideals.Ideal.lower"]}
+{"name": "Becoming.HistoryIdeals.historyIdeal_same_iff", "uses": ["Becoming.HistoryIdeals.prefix_antisymm", "Becoming.HistoryIdeals.trace_le_trace_iff", "Becoming.HistoryIdeals.trace_not_le_principal", "Becoming.Ideals.Ideal.Same.ge", "Becoming.Ideals.Ideal.Same.le", "Becoming.Ideals.Ideal.Same.refl", "Becoming.Ideals.Ideal.same_of_le", "Becoming.Ideals.principal_le_iff"]}
+{"name": "Becoming.HistoryIdeals.history_le_iff", "uses": ["Becoming.HistoryIdeals.trace_le_trace_iff", "Becoming.HistoryIdeals.trace_not_le_principal", "Becoming.Ideals.principal_le_iff"]}
+{"name": "Becoming.HistoryIdeals.history_within_iff", "uses": ["Becoming.HistoryIdeals.initialWord_initial", "Becoming.HistoryIdeals.initial_le_initialWord", "Becoming.HistoryIdeals.prefixClosed_iff_lower", "Becoming.Ideals.within_principal_iff"]}
+{"name": "Becoming.HistoryIdeals.initialWord_initial", "uses": []}
+{"name": "Becoming.HistoryIdeals.initialWord_length", "uses": []}
+{"name": "Becoming.HistoryIdeals.initial_append", "uses": []}
+{"name": "Becoming.HistoryIdeals.initial_congr", "uses": []}
+{"name": "Becoming.HistoryIdeals.initial_iff_letter", "uses": []}
+{"name": "Becoming.HistoryIdeals.initial_initialWord_iff", "uses": []}
+{"name": "Becoming.HistoryIdeals.initial_le_initialWord", "uses": ["Becoming.HistoryIdeals.initialWord_initial", "Becoming.HistoryIdeals.initialWord_length", "Becoming.HistoryIdeals.initial_le_of_length"]}
+{"name": "Becoming.HistoryIdeals.initial_le_of_length", "uses": []}
+{"name": "Becoming.HistoryIdeals.least_true_or_below", "uses": []}
+{"name": "Becoming.HistoryIdeals.length_le_of_le", "uses": ["Becoming.ListTests.length_append"]}
+{"name": "Becoming.HistoryIdeals.letter_append", "uses": ["Becoming.HistoryIdeals.letter._proof_1"]}
+{"name": "Becoming.HistoryIdeals.letter_congr", "uses": []}
+{"name": "Becoming.HistoryIdeals.prefixClosed_iff_lower", "uses": []}
+{"name": "Becoming.HistoryIdeals.prefix_antisymm", "uses": ["Becoming.HistoryIdeals.append_eq_nil_left", "Becoming.HistoryIdeals.append_eq_self", "Becoming.ListTests.append_assoc", "Becoming.ListTests.append_nil"]}
+{"name": "Becoming.HistoryIdeals.principal_hasLongest", "uses": ["Becoming.HistoryIdeals.length_le_of_le", "Becoming.Ideals.Preorder.refl"]}
+{"name": "Becoming.HistoryIdeals.sequence_stretch_iff", "uses": ["Becoming.HistoryIdeals.initial_initialWord_iff", "Becoming.Sequences.agree_iff"]}
+{"name": "Becoming.HistoryIdeals.trace_goesOn", "uses": ["Becoming.HistoryIdeals.initialWord_initial", "Becoming.HistoryIdeals.initialWord_length"]}
+{"name": "Becoming.HistoryIdeals.trace_le_trace_iff", "uses": ["Becoming.HistoryIdeals.initialWord_initial", "Becoming.HistoryIdeals.initial_congr", "Becoming.HistoryIdeals.initial_initialWord_iff"]}
+{"name": "Becoming.HistoryIdeals.trace_not_le_principal", "uses": ["Becoming.HistoryIdeals.initialWord_initial", "Becoming.HistoryIdeals.initialWord_length", "Becoming.HistoryIdeals.length_le_of_le"]}
+{"name": "Becoming.HistoryIdeals.unit_le_of_length", "uses": []}
+{"name": "Becoming.HistoryIdeals.units_length", "uses": []}
+{"name": "Becoming.Run.stretches_le_iff", "uses": ["Becoming.Run.AgreeUpTo.refl", "Becoming.Run.AgreeUpTo.trans"]}
+{"name": "Becoming.Run.stretches_not_principal", "uses": ["Becoming.Run.AgreeUpTo.refl"]}
+{"name": "Becoming.Stretches.adherence_unique", "uses": ["Becoming.Ideals.Ideal.Same.refl", "Becoming.Ideals.Ideal.Same.symm", "Becoming.Ideals.ScottClosed.same", "Becoming.Ideals.hull_unique", "Becoming.adheres_iff_hull"]}
+{"name": "Becoming.Stretches.adheres_content", "uses": ["Becoming.Adheres.of", "Becoming.Ideals.hull_content", "Becoming.adheres_iff_hull"]}
+{"name": "Becoming.Stretches.adheres_iff_closed", "uses": ["Becoming.Ideals.AdheresBy.of", "Becoming.Ideals.Ideal.Same.refl", "Becoming.Ideals.Ideal.Same.symm", "Becoming.Ideals.ScottClosed.same", "Becoming.Ideals.hull_closed", "Becoming.Ideals.hull_least", "Becoming.adheres_iff_hull"]}
+{"name": "Becoming.Stretches.adheres_joint", "uses": ["Becoming.Ideals.hull_joint", "Becoming.adheres_iff_hull"]}
+{"name": "Becoming.Stretches.avoids_adheres", "uses": ["Becoming.Ideals.avoids_closed", "Becoming.Stretches.adheres_iff_closed"]}
+{"name": "Becoming.Stretches.avoids_refutable", "uses": ["Becoming.Ideals.avoids_refutable_of_found", "Becoming.Stretches.refutable_of_class"]}
+{"name": "Becoming.Stretches.avoids_runs", "uses": ["Becoming.Ideals.avoids_unique"]}
+{"name": "Becoming.Stretches.classification", "uses": ["Becoming.Stretches.goesOn_run", "Becoming.Stretches.hasLatest_principal"]}
+{"name": "Becoming.Stretches.closed_refutable_iff", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.Ideals.closed_refutable_iff", "Becoming.Ideals.within_closed"]}
+{"name": "Becoming.Stretches.closed_runs", "uses": ["Becoming.Ideals.closed_iff_lower", "Becoming.Ideals.lower_iff_content"]}
+{"name": "Becoming.Stretches.cut_decided_iff_lpo", "uses": ["Becoming.HistoryIdeals.cut_decided_iff_lpo", "Becoming.Stretches.cut_goesOn_iff", "Becoming.Stretches.cut_hasLatest_iff"]}
+{"name": "Becoming.Stretches.cut_goesOn_iff", "uses": ["Becoming.HistoryIdeals.units_length"]}
+{"name": "Becoming.Stretches.cut_hasLatest_iff", "uses": ["Becoming.HistoryIdeals.units_length"]}
+{"name": "Becoming.Stretches.finite_basis", "uses": ["Becoming.Ideals.principal_basis"]}
+{"name": "Becoming.Stretches.goesOn_run", "uses": ["Becoming.Ideals.Ideal.lower", "Becoming.Stretches.mem_act", "Becoming.Stretches.mem_state"]}
+{"name": "Becoming.Stretches.hasLatest_principal", "uses": ["Becoming.Ideals.Ideal.directed", "Becoming.Ideals.Ideal.lower", "Becoming.Run.AgreeUpTo.mono", "Becoming.Run.AgreeUpTo.symm", "Becoming.Run.AgreeUpTo.trans"]}
+{"name": "Becoming.Stretches.histories_representation", "uses": ["Becoming.Ideals.unique_basis_representation"]}
+{"name": "Becoming.Stretches.inherited_histories", "uses": ["Becoming.Ideals.lift_within", "Becoming.Ideals.restrict_lift"]}
+{"name": "Becoming.Stretches.mem_act", "uses": ["Becoming.Ideals.Ideal.directed"]}
+{"name": "Becoming.Stretches.mem_state", "uses": ["Becoming.Ideals.Ideal.directed"]}
+{"name": "Becoming.Stretches.principal_hasLatest", "uses": ["Becoming.Ideals.Preorder.refl"]}
+{"name": "Becoming.Stretches.refutable_closed_iff", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.Ideals.ScottClosed.lower", "Becoming.Ideals.principal_le_iff", "Becoming.Ideals.refutable_closed_iff", "Becoming.Stretches.unit_agree"]}
+{"name": "Becoming.Stretches.refutable_of_class", "uses": ["Becoming.refutable_iff_refutableBy"]}
+{"name": "Becoming.Stretches.run_goesOn", "uses": ["Becoming.Run.AgreeUpTo.refl"]}
+{"name": "Becoming.Stretches.run_not_compact", "uses": ["Becoming.Ideals.compact_iff_principal", "Becoming.Run.stretches_not_principal"]}
+{"name": "Becoming.Stretches.run_reading_unique", "uses": ["Becoming.Ideals.Preorder.Equiv.symm", "Becoming.Ideals.Preorder.Equiv.trans", "Becoming.Ideals.unique_continuous_extension"]}
+{"name": "Becoming.Stretches.runs_told_apart", "uses": ["Becoming.Ideals.Ideal.Same.le", "Becoming.Ideals.above_monotone", "Becoming.Ideals.above_readings_separate", "Becoming.Run.stretches_le_iff"]}
+{"name": "Becoming.Stretches.sequences_le_iff", "uses": ["Becoming.HistoryIdeals.history_le_iff", "Becoming.HistoryIdeals.trace_le_trace_iff", "Becoming.Run.stretches_le_iff", "Becoming.Sequences.agree_iff"]}
+{"name": "Becoming.Stretches.sequences_same_iff", "uses": ["Becoming.HistoryIdeals.historyIdeal_same_iff", "Becoming.HistoryIdeals.trace_le_trace_iff", "Becoming.Ideals.Ideal.Same.ge", "Becoming.Ideals.Ideal.Same.le", "Becoming.Ideals.Ideal.same_of_le", "Becoming.Stretches.sequences_le_iff"]}
+{"name": "Becoming.Stretches.sequences_within_iff", "uses": ["Becoming.HistoryIdeals.history_within_iff", "Becoming.HistoryIdeals.initial_initialWord_iff", "Becoming.HistoryIdeals.initial_le_initialWord", "Becoming.HistoryIdeals.prefixClosed_iff_lower", "Becoming.Run.AgreeUpTo.refl", "Becoming.Sequences.agree_iff"]}
+{"name": "Becoming.Stretches.unit_agree", "uses": []}
+{"name": "Becoming.Stretches.within_order_iff", "uses": ["Becoming.Ideals.lift_le_iff", "Becoming.Ideals.lift_restrict", "Becoming.Run.stretches_le_iff"]}
+{"name": "Becoming.Stretches.within_refutable", "uses": ["Becoming.Ideals.within_refutable_iff", "Becoming.Stretches.refutable_of_class"]}
+{"name": "Becoming.adheres_iff_hull", "uses": ["Becoming.Ideals.Ideal.Same.refl", "Becoming.adheres_iff_adheresBy"]}
+{"name": "Becoming.closed_iff_within_lower", "uses": ["Becoming.Ideals.Ideal.Same.refl", "Becoming.Ideals.content_lower", "Becoming.adheres_iff_adheresBy", "Becoming.adheres_iff_hull"]}
+{"name": "Becoming.refutable_holds_iff", "uses": ["Becoming.Refutable.not_not", "Becoming.Sequences.splice_after", "Becoming.Sequences.splice_agree"]}

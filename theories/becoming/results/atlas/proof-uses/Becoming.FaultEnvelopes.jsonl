@@ -1,0 +1,21 @@
+{"name": "Becoming.FaultEnvelopes.all_congr", "uses": []}
+{"name": "Becoming.FaultEnvelopes.any_append", "uses": []}
+{"name": "Becoming.FaultEnvelopes.availability_iff_separated", "uses": ["Becoming.FaultEnvelopes.certificate_available", "Becoming.FaultEnvelopes.certificate_witness", "Becoming.ListTests.contains_false_iff", "Becoming.ListTests.not_true_iff"]}
+{"name": "Becoming.FaultEnvelopes.certificate_available", "uses": ["Becoming.FaultEnvelopes.certificate_iff", "Becoming.ListTests.not_mem_nil"]}
+{"name": "Becoming.FaultEnvelopes.certificate_iff", "uses": ["Becoming.FaultEnvelopes.supports_outside_iff", "Becoming.ListTests.all_true_iff", "Becoming.ListTests.and_true_iff", "Becoming.ListTests.any_true_iff", "Becoming.ListTests.not_isEmpty_true_iff"]}
+{"name": "Becoming.FaultEnvelopes.certificate_sound", "uses": ["Becoming.FaultEnvelopes.certificate_witness"]}
+{"name": "Becoming.FaultEnvelopes.certificate_witness", "uses": ["Becoming.FaultEnvelopes.certificate_iff"]}
+{"name": "Becoming.FaultEnvelopes.copied_roster_same", "uses": ["Becoming.FaultEnvelopes.all_congr", "Becoming.FaultEnvelopes.any_append", "Becoming.FaultEnvelopes.or_absorbed", "Becoming.FaultEnvelopes.supports_outside_iff", "Becoming.ListTests.any_true_iff"]}
+{"name": "Becoming.FaultEnvelopes.correlated_four_separation", "uses": ["Becoming.FaultEnvelopes.separated_of_test"]}
+{"name": "Becoming.FaultEnvelopes.correlated_three_blocks", "uses": []}
+{"name": "Becoming.FaultEnvelopes.covering_faults_reject", "uses": ["Becoming.FaultEnvelopes.support_inside_fault_rejected", "Becoming.ListTests.contains_false_iff", "Becoming.ListTests.not_true_iff"]}
+{"name": "Becoming.FaultEnvelopes.duplicated_roster_same", "uses": ["Becoming.FaultEnvelopes.copied_roster_same"]}
+{"name": "Becoming.FaultEnvelopes.empty_envelope_rejects", "uses": []}
+{"name": "Becoming.FaultEnvelopes.one_fault_separation", "uses": ["Becoming.FaultEnvelopes.separated_of_test"]}
+{"name": "Becoming.FaultEnvelopes.or_absorbed", "uses": []}
+{"name": "Becoming.FaultEnvelopes.or_self", "uses": []}
+{"name": "Becoming.FaultEnvelopes.separated_of_test", "uses": ["Becoming.ListTests.all_true_iff", "Becoming.ListTests.and_true_iff", "Becoming.ListTests.any_true_iff", "Becoming.ListTests.contains_false_iff", "Becoming.ListTests.not_true_iff"]}
+{"name": "Becoming.FaultEnvelopes.stronger_envelope_no_new_acceptance", "uses": ["Becoming.FaultEnvelopes.certificate_iff", "Becoming.FaultEnvelopes.certificate_witness"]}
+{"name": "Becoming.FaultEnvelopes.support_inside_fault_rejected", "uses": ["Becoming.FaultEnvelopes.certificate_witness", "Becoming.ListTests.false_iff_not"]}
+{"name": "Becoming.FaultEnvelopes.supports_outside_iff", "uses": ["Becoming.ListTests.and_true_iff", "Becoming.ListTests.contains_false_iff", "Becoming.ListTests.not_true_iff"]}
+{"name": "Becoming.FaultEnvelopes.total_fault_rejects", "uses": ["Becoming.FaultEnvelopes.support_inside_fault_rejected"]}

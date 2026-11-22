@@ -1,0 +1,20 @@
+{"name": "Becoming.UnitMatchings.FrameMatch.bwd_fwd", "uses": []}
+{"name": "Becoming.UnitMatchings.FrameMatch.bwd_lt", "uses": []}
+{"name": "Becoming.UnitMatchings.FrameMatch.eq", "uses": ["Becoming.UnitMatchings.FrameMatch.le"]}
+{"name": "Becoming.UnitMatchings.FrameMatch.fwd_bwd", "uses": []}
+{"name": "Becoming.UnitMatchings.FrameMatch.fwd_lt", "uses": []}
+{"name": "Becoming.UnitMatchings.FrameMatch.le", "uses": ["Becoming.Undecided.mem_upto", "Becoming.Undecided.upto_length", "Becoming.UnitMatchings.FrameMatch.bwd_fwd", "Becoming.UnitMatchings.FrameMatch.fwd_lt", "Becoming.revisits_within"]}
+{"name": "Becoming.UnitMatchings.FrameMatch.predecessor_unique", "uses": ["Becoming.UnitMatchings.FrameMatch.bwd_fwd"]}
+{"name": "Becoming.UnitMatchings.FrameMatchings.balances", "uses": ["Becoming.UnitMatchings.FrameMatch.eq"]}
+{"name": "Becoming.UnitMatchings.FrameMatchings.next", "uses": ["Becoming.UnitMatchings.FrameMatch.fwd_lt"]}
+{"name": "Becoming.UnitMatchings.crossing_edge", "uses": ["Becoming.GrammarLaws.mem_middle", "Becoming.GrammarLaws.split_append", "Becoming.ListTests.append_assoc", "Becoming.ListTests.length_append", "Becoming.«对之取»"]}
+{"name": "Becoming.UnitMatchings.endings_count", "uses": ["Becoming.ListTests.length_append", "Becoming.Naturals.add_left_cancel", "Becoming.UnitMatchings.length_givenUnits", "Becoming.UnitMatchings.length_takenUnits", "Becoming.excess_balance", "Becoming.«对之长»"]}
+{"name": "Becoming.UnitMatchings.frameMatchings_iff_balances", "uses": ["Becoming.UnitMatchings.FrameMatchings.balances"]}
+{"name": "Becoming.UnitMatchings.leaving_and_endings_count", "uses": ["Becoming.ListTests.length_append", "Becoming.Naturals.add_left_cancel", "Becoming.UnitMatchings.length_givenUnits", "Becoming.UnitMatchings.length_takenUnits", "Becoming.excess_balance", "Becoming.«对之长»"]}
+{"name": "Becoming.UnitMatchings.length_givenUnits", "uses": ["Becoming.Undecided.upto_length", "Becoming.length_map", "Becoming.total_congr", "Becoming.«聚之长»"]}
+{"name": "Becoming.UnitMatchings.length_takenUnits", "uses": ["Becoming.Undecided.upto_length", "Becoming.length_map", "Becoming.total_congr", "Becoming.«聚之长»"]}
+{"name": "Becoming.UnitMatchings.lossless_not_dissipative", "uses": []}
+{"name": "Becoming.UnitMatchings.residual_pos_of_dissipates", "uses": ["Becoming.excess_pos"]}
+{"name": "Becoming.UnitMatchings.rise_crossing_strong", "uses": ["Becoming.Flow.Balances.rise_draws_beyond_inflow", "Becoming.Flow.excess_zero_of_le", "Becoming.ListTests.length_append", "Becoming.UnitMatchings.crossing_edge", "Becoming.UnitMatchings.length_givenUnits", "Becoming.UnitMatchings.length_takenUnits", "Becoming.excess_balance", "Becoming.mem_append_of_left", "Becoming.«对之逆»"]}
+{"name": "Becoming.UnitMatchings.rise_crossing_weak", "uses": ["Becoming.Flow.Balances.rise_draws_beyond_inflow", "Becoming.UnitMatchings.crossing_edge", "Becoming.UnitMatchings.length_givenUnits", "Becoming.UnitMatchings.length_takenUnits", "Becoming.«对之逆»"]}
+{"name": "Becoming.UnitMatchings.source_minimal_zero_of_dissipates", "uses": ["Becoming.Flow.excess_zero_of_le"]}

@@ -1,0 +1,45 @@
+{"name": "Becoming.Amounts.add_assoc", "uses": []}
+{"name": "Becoming.Amounts.add_comm", "uses": []}
+{"name": "Becoming.Amounts.add_le_add_left", "uses": ["Becoming.Amounts.add_comm", "Becoming.Amounts.add_le_add_right"]}
+{"name": "Becoming.Amounts.add_le_add_right", "uses": []}
+{"name": "Becoming.Amounts.add_swap", "uses": ["Becoming.Amounts.add_assoc", "Becoming.Amounts.add_comm"]}
+{"name": "Becoming.Amounts.add_zero", "uses": ["Becoming.Amounts.add_comm", "Becoming.Amounts.zero_add"]}
+{"name": "Becoming.Amounts.approaches_rest", "uses": ["Becoming.Amounts.add_le_add_left", "Becoming.Amounts.le_trans", "Becoming.Amounts.rests_of_archimedean", "Becoming.Amounts.still_of_falls"]}
+{"name": "Becoming.Amounts.falls_by_stretch", "uses": ["Becoming.Amounts.total_steps_lose", "Becoming.balance_over_stretch_on", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Amounts.falls_end", "uses": ["Becoming.Amounts.add_le_add_right", "Becoming.Amounts.le_refl", "Becoming.Amounts.le_trans", "Becoming.Amounts.zero_le"]}
+{"name": "Becoming.Amounts.family_loses", "uses": ["Becoming.Amounts.add_assoc", "Becoming.Amounts.add_comm", "Becoming.Amounts.add_le_add_left", "Becoming.Amounts.le_of_add_le_add_right", "Becoming.Amounts.le_of_eq", "Becoming.Amounts.le_trans"]}
+{"name": "Becoming.Amounts.family_rests", "uses": ["Becoming.Amounts.family_loses", "Becoming.Amounts.family_still", "Becoming.Amounts.rests"]}
+{"name": "Becoming.Amounts.family_rests_of_archimedean", "uses": ["Becoming.Amounts.family_loses", "Becoming.Amounts.family_still", "Becoming.Amounts.rests_of_archimedean"]}
+{"name": "Becoming.Amounts.family_still", "uses": ["Becoming.Amounts.add_le_add_left", "Becoming.Amounts.le_of_add_le_add_right", "Becoming.Amounts.le_trans"]}
+{"name": "Becoming.Amounts.few_large_losses", "uses": ["Becoming.Amounts.large_losses_within"]}
+{"name": "Becoming.Amounts.few_large_losses_of_archimedean", "uses": ["Becoming.Amounts.few_large_losses"]}
+{"name": "Becoming.Amounts.large_losses_from", "uses": ["Becoming.Amounts.add_le_add_left", "Becoming.Amounts.add_le_add_right", "Becoming.Amounts.add_swap", "Becoming.Amounts.add_zero", "Becoming.Amounts.le_of_eq", "Becoming.Amounts.le_trans", "Becoming.Amounts.still_of_falls", "Becoming.Amounts.still_within"]}
+{"name": "Becoming.Amounts.large_losses_within", "uses": ["Becoming.Amounts.large_losses_from", "Becoming.Amounts.le_add_left", "Becoming.Amounts.le_trans"]}
+{"name": "Becoming.Amounts.le_add_left", "uses": ["Becoming.Amounts.add_comm", "Becoming.Amounts.le_add_right"]}
+{"name": "Becoming.Amounts.le_add_right", "uses": ["Becoming.Amounts.add_le_add_left", "Becoming.Amounts.add_zero", "Becoming.Amounts.zero_le"]}
+{"name": "Becoming.Amounts.le_by_exchange", "uses": ["Becoming.Amounts.total_steps_add", "Becoming.Amounts.total_steps_le", "Becoming.balance_over_stretch_on", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Amounts.le_of_add_le_add_right", "uses": []}
+{"name": "Becoming.Amounts.le_of_eq", "uses": ["Becoming.Amounts.le_refl"]}
+{"name": "Becoming.Amounts.le_refl", "uses": []}
+{"name": "Becoming.Amounts.le_trans", "uses": []}
+{"name": "Becoming.Amounts.loses_times", "uses": ["Becoming.Amounts.add_le_add_right", "Becoming.Amounts.add_swap", "Becoming.Amounts.add_zero", "Becoming.Amounts.le_of_eq", "Becoming.Amounts.le_trans", "Becoming.Amounts.still_le"]}
+{"name": "Becoming.Amounts.losses_within", "uses": ["Becoming.Amounts.add_le_add_right", "Becoming.Amounts.add_swap", "Becoming.Amounts.add_zero", "Becoming.Amounts.le_of_eq", "Becoming.Amounts.le_trans"]}
+{"name": "Becoming.Amounts.replenishment_unbounded", "uses": ["Becoming.Amounts.add_le_add_right", "Becoming.Amounts.family_rests_of_archimedean", "Becoming.Amounts.le_add_right", "Becoming.Amounts.le_trans"]}
+{"name": "Becoming.Amounts.rests", "uses": ["Becoming.Amounts.rests_unrefuted"]}
+{"name": "Becoming.Amounts.rests_of_archimedean", "uses": ["Becoming.Amounts.rests"]}
+{"name": "Becoming.Amounts.rests_unrefuted", "uses": ["Becoming.Amounts.falls_end", "Becoming.«尽则不或屡»"]}
+{"name": "Becoming.Amounts.still_le", "uses": ["Becoming.Amounts.le_refl", "Becoming.Amounts.le_trans"]}
+{"name": "Becoming.Amounts.still_of_falls", "uses": ["Becoming.Amounts.le_add_right", "Becoming.Amounts.le_trans"]}
+{"name": "Becoming.Amounts.still_within", "uses": ["Becoming.Amounts.le_refl", "Becoming.Amounts.le_trans"]}
+{"name": "Becoming.Amounts.times_le", "uses": ["Becoming.Amounts.add_le_add_left", "Becoming.Amounts.add_le_add_right", "Becoming.Amounts.le_refl", "Becoming.Amounts.le_trans"]}
+{"name": "Becoming.Amounts.total_steps_add", "uses": []}
+{"name": "Becoming.Amounts.total_steps_le", "uses": []}
+{"name": "Becoming.Amounts.total_steps_lose", "uses": []}
+{"name": "Becoming.Amounts.unmarked_or_marked", "uses": []}
+{"name": "Becoming.Amounts.unmarked_within", "uses": ["Becoming.Amounts.falls_by_stretch", "Becoming.Amounts.unmarked_or_marked"]}
+{"name": "Becoming.Amounts.whole_archimedean", "uses": ["Becoming.Amounts.times_le", "Becoming.Amounts.whole_within"]}
+{"name": "Becoming.Amounts.whole_losing_steps", "uses": ["Becoming.Amounts.large_losses_within", "Becoming.Amounts.whole_times_one"]}
+{"name": "Becoming.Amounts.whole_times_one", "uses": []}
+{"name": "Becoming.Amounts.whole_within", "uses": ["Becoming.Amounts.whole_times_one"]}
+{"name": "Becoming.Amounts.zero_add", "uses": []}
+{"name": "Becoming.Amounts.zero_le", "uses": []}

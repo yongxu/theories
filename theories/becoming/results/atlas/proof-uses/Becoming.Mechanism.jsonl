@@ -1,0 +1,31 @@
+{"name": "Becoming.Coarse.carries", "uses": ["Becoming.Coarse.not_determined"]}
+{"name": "Becoming.Coarse.goAlike", "uses": []}
+{"name": "Becoming.Coarse.not_determined", "uses": []}
+{"name": "Becoming.DependsOnlyOn.goAlike", "uses": []}
+{"name": "Becoming.DependsOnlyOn.reabsorbed", "uses": ["Becoming.DependsOnlyOn.goAlike", "Becoming.GoAlike.runs_agree", "Becoming.Run.step"]}
+{"name": "Becoming.GoAlike.runs_agree", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Image.least", "uses": ["Becoming.«保之像»"]}
+{"name": "Becoming.Law.dependsOnlyOn_iff", "uses": []}
+{"name": "Becoming.Law.reabsorbed", "uses": ["Becoming.DependsOnlyOn.reabsorbed", "Becoming.Law.dependsOnlyOn_iff"]}
+{"name": "Becoming.Run.not_fixesThrough_of_goAlike", "uses": ["Becoming.Run.not_fixesThrough_of_untaken", "Becoming.Run.stepsThrough_of_factors", "Becoming.factors_image", "Becoming.image_determined_iff"]}
+{"name": "Becoming.Run.not_fixesThrough_of_untaken", "uses": ["Becoming.Run.stepsThrough_retarget", "Becoming.retarget_determined", "Becoming.retarget_step"]}
+{"name": "Becoming.Run.stepsThrough_retarget", "uses": []}
+{"name": "Becoming.Run.steps_by_rule", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Switching.determined", "uses": ["Becoming.adaptive_determined"]}
+{"name": "Becoming.Switching.no_state_law", "uses": []}
+{"name": "Becoming.Switching.not_goAlike", "uses": ["Becoming.adaptive_state_law_iff"]}
+{"name": "Becoming.adaptive_determined", "uses": []}
+{"name": "Becoming.adaptive_state_carries_iff", "uses": ["Becoming.adaptive_state_law_iff", "Becoming.carries_law_iff"]}
+{"name": "Becoming.adaptive_state_law_iff", "uses": []}
+{"name": "Becoming.carries_law_iff", "uses": ["Becoming.factors_image", "Becoming.image_determined_iff"]}
+{"name": "Becoming.factors_image", "uses": ["Becoming.«保之像»"]}
+{"name": "Becoming.forget_inputs_determined_iff", "uses": []}
+{"name": "Becoming.goAlike_const", "uses": []}
+{"name": "Becoming.goAlike_id_iff", "uses": []}
+{"name": "Becoming.goAlike_image_iff", "uses": []}
+{"name": "Becoming.image_determined_iff", "uses": ["Becoming.determined_iff_fixed", "Becoming.goAlikeUnder_iff_alike", "Becoming.«像定后当且仅当同行»"]}
+{"name": "Becoming.image_step_iff", "uses": []}
+{"name": "Becoming.inputs_determined", "uses": []}
+{"name": "Becoming.inputs_intervention_unfixed", "uses": ["Becoming.Run.not_fixes_of_untaken", "Becoming.inputs_determined"]}
+{"name": "Becoming.inputs_model_fixes", "uses": []}
+{"name": "Becoming.ruleLaw_determined", "uses": []}

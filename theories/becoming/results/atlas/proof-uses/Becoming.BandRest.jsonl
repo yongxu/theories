@@ -1,0 +1,2 @@
+{"name": "Becoming.BandRest.keeps_one_way", "uses": ["Becoming.Lasting.orbit_mono", "Becoming.Law.orbit_shift"]}
+{"name": "Becoming.BandRest.rests_on_band", "uses": ["Becoming.BandRest.keeps_one_way", "Becoming.LastChange.still_within", "Becoming.Naturals.sub_add_cancel", "Becoming.Optimum.sub_le_sub_left_of_le", "Becoming.Requirement.Formation.sub_lt_sub_of_lt"]}

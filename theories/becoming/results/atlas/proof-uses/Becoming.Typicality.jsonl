@@ -1,0 +1,50 @@
+{"name": "Becoming.Typicality.along_weight", "uses": []}
+{"name": "Becoming.Typicality.atLeast_le", "uses": ["Becoming.Typicality.ones_add_zeros", "Becoming.Typicality.tilt_le", "Becoming.Typicality.weight_mul", "Becoming.Typicality.weight_pow", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Typicality.concentrated", "uses": ["Becoming.Typicality.atLeast_le", "Becoming.Typicality.mem_courses_iff", "Becoming.Typicality.total_le_mem", "Becoming.Typicality.total_mul_right", "Becoming.Typicality.total_weight"]}
+{"name": "Becoming.Typicality.courses_length", "uses": ["Becoming.Typicality.extend_length"]}
+{"name": "Becoming.Typicality.cross_false", "uses": []}
+{"name": "Becoming.Typicality.cross_true", "uses": ["Becoming.add_mul_split"]}
+{"name": "Becoming.Typicality.extend_length", "uses": []}
+{"name": "Becoming.Typicality.few_far_ahead", "uses": ["Becoming.Typicality.concentrated"]}
+{"name": "Becoming.Typicality.margin_square", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.Naturals.le_of_add_le_right", "Becoming.Typicality.square_gap", "Becoming.le_dest"]}
+{"name": "Becoming.Typicality.mem_courses_iff", "uses": ["Becoming.Typicality.mem_extend_true", "Becoming.Typicality.of_mem_extend"]}
+{"name": "Becoming.Typicality.mem_extend_true", "uses": []}
+{"name": "Becoming.Typicality.moving_le", "uses": []}
+{"name": "Becoming.Typicality.of_mem_extend", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Typicality.offByWithin_le", "uses": ["Becoming.Naturals.twice_le", "Becoming.Typicality.stopped_spec"]}
+{"name": "Becoming.Typicality.offBy_le_within", "uses": ["Becoming.Typicality.reachesBy_of_end"]}
+{"name": "Becoming.Typicality.ones_add_zeros", "uses": []}
+{"name": "Becoming.Typicality.reachesBy_of_end", "uses": ["Becoming.ListTests.or_right"]}
+{"name": "Becoming.Typicality.regroup", "uses": ["Becoming.add_mul_split"]}
+{"name": "Becoming.Typicality.regroup_square", "uses": []}
+{"name": "Becoming.Typicality.split", "uses": ["Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.Typicality.spread", "uses": ["Becoming.Typicality.step_weight", "Becoming.Typicality.total_add", "Becoming.Typicality.total_congr", "Becoming.Typicality.total_extend", "Becoming.Typicality.total_mul", "Becoming.Typicality.total_weight", "Becoming.Typicality.weighted_cross", "Becoming.Typicality.weighted_square"]}
+{"name": "Becoming.Typicality.sq_add", "uses": ["Becoming.add_mul_split"]}
+{"name": "Becoming.Typicality.square_false", "uses": ["Becoming.Typicality.sq_add"]}
+{"name": "Becoming.Typicality.square_gap", "uses": ["Becoming.Naturals.two_mul", "Becoming.Typicality.regroup_square", "Becoming.add_mul_split"]}
+{"name": "Becoming.Typicality.square_true", "uses": ["Becoming.Typicality.sq_add"]}
+{"name": "Becoming.Typicality.step_weight", "uses": ["Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.Typicality.steps_leave", "uses": ["Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.Typicality.stopped_cross_step", "uses": ["Becoming.Typicality.stopped_go", "Becoming.Typicality.weighted_cross", "Becoming.add_mul_split", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Typicality.stopped_go", "uses": ["Becoming.Typicality.stopped_spec"]}
+{"name": "Becoming.Typicality.stopped_spec", "uses": ["Becoming.ListTests.or_left"]}
+{"name": "Becoming.Typicality.stopped_spread", "uses": ["Becoming.Typicality.moving_le", "Becoming.Typicality.step_weight", "Becoming.Typicality.stopped_cross_step", "Becoming.Typicality.stopped_square_step", "Becoming.Typicality.total_add", "Becoming.Typicality.total_congr", "Becoming.Typicality.total_extend", "Becoming.Typicality.total_le", "Becoming.Typicality.total_mul", "Becoming.Typicality.total_mul_right", "Becoming.Typicality.total_weight"]}
+{"name": "Becoming.Typicality.stopped_square_step", "uses": ["Becoming.Typicality.stopped_go", "Becoming.Typicality.weighted_square", "Becoming.add_mul_split", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Typicality.sum_courses_weight", "uses": ["Becoming.Typicality.total_weight", "Becoming.Typicality.transfer_weight", "Becoming.Weights.sum_courses"]}
+{"name": "Becoming.Typicality.tilt_le", "uses": ["Becoming.Naturals.pow_add", "Becoming.le_dest", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Typicality.total_add", "uses": []}
+{"name": "Becoming.Typicality.total_congr", "uses": []}
+{"name": "Becoming.Typicality.total_congr_mem", "uses": []}
+{"name": "Becoming.Typicality.total_extend", "uses": []}
+{"name": "Becoming.Typicality.total_le", "uses": []}
+{"name": "Becoming.Typicality.total_le_mem", "uses": []}
+{"name": "Becoming.Typicality.total_mul", "uses": []}
+{"name": "Becoming.Typicality.total_mul_right", "uses": ["Becoming.add_mul_split"]}
+{"name": "Becoming.Typicality.total_weight", "uses": ["Becoming.Typicality.total_congr", "Becoming.Typicality.total_extend", "Becoming.Typicality.total_mul", "Becoming.add_mul_split"]}
+{"name": "Becoming.Typicality.transfer_weight", "uses": ["Becoming.add_mul_split"]}
+{"name": "Becoming.Typicality.typical", "uses": ["Becoming.Typicality.offBy_le_within", "Becoming.Typicality.total_le", "Becoming.Typicality.typical_throughout"]}
+{"name": "Becoming.Typicality.typical_throughout", "uses": ["Becoming.Typicality.offByWithin_le", "Becoming.Typicality.stopped_spread", "Becoming.Typicality.total_add", "Becoming.Typicality.total_le", "Becoming.Typicality.total_mul_right", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Typicality.weight_mul", "uses": ["Becoming.Naturals.mul_mul_mul_comm"]}
+{"name": "Becoming.Typicality.weight_pow", "uses": ["Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.Typicality.weighted_cross", "uses": ["Becoming.Typicality.cross_false", "Becoming.Typicality.cross_true", "Becoming.Typicality.regroup", "Becoming.Typicality.split"]}
+{"name": "Becoming.Typicality.weighted_square", "uses": ["Becoming.Typicality.regroup", "Becoming.Typicality.split", "Becoming.Typicality.square_false", "Becoming.Typicality.square_true", "Becoming.Typicality.steps_leave"]}

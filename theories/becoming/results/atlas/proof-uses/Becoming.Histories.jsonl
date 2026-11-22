@@ -1,0 +1,26 @@
+{"name": "Becoming.Alike.sameTests", "uses": ["Becoming.Alike.symm", "Becoming.Alike.tests", "Becoming.Alike.trace"]}
+{"name": "Becoming.Choosing.early_not_determined", "uses": []}
+{"name": "Becoming.Choosing.early_of_open", "uses": []}
+{"name": "Becoming.Choosing.early_open", "uses": []}
+{"name": "Becoming.Choosing.late_of_open", "uses": []}
+{"name": "Becoming.Choosing.late_open", "uses": []}
+{"name": "Becoming.Choosing.not_alike", "uses": ["Becoming.Alike.step"]}
+{"name": "Becoming.Choosing.sameTests", "uses": ["Becoming.Choosing.early_of_open", "Becoming.Choosing.early_open", "Becoming.Choosing.late_of_open", "Becoming.Choosing.late_open"]}
+{"name": "Becoming.DeadEnd.not_live", "uses": ["Becoming.DeadEnd.no_history"]}
+{"name": "Becoming.Determined.alike_iff_sameTests", "uses": ["Becoming.Determined.at", "Becoming.alike_iff_sameTests"]}
+{"name": "Becoming.SameTests.after", "uses": ["Becoming.Alike.realized", "Becoming.Alike.trace", "Generative.trace_cons_iff"]}
+{"name": "Becoming.ShownBy.admits", "uses": []}
+{"name": "Becoming.Trace.of_same", "uses": ["Generative.Trace.brecOn"]}
+{"name": "Becoming.admits_live_iff", "uses": ["Becoming.ShownBy.admits", "Becoming.live_le"]}
+{"name": "Becoming.admits_spliceClosed", "uses": []}
+{"name": "Becoming.alike_iff_sameTests", "uses": ["Becoming.Alike.sameTests", "Becoming.sameTests_bisimulation"]}
+{"name": "Becoming.determined_family_iff", "uses": ["Becoming.ShownBy.admits", "Becoming.family_iff", "Becoming.shownBy_determined_iff"]}
+{"name": "Becoming.family_iff", "uses": ["Becoming.ShownBy.admits", "Becoming.admits_spliceClosed"]}
+{"name": "Becoming.finite_family_iff", "uses": ["Generative.trace_cons_iff", "Generative.trace_nil_iff", "Generative.trace_singleton_iff"]}
+{"name": "Becoming.live_le", "uses": ["Becoming.shownBy_le_iff"]}
+{"name": "Becoming.live_live", "uses": ["Becoming.admits_live_iff", "Becoming.live_le"]}
+{"name": "Becoming.sameTests_bisimulation", "uses": ["Becoming.SameTests.after", "Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.same_finite_histories_iff", "uses": ["Becoming.Trace.of_same", "Generative.trace_singleton_iff"]}
+{"name": "Becoming.same_histories_iff", "uses": ["Becoming.ShownBy.admits", "Becoming.admits_live_iff"]}
+{"name": "Becoming.shownBy_determined_iff", "uses": []}
+{"name": "Becoming.shownBy_le_iff", "uses": []}

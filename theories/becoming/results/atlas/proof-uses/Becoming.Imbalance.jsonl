@@ -1,0 +1,13 @@
+{"name": "Becoming.Flow.balancesOn_iff_idle", "uses": ["Becoming.le_of_sub_eq_zero", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.Flow.balances_iff_idle", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.balancesOn_iff_idle"]}
+{"name": "Becoming.Flow.withImbalance_acting_at_iff", "uses": ["Becoming.eq_zero_of_not_pos", "Becoming.le_of_sub_eq_zero", "Becoming.mem_map_some", "Becoming.mem_of_some_mem", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.Flow.withImbalance_acting_iff", "uses": ["Becoming.Flow.withImbalance_acting_at_iff"]}
+{"name": "Becoming.Flow.withImbalance_acting_taking_iff", "uses": ["Becoming.Flow.withImbalance_acting_iff", "Becoming.Flow.withImbalance_taking_iff"]}
+{"name": "Becoming.Flow.withImbalance_acting_taking_on_iff", "uses": ["Becoming.Flow.withImbalance_acting_at_iff", "Becoming.Flow.withImbalance_taking_at_iff"]}
+{"name": "Becoming.Flow.withImbalance_balances", "uses": ["Becoming.Flow.withImbalance_given", "Becoming.Flow.withImbalance_taken", "Becoming.add_sub_turn"]}
+{"name": "Becoming.Flow.withImbalance_balancesOn", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.withImbalance_balances"]}
+{"name": "Becoming.Flow.withImbalance_given", "uses": ["Becoming.total_map_some"]}
+{"name": "Becoming.Flow.withImbalance_taken", "uses": ["Becoming.total_map_some"]}
+{"name": "Becoming.Flow.withImbalance_taking_at_iff", "uses": ["Becoming.eq_zero_of_not_pos", "Becoming.le_of_sub_eq_zero", "Becoming.mem_map_some", "Becoming.mem_of_some_mem", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.Flow.withImbalance_taking_iff", "uses": ["Becoming.Flow.withImbalance_taking_at_iff"]}
+{"name": "Becoming.mem_of_some_mem", "uses": []}

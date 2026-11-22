@@ -1,0 +1,62 @@
+{"name": "Becoming.SelectionTerm.Doubling.doubling", "uses": []}
+{"name": "Becoming.SelectionTerm.Flow.support_moved_rises", "uses": ["Becoming.SelectionTerm.Flow.support_not_against", "Becoming.SelectionTerm.Flow.support_not_lower", "Becoming.SelectionTerm.Generations.moved_by_selection", "Becoming.SelectionTerm.lowered_exact"]}
+{"name": "Becoming.SelectionTerm.Flow.support_not_against", "uses": ["Becoming.Flow.unsupported_childless", "Becoming.SelectionTerm.discord_zero_of_below", "Becoming.SelectionTerm.share_le_of_below"]}
+{"name": "Becoming.SelectionTerm.Flow.support_not_lower", "uses": ["Becoming.SelectionTerm.Flow.support_not_against", "Becoming.SelectionTerm.Generations.not_lower", "Becoming.SelectionTerm.Generations.not_lower_step"]}
+{"name": "Becoming.SelectionTerm.Generations.balanced_exact_iff", "uses": ["Becoming.SelectionTerm.lowered_exact", "Becoming.SelectionTerm.raised_exact"]}
+{"name": "Becoming.SelectionTerm.Generations.balanced_uniform_iff", "uses": ["Becoming.SelectionTerm.concord_uniform", "Becoming.SelectionTerm.discord_uniform"]}
+{"name": "Becoming.SelectionTerm.Generations.born_eq", "uses": ["Becoming.SelectionTerm.Generations.total_flatMap", "Becoming.total_congr", "Becoming.total_ones"]}
+{"name": "Becoming.SelectionTerm.Generations.empty_after", "uses": ["Becoming.nil_of_length_zero"]}
+{"name": "Becoming.SelectionTerm.Generations.empty_sum", "uses": ["Becoming.nil_of_length_zero"]}
+{"name": "Becoming.SelectionTerm.Generations.kept", "uses": ["Becoming.SelectionTerm.Generations.kept_extend"]}
+{"name": "Becoming.SelectionTerm.Generations.kept_extend", "uses": ["Becoming.SelectionTerm.Generations.empty_after", "Becoming.SelectionTerm.Generations.kept_step_iff", "Becoming.mul_turn"]}
+{"name": "Becoming.SelectionTerm.Generations.kept_step_iff", "uses": ["Becoming.SelectionTerm.Generations.mean_step", "Becoming.SelectionTerm.eq_iff_of_balance"]}
+{"name": "Becoming.SelectionTerm.Generations.mean_step", "uses": ["Becoming.SelectionTerm.Generations.born_eq", "Becoming.SelectionTerm.Generations.offspring_eq", "Becoming.SelectionTerm.offspring_covariation"]}
+{"name": "Becoming.SelectionTerm.Generations.moved_by_selection", "uses": ["Becoming.SelectionTerm.Generations.balanced_exact_iff", "Becoming.SelectionTerm.Generations.moved_unbalanced"]}
+{"name": "Becoming.SelectionTerm.Generations.moved_by_transmission", "uses": ["Becoming.SelectionTerm.Generations.balanced_uniform_iff", "Becoming.SelectionTerm.Generations.moved_unbalanced"]}
+{"name": "Becoming.SelectionTerm.Generations.moved_unbalanced", "uses": ["Becoming.SelectionTerm.Generations.kept_extend"]}
+{"name": "Becoming.SelectionTerm.Generations.not_lower", "uses": ["Becoming.SelectionTerm.Generations.empty_after", "Becoming.SelectionTerm.le_of_mul_le_mul", "Becoming.mul_turn"]}
+{"name": "Becoming.SelectionTerm.Generations.not_lower_step", "uses": ["Becoming.SelectionTerm.Generations.mean_step"]}
+{"name": "Becoming.SelectionTerm.Generations.offspring_eq", "uses": ["Becoming.SelectionTerm.Generations.total_flatMap"]}
+{"name": "Becoming.SelectionTerm.Generations.raises_exact_iff", "uses": ["Becoming.SelectionTerm.lowered_exact", "Becoming.SelectionTerm.raised_exact"]}
+{"name": "Becoming.SelectionTerm.Generations.rises", "uses": ["Becoming.Naturals.lt_of_mul_lt_mul_left", "Becoming.SelectionTerm.Generations.empty_sum", "Becoming.SelectionTerm.Generations.rises_step_iff", "Becoming.SelectionTerm.pos_of_mul_pos", "Becoming.mul_turn"]}
+{"name": "Becoming.SelectionTerm.Generations.rises_step_iff", "uses": ["Becoming.SelectionTerm.Generations.mean_step", "Becoming.SelectionTerm.lt_iff_of_balance"]}
+{"name": "Becoming.SelectionTerm.Generations.total_flatMap", "uses": ["Becoming.total_append"]}
+{"name": "Becoming.SelectionTerm.Rising.exact", "uses": []}
+{"name": "Becoming.SelectionTerm.Rising.rising", "uses": []}
+{"name": "Becoming.SelectionTerm.SupportedDescent.descended", "uses": ["Becoming.Drawdown.descends_same", "Becoming.Drawdown.descends_varied"]}
+{"name": "Becoming.SelectionTerm.SupportedDescent.family_late", "uses": []}
+{"name": "Becoming.SelectionTerm.SupportedDescent.supported_descent", "uses": ["Becoming.Drawdown.acting", "Becoming.Drawdown.dependent", "Becoming.SelectionTerm.Flow.support_not_lower", "Becoming.SelectionTerm.SupportedDescent.descended", "Becoming.SelectionTerm.SupportedDescent.top"]}
+{"name": "Becoming.SelectionTerm.SupportedDescent.top", "uses": ["Becoming.Drawdown.same_unsupported", "Becoming.SelectionTerm.SupportedDescent.family_late"]}
+{"name": "Becoming.SelectionTerm.concord_alike", "uses": ["Becoming.SelectionTerm.pairs_zero", "Becoming.excess_self"]}
+{"name": "Becoming.SelectionTerm.concord_swap", "uses": ["Becoming.total_swap"]}
+{"name": "Becoming.SelectionTerm.concord_uniform", "uses": ["Becoming.SelectionTerm.pairs_zero", "Becoming.excess_self"]}
+{"name": "Becoming.SelectionTerm.covariation", "uses": ["Becoming.Naturals.add_congr", "Becoming.SelectionTerm.concord_swap", "Becoming.SelectionTerm.discord_swap", "Becoming.SelectionTerm.half", "Becoming.SelectionTerm.pair_balance", "Becoming.SelectionTerm.pairs_add", "Becoming.SelectionTerm.pairs_cross", "Becoming.SelectionTerm.pairs_cross'", "Becoming.SelectionTerm.pairs_other", "Becoming.SelectionTerm.pairs_own", "Becoming.total_congr"]}
+{"name": "Becoming.SelectionTerm.discord_alike", "uses": ["Becoming.SelectionTerm.pairs_zero", "Becoming.excess_self"]}
+{"name": "Becoming.SelectionTerm.discord_swap", "uses": ["Becoming.total_swap"]}
+{"name": "Becoming.SelectionTerm.discord_uniform", "uses": ["Becoming.SelectionTerm.pairs_zero", "Becoming.excess_self"]}
+{"name": "Becoming.SelectionTerm.discord_zero_of_below", "uses": ["Becoming.Flow.excess_zero_of_le", "Becoming.SelectionTerm.pairs_zero"]}
+{"name": "Becoming.SelectionTerm.eq_iff_of_balance", "uses": ["Becoming.Naturals.add_left_cancel", "Becoming.add_right_cancel"]}
+{"name": "Becoming.SelectionTerm.exceeds_iff", "uses": ["Becoming.SelectionTerm.covariation", "Becoming.SelectionTerm.lt_iff_of_balance"]}
+{"name": "Becoming.SelectionTerm.excess_add_left", "uses": []}
+{"name": "Becoming.SelectionTerm.excess_self_add", "uses": []}
+{"name": "Becoming.SelectionTerm.half", "uses": []}
+{"name": "Becoming.SelectionTerm.le_of_mul_le_mul", "uses": []}
+{"name": "Becoming.SelectionTerm.lowered_exact", "uses": ["Becoming.excess_self", "Becoming.total_eq_zero"]}
+{"name": "Becoming.SelectionTerm.lt_iff_of_balance", "uses": []}
+{"name": "Becoming.SelectionTerm.none_iff", "uses": ["Becoming.SelectionTerm.covariation", "Becoming.SelectionTerm.eq_iff_of_balance"]}
+{"name": "Becoming.SelectionTerm.offspring_covariation", "uses": ["Becoming.SelectionTerm.selection_covariation", "Becoming.price"]}
+{"name": "Becoming.SelectionTerm.pair_balance", "uses": ["Becoming.SelectionTerm.pair_ordered", "Becoming.SelectionTerm.swap_both", "Becoming.le_dest"]}
+{"name": "Becoming.SelectionTerm.pair_ordered", "uses": ["Becoming.SelectionTerm.excess_add_left", "Becoming.SelectionTerm.excess_self_add", "Becoming.add_mul_split"]}
+{"name": "Becoming.SelectionTerm.pairs_add", "uses": ["Becoming.total_add", "Becoming.total_congr"]}
+{"name": "Becoming.SelectionTerm.pairs_cross", "uses": ["Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.SelectionTerm.pairs_cross'", "uses": ["Becoming.SelectionTerm.pairs_cross", "Becoming.total_swap"]}
+{"name": "Becoming.SelectionTerm.pairs_other", "uses": ["Becoming.total_const"]}
+{"name": "Becoming.SelectionTerm.pairs_own", "uses": ["Becoming.total_congr", "Becoming.total_const", "Becoming.total_mul"]}
+{"name": "Becoming.SelectionTerm.pairs_zero", "uses": ["Becoming.total_eq_zero"]}
+{"name": "Becoming.SelectionTerm.pos_of_mul_pos", "uses": []}
+{"name": "Becoming.SelectionTerm.raised_exact", "uses": ["Becoming.excess_self", "Becoming.total_eq_zero"]}
+{"name": "Becoming.SelectionTerm.selection_covariation", "uses": ["Becoming.SelectionTerm.covariation"]}
+{"name": "Becoming.SelectionTerm.selection_exceeds_iff", "uses": ["Becoming.SelectionTerm.exceeds_iff"]}
+{"name": "Becoming.SelectionTerm.selection_none_iff", "uses": ["Becoming.SelectionTerm.none_iff"]}
+{"name": "Becoming.SelectionTerm.share_le_of_below", "uses": ["Becoming.SelectionTerm.covariation", "Becoming.SelectionTerm.discord_zero_of_below"]}
+{"name": "Becoming.SelectionTerm.swap_both", "uses": []}

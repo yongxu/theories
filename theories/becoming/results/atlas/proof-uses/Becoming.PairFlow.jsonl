@@ -1,0 +1,78 @@
+{"name": "Becoming.PairFlow.DrawnBelowNeed.drawn", "uses": []}
+{"name": "Becoming.PairFlow.DrawnBelowNeed.fallen", "uses": ["Becoming.PairFlow.WhileStanding.stays_fallen"]}
+{"name": "Becoming.PairFlow.DrawnBelowNeed.levels_drawn", "uses": []}
+{"name": "Becoming.PairFlow.FailedRenewal.agree_to_shortfall", "uses": ["Becoming.PairFlow.WhileStanding.runs_agree_until"]}
+{"name": "Becoming.PairFlow.FailedRenewal.first_active_keeping", "uses": ["Becoming.PairFlow.FailedRenewal.levels_keeping"]}
+{"name": "Becoming.PairFlow.FailedRenewal.first_active_sharing", "uses": ["Becoming.PairFlow.FailedRenewal.levels_sharing"]}
+{"name": "Becoming.PairFlow.FailedRenewal.first_keeping", "uses": ["Becoming.PairFlow.FailedRenewal.first_active_keeping"]}
+{"name": "Becoming.PairFlow.FailedRenewal.first_sends", "uses": ["Becoming.PairFlow.FailedRenewal.first_active_sharing"]}
+{"name": "Becoming.PairFlow.FailedRenewal.first_sharing", "uses": ["Becoming.PairFlow.FailedRenewal.first_active_sharing"]}
+{"name": "Becoming.PairFlow.FailedRenewal.gifts_sharing", "uses": ["Becoming.PairFlow.FailedRenewal.first_sends", "Becoming.PairFlow.FailedRenewal.second_sends"]}
+{"name": "Becoming.PairFlow.FailedRenewal.keeping_fallen", "uses": ["Becoming.PairFlow.WhileStanding.stays_fallen"]}
+{"name": "Becoming.PairFlow.FailedRenewal.levels_keeping", "uses": []}
+{"name": "Becoming.PairFlow.FailedRenewal.levels_sharing", "uses": []}
+{"name": "Becoming.PairFlow.FailedRenewal.lines_gain", "uses": ["Becoming.PairFlow.FailedRenewal.first_keeping", "Becoming.PairFlow.FailedRenewal.first_sharing", "Becoming.PairFlow.FailedRenewal.second_keeping", "Becoming.PairFlow.FailedRenewal.second_sharing"]}
+{"name": "Becoming.PairFlow.FailedRenewal.read_to_shortfall", "uses": ["Becoming.PairFlow.WhileStanding.factors_equal_while_supported"]}
+{"name": "Becoming.PairFlow.FailedRenewal.read_to_shortfall_met", "uses": []}
+{"name": "Becoming.PairFlow.FailedRenewal.second_keeping", "uses": ["Becoming.PairFlow.FailedRenewal.levels_keeping"]}
+{"name": "Becoming.PairFlow.FailedRenewal.second_sends", "uses": ["Becoming.PairFlow.FailedRenewal.levels_sharing"]}
+{"name": "Becoming.PairFlow.FailedRenewal.second_sharing", "uses": ["Becoming.PairFlow.FailedRenewal.levels_sharing"]}
+{"name": "Becoming.PairFlow.FailedRenewal.shortfall", "uses": []}
+{"name": "Becoming.PairFlow.GiverAtNeed.alone_fallen", "uses": ["Becoming.PairFlow.WhileStanding.stays_fallen"]}
+{"name": "Becoming.PairFlow.GiverAtNeed.alone_first", "uses": ["Becoming.PairFlow.GiverAtNeed.levels_alone"]}
+{"name": "Becoming.PairFlow.GiverAtNeed.gift_lost", "uses": ["Becoming.PairFlow.GiverAtNeed.alone_first", "Becoming.PairFlow.GiverAtNeed.kept_first"]}
+{"name": "Becoming.PairFlow.GiverAtNeed.kept_first", "uses": ["Becoming.PairFlow.GiverAtNeed.levels_kept", "Becoming.PairFlow.WhileStanding.lineAt_of_active"]}
+{"name": "Becoming.PairFlow.GiverAtNeed.levels_alone", "uses": []}
+{"name": "Becoming.PairFlow.GiverAtNeed.levels_kept", "uses": []}
+{"name": "Becoming.PairFlow.GiverAtNeed.second_active", "uses": ["Becoming.PairFlow.GiverAtNeed.levels_alone", "Becoming.PairFlow.GiverAtNeed.levels_kept"]}
+{"name": "Becoming.PairFlow.GiverAtNeed.standings_differ", "uses": []}
+{"name": "Becoming.PairFlow.GiverAtNeed.withholder_same", "uses": ["Becoming.PairFlow.GiverAtNeed.second_active", "Becoming.PairFlow.WhileStanding.lines_agree_while_active"]}
+{"name": "Becoming.PairFlow.NeedsAtCapacity.at_capacity", "uses": ["Becoming.PairFlow.NeedsAtCapacity.gainless", "Becoming.PairFlow.met_needs_within_start", "Becoming.PairSelection.Needs.balances"]}
+{"name": "Becoming.PairFlow.NeedsAtCapacity.gainless", "uses": []}
+{"name": "Becoming.PairFlow.Routes.acting", "uses": []}
+{"name": "Becoming.PairFlow.Routes.balances", "uses": ["Becoming.PairFlow.Routes.drawn_eq", "Becoming.PairFlow.Routes.given_line", "Becoming.PairFlow.Routes.given_member", "Becoming.PairFlow.Routes.taken_member"]}
+{"name": "Becoming.PairFlow.Routes.dependent", "uses": []}
+{"name": "Becoming.PairFlow.Routes.drawn_eq", "uses": []}
+{"name": "Becoming.PairFlow.Routes.factor_gap", "uses": []}
+{"name": "Becoming.PairFlow.Routes.gap_iff", "uses": ["Becoming.Naturals.lt_of_add_lt_add_left", "Becoming.PairFlow.Routes.factor_gap"]}
+{"name": "Becoming.PairFlow.Routes.given_line", "uses": []}
+{"name": "Becoming.PairFlow.Routes.given_member", "uses": []}
+{"name": "Becoming.PairFlow.Routes.lineAt_eq", "uses": ["Becoming.PairFlow.mul_cond", "Becoming.PairFlow.regroup"]}
+{"name": "Becoming.PairFlow.Routes.line_offspring", "uses": ["Becoming.PairFlow.Routes.lineAt_eq"]}
+{"name": "Becoming.PairFlow.Routes.plain", "uses": ["Becoming.PairFlow.Routes.line_offspring"]}
+{"name": "Becoming.PairFlow.Routes.signs", "uses": []}
+{"name": "Becoming.PairFlow.Routes.supported", "uses": ["Becoming.PairFlow.Routes.dependent"]}
+{"name": "Becoming.PairFlow.Routes.taken_member", "uses": []}
+{"name": "Becoming.PairFlow.WhileStanding.Parts.fits", "uses": []}
+{"name": "Becoming.PairFlow.WhileStanding.acting", "uses": ["Becoming.PairFlow.WhileStanding.active_of_give"]}
+{"name": "Becoming.PairFlow.WhileStanding.active_of_give", "uses": ["Becoming.ListTests.and_right", "Becoming.ListTests.true_of_cond_pos"]}
+{"name": "Becoming.PairFlow.WhileStanding.avail_same", "uses": ["Becoming.Naturals.le_sub_of_add_le", "Becoming.Naturals.sub_add_add", "Becoming.Naturals.sub_sub"]}
+{"name": "Becoming.PairFlow.WhileStanding.balances", "uses": ["Becoming.PairFlow.WhileStanding.given_line", "Becoming.PairFlow.WhileStanding.member_balance"]}
+{"name": "Becoming.PairFlow.WhileStanding.capped_le", "uses": []}
+{"name": "Becoming.PairFlow.WhileStanding.dependent", "uses": []}
+{"name": "Becoming.PairFlow.WhileStanding.factors_equal_while_supported", "uses": ["Becoming.PairFlow.WhileStanding.runs_agree_until", "Becoming.PairFlow.factors_equal"]}
+{"name": "Becoming.PairFlow.WhileStanding.given_line", "uses": []}
+{"name": "Becoming.PairFlow.WhileStanding.given_member", "uses": []}
+{"name": "Becoming.PairFlow.WhileStanding.lineAt_of_active", "uses": []}
+{"name": "Becoming.PairFlow.WhileStanding.lines_agree_while_active", "uses": []}
+{"name": "Becoming.PairFlow.WhileStanding.lt_of_ble_false", "uses": []}
+{"name": "Becoming.PairFlow.WhileStanding.member_balance", "uses": ["Becoming.PairFlow.WhileStanding.capped_le", "Becoming.PairFlow.WhileStanding.given_member", "Becoming.PairFlow.WhileStanding.ownTake_le", "Becoming.PairFlow.WhileStanding.settle", "Becoming.PairFlow.WhileStanding.taken_member"]}
+{"name": "Becoming.PairFlow.WhileStanding.member_net", "uses": ["Becoming.PairFlow.WhileStanding.Parts.fits", "Becoming.PairFlow.WhileStanding.avail_same", "Becoming.PairFlow.WhileStanding.swap_net"]}
+{"name": "Becoming.PairFlow.WhileStanding.next_le_of_idle", "uses": []}
+{"name": "Becoming.PairFlow.WhileStanding.ownTake_le", "uses": ["Becoming.ListTests.bif_le", "Becoming.PairFlow.WhileStanding.Parts.fits"]}
+{"name": "Becoming.PairFlow.WhileStanding.pair_ext", "uses": []}
+{"name": "Becoming.PairFlow.WhileStanding.runs_agree_until", "uses": ["Becoming.PairFlow.WhileStanding.balances", "Becoming.PairFlow.WhileStanding.given_line", "Becoming.PairFlow.WhileStanding.given_member", "Becoming.PairFlow.WhileStanding.member_net", "Becoming.PairFlow.WhileStanding.pair_ext", "Becoming.PairFlow.WhileStanding.taken_member", "Becoming.PairFlow.levels_agree_until"]}
+{"name": "Becoming.PairFlow.WhileStanding.settle", "uses": ["Becoming.add_sub_of_le"]}
+{"name": "Becoming.PairFlow.WhileStanding.standing_advance", "uses": []}
+{"name": "Becoming.PairFlow.WhileStanding.stays_fallen", "uses": ["Becoming.Naturals.ble_false_of_lt", "Becoming.PairFlow.WhileStanding.lt_of_ble_false", "Becoming.PairFlow.WhileStanding.next_le_of_idle", "Becoming.PairFlow.WhileStanding.standing_advance"]}
+{"name": "Becoming.PairFlow.WhileStanding.swap_net", "uses": []}
+{"name": "Becoming.PairFlow.WhileStanding.taken_member", "uses": []}
+{"name": "Becoming.PairFlow.factors_equal", "uses": ["Becoming.Naturals.add_left_cancel"]}
+{"name": "Becoming.PairFlow.levels_agree", "uses": ["Becoming.PairFlow.levels_agree_until"]}
+{"name": "Becoming.PairFlow.levels_agree_until", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.PairFlow.metNeed_le", "uses": []}
+{"name": "Becoming.PairFlow.metNeed_of_supported", "uses": []}
+{"name": "Becoming.PairFlow.met_needs_le_stock", "uses": ["Becoming.PairFlow.metNeed_le", "Becoming.total_le", "Becoming.total_map"]}
+{"name": "Becoming.PairFlow.met_needs_within_start", "uses": ["Becoming.Flow.Balances.stock_not_rises_over", "Becoming.PairFlow.met_needs_le_stock"]}
+{"name": "Becoming.PairFlow.mul_cond", "uses": []}
+{"name": "Becoming.PairFlow.regroup", "uses": []}

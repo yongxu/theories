@@ -1,0 +1,509 @@
+{"name": "Becoming.Flow.ActsWithin.given_eq", "uses": ["Becoming.total_congr", "Becoming.total_split"]}
+{"name": "Becoming.Flow.ActsWithin.moveUnit", "uses": ["Becoming.Flow.moveUnit_give", "Becoming.Flow.moveUnit_take", "Becoming.Flow.other_of_out", "Becoming.total_congr", "Becoming.total_raise_at"]}
+{"name": "Becoming.Flow.ActsWithin.part_taken_le", "uses": ["Becoming.total_le"]}
+{"name": "Becoming.Flow.ActsWithin.redirect", "uses": ["Becoming.Flow.other_of_out", "Becoming.Flow.redirect_give", "Becoming.Naturals.sub_add_cancel", "Becoming.add_right_cancel", "Becoming.total_congr", "Becoming.total_raise_at"]}
+{"name": "Becoming.Flow.ActsWithin.taken_eq", "uses": ["Becoming.total_congr", "Becoming.total_split"]}
+{"name": "Becoming.Flow.Balances.drawnAt_eq", "uses": ["Becoming.Naturals.add_sub_cancel"]}
+{"name": "Becoming.Flow.Balances.family_le_iff", "uses": ["Becoming.Flow.Balances.beyond_falls_exactly", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Flow.Balances.keeping_taken_le", "uses": ["Becoming.Flow.Balances.drawnAt_eq", "Becoming.Flow.Balances.within", "Becoming.Optimum.keeping_drawn_le", "Becoming.Optimum.sum_eq_of_eq"]}
+{"name": "Becoming.Flow.Balances.met_taken_le", "uses": ["Becoming.Flow.Balances.drawnAt_eq", "Becoming.Flow.Balances.within", "Becoming.Optimum.met_drawn_le", "Becoming.Optimum.sum_eq_of_eq"]}
+{"name": "Becoming.Flow.Balances.open_course", "uses": ["Becoming.Flow.Balances.drawnAt_eq", "Becoming.Flow.Balances.within"]}
+{"name": "Becoming.Flow.Balances.sum_taken", "uses": ["Becoming.Flow.Balances.drawnAt_eq", "Becoming.Optimum.sum_eq_of_eq"]}
+{"name": "Becoming.Flow.Balances.taken_add_shortfall", "uses": ["Becoming.Flow.Balances.sum_taken", "Becoming.Flow.Balances.within", "Becoming.Optimum.drawn_add_shortfall"]}
+{"name": "Becoming.Flow.Balances.taken_eq_of_alike", "uses": ["Becoming.Flow.Balances.sum_taken", "Becoming.Flow.Balances.within", "Becoming.Naturals.add_left_cancel", "Becoming.Optimum.level_add_drawn_of_within", "Becoming.Optimum.sum_eq_of_eq"]}
+{"name": "Becoming.Flow.Balances.taken_le_iff", "uses": ["Becoming.Flow.Balances.taken_add_shortfall", "Becoming.Optimum.le_iff_of_add_eq"]}
+{"name": "Becoming.Flow.Balances.within", "uses": []}
+{"name": "Becoming.Flow.Outcome.of_balances", "uses": []}
+{"name": "Becoming.Flow.capacity_eq_zero", "uses": ["Becoming.total_congr_on", "Becoming.total_zero"]}
+{"name": "Becoming.Flow.keeping_optimum_takes_slack", "uses": ["Becoming.Flow.Balances.beyond_falls_exactly", "Becoming.Optimum.least_of_room", "Becoming.Web.MetOn.stock_eq", "Becoming.add_right_cancel", "Becoming.total_congr_on"]}
+{"name": "Becoming.Flow.moveUnit_balances", "uses": ["Becoming.Flow.moveUnit_given_at", "Becoming.Flow.moveUnit_given_off", "Becoming.Flow.moveUnit_taken_at", "Becoming.Flow.moveUnit_taken_off", "Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.Flow.moveUnit_give", "uses": []}
+{"name": "Becoming.Flow.moveUnit_given_at", "uses": ["Becoming.Flow.moveUnit_give", "Becoming.total_raise_at"]}
+{"name": "Becoming.Flow.moveUnit_given_off", "uses": ["Becoming.Flow.moveUnit_give", "Becoming.total_congr"]}
+{"name": "Becoming.Flow.moveUnit_take", "uses": []}
+{"name": "Becoming.Flow.moveUnit_taken_at", "uses": ["Becoming.Flow.moveUnit_take", "Becoming.total_raise_at"]}
+{"name": "Becoming.Flow.moveUnit_taken_off", "uses": ["Becoming.Flow.moveUnit_take", "Becoming.total_congr"]}
+{"name": "Becoming.Flow.other_of_out", "uses": []}
+{"name": "Becoming.Flow.redirect_balances", "uses": ["Becoming.Flow.redirect_given_at", "Becoming.Flow.redirect_given_off", "Becoming.Flow.redirect_given_to", "Becoming.Naturals.sub_add_cancel", "Becoming.add_right_cancel"]}
+{"name": "Becoming.Flow.redirect_give", "uses": []}
+{"name": "Becoming.Flow.redirect_given_at", "uses": ["Becoming.Flow.redirect_give", "Becoming.Naturals.sub_add_cancel", "Becoming.total_raise_at"]}
+{"name": "Becoming.Flow.redirect_given_off", "uses": ["Becoming.Flow.redirect_give", "Becoming.total_congr"]}
+{"name": "Becoming.Flow.redirect_given_to", "uses": ["Becoming.Flow.redirect_give", "Becoming.total_raise_at"]}
+{"name": "Becoming.Flow.restGiven_unsupported", "uses": ["Becoming.total_congr_on", "Becoming.total_zero"]}
+{"name": "Becoming.Flow.top_iff_least", "uses": ["Becoming.Flow.Balances.family_le_iff"]}
+{"name": "Becoming.Optimum.Above.floor_or_full", "uses": ["Becoming.Optimum.Above.floor_or_full_of_ranked", "Becoming.Optimum.transfer_exceeds"]}
+{"name": "Becoming.Optimum.Above.floor_or_full_of_ranked", "uses": ["Becoming.Flow.ActsWithin.given_eq", "Becoming.Flow.ActsWithin.taken_eq", "Becoming.Optimum.Above.full_of_ranked", "Becoming.total_congr_on", "Becoming.total_zero"]}
+{"name": "Becoming.Optimum.Above.full", "uses": ["Becoming.Optimum.Above.full_of_ranked", "Becoming.Optimum.transfer_exceeds"]}
+{"name": "Becoming.Optimum.Above.full_of_ranked", "uses": ["Becoming.Optimum.Above.transfer"]}
+{"name": "Becoming.Optimum.Above.room", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.Optimum.Above.transfer", "Becoming.Optimum.member_below", "Becoming.Optimum.transfer_exceeds"]}
+{"name": "Becoming.Optimum.Above.transfer", "uses": ["Becoming.Flow.ActsWithin.moveUnit", "Becoming.Flow.ActsWithin.redirect", "Becoming.Flow.moveUnit_balances", "Becoming.Flow.redirect_balances", "Becoming.ListTests.mem_append_iff", "Becoming.Optimum.transfer_above"]}
+{"name": "Becoming.Optimum.AtOnce.drain_most", "uses": ["Becoming.Optimum.AtOnce.drawn_step", "Becoming.Optimum.AtOnce.portion_falls"]}
+{"name": "Becoming.Optimum.AtOnce.drain_perfect_iff", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.Naturals.sub_add_cancel", "Becoming.Optimum.AtOnce.later_drained", "Becoming.Optimum.AtOnce.steps_after", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.AtOnce.drained_add_le", "uses": ["Becoming.Optimum.AtOnce.drawn_step"]}
+{"name": "Becoming.Optimum.AtOnce.drains", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.Optimum.AtOnce.later_less", "Becoming.Optimum.AtOnce.revisions_drain"]}
+{"name": "Becoming.Optimum.AtOnce.drawn_step", "uses": ["Becoming.Optimum.AtOnce.sumTo_zero"]}
+{"name": "Becoming.Optimum.AtOnce.holding_draws_more", "uses": ["Becoming.Optimum.AtOnce.drained_add_le", "Becoming.Optimum.AtOnce.drawn_step"]}
+{"name": "Becoming.Optimum.AtOnce.last_draws", "uses": ["Becoming.Optimum.InTurn.leaves_floor"]}
+{"name": "Becoming.Optimum.AtOnce.later_drained", "uses": ["Becoming.Optimum.AtOnce.drawn_step", "Becoming.Optimum.AtOnce.sumTo_set", "Becoming.Optimum.AtOnce.sumTo_zero"]}
+{"name": "Becoming.Optimum.AtOnce.later_less", "uses": ["Becoming.Optimum.AtOnce.drawn_step", "Becoming.Optimum.AtOnce.sumTo_set"]}
+{"name": "Becoming.Optimum.AtOnce.levels_drained", "uses": ["Becoming.Optimum.AtOnce.sumTo_zero"]}
+{"name": "Becoming.Optimum.AtOnce.portion_falls", "uses": []}
+{"name": "Becoming.Optimum.AtOnce.revisions_drain", "uses": ["Becoming.Optimum.AtOnce.later_less", "Becoming.Optimum.InTurn.floor_of_less"]}
+{"name": "Becoming.Optimum.AtOnce.steps_after", "uses": ["Becoming.le_dest"]}
+{"name": "Becoming.Optimum.AtOnce.sumTo_congr", "uses": []}
+{"name": "Becoming.Optimum.AtOnce.sumTo_set", "uses": ["Becoming.Optimum.AtOnce.sumTo_congr"]}
+{"name": "Becoming.Optimum.AtOnce.sumTo_zero", "uses": ["Becoming.Optimum.AtOnce.sumTo_congr", "Becoming.Optimum.AtOnce.sumTo_zeros"]}
+{"name": "Becoming.Optimum.AtOnce.sumTo_zeros", "uses": []}
+{"name": "Becoming.Optimum.AtOnce.whole_not_drained", "uses": ["Becoming.Optimum.AtOnce.drain_perfect_iff"]}
+{"name": "Becoming.Optimum.AtOnce.whole_perfect_iff", "uses": ["Becoming.Optimum.AtOnce.drain_perfect_iff"]}
+{"name": "Becoming.Optimum.Drain.counted_after_drains", "uses": ["Becoming.DrawnBeyond.source_apart", "Becoming.Optimum.Drain.split_shared", "Becoming.Optimum.Drain.storeOrder_rising", "Becoming.Optimum.Rising.mono", "Becoming.Optimum.least_of_shared"]}
+{"name": "Becoming.Optimum.Drain.drained_ends", "uses": ["Becoming.Diversion.dependent", "Becoming.DrawnBeyond.fixed_source", "Becoming.DrawnBeyond.met_source", "Becoming.DrawnBeyond.source_apart", "Becoming.Optimum.Drain.drained_optimum", "Becoming.Optimum.Drain.split_shared", "Becoming.Optimum.Drain.storeOrder_rising", "Becoming.Optimum.Drain.taker_couples_store", "Becoming.Optimum.Shared.room", "Becoming.Web.optimum_ends_beyond"]}
+{"name": "Becoming.Optimum.Drain.drained_optimum", "uses": []}
+{"name": "Becoming.Optimum.Drain.drawing_broken_iff", "uses": ["Becoming.DrawnBeyond.met_source", "Becoming.DrawnBeyond.source_apart", "Becoming.Optimum.Drain.drawing_optimum", "Becoming.Optimum.Drain.formations_distinct", "Becoming.Optimum.Drain.storeOrder_rising", "Becoming.Optimum.Drain.store_source_distinct", "Becoming.Web.optimum_broken_iff_capacity", "Becoming.sub_lt_self_iff"]}
+{"name": "Becoming.Optimum.Drain.drawing_optimum", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.Optimum.Drain.drawing_within"]}
+{"name": "Becoming.Optimum.Drain.drawing_within", "uses": []}
+{"name": "Becoming.Optimum.Drain.formations_distinct", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Optimum.Drain.keeping_room", "uses": ["Becoming.DrawnBeyond.source_apart", "Becoming.Optimum.Drain.split_shared", "Becoming.Optimum.transfer_exceeds", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Optimum.Drain.kept_takes_slack", "uses": ["Becoming.DrawnBeyond.WithinSlack.balances", "Becoming.DrawnBeyond.met_source", "Becoming.DrawnBeyond.whole_gainless", "Becoming.Flow.keeping_optimum_takes_slack", "Becoming.Optimum.Drain.keeping_room", "Becoming.Optimum.Drain.storeOrder_rising", "Becoming.le_of_add_le_add_right", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Optimum.Drain.room_needed", "uses": []}
+{"name": "Becoming.Optimum.Drain.satisficing_either", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Optimum.Drain.split_shared", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Optimum.Drain.storeOrder_rising", "uses": ["Becoming.Optimum.rising_total"]}
+{"name": "Becoming.Optimum.Drain.store_source_distinct", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Optimum.Drain.taker_couples_store", "uses": []}
+{"name": "Becoming.Optimum.Exceeds.total_lt", "uses": ["Becoming.mem_cons_cases", "Becoming.total_le"]}
+{"name": "Becoming.Optimum.Holding.burst_above", "uses": []}
+{"name": "Becoming.Optimum.Holding.burst_le", "uses": []}
+{"name": "Becoming.Optimum.Holding.burst_met", "uses": ["Becoming.Optimum.Holding.burst_above", "Becoming.Optimum.Holding.burst_le", "Becoming.Optimum.Holding.fallOnce_drawn", "Becoming.Optimum.Holding.fallOnce_met", "Becoming.Optimum.Holding.fallOnce_open", "Becoming.Optimum.Holding.metDraw_of_keeps", "Becoming.Optimum.Holding.stepwiseDraw_of_falls", "Becoming.Optimum.Holding.stepwiseDraw_of_keeps", "Becoming.Optimum.continued_drawn", "Becoming.Optimum.continued_keeps", "Becoming.Optimum.continued_met_frontier", "Becoming.Optimum.holdingTo_keeps", "Becoming.Optimum.holdingTo_most", "Becoming.Web.frontier_keeps_stepwise", "Becoming.Web.frontier_met_kept", "Becoming.add_right_cancel"]}
+{"name": "Becoming.Optimum.Holding.coupledDraw_of_below", "uses": ["Becoming.Optimum.Holding.metThrough_of_below"]}
+{"name": "Becoming.Optimum.Holding.coupledDraw_of_keeps", "uses": ["Becoming.Optimum.Holding.metThrough_of_keeps"]}
+{"name": "Becoming.Optimum.Holding.course_balances", "uses": ["Becoming.Naturals.add_sub_of_le", "Becoming.Optimum.holding_within"]}
+{"name": "Becoming.Optimum.Holding.doubling_above", "uses": ["Becoming.Optimum.Holding.doubling_high", "Becoming.Optimum.Holding.doubling_low", "Becoming.Optimum.Holding.doubling_rises_strictly", "Becoming.Optimum.Holding.mul_lt_of_pos", "Becoming.Optimum.Holding.twice_mul"]}
+{"name": "Becoming.Optimum.Holding.doubling_capacity", "uses": ["Becoming.Optimum.Holding.keepsFirst_best", "Becoming.Optimum.Holding.keepsFirst_le", "Becoming.Optimum.Holding.only_three", "Becoming.Optimum.InTurn.at_floor", "Becoming.Optimum.InTurn.last_at_floor", "Becoming.Optimum.InTurn.perfect_at_floors", "Becoming.Optimum.sub_le_sub_left_of_le", "Becoming.Web.drained_broken"]}
+{"name": "Becoming.Optimum.Holding.doubling_drawn_first", "uses": ["Becoming.Optimum.Holding.doubling_above", "Becoming.Optimum.Holding.doubling_grows", "Becoming.Optimum.Holding.doubling_rises", "Becoming.Optimum.Holding.doubling_rises_strictly", "Becoming.Optimum.Holding.doubling_top", "Becoming.Optimum.Holding.halved_left_le", "Becoming.Optimum.Holding.pos_of_lt_two_mul", "Becoming.Optimum.Holding.quartered_left_lt", "Becoming.Optimum.Next.exhausting_frontier", "Becoming.Optimum.Next.holding_frontier", "Becoming.Optimum.frontier_rebuilds", "Becoming.Optimum.frontier_rebuilt", "Becoming.Optimum.rise_stays", "Becoming.Web.Next.frontier_ends_drawn_first", "Becoming.Web.Next.frontier_ends_drawn_more", "Becoming.le_dest"]}
+{"name": "Becoming.Optimum.Holding.doubling_drawn_first_linear", "uses": ["Becoming.Optimum.Holding.doubling_drawn_first", "Becoming.Optimum.Holding.linear_falls"]}
+{"name": "Becoming.Optimum.Holding.doubling_gain_le", "uses": ["Becoming.Optimum.Holding.twice_mul", "Becoming.le_dest"]}
+{"name": "Becoming.Optimum.Holding.doubling_gain_lt", "uses": ["Becoming.Optimum.Holding.twice_mul", "Becoming.le_dest"]}
+{"name": "Becoming.Optimum.Holding.doubling_grows", "uses": ["Becoming.Optimum.Holding.doubling_low"]}
+{"name": "Becoming.Optimum.Holding.doubling_high", "uses": []}
+{"name": "Becoming.Optimum.Holding.doubling_low", "uses": []}
+{"name": "Becoming.Optimum.Holding.doubling_outpaced", "uses": ["Becoming.Optimum.Holding.doubling_high", "Becoming.Optimum.Holding.doubling_low", "Becoming.Optimum.Holding.twice_mul", "Becoming.le_dest"]}
+{"name": "Becoming.Optimum.Holding.doubling_outpaced_le", "uses": ["Becoming.Optimum.Holding.doubling_high", "Becoming.Optimum.Holding.doubling_low", "Becoming.Optimum.Holding.twice_mul"]}
+{"name": "Becoming.Optimum.Holding.doubling_rebuilds", "uses": ["Becoming.Optimum.Holding.doubling_above", "Becoming.Optimum.Holding.doubling_grows", "Becoming.Optimum.Holding.doubling_outpaced", "Becoming.Optimum.Holding.doubling_outpaced_le", "Becoming.Optimum.Holding.doubling_rises", "Becoming.Optimum.Holding.doubling_rises_strictly", "Becoming.Optimum.Holding.doubling_top", "Becoming.Optimum.exhausting_frontier", "Becoming.Optimum.frontier_exhausts", "Becoming.Optimum.frontier_rebuilt", "Becoming.Optimum.rebuilding_frontier", "Becoming.Optimum.rise_stays", "Becoming.Web.frontier_rebuilds", "Becoming.le_dest"]}
+{"name": "Becoming.Optimum.Holding.doubling_rises", "uses": ["Becoming.Optimum.Holding.doubling_gain_le", "Becoming.Optimum.Holding.doubling_low"]}
+{"name": "Becoming.Optimum.Holding.doubling_rises_strictly", "uses": ["Becoming.Optimum.Holding.doubling_gain_lt", "Becoming.Optimum.Holding.doubling_low"]}
+{"name": "Becoming.Optimum.Holding.doubling_top", "uses": ["Becoming.Optimum.Holding.doubling_high", "Becoming.Optimum.Holding.doubling_low", "Becoming.Optimum.Holding.doubling_rises", "Becoming.Optimum.Holding.twice_mul"]}
+{"name": "Becoming.Optimum.Holding.fallOnce_drawn", "uses": []}
+{"name": "Becoming.Optimum.Holding.fallOnce_met", "uses": []}
+{"name": "Becoming.Optimum.Holding.fallOnce_open", "uses": []}
+{"name": "Becoming.Optimum.Holding.gate_le", "uses": []}
+{"name": "Becoming.Optimum.Holding.gated_alike", "uses": ["Becoming.Flow.Balances.taken_eq_of_alike", "Becoming.Optimum.Holding.course_balances", "Becoming.Optimum.Holding.gate_le", "Becoming.Optimum.holding_after", "Becoming.Optimum.holding_before", "Becoming.Optimum.holding_frontier"]}
+{"name": "Becoming.Optimum.Holding.gated_in_turn", "uses": ["Becoming.Optimum.Holding.gated_alike", "Becoming.Optimum.Holding.restraint_keeps", "Becoming.Optimum.InTurn.floors_perfect", "Becoming.Optimum.InTurn.perfect_at_floors", "Becoming.Optimum.InTurn.revised_at_floors", "Becoming.Optimum.InTurn.revised_leaves", "Becoming.Web.drained_broken"]}
+{"name": "Becoming.Optimum.Holding.gated_left", "uses": ["Becoming.Optimum.Holding.gate_le", "Becoming.Optimum.frontier_left_iff", "Becoming.Optimum.holdingTo_same", "Becoming.Optimum.holding_frontier_left", "Becoming.Optimum.keeping_frontier_left", "Becoming.Optimum.keeping_not_frontier"]}
+{"name": "Becoming.Optimum.Holding.half_double", "uses": []}
+{"name": "Becoming.Optimum.Holding.half_le", "uses": ["Becoming.Optimum.Holding.half_double", "Becoming.Optimum.Holding.half_mono"]}
+{"name": "Becoming.Optimum.Holding.half_le_succ", "uses": []}
+{"name": "Becoming.Optimum.Holding.half_mono", "uses": ["Becoming.Optimum.Holding.half_le_succ"]}
+{"name": "Becoming.Optimum.Holding.halved_left_le", "uses": ["Becoming.Optimum.Holding.doubling_high", "Becoming.Optimum.Holding.doubling_low", "Becoming.Optimum.Holding.halved_twice"]}
+{"name": "Becoming.Optimum.Holding.halved_lt", "uses": ["Becoming.Optimum.Holding.halved_twice"]}
+{"name": "Becoming.Optimum.Holding.halved_twice", "uses": []}
+{"name": "Becoming.Optimum.Holding.halves_held", "uses": ["Becoming.Optimum.Holding.halves_hold"]}
+{"name": "Becoming.Optimum.Holding.halves_hold", "uses": []}
+{"name": "Becoming.Optimum.Holding.halves_race", "uses": ["Becoming.Optimum.AtOnce.holding_draws_more", "Becoming.Optimum.AtOnce.last_draws", "Becoming.Optimum.AtOnce.whole_not_drained", "Becoming.Optimum.Holding.halves_held", "Becoming.Optimum.Holding.halves_hold", "Becoming.Optimum.Holding.halves_return", "Becoming.Web.drain_perfect_broken"]}
+{"name": "Becoming.Optimum.Holding.halves_return", "uses": ["Becoming.Naturals.add_sub_cancel", "Becoming.Optimum.Holding.half_double", "Becoming.Optimum.Holding.half_le", "Becoming.Optimum.Holding.half_mono", "Becoming.le_dest"]}
+{"name": "Becoming.Optimum.Holding.keepsFirst_best", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.Optimum.Holding.twice_sum", "Becoming.le_dest", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.Optimum.Holding.keepsFirst_le", "uses": []}
+{"name": "Becoming.Optimum.Holding.linear_falls", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.le_dest"]}
+{"name": "Becoming.Optimum.Holding.logistic_above", "uses": ["Becoming.Optimum.Holding.logistic_beyond", "Becoming.le_dest"]}
+{"name": "Becoming.Optimum.Holding.logistic_beyond", "uses": ["Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.Optimum.Holding.logistic_beyond_gain", "uses": ["Becoming.Optimum.Holding.logistic_beyond"]}
+{"name": "Becoming.Optimum.Holding.logistic_broken", "uses": ["Becoming.Optimum.Holding.course_balances", "Becoming.Optimum.Holding.logistic_greatest", "Becoming.Optimum.Holding.logistic_le", "Becoming.Optimum.holding_frontier", "Becoming.Web.frontier_broken"]}
+{"name": "Becoming.Optimum.Holding.logistic_coupled", "uses": ["Becoming.Optimum.Holding.coupledDraw_of_below", "Becoming.Optimum.Holding.coupledDraw_of_keeps", "Becoming.Optimum.Holding.logistic_above", "Becoming.Optimum.Holding.logistic_le", "Becoming.Optimum.continued_breaking_frontier", "Becoming.Optimum.continued_kept_frontier", "Becoming.Web.frontier_breaks_below", "Becoming.Web.frontier_keeps_above"]}
+{"name": "Becoming.Optimum.Holding.logistic_gain_le", "uses": ["Becoming.Optimum.Holding.logistic_beyond_gain"]}
+{"name": "Becoming.Optimum.Holding.logistic_gain_lt", "uses": ["Becoming.Optimum.Holding.logistic_beyond_gain"]}
+{"name": "Becoming.Optimum.Holding.logistic_gain_zero", "uses": []}
+{"name": "Becoming.Optimum.Holding.logistic_greatest", "uses": ["Becoming.Naturals.succ_ne_zero", "Becoming.Optimum.Holding.logistic_beyond"]}
+{"name": "Becoming.Optimum.Holding.logistic_le", "uses": ["Becoming.Optimum.Holding.logistic_beyond"]}
+{"name": "Becoming.Optimum.Holding.logistic_le_self", "uses": ["Becoming.Optimum.Holding.logistic_beyond"]}
+{"name": "Becoming.Optimum.Holding.logistic_left", "uses": ["Becoming.Optimum.Holding.logistic_greatest", "Becoming.Optimum.Holding.logistic_le", "Becoming.Optimum.keeping_frontier_left", "Becoming.Web.frontier_broken_left"]}
+{"name": "Becoming.Optimum.Holding.logistic_open_le", "uses": ["Becoming.Optimum.Holding.logistic_within"]}
+{"name": "Becoming.Optimum.Holding.logistic_outpaced", "uses": ["Becoming.Optimum.Holding.logistic_outpaced_le", "Becoming.le_dest"]}
+{"name": "Becoming.Optimum.Holding.logistic_outpaced_le", "uses": ["Becoming.Optimum.Holding.logistic_le_self", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Optimum.Holding.logistic_stepwise", "uses": ["Becoming.Optimum.Holding.logistic_above", "Becoming.Optimum.Holding.logistic_le", "Becoming.Optimum.Holding.stepwiseDraw_ge", "Becoming.Optimum.Holding.stepwiseDraw_of_falls", "Becoming.Optimum.Holding.stepwiseDraw_of_keeps", "Becoming.Optimum.continued_ending_stepwise_frontier", "Becoming.Optimum.continued_holding_stepwise_frontier", "Becoming.Optimum.continued_stepwise_frontier", "Becoming.Web.frontier_breaks_at_end", "Becoming.Web.frontier_keeps_stepwise", "Becoming.Web.frontier_met_before_end"]}
+{"name": "Becoming.Optimum.Holding.logistic_valued", "uses": ["Becoming.Optimum.Holding.coupledDraw_of_keeps", "Becoming.Optimum.Holding.logistic_above", "Becoming.Optimum.Holding.logistic_greatest", "Becoming.Optimum.Holding.logistic_le", "Becoming.Optimum.Holding.logistic_open_le", "Becoming.Optimum.frontier_valued_iff", "Becoming.Optimum.regrowing_frontier", "Becoming.Web.frontier_breaks_valued", "Becoming.Web.frontier_rebuilt_valued"]}
+{"name": "Becoming.Optimum.Holding.logistic_weighted", "uses": ["Becoming.Optimum.Holding.logistic_gain_le", "Becoming.Optimum.Holding.logistic_gain_lt", "Becoming.Optimum.Holding.logistic_gain_zero", "Becoming.Optimum.Holding.logistic_outpaced", "Becoming.Optimum.Holding.logistic_outpaced_le", "Becoming.Optimum.Holding.pos_of_lt_two_mul", "Becoming.Optimum.exhausting_frontier", "Becoming.Optimum.frontier_below_weighted", "Becoming.Optimum.frontier_gains_weighted", "Becoming.Optimum.holding_after", "Becoming.Optimum.holding_before", "Becoming.Optimum.holding_gains", "Becoming.Optimum.holding_open_at", "Becoming.Optimum.weighted_holding_frontier", "Becoming.Web.frontier_broken_weighted", "Becoming.Web.frontier_exhausts"]}
+{"name": "Becoming.Optimum.Holding.logistic_within", "uses": []}
+{"name": "Becoming.Optimum.Holding.metDraw_of_keeps", "uses": ["Becoming.Optimum.metCount_of_met"]}
+{"name": "Becoming.Optimum.Holding.metRun_ge", "uses": ["Becoming.Optimum.Holding.metRun_of_met"]}
+{"name": "Becoming.Optimum.Holding.metRun_of_falls", "uses": ["Becoming.Optimum.Holding.metRun_of_met", "Becoming.Optimum.Holding.metThrough_of_below"]}
+{"name": "Becoming.Optimum.Holding.metRun_of_met", "uses": ["Becoming.Optimum.Holding.metThrough_of_keeps"]}
+{"name": "Becoming.Optimum.Holding.metThrough_of_below", "uses": ["Becoming.le_succ_cases"]}
+{"name": "Becoming.Optimum.Holding.metThrough_of_keeps", "uses": []}
+{"name": "Becoming.Optimum.Holding.mul_lt_of_pos", "uses": ["Becoming.le_dest"]}
+{"name": "Becoming.Optimum.Holding.only_three", "uses": []}
+{"name": "Becoming.Optimum.Holding.pass_keep", "uses": []}
+{"name": "Becoming.Optimum.Holding.pos_of_lt_two_mul", "uses": []}
+{"name": "Becoming.Optimum.Holding.quartered_left_lt", "uses": ["Becoming.Optimum.Holding.halved_left_le", "Becoming.Optimum.Holding.halved_lt"]}
+{"name": "Becoming.Optimum.Holding.restraint_keeps", "uses": ["Becoming.Optimum.Holding.pass_keep"]}
+{"name": "Becoming.Optimum.Holding.stepwiseDraw_ge", "uses": ["Becoming.Optimum.Holding.metRun_ge"]}
+{"name": "Becoming.Optimum.Holding.stepwiseDraw_of_falls", "uses": ["Becoming.Optimum.Holding.metRun_of_falls", "Becoming.le_dest"]}
+{"name": "Becoming.Optimum.Holding.stepwiseDraw_of_keeps", "uses": ["Becoming.Optimum.Holding.metRun_of_met"]}
+{"name": "Becoming.Optimum.Holding.twice_mul", "uses": ["Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Optimum.Holding.twice_sum", "uses": []}
+{"name": "Becoming.Optimum.InTurn.Stopping.not_least", "uses": []}
+{"name": "Becoming.Optimum.InTurn.Stopping.perfect_keeps", "uses": ["Becoming.Optimum.InTurn.drawnAll_none", "Becoming.Optimum.InTurn.drawn_other_none", "Becoming.Optimum.InTurn.position_last"]}
+{"name": "Becoming.Optimum.InTurn.Stopping.zero_not_perfect", "uses": []}
+{"name": "Becoming.Optimum.InTurn.after_draw_nothing", "uses": ["Becoming.Optimum.InTurn.pass_through"]}
+{"name": "Becoming.Optimum.InTurn.at_floor", "uses": ["Becoming.Optimum.InTurn.leaves_floor"]}
+{"name": "Becoming.Optimum.InTurn.bestUpTo_le", "uses": []}
+{"name": "Becoming.Optimum.InTurn.bestUpTo_max", "uses": ["Becoming.le_succ_cases"]}
+{"name": "Becoming.Optimum.InTurn.best_from", "uses": ["Becoming.Optimum.InTurn.bestUpTo_max", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.Optimum.InTurn.drawnAll_grows", "uses": ["Becoming.Optimum.InTurn.drawnAll_none"]}
+{"name": "Becoming.Optimum.InTurn.drawnAll_none", "uses": ["Becoming.Optimum.InTurn.drawn_first_none", "Becoming.Optimum.InTurn.drawn_other_none", "Becoming.between_of_mem_steps", "Becoming.total_congr_on"]}
+{"name": "Becoming.Optimum.InTurn.drawn_first_none", "uses": ["Becoming.Optimum.InTurn.pass_through"]}
+{"name": "Becoming.Optimum.InTurn.drawn_other_none", "uses": ["Becoming.Optimum.InTurn.pass_through"]}
+{"name": "Becoming.Optimum.InTurn.floor_after", "uses": ["Becoming.Optimum.InTurn.after_draw_nothing", "Becoming.Optimum.InTurn.at_floor"]}
+{"name": "Becoming.Optimum.InTurn.floor_of_less", "uses": ["Becoming.Optimum.InTurn.kept_returns"]}
+{"name": "Becoming.Optimum.InTurn.floor_through", "uses": ["Becoming.Optimum.InTurn.at_floor", "Becoming.Optimum.InTurn.pass_through", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.Optimum.InTurn.floors_perfect", "uses": ["Becoming.Optimum.InTurn.after_draw_nothing", "Becoming.Optimum.InTurn.pass_through", "Becoming.Optimum.sub_le_sub_left_of_le", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.Optimum.InTurn.kept_returns", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.le_dest", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.InTurn.last_at_floor", "uses": ["Becoming.Optimum.InTurn.at_floor"]}
+{"name": "Becoming.Optimum.InTurn.later_same", "uses": ["Becoming.Optimum.InTurn.drawn_other_none"]}
+{"name": "Becoming.Optimum.InTurn.leaves_floor", "uses": ["Becoming.Optimum.InTurn.floor_of_less", "Becoming.SupportGated.sub_pos_of_lt"]}
+{"name": "Becoming.Optimum.InTurn.levels_through", "uses": ["Becoming.Optimum.InTurn.pass_through"]}
+{"name": "Becoming.Optimum.InTurn.pass_le", "uses": []}
+{"name": "Becoming.Optimum.InTurn.pass_through", "uses": ["Becoming.Optimum.InTurn.pass_zero"]}
+{"name": "Becoming.Optimum.InTurn.pass_zero", "uses": []}
+{"name": "Becoming.Optimum.InTurn.perfect_at_floors", "uses": ["Becoming.Optimum.InTurn.revisions_reach_floors"]}
+{"name": "Becoming.Optimum.InTurn.position_keeps_nothing", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.Optimum.sub_le_sub_left_of_le", "Becoming.le_dest", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.InTurn.position_last", "uses": ["Becoming.Optimum.InTurn.position_step"]}
+{"name": "Becoming.Optimum.InTurn.position_levels", "uses": ["Becoming.Optimum.InTurn.levels_through", "Becoming.Optimum.InTurn.position_perfect_draws"]}
+{"name": "Becoming.Optimum.InTurn.position_nothing_best", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.Optimum.sub_le_sub_left_of_le", "Becoming.le_dest"]}
+{"name": "Becoming.Optimum.InTurn.position_one", "uses": []}
+{"name": "Becoming.Optimum.InTurn.position_perfect_draws", "uses": ["Becoming.Optimum.InTurn.position_perfect_ends", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.Optimum.InTurn.position_perfect_ends", "uses": ["Becoming.Optimum.InTurn.drawnAll_grows", "Becoming.Optimum.InTurn.later_same", "Becoming.Optimum.InTurn.pass_through", "Becoming.Optimum.InTurn.position_last", "Becoming.Optimum.InTurn.position_step", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.Optimum.InTurn.position_step", "uses": ["Becoming.Optimum.InTurn.pass_le", "Becoming.Optimum.InTurn.pass_zero", "Becoming.Optimum.InTurn.position_keeps_nothing"]}
+{"name": "Becoming.Optimum.InTurn.revise_revises", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.Optimum.InTurn.bestUpTo_le", "Becoming.Optimum.InTurn.best_from", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.Optimum.InTurn.revised_at_floors", "uses": ["Becoming.Optimum.InTurn.levels_through", "Becoming.Optimum.InTurn.revise_revises", "Becoming.Optimum.InTurn.revised_leaves", "Becoming.Optimum.InTurn.revisions_reach_floors"]}
+{"name": "Becoming.Optimum.InTurn.revised_leaves", "uses": ["Becoming.Optimum.InTurn.revise_revises"]}
+{"name": "Becoming.Optimum.InTurn.revisions_reach_floors", "uses": ["Becoming.Optimum.InTurn.floor_after", "Becoming.Optimum.InTurn.floor_through"]}
+{"name": "Becoming.Optimum.InTurn.zero_position_perfect", "uses": ["Becoming.Optimum.InTurn.drawnAll_grows", "Becoming.Optimum.InTurn.later_same", "Becoming.Optimum.InTurn.pass_le", "Becoming.Optimum.InTurn.pass_through", "Becoming.Optimum.InTurn.pass_zero", "Becoming.Optimum.InTurn.position_nothing_best", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.Optimum.MutualBest.full", "uses": ["Becoming.Optimum.Above.full", "Becoming.Optimum.above_nothing", "Becoming.Optimum.alone_self"]}
+{"name": "Becoming.Optimum.Next.drawable_le_of_gains", "uses": ["Becoming.Amounts.le_by_exchange", "Becoming.Optimum.Next.drawable_step"]}
+{"name": "Becoming.Optimum.Next.drawable_lt_of_gains", "uses": ["Becoming.Optimum.Next.drawable_le_of_gains", "Becoming.Optimum.Next.drawable_step", "Becoming.Optimum.add_steps"]}
+{"name": "Becoming.Optimum.Next.drawable_step", "uses": ["Becoming.Optimum.Next.weighted_add_left"]}
+{"name": "Becoming.Optimum.Next.ended_outdrawn", "uses": ["Becoming.Optimum.Next.holding_within", "Becoming.Optimum.Next.weighted_lt_of_gains", "Becoming.Optimum.holding_after", "Becoming.Optimum.holding_before"]}
+{"name": "Becoming.Optimum.Next.exhausting_frontier", "uses": ["Becoming.Optimum.Next.holding_frontier", "Becoming.Optimum.Next.outpaced_greatest"]}
+{"name": "Becoming.Optimum.Next.frontier_below", "uses": ["Becoming.Optimum.Next.frontier_gains_of_most", "Becoming.Optimum.Next.gainsMost_of_greatest"]}
+{"name": "Becoming.Optimum.Next.frontier_ends_drawn_first", "uses": ["Becoming.Optimum.Next.frontier_ends_of_le"]}
+{"name": "Becoming.Optimum.Next.frontier_ends_drawn_more", "uses": ["Becoming.Optimum.Next.frontier_ends_of_lt"]}
+{"name": "Becoming.Optimum.Next.frontier_ends_of_le", "uses": ["Becoming.Optimum.Holding.mul_lt_of_pos", "Becoming.Optimum.Next.frontier_exhausts"]}
+{"name": "Becoming.Optimum.Next.frontier_ends_of_lt", "uses": ["Becoming.Optimum.Holding.mul_lt_of_pos", "Becoming.Optimum.Next.frontier_exhausts"]}
+{"name": "Becoming.Optimum.Next.frontier_exhausts", "uses": ["Becoming.Optimum.Next.frontier_below", "Becoming.Optimum.Next.holding_open", "Becoming.Optimum.Next.outpaced_above", "Becoming.Optimum.Next.outpaced_greatest", "Becoming.Optimum.holding_after", "Becoming.Optimum.holding_gains"]}
+{"name": "Becoming.Optimum.Next.frontier_gains_of_most", "uses": ["Becoming.Optimum.Next.weighted_lt_of_gains"]}
+{"name": "Becoming.Optimum.Next.frontier_leaves", "uses": ["Becoming.Optimum.Next.ended_outdrawn", "Becoming.Optimum.Next.holding_open", "Becoming.Optimum.Next.stays_empty"]}
+{"name": "Becoming.Optimum.Next.frontier_of_gainsMost", "uses": ["Becoming.Optimum.Next.weighted_le_of_gains"]}
+{"name": "Becoming.Optimum.Next.frontier_rebuilds", "uses": ["Becoming.Optimum.Next.frontier_gains_of_most", "Becoming.Optimum.Next.le_rise", "Becoming.Optimum.Next.rebuilding_after", "Becoming.Optimum.Next.rebuilding_before", "Becoming.Optimum.Next.rebuilding_gainsMost", "Becoming.Optimum.Next.rebuilding_open", "Becoming.Optimum.Next.rise_below_before", "Becoming.Optimum.Next.rise_le", "Becoming.Optimum.Next.rise_of_below"]}
+{"name": "Becoming.Optimum.Next.frontier_rebuilt", "uses": ["Becoming.Optimum.Next.frontier_gains_of_most", "Becoming.Optimum.Next.rebuilding_after", "Becoming.Optimum.Next.rebuilding_before", "Becoming.Optimum.Next.rebuilding_gainsMost", "Becoming.Optimum.Next.rebuilding_open"]}
+{"name": "Becoming.Optimum.Next.gainsMost_of_greatest", "uses": []}
+{"name": "Becoming.Optimum.Next.holding_frontier", "uses": ["Becoming.Optimum.Next.frontier_of_gainsMost", "Becoming.Optimum.Next.gainsMost_of_greatest", "Becoming.Optimum.Next.holding_open", "Becoming.Optimum.holding_after", "Becoming.Optimum.holding_gains"]}
+{"name": "Becoming.Optimum.Next.holding_open", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.Optimum.Next.holding_within", "Becoming.Optimum.holding_after", "Becoming.Optimum.holding_before", "Becoming.Optimum.sub_le_sub_right_of_le"]}
+{"name": "Becoming.Optimum.Next.holding_within", "uses": ["Becoming.Optimum.holding_after", "Becoming.Optimum.holding_before"]}
+{"name": "Becoming.Optimum.Next.le_rise", "uses": ["Becoming.Optimum.Next.rise_at_top", "Becoming.Optimum.Next.rise_le_top", "Becoming.Optimum.Next.rise_succ"]}
+{"name": "Becoming.Optimum.Next.outpaced_above", "uses": []}
+{"name": "Becoming.Optimum.Next.outpaced_greatest", "uses": []}
+{"name": "Becoming.Optimum.Next.rebuilding_after", "uses": []}
+{"name": "Becoming.Optimum.Next.rebuilding_at", "uses": ["Becoming.Optimum.Next.rebuilding_before"]}
+{"name": "Becoming.Optimum.Next.rebuilding_before", "uses": []}
+{"name": "Becoming.Optimum.Next.rebuilding_frontier", "uses": ["Becoming.Optimum.Next.frontier_of_gainsMost", "Becoming.Optimum.Next.rebuilding_after", "Becoming.Optimum.Next.rebuilding_gainsMost", "Becoming.Optimum.Next.rebuilding_open"]}
+{"name": "Becoming.Optimum.Next.rebuilding_gainsMost", "uses": ["Becoming.Optimum.Next.le_rise", "Becoming.Optimum.Next.rebuilding_before", "Becoming.Optimum.Next.rise_le"]}
+{"name": "Becoming.Optimum.Next.rebuilding_le_cap", "uses": ["Becoming.Optimum.Next.rebuilding_after", "Becoming.Optimum.Next.rebuilding_before", "Becoming.Optimum.Next.rise_le"]}
+{"name": "Becoming.Optimum.Next.rebuilding_open", "uses": ["Becoming.Optimum.Next.rebuilding_le_cap", "Becoming.Optimum.Next.rebuilding_within"]}
+{"name": "Becoming.Optimum.Next.rebuilding_within", "uses": ["Becoming.Optimum.Next.rebuilding_after", "Becoming.Optimum.Next.rebuilding_at", "Becoming.Optimum.Next.rebuilding_before", "Becoming.Optimum.Next.rise_within"]}
+{"name": "Becoming.Optimum.Next.rise_at_top", "uses": ["Becoming.Optimum.Next.rise_le", "Becoming.Optimum.Next.rise_succ"]}
+{"name": "Becoming.Optimum.Next.rise_below_before", "uses": ["Becoming.Optimum.Next.rise_at_top", "Becoming.Optimum.Next.rise_le"]}
+{"name": "Becoming.Optimum.Next.rise_le", "uses": ["Becoming.Optimum.Next.rise_succ"]}
+{"name": "Becoming.Optimum.Next.rise_le_top", "uses": ["Becoming.Optimum.Next.rise_le"]}
+{"name": "Becoming.Optimum.Next.rise_of_below", "uses": ["Becoming.Optimum.Next.rise_succ"]}
+{"name": "Becoming.Optimum.Next.rise_stays", "uses": ["Becoming.Optimum.Next.rise_at_top"]}
+{"name": "Becoming.Optimum.Next.rise_succ", "uses": []}
+{"name": "Becoming.Optimum.Next.rise_within", "uses": ["Becoming.Optimum.Next.rise_succ"]}
+{"name": "Becoming.Optimum.Next.stays_empty", "uses": []}
+{"name": "Becoming.Optimum.Next.weighted_add_left", "uses": ["Becoming.Naturals.add_sub_of_le"]}
+{"name": "Becoming.Optimum.Next.weighted_le_of_gains", "uses": ["Becoming.Optimum.Next.drawable_le_of_gains", "Becoming.Optimum.Next.weighted_add_left", "Becoming.Optimum.Next.weighted_of_ends"]}
+{"name": "Becoming.Optimum.Next.weighted_lt_of_gains", "uses": ["Becoming.Optimum.Next.drawable_le_of_gains", "Becoming.Optimum.Next.drawable_lt_of_gains", "Becoming.Optimum.Next.weighted_add_left", "Becoming.Optimum.Next.weighted_of_ends", "Becoming.le_dest"]}
+{"name": "Becoming.Optimum.Next.weighted_of_ends", "uses": ["Becoming.Optimum.Next.weighted_add_left"]}
+{"name": "Becoming.Optimum.Renewing.alone_kept", "uses": ["Becoming.Optimum.Renewing.lost_iff"]}
+{"name": "Becoming.Optimum.Renewing.course_balances", "uses": ["Becoming.Naturals.add_sub_of_le", "Becoming.Optimum.Renewing.source_within"]}
+{"name": "Becoming.Optimum.Renewing.course_optimum", "uses": ["Becoming.Optimum.Renewing.course_balances", "Becoming.Optimum.Renewing.course_within", "Becoming.Optimum.Renewing.le_draw", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.Renewing.course_reoptimizes", "uses": ["Becoming.Optimum.Renewing.course_optimum"]}
+{"name": "Becoming.Optimum.Renewing.course_within", "uses": ["Becoming.Optimum.Renewing.draw_le"]}
+{"name": "Becoming.Optimum.Renewing.draw_le", "uses": ["Becoming.Optimum.sub_sub_of_le"]}
+{"name": "Becoming.Optimum.Renewing.draws_source", "uses": []}
+{"name": "Becoming.Optimum.Renewing.first_optimum", "uses": ["Becoming.Optimum.Renewing.joint_course_balances", "Becoming.Optimum.Renewing.joint_course_within", "Becoming.Optimum.Renewing.le_takeOne", "Becoming.Optimum.alone_self", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.Renewing.joint_course_balances", "uses": ["Becoming.Optimum.Renewing.joint_split"]}
+{"name": "Becoming.Optimum.Renewing.joint_course_best", "uses": ["Becoming.Optimum.Renewing.first_optimum", "Becoming.Optimum.Renewing.joint_course_within", "Becoming.Optimum.Renewing.second_optimum"]}
+{"name": "Becoming.Optimum.Renewing.joint_course_lost", "uses": ["Becoming.Optimum.Renewing.joint_course_balances", "Becoming.Optimum.Renewing.joint_course_best", "Becoming.Optimum.Renewing.joint_restGiven", "Becoming.Optimum.Renewing.renewal_le", "Becoming.Optimum.TwoTakers.lists", "Becoming.Optimum.TwoTakers.members_distinct", "Becoming.Web.mutual_course_lost"]}
+{"name": "Becoming.Optimum.Renewing.joint_course_within", "uses": ["Becoming.Optimum.Renewing.takeOne_le_one"]}
+{"name": "Becoming.Optimum.Renewing.joint_restGiven", "uses": []}
+{"name": "Becoming.Optimum.Renewing.joint_split", "uses": ["Becoming.Naturals.sub_sub", "Becoming.Optimum.Renewing.takeOne_split"]}
+{"name": "Becoming.Optimum.Renewing.joint_store_bounded", "uses": ["Becoming.Optimum.Renewing.joint_store_eq_sum", "Becoming.Optimum.Renewing.renewal_le", "Becoming.Optimum.ended_drawn_le"]}
+{"name": "Becoming.Optimum.Renewing.joint_store_eq_sum", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.Optimum.Renewing.joint_split"]}
+{"name": "Becoming.Optimum.Renewing.keeping_holds_more", "uses": ["Becoming.Optimum.Renewing.renewed_at", "Becoming.Optimum.Renewing.renewed_below", "Becoming.Optimum.Renewing.store_eq_sum", "Becoming.Optimum.keeping_draws_more", "Becoming.Optimum.renews_of"]}
+{"name": "Becoming.Optimum.Renewing.le_draw", "uses": ["Becoming.Optimum.sub_sub_of_le", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.Optimum.Renewing.le_takeOne", "uses": ["Becoming.succ_sub_self"]}
+{"name": "Becoming.Optimum.Renewing.lost_iff", "uses": ["Becoming.DrawnBeyond.source_apart", "Becoming.Optimum.Drain.formations_distinct", "Becoming.Optimum.Drain.storeOrder_rising", "Becoming.Optimum.Drain.store_source_distinct", "Becoming.Optimum.Renewing.course_reoptimizes", "Becoming.Optimum.Renewing.draws_source", "Becoming.Optimum.Renewing.renewal_le", "Becoming.Optimum.Renewing.renewing_source", "Becoming.Optimum.Renewing.restGiven_source", "Becoming.Web.course_lost_iff"]}
+{"name": "Becoming.Optimum.Renewing.renewal_le", "uses": []}
+{"name": "Becoming.Optimum.Renewing.renewed_at", "uses": []}
+{"name": "Becoming.Optimum.Renewing.renewed_below", "uses": []}
+{"name": "Becoming.Optimum.Renewing.renewing_source", "uses": ["Becoming.Optimum.Renewing.renewed_at", "Becoming.Optimum.Renewing.restGiven_source"]}
+{"name": "Becoming.Optimum.Renewing.restGiven_source", "uses": []}
+{"name": "Becoming.Optimum.Renewing.restrained_course_balances", "uses": []}
+{"name": "Becoming.Optimum.Renewing.restrained_course_not_best", "uses": ["Becoming.Optimum.MutualBest.full", "Becoming.Optimum.Renewing.restrained_course_balances", "Becoming.Optimum.TwoTakers.lists", "Becoming.Optimum.TwoTakers.members_distinct"]}
+{"name": "Becoming.Optimum.Renewing.restraint_holds_more", "uses": ["Becoming.Optimum.Renewing.joint_store_bounded"]}
+{"name": "Becoming.Optimum.Renewing.second_optimum", "uses": ["Becoming.Naturals.le_sub_of_add_le", "Becoming.Optimum.Renewing.joint_course_balances", "Becoming.Optimum.Renewing.joint_course_within", "Becoming.Optimum.Renewing.le_takeOne", "Becoming.Optimum.Renewing.sub_takeOne", "Becoming.Optimum.alone_self", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.Renewing.source_beyond", "uses": ["Becoming.DrawnBeyond.source_apart", "Becoming.Optimum.Drain.formations_distinct", "Becoming.Optimum.Drain.storeOrder_rising", "Becoming.Optimum.Drain.store_source_distinct", "Becoming.Optimum.Renewing.course_reoptimizes", "Becoming.Optimum.course_beyond"]}
+{"name": "Becoming.Optimum.Renewing.source_within", "uses": []}
+{"name": "Becoming.Optimum.Renewing.store_bounded", "uses": ["Becoming.Optimum.Renewing.renewed_at", "Becoming.Optimum.Renewing.renewed_below", "Becoming.Optimum.Renewing.store_eq_sum", "Becoming.Optimum.ended_drawn_le", "Becoming.Optimum.renews_of"]}
+{"name": "Becoming.Optimum.Renewing.store_bounded_iff", "uses": ["Becoming.Optimum.Renewing.renewed_at", "Becoming.Optimum.Renewing.renewed_below", "Becoming.Optimum.Renewing.store_eq_sum", "Becoming.Optimum.drawn_bounded_iff"]}
+{"name": "Becoming.Optimum.Renewing.store_eq_sum", "uses": []}
+{"name": "Becoming.Optimum.Renewing.store_kept", "uses": ["Becoming.Optimum.Renewing.renewed_at", "Becoming.Optimum.Renewing.store_eq_sum", "Becoming.Optimum.kept_drawn"]}
+{"name": "Becoming.Optimum.Renewing.sub_takeOne", "uses": ["Becoming.succ_sub_self"]}
+{"name": "Becoming.Optimum.Renewing.takeOne_le_one", "uses": ["Becoming.succ_sub_self"]}
+{"name": "Becoming.Optimum.Renewing.takeOne_split", "uses": ["Becoming.Naturals.add_sub_of_le", "Becoming.Optimum.Renewing.sub_takeOne"]}
+{"name": "Becoming.Optimum.Renewing.unsupported_source", "uses": ["Becoming.Optimum.Renewing.renewed_below", "Becoming.Optimum.Renewing.restGiven_source"]}
+{"name": "Becoming.Optimum.Rising.mono", "uses": []}
+{"name": "Becoming.Optimum.Shared.room", "uses": ["Becoming.Optimum.transfer_exceeds"]}
+{"name": "Becoming.Optimum.TwoTakers.gives_at_most_one", "uses": ["Becoming.Optimum.alone_self"]}
+{"name": "Becoming.Optimum.TwoTakers.joint_balances", "uses": []}
+{"name": "Becoming.Optimum.TwoTakers.joint_best", "uses": ["Becoming.Optimum.TwoTakers.joint_optimum", "Becoming.Optimum.TwoTakers.joint_within"]}
+{"name": "Becoming.Optimum.TwoTakers.joint_drains", "uses": ["Becoming.Optimum.TwoTakers.joint_balances", "Becoming.Optimum.TwoTakers.joint_best", "Becoming.Optimum.TwoTakers.lists", "Becoming.Optimum.TwoTakers.members_distinct", "Becoming.Optimum.mutual_beyond"]}
+{"name": "Becoming.Optimum.TwoTakers.joint_optimum", "uses": ["Becoming.Optimum.TwoTakers.gives_at_most_one", "Becoming.Optimum.TwoTakers.joint_balances", "Becoming.Optimum.TwoTakers.joint_within"]}
+{"name": "Becoming.Optimum.TwoTakers.joint_within", "uses": []}
+{"name": "Becoming.Optimum.TwoTakers.lists", "uses": ["Becoming.DrawnBeyond.source_apart", "Becoming.Optimum.Drain.storeOrder_rising", "Becoming.Optimum.Drain.store_source_distinct"]}
+{"name": "Becoming.Optimum.TwoTakers.members_distinct", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Optimum.TwoTakers.restrained_balances", "uses": []}
+{"name": "Becoming.Optimum.TwoTakers.restrained_not_mutual", "uses": ["Becoming.Optimum.MutualBest.full", "Becoming.Optimum.TwoTakers.lists", "Becoming.Optimum.TwoTakers.members_distinct", "Becoming.Optimum.TwoTakers.restrained_balances"]}
+{"name": "Becoming.Optimum.TwoTakers.within_slack_jointly_below", "uses": []}
+{"name": "Becoming.Optimum.above_nothing", "uses": []}
+{"name": "Becoming.Optimum.add_steps", "uses": []}
+{"name": "Becoming.Optimum.alone_self", "uses": []}
+{"name": "Becoming.Optimum.beyond_of_ranked", "uses": ["Becoming.Flow.ActsWithin.given_eq", "Becoming.Flow.ActsWithin.part_taken_le", "Becoming.Flow.ActsWithin.taken_eq", "Becoming.Naturals.add_sub_cancel", "Becoming.Naturals.sub_sub", "Becoming.Optimum.Above.floor_or_full_of_ranked", "Becoming.Optimum.above_nothing", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.Optimum.continued_after", "uses": []}
+{"name": "Becoming.Optimum.continued_breaking_frontier", "uses": ["Becoming.Optimum.continued_drawn", "Becoming.Optimum.continued_open", "Becoming.Optimum.holdingTo_steps", "Becoming.Optimum.holding_most", "Becoming.Optimum.keeping_drawn_le", "Becoming.Optimum.keeps_or_below", "Becoming.Optimum.lt_of_forgone_below", "Becoming.Optimum.open_le_most"]}
+{"name": "Becoming.Optimum.continued_drawn", "uses": ["Becoming.Optimum.continued_le", "Becoming.Optimum.sum_eq_of_eq"]}
+{"name": "Becoming.Optimum.continued_ending_stepwise_frontier", "uses": ["Becoming.Optimum.continued_drawn", "Becoming.Optimum.continued_le", "Becoming.Optimum.continued_open", "Becoming.Optimum.holdingTo_met", "Becoming.Optimum.holdingTo_most", "Becoming.Optimum.holdingTo_steps", "Becoming.Optimum.keeping_drawn_le", "Becoming.Optimum.keeps_or_falls", "Becoming.Optimum.le_of_stepwise_end", "Becoming.Optimum.met_drawn_le", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.continued_holding_stepwise_frontier", "uses": ["Becoming.Optimum.continued_drawn", "Becoming.Optimum.continued_open", "Becoming.Optimum.holdingTo_steps", "Becoming.Optimum.holding_most", "Becoming.Optimum.keeping_drawn_le", "Becoming.Optimum.keeps_or_falls", "Becoming.Optimum.met_drawn_le", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.continued_keeping_frontier", "uses": ["Becoming.Optimum.continued_drawn", "Becoming.Optimum.continued_keeps", "Becoming.Optimum.continued_open", "Becoming.Optimum.holdingTo_keeps", "Becoming.Optimum.holdingTo_most", "Becoming.Optimum.holdingTo_steps", "Becoming.Optimum.keeping_drawn_le", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.continued_keeps", "uses": ["Becoming.Optimum.continued_le"]}
+{"name": "Becoming.Optimum.continued_kept_frontier", "uses": ["Becoming.Optimum.continued_drawn", "Becoming.Optimum.continued_keeping_frontier", "Becoming.Optimum.holdingTo_most", "Becoming.Optimum.keeps_or_below", "Becoming.Optimum.lt_of_forgone_beyond", "Becoming.Optimum.open_le_most"]}
+{"name": "Becoming.Optimum.continued_le", "uses": []}
+{"name": "Becoming.Optimum.continued_met_frontier", "uses": ["Becoming.Optimum.continued_drawn", "Becoming.Optimum.continued_keeping_frontier", "Becoming.Optimum.falls_met_le", "Becoming.Optimum.holdingTo_most", "Becoming.Optimum.keeps_or_falls"]}
+{"name": "Becoming.Optimum.continued_open", "uses": ["Becoming.Optimum.continued_after", "Becoming.Optimum.continued_le"]}
+{"name": "Becoming.Optimum.continued_stepwise_frontier", "uses": ["Becoming.Optimum.continued_drawn", "Becoming.Optimum.continued_keeping_frontier", "Becoming.Optimum.holdingTo_most", "Becoming.Optimum.keeps_or_falls", "Becoming.Optimum.lt_of_stepwise", "Becoming.Optimum.met_drawn_le"]}
+{"name": "Becoming.Optimum.countUpTo_all", "uses": []}
+{"name": "Becoming.Optimum.countUpTo_below", "uses": ["Becoming.Optimum.countUpTo_all", "Becoming.le_succ_cases"]}
+{"name": "Becoming.Optimum.countUpTo_le", "uses": ["Becoming.Optimum.counted_le_one"]}
+{"name": "Becoming.Optimum.countUpTo_lt", "uses": ["Becoming.Optimum.countUpTo_le", "Becoming.Optimum.counted_le_one"]}
+{"name": "Becoming.Optimum.counted_le_one", "uses": []}
+{"name": "Becoming.Optimum.counted_step", "uses": []}
+{"name": "Becoming.Optimum.course_beyond", "uses": ["Becoming.Naturals.sub_sub", "Becoming.Optimum.optimum_beyond"]}
+{"name": "Becoming.Optimum.drawnAt_le_of", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.Optimum.sub_le_sub_right_of_le"]}
+{"name": "Becoming.Optimum.drawn_add_left_le_most", "uses": ["Becoming.Optimum.drawn_add_shortfall_after"]}
+{"name": "Becoming.Optimum.drawn_add_shortfall", "uses": ["Becoming.Optimum.drawn_add_shortfall_up_to"]}
+{"name": "Becoming.Optimum.drawn_add_shortfall_after", "uses": ["Becoming.Optimum.drawn_add_shortfall_after_up_to"]}
+{"name": "Becoming.Optimum.drawn_add_shortfall_after_up_to", "uses": ["Becoming.Naturals.add_sub_of_le", "Becoming.Optimum.drawn_add_shortfall_up_to", "Becoming.Optimum.sum_succ_first"]}
+{"name": "Becoming.Optimum.drawn_add_shortfall_up_to", "uses": ["Becoming.Optimum.level_add_drawn_of_within", "Becoming.Optimum.sum_add_shortfall_up_to"]}
+{"name": "Becoming.Optimum.drawn_at_least", "uses": ["Becoming.Optimum.given_le_drawn", "Becoming.Optimum.level_le_start", "Becoming.Optimum.mul_le_sum"]}
+{"name": "Becoming.Optimum.drawn_bounded_iff", "uses": ["Becoming.Optimum.ended_drawn_le", "Becoming.Optimum.kept_drawn", "Becoming.Optimum.renews_of"]}
+{"name": "Becoming.Optimum.drawn_le_most", "uses": ["Becoming.Optimum.drawn_add_shortfall_after"]}
+{"name": "Becoming.Optimum.drawn_unbounded", "uses": ["Becoming.Optimum.drawn_at_least"]}
+{"name": "Becoming.Optimum.drawn_within", "uses": ["Becoming.Optimum.level_add_drawn", "Becoming.Optimum.sum_le_mul"]}
+{"name": "Becoming.Optimum.drops_of_not_keeps", "uses": ["Becoming.Optimum.keeps_or_drops"]}
+{"name": "Becoming.Optimum.ended_drawn_le", "uses": ["Becoming.Optimum.ends_within", "Becoming.Optimum.level_add_drawn", "Becoming.Optimum.sum_le_mul_until"]}
+{"name": "Becoming.Optimum.ends_within", "uses": ["Becoming.Amounts.falls_by_stretch", "Becoming.Naturals.add_sub_of_le", "Becoming.Naturals.le_sub_of_add_le", "Becoming.Optimum.falls_over", "Becoming.Optimum.never_rises", "Becoming.le_dest"]}
+{"name": "Becoming.Optimum.eq_of_add_eq_of_le", "uses": ["Becoming.Naturals.add_left_cancel", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.eq_zero_of_add", "uses": ["Becoming.Naturals.succ_ne_zero"]}
+{"name": "Becoming.Optimum.exhausting_frontier", "uses": ["Becoming.Optimum.Next.exhausting_frontier"]}
+{"name": "Becoming.Optimum.falls_met_le", "uses": ["Becoming.Optimum.countUpTo_le", "Becoming.Optimum.countUpTo_lt", "Becoming.Optimum.le_of_met_count", "Becoming.Optimum.met_count_drawn_le", "Becoming.Optimum.met_key_drop", "Becoming.Optimum.met_key_end", "Becoming.le_dest"]}
+{"name": "Becoming.Optimum.falls_over", "uses": ["Becoming.Naturals.add_sub_cancel", "Becoming.Naturals.sub_add_cancel", "Becoming.Naturals.sub_sub", "Becoming.Optimum.sub_le_sub_left_of_le", "Becoming.Optimum.sub_le_sub_right_of_le"]}
+{"name": "Becoming.Optimum.forgone_grows", "uses": []}
+{"name": "Becoming.Optimum.frontier_below_weighted", "uses": ["Becoming.Optimum.Next.frontier_below"]}
+{"name": "Becoming.Optimum.frontier_breaks_at_end", "uses": ["Becoming.Optimum.continued_drawn", "Becoming.Optimum.continued_le", "Becoming.Optimum.continued_open", "Becoming.Optimum.holdingTo_met", "Becoming.Optimum.holdingTo_most", "Becoming.Optimum.holdingTo_steps", "Becoming.Optimum.keeping_drawn_le"]}
+{"name": "Becoming.Optimum.frontier_breaks_below", "uses": ["Becoming.Optimum.continued_drawn", "Becoming.Optimum.continued_open", "Becoming.Optimum.holdingTo_most", "Becoming.Optimum.holdingTo_steps", "Becoming.Optimum.keeping_drawn_le", "Becoming.Optimum.lt_of_forgone_below"]}
+{"name": "Becoming.Optimum.frontier_breaks_valued", "uses": ["Becoming.Optimum.keeping_le_most", "Becoming.Optimum.lt_of_valued_below", "Becoming.Optimum.regrowing_valued", "Becoming.Optimum.valued_eq"]}
+{"name": "Becoming.Optimum.frontier_exhausts", "uses": ["Becoming.Optimum.Next.frontier_exhausts"]}
+{"name": "Becoming.Optimum.frontier_gains_of_most", "uses": ["Becoming.Optimum.Next.frontier_gains_of_most"]}
+{"name": "Becoming.Optimum.frontier_gains_weighted", "uses": ["Becoming.Optimum.frontier_gains_of_most", "Becoming.Optimum.gainsMost_of_greatest"]}
+{"name": "Becoming.Optimum.frontier_holds", "uses": ["Becoming.Optimum.holding_most", "Becoming.Optimum.holding_open", "Becoming.Optimum.most_iff", "Becoming.Optimum.open_le_most"]}
+{"name": "Becoming.Optimum.frontier_holds_left", "uses": ["Becoming.Optimum.keeping_left_most", "Becoming.Optimum.keeping_open", "Becoming.Optimum.most_left_iff", "Becoming.Optimum.open_left_le_most"]}
+{"name": "Becoming.Optimum.frontier_holds_valued", "uses": ["Becoming.Optimum.open_valued_le_most", "Becoming.Optimum.regrowing_valued", "Becoming.Optimum.valued_most_iff"]}
+{"name": "Becoming.Optimum.frontier_keeps", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.Optimum.continued_drawn", "Becoming.Optimum.continued_keeps", "Becoming.Optimum.continued_open", "Becoming.Optimum.drawn_add_shortfall_after_up_to", "Becoming.Optimum.holdingTo_keeps", "Becoming.Optimum.holdingTo_most", "Becoming.Optimum.holdingTo_steps", "Becoming.Optimum.sum_eq_zero_iff", "Becoming.le_of_sub_eq_zero"]}
+{"name": "Becoming.Optimum.frontier_keeps_above", "uses": ["Becoming.Optimum.continued_drawn", "Becoming.Optimum.continued_keeps", "Becoming.Optimum.continued_open", "Becoming.Optimum.holdingTo_keeps", "Becoming.Optimum.holdingTo_most", "Becoming.Optimum.holdingTo_steps", "Becoming.Optimum.lt_of_forgone_beyond", "Becoming.Optimum.open_le_most"]}
+{"name": "Becoming.Optimum.frontier_keeps_met", "uses": ["Becoming.Optimum.continued_drawn", "Becoming.Optimum.continued_keeps", "Becoming.Optimum.continued_open", "Becoming.Optimum.falls_met_le", "Becoming.Optimum.holdingTo_keeps", "Becoming.Optimum.holdingTo_most", "Becoming.Optimum.holdingTo_steps", "Becoming.Optimum.keeps_or_falls", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.frontier_keeps_stepwise", "uses": ["Becoming.Optimum.continued_drawn", "Becoming.Optimum.continued_keeps", "Becoming.Optimum.continued_open", "Becoming.Optimum.holdingTo_keeps", "Becoming.Optimum.holdingTo_most", "Becoming.Optimum.holdingTo_steps", "Becoming.Optimum.keeps_or_falls", "Becoming.Optimum.lt_of_stepwise", "Becoming.Optimum.met_drawn_le"]}
+{"name": "Becoming.Optimum.frontier_leaves", "uses": ["Becoming.Optimum.Next.frontier_leaves"]}
+{"name": "Becoming.Optimum.frontier_left_iff", "uses": ["Becoming.Optimum.frontier_holds_left", "Becoming.Optimum.most_left_iff", "Becoming.Optimum.open_left_le_most"]}
+{"name": "Becoming.Optimum.frontier_met_before_end", "uses": ["Becoming.Optimum.continued_drawn", "Becoming.Optimum.continued_le", "Becoming.Optimum.continued_open", "Becoming.Optimum.holdingTo_met", "Becoming.Optimum.holdingTo_most", "Becoming.Optimum.holdingTo_steps", "Becoming.Optimum.keeps_or_falls", "Becoming.Optimum.lt_of_stepwise_end", "Becoming.Optimum.met_drawn_le"]}
+{"name": "Becoming.Optimum.frontier_of_gainsMost", "uses": ["Becoming.Optimum.Next.frontier_of_gainsMost"]}
+{"name": "Becoming.Optimum.frontier_rebuilds", "uses": ["Becoming.Optimum.Next.frontier_rebuilds"]}
+{"name": "Becoming.Optimum.frontier_rebuilt", "uses": ["Becoming.Optimum.Next.frontier_rebuilt"]}
+{"name": "Becoming.Optimum.frontier_valued_iff", "uses": ["Becoming.Optimum.frontier_holds_valued", "Becoming.Optimum.open_valued_le_most", "Becoming.Optimum.valued_most_iff"]}
+{"name": "Becoming.Optimum.gainsMost_of_greatest", "uses": ["Becoming.Optimum.Next.gainsMost_of_greatest"]}
+{"name": "Becoming.Optimum.gated_stays_below", "uses": []}
+{"name": "Becoming.Optimum.given_le_drawn", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.Optimum.level_add_drawn"]}
+{"name": "Becoming.Optimum.holdingTo_after", "uses": []}
+{"name": "Becoming.Optimum.holdingTo_before", "uses": []}
+{"name": "Becoming.Optimum.holdingTo_ge", "uses": ["Becoming.Optimum.holdingTo_after", "Becoming.Optimum.holdingTo_before"]}
+{"name": "Becoming.Optimum.holdingTo_keeps", "uses": ["Becoming.Optimum.holdingTo_after", "Becoming.Optimum.holdingTo_before"]}
+{"name": "Becoming.Optimum.holdingTo_met", "uses": ["Becoming.Optimum.holdingTo_before"]}
+{"name": "Becoming.Optimum.holdingTo_most", "uses": ["Becoming.Optimum.drawn_add_shortfall_after_up_to", "Becoming.Optimum.holdingTo_after", "Becoming.Optimum.holdingTo_before", "Becoming.Optimum.holdingTo_within", "Becoming.Optimum.sum_eq_zero_iff"]}
+{"name": "Becoming.Optimum.holdingTo_open", "uses": ["Becoming.Optimum.drawnAt_le_of", "Becoming.Optimum.holdingTo_after", "Becoming.Optimum.holdingTo_steps", "Becoming.Optimum.holdingTo_within"]}
+{"name": "Becoming.Optimum.holdingTo_same", "uses": ["Becoming.Optimum.holdingTo_after", "Becoming.Optimum.holdingTo_before"]}
+{"name": "Becoming.Optimum.holdingTo_steps", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.Optimum.holdingTo_steps_of"]}
+{"name": "Becoming.Optimum.holdingTo_steps_of", "uses": ["Becoming.Optimum.drawnAt_le_of", "Becoming.Optimum.holdingTo_after", "Becoming.Optimum.holdingTo_before"]}
+{"name": "Becoming.Optimum.holdingTo_within", "uses": ["Becoming.Optimum.holdingTo_after", "Becoming.Optimum.holdingTo_before", "Becoming.Optimum.holdingTo_ge"]}
+{"name": "Becoming.Optimum.holding_after", "uses": ["Becoming.Optimum.holdingTo_after"]}
+{"name": "Becoming.Optimum.holding_before", "uses": ["Becoming.Optimum.holdingTo_before"]}
+{"name": "Becoming.Optimum.holding_frontier", "uses": ["Becoming.Optimum.holding_most", "Becoming.Optimum.holding_open", "Becoming.Optimum.open_le_most"]}
+{"name": "Becoming.Optimum.holding_frontier_left", "uses": ["Becoming.Optimum.holding_after", "Becoming.Optimum.holding_most", "Becoming.Optimum.holding_open", "Becoming.Optimum.open_left_le_most"]}
+{"name": "Becoming.Optimum.holding_gains", "uses": ["Becoming.Optimum.holding_before"]}
+{"name": "Becoming.Optimum.holding_most", "uses": ["Becoming.Optimum.holding_after", "Becoming.Optimum.holding_before", "Becoming.Optimum.holding_within", "Becoming.Optimum.most_iff"]}
+{"name": "Becoming.Optimum.holding_open", "uses": ["Becoming.Optimum.holdingTo_open"]}
+{"name": "Becoming.Optimum.holding_open_at", "uses": ["Becoming.Optimum.Next.holding_open"]}
+{"name": "Becoming.Optimum.holding_within", "uses": ["Becoming.Optimum.holdingTo_within"]}
+{"name": "Becoming.Optimum.keeping_drawn_le", "uses": ["Becoming.Optimum.keeping_le_most"]}
+{"name": "Becoming.Optimum.keeping_draws_more", "uses": ["Becoming.Optimum.ended_drawn_le", "Becoming.Optimum.kept_drawn"]}
+{"name": "Becoming.Optimum.keeping_frontier_left", "uses": ["Becoming.Optimum.keeping_left_most", "Becoming.Optimum.keeping_open", "Becoming.Optimum.open_left_le_most"]}
+{"name": "Becoming.Optimum.keeping_le_most", "uses": ["Becoming.Optimum.drawn_add_shortfall_after_up_to"]}
+{"name": "Becoming.Optimum.keeping_left_most", "uses": ["Becoming.Optimum.holdingTo_same", "Becoming.Optimum.holdingTo_within", "Becoming.Optimum.most_left_iff"]}
+{"name": "Becoming.Optimum.keeping_not_frontier", "uses": ["Becoming.Optimum.frontier_holds", "Becoming.Optimum.holdingTo_after"]}
+{"name": "Becoming.Optimum.keeping_open", "uses": ["Becoming.Optimum.drawnAt_le_of", "Becoming.Optimum.holdingTo_same", "Becoming.Optimum.holdingTo_within"]}
+{"name": "Becoming.Optimum.keeps_or_below", "uses": ["Becoming.Optimum.keeps_or_drops"]}
+{"name": "Becoming.Optimum.keeps_or_drops", "uses": ["Becoming.Optimum.keeps_or_falls"]}
+{"name": "Becoming.Optimum.keeps_or_falls", "uses": ["Becoming.le_succ_cases"]}
+{"name": "Becoming.Optimum.kept_at_need", "uses": ["Becoming.Naturals.add_sub_cancel", "Becoming.Optimum.sub_le_sub_left_of_le"]}
+{"name": "Becoming.Optimum.kept_drawn", "uses": ["Becoming.Optimum.kept_at_need", "Becoming.Optimum.sub_sub_of_le"]}
+{"name": "Becoming.Optimum.kept_iff_within", "uses": ["Becoming.Optimum.ends_within", "Becoming.Optimum.kept_at_need"]}
+{"name": "Becoming.Optimum.last_before", "uses": []}
+{"name": "Becoming.Optimum.le_iff_of_add_eq", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.le_of_met_count", "uses": ["Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.le_of_stepwise_end", "uses": ["Becoming.Optimum.stepwise_arith_le", "Becoming.le_dest", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.le_sub_add_of_le", "uses": ["Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.Optimum.least_iff", "uses": []}
+{"name": "Becoming.Optimum.least_of_room", "uses": ["Becoming.Optimum.least_iff"]}
+{"name": "Becoming.Optimum.least_of_shared", "uses": ["Becoming.Optimum.Shared.room", "Becoming.Optimum.least_of_room"]}
+{"name": "Becoming.Optimum.level_add_drawn", "uses": ["Becoming.Optimum.level_add_drawn_of_within"]}
+{"name": "Becoming.Optimum.level_add_drawn_of_within", "uses": ["Becoming.Amounts.whole_sum", "Becoming.Naturals.add_sub_of_le", "Becoming.balance_over_stretch"]}
+{"name": "Becoming.Optimum.level_le_start", "uses": ["Becoming.Optimum.never_rises"]}
+{"name": "Becoming.Optimum.level_stays_below", "uses": ["Becoming.Optimum.never_rises"]}
+{"name": "Becoming.Optimum.lt_of_forgone_below", "uses": []}
+{"name": "Becoming.Optimum.lt_of_forgone_beyond", "uses": []}
+{"name": "Becoming.Optimum.lt_of_stepwise", "uses": ["Becoming.Optimum.stepwise_arith", "Becoming.le_dest"]}
+{"name": "Becoming.Optimum.lt_of_stepwise_end", "uses": ["Becoming.Optimum.stepwise_arith_lt", "Becoming.le_dest"]}
+{"name": "Becoming.Optimum.lt_of_valued_below", "uses": []}
+{"name": "Becoming.Optimum.member_below", "uses": ["Becoming.exists_lt_of_total_lt"]}
+{"name": "Becoming.Optimum.metCount_of_met", "uses": ["Becoming.Optimum.countUpTo_all"]}
+{"name": "Becoming.Optimum.met_count_drawn_le", "uses": ["Becoming.Optimum.drawn_add_shortfall_after", "Becoming.Optimum.shortfall_count_ge"]}
+{"name": "Becoming.Optimum.met_drawn_le", "uses": ["Becoming.Optimum.drawn_add_shortfall_after", "Becoming.Optimum.shortfall_ge"]}
+{"name": "Becoming.Optimum.met_key_drop", "uses": ["Becoming.Optimum.mul_le_of_rate"]}
+{"name": "Becoming.Optimum.met_key_end", "uses": ["Becoming.Optimum.mul_le_of_rate"]}
+{"name": "Becoming.Optimum.most_iff", "uses": ["Becoming.Naturals.add_left_cancel", "Becoming.Optimum.drawn_add_shortfall_after", "Becoming.Optimum.eq_zero_of_add", "Becoming.Optimum.sum_eq_zero_iff", "Becoming.le_of_sub_eq_zero"]}
+{"name": "Becoming.Optimum.most_left_iff", "uses": ["Becoming.Naturals.add_left_cancel", "Becoming.Optimum.drawn_add_shortfall_after", "Becoming.Optimum.sum_eq_zero_iff", "Becoming.le_of_sub_eq_zero"]}
+{"name": "Becoming.Optimum.mul_le_of_rate", "uses": []}
+{"name": "Becoming.Optimum.mul_le_sum", "uses": []}
+{"name": "Becoming.Optimum.mul_left_cancel_of_pos", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.Optimum.mutual_as_one", "uses": ["Becoming.Optimum.mutual_beyond", "Becoming.Optimum.optimum_beyond"]}
+{"name": "Becoming.Optimum.mutual_beyond", "uses": ["Becoming.Naturals.add_sub_cancel", "Becoming.Naturals.sub_sub", "Becoming.Optimum.MutualBest.full", "Becoming.Optimum.alone_self", "Becoming.sub_eq_zero_of_le", "Becoming.total_congr_on", "Becoming.total_le", "Becoming.total_split", "Becoming.total_zero"]}
+{"name": "Becoming.Optimum.mutual_course_beyond", "uses": ["Becoming.Naturals.sub_sub", "Becoming.Optimum.mutual_beyond"]}
+{"name": "Becoming.Optimum.mutual_lowers_iff", "uses": ["Becoming.Optimum.mutual_beyond", "Becoming.sub_lt_self_iff"]}
+{"name": "Becoming.Optimum.never_rises", "uses": ["Becoming.Naturals.add_sub_cancel", "Becoming.Optimum.sub_le_sub_left_of_le"]}
+{"name": "Becoming.Optimum.open_le_most", "uses": ["Becoming.Optimum.drawn_le_most"]}
+{"name": "Becoming.Optimum.open_left_le_most", "uses": ["Becoming.Optimum.drawn_add_left_le_most"]}
+{"name": "Becoming.Optimum.open_valued_le_most", "uses": ["Becoming.Optimum.open_left_le_most", "Becoming.Optimum.valued_eq"]}
+{"name": "Becoming.Optimum.optima_lack_iff", "uses": []}
+{"name": "Becoming.Optimum.optima_lack_iff_bounded", "uses": ["Becoming.Optimum.optima_lack_of_bound"]}
+{"name": "Becoming.Optimum.optima_lack_of_bound", "uses": ["Becoming.Optimum.least_of_room"]}
+{"name": "Becoming.Optimum.optimum_beyond", "uses": ["Becoming.Optimum.beyond_of_ranked", "Becoming.Optimum.transfer_exceeds"]}
+{"name": "Becoming.Optimum.optimum_lowers_iff", "uses": ["Becoming.Optimum.optimum_beyond", "Becoming.sub_lt_self_iff"]}
+{"name": "Becoming.Optimum.optimum_untouched", "uses": ["Becoming.Flow.capacity_eq_zero", "Becoming.Optimum.optimum_beyond"]}
+{"name": "Becoming.Optimum.outweighed_stepwise", "uses": []}
+{"name": "Becoming.Optimum.rebuilding_frontier", "uses": ["Becoming.Optimum.Next.rebuilding_frontier"]}
+{"name": "Becoming.Optimum.regrowing_frontier", "uses": ["Becoming.Optimum.open_valued_le_most", "Becoming.Optimum.regrowing_valued"]}
+{"name": "Becoming.Optimum.regrowing_valued", "uses": ["Becoming.Optimum.continued_le", "Becoming.Optimum.continued_open", "Becoming.Optimum.holdingTo_after", "Becoming.Optimum.holdingTo_before", "Becoming.Optimum.holdingTo_steps_of", "Becoming.Optimum.most_left_iff", "Becoming.Optimum.valued_of_most"]}
+{"name": "Becoming.Optimum.renews_of", "uses": []}
+{"name": "Becoming.Optimum.reread_deadline_iff", "uses": ["Becoming.Naturals.add_sub_cancel", "Becoming.Naturals.add_sub_of_le", "Becoming.Naturals.le_sub_of_add_le", "Becoming.Naturals.sub_add_cancel", "Becoming.Naturals.sub_sub", "Becoming.Optimum.never_rises", "Becoming.le_of_add_le_add_right", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.Optimum.reread_kept_iff", "uses": ["Becoming.Optimum.never_rises", "Becoming.le_dest"]}
+{"name": "Becoming.Optimum.rise_stays", "uses": ["Becoming.Optimum.Next.rise_stays"]}
+{"name": "Becoming.Optimum.rising_optimum_iff", "uses": []}
+{"name": "Becoming.Optimum.rising_total", "uses": ["Becoming.Optimum.Exceeds.total_lt"]}
+{"name": "Becoming.Optimum.shortfall_count_ge", "uses": ["Becoming.Optimum.counted_step", "Becoming.Optimum.le_sub_add_of_le"]}
+{"name": "Becoming.Optimum.shortfall_ge", "uses": ["Becoming.Optimum.countUpTo_below", "Becoming.Optimum.shortfall_count_ge"]}
+{"name": "Becoming.Optimum.stepwise_arith", "uses": []}
+{"name": "Becoming.Optimum.stepwise_arith_le", "uses": []}
+{"name": "Becoming.Optimum.stepwise_arith_lt", "uses": ["Becoming.Optimum.stepwise_arith_le"]}
+{"name": "Becoming.Optimum.sub_le_sub_left_of_le", "uses": ["Becoming.Naturals.sub_sub", "Becoming.le_dest"]}
+{"name": "Becoming.Optimum.sub_le_sub_right_of_le", "uses": []}
+{"name": "Becoming.Optimum.sub_sub_of_le", "uses": ["Becoming.Naturals.add_sub_cancel", "Becoming.Naturals.add_sub_of_le"]}
+{"name": "Becoming.Optimum.sum_add_shortfall", "uses": ["Becoming.Naturals.add_sub_of_le"]}
+{"name": "Becoming.Optimum.sum_add_shortfall_up_to", "uses": ["Becoming.Optimum.sum_add_shortfall", "Becoming.Optimum.sum_eq_of_eq"]}
+{"name": "Becoming.Optimum.sum_eq_of_eq", "uses": []}
+{"name": "Becoming.Optimum.sum_eq_zero_iff", "uses": ["Becoming.Optimum.eq_zero_of_add"]}
+{"name": "Becoming.Optimum.sum_le_mul", "uses": []}
+{"name": "Becoming.Optimum.sum_le_mul_until", "uses": ["Becoming.Optimum.sum_le_mul"]}
+{"name": "Becoming.Optimum.sum_succ_first", "uses": []}
+{"name": "Becoming.Optimum.transfer_above", "uses": ["Becoming.Naturals.le_sub_of_add_le"]}
+{"name": "Becoming.Optimum.transfer_exceeds", "uses": []}
+{"name": "Becoming.Optimum.valued_eq", "uses": []}
+{"name": "Becoming.Optimum.valued_most_iff", "uses": ["Becoming.Optimum.eq_of_add_eq_of_le", "Becoming.Optimum.most_left_iff", "Becoming.Optimum.mul_left_cancel_of_pos", "Becoming.Optimum.open_left_le_most", "Becoming.Optimum.valued_eq", "Becoming.Optimum.valued_of_most", "Becoming.SupportGated.sub_pos_of_lt"]}
+{"name": "Becoming.Optimum.valued_of_most", "uses": ["Becoming.Optimum.valued_eq"]}
+{"name": "Becoming.Optimum.weighted_frontier", "uses": ["Becoming.Optimum.frontier_of_gainsMost", "Becoming.Optimum.gainsMost_of_greatest"]}
+{"name": "Becoming.Optimum.weighted_holding_frontier", "uses": ["Becoming.Optimum.holding_after", "Becoming.Optimum.holding_gains", "Becoming.Optimum.holding_open_at", "Becoming.Optimum.weighted_frontier"]}
+{"name": "Becoming.Web.Next.frontier_broken", "uses": ["Becoming.Optimum.Next.frontier_below"]}
+{"name": "Becoming.Web.Next.frontier_ends_drawn_first", "uses": ["Becoming.Optimum.Next.frontier_ends_drawn_first"]}
+{"name": "Becoming.Web.Next.frontier_ends_drawn_more", "uses": ["Becoming.Optimum.Next.frontier_ends_drawn_more"]}
+{"name": "Becoming.Web.Next.frontier_exhausts", "uses": ["Becoming.Optimum.Next.frontier_exhausts"]}
+{"name": "Becoming.Web.Next.frontier_leaves", "uses": ["Becoming.Optimum.Next.frontier_leaves"]}
+{"name": "Becoming.Web.Next.frontier_rebuilds", "uses": ["Becoming.Optimum.Next.frontier_rebuilds"]}
+{"name": "Becoming.Web.at_once_beyond", "uses": ["Becoming.Optimum.AtOnce.drain_most", "Becoming.Web.at_once_broken"]}
+{"name": "Becoming.Web.at_once_broken", "uses": ["Becoming.Optimum.AtOnce.drains", "Becoming.Optimum.AtOnce.levels_drained"]}
+{"name": "Becoming.Web.course_drawn_unbounded", "uses": ["Becoming.Optimum.course_beyond", "Becoming.Optimum.drawn_at_least", "Becoming.Optimum.drawn_unbounded", "Becoming.Web.lost_over"]}
+{"name": "Becoming.Web.course_drawn_within", "uses": ["Becoming.Optimum.course_beyond", "Becoming.Optimum.drawn_within"]}
+{"name": "Becoming.Web.course_ended_drawn", "uses": ["Becoming.Optimum.course_beyond", "Becoming.Optimum.ended_drawn_le"]}
+{"name": "Becoming.Web.course_kept_iff", "uses": ["Becoming.Optimum.course_beyond", "Becoming.Optimum.kept_iff_within"]}
+{"name": "Becoming.Web.course_lost_iff", "uses": ["Becoming.Optimum.course_beyond", "Becoming.Web.lost_iff"]}
+{"name": "Becoming.Web.drain_perfect_broken", "uses": ["Becoming.Optimum.AtOnce.drain_perfect_iff", "Becoming.Optimum.AtOnce.levels_drained"]}
+{"name": "Becoming.Web.drain_position_broken", "uses": ["Becoming.Optimum.InTurn.zero_position_perfect", "Becoming.Web.position_broken"]}
+{"name": "Becoming.Web.drained_broken", "uses": ["Becoming.Optimum.InTurn.levels_through"]}
+{"name": "Becoming.Web.frontier_breaks_at_end", "uses": ["Becoming.Optimum.drops_of_not_keeps", "Becoming.Optimum.frontier_breaks_at_end"]}
+{"name": "Becoming.Web.frontier_breaks_below", "uses": ["Becoming.Optimum.drops_of_not_keeps", "Becoming.Optimum.frontier_breaks_below"]}
+{"name": "Becoming.Web.frontier_breaks_last", "uses": ["Becoming.Web.frontier_breaks_at_end", "Becoming.Web.frontier_met_before_end"]}
+{"name": "Becoming.Web.frontier_breaks_long", "uses": ["Becoming.Optimum.forgone_grows", "Becoming.Web.frontier_breaks_below"]}
+{"name": "Becoming.Web.frontier_breaks_stepwise_long", "uses": ["Becoming.Optimum.outweighed_stepwise", "Becoming.Web.frontier_breaks_below"]}
+{"name": "Becoming.Web.frontier_breaks_valued", "uses": ["Becoming.Optimum.drops_of_not_keeps", "Becoming.Optimum.frontier_breaks_valued"]}
+{"name": "Becoming.Web.frontier_broken", "uses": ["Becoming.Optimum.frontier_holds"]}
+{"name": "Becoming.Web.frontier_broken_left", "uses": ["Becoming.Optimum.frontier_holds_left"]}
+{"name": "Becoming.Web.frontier_broken_weighted", "uses": ["Becoming.Optimum.frontier_below_weighted"]}
+{"name": "Becoming.Web.frontier_exhausts", "uses": ["Becoming.Optimum.frontier_exhausts"]}
+{"name": "Becoming.Web.frontier_keeps", "uses": ["Becoming.Optimum.frontier_keeps"]}
+{"name": "Becoming.Web.frontier_keeps_above", "uses": ["Becoming.Optimum.frontier_keeps_above"]}
+{"name": "Becoming.Web.frontier_keeps_stepwise", "uses": ["Becoming.Optimum.frontier_keeps_stepwise"]}
+{"name": "Becoming.Web.frontier_kept", "uses": ["Becoming.Optimum.frontier_holds"]}
+{"name": "Becoming.Web.frontier_kept_left", "uses": ["Becoming.Optimum.frontier_holds_left"]}
+{"name": "Becoming.Web.frontier_leaves", "uses": ["Becoming.Optimum.frontier_leaves"]}
+{"name": "Becoming.Web.frontier_met_before_end", "uses": ["Becoming.Optimum.frontier_met_before_end"]}
+{"name": "Becoming.Web.frontier_met_kept", "uses": ["Becoming.Optimum.frontier_keeps_met"]}
+{"name": "Becoming.Web.frontier_rebuilds", "uses": ["Becoming.Optimum.frontier_rebuilds"]}
+{"name": "Becoming.Web.frontier_rebuilt_valued", "uses": ["Becoming.Optimum.frontier_holds_valued"]}
+{"name": "Becoming.Web.lost_iff", "uses": ["Becoming.Optimum.kept_at_need", "Becoming.Web.lost_over"]}
+{"name": "Becoming.Web.lost_over", "uses": ["Becoming.Optimum.ends_within", "Becoming.Optimum.last_before", "Becoming.Optimum.level_stays_below", "Becoming.le_dest"]}
+{"name": "Becoming.Web.mutual_broken_iff_capacity", "uses": ["Becoming.Optimum.mutual_beyond"]}
+{"name": "Becoming.Web.mutual_course_lost", "uses": ["Becoming.Optimum.mutual_course_beyond", "Becoming.Web.lost_over"]}
+{"name": "Becoming.Web.optimum_broken_iff", "uses": ["Becoming.Optimum.least_of_room"]}
+{"name": "Becoming.Web.optimum_broken_iff_capacity", "uses": ["Becoming.Optimum.optimum_beyond"]}
+{"name": "Becoming.Web.optimum_ends_beyond", "uses": ["Becoming.Web.optimum_broken_iff"]}
+{"name": "Becoming.Web.position_broken", "uses": ["Becoming.Optimum.InTurn.position_levels"]}
+{"name": "Becoming.Web.whole_drain_broken", "uses": ["Becoming.Optimum.AtOnce.drain_perfect_iff", "Becoming.Optimum.AtOnce.whole_perfect_iff", "Becoming.Web.drain_perfect_broken"]}
+{"name": "Becoming.sub_lt_self_iff", "uses": ["Becoming.Naturals.succ_sub_succ"]}
+{"name": "Becoming.total_raise_at", "uses": ["Becoming.mem_cons_cases", "Becoming.total_congr_on"]}
+{"name": "Becoming.total_split", "uses": ["Becoming.total_add", "Becoming.total_congr"]}

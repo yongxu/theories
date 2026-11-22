@@ -1,0 +1,27 @@
+{"name": "Becoming.RevisionRoutes.Example.both_at_loss_ten", "uses": ["Becoming.RevisionRoutes.revised_maximal_iff"]}
+{"name": "Becoming.RevisionRoutes.Example.restored_every", "uses": ["Becoming.RevisionRoutes.every_value_loss_iff"]}
+{"name": "Becoming.RevisionRoutes.Example.twoRoutes_complying_above", "uses": []}
+{"name": "Becoming.RevisionRoutes.Example.twoRoutes_open_not_above", "uses": []}
+{"name": "Becoming.RevisionRoutes.Example.twoRoutes_valid", "uses": []}
+{"name": "Becoming.RevisionRoutes.GainLoss.above_asymm", "uses": []}
+{"name": "Becoming.RevisionRoutes.GainLoss.above_irrefl", "uses": []}
+{"name": "Becoming.RevisionRoutes.GainLoss.maximal_iff", "uses": []}
+{"name": "Becoming.RevisionRoutes.above_asymm", "uses": ["Becoming.RevisionRoutes.GainLoss.above_asymm"]}
+{"name": "Becoming.RevisionRoutes.above_at_some_value", "uses": ["Becoming.RevisionRoutes.above_of_value_exceeds"]}
+{"name": "Becoming.RevisionRoutes.above_irrefl", "uses": ["Becoming.RevisionRoutes.GainLoss.above_irrefl"]}
+{"name": "Becoming.RevisionRoutes.above_needs", "uses": ["Becoming.Naturals.lt_of_mul_lt_mul_right", "Becoming.RevisionRoutes.pos_of_mul_lt_mul"]}
+{"name": "Becoming.RevisionRoutes.above_of_more_value", "uses": []}
+{"name": "Becoming.RevisionRoutes.above_of_value_exceeds", "uses": []}
+{"name": "Becoming.RevisionRoutes.eq_zero_of_mul_eq_zero", "uses": []}
+{"name": "Becoming.RevisionRoutes.every_loss_iff", "uses": ["Becoming.RevisionRoutes.revised_maximal_iff"]}
+{"name": "Becoming.RevisionRoutes.every_loss_iff_kept", "uses": ["Becoming.RevisionRoutes.every_loss_iff"]}
+{"name": "Becoming.RevisionRoutes.every_value_iff", "uses": ["Becoming.RevisionRoutes.above_of_value_exceeds", "Becoming.RevisionRoutes.revised_maximal_iff"]}
+{"name": "Becoming.RevisionRoutes.every_value_loss_iff", "uses": ["Becoming.RevisionRoutes.every_value_iff", "Becoming.RevisionRoutes.revised_maximal_iff"]}
+{"name": "Becoming.RevisionRoutes.every_value_loss_iff_of_route", "uses": ["Becoming.RevisionRoutes.eq_zero_of_mul_eq_zero", "Becoming.RevisionRoutes.every_value_loss_iff"]}
+{"name": "Becoming.RevisionRoutes.maximal_of_certain", "uses": ["Becoming.RevisionRoutes.maximal_of_kept_le"]}
+{"name": "Becoming.RevisionRoutes.maximal_of_kept_le", "uses": ["Becoming.RevisionRoutes.revised_maximal_iff"]}
+{"name": "Becoming.RevisionRoutes.maximal_of_more_restored", "uses": ["Becoming.RevisionRoutes.revised_maximal_iff"]}
+{"name": "Becoming.RevisionRoutes.maximal_of_no_value", "uses": ["Becoming.RevisionRoutes.revised_maximal_iff"]}
+{"name": "Becoming.RevisionRoutes.pos_of_mul_lt_mul", "uses": []}
+{"name": "Becoming.RevisionRoutes.revised_maximal_iff", "uses": ["Becoming.RevisionRoutes.above_irrefl"]}
+{"name": "Becoming.RevisionRoutes.route_above_iff", "uses": []}

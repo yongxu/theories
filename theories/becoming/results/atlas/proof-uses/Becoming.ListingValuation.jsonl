@@ -1,0 +1,136 @@
+{"name": "Becoming.ListingValuation.Informing.informing_lowers", "uses": []}
+{"name": "Becoming.ListingValuation.OneListing.refined_lowers", "uses": []}
+{"name": "Becoming.ListingValuation.Revaluing.revaluing_best", "uses": []}
+{"name": "Becoming.ListingValuation.TwoWorlds.answersBefore_congr", "uses": []}
+{"name": "Becoming.ListingValuation.TwoWorlds.answers_alike", "uses": ["Becoming.ListingValuation.TwoWorlds.routes_rest"]}
+{"name": "Becoming.ListingValuation.TwoWorlds.changedBefore_of_constant", "uses": []}
+{"name": "Becoming.ListingValuation.TwoWorlds.changedBefore_succ_of_true", "uses": []}
+{"name": "Becoming.ListingValuation.TwoWorlds.changed_apart", "uses": ["Becoming.ListingValuation.TwoWorlds.changedBefore_of_constant", "Becoming.ListingValuation.TwoWorlds.presented_changed", "Becoming.ListingValuation.TwoWorlds.shown_keeps_agree"]}
+{"name": "Becoming.ListingValuation.TwoWorlds.lumped_with_start", "uses": ["Becoming.ListingValuation.TwoWorlds.starts_apart"]}
+{"name": "Becoming.ListingValuation.TwoWorlds.not_lumped", "uses": ["Becoming.ListingValuation.TwoWorlds.changed_apart", "Becoming.ListingValuation.TwoWorlds.routes_alike"]}
+{"name": "Becoming.ListingValuation.TwoWorlds.orderEnd_rests", "uses": []}
+{"name": "Becoming.ListingValuation.TwoWorlds.orders_apart", "uses": ["Becoming.ListingValuation.TwoWorlds.orders_rest"]}
+{"name": "Becoming.ListingValuation.TwoWorlds.orders_rest", "uses": ["Becoming.ListingValuation.TwoWorlds.orderEnd_rests"]}
+{"name": "Becoming.ListingValuation.TwoWorlds.presented_changed", "uses": ["Becoming.ListingValuation.TwoWorlds.changedBefore_succ_of_true"]}
+{"name": "Becoming.ListingValuation.TwoWorlds.presented_course", "uses": []}
+{"name": "Becoming.ListingValuation.TwoWorlds.presented_removes_residual", "uses": []}
+{"name": "Becoming.ListingValuation.TwoWorlds.presented_turns", "uses": []}
+{"name": "Becoming.ListingValuation.TwoWorlds.reached_rests", "uses": []}
+{"name": "Becoming.ListingValuation.TwoWorlds.route_answers", "uses": ["Becoming.ListingValuation.TwoWorlds.routes_rest"]}
+{"name": "Becoming.ListingValuation.TwoWorlds.routes_alike", "uses": ["Becoming.ListingValuation.TwoWorlds.answersBefore_congr", "Becoming.ListingValuation.TwoWorlds.answers_alike", "Becoming.ListingValuation.TwoWorlds.routes_rest"]}
+{"name": "Becoming.ListingValuation.TwoWorlds.routes_rest", "uses": ["Becoming.ListingValuation.TwoWorlds.reached_rests"]}
+{"name": "Becoming.ListingValuation.TwoWorlds.shown_course", "uses": []}
+{"name": "Becoming.ListingValuation.TwoWorlds.shown_keeps_agree", "uses": ["Becoming.ListingValuation.TwoWorlds.routes_rest"]}
+{"name": "Becoming.ListingValuation.TwoWorlds.shown_removes_least", "uses": []}
+{"name": "Becoming.ListingValuation.TwoWorlds.shown_turns", "uses": []}
+{"name": "Becoming.ListingValuation.TwoWorlds.starts_apart", "uses": []}
+{"name": "Becoming.ListingValuation.WeightsApart.not_splitsKeep", "uses": []}
+{"name": "Becoming.ListingValuation.WeightsApart.weights_matter", "uses": []}
+{"name": "Becoming.ListingValuation.WeightsApart.weights_split", "uses": []}
+{"name": "Becoming.ListingValuation.active_answer", "uses": []}
+{"name": "Becoming.ListingValuation.active_step", "uses": []}
+{"name": "Becoming.ListingValuation.add_lt_iff_sub_add_lt", "uses": ["Becoming.Naturals.add_lt_add_left_iff", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.ListingValuation.after_le_iff_shortfall", "uses": ["Becoming.HeldForReading.across_le_iff", "Becoming.HeldForReading.after_add_shortfall"]}
+{"name": "Becoming.ListingValuation.after_lt_iff_shortfall", "uses": ["Becoming.HeldForReading.across_lt_iff", "Becoming.HeldForReading.after_add_shortfall"]}
+{"name": "Becoming.ListingValuation.after_rule_total", "uses": ["Becoming.HeldForReading.held_term", "Becoming.total_congr"]}
+{"name": "Becoming.ListingValuation.answer_constant", "uses": ["Becoming.ListingValuation.const_worth", "Becoming.ListingValuation.inputs_alike"]}
+{"name": "Becoming.ListingValuation.answer_false_iff", "uses": []}
+{"name": "Becoming.ListingValuation.answer_least_of_net", "uses": ["Becoming.ListingValuation.answer_least_of_scaled"]}
+{"name": "Becoming.ListingValuation.answer_least_of_scaled", "uses": ["Becoming.HeldForReading.across_le_iff", "Becoming.HeldForReading.across_lt_iff", "Becoming.ListingValuation.answer_residual_zero_iff", "Becoming.ListingValuation.within_add", "Becoming.ListingValuation.within_congr_weighted", "Becoming.ListingValuation.within_mul", "Becoming.ListingValuation.within_turn"]}
+{"name": "Becoming.ListingValuation.answer_residual_zero_iff", "uses": ["Becoming.ListingValuation.residual_zero_iff"]}
+{"name": "Becoming.ListingValuation.answer_shortfall_least", "uses": ["Becoming.ListingValuation.answer_least_of_net", "Becoming.ListingValuation.shortfall_split"]}
+{"name": "Becoming.ListingValuation.answer_shown", "uses": ["Becoming.ListingValuation.within_shown"]}
+{"name": "Becoming.ListingValuation.answer_true_iff", "uses": []}
+{"name": "Becoming.ListingValuation.cell_refined_le", "uses": ["Becoming.ListTests.and_left", "Becoming.ListTests.and_right", "Becoming.ListTests.cond_zero_le", "Becoming.ListTests.false_of_not", "Becoming.ListTests.false_of_not_true", "Becoming.ListingValuation.answer_false_iff", "Becoming.ListingValuation.answer_true_iff", "Becoming.ListingValuation.split_cell_le", "Becoming.ListingValuation.total_lt_of_mem", "Becoming.ListingValuation.weightedOn_by_cells", "Becoming.ListingValuation.within_rule_split", "Becoming.ListingValuation.within_split", "Becoming.total_eq_zero", "Becoming.total_le"]}
+{"name": "Becoming.ListingValuation.coarser_not_above", "uses": ["Becoming.ListingValuation.forgone_least_iff", "Becoming.ListingValuation.least_falls"]}
+{"name": "Becoming.ListingValuation.cond_split_least", "uses": ["Becoming.add_sub_of_le", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.ListingValuation.cond_sub_eq_zero_iff", "uses": ["Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.ListingValuation.cond_sub_pos_iff", "uses": ["Becoming.ListingValuation.lt_of_sub_pos_core", "Becoming.SupportGated.sub_pos_of_lt"]}
+{"name": "Becoming.ListingValuation.const_below_iff", "uses": ["Becoming.ListingValuation.const_worth", "Becoming.lt_iff_pos"]}
+{"name": "Becoming.ListingValuation.const_worth", "uses": ["Becoming.total_congr_on"]}
+{"name": "Becoming.ListingValuation.either_both", "uses": []}
+{"name": "Becoming.ListingValuation.either_mem", "uses": []}
+{"name": "Becoming.ListingValuation.either_neither", "uses": []}
+{"name": "Becoming.ListingValuation.either_which", "uses": []}
+{"name": "Becoming.ListingValuation.external_step", "uses": []}
+{"name": "Becoming.ListingValuation.forgone_least_iff", "uses": ["Becoming.ListingValuation.answer_least_of_net", "Becoming.ListingValuation.forgone_through_lt_iff"]}
+{"name": "Becoming.ListingValuation.forgone_lt_iff", "uses": ["Becoming.HeldForReading.excess_held", "Becoming.HeldForReading.held_above_held_iff", "Becoming.RevisionPlans.above_iff", "Becoming.RevisionPlans.splits_held"]}
+{"name": "Becoming.ListingValuation.forgone_through_lt_iff", "uses": ["Becoming.ListingValuation.forgone_lt_iff", "Becoming.ListingValuation.shortfall_split"]}
+{"name": "Becoming.ListingValuation.goExcessWithin_eq", "uses": []}
+{"name": "Becoming.ListingValuation.informed_answer_le", "uses": ["Becoming.ListingValuation.answer_least_of_net", "Becoming.ListingValuation.informed_le"]}
+{"name": "Becoming.ListingValuation.informed_le", "uses": ["Becoming.HeldForReading.finer_least_le", "Becoming.ListingValuation.after_le_iff_shortfall", "Becoming.ListingValuation.shortfall_congr_on", "Becoming.ListingValuation.shortfall_split"]}
+{"name": "Becoming.ListingValuation.informed_le_add_residual", "uses": ["Becoming.HeldForReading.after_add_shortfall", "Becoming.HeldForReading.finer_least_le", "Becoming.ListingValuation.shortfall_congr_on", "Becoming.ListingValuation.shortfall_split", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.ListingValuation.informed_lt_iff", "uses": ["Becoming.ListingValuation.after_lt_iff_shortfall", "Becoming.ListingValuation.least_falls", "Becoming.ListingValuation.shortfall_split"]}
+{"name": "Becoming.ListingValuation.input_eq_of_ne_demonstrate", "uses": []}
+{"name": "Becoming.ListingValuation.input_eq_of_reveal_eq", "uses": []}
+{"name": "Becoming.ListingValuation.inputs_alike", "uses": ["Becoming.ListingValuation.input_eq_of_reveal_eq", "Becoming.ListingValuation.inputs_alike_before"]}
+{"name": "Becoming.ListingValuation.inputs_alike_before", "uses": ["Becoming.Blanket.congr3", "Becoming.ListingValuation.world_fixed"]}
+{"name": "Becoming.ListingValuation.internal_step", "uses": []}
+{"name": "Becoming.ListingValuation.ite_cond_split", "uses": []}
+{"name": "Becoming.ListingValuation.ite_mul_add", "uses": []}
+{"name": "Becoming.ListingValuation.ite_mul_left", "uses": ["Becoming.mul_turn"]}
+{"name": "Becoming.ListingValuation.ite_split_rule", "uses": []}
+{"name": "Becoming.ListingValuation.least_falls", "uses": ["Becoming.HeldForReading.finer_least_le", "Becoming.ListingValuation.shortfall_congr_on"]}
+{"name": "Becoming.ListingValuation.lt_of_sub_pos_core", "uses": ["Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.ListingValuation.no_order_across", "uses": []}
+{"name": "Becoming.ListingValuation.offExcessWithin_eq", "uses": []}
+{"name": "Becoming.ListingValuation.one_cell_worth", "uses": ["Becoming.ListingValuation.const_worth"]}
+{"name": "Becoming.ListingValuation.outcome_least", "uses": ["Becoming.ListingValuation.answer_least_of_net"]}
+{"name": "Becoming.ListingValuation.own_least", "uses": ["Becoming.HeldForReading.least_through", "Becoming.ListingValuation.after_le_iff_shortfall", "Becoming.ListingValuation.answer_shortfall_least"]}
+{"name": "Becoming.ListingValuation.presented_forgone_lt_iff", "uses": ["Becoming.ListingValuation.revalued_forgone_lt_iff"]}
+{"name": "Becoming.ListingValuation.refined_le_of_splitsKeep", "uses": ["Becoming.HeldForReading.total_by_cells", "Becoming.ListingValuation.after_rule_total", "Becoming.ListingValuation.cell_refined_le", "Becoming.ListingValuation.total_cond_by_cells", "Becoming.total_le"]}
+{"name": "Becoming.ListingValuation.refined_lt_iff", "uses": ["Becoming.ListingValuation.add_lt_iff_sub_add_lt", "Becoming.ListingValuation.forgone_through_lt_iff", "Becoming.ListingValuation.least_falls"]}
+{"name": "Becoming.ListingValuation.refining_never_lowers_iff", "uses": ["Becoming.ListingValuation.refined_le_of_splitsKeep", "Becoming.ListingValuation.splitsKeep_of_refined_le"]}
+{"name": "Becoming.ListingValuation.release_keeps", "uses": ["Becoming.ListingValuation.splitsKeep_of_off_le_go"]}
+{"name": "Becoming.ListingValuation.residual_pos_iff", "uses": ["Becoming.ListingValuation.cond_sub_pos_iff", "Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.ListingValuation.residual_pos_of_gains", "uses": ["Becoming.HeldForReading.least_through", "Becoming.ListingValuation.after_lt_iff_shortfall", "Becoming.ListingValuation.shortfall_split"]}
+{"name": "Becoming.ListingValuation.residual_zero_iff", "uses": ["Becoming.ListingValuation.cond_sub_eq_zero_iff", "Becoming.le_total_of_mem", "Becoming.total_eq_zero"]}
+{"name": "Becoming.ListingValuation.revalued_forgone_lt_iff", "uses": ["Becoming.ListingValuation.forgone_through_lt_iff", "Becoming.Naturals.add_lt_add_left_iff"]}
+{"name": "Becoming.ListingValuation.revalued_lowers_iff", "uses": ["Becoming.ListingValuation.after_lt_iff_shortfall", "Becoming.ListingValuation.answer_shortfall_least", "Becoming.ListingValuation.residual_pos_iff", "Becoming.ListingValuation.shortfall_split", "Becoming.lt_iff_pos"]}
+{"name": "Becoming.ListingValuation.revalued_split", "uses": ["Becoming.ListingValuation.shortfall_split"]}
+{"name": "Becoming.ListingValuation.revaluing_gain", "uses": ["Becoming.HeldForReading.after_add_shortfall", "Becoming.ListingValuation.answer_shortfall_least", "Becoming.ListingValuation.shortfall_split", "Becoming.add_right_cancel"]}
+{"name": "Becoming.ListingValuation.revaluing_gains_iff", "uses": ["Becoming.ListingValuation.after_lt_iff_shortfall", "Becoming.ListingValuation.answer_shortfall_least", "Becoming.ListingValuation.residual_pos_of_gains", "Becoming.ListingValuation.shortfall_split"]}
+{"name": "Becoming.ListingValuation.scales_by_candidate", "uses": []}
+{"name": "Becoming.ListingValuation.sensory_step", "uses": []}
+{"name": "Becoming.ListingValuation.shortfall_congr_on", "uses": ["Becoming.total_congr_on"]}
+{"name": "Becoming.ListingValuation.shortfall_split", "uses": ["Becoming.HeldForReading.shortfall_through", "Becoming.ListingValuation.cond_split_least", "Becoming.total_add", "Becoming.total_congr"]}
+{"name": "Becoming.ListingValuation.shown_least_le", "uses": ["Becoming.HeldForReading.finer_least_le"]}
+{"name": "Becoming.ListingValuation.shown_never_lowers", "uses": ["Becoming.ListingValuation.answer_shown", "Becoming.ListingValuation.informed_answer_le", "Becoming.total_congr_on"]}
+{"name": "Becoming.ListingValuation.shown_split", "uses": ["Becoming.ListingValuation.answer_shown", "Becoming.ListingValuation.shortfall_congr_on", "Becoming.ListingValuation.shortfall_split"]}
+{"name": "Becoming.ListingValuation.split_cell_le", "uses": []}
+{"name": "Becoming.ListingValuation.split_released_term", "uses": []}
+{"name": "Becoming.ListingValuation.split_stopped_term", "uses": []}
+{"name": "Becoming.ListingValuation.splitsKeep_of_net", "uses": ["Becoming.ListingValuation.informed_answer_le", "Becoming.ListingValuation.splitsKeep_of_refined_le"]}
+{"name": "Becoming.ListingValuation.splitsKeep_of_off_le_go", "uses": ["Becoming.ListTests.cond_zero_le", "Becoming.total_le"]}
+{"name": "Becoming.ListingValuation.splitsKeep_of_refined_le", "uses": ["Becoming.HeldForReading.across_le_iff", "Becoming.ListingValuation.either_both", "Becoming.ListingValuation.either_mem", "Becoming.ListingValuation.either_neither", "Becoming.ListingValuation.either_which", "Becoming.ListingValuation.which_first", "Becoming.ListingValuation.which_mem", "Becoming.ListingValuation.which_second", "Becoming.ListingValuation.worth_split_released", "Becoming.ListingValuation.worth_split_stopped", "Becoming.total_add", "Becoming.total_congr"]}
+{"name": "Becoming.ListingValuation.through_sensed", "uses": ["Becoming.Blanket.Blanketed.agent_through_sensory"]}
+{"name": "Becoming.ListingValuation.timing", "uses": ["Becoming.ListingValuation.world_fixed"]}
+{"name": "Becoming.ListingValuation.told_residual_zero_iff", "uses": ["Becoming.ListingValuation.answer_residual_zero_iff", "Becoming.ListingValuation.unweighted_released", "Becoming.ListingValuation.weighed_stops_iff", "Becoming.ListingValuation.weightOf_pos_iff", "Becoming.ListingValuation.within_id", "Becoming.SupportGated.sub_pos_of_lt", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.ListingValuation.told_shortfall_zero_iff", "uses": ["Becoming.ListingValuation.answer_false_iff", "Becoming.ListingValuation.answer_true_iff", "Becoming.ListingValuation.unweighted_released", "Becoming.ListingValuation.weighed_stops_iff", "Becoming.SupportGated.sub_pos_of_lt", "Becoming.le_total_of_mem", "Becoming.sub_eq_zero_of_le", "Becoming.total_eq_zero"]}
+{"name": "Becoming.ListingValuation.total_cond_by_cells", "uses": ["Becoming.HeldForReading.cell_term", "Becoming.HeldForReading.total_by_cells", "Becoming.HeldForReading.total_cond_both", "Becoming.total_congr"]}
+{"name": "Becoming.ListingValuation.total_filter_shows", "uses": ["Becoming.Narrowing.filter_cons_false", "Becoming.Narrowing.filter_cons_true"]}
+{"name": "Becoming.ListingValuation.total_lt_of_mem", "uses": ["Becoming.total_le"]}
+{"name": "Becoming.ListingValuation.undemonstrated_alike", "uses": ["Becoming.ListingValuation.input_eq_of_ne_demonstrate", "Becoming.ListingValuation.inputs_alike_before"]}
+{"name": "Becoming.ListingValuation.undemonstrated_worth", "uses": ["Becoming.ListingValuation.const_worth", "Becoming.ListingValuation.undemonstrated_alike"]}
+{"name": "Becoming.ListingValuation.unweighted_cell", "uses": ["Becoming.total_eq_zero"]}
+{"name": "Becoming.ListingValuation.unweighted_released", "uses": ["Becoming.ListingValuation.within_id"]}
+{"name": "Becoming.ListingValuation.unweighted_told", "uses": []}
+{"name": "Becoming.ListingValuation.updates_commute", "uses": []}
+{"name": "Becoming.ListingValuation.weighed_stops_iff", "uses": ["Becoming.HeldForReading.across_lt_iff", "Becoming.ListingValuation.weightOf_pos_iff", "Becoming.ListingValuation.within_id"]}
+{"name": "Becoming.ListingValuation.weightOf_pos_iff", "uses": ["Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.ListingValuation.weightedOn_by_cells", "uses": ["Becoming.ListingValuation.total_cond_by_cells", "Becoming.total_congr", "Becoming.total_congr_on", "Becoming.total_eq_zero"]}
+{"name": "Becoming.ListingValuation.which_first", "uses": []}
+{"name": "Becoming.ListingValuation.which_mem", "uses": []}
+{"name": "Becoming.ListingValuation.which_second", "uses": []}
+{"name": "Becoming.ListingValuation.within_add", "uses": ["Becoming.ListingValuation.ite_mul_add", "Becoming.total_add", "Becoming.total_congr"]}
+{"name": "Becoming.ListingValuation.within_congr_weighted", "uses": ["Becoming.total_congr_on"]}
+{"name": "Becoming.ListingValuation.within_id", "uses": ["Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.ListingValuation.within_mul", "uses": ["Becoming.ListingValuation.ite_mul_left", "Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.ListingValuation.within_one_cell", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.ListingValuation.within_rule_split", "uses": ["Becoming.ListingValuation.ite_cond_split", "Becoming.total_add", "Becoming.total_congr"]}
+{"name": "Becoming.ListingValuation.within_shown", "uses": ["Becoming.ListingValuation.total_filter_shows", "Becoming.ListingValuation.within_one_cell"]}
+{"name": "Becoming.ListingValuation.within_split", "uses": ["Becoming.ListingValuation.ite_split_rule", "Becoming.total_add", "Becoming.total_congr"]}
+{"name": "Becoming.ListingValuation.within_turn", "uses": ["Becoming.ListingValuation.within_add", "Becoming.ListingValuation.within_congr_weighted", "Becoming.add_sub_turn"]}
+{"name": "Becoming.ListingValuation.world_fixed", "uses": []}
+{"name": "Becoming.ListingValuation.worth_split_released", "uses": ["Becoming.ListingValuation.after_rule_total", "Becoming.ListingValuation.split_released_term", "Becoming.total_add", "Becoming.total_congr"]}
+{"name": "Becoming.ListingValuation.worth_split_stopped", "uses": ["Becoming.ListingValuation.after_rule_total", "Becoming.ListingValuation.split_stopped_term", "Becoming.total_add", "Becoming.total_congr"]}

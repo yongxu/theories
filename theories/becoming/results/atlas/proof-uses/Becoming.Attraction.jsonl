@@ -1,0 +1,61 @@
+{"name": "Becoming.Branching.iter_iff_reachable", "uses": ["Becoming.Branching.pred_mono", "Becoming.Iteration.iter_iff_stages", "Becoming.ListTests.length_append", "Generative.trace_append_iff", "Generative.trace_singleton_iff"]}
+{"name": "Becoming.Branching.pred_mono", "uses": []}
+{"name": "Becoming.Branching.reachable_iff_all", "uses": ["Becoming.Branching.iter_iff_reachable", "Becoming.Branching.pred_mono", "Becoming.Iteration.iter_iff_all"]}
+{"name": "Becoming.Exit.keeps", "uses": []}
+{"name": "Becoming.Exit.leaves", "uses": []}
+{"name": "Becoming.Exit.leaving_takes", "uses": ["Becoming.Run.leaving_needs"]}
+{"name": "Becoming.Exit.locked_in", "uses": ["Becoming.Exit.keeps", "Becoming.Run.stays"]}
+{"name": "Becoming.Exit.not_invariant", "uses": ["Becoming.Exit.leaves", "Becoming.invariant_iff_every_move"]}
+{"name": "Becoming.Invariant.locks_out", "uses": ["Becoming.Invariant.reach"]}
+{"name": "Becoming.Law.Absorbing.orbit", "uses": []}
+{"name": "Becoming.Law.Drawn.not_keeps", "uses": ["Becoming.Law.Drawn.not_returns", "Becoming.Law.returns_iff_keeps"]}
+{"name": "Becoming.Law.Drawn.not_lossless", "uses": ["Becoming.Law.Drawn.not_returns", "Becoming.Law.Lossless.returns"]}
+{"name": "Becoming.Law.Drawn.not_returns", "uses": ["Becoming.Law.drawn_iff_drawnIn", "Becoming.Law.next_fixed", "Becoming.Law.returns_iff_reaches", "Becoming.«定后则返者不入»"]}
+{"name": "Becoming.Law.DrawnInto.never_back", "uses": ["Becoming.Law.Absorbing.orbit"]}
+{"name": "Becoming.Law.Lossless.not_drawn", "uses": ["Becoming.Law.Drawn.not_lossless"]}
+{"name": "Becoming.Law.Meet.later", "uses": ["Becoming.Law.orbit_add"]}
+{"name": "Becoming.Law.Meet.reaches_returning", "uses": ["Becoming.Law.Meet.later", "Becoming.Law.orbit_mul", "Becoming.Law.returns_iff"]}
+{"name": "Becoming.Law.Meet.refl", "uses": []}
+{"name": "Becoming.Law.Meet.symm", "uses": []}
+{"name": "Becoming.Law.Meet.trans", "uses": ["Becoming.Law.Meet.later", "Becoming.le_dest"]}
+{"name": "Becoming.Law.Merges.draws", "uses": ["Becoming.Law.merge_draws", "Becoming.Law.merges_iff"]}
+{"name": "Becoming.Law.Merges.not_both_return", "uses": ["Becoming.Law.orbit_add", "Becoming.Law.orbit_mul", "Becoming.Law.orbit_shift", "Becoming.Law.periods_meet", "Becoming.Law.returns_iff"]}
+{"name": "Becoming.Law.absorbing_ahead", "uses": []}
+{"name": "Becoming.Law.absorbing_iff_closed", "uses": []}
+{"name": "Becoming.Law.absorbing_iff_invariant", "uses": []}
+{"name": "Becoming.Law.basin_one_cycle", "uses": ["Becoming.Law.Meet.reaches_returning", "Becoming.Law.Meet.symm", "Becoming.Law.Meet.trans", "Becoming.Law.enters_returning"]}
+{"name": "Becoming.Law.drawnInto_ahead", "uses": ["Becoming.Law.returns_iff_ahead"]}
+{"name": "Becoming.Law.drawnInto_returning", "uses": ["Becoming.Law.enters_returning"]}
+{"name": "Becoming.Law.drawn_iff_drawnIn", "uses": ["Becoming.Law.absorbing_iff_closed", "Becoming.Law.reaches_iff_orbit"]}
+{"name": "Becoming.Law.drawn_iff_lost", "uses": ["Becoming.Branching.Returns.reachable", "Becoming.Law.Drawn.not_returns", "Becoming.Law.drawn_iff_not_returns", "Becoming.Law.returns_iff_always_reachable"]}
+{"name": "Becoming.Law.drawn_iff_not_reachable_count", "uses": ["Becoming.Branching.reachable_iff_all", "Becoming.Law.drawn_iff_lost"]}
+{"name": "Becoming.Law.drawn_iff_not_returns", "uses": ["Becoming.Law.drawn_iff_drawnIn", "Becoming.Law.next_fixed", "Becoming.Law.next_total", "Becoming.Law.returns_iff_reaches", "Becoming.«定后有后则入当且仅当不返»"]}
+{"name": "Becoming.Law.drawn_of_lost", "uses": ["Becoming.Law.lost_drawn", "Becoming.Law.reachable_absorbing"]}
+{"name": "Becoming.Law.enters_returning", "uses": ["Becoming.Law.enters_returning_within"]}
+{"name": "Becoming.Law.enters_returning_within", "uses": ["Becoming.Law.orbit_add", "Becoming.Law.returns_iff", "Becoming.gap_of_lt", "Becoming.revisits_within"]}
+{"name": "Becoming.Law.lossless_iff_none_drawn", "uses": ["Becoming.Law.Lossless.not_drawn", "Becoming.Law.none_drawn_lossless"]}
+{"name": "Becoming.Law.lost_drawn", "uses": ["Becoming.Law.reachable_orbit"]}
+{"name": "Becoming.Law.merge_draws", "uses": ["Becoming.Law.Merges.not_both_return", "Becoming.Law.drawn_iff_not_returns"]}
+{"name": "Becoming.Law.none_drawn_lossless", "uses": ["Becoming.Law.lossless_iff", "Becoming.Law.none_drawn_merges_nothing"]}
+{"name": "Becoming.Law.none_drawn_merges_nothing", "uses": ["Becoming.Law.merge_draws"]}
+{"name": "Becoming.Law.periods_meet", "uses": []}
+{"name": "Becoming.Law.pred_drawn_keeps", "uses": ["Becoming.Law.drawn_iff_not_returns", "Becoming.Law.orbit_shift", "Becoming.Law.pred_open", "Becoming.Law.pred_orbit_zero", "Becoming.Law.returns_iff"]}
+{"name": "Becoming.Law.pred_orbit_zero", "uses": []}
+{"name": "Becoming.Law.reachable_absorbing", "uses": ["Becoming.Law.orbit_shift", "Becoming.Law.reachable_iff"]}
+{"name": "Becoming.Law.reachable_orbit", "uses": ["Becoming.Law.reachable_iff"]}
+{"name": "Becoming.Law.returning_absorbing", "uses": ["Becoming.Law.orbit_shift", "Becoming.Law.returns_iff"]}
+{"name": "Becoming.Law.returns_iff_ahead", "uses": ["Becoming.Law.Returns.undo", "Becoming.Law.orbit_shift", "Becoming.Law.returns_iff"]}
+{"name": "Becoming.Law.returns_iff_always_reachable", "uses": ["Becoming.Branching.Returns.reachable", "Becoming.Law.returns_of_reachable"]}
+{"name": "Becoming.Law.returns_iff_reachable_count", "uses": ["Becoming.Branching.reachable_iff_all", "Becoming.Law.returns_iff_always_reachable"]}
+{"name": "Becoming.Law.succ_drawn_lossless", "uses": ["Becoming.Law.drawn_iff_not_returns", "Becoming.Law.succ_open"]}
+{"name": "Becoming.Ratchet.absorbing", "uses": []}
+{"name": "Becoming.Ratchet.false_drawn", "uses": []}
+{"name": "Becoming.Ratchet.false_lost", "uses": ["Becoming.Law.reachable_iff"]}
+{"name": "Becoming.Ratchet.false_never_returns", "uses": ["Becoming.Law.Drawn.not_returns", "Becoming.Ratchet.absorbing", "Becoming.Ratchet.false_drawn"]}
+{"name": "Becoming.Ratchet.merges", "uses": ["Becoming.Law.merges_iff"]}
+{"name": "Becoming.Ratchet.true_not_drawn", "uses": ["Becoming.Law.Drawn.not_returns", "Becoming.Ratchet.true_returns"]}
+{"name": "Becoming.Ratchet.true_returns", "uses": ["Becoming.Law.returns_iff"]}
+{"name": "Becoming.Run.leaving_needs", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Run.locked_in", "uses": ["Becoming.Invariant.reach", "Becoming.Run.reach"]}
+{"name": "Becoming.Run.stays", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.invariant_iff_every_move", "uses": []}

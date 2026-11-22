@@ -1,0 +1,51 @@
+{"name": "Becoming.Map.Endless.generates", "uses": ["Becoming.Map.step_irrefl"]}
+{"name": "Becoming.Map.Endless.generation", "uses": ["Becoming.Map.step_irrefl"]}
+{"name": "Becoming.Map.Endless.generation_in_pairs", "uses": ["Becoming.Map.half_rises_beyond", "Becoming.Map.step_reaches_of_le"]}
+{"name": "Becoming.Map.Short.ends", "uses": []}
+{"name": "Becoming.Map.Short.reaches_end", "uses": ["Becoming.Map.short_end"]}
+{"name": "Becoming.Map.Short.renews_and_ends", "uses": ["Becoming.Map.Short.reaches_end"]}
+{"name": "Becoming.Map.Short.renews_and_ends_everywhere", "uses": ["Becoming.Map.Short.ends"]}
+{"name": "Becoming.Map.StepWhere.end_decides", "uses": ["Becoming.Map.StepWhere.has_next_iff"]}
+{"name": "Becoming.Map.StepWhere.ends", "uses": []}
+{"name": "Becoming.Map.StepWhere.has_next_iff", "uses": []}
+{"name": "Becoming.Map.Still.keeping", "uses": []}
+{"name": "Becoming.Map.Still.keeps", "uses": []}
+{"name": "Becoming.Map.fork_chain_begins", "uses": ["Becoming.Map.step_irrefl"]}
+{"name": "Becoming.Map.half_rises_beyond", "uses": []}
+{"name": "Becoming.Map.short_end", "uses": []}
+{"name": "Becoming.Map.step_irrefl", "uses": []}
+{"name": "Becoming.Map.step_reached_le", "uses": []}
+{"name": "Becoming.Map.step_reaches", "uses": ["Becoming.«所及之传递»"]}
+{"name": "Becoming.Map.step_reaches_of_le", "uses": ["Becoming.«所及之传递»"]}
+{"name": "Becoming.Map.«生守相杂»", "uses": ["Becoming.Map.fork_chain_begins"]}
+{"name": "Becoming.«不穷则延»", "uses": ["Becoming.«相续之续»"]}
+{"name": "Becoming.«不穷有终之定当且仅当排中»", "uses": []}
+{"name": "Becoming.«传则异»", "uses": []}
+{"name": "Becoming.«全三域之周»", "uses": []}
+{"name": "Becoming.«全三域之定当且仅当排中»", "uses": ["Becoming.«全三域之周»"]}
+{"name": "Becoming.«全守有终不并»", "uses": []}
+{"name": "Becoming.«全生成之所及亦全生成»", "uses": ["Becoming.«所及之传递»"]}
+{"name": "Becoming.«全生成全守不并»", "uses": []}
+{"name": "Becoming.«全生成有终不并»", "uses": []}
+{"name": "Becoming.«单行则族含所及»", "uses": []}
+{"name": "Becoming.«单行则生守不并»", "uses": ["Becoming.«单行则族含所及»"]}
+{"name": "Becoming.«守则延»", "uses": []}
+{"name": "Becoming.«守退化不并»", "uses": ["Becoming.«守则延»", "Becoming.«延尽不并»"]}
+{"name": "Becoming.«尽».brecOn", "uses": []}
+{"name": "Becoming.«尽则有终当且仅当排中»", "uses": ["Becoming.Map.StepWhere.end_decides", "Becoming.Map.StepWhere.ends", "Becoming.«尽而续可定则有终»"]}
+{"name": "Becoming.«尽则非不穷»", "uses": ["Becoming.«不穷则延»", "Becoming.«延尽不并»"]}
+{"name": "Becoming.«尽则非无终»", "uses": ["Becoming.«所及之传递»"]}
+{"name": "Becoming.«尽而续可定则有终»", "uses": ["Becoming.«所及之传递»"]}
+{"name": "Becoming.«延尽不并»", "uses": []}
+{"name": "Becoming.«延尽之定当且仅当排中»", "uses": ["Becoming.«延尽不并»"]}
+{"name": "Becoming.«息即尽»", "uses": []}
+{"name": "Becoming.«所及之传递»", "uses": ["Becoming.«及之传递»"]}
+{"name": "Becoming.«有常则无终»", "uses": ["Becoming.«有常则相续不尽»", "Becoming.«有常则续不尽»"]}
+{"name": "Becoming.«有终之所前亦有终»", "uses": ["Becoming.«所及之传递»"]}
+{"name": "Becoming.«有终则粗不有常»", "uses": ["Becoming.«有常则无终»"]}
+{"name": "Becoming.«生成则延»", "uses": []}
+{"name": "Becoming.«生成退化不并»", "uses": ["Becoming.«延尽不并»", "Becoming.«生成则延»"]}
+{"name": "Becoming.«生生即延»", "uses": []}
+{"name": "Becoming.«相续之续»", "uses": ["Becoming.«及之传递»"]}
+{"name": "Becoming.«阶全生成则上无终»", "uses": ["Becoming.«全生成有终不并»"]}
+{"name": "Becoming.«阶生成则上不退化»", "uses": ["Becoming.«生成退化不并»"]}

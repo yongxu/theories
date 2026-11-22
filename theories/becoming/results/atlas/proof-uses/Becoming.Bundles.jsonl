@@ -1,0 +1,30 @@
+{"name": "Becoming.Activation.PastRelease.no_joint", "uses": ["Becoming.Activation.PastRelease.not_both", "Becoming.Activation.PastRelease.trace", "Becoming.Activation.joint_content_both"]}
+{"name": "Becoming.Activation.PastRelease.not_both", "uses": []}
+{"name": "Becoming.Activation.PastRelease.step", "uses": []}
+{"name": "Becoming.Activation.PastRelease.trace", "uses": ["Becoming.Activation.PastRelease.step", "Generative.Trace.brecOn"]}
+{"name": "Becoming.Activation.admissible_trace", "uses": []}
+{"name": "Becoming.Activation.joint_content_both", "uses": []}
+{"name": "Becoming.Activation.released_not_both", "uses": []}
+{"name": "Becoming.Activation.retainedLeft_only", "uses": []}
+{"name": "Becoming.Activation.retained_left_only", "uses": ["Becoming.Activation.admissible_trace", "Becoming.Activation.retainedLeft_only", "Becoming.Activation.together_all", "Becoming.Activation.together_retained", "Becoming.Activation.twoSteps_meaning"]}
+{"name": "Becoming.Activation.same_marginals_lose_bundle", "uses": ["Becoming.Activation.released_not_both", "Becoming.Activation.together_all", "Becoming.Activation.together_retained"]}
+{"name": "Becoming.Activation.together_all", "uses": []}
+{"name": "Becoming.Activation.together_retained", "uses": []}
+{"name": "Becoming.Activation.trace_admissible", "uses": ["Generative.trace_cons_iff", "Generative.trace_singleton_iff"]}
+{"name": "Becoming.Activation.twoSteps_meaning", "uses": []}
+{"name": "Becoming.CarriesProfiles.trans", "uses": []}
+{"name": "Becoming.Frame.lift_reflects", "uses": ["Becoming.Reach.lift"]}
+{"name": "Becoming.Frame.map_preserves", "uses": ["Becoming.Reach.map", "Becoming.preserves_of_transport"]}
+{"name": "Becoming.Regimes.extension", "uses": ["Becoming.Activation.same_marginals_lose_bundle", "Becoming.Regimes.released_carried", "Becoming.carries_iff_preserves"]}
+{"name": "Becoming.Regimes.joint_enrichment_classified", "uses": ["Becoming.Lexical.classified_of_fresh", "Becoming.Regimes.joint_enrichment_strict", "Becoming.Regimes.no_fresh_released"]}
+{"name": "Becoming.Regimes.joint_enrichment_strict", "uses": ["Becoming.Activation.same_marginals_lose_bundle", "Becoming.Regimes.extension"]}
+{"name": "Becoming.Regimes.joint_separates", "uses": ["Becoming.Regimes.marginals_agree"]}
+{"name": "Becoming.Regimes.marginals_agree", "uses": ["Becoming.Activation.same_marginals_lose_bundle"]}
+{"name": "Becoming.Regimes.no_comparison_through_marginals", "uses": ["Becoming.Comparison.separates", "Becoming.Regimes.extension", "Becoming.Regimes.marginals_agree"]}
+{"name": "Becoming.Regimes.no_fresh_released", "uses": ["Becoming.Activation.released_not_both"]}
+{"name": "Becoming.Regimes.possibility_not_realization", "uses": ["Becoming.Activation.retainedLeft_only", "Becoming.Regimes.marginals_agree"]}
+{"name": "Becoming.Regimes.released_carried", "uses": ["Becoming.Activation.together_all", "Becoming.Activation.together_retained"]}
+{"name": "Becoming.carries_iff_preserves", "uses": []}
+{"name": "Becoming.complement_closed_no_extension", "uses": ["Becoming.no_new_of_complement"]}
+{"name": "Becoming.no_new_of_complement", "uses": []}
+{"name": "Becoming.preserves_of_transport", "uses": ["Becoming.carries_iff_preserves"]}

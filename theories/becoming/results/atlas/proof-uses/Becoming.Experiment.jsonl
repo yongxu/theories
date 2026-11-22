@@ -1,0 +1,24 @@
+{"name": "Becoming.Confound.aligned_with_hidden", "uses": ["Becoming.Confound.hidden_two"]}
+{"name": "Becoming.Confound.confounded", "uses": ["Becoming.Confound.aligned_with_hidden"]}
+{"name": "Becoming.Confound.determined", "uses": []}
+{"name": "Becoming.Confound.hidden_two", "uses": ["Becoming.ListTests.not_not"]}
+{"name": "Becoming.Confound.misattributes", "uses": ["Becoming.Confound.move_idle", "Becoming.Run.fixesThrough_of_takes"]}
+{"name": "Becoming.Confound.moveDecides_determined", "uses": []}
+{"name": "Becoming.Confound.move_idle", "uses": []}
+{"name": "Becoming.Confound.varied_refutes", "uses": []}
+{"name": "Becoming.Run.fixesThrough_of_takes", "uses": []}
+{"name": "Becoming.Run.fixes_of_takes", "uses": []}
+{"name": "Becoming.Run.fixes_on_return", "uses": ["Becoming.Run.fixes_of_takes"]}
+{"name": "Becoming.Run.generalizes", "uses": ["Becoming.Run.stepsThrough_of_factors"]}
+{"name": "Becoming.Run.not_fixes_of_untaken", "uses": ["Becoming.Run.stepsOf_retarget", "Becoming.retarget_determined", "Becoming.retarget_step"]}
+{"name": "Becoming.Run.not_fixes_other_of_new", "uses": ["Becoming.Run.not_fixes_of_untaken", "Becoming.Run.ordered_of_ne"]}
+{"name": "Becoming.Run.ordered_of_ne", "uses": []}
+{"name": "Becoming.Run.projection_returns", "uses": ["Becoming.revisits_from"]}
+{"name": "Becoming.Run.stepsOf_retarget", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Run.stepsThrough_of_factors", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.keepHistory_determined", "uses": []}
+{"name": "Becoming.keepHistory_fixes_nothing_else", "uses": ["Becoming.Run.not_fixes_other_of_new", "Becoming.keepHistory_determined", "Becoming.keepHistory_new"]}
+{"name": "Becoming.keepHistory_length", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.keepHistory_new", "uses": ["Becoming.keepHistory_length"]}
+{"name": "Becoming.retarget_determined", "uses": []}
+{"name": "Becoming.retarget_step", "uses": []}

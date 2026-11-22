@@ -1,0 +1,188 @@
+{"name": "Becoming.Alike.alikeTo", "uses": ["Becoming.Iteration.postfixed_in_iter", "Becoming.alike_mono", "Becoming.iter_iff_alikeTo"]}
+{"name": "Becoming.Alike.decided", "uses": ["Becoming.Alike.alikeTo", "Becoming.AlikeTo.bisimulation", "Becoming.AlikeTo.decided", "Becoming.AlikeTo.steady", "Becoming.FiniteDecided.listed"]}
+{"name": "Becoming.Alike.functional", "uses": ["Becoming.Alike.symm", "Becoming.Alike.trans"]}
+{"name": "Becoming.Alike.holds_iff", "uses": ["Becoming.AlikeWith.holds_iff", "Becoming.BranchingTest.holds_toWith", "Becoming.alikeWith_empty_iff"]}
+{"name": "Becoming.Alike.sameBranchingTests", "uses": ["Becoming.Alike.holds_iff"]}
+{"name": "Becoming.AlikeAcross.decided", "uses": ["Becoming.AlikeTo.decided"]}
+{"name": "Becoming.AlikeAcross.refining", "uses": ["Becoming.AlikeTo.of_succ", "Becoming.AlikeTo.self", "Becoming.AlikeTo.symm", "Becoming.AlikeTo.trans"]}
+{"name": "Becoming.AlikeTo.bisimulation", "uses": []}
+{"name": "Becoming.AlikeTo.decided", "uses": ["Becoming.Decided.and", "Becoming.forth_decided", "Becoming.sameClaims_decided"]}
+{"name": "Becoming.AlikeTo.down_to", "uses": ["Becoming.AlikeTo.of_succ", "Becoming.holds_below"]}
+{"name": "Becoming.AlikeTo.of_succ", "uses": ["Becoming.Iteration.iter_pred", "Becoming.alike_mono", "Becoming.iter_iff_alikeTo"]}
+{"name": "Becoming.AlikeTo.realized", "uses": []}
+{"name": "Becoming.AlikeTo.refining", "uses": ["Becoming.AlikeTo.of_succ", "Becoming.AlikeTo.self", "Becoming.AlikeTo.symm", "Becoming.AlikeTo.trans"]}
+{"name": "Becoming.AlikeTo.self", "uses": ["Becoming.Alike.alikeTo", "Becoming.Alike.refl"]}
+{"name": "Becoming.AlikeTo.steady", "uses": ["Becoming.AlikeTo.steady_within"]}
+{"name": "Becoming.AlikeTo.steady_within", "uses": ["Becoming.alike_at_pairs"]}
+{"name": "Becoming.AlikeTo.steady_within_across", "uses": ["Becoming.AlikeAcross.decided", "Becoming.AlikeAcross.refining", "Becoming.Refining.steady_within", "Becoming.length_bothOf", "Becoming.mem_bothOf_left", "Becoming.mem_bothOf_right"]}
+{"name": "Becoming.AlikeTo.steady_within_classes", "uses": ["Becoming.AlikeTo.decided", "Becoming.AlikeTo.refining", "Becoming.Refining.steady_within"]}
+{"name": "Becoming.AlikeTo.symm", "uses": []}
+{"name": "Becoming.AlikeTo.trans", "uses": []}
+{"name": "Becoming.AlikeWith.alike", "uses": []}
+{"name": "Becoming.AlikeWith.functional", "uses": ["Becoming.AlikeWith.symm", "Becoming.AlikeWith.trans"]}
+{"name": "Becoming.AlikeWith.holds_iff", "uses": ["Becoming.AlikeWith.parts", "Becoming.AlikeWith.realized", "Becoming.AlikeWith.step", "Becoming.AlikeWith.symm"]}
+{"name": "Becoming.AlikeWith.matchesParts", "uses": ["Becoming.AlikeWith.parts"]}
+{"name": "Becoming.AlikeWith.parts", "uses": []}
+{"name": "Becoming.AlikeWith.realized", "uses": ["Becoming.Alike.realized", "Becoming.AlikeWith.alike"]}
+{"name": "Becoming.AlikeWith.refl", "uses": ["Becoming.BisimulationWith.eq"]}
+{"name": "Becoming.AlikeWith.sameTestsWith", "uses": ["Becoming.AlikeWith.holds_iff"]}
+{"name": "Becoming.AlikeWith.step", "uses": []}
+{"name": "Becoming.AlikeWith.symm", "uses": ["Becoming.BisimulationWith.converse"]}
+{"name": "Becoming.AlikeWith.trans", "uses": ["Becoming.BisimulationWith.comp"]}
+{"name": "Becoming.BisimulationWith.comp", "uses": ["Becoming.Bisimulation.comp", "Becoming.MatchesParts.comp", "Becoming.MatchesParts.transport"]}
+{"name": "Becoming.BisimulationWith.converse", "uses": ["Becoming.Bisimulation.converse"]}
+{"name": "Becoming.BisimulationWith.eq", "uses": ["Becoming.Bisimulation.eq"]}
+{"name": "Becoming.BranchingTest.apart_from_list", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.BranchingTest.apart_from_listed", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.BranchingTest.brecOn.eq", "uses": []}
+{"name": "Becoming.BranchingTest.holds_toWith", "uses": []}
+{"name": "Becoming.Chains.endless_alike_on", "uses": ["Becoming.Alike.step"]}
+{"name": "Becoming.Chains.on_holds_iff", "uses": ["Becoming.holds_below"]}
+{"name": "Becoming.Chains.outcomes", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Chains.outcomesListed", "uses": ["Becoming.Chains.outcomes"]}
+{"name": "Becoming.Chains.sameBranchingTests", "uses": ["Becoming.Chains.on_holds_iff"]}
+{"name": "Becoming.Chains.side_throughout", "uses": ["Becoming.Chains.endless_alike_on"]}
+{"name": "Becoming.Chains.throughout_of_alike", "uses": ["Becoming.Alike.step", "Becoming.Chains.side_throughout"]}
+{"name": "Becoming.Choosing.branching_apart", "uses": []}
+{"name": "Becoming.Decided.exists_not_of_listed", "uses": ["Becoming.Decided.exists_of_listed", "Becoming.Decided.not", "Becoming.Decided.of_not_not"]}
+{"name": "Becoming.Decided.exists_of_listed", "uses": ["Becoming.Decided.exists_listed"]}
+{"name": "Becoming.Decided.forall_in", "uses": ["Becoming.Decided.exists_listed", "Becoming.Decided.not", "Becoming.Decided.of_not_not"]}
+{"name": "Becoming.Decided.forall_of_listed", "uses": ["Becoming.Decided.exists_of_listed", "Becoming.Decided.not", "Becoming.Decided.of_not_not"]}
+{"name": "Becoming.Decided.iff", "uses": []}
+{"name": "Becoming.Decided.imp", "uses": []}
+{"name": "Becoming.Dependence.dichotomy_of_determinedAt", "uses": ["Becoming.Alike.realized", "Becoming.Dependence.dichotomy_of_same_level"]}
+{"name": "Becoming.Dependence.dichotomy_of_same_level", "uses": []}
+{"name": "Becoming.Dependence.level_registers", "uses": []}
+{"name": "Becoming.EitherClaim.decided_of_alike", "uses": ["Becoming.Alike.realized", "Becoming.Alike.step"]}
+{"name": "Becoming.EitherClaim.either_holds_of", "uses": []}
+{"name": "Becoming.EitherClaim.either_holds_of_not", "uses": []}
+{"name": "Becoming.EitherClaim.either_settles", "uses": ["Becoming.EitherClaim.either_holds_of", "Becoming.EitherClaim.either_holds_of_not", "Becoming.EitherClaim.settled_decided", "Becoming.not_not_decided"]}
+{"name": "Becoming.EitherClaim.listed", "uses": []}
+{"name": "Becoming.EitherClaim.sameBranchingTests", "uses": ["Becoming.EitherClaim.either_settles"]}
+{"name": "Becoming.EitherClaim.settled_decided", "uses": ["Becoming.Decided.and", "Becoming.Decided.not"]}
+{"name": "Becoming.EitherClaim.step_decided", "uses": []}
+{"name": "Becoming.EitherNever.of_nowhereDecided", "uses": []}
+{"name": "Becoming.EitherStep.decided_of_alike", "uses": ["Becoming.Alike.step", "Becoming.Alike.symm"]}
+{"name": "Becoming.EitherStep.either_holds_of", "uses": []}
+{"name": "Becoming.EitherStep.either_holds_of_not", "uses": []}
+{"name": "Becoming.EitherStep.either_settles", "uses": ["Becoming.EitherStep.either_holds_of", "Becoming.EitherStep.either_holds_of_not", "Becoming.EitherStep.settled_decided", "Becoming.not_not_decided"]}
+{"name": "Becoming.EitherStep.listed", "uses": []}
+{"name": "Becoming.EitherStep.sameBranchingTests", "uses": ["Becoming.EitherStep.either_settles"]}
+{"name": "Becoming.EitherStep.settled_decided", "uses": ["Becoming.Decided.and", "Becoming.Decided.not"]}
+{"name": "Becoming.EitherThroughout.list", "uses": ["Becoming.Decided.exists_listed", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.EitherThroughout.of_em", "uses": ["Becoming.Decided.of_not_not", "Becoming.holds_below"]}
+{"name": "Becoming.EitherThroughout.of_nowhereDecided", "uses": ["Becoming.EitherNever.of_nowhereDecided", "Becoming.eitherThroughout_iff_eitherNever"]}
+{"name": "Becoming.EndOfPath.alikeTo_room", "uses": ["Becoming.room_after"]}
+{"name": "Becoming.EndOfPath.classes_exact", "uses": ["Becoming.Alike.alikeTo", "Becoming.EndOfPath.alikeTo_room", "Becoming.EndOfPath.finite", "Becoming.EndOfPath.not_alikeTo_past", "Becoming.length_finBelow"]}
+{"name": "Becoming.EndOfPath.finite", "uses": ["Becoming.mem_finBelow"]}
+{"name": "Becoming.EndOfPath.not_alikeTo_past", "uses": []}
+{"name": "Becoming.FiniteDecided.listed", "uses": []}
+{"name": "Becoming.FiniteDecided.realized", "uses": []}
+{"name": "Becoming.FiniteDecided.step", "uses": []}
+{"name": "Becoming.LLPO.FirstAt.decided", "uses": ["Becoming.Decided.and", "Becoming.Decided.exists_below", "Becoming.Decided.not"]}
+{"name": "Becoming.LLPO.FirstAt.of_holds", "uses": ["Becoming.Decided.exists_below"]}
+{"name": "Becoming.LLPO.FirstAt.unique", "uses": []}
+{"name": "Becoming.LLPO.Interleave.decided", "uses": ["Becoming.LLPO.Interleave.even", "Becoming.LLPO.Interleave.odd", "Becoming.Pulse.parity"]}
+{"name": "Becoming.LLPO.Interleave.even", "uses": ["Becoming.LLPO.two_mul_inj", "Becoming.LLPO.two_mul_ne_succ"]}
+{"name": "Becoming.LLPO.Interleave.odd", "uses": ["Becoming.LLPO.succ_inj", "Becoming.LLPO.two_mul_inj", "Becoming.LLPO.two_mul_ne_succ"]}
+{"name": "Becoming.LLPO.decidable", "uses": []}
+{"name": "Becoming.LLPO.decided_true", "uses": []}
+{"name": "Becoming.LLPO.eq_false_of_not", "uses": []}
+{"name": "Becoming.LLPO.of_eitherThroughout", "uses": ["Becoming.LLPO.of_forDecided", "Becoming.eitherThroughout_iff_llpoForDecided"]}
+{"name": "Becoming.LLPO.of_forDecided", "uses": ["Becoming.LLPO.decided_true", "Becoming.LLPO.eq_false_of_not"]}
+{"name": "Becoming.LLPO.of_lpo", "uses": ["Becoming.LLPO.eq_false_of_not", "Becoming.LLPO.two_mul_ne_succ"]}
+{"name": "Becoming.LLPO.succ_inj", "uses": []}
+{"name": "Becoming.LLPO.two_mul_inj", "uses": ["Becoming.LLPO.succ_inj", "Becoming.Naturals.succ_ne_zero"]}
+{"name": "Becoming.LLPO.two_mul_ne_succ", "uses": ["Becoming.LLPO.succ_inj", "Becoming.Naturals.succ_ne_zero"]}
+{"name": "Becoming.Likeness.Parting.carries", "uses": ["Becoming.carries_unregistered"]}
+{"name": "Becoming.Likeness.Parting.going_not_stopped", "uses": ["Becoming.Alike.step"]}
+{"name": "Becoming.Likeness.Parting.image_not_determinedAt", "uses": ["Becoming.Likeness.Parting.going_not_stopped"]}
+{"name": "Becoming.ListedOutcomeFrames.alike_iff_sameBranchingTests_of_nowhereDecided", "uses": ["Becoming.EitherThroughout.of_nowhereDecided", "Becoming.OutcomesListed.alike_iff_sameBranchingTests"]}
+{"name": "Becoming.ListedOutcomeFrames.llpo_of_sameBranchingTests_fix", "uses": ["Becoming.LLPO.of_eitherThroughout", "Becoming.alike_of_sameBranchingTests_outcomes_iff"]}
+{"name": "Becoming.ListedOutcomeFrames.sameBranchingTests_fix_iff_llpoForDecided", "uses": ["Becoming.alike_of_sameBranchingTests_outcomes_iff", "Becoming.eitherThroughout_iff_llpoForDecided"]}
+{"name": "Becoming.MatchesParts.comp", "uses": []}
+{"name": "Becoming.MatchesParts.transport", "uses": []}
+{"name": "Becoming.NowhereDecided.of_em", "uses": []}
+{"name": "Becoming.OneLoop.alike_iff", "uses": ["Becoming.Alike.step", "Becoming.Alike.symm"]}
+{"name": "Becoming.OutcomesListed.alikeTo_bisimulation", "uses": ["Becoming.AlikeTo.of_succ", "Becoming.EitherThroughout.list", "Becoming.OutcomesListed.alikeTo_decided", "Becoming.OutcomesListed.outcomes"]}
+{"name": "Becoming.OutcomesListed.alikeTo_decided", "uses": ["Becoming.Decided.and", "Becoming.OutcomesListed.forth_decided", "Becoming.OutcomesListed.sameClaims_decided"]}
+{"name": "Becoming.OutcomesListed.alikeTo_of_same", "uses": ["Becoming.Decided.of_not_not", "Becoming.OutcomesListed.alikeTo_decided", "Becoming.OutcomesListed.apart_of_not_alikeTo"]}
+{"name": "Becoming.OutcomesListed.alike_iff_sameBranchingTests", "uses": ["Becoming.Alike.sameBranchingTests", "Becoming.OutcomesListed.alikeTo_bisimulation", "Becoming.OutcomesListed.alikeTo_of_same"]}
+{"name": "Becoming.OutcomesListed.apart_of_claims", "uses": ["Becoming.Decided.exists_not_of_listed", "Becoming.Decided.iff", "Becoming.OutcomesListed.realized"]}
+{"name": "Becoming.OutcomesListed.apart_of_not_alikeTo", "uses": ["Becoming.BranchingTest.apart_from_list", "Becoming.OutcomesListed.alikeTo_decided", "Becoming.OutcomesListed.apart_of_claims", "Becoming.OutcomesListed.forth_decided", "Becoming.OutcomesListed.outcomes", "Becoming.OutcomesListed.sameClaims_decided", "Becoming.OutcomesListed.unmatched"]}
+{"name": "Becoming.OutcomesListed.forth_decided", "uses": ["Becoming.Decided.forall_in", "Becoming.Decided.forall_of_listed", "Becoming.OutcomesListed.matched_decided", "Becoming.OutcomesListed.outcomes"]}
+{"name": "Becoming.OutcomesListed.matched_decided", "uses": ["Becoming.Decided.exists_listed", "Becoming.OutcomesListed.outcomes"]}
+{"name": "Becoming.OutcomesListed.outcomes", "uses": []}
+{"name": "Becoming.OutcomesListed.realized", "uses": []}
+{"name": "Becoming.OutcomesListed.sameClaims_decided", "uses": ["Becoming.Decided.forall_of_listed", "Becoming.Decided.iff", "Becoming.OutcomesListed.realized"]}
+{"name": "Becoming.OutcomesListed.unmatched", "uses": ["Becoming.Decided.exists_not_in", "Becoming.Decided.exists_not_of_listed", "Becoming.Decided.forall_in", "Becoming.OutcomesListed.matched_decided", "Becoming.OutcomesListed.outcomes"]}
+{"name": "Becoming.Run.new_of_newAlike", "uses": ["Becoming.Alike.refl"]}
+{"name": "Becoming.Run.not_fixesAlike_other_of_new", "uses": ["Becoming.Alike.symm", "Becoming.Run.not_fixesAlike_of_untaken", "Becoming.Run.ordered_of_ne"]}
+{"name": "Becoming.Run.not_fixesThroughAlike_of_goAlikeUnder", "uses": ["Becoming.Run.not_fixesThroughAlike_of_untaken", "Becoming.Run.stepsThrough_of_factors", "Becoming.factors_imageUnder", "Becoming.imageUnder_determinedAt"]}
+{"name": "Becoming.Run.not_fixesThroughAlike_of_untaken", "uses": ["Becoming.Alike.realized", "Becoming.retargetAlike_determinedAt", "Becoming.retargetAlike_step"]}
+{"name": "Becoming.SameBranchingTests.alikeTo", "uses": ["Becoming.AlikeTo.decided", "Becoming.Decided.of_not_not", "Becoming.apart_of_not_alikeTo"]}
+{"name": "Becoming.SameBranchingTests.functional", "uses": []}
+{"name": "Becoming.SameTestsWith.functional", "uses": ["Becoming.SameTestsWith.symm", "Becoming.SameTestsWith.trans"]}
+{"name": "Becoming.SameTestsWith.refl", "uses": []}
+{"name": "Becoming.SameTestsWith.sameBranchingTests", "uses": ["Becoming.BranchingTest.holds_toWith"]}
+{"name": "Becoming.SameTestsWith.symm", "uses": []}
+{"name": "Becoming.SameTestsWith.trans", "uses": []}
+{"name": "Becoming.TestWith.brecOn.eq", "uses": []}
+{"name": "Becoming.Unbounded.endless_not_alike_rest", "uses": ["Becoming.Alike.step"]}
+{"name": "Becoming.Unbounded.not_alike", "uses": ["Becoming.Alike.step", "Becoming.Alike.symm", "Becoming.Unbounded.endless_not_alike_rest"]}
+{"name": "Becoming.Unbounded.rest_holds_iff", "uses": []}
+{"name": "Becoming.Unbounded.sameBranchingTests", "uses": ["Becoming.Unbounded.rest_holds_iff"]}
+{"name": "Becoming.alikeTo_frameBy_iff", "uses": ["Becoming.Law.orbit_shift"]}
+{"name": "Becoming.alikeWith_empty_iff", "uses": ["Becoming.AlikeWith.alike"]}
+{"name": "Becoming.alike_at_cover", "uses": ["Becoming.Iteration.iter_persists", "Becoming.alike_mono", "Becoming.iter_iff_alikeTo"]}
+{"name": "Becoming.alike_at_pairs", "uses": ["Becoming.alike_at_cover", "Becoming.length_pairsOf", "Becoming.mem_pairsOf"]}
+{"name": "Becoming.alike_decided_iff_em", "uses": ["Becoming.OneLoop.alike_iff"]}
+{"name": "Becoming.alike_equivalence", "uses": ["Becoming.Alike.refl", "Becoming.Alike.symm", "Becoming.Alike.trans"]}
+{"name": "Becoming.alike_iff_alikeTo", "uses": ["Becoming.Alike.alikeTo", "Becoming.AlikeTo.bisimulation", "Becoming.AlikeTo.steady"]}
+{"name": "Becoming.alike_iff_alikeTo_across", "uses": ["Becoming.Alike.alikeTo", "Becoming.AlikeTo.bisimulation", "Becoming.AlikeTo.down_to", "Becoming.AlikeTo.steady_within_across", "Becoming.DistinctUnder.single", "Becoming.le_pred_of_succ_le"]}
+{"name": "Becoming.alike_iff_alikeTo_classes", "uses": ["Becoming.Alike.alikeTo", "Becoming.AlikeTo.bisimulation", "Becoming.AlikeTo.down_to", "Becoming.AlikeTo.steady_within_classes", "Becoming.DistinctUnder.single", "Becoming.le_pred_of_succ_le"]}
+{"name": "Becoming.alike_iff_alikeTo_pairs", "uses": ["Becoming.alike_iff_at_cover", "Becoming.length_pairsOf", "Becoming.mem_pairsOf"]}
+{"name": "Becoming.alike_iff_at_cover", "uses": ["Becoming.Alike.alikeTo", "Becoming.AlikeTo.bisimulation", "Becoming.alike_at_cover"]}
+{"name": "Becoming.alike_iff_sameBranchingTests", "uses": ["Becoming.Alike.sameBranchingTests", "Becoming.AlikeTo.bisimulation", "Becoming.AlikeTo.steady", "Becoming.FiniteDecided.listed", "Becoming.SameBranchingTests.alikeTo"]}
+{"name": "Becoming.alike_iff_sameBranchingTests_of_em", "uses": ["Becoming.Alike.sameBranchingTests", "Becoming.alike_of_sameBranchingTests_of_em"]}
+{"name": "Becoming.alike_mono", "uses": []}
+{"name": "Becoming.alike_of_sameBranchingTests_decided_steps_iff_em", "uses": ["Becoming.EitherClaim.decided_of_alike", "Becoming.EitherClaim.listed", "Becoming.EitherClaim.sameBranchingTests", "Becoming.EitherClaim.step_decided", "Becoming.alike_iff_sameBranchingTests"]}
+{"name": "Becoming.alike_of_sameBranchingTests_iff_em", "uses": ["Becoming.EitherStep.decided_of_alike", "Becoming.EitherStep.listed", "Becoming.EitherStep.sameBranchingTests", "Becoming.alike_iff_sameBranchingTests"]}
+{"name": "Becoming.alike_of_sameBranchingTests_of_em", "uses": ["Becoming.BranchingTest.apart_from_list", "Becoming.apart_of_not_sameBranchingTests"]}
+{"name": "Becoming.alike_of_sameBranchingTests_outcomes_iff", "uses": ["Becoming.Chains.outcomesListed", "Becoming.Chains.sameBranchingTests", "Becoming.Chains.throughout_of_alike", "Becoming.OutcomesListed.alike_iff_sameBranchingTests"]}
+{"name": "Becoming.alike_respectsClaims", "uses": ["Becoming.Alike.realized"]}
+{"name": "Becoming.apart_of_claims", "uses": ["Becoming.Decided.exists_not_of_listed", "Becoming.Decided.iff", "Becoming.FiniteDecided.realized"]}
+{"name": "Becoming.apart_of_not_alikeTo", "uses": ["Becoming.AlikeTo.decided", "Becoming.BranchingTest.apart_from_listed", "Becoming.FiniteDecided.listed", "Becoming.FiniteDecided.step", "Becoming.apart_of_claims", "Becoming.forth_decided", "Becoming.sameClaims_decided", "Becoming.unmatched_of_not_forth"]}
+{"name": "Becoming.apart_of_not_sameBranchingTests", "uses": ["Becoming.Decided.of_not_not"]}
+{"name": "Becoming.carries_law_alike_iff", "uses": ["Becoming.Alike.step", "Becoming.Alike.trans", "Becoming.alike_equivalence", "Becoming.alike_respectsClaims", "Becoming.factors_imageUnder", "Becoming.imageUnder_determinedAt"]}
+{"name": "Becoming.carries_law_named_iff", "uses": ["Becoming.carries_law_alike_iff", "Becoming.eq_equivalence"]}
+{"name": "Becoming.drops_somewhere", "uses": []}
+{"name": "Becoming.eitherNever_iff_llpoForDecided", "uses": ["Becoming.LLPO.FirstAt.decided", "Becoming.LLPO.FirstAt.of_holds", "Becoming.LLPO.FirstAt.unique", "Becoming.LLPO.Interleave.decided", "Becoming.LLPO.Interleave.even", "Becoming.LLPO.Interleave.odd", "Becoming.LLPO.two_mul_ne_succ"]}
+{"name": "Becoming.eitherThroughout_iff_eitherNever", "uses": ["Becoming.Decided.exists_below", "Becoming.Decided.not", "Becoming.Decided.of_not_not", "Becoming.holds_below"]}
+{"name": "Becoming.eitherThroughout_iff_llpoForDecided", "uses": ["Becoming.eitherNever_iff_llpoForDecided", "Becoming.eitherThroughout_iff_eitherNever"]}
+{"name": "Becoming.eq_equivalence", "uses": []}
+{"name": "Becoming.factors_imageUnder", "uses": []}
+{"name": "Becoming.forth_decided", "uses": ["Becoming.Decided.and", "Becoming.Decided.exists_of_listed", "Becoming.Decided.forall_of_listed", "Becoming.Decided.imp", "Becoming.FiniteDecided.listed", "Becoming.FiniteDecided.step"]}
+{"name": "Becoming.holds_below", "uses": []}
+{"name": "Becoming.imageUnder_bisimulation", "uses": []}
+{"name": "Becoming.imageUnder_determinedAt", "uses": ["Becoming.imageUnder_bisimulation"]}
+{"name": "Becoming.image_determinedAt_iff", "uses": ["Becoming.Alike.refl", "Becoming.Alike.step", "Becoming.Alike.trans", "Becoming.factors_image"]}
+{"name": "Becoming.iter_iff_alikeTo", "uses": ["Becoming.Iteration.iter_iff_stages", "Becoming.alike_mono"]}
+{"name": "Becoming.length_bothOf", "uses": ["Becoming.length_rightsOf"]}
+{"name": "Becoming.length_finBelow", "uses": []}
+{"name": "Becoming.length_pairedWith", "uses": []}
+{"name": "Becoming.length_pairsOf", "uses": ["Becoming.length_pairedWith"]}
+{"name": "Becoming.length_rightsOf", "uses": []}
+{"name": "Becoming.mem_bothOf_left", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.mem_bothOf_right", "uses": ["Becoming.mem_rightsOf"]}
+{"name": "Becoming.mem_finBelow", "uses": []}
+{"name": "Becoming.mem_pairedWith_left", "uses": []}
+{"name": "Becoming.mem_pairedWith_right", "uses": []}
+{"name": "Becoming.mem_pairsOf", "uses": ["Becoming.mem_pairedWith_left", "Becoming.mem_pairedWith_right"]}
+{"name": "Becoming.mem_rightsOf", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.room_after", "uses": []}
+{"name": "Becoming.sameClaims_decided", "uses": ["Becoming.Decided.forall_of_listed", "Becoming.Decided.iff", "Becoming.FiniteDecided.realized"]}
+{"name": "Becoming.skip_side", "uses": []}
+{"name": "Becoming.skip_succ", "uses": []}
+{"name": "Becoming.stops_decreasing", "uses": ["Becoming.drops_somewhere", "Becoming.holds_below", "Becoming.mem_cons_cases", "Becoming.skipAt_le", "Becoming.skip_side", "Becoming.skip_succ"]}
+{"name": "Becoming.unmatched_of_not_forth", "uses": ["Becoming.Decided.and", "Becoming.Decided.exists_not_of_listed", "Becoming.Decided.exists_of_listed", "Becoming.Decided.forall_of_listed", "Becoming.Decided.imp", "Becoming.Decided.of_not_not", "Becoming.FiniteDecided.listed", "Becoming.FiniteDecided.step"]}

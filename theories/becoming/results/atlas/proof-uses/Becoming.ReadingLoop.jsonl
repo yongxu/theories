@@ -1,0 +1,51 @@
+{"name": "Becoming.ReadingLoop.Loop.faithful_kept", "uses": ["Becoming.ReadingLoop.Loop.kept_iff"]}
+{"name": "Becoming.ReadingLoop.Loop.fitting_closed", "uses": ["Becoming.Narrowing.mem_filter"]}
+{"name": "Becoming.ReadingLoop.Loop.kept_alike", "uses": ["Becoming.ReadingLoop.Loop.kept_iff"]}
+{"name": "Becoming.ReadingLoop.Loop.kept_iff", "uses": ["Becoming.Narrowing.mem_filter"]}
+{"name": "Becoming.ReadingLoop.Loop.rests_of_unrefuted", "uses": ["Becoming.ReadingLoop.filter_all"]}
+{"name": "Becoming.ReadingLoop.PairwiseShared.none_for_all", "uses": []}
+{"name": "Becoming.ReadingLoop.PairwiseShared.two_share", "uses": []}
+{"name": "Becoming.ReadingLoop.Untested.alike_in_both", "uses": ["Becoming.ReadingLoop.Untested.rests"]}
+{"name": "Becoming.ReadingLoop.Untested.apart_beyond", "uses": []}
+{"name": "Becoming.ReadingLoop.Untested.both_accord", "uses": []}
+{"name": "Becoming.ReadingLoop.Untested.byWorst_iff", "uses": []}
+{"name": "Becoming.ReadingLoop.Untested.explorer_down", "uses": []}
+{"name": "Becoming.ReadingLoop.Untested.explorer_low_once", "uses": ["Becoming.ReadingLoop.Untested.explorer_down"]}
+{"name": "Becoming.ReadingLoop.Untested.explorer_up", "uses": []}
+{"name": "Becoming.ReadingLoop.Untested.floor_forgoes", "uses": ["Becoming.ReadingLoop.alike_of_kept"]}
+{"name": "Becoming.ReadingLoop.Untested.floor_never_high", "uses": ["Becoming.ReadingLoop.Untested.floor_forgoes"]}
+{"name": "Becoming.ReadingLoop.Untested.informed_turns", "uses": []}
+{"name": "Becoming.ReadingLoop.Untested.lower_cases", "uses": []}
+{"name": "Becoming.ReadingLoop.Untested.lower_le_left", "uses": []}
+{"name": "Becoming.ReadingLoop.Untested.lower_le_right", "uses": []}
+{"name": "Becoming.ReadingLoop.Untested.model_or_order", "uses": ["Becoming.ReadingLoop.observed_alike"]}
+{"name": "Becoming.ReadingLoop.Untested.never_high", "uses": ["Becoming.ReadingLoop.Untested.rests"]}
+{"name": "Becoming.ReadingLoop.Untested.order_rests", "uses": ["Becoming.ReadingLoop.Loop.rests_of_unrefuted"]}
+{"name": "Becoming.ReadingLoop.Untested.rests", "uses": ["Becoming.ReadingLoop.Loop.rests_of_unrefuted"]}
+{"name": "Becoming.ReadingLoop.Untested.true_kept", "uses": ["Becoming.ReadingLoop.Loop.faithful_kept"]}
+{"name": "Becoming.ReadingLoop.Untested.worst_attained", "uses": ["Becoming.ReadingLoop.Untested.lower_cases"]}
+{"name": "Becoming.ReadingLoop.Untested.worst_le", "uses": ["Becoming.ReadingLoop.Untested.lower_le_left", "Becoming.ReadingLoop.Untested.lower_le_right"]}
+{"name": "Becoming.ReadingLoop.alike_of_kept", "uses": ["Becoming.ReadingLoop.alike_within"]}
+{"name": "Becoming.ReadingLoop.alike_within", "uses": ["Becoming.Blanket.Blanketed.agent_through_sensory", "Becoming.Blanket.congr3"]}
+{"name": "Becoming.ReadingLoop.closed_of_keptBy", "uses": []}
+{"name": "Becoming.ReadingLoop.everything_kept", "uses": []}
+{"name": "Becoming.ReadingLoop.everything_leadsInto_iff", "uses": []}
+{"name": "Becoming.ReadingLoop.filter_all", "uses": ["Becoming.Narrowing.filter_cons_true"]}
+{"name": "Becoming.ReadingLoop.generated_closed", "uses": []}
+{"name": "Becoming.ReadingLoop.history_continues_iff", "uses": ["Becoming.ReadingLoop.possible_of_reached", "Becoming.ReadingLoop.reached_of_possible"]}
+{"name": "Becoming.ReadingLoop.history_keeps_iff", "uses": ["Becoming.ReadingLoop.generated_closed", "Becoming.ReadingLoop.keeps_of_leadsInto", "Becoming.ReadingLoop.reached_of_possible", "Becoming.«及之传递»"]}
+{"name": "Becoming.ReadingLoop.keeping_policy_iff", "uses": ["Becoming.ReadingLoop.keeps_continues_iff"]}
+{"name": "Becoming.ReadingLoop.keeps_continues_iff", "uses": ["Becoming.ReadingLoop.closed_of_keptBy", "Becoming.ReadingLoop.keeps_of_leadsInto", "Becoming.ReadingLoop.leadsInto_of_keeps"]}
+{"name": "Becoming.ReadingLoop.keeps_iff_leadsInto", "uses": ["Becoming.ReadingLoop.closed_of_keptBy", "Becoming.ReadingLoop.keeps_of_leadsInto", "Becoming.ReadingLoop.leadsInto_of_keeps"]}
+{"name": "Becoming.ReadingLoop.keeps_of_leadsInto", "uses": []}
+{"name": "Becoming.ReadingLoop.kept_iff_closed", "uses": ["Becoming.«闭之及»"]}
+{"name": "Becoming.ReadingLoop.leadsInto_of_keeps", "uses": []}
+{"name": "Becoming.ReadingLoop.nothing_kept", "uses": []}
+{"name": "Becoming.ReadingLoop.nothing_leadsInto", "uses": []}
+{"name": "Becoming.ReadingLoop.nothing_sound", "uses": []}
+{"name": "Becoming.ReadingLoop.observed_alike", "uses": []}
+{"name": "Becoming.ReadingLoop.possible_kept", "uses": []}
+{"name": "Becoming.ReadingLoop.possible_least", "uses": []}
+{"name": "Becoming.ReadingLoop.possible_of_reached", "uses": ["Becoming.ReadingLoop.generated_closed", "Becoming.«闭之及»"]}
+{"name": "Becoming.ReadingLoop.reached_of_possible", "uses": ["Becoming.«及之传递»"]}
+{"name": "Becoming.ReadingLoop.sensed_alike_iff", "uses": ["Becoming.Blanket.Blanketed.agent_through_sensory", "Becoming.Blanket.congr3"]}

@@ -1,0 +1,96 @@
+{"name": "Becoming.Hexagram.allHold_iff", "uses": []}
+{"name": "Becoming.Hexagram.allHold_sites", "uses": ["Becoming.bool_of_and_true"]}
+{"name": "Becoming.Hexagram.all_congr", "uses": []}
+{"name": "Becoming.Hexagram.alternates_answers", "uses": []}
+{"name": "Becoming.Hexagram.alternates_flip_bottom", "uses": []}
+{"name": "Becoming.Hexagram.alternates_flip_top", "uses": []}
+{"name": "Becoming.Hexagram.alternates_iff_phase", "uses": []}
+{"name": "Becoming.Hexagram.answeredStatements_sole", "uses": ["Becoming.ListTests.all_sound"]}
+{"name": "Becoming.Hexagram.answers_complement", "uses": ["Becoming.Hexagram.line_complement", "Becoming.Hexagram.same_not_not"]}
+{"name": "Becoming.Hexagram.answers_self", "uses": ["Becoming.Hexagram.same_self"]}
+{"name": "Becoming.Hexagram.answers_shown_along_run", "uses": ["Becoming.Hexagram.alternates_answers", "Becoming.Hexagram.answers_complement", "Becoming.Hexagram.answers_self", "Becoming.Hexagram.answers_symm", "Becoming.Hexagram.opposed_answers"]}
+{"name": "Becoming.Hexagram.answers_symm", "uses": ["Becoming.Hexagram.same_comm"]}
+{"name": "Becoming.Hexagram.backward_between", "uses": ["Becoming.Hexagram.backward_run", "Becoming.Hexagram.fixedPhase_reverse"]}
+{"name": "Becoming.Hexagram.backward_sole", "uses": ["Becoming.Hexagram.backward_run", "Becoming.Hexagram.sole_reverse"]}
+{"name": "Becoming.Hexagram.betweenPhases_not_goAlike", "uses": ["Becoming.Hexagram.betweenPhases_not_lumped", "Becoming.Learning.goAlike_iff_lumped"]}
+{"name": "Becoming.Hexagram.betweenPhases_not_lumped", "uses": []}
+{"name": "Becoming.Hexagram.between_glue_along_run", "uses": ["Becoming.Hexagram.allHold_iff", "Becoming.Hexagram.between_glues_iff", "Becoming.Hexagram.noneHold_iff"]}
+{"name": "Becoming.Hexagram.between_glues_iff", "uses": ["Becoming.Hexagram.allHold_sites", "Becoming.Hexagram.atSites_glues_iff_constant", "Becoming.Hexagram.noneHold_sites"]}
+{"name": "Becoming.Hexagram.between_no_free_frame", "uses": ["Becoming.Contextual.fitsFree_iff", "Becoming.Hexagram.between_glues_iff"]}
+{"name": "Becoming.Hexagram.between_shown_along_runs", "uses": ["Becoming.Hexagram.alternates_iff_phase", "Becoming.Hexagram.falls_iff_phase", "Becoming.Hexagram.fixedPhase_end", "Becoming.Hexagram.holdsPlace_ends", "Becoming.Hexagram.holdsPlace_iff", "Becoming.Hexagram.holdsPlace_inPhase", "Becoming.Hexagram.inner_seams_told", "Becoming.Hexagram.opposed_mid_told", "Becoming.Hexagram.rises_iff_phase"]}
+{"name": "Becoming.Hexagram.centre_fixes_parity", "uses": ["Becoming.Hexagram.parity_of_statement"]}
+{"name": "Becoming.Hexagram.changes_run_between", "uses": ["Becoming.Hexagram.fixedPhase_flip_self", "Becoming.Hexagram.sameBetween_flip_end", "Becoming.Run.step"]}
+{"name": "Becoming.Hexagram.changes_run_ends", "uses": ["Becoming.Hexagram.ends_not_told", "Becoming.Run.step"]}
+{"name": "Becoming.Hexagram.changes_run_sole", "uses": ["Becoming.Hexagram.flip_flip", "Becoming.Hexagram.sole_flip", "Becoming.Hexagram.sole_iff_flip", "Becoming.Run.step"]}
+{"name": "Becoming.Hexagram.course_between", "uses": []}
+{"name": "Becoming.Hexagram.daYou_answered", "uses": []}
+{"name": "Becoming.Hexagram.ends_not_told", "uses": ["Becoming.Hexagram.alternates_flip_bottom", "Becoming.Hexagram.alternates_flip_top", "Becoming.Hexagram.opposed_flip_self", "Becoming.Hexagram.sameBetween_flip_end"]}
+{"name": "Becoming.Hexagram.falls_iff_phase", "uses": []}
+{"name": "Becoming.Hexagram.feng_no_sole", "uses": []}
+{"name": "Becoming.Hexagram.fixedPhase_between", "uses": []}
+{"name": "Becoming.Hexagram.fixedPhase_complement", "uses": ["Becoming.Hexagram.inPhase_complement"]}
+{"name": "Becoming.Hexagram.fixedPhase_end", "uses": []}
+{"name": "Becoming.Hexagram.fixedPhase_flip_self", "uses": ["Becoming.Hexagram.fixedPhase_between", "Becoming.Hexagram.inPhase_flip_self"]}
+{"name": "Becoming.Hexagram.fixedPhase_reverse", "uses": ["Becoming.Hexagram.inPhase_reverse"]}
+{"name": "Becoming.Hexagram.fixedPhase_waxWane_enters", "uses": ["Becoming.Hexagram.inPhase_waxWane_above"]}
+{"name": "Becoming.Hexagram.fixedPhase_waxWane_rises", "uses": ["Becoming.Hexagram.fixedPhase_between", "Becoming.Hexagram.inPhase_waxWane_above"]}
+{"name": "Becoming.Hexagram.guai_iff", "uses": []}
+{"name": "Becoming.Hexagram.guai_sole", "uses": []}
+{"name": "Becoming.Hexagram.holdsPlace_ends", "uses": []}
+{"name": "Becoming.Hexagram.holdsPlace_iff", "uses": []}
+{"name": "Becoming.Hexagram.holdsPlace_inPhase", "uses": ["Becoming.bool_of_and_true"]}
+{"name": "Becoming.Hexagram.inner_seams_told", "uses": ["Becoming.Hexagram.alternates_iff_phase", "Becoming.Hexagram.falls_iff_phase", "Becoming.Hexagram.rises_iff_phase", "Becoming.Hexagram.sameBetween_phase"]}
+{"name": "Becoming.Hexagram.jie_one_opposed", "uses": []}
+{"name": "Becoming.Hexagram.lineTextMiddle_places", "uses": ["Becoming.ListTests.all_sound"]}
+{"name": "Becoming.Hexagram.lineTextPlace_holds", "uses": ["Becoming.ListTests.all_sound", "Becoming.bool_of_and_true"]}
+{"name": "Becoming.Hexagram.lv_sole", "uses": []}
+{"name": "Becoming.Hexagram.mem_others", "uses": []}
+{"name": "Becoming.Hexagram.noneHold_iff", "uses": []}
+{"name": "Becoming.Hexagram.noneHold_sites", "uses": ["Becoming.ListTests.false_of_not", "Becoming.bool_of_and_true"]}
+{"name": "Becoming.Hexagram.none_sole", "uses": ["Becoming.Hexagram.neither"]}
+{"name": "Becoming.Hexagram.not_mem_others_self", "uses": []}
+{"name": "Becoming.Hexagram.one_in_phase_of_parity", "uses": []}
+{"name": "Becoming.Hexagram.opposed_answers", "uses": []}
+{"name": "Becoming.Hexagram.opposed_mid_told", "uses": ["Becoming.Hexagram.opposed_iff_phase", "Becoming.Hexagram.sameBetween_phase"]}
+{"name": "Becoming.Hexagram.parity_of_statement", "uses": []}
+{"name": "Becoming.Hexagram.placeStatements_between", "uses": ["Becoming.ListTests.all_sound"]}
+{"name": "Becoming.Hexagram.placeStatements_hold", "uses": ["Becoming.Hexagram.same_eq", "Becoming.ListTests.all_sound"]}
+{"name": "Becoming.Hexagram.placedCount_complement", "uses": []}
+{"name": "Becoming.Hexagram.placedCount_waxWane", "uses": []}
+{"name": "Becoming.Hexagram.qian_top", "uses": []}
+{"name": "Becoming.Hexagram.rises_iff_phase", "uses": []}
+{"name": "Becoming.Hexagram.run_between_rises", "uses": ["Becoming.Hexagram.fixedPhase_waxWane_enters", "Becoming.Hexagram.fixedPhase_waxWane_rises"]}
+{"name": "Becoming.Hexagram.run_between_six", "uses": ["Becoming.Hexagram.fixedPhase_complement", "Becoming.Hexagram.placedCount_complement", "Becoming.Hexagram.run_six_steps"]}
+{"name": "Becoming.Hexagram.run_course_between", "uses": ["Becoming.Hexagram.course_between", "Becoming.Law.orbit_add"]}
+{"name": "Becoming.Hexagram.run_placedCount", "uses": ["Becoming.Hexagram.placedCount_waxWane"]}
+{"name": "Becoming.Hexagram.run_sole", "uses": ["Becoming.Hexagram.sole_six", "Becoming.Hexagram.sole_top_passes", "Becoming.Hexagram.sole_waxWane_none", "Becoming.Law.orbit_add"]}
+{"name": "Becoming.Hexagram.sameBetween_flip_end", "uses": ["Becoming.Hexagram.inPhase_flip_other"]}
+{"name": "Becoming.Hexagram.sameBetween_phase", "uses": ["Becoming.Hexagram.fixedPhase_between"]}
+{"name": "Becoming.Hexagram.same_comm", "uses": []}
+{"name": "Becoming.Hexagram.soleAny_count", "uses": []}
+{"name": "Becoming.Hexagram.soleAny_waxWane", "uses": []}
+{"name": "Becoming.Hexagram.sole_answered", "uses": ["Becoming.Hexagram.mem_others", "Becoming.ListTests.all_sound"]}
+{"name": "Becoming.Hexagram.sole_any", "uses": ["Becoming.ListTests.or_left", "Becoming.ListTests.or_right"]}
+{"name": "Becoming.Hexagram.sole_any_phase", "uses": []}
+{"name": "Becoming.Hexagram.sole_broken_seams", "uses": []}
+{"name": "Becoming.Hexagram.sole_complement", "uses": ["Becoming.Hexagram.all_congr", "Becoming.Hexagram.answers_complement"]}
+{"name": "Becoming.Hexagram.sole_count", "uses": []}
+{"name": "Becoming.Hexagram.sole_flip", "uses": []}
+{"name": "Becoming.Hexagram.sole_iff_flip", "uses": ["Becoming.Hexagram.ne_of_eqb"]}
+{"name": "Becoming.Hexagram.sole_of_answered", "uses": ["Becoming.Hexagram.not_mem_others_self", "Becoming.ListTests.all_complete"]}
+{"name": "Becoming.Hexagram.sole_opposition", "uses": []}
+{"name": "Becoming.Hexagram.sole_places", "uses": []}
+{"name": "Becoming.Hexagram.sole_reverse", "uses": []}
+{"name": "Becoming.Hexagram.sole_shown_along_run", "uses": ["Becoming.Hexagram.guai_iff", "Becoming.Hexagram.soleAny_count", "Becoming.Hexagram.sole_answered", "Becoming.Hexagram.sole_broken_seams", "Becoming.Hexagram.sole_count", "Becoming.Hexagram.sole_iff_flip", "Becoming.Hexagram.sole_of_answered", "Becoming.Hexagram.sole_opposition", "Becoming.Hexagram.sole_unbroken_seams", "Becoming.Hexagram.sole_unique"]}
+{"name": "Becoming.Hexagram.sole_six", "uses": ["Becoming.Hexagram.six_steps", "Becoming.Hexagram.sole_complement"]}
+{"name": "Becoming.Hexagram.sole_top_passes", "uses": []}
+{"name": "Becoming.Hexagram.sole_unbroken_seams", "uses": []}
+{"name": "Becoming.Hexagram.sole_unique", "uses": []}
+{"name": "Becoming.Hexagram.sole_waxWane_none", "uses": ["Becoming.Hexagram.and_false_of_true", "Becoming.Hexagram.none_sole", "Becoming.Hexagram.soleAny_waxWane", "Becoming.Hexagram.sole_any"]}
+{"name": "Becoming.Hexagram.statements_fix_parity", "uses": ["Becoming.Hexagram.parity_of_statement"]}
+{"name": "Becoming.Hexagram.top_no_parity", "uses": ["Becoming.Hexagram.one_in_phase_of_parity"]}
+{"name": "Becoming.Hexagram.tuanPlaceStatements_agree", "uses": ["Becoming.Hexagram.same_eq", "Becoming.ListTests.all_sound", "Becoming.bool_of_and_true"]}
+{"name": "Becoming.Hexagram.tuanWhole_between", "uses": ["Becoming.ListTests.all_sound"]}
+{"name": "Becoming.Hexagram.tuanWhole_six", "uses": []}
+{"name": "Becoming.Hexagram.xiaoXu_answered", "uses": []}
+{"name": "Becoming.Hexagram.xu_top_no_place", "uses": []}

@@ -1,0 +1,98 @@
+{"name": "Becoming.Countless.countless", "uses": ["Becoming.Countless.ends", "Becoming.Countless.never", "Becoming.Countless.whole", "Becoming.Web.Whole.needs_arising"]}
+{"name": "Becoming.Countless.ends", "uses": []}
+{"name": "Becoming.Countless.never", "uses": []}
+{"name": "Becoming.Countless.whole", "uses": []}
+{"name": "Becoming.Counts.all_of_eq_length", "uses": ["Becoming.Counts.lt_length_of_fails", "Becoming.counts_iff_decided"]}
+{"name": "Becoming.Counts.lt_length_of_fails", "uses": ["Becoming.Counts.le_length", "Becoming.Indicates.eq_zero", "Becoming.Indicates.le_one", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Gaps.alive_even", "uses": []}
+{"name": "Becoming.Gaps.alive_odd", "uses": []}
+{"name": "Becoming.Gaps.ends", "uses": []}
+{"name": "Becoming.Gaps.gaps", "uses": ["Becoming.Gaps.ends", "Becoming.Gaps.listed", "Becoming.Gaps.whole"]}
+{"name": "Becoming.Gaps.listed", "uses": ["Becoming.Gaps.alive_even", "Becoming.Gaps.alive_odd"]}
+{"name": "Becoming.Gaps.whole", "uses": []}
+{"name": "Becoming.Generations.allWhole_never", "uses": ["Becoming.Web.AllWhole.inactive_of_part"]}
+{"name": "Becoming.Generations.brief", "uses": []}
+{"name": "Becoming.Generations.ends", "uses": []}
+{"name": "Becoming.Generations.generations", "uses": ["Becoming.Generations.brief", "Becoming.Generations.ends", "Becoming.Generations.listed", "Becoming.Generations.whole"]}
+{"name": "Becoming.Generations.listed", "uses": []}
+{"name": "Becoming.Generations.whole", "uses": []}
+{"name": "Becoming.Immortal.each_other", "uses": []}
+{"name": "Becoming.Immortal.immortal", "uses": []}
+{"name": "Becoming.Layered.arise_again", "uses": []}
+{"name": "Becoming.Layered.brief", "uses": []}
+{"name": "Becoming.Layered.composed", "uses": []}
+{"name": "Becoming.Layered.within", "uses": ["Becoming.Layered.brief", "Becoming.Layered.composed", "Becoming.Web.Whole.arises_within"]}
+{"name": "Becoming.Rafters.decided", "uses": []}
+{"name": "Becoming.Rafters.grade_two", "uses": []}
+{"name": "Becoming.Rafters.house", "uses": []}
+{"name": "Becoming.Rafters.remains", "uses": []}
+{"name": "Becoming.Rafters.taken", "uses": ["Becoming.Rafters.decided", "Becoming.Rafters.grade_two", "Becoming.Rafters.house", "Becoming.Rafters.remains", "Becoming.Web.diminished_iff"]}
+{"name": "Becoming.Shifts.half_even", "uses": ["Becoming.Shifts.odd_two"]}
+{"name": "Becoming.Shifts.odd_two", "uses": []}
+{"name": "Becoming.Shifts.shifts", "uses": ["Becoming.Shifts.half_even"]}
+{"name": "Becoming.Web.AllWhole.active_of_none", "uses": []}
+{"name": "Becoming.Web.AllWhole.active_whole", "uses": []}
+{"name": "Becoming.Web.AllWhole.arises_part", "uses": ["Becoming.Web.AllWhole.atLeastWhole", "Becoming.Web.AtLeastWhole.arises_part"]}
+{"name": "Becoming.Web.AllWhole.atLeastWhole", "uses": ["Becoming.Counts.le_length", "Becoming.Web.Grade.eq_length_iff", "Becoming.counts_iff_decided"]}
+{"name": "Becoming.Web.AllWhole.brief_of_part", "uses": ["Becoming.Web.AllWhole.inactive_of_part"]}
+{"name": "Becoming.Web.AllWhole.ceases_part", "uses": ["Becoming.Web.AllWhole.atLeastWhole", "Becoming.Web.AtLeastWhole.ceases_part"]}
+{"name": "Becoming.Web.AllWhole.ends_of_part", "uses": ["Becoming.Web.AllWhole.inactive_of_part"]}
+{"name": "Becoming.Web.AllWhole.inactive_of_part", "uses": []}
+{"name": "Becoming.Web.AllWhole.persists_iff", "uses": []}
+{"name": "Becoming.Web.AtLeastWhole.allWhole", "uses": ["Becoming.Counts.le_length", "Becoming.Web.Grade.eq_length_iff"]}
+{"name": "Becoming.Web.AtLeastWhole.arises_part", "uses": ["Becoming.Web.Grade.arises_of_lt"]}
+{"name": "Becoming.Web.AtLeastWhole.ceases_part", "uses": ["Becoming.Web.Grade.ceases_of_lt"]}
+{"name": "Becoming.Web.AtLeastWhole.whole", "uses": ["Becoming.Web.Grade.pos_iff"]}
+{"name": "Becoming.Web.Covered.arises_within", "uses": ["Becoming.Web.active_back"]}
+{"name": "Becoming.Web.Covered.needs_arising", "uses": ["Becoming.Web.Listed.end_without_arising"]}
+{"name": "Becoming.Web.Covered.needs_new", "uses": ["Becoming.Web.Covered.needs_arising", "Becoming.Web.Ends.all"]}
+{"name": "Becoming.Web.Ends.all", "uses": []}
+{"name": "Becoming.Web.Grade.across_step", "uses": ["Becoming.Counts.across_step"]}
+{"name": "Becoming.Web.Grade.arises_of_lt", "uses": ["Becoming.Counts.exists_of_pos", "Becoming.Decided.and", "Becoming.Decided.not", "Becoming.Web.Grade.across_step", "Becoming.counts_iff_decided"]}
+{"name": "Becoming.Web.Grade.ceases_of_lt", "uses": ["Becoming.Counts.exists_of_pos", "Becoming.Decided.and", "Becoming.Decided.not", "Becoming.Web.Grade.across_step", "Becoming.counts_iff_decided"]}
+{"name": "Becoming.Web.Grade.diminished_iff", "uses": ["Becoming.Counts.le_length", "Becoming.Web.Grade.eq_length_iff", "Becoming.Web.Grade.pos_iff"]}
+{"name": "Becoming.Web.Grade.eq_length_iff", "uses": ["Becoming.Counts.all_of_eq_length", "Becoming.Counts.of_all", "Becoming.Counts.unique"]}
+{"name": "Becoming.Web.Grade.lt_length_of_inactive", "uses": ["Becoming.Counts.lt_length_of_fails"]}
+{"name": "Becoming.Web.Grade.pos_iff", "uses": ["Becoming.Counts.exists_of_pos", "Becoming.Counts.pos_of_mem"]}
+{"name": "Becoming.Web.Listed.end_without_arising", "uses": ["Becoming.Web.Ends.all", "Becoming.Web.active_back"]}
+{"name": "Becoming.Web.Whole.arises_part", "uses": []}
+{"name": "Becoming.Web.Whole.arises_within", "uses": ["Becoming.Web.Covered.arises_within", "Becoming.Web.Whole.covered"]}
+{"name": "Becoming.Web.Whole.atLeastWhole", "uses": ["Becoming.Web.Grade.pos_iff", "Becoming.counts_iff_decided"]}
+{"name": "Becoming.Web.Whole.ceases_part", "uses": []}
+{"name": "Becoming.Web.Whole.covered", "uses": []}
+{"name": "Becoming.Web.Whole.ends_without_arising", "uses": ["Becoming.Web.Listed.end_without_arising"]}
+{"name": "Becoming.Web.Whole.family_excess_ends", "uses": ["Becoming.Flow.family_excess_ends", "Becoming.Web.Whole.ends_without_arising"]}
+{"name": "Becoming.Web.Whole.joint_excess_ends", "uses": ["Becoming.Flow.gate_single", "Becoming.Web.Whole.family_excess_ends"]}
+{"name": "Becoming.Web.Whole.needs_arising", "uses": ["Becoming.Web.Covered.needs_arising", "Becoming.Web.Whole.covered"]}
+{"name": "Becoming.Web.Whole.needs_new", "uses": ["Becoming.Web.Covered.needs_new", "Becoming.Web.Whole.covered"]}
+{"name": "Becoming.Web.Whole.parts_unceasing", "uses": ["Becoming.Web.Whole.arises_part"]}
+{"name": "Becoming.Web.Whole.persists_from", "uses": ["Becoming.Web.Whole.persists_of_arising", "Becoming.le_dest"]}
+{"name": "Becoming.Web.Whole.persists_of_arising", "uses": ["Becoming.le_dest"]}
+{"name": "Becoming.Web.Whole.same_iff_inStep", "uses": ["Becoming.Web.AllWhole.active_whole"]}
+{"name": "Becoming.Web.active_back", "uses": ["Becoming.kept_onward"]}
+{"name": "Becoming.Web.allWhole_self", "uses": []}
+{"name": "Becoming.Web.diminished_iff", "uses": ["Becoming.Web.Grade.diminished_iff", "Becoming.counts_iff_decided"]}
+{"name": "Becoming.Web.whole_self", "uses": []}
+{"name": "Becoming.WholeExceeding.acting", "uses": []}
+{"name": "Becoming.WholeExceeding.arising", "uses": []}
+{"name": "Becoming.WholeExceeding.balances", "uses": []}
+{"name": "Becoming.WholeExceeding.dependent", "uses": []}
+{"name": "Becoming.WholeExceeding.drawn", "uses": ["Becoming.Web.Whole.family_excess_ends", "Becoming.WholeExceeding.acting", "Becoming.WholeExceeding.arising", "Becoming.WholeExceeding.balances", "Becoming.WholeExceeding.dependent", "Becoming.WholeExceeding.ends", "Becoming.WholeExceeding.excess", "Becoming.WholeExceeding.gated", "Becoming.WholeExceeding.listed", "Becoming.WholeExceeding.whole"]}
+{"name": "Becoming.WholeExceeding.ends", "uses": []}
+{"name": "Becoming.WholeExceeding.excess", "uses": []}
+{"name": "Becoming.WholeExceeding.gated", "uses": []}
+{"name": "Becoming.WholeExceeding.lineage_ne", "uses": []}
+{"name": "Becoming.WholeExceeding.listed", "uses": ["Becoming.ListTests.mem_singleton_iff", "Becoming.WholeExceeding.lineage_ne", "Becoming.WholeExceeding.member_ne", "Becoming.WholeExceeding.not_mem_pair"]}
+{"name": "Becoming.WholeExceeding.member_ne", "uses": []}
+{"name": "Becoming.WholeExceeding.not_mem_pair", "uses": ["Becoming.ListTests.mem_cons_iff", "Becoming.ListTests.mem_singleton_iff"]}
+{"name": "Becoming.WholeExceeding.whole", "uses": []}
+{"name": "Becoming.WholeUnending.balances", "uses": []}
+{"name": "Becoming.WholeUnending.persists", "uses": ["Becoming.ListTests.mem_singleton_iff", "Becoming.WholeUnending.balances"]}
+{"name": "Becoming.WholeUngated.balances", "uses": []}
+{"name": "Becoming.WholeUngated.persists", "uses": ["Becoming.Generations.ends", "Becoming.Generations.generations", "Becoming.Generations.listed", "Becoming.Generations.whole", "Becoming.WholeUngated.balances"]}
+{"name": "Becoming.WholeWithin.acting", "uses": []}
+{"name": "Becoming.WholeWithin.arising", "uses": []}
+{"name": "Becoming.WholeWithin.balances", "uses": []}
+{"name": "Becoming.WholeWithin.dependent", "uses": []}
+{"name": "Becoming.WholeWithin.gated", "uses": []}
+{"name": "Becoming.WholeWithin.kept", "uses": ["Becoming.Generations.ends", "Becoming.Generations.generations", "Becoming.Generations.listed", "Becoming.Generations.whole", "Becoming.WholeWithin.acting", "Becoming.WholeWithin.balances", "Becoming.WholeWithin.dependent"]}

@@ -1,0 +1,5 @@
+{"name": "Becoming.SignificanceStatements.noOutside_iff_paths_livingSignificance", "uses": ["Becoming.Web.unrestricted_iff_paths_livingSignificance", "Becoming.ownClosure_unrestricted_iff_noOutside"]}
+{"name": "Becoming.SignificanceStatements.paths_comparison_grammar", "uses": ["Becoming.Web.paths_comparison_widens", "Becoming.Web.widens_iff"]}
+{"name": "Becoming.SignificanceStatements.paths_extension_iff_grammar", "uses": ["Becoming.Web.paths_extension_iff_widens", "Becoming.Web.widens_iff"]}
+{"name": "Becoming.SignificanceStatements.paths_one_object_root", "uses": ["Becoming.Web.paths_one_object", "Becoming.Web.widens_iff", "Becoming.ownClosure_unrestricted_iff_noOutside"]}
+{"name": "Becoming.SignificanceStatements.widens_iff_retains_adds_root", "uses": ["Becoming.Web.widens_iff", "Becoming.Web.widens_iff_retains_adds", "Becoming.ownClosure_unrestricted_iff_noOutside"]}

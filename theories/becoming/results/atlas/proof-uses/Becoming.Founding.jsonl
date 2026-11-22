@@ -1,0 +1,50 @@
+{"name": "Becoming.Founding.Body.acting", "uses": []}
+{"name": "Becoming.Founding.Body.balances", "uses": []}
+{"name": "Becoming.Founding.Body.body_ended", "uses": ["Becoming.Flow.family_excess_ends", "Becoming.Founding.Body.acting", "Becoming.Founding.Body.balances", "Becoming.Founding.Body.dependent", "Becoming.Founding.Body.excess", "Becoming.Founding.Body.gated", "Becoming.Founding.Body.start"]}
+{"name": "Becoming.Founding.Body.confined_ended", "uses": ["Becoming.Founding.Body.acting", "Becoming.Founding.Body.balances", "Becoming.Founding.Body.confined_rise", "Becoming.Founding.Body.dependent", "Becoming.Founding.Body.descended", "Becoming.Founding.Flow.ConfinedRise.ends"]}
+{"name": "Becoming.Founding.Body.confined_late", "uses": []}
+{"name": "Becoming.Founding.Body.confined_marks", "uses": []}
+{"name": "Becoming.Founding.Body.confined_rise", "uses": ["Becoming.Founding.Body.confined_late", "Becoming.Founding.Body.confined_marks", "Becoming.Founding.Body.excess", "Becoming.Founding.Body.gated", "Becoming.Founding.Body.start"]}
+{"name": "Becoming.Founding.Body.dependent", "uses": []}
+{"name": "Becoming.Founding.Body.descended", "uses": ["Becoming.Founding.Body.family_late"]}
+{"name": "Becoming.Founding.Body.excess", "uses": []}
+{"name": "Becoming.Founding.Body.family_late", "uses": []}
+{"name": "Becoming.Founding.Body.gated", "uses": ["Becoming.Founding.Body.give_body"]}
+{"name": "Becoming.Founding.Body.give_body", "uses": []}
+{"name": "Becoming.Founding.Body.spread_marks", "uses": []}
+{"name": "Becoming.Founding.Body.spread_outlasts", "uses": []}
+{"name": "Becoming.Founding.Body.spread_rise", "uses": ["Becoming.Founding.Body.excess", "Becoming.Founding.Body.gated", "Becoming.Founding.Body.spread_marks", "Becoming.Founding.Body.start"]}
+{"name": "Becoming.Founding.Body.spread_unconfined", "uses": []}
+{"name": "Becoming.Founding.Body.start", "uses": []}
+{"name": "Becoming.Founding.Flow.ConfinedRise.confined", "uses": []}
+{"name": "Becoming.Founding.Flow.ConfinedRise.ends", "uses": ["Becoming.Founding.Flow.ConfinedRise.confined", "Becoming.Founding.Flow.ConfinedRise.toRise", "Becoming.Founding.Flow.Rise.excess", "Becoming.Founding.Flow.Rise.founded", "Becoming.Founding.Flow.Rise.gated", "Becoming.Founding.Flow.Rise.start", "Becoming.Founding.Flow.confined_ends"]}
+{"name": "Becoming.Founding.Flow.ConfinedRise.toRise", "uses": []}
+{"name": "Becoming.Founding.Flow.Rise.draws", "uses": []}
+{"name": "Becoming.Founding.Flow.Rise.excess", "uses": []}
+{"name": "Becoming.Founding.Flow.Rise.founded", "uses": []}
+{"name": "Becoming.Founding.Flow.Rise.gated", "uses": []}
+{"name": "Becoming.Founding.Flow.Rise.selected", "uses": []}
+{"name": "Becoming.Founding.Flow.Rise.start", "uses": []}
+{"name": "Becoming.Founding.Flow.confined_ends", "uses": ["Becoming.Founding.nil_of_none", "Becoming.GroupEnding.Flow.family_childless", "Becoming.ListTests.mem_flatMap_iff", "Becoming.SelectionLevels.lineage_within"]}
+{"name": "Becoming.Founding.Flow.survivors_independent", "uses": ["Becoming.GroupEnding.Flow.family_childless", "Becoming.ListTests.mem_flatMap_iff"]}
+{"name": "Becoming.Founding.Germline.family_two", "uses": []}
+{"name": "Becoming.Founding.Germline.founded", "uses": ["Becoming.Founding.Germline.family_two"]}
+{"name": "Becoming.Founding.Germline.sequestered_founded", "uses": ["Becoming.Founding.Germline.founded"]}
+{"name": "Becoming.Founding.Germline.sequestered_rises", "uses": ["Becoming.Founding.Germline.sequestered_founded", "Becoming.Founding.Germline.sequestered_sequestered", "Becoming.Founding.Nested.raises_iff_among"]}
+{"name": "Becoming.Founding.Germline.sequestered_sequestered", "uses": []}
+{"name": "Becoming.Founding.Germline.unsequestered_falls", "uses": []}
+{"name": "Becoming.Founding.Germline.unsequestered_founded", "uses": ["Becoming.Founding.Germline.founded"]}
+{"name": "Becoming.Founding.Germline.within_against", "uses": []}
+{"name": "Becoming.Founding.Nested.exact_of_sequestered", "uses": []}
+{"name": "Becoming.Founding.Nested.lowered_carried", "uses": ["Becoming.total_congr_on"]}
+{"name": "Becoming.Founding.Nested.raised_carried", "uses": ["Becoming.total_congr_on"]}
+{"name": "Becoming.Founding.Nested.raises_iff_among", "uses": ["Becoming.Founding.Nested.exact_of_sequestered", "Becoming.SelectionTerm.Generations.raises_exact_iff"]}
+{"name": "Becoming.Founding.Nested.raises_iff_carried", "uses": ["Becoming.Founding.Nested.lowered_carried", "Becoming.Founding.Nested.raised_carried"]}
+{"name": "Becoming.Founding.Nested.varied_within", "uses": ["Becoming.Founding.of_mem_single", "Becoming.Founding.varied_before"]}
+{"name": "Becoming.Founding.changed_or_none", "uses": []}
+{"name": "Becoming.Founding.exact_of_none", "uses": ["Becoming.Reproduction.le_of_excess_zero", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.Founding.nil_of_none", "uses": []}
+{"name": "Becoming.Founding.none_within_until", "uses": ["Becoming.Founding.uniform_until", "Becoming.SelectionTerm.concord_alike", "Becoming.SelectionTerm.discord_alike"]}
+{"name": "Becoming.Founding.of_mem_single", "uses": []}
+{"name": "Becoming.Founding.uniform_until", "uses": ["Becoming.ListTests.mem_flatMap_iff"]}
+{"name": "Becoming.Founding.varied_before", "uses": ["Becoming.Founding.changed_or_none", "Becoming.Founding.exact_of_none", "Becoming.Founding.none_within_until"]}

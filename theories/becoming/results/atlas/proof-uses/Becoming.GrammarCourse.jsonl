@@ -1,0 +1,32 @@
+{"name": "Becoming.Law.alike_iff_core", "uses": ["Becoming.Law.alike_iff_sameFuture", "Becoming.Law.core_is_sameFuture"]}
+{"name": "Becoming.Law.coarsest_iff_core", "uses": ["Becoming.Law.keepsAndCarries_iff", "Becoming.contains_core_iff"]}
+{"name": "Becoming.Law.constant_iff_core", "uses": ["Becoming.sameValue_class", "Becoming.«根»", "Becoming.«类有常当且仅当含于核»"]}
+{"name": "Becoming.Law.constant_iff_keeps", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.Law.continues_in_core_iff", "uses": ["Becoming.Law.core_is_sameFuture", "Becoming.Law.orbit_shift", "Becoming.Law.unending_iff"]}
+{"name": "Becoming.Law.core_iff_below", "uses": ["Becoming.Law.core_is_sameFuture", "Becoming.Law.sameFuture_iff_below"]}
+{"name": "Becoming.Law.core_is_sameFuture", "uses": ["Becoming.Law.constant_iff_keeps", "Becoming.Law.sameFuture_coarsest"]}
+{"name": "Becoming.Law.ends_iff_changes", "uses": ["Becoming.Law.step_hasSucc_iff"]}
+{"name": "Becoming.Law.keepsAndCarries_iff", "uses": ["Becoming.Law.constant_iff_keeps", "Becoming.Learning.goAlike_iff_lumped"]}
+{"name": "Becoming.Law.kept_along", "uses": ["Becoming.Law.KeepsRelation.run"]}
+{"name": "Becoming.Law.learnable_iff_core", "uses": ["Becoming.Law.core_is_sameFuture", "Becoming.Learnable.learnable_iff"]}
+{"name": "Becoming.Law.learnable_of_core_within", "uses": ["Becoming.Law.constant_iff_keeps", "Becoming.Law.kept_along", "Becoming.Law.learnable_iff_core", "Becoming.«根»"]}
+{"name": "Becoming.Law.line_on_orbit", "uses": ["Becoming.Law.orbit_shift"]}
+{"name": "Becoming.Law.reached_while_same", "uses": ["Becoming.Law.step_hasSucc_iff", "Becoming.«及之传递»"]}
+{"name": "Becoming.Law.stays_of_constant", "uses": ["Becoming.Law.constant_iff_core", "Becoming.Law.continues_in_core_iff", "Becoming.Law.unending_iff"]}
+{"name": "Becoming.Law.step_hasSucc_iff", "uses": []}
+{"name": "Becoming.Law.unending_iff", "uses": ["Becoming.Law.line_on_orbit", "Becoming.Law.reached_while_same", "Becoming.Law.step_hasSucc_iff"]}
+{"name": "Becoming.SameAhead.is_core", "uses": ["Becoming.Law.core_is_sameFuture", "Becoming.Law.succ_orbit"]}
+{"name": "Becoming.SameAhead.next_by_root", "uses": ["Becoming.SameAhead.is_core", "Becoming.«有常之逐点»", "Becoming.«根»"]}
+{"name": "Becoming.SameAhead.no_continuation", "uses": ["Becoming.SameAhead.is_core", "Becoming.SameAhead.new_each"]}
+{"name": "Becoming.Steps.next_is_step", "uses": []}
+{"name": "Becoming.TwoCourses.core_exact", "uses": ["Becoming.Identification.bounded_agree_exact", "Becoming.Identification.prefix_eq_iff", "Becoming.TwoCourses.core_iff"]}
+{"name": "Becoming.TwoCourses.core_iff", "uses": ["Becoming.Law.core_is_sameFuture", "Becoming.TwoCourses.orbit_inl", "Becoming.TwoCourses.orbit_inr"]}
+{"name": "Becoming.TwoCourses.core_iff_bounded", "uses": ["Becoming.Identification.bounded_agree", "Becoming.Identification.statesBelow_shift", "Becoming.TwoCourses.core_iff"]}
+{"name": "Becoming.TwoCourses.orbit_inl", "uses": []}
+{"name": "Becoming.TwoCourses.orbit_inr", "uses": []}
+{"name": "Becoming.contains_core_iff", "uses": ["Becoming.«根»"]}
+{"name": "Becoming.core_iff_below", "uses": ["Becoming.Identification.sameAhead_iff_below", "Becoming.SameAhead.is_core"]}
+{"name": "Becoming.core_within_core_iff", "uses": ["Becoming.«根»"]}
+{"name": "Becoming.course_core_iff", "uses": ["Becoming.Law.core_is_sameFuture", "Becoming.SameAhead.is_core", "Becoming.sameAhead_orbit_iff"]}
+{"name": "Becoming.sameValue_class", "uses": []}
+{"name": "Becoming.statesBelow_iff_core", "uses": ["Becoming.SameAhead.is_core"]}

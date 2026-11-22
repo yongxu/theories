@@ -1,0 +1,29 @@
+{"name": "Becoming.Viability.Certificate.closed", "uses": []}
+{"name": "Becoming.Viability.Certificate.kernel", "uses": ["Becoming.Viability.Certificate.closed", "Becoming.Viability.Certificate.within", "Becoming.Viability.kernel_iff_held", "Becoming.invariant_iff_closedUnder", "Becoming.«闭在内则在所闭之承»"]}
+{"name": "Becoming.Viability.Certificate.within", "uses": []}
+{"name": "Becoming.Viability.Kernel.mono", "uses": []}
+{"name": "Becoming.Viability.Kernel.run", "uses": ["Becoming.Run.reach"]}
+{"name": "Becoming.Viability.Leaves.within_not_kernel", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Viability.agrees_of_within", "uses": ["Becoming.Viability.step_of_ready"]}
+{"name": "Becoming.Viability.certificate_disturbed_iff", "uses": ["Becoming.Viability.Certificate.closed", "Becoming.Viability.Certificate.within"]}
+{"name": "Becoming.Viability.certificate_never_leaves", "uses": ["Becoming.Viability.Certificate.kernel", "Becoming.Viability.certificate_disturbed_iff", "Becoming.Viability.history_reach"]}
+{"name": "Becoming.Viability.extend_admissible", "uses": []}
+{"name": "Becoming.Viability.guardedStep_none", "uses": []}
+{"name": "Becoming.Viability.guarded_iff", "uses": ["Becoming.Viability.agrees_of_within", "Becoming.Viability.ready_of_step"]}
+{"name": "Becoming.Viability.guarded_never_fails_iff", "uses": ["Becoming.Viability.guarded_iff", "Becoming.Viability.never_leaves_iff_certificate"]}
+{"name": "Becoming.Viability.history_extend", "uses": ["Becoming.Viability.history_shift"]}
+{"name": "Becoming.Viability.history_reach", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans"]}
+{"name": "Becoming.Viability.history_shift", "uses": []}
+{"name": "Becoming.Viability.kernel_certificate", "uses": ["Becoming.Viability.kernel_iff_held", "Becoming.invariant_iff_closedUnder", "Becoming.«所闭之承在内»", "Becoming.«所闭之承闭»"]}
+{"name": "Becoming.Viability.kernel_iff_certificate", "uses": ["Becoming.Viability.Certificate.kernel", "Becoming.Viability.kernel_certificate"]}
+{"name": "Becoming.Viability.kernel_iff_held", "uses": ["Becoming.reach_iff_withinClosure"]}
+{"name": "Becoming.Viability.kernel_iff_iter", "uses": ["Becoming.Viability.kernel_iff_held", "Becoming.held_iff_iter"]}
+{"name": "Becoming.Viability.kernel_iff_iter_pred_length", "uses": ["Becoming.Viability.kernel_iff_held", "Becoming.held_iff_iter_pred_length"]}
+{"name": "Becoming.Viability.kernel_largest", "uses": ["Becoming.Viability.Certificate.kernel", "Becoming.Viability.kernel_certificate"]}
+{"name": "Becoming.Viability.kernel_step_iff", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans"]}
+{"name": "Becoming.Viability.needs_admissible", "uses": []}
+{"name": "Becoming.Viability.never_leaves_iff_certificate", "uses": ["Becoming.Viability.certificate_disturbed_iff", "Becoming.Viability.kernel_iff_certificate", "Becoming.Viability.never_leaves_iff_kernel"]}
+{"name": "Becoming.Viability.never_leaves_iff_kernel", "uses": ["Becoming.Viability.extend_admissible", "Becoming.Viability.history_extend", "Becoming.Viability.history_reach", "Becoming.Viability.trace_disturbed_iff"]}
+{"name": "Becoming.Viability.ready_of_step", "uses": ["Becoming.ListTests.none_ne_some"]}
+{"name": "Becoming.Viability.step_of_ready", "uses": []}
+{"name": "Becoming.Viability.trace_disturbed_iff", "uses": []}

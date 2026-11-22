@@ -1,0 +1,34 @@
+{"name": "Becoming.HistoryLanguages.Bounded.empty", "uses": []}
+{"name": "Becoming.HistoryLanguages.Bounded.history_realizes", "uses": ["Becoming.HistoryLanguages.Bounded.empty", "Becoming.HistoryLanguages.Bounded.prefixClosed", "Becoming.HistoryLanguages.feasible_iff"]}
+{"name": "Becoming.HistoryLanguages.Bounded.no_one_point_law", "uses": ["Becoming.HistoryLanguages.Bounded.not_double", "Becoming.HistoryLanguages.Bounded.single", "Generative.trace_singleton_iff"]}
+{"name": "Becoming.HistoryLanguages.Bounded.not_double", "uses": []}
+{"name": "Becoming.HistoryLanguages.Bounded.prefixClosed", "uses": ["Becoming.HistoryLanguages.Bounded.empty", "Becoming.HistoryLanguages.Bounded.single"]}
+{"name": "Becoming.HistoryLanguages.Bounded.single", "uses": []}
+{"name": "Becoming.HistoryLanguages.Feasible.joint_obstruction_refutes_stability", "uses": ["Becoming.HistoryLanguages.feasible_nil", "Becoming.HistoryLanguages.feasible_prefixClosed", "Becoming.HistoryLanguages.joint_obstruction_refutes_stability"]}
+{"name": "Becoming.HistoryLanguages.Feasible.obstruction_locates_changed_profile", "uses": ["Becoming.HistoryLanguages.feasible_nil", "Becoming.HistoryLanguages.obstruction_locates_changed_profile"]}
+{"name": "Becoming.HistoryLanguages.Feasible.stable_iff_letterwise", "uses": ["Becoming.HistoryLanguages.feasible_nil", "Becoming.HistoryLanguages.feasible_prefixClosed", "Becoming.HistoryLanguages.stable_iff_letterwise"]}
+{"name": "Becoming.HistoryLanguages.Feasible.stable_of_same", "uses": []}
+{"name": "Becoming.HistoryLanguages.blocked_extension_separates", "uses": []}
+{"name": "Becoming.HistoryLanguages.enabled_extension_separates", "uses": []}
+{"name": "Becoming.HistoryLanguages.feasible_iff", "uses": ["Becoming.HistoryLanguages.trace_from_empty_iff"]}
+{"name": "Becoming.HistoryLanguages.feasible_nil", "uses": []}
+{"name": "Becoming.HistoryLanguages.feasible_prefixClosed", "uses": ["Generative.feasible_prefix"]}
+{"name": "Becoming.HistoryLanguages.future_update", "uses": ["Becoming.ListTests.append_assoc"]}
+{"name": "Becoming.HistoryLanguages.gate_formation", "uses": ["Generative.trace_singleton_iff"]}
+{"name": "Becoming.HistoryLanguages.gate_gains_profile", "uses": ["Becoming.HistoryLanguages.enabled_extension_separates", "Becoming.HistoryLanguages.gate_formation"]}
+{"name": "Becoming.HistoryLanguages.joint_obstruction_refutes_stability", "uses": ["Becoming.HistoryLanguages.stable_implies_letterwise"]}
+{"name": "Becoming.HistoryLanguages.latch_changes_profile_and_continues", "uses": ["Becoming.HistoryLanguages.blocked_extension_separates", "Becoming.HistoryLanguages.latch_obstruction"]}
+{"name": "Becoming.HistoryLanguages.latch_obstruction", "uses": ["Generative.trace_cons_iff"]}
+{"name": "Becoming.HistoryLanguages.letterwise_append", "uses": []}
+{"name": "Becoming.HistoryLanguages.letterwise_implies_stable", "uses": ["Becoming.HistoryLanguages.letterwise_append"]}
+{"name": "Becoming.HistoryLanguages.locate_first_obstruction", "uses": ["Becoming.ListTests.append_assoc", "Becoming.ListTests.append_nil"]}
+{"name": "Becoming.HistoryLanguages.obstruction_locates_changed_profile", "uses": ["Becoming.HistoryLanguages.blocked_extension_separates", "Becoming.HistoryLanguages.locate_first_obstruction"]}
+{"name": "Becoming.HistoryLanguages.realizes_feasible", "uses": ["Becoming.HistoryLanguages.feasible_iff", "Becoming.HistoryLanguages.feasible_nil", "Becoming.HistoryLanguages.feasible_prefixClosed"]}
+{"name": "Becoming.HistoryLanguages.same_future_extends", "uses": ["Becoming.HistoryLanguages.future_update"]}
+{"name": "Becoming.HistoryLanguages.stable_iff_letterwise", "uses": ["Becoming.HistoryLanguages.letterwise_implies_stable", "Becoming.HistoryLanguages.stable_implies_letterwise"]}
+{"name": "Becoming.HistoryLanguages.stable_implies_letterwise", "uses": []}
+{"name": "Becoming.HistoryLanguages.trace_from_empty_iff", "uses": ["Becoming.HistoryLanguages.trace_iff"]}
+{"name": "Becoming.HistoryLanguages.trace_iff", "uses": ["Becoming.ListTests.append_assoc", "Becoming.ListTests.append_nil", "Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.HistoryLanguages.unrestricted_histories_stable", "uses": ["Becoming.HistoryLanguages.Feasible.stable_of_same", "Becoming.HistoryLanguages.unrestricted_realized", "Becoming.HistoryLanguages.unrestricted_stable"]}
+{"name": "Becoming.HistoryLanguages.unrestricted_realized", "uses": ["Becoming.HistoryLanguages.feasible_iff"]}
+{"name": "Becoming.HistoryLanguages.unrestricted_stable", "uses": []}

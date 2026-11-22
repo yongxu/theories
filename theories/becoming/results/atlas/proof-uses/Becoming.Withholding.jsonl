@@ -1,0 +1,41 @@
+{"name": "Becoming.Withholding.Chain.append", "uses": ["Becoming.Withholding.Chain.brecOn"]}
+{"name": "Becoming.Withholding.Chain.brecOn", "uses": []}
+{"name": "Becoming.Withholding.Chain.iterate", "uses": ["Becoming.Withholding.Chain.append"]}
+{"name": "Becoming.Withholding.Chain.last", "uses": ["Becoming.Withholding.Chain.last_of_eq"]}
+{"name": "Becoming.Withholding.Chain.last_of_eq", "uses": []}
+{"name": "Becoming.Withholding.Chain.prefix", "uses": ["Becoming.Withholding.Chain.last"]}
+{"name": "Becoming.Withholding.Chain.zero_eq", "uses": []}
+{"name": "Becoming.Withholding.Line.no_chain_two", "uses": ["Becoming.Withholding.Chain.last"]}
+{"name": "Becoming.Withholding.Line.passes_out_exact", "uses": ["Becoming.Withholding.Line.no_chain_two", "Becoming.Withholding.gives_without_chain"]}
+{"name": "Becoming.Withholding.Ring.answers_circulates", "uses": ["Becoming.Withholding.Ring.rotate_first", "Becoming.Withholding.Ring.rotate_second", "Becoming.Withholding.Ring.rotate_third"]}
+{"name": "Becoming.Withholding.Ring.answers_first", "uses": []}
+{"name": "Becoming.Withholding.Ring.answers_returns", "uses": ["Becoming.Withholding.Ring.loop", "Becoming.Withholding.withholding_returns"]}
+{"name": "Becoming.Withholding.Ring.answers_second", "uses": []}
+{"name": "Becoming.Withholding.Ring.answers_third", "uses": []}
+{"name": "Becoming.Withholding.Ring.givesFirst_first", "uses": []}
+{"name": "Becoming.Withholding.Ring.givesFirst_restores", "uses": ["Becoming.Withholding.Ring.givesFirst_first", "Becoming.Withholding.Ring.givesFirst_second", "Becoming.Withholding.Ring.givesFirst_third", "Becoming.le_dest"]}
+{"name": "Becoming.Withholding.Ring.givesFirst_restores_exact", "uses": []}
+{"name": "Becoming.Withholding.Ring.givesFirst_second", "uses": ["Becoming.Withholding.Ring.givesFirst_first"]}
+{"name": "Becoming.Withholding.Ring.givesFirst_third", "uses": ["Becoming.Withholding.Ring.givesFirst_second"]}
+{"name": "Becoming.Withholding.Ring.loop", "uses": []}
+{"name": "Becoming.Withholding.Ring.rotate_first", "uses": ["Becoming.Withholding.Ring.answers_first", "Becoming.Withholding.Ring.answers_second", "Becoming.Withholding.Ring.answers_third"]}
+{"name": "Becoming.Withholding.Ring.rotate_second", "uses": ["Becoming.Withholding.Ring.answers_first", "Becoming.Withholding.Ring.answers_second", "Becoming.Withholding.Ring.answers_third"]}
+{"name": "Becoming.Withholding.Ring.rotate_third", "uses": ["Becoming.Withholding.Ring.answers_first", "Becoming.Withholding.Ring.answers_second", "Becoming.Withholding.Ring.answers_third"]}
+{"name": "Becoming.Withholding.Ring.waitsAll_absorbs_exact", "uses": ["Becoming.Withholding.Ring.within_two", "Becoming.Withholding.withholding_absorbs"]}
+{"name": "Becoming.Withholding.Ring.within_two", "uses": []}
+{"name": "Becoming.Withholding.Within.mono", "uses": []}
+{"name": "Becoming.Withholding.answers_closed", "uses": ["Becoming.Withholding.chain_iff_steps", "Becoming.«承之迭»"]}
+{"name": "Becoming.Withholding.answers_more_waiting", "uses": []}
+{"name": "Becoming.Withholding.chain_iff_steps", "uses": ["Becoming.Withholding.Chain.last", "Becoming.Withholding.Chain.zero_eq", "Becoming.«迭之末步»"]}
+{"name": "Becoming.Withholding.gives_without_chain", "uses": ["Becoming.Withholding.answers_closed", "Becoming.Withholding.no_longer_chain"]}
+{"name": "Becoming.Withholding.no_longer_chain", "uses": ["Becoming.Withholding.Chain.prefix", "Becoming.le_dest"]}
+{"name": "Becoming.Withholding.total_withholding_merges", "uses": ["Becoming.Withholding.waitsAll_withholding_stays"]}
+{"name": "Becoming.Withholding.waitsAll_closed", "uses": ["Becoming.Withholding.within_iff_withinSteps", "Becoming.«存承之迭»"]}
+{"name": "Becoming.Withholding.waitsAll_gives_earlier", "uses": []}
+{"name": "Becoming.Withholding.waitsAll_more_waiting", "uses": []}
+{"name": "Becoming.Withholding.waitsAll_withholding_stays", "uses": ["Becoming.Withholding.waitsAll_gives_earlier"]}
+{"name": "Becoming.Withholding.waitsAll_withholding_stays_le", "uses": ["Becoming.Withholding.waitsAll_withholding_stays", "Becoming.le_dest"]}
+{"name": "Becoming.Withholding.withholding_absorbs", "uses": ["Becoming.Withholding.Within.mono", "Becoming.Withholding.waitsAll_closed"]}
+{"name": "Becoming.Withholding.withholding_returns", "uses": ["Becoming.Withholding.Chain.iterate", "Becoming.Withholding.answers_closed"]}
+{"name": "Becoming.Withholding.withholding_spreads", "uses": ["Becoming.Withholding.waitsAll_closed"]}
+{"name": "Becoming.Withholding.within_iff_withinSteps", "uses": ["Becoming.Withholding.chain_iff_steps"]}

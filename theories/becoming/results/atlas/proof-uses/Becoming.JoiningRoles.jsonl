@@ -1,0 +1,23 @@
+{"name": "Becoming.Fragment.idle_self_retained", "uses": ["Becoming.Fragment.idle_traced", "Becoming.Joining.retained_self_iff"]}
+{"name": "Becoming.Fragment.once_codes_apart", "uses": ["Becoming.Fragment.idle_traced", "Becoming.Fragment.passageTrace_alone", "Becoming.Joining.retained_codes_apart", "Becoming.Presentations.equal_codes_same_answers"]}
+{"name": "Becoming.Fragment.once_open_not_pairLifting", "uses": ["Becoming.Fragment.has_units", "Becoming.Fragment.passageTrace_alone", "Becoming.Joining.HasUnits.collapse", "Becoming.Joining.not_pairLifting_coarse"]}
+{"name": "Becoming.Fragment.once_retained_apart", "uses": ["Becoming.Fragment.passageTrace_alone", "Becoming.Joining.retained_apart", "Becoming.Joining.retained_self_iff", "Becoming.SameBranchingTests.symm"]}
+{"name": "Becoming.Fragment.once_roles_hide_ends", "uses": ["Becoming.Alike.sameBranchingTests", "Becoming.Fragment.has_units", "Becoming.Fragment.idle_ends_apart", "Becoming.Joining.HasUnits.roleTotal", "Becoming.Joining.RoleTotal.alike"]}
+{"name": "Becoming.Fragment.once_roles_hide_failure", "uses": ["Becoming.Fragment.passageTrace_alone", "Becoming.Fragment.traces_collapse"]}
+{"name": "Becoming.Fragment.once_self_apart", "uses": ["Becoming.Fragment.passageTrace_alone"]}
+{"name": "Becoming.Fragment.passageTrace_alone", "uses": ["Becoming.Fragment.passage_not_self_joint"]}
+{"name": "Becoming.Fragment.traces_collapse", "uses": ["Becoming.Fragment.has_units", "Becoming.Joining.HasUnits.collapse"]}
+{"name": "Becoming.Joining.HasUnits.collapse", "uses": ["Becoming.Alike.sameBranchingTests", "Becoming.Joining.HasUnits.roleTotal", "Becoming.Joining.OpenMap.alike", "Becoming.Joining.RoleTotal.openMap"]}
+{"name": "Becoming.Joining.HasUnits.roleTotal", "uses": []}
+{"name": "Becoming.Joining.Occurrence.ofTuple_at", "uses": []}
+{"name": "Becoming.Joining.collapsed_exact", "uses": ["Becoming.Joining.HasUnits.collapse"]}
+{"name": "Becoming.Joining.collapsed_reduced", "uses": []}
+{"name": "Becoming.Joining.covers_of_em", "uses": ["Becoming.Alike.sameBranchingTests", "Becoming.Joining.LocallyFinite.alike_iff", "Becoming.Joining.covers"]}
+{"name": "Becoming.Joining.factor_unique_of_ext", "uses": ["Becoming.Joining.universal_factor"]}
+{"name": "Becoming.Joining.fragment_not_sameBranchingTests_occurrence", "uses": []}
+{"name": "Becoming.Joining.match_incident_of_em", "uses": ["Becoming.Joining.LocallyFinite.outcomes", "Becoming.Joining.slots_sameBranchingTests", "Becoming.SameBranchingTests.step_of_em"]}
+{"name": "Becoming.Joining.placeMap_step", "uses": ["Becoming.Joining.Occurrence.map_at"]}
+{"name": "Becoming.Joining.retained_pair_matches_of_em", "uses": ["Becoming.Joining.FiniteOutcomes.retained_outcomes", "Becoming.ListTests.length_append", "Becoming.SameBranchingTests.step_of_em"]}
+{"name": "Becoming.Joining.retained_step_extends", "uses": []}
+{"name": "Becoming.Joining.roleFrame_leave_holds", "uses": []}
+{"name": "Becoming.Joining.slots_sameBranchingTests", "uses": ["Becoming.Joining.roleFrame_leave_holds"]}

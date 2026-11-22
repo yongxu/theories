@@ -1,0 +1,82 @@
+{"name": "Becoming.Flow.Balances.atSetPoint_breaks", "uses": ["Becoming.Flow.Balances.breaks_beyond", "Becoming.total_congr_on"]}
+{"name": "Becoming.Flow.Balances.atSetPoint_broken_iff", "uses": ["Becoming.Flow.Balances.atSetPoint_draws", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.Flow.Balances.atSetPoint_draws", "uses": ["Becoming.Flow.Balances.beyond_falls_exactly", "Becoming.total_congr_on"]}
+{"name": "Becoming.Flow.Balances.held_draws_lost", "uses": ["Becoming.Flow.Balances.atSetPoint_draws", "Becoming.add_right_cancel", "Becoming.total_congr_on"]}
+{"name": "Becoming.Flow.Balances.mutual_atSetPoint_breaks", "uses": ["Becoming.Flow.Balances.atSetPoint_breaks", "Becoming.Optimum.mutual_atSetPoint"]}
+{"name": "Becoming.Flow.Balances.mutual_atSetPoint_draws", "uses": ["Becoming.Flow.Balances.atSetPoint_draws", "Becoming.Optimum.mutual_atSetPoint"]}
+{"name": "Becoming.Flow.held_draws", "uses": ["Becoming.Flow.BalancesOn.over", "Becoming.Naturals.le_of_add_le_add_left", "Becoming.Optimum.total_le_of_only", "Becoming.le_of_add_le_add_right", "Becoming.le_total_of_mem", "Becoming.total_le"]}
+{"name": "Becoming.Flow.held_excess_ends", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.held_draws", "Becoming.Flow.joint_excess_ends", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_le", "Becoming.total_split"]}
+{"name": "Becoming.Flow.nearing_optimum_draws", "uses": ["Becoming.Flow.Balances.atSetPoint_draws", "Becoming.Optimum.atSetPoint_of_reach"]}
+{"name": "Becoming.Optimum.Drain.atSetPoint_source", "uses": ["Becoming.Naturals.add_sub_cancel", "Becoming.Optimum.Drain.storedAt_split", "Becoming.Optimum.atSetPoint_of_reach", "Becoming.Optimum.atSetPoint_single"]}
+{"name": "Becoming.Optimum.Drain.kept_iff", "uses": ["Becoming.Optimum.Drain.atSetPoint_source"]}
+{"name": "Becoming.Optimum.Drain.nearing_breaks", "uses": ["Becoming.Optimum.Drain.atSetPoint_source"]}
+{"name": "Becoming.Optimum.Drain.nearing_keeps", "uses": ["Becoming.DrawnBeyond.source_apart", "Becoming.Optimum.Drain.atSetPoint_source", "Becoming.Optimum.Drain.split_shared", "Becoming.Optimum.Drain.storedAt_split", "Becoming.Optimum.Shared.room", "Becoming.Optimum.atSetPoint_frontier", "Becoming.Optimum.atSetPoint_single", "Becoming.Optimum.least_of_shared"]}
+{"name": "Becoming.Optimum.Drain.satisficingThen_keeps", "uses": []}
+{"name": "Becoming.Optimum.Drain.storedAt_split", "uses": ["Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.Optimum.HeldPair.acting", "uses": []}
+{"name": "Becoming.Optimum.HeldPair.alone", "uses": []}
+{"name": "Becoming.Optimum.HeldPair.apart", "uses": []}
+{"name": "Becoming.Optimum.HeldPair.balances", "uses": []}
+{"name": "Becoming.Optimum.HeldPair.dependent", "uses": []}
+{"name": "Becoming.Optimum.HeldPair.distinct", "uses": ["Becoming.Optimum.HeldPair.members_distinct"]}
+{"name": "Becoming.Optimum.HeldPair.exceeds", "uses": []}
+{"name": "Becoming.Optimum.HeldPair.gated", "uses": []}
+{"name": "Becoming.Optimum.HeldPair.held", "uses": []}
+{"name": "Becoming.Optimum.HeldPair.held_end", "uses": ["Becoming.Flow.held_excess_ends", "Becoming.Optimum.HeldPair.acting", "Becoming.Optimum.HeldPair.alone", "Becoming.Optimum.HeldPair.apart", "Becoming.Optimum.HeldPair.balances", "Becoming.Optimum.HeldPair.dependent", "Becoming.Optimum.HeldPair.distinct", "Becoming.Optimum.HeldPair.exceeds", "Becoming.Optimum.HeldPair.gated", "Becoming.Optimum.HeldPair.held", "Becoming.Optimum.HeldPair.listed", "Becoming.Optimum.HeldPair.loses", "Becoming.Optimum.HeldPair.within", "Becoming.Optimum.stock_eq_of_atSetPoint"]}
+{"name": "Becoming.Optimum.HeldPair.listed", "uses": []}
+{"name": "Becoming.Optimum.HeldPair.loses", "uses": []}
+{"name": "Becoming.Optimum.HeldPair.members_distinct", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Optimum.HeldPair.within", "uses": []}
+{"name": "Becoming.Optimum.Nearer.gaps", "uses": ["Becoming.Regulation.Between.gap_le"]}
+{"name": "Becoming.Optimum.Nearing.mono", "uses": []}
+{"name": "Becoming.Optimum.Nearing.not_rising", "uses": ["Becoming.Optimum.nearer_of_atSetPoint"]}
+{"name": "Becoming.Optimum.Nearing.rises_below", "uses": ["Becoming.Optimum.nearer_iff_exceeds"]}
+{"name": "Becoming.Optimum.Skew.nearing", "uses": ["Becoming.Regulation.gap_of_ge", "Becoming.Regulation.gap_of_le", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.Optimum.Skew.not_by_gaps", "uses": []}
+{"name": "Becoming.Optimum.Spread.counted_after_empties", "uses": ["Becoming.Optimum.atSetPoint_single"]}
+{"name": "Becoming.Optimum.Topped.counted_after_keeps", "uses": ["Becoming.Optimum.Topped.idle_open", "Becoming.Optimum.atSetPoint_single", "Becoming.Optimum.counted_after_most", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.Topped.counted_less_drains", "uses": ["Becoming.Optimum.Topped.discarding_open"]}
+{"name": "Becoming.Optimum.Topped.discarding_open", "uses": []}
+{"name": "Becoming.Optimum.Topped.idle_open", "uses": []}
+{"name": "Becoming.Optimum.Topped.nearing_either", "uses": ["Becoming.Optimum.Topped.discarding_open", "Becoming.Optimum.Topped.idle_open", "Becoming.Optimum.atSetPoint_frontier", "Becoming.Optimum.atSetPoint_of_reach", "Becoming.Optimum.atSetPoint_single"]}
+{"name": "Becoming.Optimum.Topped.out_of_reach", "uses": ["Becoming.DrawnBeyond.source_apart", "Becoming.Optimum.Drain.formations_distinct", "Becoming.Optimum.Drain.store_source_distinct", "Becoming.Optimum.Topped.store_le_two", "Becoming.Optimum.nearing_beyond"]}
+{"name": "Becoming.Optimum.Topped.rising_drains", "uses": ["Becoming.DrawnBeyond.source_apart", "Becoming.Optimum.Drain.formations_distinct", "Becoming.Optimum.Drain.store_source_distinct", "Becoming.Optimum.optimum_beyond"]}
+{"name": "Becoming.Optimum.Topped.store_le_two", "uses": []}
+{"name": "Becoming.Optimum.Topped.weighted_keeps", "uses": ["Becoming.Optimum.Topped.idle_open"]}
+{"name": "Becoming.Optimum.TwoStores.balances", "uses": []}
+{"name": "Becoming.Optimum.TwoStores.best", "uses": ["Becoming.Optimum.atSetPoint_frontier", "Becoming.Optimum.atSetPoint_single"]}
+{"name": "Becoming.Optimum.TwoStores.gainless", "uses": []}
+{"name": "Becoming.Optimum.TwoStores.jointly_broken", "uses": ["Becoming.Flow.Balances.mutual_atSetPoint_breaks", "Becoming.ListTests.mem_bools", "Becoming.Optimum.TwoStores.balances", "Becoming.Optimum.TwoStores.best", "Becoming.Optimum.TwoStores.gainless", "Becoming.Optimum.atSetPoint_single", "Becoming.Optimum.byGap_nearing"]}
+{"name": "Becoming.Optimum.atSetPoint_frontier", "uses": ["Becoming.Optimum.byGap_unbeaten_at"]}
+{"name": "Becoming.Optimum.atSetPoint_iff", "uses": []}
+{"name": "Becoming.Optimum.atSetPoint_of_reach", "uses": ["Becoming.Optimum.atSetPoint_iff", "Becoming.Optimum.nearer_of_atSetPoint"]}
+{"name": "Becoming.Optimum.atSetPoint_single", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Optimum.byGapLess_nearing", "uses": ["Becoming.Optimum.Nearing.mono", "Becoming.Optimum.byGap_nearing"]}
+{"name": "Becoming.Optimum.byGapThen_asymm", "uses": []}
+{"name": "Becoming.Optimum.byGapThen_nearing", "uses": ["Becoming.Optimum.Nearing.mono", "Becoming.Optimum.byGap_nearing"]}
+{"name": "Becoming.Optimum.byGapThen_not_rising", "uses": ["Becoming.Optimum.Nearing.not_rising", "Becoming.Optimum.byGapThen_asymm", "Becoming.Optimum.byGapThen_nearing"]}
+{"name": "Becoming.Optimum.byGap_nearing", "uses": ["Becoming.Optimum.Exceeds.total_lt", "Becoming.Optimum.nearing_of_gaps"]}
+{"name": "Becoming.Optimum.byGap_not_rising", "uses": ["Becoming.Optimum.byGap_unbeaten_at", "Becoming.Optimum.not_rising_of_unbeaten"]}
+{"name": "Becoming.Optimum.byGap_unbeaten_at", "uses": ["Becoming.Optimum.total_gapTo_eq_zero"]}
+{"name": "Becoming.Optimum.counted_after_keeps_iff", "uses": ["Becoming.Optimum.counted_after_most", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.counted_after_most", "uses": ["Becoming.Optimum.atSetPoint_of_reach", "Becoming.Optimum.byGapThen_nearing", "Becoming.Optimum.total_gapTo_eq_zero"]}
+{"name": "Becoming.Optimum.gapTo_eq_zero", "uses": ["Becoming.gap_self"]}
+{"name": "Becoming.Optimum.gapTo_of_upTo", "uses": ["Becoming.Regulation.gap_of_ge"]}
+{"name": "Becoming.Optimum.least_at_iff", "uses": ["Becoming.Optimum.atSetPoint_frontier", "Becoming.Optimum.atSetPoint_of_reach", "Becoming.Optimum.byGap_nearing"]}
+{"name": "Becoming.Optimum.least_below", "uses": ["Becoming.Optimum.least_below_iff"]}
+{"name": "Becoming.Optimum.least_below_iff", "uses": ["Becoming.Optimum.Nearing.rises_below", "Becoming.Optimum.least_iff", "Becoming.Optimum.nearer_iff_exceeds"]}
+{"name": "Becoming.Optimum.mutual_atSetPoint", "uses": ["Becoming.Optimum.atSetPoint_of_reach"]}
+{"name": "Becoming.Optimum.nearer_iff_exceeds", "uses": ["Becoming.Optimum.gapTo_of_upTo", "Becoming.Optimum.sub_lt_sub_iff"]}
+{"name": "Becoming.Optimum.nearer_of_atSetPoint", "uses": ["Becoming.Optimum.gapTo_eq_zero", "Becoming.Optimum.setPoint_between", "Becoming.gap_eq_zero_iff"]}
+{"name": "Becoming.Optimum.nearing_as_rising", "uses": ["Becoming.Optimum.nearing_beyond", "Becoming.Optimum.optimum_beyond"]}
+{"name": "Becoming.Optimum.nearing_beyond", "uses": ["Becoming.Optimum.beyond_of_ranked", "Becoming.Optimum.transfer_nearer"]}
+{"name": "Becoming.Optimum.nearing_of_gaps", "uses": ["Becoming.Optimum.Nearer.gaps"]}
+{"name": "Becoming.Optimum.not_rising_of_unbeaten", "uses": []}
+{"name": "Becoming.Optimum.optima_iff", "uses": ["Becoming.Optimum.atSetPoint_frontier", "Becoming.Optimum.atSetPoint_of_reach", "Becoming.Optimum.byGap_nearing"]}
+{"name": "Becoming.Optimum.setPoint_between", "uses": []}
+{"name": "Becoming.Optimum.stock_eq_of_atSetPoint", "uses": ["Becoming.total_congr_on"]}
+{"name": "Becoming.Optimum.sub_le_sub_iff", "uses": ["Becoming.Optimum.sub_le_sub_left_of_le", "Becoming.add_sub_of_le", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Optimum.sub_lt_sub_iff", "uses": ["Becoming.Optimum.sub_le_sub_left_of_le", "Becoming.Requirement.Formation.sub_lt_sub_of_lt"]}
+{"name": "Becoming.Optimum.total_gapTo_eq_zero", "uses": ["Becoming.Optimum.gapTo_eq_zero", "Becoming.total_congr_on", "Becoming.total_zero"]}
+{"name": "Becoming.Optimum.total_le_of_only", "uses": ["Becoming.total_congr_on", "Becoming.total_le_at"]}
+{"name": "Becoming.Optimum.transfer_nearer", "uses": ["Becoming.Optimum.sub_lt_sub_iff", "Becoming.Regulation.Between.refl", "Becoming.Regulation.gap_of_ge"]}

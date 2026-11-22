@@ -1,0 +1,94 @@
+{"name": "Becoming.Rooms.Matched.closed", "uses": ["Becoming.Rooms.Matched.open_rest", "Becoming.Rooms.net_open", "Becoming.Rooms.net_shut", "Becoming.Rooms.next_rest"]}
+{"name": "Becoming.Rooms.Matched.keeping", "uses": ["Becoming.Rooms.Matched.kept_kept", "Becoming.Rooms.Matched.no_renewal", "Becoming.Rooms.Matched.reach", "Becoming.Rooms.rest_step"]}
+{"name": "Becoming.Rooms.Matched.keeps_at", "uses": ["Becoming.Rooms.Matched.kept_kept", "Becoming.Rooms.Matched.no_renewal", "Becoming.Rooms.rest_step"]}
+{"name": "Becoming.Rooms.Matched.kept_kept", "uses": ["Becoming.Rooms.Matched.open_rest", "Becoming.Rooms.opens"]}
+{"name": "Becoming.Rooms.Matched.no_renewal", "uses": ["Becoming.Rooms.Matched.closed", "Becoming.Rooms.Matched.not_begins_kept", "Becoming.Rooms.Matched.reach", "Becoming.Rooms.not_begins_start"]}
+{"name": "Becoming.Rooms.Matched.not_begins_kept", "uses": ["Becoming.Rooms.Matched.kept_kept"]}
+{"name": "Becoming.Rooms.Matched.not_generates", "uses": ["Becoming.Rooms.Matched.no_renewal"]}
+{"name": "Becoming.Rooms.Matched.open_rest", "uses": ["Becoming.Rooms.warms_open"]}
+{"name": "Becoming.Rooms.Matched.reach", "uses": ["Becoming.Rooms.Matched.closed", "Becoming.«闭之及»"]}
+{"name": "Becoming.Rooms.Matched.rows", "uses": ["Becoming.Rooms.Matched.keeping", "Becoming.Rooms.Matched.keeps_at", "Becoming.Rooms.Matched.not_generates", "Becoming.«全守有终不并»", "Becoming.«全生成全守不并»", "Becoming.«守则后守»", "Becoming.«守退化不并»"]}
+{"name": "Becoming.Rooms.Matched.start_kept", "uses": ["Becoming.Rooms.Matched.open_rest", "Becoming.Rooms.opens"]}
+{"name": "Becoming.Rooms.Overshooting.begins_o3", "uses": ["Becoming.Rooms.begins_open"]}
+{"name": "Becoming.Rooms.Overshooting.begins_o4", "uses": ["Becoming.Rooms.begins_open"]}
+{"name": "Becoming.Rooms.Overshooting.begins_open_line", "uses": []}
+{"name": "Becoming.Rooms.Overshooting.closed", "uses": ["Becoming.Rooms.net_open", "Becoming.Rooms.net_shut"]}
+{"name": "Becoming.Rooms.Overshooting.closed_open", "uses": ["Becoming.Rooms.net_open"]}
+{"name": "Becoming.Rooms.Overshooting.generates", "uses": ["Becoming.Rooms.Overshooting.renews"]}
+{"name": "Becoming.Rooms.Overshooting.generates_open", "uses": ["Becoming.Rooms.Overshooting.begins_o3", "Becoming.Rooms.Overshooting.begins_o4", "Becoming.Rooms.Overshooting.begins_open_line", "Becoming.Rooms.Overshooting.o3_o4", "Becoming.Rooms.Overshooting.o4_o3"]}
+{"name": "Becoming.Rooms.Overshooting.generation", "uses": ["Becoming.Rooms.Overshooting.reach", "Becoming.Rooms.Overshooting.renews"]}
+{"name": "Becoming.Rooms.Overshooting.generation_strong", "uses": ["Becoming.Rooms.Overshooting.generation"]}
+{"name": "Becoming.Rooms.Overshooting.keeps", "uses": ["Becoming.Rooms.not_begins_start", "Becoming.Rooms.rest_step"]}
+{"name": "Becoming.Rooms.Overshooting.not_keepsAfter_open", "uses": ["Becoming.Rooms.Overshooting.begins_o3", "Becoming.Rooms.Overshooting.begins_o4", "Becoming.Rooms.Overshooting.closed_open", "Becoming.Rooms.net_open", "Becoming.«闭之及»"]}
+{"name": "Becoming.Rooms.Overshooting.o3_o4", "uses": ["Becoming.Rooms.opens"]}
+{"name": "Becoming.Rooms.Overshooting.o4_o3", "uses": ["Becoming.Rooms.opens"]}
+{"name": "Becoming.Rooms.Overshooting.openNet_single", "uses": ["Becoming.Rooms.net_open"]}
+{"name": "Becoming.Rooms.Overshooting.reach", "uses": ["Becoming.Rooms.Overshooting.closed", "Becoming.«闭之及»"]}
+{"name": "Becoming.Rooms.Overshooting.renewing_steps", "uses": ["Becoming.Rooms.Overshooting.begins_o3", "Becoming.Rooms.Overshooting.begins_o4", "Becoming.Rooms.Overshooting.o3_o4", "Becoming.Rooms.Overshooting.o4_o3", "Becoming.Rooms.Overshooting.s3_o4", "Becoming.Rooms.net_open", "Becoming.Rooms.not_begins_start"]}
+{"name": "Becoming.Rooms.Overshooting.renews", "uses": ["Becoming.Rooms.Overshooting.begins_o3", "Becoming.Rooms.Overshooting.begins_o4", "Becoming.Rooms.Overshooting.o3_o4", "Becoming.Rooms.Overshooting.o4_o3", "Becoming.Rooms.Overshooting.s3_o4"]}
+{"name": "Becoming.Rooms.Overshooting.rows", "uses": ["Becoming.Rooms.Overshooting.generates", "Becoming.Rooms.Overshooting.generation", "Becoming.Rooms.Overshooting.not_keepsAfter_open", "Becoming.«全生成全守不并»", "Becoming.«全生成有终不并»", "Becoming.«守则后守»", "Becoming.«生成退化不并»"]}
+{"name": "Becoming.Rooms.Overshooting.s3_o4", "uses": ["Becoming.Rooms.opens"]}
+{"name": "Becoming.Rooms.Overshooting.single_line_tested", "uses": ["Becoming.Rooms.Overshooting.generates", "Becoming.Rooms.Overshooting.generates_open", "Becoming.Rooms.Overshooting.keeps", "Becoming.Rooms.Overshooting.openNet_single", "Becoming.Rooms.Overshooting.s3_o4", "Becoming.Rooms.rest_step", "Becoming.«单行则生成后守不并»", "Becoming.«守则后守»"]}
+{"name": "Becoming.Rooms.Unheated.b1_b0", "uses": ["Becoming.Rooms.cools"]}
+{"name": "Becoming.Rooms.Unheated.b1_ends", "uses": ["Becoming.Rooms.cold_after"]}
+{"name": "Becoming.Rooms.Unheated.b2_b1", "uses": ["Becoming.Rooms.cools"]}
+{"name": "Becoming.Rooms.Unheated.begins_b1", "uses": ["Becoming.Rooms.begins_open"]}
+{"name": "Becoming.Rooms.Unheated.begins_b2", "uses": ["Becoming.Rooms.begins_open"]}
+{"name": "Becoming.Rooms.Unheated.closed", "uses": ["Becoming.Rooms.Unheated.b1_ends", "Becoming.Rooms.net_open", "Becoming.Rooms.net_shut"]}
+{"name": "Becoming.Rooms.Unheated.ends", "uses": ["Becoming.Rooms.Unheated.b1_ends", "Becoming.Rooms.Unheated.b2_b1", "Becoming.Rooms.Unheated.s3_b2"]}
+{"name": "Becoming.Rooms.Unheated.ends_b1", "uses": ["Becoming.Rooms.Unheated.b1_ends"]}
+{"name": "Becoming.Rooms.Unheated.ends_b2", "uses": ["Becoming.Rooms.Unheated.ends_b1", "Becoming.Rooms.net_open"]}
+{"name": "Becoming.Rooms.Unheated.keeps", "uses": ["Becoming.Rooms.not_begins_start", "Becoming.Rooms.rest_step"]}
+{"name": "Becoming.Rooms.Unheated.not_generates", "uses": ["Becoming.Rooms.Unheated.b1_ends", "Becoming.Rooms.Unheated.reach", "Becoming.Rooms.net_open", "Becoming.Rooms.net_shut", "Becoming.Rooms.not_begins_start"]}
+{"name": "Becoming.Rooms.Unheated.reach", "uses": ["Becoming.Rooms.Unheated.closed", "Becoming.«闭之及»"]}
+{"name": "Becoming.Rooms.Unheated.rows", "uses": ["Becoming.Rooms.Unheated.b1_ends", "Becoming.Rooms.Unheated.b2_b1", "Becoming.Rooms.Unheated.ends", "Becoming.Rooms.Unheated.ends_b2", "Becoming.Rooms.Unheated.keeps", "Becoming.Rooms.rest_step", "Becoming.«全守有终不并»", "Becoming.«全生成有终不并»", "Becoming.«后守退化不并»", "Becoming.«守则后守»", "Becoming.«有终则粗不有常»", "Becoming.«生成退化不并»"]}
+{"name": "Becoming.Rooms.Unheated.s3_b2", "uses": ["Becoming.Rooms.cools"]}
+{"name": "Becoming.Rooms.alike_class", "uses": []}
+{"name": "Becoming.Rooms.alike_in_core_iff", "uses": ["Becoming.Rooms.alike_class", "Becoming.Rooms.«温有常当且仅当有给»", "Becoming.«类有常当且仅当含于核»"]}
+{"name": "Becoming.Rooms.before_at_one", "uses": []}
+{"name": "Becoming.Rooms.before_pos", "uses": ["Becoming.Rooms.exchange_ge"]}
+{"name": "Becoming.Rooms.before_unheated", "uses": ["Becoming.Rooms.heater_zero"]}
+{"name": "Becoming.Rooms.before_window_moves", "uses": []}
+{"name": "Becoming.Rooms.begins_open", "uses": []}
+{"name": "Becoming.Rooms.cold_after", "uses": ["Becoming.Rooms.net_open", "Becoming.Rooms.next_zero"]}
+{"name": "Becoming.Rooms.cold_rests", "uses": ["Becoming.Rooms.cold_step", "Becoming.Rooms.next_zero", "Becoming.«闭之及»"]}
+{"name": "Becoming.Rooms.cold_step", "uses": ["Becoming.Rooms.net_open", "Becoming.Rooms.next_zero"]}
+{"name": "Becoming.Rooms.cools", "uses": ["Becoming.Rooms.next_zero"]}
+{"name": "Becoming.Rooms.cools_to", "uses": ["Becoming.Rooms.cools", "Becoming.«所及之传递»"]}
+{"name": "Becoming.Rooms.empties", "uses": ["Becoming.Rooms.cools", "Becoming.Rooms.heated_warm"]}
+{"name": "Becoming.Rooms.exchange_ge", "uses": []}
+{"name": "Becoming.Rooms.heated_unended", "uses": ["Becoming.Rooms.rest_step", "Becoming.Rooms.«温有常当且仅当有给»", "Becoming.«有常则往不穷»"]}
+{"name": "Becoming.Rooms.heated_warm", "uses": ["Becoming.Rooms.next_pos", "Becoming.Rooms.warm_of_pos"]}
+{"name": "Becoming.Rooms.heater_zero", "uses": []}
+{"name": "Becoming.Rooms.heaters_told_apart", "uses": ["Becoming.Rooms.Overshooting.s3_o4", "Becoming.Rooms.net_shut"]}
+{"name": "Becoming.Rooms.joint_converse", "uses": ["Becoming.Rooms.cold_after", "Becoming.Rooms.cools", "Becoming.Rooms.heated_warm", "Becoming.Rooms.opens", "Becoming.Rooms.warm_of_pos", "Becoming.«有亡之续则不有常»", "Becoming.«闭之及»"]}
+{"name": "Becoming.Rooms.lasts", "uses": ["Becoming.Rooms.heated_warm", "Becoming.Rooms.opens", "Becoming.Rooms.unheated_step", "Becoming.Rooms.warm_of_pos"]}
+{"name": "Becoming.Rooms.net_open", "uses": []}
+{"name": "Becoming.Rooms.net_shut", "uses": []}
+{"name": "Becoming.Rooms.next_pos", "uses": []}
+{"name": "Becoming.Rooms.next_rest", "uses": []}
+{"name": "Becoming.Rooms.next_zero", "uses": ["Becoming.Rooms.heater_zero"]}
+{"name": "Becoming.Rooms.not_begins_start", "uses": ["Becoming.Rooms.rest_step"]}
+{"name": "Becoming.Rooms.opens", "uses": []}
+{"name": "Becoming.Rooms.rest_step", "uses": ["Becoming.Rooms.next_rest"]}
+{"name": "Becoming.Rooms.shut_one_class_alike", "uses": ["Becoming.Rooms.warm_of_level", "Becoming.Rooms.«不开窗则同核»", "Becoming.«核之单调»"]}
+{"name": "Becoming.Rooms.shut_rest_step", "uses": ["Becoming.Rooms.next_rest"]}
+{"name": "Becoming.Rooms.shut_rests", "uses": ["Becoming.Rooms.shut_rest_step", "Becoming.Rooms.shut_start", "Becoming.«闭之及»"]}
+{"name": "Becoming.Rooms.shut_start", "uses": ["Becoming.Rooms.next_rest"]}
+{"name": "Becoming.Rooms.toy_branches", "uses": ["Becoming.Rooms.net_shut", "Becoming.Rooms.shut_start"]}
+{"name": "Becoming.Rooms.toy_verdict", "uses": ["Becoming.Rooms.toy_branches", "Becoming.Rooms.«开窗以温层如其余乃分»", "Becoming.«可分则不在核»"]}
+{"name": "Becoming.Rooms.unended_at_one", "uses": ["Becoming.Rooms.net_shut", "Becoming.Rooms.rest_step", "Becoming.Rooms.«温有常当且仅当有给»", "Becoming.«有常则往不穷»", "Becoming.«闭之及»"]}
+{"name": "Becoming.Rooms.unheated_step", "uses": ["Becoming.Rooms.exchange_ge", "Becoming.Rooms.next_zero"]}
+{"name": "Becoming.Rooms.warm_of_level", "uses": []}
+{"name": "Becoming.Rooms.warm_of_pos", "uses": []}
+{"name": "Becoming.Rooms.warms_open", "uses": []}
+{"name": "Becoming.Rooms.«不开窗则同核»", "uses": ["Becoming.Rooms.next_rest", "Becoming.Rooms.shut_start", "Becoming.«有常之逐点»"]}
+{"name": "Becoming.Rooms.«平衡守而有终»", "uses": ["Becoming.Rooms.Unheated.begins_b2", "Becoming.Rooms.Unheated.ends", "Becoming.Rooms.Unheated.keeps", "Becoming.Rooms.Unheated.not_generates", "Becoming.Rooms.Unheated.s3_b2", "Becoming.«守退化不并»"]}
+{"name": "Becoming.Rooms.«开窗以温层如其余乃分»", "uses": ["Becoming.Rooms.cools", "Becoming.Rooms.empties", "Becoming.Rooms.heated_warm", "Becoming.Rooms.lasts"]}
+{"name": "Becoming.Rooms.«开窗则一层可分»", "uses": ["Becoming.Rooms.cools", "Becoming.Rooms.net_shut", "Becoming.Rooms.next_rest", "Becoming.Rooms.warms_open", "Becoming.«可分则不在核»"]}
+{"name": "Becoming.Rooms.«开窗则平衡新而尽»", "uses": ["Becoming.Rooms.Unheated.b2_b1", "Becoming.Rooms.Unheated.begins_b1", "Becoming.Rooms.Unheated.ends_b2"]}
+{"name": "Becoming.Rooms.«有给之室以温不可分»", "uses": ["Becoming.Rooms.heated_warm", "Becoming.Rooms.opens", "Becoming.Rooms.warm_of_pos", "Becoming.«有常之逐点»"]}
+{"name": "Becoming.Rooms.«温不穷当且仅当有给»", "uses": ["Becoming.Rooms.cold_after", "Becoming.Rooms.cools", "Becoming.Rooms.cools_to", "Becoming.Rooms.rest_step", "Becoming.Rooms.«温有常当且仅当有给»", "Becoming.«所及之传递»", "Becoming.«有常则往不穷»"]}
+{"name": "Becoming.Rooms.«温有常当且仅当有给»", "uses": ["Becoming.Rooms.cold_after", "Becoming.Rooms.cools", "Becoming.Rooms.heated_warm", "Becoming.Rooms.opens", "Becoming.«有亡之续则不有常»", "Becoming.«有常之逐点»"]}
+{"name": "Becoming.Rooms.«给如所取则全守»", "uses": ["Becoming.Rooms.Matched.keeping", "Becoming.Rooms.Matched.not_generates"]}
+{"name": "Becoming.Rooms.«给过所取则生守相杂»", "uses": ["Becoming.Rooms.Overshooting.generates", "Becoming.Rooms.Overshooting.keeps"]}

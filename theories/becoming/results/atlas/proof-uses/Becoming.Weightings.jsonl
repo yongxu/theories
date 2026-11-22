@@ -1,0 +1,387 @@
+{"name": "Becoming.Capacities.calls", "uses": []}
+{"name": "Becoming.Capacities.copies_apart", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Capacities.demand_two", "uses": ["Becoming.Capacities.excess_succ", "Becoming.Capacities.steady"]}
+{"name": "Becoming.Capacities.distinct", "uses": []}
+{"name": "Becoming.Capacities.excess_succ", "uses": []}
+{"name": "Becoming.Capacities.jointly_feeds", "uses": ["Becoming.Feeders.user_outside", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Capacities.needs_both", "uses": ["Becoming.Flow.needs_giver_of_short"]}
+{"name": "Becoming.Capacities.needs_second", "uses": ["Becoming.Flow.needs_giver_of_short"]}
+{"name": "Becoming.Capacities.neither_alone", "uses": ["Becoming.Capacities.calls", "Becoming.Capacities.demand_two"]}
+{"name": "Becoming.Capacities.not_needs_first", "uses": ["Becoming.Capacities.second_alone_first_not"]}
+{"name": "Becoming.Capacities.second_alone_first_not", "uses": ["Becoming.Capacities.calls", "Becoming.Capacities.demand_two", "Becoming.Capacities.distinct", "Becoming.Feeders.user_outside", "Becoming.Flow.feedsAlone_iff"]}
+{"name": "Becoming.Capacities.second_in_degree", "uses": ["Becoming.Capacities.copies_apart", "Becoming.Capacities.distinct", "Becoming.Feeders.user_outside", "Becoming.Flow.least_giving"]}
+{"name": "Becoming.Capacities.steady", "uses": []}
+{"name": "Becoming.Chain.every_not_related", "uses": ["Becoming.Chain.third_not_within", "Becoming.Chain.third_related", "Becoming.subTrue_every_iff", "Becoming.subTrue_significantWithin_iff"]}
+{"name": "Becoming.Chain.third_not_within", "uses": []}
+{"name": "Becoming.Chain.third_related", "uses": ["Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Clearing.centers_retain_yet_loses", "uses": ["Becoming.Clearing.clearer_loses_dweller", "Becoming.Clearing.loses_beyond", "Becoming.Web.AdmitsWithin.narrow", "Becoming.Web.retains_atCenters_iff"]}
+{"name": "Becoming.Copies.carriesAlone", "uses": ["Becoming.Copies.user_not_copy"]}
+{"name": "Becoming.Copies.needsSome", "uses": []}
+{"name": "Becoming.Copies.two_copies", "uses": ["Becoming.Copies.carriesAlone", "Becoming.Copies.needsSome", "Becoming.needs_iff_only"]}
+{"name": "Becoming.Copies.user_not_copy", "uses": []}
+{"name": "Becoming.Divided.not_within", "uses": []}
+{"name": "Becoming.Divided.selfAscribed_not_invariant", "uses": ["Becoming.Divided.not_within", "Becoming.WithinClosure.refl", "Becoming.ownClosure_standpointInvariant_iff"]}
+{"name": "Becoming.Divided.withinSome_both", "uses": ["Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Feeders.drawsPast_withFirst", "uses": []}
+{"name": "Becoming.Feeders.drawsPast_withSecond", "uses": []}
+{"name": "Becoming.Feeders.fedOnlyBy_withFirst", "uses": ["Becoming.Feeders.mem_pair"]}
+{"name": "Becoming.Feeders.fedOnlyBy_withSecond", "uses": ["Becoming.Feeders.mem_pair"]}
+{"name": "Becoming.Feeders.mem_pair", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Feeders.partAlone", "uses": ["Becoming.Copies.user_not_copy", "Becoming.Feeders.drawsPast_withFirst", "Becoming.Feeders.drawsPast_withSecond", "Becoming.Feeders.fedOnlyBy_withFirst", "Becoming.Feeders.fedOnlyBy_withSecond", "Becoming.Feeders.mem_pair"]}
+{"name": "Becoming.Feeders.two_feeders", "uses": ["Becoming.Feeders.partAlone", "Becoming.Flow.needsSome_of_drawsPast", "Becoming.Flow.needs_giver_iff_only"]}
+{"name": "Becoming.Feeders.two_feeders_on", "uses": ["Becoming.Feeders.user_outside", "Becoming.Flow.needs_giver_iff_only_on"]}
+{"name": "Becoming.Feeders.user_outside", "uses": ["Becoming.Feeders.mem_pair"]}
+{"name": "Becoming.FeedersInTurn.calls", "uses": []}
+{"name": "Becoming.FeedersInTurn.needs_both", "uses": ["Becoming.Feeders.mem_pair", "Becoming.Feeders.user_outside", "Becoming.FeedersInTurn.calls", "Becoming.Flow.needs_giver_iff_alone"]}
+{"name": "Becoming.FeedersInTurn.possible", "uses": ["Becoming.Flow.drawnAcross_drawsPast", "Becoming.Flow.drawnAcross_fedOnlyOn"]}
+{"name": "Becoming.Flow.able_of_covers", "uses": ["Becoming.Flow.capacityWithout_split", "Becoming.excess_le_of_le_add"]}
+{"name": "Becoming.Flow.active_of_givesInto", "uses": ["Becoming.Naturals.pos_or_of_add_pos", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.active_of_givesWithin", "uses": ["Becoming.total_pos"]}
+{"name": "Becoming.Flow.active_of_withinFeedingUpTo", "uses": ["Becoming.Flow.gives_of_withinFeedingUpTo"]}
+{"name": "Becoming.Flow.capacityWithout_short", "uses": ["Becoming.Flow.otherCapacity_short", "Becoming.total_add", "Becoming.total_congr_on", "Becoming.total_eq_at"]}
+{"name": "Becoming.Flow.capacityWithout_split", "uses": ["Becoming.Flow.otherCapacity_split", "Becoming.total_add", "Becoming.total_congr_on", "Becoming.total_eq_at"]}
+{"name": "Becoming.Flow.centersWithin_feeding_of_common", "uses": ["Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.Flow.centersWithin_influence_of_common", "uses": ["Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.Flow.coupled_ending_ranked_below", "uses": ["Becoming.GroupEnding.Flow.coupled_generation_childless", "Becoming.Weighting.every_increasingInOwn_iff_includes"]}
+{"name": "Becoming.Flow.covers_of_drawsPast", "uses": ["Becoming.Flow.demand_le_replenishment", "Becoming.Flow.givenFrom_outside", "Becoming.Flow.others_le_capacityWithout", "Becoming.Flow.replenishment_split"]}
+{"name": "Becoming.Flow.demand_le_replenishment", "uses": ["Becoming.Flow.given_of_steady", "Becoming.Flow.rise_le_given", "Becoming.Flow.uptake_pos", "Becoming.total_add", "Becoming.total_congr_on", "Becoming.total_le"]}
+{"name": "Becoming.Flow.drawnAcross_acting", "uses": ["Becoming.Flow.drawnAcross_gives"]}
+{"name": "Becoming.Flow.drawnAcross_balancesOn", "uses": ["Becoming.add_sub_of_le", "Becoming.total_two"]}
+{"name": "Becoming.Flow.drawnAcross_drawsPast", "uses": ["Becoming.SupportGated.sub_pos_of_lt", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.drawnAcross_fedOnlyOn", "uses": ["Becoming.Flow.drawnAcross_acting", "Becoming.Flow.drawnAcross_balancesOn", "Becoming.Flow.drawnAcross_gives"]}
+{"name": "Becoming.Flow.drawnAcross_gives", "uses": []}
+{"name": "Becoming.Flow.fedFromStores_within", "uses": ["Becoming.Flow.take_le_storeFall", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.feedsAlone_iff", "uses": ["Becoming.Flow.demand_le_replenishment", "Becoming.Flow.leastDrawn_drawsPast", "Becoming.Flow.leastDrawn_fedOnlyWithin", "Becoming.Flow.leastDrawn_gives", "Becoming.Flow.needsSome_within", "Becoming.Web.callsForGiving_iff_demand_pos", "Becoming.total_le", "Becoming.total_le_at", "Becoming.total_pos", "Becoming.total_pos_of_mem", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.firstActiveOther_active", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Flow.firstActiveOther_mem", "uses": []}
+{"name": "Becoming.Flow.givenFrom_outside", "uses": ["Becoming.eq_zero_of_not_pos", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.given_of_steady", "uses": ["Becoming.across", "Becoming.add_right_cancel", "Becoming.eq_zero_of_not_pos", "Becoming.excess_pos"]}
+{"name": "Becoming.Flow.given_pos_of_calls", "uses": ["Becoming.le_of_add_le_add_right", "Becoming.le_total_of_mem", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.gives_of_withinFeedingUpTo", "uses": []}
+{"name": "Becoming.Flow.gradedDrawn_fedOnlyWithin", "uses": ["Becoming.Flow.capacityWithout_short", "Becoming.Flow.sharedDrawn_fedOnlyWithin", "Becoming.Flow.shortCapacity_le", "Becoming.le_add_excess"]}
+{"name": "Becoming.Flow.gradedDrawn_givenFrom_le", "uses": ["Becoming.Flow.sharedDrawn_given_le", "Becoming.Web.otherCapacity_le", "Becoming.total_eq_at"]}
+{"name": "Becoming.Flow.gradedStoreDrawn_balancesOn", "uses": ["Becoming.Flow.capacityWithout_short", "Becoming.Flow.gradedStoreDrawn_gives", "Becoming.Flow.sharedDrawn_given_members", "Becoming.across", "Becoming.eq_zero_of_not_pos", "Becoming.le_add_excess", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.gradedStoreDrawn_balances_store", "uses": ["Becoming.Flow.gradedStoreDrawn_gives", "Becoming.Flow.storeDrawn_taken_store", "Becoming.across", "Becoming.eq_zero_of_not_pos", "Becoming.excess_pos", "Becoming.mem_cons_cases", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.gradedStoreDrawn_drawsPast", "uses": ["Becoming.excess_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.gradedStoreDrawn_fedFromStores", "uses": ["Becoming.Flow.gradedStoreDrawn_balancesOn", "Becoming.Flow.gradedStoreDrawn_balances_store", "Becoming.Flow.gradedStoreDrawn_gives", "Becoming.Flow.sharedDrawn_given_le", "Becoming.Flow.shortCapacity_le", "Becoming.Web.otherCapacity_le", "Becoming.eq_zero_of_not_pos", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.gradedStoreDrawn_givenFrom_le", "uses": ["Becoming.Flow.gradedDrawn_givenFrom_le"]}
+{"name": "Becoming.Flow.gradedStoreDrawn_gives", "uses": ["Becoming.Flow.sharedDrawn_gives"]}
+{"name": "Becoming.Flow.leastDrawn_acting", "uses": ["Becoming.Flow.leastDrawn_gives"]}
+{"name": "Becoming.Flow.leastDrawn_balancesOn", "uses": ["Becoming.across", "Becoming.total_two"]}
+{"name": "Becoming.Flow.leastDrawn_drawsPast", "uses": ["Becoming.excess_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.leastDrawn_fedOnlyWithin", "uses": ["Becoming.Flow.leastDrawn_acting", "Becoming.Flow.leastDrawn_balancesOn", "Becoming.Flow.leastDrawn_given_total", "Becoming.Flow.leastDrawn_gives", "Becoming.Web.callsForGiving_iff_demand_pos", "Becoming.eq_zero_of_not_pos", "Becoming.mem_cons_cases", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.leastDrawn_given_total", "uses": ["Becoming.Web.total_drawnUnit", "Becoming.total_add", "Becoming.total_congr_on"]}
+{"name": "Becoming.Flow.leastDrawn_gives", "uses": ["Becoming.excess_pos"]}
+{"name": "Becoming.Flow.least_giving", "uses": ["Becoming.Amounts.total_steps_le", "Becoming.Flow.gradedDrawn_fedOnlyWithin", "Becoming.Flow.gradedDrawn_givenFrom_le", "Becoming.Flow.sharedDrawn_drawsPast", "Becoming.Flow.shortfalls_le_given"]}
+{"name": "Becoming.Flow.least_giving_from_stores", "uses": ["Becoming.Amounts.total_steps_le", "Becoming.Flow.fedFromStores_within", "Becoming.Flow.gradedStoreDrawn_drawsPast", "Becoming.Flow.gradedStoreDrawn_fedFromStores", "Becoming.Flow.gradedStoreDrawn_givenFrom_le", "Becoming.Flow.shortfalls_le_given"]}
+{"name": "Becoming.Flow.least_giving_of_possible", "uses": ["Becoming.Flow.able_of_covers", "Becoming.Flow.least_giving", "Becoming.Flow.possible_iff_covers"]}
+{"name": "Becoming.Flow.needsSome_of_drawsPast", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.needsSome_on"]}
+{"name": "Becoming.Flow.needsSome_on", "uses": ["Becoming.Flow.accumulates_on", "Becoming.Flow.uptake_pos", "Becoming.between_of_mem_steps", "Becoming.steps_ge", "Becoming.total_le", "Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.needsSome_tiers", "uses": ["Becoming.Flow.uptake_le_tiers", "Becoming.Flow.uptake_pos", "Becoming.between_of_mem_steps", "Becoming.steps_ge", "Becoming.total_le", "Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.needsSome_within", "uses": ["Becoming.Flow.needsSome_on"]}
+{"name": "Becoming.Flow.needsSome_without_end", "uses": ["Becoming.Flow.needsSome_on"]}
+{"name": "Becoming.Flow.needs_giver_iff_alone", "uses": ["Becoming.Flow.drawnAcross_drawsPast", "Becoming.Flow.drawnAcross_fedOnlyOn", "Becoming.Flow.drawnAcross_gives", "Becoming.Flow.firstActiveOther_active", "Becoming.Flow.firstActiveOther_mem", "Becoming.Flow.given_pos_of_calls", "Becoming.between_of_mem_steps", "Becoming.steps_of_within", "Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.needs_giver_iff_only", "uses": ["Becoming.Flow.needsSome_of_drawsPast", "Becoming.needsPart_iff_only"]}
+{"name": "Becoming.Flow.needs_giver_iff_only_on", "uses": ["Becoming.Flow.needsSome_on", "Becoming.Flow.partAlone_on", "Becoming.needsPart_iff_only"]}
+{"name": "Becoming.Flow.needs_giver_iff_only_within", "uses": ["Becoming.Flow.needsSome_within", "Becoming.Flow.partAlone_within_iff", "Becoming.needsPart_iff_only"]}
+{"name": "Becoming.Flow.needs_giver_iff_short", "uses": ["Becoming.Flow.needs_giver_of_short", "Becoming.Flow.sharedDrawn_drawsPast", "Becoming.Flow.sharedDrawn_fedOnlyWithin", "Becoming.Flow.sharedDrawn_not_gives", "Becoming.between_of_mem_steps", "Becoming.steps_of_within"]}
+{"name": "Becoming.Flow.needs_giver_iff_shortfalls_pos", "uses": ["Becoming.Flow.needs_giver_iff_short", "Becoming.between_of_mem_steps", "Becoming.excess_pos", "Becoming.steps_of_within", "Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.needs_giver_iff_store_short", "uses": ["Becoming.Flow.fedFromStores_within", "Becoming.Flow.needs_giver_of_short", "Becoming.Flow.storeDrawn_drawsPast", "Becoming.Flow.storeDrawn_fedFromStores", "Becoming.Flow.storeDrawn_not_gives", "Becoming.between_of_mem_steps", "Becoming.steps_of_within"]}
+{"name": "Becoming.Flow.needs_giver_of_short", "uses": ["Becoming.Flow.demand_le_replenishment", "Becoming.le_total_of_mem", "Becoming.total_le", "Becoming.total_le_at", "Becoming.total_pos", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.needs_iff_none_of_inactive", "uses": ["Becoming.Flow.active_of_givesWithin"]}
+{"name": "Becoming.Flow.needs_iff_through_short", "uses": ["Becoming.Flow.demand_le_replenishment", "Becoming.Flow.replenishment_le_othersThrough", "Becoming.Flow.routedDrawn_drawsPast", "Becoming.Flow.routedDrawn_fedThroughStores", "Becoming.Flow.routedDrawn_not_gives", "Becoming.Flow.storesRisen_le_capacity", "Becoming.between_of_mem_steps", "Becoming.eq_zero_of_not_pos", "Becoming.steps_of_within"]}
+{"name": "Becoming.Flow.needs_into_iff_none_of_inactive", "uses": ["Becoming.Flow.active_of_givesInto"]}
+{"name": "Becoming.Flow.needs_of_class_short", "uses": ["Becoming.Flow.covers_of_drawsPast", "Becoming.needsPart_of_none"]}
+{"name": "Becoming.Flow.otherCapacity_short", "uses": []}
+{"name": "Becoming.Flow.otherCapacity_split", "uses": []}
+{"name": "Becoming.Flow.others_le_capacityWithout", "uses": ["Becoming.le_total_of_mem", "Becoming.total_le", "Becoming.total_le_at", "Becoming.total_pos", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.ownClosure_feeding_invariant_of_common", "uses": ["Becoming.Flow.centersWithin_feeding_of_common", "Becoming.ownClosure_standpointInvariant_iff_centersWithin"]}
+{"name": "Becoming.Flow.ownClosure_influence_invariant_of_common", "uses": ["Becoming.Flow.centersWithin_influence_of_common", "Becoming.ownClosure_standpointInvariant_iff_centersWithin"]}
+{"name": "Becoming.Flow.partAlone_on", "uses": ["Becoming.Flow.drawnAcross_drawsPast", "Becoming.Flow.drawnAcross_fedOnlyOn", "Becoming.Flow.drawnAcross_gives", "Becoming.Flow.needsSome_on", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.partAlone_within_iff", "uses": ["Becoming.Flow.feedsAlone_iff"]}
+{"name": "Becoming.Flow.passed_le_drop", "uses": ["Becoming.Flow.passed_le_supply"]}
+{"name": "Becoming.Flow.passed_le_supply", "uses": ["Becoming.Flow.BalancesOn.over", "Becoming.Flow.replenishment_le_uptake"]}
+{"name": "Becoming.Flow.passed_zero_of_exhausted", "uses": ["Becoming.Flow.passed_le_drop"]}
+{"name": "Becoming.Flow.possible_iff_covers", "uses": ["Becoming.Flow.covers_of_drawsPast", "Becoming.Flow.sharedDrawn_drawsPast", "Becoming.Flow.sharedDrawn_fedOnlyWithin"]}
+{"name": "Becoming.Flow.replenishment_le_othersThrough", "uses": ["Becoming.Flow.replenishment_le_taken", "Becoming.Flow.rise_le_given", "Becoming.Flow.stores_given_le", "Becoming.Flow.taken_store", "Becoming.excess_add_of_le", "Becoming.le_excess_of_add_le", "Becoming.total_add", "Becoming.total_congr_on", "Becoming.total_eq_zero", "Becoming.total_le"]}
+{"name": "Becoming.Flow.replenishment_le_taken", "uses": ["Becoming.le_total_of_mem", "Becoming.total_eq_zero", "Becoming.total_le", "Becoming.total_pos", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.replenishment_le_uptake", "uses": ["Becoming.total_le", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.replenishment_split", "uses": ["Becoming.split_by", "Becoming.total_add", "Becoming.total_congr_on", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.rise_le_given", "uses": ["Becoming.Flow.given_of_steady", "Becoming.excess_pos"]}
+{"name": "Becoming.Flow.routedCapacity_covers", "uses": ["Becoming.Flow.firstActiveOther_active", "Becoming.Flow.firstActiveOther_mem", "Becoming.le_add_excess", "Becoming.le_total_of_mem", "Becoming.total_add", "Becoming.total_congr_on"]}
+{"name": "Becoming.Flow.routedDrawn_balancesOn", "uses": ["Becoming.Flow.routedCapacity_covers", "Becoming.Flow.routedDrawn_give_family", "Becoming.Flow.sharedDrawn_given_members", "Becoming.Flow.sharedDrawn_gives", "Becoming.ListTests.mem_append_iff", "Becoming.across", "Becoming.eq_zero_of_not_pos", "Becoming.total_append", "Becoming.total_congr_on", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.routedDrawn_balances_store", "uses": ["Becoming.Flow.routedDrawn_given_store", "Becoming.Flow.routedDrawn_taken_store", "Becoming.across", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Flow.routedDrawn_drawsPast", "uses": ["Becoming.excess_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.routedDrawn_fedThroughStores", "uses": ["Becoming.Flow.routedDrawn_balancesOn", "Becoming.Flow.routedDrawn_balances_store", "Becoming.Flow.routedDrawn_give_family", "Becoming.Flow.routedDrawn_give_store", "Becoming.Flow.routedGive_le", "Becoming.Flow.routedGive_pos", "Becoming.Flow.sharedDrawn_given_le", "Becoming.Flow.sharedDrawn_gives", "Becoming.ListTests.mem_append_iff", "Becoming.Naturals.pos_or_of_add_pos", "Becoming.Web.otherCapacity_le", "Becoming.distinct_append", "Becoming.total_congr_on"]}
+{"name": "Becoming.Flow.routedDrawn_give_family", "uses": ["Becoming.Flow.routedGive_family"]}
+{"name": "Becoming.Flow.routedDrawn_give_store", "uses": ["Becoming.Flow.sharedDrawn_gives", "Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.Flow.routedDrawn_given_store", "uses": ["Becoming.Flow.routedDrawn_give_store", "Becoming.Flow.routedGive_pos", "Becoming.Flow.routedGive_store", "Becoming.eq_zero_of_not_pos", "Becoming.total_append", "Becoming.total_congr_on", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.routedDrawn_not_gives", "uses": ["Becoming.Flow.routedDrawn_give_family", "Becoming.Flow.routedDrawn_give_store", "Becoming.Flow.routedGive_pos", "Becoming.Flow.sharedDrawn_quiet", "Becoming.eq_zero_of_not_pos", "Becoming.total_congr_on", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.routedDrawn_taken_store", "uses": ["Becoming.total_append", "Becoming.total_eq_at", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.routedGive_family", "uses": ["Becoming.Flow.routedGive_pos", "Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.Flow.routedGive_le", "uses": ["Becoming.Web.otherCapacity_le", "Becoming.mem_pairUp", "Becoming.mem_unitsOn", "Becoming.total_le", "Becoming.total_le_at", "Becoming.total_le_at_on", "Becoming.total_pairUp_snd_le", "Becoming.total_swap", "Becoming.total_unitsOn"]}
+{"name": "Becoming.Flow.routedGive_pos", "uses": ["Becoming.mem_pairUp", "Becoming.mem_unitsOn", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.routedGive_store", "uses": ["Becoming.Flow.storeNeed_total_le", "Becoming.mem_pairUp", "Becoming.mem_unitsOn", "Becoming.total_congr_on", "Becoming.total_eq_at", "Becoming.total_eq_zero", "Becoming.total_pairUp_fst", "Becoming.total_swap", "Becoming.total_unitsOn"]}
+{"name": "Becoming.Flow.routed_le", "uses": ["Becoming.excess_le_of_le_add"]}
+{"name": "Becoming.Flow.routed_zero", "uses": ["Becoming.eq_zero_of_not_pos", "Becoming.excess_pos"]}
+{"name": "Becoming.Flow.router_of_routed", "uses": ["Becoming.Flow.firstActiveOther_active", "Becoming.Flow.firstActiveOther_mem", "Becoming.Flow.routed_zero"]}
+{"name": "Becoming.Flow.sharedDrawn_acting", "uses": ["Becoming.Flow.sharedDrawn_gives"]}
+{"name": "Becoming.Flow.sharedDrawn_balancesOn", "uses": ["Becoming.Flow.sharedDrawn_given_members", "Becoming.Flow.sharedDrawn_gives", "Becoming.across", "Becoming.eq_zero_of_not_pos", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.sharedDrawn_drawsPast", "uses": ["Becoming.excess_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.sharedDrawn_fedOnlyWithin", "uses": ["Becoming.Flow.sharedDrawn_acting", "Becoming.Flow.sharedDrawn_balancesOn", "Becoming.Flow.sharedDrawn_given_le", "Becoming.Flow.sharedDrawn_gives", "Becoming.Web.otherCapacity_le"]}
+{"name": "Becoming.Flow.sharedDrawn_given_le", "uses": ["Becoming.total_le", "Becoming.total_le_at", "Becoming.total_pairUp_snd_le", "Becoming.total_swap", "Becoming.total_unitsOn"]}
+{"name": "Becoming.Flow.sharedDrawn_given_members", "uses": ["Becoming.Web.mem_shares", "Becoming.Web.total_demandAt", "Becoming.total_congr_on", "Becoming.total_eq_at", "Becoming.total_eq_zero", "Becoming.total_pairUp_fst", "Becoming.total_swap", "Becoming.total_unitsOn"]}
+{"name": "Becoming.Flow.sharedDrawn_gives", "uses": ["Becoming.Web.mem_shares", "Becoming.total_pos"]}
+{"name": "Becoming.Flow.sharedDrawn_not_gives", "uses": ["Becoming.Flow.sharedDrawn_quiet"]}
+{"name": "Becoming.Flow.sharedDrawn_quiet", "uses": ["Becoming.Flow.sharedDrawn_given_le"]}
+{"name": "Becoming.Flow.shortCapacity_le", "uses": ["Becoming.Web.otherCapacity_le"]}
+{"name": "Becoming.Flow.shortfall_le_givenFrom", "uses": ["Becoming.Flow.demand_le_replenishment", "Becoming.Flow.others_le_capacityWithout", "Becoming.Flow.replenishment_split", "Becoming.excess_le_of_le_add"]}
+{"name": "Becoming.Flow.shortfalls_le_given", "uses": ["Becoming.Amounts.total_steps_le", "Becoming.Flow.shortfall_le_givenFrom"]}
+{"name": "Becoming.Flow.storeDrawn_balancesOn", "uses": ["Becoming.Flow.sharedDrawn_given_members", "Becoming.Flow.sharedDrawn_gives", "Becoming.across", "Becoming.eq_zero_of_not_pos", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.storeDrawn_balances_store", "uses": ["Becoming.Flow.storeDrawn_given_store", "Becoming.Flow.storeDrawn_taken_store", "Becoming.across", "Becoming.eq_zero_of_not_pos", "Becoming.excess_pos", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Flow.storeDrawn_drawsPast", "uses": ["Becoming.excess_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.storeDrawn_fedFromStores", "uses": ["Becoming.Flow.sharedDrawn_given_le", "Becoming.Flow.sharedDrawn_gives", "Becoming.Flow.storeDrawn_balancesOn", "Becoming.Flow.storeDrawn_balances_store", "Becoming.Flow.storeDrawn_given_store", "Becoming.Web.otherCapacity_le"]}
+{"name": "Becoming.Flow.storeDrawn_given_store", "uses": ["Becoming.Flow.sharedDrawn_gives", "Becoming.eq_zero_of_not_pos", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.storeDrawn_not_gives", "uses": ["Becoming.Flow.sharedDrawn_not_gives"]}
+{"name": "Becoming.Flow.storeDrawn_taken_store", "uses": ["Becoming.total_eq_at"]}
+{"name": "Becoming.Flow.storeNeed_total_le", "uses": ["Becoming.Flow.routed_le", "Becoming.Flow.routed_zero", "Becoming.excess_add_of_le", "Becoming.total_add", "Becoming.total_le_at"]}
+{"name": "Becoming.Flow.storesRisen_le_capacity", "uses": ["Becoming.Flow.storesRisen_le_given", "Becoming.Flow.stores_given_le"]}
+{"name": "Becoming.Flow.storesRisen_le_given", "uses": ["Becoming.Flow.rise_le_given", "Becoming.total_le"]}
+{"name": "Becoming.Flow.stores_given_le", "uses": ["Becoming.le_total_of_mem", "Becoming.total_le", "Becoming.total_le_at", "Becoming.total_pos", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.take_le_storeFall", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.across", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.Flow.taken_store", "uses": ["Becoming.Flow.rise_le_given", "Becoming.Naturals.add_left_cancel", "Becoming.across", "Becoming.excess_add_of_le"]}
+{"name": "Becoming.Flow.uptake_le_tiers", "uses": ["Becoming.Amounts.total_steps_le", "Becoming.Flow.accumulates_on", "Becoming.Flow.replenishment_le_uptake"]}
+{"name": "Becoming.Flow.withinFeeding_of_upTo", "uses": []}
+{"name": "Becoming.Framed.framing_alone", "uses": ["Becoming.Framed.increasing", "Becoming.Framed.widensBy", "Becoming.Weighting.reads_increasingAt"]}
+{"name": "Becoming.Framed.increasing", "uses": ["Becoming.Weighting.ranksNet_increasingAt"]}
+{"name": "Becoming.Framed.widensBy", "uses": []}
+{"name": "Becoming.Interacting.alone", "uses": []}
+{"name": "Becoming.Interacting.eq_true_of_not_false", "uses": []}
+{"name": "Becoming.Interacting.increment_differs", "uses": []}
+{"name": "Becoming.Interacting.jointly", "uses": ["Becoming.Interacting.eq_true_of_not_false"]}
+{"name": "Becoming.Interacting.not_net", "uses": ["Becoming.Interacting.alone", "Becoming.Interacting.increment_differs", "Becoming.Interacting.jointly", "Becoming.Weighting.increment_transfer", "Becoming.Weighting.ranksNet_increment_alike"]}
+{"name": "Becoming.LevelTransfer.by_law", "uses": ["Becoming.LevelTransfer.concave_to", "Becoming.Weighting.prior_transfer"]}
+{"name": "Becoming.LevelTransfer.concave_to", "uses": []}
+{"name": "Becoming.LevelTransfer.decided", "uses": []}
+{"name": "Becoming.LevelTransfer.mixed", "uses": []}
+{"name": "Becoming.Needs.refl", "uses": []}
+{"name": "Becoming.Needs.trans", "uses": []}
+{"name": "Becoming.Overlapping.acting", "uses": ["Becoming.Overlapping.give_pos"]}
+{"name": "Becoming.Overlapping.closure_overreaches", "uses": ["Becoming.Flow.WithinFeeding.of_fedBy", "Becoming.Flow.WithinFeeding.trans", "Becoming.Flow.gives_of_withinFeedingUpTo", "Becoming.Flow.needs_iff_none_of_inactive", "Becoming.Overlapping.draws", "Becoming.Overlapping.fed", "Becoming.Overlapping.fed_first", "Becoming.Overlapping.fed_middle", "Becoming.Overlapping.last_quiet", "Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.Overlapping.draws", "uses": []}
+{"name": "Becoming.Overlapping.fed", "uses": ["Becoming.Overlapping.acting", "Becoming.Overlapping.give_pos", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Overlapping.fed_first", "uses": []}
+{"name": "Becoming.Overlapping.fed_middle", "uses": []}
+{"name": "Becoming.Overlapping.give_pos", "uses": []}
+{"name": "Becoming.Overlapping.last_quiet", "uses": []}
+{"name": "Becoming.OwnStores.apart", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.OwnStores.distinct", "uses": []}
+{"name": "Becoming.OwnStores.first_in_degree", "uses": ["Becoming.Flow.least_giving_from_stores", "Becoming.OwnStores.apart", "Becoming.OwnStores.distinct", "Becoming.OwnStores.own", "Becoming.OwnStores.separate", "Becoming.OwnStores.steady", "Becoming.OwnStores.user_outside"]}
+{"name": "Becoming.OwnStores.first_steady", "uses": []}
+{"name": "Becoming.OwnStores.needs_first", "uses": ["Becoming.Flow.needs_giver_iff_store_short", "Becoming.OwnStores.apart", "Becoming.OwnStores.distinct", "Becoming.OwnStores.own", "Becoming.OwnStores.separate", "Becoming.OwnStores.steady", "Becoming.OwnStores.user_outside"]}
+{"name": "Becoming.OwnStores.not_needs_second", "uses": ["Becoming.Flow.needs_giver_iff_store_short", "Becoming.OwnStores.apart", "Becoming.OwnStores.distinct", "Becoming.OwnStores.own", "Becoming.OwnStores.separate", "Becoming.OwnStores.steady", "Becoming.OwnStores.user_outside"]}
+{"name": "Becoming.OwnStores.own", "uses": []}
+{"name": "Becoming.OwnStores.second_spent", "uses": ["Becoming.Flow.fedFromStores_within", "Becoming.OwnStores.second_store_spent"]}
+{"name": "Becoming.OwnStores.second_steady", "uses": []}
+{"name": "Becoming.OwnStores.second_store_spent", "uses": []}
+{"name": "Becoming.OwnStores.separate", "uses": ["Becoming.OwnStores.user_outside", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.OwnStores.steady", "uses": ["Becoming.OwnStores.first_steady", "Becoming.OwnStores.second_steady", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.OwnStores.user_outside", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Partial.cond_pos", "uses": []}
+{"name": "Becoming.Partial.not_gradeInvariant", "uses": []}
+{"name": "Becoming.Partial.ranks_differ", "uses": []}
+{"name": "Becoming.Partial.standing", "uses": ["Becoming.Partial.cond_pos"]}
+{"name": "Becoming.Routing.absent", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Routing.absent_nil", "uses": []}
+{"name": "Becoming.Routing.apart_four", "uses": ["Becoming.Routing.absent", "Becoming.Routing.absent_nil"]}
+{"name": "Becoming.Routing.apart_one", "uses": ["Becoming.Routing.absent_nil"]}
+{"name": "Becoming.Routing.apart_three", "uses": ["Becoming.Routing.absent_nil"]}
+{"name": "Becoming.Routing.apart_two", "uses": ["Becoming.Routing.absent", "Becoming.Routing.absent_nil"]}
+{"name": "Becoming.Routing.distinct", "uses": ["Becoming.Routing.absent_nil"]}
+{"name": "Becoming.Routing.every", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Routing.every_nil", "uses": []}
+{"name": "Becoming.Routing.fill_needs_top", "uses": ["Becoming.Flow.needs_iff_through_short", "Becoming.Routing.absent", "Becoming.Routing.absent_nil", "Becoming.Routing.apart_three", "Becoming.Routing.apart_two", "Becoming.Routing.distinct", "Becoming.Routing.own", "Becoming.Routing.separate", "Becoming.Routing.tiers_three"]}
+{"name": "Becoming.Routing.lone_router_needed", "uses": ["Becoming.Flow.needs_iff_through_short", "Becoming.Routing.absent", "Becoming.Routing.absent_nil", "Becoming.Routing.apart_one", "Becoming.Routing.apart_three", "Becoming.Routing.distinct", "Becoming.Routing.own", "Becoming.Routing.separate_one", "Becoming.Routing.tiers_one"]}
+{"name": "Becoming.Routing.own", "uses": []}
+{"name": "Becoming.Routing.possible", "uses": ["Becoming.Flow.routedDrawn_drawsPast", "Becoming.Flow.routedDrawn_fedThroughStores", "Becoming.Routing.absent", "Becoming.Routing.absent_nil", "Becoming.Routing.apart_four", "Becoming.Routing.apart_one", "Becoming.Routing.apart_three", "Becoming.Routing.apart_two", "Becoming.Routing.distinct", "Becoming.Routing.own", "Becoming.Routing.separate", "Becoming.Routing.separate_one", "Becoming.Routing.tiers", "Becoming.Routing.tiers_one", "Becoming.Routing.tiers_three"]}
+{"name": "Becoming.Routing.rise_needs_top", "uses": ["Becoming.Flow.needs_iff_through_short", "Becoming.Routing.absent", "Becoming.Routing.absent_nil", "Becoming.Routing.apart_four", "Becoming.Routing.apart_two", "Becoming.Routing.distinct", "Becoming.Routing.own", "Becoming.Routing.separate", "Becoming.Routing.tiers"]}
+{"name": "Becoming.Routing.router_not_needed", "uses": ["Becoming.Routing.absent", "Becoming.Routing.absent_nil", "Becoming.Routing.apart_three", "Becoming.Routing.apart_two", "Becoming.Routing.separate", "Becoming.Routing.still_law", "Becoming.Routing.tiers_three"]}
+{"name": "Becoming.Routing.separate", "uses": ["Becoming.Routing.absent", "Becoming.Routing.absent_nil", "Becoming.Routing.every", "Becoming.Routing.every_nil"]}
+{"name": "Becoming.Routing.separate_one", "uses": ["Becoming.Routing.absent", "Becoming.Routing.absent_nil", "Becoming.Routing.every", "Becoming.Routing.every_nil"]}
+{"name": "Becoming.Routing.still_law", "uses": ["Becoming.Flow.needs_iff_through_short", "Becoming.Routing.distinct", "Becoming.Routing.own"]}
+{"name": "Becoming.Routing.tiers", "uses": ["Becoming.Routing.absent", "Becoming.Routing.absent_nil", "Becoming.Routing.every", "Becoming.Routing.every_nil"]}
+{"name": "Becoming.Routing.tiers_one", "uses": ["Becoming.Routing.absent", "Becoming.Routing.absent_nil", "Becoming.Routing.every", "Becoming.Routing.every_nil"]}
+{"name": "Becoming.Routing.tiers_three", "uses": ["Becoming.Routing.absent", "Becoming.Routing.absent_nil", "Becoming.Routing.every", "Becoming.Routing.every_nil"]}
+{"name": "Becoming.Routing.top_needed", "uses": ["Becoming.Flow.needs_iff_through_short", "Becoming.Routing.absent", "Becoming.Routing.absent_nil", "Becoming.Routing.apart_three", "Becoming.Routing.apart_two", "Becoming.Routing.distinct", "Becoming.Routing.own", "Becoming.Routing.separate", "Becoming.Routing.tiers_three"]}
+{"name": "Becoming.Routing.tops_not_needed", "uses": ["Becoming.Routing.absent", "Becoming.Routing.absent_nil", "Becoming.Routing.apart_four", "Becoming.Routing.apart_two", "Becoming.Routing.separate", "Becoming.Routing.still_law", "Becoming.Routing.tiers"]}
+{"name": "Becoming.SharedCopies.apart", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.SharedCopies.calls", "uses": []}
+{"name": "Becoming.SharedCopies.cap_le_one", "uses": []}
+{"name": "Becoming.SharedCopies.demand_two", "uses": ["Becoming.Capacities.excess_succ", "Becoming.SharedCopies.steady"]}
+{"name": "Becoming.SharedCopies.distinct", "uses": []}
+{"name": "Becoming.SharedCopies.needs_some", "uses": ["Becoming.Flow.needsSome_within"]}
+{"name": "Becoming.SharedCopies.none_alone", "uses": ["Becoming.SharedCopies.calls", "Becoming.SharedCopies.cap_le_one", "Becoming.SharedCopies.demand_two"]}
+{"name": "Becoming.SharedCopies.none_needed", "uses": ["Becoming.Flow.needs_giver_iff_short", "Becoming.SharedCopies.apart", "Becoming.SharedCopies.demand_two", "Becoming.SharedCopies.distinct", "Becoming.SharedCopies.user_outside", "Becoming.SharedCopies.without_two"]}
+{"name": "Becoming.SharedCopies.steady", "uses": []}
+{"name": "Becoming.SharedCopies.user_outside", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.SharedCopies.without_two", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.TwoTiers.drawn_not_supply", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.TwoTiers.needs_source", "uses": ["Becoming.Flow.needsSome_tiers"]}
+{"name": "Becoming.TwoTiers.possible", "uses": ["Becoming.TwoTiers.drawn_not_supply"]}
+{"name": "Becoming.Web.admitsWithin_forced_iff", "uses": ["Becoming.forced_iff_center"]}
+{"name": "Becoming.Web.admitsWithin_forced_within_some_iff", "uses": ["Becoming.forced_iff_within_some"]}
+{"name": "Becoming.Web.callsForGiving_iff_demand_pos", "uses": ["Becoming.excess_pos", "Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Web.mem_shares", "uses": ["Becoming.mem_pairUp", "Becoming.mem_unitsOn"]}
+{"name": "Becoming.Web.not_widens_of_closes", "uses": []}
+{"name": "Becoming.Web.otherCapacity_le", "uses": []}
+{"name": "Becoming.Web.retains_atCenters_iff", "uses": ["Becoming.Web.retains_bounded_iff"]}
+{"name": "Becoming.Web.total_demandAt", "uses": ["Becoming.Web.total_drawnUnit", "Becoming.total_add"]}
+{"name": "Becoming.Web.total_drawnUnit", "uses": ["Becoming.le_total_of_mem", "Becoming.total_eq_zero", "Becoming.total_le_at"]}
+{"name": "Becoming.Web.widens_iff_every_of_class", "uses": ["Becoming.Web.widens_iff_every_weighting", "Becoming.Weighting.widens_iff_every_of_class", "Becoming.Weighting.widens_iff_every_positive"]}
+{"name": "Becoming.Web.widens_iff_every_weighting", "uses": ["Becoming.Weighting.widens_iff_every_positive"]}
+{"name": "Becoming.Weighting.WidensOn.not_reverse", "uses": ["Becoming.Weighting.widensOn_iff", "Becoming.«广不可逆»"]}
+{"name": "Becoming.Weighting.WidensOn.trans", "uses": ["Becoming.Weighting.widensOn_iff", "Becoming.«广之传递»"]}
+{"name": "Becoming.Weighting.add_le_add_iff", "uses": []}
+{"name": "Becoming.Weighting.and_swap", "uses": []}
+{"name": "Becoming.Weighting.beyond_lt", "uses": ["Becoming.ListTests.cond_zero_le", "Becoming.ListTests.false_of_not", "Becoming.Weighting.term_lt_of", "Becoming.Weighting.total_lt", "Becoming.bool_and_true", "Becoming.bool_of_and_true"]}
+{"name": "Becoming.Weighting.beyond_term_zero", "uses": []}
+{"name": "Becoming.Weighting.beyond_within", "uses": ["Becoming.ListTests.cond_zero_le", "Becoming.Naturals.mul_right_comm", "Becoming.Weighting.weighed_const", "Becoming.Weighting.weighed_scale", "Becoming.total_congr", "Becoming.total_le"]}
+{"name": "Becoming.Weighting.concave_gap", "uses": ["Becoming.Integers.nat_rearrange"]}
+{"name": "Becoming.Weighting.cond_between", "uses": []}
+{"name": "Becoming.Weighting.cond_mul", "uses": []}
+{"name": "Becoming.Weighting.cond_one_pos", "uses": []}
+{"name": "Becoming.Weighting.cond_pos_of", "uses": []}
+{"name": "Becoming.Weighting.cond_scale", "uses": []}
+{"name": "Becoming.Weighting.cond_zero", "uses": []}
+{"name": "Becoming.Weighting.const_lt_iff_beyond", "uses": ["Becoming.Weighting.ranks_le_past_ratio", "Becoming.Weighting.ranks_past_ratio"]}
+{"name": "Becoming.Weighting.ended_below", "uses": ["Becoming.Weighting.every_increasingInOwn_iff_includes", "Becoming.Weighting.includes_of_ended"]}
+{"name": "Becoming.Weighting.every_increasingInOwn_iff_includes", "uses": ["Becoming.Weighting.widensOwn_iff_every_increasingInOwn"]}
+{"name": "Becoming.Weighting.every_within_iff", "uses": ["Becoming.Weighting.ranks_past_ratio", "Becoming.Weighting.tilted_lt_iff", "Becoming.Weighting.tilted_positive", "Becoming.Weighting.tilted_within"]}
+{"name": "Becoming.Weighting.exceedsOn_iff", "uses": []}
+{"name": "Becoming.Weighting.exceeds_or_includes", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Weighting.gain_at", "uses": []}
+{"name": "Becoming.Weighting.grammar_widens_iff_every_positive", "uses": ["Becoming.Weighting.widensOn_iff", "Becoming.Weighting.widens_iff_every_positive"]}
+{"name": "Becoming.Weighting.includesOn_iff", "uses": []}
+{"name": "Becoming.Weighting.includes_of_ended", "uses": []}
+{"name": "Becoming.Weighting.includes_restrict", "uses": ["Becoming.bool_and_true", "Becoming.bool_of_and_true"]}
+{"name": "Becoming.Weighting.increasingInOwnOn_every_iff", "uses": ["Becoming.Weighting.increasingInOwnOn_of_increasingInOwn"]}
+{"name": "Becoming.Weighting.increasingInOwnOn_of_increasingInOwn", "uses": []}
+{"name": "Becoming.Weighting.increasingInOwn_iff_increasing", "uses": ["Becoming.Weighting.increasingInOwn_of_increasing"]}
+{"name": "Becoming.Weighting.increasingInOwn_of_increasing", "uses": []}
+{"name": "Becoming.Weighting.increasing_lexical", "uses": ["Becoming.Weighting.exceeds_or_includes", "Becoming.Weighting.gain_at", "Becoming.Weighting.includes_restrict"]}
+{"name": "Becoming.Weighting.increasing_prior", "uses": ["Becoming.Weighting.prior_lt_of_widens"]}
+{"name": "Becoming.Weighting.increasing_ranks", "uses": ["Becoming.Weighting.weighed_lt_of_widens"]}
+{"name": "Becoming.Weighting.increment_transfer", "uses": []}
+{"name": "Becoming.Weighting.le_of_strict", "uses": []}
+{"name": "Becoming.Weighting.level_le_of_includes", "uses": ["Becoming.Weighting.weighed_le_of_includes"]}
+{"name": "Becoming.Weighting.level_lt_of_includes_at", "uses": ["Becoming.Weighting.cond_one_pos", "Becoming.Weighting.term_le", "Becoming.Weighting.term_lt", "Becoming.Weighting.total_lt"]}
+{"name": "Becoming.Weighting.mixedOn_iff", "uses": ["Becoming.Weighting.exceedsOn_iff"]}
+{"name": "Becoming.Weighting.mixed_either_way", "uses": ["Becoming.Weighting.outweighs"]}
+{"name": "Becoming.Weighting.mixed_either_way_of_class", "uses": ["Becoming.Weighting.mixed_either_way"]}
+{"name": "Becoming.Weighting.mul_lt_mul_iff", "uses": ["Becoming.Naturals.lt_of_mul_lt_mul_left", "Becoming.Naturals.mul_lt_mul_of_pos"]}
+{"name": "Becoming.Weighting.narrower_above_net", "uses": ["Becoming.Weighting.ranksNet_increasingAt", "Becoming.Weighting.reads_increasingAt"]}
+{"name": "Becoming.Weighting.neutral_ranks_by_number", "uses": ["Becoming.Weighting.const_lt_iff_beyond", "Becoming.Weighting.weighed_lt_iff_beyond"]}
+{"name": "Becoming.Weighting.opposite_within_iff", "uses": ["Becoming.Weighting.some_within_reverses_iff"]}
+{"name": "Becoming.Weighting.outweighs", "uses": ["Becoming.Weighting.size_le_length", "Becoming.Weighting.size_pos_of_exceeds", "Becoming.Weighting.some_within_reverses_iff"]}
+{"name": "Becoming.Weighting.pos_of_lt_mul", "uses": []}
+{"name": "Becoming.Weighting.prior_lt_of_widens", "uses": ["Becoming.Weighting.le_of_strict", "Becoming.Weighting.level_le_of_includes", "Becoming.Weighting.level_lt_of_includes_at", "Becoming.Weighting.total_lt"]}
+{"name": "Becoming.Weighting.prior_transfer", "uses": ["Becoming.Weighting.concave_gap", "Becoming.total_congr_on"]}
+{"name": "Becoming.Weighting.ranksNet_iff_beyond", "uses": ["Becoming.Naturals.add_lt_add_left_iff", "Becoming.Weighting.weighed_split", "Becoming.Weighting.weighed_split_right"]}
+{"name": "Becoming.Weighting.ranksNet_increasingAt", "uses": ["Becoming.Weighting.ranksNet_widensBy"]}
+{"name": "Becoming.Weighting.ranksNet_increment_alike", "uses": ["Becoming.Weighting.increment_transfer", "Becoming.Weighting.ranksNet_widensBy"]}
+{"name": "Becoming.Weighting.ranksNet_lt_of_widens", "uses": ["Becoming.Weighting.beyond_lt", "Becoming.Weighting.ranksNet_iff_beyond", "Becoming.Weighting.weighed_beyond_of_includes"]}
+{"name": "Becoming.Weighting.ranksNet_ties", "uses": ["Becoming.Weighting.ranksNet_widensBy"]}
+{"name": "Becoming.Weighting.ranksNet_widensBy", "uses": ["Becoming.Weighting.mul_lt_mul_iff", "Becoming.Weighting.ranksNet_iff_beyond", "Becoming.Weighting.size_widensBy_pos", "Becoming.Weighting.weighed_beyond_of_includes", "Becoming.Weighting.weighed_widensBy"]}
+{"name": "Becoming.Weighting.ranks_alike_of_gradeInvariant", "uses": ["Becoming.Weighting.weighed_eq_of_gradeInvariant"]}
+{"name": "Becoming.Weighting.ranks_le_past_ratio", "uses": ["Becoming.Naturals.mul_lt_mul_of_pos", "Becoming.Naturals.mul_right_comm", "Becoming.Weighting.beyond_within", "Becoming.Weighting.weighed_le_iff_beyond", "Becoming.Weighting.weighed_zero_of_size"]}
+{"name": "Becoming.Weighting.ranks_past_ratio", "uses": ["Becoming.Naturals.mul_right_comm", "Becoming.Weighting.beyond_within", "Becoming.Weighting.mul_lt_mul_iff", "Becoming.Weighting.pos_of_lt_mul", "Becoming.Weighting.weighed_lt_iff_beyond", "Becoming.Weighting.weighed_pos_of_size"]}
+{"name": "Becoming.Weighting.reads_increasingAt", "uses": []}
+{"name": "Becoming.Weighting.reads_increment", "uses": ["Becoming.Weighting.reads_increment_of"]}
+{"name": "Becoming.Weighting.reads_increment_of", "uses": []}
+{"name": "Becoming.Weighting.reads_ranksNet", "uses": ["Becoming.Weighting.ranksNet_widensBy"]}
+{"name": "Becoming.Weighting.reads_ranksNet_widens", "uses": ["Becoming.Weighting.ranksNet_lt_of_widens"]}
+{"name": "Becoming.Weighting.size_le_length", "uses": ["Becoming.cond_le_one", "Becoming.total_le", "Becoming.total_ones"]}
+{"name": "Becoming.Weighting.size_pos_of_exceeds", "uses": ["Becoming.Weighting.cond_one_pos", "Becoming.bool_and_true", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Weighting.size_widensBy_pos", "uses": ["Becoming.Weighting.cond_one_pos", "Becoming.bool_and_true", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Weighting.some_increasingInOwn_reverses", "uses": ["Becoming.Weighting.increasingInOwn_of_increasing", "Becoming.Weighting.increasing_ranks", "Becoming.Weighting.outweighs"]}
+{"name": "Becoming.Weighting.some_within_reverses_iff", "uses": ["Becoming.Weighting.ranks_le_past_ratio", "Becoming.Weighting.tilted_gt_iff", "Becoming.Weighting.tilted_positive", "Becoming.Weighting.tilted_within"]}
+{"name": "Becoming.Weighting.standingInvariant_of_gradeInvariant", "uses": []}
+{"name": "Becoming.Weighting.sufficient_ties", "uses": ["Becoming.total_congr_on"]}
+{"name": "Becoming.Weighting.term_eq_at", "uses": []}
+{"name": "Becoming.Weighting.term_le", "uses": []}
+{"name": "Becoming.Weighting.term_lt", "uses": []}
+{"name": "Becoming.Weighting.term_lt_of", "uses": []}
+{"name": "Becoming.Weighting.term_split", "uses": []}
+{"name": "Becoming.Weighting.tilt_beyond", "uses": []}
+{"name": "Becoming.Weighting.tilt_toward", "uses": []}
+{"name": "Becoming.Weighting.tilted_gt_iff", "uses": ["Becoming.Weighting.weighed_lt_iff_beyond", "Becoming.Weighting.weighed_tilted_beyond", "Becoming.Weighting.weighed_tilted_toward"]}
+{"name": "Becoming.Weighting.tilted_lt_iff", "uses": ["Becoming.Weighting.weighed_lt_iff_beyond", "Becoming.Weighting.weighed_tilted_beyond", "Becoming.Weighting.weighed_tilted_toward"]}
+{"name": "Becoming.Weighting.tilted_positive", "uses": ["Becoming.Weighting.cond_between"]}
+{"name": "Becoming.Weighting.tilted_ties", "uses": ["Becoming.Weighting.weighed_split", "Becoming.Weighting.weighed_split_right", "Becoming.Weighting.weighed_tilted_beyond", "Becoming.Weighting.weighed_tilted_toward"]}
+{"name": "Becoming.Weighting.tilted_within", "uses": ["Becoming.Weighting.cond_between"]}
+{"name": "Becoming.Weighting.total_lt", "uses": ["Becoming.mem_cons_cases", "Becoming.total_le"]}
+{"name": "Becoming.Weighting.weighed_beyond_of_includes", "uses": ["Becoming.Weighting.beyond_term_zero", "Becoming.total_congr_on", "Becoming.total_zero"]}
+{"name": "Becoming.Weighting.weighed_const", "uses": ["Becoming.Weighting.cond_mul", "Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.Weighting.weighed_eq_of_gradeInvariant", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.Weighting.weighed_eq_of_unweighted", "uses": ["Becoming.total_congr_on"]}
+{"name": "Becoming.Weighting.weighed_le_iff_beyond", "uses": ["Becoming.Weighting.add_le_add_iff", "Becoming.Weighting.weighed_split", "Becoming.Weighting.weighed_split_right"]}
+{"name": "Becoming.Weighting.weighed_le_of_includes", "uses": ["Becoming.Weighting.term_le", "Becoming.total_le"]}
+{"name": "Becoming.Weighting.weighed_lt_iff_beyond", "uses": ["Becoming.Naturals.add_lt_add_left_iff", "Becoming.Weighting.weighed_split", "Becoming.Weighting.weighed_split_right"]}
+{"name": "Becoming.Weighting.weighed_lt_of_widens", "uses": ["Becoming.Weighting.ranksNet.eq_1", "Becoming.Weighting.ranksNet_lt_of_widens", "Becoming.Weighting.weighed_zero"]}
+{"name": "Becoming.Weighting.weighed_pos_of_size", "uses": ["Becoming.Weighting.cond_pos_of", "Becoming.total_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Weighting.weighed_scale", "uses": ["Becoming.Weighting.cond_scale", "Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.Weighting.weighed_shared", "uses": ["Becoming.Weighting.and_swap", "Becoming.total_congr"]}
+{"name": "Becoming.Weighting.weighed_split", "uses": ["Becoming.Weighting.term_split", "Becoming.total_add", "Becoming.total_congr"]}
+{"name": "Becoming.Weighting.weighed_split_right", "uses": ["Becoming.Weighting.weighed_shared", "Becoming.Weighting.weighed_split"]}
+{"name": "Becoming.Weighting.weighed_tilted_beyond", "uses": ["Becoming.Weighting.tilt_beyond", "Becoming.Weighting.weighed_const", "Becoming.total_congr"]}
+{"name": "Becoming.Weighting.weighed_tilted_toward", "uses": ["Becoming.Weighting.tilt_toward", "Becoming.Weighting.weighed_const", "Becoming.total_congr"]}
+{"name": "Becoming.Weighting.weighed_widensBy", "uses": ["Becoming.ListTests.false_of_not", "Becoming.Weighting.term_eq_at", "Becoming.Weighting.weighed_const", "Becoming.bool_of_and_true", "Becoming.total_congr_on"]}
+{"name": "Becoming.Weighting.weighed_zero", "uses": ["Becoming.Weighting.cond_zero", "Becoming.total_congr", "Becoming.total_zero"]}
+{"name": "Becoming.Weighting.weighed_zero_of_size", "uses": []}
+{"name": "Becoming.Weighting.widensOn_iff", "uses": ["Becoming.Weighting.exceedsOn_iff", "Becoming.Weighting.includesOn_iff"]}
+{"name": "Becoming.Weighting.widensOn_of_widensBy", "uses": []}
+{"name": "Becoming.Weighting.widensOwn_iff_every_increasingInOwn", "uses": []}
+{"name": "Becoming.Weighting.widens_iff_every_increasing", "uses": ["Becoming.Weighting.increasing_ranks", "Becoming.Weighting.widens_iff_every_of_class"]}
+{"name": "Becoming.Weighting.widens_iff_every_of_class", "uses": ["Becoming.Weighting.widens_iff_every_positive"]}
+{"name": "Becoming.Weighting.widens_iff_every_positive", "uses": ["Becoming.Weighting.exceeds_or_includes", "Becoming.Weighting.outweighs", "Becoming.Weighting.weighed_le_of_includes", "Becoming.Weighting.weighed_lt_of_widens"]}
+{"name": "Becoming.Weighting.widens_iff_every_score", "uses": ["Becoming.Weighting.increasing_ranks", "Becoming.Weighting.widens_iff_every_positive"]}
+{"name": "Becoming.atCenters_least", "uses": ["Becoming.subTrue_empty_iff"]}
+{"name": "Becoming.atCenters_presupposed", "uses": ["Becoming.subTrue_empty_iff"]}
+{"name": "Becoming.atCenters_standpointInvariant", "uses": []}
+{"name": "Becoming.excess_add_of_le", "uses": ["Becoming.eq_zero_of_not_pos", "Becoming.excess_balance", "Becoming.excess_pos"]}
+{"name": "Becoming.forced_iff_center", "uses": ["Becoming.atCenters_least", "Becoming.atCenters_presupposed", "Becoming.atCenters_standpointInvariant"]}
+{"name": "Becoming.forced_iff_within", "uses": ["Becoming.subTrue_significantWithin_iff"]}
+{"name": "Becoming.forced_iff_within_some", "uses": ["Becoming.shared_standpointInvariant", "Becoming.subTrue_significantWithin_iff"]}
+{"name": "Becoming.forced_member_iff_only", "uses": ["Becoming.forced_needs_iff", "Becoming.needs_iff_only"]}
+{"name": "Becoming.forced_needs_iff", "uses": ["Becoming.forced_iff_within", "Becoming.withinClosure_needs_iff"]}
+{"name": "Becoming.le_excess_of_add_le", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.excess_balance"]}
+{"name": "Becoming.mem_pairUp", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.mem_replicate_pos", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.mem_unitsOn", "uses": ["Becoming.mem_append_cases", "Becoming.mem_replicate_pos"]}
+{"name": "Becoming.needsPart_iff_only", "uses": []}
+{"name": "Becoming.needsPart_of_none", "uses": []}
+{"name": "Becoming.needs_iff_only", "uses": ["Becoming.needsPart_iff_only"]}
+{"name": "Becoming.ownClosure_presupposed", "uses": ["Becoming.subTrue_significantWithin_iff"]}
+{"name": "Becoming.ownClosure_standpointInvariant_iff", "uses": []}
+{"name": "Becoming.ownClosure_standpointInvariant_iff_centersWithin", "uses": ["Becoming.WithinClosure.refl", "Becoming.WithinClosure.trans", "Becoming.ownClosure_standpointInvariant_iff"]}
+{"name": "Becoming.ownClosure_unrestricted_iff", "uses": []}
+{"name": "Becoming.ownClosure_unrestricted_iff_of_onto", "uses": ["Becoming.ownClosure_unrestricted_iff"]}
+{"name": "Becoming.ownClosure_unrestricted_iff_of_returning", "uses": ["Becoming.ReturnsAlong.whole", "Becoming.ownClosure_unrestricted_iff"]}
+{"name": "Becoming.ownClosure_unrestricted_of_whole", "uses": ["Becoming.ownClosure_unrestricted_iff"]}
+{"name": "Becoming.selfAscribed_iff_withinSome", "uses": []}
+{"name": "Becoming.selfAscribed_iff_withinSome_iff_centersWithin", "uses": ["Becoming.WithinClosure.refl", "Becoming.WithinClosure.trans", "Becoming.selfAscribed_iff_withinSome"]}
+{"name": "Becoming.selfAscribed_standpointInvariant_iff", "uses": []}
+{"name": "Becoming.shared_standpointInvariant", "uses": []}
+{"name": "Becoming.split_by", "uses": []}
+{"name": "Becoming.standpointInvariant_iff_shared", "uses": []}
+{"name": "Becoming.subTrue_every_iff", "uses": ["Becoming.subTrue_significantWithin_iff"]}
+{"name": "Becoming.subTrue_every_of_related", "uses": ["Becoming.subTrue_of_larger"]}
+{"name": "Becoming.total_eq_at", "uses": ["Becoming.le_total_of_mem", "Becoming.total_le_at"]}
+{"name": "Becoming.total_le_at_on", "uses": ["Becoming.eq_zero_of_not_pos", "Becoming.total_eq_zero"]}
+{"name": "Becoming.total_pairUp_fst", "uses": ["Becoming.Naturals.le_of_add_le_add_left"]}
+{"name": "Becoming.total_pairUp_snd_le", "uses": []}
+{"name": "Becoming.total_two", "uses": []}
+{"name": "Becoming.total_unitsOn", "uses": ["Becoming.Naturals.add_congr", "Becoming.total_append", "Becoming.total_replicate"]}
+{"name": "Becoming.unrestricted_atCenters_iff", "uses": []}
+{"name": "Becoming.withinClosure_iff_of_centersWithin", "uses": ["Becoming.WithinClosure.trans"]}
+{"name": "Becoming.withinClosure_needs_iff", "uses": ["Becoming.Needs.refl", "Becoming.Needs.trans", "Becoming.WithinClosure.of_rel"]}

@@ -1,0 +1,28 @@
+{"name": "Becoming.PairChance.absorbed_share", "uses": ["Becoming.PairChance.block_free_weight", "Becoming.PairChance.block_lt", "Becoming.PairChance.still_giving_le", "Becoming.PairChance.total_blocks", "Becoming.PairChance.weight_append", "Becoming.Typicality.total_weight"]}
+{"name": "Becoming.PairChance.block_free_weight", "uses": ["Becoming.Naturals.add_sub_cancel", "Becoming.PairChance.block_total"]}
+{"name": "Becoming.PairChance.block_lt", "uses": ["Becoming.Typicality.total_le"]}
+{"name": "Becoming.PairChance.block_total", "uses": ["Becoming.PairChance.free_but_burst", "Becoming.PairChance.weight_burst", "Becoming.Typicality.total_congr_mem", "Becoming.Typicality.total_weight"]}
+{"name": "Becoming.PairChance.burst_absorbs", "uses": ["Becoming.PairChance.dead_stays", "Becoming.PairChance.err_withholds"]}
+{"name": "Becoming.PairChance.burst_absorbs_from", "uses": ["Becoming.PairChance.burst_absorbs", "Becoming.le_dest"]}
+{"name": "Becoming.PairChance.burst_of_not_free", "uses": []}
+{"name": "Becoming.PairChance.cond_and_mul", "uses": []}
+{"name": "Becoming.PairChance.dead_stays", "uses": []}
+{"name": "Becoming.PairChance.err_withholds", "uses": ["Becoming.PairSelection.and_not_true", "Becoming.PairSelection.time"]}
+{"name": "Becoming.PairChance.free_but_burst", "uses": []}
+{"name": "Becoming.PairChance.keeps_answering", "uses": []}
+{"name": "Becoming.PairChance.keeps_waitingBoth", "uses": []}
+{"name": "Becoming.PairChance.keeps_windowed", "uses": []}
+{"name": "Becoming.PairChance.keeps_withholding", "uses": []}
+{"name": "Becoming.PairChance.nil_of_mem_zero", "uses": []}
+{"name": "Becoming.PairChance.not_keeps_agreeing", "uses": []}
+{"name": "Becoming.PairChance.not_keeps_alternating", "uses": []}
+{"name": "Becoming.PairChance.not_keeps_sparing", "uses": []}
+{"name": "Becoming.PairChance.shape_of_mem_four", "uses": ["Becoming.PairChance.nil_of_mem_zero", "Becoming.Typicality.of_mem_extend"]}
+{"name": "Becoming.PairChance.still_gives_free", "uses": ["Becoming.PairChance.burst_absorbs_from", "Becoming.PairChance.burst_of_not_free"]}
+{"name": "Becoming.PairChance.still_giving_le", "uses": ["Becoming.PairChance.shape_of_mem_four", "Becoming.PairChance.still_gives_free", "Becoming.PairChance.survive_four", "Becoming.PairChance.total_blocks", "Becoming.Typicality.mem_courses_iff", "Becoming.total_le"]}
+{"name": "Becoming.PairChance.survive_four", "uses": ["Becoming.PairChance.cond_and_mul", "Becoming.PairChance.weight_append"]}
+{"name": "Becoming.PairChance.total_blocks", "uses": ["Becoming.PairChance.total_courses_split", "Becoming.Typicality.total_congr", "Becoming.Typicality.total_mul", "Becoming.Typicality.total_mul_right", "Becoming.total_congr_on"]}
+{"name": "Becoming.PairChance.total_courses_split", "uses": ["Becoming.Typicality.total_congr", "Becoming.Typicality.total_extend"]}
+{"name": "Becoming.PairChance.weight_append", "uses": ["Becoming.mul_assoc_nat"]}
+{"name": "Becoming.PairChance.weight_burst", "uses": ["Becoming.Typicality.weight_pow"]}
+{"name": "Becoming.PairChance.window_witness", "uses": []}

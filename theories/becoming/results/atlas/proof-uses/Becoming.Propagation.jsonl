@@ -1,0 +1,74 @@
+{"name": "Becoming.Conveyed.brecOn", "uses": []}
+{"name": "Becoming.Conveyed.spread", "uses": []}
+{"name": "Becoming.ExchangeLaw.Nonanticipating.respondsWithin_later", "uses": ["Becoming.ExchangeLaw.exchangeGap_of_alike"]}
+{"name": "Becoming.ExchangeLaw.RespondsWithin.mono", "uses": []}
+{"name": "Becoming.ExchangeLaw.alike_of_exchangeGap", "uses": ["Becoming.gap_eq_zero_iff"]}
+{"name": "Becoming.ExchangeLaw.carrying_nonanticipating", "uses": ["Becoming.Propagation.le_of_mem_steps_upto", "Becoming.total_congr_on"]}
+{"name": "Becoming.ExchangeLaw.carrying_respondsWithin", "uses": ["Becoming.gap_eq_zero_iff", "Becoming.gap_mul_le", "Becoming.gap_self", "Becoming.gap_total", "Becoming.steps_distinct", "Becoming.total_le", "Becoming.total_le_at", "Becoming.total_pos"]}
+{"name": "Becoming.ExchangeLaw.courseWorld_balanced_iff", "uses": ["Becoming.ExchangeLaw.course_balances_iff", "Becoming.Flow.roles_balances"]}
+{"name": "Becoming.ExchangeLaw.exchangeGap_le_mixCells", "uses": ["Becoming.ExchangeLaw.exchangeGap_self", "Becoming.ExchangeLaw.exchangeGap_triangle", "Becoming.gap_self", "Becoming.mixCells_either"]}
+{"name": "Becoming.ExchangeLaw.exchangeGap_le_shares", "uses": ["Becoming.ExchangeLaw.exchangeGap_le_strengths", "Becoming.total_add", "Becoming.total_append", "Becoming.total_congr_on"]}
+{"name": "Becoming.ExchangeLaw.exchangeGap_le_strengths", "uses": ["Becoming.ExchangeLaw.exchangeGap_le_mixCells", "Becoming.ExchangeLaw.exchangeGap_of_alike", "Becoming.ExchangeLaw.exchangeGap_triangle", "Becoming.Propagation.le_of_mem_steps_upto", "Becoming.Propagation.mem_steps_upto", "Becoming.mem_cellsOf", "Becoming.mixCells_either", "Becoming.mixCells_listed", "Becoming.of_mem_cellsOf", "Becoming.total_cellsOf"]}
+{"name": "Becoming.ExchangeLaw.exchangeGap_le_strengths_listed", "uses": ["Becoming.ExchangeLaw.exchangeGap_le_strengths"]}
+{"name": "Becoming.ExchangeLaw.exchangeGap_of_alike", "uses": ["Becoming.gap_eq_zero_iff"]}
+{"name": "Becoming.ExchangeLaw.exchangeGap_self", "uses": ["Becoming.gap_self"]}
+{"name": "Becoming.ExchangeLaw.exchangeGap_triangle", "uses": ["Becoming.gap_triangle"]}
+{"name": "Becoming.ExchangeLaw.insensitiveAt_iff_strength_zero", "uses": ["Becoming.ExchangeLaw.alike_of_exchangeGap", "Becoming.ExchangeLaw.exchangeGap_le_strengths", "Becoming.ExchangeLaw.exchangeGap_of_alike", "Becoming.mem_cons_cases", "Becoming.total_eq_zero"]}
+{"name": "Becoming.ExchangeLaw.sensitive_iff_strength", "uses": ["Becoming.ExchangeLaw.insensitiveAt_iff_strength_zero"]}
+{"name": "Becoming.Flow.exchangeGap_of_alike", "uses": ["Becoming.gap_eq_zero_iff"]}
+{"name": "Becoming.Propagation.Chain.first", "uses": ["Becoming.Propagation.carried_two_succ", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Propagation.Chain.gap_arrives", "uses": ["Becoming.Propagation.Chain.keeps_arriving", "Becoming.carried_attained"]}
+{"name": "Becoming.Propagation.Chain.keeps_arriving", "uses": ["Becoming.Propagation.Chain.first", "Becoming.Propagation.Chain.relayed", "Becoming.Propagation.carried_two_succ"]}
+{"name": "Becoming.Propagation.Chain.relayed", "uses": ["Becoming.Propagation.total_steps_at", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Propagation.Loop.returned", "uses": ["Becoming.Propagation.total_steps_at", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Propagation.Loop.runaway", "uses": ["Becoming.Propagation.Loop.returned", "Becoming.Propagation.carried_two_succ"]}
+{"name": "Becoming.Propagation.Square.not_respondsWithin", "uses": ["Becoming.Propagation.Square.succ_square", "Becoming.gap_add_self", "Becoming.gap_comm", "Becoming.gap_self"]}
+{"name": "Becoming.Propagation.Square.succ_square", "uses": []}
+{"name": "Becoming.Propagation.carried_two_succ", "uses": ["Becoming.carried_succ"]}
+{"name": "Becoming.Propagation.cond_add", "uses": []}
+{"name": "Becoming.Propagation.cond_le_cond", "uses": []}
+{"name": "Becoming.Propagation.cond_same", "uses": []}
+{"name": "Becoming.Propagation.distinct_two", "uses": []}
+{"name": "Becoming.Propagation.every_two", "uses": []}
+{"name": "Becoming.Propagation.le_of_mem_steps_upto", "uses": ["Becoming.between_of_mem_steps"]}
+{"name": "Becoming.Propagation.mem_steps_upto", "uses": ["Becoming.steps_of_within"]}
+{"name": "Becoming.Propagation.of_mem_map_pair", "uses": []}
+{"name": "Becoming.Propagation.pos_of_mul_pos", "uses": []}
+{"name": "Becoming.Propagation.rearrange", "uses": []}
+{"name": "Becoming.Propagation.total_steps_at", "uses": ["Becoming.Propagation.mem_steps_upto", "Becoming.le_total_of_mem", "Becoming.steps_distinct", "Becoming.total_le_at"]}
+{"name": "Becoming.carriedGive_le", "uses": ["Becoming.carried_succ", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.carriedWorld_balanced", "uses": ["Becoming.Flow.roles_balances", "Becoming.carrying_balances"]}
+{"name": "Becoming.carriedWorld_level", "uses": []}
+{"name": "Becoming.carried_add", "uses": ["Becoming.Naturals.add_congr", "Becoming.Propagation.cond_add", "Becoming.Propagation.le_of_mem_steps_upto", "Becoming.carried_succ", "Becoming.le_succ_cases", "Becoming.total_add", "Becoming.total_congr_on"]}
+{"name": "Becoming.carried_attained", "uses": ["Becoming.carried_quiet", "Becoming.gap_zero"]}
+{"name": "Becoming.carried_le_succ", "uses": ["Becoming.carried_succ"]}
+{"name": "Becoming.carried_mono", "uses": ["Becoming.Propagation.cond_le_cond", "Becoming.Propagation.le_of_mem_steps_upto", "Becoming.carried_succ", "Becoming.le_succ_cases", "Becoming.total_le"]}
+{"name": "Becoming.carried_pos_iff", "uses": ["Becoming.Propagation.le_of_mem_steps_upto", "Becoming.Propagation.mem_steps_upto", "Becoming.Propagation.pos_of_mul_pos", "Becoming.carriedGive_le", "Becoming.carried_le_succ", "Becoming.carried_succ", "Becoming.eq_zero_of_not_pos", "Becoming.le_succ_cases", "Becoming.le_total_of_mem", "Becoming.total_pos"]}
+{"name": "Becoming.carried_quiet", "uses": ["Becoming.Propagation.cond_same", "Becoming.Propagation.le_of_mem_steps_upto", "Becoming.carried_succ", "Becoming.le_succ_cases", "Becoming.total_eq_zero"]}
+{"name": "Becoming.carried_succ", "uses": ["Becoming.ExchangeLaw.carrying_nonanticipating", "Becoming.ExchangeLaw.levels_succ", "Becoming.ExchangeLaw.totals_under", "Becoming.total_zero"]}
+{"name": "Becoming.carried_zero", "uses": []}
+{"name": "Becoming.carrying_balances", "uses": ["Becoming.ExchangeLaw.carrying_nonanticipating", "Becoming.ExchangeLaw.course_balances_iff", "Becoming.total_zero"]}
+{"name": "Becoming.gap_add", "uses": ["Becoming.gap_comm", "Becoming.gap_le_of", "Becoming.le_add_gap"]}
+{"name": "Becoming.gap_add_self", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.gap_comm", "uses": []}
+{"name": "Becoming.gap_eq_zero_iff", "uses": ["Becoming.gap_comm", "Becoming.gap_self", "Becoming.le_add_gap"]}
+{"name": "Becoming.gap_le_carried", "uses": ["Becoming.ExchangeLaw.exchangeGap_le_strengths_listed", "Becoming.Propagation.le_of_mem_steps_upto", "Becoming.carried_succ", "Becoming.gap_step", "Becoming.le_succ_cases", "Becoming.total_le"]}
+{"name": "Becoming.gap_le_iff", "uses": ["Becoming.gap_comm", "Becoming.gap_le_of", "Becoming.le_add_gap"]}
+{"name": "Becoming.gap_le_of", "uses": ["Becoming.Naturals.sub_le_of_le_add", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.gap_mul_le", "uses": ["Becoming.gap_comm", "Becoming.gap_le_of", "Becoming.le_add_gap"]}
+{"name": "Becoming.gap_of_balances", "uses": ["Becoming.Propagation.rearrange", "Becoming.gap_comm", "Becoming.gap_le_of", "Becoming.le_add_gap", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.gap_self", "uses": []}
+{"name": "Becoming.gap_step", "uses": ["Becoming.gap_of_balances", "Becoming.gap_total", "Becoming.total_add"]}
+{"name": "Becoming.gap_step_of_alike", "uses": ["Becoming.Flow.exchangeGap_of_alike", "Becoming.gap_step", "Becoming.total_eq_zero"]}
+{"name": "Becoming.gap_total", "uses": ["Becoming.gap_add", "Becoming.gap_self"]}
+{"name": "Becoming.gap_triangle", "uses": ["Becoming.gap_comm", "Becoming.gap_le_of", "Becoming.le_add_gap"]}
+{"name": "Becoming.gap_zero", "uses": []}
+{"name": "Becoming.le_add_gap", "uses": ["Becoming.add_sub_turn"]}
+{"name": "Becoming.levels_alike_of_not_conveyed", "uses": ["Becoming.carried_pos_iff", "Becoming.eq_zero_of_not_pos", "Becoming.gap_eq_zero_iff", "Becoming.gap_le_carried"]}
+{"name": "Becoming.levels_step_exact", "uses": []}
+{"name": "Becoming.mem_cellsOf", "uses": ["Becoming.prodMk_mem_map"]}
+{"name": "Becoming.mixCells_either", "uses": []}
+{"name": "Becoming.mixCells_listed", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.most_difference_arrives", "uses": ["Becoming.ExchangeLaw.carrying_nonanticipating", "Becoming.ExchangeLaw.carrying_respondsWithin", "Becoming.ExchangeLaw.course_follows", "Becoming.carried_attained", "Becoming.carrying_balances", "Becoming.gap_le_carried", "Becoming.gap_self", "Becoming.gap_zero"]}
+{"name": "Becoming.of_mem_cellsOf", "uses": ["Becoming.Propagation.of_mem_map_pair", "Becoming.mem_append_cases"]}
+{"name": "Becoming.total_cellsOf", "uses": ["Becoming.total_append", "Becoming.total_map"]}

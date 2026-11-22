@@ -1,0 +1,108 @@
+{"name": "Becoming.ChainInTime.start_le", "uses": []}
+{"name": "Becoming.Frequency.First.couplesAt_first", "uses": ["Becoming.beq_self", "Becoming.bool_and_true"]}
+{"name": "Becoming.Frequency.First.decides", "uses": ["Becoming.Clear.false_before", "Becoming.Clear.false_of_not", "Becoming.Clear.first_of_true", "Becoming.Clear.not_both", "Becoming.Clear.or_first", "Becoming.Frequency.First.couplesAt_first", "Becoming.Frequency.First.not_recurs", "Becoming.couples_strengthsFrom_iff"]}
+{"name": "Becoming.Frequency.First.not_recurs", "uses": ["Becoming.Frequency.First.of_couplesAt", "Becoming.Frequency.First.once"]}
+{"name": "Becoming.Frequency.First.of_couplesAt", "uses": ["Becoming.ListTests.and_left", "Becoming.ListTests.and_right"]}
+{"name": "Becoming.Frequency.First.once", "uses": ["Becoming.Clear.first_unique", "Becoming.Frequency.First.of_couplesAt"]}
+{"name": "Becoming.Frequency.Rows.allUpTo_of", "uses": ["Becoming.bool_and_true"]}
+{"name": "Becoming.Frequency.Rows.allUpTo_true", "uses": ["Becoming.ListTests.and_left", "Becoming.ListTests.and_right", "Becoming.le_succ_cases"]}
+{"name": "Becoming.Frequency.Rows.anyUpTo_of", "uses": ["Becoming.ListTests.or_left", "Becoming.ListTests.or_right", "Becoming.le_succ_cases"]}
+{"name": "Becoming.Frequency.Rows.anyUpTo_true", "uses": ["Becoming.ListTests.or_cases"]}
+{"name": "Becoming.Frequency.Rows.couplesAt_of_found", "uses": ["Becoming.bool_and_true"]}
+{"name": "Becoming.Frequency.Rows.couplesAt_of_rows", "uses": ["Becoming.Frequency.Rows.allUpTo_of", "Becoming.Frequency.Rows.anyUpTo_of", "Becoming.Frequency.Rows.couplesAt_of_found", "Becoming.Frequency.Rows.witnessed"]}
+{"name": "Becoming.Frequency.Rows.decide_rows", "uses": ["Becoming.le_succ_cases"]}
+{"name": "Becoming.Frequency.Rows.found_of_couplesAt", "uses": ["Becoming.ListTests.and_right"]}
+{"name": "Becoming.Frequency.Rows.recurs_iff", "uses": ["Becoming.Frequency.Rows.allUpTo_true", "Becoming.Frequency.Rows.anyUpTo_true", "Becoming.Frequency.Rows.couplesAt_of_rows", "Becoming.Frequency.Rows.found_of_couplesAt"]}
+{"name": "Becoming.Frequency.Rows.witnessed", "uses": ["Becoming.le_succ_cases"]}
+{"name": "Becoming.Frequency.SelfLoop.always", "uses": []}
+{"name": "Becoming.Frequency.SelfLoop.always_carried", "uses": ["Becoming.Frequency.SelfLoop.carried_eq", "Becoming.Frequency.count_always"]}
+{"name": "Becoming.Frequency.SelfLoop.carried_eq", "uses": ["Becoming.Frequency.SelfLoop.give", "Becoming.Frequency.step_eq", "Becoming.Naturals.add_congr", "Becoming.carried_succ"]}
+{"name": "Becoming.Frequency.SelfLoop.couplesAt", "uses": ["Becoming.Frequency.SelfLoop.strengths_on", "Becoming.beq_self"]}
+{"name": "Becoming.Frequency.SelfLoop.couplesAt_iff", "uses": ["Becoming.Frequency.SelfLoop.couplesAt", "Becoming.Frequency.SelfLoop.strengths_off", "Becoming.Frequency.SelfLoop.strengths_on", "Becoming.Propagation.cond_same"]}
+{"name": "Becoming.Frequency.SelfLoop.give", "uses": ["Becoming.Frequency.SelfLoop.strengths_off", "Becoming.Frequency.SelfLoop.strengths_on", "Becoming.Loops.SelfLoop.give", "Becoming.carriedGive_congr_strength", "Becoming.total_congr"]}
+{"name": "Becoming.Frequency.SelfLoop.inflow_eq", "uses": ["Becoming.Frequency.SelfLoop.strengths_off", "Becoming.Frequency.SelfLoop.strengths_on", "Becoming.Loops.SelfLoop.inflow_eq", "Becoming.inflow_congr_strength"]}
+{"name": "Becoming.Frequency.SelfLoop.into", "uses": ["Becoming.Frequency.SelfLoop.inflow_eq", "Becoming.ListTests.bif_le"]}
+{"name": "Becoming.Frequency.SelfLoop.onset", "uses": []}
+{"name": "Becoming.Frequency.SelfLoop.polynomial_iff", "uses": ["Becoming.Frequency.SelfLoop.carried_eq", "Becoming.Frequency.SelfLoop.into", "Becoming.Frequency.SelfLoop.quiet", "Becoming.Loops.pow_le_pow_base", "Becoming.carried_le_of_rare"]}
+{"name": "Becoming.Frequency.SelfLoop.quiet", "uses": ["Becoming.Frequency.SelfLoop.inflow_eq"]}
+{"name": "Becoming.Frequency.SelfLoop.recurs", "uses": ["Becoming.Frequency.SelfLoop.couplesAt"]}
+{"name": "Becoming.Frequency.SelfLoop.roundTrip", "uses": ["Becoming.Frequency.SelfLoop.couplesAt", "Becoming.RoundTrip.of_couplesAt"]}
+{"name": "Becoming.Frequency.SelfLoop.strengths_off", "uses": ["Becoming.Propagation.cond_same"]}
+{"name": "Becoming.Frequency.SelfLoop.strengths_on", "uses": []}
+{"name": "Becoming.Frequency.Sparse.bounds", "uses": ["Becoming.Loops.two_pow_succ", "Becoming.Naturals.add_congr"]}
+{"name": "Becoming.Frequency.Sparse.count_eq", "uses": []}
+{"name": "Becoming.Frequency.Sparse.double_eq", "uses": []}
+{"name": "Becoming.Frequency.Sparse.inexact", "uses": ["Becoming.Frequency.Sparse.recurs", "Becoming.carriedWithin_lt_of_recurring_loop"]}
+{"name": "Becoming.Frequency.Sparse.often", "uses": ["Becoming.Frequency.Sparse.unbounded", "Becoming.Frequency.recurs_of_unbounded"]}
+{"name": "Becoming.Frequency.Sparse.polynomial", "uses": ["Becoming.Frequency.SelfLoop.into", "Becoming.Frequency.SelfLoop.quiet", "Becoming.Frequency.Sparse.rare", "Becoming.carried_le_of_rare"]}
+{"name": "Becoming.Frequency.Sparse.rare", "uses": ["Becoming.Frequency.Sparse.bounds", "Becoming.Frequency.Sparse.count_eq", "Becoming.Frequency.Sparse.double_eq"]}
+{"name": "Becoming.Frequency.Sparse.recurs", "uses": ["Becoming.Frequency.SelfLoop.recurs", "Becoming.Frequency.Sparse.often"]}
+{"name": "Becoming.Frequency.Sparse.unbounded", "uses": ["Becoming.Frequency.Sparse.bounds", "Becoming.Frequency.Sparse.count_eq", "Becoming.Loops.pow_le_pow_exp"]}
+{"name": "Becoming.Frequency.bound_list", "uses": []}
+{"name": "Becoming.Frequency.count_always", "uses": []}
+{"name": "Becoming.Frequency.count_before", "uses": ["Becoming.Frequency.count_succ_off", "Becoming.Naturals.ble_false_of_lt"]}
+{"name": "Becoming.Frequency.count_from", "uses": ["Becoming.Frequency.count_before", "Becoming.Frequency.count_succ_on"]}
+{"name": "Becoming.Frequency.count_le", "uses": ["Becoming.cond_le_one"]}
+{"name": "Becoming.Frequency.count_le_succ", "uses": []}
+{"name": "Becoming.Frequency.count_mono", "uses": ["Becoming.Frequency.count_le_succ"]}
+{"name": "Becoming.Frequency.count_succ_off", "uses": []}
+{"name": "Becoming.Frequency.count_succ_on", "uses": []}
+{"name": "Becoming.Frequency.couplesAt_of_readsLate", "uses": ["Becoming.Propagation.le_of_mem_steps_upto", "Becoming.total_pos"]}
+{"name": "Becoming.Frequency.marked_between", "uses": ["Becoming.Frequency.count_mono", "Becoming.Frequency.count_succ_off"]}
+{"name": "Becoming.Frequency.pow_le_two_pow_pow", "uses": ["Becoming.Frequency.succ_le_two_pow", "Becoming.Loops.pow_le_pow_base", "Becoming.Loops.pow_mul_nat"]}
+{"name": "Becoming.Frequency.quiet_coupling", "uses": ["Becoming.Loops.zero_or_pos", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.Frequency.readsLate_of_couplesAt", "uses": ["Becoming.Propagation.mem_steps_upto", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Frequency.recurs_of_unbounded", "uses": ["Becoming.Frequency.marked_between"]}
+{"name": "Becoming.Frequency.step_eq", "uses": ["Becoming.Frequency.count_succ_off", "Becoming.Frequency.count_succ_on", "Becoming.Loops.one_add_mul", "Becoming.mul_turn"]}
+{"name": "Becoming.Frequency.succ_le_two_pow", "uses": ["Becoming.Naturals.lt_two_pow"]}
+{"name": "Becoming.RecursOrStops.lpo", "uses": []}
+{"name": "Becoming.RoundTrip.of_couplesAt", "uses": []}
+{"name": "Becoming.Saturation.Antitone.zeroFrom", "uses": []}
+{"name": "Becoming.Saturation.carriedGive_split", "uses": ["Becoming.total_swap", "Becoming.total_zero"]}
+{"name": "Becoming.Saturation.climbs", "uses": ["Becoming.Saturation.one_le_passingAt", "Becoming.Saturation.passed_le_succ"]}
+{"name": "Becoming.Saturation.course_stands", "uses": ["Becoming.Saturation.course_succ"]}
+{"name": "Becoming.Saturation.course_stops_by", "uses": ["Becoming.Saturation.course_stands", "Becoming.Saturation.not_recurs", "Becoming.Saturation.passed_from", "Becoming.Saturation.stops_by"]}
+{"name": "Becoming.Saturation.course_stops_iff", "uses": ["Becoming.Saturation.course_stands", "Becoming.Saturation.stops_iff"]}
+{"name": "Becoming.Saturation.course_succ", "uses": ["Becoming.Saturation.readsBefore", "Becoming.Saturation.total_carriedGive", "Becoming.formedCourse_succ"]}
+{"name": "Becoming.Saturation.exact", "uses": ["Becoming.Saturation.stops", "Becoming.exact_of_reading_before"]}
+{"name": "Becoming.Saturation.floored", "uses": ["Becoming.Saturation.climbs"]}
+{"name": "Becoming.Saturation.floored_inexact", "uses": ["Becoming.Saturation.floored", "Becoming.unbounded_of_recurring_loop"]}
+{"name": "Becoming.Saturation.not_recurs", "uses": ["Becoming.Saturation.stops", "Becoming.StopsBy.not_recurs"]}
+{"name": "Becoming.Saturation.one_le_passingAt", "uses": ["Becoming.Propagation.mem_steps_upto", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Saturation.passed_congr", "uses": ["Becoming.Naturals.add_congr", "Becoming.Saturation.passingAt_congr"]}
+{"name": "Becoming.Saturation.passed_from", "uses": ["Becoming.Saturation.passed_le_add", "Becoming.Saturation.passingAt_zero"]}
+{"name": "Becoming.Saturation.passed_le_add", "uses": ["Becoming.Saturation.passed_le_succ"]}
+{"name": "Becoming.Saturation.passed_le_succ", "uses": []}
+{"name": "Becoming.Saturation.passed_lt", "uses": ["Becoming.Saturation.passingAt_zero"]}
+{"name": "Becoming.Saturation.passed_mono", "uses": ["Becoming.Saturation.passed_le_add"]}
+{"name": "Becoming.Saturation.passingAt_congr", "uses": ["Becoming.Propagation.le_of_mem_steps_upto", "Becoming.total_congr", "Becoming.total_congr_on"]}
+{"name": "Becoming.Saturation.passingAt_zero", "uses": ["Becoming.total_eq_zero"]}
+{"name": "Becoming.Saturation.readsBefore", "uses": ["Becoming.Saturation.passed_congr"]}
+{"name": "Becoming.Saturation.stops", "uses": ["Becoming.Saturation.passed_mono"]}
+{"name": "Becoming.Saturation.stops_by", "uses": ["Becoming.Saturation.climbs", "Becoming.Saturation.stops"]}
+{"name": "Becoming.Saturation.stops_by_zero", "uses": ["Becoming.Saturation.Antitone.zeroFrom", "Becoming.Saturation.climbs", "Becoming.Saturation.stops"]}
+{"name": "Becoming.Saturation.stops_iff", "uses": ["Becoming.Saturation.stops_by_zero"]}
+{"name": "Becoming.Saturation.total_carriedGive", "uses": ["Becoming.Saturation.carriedGive_split", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_swap"]}
+{"name": "Becoming.Saturation.wearing_stops", "uses": ["Becoming.Naturals.sub_sub", "Becoming.Saturation.course_stands", "Becoming.Saturation.stops_by_zero", "Becoming.le_dest"]}
+{"name": "Becoming.StopsBy.mono", "uses": []}
+{"name": "Becoming.StopsBy.not_recurs", "uses": []}
+{"name": "Becoming.carriedGive_with_gaps", "uses": ["Becoming.carriedGive_of_part", "Becoming.carriedGive_of_rest"]}
+{"name": "Becoming.carried_along_in_time", "uses": ["Becoming.carried_mono_steps", "Becoming.carried_step_ge_at"]}
+{"name": "Becoming.carried_doubles_roundTrip", "uses": ["Becoming.ChainInTime.start_le", "Becoming.carried_along_in_time", "Becoming.carried_mono_steps", "Becoming.carried_step_ge_at"]}
+{"name": "Becoming.carried_le_count", "uses": ["Becoming.carried_le_disturbed", "Becoming.total_eq_zero"]}
+{"name": "Becoming.carried_le_coupling", "uses": ["Becoming.Frequency.quiet_coupling", "Becoming.carried_le_count"]}
+{"name": "Becoming.carried_le_disturbed", "uses": ["Becoming.Frequency.step_eq", "Becoming.carriedGive_with_gaps", "Becoming.carried_mono_steps", "Becoming.carried_succ", "Becoming.count_step", "Becoming.one_le_pow_add", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_give_le_inflow"]}
+{"name": "Becoming.carried_le_of_rare", "uses": ["Becoming.Frequency.pow_le_two_pow_pow", "Becoming.Loops.pow_le_pow_base", "Becoming.Loops.pow_mul_nat", "Becoming.Naturals.mul_pow_eq", "Becoming.carried_le_count", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.carried_roundTrip", "uses": ["Becoming.Loops.two_pow_succ", "Becoming.add_mul_split", "Becoming.carried_doubles_roundTrip"]}
+{"name": "Becoming.carried_step_ge_at", "uses": ["Becoming.Loops.le_mul_of_pos", "Becoming.Propagation.mem_steps_upto", "Becoming.carriedGive_of_rest", "Becoming.carried_succ", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.count_step", "uses": ["Becoming.Frequency.count_succ_off", "Becoming.Frequency.count_succ_on"]}
+{"name": "Becoming.gap_le_count", "uses": ["Becoming.carried_le_count", "Becoming.gap_le_carried"]}
+{"name": "Becoming.inflow_congr_strength", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.lpo_of_settled", "uses": ["Becoming.Frequency.First.decides"]}
+{"name": "Becoming.one_le_pow_add", "uses": []}
+{"name": "Becoming.recurs_or_stops", "uses": ["Becoming.Frequency.couplesAt_of_readsLate", "Becoming.Frequency.readsLate_of_couplesAt"]}
+{"name": "Becoming.runaway_of_roundTrip", "uses": ["Becoming.carried_roundTrip"]}
+{"name": "Becoming.settled_every_iff", "uses": ["Becoming.settled_iff_recursOrStops", "Becoming.settled_of_recursOrStops"]}
+{"name": "Becoming.settled_iff_recursOrStops", "uses": ["Becoming.Frequency.Rows.couplesAt_of_rows", "Becoming.Frequency.Rows.decide_rows", "Becoming.Frequency.Rows.recurs_iff", "Becoming.couples_strengthsFrom_iff", "Becoming.lpo_of_settled", "Becoming.settled_of_recursOrStops"]}
+{"name": "Becoming.settled_of_each", "uses": ["Becoming.Frequency.bound_list", "Becoming.StopsBy.mono", "Becoming.couples_strengthsFrom_iff"]}
+{"name": "Becoming.settled_of_recursOrStops", "uses": ["Becoming.recurs_or_stops", "Becoming.settled_of_each"]}

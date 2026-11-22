@@ -1,0 +1,42 @@
+{"name": "Becoming.LearnedGrouping.Sound.ofNat_ctorIdx", "uses": []}
+{"name": "Becoming.LearnedGrouping.along", "uses": ["Becoming.LearnedGrouping.trace_end"]}
+{"name": "Becoming.LearnedGrouping.broaden_one_form", "uses": []}
+{"name": "Becoming.LearnedGrouping.broaden_prefix", "uses": []}
+{"name": "Becoming.LearnedGrouping.broaden_reaches_context", "uses": []}
+{"name": "Becoming.LearnedGrouping.broaden_stock", "uses": ["Becoming.LearnedGrouping.expose_stock"]}
+{"name": "Becoming.LearnedGrouping.broadening_after_failure", "uses": ["Becoming.LearnedGrouping.along", "Becoming.LearnedGrouping.broaden_reaches_context"]}
+{"name": "Becoming.LearnedGrouping.broadening_keeps_prefix", "uses": ["Becoming.LearnedGrouping.along", "Becoming.LearnedGrouping.broaden_prefix"]}
+{"name": "Becoming.LearnedGrouping.broadening_parses_one_form", "uses": ["Becoming.LearnedGrouping.along", "Becoming.LearnedGrouping.broaden_one_form"]}
+{"name": "Becoming.LearnedGrouping.broadening_trace", "uses": ["Becoming.LearnedGrouping.broaden_stock", "Becoming.LearnedGrouping.expose_trace"]}
+{"name": "Becoming.LearnedGrouping.context_assembles", "uses": ["Becoming.LearnedGrouping.context_groups_words", "Becoming.LearnedGrouping.decodes_words"]}
+{"name": "Becoming.LearnedGrouping.context_forms_bond", "uses": []}
+{"name": "Becoming.LearnedGrouping.context_groups_words", "uses": ["Becoming.LearnedGrouping.context_forms_bond", "Becoming.LearnedGrouping.two_word_iff"]}
+{"name": "Becoming.LearnedGrouping.counts_agree", "uses": []}
+{"name": "Becoming.LearnedGrouping.decodes_words", "uses": ["Becoming.Segmentation.readAll_map_iff"]}
+{"name": "Becoming.LearnedGrouping.expose_stock", "uses": ["Becoming.LearnedGrouping.receive_stock"]}
+{"name": "Becoming.LearnedGrouping.expose_trace", "uses": ["Becoming.LearnedGrouping.step_iff"]}
+{"name": "Becoming.LearnedGrouping.gap_breaks_edge", "uses": []}
+{"name": "Becoming.LearnedGrouping.grouping_assembles", "uses": ["Becoming.LearnedGrouping.along", "Becoming.LearnedGrouping.context_assembles"]}
+{"name": "Becoming.LearnedGrouping.grouping_reaches_program", "uses": []}
+{"name": "Becoming.LearnedGrouping.history_account", "uses": []}
+{"name": "Becoming.LearnedGrouping.ideal_two_word", "uses": ["Becoming.LearnedGrouping.two_word_iff"]}
+{"name": "Becoming.LearnedGrouping.order_changes_grouping", "uses": []}
+{"name": "Becoming.LearnedGrouping.order_not_frequency", "uses": ["Becoming.LearnedGrouping.along", "Becoming.LearnedGrouping.counts_agree", "Becoming.LearnedGrouping.grouping_reaches_program", "Becoming.LearnedGrouping.order_changes_grouping"]}
+{"name": "Becoming.LearnedGrouping.parse_without_support", "uses": ["Becoming.LearnedGrouping.along", "Becoming.LearnedGrouping.parsed_short"]}
+{"name": "Becoming.LearnedGrouping.parsed_keeps", "uses": []}
+{"name": "Becoming.LearnedGrouping.parsed_not_broadened", "uses": ["Becoming.LearnedGrouping.along", "Becoming.LearnedGrouping.parsed_keeps"]}
+{"name": "Becoming.LearnedGrouping.parsed_short", "uses": []}
+{"name": "Becoming.LearnedGrouping.receive_short", "uses": []}
+{"name": "Becoming.LearnedGrouping.receive_stock", "uses": []}
+{"name": "Becoming.LearnedGrouping.reception_changes_parse", "uses": ["Becoming.LearnedGrouping.along", "Becoming.LearnedGrouping.grouping_reaches_program", "Becoming.LearnedGrouping.unexposed_unparsed"]}
+{"name": "Becoming.LearnedGrouping.repetition_joins_words", "uses": []}
+{"name": "Becoming.LearnedGrouping.response_keeps_history", "uses": ["Becoming.LearnedGrouping.along", "Becoming.LearnedGrouping.response_keeps_log"]}
+{"name": "Becoming.LearnedGrouping.response_keeps_log", "uses": []}
+{"name": "Becoming.LearnedGrouping.spelled", "uses": []}
+{"name": "Becoming.LearnedGrouping.step_iff", "uses": []}
+{"name": "Becoming.LearnedGrouping.still_without_support", "uses": ["Becoming.LearnedGrouping.receive_short", "Becoming.LearnedGrouping.step_iff", "Generative.Trace.brecOn"]}
+{"name": "Becoming.LearnedGrouping.support_used", "uses": ["Becoming.LearnedGrouping.along", "Becoming.LearnedGrouping.history_account"]}
+{"name": "Becoming.LearnedGrouping.total_kept", "uses": ["Becoming.LearnedGrouping.along", "Becoming.LearnedGrouping.expose_stock"]}
+{"name": "Becoming.LearnedGrouping.trace_end", "uses": ["Becoming.LearnedGrouping.step_iff", "Generative.Trace.brecOn"]}
+{"name": "Becoming.LearnedGrouping.two_word_iff", "uses": ["Becoming.LearnedGrouping.spelled", "Becoming.Segmentation.encode_iff"]}
+{"name": "Becoming.LearnedGrouping.unexposed_unparsed", "uses": []}

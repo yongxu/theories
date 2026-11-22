@@ -1,0 +1,18 @@
+{"name": "Becoming.Diversion.diverting_gainless", "uses": []}
+{"name": "Becoming.Diversion.draws_beyond", "uses": ["Becoming.Diversion.diverting_gainless", "Becoming.Diversion.favours", "Becoming.Diversion.places_distinct", "Becoming.Diversion.taker_listed", "Becoming.Flow.favours_reaching_beyond", "Becoming.Web.raises_selectsThrough", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Diversion.places_distinct", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Diversion.supplying_raises_untaken", "uses": ["Becoming.Diversion.blind_to_source"]}
+{"name": "Becoming.Diversion.supplying_rises_by_inflow", "uses": []}
+{"name": "Becoming.Diversion.taker_listed", "uses": []}
+{"name": "Becoming.Flow.Balances.gives_more_of_rise", "uses": ["Becoming.Flow.Balances.over", "Becoming.exists_lt_of_total_lt", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.Balances.rise_draws_beyond", "uses": ["Becoming.Flow.Balances.rise_draws_beyond_inflow", "Becoming.Flow.gainlessOn_iff_inflow"]}
+{"name": "Becoming.Flow.Balances.rise_draws_beyond_inflow", "uses": ["Becoming.Flow.Balances.stock_inflow", "Becoming.excess_le_of_le_add", "Becoming.excess_pos", "Becoming.exists_lt_of_total_lt", "Becoming.le_add_excess", "Becoming.total_le_of_support"]}
+{"name": "Becoming.Flow.Balances.rise_le_inflow_beyond", "uses": ["Becoming.Flow.Balances.over", "Becoming.add_sub_of_le", "Becoming.le_add_excess", "Becoming.le_of_add_le_add_right", "Becoming.total_add", "Becoming.total_le", "Becoming.total_le_of_support", "Becoming.total_swap"]}
+{"name": "Becoming.Flow.Balances.rise_paid_from_beyond", "uses": ["Becoming.Flow.Balances.rise_le_inflow_beyond", "Becoming.Flow.gainlessOn_iff_inflow"]}
+{"name": "Becoming.Flow.Balances.rise_takes_beyond", "uses": ["Becoming.Flow.Balances.rise_takes_beyond_inflow", "Becoming.Flow.gainlessOn_iff_inflow"]}
+{"name": "Becoming.Flow.Balances.rise_takes_beyond_inflow", "uses": ["Becoming.Flow.Balances.rise_draws_beyond_inflow", "Becoming.exists_outside_of_total_lt"]}
+{"name": "Becoming.Flow.Gainless.rise_takes_beyond", "uses": ["Becoming.Flow.Balances.rise_takes_beyond"]}
+{"name": "Becoming.Flow.favours_reaching_beyond", "uses": ["Becoming.Flow.favours_reaching_beyond_inflow", "Becoming.Flow.gainlessOn_iff_inflow"]}
+{"name": "Becoming.Flow.favours_reaching_beyond_inflow", "uses": ["Becoming.Flow.Balances.rise_takes_beyond_inflow"]}
+{"name": "Becoming.Web.raises_selectsThrough", "uses": ["Becoming.total_congr_on"]}
+{"name": "Becoming.exists_outside_of_total_lt", "uses": ["Becoming.search", "Becoming.total_le_of_support"]}

@@ -1,0 +1,11 @@
+{"name": "Becoming.Flow.class_judge_beyond", "uses": ["Becoming.Flow.uncoupled_beyond_coupling", "Becoming.Web.AlikeThrough.refl", "Becoming.Web.class_judge_iff"]}
+{"name": "Becoming.Predation.fox_ends", "uses": ["Becoming.Predation.dependent", "Becoming.Predation.embodied", "Becoming.Predation.hare_ends", "Becoming.Reach.of_step", "Becoming.Web.coextinct"]}
+{"name": "Becoming.Renewable.finite_reading_withholds_renewal", "uses": ["Becoming.Renewable.prefix_does_not_decide"]}
+{"name": "Becoming.Renewable.no_exact_finite_reading", "uses": ["Becoming.Renewable.finite_reading_withholds_renewal", "Becoming.Web.renewing_not_consuming"]}
+{"name": "Becoming.Sequences.recurs_iff", "uses": []}
+{"name": "Becoming.Web.active_along", "uses": ["Becoming.Web.Embodied.active_of_bearing"]}
+{"name": "Becoming.Web.class_judge_iff", "uses": ["Becoming.commonResponse_judge_iff"]}
+{"name": "Becoming.Web.class_judge_later", "uses": ["Becoming.Web.AlikeThroughUpTo.earlier", "Becoming.commonResponse_antitone", "Becoming.sees_narrow"]}
+{"name": "Becoming.Web.class_judge_widen", "uses": ["Becoming.Web.AlikeThroughUpTo.of_obs", "Becoming.commonResponse_antitone", "Becoming.sees_narrow"]}
+{"name": "Becoming.Web.coextinct", "uses": ["Becoming.Invariant.reach", "Becoming.Web.active_along"]}
+{"name": "Becoming.sees_narrow", "uses": []}

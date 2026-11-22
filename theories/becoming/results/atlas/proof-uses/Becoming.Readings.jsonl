@@ -1,0 +1,11 @@
+{"name": "Becoming.Contextual.world_active", "uses": []}
+{"name": "Becoming.Flow.changeReadings_agree_iff", "uses": ["Becoming.changes_agree_iff"]}
+{"name": "Becoming.Flow.changeReadings_free_iff", "uses": ["Becoming.Contextual.fitsFree_iff", "Becoming.Flow.changeReadings_glue_everywhere_iff"]}
+{"name": "Becoming.Flow.changeReadings_glue_counting_rest", "uses": ["Becoming.Flow.changeReadings_glue_iff", "Becoming.Flow.withImbalance_balances"]}
+{"name": "Becoming.Flow.changeReadings_glue_everywhere_iff", "uses": ["Becoming.Flow.changeReadings_glue_iff"]}
+{"name": "Becoming.Flow.changeReadings_glue_iff", "uses": ["Becoming.Contextual.glues_iff_agree", "Becoming.Flow.changeReadings_agree_iff"]}
+{"name": "Becoming.World.unity", "uses": ["Becoming.Flow.changeReadings_glue_everywhere_iff", "Becoming.World.withRest_balanced", "Becoming.World.withRest_closed_iff"]}
+{"name": "Becoming.add_eq_of_sub_eq", "uses": ["Becoming.add_right_cancel", "Becoming.add_sub_turn"]}
+{"name": "Becoming.changes_agree_iff", "uses": ["Becoming.add_eq_of_sub_eq", "Becoming.sub_eq_of_add_eq"]}
+{"name": "Becoming.sub_add_add_right", "uses": []}
+{"name": "Becoming.sub_eq_of_add_eq", "uses": ["Becoming.sub_add_add_right"]}

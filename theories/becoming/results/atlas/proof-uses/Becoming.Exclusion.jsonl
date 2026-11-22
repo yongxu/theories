@@ -1,0 +1,39 @@
+{"name": "Becoming.Excluding.acting", "uses": []}
+{"name": "Becoming.Excluding.admission_alike", "uses": ["Becoming.Excluding.admits_all"]}
+{"name": "Becoming.Excluding.admits_all", "uses": ["Becoming.Excluding.level_two"]}
+{"name": "Becoming.Excluding.balances", "uses": []}
+{"name": "Becoming.Excluding.continues", "uses": []}
+{"name": "Becoming.Excluding.dependent", "uses": ["Becoming.Excluding.level_two"]}
+{"name": "Becoming.Excluding.ends_by_law", "uses": ["Becoming.Excluding.acting", "Becoming.Excluding.balances", "Becoming.Excluding.continues", "Becoming.Excluding.dependent", "Becoming.Excluding.gated", "Becoming.Excluding.second_lasting", "Becoming.Excluding.second_lives", "Becoming.Excluding.takes_all", "Becoming.Flow.continuing_ends_taker"]}
+{"name": "Becoming.Excluding.first_step", "uses": []}
+{"name": "Becoming.Excluding.gated", "uses": []}
+{"name": "Becoming.Excluding.level_two", "uses": []}
+{"name": "Becoming.Excluding.second_lasting", "uses": []}
+{"name": "Becoming.Excluding.second_lives", "uses": []}
+{"name": "Becoming.Excluding.takes_all", "uses": []}
+{"name": "Becoming.Excluding.three_courses", "uses": ["Becoming.Exceeding.all_end", "Becoming.Excluding.balances", "Becoming.Excluding.continues", "Becoming.Excluding.dependent", "Becoming.Excluding.takes_all", "Becoming.Sharing.balances", "Becoming.Sharing.dependent", "Becoming.Sharing.neither_all", "Becoming.Sharing.within"]}
+{"name": "Becoming.Flow.alongside_not_all", "uses": ["Becoming.Flow.full_taking_ends"]}
+{"name": "Becoming.Flow.continuing_ends_taker", "uses": ["Becoming.Flow.continuing_excludes_active", "Becoming.Web.active_before"]}
+{"name": "Becoming.Flow.continuing_excludes", "uses": ["Becoming.Flow.full_taking_ends"]}
+{"name": "Becoming.Flow.continuing_excludes_active", "uses": ["Becoming.Flow.continuing_excludes"]}
+{"name": "Becoming.Flow.distinct_of_nodup", "uses": []}
+{"name": "Becoming.Flow.excess_of_takesAll", "uses": ["Becoming.Flow.outrun_excess"]}
+{"name": "Becoming.Flow.full_taking_ends", "uses": ["Becoming.Flow.excess_of_takesAll", "Becoming.Flow.joint_excess_ends"]}
+{"name": "Becoming.Flow.full_taking_ends_at", "uses": ["Becoming.Flow.excess_of_takesAll", "Becoming.Flow.joint_excess_ends_at"]}
+{"name": "Becoming.Flow.level_kept", "uses": ["Becoming.Flow.joint_keeps"]}
+{"name": "Becoming.Flow.level_kept_of_plans", "uses": ["Becoming.Flow.level_kept", "Becoming.Flow.withinJoint_of_plan"]}
+{"name": "Becoming.Flow.outrun_below", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.excess_bounded_at", "Becoming.Flow.outrun_excess", "Becoming.Flow.stays_below"]}
+{"name": "Becoming.Flow.outrun_ends", "uses": ["Becoming.Flow.ends_below_at", "Becoming.Flow.outrun_below"]}
+{"name": "Becoming.Flow.outrun_excess", "uses": ["Becoming.Flow.rest_le_taken"]}
+{"name": "Becoming.Flow.outrun_reading_alike", "uses": ["Becoming.Flow.outrun_below"]}
+{"name": "Becoming.Flow.rest_le_taken", "uses": ["Becoming.total_le_of_support"]}
+{"name": "Becoming.Flow.supported_of_within", "uses": ["Becoming.Flow.level_kept"]}
+{"name": "Becoming.Flow.withinJoint_of_plan", "uses": ["Becoming.Flow.distinct_of_nodup", "Becoming.JointPlan.supports_of_realizes", "Becoming.length_le_of_sub"]}
+{"name": "Becoming.Sharing.balances", "uses": []}
+{"name": "Becoming.Sharing.dependent", "uses": ["Becoming.Flow.supported_of_within", "Becoming.Sharing.balances", "Becoming.Sharing.within"]}
+{"name": "Becoming.Sharing.full_taking_needed", "uses": []}
+{"name": "Becoming.Sharing.neither_all", "uses": []}
+{"name": "Becoming.Sharing.within", "uses": []}
+{"name": "Becoming.Web.active_before", "uses": ["Becoming.kept_onward"]}
+{"name": "Becoming.add_le_total_of_mem", "uses": ["Becoming.le_total_of_mem", "Becoming.mem_of_mem_cons_ne"]}
+{"name": "Becoming.mem_of_mem_cons_ne", "uses": []}

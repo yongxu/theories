@@ -1,0 +1,52 @@
+{"name": "Becoming.Flip.P₄_apart", "uses": []}
+{"name": "Becoming.Flip.flipMove_twice", "uses": []}
+{"name": "Becoming.Flip.models_correspond", "uses": ["Becoming.Flip.steps_carried", "Becoming.«对应之像»"]}
+{"name": "Becoming.Flip.not_renamed", "uses": ["Becoming.Flip.P₄_apart", "Becoming.«一一对应».to_eq_iff"]}
+{"name": "Becoming.Flip.steps_carried", "uses": []}
+{"name": "Becoming.Forgotten.moves_forgotten", "uses": []}
+{"name": "Becoming.NoConfigurations.models_correspond", "uses": []}
+{"name": "Becoming.NoConfigurations.not_renamed", "uses": ["Becoming.«一一对应».to_back"]}
+{"name": "Becoming.NoMoves.models_correspond", "uses": []}
+{"name": "Becoming.NoMoves.not_renamed", "uses": ["Becoming.«一一对应».to_back"]}
+{"name": "Becoming.Twist.P₂_loops_by_one_move", "uses": ["Becoming.Twist.P₂_not_both"]}
+{"name": "Becoming.Twist.P₂_not_both", "uses": []}
+{"name": "Becoming.Twist.flipConfiguration_twice", "uses": []}
+{"name": "Becoming.Twist.models_correspond", "uses": ["Becoming.Twist.steps_carried", "Becoming.«对应之像»"]}
+{"name": "Becoming.Twist.not_renamed", "uses": ["Becoming.Twist.P₂_loops_by_one_move", "Becoming.«一一对应».to_eq_iff"]}
+{"name": "Becoming.Twist.steps_carried", "uses": []}
+{"name": "Becoming.class_is_claims", "uses": ["Becoming.«类».refl", "Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.enabled_iff_neng", "uses": []}
+{"name": "Becoming.factorsThrough_iff_image", "uses": ["Becoming.Image.least", "Becoming.factors_image"]}
+{"name": "Becoming.feasible_iff_li", "uses": ["Becoming.trace_iff_li"]}
+{"name": "Becoming.forall_moveRel_iff", "uses": []}
+{"name": "Becoming.forall_steps_iff", "uses": ["Becoming.steps_one_move"]}
+{"name": "Becoming.mk_moveRel", "uses": []}
+{"name": "Becoming.moveRel_mk", "uses": []}
+{"name": "Becoming.reading_next_move_not_withMove", "uses": ["Becoming.withMove_image_iff"]}
+{"name": "Becoming.renaming_determined", "uses": ["Becoming.determined_iff_fixed", "Becoming.renaming_moveRel", "Becoming.«一一对应».to_back", "Becoming.«定后之对应»"]}
+{"name": "Becoming.renaming_goAlike", "uses": ["Becoming.goAlikeUnder_iff_alike", "Becoming.renaming_moveRel", "Becoming.«一一对应».back_to", "Becoming.«一一对应».to_back", "Becoming.«同行之对应»", "Becoming.«对应之像»"]}
+{"name": "Becoming.renaming_invariant", "uses": ["Becoming.invariant_iff_closedUnder", "Becoming.renaming_steps", "Becoming.«闭之对应»"]}
+{"name": "Becoming.renaming_iterate", "uses": ["Becoming.renaming_steps", "Becoming.«迭之对应»", "Becoming.«迭内之对应»"]}
+{"name": "Becoming.renaming_lossless", "uses": ["Becoming.Branching.lossless_iff_fixedBefore", "Becoming.renaming_steps", "Becoming.«定前之对应»"]}
+{"name": "Becoming.renaming_moveRel", "uses": ["Becoming.«对应之像»"]}
+{"name": "Becoming.renaming_of_withMove", "uses": ["Becoming.step_iff_withMove", "Becoming.«对应之逐点»"]}
+{"name": "Becoming.renaming_reach", "uses": ["Becoming.reach_iff_withinClosure", "Becoming.renaming_steps", "Becoming.«所闭之对应»"]}
+{"name": "Becoming.renaming_returns", "uses": ["Becoming.Branching.returns_iff_reaches", "Becoming.renaming_steps", "Becoming.«及之对应»"]}
+{"name": "Becoming.renaming_steps", "uses": ["Becoming.«一一对应».to_back", "Becoming.«对应之像»"]}
+{"name": "Becoming.renaming_trace", "uses": ["Becoming.renaming_moveRel", "Becoming.trace_iff_li", "Becoming.«历之对应»"]}
+{"name": "Becoming.renaming_yan", "uses": ["Becoming.renaming_steps", "Becoming.«一之像»", "Becoming.«延之对应»"]}
+{"name": "Becoming.run_iff_image", "uses": ["Becoming.Run.step", "Becoming.«保之像»"]}
+{"name": "Becoming.run_image", "uses": ["Becoming.Run.step", "Becoming.«保之像»"]}
+{"name": "Becoming.run_yan", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.step_iff_withMove", "uses": []}
+{"name": "Becoming.steps_edgeProcess", "uses": ["Becoming.steps_one_move"]}
+{"name": "Becoming.steps_iff_moveRel", "uses": []}
+{"name": "Becoming.steps_lawProcess", "uses": ["Becoming.steps_one_move"]}
+{"name": "Becoming.steps_one_move", "uses": []}
+{"name": "Becoming.steps_unlabelled", "uses": ["Becoming.steps_one_move"]}
+{"name": "Becoming.trace_iff_li", "uses": ["Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.withMove_image_iff", "uses": []}
+{"name": "Becoming.withMove_of_renaming", "uses": ["Becoming.«一一对应».to_eq_iff", "Becoming.«对应之像»"]}
+{"name": "Becoming.yan_iff_keepsMoving", "uses": []}
+{"name": "Becoming.yan_line_iff_dependentChoice", "uses": ["Becoming.Onward.runs_iff_dependentChoice", "Becoming.Run.step"]}
+{"name": "Becoming.yan_line_of_list", "uses": ["Becoming.Onward.KeepsMoving.run", "Becoming.Run.step"]}

@@ -1,0 +1,6 @@
+{"name": "Becoming.Successive.acting", "uses": []}
+{"name": "Becoming.Successive.balances", "uses": ["Becoming.Frontier.burns"]}
+{"name": "Becoming.Successive.dissipative", "uses": ["Becoming.Frontier.burning_self", "Becoming.le_total_of_mem", "Becoming.sign_le", "Becoming.sign_le_one", "Becoming.total_le_at", "Becoming.total_zero"]}
+{"name": "Becoming.Successive.fed", "uses": ["Becoming.Frontier.burning_self"]}
+{"name": "Becoming.Successive.relay", "uses": ["Becoming.Successive.acting", "Becoming.Successive.balances", "Becoming.Successive.dissipative", "Becoming.Successive.fed", "Becoming.Successive.takes_part_once"]}
+{"name": "Becoming.Successive.takes_part_once", "uses": []}

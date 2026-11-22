@@ -1,0 +1,7 @@
+{"name": "Becoming.Turns.Copying.reaches_first_only", "uses": ["Becoming.Turns.Copying.readsOnlyActs", "Becoming.Turns.act_alike_of_cascade"]}
+{"name": "Becoming.Turns.Copying.readsOnlyActs", "uses": []}
+{"name": "Becoming.Turns.act_alike_of_cascade", "uses": ["Becoming.Turns.acts_alike_of_cascade", "Becoming.Turns.law_alike_of_cascade"]}
+{"name": "Becoming.Turns.acts_alike_of_cascade", "uses": ["Becoming.Turns.law_alike_of_cascade"]}
+{"name": "Becoming.Turns.cascade_through", "uses": ["Becoming.Turns.acts_alike_of_cascade"]}
+{"name": "Becoming.Turns.law_alike_of_cascade", "uses": []}
+{"name": "Becoming.Turns.separates_at", "uses": []}

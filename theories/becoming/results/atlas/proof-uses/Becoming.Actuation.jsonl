@@ -1,0 +1,47 @@
+{"name": "Becoming.Actuation.Command.ofNat_ctorIdx", "uses": []}
+{"name": "Becoming.Actuation.Query.ofNat_ctorIdx", "uses": []}
+{"name": "Becoming.Actuation.beq_self", "uses": []}
+{"name": "Becoming.Actuation.chosen_completes", "uses": ["Becoming.Actuation.passes_iff", "Becoming.ContingentPlans.valid_iff_passes", "Becoming.ListTests.find_some"]}
+{"name": "Becoming.Actuation.conserved_invariant", "uses": ["Becoming.Actuation.move_draws"]}
+{"name": "Becoming.Actuation.conserved_trace", "uses": ["Becoming.Actuation.conserved_invariant", "Becoming.Invariant.trace"]}
+{"name": "Becoming.Actuation.deliver_conserves", "uses": ["Becoming.Actuation.draws_then"]}
+{"name": "Becoming.Actuation.draw_conserves", "uses": ["Becoming.Actuation.draw_eq_some", "Becoming.Naturals.sub_add_add"]}
+{"name": "Becoming.Actuation.draw_eq_some", "uses": []}
+{"name": "Becoming.Actuation.draw_none", "uses": []}
+{"name": "Becoming.Actuation.draw_some", "uses": []}
+{"name": "Becoming.Actuation.draws_then", "uses": ["Becoming.Actuation.draw_conserves", "Becoming.ListTests.bind_eq_some"]}
+{"name": "Becoming.Actuation.enact_conserves", "uses": ["Becoming.Actuation.draws_then"]}
+{"name": "Becoming.Actuation.enact_revoked", "uses": ["Becoming.ListTests.beq_false_iff"]}
+{"name": "Becoming.Actuation.enact_undelivered", "uses": []}
+{"name": "Becoming.Actuation.issue_conserves", "uses": ["Becoming.Actuation.draws_then"]}
+{"name": "Becoming.Actuation.issue_stale", "uses": ["Becoming.ListTests.beq_false_iff"]}
+{"name": "Becoming.Actuation.issue_unsigned", "uses": []}
+{"name": "Becoming.Actuation.known_route_completes", "uses": ["Becoming.Actuation.chosen_completes", "Becoming.Actuation.known_route_no_probe"]}
+{"name": "Becoming.Actuation.known_route_no_probe", "uses": []}
+{"name": "Becoming.Actuation.late_no_trace", "uses": ["Becoming.Actuation.late_probe_no_run", "Becoming.Actuation.run_iff", "Becoming.ListTests.none_ne_some"]}
+{"name": "Becoming.Actuation.late_probe_no_run", "uses": []}
+{"name": "Becoming.Actuation.move_draws", "uses": ["Becoming.Actuation.deliver_conserves", "Becoming.Actuation.draw_conserves", "Becoming.Actuation.enact_conserves", "Becoming.Actuation.issue_conserves", "Becoming.ListTests.bind_eq_some"]}
+{"name": "Becoming.Actuation.none_chosen", "uses": ["Becoming.Actuation.passes_iff", "Becoming.ContingentPlans.valid_iff_passes", "Becoming.ListTests.find_none_iff"]}
+{"name": "Becoming.Actuation.omitted_route_fails", "uses": ["Becoming.Actuation.chosen_completes", "Becoming.Actuation.omitted_route_fails_run", "Becoming.Actuation.run_iff", "Becoming.ListTests.none_ne_some"]}
+{"name": "Becoming.Actuation.omitted_route_fails_run", "uses": []}
+{"name": "Becoming.Actuation.passes_iff", "uses": ["Becoming.Actuation.run_iff", "Becoming.ListTests.option_any_true_iff"]}
+{"name": "Becoming.Actuation.protocol_completes", "uses": ["Becoming.Actuation.protocol_exact", "Becoming.Actuation.protocol_iff"]}
+{"name": "Becoming.Actuation.protocol_exact", "uses": ["Becoming.Actuation.beq_self", "Becoming.Actuation.draw_some", "Becoming.Naturals.le_of_add_le_left", "Becoming.Naturals.le_of_add_le_right", "Becoming.Naturals.le_sub_of_add_le", "Becoming.Naturals.sub_add_cancel", "Becoming.Naturals.sub_sub"]}
+{"name": "Becoming.Actuation.protocol_iff", "uses": ["Becoming.ListTests.bind_eq_some", "Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.Actuation.replacement_run", "uses": []}
+{"name": "Becoming.Actuation.replacement_trace", "uses": ["Becoming.Actuation.replacement_run", "Becoming.Actuation.run_iff", "Becoming.ListTests.map_eq_some"]}
+{"name": "Becoming.Actuation.revoked_no_enact", "uses": ["Becoming.Actuation.enact_revoked", "Becoming.ListTests.none_ne_some"]}
+{"name": "Becoming.Actuation.route_inquiry_completes_both", "uses": ["Becoming.Actuation.chosen_completes", "Becoming.Actuation.unknown_route_probes"]}
+{"name": "Becoming.Actuation.run_iff", "uses": ["Becoming.Actuation.protocol_iff", "Becoming.ListTests.bind_eq_some", "Generative.trace_cons_iff"]}
+{"name": "Becoming.Actuation.shutdown_run", "uses": []}
+{"name": "Becoming.Actuation.shutdown_trace", "uses": ["Becoming.Actuation.run_iff", "Becoming.Actuation.shutdown_run", "Becoming.ListTests.map_eq_some"]}
+{"name": "Becoming.Actuation.stale_no_issue", "uses": ["Becoming.Actuation.issue_stale", "Becoming.ListTests.none_ne_some"]}
+{"name": "Becoming.Actuation.statewise_not_uniform", "uses": ["Becoming.Actuation.none_chosen", "Becoming.Actuation.protocol_iff", "Becoming.Actuation.statewise_not_uniform_run", "Becoming.ListTests.isSome_iff"]}
+{"name": "Becoming.Actuation.statewise_not_uniform_run", "uses": []}
+{"name": "Becoming.Actuation.timely_run", "uses": []}
+{"name": "Becoming.Actuation.timely_trace", "uses": ["Becoming.Actuation.run_iff", "Becoming.Actuation.timely_run", "Becoming.ListTests.isSome_iff"]}
+{"name": "Becoming.Actuation.undelivered_no_enact", "uses": ["Becoming.Actuation.enact_undelivered", "Becoming.ListTests.none_ne_some"]}
+{"name": "Becoming.Actuation.unknown_route_probes", "uses": []}
+{"name": "Becoming.Actuation.unsigned_no_issue", "uses": ["Becoming.Actuation.issue_unsigned", "Becoming.ListTests.none_ne_some"]}
+{"name": "Becoming.Actuation.update_run", "uses": []}
+{"name": "Becoming.Actuation.update_trace", "uses": ["Becoming.Actuation.run_iff", "Becoming.Actuation.update_run", "Becoming.ListTests.map_eq_some"]}

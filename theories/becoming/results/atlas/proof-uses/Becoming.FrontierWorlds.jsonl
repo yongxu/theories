@@ -1,0 +1,8 @@
+{"name": "Becoming.FrontierWorlds.Discharged.no_residual", "uses": ["Becoming.Requirement.Settled.no_residual"]}
+{"name": "Becoming.FrontierWorlds.Served.not_of_gap", "uses": ["Becoming.Requirement.Served.not_of_gap"]}
+{"name": "Becoming.FrontierWorlds.Served.successor", "uses": ["Becoming.Requirement.Served.successor"]}
+{"name": "Becoming.FrontierWorlds.giver_active", "uses": ["Becoming.Requirement.Assigned.capable"]}
+{"name": "Becoming.FrontierWorlds.residual_of_unfulfilled", "uses": ["Becoming.Requirement.residual_of_unfulfilled"]}
+{"name": "Becoming.FrontierWorlds.served_of_handover", "uses": ["Becoming.Requirement.served_of_handover"]}
+{"name": "Becoming.FrontierWorlds.sole_giver_active", "uses": ["Becoming.FrontierWorlds.giver_active", "Becoming.FrontierWorlds.sole_giver_required"]}
+{"name": "Becoming.FrontierWorlds.sole_giver_required", "uses": ["Becoming.Requirement.Assigned.unique_required"]}

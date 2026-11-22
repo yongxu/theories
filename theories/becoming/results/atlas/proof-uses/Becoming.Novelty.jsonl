@@ -1,0 +1,22 @@
+{"name": "Becoming.Flow.Balances.bounded", "uses": ["Becoming.Flow.Balances.nonrising", "Becoming.nonrising_between"]}
+{"name": "Becoming.Flow.bounded_counting_rest", "uses": ["Becoming.Flow.Balances.bounded", "Becoming.Flow.withImbalance_balances"]}
+{"name": "Becoming.Flow.uncarried_of_bounded", "uses": ["Becoming.Web.unread_of_unbounded", "Becoming.recurring_accumulates"]}
+{"name": "Becoming.Web.changes_le_stock", "uses": ["Becoming.mark_one", "Becoming.mark_zero", "Becoming.steps_last"]}
+{"name": "Becoming.Web.counting_gains", "uses": ["Becoming.Web.counting_new", "Becoming.Web.unbounded_of_new"]}
+{"name": "Becoming.Web.counting_new", "uses": []}
+{"name": "Becoming.Web.distinct_configs_of_apart", "uses": ["Becoming.distinct_map_on", "Becoming.map_comp_eq"]}
+{"name": "Becoming.Web.exceeds_of_distinct_configs", "uses": ["Becoming.Web.config_within", "Becoming.length_le_of_sub", "Becoming.length_map", "Becoming.preimage_of_mem_map", "Becoming.search"]}
+{"name": "Becoming.Web.exceeds_of_new", "uses": ["Becoming.Web.distinct_configs_of_apart", "Becoming.Web.exceeds_of_distinct_configs", "Becoming.length_map", "Becoming.preimage_of_mem_map", "Becoming.steps_distinct", "Becoming.steps_length", "Becoming.steps_within"]}
+{"name": "Becoming.Web.never_revisits_of_loses", "uses": ["Becoming.Web.config_total", "Becoming.nonrising_between"]}
+{"name": "Becoming.Web.rests_of_loses", "uses": ["Becoming.Web.changes_le_stock", "Becoming.mark_pos", "Becoming.recurring_accumulates"]}
+{"name": "Becoming.Web.returns_of_bounded", "uses": ["Becoming.Web.config_within", "Becoming.Web.rests_of_never_revisits"]}
+{"name": "Becoming.Web.revisits_of_bounded", "uses": ["Becoming.Web.config_within", "Becoming.revisits_from"]}
+{"name": "Becoming.Web.revisits_of_nonrising", "uses": ["Becoming.Web.revisits_of_bounded", "Becoming.nonrising_between"]}
+{"name": "Becoming.Web.unbounded_of_distinct_configs", "uses": ["Becoming.Web.exceeds_of_distinct_configs"]}
+{"name": "Becoming.Web.unbounded_of_never_revisits", "uses": ["Becoming.Web.returns_of_bounded"]}
+{"name": "Becoming.Web.unbounded_of_new", "uses": ["Becoming.Web.distinct_configs_of_apart", "Becoming.Web.unbounded_of_distinct_configs", "Becoming.length_map", "Becoming.preimage_of_mem_map", "Becoming.steps_distinct", "Becoming.steps_length", "Becoming.steps_mem"]}
+{"name": "Becoming.Web.unread_of_new_record", "uses": ["Becoming.Web.revisits_of_bounded"]}
+{"name": "Becoming.Web.unread_of_unbounded", "uses": ["Becoming.Web.config_within", "Becoming.le_sumOver"]}
+{"name": "Becoming.World.forgets_of_bounded", "uses": ["Becoming.Flow.exchanges_pos", "Becoming.Flow.uncarried_of_bounded"]}
+{"name": "Becoming.first_law_cases", "uses": ["Becoming.Flow.Balances.bounded", "Becoming.Web.returns_of_bounded", "Becoming.Web.revisits_of_bounded", "Becoming.World.forgets_of_bounded"]}
+{"name": "Becoming.upto_or_fails", "uses": ["Becoming.le_succ_cases"]}

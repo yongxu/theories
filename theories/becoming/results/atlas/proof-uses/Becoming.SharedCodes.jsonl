@@ -1,0 +1,125 @@
+{"name": "Becoming.Law.Commutes.keepsRelation", "uses": []}
+{"name": "Becoming.SharedCodes.Gloss.distinct", "uses": ["Becoming.CrossSituational.mem_singleton", "Becoming.SharedCodes.Gloss.zero_ne_one"]}
+{"name": "Becoming.SharedCodes.Gloss.earlier_rests", "uses": ["Becoming.SharedCodes.Gloss.distinct", "Becoming.SharedCodes.Gloss.exact", "Becoming.SharedCodes.written_rests"]}
+{"name": "Becoming.SharedCodes.Gloss.exact", "uses": ["Becoming.beq_self"]}
+{"name": "Becoming.SharedCodes.Gloss.taken_up_locks", "uses": ["Becoming.SharedCodes.Gloss.distinct", "Becoming.SharedCodes.Gloss.exact", "Becoming.SharedCodes.Gloss.zero_ne_one", "Becoming.SharedCodes.omitted_rest", "Becoming.SharedCodes.written_rests"]}
+{"name": "Becoming.SharedCodes.Gloss.uptake_loses", "uses": []}
+{"name": "Becoming.SharedCodes.Gloss.zero_ne_one", "uses": []}
+{"name": "Becoming.SharedCodes.Majority.even_rests", "uses": []}
+{"name": "Becoming.SharedCodes.Majority.odd_agrees", "uses": []}
+{"name": "Becoming.SharedCodes.Path.joined", "uses": []}
+{"name": "Becoming.SharedCodes.Path.least_coupled", "uses": []}
+{"name": "Becoming.SharedCodes.Path.least_least", "uses": []}
+{"name": "Becoming.SharedCodes.Path.never_agree", "uses": ["Becoming.SharedCodes.Path.joined", "Becoming.SharedCodes.Path.least_coupled", "Becoming.SharedCodes.Path.least_least", "Becoming.SharedCodes.Path.stays_a", "Becoming.SharedCodes.Path.stays_b", "Becoming.SharedCodes.follow_state"]}
+{"name": "Becoming.SharedCodes.Path.stays_a", "uses": []}
+{"name": "Becoming.SharedCodes.Path.stays_b", "uses": []}
+{"name": "Becoming.SharedCodes.TwoFormations.bor_comm", "uses": []}
+{"name": "Becoming.SharedCodes.TwoFormations.centre_breaks_exchange", "uses": ["Becoming.ListTests.not_ne_self", "Becoming.SharedCodes.TwoFormations.centre_keeps_renaming", "Becoming.SharedCodes.TwoFormations.start_symmetric", "Becoming.SharedCodes.TwoFormations.three_agree", "Becoming.SharedCodes.never_agrees_of_both"]}
+{"name": "Becoming.SharedCodes.TwoFormations.centre_keeps_renaming", "uses": []}
+{"name": "Becoming.SharedCodes.TwoFormations.crossing_keeps_exchange", "uses": []}
+{"name": "Becoming.SharedCodes.TwoFormations.crossing_keeps_renaming", "uses": []}
+{"name": "Becoming.SharedCodes.TwoFormations.crossing_never_agrees", "uses": ["Becoming.SharedCodes.TwoFormations.crossing_keeps_exchange", "Becoming.SharedCodes.TwoFormations.crossing_keeps_renaming", "Becoming.SharedCodes.TwoFormations.start_symmetric", "Becoming.SharedCodes.never_agrees_of_both"]}
+{"name": "Becoming.SharedCodes.TwoFormations.homonym", "uses": ["Becoming.SharedCodes.step_from"]}
+{"name": "Becoming.SharedCodes.TwoFormations.order_decides", "uses": ["Becoming.SharedCodes.step_from"]}
+{"name": "Becoming.SharedCodes.TwoFormations.ordered_breaks_exchange", "uses": ["Becoming.ListTests.not_ne_self", "Becoming.SharedCodes.TwoFormations.ordered_keeps_renaming", "Becoming.SharedCodes.TwoFormations.start_symmetric", "Becoming.SharedCodes.TwoFormations.three_agree", "Becoming.SharedCodes.never_agrees_of_both"]}
+{"name": "Becoming.SharedCodes.TwoFormations.ordered_keeps_renaming", "uses": ["Becoming.SharedCodes.hear_keeps_renaming"]}
+{"name": "Becoming.SharedCodes.TwoFormations.preferred_breaks_renaming", "uses": ["Becoming.ListTests.not_ne_self", "Becoming.SharedCodes.TwoFormations.preferred_keeps_exchange", "Becoming.SharedCodes.TwoFormations.start_symmetric", "Becoming.SharedCodes.TwoFormations.three_agree", "Becoming.SharedCodes.never_agrees_of_both"]}
+{"name": "Becoming.SharedCodes.TwoFormations.preferred_keeps_exchange", "uses": ["Becoming.SharedCodes.TwoFormations.bor_comm"]}
+{"name": "Becoming.SharedCodes.TwoFormations.start_symmetric", "uses": ["Becoming.ListTests.not_not"]}
+{"name": "Becoming.SharedCodes.TwoFormations.three_agree", "uses": []}
+{"name": "Becoming.SharedCodes.added_never_replaced", "uses": ["Becoming.SharedCodes.adding_prefix", "Becoming.SharedCodes.kept_bars"]}
+{"name": "Becoming.SharedCodes.adding_prefix", "uses": ["Becoming.ListTests.append_assoc", "Becoming.ListTests.append_nil", "Becoming.Run.step"]}
+{"name": "Becoming.SharedCodes.agreement_kept", "uses": ["Becoming.SharedCodes.kept_at"]}
+{"name": "Becoming.SharedCodes.agrees_every_start_iff", "uses": ["Becoming.SharedCodes.run_origin"]}
+{"name": "Becoming.SharedCodes.agrees_only_fixed", "uses": ["Becoming.Law.KeepsRelation.run"]}
+{"name": "Becoming.SharedCodes.all_agree_rest", "uses": ["Becoming.SharedCodes.run_kept"]}
+{"name": "Becoming.SharedCodes.back_from", "uses": []}
+{"name": "Becoming.SharedCodes.back_held", "uses": []}
+{"name": "Becoming.SharedCodes.back_to", "uses": []}
+{"name": "Becoming.SharedCodes.bool_false_ne_true", "uses": []}
+{"name": "Becoming.SharedCodes.broadcast_holds", "uses": ["Becoming.SharedCodes.back_from", "Becoming.SharedCodes.back_held", "Becoming.SharedCodes.back_to", "Becoming.SharedCodes.hear_back"]}
+{"name": "Becoming.SharedCodes.broadcast_reaches", "uses": ["Becoming.SharedCodes.broadcast_holds"]}
+{"name": "Becoming.SharedCodes.changes_iff", "uses": ["Becoming.SharedCodes.hearBy_other", "Becoming.SharedCodes.hearBy_refused"]}
+{"name": "Becoming.SharedCodes.code_read_every", "uses": ["Becoming.SharedCodes.course_read", "Becoming.SharedCodes.course_states_iff"]}
+{"name": "Becoming.SharedCodes.coin_at", "uses": []}
+{"name": "Becoming.SharedCodes.coin_other_sense", "uses": []}
+{"name": "Becoming.SharedCodes.coined_returns", "uses": ["Becoming.ListTests.mem_map_iff", "Becoming.SharedCodes.broadcast_reaches", "Becoming.SharedCodes.coin_at", "Becoming.SharedCodes.coin_other_sense", "Becoming.SharedCodes.runBy_other_sense"]}
+{"name": "Becoming.SharedCodes.course_read", "uses": ["Becoming.CrossSituational.reads_every_iff", "Becoming.CrossSituational.resolves_iff"]}
+{"name": "Becoming.SharedCodes.course_states_iff", "uses": []}
+{"name": "Becoming.SharedCodes.covered_rest", "uses": ["Becoming.CrossSituational.resolved_is_target", "Becoming.CrossSituational.unique_eq_some_iff", "Becoming.SharedCodes.written_rests"]}
+{"name": "Becoming.SharedCodes.every_cohort_resolves", "uses": ["Becoming.SharedCodes.resolve_mem", "Becoming.SharedCodes.resolve_written", "Becoming.SharedCodes.written_rests"]}
+{"name": "Becoming.SharedCodes.follow_agrees_iff", "uses": ["Becoming.SharedCodes.follow_state"]}
+{"name": "Becoming.SharedCodes.follow_state", "uses": ["Becoming.Law.orbit_shift"]}
+{"name": "Becoming.SharedCodes.hearBy_held", "uses": ["Becoming.SharedCodes.bool_false_ne_true", "Becoming.SharedCodes.hearBy_other"]}
+{"name": "Becoming.SharedCodes.hearBy_keeps_renaming", "uses": ["Becoming.SharedCodes.hearBy_other", "Becoming.SharedCodes.hearBy_refused"]}
+{"name": "Becoming.SharedCodes.hearBy_other", "uses": []}
+{"name": "Becoming.SharedCodes.hearBy_refused", "uses": ["Becoming.SharedCodes.bool_false_ne_true", "Becoming.SharedCodes.hearBy_other"]}
+{"name": "Becoming.SharedCodes.hearBy_taken", "uses": []}
+{"name": "Becoming.SharedCodes.hear_back", "uses": ["Becoming.SharedCodes.hearBy_other"]}
+{"name": "Becoming.SharedCodes.hear_keeps_renaming", "uses": ["Becoming.SharedCodes.hearBy_keeps_renaming"]}
+{"name": "Becoming.SharedCodes.hearings_congr", "uses": []}
+{"name": "Becoming.SharedCodes.hearings_listed", "uses": ["Becoming.SharedCodes.hearings_congr", "Becoming.SharedCodes.hearings_shift"]}
+{"name": "Becoming.SharedCodes.hearings_shift", "uses": []}
+{"name": "Becoming.SharedCodes.held_stays", "uses": ["Becoming.SharedCodes.runBy_held"]}
+{"name": "Becoming.SharedCodes.impose_agrees", "uses": []}
+{"name": "Becoming.SharedCodes.impose_keeps_exchange", "uses": []}
+{"name": "Becoming.SharedCodes.impose_loses_iff", "uses": []}
+{"name": "Becoming.SharedCodes.impose_privileges_forms", "uses": []}
+{"name": "Becoming.SharedCodes.keep_of_resolved", "uses": []}
+{"name": "Becoming.SharedCodes.keeps_apart_iff", "uses": ["Becoming.SharedCodes.hearBy_other", "Becoming.SharedCodes.hearBy_taken"]}
+{"name": "Becoming.SharedCodes.keeps_both", "uses": []}
+{"name": "Becoming.SharedCodes.kept_at", "uses": ["Becoming.SharedCodes.hearBy_held", "Becoming.SharedCodes.hearBy_other"]}
+{"name": "Becoming.SharedCodes.kept_bars", "uses": ["Becoming.CrossSituational.mem_singleton", "Becoming.CrossSituational.narrows", "Becoming.CrossSituational.unique_eq_some_iff"]}
+{"name": "Becoming.SharedCodes.kept_iff", "uses": ["Becoming.SharedCodes.hearBy_other", "Becoming.SharedCodes.hearBy_refused", "Becoming.SharedCodes.hearBy_taken"]}
+{"name": "Becoming.SharedCodes.kept_rests", "uses": ["Becoming.ListTests.append_assoc", "Becoming.ListTests.append_nil", "Becoming.SharedCodes.keep_of_resolved", "Becoming.SharedCodes.resolve_kept"]}
+{"name": "Becoming.SharedCodes.majority_held", "uses": []}
+{"name": "Becoming.SharedCodes.never_agrees", "uses": ["Becoming.SharedCodes.agrees_only_fixed"]}
+{"name": "Becoming.SharedCodes.never_agrees_of_both", "uses": ["Becoming.SharedCodes.keeps_both", "Becoming.SharedCodes.never_agrees"]}
+{"name": "Becoming.SharedCodes.nextCohort_merges", "uses": ["Becoming.Law.merges_iff", "Becoming.SharedCodes.nextCohort_of_resolved", "Becoming.SharedCodes.resolved_alike_merged"]}
+{"name": "Becoming.SharedCodes.nextCohort_of_resolved", "uses": []}
+{"name": "Becoming.SharedCodes.no_reading_recovers", "uses": ["Becoming.SharedCodes.resolved_alike_merged"]}
+{"name": "Becoming.SharedCodes.omitted_rest", "uses": ["Becoming.CrossSituational.mem_candidates", "Becoming.CrossSituational.mem_singleton", "Becoming.SharedCodes.bool_false_ne_true", "Becoming.SharedCodes.resolve_mem", "Becoming.SharedCodes.written_rests"]}
+{"name": "Becoming.SharedCodes.one_form_reads_iff", "uses": []}
+{"name": "Becoming.SharedCodes.outside_needed", "uses": ["Becoming.SharedCodes.held_stays", "Becoming.SharedCodes.window_runBy"]}
+{"name": "Becoming.SharedCodes.outside_returns", "uses": ["Becoming.SharedCodes.hearBy_other", "Becoming.SharedCodes.hearBy_taken", "Becoming.SharedCodes.step_at"]}
+{"name": "Becoming.SharedCodes.pair_agrees_only_fixed", "uses": ["Becoming.Law.Commutes.keepsRelation", "Becoming.Law.KeepsRelation.run"]}
+{"name": "Becoming.SharedCodes.pair_kept", "uses": ["Becoming.SharedCodes.run_agreement_kept"]}
+{"name": "Becoming.SharedCodes.pair_never_agrees", "uses": ["Becoming.SharedCodes.pair_agrees_only_fixed"]}
+{"name": "Becoming.SharedCodes.reached_differ_iff", "uses": ["Becoming.SharedCodes.run_renamed"]}
+{"name": "Becoming.SharedCodes.reads_iff", "uses": []}
+{"name": "Becoming.SharedCodes.reads_other", "uses": []}
+{"name": "Becoming.SharedCodes.renamed_carries_iff", "uses": ["Becoming.SharedCodes.renamed_goAlike_iff", "Becoming.carries_law_iff"]}
+{"name": "Becoming.SharedCodes.renamed_goAlike_iff", "uses": []}
+{"name": "Becoming.SharedCodes.renamed_tells_apart_iff", "uses": []}
+{"name": "Becoming.SharedCodes.resolve_kept", "uses": ["Becoming.CrossSituational.candidates_snoc_bearing", "Becoming.CrossSituational.filter_true", "Becoming.CrossSituational.unique_eq_some_iff"]}
+{"name": "Becoming.SharedCodes.resolve_mem", "uses": ["Becoming.CrossSituational.mem_candidates", "Becoming.CrossSituational.unique_eq_some_iff"]}
+{"name": "Becoming.SharedCodes.resolve_written", "uses": ["Becoming.CrossSituational.mem_singleton", "Becoming.CrossSituational.resolves_iff"]}
+{"name": "Becoming.SharedCodes.resolved_alike_merged", "uses": ["Becoming.Law.merged_stays", "Becoming.SharedCodes.nextCohort_of_resolved"]}
+{"name": "Becoming.SharedCodes.runBy_held", "uses": ["Becoming.SharedCodes.hearBy_held"]}
+{"name": "Becoming.SharedCodes.runBy_other_sense", "uses": ["Becoming.SharedCodes.hearBy_other"]}
+{"name": "Becoming.SharedCodes.run_agreement_kept", "uses": ["Becoming.Run.step", "Becoming.SharedCodes.agreement_kept"]}
+{"name": "Becoming.SharedCodes.run_agrees_every_start_iff", "uses": ["Becoming.SharedCodes.agrees_every_start_iff", "Becoming.SharedCodes.state_hearings"]}
+{"name": "Becoming.SharedCodes.run_changes_iff", "uses": ["Becoming.SharedCodes.changes_iff", "Becoming.SharedCodes.step_at"]}
+{"name": "Becoming.SharedCodes.run_from_imposition", "uses": ["Becoming.SharedCodes.impose_agrees", "Becoming.SharedCodes.impose_loses_iff", "Becoming.SharedCodes.run_imposed_stays", "Becoming.SharedCodes.self_reads_iff", "Becoming.SharedCodes.source_loses_nothing"]}
+{"name": "Becoming.SharedCodes.run_held", "uses": ["Becoming.SharedCodes.runBy_held", "Becoming.SharedCodes.window_runBy"]}
+{"name": "Becoming.SharedCodes.run_imposed_stays", "uses": ["Becoming.SharedCodes.held_stays", "Becoming.SharedCodes.window_runBy"]}
+{"name": "Becoming.SharedCodes.run_keeps_apart_iff", "uses": ["Becoming.Run.step", "Becoming.SharedCodes.keeps_apart_iff"]}
+{"name": "Becoming.SharedCodes.run_kept", "uses": ["Becoming.SharedCodes.kept_at", "Becoming.SharedCodes.step_at"]}
+{"name": "Becoming.SharedCodes.run_kept_iff", "uses": ["Becoming.Run.step", "Becoming.SharedCodes.kept_iff"]}
+{"name": "Becoming.SharedCodes.run_origin", "uses": ["Becoming.SharedCodes.hear_back"]}
+{"name": "Becoming.SharedCodes.run_origin_window", "uses": ["Becoming.SharedCodes.run_origin", "Becoming.SharedCodes.window_runBy"]}
+{"name": "Becoming.SharedCodes.run_reads_iff", "uses": ["Becoming.SharedCodes.reads_iff", "Becoming.SharedCodes.reads_other"]}
+{"name": "Becoming.SharedCodes.run_reads_kept", "uses": ["Becoming.SharedCodes.pair_kept", "Becoming.SharedCodes.reads_iff"]}
+{"name": "Becoming.SharedCodes.run_renamed", "uses": ["Becoming.SharedCodes.hearBy_keeps_renaming", "Becoming.SharedCodes.step_at"]}
+{"name": "Becoming.SharedCodes.run_renamed_tells_apart_iff", "uses": ["Becoming.SharedCodes.renamed_tells_apart_iff", "Becoming.SharedCodes.run_renamed"]}
+{"name": "Becoming.SharedCodes.run_shared_iff_in_use", "uses": ["Becoming.SharedCodes.hearings_listed", "Becoming.SharedCodes.shared_iff_in_use", "Becoming.SharedCodes.state_hearings", "Becoming.SharedCodes.window_runBy"]}
+{"name": "Becoming.SharedCodes.self_reads_iff", "uses": []}
+{"name": "Becoming.SharedCodes.shared_iff_in_use", "uses": ["Becoming.SharedCodes.broadcast_reaches", "Becoming.SharedCodes.runBy_held"]}
+{"name": "Becoming.SharedCodes.source_loses_nothing", "uses": []}
+{"name": "Becoming.SharedCodes.state_hearings", "uses": ["Becoming.SharedCodes.window_hearings", "Becoming.SharedCodes.window_runBy"]}
+{"name": "Becoming.SharedCodes.step_at", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.SharedCodes.step_from", "uses": ["Becoming.SharedCodes.step_at"]}
+{"name": "Becoming.SharedCodes.synonyms_read_iff", "uses": []}
+{"name": "Becoming.SharedCodes.window_hearings", "uses": []}
+{"name": "Becoming.SharedCodes.window_runBy", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.SharedCodes.written_rests", "uses": ["Becoming.SharedCodes.nextCohort_of_resolved", "Becoming.SharedCodes.resolve_mem", "Becoming.SharedCodes.resolve_written"]}

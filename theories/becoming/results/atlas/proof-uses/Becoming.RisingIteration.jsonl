@@ -1,0 +1,4 @@
+{"name": "Becoming.Iteration.commutes_false", "uses": ["Becoming.Decided.of_not_not", "Becoming.not_not_all", "Becoming.not_not_decided"]}
+{"name": "Becoming.Iteration.rise_not_not", "uses": ["Becoming.Iteration.commutes_false", "Becoming.Iteration.iter_gives_persists"]}
+{"name": "Becoming.Iteration.rise_of_stable", "uses": ["Becoming.Iteration.rise_not_not"]}
+{"name": "Becoming.Iteration.singleton_rise_needs_em", "uses": []}

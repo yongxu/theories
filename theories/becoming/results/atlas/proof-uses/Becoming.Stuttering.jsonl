@@ -1,0 +1,75 @@
+{"name": "Becoming.Expansion.more_step_relative", "uses": ["Becoming.Expansion.more", "Becoming.Flow.sample_not_more", "Becoming.Order.Halving.idles"]}
+{"name": "Becoming.Flow.given_nil", "uses": []}
+{"name": "Becoming.Flow.once_of_moves", "uses": ["Becoming.mem_cons_cases", "Becoming.span_moves"]}
+{"name": "Becoming.Flow.sample_idle_balancesOn", "uses": ["Becoming.Flow.given_nil", "Becoming.Flow.sample_idle_present", "Becoming.Flow.taken_nil"]}
+{"name": "Becoming.Flow.sample_idle_closedAt", "uses": ["Becoming.Flow.sample_idle_present"]}
+{"name": "Becoming.Flow.sample_idle_dissipatesOn", "uses": ["Becoming.Flow.sample_idle_present"]}
+{"name": "Becoming.Flow.sample_idle_enclosed", "uses": ["Becoming.Flow.sample_idle_closedAt"]}
+{"name": "Becoming.Flow.sample_idle_give", "uses": ["Becoming.span_idle"]}
+{"name": "Becoming.Flow.sample_idle_not_descends", "uses": ["Becoming.Flow.sample_idle_give"]}
+{"name": "Becoming.Flow.sample_idle_present", "uses": ["Becoming.span_idle"]}
+{"name": "Becoming.Flow.sample_idle_runsDownOn", "uses": ["Becoming.Flow.sample_idle_balancesOn", "Becoming.Flow.sample_idle_dissipatesOn"]}
+{"name": "Becoming.Flow.sample_idle_take", "uses": ["Becoming.span_idle"]}
+{"name": "Becoming.Flow.sample_idle_takers", "uses": ["Becoming.Flow.sample_idle_present"]}
+{"name": "Becoming.Flow.sample_moves_acting_iff", "uses": ["Becoming.Flow.sample_moves_give", "Becoming.Flow.sample_moves_mem"]}
+{"name": "Becoming.Flow.sample_moves_balancesOn_iff", "uses": ["Becoming.Flow.sample_moves_given", "Becoming.Flow.sample_moves_taken"]}
+{"name": "Becoming.Flow.sample_moves_closedAt_iff", "uses": ["Becoming.Flow.sample_closedAt_iff", "Becoming.mem_cons_cases", "Becoming.span_moves"]}
+{"name": "Becoming.Flow.sample_moves_descends_iff", "uses": ["Becoming.Flow.sample_moves_give", "Becoming.Flow.sample_moves_mem", "Becoming.comesToBe_moves"]}
+{"name": "Becoming.Flow.sample_moves_dissipatesOn_iff", "uses": ["Becoming.Flow.sample_moves_give", "Becoming.Flow.sample_moves_mem", "Becoming.Flow.sample_moves_take", "Becoming.total_congr"]}
+{"name": "Becoming.Flow.sample_moves_give", "uses": ["Becoming.gate_mem", "Becoming.span_moves"]}
+{"name": "Becoming.Flow.sample_moves_given", "uses": ["Becoming.Flow.once_of_moves", "Becoming.Flow.sample_given_on", "Becoming.span_moves"]}
+{"name": "Becoming.Flow.sample_moves_mem", "uses": ["Becoming.Flow.unionPresent_spec", "Becoming.mem_cons_cases", "Becoming.span_moves"]}
+{"name": "Becoming.Flow.sample_moves_runsDownOn_iff", "uses": ["Becoming.Flow.sample_moves_balancesOn_iff", "Becoming.Flow.sample_moves_dissipatesOn_iff"]}
+{"name": "Becoming.Flow.sample_moves_take", "uses": ["Becoming.gate_mem", "Becoming.span_moves"]}
+{"name": "Becoming.Flow.sample_moves_taken", "uses": ["Becoming.Flow.once_of_moves", "Becoming.Flow.sample_taken_on", "Becoming.span_moves"]}
+{"name": "Becoming.Flow.sample_moves_taking_iff", "uses": ["Becoming.Flow.sample_moves_mem", "Becoming.Flow.sample_moves_take"]}
+{"name": "Becoming.Flow.sample_not_more", "uses": ["Becoming.Flow.sample_idle_takers"]}
+{"name": "Becoming.Flow.stutter_acting_iff", "uses": ["Becoming.Flow.sample_idle_give", "Becoming.Flow.sample_moves_acting_iff", "Becoming.Stutter.moving"]}
+{"name": "Becoming.Flow.stutter_balances_iff", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.balances_iff_on", "Becoming.Flow.sample_idle_balancesOn", "Becoming.Flow.sample_moves_balancesOn_iff", "Becoming.Stutter.moving"]}
+{"name": "Becoming.Flow.stutter_dissipative_iff", "uses": ["Becoming.Flow.sample_dissipative", "Becoming.Flow.sample_moves_closedAt_iff", "Becoming.Flow.sample_moves_dissipatesOn_iff", "Becoming.Stutter.moving"]}
+{"name": "Becoming.Flow.stutter_given", "uses": ["Becoming.Flow.given_nil", "Becoming.Flow.sample_idle_present", "Becoming.Flow.sample_moves_given", "Becoming.stutter_total"]}
+{"name": "Becoming.Flow.stutter_taken", "uses": ["Becoming.Flow.sample_idle_present", "Becoming.Flow.sample_moves_taken", "Becoming.Flow.taken_nil", "Becoming.stutter_total"]}
+{"name": "Becoming.Flow.stutter_taking_iff", "uses": ["Becoming.Flow.sample_idle_take", "Becoming.Flow.sample_moves_taking_iff", "Becoming.Stutter.moving"]}
+{"name": "Becoming.Flow.stutter_transmitsWithin_iff", "uses": ["Becoming.Flow.sample_idle_not_descends", "Becoming.Flow.sample_moves_descends_iff", "Becoming.Stutter.moving"]}
+{"name": "Becoming.Flow.taken_nil", "uses": []}
+{"name": "Becoming.Lapse.carried", "uses": []}
+{"name": "Becoming.Lapse.reserve_step_relative", "uses": ["Becoming.Lapse.carried", "Becoming.Lapse.stuttered_reserve"]}
+{"name": "Becoming.Lapse.stuttered_reserve", "uses": ["Becoming.Lapse.unsupported"]}
+{"name": "Becoming.Lapse.unsupported", "uses": []}
+{"name": "Becoming.Order.Halving.idles", "uses": ["Becoming.Pulse.half_even", "Becoming.Pulse.half_odd"]}
+{"name": "Becoming.Order.Halving.steps_", "uses": []}
+{"name": "Becoming.Order.Halving.stutter", "uses": ["Becoming.Order.Halving.steps_", "Becoming.Pulse.half_even"]}
+{"name": "Becoming.Stutter.crosses", "uses": ["Becoming.Stutter.crossing"]}
+{"name": "Becoming.Stutter.crossing", "uses": []}
+{"name": "Becoming.Stutter.le_self", "uses": []}
+{"name": "Becoming.Stutter.le_succ", "uses": []}
+{"name": "Becoming.Stutter.mono", "uses": ["Becoming.Stutter.le_succ"]}
+{"name": "Becoming.Stutter.moving", "uses": ["Becoming.Stutter.crosses"]}
+{"name": "Becoming.Web.sample_idle_not_carries", "uses": []}
+{"name": "Becoming.Web.stutter_dependent_iff", "uses": ["Becoming.Web.sample_dependent"]}
+{"name": "Becoming.Web.stutter_embodied_iff", "uses": []}
+{"name": "Becoming.World.stutter_arisingRecurs_iff", "uses": ["Becoming.comesToBe_moves", "Becoming.not_comesToBe_idle", "Becoming.recurs_shape", "Becoming.stutter_recurs_iff"]}
+{"name": "Becoming.World.stutter_ceasingRecurs_iff", "uses": ["Becoming.ceasesToBe_moves", "Becoming.not_ceasesToBe_idle", "Becoming.recurs_shape", "Becoming.stutter_recurs_iff"]}
+{"name": "Becoming.World.stutter_change_recurs_iff", "uses": ["Becoming.excess_pos", "Becoming.fall_idle", "Becoming.fall_moves", "Becoming.rise_idle", "Becoming.rise_moves", "Becoming.stutter_recurs_iff"]}
+{"name": "Becoming.World.stutter_counted_of_section", "uses": []}
+{"name": "Becoming.World.stutter_premises_iff", "uses": ["Becoming.Flow.stutter_acting_iff", "Becoming.Flow.stutter_balances_iff", "Becoming.Flow.stutter_dissipative_iff", "Becoming.Flow.stutter_taking_iff", "Becoming.Flow.stutter_transmitsWithin_iff", "Becoming.Web.stutter_dependent_iff", "Becoming.Web.stutter_embodied_iff"]}
+{"name": "Becoming.ceasesToBe_moves", "uses": []}
+{"name": "Becoming.comesToBe_moves", "uses": []}
+{"name": "Becoming.excess_of_sum", "uses": ["Becoming.excess_add_right"]}
+{"name": "Becoming.fall_idle", "uses": ["Becoming.excess_self"]}
+{"name": "Becoming.fall_moves", "uses": []}
+{"name": "Becoming.not_ceasesToBe_idle", "uses": []}
+{"name": "Becoming.not_comesToBe_idle", "uses": []}
+{"name": "Becoming.recurs_shape", "uses": []}
+{"name": "Becoming.rise_idle", "uses": ["Becoming.excess_self"]}
+{"name": "Becoming.rise_moves", "uses": []}
+{"name": "Becoming.span_idle", "uses": []}
+{"name": "Becoming.span_moves", "uses": ["Becoming.succ_sub_self"]}
+{"name": "Becoming.stutter_ceasings", "uses": ["Becoming.ceasesToBe_moves", "Becoming.mark_iff", "Becoming.mark_zero", "Becoming.not_ceasesToBe_idle", "Becoming.stutter_total", "Becoming.total_congr", "Becoming.total_zero"]}
+{"name": "Becoming.stutter_comings", "uses": ["Becoming.comesToBe_moves", "Becoming.mark_iff", "Becoming.mark_zero", "Becoming.not_comesToBe_idle", "Becoming.stutter_total", "Becoming.total_congr", "Becoming.total_zero"]}
+{"name": "Becoming.stutter_fall_count", "uses": ["Becoming.fall_idle", "Becoming.fall_moves", "Becoming.stutter_total"]}
+{"name": "Becoming.stutter_fallen", "uses": ["Becoming.fall_idle", "Becoming.fall_moves", "Becoming.stutter_total"]}
+{"name": "Becoming.stutter_recurs_iff", "uses": ["Becoming.Stutter.le_self", "Becoming.Stutter.mono", "Becoming.Stutter.moving"]}
+{"name": "Becoming.stutter_rise_count", "uses": ["Becoming.rise_idle", "Becoming.rise_moves", "Becoming.stutter_total"]}
+{"name": "Becoming.stutter_risen", "uses": ["Becoming.rise_idle", "Becoming.rise_moves", "Becoming.stutter_total"]}
+{"name": "Becoming.stutter_total", "uses": ["Becoming.Stutter.mono", "Becoming.steps_last"]}

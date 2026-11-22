@@ -1,0 +1,7 @@
+{"name": "Becoming.Hexagram.changes_mirror_apart", "uses": ["Becoming.Branching.mirror_apart", "Becoming.Hexagram.changes_symmetric", "Becoming.Hexagram.complement_moves"]}
+{"name": "Becoming.Hexagram.changes_symmetric", "uses": ["Becoming.Hexagram.flip_complement"]}
+{"name": "Becoming.Hexagram.complement_moves", "uses": ["Becoming.Diagonal.flip_moves", "Becoming.Hexagram.complement_l1"]}
+{"name": "Becoming.Hexagram.flip_complement", "uses": []}
+{"name": "Becoming.Hexagram.wane_breaks", "uses": ["Becoming.Hexagram.complement_moves", "Becoming.Hexagram.wane_six", "Becoming.Law.Commutes.breaks"]}
+{"name": "Becoming.Hexagram.waxWane_apart", "uses": ["Becoming.Hexagram.complement_moves", "Becoming.Hexagram.waxWane_complement", "Becoming.Law.Commutes.apart"]}
+{"name": "Becoming.Hexagram.waxWane_halfway", "uses": ["Becoming.Hexagram.complement_complement", "Becoming.Hexagram.six_steps", "Becoming.Hexagram.waxWane_complement", "Becoming.Law.Commutes.paired_halfway"]}

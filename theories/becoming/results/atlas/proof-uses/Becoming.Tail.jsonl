@@ -1,0 +1,49 @@
+{"name": "Becoming.ChangedByNoCondition.eq_of_agree_from", "uses": []}
+{"name": "Becoming.ChangedByNoCondition.of_agree_from", "uses": []}
+{"name": "Becoming.LPO.of_rule", "uses": ["Becoming.ListTests.false_of_not_true"]}
+{"name": "Becoming.Tail.add_eq", "uses": []}
+{"name": "Becoming.Tail.eq_zero_of_nonzero_false", "uses": []}
+{"name": "Becoming.TailRuns.changedByNoCondition_iff_runs", "uses": ["Becoming.TailRuns.falseRule_iff", "Becoming.changedByNoCondition_iff_rule"]}
+{"name": "Becoming.TailRuns.falseRule_iff", "uses": []}
+{"name": "Becoming.TailRuns.indicators_sum", "uses": ["Becoming.neverIndicator_add_vanishIndicator"]}
+{"name": "Becoming.TailRuns.insensitive_differs_decides", "uses": ["Becoming.TailRuns.wlpo_iff_runs", "Becoming.wlpo_of_insensitive_differs"]}
+{"name": "Becoming.TailRuns.insensitive_differs_iff_runs", "uses": ["Becoming.TailRuns.falseRule_iff", "Becoming.insensitive_differs_iff_rule"]}
+{"name": "Becoming.TailRuns.lpo_iff_runs", "uses": []}
+{"name": "Becoming.TailRuns.not_through_sensitive_decides", "uses": ["Becoming.TailRuns.wlpo_iff_runs", "Becoming.wlpo_of_not_through_sensitive"]}
+{"name": "Becoming.TailRuns.not_through_sensitive_iff_runs", "uses": ["Becoming.TailRuns.falseRule_iff", "Becoming.not_through_sensitive_iff_rule"]}
+{"name": "Becoming.TailRuns.trueRule_iff", "uses": []}
+{"name": "Becoming.TailRuns.vanishRule_iff", "uses": []}
+{"name": "Becoming.TailRuns.vanishRule_iff_trueRule", "uses": ["Becoming.TailRuns.trueRule_iff", "Becoming.TailRuns.vanishRule_iff", "Becoming.vanishDecision_iff_lpoRule"]}
+{"name": "Becoming.TailRuns.vanish_decides", "uses": ["Becoming.TailRuns.lpo_iff_runs", "Becoming.lpo_of_vanish_decided"]}
+{"name": "Becoming.TailRuns.wlpo_iff_runs", "uses": []}
+{"name": "Becoming.WLPO.of_rule", "uses": []}
+{"name": "Becoming.changedByNoCondition_iff_rule", "uses": ["Becoming.neverIndicator_changedByNoCondition", "Becoming.neverIndicator_ones", "Becoming.neverIndicator_zeros", "Becoming.wholeLaw_insensitive"]}
+{"name": "Becoming.insensitive_differs_iff_rule", "uses": ["Becoming.neverLaw_differs", "Becoming.neverLaw_insensitive"]}
+{"name": "Becoming.neverIndicator_add_vanishIndicator", "uses": ["Becoming.Tail.add_eq", "Becoming.neverIndicator_eq_one", "Becoming.neverIndicator_eq_zero", "Becoming.vanishIndicator_eq_one", "Becoming.vanishIndicator_eq_zero"]}
+{"name": "Becoming.neverIndicator_changedByNoCondition", "uses": ["Becoming.ChangedByNoCondition.of_agree_from", "Becoming.neverIndicator_eq_of_agree"]}
+{"name": "Becoming.neverIndicator_eq_of_agree", "uses": ["Becoming.VanishFrom.of_agree", "Becoming.neverIndicator_eq_one", "Becoming.vanishesFrom_never_iff"]}
+{"name": "Becoming.neverIndicator_eq_one", "uses": ["Becoming.vanishesFrom_never_iff"]}
+{"name": "Becoming.neverIndicator_eq_zero", "uses": ["Becoming.vanishesFrom_never_iff"]}
+{"name": "Becoming.neverIndicator_ones", "uses": ["Becoming.neverIndicator_eq_one"]}
+{"name": "Becoming.neverIndicator_zeros", "uses": ["Becoming.neverIndicator_eq_zero"]}
+{"name": "Becoming.neverLaw_differs", "uses": ["Becoming.neverIndicator_ones", "Becoming.neverIndicator_zeros"]}
+{"name": "Becoming.neverLaw_insensitive", "uses": ["Becoming.neverIndicator_changedByNoCondition", "Becoming.wholeLaw_insensitive"]}
+{"name": "Becoming.neverLaw_nonanticipating", "uses": ["Becoming.neverIndicator_changedByNoCondition", "Becoming.wholeLaw_nonanticipating"]}
+{"name": "Becoming.neverLaw_not_sensitive", "uses": ["Becoming.neverIndicator_changedByNoCondition", "Becoming.wholeLaw_not_sensitive"]}
+{"name": "Becoming.not_through_sensitive_iff_rule", "uses": ["Becoming.neverLaw_differs", "Becoming.neverLaw_nonanticipating", "Becoming.neverLaw_not_sensitive"]}
+{"name": "Becoming.raisedFrom_false", "uses": ["Becoming.ListTests.false_of_not_true", "Becoming.Tail.eq_zero_of_nonzero_false"]}
+{"name": "Becoming.raisedFrom_of", "uses": []}
+{"name": "Becoming.tailLaw_eq_wholeLaw", "uses": []}
+{"name": "Becoming.vanishDecision_iff_lpoRule", "uses": []}
+{"name": "Becoming.vanishIndicator_changedByNoCondition", "uses": ["Becoming.ChangedByNoCondition.of_agree_from", "Becoming.vanishIndicator_eq_of_agree"]}
+{"name": "Becoming.vanishesFrom_never_iff", "uses": ["Becoming.ListTests.false_of_not_true", "Becoming.vanishesFrom_of", "Becoming.vanishesFrom_true"]}
+{"name": "Becoming.vanishesFrom_of", "uses": []}
+{"name": "Becoming.vanishesFrom_true", "uses": ["Becoming.Tail.eq_zero_of_nonzero_false"]}
+{"name": "Becoming.wholeLaw_insensitive", "uses": []}
+{"name": "Becoming.wholeLaw_no_least_coupling", "uses": ["Becoming.wholeLaw_through_from"]}
+{"name": "Becoming.wholeLaw_nonanticipating", "uses": ["Becoming.ChangedByNoCondition.eq_of_agree_from"]}
+{"name": "Becoming.wholeLaw_not_readsFinitely", "uses": ["Becoming.ExchangeLaw.ReadsFinitely.alike_of_insensitive", "Becoming.wholeLaw_not_sensitive"]}
+{"name": "Becoming.wholeLaw_not_sensitive", "uses": ["Becoming.wholeLaw_insensitive"]}
+{"name": "Becoming.wholeLaw_not_through_sensitive", "uses": ["Becoming.wholeLaw_not_sensitive"]}
+{"name": "Becoming.wholeLaw_reads_from", "uses": ["Becoming.ChangedByNoCondition.eq_of_agree_from"]}
+{"name": "Becoming.wholeLaw_through_from", "uses": ["Becoming.wholeLaw_reads_from"]}

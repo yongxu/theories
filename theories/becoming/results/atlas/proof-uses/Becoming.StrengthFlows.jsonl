@@ -1,0 +1,12 @@
+{"name": "Becoming.StrengthFlows.alike_of_readsAt_all", "uses": ["Becoming.ExchangeLaw.Nonanticipating.readsAt_all"]}
+{"name": "Becoming.StrengthFlows.carriedWorld_start", "uses": ["Becoming.carriedWorld_level", "Becoming.carried_zero"]}
+{"name": "Becoming.StrengthFlows.course_eq_flowUnder", "uses": []}
+{"name": "Becoming.StrengthFlows.exchangeGap_follows", "uses": ["Becoming.Naturals.add_congr"]}
+{"name": "Becoming.StrengthFlows.exchangeGap_le_shares_flows", "uses": ["Becoming.ExchangeLaw.exchangeGap_le_shares", "Becoming.StrengthFlows.exchangeGap_follows"]}
+{"name": "Becoming.StrengthFlows.exchange_alike_later", "uses": ["Becoming.ExchangeLaw.Nonanticipating.respondsWithin_later", "Becoming.StrengthFlows.exchangeGap_follows"]}
+{"name": "Becoming.StrengthFlows.flowUnder_follows", "uses": []}
+{"name": "Becoming.StrengthFlows.gap_le_carried_into_worlds", "uses": ["Becoming.ExchangeLaw.ReadsInto.restrict", "Becoming.TwoActs.gap_le_carried"]}
+{"name": "Becoming.StrengthFlows.gap_le_carried_mono_worlds", "uses": ["Becoming.ExchangeLaw.RespondsWithin.mono", "Becoming.TwoActs.gap_le_carried"]}
+{"name": "Becoming.StrengthFlows.measure_alike_read", "uses": ["Becoming.Observation.Measure.readsInto"]}
+{"name": "Becoming.StrengthFlows.respondsWithin_zero_iff_flows", "uses": []}
+{"name": "Becoming.StrengthFlows.sensitive_iff_flows", "uses": ["Becoming.ExchangeLaw.sensitive_iff_strength", "Becoming.StrengthFlows.respondsWithin_zero_iff_flows"]}

@@ -1,0 +1,34 @@
+{"name": "Becoming.Blocked.determined", "uses": []}
+{"name": "Becoming.Blocked.only_together_unbroken", "uses": ["Becoming.Blocked.determined"]}
+{"name": "Becoming.Dependence.DifferenceOnlyTogether.of_breaks", "uses": ["Becoming.Dependence.keeps_not_breaks"]}
+{"name": "Becoming.Dependence.DifferenceOnlyTogether.two_le_length", "uses": ["Becoming.Dependence.keeps_not_breaks"]}
+{"name": "Becoming.Dependence.Overdetermined.no_difference", "uses": ["Becoming.Dependence.keeps_not_breaks"]}
+{"name": "Becoming.Dependence.Overdetermined.only_together", "uses": ["Becoming.Dependence.DifferenceOnlyTogether.of_breaks"]}
+{"name": "Becoming.Dependence.along_broken", "uses": []}
+{"name": "Becoming.Dependence.along_kept", "uses": []}
+{"name": "Becoming.Dependence.breaksBy_iff_level", "uses": []}
+{"name": "Becoming.Dependence.determined_dichotomy", "uses": []}
+{"name": "Becoming.Dependence.differenceOnlyTogether_iff", "uses": ["Becoming.Dependence.DifferenceOnlyTogether.of_breaks", "Becoming.Dependence.determined_dichotomy"]}
+{"name": "Becoming.Dependence.keeps_iff_not_breaks", "uses": ["Becoming.Dependence.keeps_not_breaks"]}
+{"name": "Becoming.Dependence.keeps_not_breaks", "uses": []}
+{"name": "Becoming.Dependence.makesDifference_iff", "uses": ["Becoming.Dependence.keeps_iff_not_breaks"]}
+{"name": "Becoming.Dependence.makesDifference_iff_together", "uses": []}
+{"name": "Becoming.Hidden.shock_in_the_step", "uses": ["Becoming.Dependence.Overdetermined.no_difference"]}
+{"name": "Becoming.NeedRises.only_together_unmet", "uses": ["Becoming.Pool.determined"]}
+{"name": "Becoming.Pool.all_overdetermined", "uses": ["Becoming.Pool.breaks_from_one"]}
+{"name": "Becoming.Pool.breaks_from_one", "uses": []}
+{"name": "Becoming.Pool.determined", "uses": []}
+{"name": "Becoming.Pool.difference_only_together", "uses": ["Becoming.Dependence.Overdetermined.no_difference", "Becoming.Pool.all_overdetermined", "Becoming.Pool.breaks_from_one", "Becoming.Pool.steady_consumed", "Becoming.Run.step"]}
+{"name": "Becoming.Pool.first_two_only_together", "uses": ["Becoming.Dependence.Overdetermined.only_together", "Becoming.Pool.all_overdetermined", "Becoming.Pool.breaks_from_one"]}
+{"name": "Becoming.Pool.steady_consumed", "uses": []}
+{"name": "Becoming.Pool.within_share_undermines", "uses": ["Becoming.Pool.breaks_from_one"]}
+{"name": "Becoming.Renewable.breaking_event_makes_step_difference", "uses": []}
+{"name": "Becoming.Renewable.depletion_is_joint", "uses": ["Becoming.Renewable.overdraw_consumes"]}
+{"name": "Becoming.Renewable.drains", "uses": ["Becoming.Renewable.overdraw_lowers"]}
+{"name": "Becoming.Renewable.no_finite_segment_makes_difference", "uses": ["Becoming.Renewable.overdraw_consumes"]}
+{"name": "Becoming.Renewable.overdraw_consumes", "uses": ["Becoming.Renewable.drains", "Becoming.sub_self_add"]}
+{"name": "Becoming.Renewable.overdraw_lowers", "uses": []}
+{"name": "Becoming.Shock.determined", "uses": []}
+{"name": "Becoming.Shock.move_decides", "uses": ["Becoming.Dependence.Overdetermined.no_difference"]}
+{"name": "Becoming.Tagged.move_unavailable", "uses": ["Becoming.Pool.breaks_from_one"]}
+{"name": "Becoming.sub_self_add", "uses": []}

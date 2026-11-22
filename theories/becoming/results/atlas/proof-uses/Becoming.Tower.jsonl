@@ -1,0 +1,9 @@
+{"name": "Becoming.Tower.balances_coarser", "uses": ["Becoming.Flow.sample_balances", "Becoming.Tower.flow_sample", "Becoming.Tower.strict", "Becoming.Tower.web_sample"]}
+{"name": "Becoming.Tower.changes_within", "uses": ["Becoming.Flow.runsDown_bounds_change", "Becoming.Tower.level_zero", "Becoming.total_congr_on"]}
+{"name": "Becoming.Tower.dissipative_coarser", "uses": ["Becoming.Flow.sample_dissipative", "Becoming.Tower.flow_sample"]}
+{"name": "Becoming.Tower.flow_sample", "uses": []}
+{"name": "Becoming.Tower.level_zero", "uses": ["Becoming.Tower.web_zero"]}
+{"name": "Becoming.Tower.reads_strict", "uses": ["Becoming.Strict.comp", "Becoming.Tower.strict"]}
+{"name": "Becoming.Tower.strict", "uses": []}
+{"name": "Becoming.Tower.web_sample", "uses": []}
+{"name": "Becoming.Tower.web_zero", "uses": ["Becoming.Tower.web_sample"]}

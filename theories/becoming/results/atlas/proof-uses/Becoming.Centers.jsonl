@@ -1,0 +1,22 @@
+{"name": "Becoming.Flow.InOneLoop.mono", "uses": ["Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Flow.InOneLoop.refl", "uses": ["Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Flow.InOneLoop.symm", "uses": []}
+{"name": "Becoming.Flow.InOneLoop.trans", "uses": ["Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Flow.ReachReturns.of_loop", "uses": ["Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Flow.ReachReturns.represented", "uses": ["Becoming.Flow.withinCoupling_of_withinInfluence", "Becoming.Flow.withinReach_iff_influence"]}
+{"name": "Becoming.Flow.exists_reachReturns", "uses": ["Becoming.Flow.holdsCount_lt", "Becoming.Flow.holdsCount_pos", "Becoming.Flow.search", "Becoming.WithinClosure.refl", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Flow.holdsCount_lt", "uses": ["Becoming.Web.holdsCount_le_of_imp", "Becoming.Web.toNat_le_of_imp"]}
+{"name": "Becoming.Flow.holdsCount_pos", "uses": []}
+{"name": "Becoming.Flow.reachReturns_iff_closed", "uses": ["Becoming.Flow.InOneLoop.refl", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Flow.reachReturns_iff_loop", "uses": []}
+{"name": "Becoming.Flow.reachReturns_iff_represented", "uses": ["Becoming.Flow.ReachReturns.represented", "Becoming.Flow.withinCoupling_thresholdOnly", "Becoming.Flow.withinReach_iff_influence"]}
+{"name": "Becoming.Flow.search", "uses": []}
+{"name": "Becoming.Flow.withinReach_iff_influence", "uses": ["Becoming.WithinClosure.converse"]}
+{"name": "Becoming.Line.a_affects_b", "uses": []}
+{"name": "Becoming.Line.closed_b_affects_a", "uses": []}
+{"name": "Becoming.Line.closed_one_loop", "uses": ["Becoming.Line.a_affects_b", "Becoming.Line.closed_b_affects_a", "Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.Line.closed_returns", "uses": ["Becoming.Line.closed_one_loop", "Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Line.open_b_alone", "uses": ["Becoming.Line.open_b_inert"]}
+{"name": "Becoming.Line.open_b_inert", "uses": []}
+{"name": "Becoming.Line.open_b_returns", "uses": ["Becoming.Line.open_b_alone", "Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Line.open_not_returns", "uses": ["Becoming.Line.a_affects_b", "Becoming.Line.open_b_alone", "Becoming.WithinClosure.of_rel"]}

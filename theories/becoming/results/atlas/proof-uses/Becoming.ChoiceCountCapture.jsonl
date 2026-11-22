@@ -1,0 +1,34 @@
+{"name": "Becoming.ChoiceCountCapture.Witness.Stale.above_but_stale_locks_down", "uses": []}
+{"name": "Becoming.ChoiceCountCapture.Witness.Stale.above_but_stale_never_first", "uses": ["Becoming.ChoiceCountCapture.Witness.Stale.above_but_stale_locks_down", "Becoming.ChoiceCountCapture.choose_lowers", "Becoming.ChoiceCountCapture.lower_strict", "Becoming.ChoiceCountCapture.weighted_reads", "Becoming.RuleCapture.ReadsShare.reverse", "Becoming.RuleCapture.locked_stays"]}
+{"name": "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_at_once_locks_down", "uses": ["Becoming.ChoiceCountCapture.Witness.four_pos", "Becoming.ChoiceCountCapture.counted_locks_down"]}
+{"name": "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_late_keeps_first", "uses": ["Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_late_locks_up", "Becoming.ChoiceCountCapture.Witness.four_pos", "Becoming.ChoiceCountCapture.choose_raises", "Becoming.ChoiceCountCapture.weighted_reads", "Becoming.RuleCapture.CarrierCounts.upper", "Becoming.RuleCapture.locked_stays"]}
+{"name": "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_late_locks_up", "uses": ["Becoming.ChoiceCountCapture.Witness.four_pos"]}
+{"name": "Becoming.ChoiceCountCapture.Witness.after_one_still_first", "uses": []}
+{"name": "Becoming.ChoiceCountCapture.Witness.after_two_turns", "uses": []}
+{"name": "Becoming.ChoiceCountCapture.Witness.counted_beats_score", "uses": ["Becoming.ChoiceCountCapture.counted_chooses", "Becoming.RuleCapture.CarrierCounts.other_pos"]}
+{"name": "Becoming.ChoiceCountCapture.Witness.four_pos", "uses": []}
+{"name": "Becoming.ChoiceCountCapture.Witness.moved_locks_down", "uses": ["Becoming.ChoiceCountCapture.counted_locks_down"]}
+{"name": "Becoming.ChoiceCountCapture.Witness.posterior_share_falls", "uses": ["Becoming.ChoiceCountCapture.posterior_count_falls"]}
+{"name": "Becoming.ChoiceCountCapture.Witness.score_decides", "uses": ["Becoming.ChoiceCountCapture.counted_locks_down"]}
+{"name": "Becoming.ChoiceCountCapture.choose_favoured", "uses": ["Becoming.ChoiceCountCapture.choose._proof_1", "Becoming.RuleCapture.CarrierCounts.other_pos"]}
+{"name": "Becoming.ChoiceCountCapture.choose_lowers", "uses": ["Becoming.ChoiceCountCapture.choose_unfavoured"]}
+{"name": "Becoming.ChoiceCountCapture.choose_raises", "uses": ["Becoming.ChoiceCountCapture.choose_favoured", "Becoming.RuleCapture.CarrierCounts.other_pos"]}
+{"name": "Becoming.ChoiceCountCapture.choose_rises_strictly", "uses": ["Becoming.ChoiceCountCapture.choose_favoured", "Becoming.RuleCapture.CarrierCounts.other_pos"]}
+{"name": "Becoming.ChoiceCountCapture.choose_unfavoured", "uses": ["Becoming.ChoiceCountCapture.choose._proof_1", "Becoming.RuleCapture.CarrierCounts.other_pos"]}
+{"name": "Becoming.ChoiceCountCapture.chosen_alike", "uses": ["Becoming.ChoiceCountCapture.selectsThrough"]}
+{"name": "Becoming.ChoiceCountCapture.counted_chooses", "uses": ["Becoming.ChoiceCountCapture.choose_favoured", "Becoming.ChoiceCountCapture.counted_locks", "Becoming.Pace.paced_fast_succ", "Becoming.RuleCapture.CarrierCounts.other_pos"]}
+{"name": "Becoming.ChoiceCountCapture.counted_chooses_down", "uses": ["Becoming.ChoiceCountCapture.choose_unfavoured", "Becoming.ChoiceCountCapture.counted_locks_down", "Becoming.Pace.paced_fast_succ"]}
+{"name": "Becoming.ChoiceCountCapture.counted_locks", "uses": ["Becoming.ChoiceCountCapture.choose_raises", "Becoming.ChoiceCountCapture.start_locked", "Becoming.ChoiceCountCapture.weighted_reads", "Becoming.RuleCapture.CarrierCounts.upper", "Becoming.RuleCapture.locked_rises", "Becoming.RuleCapture.locked_stays"]}
+{"name": "Becoming.ChoiceCountCapture.counted_locks_down", "uses": ["Becoming.ChoiceCountCapture.choose_lowers", "Becoming.ChoiceCountCapture.lower_strict", "Becoming.ChoiceCountCapture.weighted_reads", "Becoming.Ideals.Preorder.refl", "Becoming.RuleCapture.ReadsShare.reverse", "Becoming.RuleCapture.locked_rises", "Becoming.RuleCapture.locked_stays"]}
+{"name": "Becoming.ChoiceCountCapture.counted_outlives_loss", "uses": ["Becoming.ChoiceCountCapture.choose_raises", "Becoming.ChoiceCountCapture.start_locked", "Becoming.ChoiceCountCapture.weighted_reads", "Becoming.ClosedCapture.lock_outlives_loss", "Becoming.RuleCapture.CarrierCounts.upper"]}
+{"name": "Becoming.ChoiceCountCapture.lower_strict", "uses": ["Becoming.RuleCapture.CarrierCounts.other_pos"]}
+{"name": "Becoming.ChoiceCountCapture.memberFolds_alike", "uses": ["Becoming.Web.alikeThroughUpTo_iff_prefix"]}
+{"name": "Becoming.ChoiceCountCapture.pooled_selectsThrough", "uses": ["Becoming.ChoiceCountCapture.memberFolds_alike"]}
+{"name": "Becoming.ChoiceCountCapture.pooled_unchosen_beyond", "uses": ["Becoming.ChoiceCountCapture.pooled_selectsThrough", "Becoming.Flow.unselected_beyond_pool"]}
+{"name": "Becoming.ChoiceCountCapture.posterior_count_falls", "uses": ["Becoming.RuleShaping.falls_strictly"]}
+{"name": "Becoming.ChoiceCountCapture.posterior_course_falls", "uses": ["Becoming.RuleShaping.falls_strictly", "Becoming.RuleShaping.present_along"]}
+{"name": "Becoming.ChoiceCountCapture.selectsThrough", "uses": ["Becoming.Web.selectsThrough_iff_prefix"]}
+{"name": "Becoming.ChoiceCountCapture.start_locked", "uses": ["Becoming.Ideals.Preorder.refl"]}
+{"name": "Becoming.ChoiceCountCapture.unchosen_beyond_coupling", "uses": ["Becoming.ChoiceCountCapture.selectsThrough", "Becoming.Flow.unselected_beyond_coupling"]}
+{"name": "Becoming.ChoiceCountCapture.weighted_favours_iff", "uses": []}
+{"name": "Becoming.ChoiceCountCapture.weighted_reads", "uses": ["Becoming.Naturals.mul_mul_mul_comm"]}

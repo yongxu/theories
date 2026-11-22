@@ -1,0 +1,65 @@
+{"name": "Becoming.Copying.add_le_iff", "uses": ["Becoming.Naturals.le_sub_of_add_le", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.Copying.append_cancel", "uses": []}
+{"name": "Becoming.Copying.batch_all_iff", "uses": ["Becoming.Copying.add_le_iff", "Becoming.Copying.copies", "Becoming.Copying.released_iff", "Becoming.Copying.releases_iff", "Becoming.Copying.supplies_append_iff", "Becoming.Copying.supplies_nil", "Becoming.Naturals.sub_sub"]}
+{"name": "Becoming.Copying.batch_all_swap", "uses": ["Becoming.Copying.batch_all_iff", "Becoming.Copying.countOf_joinAll_swap", "Becoming.Copying.totalOf_swap"]}
+{"name": "Becoming.Copying.built_iff", "uses": ["Becoming.Copying.add_le_iff", "Becoming.Copying.copies", "Becoming.Copying.ne_append_cons", "Becoming.Copying.steps_fixed", "Becoming.Copying.supplies_cons_iff", "Becoming.Copying.supplies_nil", "Becoming.Copying.tick_cons", "Becoming.ListTests.append_assoc", "Becoming.ListTests.append_nil"]}
+{"name": "Becoming.Copying.completes_iff", "uses": ["Becoming.Copying.copies", "Becoming.Copying.supplied_of_completes"]}
+{"name": "Becoming.Copying.copies", "uses": ["Becoming.Copying.add_le_iff", "Becoming.Copying.supplies_cons_iff", "Becoming.Copying.tick_cons", "Becoming.ListTests.append_assoc", "Becoming.ListTests.append_nil", "Becoming.Naturals.sub_sub"]}
+{"name": "Becoming.Copying.copying_iff", "uses": ["Becoming.Copying.add_le_iff", "Becoming.Copying.mul_pow_succ", "Becoming.Naturals.sub_sub"]}
+{"name": "Becoming.Copying.copying_runs", "uses": ["Becoming.Copying.copying_iff"]}
+{"name": "Becoming.Copying.countOf_append", "uses": []}
+{"name": "Becoming.Copying.countOf_joinAll_replicate", "uses": ["Becoming.Copying.countOf_append"]}
+{"name": "Becoming.Copying.countOf_joinAll_swap", "uses": ["Becoming.Copying.countOf_append"]}
+{"name": "Becoming.Copying.countOf_other", "uses": []}
+{"name": "Becoming.Copying.countOf_remove", "uses": ["Becoming.Copying.countOf_other", "Becoming.Copying.countOf_remove_other", "Becoming.Copying.countOf_remove_self", "Becoming.Copying.countOf_self"]}
+{"name": "Becoming.Copying.countOf_removeAll", "uses": ["Becoming.Copying.countOf_other", "Becoming.Copying.countOf_remove_other", "Becoming.Copying.countOf_remove_self", "Becoming.Copying.countOf_self", "Becoming.Copying.supplies_cons_iff"]}
+{"name": "Becoming.Copying.countOf_remove_other", "uses": ["Becoming.Copying.countOf_other"]}
+{"name": "Becoming.Copying.countOf_remove_self", "uses": ["Becoming.Copying.countOf_other"]}
+{"name": "Becoming.Copying.countOf_self", "uses": []}
+{"name": "Becoming.Copying.countOf_setAt", "uses": ["Becoming.Copying.countOf_append"]}
+{"name": "Becoming.Copying.defects_beyond", "uses": []}
+{"name": "Becoming.Copying.defects_break", "uses": []}
+{"name": "Becoming.Copying.defects_fix", "uses": []}
+{"name": "Becoming.Copying.defects_self", "uses": []}
+{"name": "Becoming.Copying.defects_zero_iff", "uses": []}
+{"name": "Becoming.Copying.doubling_iff", "uses": ["Becoming.Copying.copying_iff"]}
+{"name": "Becoming.Copying.doubling_runs", "uses": ["Becoming.Copying.copying_runs"]}
+{"name": "Becoming.Copying.empties_iff", "uses": ["Becoming.Copying.copies", "Becoming.Copying.countOf_removeAll", "Becoming.Copying.nil_iff_countOf_zero", "Becoming.Copying.supplied_of_completes", "Becoming.add_right_cancel"]}
+{"name": "Becoming.Copying.exchange_keeps_counts", "uses": ["Becoming.Copying.countOf_append", "Becoming.Copying.countOf_remove", "Becoming.Copying.countOf_setAt", "Becoming.Copying.ite_cases"]}
+{"name": "Becoming.Copying.exchange_le", "uses": ["Becoming.Copying.defects_beyond", "Becoming.Copying.defects_fix", "Becoming.Copying.ite_cases"]}
+{"name": "Becoming.Copying.extends_along", "uses": ["Becoming.ListTests.append_assoc", "Becoming.ListTests.append_nil", "Generative.Trace.brecOn"]}
+{"name": "Becoming.Copying.extends_along_iff", "uses": ["Becoming.Copying.extends_along"]}
+{"name": "Becoming.Copying.inspect_keeps_counts", "uses": ["Becoming.Copying.exchange_keeps_counts", "Becoming.Copying.ite_cases"]}
+{"name": "Becoming.Copying.inspect_le", "uses": ["Becoming.Copying.exchange_le", "Becoming.Copying.ite_cases"]}
+{"name": "Becoming.Copying.inspect_le_iff", "uses": ["Becoming.Copying.countOf_self", "Becoming.Copying.defects_break", "Becoming.Copying.defects_self", "Becoming.Copying.inspect_le", "Becoming.Naturals.add_sub_cancel_left"]}
+{"name": "Becoming.Copying.inspect_matches_iff", "uses": ["Becoming.Copying.add_le_iff", "Becoming.Copying.nth_setAt_self"]}
+{"name": "Becoming.Copying.ite_cases", "uses": []}
+{"name": "Becoming.Copying.lineage_all_iff", "uses": ["Becoming.Copying.batch_all_iff", "Becoming.Copying.countOf_joinAll_replicate", "Becoming.Copying.totalOf_replicate"]}
+{"name": "Becoming.Copying.midpoint_arith", "uses": ["Becoming.add_right_cancel"]}
+{"name": "Becoming.Copying.mul_pow_succ", "uses": ["Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Copying.ne_append_cons", "uses": ["Becoming.Copying.append_cancel", "Becoming.ListTests.append_nil"]}
+{"name": "Becoming.Copying.nil_iff_countOf_zero", "uses": ["Becoming.Copying.countOf_self"]}
+{"name": "Becoming.Copying.nth_setAt_self", "uses": []}
+{"name": "Becoming.Copying.pos_of_supplies", "uses": ["Becoming.Copying.countOf_self"]}
+{"name": "Becoming.Copying.readStep_extends", "uses": ["Becoming.Copying.ite_cases", "Becoming.ListTests.append_nil"]}
+{"name": "Becoming.Copying.readSteps_extends", "uses": ["Becoming.Copying.readStep_extends", "Becoming.ListTests.append_assoc", "Becoming.ListTests.append_nil"]}
+{"name": "Becoming.Copying.readSteps_fixed", "uses": []}
+{"name": "Becoming.Copying.reading_iff", "uses": ["Becoming.Copying.add_le_iff", "Becoming.Copying.append_cancel", "Becoming.Copying.ne_append_cons", "Becoming.Copying.pos_of_supplies", "Becoming.Copying.readSteps_extends", "Becoming.Copying.readSteps_fixed", "Becoming.Copying.supplies_cons_iff", "Becoming.Copying.supplies_nil", "Becoming.ListTests.append_assoc", "Becoming.ListTests.append_nil", "Becoming.ListTests.length_append"]}
+{"name": "Becoming.Copying.released_iff", "uses": []}
+{"name": "Becoming.Copying.releases_iff", "uses": ["Becoming.Copying.add_le_iff", "Becoming.Copying.copies", "Becoming.Copying.supplied_of_completes"]}
+{"name": "Becoming.Copying.requiredBy_add", "uses": ["Becoming.Copying.mul_pow_succ"]}
+{"name": "Becoming.Copying.required_add", "uses": ["Becoming.Copying.requiredBy_add"]}
+{"name": "Becoming.Copying.scan_le", "uses": ["Becoming.Copying.inspect_le"]}
+{"name": "Becoming.Copying.steps_fixed", "uses": []}
+{"name": "Becoming.Copying.supplied_of_completes", "uses": ["Becoming.Copying.add_le_iff", "Becoming.Copying.steps_fixed", "Becoming.Copying.supplies_cons_iff", "Becoming.Copying.supplies_nil", "Becoming.Copying.tick_cons"]}
+{"name": "Becoming.Copying.supplies_append_iff", "uses": ["Becoming.Copying.supplies_cons_iff", "Becoming.Copying.supplies_nil"]}
+{"name": "Becoming.Copying.supplies_cons_iff", "uses": ["Becoming.Copying.countOf_other", "Becoming.Copying.countOf_remove_other", "Becoming.Copying.countOf_remove_self", "Becoming.Copying.countOf_self", "Becoming.Copying.pos_of_supplies"]}
+{"name": "Becoming.Copying.supplies_nil", "uses": []}
+{"name": "Becoming.Copying.tenfold", "uses": ["Becoming.Copying.copying_runs"]}
+{"name": "Becoming.Copying.tick_cons", "uses": []}
+{"name": "Becoming.Copying.totalOf_replicate", "uses": []}
+{"name": "Becoming.Copying.totalOf_swap", "uses": []}
+{"name": "Becoming.Copying.use_lt_iff", "uses": ["Becoming.Copying.use_word", "Becoming.add_right_cancel"]}
+{"name": "Becoming.Copying.use_midpoint", "uses": ["Becoming.Copying.midpoint_arith", "Becoming.Copying.use_word"]}
+{"name": "Becoming.Copying.use_pair", "uses": []}
+{"name": "Becoming.Copying.use_word", "uses": ["Becoming.Copying.use_pair"]}

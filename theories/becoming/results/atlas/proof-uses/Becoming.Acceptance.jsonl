@@ -1,0 +1,17 @@
+{"name": "Becoming.Acceptance.acceptance_factorization", "uses": ["Becoming.IntegerOrder.add_le_add", "Becoming.IntegerOrder.add_le_add_right", "Becoming.IntegerOrder.le_of_add_le_add_left", "Becoming.IntegerOrder.le_of_add_le_add_right", "Becoming.IntegerOrder.le_of_lt", "Becoming.IntegerOrder.lt_irrefl", "Becoming.IntegerOrder.lt_of_lt_of_le"]}
+{"name": "Becoming.Acceptance.accepting_optimum_can_destroy_access", "uses": ["Becoming.Acceptance.maintenance_separation"]}
+{"name": "Becoming.Acceptance.approximate_score_bound", "uses": ["Becoming.IntegerOrder.add_le_add_right", "Becoming.IntegerOrder.le_trans", "Becoming.IntegerOrder.sub_add_sub", "Becoming.Integers.add_add_add_comm", "Becoming.Integers.add_comm", "Becoming.Integers.add_right_neg", "Becoming.Integers.two_mul", "Becoming.Integers.zero_add"]}
+{"name": "Becoming.Acceptance.approximate_score_bound_tight", "uses": ["Becoming.IntegerOrder.add_sub_cancel_right", "Becoming.IntegerOrder.le_add_of_nonneg_right", "Becoming.IntegerOrder.le_refl", "Becoming.IntegerOrder.le_trans", "Becoming.IntegerOrder.neg_nonpos_of_nonneg", "Becoming.Integers.sub_zero", "Becoming.Integers.two_mul", "Becoming.Integers.zero_add"]}
+{"name": "Becoming.Acceptance.every_fixed_access_weight_has_counterexample", "uses": ["Becoming.Acceptance.fixed_access_weight_boundary", "Becoming.IntegerOrder.lt_add_one"]}
+{"name": "Becoming.Acceptance.every_optimum_has_access_iff", "uses": ["Becoming.Acceptance.acceptance_factorization"]}
+{"name": "Becoming.Acceptance.fixed_access_weight_boundary", "uses": ["Becoming.Integers.add_zero"]}
+{"name": "Becoming.Acceptance.maintenance_separation", "uses": ["Becoming.Acceptance.acceptance_factorization", "Becoming.IntegerOrder.le_of_lt", "Becoming.IntegerOrder.le_refl", "Becoming.IntegerOrder.lt_irrefl", "Becoming.IntegerOrder.lt_of_lt_of_le"]}
+{"name": "Becoming.Acceptance.maintenance_weight_exact", "uses": ["Becoming.IntegerOrder.le_refl", "Becoming.IntegerOrder.lt_or_le", "Becoming.IntegerOrder.not_lt_of_le", "Becoming.Integers.add_zero", "Becoming.Integers.zero_add"]}
+{"name": "Becoming.Acceptance.no_base_optimal_access", "uses": []}
+{"name": "Becoming.Acceptance.one_le_two", "uses": []}
+{"name": "Becoming.Acceptance.recomputed_value_restores_branch", "uses": ["Becoming.Acceptance.acceptance_factorization", "Becoming.IntegerOrder.le_refl", "Becoming.IntegerOrder.lt_irrefl", "Becoming.IntegerOrder.lt_of_lt_of_le"]}
+{"name": "Becoming.Acceptance.restricted_value_achievable", "uses": []}
+{"name": "Becoming.Acceptance.restricted_value_bounds", "uses": ["Becoming.IntegerOrder.le_refl"]}
+{"name": "Becoming.Acceptance.stale_value_shield_suboptimal", "uses": ["Becoming.Acceptance.acceptance_factorization", "Becoming.IntegerOrder.le_of_lt", "Becoming.IntegerOrder.le_refl"]}
+{"name": "Becoming.Acceptance.unavoidable_score_loss", "uses": ["Becoming.IntegerOrder.sub_le_sub_left", "Becoming.IntegerOrder.sub_nonneg_of_le"]}
+{"name": "Becoming.Acceptance.unrestricted_value_optimal", "uses": ["Becoming.Acceptance.one_le_two", "Becoming.IntegerOrder.le_of_lt", "Becoming.IntegerOrder.le_refl", "Becoming.IntegerOrder.le_trans"]}

@@ -1,0 +1,22 @@
+{"name": "Becoming.Handoff.Run.novel_by_handoff", "uses": ["Becoming.Handoff.handed_off_progress", "Becoming.RenewalBound.renewal_within_rank_bound"]}
+{"name": "Becoming.Handoff.Run.relevance_by_handoff_of_unrestricted", "uses": ["Becoming.Handoff.Run.novel_by_handoff", "Becoming.livingSignificance_of_unrestricted"]}
+{"name": "Becoming.Handoff.changed_form", "uses": []}
+{"name": "Becoming.Handoff.changed_form_with_valid_handoff", "uses": []}
+{"name": "Becoming.Handoff.each_fixed_rule_finishes", "uses": []}
+{"name": "Becoming.Handoff.each_rule_local_progress", "uses": []}
+{"name": "Becoming.Handoff.fails_forever", "uses": ["Becoming.Handoff.revised_rules_can_fail_forever"]}
+{"name": "Becoming.Handoff.handed_off_progress", "uses": []}
+{"name": "Becoming.Handoff.newContent_by_bound", "uses": ["Becoming.Handoff.handed_off_progress", "Becoming.RenewalBound.renewal_within_rank_bound"]}
+{"name": "Becoming.Handoff.newContent_by_bound_on_runs", "uses": ["Becoming.Handoff.revised_newContent_by_bound_of_unrestricted"]}
+{"name": "Becoming.Handoff.outcome_not_fixed", "uses": ["Becoming.Handoff.realized_form_need_not_be_fixed", "Generative.trace_singleton_iff"]}
+{"name": "Becoming.Handoff.realized_form_need_not_be_fixed", "uses": []}
+{"name": "Becoming.Handoff.resets_remaining", "uses": ["Becoming.Handoff.revision_resets_remaining"]}
+{"name": "Becoming.Handoff.revised_newContent_by_bound_of_unrestricted", "uses": ["Becoming.Handoff.newContent_by_bound", "Becoming.Handoff.securesNewContent_by_bound_of_unrestricted"]}
+{"name": "Becoming.Handoff.revised_rules_can_fail_forever", "uses": ["Becoming.Handoff.each_fixed_rule_finishes", "Becoming.Handoff.each_rule_local_progress", "Becoming.Handoff.revising_unfinished"]}
+{"name": "Becoming.Handoff.revising_run_stays_unfinished", "uses": []}
+{"name": "Becoming.Handoff.revising_state", "uses": []}
+{"name": "Becoming.Handoff.revising_unfinished", "uses": ["Becoming.Handoff.revising_run_stays_unfinished"]}
+{"name": "Becoming.Handoff.revision_resets_remaining", "uses": ["Becoming.Handoff.revising_run_stays_unfinished"]}
+{"name": "Becoming.Handoff.securesNewContent_by_bound", "uses": ["Becoming.SecuredContent.contingent_newContent"]}
+{"name": "Becoming.Handoff.securesNewContent_by_bound_of_unrestricted", "uses": ["Becoming.Handoff.securesNewContent_by_bound", "Becoming.livingSignificance_of_unrestricted"]}
+{"name": "Becoming.Handoff.step_iff", "uses": []}

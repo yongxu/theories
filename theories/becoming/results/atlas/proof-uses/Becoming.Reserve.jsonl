@@ -1,0 +1,89 @@
+{"name": "Becoming.Bridged.bridged", "uses": []}
+{"name": "Becoming.Cascade.carries", "uses": ["Becoming.Cascade.falls", "Becoming.Cascade.never_rises"]}
+{"name": "Becoming.Cascade.cascade", "uses": ["Becoming.Cascade.carries", "Becoming.Cascade.decays", "Becoming.Cascade.embodied", "Becoming.Cascade.ends"]}
+{"name": "Becoming.Cascade.decays", "uses": ["Becoming.Cascade.falls", "Becoming.Cascade.upto_pos"]}
+{"name": "Becoming.Cascade.embodied", "uses": ["Becoming.Cascade.upto_pos"]}
+{"name": "Becoming.Cascade.ends", "uses": ["Becoming.Cascade.upto_self"]}
+{"name": "Becoming.Cascade.falls", "uses": ["Becoming.Cascade.unsupported_late", "Becoming.Cascade.upto_after", "Becoming.Cascade.upto_self"]}
+{"name": "Becoming.Cascade.never_rises", "uses": ["Becoming.Cascade.upto_le_one"]}
+{"name": "Becoming.Cascade.supported_of_le", "uses": ["Becoming.Cascade.upto_pos"]}
+{"name": "Becoming.Cascade.unsupported_late", "uses": ["Becoming.Cascade.supported_of_le"]}
+{"name": "Becoming.Cascade.upto_after", "uses": []}
+{"name": "Becoming.Cascade.upto_le_one", "uses": []}
+{"name": "Becoming.Cascade.upto_pos", "uses": []}
+{"name": "Becoming.Cascade.upto_self", "uses": []}
+{"name": "Becoming.Famine.balances", "uses": []}
+{"name": "Becoming.Famine.carries", "uses": ["Becoming.Famine.balances", "Becoming.Famine.fed", "Becoming.Famine.supported_of_ne_fox", "Becoming.Flow.carries_of_own", "Becoming.total_zero"]}
+{"name": "Becoming.Famine.famine", "uses": ["Becoming.Famine.carries", "Becoming.Famine.hare_embodied", "Becoming.Famine.transformed_dependent"]}
+{"name": "Becoming.Famine.fed", "uses": []}
+{"name": "Becoming.Famine.hare_embodied", "uses": []}
+{"name": "Becoming.Famine.living_differs", "uses": ["Becoming.Famine.transformed_not_undermining", "Becoming.Famine.undermines_one"]}
+{"name": "Becoming.Famine.supported_of_ne_fox", "uses": []}
+{"name": "Becoming.Famine.transformed_dependent", "uses": []}
+{"name": "Becoming.Famine.transformed_not_undermining", "uses": []}
+{"name": "Becoming.Famine.undermines_one", "uses": []}
+{"name": "Becoming.Flow.carriesAcross_of_held", "uses": []}
+{"name": "Becoming.Flow.carries_of_held", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.carriesAcross_of_held"]}
+{"name": "Becoming.Flow.carries_of_own", "uses": ["Becoming.Flow.carries_of_held", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Once.carries", "uses": ["Becoming.Once.ind_and_le", "Becoming.Once.ind_fall"]}
+{"name": "Becoming.Once.ind_and_le", "uses": []}
+{"name": "Becoming.Once.ind_fall", "uses": []}
+{"name": "Becoming.Once.once", "uses": ["Becoming.Clear.first_unique"]}
+{"name": "Becoming.Once.unsupported", "uses": []}
+{"name": "Becoming.Provisioned.acting", "uses": []}
+{"name": "Becoming.Provisioned.balances", "uses": []}
+{"name": "Becoming.Provisioned.provisioned", "uses": ["Becoming.Provisioned.acting", "Becoming.Provisioned.balances"]}
+{"name": "Becoming.Seed.carries", "uses": []}
+{"name": "Becoming.Seed.dark", "uses": []}
+{"name": "Becoming.Seed.no_held", "uses": ["Becoming.Seed.dark", "Becoming.Web.Carries.pos"]}
+{"name": "Becoming.Seed.not_decays", "uses": ["Becoming.Seed.dark"]}
+{"name": "Becoming.Seed.seed", "uses": ["Becoming.Seed.carries", "Becoming.Seed.dark"]}
+{"name": "Becoming.ShortCascade.carries", "uses": ["Becoming.Cascade.carries", "Becoming.ShortCascade.unsupported"]}
+{"name": "Becoming.ShortCascade.decays", "uses": ["Becoming.Cascade.decays", "Becoming.ShortCascade.unsupported"]}
+{"name": "Becoming.ShortCascade.ranked", "uses": []}
+{"name": "Becoming.ShortCascade.unsupported", "uses": []}
+{"name": "Becoming.Sleeper.sleeper", "uses": ["Becoming.Shuttle.recurs"]}
+{"name": "Becoming.Viable.carries", "uses": []}
+{"name": "Becoming.Viable.dark", "uses": []}
+{"name": "Becoming.Viable.decays", "uses": []}
+{"name": "Becoming.Viable.no_held", "uses": ["Becoming.Viable.dark", "Becoming.Web.Carries.pos"]}
+{"name": "Becoming.Viable.viable", "uses": ["Becoming.Viable.carries", "Becoming.Viable.dark", "Becoming.Viable.decays"]}
+{"name": "Becoming.Web.Carries.active_not_recurring", "uses": ["Becoming.Web.active_not_recurring_from"]}
+{"name": "Becoming.Web.Carries.arising_not_recurring", "uses": ["Becoming.Web.arising_not_recurring_from"]}
+{"name": "Becoming.Web.Carries.chain_ends", "uses": ["Becoming.Web.chain_ends_from"]}
+{"name": "Becoming.Web.Carries.chain_ends_of_em", "uses": ["Becoming.Web.chain_ends_of_em_from"]}
+{"name": "Becoming.Web.Carries.coextinct_lasts", "uses": ["Becoming.Web.active_not_recurring_from", "Becoming.Web.unsupported_after_end"]}
+{"name": "Becoming.Web.Carries.consumed_lasts", "uses": ["Becoming.Web.active_not_recurring_from", "Becoming.Web.unsupported_after_loss"]}
+{"name": "Becoming.Web.Carries.decays_by", "uses": ["Becoming.Web.decays_by_from"]}
+{"name": "Becoming.Web.Carries.ends_within", "uses": ["Becoming.Web.ends_within_from"]}
+{"name": "Becoming.Web.Carries.lasts", "uses": ["Becoming.Web.lasts_on"]}
+{"name": "Becoming.Web.Carries.lasts_within", "uses": ["Becoming.Web.Carries.lasts"]}
+{"name": "Becoming.Web.Carries.pos", "uses": ["Becoming.Web.CarriesAcross.pos"]}
+{"name": "Becoming.Web.Carries.step", "uses": ["Becoming.Web.CarriesAcross.step"]}
+{"name": "Becoming.Web.CarriesAcross.pos", "uses": []}
+{"name": "Becoming.Web.CarriesAcross.step", "uses": ["Becoming.mark_cases"]}
+{"name": "Becoming.Web.active_not_recurring_from", "uses": ["Becoming.falls_not_recurring"]}
+{"name": "Becoming.Web.arising_not_recurring_from", "uses": ["Becoming.Web.active_not_recurring_from"]}
+{"name": "Becoming.Web.came_to_stand", "uses": ["Becoming.arises_at_a_step"]}
+{"name": "Becoming.Web.carries_zero", "uses": ["Becoming.Web.carries_zero_across"]}
+{"name": "Becoming.Web.carries_zero_across", "uses": []}
+{"name": "Becoming.Web.chainEnd_ge", "uses": []}
+{"name": "Becoming.Web.chainEnd_zero", "uses": []}
+{"name": "Becoming.Web.chain_ends_from", "uses": ["Becoming.Web.chainEnd_ge", "Becoming.Web.ends_within_from", "Becoming.Web.unsupported_after_end", "Becoming.le_dest"]}
+{"name": "Becoming.Web.chain_ends_of_em_from", "uses": ["Becoming.Web.active_not_recurring_from", "Becoming.Web.unsupported_after_end", "Becoming.exists_not_of_em"]}
+{"name": "Becoming.Web.climbs", "uses": []}
+{"name": "Becoming.Web.decays_by_from", "uses": ["Becoming.Web.decays_by_on"]}
+{"name": "Becoming.Web.decays_by_on", "uses": []}
+{"name": "Becoming.Web.ended_for_good", "uses": ["Becoming.kept_onward"]}
+{"name": "Becoming.Web.ends_within_from", "uses": ["Becoming.Web.ends_within_on"]}
+{"name": "Becoming.Web.ends_within_on", "uses": ["Becoming.Web.CarriesAcross.pos", "Becoming.Web.decays_by_on", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Web.lasts_on", "uses": ["Becoming.Web.CarriesAcross.step"]}
+{"name": "Becoming.Web.late_return_finds_none", "uses": ["Becoming.Web.ended_for_good", "Becoming.Web.ends_within_on"]}
+{"name": "Becoming.Web.lpo_of_ending", "uses": ["Becoming.Clear.false_before", "Becoming.Clear.false_of_not", "Becoming.Clear.first_of_true", "Becoming.Clear.not_both", "Becoming.Clear.or_first", "Becoming.Once.carries", "Becoming.Once.unsupported"]}
+{"name": "Becoming.Web.no_unending_chain", "uses": ["Becoming.Web.climbs"]}
+{"name": "Becoming.Web.redirect_dependent", "uses": ["Becoming.Web.redirect_supported_at"]}
+{"name": "Becoming.Web.redirect_same", "uses": []}
+{"name": "Becoming.Web.redirect_supported_at", "uses": ["Becoming.Web.CarriesAcross.pos"]}
+{"name": "Becoming.Web.unsupported_after_end", "uses": []}
+{"name": "Becoming.Web.unsupported_after_loss", "uses": []}
+{"name": "Becoming.short_cascade", "uses": ["Becoming.Cascade.embodied", "Becoming.Cascade.ends", "Becoming.ShortCascade.carries", "Becoming.ShortCascade.decays", "Becoming.ShortCascade.ranked", "Becoming.Web.Carries.chain_ends", "Becoming.Web.no_unending_chain"]}

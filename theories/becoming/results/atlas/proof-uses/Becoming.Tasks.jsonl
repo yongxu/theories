@@ -1,0 +1,128 @@
+{"name": "Becoming.Reaching.coversLater_of_trace", "uses": ["Generative.Trace.brecOn"]}
+{"name": "Becoming.Reaching.not_widensWithLag_of_reach", "uses": ["Becoming.Reaching.coversLater_of_trace"]}
+{"name": "Becoming.Reaching.widensOrLater_iff_of_reach", "uses": ["Becoming.Reaching.not_widensWithLag_of_reach"]}
+{"name": "Becoming.Tasks.CatalysedSeries.not_holding", "uses": []}
+{"name": "Becoming.Tasks.CatalysedSeries.performs_pair", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.Tasks.Catalysis.coversLater_all", "uses": ["Becoming.Tasks.Catalysis.no_course"]}
+{"name": "Becoming.Tasks.Catalysis.into", "uses": []}
+{"name": "Becoming.Tasks.Catalysis.narrows", "uses": ["Becoming.Invariant.reach", "Becoming.Reach.refl", "Becoming.Tasks.Catalysis.product_stays"]}
+{"name": "Becoming.Tasks.Catalysis.no_course", "uses": ["Becoming.Run.step", "Becoming.Tasks.Catalysis.into", "Becoming.Tasks.Catalysis.stuck"]}
+{"name": "Becoming.Tasks.Catalysis.not_held", "uses": []}
+{"name": "Becoming.Tasks.Catalysis.not_held_unchanged", "uses": []}
+{"name": "Becoming.Tasks.Catalysis.not_widensOrLater", "uses": ["Becoming.Tasks.Catalysis.coversLater_all", "Becoming.Tasks.Catalysis.no_course"]}
+{"name": "Becoming.Tasks.Catalysis.performs", "uses": ["Becoming.Tasks.Catalysis.reach_product"]}
+{"name": "Becoming.Tasks.Catalysis.product_stays", "uses": []}
+{"name": "Becoming.Tasks.Catalysis.reach_product", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.Tasks.Catalysis.stuck", "uses": []}
+{"name": "Becoming.Tasks.Catalysis.transpose_not_possible", "uses": ["Becoming.Invariant.reach", "Becoming.Tasks.Catalysis.product_stays"]}
+{"name": "Becoming.Tasks.ClimbTask.fixed", "uses": ["Becoming.«定后之逐点»"]}
+{"name": "Becoming.Tasks.ClimbTask.invariably", "uses": ["Becoming.Tasks.ClimbTask.fixed", "Becoming.Tasks.ClimbTask.performs", "Becoming.Tasks.Delivers.invariably", "Becoming.«定后则定后于»"]}
+{"name": "Becoming.Tasks.ClimbTask.moves_change", "uses": []}
+{"name": "Becoming.Tasks.ClimbTask.performs", "uses": ["Becoming.Climb.trace_units"]}
+{"name": "Becoming.Tasks.ClimbTask.performs_function", "uses": ["Becoming.Tasks.ClimbTask.performs"]}
+{"name": "Becoming.Tasks.ClimbTask.performs_identity", "uses": ["Becoming.Tasks.ClimbTask.performs"]}
+{"name": "Becoming.Tasks.Conserved.additive_pattern", "uses": ["Becoming.Tasks.Conserved.not_lower", "Becoming.Tasks.Conserved.not_lower_first", "Becoming.Tasks.Conserved.not_raise", "Becoming.Tasks.Conserved.not_raise_second", "Becoming.Tasks.Conserved.performs_both", "Becoming.Tasks.Conserved.performs_lower_raise"]}
+{"name": "Becoming.Tasks.Conserved.empty_stays", "uses": []}
+{"name": "Becoming.Tasks.Conserved.first_empty_of_raised_second", "uses": ["Becoming.Invariant.reach", "Becoming.Tasks.Conserved.empty_stays", "Becoming.Tasks.Conserved.unit_stays"]}
+{"name": "Becoming.Tasks.Conserved.first_full_of_lowered", "uses": ["Becoming.Invariant.reach", "Becoming.Tasks.Conserved.full_stays", "Becoming.Tasks.Conserved.unit_stays"]}
+{"name": "Becoming.Tasks.Conserved.full_stays", "uses": []}
+{"name": "Becoming.Tasks.Conserved.holdsOne_eq_xor", "uses": []}
+{"name": "Becoming.Tasks.Conserved.holdsOne_kept", "uses": []}
+{"name": "Becoming.Tasks.Conserved.holdsOne_recodes", "uses": []}
+{"name": "Becoming.Tasks.Conserved.not_lower", "uses": ["Becoming.Invariant.reach", "Becoming.Tasks.Conserved.first_full_of_lowered", "Becoming.Tasks.Conserved.full_stays"]}
+{"name": "Becoming.Tasks.Conserved.not_lower_alone", "uses": ["Becoming.Invariant.reach", "Becoming.Tasks.Conserved.full_stays"]}
+{"name": "Becoming.Tasks.Conserved.not_lower_first", "uses": ["Becoming.Invariant.reach", "Becoming.Tasks.Conserved.full_stays", "Becoming.Tasks.Conserved.second_full_of_emptied"]}
+{"name": "Becoming.Tasks.Conserved.not_lower_first_alone", "uses": ["Becoming.Invariant.reach", "Becoming.Tasks.Conserved.full_stays"]}
+{"name": "Becoming.Tasks.Conserved.not_raise", "uses": ["Becoming.Invariant.reach", "Becoming.Tasks.Conserved.empty_stays", "Becoming.Tasks.Conserved.second_empty_of_raised"]}
+{"name": "Becoming.Tasks.Conserved.not_raise_alone", "uses": ["Becoming.Invariant.reach", "Becoming.Tasks.Conserved.empty_stays"]}
+{"name": "Becoming.Tasks.Conserved.not_raise_second", "uses": ["Becoming.Invariant.reach", "Becoming.Tasks.Conserved.empty_stays", "Becoming.Tasks.Conserved.first_empty_of_raised_second"]}
+{"name": "Becoming.Tasks.Conserved.not_raise_second_alone", "uses": ["Becoming.Invariant.reach", "Becoming.Tasks.Conserved.empty_stays"]}
+{"name": "Becoming.Tasks.Conserved.performs_both", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Tasks.Conserved.performs_lower_first_with_one", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Tasks.Conserved.performs_lower_raise", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Tasks.Conserved.performs_lower_second_with_one", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Tasks.Conserved.performs_raise_second_with_one", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Tasks.Conserved.performs_with_one", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Tasks.Conserved.second_empty_of_raised", "uses": ["Becoming.Invariant.reach", "Becoming.Tasks.Conserved.empty_stays", "Becoming.Tasks.Conserved.unit_stays"]}
+{"name": "Becoming.Tasks.Conserved.second_full_of_emptied", "uses": ["Becoming.Invariant.reach", "Becoming.Tasks.Conserved.full_stays", "Becoming.Tasks.Conserved.unit_stays"]}
+{"name": "Becoming.Tasks.Conserved.unit_stays", "uses": []}
+{"name": "Becoming.Tasks.Conserved.whole_of_impossible_parts", "uses": ["Becoming.Tasks.Conserved.not_lower", "Becoming.Tasks.Conserved.not_raise", "Becoming.Tasks.Conserved.performs_both"]}
+{"name": "Becoming.Tasks.Delivers.adds_nothing", "uses": ["Becoming.Reaching.Possible.of_reach", "Becoming.Reaching.coversLater_of_trace"]}
+{"name": "Becoming.Tasks.Delivers.heldMoves_mono", "uses": ["Becoming.Reach.heldMoves_mono"]}
+{"name": "Becoming.Tasks.Delivers.interleave_left", "uses": ["Becoming.Tasks.reach_interleave_left"]}
+{"name": "Becoming.Tasks.Delivers.interleave_right", "uses": ["Becoming.Tasks.reach_interleave_right"]}
+{"name": "Becoming.Tasks.Delivers.invariably", "uses": ["Becoming.Reach.refl", "Becoming.Tasks.on_every_run"]}
+{"name": "Becoming.Tasks.Delivers.of_heldMoves", "uses": ["Becoming.Reach.of_heldMoves"]}
+{"name": "Becoming.Tasks.Delivers.pair_left", "uses": ["Becoming.Reach.of_heldMoves", "Becoming.Reach.same_of_heldMoves", "Becoming.Tasks.sameReading_class"]}
+{"name": "Becoming.Tasks.Delivers.pair_left_held", "uses": ["Becoming.Reach.heldMoves_mono", "Becoming.Reach.same_of_heldMoves", "Becoming.Tasks.sameReading_class"]}
+{"name": "Becoming.Tasks.Delivers.pair_right", "uses": ["Becoming.Reach.of_heldMoves", "Becoming.Reach.same_of_heldMoves", "Becoming.Tasks.sameReading_class"]}
+{"name": "Becoming.Tasks.Delivers.pair_right_held", "uses": ["Becoming.Reach.heldMoves_mono", "Becoming.Reach.same_of_heldMoves", "Becoming.Tasks.sameReading_class"]}
+{"name": "Becoming.Tasks.Delivers.parallel_holding", "uses": ["Becoming.Tasks.Delivers.pair_left_held", "Becoming.Tasks.Delivers.pair_right_held", "Becoming.Tasks.Delivers.parallel_inTurn"]}
+{"name": "Becoming.Tasks.Delivers.parallel_inTurn", "uses": ["Becoming.Reach.of_heldMoves", "Becoming.Reach.same_of_heldMoves", "Becoming.Reach.trans", "Becoming.Tasks.sameReading_class"]}
+{"name": "Becoming.Tasks.Delivers.possibleWithPartHeld", "uses": []}
+{"name": "Becoming.Tasks.Delivers.serial", "uses": ["Becoming.Reach.trans"]}
+{"name": "Becoming.Tasks.Delivers.serial_holding", "uses": ["Becoming.Tasks.Delivers.pair_left", "Becoming.Tasks.Delivers.pair_right", "Becoming.Tasks.Delivers.serial"]}
+{"name": "Becoming.Tasks.FallTask.admits_zero", "uses": []}
+{"name": "Becoming.Tasks.FallTask.stays", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Tasks.FallTask.widens_back", "uses": ["Becoming.Reach.of_step", "Becoming.Tasks.FallTask.admits_zero", "Becoming.Tasks.FallTask.stays"]}
+{"name": "Becoming.Tasks.FlipTower.not_held", "uses": []}
+{"name": "Becoming.Tasks.FlipTower.performs", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Tasks.Performs.of_heldMoves", "uses": ["Becoming.Tasks.Delivers.of_heldMoves"]}
+{"name": "Becoming.Tasks.Performs.parallel_interleave", "uses": ["Becoming.Tasks.Delivers.heldMoves_mono", "Becoming.Tasks.Delivers.interleave_left", "Becoming.Tasks.Delivers.interleave_right", "Becoming.Tasks.Delivers.parallel_holding", "Becoming.Tasks.Presented.interleave"]}
+{"name": "Becoming.Tasks.Performs.serial", "uses": ["Becoming.Tasks.Delivers.serial"]}
+{"name": "Becoming.Tasks.Performs.serial_interleaveOn", "uses": ["Becoming.Tasks.Delivers.serial_holding", "Becoming.Tasks.reach_interleaveOn_left", "Becoming.Tasks.reach_interleaveOn_right"]}
+{"name": "Becoming.Tasks.Performs.unitPart", "uses": []}
+{"name": "Becoming.Tasks.Possible.interleave_left", "uses": ["Becoming.Tasks.Delivers.interleave_left", "Becoming.Tasks.Delivers.of_heldMoves"]}
+{"name": "Becoming.Tasks.Possible.interleave_right", "uses": ["Becoming.Tasks.Delivers.interleave_right", "Becoming.Tasks.Delivers.of_heldMoves"]}
+{"name": "Becoming.Tasks.Possible.of_interleave_left", "uses": ["Becoming.Tasks.reach_fst_of_interleave"]}
+{"name": "Becoming.Tasks.Possible.of_interleave_right", "uses": ["Becoming.Tasks.reach_snd_of_interleave"]}
+{"name": "Becoming.Tasks.Possible.parallel_interleave", "uses": ["Becoming.Tasks.Performs.parallel_interleave"]}
+{"name": "Becoming.Tasks.Possible.parallel_within", "uses": ["Becoming.Tasks.Possible.of_interleave_left", "Becoming.Tasks.Possible.of_interleave_right", "Becoming.Tasks.Possible.parallel_interleave"]}
+{"name": "Becoming.Tasks.Possible.serial_interleaveOn", "uses": ["Becoming.Tasks.Performs.serial_interleaveOn"]}
+{"name": "Becoming.Tasks.Possible.serial_of_unitPart", "uses": ["Becoming.Tasks.Performs.serial", "Becoming.Tasks.Performs.unitPart"]}
+{"name": "Becoming.Tasks.PossibleFrom.possible", "uses": []}
+{"name": "Becoming.Tasks.Presented.interleave", "uses": []}
+{"name": "Becoming.Tasks.Resetting.composition_fails", "uses": ["Becoming.Tasks.Resetting.not_possible", "Becoming.Tasks.Resetting.performs_first", "Becoming.Tasks.Resetting.performs_second", "Becoming.Tasks.Resetting.regular"]}
+{"name": "Becoming.Tasks.Resetting.listed_not_regular", "uses": []}
+{"name": "Becoming.Tasks.Resetting.not_holding", "uses": []}
+{"name": "Becoming.Tasks.Resetting.not_possible", "uses": ["Becoming.Tasks.Resetting.not_two"]}
+{"name": "Becoming.Tasks.Resetting.not_two", "uses": ["Becoming.Invariant.reach", "Becoming.Tasks.Resetting.stays"]}
+{"name": "Becoming.Tasks.Resetting.one_part_two_regions", "uses": ["Becoming.Tasks.Resetting.not_possible", "Becoming.Tasks.Resetting.performs_first_by_part", "Becoming.Tasks.Resetting.performs_second", "Becoming.Tasks.Resetting.regular"]}
+{"name": "Becoming.Tasks.Resetting.performs_first", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Tasks.Resetting.performs_first_by_part", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Tasks.Resetting.performs_second", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Tasks.Resetting.regular", "uses": []}
+{"name": "Becoming.Tasks.Resetting.stays", "uses": []}
+{"name": "Becoming.Tasks.ResettingInterleaved.composition_fails_within", "uses": ["Becoming.Tasks.Resetting.regular", "Becoming.Tasks.ResettingInterleaved.first_possible", "Becoming.Tasks.ResettingInterleaved.not_possible", "Becoming.Tasks.ResettingInterleaved.second_possible"]}
+{"name": "Becoming.Tasks.ResettingInterleaved.first_possible", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Tasks.ResettingInterleaved.not_possible", "uses": ["Becoming.Tasks.ResettingInterleaved.not_two"]}
+{"name": "Becoming.Tasks.ResettingInterleaved.not_two", "uses": ["Becoming.Invariant.reach", "Becoming.Tasks.ResettingInterleaved.stays"]}
+{"name": "Becoming.Tasks.ResettingInterleaved.second_possible", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Tasks.ResettingInterleaved.stays", "uses": []}
+{"name": "Becoming.Tasks.RiseTask.widens", "uses": ["Becoming.Reach.of_step", "Becoming.Reaching.coversLater_of_trace", "Becoming.Rise.rises"]}
+{"name": "Becoming.Tasks.Unmade.absent_stays", "uses": []}
+{"name": "Becoming.Tasks.Unmade.performs", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Tasks.Unmade.possible_not_possibleFrom", "uses": ["Becoming.Invariant.reach", "Becoming.Tasks.Unmade.absent_stays", "Becoming.Tasks.Unmade.performs"]}
+{"name": "Becoming.Tasks.Unregular.composite_not_possible", "uses": ["Becoming.Invariant.reach", "Becoming.Tasks.Unregular.stays"]}
+{"name": "Becoming.Tasks.Unregular.not_regular", "uses": []}
+{"name": "Becoming.Tasks.Unregular.performs_first", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Tasks.Unregular.performs_second", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Tasks.Unregular.stays", "uses": []}
+{"name": "Becoming.Tasks.changes_of_partHeldGrows", "uses": ["Becoming.Run.changes_of_heldGrows"]}
+{"name": "Becoming.Tasks.changes_of_partHeldKeepsWidening", "uses": ["Becoming.Run.changes_of_heldKeepsWidening"]}
+{"name": "Becoming.Tasks.delivers_iff_possible", "uses": []}
+{"name": "Becoming.Tasks.not_partHeldKeepsWidening_of_listed", "uses": ["Becoming.Run.not_heldKeepsWidening_of_listed"]}
+{"name": "Becoming.Tasks.on_every_run", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.trans", "Becoming.Run.step", "Becoming.reach_iff_withinClosure", "Generative.Trace.brecOn"]}
+{"name": "Becoming.Tasks.performs_identity", "uses": ["Becoming.Reach.refl"]}
+{"name": "Becoming.Tasks.possibleWithPartHeld_of_stays", "uses": ["Becoming.Run.possibleHeld_of_stays"]}
+{"name": "Becoming.Tasks.possible_of_no_input", "uses": []}
+{"name": "Becoming.Tasks.reach_fst_of_interleave", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans", "Generative.Trace.brecOn"]}
+{"name": "Becoming.Tasks.reach_interleaveOn_left", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans", "Generative.Trace.brecOn"]}
+{"name": "Becoming.Tasks.reach_interleaveOn_right", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans", "Generative.Trace.brecOn"]}
+{"name": "Becoming.Tasks.reach_interleave_left", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans", "Generative.Trace.brecOn"]}
+{"name": "Becoming.Tasks.reach_interleave_right", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans", "Generative.Trace.brecOn"]}
+{"name": "Becoming.Tasks.reach_snd_of_interleave", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans", "Generative.Trace.brecOn"]}
+{"name": "Becoming.Tasks.sameReading_class", "uses": []}
+{"name": "Becoming.Tasks.tower_delivers_iff_held", "uses": ["Becoming.Reach.of_heldMoves", "Becoming.Tasks.tower_reach_held"]}
+{"name": "Becoming.Tasks.tower_made_held", "uses": ["Becoming.Reach.same_of_heldMoves", "Becoming.RuleTower.sameFrom_class", "Becoming.Tasks.tower_reach_held"]}
+{"name": "Becoming.Tasks.tower_reach_held", "uses": ["Becoming.Reaching.reach_held_of_sequence", "Becoming.RuleTower.SameFrom.mono", "Becoming.RuleTower.step_sameFrom"]}

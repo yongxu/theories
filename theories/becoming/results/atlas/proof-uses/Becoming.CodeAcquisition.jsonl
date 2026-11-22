@@ -1,0 +1,38 @@
+{"name": "Becoming.CodeAcquisition.Expr.brecOn.eq", "uses": []}
+{"name": "Becoming.CodeAcquisition.acquired_every_expression", "uses": ["Becoming.CodeAcquisition.acquired_exact"]}
+{"name": "Becoming.CodeAcquisition.acquired_exact", "uses": []}
+{"name": "Becoming.CodeAcquisition.acquisition_draw", "uses": []}
+{"name": "Becoming.CodeAcquisition.choice_keeps_content", "uses": []}
+{"name": "Becoming.CodeAcquisition.equal_primitives_unresolved", "uses": []}
+{"name": "Becoming.CodeAcquisition.installed_not_executed", "uses": []}
+{"name": "Becoming.CodeAcquisition.installed_without_execution", "uses": ["Becoming.CodeAcquisition.installed_not_executed"]}
+{"name": "Becoming.CodeAcquisition.missing_composite_no_code", "uses": []}
+{"name": "Becoming.CodeAcquisition.nonuniform_agrees_on_probes", "uses": []}
+{"name": "Becoming.CodeAcquisition.nonuniform_fails_transfer", "uses": []}
+{"name": "Becoming.CodeAcquisition.novel_after_step", "uses": ["Becoming.CodeAcquisition.novel_execution"]}
+{"name": "Becoming.CodeAcquisition.novel_execution", "uses": []}
+{"name": "Becoming.CodeAcquisition.novel_not_probe", "uses": []}
+{"name": "Becoming.CodeAcquisition.primitives_no_exact", "uses": ["Becoming.CodeAcquisition.primitives_not_lumped", "Becoming.PartialReadout.ExactWithin.lumped"]}
+{"name": "Becoming.CodeAcquisition.primitives_not_lumped", "uses": []}
+{"name": "Becoming.CodeAcquisition.probe_readings", "uses": []}
+{"name": "Becoming.CodeAcquisition.records_form_interpretation", "uses": []}
+{"name": "Becoming.CodeAcquisition.records_supply_evidence", "uses": []}
+{"name": "Becoming.CodeAcquisition.renaming_keeps_values", "uses": []}
+{"name": "Becoming.CodeAcquisition.reversed_composite_switches", "uses": []}
+{"name": "Becoming.CodeAcquisition.step_code_transfers", "uses": ["Becoming.CodeAcquisition.acquired_every_expression", "Becoming.CodeAcquisition.train_of_le"]}
+{"name": "Becoming.CodeAcquisition.step_evidence", "uses": ["Becoming.CodeAcquisition.records_supply_evidence", "Becoming.CodeAcquisition.step_records"]}
+{"name": "Becoming.CodeAcquisition.step_iff", "uses": []}
+{"name": "Becoming.CodeAcquisition.step_installs", "uses": ["Becoming.CodeAcquisition.training_installs"]}
+{"name": "Becoming.CodeAcquisition.step_records", "uses": ["Becoming.CodeAcquisition.training_records"]}
+{"name": "Becoming.CodeAcquisition.step_rests_when_short", "uses": ["Becoming.CodeAcquisition.training_short"]}
+{"name": "Becoming.CodeAcquisition.step_stock", "uses": ["Becoming.CodeAcquisition.training_stock"]}
+{"name": "Becoming.CodeAcquisition.step_then_execute", "uses": ["Becoming.CodeAcquisition.trained_execution", "Becoming.CodeAcquisition.trained_execution_stock"]}
+{"name": "Becoming.CodeAcquisition.sub_add_of_le", "uses": []}
+{"name": "Becoming.CodeAcquisition.train_of_le", "uses": ["Becoming.CodeAcquisition.acquisition_draw"]}
+{"name": "Becoming.CodeAcquisition.trained_execution", "uses": ["Becoming.CodeAcquisition.acquired_exact", "Becoming.CodeAcquisition.train_of_le", "Becoming.Naturals.le_of_add_le_right", "Becoming.Naturals.le_sub_of_add_le"]}
+{"name": "Becoming.CodeAcquisition.trained_execution_stock", "uses": ["Becoming.CodeAcquisition.sub_add_of_le", "Becoming.Naturals.le_of_add_le_right", "Becoming.Naturals.le_sub_of_add_le"]}
+{"name": "Becoming.CodeAcquisition.training_installs", "uses": ["Becoming.CodeAcquisition.acquired_exact", "Becoming.CodeAcquisition.train_of_le"]}
+{"name": "Becoming.CodeAcquisition.training_records", "uses": ["Becoming.CodeAcquisition.train_of_le"]}
+{"name": "Becoming.CodeAcquisition.training_short", "uses": ["Becoming.CodeAcquisition.acquisition_draw"]}
+{"name": "Becoming.CodeAcquisition.training_stock", "uses": ["Becoming.CodeAcquisition.sub_add_of_le", "Becoming.CodeAcquisition.train_of_le"]}
+{"name": "Becoming.CodeAcquisition.wrong_order_fails_transfer", "uses": []}

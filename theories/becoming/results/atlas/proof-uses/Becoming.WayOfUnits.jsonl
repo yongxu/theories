@@ -1,0 +1,68 @@
+{"name": "Becoming.WayOfUnits.Against.turns_and_ends", "uses": ["Becoming.Law.stepWhile_none_iff", "Becoming.Law.stepWhile_steps_iff", "Becoming.Law.stepWhile_unending_iff"]}
+{"name": "Becoming.WayOfUnits.GivenFromNothing.greater_need_fails", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.WayOfUnits.unending_of_fixed"]}
+{"name": "Becoming.WayOfUnits.GivenFromNothing.more_use_fails", "uses": ["Becoming.WayOfUnits.GivenFromNothing.greater_need_fails", "Becoming.WayOfUnits.unending_of_fixed"]}
+{"name": "Becoming.WayOfUnits.GivenFromNothing.regime", "uses": ["Becoming.RegimeMargin.keeps_of_below", "Becoming.RegimeMargin.meets_of_below", "Becoming.RegimeMargin.short_of_below"]}
+{"name": "Becoming.WayOfUnits.With.goes_on", "uses": ["Becoming.RegimeMargin.keeps_of_below", "Becoming.RegimeMargin.meets_of_below", "Becoming.RegimeMargin.short_of_below", "Becoming.WayOfUnits.two_units_iff"]}
+{"name": "Becoming.WayOfUnits.With.goes_on_holds", "uses": ["Becoming.Law.orbit_add", "Becoming.RegimeMargin.keeps_of_below", "Becoming.RegimeMargin.meets_of_below", "Becoming.RegimeMargin.short_of_below", "Becoming.WayOfUnits.With.levels", "Becoming.WayOfUnits.stays", "Becoming.WayOfUnits.unending_iff_holds"]}
+{"name": "Becoming.WayOfUnits.With.levels", "uses": []}
+{"name": "Becoming.WayOfUnits.after_twoWay", "uses": ["Becoming.WayOfUnits.goes_of_le"]}
+{"name": "Becoming.WayOfUnits.after_unit", "uses": ["Becoming.WayOfUnits.cond_single"]}
+{"name": "Becoming.WayOfUnits.allKids_unit", "uses": []}
+{"name": "Becoming.WayOfUnits.all_iff_while", "uses": []}
+{"name": "Becoming.WayOfUnits.alone_holds", "uses": ["Becoming.RegimeMargin.holds"]}
+{"name": "Becoming.WayOfUnits.along_unit", "uses": ["Becoming.WayOfUnits.course_unit", "Becoming.WayOfUnits.regime_unit"]}
+{"name": "Becoming.WayOfUnits.asItWas_first", "uses": []}
+{"name": "Becoming.WayOfUnits.carrier_above", "uses": ["Becoming.WayOfUnits.carrier_falls", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.WayOfUnits.carrier_falls", "uses": ["Becoming.WayOfUnits.step_falls", "Becoming.WayOfUnits.use_at_least"]}
+{"name": "Becoming.WayOfUnits.carrier_level_zero", "uses": ["Becoming.WayOfUnits.firstUse_zero"]}
+{"name": "Becoming.WayOfUnits.carrier_within", "uses": ["Becoming.WayOfUnits.keeps_use"]}
+{"name": "Becoming.WayOfUnits.cond_single", "uses": []}
+{"name": "Becoming.WayOfUnits.course_fixed", "uses": ["Becoming.LineOnAStock.course_fixed", "Becoming.WayOfUnits.course_unit", "Becoming.WayOfUnits.step_unit"]}
+{"name": "Becoming.WayOfUnits.course_twoWay", "uses": ["Becoming.WayOfUnits.after_twoWay", "Becoming.WayOfUnits.taken_twoWay"]}
+{"name": "Becoming.WayOfUnits.course_unit", "uses": ["Becoming.WayOfUnits.orbit_congr", "Becoming.WayOfUnits.step_unit"]}
+{"name": "Becoming.WayOfUnits.down_unit", "uses": ["Becoming.CrossSituational.mem_singleton"]}
+{"name": "Becoming.WayOfUnits.ends_while_net_goes", "uses": ["Becoming.WayOfUnits.mem_after_iff"]}
+{"name": "Becoming.WayOfUnits.firstUse_zero", "uses": []}
+{"name": "Becoming.WayOfUnits.first_kept", "uses": []}
+{"name": "Becoming.WayOfUnits.first_outside", "uses": []}
+{"name": "Becoming.WayOfUnits.first_turns", "uses": []}
+{"name": "Becoming.WayOfUnits.first_uses", "uses": []}
+{"name": "Becoming.WayOfUnits.first_uses₁", "uses": ["Becoming.WayOfUnits.orbit_id_true"]}
+{"name": "Becoming.WayOfUnits.fixed_while", "uses": ["Becoming.LineOnAStock.course_generation", "Becoming.WayOfUnits.course_unit", "Becoming.WayOfUnits.generation_unit", "Becoming.WayOfUnits.taken_unit"]}
+{"name": "Becoming.WayOfUnits.generation_unit", "uses": ["Becoming.WayOfUnits.allKids_unit"]}
+{"name": "Becoming.WayOfUnits.goes_iff_alone", "uses": ["Becoming.WayOfUnits.all_iff_while", "Becoming.WayOfUnits.fixed_while", "Becoming.WayOfUnits.goes_twoWay"]}
+{"name": "Becoming.WayOfUnits.goes_iff_carrier", "uses": ["Becoming.WayOfUnits.all_iff_while", "Becoming.WayOfUnits.course_twoWay", "Becoming.WayOfUnits.goes_twoWay"]}
+{"name": "Becoming.WayOfUnits.goes_of_le", "uses": []}
+{"name": "Becoming.WayOfUnits.goes_twoWay", "uses": []}
+{"name": "Becoming.WayOfUnits.greater_need", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.WayOfUnits.goes_iff_carrier", "Becoming.WayOfUnits.greater_need_along"]}
+{"name": "Becoming.WayOfUnits.greater_need_along", "uses": ["Becoming.WayOfUnits.alone_holds", "Becoming.WayOfUnits.carrier_above", "Becoming.WayOfUnits.carrier_within", "Becoming.WayOfUnits.first_turns", "Becoming.WayOfUnits.step_above_need"]}
+{"name": "Becoming.WayOfUnits.holds_unit", "uses": ["Becoming.WayOfUnits.taken_unit"]}
+{"name": "Becoming.WayOfUnits.keeps_use", "uses": ["Becoming.Naturals.sub_sub"]}
+{"name": "Becoming.WayOfUnits.le_of_goes", "uses": []}
+{"name": "Becoming.WayOfUnits.mem_after_iff", "uses": ["Becoming.GrammarLaws.mem_keep", "Becoming.WayOfUnits.goes_of_le", "Becoming.WayOfUnits.le_of_goes"]}
+{"name": "Becoming.WayOfUnits.more_use_along", "uses": ["Becoming.WayOfUnits.alone_holds", "Becoming.WayOfUnits.carrier_above", "Becoming.WayOfUnits.carrier_within", "Becoming.WayOfUnits.step_same_sum", "Becoming.WayOfUnits.there_or_ended"]}
+{"name": "Becoming.WayOfUnits.more_use_on_first", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.Naturals.le_of_add_le_add_left", "Becoming.WayOfUnits.goes_iff_carrier", "Becoming.WayOfUnits.more_use_along"]}
+{"name": "Becoming.WayOfUnits.needing_unit", "uses": ["Becoming.WayOfUnits.generation_unit"]}
+{"name": "Becoming.WayOfUnits.net_unit", "uses": ["Becoming.WayOfUnits.step_unit"]}
+{"name": "Becoming.WayOfUnits.orbit_congr", "uses": []}
+{"name": "Becoming.WayOfUnits.orbit_id_true", "uses": []}
+{"name": "Becoming.WayOfUnits.regime_unit", "uses": ["Becoming.WayOfUnits.taken_unit"]}
+{"name": "Becoming.WayOfUnits.stays", "uses": ["Becoming.RegimeMargin.holds", "Becoming.WayOfUnits.fixed_while"]}
+{"name": "Becoming.WayOfUnits.step_above_need", "uses": []}
+{"name": "Becoming.WayOfUnits.step_falls", "uses": ["Becoming.LineOnAStock.step_lowers"]}
+{"name": "Becoming.WayOfUnits.step_same_sum", "uses": []}
+{"name": "Becoming.WayOfUnits.step_unit", "uses": ["Becoming.WayOfUnits.after_unit", "Becoming.WayOfUnits.taken_unit"]}
+{"name": "Becoming.WayOfUnits.taken_twoWay", "uses": []}
+{"name": "Becoming.WayOfUnits.taken_unit", "uses": []}
+{"name": "Becoming.WayOfUnits.takes_nothing_ends", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.RegimeMargin.ends_below", "Becoming.WayOfUnits.goes_iff_alone", "Becoming.WayOfUnits.takes_nothing_iff_alone"]}
+{"name": "Becoming.WayOfUnits.takes_nothing_iff_alone", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.WayOfUnits.carrier_level_zero", "Becoming.WayOfUnits.goes_iff_alone", "Becoming.WayOfUnits.goes_iff_carrier"]}
+{"name": "Becoming.WayOfUnits.there_or_ended", "uses": []}
+{"name": "Becoming.WayOfUnits.two_units_iff", "uses": ["Becoming.TurningInTime.turns_in_time_iff", "Becoming.WayOfUnits.asItWas_first", "Becoming.WayOfUnits.first_kept", "Becoming.WayOfUnits.first_outside", "Becoming.WayOfUnits.first_turns", "Becoming.WayOfUnits.first_uses", "Becoming.WayOfUnits.first_uses₁", "Becoming.WayOfUnits.unending_iff_carrier"]}
+{"name": "Becoming.WayOfUnits.unending_above", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.WayOfUnits.carrier_above", "Becoming.WayOfUnits.course_twoWay", "Becoming.WayOfUnits.goes_iff_carrier"]}
+{"name": "Becoming.WayOfUnits.unending_iff_carrier", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.WayOfUnits.goes_iff_carrier"]}
+{"name": "Becoming.WayOfUnits.unending_iff_holds", "uses": ["Becoming.LineOnAStock.unending_iff_holds", "Becoming.WayOfUnits.along_unit", "Becoming.WayOfUnits.course_unit", "Becoming.WayOfUnits.down_unit", "Becoming.WayOfUnits.holds_unit", "Becoming.WayOfUnits.needing_unit", "Becoming.WayOfUnits.unending_unit"]}
+{"name": "Becoming.WayOfUnits.unending_needs_nothing", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.WayOfUnits.goes_iff_carrier"]}
+{"name": "Becoming.WayOfUnits.unending_of_fixed", "uses": ["Becoming.Law.orbit_add", "Becoming.Law.stepWhile_unending_iff", "Becoming.WayOfUnits.course_fixed", "Becoming.le_dest"]}
+{"name": "Becoming.WayOfUnits.unending_taken_below", "uses": ["Becoming.LineOnAStock.unending_taken_below", "Becoming.WayOfUnits.course_unit", "Becoming.WayOfUnits.needing_unit", "Becoming.WayOfUnits.taken_unit", "Becoming.WayOfUnits.unending_unit"]}
+{"name": "Becoming.WayOfUnits.unending_unit", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.WayOfUnits.course_unit"]}
+{"name": "Becoming.WayOfUnits.use_at_least", "uses": []}

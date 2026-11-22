@@ -1,0 +1,40 @@
+{"name": "Becoming.HistorySums.Leads.brecOn", "uses": []}
+{"name": "Becoming.HistorySums.Leads.trace", "uses": ["Becoming.HistorySums.Leads.brecOn"]}
+{"name": "Becoming.HistorySums.along_trace", "uses": ["Becoming.Weights.Hom.map_mul", "Becoming.bool_of_and_true"]}
+{"name": "Becoming.HistorySums.cond_nonzero", "uses": []}
+{"name": "Becoming.HistorySums.exactly_le_transfer", "uses": ["Becoming.HistorySums.le_sum_of_mem", "Becoming.HistorySums.mem_steps", "Becoming.Weights.exactly_above", "Becoming.Weights.transfer_eq_sum_exactly"]}
+{"name": "Becoming.HistorySums.exactly_responses_trace", "uses": ["Becoming.HistorySums.along_trace", "Becoming.HistorySums.cond_nonzero", "Becoming.Weights.Hom.sum", "Becoming.Weights.exactly_eq_courses", "Becoming.possibility_sum_true"]}
+{"name": "Becoming.HistorySums.exactly_trace", "uses": ["Becoming.HistorySums.exactly_le_transfer", "Becoming.RouteTraces.nonzero_of_le", "Becoming.counting_transfer_iff"]}
+{"name": "Becoming.HistorySums.firstListed_not_comm", "uses": []}
+{"name": "Becoming.HistorySums.grouping_needs_commuting", "uses": []}
+{"name": "Becoming.HistorySums.labelled_trace_iff", "uses": ["Becoming.HistorySums.mem_labelled", "Becoming.Weights.transfer_labelled", "Becoming.counting_transfer_iff"]}
+{"name": "Becoming.HistorySums.le_sum_of_mem", "uses": []}
+{"name": "Becoming.HistorySums.mem_labelled", "uses": ["Becoming.ListTests.mem_map_of", "Becoming.mem_appended_left", "Becoming.mem_appended_right"]}
+{"name": "Becoming.HistorySums.mem_steps", "uses": []}
+{"name": "Becoming.HistorySums.possibility_exactly_trace", "uses": ["Becoming.HistorySums.exactly_trace", "Becoming.Weights.Hom.exactly"]}
+{"name": "Becoming.HistorySums.possibility_sum_false", "uses": ["Becoming.possibility_sum_of_mem"]}
+{"name": "Becoming.HistorySums.steps_shift", "uses": []}
+{"name": "Becoming.HistorySums.trace_split_iff", "uses": ["Becoming.Weights.transfer_split", "Becoming.possibility_transfer_iff"]}
+{"name": "Becoming.Routes.SelfLoop.exactly_eq", "uses": ["Becoming.Loops.binom_zero", "Becoming.Loops.pow_step", "Becoming.Naturals.add_congr", "Becoming.add_mul_split"]}
+{"name": "Becoming.Weights.Hom.exactly", "uses": ["Becoming.Weights.Hom.map_add", "Becoming.Weights.Hom.map_mul", "Becoming.Weights.Hom.map_zero", "Becoming.Weights.Hom.sum", "Becoming.Weights.sum_congr"]}
+{"name": "Becoming.Weights.add_add_add_comm", "uses": ["Becoming.Weights.add_assoc"]}
+{"name": "Becoming.Weights.along_append", "uses": []}
+{"name": "Becoming.Weights.cond_mul", "uses": ["Becoming.Weights.mul_zero"]}
+{"name": "Becoming.Weights.exactly_above", "uses": ["Becoming.Weights.mul_zero", "Becoming.Weights.sum_eq_zero", "Becoming.Weights.zero_add"]}
+{"name": "Becoming.Weights.exactly_eq_courses", "uses": ["Becoming.Weights.add_zero", "Becoming.Weights.cond_mul", "Becoming.Weights.mul_sum", "Becoming.Weights.sum_add", "Becoming.Weights.sum_congr", "Becoming.Weights.sum_courses_labelled", "Becoming.Weights.sum_eq_zero", "Becoming.Weights.sum_openSteps", "Becoming.Weights.zero_add"]}
+{"name": "Becoming.Weights.regroup", "uses": ["Becoming.Weights.add_assoc", "Becoming.Weights.left_distrib", "Becoming.Weights.mul_sum", "Becoming.Weights.sum_add"]}
+{"name": "Becoming.Weights.sum_add", "uses": ["Becoming.Weights.add_add_add_comm", "Becoming.Weights.zero_add"]}
+{"name": "Becoming.Weights.sum_comm", "uses": ["Becoming.Weights.sum_add", "Becoming.Weights.sum_eq_zero"]}
+{"name": "Becoming.Weights.sum_courses_labelled", "uses": ["Becoming.Weights.sum_append", "Becoming.Weights.sum_congr", "Becoming.Weights.sum_joinMap", "Becoming.Weights.sum_map", "Becoming.Weights.sum_openSteps"]}
+{"name": "Becoming.Weights.sum_eq_zero", "uses": ["Becoming.Weights.zero_add"]}
+{"name": "Becoming.Weights.sum_openSteps", "uses": ["Becoming.Weights.sum_congr", "Becoming.Weights.sum_joinMap", "Becoming.Weights.sum_map"]}
+{"name": "Becoming.Weights.sum_steps_succ", "uses": ["Becoming.HistorySums.steps_shift", "Becoming.Weights.sum_map"]}
+{"name": "Becoming.Weights.transfer_between", "uses": ["Becoming.FinerTraces.of_mem_openSteps", "Becoming.Weights.mul_zero", "Becoming.Weights.sum_congr", "Becoming.Weights.transfer_zero_of_impossible", "Becoming.Weights.zero_mul"]}
+{"name": "Becoming.Weights.transfer_between_traces", "uses": ["Becoming.HistorySums.Leads.trace", "Becoming.Weights.transfer_between", "Becoming.possibility_transfer_iff"]}
+{"name": "Becoming.Weights.transfer_eq_sum_exactly", "uses": ["Becoming.Weights.within_eq_sum_exactly", "Becoming.Weights.within_exact"]}
+{"name": "Becoming.Weights.transfer_labelled", "uses": ["Becoming.Weights.right_distrib", "Becoming.Weights.sum_add", "Becoming.Weights.sum_append", "Becoming.Weights.sum_congr", "Becoming.Weights.sum_map", "Becoming.Weights.sum_openSteps"]}
+{"name": "Becoming.Weights.transfer_split", "uses": ["Becoming.Weights.sum_congr"]}
+{"name": "Becoming.Weights.transfer_zero_of_impossible", "uses": ["Becoming.Hexagram.and_false_of_true", "Becoming.HistorySums.possibility_sum_false", "Becoming.Weights.mul_zero", "Becoming.Weights.sum_eq_zero", "Becoming.Weights.zero_mul"]}
+{"name": "Becoming.Weights.transfer_zero_of_no_trace", "uses": ["Becoming.Weights.transfer_zero_of_impossible", "Becoming.possibility_transfer_iff"]}
+{"name": "Becoming.Weights.within_eq_sum_exactly", "uses": ["Becoming.HistorySums.steps_shift", "Becoming.Weights.add_zero", "Becoming.Weights.regroup", "Becoming.Weights.sum_add", "Becoming.Weights.sum_comm", "Becoming.Weights.sum_congr", "Becoming.Weights.sum_eq_zero", "Becoming.Weights.sum_map", "Becoming.Weights.sum_steps_succ", "Becoming.Weights.within_zero_eq_exactly"]}
+{"name": "Becoming.Weights.within_zero_eq_exactly", "uses": ["Becoming.Weights.sum_congr"]}

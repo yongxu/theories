@@ -1,0 +1,74 @@
+{"name": "Becoming.Branching.Lossless.cancel", "uses": ["Becoming.Branching.lossless_iff_fixedBefore", "Becoming.Run.step", "Becoming.«定前则线可退»"]}
+{"name": "Becoming.Branching.Lossless.comes_back", "uses": ["Becoming.Branching.lossless_iff_fixedBefore", "Becoming.Run.step", "Becoming.«定前则线不并»", "Becoming.«线有限不并则回»"]}
+{"name": "Becoming.Branching.Lossless.no_rise", "uses": ["Becoming.Branching.Lossless.recurs", "Becoming.never_falls_over"]}
+{"name": "Becoming.Branching.Lossless.recurs", "uses": ["Becoming.Branching.Lossless.comes_back"]}
+{"name": "Becoming.Branching.Lossless.returns", "uses": ["Becoming.Branching.lossless_iff_fixedBefore", "Becoming.Branching.returns_iff_reaches", "Becoming.Run.step", "Becoming.«线有限定前则返»"]}
+{"name": "Becoming.Branching.Lossless.returns_of_total", "uses": ["Becoming.Branching.lossless_iff_fixedBefore", "Becoming.Branching.returns_iff_reaches", "Becoming.«有限遍后定前则皆返»"]}
+{"name": "Becoming.Branching.Lossless.unlisted", "uses": ["Becoming.Branching.Lossless.returns"]}
+{"name": "Becoming.Branching.Merges.not_lossless", "uses": []}
+{"name": "Becoming.Branching.Reachable.earlier", "uses": []}
+{"name": "Becoming.Branching.Returns.pred", "uses": ["Becoming.Branching.trace_last", "Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.Branching.Returns.reachable", "uses": ["Becoming.Branching.Returns.reachable_from"]}
+{"name": "Becoming.Branching.Returns.reachable_from", "uses": ["Becoming.Branching.Returns.pred"]}
+{"name": "Becoming.Branching.law_reach_iff", "uses": ["Becoming.Branching.law_trace_iff", "Becoming.Branching.units_length"]}
+{"name": "Becoming.Branching.law_trace_iff", "uses": ["Becoming.Branching.law_trace_of", "Becoming.Law.orbit_shift"]}
+{"name": "Becoming.Branching.law_trace_of", "uses": ["Becoming.Law.orbit_shift"]}
+{"name": "Becoming.Branching.lossless_iff_fixedBefore", "uses": []}
+{"name": "Becoming.Branching.lost_stays", "uses": ["Becoming.Branching.Reachable.earlier"]}
+{"name": "Becoming.Branching.returns_iff_reaches", "uses": ["Becoming.reach_iff_withinClosure", "Becoming.«及当且仅当一步而所闭»"]}
+{"name": "Becoming.Branching.rise_not_lossless", "uses": ["Becoming.Branching.Lossless.no_rise"]}
+{"name": "Becoming.Branching.trace_last", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans"]}
+{"name": "Becoming.Branching.units_length", "uses": []}
+{"name": "Becoming.Law.Lossless.cancel", "uses": ["Becoming.Law.steps_orbit", "Becoming.«迭之定前»"]}
+{"name": "Becoming.Law.Lossless.no_rise", "uses": ["Becoming.Branching.Lossless.no_rise"]}
+{"name": "Becoming.Law.Lossless.returns", "uses": ["Becoming.Law.lossless_iff_fixedBefore", "Becoming.Law.next_total", "Becoming.Law.returns_iff_reaches", "Becoming.«有限遍后定前则皆返»"]}
+{"name": "Becoming.Law.Lossless.unlisted", "uses": ["Becoming.Branching.Lossless.unlisted"]}
+{"name": "Becoming.Law.Merges.loses", "uses": ["Becoming.Branching.Merges.not_lossless", "Becoming.Law.lossless_of_reachable"]}
+{"name": "Becoming.Law.Returns.undo", "uses": ["Becoming.Law.orbit_shift", "Becoming.Law.returns_iff"]}
+{"name": "Becoming.Law.keeps_iff", "uses": ["Becoming.Law.reachable_iff"]}
+{"name": "Becoming.Law.lossless_iff", "uses": []}
+{"name": "Becoming.Law.lossless_iff_fixedBefore", "uses": ["Becoming.Law.lossless_iff"]}
+{"name": "Becoming.Law.lossless_iff_returns", "uses": ["Becoming.Law.lossless_iff_fixedBefore", "Becoming.Law.next_fixed", "Becoming.Law.next_total", "Becoming.Law.returns_iff_reaches", "Becoming.«有限遍后定后则定前当且仅当皆返»"]}
+{"name": "Becoming.Law.lossless_of_reachable", "uses": ["Becoming.Law.lossless_of_returns", "Becoming.Law.returns_of_reachable"]}
+{"name": "Becoming.Law.lossless_of_returns", "uses": ["Becoming.Law.lossless_iff_fixedBefore", "Becoming.Law.next_fixed", "Becoming.Law.returns_iff_reaches", "Becoming.«皆返定后则定前»"]}
+{"name": "Becoming.Law.lost_stays", "uses": ["Becoming.Branching.lost_stays"]}
+{"name": "Becoming.Law.merged_stays", "uses": ["Becoming.Law.orbit_shift"]}
+{"name": "Becoming.Law.merges_iff", "uses": []}
+{"name": "Becoming.Law.next_fixed", "uses": []}
+{"name": "Becoming.Law.next_total", "uses": []}
+{"name": "Becoming.Law.orbit_add", "uses": []}
+{"name": "Becoming.Law.orbit_mul", "uses": ["Becoming.Law.step_fixed", "Becoming.Law.steps_orbit", "Becoming.«迭之周»", "Becoming.«迭之定»"]}
+{"name": "Becoming.Law.orbit_shift", "uses": ["Becoming.Law.orbit_add"]}
+{"name": "Becoming.Law.past_length", "uses": []}
+{"name": "Becoming.Law.pred_open", "uses": ["Becoming.Law.keeps_iff", "Becoming.Law.merges_iff", "Becoming.Law.pred_orbit"]}
+{"name": "Becoming.Law.pred_orbit", "uses": []}
+{"name": "Becoming.Law.present_forgets", "uses": ["Becoming.Law.present_orbit", "Becoming.Law.withHistory_new", "Becoming.revisits_from"]}
+{"name": "Becoming.Law.present_orbit", "uses": []}
+{"name": "Becoming.Law.reachable_iff", "uses": ["Becoming.Branching.law_trace_iff", "Becoming.Branching.units_length"]}
+{"name": "Becoming.Law.reaches_iff_orbit", "uses": ["Becoming.Law.orbit_shift", "Becoming.Law.reaches_of_orbit"]}
+{"name": "Becoming.Law.reaches_of_orbit", "uses": ["Becoming.Law.orbit_shift"]}
+{"name": "Becoming.Law.return_keeps_history", "uses": ["Becoming.Law.present_orbit", "Becoming.Law.withHistory_new"]}
+{"name": "Becoming.Law.returns_iff", "uses": ["Becoming.Branching.law_reach_iff", "Becoming.Law.orbit_shift"]}
+{"name": "Becoming.Law.returns_iff_keeps", "uses": ["Becoming.Branching.Returns.reachable", "Becoming.Law.returns_of_reachable"]}
+{"name": "Becoming.Law.returns_iff_reaches", "uses": ["Becoming.Law.reaches_iff_orbit", "Becoming.Law.returns_iff"]}
+{"name": "Becoming.Law.returns_of_reachable", "uses": ["Becoming.Law.next_fixed", "Becoming.Law.reachable_iff", "Becoming.Law.returns_iff_reaches", "Becoming.«定后于线有限则末返»", "Becoming.«定后则定后于»"]}
+{"name": "Becoming.Law.rise_not_lossless", "uses": ["Becoming.Branching.rise_not_lossless"]}
+{"name": "Becoming.Law.run_state", "uses": []}
+{"name": "Becoming.Law.step_fixed", "uses": []}
+{"name": "Becoming.Law.steps_orbit", "uses": ["Becoming.Law.orbit_shift"]}
+{"name": "Becoming.Law.succ_open", "uses": ["Becoming.Law.lossless_iff", "Becoming.Law.reachable_iff", "Becoming.Law.returns_iff", "Becoming.Law.succ_orbit"]}
+{"name": "Becoming.Law.succ_orbit", "uses": []}
+{"name": "Becoming.Law.withHistory_loses_beginning", "uses": ["Becoming.Law.past_length", "Becoming.Law.reachable_iff"]}
+{"name": "Becoming.Law.withHistory_lossless", "uses": ["Becoming.Law.lossless_iff"]}
+{"name": "Becoming.Law.withHistory_never_returns", "uses": ["Becoming.Law.returns_iff", "Becoming.Law.withHistory_new"]}
+{"name": "Becoming.Law.withHistory_new", "uses": ["Becoming.Law.past_length"]}
+{"name": "Becoming.Law.withHistory_unlisted", "uses": ["Becoming.Law.withHistory_new", "Becoming.revisits_of_held"]}
+{"name": "Becoming.Marks.change_not_recurring", "uses": ["Becoming.Marks.mono", "Becoming.le_dest", "Becoming.le_sumOver"]}
+{"name": "Becoming.Marks.mono", "uses": ["Becoming.never_falls_over"]}
+{"name": "Becoming.le_sumOver", "uses": []}
+{"name": "Becoming.never_falls_over", "uses": []}
+{"name": "Becoming.not_marks", "uses": ["Becoming.Marks.change_not_recurring"]}
+{"name": "Becoming.revisits_from", "uses": ["Becoming.revisits_of_held"]}
+{"name": "Becoming.revisits_of_held", "uses": ["Becoming.revisits_within"]}
+{"name": "Becoming.unheld_of_new", "uses": ["Becoming.revisits_within"]}
+{"name": "Becoming.unlisted_of_new", "uses": ["Becoming.unheld_of_new"]}

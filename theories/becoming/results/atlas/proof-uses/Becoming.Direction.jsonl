@@ -1,0 +1,14 @@
+{"name": "Becoming.Clearing.direction", "uses": ["Becoming.Clearing.pool_closes_gap", "Becoming.Clearing.spared_widens", "Becoming.Direction.narrowed_not_chosen"]}
+{"name": "Becoming.Clearing.spared_widens", "uses": ["Becoming.Clearing.dweller_spared", "Becoming.Clearing.unsupported_with"]}
+{"name": "Becoming.Direction.chosen_keeps_basic", "uses": ["Becoming.FrontierFrames.Priority.kept_unrefuted"]}
+{"name": "Becoming.Direction.exchange_direction", "uses": ["Becoming.Direction.exchange_widening_selected_by_pool", "Becoming.Direction.narrowed_not_chosen"]}
+{"name": "Becoming.Direction.exchange_widening_selected_by_pool", "uses": ["Becoming.Direction.widening_selected_by_pool", "Becoming.ExchangeLaw.course_balances_iff", "Becoming.ExchangeLaw.withAct_follows", "Becoming.ExchangeLaw.withAct_give_of_part", "Becoming.ExchangeLaw.withAct_nonanticipating", "Becoming.ExchangeLaw.withAct_take_of_part", "Becoming.WithinClosureOf.of_member"]}
+{"name": "Becoming.Direction.extension_iff_widens", "uses": ["Becoming.Web.paths_extension_iff_widens"]}
+{"name": "Becoming.Direction.grounded_widening_selected", "uses": ["Becoming.Direction.extension_iff_widens", "Becoming.Direction.widening_selected_by_pool", "Becoming.Web.paths_one_object", "Becoming.Web.unrestricted_iff_grounds_beyond"]}
+{"name": "Becoming.Direction.kept_required", "uses": ["Becoming.FrontierFrames.Priority.kept_required"]}
+{"name": "Becoming.Direction.narrowed_not_chosen", "uses": ["Becoming.Direction.extension_iff_widens", "Becoming.Lexical.BasicPriority.iff", "Becoming.Lexical.Frame.above_of_extension", "Becoming.Requirement.Frontier.excluded"]}
+{"name": "Becoming.Direction.options_iff", "uses": []}
+{"name": "Becoming.Direction.widening_not_not_better", "uses": ["Becoming.Direction.extension_iff_widens", "Becoming.FrontierFrames.Priority.not_not_of_extension"]}
+{"name": "Becoming.Direction.widening_selected_by_pool", "uses": ["Becoming.Flow.act_selected_by_pool"]}
+{"name": "Becoming.Requirement.Handover.direction", "uses": ["Becoming.FrontierFrames.basicPriority_iff_priority", "Becoming.Lexical.BasicPriority.iff", "Becoming.Requirement.Frontier.excluded", "Becoming.Requirement.Handover.expansion_has_real_gain", "Becoming.Requirement.Handover.transfer_above_expansion", "Becoming.Requirement.Handover.transfer_above_keep"]}
+{"name": "Becoming.Web.unrestricted_iff_grounds_beyond", "uses": ["Becoming.Valuation.premises_of_unrestricted", "Becoming.Valuation.significant_iff"]}

@@ -1,0 +1,6 @@
+{"name": "Becoming.RouteTraces.possibility_within_trace", "uses": ["Becoming.RouteTraces.within_trace", "Becoming.Weights.Hom.within"]}
+{"name": "Becoming.RouteTraces.scheduleWorld_le_always", "uses": ["Becoming.FormedLoops.scheduleWorld_course", "Becoming.Frequency.count_le", "Becoming.Loops.pow_le_pow_exp"]}
+{"name": "Becoming.RouteTraces.selfLoopWorld_full_order", "uses": ["Becoming.FormedLoops.scheduleWorld_course", "Becoming.Frequency.count_always", "Becoming.Routes.SelfLoop.within_exact"]}
+{"name": "Becoming.RouteTraces.selfLoopWorld_geomBound", "uses": ["Becoming.FormedLoops.scheduleWorld_course", "Becoming.Frequency.count_always", "Becoming.Loops.geomBound_eq"]}
+{"name": "Becoming.RouteTraces.selfLoopWorld_mono", "uses": ["Becoming.Loops.geomBound_mono", "Becoming.RouteTraces.selfLoopWorld_geomBound"]}
+{"name": "Becoming.RouteTraces.within_trace", "uses": ["Becoming.RouteTraces.nonzero_of_le", "Becoming.counting_transfer_iff", "Becoming.counting_within_le_transfer"]}

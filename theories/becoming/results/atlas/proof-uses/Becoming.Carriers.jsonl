@@ -1,0 +1,46 @@
+{"name": "Becoming.Carriers.continuing_single_event_is_one_recurrence", "uses": []}
+{"name": "Becoming.Carriers.event_without_state_distinction", "uses": []}
+{"name": "Becoming.Carriers.feasible_of_step_total", "uses": []}
+{"name": "Becoming.Carriers.identity_bool_bijection", "uses": []}
+{"name": "Becoming.Carriers.idle_cannot_continue", "uses": []}
+{"name": "Becoming.Carriers.idle_differs_from_recurrence", "uses": []}
+{"name": "Becoming.Carriers.idle_no_event", "uses": []}
+{"name": "Becoming.Carriers.injective_bool_map_commutes_not", "uses": ["Becoming.Carriers.injective_bool_map_forms"]}
+{"name": "Becoming.Carriers.injective_bool_map_forms", "uses": []}
+{"name": "Becoming.Carriers.negation_bool_bijection", "uses": []}
+{"name": "Becoming.Carriers.no_state_map_identifies_static_toggle", "uses": ["Becoming.Carriers.static_event", "Becoming.Carriers.toggle_always_changes"]}
+{"name": "Becoming.Carriers.same_carrier_incompatible_laws", "uses": []}
+{"name": "Becoming.Carriers.states_relationally_identical", "uses": []}
+{"name": "Becoming.Carriers.static_determined", "uses": []}
+{"name": "Becoming.Carriers.static_event", "uses": []}
+{"name": "Becoming.Carriers.static_history_never_changes", "uses": []}
+{"name": "Becoming.Carriers.static_is_one_recurrence", "uses": ["Becoming.Carriers.continuing_single_event_is_one_recurrence"]}
+{"name": "Becoming.Carriers.static_ne_toggle", "uses": ["Becoming.Carriers.static_event", "Becoming.Carriers.toggle_always_changes"]}
+{"name": "Becoming.Carriers.static_never_changes", "uses": []}
+{"name": "Becoming.Carriers.static_renaming_invariant", "uses": []}
+{"name": "Becoming.Carriers.static_symmetric", "uses": []}
+{"name": "Becoming.Carriers.static_symmetry_candidate", "uses": ["Becoming.Carriers.static_determined", "Becoming.Carriers.static_renaming_invariant", "Becoming.Carriers.static_symmetric", "Becoming.Carriers.static_total", "Becoming.Carriers.static_unique_predecessor"]}
+{"name": "Becoming.Carriers.static_toggle_not_endpoint_trace_equivalent", "uses": ["Becoming.Carriers.static_toggle_singleton_endpoints_differ"]}
+{"name": "Becoming.Carriers.static_toggle_not_same_steps", "uses": ["Becoming.Carriers.static_toggle_not_endpoint_trace_equivalent", "Becoming.same_steps_iff_traces"]}
+{"name": "Becoming.Carriers.static_toggle_one_dynamics", "uses": []}
+{"name": "Becoming.Carriers.static_toggle_same_feasible", "uses": ["Becoming.Carriers.static_total", "Becoming.Carriers.toggle_total", "Becoming.Carriers.total_processes_same_feasible"]}
+{"name": "Becoming.Carriers.static_toggle_same_histories", "uses": ["Becoming.Bisimulation.converse", "Becoming.Bisimulation.trace", "Becoming.Carriers.static_toggle_one_dynamics"]}
+{"name": "Becoming.Carriers.static_toggle_singleton_endpoints_differ", "uses": ["Becoming.Carriers.static_event", "Becoming.Carriers.toggle_always_changes", "Generative.trace_singleton_iff"]}
+{"name": "Becoming.Carriers.static_total", "uses": []}
+{"name": "Becoming.Carriers.static_unique_predecessor", "uses": ["Becoming.Carriers.static_determined", "Becoming.Carriers.static_symmetric", "Becoming.Carriers.static_total", "Becoming.Carriers.unique_predecessor_of_total_determined_symmetric"]}
+{"name": "Becoming.Carriers.symmetric_dynamics_remain_underdetermined", "uses": ["Becoming.Carriers.static_event", "Becoming.Carriers.static_ne_toggle", "Becoming.Carriers.static_symmetry_candidate", "Becoming.Carriers.toggle_always_changes", "Becoming.Carriers.toggle_symmetry_candidate"]}
+{"name": "Becoming.Carriers.toggle_always_changes", "uses": []}
+{"name": "Becoming.Carriers.toggle_continues", "uses": []}
+{"name": "Becoming.Carriers.toggle_determined", "uses": []}
+{"name": "Becoming.Carriers.toggle_event", "uses": []}
+{"name": "Becoming.Carriers.toggle_is_one_recurrence", "uses": ["Becoming.Carriers.continuing_single_event_is_one_recurrence"]}
+{"name": "Becoming.Carriers.toggle_renaming_invariant", "uses": ["Becoming.Carriers.injective_bool_map_commutes_not"]}
+{"name": "Becoming.Carriers.toggle_symmetric", "uses": []}
+{"name": "Becoming.Carriers.toggle_symmetry_candidate", "uses": ["Becoming.Carriers.toggle_determined", "Becoming.Carriers.toggle_renaming_invariant", "Becoming.Carriers.toggle_symmetric", "Becoming.Carriers.toggle_total", "Becoming.Carriers.toggle_unique_predecessor"]}
+{"name": "Becoming.Carriers.toggle_total", "uses": []}
+{"name": "Becoming.Carriers.toggle_two_event_cycle", "uses": ["Becoming.Carriers.toggle_event"]}
+{"name": "Becoming.Carriers.toggle_unique_predecessor", "uses": ["Becoming.Carriers.toggle_determined", "Becoming.Carriers.toggle_symmetric", "Becoming.Carriers.toggle_total", "Becoming.Carriers.unique_predecessor_of_total_determined_symmetric"]}
+{"name": "Becoming.Carriers.total_processes_same_feasible", "uses": ["Becoming.Carriers.feasible_of_step_total"]}
+{"name": "Becoming.Carriers.unchanged_reads_carrier_identity", "uses": ["Becoming.Carriers.static_toggle_one_dynamics"]}
+{"name": "Becoming.Carriers.unique_predecessor_of_total_determined_symmetric", "uses": []}
+{"name": "Becoming.Carriers.word_feasibility_does_not_determine_endpoints", "uses": ["Becoming.Carriers.static_toggle_same_feasible", "Becoming.Carriers.static_toggle_singleton_endpoints_differ"]}

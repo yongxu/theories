@@ -1,0 +1,81 @@
+{"name": "Becoming.ClosedCycle.acting", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.ClosedCycle.balances", "uses": []}
+{"name": "Becoming.ClosedCycle.cycle", "uses": ["Becoming.ClosedCycle.acting", "Becoming.ClosedCycle.balances", "Becoming.ClosedCycle.dependent", "Becoming.ClosedCycle.includes_across", "Becoming.ClosedCycle.not_keeps_widening_by_name", "Becoming.ClosedCycle.not_opening", "Becoming.ClosedCycle.opened"]}
+{"name": "Becoming.ClosedCycle.dependent", "uses": ["Becoming.ClosedCycle.supported_iff"]}
+{"name": "Becoming.ClosedCycle.gains_iff", "uses": ["Becoming.ClosedCycle.supported_iff", "Becoming.ListTests.not_ne_self"]}
+{"name": "Becoming.ClosedCycle.give_pos", "uses": ["Becoming.ClosedCycle.mark_self"]}
+{"name": "Becoming.ClosedCycle.includes_across", "uses": ["Becoming.ClosedCycle.linked_to", "Becoming.ClosedCycle.supported_iff"]}
+{"name": "Becoming.ClosedCycle.linked_parity", "uses": []}
+{"name": "Becoming.ClosedCycle.linked_to", "uses": ["Becoming.ClosedCycle.linked_parity", "Becoming.le_dest"]}
+{"name": "Becoming.ClosedCycle.listed", "uses": []}
+{"name": "Becoming.ClosedCycle.mark_not_left", "uses": []}
+{"name": "Becoming.ClosedCycle.mark_pos_iff", "uses": []}
+{"name": "Becoming.ClosedCycle.mark_self", "uses": []}
+{"name": "Becoming.ClosedCycle.not_keeps_widening_by_name", "uses": ["Becoming.ClosedCycle.listed", "Becoming.Web.KeepsWidening.not_listed"]}
+{"name": "Becoming.ClosedCycle.not_opening", "uses": ["Becoming.ClosedCycle.linked_to", "Becoming.ClosedCycle.supported_iff"]}
+{"name": "Becoming.ClosedCycle.opened", "uses": ["Becoming.ClosedCycle.gains_iff", "Becoming.ClosedCycle.give_pos", "Becoming.ClosedCycle.rises_at", "Becoming.ClosedCycle.supported_iff"]}
+{"name": "Becoming.ClosedCycle.rises_at", "uses": ["Becoming.ClosedCycle.mark_not_left", "Becoming.ClosedCycle.mark_self"]}
+{"name": "Becoming.ClosedCycle.supported_iff", "uses": ["Becoming.ClosedCycle.mark_pos_iff"]}
+{"name": "Becoming.Flow.OpenedByOpened.not_of_unsupported", "uses": []}
+{"name": "Becoming.LagWitness.kept_later", "uses": ["Becoming.LagWitness.lagging_iff", "Becoming.LagWitness.travelling_iff"]}
+{"name": "Becoming.LagWitness.lag", "uses": ["Becoming.LagWitness.kept_later", "Becoming.LagWitness.lagging_keeps_widening", "Becoming.LagWitness.not_eventually_lagging", "Becoming.LagWitness.not_eventually_travelling"]}
+{"name": "Becoming.LagWitness.lagging_iff", "uses": ["Becoming.OwnCondition.admits_iff", "Becoming.OwnCondition.le_of_rung_pos", "Becoming.OwnCondition.rung_pos"]}
+{"name": "Becoming.LagWitness.lagging_keeps_widening", "uses": ["Becoming.LagWitness.lagging_iff", "Becoming.Web.exceedsAcross_itself_iff", "Becoming.Web.includesAcross_itself_iff"]}
+{"name": "Becoming.LagWitness.not_eventually_lagging", "uses": ["Becoming.LagWitness.lagging_iff", "Becoming.LagWitness.travelling_iff", "Becoming.Web.eventuallyWidens_iff"]}
+{"name": "Becoming.LagWitness.not_eventually_travelling", "uses": ["Becoming.LagWitness.lagging_iff", "Becoming.LagWitness.travelling_iff", "Becoming.Web.eventuallyWidens_iff"]}
+{"name": "Becoming.LagWitness.travelling_iff", "uses": ["Becoming.OwnCondition.admits_iff"]}
+{"name": "Becoming.MergedWitness.admits", "uses": []}
+{"name": "Becoming.MergedWitness.into_true", "uses": ["Becoming.MergedWitness.into_true_aux"]}
+{"name": "Becoming.MergedWitness.into_true_aux", "uses": ["Becoming.Web.Linked.brecOn"]}
+{"name": "Becoming.MergedWitness.keeps_widening_along_merge", "uses": ["Becoming.MergedWitness.admits", "Becoming.MergedWitness.into_true", "Becoming.MergedWitness.to_false", "Becoming.le_dest"]}
+{"name": "Becoming.MergedWitness.listed", "uses": []}
+{"name": "Becoming.MergedWitness.not_keeps_widening_by_name", "uses": ["Becoming.MergedWitness.listed", "Becoming.Web.KeepsWidening.not_listed"]}
+{"name": "Becoming.MergedWitness.to_false", "uses": []}
+{"name": "Becoming.OpeningChain.balanced_step", "uses": ["Becoming.OwnCondition.rung_mono", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.OpeningChain.carried", "uses": ["Becoming.OpeningChain.dependent", "Becoming.OpeningChain.oneGiver_acting", "Becoming.OpeningChain.oneGiver_balances", "Becoming.OpeningChain.oneGiver_not_opened", "Becoming.OpeningChain.relay_acting", "Becoming.OpeningChain.relay_balances", "Becoming.OpeningChain.relay_opened"]}
+{"name": "Becoming.OpeningChain.dependent", "uses": ["Becoming.OpeningChain.supported_iff"]}
+{"name": "Becoming.OpeningChain.gains_iff", "uses": ["Becoming.OpeningChain.supported_iff"]}
+{"name": "Becoming.OpeningChain.level_rising", "uses": []}
+{"name": "Becoming.OpeningChain.oneGiver_acting", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.OpeningChain.oneGiver_balances", "uses": ["Becoming.OpeningChain.balanced_step"]}
+{"name": "Becoming.OpeningChain.oneGiver_not_opened", "uses": ["Becoming.OpeningChain.gains_iff", "Becoming.OpeningChain.supported_iff", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.OpeningChain.opening_pos", "uses": ["Becoming.OwnCondition.rung_pos", "Becoming.OwnCondition.rung_zero"]}
+{"name": "Becoming.OpeningChain.relay_acting", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.OpeningChain.relay_balances", "uses": ["Becoming.OpeningChain.balanced_step"]}
+{"name": "Becoming.OpeningChain.relay_opened", "uses": ["Becoming.OpeningChain.gains_iff", "Becoming.OpeningChain.opening_pos", "Becoming.OpeningChain.rises_next", "Becoming.OpeningChain.supported_iff"]}
+{"name": "Becoming.OpeningChain.rises_next", "uses": ["Becoming.OwnCondition.rung_pos", "Becoming.OwnCondition.rung_zero"]}
+{"name": "Becoming.OpeningChain.supported_iff", "uses": ["Becoming.OwnCondition.le_of_rung_pos", "Becoming.OwnCondition.rung_pos"]}
+{"name": "Becoming.OwnCondition.admits_iff", "uses": []}
+{"name": "Becoming.OwnCondition.burst_later", "uses": ["Becoming.OwnCondition.admits_iff"]}
+{"name": "Becoming.OwnCondition.burst_not_keeps_widening", "uses": ["Becoming.OwnCondition.burst_not_opening"]}
+{"name": "Becoming.OwnCondition.burst_not_opening", "uses": ["Becoming.OwnCondition.burst_later"]}
+{"name": "Becoming.OwnCondition.burst_widens_now", "uses": ["Becoming.OwnCondition.burst_zero_iff", "Becoming.OwnCondition.rising_iff", "Becoming.OwnCondition.zero_of_le_zero"]}
+{"name": "Becoming.OwnCondition.burst_zero_iff", "uses": ["Becoming.OwnCondition.admits_iff", "Becoming.OwnCondition.le_of_rung_pos", "Becoming.OwnCondition.rung_pos"]}
+{"name": "Becoming.OwnCondition.disagreement", "uses": ["Becoming.OwnCondition.burst_not_keeps_widening", "Becoming.OwnCondition.burst_widens_now", "Becoming.OwnCondition.mixed", "Becoming.OwnCondition.rising_eventually_widens_burst", "Becoming.OwnCondition.rising_keeps_widening"]}
+{"name": "Becoming.OwnCondition.full_admits", "uses": ["Becoming.OwnCondition.admits_iff"]}
+{"name": "Becoming.OwnCondition.full_eventually_widens_rising", "uses": ["Becoming.OwnCondition.full_admits", "Becoming.OwnCondition.full_widens_rising", "Becoming.OwnCondition.rising_iff", "Becoming.Web.WidensWithoutEnd.eventually"]}
+{"name": "Becoming.OwnCondition.full_not_opening", "uses": ["Becoming.OwnCondition.full_admits", "Becoming.Web.Linked.itself_of_le"]}
+{"name": "Becoming.OwnCondition.full_widens_rising", "uses": ["Becoming.OwnCondition.full_admits", "Becoming.OwnCondition.rising_iff"]}
+{"name": "Becoming.OwnCondition.le_of_rung_pos", "uses": []}
+{"name": "Becoming.OwnCondition.mixed", "uses": ["Becoming.OwnCondition.burst_later", "Becoming.OwnCondition.burst_zero_iff", "Becoming.OwnCondition.rising_iff"]}
+{"name": "Becoming.OwnCondition.not_monotone", "uses": ["Becoming.OwnCondition.full_not_opening", "Becoming.OwnCondition.full_widens_rising", "Becoming.OwnCondition.rising_keeps_widening"]}
+{"name": "Becoming.OwnCondition.not_opened", "uses": ["Becoming.Flow.OpenedByOpened.not_of_unsupported"]}
+{"name": "Becoming.OwnCondition.rising_eventually_widens_burst", "uses": ["Becoming.OwnCondition.burst_later", "Becoming.OwnCondition.rising_iff", "Becoming.Web.eventually_of_vanishing"]}
+{"name": "Becoming.OwnCondition.rising_iff", "uses": ["Becoming.OwnCondition.admits_iff", "Becoming.OwnCondition.le_of_rung_pos", "Becoming.OwnCondition.rung_pos"]}
+{"name": "Becoming.OwnCondition.rising_keeps_widening", "uses": ["Becoming.OwnCondition.rising_iff", "Becoming.Web.exceedsAcross_itself_iff", "Becoming.Web.includesAcross_itself_iff"]}
+{"name": "Becoming.OwnCondition.rung_mono", "uses": []}
+{"name": "Becoming.OwnCondition.rung_pos", "uses": []}
+{"name": "Becoming.OwnCondition.rung_zero", "uses": []}
+{"name": "Becoming.OwnCondition.zero_of_le_zero", "uses": []}
+{"name": "Becoming.Saturated.level_full", "uses": []}
+{"name": "Becoming.Saturated.reverses", "uses": ["Becoming.OpeningChain.level_rising", "Becoming.OpeningChain.relay_opened", "Becoming.OwnCondition.full_widens_rising", "Becoming.Saturated.level_full", "Becoming.Saturated.still_not_opened"]}
+{"name": "Becoming.Saturated.still_balances", "uses": []}
+{"name": "Becoming.Saturated.still_not_opened", "uses": []}
+{"name": "Becoming.Web.eventually_dense", "uses": ["Becoming.Sequences.agree_iff", "Becoming.Web.EventuallyWidens.of_agree_left", "Becoming.Web.splice_before", "Becoming.Web.splice_from"]}
+{"name": "Becoming.Web.eventually_insulated", "uses": ["Becoming.Web.eventually_dense", "Becoming.insulates_iff_dense"]}
+{"name": "Becoming.Web.eventually_neither", "uses": ["Becoming.Web.EventuallyWidens.irrefl", "Becoming.Web.eventually_dense", "Becoming.Web.not_eventually_dense", "Becoming.not_refutable_of_adheres", "Becoming.not_verifiable_of_adheres"]}
+{"name": "Becoming.Web.lt_stepBound", "uses": []}
+{"name": "Becoming.Web.not_eventually_dense", "uses": ["Becoming.Sequences.agree_iff", "Becoming.Web.EventuallyWidens.irrefl", "Becoming.Web.EventuallyWidens.of_agree_left", "Becoming.Web.splice_before", "Becoming.Web.splice_from"]}
+{"name": "Becoming.Web.not_eventually_of_listed", "uses": ["Becoming.Web.eventuallyWidens_iff", "Becoming.Web.lt_stepBound"]}
+{"name": "Becoming.Web.splice_before", "uses": []}
+{"name": "Becoming.Web.splice_from", "uses": []}

@@ -1,0 +1,57 @@
+{"name": "Becoming.Pace.paced_fast_succ", "uses": ["Becoming.Pace.paced_succ"]}
+{"name": "Becoming.Pace.paced_shift", "uses": ["Becoming.Pace.paced_succ"]}
+{"name": "Becoming.RuleCapture.Alternating.alternates", "uses": ["Becoming.RuleCapture.Alternating.even", "Becoming.RuleCapture.Alternating.from_even", "Becoming.RuleCapture.Alternating.lt_four", "Becoming.RuleCapture.CarrierCounts.hi_not_le_lo", "Becoming.RuleCapture.CarrierCounts.other_pos"]}
+{"name": "Becoming.RuleCapture.Alternating.before_locked", "uses": []}
+{"name": "Becoming.RuleCapture.Alternating.course_step", "uses": ["Becoming.RuleCapture.CarrierCounts.always_step"]}
+{"name": "Becoming.RuleCapture.Alternating.even", "uses": ["Becoming.Naturals.mul_right_comm", "Becoming.RuleCapture.Alternating.course_step", "Becoming.RuleCapture.Alternating.from_even", "Becoming.RuleCapture.CarrierCounts.threshold_below"]}
+{"name": "Becoming.RuleCapture.Alternating.from_even", "uses": ["Becoming.RuleCapture.Alternating.course_step", "Becoming.RuleCapture.CarrierCounts.other_pos", "Becoming.RuleCapture.CarrierCounts.threshold_above"]}
+{"name": "Becoming.RuleCapture.Alternating.lt_four", "uses": []}
+{"name": "Becoming.RuleCapture.Alternating.never_locked", "uses": ["Becoming.RuleCapture.Alternating.even", "Becoming.RuleCapture.Alternating.from_even", "Becoming.RuleCapture.CarrierCounts.hi_not_le_lo", "Becoming.RuleCapture.CarrierCounts.threshold_above", "Becoming.RuleCapture.CarrierCounts.threshold_below"]}
+{"name": "Becoming.RuleCapture.Alternating.odd", "uses": ["Becoming.RuleCapture.Alternating.even", "Becoming.RuleCapture.Alternating.from_even", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.RuleCapture.CarrierCounts.always_step", "uses": ["Becoming.Pace.paced_succ"]}
+{"name": "Becoming.RuleCapture.CarrierCounts.byMargin_reads", "uses": ["Becoming.RuleCapture.CarrierCounts.margin_le"]}
+{"name": "Becoming.RuleCapture.CarrierCounts.hi_not_le_lo", "uses": []}
+{"name": "Becoming.RuleCapture.CarrierCounts.hi_not_le_twoToOne", "uses": []}
+{"name": "Becoming.RuleCapture.CarrierCounts.lo_le_hi", "uses": []}
+{"name": "Becoming.RuleCapture.CarrierCounts.lower", "uses": ["Becoming.RuleCapture.CarrierCounts.other_pos"]}
+{"name": "Becoming.RuleCapture.CarrierCounts.lowers", "uses": ["Becoming.Naturals.mul_right_comm", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.RuleCapture.CarrierCounts.margin_course", "uses": ["Becoming.RuleCapture.CarrierCounts.byMargin_reads", "Becoming.RuleCapture.CarrierCounts.margin_favours", "Becoming.RuleCapture.CarrierCounts.raises", "Becoming.RuleCapture.CarrierCounts.upper", "Becoming.RuleCapture.favouring_locks", "Becoming.RuleCapture.locked_rises"]}
+{"name": "Becoming.RuleCapture.CarrierCounts.margin_favours", "uses": []}
+{"name": "Becoming.RuleCapture.CarrierCounts.margin_le", "uses": []}
+{"name": "Becoming.RuleCapture.CarrierCounts.other_pos", "uses": []}
+{"name": "Becoming.RuleCapture.CarrierCounts.perturbation_keeps_below_counts", "uses": ["Becoming.RuleCapture.CarrierCounts.select_mono", "Becoming.RuleCapture.perturbation_keeps_below"]}
+{"name": "Becoming.RuleCapture.CarrierCounts.proportional_locks", "uses": ["Becoming.RuleCapture.CarrierCounts.proportional_reads", "Becoming.RuleCapture.CarrierCounts.raises", "Becoming.RuleCapture.CarrierCounts.upper", "Becoming.RuleCapture.locked_rises"]}
+{"name": "Becoming.RuleCapture.CarrierCounts.proportional_locks_down", "uses": ["Becoming.RuleCapture.CarrierCounts.lower", "Becoming.RuleCapture.CarrierCounts.lowers", "Becoming.RuleCapture.CarrierCounts.proportional_reads", "Becoming.RuleCapture.ReadsShare.reverse", "Becoming.RuleCapture.locked_rises"]}
+{"name": "Becoming.RuleCapture.CarrierCounts.proportional_reads", "uses": []}
+{"name": "Becoming.RuleCapture.CarrierCounts.raises", "uses": ["Becoming.Naturals.mul_right_comm", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.RuleCapture.CarrierCounts.rises_strictly", "uses": ["Becoming.Naturals.mul_right_comm", "Becoming.RuleCapture.CarrierCounts.other_pos", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.RuleCapture.CarrierCounts.rises_strictly_along", "uses": ["Becoming.Pace.paced_fast_succ", "Becoming.RuleCapture.CarrierCounts.rises_strictly"]}
+{"name": "Becoming.RuleCapture.CarrierCounts.select_mono", "uses": ["Becoming.Naturals.mul_mul_mul_comm"]}
+{"name": "Becoming.RuleCapture.CarrierCounts.share_not_lower_counts", "uses": ["Becoming.share_not_lower"]}
+{"name": "Becoming.RuleCapture.CarrierCounts.threshold_above", "uses": []}
+{"name": "Becoming.RuleCapture.CarrierCounts.threshold_below", "uses": []}
+{"name": "Becoming.RuleCapture.CarrierCounts.threshold_favours", "uses": ["Becoming.RuleCapture.CarrierCounts.threshold_above", "Becoming.RuleCapture.CarrierCounts.threshold_below"]}
+{"name": "Becoming.RuleCapture.CarrierCounts.threshold_reads", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.RuleCapture.CarrierCounts.threshold_above", "Becoming.RuleCapture.CarrierCounts.threshold_below", "Becoming.RuleCapture.CarrierCounts.upper"]}
+{"name": "Becoming.RuleCapture.CarrierCounts.twoToOne_le_hi", "uses": []}
+{"name": "Becoming.RuleCapture.CarrierCounts.upper", "uses": ["Becoming.RuleCapture.CarrierCounts.other_pos"]}
+{"name": "Becoming.RuleCapture.ReadsShare.pair", "uses": []}
+{"name": "Becoming.RuleCapture.ReadsShare.reverse", "uses": []}
+{"name": "Becoming.RuleCapture.Reversed.locked_down", "uses": []}
+{"name": "Becoming.RuleCapture.Reversed.not_absorbed", "uses": ["Becoming.RuleCapture.Alternating.before_locked", "Becoming.RuleCapture.CarrierCounts.hi_not_le_lo", "Becoming.RuleCapture.CarrierCounts.lo_le_hi", "Becoming.RuleCapture.CarrierCounts.lower", "Becoming.RuleCapture.CarrierCounts.lowers", "Becoming.RuleCapture.CarrierCounts.threshold_reads", "Becoming.RuleCapture.ReadsShare.reverse", "Becoming.RuleCapture.Reversed.locked_down", "Becoming.RuleCapture.locked_rises"]}
+{"name": "Becoming.RuleCapture.Second.second_exact", "uses": ["Becoming.RuleCapture.CarrierCounts.hi_not_le_twoToOne", "Becoming.RuleCapture.CarrierCounts.raises", "Becoming.RuleCapture.CarrierCounts.threshold_favours", "Becoming.RuleCapture.CarrierCounts.threshold_reads", "Becoming.RuleCapture.CarrierCounts.twoToOne_le_hi", "Becoming.RuleCapture.uniform_locks"]}
+{"name": "Becoming.RuleCapture.against_not_rising", "uses": ["Becoming.Pace.paced_succ", "Becoming.RuleCapture.share_kept_along", "Becoming.le_dest"]}
+{"name": "Becoming.RuleCapture.favouring_locks", "uses": ["Becoming.Pace.paced_succ", "Becoming.RuleCapture.favours_throughout"]}
+{"name": "Becoming.RuleCapture.favours_after_reading", "uses": ["Becoming.Pace.paced_succ", "Becoming.Pace.stays_turned", "Becoming.RuleCapture.turn_favours"]}
+{"name": "Becoming.RuleCapture.favours_throughout", "uses": ["Becoming.Pace.stays_turned", "Becoming.RuleCapture.turn_favours"]}
+{"name": "Becoming.RuleCapture.locked_not_below", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.Ideals.Preorder.trans", "Becoming.Pace.stays_turned", "Becoming.RuleCapture.turn_locked"]}
+{"name": "Becoming.RuleCapture.locked_rises", "uses": ["Becoming.Pace.paced_succ", "Becoming.RuleCapture.locked_stays", "Becoming.RuleCapture.turn_locked"]}
+{"name": "Becoming.RuleCapture.locked_stays", "uses": ["Becoming.Pace.stays_turned", "Becoming.RuleCapture.turn_locked"]}
+{"name": "Becoming.RuleCapture.order_kept", "uses": ["Becoming.Pace.paced_succ"]}
+{"name": "Becoming.RuleCapture.pair_locks", "uses": ["Becoming.RuleCapture.ReadsShare.pair", "Becoming.RuleCapture.favouring_locks"]}
+{"name": "Becoming.RuleCapture.perturbation_absorbed", "uses": ["Becoming.Pace.paced_succ", "Becoming.RuleCapture.perturbation_invariant"]}
+{"name": "Becoming.RuleCapture.perturbation_invariant", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.Ideals.Preorder.trans", "Becoming.Pace.paced_succ"]}
+{"name": "Becoming.RuleCapture.perturbation_keeps_below", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.Pace.paced_shift", "Becoming.RuleCapture.order_kept"]}
+{"name": "Becoming.RuleCapture.share_kept_along", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.Ideals.Preorder.trans", "Becoming.Pace.paced_fast_succ"]}
+{"name": "Becoming.RuleCapture.turn_favours", "uses": []}
+{"name": "Becoming.RuleCapture.turn_locked", "uses": ["Becoming.Ideals.Preorder.refl", "Becoming.Ideals.Preorder.trans"]}
+{"name": "Becoming.RuleCapture.uniform_locks", "uses": ["Becoming.Pace.paced_succ", "Becoming.RuleCapture.favours_after_reading", "Becoming.le_dest"]}

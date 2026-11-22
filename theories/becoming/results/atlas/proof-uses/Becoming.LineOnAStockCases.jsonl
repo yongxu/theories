@@ -1,0 +1,9 @@
+{"name": "Becoming.LineOnAStock.DrainCase.drain", "uses": ["Becoming.Law.orbit_add", "Becoming.LineOnAStock.DrainCase.empty_of", "Becoming.LineOnAStock.DrainCase.gift_eq", "Becoming.LineOnAStock.DrainCase.late", "Becoming.LineOnAStock.DrainCase.need_agrees", "Becoming.LineOnAStock.fall", "Becoming.LineOnAStock.never_in", "Becoming.LineageDrawdown.Drain.familyP_eq", "Becoming.le_dest", "Becoming.nil_of_length_zero"]}
+{"name": "Becoming.LineOnAStock.DrainCase.empty_of", "uses": []}
+{"name": "Becoming.LineOnAStock.DrainCase.gift_eq", "uses": []}
+{"name": "Becoming.LineOnAStock.DrainCase.late", "uses": []}
+{"name": "Becoming.LineOnAStock.DrainCase.need_agrees", "uses": []}
+{"name": "Becoming.LineOnAStock.MultiplyingTakersCase.agree", "uses": ["Becoming.LineOnAStock.MultiplyingTakersCase.family_late", "Becoming.LineOnAStock.MultiplyingTakersCase.late", "Becoming.LineageRegimes.MultiplyingTakers.inactive"]}
+{"name": "Becoming.LineOnAStock.MultiplyingTakersCase.family_late", "uses": []}
+{"name": "Becoming.LineOnAStock.MultiplyingTakersCase.late", "uses": []}
+{"name": "Becoming.LineOnAStock.MultiplyingTakersCase.multiplying_takers", "uses": ["Becoming.LineOnAStock.MultiplyingTakersCase.agree", "Becoming.LineOnAStock.way_ends", "Becoming.RegimeMargin.keeps_of_below"]}

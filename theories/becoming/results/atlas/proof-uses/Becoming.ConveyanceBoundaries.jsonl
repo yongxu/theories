@@ -1,0 +1,8 @@
+{"name": "Becoming.Clearing.resource_no_boundary", "uses": ["Becoming.Clearing.resource_not_cut", "Becoming.Clearing.resource_not_cut_living_on", "Becoming.Flow.cut_of_closedUnder"]}
+{"name": "Becoming.Flow.closedUnder_of_cut", "uses": ["Becoming.Flow.cut_iff_notGoingOut", "Becoming.closedUnder_iff_closed", "Becoming.«不外者内则不出当且仅当闭»"]}
+{"name": "Becoming.Flow.closures_not_within_region", "uses": ["Becoming.Flow.cut_of_closedUnder", "Becoming.Flow.region_not_a_cut", "Becoming.«缘在所闭»"]}
+{"name": "Becoming.Flow.conveyance_symm", "uses": []}
+{"name": "Becoming.Flow.cut_iff_notComingIn", "uses": ["Becoming.Flow.conveyance_symm", "Becoming.«对称则不出当且仅当逆不出»"]}
+{"name": "Becoming.Flow.cut_iff_notGoingOut", "uses": []}
+{"name": "Becoming.Flow.cut_of_closedUnder", "uses": ["Becoming.Flow.cut_iff_notGoingOut", "Becoming.closedUnder_iff_closed", "Becoming.«闭则不出»"]}
+{"name": "Becoming.Flow.region_no_boundary", "uses": ["Becoming.Flow.cut_of_closedUnder", "Becoming.Flow.region_not_a_cut"]}

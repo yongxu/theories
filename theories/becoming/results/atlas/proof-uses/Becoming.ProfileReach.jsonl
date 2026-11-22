@@ -1,0 +1,16 @@
+{"name": "Becoming.ProfileReach.chain_preserves", "uses": ["Becoming.Invariant.reach"]}
+{"name": "Becoming.ProfileReach.closed_self_blocks_reach", "uses": ["Becoming.ProfileReach.threshold_selfSignificance"]}
+{"name": "Becoming.ProfileReach.formed_other_has_significance", "uses": ["Becoming.ProfileReach.selfSignificance_reaches_at_least_as_connected"]}
+{"name": "Becoming.ProfileReach.persistence_rival_escapes_self_transcendence", "uses": []}
+{"name": "Becoming.ProfileReach.present_aim_evaluator_escapes", "uses": []}
+{"name": "Becoming.ProfileReach.reach_is_livingSignificance", "uses": []}
+{"name": "Becoming.ProfileReach.reach_relations_iff", "uses": ["Becoming.Invariant.reach", "Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans"]}
+{"name": "Becoming.ProfileReach.selfSignificance_derives_reachable_livingSignificance", "uses": ["Becoming.ProfileReach.reach_is_livingSignificance", "Becoming.ProfileReach.tolerant_chain_reaches"]}
+{"name": "Becoming.ProfileReach.selfSignificance_reaches_at_least_as_connected", "uses": []}
+{"name": "Becoming.ProfileReach.selfSignificance_valuation", "uses": []}
+{"name": "Becoming.ProfileReach.strict_indexed_rival_inconsistent", "uses": ["Becoming.ProfileReach.selfSignificance_reaches_at_least_as_connected"]}
+{"name": "Becoming.ProfileReach.threshold_rival_is_consistent_without_tolerance", "uses": ["Becoming.ProfileReach.threshold_selfSignificance"]}
+{"name": "Becoming.ProfileReach.threshold_selfSignificance", "uses": []}
+{"name": "Becoming.ProfileReach.tolerant_chain_reaches", "uses": ["Becoming.ProfileReach.reach_relations_iff", "Becoming.ProfileReach.selfSignificance_valuation", "Becoming.ProfileReach.tolerant_iff_neutral", "Becoming.Valuation.reaches"]}
+{"name": "Becoming.ProfileReach.tolerant_iff_neutral", "uses": []}
+{"name": "Becoming.ProfileReach.tolerant_standpoint_reaches_stranger", "uses": []}

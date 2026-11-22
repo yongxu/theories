@@ -1,0 +1,253 @@
+{"name": "Becoming.ClosedCycle.bounded_while_opening", "uses": ["Becoming.ClosedCycle.balances", "Becoming.ClosedCycle.closed", "Becoming.ClosedCycle.distinct", "Becoming.ClosedCycle.gainless", "Becoming.ClosedCycle.keeps_opening_by_name", "Becoming.ClosedCycle.requiresWithin", "Becoming.ClosedCycle.stock_one", "Becoming.Flow.Balances.on", "Becoming.Flow.BalancesOn.rest_not_netGiver"]}
+{"name": "Becoming.ClosedCycle.brief", "uses": ["Becoming.ClosedCycle.supported_iff", "Becoming.ListTests.not_ne_self"]}
+{"name": "Becoming.ClosedCycle.capacity", "uses": ["Becoming.ClosedCycle.mark_sum"]}
+{"name": "Becoming.ClosedCycle.closed", "uses": ["Becoming.ClosedCycle.listed"]}
+{"name": "Becoming.ClosedCycle.cycle_within", "uses": ["Becoming.ClosedCycle.acting", "Becoming.ClosedCycle.balances", "Becoming.ClosedCycle.dependent", "Becoming.ClosedCycle.includes_across", "Becoming.ClosedCycle.not_keeps_widening_by_name", "Becoming.ClosedCycle.not_opening", "Becoming.ClosedCycle.opened_within"]}
+{"name": "Becoming.ClosedCycle.distinct", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.ClosedCycle.gainless", "uses": ["Becoming.ClosedCycle.mark_pos_iff", "Becoming.ClosedCycle.mark_self", "Becoming.Thresholds.le_of_not_not", "Becoming.le_total_of_mem", "Becoming.total_le_at"]}
+{"name": "Becoming.ClosedCycle.generates", "uses": ["Becoming.ClosedCycle.brief", "Becoming.ClosedCycle.includes_along_passings", "Becoming.Flow.generation_of_includes_brief", "Becoming.«全生成则生成»"]}
+{"name": "Becoming.ClosedCycle.generation_without_widening", "uses": ["Becoming.ClosedCycle.brief", "Becoming.ClosedCycle.includes_along_passings", "Becoming.ClosedCycle.not_keeps_widening_by_name", "Becoming.ClosedCycle.not_opening_along", "Becoming.Flow.generation_of_includes_brief"]}
+{"name": "Becoming.ClosedCycle.includes_along_passings", "uses": ["Becoming.ClosedCycle.linked_along_passings_to", "Becoming.ClosedCycle.supported_iff"]}
+{"name": "Becoming.ClosedCycle.keeps_opening_by_name", "uses": ["Becoming.ClosedCycle.supported_iff", "Becoming.ListTests.not_ne_self", "Becoming.Web.exceedsAcross_itself_iff"]}
+{"name": "Becoming.ClosedCycle.linked_along_passings", "uses": ["Becoming.ClosedCycle.passesSupport_next"]}
+{"name": "Becoming.ClosedCycle.linked_along_passings_to", "uses": ["Becoming.ClosedCycle.linked_along_passings", "Becoming.le_dest"]}
+{"name": "Becoming.ClosedCycle.mark_sum", "uses": []}
+{"name": "Becoming.ClosedCycle.not_opening_along", "uses": ["Becoming.ClosedCycle.acting", "Becoming.ClosedCycle.balances", "Becoming.ClosedCycle.dependent", "Becoming.ClosedCycle.unloosened", "Becoming.Flow.not_exceedsAcross_along_passings"]}
+{"name": "Becoming.ClosedCycle.opened_within", "uses": ["Becoming.ClosedCycle.acting", "Becoming.ClosedCycle.balances", "Becoming.ClosedCycle.brief", "Becoming.ClosedCycle.dependent", "Becoming.ClosedCycle.opened", "Becoming.ClosedCycle.unloosened", "Becoming.Flow.openedByOpenedWithin_of_brief"]}
+{"name": "Becoming.ClosedCycle.passesSupport_next", "uses": ["Becoming.ClosedCycle.gains_iff", "Becoming.ClosedCycle.give_pos", "Becoming.ClosedCycle.rises_at", "Becoming.ClosedCycle.supported_iff"]}
+{"name": "Becoming.ClosedCycle.renewers_bounded_while_opening", "uses": ["Becoming.ClosedCycle.balances", "Becoming.ClosedCycle.capacity", "Becoming.ClosedCycle.keeps_opening_by_name", "Becoming.ClosedCycle.renewers_le", "Becoming.ClosedCycle.takes_while_supported"]}
+{"name": "Becoming.ClosedCycle.renewers_le", "uses": ["Becoming.sign_le_one"]}
+{"name": "Becoming.ClosedCycle.requiresWithin", "uses": ["Becoming.ClosedCycle.listed"]}
+{"name": "Becoming.ClosedCycle.stock_one", "uses": ["Becoming.ClosedCycle.mark_sum"]}
+{"name": "Becoming.ClosedCycle.takes_while_supported", "uses": ["Becoming.ClosedCycle.mark_sum", "Becoming.ClosedCycle.supported_iff"]}
+{"name": "Becoming.ClosedCycle.unloosened", "uses": []}
+{"name": "Becoming.Flow.BeginsAlong.carries", "uses": ["Becoming.Flow.passesSupport_carries_iff"]}
+{"name": "Becoming.Flow.BeginsAlong.carries_kind_iff", "uses": ["Becoming.Web.supportedPassing_within", "Becoming.Web.withinKind_within"]}
+{"name": "Becoming.Flow.BeginsAlong.iff_begins", "uses": []}
+{"name": "Becoming.Flow.BeginsAlong.not_along", "uses": []}
+{"name": "Becoming.Flow.OpenedByOpenedWithin.add", "uses": ["Becoming.Flow.OpenedByOpenedWithin.succ"]}
+{"name": "Becoming.Flow.OpenedByOpenedWithin.lagged", "uses": ["Becoming.le_dest"]}
+{"name": "Becoming.Flow.OpenedByOpenedWithin.mono", "uses": ["Becoming.Flow.OpenedByOpenedWithin.add", "Becoming.le_dest"]}
+{"name": "Becoming.Flow.OpenedByOpenedWithin.not_of_unsupported", "uses": []}
+{"name": "Becoming.Flow.OpenedByOpenedWithin.succ", "uses": []}
+{"name": "Becoming.Flow.PassesSupport.takes", "uses": ["Becoming.Flow.DissipatesOn.takes_of_gives", "Becoming.sign_pos", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.beginsAlong_supportedItself_iff", "uses": []}
+{"name": "Becoming.Flow.begins_late_of_keepsOpening", "uses": ["Becoming.Flow.begun_of_exceedsAcross"]}
+{"name": "Becoming.Flow.begun_of_exceedsAcross", "uses": ["Becoming.Flow.descends_or_begun", "Becoming.le_dest"]}
+{"name": "Becoming.Flow.descends_along_passings", "uses": ["Becoming.Flow.descends_along_supportedPassing", "Becoming.Web.Linked.mono", "Becoming.Web.supportedPassing_within"]}
+{"name": "Becoming.Flow.descends_along_supportedPassing", "uses": ["Becoming.Flow.BeginsAlong.not_along", "Becoming.Flow.descends_or_begun"]}
+{"name": "Becoming.Flow.descends_or_begun", "uses": ["Becoming.Flow.Acting.giversSupported", "Becoming.Flow.Balances.on", "Becoming.Flow.gain_given_by_supported_at", "Becoming.Web.Linked.snoc"]}
+{"name": "Becoming.Flow.gain_carried", "uses": ["Becoming.Flow.gain_given_by_supported_at", "Becoming.Flow.passesSupport_carries_iff"]}
+{"name": "Becoming.Flow.gain_given_by_recent_gainer_decided", "uses": ["Becoming.Flow.rise_given_by_supported_at", "Becoming.Web.GainsSupport.rises", "Becoming.came_between", "Becoming.upto_or_fails"]}
+{"name": "Becoming.Flow.generation_of_brief", "uses": ["Becoming.Flow.passes_or_carried_on"]}
+{"name": "Becoming.Flow.generation_of_includes_brief", "uses": ["Becoming.Flow.generation_of_brief", "Becoming.Web.includesAcrossFrom_iff_endless"]}
+{"name": "Becoming.Flow.not_exceedsAcross_along_passings", "uses": ["Becoming.Flow.not_exceedsAcross_along_supportedPassing", "Becoming.Web.supportedPassing_within"]}
+{"name": "Becoming.Flow.not_exceedsAcross_along_supportedPassing", "uses": ["Becoming.Flow.BeginsAlong.not_along", "Becoming.Flow.begun_of_exceedsAcross", "Becoming.Web.ExceedsAcross.anti"]}
+{"name": "Becoming.Flow.not_generation_of_dissipated_requirements", "uses": ["Becoming.Flow.PassesSupport.takes", "Becoming.Flow.taking_not_recurring_from", "Becoming.Web.active_along_line", "Becoming.Web.carries_iff", "Becoming.Web.generation_renews_late"]}
+{"name": "Becoming.Flow.not_keepsOpening_along_passings", "uses": ["Becoming.Flow.not_keepsOpening_along_supportedPassing", "Becoming.Web.supportedPassing_within"]}
+{"name": "Becoming.Flow.not_keepsOpening_along_supportedPassing", "uses": ["Becoming.Flow.not_exceedsAcross_along_supportedPassing"]}
+{"name": "Becoming.Flow.not_keepsOpening_of_dissipated_requirements", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.BalancesOn.runs_down", "Becoming.Flow.PassesSupport.takes", "Becoming.Flow.begins_late_of_keepsOpening", "Becoming.falls_stop_unrefuted"]}
+{"name": "Becoming.Flow.not_keepsWidening_along_passings", "uses": ["Becoming.Flow.not_keepsWidening_along_supportedPassing", "Becoming.Web.supportedPassing_within"]}
+{"name": "Becoming.Flow.not_keepsWidening_along_supportedPassing", "uses": ["Becoming.Flow.not_keepsOpening_along_supportedPassing"]}
+{"name": "Becoming.Flow.not_keepsWidening_of_dissipated_requirements", "uses": ["Becoming.Flow.not_keepsOpening_of_dissipated_requirements"]}
+{"name": "Becoming.Flow.not_within_zero", "uses": []}
+{"name": "Becoming.Flow.openedByOpenedWithin_of_brief", "uses": ["Becoming.Flow.gain_given_by_recent_gainer"]}
+{"name": "Becoming.Flow.openedByOpenedWithin_of_opened", "uses": []}
+{"name": "Becoming.Flow.passesSupport_carries_iff", "uses": ["Becoming.Web.passing_carries_iff"]}
+{"name": "Becoming.Flow.passes_late_of_keepsOpening_byName", "uses": ["Becoming.Flow.begins_late_of_keepsOpening", "Becoming.Web.ExceedsAcross.anti", "Becoming.Web.supportedItself_within"]}
+{"name": "Becoming.Flow.passes_or_carried_on", "uses": ["Becoming.Flow.passesSupport_carries_iff", "Becoming.Web.active_along_line", "Becoming.le_succ_cases", "Becoming.«所及之传递»"]}
+{"name": "Becoming.Flow.whole_not_keepsWidening", "uses": ["Becoming.Web.KeepsWidening.open_late"]}
+{"name": "Becoming.KindRelay.Fed.acting", "uses": ["Becoming.KindRelay.present_holds"]}
+{"name": "Becoming.KindRelay.Fed.balances", "uses": ["Becoming.KindRelay.Fed.fuel_balance", "Becoming.KindRelay.balance_at"]}
+{"name": "Becoming.KindRelay.Fed.conserving_on_part", "uses": ["Becoming.KindRelay.Fed.part_conserves", "Becoming.total_map"]}
+{"name": "Becoming.KindRelay.Fed.dependent", "uses": ["Becoming.KindRelay.Fed.supported_iff"]}
+{"name": "Becoming.KindRelay.Fed.dissipative", "uses": ["Becoming.KindRelay.Fed.give_support", "Becoming.KindRelay.Fed.map_distinct", "Becoming.KindRelay.Fed.take_distinct", "Becoming.KindRelay.Fed.take_support", "Becoming.KindRelay.give_distinct", "Becoming.KindRelay.inside", "Becoming.KindRelay.moves_taken", "Becoming.total_eq_of_supports", "Becoming.total_map"]}
+{"name": "Becoming.KindRelay.Fed.fuel_balance", "uses": ["Becoming.KindRelay.Fed.fuel_present", "Becoming.total_congr", "Becoming.total_eq_zero"]}
+{"name": "Becoming.KindRelay.Fed.fuel_present", "uses": []}
+{"name": "Becoming.KindRelay.Fed.gainless", "uses": ["Becoming.Flow.Dissipative.gainless", "Becoming.KindRelay.Fed.dissipative"]}
+{"name": "Becoming.KindRelay.Fed.generation", "uses": ["Becoming.KindRelay.Fed.runs", "Becoming.KindRelay.Runs.generation"]}
+{"name": "Becoming.KindRelay.Fed.generation_one_up", "uses": ["Becoming.KindRelay.Fed.runs", "Becoming.KindRelay.Runs.generation_one_up"]}
+{"name": "Becoming.KindRelay.Fed.give_support", "uses": ["Becoming.KindRelay.give_support", "Becoming.mem_map_of"]}
+{"name": "Becoming.KindRelay.Fed.keeps_widening", "uses": ["Becoming.KindRelay.Fed.runs", "Becoming.KindRelay.Runs.keeps_widening"]}
+{"name": "Becoming.KindRelay.Fed.lt_fuelBound", "uses": []}
+{"name": "Becoming.KindRelay.Fed.map_distinct", "uses": ["Becoming.distinct_map_on"]}
+{"name": "Becoming.KindRelay.Fed.not_keepsWidening_byName", "uses": ["Becoming.KindRelay.Fed.runs", "Becoming.KindRelay.Runs.not_keepsWidening_byName"]}
+{"name": "Becoming.KindRelay.Fed.not_keepsWidening_dormant", "uses": ["Becoming.KindRelay.Fed.runs", "Becoming.KindRelay.Runs.not_keepsOpening_dormant"]}
+{"name": "Becoming.KindRelay.Fed.not_keepsWidening_supportedPassing", "uses": ["Becoming.Flow.not_keepsWidening_along_supportedPassing", "Becoming.KindRelay.Fed.acting", "Becoming.KindRelay.Fed.balances", "Becoming.KindRelay.Fed.dependent", "Becoming.KindRelay.Fed.unloosened"]}
+{"name": "Becoming.KindRelay.Fed.not_listed", "uses": ["Becoming.KindRelay.Fed.lt_fuelBound"]}
+{"name": "Becoming.KindRelay.Fed.part_conserves", "uses": []}
+{"name": "Becoming.KindRelay.Fed.passes_iff", "uses": ["Becoming.KindRelay.Fed.supported_iff", "Becoming.KindRelay.moves_facts"]}
+{"name": "Becoming.KindRelay.Fed.renews_without_end", "uses": ["Becoming.KindRelay.Fed.runs", "Becoming.KindRelay.Runs.renews_without_end"]}
+{"name": "Becoming.KindRelay.Fed.requirements_not_dissipated", "uses": ["Becoming.Flow.not_keepsWidening_of_dissipated_requirements", "Becoming.KindRelay.Fed.acting", "Becoming.KindRelay.Fed.balances", "Becoming.KindRelay.Fed.dependent", "Becoming.KindRelay.Fed.keeps_widening", "Becoming.KindRelay.Fed.unloosened", "Becoming.Web.KeepsWidening.later"]}
+{"name": "Becoming.KindRelay.Fed.returns", "uses": ["Becoming.KindRelay.parity_two"]}
+{"name": "Becoming.KindRelay.Fed.runs", "uses": ["Becoming.KindRelay.Fed.passes_iff", "Becoming.KindRelay.Fed.supported_iff"]}
+{"name": "Becoming.KindRelay.Fed.supported_iff", "uses": []}
+{"name": "Becoming.KindRelay.Fed.take_distinct", "uses": []}
+{"name": "Becoming.KindRelay.Fed.take_support", "uses": ["Becoming.KindRelay.take_support", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.KindRelay.Fed.taking", "uses": ["Becoming.KindRelay.present_holds", "Becoming.KindRelay.takes_own"]}
+{"name": "Becoming.KindRelay.Fed.unloosened", "uses": []}
+{"name": "Becoming.KindRelay.Form.ofNat_ctorIdx", "uses": []}
+{"name": "Becoming.KindRelay.Runs.along", "uses": ["Becoming.KindRelay.Runs.step"]}
+{"name": "Becoming.KindRelay.Runs.beginnings_without_opening", "uses": ["Becoming.KindRelay.Runs.begins_dormant", "Becoming.KindRelay.Runs.not_keepsOpening_dormant"]}
+{"name": "Becoming.KindRelay.Runs.begins_dormant", "uses": ["Becoming.KindRelay.Runs.not_into", "Becoming.KindRelay.Runs.passes"]}
+{"name": "Becoming.KindRelay.Runs.brief", "uses": ["Becoming.KindRelay.Runs.supported", "Becoming.KindRelay.holds_brief"]}
+{"name": "Becoming.KindRelay.Runs.dormant_not_exceeds", "uses": ["Becoming.KindRelay.Runs.passes", "Becoming.KindRelay.Runs.supported", "Becoming.KindRelay.back_facts", "Becoming.KindRelay.odd_of_next_even", "Becoming.Web.Linked.itself_of_le", "Becoming.Web.Linked.mono", "Becoming.Web.Linked.snoc", "Becoming.le_dest"]}
+{"name": "Becoming.KindRelay.Runs.exceeds", "uses": ["Becoming.KindRelay.Runs.not_into", "Becoming.KindRelay.Runs.supported", "Becoming.ListTests.false_of_not", "Becoming.Web.Linked.last"]}
+{"name": "Becoming.KindRelay.Runs.generation", "uses": ["Becoming.KindRelay.Runs.along", "Becoming.KindRelay.Runs.brief", "Becoming.KindRelay.Runs.step", "Becoming.Web.endless_of_successor", "Becoming.Web.generation_of_one_step_supports"]}
+{"name": "Becoming.KindRelay.Runs.generation_one_up", "uses": ["Becoming.KindRelay.Runs.renews_even", "Becoming.KindRelay.Runs.step", "Becoming.Web.active_along_line", "Becoming.Web.endless_of_successor"]}
+{"name": "Becoming.KindRelay.Runs.generation_order_zero", "uses": ["Becoming.KindRelay.Runs.brief", "Becoming.KindRelay.Runs.step", "Becoming.Web.endless_of_successor", "Becoming.Web.generation_of_one_step_supports", "Becoming.Web.kindClass_within"]}
+{"name": "Becoming.KindRelay.Runs.generation_two_orders", "uses": ["Becoming.KindRelay.Runs.generation_one_up", "Becoming.KindRelay.Runs.generation_order_zero"]}
+{"name": "Becoming.KindRelay.Runs.includes", "uses": ["Becoming.KindRelay.Runs.linked", "Becoming.le_dest"]}
+{"name": "Becoming.KindRelay.Runs.keeps_widening", "uses": ["Becoming.KindRelay.Runs.includes", "Becoming.KindRelay.Runs.opens"]}
+{"name": "Becoming.KindRelay.Runs.linked", "uses": ["Becoming.KindRelay.Runs.along", "Becoming.KindRelay.Runs.step", "Becoming.Web.Linked.snoc"]}
+{"name": "Becoming.KindRelay.Runs.not_includes_within_itself", "uses": ["Becoming.KindRelay.Runs.brief", "Becoming.KindRelay.Runs.some_supported", "Becoming.Web.Linked.one_step"]}
+{"name": "Becoming.KindRelay.Runs.not_into", "uses": ["Becoming.KindRelay.Runs.passes", "Becoming.KindRelay.Runs.supported", "Becoming.KindRelay.starter_facts", "Becoming.KindRelay.starter_fresh"]}
+{"name": "Becoming.KindRelay.Runs.not_keepsOpening_dormant", "uses": ["Becoming.KindRelay.Runs.dormant_not_exceeds"]}
+{"name": "Becoming.KindRelay.Runs.not_keepsWidening_byName", "uses": ["Becoming.KindRelay.Runs.not_includes_within_itself"]}
+{"name": "Becoming.KindRelay.Runs.not_keepsWidening_supportedItself", "uses": ["Becoming.KindRelay.Runs.not_includes_within_itself", "Becoming.Web.supportedItself_within"]}
+{"name": "Becoming.KindRelay.Runs.opens", "uses": ["Becoming.KindRelay.Runs.exceeds", "Becoming.KindRelay.parity_two"]}
+{"name": "Becoming.KindRelay.Runs.passes", "uses": []}
+{"name": "Becoming.KindRelay.Runs.renews_even", "uses": ["Becoming.Flow.BeginsAlong.carries_kind_iff", "Becoming.KindRelay.Runs.not_into", "Becoming.KindRelay.Runs.passes", "Becoming.KindRelay.Runs.supported", "Becoming.KindRelay.sameKind_refl", "Becoming.KindRelay.starter_facts"]}
+{"name": "Becoming.KindRelay.Runs.renews_without_end", "uses": ["Becoming.KindRelay.Runs.renews_even", "Becoming.KindRelay.Runs.step", "Becoming.KindRelay.Runs.supported", "Becoming.KindRelay.parity_two"]}
+{"name": "Becoming.KindRelay.Runs.some_supported", "uses": ["Becoming.KindRelay.Runs.supported"]}
+{"name": "Becoming.KindRelay.Runs.step", "uses": ["Becoming.KindRelay.Runs.passes", "Becoming.KindRelay.Runs.supported", "Becoming.KindRelay.lineage_facts"]}
+{"name": "Becoming.KindRelay.Runs.supported", "uses": []}
+{"name": "Becoming.KindRelay.acting", "uses": ["Becoming.KindRelay.present_holds"]}
+{"name": "Becoming.KindRelay.back_facts", "uses": []}
+{"name": "Becoming.KindRelay.balance_at", "uses": []}
+{"name": "Becoming.KindRelay.balances", "uses": ["Becoming.KindRelay.balance_at"]}
+{"name": "Becoming.KindRelay.conserving", "uses": ["Becoming.KindRelay.give_distinct", "Becoming.KindRelay.give_support", "Becoming.KindRelay.inside", "Becoming.KindRelay.moves_taken", "Becoming.KindRelay.single_distinct", "Becoming.KindRelay.take_support", "Becoming.total_eq_of_supports"]}
+{"name": "Becoming.KindRelay.dependent", "uses": ["Becoming.KindRelay.supported_iff"]}
+{"name": "Becoming.KindRelay.distinct_forms", "uses": []}
+{"name": "Becoming.KindRelay.every_form", "uses": []}
+{"name": "Becoming.KindRelay.gainless", "uses": ["Becoming.Flow.Conserving.gainless", "Becoming.KindRelay.conserving"]}
+{"name": "Becoming.KindRelay.generation", "uses": ["Becoming.KindRelay.Runs.generation", "Becoming.KindRelay.runs"]}
+{"name": "Becoming.KindRelay.generation_one_up", "uses": ["Becoming.KindRelay.Runs.generation_one_up", "Becoming.KindRelay.runs"]}
+{"name": "Becoming.KindRelay.give_distinct", "uses": ["Becoming.KindRelay.pair_distinct", "Becoming.KindRelay.single_distinct"]}
+{"name": "Becoming.KindRelay.give_support", "uses": []}
+{"name": "Becoming.KindRelay.holds_brief", "uses": []}
+{"name": "Becoming.KindRelay.inside", "uses": []}
+{"name": "Becoming.KindRelay.keeps_widening", "uses": ["Becoming.KindRelay.Runs.keeps_widening", "Becoming.KindRelay.runs"]}
+{"name": "Becoming.KindRelay.lineage_facts", "uses": []}
+{"name": "Becoming.KindRelay.moves_facts", "uses": []}
+{"name": "Becoming.KindRelay.moves_taken", "uses": []}
+{"name": "Becoming.KindRelay.not_keepsWidening_byName", "uses": ["Becoming.KindRelay.Runs.not_keepsWidening_byName", "Becoming.KindRelay.runs"]}
+{"name": "Becoming.KindRelay.not_keepsWidening_byName_of_whole", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.whole_not_keepsWidening", "Becoming.KindRelay.balances", "Becoming.KindRelay.distinct_forms", "Becoming.KindRelay.every_form", "Becoming.KindRelay.gainless", "Becoming.KindRelay.requiresWithin"]}
+{"name": "Becoming.KindRelay.not_keepsWidening_dormant", "uses": ["Becoming.KindRelay.Runs.not_keepsOpening_dormant", "Becoming.KindRelay.runs"]}
+{"name": "Becoming.KindRelay.not_keepsWidening_supportedPassing", "uses": ["Becoming.Flow.not_keepsWidening_along_supportedPassing", "Becoming.KindRelay.acting", "Becoming.KindRelay.balances", "Becoming.KindRelay.dependent", "Becoming.KindRelay.unloosened"]}
+{"name": "Becoming.KindRelay.odd_of_next_even", "uses": []}
+{"name": "Becoming.KindRelay.pair_distinct", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.KindRelay.parity_two", "uses": []}
+{"name": "Becoming.KindRelay.passes_iff", "uses": ["Becoming.KindRelay.moves_facts", "Becoming.KindRelay.supported_iff"]}
+{"name": "Becoming.KindRelay.present_holds", "uses": []}
+{"name": "Becoming.KindRelay.renews_without_end", "uses": ["Becoming.KindRelay.Runs.renews_without_end", "Becoming.KindRelay.runs"]}
+{"name": "Becoming.KindRelay.requiresWithin", "uses": ["Becoming.KindRelay.every_form"]}
+{"name": "Becoming.KindRelay.returns", "uses": ["Becoming.KindRelay.parity_two"]}
+{"name": "Becoming.KindRelay.runs", "uses": ["Becoming.KindRelay.passes_iff", "Becoming.KindRelay.supported_iff"]}
+{"name": "Becoming.KindRelay.sameKind_refl", "uses": []}
+{"name": "Becoming.KindRelay.single_distinct", "uses": []}
+{"name": "Becoming.KindRelay.starter_facts", "uses": []}
+{"name": "Becoming.KindRelay.starter_fresh", "uses": []}
+{"name": "Becoming.KindRelay.supported_iff", "uses": []}
+{"name": "Becoming.KindRelay.take_support", "uses": []}
+{"name": "Becoming.KindRelay.takes_own", "uses": []}
+{"name": "Becoming.KindRelay.taking", "uses": ["Becoming.KindRelay.present_holds", "Becoming.KindRelay.takes_own"]}
+{"name": "Becoming.KindRelay.unloosened", "uses": []}
+{"name": "Becoming.Ladder.atZero_pos", "uses": []}
+{"name": "Becoming.Ladder.balance_needed", "uses": ["Becoming.Ladder.keeps_widening", "Becoming.Ladder.upkept_takes", "Becoming.total_zero"]}
+{"name": "Becoming.Ladder.capacity_needed", "uses": ["Becoming.Ladder.keeps_widening", "Becoming.Ladder.oneRenewer_balances", "Becoming.Ladder.oneRenewer_renewers", "Becoming.Ladder.upkept_takes"]}
+{"name": "Becoming.Ladder.frontier_balances", "uses": ["Becoming.Ladder.unused_step"]}
+{"name": "Becoming.Ladder.frontier_capacity", "uses": []}
+{"name": "Becoming.Ladder.frontier_gainless", "uses": ["Becoming.Ladder.atZero_pos", "Becoming.Ladder.same_self", "Becoming.Thresholds.le_of_not_not", "Becoming.le_total_of_mem", "Becoming.total_le_at"]}
+{"name": "Becoming.Ladder.frontier_open", "uses": ["Becoming.Ladder.same_self", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Ladder.frontier_renewers", "uses": ["Becoming.sign_le_one"]}
+{"name": "Becoming.Ladder.frontier_witness", "uses": ["Becoming.Ladder.frontier_balances", "Becoming.Ladder.frontier_gainless", "Becoming.Ladder.frontier_open", "Becoming.Ladder.keeps_widening", "Becoming.Ladder.requiresWithin"]}
+{"name": "Becoming.Ladder.keeps_widening", "uses": ["Becoming.Ladder.supported_none", "Becoming.Ladder.supported_some", "Becoming.Web.exceedsAcross_itself_iff", "Becoming.Web.includesAcross_itself_iff"]}
+{"name": "Becoming.Ladder.oneRenewer_balances", "uses": ["Becoming.Ladder.unused_step", "Becoming.total_map", "Becoming.total_zero"]}
+{"name": "Becoming.Ladder.oneRenewer_renewers", "uses": ["Becoming.sign_le_one", "Becoming.total_map", "Becoming.total_zero"]}
+{"name": "Becoming.Ladder.requiresWithin", "uses": []}
+{"name": "Becoming.Ladder.same_self", "uses": []}
+{"name": "Becoming.Ladder.shift_balance", "uses": []}
+{"name": "Becoming.Ladder.stock_unbounded", "uses": ["Becoming.Ladder.keeps_widening", "Becoming.Ladder.requiresWithin", "Becoming.Web.KeepsWidening.passes_every_bound"]}
+{"name": "Becoming.Ladder.supported_none", "uses": []}
+{"name": "Becoming.Ladder.supported_some", "uses": []}
+{"name": "Becoming.Ladder.unused_step", "uses": []}
+{"name": "Becoming.Ladder.upkeep_needed", "uses": ["Becoming.Ladder.frontier_balances", "Becoming.Ladder.frontier_capacity", "Becoming.Ladder.frontier_renewers", "Becoming.Ladder.keeps_widening"]}
+{"name": "Becoming.Ladder.upkept_balances", "uses": ["Becoming.Ladder.frontier_balances", "Becoming.Ladder.shift_balance", "Becoming.total_map"]}
+{"name": "Becoming.Ladder.upkept_capacity", "uses": []}
+{"name": "Becoming.Ladder.upkept_gainless", "uses": ["Becoming.Ladder.atZero_pos", "Becoming.Ladder.same_self", "Becoming.Thresholds.le_of_not_not", "Becoming.le_total_of_mem", "Becoming.total_add", "Becoming.total_le_at"]}
+{"name": "Becoming.Ladder.upkept_takes", "uses": ["Becoming.Ladder.supported_some", "Becoming.Undecided.mem_upto", "Becoming.mem_map_of"]}
+{"name": "Becoming.Ladder.upkept_witness", "uses": ["Becoming.Flow.Balances.on", "Becoming.Ladder.keeps_widening", "Becoming.Ladder.upkept_balances", "Becoming.Ladder.upkept_capacity", "Becoming.Ladder.upkept_gainless", "Becoming.Ladder.upkept_takes", "Becoming.Web.KeepsWidening.renewers_unbounded"]}
+{"name": "Becoming.Loosening.bounded_while_widening", "uses": ["Becoming.Loosening.keeps_widening"]}
+{"name": "Becoming.Loosening.keeps_widening", "uses": ["Becoming.Loosening.supported_iff", "Becoming.Web.exceedsAcross_itself_iff", "Becoming.Web.includesAcross_itself_iff"]}
+{"name": "Becoming.Loosening.strict_le_one_iff", "uses": []}
+{"name": "Becoming.Loosening.supported_iff", "uses": ["Becoming.Loosening.strict_le_one_iff"]}
+{"name": "Becoming.Map.Undecided.kind_degenerates", "uses": ["Becoming.Map.Undecided.inactive_two", "Becoming.Web.kind_every_branch_ends_of_gone"]}
+{"name": "Becoming.OpeningChain.brevity_needed", "uses": ["Becoming.OpeningChain.dependent", "Becoming.OpeningChain.gains_recur", "Becoming.OpeningChain.lasting", "Becoming.OpeningChain.oneGiver_acting", "Becoming.OpeningChain.oneGiver_balances", "Becoming.OpeningChain.oneGiver_not_within", "Becoming.OpeningChain.unloosened"]}
+{"name": "Becoming.OpeningChain.carriers_within", "uses": ["Becoming.OpeningChain.lasting", "Becoming.OpeningChain.oneGiver_not_within", "Becoming.OpeningChain.relay_within"]}
+{"name": "Becoming.OpeningChain.fixed_but_unbounded", "uses": ["Becoming.OpeningChain.keeps_widening", "Becoming.OpeningChain.relay_balances", "Becoming.OpeningChain.stock_le"]}
+{"name": "Becoming.OpeningChain.forms_independent", "uses": ["Becoming.OpeningChain.laggedRelay_not_opened", "Becoming.OpeningChain.laggedRelay_within", "Becoming.OpeningChain.lateGiver_acting", "Becoming.OpeningChain.lateGiver_balances", "Becoming.OpeningChain.lateGiver_not_within", "Becoming.OpeningChain.lateGiver_opened"]}
+{"name": "Becoming.OpeningChain.gains_recur", "uses": ["Becoming.OpeningChain.gains_iff"]}
+{"name": "Becoming.OpeningChain.keeps_widening", "uses": ["Becoming.OpeningChain.supported_iff", "Becoming.Web.exceedsAcross_itself_iff", "Becoming.Web.includesAcross_itself_iff"]}
+{"name": "Becoming.OpeningChain.laggedRelay_acting", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.OpeningChain.laggedRelay_balances", "uses": ["Becoming.OpeningChain.balanced_step"]}
+{"name": "Becoming.OpeningChain.laggedRelay_not_opened", "uses": ["Becoming.OpeningChain.gains_iff", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.OpeningChain.laggedRelay_within", "uses": ["Becoming.OpeningChain.gains_iff", "Becoming.OpeningChain.gains_recur", "Becoming.OpeningChain.opening_pos", "Becoming.OpeningChain.rises_next", "Becoming.OpeningChain.supported_iff"]}
+{"name": "Becoming.OpeningChain.lasting", "uses": ["Becoming.OpeningChain.supported_iff"]}
+{"name": "Becoming.OpeningChain.lateGiver_acting", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.OpeningChain.lateGiver_balances", "uses": ["Becoming.OpeningChain.balanced_step"]}
+{"name": "Becoming.OpeningChain.lateGiver_not_within", "uses": ["Becoming.OpeningChain.gains_iff", "Becoming.OpeningChain.lateGiving_succ", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.OpeningChain.lateGiver_opened", "uses": ["Becoming.OpeningChain.gains_iff", "Becoming.OpeningChain.gains_recur", "Becoming.OpeningChain.opening_pos", "Becoming.OpeningChain.rises_next", "Becoming.OpeningChain.supported_iff"]}
+{"name": "Becoming.OpeningChain.lateGiving_succ", "uses": []}
+{"name": "Becoming.OpeningChain.oneGiver_not_within", "uses": ["Becoming.OpeningChain.gains_iff", "Becoming.OpeningChain.supported_iff", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.OpeningChain.relay_within", "uses": ["Becoming.OpeningChain.gains_iff", "Becoming.OpeningChain.opening_pos", "Becoming.OpeningChain.rises_next", "Becoming.OpeningChain.supported_iff"]}
+{"name": "Becoming.OpeningChain.stock_le", "uses": ["Becoming.OwnCondition.rung_le_one", "Becoming.total_le", "Becoming.total_ones"]}
+{"name": "Becoming.OpeningChain.unloosened", "uses": []}
+{"name": "Becoming.OpeningChain.within_not_fixed_origin", "uses": ["Becoming.OpeningChain.dependent", "Becoming.OpeningChain.gains_recur", "Becoming.OpeningChain.laggedRelay_acting", "Becoming.OpeningChain.laggedRelay_balances", "Becoming.OpeningChain.laggedRelay_not_opened", "Becoming.OpeningChain.laggedRelay_within"]}
+{"name": "Becoming.OwnCondition.not_within", "uses": ["Becoming.Flow.OpenedByOpenedWithin.not_of_unsupported"]}
+{"name": "Becoming.OwnCondition.rising_kept", "uses": ["Becoming.OwnCondition.rising_iff", "Becoming.OwnCondition.rising_keeps_widening", "Becoming.Web.kept_of_includes_by_name"]}
+{"name": "Becoming.OwnCondition.rung_le_one", "uses": []}
+{"name": "Becoming.Saturated.endless", "uses": ["Becoming.Saturated.supported"]}
+{"name": "Becoming.Saturated.lasting_kept", "uses": ["Becoming.Saturated.endless", "Becoming.Saturated.no_carry", "Becoming.Saturated.supported"]}
+{"name": "Becoming.Saturated.no_carry", "uses": []}
+{"name": "Becoming.Saturated.reverses_within", "uses": ["Becoming.OpeningChain.level_rising", "Becoming.OpeningChain.relay_within", "Becoming.OwnCondition.full_widens_rising", "Becoming.Saturated.level_full", "Becoming.Saturated.still_not_within"]}
+{"name": "Becoming.Saturated.still_not_within", "uses": []}
+{"name": "Becoming.Saturated.supported", "uses": []}
+{"name": "Becoming.Source.balances", "uses": []}
+{"name": "Becoming.Source.closed", "uses": ["Becoming.Source.every"]}
+{"name": "Becoming.Source.distinct", "uses": []}
+{"name": "Becoming.Source.every", "uses": []}
+{"name": "Becoming.Source.from_nothing", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.BalancesOn.rest_not_netGiver", "Becoming.Source.balances", "Becoming.Source.closed", "Becoming.Source.distinct", "Becoming.Source.every", "Becoming.Source.keeps_widening", "Becoming.Source.not_gainless", "Becoming.Source.requiresWithin"]}
+{"name": "Becoming.Source.keeps_widening", "uses": ["Becoming.Source.supported_iff", "Becoming.Web.exceedsAcross_itself_iff", "Becoming.Web.includesAcross_itself_iff"]}
+{"name": "Becoming.Source.not_gainless", "uses": ["Becoming.Source.closed", "Becoming.Source.distinct"]}
+{"name": "Becoming.Source.requiresWithin", "uses": ["Becoming.Source.every"]}
+{"name": "Becoming.Source.supported_iff", "uses": []}
+{"name": "Becoming.Web.KeepsWidening.distinct_configs", "uses": ["Becoming.Web.exceedsAcross_itself_iff", "Becoming.Web.includesAcross_itself_iff", "Becoming.Web.supported_of_config", "Becoming.mem_cons_cases", "Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.Web.KeepsWidening.from_rest_or_open", "uses": ["Becoming.Flow.rise_from_rest_or_open", "Becoming.Web.KeepsWidening.rises_late"]}
+{"name": "Becoming.Web.KeepsWidening.more", "uses": ["Becoming.Web.KeepsWidening.gathers", "Becoming.Web.includesAcross_itself_iff", "Becoming.length_le_count"]}
+{"name": "Becoming.Web.KeepsWidening.open_late", "uses": ["Becoming.Flow.BalancesOn.rest_not_netGiver", "Becoming.Web.KeepsWidening.from_rest_or_open"]}
+{"name": "Becoming.Web.KeepsWidening.passes_every_bound", "uses": ["Becoming.Web.KeepsWidening.distinct_configs", "Becoming.Web.KeepsWidening.later", "Becoming.Web.unbounded_of_distinct_configs"]}
+{"name": "Becoming.Web.KeepsWidening.renewers_unbounded", "uses": ["Becoming.Flow.More.renewers_unbounded_from", "Becoming.Web.KeepsWidening.more"]}
+{"name": "Becoming.Web.KeepsWidening.replenishment_unbounded", "uses": ["Becoming.Flow.More.replenishment_unbounded_from", "Becoming.Web.KeepsWidening.more"]}
+{"name": "Becoming.Web.KeepsWidening.rises_late", "uses": ["Becoming.Web.KeepsWidening.passes_every_bound", "Becoming.rises_between"]}
+{"name": "Becoming.Web.Linked.last", "uses": ["Becoming.Web.Linked.brecOn"]}
+{"name": "Becoming.Web.Linked.one_step", "uses": ["Becoming.Web.Linked.same_of_at"]}
+{"name": "Becoming.Web.Linked.same_of_at", "uses": ["Becoming.Web.Linked.steps_le"]}
+{"name": "Becoming.Web.Linked.snoc", "uses": ["Becoming.Web.Linked.brecOn"]}
+{"name": "Becoming.Web.Linked.steps_le", "uses": ["Becoming.Web.Linked.brecOn"]}
+{"name": "Becoming.Web.endless_of_successor", "uses": ["Becoming.Web.supported_along"]}
+{"name": "Becoming.Web.generation_of_one_step_supports", "uses": ["Becoming.Web.begins_of_arises", "Becoming.Web.supported_along"]}
+{"name": "Becoming.Web.includesAcrossFrom_iff_endless", "uses": ["Becoming.Web.Linked.one_step", "Becoming.Web.active_along_line", "Becoming.Web.linked_of_reached", "Becoming.Web.reached_later", "Becoming.Web.reaches_onward", "Becoming.le_dest"]}
+{"name": "Becoming.Web.kept_of_includes_by_name", "uses": ["Becoming.Web.includesAcrossFrom_iff_endless", "Becoming.Web.itself_keeps", "Becoming.Web.itself_not_generation"]}
+{"name": "Becoming.Web.kindClass_within", "uses": []}
+{"name": "Becoming.Web.kind_every_branch_ends_of_gone", "uses": ["Becoming.Web.every_branch_ends_of_gone", "Becoming.Web.kindClass_within"]}
+{"name": "Becoming.Web.linked_of_reached", "uses": ["Becoming.Web.line_linked", "Becoming.«及之单调»"]}
+{"name": "Becoming.Web.supportedItself_not_generation", "uses": ["Becoming.Web.not_generation_of_within_itself", "Becoming.Web.supportedItself_within"]}
+{"name": "Becoming.Web.supportedItself_within", "uses": []}
+{"name": "Becoming.Web.supportedPassing_cont_iff", "uses": ["Becoming.Web.supportedPassing_within"]}
+{"name": "Becoming.Web.supportedPassing_within", "uses": []}
+{"name": "Becoming.Web.supported_along", "uses": ["Becoming.Web.active_along_line", "Becoming.«及之单调»"]}
+{"name": "Becoming.Web.withinKind_begins_iff", "uses": ["Becoming.Web.supportedPassing_within", "Becoming.Web.withinKind_within"]}
+{"name": "Becoming.Web.withinKind_cont_iff", "uses": []}
+{"name": "Becoming.Web.withinKind_within", "uses": []}
+{"name": "Becoming.«全生成则生成»", "uses": ["Becoming.«所及之传递»"]}

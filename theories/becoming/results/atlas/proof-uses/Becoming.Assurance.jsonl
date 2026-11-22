@@ -1,0 +1,16 @@
+{"name": "Becoming.Assurance.Branch.ends_three", "uses": ["Becoming.Assurance.Branch.one_ne_zero", "Becoming.Assurance.Branch.stuck"]}
+{"name": "Becoming.Assurance.Branch.not_determined", "uses": ["Becoming.Assurance.Branch.two_ne_one"]}
+{"name": "Becoming.Assurance.Branch.one_ne_zero", "uses": []}
+{"name": "Becoming.Assurance.Branch.runs_not_completes", "uses": ["Becoming.Assurance.Branch.ends_three", "Becoming.Assurance.Branch.stuck"]}
+{"name": "Becoming.Assurance.Branch.stuck", "uses": ["Becoming.Assurance.Branch.two_ne_one", "Becoming.Assurance.Branch.two_ne_zero"]}
+{"name": "Becoming.Assurance.Branch.two_ne_one", "uses": []}
+{"name": "Becoming.Assurance.Branch.two_ne_zero", "uses": []}
+{"name": "Becoming.Assurance.completes_iff_of_determined", "uses": ["Becoming.Assurance.completes_of_runs", "Becoming.Assurance.runs_of_completes"]}
+{"name": "Becoming.Assurance.completes_iff_runs", "uses": ["Becoming.Assurance.completes_of_runs", "Becoming.Assurance.runs_of_completes", "Becoming.Assurance.safeTrace_free"]}
+{"name": "Becoming.Assurance.completes_ofMap_iff", "uses": []}
+{"name": "Becoming.Assurance.completes_ofMap_single", "uses": ["Becoming.Assurance.completes_ofMap_iff"]}
+{"name": "Becoming.Assurance.completes_ofPartial_iff", "uses": ["Becoming.Assurance.completes_iff_runs", "Becoming.Assurance.ofPartial_determined", "Becoming.Assurance.runs_of_completes", "Becoming.Assurance.trace_ofPartial_iff"]}
+{"name": "Becoming.Assurance.completes_of_runs", "uses": ["Becoming.Assurance.safeTrace_head"]}
+{"name": "Becoming.Assurance.runs_of_completes", "uses": ["Generative.InquirySufficiency.completes_all_actual_steps_safe", "Generative.InquirySufficiency.completes_every_actual_endpoint", "Generative.InquirySufficiency.completes_has_actual_endpoint"]}
+{"name": "Becoming.Assurance.safeTrace_free", "uses": ["Generative.Trace.brecOn"]}
+{"name": "Becoming.Assurance.safeTrace_head", "uses": []}

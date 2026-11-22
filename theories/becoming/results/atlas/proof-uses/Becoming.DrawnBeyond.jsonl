@@ -1,0 +1,42 @@
+{"name": "Becoming.DrawnBeyond.Dweller.rise_ends_dweller", "uses": ["Becoming.Diversion.dependent", "Becoming.Diversion.diverting_balances", "Becoming.DrawnBeyond.fixed_source", "Becoming.DrawnBeyond.met_source", "Becoming.DrawnBeyond.whole_gainless", "Becoming.Flow.Balances.breaks_beyond_ends"]}
+{"name": "Becoming.DrawnBeyond.Dweller.selected_breaks", "uses": ["Becoming.Diversion.diverting_balances", "Becoming.Diversion.taker_listed", "Becoming.DrawnBeyond.met_source", "Becoming.DrawnBeyond.source_apart", "Becoming.DrawnBeyond.whole_gainless", "Becoming.Flow.favours_breaking_beyond", "Becoming.Web.raises_selectsThrough", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.DrawnBeyond.Lapsing.share_falls", "uses": ["Becoming.DrawnBeyond.whole_gainless", "Becoming.Flow.share_not_against", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.DrawnBeyond.Spreading.balances", "uses": []}
+{"name": "Becoming.DrawnBeyond.Spreading.exact", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.DrawnBeyond.Spreading.gainless", "uses": ["Becoming.DrawnBeyond.whole_gainless"]}
+{"name": "Becoming.DrawnBeyond.Spreading.rewarded", "uses": []}
+{"name": "Becoming.DrawnBeyond.Spreading.share_rises", "uses": ["Becoming.DrawnBeyond.Spreading.exact", "Becoming.DrawnBeyond.Spreading.gainless", "Becoming.DrawnBeyond.Spreading.rewarded", "Becoming.Flow.share_moved_rises", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.DrawnBeyond.Spreading.store_bounded", "uses": ["Becoming.DrawnBeyond.Spreading.balances", "Becoming.DrawnBeyond.Spreading.gainless", "Becoming.Flow.Balances.rise_bounded_by_beyond"]}
+{"name": "Becoming.DrawnBeyond.WithinSlack.balances", "uses": []}
+{"name": "Becoming.DrawnBeyond.WithinSlack.within_slack", "uses": ["Becoming.DrawnBeyond.met_source", "Becoming.DrawnBeyond.whole_gainless"]}
+{"name": "Becoming.DrawnBeyond.fixed_source", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.DrawnBeyond.met_source", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.DrawnBeyond.source_apart", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.DrawnBeyond.whole_gainless", "uses": []}
+{"name": "Becoming.Flow.Balances.beyond_falls_exactly", "uses": ["Becoming.Flow.Balances.stock_lost", "Becoming.total_append"]}
+{"name": "Becoming.Flow.Balances.beyond_falls_inflow", "uses": ["Becoming.Flow.Balances.stock_inflow", "Becoming.total_append"]}
+{"name": "Becoming.Flow.Balances.breaks_beyond", "uses": ["Becoming.Flow.Balances.breaks_beyond_inflow", "Becoming.Flow.gainlessOn_iff_inflow"]}
+{"name": "Becoming.Flow.Balances.breaks_beyond_ends", "uses": ["Becoming.Flow.Balances.breaks_beyond_unsettles"]}
+{"name": "Becoming.Flow.Balances.breaks_beyond_inflow", "uses": ["Becoming.Flow.Balances.beyond_falls_inflow", "Becoming.Web.MetOn.breaks_of_falls"]}
+{"name": "Becoming.Flow.Balances.breaks_beyond_past_free", "uses": ["Becoming.Flow.Balances.stock_lost", "Becoming.Web.MetOn.breaks_of_falls", "Becoming.total_append"]}
+{"name": "Becoming.Flow.Balances.breaks_beyond_unsettles", "uses": ["Becoming.Flow.Balances.breaks_beyond"]}
+{"name": "Becoming.Flow.Balances.open_of_rise_above", "uses": ["Becoming.Flow.Balances.rise_bounded_by_beyond"]}
+{"name": "Becoming.Flow.Balances.rise_bounded_by_beyond", "uses": ["Becoming.Flow.Balances.stock_not_rises_over", "Becoming.total_append"]}
+{"name": "Becoming.Flow.Balances.rise_bounded_by_beyond_inflow", "uses": ["Becoming.Flow.Balances.stock_over_inflow", "Becoming.total_append"]}
+{"name": "Becoming.Flow.Balances.rise_breaks_beyond", "uses": ["Becoming.Flow.Balances.breaks_beyond"]}
+{"name": "Becoming.Flow.Balances.rise_breaks_beyond_inflow", "uses": ["Becoming.Flow.Balances.breaks_beyond_inflow"]}
+{"name": "Becoming.Flow.Balances.rise_lowers_beyond", "uses": ["Becoming.Flow.Balances.rise_lowers_beyond_inflow", "Becoming.Flow.gainlessOn_iff_inflow"]}
+{"name": "Becoming.Flow.Balances.rise_lowers_beyond_dissipating", "uses": ["Becoming.Flow.Balances.beyond_falls_exactly", "Becoming.Flow.DissipatesOn.gainlessOn", "Becoming.Flow.DissipatesOn.takers_le_lost"]}
+{"name": "Becoming.Flow.Balances.rise_lowers_beyond_inflow", "uses": ["Becoming.Flow.Balances.beyond_falls_inflow"]}
+{"name": "Becoming.Flow.Balances.stock_not_rises_over", "uses": ["Becoming.Flow.Balances.stock_over_inflow", "Becoming.Flow.gainlessOn_iff_inflow", "Becoming.between_of_mem_steps", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.RaisesOn.reaches", "uses": ["Becoming.Flow.excess_zero_of_le", "Becoming.Flow.reaches_inflow"]}
+{"name": "Becoming.Flow.favours_breaking_beyond", "uses": ["Becoming.Flow.favours_breaking_beyond_inflow", "Becoming.Flow.gainlessOn_iff_inflow"]}
+{"name": "Becoming.Flow.favours_breaking_beyond_inflow", "uses": ["Becoming.Flow.Balances.rise_breaks_beyond_inflow"]}
+{"name": "Becoming.Flow.lowered_none", "uses": ["Becoming.Flow.excess_zero_of_le", "Becoming.sign_le_of_pos", "Becoming.total_eq_zero"]}
+{"name": "Becoming.Flow.reach_of_pos", "uses": ["Becoming.sign_eq_one"]}
+{"name": "Becoming.Flow.reaches_inflow", "uses": ["Becoming.le_add_excess", "Becoming.total_append"]}
+{"name": "Becoming.Flow.share_moved_rises", "uses": ["Becoming.Flow.share_not_against", "Becoming.SelectionTerm.Generations.moved_by_selection", "Becoming.SelectionTerm.Generations.not_lower", "Becoming.SelectionTerm.Generations.not_lower_step", "Becoming.SelectionTerm.lowered_exact"]}
+{"name": "Becoming.Flow.share_not_against", "uses": ["Becoming.Flow.RaisesOn.reaches", "Becoming.Flow.reach_of_pos", "Becoming.SelectionTerm.discord_zero_of_below", "Becoming.sign_le_one"]}
+{"name": "Becoming.Flow.share_not_lower", "uses": ["Becoming.Flow.lowered_none", "Becoming.Flow.share_not_against", "Becoming.SelectionTerm.Generations.not_lower", "Becoming.SelectionTerm.Generations.not_lower_step"]}
+{"name": "Becoming.Web.MetOn.breaks_of_falls", "uses": ["Becoming.Web.MetOn.stock_eq", "Becoming.le_of_add_le_add_right", "Becoming.search", "Becoming.total_le"]}
+{"name": "Becoming.Web.MetOn.stock_eq", "uses": ["Becoming.add_sub_of_le", "Becoming.total_add", "Becoming.total_congr_on"]}

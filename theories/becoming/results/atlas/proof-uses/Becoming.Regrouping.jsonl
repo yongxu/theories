@@ -1,0 +1,24 @@
+{"name": "Becoming.Frame.regroup_extension_iff", "uses": ["Becoming.Frame.regroup_gain_iff", "Becoming.Frame.regroup_gain_reflects", "Becoming.Frame.regroup_retains", "Becoming.Frame.regroup_retains_iff"]}
+{"name": "Becoming.Frame.regroup_gain_iff", "uses": ["Becoming.Frame.regroup_gain_reflects", "Becoming.Frame.respectsAt_iff"]}
+{"name": "Becoming.Frame.regroup_gain_reflects", "uses": []}
+{"name": "Becoming.Frame.regroup_retains", "uses": []}
+{"name": "Becoming.Frame.regroup_retains_iff", "uses": ["Becoming.Frame.regroup_retains", "Becoming.Frame.respectsAt_iff"]}
+{"name": "Becoming.Frame.respectsAt_iff", "uses": []}
+{"name": "Becoming.Transfer.courseLaw_nonanticipating", "uses": []}
+{"name": "Becoming.Transfer.courses_balanced", "uses": ["Becoming.ExchangeLaw.course_balances_iff", "Becoming.Transfer.courseLaw_nonanticipating", "Becoming.Transfer.courses_feasible"]}
+{"name": "Becoming.Transfer.courses_feasible", "uses": ["Becoming.Transfer.move_levels"]}
+{"name": "Becoming.Transfer.courses_follow_same_rest", "uses": ["Becoming.ExchangeLaw.withAct_follows"]}
+{"name": "Becoming.Transfer.generated_mixed_hidden", "uses": ["Becoming.Transfer.mixed", "Becoming.Transfer.move_group_realized", "Becoming.Transfer.move_levels", "Becoming.Transfer.wait_group_realized", "Becoming.Transfer.wait_levels", "Becoming.Transfer.withheld"]}
+{"name": "Becoming.Transfer.merged_not_respects", "uses": ["Becoming.Transfer.mixed", "Becoming.Transfer.withheld"]}
+{"name": "Becoming.Transfer.move_group_realized", "uses": []}
+{"name": "Becoming.Transfer.move_levels", "uses": ["Becoming.ExchangeLaw.levels_succ"]}
+{"name": "Becoming.Transfer.wait_group_realized", "uses": []}
+{"name": "Becoming.Transfer.wait_levels", "uses": ["Becoming.ExchangeLaw.levels_succ"]}
+{"name": "Becoming.Web.SameRequirements.admits", "uses": []}
+{"name": "Becoming.Web.SameRequirements.extension_iff_widens", "uses": ["Becoming.Web.SameRequirements.respects", "Becoming.Web.regroup_extension_iff_widens"]}
+{"name": "Becoming.Web.SameRequirements.respects", "uses": ["Becoming.Web.SameRequirements.admits"]}
+{"name": "Becoming.Web.admits_iff_requiredLevel", "uses": []}
+{"name": "Becoming.Web.admits_requiredLevel", "uses": ["Becoming.Web.admits_iff_requiredLevel"]}
+{"name": "Becoming.Web.regroup_extension_iff_widens", "uses": ["Becoming.Frame.regroup_extension_iff", "Becoming.Web.paths_extension_iff_widens"]}
+{"name": "Becoming.Web.regroup_faithful_iff_requiredLevel", "uses": ["Becoming.Web.same_admission_iff_requiredLevel"]}
+{"name": "Becoming.Web.same_admission_iff_requiredLevel", "uses": ["Becoming.Web.admits_iff_requiredLevel", "Becoming.Web.admits_requiredLevel"]}

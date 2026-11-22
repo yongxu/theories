@@ -1,0 +1,29 @@
+{"name": "Becoming.EndlessLosses.no_sufficient_matching", "uses": ["Becoming.EndlessLosses.self_match", "Becoming.Frame.SufficientMatching.not_self"]}
+{"name": "Becoming.EndlessLosses.self_match", "uses": []}
+{"name": "Becoming.Frame.ReadsAt.loss_retained", "uses": []}
+{"name": "Becoming.Frame.StrictLossMatch.asymm", "uses": ["Becoming.Frame.StrictLossMatch.length_lt"]}
+{"name": "Becoming.Frame.StrictLossMatch.classCount_le", "uses": ["Becoming.distinct_map_on", "Becoming.marks_le_of_sub", "Becoming.preimage_of_mem_map", "Becoming.total_congr_on", "Becoming.total_map"]}
+{"name": "Becoming.Frame.StrictLossMatch.counterpart", "uses": []}
+{"name": "Becoming.Frame.StrictLossMatch.irrefl", "uses": ["Becoming.Frame.StrictLossMatch.length_lt"]}
+{"name": "Becoming.Frame.StrictLossMatch.length_lt", "uses": ["Becoming.distinct_map_on", "Becoming.length_le_of_sub", "Becoming.length_map", "Becoming.mem_cons_cases", "Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.Frame.StrictLossMatch.mono", "uses": []}
+{"name": "Becoming.Frame.StrictLossMatch.trans", "uses": []}
+{"name": "Becoming.Frame.SufficientMatching.comparison", "uses": ["Becoming.Frame.strictLossMatch_of_extension"]}
+{"name": "Becoming.Frame.SufficientMatching.not_mutual", "uses": []}
+{"name": "Becoming.Frame.SufficientMatching.not_self", "uses": []}
+{"name": "Becoming.Frame.classCount_unit", "uses": ["Becoming.mark_one", "Becoming.total_congr", "Becoming.total_ones"]}
+{"name": "Becoming.Frame.distinct_lostOf", "uses": ["Becoming.Frame.mem_lostOf"]}
+{"name": "Becoming.Frame.exists_fresh", "uses": ["Becoming.length_le_of_sub", "Becoming.length_map", "Becoming.mem_map_of", "Becoming.search"]}
+{"name": "Becoming.Frame.lossesListed_lostOf", "uses": ["Becoming.Frame.distinct_lostOf", "Becoming.Frame.mem_lostOf"]}
+{"name": "Becoming.Frame.matching_of_counts", "uses": ["Becoming.LossMatching.total_middle", "Becoming.distinct_remove", "Becoming.le_of_add_le_add_right", "Becoming.mark_pos", "Becoming.mem_cons_cases", "Becoming.mem_insert", "Becoming.not_mem_of_middle", "Becoming.total_pos"]}
+{"name": "Becoming.Frame.mem_lostOf", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Frame.not_readsAt_of_recovery", "uses": ["Becoming.Frame.readsAt_iff_settled"]}
+{"name": "Becoming.Frame.not_strictLossMatch_of_base_lost", "uses": ["Becoming.Frame.StrictLossMatch.length_lt"]}
+{"name": "Becoming.Frame.not_strictLossMatch_of_kept", "uses": ["Becoming.Frame.StrictLossMatch.counterpart"]}
+{"name": "Becoming.Frame.not_strictLossMatch_of_length_le", "uses": ["Becoming.Frame.StrictLossMatch.length_lt"]}
+{"name": "Becoming.Frame.readsAt_iff_settled", "uses": []}
+{"name": "Becoming.Frame.strictLossMatch_iff_counts", "uses": ["Becoming.Frame.StrictLossMatch.classCount_le", "Becoming.Frame.StrictLossMatch.length_lt", "Becoming.Frame.strictLossMatch_of_counts"]}
+{"name": "Becoming.Frame.strictLossMatch_iff_length_of_alike", "uses": ["Becoming.Frame.StrictLossMatch.length_lt", "Becoming.Frame.classCount_unit", "Becoming.Frame.strictLossMatch_of_counts"]}
+{"name": "Becoming.Frame.strictLossMatch_of_counts", "uses": ["Becoming.Frame.exists_fresh", "Becoming.Frame.matching_of_counts"]}
+{"name": "Becoming.Frame.strictLossMatch_of_extension", "uses": []}
+{"name": "Becoming.LossMatching.total_middle", "uses": ["Becoming.total_append"]}

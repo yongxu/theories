@@ -1,0 +1,29 @@
+{"name": "Becoming.Countdown.Advances.advance", "uses": []}
+{"name": "Becoming.Countdown.Advances.completes", "uses": ["Becoming.Countdown.Advances.countedWork", "Becoming.Countdown.completes_iff"]}
+{"name": "Becoming.Countdown.Advances.countedWork", "uses": ["Becoming.Countdown.Advances.advance", "Becoming.Countdown.Advances.finish"]}
+{"name": "Becoming.Countdown.Advances.finish", "uses": []}
+{"name": "Becoming.Countdown.CountedWork.advance", "uses": []}
+{"name": "Becoming.Countdown.CountedWork.finish", "uses": []}
+{"name": "Becoming.Countdown.CountedWork.stall", "uses": []}
+{"name": "Becoming.Countdown.Reserved.kept", "uses": []}
+{"name": "Becoming.Countdown.Reserved.moves", "uses": []}
+{"name": "Becoming.Countdown.Slow.misses", "uses": []}
+{"name": "Becoming.Countdown.Slow.reserved", "uses": []}
+{"name": "Becoming.Countdown.admitted_invariant_iff", "uses": ["Becoming.Countdown.invariant_iff_reach", "Becoming.Reach.of_step"]}
+{"name": "Becoming.Countdown.completes_iff", "uses": ["Becoming.Countdown.CountedWork.finish", "Becoming.Countdown.eq_zero_of_add_eq", "Becoming.Countdown.pos_of_add_eq", "Becoming.Countdown.stalls_beyond", "Becoming.Countdown.ticks_busy", "Becoming.Countdown.ticks_succ", "Becoming.ListTests.none_ne_some"]}
+{"name": "Becoming.Countdown.completes_plan_iff", "uses": ["Becoming.Assurance.completes_ofPartial_iff", "Becoming.Countdown.completes_iff", "Becoming.Countdown.ticks_eq_runPartial"]}
+{"name": "Becoming.Countdown.eq_zero_of_add_eq", "uses": []}
+{"name": "Becoming.Countdown.exits", "uses": ["Becoming.Countdown.Reserved.moves", "Becoming.Countdown.stays_exit"]}
+{"name": "Becoming.Countdown.invariant_iff_reach", "uses": ["Becoming.Invariant.reach", "Becoming.Reach.of_step"]}
+{"name": "Becoming.Countdown.not_done_before", "uses": ["Becoming.Countdown.pending_before"]}
+{"name": "Becoming.Countdown.pending_before", "uses": ["Becoming.Countdown.stalls_beyond", "Becoming.Countdown.ticks_busy", "Becoming.ListTests.none_ne_some"]}
+{"name": "Becoming.Countdown.pos_of_add_eq", "uses": []}
+{"name": "Becoming.Countdown.runs_valid", "uses": ["Becoming.Countdown.Reserved.moves"]}
+{"name": "Becoming.Countdown.stalls_beyond", "uses": ["Becoming.Countdown.CountedWork.advance", "Becoming.Countdown.CountedWork.stall"]}
+{"name": "Becoming.Countdown.stays_exit", "uses": ["Becoming.Countdown.Reserved.kept", "Becoming.Countdown.Reserved.moves"]}
+{"name": "Becoming.Countdown.ticks_busy", "uses": ["Becoming.Countdown.CountedWork.advance"]}
+{"name": "Becoming.Countdown.ticks_eq_runPartial", "uses": []}
+{"name": "Becoming.Countdown.ticks_succ", "uses": []}
+{"name": "Becoming.CountdownCourses.not_done_before_course", "uses": ["Becoming.Assurance.trace_ofPartial_iff", "Becoming.Countdown.not_done_before", "Becoming.Countdown.ticks_eq_runPartial"]}
+{"name": "Becoming.CountdownCourses.slow_exits", "uses": ["Becoming.Assurance.trace_ofPartial_iff", "Becoming.Countdown.Slow.reserved", "Becoming.Countdown.exits"]}
+{"name": "Becoming.CountdownCourses.slow_misses", "uses": ["Becoming.Assurance.trace_ofPartial_iff", "Becoming.Countdown.Slow.misses"]}

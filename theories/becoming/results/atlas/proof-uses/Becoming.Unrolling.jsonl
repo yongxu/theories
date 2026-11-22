@@ -1,0 +1,15 @@
+{"name": "Becoming.Learnable.ahead_fixes", "uses": ["Becoming.Identification.held_byElimination_rests", "Becoming.Learning.ahead_accords"]}
+{"name": "Becoming.Learnable.eq_of_returns", "uses": ["Becoming.Law.orbit_mul", "Becoming.Law.returns_iff"]}
+{"name": "Becoming.Learnable.fromWorld_respects", "uses": ["Becoming.Identification.prefix_eq_iff", "Becoming.Learnable.firstFit_congr"]}
+{"name": "Becoming.Learnable.given_nothing_not_every", "uses": ["Becoming.Learnable.reading_predicts"]}
+{"name": "Becoming.Learnable.learnable_iff_reading", "uses": ["Becoming.Law.orbit_add", "Becoming.Learnable.fromWorld_respects", "Becoming.Learnable.learnable_iff", "Becoming.Learnable.reading_predicts_from", "Becoming.Learnable.reads_of_agree", "Becoming.le_dest"]}
+{"name": "Becoming.Learnable.reading_predicts", "uses": ["Becoming.Law.orbit_add", "Becoming.Learnable.ahead_fixes"]}
+{"name": "Becoming.Learnable.reading_predicts_from", "uses": ["Becoming.Law.orbit_add", "Becoming.Learnable.ahead_fixes"]}
+{"name": "Becoming.Learnable.reads_of_agree", "uses": ["Becoming.Identification.firstFit_found", "Becoming.Identification.firstFit_sound", "Becoming.Identification.prefix_eq_iff", "Becoming.Law.reachable_iff", "Becoming.Law.returns_of_reachable", "Becoming.Law.sameFuture_iff_below", "Becoming.Learnable.eq_of_returns"]}
+{"name": "Becoming.LearnableRuns.ahead_fixes", "uses": ["Becoming.Branching.law_run_state", "Becoming.Learnable.ahead_fixes", "Becoming.LearnableRuns.prefix_eq"]}
+{"name": "Becoming.LearnableRuns.future_eq", "uses": ["Becoming.Branching.law_run_state", "Becoming.Law.orbit_add"]}
+{"name": "Becoming.LearnableRuns.given_nothing_not_every", "uses": ["Becoming.Learnable.given_nothing_not_every", "Becoming.LearnableRuns.predicts_iff"]}
+{"name": "Becoming.LearnableRuns.learnable_iff_reading", "uses": ["Becoming.Branching.law_run_state", "Becoming.Learnable.learnable_iff_reading", "Becoming.LearnableRuns.future_eq", "Becoming.LearnableRuns.predicts_iff"]}
+{"name": "Becoming.Learning.ahead_accords", "uses": ["Becoming.Learning.unroll_prefix"]}
+{"name": "Becoming.Learning.extendBy_of", "uses": []}
+{"name": "Becoming.Learning.unroll_prefix", "uses": ["Becoming.Learning.extendBy_of"]}

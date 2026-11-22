@@ -1,0 +1,40 @@
+{"name": "Becoming.Belief.rate_changes_on_step", "uses": []}
+{"name": "Becoming.Belief.rate_read_in_regularity", "uses": ["Becoming.adaptive_core_apart"]}
+{"name": "Becoming.Decay.both_open", "uses": []}
+{"name": "Becoming.Decay.decay_alters", "uses": []}
+{"name": "Becoming.Decay.history_apart", "uses": ["Becoming.Decay.intactAlike_class", "Becoming.«亡于核下不变»", "Becoming.«根»"]}
+{"name": "Becoming.Decay.history_within", "uses": []}
+{"name": "Becoming.Decay.intactAlike_class", "uses": []}
+{"name": "Becoming.Decay.possible_acyclic", "uses": ["Becoming.Decay.reach_rises"]}
+{"name": "Becoming.Decay.possible_constant", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.Decay.reach_rises", "uses": []}
+{"name": "Becoming.Decay.time_not_in_core", "uses": ["Becoming.Decay.intactAlike_class", "Becoming.Decay.possible_constant", "Becoming.«类有常当且仅当含于核»"]}
+{"name": "Becoming.LineOfDescent.Endless.generates", "uses": ["Becoming.LineOfDescent.Endless.total"]}
+{"name": "Becoming.Overlap.b_positions", "uses": []}
+{"name": "Becoming.Overlap.continues_each", "uses": ["Becoming.sameValue_class"]}
+{"name": "Becoming.Overlap.tolerance_line_apart", "uses": []}
+{"name": "Becoming.SharedCondition.affecting_member_outside", "uses": ["Becoming.SharedCondition.first_left_into_condition", "Becoming.sameValue_class", "Becoming.«所经不同则不及»"]}
+{"name": "Becoming.SharedCondition.affecting_reaches_other", "uses": []}
+{"name": "Becoming.SharedCondition.fed_outside", "uses": ["Becoming.SharedCondition.first_never_left", "Becoming.«一为类»", "Becoming.«及之单调»", "Becoming.«所经不同则不及»"]}
+{"name": "Becoming.SharedCondition.first_left_into_condition", "uses": []}
+{"name": "Becoming.SharedCondition.first_never_left", "uses": []}
+{"name": "Becoming.ThirdAffects.condition_joined", "uses": ["Becoming.«缘在族中»"]}
+{"name": "Becoming.ThirdAffects.finer_class_reaches", "uses": ["Becoming.ThirdAffects.joined_to_start", "Becoming.ThirdAffects.third_constant"]}
+{"name": "Becoming.ThirdAffects.joined_to_start", "uses": ["Becoming.ThirdAffects.condition_joined", "Becoming.«缘在族中»"]}
+{"name": "Becoming.ThirdAffects.rest_to_rest", "uses": []}
+{"name": "Becoming.ThirdAffects.succ_of_kind", "uses": []}
+{"name": "Becoming.ThirdAffects.third_class", "uses": ["Becoming.sameValue_class"]}
+{"name": "Becoming.ThirdAffects.third_constant", "uses": ["Becoming.ThirdAffects.rest_to_rest", "Becoming.ThirdAffects.succ_of_kind", "Becoming.«有常之逐点»"]}
+{"name": "Becoming.ThirdFed.constant_takes_third", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.ThirdThing.family_keeps_third", "uses": ["Becoming.ThirdThing.step_keeps_third", "Becoming.sameValue_class", "Becoming.«续即缘当且仅当含族»"]}
+{"name": "Becoming.ThirdThing.fixed_class", "uses": ["Becoming.ThirdThing.family_keeps_third", "Becoming.«缘在族中»"]}
+{"name": "Becoming.ThirdThing.fixed_class_reaches", "uses": ["Becoming.ThirdThing.total", "Becoming.«族之续即缘»", "Becoming.«遍有后则族有常»", "Becoming.«遍有后则缘在族核»"]}
+{"name": "Becoming.ThirdThing.step_keeps_third", "uses": []}
+{"name": "Becoming.ThirdThing.total", "uses": []}
+{"name": "Becoming.TwoLines.between", "uses": []}
+{"name": "Becoming.TwoLines.core_through_birth", "uses": ["Becoming.TwoLines.family_class", "Becoming.TwoLines.family_constant", "Becoming.«类有常当且仅当含于核»"]}
+{"name": "Becoming.TwoLines.family_class", "uses": []}
+{"name": "Becoming.TwoLines.family_constant", "uses": ["Becoming.TwoLines.total", "Becoming.«有常之逐点»"]}
+{"name": "Becoming.TwoLines.line_in_family", "uses": ["Becoming.TwoLines.family_class", "Becoming.«及之单调»", "Becoming.«线内同类»"]}
+{"name": "Becoming.TwoLines.other_line_outside", "uses": ["Becoming.TwoLines.line_in_family"]}
+{"name": "Becoming.TwoLines.total", "uses": []}

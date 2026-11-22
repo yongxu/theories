@@ -1,0 +1,7 @@
+{"name": "Becoming.ActivationCapacity.coupled_within_one", "uses": ["Becoming.ActivationCapacity.joint_iff"]}
+{"name": "Becoming.ActivationCapacity.initial_not_within_one", "uses": ["Becoming.ActivationCapacity.joint_iff"]}
+{"name": "Becoming.ActivationCapacity.joint_iff", "uses": ["Becoming.Activation.joint_content_both"]}
+{"name": "Becoming.ActivationCapacity.preparation_changes_capacity", "uses": ["Becoming.ActivationCapacity.coupled_within_one", "Becoming.ActivationCapacity.initial_not_within_one", "Becoming.WithinMoves.after_course"]}
+{"name": "Becoming.ActivationCapacity.prepared_can_end_one_sided", "uses": ["Becoming.ActivationCapacity.coupled_within_one"]}
+{"name": "Becoming.ActivationCapacity.release_loses_joint", "uses": ["Becoming.ActivationCapacity.preparation_changes_capacity", "Becoming.ActivationCapacity.released_not_joint"]}
+{"name": "Becoming.ActivationCapacity.released_not_joint", "uses": ["Becoming.Activation.PastRelease.no_joint"]}

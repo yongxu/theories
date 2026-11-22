@@ -1,0 +1,113 @@
+{"name": "Becoming.LineOnAStock.AlikeFiner.alike_not_met", "uses": []}
+{"name": "Becoming.LineOnAStock.Doubling.course_values", "uses": ["Becoming.Law.stepWhile_unending_iff"]}
+{"name": "Becoming.LineOnAStock.Doubling.ends_by_law", "uses": ["Becoming.LineOnAStock.way_ends", "Becoming.RegimeMargin.keeps_of_below"]}
+{"name": "Becoming.LineOnAStock.Doubling.unmet_by_law", "uses": ["Becoming.LineOnAStock.need_unmet", "Becoming.RegimeMargin.keeps_of_below"]}
+{"name": "Becoming.LineOnAStock.EqualInPlaceOfMore.all_but_grows", "uses": ["Becoming.LineOnAStock.unending_of_fixed", "Becoming.RegimeMargin.keeps_of_below"]}
+{"name": "Becoming.LineOnAStock.EqualInPlaceOfMore.holds_by_law", "uses": ["Becoming.LineOnAStock.course_fixed", "Becoming.LineOnAStock.unending_iff_holds", "Becoming.RegimeMargin.keeps_of_below", "Becoming.RegimeMargin.meets_of_below", "Becoming.RegimeMargin.short_of_below"]}
+{"name": "Becoming.LineOnAStock.HigherStartEnds.from_seven", "uses": ["Becoming.Law.stepWhile_unending_iff"]}
+{"name": "Becoming.LineOnAStock.HigherStartEnds.from_six", "uses": ["Becoming.LineOnAStock.unending_of_fixed"]}
+{"name": "Becoming.LineOnAStock.HigherStartEnds.higher_ends", "uses": ["Becoming.LineOnAStock.HigherStartEnds.from_seven", "Becoming.LineOnAStock.HigherStartEnds.from_six", "Becoming.LineOnAStock.ways_alike"]}
+{"name": "Becoming.LineOnAStock.KidHigherNeed.all_but_down", "uses": ["Becoming.RegimeMargin.keeps_of_below"]}
+{"name": "Becoming.LineOnAStock.KidsNeedMore.all_but_down", "uses": ["Becoming.LineOnAStock.KidsNeedMore.fixed", "Becoming.LineOnAStock.unending_of_fixed", "Becoming.RegimeMargin.keeps_of_below"]}
+{"name": "Becoming.LineOnAStock.KidsNeedMore.fixed", "uses": []}
+{"name": "Becoming.LineOnAStock.NoKids.ends_met", "uses": ["Becoming.Law.stepWhile_unending_iff"]}
+{"name": "Becoming.LineOnAStock.NothingTakenEnds.ending_differs", "uses": ["Becoming.Law.orbit_add", "Becoming.Law.stepWhile_none_iff", "Becoming.Law.stepWhile_steps_iff", "Becoming.LineOnAStock.course_fixed", "Becoming.LineOnAStock.takes_nothing", "Becoming.LineOnAStock.unending_of_fixed"]}
+{"name": "Becoming.LineOnAStock.Overdrawn.gone", "uses": ["Becoming.Law.orbit_add", "Becoming.LineOnAStock.Overdrawn.short", "Becoming.LineOnAStock.course_fixed", "Becoming.LineOnAStock.fall"]}
+{"name": "Becoming.LineOnAStock.Overdrawn.short", "uses": ["Becoming.Naturals.sub_sub", "Becoming.RegimeMargin.Peaked.min_le_left'", "Becoming.RegimeMargin.Peaked.min_le_right'", "Becoming.le_dest"]}
+{"name": "Becoming.LineOnAStock.ProperLine.gone", "uses": ["Becoming.Law.orbit_add", "Becoming.LineOnAStock.course_fixed", "Becoming.LineOnAStock.line_ends", "Becoming.RegimeMargin.keeps_of_below"]}
+{"name": "Becoming.LineOnAStock.ShareRises.course_values", "uses": ["Becoming.Law.orbit_add", "Becoming.LineOnAStock.course_fixed"]}
+{"name": "Becoming.LineOnAStock.ShareRises.goes_on", "uses": ["Becoming.LineOnAStock.unending_of_fixed"]}
+{"name": "Becoming.LineOnAStock.TakesNothing.lost", "uses": ["Becoming.Law.orbit_add", "Becoming.LineOnAStock.course_fixed", "Becoming.LineOnAStock.takes_nothing", "Becoming.LineOnAStock.unending_of_fixed"]}
+{"name": "Becoming.LineOnAStock.TwoForOne.holds_by_law", "uses": ["Becoming.Law.orbit_add", "Becoming.LineOnAStock.course_fixed", "Becoming.LineOnAStock.unending_iff_holds", "Becoming.RegimeMargin.keeps_of_below", "Becoming.RegimeMargin.meets_of_below", "Becoming.RegimeMargin.short_of_below"]}
+{"name": "Becoming.LineOnAStock.account", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.balance_over_stretch_on"]}
+{"name": "Becoming.LineOnAStock.account_unending", "uses": ["Becoming.LineOnAStock.account", "Becoming.LineOnAStock.unending_taken_below"]}
+{"name": "Becoming.LineOnAStock.after_alike", "uses": ["Becoming.LineOnAStock.decide_le_congr"]}
+{"name": "Becoming.LineOnAStock.after_append", "uses": ["Becoming.ListTests.append_assoc"]}
+{"name": "Becoming.LineOnAStock.after_flatMap", "uses": []}
+{"name": "Becoming.LineOnAStock.after_length_le", "uses": ["Becoming.LineOnAStock.block_le", "Becoming.ListTests.length_append"]}
+{"name": "Becoming.LineOnAStock.after_length_lt", "uses": ["Becoming.LineOnAStock.after_length_le", "Becoming.LineOnAStock.block_le", "Becoming.LineOnAStock.block_lt", "Becoming.ListTests.length_append"]}
+{"name": "Becoming.LineOnAStock.after_of_met", "uses": []}
+{"name": "Becoming.LineOnAStock.alike_iff", "uses": ["Becoming.LineOnAStock.alike_of_met", "Becoming.LineOnAStock.met_of_alike_le"]}
+{"name": "Becoming.LineOnAStock.alike_of_met", "uses": ["Becoming.LineOnAStock.after_alike"]}
+{"name": "Becoming.LineOnAStock.allKids_flatMap", "uses": []}
+{"name": "Becoming.LineOnAStock.allKids_rises", "uses": ["Becoming.LineOnAStock.after_of_met", "Becoming.LineOnAStock.rise", "Becoming.total_ones"]}
+{"name": "Becoming.LineOnAStock.anyMet_iff", "uses": []}
+{"name": "Becoming.LineOnAStock.below_after", "uses": ["Becoming.LineOnAStock.line_from_line"]}
+{"name": "Becoming.LineOnAStock.below_keeps", "uses": ["Becoming.LineOnAStock.line_from_line"]}
+{"name": "Becoming.LineOnAStock.block_le", "uses": []}
+{"name": "Becoming.LineOnAStock.block_lt", "uses": ["Becoming.LineOnAStock.mem_of_ne_nil", "Becoming.length_pos_of_mem"]}
+{"name": "Becoming.LineOnAStock.born_alike", "uses": ["Becoming.LineOnAStock.born_eq_length", "Becoming.LineOnAStock.ways_alike"]}
+{"name": "Becoming.LineOnAStock.born_eq_length", "uses": ["Becoming.LineOnAStock.family_eq", "Becoming.SelectionTerm.Generations.born_eq"]}
+{"name": "Becoming.LineOnAStock.course_asItWas", "uses": ["Becoming.LineOnAStock.after_of_met"]}
+{"name": "Becoming.LineOnAStock.course_fixed", "uses": []}
+{"name": "Becoming.LineOnAStock.course_generation", "uses": ["Becoming.LineOnAStock.after_of_met", "Becoming.LineOnAStock.taken_generation"]}
+{"name": "Becoming.LineOnAStock.decide_le_congr", "uses": []}
+{"name": "Becoming.LineOnAStock.draw_holds", "uses": ["Becoming.LineOnAStock.draw_rises"]}
+{"name": "Becoming.LineOnAStock.draw_rises", "uses": ["Becoming.LineOnAStock.lineTake_append"]}
+{"name": "Becoming.LineOnAStock.ends_all", "uses": ["Becoming.LineOnAStock.ends_high", "Becoming.LineOnAStock.ends_low", "Becoming.LineOnAStock.strong_below"]}
+{"name": "Becoming.LineOnAStock.ends_high", "uses": ["Becoming.LineOnAStock.below_keeps", "Becoming.LineOnAStock.ends_low", "Becoming.LineOnAStock.lineCount_pos", "Becoming.LineOnAStock.lineTake_le_taken", "Becoming.LineOnAStock.line_or_none", "Becoming.LineOnAStock.none_shift", "Becoming.LineOnAStock.rise", "Becoming.LineOnAStock.step_zero", "Becoming.TurningInTime.kept_within"]}
+{"name": "Becoming.LineOnAStock.ends_low", "uses": ["Becoming.LineOnAStock.below_after", "Becoming.LineOnAStock.none_shift", "Becoming.TurningInTime.kept_within"]}
+{"name": "Becoming.LineOnAStock.fall", "uses": ["Becoming.LineOnAStock.fall_from"]}
+{"name": "Becoming.LineOnAStock.fall_from", "uses": ["Becoming.LineOnAStock.draw_holds", "Becoming.LineOnAStock.fall_low", "Becoming.LineOnAStock.lineTake_le_taken", "Becoming.LineOnAStock.step_overdrawn"]}
+{"name": "Becoming.LineOnAStock.fall_low", "uses": ["Becoming.LineOnAStock.gone_after"]}
+{"name": "Becoming.LineOnAStock.falls_to_unmet", "uses": ["Becoming.LineOnAStock.generation_ancestor", "Becoming.LineOnAStock.need_unmet"]}
+{"name": "Becoming.LineOnAStock.family_eq", "uses": ["Becoming.LineOnAStock.after_flatMap"]}
+{"name": "Becoming.LineOnAStock.generation_ancestor", "uses": ["Becoming.LineOnAStock.mem_allKids_iff"]}
+{"name": "Becoming.LineOnAStock.generation_below", "uses": ["Becoming.LineOnAStock.mem_allKids_iff"]}
+{"name": "Becoming.LineOnAStock.generation_mem", "uses": ["Becoming.LineOnAStock.mem_allKids_iff", "Becoming.LineOnAStock.mem_of_ne_nil"]}
+{"name": "Becoming.LineOnAStock.generation_orbit", "uses": []}
+{"name": "Becoming.LineOnAStock.generations_rise", "uses": ["Becoming.LineOnAStock.allKids_rises", "Becoming.LineOnAStock.generation_mem", "Becoming.LineOnAStock.generation_orbit", "Becoming.LineOnAStock.kids_of_grows", "Becoming.LineOnAStock.mem_of_ne_nil", "Becoming.length_pos_of_mem"]}
+{"name": "Becoming.LineOnAStock.gone_after", "uses": ["Becoming.LineOnAStock.gone_from", "Becoming.LineOnAStock.none_after"]}
+{"name": "Becoming.LineOnAStock.gone_from", "uses": ["Becoming.Law.orbit_add", "Becoming.LineOnAStock.never_in", "Becoming.le_dest"]}
+{"name": "Becoming.LineOnAStock.ite_le", "uses": []}
+{"name": "Becoming.LineOnAStock.kids_of_grows", "uses": []}
+{"name": "Becoming.LineOnAStock.left_of_taken", "uses": []}
+{"name": "Becoming.LineOnAStock.lineCount_pos", "uses": ["Becoming.le_total_of_mem"]}
+{"name": "Becoming.LineOnAStock.lineTake_append", "uses": ["Becoming.total_append"]}
+{"name": "Becoming.LineOnAStock.lineTake_le_taken", "uses": ["Becoming.LineOnAStock.ite_le", "Becoming.total_le"]}
+{"name": "Becoming.LineOnAStock.lineTake_true", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.LineOnAStock.line_ends", "uses": ["Becoming.LineOnAStock.ends_all", "Becoming.LineOnAStock.gone_after", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.LineOnAStock.line_from_line", "uses": ["Becoming.LineOnAStock.mem_after_iff"]}
+{"name": "Becoming.LineOnAStock.line_or_none", "uses": []}
+{"name": "Becoming.LineOnAStock.mem_after_iff", "uses": ["Becoming.LineOnAStock.after_flatMap", "Becoming.LineOnAStock.mem_cond", "Becoming.LineOnAStock.mem_cond_of", "Becoming.ListTests.mem_flatMap_iff"]}
+{"name": "Becoming.LineOnAStock.mem_allKids_iff", "uses": ["Becoming.LineOnAStock.allKids_flatMap", "Becoming.ListTests.mem_flatMap_iff"]}
+{"name": "Becoming.LineOnAStock.mem_cond", "uses": []}
+{"name": "Becoming.LineOnAStock.mem_cond_of", "uses": []}
+{"name": "Becoming.LineOnAStock.mem_generation", "uses": ["Becoming.LineOnAStock.mem_after_iff", "Becoming.LineOnAStock.mem_allKids_iff"]}
+{"name": "Becoming.LineOnAStock.mem_of_ne_nil", "uses": []}
+{"name": "Becoming.LineOnAStock.met_of_alike_le", "uses": ["Becoming.LineOnAStock.after_length_lt"]}
+{"name": "Becoming.LineOnAStock.met_or_unmet", "uses": []}
+{"name": "Becoming.LineOnAStock.need_in_after", "uses": ["Becoming.LineOnAStock.mem_after_iff"]}
+{"name": "Becoming.LineOnAStock.need_unmet", "uses": ["Becoming.LineOnAStock.course_asItWas", "Becoming.LineOnAStock.generation_mem", "Becoming.LineOnAStock.generations_rise", "Becoming.LineOnAStock.kids_of_grows", "Becoming.LineOnAStock.mem_of_ne_nil", "Becoming.LineOnAStock.met_or_unmet", "Becoming.LineOnAStock.way_while_met", "Becoming.TurningInTime.rising_takes_all", "Becoming.first_of_decided"]}
+{"name": "Becoming.LineOnAStock.needs_after_iff", "uses": ["Becoming.LineOnAStock.mem_after_iff", "Becoming.LineOnAStock.mem_of_ne_nil"]}
+{"name": "Becoming.LineOnAStock.needs_kept", "uses": ["Becoming.LineOnAStock.needs_after_iff"]}
+{"name": "Becoming.LineOnAStock.never_in", "uses": ["Becoming.LineOnAStock.family_eq", "Becoming.LineOnAStock.mem_cond", "Becoming.SelectionTerm.Generations.kept_of_descent"]}
+{"name": "Becoming.LineOnAStock.none_after", "uses": ["Becoming.LineOnAStock.line_from_line"]}
+{"name": "Becoming.LineOnAStock.none_shift", "uses": ["Becoming.Law.orbit_add"]}
+{"name": "Becoming.LineOnAStock.one_need_ends", "uses": ["Becoming.Law.stepWhile_none_iff", "Becoming.Law.stepWhile_steps_iff", "Becoming.LineOnAStock.generation_mem", "Becoming.LineOnAStock.kids_of_grows", "Becoming.LineOnAStock.need_unmet"]}
+{"name": "Becoming.LineOnAStock.reaches_from", "uses": ["Becoming.LineOnAStock.below_after", "Becoming.LineOnAStock.below_keeps", "Becoming.LineOnAStock.mem_generation", "Becoming.LineOnAStock.step_lowers"]}
+{"name": "Becoming.LineOnAStock.reaches_holds", "uses": ["Becoming.LineOnAStock.reaches_from", "Becoming.LineOnAStock.strong_below", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.LineOnAStock.rise", "uses": ["Becoming.LineOnAStock.draw_rises"]}
+{"name": "Becoming.LineOnAStock.step_lowers", "uses": ["Becoming.LineOnAStock.step_zero", "Becoming.TurningInTime.held_above"]}
+{"name": "Becoming.LineOnAStock.step_overdrawn", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.LineOnAStock.step_zero", "uses": ["Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.LineOnAStock.strip_after", "uses": ["Becoming.LineOnAStock.mem_cond", "Becoming.LineOnAStock.strip_all", "Becoming.LineOnAStock.strip_append", "Becoming.LineOnAStock.strip_neg", "Becoming.LineOnAStock.strip_pos"]}
+{"name": "Becoming.LineOnAStock.strip_all", "uses": ["Becoming.LineOnAStock.strip_pos"]}
+{"name": "Becoming.LineOnAStock.strip_append", "uses": ["Becoming.LineOnAStock.strip_neg", "Becoming.LineOnAStock.strip_pos"]}
+{"name": "Becoming.LineOnAStock.strip_course", "uses": ["Becoming.LineOnAStock.left_of_taken", "Becoming.LineOnAStock.strip_after", "Becoming.LineOnAStock.taken_strip"]}
+{"name": "Becoming.LineOnAStock.strip_neg", "uses": []}
+{"name": "Becoming.LineOnAStock.strip_pos", "uses": []}
+{"name": "Becoming.LineOnAStock.strip_strip", "uses": ["Becoming.LineOnAStock.strip_neg", "Becoming.LineOnAStock.strip_pos"]}
+{"name": "Becoming.LineOnAStock.strong_below", "uses": []}
+{"name": "Becoming.LineOnAStock.taken_allKids", "uses": ["Becoming.LineOnAStock.allKids_flatMap", "Becoming.SelectionTerm.Generations.total_flatMap", "Becoming.total_congr"]}
+{"name": "Becoming.LineOnAStock.taken_below", "uses": ["Becoming.LineOnAStock.mem_generation", "Becoming.LineOnAStock.step_zero"]}
+{"name": "Becoming.LineOnAStock.taken_generation", "uses": ["Becoming.LineOnAStock.taken_allKids"]}
+{"name": "Becoming.LineOnAStock.taken_strip", "uses": ["Becoming.LineOnAStock.strip_neg", "Becoming.LineOnAStock.strip_pos"]}
+{"name": "Becoming.LineOnAStock.takes_nothing", "uses": ["Becoming.LineOnAStock.strip_course", "Becoming.LineOnAStock.strip_strip"]}
+{"name": "Becoming.LineOnAStock.unending_iff_holds", "uses": ["Becoming.Law.orbit_add", "Becoming.Law.stepWhile_unending_iff", "Becoming.LineOnAStock.course_generation", "Becoming.LineOnAStock.generation_below", "Becoming.LineOnAStock.generation_mem", "Becoming.LineOnAStock.mem_of_ne_nil", "Becoming.LineOnAStock.reaches_holds", "Becoming.LineOnAStock.within_along", "Becoming.RegimeMargin.holds", "Becoming.le_dest"]}
+{"name": "Becoming.LineOnAStock.unending_of_fixed", "uses": ["Becoming.Law.orbit_add", "Becoming.Law.stepWhile_unending_iff", "Becoming.LineOnAStock.course_fixed", "Becoming.le_dest"]}
+{"name": "Becoming.LineOnAStock.unending_taken_below", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.LineOnAStock.taken_below"]}
+{"name": "Becoming.LineOnAStock.way_ends", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.LineOnAStock.ends_all", "Becoming.LineOnAStock.lineTake_true", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.LineOnAStock.way_while_met", "uses": ["Becoming.LineOnAStock.course_asItWas", "Becoming.LineOnAStock.generation_orbit", "Becoming.TurningInTime.asItWas_way"]}
+{"name": "Becoming.LineOnAStock.ways_alike", "uses": ["Becoming.LineOnAStock.after_alike"]}
+{"name": "Becoming.LineOnAStock.within_along", "uses": []}

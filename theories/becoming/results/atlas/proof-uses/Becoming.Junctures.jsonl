@@ -1,0 +1,50 @@
+{"name": "Becoming.Branching.Hidden.chain_reach", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans"]}
+{"name": "Becoming.Branching.Hidden.fork_back", "uses": ["Becoming.Branching.Hidden.chain_reach", "Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.Branching.Hidden.juncture_decides", "uses": ["Becoming.Branching.Hidden.fork_back", "Becoming.Branching.Hidden.sink_lost", "Becoming.Branching.Hidden.sink_stuck", "Becoming.Branching.Hidden.to_origin", "Becoming.Reach.refl"]}
+{"name": "Becoming.Branching.Hidden.path", "uses": []}
+{"name": "Becoming.Branching.Hidden.returns", "uses": ["Becoming.Reach.refl"]}
+{"name": "Becoming.Branching.Hidden.sink_lost", "uses": ["Becoming.Branching.Hidden.sink_stuck"]}
+{"name": "Becoming.Branching.Hidden.sink_stuck", "uses": []}
+{"name": "Becoming.Branching.Hidden.to_origin", "uses": []}
+{"name": "Becoming.Branching.Juncture.outcomes_differ", "uses": []}
+{"name": "Becoming.Branching.Juncture.possiblyDrawn", "uses": ["Becoming.Branching.Juncture.reach", "Becoming.Branching.possiblyDrawn_iff", "Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.Branching.Juncture.reach", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.Branching.Juncture.returns", "uses": ["Becoming.Reach.trans"]}
+{"name": "Becoming.Branching.LeadsSteady.next", "uses": ["Becoming.Branching.any_congr"]}
+{"name": "Becoming.Branching.Many.no_juncture", "uses": ["Becoming.Reach.refl"]}
+{"name": "Becoming.Branching.Many.options", "uses": []}
+{"name": "Becoming.Branching.OneWay.juncture", "uses": ["Becoming.Branching.OneWay.atTrue_invariant", "Becoming.Invariant.reach", "Becoming.Reach.refl"]}
+{"name": "Becoming.Branching.PossiblyDrawn.passes_juncture", "uses": ["Becoming.Branching.loss_passes_juncture", "Becoming.Branching.possiblyDrawn_iff"]}
+{"name": "Becoming.Branching.SubProcess.reach", "uses": ["Becoming.Reach.map"]}
+{"name": "Becoming.Branching.any_congr", "uses": []}
+{"name": "Becoming.Branching.juncture_iff", "uses": []}
+{"name": "Becoming.Branching.keeping_greatest", "uses": ["Becoming.Branching.SubProcess.reach", "Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.Branching.keeping_keeps", "uses": ["Becoming.Branching.reach_keeping_iff", "Becoming.Branching.trace_last", "Becoming.Reach.refl"]}
+{"name": "Becoming.Branching.keeping_removes_at_juncture", "uses": ["Becoming.Branching.SubProcess.reach", "Becoming.Branching.keeping_keeps", "Becoming.Branching.keeping_sub", "Becoming.Branching.step_back"]}
+{"name": "Becoming.Branching.keeping_returns_iff", "uses": ["Becoming.Branching.SubProcess.reach", "Becoming.Branching.keeping_sub", "Becoming.Branching.reach_keeping_iff"]}
+{"name": "Becoming.Branching.keeping_sub", "uses": []}
+{"name": "Becoming.Branching.keeps_before_juncture", "uses": []}
+{"name": "Becoming.Branching.leadsWithin_complete", "uses": ["Becoming.ListTests.and_true_iff", "Becoming.ListTests.any_true_iff", "Becoming.ListTests.or_true_iff", "Generative.Trace.brecOn"]}
+{"name": "Becoming.Branching.leadsWithin_sound", "uses": ["Becoming.ListTests.and_true_iff", "Becoming.ListTests.any_true_iff", "Becoming.ListTests.or_true_iff", "Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans"]}
+{"name": "Becoming.Branching.leadsWithin_up", "uses": ["Becoming.ListTests.and_true_iff", "Becoming.ListTests.any_true_iff", "Becoming.ListTests.or_true_iff"]}
+{"name": "Becoming.Branching.leads_bound", "uses": ["Becoming.Branching.LeadsSteady.next", "Becoming.Branching.leadsWithin_up", "Becoming.Branching.leads_settles", "Becoming.Undecided.kept_from"]}
+{"name": "Becoming.Branching.leads_settles", "uses": ["Becoming.Branching.LeadsSteady.next", "Becoming.Branching.leadsWithin_up", "Becoming.Branching.leads_steady_or_rises", "Becoming.Undecided.settles_within"]}
+{"name": "Becoming.Branching.leads_steady_or_rises", "uses": ["Becoming.Branching.leadsWithin_up", "Becoming.Undecided.each_or_some"]}
+{"name": "Becoming.Branching.losing_loses", "uses": ["Becoming.Branching.trace_last"]}
+{"name": "Becoming.Branching.losing_not_returns", "uses": ["Becoming.Branching.SubProcess.reach", "Becoming.Branching.losing_sub"]}
+{"name": "Becoming.Branching.losing_sub", "uses": []}
+{"name": "Becoming.Branching.loss_passes_juncture", "uses": ["Becoming.Branching.loss_passes_juncture_from", "Becoming.Reach.refl"]}
+{"name": "Becoming.Branching.loss_passes_juncture_decided", "uses": ["Becoming.Branching.loss_passes_juncture_decided_from", "Becoming.Reach.refl"]}
+{"name": "Becoming.Branching.loss_passes_juncture_decided_from", "uses": ["Becoming.Branching.step_back", "Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans", "Generative.Trace.brecOn"]}
+{"name": "Becoming.Branching.loss_passes_juncture_from", "uses": ["Becoming.Branching.step_back", "Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans", "Generative.Trace.brecOn"]}
+{"name": "Becoming.Branching.loss_passes_juncture_listed", "uses": ["Becoming.Branching.loss_passes_juncture_decided", "Becoming.Branching.reach_decided_listed"]}
+{"name": "Becoming.Branching.lpo_of_junctures_found", "uses": ["Becoming.Branching.Hidden.juncture_decides", "Becoming.Branching.Hidden.path", "Becoming.Branching.Hidden.returns", "Becoming.Branching.Hidden.sink_lost"]}
+{"name": "Becoming.Branching.no_juncture_of_keeps", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.Branching.reach_decided_listed", "uses": ["Becoming.Branching.reach_iff_leads"]}
+{"name": "Becoming.Branching.reach_iff_leads", "uses": ["Becoming.Branching.leadsWithin_complete", "Becoming.Branching.leadsWithin_sound", "Becoming.Branching.leads_bound", "Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.Branching.reach_keeping_iff", "uses": ["Becoming.Branching.SubProcess.reach", "Becoming.Branching.keeping_sub", "Becoming.Branching.reach_keeping_of_trace"]}
+{"name": "Becoming.Branching.reach_keeping_of_trace", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans", "Generative.Trace.brecOn"]}
+{"name": "Becoming.Branching.reach_within_listed", "uses": ["Becoming.Reaching.reach_within_of_pred_le"]}
+{"name": "Becoming.Branching.step_back", "uses": ["Becoming.reach_iff_withinClosure", "Becoming.«及当且仅当一步而所闭»", "Becoming.«所闭当且仅当同一或及»"]}
+{"name": "Becoming.TimedResponse.same_step_unreached", "uses": ["Becoming.TimedResponse.answer_alike_before"]}
+{"name": "Becoming.TimedResponse.turned_at_juncture", "uses": ["Becoming.TimedResponse.same_step_unreached"]}

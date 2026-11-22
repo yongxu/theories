@@ -1,0 +1,88 @@
+{"name": "Becoming.Accretion.never_ceases", "uses": []}
+{"name": "Becoming.Accretion.never_falls", "uses": []}
+{"name": "Becoming.Accretion.rises", "uses": []}
+{"name": "Becoming.Accretion.unceasing", "uses": []}
+{"name": "Becoming.Attrition.ceasing", "uses": []}
+{"name": "Becoming.Attrition.nothing_arises", "uses": []}
+{"name": "Becoming.CeasesToBe.not_comes", "uses": []}
+{"name": "Becoming.CeasesToBe.not_comes_by_grammar", "uses": ["Becoming.Steps.wang_iff_sheng_next", "Becoming.ceasesToBe_iff_wang", "Becoming.comesToBe_not_iff_sheng"]}
+{"name": "Becoming.CeasesToBe.of_not", "uses": []}
+{"name": "Becoming.Clear.cases", "uses": []}
+{"name": "Becoming.Clear.false_before", "uses": ["Becoming.Clear.mono", "Becoming.ListTests.and_right", "Becoming.ListTests.false_of_not"]}
+{"name": "Becoming.Clear.false_of_not", "uses": []}
+{"name": "Becoming.Clear.first_of_true", "uses": ["Becoming.Clear.or_first"]}
+{"name": "Becoming.Clear.first_unique", "uses": ["Becoming.Clear.false_before", "Becoming.Clear.not_both"]}
+{"name": "Becoming.Clear.mono", "uses": ["Becoming.ListTests.and_left"]}
+{"name": "Becoming.Clear.not_both", "uses": []}
+{"name": "Becoming.Clear.or_first", "uses": ["Becoming.Clear.cases", "Becoming.bool_and_true"]}
+{"name": "Becoming.ComesToBe.not_ceases", "uses": []}
+{"name": "Becoming.ComesToBe.not_ceases_by_grammar", "uses": ["Becoming.Steps.wang_iff_sheng_next", "Becoming.ceasesToBe_not_iff_wang", "Becoming.comesToBe_iff_sheng"]}
+{"name": "Becoming.ComesToBe.of_not", "uses": []}
+{"name": "Becoming.Flow.excess_zero_of_le", "uses": []}
+{"name": "Becoming.Recurs.accumulates", "uses": ["Becoming.recurring_accumulates", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Recurs.mono", "uses": []}
+{"name": "Becoming.Steps.buqiong_iff", "uses": ["Becoming.Steps.hasSucc_iff", "Becoming.Steps.reach_later", "Becoming.Steps.reached_of_buqiong"]}
+{"name": "Becoming.Steps.course_of_constant", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.Steps.iff_of_eqs", "uses": []}
+{"name": "Becoming.Steps.keeps_of_alike", "uses": []}
+{"name": "Becoming.Steps.reach_later", "uses": []}
+{"name": "Becoming.Steps.reached_of_buqiong", "uses": ["Becoming.Steps.hasSucc_iff", "Becoming.«及之传递»"]}
+{"name": "Becoming.Web.arising_recurs_iff", "uses": ["Becoming.coming_recurs_iff"]}
+{"name": "Becoming.Web.ceasesToStand_iff_wang", "uses": ["Becoming.ceasesToBe_iff_wang"]}
+{"name": "Becoming.Web.ceases_iff_inactive_sheng", "uses": ["Becoming.Steps.wang_iff_sheng_next", "Becoming.Web.ceases_iff_wang", "Becoming.Web.sheng_iff_steps", "Becoming.Web.wang_iff_steps"]}
+{"name": "Becoming.Web.ceases_iff_wang", "uses": ["Becoming.Web.wang_iff_steps", "Becoming.ceasesToBe_iff_wang"]}
+{"name": "Becoming.Web.ceasing_readings", "uses": ["Becoming.CeasesToBe.not_comes", "Becoming.CeasesToBe.of_not", "Becoming.ComesToBe.not_ceases", "Becoming.ComesToBe.of_not"]}
+{"name": "Becoming.Web.change_readings", "uses": []}
+{"name": "Becoming.Web.dissolves_iff_wang", "uses": ["Becoming.ceasesToBe_iff_wang"]}
+{"name": "Becoming.Web.falls_need_rises", "uses": ["Becoming.Recurs.mono", "Becoming.excess_pos", "Becoming.rising_recurs"]}
+{"name": "Becoming.Web.flash_positions", "uses": ["Becoming.Steps.along_irrefl", "Becoming.Web.arises_iff_sheng", "Becoming.Web.ceases_iff_wang", "Becoming.«四相无自立»"]}
+{"name": "Becoming.Web.sheng_iff_arises_or_ceases", "uses": ["Becoming.Web.sheng_iff_steps", "Becoming.sheng_iff_change"]}
+{"name": "Becoming.Web.standing_recurs_iff", "uses": ["Becoming.coming_recurs_iff"]}
+{"name": "Becoming.Web.supported_of", "uses": []}
+{"name": "Becoming.Web.unceasing_iff", "uses": ["Becoming.Web.unceasing_iff_covering"]}
+{"name": "Becoming.Web.unceasing_iff_covering", "uses": ["Becoming.Web.arising_recurs_iff"]}
+{"name": "Becoming.across", "uses": ["Becoming.excess_balance"]}
+{"name": "Becoming.buqiong_alike_iff", "uses": ["Becoming.Steps.buqiong_iff", "Becoming.Steps.keeps_of_alike"]}
+{"name": "Becoming.buqiong_of_stays_failing", "uses": ["Becoming.buqiong_alike_iff", "Becoming.stays_failing"]}
+{"name": "Becoming.ceasesToBe_iff_wang", "uses": ["Becoming.Steps.hasSucc_iff"]}
+{"name": "Becoming.ceasesToBe_not_iff_wang", "uses": ["Becoming.Steps.hasSucc_iff"]}
+{"name": "Becoming.comesToBe_iff_sheng", "uses": ["Becoming.Steps.hasPred_iff"]}
+{"name": "Becoming.comesToBe_not_iff_sheng", "uses": ["Becoming.Steps.hasPred_iff"]}
+{"name": "Becoming.coming_recurs_iff", "uses": ["Becoming.Recurs.mono", "Becoming.fall_mark", "Becoming.falling_recurs", "Becoming.mark_le_one", "Becoming.mark_pos", "Becoming.rise_mark", "Becoming.rising_recurs"]}
+{"name": "Becoming.continues_in_core_iff_buqiong", "uses": ["Becoming.Steps.buqiong_iff", "Becoming.Steps.iff_of_eqs", "Becoming.core_iff_same_course"]}
+{"name": "Becoming.core_iff_same_course", "uses": ["Becoming.Steps.course_of_constant", "Becoming.Steps.iff_of_eqs", "Becoming.«有常之逐点»"]}
+{"name": "Becoming.excess_add_right", "uses": []}
+{"name": "Becoming.excess_balance", "uses": []}
+{"name": "Becoming.excess_le_of_le_add", "uses": []}
+{"name": "Becoming.excess_mark", "uses": []}
+{"name": "Becoming.excess_pos", "uses": []}
+{"name": "Becoming.excess_self", "uses": []}
+{"name": "Becoming.exists_not_of_em", "uses": []}
+{"name": "Becoming.fall_mark", "uses": ["Becoming.excess_mark"]}
+{"name": "Becoming.fallen_within", "uses": ["Becoming.family_over_stretch"]}
+{"name": "Becoming.falling_recurs", "uses": ["Becoming.Recurs.accumulates", "Becoming.pos_of_exceeds", "Becoming.risen_within", "Becoming.steps_mem", "Becoming.total_pos"]}
+{"name": "Becoming.family_over_stretch", "uses": ["Becoming.over_stretch", "Becoming.total_add", "Becoming.total_zero"]}
+{"name": "Becoming.held_over_stretch", "uses": ["Becoming.fall_mark", "Becoming.family_over_stretch", "Becoming.rise_mark", "Becoming.total_congr"]}
+{"name": "Becoming.keep_pace", "uses": ["Becoming.held_over_stretch", "Becoming.marks_within"]}
+{"name": "Becoming.le_add_excess", "uses": ["Becoming.excess_balance"]}
+{"name": "Becoming.mark_cases", "uses": []}
+{"name": "Becoming.mark_iff", "uses": ["Becoming.mark_cases"]}
+{"name": "Becoming.mark_le_one", "uses": ["Becoming.mark_cases"]}
+{"name": "Becoming.mark_pos", "uses": ["Becoming.mark_cases"]}
+{"name": "Becoming.marks_within", "uses": ["Becoming.mark_le_one", "Becoming.total_le", "Becoming.total_ones"]}
+{"name": "Becoming.over_stretch", "uses": ["Becoming.across", "Becoming.balance_over_stretch"]}
+{"name": "Becoming.persists", "uses": []}
+{"name": "Becoming.persists_by_grammar", "uses": ["Becoming.persists_of_positions", "Becoming.positions_of_decided"]}
+{"name": "Becoming.persists_of_em", "uses": []}
+{"name": "Becoming.persists_of_em_by_grammar", "uses": ["Becoming.persists_of_positions", "Becoming.«四相之定当且仅当排中»"]}
+{"name": "Becoming.persists_of_positions", "uses": ["Becoming.Steps.hasPred_iff"]}
+{"name": "Becoming.positions_iff_change", "uses": ["Becoming.Steps.hasPred_iff"]}
+{"name": "Becoming.positions_iff_em", "uses": ["Becoming.Steps.hasPred_iff", "Becoming.«四相之定当且仅当排中»"]}
+{"name": "Becoming.positions_of_decided", "uses": ["Becoming.Steps.hasPred_iff"]}
+{"name": "Becoming.rise_mark", "uses": ["Becoming.excess_mark", "Becoming.mark_iff"]}
+{"name": "Becoming.risen_within", "uses": ["Becoming.family_over_stretch", "Becoming.total_le"]}
+{"name": "Becoming.rising_recurs", "uses": ["Becoming.Recurs.accumulates", "Becoming.fallen_within", "Becoming.pos_of_exceeds", "Becoming.steps_mem", "Becoming.total_pos"]}
+{"name": "Becoming.sheng_iff_change", "uses": ["Becoming.Steps.hasPred_iff", "Becoming.Steps.wang_iff_sheng_next", "Becoming.ceasesToBe_iff_wang", "Becoming.comesToBe_iff_sheng"]}
+{"name": "Becoming.stays_failing", "uses": []}
+{"name": "Becoming.still_of_buqiong", "uses": ["Becoming.Steps.buqiong_iff"]}
+{"name": "Becoming.still_stays_of_constant", "uses": ["Becoming.Steps.hasSucc_iff", "Becoming.«有常则续不尽»"]}

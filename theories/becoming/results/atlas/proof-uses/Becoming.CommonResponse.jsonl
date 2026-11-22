@@ -1,0 +1,45 @@
+{"name": "Becoming.closure_iff_reach_within", "uses": ["Becoming.closure_of_reach", "Becoming.reach_within_pred_length"]}
+{"name": "Becoming.closure_of_reach", "uses": ["Becoming.«所闭之传递»", "Becoming.«所闭之自反»", "Becoming.«缘在所闭»"]}
+{"name": "Becoming.held_iff_iter", "uses": ["Becoming.Iteration.iter_largest", "Becoming.region_mono", "Becoming.«所闭之承最大»"]}
+{"name": "Becoming.held_iff_iter_pred_length", "uses": ["Becoming.Iteration.iter_persists_from_all", "Becoming.Iteration.iter_pred", "Becoming.held_iff_iter", "Becoming.region_first", "Becoming.region_mono"]}
+{"name": "Becoming.reach_commutes", "uses": []}
+{"name": "Becoming.reach_mono", "uses": []}
+{"name": "Becoming.reach_within_pred_length", "uses": ["Becoming.Iteration.iter_within_pred_length", "Becoming.reach_commutes", "Becoming.reach_mono"]}
+{"name": "Becoming.region_first", "uses": []}
+{"name": "Becoming.region_mono", "uses": []}
+{"name": "Becoming.«一之共应当且仅当一应遍»", "uses": []}
+{"name": "Becoming.«传递则承闭»", "uses": []}
+{"name": "Becoming.«依读而应则共应»", "uses": []}
+{"name": "Becoming.«共应之例».EachNotCommon.each", "uses": []}
+{"name": "Becoming.«共应之例».EachNotCommon.none", "uses": ["Becoming.«一之共应当且仅当一应遍»"]}
+{"name": "Becoming.«共应之例».NotCovering.fixed", "uses": []}
+{"name": "Becoming.«共应之例».NotCovering.none", "uses": []}
+{"name": "Becoming.«共应之例».NotOne.common", "uses": []}
+{"name": "Becoming.«共应之例».NotOne.differ", "uses": []}
+{"name": "Becoming.«共应之例».NotReflexive.held_each", "uses": []}
+{"name": "Becoming.«共应之例».NotReflexive.none", "uses": []}
+{"name": "Becoming.«共应之例».NotReflexive.trans", "uses": []}
+{"name": "Becoming.«共应之例».NotTransitive.held_each", "uses": []}
+{"name": "Becoming.«共应之例».NotTransitive.none", "uses": []}
+{"name": "Becoming.«共应之例».NotTransitive.refl", "uses": []}
+{"name": "Becoming.«共应之例».NotTransitive.symm", "uses": []}
+{"name": "Becoming.«共应之例».OneCarrier.fixed", "uses": []}
+{"name": "Becoming.«共应之例».OneCarrier.none", "uses": []}
+{"name": "Becoming.«共应之例».PairsNotCommon.none", "uses": ["Becoming.«一之共应当且仅当一应遍»"]}
+{"name": "Becoming.«共应之例».PairsNotCommon.pairs", "uses": []}
+{"name": "Becoming.«共应之细»", "uses": []}
+{"name": "Becoming.«共应当且仅当所闭之承遍»", "uses": ["Becoming.«所闭之承在内»", "Becoming.«所闭之承闭»", "Becoming.«闭在内则在所闭之承»"]}
+{"name": "Becoming.«应际同行当且仅当同读同应»", "uses": ["Becoming.«同行之逐点»"]}
+{"name": "Becoming.«所闭之承在内»", "uses": ["Becoming.«所闭之自反»"]}
+{"name": "Becoming.«所闭之承最大»", "uses": ["Becoming.«所闭之承在内»", "Becoming.«所闭之承闭»", "Becoming.«闭在内则在所闭之承»"]}
+{"name": "Becoming.«所闭之承闭»", "uses": ["Becoming.«所闭之传递»", "Becoming.«缘在所闭»"]}
+{"name": "Becoming.«映应共应当且仅当同读同应»", "uses": ["Becoming.«遍定应共应当且仅当同读同应»"]}
+{"name": "Becoming.«自反传递则共应当且仅当承遍»", "uses": ["Becoming.«传递则承闭»", "Becoming.«自反则承在内»", "Becoming.«闭在内则在承»"]}
+{"name": "Becoming.«自反则承在内»", "uses": []}
+{"name": "Becoming.«诸承在内当且仅当自反»", "uses": ["Becoming.«自反则承在内»"]}
+{"name": "Becoming.«诸承闭当且仅当传递»", "uses": ["Becoming.«传递则承闭»"]}
+{"name": "Becoming.«遍定应共应当且仅当像定后»", "uses": ["Becoming.«像定后当且仅当同行»", "Becoming.«应际同行当且仅当同读同应»", "Becoming.«遍定应共应当且仅当同读同应»"]}
+{"name": "Becoming.«遍定应共应当且仅当同读同应»", "uses": []}
+{"name": "Becoming.«闭在内则在所闭之承»", "uses": ["Becoming.«闭含所闭»"]}
+{"name": "Becoming.«闭在内则在承»", "uses": []}
+{"name": "Becoming.«静之共应当且仅当遍»", "uses": []}

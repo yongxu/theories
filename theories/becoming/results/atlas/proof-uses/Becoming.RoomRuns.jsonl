@@ -1,0 +1,24 @@
+{"name": "Becoming.Rooms.Matched.no_generation_at_moments", "uses": ["Becoming.Rooms.Matched.window_held", "Becoming.Rooms.windowAt_level", "Becoming.Steps.generation_iff_begins", "Becoming.Steps.hasPred_iff"]}
+{"name": "Becoming.Rooms.Matched.not_widening", "uses": ["Becoming.Rooms.Matched.window_held", "Becoming.Rooms.windowAt_level", "Becoming.Run.not_keepsWidening_of_returns"]}
+{"name": "Becoming.Rooms.Matched.window_held", "uses": ["Becoming.RegimeMargin.holds", "Becoming.Rooms.matched_keeps", "Becoming.Rooms.matched_meets", "Becoming.Rooms.windowAt_level"]}
+{"name": "Becoming.Rooms.Overshooting.alternates", "uses": []}
+{"name": "Becoming.Rooms.Overshooting.alternation_shifted", "uses": ["Becoming.Rooms.Overshooting.in_phase"]}
+{"name": "Becoming.Rooms.Overshooting.generation_at_moments", "uses": ["Becoming.Rooms.Overshooting.alternates", "Becoming.Run.generation_of_held_changes"]}
+{"name": "Becoming.Rooms.Overshooting.heater_shifted", "uses": []}
+{"name": "Becoming.Rooms.Overshooting.holds_one_way", "uses": ["Becoming.Rooms.Overshooting.alternates"]}
+{"name": "Becoming.Rooms.Overshooting.in_phase", "uses": []}
+{"name": "Becoming.Rooms.Overshooting.not_widening", "uses": ["Becoming.Rooms.Overshooting.alternates", "Becoming.Run.not_keepsWidening_of_returns"]}
+{"name": "Becoming.Rooms.Unheated.cold_not_held", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.trans", "Becoming.Reaching.possibleHeld_iff_line", "Becoming.Rooms.alike_class", "Becoming.«线内同类»"]}
+{"name": "Becoming.Rooms.Unheated.no_generation_at_moments", "uses": ["Becoming.Rooms.Unheated.window_cold", "Becoming.Rooms.windowAt_level", "Becoming.Steps.generation_iff_begins", "Becoming.Steps.hasPred_iff"]}
+{"name": "Becoming.Rooms.Unheated.not_widening", "uses": ["Becoming.Rooms.Unheated.window_cold", "Becoming.Rooms.windowAt_level", "Becoming.Run.not_keepsWidening_of_returns"]}
+{"name": "Becoming.Rooms.Unheated.window_cold", "uses": ["Becoming.RegimeMargin.stays_ended", "Becoming.Rooms.heater_zero", "Becoming.Rooms.windowAt_level"]}
+{"name": "Becoming.Rooms.heated_held", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans", "Becoming.Rooms.heated_warm", "Becoming.Rooms.net_of_steps", "Generative.Trace.brecOn"]}
+{"name": "Becoming.Rooms.heated_possible_held", "uses": ["Becoming.Rooms.heated_held"]}
+{"name": "Becoming.Rooms.line_iff_held", "uses": ["Becoming.Reaching.reach_heldMoves_iff", "Becoming.Rooms.net_of_steps", "Becoming.Rooms.steps_of_net", "Becoming.«及之单调»"]}
+{"name": "Becoming.Rooms.matched_keeps", "uses": []}
+{"name": "Becoming.Rooms.matched_meets", "uses": []}
+{"name": "Becoming.Rooms.net_of_steps", "uses": []}
+{"name": "Becoming.Rooms.next_open", "uses": []}
+{"name": "Becoming.Rooms.steps_of_net", "uses": []}
+{"name": "Becoming.Rooms.windowAt_level", "uses": []}
+{"name": "Becoming.Rooms.window_line", "uses": ["Becoming.Rooms.next_open", "Becoming.Rooms.opens", "Becoming.Rooms.windowAt_level"]}

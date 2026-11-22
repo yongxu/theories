@@ -1,0 +1,39 @@
+{"name": "Becoming.LineOfDescent.Endless.core_through_birth", "uses": ["Becoming.LineOfDescent.Endless.descent_constant", "Becoming.LineOfDescent.Endless.member_ends", "Becoming.«一为类»", "Becoming.«类有常当且仅当含于核»"]}
+{"name": "Becoming.LineOfDescent.Endless.descent_constant", "uses": ["Becoming.LineOfDescent.Endless.total", "Becoming.«有常之逐点»"]}
+{"name": "Becoming.LineOfDescent.Endless.descent_no_outside", "uses": ["Becoming.LineOfDescent.Endless.descent_reaches"]}
+{"name": "Becoming.LineOfDescent.Endless.descent_reaches", "uses": ["Becoming.LineOfDescent.Endless.descent_reaches_both"]}
+{"name": "Becoming.LineOfDescent.Endless.descent_reaches_both", "uses": ["Becoming.«相续之续»"]}
+{"name": "Becoming.LineOfDescent.Endless.descent_unending", "uses": ["Becoming.LineOfDescent.Endless.core_through_birth", "Becoming.«守核则不穷»"]}
+{"name": "Becoming.LineOfDescent.Endless.member_class", "uses": []}
+{"name": "Becoming.LineOfDescent.Endless.member_ends", "uses": []}
+{"name": "Becoming.LineOfDescent.Endless.member_line", "uses": ["Becoming.LineOfDescent.Endless.member_class", "Becoming.«线内同类»"]}
+{"name": "Becoming.LineOfDescent.Endless.member_outside", "uses": ["Becoming.LineOfDescent.Endless.member_line"]}
+{"name": "Becoming.LineOfDescent.Endless.total", "uses": []}
+{"name": "Becoming.LineOfDescent.Last.core_no_continuation", "uses": ["Becoming.LineOfDescent.Last.never_unending", "Becoming.«无不穷则核无续»"]}
+{"name": "Becoming.LineOfDescent.Last.descent_past_end", "uses": ["Becoming.«过亡而续»"]}
+{"name": "Becoming.LineOfDescent.Last.last_ends", "uses": []}
+{"name": "Becoming.LineOfDescent.Last.never_unending", "uses": ["Becoming.LineOfDescent.Last.last_ends"]}
+{"name": "Becoming.eq_or_reach_iff_reached", "uses": ["Becoming.«一之续»", "Becoming.«及之单调»", "Becoming.«相续含于及»"]}
+{"name": "Becoming.ownClosure_unrestricted_iff_noOutside", "uses": ["Becoming.ownClosure_unrestricted_iff", "Becoming.withinClosure_iff_reached"]}
+{"name": "Becoming.premises_of_noOutside", "uses": ["Becoming.Valuation.premises_of_unrestricted", "Becoming.ownClosure_unrestricted_iff_noOutside"]}
+{"name": "Becoming.withinClosure_iff_reached", "uses": ["Becoming.eq_or_reach_iff_reached", "Becoming.«所闭当且仅当同一或及»"]}
+{"name": "Becoming.withinClosure_of_line", "uses": ["Becoming.«所闭当且仅当同一或及»", "Becoming.«相续含于及»"]}
+{"name": "Becoming.«各续无外则同一中心»", "uses": ["Becoming.«及之传递»", "Becoming.«相续含于及»"]}
+{"name": "Becoming.«同族之粗化»", "uses": ["Becoming.«粗化»"]}
+{"name": "Becoming.«所及则同族»", "uses": ["Becoming.«相续则同族»"]}
+{"name": "Becoming.«族之所及即一之所及»", "uses": ["Becoming.«及之单调»", "Becoming.«缘在族中»"]}
+{"name": "Becoming.«族之续即缘»", "uses": ["Becoming.«缘在族中»"]}
+{"name": "Becoming.«族无外之粗化»", "uses": ["Becoming.«同族之粗化»"]}
+{"name": "Becoming.«无不穷则核无续»", "uses": ["Becoming.«守核则不穷»"]}
+{"name": "Becoming.«核有续当且仅当有不穷»", "uses": ["Becoming.«守核则不穷»"]}
+{"name": "Becoming.«相续则同族»", "uses": []}
+{"name": "Becoming.«续即缘当且仅当含族»", "uses": ["Becoming.«类».refl", "Becoming.«类».symm", "Becoming.«类».trans", "Becoming.«缘在族中»"]}
+{"name": "Becoming.«续无外之粗化»", "uses": ["Becoming.«及之单调»", "Becoming.«粗化»"]}
+{"name": "Becoming.«续无外则中心无缘»", "uses": ["Becoming.«及之传递»", "Becoming.«相续含于及»"]}
+{"name": "Becoming.«续无外则同一中心»", "uses": ["Becoming.«各续无外则同一中心»"]}
+{"name": "Becoming.«续无外则族无外»", "uses": ["Becoming.«所及则同族»"]}
+{"name": "Becoming.«缘在族中»", "uses": []}
+{"name": "Becoming.«过亡而续»", "uses": ["Becoming.«相续之始有后»", "Becoming.«相续之续»"]}
+{"name": "Becoming.«遍有后则族有常»", "uses": ["Becoming.«有常之逐点»", "Becoming.«缘在族中»"]}
+{"name": "Becoming.«遍有后则核之所及即一之所及»", "uses": ["Becoming.«及之单调»", "Becoming.«遍有后则缘在族核»"]}
+{"name": "Becoming.«遍有后则缘在族核»", "uses": ["Becoming.«同族为类»", "Becoming.«类有常当且仅当含于核»", "Becoming.«缘在族中»", "Becoming.«遍有后则族有常»"]}

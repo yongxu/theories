@@ -1,0 +1,35 @@
+{"name": "Becoming.Square.Shows.act", "uses": ["Becoming.Square.mulVec_obs", "Becoming.Square.sign_mul"]}
+{"name": "Becoming.Square.act_congr", "uses": ["Becoming.Square.flip_comm"]}
+{"name": "Becoming.Square.act_three", "uses": ["Becoming.Square.flip_flip"]}
+{"name": "Becoming.Square.column_commute", "uses": []}
+{"name": "Becoming.Square.column_parity", "uses": ["Becoming.Square.Shows.act", "Becoming.Square.act_three", "Becoming.Square.column_signed", "Becoming.Square.flip_cancel", "Becoming.Square.shows_three"]}
+{"name": "Becoming.Square.column_product", "uses": []}
+{"name": "Becoming.Square.column_realized", "uses": []}
+{"name": "Becoming.Square.column_signed", "uses": []}
+{"name": "Becoming.Square.eq_zero_of_neg_eq", "uses": []}
+{"name": "Becoming.Square.flip_cancel", "uses": ["Becoming.Square.eq_zero_of_neg_eq"]}
+{"name": "Becoming.Square.flip_comm", "uses": ["Becoming.Square.flip_flip"]}
+{"name": "Becoming.Square.flip_flip", "uses": []}
+{"name": "Becoming.Square.int_neg_one_mul", "uses": []}
+{"name": "Becoming.Square.line_commute", "uses": ["Becoming.Square.column_commute", "Becoming.Square.row_commute"]}
+{"name": "Becoming.Square.line_parity", "uses": ["Becoming.Square.column_parity", "Becoming.Square.row_parity"]}
+{"name": "Becoming.Square.line_product", "uses": ["Becoming.Square.column_product", "Becoming.Square.row_product"]}
+{"name": "Becoming.Square.line_realized", "uses": ["Becoming.Square.column_realized", "Becoming.Square.row_realized"]}
+{"name": "Becoming.Square.mulVec_obs", "uses": ["Becoming.Square.mulVec_signed", "Becoming.Square.obs_signed"]}
+{"name": "Becoming.Square.mulVec_signed", "uses": ["Becoming.Integers.zero_add", "Becoming.Integers.zero_mul", "Becoming.Square.sign_mul"]}
+{"name": "Becoming.Square.no_context_free_values", "uses": ["Becoming.Square.noGlobal", "Becoming.Square.shows_support"]}
+{"name": "Becoming.Square.obs_signed", "uses": []}
+{"name": "Becoming.Square.obs_sq", "uses": []}
+{"name": "Becoming.Square.off_line_anticommute", "uses": []}
+{"name": "Becoming.Square.parity_third", "uses": []}
+{"name": "Becoming.Square.row_commute", "uses": []}
+{"name": "Becoming.Square.row_parity", "uses": ["Becoming.Square.Shows.act", "Becoming.Square.act_three", "Becoming.Square.flip_cancel", "Becoming.Square.row_signed", "Becoming.Square.shows_three"]}
+{"name": "Becoming.Square.row_product", "uses": []}
+{"name": "Becoming.Square.row_realized", "uses": []}
+{"name": "Becoming.Square.row_signed", "uses": []}
+{"name": "Becoming.Square.shows_support", "uses": ["Becoming.Square.line_parity"]}
+{"name": "Becoming.Square.shows_three", "uses": ["Becoming.Square.act_congr", "Becoming.Square.flip_flip"]}
+{"name": "Becoming.Square.sign_mul", "uses": ["Becoming.Square.int_neg_one_mul"]}
+{"name": "Becoming.Square.support_shown", "uses": ["Becoming.Square.line_realized", "Becoming.Square.parity_third", "Becoming.Square.three"]}
+{"name": "Becoming.Square.three", "uses": []}
+{"name": "Becoming.Square.yy_entries", "uses": []}

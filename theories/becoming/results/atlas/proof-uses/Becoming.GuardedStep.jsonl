@@ -1,0 +1,14 @@
+{"name": "Becoming.Law.stepWhile_always", "uses": []}
+{"name": "Becoming.Law.stepWhile_constant_iff", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.Law.stepWhile_continues_iff", "uses": []}
+{"name": "Becoming.Law.stepWhile_fixed", "uses": []}
+{"name": "Becoming.Law.stepWhile_goesAlike_iff", "uses": ["Becoming.«同行之逐点»"]}
+{"name": "Becoming.Law.stepWhile_guarded_iff", "uses": ["Becoming.Lasting.guarded_upto_iff", "Becoming.Lasting.orbit_eq_history", "Becoming.Law.stepWhile_steps_iff"]}
+{"name": "Becoming.Law.stepWhile_hasSucc_iff", "uses": ["Becoming.Law.stepWhile_continues_iff", "Becoming.Law.step_hasSucc_iff"]}
+{"name": "Becoming.Law.stepWhile_none_iff", "uses": []}
+{"name": "Becoming.Law.stepWhile_step", "uses": []}
+{"name": "Becoming.Law.stepWhile_steps_iff", "uses": ["Becoming.Law.orbit_shift"]}
+{"name": "Becoming.Law.stepWhile_toEnd_decides", "uses": ["Becoming.«同行之逐点»"]}
+{"name": "Becoming.Law.stepWhile_toEnd_iff", "uses": ["Becoming.Law.stepWhile_fixed", "Becoming.Law.stepWhile_none_iff", "Becoming.«局定后则至终有常当且仅当同行可决»"]}
+{"name": "Becoming.Law.stepWhile_unending_iff", "uses": ["Becoming.Law.stepWhile_continues_iff", "Becoming.Law.unending_iff_steps", "_private.Becoming.GuardedStep.0.Becoming.Law.unending_of_continues"]}
+{"name": "_private.Becoming.GuardedStep.0.Becoming.Law.unending_of_continues", "uses": ["Becoming.«及之单调»"]}

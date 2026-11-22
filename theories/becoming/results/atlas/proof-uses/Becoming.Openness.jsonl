@@ -1,0 +1,78 @@
+{"name": "Becoming.Accretion.alive_distinct", "uses": ["Becoming.Accretion.mem_alive"]}
+{"name": "Becoming.Accretion.census", "uses": ["Becoming.Accretion.alive_distinct", "Becoming.Accretion.mem_alive"]}
+{"name": "Becoming.Accretion.mem_alive", "uses": []}
+{"name": "Becoming.Exposed.census", "uses": ["Becoming.Exposed.stands_iff", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Exposed.holder_one", "uses": ["Becoming.Shuttle.stands_two"]}
+{"name": "Becoming.Exposed.open_at", "uses": ["Becoming.Exposed.outside"]}
+{"name": "Becoming.Exposed.outside", "uses": ["Becoming.beyond_not_mem", "Becoming.mem_map_of"]}
+{"name": "Becoming.Exposed.stands_iff", "uses": []}
+{"name": "Becoming.Few.comes_at", "uses": []}
+{"name": "Becoming.Few.coming_not_recurring", "uses": ["Becoming.Clear.first_unique", "Becoming.Few.comes_at"]}
+{"name": "Becoming.Few.distinct_found", "uses": ["Becoming.Few.distinct_pick"]}
+{"name": "Becoming.Few.distinct_pick", "uses": []}
+{"name": "Becoming.Few.listed", "uses": ["Becoming.Few.distinct_found", "Becoming.Few.mem_found"]}
+{"name": "Becoming.Few.mem_found", "uses": ["Becoming.Few.mem_pick"]}
+{"name": "Becoming.Few.mem_pick", "uses": ["Becoming.Clear.first_unique", "Becoming.Clear.not_both", "Becoming.ListTests.and_left", "Becoming.ListTests.and_right", "Becoming.bool_and_true", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Flow.AroundStanding.runsDownClosed", "uses": ["Becoming.Flow.Balances.on"]}
+{"name": "Becoming.Flow.Enclosed.aroundStanding", "uses": ["Becoming.Flow.Enclosed.around", "Becoming.mem_append_of_left", "Becoming.mem_append_of_right"]}
+{"name": "Becoming.Flow.Enclosed.aroundStanding_not_not", "uses": ["Becoming.Flow.Enclosed.around_not_not", "Becoming.mem_append_of_left", "Becoming.mem_append_of_right"]}
+{"name": "Becoming.Flow.change_lowers", "uses": ["Becoming.Flow.AroundStanding.runsDownClosed", "Becoming.Flow.RunsDown.changes_iff", "Becoming.Flow.RunsDownClosed.runsDown"]}
+{"name": "Becoming.Flow.change_not_recurring_from", "uses": ["Becoming.Flow.change_recurs_iff"]}
+{"name": "Becoming.Flow.change_stops_unrefuted", "uses": ["Becoming.Amounts.rests_unrefuted", "Becoming.Amounts.whole_within", "Becoming.Flow.RunsDown.changes_iff", "Becoming.Flow.RunsDown.standing_le"]}
+{"name": "Becoming.Flow.change_stops_unrefuted_around", "uses": ["Becoming.Flow.AroundStanding.runsDownClosed", "Becoming.Flow.RunsDownClosed.runsDown", "Becoming.Flow.change_stops_unrefuted"]}
+{"name": "Becoming.Flow.exchange_lowers", "uses": ["Becoming.Flow.AroundStanding.runsDownClosed", "Becoming.Flow.RunsDownClosed.exchanges_iff"]}
+{"name": "Becoming.Flow.exchange_not_recurring_around", "uses": ["Becoming.Flow.AroundStanding.runsDownClosed", "Becoming.Flow.exchange_not_recurring_from"]}
+{"name": "Becoming.Flow.exchange_not_recurring_from", "uses": ["Becoming.Flow.exchange_recurs_iff"]}
+{"name": "Becoming.Flow.fall_lowers_on", "uses": ["Becoming.Flow.Balances.on", "Becoming.Flow.BalancesOn.fall_lowers"]}
+{"name": "Becoming.Flow.standing_never_rises", "uses": ["Becoming.Flow.AroundStanding.runsDownClosed", "Becoming.Flow.RunsDown.standing_le", "Becoming.Flow.RunsDownClosed.runsDown"]}
+{"name": "Becoming.Flow.standing_runs_down", "uses": ["Becoming.Flow.AroundStanding.runsDownClosed", "Becoming.Flow.BalancesOn.runs_down", "Becoming.Flow.RunsDownOn.stock_eq"]}
+{"name": "Becoming.Holding.census", "uses": []}
+{"name": "Becoming.Holding.open_at", "uses": ["Becoming.Exposed.outside"]}
+{"name": "Becoming.Listed.few_of_quiet", "uses": ["Becoming.comes_after", "Becoming.mem_gather"]}
+{"name": "Becoming.Listed.few_of_stop_unrefuted", "uses": ["Becoming.comes_after_unrefuted", "Becoming.mem_gather"]}
+{"name": "Becoming.Listed.lpo_of_few", "uses": ["Becoming.Clear.false_before", "Becoming.Clear.false_of_not", "Becoming.Clear.first_of_true", "Becoming.Clear.not_both", "Becoming.Clear.or_first", "Becoming.Few.coming_not_recurring", "Becoming.Few.listed", "Becoming.lt_beyond"]}
+{"name": "Becoming.Procession.census", "uses": []}
+{"name": "Becoming.Slow.census", "uses": ["Becoming.Cycle.distinct", "Becoming.Cycle.listed", "Becoming.Cycle.present_lt"]}
+{"name": "Becoming.Slow.grows_between", "uses": []}
+{"name": "Becoming.Slow.length", "uses": []}
+{"name": "Becoming.Throughput.census", "uses": ["Becoming.Exposed.stands_iff", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.Throughput.fuel_stands", "uses": []}
+{"name": "Becoming.Throughput.unlisted", "uses": ["Becoming.beyond_not_mem", "Becoming.mem_map_of"]}
+{"name": "Becoming.Web.StandingCensus.coming_iff_ceasing", "uses": ["Becoming.Listed.coming_iff_ceasing"]}
+{"name": "Becoming.Web.StandingCensus.coming_of_ceasing", "uses": ["Becoming.Listed.covered", "Becoming.coming_of_ceasing_covered"]}
+{"name": "Becoming.Web.StandingCensus.over_stretch", "uses": ["Becoming.Web.StandingCensus.over_stretch_on"]}
+{"name": "Becoming.Web.StandingCensus.over_stretch_on", "uses": ["Becoming.Listed.over_stretch_on"]}
+{"name": "Becoming.World.CountedBy.arising_iff_ceasing", "uses": ["Becoming.Listed.ceasing_of_returning", "Becoming.World.arising_of_ceasing"]}
+{"name": "Becoming.World.CountedWithin.arising_iff_ceasing", "uses": ["Becoming.Web.unceasing_iff_bounded"]}
+{"name": "Becoming.World.Finite.census_bounded", "uses": ["Becoming.length_le_of_sub"]}
+{"name": "Becoming.World.Finite.countedWithin", "uses": ["Becoming.World.Finite.census_bounded", "Becoming.World.Finite.counted"]}
+{"name": "Becoming.World.Finite.standing", "uses": ["Becoming.keep_distinct", "Becoming.mem_keep"]}
+{"name": "Becoming.World.accretion_unbounded", "uses": ["Becoming.World.CountedWithin.arising_iff_ceasing", "Becoming.World.census_one_way"]}
+{"name": "Becoming.World.arising_not_recurring_from", "uses": ["Becoming.Flow.change_not_recurring_from", "Becoming.Web.ComesToStand.rises", "Becoming.Web.Embodied.comesToStand"]}
+{"name": "Becoming.World.arising_of_ceasing", "uses": ["Becoming.Listed.covered", "Becoming.coming_of_ceasing_covered"]}
+{"name": "Becoming.World.arising_opens", "uses": ["Becoming.World.not_recurring_of_rests_unrefuted", "Becoming.World.rests_unrefuted_enclosed"]}
+{"name": "Becoming.World.arising_stops_unrefuted", "uses": ["Becoming.Flow.AroundStanding.runsDownClosed", "Becoming.Flow.RunsDownClosed.runsDown", "Becoming.World.arising_stops_unrefuted_from"]}
+{"name": "Becoming.World.arising_stops_unrefuted_from", "uses": ["Becoming.Flow.change_stops_unrefuted", "Becoming.Web.ComesToStand.rises", "Becoming.Web.Embodied.comesToStand"]}
+{"name": "Becoming.World.census_one_way", "uses": ["Becoming.Accretion.census", "Becoming.World.arising_of_ceasing", "Becoming.World.separate"]}
+{"name": "Becoming.World.comes_to_rest_unrefuted", "uses": ["Becoming.Flow.AroundStanding.runsDownClosed", "Becoming.Flow.RunsDownClosed.runsDown", "Becoming.World.comes_to_rest_unrefuted_from"]}
+{"name": "Becoming.World.comes_to_rest_unrefuted_from", "uses": ["Becoming.Covers.not_not_coming_from", "Becoming.World.arising_stops_unrefuted_from", "Becoming.World.rests_unrefuted_iff"]}
+{"name": "Becoming.World.exchange_needs", "uses": ["Becoming.Cycle.closed_more", "Becoming.Exposed.open_at", "Becoming.Exposed.stands_iff", "Becoming.Frontier.burning_self", "Becoming.ListTests.mem_bools", "Becoming.Shuttle.distinct", "Becoming.Throughput.around", "Becoming.Throughput.fuel_stands", "Becoming.Throughput.unlisted", "Becoming.World.exposed_standing", "Becoming.World.exposed_world", "Becoming.World.leaking_world", "Becoming.World.throughput_world", "Becoming.witnesses_not_dissipative"]}
+{"name": "Becoming.World.exchange_not_recurring", "uses": ["Becoming.Flow.exchange_not_recurring_around"]}
+{"name": "Becoming.World.exposed_standing", "uses": ["Becoming.Exposed.census", "Becoming.Exposed.holder_one", "Becoming.Exposed.outside", "Becoming.Shuttle.next_off", "Becoming.World.standingCensus"]}
+{"name": "Becoming.World.exposed_world", "uses": ["Becoming.Exposed.census", "Becoming.Exposed.open_at", "Becoming.Shuttle.balances", "Becoming.Shuttle.holder_stands", "Becoming.Shuttle.recurs", "Becoming.World.Premised.of"]}
+{"name": "Becoming.World.falls_of_ceases", "uses": ["Becoming.eq_zero_of_not_pos"]}
+{"name": "Becoming.World.hatch_rests_unrefuted", "uses": ["Becoming.World.Hatch.closed", "Becoming.World.Hatch.kin_distinct", "Becoming.World.hatch_balanced", "Becoming.World.hatch_counted", "Becoming.World.hatch_dissipative", "Becoming.World.rests_unrefuted_enclosed"]}
+{"name": "Becoming.World.holding_world", "uses": ["Becoming.Exposed.outside", "Becoming.Holding.census", "Becoming.Holding.open_at", "Becoming.World.Premised.of"]}
+{"name": "Becoming.World.openness_contingent", "uses": ["Becoming.World.Finite.enclosed", "Becoming.World.exposed_world", "Becoming.World.mutualism_finite", "Becoming.World.mutualism_premised", "Becoming.World.mutualism_world"]}
+{"name": "Becoming.World.procession_world", "uses": ["Becoming.Procession.census", "Becoming.beyond_not_mem"]}
+{"name": "Becoming.World.rest_few", "uses": ["Becoming.Flow.AroundStanding.runsDownClosed", "Becoming.Flow.RunsDownClosed.runsDown", "Becoming.Flow.change_stops_unrefuted", "Becoming.Listed.few_of_stop_unrefuted", "Becoming.Web.ComesToStand.rises", "Becoming.Web.Embodied.comesToStand"]}
+{"name": "Becoming.World.rest_needs_census", "uses": ["Becoming.Attrition.nothing_arises", "Becoming.World.census_one_way"]}
+{"name": "Becoming.World.rest_needs_standing", "uses": ["Becoming.Throughput.around", "Becoming.Throughput.balances", "Becoming.Throughput.census", "Becoming.Throughput.dissipative", "Becoming.Throughput.fuel_stands", "Becoming.Throughput.throughput", "Becoming.Throughput.unlisted", "Becoming.World.throughput_arising", "Becoming.World.throughput_world"]}
+{"name": "Becoming.World.rests_unrefuted_around", "uses": ["Becoming.World.Embodied.arising", "Becoming.World.comes_to_rest_unrefuted", "Becoming.World.standingCensus"]}
+{"name": "Becoming.World.rises_of_arises", "uses": ["Becoming.Web.ComesToStand.rises"]}
+{"name": "Becoming.World.slow_world", "uses": ["Becoming.Slow.census", "Becoming.Slow.grows_between", "Becoming.Slow.length", "Becoming.rises_between"]}
+{"name": "Becoming.World.standingCensus", "uses": []}
+{"name": "Becoming.comes_after", "uses": []}
+{"name": "Becoming.comes_after_unrefuted", "uses": []}
+{"name": "Becoming.gather_self", "uses": ["Becoming.mem_append_of_left"]}
+{"name": "Becoming.mem_gather", "uses": ["Becoming.gather_self", "Becoming.mem_append_of_right"]}

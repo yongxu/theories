@@ -1,0 +1,101 @@
+{"name": "Becoming.Commutes.append", "uses": []}
+{"name": "Becoming.Commutes.keeps", "uses": ["Becoming.swapAt_lt", "Becoming.swapAt_swapAt"]}
+{"name": "Becoming.Commutes.of_iff", "uses": []}
+{"name": "Becoming.Footprinted.counted_reorder", "uses": ["Becoming.Web.commute_census"]}
+{"name": "Becoming.Footprinted.decidesIdle_iff", "uses": ["Becoming.Footprinted.inList_iff", "Becoming.ListTests.and_true_iff", "Becoming.ListTests.not_true_iff", "Becoming.bool_cases", "Becoming.not_eq_false_iff"]}
+{"name": "Becoming.Footprinted.inList_iff", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.Footprinted.independent_iff_commutes", "uses": ["Becoming.Commutes.of_iff", "Becoming.Footprinted.commute_contains", "Becoming.Footprinted.commute_joined"]}
+{"name": "Becoming.Footprinted.keeps_iff_orients", "uses": []}
+{"name": "Becoming.Footprinted.least_contains", "uses": ["Becoming.not_eq_false_iff"]}
+{"name": "Becoming.Footprinted.least_exists_iff", "uses": ["Becoming.Footprinted.least_contains", "Becoming.Footprinted.least_le", "Becoming.ListTests.not_true_iff", "Becoming.bool_cases"]}
+{"name": "Becoming.Footprinted.least_joined", "uses": ["Becoming.Footprinted.Joined.mono", "Becoming.Footprinted.least_le"]}
+{"name": "Becoming.Footprinted.least_keeps", "uses": ["Becoming.Footprinted.least_joined"]}
+{"name": "Becoming.Footprinted.least_le", "uses": ["Becoming.ListTests.not_true_iff", "Becoming.bool_cases"]}
+{"name": "Becoming.Footprinted.least_precedes", "uses": ["Becoming.Footprinted.Precedes.mono", "Becoming.Footprinted.least_le"]}
+{"name": "Becoming.Footprinted.least_touch_iff", "uses": ["Becoming.ListTests.not_true_iff", "Becoming.bool_cases"]}
+{"name": "Becoming.Footprinted.normalize_independent", "uses": ["Becoming.Footprinted.independent_iff_commutes", "Becoming.Reindexes.identity", "Becoming.normalSteps_spec"]}
+{"name": "Becoming.Footprinted.normalize_precedes", "uses": ["Becoming.Footprinted.normalize_independent", "Becoming.Footprinted.reorder_precedes"]}
+{"name": "Becoming.Footprinted.normalize_premises", "uses": ["Becoming.Footprinted.normalize_independent", "Becoming.Footprinted.reorder_premises"]}
+{"name": "Becoming.Footprinted.normalize_reorder", "uses": ["Becoming.Commutes.of_iff", "Becoming.EachStep.append", "Becoming.Footprinted.Independent.append", "Becoming.Footprinted.Joined.symm", "Becoming.Footprinted.independent_iff_commutes", "Becoming.Footprinted.normalize_independent", "Becoming.Footprinted.reorder_append", "Becoming.Footprinted.reorder_contains", "Becoming.Footprinted.reorder_determined", "Becoming.Footprinted.reorder_joined", "Becoming.Reindexes.identity", "Becoming.normalForm_iff", "Becoming.normalSteps_spec", "Becoming.place_append", "Becoming.reindexes_of_within"]}
+{"name": "Becoming.Footprinted.rearranges_iff_independent", "uses": ["Becoming.Footprinted.independent_iff_commutes"]}
+{"name": "Becoming.Footprinted.reorder_census", "uses": ["Becoming.EachStep.always", "Becoming.Footprinted.reorder_reorders", "Becoming.Reorders.census"]}
+{"name": "Becoming.Footprinted.reorder_determined", "uses": ["Becoming.Flow.SameExchange.symm", "Becoming.Flow.SameExchange.trans", "Becoming.Footprinted.converse_webs", "Becoming.Footprinted.reorder_before", "Becoming.Footprinted.reorder_contains", "Becoming.Footprinted.reorder_exchange", "Becoming.Footprinted.reorder_shows", "Becoming.Footprinted.reorder_touch", "Becoming.Naturals.le_of_add_le_add_left", "Becoming.Reindexes.identity", "Becoming.Web.SameAt.symm", "Becoming.Web.SameAt.trans", "Becoming.le_dest", "Becoming.origin_place", "Becoming.origin_within", "Becoming.place_origin"]}
+{"name": "Becoming.Footprinted.standing_reorder", "uses": ["Becoming.Web.commute_standingCensus"]}
+{"name": "Becoming.KeepsOrder.first_free", "uses": []}
+{"name": "Becoming.OrderWorlds.commuted_rise_count", "uses": ["Becoming.Exchanged.rise_count", "Becoming.Web.Commuted.stock"]}
+{"name": "Becoming.OrderWorlds.complete_iff", "uses": ["Becoming.Footprinted.Joined.symm", "Becoming.complete_iff"]}
+{"name": "Becoming.OrderWorlds.halving_premises_iff", "uses": ["Becoming.Order.Halving.stutter", "Becoming.World.stutter_premises_iff"]}
+{"name": "Becoming.OrderWorlds.normalForm_least", "uses": ["Becoming.Footprinted.Joined.symm", "Becoming.normalForm_least"]}
+{"name": "Becoming.OrderWorlds.normalForm_normal", "uses": ["Becoming.Footprinted.Joined.symm", "Becoming.normalForm_normal"]}
+{"name": "Becoming.OrderWorlds.rearranges_refl", "uses": ["Becoming.Footprinted.Joined.symm", "Becoming.Orients.refl", "Becoming.rearranges_iff"]}
+{"name": "Becoming.OrderWorlds.rearranges_symm", "uses": ["Becoming.Footprinted.Joined.symm", "Becoming.Rearranges.symm"]}
+{"name": "Becoming.OrderWorlds.rearranges_trans", "uses": ["Becoming.Footprinted.Joined.symm", "Becoming.Rearranges.trans"]}
+{"name": "Becoming.Orients.refl", "uses": []}
+{"name": "Becoming.Orients.symm", "uses": ["Becoming.lt_of_le_ne"]}
+{"name": "Becoming.Orients.trans", "uses": []}
+{"name": "Becoming.Rearranges.orients", "uses": ["Becoming.commutes_orients"]}
+{"name": "Becoming.Rearranges.symm", "uses": ["Becoming.Orients.symm", "Becoming.Rearranges.orients", "Becoming.rearranges_iff"]}
+{"name": "Becoming.Rearranges.trans", "uses": ["Becoming.Orients.trans", "Becoming.Rearranges.orients", "Becoming.rearranges_iff"]}
+{"name": "Becoming.Reindexes.comp", "uses": []}
+{"name": "Becoming.Reindexes.identity", "uses": []}
+{"name": "Becoming.Reindexes.symm", "uses": []}
+{"name": "Becoming.Reorders.census", "uses": ["Becoming.Reorders.brecOn", "Becoming.Web.commute_census", "Becoming.Web.commute_census_back", "Becoming.Web.commute_standingCensus", "Becoming.Web.commute_standingCensus_back"]}
+{"name": "Becoming.Triple.decides", "uses": ["Becoming.bool_cases"]}
+{"name": "Becoming.Triple.identity_normal", "uses": []}
+{"name": "Becoming.Triple.not_rearranged", "uses": ["Becoming.Reindexes.identity", "Becoming.Triple.decides", "Becoming.Triple.identity_normal", "Becoming.Triple.reversed_normal", "Becoming.Triple.reversed_reindexes", "Becoming.Triple.symm", "Becoming.normalForm_iff"]}
+{"name": "Becoming.Triple.reversed_normal", "uses": []}
+{"name": "Becoming.Triple.reversed_reindexes", "uses": []}
+{"name": "Becoming.Triple.symm", "uses": []}
+{"name": "Becoming.Web.commute_active_false", "uses": ["Becoming.cond_of_false"]}
+{"name": "Becoming.Web.commute_census", "uses": ["Becoming.Web.commute_active_away", "Becoming.Web.commute_active_false", "Becoming.Web.commute_active_true", "Becoming.Web.mix_of_sides", "Becoming.listed_splice"]}
+{"name": "Becoming.Web.commute_census_back", "uses": ["Becoming.Web.commute_active_away", "Becoming.Web.mix_of_sides", "Becoming.listed_splice", "Becoming.ne_first", "Becoming.ne_last"]}
+{"name": "Becoming.Web.commute_level_away", "uses": []}
+{"name": "Becoming.Web.commute_standingCensus", "uses": ["Becoming.Web.commute_level_away", "Becoming.Web.commute_level_false", "Becoming.Web.commute_level_true", "Becoming.Web.mix_of_sides", "Becoming.listed_splice"]}
+{"name": "Becoming.Web.commute_standingCensus_back", "uses": ["Becoming.Web.commute_level_away", "Becoming.Web.mix_of_sides", "Becoming.listed_splice", "Becoming.ne_first", "Becoming.ne_last"]}
+{"name": "Becoming.Web.mix_of_sides", "uses": []}
+{"name": "Becoming.World.commute_counted", "uses": ["Becoming.Web.commute_census"]}
+{"name": "Becoming.World.commute_counted_iff", "uses": ["Becoming.Web.commute_census_back", "Becoming.World.commute_counted"]}
+{"name": "Becoming.add_excess_of_le", "uses": ["Becoming.eq_zero_of_not_pos", "Becoming.excess_balance", "Becoming.excess_pos"]}
+{"name": "Becoming.agreeFrom_iff", "uses": ["Becoming.ListTests.and_true_iff", "Becoming.beq_self", "Becoming.lt_of_le_ne"]}
+{"name": "Becoming.apartBelow_iff", "uses": ["Becoming.ListTests.and_true_iff"]}
+{"name": "Becoming.bool_cases", "uses": []}
+{"name": "Becoming.commutes_orients", "uses": ["Becoming.Commutes.keeps"]}
+{"name": "Becoming.complete_iff", "uses": ["Becoming.decides_of_complete", "Becoming.normalForm_complete"]}
+{"name": "Becoming.decides_of_complete", "uses": ["Becoming.agreeFrom_iff", "Becoming.lt_of_le_ne", "Becoming.pair_rearranges", "Becoming.pair_within", "Becoming.reindexes_of_within"]}
+{"name": "Becoming.firstWhere_before", "uses": ["Becoming.cond_of_false", "Becoming.cond_of_true", "Becoming.lt_of_le_ne"]}
+{"name": "Becoming.firstWhere_congr", "uses": []}
+{"name": "Becoming.firstWhere_found", "uses": ["Becoming.cond_of_false", "Becoming.cond_of_true", "Becoming.lt_of_le_ne"]}
+{"name": "Becoming.firstWhere_ge", "uses": ["Becoming.cond_of_false", "Becoming.cond_of_true"]}
+{"name": "Becoming.freeAt_iff", "uses": ["Becoming.ListTests.and_true_iff", "Becoming.add_excess_of_le", "Becoming.apartBelow_iff"]}
+{"name": "Becoming.free_transfer", "uses": ["Becoming.freeAt_iff"]}
+{"name": "Becoming.listed_splice", "uses": ["Becoming.distinct_append", "Becoming.keep_distinct", "Becoming.mem_append_cases", "Becoming.mem_append_of_left", "Becoming.mem_append_of_right", "Becoming.mem_keep"]}
+{"name": "Becoming.lowered_keepsOrder", "uses": ["Becoming.Commutes.keeps", "Becoming.Footprinted.lowered_origin", "Becoming.place_origin"]}
+{"name": "Becoming.lowering_commutes", "uses": ["Becoming.swapAt_first", "Becoming.swapAt_of_lt"]}
+{"name": "Becoming.lowering_inside", "uses": []}
+{"name": "Becoming.next_spec", "uses": ["Becoming.Commutes.append", "Becoming.EachStep.append", "Becoming.Reindexes.comp", "Becoming.add_excess_of_le", "Becoming.freeAt_iff", "Becoming.lowering_commutes", "Becoming.lowering_inside", "Becoming.origin_append", "Becoming.origin_lowering_below", "Becoming.origin_lowering_top", "Becoming.pick_spec", "Becoming.reindexes_of_within"]}
+{"name": "Becoming.normalForm_agree", "uses": ["Becoming.normalForm_reindexes", "Becoming.normalSteps_agree"]}
+{"name": "Becoming.normalForm_complete", "uses": ["Becoming.normalForm_iff"]}
+{"name": "Becoming.normalForm_iff", "uses": ["Becoming.Orients.symm", "Becoming.Orients.trans", "Becoming.Rearranges.orients", "Becoming.normalForm_agree", "Becoming.normalForm_rearranges", "Becoming.rearranges_iff"]}
+{"name": "Becoming.normalForm_least", "uses": ["Becoming.Orients.symm", "Becoming.Orients.trans", "Becoming.Rearranges.orients", "Becoming.Reindexes.comp", "Becoming.commutes_orients", "Becoming.firstWhere_found", "Becoming.freeAt_iff", "Becoming.free_transfer", "Becoming.le_dest", "Becoming.next_spec", "Becoming.normalSteps_spec", "Becoming.normalSteps_stable", "Becoming.reindexes_of_within"]}
+{"name": "Becoming.normalForm_normal", "uses": ["Becoming.normalForm_iff", "Becoming.normalForm_rearranges", "Becoming.normalForm_reindexes"]}
+{"name": "Becoming.normalForm_rearranges", "uses": ["Becoming.normalSteps_spec"]}
+{"name": "Becoming.normalForm_reindexes", "uses": ["Becoming.Reindexes.comp", "Becoming.normalSteps_spec", "Becoming.reindexes_of_within"]}
+{"name": "Becoming.normalSteps_agree", "uses": ["Becoming.Orients.symm", "Becoming.Orients.trans", "Becoming.Reindexes.comp", "Becoming.bool_eq_of_iff", "Becoming.commutes_orients", "Becoming.firstWhere_congr", "Becoming.free_transfer", "Becoming.next_spec", "Becoming.normalSteps_spec", "Becoming.reindexes_of_within"]}
+{"name": "Becoming.normalSteps_spec", "uses": ["Becoming.next_spec"]}
+{"name": "Becoming.normalSteps_stable", "uses": ["Becoming.next_spec", "Becoming.normalSteps_spec"]}
+{"name": "Becoming.not_eq_false_iff", "uses": []}
+{"name": "Becoming.origin_append", "uses": []}
+{"name": "Becoming.origin_lowering_below", "uses": ["Becoming.origin_place", "Becoming.place_lowering_outside"]}
+{"name": "Becoming.origin_lowering_top", "uses": ["Becoming.origin_place", "Becoming.place_lowering_top"]}
+{"name": "Becoming.origin_within", "uses": ["Becoming.swapAt_within"]}
+{"name": "Becoming.pair_rearranges", "uses": ["Becoming.Rearranges.orients", "Becoming.add_excess_of_le", "Becoming.origin_lowering_below", "Becoming.origin_lowering_top", "Becoming.pair_within", "Becoming.place_append", "Becoming.place_lowering_outside", "Becoming.place_lowering_top", "Becoming.reindexes_of_within", "Becoming.swapAt_first", "Becoming.swapAt_second"]}
+{"name": "Becoming.pair_within", "uses": ["Becoming.EachStep.append", "Becoming.add_excess_of_le", "Becoming.lowering_inside"]}
+{"name": "Becoming.pick_least", "uses": ["Becoming.firstWhere_before"]}
+{"name": "Becoming.pick_spec", "uses": ["Becoming.Reindexes.comp", "Becoming.firstWhere_found", "Becoming.firstWhere_ge", "Becoming.freeAt_iff", "Becoming.reindexes_of_within"]}
+{"name": "Becoming.place_within", "uses": ["Becoming.swapAt_within"]}
+{"name": "Becoming.rearranges_iff", "uses": ["Becoming.Rearranges.orients", "Becoming.Reindexes.comp", "Becoming.Reindexes.symm", "Becoming.sorts_by"]}
+{"name": "Becoming.reindexes_of_within", "uses": ["Becoming.origin_place", "Becoming.origin_within", "Becoming.place_origin", "Becoming.place_within"]}
+{"name": "Becoming.sorts_by", "uses": ["Becoming.le_dest", "Becoming.sorts_step_by"]}
+{"name": "Becoming.sorts_by_iff", "uses": ["Becoming.Commutes.keeps", "Becoming.sorts_by"]}
+{"name": "Becoming.sorts_step_by", "uses": ["Becoming.Commutes.append", "Becoming.EachStep.append", "Becoming.EachStep.mono", "Becoming.Footprinted.lowered_place", "Becoming.Footprinted.lowered_reindexes", "Becoming.KeepsOrder.first_free", "Becoming.Naturals.le_of_add_le_add_left", "Becoming.lowered_keepsOrder", "Becoming.lowering_commutes", "Becoming.lowering_within", "Becoming.origin_place", "Becoming.place_append", "Becoming.place_fixed", "Becoming.place_lowering_top"]}
+{"name": "Becoming.swapAt_within", "uses": ["Becoming.swapAt_away", "Becoming.swapAt_first", "Becoming.swapAt_second"]}

@@ -1,0 +1,6 @@
+{"name": "Becoming.Room.same_alike", "uses": []}
+{"name": "Becoming.Room.same_constant", "uses": ["Becoming.«有常之逐点»"]}
+{"name": "Becoming.Room.same_symm", "uses": []}
+{"name": "Becoming.«可分则不在核»", "uses": ["Becoming.«核在每层之内»"]}
+{"name": "Becoming.«恒温与平衡»", "uses": ["Becoming.Room.same_alike", "Becoming.Room.same_constant", "Becoming.Room.same_symm", "Becoming.«可分则不在核»"]}
+{"name": "Becoming.«核在每层之内»", "uses": ["Becoming.«有常之逐点»", "Becoming.«根»"]}

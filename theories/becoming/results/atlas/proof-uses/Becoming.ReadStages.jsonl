@@ -1,0 +1,57 @@
+{"name": "Becoming.ReadStages.Example.best", "uses": ["Becoming.ReadStages.Example.outweighs", "Becoming.ReadStages.complyThenOwn_best_iff"]}
+{"name": "Becoming.ReadStages.Example.chosen", "uses": ["Becoming.ReadStages.Example.outweighs", "Becoming.ReadStages.choose_eq_iff"]}
+{"name": "Becoming.ReadStages.Example.equal_weights", "uses": ["Becoming.ReadStages.kept_not_raised_chooses_own"]}
+{"name": "Becoming.ReadStages.Example.exit_tie", "uses": []}
+{"name": "Becoming.ReadStages.Example.freshDraw_above", "uses": []}
+{"name": "Becoming.ReadStages.Example.freshDraw_boundary", "uses": []}
+{"name": "Becoming.ReadStages.Example.no_total", "uses": []}
+{"name": "Becoming.ReadStages.Example.outweighs", "uses": []}
+{"name": "Becoming.ReadStages.Example.tie", "uses": []}
+{"name": "Becoming.ReadStages.Example.valid", "uses": []}
+{"name": "Becoming.ReadStages.Example.valueless", "uses": ["Becoming.ReadStages.no_value_chooses_own"]}
+{"name": "Becoming.ReadStages.Example.variants_valid", "uses": ["Becoming.ReadStages.Example.valid"]}
+{"name": "Becoming.ReadStages.above_asymm", "uses": ["Becoming.RevisionRoutes.GainLoss.above_asymm"]}
+{"name": "Becoming.ReadStages.above_iff_routes", "uses": ["Becoming.ReadStages.gain_asRoute", "Becoming.ReadStages.loss_asRoute"]}
+{"name": "Becoming.ReadStages.above_irrefl", "uses": ["Becoming.RevisionRoutes.GainLoss.above_irrefl"]}
+{"name": "Becoming.ReadStages.choose_eq_iff", "uses": []}
+{"name": "Becoming.ReadStages.choose_of_not_outweighs", "uses": []}
+{"name": "Becoming.ReadStages.choose_optimal", "uses": ["Becoming.ReadStages.above_asymm", "Becoming.ReadStages.above_irrefl", "Becoming.ReadStages.complyThenOwn_best_iff"]}
+{"name": "Becoming.ReadStages.complyAtBoth_maximal_iff", "uses": ["Becoming.RevisionRoutes.GainLoss.maximal_iff"]}
+{"name": "Becoming.ReadStages.complyAtBoth_not_above_ownAtBoth", "uses": []}
+{"name": "Becoming.ReadStages.complyThenOwn_best_iff", "uses": []}
+{"name": "Becoming.ReadStages.complyThenOwn_maximal_iff", "uses": ["Becoming.ReadStages.above_irrefl", "Becoming.ReadStages.unread_comply_not_above"]}
+{"name": "Becoming.ReadStages.complyThenOwn_not_uniform", "uses": []}
+{"name": "Becoming.ReadStages.complyThenOwn_realized_iff", "uses": ["Becoming.ReadStages.complyThenOwn_not_uniform", "Becoming.ReadStages.plan_realized_iff"]}
+{"name": "Becoming.ReadStages.freshDraw_above_iff", "uses": ["Becoming.ReadStages.freshDraw_gap", "Becoming.ReadStages.freshDraw_witness"]}
+{"name": "Becoming.ReadStages.freshDraw_above_iff_chance", "uses": ["Becoming.ReadStages.freshDraw_reduce"]}
+{"name": "Becoming.ReadStages.freshDraw_bound", "uses": ["Becoming.Naturals.two_mul", "Becoming.ReadStages.square_split", "Becoming.ReadStages.sum_le_square", "Becoming.add_mul_split"]}
+{"name": "Becoming.ReadStages.freshDraw_gap", "uses": ["Becoming.ReadStages.freshDraw_bound"]}
+{"name": "Becoming.ReadStages.freshDraw_not_above_of_not_raised", "uses": ["Becoming.Naturals.two_mul", "Becoming.ReadStages.freshDraw_gap"]}
+{"name": "Becoming.ReadStages.freshDraw_not_above_without_value", "uses": ["Becoming.ReadStages.freshDraw_gap"]}
+{"name": "Becoming.ReadStages.freshDraw_reduce", "uses": ["Becoming.ReadStages.square_split", "Becoming.ReadStages.sum_regroup", "Becoming.add_mul_split", "Becoming.mul_turn"]}
+{"name": "Becoming.ReadStages.freshDraw_witness", "uses": ["Becoming.Naturals.two_mul", "Becoming.ReadStages.square_split", "Becoming.ReadStages.sum_lt_of_room", "Becoming.add_mul_split"]}
+{"name": "Becoming.ReadStages.gain_asRoute", "uses": []}
+{"name": "Becoming.ReadStages.kept_alike", "uses": []}
+{"name": "Becoming.ReadStages.kept_not_raised", "uses": []}
+{"name": "Becoming.ReadStages.kept_not_raised_chooses_own", "uses": ["Becoming.ReadStages.kept_not_raised"]}
+{"name": "Becoming.ReadStages.loss_asRoute", "uses": []}
+{"name": "Becoming.ReadStages.lumped_uniform", "uses": []}
+{"name": "Becoming.ReadStages.mixture_never_above", "uses": []}
+{"name": "Becoming.ReadStages.no_value", "uses": []}
+{"name": "Becoming.ReadStages.no_value_chooses_own", "uses": ["Becoming.ReadStages.no_value"]}
+{"name": "Becoming.ReadStages.only_complyThenOwn_iff", "uses": ["Becoming.ReadStages.choose_eq_iff", "Becoming.ReadStages.choose_optimal", "Becoming.ReadStages.complyThenOwn_best_iff"]}
+{"name": "Becoming.ReadStages.outweighs_needs", "uses": ["Becoming.ReadStages.kept_not_raised", "Becoming.ReadStages.no_value"]}
+{"name": "Becoming.ReadStages.outweighs_needs_more", "uses": []}
+{"name": "Becoming.ReadStages.ownAtBoth_above_of_not_raised", "uses": []}
+{"name": "Becoming.ReadStages.ownAtBoth_above_without_value", "uses": []}
+{"name": "Becoming.ReadStages.ownAtBoth_best_iff", "uses": []}
+{"name": "Becoming.ReadStages.plan_realized_iff", "uses": []}
+{"name": "Becoming.ReadStages.read_fixes_unread", "uses": ["Becoming.Learning.lumped_determines"]}
+{"name": "Becoming.ReadStages.square_split", "uses": ["Becoming.add_mul_split", "Becoming.mul_turn"]}
+{"name": "Becoming.ReadStages.sum_le_square", "uses": []}
+{"name": "Becoming.ReadStages.sum_lt_of_room", "uses": []}
+{"name": "Becoming.ReadStages.sum_regroup", "uses": []}
+{"name": "Becoming.ReadStages.twin_complyThenOwn", "uses": ["Becoming.Learning.twin_selected"]}
+{"name": "Becoming.ReadStages.uniform_best_iff", "uses": []}
+{"name": "Becoming.ReadStages.uniform_tie", "uses": []}
+{"name": "Becoming.ReadStages.unread_comply_not_above", "uses": []}

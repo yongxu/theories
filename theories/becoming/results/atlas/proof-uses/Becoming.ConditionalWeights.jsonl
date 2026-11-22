@@ -1,0 +1,93 @@
+{"name": "Becoming.ConditionalWeights.Share.le_iff_reciprocal", "uses": []}
+{"name": "Becoming.ConditionalWeights.Share.le_refl", "uses": []}
+{"name": "Becoming.ConditionalWeights.Share.le_trans", "uses": ["Becoming.Naturals.mul_right_comm"]}
+{"name": "Becoming.ConditionalWeights.Share.mul_le_left", "uses": ["Becoming.mul_assoc_nat"]}
+{"name": "Becoming.ConditionalWeights.Share.mul_le_mul", "uses": ["Becoming.Naturals.mul_mul_mul_comm"]}
+{"name": "Becoming.ConditionalWeights.Share.zero_whole", "uses": []}
+{"name": "Becoming.ConditionalWeights.Witness.le_not_transitive", "uses": []}
+{"name": "Becoming.ConditionalWeights.Witness.positive_part_zero_whole", "uses": []}
+{"name": "Becoming.ConditionalWeights.Witness.prior_not_share", "uses": []}
+{"name": "Becoming.ConditionalWeights.Witness.record_reverses", "uses": []}
+{"name": "Becoming.ConditionalWeights.Witness.within_exceeds_end", "uses": []}
+{"name": "Becoming.ConditionalWeights.courses_add", "uses": ["Becoming.ConditionalWeights.extend_joinMap", "Becoming.ConditionalWeights.extend_map_append", "Becoming.ConditionalWeights.joinMap_congr", "Becoming.ConditionalWeights.joinMap_single"]}
+{"name": "Becoming.ConditionalWeights.deviates_bound", "uses": ["Becoming.ConditionalWeights.deviates_offBy", "Becoming.ConditionalWeights.mass_eq_total", "Becoming.Typicality.total_le", "Becoming.Typicality.typical"]}
+{"name": "Becoming.ConditionalWeights.deviates_offBy", "uses": ["Becoming.ListTests.or_true_iff", "Becoming.Typicality.margin_square"]}
+{"name": "Becoming.ConditionalWeights.drop_append_length", "uses": []}
+{"name": "Becoming.ConditionalWeights.entry_and", "uses": []}
+{"name": "Becoming.ConditionalWeights.entry_and_comm", "uses": []}
+{"name": "Becoming.ConditionalWeights.entry_and_true", "uses": []}
+{"name": "Becoming.ConditionalWeights.entry_mul_left", "uses": []}
+{"name": "Becoming.ConditionalWeights.entry_restrict_le", "uses": ["Becoming.ConditionalWeights.entry_test_le"]}
+{"name": "Becoming.ConditionalWeights.entry_split", "uses": []}
+{"name": "Becoming.ConditionalWeights.entry_swap", "uses": []}
+{"name": "Becoming.ConditionalWeights.entry_test_le", "uses": []}
+{"name": "Becoming.ConditionalWeights.evidence", "uses": ["Becoming.ConditionalWeights.mass_pairWeight"]}
+{"name": "Becoming.ConditionalWeights.extend_append", "uses": []}
+{"name": "Becoming.ConditionalWeights.extend_joinMap", "uses": ["Becoming.ConditionalWeights.extend_append"]}
+{"name": "Becoming.ConditionalWeights.extend_map_append", "uses": []}
+{"name": "Becoming.ConditionalWeights.fallsTo_append", "uses": ["Becoming.ConditionalWeights.margin_shift", "Becoming.ConditionalWeights.ones_append", "Becoming.ConditionalWeights.zeros_append", "Becoming.ListTests.decide_true_iff", "Becoming.bool_eq_of_iff"]}
+{"name": "Becoming.ConditionalWeights.fallsTo_bound", "uses": ["Becoming.ConditionalWeights.fallsWithin_bound", "Becoming.ConditionalWeights.fallsWithin_of_end", "Becoming.mass_mono"]}
+{"name": "Becoming.ConditionalWeights.fallsTo_succ", "uses": []}
+{"name": "Becoming.ConditionalWeights.fallsWithin_append", "uses": ["Becoming.ConditionalWeights.fallsTo_append", "Becoming.ConditionalWeights.fallsWithin_of_end"]}
+{"name": "Becoming.ConditionalWeights.fallsWithin_bound", "uses": ["Becoming.ConditionalWeights.fallsWithin_entry", "Becoming.ConditionalWeights.mass_eq_total", "Becoming.Typicality.total_le", "Becoming.Typicality.typical_throughout"]}
+{"name": "Becoming.ConditionalWeights.fallsWithin_entry", "uses": ["Becoming.ConditionalWeights.fallsWithin_reachesBy"]}
+{"name": "Becoming.ConditionalWeights.fallsWithin_of_end", "uses": ["Becoming.ListTests.or_right"]}
+{"name": "Becoming.ConditionalWeights.fallsWithin_reachesBy", "uses": ["Becoming.ListTests.or_cases", "Becoming.ListTests.or_left", "Becoming.ListTests.or_right", "Becoming.Typicality.margin_square"]}
+{"name": "Becoming.ConditionalWeights.fallsWithin_reciprocal", "uses": ["Becoming.ConditionalWeights.Share.le_iff_reciprocal", "Becoming.ConditionalWeights.fallsWithin_share"]}
+{"name": "Becoming.ConditionalWeights.fallsWithin_share", "uses": ["Becoming.ConditionalWeights.fallsWithin_bound", "Becoming.ConditionalWeights.whole_typical", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.ConditionalWeights.foldr_part", "uses": []}
+{"name": "Becoming.ConditionalWeights.foldr_whole", "uses": []}
+{"name": "Becoming.ConditionalWeights.joinMap_congr", "uses": []}
+{"name": "Becoming.ConditionalWeights.joinMap_single", "uses": []}
+{"name": "Becoming.ConditionalWeights.margin_shift", "uses": ["Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.ConditionalWeights.mass_absent", "uses": []}
+{"name": "Becoming.ConditionalWeights.mass_and_comm", "uses": ["Becoming.ConditionalWeights.entry_and_comm", "Becoming.ConditionalWeights.mass_congr"]}
+{"name": "Becoming.ConditionalWeights.mass_and_true", "uses": ["Becoming.ConditionalWeights.entry_and_true", "Becoming.ConditionalWeights.mass_congr"]}
+{"name": "Becoming.ConditionalWeights.mass_append", "uses": ["Becoming.ConditionalWeights.mass_eq_sum", "Becoming.Naturals.add_congr", "Becoming.Weights.sum_append"]}
+{"name": "Becoming.ConditionalWeights.mass_congr", "uses": ["Becoming.ConditionalWeights.mass_congr_mem"]}
+{"name": "Becoming.ConditionalWeights.mass_congr_mem", "uses": ["Becoming.ConditionalWeights.mass_eq_sum", "Becoming.Weights.sum_congr"]}
+{"name": "Becoming.ConditionalWeights.mass_eq_sum", "uses": []}
+{"name": "Becoming.ConditionalWeights.mass_eq_total", "uses": []}
+{"name": "Becoming.ConditionalWeights.mass_first", "uses": ["Becoming.ConditionalWeights.mass_and_true", "Becoming.ConditionalWeights.mass_product"]}
+{"name": "Becoming.ConditionalWeights.mass_joinMap", "uses": ["Becoming.ConditionalWeights.mass_eq_sum", "Becoming.Weights.sum_congr", "Becoming.Weights.sum_joinMap"]}
+{"name": "Becoming.ConditionalWeights.mass_le_of_entries", "uses": []}
+{"name": "Becoming.ConditionalWeights.mass_map", "uses": ["Becoming.ConditionalWeights.mass_eq_sum", "Becoming.Weights.sum_map"]}
+{"name": "Becoming.ConditionalWeights.mass_meetsEach", "uses": ["Becoming.ConditionalWeights.mass_congr", "Becoming.ConditionalWeights.mass_joinMap", "Becoming.ConditionalWeights.mass_map", "Becoming.ConditionalWeights.mass_mul_right", "Becoming.ConditionalWeights.mass_scaled_event"]}
+{"name": "Becoming.ConditionalWeights.mass_mul_left", "uses": ["Becoming.ConditionalWeights.entry_mul_left", "Becoming.ConditionalWeights.mass_eq_sum", "Becoming.Weights.mul_sum", "Becoming.Weights.sum_congr"]}
+{"name": "Becoming.ConditionalWeights.mass_mul_right", "uses": ["Becoming.ConditionalWeights.mass_congr", "Becoming.ConditionalWeights.mass_mul_left"]}
+{"name": "Becoming.ConditionalWeights.mass_none", "uses": []}
+{"name": "Becoming.ConditionalWeights.mass_pairWeight", "uses": ["Becoming.ConditionalWeights.mass_pairs"]}
+{"name": "Becoming.ConditionalWeights.mass_pairs", "uses": ["Becoming.ConditionalWeights.mass_append", "Becoming.ConditionalWeights.mass_map", "Becoming.ConditionalWeights.mass_scaled_event", "Becoming.Naturals.add_congr"]}
+{"name": "Becoming.ConditionalWeights.mass_product", "uses": ["Becoming.ConditionalWeights.mass_mul_right", "Becoming.ConditionalWeights.mass_pairs"]}
+{"name": "Becoming.ConditionalWeights.mass_record", "uses": ["Becoming.ConditionalWeights.courses_add", "Becoming.ConditionalWeights.drop_append_length", "Becoming.ConditionalWeights.mass_congr_mem", "Becoming.ConditionalWeights.mass_joinMap", "Becoming.ConditionalWeights.mass_map", "Becoming.ConditionalWeights.mass_mul_right", "Becoming.ConditionalWeights.mass_none", "Becoming.ConditionalWeights.weight_append", "Becoming.Typicality.mem_courses_iff"]}
+{"name": "Becoming.ConditionalWeights.mass_restrict", "uses": ["Becoming.ConditionalWeights.entry_and", "Becoming.ConditionalWeights.mass_congr"]}
+{"name": "Becoming.ConditionalWeights.mass_restrict_le", "uses": ["Becoming.ConditionalWeights.entry_restrict_le", "Becoming.ConditionalWeights.mass_le_of_entries"]}
+{"name": "Becoming.ConditionalWeights.mass_scaled_event", "uses": ["Becoming.ConditionalWeights.mass_mul_left", "Becoming.ConditionalWeights.mass_none"]}
+{"name": "Becoming.ConditionalWeights.mass_single", "uses": ["Becoming.ConditionalWeights.mass_absent"]}
+{"name": "Becoming.ConditionalWeights.mass_split", "uses": ["Becoming.ConditionalWeights.entry_split"]}
+{"name": "Becoming.ConditionalWeights.ones_append", "uses": []}
+{"name": "Becoming.ConditionalWeights.posterior_le_iff", "uses": ["Becoming.ConditionalWeights.mass_pairWeight", "Becoming.ConditionalWeights.mass_restrict", "Becoming.ConditionalWeights.whole_restrict"]}
+{"name": "Becoming.ConditionalWeights.posterior_le_iff_single", "uses": ["Becoming.ConditionalWeights.mass_single", "Becoming.ConditionalWeights.posterior_le_iff"]}
+{"name": "Becoming.ConditionalWeights.posterior_single", "uses": ["Becoming.ConditionalWeights.evidence", "Becoming.ConditionalWeights.mass_pairWeight", "Becoming.ConditionalWeights.mass_restrict", "Becoming.ConditionalWeights.mass_single", "Becoming.ConditionalWeights.whole_restrict"]}
+{"name": "Becoming.ConditionalWeights.prior_share", "uses": ["Becoming.ConditionalWeights.evidence", "Becoming.ConditionalWeights.mass_and_true", "Becoming.ConditionalWeights.mass_congr_mem", "Becoming.ConditionalWeights.mass_mul_right", "Becoming.ConditionalWeights.mass_pairWeight", "Becoming.ConditionalWeights.mass_single"]}
+{"name": "Becoming.ConditionalWeights.record_bound", "uses": ["Becoming.ConditionalWeights.fallsWithin_bound", "Becoming.ConditionalWeights.mass_and_comm", "Becoming.ConditionalWeights.mass_and_true", "Becoming.ConditionalWeights.mass_record", "Becoming.ConditionalWeights.mass_restrict", "Becoming.ConditionalWeights.record_fallsWithin", "Becoming.ConditionalWeights.whole_restrict", "Becoming.ConditionalWeights.whole_typical", "Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.ConditionalWeights.record_fallsWithin", "uses": ["Becoming.ConditionalWeights.fallsWithin_append", "Becoming.ConditionalWeights.mass_record"]}
+{"name": "Becoming.ConditionalWeights.record_share", "uses": ["Becoming.ConditionalWeights.mass_and_comm", "Becoming.ConditionalWeights.mass_and_true", "Becoming.ConditionalWeights.mass_record", "Becoming.ConditionalWeights.mass_restrict", "Becoming.ConditionalWeights.record_fallsWithin", "Becoming.ConditionalWeights.whole_restrict", "Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.ConditionalWeights.restrict_comm", "uses": ["Becoming.ConditionalWeights.entry_swap"]}
+{"name": "Becoming.ConditionalWeights.restrict_independent", "uses": ["Becoming.ConditionalWeights.mass_first", "Becoming.ConditionalWeights.mass_product", "Becoming.ConditionalWeights.mass_restrict", "Becoming.ConditionalWeights.whole_restrict", "Becoming.Naturals.mul_mul_mul_comm"]}
+{"name": "Becoming.ConditionalWeights.restrict_le", "uses": ["Becoming.ConditionalWeights.entry_test_le"]}
+{"name": "Becoming.ConditionalWeights.restrict_restrict", "uses": ["Becoming.ConditionalWeights.entry_and", "Becoming.ConditionalWeights.entry_swap"]}
+{"name": "Becoming.ConditionalWeights.restrict_two_ways", "uses": ["Becoming.ConditionalWeights.mass_and_comm", "Becoming.ConditionalWeights.mass_restrict", "Becoming.ConditionalWeights.whole_restrict", "Becoming.Naturals.mul_mul_mul_comm"]}
+{"name": "Becoming.ConditionalWeights.share_le_of_included", "uses": ["Becoming.mass_mono"]}
+{"name": "Becoming.ConditionalWeights.share_meetsEach", "uses": ["Becoming.ConditionalWeights.foldr_part", "Becoming.ConditionalWeights.foldr_whole", "Becoming.ConditionalWeights.mass_meetsEach", "Becoming.ConditionalWeights.whole_courses"]}
+{"name": "Becoming.ConditionalWeights.share_product", "uses": ["Becoming.ConditionalWeights.mass_product"]}
+{"name": "Becoming.ConditionalWeights.share_product_le", "uses": ["Becoming.ConditionalWeights.Share.mul_le_left", "Becoming.ConditionalWeights.share_product", "Becoming.ConditionalWeights.share_within"]}
+{"name": "Becoming.ConditionalWeights.share_product_le_right", "uses": ["Becoming.ConditionalWeights.share_product", "Becoming.ConditionalWeights.share_within", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.ConditionalWeights.share_within", "uses": ["Becoming.mass_mono"]}
+{"name": "Becoming.ConditionalWeights.share_zero_whole", "uses": ["Becoming.ConditionalWeights.share_within"]}
+{"name": "Becoming.ConditionalWeights.weight_append", "uses": ["Becoming.mul_assoc_nat"]}
+{"name": "Becoming.ConditionalWeights.whole_courses", "uses": ["Becoming.ConditionalWeights.mass_congr", "Becoming.ConditionalWeights.mass_joinMap", "Becoming.ConditionalWeights.mass_map", "Becoming.ConditionalWeights.mass_mul_left", "Becoming.ConditionalWeights.mass_mul_right"]}
+{"name": "Becoming.ConditionalWeights.whole_of_entries", "uses": []}
+{"name": "Becoming.ConditionalWeights.whole_restrict", "uses": ["Becoming.ConditionalWeights.mass_restrict"]}
+{"name": "Becoming.ConditionalWeights.whole_typical", "uses": ["Becoming.ConditionalWeights.mass_eq_total", "Becoming.Typicality.total_weight"]}
+{"name": "Becoming.ConditionalWeights.zeros_append", "uses": []}

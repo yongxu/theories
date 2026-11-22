@@ -1,0 +1,29 @@
+{"name": "Becoming.UnreadStandings.eq_relabelled", "uses": []}
+{"name": "Becoming.UnreadStandings.factor_of_one", "uses": []}
+{"name": "Becoming.UnreadStandings.le_scaled", "uses": []}
+{"name": "Becoming.UnreadStandings.le_squared", "uses": ["Becoming.UnreadStandings.lt_scaled"]}
+{"name": "Becoming.UnreadStandings.lt_relabelled", "uses": []}
+{"name": "Becoming.UnreadStandings.lt_scaled", "uses": []}
+{"name": "Becoming.UnreadStandings.pos_scaled", "uses": []}
+{"name": "Becoming.UnreadStandings.pos_squared", "uses": []}
+{"name": "Becoming.UnreadStandings.sum_eq_scaled", "uses": []}
+{"name": "Becoming.World.atFinerUnit_activityClass", "uses": ["Becoming.World.carried_of_same"]}
+{"name": "Becoming.World.atFinerUnit_agree", "uses": ["Becoming.UnreadStandings.le_scaled", "Becoming.UnreadStandings.lt_scaled", "Becoming.UnreadStandings.pos_scaled", "Becoming.World.atFinerUnit_conserves"]}
+{"name": "Becoming.World.atFinerUnit_balanced_iff", "uses": ["Becoming.World.atFinerUnit_conserves"]}
+{"name": "Becoming.World.atFinerUnit_begins", "uses": ["Becoming.World.atFinerUnit_activityClass", "Becoming.World.atFinerUnit_carried", "Becoming.«生之对应»"]}
+{"name": "Becoming.World.atFinerUnit_carried", "uses": ["Becoming.World.atFinerUnit_agree", "Becoming.World.carried_of_same"]}
+{"name": "Becoming.World.atFinerUnit_conserves", "uses": ["Becoming.UnreadStandings.sum_eq_scaled", "Becoming.World.atFinerUnit_given", "Becoming.World.atFinerUnit_taken"]}
+{"name": "Becoming.World.atFinerUnit_ends", "uses": ["Becoming.World.atFinerUnit_activityClass", "Becoming.World.atFinerUnit_carried", "Becoming.«亡之对应»"]}
+{"name": "Becoming.World.atFinerUnit_family", "uses": ["Becoming.World.atFinerUnit_activityClass", "Becoming.World.atFinerUnit_carried", "Becoming.«同族之对应»"]}
+{"name": "Becoming.World.atFinerUnit_given", "uses": ["Becoming.total_mul"]}
+{"name": "Becoming.World.atFinerUnit_level", "uses": []}
+{"name": "Becoming.World.atFinerUnit_taken", "uses": ["Becoming.total_mul"]}
+{"name": "Becoming.World.carried_of_same", "uses": ["Becoming.«对应之像»"]}
+{"name": "Becoming.World.oneTwo_not_scaled", "uses": ["Becoming.UnreadStandings.factor_of_one", "Becoming.World.stillAt_squared_agree"]}
+{"name": "Becoming.World.ratio_apart", "uses": ["Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.World.standingAt_eq_stillAt", "uses": []}
+{"name": "Becoming.World.standing_not_read", "uses": ["Becoming.World.atFinerUnit_agree"]}
+{"name": "Becoming.World.standing_not_read_up_to_unit", "uses": ["Becoming.World.ratio_apart", "Becoming.World.stillAt_squared_agree"]}
+{"name": "Becoming.World.stillAt_conserves", "uses": []}
+{"name": "Becoming.World.stillAt_relabel_agree", "uses": ["Becoming.UnreadStandings.eq_relabelled", "Becoming.UnreadStandings.lt_relabelled", "Becoming.World.stillAt_conserves"]}
+{"name": "Becoming.World.stillAt_squared_agree", "uses": ["Becoming.UnreadStandings.le_squared", "Becoming.UnreadStandings.pos_squared", "Becoming.World.stillAt_relabel_agree"]}

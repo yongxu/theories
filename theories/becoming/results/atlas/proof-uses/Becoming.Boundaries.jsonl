@@ -1,0 +1,69 @@
+{"name": "Becoming.Boundary.closure", "uses": ["Becoming.WithinClosure.refl", "Becoming.closedUnder_withinClosure"]}
+{"name": "Becoming.Boundary.holds", "uses": []}
+{"name": "Becoming.Boundary.of_larger", "uses": []}
+{"name": "Becoming.Boundary.only_whole", "uses": ["Becoming.Boundary.holds"]}
+{"name": "Becoming.Boundary.whole", "uses": []}
+{"name": "Becoming.BoundaryFlows.boundaryInvariant_iff_extends", "uses": ["Becoming.Boundary.whole", "Becoming.boundaryInvariant_iff_extends"]}
+{"name": "Becoming.BoundaryFlows.bounded_reach_iff", "uses": ["Becoming.bounded_closure_iff"]}
+{"name": "Becoming.BoundaryFlows.not_subTrue_of_invariant", "uses": ["Becoming.Boundary.whole", "Becoming.not_subTrue_of_invariant"]}
+{"name": "Becoming.BoundaryFlows.only_whole_of_common", "uses": ["Becoming.Boundary.only_whole", "Becoming.Flow.system_whole_of_common"]}
+{"name": "Becoming.BoundaryFlows.own_continuation", "uses": ["Becoming.subTrue_empty_iff", "Becoming.subTrue_of_larger"]}
+{"name": "Becoming.BoundaryFlows.reach_scopes", "uses": ["Becoming.presupposition_scopes"]}
+{"name": "Becoming.BoundaryFlows.retains_whole_iff_includes", "uses": ["Becoming.Web.retains_iff_includes", "Becoming.bounded_whole"]}
+{"name": "Becoming.BoundaryFlows.shares_iff_total_of_common", "uses": ["Becoming.Flow.presupposition_order", "Becoming.Flow.system_whole_of_common", "Becoming.subTrue_significantWithin_iff", "Becoming.subTrue_total_iff"]}
+{"name": "Becoming.BoundaryFlows.significant_of_presupposed", "uses": ["Becoming.Boundary.whole", "Becoming.Valuation.significant_of_presupposed"]}
+{"name": "Becoming.BoundaryFlows.superTrue_all_iff", "uses": ["Becoming.Boundary.whole", "Becoming.superTrue_all_iff"]}
+{"name": "Becoming.BoundaryFlows.superTrue_level_free", "uses": ["Becoming.superTrue_level_free"]}
+{"name": "Becoming.BoundaryFlows.unrestricted_iff_superTrue", "uses": ["Becoming.unrestricted_iff_superTrue"]}
+{"name": "Becoming.BoundaryFlows.unrestricted_of_presupposed", "uses": ["Becoming.Boundary.whole", "Becoming.unrestricted_of_presupposed"]}
+{"name": "Becoming.BoundaryWorlds.presupposition_iff_all", "uses": ["Becoming.Boundary.whole", "Becoming.presupposition_iff_all_of_invariant"]}
+{"name": "Becoming.Clearing.levels_differ", "uses": ["Becoming.Clearing.dweller_beyond", "Becoming.Clearing.levels", "Becoming.subTrue_significantWithin_iff"]}
+{"name": "Becoming.Clearing.own_presupposition", "uses": ["Becoming.Boundary.whole", "Becoming.Clearing.admitted_without", "Becoming.Clearing.levels", "Becoming.Clearing.system_counts_dweller", "Becoming.Clearing.unsupported_with", "Becoming.Flow.withinInfluence_of_withinFeeding", "Becoming.Web.Retains.not_added", "Becoming.Web.Retains.of_fewer", "Becoming.subTrue_significantWithin_iff", "Becoming.superTrue_significantWithin_iff"]}
+{"name": "Becoming.Clearing.system_presupposition", "uses": ["Becoming.Clearing.system_whole", "Becoming.Flow.unrestricted_iff_system_presupposed"]}
+{"name": "Becoming.Clearing.with_fixed_boundary", "uses": ["Becoming.Clearing.dweller_beyond"]}
+{"name": "Becoming.Clearing.without_invariance", "uses": ["Becoming.Boundary.closure", "Becoming.Boundary.whole", "Becoming.Clearing.dweller_beyond", "Becoming.bounded_closure_least"]}
+{"name": "Becoming.Clearing.without_presupposition", "uses": ["Becoming.Boundary.whole"]}
+{"name": "Becoming.Clearing.without_standpoint_invariance", "uses": ["Becoming.Clearing.dweller_beyond", "Becoming.WithinClosure.refl", "Becoming.bounded_closure_least"]}
+{"name": "Becoming.Flow.Balances.presupposed_comparison", "uses": ["Becoming.Flow.Balances.comparison_within_reach", "Becoming.Flow.ReachesBefore.reaches", "Becoming.Flow.reaches_within_closed", "Becoming.closedUnder_withinClosure", "Becoming.subTrue_significantWithin_iff"]}
+{"name": "Becoming.Flow.Balances.presupposed_reach_comparison", "uses": ["Becoming.Flow.Balances.presupposed_comparison"]}
+{"name": "Becoming.Flow.presupposition_order", "uses": ["Becoming.Flow.affectedBy_of_fedFrom", "Becoming.Flow.shares_of_affectedBy", "Becoming.Flow.shares_symm", "Becoming.subTrue_of_larger"]}
+{"name": "Becoming.Flow.unrestricted_iff_presupposed_of_common", "uses": ["Becoming.Flow.system_whole_of_common", "Becoming.Flow.unrestricted_iff_system_presupposed"]}
+{"name": "Becoming.Flow.unrestricted_iff_system_presupposed", "uses": ["Becoming.unrestricted_iff_presupposed_of_whole"]}
+{"name": "Becoming.OneCounts.forms_apart", "uses": ["Becoming.Boundary.whole", "Becoming.subTrue_empty_iff"]}
+{"name": "Becoming.Valuation.significant_of_presupposed", "uses": ["Becoming.Valuation.premises_of_unrestricted", "Becoming.unrestricted_iff_presupposed"]}
+{"name": "Becoming.Web.selfValuation_empty_own", "uses": ["Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Web.selfValuation_feeding_own", "uses": []}
+{"name": "Becoming.Web.selfValuation_held", "uses": ["Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Web.selfValuation_of_unrestricted", "uses": ["Becoming.Valuation.premises_of_unrestricted"]}
+{"name": "Becoming.Web.selfValuation_own_least", "uses": ["Becoming.Boundary.holds", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.refl", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Web.selfValuation_significant_iff", "uses": ["Becoming.Valuation.significant_iff_held", "Becoming.Web.selfValuation_held"]}
+{"name": "Becoming.boundaryInvariant_iff_all", "uses": ["Becoming.superTrue_iff", "Becoming.superTrue_significantWithin_iff"]}
+{"name": "Becoming.boundaryInvariant_iff_conditional", "uses": []}
+{"name": "Becoming.boundaryInvariant_iff_determinate", "uses": []}
+{"name": "Becoming.boundaryInvariant_iff_extends", "uses": []}
+{"name": "Becoming.boundaryInvariant_iff_standpointInvariant", "uses": ["Becoming.Boundary.whole", "Becoming.boundaryInvariant_iff_all", "Becoming.unrestricted_iff_presupposed_along", "Becoming.unrestricted_of_standpointInvariant"]}
+{"name": "Becoming.bounded_closure_iff", "uses": ["Becoming.superTrue_member_iff"]}
+{"name": "Becoming.bounded_closure_least", "uses": ["Becoming.subTrue_significantWithin_iff"]}
+{"name": "Becoming.bounded_invariant_iff", "uses": ["Becoming.Boundary.closure", "Becoming.Boundary.whole", "Becoming.boundaryInvariant_iff_all"]}
+{"name": "Becoming.not_subTrue_of_invariant", "uses": ["Becoming.boundaryInvariant_iff_conditional"]}
+{"name": "Becoming.presupposition_iff_all_of_invariant", "uses": ["Becoming.boundaryInvariant_iff_conditional"]}
+{"name": "Becoming.presupposition_scopes", "uses": ["Becoming.Boundary.whole", "Becoming.subTrue_significantWithin_iff", "Becoming.superTrue_member_iff", "Becoming.superTrue_significantWithin_iff"]}
+{"name": "Becoming.retains_agree_of_presupposed", "uses": ["Becoming.Web.retains_agree", "Becoming.unrestricted_iff_presupposed"]}
+{"name": "Becoming.subTrue_all_iff", "uses": ["Becoming.Boundary.closure", "Becoming.Boundary.holds"]}
+{"name": "Becoming.subTrue_empty_iff", "uses": ["Becoming.WithinClosure.refl", "Becoming.subTrue_significantWithin_iff"]}
+{"name": "Becoming.subTrue_member", "uses": ["Becoming.Boundary.whole"]}
+{"name": "Becoming.subTrue_of_larger", "uses": ["Becoming.Boundary.of_larger"]}
+{"name": "Becoming.subTrue_significantWithin_iff", "uses": ["Becoming.subTrue_all_iff"]}
+{"name": "Becoming.subTrue_total_iff", "uses": ["Becoming.WithinClosure.of_rel", "Becoming.subTrue_significantWithin_iff"]}
+{"name": "Becoming.superTrue_all_iff", "uses": []}
+{"name": "Becoming.superTrue_iff", "uses": []}
+{"name": "Becoming.superTrue_level_free", "uses": ["Becoming.Boundary.whole", "Becoming.superTrue_significantWithin_iff"]}
+{"name": "Becoming.superTrue_member_iff", "uses": ["Becoming.Boundary.holds"]}
+{"name": "Becoming.superTrue_significantWithin_iff", "uses": ["Becoming.superTrue_significantWithin_iff_union"]}
+{"name": "Becoming.superTrue_significantWithin_iff_union", "uses": []}
+{"name": "Becoming.unrestricted_iff_presupposed", "uses": ["Becoming.superTrue_iff", "Becoming.superTrue_significantWithin_iff"]}
+{"name": "Becoming.unrestricted_iff_presupposed_along", "uses": ["Becoming.Boundary.whole", "Becoming.unrestricted_iff_presupposed"]}
+{"name": "Becoming.unrestricted_iff_presupposed_of_whole", "uses": ["Becoming.subTrue_significantWithin_iff"]}
+{"name": "Becoming.unrestricted_iff_superTrue", "uses": ["Becoming.Boundary.whole", "Becoming.superTrue_significantWithin_iff"]}
+{"name": "Becoming.unrestricted_of_presupposed", "uses": []}
+{"name": "Becoming.unrestricted_of_standpointInvariant", "uses": ["Becoming.subTrue_significantWithin_iff"]}

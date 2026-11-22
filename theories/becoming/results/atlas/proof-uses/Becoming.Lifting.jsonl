@@ -1,0 +1,6 @@
+{"name": "Becoming.LiftModel.lift_needs_live_middle", "uses": []}
+{"name": "Becoming.LiftModel.some_outcome_does_not_lift", "uses": []}
+{"name": "Becoming.comparison_lifts", "uses": []}
+{"name": "Becoming.lift_coherent_selection_survives", "uses": ["Becoming.comparison_lifts"]}
+{"name": "Becoming.lift_continual_improvement_has_no_survivor", "uses": []}
+{"name": "Becoming.lifted_comparison_supplies_reason", "uses": ["Becoming.comparison_lifts"]}

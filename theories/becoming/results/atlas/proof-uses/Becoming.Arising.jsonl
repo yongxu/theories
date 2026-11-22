@@ -1,0 +1,46 @@
+{"name": "Becoming.Growth.ceases", "uses": ["Becoming.Growth.left_late", "Becoming.Growth.left_succ_le", "Becoming.Web.Unceasing.rises"]}
+{"name": "Becoming.Growth.left_late", "uses": []}
+{"name": "Becoming.Growth.left_succ_le", "uses": []}
+{"name": "Becoming.Oscillation.arises_on_rise", "uses": []}
+{"name": "Becoming.Oscillation.back", "uses": []}
+{"name": "Becoming.Oscillation.charge_even", "uses": []}
+{"name": "Becoming.Oscillation.charge_odd", "uses": []}
+{"name": "Becoming.Oscillation.readings", "uses": ["Becoming.Oscillation.back", "Becoming.Oscillation.charge_even", "Becoming.Oscillation.charge_odd", "Becoming.Web.MetAbove.now"]}
+{"name": "Becoming.Oscillation.unceasing", "uses": ["Becoming.Oscillation.arises_on_rise", "Becoming.Oscillation.charge_even", "Becoming.Oscillation.charge_odd", "Becoming.Web.Unceasing.activeRenewer_recurs"]}
+{"name": "Becoming.Recycle.atA_even", "uses": []}
+{"name": "Becoming.Recycle.atA_odd", "uses": []}
+{"name": "Becoming.Recycle.closed_unceasing", "uses": ["Becoming.Recycle.atA_even", "Becoming.Recycle.atA_odd", "Becoming.Recycle.passed", "Becoming.Recycle.total_one", "Becoming.Web.Unceasing.activeRenewer_recurs"]}
+{"name": "Becoming.Recycle.passed", "uses": []}
+{"name": "Becoming.Recycle.total_one", "uses": []}
+{"name": "Becoming.Relay.defers", "uses": ["Becoming.Relay.reserve_succ_le", "Becoming.Web.substitution_defers"]}
+{"name": "Becoming.Relay.reserve_succ_le", "uses": []}
+{"name": "Becoming.Steps.alike_class", "uses": []}
+{"name": "Becoming.Steps.along_fixed", "uses": ["Becoming.«定后之逐点»"]}
+{"name": "Becoming.Steps.along_hasPred_iff", "uses": []}
+{"name": "Becoming.Steps.along_hasSucc_iff", "uses": []}
+{"name": "Becoming.Steps.along_irrefl", "uses": []}
+{"name": "Becoming.Steps.along_sheng_zero", "uses": []}
+{"name": "Becoming.Steps.hasPred_iff", "uses": []}
+{"name": "Becoming.Steps.hasSucc_iff", "uses": []}
+{"name": "Becoming.Steps.sheng_zero", "uses": []}
+{"name": "Becoming.Steps.wang_iff_sheng_next", "uses": ["Becoming.Steps.hasPred_iff", "Becoming.Steps.hasSucc_iff"]}
+{"name": "Becoming.Tide.renewal_without_arising", "uses": ["Becoming.Tide.tide_even", "Becoming.Tide.tide_odd"]}
+{"name": "Becoming.Tide.tide_even", "uses": []}
+{"name": "Becoming.Tide.tide_odd", "uses": []}
+{"name": "Becoming.Tide.unrelated_depletion", "uses": ["Becoming.Tide.tide_even", "Becoming.Tide.tide_odd", "Becoming.Web.Unceasing.activeRenewer_recurs"]}
+{"name": "Becoming.Web.Unceasing.activeRenewer_recurs", "uses": ["Becoming.Web.Unceasing.rises"]}
+{"name": "Becoming.Web.Unceasing.rises", "uses": ["Becoming.Web.depletion_not_recurring"]}
+{"name": "Becoming.Web.activityClass_class", "uses": []}
+{"name": "Becoming.Web.activityClass_eq_alikeAt", "uses": []}
+{"name": "Becoming.Web.arises_iff_sheng", "uses": ["Becoming.Steps.along_hasPred_iff"]}
+{"name": "Becoming.Web.depletes_iff", "uses": ["Becoming.Web.rises_or_still"]}
+{"name": "Becoming.Web.depletion_not_recurring", "uses": ["Becoming.Web.stock_le", "Becoming.Web.stock_lt", "Becoming.falls_not_recurring"]}
+{"name": "Becoming.Web.dissipation_arising_not_recurring", "uses": ["Becoming.falls_not_recurring"]}
+{"name": "Becoming.Web.renews_iff", "uses": ["Becoming.Steps.along_hasSucc_iff", "Becoming.Web.arises_iff_sheng"]}
+{"name": "Becoming.Web.rises_or_still", "uses": []}
+{"name": "Becoming.Web.sheng_iff_steps", "uses": ["Becoming.Steps.along_hasPred_iff", "Becoming.Steps.hasPred_iff"]}
+{"name": "Becoming.Web.stock_le", "uses": []}
+{"name": "Becoming.Web.stock_lt", "uses": ["Becoming.Web.stock_le"]}
+{"name": "Becoming.Web.substitution_defers", "uses": ["Becoming.Web.depletion_not_recurring"]}
+{"name": "Becoming.Web.unceasing_iff_late_beginnings", "uses": ["Becoming.Web.arises_iff_sheng"]}
+{"name": "Becoming.Web.wang_iff_steps", "uses": ["Becoming.Steps.along_hasSucc_iff", "Becoming.Steps.hasSucc_iff"]}

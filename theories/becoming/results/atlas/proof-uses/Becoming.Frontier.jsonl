@@ -1,0 +1,70 @@
+{"name": "Becoming.Lexical.BasicPriority.frontier_iff", "uses": ["Becoming.Lexical.BasicPriority.iff"]}
+{"name": "Becoming.Lexical.BasicPriority.required_iff", "uses": ["Becoming.Lexical.BasicPriority.frontier_iff"]}
+{"name": "Becoming.Requirement.Assigned.capable", "uses": []}
+{"name": "Becoming.Requirement.Assigned.unique_required", "uses": []}
+{"name": "Becoming.Requirement.Collective.no_common_plan", "uses": []}
+{"name": "Becoming.Requirement.Collective.required", "uses": ["Becoming.Requirement.Required.defeated"]}
+{"name": "Becoming.Requirement.Formation.amount_recovers_basis", "uses": []}
+{"name": "Becoming.Requirement.Formation.basis_left", "uses": []}
+{"name": "Becoming.Requirement.Formation.basis_right", "uses": []}
+{"name": "Becoming.Requirement.Formation.bettered_unformed", "uses": ["Becoming.Requirement.Formation.basis_left", "Becoming.Requirement.Formation.basis_right", "Becoming.Requirement.Formation.eligible_all", "Becoming.Requirement.Formation.left_above_idle", "Becoming.Requirement.Formation.left_above_overbuild"]}
+{"name": "Becoming.Requirement.Formation.decided_above", "uses": ["Becoming.Lexical.Above.decided", "Becoming.Requirement.Formation.decided_free", "Becoming.Requirement.Formation.decided_protect", "Becoming.Requirement.decided_included_bool", "Becoming.Requirement.decided_included_unit"]}
+{"name": "Becoming.Requirement.Formation.decided_basis", "uses": ["Becoming.Requirement.decided_of_decidable"]}
+{"name": "Becoming.Requirement.Formation.decided_formed", "uses": ["Becoming.Decided.and", "Becoming.Requirement.Formation.decided_basis", "Becoming.Requirement.Formation.decided_linked"]}
+{"name": "Becoming.Requirement.Formation.decided_free", "uses": ["Becoming.Requirement.decided_of_decidable"]}
+{"name": "Becoming.Requirement.Formation.decided_linked", "uses": []}
+{"name": "Becoming.Requirement.Formation.decided_protect", "uses": ["Becoming.Decided.and", "Becoming.Requirement.Formation.decided_basis", "Becoming.Requirement.Formation.decided_linked"]}
+{"name": "Becoming.Requirement.Formation.eligible_all", "uses": []}
+{"name": "Becoming.Requirement.Formation.eq_zero_of_sub_eq", "uses": []}
+{"name": "Becoming.Requirement.Formation.exact_menu", "uses": ["Becoming.Requirement.Formation.eligible_all"]}
+{"name": "Becoming.Requirement.Formation.formation_loses_occasion", "uses": []}
+{"name": "Becoming.Requirement.Formation.frontier_iff", "uses": ["Becoming.Requirement.Formation.eligible_all", "Becoming.Requirement.Formation.left_above_idle", "Becoming.Requirement.Formation.left_above_overbuild", "Becoming.Requirement.Formation.working_unbeaten"]}
+{"name": "Becoming.Requirement.Formation.left_above_idle", "uses": ["Becoming.Lexical.Above.anchor", "Becoming.Requirement.Formation.basis_left"]}
+{"name": "Becoming.Requirement.Formation.left_above_overbuild", "uses": ["Becoming.Lexical.Above.anchor", "Becoming.Requirement.Formation.basis_left", "Becoming.Requirement.Formation.not_basis_overbuild"]}
+{"name": "Becoming.Requirement.Formation.left_retains_basis", "uses": ["Becoming.Requirement.Formation.basis_left"]}
+{"name": "Becoming.Requirement.Formation.no_report_judge", "uses": ["Becoming.Requirement.Formation.basis_left", "Becoming.Requirement.Formation.not_basis_overbuild"]}
+{"name": "Becoming.Requirement.Formation.no_route_required", "uses": ["Becoming.Requirement.Formation.frontier_iff", "Becoming.Requirement.Required.defeated"]}
+{"name": "Becoming.Requirement.Formation.not_basis_overbuild", "uses": []}
+{"name": "Becoming.Requirement.Formation.overbuilding", "uses": ["Becoming.Requirement.Formation.eligible_all", "Becoming.Requirement.Formation.left_above_overbuild", "Becoming.Requirement.Formation.not_basis_overbuild", "Becoming.Requirement.Frontier.excluded"]}
+{"name": "Becoming.Requirement.Formation.required", "uses": ["Becoming.Decided.weakly", "Becoming.Lexical.Above.irrefl", "Becoming.Lexical.Above.trans", "Becoming.Requirement.Formation.bettered_unformed", "Becoming.Requirement.Formation.decided_above", "Becoming.Requirement.Formation.decided_formed", "Becoming.Requirement.Formation.exact_menu", "Becoming.Requirement.required_of_bettered"]}
+{"name": "Becoming.Requirement.Formation.same_report_different_basis", "uses": ["Becoming.Requirement.Formation.basis_left", "Becoming.Requirement.Formation.not_basis_overbuild"]}
+{"name": "Becoming.Requirement.Formation.sub_lt_sub_of_lt", "uses": []}
+{"name": "Becoming.Requirement.Formation.unbeaten_of", "uses": ["Becoming.Lexical.Above.no_trade", "Becoming.Lexical.Above.not_of_included", "Becoming.Requirement.Formation.not_basis_overbuild"]}
+{"name": "Becoming.Requirement.Formation.working_unbeaten", "uses": ["Becoming.Requirement.Formation.basis_left", "Becoming.Requirement.Formation.basis_right", "Becoming.Requirement.Formation.unbeaten_of"]}
+{"name": "Becoming.Requirement.Frontier.excluded", "uses": []}
+{"name": "Becoming.Requirement.Handover.expansion_excluded", "uses": ["Becoming.Requirement.Frontier.excluded", "Becoming.Requirement.Handover.transfer_above_expansion"]}
+{"name": "Becoming.Requirement.Handover.expansion_has_real_gain", "uses": []}
+{"name": "Becoming.Requirement.Handover.keep_above_expansion", "uses": ["Becoming.Lexical.Above.anchor"]}
+{"name": "Becoming.Requirement.Handover.served", "uses": ["Becoming.Requirement.served_of_handover"]}
+{"name": "Becoming.Requirement.Handover.transfer_above_expansion", "uses": ["Becoming.Lexical.Above.trans", "Becoming.Requirement.Handover.keep_above_expansion", "Becoming.Requirement.Handover.transfer_above_keep"]}
+{"name": "Becoming.Requirement.Handover.transfer_above_keep", "uses": []}
+{"name": "Becoming.Requirement.Handover.undelivered_fails", "uses": ["Becoming.Requirement.Served.not_of_gap"]}
+{"name": "Becoming.Requirement.Required.defeated", "uses": []}
+{"name": "Becoming.Requirement.Required.impossible", "uses": []}
+{"name": "Becoming.Requirement.Required.means", "uses": []}
+{"name": "Becoming.Requirement.Required.performed", "uses": []}
+{"name": "Becoming.Requirement.Required.redescribed", "uses": []}
+{"name": "Becoming.Requirement.Routes.decided_basic", "uses": ["Becoming.Decided.and", "Becoming.Requirement.Routes.decided_fresh"]}
+{"name": "Becoming.Requirement.Routes.decided_classified", "uses": ["Becoming.Lexical.Above.decided", "Becoming.Requirement.Routes.decided_basic", "Becoming.Requirement.Routes.decided_gain", "Becoming.Requirement.decided_included_sum"]}
+{"name": "Becoming.Requirement.Routes.decided_fresh", "uses": []}
+{"name": "Becoming.Requirement.Routes.decided_gain", "uses": ["Becoming.Decided.and", "Becoming.Decided.not", "Becoming.Requirement.Routes.decided_fresh"]}
+{"name": "Becoming.Requirement.Routes.formed_of_frontier", "uses": ["Becoming.Requirement.Routes.left_above_absent"]}
+{"name": "Becoming.Requirement.Routes.left_above_absent", "uses": []}
+{"name": "Becoming.Requirement.Routes.none_robust", "uses": ["Becoming.Requirement.Routes.formed_of_frontier", "Becoming.Requirement.Routes.opposite_routes"]}
+{"name": "Becoming.Requirement.Routes.opposite_routes", "uses": ["Becoming.Lexical.Above.anchor"]}
+{"name": "Becoming.Requirement.Routes.required", "uses": ["Becoming.Decided.weakly", "Becoming.Lexical.Above.irrefl", "Becoming.Lexical.Above.trans", "Becoming.Requirement.Routes.decided_classified", "Becoming.Requirement.Routes.formed_of_frontier", "Becoming.Requirement.frontier_exists"]}
+{"name": "Becoming.Requirement.Served.not_of_gap", "uses": ["Becoming.Requirement.Served.successor"]}
+{"name": "Becoming.Requirement.Served.successor", "uses": []}
+{"name": "Becoming.Requirement.Settled.no_residual", "uses": []}
+{"name": "Becoming.Requirement.decided_included_bool", "uses": []}
+{"name": "Becoming.Requirement.decided_included_sum", "uses": ["Becoming.Requirement.decided_included_bool", "Becoming.Requirement.decided_included_sum_of", "Becoming.Requirement.decided_included_unit"]}
+{"name": "Becoming.Requirement.decided_included_sum_of", "uses": []}
+{"name": "Becoming.Requirement.decided_included_unit", "uses": []}
+{"name": "Becoming.Requirement.decided_of_decidable", "uses": []}
+{"name": "Becoming.Requirement.frontier_exists", "uses": ["Becoming.Requirement.frontier_iff_undominated", "Becoming.exists_undominated"]}
+{"name": "Becoming.Requirement.frontier_iff_undominated", "uses": []}
+{"name": "Becoming.Requirement.required_of_bettered", "uses": ["Becoming.Requirement.frontier_exists", "Becoming.Requirement.frontier_iff_undominated", "Becoming.undominated_has"]}
+{"name": "Becoming.Requirement.required_under_every_classification", "uses": ["Becoming.Lexical.Above.irrefl", "Becoming.Lexical.Above.trans", "Becoming.Lexical.classified_of_decided", "Becoming.Requirement.required_of_bettered"]}
+{"name": "Becoming.Requirement.residual_of_unfulfilled", "uses": []}
+{"name": "Becoming.Requirement.separate_not_joint", "uses": []}
+{"name": "Becoming.Requirement.served_of_handover", "uses": []}

@@ -1,0 +1,7 @@
+{"name": "Becoming.HistoryIdealsTraces.classification", "uses": ["Becoming.HistoryIdeals.classification", "Becoming.HistoryIdeals.history_within_iff", "Becoming.HistoryLanguages.feasible_prefixClosed"]}
+{"name": "Becoming.HistoryIdealsTraces.countdown_down", "uses": []}
+{"name": "Becoming.HistoryIdealsTraces.countdown_ends", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.HistoryIdealsTraces.course_settles", "uses": ["Becoming.HistoryIdeals.principal_hasLongest"]}
+{"name": "Becoming.HistoryIdealsTraces.history_without_run", "uses": ["Becoming.HistoryIdealsTraces.countdown_down", "Becoming.HistoryIdealsTraces.countdown_ends", "Becoming.Run.step"]}
+{"name": "Becoming.HistoryIdealsTraces.run_goesOn", "uses": ["Becoming.HistoryIdeals.trace_goesOn", "Becoming.HistoryIdealsTraces.run_initial_trace"]}
+{"name": "Becoming.HistoryIdealsTraces.run_initial_trace", "uses": ["Becoming.Run.step"]}

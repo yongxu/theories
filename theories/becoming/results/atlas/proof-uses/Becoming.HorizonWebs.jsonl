@@ -1,0 +1,8 @@
+{"name": "Becoming.Feedback.after_horizon", "uses": ["Becoming.Feedback.at_horizon", "Becoming.Feedback.step_one"]}
+{"name": "Becoming.Feedback.at_horizon", "uses": ["Becoming.Feedback.descending", "Becoming.add_right_cancel"]}
+{"name": "Becoming.Feedback.descending", "uses": ["Becoming.Feedback.step_two", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Feedback.prefix_does_not_decide", "uses": ["Becoming.Feedback.supported", "RelationalRenewal.Law.overdraw_consuming"]}
+{"name": "Becoming.Feedback.step_one", "uses": ["RelationalRenewal.Law.level_succ"]}
+{"name": "Becoming.Feedback.step_two", "uses": ["RelationalRenewal.Law.level_succ", "RelationalRenewal.add_sub_self"]}
+{"name": "Becoming.Feedback.supported", "uses": ["Becoming.Feedback.after_horizon", "Becoming.Feedback.descending", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.HorizonWebs.prefix_does_not_decide", "uses": ["Becoming.Feedback.descending", "Becoming.Feedback.prefix_does_not_decide", "Becoming.Web.static_consumingIn", "Becoming.Web.static_renewingIn", "Becoming.add_right_cancel"]}

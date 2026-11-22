@@ -1,0 +1,7 @@
+{"name": "Becoming.Amounts.no_whole_reading", "uses": ["Becoming.not_falls_ever"]}
+{"name": "Becoming.Dyadic.half_return", "uses": ["Becoming.Dyadic.add_comm'", "Becoming.Dyadic.half_below", "Becoming.Dyadic.le_of_add_le_add_right'", "Becoming.Dyadic.zero_add'"]}
+{"name": "Becoming.Halving.new_without_gain", "uses": ["Becoming.Halving.never_rests", "Becoming.Halving.two_pow_lt"]}
+{"name": "Becoming.Halving.no_whole_reading", "uses": ["Becoming.Amounts.no_whole_reading", "Becoming.Halving.endless"]}
+{"name": "Becoming.Halving.two_pow_lt", "uses": []}
+{"name": "Becoming.falls_by_steps", "uses": []}
+{"name": "Becoming.not_falls_ever", "uses": ["Becoming.falls_by_steps"]}

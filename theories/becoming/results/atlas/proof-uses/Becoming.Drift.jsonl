@@ -1,0 +1,127 @@
+{"name": "Becoming.Drift.Favoured.two_members", "uses": []}
+{"name": "Becoming.Drift.Flow.ended_falls_back", "uses": ["Becoming.Drift.Generations.raised_falls_back", "Becoming.Drift.falls_back_ge", "Becoming.GroupEnding.Flow.raises_of_inactive"]}
+{"name": "Becoming.Drift.Generations.expected_sampled", "uses": ["Becoming.Drift.expected_ones"]}
+{"name": "Becoming.Drift.Generations.raised_falls_back", "uses": ["Becoming.Drift.falls_back", "Becoming.SelectionTerm.Generations.rises_step_iff", "Becoming.le_dest"]}
+{"name": "Becoming.Drift.OneDraw.falls_back", "uses": []}
+{"name": "Becoming.Drift.Replacement.add_three_pairs", "uses": []}
+{"name": "Becoming.Drift.Replacement.climbs", "uses": ["Becoming.Drift.Replacement.climbsBy"]}
+{"name": "Becoming.Drift.Replacement.climbsBy", "uses": ["Becoming.Drift.Replacement.valueBy_mixed", "Becoming.Drift.Replacement.valueBy_one_kind"]}
+{"name": "Becoming.Drift.Replacement.downs_const", "uses": []}
+{"name": "Becoming.Drift.Replacement.favoured_share", "uses": ["Becoming.Drift.Replacement.potential_above", "Becoming.Drift.Replacement.potential_from", "Becoming.add_mul_split", "Becoming.mul_turn"]}
+{"name": "Becoming.Drift.Replacement.favoured_share_above", "uses": ["Becoming.Drift.Replacement.potential_above", "Becoming.Drift.Replacement.potential_from", "Becoming.Drift.Replacement.rise_antitone_le", "Becoming.Drift.Replacement.rise_closed", "Becoming.Drift.Replacement.rise_step", "Becoming.Drift.one_le_pow", "Becoming.Naturals.lt_of_mul_lt_mul_left", "Becoming.add_mul_split", "Becoming.mul_turn"]}
+{"name": "Becoming.Drift.Replacement.fixation", "uses": ["Becoming.Drift.Replacement.fixationBy", "Becoming.Drift.Replacement.steps_const"]}
+{"name": "Becoming.Drift.Replacement.fixationBy", "uses": ["Becoming.Drift.Replacement.fixationBy_bounds", "Becoming.Drift.Replacement.varied_vanishesBy"]}
+{"name": "Becoming.Drift.Replacement.fixationBy_bounds", "uses": ["Becoming.Drift.Replacement.fixedBy_below", "Becoming.Drift.Replacement.potentialBy_within", "Becoming.Drift.Replacement.valueBy_add", "Becoming.Drift.Replacement.valueBy_le", "Becoming.Drift.Replacement.valueBy_mul", "Becoming.Drift.Replacement.valueBy_potential"]}
+{"name": "Becoming.Drift.Replacement.fixation_bounds", "uses": ["Becoming.Drift.Replacement.fixationBy_bounds", "Becoming.Drift.Replacement.steps_const"]}
+{"name": "Becoming.Drift.Replacement.fixedBy_below", "uses": ["Becoming.Drift.Replacement.potentialBy_mono"]}
+{"name": "Becoming.Drift.Replacement.fixedBy_disfavoured", "uses": ["Becoming.Drift.Replacement.fixationBy_bounds", "Becoming.Drift.Replacement.le_of_eq_le", "Becoming.Drift.Replacement.le_of_le_eq", "Becoming.Drift.Replacement.potentialBy_head", "Becoming.Drift.Replacement.potentialBy_le_top", "Becoming.Drift.Replacement.potentialBy_top_pos", "Becoming.Drift.Replacement.riseBy_le_of_disfavoured", "Becoming.Drift.Replacement.riseBy_shift", "Becoming.Drift.Replacement.turn_out", "Becoming.SelectionTerm.le_of_mul_le_mul", "Becoming.le_dest", "Becoming.mul_turn"]}
+{"name": "Becoming.Drift.Replacement.fixed_below", "uses": ["Becoming.Drift.Replacement.fixedBy_below"]}
+{"name": "Becoming.Drift.Replacement.harmonic_step", "uses": ["Becoming.add_mul_split"]}
+{"name": "Becoming.Drift.Replacement.le_of_eq_le", "uses": []}
+{"name": "Becoming.Drift.Replacement.le_of_le_eq", "uses": []}
+{"name": "Becoming.Drift.Replacement.lostBy_bounds", "uses": ["Becoming.Drift.Replacement.fixationBy_bounds", "Becoming.Drift.Replacement.le_of_eq_le", "Becoming.Drift.Replacement.valueBy_partition"]}
+{"name": "Becoming.Drift.Replacement.lostBy_favoured", "uses": ["Becoming.Drift.Replacement.le_of_le_eq", "Becoming.Drift.Replacement.lostBy_bounds", "Becoming.Drift.Replacement.potentialBy_le_top", "Becoming.Drift.Replacement.potentialBy_tail", "Becoming.Drift.Replacement.potentialBy_top_pos", "Becoming.Drift.Replacement.riseBy_le_of_favoured", "Becoming.Drift.Replacement.riseBy_shift", "Becoming.Drift.Replacement.turn_out", "Becoming.Drift.Replacement.valueBy_stays", "Becoming.SelectionTerm.le_of_mul_le_mul", "Becoming.le_dest", "Becoming.le_of_add_le_add_right", "Becoming.mul_turn"]}
+{"name": "Becoming.Drift.Replacement.lost_ge", "uses": ["Becoming.Drift.Replacement.lost_geBy"]}
+{"name": "Becoming.Drift.Replacement.lost_geBy", "uses": ["Becoming.Drift.Replacement.valueBy_mixed", "Becoming.Drift.Replacement.valueBy_stays", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Drift.Replacement.neutral_share", "uses": ["Becoming.Drift.Replacement.potential_neutral", "Becoming.mul_turn"]}
+{"name": "Becoming.Drift.Replacement.partition", "uses": []}
+{"name": "Becoming.Drift.Replacement.potentialBy_beyond", "uses": []}
+{"name": "Becoming.Drift.Replacement.potentialBy_harmonic", "uses": ["Becoming.Drift.Replacement.harmonic_step", "Becoming.Drift.Replacement.riseBy_step"]}
+{"name": "Becoming.Drift.Replacement.potentialBy_head", "uses": []}
+{"name": "Becoming.Drift.Replacement.potentialBy_le_succ", "uses": []}
+{"name": "Becoming.Drift.Replacement.potentialBy_le_top", "uses": ["Becoming.Drift.Replacement.potentialBy_beyond", "Becoming.Drift.Replacement.potentialBy_mono", "Becoming.le_dest"]}
+{"name": "Becoming.Drift.Replacement.potentialBy_mono", "uses": ["Becoming.Drift.Replacement.potentialBy_le_succ"]}
+{"name": "Becoming.Drift.Replacement.potentialBy_tail", "uses": []}
+{"name": "Becoming.Drift.Replacement.potentialBy_top_pos", "uses": ["Becoming.Drift.Replacement.le_of_le_eq", "Becoming.Drift.Replacement.potentialBy_le_top", "Becoming.Drift.Replacement.ups_pos"]}
+{"name": "Becoming.Drift.Replacement.potentialBy_within", "uses": ["Becoming.Drift.Replacement.potentialBy_le_top"]}
+{"name": "Becoming.Drift.Replacement.potential_above", "uses": ["Becoming.Drift.Replacement.potentialBy_tail", "Becoming.Drift.Replacement.rise_antitone_le"]}
+{"name": "Becoming.Drift.Replacement.potential_beyond", "uses": ["Becoming.Drift.Replacement.potentialBy_beyond"]}
+{"name": "Becoming.Drift.Replacement.potential_from", "uses": ["Becoming.Drift.Replacement.rise_antitone"]}
+{"name": "Becoming.Drift.Replacement.potential_harmonic", "uses": ["Becoming.Drift.Replacement.potentialBy_harmonic"]}
+{"name": "Becoming.Drift.Replacement.potential_le_succ", "uses": ["Becoming.Drift.Replacement.potentialBy_le_succ"]}
+{"name": "Becoming.Drift.Replacement.potential_le_top", "uses": ["Becoming.Drift.Replacement.potentialBy_le_top"]}
+{"name": "Becoming.Drift.Replacement.potential_mono", "uses": ["Becoming.Drift.Replacement.potentialBy_mono"]}
+{"name": "Becoming.Drift.Replacement.potential_neutral", "uses": ["Becoming.Drift.Replacement.rise_neutral"]}
+{"name": "Becoming.Drift.Replacement.potential_within", "uses": ["Becoming.Drift.Replacement.potentialBy_within"]}
+{"name": "Becoming.Drift.Replacement.riseBy_ends", "uses": ["Becoming.Drift.sub_self_zero"]}
+{"name": "Becoming.Drift.Replacement.riseBy_le_of_disfavoured", "uses": ["Becoming.Drift.Replacement.riseBy_shift", "Becoming.Drift.Replacement.ups_le", "Becoming.Drift.Replacement.ups_pos", "Becoming.SelectionTerm.le_of_mul_le_mul"]}
+{"name": "Becoming.Drift.Replacement.riseBy_le_of_favoured", "uses": ["Becoming.Drift.Replacement.riseBy_shift", "Becoming.Drift.Replacement.ups_le", "Becoming.Drift.Replacement.ups_pos", "Becoming.SelectionTerm.le_of_mul_le_mul"]}
+{"name": "Becoming.Drift.Replacement.riseBy_shift", "uses": ["Becoming.Drift.Replacement.le_of_eq_le", "Becoming.Drift.Replacement.riseBy_step", "Becoming.mul_assoc_nat", "Becoming.mul_turn", "Becoming.shift_succ"]}
+{"name": "Becoming.Drift.Replacement.riseBy_step", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.le_dest", "Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.Drift.Replacement.rise_antitone", "uses": ["Becoming.Drift.Replacement.rise_closed", "Becoming.Drift.Replacement.rise_step", "Becoming.SelectionTerm.le_of_mul_le_mul"]}
+{"name": "Becoming.Drift.Replacement.rise_antitone_le", "uses": ["Becoming.Drift.Replacement.rise_antitone"]}
+{"name": "Becoming.Drift.Replacement.rise_closed", "uses": ["Becoming.Drift.Replacement.downs_const", "Becoming.Drift.Replacement.ups_const"]}
+{"name": "Becoming.Drift.Replacement.rise_neutral", "uses": ["Becoming.Drift.Replacement.rise_closed", "Becoming.Naturals.add_sub_cancel_left", "Becoming.Naturals.pow_add", "Becoming.le_dest"]}
+{"name": "Becoming.Drift.Replacement.rise_step", "uses": ["Becoming.Drift.Replacement.riseBy_step"]}
+{"name": "Becoming.Drift.Replacement.steps_const", "uses": []}
+{"name": "Becoming.Drift.Replacement.turn_out", "uses": ["Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Drift.Replacement.ups_const", "uses": []}
+{"name": "Becoming.Drift.Replacement.ups_le", "uses": ["Becoming.Drift.Replacement.le_of_le_eq", "Becoming.shift_succ"]}
+{"name": "Becoming.Drift.Replacement.ups_pos", "uses": ["Becoming.Drift.Replacement.le_of_le_eq", "Becoming.shift_succ"]}
+{"name": "Becoming.Drift.Replacement.valueBy_add", "uses": ["Becoming.Drift.Replacement.add_three_pairs", "Becoming.Drift.Replacement.valueBy_mixed", "Becoming.Drift.Replacement.valueBy_one_kind"]}
+{"name": "Becoming.Drift.Replacement.valueBy_comp", "uses": ["Becoming.Drift.Replacement.valueBy_mixed", "Becoming.Drift.Replacement.valueBy_one_kind"]}
+{"name": "Becoming.Drift.Replacement.valueBy_congr", "uses": ["Becoming.Drift.Replacement.valueBy_le"]}
+{"name": "Becoming.Drift.Replacement.valueBy_const", "uses": ["Becoming.Drift.Replacement.valueBy_mixed", "Becoming.Drift.Replacement.valueBy_one_kind", "Becoming.add_mul_split", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Drift.Replacement.valueBy_le", "uses": ["Becoming.Drift.Replacement.valueBy_mixed", "Becoming.Drift.Replacement.valueBy_one_kind"]}
+{"name": "Becoming.Drift.Replacement.valueBy_mixed", "uses": []}
+{"name": "Becoming.Drift.Replacement.valueBy_mul", "uses": ["Becoming.Drift.Replacement.valueBy_mixed", "Becoming.Drift.Replacement.valueBy_one_kind", "Becoming.mul_turn"]}
+{"name": "Becoming.Drift.Replacement.valueBy_one_kind", "uses": []}
+{"name": "Becoming.Drift.Replacement.valueBy_partition", "uses": ["Becoming.Drift.Replacement.partition", "Becoming.Drift.Replacement.valueBy_add", "Becoming.Drift.Replacement.valueBy_congr", "Becoming.Drift.Replacement.valueBy_const"]}
+{"name": "Becoming.Drift.Replacement.valueBy_potential", "uses": ["Becoming.Drift.Replacement.potentialBy_harmonic", "Becoming.Drift.Replacement.valueBy_mixed", "Becoming.Drift.Replacement.valueBy_one_kind", "Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.Drift.Replacement.valueBy_stays", "uses": ["Becoming.Drift.Replacement.valueBy_one_kind", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Drift.Replacement.value_add", "uses": ["Becoming.Drift.Replacement.valueBy_add"]}
+{"name": "Becoming.Drift.Replacement.value_comp", "uses": ["Becoming.Drift.Replacement.valueBy_comp"]}
+{"name": "Becoming.Drift.Replacement.value_congr", "uses": ["Becoming.Drift.Replacement.valueBy_congr"]}
+{"name": "Becoming.Drift.Replacement.value_const", "uses": ["Becoming.Drift.Replacement.steps_const", "Becoming.Drift.Replacement.valueBy_const"]}
+{"name": "Becoming.Drift.Replacement.value_le", "uses": ["Becoming.Drift.Replacement.valueBy_le"]}
+{"name": "Becoming.Drift.Replacement.value_mixed", "uses": ["Becoming.Drift.Replacement.valueBy_mixed"]}
+{"name": "Becoming.Drift.Replacement.value_mul", "uses": ["Becoming.Drift.Replacement.valueBy_mul"]}
+{"name": "Becoming.Drift.Replacement.value_one_kind", "uses": ["Becoming.Drift.Replacement.valueBy_one_kind"]}
+{"name": "Becoming.Drift.Replacement.value_partition", "uses": ["Becoming.Drift.Replacement.steps_const", "Becoming.Drift.Replacement.valueBy_partition"]}
+{"name": "Becoming.Drift.Replacement.value_potential", "uses": ["Becoming.Drift.Replacement.steps_const", "Becoming.Drift.Replacement.valueBy_potential"]}
+{"name": "Becoming.Drift.Replacement.value_stays", "uses": ["Becoming.Drift.Replacement.valueBy_stays"]}
+{"name": "Becoming.Drift.Replacement.varied_step", "uses": ["Becoming.Drift.Replacement.steps_const", "Becoming.Drift.Replacement.varied_stepBy"]}
+{"name": "Becoming.Drift.Replacement.varied_stepBy", "uses": ["Becoming.Drift.Replacement.climbsBy", "Becoming.Drift.Replacement.valueBy_partition", "Becoming.Drift.Replacement.valueBy_stays"]}
+{"name": "Becoming.Drift.Replacement.varied_vanishes", "uses": ["Becoming.Drift.Replacement.steps_const", "Becoming.Drift.Replacement.varied_vanishesBy"]}
+{"name": "Becoming.Drift.Replacement.varied_vanishesBy", "uses": ["Becoming.Drift.Replacement.valueBy_comp", "Becoming.Drift.Replacement.valueBy_le", "Becoming.Drift.Replacement.valueBy_mul", "Becoming.Drift.Replacement.varied_stepBy", "Becoming.add_mul_split", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Drift.TwoMembers.one_generation", "uses": []}
+{"name": "Becoming.Drift.count_le", "uses": []}
+{"name": "Becoming.Drift.expected_ones", "uses": ["Becoming.Drift.step_expected", "Becoming.Drift.weighted_ones_step"]}
+{"name": "Becoming.Drift.expected_zeros", "uses": ["Becoming.Drift.step_expected", "Becoming.Drift.weighted_zeros_step"]}
+{"name": "Becoming.Drift.falls_back", "uses": ["Becoming.Drift.falls_back_le", "Becoming.Typicality.mem_courses_iff", "Becoming.Typicality.spread", "Becoming.Typicality.total_le_mem", "Becoming.Typicality.total_mul_right", "Becoming.le_of_add_le_add_right", "Becoming.mul_turn", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.Drift.falls_back_ge", "uses": ["Becoming.Drift.lost_le", "Becoming.Drift.lost_weight", "Becoming.Typicality.total_le"]}
+{"name": "Becoming.Drift.falls_back_le", "uses": ["Becoming.Drift.far_back", "Becoming.Drift.gap_le", "Becoming.Naturals.twice_le", "Becoming.Typicality.ones_add_zeros"]}
+{"name": "Becoming.Drift.far_back", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.Naturals.twice_le", "Becoming.Reproduction.square_mul", "Becoming.add_mul_split", "Becoming.le_dest"]}
+{"name": "Becoming.Drift.fixation", "uses": ["Becoming.Drift.count_le", "Becoming.Drift.fixed_le", "Becoming.Drift.sampled_add", "Becoming.Drift.sampled_count", "Becoming.Drift.sampled_le", "Becoming.Drift.sampled_mul", "Becoming.Drift.varied_vanishes"]}
+{"name": "Becoming.Drift.fixed_le", "uses": []}
+{"name": "Becoming.Drift.from_all", "uses": ["Becoming.Typicality.total_extend", "Becoming.mul_assoc_nat", "Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.Drift.from_none", "uses": ["Becoming.Typicality.total_extend", "Becoming.mul_assoc_nat", "Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.Drift.gap_le", "uses": ["Becoming.add_mul_split", "Becoming.le_of_add_le_add_right", "Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.Drift.lost_false", "uses": []}
+{"name": "Becoming.Drift.lost_le", "uses": []}
+{"name": "Becoming.Drift.lost_true", "uses": []}
+{"name": "Becoming.Drift.lost_weight", "uses": ["Becoming.Drift.lost_false", "Becoming.Drift.lost_true", "Becoming.Typicality.total_extend", "Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.Drift.one_le_pow", "uses": []}
+{"name": "Becoming.Drift.ones_le", "uses": ["Becoming.Typicality.ones_add_zeros"]}
+{"name": "Becoming.Drift.sampled_add", "uses": ["Becoming.Drift.sampled_succ", "Becoming.total_add", "Becoming.total_congr"]}
+{"name": "Becoming.Drift.sampled_all", "uses": ["Becoming.Drift.from_all", "Becoming.Drift.sampled_succ", "Becoming.Drift.sub_self_zero", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Drift.sampled_count", "uses": ["Becoming.Drift.ones_le", "Becoming.Drift.sampled_succ", "Becoming.Drift.weighted_ones", "Becoming.Typicality.mem_courses_iff", "Becoming.Typicality.total_congr_mem", "Becoming.Typicality.total_mul_right", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Drift.sampled_le", "uses": ["Becoming.Drift.ones_le", "Becoming.Typicality.mem_courses_iff", "Becoming.Typicality.total_le_mem"]}
+{"name": "Becoming.Drift.sampled_mul", "uses": ["Becoming.Drift.sampled_succ", "Becoming.mul_turn", "Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.Drift.sampled_none", "uses": ["Becoming.Drift.from_none", "Becoming.Drift.sampled_succ", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Drift.sampled_one", "uses": ["Becoming.Drift.ones_le", "Becoming.Drift.sampled_succ", "Becoming.Typicality.mem_courses_iff", "Becoming.Typicality.total_congr_mem", "Becoming.Typicality.total_mul_right", "Becoming.Typicality.total_weight", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.Drift.sampled_succ", "uses": []}
+{"name": "Becoming.Drift.step_expected", "uses": ["Becoming.add_mul_split", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Drift.step_ones", "uses": ["Becoming.Naturals.add_congr", "Becoming.add_mul_split", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Drift.step_zeros", "uses": ["Becoming.Naturals.add_congr", "Becoming.add_mul_split", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Drift.sub_self_zero", "uses": []}
+{"name": "Becoming.Drift.varied_self", "uses": []}
+{"name": "Becoming.Drift.varied_step", "uses": ["Becoming.Drift.ones_le", "Becoming.Typicality.ones_add_zeros"]}
+{"name": "Becoming.Drift.varied_vanishes", "uses": ["Becoming.Drift.lost_weight", "Becoming.Drift.one_le_pow", "Becoming.Drift.sampled_all", "Becoming.Drift.sampled_none", "Becoming.Drift.sampled_succ", "Becoming.Drift.varied_self", "Becoming.Drift.varied_step", "Becoming.Drift.varied_zero", "Becoming.Drift.whole_weight", "Becoming.Typicality.mem_courses_iff", "Becoming.Typicality.total_le_mem", "Becoming.Typicality.total_mul_right", "Becoming.Typicality.total_weight", "Becoming.add_mul_split", "Becoming.add_sub_of_le", "Becoming.le_of_add_le_add_right", "Becoming.total_add"]}
+{"name": "Becoming.Drift.varied_zero", "uses": []}
+{"name": "Becoming.Drift.weighted_ones", "uses": ["Becoming.Drift.expected_ones", "Becoming.add_sub_of_le", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Drift.weighted_ones_step", "uses": ["Becoming.Drift.step_ones", "Becoming.Typicality.total_extend", "Becoming.Typicality.total_weight", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.Drift.weighted_zeros_step", "uses": ["Becoming.Drift.step_zeros", "Becoming.Typicality.total_extend", "Becoming.Typicality.total_weight", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.Drift.whole_false", "uses": []}
+{"name": "Becoming.Drift.whole_true", "uses": []}
+{"name": "Becoming.Drift.whole_weight", "uses": ["Becoming.Drift.whole_false", "Becoming.Drift.whole_true", "Becoming.Typicality.total_extend", "Becoming.total_congr", "Becoming.total_mul"]}

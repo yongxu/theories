@@ -1,0 +1,55 @@
+{"name": "Becoming.ReferencePlan.added_keeps", "uses": ["Becoming.Contacts.keeps_iff_retains"]}
+{"name": "Becoming.ReferencePlan.agreeOn_iff", "uses": []}
+{"name": "Becoming.ReferencePlan.balanced", "uses": ["Becoming.ReferencePlan.step_conserves"]}
+{"name": "Becoming.ReferencePlan.both_revised_contacts_used", "uses": []}
+{"name": "Becoming.ReferencePlan.checked_pair_correct", "uses": []}
+{"name": "Becoming.ReferencePlan.checked_pair_iff", "uses": ["Becoming.ReferencePlan.flip_is_pick", "Becoming.References.drives_iff"]}
+{"name": "Becoming.ReferencePlan.choice_at_contact", "uses": []}
+{"name": "Becoming.ReferencePlan.complete_history", "uses": ["Becoming.ReferencePlan.run_trace"]}
+{"name": "Becoming.ReferencePlan.constant_channel_contacts_use_fuel", "uses": []}
+{"name": "Becoming.ReferencePlan.constant_channel_rejected", "uses": []}
+{"name": "Becoming.ReferencePlan.covered", "uses": ["Becoming.ReferencePlan.balanced", "Becoming.ReferencePlan.draws_held", "Becoming.Stock.covered_of_trace"]}
+{"name": "Becoming.ReferencePlan.determined", "uses": []}
+{"name": "Becoming.ReferencePlan.draws_held", "uses": []}
+{"name": "Becoming.ReferencePlan.drift_after_check_can_fail", "uses": []}
+{"name": "Becoming.ReferencePlan.drift_fails", "uses": ["Becoming.ReferencePlan.checked_pair_iff", "Becoming.References.inverted_fails"]}
+{"name": "Becoming.ReferencePlan.drift_has_actual_history", "uses": ["Becoming.ReferencePlan.run_trace"]}
+{"name": "Becoming.ReferencePlan.erased_mismatch_cannot_activate", "uses": []}
+{"name": "Becoming.ReferencePlan.first_candidate_unavailable_before", "uses": []}
+{"name": "Becoming.ReferencePlan.first_mismatch_acquired", "uses": []}
+{"name": "Becoming.ReferencePlan.first_new_selection", "uses": ["Becoming.ReferencePlan.new_contact_choice"]}
+{"name": "Becoming.ReferencePlan.first_policy_repair", "uses": []}
+{"name": "Becoming.ReferencePlan.first_repair_used_then_second_mismatch", "uses": []}
+{"name": "Becoming.ReferencePlan.first_use_succeeds", "uses": []}
+{"name": "Becoming.ReferencePlan.flip_is_pick", "uses": []}
+{"name": "Becoming.ReferencePlan.flip_twice", "uses": []}
+{"name": "Becoming.ReferencePlan.frozen_blind", "uses": []}
+{"name": "Becoming.ReferencePlan.frozen_method_still_fails", "uses": []}
+{"name": "Becoming.ReferencePlan.frozen_misses", "uses": ["Becoming.Contacts.blind_misses", "Becoming.Contacts.nat_unlisted", "Becoming.ReferencePlan.frozen_blind"]}
+{"name": "Becoming.ReferencePlan.frozen_reads_method", "uses": []}
+{"name": "Becoming.ReferencePlan.frozen_second_method_still_fails", "uses": []}
+{"name": "Becoming.ReferencePlan.fuel_used_without_reset", "uses": []}
+{"name": "Becoming.ReferencePlan.install_binds_fresh", "uses": []}
+{"name": "Becoming.ReferencePlan.installed_response_correct", "uses": []}
+{"name": "Becoming.ReferencePlan.methods_change_twice", "uses": []}
+{"name": "Becoming.ReferencePlan.new_contact_choice", "uses": ["Becoming.Contacts.retired_loses"]}
+{"name": "Becoming.ReferencePlan.no_action_after_exhaustion", "uses": []}
+{"name": "Becoming.ReferencePlan.old_selections_remain", "uses": ["Becoming.Learning.Training.keeps_through_iff", "Becoming.ReferencePlan.added_keeps"]}
+{"name": "Becoming.ReferencePlan.probe_binds_both_references", "uses": []}
+{"name": "Becoming.ReferencePlan.propose_answers", "uses": []}
+{"name": "Becoming.ReferencePlan.propose_from_mismatch", "uses": []}
+{"name": "Becoming.ReferencePlan.propose_without_mismatch", "uses": []}
+{"name": "Becoming.ReferencePlan.references_use_fuel_before_exhaustion", "uses": []}
+{"name": "Becoming.ReferencePlan.repair_trace", "uses": []}
+{"name": "Becoming.ReferencePlan.revise_registers_failure", "uses": ["Becoming.Contacts.answers_iff", "Becoming.ReferencePlan.propose_answers"]}
+{"name": "Becoming.ReferencePlan.revision_binds_plan", "uses": []}
+{"name": "Becoming.ReferencePlan.run_trace", "uses": []}
+{"name": "Becoming.ReferencePlan.second_candidate_unavailable_before", "uses": []}
+{"name": "Becoming.ReferencePlan.second_installed_choice", "uses": ["Becoming.ReferencePlan.choice_at_contact", "Becoming.ReferencePlan.second_new_selection"]}
+{"name": "Becoming.ReferencePlan.second_new_selection", "uses": ["Becoming.ReferencePlan.new_contact_choice", "Becoming.ReferencePlan.second_candidate_unavailable_before"]}
+{"name": "Becoming.ReferencePlan.second_policy_repair", "uses": []}
+{"name": "Becoming.ReferencePlan.second_use_succeeds", "uses": []}
+{"name": "Becoming.ReferencePlan.step_conserves", "uses": ["Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.ReferencePlan.support_too_small_to_build", "uses": []}
+{"name": "Becoming.ReferencePlan.trace_conserves", "uses": ["Becoming.ReferencePlan.balanced", "Becoming.ReferencePlan.used_balanced", "Becoming.Stock.trace_balance", "Becoming.total_zero"]}
+{"name": "Becoming.ReferencePlan.used_balanced", "uses": ["Becoming.ReferencePlan.step_conserves"]}

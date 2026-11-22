@@ -1,0 +1,55 @@
+{"name": "Becoming.GrammarTransport.map_replicate", "uses": []}
+{"name": "Becoming.«一一对应».back_to", "uses": []}
+{"name": "Becoming.«一一对应».to_back", "uses": []}
+{"name": "Becoming.«一一对应».to_eq_iff", "uses": ["Becoming.«一一对应».back_to"]}
+{"name": "Becoming.«一之像»", "uses": ["Becoming.«对应之像»"]}
+{"name": "Becoming.«不穷之对应»", "uses": ["Becoming.«一一对应».to_back", "Becoming.«所及之对应»", "Becoming.«有后之对应»"]}
+{"name": "Becoming.«亡之对应»", "uses": ["Becoming.«有后之对应»"]}
+{"name": "Becoming.«传之对应»", "uses": ["Becoming.«生之对应»", "Becoming.«续之对应»"]}
+{"name": "Becoming.«住之对应»", "uses": ["Becoming.«有前之对应»", "Becoming.«有后之对应»"]}
+{"name": "Becoming.«全守之对应»", "uses": ["Becoming.«一一对应».to_back", "Becoming.«不穷之对应»", "Becoming.«传之对应»", "Becoming.«所及之对应»"]}
+{"name": "Becoming.«全生成之对应»", "uses": ["Becoming.«一一对应».to_back", "Becoming.«不穷之对应»", "Becoming.«所及之对应»", "Becoming.«所及有传之对应»"]}
+{"name": "Becoming.«则之对应»", "uses": ["Becoming.«对应之回»", "Becoming.«对应之逐点»"]}
+{"name": "Becoming.«历之像»", "uses": ["Becoming.«而之像»", "Becoming.«静之像»"]}
+{"name": "Becoming.«历之对应»", "uses": ["Becoming.«历之像»", "Becoming.«对应之逐点»"]}
+{"name": "Becoming.«及之像»", "uses": ["Becoming.«及之对应»", "Becoming.«对应之像»"]}
+{"name": "Becoming.«及之对应»", "uses": ["Becoming.«一一对应».back_to", "Becoming.«对应之回»", "Becoming.«对应之逐点»"]}
+{"name": "Becoming.«反对应之像»", "uses": ["Becoming.«对应之像»", "Becoming.«对应之回»"]}
+{"name": "Becoming.«合之像»", "uses": ["Becoming.«对应之像»", "Becoming.«对应之逐点»"]}
+{"name": "Becoming.«合成之像»", "uses": ["Becoming.«对应之像»", "Becoming.«对应之逐点»"]}
+{"name": "Becoming.«同族之对应»", "uses": ["Becoming.«一一对应».back_to", "Becoming.«一一对应».to_back", "Becoming.«续之对应»"]}
+{"name": "Becoming.«同行之对应»", "uses": ["Becoming.«则之对应»", "Becoming.«而之像»", "Becoming.«逆之像»"]}
+{"name": "Becoming.«回之像»", "uses": ["Becoming.«对应之像»"]}
+{"name": "Becoming.«复生之对应»", "uses": ["Becoming.«一一对应».to_back", "Becoming.«对应之逐点»", "Becoming.«有后之对应»", "Becoming.«生之对应»"]}
+{"name": "Becoming.«定前之对应»", "uses": ["Becoming.«则之对应»", "Becoming.«而之像»", "Becoming.«逆之像»", "Becoming.«静之像»"]}
+{"name": "Becoming.«定后之对应»", "uses": ["Becoming.«则之对应»", "Becoming.«而之像»", "Becoming.«逆之像»", "Becoming.«静之像»"]}
+{"name": "Becoming.«对应之像»", "uses": ["Becoming.«一一对应».to_back", "Becoming.«一一对应».to_eq_iff"]}
+{"name": "Becoming.«对应之回»", "uses": ["Becoming.«一一对应».to_back", "Becoming.«对应之逐点»"]}
+{"name": "Becoming.«对应之逐点»", "uses": ["Becoming.«对应之像»"]}
+{"name": "Becoming.«尽之对应»", "uses": ["Becoming.«一一对应».back_to", "Becoming.«一一对应».to_back", "Becoming.«尽之拉回»", "Becoming.«续之对应»"]}
+{"name": "Becoming.«尽之拉回»", "uses": []}
+{"name": "Becoming.«延之对应»", "uses": ["Becoming.«一一对应».back_to", "Becoming.«一一对应».to_back", "Becoming.«延之拉回»", "Becoming.«续之对应»"]}
+{"name": "Becoming.«延之拉回»", "uses": []}
+{"name": "Becoming.«异之对应»", "uses": ["Becoming.«对应之逐点»", "Becoming.«续之对应»"]}
+{"name": "Becoming.«所及之对应»", "uses": ["Becoming.«一一对应».to_eq_iff", "Becoming.«相续之对应»"]}
+{"name": "Becoming.«所及有传之对应»", "uses": ["Becoming.«一一对应».to_back", "Becoming.«传之对应»", "Becoming.«所及之对应»"]}
+{"name": "Becoming.«所闭之对应»", "uses": ["Becoming.«一一对应».back_to", "Becoming.«对应之回»", "Becoming.«对应之逐点»"]}
+{"name": "Becoming.«无环之对应»", "uses": ["Becoming.«一一对应».to_back", "Becoming.«及之对应»"]}
+{"name": "Becoming.«有前之对应»", "uses": ["Becoming.«一一对应».to_back", "Becoming.«续之对应»"]}
+{"name": "Becoming.«有后之对应»", "uses": ["Becoming.«一一对应».to_back", "Becoming.«续之对应»"]}
+{"name": "Becoming.«有常之对应»", "uses": ["Becoming.«则之对应»", "Becoming.«而之像»", "Becoming.«逆之像»"]}
+{"name": "Becoming.«有终之对应»", "uses": ["Becoming.«一一对应».to_back", "Becoming.«亡之对应»", "Becoming.«所及之对应»"]}
+{"name": "Becoming.«核之对应»", "uses": ["Becoming.«则之对应»", "Becoming.«回之像»", "Becoming.«对应之逐点»", "Becoming.«有常之对应»", "Becoming.«谓之自反»", "Becoming.«逆之像»"]}
+{"name": "Becoming.«生之对应»", "uses": ["Becoming.«有前之对应»"]}
+{"name": "Becoming.«相续之对应»", "uses": ["Becoming.«及之对应»", "Becoming.«合之像»"]}
+{"name": "Becoming.«类之对应»", "uses": ["Becoming.«一一对应».to_back", "Becoming.«对应之回»", "Becoming.«对应之逐点»", "Becoming.«类».refl", "Becoming.«类».symm", "Becoming.«类».trans"]}
+{"name": "Becoming.«续之对应»", "uses": ["Becoming.«合之像»", "Becoming.«对应之逐点»"]}
+{"name": "Becoming.«而之像»", "uses": ["Becoming.«一一对应».to_back", "Becoming.«对应之像»", "Becoming.«对应之逐点»"]}
+{"name": "Becoming.«谓之自反»", "uses": []}
+{"name": "Becoming.«迭之像»", "uses": ["Becoming.GrammarTransport.map_replicate", "Becoming.«历之对应»", "Becoming.«对应之像»", "Becoming.«迭即历»"]}
+{"name": "Becoming.«迭之对应»", "uses": ["Becoming.«对应之逐点»", "Becoming.«迭之像»"]}
+{"name": "Becoming.«迭内之对应»", "uses": ["Becoming.«迭之对应»"]}
+{"name": "Becoming.«逆之像»", "uses": ["Becoming.«对应之像»", "Becoming.«对应之逐点»"]}
+{"name": "Becoming.«部分恒等之像»", "uses": ["Becoming.«一一对应».to_eq_iff", "Becoming.«对应之像»"]}
+{"name": "Becoming.«闭之对应»", "uses": ["Becoming.«一一对应».to_back", "Becoming.«对应之回»", "Becoming.«对应之逐点»"]}
+{"name": "Becoming.«静之像»", "uses": ["Becoming.«一一对应».to_eq_iff", "Becoming.«对应之像»"]}

@@ -1,0 +1,55 @@
+{"name": "Becoming.Branching.Lossless.loses_nothing", "uses": ["Becoming.Amounts.add_comm", "Becoming.Amounts.le_add_right", "Becoming.Amounts.le_of_add_le_add_right", "Becoming.Amounts.le_of_eq", "Becoming.Amounts.le_trans", "Becoming.Amounts.still_within", "Becoming.Amounts.zero_add", "Becoming.Branching.Lossless.recurs"]}
+{"name": "Becoming.Branching.loss_needs_merge", "uses": ["Becoming.Branching.Lossless.loses_nothing"]}
+{"name": "Becoming.Branching.rests_along_run", "uses": ["Becoming.Amounts.rests_of_finite_reading"]}
+{"name": "Becoming.Dyadic.add_assoc'", "uses": ["Becoming.Dyadic.ext'", "Becoming.Naturals.mul_right_comm", "Becoming.Naturals.pow_add", "Becoming.add_mul_split", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Dyadic.add_comm'", "uses": ["Becoming.Dyadic.ext'"]}
+{"name": "Becoming.Dyadic.add_le_add_right'", "uses": ["Becoming.Dyadic.expand"]}
+{"name": "Becoming.Dyadic.archimedean", "uses": ["Becoming.Dyadic.le_trans'", "Becoming.Dyadic.num_pos", "Becoming.Dyadic.times_ge"]}
+{"name": "Becoming.Dyadic.expand", "uses": ["Becoming.Naturals.pow_add", "Becoming.add_mul_split", "Becoming.mul_assoc_nat", "Becoming.mul_turn"]}
+{"name": "Becoming.Dyadic.ext'", "uses": []}
+{"name": "Becoming.Dyadic.half_below", "uses": ["Becoming.Dyadic.num_pos"]}
+{"name": "Becoming.Dyadic.le_of_add_le_add_right'", "uses": ["Becoming.Dyadic.expand", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Dyadic.le_trans'", "uses": ["Becoming.Naturals.mul_right_comm"]}
+{"name": "Becoming.Dyadic.num_pos", "uses": []}
+{"name": "Becoming.Dyadic.times_ge", "uses": ["Becoming.Dyadic.add_le_add_right'", "Becoming.Dyadic.le_trans'", "Becoming.Naturals.pow_add", "Becoming.add_mul_split", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Dyadic.zero_add'", "uses": ["Becoming.Dyadic.ext'"]}
+{"name": "Becoming.Dyadic.zero_le'", "uses": []}
+{"name": "Becoming.Halving.approaches_without_reaching", "uses": ["Becoming.Amounts.approaches_rest", "Becoming.Amounts.few_large_losses_of_archimedean", "Becoming.Dyadic.archimedean", "Becoming.Halving.falls", "Becoming.Halving.falls_strictly"]}
+{"name": "Becoming.Halving.endless", "uses": ["Becoming.Halving.falls_strictly", "Becoming.Halving.never_rests"]}
+{"name": "Becoming.Halving.falls", "uses": ["Becoming.Naturals.pow_add", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Halving.falls_back", "uses": ["Becoming.Naturals.pow_add", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Halving.falls_strictly", "uses": []}
+{"name": "Becoming.Halving.le_two_pow", "uses": []}
+{"name": "Becoming.Halving.loss_positive", "uses": []}
+{"name": "Becoming.Halving.never_rests", "uses": ["Becoming.Amounts.le_add_right", "Becoming.Amounts.le_trans", "Becoming.Dyadic.archimedean", "Becoming.Halving.falls", "Becoming.Halving.falls_strictly", "Becoming.Halving.loss_positive", "Becoming.Halving.no_least_loss"]}
+{"name": "Becoming.Halving.no_least_fall", "uses": ["Becoming.Amounts.add_comm", "Becoming.Amounts.le_of_add_le_add_right", "Becoming.Amounts.le_of_eq", "Becoming.Amounts.le_trans", "Becoming.Halving.falls_back", "Becoming.Halving.falls_strictly", "Becoming.Halving.never_rests", "Becoming.Halving.no_least_loss"]}
+{"name": "Becoming.Halving.no_least_loss", "uses": ["Becoming.Dyadic.num_pos"]}
+{"name": "Becoming.Halving.stock_unlisted", "uses": ["Becoming.Amounts.rests_of_finite_reading", "Becoming.Halving.falls_strictly", "Becoming.Halving.never_rests"]}
+{"name": "Becoming.Halving.takes_halve", "uses": ["Becoming.Amounts.add_le_add_left", "Becoming.Halving.le_two_pow", "Becoming.Halving.loss_positive", "Becoming.Halving.no_least_loss", "Becoming.Halving.takes_within_one"]}
+{"name": "Becoming.Halving.takes_within_one", "uses": ["Becoming.Dyadic.le_trans'", "Becoming.Halving.times_le_num"]}
+{"name": "Becoming.Halving.times_le_num", "uses": ["Becoming.Dyadic.add_le_add_right'", "Becoming.Dyadic.le_trans'", "Becoming.Dyadic.zero_le'", "Becoming.Naturals.pow_add", "Becoming.add_mul_split", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.Halving.worlds_need_not_rest", "uses": ["Becoming.Amounts.not_endlessFall_of_worldsRest", "Becoming.Dyadic.archimedean", "Becoming.Halving.endless", "Becoming.Halving.no_least_fall"]}
+{"name": "Becoming.Law.Lossless.keeps_apart", "uses": ["Becoming.Law.Lossless.cancel"]}
+{"name": "Becoming.Law.Lossless.loses_nothing", "uses": ["Becoming.Branching.Lossless.loses_nothing"]}
+{"name": "Becoming.Law.Lossless.narrowing_spreads", "uses": ["Becoming.Law.Lossless.keeps_apart", "Becoming.Law.distinct_within"]}
+{"name": "Becoming.Law.Lossless.regains", "uses": ["Becoming.Amounts.still_within", "Becoming.Law.Lossless.returns", "Becoming.Law.orbit_mul", "Becoming.Law.returns_iff"]}
+{"name": "Becoming.Law.Lossless.reset_unlisted", "uses": ["Becoming.Law.Lossless.returns", "Becoming.Law.returns_iff"]}
+{"name": "Becoming.Law.distinct_within", "uses": ["Becoming.length_pairsOf", "Becoming.mem_pairsOf", "Becoming.revisits_within"]}
+{"name": "Becoming.Law.loss_needs_merge", "uses": ["Becoming.Branching.loss_needs_merge"]}
+{"name": "Becoming.Layered.add_le_add_right'", "uses": ["Becoming.Dyadic.add_le_add_right'", "Becoming.Dyadic.le_of_add_le_add_right'"]}
+{"name": "Becoming.Layered.beyond_every_multiple", "uses": ["Becoming.Dyadic.le_trans'", "Becoming.Dyadic.zero_le'", "Becoming.Layered.times_coarse"]}
+{"name": "Becoming.Layered.endless", "uses": ["Becoming.Halving.falls_strictly", "Becoming.Layered.never_rests"]}
+{"name": "Becoming.Layered.ext'", "uses": []}
+{"name": "Becoming.Layered.fallsAtLeast", "uses": ["Becoming.Amounts.add_zero", "Becoming.Amounts.le_of_eq", "Becoming.Dyadic.le_trans'"]}
+{"name": "Becoming.Layered.le_of_add_le_add_right'", "uses": ["Becoming.Dyadic.add_le_add_right'", "Becoming.Dyadic.le_of_add_le_add_right'", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Layered.le_trans'", "uses": ["Becoming.Dyadic.le_trans'"]}
+{"name": "Becoming.Layered.least_positive", "uses": []}
+{"name": "Becoming.Layered.loses", "uses": ["Becoming.Amounts.add_zero", "Becoming.Halving.falls_strictly", "Becoming.Halving.never_rests"]}
+{"name": "Becoming.Layered.never_rests", "uses": ["Becoming.Amounts.le_add_right", "Becoming.Amounts.le_trans", "Becoming.Halving.falls_strictly", "Becoming.Layered.beyond_every_multiple", "Becoming.Layered.least_positive", "Becoming.Layered.loses"]}
+{"name": "Becoming.Layered.not_archimedean", "uses": ["Becoming.Layered.beyond_every_multiple", "Becoming.Layered.least_positive"]}
+{"name": "Becoming.Layered.times_coarse", "uses": ["Becoming.Amounts.add_zero"]}
+{"name": "Becoming.Layered.worlds_need_not_rest", "uses": ["Becoming.Amounts.not_endlessFall_of_worldsRest", "Becoming.Layered.endless", "Becoming.Layered.fallsAtLeast", "Becoming.Layered.least_positive", "Becoming.Layered.not_archimedean"]}
+{"name": "Becoming.Reset.kept_by_rest", "uses": ["Becoming.Law.Lossless.reset_unlisted", "Becoming.Naturals.add_left_cancel", "Becoming.Naturals.ne_of_lt", "Becoming.Reset.lossless", "Becoming.Reset.part_merges", "Becoming.Reset.rest_length", "Becoming.unlisted_of_new"]}
+{"name": "Becoming.Reset.lossless", "uses": ["Becoming.Law.lossless_iff"]}
+{"name": "Becoming.Reset.part_merges", "uses": []}
+{"name": "Becoming.Reset.rest_length", "uses": []}

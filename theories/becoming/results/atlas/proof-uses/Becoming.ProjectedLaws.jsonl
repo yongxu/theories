@@ -1,0 +1,29 @@
+{"name": "Becoming.ProjectedLaws.Event.ofNat_ctorIdx", "uses": []}
+{"name": "Becoming.ProjectedLaws.assembly_draws", "uses": ["Becoming.ProjectedLaws.formation_consumes_spare_and_fuel"]}
+{"name": "Becoming.ProjectedLaws.commuting_composes", "uses": []}
+{"name": "Becoming.ProjectedLaws.commuting_iff_factors", "uses": []}
+{"name": "Becoming.ProjectedLaws.commuting_iff_traces", "uses": ["Becoming.ProjectedLaws.trace_iff", "Becoming.Readout.foldl_semiconj"]}
+{"name": "Becoming.ProjectedLaws.coupled_trace", "uses": ["Becoming.ProjectedLaws.commuting_iff_traces"]}
+{"name": "Becoming.ProjectedLaws.cross_routing_not_fixed", "uses": []}
+{"name": "Becoming.ProjectedLaws.cross_routing_two_steps", "uses": []}
+{"name": "Becoming.ProjectedLaws.crossed_left_not_fibre_consistent", "uses": []}
+{"name": "Becoming.ProjectedLaws.exchange_available_after_formation", "uses": []}
+{"name": "Becoming.ProjectedLaws.exchange_unavailable_before_formation", "uses": []}
+{"name": "Becoming.ProjectedLaws.fibre_iff_goAlike", "uses": []}
+{"name": "Becoming.ProjectedLaws.formation_and_recurrence_same_history", "uses": ["Becoming.ProjectedLaws.formation_step"]}
+{"name": "Becoming.ProjectedLaws.formation_consumes_spare_and_fuel", "uses": []}
+{"name": "Becoming.ProjectedLaws.formation_preserves_cell_values", "uses": []}
+{"name": "Becoming.ProjectedLaws.formation_step", "uses": []}
+{"name": "Becoming.ProjectedLaws.fuel_does_not_increase", "uses": []}
+{"name": "Becoming.ProjectedLaws.left_carries_no_law", "uses": ["Becoming.ProjectedLaws.left_not_goAlike", "Becoming.carries_law_iff"]}
+{"name": "Becoming.ProjectedLaws.left_not_goAlike", "uses": ["Becoming.ProjectedLaws.crossed_left_not_fibre_consistent", "Becoming.ProjectedLaws.fibre_iff_goAlike"]}
+{"name": "Becoming.ProjectedLaws.link_inventory_preserved", "uses": []}
+{"name": "Becoming.ProjectedLaws.no_autonomous_left_law", "uses": ["Becoming.ProjectedLaws.crossed_left_not_fibre_consistent", "Becoming.ProjectedLaws.reduced_law_exists_iff"]}
+{"name": "Becoming.ProjectedLaws.no_fuel_blocks_formation", "uses": []}
+{"name": "Becoming.ProjectedLaws.no_spare_blocks_formation", "uses": []}
+{"name": "Becoming.ProjectedLaws.parts_only_cannot_preserve_futures", "uses": ["Becoming.ProjectedLaws.exchange_unavailable_before_formation", "Becoming.ProjectedLaws.formation_preserves_cell_values", "Generative.trace_singleton_iff"]}
+{"name": "Becoming.ProjectedLaws.reduced_law_exists_iff", "uses": []}
+{"name": "Becoming.ProjectedLaws.self_routing_fixed", "uses": []}
+{"name": "Becoming.ProjectedLaws.trace_iff", "uses": ["Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.ProjectedLaws.traces_compose", "uses": ["Becoming.ProjectedLaws.commuting_composes", "Becoming.ProjectedLaws.commuting_iff_traces"]}
+{"name": "Becoming.ProjectedLaws.wiring_recurrence", "uses": ["Becoming.ProjectedLaws.cross_routing_not_fixed", "Becoming.ProjectedLaws.trace_iff"]}

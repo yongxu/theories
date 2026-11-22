@@ -1,0 +1,29 @@
+{"name": "Becoming.Flow.Balances.comparison_within_response", "uses": ["Becoming.Flow.Balances.comparison_within_difference", "Becoming.Flow.Balances.on", "Becoming.Flow.not_differs_beyond_response"]}
+{"name": "Becoming.Flow.Balances.comparison_within_response_of_decidable", "uses": ["Becoming.Flow.Balances.comparison_within_response"]}
+{"name": "Becoming.Flow.alike_beyond_response", "uses": ["Becoming.Flow.alike_within_closed", "Becoming.Flow.beyond_response_closed", "Becoming.Flow.outside_part_of_beyond_response"]}
+{"name": "Becoming.Flow.beyond_response_closed", "uses": ["Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Flow.exchange_alike_beyond_response", "uses": ["Becoming.Flow.alike_beyond_response", "Becoming.Flow.outside_part_of_beyond_response"]}
+{"name": "Becoming.Flow.member_within_response", "uses": ["Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Flow.not_differs_beyond_response", "uses": ["Becoming.Flow.totals_alike_beyond_response"]}
+{"name": "Becoming.Flow.outside_part_of_beyond_response", "uses": ["Becoming.Flow.member_within_response"]}
+{"name": "Becoming.Flow.respondsThroughCoupling_withhold", "uses": ["Becoming.Flow.withheld_eq_of_false"]}
+{"name": "Becoming.Flow.totals_alike_beyond_response", "uses": ["Becoming.Flow.beyond_response_closed", "Becoming.Flow.exchange_agrees_within", "Becoming.Flow.exchange_alike_beyond_response", "Becoming.total_congr_on"]}
+{"name": "Becoming.Flow.withinResponse_iff_coupling", "uses": ["Becoming.WithinClosure.converse"]}
+{"name": "Becoming.Flow.withinResponse_of_reaches", "uses": ["Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.Flow.withinResponse_of_withinReach", "uses": ["Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Flow.withinResponse_self_iff", "uses": ["Becoming.Flow.withinResponse_iff_coupling", "Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Flow.withinResponse_thresholdOnly_iff", "uses": ["Becoming.Flow.withinResponse_of_withinReach", "Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Loop.balances", "uses": []}
+{"name": "Becoming.Loop.dependent", "uses": []}
+{"name": "Becoming.Loop.quiet_balances", "uses": []}
+{"name": "Becoming.Loop.quiet_dependent", "uses": []}
+{"name": "Becoming.Loop.responds", "uses": []}
+{"name": "Becoming.Loop.returns", "uses": ["Becoming.Loop.balances", "Becoming.Loop.dependent", "Becoming.Loop.quiet_balances", "Becoming.Loop.quiet_dependent", "Becoming.Loop.responds"]}
+{"name": "Becoming.Trophic.den_untouched", "uses": []}
+{"name": "Becoming.Trophic.far_unaffected", "uses": ["Becoming.Trophic.den_untouched"]}
+{"name": "Becoming.Trophic.forest_within_response", "uses": ["Becoming.Trophic.wolves_unreached", "Becoming.WithinClosure.of_rel", "Becoming.WithinClosure.trans"]}
+{"name": "Becoming.Trophic.responds_through_coupling", "uses": []}
+{"name": "Becoming.Trophic.responsiveReach_closed", "uses": ["Becoming.Trophic.far_unaffected"]}
+{"name": "Becoming.Trophic.responsive_comparison", "uses": ["Becoming.Flow.Balances.comparison_within_response", "Becoming.Trophic.balances", "Becoming.Trophic.responds_through_coupling", "Becoming.Trophic.responsive_balances", "Becoming.Trophic.within_response_iff", "Becoming.Web.Includes.not_exceeded"]}
+{"name": "Becoming.Trophic.within_response_iff", "uses": ["Becoming.Flow.member_within_response", "Becoming.Trophic.forest_within_response", "Becoming.Trophic.responsiveReach_closed", "Becoming.WithinClosure.of_rel"]}
+{"name": "Becoming.WithinClosure.converse", "uses": ["Becoming.«所闭之逆»"]}

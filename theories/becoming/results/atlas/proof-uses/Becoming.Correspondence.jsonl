@@ -1,0 +1,37 @@
+{"name": "Becoming.Later.drawing_connects_earlier", "uses": ["Becoming.Web.connected_of_renewable"]}
+{"name": "Becoming.Mutualism.apart_embodied", "uses": ["Becoming.Mutualism.apart_not_connected", "Becoming.Mutualism.apart_not_interacting"]}
+{"name": "Becoming.Mutualism.apart_not_connected", "uses": ["Becoming.Invariant.reach", "Becoming.Mutualism.apart_alive", "Becoming.Mutualism.apart_participates", "Becoming.Mutualism.other_cancel"]}
+{"name": "Becoming.Mutualism.apart_not_interacting", "uses": ["Becoming.Invariant.reach", "Becoming.Mutualism.apart_alive", "Becoming.Mutualism.other_cancel"]}
+{"name": "Becoming.Mutualism.apart_participates", "uses": []}
+{"name": "Becoming.Mutualism.connected", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Mutualism.significant_iff", "uses": ["Becoming.Mutualism.alive", "Becoming.Mutualism.connected", "Becoming.Valuation.significant_iff"]}
+{"name": "Becoming.Pinned.drawing_interacts", "uses": ["Becoming.Pinned.undermining_without_effect"]}
+{"name": "Becoming.Shared.connection_by_living_use", "uses": ["Becoming.Invariant.reach", "Becoming.Shared.first_isolated", "Becoming.Shared.participates", "Becoming.Web.connected_of_common", "Becoming.Web.connected_of_renewable"]}
+{"name": "Becoming.Shared.dependent", "uses": []}
+{"name": "Becoming.Shared.first_isolated", "uses": ["Becoming.Shared.no_living_drawer"]}
+{"name": "Becoming.Shared.no_living_drawer", "uses": ["Becoming.Shared.user_undermines"]}
+{"name": "Becoming.Shared.participates", "uses": []}
+{"name": "Becoming.Shared.user_undermines", "uses": []}
+{"name": "Becoming.Valuation.Connected.transfer", "uses": ["Becoming.Reach.map"]}
+{"name": "Becoming.Valuation.connected_iff_of_map", "uses": ["Becoming.Reach.lift", "Becoming.Reach.map"]}
+{"name": "Becoming.Web.Idle.not_interacts", "uses": []}
+{"name": "Becoming.Web.Idle.not_undermining", "uses": ["Becoming.Web.Idle.not_interacts", "Becoming.Web.UnderminingOn.interacts"]}
+{"name": "Becoming.Web.Interacts.participates", "uses": []}
+{"name": "Becoming.Web.Interacts.symm", "uses": []}
+{"name": "Becoming.Web.SelfBearing.interacts", "uses": []}
+{"name": "Becoming.Web.UnderminingOn.interacts", "uses": []}
+{"name": "Becoming.Web.adjoin_connected_iff", "uses": ["Becoming.Valuation.Connected.transfer", "Becoming.Web.Idle.not_interacts", "Becoming.Web.Idle.not_undermining", "Becoming.Web.adjoin_living"]}
+{"name": "Becoming.Web.adjoin_living", "uses": []}
+{"name": "Becoming.Web.connected_of_renewable", "uses": ["Becoming.Reach.trans", "Becoming.Web.interacts_reach"]}
+{"name": "Becoming.Web.drawing_reaches", "uses": []}
+{"name": "Becoming.Web.inert_connects", "uses": ["Becoming.Web.Idle.not_undermining", "Becoming.Web.adjoin_connected_iff", "Becoming.Web.adjoin_living", "Becoming.Web.connected_of_common"]}
+{"name": "Becoming.Web.interaction_narrows", "uses": ["Becoming.Web.Interacts.participates"]}
+{"name": "Becoming.Web.interacts_reach", "uses": ["Becoming.Reach.of_step"]}
+{"name": "Becoming.Web.one_use_connects", "uses": ["Becoming.Web.adjoin_living", "Becoming.Web.connected_of_renewable"]}
+{"name": "Becoming.Web.relabel_interaction_connected", "uses": ["Becoming.Valuation.connected_iff_of_map", "Becoming.Web.exists_of_onto", "Becoming.Web.relabel_alive"]}
+{"name": "Becoming.Web.relabel_valuation_connected", "uses": ["Becoming.Valuation.connected_iff_of_map", "Becoming.Web.exists_of_onto", "Becoming.Web.relabel_alive"]}
+{"name": "Becoming.Web.roles_interaction_connected", "uses": ["Becoming.Valuation.connected_iff_of_map", "Becoming.Web.roles_alive", "Becoming.Web.roles_event_injective", "Becoming.Web.roles_event_onto"]}
+{"name": "Becoming.Web.roles_valuation_connected", "uses": ["Becoming.Valuation.connected_iff_of_map", "Becoming.Web.roles_alive", "Becoming.Web.roles_event_injective", "Becoming.Web.roles_event_onto"]}
+{"name": "Becoming.Web.significant_iff_of_renewable", "uses": ["Becoming.Valuation.significant_iff", "Becoming.Web.connected_of_renewable"]}
+{"name": "Becoming.Web.universal_connects", "uses": ["Becoming.Web.adjoin_living", "Becoming.Web.interacts_reach"]}
+{"name": "Becoming.Web.valuing_undermining_reaches", "uses": []}
