@@ -4,7 +4,7 @@
 
 ## Why
 
-On the evening of 22 November Ren asked the session that holds row FM whether the map really has a centre, and wrote: "we want the map to be represented as "the map" - is our approaching right?" ([his words](../../../../../../sources/15-codex-theory-conversations/2026-11-22-does-our-map-have-a-centre.md); he asked and did not state). The coordinating session then put to this row, as its reading, that the atlas's links could be read off Lean when a page is drawn, where today they are typed by hand. This note counts what the represented map has today and what such a reading would add, so that the question can be put to him with figures and their limits. It decides nothing.
+On the evening of 22 November Ren asked the session that holds row FM whether the map really has a centre, and wrote: "we want the map to be represented as "the map" - is our approaching right?" ([his words](../../../../../../../sources/15-codex-theory-conversations/2026-11-22-does-our-map-have-a-centre.md); he asked and did not state). The coordinating session then put to this row, as its reading, that the atlas's links could be read off Lean when a page is drawn, where today they are typed by hand. This note counts what the represented map has today and what such a reading would add, so that the question can be put to him with figures and their limits. It decides nothing.
 
 ## What was counted, and by what
 
