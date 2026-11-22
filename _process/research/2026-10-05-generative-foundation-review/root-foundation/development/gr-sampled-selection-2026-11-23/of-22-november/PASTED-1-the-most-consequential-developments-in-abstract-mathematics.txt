@@ -1,0 +1,437 @@
+# **The most consequential developments in abstract mathematics — and how they are changing society**
+
+Research landscape · November 2026
+
+There is a remarkable convergence taking place across **type theory, category theory, group theory, topology, logic, algebra, and the mathematics of complex systems**.
+
+These fields are increasingly becoming tools for constructing the world, rather than only describing it.
+
+Three developments illustrate the scale of the change:
+
+- **Type theory is helping make software mathematically trustworthy.** Type-safe programming is already deployed across major operating systems, while proof assistants and formal verification are being used to establish correctness properties of increasingly sophisticated software.
+- **Group theory is helping encode physical reality into AI.** Instead of making neural networks learn every rotation, reflection, or change of coordinates from data, researchers can build the relevant symmetries into their architectures. This is increasingly important in molecular simulation and materials science.
+- **Category theory is providing a mathematics of composition.** It offers ways to construct larger models from smaller ones while preserving important relationships. Applications are emerging in scientific modeling, data integration, and quantum circuit optimization.
+
+These are not equally mature. For example, Google reported in November 2025 that memory-safety vulnerabilities had fallen below 20% of Android's reported vulnerabilities, reflecting its broader move toward memory-safe languages such as Rust. Meanwhile, many ambitious applications of category theory remain research prototypes rather than widespread infrastructure.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://blog.google\&sz=32)
+
+blog.google+2
+
+
+
+I would distinguish **what already transforms society, what is being actively built, and what could be foundational over the next 10–20 years**.
+
+## **1. The most consequential directions, ranked by practical significance**
+
+The rankings are qualitative judgments. “Established” means substantial practical use; “emerging” means working implementations with limited adoption; “frontier” means primarily active research.
+
+### **A. Mathematics already changing real-world systems**
+
+### **01**
+
+**Type theory → software safety and correctness**
+
+Established · Type systems, linear logic, ownership
+
+Types can express more than what kind of value something is. They can constrain ownership, resource usage, protocol states, and even logical properties.
+
+Rust's ownership and borrowing system is one particularly important realization. Its guarantees prevent large classes of memory-safety errors at compile time. The impact extends to operating systems, browsers, infrastructure, and embedded devices.
+
+**Frontier:** Refinement, dependent, and effect types that specify increasingly detailed behavior, potentially allowing large parts of software safety to be enforced by construction.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://blog.google\&sz=32)
+
+blog.google+1
+
+
+
+### **02**
+
+**Proof theory + dependent types → AI-generated, machine-checked verification**
+
+Rapidly advancing · Lean, Rocq, Isabelle, automated reasoning
+
+The Curry–Howard correspondence connects propositions with types and proofs with programs. This allows a small proof-checking kernel to verify complicated mathematical arguments.
+
+A major milestone came on **November 10, 2026**: Google DeepMind introduced AlphaProof Code, reporting machine-checked proofs of key security properties of Signal's cryptographic implementation down to compiled machine code, using AI agents and Lean.
+
+**Frontier:** Reducing the cost of verifying critical software so that formal assurance becomes routine rather than exceptional. The central limitation remains specifying the *right* properties to prove.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://deepmind.google\&sz=32)
+
+Google DeepMind+1
+
+
+
+### **03**
+
+**Group theory, algebraic number theory, and lattices → cryptography**
+
+Established, with a major transition underway
+
+Elliptic-curve groups and finite-field algebra support digital signatures, authentication, and secure communication. Algebraic structures are therefore essential to the security of much of digital society.
+
+The frontier has shifted toward quantum-resistant constructions. In 2024, NIST finalized ML-KEM and ML-DSA, both based on module lattices, alongside a hash-based signature standard. Migration is now a significant infrastructure project.
+
+**Frontier:** Efficient post-quantum security, stronger mathematical security reductions, and privacy-preserving computation.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.nist.gov\&sz=32)
+
+NIST+1
+
+
+
+### **04**
+
+**Algebraic geometry and finite fields → succinct proofs of computation**
+
+Deployed · SNARKs, STARKs, polynomial commitments
+
+A system can provide a relatively small proof that an extensive computation was performed correctly, without requiring everybody to repeat it.
+
+Ethereum scaling systems already use such validity proofs. The deeper possibility is verifiable outsourced computation, including eventually certain AI operations, and proofs of eligibility or compliance without disclosing all underlying data.
+
+**Frontier:** Recursive proofs, efficient proof generation, and practical verification of general-purpose computations. Note that a validity proof does not automatically imply privacy.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://ethereum.org\&sz=32)
+
+ethereum.org+1
+
+
+
+### **05**
+
+**Group representations → symmetry-aware artificial intelligence**
+
+Active scientific use · Geometric and equivariant neural networks
+
+The essential idea is that changing a molecular system's orientation should change a model's vector-valued outputs consistently, without arbitrarily changing the underlying physics.
+
+Mathematically, equivariance is:
+
+\\[ f(g\cdot x)=g\cdot f(x) \\]
+
+Models such as MACE and NequIP employ symmetry-aware architectures to predict interatomic interactions, supporting molecular dynamics and materials research.
+
+**Frontier:** Learning richer physical invariances, exploiting symmetries not explicitly provided, and developing more generalizable scientific AI.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.nature.com\&sz=32)
+
+Nature+1
+
+
+
+### **06**
+
+**Group theory + algebraic topology → quantum error correction**
+
+Experimental breakthrough · Stabilizer and surface codes
+
+Stabilizer codes use groups of quantum operators to identify errors without directly measuring the logical quantum information. Surface codes also use geometrical and topological organization.
+
+Google's published surface-code experiments demonstrated below-threshold error correction: increasing code distance reduced logical error rates.
+
+**Frontier:** Scalable, fault-tolerant quantum computers, with possible consequences for chemistry, simulation, and computational science. Practical broad quantum advantage remains uncertain.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.nature.com\&sz=32)
+
+Nature
+
+
+
+### **07**
+
+**Game theory, matching theory, and combinatorics → institutional design**
+
+Established · Market design and allocation mechanisms
+
+Abstract models of preferences, incentives, stability, and matching are used to organize kidney exchange, medical residency matching, school admissions, and other systems.
+
+This is one of the clearest examples of a mathematical theory being translated directly into the rules of social institutions.
+
+**Frontier:** Dynamic matching, fair resource allocation, collective decision-making, and mechanisms that perform well under incomplete information. Mathematical efficiency and social justice are different properties and must both be examined.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.sciencedirect.com\&sz=32)
+
+ScienceDirect+1
+
+
+
+## **2. Category theory and the emerging mathematics of interconnected systems**
+
+These may be less widely deployed today than cryptography or type systems, but they have unusually broad conceptual potential.
+
+Category theory shifts attention from isolated objects to **relationships, transformations, and the laws governing their composition**.
+
+### **08**
+
+**Applied category theory → compositional systems modeling**
+
+Emerging · Open systems, Petri nets, operads, wiring diagrams
+
+Rather than constructing a single enormous simulation, researchers describe smaller systems with well-defined interfaces and mathematical operations for combining them.
+
+The AlgebraicJulia ecosystem provides software for composing epidemic models, chemical reaction networks, and dynamical systems.
+
+**Why consequential:** It could make scientific models modular, interoperable, inspectable, and reusable across disciplines.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://algebraicjulia.github.io\&sz=32)
+
+AlgebraicPetri.jl+1
+
+
+
+### **09**
+
+**Functorial data migration → semantic interoperability**
+
+Specialized implementations · Categorical databases, CQL
+
+Different organizations often represent the same reality using incompatible schemas.
+
+Category theory offers a way to treat schema translations as structure-preserving transformations. CQL applies these ideas to query, migrate, and integrate data while enforcing specified consistency constraints.
+
+**Why consequential:** Better interoperability between scientific databases, public institutions, industrial supply chains, and potentially AI knowledge systems.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://categoricaldata.net\&sz=32)
+
+categoricaldata.net+1
+
+
+
+### **10**
+
+**Monoidal categories and string diagrams → quantum compilation**
+
+Implemented tools · ZX-calculus, PyZX, pytket
+
+Quantum operations can be expressed as diagrams whose rewrites preserve computational meaning.
+
+This makes it possible to recognize redundancies and optimize circuits at a structural level, rather than treating them merely as sequences of machine instructions.
+
+**Why consequential:** Potentially lower circuit depth, fewer gates, and reduced quantum computation costs. These techniques are already implemented in quantum software toolchains.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://docs.quantinuum.com\&sz=32)
+
+pytket user guide+1
+
+
+
+### **11**
+
+**Markov categories → compositional probability and causality**
+
+Frontier · Categorical probability, causal models, natural transformations
+
+Probability, conditioning, independence, interventions, and causal relationships can be described through a common language of processes.
+
+A 2026 research direction formalizes causal abstraction between low-level mechanisms and high-level explanatory models using natural transformations.
+
+**Why consequential:** A possible foundation for AI models that reason across scales while retaining meaningful causal structure—not just statistical correlations.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://arxiv.org\&sz=32)
+
+arXiv+1
+
+
+
+### **12**
+
+**Sheaf theory → consistency across local perspectives**
+
+Frontier · Distributed sensing, heterogeneous coordination
+
+Sheaf theory studies how locally defined information can fit together consistently across overlapping contexts.
+
+Research from 2025–2026 applies cellular sheaves to multi-agent consensus, flocking, formation control, and collaborative mapping.
+
+**Why consequential:** Distributed systems in which participants have different information and capabilities, without requiring one participant to possess a complete global view. Current demonstrations are primarily mathematical analyses and simulations.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://ieeexplore.ieee.org\&sz=32)
+
+IEEE Xplore+1
+
+
+
+### **13**
+
+**Category-theoretic planning → reusable robot and AI capabilities**
+
+Research implementations · Functors, rewriting, structured state spaces
+
+One research direction represents plans as mathematical transformations and investigates how a valid plan can be transferred between domains without constructing everything again.
+
+Work published in 2025 demonstrated functorial task-plan migration, while other neural-symbolic research uses categorical structures for resource and temporal constraints.
+
+**Why consequential:** More reliable and reusable planning in autonomous agents, robotics, and flexible manufacturing.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.epatters.org\&sz=32)
+
+Evan Patterson+1
+
+
+
+## **3. More fundamental abstractions that could reshape future science**
+
+These have longer horizons or less established social deployment.
+
+| Direction                                                | Central discovery or research question                                                                           | Potential consequence                                                                   |
+| -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| **14. Homotopy Type Theory (HoTT)**                      | Types can behave like spaces, with equalities represented by paths; univalence connects equivalence and identity | New foundations for machine-checkable mathematics and structural reasoning              |
+| **15. Higher category theory**                           | Relations and transformations can themselves have higher-order relationships                                     | Richer models of interacting transformations, mathematical physics, and complex systems |
+| **16. Topological data analysis**                        | Persistent homology extracts features such as components, loops, and cavities across scales                      | Discovering structures in biological, medical, physical, and high-dimensional data      |
+| **17. Representation theory and Lie theory**             | Describe systems through their symmetries and how groups act on spaces                                           | Mathematical foundations for particle physics, quantum systems, and geometric AI        |
+| **18. Formal methods for AI agents**                     | Use proof obligations, permissions, temporal logic, and typed interfaces to constrain autonomous behavior        | Agents whose permitted actions can be checked systematically                            |
+| **19. Compositional control theory**                     | Establish properties of interconnected dynamical systems from properties of their parts                          | More robust robotics, power networks, distributed infrastructure, and automation        |
+| **20. Algebraic and categorical approaches to learning** | Understand transformations, representations, abstractions, and learning rules structurally                       | New possibilities for generalization, interpretability, and more efficient AI           |
+
+Several concrete developments make these directions worth watching.
+
+In **HoTT**, substantial progress continues on constructive models and machine-checkable synthetic mathematics. A 2026 paper developed cellular methods in homotopy type theory and formalized its results in Cubical Agda.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://doi.org\&sz=32)
+
+DOI+1
+
+
+
+In **topological data analysis**, recent reviews survey applications to molecular science, biomedical research, time-series analysis, and machine learning. These approaches are scientifically useful, but broad clinical or industrial adoption should not be inferred from research demonstrations alone.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.mdpi.com\&sz=32)
+
+MDPI+1
+
+
+
+In **formal AI planning and control**, the challenge is becoming more concrete: how to preserve invariants when complex systems are assembled from independently developed components, and how to verify the behavior of systems that continually update their plans.
+
+## **4. The deeper connections between these theories**
+
+The most interesting possibility is not that one of these theories will become dominant. It is that they express complementary aspects of a common problem: **how structure is preserved, transformed, composed, and understood across different scales**.
+
+### **A conceptual map of the abstractions**
+
+**Type theory / Logic**
+
+What can exist, be expressed, or be proved?
+
+**Category theory / Higher structures**
+
+How can structures and processes compose?
+
+Group theory
+
+What remains invariant through transformation?
+
+Topology
+
+What structure survives continuous change?
+
+Causal theory
+
+How do interventions change outcomes?
+
+Dynamical systems
+
+How does structure evolve in time?
+
+**Compositional science and engineering**
+
+Models, computations, agents, institutions, physical infrastructure
+
+This is a conceptual synthesis, not a formal mathematical hierarchy.
+
+One particularly important bridge is between category theory and type theory. Types can be interpreted through categorical semantics, and certain categories provide models of type theories. Homotopy type theory extends this relationship into higher-dimensional structures.
+
+Another is between group theory and geometric learning. Symmetry provides constraints on how a system should transform, and group representations translate those constraints into mathematical operations an AI model can use.
+
+A third is between category theory and causality: if a high-level abstraction is supposed to represent a low-level system, under what conditions do causal interventions and predictions remain consistent between them?
+
+These bridges are interesting because they address something more fundamental than computational speed: **whether an abstraction faithfully preserves what matters in the system it represents**.
+
+## **5. Where I would put the greatest research attention**
+
+For longer-term importance, my priorities would be different from a ranking based on current deployment.
+
+## **1**
+
+**AI + type theory + formal verification**
+
+If AI can generate programs, mathematical models, and proofs while independent proof checkers establish their correctness relative to explicit specifications, it could fundamentally change the economics of producing trustworthy technology.
+
+The new AlphaProof Code result makes this a particularly consequential near-term direction.
+
+## **2**
+
+**Compositional systems theory**
+
+The ability to build, understand, and validate a complex whole from many smaller systems is central to science and engineering.
+
+It is especially relevant to highly automated manufacturing, networks of agents, ecological modeling, and public infrastructure.
+
+## **3**
+
+**Causal abstraction and multiscale modeling**
+
+Much of scientific understanding depends on moving between scales: molecules, cells, organisms, ecosystems; individuals, organizations, institutions, societies.
+
+A theory that clarifies when higher-level models preserve causal relationships could be enormously valuable. However, a complete practical framework does not yet exist.
+
+## **4**
+
+**Equivariant and structure-aware AI**
+
+Models that respect physical and mathematical constraints can require less data, generalize more reliably, and be easier to connect to established science.
+
+I expect this to be particularly important for physics, chemistry, materials, and robotics.
+
+## **5**
+
+**Formal theories of cooperation, coordination, and institutions**
+
+This is the least settled of the five, but potentially very consequential.
+
+Mechanism design, distributed optimization, game theory, sheaf theory, and compositional modeling offer different tools for understanding how locally autonomous participants can form coherent and beneficial larger systems.
+
+None of these theories alone establishes what is socially desirable. But they could help translate democratically chosen objectives, rights, and constraints into more reliable institutional mechanisms.
+
+## **6. Research groups and projects worth following**
+
+A few starting points, selected for substantive work rather than general publicity:
+
+| Project or community                                                                                                                | What to follow                                                       |
+| ----------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| [Lean](https://lean-lang.org/?utm_source=chatgpt.com) and [Mathlib](https://leanprover-community.github.io/?utm_source=chatgpt.com) | Formal mathematical libraries, theorem proving, verification         |
+| [Topos Institute](https://topos.institute/?utm_source=chatgpt.com)                                                                  | Applied category theory, compositional systems, scientific modeling  |
+| [AlgebraicJulia](https://www.algebraicjulia.org/?utm_source=chatgpt.com)                                                            | Executable compositional models and categorical computation          |
+| [CQL / Categorical Data](https://categoricaldata.net/?utm_source=chatgpt.com)                                                       | Schema translation, data integrity, interoperability                 |
+| [ZX-calculus community](https://zxcalculus.com/?utm_source=chatgpt.com)                                                             | Diagrammatic quantum reasoning and circuit optimization              |
+| [Homotopy Type Theory](https://homotopytypetheory.org/?utm_source=chatgpt.com)                                                      | Univalent foundations, higher-dimensional equality                   |
+| [NIST post-quantum cryptography](https://www.nist.gov/pqcrypto?utm_source=chatgpt.com)                                              | Algebraic cryptography and deployment of quantum-resistant standards |
+
+## **The larger picture**
+
+There is a conceptual distinction I think is especially important.
+
+Historically, much of applied mathematics has been used to **predict what a system will do**.
+
+A growing body of work is also concerned with **constructing systems whose behavior satisfies properties that can be stated, composed, checked, or proved**.
+
+This opens a more ambitious direction:
+
+- Logic and type theory establish what can be expressed and proved.
+- Group theory identifies the symmetries under which a description remains valid.
+- Category theory provides rules for composing structures.
+- Causal and dynamical theories describe how those structures interact and evolve.
+- Formal verification connects mathematical claims to executable implementations.
+
+The convergence could eventually support scientific and technological infrastructure that is not merely powerful, but more understandable, modifiable, interoperable, and reliable.
+
+And there is an important limit: a mathematically verified system is verified **against its formal specification**, not automatically against reality, human values, or the public good. Selecting the right abstractions and specifications remains a scientific, empirical, and collective task.
+
+To me, the most consequential open question emerging from these fields is:
+
+**Can we develop a compositional mathematics of complex adaptive systems that preserves meaningful properties across scales—from physical components and software agents to organizations, ecosystems, and societies—while allowing those systems to learn, change, and coordinate?**
+
+That is not yet a solved theory. But parts of it are already being developed in several mathematical communities, and their convergence may be more important than any individual theorem.

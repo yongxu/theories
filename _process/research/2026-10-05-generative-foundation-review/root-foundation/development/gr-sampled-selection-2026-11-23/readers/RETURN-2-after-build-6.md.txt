@@ -1,0 +1,98 @@
+AI-written: the final report of a reader who took no part (a Claude subagent of the session that holds row GR), word for word, taken from its transcript on 23 November 2026. Paths in it are of that night.
+
+**Verdict in brief:** no docstring overstates its theorem, and nothing in the 409 modules duplicates the new lemmas, but the built case `Missed` is degenerate and one sentence of the account says the reverse of what holds. Read-only; nothing was built or run.
+
+Paths: `S` = `/Users/ren/theories/tmp/coarser-1123/tree/Becoming/SampledSelection.lean`; `B` = `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming`.
+
+## Findings
+
+**1. MUST — `Missed.coarse_blind` is had for a trivial reason: read at the even steps the selector has no coupling at all, so every coarse selection through its couplings is constant.**
+- `Missed.web` requires only `f = false ∧ t = 1` (S:261) and `none` is `False` (S:282).
+- So on `web.sample twice` the selector's admission is vacuous at every step read (`twice_ne_one`, S:301) and nothing is coupled by level.
+- By `AlikeThrough` (B/Testing.lean:186-187), any two histories whatever are alike through `false`'s couplings on the sampled web. `SelectsThrough` (B/Selection.lean:137-139) then forces `select l ↔ select l'` for all `l`, `l'`.
+- `coarse_blind` (S:331-338) does call `Flow.sample_unselected_beyond_coupling`, so clause (iv) is met by its letter. But the conclusion holds of any pair of histories, not of the levels with and without the part.
+- The premises do no work in the case: `balanced` is vacuous (nothing couples in at the coarser steps, `coarse_uncoupled`, S:306), and `without`, `once` and `beyond` are not needed for the conclusion.
+- This is the vacuity you named ("the selector's admission is never read"). Clauses (v) and (vi) guard against cancellation, not against this.
+- Repair, which needs a new build and a new read: two conditions. The selector requires one at step 1 only and is coupled by level to the other, with something inside the closure read at the even steps exchanging with that other. Add a clause that some coarse selection through the selector's own couplings is not constant.
+- If such a case cannot be built with (i) to (vi) and that clause, the row is a dictionary with one lemma.
+
+**2. MUST — one sentence of the account says the reverse (S:48-49).**
+- Quoted: "The part is asked to lie beyond the closure read at the coarser steps, which is asked of fewer parts than lying beyond the closure."
+- By `Flow.sample_withinCoupling` (S:172-173) the closure read at the coarser steps lies within the closure, so more parts lie beyond it, not fewer. `Missed` is the witness: `true` is beyond the one and within the other (S:312-314).
+- The premise `beyond` (S:237) is the weaker one and the theorem covers more parts. Reword to say so.
+
+**3. SHOULD — the "So" sentence on what can shrink the closure is argued, not proved, and reads as proved (S:32-34).**
+- Quoted: "So the closure can be smaller at the coarser steps only through a requirement that holds at no step read".
+- No theorem states it. `Flow.exchanges_sample` (S:158) and `Strict.covers` (S:148) are used by nothing else in the module.
+- Either state it (with `Strict σ`, `σ 0 = 0` and every `W.DependsOn g c` giving `(W.sample σ).DependsOn g c`, `WithinCoupling` implies the sampled one; this is `WithinClosure.mono` with `exchanges_sample`), or mark the sentence as argued.
+
+**4. SHOULD — say what the blindness law adds over `of_sample` with the fine law.**
+- For a part beyond the fine closure, coarse blindness already follows from `Web.SelectsThrough.of_sample` (S:108) and `Flow.unselected_beyond_coupling` (B/Selection.lean:345), needing only `Strict`.
+- So the surplus of `sample_unselected_beyond_coupling` is exactly the parts within the fine closure and beyond the coarser one, plus balance asked on fewer conditions.
+- The account does not say this, and `of_sample` is used by nothing in the module.
+
+**5. SHOULD — `Strict` is left out of two tellings.**
+- Docstring of `Web.AlikeThroughUpTo.sample` (S:98-99) against its signature `(strict : Strict σ)` (S:100).
+- First bullet of the account (S:20-22), for both `AlikeThroughUpTo.sample` and `SelectsThrough.of_sample`; it also drops the steps `t` and `σ t`.
+- The header promises "no premise beyond those each statement names" (S:14).
+
+**6. NOTE — a name.** `Strict.covers` is declared inside `namespace Flow` (S:133, 148), so its name is `Becoming.Flow.Strict.covers`. The account cites it as `Strict.covers` (S:31), and `strict.covers` would not resolve. `Strict.le` (S:80) is placed correctly.
+
+**7. NOTE — the other docstrings match their signatures.**
+- Checked and found accurate: `sample_alikeThrough_iff` (`Iff.rfl`, checked by unfolding `Admits`, B/Admission.lean:378), `sample_selects_alike_iff` (honestly told as saying nothing more), `sample_dependsOn`, `sample_coupledInto`, `sample_exchanges`, `exchanges_sample`, `sample_withinCoupling`, `WithheldLevels.sample`, `sample_unselected_beyond_coupling`.
+- The four `Missed` docstrings match what is proved; the gap is in finding 1.
+
+**8. NOTE — the six clauses of `Missed`, by hand.**
+
+| Clause | Holds | Why |
+|---|---|---|
+| (i) within at the fine steps | yes, real | `DependsOn false ()` at step 1; `true` takes `bit true = 1` at step 0 (S:315) |
+| (ii) beyond at the coarser | yes, real | `{false}` is closed because nothing couples in (S:316-319) |
+| (iii) a fine selection separates | yes, real | at step 1 the selector's admission is `1 ≤ 0` against `1 ≤ 1` (S:326); admission is read |
+| (iv) no coarse selection separates | by letter only | finding 1 |
+| (v) sampled levels differ | yes | at sampled step 1: `web.level 2 () = 0`, `kept 2 () = 1`; equal at sampled step 0 |
+| (vi) a wider coupling separates | yes | under `all`, the second component of `AlikeThrough` fails at step 1 (S:346) |
+
+`without`, `once` and `balances` (S:287-298) check by computation.
+
+**9. NOTE — is `WithheldLevels.sample` a real lemma?** Yes, but small.
+- It does not close by unfolding: `unionPresent_withhold` is an induction on the list (S:179-182) and `withheld_gated` a case split with `gateBy_zero` and `total_zero` (S:185-190). The rest is `BalancesOn.sample` (B/Sampling.lean:458) applied to the withheld flow.
+- It could have failed only if `withhold` changed `present`; it does not (B/Admission.lean:493-495). `σ 0 = 0` is truly needed, for the start clause.
+- It is of the kind `Sampling` already holds ("what composes").
+
+**10. NOTE — the fatal judgment, both sides.**
+- For "dictionary":
+  - S1 and S2 are definitional.
+  - S3 is `WithinClosure.mono`.
+  - S4 is an instance by its own telling.
+  - The core of `Missed` is `twice_ne_one`, proved from `Strobe.flick_even` (S:301-303); that is `Strobe.coarse_quiet` with `requires` for `active`.
+  - Clause (iv) follows from that by unfolding (finding 1).
+- Against:
+  - The general S4, for a part within the fine closure and beyond the coarser, is in neither parent. `Selection.lean` alone cannot give it (`fine_separates` shows the fine law does not apply), and `Sampling.lean` has no selection.
+  - Its premises reach the fine level only through the new lemma.
+  - It needs no step-relative premise (`Acting`, `Taking`, `Transmitting`).
+- What I hold: "`Missed` is Strobe with a requirement" — yes, as built. "S4 is an instance" — yes, as the module says. "The module says nothing of selection" — no: S4 says something, but no built case shows it doing work.
+
+**11. NOTE — nothing found under other names.**
+- Grep over `B/*.lean` found none of `atTimes`, `WithheldLevels.sample`, `sample_withhold*`, `sample_exchanges`, `exchanges_sample`, `sample_withinCoupling`, `sample_coupledInto`, `sample_dependsOn`, `sample_unselected*`.
+- No line pairs `sample` or `span σ` with `withhold`, `Exchanges`, `SelectsThrough`, `WithinCoupling` or `AlikeThrough`.
+- The modules that use `.sample` (Listing, Tower, Stuttering, OrderNormal, IdleRemoval) do not mention `withhold`.
+- The nearest are `ExchangeFlows.sample_take_absent` and `sample_give_absent` (B/Sampling.lean:1077-1084) and `Flow.withhold_exchanges` (B/Testing.lean:616); none is the same statement.
+- `SelectionPool.anticipation_misses` (B/SelectionPool.lean:518) is a different axis (two readers, one web).
+
+**12. NOTE — "What this is and is not" (S:59-68).**
+- Claims too little: it does not say that at the steps read the selector in `Missed` has no coupling (finding 1), nor findings 3 and 4.
+- Not listed as not shown: scores and groups at a sample (`unscored_beyond_coupling`, `unselected_beyond_coupling_all`).
+- "Neither module imports the other" holds for the direct imports I read.
+
+## Not checked
+- That the module builds, and the axiom reports.
+- The lister's output for N2; I read the proof term at S:241-244 and it does call `unselected_beyond_coupling` and `BalancesOn.sample` directly.
+- Transitive imports.
+- `Frame.lean` beyond the statement of `not_within_of_closed` (the direction of `ClosedUnder` taken from how it is used).
+- The body of `alike_within_closed`.
+- `Clearing`, beyond its statements in `Selection.lean`.
+- The `becoming-checks/` copies.
+- Part 2.
+
+**LAND AFTER THE MUSTS.** The general law with `WithheldLevels.sample` is a real, small join that neither parent has, but `Missed` as built is `Strobe.coarse_quiet` with a requirement, its blindness clause holding of any two histories. If a case in which the selector keeps a coupling at the steps read cannot be built, the row closes as a dictionary with one lemma.

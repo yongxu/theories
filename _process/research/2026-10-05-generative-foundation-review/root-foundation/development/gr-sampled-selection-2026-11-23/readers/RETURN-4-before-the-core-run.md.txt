@@ -1,0 +1,100 @@
+AI-written: the final report of a reader who took no part (a Claude subagent of the session that holds row GR), word for word, taken from its transcript on 23 November 2026. Paths in it are of that night.
+
+**Review of `SampledSelection.lean` as it stands (hand check from the definitions; nothing run, no file edited)**
+
+File: `/Users/ren/tmp/gr/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SampledSelection.lean`
+
+No MUST and no MUST-TEXT. Three SHOULDs and three NOTEs follow, under the five questions.
+
+## 1. Is `Missed` wrong in a new way?
+
+It is not void, not met by the letter, and not inert. One new weakness is below (S1).
+
+Values, from lines 281-324:
+
+| | step 0 | step 1 | step 2 on |
+|---|---|---|---|
+| `web.level _ true` | 1 | 1 | 2 |
+| `web.level _ false` | 1 | 0 | 0 |
+| `kept _ true` | 1 | 1 | 2 |
+| `kept _ false` | 1 | 1 | 1 |
+| `flow.present` | `[true]` | `[false]` | `[]` |
+
+- **The second condition moves through the flow.** `give 1 false true = bit (!false) = 1` (l.313) and `false ∈ present 1`. Balance at t=1, c=true reads 2 + 0 = 1 + 1.
+- **`web.level` is forced.** `balances` (l.353) holds at all six cases; I recomputed each. With the start, it fixes the levels.
+- **`kept` is forced.** `without` (l.338) holds: with the part withheld, `take 0 true false` becomes 0, so `false` stays at 1; on `true` it reads 2 + 0 = 1 + 1 at t=1. `WithheldLevels.unique` (Admission.lean l.532) makes `kept` the only such history.
+- **The sampled levels agree on `true` at every step read** because only `false` exchanges with `true` (`second_exchanged`, l.373) and `part false = false`.
+- **The three premises now do work.** `without` and `balanced` are non-trivial on `true` (it moves). `beyond` is non-trivial: the part exchanges with a condition coupled into the selector on the fine web.
+
+**A direct proof still exists.** Something like `through _ _ fun s _ => ⟨⟨fun _ _ r => absurd r.2.2 (twice_ne_one s), fun _ _ r => absurd r.2.2 (twice_ne_one s)⟩, fun c o => match c, o.2 with | _, rfl => rfl⟩` should do it, ignoring all three premises (not compiled). The `rfl` is immediate because `kept _ true` is written as `web.level t true` (l.323).
+
+- This is true of any concrete case: once both histories are written down, likeness at the steps read is checkable.
+- Writing `kept` on `true` as numerals would be cosmetic.
+- Nothing short of a case with a free parameter mends it, and that is the general law.
+- What the case can honestly show is that the premises are jointly met with the conclusion not void, the selections not constant, and the closure inclusion strict. It shows those.
+
+**S1 (SHOULD; Lean or one sentence): the selector gives while unsupported.**
+- With the part, the selector requires `false` at step 1 at need 1, where `level 1 false = 0`. It is `active` (l.291) and gives its unit across that very step.
+- So `Web.Dependent` fails of `web`. `Taking` fails too (`draws := False`, yet the part takes). The selector gives without taking.
+- The blindness leans on this. If the unmet requirement stopped the gift, `true` would stand at 1 against 2 at step 2, and a selection at the even steps would separate.
+- This is the law's standing "rest of the exchange fixed", so the theorems are sound. But `Diversion.favours` shows its case meets `Dependent`, `Acting` and `Taking`; this case meets only balance, listing once and `Acting`.
+- A possible mend I did not check: put the gift across step 0 (`present 0 = [true, false]`) and make the selector inactive at step 1. `true` would still move across the first coarse step.
+- Otherwise say it in "What this is and is not".
+
+## 2. The coupling closure read at the even steps
+
+Nothing unintended enters.
+
+- On the sampled web `requires` never holds (`twice s ≠ 1`), so only `true` couples into `false` (`coarse_coupled`, l.381).
+- Only `false` exchanges with `true`, so `{false}` is closed, and `true` is outside it.
+- The selector's gift adds only the selector to its own closure.
+- On the fine web, `false` couples in by the requirement at step 1, and `true` exchanges with it at step 0, so the part is within. `within_fine_beyond_coarse` holds as stated.
+
+## 3. The eight statements
+
+All hold as stated, by hand.
+
+- `once`: `[true]`, `[false]`, `[]` are each without repetition.
+- `without`, `balances`: as computed above.
+- `within_fine_beyond_coarse`: as in question 2.
+- `fine_separates`: at step 1 ≤ `twice 1`, `Admits` holds of `kept` (1 ≤ 1) and fails of `web.level` (1 ≤ 0).
+- `coarse_blind`: the premises are discharged correctly; `twice 0 = 0` by `rfl`; balance is given on every condition, more than asked.
+- `coarse_reads`: the constant histories 0 and 1 differ on `true` at coarse step 0.
+- `coarse_differs`: `web.level 2 false = 0` against `kept 2 false = 1`; under `all` the level clause separates at coarse step 1.
+
+## 4. The opening account
+
+No sentence in the four passages says more than the theorems.
+
+- **S2 (SHOULD-TEXT), l.64-65:** "though selections through them up to the first step read already tell histories apart". The theorem gives one selection and two constant histories (all 0, all 1) that are not levels of this flow. Say "a selection … tells two constant histories apart, differing on the second condition".
+- **S3 (SHOULD-TEXT), l.61-63:** "(`Missed.coarse_blind`, by the law above)" is true of the proof term. Add a clause that the agreement can also be checked directly, and that the case shows the premises met together, not that the law is needed for it.
+- **N1 (NOTE), l.45-46:** "balance at the fine steps on what couples in at the coarser" omits "into a formation within the closure read there". It reads as a stronger premise, so it says less, not more.
+- **N2 (NOTE), l.33-37:** "smaller … only through a requirement that holds at no step read" is glossed exactly by its "where every dependence…" clause. The premise ranges over all formations, more than needed.
+- **N3 (NOTE), l.42-43:** "This lemma is what the module adds to the two it joins" passes over `exchanges_sample` and `withinCoupling_sample`, which are also new and are the better part.
+- "The case `Missed`" bullet, apart from S2, and "What this is and is not": accurate. "The module is a leaf" holds; only `Becoming.lean` imports it.
+
+## 5. Small real join, or `Strobe.converse_fails` with a requirement?
+
+**Against.**
+- The blindness law is `unselected_beyond_coupling` at the sampled flow and web, as the file says.
+- `Web.sample` reads `requires` at `σ s` by definition, so a requirement at an odd step is missed by construction, as `Strobe` misses activity.
+- The case's conclusion has a direct check.
+
+**For.**
+- `Flow.WithheldLevels.sample` is a real commuting lemma that neither module has.
+- `exchanges_sample` with `withinCoupling_sample` say something `Strobe` cannot: exchange is never lost to the coarser reading, so the closure shrinks only through an unread requirement.
+- The sampled law reaches parts within the fine closure, where `of_sample` with the fine law gives nothing. `Missed` shows that region is inhabited with a conclusion that is not void.
+
+**Decided: a small real join.** It rests on the general lemmas, not on the case. The case is `Strobe` with a requirement in place of activity plus one instance of the older law. That is the right job for a witness, and the header nearly says so ("as `Strobe` shows it of activity").
+
+## Not checked
+
+- No build and no axiom report; I took those as given.
+- The proofs of `alike_within_closed`, the grammar closure lemmas, and `balance_over_stretch_on`.
+- The instances behind `by decide`.
+- The names `RuleCapture.locked_stays` and `turn_locked`, and the history of the withdrawn part.
+- The entries in `Becoming.lean` and `check_becoming.py`; the README row I only saw in passing.
+- Whether Selection and Sampling import each other transitively; directly they do not.
+- The S1 mend was not worked through in Lean.
+
+**LAND.** The eight statements hold, the closure is as stated, and no sentence in the four passages says more than its theorem. S1 to S3 are worth making before or right after landing but do not make anything said false.

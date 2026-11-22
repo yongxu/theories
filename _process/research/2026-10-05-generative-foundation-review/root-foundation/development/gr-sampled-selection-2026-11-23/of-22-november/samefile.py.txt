@@ -1,0 +1,44 @@
+import os, re, sys
+B = sys.argv[1]
+files = {f[:-5]: open(os.path.join(B, f), encoding='utf-8').read() for f in sorted(os.listdir(B)) if f.endswith('.lean')}
+def split(s):
+    # the opening account, and the rest (code with its docstrings)
+    m = re.search(r'/-!(.*?)-/', s, re.S)
+    return (m.group(1) if m else ''), (s[m.end():] if m else s)
+def having(pat, where='all'):
+    r = re.compile(pat)
+    out = set()
+    for n, s in files.items():
+        acc, code = split(s)
+        t = {'all': s, 'code': code, 'account': acc}[where]
+        if r.search(t): out.add(n)
+    return out
+fams = {
+ # as first run on the evening (the patterns of that grep, exactly)
+ 'coarse(as run)':  r'Web\.sample|Flow\.sample|\.sample\b|Frame\.blocks|Stutter',
+ 'lock(as run)':    r'paced|ReadsShare|Locked|TurningInTime|ReadInTime|SelectsThrough',
+ 'whole(as run)':   r'Web\.Whole|\.Whole\b|JointFrame|Joining\.',
+ 'select(as run)':  r'SelectsThrough|ReadsShare|Unread|Locked',
+ 'project(as run)': r'ProjectedLaws|Commuting\b',
+ 'lock2(as run)':   r'paced|ReadsShare|Locked|SelectsThrough',
+ # wider names for the same things
+ 'coarse(wider)':   r'\bsample\b|\.sample_|sample_|\bblocks\b|Stutter|\bTower\b|Sampling|Granularity|coarser|\bσ\b.*strictly',
+ 'lock(wider)':     r'\bpaced\b|Pace\.|ReadsShare|\bLocked\b|\blocked|\bLocks\b|TurningInTime|ReadInTime|RuleCapture|ClosedCapture|turns_in_time|locks\b',
+ 'whole(wider)':    r'\bWhole\b|\bWholes\b|JointFrame|\bJoining\b|JointPlan|Composition\b',
+ 'select(wider)':   r'SelectsThrough|SelectsThroughAll|ReadsShare|\bUnread\b|\bLocked\b|unselected|selects_alike|Selection\b',
+}
+S = {k: having(v) for k, v in fams.items()}
+def show(a, b):
+    both = sorted(S[a] & S[b])
+    print('%-16s (%3d files)  with  %-16s (%3d files): %d in one file  %s' % (a, len(S[a]), b, len(S[b]), len(both), ', '.join(both)[:400]))
+print('--- as run on the evening: whole text of each file ---')
+show('coarse(as run)', 'lock(as run)')
+show('whole(as run)', 'select(as run)')
+show('project(as run)', 'lock2(as run)')
+print('--- wider names: whole text of each file ---')
+show('coarse(wider)', 'lock(wider)')
+show('whole(wider)', 'select(wider)')
+print('--- wider names, code only (the opening account left out) ---')
+for a, b in (('coarse(wider)', 'lock(wider)'), ('whole(wider)', 'select(wider)')):
+    A = having(fams[a], 'code'); Bq = having(fams[b], 'code'); both = sorted(A & Bq)
+    print('%-16s (%3d)  with  %-16s (%3d): %d  %s' % (a, len(A), b, len(Bq), len(both), ', '.join(both)[:500]))

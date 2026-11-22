@@ -1,0 +1,54 @@
+import os, json, sys
+P = sys.argv[1]
+mod = {}      # theorem name -> module
+uses = {}     # theorem name -> list of names
+for f in sorted(os.listdir(P)):
+    if not f.endswith('.jsonl'): continue
+    m = f[:-6].replace('Becoming.', '')
+    for line in open(os.path.join(P, f), encoding='utf-8'):
+        line = line.strip()
+        if not line: continue
+        o = json.loads(line)
+        mod[o['name']] = m; uses[o['name']] = o.get('uses', [])
+print(len(mod), 'names in', len(set(mod.values())), 'modules;', sum(len(v) for v in uses.values()), 'uses;', sum(1 for v in uses.values() for u in v if u not in mod), 'uses of names no file lists')
+A = {'Composition','Wholes','Joining','Gluing','Sampling','Tower','ProjectedLaws','Granularity','Stuttering'}
+L = {'Pace','RuleCapture','ClosedCapture','RuleShaping','DrawnShaping','PoolFromCourse','ReadInTime','TurningInTime','ChoiceCountCapture'}
+S = {'Selection','SelectionPool','SelectionGap','SelectionReach','PoolResponse','PoolCourse','BeyondCoupling'}
+for F, nm in ((A,'A parts, wholes, coarser steps'), (L,'L the lock, the pace, a turn in time'), (S,'S selection through couplings')):
+    missing = sorted(x for x in F if x not in set(mod.values()))
+    print('%-40s %4d names%s' % (nm, sum(1 for n in mod if mod[n] in F), ('; no file for ' + ', '.join(missing)) if missing else ''))
+# transitive closure of uses, as sets of MODULES reached, by memoised depth-first walk
+sys.setrecursionlimit(100000)
+memo = {}
+def reach(n, stack=frozenset()):
+    if n in memo: return memo[n]
+    out = set()
+    for u in uses.get(n, []):
+        if u in mod: out.add(mod[u])
+        if u in uses and u not in stack: out |= reach(u, stack | {n})
+    memo[n] = out
+    return out
+def fam(ms):
+    return ('A' if ms & A else '') + ('L' if ms & L else '') + ('S' if ms & S else '')
+direct = {n: {mod[u] for u in uses[n] if u in mod} for n in uses}
+print()
+print('DIRECT (a proof term names a theorem of the other family):')
+for X, Y, t in ((A, L, 'a theorem of A uses one of L'), (A, S, 'a theorem of A uses one of S'), (L, A, 'a theorem of L uses one of A'), (S, A, 'a theorem of S uses one of A')):
+    hit = sorted(n for n in uses if mod[n] in X and direct[n] & Y)
+    print('  %-32s %3d  %s' % (t, len(hit), '; '.join(h.replace('Becoming.','') for h in hit[:6])))
+for Y, t in ((L, 'any theorem using both A and L'), (S, 'any theorem using both A and S')):
+    hit = sorted(n for n in uses if direct[n] & A and direct[n] & Y)
+    print('  %-32s %3d  %s' % (t, len(hit), '; '.join('%s [%s]' % (h.replace('Becoming.',''), mod[h]) for h in hit[:8])))
+print('THROUGH CHAINS (the closure of uses reaches the other family):')
+R = {n: reach(n) for n in uses}
+for X, Y, t in ((A, L, 'a theorem of A reaches L'), (A, S, 'a theorem of A reaches S'), (L, A, 'a theorem of L reaches A'), (S, A, 'a theorem of S reaches A')):
+    hit = sorted(n for n in uses if mod[n] in X and R[n] & Y)
+    print('  %-32s %3d  %s' % (t, len(hit), '; '.join('%s [%s->%s]' % (h.replace('Becoming.',''), mod[h], ','.join(sorted(R[h] & Y))) for h in hit[:6])))
+for Y, t in ((L, 'any theorem reaching both A and L'), (S, 'any theorem reaching both A and S')):
+    hit = sorted(n for n in uses if (R[n] | {mod[n]}) & A and (R[n] | {mod[n]}) & Y)
+    bymod = {}
+    for h in hit: bymod.setdefault(mod[h], []).append(h)
+    print('  %-34s %3d theorems in %d modules' % (t, len(hit), len(bymod)))
+    for m in sorted(bymod, key=lambda m: -len(bymod[m]))[:14]:
+        h = bymod[m][0]
+        print('      %-22s %3d   e.g. %s  (A: %s; other: %s)' % (m, len(bymod[m]), h.replace('Becoming.','')[:60], ','.join(sorted((R[h]|{mod[h]}) & A)), ','.join(sorted((R[h]|{mod[h]}) & Y))))

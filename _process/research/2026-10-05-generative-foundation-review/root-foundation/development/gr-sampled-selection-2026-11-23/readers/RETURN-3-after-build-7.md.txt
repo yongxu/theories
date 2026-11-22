@@ -1,0 +1,67 @@
+AI-written: the final report of a reader who took no part (a Claude subagent of the session that holds row GR), word for word, taken from its transcript on 23 November 2026. Paths in it are of that night.
+
+**Verdict: LAND AFTER THE MUSTS.** The rebuilt `Missed` is no longer vacuous and all seven statements hold as stated, but one heading contradicts a theorem in the same namespace. Everything below is checked by hand from the definitions; nothing was built or run.
+
+File: `/Users/ren/theories/tmp/coarser-1123/tree/Becoming/SampledSelection.lean`
+
+## 1. What `coarse_blind` now depends on
+
+- **Not true of any two histories.** `AlikeThrough` (Testing.lean 186-187) is an admission iff plus `∀ c, obs g c → l t c = l' t c`. On `web.sample twice` the requirement is `f = false ∧ c = false ∧ twice s = 1` (web, line 283; `Web.sample`, Sampling.lean 133-135), which holds at no `s` (`twice_ne_one`, 335-337). So admission holds of every history and that conjunct is always true.
+- **Exactly which pairs are selected alike.** With `byLevel false c ↔ c = true` (306), two histories are alike at coarse step `s` iff `l s true = l' s true`. By `Web.sample_selects_alike_iff` (130-134), every selection through the selector's couplings at the even steps up to `t` selects `l`, `l'` alike iff they agree on the second condition at every coarse step `s ≤ t`. `coarse_reads` (385-388) proves this is not all pairs.
+- **Why the two sampled histories are such a pair.** `atTimes twice web.level s true` and `atTimes twice kept s true` are both `1` by `rfl` (lines 278, 303). The part and the flow enter only weakly: `second_unexchanged` (340-343) holds for every `h`, so nothing in the flow touches the second condition. The agreement is therefore not specific to this part; any part of this flow would give it.
+- **What is not arbitrary.** `kept` is forced: `without` (315-322) proves it is the withheld-levels history, and `web.level` on `true` is forced by `balances` (324-332).
+- **Do the law's premises do work?** They are discharged non-vacuously (`without`; `balanced` by a real computation; `beyond` by `within_fine_beyond_coarse.2`). But a direct proof takes about three lines and uses neither `flow`, `part`, `once`, `without` nor `balances`: `through _ _ fun s _ => ⟨⟨fun _ _ r => absurd r.2.2 (twice_ne_one s), fun _ _ r => absurd r.2.2 (twice_ne_one s)⟩, fun c h => match c, h with | _, ⟨_, rfl⟩ => rfl⟩`.
+- **How serious.** Moderate, not a blocker. The case is a true instance of the law and shows the law reaches a part within the fine closure. It does not show the law doing work a direct check could not, because the only condition read at the coarser step is inert.
+
+## 2. The seven statements
+
+All hold.
+
+| Statement | Lines | Check |
+|---|---|---|
+| Within the closure at the fine steps | 356 | `DependsOn false false` at step 1; `Exchanges true false` at step 0, since `true ∈ [true]` and `0 < bit true = 1` |
+| Beyond it at the coarser | 357-361 | Region `{false}` is closed: the only condition coupled in is `true` (`coarse_coupled`, 346-349), and nothing exchanges with it (via `sample_exchanges`) |
+| A fine selection separates | 365-370 | Up to fine step `twice 1 = 2`; at step 1 `kept` admits (`1 ≤ 1`) and `web.level` does not (`1 ≤ 0`). The separation is by threshold |
+| No coarse selection through the selector's couplings separates | 374-381 | For every `t`; arguments match `sample_unselected_beyond_coupling` (253-264). `balanced` is discharged for every condition, ignoring its hypotheses |
+| Such coarse selections are not constant | 385-388 | At `t = 0`, constant-0 against constant-1, which differ on `true` |
+| The sampled levels differ at a step read | 393, 396 | `web.level 2 false = 0`, `kept 2 false = 1` |
+| A coarse selection under a wider coupling separates | 394-397 | Under `all`, at coarse step 1 on condition `false`, `0 ≠ 1` |
+
+## 3. The account
+
+**MUST-1.** The section heading at line 268 overstates: "A part within the closure at the fine steps that no selection at the coarser steps registers". `coarse_differs` in the same namespace gives a selection at the coarser steps that separates it. It should read "no selection through the selector's couplings at the coarser steps".
+
+**SHOULD-1.** The bullet "The case `Missed`" (54-63) says nothing false, but says less than the case: it omits that nothing exchanges with the second condition. Either add a clause saying so, or have some formation outside the part exchange with `true` so its level moves and the agreement comes through balance.
+
+**SHOULD-2.** Lines 51-53: "of which there are more than lie beyond the closure". Proved in general is only "no fewer" (`sample_withinCoupling`); strictly more is shown only in `Missed`, and `withinCoupling_sample` shows they can coincide.
+
+**NOTE-1.** Lines 49-51: "needing only that the reading is strict" leaves unsaid that the fine law's own premises are still needed (`without`, and balance on what couples in at the fine closure).
+
+**NOTE-2.** "balance asked on fewer conditions" (53) is true of the signature but not exercised by `Missed`, where balance holds on both conditions.
+
+**NOTE-3.** `coarse_reads` is at step 0 and of two histories that are not histories of the flow. The account's "such selections are not constant" still holds for every `t`, since a selection through the couplings up to 0 is one up to any `t`. That step is not in the Lean.
+
+"What this is and is not" (65-74): the first two sentences match the Lean, and I found no overstatement in them.
+
+## 4. `Flow.withinCoupling_sample` (188-196) against lines 33-36
+
+The signature takes `strict`, `zero : σ 0 = 0`, and `read : ∀ g c, W.DependsOn g c → (W.sample σ).DependsOn g c`, and gives fine-within implies coarse-within.
+
+**SHOULD-3.** The citing sentence, "where every dependence is a dependence at some step read, the two closures are one (`Flow.withinCoupling_sample`)", differs from it in two ways:
+- It carries `strict` and `σ 0 = 0` only through "So" from the sentence before. The "only through a requirement that holds at no step read" is false without `σ 0 = 0`, because an exchange before `σ 0` is lost. State both premises in the sentence.
+- The theorem is one inclusion. "The two closures are one" also needs `Flow.sample_withinCoupling`, which the docstring (187) says and the account does not cite here.
+
+The reading of `read` as "every dependence is a dependence at some step read" is exact.
+
+**SHOULD-4.** Line 35-36: "It is the same fact as `Strobe.coarse_quiet` of activity." `coarse_quiet` (Sampling.lean 270-271) is a statement about one built web. No theorem joins the two, so this is a likeness, not a proved identity; "as `Strobe.coarse_quiet` shows of activity" would say it.
+
+## Not checked
+
+- No build and no axiom report, so "every declaration has an empty axiom report" and "builds with no error" are taken on your word.
+- "The module is a leaf": my grep for importers failed on a shell glob and I did not rerun it.
+- The withdrawn second part, and whether `RuleCapture.locked_stays` and `turn_locked` exist.
+- The proofs of the general lemmas at 198-244 (`WithheldLevels.sample`, `sample_withhold_taken`, `sample_withhold_given`) and the body of `unselected_beyond_coupling` / `uncoupled_beyond_coupling`; only their signatures were read.
+- Which `bit` is in scope; I assumed `bit true = 1`, as the build implies.
+- `TESTS.md` and the build logs in `/Users/ren/theories/tmp/coarser-1123/`.
+
+No file was edited.
