@@ -357,6 +357,7 @@ import Becoming.OptimumSeason
 import Becoming.CoupledDrawers
 import Becoming.SetPointOptimum
 import Becoming.SelectionPool
+import Becoming.SampledSelection
 import Becoming.PoolResponse
 import Becoming.Training
 import Becoming.PoolCourse
@@ -2393,6 +2394,17 @@ tagged instance or application.
   entering (`Flow.held_draws`, `Flow.held_excess_ends`, from `Flow.joint_excess_ends`). A leaf: its
   laws are cases of `Optimum`'s, `DrawnBeyond`'s and `Continuation`'s on one class of orders, read
   on active inference (board item UE1b).
+* `Becoming.SampledSelection` (L1): a selection through a formation's couplings on a web read at
+  coarser steps. Taken back along a strict reading it is a selection through the couplings of the
+  web. The coupling closure read at the coarser steps lies within the coupling closure, and with
+  the reading strict and from step 0 it is smaller only through a requirement that holds at no step
+  read. Withholding a part commutes with the reading, each relatum listed once, so every selection
+  through the couplings read at the coarser steps, of a formation within the closure read there,
+  selects the sampled levels with and without a part beyond that closure alike
+  (`Flow.unselected_beyond_coupling` at the sampled flow). In `Missed` a part within the closure
+  and beyond the closure read at the even steps is separated by a selection through the selector's
+  couplings and by none read at the even steps. A leaf joining `Becoming.Sampling` and
+  `Becoming.Selection`.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled

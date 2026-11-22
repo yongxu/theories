@@ -4887,6 +4887,11 @@
    "region": "method",
    "base": "general",
    "note": "rising iteration where every state is listed: up to a double negation; what a bound for every step would decide"
+  },
+  "Becoming.SampledSelection": {
+   "region": "collective",
+   "base": "general",
+   "note": "GR a selection through couplings on a web read at coarser steps: what it keeps, the closure read there, blindness beyond it"
   }
  }
 }
