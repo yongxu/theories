@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261122T094514.036246Z",
- "core_sources_sha256": "07532a7bc5336271f22b0db683b68fa0cbf8d1dbb4fa338730e7da9e2b2b001f",
+ "core_receipt": "20261122T175942.715137Z",
+ "core_sources_sha256": "a19bf91aa8ca7361ed666880c11737f0ae078907c4a17734b728e179aa3afca9",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,16 +58,16 @@
   ]
  },
  "counts": {
-  "laws": 4411,
+  "laws": 4416,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 1063,
-  "balance, represented": 636,
+  "grammar": 1066,
+  "balance, represented": 637,
   "anchor, not reached": 134,
-  "no shared law": 2178,
+  "no shared law": 2179,
   "vocabulary_only": 105,
-  "closure": 587,
-  "balance": 895,
+  "closure": 590,
+  "balance": 898,
   "return": 254,
   "lumping": 92,
   "order": 105
@@ -45711,6 +45711,77 @@
     "dependence": "no shared law"
    }
   ],
+  "selection-through-couplings-at-a-coarser-step": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Web.SelectsThrough.of_sample",
+     "Becoming.Web.AlikeThroughUpTo.sample",
+     "Becoming.Web.sample_alikeThrough_iff",
+     "Becoming.Web.sample_selects_alike_iff"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Flow.sample_withinCoupling",
+     "Becoming.Flow.withinCoupling_sample",
+     "Becoming.Flow.sample_exchanges",
+     "Becoming.Flow.exchanges_sample",
+     "Becoming.Web.sample_coupledInto",
+     "Becoming.Web.sample_dependsOn"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Flow.WithheldLevels.sample",
+     "Becoming.Flow.sample_withhold_taken",
+     "Becoming.Flow.sample_withhold_given"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Flow.sample_unselected_beyond_coupling"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.Missed.within_fine_beyond_coarse",
+     "Becoming.Missed.fine_separates",
+     "Becoming.Missed.coarse_blind",
+     "Becoming.Missed.coarse_reads",
+     "Becoming.Missed.coarse_differs"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "selection-through-couplings": [
    {
     "law": 1,
@@ -67739,7 +67810,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "86b8866e3539b9c03a5efd961d79b361c2715a54995e683115504487e9d85035",
+   "modules_sha256": "f476b0717fd3242e2997053e87f8e9e23f6f7b0dc44779b1dd853fbcdc702d31",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

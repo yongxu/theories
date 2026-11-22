@@ -1,0 +1,27 @@
+Becoming/SampledSelection.lean:377:9: error: Type mismatch
+  List.Mem.head ?m.52
+has type
+  List.Mem ?m.51 (?m.51 :: ?m.52)
+but is expected to have type
+  h ∈ flow.present (0 + 1)
+Becoming/SampledSelection.lean:403:58: error: Type mismatch
+  Nat.le_refl 1
+has type
+  1 ≤ 1
+but is expected to have type
+  web.need 1 false x✝¹ ≤ kept 1 x✝¹
+
+{
+  "tree": "/Users/ren/theories/tmp/coarser-1123/tree",
+  "modules": 38,
+  "ran": [
+    "Becoming.SampledSelection"
+  ],
+  "reused": 37,
+  "unclean": [],
+  "audits": {},
+  "seconds": {
+    "Becoming.SampledSelection": 3.024
+  },
+  "failed": "Becoming.SampledSelection"
+}

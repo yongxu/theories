@@ -1,0 +1,154 @@
+import Becoming.ClosedCapture
+
+/-!
+# Sampled pace: a rule read at stretches, as a rule read at every step of a coarser course
+
+DRAFT (AI-written, 23 November 2026). Account to be written when the statements stand.
+-/
+
+namespace Becoming
+
+namespace Pace
+
+variable {S : Type u} {R : Type v} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool}
+
+/-- The fast step of a stretch: the rule held for `k + 1` steps. -/
+def stretchFast (f : S → R → S) (k : Nat) (x : S) (g : R) : S :=
+  Law.orbit (fun y => f y g) x (k + 1)
+
+/-- The reading of a stretch: the rule read off the configuration the held rule reaches in `k`
+steps, the stretch's last. -/
+def stretchRead (f : S → R → S) (h : S → R → R) (k : Nat) (x : S) (g : R) : R :=
+  h (Law.orbit (fun y => f y g) x k) g
+
+/-- **One stretch.** -/
+theorem paced_over_stretch {c : S × R} {a k : Nat} (held : ∀ j, j < k → reads (a + j) = false)
+    (read : reads (a + k) = true) :
+    paced f h reads c (a + k + 1) =
+      (stretchFast f k (paced f h reads c a).1 (paced f h reads c a).2,
+        stretchRead f h k (paced f h reads c a).1 (paced f h reads c a).2) := by
+  rw [paced_succ, read, paced_stretch held k (Nat.le_refl k)]
+  rfl
+
+/-- **Read at the stretch ends, the course is the course of the stretch's law read at every
+step.** -/
+theorem sampled_paced {k : Nat} (held : ∀ s j, j < k → reads ((k + 1) * s + j) = false)
+    (read : ∀ s, reads ((k + 1) * s + k) = true) (c : S × R) :
+    ∀ s, paced f h reads c ((k + 1) * s) =
+      paced (stretchFast f k) (stretchRead f h k) (fun _ => true) c s
+  | 0 => rfl
+  | s + 1 => by
+    rw [show (k + 1) * (s + 1) = (k + 1) * s + k + 1 from rfl,
+      paced_over_stretch (held s) (read s), sampled_paced held read c s, paced_succ]
+    rfl
+
+end Pace
+
+namespace RuleCapture
+
+open Pace
+
+variable {S : Type u} {R : Type v} {f : S → R → S} {h : S → R → R}
+  {P : Ideals.Preorder S} {M : Ideals.Preorder R} {favours : R → Prop}
+
+/-- Under a favouring rule held, the share is not lower at any later step of the orbit. -/
+theorem held_not_lower (raises : Raises P favours f) {g : R} (fav : favours g) (x : S) (n : Nat) :
+    ∀ j, P.le (Law.orbit (fun y => f y g) x n) (Law.orbit (fun y => f y g) x (n + j))
+  | 0 => P.refl _
+  | j + 1 => P.trans (held_not_lower raises fav x n j) (raises _ g fav)
+
+/-- **Raising is kept by the stretch's law.** -/
+theorem Raises.stretch (raises : Raises P favours f) (k : Nat) :
+    Raises P favours (stretchFast f k) :=
+  fun x g fav => Eq.subst (motive := fun n => P.le x (Law.orbit (fun y => f y g) x n))
+    (Nat.zero_add (k + 1)) (held_not_lower raises fav x 0 (k + 1))
+
+/-- **Locked is locked for every stretch's reading.** -/
+theorem Locked.stretch (raises : Raises P favours f) (monotone : ReadsShare P M h) {p : S × R}
+    (locked : Locked M favours h p) (k : Nat) : Locked M favours (stretchRead f h k) p :=
+  ⟨locked.1, M.trans locked.2 (monotone _ _ _ _
+    (Eq.subst (motive := fun n => P.le p.1 (Law.orbit (fun y => f y p.2) p.1 n))
+      (Nat.zero_add k) (held_not_lower raises locked.1 p.1 0 k)))⟩
+
+/-- **The longer the stretch, the more is locked.** -/
+theorem Locked.longer (raises : Raises P favours f) (monotone : ReadsShare P M h) {p : S × R}
+    {k : Nat} (locked : Locked M favours (stretchRead f h k) p) (j : Nat) :
+    Locked M favours (stretchRead f h (k + j)) p :=
+  ⟨locked.1, M.trans locked.2 (monotone _ _ _ _ (held_not_lower raises locked.1 p.1 k j))⟩
+
+/-- **The stretch's turn keeps what is locked for its reading.** -/
+theorem stretch_turn_locked (raises : Raises P favours f) (monotone : ReadsShare P M h)
+    (upper : ∀ {g g'}, M.le g g' → favours g → favours g') (k : Nat) (p : S × R)
+    (locked : Locked M favours (stretchRead f h k) p) :
+    Locked M favours (stretchRead f h k) (turn (stretchFast f k) (stretchRead f h k) true p) ∧
+      P.le p.1 (turn (stretchFast f k) (stretchRead f h k) true p).1 ∧
+      M.le p.2 (turn (stretchFast f k) (stretchRead f h k) true p).2 :=
+  have fav' : favours (stretchRead f h k p.1 p.2) := upper locked.2 locked.1
+  ⟨⟨fav', monotone _ _ _ _ (P.trans (raises _ p.2 locked.1)
+      (Eq.subst (motive := fun n => P.le (stretchFast f k p.1 p.2)
+          (Law.orbit (fun y => f y (stretchRead f h k p.1 p.2)) (stretchFast f k p.1 p.2) n))
+        (Nat.zero_add k) (held_not_lower raises fav' (stretchFast f k p.1 p.2) 0 k)))⟩,
+   (Raises.stretch raises k) p.1 p.2 locked.1, locked.2⟩
+
+end RuleCapture
+
+namespace ClosedCapture
+
+open Pace
+
+variable {A : Type u} {B : Type v} {R : Type w}
+
+/-- Unread, the held rule's orbit has one share at every step, whatever lies beyond. -/
+theorem held_unread {f : A × B → R → A × B} {h : A × B → R → R} (unread : Unread f h) (a : A)
+    (b b' : B) (g : R) :
+    ∀ n, (Law.orbit (fun y => f y g) (a, b) n).1 = (Law.orbit (fun y => f y g) (a, b') n).1
+  | 0 => rfl
+  | n + 1 => by
+    have ih := held_unread unread a b b' g n
+    show (f (Law.orbit (fun y => f y g) (a, b) n) g).1 = (f (Law.orbit (fun y => f y g) (a, b') n) g).1
+    generalize Law.orbit (fun y => f y g) (a, b) n = p at ih ⊢
+    generalize Law.orbit (fun y => f y g) (a, b') n = q at ih ⊢
+    cases p; cases q; cases ih; exact unread.1 _ _ _ g
+
+/-- **Unread is kept by the stretch's law.** -/
+theorem Unread.stretch {f : A × B → R → A × B} {h : A × B → R → R} (unread : Unread f h)
+    (k : Nat) : Unread (stretchFast f k) (stretchRead f h k) :=
+  ⟨fun a b b' g => held_unread unread a b b' g (k + 1), fun a b b' g => by
+    have same := held_unread unread a b b' g k
+    show h (Law.orbit (fun y => f y g) (a, b) k) g = h (Law.orbit (fun y => f y g) (a, b') k) g
+    generalize Law.orbit (fun y => f y g) (a, b) k = p at same ⊢
+    generalize Law.orbit (fun y => f y g) (a, b') k = q at same ⊢
+    cases p; cases q; cases same; exact unread.2 _ _ _ g⟩
+
+end ClosedCapture
+
+/-! ## Reading the share alone is relative to the step -/
+
+namespace StretchReads
+
+open Pace RuleCapture
+
+/-- `false` below `true`. -/
+def order : Ideals.Preorder Bool where
+  le a b := a = true → b = true
+  refl _ := id
+  trans ab bc := fun a => bc (ab a)
+
+/-- The fast level takes the rule's value. -/
+def fast (_ g : Bool) : Bool := g
+
+/-- The rule read is the fast level. -/
+def read (x _ : Bool) : Bool := x
+
+/-- **Not kept.** The reading reads the share alone; the reading of a stretch of two steps reads
+the rule in force and not the share. -/
+theorem stretch_reads_rule :
+    ReadsShare order order read ∧ ¬ ReadsShare order order (stretchRead fast read 1) ∧
+      ∀ x g, stretchRead fast read 1 x g = g :=
+  ⟨fun _ _ _ _ le => le,
+   fun reads => absurd (reads true true true false id rfl) (by decide),
+   fun _ _ => rfl⟩
+
+end StretchReads
+
+end Becoming

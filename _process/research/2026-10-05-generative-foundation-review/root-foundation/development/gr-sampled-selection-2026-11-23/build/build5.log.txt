@@ -1,0 +1,21 @@
+{
+  "tree": "/Users/ren/theories/tmp/coarser-1123/tree",
+  "modules": 38,
+  "ran": [
+    "Becoming.SampledSelection",
+    "BecomingSampledSelectionAxiomAudit"
+  ],
+  "reused": 37,
+  "unclean": [],
+  "audits": {
+    "Becoming.SampledSelection": {
+      "theorems": 26,
+      "declarations": 33,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.SampledSelection": 0.559,
+    "BecomingSampledSelectionAxiomAudit": 0.448
+  }
+}

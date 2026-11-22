@@ -1,0 +1,24 @@
+Becoming/SampledSelection.lean:86:65: error: Application type mismatch: The argument
+  zero
+has type
+  σ 0 = 0
+but is expected to have type
+  0 = ?m.34
+in the application
+  Nat.le_of_eq zero
+Becoming/SampledSelection.lean:217:9: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+
+{
+  "tree": "/Users/ren/theories/tmp/coarser-1123/tree",
+  "modules": 38,
+  "ran": [
+    "Becoming.SampledSelection"
+  ],
+  "reused": 37,
+  "unclean": [],
+  "audits": {},
+  "seconds": {
+    "Becoming.SampledSelection": 3.528
+  },
+  "failed": "Becoming.SampledSelection"
+}

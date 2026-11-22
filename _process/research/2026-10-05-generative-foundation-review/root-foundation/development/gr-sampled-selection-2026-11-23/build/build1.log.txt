@@ -1,0 +1,24 @@
+Becoming/SampledSelection.lean:171:2: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/SampledSelection.lean:172:22: error: Function expected at
+  through
+but this term has type
+  ?m.73 alike x✝¹ x✝
+
+Note: Expected a function because this term is being applied to the argument
+  _
+
+{
+  "tree": "/Users/ren/theories/tmp/coarser-1123/tree",
+  "modules": 38,
+  "ran": [
+    "Becoming.SampledSelection"
+  ],
+  "reused": 37,
+  "unclean": [],
+  "audits": {},
+  "seconds": {
+    "Becoming.SampledSelection": 2.7
+  },
+  "failed": "Becoming.SampledSelection"
+}
+python3 -B scratch_build.py /Users/ren/theories/tmp/coarser-1123/tree   3.97s user 0.91s system 71% cpu 6.861 total

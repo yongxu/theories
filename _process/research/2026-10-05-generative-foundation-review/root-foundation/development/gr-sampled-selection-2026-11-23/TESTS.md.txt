@@ -1,0 +1,73 @@
+# Row GR: tests written before any build that counts (AI-written, 23 November 2026)
+
+One scratch build ran at 00:13 WIB, before the coordinating session's conditions arrived (a draft of part 1; 2.7 s; it failed in its built case). It is told here and counts for nothing. No test below was chosen from its result.
+
+## What the row is for
+
+`Sampling` asks of the laws of one step: what holds across a coarse step where it holds across the fine steps inside, what does not come back from the coarse step to the fine, and what is relative to the step. Row GR asks the same of (1) selection through couplings on a web and (2) the lock's two-level course. New modules only; no existing module is edited.
+
+## Part 1, `Becoming.SampledSelection` (web and flow)
+
+Statements, each with the web and its sample both in it:
+S1. A selection through a formation's couplings on the web read at strictly increasing times, taken back along the reading, is a selection through its couplings on the web, up to the fine step read.
+S2. Every selection through the couplings on the sampled web selects two histories alike exactly where they are alike through the couplings at the sampled steps.
+S3. The coupling closure of the sampled flow and web lies within the coupling closure of the flow and web.
+S4. With the levels without a part given at the fine steps, each relatum listed once, the reading starting at step 0 and balance at the fine steps on what couples in at the coarser steps: every selection through the couplings read at the coarser steps, of a formation within the closure read there, selects the sampled levels with and without a part beyond that closure alike.
+S5. A built case: two histories that a selection through the couplings at the fine steps separates and every selection through them at the coarser steps selects alike.
+S6. A built case for S3 and S4 together: a part within the coupling closure at the fine steps and beyond it at the coarser, whose levels with and without it some fine selection separates and no coarse selection does.
+
+Counts as nothing gained:
+N1. S2 alone. It is `Web.selects_alike_iff` at a web that happens to be a sample (row DJ said so beforehand, and so did the writer).
+N2. S4 whose proof term does not use, directly, both `Flow.unselected_beyond_coupling` (as it stands) and a law of `Sampling` on balance (`Flow.BalancesOn.sample` or `Flow.sample_balances`). Checked by the lister, not by a reader.
+N3. S5 and S6 both failing to be built. Then part 1 is filed as a dictionary and no module lands.
+N4. S6 not built while S5 is: then the module says only that fewer steps are read, and the sentence "at a coarser step a selection is blind to more of what couples in" is not said anywhere.
+
+What would count against the reading "what makes a difference to a selection is relative to the grain it reads at": S4 needing a premise at the coarser steps that Sampling shows is step-relative (only active relata giving or taking, bounded transmission). Then that is what is reported.
+
+## Part 2, `Becoming.SampledPace` (the two-level course of `Pace`)
+
+The lock is already told on `Pace.paced` step by step: by the coordinating session's count over the print, 25 theorems call both a theorem of `Pace` and one of `RuleCapture`, `ClosedCapture` or `PoolFromCourse`, every one through `paced_succ`, `paced_run` or `stays_turned`, and none through `Pace.paced_stretch`.
+
+Statements:
+P1. One stretch: from any step, `k` steps not read and then one read take the course to the held rule's orbit of `k + 1` steps and the rule read off the orbit's `k`-th configuration. Iterated on a schedule that reads at the last step of every stretch of `k + 1`: the course at the stretch ends is the two-level course of the stretch's law (fast step: the held orbit of `k + 1`; reading: the reading of the orbit's `k`-th configuration) read at every step.
+P2. `Raises` and `ClosedCapture.Unread` hold of the stretch's law where they hold of the law.
+P3. `ReadsShare` does not: a built case where it holds of the reading and fails of the stretch's reading.
+P4. `Locked` for the stretch's reading follows from `Locked` under `Raises` and `ReadsShare`; and `Locked` for a stretch of `k` gives `Locked` for every longer stretch.
+P5. Under `Raises`, `ReadsShare` and favouring kept upward, the configurations `Locked` for the stretch's reading are kept by the stretch's turn, share and rule not lower, though the stretch's reading need not meet `ReadsShare`.
+P6. A built case: one start, one selection, one reading; read at every step the course is `Locked` at no step; read at every second step it is `Locked` for the stretch's reading at every stretch end and its share falls across no stretch.
+
+Counts as nothing gained:
+M1. P1 alone, or P1 with P2: `paced_stretch` said again.
+M2. P4's first half and P5 if their proof terms use neither `Pace.paced_stretch` (or P1) nor a lock law as it stands (`RuleCapture.turn_locked`, `locked_stays`, `locked_not_below` or `share_kept_along`): then they are re-proofs beside the lock, not a join. And if any of P4 or P5 is, after its definitions are unfolded, the statement of `RuleCapture.locked_stays`, `locked_rises`, `locked_not_below`, `share_kept_along`, `order_kept`, `PoolFromCourse.locked_along`, `locked_step`, `window_order_kept`, `ClosedCapture.agreeing_stays`, `unread_course`, `course_past` or `Thinned.rule_read` at particular arguments: it is that theorem said again. The writer opens each of the twelve at its statement before building and writes down which is nearest.
+M3. P3 and P6 both failing to be built. Then part 2 lands nothing.
+M4. P6 turning out to be `RuleCapture.Alternating`, `Reversed.not_absorbed` or `Second.second_exact` with the schedule renamed.
+
+What part 2 does not take: any law of `TurningInTime` or `ReadInTime`, the window laws, and the alignment paragraph's sentence on "early enough", which is row FM's read.
+
+## How it is checked
+
+- The lister (`aaRow`) on S4, P4 and P5 for what their proof terms use.
+- One reader who took no part attacks this file before the build that counts; a second, after the build, sets each docstring against its signature.
+- Caps: 14 scratch builds, 1 core run, 1 print, 1 render, 1 gate with reruns of reds only; readers 600 thousand tokens in all. A cap is a stop.
+
+## After the reader's attack (written 00:20 WIB by the file's time, 23 November; the hour first typed here, 00:25, was not read from a clock; the text above is as first frozen, sha256 fc03b9f7…)
+
+A reader who took no part attacked the file (177 thousand tokens, nothing built). Nine findings marked MUST. What the writer takes, before any build that counts:
+
+**Part 2 is withdrawn by its own test, unbuilt.** `Locked` for the stretch's reading unfolds to plain `Locked` at the configuration `k` unread steps on (`RuleCapture.Locked` is `favours p.2 ∧ M.le p.2 (h p.1 p.2)`). So P4 and P5 are `RuleCapture.locked_stays` and `turn_locked` re-indexed along a stretch that does not read, up to one rewrite from `paced` to `Law.orbit`; M2 as worded could have been passed by denying that. P6 is the mirror of the pair `RuleCapture.Alternating` and `Reversed`, which already share one start, one selection and one reading and differ in schedule; and its contrast is the phase of the first reading, not the grain (the reader built both companion courses by hand). P3 is true and cheap and bears on no lock. Nothing of part 2 lands. What is kept from it, as a sentence for the record and not a module: the lock's laws are stated over every schedule and every stretch, and a stretch's reading is the plain reading at the stretch's last configuration, so reading at stretches adds no lock that the package lacks.
+
+**Part 1, tests replaced.**
+- S5 as drafted is void: its two histories are equal at the sampled steps, so every claim selects them alike. It is dropped; `SelectionPool.anticipation_misses` already has that shape on another axis.
+- S3 is stated with its other half: with the reading strict and starting at step 0, an exchange across some coarse step is exactly an exchange at some fine step. So the closure can shrink at the coarser steps only through a requirement that holds at no step read. The module says this in those words and names `Strobe.coarse_quiet` as the same fact of activity.
+- S6 must have all of: (i) the part within the coupling closure at the fine steps; (ii) beyond it at the coarser; (iii) a selection through the formation's couplings at the fine steps separating the levels with and without the part; (iv) no selection through them at the coarser steps separating the sampled levels, obtained by S4 and not by hand; (v) the sampled levels with and without the part differing at a sampled step; (vi) some selection at the coarser steps, under a wider coupling by level, separating them. Without (v) and (vi) the case could be had by cancellation.
+- S4: what is new in it is one lemma, that withholding a part commutes with reading at coarser steps (`WithheldLevels.sample`); S4 is `Flow.unselected_beyond_coupling` at the sampled flow with its premises carried over by that lemma and `Flow.BalancesOn.sample`. The module says so. It needs `Strict`, a reading from step 0 and each relatum listed once, which the fine law does not.
+- The falsifier first written cannot fire (the blindness law takes no premise on acting, taking or transmission). The live ones: S6 cannot be built with (i) to (vi); or a second reader, after the build, judges that S6 is `Strobe.converse_fails` with a requirement in place of activity and S4 an instance, and that the module says nothing of selection. Either way no module lands and the row is closed as a dictionary with one lemma.
+- Consequence, stated for every clause: a clause met means that part does not land.
+
+## After the second reader (read after build 6; 163 thousand tokens)
+
+Verdict: land after two MUSTs. (1) The built case met clause (iv) by its letter only: read at the even steps its selector had no coupling at all, so every selection through its couplings there was constant and the blindness held of any two histories. Taken: the case is rebuilt with two conditions, the selector coupled by level to the second, and a seventh clause added: (vii) some selection through the selector's own couplings at the coarser steps is not constant. If the case cannot be built with (i) to (vii), the row closes as a dictionary with one lemma. (2) One sentence of the account said "fewer parts" where it is more; mended. Also taken: `Strict` named in two tellings; the sentence on how the closure can shrink is now a theorem and not an argued "so"; the account says what the blindness law adds over the fine law with the pull-back (only the parts within the closure and beyond the closure read at the coarser steps, and balance asked on fewer conditions).
+
+## After the third reader (read after build 7; 101 thousand tokens)
+
+Verdict: land after one MUST. The heading of the built case said "no selection at the coarser steps registers" where `Missed.coarse_differs` gives one that does; it now says "no selection through the selector's couplings". Also taken: in the case as read the second condition was inert (nothing exchanged with it), so the blindness law did no work there that a direct check could not; the case was changed so that the selector gives one unit to the second condition across the second step and its level moves through the flow (builds 8 and 9). Four sentences of the account were mended: "no fewer parts" in general and one more in the case; the closure sentence names the reading strict and from step 0 and cites both inclusions; `Strobe.coarse_quiet` is a likeness and not the same fact; the fine law's own premises are still needed with the pull-back. The case as it stands after build 9 has been read by no reader who took no part.

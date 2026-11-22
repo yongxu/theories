@@ -1,0 +1,29 @@
+{"name": "Becoming.Flow.WithheldLevels.sample", "uses": ["Becoming.Flow.BalancesOn.sample", "Becoming.Flow.sample_withhold_given", "Becoming.Flow.sample_withhold_taken"]}
+{"name": "Becoming.Flow.exchanges_sample", "uses": ["Becoming.Flow.unionPresent_spec", "Becoming.Strict.covers", "Becoming.gate_mem", "Becoming.span_mem", "Becoming.total_pos_of_mem"]}
+{"name": "Becoming.Flow.sample_exchanges", "uses": ["Becoming.Flow.pos_of_gated"]}
+{"name": "Becoming.Flow.sample_unselected_beyond_coupling", "uses": ["Becoming.Flow.BalancesOn.sample", "Becoming.Flow.WithheldLevels.sample", "Becoming.Flow.unselected_beyond_coupling"]}
+{"name": "Becoming.Flow.sample_withhold_given", "uses": ["Becoming.Flow.unionPresent_withhold", "Becoming.Flow.withheld_gated", "Becoming.total_congr_on"]}
+{"name": "Becoming.Flow.sample_withhold_taken", "uses": ["Becoming.Flow.unionPresent_withhold", "Becoming.Flow.withheld_gated", "Becoming.total_congr_on"]}
+{"name": "Becoming.Flow.sample_withinCoupling", "uses": ["Becoming.Flow.sample_exchanges", "Becoming.Web.sample_coupledInto", "Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Flow.unionPresent_withhold", "uses": []}
+{"name": "Becoming.Flow.withheld_gated", "uses": ["Becoming.gateBy_zero", "Becoming.total_congr_on", "Becoming.total_zero"]}
+{"name": "Becoming.Flow.withinCoupling_sample", "uses": ["Becoming.Flow.exchanges_sample", "Becoming.WithinClosure.mono"]}
+{"name": "Becoming.Missed.balances", "uses": []}
+{"name": "Becoming.Missed.coarse_blind", "uses": ["Becoming.Flow.sample_unselected_beyond_coupling", "Becoming.Missed.balances", "Becoming.Missed.once", "Becoming.Missed.within_fine_beyond_coarse", "Becoming.Missed.without", "Becoming.Strobe.twice_strict", "Becoming.WithinClosure.refl"]}
+{"name": "Becoming.Missed.coarse_coupled", "uses": ["Becoming.Missed.twice_ne_one"]}
+{"name": "Becoming.Missed.coarse_differs", "uses": ["Becoming.Web.separates"]}
+{"name": "Becoming.Missed.coarse_reads", "uses": ["Becoming.Web.separates"]}
+{"name": "Becoming.Missed.fine_separates", "uses": ["Becoming.Web.separates"]}
+{"name": "Becoming.Missed.once", "uses": []}
+{"name": "Becoming.Missed.second_exchanged", "uses": []}
+{"name": "Becoming.Missed.twice_ne_one", "uses": ["Becoming.Strobe.flick_even"]}
+{"name": "Becoming.Missed.within_fine_beyond_coarse", "uses": ["Becoming.Flow.sample_exchanges", "Becoming.Missed.coarse_coupled", "Becoming.Missed.second_exchanged", "Becoming.WithinClosure.of_rel", "Becoming.not_within_of_closed"]}
+{"name": "Becoming.Missed.without", "uses": []}
+{"name": "Becoming.Strict.covers", "uses": []}
+{"name": "Becoming.Strict.le", "uses": ["Becoming.Strict.lt"]}
+{"name": "Becoming.Web.AlikeThroughUpTo.sample", "uses": ["Becoming.Strict.le"]}
+{"name": "Becoming.Web.SelectsThrough.of_sample", "uses": ["Becoming.Web.AlikeThroughUpTo.sample"]}
+{"name": "Becoming.Web.sample_alikeThrough_iff", "uses": []}
+{"name": "Becoming.Web.sample_coupledInto", "uses": ["Becoming.Web.sample_dependsOn"]}
+{"name": "Becoming.Web.sample_dependsOn", "uses": []}
+{"name": "Becoming.Web.sample_selects_alike_iff", "uses": ["Becoming.Web.selects_alike_iff"]}

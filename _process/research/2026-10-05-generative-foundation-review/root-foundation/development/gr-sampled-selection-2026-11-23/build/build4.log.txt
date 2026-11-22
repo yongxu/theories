@@ -1,0 +1,34 @@
+{
+  "tree": "/Users/ren/theories/tmp/coarser-1123/tree",
+  "modules": 38,
+  "ran": [
+    "Becoming.SampledSelection",
+    "BecomingSampledSelectionAxiomAudit"
+  ],
+  "reused": 37,
+  "unclean": [],
+  "audits": {
+    "Becoming.SampledSelection": {
+      "theorems": 26,
+      "declarations": 33,
+      "with_axioms": {
+        "Becoming.Missed.twice_ne_one": [
+          "propext"
+        ],
+        "Becoming.Missed.coarse_uncoupled": [
+          "propext"
+        ],
+        "Becoming.Missed.within_fine_beyond_coarse": [
+          "propext"
+        ],
+        "Becoming.Missed.coarse_blind": [
+          "propext"
+        ]
+      }
+    }
+  },
+  "seconds": {
+    "Becoming.SampledSelection": 2.807,
+    "BecomingSampledSelectionAxiomAudit": 0.498
+  }
+}
