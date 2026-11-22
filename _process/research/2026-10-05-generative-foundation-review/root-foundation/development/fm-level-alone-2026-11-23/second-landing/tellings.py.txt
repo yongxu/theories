@@ -1,0 +1,50 @@
+# AI-written (row FM), 23 November 2026. The tellings outside the module after its recoverable and no-return forms
+# were restated under the core's premises: root bullet, README row, checker's scope text, record, study note.
+import json,sys,datetime
+WT='/Users/ren/tmp/fm/wt/'; LB=WT+'experiments/integrated-correction/general-framework/generative-basis/lean/becoming/'
+bad=0
+def rep(path,old,new,tag):
+    global bad
+    s=open(path).read(); n=s.count(old)
+    if n!=1: print('!!',tag,n); bad+=1; return
+    open(path,'w').write(s.replace(old,new))
+rep(LB+'Becoming.lean',
+ "(`silent_at_start_iff_next`); under the latter the\n  same is said as recoverable at step `D + 1`, as no such marking succeeding exactly where there is\n  a point of no return at or before it, and, with `H₂ + y₂ ≤ hi` besides, in the\n  use at step `D`.",
+ "(`silent_at_start_iff_next`). Under the first law's premises the same is said as recoverable at\n  step `D + 1`, and as no such marking succeeding exactly where there is a point of no return at or\n  before it (`silent_at_start_iff_recoverable_next_of_stays_below`,\n  `silent_at_start_none_iff_no_return_of_stays_below`); under the latter law's, with\n  `H₂ + y₂ ≤ hi` besides, in the use at step `D`.",'root')
+rep(LB+'README.md',
+ "under the last premises the same as recoverable at that step, as no such marking giving one exactly where there is a point of no return at or before it, and, with `H₂ + y₂ ≤ hi` besides, in the use (`silent_at_start_iff_recoverable_next`, `silent_at_start_none_iff_no_return`, `silent_at_start_iff_use`)",
+ "under the first law's premises the same as recoverable at that step, and as no such marking giving one exactly where there is a point of no return at or before it (`silent_at_start_iff_recoverable_next_of_stays_below`, `silent_at_start_none_iff_no_return_of_stays_below`); under the last premises, with `H₂ + y₂ ≤ hi` besides, in the use (`silent_at_start_iff_use`)",'readme')
+rep(LB+'check_becoming.py',
+ ', under which the same is said as recoverable at step D "\n    "+ 1, as no such marking succeeding exactly where there is a point of no return at or before it, and, with H2 + y2 <= hi besides, in the use at step D. Five worked courses; two "',
+ '. Given that premise the same is said as recoverable at step D + 1 and as no such marking succeeding "\n    "exactly where there is a point of no return at or before it; under the last two premises, with H2 + y2 <= hi besides, in the use at step D. Five worked courses; two "','scope')
+p=WT+'theories/becoming/results/records/a-reading-of-the-level-alone.json'; d=json.load(open(p)); N='Becoming.LevelAlone.'
+L6=d['laws'][5]; old="Under the premises of the law before: such a marking exists exactly where the levels of the course as it was are recoverable at step D + 1 (the turns to the standing use H2 feasible, the need met at every step asked); under no such marking does the line never end, exactly where those levels have a point of no return at or before step D + 1; and, with H2 + y2 <= hi, such a marking exists exactly where"
+new="Under the common premises and the one premise that the level once below H2 + y2 stays below: such a marking exists exactly where the levels of the course as it was are recoverable at step D + 1 (the turns to the standing use H2 feasible, the need met at every step asked); and under no such marking does the line never end, exactly where those levels have a point of no return at or before step D + 1. Under the premises of the law for any corrected use the same two hold, as calls of these; and under those, with H2 + y2 <= hi, such a marking exists exactly where"
+if L6['en'].count(old)!=1: print('!! law 6'); bad+=1
+L6['en']=L6['en'].replace(old,new)
+newd=[N+'silent_at_start_iff_recoverable_next_of_stays_below',N+'silent_at_start_none_iff_no_return_of_stays_below']
+L6['declarations']=newd+L6['declarations']
+for r in d['references']:
+    if r['role']=='proof': r['declarations']=r['declarations']+newd
+d['aliases']=d['aliases']+newd
+x=[k for k in d['does_not_show'] if k['en'].startswith('The recoverable, no-return and use forms where the level may rise')]
+if len(x)!=1: print('!! dns'); bad+=1
+else: x[0]['en']="The form in the use where the level may rise: it is stated only under the premises from which the level never rises."
+d['next_delta']['en']="A condition on the regime's numbers that says on which side of the equivalence a course falls; and, further off, what a marking sets derived and not handed in."
+dep=d['dependencies'][0]['detail']; o="and its recoverable and no-return laws, each used as it stands"
+if dep['en'].count(o)!=1: print('!! dep'); bad+=1
+dep['en']=dep['en'].replace(o,"and its recoverable and no-return laws under the premise that a level once below stays below, each used as it stands")
+d['history'].append({"en":"23 November 2026, later: the recoverable and no-return forms restated under the common premises and the one premise that the level once below H2 + y2 stays below, on laws of Becoming.TurningInTime landed that day by the row that keeps it; the two earlier forms keep their statements and became calls. AI-written (Claude Fable); the two statements were first tested in scratch by that row."})
+if bad: print('NOT WRITTEN'); sys.exit(1)
+open(p,'w').write(json.dumps(d,ensure_ascii=False,indent=1)+'\n'); print('record law 6 length',len(L6['en']))
+note=WT+'_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-level-alone-2026-11-23/NOTE.md'
+open(note,'a').write('''
+## Later on 23 November: the recoverable and no-return forms under the core law's premises
+
+*AI-written (Claude Fable, board row FM). A second, small landing; the text above is left as it was written, and where it says those two forms are given only where the level never rises it is of the first landing.*
+
+After the first landing the session that keeps `Becoming.TurningInTime` (row DJ) restated three of that module's laws under the premise this module's core law takes (a level once below `H + y` stays below) with a bound on the level in place of a level that never rises, the older laws coming back as calls ([its record](../dj-a-line-on-a-stock/laws-of-a-level-under-stays-below-2026-11-23/NOTE.md)). It tested in scratch, on its new module, that this module's recoverable and no-return forms then hold under the core law's premises, and handed the two theorems over as text. This landing puts them in: `silent_at_start_iff_recoverable_next_of_stays_below` and `silent_at_start_none_iff_no_return_of_stays_below`, without the two premises from which the level never rises; the two earlier forms keep their statements and are now calls of them; and the module's private copy of "above at a later step, so above at every earlier one" is gone, its two uses calling row DJ's public `above_before_of_stays_below`. The form in the use stays as it was.
+
+How it was done: claimed on the board before any build; built in scratch from row DJ's text; every declaration as Lean holds it compared by script before and after ([the comparison](second-landing/compare_rows.out.txt)); the changed tellings read by one reader who took no part ([its return](second-landing/reader-6.json.txt)). The cap said beforehand: at most 5 scratch builds, 1 core run, 1 reader of at most 200 thousand tokens; what it came to is in the Queue clause of the landing.
+''')
+print('tellings written')

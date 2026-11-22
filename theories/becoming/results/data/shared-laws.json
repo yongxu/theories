@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261122T223138.659438Z",
- "core_sources_sha256": "4b3737f00b30c00d883b4941e59148cadcbabaa80ebfff42b1dc8b9e56bd1484",
+ "core_receipt": "20261122T230327.664744Z",
+ "core_sources_sha256": "66ff8c0a99f4977ba0a9139b653ad1f6babd3e71cf1eab3d895c48d838b365df",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -4109,6 +4109,8 @@
    {
     "law": 6,
     "declarations": [
+     "Becoming.LevelAlone.silent_at_start_iff_recoverable_next_of_stays_below",
+     "Becoming.LevelAlone.silent_at_start_none_iff_no_return_of_stays_below",
      "Becoming.LevelAlone.silent_at_start_iff_recoverable_next",
      "Becoming.LevelAlone.silent_at_start_none_iff_no_return",
      "Becoming.LevelAlone.next_above_iff_draw",
@@ -67955,7 +67957,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "60229b676aab1601fdbc6a118ecf7d702c5a9df5735537f34815f4a4f36f8272",
+   "modules_sha256": "72f9c5da6c47f008288d5638e856b3d3d1e1151ea85d7c33c01718bcf1058287",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

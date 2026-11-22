@@ -7,7 +7,7 @@
  "kind": "theorem",
  "status": "recorded-checked",
  "family": "F01",
- "reviewed_at_utc": "2026-11-22T19:48:03+00:00",
+ "reviewed_at_utc": "2026-11-22T23:06:27+00:00",
  "statement": {
   "en": "Under the regime's premises, a use rising strictly for hi steps and one fixed correction, the level as it was first differing from the start's at D: if it stays below H2 + y2 once below, some marking silent at the start's level gives a line that never ends just where it is at least H2 + y2 at D + 1."
  },
@@ -51,8 +51,10 @@
    ]
   },
   {
-   "en": "Under the premises of the law before: such a marking exists exactly where the levels of the course as it was are recoverable at step D + 1 (the turns to the standing use H2 feasible, the need met at every step asked); under no such marking does the line never end, exactly where those levels have a point of no return at or before step D + 1; and, with H2 + y2 <= hi, such a marking exists exactly where the use as it was at step D and y2 together are at most the level at step D. The last is read through one step under any use u from any level x: where nothing is given from nothing, giving is short of H2 below y2 and meets it wherever both y2 <= z and z + H2 <= hi, the step under no use does not fall as the level rises, H2 + y2 <= hi and 0 < H2 + y2, that step leaves at least H2 + y2 exactly where u + y2 <= x.",
+   "en": "Under the common premises and the one premise that the level once below H2 + y2 stays below: such a marking exists exactly where the levels of the course as it was are recoverable at step D + 1 (the turns to the standing use H2 feasible, the need met at every step asked); and under no such marking does the line never end, exactly where those levels have a point of no return at or before step D + 1. Under the premises of the law for any corrected use the same two hold, as calls of these; and under those, with H2 + y2 <= hi, such a marking exists exactly where the use as it was at step D and y2 together are at most the level at step D. The last is read through one step under any use u from any level x: where nothing is given from nothing, giving is short of H2 below y2 and meets it wherever both y2 <= z and z + H2 <= hi, the step under no use does not fall as the level rises, H2 + y2 <= hi and 0 < H2 + y2, that step leaves at least H2 + y2 exactly where u + y2 <= x.",
    "declarations": [
+    "Becoming.LevelAlone.silent_at_start_iff_recoverable_next_of_stays_below",
+    "Becoming.LevelAlone.silent_at_start_none_iff_no_return_of_stays_below",
     "Becoming.LevelAlone.silent_at_start_iff_recoverable_next",
     "Becoming.LevelAlone.silent_at_start_none_iff_no_return",
     "Becoming.LevelAlone.next_above_iff_draw",
@@ -115,7 +117,7 @@
    "kind": "converse"
   },
   {
-   "en": "The recoverable, no-return and use forms where the level may rise: they are stated only under the premises from which the level never rises.",
+   "en": "The form in the use where the level may rise: it is stated only under the premises from which the level never rises.",
    "kind": "scope"
   },
   {
@@ -138,10 +140,10 @@
   "omission-not-refutation"
  ],
  "validation_scope": {
-  "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261122T194452.040858Z): the declarations cited, in one new module, have empty axiom reports; the checker verifies core purity. AI-written from frozen briefs: three forms read by four readers who took no part; a fourth by a reader of another kind of model on its findings; a reader of that repair, whose mends to the tellings were applied in its words. Statements compared by script between the third form and the fourth, whose code the landed form keeps. A further reader and the coordinating session read the record and accounts."
+  "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261122T230327.664744Z): the declarations cited, in one module, have empty axiom reports; the checker verifies core purity. AI-written from frozen briefs: three forms read by four readers who took no part; a fourth by a reader of another kind of model on its findings; a reader of that repair. Two forms were then restated on laws of the imported module, from text tested by the row that keeps it, and read by one more reader. Statements compared by script. Two readers and the coordinating session read the record and accounts."
  },
  "next_delta": {
-  "en": "The recoverable and no-return forms under the one premise that a level once below H2 + y2 stays below, in place of a level that never rises; argued on paper by one reader and checked as an argument by a second, not built, and open on the row that keeps Becoming.TurningInTime."
+  "en": "A condition on the regime's numbers that says on which side of the equivalence a course falls; and, further off, what a marking sets derived and not handed in."
  },
  "correspondence": {
   "en": "A selection whose draw rises step by step while the level it lives on does not yet differ: of every way of reading the level alone that stays silent while the level is where it started, none is in time unless the one that marks every other level is, and that one's correction takes effect one step after the level first differs. This is a reading of the laws under their premises, which no actual selection is shown to meet. Where that one is too late, no reading of the level that is silent at the start's level is in time; whether one that marks the start's level, or one that reads more than the level, would be is not stated."
@@ -187,14 +189,16 @@
   "Becoming.LevelAlone.WithoutStill.some_unending",
   "Becoming.LevelAlone.WithoutStill.next_below",
   "Becoming.LevelAlone.WithoutStill.start_step",
-  "Becoming.LevelAlone.WithoutStill.not_still"
+  "Becoming.LevelAlone.WithoutStill.not_still",
+  "Becoming.LevelAlone.silent_at_start_iff_recoverable_next_of_stays_below",
+  "Becoming.LevelAlone.silent_at_start_none_iff_no_return_of_stays_below"
  ],
  "dependencies": [
   {
    "id": "turning-in-time",
    "relation": "formal-reuse",
    "detail": {
-    "en": "Its split of a line's never ending at the first marked step, its exact level for a kept kind, its law that a use rising against a capped level leaves nothing, and its recoverable and no-return laws, each used as it stands; and, of Becoming.ReadOffInTime through it, the notions of recoverable and of a point of no return and the law that what is recoverable at a step is recoverable at every earlier one (Recoverable.earlier)."
+    "en": "Its split of a line's never ending at the first marked step, its exact level for a kept kind, its law that a use rising against a capped level leaves nothing, its recoverable and no-return laws under the premise that a level once below stays below with the level at most hi, and its law that under that premise alone a level at or above a threshold at a step is at or above it at every earlier step, each used as it stands; and, of Becoming.ReadOffInTime through it, the notions of recoverable and of a point of no return and the law that what is recoverable at a step is recoverable at every earlier one (Recoverable.earlier)."
    }
   },
   {
@@ -249,25 +253,27 @@
     "Becoming.LevelAlone.WithoutStill.some_unending",
     "Becoming.LevelAlone.WithoutStill.next_below",
     "Becoming.LevelAlone.WithoutStill.start_step",
-    "Becoming.LevelAlone.WithoutStill.not_still"
+    "Becoming.LevelAlone.WithoutStill.not_still",
+    "Becoming.LevelAlone.silent_at_start_iff_recoverable_next_of_stays_below",
+    "Becoming.LevelAlone.silent_at_start_none_iff_no_return_of_stays_below"
    ],
-   "sha256": "9d9dbd17e2bd9541a4df0616c3ff1710735df4913ed3cd3c299ef4cb264fdf7a"
+   "sha256": "efa141c9552125f7ed9cae89f6aad179fbfc925496199391f38791969f30e83d"
   },
   {
-   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T194452.040858Z/verification.json",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T230327.664744Z/verification.json",
    "role": "receipt",
-   "sha256": "93c4524cb09e8f5f5df27785db7e13e4a3a505a2fa50bda85bcb9ff39690ff10"
+   "sha256": "9a95e65e3f32b872d948dfdb4bd11d818cd355c2a6ac6342da0f02d25dae269d"
   },
   {
    "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-level-alone-2026-11-23/NOTE.md",
    "role": "review",
-   "sha256": "6b8e8262c1e43d3b8051571be7ed3705d4144829f289ce502e3a8042593a7903"
+   "sha256": "aba6db28242cf41b0cfa34f43b85c3b5dd7a4d8a04164850e99d639afc41c7fc"
   }
  ],
  "proof_bindings": [
   {
    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LevelAlone.lean",
-   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T194452.040858Z/verification.json",
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T230327.664744Z/verification.json",
    "sha256_pointer": "/source_sha256/Becoming.LevelAlone",
    "success_pointer": "/status",
    "success_value": "passed"
@@ -276,6 +282,9 @@
  "history": [
   {
    "en": "23 November 2026: added, on board row FM, from the row's order of 22 November (the sentences on a selection set against the Lean, then one tried whole as a claim that can fail). AI-written (Claude Fable, with a last repair of the module by a reader of another kind of model). The briefs, the forms, what each reader changed and what it cost are in the study note."
+  },
+  {
+   "en": "23 November 2026, later: the recoverable and no-return forms restated under the common premises and the one premise that the level once below H2 + y2 stays below, on laws of Becoming.TurningInTime landed that day by the row that keeps it; the two earlier forms keep their statements and became calls. AI-written (Claude Fable); the two statements were first tested in scratch by that row."
   }
  ]
 }

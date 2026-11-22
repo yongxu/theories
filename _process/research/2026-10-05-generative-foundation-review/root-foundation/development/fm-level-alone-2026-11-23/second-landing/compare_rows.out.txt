@@ -1,0 +1,11 @@
+before: 68 declarations (50 public); after: 69 (52 public)
+PROOF   public  Becoming.LevelAlone.silent_at_start_iff_next_of_stays_below: statement the same; head Iff.intro -> Iff.intro; uses +['Becoming.TurningInTime.above_before_of_stays_below'] -['_private.Becoming.LevelAlone.0.Becoming.LevelAlone.above_before']
+PROOF   public  Becoming.LevelAlone.silent_at_start_iff_recoverable_next: statement the same; head Iff.trans -> Becoming.LevelAlone.silent_at_start_iff_recoverable_next_of_stays_below; uses +['Becoming.LevelAlone.silent_at_start_iff_recoverable_next_of_stays_below'] -['Becoming.LevelAlone.silent_at_start_iff_next', 'Becoming.TurningInTime.kept_within', 'Becoming.TurningInTime.recoverable_iff_above']
+ADDED   public  theorem Becoming.LevelAlone.silent_at_start_iff_recoverable_next_of_stays_below
+PROOF   public  Becoming.LevelAlone.silent_at_start_none_iff_no_return: statement the same; head Iff.intro -> Becoming.LevelAlone.silent_at_start_none_iff_no_return_of_stays_below; uses +['Becoming.LevelAlone.silent_at_start_none_iff_no_return_of_stays_below'] -['Becoming.LevelAlone.silent_at_start_iff_next', 'Becoming.LevelAlone.silent_at_start_iff_recoverable_next', 'Becoming.Recoverable.earlier', 'Becoming.TurningInTime.kept_within', 'Becoming.TurningInTime.noReturnAt_of_below']
+ADDED   public  theorem Becoming.LevelAlone.silent_at_start_none_iff_no_return_of_stays_below
+REMOVED private theorem _private.Becoming.LevelAlone.0.Becoming.LevelAlone.above_before
+PROOF   private _private.Becoming.LevelAlone.0.Becoming.LevelAlone.all_but_start_of_next: statement the same; head Iff.mpr -> Iff.mpr; uses +['Becoming.TurningInTime.above_before_of_stays_below'] -['_private.Becoming.LevelAlone.0.Becoming.LevelAlone.above_before']
+public declarations with statement identical binder by binder: 50
+after form, declarations with a recursor in the term: [('giving_mono', ['Nat.le.brecOn']), ('level_never_rises_of_rises', ['Nat.recAux']), ('level_within', ['Nat.brecOn']), ('never_rises_before', ['Nat.brecOn']), ('nothing_left', ['Nat.le.brecOn']), ('rise_orbit', ['Nat.brecOn']), ('unending_at_fixed', ['Nat.recAux']), ('use_from', ['Nat.brecOn'])]
+foreign constants used, after form: 82 []

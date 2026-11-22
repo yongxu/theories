@@ -408,7 +408,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "role": "receipt",
-      "sha256": "9dffe9a99119a9921018fb7a8b71e392c7ec2e1301a80130344c10b4f1db9ee3",
+      "sha256": "9a95e65e3f32b872d948dfdb4bd11d818cd355c2a6ac6342da0f02d25dae269d",
       "declarations": []
     },
     {

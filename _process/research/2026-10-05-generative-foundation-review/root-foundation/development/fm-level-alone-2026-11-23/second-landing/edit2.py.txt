@@ -1,0 +1,124 @@
+# AI-written (row FM), 23 November 2026. LevelAlone: the recoverable and no-return forms under the core's premises,
+# on row DJ's laws of TurningInTime that end _of_stays_below; the two existing forms become calls; above_before a call.
+import re,sys
+p='/Users/ren/tmp/fm/build16/tree/Becoming/LevelAlone.lean'; s=open(p).read(); bad=0
+def rx(t): return r'\s+'.join(re.escape(w) for w in t.split())
+def rep(old,new,tag,exact=False):
+    global s,bad
+    if exact:
+        n=s.count(old)
+        if n!=1: print('!!',tag,n); bad+=1; return
+        s=s.replace(old,new)
+    else:
+        m=list(re.finditer(rx(old),s))
+        if len(m)!=1: print('!!',tag,len(m)); bad+=1; return
+        s=s[:m[0].start()]+new+s[m[0].end():]
+# 1. above_before: the private copy goes, the two calls take the public law
+a=s.index("/-- If each level below `c` stays below at the next step (`below`), then `c ≤ X T` implies"); b=s.index("private theorem use_from"); 
+blk=s[a:b]; assert 'private theorem above_before' in blk and blk.count('theorem ')==1
+# keep the docstring that precedes use_from: cut only up to the docstring start of use_from
+c=s.rfind('/--',a,b) if s.rfind('/--',a+5,b)>a else None
+cut_end = s.rfind('/--',a+5,b) if s.rfind('/--',a+5,b)!=-1 else b
+s=s[:a]+s[cut_end:]
+n=s.count('above_before below'); assert n==2,n
+s=s.replace('above_before below','above_before_of_stays_below below')
+# 2. the two new statements, before the A forms
+G='''    {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat}
+    (sets : ∀ v, Kept (t v)) (stays : ∀ v, Kept v → Kept (alone v)) (uses : ∀ v, Kept v → use v = H₂)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps₀ : RegimeMargin.Keeps giving 0 hi)
+    (needs : 0 < need) (within : need ≤ H₂ + y₂)
+    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1)))
+    (high : x₀ ≤ hi) (rest : ∀ j, j < D → level alone giving use w x₀ j = x₀)
+    (differs : level alone giving use w x₀ D ≠ x₀)
+'''
+LHS_E='''    (∃ (marked : Nat → Prop) (_ : DecidablePred marked), ¬ marked x₀ ∧
+        «不穷» (net need (readBy marked t alone) (fun w x => RegimeMargin.step giving (use w) x)) «一»
+          (w, x₀))
+      ↔ Recoverable (Turned (fun j => level alone giving use w x₀ j) giving H₂) (MeetsNeed need)
+          (fun t _ => level alone giving use w x₀ t) (D + 1) :=
+'''
+LHS_A='''    (∀ (marked : Nat → Prop) [DecidablePred marked], ¬ marked x₀ →
+        ¬ «不穷» (net need (readBy marked t alone) (fun w x => RegimeMargin.step giving (use w) x)) «一»
+          (w, x₀))
+      ↔ ∃ N, N ≤ D + 1 ∧
+          NoReturnAt (Turned (fun j => level alone giving use w x₀ j) giving H₂) (MeetsNeed need)
+            (fun t _ => level alone giving use w x₀ t) N :=
+'''
+BEL='''    (below : ∀ j, level alone giving use w x₀ j < H₂ + y₂ →
+      level alone giving use w x₀ (j + 1) < H₂ + y₂) :
+'''
+MS='''    (mono : ∀ z z', z ≤ z' → z + giving z ≤ z' + giving z')
+    (still : RegimeMargin.step giving (use w) x₀ ≤ x₀) :
+'''
+new4=('''/-- Under the common premises and `below`, some marking silent at `x₀` gives a line that never
+ends exactly when the original levels are `Recoverable` at `D + 1`. Feasible courses turn to the
+standing use `H₂`; the need must be met at every step. The lag puts the test one step after the
+first difference. Neither `mono` nor `still` is asked, so the original level may rise. By
+`silent_at_start_iff_next_of_stays_below` and `recoverable_iff_above_of_stays_below` of
+`Becoming.TurningInTime`, whose bound at `D + 1` is `level_within` from `keeps₀` and `high`. -/
+theorem silent_at_start_iff_recoverable_next_of_stays_below {t alone : W → W} {Kept : W → Prop}
+'''+G+BEL+LHS_E+'''  (silent_at_start_iff_next_of_stays_below sets stays uses nothing short meets keeps₀ needs within
+      rises high rest differs below).trans
+    (recoverable_iff_above_of_stays_below (X := fun j => level alone giving use w x₀ j) below
+      (level_within keeps₀ high (D + 1)) nothing short meets
+      (fun _ le => kept_within keeps₀ H₂ le) needs within).symm
+
+/-- Under the common premises and `below`, every marking silent at `x₀` satisfies `¬ «不穷»`
+exactly when there is a point of no return `N ≤ D + 1` for the same feasible turns and need as in
+`silent_at_start_iff_recoverable_next_of_stays_below`. The bound includes the lag and permits
+`N = 0`. The universal negation exhibits no end. Neither `mono` nor `still` is asked. Below
+threshold, `noReturnAt_of_below_of_stays_below` of `Becoming.TurningInTime` supplies the point, its
+bound at every step from `level_within`. Conversely, a successful marking silent at `x₀` would
+witness recoverability at `D + 1`, hence at `N` by `Recoverable.earlier` of
+`Becoming.ReadOffInTime`, contradicting `NoReturnAt`. -/
+theorem silent_at_start_none_iff_no_return_of_stays_below {t alone : W → W} {Kept : W → Prop}
+'''+G+BEL+LHS_A+'''  ⟨fun all => (Nat.lt_or_ge (level alone giving use w x₀ (D + 1)) (H₂ + y₂)).elim
+    (fun under => noReturnAt_of_below_of_stays_below (X := fun j => level alone giving use w x₀ j)
+      below (level_within keeps₀ high) nothing short meets
+      (fun _ le => kept_within keeps₀ H₂ le) needs within under)
+    (fun above =>
+      match (silent_at_start_iff_next_of_stays_below (t := t) sets stays uses nothing short meets
+          keeps₀ needs within rises high rest differs below).mpr above with
+      | ⟨marked, dec, silent, never⟩ => absurd never (@all marked dec silent)),
+   fun ⟨_, le, point⟩ marked dec silent never =>
+    point.1 (Recoverable.earlier
+      ((silent_at_start_iff_recoverable_next_of_stays_below sets stays uses nothing short meets
+        keeps₀ needs within rises high rest differs below).mp ⟨marked, dec, silent, never⟩) le)⟩
+
+''')
+BELOW_A="(fun j lt => Nat.lt_of_le_of_lt\n      (level_never_rises_of_rises mono still nothing high rises j) lt)"
+a4=('''/-- Under law A's premises, the same equivalence with `Recoverable` at `D + 1`: a call of
+`silent_at_start_iff_recoverable_next_of_stays_below`, with `below` from
+`level_never_rises_of_rises`. -/
+theorem silent_at_start_iff_recoverable_next {t alone : W → W} {Kept : W → Prop}
+'''+G+MS+LHS_E+'''  silent_at_start_iff_recoverable_next_of_stays_below sets stays uses nothing short meets keeps₀
+    needs within rises high rest differs
+    '''+BELOW_A+'''
+
+/-- Under law A's premises, the same equivalence with a point of no return `N ≤ D + 1`, which
+permits `N = 0`; the universal negation exhibits no end. A call of
+`silent_at_start_none_iff_no_return_of_stays_below`, with `below` from
+`level_never_rises_of_rises`. -/
+theorem silent_at_start_none_iff_no_return {t alone : W → W} {Kept : W → Prop}
+'''+G+MS+LHS_A+'''  silent_at_start_none_iff_no_return_of_stays_below sets stays uses nothing short meets keeps₀
+    needs within rises high rest differs
+    '''+BELOW_A+'''
+
+''')
+a=s.index("/-- Under law A's premises, some marking silent at `x₀` gives a line that never ends exactly\nwhen the original levels are `Recoverable` at `D + 1`.")
+b=s.index("/-- Under law A's premises and `H₂ + y₂ ≤ hi` (`fits`), some marking silent at `x₀` gives a")
+old=s[a:b]; assert old.count('\ntheorem ')==2, old.count('\ntheorem ')
+s=s[:a]+new4+a4+s[b:]
+# 3. the head note and one docstring
+rep("The recoverable, no-return and use forms call A. The use form also asks `H₂ + y₂ ≤ hi` (`fits`).",
+    "The recoverable and no-return forms are stated under the common premises and `below` (`silent_at_start_iff_recoverable_next_of_stays_below`, `silent_at_start_none_iff_no_return_of_stays_below`), by the laws of `Becoming.TurningInTime` that end `_of_stays_below`; under A's premises they are calls of those. The use form calls A and also asks `H₂ + y₂ ≤ hi` (`fits`).",'head a')
+a=s.index("* The recoverable and no-return forms can use `below` and the level bound from `keeps₀` and `high`"); b=s.index("first failure of recoverability.",a)+len("first failure of recoverability.")
+s=s[:a].rstrip('\n')+s[b:]
+rep("the recoverable, no-return and use forms under `below` or `le` alone (argued above, not built);","the use form under `below` or `le` alone (not argued and not built; the recoverable and no-return forms under `below` are statements);",'head c')
+rep("`recoverable_iff_above` and `noReturnAt_of_below` are called here with `level_never_rises_of_rises` as `fall`, and the other two are not called.",
+    "none of the four is: its recoverable and no-return forms call the laws of that module that end `_of_stays_below`, with `below` from `level_never_rises_of_rises` under law A.",'docstring d')
+if bad: print('NOT WRITTEN'); sys.exit(1)
+open(p,'w').write(s); print('written; lines',s.count('\n'))
+for k in ['noReturnAt_of_below`','recoverable_iff_above`','above_before','argued above']:
+    print(k, [i+1 for i,l in enumerate(s.split('\n')) if k in l][:8])
