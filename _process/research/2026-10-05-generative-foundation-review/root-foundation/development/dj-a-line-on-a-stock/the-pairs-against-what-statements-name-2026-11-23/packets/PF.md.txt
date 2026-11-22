@@ -1,0 +1,883 @@
+# Packet F: 24 statements
+
+*Built by script from Lean's own print of what each statement names. The columns "premises name" and "conclusion names" show where a listed notion stands after the outer ∀ and → are peeled, and nothing more: a denied notion stands as the conclusion's, an iff or a conjunction is all conclusion, a carrier's type stands among the premises. Section variables are not shown; the file and lines are given so that you can open the statement where it is unclear.*
+
+## F01  `Becoming.Growth.ceases`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean`, lines 321 to 340.
+
+- conclusion names: `Becoming.Web.Unceasing`  — listed under: going on at all: LASTING  (some by a reader's reading only)
+- conclusion names: `Becoming.Web.ConsumingIn`  — listed under: on the web: CONSUMING
+
+```lean
+/-- Cells arise while drawing the condition down; the condition is consumed and arising
+does not recur. -/
+theorem ceases :
+    web.Dependent ∧ web.Arises 0 0 ∧ web.Arises 1 1 ∧ web.ConsumingIn 0 ∧
+    (∀ t, ¬ web.Rises t ()) ∧ ¬ web.Unceasing :=
+```
+
+## F02  `Becoming.Turnover.identified`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean`, lines 1481 to 1509.
+
+- conclusion names: `Becoming.Web.Unceasing`  — listed under: going on at all: LASTING  (some by a reader's reading only)
+- conclusion names: `Becoming.Web.ConsumingIn`, `Becoming.Web.UnderminingAt`  — listed under: on the web: CONSUMING
+- conclusion names: `Becoming.Web.RenewingIn`  — listed under: on the web: RENEWING
+
+```lean
+/-- As named in `web`: activity needs support; the keeper renews and the drawer consumes;
+the drawer undermines at every step, the consumer's need having been met at the
+first; and no dependence forms and nothing arises. -/
+theorem identified :
+    web.Dependent ∧ web.RenewingIn .keeper ∧ web.ConsumingIn .drawer ∧
+    (∀ t, web.UnderminingAt t .drawer) ∧ (∀ t f c, ¬ web.Forms t f c) ∧ ¬ web.Unceasing :=
+```
+
+## F03  `Becoming.Turnover.reidentified`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean`, lines 1511 to 1559.
+
+- conclusion names: `Becoming.Web.Unceasing`  — listed under: going on at all: LASTING  (some by a reader's reading only)
+- conclusion names: `Becoming.Web.ConsumingIn`, `Becoming.Web.UnderminingAt`  — listed under: on the web: CONSUMING
+- conclusion names: `Becoming.Web.RenewingIn`  — listed under: on the web: RENEWING
+
+```lean
+/-- Re-identified, with every step's relations unchanged: activity still needs support; no
+formation renews and two consume; no event after the first step undermines; the keeper
+transforms its dependence across the first step; and formations arise at every odd step,
+lowering no condition. -/
+theorem reidentified :
+    turned.Dependent ∧ (∀ x, ¬ turned.RenewingIn x) ∧ turned.ConsumingIn .drawer ∧
+    turned.ConsumingIn .idle ∧ (∀ t x, 1 ≤ t → ¬ turned.UnderminingAt t x) ∧
+    turned.Dissolves 0 .keeper .spring ∧ turned.Forms 0 .keeper .pool ∧ turned.Unceasing ∧
+    ¬ turned.Depletes [.pool, .spring] fun t => ∃ x, turned.Arises t x :=
+```
+
+## F04  `Becoming.Renewable.kept_part_not_renewal`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointKeeping.lean`, lines 387 to 408.
+
+- conclusion names: `Becoming.Viability.Keepable`, `Becoming.Viability.Kernel`  — listed under: going on at all: LASTING  (some by a reader's reading only)
+- conclusion names: `RelationalRenewal.ConsumingIn`  — listed under: on the web: CONSUMING
+- conclusion names: `RelationalRenewal.RenewingIn`  — listed under: on the web: RENEWING
+
+```lean
+/-- **A formation's activity kept under every course decides neither renewal nor what the run
+does to others.** In `Renewable` the focal formation is active at every configuration, so no
+course leaves that guard; the kernel conjunct is stated at this configuration (the same one-line
+proof serves every other), and it is a fact of the configuration, shared by every run from it
+(`Kernel.run`). From this one
+configuration, one run renews and another consumes the condition of the sustaining formation,
+which ends from step 1 (`class_belongs_to_the_run`): renewing is a fact of the run. The
+sustaining formation's activity, unlike the focal one, is a guard that can fail: it is keepable
+from there (the run within renewal) and not in the kernel (the run beyond it). -/
+theorem kept_part_not_renewal :
+    Kernel process (fun s => conditions.active s .focal) (withinRenewal.state 0) ∧
+      withinRenewal.state 0 = beyondRenewal.state 0 ∧
+      RenewingIn (conditions.along withinRenewal) .focal ∧
+      ConsumingIn (conditions.along beyondRenewal) .focal ∧
+      (∀ t, 1 ≤ t → ¬ conditions.active (beyondRenewal.state t) .sustaining) ∧
+      Keepable process (fun s => conditions.active s .sustaining) (withinRenewal.state 0) ∧
+      ¬ Kernel process (fun s => conditions.active s .sustaining) (withinRenewal.state 0) :=
+```
+
+## F05  `Becoming.World.shuttle_world`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean`, lines 306 to 318.
+
+- conclusion names: `Becoming.World.CeasingRecurs`  — listed under: going on at all: CEASING
+- conclusion names: `Becoming.World.ArisingRecurs`  — listed under: going on at all: LASTING  (some by a reader's reading only)
+- conclusion names, through a definition: `Becoming.World.Living (built from Becoming.Web.UnderminingAt)`  — listed under: on the web: CONSUMING
+
+```lean
+/-- Two sides hand one standing back and forth: a finite world in which arising and ceasing
+recur and every event is living. Activity needs support, the flow balances,
+only active sides give, and every side is embodied, so the zero reserve carries it; the
+sides take without drawing, and the flow does not dissipate. -/
+theorem shuttle_world :
+    shuttle.Finite ∧ shuttle.ArisingRecurs ∧ shuttle.CeasingRecurs ∧ shuttle.Living ∧
+    shuttle.Dependent ∧ shuttle.Balanced ∧ shuttle.Acting ∧ ¬ shuttle.Taking ∧
+    ¬ shuttle.Dissipative ∧ shuttle.Embodied ∧ shuttle.Carried :=
+```
+
+## F06  `Becoming.World.selfDrawing_world`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean`, lines 361 to 375.
+
+- conclusion names: `Becoming.World.CeasingRecurs`  — listed under: going on at all: CEASING
+- conclusion names: `Becoming.World.ArisingRecurs`  — listed under: going on at all: LASTING  (some by a reader's reading only)
+- conclusion names, through a definition: `Becoming.World.Living (built from Becoming.Web.UnderminingAt)`  — listed under: on the web: CONSUMING
+
+```lean
+/-- The same activity as `shuttle`, so arising and ceasing recur, while not every event is
+living in the stepwise reading: the holder draws on its own standing as it hands it on,
+the undermining of `Embodied.ending_breaks`. On the stepwise reading such drawing at an ending is
+not living, for every drawer, and the verdict values no drawer (DELEGATED-CHOICES D6). The flow
+balances, only active sides give and take, and they take only from what they draw on. -/
+theorem selfDrawing_world :
+    selfDrawing.Finite ∧ selfDrawing.ArisingRecurs ∧ selfDrawing.CeasingRecurs ∧
+    ¬ selfDrawing.Living ∧ selfDrawing.Dependent ∧ selfDrawing.Balanced ∧ selfDrawing.Acting ∧
+    selfDrawing.Taking ∧ selfDrawing.Embodied :=
+```
+
+## F07  `Becoming.World.mutualism_world`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean`, lines 388 to 396.
+
+- conclusion names: `Becoming.World.CeasingRecurs`  — listed under: going on at all: CEASING
+- conclusion names: `Becoming.World.ArisingRecurs`  — listed under: going on at all: LASTING  (some by a reader's reading only)
+- conclusion names, through a definition: `Becoming.World.Living (built from Becoming.Web.UnderminingAt)`  — listed under: on the web: CONSUMING
+
+```lean
+/-- A finite world in which nothing arises or ceases and every event is living. -/
+theorem mutualism_world :
+    mutualism.Finite ∧ ¬ mutualism.ArisingRecurs ∧ ¬ mutualism.CeasingRecurs ∧
+    mutualism.Living ∧ mutualism.Dependent ∧ mutualism.Embodied :=
+```
+
+## F08  `Becoming.World.drawdown_world`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean`, lines 427 to 441.
+
+- conclusion names: `Becoming.World.CeasingRecurs`  — listed under: going on at all: CEASING
+- conclusion names: `Becoming.World.ArisingRecurs`  — listed under: going on at all: LASTING  (some by a reader's reading only)
+- conclusion names, through a definition: `Becoming.World.Living (built from Becoming.Web.UnderminingAt)`  — listed under: on the web: CONSUMING
+
+```lean
+/-- A finite world in which arising does not recur and not every event is living: the
+parent's taking leaves the pool below its own need. The pool stands without being active,
+so not every relatum is embodied. -/
+theorem drawdown_world :
+    drawdown.Finite ∧ ¬ drawdown.ArisingRecurs ∧ ¬ drawdown.CeasingRecurs ∧
+    ¬ drawdown.Living ∧ drawdown.Dependent ∧ drawdown.Taking ∧ ¬ drawdown.Embodied :=
+```
+
+## F09  `Becoming.World.grazing_world`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean`, lines 772 to 785.
+
+- conclusion names: `Becoming.World.ArisingRecurs`  — listed under: going on at all: LASTING  (some by a reader's reading only)
+- conclusion names, through a definition: `Becoming.World.Living (built from Becoming.Web.UnderminingAt)`  — listed under: on the web: CONSUMING
+
+```lean
+/-- A finite world in which arising recurs and not every event is living, outside the
+choice about drawing on a self-bearing relatum at its own ending: the grazer's event at
+the first step undermines the browser's dependence on the pool, which is not the drawer
+and never active. Activity needs support, the flow balances, and only active relata give,
+and take only what they draw on. -/
+theorem grazing_world :
+    grazing.Finite ∧ grazing.ArisingRecurs ∧ ¬ grazing.Living ∧ grazing.Dependent ∧
+    grazing.Balanced ∧ grazing.Acting ∧ grazing.Taking :=
+```
+
+## F10  `Becoming.World.seedbank_world`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean`, lines 844 to 881.
+
+- conclusion names: `Becoming.Web.Ceases`  — listed under: going on at all: CEASING
+- conclusion names: `Becoming.Web.UnderminingOn`  — listed under: on the web: CONSUMING
+- conclusion names, through a definition: `Becoming.World.Living (built from Becoming.Web.UnderminingAt)`  — listed under: on the web: CONSUMING
+
+```lean
+/-- A finite, balanced world in which activity needs support and every relatum is
+embodied. The drawer's event at the first step undermines the seed's dependence on the
+soil, which persists unchanged, so the event is not living, and the premises of
+`Web.Dependent.inactive_below` hold. Yet the seed is never active and nothing ever ceases:
+the undermining co-occurs with no ending. -/
+theorem seedbank_world :
+    seedbank.Dependent ∧ seedbank.Embodied ∧ seedbank.Balanced ∧ seedbank.Finite ∧
+    seedbank.web.UnderminingOn 0 .drawer .soil ∧ ¬ seedbank.Living ∧
+    (seedbank.web.level 1 .soil < seedbank.web.need 0 .seed .soil ∧
+      seedbank.web.requires 1 .seed .soil ∧
+      seedbank.web.need 0 .seed .soil ≤ seedbank.web.need 1 .seed .soil) ∧
+    (∀ t, ¬ seedbank.web.active t .seed) ∧ ∀ t x, ¬ seedbank.web.Ceases t x :=
+```
+
+## F11  `Becoming.World.living_crosses`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean`, lines 1061 to 1072.
+
+- conclusion names: `Becoming.World.ArisingRecurs`  — listed under: going on at all: LASTING  (some by a reader's reading only)
+- conclusion names, through a definition: `Becoming.World.Living (built from Becoming.Web.UnderminingAt)`  — listed under: on the web: CONSUMING
+
+```lean
+/-- Living crosses arising: among finite worlds, arising recurring or not occurs both with
+every event living and with some event not living. In a finite world whose activity is
+decided, ceasing recurs exactly when arising does, so the same holds of it. -/
+theorem living_crosses :
+    (shuttle.Finite ∧ shuttle.ArisingRecurs ∧ shuttle.Living) ∧
+    (grazing.Finite ∧ grazing.ArisingRecurs ∧ ¬ grazing.Living) ∧
+    (mutualism.Finite ∧ ¬ mutualism.ArisingRecurs ∧ mutualism.Living) ∧
+    (drawdown.Finite ∧ ¬ drawdown.ArisingRecurs ∧ ¬ drawdown.Living) :=
+```
+
+## F12  `Becoming.World.living_crosses_ceasing`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean`, lines 1074 to 1087.
+
+- conclusion names: `Becoming.World.CeasingRecurs`  — listed under: going on at all: CEASING
+- conclusion names, through a definition: `Becoming.World.Living (built from Becoming.Web.UnderminingAt)`  — listed under: on the web: CONSUMING
+
+```lean
+/-- Living crosses ceasing too: these finite worlds have their activity decided, so ceasing
+recurs exactly where arising does (the tenth review's probe). -/
+theorem living_crosses_ceasing :
+    (shuttle.Finite ∧ shuttle.CeasingRecurs ∧ shuttle.Living) ∧
+    (grazing.Finite ∧ grazing.CeasingRecurs ∧ ¬ grazing.Living) ∧
+    (mutualism.Finite ∧ ¬ mutualism.CeasingRecurs ∧ mutualism.Living) ∧
+    (drawdown.Finite ∧ ¬ drawdown.CeasingRecurs ∧ ¬ drawdown.Living) :=
+```
+
+## F13  `Becoming.ClosedCapture.lock_line`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean`, lines 320 to 344.
+
+- premises name: `Becoming.RuleCapture.Locked`  — listed under: a LOCK (a rule set again from the share it already favours), or the same notion with the order reversed (read which)
+- conclusion names: `Becoming.«不穷»`  — listed under: going on at all: LASTING
+- conclusion names: `Becoming.ClosedCapture.lockedAlike`  — listed under: a LOCK (a rule set again from the share it already favours), or the same notion with the order reversed (read which)
+
+```lean
+/-- **The locked loop's line never ends, while every step alters the loss.** Under the premises of
+`lock_outlives_loss`, from a locked start the line under the class of being locked or not never
+ends along the joined two-level step, and each of its steps is an alteration under the loss: the
+course stays locked while the coordinate it does not read changes at every step. -/
+theorem lock_line {P : Ideals.Preorder A} {M : Ideals.Preorder R} {favours : R → Prop}
+    {fA : A → R → A} {fB : A × Nat → R → Nat} {hA : A → R → R} {reads : Nat → Bool}
+    (raises : Raises P favours fA) (monotone : ReadsShare P M hA)
+    (upper : ∀ {g g'}, M.le g g' → favours g → favours g') (accrues : Accrues fB)
+    {a : A} {b : Nat} {g : R} (locked : Locked M favours hA (a, g)) :
+    «不穷» (Law.step (Pace.step (join fA fB) (joinRead hA) reads)) (lockedAlike M favours hA)
+        ((a, b), g, 0) ∧
+      ∀ n, «异» (Law.step (Pace.step (join fA fB) (joinRead hA) reads)) (lockedAlike M favours hA)
+        (sameValue loss)
+        (Law.orbit (Pace.step (join fA fB) (joinRead hA) reads) ((a, b), g, 0) n)
+        (Law.orbit (Pace.step (join fA fB) (joinRead hA) reads) ((a, b), g, 0) (n + 1)) :=
+```
+
+## F14  `Becoming.ClosedCapture.Beyond.closed_line`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean`, lines 369 to 381.
+
+- conclusion names: `Becoming.«不穷»`  — listed under: going on at all: LASTING
+- conclusion names: `Becoming.ClosedCapture.lockedAlike`  — listed under: a LOCK (a rule set again from the share it already favours), or the same notion with the order reversed (read which)
+
+```lean
+/-- **Read from the share alone, the line under being locked never ends**, and each of its steps
+alters the loss. -/
+theorem closed_line :
+    «不穷» (Law.step (Pace.step (join select lossStep) (joinRead closedRead) (fun _ => true)))
+        (lockedAlike order favours closedRead) ((twoToOne, 0), hi, 0) ∧
+      ∀ n, «异» (Law.step (Pace.step (join select lossStep) (joinRead closedRead) (fun _ => true)))
+        (lockedAlike order favours closedRead) (sameValue loss)
+        (Law.orbit (Pace.step (join select lossStep) (joinRead closedRead) (fun _ => true))
+          ((twoToOne, 0), hi, 0) n)
+        (Law.orbit (Pace.step (join select lossStep) (joinRead closedRead) (fun _ => true))
+          ((twoToOne, 0), hi, 0) (n + 1)) :=
+```
+
+## F15  `Becoming.NoReturnAt.recoverable_iff`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean`, lines 606 to 612.
+
+- premises name: `Becoming.NoReturnAt`  — listed under: going on at all: NO RETURN
+- conclusion names: `Becoming.Recoverable`  — listed under: a TURN IN TIME
+
+```lean
+/-- **Before the point, and only before it, the course is recoverable.** -/
+theorem NoReturnAt.recoverable_iff (point : NoReturnAt feasible keeps l N) {n : Nat} :
+    Recoverable feasible keeps l n ↔ n < N :=
+```
+
+## F16  `Becoming.noReturnAt_of_past`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean`, lines 630 to 637.
+
+- premises name: `Becoming.Recoverable`  — listed under: a TURN IN TIME
+- conclusion names: `Becoming.NoReturnAt`  — listed under: going on at all: NO RETURN
+
+```lean
+/-- **A point of no return exists where recoverability is decided at each step and fails at
+some.** -/
+theorem noReturnAt_of_past (decided : ∀ n, Recoverable feasible keeps l n ∨
+      ¬ Recoverable feasible keeps l n) {n : Nat} (past : ¬ Recoverable feasible keeps l n) :
+    ∃ N, N ≤ n ∧ NoReturnAt feasible keeps l N :=
+```
+
+## F17  `Becoming.ReadingsPersist.Habitat.cleared_removes_its_readers`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean`, lines 1313 to 1328.
+
+- conclusion names: `Becoming.AllPersist`  — listed under: going on at all: LASTING
+- conclusion names: `Becoming.RemovesItsReaders`  — listed under: a LOCK (a rule set again from the share it already favours), or the same notion with the order reversed (read which)  (some by a reader's reading only)
+- conclusion names, through a definition: `Becoming.SurvivorsPersist (built from Becoming.StandsLate)`  — listed under: going on at all: LASTING
+
+```lean
+/-- **The meta-attractor's shape, witnessed.** In the course where the line reads the dweller out and
+nothing comes back, selection by persistence read off the pool the course gives holds, and the course
+removes the dweller's line, read as a reader of the habitat (its continuation requires the habitat), from
+that pool: a selection removing its own readers, with which lines read supplied. Read off the fixed pool of both lines, the same selection fails there; in the course where
+the line reads everything, it holds read off either pool. -/
+theorem cleared_removes_its_readers :
+    RemovesItsReaders (SurvivorsPersist slotsOf) slotsOf (fun i => i = .d) cleared ∧
+      ¬ AllPersist slotsOf cleared ∧ AllPersist slotsOf keep :=
+```
+
+## F18  `Becoming.TurningInTime.locked_turns_in_time_share_iff`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean`, lines 1852 to 1917.
+
+- premises name: `Becoming.RuleCapture.Locked`  — listed under: a LOCK (a rule set again from the share it already favours), or the same notion with the order reversed (read which)
+- conclusion names: `Becoming.«不穷»`  — listed under: going on at all: LASTING
+
+```lean
+/-- **A correction that sets the share as well as the rule: a `Locked` way from a level below
+`H₁ + y₁` never ends exactly where its first step at a level the window reads leaves the level at or
+above `H₂ + y₂`.** It is `turns_in_time_iff` at the kept kind `Low ∧ kept`: the levels in `[N, K)`
+marked, the lock's step as it was reading at every step (`windowAlone fA hA (fun _ => true)`) as
+`alone`, the way after a step `windowAfterShare fA hA sA hL N K` (`window_share_alone_outside`), and the
+kept kind the ways whose share is `Low` and whose rule is `kept`. That theorem's `turns` and `kept` are
+met here from three given premises, with none on where the window lies: the window sets a `Low` share
+and a `kept` rule (`sets`); off a `Low` share the rule read is `kept` (`lowRule`); under a `kept` rule a
+`Low` share steps to a `Low` share (`lowStays`). So the correction reaches the share because the
+window's reading sets it (`sets`, given), not because the share falls under the corrected rule. Its
+`uses₁` is met from the lock's premises, as in `locked_turns_in_time_on_window_iff`: under `Raises`,
+`ReadsShare` and favouring kept upward (`raises`, `monotone`, `upper`), from a `Locked` start (`locked`)
+the share and the rule along the lock's own course are never below the start's
+(`locked_alone_not_below`), so with `draws` every way on it uses at least `H₁`. The other premises are
+`turns_in_time_iff`'s: the use `H₂` of a way with a `Low` share and a `kept` rule (`uses`); the regime
+premises (`nothing`, `short`, `meets`, `keeps`); the need, positive (`needs`) and at most `H₂ + y₂`
+(`within`); giving short of `H₁` below `y₁` (`short₁`); and the start at most `hi` (`high`). The
+overdraw of the course as it was stays given, as in the laws before: the floor `H₁` on the use where the
+share and the rule are not below the start's (`draws`) and the start below `H₁ + y₁` (`below`). The
+right side is on the lock's own course, the orbit of `asItWas (windowAlone fA hA (fun _ => true))` from
+`(w, x)`; from step `T + 1` on, for its `T`, the pair's course has a `Low` share and a `kept` rule
+(`share_corrected_on_course`). The level's step is the regime's, `RegimeMargin.step giving (use w)`.
+Only the "if" side has a worked case (`Three.share_read_goes_on`; on the same band with the share left
+by `fA`, `Three.read_at_eight_ends` ends). -/
+theorem locked_turns_in_time_share_iff {P : Ideals.Preorder A} {M : Ideals.Preorder R}
+    {favours : R → Prop} {fA : A → R → A} {hA : A → R → R} (sA : A × Nat → R → A)
+    (hL : A × Nat → R → R) (N K : Nat)
+    (raises : Raises P favours fA) (monotone : ReadsShare P M hA)
+    (upper : ∀ {g g'}, M.le g g' → favours g → favours g')
+    {Low : A → Prop} {kept : R → Prop}
+    (sets : ∀ (p : A × Nat) (g : R), N ≤ p.2 → p.2 < K → Low (sA p g) ∧ kept (hL p g))
+    (lowRule : ∀ a g, Low a → kept (hA a g)) (lowStays : ∀ a g, Low a → kept g → Low (fA a g))
+    {giving : Nat → Nat} {use : A × R × Nat → Nat} {H₁ y₁ H₂ y₂ hi need : Nat}
+    (uses : ∀ v : A × R × Nat, Low v.1 → kept v.2.1 → use v = H₂)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi)
+    (needs : 0 < need) (within : need ≤ H₂ + y₂)
+    (short₁ : RegimeMargin.Short giving H₁ y₁)
+    {w : A × R × Nat} {x : Nat} (locked : Locked M favours hA (w.1, w.2.1))
+    (draws : ∀ v : A × R × Nat, P.le w.1 v.1 → M.le w.2.1 v.2.1 → H₁ ≤ use v)
+    (below : x < H₁ + y₁) (high : x ≤ hi) :
+    «不穷» (net need (windowAfterShare fA hA sA hL N K)
+        (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x) ↔
+      ∃ T, (∀ j, j < T →
+          need ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true))
+            (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2 ∧
+          ¬ (N ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true))
+              (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2 ∧
+            (Law.orbit (asItWas (windowAlone fA hA (fun _ => true))
+              (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2 < K)) ∧
+        need ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true))
+          (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2 ∧
+        (N ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true))
+            (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2 ∧
+          (Law.orbit (asItWas (windowAlone fA hA (fun _ => true))
+            (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2 < K) ∧
+        H₂ + y₂ ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true))
+          (fun w x => RegimeMargin.step giving (use w) x)) (w, x) (T + 1)).2 :=
+```
+
+## F19  `Becoming.TurningInTime.noReturnAt_of_below`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean`, lines 2200 to 2214.
+
+- conclusion names: `Becoming.NoReturnAt`  — listed under: going on at all: NO RETURN
+- conclusion names: `Becoming.TurningInTime.Turned`  — listed under: a TURN IN TIME
+
+```lean
+/-- **Where `X` comes below `H + y`, it has a point of no return no later.** Under
+`recoverable_iff_above`'s premises (`X` never rising and starting at most `hi`, nothing given from
+nothing, giving short of `H` below `y`, meeting it from `y` up to `hi`, the step under `H` keeping the
+level within `hi`, a positive need at most `H + y`), where `X n < H + y` there is a point of no return
+`N ≤ n`; by `noReturnAt_of_past`, recoverability decided through `recoverable_iff_above`. `top`,
+`meets`, `keeps` and `within` serve only to decide recoverability at each step; that `X` is not
+recoverable at `n` uses `fall`, `nothing`, `short` and `needs`. -/
+theorem noReturnAt_of_below {X : Nat → Nat} {giving : Nat → Nat} {H y hi need : Nat}
+    (fall : ∀ t, X (t + 1) ≤ X t) (top : X 0 ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y) {n : Nat} (below : X n < H + y) :
+    ∃ N, N ≤ n ∧ NoReturnAt (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N :=
+```
+
+## F20  `Becoming.TurningInTime.noReturn_exists`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean`, lines 2299 to 2329.
+
+- conclusion names: `Becoming.NoReturnAt`  — listed under: going on at all: NO RETURN
+- conclusion names: `Becoming.TurningInTime.Turned`  — listed under: a TURN IN TIME
+
+```lean
+/-- **R5. The course as it was has a point of no return, within `x` steps.** Under
+`turns_in_time_iff`'s premises on the regime and on the course as it was (none on the marks or the
+kept kind): nothing given from nothing; giving short of `H₂` below `y₂`, meeting it from `y₂` up to
+`hi`, the step under `H₂` keeping the level within `hi`; a positive need at most `H₂ + y₂`; giving
+short of `H₁` below `y₁`, every way on `alone`'s orbit from `w` using at least `H₁`, and the start `x`
+below `H₁ + y₁` and at most `hi`. Then the level course as it was from `(w, x)`, with the turns to
+`H₂` as the feasible courses and the need met at every step as what is asked, has a point of no
+return `N ≤ x`. By `noReturnAt_of_past`. The premises on `H₂` (with `high`) decide recoverability at
+each step through `recoverable_iff_above`; that the course is not recoverable at step `x` needs only
+that its level there is below the need (a course that agrees with it at `x` does not meet the need
+there), which the premises on the course as it was give with a positive need
+(`Optimum.ends_within`). -/
+theorem noReturn_exists {alone : W → W} {giving : Nat → Nat} {use : W → Nat}
+    {H₁ y₁ H₂ y₂ hi need : Nat}
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi)
+    (needs : 0 < need) (within : need ≤ H₂ + y₂)
+    (short₁ : RegimeMargin.Short giving H₁ y₁) {w : W} {x : Nat}
+    (uses₁ : ∀ j, H₁ ≤ use (Law.orbit alone w j)) (below : x < H₁ + y₁) (high : x ≤ hi) :
+    ∃ N, N ≤ x ∧ NoReturnAt
+      (Turned (fun j => (Law.orbit (asItWas alone
+        (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2) giving H₂)
+      (MeetsNeed need)
+      (fun t _ => (Law.orbit (asItWas alone
+        (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2) N :=
+```
+
+## F21  `Becoming.TurningInTime.Three.read_at_eight_ends`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean`, lines 2682 to 2739.
+
+- conclusion names: `Becoming.«不穷»`  — listed under: going on at all: LASTING
+- conclusion names: `Becoming.RuleCapture.Locked`  — listed under: a LOCK (a rule set again from the share it already favours), or the same notion with the order reversed (read which)
+
+```lean
+/-- **Read at eight, in time, and the line still ends.** On the lock's own types (`lock_ends`'s share,
+rule, reading off the share, use and giving, every step reading, a need of one), with the window
+`[8, 9)` reading the rule `false` off the level (`noRule`), from the way `(3, true, 0)` at the level
+nine: the course runs `((3, true, 0), 9)`, `((3, true, 1), 8)`, `((3, false, 2), 6)`,
+`((3, true, 3), 6)`, `((3, true, 4), 2)`, `((3, true, 5), 0)`. The level is read at eight; the step from
+eight is still under the use of five and leaves six, the kept kind's `H₂ + y₂`; at six, under the use of
+three, six is left; six is outside the window, so the rule is read off the share again (`true`), the use
+is five again and the line ends: in five steps it reaches `((3, true, 5), 0)`, which conditions nothing.
+The start is `Locked`. The right side of `turns_in_time_iff` holds, at `T = 1` with the window's levels
+marked and the lock's step as it was (`windowAlone`) as `alone`, while the line ends:
+`turns_in_time_iff`'s premise `kept` fails here (it follows from the last conjunct, since `kept` gives
+`keptBelow` at any `c`). The premise of `locked_turns_in_time_on_window_iff` that fails is `low`, the
+others holding at `H₁ = y₁ = 5`, `H₂ = y₂ = 3`, `hi = 6` and `c = 7` (argued here, not a Lean
+statement): the window starts at eight, above `H₂ + y₂ = 6`, so that `keptBelow` of
+`turns_in_time_iff_kept_below` fails at the level six for every `c` above six (the last conjunct). -/
+theorem read_at_eight_ends :
+    Law.orbit (pair (windowAfter lockShare lockRead noRule 8 9 (fun _ => true))
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) 1 =
+      ((3, true, 1), 8) ∧
+    Law.orbit (pair (windowAfter lockShare lockRead noRule 8 9 (fun _ => true))
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) 2 =
+      ((3, false, 2), 6) ∧
+    Law.orbit (pair (windowAfter lockShare lockRead noRule 8 9 (fun _ => true))
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) 3 =
+      ((3, true, 3), 6) ∧
+    Law.orbit (pair (windowAfter lockShare lockRead noRule 8 9 (fun _ => true))
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) 4 =
+      ((3, true, 4), 2) ∧
+    «迭» (net 1 (windowAfter lockShare lockRead noRule 8 9 (fun _ => true))
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) 5 ((3, true, 0), 9) ((3, true, 5), 0) ∧
+    (∀ v, ¬ net 1 (windowAfter lockShare lockRead noRule 8 9 (fun _ => true))
+        (fun w x => RegimeMargin.step giving (lockUse w) x) ((3, true, 5), 0) v) ∧
+    ¬ «不穷» (net 1 (windowAfter lockShare lockRead noRule 8 9 (fun _ => true))
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) «一» ((3, true, 0), 9) ∧
+    RuleCapture.Locked ruleOrder (fun g => g = true) lockRead (3, true) ∧
+    (∃ T, (∀ j, j < T →
+          1 ≤ (Law.orbit (asItWas (windowAlone lockShare lockRead (fun _ => true))
+            (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) j).2 ∧
+          ¬ (8 ≤ (Law.orbit (asItWas (windowAlone lockShare lockRead (fun _ => true))
+              (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) j).2 ∧
+            (Law.orbit (asItWas (windowAlone lockShare lockRead (fun _ => true))
+              (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) j).2 < 9)) ∧
+        1 ≤ (Law.orbit (asItWas (windowAlone lockShare lockRead (fun _ => true))
+          (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) T).2 ∧
+        (8 ≤ (Law.orbit (asItWas (windowAlone lockShare lockRead (fun _ => true))
+            (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) T).2 ∧
+          (Law.orbit (asItWas (windowAlone lockShare lockRead (fun _ => true))
+            (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) T).2 < 9) ∧
+        3 + 3 ≤ (Law.orbit (asItWas (windowAlone lockShare lockRead (fun _ => true))
+          (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) (T + 1)).2) ∧
+    (∀ c, 6 < c → ¬ ∀ (v : Nat × Bool × Nat) (z : Nat), v.2.1 = false → 3 + 3 ≤ z → z < c →
+      (windowAfter lockShare lockRead noRule 8 9 (fun _ => true) v z).2.1 = false) :=
+```
+
+## F22  `Becoming.TurningInTime.Three.read_to_ten`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean`, lines 2771 to 2853.
+
+- conclusion names: `Becoming.«不穷»`  — listed under: going on at all: LASTING
+- conclusion names: `Becoming.RuleCapture.Locked`  — listed under: a LOCK (a rule set again from the share it already favours), or the same notion with the order reversed (read which)
+
+```lean
+/-- **Read up to ten: from nine the line goes on, from seven it ends.** On the lock's own types as in
+`read_at_eight_ends`, with the window `[6, 10)` reading the rule `false` (`noRule`), through
+`locked_turns_in_time_on_window_iff` at `H₁ = y₁ = 5`, `H₂ = y₂ = 3`, `hi = 12`, `c = 10`, with `kept`
+saying that the rule is `false`. From the way `(3, true, 0)` at the level nine the course is
+`((3, true, 0), 9)`, `((3, false, 1), 8)`, `((3, false, 2), 10)`, `((3, true, 3), 12)`,
+`((3, true, 4), 12)`: nine is read at step 0, and the level of the lock's own course one step later is
+`RegimeMargin.step giving 5 9`, eight, at or above six, so the line never ends; at ten, outside the
+window, the rule is read off the share again (`true`); the step from ten is still under the use of three
+and leaves twelve; from twelve a use of five is met and twelve is left. From the level seven the course
+is `((3, true, 0), 7)`, `((3, false, 1), 4)`, `((3, true, 2), 2)`, `((3, true, 3), 0)`: the net reaches
+`((3, true, 3), 0)` in three steps, which conditions nothing, and the line does not go on, by the law's
+only-if direction: at `T = 0` the level of the lock's own course one step later is four, below six, and
+a later `T` would be a step whose level, at most four since that level never rises (`lock_falls`), the
+window reads, which it does not. The law's `high` holds: from a start below ten the level of the lock's
+own course never rises (`lock_falls`), so it stays within twelve. The kind is not kept at every level:
+at the level ten the way `(3, false, 2)` is followed by the rule `true`. The start is `Locked`. -/
+theorem read_to_ten :
+    «不穷» (net 1 (windowAfter lockShare lockRead noRule 6 10 (fun _ => true))
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) «一» ((3, true, 0), 9) ∧
+    Law.orbit (pair (windowAfter lockShare lockRead noRule 6 10 (fun _ => true))
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) 1 =
+      ((3, false, 1), 8) ∧
+    Law.orbit (pair (windowAfter lockShare lockRead noRule 6 10 (fun _ => true))
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) 2 =
+      ((3, false, 2), 10) ∧
+    Law.orbit (pair (windowAfter lockShare lockRead noRule 6 10 (fun _ => true))
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) 3 =
+      ((3, true, 3), 12) ∧
+    Law.orbit (pair (windowAfter lockShare lockRead noRule 6 10 (fun _ => true))
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) 4 =
+      ((3, true, 4), 12) ∧
+    Law.orbit (pair (windowAfter lockShare lockRead noRule 6 10 (fun _ => true))
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 7) 1 =
+      ((3, false, 1), 4) ∧
+    Law.orbit (pair (windowAfter lockShare lockRead noRule 6 10 (fun _ => true))
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 7) 2 =
+      ((3, true, 2), 2) ∧
+    «迭» (net 1 (windowAfter lockShare lockRead noRule 6 10 (fun _ => true))
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) 3 ((3, true, 0), 7) ((3, true, 3), 0) ∧
+    (∀ v, ¬ net 1 (windowAfter lockShare lockRead noRule 6 10 (fun _ => true))
+        (fun w x => RegimeMargin.step giving (lockUse w) x) ((3, true, 3), 0) v) ∧
+    ¬ «不穷» (net 1 (windowAfter lockShare lockRead noRule 6 10 (fun _ => true))
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) «一» ((3, true, 0), 7) ∧
+    (¬ ∀ (v : Nat × Bool × Nat) (z : Nat), v.2.1 = false →
+      (windowAfter lockShare lockRead noRule 6 10 (fun _ => true) v z).2.1 = false) ∧
+    RuleCapture.Locked ruleOrder (fun g => g = true) lockRead (3, true) :=
+```
+
+## F23  `Becoming.TurningInTime.Three.unlocked_goes_on`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean`, lines 2950 to 2986.
+
+- conclusion names: `Becoming.«不穷»`  — listed under: going on at all: LASTING
+- conclusion names: `Becoming.RuleCapture.Locked`  — listed under: a LOCK (a rule set again from the share it already favours), or the same notion with the order reversed (read which)
+
+```lean
+/-- **From one start that is not `Locked`, the line goes on with no step at a level the window reads.**
+On the lock's own types as in `read_at_eight_ends`, with the window `[6, 8)` reading the rule `false`
+(`noRule`), from the way `(2, true, 0)` at the level nine, which is not `Locked` (the rule read off the
+share two is `false`, below the rule `true` in force; the first conjunct). The pair's course and the
+lock's own course are both `((2, true, 0), 9)`, `((2, false, 1), 8)`, `((2, false, 2), 10)`,
+`((2, false, 3), 12)`, and then `((2, false, n + 3), 12)` for every `n` (from step 3 on by the private
+`unlocked_orbit` and `unlocked_alone_orbit`; the configurations at steps 1 and 2 are not conjuncts: at
+steps 0 to 2 the proof decides only that the need is met and that the level is not read): the rule read
+off the share two is `false`, so the use falls to three without the level being read. The line never
+ends (the second conjunct), and no step of the lock's own course is at a level the window reads (the
+third conjunct), so the right side of `locked_turns_in_time_on_window_iff` fails here while the line
+never ends. Every premise of that law other than `locked` holds here at `N = 6`, `K = 8`, `H₁ = y₁ = 5`,
+`H₂ = y₂ = 3`, `hi = 6` and `c = 7` (argued here, not a Lean statement: each is met as `held_at_six`
+meets it, with `K = 8`, so that `covers` is `7 ≤ 8`, and `draws` at the share two; `safe` asks nothing
+since `c` is above `hi`, and `high` asks nothing by the third conjunct). -/
+theorem unlocked_goes_on :
+    ¬ RuleCapture.Locked ruleOrder (fun g => g = true) lockRead (2, true) ∧
+    «不穷» (net 1 (windowAfter lockShare lockRead noRule 6 8 (fun _ => true))
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) «一» ((2, true, 0), 9) ∧
+    ∀ T, ¬ (6 ≤ (Law.orbit (asItWas (windowAlone lockShare lockRead (fun _ => true))
+          (fun w x => RegimeMargin.step giving (lockUse w) x)) ((2, true, 0), 9) T).2 ∧
+        (Law.orbit (asItWas (windowAlone lockShare lockRead (fun _ => true))
+          (fun w x => RegimeMargin.step giving (lockUse w) x)) ((2, true, 0), 9) T).2 < 8) :=
+```
+
+## F24  `Becoming.TurningInTime.Three.share_read_goes_on`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean`, lines 3090 to 3146.
+
+- conclusion names: `Becoming.«不穷»`  — listed under: going on at all: LASTING
+- conclusion names: `Becoming.RuleCapture.Locked`  — listed under: a LOCK (a rule set again from the share it already favours), or the same notion with the order reversed (read which)
+
+```lean
+/-- **Read at eight, the share set as well as the rule: the line never ends, and from step 2 on the share
+is below three and the rule `false`.** On the lock's own types as in `read_at_eight_ends` (`lockShare`, `lockRead`, `lockUse`,
+giving `min z (12 - z)`, a need of one), on the same band `[8, 9)`, the window now setting the share to
+nothing (`zeroShare`) as well as the rule to `false` (`noRule`), from the way `(3, true, 0)` at the level
+nine. The course is `((3, true, 0), 9)`, `((3, true, 1), 8)`, `((0, false, 2), 6)`, and then
+`((0, false, n + 2), 6)` for every `n` (the third conjunct): eight is read and the step from it, still
+under the use of five, leaves six; at six, outside the window, the rule is read off the share nothing,
+`false`, the use is three and six is left. The line never ends by `locked_turns_in_time_share_iff` at
+`Low a := a < 3`, `kept g := g = false`, `H₁ = y₁ = 5`, `H₂ = y₂ = 3`, `hi = 12` and `T = 1` (the
+fourth conjunct). From step 2 on the share is below three and the rule `false`, by
+`share_corrected_on_course` at the same `T = 1` of the course as it was (the fifth). The start is `Locked`. On this band, with the share
+left by `lockShare` where the window reads, `read_at_eight_ends` ends: six is outside the window, the
+rule is read off the share three again (`true`) and the use is five again. -/
+theorem share_read_goes_on :
+    Law.orbit (pair (windowAfterShare lockShare lockRead zeroShare noRule 8 9)
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) 1 =
+      ((3, true, 1), 8) ∧
+    Law.orbit (pair (windowAfterShare lockShare lockRead zeroShare noRule 8 9)
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) 2 =
+      ((0, false, 2), 6) ∧
+    (∀ n, Law.orbit (pair (windowAfterShare lockShare lockRead zeroShare noRule 8 9)
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) (n + 2) =
+      ((0, false, n + 2), 6)) ∧
+    «不穷» (net 1 (windowAfterShare lockShare lockRead zeroShare noRule 8 9)
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) «一» ((3, true, 0), 9) ∧
+    (∀ k, (Law.orbit (pair (windowAfterShare lockShare lockRead zeroShare noRule 8 9)
+          (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) (1 + 1 + k)).1.1 < 3 ∧
+      (Law.orbit (pair (windowAfterShare lockShare lockRead zeroShare noRule 8 9)
+          (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9)
+          (1 + 1 + k)).1.2.1 = false) ∧
+    RuleCapture.Locked ruleOrder (fun g => g = true) lockRead (3, true) :=
+```
+
+# The notions named in this packet, each definition whole
+
+## `Becoming.Web.Unceasing`
+
+Listed under: going on at all: LASTING — BY A READER'S READING ONLY. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean`, line 96.
+
+```lean
+/-- Arising does not cease: some formation arises at arbitrarily late steps. -/
+def Unceasing : Prop :=
+  ∀ N, ∃ t f, N ≤ t ∧ W.Arises t f
+```
+
+## `Becoming.Web.ConsumingIn`
+
+Listed under: on the web: CONSUMING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 169.
+
+```lean
+def ConsumingIn (f : F) : Prop :=
+  ∃ t c, W.draws t f c ∧ W.Consumed c
+```
+
+## `Becoming.Web.UnderminingAt`
+
+Listed under: on the web: CONSUMING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 322.
+
+```lean
+/-- A formation's event at `t` is undermining when one of its relations is. -/
+def UnderminingAt (t : Nat) (f : F) : Prop :=
+  ∃ c, W.UnderminingOn t f c
+```
+
+## `Becoming.Web.RenewingIn`
+
+Listed under: on the web: RENEWING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 166.
+
+```lean
+def RenewingIn (f : F) : Prop :=
+  ∀ t c, W.Participates t f c → W.Renewed c
+```
+
+## `Becoming.Viability.Keepable`
+
+Listed under: going on at all: LASTING — BY A READER'S READING ONLY. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointKeeping.lean`, line 90.
+
+```lean
+/-- A guard is **keepable** from `s` where some run from `s` stays within it. -/
+def Keepable (P : Process S A) (g : S → Prop) (s : S) : Prop :=
+  ∃ r : Run P, r.state 0 = s ∧ ∀ n, g (r.state n)
+```
+
+## `Becoming.Viability.Kernel`
+
+Listed under: going on at all: LASTING — BY A READER'S READING ONLY. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean`, line 57.
+
+```lean
+/-- The **invariance kernel** of a guard: the configurations from which no course leaves it. -/
+def Kernel (P : Process S A) (guard : S → Prop) (s : S) : Prop :=
+  ∀ t, Reach P s t → guard t
+```
+
+## `RelationalRenewal.ConsumingIn`
+
+Listed under: on the web: CONSUMING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean`, line 135.
+
+```lean
+def ConsumingIn (U : Unfolding F C) (f : F) : Prop :=
+  ∃ c, U.draws f c ∧ Consumed U c
+```
+
+## `RelationalRenewal.RenewingIn`
+
+Listed under: on the web: RENEWING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean`, line 132.
+
+```lean
+def RenewingIn (U : Unfolding F C) (f : F) : Prop :=
+  ∀ c, Participates U f c → Renewed U c
+```
+
+## `Becoming.World.CeasingRecurs`
+
+Listed under: going on at all: CEASING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean`, line 194.
+
+```lean
+/-- Ceasing recurs: some relatum ceases at arbitrarily late steps. -/
+def CeasingRecurs : Prop :=
+  ∀ N, ∃ t x, N ≤ t ∧ w.web.Ceases t x
+```
+
+## `Becoming.World.ArisingRecurs`
+
+Listed under: going on at all: LASTING — BY A READER'S READING ONLY. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean`, line 190.
+
+```lean
+/-- Arising recurs: some relatum arises at arbitrarily late steps. -/
+def ArisingRecurs : Prop :=
+  w.web.Unceasing
+```
+
+## `Becoming.World.Living`
+
+Listed under: a definition built from a listed notion. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean`, line 199.
+
+```lean
+/-- Every event is living in the stepwise reading: no active relatum undermines. -/
+def Living : Prop :=
+  ∀ t x, w.web.active t x → ¬ w.web.UnderminingAt t x
+```
+
+## `Becoming.Web.Ceases`
+
+Listed under: going on at all: CEASING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean`, line 478.
+
+```lean
+/-- A formation ceases across the step from `t`: active at `t`, not active after it. -/
+def Ceases (t : Nat) (f : F) : Prop :=
+  W.active t f ∧ ¬ W.active (t + 1) f
+```
+
+## `Becoming.Web.UnderminingOn`
+
+Listed under: on the web: CONSUMING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 314.
+
+```lean
+/-- A formation's relation to a condition at `t` is undermining: it draws on the
+condition at a step after which the condition is below a dependence's present need and
+below a need of that dependence it met while the dependence held. Other formations may
+take part. -/
+def UnderminingOn (t : Nat) (f : F) (c : C) : Prop :=
+  W.draws t f c ∧ ∃ g, W.requires t g c ∧ W.MetAbove t g c (W.level (t + 1) c) ∧
+    W.level (t + 1) c < W.need t g c
+```
+
+## `Becoming.RuleCapture.Locked`
+
+Listed under: a LOCK (a rule set again from the share it already favours), or the same notion with the order reversed (read which). File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean`, line 158.
+
+```lean
+/-- **Locked**: the rule in force favours, and it is not above what the reading of the share
+gives. -/
+def Locked (M : Ideals.Preorder R) (favours : R → Prop) (h : S → R → R) (p : S × R) : Prop :=
+  favours p.2 ∧ M.le p.2 (h p.1 p.2)
+```
+
+## `Becoming.«不穷»`
+
+Listed under: going on at all: LASTING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean`, line 241.
+
+```lean
+/-- The line from `x` never ends (不穷): every occurrence it reaches has a successor. That some
+endless chain of occurrences then exists is a further step, which takes dependent choice. -/
+def «不穷» (R E : «际» α) (x : α) : Prop :=
+  ∀ y, (x = y ∨ «相续» R E x y) → «有后» R E y
+```
+
+## `Becoming.ClosedCapture.lockedAlike`
+
+Listed under: a LOCK (a rule set again from the share it already favours), or the same notion with the order reversed (read which). File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean`, line 286.
+
+```lean
+/-- Two configurations of the joined two-level step alike in whether share and rule are locked. -/
+def lockedAlike (M : Ideals.Preorder R) (favours : R → Prop) (hA : A → R → R) :
+    «际» ((A × Nat) × R × Nat) :=
+  fun p q => Locked M favours hA (p.1.1, p.2.1) ↔ Locked M favours hA (q.1.1, q.2.1)
+```
+
+## `Becoming.NoReturnAt`
+
+Listed under: going on at all: NO RETURN. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean`, line 594.
+
+```lean
+/-- **The point of no return of a course**: the first step at which it is not recoverable. -/
+def NoReturnAt (feasible keeps : (Nat → C → Nat) → Prop) (l : Nat → C → Nat) (N : Nat) : Prop :=
+  ¬ Recoverable feasible keeps l N ∧ ∀ n, n < N → Recoverable feasible keeps l n
+```
+
+## `Becoming.Recoverable`
+
+Listed under: a TURN IN TIME. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean`, line 589.
+
+```lean
+/-- **Recoverable at a step**: some course among the feasible ones, agreeing with `l` at every step
+up to `N`, keeps what `keeps` asks of a course. -/
+def Recoverable (feasible keeps : (Nat → C → Nat) → Prop) (l : Nat → C → Nat) (N : Nat) : Prop :=
+  ∃ l', feasible l' ∧ AgreeUpTo l' l N ∧ keeps l'
+```
+
+## `Becoming.AllPersist`
+
+Listed under: going on at all: LASTING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean`, line 543.
+
+```lean
+/-- **Selection by persistence, read off a fixed pool**: every listed line persists. -/
+def AllPersist (slotsOf : I → X → Prop) (l : Nat → X → Nat) : Prop :=
+  ∀ i, StandsLate (slotsOf i) l
+```
+
+## `Becoming.RemovesItsReaders`
+
+Listed under: a LOCK (a rule set again from the share it already favours), or the same notion with the order reversed (read which) — BY A READER'S READING ONLY. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean`, line 552.
+
+```lean
+/-- **A selection removing its own readers** (the meta-attractor's shape, stated with the pool read off
+the course): the selection holds at a course that removes a line of readers from the pool that course
+gives. -/
+def RemovesItsReaders (select : (Nat → X → Nat) → Prop) (slotsOf : I → X → Prop) (readers : I → Prop)
+    (l : Nat → X → Nat) : Prop :=
+  select l ∧ ∃ i, readers i ∧ RemovesLine slotsOf l i
+```
+
+## `Becoming.SurvivorsPersist`
+
+Listed under: a definition built from a listed notion. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean`, line 538.
+
+```lean
+/-- **Selection by persistence, read off the pool a course gives**: from some step on, every line alive
+in the course persists. -/
+def SurvivorsPersist (slotsOf : I → X → Prop) (l : Nat → X → Nat) : Prop :=
+  ∃ T, ∀ i, (∃ t, T ≤ t ∧ AliveIn slotsOf l t i) → StandsLate (slotsOf i) l
+```
+
+## `Becoming.StandsLate`
+
+Listed under: going on at all: LASTING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean`, line 420.
+
+```lean
+/-- A group of relata stands at arbitrarily late steps under a level history. -/
+def StandsLate (group : X → Prop) (l : Nat → X → Nat) : Prop :=
+  ∀ N, ∃ t x, N ≤ t ∧ group x ∧ 0 < l t x
+```
+
+## `Becoming.TurningInTime.Turned`
+
+Listed under: a TURN IN TIME. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean`, line 2002.
+
+```lean
+/-- **The feasible courses**: the courses over one condition that are `X` turned to `H` at some step
+`T`, the start included. -/
+def Turned (X : Nat → Nat) (giving : Nat → Nat) (H : Nat) (l : Nat → Unit → Nat) : Prop :=
+  ∃ T, ∀ t c, l t c = turned X giving H T t
+```

@@ -1,0 +1,128 @@
+ALREADY TOLD: 49 items, in the file's order
+
+Paths: DIR = /Users/ren/theories/_process/DIRECTION.md (lines 19 to 44 read whole). Chapters are in /Users/ren/theories/theories/becoming/chapters/: 01 = 01-ROOT.md, 02 = 02-MAP.md, 04 = 04-LIFE.md, 06 = 06-CLASSICAL-TEXTS.md, 07 = 07-SIGNIFICANCE.md. NOTE = /Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-roads-the-atlas-tells-2026-11-22/NOTE.md.
+
+"Not found in (1) to (3)" below means: DIR 19 to 44, the 24 linked passages read whole, and NOTE read whole; plus a search of every chapter file for the theorem's last name component.
+
+How I applied the ranges. A heading anchor (`branches`, `capture`, `turning-in-time`, `not-shown`, `open`) is listed with its own line only. I counted the text from such an anchor to the next anchor as the passage (02:16 to 22, 02:491 to 495), and nothing beyond it. Three places sit just outside the listed ranges and would change answers if counted:
+- 02:59 (the paragraph straight after `map-on-the-world`) decides D01, D02, D03, E05.
+- 02:439 (inside §9, which DIR 19 links as "02 §9 to §11") decides F13.
+- 07:116 (the paragraph before `r-keeping-widening-is-generation-losing-nothing`) decides D18, E01, E15.
+
+**A04** `Web.renewingAlong_not_consumingAlong`: TOLD WITH MORE THAN IS PROVED. DIR:33: "renewing from an event excludes consuming from any later event that continues it", given there as "the writer's own working on paper from two proved laws", neither named. The theorem is the same event only (`RenewingAlong R t g → ¬ ConsumingAlong R t g`); the source says it more widely, of every later continuing event, and names no theorem. Borderline: if "later" does not cover the event itself, this is NOT TOLD THERE.
+
+**A08** `Web.renewed_not_consumed`: NOT TOLD THERE. Nearest: 02:125 "a condition whose dependences all return is not consumed (`Web.Restored.not_consumed`)", another notion (returning at some later step); DIR:29 and 02:116 tell the wall of formations, not of a condition.
+
+**A09** `Web.kept_or_broken`: NOT TOLD THERE. Nearest in the sources: 05:161 (`Flow.Balances.broken_iff`), which is not the cover. Outside them, 02:122 "Each step keeps, breaks, forms or dissolves each dependence" does not name it.
+
+**A10** `Web.kept_not_broken`: NOT TOLD THERE.
+
+**A11** `Web.RenewingAt.not_undermining`: NOT TOLD THERE. 07:171 defines within renewal and undermining and states no exclusion. The script's "07" is a substring hit on `Preemption.not_undermining_yet_loses` (07:66), another theorem.
+
+**A12** `Web.RenewingAt.not_breaking`: NOT TOLD THERE.
+
+**A13** `Web.not_renewing_at_of_broken`: NOT TOLD THERE. 07:171's definition of within renewal ("its step keeps every dependence on every condition it takes part in") has it as a contrapositive, not drawn.
+
+**B09** `Renewable.finite_reading_withholds_renewal`: NOT TOLD THERE. 02:128 tells the companion by name: "a reading fixed by `h` steps that includes every renewing run includes a consuming one (`Renewable.finite_reading_includes_consumption`)". The statement's own form (a reading with no consuming run leaves out an exhibited renewing run) is not stated. Borderline: classically the contrapositive.
+
+**B10** `Optimum.Holding.doubling_capacity`: NOT TOLD THERE. No chapter has `doubling_capacity`.
+
+**B16** `Ranking.wholeRun_of_renewed`: NOT TOLD THERE.
+
+**B17** `Ranking.stepwise_of_renewed`: NOT TOLD THERE.
+
+**B18** `Ranking.renewed_extends_iff`: TOLD IN ANOTHER CHAPTER PLACE ONLY. 07:835: "under the whole-run or the stepwise reading, a course renewing every condition extends another exactly when it is active at every event the other includes and at some event the other withholds (`Ranking.renewed_extends_iff`)".
+
+**C01** `Ranking.renewed_active_extends_iff`: NOT TOLD THERE. No chapter names it.
+
+**C06** `SupportGatedWebs.jointly_consuming`: TOLD WITH MORE THAN IS PROVED. 02:116: "two drawers each within renewal can together consume it (`RelationalRenewal.Law.jointly_consuming`)". Left out: the joint draw exceeds the renewal at every step, the need is positive, the need is met at the start; the end of both formations from some step on is not told either. The name cited is the twin in `RelationalRenewal`, not this web form, and the sentence says "can".
+
+**C10** `Web.RenewingInWithin.not_undermining_for`: NOT TOLD THERE.
+
+**C11** `Web.RenewingInWithin.not_consuming`: NOT TOLD THERE. Nearest: 02:125 "Return grades renewal: within `p` steps, at some later step, never. The grades are ordered; consumption is exactly a dependence that never returns", and DIR:29; neither states that a formation renewing within `p` is not consuming. The match in DIR:29 is `Web.renewing_not_consuming`, another theorem.
+
+**C14** `RelationalRenewal.renewed_not_consumed`: NOT TOLD THERE.
+
+**C15** `RelationalRenewal.renewing_not_consuming`: NOT TOLD THERE. DIR:29 "of every web, that no formation is both (`Web.renewing_not_consuming`)" and 02:116 "The two classes exclude each other" tell the package's twin on `Web`; this one is on `RelationalRenewal.Unfolding`. Borderline: the same sentence on another carrier.
+
+**D01** `«尽则非无终»`: TOLD IN ANOTHER CHAPTER PLACE ONLY. 02:59: "Without the decision, ending on every branch reaches an end only up to double negation (`«尽则非无终»`)".
+
+**D02** `«尽而续可定则有终»`: TOLD IN ANOTHER CHAPTER PLACE ONLY. 02:59: "with it, an end (`«尽而续可定则有终»`)". 02:53, inside the range, tells only the World form (`Web.end_of_gone`).
+
+**D03** `«尽则有终当且仅当排中»`: TOLD IN ANOTHER CHAPTER PLACE ONLY. 02:59: "that every line meeting the premise reaches an end (有终) is exactly excluded middle (`Map.end_of_gone_iff_excluded_middle`; on the grammar, `«尽则有终当且仅当排中»`)".
+
+**D07** `LineageRegimes.stock_forces_neither`: TOLD IN ANOTHER CHAPTER PLACE ONLY. 04:165: "The stock alone decides neither fate: in a handover between two relata, from the same stock `s ≥ 1`, a relay with no excess generates and a run-down degenerates (`Handover.both_fates`, `stock_forces_neither`)".
+
+**D09** `LineageRegions.Chain.chain`: NOT TOLD THERE. No chapter has `Chain.chain` or `LineageRegions.Chain`.
+
+**D18** `Run.generation_of_heldKeepsWidening`: TOLD IN ANOTHER CHAPTER PLACE ONLY. 07:116: "on the map that is 全生成 at (the one, what is held) at every moment (`Steps.generation_iff_begins`, `Run.generation_of_heldKeepsWidening`)". 07:123, inside the range, only points to it: "the theorem on the held possible runs one way (above)".
+
+**D21** `Steps.generation_of_reachingKeepsWidening`: TOLD, not by name. 07:121: "Where each point is, at each moment, refuted or unrefuted, keeping widening gives 全生成, the step at which a new point arrives being located with the point (`Steps.generation_of_keepsWidening`, `Steps.change_located`)", with "Keeping widening from a moment is this section's chain form shifted to it". The statement is that law at the first moment in the chain form, with the same one premise.
+
+**D22** `Steps.wem_of_generation_of_keepsWidening`: TOLD, not by name. 07:121: "For every chain, the forward direction is exactly weak excluded middle (`Steps.forward_iff_wem`)". The statement is that iff's forward half (it asks the first moment only).
+
+**D23** `Steps.dne_of_keepsWidening_of_generation`: TOLD, not by name. 07:121: "The converse is exactly excluded middle (`Steps.back_iff_em`)". The statement is that iff's forward half, in the form "every proposition not refuted holds".
+
+**D24** `Web.generation_of_keepsWidening_byName`: TOLD, not by name. 07:121: "So, under the same premises on admission, keeping widening by name is 全生成 of the course's moments at (nothing lost, the same possible) (`Web.keepsWidening_byName_iff_generation`)". The source tells an iff under two premises; the statement is its forward half and takes only the first, so it is told with one premise more than it needs.
+
+**D25** `Web.kept_by_name_and_generation_on_moments`: TOLD, not by name and in parts.
+- 07:121: "On the occurrences, each formation admitted from the moment on is 全守, from nothing lost alone (`Web.kept_of_includes_by_name`)", and the sentence quoted under D24 for the moments.
+- 07:123: "On the occurrences, by name, keeping widening is keeping; on the course's moments it is generation".
+- The conjunct that no occurrence is 全生成 is stated only at 02:51: "Read by names alone nothing is 全生成".
+Borderline: no one sentence has all three.
+
+**E01** `«生生不息»`: TOLD IN ANOTHER CHAPTER PLACE ONLY. 01:151: "it renews (`«生生则复生»`) and does not cease (`«生生不息»`)"; also named at 06:123 and 07:116. Inside the range, 02:29 to 30 give it only through two other rows (`«生生即延»`, `«息即尽»`, `«延尽不并»`).
+
+**E05** `«尽则非不穷»`: TOLD IN ANOTHER CHAPTER PLACE ONLY. 02:59: "those theorems are proved from degeneration through `«尽则非不穷»`". Inside the range, 02:29 does not state it.
+
+**E06** `«生成则延»`: TOLD, not by name, by the definition's own sentence. 02:21: "*Generation* (生成, shēngchéng): along some branch (such a family) the pattern goes on and from every member a carrying renewal between members lies ahead". In the Lean the theorem is a projection of that definition. Borderline: a definition, and line 21 is counted only by taking `branches` to the next anchor.
+
+**E07** `«守则延»`: TOLD, not by name. 02:21: "*keeping* (守, shǒu): along some branch it goes on with no carrying renewal between members"; and 02:45: "Keeping gives keeping from some point on, and so does 全守; it goes on along its branch" (`«守则后守»`, `«后守则延»`). Same borderline as E06; the match at 02:45 is `«后守则延»`, another theorem.
+
+**E08** `Flow.generation_of_brief`: TOLD IN ANOTHER CHAPTER PLACE ONLY. 07:101: "where no support lasts `K + 1` steps every supported endless line is 全生成 (`Flow.generation_of_brief`)".
+
+**E09** `Web.generation_of_one_step_supports`: NOT TOLD THERE.
+
+**E10** `Map.outside_of_not_endless`: NOT TOLD THERE. 02:21 makes 不穷 part of both 全生成 and 全守; that a line not 不穷 is in neither is not drawn there or at 02:56. Borderline: contrapositive of the definitions.
+
+**E11** `Web.keeping_of_carried_on`: NOT TOLD THERE. 02:51 tells `Web.itself_keeps`, another statement.
+
+**E15** `Run.not_unending_of_heldKeepsWidening`: TOLD IN ANOTHER CHAPTER PLACE ONLY. 07:116: "Where it keeps widening, read on the course's moments, from no moment is the course's line under what is held unending … (`«不穷»`, `«生»`; `Run.not_unending_of_heldKeepsWidening`, `Run.begins_of_heldKeepsWidening`)".
+
+**E16** `Flow.persisting_consistent_with_selfConcern`: TOLD IN ANOTHER CHAPTER PLACE ONLY. 07:660: "and with an order increasing in its own continuation on the occasions it met, wherever only ending was at stake there (`Flow.persisting_consistent_with_selfConcern`)"; named again at 07:757.
+
+**E19** `Web.UnderminingOn.exceeded`: NOT TOLD THERE. The chapter hits on "exceeded" are the plain word.
+
+**E20** `Web.Includes.not_undermining`: NOT TOLD THERE. The script's "07" is the same substring hit as A11.
+
+**E21** `Flow.Balances.includes_of_renewed`: NOT TOLD THERE. 07:77 tells its corollary under the same premises: "draws only on conditions renewed over the run | does not narrow (`Flow.Balances.not_narrows_of_renewed`)". In the Lean that corollary is `¬ W.Widens l W.level`, proved from this theorem; the stronger conclusion, that the levels with the part include those without, is not stated. Borderline: told with less than is proved.
+
+**E22** `Flow.Balances.includes_of_renewingIn`: NOT TOLD THERE. DIR:23 "a part of renewing formations does not narrow what can form" has its premises and the weaker conclusion. Same borderline as E21.
+
+**F13** `ClosedCapture.lock_line`: TOLD IN ANOTHER CHAPTER PLACE ONLY. 02:439: "Under the premises of `lock_outlives_loss`, from a locked start the line under the class of being locked or not never ends and each of its steps alters the loss (`ClosedCapture.lock_line`)". Inside the ranges, 02:494 says only, with no premise, "a class that a course keeps while what it does not read changes at every step, on courses that never end"; if that pointer sentence is counted, the answer becomes TOLD WITH MORE THAN IS PROVED.
+
+**F15** `NoReturnAt.recoverable_iff`: NOT TOLD THERE. 07:261 gives the definition ("the first step at which the course is not recoverable"), and 07:263 its use at one step: "That holds exactly where the first step apart comes before the point of no return (`Web.readableInTime_iff`)". "Recoverable exactly before the point" for every step is not stated. The script's "02, 07" are substring hits on `TurningInTime.recoverable_iff_above` and `FourReaders.recoverable_iff_regime`. Borderline.
+
+**F16** `noReturnAt_of_past`: NOT TOLD THERE.
+
+**F18** `TurningInTime.locked_turns_in_time_share_iff`: TOLD, by name. NOTE:22: "`TurningInTime.locked_turns_in_time_share_iff` (C39), from `capture-through-the-rule` to `turning-in-time`: the reader and the judge call it a road, exact; the checker does not". DIR:42 names its sibling `locked_turns_in_time_on_window_iff`, not this one.
+
+**F19** `TurningInTime.noReturnAt_of_below`: TOLD, not by name. 02:508, with every premise the statement takes (a level course that never rises and starts at most `hi`, §5's premises for the use, a positive need at most `H + y`): "so its point of no return, a step in 07 §3.6's sense, is the first step at which its level is below §5's point of no return, a level (`TurningInTime.recoverable_iff_above`, `TurningInTime.noReturnAt_iff_first_below`)". Borderline: "there is one, no later than a step below" is read from "is the first step".
+
+**F20** `TurningInTime.noReturn_exists`: NOT TOLD THERE. 02:508 speaks of "the point of no return of the course as it was" (`turns_in_time_iff_before`) and 02:512 gives it for the witness (`Three.noReturn`); that it exists within `x` steps under these premises is not stated.
+
+**Counts**
+- TOLD: 9 (D21, D22, D23, D24, D25, E06, E07, F18, F19). Only F18 is by name.
+- TOLD WITH MORE THAN IS PROVED: 2 (A04, C06).
+- TOLD IN ANOTHER CHAPTER PLACE ONLY: 12 (B18, D01, D02, D03, D07, D18, E01, E05, E08, E15, E16, F13).
+- NOT TOLD THERE: 26 (A08, A09, A10, A11, A12, A13, B09, B10, B16, B17, C01, C10, C11, C14, C15, D09, E09, E10, E11, E19, E20, E21, E22, F15, F16, F20).
+- All 49 decided.
+
+**What I did not read**
+- FROZEN.md: not opened.
+- Lean: for each item, the statement and its doc comment only, at the lines given; no proofs. I opened definitions only for `RenewingAlong`, `ConsumingAlong`, `Continuing`, `«生成»`, `«守»`, `«延»`, `Includes`, `Exceeds`. I also opened the statements of the siblings `Steps.generation_of_keepsWidening`, `forward_iff_wem`, `back_iff_em`, `Web.keepsWidening_byName_iff_generation`, `Balances.not_narrows_of_renewed`, `Web.renewing_not_consuming` and `RelationalRenewal.Law.jointly_consuming`. Other premises (`Kept`, `Broken`, `RenewingAt`, `Recoverable`, `NoReturnAt`, `Taking`, `WithheldLevels`, the regime's) are taken from the binders as printed.
+- Chapters outside the linked passages: not read; only searched by each theorem's last name component, and the lines found were opened (01:151, 02:59, 02:122, 02:439, 04:165, 06:123, 07:66, 07:101, 07:116, 07:660, 07:757, 07:835). A chapter that tells a statement in words without its name, outside the linked passages, would be missed.
+- 02 §9 and §10 (lines 398 to 489): only 398, 439 (one sentence), 473, 476 and 489.
+- DIRECTION.md outside lines 19 to 44, the plan it links, the result records, the atlas, the glossary and the one page: not read.
+- NOTE.md was read whole; the files it links (readers' returns, its ITEMS.jsonl, the key) were not opened.
+- The script's lists of naming chapters and atlas dynamics: taken as given, except the chapter hits above.

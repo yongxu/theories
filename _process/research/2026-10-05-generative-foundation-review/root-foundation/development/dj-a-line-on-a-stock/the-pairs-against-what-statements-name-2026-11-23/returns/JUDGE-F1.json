@@ -1,0 +1,782 @@
+{
+ "packet": "F",
+ "answers": [
+  {
+   "item": "F01",
+   "verdict": "BUILT CASE",
+   "from_side": "CONSUMING",
+   "to_side": "LASTING",
+   "kind": "under X and not Y",
+   "quote": "web.ConsumingIn 0 ∧ (∀ t, ¬ web.Rises t ()) ∧ ¬ web.Unceasing",
+   "handed_in": "Nothing: no premise. One built web (Growth.web: one condition of three units, never rising; cell n active after step n while a unit is left).",
+   "converse": "None named. No general statement; the section heading ('Arising on a consumed condition ceases') is general in wording, the theorem is this one web.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.ConsumingIn",
+     "of_what": "one formation, cell 0: at some step it draws on a condition that is Consumed (the web's one condition)",
+     "grain": "a whole run (some step for the drawing; Consumed is of the condition's whole history)",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "LASTING",
+     "notion": "Becoming.Web.Unceasing",
+     "of_what": "the web's arising as a whole (some formation arises at arbitrarily late steps), not cell 0's own going on",
+     "grain": "a whole run (arbitrarily late steps)",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "Consuming is said of cell 0 and the denied lasting of the web's arising, so the two are said of different things in one built web; nothing general links them. It is a case of consuming together with arising that stops (it would refute 'ConsumingIn f gives Unceasing', which nobody claims). Unceasing counts as LASTING by a reader's reading only: it is recurrence of arising, not persistence of anything. Docstring agrees with the statement ('arising does not recur' = ¬ Unceasing)."
+  },
+  {
+   "item": "F02",
+   "verdict": "BUILT CASE",
+   "from_side": "CONSUMING",
+   "to_side": "LASTING",
+   "kind": "under X and not Y (CONSUMING of the drawer and not LASTING; RENEWING holds of another formation, the keeper, in the same web)",
+   "quote": "web.RenewingIn .keeper ∧ web.ConsumingIn .drawer ∧ (∀ t, web.UnderminingAt t .drawer) ∧ (∀ t f c, ¬ web.Forms t f c) ∧ ¬ web.Unceasing",
+   "handed_in": "Nothing: no premise. One built web (Turnover.web) under its first naming of formations.",
+   "converse": "None named.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.RenewingIn",
+     "of_what": "the formation .keeper: every condition it takes part in at any step is Renewed",
+     "grain": "a whole run (every step, every condition)",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.ConsumingIn; Becoming.Web.UnderminingAt",
+     "of_what": "the formation .drawer: it draws on a Consumed condition (ConsumingIn), and its event undermines some dependence at every step (UnderminingAt)",
+     "grain": "ConsumingIn: a whole run (some step); UnderminingAt: every step",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "LASTING",
+     "notion": "Becoming.Web.Unceasing",
+     "of_what": "the web's arising as a whole",
+     "grain": "a whole run (arbitrarily late steps)",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "Renewing and consuming are said of two different formations of one web (keeper, drawer), so between those two the statement is an 'across' inside a built case; the denied Unceasing is of the web. No general statement. Docstring says more than the statement in two places: 'nothing arises' (the statement has only ¬ Unceasing, no arising at arbitrarily late steps) and 'the consumer's need having been met at the first' (not a conjunct). Read with F03, which is the same web re-identified."
+  },
+  {
+   "item": "F03",
+   "verdict": "BUILT CASE",
+   "from_side": "CONSUMING",
+   "to_side": "LASTING",
+   "kind": "under both (CONSUMING of .drawer and .idle, with Unceasing of the web); RENEWING denied of every formation",
+   "quote": "(∀ x, ¬ turned.RenewingIn x) ∧ turned.ConsumingIn .drawer ∧ turned.ConsumingIn .idle ∧ (∀ t x, 1 ≤ t → ¬ turned.UnderminingAt t x) ∧ turned.Dissolves 0 .keeper .spring ∧ turned.Forms 0 .keeper .pool ∧ turned.Unceasing",
+   "handed_in": "Nothing: no premise. One built web, `turned := web.reidentify exchange` (the web of F02 with names exchanged at every odd step).",
+   "converse": "None named. As a built case it refutes, for webs: 'some formation consumes → arising does not recur', and 'arising recurs → some formation renews'.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.RenewingIn",
+     "of_what": "every formation x of the re-identified web",
+     "grain": "a whole run",
+     "denied": true,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.ConsumingIn; Becoming.Web.UnderminingAt",
+     "of_what": "ConsumingIn: the formations .drawer and .idle; UnderminingAt: every formation's event",
+     "grain": "ConsumingIn: a whole run (some step); UnderminingAt: every step from step 1 on",
+     "denied": false,
+     "which_reading": "ConsumingIn holds (not denied); UnderminingAt stands DENIED for every formation at every step t ≥ 1"
+    },
+    {
+     "side": "LASTING",
+     "notion": "Becoming.Web.Unceasing",
+     "of_what": "the web's arising as a whole",
+     "grain": "a whole run (arbitrarily late steps)",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "Under consuming and (by a reader's reading) lasting at once, with no renewing anywhere and no undermining after the first step: consuming of formations and recurring arising of the web do not exclude each other. The lasting here is recurrence of arising produced by the renaming (last conjunct: the arising lowers no condition), not persistence of a formation. The contrast with F02 (same step relations, other naming: renewing + consuming + undermining at every step, arising not recurring) is across two statements; 'with every step's relations unchanged' is in the docstring only. Docstring also says 'formations arise at every odd step'; the statement gives Unceasing, which is less specific."
+  },
+  {
+   "item": "F04",
+   "verdict": "BUILT CASE",
+   "from_side": "LASTING",
+   "to_side": "RENEWING (along one run) and CONSUMING (along another run from the same configuration)",
+   "kind": "under both, twice: Kernel (LASTING) of the focal formation's activity with RENEWING along withinRenewal, and with CONSUMING along beyondRenewal; and of the sustaining formation's activity: under Keepable and not Kernel",
+   "quote": "Kernel process (fun s => conditions.active s .focal) (withinRenewal.state 0) ∧ withinRenewal.state 0 = beyondRenewal.state 0 ∧ RenewingIn (conditions.along withinRenewal) .focal ∧ ConsumingIn (conditions.along beyondRenewal) .focal",
+   "handed_in": "Nothing: no premise. One built process (Renewable) with two built runs from one configuration.",
+   "converse": "None named. The pair of runs refutes: 'Kernel of a formation's activity at a configuration → that formation renews along every run from it' and 'Kernel of its activity → it does not consume along any run'; the last two conjuncts refute 'Keepable → Kernel'.",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "LASTING",
+     "notion": "Becoming.Viability.Kernel; Becoming.Viability.Keepable",
+     "of_what": "a guard at one configuration: 'the focal formation is active' (Kernel holds) and 'the sustaining formation is active' (Keepable holds, Kernel denied)",
+     "grain": "Kernel: every branch (every course from the configuration); Keepable: some branch (one whole run)",
+     "denied": false,
+     "which_reading": "Kernel of the focal guard and Keepable of the sustaining guard hold; Kernel of the sustaining guard stands DENIED"
+    },
+    {
+     "side": "RENEWING",
+     "notion": "RelationalRenewal.RenewingIn",
+     "of_what": "the focal formation in the unfolding along the run withinRenewal",
+     "grain": "a whole run (one branch)",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "RelationalRenewal.ConsumingIn",
+     "of_what": "the focal formation in the unfolding along the run beyondRenewal (it draws on some Consumed condition)",
+     "grain": "a whole run (another branch from the same configuration)",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "Two built runs set against each other: from one configuration at which the focal formation's activity is kept under every course, one run has the focal formation renewing and the other has it consuming. So this lasting (of the consumer's own activity, at every branch) places the formation on neither web side; renewing/consuming are facts of a run, lasting-in-the-kernel a fact of the configuration. What ends is another formation: the sustaining one is inactive from step 1 on along the consuming run (fifth conjunct; no listed ceasing notion is used). Docstring says more than the statement: that the consumed condition is 'the condition of the sustaining formation' (the statement only has ConsumingIn ... .focal, some consumed condition), and that the kernel fact is 'shared by every run' (by another theorem). Kernel/Keepable are LASTING by a reader's reading only."
+  },
+  {
+   "item": "F05",
+   "verdict": "BUILT CASE",
+   "from_side": "LASTING",
+   "to_side": "CEASING",
+   "kind": "under both (arising recurs and ceasing recurs), and not under CONSUMING (Living holds)",
+   "quote": "shuttle.Finite ∧ shuttle.ArisingRecurs ∧ shuttle.CeasingRecurs ∧ shuttle.Living",
+   "handed_in": "Nothing: no premise. One built world (shuttle).",
+   "converse": "None named.",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "LASTING",
+     "notion": "Becoming.World.ArisingRecurs (= web.Unceasing)",
+     "of_what": "the world's arising: some relatum arises at arbitrarily late steps",
+     "grain": "a whole run (arbitrarily late steps)",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CEASING",
+     "notion": "Becoming.World.CeasingRecurs",
+     "of_what": "the world's ceasing: some relatum ceases at arbitrarily late steps",
+     "grain": "a whole run (arbitrarily late steps)",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.World.Living (built from Becoming.Web.UnderminingAt)",
+     "of_what": "every active relatum's event at every step: none undermines",
+     "grain": "every step, every active relatum",
+     "denied": true,
+     "which_reading": "Living holds, so undermining stands DENIED of every active relatum at every step"
+    }
+   ],
+   "note": "A built world where recurring arising and recurring ceasing hold together and no active relatum undermines: ceasing here is not from consuming. ArisingRecurs is LASTING by a reader's reading only; in this world it holds together with recurring ceasing, so it is not persistence of any one relatum. Living denies undermining only of active relata. Docstring matches the statement."
+  },
+  {
+   "item": "F06",
+   "verdict": "BUILT CASE",
+   "from_side": "LASTING",
+   "to_side": "CONSUMING",
+   "kind": "under both (arising recurs, and not every active event is free of undermining); CEASING (recurring) also holds",
+   "quote": "selfDrawing.Finite ∧ selfDrawing.ArisingRecurs ∧ selfDrawing.CeasingRecurs ∧ ¬ selfDrawing.Living",
+   "handed_in": "Nothing: no premise. One built world (selfDrawing).",
+   "converse": "None named. As a case it refutes 'arising recurs → every event living' and 'some active event undermines → arising does not recur'.",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "LASTING",
+     "notion": "Becoming.World.ArisingRecurs",
+     "of_what": "the world's arising",
+     "grain": "a whole run (arbitrarily late steps)",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CEASING",
+     "notion": "Becoming.World.CeasingRecurs",
+     "of_what": "the world's ceasing",
+     "grain": "a whole run (arbitrarily late steps)",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.World.Living (built from Becoming.Web.UnderminingAt)",
+     "of_what": "the active relata's events: Living is denied, so not all active events are free of undermining",
+     "grain": "some step, some active relatum (as ¬∀)",
+     "denied": false,
+     "which_reading": "Living stands denied, which puts the world under undermining (CONSUMING holds)"
+    }
+   ],
+   "note": "Docstring says more than the statement: 'the same activity as shuttle', which relatum undermines (the holder drawing on its own standing at its ending), and the remark on the stepwise reading (D6) are not conjuncts; the statement gives only ¬ Living."
+  },
+  {
+   "item": "F07",
+   "verdict": "BUILT CASE",
+   "from_side": "LASTING",
+   "to_side": "CEASING",
+   "kind": "under neither (arising does not recur, ceasing does not recur, and no active relatum undermines)",
+   "quote": "mutualism.Finite ∧ ¬ mutualism.ArisingRecurs ∧ ¬ mutualism.CeasingRecurs ∧ mutualism.Living",
+   "handed_in": "Nothing: no premise. One built world (mutualism).",
+   "converse": "None named.",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "LASTING",
+     "notion": "Becoming.World.ArisingRecurs",
+     "of_what": "the world's arising",
+     "grain": "a whole run (arbitrarily late steps)",
+     "denied": true,
+     "which_reading": ""
+    },
+    {
+     "side": "CEASING",
+     "notion": "Becoming.World.CeasingRecurs",
+     "of_what": "the world's ceasing",
+     "grain": "a whole run (arbitrarily late steps)",
+     "denied": true,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.World.Living (built from Becoming.Web.UnderminingAt)",
+     "of_what": "every active relatum's event at every step",
+     "grain": "every step",
+     "denied": true,
+     "which_reading": "Living holds, so undermining stands DENIED"
+    }
+   ],
+   "note": "This case shows why ArisingRecurs is LASTING only by a reading: the docstring's 'nothing arises or ceases' is the world that simply stays, and it stands under ¬ ArisingRecurs. The docstring's 'nothing arises or ceases' is stronger than the statement's ¬ ArisingRecurs ∧ ¬ CeasingRecurs (which deny only arbitrarily late arising and ceasing)."
+  },
+  {
+   "item": "F08",
+   "verdict": "BUILT CASE",
+   "from_side": "CONSUMING",
+   "to_side": "LASTING",
+   "kind": "under X and not Y (not every active event is free of undermining; arising does not recur); recurring CEASING also denied",
+   "quote": "drawdown.Finite ∧ ¬ drawdown.ArisingRecurs ∧ ¬ drawdown.CeasingRecurs ∧ ¬ drawdown.Living",
+   "handed_in": "Nothing: no premise. One built world (drawdown).",
+   "converse": "None named. As a case it refutes 'some active event undermines → ceasing recurs'.",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.World.Living (built from Becoming.Web.UnderminingAt)",
+     "of_what": "the active relata's events",
+     "grain": "some step, some active relatum (as ¬∀)",
+     "denied": false,
+     "which_reading": "Living stands denied, so undermining holds"
+    },
+    {
+     "side": "LASTING",
+     "notion": "Becoming.World.ArisingRecurs",
+     "of_what": "the world's arising",
+     "grain": "a whole run (arbitrarily late steps)",
+     "denied": true,
+     "which_reading": ""
+    },
+    {
+     "side": "CEASING",
+     "notion": "Becoming.World.CeasingRecurs",
+     "of_what": "the world's ceasing",
+     "grain": "a whole run (arbitrarily late steps)",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "Undermining with neither recurring arising nor recurring ceasing. The statement denies only recurrence; it does not say that nothing ceases once. Docstring names which relatum undermines (the parent's taking leaves the pool below its own need); the statement has only ¬ Living."
+  },
+  {
+   "item": "F09",
+   "verdict": "BUILT CASE",
+   "from_side": "LASTING",
+   "to_side": "CONSUMING",
+   "kind": "under both (arising recurs, and not every active event is free of undermining)",
+   "quote": "grazing.Finite ∧ grazing.ArisingRecurs ∧ ¬ grazing.Living",
+   "handed_in": "Nothing: no premise. One built world (grazing).",
+   "converse": "None named. As a case it refutes 'arising recurs → every event living'.",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "LASTING",
+     "notion": "Becoming.World.ArisingRecurs",
+     "of_what": "the world's arising",
+     "grain": "a whole run (arbitrarily late steps)",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.World.Living (built from Becoming.Web.UnderminingAt)",
+     "of_what": "the active relata's events",
+     "grain": "some step, some active relatum (as ¬∀)",
+     "denied": false,
+     "which_reading": "Living stands denied, so undermining holds"
+    }
+   ],
+   "note": "Docstring says more: that the undermining is the grazer's at the first step, of the browser's dependence on the pool (a dependence of another relatum, never active). The statement has only ¬ Living."
+  },
+  {
+   "item": "F10",
+   "verdict": "BUILT CASE",
+   "from_side": "CONSUMING",
+   "to_side": "CEASING",
+   "kind": "under X and not Y (the drawer's relation to the soil undermines at step 0; no relatum ceases at any step)",
+   "quote": "seedbank.web.UnderminingOn 0 .drawer .soil ∧ ¬ seedbank.Living ∧ ... ∧ (∀ t, ¬ seedbank.web.active t .seed) ∧ ∀ t x, ¬ seedbank.web.Ceases t x",
+   "handed_in": "Nothing: no premise. One built world (seedbank).",
+   "converse": "None named. The case refutes 'undermining (even with the level after the step below a persisting dependence's unchanged need) → something ceases'.",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.UnderminingOn; Becoming.World.Living",
+     "of_what": "UnderminingOn: the drawer's relation to the condition soil, undermining a dependence (the seed's on the soil, per the third conjunct); Living denied of the world",
+     "grain": "a step (step 0)",
+     "denied": false,
+     "which_reading": "Living stands denied; UnderminingOn holds"
+    },
+    {
+     "side": "CEASING",
+     "notion": "Becoming.Web.Ceases",
+     "of_what": "every relatum x",
+     "grain": "every step",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "Consuming of one going-on (the drawer's draw on the soil) with ceasing denied of every relatum: the undermined dependent, the seed, is never active (eighth conjunct), so there is no activity to end. Undermining therefore does not place anything on CEASING without the dependent being active. Docstring matches the statement ('the undermining co-occurs with no ending')."
+  },
+  {
+   "item": "F11",
+   "verdict": "BUILT CASE",
+   "from_side": "LASTING",
+   "to_side": "CONSUMING",
+   "kind": "all four combinations, one built world each: under X and not Y (shuttle), under both (grazing), under neither (mutualism), under Y and not X (drawdown)",
+   "quote": "(shuttle.Finite ∧ shuttle.ArisingRecurs ∧ shuttle.Living) ∧ (grazing.Finite ∧ grazing.ArisingRecurs ∧ ¬ grazing.Living) ∧ (mutualism.Finite ∧ ¬ mutualism.ArisingRecurs ∧ mutualism.Living) ∧ (drawdown.Finite ∧ ¬ drawdown.ArisingRecurs ∧ ¬ drawdown.Living)",
+   "handed_in": "Nothing: no premise. Four built worlds.",
+   "converse": "The four cases refute every implication between the two among finite worlds: ArisingRecurs → Living (grazing), Living → ArisingRecurs (mutualism), ArisingRecurs → ¬Living (shuttle), ¬Living → ArisingRecurs (drawdown), and their contrapositives; so no wall, no implication, no equivalence.",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "LASTING",
+     "notion": "Becoming.World.ArisingRecurs",
+     "of_what": "a world's arising (some relatum arises at arbitrarily late steps)",
+     "grain": "a whole run",
+     "denied": false,
+     "which_reading": "holds in shuttle and grazing; stands DENIED in mutualism and drawdown"
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.World.Living (built from Becoming.Web.UnderminingAt)",
+     "of_what": "the active relata's events of a world",
+     "grain": "every step (Living) / some step (¬ Living)",
+     "denied": false,
+     "which_reading": "undermining holds (Living denied) in grazing and drawdown; stands DENIED (Living holds) in shuttle and mutualism"
+    }
+   ],
+   "note": "The statement says that recurring arising and undermining by an active relatum are independent among finite worlds: it places the two sides as not placed by each other. Docstring's second sentence (in a finite world whose activity is decided, ceasing recurs exactly when arising does) is not in this statement; it is the business of F12 and of another theorem."
+  },
+  {
+   "item": "F12",
+   "verdict": "BUILT CASE",
+   "from_side": "CEASING",
+   "to_side": "CONSUMING",
+   "kind": "all four combinations, one built world each: under X and not Y (shuttle), under both (grazing), under neither (mutualism), under Y and not X (drawdown)",
+   "quote": "(shuttle.Finite ∧ shuttle.CeasingRecurs ∧ shuttle.Living) ∧ (grazing.Finite ∧ grazing.CeasingRecurs ∧ ¬ grazing.Living) ∧ (mutualism.Finite ∧ ¬ mutualism.CeasingRecurs ∧ mutualism.Living) ∧ (drawdown.Finite ∧ ¬ drawdown.CeasingRecurs ∧ ¬ drawdown.Living)",
+   "handed_in": "Nothing: no premise. Four built worlds.",
+   "converse": "The four cases refute every implication between recurring ceasing and undermining among finite worlds: CeasingRecurs → ¬Living (shuttle), CeasingRecurs → Living (grazing), Living → CeasingRecurs (mutualism), ¬Living → CeasingRecurs (drawdown).",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "CEASING",
+     "notion": "Becoming.World.CeasingRecurs",
+     "of_what": "a world's ceasing (some relatum ceases at arbitrarily late steps)",
+     "grain": "a whole run",
+     "denied": false,
+     "which_reading": "holds in shuttle and grazing; stands DENIED in mutualism and drawdown"
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.World.Living (built from Becoming.Web.UnderminingAt)",
+     "of_what": "the active relata's events of a world",
+     "grain": "every step (Living) / some step (¬ Living)",
+     "denied": false,
+     "which_reading": "undermining holds (Living denied) in grazing and drawdown; stands DENIED in shuttle and mutualism"
+    }
+   ],
+   "note": "Recurring ceasing and undermining are independent among these finite worlds: ceasing recurs without any undermining (shuttle), and undermining occurs without recurring ceasing (drawdown). Docstring's reason ('activity decided, so ceasing recurs exactly where arising does') is not stated here; the statement is the four conjunctions only."
+  },
+  {
+   "item": "F13",
+   "verdict": "IMPLIES",
+   "from_side": "LOCK",
+   "to_side": "LASTING",
+   "kind": "",
+   "quote": "(locked : Locked M favours hA (a, g)) : «不穷» (Law.step (Pace.step (join fA fB) (joinRead hA) reads)) (lockedAlike M favours hA) ((a, b), g, 0)",
+   "handed_in": "raises : Raises P favours fA; monotone : ReadsShare P M hA; upper (favouring kept upward in M); accrues : Accrues fB (used for the second conjunct, the loss altering at every step). The class lockedAlike and the step are given by the statement, not handed in.",
+   "converse": "No converse named, in the statement or the docstring.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "LOCK",
+     "notion": "Becoming.RuleCapture.Locked (premise); Becoming.ClosedCapture.lockedAlike (the class of the line)",
+     "of_what": "Locked: the share a and the rule g of the start configuration; lockedAlike: two configurations of the joined step alike in whether share and rule are locked",
+     "grain": "Locked: a step (the start, step 0); lockedAlike: every step of the line",
+     "denied": false,
+     "which_reading": "LOCK itself, not reversed: the arguments are in the definition's order (favours g ∧ M.le g (hA a g): the rule in force favours and is not above what the reading of the share gives). lockedAlike is an iff of two Locked statements, symmetric, so it has no direction; from a locked start it is the class 'still locked'."
+    },
+    {
+     "side": "LASTING",
+     "notion": "Becoming.«不穷»",
+     "of_what": "the line from the start ((a, b), g, 0) under the joined two-level step and under the class lockedAlike",
+     "grain": "a whole run (every occurrence the line reaches has a successor)",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "The lasting stated is the lock's own: the step is a total function (Law.step), so a successor always exists; what 不穷 under lockedAlike adds is that every step lands alike in lockedness, which from a locked start is 'locked at every step' (the proof's `stays`). So LOCK at step 0 with these premises gives the LOCK lasting along the whole course: no passage out of the lock, and nothing is said of whether what sustains the course lasts; the second conjunct says only that the loss, a coordinate the class does not read, changes at every step. Docstring matches ('the course stays locked while the coordinate it does not read changes')."
+  },
+  {
+   "item": "F14",
+   "verdict": "BUILT CASE",
+   "from_side": "LOCK",
+   "to_side": "LASTING",
+   "kind": "under both (LASTING stated; LOCK stated only as the class lockedAlike of the line: that the start is Locked is in the proof's `closed_locked`, not in the statement)",
+   "quote": "«不穷» (Law.step (Pace.step (join select lossStep) (joinRead closedRead) (fun _ => true))) (lockedAlike order favours closedRead) ((twoToOne, 0), hi, 0)",
+   "handed_in": "Nothing: no premise. One built course (namespace Beyond: select, lossStep, closedRead, order, favours, start (twoToOne, 0) with rule hi, every step reading).",
+   "converse": "None named.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "LOCK",
+     "notion": "Becoming.ClosedCapture.lockedAlike",
+     "of_what": "the class under which the line is taken: configurations alike in whether share and rule are locked",
+     "grain": "every step of the line",
+     "denied": false,
+     "which_reading": "Neither LOCK nor its reverse by the statement's letter: lockedAlike is a symmetric iff of Locked (itself in the definition's order). The statement does not say on which side of the class the start lies; the proof takes it from `closed_locked` (locked)."
+    },
+    {
+     "side": "LASTING",
+     "notion": "Becoming.«不穷»",
+     "of_what": "the line from ((twoToOne, 0), hi, 0) under the built joined step and the class lockedAlike",
+     "grain": "a whole run",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "From the statement alone: this built course keeps one lock status for ever (every step is alike in lockedness) while each step alters the loss. It is the instance of F13 (`lock_line`) for the reading off the share alone. Docstring says more than the statement: 'the line under being locked never ends' presupposes the start is locked, which is not a conjunct. As in F13 the lasting is of the lock status, since the step is total."
+  },
+  {
+   "item": "F15",
+   "verdict": "PASSAGE",
+   "from_side": "TURN IN TIME",
+   "to_side": "NO RETURN",
+   "kind": "t",
+   "quote": "(point : NoReturnAt feasible keeps l N) {n : Nat} : Recoverable feasible keeps l n ↔ n < N",
+   "handed_in": "Only `point : NoReturnAt feasible keeps l N` (itself the far side's notion). feasible, keeps and l are arbitrary; no other premise.",
+   "converse": "It is an iff: recoverable at n exactly when n < N; so not recoverable at every n with N ≤ n.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "TURN IN TIME",
+     "notion": "Becoming.Recoverable",
+     "of_what": "the course l, relative to a set of feasible courses and what is asked (keeps): some feasible course agreeing with l up to step n keeps",
+     "grain": "a step n (holding at every step n < N); 'some branch' in that it asks for one feasible continuation",
+     "denied": false,
+     "which_reading": "holds at every n < N; stands DENIED at every n with N ≤ n (the other half of the iff)"
+    },
+    {
+     "side": "NO RETURN",
+     "notion": "Becoming.NoReturnAt",
+     "of_what": "the same course l, at the step N",
+     "grain": "from an event on: the first step at which l is not recoverable, and by this statement every step from N on",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "The same course is recoverable at every step before N and at no step from N on: indices 'n < N' and (its negation) 'N ≤ n'. What the theorem adds to the definition of NoReturnAt (not recoverable at N, recoverable at every earlier step) is that recoverability never comes back after N (by `Recoverable.earlier`). Recoverable is the availability of a turn (a feasible course that keeps), not a turn taken. The premise named by the packet is the far side's own notion, so this is the unfolding of a point of no return into a passage rather than a passage derived from independent premises. Docstring matches the statement exactly."
+  },
+  {
+   "item": "F16",
+   "verdict": "IMPLIES",
+   "from_side": "TURN IN TIME (denied: not recoverable at n)",
+   "to_side": "NO RETURN",
+   "kind": "",
+   "quote": "(past : ¬ Recoverable feasible keeps l n) : ∃ N, N ≤ n ∧ NoReturnAt feasible keeps l N",
+   "handed_in": "decided : ∀ n, Recoverable feasible keeps l n ∨ ¬ Recoverable feasible keeps l n (recoverability decided at each step). Nothing else; feasible, keeps, l arbitrary.",
+   "converse": "No converse named in statement or docstring. (NoReturnAt N gives ¬ Recoverable at N by its definition, and at every later step by F15; that is elsewhere.)",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "TURN IN TIME",
+     "notion": "Becoming.Recoverable",
+     "of_what": "the course l relative to feasible and keeps",
+     "grain": "a step n (as premise); every step (in `decided`)",
+     "denied": true,
+     "which_reading": "stands DENIED at the step n in the premise `past`"
+    },
+    {
+     "side": "NO RETURN",
+     "notion": "Becoming.NoReturnAt",
+     "of_what": "the same course l",
+     "grain": "from an event on: a first unrecoverable step N, with N ≤ n",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "Of one course: the turn's availability failing at some step, with recoverability decided at every step, gives a first step N ≤ n of failure. The indices differ (n in the premise, N ≤ n in the conclusion), and NoReturnAt N carries, by its definition, recoverability at every step before N; so the conclusion locates the passage point of F15 at or before n (N may be 0, when the course was never recoverable). `decided` is a real premise here (no classical choice). Docstring matches."
+  },
+  {
+   "item": "F17",
+   "verdict": "BUILT CASE",
+   "from_side": "LOCK (by a reader's reading: RemovesItsReaders)",
+   "to_side": "LASTING (AllPersist)",
+   "kind": "under X and not Y (the course `cleared`); a second built course `keep` is under Y, with X not said of it",
+   "quote": "RemovesItsReaders (SurvivorsPersist slotsOf) slotsOf (fun i => i = .d) cleared ∧ ¬ AllPersist slotsOf cleared ∧ AllPersist slotsOf keep",
+   "handed_in": "Nothing: no premise. Two built courses (cleared, keep) over the built lines `slotsOf` of namespace Habitat; the readers are supplied as `fun i => i = .d`.",
+   "converse": "None named. The course `cleared` refutes 'SurvivorsPersist → AllPersist' (selection by persistence read off the pool the course gives does not give persistence of every listed line).",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "LOCK",
+     "notion": "Becoming.RemovesItsReaders",
+     "of_what": "a selection (SurvivorsPersist slotsOf) and one course (cleared): the selection holds at the course, and the course removes the line .d (alive at step 0, from some step on not alive)",
+     "grain": "a whole run (the removal from some step on)",
+     "denied": false,
+     "which_reading": "Neither Locked nor Locked reversed: no rule, share or order appears; the notion is 'select l ∧ a line of readers is removed from the pool l gives'. It is on the LOCK list by a reader's reading only."
+    },
+    {
+     "side": "LASTING",
+     "notion": "Becoming.AllPersist; Becoming.SurvivorsPersist (built from Becoming.StandsLate)",
+     "of_what": "AllPersist: every listed line under a course (of `cleared`: denied; of `keep`: holds). SurvivorsPersist: every line alive from some step on in `cleared` stands late (holds, as the `select` inside RemovesItsReaders)",
+     "grain": "a whole run (StandsLate: at arbitrarily late steps)",
+     "denied": false,
+     "which_reading": "AllPersist stands DENIED of cleared and holds of keep; SurvivorsPersist holds of cleared"
+    }
+   ],
+   "note": "In one built course lasting holds of the survivors and fails of the listed lines: the same course is under 'every line still alive persists' and under 'not every line persists', the difference being the line the course removed. The two sides are thus not opposed here: the removal is what makes the survivors' lasting hold. The pair cleared/keep shows AllPersist is not empty for these lines. Docstring says more than the statement: 'in the course where the line reads everything, it holds read off either pool' (the statement gives only AllPersist of keep; SurvivorsPersist of keep is not a conjunct), and the story of who reads whom ('its continuation requires the habitat') is not in the statement, where the readers are just the predicate i = .d."
+  },
+  {
+   "item": "F18",
+   "verdict": "PASSAGE",
+   "from_side": "LOCK",
+   "to_side": "LASTING",
+   "kind": "p",
+   "quote": "(locked : Locked M favours hA (w.1, w.2.1)) ... «不穷» (net need (windowAfterShare fA hA sA hL N K) (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x) ↔ ∃ T, (∀ j, j < T → need ≤ (...orbit... j).2 ∧ ¬ (N ≤ (...).2 ∧ (...).2 < K)) ∧ need ≤ (... T).2 ∧ (N ≤ (... T).2 ∧ (... T).2 < K) ∧ H₂ + y₂ ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) (fun w x => RegimeMargin.step giving (use w) x)) (w, x) (T + 1)).2",
+   "handed_in": "The window and what it sets: sA, hL, N, K, sets (inside [N, K) the share becomes Low and the rule kept), lowRule, lowStays. The lock's law premises: raises, monotone, upper. The kept kind's use: uses (= H₂). The regime: nothing, short, meets, keeps; needs (0 < need), within (need ≤ H₂ + y₂); short₁. The overdraw of the course as it was: draws (use at least H₁ where share and rule are not below the start's), below (x < H₁ + y₁), high (x ≤ hi).",
+   "converse": "The statement is an iff, so both directions are stated: the line under the correcting window never ends exactly where the condition holds, and ends otherwise. Docstring: 'Only the \"if\" side has a worked case'.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "LOCK",
+     "notion": "Becoming.RuleCapture.Locked",
+     "of_what": "the share w.1 and the rule w.2.1 of the starting way",
+     "grain": "a step (the start, step 0)",
+     "denied": false,
+     "which_reading": "LOCK itself, not reversed: arguments in the definition's order (the rule in force favours and is not above what the reading of the share gives)."
+    },
+    {
+     "side": "LASTING",
+     "notion": "Becoming.«不穷»",
+     "of_what": "the line from (w, x) of the net (a next only where the level meets the need) of the course whose way is corrected inside the window (windowAfterShare), under the class 一 (everything alike)",
+     "grain": "a whole run",
+     "denied": false,
+     "which_reading": "holds on one range of the iff and stands denied on the other"
+    }
+   ],
+   "note": "The two ranges are the right side of the iff and its failure. Range giving LASTING: there is a T such that on the lock's own course (asItWas (windowAlone ...)) the need is met and the level is outside [N, K) at every j < T, at T the need is met and the level is inside [N, K), and the level at T + 1 is at least H₂ + y₂. Other range (no such T): the corrected line ends (¬ 不穷). So a start under LOCK is placed under LASTING or under ending by a condition on when the window first reads the level and what is left after that step. Two limits: (1) the ending on the other range is said of the corrected line; that the lock's own line ends is not a conjunct here (it is what `draws` and `below` are for, in other laws); (2) the statement does not say the course leaves the lock: that from step T + 1 on the share is Low and the rule kept is `share_corrected_on_course`, cited in the docstring only. 'Turns in time' is in the name and docstring; no listed TURN notion is in the statement, the right side being an explicit condition on levels. Here 不穷 is substantive (the net has a next only where the need is met), unlike F13/F14."
+  },
+  {
+   "item": "F19",
+   "verdict": "PASSAGE",
+   "from_side": "TURN IN TIME",
+   "to_side": "NO RETURN",
+   "kind": "t",
+   "quote": "(below : X n < H + y) : ∃ N, N ≤ n ∧ NoReturnAt (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N",
+   "handed_in": "fall (X never rises), top (X 0 ≤ hi), nothing, short, meets, keeps (the regime under the use H), needs (0 < need), within (need ≤ H + y), below (X n < H + y). None is a listed notion.",
+   "converse": "None named. (That X is recoverable exactly where X n ≥ H + y is `recoverable_iff_above`, named in the docstring, not stated here.)",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "TURN IN TIME",
+     "notion": "Becoming.TurningInTime.Turned (as the feasible courses inside NoReturnAt)",
+     "of_what": "the courses that are the level course X turned to the standing use H at some step T; through NoReturnAt's definition: at each step before N some such turned course agreeing with X so far meets the need at every step, and at N none does",
+     "grain": "a step (each step before N; denied at N); 'some branch' (one turned course)",
+     "denied": false,
+     "which_reading": "available before N, DENIED at N, both inside the unfolding of NoReturnAt"
+    },
+    {
+     "side": "NO RETURN",
+     "notion": "Becoming.NoReturnAt",
+     "of_what": "the level course X (fun t _ => X t), with the turns to H as what is feasible and the need met at every step as what is asked",
+     "grain": "from an event on: a first step N, with N ≤ n",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "The premises do not place the course on the turn's side: they are premises on levels. The statement places the course on NO RETURN at some N ≤ n, and the relation to the turn is carried by NoReturnAt's own definition ('¬ Recoverable ... N ∧ ∀ n, n < N → Recoverable ... n', with feasible := Turned X giving H): before N a turn to H still keeps the need met, at N no turn does. The indices are 'n < N' (in that definition) and 'N' (with 'N ≤ n' in the statement). N may be 0, in which case no step is on the turn's side and there is no passage, only a course never recoverable. Turned is named as a carrier (the feasible set); if one counts only what the theorem adds beyond the definition, it adds existence and the bound N ≤ n from the level being below H + y, and says nothing new of turn against no return. Docstring matches the statement."
+  },
+  {
+   "item": "F20",
+   "verdict": "PASSAGE",
+   "from_side": "TURN IN TIME",
+   "to_side": "NO RETURN",
+   "kind": "t",
+   "quote": "∃ N, N ≤ x ∧ NoReturnAt (Turned (fun j => (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2) giving H₂) (MeetsNeed need) (fun t _ => (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2) N",
+   "handed_in": "nothing, short, meets, keeps (the regime under the use H₂, up to hi), needs (0 < need), within (need ≤ H₂ + y₂), short₁ (giving short of H₁ below y₁), uses₁ (every way on alone's orbit from w uses at least H₁), below (x < H₁ + y₁), high (x ≤ hi). None is a listed notion.",
+   "converse": "None named.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "TURN IN TIME",
+     "notion": "Becoming.TurningInTime.Turned (as the feasible courses inside NoReturnAt)",
+     "of_what": "the courses that are the level course as it was, turned to the use H₂ at some step; through NoReturnAt's definition: before N some such turn meets the need at every step, at N none does",
+     "grain": "a step (each step before N; denied at N); some branch",
+     "denied": false,
+     "which_reading": "available before N, DENIED at N, both inside the unfolding of NoReturnAt"
+    },
+    {
+     "side": "NO RETURN",
+     "notion": "Becoming.NoReturnAt",
+     "of_what": "the level course as it was from (w, x): the level coordinate of the orbit of asItWas alone",
+     "grain": "from an event on: a first step N, with N ≤ x (x being the starting level, so within as many steps as the start has units)",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "As F19, for the course as it was: unconditional existence of the point (no 'where it comes below' premise; the overdraw premises uses₁, short₁, below give it). The course's premises are those of the lock laws' overdraw, but Locked is not named: `alone` is any step of the way. The turn-before / no-turn-at structure is in NoReturnAt's definition, with indices 'n < N' there and 'N ≤ x' here; N may be 0, and then nothing is on the turn's side. Turned is named as the carrier of the feasible courses. Docstring matches ('has a point of no return, within x steps')."
+  },
+  {
+   "item": "F21",
+   "verdict": "BUILT CASE",
+   "from_side": "LOCK",
+   "to_side": "LASTING",
+   "kind": "under X and not Y (the start is Locked; the line under the window [8, 9) ends)",
+   "quote": "¬ «不穷» (net 1 (windowAfter lockShare lockRead noRule 8 9 (fun _ => true)) (fun w x => RegimeMargin.step giving (lockUse w) x)) «一» ((3, true, 0), 9) ∧ RuleCapture.Locked ruleOrder (fun g => g = true) lockRead (3, true) ∧ (∃ T, ...)",
+   "handed_in": "Nothing: no premise. One built course on the lock's own types (lockShare, lockRead, lockUse, giving, need 1), window [8, 9) reading the rule false (noRule), start ((3, true, 0), 9).",
+   "converse": "The case refutes an implication: 'Locked start, and the right side of the turn laws holds (the lock's own course is read at a level in the window with the need met and the next level at least H₂ + y₂ = 3 + 3) → the corrected line never ends'. That right side is the ninth conjunct (∃ T ...); the line still ends. So the 'if' direction of the laws fails without the premise that the kind is kept (last conjunct: for every c > 6 it is not kept below c).",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "LOCK",
+     "notion": "Becoming.RuleCapture.Locked",
+     "of_what": "the share 3 and the rule true of the starting way",
+     "grain": "a step (the start)",
+     "denied": false,
+     "which_reading": "LOCK itself, not reversed: definition's order, with favours := (g = true) and the reading lockRead off the share; the rule true favours and is not above what is read off the share 3."
+    },
+    {
+     "side": "LASTING",
+     "notion": "Becoming.«不穷»",
+     "of_what": "the line from ((3, true, 0), 9) of the net (need 1) of the course with the rule corrected in the window [8, 9), under the class 一",
+     "grain": "a whole run (it reaches ((3, true, 5), 0) in five steps, which has no next)",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "A locked start whose rule is read and set false in time (at level eight, leaving six) and whose line still ends: at step 3 the rule is true again (the orbit conjuncts: ((3, false, 2), 6) then ((3, true, 3), 6)), because the window leaves the share at three and the rule is read off the share again. So a correction of the rule alone is not a passage out of the lock here. Docstring says more than the statement: T = 1 (the statement has ∃ T), and which premises of which laws fail or hold at which constants is 'argued here, not a Lean statement'; the statement carries only the last conjunct. Read against F24 (same band, share set too: goes on)."
+  },
+  {
+   "item": "F22",
+   "verdict": "BUILT CASE",
+   "from_side": "LOCK",
+   "to_side": "LASTING",
+   "kind": "two built starts set against each other: under both (from the level nine), under X and not Y (from the level seven)",
+   "quote": "«不穷» (net 1 (windowAfter lockShare lockRead noRule 6 10 (fun _ => true)) (fun w x => RegimeMargin.step giving (lockUse w) x)) «一» ((3, true, 0), 9) ∧ ... ∧ ¬ «不穷» (net 1 (windowAfter lockShare lockRead noRule 6 10 (fun _ => true)) (fun w x => RegimeMargin.step giving (lockUse w) x)) «一» ((3, true, 0), 7) ∧ ... ∧ RuleCapture.Locked ruleOrder (fun g => g = true) lockRead (3, true)",
+   "handed_in": "Nothing: no premise. One built system (the lock's own types, window [6, 10) reading the rule false, need 1) and two starts differing only in the level: nine and seven.",
+   "converse": "The pair refutes both 'Locked start under this window → the line never ends' (from seven it ends) and 'Locked start → the line ends' (from nine it goes on). No law is stated; the docstring says the pair is the two directions of `locked_turns_in_time_on_window_iff` at these constants.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "LOCK",
+     "notion": "Becoming.RuleCapture.Locked",
+     "of_what": "the share 3 and the rule true, the way common to both starts",
+     "grain": "a step (the start)",
+     "denied": false,
+     "which_reading": "LOCK itself, not reversed (definition's order; favours := (g = true))."
+    },
+    {
+     "side": "LASTING",
+     "notion": "Becoming.«不穷»",
+     "of_what": "two lines of the same net under the class 一: from ((3, true, 0), 9) and from ((3, true, 0), 7)",
+     "grain": "a whole run each",
+     "denied": false,
+     "which_reading": "holds of the line from the level nine; stands DENIED of the line from the level seven (it reaches ((3, true, 3), 0) in three steps, which has no next)"
+    }
+   ],
+   "note": "What the pair shows: with the same locked way and the same window, the level at which the window first reads decides (nine: goes on; seven: ends). It is the built instance of a passage by a parameter (the starting level), with both outcomes exhibited and no range stated. The line from nine goes on although the kind is not kept everywhere (eleventh conjunct) and the rule is true again from step 3 (orbit conjuncts ((3, true, 3), 12), ((3, true, 4), 12)): so that line lasts while back under the rule true with the share three, i.e. lasting here does not come with staying out of the lock. Docstring says more: the constants of the law, the T's, `lock_falls`, and the reasoning for the only-if direction are not conjuncts."
+  },
+  {
+   "item": "F23",
+   "verdict": "BUILT CASE",
+   "from_side": "LASTING",
+   "to_side": "LOCK",
+   "kind": "under X and not Y (the line never ends; the start is not Locked)",
+   "quote": "¬ RuleCapture.Locked ruleOrder (fun g => g = true) lockRead (2, true) ∧ «不穷» (net 1 (windowAfter lockShare lockRead noRule 6 8 (fun _ => true)) (fun w x => RegimeMargin.step giving (lockUse w) x)) «一» ((2, true, 0), 9) ∧ ∀ T, ¬ (6 ≤ (...orbit... T).2 ∧ (...orbit... T).2 < 8)",
+   "handed_in": "Nothing: no premise. One built course: the lock's own types, window [6, 8) reading the rule false, start ((2, true, 0), 9).",
+   "converse": "The case refutes: 'the line under the window never ends → some step of the course as it was is at a level the window reads' when the start is not Locked (the only-if direction of `locked_turns_in_time_on_window_iff` without its premise `locked`), and so also 'never ends under a window → started Locked and was turned'.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "LOCK",
+     "notion": "Becoming.RuleCapture.Locked",
+     "of_what": "the share 2 and the rule true of the starting way",
+     "grain": "a step (the start)",
+     "denied": true,
+     "which_reading": "LOCK itself, not reversed, and DENIED: the rule true favours, but (docstring) the rule read off the share two is false, below the rule in force, so the second half of Locked fails."
+    },
+    {
+     "side": "LASTING",
+     "notion": "Becoming.«不穷»",
+     "of_what": "the line from ((2, true, 0), 9) of the net (need 1) under the window [6, 8), under the class 一",
+     "grain": "a whole run",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "Lasting without the lock and without any reading by the window (third conjunct: no step of the course as it was is at a level in [6, 8)): the rule falls by the share's own reading. So lasting does not place a course on 'was locked and turned in time'. Docstring says more than the statement: the configurations at steps 1 and 2 and the later ones are 'not conjuncts', and that every other premise of the law holds is 'argued here, not a Lean statement'."
+  },
+  {
+   "item": "F24",
+   "verdict": "BUILT CASE",
+   "from_side": "LOCK",
+   "to_side": "LASTING",
+   "kind": "under both (the start is Locked; the line never ends)",
+   "quote": "«不穷» (net 1 (windowAfterShare lockShare lockRead zeroShare noRule 8 9) (fun w x => RegimeMargin.step giving (lockUse w) x)) «一» ((3, true, 0), 9) ∧ (∀ k, (... (1 + 1 + k)).1.1 < 3 ∧ (... (1 + 1 + k)).1.2.1 = false) ∧ RuleCapture.Locked ruleOrder (fun g => g = true) lockRead (3, true)",
+   "handed_in": "Nothing: no premise. One built course: the lock's own types, the window [8, 9) setting the share to nothing (zeroShare) and the rule to false (noRule), need 1, start ((3, true, 0), 9).",
+   "converse": "None named. The case refutes 'Locked start → the line ends' for a course corrected in a window; it is the worked case of the 'if' side of F18 (`locked_turns_in_time_share_iff`), as the docstring says.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "LOCK",
+     "notion": "Becoming.RuleCapture.Locked",
+     "of_what": "the share 3 and the rule true of the starting way",
+     "grain": "a step (the start, step 0)",
+     "denied": false,
+     "which_reading": "LOCK itself, not reversed (definition's order; favours := (g = true))."
+    },
+    {
+     "side": "LASTING",
+     "notion": "Becoming.«不穷»",
+     "of_what": "the line from ((3, true, 0), 9) of the net (need 1) of the course whose share and rule are set in the window [8, 9), under the class 一",
+     "grain": "a whole run",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "By its letter a built case under both. Its conjuncts also give, unnamed, the leaving of the lock: at step 1 the way is (3, true, 1), the start's share and rule; from step 2 on the way is (0, false, n + 2) (third and fifth conjuncts), and a rule false is not favoured (favours is g = true), so Locked fails from step 2 on, though ¬ Locked is not written. So in substance one course is under LOCK at steps 0 and 1, out of it from step 2 on, and never ends: a built passage by index out of the lock, with lasting said of the whole line. Set against F21 (same band, same start, share left alone: the rule returns to true and the line ends), the two statements together show that what decides is the share being set and not only the rule; that contrast is across statements and stated here only in the docstring."
+  }
+ ],
+ "not_read": ""
+}

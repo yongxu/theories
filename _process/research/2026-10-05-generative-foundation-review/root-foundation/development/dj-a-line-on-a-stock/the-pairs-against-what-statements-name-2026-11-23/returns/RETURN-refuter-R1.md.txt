@@ -1,0 +1,187 @@
+REFUTATION OF R1.json: 20 entries, each opened in the Lean at its lines. No Lean, build or test was run and no file was written.
+
+Result: 10 STAND, 8 STAND NARROWED, 2 FALL (B18 and C01, both to NAME ONLY).
+
+Paths are under `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/`: `becoming/Becoming/` (short names below) and `deeper/RelationalRenewal.lean` (written RR).
+
+Question 4 does not arise: no entry reads WIDENS/NARROWS or LOCK and its reverse.
+
+## The 16 standing verdicts
+
+**A04 `Web.renewingAlong_not_consumingAlong` — STANDS (WALL)**
+- ContinuedClasses.lean 93-96; the quote is exact (it breaks over two lines in the file).
+- Both notions are of the same W, R, t, g (definitions at 82-88). Nothing is handed in.
+- The proof is one call: `Web.renewed_not_consumed (renewing u f continuing c (.inr drawn)) consumed`. It is A08 on the one drawn condition; the readers said so.
+
+**A08 `Web.renewed_not_consumed` — STANDS (WALL)**
+- Dependence.lean 218-220; quote exact; same condition c of one web.
+- Direct proof: `Renewed` gives `need T g c ≤ level (T+1) c`; `Consumed` gives `level (T+1) c < need T g c`. Only step T+1 of the "at every later step" is used.
+- One direction only, and both readers say so.
+
+**A09 `Web.kept_or_broken` — STANDS NARROWED (COVERS)**
+- Dependence.lean 234-238; quote exact.
+- The readers wrote of the premises "Neither is a notion of either side". That is not so:
+  - `met` is literally the first conjunct of `Kept` (142-143) and the second of `Broken` (146-147).
+  - `depends` is the first conjunct of `Broken`.
+- With the common part handed in, what is left is `need ≤ level (t+1) ∨ level (t+1) < need`. The proof is `Nat.lt_or_ge` and nothing else (236).
+- Narrowed sentence: "Of one dependence that holds and is met at t, the level after the step is at or above the need (Kept) or below it (Broken): the totality of the order on Nat, with the conjuncts the two notions share handed in."
+- It is a cover of step notions, not of the sides:
+  - `Unmet.consumed_without_loss` (Dependence.lean 385-387) states `(∀ t g, ¬ web.Broken t g ()) ∧ web.Consumed () ∧ … web.ConsumingIn .drawer ∧ ∀ t, ¬ web.UnderminingAt t .drawer`.
+  - So a course can be under whole-run CONSUMING with no Broken anywhere.
+  - `Kept` at one step does not give `Renewed`.
+
+**A10 `Web.kept_not_broken` — STANDS (WALL, between Kept and Broken)**
+- Dependence.lean 240-241; quote exact; same t, g, c.
+- Proof: `Nat.not_le_of_gt fell kept.2`, the definitions unfolded plus one order fact.
+- As a wall between RENEWING and CONSUMING it rests on the reading the readers already flag. The Lean gives `Renewed := ∀ … Kept` (150-151) and `Lost → Consumed` (230). It gives neither Broken → Consumed nor Consumed → some Broken (see A09).
+
+**A11 `Web.RenewingAt.not_undermining` — STANDS (WALL)**
+- Dependence.lean 338-341; quote exact; same event, f at t.
+- Direct proof: `(renewing.2 c (Or.inr drawn) g depends).2` against `fell`.
+- Not used: the `active` conjunct of `RenewingAt`, and the `MetAbove` conjunct of `UnderminingOn`. The wall holds of the wider pair "keeps every dependence on what it draws on" against "level after the step below a present need".
+
+**A12 `Web.RenewingAt.not_breaking` — STANDS (WALL), a corollary**
+- Dependence.lean 343-345. One call: `renewing.not_undermining ⟨c, breaking.undermining⟩`. It is A11 through `BreakingOn.undermining` (333-335); the readers said so.
+- Correction to "CONSUMING by a reader's reading only": `BreakingOn.undermining` is a theorem, so every BreakingAt event is an UnderminingAt event. BreakingAt stands under the listed notion by proof.
+
+**B09 `Renewable.finite_reading_withholds_renewal` — STANDS NARROWED (ACROSS)**
+- LabelledRoles.lean 160-169; quote exact.
+- CONSUMING occurs only negated, inside the hypothesis `sound`. No run is said to consume. RENEWING is affirmed of some run outside the reading.
+- Narrowed sentence: "In the one built process, for every h, no set of runs decided by the first h steps contains every renewing run and no consuming run."
+- That a consuming run exists is entailed (take `reading := fun _ => True`), not stated.
+- The proof is one call of `prefix_does_not_decide h` (Horizon.lean 108-113) plus one use each of `decided` and `sound`. All the placing is in that theorem.
+- General over h and readings, not over processes, as both readers say.
+
+**B16 `Ranking.wholeRun_of_renewed` — STANDS NARROWED (WALL)**
+- Ranking.lean 145-148; quote exact.
+- Not the same thing on the two sides: `Renewed` is premised of every condition of the web; `ConsumingIn` is denied of one formation. Both readers say this.
+- What they did not say:
+  - `∀ c, Renewed c` gives `RenewingIn f` for every f, by definition (Dependence.lean 166-167).
+  - So B16's wall is a weakening of `Web.renewing_not_consuming` (Dependence.lean 222), the same-formation wall with the smaller premise.
+- The left-to-right half is the first projection of `wholeRun` (122-123). The other half is one call, `Web.renewed_not_consumed (renewed c) consumed` (A08).
+- Narrowed sentence: "In one web all of whose conditions are Renewed, a formation active at an event is not ConsumingIn; a weaker form of Web.renewing_not_consuming, proved by A08, delivered only alongside activity."
+
+**B17 `Ranking.stepwise_of_renewed` — STANDS NARROWED (WALL)**
+- Ranking.lean 152-156; quote exact.
+- Different things and different grains: the premise is of all conditions over the whole run; the denial is of one event at one step.
+- The proof term is A11's, inline: `Nat.not_le_of_gt fell (renewed c e.2 g depends).2`. No theorem is called.
+- It follows from A11 through `renewing_at_active` (Dependence.lean 348-350), since `∀ c, Renewed c` and activity give `RenewingAt`. Neither reader named this.
+- Narrowed sentence: "A whole-run premise on every condition of a web excludes UnderminingAt of any active event of it; a case of A11, not a wall between two notions at one index."
+
+**B18 `Ranking.renewed_extends_iff` — FALLS (my verdict: NAME ONLY)**
+- Ranking.lean 161-168; quote exact.
+- ACROSS needs Y said of the other going-on. Here `ConsumingIn` and `UnderminingAt` are said of nothing. They stand inside `wholeRun U w e` and `stepwise U w e`:
+  - once as a hypothesis (`wholeRun U w e → …`);
+  - once under a negation (`¬ wholeRun U w e`, which is "inactive or consuming").
+- The readers disagree on the field: B1 has `denied: true`, B2 `denied: false`. B2 is right that they are neither affirmed nor denied.
+- The consuming notion also stands on the renewing course itself. `ExtendsUnder (wholeRun U) w w'` unfolds to `(∀ e, wholeRun U w e → wholeRun U w' e) ∧ ∃ e, True ∧ wholeRun U w' e ∧ ¬ wholeRun U w e` (Extension.lean 45-47; Ranking.lean 111-112). Neither reader lists that occurrence.
+- The proof is two calls of `extendsUnder_iff_of_exact` (133-141), fed B16 and B17. The statement adds nothing to them about the sides.
+- What can be drawn from it:
+  - with w := w' it gives back B16 and B17;
+  - with added activity premises, a course in which a formation consumes is extended by the renewed one. The statement does not say this, as B1's own note admits.
+
+**C01 `Ranking.renewed_active_extends_iff` — FALLS (my verdict: NAME ONLY, with one corollary that is across)**
+- Ranking.lean 172-183; quote exact.
+- Same ground as B18. The right side `∃ e, ¬ wholeRun U w e` holds when w is merely inactive at one event. Nothing is said to consume.
+- `denied: true` in both C1 and C2 is wrong as a field. C1 wrote that NAME ONLY was defensible.
+- The proof is four calls of B18 with `always` discharging the activity conditions.
+- A one-step consequence the readers did not state, and which is an across-placing:
+  - if some formation is ConsumingIn in `U w`, or some event of w is UnderminingAt, then `∃ e, ¬ reading w e`;
+  - so the renewed, always-active w' extends w.
+- That consequence is a corollary. The statement itself is the iff with the weaker right side.
+
+**C06 `SupportGatedWebs.jointly_consuming` — STANDS (ACROSS)**
+- RenewalFlow.lean 285-296; C1's quote is exact, C2's stops after the third conjunct.
+- RenewingIn is affirmed of `.focal` on two webs and ConsumingIn of `.focal` on a third. The premises are arithmetic on draw and renew, and none carries a side.
+- Neither reader said that the statement is a transport with nothing added: `match Law.jointly_consuming … with`, then `Web.static_renewingIn` / `static_consumingIn` (.mpr). The source is RR 571-585.
+- C2's point is confirmed: `together s r n d1 d2` is by definition `alone s r n (fun t => d1 t + d2 t)` (RR 560-566).
+- No passage is stated. The general statements it is assembled from are of any `Law`, one side each:
+  - `within_renewal_renewing` (RR 339-343);
+  - `overdraw_consuming` (RR 421-425);
+  - `dependent_overdraw_ends_itself` (RR 438-441).
+
+**C10 `Web.RenewingInWithin.not_undermining_for` — STANDS NARROWED (WALL)**
+- Restoration.lean 169-173; quote exact; same f, same p.
+- The grains differ, as both readers say: the whole run of f against one event and its next p steps.
+- Narrowed sentence: "No event of a formation renewing within p is undermining for p."
+- Two readers' remarks to correct:
+  - It extends past "the same p only". With `UnderminingFor.anti` (162-165) and `RenewingInWithin.mono` (157-159), it excludes UnderminingFor q for every q ≥ p.
+  - At p = 1, `undermining_for_one` (139-141) makes `UnderminingFor 1` the listed `UnderminingAt`. There the side does not rest on a reading.
+
+**C11 `Web.RenewingInWithin.not_consuming` — STANDS (WALL)**
+- Restoration.lean 176-178; quote exact; same formation, whole run on both sides.
+- The proof is a chain of two calls: `RenewedWithin.restored` (109-113), then `Restored.not_consumed` (115-119).
+- The wall underneath is `Restored c → ¬ Consumed c`, which is wider than the one stated.
+
+**C14 `RelationalRenewal.renewed_not_consumed` — STANDS (WALL)**
+- RR 138-141; quote exact; same condition.
+- Direct proof: `renewed T g depends` against `lost T (Nat.le_refl T)`. Here Consumed is "from T on" with `T ≤ t`.
+
+**C15 `RelationalRenewal.renewing_not_consuming` — STANDS (WALL), a corollary**
+- RR 143-146; quote exact. One call of C14 on the drawn condition.
+- The point C1 left unchecked is confirmed: `Participates U f c := U.requires f c ∨ U.draws f c` (RR 129-130).
+
+## The four sampled as BUILT CASE or NAME ONLY
+
+**A06 `Web.universal_connects` — STANDS (NAME ONLY)**
+- Correspondence.lean 328-337; quote exact.
+- `UnderminingAt` enters only through `interaction.living` (139-140), on both sides of an iff. `Renewed none` is affirmed of the built condition (`Condition.universal`, 302-303: level 1, need 1, required and drawn by all).
+- No general statement is hidden. The general neighbour is `adjoin_living` (276-284), which is about `UnderminingOn`, not about Renewed.
+- The residue the readers name ("a Renewed condition is undermined by no draw") is in the proof (`Nat.lt_irrefl 1 fell`). I found it as no named theorem: a one-line grep over `becoming/Becoming/*.lean` for a Renewed premise with an Undermining conclusion returned nothing. That grep cannot see statements broken over lines. B17's proof holds the same fact inline.
+
+**B03 `Renewable.class_belongs_to_the_run` — STANDS (BUILT CASE)**
+- Labelled.lean 564-579; closed terms; no general statement.
+- The sub-kind "under X and not Y" does not fit, as both readers say. It is one run under RENEWING and another under CONSUMING, with no denial stated.
+- Missed by both: it is the h = 0 case of `Horizon.prefix_does_not_decide`. That theorem's base case is `⟨withinRenewal, beyondRenewal, …⟩` (Horizon.lean 114) and it is general in h over the same process. It is in Web notions, joined by `Web.static_renewingIn` / `static_consumingIn` (Dependence.lean 206-214).
+- Correction to both readers' remark that the docstring says more by naming "the condition of the sustaining formation": in `Renewable.conditions` (Renewal.lean 74-87) only `.sustaining` requires the one condition. `ConsumingIn .focal` there can be no other dependence.
+
+**B15 `Hibernation.world_readings` — STANDS (BUILT CASE)**
+- Persistence.lean 1128-1145; closed terms.
+- It is `Hibernation.readings` (349-…, conjuncts 13-15) carried into a world by general transport iffs (`roles_renewingIn`, `World.ofRoles_reidentify_consumingIn`, `…_renewingIn`). The readers said so.
+- Missed by both:
+  - The last conjunct, `¬ …RenewingIn (.inl .hibernator)`, is not independent. It follows from the ConsumingIn conjunct by `Web.renewing_not_consuming` (Dependence.lean 222).
+  - The consuming is of a dependence never met. `pool_consumed` (313-314) has the consumer needing 2 at step 0, and the level is 1 at every step (web, 267-268). Nothing is broken or undermined anywhere in that web. This is my reading of the definition, not a stated theorem.
+  - In the unexchanged web the forager draws the pool from the third step on (289). The consuming is the forager's, moved onto the hibernator's name by the exchange. Neither `world_readings` nor the part of `readings` I read states the forager's ConsumingIn.
+
+**C16 `RelationalRenewal.fluctuating_neither` — STANDS (BUILT CASE, under neither)**
+- RR 216-228; closed; no general statement.
+- Missed by both, unless it is their C07, which I could not see: the same unfolding is placed under the cycle reading of RENEWING. `seasonal_renewed_within_two` (Restoration.lean 221-223) states `(Web.static fluctuating).RenewedWithin 2 () ∧ ¬ …RenewedWithin 1 () ∧ ¬ …Renewed ()`. So "under neither" holds of the strict whole-run notions only.
+
+## What the two readers both missed
+
+1. **The 16 are fewer than 16 facts.** By the proof heads:
+   - A04, B16 and C15 are calls of A08 or C14.
+   - A12 is a call of A11; B17 is A11's term again.
+   - C11 is `Restored.not_consumed`.
+   - B18 is `extendsUnder_iff_of_exact` on B16 and B17; C01 is B18.
+   - C06 is `Law.jointly_consuming` transported; B09 wraps `prefix_does_not_decide`.
+   - Independent: A08 (with C14 its static twin), A10/A11 (one inequality at t+1), C10, `Restored.not_consumed`, and A09 (`Nat.lt_or_ge`).
+   - Each wall is the two definitions' opposite inequalities at one shared step, closed by `Nat.not_le_of_gt`.
+
+2. **C14 and C15 are A08 and `Web.renewing_not_consuming` on static webs.** The iffs are `static_renewed`, `static_consumed`, `static_renewingIn`, `static_consumingIn` (Dependence.lean 196-214). Neither proof calls the other.
+
+3. **`Web.renewing_not_consuming` (Dependence.lean 222-223) is not in this file.** It is the same-formation, whole-run wall, and B16 is a weakening of it.
+
+4. **A09's premises are the shared conjuncts of the two notions.** See A09.
+
+5. **Step grain and whole-run grain come apart.** `Unmet.consumed_without_loss` (Dependence.lean 385-387) has whole-run CONSUMING with no Broken and no UnderminingAt at any step. A09, A10, A11, A12 and B17 therefore place nothing about `Consumed` / `ConsumingIn`.
+
+6. **`consumed_iff` (Restoration.lean 121-123) says `Consumed c` is exactly "some dependence holding at T is never met again".** That is the failure of `Restored` for one dependence. So at the grain of a condition, what lies between Renewed and Consumed is Restored-but-not-Renewed. I found no theorem stating `Restored c ∨ Consumed c` in Restoration.lean 44-262; lines 263-335 were not read.
+
+7. **`prefix_does_not_decide` (Horizon.lean 108-113) carries a same-course statement B09 does not.** In the consuming run, for t < h, `RenewingAt t .focal` holds: step-grain RENEWING inside a whole-run CONSUMING course.
+
+8. **C06 and B03 differ on whether the consumer itself ceases.**
+   - In `together` the focal formation needs the condition (need = need, RR 565-566) and is inactive from T on.
+   - In `Renewable.conditions` the focal formation requires nothing and stays active.
+   - The general statement is `dependent_overdraw_ends_itself` (RR 438-441, premise `0 < L.needF`).
+   - This is CONSUMING with CEASING, outside this file's pair.
+
+9. **The remaining misses are under their entries:** A12 (BreakingAt is under UnderminingAt by theorem), C10 (extends to all q ≥ p; listed notion at p = 1), B15 (redundant last conjunct), B18/C01 (the consuming notion inside `ExtendsUnder` on the renewing course; w := w' gives back B16/B17), C16 (`seasonal_renewed_within_two`).
+
+## Not read
+
+- As instructed: FROZEN.md, DIRECTION.md, the chapters, any `fm-` folder.
+- The readers' packets, and the other entries they cite by number (A01, A03, B05, B11, B14, C07, C08, C12). Where a note leans on one of those, I did not check it.
+- Proofs beyond their first lines for: `prefix_does_not_decide` (the h+1 case), `Hibernation.readings` after its tenth component, `dependent_overdraw_ends_itself`.
+- The definitions of `World.ofRoles`, `Reidentify`, `Flow.still`, `Witnesses.profile`, `interacts_reach`, `Valuation.Connected`; Identity.lean; Restoration.lean 263-335; RenewalFlow.lean outside 225-300.
+- All 20 entries were reached, at roughly 75,000 tokens of reading.

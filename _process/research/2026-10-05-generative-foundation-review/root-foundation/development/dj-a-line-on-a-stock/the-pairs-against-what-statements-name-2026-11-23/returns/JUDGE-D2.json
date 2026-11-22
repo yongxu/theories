@@ -1,0 +1,860 @@
+{
+ "packet": "D",
+ "answers": [
+  {
+   "item": "D01",
+   "verdict": "IMPLIES",
+   "from_side": "DEGENERATES",
+   "to_side": "REACHES AN END",
+   "kind": "",
+   "quote": "(h : «尽» R L x) : ¬ ¬ «有终» R L x",
+   "handed_in": "nothing beyond 尽 itself; but the conclusion is only the double negation of 有终, not 有终",
+   "converse": "No converse named in statement or docstring. (The packet's definition of 有终 carries the remark that reaching an end is not degeneration, but this statement says nothing of 有终 → 尽.)",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "DEGENERATES",
+     "notion": "尽",
+     "of_what": "the point x of a line, under step relation R and coarse class L",
+     "grain": "every branch from x on (inductive: everything continuing x ends on every branch)",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "REACHES AN END",
+     "notion": "有终",
+     "of_what": "the same point x under the same R and L",
+     "grain": "some point the coarse line from x reaches (some branch)",
+     "denied": false,
+     "which_reading": "stands under a double negation: ¬¬有终, i.e. it is not refuted, not exhibited"
+    }
+   ],
+   "note": "IMPLIES only up to double negation: of one thing at one index, 尽 gives that 有终 cannot be refuted. The docstring says exactly this ('up to double negation'). Not a passage: both are said of the same x."
+  },
+  {
+   "item": "D02",
+   "verdict": "IMPLIES",
+   "from_side": "DEGENERATES",
+   "to_side": "REACHES AN END",
+   "kind": "",
+   "quote": "(h : «尽» R L x) : (∀ y, «所及» R L x y → «有后» R L y ∨ ¬ «有后» R L y) → «有终» R L x",
+   "handed_in": "that going on (有后) is decided, yes or no, at every point the coarse line from x reaches",
+   "converse": "No converse named in statement or docstring.",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "DEGENERATES",
+     "notion": "尽",
+     "of_what": "the point x under step relation R and coarse class L",
+     "grain": "every branch from x on",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "REACHES AN END",
+     "notion": "有终",
+     "of_what": "the same point x under the same R and L",
+     "grain": "some reached point of the line from x (some branch)",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "Docstring and statement agree. Same thing, same index: the whole line from x ending on every branch, with going-on decided along it, has a reached point that ends."
+  },
+  {
+   "item": "D03",
+   "verdict": "IMPLIES",
+   "from_side": "DEGENERATES",
+   "to_side": "REACHES AN END",
+   "kind": "",
+   "quote": "(∀ (β : Type) (R L : «际» β) (x : β), «尽» R L x → «有终» R L x) ↔ ∀ P : Prop, P ∨ ¬ P",
+   "handed_in": "excluded middle for every proposition: the statement says the implication 尽 → 有终, taken at every carrier, relation and point, holds exactly when excluded middle does",
+   "converse": "No converse (有终 → 尽) named. The iff here is not between the two notions; it is between the universal implication 尽 → 有终 and excluded middle.",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "DEGENERATES",
+     "notion": "尽",
+     "of_what": "any point x of any line (every carrier β in Type, every R, L)",
+     "grain": "every branch from x on",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "REACHES AN END",
+     "notion": "有终",
+     "of_what": "the same point x under the same R, L",
+     "grain": "some reached point (some branch)",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "Not EQUIVALENT in the rubric's sense: the two notions stand as antecedent and consequent of one implication, and that implication (universally quantified) is one side of an iff whose other side is excluded middle. So the statement does not assert DEGENERATES → REACHES AN END outright; it calibrates it: asserting it everywhere is the same as excluded middle. The docstring adds what the statement does not show (that the forward direction is witnessed by Map.StepWhere, and what is undecided there)."
+  },
+  {
+   "item": "D04",
+   "verdict": "BUILT CASE",
+   "from_side": "KEEPS",
+   "to_side": "GENERATES",
+   "kind": "under X and not Y (under KEEPS, strong form, and not GENERATES, strong form)",
+   "quote": "«全守» (Web.continuationStep Web.itself) (web.admitting rising).activityClass (web.admitting rising).carrierClass (S, n) ∧ ¬ «全生成» (Web.continuationStep Web.itself) (web.admitting rising).activityClass (web.admitting rising).carrierClass (S, n)",
+   "handed_in": "n ≤ S (the occurrence is one the rising level admits); the web and the level course 'rising' are built constants of namespace OwnCondition",
+   "converse": "none named",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "KEEPS",
+     "notion": "全守",
+     "of_what": "the occurrence (S, n), formation n at step S, on the line of continuation by name (Web.itself), under the activity class and carrier class of the web admitting at the rising level",
+     "grain": "whole line from the occurrence: never ends, and from some reached point on no carrying renewal ahead",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "GENERATES",
+     "notion": "全生成",
+     "of_what": "the same occurrence, same step relation, same two classes",
+     "grain": "whole line from the occurrence",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "A family of built points (every n ≤ S), no general statement. By the two definitions in the packet, 全守 and 全生成 with the same arguments already exclude each other (one says a renewal lies ahead of every reached point, the other that from some reached point none does), so the denied half adds nothing beyond the first; the pair refutes no implication. The proof line (opened) calls a general law Web.kept_of_includes_by_name with the inclusion half of rising_keeps_widening, so this course is one that keeps widening by name, but WIDENS is not named in the statement. Docstring's 'as nothing is by name' is a general claim not in this statement."
+  },
+  {
+   "item": "D05",
+   "verdict": "BUILT CASE",
+   "from_side": "KEEPS",
+   "to_side": "GENERATES",
+   "kind": "under X and not Y (under KEEPS, strong form, and not GENERATES, strong form), at every occurrence x of the built web",
+   "quote": "∀ x, «全守» (Web.continuationStep (Web.passingContinuation (still.PassesSupport web))) (web.admitting web.level).activityClass (web.admitting web.level).carrierClass x ∧ ¬ «全生成» (Web.continuationStep (Web.passingContinuation (still.PassesSupport web))) (web.admitting web.level).activityClass (web.admitting web.level).carrierClass x",
+   "handed_in": "nothing; web and the flow 'still' are built constants of namespace Saturated. The first conjunct states the case's own feature: \"∀ K, ¬ ∀ t g, ¬ ∀ i, i ≤ K → web.Supported (t + i) g\" (for no bound K is support brief).",
+   "converse": "none named",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "KEEPS",
+     "notion": "全守",
+     "of_what": "every occurrence x (step, formation) of the saturated web, on the line along 'carry on, or pass support', under the activity and carrier classes at the web's own level",
+     "grain": "whole line from x: never ends, from some reached point on no renewal ahead",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "GENERATES",
+     "notion": "全生成",
+     "of_what": "the same occurrences, same line, same classes",
+     "grain": "whole line from x",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "What the case refutes, by its docstring: a 'generation law' with its brevity premise dropped (lasting lines without brief support would be 全生成); here support is not brief at any bound, every line lasts, and each is 全守 and not 全生成. The law itself is not in the statement, so that reading rests on the docstring. As in D04 the denied half follows from 全守 with the same arguments. Lasting (不穷) is inside 全守, not named apart."
+  },
+  {
+   "item": "D06",
+   "verdict": "BUILT CASE",
+   "from_side": "GENERATES",
+   "to_side": "DEGENERATES",
+   "kind": "a pair of built courses set against each other: the relay under GENERATES, the run-down under DEGENERATES; neither 'not' is stated",
+   "quote": "(web (relay s)).stock family 0 = s ∧ (web (runDown s)).stock family 0 = s ∧ ... «生成» (lineStep (flow (relay s)) (web (relay s)) (oneKind Bool)) ((web (relay s)).kindClass (oneKind Bool)) (web (relay s)).carrierClass (0, true) ∧ «退化» (lineStep (flow (runDown s)) (web (runDown s)) (oneKind Bool)) ((web (runDown s)).kindClass (oneKind Bool)) (0, true)",
+   "handed_in": "0 < s; everything else is built (relay s, runDown s, their webs, flows and generations)",
+   "converse": "none named",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "GENERATES",
+     "notion": "生成",
+     "of_what": "the point (0, true) (step 0, member true) of the lineage line of the relay handover at stock s, under kind class and carrier class",
+     "grain": "some branch from that point, a renewal ahead of every point of it",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "DEGENERATES",
+     "notion": "退化",
+     "of_what": "the point (0, true) of the lineage line of the run-down handover at stock s, under kind class",
+     "grain": "every branch from that point",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "The two sides are said of two different built goings-on (across courses), not of one. What the pair shows: the same starting stock s (every s ≥ 1) is compatible with either side, with the differences stated in the same statement (relay: stock stays s, never in excess, never dissipated on; run-down: uptake exceeds replenishment at each of its first s steps, dissipated on at every step). No implication between GENERATES and DEGENERATES is stated or refuted; that the relay does not degenerate or the run-down does not generate is not stated. Docstring says itself that balance, gating, embodiment are not stated here."
+  },
+  {
+   "item": "D07",
+   "verdict": "ACROSS",
+   "from_side": "DEGENERATES",
+   "to_side": "GENERATES",
+   "kind": "",
+   "quote": "(¬ ∀ L W G, GatedPairCourse s L W G → «退化» (lineStep L W (oneKind Bool)) (W.kindClass (oneKind Bool)) (0, true)) ∧ ¬ ∀ L W G, GatedPairCourse s L W G → «生成» (lineStep L W (oneKind Bool)) (W.kindClass (oneKind Bool)) W.carrierClass (0, true)",
+   "handed_in": "0 < s; GatedPairCourse s L W G (balanced, acting, dependent, embodied, descended generations, first generation [true], giving gated at need one, stock s at step 0) stands as the antecedent inside each denied universal",
+   "converse": "none named",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "DEGENERATES",
+     "notion": "退化",
+     "of_what": "the point (0, true) of the lineage line of an arbitrary gated pair course at stock s (bound L, W, G of the first conjunct)",
+     "grain": "every branch from that point",
+     "denied": true,
+     "which_reading": "denied as following from the gated condition: 'not every such course degenerates'; not denied of any named course"
+    },
+    {
+     "side": "GENERATES",
+     "notion": "生成",
+     "of_what": "the point (0, true) of the lineage line of an arbitrary gated pair course at stock s (bound L, W, G of the second conjunct, separately quantified)",
+     "grain": "some branch from that point",
+     "denied": true,
+     "which_reading": "denied as following from the gated condition: 'not every such course generates'"
+    }
+   ],
+   "note": "The statement places neither side with respect to the other: each notion stands alone inside its own denied universal over courses, as a consequence the gated condition at stock s does not force. No course is affirmed to be on either side in the statement (the docstring's 'some gated course generates and some degenerates' is the built pair of D06, and constructively more than ¬∀). ACROSS is the nearest verdict: the two are said of separately quantified courses. The placing of the two sides is in the proof, not the statement: the proof (opened) calls «生成退化不并» (generating and degenerating do not hold together) with Handover.relay_generates and Handover.runDown_degenerates; that wall is used, not stated here."
+  },
+  {
+   "item": "D08",
+   "verdict": "BUILT CASE",
+   "from_side": "GENERATES",
+   "to_side": "KEEPS",
+   "kind": "one built course at one point under two pairs of classes: under GENERATES at the activity classes; under KEEPS and not GENERATES at the support (admitting-at-level) classes",
+   "quote": "«生成» (lineStep Reproduction.Relay.flow web (oneKind Bool)) (web.kindClass (oneKind Bool)) web.carrierClass (0, true) ∧ «守» (lineStep Reproduction.Relay.flow web (oneKind Bool)) ((web.admitting web.level).kindClass (oneKind Bool)) (web.admitting web.level).carrierClass (0, true) ∧ ¬ «生成» (lineStep Reproduction.Relay.flow web (oneKind Bool)) ((web.admitting web.level).kindClass (oneKind Bool)) (web.admitting web.level).carrierClass (0, true)",
+   "handed_in": "nothing; the web and the relay flow are built constants. Stated alongside: every formation embodied, only active formations give, generations Descended.",
+   "converse": "none named",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "GENERATES",
+     "notion": "生成",
+     "of_what": "the point (0, true) of the lineage line (lineStep Relay.flow web), under the web's kind class and carrier class (the docstring's grain of activity)",
+     "grain": "some branch from the first member",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "KEEPS",
+     "notion": "守",
+     "of_what": "the same point of the same line, under the kind class and carrier class of the web admitting at its level (the docstring's grain of support)",
+     "grain": "some branch from the first member, no carrying renewal on it",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "GENERATES",
+     "notion": "生成",
+     "of_what": "the same point of the same line under the support classes",
+     "grain": "some branch",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "Same going-on, same step relation, same point; what differs is only the two class arguments. So the pair shows that which side the one course falls on turns on the classes under which it is read, not on the course. It is not 'under both' at one reading: at the support classes it keeps and does not generate; at the activity classes it generates, and whether it keeps there is not stated. The docstring adds a caution the statement does not carry: support is vacuous in this web (nothing required), so the keep is that of a reading in which activity never changes."
+  },
+  {
+   "item": "D09",
+   "verdict": "ACROSS",
+   "from_side": "GENERATES",
+   "to_side": "DEGENERATES",
+   "kind": "",
+   "quote": "«生成» (lineStep flow web (oneKind Nat)) (web.kindClass (oneKind Nat)) web.carrierClass (0, 1) ∧ «生成» (lineStep flow web (oneKind Nat)) ((web.admitting web.level).kindClass (oneKind Nat)) (web.admitting web.level).carrierClass (1, 2) ∧ «退化» (lineStep flow web (oneKind Nat)) (web.kindClass (oneKind Nat)) (0, 0)",
+   "handed_in": "nothing; one built web, flow and generations (namespace Chain). Stated alongside: Acting, Dependent, embodied, Descended, FirstSupportedOffspring, ByNumber, exact transmission at every step, every generation nonempty, concordance 1 at step 0.",
+   "converse": "none named",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "GENERATES",
+     "notion": "生成",
+     "of_what": "member 1 at step 0, point (0, 1) of the lineage line, under kind and carrier classes at activity; and member 2 at step 1, point (1, 2), under the classes of the web admitting at its level (support)",
+     "grain": "some branch from each of those points",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "DEGENERATES",
+     "notion": "退化",
+     "of_what": "member 0 at step 0, point (0, 0) of the same lineage step relation, under the kind class at activity",
+     "grain": "every branch from that point",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "A built example, with no general statement, in which the two sides are said of different members of one web: member 1 (and member 2, at the other classes) generates, the childless member 0 degenerates. Nothing is said of one member under both or under one and not the other, so none of the BUILT CASE kinds fits; hence ACROSS. It shows only that one web holds a generating lineage and a degenerating one side by side. Docstring agrees with the statement ('childless' is its gloss)."
+  },
+  {
+   "item": "D10",
+   "verdict": "BUILT CASE",
+   "from_side": "GENERATES",
+   "to_side": "DEGENERATES",
+   "kind": "a pair of built courses set against each other, for every horizon H: 'always' under GENERATES, 'upTo H' under DEGENERATES; neither 'not' is stated",
+   "quote": "(∀ t, t ≤ H → (generations always).concordAt t = 2 ∧ (generations (upTo H)).concordAt t = 2 ∧ (generations always).discordAt t = 0 ∧ (generations (upTo H)).discordAt t = 0) ∧ «生成» (lineStep (flow always) (web always) (oneKind Formation)) ((web always).kindClass (oneKind Formation)) (web always).carrierClass (0, (0, true)) ∧ «退化» (lineStep (flow (upTo H)) (web (upTo H)) (oneKind Formation)) ((web (upTo H)).kindClass (oneKind Formation)) (0, (0, true))",
+   "handed_in": "H : Nat, any; all else built (the courses 'always' and 'upTo H')",
+   "converse": "none named",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "GENERATES",
+     "notion": "生成",
+     "of_what": "the point (0, (0, true)), the first marked member at step 0, of the lineage line of the course 'always', under kind and carrier classes",
+     "grain": "some branch from that point",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "DEGENERATES",
+     "notion": "退化",
+     "of_what": "the point (0, (0, true)) of the lineage line of the course 'upTo H', under kind class",
+     "grain": "every branch from that point",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "The two sides are said of two different built courses. What the pair shows: agreement of families through H + 1 and of the selection terms (concordance 2, discordance 0) through H does not decide between GENERATES and DEGENERATES; it refutes 'same terms through a horizon → same side'. The statement gives no index at which one course passes from one side to the other, so it is not a passage. The docstring says more than the statement on one point: that after H the terms differ (the second's zero at H + 1) is not among the conjuncts."
+  },
+  {
+   "item": "D11",
+   "verdict": "BUILT CASE",
+   "from_side": "KEEPS",
+   "to_side": "REACHES AN END",
+   "kind": "two points of one built net: at start 3 under KEEPS in the weak form 后守 only (strong KEEPS and strong GENERATES denied); at b2 under REACHES AN END and not KEEPS (any of three forms) and not GENERATES (either form)",
+   "quote": "¬ «全生成» (net 3 0) alike sameLevel (start 3) ∧ ¬ «全守» (net 3 0) alike sameLevel (start 3) ∧ «后守» (net 3 0) alike sameLevel (start 3) ∧ ¬ «有常» (net 3 0) alike ∧ ¬ «生成» (net 3 0) alike sameLevel b2 ∧ ¬ «守» (net 3 0) alike sameLevel b2 ∧ ¬ «后守» (net 3 0) alike sameLevel b2 ∧ ¬ «全生成» (net 3 0) alike sameLevel b2 ∧ ¬ «全守» (net 3 0) alike sameLevel b2 ∧ «有终» (net 3 0) alike b2",
+   "handed_in": "nothing; net 3 0 (margin three, heater giving nothing), start 3 (window shut, level 3) and b2 (window open, level 2) are built",
+   "converse": "none named",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "KEEPS",
+     "notion": "后守",
+     "of_what": "the occurrence start 3 of the net 3 0, under coarse class 'warm or not' and fine class 'same level'",
+     "grain": "some branch, from a reached point of it on",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "KEEPS",
+     "notion": "全守",
+     "of_what": "start 3, and b2",
+     "grain": "whole line",
+     "denied": true,
+     "which_reading": ""
+    },
+    {
+     "side": "KEEPS",
+     "notion": "守, 后守",
+     "of_what": "the occurrence b2",
+     "grain": "some branch",
+     "denied": true,
+     "which_reading": ""
+    },
+    {
+     "side": "GENERATES",
+     "notion": "全生成 (start 3 and b2), 生成 (b2)",
+     "of_what": "start 3 for the strong form; b2 for both forms",
+     "grain": "whole line (全生成), some branch (生成)",
+     "denied": true,
+     "which_reading": ""
+    },
+    {
+     "side": "REACHES AN END",
+     "notion": "有终",
+     "of_what": "the occurrence b2, under the coarse class 'warm or not'",
+     "grain": "some reached point of the line from b2",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "The statement refutes 后守 → 全守 (keeping from some point on along a branch without the strong form) at start 3, and shows at b2 a point that reaches an end and is in no form of keeping or generating. It does not say b2 is reached from start 3; by the net's definition (opened) b2 is the one-step successor of start 3 along the window's branch, so the two points lie on one forking line: the shut branch keeps, the window's branch ends. That is a fork, not a passage of one course from keeping to ending. The docstring says more than the statement twice: 'it reaches an end' of the set level (有终 at start 3 is in D12, not here) and 'it degenerates' after the window opens (退化 at b2 is not among the conjuncts). ¬有常 is of the net and class, not of a point."
+  },
+  {
+   "item": "D12",
+   "verdict": "BUILT CASE",
+   "from_side": "KEEPS",
+   "to_side": "REACHES AN END",
+   "kind": "under both (KEEPS and REACHES AN END at one point), and under neither of GENERATES and DEGENERATES",
+   "quote": "«守» (net 3 0) alike sameLevel (start 3) ∧ «有终» (net 3 0) alike (start 3) ∧ «新而有终» (net 3 0) alike sameLevel (start 3) ∧ ¬ «生成» (net 3 0) alike sameLevel (start 3) ∧ ¬ «退化» (net 3 0) alike (start 3)",
+   "handed_in": "nothing; the unheated room's net at margin three and its set-level occurrence are built",
+   "converse": "none named",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "KEEPS",
+     "notion": "守",
+     "of_what": "the occurrence start 3 of net 3 0, under 'warm or not' and 'same level'",
+     "grain": "some branch (the docstring: the shut branch)",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "REACHES AN END",
+     "notion": "有终; 新而有终",
+     "of_what": "the same occurrence, under 'warm or not' (and 'same level' for the renewal)",
+     "grain": "some reached point of the line ends (the docstring: along the window's branch); for 新而有终 also some carrying renewal at a reached point",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "GENERATES",
+     "notion": "生成",
+     "of_what": "the same occurrence, same classes",
+     "grain": "some branch",
+     "denied": true,
+     "which_reading": ""
+    },
+    {
+     "side": "DEGENERATES",
+     "notion": "退化",
+     "of_what": "the same occurrence under 'warm or not'",
+     "grain": "every branch",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "One point under two sides at once: it refutes 'KEEPS (守) excludes REACHES AN END' (no wall: the two are of different branches from one point); it refutes REACHES AN END → DEGENERATES (有终 with ¬退化: the converse direction of D01/D02); and it refutes 'a carrying renewal on the line → GENERATES' (新而有终 with ¬生成). Docstring and statement agree; which branch each is along is the docstring's gloss, the statement only gives the existentials."
+  },
+  {
+   "item": "D13",
+   "verdict": "BUILT CASE",
+   "from_side": "KEEPS",
+   "to_side": "GENERATES",
+   "kind": "under X and not Y: under KEEPS (守 and 后守) at both occurrences; not GENERATES (strong form at both, 生成 at kept m only), not REACHES AN END, not DEGENERATES",
+   "quote": "«守» (net m 1) alike sameLevel (start m) ∧ «守» (net m 1) alike sameLevel (kept m) ∧ «后守» (net m 1) alike sameLevel (start m) ∧ «后守» (net m 1) alike sameLevel (kept m) ∧ ¬ «生成» (net m 1) alike sameLevel (kept m) ∧ ¬ «全生成» (net m 1) alike sameLevel (start m) ∧ ¬ «全生成» (net m 1) alike sameLevel (kept m) ∧ ¬ «有终» (net m 1) alike (start m) ∧ ¬ «有终» (net m 1) alike (kept m) ∧ ¬ «退化» (net m 1) alike (start m) ∧ ¬ «退化» (net m 1) alike (kept m)",
+   "handed_in": "1 ≤ m; the matched net (heater giving one, what the window draws) and its two occurrences start m (shut, level m) and kept m (open, level m) are built",
+   "converse": "none named",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "KEEPS",
+     "notion": "守, 后守",
+     "of_what": "the occurrences start m and kept m of net m 1, under 'warm or not' and 'same level'",
+     "grain": "some branch; for 后守 from a reached point of it on",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "GENERATES",
+     "notion": "生成 (kept m only), 全生成 (both)",
+     "of_what": "kept m; start m and kept m",
+     "grain": "some branch; whole line",
+     "denied": true,
+     "which_reading": ""
+    },
+    {
+     "side": "REACHES AN END",
+     "notion": "有终",
+     "of_what": "start m and kept m",
+     "grain": "some reached point",
+     "denied": true,
+     "which_reading": ""
+    },
+    {
+     "side": "DEGENERATES",
+     "notion": "退化",
+     "of_what": "start m and kept m",
+     "grain": "every branch",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "A family of built cases (every margin m ≥ 1) wholly on the KEEPS side, with the other three grammar sides denied. It refutes no implication between two sides; it shows keeping without ending. The docstring says 'at both occurrences ... neither 生成', but the statement denies 生成 only at kept m; ¬生成 at start m is in D14, not here."
+  },
+  {
+   "item": "D14",
+   "verdict": "BUILT CASE",
+   "from_side": "KEEPS",
+   "to_side": "GENERATES",
+   "kind": "under X and not Y (under KEEPS, strong form, at both occurrences; not GENERATES at start m)",
+   "quote": "«全守» (net m 1) alike sameLevel (start m) ∧ «全守» (net m 1) alike sameLevel (Matched.kept m) ∧ ¬ «生成» (net m 1) alike sameLevel (start m)",
+   "handed_in": "1 ≤ m; the matched net and its occurrences are built",
+   "converse": "none named",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "KEEPS",
+     "notion": "全守",
+     "of_what": "the occurrences start m and kept m of net m 1, under 'warm or not' and 'same level'",
+     "grain": "whole line: never ends, from some reached point on no renewal ahead",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "GENERATES",
+     "notion": "生成",
+     "of_what": "the occurrence start m, same classes",
+     "grain": "some branch",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "A family of built cases, no general statement. Here the denied half is not a consequence of the definitions alone as it is in D04/D05: 全守 fixes one reached point after which nothing renews, and 生成 asks only for some branch, so on a branching net the two are not excluded by their forms; the statement gives ¬生成 for this net. The docstring's title reads as a general law ('a heater giving exactly what the window draws keeps'); the statement is of this one family of nets, heater amount 1."
+  },
+  {
+   "item": "D15",
+   "verdict": "BUILT CASE",
+   "from_side": "GENERATES",
+   "to_side": "KEEPS",
+   "kind": "under both (GENERATES and KEEPS in the form 后守) at start 3 on the branching net; on the open net at o4 only ¬后守 is stated",
+   "quote": "¬ «后守» (openNet 3 2) alike sameLevel o4 ∧ (¬ ∀ {z w w' : Occurrence}, net 3 2 z w → net 3 2 z w' → w = w') ∧ «生成» (net 3 2) alike sameLevel (start 3) ∧ «后守» (net 3 2) alike sameLevel (start 3)",
+   "handed_in": "nothing; the overshooting net (margin 3, heater 2), its restriction openNet to open occurrences, start 3 and o4 are built. The middle conjunct states the case's feature: the net 3 2 is not a single line.",
+   "converse": "none named",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "GENERATES",
+     "notion": "生成",
+     "of_what": "the occurrence start 3 of the whole net 3 2, under 'warm or not' and 'same level'",
+     "grain": "some branch",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "KEEPS",
+     "notion": "后守",
+     "of_what": "the same occurrence start 3 of net 3 2",
+     "grain": "some branch, from a reached point of it on",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "KEEPS",
+     "notion": "后守",
+     "of_what": "the occurrence o4 of a different step relation, openNet 3 2 (the net from open occurrences only)",
+     "grain": "some branch from a point on",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "What the pair shows: GENERATES and keeping-from-some-point-on hold together at one point where the net branches, so 'GENERATES → not 后守' fails without the single-line premise; the single-line law the docstring cites («单行则生成后守不并») is not stated here. The docstring says more than the statement: that the thermostat generates on the open net at o4 is not among the conjuncts (only ¬后守 there), nor is it stated that openNet is a single line. The two halves are said of two step relations (openNet and net), so the open-net half and the set-level half are across readings, not one line."
+  },
+  {
+   "item": "D16",
+   "verdict": "BUILT CASE",
+   "from_side": "GENERATES",
+   "to_side": "KEEPS",
+   "kind": "under X and not Y: at o4 and at o3 under GENERATES and not KEEPS (three forms), not DEGENERATES, not REACHES AN END; at start 3 strong KEEPS, REACHES AN END and DEGENERATES all denied",
+   "quote": "∀ {x : Occurrence}, (x = o4 ∨ x = o3) → «生成» (net 3 2) alike sameLevel x ∧ ¬ «守» (net 3 2) alike sameLevel x ∧ ¬ «后守» (net 3 2) alike sameLevel x ∧ ¬ «退化» (net 3 2) alike x ∧ ¬ «全守» (net 3 2) alike sameLevel x ∧ ¬ «有终» (net 3 2) alike x",
+   "handed_in": "nothing; the overshooting net and the occurrences start 3, o4 (open, level 4), o3 (open, level 3) are built",
+   "converse": "none named",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "GENERATES",
+     "notion": "生成",
+     "of_what": "the occurrences o4 and o3 of net 3 2 (window open), under 'warm or not' and 'same level'",
+     "grain": "some branch",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "KEEPS",
+     "notion": "守, 后守, 全守 (o4, o3); 全守 (start 3)",
+     "of_what": "o4 and o3 for all three forms; start 3 for the strong form only",
+     "grain": "some branch (守, 后守); whole line (全守)",
+     "denied": true,
+     "which_reading": ""
+    },
+    {
+     "side": "DEGENERATES",
+     "notion": "退化",
+     "of_what": "start 3, o4, o3",
+     "grain": "every branch",
+     "denied": true,
+     "which_reading": ""
+    },
+    {
+     "side": "REACHES AN END",
+     "notion": "有终",
+     "of_what": "start 3, o4, o3",
+     "grain": "some reached point",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "Built points wholly on the GENERATES side after the window opens, with keeping in every form denied there. Set beside D15/D17 (start 3 generates and keeps), it shows the both-at-once holds at the forking occurrence and not at the open ones, but this statement does not itself state 生成 or 守 at start 3. Docstring and statement agree."
+  },
+  {
+   "item": "D17",
+   "verdict": "BUILT CASE",
+   "from_side": "GENERATES",
+   "to_side": "KEEPS",
+   "kind": "under both",
+   "quote": "«生成» (net 3 2) alike sameLevel (start 3) ∧ «守» (net 3 2) alike sameLevel (start 3)",
+   "handed_in": "nothing; the overshooting net at margin three, heater two, and its set-level occurrence are built",
+   "converse": "none named",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "GENERATES",
+     "notion": "生成",
+     "of_what": "the occurrence start 3 of net 3 2, under 'warm or not' and 'same level'",
+     "grain": "some branch (docstring: the window's branch)",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "KEEPS",
+     "notion": "守",
+     "of_what": "the same occurrence, same net, same classes",
+     "grain": "some branch (docstring: the shut branch)",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "One point under both sides: it refutes 'GENERATES excludes KEEPS' for the some-branch forms (no wall between 生成 and 守 at a forking point). The title reads as a general law ('where the heater gives more than the window takes'); the statement is one net at one margin. The docstring says more than the statement: which branch each is along, and that the point is also 全生成 (cited to another theorem, not stated here)."
+  },
+  {
+   "item": "D18",
+   "verdict": "IMPLIES",
+   "from_side": "WIDENS",
+   "to_side": "GENERATES",
+   "kind": "",
+   "quote": "(keeps : Reaching.KeepsWidening (fun n => Reaching.PossibleHeld P Same adm (r.state n))) (N : Nat) : «全生成» Steps.next «一» (fun n m => Same (r.state n) (r.state m)) N",
+   "handed_in": "a run r of the process P; decided : ∀ n, Same (r.state n) (r.state (n + 1)) ∨ ¬ Same (r.state n) (r.state (n + 1)) (holding is decided between each state and the next)",
+   "converse": "The statement names none. The docstring names the converse's failure: 'not conversely (Oscillating.generation_without_widening)' (item D19).",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "WIDENS",
+     "notion": "Reaching.KeepsWidening",
+     "of_what": "the chain, indexed by the run's steps n, of what is possible from the run's n-th state under the moves that hold the part read by Same (PossibleHeld)",
+     "grain": "the whole run from step 0: nothing held is lost from any step to any later, and after every step something new is held later",
+     "denied": false,
+     "which_reading": "WIDENS: the definition gives Q n x → Q (n + d) x (what the earlier step holds the later holds) and ∃ d x, Q (n + d) x ∧ ¬ Q n x (the later holds something the earlier does not); earlier is the smaller"
+    },
+    {
+     "side": "GENERATES",
+     "notion": "全生成",
+     "of_what": "every moment N of the line of the run's moments (Steps.next, successor on Nat: a single line), under the coarse class the one (all moments alike) and the fine class 'the held part is the same at the two states'",
+     "grain": "the whole line from N on, for every N",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "Of one run: its possible-with-a-part-held keeping widening gives generation in the strong form at every moment, at (the one, what is held). The two notions are said of related but not identical things: widening of the chain of possibles, generation of the moments read under sameness of the held part. Not a passage: no index at which one gives way to the other. Docstring and statement agree; the docstring's route (a line under the part begins after every moment) is the proof's, not the statement's."
+  },
+  {
+   "item": "D19",
+   "verdict": "BUILT CASE",
+   "from_side": "GENERATES",
+   "to_side": "WIDENS",
+   "kind": "under X and not Y (under GENERATES, strong form, at every moment; not WIDENS)",
+   "quote": "(∀ N, «全生成» Steps.next «一» (fun i j => Same (course.state i) (course.state j)) N) ∧ ¬ Reaching.KeepsWidening (fun k => Reaching.PossibleHeld process Same adm (course.state k))",
+   "handed_in": "nothing; process, Same, adm and course are built constants of namespace Oscillating",
+   "converse": "This is the refutation of a converse: it refutes GENERATES → WIDENS in the form 'every moment 全生成 at (the one, the held part) → the possible with the part held keeps widening', the converse of D18 (Run.generation_of_heldKeepsWidening), as the docstring says.",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "GENERATES",
+     "notion": "全生成",
+     "of_what": "every moment N of the built course's line of moments (Steps.next), under the one and 'the rule held is the same at the two states'",
+     "grain": "the whole line from N on, for every N",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "WIDENS",
+     "notion": "Reaching.KeepsWidening",
+     "of_what": "the chain, over the course's steps, of what is possible from the k-th state with the rule held",
+     "grain": "the whole run from step 0",
+     "denied": true,
+     "which_reading": "WIDENS denied: the notion (earlier included in later, something new after every step) fails; the statement does not say which half fails, nor that the chain narrows"
+    }
+   ],
+   "note": "Built case with the same shape of arguments as D18's conclusion and premise, so it does refute D18's converse as stated. Not-widening is not narrowing: ¬KeepsWidening says only that the conjunction of nothing-lost and something-new-after-every-step fails."
+  },
+  {
+   "item": "D20",
+   "verdict": "BUILT CASE",
+   "from_side": "GENERATES",
+   "to_side": "WIDENS",
+   "kind": "under X and not Y (under GENERATES, strong form, at every supported occurrence; not WIDENS)",
+   "quote": "(∀ S f, web.Supported S f → «全生成» (Web.continuationStep (Web.passingContinuation (flow.PassesSupport web))) (web.admitting web.level).activityClass (web.admitting web.level).carrierClass (S, f)) ∧ (∀ S U, S ≤ U → ¬ web.ExceedsAcross (Web.passingContinuation (flow.PassesSupport web)) web.level S U) ∧ ∀ T, ¬ web.KeepsWidening Web.itself web.level T",
+   "handed_in": "nothing; web and flow are built constants of namespace ClosedCycle; web.Supported S f restricts the first conjunct to supported occurrences",
+   "converse": "It refutes GENERATES → WIDENS on the web: 全生成 of the occurrence lines along 'carry on, or pass support' does not give keeping widening of the admitted range. No theorem is named as the one whose converse this is.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "GENERATES",
+     "notion": "全生成",
+     "of_what": "each supported occurrence (S, f) of the cycle, on the line along the continuation 'carry on, or pass support', under the activity and carrier classes of the web admitting at its level",
+     "grain": "the whole line from the occurrence",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "WIDENS",
+     "notion": "Web.KeepsWidening",
+     "of_what": "the range the web's own levels admit, along continuation by name (Web.itself), from a step T on",
+     "grain": "from T on, for every T: denied from every step",
+     "denied": true,
+     "which_reading": "WIDENS denied: Web.KeepsWidening is IncludesAcrossFrom (every formation admitted at the earlier S is linked to one admitted at the later U) with KeepsOpening (the later U admits something linked to nothing admitted at S); earlier is the smaller. The statement does not say the range narrows."
+    }
+   ],
+   "note": "The two halves are along two continuations: generation along the passing continuation, the named notion KeepsWidening denied along continuation by name. Along the passing continuation the statement denies only the exceeding half (¬ExceedsAcross for every S ≤ U), from which, by the definition opened (KeepsOpening needs an ExceedsAcross), keeping widening along it fails too, though it is not stated under that name. The carrier and classes differ from D24's (occurrences under activity and carrier classes here; moments under nothing-lost and same-possible there), so this is not the refutation of D24's converse as D24 is stated. Docstring and statement agree."
+  },
+  {
+   "item": "D21",
+   "verdict": "IMPLIES",
+   "from_side": "WIDENS",
+   "to_side": "GENERATES",
+   "kind": "",
+   "quote": "(wdec : ∀ n x, ¬ Q n x ∨ ¬¬ Q n x) (keeps : Reaching.KeepsWidening Q) : «全生成» next (includes Q) (same Q) 0",
+   "handed_in": "wdec : ∀ n x, ¬ Q n x ∨ ¬¬ Q n x (each point is, at each moment, refuted or unrefuted)",
+   "converse": "Neither the statement nor its docstring names a converse or its failure. (D23, same file, says the converse for every chain would give excluded middle.)",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "WIDENS",
+     "notion": "Reaching.KeepsWidening",
+     "of_what": "a chain Q of predicates indexed by moments (what is held at each step)",
+     "grain": "the whole chain from step 0",
+     "denied": false,
+     "which_reading": "WIDENS: Q n x → Q (n + d) x, and ∃ d x, Q (n + d) x ∧ ¬ Q n x; the earlier is included in the later and the later holds something new"
+    },
+    {
+     "side": "GENERATES",
+     "notion": "全生成",
+     "of_what": "the first moment, 0, of the line of moments (successor), under the coarse class 'nothing lost' (includes Q: all held at n is held at m) and the fine class 'the same possible' (same Q)",
+     "grain": "the whole line of moments from 0",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "Of one chain: its keeping widening is, on the line of its moments, generation in the strong form at the first moment. The coarse class of the generation is widening's own inclusion half (includes Q), so part of the conclusion restates part of the premise; the file's header (lines 68 to 77, opened for the definitions) says as much: a representation, not a join of two notions fixed apart. Docstring and statement agree."
+  },
+  {
+   "item": "D22",
+   "verdict": "IMPLIES",
+   "from_side": "WIDENS",
+   "to_side": "GENERATES",
+   "kind": "",
+   "quote": "(forward : ∀ Q : Nat → Nat → Prop, KeepsWideningFrom Q 0 → «全生成» next (includes Q) (same Q) 0) (P : Prop) : ¬ P ∨ ¬¬ P",
+   "handed_in": "the implication WIDENS → GENERATES itself is what is handed in (as the hypothesis 'forward', for every chain on Nat); the conclusion is weak excluded middle for every proposition",
+   "converse": "No converse named here; D23 is the matching statement for the converse direction.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "WIDENS",
+     "notion": "Steps.KeepsWideningFrom",
+     "of_what": "any chain Q of predicates on Nat, from moment 0",
+     "grain": "from step 0 on, across every stretch",
+     "denied": false,
+     "which_reading": "WIDENS: from N on, includes Q S U for S ≤ U (what is held at the earlier S is held at the later U) and after every S some later U holds an x not held at S. It stands as the antecedent of a hypothesised implication, not asserted."
+    },
+    {
+     "side": "GENERATES",
+     "notion": "全生成",
+     "of_what": "the first moment 0 of the line of moments, under 'nothing lost' and 'the same possible' of the same chain",
+     "grain": "the whole line from 0",
+     "denied": false,
+     "which_reading": "stands as the consequent of the hypothesised implication, not asserted"
+    }
+   ],
+   "note": "The statement does not assert WIDENS → GENERATES; it says what that implication costs: held for every chain with no further premise, it yields weak excluded middle. So it is a statement about the IMPLIES of D21 (that D21's premise wdec cannot be dropped without that logic), not a new placing of the sides. Both notions are named only inside a premise. Docstring and statement agree."
+  },
+  {
+   "item": "D23",
+   "verdict": "IMPLIES",
+   "from_side": "GENERATES",
+   "to_side": "WIDENS",
+   "kind": "",
+   "quote": "(back : ∀ Q : Nat → Nat → Prop, «全生成» next (includes Q) (same Q) 0 → KeepsWideningFrom Q 0) (P : Prop) (unrefuted : ¬¬ P) : P",
+   "handed_in": "the implication GENERATES → WIDENS itself is what is handed in (hypothesis 'back', for every chain on Nat), with ¬¬P; the conclusion is P (double-negation elimination, hence excluded middle)",
+   "converse": "This is about the converse of D21/D22's direction: it says the converse (全生成 at (nothing lost, the same possible) → keeping widening), held for every chain, gives excluded middle. It neither asserts nor refutes that converse; no failure of it is named.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "GENERATES",
+     "notion": "全生成",
+     "of_what": "the first moment 0 of the line of moments of any chain Q on Nat, under 'nothing lost' and 'the same possible'",
+     "grain": "the whole line from 0",
+     "denied": false,
+     "which_reading": "antecedent of a hypothesised implication, not asserted"
+    },
+    {
+     "side": "WIDENS",
+     "notion": "Steps.KeepsWideningFrom",
+     "of_what": "the same chain Q, from moment 0",
+     "grain": "from step 0 on, across every stretch",
+     "denied": false,
+     "which_reading": "WIDENS (earlier S included in later U; something new after every step); consequent of the hypothesised implication, not asserted"
+    }
+   ],
+   "note": "As D22, a statement about an implication between the two sides and not an assertion of it: GENERATES → WIDENS at these classes for every chain is as strong as excluded middle (docstring: 'exhibiting the point needs excluded middle'). Both notions are named only inside a premise. It does not show the converse false: no chain is given that generates and does not keep widening."
+  },
+  {
+   "item": "D24",
+   "verdict": "IMPLIES",
+   "from_side": "WIDENS",
+   "to_side": "GENERATES",
+   "kind": "",
+   "quote": "(keeps : W.KeepsWidening itself l T) : «全生成» Steps.next (Steps.includes fun t f => W.Admits (l t) t f) (Steps.same fun t f => W.Admits (l t) t f) T",
+   "handed_in": "wdec : ∀ t f, ¬ W.Admits (l t) t f ∨ ¬¬ W.Admits (l t) t f (admission is, at each moment, refuted or unrefuted); a web W, a course of levels l, a moment T",
+   "converse": "Neither the statement nor its docstring names a converse. (The file's header, seen while opening the definitions, names an iff under the same premises, Web.keepsWidening_byName_iff_generation; it is not this statement.)",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "WIDENS",
+     "notion": "Web.KeepsWidening",
+     "of_what": "the range of formations the course of levels l admits on the web W, along continuation by name (itself)",
+     "grain": "from the moment T on, across every stretch",
+     "denied": false,
+     "which_reading": "WIDENS: IncludesAcrossFrom (each formation admitted at the earlier S is linked to one admitted at the later U) with KeepsOpening (after every S some later U admits a formation linked to nothing admitted at S); the earlier is the smaller"
+    },
+    {
+     "side": "GENERATES",
+     "notion": "全生成",
+     "of_what": "the moment T of the line of the course's moments (Steps.next), under 'nothing lost' and 'the same possible' of the admitted range",
+     "grain": "the whole line of moments from T on",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "Of one web and one course of levels at one moment T: keeping widening by name gives generation, in the strong form, of the moments' line from T. As in D21 the generation's coarse class is the widening's own inclusion read on moments. Generation here is of the course's moments, not of any formation's occurrence line (D25 denies it there). Docstring and statement agree."
+  },
+  {
+   "item": "D25",
+   "verdict": "IMPLIES",
+   "from_side": "WIDENS",
+   "to_side": "KEEPS (of each admitted occurrence) and GENERATES (of the course's moments)",
+   "kind": "",
+   "quote": "(∀ S f, T ≤ S → W.Admits (l S) S f → «全守» (continuationStep itself) (W.admitting l).activityClass (W.admitting l).carrierClass (S, f) ∧ ¬ «全生成» (continuationStep itself) (W.admitting l).activityClass (W.admitting l).carrierClass (S, f)) ∧ «全生成» Steps.next (Steps.includes fun t f => W.Admits (l t) t f) (Steps.same fun t f => W.Admits (l t) t f) T",
+   "handed_in": "wdec : ∀ t f, ¬ W.Admits (l t) t f ∨ ¬¬ W.Admits (l t) t f; for the first half also T ≤ S and W.Admits (l S) S f (the occurrence is admitted at or after T)",
+   "converse": "none named",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "WIDENS",
+     "notion": "Web.KeepsWidening",
+     "of_what": "the range the levels l admit on the web W, along continuation by name",
+     "grain": "from the moment T on",
+     "denied": false,
+     "which_reading": "WIDENS, as in D24: earlier admitted range included in the later along the continuation, and something new opened after every step"
+    },
+    {
+     "side": "KEEPS",
+     "notion": "全守",
+     "of_what": "each occurrence (S, f) with T ≤ S and f admitted at S, on the line of continuation by name, under the activity and carrier classes of the web admitting at l",
+     "grain": "the whole line from the occurrence: never ends, from some reached point on no renewal ahead",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "GENERATES",
+     "notion": "全生成",
+     "of_what": "the same occurrences (S, f), same line, same classes",
+     "grain": "whole line from the occurrence",
+     "denied": true,
+     "which_reading": ""
+    },
+    {
+     "side": "GENERATES",
+     "notion": "全生成",
+     "of_what": "the moment T of the line of the course's moments, under 'nothing lost' and 'the same possible' of the admitted range",
+     "grain": "the whole line of moments from T on",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "Two placings in one statement. From WIDENS: it gives KEEPS of every admitted formation's own line and GENERATES of the line of moments. Between KEEPS and GENERATES the placing is ACROSS: they are said of two carriers (occurrences of formations; moments of the course), and on the occurrences GENERATES is denied; so under one premise the same notion 全生成 stands affirmed of the moments and denied of the occurrences. The docstring says this ('two carriers ... not the map's two grains of one carrier'). The docstring says the keeping half needs 'nothing lost alone'; the statement hands in the whole of KeepsWidening for both halves, so that sharper claim is not in the statement. The denied 全生成 on occurrences follows from 全守 with the same arguments by the two definitions."
+  }
+ ],
+ "not_read": "None: all 25 items of /Users/ren/theories/tmp/r7/one-model/check/statements23/packets/PD.md were read and answered. Lean lines opened, for definitions and one proof only (no build, no Lean run, no file written): KeepingWidening.lean 1196-1232 and 1840-1863; LineageRegimes.lean 1076-1112 (proof of stock_forces_neither and the end of GatedPairCourse); RoomNet.lean 60-100 plus a grep of its occurrence definitions; HeldPossible.lean 196-222; WideningOnTheMap.lean 60-103 (this took in the tail of the file's header comment, lines 60-84); EventualWidening.lean 276-292; ContinuedClasses.lean 478-492; Grammar.lean 240-246. Not checked: whether b2 is reached from start 3 was worked out by hand from the net's definition, not by Lean."
+}

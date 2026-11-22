@@ -1,0 +1,154 @@
+THIRD READER: five statements, read from the statement, with definitions from the packets and the Lean files at the stated lines. No Lean was run and no file was written.
+
+## A13 — Becoming.Web.not_renewing_at_of_broken (Dependence.lean 352-356)
+
+**Verdict:** WALL.
+
+**X and Y:** X = CONSUMING, as `Web.Broken` (listed there by a reader's reading only). Y = RENEWING, as `Web.RenewingAt`.
+
+**Part of the statement it rests on:** `(joins : W.Participates t f c) (broken : W.Broken t g c) : ¬ W.RenewingAt t f`
+
+**Handed in:**
+- The web `W` (section variable, line 131, made implicit at 186).
+- `joins`: f takes part in c at t (`W.requires t f c ∨ W.draws t f c`, line 163).
+- `broken`: the Broken premise itself.
+
+**Each side:**
+- Broken is said of g's dependence on c across the step from t ("met at `t`, not after the step"). Grain: one dependence, one step. It is affirmed, as a premise. Its definition has no clause on later steps, so it is not `Consumed`.
+- RenewingAt is said of f's event at t. Grain: one formation at one step, quantifying over every condition f takes part in and every dependence on them. It is denied, in the conclusion.
+- Both sit at the same step t and the same condition c. f and g are free and may or may not be the same formation.
+
+**Hesitation:** between WALL and ACROSS (Broken is of g's dependence, RenewingAt of f's event), with IMPLIES a distant third.
+- I chose WALL because `RenewingAt t f` unfolds to `∀ c, Participates t f c → ∀ g, requires t g c → Kept t g c`. The broken dependence (g, c) is one of the things RenewingAt of f already speaks of, so this is not a second going-on.
+- The statement is the contrapositive of that clause joined to `kept_not_broken`.
+- It is not IMPLIES because Y is denied, not given.
+
+**Reach of the wall:** only events at that step t of formations taking part in that c. Nothing is said about other steps, about formations not taking part in c, or about `RenewingIn`, `Renewed` or `Consumed`.
+
+## B10 — Becoming.Optimum.Holding.doubling_capacity (Optimum.lean 9392-9451 in the packet; the theorem stands at 9400-9451 in the file as read)
+
+**Verdict:** BUILT CASE.
+
+**Which of the three:** under both, but one side in each of two built settings. No one web is said to be under both, and by the definitions none could be at the same step and dependence (A10, `kept_not_broken`).
+
+**X and Y:** X = RENEWING, as `Web.Kept`. Y = CONSUMING, as `Web.Broken`. Both are listed by a reader's reading only.
+
+**Part of the statement it rests on:**
+- Second conjunct: `∀ rules, InTurn.Perfect (fun _ z => z + z) oneUnit rules 2 2 → rules 0 0 3 = 3 ∧ (web (onSource (InTurn.levels (fun _ z => z + z) rules 2 3))).Kept 0 .dweller .source`
+- Third conjunct: `∀ rules, InTurn.Perfect (fun _ z => z + z) (fun _ _ _ => 0) rules 2 2 → (web (onSource (InTurn.levels (fun _ z => z + z) rules 2 3))).Broken 0 .dweller .source`
+
+**Handed in:** nothing; the statement is closed. Everything is built:
+- `web` is `Diversion.web` (Selection.lean 847): the dweller requires the source at need 2.
+- `onSource` (Optimum.lean 5063) puts the source along a course and leaves the store at 0.
+- `InTurn.levels` runs with growth "twice what is left", 2 drawers, start level 3.
+- `Perfect` is over a horizon of 2.
+- The floors are `oneUnit` (9334) and the zero floor.
+- The only bound variable is `rules`, ranging over the perfect profiles of each built game.
+
+**Each side:**
+- Kept is said of the dweller's dependence on the source across the step from 0, in the web of every profile perfect under the floor `oneUnit`. Grain: one dependence, one step. Affirmed.
+- Broken is said of the same named dependence at the same step 0, in the web of every profile perfect with no floor. Affirmed.
+- Neither is denied anywhere in the statement.
+
+**A gap in what is stated:**
+- The first conjunct (`Perfect … oneUnit keeping 2 2`) shows that a perfect profile exists under `oneUnit`, so the Kept side is inhabited.
+- The statement gives no perfect profile under the zero floor. As stated, the Broken conjunct is conditional and could be vacuous.
+- I looked only at this statement and its proof, and did not search for an existence theorem elsewhere.
+
+**Hesitation:** between BUILT CASE and PASSAGE kind "p", with ACROSS third.
+- The PASSAGE reading would be from CONSUMING to RENEWING, same index 0, with the parameter being the second argument of `Perfect`: `fun _ _ _ => 0` against `oneUnit`.
+- I chose BUILT CASE for three reasons: there is no premise placing a course on X; the parameter takes two built values, not stated ranges; and it is not "that same course", since the level path `InTurn.levels … rules 2 3` differs with `rules`.
+- It is not ACROSS because nothing general is said. The two webs are two runs of one built game.
+- If kind "p" is meant to admit a two-valued built parameter, this is the item's alternative verdict.
+
+## D07 — Becoming.LineageRegimes.stock_forces_neither (LineageRegimes.lean 1082-1100)
+
+**Verdict:** NAME ONLY. The statement names both sides and places neither with respect to the other.
+
+**X and Y:** X = DEGENERATES, as `«退化»`. Y = GENERATES, as `«生成»`.
+
+**Part of the statement it rests on:** `(¬ ∀ L W G, GatedPairCourse s L W G → «退化» … (0, true)) ∧ ¬ ∀ L W G, GatedPairCourse s L W G → «生成» … (0, true)`
+
+**Handed in:** `pos : 0 < s`. The statement is general in the stock s.
+
+**Each side:**
+- 退化 is named of the point (0, true) of `lineStep L W (oneKind Bool)` under `W.kindClass`, for bound L, W, G meeting `GatedPairCourse s`. It stands only as the consequent of a denied universal.
+- 生成 is named of the same point, with `W.carrierClass` added, in the same position.
+- Neither is affirmed of any course and neither is denied of any course. What is denied is that the stock forces either.
+- Read classically, the statement gives "some gated course at stock s does not degenerate" and "some does not generate". It does not give one that generates or one that degenerates.
+
+**Hesitation:** between NAME ONLY and BUILT CASE under both, across two courses.
+- BUILT CASE is what the docstring says ("some gated course … generates and some degenerates"), what the proof uses (`Handover.relay_generates`, `Handover.runDown_degenerates`), and what D06 `both_fates` states.
+- I chose NAME ONLY because this statement shows no built example. L, W and G are bound, and its two conjuncts are denied implications from a third thing (the gated pair course at stock s) to each side separately.
+- The exclusion `«生成退化不并»` is used in the proof and is not in the statement.
+- No verdict on the list fits "a third thing forces neither side" exactly. NAME ONLY in its "beside the point" sense is the nearest.
+- If a denied universal is to count as the statement-form of an example, the verdict would be BUILT CASE, but none of its three sub-kinds is stated here.
+
+## D09 — Becoming.LineageRegions.Chain.chain (LineageRegions.lean 1017-1053)
+
+**Verdict:** BUILT CASE.
+
+**Which of the three:** under both, each side at a different point of the one built chain. No point is said to be under both, and the statement denies nothing.
+
+**X and Y:** X = GENERATES, as `«生成»`. Y = DEGENERATES, as `«退化»`.
+
+**Part of the statement it rests on:** the last three conjuncts.
+- `«生成» (lineStep flow web (oneKind Nat)) (web.kindClass (oneKind Nat)) web.carrierClass (0, 1)`
+- `«生成» (lineStep flow web (oneKind Nat)) ((web.admitting web.level).kindClass (oneKind Nat)) (web.admitting web.level).carrierClass (1, 2)`
+- `«退化» (lineStep flow web (oneKind Nat)) (web.kindClass (oneKind Nat)) (0, 0)`
+
+**Handed in:** nothing; the statement is closed. `Chain.web`, `flow` and `generations` are built at lines 884-909: formation t+1 stands at step t, formation 0 stands at step 0 only, and each requires its own standing at need 1.
+
+**Each side:**
+- 生成 is said of the occurrence (step 0, member 1) at the grain of activity, and of (step 1, member 2) at the grain of support (the admitting web). Affirmed.
+- 退化 is said of the occurrence (step 0, member 0), the childless member, at the grain of activity. Affirmed.
+- The first 生成 and the 退化 share the same step relation and the same class (`web.kindClass`). They differ only in the point: (0, 1) against (0, 0).
+
+**Hesitation:** between BUILT CASE and ACROSS (generation is of member 1's line, degeneration of member 0's).
+- I chose BUILT CASE because every carrier is built and nothing general is stated.
+- The across-ness is recorded in the sub-kind: two points of one built relation, one side each.
+- The statement does not itself say that (0, 1) does not degenerate or that (0, 0) does not generate. The proof uses `«延尽不并»` for the latter.
+
+## E16 — Becoming.Flow.persisting_consistent_with_selfConcern (PersistingChoices.lean 491-518)
+
+**Verdict:** NAME ONLY. WIDENS is named only as a condition inside an unfolding and inside a premise; nothing is said to widen or to narrow.
+
+**X and Y:** X = LASTING, as `SelectionTerm.Generations.Persists`. Y = WIDENS, as `Weighting.WidensOn`, reached in the conclusion through `Weighting.IncreasingInOwnOn`.
+
+**Part of the statement it rests on:**
+- Premise `(persists : G.Persists)`.
+- Premise `(stake : ∀ a b, ch.Met a b → Weighting.WidensOn items a b → Weighting.AddsOwn items own a b → ¬ ends a ∧ ends b)`.
+- Conclusion `∃ P …, ch.Accords P ∧ Weighting.IncreasingInOwnOn ch.Met items own (fun b a => P a b)`, which unfolds to `∀ a b, ch.Met a b → WidensOn items a b → AddsOwn items own a b → P a b`.
+
+**Handed in:**
+- The laws: `balances`, `acting`, `dependent`, `descended`, `gated`, `coupled`.
+- `persists`.
+- `realized`: a chosen alternative that ends is an overdraw of the family from a short stock.
+- `none`: the shown choices have no cycle.
+- `stake`.
+
+**Each side:**
+- Persists is said of the line of descent G over X on the flow and web: past every step some cohort has a member. Grain: the whole line. Affirmed, as a premise.
+- WidensOn is said of a pair of alternatives `a b : Y → Bool` of the chooser `ch` on the listed items. Grain: one pair of courses open on an occasion. It is neither affirmed nor denied: it stands as an antecedent under `∀ a b` in `stake`, and again as an antecedent in the unfolding of the conclusion.
+- The line and the alternatives are of different types (X and Y). They are joined only through `realized` and `stake`.
+
+**Hesitation:** between NAME ONLY and IMPLIES (LASTING, with premises, gives an order increasing in own continuation), with ACROSS third.
+- I chose NAME ONLY because the conclusion asserts no widening of anything. It asserts that some strict order according with the choices ranks a above b on the met pairs where a widens b and adds to its own continuation.
+- Widening selects the pairs and is not predicated of the persisting line.
+- It is not "of one thing": X is of the line G, and the order is over the chooser's alternatives.
+- The conclusion is an existence (`∃ P`), a consistency, not that the line holds that order.
+- In the proof, the widening premise is only passed to `stake` to obtain `¬ ends a ∧ ends b` (`increasingInOwnOn_of_keeping`, lines 362-368). The work is keeping above ending.
+- It is not ACROSS because Y is not said of any going-on.
+- If a definition "built from a listed notion" is to count as the Y notion itself, the alternative is IMPLIES: Persists with all the listed premises gives the existence of such an order.
+
+## What I did not read
+
+- The forbidden places: FROZEN.md, returns, refute, told, DIRECTION.md, the fm- folders and the chapters.
+- The other items of packets PA, PB, PD and PE, and packet PC.
+- In the Lean, unread:
+  - the `Flow` and `Web` structures;
+  - `Handover.relay` and `runDown` and their lemmas;
+  - `«续»`, `«所及»`, `«传»`, `Web.continuationStep`, and the bodies of `activityClass` and `carrierClass`;
+  - the `ChoiceOccasions` structure and `Accords` (ShownOrder.lean 83-103, located only);
+  - the proof of `«生成退化不并»` (statement only, GrammarMap.lean 296);
+  - `InTurn.perfect_at_floors`.

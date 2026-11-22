@@ -1,0 +1,904 @@
+{
+ "passages": [
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "branches",
+   "found": true,
+   "lines": [
+    16,
+    16
+   ],
+   "names": 0
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "capture",
+   "found": true,
+   "lines": [
+    395,
+    395
+   ],
+   "names": 0
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "map-on-the-world",
+   "found": true,
+   "lines": [
+    55,
+    57
+   ],
+   "names": 5
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "not-shown",
+   "found": true,
+   "lines": [
+    527,
+    527
+   ],
+   "names": 0
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "open",
+   "found": true,
+   "lines": [
+    537,
+    537
+   ],
+   "names": 0
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-becoming-finite-horizon",
+   "found": true,
+   "lines": [
+    127,
+    131
+   ],
+   "names": 11
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-becoming-return-grades",
+   "found": true,
+   "lines": [
+    124,
+    126
+   ],
+   "names": 4
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-generation-and-degeneration-at-two-grains",
+   "found": true,
+   "lines": [
+    23,
+    54
+   ],
+   "names": 73
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-regulation-from-one-side-and-locally",
+   "found": true,
+   "lines": [
+    381,
+    383
+   ],
+   "names": 5
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-relational-renewal-classification",
+   "found": true,
+   "lines": [
+    115,
+    117
+   ],
+   "names": 7
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-supported-renewal-recovery",
+   "found": true,
+   "lines": [
+    135,
+    137
+   ],
+   "names": 2
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-the-lock-draws-its-readers-out",
+   "found": true,
+   "lines": [
+    475,
+    477
+   ],
+   "names": 26
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-turning-in-time",
+   "found": true,
+   "lines": [
+    499,
+    513
+   ],
+   "names": 73
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "runs",
+   "found": true,
+   "lines": [
+    110,
+    114
+   ],
+   "names": 4
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "turning-in-time",
+   "found": true,
+   "lines": [
+    491,
+    491
+   ],
+   "names": 0
+  },
+  {
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-selection-through-couplings",
+   "found": true,
+   "lines": [
+    26,
+    34
+   ],
+   "names": 9
+  },
+  {
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-re-optimizing-above-a-renewal-ends-it",
+   "found": true,
+   "lines": [
+    221,
+    221
+   ],
+   "names": 15
+  },
+  {
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-what-a-rise-draws-from-beyond",
+   "found": true,
+   "lines": [
+    160,
+    164
+   ],
+   "names": 14
+  },
+  {
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-a-loss-read-before-its-point-of-no-return",
+   "found": true,
+   "lines": [
+    260,
+    280
+   ],
+   "names": 24
+  },
+  {
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-becoming-stepwise-reading",
+   "found": true,
+   "lines": [
+    170,
+    172
+   ],
+   "names": 4
+  },
+  {
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-four-cases-of-a-part",
+   "found": true,
+   "lines": [
+    56,
+    58
+   ],
+   "names": 17
+  },
+  {
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-keeping-widening-is-generation-losing-nothing",
+   "found": true,
+   "lines": [
+    120,
+    124
+   ],
+   "names": 23
+  },
+  {
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-the-run-classes-and-widening",
+   "found": true,
+   "lines": [
+    72,
+    83
+   ],
+   "names": 7
+  },
+  {
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "reading-in-time",
+   "found": true,
+   "lines": [
+    245,
+    249
+   ],
+   "names": 0
+  }
+ ],
+ "controls": {
+  "Becoming.Clearing.narrows": [
+   "07-SIGNIFICANCE.md#r-four-cases-of-a-part"
+  ],
+  "Becoming.Clearing.read_not_direction": [
+   "07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+  ],
+  "Becoming.Clearing.selected_pooled": [
+   "03-KNOWING.md#r-selection-through-couplings"
+  ],
+  "Becoming.Clearing.unselected": [
+   "03-KNOWING.md#r-selection-through-couplings"
+  ],
+  "Becoming.ClosedCapture.course_past": [
+   "02-MAP.md#r-the-lock-draws-its-readers-out"
+  ],
+  "Becoming.DrawnBeyond.Lapsing.share_falls": [
+   "05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond"
+  ],
+  "Becoming.DrawnBeyond.Spreading.share_rises": [
+   "05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond"
+  ],
+  "Becoming.DrawnBeyond.Spreading.store_bounded": [
+   "05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond"
+  ],
+  "Becoming.Flow.Balances.beyond_falls_exactly": [
+   "05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond"
+  ],
+  "Becoming.Flow.Balances.breaks_beyond_ends": [
+   "05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond"
+  ],
+  "Becoming.Flow.Balances.broken_iff": [
+   "05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond"
+  ],
+  "Becoming.Flow.Balances.broken_shared": [
+   "05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond"
+  ],
+  "Becoming.Flow.Balances.closes_nothing": [
+   "07-SIGNIFICANCE.md#r-four-cases-of-a-part"
+  ],
+  "Becoming.Flow.Balances.keeps_of_not_arising": [
+   "07-SIGNIFICANCE.md#r-the-run-classes-and-widening"
+  ],
+  "Becoming.Flow.Balances.kept_of_restrained": [
+   "05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond"
+  ],
+  "Becoming.Flow.Balances.narrows_of_consumed": [
+   "07-SIGNIFICANCE.md#r-the-run-classes-and-widening"
+  ],
+  "Becoming.Flow.Balances.not_narrows_of_renewed": [
+   "07-SIGNIFICANCE.md#r-the-run-classes-and-widening"
+  ],
+  "Becoming.Flow.Balances.rise_breaks_beyond": [
+   "05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond"
+  ],
+  "Becoming.Flow.RaisesOn.reaches": [
+   "05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond"
+  ],
+  "Becoming.Flow.ends_below": [
+   "02-MAP.md#r-relational-renewal-classification"
+  ],
+  "Becoming.Flow.ends_below_at": [
+   "02-MAP.md#r-relational-renewal-classification"
+  ],
+  "Becoming.Flow.favours_breaking_beyond": [
+   "05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond"
+  ],
+  "Becoming.Flow.never_returns_below": [
+   "02-MAP.md#r-regulation-from-one-side-and-locally"
+  ],
+  "Becoming.Flow.restores": [
+   "02-MAP.md#r-supported-renewal-recovery"
+  ],
+  "Becoming.Flow.share_moved_rises": [
+   "05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond"
+  ],
+  "Becoming.Flow.share_not_against": [
+   "05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond"
+  ],
+  "Becoming.Flow.share_not_lower": [
+   "05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond"
+  ],
+  "Becoming.Flow.stays_below": [
+   "02-MAP.md#r-relational-renewal-classification"
+  ],
+  "Becoming.Flow.stays_below_at": [
+   "02-MAP.md#r-relational-renewal-classification"
+  ],
+  "Becoming.Flow.stock_settles": [
+   "02-MAP.md#r-regulation-from-one-side-and-locally"
+  ],
+  "Becoming.Flow.unselected_beyond_coupling": [
+   "03-KNOWING.md#r-selection-through-couplings"
+  ],
+  "Becoming.Flow.unselected_beyond_coupling_responsive": [
+   "03-KNOWING.md#r-selection-through-couplings"
+  ],
+  "Becoming.Flow.widens_iff_within_margin_at": [
+   "07-SIGNIFICANCE.md#r-four-cases-of-a-part"
+  ],
+  "Becoming.FourReaders.balances": [
+   "07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+  ],
+  "Becoming.FourReaders.dweller_late": [
+   "07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+  ],
+  "Becoming.FourReaders.listener_late": [
+   "07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+  ],
+  "Becoming.FourReaders.mid_atThePoint": [
+   "07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+  ],
+  "Becoming.FourReaders.near_inTime": [
+   "07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+  ],
+  "Becoming.FourReaders.noReturn": [
+   "07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+  ],
+  "Becoming.FourReaders.recoverable_iff_regime": [
+   "07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+  ],
+  "Becoming.FourReaders.regime_point": [
+   "07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+  ],
+  "Becoming.FourReaders.stopped_is_regime": [
+   "07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+  ],
+  "Becoming.Interacting.alone": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.Map.Endless.generates": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.Endless.generation": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.Endless.generation_in_pairs": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.Once.keeping": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.Once.keepsAfter": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.Once.not_degenerates": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.Once.not_generates": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.Once.not_keeps": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.Short.ends": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.Short.reaches_end": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.Short.renews_and_ends": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.Short.renews_and_ends_everywhere": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.Still.keeping": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.Still.keeps": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.generates_iff_changes": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.keepsAfter_iff_settles": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.renewal_undecided": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.«后守之定则LPO»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.«生守相杂»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.«生成之定则WLPO»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Map.«生成后守之定则LPO»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.ModelStatements.agreeUpTo_iff": [
+   "02-MAP.md#r-becoming-finite-horizon"
+  ],
+  "Becoming.ModelStatements.finite_reading_iff": [
+   "02-MAP.md#r-becoming-finite-horizon"
+  ],
+  "Becoming.ModelStatements.finite_reading_not_exact": [
+   "02-MAP.md#r-becoming-finite-horizon"
+  ],
+  "Becoming.ModelStatements.renewingIn_iff": [
+   "02-MAP.md#r-becoming-finite-horizon"
+  ],
+  "Becoming.ModelStatements.renewing_iff_along": [
+   "02-MAP.md#r-becoming-finite-horizon"
+  ],
+  "Becoming.ModelStatements.renewing_not_closed": [
+   "02-MAP.md#r-becoming-finite-horizon"
+  ],
+  "Becoming.NoReturnAt.parts": [
+   "07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+  ],
+  "Becoming.Optimum.HeldPair.alone": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.Optimum.drawn_bounded_iff": [
+   "05-COLLECTIVES.md#r-re-optimizing-above-a-renewal-ends-it"
+  ],
+  "Becoming.Optimum.ends_within": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.Optimum.gated_stays_below": [
+   "05-COLLECTIVES.md#r-re-optimizing-above-a-renewal-ends-it"
+  ],
+  "Becoming.Optimum.reread_deadline_iff": [
+   "05-COLLECTIVES.md#r-re-optimizing-above-a-renewal-ends-it"
+  ],
+  "Becoming.Optimum.reread_kept_iff": [
+   "05-COLLECTIVES.md#r-re-optimizing-above-a-renewal-ends-it"
+  ],
+  "Becoming.PoolFromCourse.Drained.clock_turned": [
+   "02-MAP.md#r-the-lock-draws-its-readers-out"
+  ],
+  "Becoming.PoolFromCourse.Drained.premises": [
+   "02-MAP.md#r-the-lock-draws-its-readers-out"
+  ],
+  "Becoming.PoolFromCourse.Drained.strong_not_below": [
+   "02-MAP.md#r-the-lock-draws-its-readers-out"
+  ],
+  "Becoming.PoolFromCourse.Drained.strong_undone": [
+   "02-MAP.md#r-the-lock-draws-its-readers-out"
+  ],
+  "Becoming.PoolFromCourse.Drained.weak_turned": [
+   "02-MAP.md#r-the-lock-draws-its-readers-out"
+  ],
+  "Becoming.PoolFromCourse.boundRead_reads": [
+   "02-MAP.md#r-the-lock-draws-its-readers-out"
+  ],
+  "Becoming.PoolFromCourse.stands_not_readmitted": [
+   "02-MAP.md#r-the-lock-draws-its-readers-out"
+  ],
+  "Becoming.PoolFromCourse.window_locked_after_removal": [
+   "02-MAP.md#r-the-lock-draws-its-readers-out"
+  ],
+  "Becoming.PoolFromCourse.window_never_read": [
+   "02-MAP.md#r-the-lock-draws-its-readers-out"
+  ],
+  "Becoming.PoolFromCourse.window_order_kept": [
+   "02-MAP.md#r-the-lock-draws-its-readers-out"
+  ],
+  "Becoming.PoolFromCourse.window_past": [
+   "02-MAP.md#r-the-lock-draws-its-readers-out"
+  ],
+  "Becoming.PoolFromCourse.window_past_course": [
+   "02-MAP.md#r-the-lock-draws-its-readers-out"
+  ],
+  "Becoming.PoolFromCourse.window_removed_unregistered": [
+   "02-MAP.md#r-the-lock-draws-its-readers-out"
+  ],
+  "Becoming.PoolFromCourse.window_standing_thinned": [
+   "02-MAP.md#r-the-lock-draws-its-readers-out"
+  ],
+  "Becoming.RegimeMargin.ends_iff_below": [
+   "02-MAP.md#r-turning-in-time",
+   "07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+  ],
+  "Becoming.Renewable.finite_reading_includes_consumption": [
+   "02-MAP.md#r-becoming-finite-horizon"
+  ],
+  "Becoming.Renewable.readings_differ": [
+   "07-SIGNIFICANCE.md#r-becoming-stepwise-reading"
+  ],
+  "Becoming.Restoring.Inflow.widens": [
+   "07-SIGNIFICANCE.md#r-four-cases-of-a-part"
+  ],
+  "Becoming.RuleCapture.order_kept": [
+   "02-MAP.md#r-the-lock-draws-its-readers-out"
+  ],
+  "Becoming.RuleCapture.turn_locked": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.Steps.Growing.generation": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Steps.Moving.generation": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Steps.Moving.not_keepsWidening": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Steps.back_iff_em": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Steps.begins_iff": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Steps.buqiong_includes_iff": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Steps.change_located": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Steps.forward_iff_wem": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Steps.found_of_listed": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Steps.generation_iff_keepsWidening": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Steps.generation_includes_iff": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Steps.generation_of_keepsWidening": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Steps.includes_not_back_of_generation": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Steps.keepsWideningFrom_iff_shift": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Steps.keepsWidening_iff_generation_losing_nothing": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Steps.keepsWidening_of_generation": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Steps.markov_of_keepsWidening_of_generation": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Transfer.mixed": [
+   "07-SIGNIFICANCE.md#r-four-cases-of-a-part"
+  ],
+  "Becoming.TurningInTime.Three.ends_as_it_was": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.Three.goes_on": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.Three.line_ends_while_net_goes": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.Three.noReturn": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.Three.turned_and_ends": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.agrees_until_marked": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.alike_along": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.constant_iff_needs_nothing": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.core_apart_below_need": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.count_rises": [
+   "the direction page"
+  ],
+  "Becoming.TurningInTime.course_turned": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.ends_with_net": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.ends_with_net_regime": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.join_is_asItWas": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.kind_ends_while_net_goes": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.kind_not_toEnd_of_turn": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.locked_alone": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.locked_at_class": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.locked_closed": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.locked_ends_rising": [
+   "the direction page"
+  ],
+  "Becoming.TurningInTime.locked_ends_with_net": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.locked_ends_with_net_regime": [
+   "the direction page"
+  ],
+  "Becoming.TurningInTime.locked_turns_in_time_on_window_iff": [
+   "the direction page"
+  ],
+  "Becoming.TurningInTime.net_zero": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.noReturnAt_iff_first_below": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.pair_adaptive": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.recoverable_iff_above": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.toEnd_iff": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.turns_in_time_iff": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.turns_in_time_iff_before": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.unending_iff_first_marked": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.window_agrees_until_marked": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.window_alone_outside": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.TurningInTime.window_is_pair": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.Web.Keeps.not_mixed": [
+   "07-SIGNIFICANCE.md#r-four-cases-of-a-part"
+  ],
+  "Becoming.Web.ReadsInTime.readable": [
+   "07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+  ],
+  "Becoming.Web.Restored.not_consumed": [
+   "02-MAP.md#r-becoming-return-grades"
+  ],
+  "Becoming.Web.Widens.not_keeps": [
+   "07-SIGNIFICANCE.md#r-four-cases-of-a-part"
+  ],
+  "Becoming.Web.Widens.not_mixed": [
+   "07-SIGNIFICANCE.md#r-four-cases-of-a-part"
+  ],
+  "Becoming.Web.Widens.not_reverse": [
+   "07-SIGNIFICANCE.md#r-four-cases-of-a-part"
+  ],
+  "Becoming.Web.Widens.trans": [
+   "07-SIGNIFICANCE.md#r-four-cases-of-a-part"
+  ],
+  "Becoming.Web.carries_iff": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Web.consumed_held_not_endless": [
+   "02-MAP.md#map-on-the-world"
+  ],
+  "Becoming.Web.consumed_iff": [
+   "02-MAP.md#r-becoming-return-grades"
+  ],
+  "Becoming.Web.course_lost_iff": [
+   "05-COLLECTIVES.md#r-re-optimizing-above-a-renewal-ends-it"
+  ],
+  "Becoming.Web.end_of_gone": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Web.family_excess_not_endless": [
+   "02-MAP.md#map-on-the-world"
+  ],
+  "Becoming.Web.generation_arises_late": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Web.generation_renews_late": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Web.itself_keeps": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Web.itself_not_generation": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Web.keepsWidening_byName_iff_generation": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Web.keepsWidening_iff_chain": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Web.keepsWidening_itself_iff": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Web.kept_of_includes_by_name": [
+   "07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing"
+  ],
+  "Becoming.Web.living_iff_relations": [
+   "07-SIGNIFICANCE.md#r-becoming-stepwise-reading"
+  ],
+  "Becoming.Web.mutual_course_lost": [
+   "05-COLLECTIVES.md#r-re-optimizing-above-a-renewal-ends-it"
+  ],
+  "Becoming.Web.not_endless_of_gone": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Web.passing_carries_iff": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.Web.readableInTime_iff": [
+   "07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+  ],
+  "Becoming.Web.renewing_not_consuming": [
+   "the direction page"
+  ],
+  "Becoming.Web.selects_alike_all_iff": [
+   "03-KNOWING.md#r-selection-through-couplings"
+  ],
+  "Becoming.Web.selects_alike_iff": [
+   "03-KNOWING.md#r-selection-through-couplings"
+  ],
+  "Becoming.Web.separates": [
+   "03-KNOWING.md#r-selection-through-couplings"
+  ],
+  "Becoming.Web.stopped_not_endless": [
+   "02-MAP.md#map-on-the-world"
+  ],
+  "Becoming.Web.too_late_of_alike": [
+   "07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+  ],
+  "Becoming.Web.too_late_of_own": [
+   "07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+  ],
+  "Becoming.Web.too_late_of_unreached": [
+   "07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+  ],
+  "Becoming.Web.too_late_within_margin": [
+   "07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+  ],
+  "Becoming.«三域之周»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«三域之定当且仅当排中»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«不穷则延»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«不穷有终之定当且仅当排中»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«亡而网续则不至终有常»": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.«传则异»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«传则粗不生»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«全三域之周»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«全三域之定当且仅当排中»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«全守则后守»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«全守有终不并»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«全生成之所及亦全生成»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«全生成全守不并»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«全生成有终不并»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«单行则生守不并»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«单行则生成后守不并»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«后守则延»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«后守退化不并»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«四比之周»": [
+   "07-SIGNIFICANCE.md#r-four-cases-of-a-part"
+  ],
+  "Becoming.«守则后守»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«守退化不并»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«延尽不并»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«延尽之定当且仅当排中»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«息即尽»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«有常则无终»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«有终之所前亦有终»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«有终则粗不有常»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«生则或粗生或传»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«生成退化不并»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«生生即延»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«类闭则本类常闭»": [
+   "02-MAP.md#r-turning-in-time"
+  ],
+  "Becoming.«粗有前则生为传»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«阶全生成则上无终»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "Becoming.«阶生成则上不退化»": [
+   "02-MAP.md#r-generation-and-degeneration-at-two-grains"
+  ],
+  "RelationalRenewal.Law.jointly_consuming": [
+   "02-MAP.md#r-relational-renewal-classification"
+  ]
+ }
+}

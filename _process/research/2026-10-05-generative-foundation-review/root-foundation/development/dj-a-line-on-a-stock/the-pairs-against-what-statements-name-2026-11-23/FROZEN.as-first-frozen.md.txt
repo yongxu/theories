@@ -1,0 +1,60 @@
+# Where the two ways meet in what is proved: what is to be drawn, and what would count against it
+
+*AI-written (Claude Fable, board row DJ), written before any reader ran and before any statement was judged. Frozen when its hash stands in `FROZEN.sha256.txt`. What an attack changes goes under "After", below, and nothing above it is edited.*
+
+## Why
+
+The layer of uses between proofs (22 November) draws a line where one theorem's proof uses another. It cannot see a passage, which is in what a theorem says. Lean can also print what a statement names. Asked whether to draw that across the whole atlas, the session that holds row DJ advised against it and for one piece first; Ren: "agree with your approach" (23 November; to be filed in `sources/`). The piece is the one the direction page's aim names: "two ways of going on placed with respect to each other and to going on at all".
+
+## What is taken as the two ways
+
+Not a new choice. The direction page's paragraph "Which two" says the two ways are not named in the Lean and that the account has four pairs, kept apart. Each pair has two or three sides:
+
+- **P1, on the grammar:** a pattern generates, keeps, degenerates (chapter 02 §1, `#branches`).
+- **P2, what can form:** widening, narrowing (chapter 07 §2).
+- **P3, on the web:** renewing, consuming (chapter 02 §3.1, `#runs`).
+- **P4, a lock against a turn in time** (chapter 02 §9 to §11, `#capture`, `#turning-in-time`).
+- **P0, going on at all and its ends:** lasting, ceasing, no return. This one is this file's addition, from the aim's "and to going on at all"; it is no pair of the page.
+
+That the two ways are any of these is the page's reading and stays one.
+
+## The three steps
+
+**Step 1. The notions.** For each side, the Lean declarations that are not theorems (definitions, structures, inductive types) in which that side is stated. Five readers, one a pair, each alone, from the chapter section named and from the Lean. Rules, so that the list cannot be made to fit:
+
+- N-a. A notion is on a side's list only where the chapter section, or the declaration's own docstring, says it states that side; the reader quotes the words and gives file and line. Where neither says so and the reader still judges it does, it is listed as "by the reader's reading" and kept apart.
+- N-b. A structure a statement is stated on, a carrier, a built example and a premise that many laws take are not a side's notion; they are listed apart as carriers, with why.
+- N-c. A notion that states a side only at one grain (a step, a stretch, a whole run, from an event on) is listed with its grain.
+- N-d. One reader who took no part, given the five lists and a table of every notion of the package with how many statements name it, names what is missing and what is wrongly in. Every "missing" it names is opened by the session before the list is closed.
+
+**Step 2. The print.** By script from one Lean print of every theorem of the core receipt's 412 modules (`statements23.json`; 20,616 theorems; not in it: 36 private theorems and 29 that Lean generates): for each theorem, the sides whose notions its statement names, in its premises and in its conclusion. Kept apart: naming a side's notion directly, and naming a definition that is built from one (one step, from the same print). A statement that names two different sides, of one pair or of two, is a candidate. A candidate is not a finding.
+
+**Step 3. The judging.** Each candidate is read by two readers, each alone, who are given the statement as it stands in the Lean (file, lines) and the notions with their sides, and are not given this file's forecast, the direction page, or row FM's survey. Each answers, quoting the statement, with exactly one of:
+
+- **PASSAGE** from side X to side Y: the premises place a course on X and the statement places that same course on Y, with what changes quoted: (t) an index, the near end at a step and the far end at a later one or from one on; (p) a parameter, the far end on one stated range and the near end's own outcome on the other; (d) a dropped premise. These three are row FM's, from its survey of roads (`fm-roads-the-atlas-tells-2026-11-22/QUESTIONS-ROADS.md.txt`), and a passage here is its road with sides in the place of dynamics.
+- **WALL**: no course under X's premises is under Y's notion.
+- **OVERLAP**: two notions said of one thing at one index (an iff, or "every X is a Y" with every premise kept and nothing later), or one side's case made an instance of the other's law.
+- **BUILT CASE**: a built example placed under one side or under each of two, and no general statement.
+- **NAME ONLY**: the notion is named as a carrier, of something other than the course, or inside a definition's unfolding, and the statement says nothing of the two sides with respect to each other.
+
+And with it: what is handed in (every premise that is not of side X), and at which grain each side is named. Where the two disagree a third reads. One reader who took no part then tries to refute every PASSAGE, WALL and OVERLAP that stands.
+
+## The forecast, on record before any reader
+
+By the session, unchecked. Inside P3: a wall (`Web.renewing_not_consuming`) and built cases; no passage with an index beyond the built courses the direction page already tells. Inside P2 and P1: overlaps and walls. Inside P4: statements of `TurningInTime` and `ClosedCapture`, already told on the direction page. Between pairs: P2 with P3 in the web's own modules (chapter 07 §2); P4 with P3 none, or by a built example only; P4 with P2 none; P1 with P3 few; P0 with every pair many, most of them NAME ONLY or the definition unfolded. Passages of kind (t) that survive the refuter and that the direction page does not tell: fewer than five, more likely none or one. Most candidates: NAME ONLY.
+
+## What would count against the step, written first
+
+- **T1. Nothing gained.** Every statement that stands as PASSAGE, WALL or OVERLAP is already told in the direction page's paragraphs from "Which two" to "What is not there", in the chapters' sections those paragraphs cite, or in row FM's four lists, and no sentence there of the form "not found", "does not", "nothing" is contradicted. Then nothing is drawn on any page of the map; the print stays a lookup, and the record says so in those words.
+- **T2. What would be gained,** and nothing less: (a) a statement, standing after the refuter, that places one side with respect to another and that those sources do not tell; or (b) a sentence of those sources contradicted by a statement, the statement quoted; or (c) for a pair of sides, that no statement of the print names both, directly or through a definition, said as "none found by this print" with the print's limits, never as "none".
+- **T3. Against the method.** If most candidates the two readers judge are NAME ONLY, the print does not find places worth reading, and it is not to be proposed as a layer of the atlas.
+- **T4. Against the notions.** If the reader of N-d finds a side whose list holds only notions "by the reader's reading", that side is not stated in the Lean by any notion that says so, and every candidate through it is reported apart as resting on a reading.
+- **T5.** No count from this step is set beside another as a score, and none is a thing to move. A page, if one is drawn, shows statements with their premises, not a figure.
+
+## What it does not do
+
+No Lean is written or changed. Nothing is entered on the atlas by this step; whether anything is drawn there is decided after T1 to T4 are answered. It does not read the sentences on a selection in AGENTS.md, which is row FM's order; if row FM names the notions of those sentences, the same print answers which theorems name them.
+
+## Cost, said beforehand
+
+Step 1 with the attack on this file: seven readers, a cap of 1.0 million tokens, every stage inside it (five readers of notions, one attacker of this file, one reader of N-d). Steps 2 is a script. The cap for step 3 is said, and told to both other sessions, after the print shows how many candidates there are and before any judge runs.

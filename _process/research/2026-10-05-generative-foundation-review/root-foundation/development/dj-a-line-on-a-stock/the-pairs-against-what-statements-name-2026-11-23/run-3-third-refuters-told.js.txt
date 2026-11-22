@@ -1,0 +1,55 @@
+export const meta = {
+  name: 'refute-and-decide-told',
+  description: 'A third reader on five differences, two refuters on the standing verdicts, and a reader who decides what is already told',
+  phases: [
+    { title: 'Third', detail: 'one reader on the five items the two judges differed on, not shown their answers' },
+    { title: 'Refute', detail: 'two readers who took no part try to refute every standing verdict' },
+    { title: 'Told', detail: 'one reader decides which standing statements the direction page and its linked passages already tell' },
+  ],
+}
+
+const ROOT = '/Users/ren/theories'
+const DIR = ROOT + '/tmp/r7/one-model/check/statements23'
+
+const WHAT = `What we are doing, so that you know the whole and not only your task. The repository at ${ROOT} holds "the theory of becoming": a map of how anything forms, persists, changes and ends, with its core proved in Lean 4. Its aim asks that two ways of going on be placed with respect to each other and to going on at all. The two ways are not named in the Lean; the account has several pairs that come near them, kept apart: on the grammar a pattern GENERATES, KEEPS or DEGENERATES (and, of a whole line, REACHES AN END, which is not degeneration); what can form WIDENS or NARROWS (one notion, Web.Widens and its kin, says both: which one is read from the order of the arguments); on the web a formation is RENEWING or CONSUMING; a LOCK (a rule set again from the share it already favours; the same notion with the order reversed is the turn in some modules) against a TURN IN TIME; and going on at all: LASTING, CEASING, NO RETURN. Each is a "side". A script found, from Lean's own print, 128 statements that name notions of two sides and that no cited chapter passage names; two readers judged each, alone. Naming is not placing; the readers said how each statement places the two sides, or that it does not.
+
+The verdicts they used. PASSAGE from X to Y: the premises place a course on X and the statement places THAT SAME course on Y, with what changes quoted: kind "t" an index (X at a step, Y at a later one or from one on), or kind "p" a parameter (the one statement gives Y on one stated range and X's own outcome on the other). IMPLIES X → Y: of one thing at one index, X with stated further premises gives Y. EQUIVALENT: an iff between a notion of X and one of Y of one thing at one index. WALL: nothing under X's notion (with the premises stated) is under Y's. COVERS: a disjunction, everything of a kind under one of several sides. BUILT CASE: a built example and no general statement (under both / under X and not Y / under neither). ACROSS: X said of one going-on and Y of another. NAME ONLY: a listed notion named as a carrier, a type, inside an unfolding, or beside the point.
+
+House rules. This Mac is busy: run no Lean, no build, no test, no gate; change and write no file; your final message is your whole return. Say what you did not read. A sentence that says a thing is absent says where you looked. Nothing is pushed or sent anywhere.`
+
+phase('Third')
+const third = agent(`${WHAT}
+
+Your task: five statements on which the two readers differed. You are a third reader and are NOT shown their answers. The items are in ${DIR}/third/ITEMS.json (item id, theorem, file, lines). Each stands in one of the packets ${DIR}/packets/PA.md, PB.md, PD.md, PE.md under its id (A13, B10, D07, D09, E16), with its statement and the definitions of the listed notions it names; read the item there, and open the Lean file at its lines where the packet does not show enough (section variables, a local definition, a few lines of proof).
+Do NOT open: ${DIR}/FROZEN.md, ${DIR}/returns, ${DIR}/refute, ${DIR}/told, ${ROOT}/_process/DIRECTION.md, any folder beginning "fm-" under ${ROOT}/_process/research, or the chapters under ${ROOT}/theories/becoming/chapters/. Answer from the STATEMENT, whatever verb its docstring uses.
+For each of the five give: exactly one verdict from the list above; X and Y; for PASSAGE the kind and both indices or ranges quoted, for BUILT CASE which of the three; the exact part of the statement the verdict rests on; what is handed in; for each side, of what the notion is said, at which grain, whether denied; and, where you hesitated between two verdicts, which and why you chose. Plain text, one section an item. Stop at about 70,000 tokens of your own reading.`, { label: 'third reader on five differences', phase: 'Third' })
+
+phase('Refute')
+const refuter = (name, extra) => agent(`${WHAT}
+
+Your task: you took no part in the judging. TRY TO REFUTE the verdicts in ${DIR}/refute/${name}.json. Each entry gives the theorem, its file and lines, and what each of the two readers answered (verdict, sides, quote, what is handed in, notes). The two agreed on the verdict of every entry. Open each statement in the Lean at its lines (and its neighbours where needed: section variables, the definitions of the notions, a few lines of the proof where the verdict turns on what is called). ${extra}
+For each entry ask, and answer from the statement:
+1. Is the quoted part in the statement, exactly? Are the two notions said of the SAME thing at the SAME index, as the verdict needs (a WALL or IMPLIES between notions said of different things, or at different grains, is not what it claims; a PASSAGE needs the same course at two indices or on two ranges)?
+2. Is anything handed in that the readers left out, and does a premise carry the conclusion (the far side assumed in a premise in other words)?
+3. Is the statement a definition unfolded, a renaming, a decidability statement, or one call of another theorem with nothing added (look at the first lines of the proof)? Say which theorem.
+4. For a notion read as WIDENS or NARROWS, or as LOCK or its reverse: did the readers read the right one from the arguments?
+5. Does the verdict say more than the statement (for example "excludes" where only one direction is shown; "passage" where an iff has a condition on the start on one side and an outcome on the other)?
+Default to "falls" where you cannot confirm a verdict from the statement. Return plain text, one short section an entry: STANDS, STANDS NARROWED (give the narrowed sentence that is true of the statement), or FALLS (give the verdict you would give and why), with the evidence (file and line, the words). Then a list of anything the two readers both missed. Stop at about 110,000 tokens of your own reading and list what you did not reach.
+Do NOT open ${DIR}/FROZEN.md, ${ROOT}/_process/DIRECTION.md, any folder beginning "fm-" under ${ROOT}/_process/research, or the chapters: you judge the statements, not the tellings.`, { label: 'refuter ' + name, phase: 'Refute' })
+const r1 = refuter('R1', 'It holds 16 standing verdicts on RENEWING with CONSUMING (walls, one covering, and statements with one side said of one going-on and the other of another) and 4 entries the readers called BUILT CASE or NAME ONLY, included as a sample: for those four, say whether the verdict hides a general statement or a placing they missed.')
+const r2 = refuter('R2', 'It holds 28 standing verdicts (inside the grammar; the grammar with widening; widening with renewing or consuming; going on at all with the grammar, with widening and with the lock and the turn; four of them PASSAGE) and 4 entries the readers called BUILT CASE or NAME ONLY, included as a sample: for those four, say whether the verdict hides a general statement or a placing they missed.')
+
+phase('Told')
+const told = agent(`${WHAT}
+
+Your task: you took no part in the judging and you saw no forecast. Decide, for each of 49 statements, whether it is ALREADY TOLD. The items are in ${DIR}/told/ITEMS.json: theorem, file, lines, the readers' verdicts, the parts of the statement they quoted, what they found handed in, and, by script, which chapters name the theorem anywhere and which dynamics of the atlas list it.
+The sources that count, and no others: (1) ${ROOT}/_process/DIRECTION.md, its paragraphs from the one that begins "*Which two.*" to the one that begins "*What is not there.*" (read them whole first); (2) the chapter passages those paragraphs link to, listed in the same file under "linked_passages" (chapter path, anchor, line range from the anchor to the next anchor; read around a passage where its sentence runs on); (3) the note ${ROOT}/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-roads-the-atlas-tells-2026-11-22/NOTE.md, its section on what was found (roads, overlaps, walls), by theorem name.
+"Told" means: the source NAMES the theorem, or STATES ITS CONCLUSION WITH EVERY PREMISE the statement takes. Open each statement in the Lean to know its premises. For each item answer one of:
+- TOLD: quote the sentence and give file and line.
+- TOLD WITH MORE THAN IS PROVED: the source states the conclusion with fewer premises than the statement takes, or more widely; quote the sentence and name the premise or limit it leaves out.
+- TOLD IN ANOTHER CHAPTER PLACE ONLY: not in the sources above, but a chapter names it elsewhere (the script's list; confirm by opening it and quote the line). This is not "told" by the rule; it is recorded apart.
+- NOT TOLD THERE: not found in sources (1) to (3); say where you looked.
+Do not judge whether a verdict is right; others do that. Do NOT open ${DIR}/FROZEN.md. Return plain text: one line or short paragraph an item, in the file's order, then the counts of the four answers, then what you did not read. Stop at about 120,000 tokens of your own reading; if you cannot finish, say which items are not decided.`, { label: 'what is already told', phase: 'Told' })
+
+const [t3, a1, a2, tl] = await Promise.all([third, r1, r2, told])
+return { third: t3, refute1: a1, refute2: a2, told: tl }

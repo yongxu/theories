@@ -1,0 +1,41 @@
+"""Controls (the attack's C1): the theorems that the direction page's paragraphs from "Which two" to "What is not
+there" name, and those named in the chapter passages those paragraphs link to (from the linked anchor to the next
+anchor of the chapter). AI-written (Claude Fable, board row DJ), 23 November 2026.
+usage: python3 -B controls.py OUT.json"""
+import json, re, sys
+from pathlib import Path
+import candidates as C
+ROOT = Path('/Users/ren/theories')
+def main(out):
+    d, receipt = C.load()
+    T = {t['name'] for t in d['theorems']}
+    def resolve(n):
+        return sorted(t for t in T if t == 'Becoming.' + n or t == n or t.endswith('.' + n))
+    page = (ROOT / '_process/DIRECTION.md').read_text().split('\n')
+    a = next(i for i, l in enumerate(page) if l.startswith('*Which two.*'))
+    b = next(i for i, l in enumerate(page) if l.startswith('*What is not there.*'))
+    text = '\n'.join(page[a:b + 1])
+    tick = re.compile(r'`([A-Za-z«»一-鿿_.′\'₀-₉0-9]+)`')
+    controls = {}
+    def add(name, where):
+        for full in resolve(name):
+            controls.setdefault(full, set()).add(where)
+    for n in tick.findall(text): add(n, 'the direction page')
+    links = sorted(set(re.findall(r'\(\.\./(theories/becoming/chapters/[0-9A-Z-]+\.md)#([a-z0-9-]+)\)', text)))
+    passages = []
+    for path, anchor in links:
+        ch = (ROOT / path).read_text().split('\n')
+        starts = [i for i, l in enumerate(ch) if f'id="{anchor}"' in l]
+        if not starts:
+            passages.append({'chapter': path, 'anchor': anchor, 'found': False}); continue
+        s = starts[0]
+        e = next((i for i in range(s + 1, len(ch)) if '<a id="' in ch[i] or ch[i].startswith('## ')), len(ch))
+        e = min(e, s + 60)
+        names = tick.findall('\n'.join(ch[s:e]))
+        for n in names: add(n, f'{Path(path).name}#{anchor}')
+        passages.append({'chapter': path, 'anchor': anchor, 'found': True, 'lines': [s + 1, e], 'names': len(names)})
+    json.dump({'passages': passages, 'controls': {k: sorted(v) for k, v in sorted(controls.items())}},
+              open(out, 'w'), indent=1, ensure_ascii=False)
+    print(len(links), 'linked passages;', sum(1 for p in passages if not p['found']), 'anchors not found;', len(controls), 'control theorems')
+if __name__ == '__main__':
+    main(sys.argv[1])

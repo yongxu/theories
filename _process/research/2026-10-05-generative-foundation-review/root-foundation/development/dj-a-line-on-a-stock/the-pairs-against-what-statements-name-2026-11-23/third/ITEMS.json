@@ -1,0 +1,62 @@
+[
+ {
+  "item": "A13",
+  "theorem": "Becoming.Web.not_renewing_at_of_broken",
+  "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+  "lines": [
+   352,
+   356
+  ],
+  "cell": "P3 within",
+  "rests_on_a_reading": [
+   "Becoming.Web.Broken as P3.consuming"
+  ]
+ },
+ {
+  "item": "B10",
+  "theorem": "Becoming.Optimum.Holding.doubling_capacity",
+  "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+  "lines": [
+   9392,
+   9451
+  ],
+  "cell": "P3 within",
+  "rests_on_a_reading": [
+   "Becoming.Web.Broken as P3.consuming",
+   "Becoming.Web.Kept as P3.renewing"
+  ]
+ },
+ {
+  "item": "D07",
+  "theorem": "Becoming.LineageRegimes.stock_forces_neither",
+  "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean",
+  "lines": [
+   1082,
+   1100
+  ],
+  "cell": "P1 within",
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "D09",
+  "theorem": "Becoming.LineageRegions.Chain.chain",
+  "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean",
+  "lines": [
+   1017,
+   1053
+  ],
+  "cell": "P1 within",
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "E16",
+  "theorem": "Becoming.Flow.persisting_consistent_with_selfConcern",
+  "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+  "lines": [
+   491,
+   518
+  ],
+  "cell": "P0 x P2",
+  "rests_on_a_reading": []
+ }
+]

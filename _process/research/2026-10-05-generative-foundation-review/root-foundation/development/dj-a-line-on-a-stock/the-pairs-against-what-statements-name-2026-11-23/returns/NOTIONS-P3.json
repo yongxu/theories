@@ -1,0 +1,398 @@
+{
+ "pair": "P3",
+ "sides": [
+  {
+   "side": "renewing",
+   "notions": [
+    {
+     "name": "Becoming.Web.RenewingIn",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+     "line": 166,
+     "basis": "chapter",
+     "quote": "\"A formation *renews* in a run where every condition it depends or draws on meets, at every step, every dependence on it (`RenewingIn`)\" (02-MAP.md, section 3.1, line 113). The declaration has no docstring of its own.",
+     "says": "Every condition the formation requires or draws on at any step is Renewed (every dependence on it kept at every step).",
+     "grain": "of a formation, over a whole run"
+    },
+    {
+     "name": "RelationalRenewal.RenewingIn",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean",
+     "line": 132,
+     "basis": "docstring",
+     "quote": "\"It is renewing when every such condition remains at the level supporting every formation that depends on it.\" (module account, RelationalRenewal.lean lines 7-8; the declaration has no docstring of its own)",
+     "says": "Every condition the formation requires or draws on is Renewed, on an unfolding whose dependences do not change.",
+     "grain": "of a formation, over a whole run, dependences fixed (on RelationalRenewal.Unfolding, the static reading)"
+    },
+    {
+     "name": "Becoming.Web.Renewed",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+     "line": 149,
+     "basis": "chapter",
+     "quote": "\"every condition it depends or draws on meets, at every step, every dependence on it\" (02-MAP.md line 113, the body of RenewingIn, which is Renewed of each such condition). Its own docstring: \"Every dependence on the condition is kept at every step.\" Restoration.lean's account, lines 6-7: \"a condition is renewed when every dependence on it is kept at every step\".",
+     "says": "Every dependence holding on the condition at any step is Kept across that step (met at the step and after it).",
+     "grain": "of a condition, over a whole run"
+    },
+    {
+     "name": "RelationalRenewal.Renewed",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean",
+     "line": 120,
+     "basis": "docstring",
+     "quote": "\"The condition stays at the level supporting every formation that depends on it.\" (docstring, line 120), with the module account's \"It is renewing when every such condition remains at the level supporting every formation that depends on it.\"",
+     "says": "At every step the condition's level meets the need of every formation that requires it.",
+     "grain": "of a condition, over a whole run, dependences fixed"
+    },
+    {
+     "name": "Becoming.Web.RenewingAt",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+     "line": 292,
+     "basis": "docstring",
+     "quote": "\"A formation's event at `t` is within renewal\" (docstring, line 292); module account lines 52-53: \"It is *within renewal* when its step keeps every dependence on every condition it participates in, the stepwise counterpart of renewal\".",
+     "says": "The formation is active at t and the step from t keeps every dependence of every formation on every condition it takes part in at t.",
+     "grain": "at a step (one event of a formation)"
+    },
+    {
+     "name": "Becoming.Web.RenewingOver",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
+     "line": 234,
+     "basis": "chapter",
+     "quote": "\"Over a region covering what a formation takes part in, renewal over the region is renewal at the step\" (02-MAP.md line 142). Docstring: \"A formation's event at `t` is within renewal over a region of conditions\".",
+     "says": "The formation is active at t and the step keeps every dependence on every condition of the region that it takes part in.",
+     "grain": "at a step, over a region (a part) of the conditions"
+    },
+    {
+     "name": "Becoming.Web.RenewingAlong",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
+     "line": 80,
+     "basis": "docstring",
+     "quote": "\"Renewing along a continuation from `g` at `t`: every relation taken part in by a formation continuing it is renewed.\" (docstring, line 80); module account line 13: \"This module reads the classes along a continuation\".",
+     "says": "Every condition taken part in by any formation that continues g at t through the continuation R is Renewed.",
+     "grain": "from an event on (g at step t), along a continuation, over the rest of the run"
+    },
+    {
+     "name": "Becoming.Web.RenewingInWithin",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Restoration.lean",
+     "line": 76,
+     "basis": "docstring",
+     "quote": "\"A formation renews over cycles of `p` in the run: every condition it participates in is renewed within `p`.\" (docstring, line 76). Against this, the module account lines 8-10: \"between them lie conditions that fall and recover. Here that middle is graded\".",
+     "says": "Every condition the formation takes part in at any step is RenewedWithin p.",
+     "grain": "of a formation, over a whole run, at the grade of cycles of p; weaker than the class (the seasonal condition, in neither class, is renewed within two)"
+    },
+    {
+     "name": "Becoming.Web.RenewedWithin",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Restoration.lean",
+     "line": 64,
+     "basis": "docstring",
+     "quote": "\"Renewal over cycles of length `p`: every dependence on the condition is met within the next `p` steps.\" (docstring, line 64). 02-MAP.md line 125: \"Return grades renewal: within `p` steps, at some later step, never.\"",
+     "says": "Every dependence holding on the condition at a step is met at one of the next p steps.",
+     "grain": "of a condition, over a whole run, at the grade of cycles of p; weaker than Renewed"
+    },
+    {
+     "name": "Becoming.ModelStatements.renewingAlong",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+     "line": 1048,
+     "basis": "docstring",
+     "quote": "\"The runs along which the focal formation renews, read at the occurrence model of the one-kind reading of the web along the run\" (docstring, line 1048); named in 02-MAP.md line 130 through `renewing_iff_along`.",
+     "says": "A predicate on runs of the Renewable process, written in the grammar's relations: from the focal formation's participated conditions, requiring lies within the relation kept across the step.",
+     "grain": "of a whole run of one built process (Renewable), for its focal formation only; the theorem at line 1058 states it equivalent to Web.RenewingIn there"
+    },
+    {
+     "name": "Becoming.Web.Kept",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+     "line": 141,
+     "basis": "reading",
+     "quote": "No words say it states the renewing side. Docstring: \"The step from `t` keeps `g`'s dependence on `c`: met at `t` and after the step.\" Listed on a reading: Renewed and RenewingAt are defined as Kept of every dependence, so it is renewal at the smallest grain.",
+     "says": "g's need of c at t is met by c's level at t and at t+1.",
+     "grain": "one dependence across one step"
+    }
+   ]
+  },
+  {
+   "side": "consuming",
+   "notions": [
+    {
+     "name": "Becoming.Web.ConsumingIn",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+     "line": 169,
+     "basis": "chapter",
+     "quote": "\"a formation *consumes* in a run where it draws at some step on a consumed condition (`ConsumingIn`). It does not say the drawing made the deficit.\" (02-MAP.md line 113). No docstring of its own.",
+     "says": "At some step the formation draws on a condition that is Consumed.",
+     "grain": "of a formation, over a whole run"
+    },
+    {
+     "name": "RelationalRenewal.ConsumingIn",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean",
+     "line": 135,
+     "basis": "docstring",
+     "quote": "\"It is consuming when it draws on a condition that some dependent formation permanently loses.\" (module account, lines 8-9; no docstring of its own)",
+     "says": "The formation draws on some condition that is Consumed, on an unfolding whose dependences and draws do not change.",
+     "grain": "of a formation, over a whole run, dependences fixed"
+    },
+    {
+     "name": "Becoming.Web.Consumed",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+     "line": 153,
+     "basis": "chapter",
+     "quote": "\"A condition is *consumed* where, for some dependence holding on it at a step, its level stays below that dependence's need at every later step (`Consumed`\" (02-MAP.md line 113). Docstring: \"A dependence holding at some step is not met at any later step.\"",
+     "says": "Some formation requires the condition at some step T, and at every step after T the level is below the need as it stood at T.",
+     "grain": "of a condition, over a whole run (from some step on)"
+    },
+    {
+     "name": "RelationalRenewal.Consumed",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean",
+     "line": 124,
+     "basis": "docstring",
+     "quote": "\"Some formation depending on the condition loses its support from some step on.\" (docstring, line 124), which the module account calls consuming: \"a condition that some dependent formation permanently loses\".",
+     "says": "Some formation requires the condition and from some step T on (T included) the level is below its need.",
+     "grain": "of a condition, over a whole run from some step on, dependences fixed"
+    },
+    {
+     "name": "Becoming.Web.Lost",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+     "line": 158,
+     "basis": "chapter",
+     "quote": "\"it need not have been met at that step, which *lost* adds: `Lost`\" (02-MAP.md line 113). Docstring: \"A met dependence is broken and never met again: a formed relationship is lost.\"",
+     "says": "Some dependence on the condition is Broken across the step from T and its need of T is never met at a later step.",
+     "grain": "of a condition, over a whole run; the stronger form of Consumed (the dependence was met, then broken)"
+    },
+    {
+     "name": "Becoming.Web.ConsumingThrough",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Substitution.lean",
+     "line": 71,
+     "basis": "docstring",
+     "quote": "\"`f` draws on a condition through whose dependence it consumes, the dependence held by another formation, or by `f` before `T₀`\" (docstring, line 71). 02-MAP.md line 133: \"exactly where its loss is witnessed by a dependence the change leaves\".",
+     "says": "f draws at some step on a condition for which some dependence, another formation's or f's own before T₀, holds at a step and is never met after it.",
+     "grain": "of a formation, over a whole run, with the witnessing dependence restricted (not f's own from T₀ on)"
+    },
+    {
+     "name": "Becoming.Web.ConsumingAlong",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
+     "line": 85,
+     "basis": "docstring",
+     "quote": "\"Consuming along a continuation from `g` at `t`: a formation continuing it draws on a consumed condition.\" (docstring, line 85)",
+     "says": "Some formation continuing g at t through the continuation R draws at its step on a Consumed condition.",
+     "grain": "from an event on (g at step t), along a continuation, over the rest of the run"
+    },
+    {
+     "name": "Becoming.Web.UnderminingAt",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+     "line": 322,
+     "basis": "docstring",
+     "quote": "\"*undermining* when it draws on a condition at a step after which the condition is below both the present need of a dependence on it and a need of that dependence met while it held: the stepwise counterpart of consumption\" (module account, lines 55-58). Docstring: \"A formation's event at `t` is undermining when one of its relations is.\"",
+     "says": "For some condition, the formation is UnderminingOn it at t.",
+     "grain": "at a step (one event of a formation)"
+    },
+    {
+     "name": "Becoming.Web.UnderminingOn",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+     "line": 314,
+     "basis": "docstring",
+     "quote": "\"A formation's relation to a condition at `t` is undermining\" (docstring, line 314), with the module account's \"the stepwise counterpart of consumption\" (lines 55-58).",
+     "says": "f draws on c at t, and some dependence on c holding at t has its present need above the level after the step, that level also below a need it met while it held (MetAbove).",
+     "grain": "at a step, of one relation of a formation to one condition"
+    },
+    {
+     "name": "Becoming.Web.UnderminingFor",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Restoration.lean",
+     "line": 81,
+     "basis": "reading",
+     "quote": "No words say consumption. Docstring: \"A formation's event at `t` undermines for `p` steps\"; module account line 19: \"undermining for one step is undermining at the step\". Listed on a reading: it is UnderminingAt held through the next p steps, and Dependence.lean calls undermining the stepwise counterpart of consumption.",
+     "says": "f draws on a condition at t and, at each of the next p steps, the level is below a dependence's need at t and below a need that dependence met while it held.",
+     "grain": "at a step, over the stretch of the next p steps"
+    },
+    {
+     "name": "Becoming.Web.UnderminingAlong",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
+     "line": 347,
+     "basis": "reading",
+     "quote": "No words say consumption. Docstring: \"Undermining along a continuation: `f` draws on `c` at a step after which `c` is below a dependence's present need and below a need met along the continuation while it held.\" Listed on a reading: it is UnderminingAt with the tenure read along a continuation (module account lines 35-38).",
+     "says": "f draws on c at t; some dependence on c at t has its need above the level after the step, and that level is below a need met along the continuation's links on which the dependence held.",
+     "grain": "at a step, tenure read along a continuation"
+    },
+    {
+     "name": "Becoming.Web.BreakingAt",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+     "line": 303,
+     "basis": "reading",
+     "quote": "No words say consumption. Docstring: \"A formation's event at `t` is breaking when one of its relations is.\" Module account line 64: \"Breaking is undermining, and an event within renewal is neither.\" Listed on a reading: the stepwise notion stronger than undermining; lines 76-77 say such an event need not make its formation consume in the run.",
+     "says": "For some condition, the formation is BreakingOn it at t.",
+     "grain": "at a step (one event of a formation)"
+    },
+    {
+     "name": "Becoming.Web.BreakingOn",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+     "line": 297,
+     "basis": "reading",
+     "quote": "No words say consumption. Docstring: \"A formation's relation to a condition at `t` is breaking: it draws on the condition at a step that breaks a dependence on it.\" Same reading as BreakingAt.",
+     "says": "f draws on c at t and some formation's dependence on c is Broken across the step from t.",
+     "grain": "at a step, of one relation of a formation to one condition"
+    },
+    {
+     "name": "Becoming.Web.Broken",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+     "line": 145,
+     "basis": "reading",
+     "quote": "No words say it states the consuming side. Docstring: \"The step from `t` breaks `g`'s dependence on `c`: met at `t`, not after the step.\" Listed on a reading: Lost is Broken and never met again, and the module account (line 33) sets it against Kept: \"Every met dependence is kept or broken across each step, and not both.\"",
+     "says": "g requires c at t, the need is met at t, and the level at t+1 is below that need.",
+     "grain": "one dependence across one step (not for good)"
+    }
+   ]
+  }
+ ],
+ "carriers": [
+  {
+   "name": "Becoming.Web",
+   "why": "The web itself (World.lean line 55; Dependence read along the step index): the structure every P3 notion is stated on; 2636 statements name it."
+  },
+  {
+   "name": "Becoming.Dependence",
+   "why": "The observable of a configuration (level, active, requires, need, draws) of which Web is the reading along steps; a carrier."
+  },
+  {
+   "name": "RelationalRenewal.Unfolding",
+   "why": "The static carrier (RelationalRenewal.lean line 101): levels and activity by step, with fixed requires, need and draws."
+  },
+  {
+   "name": "Becoming.Conditions",
+   "why": "Conditions as observables of configurations with fixed dependences (Renewal.lean line 43); a carrier."
+  },
+  {
+   "name": "Becoming.Conditions.along",
+   "why": "Reads a run of a process as a RelationalRenewal.Unfolding (Labelled.lean line 509); a conversion of carriers."
+  },
+  {
+   "name": "Becoming.Dependence.along",
+   "why": "Reads a run through its dependences as a Web (Labelled.lean line 595); a conversion of carriers."
+  },
+  {
+   "name": "Becoming.Conditions.dependence",
+   "why": "Fixed conditions as a Dependence (Dependence.lean line 125); a conversion of carriers."
+  },
+  {
+   "name": "Becoming.Web.static",
+   "why": "The static unfolding as a Web (Dependence.lean line 182); a conversion of carriers, on which the theorems at lines 188-212 state the two sets of notions equivalent."
+  },
+  {
+   "name": "Becoming.Web.Dependent",
+   "why": "A premise many laws take (338 statements): a formation is active only where the conditions it then depends on support it."
+  },
+  {
+   "name": "RelationalRenewal.Dependent",
+   "why": "The same premise on the static unfolding."
+  },
+  {
+   "name": "Becoming.Web.Supported",
+   "why": "Support of a formation at one step (274 statements); the body of the premise Dependent and what renewing is proved to keep; states neither class."
+  },
+  {
+   "name": "RelationalRenewal.Supported",
+   "why": "The same on the static unfolding."
+  },
+  {
+   "name": "Becoming.Web.Participates",
+   "why": "The relation both classes are defined over (requires or draws at a step); states neither side."
+  },
+  {
+   "name": "RelationalRenewal.Participates",
+   "why": "The same on the static unfolding."
+  },
+  {
+   "name": "Becoming.Web.Continuing",
+   "why": "The relation 'f at u continues g at t through R' on which RenewingAlong and ConsumingAlong are stated; a carrier."
+  },
+  {
+   "name": "Becoming.Web.Linked",
+   "why": "Chains of continuation links with nothing asked of activity, on which UnderminingAlong's tenure is stated; a carrier."
+  },
+  {
+   "name": "Becoming.Web.DependenceChanged",
+   "why": "A premise relating two webs (one formation's dependence changed from a step on) for the substitution law; states neither side."
+  },
+  {
+   "name": "RelationalRenewal.Law",
+   "why": "The support-gated law family (start, renew, needG, needF, draw, contrib) with Law.level, Law.formed, Law.Part, Law.need, Law.requiresPart, Law.drawsPart and Law.unfolding: a model the classification is applied to. 'Within renewal' and 'beyond renewal' are there only section headings (lines 323, 352) and premises of theorems, not declarations."
+  },
+  {
+   "name": "RelationalRenewal.Law.cultivation",
+   "why": "Built example; so are RelationalRenewal.Law.malignant, .sharing, .winning, .alone, .together and .escalation (lines 514-590), and RelationalRenewal.fluctuating with RelationalRenewal.alternating (the seasonal case in neither class)."
+  },
+  {
+   "name": "Becoming.Renewable.process",
+   "why": "Built example process (Labelled.lean line 551), with Becoming.Renewable.conditions and Becoming.Renewable.Formation (Renewal.lean lines 68-87)."
+  },
+  {
+   "name": "Becoming.Renewable.withinRenewal",
+   "why": "A built run (\"Drawing what is renewed\", Labelled.lean line 554), not a class of a step: the witness that renews in class_belongs_to_the_run."
+  },
+  {
+   "name": "Becoming.Renewable.beyondRenewal",
+   "why": "A built run (\"Drawing one unit more than is renewed\", line 557) with its state function Becoming.Renewable.beyondRenewalState; the witness that consumes."
+  },
+  {
+   "name": "Becoming.Renewable.escalating",
+   "why": "Built run; so are Becoming.Renewable.dipping and .pausing (Labelled.lean lines 693-742) with their state functions in Dependence.lean, and Becoming.Renewable.levels, .drawing, .depleting and .withheld (Joint.lean lines 675-715)."
+  }
+ ],
+ "refused": [
+  {
+   "name": "Becoming.Web.Unceasing",
+   "why": "Opened (Arising.lean line 96): some formation arises at arbitrarily late steps. It is arising without end, the subject of section 3.2, not the renewing class; the module account says \"Renewal does not imply arising\". Becoming.Web.UnceasingFrom (Identity.lean line 584) is the same under a continuation."
+  },
+  {
+   "name": "Becoming.Web.Depletes",
+   "why": "Opened (Arising.lean line 112): at each step of an event at which no condition of a family rises, one falls. The module account says it \"says only that some condition of the family changes at each step of the event, whatever its relation to the event\"; a premise of the 3.2 law, not consuming. Becoming.Web.Still, .Rises and .Falls are net level changes at a step (the account reads renewal there as a net rise, which is not the class)."
+  },
+  {
+   "name": "Becoming.Web.RenewedBy",
+   "why": "Opened (Arising.lean line 117): a premise that every rise is made by an active formation in a supplied relation `renews`; the account says that relation, left unconstrained, says nothing. Becoming.Web.ActiveRenewer (line 121) is that supplied relation at a step; a different sense of renewing from the class."
+  },
+  {
+   "name": "Becoming.Web.Ceases",
+   "why": "Opened (Change.lean line 478): active at t, not after. An ending of a formation at a step, not the consuming class. Likewise Becoming.Web.CeasesFrom (Identity.lean line 770) and Becoming.Web.CeasesToStand (Change.lean line 482)."
+  },
+  {
+   "name": "Becoming.Web.Restored",
+   "why": "Opened (Restoration.lean line 69): every dependence on the condition is met at some later step. The chapter makes it a grade of return and the module account places it in the middle between the classes (the Slowing condition returns with no cycle bounding it); proved only to be not consumed. Its docstring does not say renewal. Becoming.Web.RestoredWithin (line 60) is one dependence's return within p steps, a building block."
+  },
+  {
+   "name": "Becoming.Web.MetAbove",
+   "why": "Opened (Dependence.lean line 307): the tenure helper inside UnderminingOn. Becoming.Web.MetAboveAlong and Becoming.Web.holdingOn (ContinuedClasses.lean lines 337-345) are its forms along a continuation."
+  },
+  {
+   "name": "Becoming.Web.Forms",
+   "why": "Opened (Dependence.lean lines 172-178): Forms and Becoming.Web.Dissolves say a dependence comes to hold or stops holding across a step; change of dependence, neither class."
+  },
+  {
+   "name": "Becoming.Ranking.wholeRun",
+   "why": "Opened (Ranking.lean line 120): a reading of events, \"active and not consuming over the run\"; built from the negation of ConsumingIn, not itself a side. Becoming.Conditions.valuation (ValuationFrames.lean line 148) has the same `living`."
+  },
+  {
+   "name": "Becoming.Ranking.stepwise",
+   "why": "Opened (Ranking.lean line 125): active and not UnderminingAt. The same body stands in Becoming.Web.valuation, Becoming.Web.interaction, Becoming.Web.sustenance, and in Becoming.World.Living (Space.lean line 199) for every event; 'living' readings built from the negation of undermining, not a side."
+  },
+  {
+   "name": "Becoming.ModelStatements.keptAcross",
+   "why": "Opened (ModelStatements.lean line 174): Kept written as a relation from condition to formation at the occurrence model. The same notion as Web.Kept, restated; if Kept is kept on the list, the session may want this with it. Becoming.ModelStatements.undermined (line 178) is likewise the dependence part of UnderminingOn written out, and Becoming.ModelStatements.belowAfter (line 171) a component."
+  },
+  {
+   "name": "Becoming.Flow.Overdraws",
+   "why": "Opened (ReadingsPersist.lean line 590): on a flow, across n steps uptake exceeds replenishment from a stock below n + m. A near candidate for consuming over a stretch, but neither its docstring nor section 3.1 says consuming, and it is on a flow with a stock, not the class. Becoming.Flow.renewers (Flow.lean line 317) counts givers at a step."
+  },
+  {
+   "name": "Becoming.«生生»",
+   "why": "On the grammar, not the web: the docstrings at Grammar.lean lines 643-653 speak of \"Renewal without end\" and, for Becoming.«息», \"Ceasing\", defined along Becoming.«复生至» (renewing into). Only lines 643-662 were read; the definition of «生生» at line 254 was not opened. Becoming.«新而有终» and Becoming.«新而尽» (GrammarMap.lean lines 92, 285) were seen by docstring only. Left for whoever holds the grammar's pair."
+  },
+  {
+   "name": "Becoming.RenewalBound.Restoring",
+   "why": "Opened (RenewalBound.lean lines 171-183): a predicate on one built run of the negation law; Becoming.RenewalBound.AlternatingStep, .alternation and .rank belong to that built example, not to the web's classes."
+  },
+  {
+   "name": "Becoming.WindowedWaiting.Restores",
+   "why": "Opened (WindowedWaiting.lean lines 258-264): Restores and Becoming.WindowedWaiting.NeverRestores say a pair law gives together again, or never, after one withholding; not on the web."
+  },
+  {
+   "name": "Becoming.Net.consumes",
+   "why": "Seen by docstring only (PlaceTransitionNets.lean line 94): tokens a step takes from a place; Becoming.Net.Loses (line 127) compares what a transition produces and consumes. A different sense of the word."
+  }
+ ],
+ "not_read": "Read in full: 02-MAP.md lines 104-147 (section 3.1 and the two lines above it); Renewal.lean (all 95 lines); RelationalRenewal.lean lines 1-320, and for lines 320-606 only the section headings, the definitions with their docstrings and the names of theorems. Read in part: Dependence.lean lines 1-190 and 280-330 (the rest only by search for the notion names); Restoration.lean 1-125; Arising.lean 1-135; ContinuedClasses.lean 1-100, 325-352, 478-496, 800-815; Substitution.lean 1-80; Regions.lean 1-60 and 225-240; Labelled.lean 505-600 and 680-750; Joint.lean 672-718; and a few lines each of Change.lean, Identity.lean, ModelStatements.lean, Ranking.lean, ReadingsPersist.lean, Flow.lean, RenewalBound.lean, WindowedWaiting.lean, Space.lean, ValuationFrames.lean, Grammar.lean (628-662) and DrawnBeyond.lean. Not read: FROZEN.md (as told); the rest of 02-MAP.md, including sections 3.2 and 3.3; the direction page and the records the chapter links; GenerativeCore and InquirySufficiency; RenewalFlow.lean, Flow.lean beyond six lines, Persistence.lean, Transmission.lean, Roles.lean, Metaethics.lean, Evolution.lean, LineageDrawdown.lean, Optimum.lean, PairFlow.lean, PairSelection.lean, Reconfiguration.lean, MapInstances.lean and the other modules whose names in the table contain renew, restore, overdraw or drawdown (those names were seen in the table and, where they have one, in a scan of docstrings, and not opened). The table was searched by name (renew, consum, deplet, undermin, restor, exhaust, drawdown, overdraw, lost, loses, sustain, ceas, return) and the whole Web namespace was listed; a notion stating a side under a name with none of these words, outside the Web namespace, would not have been found by that. A scan of the bodies of non-theorem declarations in the package and in RelationalRenewal.lean for the listed notion names found only the definitions reported here. No Lean was run.",
+ "notes": "1. Line numbers are the table's (the line where the docstring starts; the `def` is one to three lines below). RelationalRenewal.lean is at /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean; many dated copies stand under *-checks/ and history/ and were not used.\n2. No file Renewable.lean was found in the package folder. The namespace Renewable is spread over Renewal.lean, Labelled.lean, Dependence.lean and Joint.lean. Its withinRenewal and beyondRenewal are two built runs, not classes of a single step. The stepwise classes are Web.RenewingAt, Web.UnderminingAt and Web.BreakingAt in Dependence.lean.\n3. \"Within renewal\" and \"beyond renewal\" as said of a draw (the chapter's \"drawing beyond renewal ends the renewal for good\") were not found as declarations in RelationalRenewal.lean or in the Renewable namespace: there they are premises written out in theorem statements and section headings (RelationalRenewal.lean lines 323, 352).\n4. Notions that are one, by the files' own statements: Web.RenewingIn, ConsumingIn, Renewed and Consumed on Web.static U are stated equivalent to the RelationalRenewal ones (Dependence.lean lines 188-212; only the statements at 188-190 were read whole, the rest by their first lines). The two Consumed differ in letter: the static one has T ≤ t, the web's T < t. ModelStatements.renewingAlong is stated equivalent to RenewingIn of the focal formation on Renewable runs (line 1058). The chapter (line 144) says RenewingAt is RenewingOver for the region of every condition.\n5. The two sides are not symmetric in the Lean. Renewing asks every condition the formation requires or draws on; consuming asks only a condition it draws on. Consumed does not ask that the dependence was ever met (Lost adds it), and the chapter says ConsumingIn \"does not say the drawing made the deficit\". The classes exclude each other and do not exhaust (the seasonal case is neither).\n6. Kept apart, as the rule asks: the six notions with basis \"reading\" (Kept; Broken, BreakingAt, BreakingOn, UnderminingFor, UnderminingAlong). Kept and Broken are at the grain of one dependence across one step; the module account sets them against each other there (\"kept or broken ... and not both\"), which a later reader of theorems may want to see even though no words call them renewing or consuming.\n7. RenewingInWithin and RenewedWithin are on the renewing list by their docstrings (\"renews over cycles of p\", \"Renewal over cycles of length p\"), yet their module's account places them in the middle between the two classes. A theorem naming one of them with ConsumingIn places a weaker grade against consuming, not the class itself.\n8. Chapter sentences of section 3.1 with no non-theorem declaration found for them in what was read: \"loss for good\" in a balanced flow (theorem names only: Flow.stays_below_at and others), \"restored\", \"transformed\" and \"ended\" as the three outcomes of a loss (the Dependence.lean account says they are contrapositives of Dependent; no definitions by those names were found in Dependence.lean lines 1-190 and 280-330), and \"return ... never\" (the chapter says it is Consumed restated, `Web.consumed_iff`).\n9. The words \"renewing\" and \"consuming\" appear in names of many built examples (Optimum.Renewing.*, PairSelection.Renewed.*, PairFlow.FailedRenewal.*, Tide.renews, Recycle.renews, Oscillation.renews and others). They were taken from the table as built examples or supplied relations and not opened, except where listed above."
+}

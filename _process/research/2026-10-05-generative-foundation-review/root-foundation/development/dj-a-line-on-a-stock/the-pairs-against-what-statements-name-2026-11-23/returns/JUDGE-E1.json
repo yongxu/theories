@@ -1,0 +1,758 @@
+{
+ "packet": "E",
+ "answers": [
+  {
+   "item": "E01",
+   "verdict": "WALL",
+   "from_side": "LASTING (生生, by a reader's reading)",
+   "to_side": "DEGENERATES (息)",
+   "kind": "",
+   "quote": "(h : «生生» R E x) : ¬ «息» R E x",
+   "handed_in": "nothing; R, E and x are arbitrary and the same on both sides",
+   "converse": "No converse (¬息 → 生生) is stated. The docstring calls the two dual (greatest family / least closed property) but claims only exclusion.",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "LASTING (by a reader's reading)",
+     "notion": "«生生»",
+     "of_what": "one occurrence x under the relation R and class E",
+     "grain": "from x on, whole run, along some branch (x lies in some family each member of which renews into a member)",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "DEGENERATES",
+     "notion": "«息»",
+     "of_what": "the same occurrence x, same R and E",
+     "grain": "from x on, every branch (everything x renews into ceases)",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "Both notions are said of the same x on the same relation, so this is a wall proper. Docstring and statement agree. The definition of 生生 itself says it does not tell sustaining renewal from destroying turnover, so the LASTING reading is the list's, not the Lean's."
+  },
+  {
+   "item": "E02",
+   "verdict": "BUILT CASE",
+   "from_side": "CEASING (亡)",
+   "to_side": "DEGENERATES (息)",
+   "kind": "under both",
+   "quote": "∃ (R E F : «际» Unit), «亡» R E () ∧ «息» R F () ∧ ¬ ∃ y, «异» R F E () y",
+   "handed_in": "nothing (closed existence statement on Unit)",
+   "converse": "none named",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "CEASING",
+     "notion": "«亡»",
+     "of_what": "the one occurrence () under relation R and class E",
+     "grain": "at the occurrence (a step: nothing continues it)",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "DEGENERATES",
+     "notion": "«息»",
+     "of_what": "the same occurrence () under the same R but class F",
+     "grain": "from the occurrence on, every branch (vacuously: it renews into nothing)",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "One occurrence is under both, with no alteration. The statement lets E and F differ (亡 under E, 息 under F); in the witness R is the empty relation and E = F = «一». The docstring's 'ends under every class' says more than the statement, which gives only some E. It shows compatibility of ending and ceasing; it refutes no implication between the two sides (at most 'ending and ceasing together require alteration')."
+  },
+  {
+   "item": "E03",
+   "verdict": "BUILT CASE",
+   "from_side": "CEASING (亡)",
+   "to_side": "GENERATES (全生成)",
+   "kind": "under CEASING and not GENERATES",
+   "quote": "«亡» Map.short «一» true ∧ ¬ «全生成» Map.short «一» «静» false",
+   "handed_in": "nothing (closed statement about the two-point line Map.short: false → true)",
+   "converse": "none named",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "CEASING",
+     "notion": "«亡»",
+     "of_what": "the occurrence true of the short line, under class «一»",
+     "grain": "at the occurrence (a step)",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "GENERATES",
+     "notion": "«全生成»",
+     "of_what": "the line from the other occurrence, false, under class «一» with carrier class «静»",
+     "grain": "whole line from false on, every branch",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "The two notions are said of two different points of one line: the end is at true, generation is denied of the line from false (which reaches true; the proof calls 全生成有终不并 with Map.Short.reaches_end). So the case shows a line that reaches an end is not 全生成; that link (via 有终) is in the proof, not in the statement. In its place in the file it refutes the theorem just above it with the premise `onward` (everything is continued) dropped: every step of short leaves «静», yet the line is not 全生成."
+  },
+  {
+   "item": "E04",
+   "verdict": "BUILT CASE",
+   "from_side": "DEGENERATES (尽)",
+   "to_side": "NO RETURN (入, by a reader's reading)",
+   "kind": "under DEGENERATES and not NO RETURN",
+   "quote": "«尽» («而» («所闭» Q) F) «一» (g 0) ∧ ¬ «屡» F g ∧ ¬ «入» Q (g 1)",
+   "handed_in": "nothing (closed existence statement: Q, F, g built on Bool)",
+   "converse": "The next theorem in the file (docstring 'Drawn in and not at rest') is the opposite case; this statement names neither.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "DEGENERATES",
+     "notion": "«尽»",
+     "of_what": "the start g 0 of the line g, under the relation 'reach by Q's closure, then a fall F' («而» («所闭» Q) F) and class «一»: it is the falls that end, not the line",
+     "grain": "from g 0 on, every branch",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "NO RETURN (by a reader's reading)",
+     "notion": "«入»",
+     "of_what": "the place the line rests at, g 1, under the relation Q",
+     "grain": "at one occurrence (some closed region it lies outside holds something it reaches)",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "The two notions are said of different occurrences (g 0, g 1) and on different relations (the falls relation; Q). The line g itself goes on for ever (∀ t, Q (g t) (g (t + 1))): what ends is the falling. It refutes 'at rest (falls end, do not recur) → the resting place is drawn in'. Reading the witness (Q = fun _ b => b = true, g 0 = false): the start g 0 does look drawn in under Q (region {true}); the statement neither says nor denies that, and I did not check it in Lean. So the docstring's 'rest is not a case of 入' is true of the resting place only."
+  },
+  {
+   "item": "E05",
+   "verdict": "WALL",
+   "from_side": "DEGENERATES (尽)",
+   "to_side": "LASTING (不穷)",
+   "kind": "",
+   "quote": "(h : «尽» R L x) : ¬ «不穷» R L x",
+   "handed_in": "nothing; R, L, x arbitrary and the same on both sides",
+   "converse": "none named (¬不穷 → 尽 is not stated)",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "DEGENERATES",
+     "notion": "«尽»",
+     "of_what": "one occurrence x under relation R and class L",
+     "grain": "from x on, every branch",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "LASTING",
+     "notion": "«不穷»",
+     "of_what": "the line from the same x, same R and L",
+     "grain": "whole line from x on, every branch (every occurrence reached has a successor)",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "Wall proper: same x, same relation, same class. The proof goes through 延尽不并 and 不穷则延, so what is proved underneath is stronger (尽 excludes even going on along some branch, 延); this statement says only the every-branch form."
+  },
+  {
+   "item": "E06",
+   "verdict": "IMPLIES",
+   "from_side": "GENERATES (生成)",
+   "to_side": "LASTING (延)",
+   "kind": "",
+   "quote": "(h : «生成» R L E x) : «延» R L x",
+   "handed_in": "nothing",
+   "converse": "none named; no docstring",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "GENERATES",
+     "notion": "«生成»",
+     "of_what": "one occurrence x under R, class L, carrier class E",
+     "grain": "from x on, along some branch (some family S)",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "LASTING",
+     "notion": "«延»",
+     "of_what": "the same x under R and L",
+     "grain": "from x on, along some branch",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "The proof drops the third conjunct of 生成: 延 is the first two conjuncts of the definition, so the implication is by definition. The lasting is the some-branch one (延), not 不穷."
+  },
+  {
+   "item": "E07",
+   "verdict": "IMPLIES",
+   "from_side": "KEEPS (守)",
+   "to_side": "LASTING (延)",
+   "kind": "",
+   "quote": "(h : «守» R L E x) : «延» R L x",
+   "handed_in": "nothing",
+   "converse": "none named; no docstring",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "KEEPS",
+     "notion": "«守»",
+     "of_what": "one occurrence x under R, class L, carrier class E",
+     "grain": "from x on, along some branch",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "LASTING",
+     "notion": "«延»",
+     "of_what": "the same x under R and L",
+     "grain": "from x on, along some branch",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "By definition, as in E06: 延 is the first two conjuncts of 守. Together E06 and E07 put both 生成 and 守 inside 延; neither statement says they exhaust it."
+  },
+  {
+   "item": "E08",
+   "verdict": "IMPLIES",
+   "from_side": "LASTING (不穷)",
+   "to_side": "GENERATES (全生成)",
+   "kind": "",
+   "quote": "(endless : «不穷» (Web.continuationStep (Web.passingContinuation (L.PassesSupport W))) (W.admitting W.level).activityClass x) : «全生成» (Web.continuationStep (Web.passingContinuation (L.PassesSupport W))) (W.admitting W.level).activityClass (W.admitting W.level).carrierClass x",
+   "handed_in": "brief : ∀ t g, ¬ ∀ i, i ≤ K → W.Supported (t + i) g (no formation supported at K + 1 steps running); start : W.Supported x.1 x.2; the relation is fixed (carry on, or pass support) and the class is activity of the admitting web. Section variables L : Flow F C, W : Web F C.",
+   "converse": "Not named. By the definition of 全生成 its first conjunct is 不穷, so the converse holds by definition; under brief and start the two coincide, though no iff is stated.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "LASTING",
+     "notion": "«不穷»",
+     "of_what": "the line from one occurrence x (a step and a formation) along 'carry on, or pass support', under activity",
+     "grain": "whole line from x on, every branch",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "GENERATES",
+     "notion": "«全生成»",
+     "of_what": "the same line from the same x, same relation and class, carrier class as E",
+     "grain": "whole line from x on, every branch (a carrying renewal ahead of every point)",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "Lasting alone does not give generation here: brief supports are handed in. The docstring's 'within K steps' is not in the statement, which gives 全生成 with no bound."
+  },
+  {
+   "item": "E09",
+   "verdict": "IMPLIES",
+   "from_side": "LASTING (不穷)",
+   "to_side": "GENERATES (全生成)",
+   "kind": "",
+   "quote": "(start : W.Supported x.1 x.2) (endless : «不穷» (continuationStep R) L x) : «全生成» (continuationStep R) L (W.admitting W.level).carrierClass x",
+   "handed_in": "within : ∀ x y, L x y → (W.admitting W.level).activityClass x y (the class is finer than activity); brief : ∀ t g, W.Supported t g → ¬ W.Supported (t + 1) g (no support two steps running); start : W.Supported x.1 x.2. R (the continuation) and L (the class) are otherwise arbitrary. Section variable W : Web F C.",
+   "converse": "Not named; by definition 全生成 contains 不穷, so the converse is immediate.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "LASTING",
+     "notion": "«不穷»",
+     "of_what": "the line from one occurrence x (step, formation) along any continuation R, under any class L finer than activity",
+     "grain": "whole line from x on, every branch",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "GENERATES",
+     "notion": "«全生成»",
+     "of_what": "the same line from the same x, same R and L, with one formation's carrier class as E",
+     "grain": "whole line from x on, every branch",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "As E08 with K = 0 and any continuation and finer class. The docstring's sentence that each step ends where a formation arises is of the proof, not of the statement."
+  },
+  {
+   "item": "E10",
+   "verdict": "IMPLIES",
+   "from_side": "GENERATES (全生成) and KEEPS (全守)",
+   "to_side": "LASTING (不穷)",
+   "kind": "",
+   "quote": "(h : ¬ «不穷» R L x) : ¬ «全生成» R L E x ∧ ¬ «全守» R L E x",
+   "handed_in": "nothing",
+   "converse": "Not named. The statement is the contrapositive form; the direct forms are the first conjuncts of the two definitions (the proof is ⟨fun g => h g.1, fun k => h k.1⟩).",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "LASTING",
+     "notion": "«不穷»",
+     "of_what": "the line from one occurrence x under R and L",
+     "grain": "whole line from x on, every branch",
+     "denied": true,
+     "which_reading": ""
+    },
+    {
+     "side": "GENERATES",
+     "notion": "«全生成»",
+     "of_what": "the same line from the same x, same R, L, with E",
+     "grain": "whole line from x on, every branch",
+     "denied": true,
+     "which_reading": ""
+    },
+    {
+     "side": "KEEPS",
+     "notion": "«全守»",
+     "of_what": "the same line from the same x",
+     "grain": "whole line; from some point on no carrying renewal",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "Stated with all three denied: not lasting → neither generating nor keeping. Read forward it is 全生成 → 不穷 and 全守 → 不穷, both by definition. It could be labelled a wall between 'not 不穷' and the two strong forms, but 'not 不穷' is not a listed side's notion (it is weaker than 尽 and is not 有终 as stated), so I give IMPLIES. It does not say a lasting line is under one of the two (no COVERS)."
+  },
+  {
+   "item": "E11",
+   "verdict": "IMPLIES",
+   "from_side": "LASTING (不穷)",
+   "to_side": "KEEPS (全守)",
+   "kind": "",
+   "quote": "(endless : «不穷» (continuationStep R) W.activityClass x) (on : ∀ s f, S ≤ s → W.active (s + 1) f → W.active s f ∧ R s f f) : «全守» (continuationStep R) W.activityClass W.carrierClass x",
+   "handed_in": "start : W.active x.1 x.2; on : from step S on, every formation active after a step was active before it and carried on as itself. Section variables W : Web F C, R : Nat → F → F → Prop.",
+   "converse": "Not named; 全守 contains 不穷 by definition, so 全守 → 不穷 is immediate, and nothing says `on` is needed.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "LASTING",
+     "notion": "«不穷»",
+     "of_what": "the line from one active occurrence x (step, formation) along continuation R under activity",
+     "grain": "whole line from x on, every branch",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "KEEPS",
+     "notion": "«全守»",
+     "of_what": "the same line from the same x, same relation and class, carrier class as E",
+     "grain": "whole line; from some point on (the proof takes step x.1 + S) no carrying renewal ahead",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "The docstring names the point (step x.1 + S); the statement gives only that some point exists. Set beside E08/E09: what is handed in decides whether an endless line is placed under GENERATES (supports brief) or under KEEPS (from S on nothing new becomes active)."
+  },
+  {
+   "item": "E12",
+   "verdict": "BUILT CASE",
+   "from_side": "LASTING (不穷)",
+   "to_side": "REACHES AN END (有终)",
+   "kind": "under LASTING and not REACHES AN END",
+   "quote": "«不穷» (net m c) alike (start m) ∧ ¬ «有终» (net m c) alike (start m)",
+   "handed_in": "hm : 1 ≤ m, hc : 1 ≤ c (a family of built rooms: every positive margin m and heating c)",
+   "converse": "none named",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "LASTING",
+     "notion": "«不穷»",
+     "of_what": "the line from the set level, start m, in the room net (net m c) under 'alike' (same warmth)",
+     "grain": "whole line from start on, every branch",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "REACHES AN END",
+     "notion": "«有终»",
+     "of_what": "the same line from the same start, same relation and class",
+     "grain": "some point the line reaches",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "The second conjunct is the first said again: by the definitions 有终 is 'some reached point has no successor' and 不穷 is 'every reached point has one', and the proof derives it in one line from the first (fun ⟨y, hy, ends⟩ => ends (unended y hy)). So the case shows a line under 不穷, and the denial of 有终 adds no second fact; the general wall 不穷 → ¬有终 is not stated here. The docstring's references to 有常则往不穷 and 有终则粗不有常 go beyond the statement."
+  },
+  {
+   "item": "E13",
+   "verdict": "BUILT CASE",
+   "from_side": "WIDENS (Reaching.KeepsWidening)",
+   "to_side": "LASTING (生生, by a reader's reading)",
+   "kind": "under both (WIDENS and LASTING), with DEGENERATES denied",
+   "quote": "Reaching.KeepsWidening (fun k => Reaching.PossibleHeld process Same adm (course.state k)) ∧ (∀ k y, Reaching.Possible process adm (course.state k) y) ∧ «生生» Steps.next (fun i j => Same (course.state i) (course.state j)) 0 ∧ ¬ «息» Steps.next (fun i j => Same (course.state i) (course.state j)) 0",
+   "handed_in": "nothing (closed statement about the built process, course, Same and adm of RaisedEveryOther)",
+   "converse": "none named",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "WIDENS",
+     "notion": "Reaching.KeepsWidening",
+     "of_what": "the chain k ↦ what is possible with the rule held (PossibleHeld) at the course's k-th configuration; NOT the whole possible, which the second conjunct says is the same at every k",
+     "grain": "whole run: every step to every later one, and after every step something new",
+     "denied": false,
+     "which_reading": "WIDENS: the chain is indexed by the course's steps in order, and the definition says Q n x → Q (n + d) x with something held later that is not held at n; the later holds more."
+    },
+    {
+     "side": "LASTING (by a reader's reading)",
+     "notion": "«生生»",
+     "of_what": "moment 0 of the same course, on the moments under Steps.next with the class 'same rule held' (Same on the course's states)",
+     "grain": "from moment 0 on, whole run, some family",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "DEGENERATES",
+     "notion": "«息»",
+     "of_what": "the same moment 0, same relation and class",
+     "grain": "from moment 0 on, every branch",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "One course is under widening (of the possible with the rule held) and under renewal without end (of its moments under the rule held) together. The last conjunct is E01 applied to the third (the proof calls «生生不息»). Set beside E15, same file: E15 gives, for this course, ¬不穷 of the same moments under the same class at every N; so this case has 生生 without 不穷 on one relation and class, which refutes 生生 → 不穷 there and shows E15's exclusion does not reach 生生. That last step is my inference from E15, not in this statement."
+  },
+  {
+   "item": "E14",
+   "verdict": "BUILT CASE",
+   "from_side": "LASTING (Generations.Persists)",
+   "to_side": "WIDENS (through Weighting.IncreasingInOwnOn, built from WidensOn)",
+   "kind": "under both, with widening only as the antecedent of a ranking",
+   "quote": "generations.Persists ∧ ... ∃ P : «际» (Bool → Bool), (∀ a, ¬ P a a) ∧ (∀ a b c, P a b → P b c → P a c) ∧ choices.Accords P ∧ P keep drain ∧ Weighting.IncreasingInOwnOn choices.Met both own (fun b a => P a b)",
+   "handed_in": "nothing (closed statement about the built two-formation web, flow, generations and chooser of Alternating)",
+   "converse": "none named",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "LASTING",
+     "notion": "SelectionTerm.Generations.Persists",
+     "of_what": "the built line of descent (generations) through the two formations",
+     "grain": "whole run: past every step some cohort has a member",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "WIDENS",
+     "notion": "Weighting.IncreasingInOwnOn (built from Weighting.WidensOn)",
+     "of_what": "an order P on the chooser's options (Bool → Bool); WidensOn itself is said of two options a, b inside the definition, as the condition under which a is ranked above b; nothing is asserted to widen",
+     "grain": "one occasion met (keep or drain)",
+     "denied": false,
+     "which_reading": "WIDENS: WidensOn items a b reads 'a admits all b admits and one more', and with R := fun b a => P a b the definition ranks that a above b (P a b; here P keep drain)."
+    }
+   ],
+   "note": "A joint witness: the line persists, and some strict order according with the one choice ranks the widening option (keep, which admits both formations) above the other (drain). In the witness keep does widen drain on `both`, so the ranking is not vacuous; that is from the definitions I opened, not from the statement. Persists is of the line, the ranking of an order on options: the statement conjoins them and says nothing of what can form widening along the persisting line. If the reading must be of WidensOn itself rather than the ranking built on it, this is NAME ONLY for that side."
+  },
+  {
+   "item": "E15",
+   "verdict": "ACROSS",
+   "from_side": "WIDENS (Reaching.KeepsWidening)",
+   "to_side": "LASTING (不穷), denied",
+   "kind": "",
+   "quote": "(keeps : Reaching.KeepsWidening (fun n => Reaching.PossibleHeld P Same adm (r.state n))) (N : Nat) : ¬ «不穷» Steps.next (fun n m => Same (r.state n) (r.state m)) N",
+   "handed_in": "r : Run P (a course, defined at every moment); nothing else",
+   "converse": "none named (that a line under the part being unending at no moment gives widening is not stated)",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "WIDENS",
+     "notion": "Reaching.KeepsWidening",
+     "of_what": "the chain n ↦ what is possible with the part held (PossibleHeld P Same adm) at the course's n-th state",
+     "grain": "whole run",
+     "denied": false,
+     "which_reading": "WIDENS: indexed by the course's moments in order; the definition has Q n x → Q (n + d) x and something new later."
+    },
+    {
+     "side": "LASTING",
+     "notion": "«不穷»",
+     "of_what": "the line from moment N on the course's moments (Steps.next) under the class 'same part' (Same on the states): the part staying the same from N on. It is NOT the course, which is a Run and has a state at every moment whatever the premise",
+     "grain": "from each moment N on, every branch (Steps.next has one)",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "In form this is an exclusion (X → ¬Y, for every N), but what is denied lasting is the line under the part, not the course that widens: where the possible-with-the-part-held keeps widening, the part is not held without end from any moment. So it is not a wall between widening and going on; the same course goes on, and by E13 can be under 生生 on the very same relation and class. Docstring and statement agree."
+  },
+  {
+   "item": "E16",
+   "verdict": "IMPLIES",
+   "from_side": "LASTING (Generations.Persists)",
+   "to_side": "WIDENS (through Weighting.IncreasingInOwnOn, built from WidensOn)",
+   "kind": "",
+   "quote": "(persists : G.Persists) ... (stake : ∀ a b, ch.Met a b → Weighting.WidensOn items a b → Weighting.AddsOwn items own a b → ¬ ends a ∧ ends b) : ∃ P : «际» (Y → Bool), (∀ a, ¬ P a a) ∧ (∀ a b c, P a b → P b c → P a c) ∧ ch.Accords P ∧ Weighting.IncreasingInOwnOn ch.Met items own (fun b a => P a b)",
+   "handed_in": "balances : L.Balances W; acting : L.Acting W; dependent : W.Dependent; descended : Descended L W G; gated; coupled (every member of every cohort needs at least m of some listed condition); realized : a chosen course that `ends` is an overdraw of ds from a short stock; none : «无环» ch.Shown (the choices come from some strict order); stake : on the pairs met, a widens b adding own only where a does not end and b does.",
+   "converse": "none named. E17 in this packet is a built case with Persists and no such order.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "LASTING",
+     "notion": "SelectionTerm.Generations.Persists",
+     "of_what": "a line of descent G on a web and flow",
+     "grain": "whole run: past every step some cohort has a member",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "WIDENS",
+     "notion": "Weighting.WidensOn (premise `stake`) and Weighting.IncreasingInOwnOn (conclusion)",
+     "of_what": "two options a, b : Y → Bool of the chooser ch on listed items; in both places WidensOn is an antecedent (in `stake`, of 'a does not end and b ends'; in the conclusion, of 'a is ranked above b'); the conclusion is a property of an order P on options",
+     "grain": "the occasions met (pairs on one menu)",
+     "denied": false,
+     "which_reading": "WIDENS: WidensOn items a b is 'a admits all b admits and one more', and with R := fun b a => P a b the widening a is ranked above b."
+    }
+   ],
+   "note": "The two sides are not said of one thing: Persists is of the line G, the ranking is of an order on the options of a chooser ch, and the only tie between them is `realized` (a chosen ending is an overdraw). So it can also be filed ACROSS; I give IMPLIES because the form is 'Persists with premises gives an order that ranks the widening option above'. Nothing is asserted to widen, and all the weight of widening is handed in by `stake`, which turns 'a widens b adding own' into 'a does not end and b does'; what the persisting supplies is that no chosen course ends. The docstring says this ('where only ending was at stake')."
+  },
+  {
+   "item": "E17",
+   "verdict": "BUILT CASE",
+   "from_side": "LASTING (Generations.Persists)",
+   "to_side": "WIDENS (through Weighting.IncreasingInOwnOn, built from WidensOn)",
+   "kind": "under LASTING and not the ranking built on WIDENS",
+   "quote": "generations.Persists ∧ choices.Accords order ∧ (∀ o, ¬ Weighting.EndsOwn items own (choices.pick o)) ∧ ¬ ∃ P : «际» (Item → Bool), (∀ a, ¬ P a a) ∧ (∀ a b c, P a b → P b c → P a c) ∧ choices.Accords P ∧ Weighting.IncreasingInOwnOn choices.Met items own (fun b a => P a b)",
+   "handed_in": "nothing (closed statement about the built web, flow, generations and chooser of Forgoing)",
+   "converse": "none named",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "LASTING",
+     "notion": "SelectionTerm.Generations.Persists",
+     "of_what": "the built line of descent (generations)",
+     "grain": "whole run",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "WIDENS",
+     "notion": "Weighting.IncreasingInOwnOn (built from Weighting.WidensOn)",
+     "of_what": "any strict order on the chooser's options according with its one choice; WidensOn stands inside as the condition of ranking, said of two options",
+     "grain": "the one occasion met (more, fewer or drain; fewer chosen)",
+     "denied": true,
+     "which_reading": "WIDENS: a widens b ranked above b; here `more` widens `fewer` adding own and `fewer` is chosen, so no according order can rank it so."
+    }
+   ],
+   "note": "It refutes: Persists (with the flow's laws: balances, acting, dependent, descended) → some strict order according with the choices is increasing in its own continuation on the pairs met. That is E16 without its premise `stake`: here no choice ends the own continuation, and the chooser forgoes the wider course without ending. So lasting does not by itself place the line's choices with the widening of its own continuation. Docstring and statement agree."
+  },
+  {
+   "item": "E18",
+   "verdict": "NAME ONLY",
+   "from_side": "WIDENS (Web.Widens)",
+   "to_side": "CONSUMING (Web.UnderminingAt), denied inside 'living'",
+   "kind": "",
+   "quote": "(alive₀ : W.active e₀.2 e₀.1 ∧ ¬ W.UnderminingAt e₀.2 e₀.1) ... (widens : W.Widens W'.level W.level)",
+   "handed_in": "connected; p₀; alive₀; decided; grounds; beyond; through; follows; follows'; balances; balances'; present; start; acts; widens. Every one is a premise; the conclusion names neither listed notion.",
+   "converse": "none named",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "WIDENS",
+     "notion": "Web.Widens",
+     "of_what": "two level paths: the other world's W'.level over this web's W.level, admissions counted by W",
+     "grain": "whole run (includes at every step, exceeds at some step)",
+     "denied": false,
+     "which_reading": "WIDENS, of W' over W: Widens l l' reads 'l widens l'' and l is W'.level; so W' is the widening world and W the narrowed one."
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Web.UnderminingAt (and Web.valuation built from it)",
+     "of_what": "an event (a formation at a step); it stands only inside 'living' = active and not undermining: of one event e₀ (alive₀), as a decidability premise over all events (decided), inside the valuation whose grounds and connectedness are handed in, and in `beyond`, which gives significance to the events that are not living",
+     "grain": "a step",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "Undermining is named only in the unfolding of 'living', which sets the scope of significance; widening is said of two level paths of two worlds. The statement does not say the widening world undermines less, nor that an undermining event narrows: it says what a selection of the widening world over the narrowed one goes through (the docstring's own last sentence: 'not that it occurs'). No placing of the two sides with respect to each other."
+  },
+  {
+   "item": "E19",
+   "verdict": "IMPLIES",
+   "from_side": "CONSUMING (Web.UnderminingOn)",
+   "to_side": "WIDENS or NARROWS, one half only: Web.Exceeds l W.level (not a listed notion; Web.Widens is not named)",
+   "kind": "",
+   "quote": "(undermining : W.UnderminingOn t f c) ... : W.Exceeds l W.level",
+   "handed_in": "holds : ∀ g, W.requires t g c → W.requires (t + 1) g c ∧ W.need t g c ≤ W.need (t + 1) g c (every dependence on c holds across the step at no smaller need); admits : ∀ g, W.requires t g c → W.Admits (l (t + 1)) (t + 1) g (the other path l admits after the step every formation depending on c before it). l is otherwise any level path.",
+   "converse": "none named. E20 is this statement contraposed.",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "CONSUMING",
+     "notion": "Web.UnderminingOn",
+     "of_what": "one formation f's relation to one condition c",
+     "grain": "a step (t to t + 1)",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "WIDENS or NARROWS (half, unlisted)",
+     "notion": "Web.Exceeds",
+     "of_what": "two level paths: a handed-in path l over the web's own levels W.level",
+     "grain": "some step of the whole run",
+     "denied": false,
+     "which_reading": "Exceeds l W.level: l admits at some step a formation the actual levels do not. It is the Exceeds half of 'l widens W.level', so the actual levels are not as wide as l; the Includes half is absent, so neither 'l widens' nor 'the levels narrow' is said in full."
+    }
+   ],
+   "note": "Only one listed side is named; the other end is a half of Web.Widens. The placing: an undermining event, with dependences that hold and a comparison path that admits the dependants, leaves the actual levels exceeded by that path. The comparison is between two paths, not between an earlier and a later step of one. I read Includes and Exceeds in Admission.lean (lines 388 to 393), not the statement's own file."
+  },
+  {
+   "item": "E20",
+   "verdict": "WALL",
+   "from_side": "WIDENS or NARROWS, one half only: Web.Includes W.level l (not a listed notion)",
+   "to_side": "CONSUMING (Web.UnderminingOn)",
+   "kind": "",
+   "quote": "(includes : W.Includes W.level l) ... : ¬ W.UnderminingOn t f c",
+   "handed_in": "holds : ∀ g, W.requires t g c → W.requires (t + 1) g c ∧ W.need t g c ≤ W.need (t + 1) g c; admits : ∀ g, W.requires t g c → W.Admits (l (t + 1)) (t + 1) g",
+   "converse": "none named. It is E19 contraposed: Includes W.level l and Exceeds l W.level contradict each other by their definitions.",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "WIDENS or NARROWS (half, unlisted)",
+     "notion": "Web.Includes",
+     "of_what": "two level paths: the web's own levels W.level over a handed-in path l",
+     "grain": "whole run, every step",
+     "denied": false,
+     "which_reading": "Includes W.level l: the actual levels admit everything l admits; the docstring's 'keeping what can form'. It is 'not narrowed against l', not 'widens' (no Exceeds)."
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Web.UnderminingOn",
+     "of_what": "any formation f's relation to the condition c",
+     "grain": "the step t",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "With holds and admits, nothing under 'the levels include l' has an undermining event at that step on that condition: an exclusion, said of one web (its levels against a path; an event at a step). Only one listed side is named. The docstring says 'only if no event at the step undermines that condition', which matches."
+  },
+  {
+   "item": "E21",
+   "verdict": "IMPLIES",
+   "from_side": "RENEWING (Web.Renewed)",
+   "to_side": "WIDENS or NARROWS, one half only: Web.Includes W.level l (not a listed notion)",
+   "kind": "",
+   "quote": "(renewed : ∀ t f c, part f = true → W.draws t f c → W.Renewed c) : W.Includes W.level l",
+   "handed_in": "balances : L.Balances W; taking : L.Taking W; without : L.WithheldLevels part W l (l is the levels without the part). Section variables L, W, part.",
+   "converse": "none named",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Web.Renewed",
+     "of_what": "a condition c: every condition any member of the part draws on at any step",
+     "grain": "whole run (every dependence on it kept at every step)",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "WIDENS or NARROWS (half, unlisted)",
+     "notion": "Web.Includes",
+     "of_what": "two level paths: the levels with the part (W.level) over the levels without it (l)",
+     "grain": "whole run, every step",
+     "denied": false,
+     "which_reading": "Includes W.level l: with the part, everything admitted without it is still admitted: the part does not narrow. Not 'widens' (no Exceeds)."
+    }
+   ],
+   "note": "Only one listed side is named. The placing: renewal of the conditions a part draws on, over the whole run, gives that the part does not narrow what can form. Renewal is said of conditions here, not of formations (E22 says it of formations)."
+  },
+  {
+   "item": "E22",
+   "verdict": "IMPLIES",
+   "from_side": "RENEWING (Web.RenewingIn)",
+   "to_side": "WIDENS or NARROWS, one half only: Web.Includes W.level l (not a listed notion)",
+   "kind": "",
+   "quote": "(renewing : ∀ f, part f = true → W.RenewingIn f) : W.Includes W.level l",
+   "handed_in": "balances : L.Balances W; taking : L.Taking W; without : L.WithheldLevels part W l",
+   "converse": "none named. E23 is a built case showing the stepwise class (RenewingAt) does not do in place of RenewingIn.",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Web.RenewingIn",
+     "of_what": "a formation: every member of the part",
+     "grain": "whole run (every condition it takes part in at any step is renewed at every step)",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "WIDENS or NARROWS (half, unlisted)",
+     "notion": "Web.Includes",
+     "of_what": "two level paths: the levels with the part over those without it",
+     "grain": "whole run, every step",
+     "denied": false,
+     "which_reading": "Includes W.level l: the part does not narrow; not 'widens'."
+    }
+   ],
+   "note": "As E21, with renewal said of the part's formations over the run. Only one listed side is named."
+  },
+  {
+   "item": "E23",
+   "verdict": "BUILT CASE",
+   "from_side": "RENEWING (Web.RenewingAt at a step; Web.RenewingIn over the run, denied)",
+   "to_side": "CONSUMING (Web.ConsumingIn), with NARROWS (Web.Widens l web.level)",
+   "kind": "under both (RENEWING at the step and CONSUMING over the run); under CONSUMING and not RENEWING at the run grain; and NARROWS",
+   "quote": "web.RenewingAt 0 true ∧ web.ConsumingIn true ∧ ¬ web.RenewingIn true ∧ web.Widens l web.level",
+   "handed_in": "without : flow.WithheldLevels drawerPart web l (it fixes l as the levels without the drawer's part); everything else is the built web and flow of Preemption",
+   "converse": "none named",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Web.RenewingAt",
+     "of_what": "the drawer's event: formation `true` at step 0",
+     "grain": "a step",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "RENEWING",
+     "notion": "Web.RenewingIn",
+     "of_what": "the same formation `true`",
+     "grain": "whole run",
+     "denied": true,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Web.ConsumingIn",
+     "of_what": "the same formation `true`",
+     "grain": "whole run (some draw on a condition a dependence on which is met at no later step)",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "NARROWS",
+     "notion": "Web.Widens",
+     "of_what": "two level paths: the levels without the drawer's part (l) over the levels with it (web.level)",
+     "grain": "whole run",
+     "denied": false,
+     "which_reading": "NARROWS, of the part: Widens l web.level reads 'l widens web.level', and l is the path without the part; so with the part what can form is narrower."
+    }
+   ],
+   "note": "One formation is within renewal at its step and consuming over the run. It refutes RenewingAt (step) → RenewingIn (run), and RenewingAt → not ConsumingIn; and, since Widens l web.level contradicts Includes web.level l, it shows E22 fails with the stepwise class in place of the run class, for this one event (RenewingAt is given at step 0 only, not at every step). The statement itself places CONSUMING over the run together with NARROWS of the same formation's part: one case, no general law. The docstring's 'the run class is the one that tells the part's place' is a reading across this case and E22, more than the statement."
+  },
+  {
+   "item": "E24",
+   "verdict": "BUILT CASE",
+   "from_side": "NARROWS in content, by unlisted notions (Web.Includes l web.level, false admitted without the part and unsupported with it, ¬ Retains)",
+   "to_side": "CONSUMING (Web.UnderminingAt), denied",
+   "kind": "under narrowing and not CONSUMING",
+   "quote": "(web.active 0 true ∧ ¬ web.UnderminingAt 0 true) ∧ (∀ t, web.Admits (l t) t false ∧ ¬ web.Supported (t + 1) false) ∧ web.Includes l web.level ∧ web.Adds sig p l web.level ∧ ¬ web.Retains sig p web.level l",
+   "handed_in": "without : flow.WithheldLevels drawerPart web l; unrestricted : Unrestricted sig (the continuation condition); p : Pos; the rest is the built web and flow of Preemption",
+   "converse": "none named",
+   "opened_file": false,
+   "sides": [
+    {
+     "side": "CONSUMING",
+     "notion": "Web.UnderminingAt",
+     "of_what": "the drawer's event: formation `true` at step 0",
+     "grain": "a step",
+     "denied": true,
+     "which_reading": ""
+    },
+    {
+     "side": "WIDENS or NARROWS (unlisted notions)",
+     "notion": "Web.Includes, with Admits and Supported",
+     "of_what": "two level paths: the levels without the drawer's part (l) over the levels with it (web.level); and formation `false` at every step",
+     "grain": "whole run, every step",
+     "denied": false,
+     "which_reading": "NARROWS, of the part: l includes web.level, and `false` is admitted by l at every step and not supported by the actual levels at any step after the first; Web.Widens is not named."
+    }
+   ],
+   "note": "Only one listed side is named, and it stands denied. The case: an active event that is not undermining, whose part still narrows what can form and loses something with significance. It refutes 'an event that is not undermining (a living event) belongs to a part that keeps what can form', and so the converse of E19 for this event: levels exceeded with no undermining at that event. The denial is of the event at step 0 only; the statement does not deny undermining at later steps. With E23 (same built web): the same event is within renewal at its step, not undermining at its step, and its formation consumes over the run. I did not open Significance.lean."
+  }
+ ],
+ "not_read": "None: all 24 items read. Opened beyond the packet, at a few lines each: GrammarConditionals.lean (E02, E03 proofs), GrammarLaws.lean 1797-1822 (E04), GrammarMap.lean 240-293 (E05-E07), KeepingWidening.lean section variables (E08, E09), MapInstances.lean 110-256 (E10, E11), RoomNet.lean 656 (E12), HeldPossible.lean 386 and 822 (E13, E15), FromTheDynamics.lean 366-382 (E14), PersistingChoices.lean 640-700 and 300-308, Weightings.lean 427-435 and 6016-6023 (E16, E17), Admission.lean 376-394 and 500-510, Dependence.lean 130-170 (E19-E24), Retaining.lean 476-487 (E23). No Lean run, no file written. E18, E19-E22 and E24 were judged from the packet's statement and the definitions only."
+}

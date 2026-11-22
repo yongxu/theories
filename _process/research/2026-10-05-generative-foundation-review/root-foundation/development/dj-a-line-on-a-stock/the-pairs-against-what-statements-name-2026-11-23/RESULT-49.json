@@ -1,0 +1,732 @@
+[
+ {
+  "item": "A04",
+  "theorem": "Web.renewingAlong_not_consumingAlong",
+  "cell": "P3 within",
+  "two_readers": [
+   "WALL",
+   "WALL"
+  ],
+  "third": null,
+  "refuter": "STANDS",
+  "told": "TOLD WITH MORE THAN IS PROVED",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "A08",
+  "theorem": "Web.renewed_not_consumed",
+  "cell": "P3 within",
+  "two_readers": [
+   "WALL",
+   "WALL"
+  ],
+  "third": null,
+  "refuter": "STANDS",
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "A09",
+  "theorem": "Web.kept_or_broken",
+  "cell": "P3 within",
+  "two_readers": [
+   "COVERS",
+   "COVERS"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "NOT TOLD THERE",
+  "atlas": [
+   "three-outcomes-of-a-loss"
+  ],
+  "rests_on_a_reading": [
+   "Becoming.Web.Broken as P3.consuming",
+   "Becoming.Web.Kept as P3.renewing"
+  ]
+ },
+ {
+  "item": "A10",
+  "theorem": "Web.kept_not_broken",
+  "cell": "P3 within",
+  "two_readers": [
+   "WALL",
+   "WALL"
+  ],
+  "third": null,
+  "refuter": "STANDS",
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": [
+   "Becoming.Web.Broken as P3.consuming",
+   "Becoming.Web.Kept as P3.renewing"
+  ]
+ },
+ {
+  "item": "A11",
+  "theorem": "Web.RenewingAt.not_undermining",
+  "cell": "P3 within",
+  "two_readers": [
+   "WALL",
+   "WALL"
+  ],
+  "third": null,
+  "refuter": "STANDS",
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "A12",
+  "theorem": "Web.RenewingAt.not_breaking",
+  "cell": "P3 within",
+  "two_readers": [
+   "WALL",
+   "WALL"
+  ],
+  "third": null,
+  "refuter": "STANDS",
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": [
+   "Becoming.Web.BreakingAt as P3.consuming"
+  ]
+ },
+ {
+  "item": "A13",
+  "theorem": "Web.not_renewing_at_of_broken",
+  "cell": "P3 within",
+  "two_readers": [
+   "WALL",
+   "ACROSS"
+  ],
+  "third": "WALL",
+  "refuter": null,
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": [
+   "Becoming.Web.Broken as P3.consuming"
+  ]
+ },
+ {
+  "item": "B09",
+  "theorem": "Renewable.finite_reading_withholds_renewal",
+  "cell": "P3 within",
+  "two_readers": [
+   "ACROSS",
+   "ACROSS"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "B10",
+  "theorem": "Optimum.Holding.doubling_capacity",
+  "cell": "P3 within",
+  "two_readers": [
+   "BUILT CASE",
+   "PASSAGE"
+  ],
+  "third": "BUILT CASE",
+  "refuter": null,
+  "told": "NOT TOLD THERE",
+  "atlas": [
+   "drawers-in-turn"
+  ],
+  "rests_on_a_reading": [
+   "Becoming.Web.Broken as P3.consuming",
+   "Becoming.Web.Kept as P3.renewing"
+  ]
+ },
+ {
+  "item": "B16",
+  "theorem": "Ranking.wholeRun_of_renewed",
+  "cell": "P3 within",
+  "two_readers": [
+   "WALL",
+   "WALL"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "B17",
+  "theorem": "Ranking.stepwise_of_renewed",
+  "cell": "P3 within",
+  "two_readers": [
+   "WALL",
+   "WALL"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "B18",
+  "theorem": "Ranking.renewed_extends_iff",
+  "cell": "P3 within",
+  "two_readers": [
+   "ACROSS",
+   "ACROSS"
+  ],
+  "third": null,
+  "refuter": "FALLS",
+  "told": "TOLD IN ANOTHER CHAPTER PLACE ONLY",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "C01",
+  "theorem": "Ranking.renewed_active_extends_iff",
+  "cell": "P3 within",
+  "two_readers": [
+   "ACROSS",
+   "ACROSS"
+  ],
+  "third": null,
+  "refuter": "FALLS",
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "C06",
+  "theorem": "SupportGatedWebs.jointly_consuming",
+  "cell": "P3 within",
+  "two_readers": [
+   "ACROSS",
+   "ACROSS"
+  ],
+  "third": null,
+  "refuter": "STANDS",
+  "told": "TOLD WITH MORE THAN IS PROVED",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "C10",
+  "theorem": "Web.RenewingInWithin.not_undermining_for",
+  "cell": "P3 within",
+  "two_readers": [
+   "WALL",
+   "WALL"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": [
+   "Becoming.Web.UnderminingFor as P3.consuming"
+  ]
+ },
+ {
+  "item": "C11",
+  "theorem": "Web.RenewingInWithin.not_consuming",
+  "cell": "P3 within",
+  "two_readers": [
+   "WALL",
+   "WALL"
+  ],
+  "third": null,
+  "refuter": "STANDS",
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "C14",
+  "theorem": "RelationalRenewal.renewed_not_consumed",
+  "cell": "P3 within",
+  "two_readers": [
+   "WALL",
+   "WALL"
+  ],
+  "third": null,
+  "refuter": "STANDS",
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "C15",
+  "theorem": "RelationalRenewal.renewing_not_consuming",
+  "cell": "P3 within",
+  "two_readers": [
+   "WALL",
+   "WALL"
+  ],
+  "third": null,
+  "refuter": "STANDS",
+  "told": "NOT TOLD THERE",
+  "atlas": [
+   "loss-of-renewal-for-good",
+   "loss-of-renewal-for-good"
+  ],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "D01",
+  "theorem": "«尽则非无终»",
+  "cell": "P1 within",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "TOLD IN ANOTHER CHAPTER PLACE ONLY",
+  "atlas": [
+   "degeneration-from-a-horizon"
+  ],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "D02",
+  "theorem": "«尽而续可定则有终»",
+  "cell": "P1 within",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "STANDS",
+  "told": "TOLD IN ANOTHER CHAPTER PLACE ONLY",
+  "atlas": [
+   "degeneration-from-a-horizon"
+  ],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "D03",
+  "theorem": "«尽则有终当且仅当排中»",
+  "cell": "P1 within",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "TOLD IN ANOTHER CHAPTER PLACE ONLY",
+  "atlas": [
+   "degeneration-from-a-horizon"
+  ],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "D07",
+  "theorem": "LineageRegimes.stock_forces_neither",
+  "cell": "P1 within",
+  "two_readers": [
+   "BUILT CASE",
+   "ACROSS"
+  ],
+  "third": "NAME ONLY",
+  "refuter": null,
+  "told": "TOLD IN ANOTHER CHAPTER PLACE ONLY",
+  "atlas": [
+   "ending-laws-as-regimes-on-a-lineage"
+  ],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "D09",
+  "theorem": "LineageRegions.Chain.chain",
+  "cell": "P1 within",
+  "two_readers": [
+   "BUILT CASE",
+   "ACROSS"
+  ],
+  "third": "BUILT CASE",
+  "refuter": null,
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "D18",
+  "theorem": "Run.generation_of_heldKeepsWidening",
+  "cell": "P1 x P2",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "TOLD IN ANOTHER CHAPTER PLACE ONLY",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "D21",
+  "theorem": "Steps.generation_of_reachingKeepsWidening",
+  "cell": "P1 x P2",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "TOLD",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "D22",
+  "theorem": "Steps.wem_of_generation_of_keepsWidening",
+  "cell": "P1 x P2",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "FALLS",
+  "told": "TOLD",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "D23",
+  "theorem": "Steps.dne_of_keepsWidening_of_generation",
+  "cell": "P1 x P2",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "FALLS",
+  "told": "TOLD",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "D24",
+  "theorem": "Web.generation_of_keepsWidening_byName",
+  "cell": "P1 x P2",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "TOLD",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "D25",
+  "theorem": "Web.kept_by_name_and_generation_on_moments",
+  "cell": "P1 x P2",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "TOLD",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "E01",
+  "theorem": "«生生不息»",
+  "cell": "P0 x P1",
+  "two_readers": [
+   "WALL",
+   "WALL"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "TOLD IN ANOTHER CHAPTER PLACE ONLY",
+  "atlas": [],
+  "rests_on_a_reading": [
+   "Becoming.«生生» as P0.lasting"
+  ]
+ },
+ {
+  "item": "E05",
+  "theorem": "«尽则非不穷»",
+  "cell": "P0 x P1",
+  "two_readers": [
+   "WALL",
+   "WALL"
+  ],
+  "third": null,
+  "refuter": "STANDS",
+  "told": "TOLD IN ANOTHER CHAPTER PLACE ONLY",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "E06",
+  "theorem": "«生成则延»",
+  "cell": "P0 x P1",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "TOLD",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "E07",
+  "theorem": "«守则延»",
+  "cell": "P0 x P1",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "TOLD",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "E08",
+  "theorem": "Flow.generation_of_brief",
+  "cell": "P0 x P1",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "STANDS",
+  "told": "TOLD IN ANOTHER CHAPTER PLACE ONLY",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "E09",
+  "theorem": "Web.generation_of_one_step_supports",
+  "cell": "P0 x P1",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "STANDS",
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "E10",
+  "theorem": "Map.outside_of_not_endless",
+  "cell": "P0 x P1",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "E11",
+  "theorem": "Web.keeping_of_carried_on",
+  "cell": "P0 x P1",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "STANDS",
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "E15",
+  "theorem": "Run.not_unending_of_heldKeepsWidening",
+  "cell": "P0 x P2",
+  "two_readers": [
+   "ACROSS",
+   "ACROSS"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "TOLD IN ANOTHER CHAPTER PLACE ONLY",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "E16",
+  "theorem": "Flow.persisting_consistent_with_selfConcern",
+  "cell": "P0 x P2",
+  "two_readers": [
+   "IMPLIES",
+   "ACROSS"
+  ],
+  "third": "NAME ONLY",
+  "refuter": null,
+  "told": "TOLD IN ANOTHER CHAPTER PLACE ONLY",
+  "atlas": [
+   "persisting-filters-what-was-chosen"
+  ],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "E19",
+  "theorem": "Web.UnderminingOn.exceeded",
+  "cell": "P2 x P3",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "E20",
+  "theorem": "Web.Includes.not_undermining",
+  "cell": "P2 x P3",
+  "two_readers": [
+   "WALL",
+   "WALL"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "E21",
+  "theorem": "Flow.Balances.includes_of_renewed",
+  "cell": "P2 x P3",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "STANDS",
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "E22",
+  "theorem": "Flow.Balances.includes_of_renewingIn",
+  "cell": "P2 x P3",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "F13",
+  "theorem": "ClosedCapture.lock_line",
+  "cell": "P0 x P4",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "TOLD IN ANOTHER CHAPTER PLACE ONLY",
+  "atlas": [
+   "closed-capture"
+  ],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "F15",
+  "theorem": "NoReturnAt.recoverable_iff",
+  "cell": "P0 x P4",
+  "two_readers": [
+   "PASSAGE",
+   "PASSAGE"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "NOT TOLD THERE",
+  "atlas": [
+   "reading-a-loss-in-time"
+  ],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "F16",
+  "theorem": "noReturnAt_of_past",
+  "cell": "P0 x P4",
+  "two_readers": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "third": null,
+  "refuter": "STANDS NARROWED",
+  "told": "NOT TOLD THERE",
+  "atlas": [],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "F18",
+  "theorem": "TurningInTime.locked_turns_in_time_share_iff",
+  "cell": "P0 x P4",
+  "two_readers": [
+   "PASSAGE",
+   "PASSAGE"
+  ],
+  "third": null,
+  "refuter": "FALLS",
+  "told": "TOLD",
+  "atlas": [
+   "turning-in-time"
+  ],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "F19",
+  "theorem": "TurningInTime.noReturnAt_of_below",
+  "cell": "P0 x P4",
+  "two_readers": [
+   "PASSAGE",
+   "PASSAGE"
+  ],
+  "third": null,
+  "refuter": "FALLS",
+  "told": "TOLD",
+  "atlas": [
+   "turning-in-time"
+  ],
+  "rests_on_a_reading": []
+ },
+ {
+  "item": "F20",
+  "theorem": "TurningInTime.noReturn_exists",
+  "cell": "P0 x P4",
+  "two_readers": [
+   "PASSAGE",
+   "PASSAGE"
+  ],
+  "third": null,
+  "refuter": "FALLS",
+  "told": "NOT TOLD THERE",
+  "atlas": [
+   "turning-in-time"
+  ],
+  "rests_on_a_reading": []
+ }
+]

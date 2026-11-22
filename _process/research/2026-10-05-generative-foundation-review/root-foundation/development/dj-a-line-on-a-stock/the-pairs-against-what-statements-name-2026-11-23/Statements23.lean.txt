@@ -1,0 +1,109 @@
+import Lean
+import Becoming
+import RelationalRenewal
+import GenerativeCore
+import InquirySufficiency
+
+/-! For every theorem declared in a module of the core receipt: where it stands in its source file, and the receipt's
+declarations that are not theorems (definitions, structures, inductive types, constructors) occurring in the types of
+its statement's binders and in what is left after the binders. For every such declaration that is not a theorem: where
+it stands, its kind, and the receipt's non-theorem declarations occurring in its type and its value (one step, nothing
+followed). It reads statements and definitions only and says nothing of what any of them means.
+AI-written (Claude Fable, board row DJ), 23 November 2026, after `AllStatements.lean` of 22 November. -/
+
+open Lean
+
+def digitsAfter (s pre : String) : Bool :=
+  s.startsWith pre && (s.drop pre.length).length > 0 && (s.drop pre.length).all (fun ch => ch.isDigit || ch == '_')
+
+def skipLast (c : Name) : Bool :=
+  match c with
+  | .str _ s => digitsAfter s "eq_" || s == "eq_def" || s == "eq_unfold" || s == "injEq" || s == "inj"
+      || s == "sizeOf_spec" || s == "noConfusion" || s == "noConfusionType" || digitsAfter s "match_"
+      || s.startsWith "_" || digitsAfter s "proof_" || s == "rec" || s == "recOn" || s == "casesOn"
+      || s == "below" || s == "brecOn" || s == "binductionOn" || s == "ibelow" || s == "ctorIdx"
+      || s == "toCtorIdx" || s == "ofNat" || s == "ctorElim" || s == "ctorElimType"
+  | .num _ _ => true
+  | _ => false
+
+def jsonList (xs : List String) : String := "[" ++ ", ".intercalate (xs.map String.quote) ++ "]"
+
+partial def split : Expr → Array Expr → Array Expr × Expr
+  | .forallE _ d b _, acc => split b (acc.push d)
+  | .mdata _ e, acc => split e acc
+  | e, acc => (acc, e)
+
+#eval show CoreM Unit from do
+  let env ← getEnv
+  let mods := env.header.moduleNames
+  let inReceipt := fun (m : Name) => (`Becoming).isPrefixOf m || m == `RelationalRenewal || m == `GenerativeCore
+    || m == `InquirySufficiency
+  let modOf := fun (u : Name) => match env.getModuleIdxFor? u with
+    | some j => some mods[j.toNat]!
+    | none => none
+  let notion := fun (u : Name) => !u.isInternal && !skipLast u && (match modOf u with
+    | some m => inReceipt m
+    | none => false) && match env.find? u with
+    | some (.thmInfo _) => false
+    | some (.recInfo _) => false
+    | some _ => true
+    | none => false
+  let srt := fun (l : List Name) => (l.map toString).toArray.qsort (· < ·) |>.toList
+  let mut rows : Array (String × String) := #[]
+  let mut nThm := 0
+  let mut nDef := 0
+  for (c, ci) in env.constants.map₁.toList do
+    if c.isInternal || skipLast c then continue
+    let some m := modOf c | continue
+    if !inReceipt m then continue
+    let rng ← findDeclarationRanges? c
+    let (l1, l2) := match rng with
+      | some r => (r.range.pos.line, r.range.endPos.line)
+      | none => (0, 0)
+    let head := "\"module\": " ++ (toString m).quote ++ ", \"name\": " ++ (toString c).quote
+      ++ ", \"line\": " ++ toString l1 ++ ", \"end\": " ++ toString l2
+    match ci with
+    | .thmInfo t =>
+      let (doms, body) := split t.type #[]
+      let mut hyp : NameSet := {}
+      for d in doms do
+        for u in d.getUsedConstants do
+          if notion u then hyp := hyp.insert u
+      let concl := (body.getUsedConstants.toList.filter notion)
+      nThm := nThm + 1
+      rows := rows.push ("T " ++ toString m ++ " " ++ toString c,
+        "THM {" ++ head ++ ", \"in_binders\": " ++ jsonList (srt hyp.toList)
+          ++ ", \"in_conclusion\": " ++ jsonList (srt concl) ++ "}")
+    | .recInfo _ => continue
+    | _ =>
+      let kind := match ci with
+        | .defnInfo _ => "def"
+        | .inductInfo _ => "inductive"
+        | .ctorInfo _ => "constructor"
+        | .opaqueInfo _ => "opaque"
+        | .axiomInfo _ => "axiom"
+        | .quotInfo _ => "quot"
+        | _ => "other"
+      let mut used : NameSet := {}
+      for u in ci.type.getUsedConstants do
+        if notion u && u != c then used := used.insert u
+      match ci.value? with
+      | some v =>
+        for u in v.getUsedConstants do
+          if notion u && u != c then used := used.insert u
+      | none => pure ()
+      match ci with
+      | .inductInfo iv =>
+        for k in iv.ctors do
+          match env.find? k with
+          | some kc =>
+            for u in kc.type.getUsedConstants do
+              if notion u && u != c then used := used.insert u
+          | none => pure ()
+      | _ => pure ()
+      nDef := nDef + 1
+      rows := rows.push ("D " ++ toString m ++ " " ++ toString c,
+        "DEF {" ++ head ++ ", \"kind\": " ++ kind.quote ++ ", \"names\": " ++ jsonList (srt used.toList) ++ "}")
+  for (_, r) in rows.qsort (fun a b => a.1 < b.1) do
+    IO.println r
+  IO.println s!"COUNT theorems {nThm} notions {nDef}"

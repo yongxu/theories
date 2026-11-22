@@ -1,0 +1,101 @@
+export const meta = {
+  name: 'notions-of-the-two-ways',
+  description: 'Which Lean notions state each side of the four pairs the direction page names; an attack on the frozen tests; a reader of what is missing',
+  phases: [
+    { title: 'Notions', detail: 'five readers, one a pair, each alone' },
+    { title: 'Attack', detail: 'one reader attacks the frozen file' },
+    { title: 'Missing', detail: 'one reader who took no part names what is missing or wrongly in' },
+  ],
+}
+
+const ROOT = '/Users/ren/theories'
+const DIR = ROOT + '/tmp/r7/one-model/check/statements23'
+const LEAN = ROOT + '/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming'
+
+const WHAT = `What we are doing (so that you know the whole and not only your task). The repository at ${ROOT} holds "the theory of becoming": a map of how anything forms, persists, changes and ends, with its core proved in Lean 4 (the package's files are under ${LEAN}/ ; three more modules, GenerativeCore, RelationalRenewal and InquirySufficiency, stand beside it one or two folders up). The aim, as the direction page has it: on that map "two ways of going on placed with respect to each other and to going on at all: a way of selecting that uses up what it or others rest on and can no longer be turned, and a way that keeps remaking what it rests on". The two ways are not named in the Lean. The direction page says the account has four pairs and keeps them apart: P1, on the grammar, where a pattern generates, keeps or degenerates; P2, what can form widening or narrowing; P3, renewing and consuming, two classes of a formation on the web; P4, a lock (a rule set again from the share it already favours) against a turn in time. This step wants to see, from the Lean itself, where statements place one side with respect to another. Its first part, yours, is only this: which Lean declarations that are NOT theorems (definitions, structures, inductive types) state each side. A later script will find every theorem whose statement names notions of two sides; other readers judge those. You judge no theorem.
+
+House rules for this run. This Mac is busy: run no Lean, no build, no test, no gate, no python that takes more than seconds; read files and search them. Change no file in the repository and write none; your final message is your whole return. Do not read ${DIR}/FROZEN.md (it holds a forecast you should not see). Nothing is pushed or sent anywhere. Say what you did not read. A sentence of yours that says a thing is absent must say where you looked ("not found in X and Y"), never "there is none".`
+
+const RULES = `Rules for the list, fixed beforehand:
+- N-a. A notion goes on a side's list only where the chapter section named below, or the declaration's own docstring (or its module's account at the top of the file), says it states that side. Quote the words (a short quote, exact) and give file and line. Where neither says so and you still judge that it states the side, give it with basis "reading" and say why; it is kept apart.
+- N-b. A structure a statement is stated on, a carrier (for example a web, a flow, a process, counts of carriers), a built example, and a premise that many laws take, are NOT a side's notion. List them as carriers, with why.
+- N-c. A notion that states a side only at one grain (at a step, over a stretch, over a whole run, from an event on, of a part, of a formation) is listed with that grain.
+- Give every name as Lean's full name exactly as it stands in the first column of ${DIR}/notions-with-counts.tsv (tab-separated: full name, kind, module, line, how many theorem statements name it). That table lists every non-theorem declaration of the package and is a way in: search it for candidates, then OPEN each candidate in the Lean before listing it. A module named Becoming.X is the file ${LEAN}/X.lean.
+- Also name what you considered and refused, with why, so that a later reader need not re-open it.
+- Stop at about 90,000 tokens of your own reading; return what you have and say what is unread.`
+
+const SCHEMA = {
+  type: 'object',
+  properties: {
+    pair: { type: 'string' },
+    sides: { type: 'array', items: { type: 'object', properties: {
+      side: { type: 'string' },
+      notions: { type: 'array', items: { type: 'object', properties: {
+        name: { type: 'string', description: 'full Lean name as in the table' },
+        file: { type: 'string' }, line: { type: 'integer' },
+        grain: { type: 'string' },
+        basis: { type: 'string', enum: ['chapter', 'docstring', 'reading'] },
+        quote: { type: 'string', description: 'the exact words that say it states this side, with where they stand' },
+        says: { type: 'string', description: 'one sentence: what the definition says, read from its body' },
+      }, required: ['name', 'file', 'line', 'basis', 'quote', 'says'] } },
+    }, required: ['side', 'notions'] } },
+    carriers: { type: 'array', items: { type: 'object', properties: { name: { type: 'string' }, why: { type: 'string' } }, required: ['name', 'why'] } },
+    refused: { type: 'array', items: { type: 'object', properties: { name: { type: 'string' }, why: { type: 'string' } }, required: ['name', 'why'] } },
+    not_read: { type: 'string' },
+    notes: { type: 'string', description: 'anything the session should know: a side with no notion that says so, two notions that are one, a chapter sentence the Lean does not carry' },
+  },
+  required: ['pair', 'sides', 'carriers', 'refused', 'not_read', 'notes'],
+}
+
+const PAIRS = [
+  { key: 'P1', label: 'grammar', text: `P1, on the grammar: where a pattern GENERATES, KEEPS, or DEGENERATES. Three sides. The chapter section: ${ROOT}/theories/becoming/chapters/02-MAP.md, its section 1 (anchors "branches", "r-generation-and-degeneration-at-two-grains", "map-on-the-world"). The grammar's declarations are largely under Chinese names; search the chapter for the Lean names it gives, and the table for the modules it names.` },
+  { key: 'P2', label: 'widening-narrowing', text: `P2, what can form: WIDENING or NARROWING. Two sides. The chapter section: ${ROOT}/theories/becoming/chapters/07-SIGNIFICANCE.md, its section 2 (anchors "r-four-cases-of-a-part", "r-the-run-classes-and-widening", "r-keeping-widening-is-generation-losing-nothing"). Candidates to open, among others the table shows: names with Widens, KeepsWidening, EventuallyWidens, RangeWidens, WidensOn, WidensBy, narrow, Narrowing; and the opening account of Space.lean.` },
+  { key: 'P3', label: 'renewing-consuming', text: `P3, on the web: RENEWING or CONSUMING, two classes of a formation over a whole run on the web (a model of formations that require and draw on shared conditions, each with a level). Two sides. The chapter section: ${ROOT}/theories/becoming/chapters/02-MAP.md, its section 3.1 (anchors "runs", "r-relational-renewal-classification", "r-becoming-return-grades"). Candidates to open, among others: Web.RenewingIn, Web.ConsumingIn, Web.Renewed, Web.Consumed, Web.RenewingAt, Web.Unceasing, Web.Depletes, Web.Ceases, the classes of a single step in Renewable.lean (withinRenewal, beyondRenewal and their neighbours), and the file RelationalRenewal.lean beside the package (find it with a search under ${ROOT}/experiments/integrated-correction/general-framework/generative-basis/lean/).` },
+  { key: 'P4', label: 'lock-turn', text: `P4: a LOCK (a rule set again from the share it already favours, which then stays) against a TURN IN TIME (a course that is read, or turns, before its point of no return). Two sides; where the Lean also has "read late" or "kept" as a named outcome, list it under the side it states and say so. The chapter sections: ${ROOT}/theories/becoming/chapters/02-MAP.md, its sections 9 to 11 (anchors "capture", "turning-in-time", "r-turning-in-time"). Candidates to open, among others: RuleCapture.Locked, ReadsShare, Raises; ClosedCapture (Unread, Thinned and its fields); ChoiceCountCapture; TurningInTime (Turned, MeetsNeed, AloneOutside, the window notions); ReadInTime; LineOnAStock; PoolFromCourse.` },
+  { key: 'P0', label: 'going-on-and-ends', text: `P0, going on at all and its ends: LASTING (a course or a thing goes on), CEASING (it ends), and NO RETURN (it can no longer be recovered or turned back; "for good"). Three sides. This is not one of the direction page's four pairs; it is taken from the aim's words "and to going on at all". There is no single chapter section: start from ${ROOT}/theories/becoming/chapters/02-MAP.md (search it for "lasting", "ceases", "no return", "recoverable", "for good") and the table. Candidates to open, among others: Lasting.Lasts, CeasesToBe, Web.Ceases, Web.CeasesFrom, Web.Unceasing (does it state lasting, or is it P3's?), Recoverable, NoReturnAt, Law.Returns, Branching.Returns, Law.Drawn. Where a notion states a side of P1 to P4 as much as this one, say so in notes; the other readers have those.` },
+]
+
+phase('Notions')
+const attackP = agent(`${WHAT}
+
+Your task is different from the readers': you ATTACK one file before anything is run on it. Exception to the house rule above: you DO read ${DIR}/FROZEN.md, and that file alone is what you attack. You may open anything else in the repository to test its sentences: the Lean, ${DIR}/statements23.json (the print: {"theorems":[{module,name,line,end,in_binders,in_conclusion}], "notions":[{module,name,line,end,kind,names}]}), ${DIR}/Statements23.lean.txt (the printer), ${ROOT}/_process/DIRECTION.md, and row FM's survey of roads at ${ROOT}/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-roads-the-atlas-tells-2026-11-22/ (QUESTIONS-ROADS.md.txt and NOTE.md).
+
+Yesterday three frozen files of this session were found to have tests that could be met by their letter with nothing of worth done, and sentences that were false. Find the same here. In particular:
+1. Each of T1 to T5: can it be passed by its letter while nothing is learned, or failed while something is? Who decides "already told", and from what text? Can T2(c) be claimed for a pair of sides merely because a side's list is thin?
+2. Every factual sentence of the file: is it true? (The count of theorems, what the print leaves out, what the direction page says under "Which two", what row FM's (t), (p), (d) are.)
+3. What the print cannot see and the file does not say: a side stated through notation, a theorem that speaks of a side through a hypothesis of another theorem, a notion under a section variable, an instance, a structure field; binders against conclusion for an iff or a negation; the "one step through a definition" rule (try it on three real notions in the json and say what it pulls in).
+4. The judging: is it blind where it says so? Do the five verdicts cover what the readers will meet (try them on six real theorems you choose from the json that name notions of two of the pairs; say what you would answer and where the verdicts fail you)?
+5. Whether the step as designed can show anything about the two ways placed with respect to each other, or only about names occurring together.
+
+Return, as plain text: every defect with the file's sentence quoted, your evidence (file and line, or the json rows), and for each a replacement text marked MUST or SHOULD. Do not rewrite the whole file. Stop at about 110,000 tokens of your own reading and say what is unchecked.`, { label: 'attack the frozen file', phase: 'Attack' })
+
+const lists = await parallel(PAIRS.map(p => () => agent(`${WHAT}
+
+Your pair. ${p.text}
+
+${RULES}
+
+Return the structure asked for. "pair" is "${p.key}".`, { label: 'notions ' + p.key + ' ' + p.label, phase: 'Notions', schema: SCHEMA })))
+
+phase('Missing')
+const got = lists.map((l, i) => l ? l : { pair: PAIRS[i].key, failed: true })
+const critic = await agent(`${WHAT}
+
+You took no part in what follows. Five readers, one a pair and each alone, returned the Lean notions that state each side, under these rules:
+
+${RULES}
+
+Their returns (JSON):
+
+${JSON.stringify(got, null, 1)}
+
+Your task (the frozen file's rule N-d): name what is MISSING and what is WRONGLY IN.
+- Missing: go through ${DIR}/notions-with-counts.tsv (every non-theorem declaration of the package with how many statements name it; 10,470 rows, so search it by the words of each side in English and by module, and look hardest at notions that many statements name). For each candidate that no reader listed or refused, open it in the Lean and say whether it states a side under N-a, with the quote.
+- Wrongly in: for each listed notion with basis "chapter" or "docstring", open the place quoted and check that the words are there and say that; for each with basis "reading", say whether you agree and why. Check that every name is in the table exactly (a later script matches on it).
+- Carriers listed as notions, and notions listed as carriers.
+- A notion listed under two sides or two pairs: say which, and whether that is right.
+- Sides whose list holds only notions by "reading".
+Return plain text: first a list "ADD" (pair, side, full name, file:line, basis, quote, grain), then "REMOVE" (full name, why), then "MOVE", then "NAMES NOT IN THE TABLE", then what you did not check. Stop at about 110,000 tokens of your own reading.`, { label: 'what is missing or wrongly in', phase: 'Missing' })
+
+const attack = await attackP
+return { lists: got, critic, attack }

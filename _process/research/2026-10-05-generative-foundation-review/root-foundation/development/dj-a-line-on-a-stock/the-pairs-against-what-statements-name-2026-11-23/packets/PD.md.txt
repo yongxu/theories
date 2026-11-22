@@ -1,0 +1,626 @@
+# Packet D: 25 statements
+
+*Built by script from Lean's own print of what each statement names. The columns "premises name" and "conclusion names" show where a listed notion stands after the outer ∀ and → are peeled, and nothing more: a denied notion stands as the conclusion's, an iff or a conjunction is all conclusion, a carrier's type stands among the premises. Section variables are not shown; the file and lines are given so that you can open the statement where it is unclear.*
+
+## D01  `Becoming.«尽则非无终»`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, lines 251 to 257.
+
+- premises name: `Becoming.«尽»`  — listed under: on the grammar: a pattern DEGENERATES
+- conclusion names: `Becoming.«有终»`  — listed under: on the grammar: the whole line REACHES AN END (not degeneration)
+
+```lean
+/-- **Ending on every branch reaches an end, up to double negation.** -/
+theorem «尽则非无终» {R L : «际» α} {x : α} (h : «尽» R L x) : ¬ ¬ «有终» R L x := by
+```
+
+## D02  `Becoming.«尽而续可定则有终»`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, lines 259 to 270.
+
+- premises name: `Becoming.«尽»`  — listed under: on the grammar: a pattern DEGENERATES
+- conclusion names: `Becoming.«有终»`  — listed under: on the grammar: the whole line REACHES AN END (not degeneration)
+
+```lean
+/-- **Ending on every branch reaches an end where going on is decided** at the points of the
+line. -/
+theorem «尽而续可定则有终» {R L : «际» α} {x : α} (h : «尽» R L x) :
+    (∀ y, «所及» R L x y → «有后» R L y ∨ ¬ «有后» R L y) → «有终» R L x := by
+```
+
+## D03  `Becoming.«尽则有终当且仅当排中»`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, lines 580 to 587.
+
+- conclusion names: `Becoming.«尽»`  — listed under: on the grammar: a pattern DEGENERATES
+- conclusion names: `Becoming.«有终»`  — listed under: on the grammar: the whole line REACHES AN END (not degeneration)
+
+```lean
+/-- **That every line ending on every branch reaches an end is exactly excluded middle**, at every
+carrier and relation. The forward direction is witnessed by `Map.StepWhere` alone: what is
+undecided is not whether a course goes on without end, since every branch ends, but whether its
+one step is taken. -/
+theorem «尽则有终当且仅当排中» :
+    (∀ (β : Type) (R L : «际» β) (x : β), «尽» R L x → «有终» R L x) ↔ ∀ P : Prop, P ∨ ¬ P :=
+```
+
+## D04  `Becoming.OwnCondition.rising_kept`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean`, lines 1219 to 1226.
+
+- conclusion names: `Becoming.«全生成»`  — listed under: on the grammar: a pattern GENERATES
+- conclusion names: `Becoming.«全守»`  — listed under: on the grammar: a pattern KEEPS
+
+```lean
+/-- **By name, the rising course is kept**: at every occurrence it admits, the admitted pattern's
+line is 全守; it is not 全生成, as nothing is by name. -/
+theorem rising_kept {S n : Nat} (le : n ≤ S) :
+    «全守» (Web.continuationStep Web.itself) (web.admitting rising).activityClass
+        (web.admitting rising).carrierClass (S, n) ∧
+      ¬ «全生成» (Web.continuationStep Web.itself) (web.admitting rising).activityClass
+        (web.admitting rising).carrierClass (S, n) :=
+```
+
+## D05  `Becoming.Saturated.lasting_kept`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean`, lines 1864 to 1876.
+
+- conclusion names: `Becoming.«全生成»`  — listed under: on the grammar: a pattern GENERATES
+- conclusion names: `Becoming.«全守»`  — listed under: on the grammar: a pattern KEEPS
+
+```lean
+/-- **Brevity cannot be dropped from the generation law**: with every formation supported
+throughout, every line along "carry on, or pass support" never ends and keeps (全守), and none is
+全生成. -/
+theorem lasting_kept :
+    (∀ K, ¬ ∀ t g, ¬ ∀ i, i ≤ K → web.Supported (t + i) g) ∧
+      ∀ x, «全守» (Web.continuationStep (Web.passingContinuation (still.PassesSupport web)))
+          (web.admitting web.level).activityClass (web.admitting web.level).carrierClass x ∧
+        ¬ «全生成» (Web.continuationStep (Web.passingContinuation (still.PassesSupport web)))
+          (web.admitting web.level).activityClass (web.admitting web.level).carrierClass x :=
+```
+
+## D06  `Becoming.LineageRegimes.Handover.both_fates`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean`, lines 1041 to 1065.
+
+- conclusion names: `Becoming.«退化»`  — listed under: on the grammar: a pattern DEGENERATES
+- conclusion names: `Becoming.«生成»`  — listed under: on the grammar: a pattern GENERATES
+
+```lean
+/-- **Both fates at every stock.** For every stock `s ≥ 1`, two handovers on the same pair, with
+generations of descent, start from the same stock `s`: the relay keeps the stock at `s`, is never in
+excess and never dissipated on, and its lineage generates (`«生成»`); the run-down is in excess at
+each of its `s` steps and dissipated on at every step, and its lineage degenerates (`«退化»`). That
+both are balanced, gated at need one, every relatum embodied and active only while supported, is
+not stated here: those are `GatedPairCourse`'s fields, met in `stock_forces_neither`'s proof. -/
+theorem both_fates {s : Nat} (pos : 0 < s) :
+    (web (relay s)).stock family 0 = s ∧ (web (runDown s)).stock family 0 = s ∧
+    (∀ t, (web (relay s)).stock family t = s) ∧
+    (∀ t, Reproduction.Relay.generations.size t = 1) ∧
+    (∀ t, ¬ (flow (relay s)).replenishment family t < (flow (relay s)).uptake family t) ∧
+    (∀ t, ¬ (flow (relay s)).DissipatesOn family t) ∧
+    (∀ k, k < s →
+      (flow (runDown s)).replenishment family (0 + k) < (flow (runDown s)).uptake family (0 + k)) ∧
+    (∀ t, (flow (runDown s)).DissipatesOn family t) ∧
+    SelectionTerm.Flow.Descended (flow (relay s)) (web (relay s)) Reproduction.Relay.generations ∧
+    SelectionTerm.Flow.Descended (flow (runDown s)) (web (runDown s)) (runGenerations s) ∧
+    «生成» (lineStep (flow (relay s)) (web (relay s)) (oneKind Bool))
+      ((web (relay s)).kindClass (oneKind Bool)) (web (relay s)).carrierClass (0, true) ∧
+    «退化» (lineStep (flow (runDown s)) (web (runDown s)) (oneKind Bool))
+      ((web (runDown s)).kindClass (oneKind Bool)) (0, true) :=
+```
+
+## D07  `Becoming.LineageRegimes.stock_forces_neither`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean`, lines 1082 to 1100.
+
+- conclusion names: `Becoming.«退化»`  — listed under: on the grammar: a pattern DEGENERATES
+- conclusion names: `Becoming.«生成»`  — listed under: on the grammar: a pattern GENERATES
+
+```lean
+/-- **The stock forces neither fate** (a restatement of the pair in `Handover.both_fates`, with
+`«生成退化不并»`, under `GatedPairCourse`). For every stock `s ≥ 1`, some gated course on a pair
+with stock `s` generates and some degenerates, so neither region follows from the stock: not every
+such course degenerates, and not every such course generates. -/
+theorem stock_forces_neither {s : Nat} (pos : 0 < s) :
+    (¬ ∀ L W G, GatedPairCourse s L W G →
+      «退化» (lineStep L W (oneKind Bool)) (W.kindClass (oneKind Bool)) (0, true)) ∧
+    ¬ ∀ L W G, GatedPairCourse s L W G →
+      «生成» (lineStep L W (oneKind Bool)) (W.kindClass (oneKind Bool)) W.carrierClass (0, true) :=
+```
+
+## D08  `Becoming.LineageRegions.StandingRelay.grain_decides_region`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean`, lines 846 to 875.
+
+- conclusion names: `Becoming.«生成»`  — listed under: on the grammar: a pattern GENERATES
+- conclusion names: `Becoming.«守»`  — listed under: on the grammar: a pattern KEEPS
+
+```lean
+/-- **The grain at which activity is read decides the stock-one cycle's region.** Every formation
+embodied, only active formations giving, the generations `Descended`: at the grain of activity
+the lineage generates from the first member, each descent a birth; at the grain of support it
+keeps, with no carrying renewal, and does not generate. The grain of support is vacuous here:
+nothing is required, so support holds at every step whether or not a formation stands, and the
+keep is the keep of the reading in which activity never changes. At that grain a dormant
+formation carries on as itself (`OneBirth.dormant_goes_on_at_support`). So the witness separates
+the grains only where support does not track standing. -/
+theorem grain_decides_region :
+    (∀ x, web.Embodied x) ∧ Reproduction.Relay.flow.Acting web ∧
+    SelectionTerm.Flow.Descended Reproduction.Relay.flow web Reproduction.Relay.generations ∧
+    «生成» (lineStep Reproduction.Relay.flow web (oneKind Bool)) (web.kindClass (oneKind Bool))
+      web.carrierClass (0, true) ∧
+    «守» (lineStep Reproduction.Relay.flow web (oneKind Bool))
+      ((web.admitting web.level).kindClass (oneKind Bool)) (web.admitting web.level).carrierClass
+      (0, true) ∧
+    ¬ «生成» (lineStep Reproduction.Relay.flow web (oneKind Bool))
+      ((web.admitting web.level).kindClass (oneKind Bool)) (web.admitting web.level).carrierClass
+      (0, true) :=
+```
+
+## D09  `Becoming.LineageRegions.Chain.chain`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean`, lines 1017 to 1053.
+
+- conclusion names: `Becoming.«退化»`  — listed under: on the grammar: a pattern DEGENERATES
+- conclusion names: `Becoming.«生成»`  — listed under: on the grammar: a pattern GENERATES
+
+```lean
+/-- **Every generation nonempty, a positive term with exact transmission, and the regions at
+points.** Every generation of the chain is nonempty; read by offspring number with exact
+transmission at every step, the term is positive at step `0`; the member `1` generates at (kind,
+carrier) at the grain of activity, and the member `2` at step `1` at the grain of support,
+every offspring supported at no step before its birth; the childless member `0` degenerates. -/
+theorem chain :
+    flow.Acting web ∧ web.Dependent ∧ (∀ x, web.Embodied x) ∧
+    SelectionTerm.Flow.Descended flow web generations ∧ FirstSupportedOffspring web generations ∧
+    Reproduction.Generations.ByNumber generations ∧
+    (∀ s, SelectionTerm.Exact (generations.family s) (generations.kids s) (generations.amount s)
+      (generations.amount (s + 1))) ∧
+    (∀ t, 0 < generations.size t) ∧ generations.concordAt 0 = 1 ∧
+    «生成» (lineStep flow web (oneKind Nat)) (web.kindClass (oneKind Nat)) web.carrierClass (0, 1) ∧
+    «生成» (lineStep flow web (oneKind Nat)) ((web.admitting web.level).kindClass (oneKind Nat))
+      (web.admitting web.level).carrierClass (1, 2) ∧
+    «退化» (lineStep flow web (oneKind Nat)) (web.kindClass (oneKind Nat)) (0, 0) :=
+```
+
+## D10  `Becoming.LineageRegions.Courses.same_terms_two_fates`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean`, lines 1616 to 1647.
+
+- conclusion names: `Becoming.«退化»`  — listed under: on the grammar: a pattern DEGENERATES
+- conclusion names: `Becoming.«生成»`  — listed under: on the grammar: a pattern GENERATES
+
+```lean
+/-- **EL1 (a) on the map: the same selection terms through any horizon, two fates.** For every
+horizon `H` there are two courses of `Descended` generations on `Flow X X`, only active
+formations giving and every formation embodied, with the same families at every step through
+`H + 1` and the same selection terms proper at every step through `H` (concordance of offspring
+number with the mark two, discordance zero: positive at every step). In the first, reproduction
+goes on, and the marked line generates (`«生成»`) at (kind, carrier) from the first marked
+member; in the second, reproduction stops after `H`, and the lineage degenerates (`«退化»`)
+from it. So the terms through a horizon need not decide the region (one course of terms for each
+horizon is shown here); after `H` the terms differ (the second's are zero at `H + 1`, as at any
+last nonempty generation). -/
+theorem same_terms_two_fates (H : Nat) :
+    (flow always).Acting (web always) ∧ (flow (upTo H)).Acting (web (upTo H)) ∧
+    (∀ x, (web always).Embodied x) ∧ (∀ x, (web (upTo H)).Embodied x) ∧
+    SelectionTerm.Flow.Descended (flow always) (web always) (generations always) ∧
+    SelectionTerm.Flow.Descended (flow (upTo H)) (web (upTo H)) (generations (upTo H)) ∧
+    (∀ t, t ≤ H + 1 → (generations always).family t = (generations (upTo H)).family t) ∧
+    (∀ t, t ≤ H → (generations always).concordAt t = 2 ∧ (generations (upTo H)).concordAt t = 2 ∧
+      (generations always).discordAt t = 0 ∧ (generations (upTo H)).discordAt t = 0) ∧
+    «生成» (lineStep (flow always) (web always) (oneKind Formation))
+      ((web always).kindClass (oneKind Formation)) (web always).carrierClass (0, (0, true)) ∧
+    «退化» (lineStep (flow (upTo H)) (web (upTo H)) (oneKind Formation))
+      ((web (upTo H)).kindClass (oneKind Formation)) (0, (0, true)) :=
+```
+
+## D11  `Becoming.Rooms.Unheated.rows`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean`, lines 269 to 283.
+
+- conclusion names: `Becoming.«全生成»`, `Becoming.«生成»`  — listed under: on the grammar: a pattern GENERATES
+- conclusion names: `Becoming.«全守»`, `Becoming.«后守»`, `Becoming.«守»`  — listed under: on the grammar: a pattern KEEPS
+- conclusion names: `Becoming.«有终»`  — listed under: on the grammar: the whole line REACHES AN END (not degeneration)
+
+```lean
+/-- The rest of its rows: at the set level it keeps from some point on and is in neither strong form
+(it reaches an end), so warmth is not a constant class under its net (`«有终则粗不有常»`); after the
+window opens it reaches an end, and is in no region of generation or keeping (it degenerates). -/
+theorem rows :
+    ¬ «全生成» (net 3 0) alike sameLevel (start 3) ∧ ¬ «全守» (net 3 0) alike sameLevel (start 3) ∧
+      «后守» (net 3 0) alike sameLevel (start 3) ∧ ¬ «有常» (net 3 0) alike ∧
+      ¬ «生成» (net 3 0) alike sameLevel b2 ∧ ¬ «守» (net 3 0) alike sameLevel b2 ∧
+      ¬ «后守» (net 3 0) alike sameLevel b2 ∧ ¬ «全生成» (net 3 0) alike sameLevel b2 ∧
+      ¬ «全守» (net 3 0) alike sameLevel b2 ∧ «有终» (net 3 0) alike b2 :=
+```
+
+## D12  `Becoming.Rooms.«平衡守而有终»`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean`, lines 287 to 296.
+
+- conclusion names: `Becoming.«退化»`  — listed under: on the grammar: a pattern DEGENERATES
+- conclusion names: `Becoming.«生成»`  — listed under: on the grammar: a pattern GENERATES
+- conclusion names: `Becoming.«守»`  — listed under: on the grammar: a pattern KEEPS
+- conclusion names: `Becoming.«新而有终»`, `Becoming.«有终»`  — listed under: on the grammar: the whole line REACHES AN END (not degeneration)
+
+```lean
+/-- **The unheated room at its set level keeps and reaches an end (平衡守而有终)**, at a margin of
+three: it keeps along the shut branch, its warmth ends along the window's, it renews on the way,
+and it is neither 生成 nor 退化. -/
+theorem «平衡守而有终» :
+    «守» (net 3 0) alike sameLevel (start 3) ∧ «有终» (net 3 0) alike (start 3) ∧
+      «新而有终» (net 3 0) alike sameLevel (start 3) ∧
+      ¬ «生成» (net 3 0) alike sameLevel (start 3) ∧ ¬ «退化» (net 3 0) alike (start 3) :=
+```
+
+## D13  `Becoming.Rooms.Matched.rows`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean`, lines 369 to 384.
+
+- conclusion names: `Becoming.«退化»`  — listed under: on the grammar: a pattern DEGENERATES
+- conclusion names: `Becoming.«全生成»`, `Becoming.«生成»`  — listed under: on the grammar: a pattern GENERATES
+- conclusion names: `Becoming.«后守»`, `Becoming.«守»`  — listed under: on the grammar: a pattern KEEPS
+- conclusion names: `Becoming.«有终»`  — listed under: on the grammar: the whole line REACHES AN END (not degeneration)
+
+```lean
+/-- The rest of its rows: at both occurrences it keeps, and keeps from some point on, and is neither
+生成 nor 全生成 nor 有终 nor 退化. -/
+theorem rows {m : Nat} (hm : 1 ≤ m) :
+    «守» (net m 1) alike sameLevel (start m) ∧ «守» (net m 1) alike sameLevel (kept m) ∧
+      «后守» (net m 1) alike sameLevel (start m) ∧ «后守» (net m 1) alike sameLevel (kept m) ∧
+      ¬ «生成» (net m 1) alike sameLevel (kept m) ∧
+      ¬ «全生成» (net m 1) alike sameLevel (start m) ∧ ¬ «全生成» (net m 1) alike sameLevel (kept m) ∧
+      ¬ «有终» (net m 1) alike (start m) ∧ ¬ «有终» (net m 1) alike (kept m) ∧
+      ¬ «退化» (net m 1) alike (start m) ∧ ¬ «退化» (net m 1) alike (kept m) :=
+```
+
+## D14  `Becoming.Rooms.«给如所取则全守»`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean`, lines 388 to 393.
+
+- conclusion names: `Becoming.«生成»`  — listed under: on the grammar: a pattern GENERATES
+- conclusion names: `Becoming.«全守»`  — listed under: on the grammar: a pattern KEEPS
+
+```lean
+/-- **A heater giving exactly what the window draws keeps, in the strong form (给如所取则全守)**, at
+every positive margin: before and after the window opens nothing renews at the level class. -/
+theorem «给如所取则全守» {m : Nat} (hm : 1 ≤ m) :
+    «全守» (net m 1) alike sameLevel (start m) ∧ «全守» (net m 1) alike sameLevel (Matched.kept m) ∧
+      ¬ «生成» (net m 1) alike sameLevel (start m) :=
+```
+
+## D15  `Becoming.Rooms.Overshooting.single_line_tested`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean`, lines 489 to 500.
+
+- conclusion names: `Becoming.«生成»`  — listed under: on the grammar: a pattern GENERATES
+- conclusion names: `Becoming.«后守»`  — listed under: on the grammar: a pattern KEEPS
+
+```lean
+/-- **The single-line law, tested both ways.** Where the window is open, the net is a single line,
+and the overshooting thermostat generating there does not keep from some point on
+(`«单行则生成后守不并»`). At its set level the net branches, and it generates and keeps from some
+point on together: the condition is needed. -/
+theorem single_line_tested :
+    ¬ «后守» (openNet 3 2) alike sameLevel o4 ∧
+      (¬ ∀ {z w w' : Occurrence}, net 3 2 z w → net 3 2 z w' → w = w') ∧
+      «生成» (net 3 2) alike sameLevel (start 3) ∧ «后守» (net 3 2) alike sameLevel (start 3) :=
+```
+
+## D16  `Becoming.Rooms.Overshooting.rows`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean`, lines 529 to 547.
+
+- conclusion names: `Becoming.«退化»`  — listed under: on the grammar: a pattern DEGENERATES
+- conclusion names: `Becoming.«生成»`  — listed under: on the grammar: a pattern GENERATES
+- conclusion names: `Becoming.«全守»`, `Becoming.«后守»`, `Becoming.«守»`  — listed under: on the grammar: a pattern KEEPS
+- conclusion names: `Becoming.«有终»`  — listed under: on the grammar: the whole line REACHES AN END (not degeneration)
+
+```lean
+/-- The rest of its rows: at the set level neither 全守 nor 有终 nor 退化; after opening it generates,
+and neither keeps, nor keeps from some point on, nor degenerates, nor is 全守 or 有终. -/
+theorem rows :
+    ¬ «全守» (net 3 2) alike sameLevel (start 3) ∧ ¬ «有终» (net 3 2) alike (start 3) ∧
+      ¬ «退化» (net 3 2) alike (start 3) ∧
+      ∀ {x : Occurrence}, (x = o4 ∨ x = o3) →
+        «生成» (net 3 2) alike sameLevel x ∧ ¬ «守» (net 3 2) alike sameLevel x ∧
+          ¬ «后守» (net 3 2) alike sameLevel x ∧ ¬ «退化» (net 3 2) alike x ∧
+          ¬ «全守» (net 3 2) alike sameLevel x ∧ ¬ «有终» (net 3 2) alike x :=
+```
+
+## D17  `Becoming.Rooms.«给过所取则生守相杂»`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean`, lines 551 to 561.
+
+- conclusion names: `Becoming.«生成»`  — listed under: on the grammar: a pattern GENERATES
+- conclusion names: `Becoming.«守»`  — listed under: on the grammar: a pattern KEEPS
+
+```lean
+/-- **Where the heater gives more than the window takes, the room at its set level generates and
+keeps (给过所取则生守相杂)**: the overshooting thermostat, at a margin of three. Along the window's
+branch the heater renews the level at every step, and along the shut branch it rests. A model case
+of `Map.«生守相杂»`, where a stipulated fork's root generates along its chain and keeps along its
+still occurrence: here the fork is the rule's, the window's branch is the chain and the shut branch
+the still occurrence, read at warm or not and the level rather than at the one and equality. It is
+stronger: at its set level the overshooting thermostat is 全生成, a renewal ahead of every
+occurrence it reaches (`Overshooting.generation_strong`). -/
+theorem «给过所取则生守相杂» :
+    «生成» (net 3 2) alike sameLevel (start 3) ∧ «守» (net 3 2) alike sameLevel (start 3) :=
+```
+
+## D18  `Becoming.Run.generation_of_heldKeepsWidening`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean`, lines 415 to 424.
+
+- premises name: `Becoming.Reaching.KeepsWidening`  — listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments)
+- conclusion names: `Becoming.«全生成»`  — listed under: on the grammar: a pattern GENERATES
+
+```lean
+/-- **Where holding is decided and the possible with a part held keeps widening, every moment is
+全生成 at (the one, what is held)**: read on the course's moments, after every moment a line under
+the part begins (`Run.begins_of_heldKeepsWidening`), which is 全生成 there
+(`Steps.generation_iff_begins`). The landed law restated on the map; not conversely
+(`Oscillating.generation_without_widening`). -/
+theorem Run.generation_of_heldKeepsWidening (r : Run P)
+    (decided : ∀ n, Same (r.state n) (r.state (n + 1)) ∨ ¬ Same (r.state n) (r.state (n + 1)))
+    (keeps : Reaching.KeepsWidening (fun n => Reaching.PossibleHeld P Same adm (r.state n)))
+    (N : Nat) : «全生成» Steps.next «一» (fun n m => Same (r.state n) (r.state m)) N :=
+```
+
+## D19  `Becoming.Oscillating.generation_without_widening`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean`, lines 905 to 912.
+
+- conclusion names: `Becoming.«全生成»`  — listed under: on the grammar: a pattern GENERATES
+- conclusion names: `Becoming.Reaching.KeepsWidening`  — listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments)
+
+```lean
+/-- **The map's generation without keeping widening**: every moment is 全生成 at (the one, the rule
+held) while the possible with the rule held does not keep widening, so the converse of
+`Run.generation_of_heldKeepsWidening` fails. -/
+theorem generation_without_widening :
+    (∀ N, «全生成» Steps.next «一» (fun i j => Same (course.state i) (course.state j)) N) ∧
+      ¬ Reaching.KeepsWidening
+        (fun k => Reaching.PossibleHeld process Same adm (course.state k)) :=
+```
+
+## D20  `Becoming.ClosedCycle.generation_without_widening`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean`, lines 1626 to 1638.
+
+- conclusion names: `Becoming.«全生成»`  — listed under: on the grammar: a pattern GENERATES
+- conclusion names: `Becoming.Web.KeepsWidening`  — listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments)
+
+```lean
+/-- **Generation without widening.** At every supported occurrence of the cycle the line along
+"carry on, or pass support" is 全生成, while along it the levels exceed from no step to a later
+one, and by name the range keeps widening from no step. -/
+theorem generation_without_widening :
+    (∀ S f, web.Supported S f →
+      «全生成» (Web.continuationStep (Web.passingContinuation (flow.PassesSupport web)))
+        (web.admitting web.level).activityClass (web.admitting web.level).carrierClass (S, f)) ∧
+      (∀ S U, S ≤ U →
+        ¬ web.ExceedsAcross (Web.passingContinuation (flow.PassesSupport web)) web.level S U) ∧
+      ∀ T, ¬ web.KeepsWidening Web.itself web.level T :=
+```
+
+## D21  `Becoming.Steps.generation_of_reachingKeepsWidening`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean`, lines 299 to 303.
+
+- premises name: `Becoming.Reaching.KeepsWidening`  — listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments)
+- conclusion names: `Becoming.«全生成»`  — listed under: on the grammar: a pattern GENERATES
+
+```lean
+/-- **Where each point is, at each moment, refuted or unrefuted, 07's chain form of keeping widening
+is 全生成 at (nothing lost, the same possible) at the first moment.** -/
+theorem generation_of_reachingKeepsWidening (wdec : ∀ n x, ¬ Q n x ∨ ¬¬ Q n x)
+    (keeps : Reaching.KeepsWidening Q) : «全生成» next (includes Q) (same Q) 0 :=
+```
+
+## D22  `Becoming.Steps.wem_of_generation_of_keepsWidening`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean`, lines 405 to 412.
+
+- premises name: `Becoming.«全生成»`  — listed under: on the grammar: a pattern GENERATES
+- premises name: `Becoming.Steps.KeepsWideningFrom`  — listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments)
+
+```lean
+/-- **Locating the step needs weak excluded middle**: if keeping widening gives 全生成 at (nothing
+lost, the same possible) for every chain, every proposition is refuted or unrefuted. -/
+theorem wem_of_generation_of_keepsWidening
+    (forward : ∀ Q : Nat → Nat → Prop, KeepsWideningFrom Q 0 → «全生成» next (includes Q) (same Q) 0)
+    (P : Prop) : ¬ P ∨ ¬¬ P :=
+```
+
+## D23  `Becoming.Steps.dne_of_keepsWidening_of_generation`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean`, lines 433 to 439.
+
+- premises name: `Becoming.«全生成»`  — listed under: on the grammar: a pattern GENERATES
+- premises name: `Becoming.Steps.KeepsWideningFrom`  — listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments)
+
+```lean
+/-- **Exhibiting the point needs excluded middle**: if 全生成 at (nothing lost, the same possible)
+gives keeping widening for every chain, every proposition not refuted holds. -/
+theorem dne_of_keepsWidening_of_generation
+    (back : ∀ Q : Nat → Nat → Prop, «全生成» next (includes Q) (same Q) 0 → KeepsWideningFrom Q 0)
+    (P : Prop) (unrefuted : ¬¬ P) : P :=
+```
+
+## D24  `Becoming.Web.generation_of_keepsWidening_byName`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean`, lines 487 to 494.
+
+- premises name: `Becoming.Web.KeepsWidening`  — listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments)
+- conclusion names: `Becoming.«全生成»`  — listed under: on the grammar: a pattern GENERATES
+
+```lean
+/-- **Where admission is, at each moment, refuted or unrefuted, keeping widening by name is 全生成
+of the course's moments at (nothing lost, the same possible).** -/
+theorem generation_of_keepsWidening_byName
+    (wdec : ∀ t f, ¬ W.Admits (l t) t f ∨ ¬¬ W.Admits (l t) t f)
+    (keeps : W.KeepsWidening itself l T) :
+    «全生成» Steps.next (Steps.includes fun t f => W.Admits (l t) t f)
+      (Steps.same fun t f => W.Admits (l t) t f) T :=
+```
+
+## D25  `Becoming.Web.kept_by_name_and_generation_on_moments`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean`, lines 508 to 523.
+
+- premises name: `Becoming.Web.KeepsWidening`  — listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments)
+- conclusion names: `Becoming.«全生成»`  — listed under: on the grammar: a pattern GENERATES
+- conclusion names: `Becoming.«全守»`  — listed under: on the grammar: a pattern KEEPS
+
+```lean
+/-- **On the occurrences, by name, each formation is kept; on the course's moments, the admitted
+range is generated.** Each formation admitted from `T` on is 全守, from nothing lost alone, and no
+occurrence is 全生成; where admission is, at each moment, refuted or unrefuted, the admitted range
+is 全生成 at (nothing lost, the same possible) on the course's moments. The two halves sit on two
+carriers, so they are not the map's two grains of one carrier; a corollary of the two theorems. -/
+theorem kept_by_name_and_generation_on_moments (wdec : ∀ t f, ¬ W.Admits (l t) t f ∨ ¬¬ W.Admits (l t) t f)
+    (keeps : W.KeepsWidening itself l T) :
+    (∀ S f, T ≤ S → W.Admits (l S) S f →
+      «全守» (continuationStep itself) (W.admitting l).activityClass (W.admitting l).carrierClass
+          (S, f) ∧
+        ¬ «全生成» (continuationStep itself) (W.admitting l).activityClass
+          (W.admitting l).carrierClass (S, f)) ∧
+      «全生成» Steps.next (Steps.includes fun t f => W.Admits (l t) t f)
+        (Steps.same fun t f => W.Admits (l t) t f) T :=
+```
+
+# The notions named in this packet, each definition whole
+
+## `Becoming.«尽»`
+
+Listed under: on the grammar: a pattern DEGENERATES. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, line 227.
+
+```lean
+/-- Ending on every branch (尽): every continuation from `x` ends on every branch; inductively, `x`
+ends on every branch where everything continuing it does. -/
+inductive «尽» (R L : «际» α) : α → Prop
+  | mk {x : α} : (∀ y, «续» R L x y → «尽» R L y) → «尽» R L x
+```
+
+## `Becoming.«有终»`
+
+Listed under: on the grammar: the whole line REACHES AN END (not degeneration). File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, line 88.
+
+```lean
+/-- Reaching an end (有终): some point the coarse line from `x` reaches ends. This is not degeneration
+(`«退化»`, ending on every branch). -/
+def «有终» (R L : «际» α) (x : α) : Prop := ∃ y, «所及» R L x y ∧ «亡» R L y
+```
+
+## `Becoming.«全生成»`
+
+Listed under: on the grammar: a pattern GENERATES. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, line 78.
+
+```lean
+/-- Generation in the strong form (全生成): the coarse line from `x` never ends, and ahead of every
+point of it lies a carrying renewal. -/
+def «全生成» (R L E : «际» α) (x : α) : Prop :=
+  «不穷» R L x ∧ ∀ y, «所及» R L x y → ∃ z w, «所及» R L y z ∧ «传» R L E z w
+```
+
+## `Becoming.«全守»`
+
+Listed under: on the grammar: a pattern KEEPS. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, line 83.
+
+```lean
+/-- Keeping in the strong form (全守): the coarse line from `x` never ends, and from some point on no
+carrying renewal lies ahead. -/
+def «全守» (R L E : «际» α) (x : α) : Prop :=
+  «不穷» R L x ∧ ∃ y, «所及» R L x y ∧ ∀ z w, «所及» R L y z → ¬ «传» R L E z w
+```
+
+## `Becoming.«退化»`
+
+Listed under: on the grammar: a pattern DEGENERATES. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, line 282.
+
+```lean
+/-- Degeneration (退化): the pattern ends on every branch. -/
+def «退化» (R L : «际» α) (x : α) : Prop := «尽» R L x
+```
+
+## `Becoming.«生成»`
+
+Listed under: on the grammar: a pattern GENERATES. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, line 272.
+
+```lean
+/-- Generation (生成): along some branch the pattern goes on and a carrying renewal lies ahead of
+every point of it. -/
+def «生成» (R L E : «际» α) (x : α) : Prop :=
+  ∃ S : α → Prop, S x ∧ (∀ z, S z → ∃ w, S w ∧ «续» R L z w) ∧
+    ∀ z, S z → ∃ u v, S u ∧ S v ∧ «所及» R L z u ∧ «传» R L E u v
+```
+
+## `Becoming.«守»`
+
+Listed under: on the grammar: a pattern KEEPS. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, line 278.
+
+```lean
+/-- Keeping (守): along some branch the pattern goes on with no carrying renewal on it. -/
+def «守» (R L E : «际» α) (x : α) : Prop :=
+  ∃ S : α → Prop, S x ∧ (∀ z, S z → ∃ w, S w ∧ «续» R L z w) ∧ ∀ u v, S u → S v → ¬ «传» R L E u v
+```
+
+## `Becoming.«后守»`
+
+Listed under: on the grammar: a pattern KEEPS. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean`, line 78.
+
+```lean
+/-- Keeping from some point on (后守): along some branch the pattern goes on, and from a point of
+that branch reached from `x` no carrying renewal lies on it. The point must be reached from `x`; a
+still point elsewhere does not count. -/
+def «后守» (R L E : «际» α) (x : α) : Prop :=
+  ∃ S : α → Prop, S x ∧ (∀ z, S z → ∃ w, S w ∧ «续» R L z w) ∧
+    ∃ z, «所及» R L x z ∧ S z ∧ ∀ u v, S u → S v → «所及» R L z u → ¬ «传» R L E u v
+```
+
+## `Becoming.«新而有终»`
+
+Listed under: on the grammar: the whole line REACHES AN END (not degeneration). File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, line 92.
+
+```lean
+/-- Renewing and still ending (新而终): a carrying renewal on a coarse line that ends. -/
+def «新而有终» (R L E : «际» α) (x : α) : Prop :=
+  «有终» R L x ∧ ∃ z w, «所及» R L x z ∧ «传» R L E z w
+```
+
+## `Becoming.Reaching.KeepsWidening`
+
+Listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments). File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean`, line 309.
+
+```lean
+/-- **Keeping widening**, 07's form for a chain of predicates: nothing held is lost from a step to
+any later one, and after every step something not held there is held later. -/
+def KeepsWidening (Q : Nat → X → Prop) : Prop :=
+  (∀ n d x, Q n x → Q (n + d) x) ∧ ∀ n, ∃ d x, Q (n + d) x ∧ ¬ Q n x
+```
+
+## `Becoming.Web.KeepsWidening`
+
+Listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments). File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean`, line 290.
+
+```lean
+/-- **Keeping widening**: from `T` on, along `R`, nothing admitted is lost and something keeps
+being opened. -/
+def KeepsWidening (R : Nat → F → F → Prop) (l : Nat → C → Nat) (T : Nat) : Prop :=
+  W.IncludesAcrossFrom R l T ∧ W.KeepsOpening R l T
+```
+
+## `Becoming.Steps.KeepsWideningFrom`
+
+Listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments). File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean`, line 98.
+
+```lean
+/-- **Keeping widening from `N`**, 07's form for a chain of predicates: from `N` on nothing held is
+lost across any stretch, and after every step something not held there is held later. -/
+def KeepsWideningFrom (Q : Nat → X → Prop) (N : Nat) : Prop :=
+  (∀ S U, N ≤ S → S ≤ U → includes Q S U) ∧ ∀ S, N ≤ S → ∃ U, S ≤ U ∧ ∃ x, Q U x ∧ ¬ Q S x
+```

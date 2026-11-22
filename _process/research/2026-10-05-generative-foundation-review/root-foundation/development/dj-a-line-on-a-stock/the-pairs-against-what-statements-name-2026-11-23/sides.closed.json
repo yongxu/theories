@@ -1,0 +1,192 @@
+{
+ "sides": {
+  "P1.generates": {
+   "direct": [
+    "Becoming.«生成»",
+    "Becoming.«全生成»",
+    "Becoming.«阶生成»",
+    "Becoming.«阶全生成»"
+   ],
+   "reading": []
+  },
+  "P1.keeps": {
+   "direct": [
+    "Becoming.«守»",
+    "Becoming.«全守»",
+    "Becoming.«后守»"
+   ],
+   "reading": []
+  },
+  "P1.degenerates": {
+   "direct": [
+    "Becoming.«退化»",
+    "Becoming.«尽»",
+    "Becoming.«新而尽»",
+    "Becoming.«息»"
+   ],
+   "reading": []
+  },
+  "P1.reaches_an_end": {
+   "direct": [
+    "Becoming.«有终»",
+    "Becoming.«新而有终»"
+   ],
+   "reading": []
+  },
+  "P2.widens_or_narrows": {
+   "direct": [
+    "Becoming.Web.Widens",
+    "Becoming.«广»",
+    "Becoming.Web.WidensWithin",
+    "Becoming.Web.WidensAlong",
+    "Becoming.Web.WidensAcross",
+    "Becoming.Web.EventuallyWidens",
+    "Becoming.Web.WidensWithoutEnd",
+    "Becoming.Web.WidensUpTo",
+    "Becoming.Web.WidensOrEventually",
+    "Becoming.Web.KeepsWidening",
+    "Becoming.Web.WidensWithLag",
+    "Becoming.Web.WidensOrWithLag",
+    "Becoming.Web.WidensOrWithFormationLag",
+    "Becoming.Web.WidensOrEachLater",
+    "Becoming.Web.WidensOrWithLagAlong",
+    "Becoming.Run.RangeWidens",
+    "Becoming.Reaching.Widens",
+    "Becoming.Reaching.WidensWithLag",
+    "Becoming.Reaching.WidensOrLater",
+    "Becoming.Reaching.KeepsWidening",
+    "Becoming.Steps.KeepsWideningFrom",
+    "Becoming.Weighting.WidensOn",
+    "Becoming.Weighting.WidensBy",
+    "Becoming.Weighting.WidensByOne"
+   ],
+   "reading": []
+  },
+  "P3.renewing": {
+   "direct": [
+    "Becoming.Web.RenewingIn",
+    "RelationalRenewal.RenewingIn",
+    "Becoming.Web.Renewed",
+    "RelationalRenewal.Renewed",
+    "Becoming.Web.RenewingAt",
+    "Becoming.Web.RenewingOver",
+    "Becoming.Web.RenewingAlong",
+    "Becoming.Web.RenewingInWithin",
+    "Becoming.Web.RenewedWithin",
+    "Becoming.ModelStatements.renewingAlong"
+   ],
+   "reading": [
+    "Becoming.Web.Kept"
+   ]
+  },
+  "P3.consuming": {
+   "direct": [
+    "Becoming.Web.ConsumingIn",
+    "RelationalRenewal.ConsumingIn",
+    "Becoming.Web.Consumed",
+    "RelationalRenewal.Consumed",
+    "Becoming.Web.Lost",
+    "Becoming.Web.ConsumingThrough",
+    "Becoming.Web.ConsumingAlong",
+    "Becoming.Web.UnderminingAt",
+    "Becoming.Web.UnderminingOn"
+   ],
+   "reading": [
+    "Becoming.Web.UnderminingFor",
+    "Becoming.Web.UnderminingAlong",
+    "Becoming.Web.BreakingAt",
+    "Becoming.Web.BreakingOn",
+    "Becoming.Web.Broken"
+   ]
+  },
+  "P4.lock_or_its_reverse": {
+   "direct": [
+    "Becoming.RuleCapture.Locked",
+    "Becoming.ClosedCapture.lockedAlike",
+    "Becoming.ClosedCapture.Unread"
+   ],
+   "reading": [
+    "Becoming.PoolFromCourse.NotReadmitted",
+    "Becoming.RemovesItsReaders"
+   ]
+  },
+  "P4.turn_in_time": {
+   "direct": [
+    "Becoming.TurningInTime.Turned",
+    "Becoming.TurningInTime.turned",
+    "Becoming.Recoverable",
+    "Becoming.Web.ReadableInTime",
+    "Becoming.Web.ReadsInTime"
+   ],
+   "reading": []
+  },
+  "P0.lasting": {
+   "direct": [
+    "Becoming.Lasting.Lasts",
+    "Becoming.HistoryIdeals.GoesOn",
+    "Becoming.Stretches.GoesOn",
+    "Becoming.SelectionTerm.Generations.Persists",
+    "Becoming.StandsLate",
+    "Becoming.AllPersist",
+    "Becoming.«不穷»",
+    "Becoming.«延»"
+   ],
+   "reading": [
+    "Becoming.Viability.Kernel",
+    "Becoming.Web.Unceasing",
+    "Becoming.Web.UnceasingFrom",
+    "Becoming.World.ArisingRecurs",
+    "Becoming.Viability.Keepable",
+    "Becoming.GuardHorizon.Viable",
+    "Becoming.Viability.KeptFor",
+    "Becoming.Lasting.Continues",
+    "Becoming.Lasting.Unbounded",
+    "Becoming.Web.Continued",
+    "Becoming.Onward.KeepsMoving",
+    "Becoming.«生生»"
+   ]
+  },
+  "P0.ceasing": {
+   "direct": [
+    "Becoming.CeasesToBe",
+    "Becoming.Web.Ceases",
+    "Becoming.Web.CeasesToStand",
+    "Becoming.Web.CeasesFrom",
+    "Becoming.GrammarLaws.ceasing",
+    "Becoming.ceasings",
+    "Becoming.Web.Ends",
+    "Becoming.RegimeMargin.Coupled.Ends",
+    "Becoming.RegimeMargin.Coupled.Indexed.Ends",
+    "Becoming.RegimeMargin.Coupled.Indexed.EndsUnder",
+    "Becoming.RuleRebuilding.Gone",
+    "Becoming.RuleRebuilding.Ends",
+    "Becoming.«亡»",
+    "Becoming.World.CeasingRecurs"
+   ],
+   "reading": [
+    "Becoming.RemovesLine"
+   ]
+  },
+  "P0.no_return": {
+   "direct": [
+    "Becoming.NoReturnAt"
+   ],
+   "reading": [
+    "Becoming.Law.Drawn",
+    "Becoming.Branching.NecessarilyDrawn",
+    "Becoming.Branching.PossiblyDrawn",
+    "Becoming.Branching.Merges",
+    "Becoming.Law.Merges",
+    "Becoming.Branching.NecessarilyDrawnInto",
+    "Becoming.Branching.PossiblyDrawnInto",
+    "Becoming.«入»"
+   ]
+  }
+ },
+ "parts_unfolded": {
+  "P2.widens_or_narrows": [
+   "Becoming.Web.Includes",
+   "Becoming.Web.Exceeds"
+  ]
+ }
+}
