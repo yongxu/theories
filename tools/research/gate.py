@@ -31,6 +31,7 @@ from dataclasses import dataclass
 import datetime as _dt
 import fcntl
 import hashlib
+import importlib
 import json
 import os
 from pathlib import Path
@@ -158,6 +159,28 @@ TOOLS = ('tools/research/*.py', '_process/research-config.json')
 DATA = 'theories/becoming/results/data/'
 RECORDS = 'theories/becoming/results/records/*.json'
 ROOTF = '_process/research/2026-10-05-generative-foundation-review/root-foundation'
+# The print of the uses between proofs (an index and one file a module) and the tool that writes it, which the
+# proof-uses check compares with the core receipt. Both are optional reads: the check can land before either exists.
+PROOF_USES = 'theories/becoming/results/atlas/proof-uses'
+PROOF_USES_TOOL = 'tools/research/proof_uses.py'
+CORE_RECEIPT_FILE = BECOMING + '/becoming-verification.json'
+PACKAGE_LEAN = ('becoming/Becoming.lean', 'becoming/Becoming/')  # the package's root module and its folder, below LEAN
+
+
+@lru_cache(maxsize=None)
+def proof_uses_sources() -> tuple:
+    """The sources the core receipt lists that lie outside the package's root module and its Becoming/ folder
+    (three on 22 November 2026: one under deeper/, GenerativeCore.lean, one under inquiry-root/). The print has
+    rows for their modules too, so a change to one reaches the proof-uses check. Read from the receipt at each
+    run; a receipt that is absent or does not parse gives none, and is the check's own error."""
+    try:
+        listed = json.loads((ROOT / CORE_RECEIPT_FILE).read_text()).get('source_paths')
+    except (OSError, ValueError, AttributeError):
+        return ()
+    return tuple(sorted({f'{LEAN}/{rel}' for rel in (listed.values() if isinstance(listed, dict) else ())
+                         if isinstance(rel, str) and rel != PACKAGE_LEAN[0] and not rel.startswith(PACKAGE_LEAN[1])}))
+
+
 # Each test file's inputs, from the test-suite map (GATE.md §3.1): its code (every research tool, since research.py
 # imports them all), the live files it asserts on, and derived inputs. A live assertion that the strict check also
 # makes is left to the strict check, which every content change reaches. A test file with no entry here reads every
@@ -206,6 +229,8 @@ TESTS = {
     'test_links': (),
     'test_moves': (),
     'test_navigation_pages': (RECORDS, DATA + 'law-families.json', DATA + 'shared-laws.json'),
+    # the tool's pure parts on made-up receipts and rows in temporary folders; it reads no live file
+    'test_proof_uses': (),
     'test_registry': (RECORDS,),
     'test_rename_ids': (RECORDS, DATA + 'generativity-chain.json', DATA + 'law-families.json', DATA + 'shared-laws.json'),
     'test_repoint': (),
@@ -255,6 +280,16 @@ CHECKS: tuple[Check, ...] = (
           note='every frozen file is the bytes its manifest names; nothing a pin froze has changed'),
     Check('receipt', (*PY, 'tools/research/gate.py', 'receipt'), (LEAN + '/**',),
           note='the committed core receipt passed and binds the bytes of every module it checks, so the core run ran on them'),
+    # Its result is a function of the core receipt, the print and the tool, so it reads those and what a core run
+    # would follow: the package's root module and its Becoming/ folder, the receipt's sources outside that folder
+    # (derived from the receipt) and the package's toolchain file. Nothing else under the wider Lean tree reaches it
+    # (a README, physics/, another checker's runs), nor does text, the board or the atlas's entries; a research tool,
+    # the config and a path no area places reach it as they reach every check.
+    Check('proof-uses', (*PY, 'tools/research/gate.py', 'proof-uses'),
+          (CORE_RECEIPT_FILE, BECOMING + '/Becoming.lean', BECOMING + '/Becoming/**', BECOMING + '/lean-toolchain',
+           f'?{PROOF_USES}/**', f'?{PROOF_USES_TOOL}'), derived='proof_uses_sources',
+          note="the print of the uses between proofs binds the core receipt's sources and toolchain, its printer and "
+               'its format, and its files are whole; it runs no Lean'),
     Check('dossiers', (*PY, PACKET + '/check_dossiers.py'),
           (REVIEW + '/**', CORPUS + '/**', BECOMING + '/Becoming/**', LEAN + '/physics/**', LEAN + '/warning/**', LEAN + '/deeper/**',
            '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/review-checks/**',
@@ -286,6 +321,9 @@ STEPS: tuple[Step, ...] = (
           '_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY*',
           'tools/research/shared_laws.py', 'tools/research/boundary.py', 'tools/research/boundary_check.lean'),
          'after the core run passes: commit shared-laws.json; the check reports it stale but never fails on it', when='laws_changed'),
+    Step('proof uses', f'python3 -B tools/research/gate.py hold -- python3 -B {PROOF_USES_TOOL}', (),
+         'after the core run, before the render: commit the files of the print it changes; where the Lean or the '
+         'printer changed, the proof-uses check fails until then', follows='proof-uses'),
     Step('render', 'python3 -B tools/research/gate.py hold -- make research-render', (),
          'commit the pages it writes; the strict check fails on any page a render would change', follows='strict'),
 )
@@ -470,6 +508,8 @@ def environment(check: Check, command=None) -> dict:
                                          text=True, timeout=60).stdout.strip()
         except (OSError, subprocess.SubprocessError):
             env[cmd[0]] = None
+    if check.name == 'proof-uses':  # its escape is part of the key: a run without the variable reuses no pass made with it
+        env['escape'] = os.environ.get('GATE_PROOF_USES', '').strip() or None
     return env
 
 
@@ -924,6 +964,101 @@ def receipt_check(base='main') -> dict:
             'stale': len(rerun), 'receipts': seen}
 
 
+RUN_PROOF_USES = (f'run python3 -B {PROOF_USES_TOOL} after the core run and before the render, and commit the files '
+                  'it changes with the pages')
+# The first words of a failure of the proof-uses check, which tell its three kinds apart.
+PROOF_USES_BEHIND = 'the print is behind the Lean'   # the landing left out the step: run the tool
+PROOF_USES_DAMAGED = 'the print files are damaged'   # files of the print missing or cut: run the tool
+PROOF_USES_FAILED = 'the tool failed'                # importing or calling the tool raised, or it answered no mapping
+PROOF_USES_ESCAPE = ('GATE_PROOF_USES with a stated reason lets the landing through on a day the tool is wrong; the '
+                     'reason goes into the landed clause, and the pages will then say the print is behind')
+
+
+def proof_uses_status():
+    """The status function of tools/research/proof_uses.py, imported only when the check runs (so the gate loads
+    without it), or None when that module or its function is absent. Any other error of the import is raised: a
+    tool that does not import is not an absent tool."""
+    try:
+        module = importlib.import_module('tools.research.proof_uses')
+    except ModuleNotFoundError as exc:
+        if exc.name in ('tools.research.proof_uses', None):
+            return None
+        raise
+    return getattr(module, 'status', None)
+
+
+def proof_uses_check(base='main') -> dict:
+    """The print of the uses between proofs against the core receipt. AI-written (Claude Opus, for board row DJ),
+    22 November 2026; mended by its review the same day (Claude Fable).
+
+    It runs no Lean and reads no Lean source: proof_uses.status(root) compares the print's index with the core
+    receipt, the printer and the format, and the check fails unless that says bound and names no damaged file.
+    Where no index exists in the tree, none existed at the base and nothing else lies under the print's
+    directory, there is no print yet and the check passes saying so; an index this landing deletes, or files of
+    a print without their index, fail.
+
+    The first words of a failure tell which kind it is: PROOF_USES_BEHIND (the index does not bind: the landing left
+    out the step) and PROOF_USES_DAMAGED (files missing or cut), each with the command to run; PROOF_USES_FAILED
+    (the tool is absent, does not import, raised, or answered something that is not a mapping with "bound"),
+    with the exception and how the escape is used. GATE_PROOF_USES='reason' lets any of these pass: the reason,
+    what would have failed and the modules behind are in its output. An empty value does nothing, and a reason
+    given when nothing failed is not reported as accepted."""
+    index = f'{PROOF_USES}/INDEX.json'
+    folder = ROOT / PROOF_USES
+    others = sorted(str(p.relative_to(ROOT)) for p in folder.rglob('*') if p.is_file()) if folder.is_dir() else []
+    had = index in files_at(base_commit(base))
+    errors, problems, behind, damage, bound, kind, note = [], [], [], [], None, None, None
+    told = lambda value: [str(x) for x in value] if isinstance(value, (list, tuple)) else ([] if value is None else [str(value)])
+    if not (ROOT / index).is_file():
+        if not had and not others:
+            kind = 'no index'
+            note = f'no print of the uses between proofs exists yet ({index} is absent) and this landing adds none; nothing to compare'
+        else:
+            kind = 'damaged'
+            errors.append(f'{PROOF_USES_DAMAGED}: {index} is missing'
+                          + ('; this landing deletes it' if had else f', beside {len(others)} file(s) of a print') + '; ' + RUN_PROOF_USES)
+    else:
+        try:
+            status = proof_uses_status()
+        except Exception as exc:  # a tool that does not import (the printer is text inside it) is the day the escape is for
+            status, kind = False, 'tool failed'
+            errors.append(f'{PROOF_USES_FAILED}: {PROOF_USES_TOOL} does not import: {exc!r}; {PROOF_USES_ESCAPE}')
+        if status is None:
+            kind = 'tool failed'
+            errors.append(f'{PROOF_USES_FAILED}: {PROOF_USES_TOOL} or its status() is absent, so the print cannot be compared '
+                          f'with the core receipt; {PROOF_USES_ESCAPE}')
+        elif status is not False:
+            try:
+                found = status(ROOT)
+                if not isinstance(found, dict) or 'bound' not in found:
+                    raise TypeError(f'status() returned {type(found).__name__}, not a mapping with "bound"')
+                bound = found['bound'] is True
+                problems, damage = told(found.get('problems')), told(found.get('damage'))
+                behind = sorted(told(found.get('modules_behind')))
+                kind = found.get('kind')
+                if kind not in (None, 'bound', 'not bound', 'damaged'):  # "no index" too: the index is there
+                    raise ValueError(f'status() gave the kind {kind!r} of a print whose index is at {index}')
+            except Exception as exc:  # a malformed index or receipt, or an answer that cannot be read
+                bound, kind = None, 'tool failed'
+                errors.append(f'{PROOF_USES_FAILED}: {PROOF_USES_TOOL} status() failed: {exc!r}; {PROOF_USES_ESCAPE}')
+            else:
+                if bound and not damage and kind in (None, 'bound'):
+                    kind = 'bound'
+                else:  # the tool's own word for the kind where it gives one, else what bound and damage say
+                    kind = kind if kind in ('not bound', 'damaged') else ('damaged' if bound else 'not bound')
+                    errors.append(f'{PROOF_USES_BEHIND if kind == "not bound" else PROOF_USES_DAMAGED}: {RUN_PROOF_USES}')
+                    if not bound:
+                        errors.append(f'the index does not bind the core receipt; behind for {len(behind)} module(s)'
+                                      + (f': {", ".join(behind)}' if behind else ''))
+                    errors += problems
+                    errors += [f"the print's files: {d}" for d in damage]
+    reason = os.environ.get('GATE_PROOF_USES', '').strip()
+    escaped = bool(reason and errors)
+    return {'errors': [] if escaped else errors, 'accepted_reason': reason if escaped else None,
+            'would_fail': errors if escaped else [], 'kind': kind, 'bound': bound, 'modules_behind': behind,
+            'problems': problems, 'damage': damage, 'note': note}
+
+
 # --- run ---------------------------------------------------------------------------------------------------------
 
 def run(base='main', full=False, fresh=False, only=None, checks=CHECKS, train=(), keep_passes=True) -> tuple[int, dict]:
@@ -945,7 +1080,7 @@ def run(base='main', full=False, fresh=False, only=None, checks=CHECKS, train=()
     for c in checks:
         if c.name not in chosen:
             continue
-        command = [*c.command, *(('--base', base) if c.name in ('board', 'frozen', 'receipt') else ()), *(('--all',) if full and c.name == 'frozen' else ())]
+        command = [*c.command, *(('--base', base) if c.name in ('board', 'frozen', 'receipt', 'proof-uses') else ()), *(('--all',) if full and c.name == 'frozen' else ())]
         env = environment(c, command)
         prior = None if fresh else reusable(c, env, across=not full)
         if prior:
@@ -966,7 +1101,14 @@ def run(base='main', full=False, fresh=False, only=None, checks=CHECKS, train=()
         seconds = time.monotonic() - start
         results[c.name] = {'status': 'passed' if code == 0 else 'failed', 'exit': code, 'seconds': round(seconds, 1),
                            'log': str(log), 'reached_by': chosen[c.name].get('paths'), 'landings': chosen[c.name].get('landings')}
-        if code == 0 and keep_passes and not dirty():
+        if c.name == 'proof-uses' and code == 0:
+            # A pass by the escape says its reason in the run's summary, beside the check's log, and is not kept: each
+            # run of a landing let through runs the check and says so itself.
+            try:
+                results[c.name]['accepted_reason'] = json.loads(log.read_text()).get('accepted_reason')
+            except (OSError, ValueError, AttributeError):  # the log is not the check's JSON alone: a set escape counts as used
+                results[c.name]['accepted_reason'] = env.get('escape')
+        if code == 0 and keep_passes and not results[c.name].get('accepted_reason') and not dirty():
             keep(c, env, seconds, ran_on)
         if code != 0:
             failed.append(c.name)
@@ -1152,7 +1294,7 @@ def status() -> dict:
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = parser.add_subparsers(dest='command', required=True)
-    for name in ('plan', 'run', 'restated', 'board', 'frozen', 'receipt'):
+    for name in ('plan', 'run', 'restated', 'board', 'frozen', 'receipt', 'proof-uses'):
         p = sub.add_parser(name)
         p.add_argument('--base', default='main')
     sub.choices['frozen'].add_argument('--all', action='store_true', help='fail on every freeze, not only those the change touches')
@@ -1193,6 +1335,9 @@ def main(argv=None):
         code = 1 if result['errors'] else 0
     elif args.command == 'receipt':
         result = receipt_check(args.base)
+        code = 1 if result['errors'] else 0
+    elif args.command == 'proof-uses':
+        result = proof_uses_check(args.base)
         code = 1 if result['errors'] else 0
     else:
         result, code = status(), 0

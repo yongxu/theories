@@ -27,7 +27,7 @@ PEOPLE = {'GIT_AUTHOR_NAME': 'Test', 'GIT_AUTHOR_EMAIL': 'test@example.invalid',
           'GIT_COMMITTER_NAME': 'Test', 'GIT_COMMITTER_EMAIL': 'test@example.invalid'}
 CONFIG = {'record_directories': ['theories/becoming/results/records']}
 CACHED = ('files_at', 'manifests', 'pins', 'frozen_paths', 'quoted_paths', 'timed_paths', 'registry_sources',
-          'draft_paths', 'review_reads')
+          'draft_paths', 'review_reads', 'proof_uses_sources')
 PROBE = 'experiments/probe.py'
 
 
@@ -1249,6 +1249,348 @@ class RuleTests(unittest.TestCase):
         # but a landing that changes only tools/research/gate.py selects neither (gate.py lines 226-229: their reads
         # are the board, and the freezes).
         self.assertTrue(gate.reached(gate.BY_NAME['board'], [('M', 'tools/research/gate.py')]))
+
+    # The proof-uses check compares the print of the uses between proofs with the core receipt. Its own rule (its reads
+    # and the receipt's sources outside the package's folder, here given by hand so that no live file is read) is
+    # tested apart from the rule that a research tool reaches every check, which alone would let the tool's path pass.
+    OUTSIDE = gate.LEAN + '/deeper/RelationalRenewal.lean'
+
+    def proof_uses_rule(self):
+        patcher = mock.patch.object(gate, 'proof_uses_sources', lambda: (self.OUTSIDE,))
+        patcher.start()
+        self.addCleanup(patcher.stop)
+        check = gate.BY_NAME['proof-uses']
+        return check, tuple(q.lstrip('?') for q in check.reads) + gate.proof_uses_sources()
+
+    def test_the_proof_uses_check_is_reached_by_the_package_lean_the_receipt_the_toolchain_the_print_and_its_tool(self):
+        check, own = self.proof_uses_rule()
+        for path in (gate.BECOMING + '/Becoming/Viability.lean', gate.BECOMING + '/Becoming.lean', self.OUTSIDE,
+                     gate.BECOMING + '/becoming-verification.json', gate.BECOMING + '/lean-toolchain',
+                     gate.PROOF_USES + '/INDEX.json', gate.PROOF_USES + '/Becoming.Viability.jsonl', gate.PROOF_USES_TOOL):
+            for status in ('M', 'A', 'D'):
+                with self.subTest(path=path, status=status):
+                    self.assertTrue(gate.reached(check, [(status, path)], patterns=own))  # by its own rule
+                    self.assertTrue(gate.reached(check, [(status, path)]))
+
+    def test_the_proof_uses_check_is_not_reached_by_text_the_board_the_atlas_entries_or_the_wider_lean_tree(self):
+        check, _ = self.proof_uses_rule()
+        for path in ('theories/becoming/ONE-PAGE.md', gate.BOARD, 'theories/becoming/results/atlas/entries/dynamics.json',
+                     '_process/RESULT-WORKFLOW.md', 'Makefile', 'tools/research/tests/test_atlas.py',
+                     gate.LEAN + '/README.md', gate.LEAN + '/physics/X.lean', gate.LEAN + '/deeper/Other.lean',
+                     gate.LEAN + '/history/run/step.log', gate.LEAN + '/universal-ethics/generative-capacity/check.py',
+                     gate.LEAN + '/inquiry-root/sufficiency-checks/20261008T000000.000000Z/verification.json',
+                     gate.BECOMING + '/README.md', gate.BECOMING + '/check_becoming.py',
+                     gate.BECOMING + '/fallible-inquiry-verification.json',
+                     gate.BECOMING + '/fallible-inquiry-checks/20261104T202342.059457Z/verification.json',
+                     gate.BECOMING + '/becoming-checks/20261104T201844.426739Z/verification.json',
+                     'experiments/other/lean/becoming/Becoming/Viability.lean'):
+            for status in ('M', 'A', 'D'):
+                with self.subTest(path=path, status=status):
+                    self.assertFalse(gate.reached(check, [(status, path)]))
+
+    def test_a_research_tool_the_config_or_an_unplaced_path_reaches_the_proof_uses_check_as_it_reaches_every_check(self):
+        check, own = self.proof_uses_rule()
+        for path in ('tools/research/atlas.py', '_process/research-config.json', 'newtop/x'):
+            with self.subTest(path):
+                self.assertFalse(gate.matches(path, own))
+                self.assertTrue(gate.reached(check, [('M', path)]))
+                self.assertTrue(gate.reached(gate.BY_NAME['board'], [('M', path)]))
+
+    def test_the_proof_uses_rule_names_nothing_the_tree_lacks(self):
+        # The print and its tool are optional reads, so the rule does not stop the gate on a tree that lacks either;
+        # the receipt, the root module, the folder and the toolchain file it names are there.
+        self.assertEqual(gate.stale_rules((gate.BY_NAME['proof-uses'],)), [])
+
+    def test_the_tools_tests_have_an_entry_so_they_do_not_read_every_path(self):
+        self.assertEqual(gate.TESTS.get('test_proof_uses'), ())
+        self.assertNotIn('**', gate.BY_NAME['test:test_proof_uses'].reads)
+
+    def test_loading_the_gate_does_not_import_the_tool(self):
+        probe = "import sys; from tools.research import gate; sys.exit(1 if 'tools.research.proof_uses' in sys.modules else 0)"
+        self.assertEqual(subprocess.run([sys.executable, '-B', '-c', probe], cwd=REPOSITORY).returncode, 0)
+
+
+class ProofUsesTests(GateCase):
+    """The proof-uses check, with the status function of tools/research/proof_uses.py stubbed (the check imports it
+    only when it runs): no print yet and none added passes; an index that does not bind the receipt fails and names
+    the modules behind; damaged files fail; a tool that is absent, does not import, raises or answers no mapping
+    fails as the tool's failure; GATE_PROOF_USES='reason' passes any of these with the reason, in the check's output
+    and in the run's summary. AI-written (Claude Opus, for board row DJ), 22 November 2026; mended by its review the
+    same day (Claude Fable)."""
+    INDEX = gate.PROOF_USES + '/INDEX.json'
+    ROWS = gate.PROOF_USES + '/Becoming.A.jsonl'
+    RECEIPT = gate.BECOMING + '/becoming-verification.json'
+    COMMAND = f'python3 -B {gate.PROOF_USES_TOOL} after the core run and before the render, and commit the files it changes with the pages'
+
+    def stub(self, bound, behind=(), problems=(), damage=(), kind=''):
+        calls = []
+
+        def status(root):
+            calls.append(root)
+            return {'present': True, 'bound': bound, 'problems': list(problems), 'modules_behind': list(behind),
+                    'damage': list(damage), 'kind': kind or ('not bound' if not bound else 'damaged' if damage else 'bound')}
+        self.patch(mock.patch.object(gate, 'proof_uses_status', lambda: status))
+        return calls
+
+    def answering(self, answer):
+        self.patch(mock.patch.object(gate, 'proof_uses_status', lambda: (lambda root: answer)))
+
+    def with_print(self):
+        self.repo.commit({self.INDEX: '{}\n', self.ROWS: ''})
+
+    def check(self, **env):
+        with mock.patch.dict(os.environ, env):
+            return gate.proof_uses_check('main')
+
+    def assertFails(self, result, *fragments, first=None):
+        self.assertTrue(result['errors'], result)
+        if first:
+            self.assertTrue(result['errors'][0].startswith(first + ': '), result)
+        for fragment in fragments:
+            self.assertTrue(any(fragment in e for e in result['errors']), (fragment, result))
+
+    def assertToolFailed(self, result, *fragments):
+        self.assertFails(result, *fragments, 'GATE_PROOF_USES with a stated reason lets the landing through on a day the tool is wrong',
+                         'the reason goes into the landed clause', 'the pages will then say the print is behind',
+                         first='the tool failed')
+        self.assertEqual((result['kind'], result['bound']), ('tool failed', None))
+
+    def assertEscapes(self, *fragments):
+        """With a reason, whatever fails now passes, and says the reason and what would have failed."""
+        result = self.check(GATE_PROOF_USES='the tool is wrong today; row DJ mends it')
+        self.assertEqual((result['errors'], result['accepted_reason']), ([], 'the tool is wrong today; row DJ mends it'), result)
+        self.assertTrue(result['would_fail'], result)
+        for fragment in fragments:
+            self.assertTrue(any(fragment in e for e in result['would_fail']), (fragment, result))
+
+    def test_no_print_and_none_added_passes_saying_so(self):
+        calls = self.stub(False, ['Becoming.A'])
+        self.repo.commit({gate.BECOMING + '/Becoming/A.lean': 'theorem a : True := trivial\n'})
+        result = self.check()
+        self.assertEqual((result['errors'], result['bound'], result['kind'], calls), ([], None, 'no index', []))
+        self.assertIn('no print', result['note'])
+
+    def test_an_index_not_binding_the_receipt_fails_as_behind_with_the_command_and_names_the_modules(self):
+        self.stub(False, ['Becoming.B', 'Becoming.A'], ['Becoming.A: the source hash differs'])
+        self.with_print()
+        result = self.check()
+        self.assertFails(result, 'Becoming.A, Becoming.B', 'Becoming.A: the source hash differs', first='the print is behind the Lean')
+        self.assertEqual(result['errors'][0], 'the print is behind the Lean: run ' + self.COMMAND)
+        self.assertEqual((result['bound'], result['kind'], result['modules_behind']), (False, 'not bound', ['Becoming.A', 'Becoming.B']))
+        self.assertFalse(any('GATE_PROOF_USES' in e for e in result['errors']), result)  # the step was left out: run it
+
+    def test_a_bound_that_is_not_true_is_not_bound(self):
+        self.answering({'bound': 'false', 'problems': [], 'modules_behind': []})  # a string is not the answer yes
+        self.with_print()
+        result = self.check()
+        self.assertFails(result, first='the print is behind the Lean')
+        self.assertEqual((result['bound'], result['kind']), (False, 'not bound'))
+
+    def test_an_index_binding_the_receipt_passes(self):
+        calls = self.stub(True)
+        self.with_print()
+        result = self.check()
+        self.assertEqual((result['errors'], result['bound'], result['kind'], calls), ([], True, 'bound', [gate.ROOT]))
+
+    def test_a_receipt_that_changed_with_no_source_changed_selects_the_check_and_it_passes_with_no_reprint(self):
+        receipt = lambda utc: json.dumps({'utc': utc, 'source_paths': {'Becoming.A': 'becoming/Becoming/A.lean'}})
+        self.on_main({self.INDEX: '{}\n', self.ROWS: '', self.RECEIPT: receipt('T1')})
+        calls = self.stub(True)
+        self.repo.commit({self.RECEIPT: receipt('T2')})  # a core run again on the same sources
+        self.assertEqual(gate.changes(gate.base_commit('main'), 'HEAD'), [('M', self.RECEIPT)])  # nothing of the print
+        selected = gate.plan('main', checks=(gate.BY_NAME['proof-uses'],))['selected']
+        self.assertEqual(selected['proof-uses']['paths'], [self.RECEIPT])
+        result = self.check()
+        self.assertEqual((result['errors'], result['bound'], result['accepted_reason'], calls), ([], True, None, [gate.ROOT]))
+
+    def test_the_receipts_sources_outside_the_package_folder_select_the_check(self):
+        listed, other = gate.LEAN + '/deeper/Renewal.lean', gate.LEAN + '/deeper/Other.lean'
+        self.on_main({self.RECEIPT: json.dumps({'source_paths': {'Becoming': 'becoming/Becoming.lean', 'Renewal': 'deeper/Renewal.lean',
+                                                                 'Becoming.A': 'becoming/Becoming/A.lean'}}),
+                      listed: 'theorem r : True := trivial\n', other: 'theorem o : True := trivial\n'})
+        self.assertEqual(gate.proof_uses_sources(), (listed,))
+        for path, reached in ((listed, True), (other, False), (gate.LEAN + '/README.md', False)):
+            with self.subTest(path):
+                self.fresh()
+                self.repo.commit({path: 'changed\n'})
+                self.assertEqual(set(gate.plan('main', checks=(gate.BY_NAME['proof-uses'],))['selected']),
+                                 {'proof-uses'} if reached else set())
+        self.fresh()
+        self.repo.commit({self.RECEIPT: 'not json\n'})  # an unreadable receipt gives no more paths; it selects the check itself
+        self.assertEqual(gate.proof_uses_sources(), ())
+
+    def test_the_plan_lists_the_print_between_the_shared_laws_and_the_render_where_the_check_is_selected(self):
+        def steps():
+            return [s['step'] for s in gate.plan('main', checks=(gate.BY_NAME['proof-uses'], strict()))['before_the_gate']]
+        self.repo.commit({'drafts/a.md': '# A, changed\n'})
+        self.assertEqual(steps(), ['render'])
+        self.repo.commit({gate.BECOMING + '/Becoming/New.lean': 'theorem t : True := trivial\n'})
+        self.assertEqual(steps(), ['core run', 'shared laws', 'proof uses', 'render'])
+        self.fresh()
+        self.repo.commit({gate.LEAN + '/physics/X.lean': 'theorem x : True := trivial\n'})  # Lean the print has no row of
+        self.assertEqual(steps(), ['core run', 'shared laws', 'render'])
+        step = next(s for s in gate.STEPS if s.name == 'proof uses')
+        self.assertEqual(step.command, f'python3 -B tools/research/gate.py hold -- python3 -B {gate.PROOF_USES_TOOL}')
+
+    def test_damaged_files_fail_as_damaged_with_the_command_though_the_index_binds(self):
+        self.stub(True, damage=['the index names the module Becoming.B and it has no file'])
+        self.with_print()
+        result = self.check()
+        self.assertFails(result, "the print's files: the index names the module Becoming.B and it has no file",
+                         first='the print files are damaged')
+        self.assertEqual(result['errors'][0], 'the print files are damaged: run ' + self.COMMAND)
+        self.assertEqual((result['bound'], result['kind'], result['damage']),
+                         (True, 'damaged', ['the index names the module Becoming.B and it has no file']))
+        self.assertEscapes('Becoming.B')
+
+    def test_damage_is_told_under_the_kind_the_tool_gives(self):
+        self.stub(False, ['Becoming.A'], damage=['Becoming.A.jsonl is cut'], kind='not bound')
+        self.with_print()
+        self.assertFails(self.check(), 'Becoming.A.jsonl is cut', 'behind for 1 module(s): Becoming.A', first='the print is behind the Lean')
+        self.stub(False, ['Becoming.A'], damage=['Becoming.A.jsonl is cut'], kind='damaged')
+        self.assertFails(self.check(), 'Becoming.A.jsonl is cut', 'behind for 1 module(s): Becoming.A', first='the print files are damaged')
+        self.answering({'bound': True, 'damage': ['Becoming.A.jsonl is cut']})  # no word from the tool: read off the two
+        self.assertFails(self.check(), 'Becoming.A.jsonl is cut', first='the print files are damaged')
+
+    def test_the_escape_passes_with_its_reason_and_the_modules_behind_in_the_output(self):
+        self.stub(False, ['Becoming.A'])
+        self.with_print()
+        reason = 'the printer drops a private theorem; fixed in the next landing'
+        result = self.check(GATE_PROOF_USES=reason)
+        self.assertEqual((result['errors'], result['accepted_reason'], result['modules_behind']), ([], reason, ['Becoming.A']))
+        self.assertTrue(any('Becoming.A' in e for e in result['would_fail']), result)
+        out = io.StringIO()
+        with mock.patch.dict(os.environ, {'GATE_PROOF_USES': reason}), mock.patch.object(sys, 'stdout', out):
+            code = gate.main(['proof-uses'])
+        printed = json.loads(out.getvalue())
+        self.assertEqual((code, printed['accepted_reason'], printed['modules_behind']), (0, reason, ['Becoming.A']))
+
+    def test_an_empty_escape_does_nothing(self):
+        self.stub(False, ['Becoming.A'])
+        self.with_print()
+        for empty in ('', '  '):
+            with self.subTest(repr(empty)):
+                result = self.check(GATE_PROOF_USES=empty)
+                self.assertFails(result, 'Becoming.A')
+                self.assertEqual((result['accepted_reason'], result['would_fail']), (None, []))
+        out = io.StringIO()
+        with mock.patch.dict(os.environ, {'GATE_PROOF_USES': ''}), mock.patch.object(sys, 'stdout', out):
+            self.assertEqual(gate.main(['proof-uses']), 1)
+
+    def test_a_reason_given_when_nothing_failed_is_not_reported_as_accepted(self):
+        self.stub(True)
+        self.with_print()
+        result = self.check(GATE_PROOF_USES='not needed today')
+        self.assertEqual((result['errors'], result['accepted_reason'], result['would_fail'], result['bound']), ([], None, [], True))
+
+    def test_an_index_this_landing_deletes_fails(self):
+        self.stub(True)
+        self.on_main({self.INDEX: '{}\n', self.ROWS: ''})
+        self.repo.commit({self.INDEX: None})
+        self.assertFails(self.check(), 'deletes it', self.COMMAND, first='the print files are damaged')
+        self.assertEscapes('deletes it')
+
+    def test_files_of_a_print_without_their_index_fail(self):
+        self.stub(True)
+        self.repo.commit({self.ROWS: ''})
+        self.assertFails(self.check(), 'INDEX.json is missing', self.COMMAND, first='the print files are damaged')
+
+    def test_an_index_without_the_tool_fails_as_the_tools_failure(self):
+        self.patch(mock.patch.object(gate, 'proof_uses_status', lambda: None))
+        self.with_print()
+        self.assertToolFailed(self.check(), f'{gate.PROOF_USES_TOOL} or its status() is absent')
+        self.assertEscapes('is absent')
+
+    def test_a_status_that_raises_fails_as_the_tools_failure_and_the_escape_passes_it(self):
+        def status(root):
+            raise ValueError('the index does not parse')
+        self.patch(mock.patch.object(gate, 'proof_uses_status', lambda: status))
+        self.repo.commit({self.INDEX: 'not json\n'})
+        self.assertToolFailed(self.check(), "status() failed: ValueError('the index does not parse')")
+        self.assertEscapes('the index does not parse')
+
+    def test_a_status_that_answers_no_mapping_with_bound_fails_as_the_tools_failure_and_the_escape_passes_it(self):
+        self.with_print()
+        for answer, name in ((None, 'NoneType'), ([], 'list'), ('bound', 'str'), ({'problems': []}, 'dict')):
+            with self.subTest(name):
+                self.answering(answer)
+                self.assertToolFailed(self.check(), f'status() returned {name}, not a mapping with "bound"')
+                self.assertEscapes(f'status() returned {name}')
+
+    def test_a_kind_the_gate_does_not_know_or_no_index_beside_an_index_is_the_tools_failure(self):
+        self.with_print()
+        for kind in ('no index', 'fine'):
+            with self.subTest(kind):
+                self.answering({'bound': True, 'problems': [], 'modules_behind': [], 'damage': [], 'kind': kind})
+                self.assertToolFailed(self.check(), repr(kind))
+
+    def test_a_tool_that_does_not_import_fails_as_the_tools_failure_and_the_escape_passes_it(self):
+        self.with_print()
+        for error in (SyntaxError('invalid syntax in the printer'), ModuleNotFoundError("No module named 'missing_helper'", name='missing_helper'),
+                      RuntimeError('raised at import')):
+            with self.subTest(type(error).__name__), mock.patch.object(gate.importlib, 'import_module', side_effect=error):
+                with self.assertRaises(type(error)):  # not read as an absent tool
+                    gate.proof_uses_status()
+                self.assertToolFailed(self.check(), f'{gate.PROOF_USES_TOOL} does not import: {error!r}')
+                self.assertEscapes('does not import')
+
+    def test_an_absent_tool_module_reads_as_none(self):
+        with mock.patch.dict(sys.modules, {'tools.research.proof_uses': None}):
+            self.assertIsNone(gate.proof_uses_status())
+
+    def test_the_tools_own_answer_is_one_the_check_reads(self):
+        # Not stubbed: the status() of tools/research/proof_uses.py on an index that binds nothing, with no receipt.
+        # Its word for the kind is one of those the check knows, so the failure is the print's and not the tool's.
+        self.repo.commit({self.INDEX: '{}\n'})
+        result = self.check()
+        self.assertIn(result['kind'], ('not bound', 'damaged'), result)
+        self.assertFails(result, self.COMMAND,
+                         first='the print is behind the Lean' if result['kind'] == 'not bound' else 'the print files are damaged')
+        self.assertIs(result['bound'], False)
+
+    # What gate.run does with the check's pass, on a check of its name whose command prints what the real one prints.
+
+    def printing(self):
+        note = self.tmp / 'ran-proof-uses'
+        body = ("import json, os; open(%r, 'a').write('x'); r = os.environ.get('GATE_PROOF_USES', '').strip(); "
+                "print(json.dumps({'errors': [], 'accepted_reason': r or None}))") % str(note)
+        return (gate.Check('proof-uses', (sys.executable, '-c', body), ('drafts/**',)),)
+
+    def test_the_escape_is_part_of_the_pass_key_of_this_check_alone(self):
+        check, other = self.printing()[0], three()[0]
+        with mock.patch.dict(os.environ, {'GATE_PROOF_USES': ' a reason '}):
+            escaped, untouched = gate.environment(check), gate.environment(other)
+        with mock.patch.dict(os.environ, {'GATE_PROOF_USES': '  '}):
+            blank = gate.environment(check)
+        plain = gate.environment(check)
+        self.assertEqual((escaped['escape'], blank['escape'], plain['escape']), ('a reason', None, None))
+        self.assertNotEqual(gate.key(check, escaped), gate.key(check, plain))
+        self.assertEqual(gate.key(check, blank), gate.key(check, plain))
+        self.assertNotIn('escape', untouched)
+
+    def test_an_escaped_pass_says_its_reason_in_the_runs_summary_and_its_log_and_is_not_reused(self):
+        checks = self.printing()
+        self.repo.commit({'drafts/a.md': '# A, changed\n'})
+        reason = 'the printer is wrong today; row DJ mends it'
+        for run in (1, 2):  # the same variable again: the check runs again and says the reason again
+            with self.subTest(run), mock.patch.dict(os.environ, {'GATE_PROOF_USES': reason}):
+                code, out = gate.run('main', checks=checks)
+                found = out['results']['proof-uses']
+                self.assertEqual((code, found['status'], found['accepted_reason'], self.runs('proof-uses')), (0, 'passed', reason, run))
+                self.assertEqual(json.loads(Path(found['log']).read_text())['accepted_reason'], reason)
+                self.assertEqual(self.kept('proof-uses'), [])
+        code, out = gate.run('main', checks=checks)  # without the variable: no pass made with it is reused
+        found = out['results']['proof-uses']
+        self.assertEqual((code, found['status'], found['accepted_reason'], self.runs('proof-uses')), (0, 'passed', None, 3))
+        self.assertEqual([e['env']['escape'] for e in self.kept('proof-uses')], [None])
+        self.assertEqual(self.status(gate.run('main', checks=checks)[1]), {'proof-uses': 'reused'})
+
+    def test_a_pass_whose_log_cannot_be_read_takes_a_set_escape_as_used(self):
+        noisy = (gate.Check('proof-uses', (sys.executable, '-c', 'print("a warning, then no JSON")'), ('drafts/**',)),)
+        self.repo.commit({'drafts/a.md': '# A, changed\n'})
+        with mock.patch.dict(os.environ, {'GATE_PROOF_USES': 'a reason'}):
+            code, out = gate.run('main', checks=noisy)
+        self.assertEqual((code, out['results']['proof-uses']['accepted_reason'], self.kept('proof-uses')), (0, 'a reason', []))
 
 
 LEAN_DIR = gate.LEAN

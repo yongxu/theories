@@ -14,6 +14,7 @@ import re
 import subprocess
 import sys
 import tempfile
+import types
 import unittest
 from unittest import mock
 from urllib.parse import unquote
@@ -21,7 +22,7 @@ from urllib.parse import unquote
 ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-from tools.research import atlas, navigation, paths, reading_catalogue, registry  # noqa: E402
+from tools.research import atlas, navigation, paths, proof_uses, reading_catalogue, registry, shared_laws  # noqa: E402
 
 CONFIG = {'record_directories': ['theories/becoming/results/records']}
 CHAPTER = 'theories/becoming/chapters/02-MAP.md'
@@ -1061,6 +1062,760 @@ class Step2bTests(unittest.TestCase):
                 lost = set(m['takes_unbound']) - set(h['takes'])
                 self.assertFalse(lost, f'{d["id"]}: {h["law"]} lacks {sorted(lost)}, taken another way')
         self.assertEqual(seen, set(mapping))
+
+
+def listing(**declarations):
+    """Dynamics as the computation reads them: an id and the declarations it lists, in the order given."""
+    return [{'id': k.replace('_', '-'), 'declarations': v} for k, v in declarations.items()]
+
+
+class UsesBetweenProofsTests(unittest.TestCase):
+    """The lines on uses between proofs, computed from small made-up lists (AI-written, 22 November 2026): a line is
+    of two theorems, the proof of one using the other as the print gives it, the two listed under different dynamics."""
+
+    def test_a_direct_use_shows_at_both_ends(self):
+        out = atlas.uses_between(listing(x=['A.t'], y=['B.u']), {'A.t': ['B.u'], 'B.u': []})
+        self.assertEqual(out['x']['uses'], [{'dynamic': 'y', 'used': 'B.u', 'in': ['A.t']}])
+        self.assertEqual(out['y']['used_by'], [{'used': 'B.u', 'dynamic': 'x', 'in': ['A.t']}])
+        self.assertEqual((out['x']['chains'], out['x']['used_by'], out['y']['uses'], out['y']['chains']), ([], [], [], []))
+        self.assertEqual((out['x']['read'], out['y']['read']), (1, 1))
+
+    def test_a_chain_runs_through_a_theorem_no_dynamic_lists_and_shows_where_it_starts(self):
+        out = atlas.uses_between(listing(x=['A.t'], y=['B.u']), {'A.t': ['M.m'], 'M.m': ['B.u'], 'B.u': []})
+        self.assertEqual(out['x']['chains'], [{'dynamics': ['y'], 'chain': ['A.t', 'M.m', 'B.u']}])
+        self.assertEqual((out['x']['uses'], out['y']['used_by'], out['y']['chains']), ([], [], []))  # the other end shows direct uses only
+
+    def test_a_private_theorem_between_is_followed_like_any_unlisted_one(self):
+        private = '_private.Becoming.M.0.Becoming.M.step'
+        out = atlas.uses_between(listing(x=['Becoming.A.t'], y=['Becoming.B.u']),
+                                 {'Becoming.A.t': [private], private: ['Becoming.B.u'], 'Becoming.B.u': []})
+        self.assertEqual(out['x']['chains'], [{'dynamics': ['y'], 'chain': ['Becoming.A.t', private, 'Becoming.B.u']}])
+
+    def test_a_theorem_of_a_module_outside_becoming_is_read_by_its_own_name(self):
+        out = atlas.uses_between(listing(x=['Becoming.A.t'], y=['RelationalRenewal.renews']),
+                                 {'Becoming.A.t': ['RelationalRenewal.renews'], 'RelationalRenewal.renews': []})
+        self.assertEqual(out['x']['uses'], [{'dynamic': 'y', 'used': 'RelationalRenewal.renews', 'in': ['Becoming.A.t']}])
+        self.assertEqual(out['y']['read'], 1)
+
+    def test_breadth_first_gives_the_direct_use_where_a_longer_chain_also_exists(self):
+        out = atlas.uses_between(listing(x=['A.t'], y=['B.u']), {'A.t': ['M.m', 'B.u'], 'M.m': ['B.u'], 'B.u': []})
+        self.assertEqual(out['x']['uses'], [{'dynamic': 'y', 'used': 'B.u', 'in': ['A.t']}])
+        self.assertEqual(out['x']['chains'], [])
+
+    def test_no_chain_to_a_theorem_another_theorem_here_uses_directly(self):
+        rows = {'A.s': ['B.u'], 'A.t': ['M.m'], 'M.m': ['B.u', 'B.v'], 'B.u': [], 'B.v': []}
+        out = atlas.uses_between(listing(x=['A.s', 'A.t'], y=['B.u', 'B.v']), rows)
+        self.assertEqual(out['x']['uses'], [{'dynamic': 'y', 'used': 'B.u', 'in': ['A.s']}])
+        self.assertEqual(out['x']['chains'], [{'dynamics': ['y'], 'chain': ['A.t', 'M.m', 'B.v']}])
+
+    def test_one_shortest_chain_for_two_ends_the_first_by_name_among_equals(self):
+        rows = {'A.t': ['M.long', 'M.b', 'M.a'], 'M.a': ['B.u'], 'M.b': ['B.u'], 'M.long': ['M.longer'], 'M.longer': ['B.u'], 'B.u': []}
+        out = atlas.uses_between(listing(x=['A.t'], y=['B.u']), rows)
+        self.assertEqual(out['x']['chains'], [{'dynamics': ['y'], 'chain': ['A.t', 'M.a', 'B.u']}])
+
+    def test_a_chain_stops_at_the_first_listed_theorem(self):
+        rows = {'A.t': ['M.m'], 'M.m': ['B.u'], 'B.u': ['C.w'], 'C.w': []}
+        out = atlas.uses_between(listing(x=['A.t'], y=['B.u'], z=['C.w']), rows)
+        self.assertEqual(out['x']['chains'], [{'dynamics': ['y'], 'chain': ['A.t', 'M.m', 'B.u']}])  # not on through B.u to z
+        self.assertEqual(out['y']['uses'], [{'dynamic': 'z', 'used': 'C.w', 'in': ['B.u']}])
+
+    def test_no_dynamic_has_a_line_to_itself(self):
+        rows = {'A.t': ['A.s', 'M.m'], 'M.m': ['A.r'], 'A.s': [], 'A.r': [], 'B.u': []}
+        out = atlas.uses_between(listing(x=['A.t', 'A.s', 'A.r'], y=['B.u']), rows)
+        for key in ('uses', 'chains', 'used_by', 'shared'):
+            self.assertEqual(out['x'][key], [], key)
+
+    def test_a_name_is_a_theorem_of_the_print_only_as_written(self):
+        rows = {'Becoming.A.t': ['Becoming.B.u'], 'Becoming.B.u': []}
+        kinds = {'Becoming.A.t': 'theorem', 'Becoming.B.u': 'theorem'}
+        out = atlas.uses_between(listing(x=['A.t'], y=['Becoming.B.u'], z=['u']), rows, kinds)  # no prefix added, no last component matched
+        self.assertEqual((out['x']['read'], out['x']['uses'], out['y']['used_by']), (0, [], []))
+        self.assertEqual(out['x']['not_read']['not_in_the_receipt_as_written'], ['A.t'])
+        self.assertEqual(out['z']['not_read']['not_in_the_receipt_as_written'], ['u'])
+
+    def test_a_use_with_a_shared_theorem_at_either_end_is_a_shared_listing_and_no_use(self):
+        rows = {'A.t': ['B.u'], 'B.u': []}
+        used_shared = atlas.uses_between(listing(x=['A.t', 'B.u'], y=['B.u']), rows)  # the used theorem is listed here too
+        using_shared = atlas.uses_between(listing(x=['A.t'], y=['A.t', 'B.u']), rows)  # the using theorem is listed there too
+        for out in (used_shared, using_shared):
+            for x in ('x', 'y'):
+                self.assertEqual((out[x]['uses'], out[x]['chains'], out[x]['used_by']), ([], [], []))
+        self.assertEqual(used_shared['x']['shared'], [{'theorem': 'B.u', 'also_under': ['y']}])
+        self.assertEqual(used_shared['y']['shared'], [{'theorem': 'B.u', 'also_under': ['x']}])
+        self.assertEqual(using_shared['x']['shared'], [{'theorem': 'A.t', 'also_under': ['y']}])
+        self.assertEqual(using_shared['y']['shared'], [{'theorem': 'A.t', 'also_under': ['x']}])
+
+    def test_the_rule_for_a_shared_theorem_holds_along_a_chain_and_spares_a_third_dynamic(self):
+        rows = {'A.t': ['M.m'], 'M.m': ['B.u'], 'B.u': []}
+        out = atlas.uses_between(listing(x=['A.t'], y=['A.t', 'B.u'], z=['B.u']), rows)
+        self.assertEqual(out['x']['chains'], [{'dynamics': ['z'], 'chain': ['A.t', 'M.m', 'B.u']}])  # z does not list A.t
+        self.assertEqual(out['y']['chains'], [])  # y lists both ends
+
+    def test_what_is_not_read_is_told_apart_by_the_receipt(self):
+        kinds = {'A.t': 'theorem', 'A.late': 'theorem', 'A.Def': 'def'}
+        out = atlas.uses_between(listing(x=['A.t', 'A.late', 'A.Def', 'Elsewhere.law'], y=[]), {'A.t': []}, kinds)
+        self.assertEqual(out['x']['read'], 1)
+        self.assertEqual(out['x']['not_read'], {'theorems_of_the_receipt_without_row': ['A.late'],
+                                                'receipt_declarations_not_theorems': ['A.Def'],
+                                                'not_in_the_receipt_as_written': ['Elsewhere.law']})
+        self.assertEqual((out['y']['read'], out['y']['not_read']), (0, {k: [] for k in atlas.NOT_READ}))
+
+    def test_a_use_of_a_name_with_no_row_is_not_followed(self):
+        out = atlas.uses_between(listing(x=['A.t'], y=['B.u']), {'A.t': ['B.u', 'Gone.m']})  # B.u is listed and has no row
+        self.assertEqual((out['x']['uses'], out['x']['chains'], out['y']['read']), ([], [], 0))
+
+    def test_rows_that_use_one_another_end(self):
+        rows = {'A.t': ['M.a', 'A.t'], 'M.a': ['M.b'], 'M.b': ['M.a', 'B.u'], 'B.u': []}
+        out = atlas.uses_between(listing(x=['A.t'], y=['B.u']), rows)
+        self.assertEqual(out['x']['chains'], [{'dynamics': ['y'], 'chain': ['A.t', 'M.a', 'M.b', 'B.u']}])
+
+    def test_the_order_is_the_atlas_and_the_entries_not_the_print(self):
+        rows = {'A.s': ['C.w', 'B.u', 'B.v'], 'A.t': ['B.u'], 'B.u': [], 'B.v': [], 'C.w': []}
+        dynamics = listing(x=['A.t', 'A.s'], z=['C.w'], y=['B.v', 'B.u'])
+        out = atlas.uses_between(dynamics, rows)
+        self.assertEqual(out['x']['uses'], [{'dynamic': 'z', 'used': 'C.w', 'in': ['A.s']}, {'dynamic': 'y', 'used': 'B.v', 'in': ['A.s']},
+                                            {'dynamic': 'y', 'used': 'B.u', 'in': ['A.t', 'A.s']}])
+        shuffled = {k: list(reversed(rows[k])) for k in reversed(list(rows))}
+        self.assertEqual(atlas.uses_between(dynamics, shuffled), out)
+
+    def test_the_modules_behind_are_read_off_the_index_and_the_receipt(self):
+        sources = {'A': '1', 'B': '2', 'New': '9'}
+        digest = shared_laws.sources_digest({'source_sha256': sources})
+        index = {'core_sources_sha256': digest, 'modules': {m: {'source_sha256': h, 'theorems': 0} for m, h in sources.items()}}
+        self.assertIsNone(atlas.modules_behind(index, sources, digest))
+        old = {'core_sources_sha256': 'e' * 64, 'modules': {'A': {'source_sha256': '1', 'theorems': 0}, 'B': {'source_sha256': '0', 'theorems': 0},
+                                                           'Gone': {'source_sha256': '7', 'theorems': 0}}}
+        self.assertEqual(atlas.modules_behind(old, sources, digest), ['B', 'Gone', 'New'])  # changed; only in the print; only in the receipt
+
+    def test_a_section_shows_four_used_theorems_for_a_dynamic_and_says_how_many_more(self):
+        used = [f'B.u{i}' for i in range(6)]
+        users = [f'A.t{i}' for i in range(6)]
+        out = atlas.uses_between(listing(x=users, y=used), {**{t: used if t == 'A.t0' else ['B.u0'] for t in users}, **{u: [] for u in used}})
+        rows, lead = atlas._uses_rows({'uses_between_proofs': out['x']}, {'y': 'The other'}, {'x': 'families/c.md', 'y': 'families/c.md'},
+                                      'families/c.md', False)
+        # the theorems first, the dynamic last and only as where the used theorems are listed
+        self.assertEqual(rows[0].split('\n')[1], '    - `B.u0`, in `A.t0`, `A.t1`, `A.t2`, `A.t3` and 2 more; `B.u1`, in `A.t0`; '
+                                                 '`B.u2`, in `A.t0`; `B.u3`, in `A.t0`; and 2 more in the data file, listed under [The other](#y).')
+        self.assertNotIn('TERRAIN', lead)  # no terrain page is written here, so none is linked
+        self.assertEqual(len(out['x']['uses']), 6)  # the data file has them all
+
+    def test_a_chain_names_at_most_three_theorems_between_in_full(self):
+        self.assertEqual(atlas._chain(['a', 'b', 'c', 'd', 'e']), '`a` → `b` → `c` → `d` → `e`')
+        self.assertEqual(atlas._chain(['a', 'b', 'c', 'd', 'e', 'f', 'g']), '`a` → `b` → (three more between) → `f` → `g`')
+
+    def test_a_chain_is_kept_for_a_dynamic_that_no_direct_line_here_shows_its_end_under(self):
+        # B.u is listed under y and z. A.s uses it directly and is itself listed under z, so its direct line is for y
+        # alone; the chain from A.t is then the only line here that has B.u under z, and is kept for z and not for y.
+        rows = {'A.s': ['B.u'], 'A.t': ['M.m'], 'M.m': ['B.u'], 'B.u': []}
+        out = atlas.uses_between(listing(x=['A.s', 'A.t'], y=['B.u'], z=['A.s', 'B.u']), rows)
+        self.assertEqual(out['x']['uses'], [{'dynamic': 'y', 'used': 'B.u', 'in': ['A.s']}])
+        self.assertEqual(out['x']['chains'], [{'dynamics': ['z'], 'chain': ['A.t', 'M.m', 'B.u']}])
+
+    def test_chains_and_uses_from_the_other_end_come_in_the_order_of_the_atlas_and_the_entries(self):
+        rows = {'A.s': ['M.b', 'M.c'], 'A.t': ['M.a'], 'M.a': ['B.v'], 'M.b': ['C.w'], 'M.c': ['B.u'], 'B.u': [], 'B.v': [], 'C.w': [],
+                'D.p': ['B.v', 'B.u'], 'E.q': ['B.u']}
+        dynamics = listing(x=['A.t', 'A.s'], z=['C.w'], y=['B.v', 'B.u'], e=['E.q'], d=['D.p'])
+        out = atlas.uses_between(dynamics, rows)
+        # chains: by the far dynamic in the atlas's order, then by the used theorem in that dynamic's order
+        self.assertEqual(out['x']['chains'], [{'dynamics': ['z'], 'chain': ['A.s', 'M.b', 'C.w']}, {'dynamics': ['y'], 'chain': ['A.t', 'M.a', 'B.v']},
+                                              {'dynamics': ['y'], 'chain': ['A.s', 'M.c', 'B.u']}])
+        # used_by: by this dynamic's theorem in its order, then by the using dynamic in the atlas's order
+        self.assertEqual(out['y']['used_by'], [{'used': 'B.v', 'dynamic': 'd', 'in': ['D.p']}, {'used': 'B.u', 'dynamic': 'e', 'in': ['E.q']},
+                                               {'used': 'B.u', 'dynamic': 'd', 'in': ['D.p']}])
+        shuffled = {k: list(reversed(rows[k])) for k in reversed(list(rows))}
+        self.assertEqual(atlas.uses_between(dynamics, shuffled), out)
+
+    def section_rows(self, out, dynamic='x', **more):
+        names = {x: f'Dynamic {x}' for x in out}
+        return atlas._uses_rows({'uses_between_proofs': out[dynamic], **more}, names, {x: 'families/c.md' for x in out}, 'families/c.md', False)[0]
+
+    def test_the_mark_that_a_typed_row_above_has_the_pair_is_given_only_for_that_very_pair(self):
+        rows = {'A.s': ['B.u'], 'A.t': ['B.u', 'B.v'], 'B.u': [], 'B.v': []}
+        out = atlas.uses_between(listing(x=['A.s', 'A.t'], y=['B.u', 'B.v']), rows)
+
+        def direct(case_of):
+            return self.section_rows(out, premises=[{'law': 'A.t', 'case_of': [{'law': case_of}]}])[0].split('\n')[1]
+        self.assertEqual(direct('B.u'), '    - `B.u`, in `A.s` and `A.t` (told above as a case); `B.v`, in `A.t`, listed under [Dynamic y](#y).')
+        self.assertEqual(direct('B.v'), '    - `B.u`, in `A.s` and `A.t`; `B.v`, in `A.t` (told above as a case), listed under [Dynamic y](#y).')
+        self.assertNotIn('told above', direct('C.elsewhere'))  # the case row is of another used theorem
+        other = self.section_rows(out, premises=[{'law': 'A.r', 'case_of': [{'law': 'B.u'}]}])  # and of another using one
+        self.assertNotIn('told above', ''.join(other))
+        self.assertNotIn('told above', ''.join(self.section_rows(out)))
+
+    def test_a_section_shows_one_chain_for_a_used_theorem_the_shortest_then_the_first_by_its_names(self):
+        rows = {'A.r': ['M.x'], 'M.x': ['M.y'], 'M.y': ['B.u'], 'A.s': ['M.b'], 'M.b': ['B.u'], 'A.t': ['M.a'], 'M.a': ['B.u'], 'B.u': []}
+        out = atlas.uses_between(listing(x=['A.r', 'A.t', 'A.s'], y=['B.u']), rows)
+        self.assertEqual(len(out['x']['chains']), 3)  # the data file has one for each pair of ends
+        shown = next(r for r in self.section_rows(out) if r.startswith('*Reached through theorems no dynamic lists.*')).split('\n')[1:]
+        self.assertEqual(shown, ['    - `A.s` → `M.b` → `B.u`, listed under [Dynamic y](#y).'])
+
+    def test_a_sentence_on_being_behind_names_twelve_modules_and_says_how_many_more(self):
+        late = [f'Becoming.M{i:02}' for i in range(14)]
+        header = {'binds_receipt': False, 'modules_behind': late, 'printed_from': {'commit': 'a' * 40, 'core_run': 'then'}}
+        said = atlas._behind_words({'proof_uses': header}, whole=False)
+        self.assertTrue(said.startswith('14 modules differ between the print and the core receipt as it now stands'))
+        self.assertIn('`Becoming.M10`, `Becoming.M11` and 2 more, all named in the data file. Lines of theorems declared in them were '
+                      'printed before those modules last changed', said)
+        self.assertNotIn('Becoming.M12', said)
+        self.assertEqual(atlas._behind_words({'proof_uses': {**header, 'binds_receipt': True}}), '')
+        self.assertEqual(atlas._behind_words({}), '')
+
+    def test_the_reader_knows_the_format_the_writer_writes_and_takes_its_index(self):
+        self.assertEqual(atlas.PROOF_USES_FORMAT, proof_uses.FORMAT)
+        index = proof_uses.index_object(PRINT_RECEIPT, PRINT_ROWS, commit='d8adcda71' + 'e' * 31)
+        self.assertIsNone(atlas._index_problem(index))
+        # and the binding hash is the writer's own function, not a second copy of it
+        self.assertIsNone(atlas.modules_behind(index, PRINT_RECEIPT['source_sha256'], proof_uses.sources_digest(PRINT_RECEIPT)))
+
+
+PRINT_RECEIPT = {
+    'status': 'passed', 'utc': '20261122T094514.036246Z', 'toolchain': 'leanprover/lean4:v4.29.1',
+    'source_sha256': {'Becoming.ClosedCapture': 'a' * 64, 'RelationalRenewal': 'b' * 64},
+    'modules': [{'module': 'Becoming.ClosedCapture', 'layer': 'core', 'declarations': [
+        {'kind': 'theorem', 'name': f'Becoming.ClosedCapture.{n}'} for n in ('turned_by_loss', 'stays_locked', 'late', 'quiet', 'unprinted')]
+        + [{'kind': 'def', 'name': 'Becoming.ClosedCapture.Locked'}]},
+        {'module': 'RelationalRenewal', 'layer': 'core', 'declarations': [{'kind': 'theorem', 'name': 'RelationalRenewal.renews'}]}]}
+STEP = '_private.Becoming.ClosedCapture.0.Becoming.ClosedCapture.step'
+PRINT_ROWS = {'Becoming.ClosedCapture': [{'name': 'Becoming.ClosedCapture.turned_by_loss', 'uses': ['Becoming.ClosedCapture.stays_locked', STEP]},
+                                         {'name': STEP, 'uses': ['RelationalRenewal.renews']},
+                                         {'name': 'Becoming.ClosedCapture.stays_locked', 'uses': []},
+                                         {'name': 'Becoming.ClosedCapture.late', 'uses': ['RelationalRenewal.renews']},
+                                         {'name': 'Becoming.ClosedCapture.quiet', 'uses': []}],
+              'RelationalRenewal': [{'name': 'RelationalRenewal.renews', 'uses': []}]}
+HEADING_SENTENCE = ('- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says '
+                    'that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a '
+                    'case, a joining or an exit, and it is about those two theorems, not about the two dynamics')
+# What a page says only where the print does not bind the core receipt.
+BEHIND_WORDS = ('between the print and the core receipt as it now stands', '*Printed before a change.*', 'last changed',
+                'changed or added since the print was made', 'may have been declared or renamed after it',
+                'is not that of its own modules', 'The lines on uses between proofs were computed')
+# What no page says of these lines, of the print or of being behind (each in lower case). The first are said of no
+# line anywhere; the second are words the pages do use to deny them or of the typed layer, so they are looked for only
+# in the text this layer writes, once its own denials are taken out.
+NEVER_SAID = ('proved from', 'most depended', 'most basic', 'most used', 'linked to no other', 'not enforced', 'told, and not',
+              'nothing enforces', 'nobody checks')
+NEVER_SAID_OF_A_LINE = ('a case', 'case of', 'join', 'the same law', 'passage', 'a road', 'central', 'pieces', 'most', 'enforce')
+DENIALS = ('(told above as a case)', 'It is not a case, a joining or an exit', 'A use is not a case', 'It is not a joining and not an exit',
+           'It cannot see a passage', 'Passages proved in Lean that no exit names are not on this page under any kind')
+
+
+class UsesBetweenProofsPageTests(AtlasCase):
+    """The same lines on the pages and in the data file, through a store with a print written beside it (AI-written,
+    22 November 2026): where they stand, what they say of themselves, what the pages say where the print is behind the
+    core receipt, and that without the print nothing differs."""
+
+    def entries(self, **shared):
+        def other(i, name, *declarations):
+            return carriers(id=i, name={'en': name}, family='G', declarations=list(declarations))
+        read = capture(declarations=['Becoming.ClosedCapture.turned_by_loss', 'Becoming.ClosedCapture.Locked'],
+                       exits=[exit_(drops=['closedcapture-unread'])],
+                       premises=[{'law': 'Becoming.ClosedCapture.turned_by_loss', 'takes': ['closedcapture-unread'],
+                                  'case_of': [{'law': 'Becoming.ClosedCapture.stays_locked', 'how': {'en': 'its rate fixed to the share read'}}]}])
+        return [read, carriers(family='G', declarations=['Becoming.ClosedCapture.stays_locked', *shared.get('carriers', [])],
+                               exits=[exit_(to='closed-capture')]),
+                other('renewal-kept', 'Renewal kept', 'RelationalRenewal.renews'),
+                other('alone', 'A theorem printed and one not', 'Becoming.ClosedCapture.late', 'Becoming.ClosedCapture.unprinted'),
+                other('quiet-one', 'A theorem that uses nothing listed', 'Becoming.ClosedCapture.quiet'),
+                other('unread-one', 'Only a theorem of another Lean tree', 'Leaf.slows_down'),
+                other('empty-one', 'No declaration')]
+
+    def write_store(self, **shared):
+        self.write_atlas(*self.entries(**shared))
+        (self.root / atlas.VOCABULARY).write_text(json.dumps(PREMISE_VOCABULARY, ensure_ascii=False, indent=1) + '\n')
+        (self.root / atlas.ENTRIES / 'premises.json').write_text(json.dumps([premise()], ensure_ascii=False, indent=1) + '\n')
+        (self.root / atlas.RECEIPT).write_text(json.dumps(PRINT_RECEIPT))
+
+    def write_print(self, rows=PRINT_ROWS, printed_from=None):
+        """The print as tools/research/proof_uses.py writes it (a test above holds that the reader takes the writer's
+        own index). `printed_from` gives source hashes that differ from the receipt's: the print was made before
+        those modules changed."""
+        folder = self.root / atlas.PROOF_USES
+        folder.mkdir(parents=True, exist_ok=True)
+        for m, listed in rows.items():
+            (folder / f'{m}.jsonl').write_text(''.join(json.dumps(r, ensure_ascii=False) + '\n' for r in sorted(listed, key=lambda r: r['name'])))
+        sources = {**PRINT_RECEIPT['source_sha256'], **(printed_from or {})}
+        index = {'about': 'For each theorem, the theorems its proof term names; one call; definitions are not followed.',
+                 'format': 1, 'printer_sha256': 'c' * 64, 'toolchain': PRINT_RECEIPT['toolchain'],
+                 'printed_from': {'commit': 'd8adcda71' + 'e' * 31, 'core_run': PRINT_RECEIPT['utc']},
+                 'core_sources_sha256': shared_laws.sources_digest({'source_sha256': sources}),
+                 'modules': {m: {'source_sha256': sources.get(m, ''), 'theorems': len(listed)} for m, listed in rows.items()},
+                 'counts': {'modules': len(rows), 'theorems': sum(len(v) for v in rows.values()),
+                            'uses_without_row': len(proof_uses.names_without_row(rows))}}
+        (folder / 'INDEX.json').write_text(json.dumps(index, ensure_ascii=False, indent=1) + '\n')
+
+    def uses_text(self, pages):
+        """The text this layer writes on the pages, in lower case with its own denials taken out: every section's item
+        on uses between proofs, the terrain's section, the sentence it adds to the atlas's lead and the front page's
+        sentence on being behind."""
+        parts = []
+        for path, body in pages.items():
+            if path.startswith(atlas.FAMILY_PAGES + '/'):
+                for part in body.split('\n<a id="')[1:]:
+                    if '- **Uses between proofs.**' in part:
+                        parts.append(part[part.index('- **Uses between proofs.**'):].split('\n[The atlas](')[0])
+            for line in body.split('\n'):
+                for opening in ('The lines on uses between proofs, last in an entry\'s section', 'The lines on uses between proofs were computed'):
+                    if opening in line:
+                        parts.append(line[line.index(opening):])
+        if atlas.TERRAIN in pages:
+            terrain = pages[atlas.TERRAIN]
+            parts.append(terrain[terrain.index('## Uses between proofs'):].split('\n[')[0])
+        text = '\n'.join(parts)
+        for words in DENIALS:
+            text = text.replace(words, '')
+        return re.sub(r'\[[^\]]*\]\([^)]*\)|`[^`]*`', '', text).lower()  # names of dynamics and of theorems are not the layer's words
+
+    def rendered(self):
+        pages, errors = atlas.render(RECORDS)
+        self.assertEqual(errors, [])
+        return pages
+
+    def section(self, page, dynamic):
+        """A dynamic's section of its family's page, from its anchor to the next one or to the page's closing line."""
+        start = page.index(f'<a id="{dynamic}"></a>\n### ')
+        ends = [i for i in (page.find('\n<a id="', start + 1), page.find('\n[The atlas](', start + 1)) if i >= 0]
+        return page[start:min(ends)]
+
+    def test_the_lines_stand_last_in_a_section_theorems_first(self):
+        self.write_store()
+        self.write_print()
+        pages = self.rendered()
+        c, g = pages[atlas.FAMILY_PAGES + '/c.md'], pages[atlas.FAMILY_PAGES + '/g.md']
+        own = self.section(c, 'closed-capture')
+        self.assertLess(own.index('- **Sources.**'), own.index('- **Uses between proofs.**'))
+        self.assertEqual(own[own.index('- **Uses between proofs.**'):].rstrip('\n').split('\n'), [
+            HEADING_SENTENCE + ' ([what it does not show](../TERRAIN.md#uses-between-proofs)).',
+            '  - *Used directly by proofs here.*',
+            '    - `Becoming.ClosedCapture.stays_locked`, in `Becoming.ClosedCapture.turned_by_loss` (told above as a case), listed under '
+            '[Self-reproducing selection across carriers](g.md#self-reproducing-selection).',
+            '  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: '
+            'the first theorem need not need the last.',
+            f'    - `Becoming.ClosedCapture.turned_by_loss` → `{STEP}` → `RelationalRenewal.renews`, listed under [Renewal kept](g.md#renewal-kept).',
+            '  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.'])
+        used = self.section(g, 'self-reproducing-selection')
+        self.assertIn("  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.", used)
+        self.assertIn('    - `Becoming.ClosedCapture.stays_locked`: in `Becoming.ClosedCapture.turned_by_loss`, listed under '
+                      '[Closed capture (元吸引子)](c.md#closed-capture).', used)
+        kept = self.section(g, 'renewal-kept')  # the chain's far end shows the direct use of it, not the chain
+        self.assertIn('    - `RelationalRenewal.renews`: in `Becoming.ClosedCapture.late`, listed under [A theorem printed and one not](#alone).', kept)
+        self.assertNotIn(STEP, kept)
+        for body in (c, g):  # bullets under the section's own heading: no heading and no anchor of their own
+            self.assertNotIn('# Uses between proofs', body)
+            self.assertNotIn('<a id="uses-between-proofs"', body)
+
+    def test_a_dynamic_with_nothing_found_and_one_that_cannot_be_read_say_which(self):
+        self.write_store()
+        self.write_print()
+        g = self.rendered()[atlas.FAMILY_PAGES + '/g.md']
+        link = '([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).'
+        self.assertIn("- **Uses between proofs.** None found. A use Lean's printer did not follow would not show here, and a chain that "
+                      'ends at a theorem listed here is shown where it starts ' + link, self.section(g, 'quiet-one'))
+        for dynamic in ('unread-one', 'empty-one'):
+            self.assertIn('- **Uses between proofs.** Not read: this entry lists no theorem of the print, so no line can be computed for it '
+                          + link, self.section(g, dynamic))
+
+    def test_a_listed_theorem_of_the_receipt_with_no_row_is_said_in_its_section_though_the_print_binds(self):
+        self.write_store()
+        self.write_print()
+        pages = self.rendered()
+        self.assertTrue(json.loads(pages[atlas.DATA])['proof_uses']['binds_receipt'])
+        alone = self.section(pages[atlas.FAMILY_PAGES + '/g.md'], 'alone')
+        lines = alone[alone.index('- **Uses between proofs.**'):].split('\n')
+        # before the lines it qualifies, and with no word of a change: the print binds, so no module changed since
+        self.assertEqual(lines[1], '  - *No row in the print.* `Becoming.ClosedCapture.unprinted` is a theorem of the core receipt that the print '
+                                   'has no row for: no line can be computed for it, and its having no line says nothing.')
+        self.assertTrue(lines[2].startswith('  - *Used directly by proofs here.*'))
+        for body in pages.values():
+            self.assertNotIn('since the print was made', body)
+        for dynamic in ('quiet-one', 'renewal-kept', 'unread-one'):  # said only where such a theorem is listed
+            self.assertNotIn('*No row in the print.*', self.section(pages[atlas.FAMILY_PAGES + '/g.md'], dynamic))
+
+    def test_a_theorem_listed_under_both_is_shown_as_the_listing_and_not_as_a_use(self):
+        self.write_store(carriers=['Becoming.ClosedCapture.turned_by_loss'])
+        self.write_print()
+        pages = self.rendered()
+        own = self.section(pages[atlas.FAMILY_PAGES + '/c.md'], 'closed-capture')
+        self.assertNotIn('listed under [Self-reproducing selection across carriers]', own)
+        self.assertIn("  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.", own)
+        self.assertIn('  - *Listed here and under another dynamic, by hand.* `Becoming.ClosedCapture.turned_by_loss`, also under '
+                      '[Self-reproducing selection across carriers](g.md#self-reproducing-selection). A use with such a theorem at one end is '
+                      'not shown as a use between the two dynamics that list it.', own)
+        data = {d['id']: d['uses_between_proofs'] for d in json.loads(pages[atlas.DATA])['dynamics']}
+        self.assertEqual(data['closed-capture']['uses'], [])
+        self.assertEqual(data['self-reproducing-selection']['used_by'], [])
+        self.assertEqual(data['self-reproducing-selection']['shared'], [{'theorem': 'Becoming.ClosedCapture.turned_by_loss', 'also_under': ['closed-capture']}])
+
+    def test_without_the_print_the_pages_and_the_data_are_what_they_were(self):
+        self.write_store()
+        before, inputs = self.rendered(), atlas.inputs()
+        self.assertNotIn('uses between proofs', ''.join(before.values()).lower())
+        data = json.loads(before[atlas.DATA])
+        self.assertEqual(data['about'], atlas.ABOUT)
+        self.assertNotIn('proof_uses', data)
+        self.assertFalse(any('uses_between_proofs' in d for d in data['dynamics']))
+        self.assertNotIn(self.root / atlas.RECEIPT, inputs)
+        self.write_print()
+        after = self.rendered()
+        self.assertEqual(set(after), set(before))  # no page more
+        self.assertNotEqual(after[atlas.DATA], before[atlas.DATA])
+        for path in (atlas.PROOF_USES_INDEX, atlas.RECEIPT, atlas.PROOF_USES + '/Becoming.ClosedCapture.jsonl', atlas.PROOF_USES + '/RelationalRenewal.jsonl'):
+            self.assertIn(self.root / path, atlas.inputs())
+        for path in sorted((self.root / atlas.PROOF_USES).iterdir()):
+            path.unlink()
+        self.assertEqual(self.rendered(), before)  # byte for byte
+        self.assertEqual(atlas.inputs(), inputs)
+
+    def test_a_render_with_the_print_is_a_fixed_point_whatever_order_the_rows_come_in(self):
+        self.write_store()
+        self.write_print()
+        first = self.rendered()
+        self.assertEqual(self.rendered(), first)
+        for m, listed in PRINT_ROWS.items():  # the same rows, each file and each list of uses the other way round
+            (self.root / atlas.PROOF_USES / f'{m}.jsonl').write_text(''.join(
+                json.dumps({'name': r['name'], 'uses': list(reversed(r['uses']))}) + '\n' for r in reversed(listed)))
+        self.assertEqual(self.rendered(), first)
+
+    def test_every_section_with_lines_says_what_a_line_is_and_no_page_says_more(self):
+        self.write_store(carriers=['Becoming.ClosedCapture.turned_by_loss', 'RelationalRenewal.renews'])
+        self.write_print(printed_from={'Becoming.ClosedCapture': 'd' * 64})
+        pages = self.rendered()
+        marks = ('*Used directly by proofs here.*', '*Reached through theorems no dynamic lists.*',
+                 '*Proofs elsewhere that directly use a theorem listed here.*', '*Listed here and under another dynamic, by hand.*')
+        with_lines = 0
+        for letter in 'cg':
+            page = pages[f'{atlas.FAMILY_PAGES}/{letter}.md']
+            for part in [self.section(page, d['id']) for d in self.entries() if d['family'].lower() == letter]:
+                if any(m in part for m in marks):
+                    with_lines += 1
+                    self.assertIn(HEADING_SENTENCE, part)
+        self.assertGreaterEqual(with_lines, 4)
+        self.write_print()
+        bound = self.rendered()
+        for render in (pages, bound):  # behind the receipt, and bound to it
+            for path, body in render.items():
+                for words in NEVER_SAID:
+                    with self.subTest(page=path, words=words):
+                        self.assertNotIn(words, body.lower())
+            # every section's lines, the terrain's section and the sentences on the front page; "not a case" is said
+            said = self.uses_text(render)
+            self.assertIn('typed by no one', said)
+            self.assertIn('none was found', said)
+            for words in NEVER_SAID_OF_A_LINE:
+                with self.subTest(words=words):
+                    self.assertNotIn(words, said)
+        self.assertIn('printed before that module last changed', self.uses_text(pages))  # the text looked through has the sentences on being behind
+
+    def test_the_terrain_says_the_limits_with_each_figure_in_its_sentence(self):
+        self.write_store()
+        # two names a printed proof uses that have no row, as Lean's generated theorems have none
+        rows = {**PRINT_ROWS, 'RelationalRenewal': [{'name': 'RelationalRenewal.renews', 'uses': ['RelationalRenewal.renews.eq_1', 'RelationalRenewal.match_1']}]}
+        self.write_print(rows)
+        pages = self.rendered()
+        terrain = pages[atlas.TERRAIN]
+        self.assertLess(terrain.index('## Laws given as cases of one law'), terrain.index('## Uses between proofs'))
+        self.assertIn('uses-between-proofs', reading_catalogue.anchors_from_text(terrain))
+        section = terrain[terrain.index('## Uses between proofs'):]
+        self.assertTrue(section.split('\n')[2].startswith('*AI-written. Computed at each render from what Lean printed'))
+        self.assertIn('5 of the 6 theorems in the print are listed under a dynamic, so these lines are of those', section)
+        self.assertIn('of the 1 pair of dynamics with an exit from one to the other, 0 have no line of this kind', section)
+        self.assertIn('0 theorems of the print are listed under more than one dynamic', section)
+        self.assertIn('2 dynamics list no theorem the print has a row for and can have no line (1 of them lists no declaration)', section)
+        # what the printer follows and what has a row, as the print's own index tells it, with the figure in that sentence
+        self.assertIn("The printer follows one call, and every declaration under a theorem's own name (Lean's auxiliary ones, and any theorem "
+                      "a person declared under that name), counting what they use as the theorem's own; a field of a structure that is a "
+                      'proposition has a row, so a proof that takes it from the structure it is given shows as a use, though what it uses is an '
+                      'assumption and not a proved theorem; a use it does not follow is not shown, so where no line is, none was found; 2 names '
+                      'the printed proofs use have no row in the print, and nothing is followed past such a name.', section)
+        self.assertIn('Passages proved in Lean that no exit names are not on this page under any kind; that none is shown is not that none '
+                      'is proved.', section)
+        self.assertIn('**What the print was made from.** Commit `d8adcda71eee`, the core run of `20261122T094514.036246Z`, '
+                      'leanprover/lean4:v4.29.1: 6 theorems in 2 modules. It binds the sources the core receipt names. 1 theorem the entries '
+                      'list is a theorem of the core receipt that the print has no row for: no line can be computed for it, and the data file '
+                      'names it.', section)
+        self.assertNotIn('|', section.split('**What the print was made from.**')[0])  # no table: no figure beside another by kind
+        # every figure is in running words, inside a sentence, and counted at this render: the index's own counts are not what is shown
+        index = json.loads((self.root / atlas.PROOF_USES_INDEX).read_text())
+        index['counts'] = {'modules': 40, 'theorems': 4000, 'uses_without_row': 400}
+        (self.root / atlas.PROOF_USES_INDEX).write_text(json.dumps(index))
+        again = self.rendered()
+        self.assertEqual(again[atlas.TERRAIN], terrain)
+        self.assertEqual(json.loads(again[atlas.DATA])['proof_uses']['counted'], {'modules': 2, 'theorems': 6, 'uses_without_row': 2})
+        figures = re.findall(r'[^.;]*\b\d[\d,]*\b[^.;]*', re.sub(r'`[^`]*`', '', section.split('**What the print was made from.**')[0]))
+        self.assertEqual(len(figures), 5)  # of the print under a dynamic; exits with no line; under several; with no theorem; names with no row
+        for words in ('piece', 'most', 'score', 'rank', 'in all', 'total'):
+            self.assertNotIn(words, section.lower())
+        self.assertIn('The lines on uses between proofs, last in an entry\'s section, are no part of the curated layer', pages[atlas.PAGE])
+        self.assertIn('It adds nothing to how far anything has been seen', pages[atlas.PAGE])
+        self.assertIn('typed by no one; they too create no result.', pages[atlas.FAMILY_PAGES + '/g.md'])
+
+    def test_the_data_file_holds_the_lists_and_the_prints_header(self):
+        self.write_store()
+        self.write_print()
+        data = json.loads(self.rendered()[atlas.DATA])
+        self.assertEqual(data['about'], atlas.ABOUT + atlas.ABOUT_USES)
+        self.assertEqual(data['proof_uses']['printed_from'], {'commit': 'd8adcda71' + 'e' * 31, 'core_run': PRINT_RECEIPT['utc']})
+        self.assertEqual((data['proof_uses']['binds_receipt'], data['proof_uses']['modules_behind']), (True, []))
+        self.assertNotIn('modules', data['proof_uses'])  # the header, not the rows nor each module's hash
+        self.assertEqual((data['proof_uses']['format'], data['proof_uses']['counted']), (1, {'modules': 2, 'theorems': 6, 'uses_without_row': 0}))
+        by = {d['id']: d['uses_between_proofs'] for d in data['dynamics']}
+        self.assertEqual(by['closed-capture'], {
+            'read': 1, 'uses': [{'dynamic': 'self-reproducing-selection', 'used': 'Becoming.ClosedCapture.stays_locked', 'in': ['Becoming.ClosedCapture.turned_by_loss']}],
+            'chains': [{'dynamics': ['renewal-kept'], 'chain': ['Becoming.ClosedCapture.turned_by_loss', STEP, 'RelationalRenewal.renews']}],
+            'used_by': [], 'shared': [],
+            'not_read': {'theorems_of_the_receipt_without_row': [], 'receipt_declarations_not_theorems': ['Becoming.ClosedCapture.Locked'],
+                         'not_in_the_receipt_as_written': []},
+            'no_row': {'in_modules_behind': [], 'other': []}})
+        self.assertEqual(by['alone']['not_read']['theorems_of_the_receipt_without_row'], ['Becoming.ClosedCapture.unprinted'])
+        self.assertEqual(by['alone']['no_row'], {'in_modules_behind': [], 'other': ['Becoming.ClosedCapture.unprinted']})  # the print binds
+        self.assertEqual(by['unread-one']['not_read']['not_in_the_receipt_as_written'], ['Leaf.slows_down'])
+        entries = json.loads((self.root / atlas.ENTRIES / 'dynamics.json').read_text())
+        self.assertFalse(any('uses_between_proofs' in e for e in entries))  # computed onto the resolved atlas, never into the entries
+
+    def test_a_print_behind_the_receipt_is_said_on_the_front_page_the_terrain_and_the_sections(self):
+        self.write_store()
+        self.write_print()
+        bound = self.rendered()
+        for path, body in bound.items():
+            for words in BEHIND_WORDS:
+                with self.subTest(page=path, words=words):
+                    self.assertNotIn(words, body)
+        self.write_print(printed_from={'Becoming.ClosedCapture': 'd' * 64})
+        pages = self.rendered()
+        # what is the case, and no more: which module, and that its theorems' lines were printed before it last changed
+        said = ('1 module differs between the print and the core receipt as it now stands (changed since, or in only one of the two): '
+                '`Becoming.ClosedCapture`. Lines of theorems declared in it were printed before that module last changed: such a line may '
+                'show a use that is gone, and a use made since is not shown.')
+        front = next(line for line in pages[atlas.PAGE].split('\n') if line.startswith('**How far it is read**'))
+        self.assertTrue(front.endswith('The lines on uses between proofs were computed from what Lean printed at commit `d8adcda71eee` (the '
+                                       'core run of `20261122T094514.036246Z`). ' + said))
+        terrain = pages[atlas.TERRAIN]
+        self.assertIn('6 theorems in 2 modules. ' + said + ' 1 theorem the entries list is declared in a module changed or added since the '
+                      'print was made and has no row in it (it may have been declared or renamed after it), so that having no line says '
+                      'nothing of it.\n', terrain)
+        self.assertNotIn('It binds the sources the core receipt names.', terrain)
+        c, g = pages[atlas.FAMILY_PAGES + '/c.md'], pages[atlas.FAMILY_PAGES + '/g.md']
+        here = ('  - *Printed before a change.* Theorems listed here are declared in `Becoming.ClosedCapture`, and their lines were printed '
+                'before that module last changed. Such a line may show a use that is gone, and a use made since is not shown.')
+        own = self.section(c, 'closed-capture')
+        # at the head of the item, before the lines it qualifies
+        self.assertEqual(own[own.index('- **Uses between proofs.**'):].split('\n')[1], here)
+        self.assertLess(own.index('*Printed before a change.*'), own.index('*Used directly by proofs here.*'))
+        self.assertIn(here, self.section(g, 'quiet-one'))  # where nothing was found, that too was read from the older rows
+        self.assertIn('  - *Printed before a change.* Lines here are read from the rows of theorems declared in `Becoming.ClosedCapture`, printed before that module '
+                      'last changed. Such a line may show a use that is gone, and a use made since is not shown.', self.section(g, 'renewal-kept'))
+        alone = self.section(g, 'alone')
+        self.assertIn('  - *No row in the print.* `Becoming.ClosedCapture.unprinted` is declared in a module changed or added since the print was '
+                      'made (it may have been declared or renamed after it): a use it makes is not shown, and its having no line says nothing.', alone)
+        self.assertLess(alone.index('*No row in the print.*'), alone.index('*Used directly by proofs here.*'))
+        self.assertNotIn('*Printed before a change.*', self.section(g, 'unread-one'))
+        data = json.loads(pages[atlas.DATA])
+        self.assertEqual((data['proof_uses']['binds_receipt'], data['proof_uses']['modules_behind']), (False, ['Becoming.ClosedCapture']))
+        by = {d['id']: d['uses_between_proofs'] for d in data['dynamics']}
+        self.assertEqual(by['renewal-kept']['behind'], {'modules_here': [], 'modules_through': ['Becoming.ClosedCapture']})
+        self.assertEqual(by['alone']['no_row'], {'in_modules_behind': ['Becoming.ClosedCapture.unprinted'], 'other': []})
+        # nothing else differs. In the data file: with what is said of being behind taken out, the lines are the bound render's
+        was = {d['id']: d['uses_between_proofs'] for d in json.loads(bound[atlas.DATA])['dynamics']}
+        self.assertEqual({x: {k: v for k, v in u.items() if k not in ('behind', 'no_row')} for x, u in by.items()},
+                         {x: {k: v for k, v in u.items() if k != 'no_row'} for x, u in was.items()})
+
+        # On every page: with the rows on being behind and on a theorem with no row dropped, the terrain's paragraph on
+        # what the print was made from dropped, and the front page's sentence cut, the two renders are the same text.
+        def apart_from_being_behind(body):
+            kept = []
+            for line in body.split('\n'):
+                if not line.startswith(('  - *Printed before a change.*', '  - *No row in the print.*', '**What the print was made from.**')):
+                    kept.append(line.split(' The lines on uses between proofs were computed')[0].rstrip())
+            return '\n'.join(kept)
+        self.assertEqual(set(pages), set(bound))
+        for path in sorted(set(pages) - {atlas.DATA}):
+            with self.subTest(page=path):
+                self.assertEqual(apart_from_being_behind(pages[path]), apart_from_being_behind(bound[path]))
+                for words in BEHIND_WORDS:  # and what was taken out is all a page says of being behind
+                    self.assertNotIn(words, apart_from_being_behind(pages[path]))
+        self.assertNotEqual(pages[atlas.TERRAIN], bound[atlas.TERRAIN])
+
+    def test_a_theorem_with_no_row_is_said_to_be_in_a_changed_module_only_where_its_module_is_behind(self):
+        self.write_store()
+        self.write_print(printed_from={'RelationalRenewal': 'd' * 64})  # the print is behind, and not for the module of `unprinted`
+        pages = self.rendered()
+        alone = self.section(pages[atlas.FAMILY_PAGES + '/g.md'], 'alone')
+        self.assertIn('  - *No row in the print.* `Becoming.ClosedCapture.unprinted` is a theorem of the core receipt that the print has no row '
+                      'for: no line can be computed for it, and its having no line says nothing.', alone)
+        self.assertNotIn('since the print was made', alone)
+        self.assertIn('`RelationalRenewal`. Lines of theorems declared in it were printed before that module last changed: such a line may show '
+                      'a use that is gone, and a use made since is not shown. 1 theorem the entries list is a theorem of the core receipt that '
+                      'the print has no row for: no line can be computed for it, and the data file names it.\n', pages[atlas.TERRAIN])
+        data = {d['id']: d['uses_between_proofs'] for d in json.loads(pages[atlas.DATA])['dynamics']}
+        self.assertEqual(data['alone']['no_row'], {'in_modules_behind': [], 'other': ['Becoming.ClosedCapture.unprinted']})
+        # both kinds in one section, each with its own words
+        rows = atlas._uses_rows({'uses_between_proofs': {**data['alone'], 'no_row': {'in_modules_behind': ['A.new', 'A.newer'], 'other': ['B.gap']}}},
+                                {'renewal-kept': 'Renewal kept'}, {'renewal-kept': 'families/g.md'}, 'families/g.md', False)[0]
+        self.assertEqual(rows[0], '*No row in the print.* `A.new` and `A.newer` are declared in a module changed or added since the print was made '
+                                  '(they may have been declared or renamed after it): a use they make is not shown, and their having no line says '
+                                  'nothing. `B.gap` is a theorem of the core receipt that the print has no row for: no line can be computed for '
+                                  'it, and its having no line says nothing.')
+
+    def test_every_link_the_lines_add_resolves(self):
+        self.write_store(carriers=['Becoming.ClosedCapture.turned_by_loss'])
+        before = self.rendered()
+        self.write_print()
+        pages = self.rendered()
+
+        def targets(body):
+            return set(re.findall(r'\]\((<[^>]+>|[^\s)]+)\)', body))
+        checked = 0
+        for name in (atlas.PAGE, atlas.TERRAIN, atlas.FAMILY_PAGES + '/c.md', atlas.FAMILY_PAGES + '/g.md'):
+            for target in sorted(targets(pages[name]) - targets(before[name])):
+                path, _, anchor = target.strip('<>').partition('#')
+                with self.subTest(page=name, target=target):
+                    resolved = posixpath.normpath(posixpath.join(posixpath.dirname(name), unquote(path))) if path else name
+                    self.assertIn(resolved, pages)  # each is a page of this render
+                    self.assertTrue(anchor)
+                    self.assertIn(unquote(anchor), reading_catalogue.anchors_from_text(pages[resolved]))
+                    checked += 1
+        self.assertGreaterEqual(checked, 3)
+        # and every link of the lines themselves, old target or new
+        for d in self.entries():
+            name = f'{atlas.FAMILY_PAGES}/{d["family"].lower()}.md'
+            for part in [self.section(pages[name], d['id'])]:
+                for target in targets(part[part.index('- **Uses between proofs.**'):]):
+                    path, _, anchor = target.strip('<>').partition('#')
+                    resolved = posixpath.normpath(posixpath.join(posixpath.dirname(name), unquote(path))) if path else name
+                    with self.subTest(page=name, target=target):
+                        self.assertIn(unquote(anchor), reading_catalogue.anchors_from_text(pages[resolved]))
+
+    def test_without_a_terrain_page_no_line_links_it(self):
+        self.write_atlas(capture(declarations=['Becoming.ClosedCapture.turned_by_loss']),
+                         carriers(family='G', declarations=['Becoming.ClosedCapture.stays_locked']))
+        (self.root / atlas.RECEIPT).write_text(json.dumps(PRINT_RECEIPT))  # no premise is read, so no terrain is written
+        self.write_print(printed_from={'RelationalRenewal': 'd' * 64})
+        pages = self.rendered()
+        self.assertNotIn(atlas.TERRAIN, pages)
+        self.assertNotIn('TERRAIN.md#uses-between-proofs', ''.join(pages.values()))
+        self.assertIn(HEADING_SENTENCE + '.', pages[atlas.FAMILY_PAGES + '/c.md'])
+        self.assertIn('1 module differs between the print and the core receipt as it now stands', pages[atlas.PAGE])  # said though no paragraph holds it
+
+    def test_a_print_that_cannot_be_read_renders_no_page(self):
+        self.write_store()
+        self.write_print()
+        folder = self.root / atlas.PROOF_USES
+        whole = (folder / 'RelationalRenewal.jsonl').read_text()
+        (folder / 'RelationalRenewal.jsonl').unlink()
+        self.assertEqual(atlas.render(RECORDS), ({}, [f'atlas: {atlas.PROOF_USES}/RelationalRenewal.jsonl: the index names the module '
+                                                      'RelationalRenewal and it has no file']))
+        for broken, words in (('{"name": "RelationalRenewal.renews"}\n', 'line 1 is not'), ('not json\n', 'JSONDecodeError'),
+                              (whole + whole, 'has a row already')):
+            (folder / 'RelationalRenewal.jsonl').write_text(broken)
+            pages, errors = atlas.render(RECORDS)
+            self.assertEqual(pages, {})
+            self.assertOne(errors, f'atlas: {atlas.PROOF_USES}/RelationalRenewal.jsonl: ', words)
+        (folder / 'RelationalRenewal.jsonl').write_text(whole)
+        self.assertEqual(atlas.render(RECORDS)[1], [])
+        index = json.loads((folder / 'INDEX.json').read_text())
+        del index['printed_from']
+        (folder / 'INDEX.json').write_text(json.dumps(index))
+        pages, errors = atlas.render(RECORDS)
+        self.assertEqual(pages, {})
+        self.assertOne(errors, f'atlas: {atlas.PROOF_USES_INDEX}: printed_from')
+
+    def test_a_module_file_with_another_number_of_rows_than_the_index_gives_renders_no_page(self):
+        self.write_store()
+        self.write_print()
+        path = self.root / atlas.PROOF_USES / 'Becoming.ClosedCapture.jsonl'
+        whole = path.read_text()
+        for rows, count in ((whole.splitlines(keepends=True)[:-1], '4 rows'),  # a file cut short at a line's end parses, and is not whole
+                            (whole.splitlines(keepends=True) + ['{"name": "Becoming.ClosedCapture.added_by_hand", "uses": []}\n'], '6 rows')):
+            path.write_text(''.join(rows))
+            pages, errors = atlas.render(RECORDS)
+            self.assertEqual(pages, {})
+            self.assertOne(errors, f'atlas: {atlas.PROOF_USES}/Becoming.ClosedCapture.jsonl: the file has {count} and the index gives the module '
+                                   'Becoming.ClosedCapture 5 theorems', 'must be made again with tools/research/proof_uses.py')
+        path.write_text(whole)
+        self.assertEqual(atlas.render(RECORDS)[1], [])
+
+    def test_a_print_of_another_format_or_of_none_renders_no_page(self):
+        self.write_store()
+        self.write_print()
+        path = self.root / atlas.PROOF_USES_INDEX
+        index = json.loads(path.read_text())
+        self.assertEqual(index['format'], atlas.PROOF_USES_FORMAT)
+        for change, told in ((lambda i: i.pop('format'), 'format: missing'), (lambda i: i.update(format=2), 'format: 2'),
+                             (lambda i: i.update(format='1'), "format: '1'"), (lambda i: i.update(format=True), 'format: True'),
+                             (lambda i: (i.update(format=2), i.pop('counts')), 'format: 2')):  # asked first: another format may lack any key
+            other = copy.deepcopy(index)
+            change(other)
+            path.write_text(json.dumps(other))
+            pages, errors = atlas.render(RECORDS)
+            self.assertEqual(pages, {})
+            self.assertOne(errors, f'atlas: {atlas.PROOF_USES_INDEX}: {told}, where this reader knows 1: the print is of another format and '
+                                   'must be made again with tools/research/proof_uses.py')
+        path.write_text(json.dumps(index))
+        self.assertEqual(atlas.render(RECORDS)[1], [])
+
+
+    def test_the_front_page_without_a_print_and_with_no_family_read_goes_from_its_navigation_to_its_lead(self):
+        self.write_atlas(capture(), carriers(family='G'))
+        lines = self.rendered()[atlas.PAGE].split('\n')
+        self.assertEqual(lines[:4], [atlas.GENERATED, '', '# The atlas of dynamics', ''])
+        self.assertTrue(lines[6].startswith("The atlas's views: **the atlas**"))  # the navigation's second line
+        self.assertEqual(lines[7:10], ['', atlas._atlas_lead(atlas.ATLAS), ''])  # no paragraph on how far it is read, and none on a print
+        self.assertTrue(lines[10].startswith('2 dynamics, by family.'))
+        self.assertTrue(atlas._atlas_lead(atlas.ATLAS).endswith('is under *Beyond its couplings*.'))
+        self.assertNotIn('uses between proofs', '\n'.join(lines).lower())
+
+    def atlas_at_head(self):
+        """tools/research/atlas.py as HEAD has it, loaded as a module of its own and pointed at this test's
+        repository. It is read from git inside the test, never at import. The comparison says something only while
+        HEAD's file is the code before this layer: once the layer is committed, HEAD's file is the code under test,
+        and the test is skipped, saying so."""
+        try:
+            done = subprocess.run(['git', 'show', 'HEAD:tools/research/atlas.py'], cwd=ROOT, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        except (OSError, subprocess.CalledProcessError) as error:
+            self.skipTest(f"git could not give HEAD's tools/research/atlas.py: {error}")
+        source = done.stdout.decode('utf-8')
+        if 'PROOF_USES' in source:
+            self.skipTest("HEAD's tools/research/atlas.py already reads the print of uses between proofs: this comparison is with the "
+                          'code before that layer, and was run while the layer was not yet committed')
+        module = types.ModuleType('tools.research.atlas_at_head')
+        module.__file__ = atlas.__file__
+        self.patch(mock.patch.dict(sys.modules, {module.__name__: module}))
+        exec(compile(source, 'HEAD:tools/research/atlas.py', 'exec'), module.__dict__)
+        module.ROOT = self.root
+        return module
+
+    def test_without_the_print_every_page_and_the_data_file_are_byte_for_byte_what_the_code_at_head_writes(self):
+        before = self.atlas_at_head()
+        self.assertEqual(atlas.ABOUT, before.ABOUT)
+
+        def same():
+            was, errors = before.render(RECORDS)
+            self.assertEqual(errors, [])
+            now = self.rendered()
+            self.assertEqual(sorted(now), sorted(was))
+            for path in sorted(was):
+                with self.subTest(page=path):
+                    self.assertEqual(now[path], was[path])
+            self.assertEqual(atlas.inputs(), before.inputs())
+            return now
+        # no family read for its premises: the front page has no paragraph on how far it is read, and no terrain is written
+        self.write_atlas(capture(), carriers(family='G', exits=[exit_(to='closed-capture')]))
+        plain = same()
+        self.assertNotIn(atlas.TERRAIN, plain)
+        self.assertNotIn('**How far it is read**', plain[atlas.PAGE])
+        # the store the tests above put a print beside, without one: a premise read, an exit between two dynamics, a case row
+        self.write_store()
+        read = same()
+        self.assertIn(atlas.TERRAIN, read)
+        self.assertIn('**How far it is read**', read[atlas.PAGE])
+        # and with a binding and a situation, for the pages only those give
+        (self.root / atlas.VOCABULARY).write_text(json.dumps(SLICE_VOCABULARY, ensure_ascii=False, indent=1) + '\n')
+        (self.root / atlas.TESTS).parent.mkdir(parents=True, exist_ok=True)
+        (self.root / atlas.TESTS).write_text(json.dumps(TESTS_TABLE) + '\n')
+        (self.root / README).write_text('# T7\n\n## Results\n\nEvery frozen verdict passed.\n')
+        for kind, rows in (('bindings', [binding()]), ('situations', [situation()])):
+            (self.root / atlas.ENTRIES / f'{kind}.json').write_text(json.dumps(rows, ensure_ascii=False, indent=1) + '\n')
+        whole = same()
+        self.assertTrue({atlas.BINDINGS_PAGE, atlas.SITUATIONS_PAGE} <= set(whole))
 
 
 if __name__ == '__main__':
