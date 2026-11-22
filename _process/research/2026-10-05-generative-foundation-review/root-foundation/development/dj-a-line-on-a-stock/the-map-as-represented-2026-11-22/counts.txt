@@ -1,0 +1,16 @@
+dynamics: 186; declarations listed: 2785; theorems of the package: 20567; of them listed under some dynamic: 2156; under two or more: 102
+dynamics that list no declaration: 6: four-routes-of-transition, self-reproducing-selection-across-carriers, capture-reaching-the-routes-of-correction, selection-for-narrowing-what-couples-in, obscuration-and-reopening, cooperation-read-as-giving-that-waits
+dynamics that list no theorem of the package (they can have no proved-from link): 17; declarations listed whose name does not begin Becoming.: 138
+exits: 329, naming another dynamic: 71; transitions: 105, with an end naming another dynamic: 0
+roads (an exit or a transition end naming another dynamic): 58 pairs; 111 dynamics linked to no other; 25 joined pieces, the largest [17, 5, 5, 3, 3]
+the same law seen twice (a case row naming a law another dynamic lists, or a joining): 62 pairs; 111 dynamics linked to no other; 19 joined pieces, the largest [10, 9, 9, 7, 4]
+hand-kept, both kinds: 105 pairs; 81 dynamics linked to no other; 20 joined pieces, the largest [41, 10, 9, 5, 4]
+proved-from links (directed): 230; of them by a direct use: 180; of them where every witness ends in a theorem also listed under the source dynamic: 22
+proved-from, by a direct use: 152 pairs; 64 dynamics linked to no other; 11 joined pieces, the largest [74, 22, 4, 4, 4]
+proved-from, directly or through theorems no dynamic lists: 200 pairs; 54 dynamics linked to no other; 7 joined pieces, the largest [114, 5, 4, 3, 2]
+hand-kept pairs that are also proved-from pairs: 77 of 105; proved-from pairs on no page of the atlas: 81 by a direct use, 123 directly or through unlisted theorems
+hand-kept pairs that are not proved-from pairs: 28, of them road pairs: 26; road pairs that are also proved-from pairs: 32 of 58
+hand-kept with proved-from by a direct use: 186 pairs; 54 dynamics linked to no other; 9 joined pieces, the largest [108, 4, 4, 4, 3]
+hand-kept with proved-from through unlisted theorems: 228 pairs; 45 dynamics linked to no other; 7 joined pieces, the largest [123, 5, 4, 3, 2]
+of the dynamics that list no theorem of the package, linked to no other with both layers: 17 of 17
+most depended on: least-loss-rest (15), becoming-renewal-reading (7), capture-through-the-rule (7), kept-at-the-length-of-a-list (6), own-count-misses-joint-excess (6)

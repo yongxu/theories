@@ -1,0 +1,100 @@
+*An AI reader who took no part's return (run as Claude Opus, 126,363 tokens), word for word from the agent's transcript. It read the note as kept in `NOTE.before-check.md.txt` and the direction page's paragraph "Of the word centre" as first written, which was afterwards rewritten to say less.*
+
+I found 14 sentences that say more, less or other than their source: 6 MUST and 8 LESSER. Every figure in counts.txt is right. When I ran the script it printed the same output, byte for byte: same list (sha256 1f7f88bed4bb6307…), dynamics.json unchanged between 10742ca6f and HEAD 0db3aaacc. Several sentences built on those figures say more than the figures do, and one sentence of the paragraph mixes two counts.
+
+## Findings
+
+**1. MUST. The paragraph mixes the direct count with the count through unlisted theorems.** It says Lean's proof terms give "123 pairs that are on no page of the atlas; with the hand-kept ones 54 dynamics are linked to no other and the largest piece has 108, counting a direct use only".
+- 54 and 108 are the right line ("hand-kept with proved-from by a direct use").
+- 123 is not from that count. It is 200 − 77, from the count through unlisted theorems. By a direct use the figure is 152 − (152 + 105 − 186) = 81.
+- The sentence also drops "directly or through theorems no dynamic lists".
+- Replace with: "Read off Lean's proof terms, a third kind, that a theorem listed under one dynamic has in its proof term a theorem listed under another, gives 81 pairs on no page of the atlas by a direct use, and 123 counting chains through theorems no dynamic lists. With the hand-kept ones, by a direct use 54 dynamics are linked to no other and the largest piece has 108; through unlisted theorems, 45 and 123."
+
+**2. MUST. Note, point 3 ("Six dynamics list no declaration and can have no such link; they are among the 54 and the 45") says less than the store.**
+- 17 dynamics list no theorem of the package, so 17 can have no proved-from link.
+- Six list nothing. The other 11 list only definitions, or names from no `Becoming.*` module: 138 declarations such as `RelationalRenewal.Law.*`, `Generative.*` and `RenewingFormation.*`, which live in `experiments/…` files.
+- All 17 are among both the 54 and the 45.
+- The script's `'Becoming.' + n` fallback matches none of the 138 unprefixed names, so it adds nothing.
+- Replace with: "Seventeen dynamics list no theorem of the package: six list nothing, and eleven list only definitions or theorems outside it (138 of the 2,785 declarations name no `Becoming.*` module). None can have such a link; all 17 are among the 54 and the 45."
+
+**3. MUST. Note, kept-at-the-length-of-a-list: "the script finds the six dynamics and the chains of calls that the morning's readers established one by one".**
+- `count_the_map.py` prints only "kept-at-the-length-of-a-list (6)". The chains are in `links-from-lean.json`, written by `links_from_lean.py` (a depth-first search). Neither file is filed in this record.
+- The six dynamics are the same six as the morning's table.
+- Of the chains, only the first steps match the morning's "A case of" column.
+  - The morning gave `attraction-is-not-returning` as "through `iter_iff_all`". The file stops at `reachable_iff_all`.
+  - The morning gave `where-the-possible-grows` as "through `iter_within_pred_length`, four calls on". The file's chain goes through `trace_within_pred_length` and `closure_iff_reach_within` to `reach_within_pred_length`, a path the morning's table does not name.
+- The file also has two more witnesses for `never-leaving-a-guard` (via `kernel_iff_iter_pred_length`) that the note leaves out.
+- Replace with: "The links file of that evening (`links-from-lean.json`, made by `links_from_lean.py`, neither filed here) has links into it from the same six dynamics as the morning's table, ending in the theorems that table names as what each row is a case of (`iter_largest`, `reachable_iff_all`, `postfixed_in_iter`, and for the two reaching rows through `reach_within_of_pred_le`). Its longer chains are its own: for `where-the-possible-grows` it reaches `reach_within_pred_length`, where the morning named `iter_within_pred_length`."
+
+**4. MUST. "his words of 16 November, 'paths clearly mapped out', are of that kind" states a reading as fact, and as if it were his.**
+- The quotation and its date are right (`2026-11-16-no-corners-the-interconnected-map.md`, line 17).
+- In the 22 November file this is row DJ's own reading ("How the sessions read it … Nothing below is his"), and it quotes more: "phase transitions, attractors, paths clearly mapped out". In his sentence the words sit beside "fully connected".
+- The paragraph's "this is a reading" marker comes several sentences earlier and does not clearly reach this one.
+- Replace with: "…and this page reads his words of 16 November, 'fully connected, with phase transitions, attractors, paths clearly mapped out', as asking for roads above all."
+
+**5. MUST. "roads are the thinner, 71 of 329 exits naming another dynamic and no transition naming one".**
+- The counts barely bear "the thinner": roads make 58 pairs against 62 for the same law seen twice, and each leaves 111 dynamics with none. The largest road piece is 17 against 10.
+- "no transition naming one" is so by how the store is built, not something found. All 98 `between.from`/`to` ends are `{"en": prose}` and 7 transitions have no `between`, so the script's string test could only ever print 0.
+- The note's sentence "of 105 transitions, none names another dynamic at either end" has the same defect.
+- Replace with: "roads make 58 pairs and the same law seen twice 62, each leaving 111 dynamics with none; 71 of 329 exits name another dynamic, and no transition can, since the store writes a transition's two ends as prose."
+
+**6. MUST. "On 21 November he said to the session that holds row FM that the goal should be '…'" says more than the source.**
+- The 21 November file says that session "holds no board row" that evening.
+- The source's sentence begins "I think our goal should be…". The next sentence scopes it to the direction to explore "at least for you, for your session". The paragraph drops both.
+- Replace with: "On 21 November he said to the session that now holds row FM (it held no row that evening): 'I think our goal should be a full map with formal link proof done elegantly with its center', the direction to explore 'at least for you, for your session'."
+
+**7. LESSER. Note: "the list … how it was wrong twice that day and corrected"** (and "wrong twice on the day it was made" under "What it does not show").
+- The README describes one first form with two defects, corrected once. The later printing on 10742ca6f is a new tip, not a correction.
+- Replace with: "its first form had two defects, corrected that afternoon".
+
+**8. LESSER. Note, "Every figure below is a line of that output".**
+- False for 110, 104, 86, 176, 72, "about a tenth", "nine tenths", 4.7 MB and "half a minute".
+- Replace with: "Every figure in the next two sections is a line of that output; figures given as the coordinating session's are its own."
+
+**9. LESSER. The "not a star" figures.**
+- "without the one, three or five … 110, 104 and 86": I reproduce these. The fifth place is a three-way tie at 6 links in (`kept-at-the-length-of-a-list`, `a-counter-rule-read-from-its-own-share`, `own-count-misses-joint-excess`). Depending on which two of the three are dropped, the largest piece is 86 or 94.
+- "from the first form of the links file": no second form exists. The undirected pairs do not depend on the order of the search, so these figures hold under breadth-first search too.
+- "laws of the account" adds "of the account" to the coordinator's "laws and not plumbing".
+- Replace with: "…110, 104 and 86 of the rest, or 94 for another choice among three tied at fifth (the coordinating session's figures; the order of search does not change them), and the theorems most links end in are, in its words, 'laws and not plumbing'."
+
+**10. LESSER. Note, point 4 ("It cannot see a road…").** It drops the coordinator's hedge, "I did not open them, but by the store's shape they will mostly be exits and transitions". The count bears that guess out: 26 of the 28 pairs are road pairs. It also misses that 32 of the 58 road pairs are proved-from pairs.
+- Replace with: "28 of the 105 hand-kept pairs are not proved-from pairs, and 26 of those 28 are roads; of the 58 road pairs, 32 are also proved-from pairs, but as a dependence and not as a passage."
+
+**11. LESSER. The coordinator's other figures are left uncorrected.** The note corrects 176→180 and 72→74, and that correction is right: from the file I get 176 links, 149 pairs, a largest piece of 72 and 64 with none; by breadth-first search, 180, 74 and 64. The four links that differ are all among `continued-change-needs-openness`, `closed-cycle-without-dissipation`, `no-finite-part-bears-taking` and `continuing-self-fed-from-beyond`. But the coordinator's "104 of the 2,676 listed declarations" and "65 transitions and 129 exits" match neither the store (2,785 declarations, 105 transitions, 329 exits) nor counts.txt (102 theorems under two or more dynamics). Neither the note nor the file's header says so.
+- Add: "Its 2,676 declarations, 104 listed twice, 65 transitions and 129 exits are not the store's (2,785; 102 theorems; 105; 329)."
+
+**12. LESSER. "It is a dependence … and it is not typed by anyone."** The note's own point 2 contradicts this: every link rests on which theorems are listed under which dynamic, and that is kept by hand.
+- Replace with: "…and no one types the link, though it rests on the listing of theorems under dynamics, which is kept by hand."
+
+**13. LESSER. Paragraph: "the tries of 21 November told below came back as dictionaries or as the package's small cases said again".**
+- The "four tries" paragraph says "as a dictionary or as two sides with no theorem between them". Only the evening's built case came back as the package's cases said again.
+- Those tries were bridges between notions, not searches for one model.
+- Replace with: "the four tries of 21 November told below, bridges between notions, came back as a dictionary or as two sides with no theorem between them, and the evening's built case as the package's own cases said again".
+
+**14. LESSER. Other small points in the paragraph.**
+- "the dynamics most depended on are the most basic and not a middle" is the coordinator's reading, not a count. Prefix it with "by the coordinating session's reading".
+- "Two kinds of link are kept apart there" should read "Three kinds…", since the record defines three.
+- "the stores were counted" should read "the atlas's store and Lean's proof terms were counted".
+- "the session that holds row FM read it before it landed, and a reader who took no part set it against his words" has not happened yet. It must be true at landing, or be removed.
+- "no place on the map is its centre, and the aim above does not ask for one" is labelled a reading, but it answers his question in the negative, next to his asking for a map "with its center". Add: "This reading differs from his words of 21 November, which asked for one; he has not read it."
+
+## Checked and found right
+
+- **Note figures:** every figure in NOTE.md matches counts.txt, line by line.
+- **Independent recounts:** I recounted from dynamics.json with my own code and got the same:
+  - roads: 71 exits, 58 pairs, 111 with none
+  - same law seen twice: 62 pairs (54 from case rows and 9 from joinings, one in common)
+  - hand-kept: 105 pairs, 81 with none
+  - proved-from: 180 and 230 directed, 152 and 200 pairs
+- **Script logic:**
+  - "joined pieces" leaves out single dynamics.
+  - The search cannot miss a direct use, and a link is counted once.
+  - The 22 links made by the listing are computed as point 2 says.
+  - The hand-kept and proved-from pairs it compares are the same kind of thing (unordered pairs of dynamic ids).
+  - Case-row laws are matched as raw names; normalising the `Becoming.` prefix changes nothing.
+- **Coordinator's points:** 1, 2, 5 and 6 are said faithfully, and the "holds better than I expected" figures reproduce.
+- **Paragraph:** both quotations of 22 November are exact, character for character. "about a tenth" is right (2,156/20,567). So is 81/41. "centre had been that session's word" and "after it reported that the centre was not found" match the source's context. "He did not say… did not withdraw…" matches the source's section on what is not said. The 16 November failure is stated under "What we do not know". "row FM's two of 22 November" matches the source.
+
+## Not read
+
+The rest of DIRECTION.md, AllProofHeads.lean.txt beyond its head, `candidate-passages.json`, and the morning record beyond its table. I could not verify the note's sentence that the coordinating session "put to this row, as its reading, that the atlas's links could be read off Lean when a page is drawn", since no filed text holds it.

@@ -1,0 +1,113 @@
+#!/usr/bin/env python3
+"""Counts of the map as represented, 22 November 2026: the atlas's hand-kept links, its roads, and the links that
+would be read off Lean's proof terms.
+
+AI-written (Claude Fable, board row DJ). Run from the repository root:
+    python3 -B count_the_map.py LIST
+LIST is the whole-package list of proof terms printed by Lean (one JSON object a line: name, module, head, uses,
+recursors), by AllProofHeads.lean beside this file. Reads theories/becoming/results/atlas/entries/dynamics.json.
+A measurement: it changes nothing, and every figure from LIST is a floor (the list follows one call and Lean's
+auxiliary declarations under a theorem's own name, and knows the recursors it knows)."""
+import collections, json, sys
+
+d = json.load(open('theories/becoming/results/atlas/entries/dynamics.json'))
+rows = {}
+for l in open(sys.argv[1]):
+    r = json.loads(l); rows[r['name']] = r
+ids = [e['id'] for e in d]; idset = set(ids)
+
+def pieces(pairs):
+    adj = collections.defaultdict(set)
+    for p in pairs:
+        a, b = tuple(p); adj[a].add(b); adj[b].add(a)
+    seen, sizes = set(), []
+    for i in ids:
+        if i in seen: continue
+        st, c = [i], set()
+        while st:
+            x = st.pop()
+            if x in c: continue
+            c.add(x); st += list(adj[x] - c)
+        seen |= c; sizes.append(len(c))
+    return sorted(sizes, reverse=True)
+
+def tell(name, pairs):
+    s = pieces(pairs)
+    print(f'{name}: {len(pairs)} pairs; {s.count(1)} dynamics linked to no other; {len(s) - s.count(1)} joined pieces, the largest {s[:5]}')
+
+# what the store lists
+listed = collections.defaultdict(set)          # any declaration name -> dynamics that list it
+for e in d:
+    for n in e['declarations']:
+        if isinstance(n, str): listed[n].add(e['id'])
+home = collections.defaultdict(set)            # theorem of the list -> dynamics that list it
+for n, hs in listed.items():
+    k = n if n in rows else ('Becoming.' + n if 'Becoming.' + n in rows else None)
+    if k: home[k] |= hs
+none_listed = [e['id'] for e in d if not [n for n in e['declarations'] if isinstance(n, str)]]
+print(f'dynamics: {len(d)}; declarations listed: {sum(len([n for n in e["declarations"] if isinstance(n, str)]) for e in d)}; '
+      f'theorems of the package: {len(rows)}; of them listed under some dynamic: {len(home)}; under two or more: {sum(1 for h in home.values() if len(h) > 1)}')
+print(f'dynamics that list no declaration: {len(none_listed)}: {", ".join(none_listed)}')
+no_thm = [e['id'] for e in d if not any(e['id'] in hs for hs in home.values())]
+outside = sum(1 for e in d for n in e['declarations'] if isinstance(n, str) and not n.startswith('Becoming.'))
+print(f'dynamics that list no theorem of the package (they can have no proved-from link): {len(no_thm)}; '
+      f'declarations listed whose name does not begin Becoming.: {outside}')
+
+# hand-kept links
+roads, same = set(), set()
+exits = exits_to = trans = trans_to = 0
+for e in d:
+    for x in e.get('exits', []):
+        exits += 1
+        if isinstance(x.get('to'), str) and x['to'] in idset and x['to'] != e['id']:
+            exits_to += 1; roads.add(frozenset((e['id'], x['to'])))
+    for t in e.get('transitions', []) or []:
+        trans += 1
+        bt = t.get('between') or {}
+        ends = [v for v in (bt.get('from'), bt.get('to')) if isinstance(v, str) and v in idset and v != e['id']]
+        trans_to += bool(ends)
+        for v in ends: roads.add(frozenset((e['id'], v)))
+    for h in e.get('premises', []) or []:
+        for c in h.get('case_of', []) or []:
+            for o in listed.get(c['law'], set()) - {e['id']}: same.add(frozenset((e['id'], o)))
+    for c in e.get('compose', []) or []:
+        if c['from']['dynamic'] != c['to']['dynamic']: same.add(frozenset((c['from']['dynamic'], c['to']['dynamic'])))
+print(f'exits: {exits}, naming another dynamic: {exits_to}; transitions: {trans}, with an end naming another dynamic: {trans_to}')
+tell('roads (an exit or a transition end naming another dynamic)', roads)
+tell('the same law seen twice (a case row naming a law another dynamic lists, or a joining)', same)
+hand = roads | same
+tell('hand-kept, both kinds', hand)
+
+# read off the proof terms: X -> Y where a theorem listed under X uses a theorem listed under Y
+direct, through, by_listing = set(), set(), 0
+links = collections.defaultdict(list)
+for t, hs in home.items():
+    seen, todo = set(), collections.deque((u, 1) for u in rows[t]['uses'])
+    while todo:                                   # breadth first, so a depth is the fewest calls
+        u, depth = todo.popleft()
+        if u in seen: continue
+        seen.add(u)
+        if u in home:
+            for x in hs:
+                for y in home[u]:
+                    if x != y: links[(x, y)].append((depth, t, u))
+        elif u in rows:
+            todo.extend((v, depth + 1) for v in rows[u]['uses'])
+for (x, y), w in links.items():
+    through.add(frozenset((x, y)))
+    if any(dep == 1 for dep, _, _ in w): direct.add(frozenset((x, y)))
+    if all(x in home[u] for _, _, u in w): by_listing += 1
+print(f'proved-from links (directed): {len(links)}; of them by a direct use: {sum(1 for w in links.values() if any(dep == 1 for dep, _, _ in w))}; '
+      f'of them where every witness ends in a theorem also listed under the source dynamic: {by_listing}')
+tell('proved-from, by a direct use', direct)
+tell('proved-from, directly or through theorems no dynamic lists', through)
+print(f'hand-kept pairs that are also proved-from pairs: {len(hand & through)} of {len(hand)}; proved-from pairs on no page of the atlas: '
+      f'{len(direct - hand)} by a direct use, {len(through - hand)} directly or through unlisted theorems')
+print(f'hand-kept pairs that are not proved-from pairs: {len(hand - through)}, of them road pairs: {len((hand - through) & roads)}; '
+      f'road pairs that are also proved-from pairs: {len(roads & through)} of {len(roads)}')
+tell('hand-kept with proved-from by a direct use', hand | direct)
+tell('hand-kept with proved-from through unlisted theorems', hand | through)
+lone = {i for i in ids if not any(i in p for p in hand | through)}
+print(f'of the dynamics that list no theorem of the package, linked to no other with both layers: {len(lone & set(no_thm))} of {len(no_thm)}')
+into = collections.Counter(y for (_, y) in links)
+print('most depended on:', ', '.join(f'{k} ({v})' for k, v in into.most_common(5)))
