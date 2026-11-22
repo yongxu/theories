@@ -526,12 +526,12 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
       "role": "proof",
-      "sha256": "2fa88ad3ec028830037114cd43671ccbff0f1e0b6d0c78bce11b9ac8ee1b6d28"
+      "sha256": "bd9bba7ad4e9a4d1901b41e9650d528c7209c8e8f350b26ad39ee241acf7233e"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCourse.lean",
       "role": "proof",
-      "sha256": "f3928375fd01ea446f97cad742df0deac94283b467472d7b773341e84090ca0e"
+      "sha256": "56354f00375e0e069f9a20c45b4f6f20b952e64485f04eb9ecffd124144fcd27"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
@@ -566,7 +566,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean",
       "role": "proof",
-      "sha256": "c09f09936ba686d570f06afc43a2c2b746a15e43a3320d8ce94c0793c4a7c8e0"
+      "sha256": "7392c948638ba31372c57bd4291f9301c18a9e49aff43588baea5fdece536920"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Experiment.lean",
