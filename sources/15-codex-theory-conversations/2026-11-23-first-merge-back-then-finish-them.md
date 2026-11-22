@@ -29,3 +29,7 @@ and wrote:
 ## What is not said
 
 He did not say which of the pasted lines "them" covers, nor what finishing each would be. He did not say to push: "nothing is pushed" stands among the pasted lines, and the session does not read "finish them" as releasing a push, a sending or a paid run. He did not say that the aim on the direction page or in AGENTS.md is changed.
+
+## A correction, later the same night (AI-written, the same session, 01:16 WIB by the clock)
+
+"He did not say which of the pasted lines "them" covers" writes as his that "them" is among the pasted lines. He did not say what "them" covers. And of the row: the claim's second part was withdrawn unbuilt and one module landed, `Becoming.SampledSelection`; the board's row GR and the study note beside the module say what was read by whom.
