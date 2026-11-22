@@ -1,0 +1,7 @@
+Token counts as the runs reported them to the session (AI-written, row FM; for the reader of the note):
+workflow wf_17fbc54c-f4a (first form: one implementer, two readers): subagent_tokens 633270
+workflow wf_5e41c7ab-b6f (second form: one implementer, one reader): subagent_tokens 485310
+workflow wf_8c00004f-77b (third form: one implementer): subagent_tokens 173832
+workflow wf_f1009cb1-673 (the reader of the fourth form): subagent_tokens 194659
+the other model's footers are the last lines of returns/astra-read.txt (1211.8k tokens) and returns/astra-repair.txt (9280.9k tokens)
+core run at the landing: lean_steps_run 9, lean_steps_reused 1647, lean_wall_seconds 34.812, receipt 20261122T192648.959660Z

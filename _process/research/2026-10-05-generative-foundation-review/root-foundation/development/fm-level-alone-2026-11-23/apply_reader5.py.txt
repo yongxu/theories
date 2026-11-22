@@ -1,0 +1,35 @@
+# AI-written (row FM). Apply the fifth reader's 32 mends (exact old/new, each must occur once), then the coordinator's
+# four points where the reader's words do not already carry them, then bring the note's cost paragraph to the figures.
+import json,sys
+WT='/Users/ren/tmp/fm/wt/'
+F=json.load(open('/Users/ren/tmp/fm/build14/returns/reader-5.json'))['findings']
+texts={}
+def get(p):
+    if p not in texts: texts[p]=open(p).read()
+    return texts[p]
+bad=0
+for i,f in enumerate(F,1):
+    if i==1: continue   # the statement: replaced below, with the strict rise the coordinator asked for
+    p=f['file']; s=get(p); n=s.count(f['old'])
+    if n!=1: print(f"!! finding {i}: {n} matches in {p.split('/')[-1]}: {f['old'][:60]!r}"); bad+=1; continue
+    texts[p]=s.replace(f['old'],f['new'])
+rec=WT+'theories/becoming/results/records/a-reading-of-the-level-alone.json'; note=WT+'_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-level-alone-2026-11-23/NOTE.md'
+def rep(p,old,new,tag):
+    global bad
+    s=get(p); n=s.count(old)
+    if n!=1: print(f"!! {tag}: {n} matches"); bad+=1; return
+    texts[p]=s.replace(old,new)
+st_old=F[0]['old']
+st_new="Under the regime's premises, a use rising strictly for hi steps and one fixed correction, the level as it was first differing from the start's at D: if it stays below H2 + y2 once below, some marking silent at the start's level gives a line that never ends just where it is at least H2 + y2 at D + 1."
+print('statement length',len(st_new)); assert len(st_new)<=300
+rep(rec,st_old,st_new,'statement')
+rep(rec," No person has read it."," One more reader and the coordinating session read the record and the accounts.",'no person')
+rep(note,"The check of this note, whose count is not in that sum, takes it over the 1.5 million (12,929 were left); that was told to both sessions before it started.",
+ "The check of this note and of the four tellings outside the module took 227,978 more: 1,715,049 in all against the 1.5 million. That it would pass the cap was told to both sessions before it started, at an estimate of 150 thousand, which it passed as well.",'cost')
+rep(note,"Three implementers and four readers, where one and two were said.","Three implementers and four readers of the module, and a fifth reader for this note and the tellings, where one implementer and two readers were said.",'who')
+rep(note,"- **The explicit list of what is not shown** was cut by the fourth form's shortening. Found by the fourth reader; put back in its words.",
+ "- **The explicit list of what is not shown** was cut by the fourth form's shortening. Found by the fourth reader; put back in its words.\n- **Tellings outside the module, written by the session at the landing.** The README row, the root file's account and the checker's scope text said the no-return form the wrong way round (as if a marking were in time exactly where there is a point of no return), and the record's statement named no premise but one and its reading ended on more than the laws give. Found by the coordinating session, which set the record and the row against the six main laws, and by the fifth reader ([its return](returns/reader-5.json.txt), 32 mends with exact words; [the coordinator's four points](COORDINATOR-four-points.md.txt)). Mended in their words before the render, with a second core run since the root file and the checker changed.",'tellings bullet')
+if bad: print('NOT WRITTEN:',bad,'failures'); sys.exit(1)
+for p,s in texts.items(): open(p,'w').write(s)
+d=json.load(open(rec)); print('record loads; validation_scope',len(d['validation_scope']['en']),'statement',len(d['statement']['en']),'correspondence',len(d['correspondence']['en']))
+print('files written:',[p.split('/')[-1] for p in texts])

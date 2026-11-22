@@ -1,0 +1,231 @@
+{
+ "verdict": "sound_with_mends",
+ "findings": [
+  {
+   "weight": "must",
+   "file": "/Users/ren/tmp/fm/wt/theories/becoming/results/records/a-reading-of-the-level-alone.json",
+   "old": "With one fixed correction at marked levels and the level first differing from the start's at step D: if the level, once below H2 + y2, stays below, some marking silent at the start's level gives a line that never ends exactly where the level at step D + 1 is at or above H2 + y2.",
+   "new": "Under the regime's premises, one fixed correction at marked levels and the level as it was first differing from the start's at D: if it stays below H2 + y2 once below, some marking silent at the start's level gives a line that never ends exactly where it is at least H2 + y2 one step later, at D + 1.",
+   "why": "The statement gives `below` as the only premise, says 'the level' without saying it is the course as it was, and leaves the lag unsaid. The core asks thirteen more premises (LevelAlone.lean l.398-408); sibling statements say 'under the regime's premises' (turning-in-time.json); PAPER.md.txt test 1 says the lag must be in the statement. New text is exactly 300 characters by script (turning-in-time's is also 300)."
+  },
+  {
+   "weight": "must",
+   "file": "/Users/ren/tmp/fm/wt/theories/becoming/results/records/a-reading-of-the-level-alone.json",
+   "old": "none can be in time unless the one that acts as soon as the level differs is; where that one is too late, what would have to be read is not the level.",
+   "new": "none is in time unless the one that marks every other level is, and that one's correction takes effect one step after the level first differs. This is a reading of the laws under their premises, which no actual selection is shown to meet. Where that one is too late, no reading of the level that is silent at the start's level is in time; whether one that marks the start's level, or one that reads more than the level, would be is not stated.",
+   "why": "Claims more than a reading may. 'Acts as soon as the level differs' hides the lag (LevelAlone.lean l.27-29). 'What would have to be read is not the level' is not stated (l.100-104) and fails by hand on Twelve: a marking that marks twelve turns to draw three at once and the level stays twelve (l.743). The corollary's premises (l.434-444) are also dropped."
+  },
+  {
+   "weight": "must",
+   "file": "/Users/ren/tmp/fm/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "old": "(`LevelAlone.readBy`). With `D` the first step at which the level of the",
+   "new": "(`LevelAlone.readBy`). Under the common premises of the module's head note (the\n  correction sets a way of a kept kind that the way's step as it was keeps and whose ways use `H₂`;\n  nothing is given from nothing, giving is short of `H₂` below `y₂` and meets it wherever both\n  `y₂ ≤ z` and `z + H₂ ≤ hi`, and the step under no use keeps levels up to `hi` within `hi`; a\n  positive need at most `H₂ + y₂`; a use that rises strictly for the first `hi` steps; a start at\n  most `hi`), with `D` the first step at which the level of the",
+   "why": "The bullet tells the core and laws A and B with no premise but `below`. Every one asks sets, stays, uses, nothing, short, meets, keeps₀, needs, within, rises, high (LevelAlone.lean l.400-405). The README row and the checker text at least name the regime and the strict rise; the neighbouring LineOnAStock bullet lists its premises."
+  },
+  {
+   "weight": "must",
+   "file": "/Users/ren/tmp/fm/wt/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-level-alone-2026-11-23/NOTE.md",
+   "old": "it showed more than the fault: where the corrected use is no more than the course's first use, the statement needs neither `mono` nor `still`.",
+   "new": "it bore out, on hand-sized courses only (ceilings two to seven, every giving: the two sides agree on all 208,458 courses with the corrected use no more than the first use), what the second reader had argued by hand: where the corrected use is no more than the course's first use, the statement needs neither `mono` nor `still`. A search shows where a statement fails, not that it holds.",
+   "why": "Who did what: reader 2 argued this by hand (returns/reader-2.json.txt finding 3), and BRIEF-2.md.txt l.10-12 says the search 'bears the reader out' on 208,458 courses (search/premises_search.json.txt: 47,002 + 1,731 + 151,629 + 8,096). A search cannot show that a statement 'needs neither' (PAPER.md.txt head line)."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/theories/becoming/results/records/a-reading-of-the-level-alone.json",
+   "old": "is below it at the next step: some marking that does not mark the start's level gives a line that never ends exactly where the level at step D + 1 is at or above H2 + y2.",
+   "new": "is below it at the next step: some marking that does not mark the start's level gives a line that never ends exactly where the level at step D + 1 is at or above H2 + y2. The + 1 is the lag: a marking marks the level at a step, and the step from the first marked level is still taken under the use as it was, so the level that decides is one step later.",
+   "why": "The lag is not said where 'step D + 1' appears in the core's law; the record says it only in does_not_show. LevelAlone.lean l.27-29 and l.390-393."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/theories/becoming/results/records/a-reading-of-the-level-alone.json",
+   "old": "So, with the common premises, for any corrected use, the equivalence with the level at step D + 1 holds.",
+   "new": "So, with the common premises, a step under no use that does not fall as the level rises and a start whose own step does not raise the level, for any corrected use, the equivalence with the level at step D + 1 holds.",
+   "why": "The sentence that tells silent_at_start_iff_next leaves `mono` and `still` to the 'So' (LevelAlone.lean l.530-531); the parallel sentence for law B names its extra premise."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/theories/becoming/results/records/a-reading-of-the-level-alone.json",
+   "old": "the same from a strict rise for the first hi steps with the cap.",
+   "new": "the same from a strict rise for the first hi steps, with the step under no use keeping every level up to hi within hi and the start at most hi.",
+   "why": "'The cap' stands for two premises of stays_below_of_le_of_rises, `keeps₀` and `high` (LevelAlone.lean l.485); the next law names its own in full."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/theories/becoming/results/records/a-reading-of-the-level-alone.json",
+   "old": "with the way's step as it was keeping the kind too, every step keeps it.",
+   "new": "with the way's step as it was keeping the kind too, every step from a way of that kind keeps it. The level of the course as it was is a definition: the way steps as it was, the level by the regime's step under the way's use.",
+   "why": "readBy_kept asks `kind : Kept v` (LevelAlone.lean l.151); `level` is listed under this law and its text does not tell it (l.159-160)."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/theories/becoming/results/records/a-reading-of-the-level-alone.json",
+   "old": "the use as it was at step D and y2 together are at most the level at step D.",
+   "new": "the use as it was at step D and y2 together are at most the level at step D. The last is read through one step under any use u from any level x: where nothing is given from nothing, giving is short of H2 below y2 and meets it wherever both y2 <= z and z + H2 <= hi, the step under no use does not fall as the level rises, H2 + y2 <= hi and 0 < H2 + y2, that step leaves at least H2 + y2 exactly where u + y2 <= x.",
+   "why": "next_above_iff_draw is listed under this law and no sentence tells it; it has its own premises and conclusion (LevelAlone.lean l.306-311)."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/theories/becoming/results/records/a-reading-of-the-level-alone.json",
+   "old": "and the step under no use falls from one left to two left.",
+   "new": "and the step under no use falls from one left to two left. The need is one on each. On Twelve and Seven the two further premises of the law for any corrected use hold as well: with giving min z (n - z), at every n, the step under no use does not fall as the level rises, and the start's own step does not raise the level.",
+   "why": "cap_mono, Twelve.mono_and_still and Seven.mono_and_still are listed under this law and untold (LevelAlone.lean l.688, 745, 782); the need (one) is a parameter of each course and unsaid (l.725-727, 767, 808)."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/theories/becoming/results/records/a-reading-of-the-level-alone.json",
+   "old": "with a start whose own step does not raise the level, are hypotheses of the theorems.",
+   "new": "with a start whose own step does not raise the level, are hypotheses of the theorems; so are a positive need at most H2 + y2 and, for the form in the use, H2 + y2 <= hi.",
+   "why": "The list of hypotheses leaves out `needs`, `within` and `fits` (LevelAlone.lean l.403, l.617)."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/theories/becoming/results/records/a-reading-of-the-level-alone.json",
+   "old": "of a marking that marks the start's level, or of a correction",
+   "new": "of a marking that marks the start's level beyond the three facts of readBy, which hold of every marking, or of a correction",
+   "why": "readBy_outside, readBy_turns and readBy_kept hold of any marking, a marked start included (LevelAlone.lean l.100-101; returns/astra-read.txt l.101)."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/theories/becoming/results/records/a-reading-of-the-level-alone.json",
+   "old": "argued by two readers on paper and open",
+   "new": "argued on paper by one reader and checked as an argument by a second, not built, and open",
+   "why": "The module and the note say 'argued by a reader' (LevelAlone.lean l.77; NOTE.md l.44). The argument is the other model's (returns/astra-read.txt l.63); reader 4 only checked it 'as an argument against the signatures' (returns/reader-4.json.txt, not_looked_at)."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/theories/becoming/results/records/a-reading-of-the-level-alone.json",
+   "old": "statements compared by script between forms.",
+   "new": "statements compared by script between the third form and the fourth, whose code the landed form keeps.",
+   "why": "Only one comparison is filed, third against fourth (compare_rows.out.txt l.1); none between the first, second and third. The new validation_scope is 576 characters, under the 600 limit. Fourth and landed code is the same with comments stripped (checked here, 567 lines)."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/theories/becoming/results/records/a-reading-of-the-level-alone.json",
+   "old": "and its recoverable and no-return laws, each used as it stands.",
+   "new": "and its recoverable and no-return laws, each used as it stands; and, of Becoming.ReadOffInTime through it, the notions of recoverable and of a point of no return and the law that what is recoverable at a step is recoverable at every earlier one (Recoverable.earlier).",
+   "why": "Recoverable, NoReturnAt and Recoverable.earlier are of ReadOffInTime.lean (l.591, 595, 601) and are used at LevelAlone.lean l.559, 588, 599; no dependency names them. A separate dependency entry may be what the schema wants; that record's id was not confirmed here."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "old": "(`LevelAlone.silent_at_start_iff_next_of_stays_below`), and exactly where the marking of every",
+   "new": "(`LevelAlone.silent_at_start_iff_next_of_stays_below`; the `+ 1` is the lag: the step from the\n  first marked level is still taken under the use as it was), and exactly where the marking of every",
+   "why": "The lag is not said where 'step `D + 1`' appears (LevelAlone.lean l.27-29)."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "old": "same is said as recoverable at step `D + 1`, as a point of no return at or before it, and in the",
+   "new": "same is said as recoverable at step `D + 1`, as no such marking succeeding exactly where there is\n  a point of no return at or before it, and, with `H₂ + y₂ ≤ hi` besides, in the",
+   "why": "The no-return form is of no marking succeeding (LevelAlone.lean l.584-589); read literally the bullet has success exactly where there is a point of no return. The use form also asks `fits` (l.617), which is left out."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "old": "under the last premises the same as recoverable at that step, as a point of no return at or before it, and in the use",
+   "new": "under the last premises the same as recoverable at that step, as no such marking giving one exactly where there is a point of no return at or before it, and, with `H₂ + y₂ ≤ hi` besides, in the use",
+   "why": "Same two points as the root-file bullet: the no-return form's polarity (LevelAlone.lean l.584-589) and the left-out `fits` of the use form (l.617)."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "old": "with a start that does not rise",
+   "new": "with a start whose own step does not raise the level",
+   "why": "`still` is of the step from the start under the start's use, not of the start (LevelAlone.lean l.531); the record and the checker text say it that way."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "old": "(`LevelAlone.silent_at_start_iff_next_of_stays_below`)",
+   "new": "(`LevelAlone.silent_at_start_iff_next_of_stays_below`; one step after by the lag: the step from the first marked level is still taken under the use as it was)",
+   "why": "The row says 'one step after the first that differs' without saying why (LevelAlone.lean l.27-29)."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "old": "where the level at step D + 1 is at or above H2 + y2, and exactly where the marking of every level \"",
+   "new": "where the level at step D + 1 is at or above H2 + y2 (the + 1 is the lag: the step from the first marked level is still taken under the use as it was), and exactly where the marking of every level \"",
+   "why": "The lag is not said where 'step D + 1' appears (LevelAlone.lean l.27-29). The edit stays inside one string literal; the file has no line limit (longest line 6,376)."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "old": "+ 1, as a point of no return at or before it, and in the use at step D. Five worked courses; two \"",
+   "new": "+ 1, as no such marking succeeding exactly where there is a point of no return at or before it, and, with H2 + y2 <= hi besides, in the use at step D. Five worked courses; two \"",
+   "why": "Same two points: the no-return form's polarity (LevelAlone.lean l.584-589) and the left-out `fits` (l.617)."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "old": "it was stays below H2 + y2 once below it, some such marking gives a line that never ends exactly ",
+   "new": "it was stays below H2 + y2 once below it, some marking silent at the start's level gives a line that never ends exactly ",
+   "why": "'Such' has only the title to point back to. Read as any marking, the sentence is false on Twelve, where by hand the marking of twelve gives a line that never ends and the level at step six is four (LevelAlone.lean l.409 asks `¬ marked x₀`; l.737-738)."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-level-alone-2026-11-23/NOTE.md",
+   "old": "by the time the level first differs it is already too late for a return to the draw the course started with.",
+   "new": "by the time the level first differs it is already too late for a return to the draw the course started with, where the return acts, as in that module's pair, from the step after the one that marks (by hand, a return taking effect at the step from that level would still hold).",
+   "why": "The sentence hides the lag, the first of row DJ's four counts (PAPER.md.txt). By hand ten goes to twelve under draw three and holds (LevelAlone.lean l.734-736)."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-level-alone-2026-11-23/NOTE.md",
+   "old": "where every law of that module takes the marked levels as given",
+   "new": "where the laws of that module, as far as it was searched (it was not read whole), take the marked levels as given",
+   "why": "'Every law' of a module that was searched, not read whole (LevelAlone.lean l.36; returns/implementer.json.txt report point 3)."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-level-alone-2026-11-23/NOTE.md",
+   "old": "With `D` the first step at which the level of the course as it was differs from the start's:",
+   "new": "Under the common premises its head note lists (the kept kind the correction sets, the regime at the corrected use within `hi`, a positive need at most `H₂ + y₂`, a use that rises strictly for the first `hi` steps, a start at most `hi`), and with `D` the first step at which the level of the course as it was differs from the start's:",
+   "why": "'What the module states' gives the core with `below` as its only premise; the common premises are asked by every law over markings (LevelAlone.lean l.41-48)."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-level-alone-2026-11-23/NOTE.md",
+   "old": "and the use at step `D` plus `y₂` at most the level at step `D`.",
+   "new": "and, with `H₂ + y₂ ≤ hi` besides, the use at step `D` plus `y₂` at most the level at step `D`.",
+   "why": "silent_at_start_iff_use asks `fits` beyond the second way's premises (LevelAlone.lean l.617)."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-level-alone-2026-11-23/NOTE.md",
+   "old": "the level rises before it gives out, 3, 3, 4, 4, 0;",
+   "new": "the level rises from step 1 to step 2, in Lean, before it gives out; by hand its levels run 3, 3, 4, 4, 0;",
+   "why": "Under 'what the module states' the run of levels reads as a Lean statement; the module marks it 'by hand' (LevelAlone.lean l.804), and Lean states only step 1 below step 2 (l.819-820). The numbers recompute right."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-level-alone-2026-11-23/NOTE.md",
+   "old": "about fourteen sentences of the telling",
+   "new": "fifteen passages of the telling (the rows of its table)",
+   "why": "The other model's table of tellings to mend has fifteen rows (returns/astra-read.txt l.95-109), several with two or three sentences each."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-level-alone-2026-11-23/NOTE.md",
+   "old": "by the lister its statements and proof terms are byte-identical to the fourth form's",
+   "new": "by the lister its statements and proof terms are byte-identical to the fourth form's (the fourth form's own print is not kept here; the comparison made from it and the one remade from the landed print are the same text, and with comments stripped the two sources are the same 567 lines, both checked by this note's reader)",
+   "why": "The two prints linked after this claim are the third's and the landed's; no print of the fourth form is in the folder. The filed comparison was made from the fourth (reader 4 cites it before the landed form existed); remade here from the two filed prints it comes out identical."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-level-alone-2026-11-23/NOTE.md",
+   "old": "The check of this note took it over the 1.5 million; that was told to both sessions before it started.",
+   "new": "The check of this note, whose count is not in that sum, takes it over the 1.5 million (12,929 were left); that was told to both sessions before it started.",
+   "why": "Said as done before the check's count exists; no figure for it is in COUNTS.txt. 1,500,000 - 1,487,071 = 12,929."
+  },
+  {
+   "weight": "lesser",
+   "file": "/Users/ren/tmp/fm/wt/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-level-alone-2026-11-23/NOTE.md",
+   "old": "found each sentence stated by a law,",
+   "new": "found each sentence stated by a law at least in part (by its own headings: one stated three times with nothing found that joins the three, one in part twice, one nearly by one law, one exactly twice),",
+   "why": "The read's own headings are weaker for two of the four: B 'Stated in part twice', C 'Near stated by one law' (READ-four-sentences.md.txt l.14, 21, 27, 36)."
+  }
+ ],
+ "checked_and_right": "Read whole: LevelAlone.lean (1,004 lines), NOTE.md, the record, the three account texts, returns/astra-read.txt, returns/astra-repair.txt, BRIEF-2-ADDENDUM, compare_rows.out and .py, the 13 build logs, COUNTS.txt. The other returns were read as findings and reports cut to length.\n\nA. Record and account texts.\n- All 39 declaration names in the record exist in the module; laws, aliases and references carry the same 39. These are every public theorem plus `readBy` and `level` (50 public declarations, 11 uncited definitions).\n- The record's reference hashes for the module, the receipt and NOTE.md match the files as read. The receipt says passed, Lean 4.29.1.\n- Common premises in law 2 match the core binder by binder (`sets` to `differs`, then `below`), against RegimeMargin's `Short`, `Meets`, `Keeps`, `FromNothing`.\n- Laws 3, 4 (apart from 'the cap'), 6 and 8 match their theorems in premises and conclusion. `Three.giving` is `min z (12 - z)`. Twelve's ten and four, Rising's rise from step 1 to 2 and its failing pair are Lean statements.\n- No text says or suggests that the response is derived (each says handed in or supplied), that a law of TurningInTime becomes a case (each denies it), that the level never rises under law B, or that a later marking fails where the earliest succeeds (does_not_show 3 says the one direction only).\n- does_not_show 1, 3, 4, 5, 6 are right. validation_scope's count of forms and readers is right (three forms, four readers; the fourth form by the other model; a last reader not read again).\n\nB. The note.\n- Line counts 594, 946, 1,084, 947, 1,004 match the filed forms and the module.\n- Builds: 13 logs; 1 to 5, 6 to 8, 9 and 10, 11, 12 and 13 fit the brief clocks (00:32:09, 01:03:12, 01:31:13) and the returns (5, 3, 2 builds). Build 11 was not run by the other model, by its own report.\n- Tokens: 633,270 + 485,310 + 173,832 + 194,659 = 1,487,071; 1,211,800 + 9,280,900 = 10,492,700, both against COUNTS.txt and the two footers. Core run 9 steps, 1,647 reused, 34.8 s. 'At most 30 builds' is BRIEF.md.txt l.137.\n- Comparison: 3 binders gone (`keeps₀` once, `pos` twice), 1 theorem added, 46 identical, none removed or renamed.\n- Who found what: `keeps` from `keeps₀` (implementer, reader 2; reader 1 notes it); the course failing `meets` (readers 1 and 2, by hand); `up` in five laws (reader 3); `pos` twice, `keeps₀` once, the marked level run together with the deciding level, three docstrings on `Meets` (astra-read); the hand course 8, 7, 5, 2, 0 (recomputed, right); 'last chance' absent from the second form; the cut list of what is not shown (reader 4, eleven findings, script tags 1 to 11).\n- The other model read the module whole against all four briefs. Fourth and landed code is identical with comments stripped.\n- All 23 relative links point at files that exist.\n- 'The corrected kind's point of no return' for H₂ + y₂ is the house phrase (turning-in-time's statement), left alone.\n\nC. Apart from the findings, nothing was found said as checked by Lean that was by hand: the note's 'checked by Lean as a conjunction' and Twelve's 'still above the threshold' are Lean statements.\n\nIf the note is mended, the record's sha256 for NOTE.md (025cabb4...) must be recomputed.",
+ "not_looked_at": "Nothing was built or run beyond read-only scripts (counts, hashes, link checks, a comment-stripped diff, the filed comparison remade from the two filed prints); no git.\n\nNot opened or not checked:\n- PAPER.md.txt beyond its head and one passage; READ-four-sentences.md.txt beyond its four headings and a few lines. So 'both statements first tried whole came apart (the turn law for a draw that rises; a growing line removed by the fall)' and 'row DJ tried to break it and could not' are unchecked. The read says 'the growing kind removed in time'.\n- BRIEF.md.txt and BRIEF-3.md.txt beyond grep; ASTRA-BRIEF and ASTRA-REPAIR; the first, second and third forms; third-to-final.diff beyond its header; the rows prints beyond their heads; the search scripts; build.sh.\n- No source in the folder for: the caps said beforehand (1.5 million, 3 million); 'told to both sessions'; row DJ checking the hand course and withdrawing the phrase; the 49 minutes of row GR's gate and 'mended in both'; the board claim for rule 6; the tool's note on caching; 'would generalise three laws of TurningInTime' (four laws there take `fall`).\n- That reader 4's mends went in 'in its words' and the re-flow changed no word: only the script's own header and the identical code were seen.\n- TurningInTime.lean, ReadOffInTime.lean and RegimeMargin.lean were searched for the named declarations, not read. 'L2', the family and region, and the record's schema beyond the two length limits were not checked.\n- Whether law texts or README rows have length caps, and whether the receipt or any generated page binds the checker's scope text or the README row, so that the mends to check_becoming.py and README.md need a new run or render.\n- The id of the record that keeps ReadOffInTime (likely a-loss-read-before-its-point-of-no-return, which cites Recoverable.earlier) was not confirmed, so the dependency mend is to a detail string, not a new entry.\n- The by-hand claim on Twelve (the marking of twelve gives a line that never ends) is my arithmetic from the definitions, not a Lean statement."
+}
