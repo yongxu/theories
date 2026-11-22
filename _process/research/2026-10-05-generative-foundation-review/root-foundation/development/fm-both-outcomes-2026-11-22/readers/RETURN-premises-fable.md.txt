@@ -1,0 +1,168 @@
+# Reader's return: premises
+
+*AI-written (Claude Fable, a reader who took no part), 22 November 2026, 06:32 WIB by the clock. Nothing was built or run; every claim below that a changed proof "goes through" is from reading the terms and is not checked by Lean.*
+
+**Read whole:** `tmp/fm/centre22/two-sides/ScratchTwoSides.lean.txt` (217 lines; byte-identical to `/Users/ren/tmp/fm/build12/Becoming/ScratchTwoSides.lean`), `Becoming/PredicateIteration.lean` (276 lines), `Becoming/Keeping.lean` (582 lines), the brief, the implementer's `REPORT.md`, `AFTER-TWO-SIDES.md`, `/Users/ren/tmp/fm/build12/Becoming/ScratchKeptForViable.lean`, `ScratchDrainOnTheLaw.lean`, `last-build.log.txt`. **Read in part:** `Becoming/Undecided.lean` ll. 360 to 420 (`each_or_some`), `Becoming/GuardHorizon.lean` ll. 280 to 340 (the loss section). Line numbers without a file name are of `ScratchTwoSides.lean.txt`.
+
+## The answer in six lines
+
+1. **One premise is the conclusion at horizon 0.** `inOrOut c` is `kept_or_lost 0 c` by unfolding, and l. 106 uses it as such: `| 0, c => inOrOut c`. The report's "It assumes no decision about either outcome" (REPORT l. 5) is false at horizon 0. Nothing at a horizon above 0 is assumed.
+2. **`everyValue` is a plain list of all values in content.** Its conclusion mentions neither the code nor the move. The weaker premise the question names would do, with one line changed (l. 126), `keptFor_empty` and `KeptFor.mono`; inclusion in a listed value's class is enough, equality is not needed.
+3. **No premise is a classical principle; none is a type class; none decides anything at a horizon above 0.** Both decisions are needed in some form: the conclusion at 0 is `inOrOut`, and the conclusion at 1 gives `Usable ∨ ¬ Usable` in a one-move case.
+4. **The route through `all.length + 1` is not needed and costs a premise.** Split at `all.length`, the first half needs only the guarded codes on the list, so the bound is the count of listed guarded codes (4 in the Drain case, against 9; the least losing level there is 3).
+5. **Docstrings:** none claims a result its statement lacks. Eight say less or something slightly else (below); the three case theorems leave out the guard and the condition on moves.
+6. **Empty cases:** all true. With no moves every code is "lost" at 1 though nothing leaves the guard: `Lost` means "cannot be kept", which includes "no usable move".
+
+## 1. The premises of Part C
+
+All five are section variables put into both theorems by `include everyMove everyValue updates inOrOut usableOrNot` (l. 99); `every` is an argument of `closed_or_lost_within` only (l. 137).
+
+| Premise | Asks, in plain words | Used | An outcome in disguise? |
+|---|---|---|---|
+| `everyMove : ∀ a, a ∈ moves` (l. 90) | one list holds every move | l. 129 `replies a (everyMove a)` (from "every listed move loses" to "every move loses"); l. 128 runs `each_or_some` over `moves`; l. 142 inside `lostReading_shortens`, for `lostReading_commutes` | No. It says nothing of the guard, the steps or the reading. |
+| `everyValue` (ll. 91 to 92) | if a guarded code has a usable move, some list holds every value of `O` | l. 117 `match everyValue c safe a usable with ⟨values, listed⟩`, l. 126 `listed o` | No. See below: it is a plain list in content. |
+| `updates` (ll. 93 to 94) | after a usable move from a guarded code, at every value (also a value no step gives), some code's class is exactly the class seen | l. 121; both directions of the `↔` are used, one per side: `(names s).mpr` at l. 124 for the kept side, the whole `names` handed into the loss at l. 124 (`⟨d, names, lost⟩`), where `lost_not_kept` later uses `(names s).mp` (l. 80). Also l. 141, as the `updates` of `coded_kept_iff_closed` | No. It says the codes are closed under what the reading leaves. A code that only covered the class seen would serve the kept side and break the either-or. |
+| `inOrOut` (l. 95) | each code's class is within the guard throughout, or a configuration of it outside the guard is given | l. 106 (horizon 0: it is the whole proof) and l. 107 (each successor horizon) | **Yes, at horizon 0, exactly.** See below. |
+| `usableOrNot` (ll. 96 to 97) | of each guarded code and each move: usable from the class, or not | l. 115 only | No. A decision of one `∀` statement per guarded code and move, in the form `p ∨ ¬ p`. |
+| `every : ∀ d, d ∈ all` (l. 137) | one list holds every code | l. 141 `fun d _ => every d` (as `within` of `coded_kept_iff_closed`, which asks only guarded codes); l. 142 in `lostReading_shortens` | No. Stronger than the first half needs: see section 4. |
+
+**`inOrOut` is the conclusion at horizon 0.** `KeptFor P sense guard allowed 0 B` is `∀ s, B s → guard s` (`Keeping.lean` l. 97), which is `codeGuard decode guard c` at `B := decode c` (`abbrev`, l. 343). `Lost … 0 c` is `iter … (Outside decode guard) 0 c`, which is `Outside decode guard c` (`PredicateIteration.lean` l. 78). So
+
+```lean
+(inOrOut : ∀ c, codeGuard decode guard c ∨ Outside decode guard c)
+```
+
+is `∀ c, KeptFor P sense guard allowed 0 (decode c) ∨ L 0 c`, and l. 106 could not typecheck otherwise:
+
+```lean
+theorem kept_or_lost : ∀ n c, KeptFor P sense guard allowed n (decode c) ∨ L n c
+  | 0, c => inOrOut c
+```
+
+The brief's T3 names "a premise that hands in the outcome (for example that `KeptFor` or `Lost` is decided)". This premise decides `KeptFor 0` against `Lost 0` for every code. It hands in the outcome at 0 and nothing above 0. Since it is an instance of the conclusion, no theorem of the form `∀ n c, KeptFor n … ∨ L n c` can do without it. What the theorem proves is that the either-or at 0 goes up to every horizon; it does not prove the either-or at 0.
+
+It is not a classical principle as a premise: for a listed type of codes it is finitely many decisions, each supplied by the user. Its form is stronger than `p ∨ ¬ p`: the right side is a witness (`∃ s, decode c s ∧ ¬ guard s`), the left a `∀`. For a class given by an arbitrary predicate on an unlisted `S`, that is a decision of the kind "all, or a counterexample", per code.
+
+**`everyValue`: does its conclusion mention the code or the move?** No.
+
+```lean
+(everyValue : ∀ c, codeGuard decode guard c → ∀ a, Usable P allowed (decode c) a →
+  ∃ values : List O, ∀ o, o ∈ values)
+```
+
+The conclusion `∃ values : List O, ∀ o, o ∈ values` has neither `c` nor `a` in it. The premise is therefore equivalent (by currying, with nothing classical) to: *if some guarded code has a usable move, then `O` is on a list.* It is weaker than a plain list only where no guarded code has any usable move, and there the proof never reaches l. 117. REPORT l. 97, "That list may depend on the code and move and must cover every value of `O`", is accurate and the dependence does no work: any one of the lists serves every code and move. For the Drain reading that keeps the level (`O = Nat`, and the guarded code `.both` has usable moves) it cannot be supplied.
+
+**The genuinely weaker premise**, and whether the proof goes through with it. Stated with inclusion, which is all the proof needs:
+
+```lean
+(everyValue : ∀ c, codeGuard decode guard c → ∀ a, Usable P allowed (decode c) a →
+  ∃ values : List O, ∀ o,
+    (∀ s, ¬ Seen P sense (decode c) a o s) ∨
+    ∃ o', o' ∈ values ∧ ∀ s, Seen P sense (decode c) a o s → Seen P sense (decode c) a o' s)
+```
+
+Only l. 126 changes. Now it is
+
+```lean
+            | .inl kept => .inr ⟨usable, fun o => kept o (listed o)⟩
+```
+
+and it would become
+
+```lean
+            | .inl kept => .inr ⟨usable, fun o => match listed o with
+              | .inl empty => KeptFor.mono (fun s seen => (empty s seen).elim) (keptFor_empty a n)
+              | .inr ⟨o', mem, inside⟩ => KeptFor.mono inside (kept o' mem)⟩
+```
+
+It needs `keptFor_empty (a : A) : ∀ n, KeptFor P sense guard allowed n (fun _ => False)` (`Keeping.lean` l. 306), whose move is the usable move `a` already in hand, and `KeptFor.mono` (`Keeping.lean` l. 276: a narrower class is kept wherever a wider one is). The losing branch (l. 127) is untouched, since it already takes a listed value. "The class is that of a listed value" (equality) is more than needed; "lies inside that of a listed value" does, by `KeptFor.mono`. With this premise `updates` is called by `kept_or_lost` only at listed values (l. 125 passes `fun o _ => atValue o`), but `coded_kept_iff_closed` still asks it at every value (`Keeping.lean` ll. 362 to 363), so the final statement keeps `updates` whole; `updatesLevel` gives that for the level reading (`ScratchDrainOnTheLaw.lean` l. 398). For the level reading the list `[0, 1, 2]` with the empty disjunct for `o ≥ 3`, or `[0, 1, 2, 3]` with no empty disjunct, would meet it by `seen_starts` and `seen_single`. Not built.
+
+## 2. `inOrOut` and `usableOrNot`: is a weaker decision enough?
+
+**`inOrOut`.** For `kept_or_lost` as stated, with `Lost` started from a witness: no, because the premise is its instance at 0. Three ways to ask less, each changing something else:
+
+- **Fewer codes.** The recursion calls `inOrOut` at `c` and at the codes `updates` gives (l. 107, then l. 123 `kept_or_lost n d`). A predicate on codes closed under those successors, with `inOrOut` asked only inside it, would do for the codes inside it. The statement would then carry that predicate.
+- **A negation in place of the witness.** Start `Lost` from `fun c => ¬ codeGuard decode guard c` (as `GuardHorizon.lostStep` starts from `¬ guard s`, `GuardHorizon.lean` l. 294). Then the premise is `codeGuard decode guard c ∨ ¬ codeGuard decode guard c`, one proposition decided per code, which `Outside` implies and which does not imply `Outside`. Reading the proofs: `lostReading_start` stays `Or.inl`; `lostReading_commutes` passes the left disjunct through unchanged (l. 54); `lost_not_kept` at 0 becomes `outside kept`; `kept_or_lost` is unchanged in shape. The price is on the losing side: a lost code would no longer give a configuration outside the guard, so the loss is not "said positively" as the brief's Part A asks. A trade, not a gain.
+- **From more primitive data.** Where each class is a listed set of configurations and the guard is decided at each configuration, `inOrOut` follows by `Undecided.each_or_some`. That is how the case proves it (`none_in_or_out`, ll. 165 to 173, by cases on levels). More is listed, less is decided at once.
+
+**`usableOrNot`.** Used at l. 115 and nowhere else:
+
+```lean
+      have sides (a : A) : bad a ∨ good a := match usableOrNot c safe a with
+```
+
+So: at a guarded code, at a successor horizon, for each move. Not at horizon 0, not at a code with a configuration outside, not in Part A (the loss step carries `¬ Usable` as a disjunct, so `lostReading_commutes` needs no decision), not in Part B, not in the second half of `closed_or_lost_within`. The report says this (REPORT ll. 74, 77, 97) and it is right. It cannot be dropped: with one move and a guarded code all of whose seen classes are guarded, the conclusion at horizon 1 is `Usable … a ∨ (¬ Usable … a ∨ ∃ o d, … ∧ Outside … d)` with the last disjunct impossible, which is the decision itself. It is asked a little more often than the argument strictly needs (where some value already leads to a lost code, usability need not be known), but I found no plain way to state that narrower premise without the horizon in it.
+
+## 3. Docstrings against statements (4 definitions, 16 theorems)
+
+**Exact, premises included** (12): `Names` (l. 18), `Outside` (l. 22), `lostReading_mono` (l. 42), `lostReading_start` (l. 47), `lostReading_commutes` (l. 51), `lostReading_shortens` (ll. 61 to 62), `lostReading_within_length` (l. 68), `lost_not_kept` (l. 74), `closed_never_lost` (l. 82), `closed_or_lost_within` (ll. 132 to 136), `none_usable_or_not` (l. 175), and `kept_or_lost` (ll. 101 to 104) with the two notes below. No docstring tells how its proof goes. None claims a result its statement does not have.
+
+**Says less, or something slightly else** (8):
+
+1. `lostReadingStep`, ll. 26 to 27: "Some configuration is outside the guard, or each move is unusable or has a value after which a code in X names exactly the class seen."
+   Statement: `Outside decode guard c ∨ ∀ a, ¬ Usable P allowed (decode c) a ∨ ∃ o d, Names decode d (Seen P sense (decode c) a o) ∧ X d`.
+   Less: "some configuration" lacks "of the code's class", and "unusable" lacks "from the code's class". Read alone the first clause says `∃ s, ¬ guard s`.
+2. `Lost`, ll. 33 to 34: "A code is lost by horizon n if it belongs to the n-th iterate of the losing step from codes with a configuration outside the guard."
+   Statement: `iter (lostReadingStep P sense guard allowed decode) (Outside decode guard)`.
+   "By" says at or before. That the iterates rise is `Iteration.iter_succ` with `lostReading_mono` and `lostReading_start`; it is not stated in this module. Later docstrings say "lost at horizon n" (l. 74) and "lost by the code-list length" (ll. 135 to 136, l. 180) of the same `L n c`.
+3. `kept_or_lost`, ll. 101 to 104: "… If each usable move from a guarded code admits a list of all values and an exact successor code at each value, then at every horizon each code's class is kept or the code is lost."
+   Statement: `∀ n c, KeptFor P sense guard allowed n (decode c) ∨ L n c`.
+   Two notes. "Admits a list of all values" is the letter of `everyValue` and reads as a list that depends on the code and move; it does not (section 1). "Kept or … lost" does not say "for that many steps" and "at that horizon", the same `n` on both sides; "at every horizon" carries it only loosely.
+4. `moves_listed`, l. 155: "Both drain moves are on the list containing false and true." Statement: `∀ a : Bool, a ∈ [false, true]`. The statement is of `Bool`; the drain is not in it.
+5. `unit_listed`, l. 160: "The reading that keeps nothing has its only value on the singleton list." Statement: `∀ o : Unit, o ∈ [()]`. The statement is of `Unit`; no reading is in it.
+6. `none_in_or_out`, l. 164: "Each pair of levels codes a class within the drain guard or contains a lane at zero." Statement: `codeGuard decode Drain.above c ∨ Outside decode Drain.above c`. "A lane at zero" is `s.2 = 0`; the statement's right side is `∃ s, decode c s ∧ ¬ Drain.above s`, that is `¬ (s.2 ≠ 0)`. The docstring says what the proof holds (`zero`, ll. 171 to 172), a little more than the statement.
+7. `starts_lost_within_none`, ll. 180 to 181: "Under the reading that keeps nothing, the two starts together are lost by the length of the nine-code list." Statement: `N allNone.length (l2, l2)` with `N` for `Lost Drain.process noneRead Drain.above everyMove decode` (l. 153). Less: the guard `Drain.above` and "every move allowed" are unsaid (the other session's docstrings say both each time). The statement is of the code `(l2, l2)`; that its class is the two starts is `starts_code` (`Iff.rfl`).
+8. `starts_first_lost_none`, ll. 188 to 189, and `starts_closed_never_lost_level`, ll. 209 to 210: the same omission of the guard and the condition on moves. Otherwise each says its statement (`N 3 (l2, l2) ∧ ∀ n, N n (l2, l2) → 3 ≤ n`; `InClosedFamily … Drain.starts ∧ ∀ n, ¬ Lost … decodeL n .both`).
+
+## 4. What `closed_or_lost_within` adds to `kept_or_lost` at one `n`
+
+The proof (ll. 140 to 143):
+
+```lean
+  ⟨(kept_or_lost everyMove everyValue updates inOrOut usableOrNot (all.length + 1) c).imp
+     (fun kept => (coded_kept_iff_closed (fun d _ => every d) updates).mp (KeptFor.shorter kept))
+     (lostReading_shortens every everyMove),
+   fun ⟨closed, lost⟩ => closed_never_lost closed all.length lost⟩
+```
+
+It adds three things to `kept_or_lost` at one horizon.
+
+- **On the left disjunct, the landed law.** "Kept for `all.length` steps" becomes "in a closed family" by `coded_kept_iff_closed … .mp`. This is real: the horizon is gone from the left side. It is the kept side's bound, and it is the only bound the first half needs.
+- **On the right disjunct, nothing that was not put there by the proof's own detour.** The split is made at `all.length + 1`; the left comes down by `KeptFor.shorter`, the right by `lostReading_shortens`. Each undoes the `+ 1`.
+- **The second half**, `closed_never_lost` at `all.length`. It uses no list, no decision, no `updates`, no bound; it holds at every `n`, and `all.length` is only where it is read off.
+
+**The route through `all.length + 1` is not needed.** This term has the same type as the first half:
+
+```lean
+(kept_or_lost everyMove everyValue updates inOrOut usableOrNot all.length c).imp
+  (coded_kept_iff_closed within updates).mp id
+```
+
+with `within : ∀ c, codeGuard decode guard c → c ∈ all`. The report says as much (REPORT l. 76, last sentence). What the report does not say: **the detour costs a premise.** `lostReading_shortens` needs `every : ∀ c, c ∈ all`; the direct split needs only the guarded codes on the list, as `coded_kept_iff_closed` does. So the statement as built asks more (every code listed) and gives a weaker bound (the length of a list of all codes) than the three-line proof above would. In the Drain case under the reading that keeps nothing: 9 codes, 4 guarded (`(l1,l1)`, `(l1,l2)`, `(l2,l1)`, `(l2,l2)`), least losing level 3.
+
+Against T4 as written ("neither half uses the bound"): it passes by the letter, since the first half uses `coded_kept_iff_closed`. The losing side's bound (Part A.2) is called, and does no necessary work there. Under Part C's premises `lostReading_within_length` is even a corollary of the final statement with `closed_never_lost` (lost at some `n`, so in no closed family, so lost at `all.length`), with no commuting and no `iter_shortens`. Part A.2 is a statement of its own only where nothing is decided: every code and move listed, no values listed, no `updates`, no decision. `lostReading_within_length` (l. 69) is called nowhere in the module.
+
+## 5. What the statement is, and is not
+
+**What it is.** There is a process (which configurations a move can lead to from a configuration), a guard on configurations, a condition on moves, and a reading that gives a value for each step. A class of configurations is what the chooser cannot tell apart. A move can be taken from a class only if it is allowed and enabled at every configuration of it; after it, the value the step gave narrows the class to what could stand now. A type of codes names some classes, and the codes must be closed under this: after a usable move from a code whose class is within the guard, at every value, some code names exactly the class seen. To have the either-or, three things must be on lists (every code, every move, every value) and two things must be decided (of each code: within the guard throughout, or a configuration of it outside; of each such code and each move: usable or not). Not asked: that the configurations be listed or finite, that a step or the guard be decided at a configuration, any equality test. Then of each code exactly one holds. Either its class lies in a family of classes within the guard, each with a usable move that leads, whatever value comes, back into the family (so the class is kept for every number of steps). Or it is lost at the level of the code list's length: whatever move is taken, some value leads to a class lost one level sooner, down to a class with a configuration outside the guard, or to a class from which no move is usable. The only numbers in the law are the horizon and the length of the list. The level of the Drain case is in the case only: there a configuration is a lane and a level, the guard is "the level is not zero", and a move that does not match the lane lowers it. The law has a guard and no quantity.
+
+**What it does not say.** Nothing is drawn down in the law: no stock, no amount, no rate, no share, nothing that locks. There is no time of reading: the reading gives a value at every step, and no statement compares reading sooner with reading later, or "early enough". It does not compare two readings; that one process is kept under one reading and lost under another is shown by the built case alone, and the either-or itself was applied only to the reading that keeps nothing (the level reading's values are all the numbers and cannot be listed as the premise stands). "Lost" does not mean that a course leaves the guard: a class with no usable move is lost at level 1 though nothing moves, and no theorem in the module turns `Lost n c` into a run of the process that reaches a configuration outside the guard (not found in what was read: the module whole). The bound is the length of a list, not the least level: 9 against 3 in the case. It has one chooser against every outcome; nothing of many who choose, of a selection, of what sustains it. It says nothing of how the two ways stand to each other.
+
+**Its name in the literature.** This is the known result that a safety game with partial observation is decided on the game of knowledge sets: the classes are the knowledge (belief) sets, `updates` is the subset construction closed under the observation update, the kept side is the largest set of knowledge sets closed under a controllable step (in control: a controlled invariant set, or viability kernel, under partial observation), the losing side is the least fixed point of the opponent's step, and the either-or with a bound of the number of positions is the determinacy of a finite safety game by backward induction. Sources I am confident of: Reif, "The complexity of two-player games of incomplete information" (1984); De Wulf, Doyen and Raskin, "A lattice theory for solving games of imperfect information" (2006); Chatterjee, Doyen, Henzinger and Raskin, "Algorithms for omega-regular games with imperfect information" (2006/2007). In planning the reading that keeps nothing is conformant planning and a reading with values is contingent planning in belief space. What differs here: (a) nothing classical: the listings and the two decisions are stated premises, and the losing side's bound is also proved with nothing decided (Part A.2, by commuting with implication over a listed set of moves); (b) the knowledge sets are an abstract type of codes with `decode`, the configurations need not be listed; (c) the value read is of the step, not of the configuration reached, and a move must be usable at every configuration of the class; (d) the literature's theorem ties the knowledge game to strategies that depend only on observations in the original game; here that tie exists on the kept side only (`keptFor_iff_plan`, for values in `Fin k`), and the losing side is tied to plans only as a negation (`lost_not_kept`). As mathematics it is not new; its use here is as a join of the package's two sides.
+
+## 6. Empty cases
+
+- **An empty class** (a code `c` with `decode c` true of nothing). `codeGuard` holds vacuously, `Outside` fails, every move is usable vacuously. With a move in the type: kept at every horizon (`keptFor_empty`), in a closed family, never lost. With no move: see the next item. The statements are true and not vacuous. Note what "kept" then says: a class of nothing is kept for ever, and `updates` forces such a code to exist wherever some value is given by no step (the code `.empty` in the level reading).
+- **An empty type of moves.** `moves := []`. `KeptFor (n + 1)` fails for every class (it asks a move); `L (n + 1) c` holds for every code, since `∀ a, …` over no moves is vacuous (l. 30). `kept_or_lost`: at 0 it is `inOrOut`; above 0 the right side. `closed_or_lost_within`: no class is in a closed family (the family asks a move); `L all.length c` holds because a code exists, so `all.length ≥ 1`. True, not vacuous, and degenerate: every code is lost at 1, a guarded one too, though nothing ever leaves the guard. `everyValue`, `updates` and `usableOrNot` are vacuous here.
+- **An empty type of values** (not asked; for completeness). `values := []`; `updates` is vacuous; a class is kept for ever exactly where it is within the guard and has a usable move, and lost at 1 otherwise. True, not vacuous.
+- **An empty type of codes.** `all := []`. Every theorem that takes a code is vacuous: `lostReading_start`, `lostReading_shortens`, `lostReading_within_length`, `lost_not_kept`, `closed_never_lost`, `kept_or_lost`, `closed_or_lost_within`. `lostReading_mono` and `lostReading_commutes` hold trivially of predicates on an empty type.
+- **A code list with repeats, or two codes naming one class.** Allowed: `every` asks membership only. The statements stay true and say something; the bound is the list's length, not the number of distinct codes or classes, so a longer list gives a weaker bound on the losing side and asks more on the kept side. The docstring's "code-list length" is exact about this. Listing the codes outside the guard also lengthens the bound for no gain (section 4).
+
+## Other things noticed (outside the one question)
+
+1. **The either-or was exercised only at the reading that keeps nothing.** `starts_lost_within_none` (ll. 182 to 186) is the one call of `closed_or_lost_within`, with values in `Unit`. There the reading does no work. And what it gives, lost at 9, is weaker than the direct `N 3` of `starts_first_lost_none` and follows from it by `iter_succ` six times with no Part C. Its closed branch is refuted by `starts_in_no_closed_family_none_direct`, itself from "not kept for 3". So in the case the theorem turns "not kept for 3" into "lost at 9" where a direct computation gives "lost at 3". Against T6 ("comes out only for a trivial reading"): Part D as the brief asked it came out, the level reading through Part B; the either-or itself came out only for the trivial reading. The weaker `everyValue` of section 1 is what would bring the level reading under it.
+2. **REPORT l. 5 is wrong as worded** ("It assumes no decision about either outcome"): section 1.
+3. **Part A is `GuardHorizon`'s loss section through a reading, term for term**: `lostReading_commutes` (ll. 52 to 59) is `lost_commutes` (`GuardHorizon.lean` ll. 326 to 332) with `Usable` for `Enabled` and `∃ o d, Names … ∧ W d` for `∃ t, P.step s a t ∧ W t`; likewise `lostReading_mono`, `lostReading_start`, `lostReading_shortens`, `lost_not_kept` against `lost_mono`, `lost_start`, `lost_shortens`, `lost_not_viable`. The brief asked for that pattern, and the bound is one call of `iter_shortens`, not an induction written again. But the older section is not made a case of the newer, nor the newer of the older; a process on codes (a step from `c` by `a` to `d` where `a` is usable and `d` names a class seen) would make it a case only up to the premises `updates` and a value existing, and with the start `¬ codeGuard`, not `Outside`.
+4. **The induction of `kept_or_lost` uses the reading only inside one step.** Lines 107 to 130 take "every code is kept at `n` or lost at `n`" to the same at `n + 1`; the induction is otherwise bare. A statement for a pair of steps, one falling and one rising, in `Iteration` would carry it (as `AFTER-TWO-SIDES.md` point 4 proposes). A search of `Becoming/*.lean` for `_or_lost`, `kept_or_lost`, `viable_or_lost`, `or_lose` found no either-or already there (names only; not a read of every module).
+5. **Two things named `everyMove`.** In Part C it is the listing `∀ a, a ∈ moves` (l. 90); in Part D it is the other session's condition on moves, "every move allowed" (`ScratchKeptForViable.lean` l. 29), as in l. 153 `Lost Drain.process noneRead Drain.above everyMove decode`. No error; a reader will stumble.
+6. **Not checked by me:** that the module builds and has no axiom (I read `last-build.log.txt`: build 5, exit 0, `"unclean": []`, `"with_axioms": {}`, 16 theorems, 20 declarations; I ran nothing). The changed terms in sections 1, 2 and 4 are read, not built.

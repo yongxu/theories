@@ -1,0 +1,123 @@
+# Brief: the either-or said once for a pair of steps, with its cases
+
+*AI-written (Claude Fable, board row FM), 22 November 2026. DRAFT until its hash is written in `FROZEN-PAIR.sha256.txt`; frozen before the implementer runs. Scratch only: outside the package, in no git object. You are the implementer. A clean failure, told with what blocked it, is a result.*
+
+## What we are doing
+
+`/Users/ren/theories` draws a map of how anything forms, persists, changes and ends, with its core proved in Lean 4 with **no axioms** (every declaration has an empty axiom report). Read `AGENTS.md` at the repository root (one page).
+
+A read of every module of the package found one thing missing: **no module has, in one statement, both outcomes of a course with a choice in it, a reading in it, and a bound on the side where it ends.** A first scratch module now has such a statement for a reading through codes: `/Users/ren/tmp/fm/build12/Becoming/ScratchTwoSides.lean` (read it whole, with its report `/Users/ren/theories/tmp/fm/centre22/two-sides/REPORT.md`). Readers who took no part read it; their returns are in `/Users/ren/theories/tmp/fm/centre22/readers/` (read `RETURN-*.md` and `sweep/REPORT.md` before you start: what they found is why this brief is as it is).
+
+What the readers and I found, in short:
+
+1. `closed_or_lost_within` needs only the bound of the KEPT side: the split of `kept_or_lost` at `all.length` proves it; the split at `all.length + 1` calls the losing side's bound by a detour.
+2. `kept_or_lost`'s induction uses nothing of readings. `iter Φ V₀ (n + 1)` is `Φ (iter Φ V₀ n)` by definition, so the either-or at every horizon follows from a statement about ONE step. It should be said once, for a pair of steps, and the reading be a case.
+3. `everyValue` as written says no more than a plain list of all values. The weaker premise that the level reading of the Drain case can meet: a list such that each value's seen class is that of a listed value.
+4. The package has no either-or for the case with no reading: `GuardHorizon` has `lost_not_viable` (never both) and the two bounds, nothing that says one or the other.
+
+Read first, whole: `Becoming/PredicateIteration.lean`; `Becoming/Keeping.lean` from `Seen` to the end of its `Readings` section; `Becoming/GuardHorizon.lean`; `Becoming/Undecided.lean` l. 381 (`each_or_some`). (The package is `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`.)
+
+## The modules
+
+Two new scratch modules in `/Users/ren/tmp/fm/build12/Becoming/`; edit nothing else there and nothing in the repository.
+
+**Build only with** `/Users/ren/tmp/fm/run-build12.sh <n> <Module> [<Module> …]` (module names without `Becoming.`). Clean means `exit 0`, `"unclean": []`, `"with_axioms": {}`. Run nothing else of Lean: no `lake`, no `check_becoming.py` (never with `--help`: it is a real run), no gate, no tests. Up to about 60 builds; number them from 20; save each module after each clean build as `/Users/ren/tmp/fm/build12/<Module>.clean-<n>.lean.txt`. Proofs as terms, in the package's style; a plain docstring on every declaration that says exactly its statement with its premises, never how the proof goes, and no more than the statement.
+
+### Module 1: `Becoming.ScratchPair` (imports `Becoming.PredicateIteration` only), namespace `Becoming.Iteration`
+
+For two steps `Φ Ψ : (S → Prop) → S → Prop` on one type and two starts `V₀ W₀`:
+
+```lean
+/-- Wherever every point is in X or in Y, every point is in the step of X by Φ or in the step
+of Y by Ψ. -/
+abbrev OneOrOther (Φ Ψ : (S → Prop) → S → Prop) : Prop :=
+  ∀ X Y : S → Prop, (∀ t, X t ∨ Y t) → ∀ z, Φ X z ∨ Ψ Y z
+
+/-- Wherever no point is in both X and Y, no point is in both the step of X by Φ and the step of
+Y by Ψ. -/
+abbrev NeverBoth (Φ Ψ : (S → Prop) → S → Prop) : Prop :=
+  ∀ X Y : S → Prop, (∀ t, ¬ (X t ∧ Y t)) → ∀ z, ¬ (Φ X z ∧ Ψ Y z)
+```
+
+(names are yours to change if they clash; check the package for clashes first.)
+
+1. `iter_or`: from `∀ z, V₀ z ∨ W₀ z` and `OneOrOther Φ Ψ`: `∀ n z, iter Φ V₀ n z ∨ iter Ψ W₀ n z`.
+2. `iter_not_both`: from `∀ z, ¬ (V₀ z ∧ W₀ z)` and `NeverBoth Φ Ψ`: `∀ n z, ¬ (iter Φ V₀ n z ∧ iter Ψ W₀ n z)`.
+3. **With a list, on the falling law's own premises** (those of `iter_iff_all`: read them; add nothing): `(∀ n, iter Φ V₀ n z) ∨ iter Ψ W₀ all.length z`, and not both. One call of `iter_or` at the list's length and one of `iter_iff_all`.
+4. **Either bound gives the other.** (a) From 1, 2 and the falling bound: `∀ n, iter Ψ W₀ n z → iter Ψ W₀ all.length z`, with NO premise that Ψ is monotone, takes its start inside its step, or commutes with implication. (b) From 1, 2 and the rising bound as a hypothesis (`∀ n z, iter Ψ W₀ n z → iter Ψ W₀ m z` for one `m`): `iter Φ V₀ m z → ∀ n, iter Φ V₀ n z`, with no premise on Φ. State each exactly as it comes out, with the premises it really uses; if one needs more, say what.
+
+No induction on a list anywhere in this module: the lists are only in what it calls.
+
+### Module 2: `Becoming.ScratchPairCases` (imports `ScratchPair`, `Keeping`, `GuardHorizon`, `Undecided`, and for Part C the scratch modules `ScratchKeptForViable`, `ScratchDrainOnTheLaw`, `ScratchTwoSides`)
+
+Reuse `ScratchTwoSides`' definitions (`Names`, `Outside`, `lostReadingStep`, `Lost`) and its theorems that stand (`lostReading_mono`, `lostReading_start`, `lostReading_commutes`, `lostReading_shortens`, `lostReading_within_length`, `lost_not_kept`, `closed_never_lost`). Give every new theorem a name that does not clash with that module's.
+
+**Part A. With no reading (`GuardHorizon`).** Let `L n s := iter (lostStep P guard) (fun t => ¬ guard t) n s`.
+
+1. `OneOrOther (choiceStep P guard) (lostStep P guard)`, from premises stated plainly as hypotheses: the configurations on a list (`every : ∀ s, s ∈ all`), the moves on a list, and three decisions: `∀ s, guard s ∨ ¬ guard s`; `∀ s a, Enabled P s a ∨ ¬ Enabled P s a`; `∀ s a t, P.step s a t ∨ ¬ P.step s a t`. Weaken any that can be weakened and say so.
+2. `NeverBoth (choiceStep P guard) (lostStep P guard)`, with no premise if it has none.
+3. As CALLS of Module 1 through `iter_iff_viable`: `viable_or_lost : ∀ n s, Viable P guard n s ∨ L n s`; `lost_not_viable` again as one call of `iter_not_both` (name it `lost_not_viable_call`; the package's is an induction of its own); and
+
+```lean
+theorem closed_or_lost : ((∃ K, Closed P guard K ∧ K s) ∨ L all.length s) ∧
+    ¬ ((∃ K, Closed P guard K ∧ K s) ∧ L all.length s)
+```
+
+**Part B. Through a reading (`Keeping`).**
+
+1. `OneOrOther (readingStep P sense guard allowed decode) (lostReadingStep P sense guard allowed decode)` from: the moves listed; `updates` and the two decisions as in `ScratchTwoSides` (asked only of guarded codes where that is enough); and, in place of `everyValue`, **the weaker list of values**:
+
+```lean
+(someValues : ∀ c, codeGuard decode guard c → ∀ a, Usable P allowed (decode c) a →
+  ∃ values : List O, ∀ o, ∃ o', o' ∈ values ∧
+    ∀ s, Seen P sense (decode c) a o s ↔ Seen P sense (decode c) a o' s)
+```
+
+(or a weaker form still that goes through, for instance "or the class seen at `o` is empty"; say what you chose and why).
+2. `kept_or_lost_call : ∀ n c, KeptFor P sense guard allowed n (decode c) ∨ Lost … n c` as ONE call of `iter_or` and the bridge `iter_iff_kept`. No induction on `n` of its own.
+3. Is `NeverBoth readingStep lostReadingStep` true? On paper I think NOT for arbitrary X and Y (`coveredBy` lets a larger code cover the class seen, and X need not hold of the exact code). Settle it: prove it, or say exactly what blocks it and leave `lost_not_kept` as the direct proof it is. Do not force it.
+4. The statement, with the split at the length:
+
+```lean
+theorem closed_or_lost_within_length {all : List C} (within : ∀ c, codeGuard decode guard c → c ∈ all) {c : C} :
+    (InClosedFamily P sense guard allowed (decode c) ∨ Lost … all.length c) ∧
+    ¬ (InClosedFamily P sense guard allowed (decode c) ∧ Lost … all.length c)
+```
+
+Note the list: `coded_kept_iff_closed` asks only that the GUARDED codes be listed. If the statement holds with that list (its length then counts the guarded codes only), state it so; if it needs every code listed, say why.
+5. The losing side's bound two ways, both stated: by the law with nothing decided (`lostReading_within_length`, already there: codes and moves listed, no `updates`); and from Part B.4 with `closed_never_lost` (decided, no commuting used). Say in the report exactly which premises each route uses.
+
+**Part C. One process, both outcomes of ONE theorem (Drain).** Under the reading that keeps nothing: the two starts together are lost within the list's length (as in `ScratchTwoSides`, now from B.4). Under the reading that keeps the level reached (`LCode`, `decodeL`, `allLevel`, `everyLevel`, `updatesLevel` of `ScratchDrainOnTheLaw`): supply B.1's premises for it (the two decisions for the eight codes; `someValues` by a short list of levels, each value of `Nat` standing with a listed one), apply THE SAME theorem B.4, and get the closed family from it by refuting the losing branch, or state both branches' premises met and name which outcome holds by the theorem already there. So that the report can say truthfully: one theorem, one process, two readings, the two outcomes.
+
+**Part D. The older results that test whether the pair is a law or a lemma (`Lasting.lean`).** `Lasts f adm guard n s` is "within the guard and every admissible disturbance leads on" (already an iterate: `iter_region_iff_lasts`); `Reaches f adm target n s` (l. 562) is "in the target, or every admissible disturbance leads on to reaching". Both are for-every, so they are each other's other side only for a determined law.
+
+1. Make `Reaches` an iterate: its step, and a bridge `iter … ↔ Reaches …` by `iter_iff_stages` (count its lines).
+2. `Reaches.not_lasts` (l. 699: given one admissible disturbance, reaching excludes lasting outside the target; an induction on `n` of its own) as ONE call of `iter_not_both` from a one-step `NeverBoth`. Statement unchanged.
+3. `reaches_of_not_lasts` and `reaches_iff_not_lasts` (ll. 844 to 857: determined law, decided target; an induction on `n` of its own) from `iter_or` and 2, the one-step `OneOrOther` from the target decided at the point. Statement unchanged (it has `[DecidablePred target]`; keep that form or the plain disjunction, and say which).
+4. `Lasting.Continues.decided` (l. 975) and `AlikeTo.decided` (`Likeness.lean` l. 976) are of another form: ONE iterate decided, where the step keeps deciding. State that form once (`iter_decided`: from the start decided at each point and `∀ X, (∀ t, Decided (X t)) → ∀ z, Decided (Φ X z)`, every iterate is decided at every point), say whether it is a call of `iter_or` with `iter_not_both` or its own three lines, and do `Continues.decided` as a call of it through `Parting.iter_iff_continues` if `Parting` has that bridge for this `Continues` (check: there may be two notions of that name). Do NOT do `AlikeTo.decided` unless it is short; say what it would take.
+5. **Count, for each of 2, 3, 4 and for `lost_not_viable_call`: the lines of the older proof (with its induction) against the lines of the call with its one-step lemma and any bridge.** Give the table. Do not shorten by cramming lines.
+
+Nothing else from the sweep's list of pairs, however many it names.
+
+## What counts as nothing gained (frozen)
+
+- **U1.** `iter_or` or `iter_not_both` needs more than its two premises, or Module 1 has an induction on a list.
+- **U2.** `kept_or_lost_call` or `viable_or_lost` is not a call of `iter_or`: it has an induction on `n` of its own, or the one-step premise can only be proved by going through all horizons.
+- **U3.** A premise of `OneOrOther` in Part A or B hands in the outcome (decides `Viable`, `KeptFor`, `L` or `Lost` at some horizon), or a classical principle or any axiom enters.
+- **U4.** The level reading cannot be brought under B.4 (then say exactly which premise it cannot meet).
+- **U5.** `lost_not_viable_call` is not shorter or plainer than the package's own induction, or is its induction again.
+- **U6.** Part 4 of Module 1 comes out only with the premises of the bound it was to replace.
+- **U7.** Any declaration with an axiom.
+- **U8 (the coordinating session's test, taken before the build).** The pair of steps is a JOIN only if an older result (`Reaches.not_lasts`, `reaches_of_not_lasts`, `Continues.decided`, `lost_not_viable`) comes out as a case with its statement unchanged, its induction gone, and no more lines than it has, bridge and one-step lemma counted. If none does, Module 1's items 1 and 2 are a lemma that saves about three lines a case, and the report says so in those words. What is then left to weigh is item 3 and item 4 of Module 1 (the statement with the list; either bound giving the other), as the form of which the either-or through a reading is a case.
+
+## Traps
+
+- `nomatch` on an equation between numbers brought `propext` on 22 November; use `Nat.noConfusion` or a lemma of `Prelude`. `simp`, `omega`, `decide` on propositions with free variables often bring axioms.
+- `Keeping`'s names are in `namespace Viability`; `GuardHorizon`'s in its own; `PredicateIteration`'s in `namespace Iteration`. `GuardHorizon`'s sections fix `S A : Type` in places: match its universes.
+- `iter_iff_kept` needs `updates`; `iter_iff_viable` needs nothing.
+- An empty class is kept at every horizon where a move exists (`keptFor_empty`).
+- Write only under `/Users/ren/tmp/fm/build12/` and `/Users/ren/theories/tmp/fm/centre22/pair/` (your report). Change nothing in the repository or in git. Start no further agents.
+
+## What to return
+
+Your whole report as your final answer, also saved as `/Users/ren/theories/tmp/fm/centre22/pair/REPORT.md`: (1) in seven lines: what built clean, what did not, U1 to U7; (2) every definition and theorem as it stands, with its premises, and what each proof calls (say of each: a call, or an induction of its own); (3) Part B.3's answer; which list B.4 needs; the two routes of B.5 with their premises; (4) Part C: the statements, or what blocked it; Part D; (5) the last build's log (its JSON), the number of builds, what you did not do; (6) anything in this brief that was wrong.

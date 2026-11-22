@@ -1,0 +1,1 @@
+{'cases': 4000, 'both': 0, 'updates_cases': 3487, 'neither_with_updates': 0, 'bound_fail': 0, 'same_class_differ': 0, 'cases_with_repeats': 2426}

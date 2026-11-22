@@ -1,0 +1,105 @@
+cells (S configurations, A moves, O values; a case = process x guard x family of codes)
+cell                          cases  code-levels  seconds family mode
+exhaustive S0 A0 O0               2            3      0.0 all
+exhaustive S0 A1 O0               2            3      0.0 all
+exhaustive S0 A1 O1               2            3      0.0 all
+exhaustive S0 A2 O2               2            3      0.0 all
+exhaustive S1 A0 O0               8           32      0.0 all
+exhaustive S1 A0 O1               8           32      0.0 all
+exhaustive S1 A1 O1              24           96      0.0 all
+exhaustive S1 A1 O2              40          160      0.0 all
+exhaustive S1 A2 O1              72          288      0.0 all
+exhaustive S1 A2 O2             200          800      0.0 all
+exhaustive S2 A0 O0              64          768      0.0 all
+exhaustive S2 A0 O2              64          768      0.0 all
+exhaustive S2 A1 O1            3136        37632      0.1 all
+exhaustive S2 A1 O2           18496       221952      0.3 all
+exhaustive S2 A2 O1          153664      1843968      2.8 all
+exhaustive S2 A2 O2         5345344     64144128    101.1 all
+exhaustive S3 A1 O1         6912000    276480000     90.9 all
+sampled S3 A1 O1             320000     13605760      9.0 rnd:15
+sampled S3 A1 O2             320000     13583150      9.1 rnd:15
+sampled S3 A2 O1             320000     13576160      9.2 rnd:15
+sampled S3 A2 O2             320000     13618910      9.6 rnd:15
+sampled S3 A3 O2             160000      6816100      2.5 rnd:15
+sampled S4 A1 O1              64000      9798732      1.3 rnd:15
+sampled S4 A2 O2              64000      9786366      1.4 rnd:15
+ALL: cases 14001128, (case, code, level) triples 423515814, seconds 237
+
+Q1 lost_not_kept: (case, code, n) with Lost n c and KeptFor n (decode c): 0
+   n = 0: {'kept_only': 20800071, 'lost_only': 25097890, 'neither': 0, 'both': 0}
+   n = 1: {'kept_only': 10738096, 'lost_only': 33918213, 'neither': 1241652, 'both': 0}
+   n = 2: {'kept_only': 9563968, 'lost_only': 34518610, 'neither': 1815383, 'both': 0}
+   Lost (n+1) c with KeptFor n (decode c) (allowed; shows no slack): 9448780
+   cases with the empty class a code: 7050187 ; of them the empty class lost at some level: 73
+   empty-class-lost by number of moves: {0: 73, 1: 0, 2: 0, 3: 0}
+   cases with a guarded code and a move not usable from it: 5974288
+   cases with no move at all (A0): 146
+
+Q2 kept_or_lost
+   every class a code: (case, code, n) looked at 34007068, neither kept nor lost: 0
+   proper subfamilies: cases 13373787, with some code neither at some level: 1679866
+   cases where `updates` (guarded codes, usable moves) holds: 11298837; neither there: 0; of those cases, codes ARE missing at an unguarded code or an unusable move in: 7385543
+   cases where `updates` is asked only of INHABITED classes seen: 11737947; neither there: 0
+   cases where `updates` fails: 2702291; of them with every code decided at every level anyway: 1022425
+   smallest neither, per cell that has one (k codes, level n):
+     exhaustive S0 A0 O0      none
+     exhaustive S0 A1 O0      none
+     exhaustive S0 A1 O1      none
+     exhaustive S0 A2 O2      none
+     exhaustive S1 A0 O0      none
+     exhaustive S1 A0 O1      none
+     exhaustive S1 A1 O1      none
+     exhaustive S1 A1 O2      none
+     exhaustive S1 A2 O1      none
+     exhaustive S1 A2 O2      none
+     exhaustive S2 A0 O0      none
+     exhaustive S2 A0 O2      none
+     exhaustive S2 A1 O1      k,n = [1, 1] code [1] case {"nS": 2, "nA": 1, "nO": 1, "steps": [{"s": 0, "a": 0, "to": [], "values": [], "allowed": false}, {"s": 1, "a": 0, "to": [0], "values": [0], "allowed": true}], "guard": [1], "codes": [[1]]}
+     exhaustive S2 A1 O2      k,n = [1, 1] code [1] case {"nS": 2, "nA": 1, "nO": 2, "steps": [{"s": 0, "a": 0, "to": [], "values": [], "allowed": false}, {"s": 1, "a": 0, "to": [0], "values": [0], "allowed": true}], "guard": [1], "codes": [[1]]}
+     exhaustive S2 A2 O1      k,n = [1, 1] code [1] case {"nS": 2, "nA": 2, "nO": 1, "steps": [{"s": 0, "a": 0, "to": [], "values": [], "allowed": false}, {"s": 0, "a": 1, "to": [], "values": [], "allowed": false}, {"s": 1, "a": 0, "to": [], "values": [], "allowed": false}, {"s": 1, "a": 1, "to": [0], "values": [0], "allowed": true}], "guard": [1], "codes": [[1]]}
+     exhaustive S2 A2 O2      k,n = [1, 1] code [1] case {"nS": 2, "nA": 2, "nO": 2, "steps": [{"s": 0, "a": 0, "to": [], "values": [], "allowed": false}, {"s": 0, "a": 1, "to": [], "values": [], "allowed": false}, {"s": 1, "a": 0, "to": [], "values": [], "allowed": false}, {"s": 1, "a": 1, "to": [0, 1], "values": [0, 1], "allowed": true}], "guard": [1], "codes": [[1]]}
+     exhaustive S3 A1 O1      k,n = [1, 1] code [1] case {"nS": 3, "nA": 1, "nO": 1, "steps": [{"s": 0, "a": 0, "to": [], "values": [], "allowed": false}, {"s": 1, "a": 0, "to": [0], "values": [0], "allowed": true}, {"s": 2, "a": 0, "to": [0], "values": [0], "allowed": true}], "guard": [1], "codes": [[1]]}
+     sampled S3 A1 O1         k,n = [1, 1] code [0, 1] case {"nS": 3, "nA": 1, "nO": 1, "steps": [{"s": 0, "a": 0, "to": [0, 1], "values": [0, 0], "allowed": true}, {"s": 1, "a": 0, "to": [2], "values": [0], "allowed": true}, {"s": 2, "a": 0, "to": [2], "values": [0], "allowed": true}], "guard": [0, 1], "codes": [[0, 1]]}
+     sampled S3 A1 O2         k,n = [1, 1] code [0, 2] case {"nS": 3, "nA": 1, "nO": 2, "steps": [{"s": 0, "a": 0, "to": [1, 2], "values": [0, 0], "allowed": true}, {"s": 1, "a": 0, "to": [2], "values": [0], "allowed": false}, {"s": 2, "a": 0, "to": [0, 1, 2], "values": [0, 1, 0], "allowed": true}], "guard": [0, 2], "codes": [[0, 2]]}
+     sampled S3 A2 O1         k,n = [1, 1] code [0] case {"nS": 3, "nA": 2, "nO": 1, "steps": [{"s": 0, "a": 0, "to": [1, 2], "values": [0, 0], "allowed": false}, {"s": 0, "a": 1, "to": [2], "values": [0], "allowed": true}, {"s": 1, "a": 0, "to": [2], "values": [0], "allowed": false}, {"s": 1, "a": 1, "to": [2], "values": [0], "allowed": true}, {"s": 2, "a": 0, "to": [1, 2], "values": [0, 0], "allowed": false}, {"s": 2, "a": 1, "to": [1, 2], "values": [0, 0], "allowed": false}], "guard": [0, 1], "codes": [[0]]}
+     sampled S3 A2 O2         k,n = [1, 1] code [0] case {"nS": 3, "nA": 2, "nO": 2, "steps": [{"s": 0, "a": 0, "to": [0, 2], "values": [1, 0], "allowed": false}, {"s": 0, "a": 1, "to": [1, 2], "values": [1, 1], "allowed": true}, {"s": 1, "a": 0, "to": [0, 1], "values": [1, 1], "allowed": false}, {"s": 1, "a": 1, "to": [0, 1, 2], "values": [1, 0, 0], "allowed": false}, {"s": 2, "a": 0, "to": [0], "values": [1], "allowed": true}, {"s": 2, "a": 1, "to": [2], "values": [0], "allowed": true}], "guard": [0], "codes": [[0]]}
+     sampled S3 A3 O2         k,n = [1, 1] code [1] case {"nS": 3, "nA": 3, "nO": 2, "steps": [{"s": 0, "a": 0, "to": [1, 2], "values": [0, 0], "allowed": true}, {"s": 0, "a": 1, "to": [0, 1], "values": [1, 0], "allowed": true}, {"s": 0, "a": 2, "to": [0, 1], "values": [1, 0], "allowed": true}, {"s": 1, "a": 0, "to": [0, 1, 2], "values": [0, 0, 0], "allowed": true}, {"s": 1, "a": 1, "to": [0, 1, 2], "values": [0, 1, 0], "allowed": true}, {"s": 1, "a": 2, "to": [1, 2], "values": [1, 1], "allowed": false}, {"s": 2, "a": 0, "to": [0, 1, 2], "values": [0, 0, 0], "allowed": true}, {"s": 2, "a": 1, "to": [0, 1, 2], "values": [1, 1, 0], "allowed": true}, {"s": 2, "a": 2, "to": [1, 2], "values": [1, 0], "allowed": false}], "guard": [0, 1], "codes": [[1]]}
+     sampled S4 A1 O1         k,n = [1, 1] code [2] case {"nS": 4, "nA": 1, "nO": 1, "steps": [{"s": 0, "a": 0, "to": [1, 2, 3], "values": [0, 0, 0], "allowed": true}, {"s": 1, "a": 0, "to": [0, 1, 3], "values": [0, 0, 0], "allowed": true}, {"s": 2, "a": 0, "to": [2, 3], "values": [0, 0], "allowed": true}, {"s": 3, "a": 0, "to": [0, 1, 2, 3], "values": [0, 0, 0, 0], "allowed": false}], "guard": [2], "codes": [[2]]}
+     sampled S4 A2 O2         k,n = [1, 1] code [3] case {"nS": 4, "nA": 2, "nO": 2, "steps": [{"s": 0, "a": 0, "to": [0, 1, 2, 3], "values": [1, 0, 1, 1], "allowed": true}, {"s": 0, "a": 1, "to": [2, 3], "values": [1, 1], "allowed": true}, {"s": 1, "a": 0, "to": [1, 2, 3], "values": [0, 0, 0], "allowed": false}, {"s": 1, "a": 1, "to": [1, 2], "values": [1, 0], "allowed": false}, {"s": 2, "a": 0, "to": [1, 2, 3], "values": [0, 1, 0], "allowed": false}, {"s": 2, "a": 1, "to": [0, 2], "values": [1, 0], "allowed": true}, {"s": 3, "a": 0, "to": [0, 3], "values": [0, 0], "allowed": true}, {"s": 3, "a": 1, "to": [0, 1, 2, 3], "values": [1, 0, 0, 0], "allowed": true}], "guard": [1, 3], "codes": [[3]]}
+
+Q3 the two halves of `Names`
+   cases with the variants computed: 6801128
+   super (the code's class CONTAINS the class seen):
+      lost and kept together (case, code, n): 17947261; in a closed family and lost: 3084610
+      neither, over all cases: 1749911; cases where every class seen after a usable move from a guarded code has such a code: 6164715, neither there: 0; bound at k fails: 0
+      smallest lost-and-kept: cell (1, 1, 1) k,n = [2, 1] code [] case {"nS": 1, "nA": 1, "nO": 1, "steps": [{"s": 0, "a": 0, "to": [], "values": [], "allowed": false}], "guard": [], "codes": [[], [0]]}
+   sub (the code's class lies INSIDE the class seen):
+      lost and kept together (case, code, n): 0; in a closed family and lost: 0
+      neither, over all cases: 2838309; cases where every class seen after a usable move from a guarded code has such a code: 5859728, neither there: 1471535; bound at k fails: 0
+
+Q4 the bounds
+   cases where Lost (k+1) differs from Lost k (k = number of codes): 0
+   cases where Lost (g+1) differs from Lost g (g = number of GUARDED codes): 0
+   largest least-losing level found, by k codes (rows) and g guarded codes (columns):
+      k\g   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+        0   0   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+        1   0   1   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+        2   0   1   2   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+        3   0   1   2   3   .   .   .   .   .   .   .   .   .   .   .   .   .
+        4   0   1   2   3   4   .   .   .   .   .   .   .   .   .   .   .   .
+        5   0   1   2   3   3   5   .   .   .   .   .   .   .   .   .   .   .
+        6   0   1   2   3   3   3   5   .   .   .   .   .   .   .   .   .   .
+        7   0   1   2   3   3   3   2   6   .   .   .   .   .   .   .   .   .
+        8   0   1   2   2   3   4   4   2   6   .   .   .   .   .   .   .   .
+   k reached (least-losing level = k) for k = [1, 2, 3, 4, 5] ; always with g = k: True
+   level g reached for (k, g): [(1, 1), (2, 1), (2, 2), (3, 1), (3, 2), (3, 3), (4, 1), (4, 2), (4, 3), (4, 4), (5, 1), (5, 2), (5, 3), (5, 5), (6, 1), (6, 2), (6, 3), (7, 1), (7, 2), (7, 3), (8, 1), (8, 2), (9, 1), (9, 2), (9, 3), (10, 1), (10, 2), (10, 3), (11, 1), (11, 2), (12, 1), (12, 2), (13, 1), (13, 2), (14, 1), (14, 2), (15, 1)]
+   level above g anywhere: False
+   kept side, `updates` holds: largest n with a code kept for n and not n+1, by g guarded codes: {1: 0, 2: 1, 3: 2, 4: 2, 5: 3, 6: 4, 7: 4, 8: 5, 9: 2, 10: 2, 11: 3, 12: 3, 13: 3, 14: 4, 15: 4, 16: 6}
+   kept side, `updates` fails: largest n with a code kept for n and not n+1, by g guarded codes: {1: 5, 2: 6, 3: 5, 4: 5, 5: 5, 6: 6, 7: 6, 8: 5, 9: 6, 10: 4, 11: 6, 12: 6, 13: 6, 14: 6, 15: 6}
+   kept for g steps and not for ever: with `updates` 0 cases, without 94373 cases
+
+Q5 closed_or_lost_within
+   every class a code: codes 3759100, 'in a closed family' differs from 'not Lost at the number of codes': 0
+   any family where `updates` holds: codes 37451667, differs: 0
+   families where `updates` fails: codes in no closed family and not lost: 1881124; in a closed family and lost: 0

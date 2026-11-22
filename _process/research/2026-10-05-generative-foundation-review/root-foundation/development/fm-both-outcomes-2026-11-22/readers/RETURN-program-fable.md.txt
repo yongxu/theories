@@ -1,0 +1,180 @@
+# Return: reader "program" (the statements and their premises, tested by program on small cases)
+
+*AI-written (Claude Fable 5.2), 22 November 2026, for board row FM. I took no part in the module. Nothing in the repository was edited; no Lean, lake, build, gate or test was run; no agent was started. Everything I wrote is under `/Users/ren/theories/tmp/fm/centre22/readers/` (this file and `program/`). What follows is tested by program on finite cases, or argued, and says which; none of it is a proof in Lean.*
+
+## Verdict on the one question, in eight lines
+
+1. **`lost_not_kept`**: never both, in 423,515,814 (case, code, level) triples over 14,001,128 cases. The levels are aligned, not shifted.
+2. **`kept_or_lost`**: with every class a code, always one or the other (34,007,068 triples, none neither). With a subfamily it fails; the smallest failure has 2 configurations, 1 move, 1 value, 1 code, at n = 1, and what is missing is `updates`. `updates` asked only of guarded codes with a usable move is enough (11,298,837 such cases, none neither; in 7,385,543 of them codes are missing elsewhere).
+3. **`Names` exact**: with codes that only *contain* the class seen, `lost_not_kept` **fails** (smallest case below) and the either-or survives. With codes that only lie *inside* the class seen it is the other way round. Each theorem uses one direction of the `↔`.
+4. **The bound**: `Lost n c → Lost k c` held in every case. `k` **is reached** for k = 2, 3, 4 (and 5, 6): there is no `k - 1` form in general. A sharper count held in every case: the number `g` of *guarded* codes. Kept side: largest edge is `g - 1`, reached.
+5. **`closed_or_lost_within`**: "in a closed family" was exactly "not `Lost` at the number of codes" for every code in every case with all classes coded (3,759,100 codes), and in every case where `updates` holds (37,451,667 codes).
+6. **Drain**: under the reading that keeps nothing the two starts are first lost at exactly 3; under the level reading never lost (levels 0 to 12, eight codes, so for ever). Over all values in Nat a coded class and move see at most 3 distinct classes; the list `[0, 1, 2]` covers them all.
+7. **Not testable by a two-valued program**: `inOrOut`, `usableOrNot`, `everyMove`, `everyValue`. I ran a three-valued model for the two decisions: each does work. The two lists need an infinite carrier and a reduction, argued below, not run.
+8. **Against the implementer's report**: its T3 line "It assumes no decision about either outcome" is not so at level 0: `inOrOut` is the conclusion at n = 0, word for word (last section).
+
+## What was read
+
+Whole: `/Users/ren/theories/tmp/fm/centre22/two-sides/ScratchTwoSides.lean.txt` (217 lines); `.../BRIEF-TWO-SIDES-THROUGH-A-READING.md`; `.../two-sides/REPORT.md`; `Becoming/PredicateIteration.lean` (276 lines); `/Users/ren/tmp/fm/build12/Becoming/ScratchKeptForViable.lean` and `ScratchDrainOnTheLaw.lean`. Of `Becoming/Keeping.lean`: ll. 1 to 125 and 265 to 394 (the header, `Seen` to `KeptFor`, `Plan` heads, the order lemmas, `keptFor_of_closed`, the whole `Readings` section). Of `GenerativeCore.lean`: ll. 23 to 29. Of `Becoming/Undecided.lean`: ll. 379 to 389 (`each_or_some`). Not read: `GuardHorizon.lean`, the rest of `Keeping.lean` (plans, `Matching`, `Joint`), the rest of `Undecided.lean`.
+
+## The model, as the Lean has it
+
+- `GenerativeCore.lean` l. 23: `structure Process (State) (Action) where step : State → Action → State → Prop` (a relation: a move may have no, one or several outcomes); l. 27: `Enabled P s a := ∃ t, P.step s a t`.
+- `Keeping.lean` l. 78: `Seen P sense B a o t := ∃ s, B s ∧ P.step s a t ∧ sense s a t = o`; l. 89: `Usable P allowed B a := ∀ s, B s → allowed s a ∧ Enabled P s a`; ll. 95 to 99: `KeptFor … 0 B := ∀ s, B s → guard s`, `KeptFor … (n + 1) B := (∀ s, B s → guard s) ∧ ∃ a, Usable P allowed B a ∧ ∀ o, KeptFor … n (Seen P sense B a o)`; ll. 333 to 336 `InClosedFamily`; l. 343 `codeGuard`.
+- Scratch module l. 19 `Names decode d B := ∀ s, decode d s ↔ B s`; l. 23 `Outside decode guard c := ∃ s, decode c s ∧ ¬ guard s`; ll. 28 to 31 `lostReadingStep … X c := Outside decode guard c ∨ ∀ a, ¬ Usable P allowed (decode c) a ∨ ∃ o d, Names decode d (Seen P sense (decode c) a o) ∧ X d`; ll. 35 to 37 `Lost := iter (lostReadingStep …) (Outside decode guard)`, with `iter` of `PredicateIteration.lean` ll. 77 to 79.
+
+Two programs hold these. `program/naive.py` is a literal transcription (sets, every quantifier written out, codes any map into classes). `program/fast.py` is the same on bitmasks, codes being a family of distinct classes. `program/crosscheck.py` compared them on 21,500 random cases at every level and code, for `KeptFor`, `Lost` and the two variants of `Names`: 0 mismatches. `InClosedFamily` was computed as the largest closed family and compared with a brute force over **all** families of classes (40,909 comparisons, |S| ≤ 3): 0 mismatches. `program/dup.py` covers codes that repeat a class (2,426 cases with repeats): never both, never neither where `updates` holds, bound at the number of codes holds, two codes of one class lost alike.
+
+Two reductions in the sweeps, both read off the definitions and tested in `crosscheck.py`: `sense` is varied only at triples where the step holds, and `allowed s a` only where `a` is enabled at `s`.
+
+Cells (S configurations, A moves, O values; a case is a process, a guard and a family of codes). **Exhaustive, every subfamily of the classes as codes**: all cells with S ≤ 1; S2 with A0, A1, A2 and O1, O2 (S2 A2 O2: 5,345,344 cases); S3 A1 O1 (6,912,000 cases). **Sampled** (the full family and 15 random subfamilies each): S3 A1 O1, S3 A1 O2, S3 A2 O1, S3 A2 O2 (320,000 cases each), S3 A3 O2 (160,000), S4 A1 O1 and S4 A2 O2 (64,000 each). Levels 0 to 2^S + 1 in every case. Totals: 14,001,128 cases, 237 seconds in 36 runs, none over 18 seconds. Table: `program/out/summary.txt`.
+
+## 1. `lost_not_kept`
+
+`Lost n c` together with `KeptFor n (decode c)`: **0** of 423,515,814 triples. Also 0 in the three-valued model of the last-but-one section (value of `Lost n c ∧ KeptFor n (decode c)` is 0 in every model), and 0 with repeated codes.
+
+Levels, over all cases:
+
+| n | kept only | lost only | neither | both |
+|---|---|---|---|---|
+| 0 | 20,800,071 | 25,097,890 | 0 | 0 |
+| 1 | 10,738,096 | 33,918,213 | 1,241,652 | 0 |
+| 2 | 9,563,968 | 34,518,610 | 1,815,383 | 0 |
+
+Not shifted: where every class is a code, `Lost n c` held exactly where `KeptFor n (decode c)` failed, at every level (section 2), so neither side can be moved by one. `Lost (n + 1) c` with `KeptFor n (decode c)` occurs 9,448,780 times (the edge itself), so the statement cannot be strengthened to `Lost (n + 1) c → ¬ KeptFor n (decode c)`.
+
+Covered: the empty class as a code in 7,050,187 cases; it is lost at some level in 73 of them, all in cells with no move, where `KeptFor (n + 1)` of it fails too (it asks for a move). With a move, the empty class was never lost. 146 cases with no move at all. 5,974,288 cases with a guarded code and a move not usable from it.
+
+## 2. `kept_or_lost`
+
+**Every class a code** (so `updates`, ll. 93 to 94, holds): neither kept nor lost in **0** of 34,007,068 triples, at every level 0 to 2^S + 1.
+
+**A subfamily as codes**: 1,679,866 of 13,373,787 cases have a code that is neither at some level. The smallest (`program/witness.py`, case W2, evaluated with the literal model):
+
+- configurations 0, 1; one move `a`; one value; the only step is `1 —a→ 0`, allowed; guard = {1}; one code `c` with `decode c` = {1}.
+- `codeGuard c` holds, `Outside c` fails. `Usable {1} a` holds. `Seen {1} a u` = {0}.
+- `KeptFor 0 {1}` holds; `KeptFor 1 {1}` fails (the class seen, {0}, is outside the guard).
+- `Lost 0 c` fails; `Lost 1 c` fails: the one move is usable and no code `d` has `Names decode d {0}`. So also at every later level.
+- `updates` fails at exactly (c, a, u). With a second code for {0} added, `Lost 1 c` holds.
+
+It is smallest in each count: no case is neither in any exhaustive cell with 0 or 1 configuration or with no move; none at n = 0 anywhere; one code, one value.
+
+**Is `updates` of guarded codes with a usable move enough?** Yes, in every case tried. Cases where that restricted `updates` holds: 11,298,837; neither: 0. In 7,385,543 of those cases the unrestricted form (every code, every move) fails, so codes really are missing at unguarded classes or after unusable moves, and the either-or still holds. I found no case where codes are missing only there and the either-or fails.
+
+It is sufficient, not necessary: of the 2,702,291 cases where it fails, 1,022,425 have every code decided at every level anyway.
+
+A weaker premise also sufficed in every case: `updates` asked only where the class seen is **inhabited** (11,737,947 cases, 0 neither). The empty class is kept for ever once there is a move (`keptFor_empty`, `Keeping.lean` l. 306), and here a usable move is in hand. This is classical evidence; a Lean premise would have to say "has a code, or is empty".
+
+## 3. `Names` exact against codes that only contain the class seen
+
+I replaced `Names decode d (Seen …)` in `lostReadingStep` by each half of its `↔` (6,801,128 cases, exhaustive on S ≤ 2 and sampled on S3).
+
+**The code's class contains the class seen** (`∀ s, Seen … s → decode d s`):
+
+- `lost_not_kept` **fails**: 17,947,261 triples lost and kept together; 3,084,610 codes in a closed family and lost, so the "not both" half of `closed_or_lost_within` fails too.
+- Smallest: 1 configuration, 1 move, 1 value, guard empty, codes ∅ and {0}, n = 1. The empty class is kept for 1 step and "lost" at 1 because ∅ lies inside {0}, which is outside the guard.
+- A case with an inhabited class (W3a): configuration 0 stays at 0, guard = {0}, codes {0} and {0, 1}. {0} is in a closed family and "lost" at 1, because {0} lies inside {0, 1}, which is `Lost 0`.
+- The either-or survives wherever every class seen (guarded code, usable move) has a containing code: 6,164,715 cases, 0 neither. The bound at `k` survives (0 failures).
+
+**The code's class lies inside the class seen** (`∀ s, decode d s → Seen … s`):
+
+- `lost_not_kept` survives: 0 both, 0 closed-and-lost.
+- The either-or fails even where every class seen has such a code: 1,471,535 triples (W3b: the class seen {1, 2} has only the part {1} coded, and {1} is kept).
+
+This matches the proofs: `lost_not_kept` uses only `(names s).mp` (l. 80), and `kept_or_lost` uses `(names s).mpr` for the kept branch (l. 124). Exactness is asked because both theorems are wanted of one `Lost`.
+
+## 4. The bound
+
+**Losing side.** With `k` codes, `Lost (k + 1)` equalled `Lost k` in all 14,001,128 cases, so `Lost n c → Lost k c` for every n.
+
+**How tight.** `k` is reached. The chain (`witness.py`, W4): configurations 1 to k, all within the guard; the one move takes i to i − 1; nothing follows 1; codes the k classes {i}; `updates` holds. Then {i} is first lost at exactly i, and is kept for i − 1 steps and not for i. Recomputed for k = 2, 3, 4, 5, 6: `Lost (k − 1) {k}` fails, `Lost k {k}` holds. The exhaustive cells reach k = 3 already with 2 configurations (codes {0}, {1}, {0, 1}).
+
+Largest least-losing level found in the sweeps, by k codes (rows) and g guarded codes (columns):
+
+| k \ g | 0 | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|---|
+| 1 | 0 | 1 | | | | |
+| 2 | 0 | 1 | 2 | | | |
+| 3 | 0 | 1 | 2 | 3 | | |
+| 4 | 0 | 1 | 2 | 3 | 4 | |
+| 5 | 0 | 1 | 2 | 3 | 3 | 5 |
+
+(Five codes need 3 configurations, where only the one-move cell is exhaustive: the entry 3 at k = 5, g = 4 is a lower estimate.)
+
+- `k` was reached only where every code is guarded (g = k). The first level then holds the codes with no usable move, since `Lost 0` is empty.
+- **The level never exceeded g**: `Lost (g + 1)` equalled `Lost g` in every case. Argued: `Lost 0` is the unguarded codes, every later strict rise adds a guarded code. So with one code outside the guard the level is at most k − 1 (W4o: the chain ending outside the guard, k codes, level k − 1).
+- So there is no `pred` form for this step in general, and the count that the cases support is the guarded codes. `lostReading_shortens` (l. 63) asks `every : ∀ c, c ∈ all`; `iter_shortens` (`PredicateIteration.lean` l. 248) needs the outside codes on its list (`within : ∀ x, (W₀ x → I all.length y) → x ∈ all`), so that theorem as called gives `k`, not `g`.
+
+**Kept side**, against the number g of guarded codes:
+
+- where `updates` holds: kept for g steps and not for ever in 0 cases; the largest n with a code kept for n and not n + 1 is g − 1, reached by the chain for g = 2 to 6 (in the sweeps: g = 1, 2, 3 give 0, 1, 2).
+- where `updates` fails: 94,373 cases kept for g steps and not for ever; edges up to 5 with one guarded code and 6 with two. `coded_kept_iff_closed` needs it.
+
+Both sides therefore meet at one number in these cases: least losing level ≤ g, last kept level ≤ g − 1, and where the either-or holds the first is the second plus one.
+
+## 5. `closed_or_lost_within`
+
+- Every class a code: `InClosedFamily (decode c)` differed from `¬ Lost k c` at **0** of 3,759,100 codes.
+- Any family where `updates` (restricted) holds: 0 of 37,451,667 codes.
+- Families where `updates` fails: 1,881,124 codes in no closed family and not lost at k (the first half fails), 0 in a closed family and lost (the second half needs no premise, as in the module l. 143).
+- Since `Lost g = Lost k` in every case, the same holds at the number of guarded codes.
+
+## 6. Drain
+
+`program/drain.py`, with the literal model. Configurations a lane and a level 0 to 3 (the Lean has Nat; no move raises a level and every coded class has levels at most 2; run again with levels 0 to 2, same output); moves `false`, `true`; `next` as `ScratchKeptForViable.lean` ll. 265 to 269; guard: level not zero; every move allowed.
+
+**The reading that keeps nothing** (nine codes, `decode c` = lane true at `c.1`, lane false at `c.2`):
+
+- `updates` holds; every code is guarded or has a configuration outside; every move is usable from every coded class. Guarded codes: (1,1), (1,2), (2,1), (2,2).
+- `Lost n (l2, l2)` for n = 0 to 10: 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1. **First lost at exactly 3.** `KeptFor n starts`: 1, 1, 1, 0, …. Not in a closed family; `Lost 9` holds.
+- Least losing level of each code: (1,1) at 1; (1,2) and (2,1) at 2; (2,2) at 3; the five codes with a zero at 0. So here k = 9, g = 4, and the largest level is 3.
+- Over the 8 lists of three moves the lower level reached is 0 each time; of the 4 lists of two moves, `false, true` and `true, false` leave both lanes at 1.
+
+**The reading that keeps the level reached** (eight codes of `LCode`):
+
+- `Lost n both` fails for n = 0 to 12; the eight codes' levels cannot change after 8, so it is never lost. `KeptFor n starts` holds for n = 0 to 12. In a closed family: yes.
+- Never lost: `both`, `empty`, `single b 1`, `single b 2`. Lost at 0: `single b 0`.
+- **Distinct classes seen over all values**, per coded class and move (computed over the values 0 to 49; values of 3 and above see the empty class since no level above 2 is reached): `both`: 3 (one lane at 2 at the value 2, the other at 1 at the value 1, empty at every other value); `single b k`: 2 (one configuration at one value, empty at the others); `empty`: 1. Most: **3**.
+- So a list of 3 values per (code, move) stands for every value. One list for all: `[0, 1, 2]` gives every class seen at every (code, move); `[1, 2, 3]` does not (it misses the value 0 after a `single` falls to level 0); `[0, 1, 2, 3]` does.
+- With the values cut to `[0, 1, 2]`, the kept and lost levels of the eight codes at n = 0 to 12 are the same as with all values, and every code is one or the other at each level.
+
+So Part C's either-or is out of reach for this reading only through the form of `everyValue` (a list of **every** value of `O`), not through anything in the case.
+
+## Part C premises that a two-valued program cannot test
+
+Every proposition is true or false in my finite cases, and every finite carrier is on a list. So `inOrOut` (l. 95), `usableOrNot` (ll. 96 to 97), `everyMove` (l. 90) and `everyValue` (ll. 91 to 92) hold of every case above; none of the sweeps says anything about them. Classically the either-or holds with no list at all (given `updates`), so no two-valued case, finite or infinite, can show a list doing work.
+
+**The two decisions: a three-valued model, run** (`program/heyting.py`, output `program/out/heyting.txt`). A proposition takes the values never, later, now (the two-world Kripke frame); `guard`, `step`, `allowed` take such values; the quantifiers are over finite carriers. Reasoning that decides nothing is sound in such a model. Cells: 1 or 2 configurations, 1 or 2 moves, codes every two-valued or every three-valued predicate; 6,561 models in each exhaustive S2 A1 cell, 24,000 sampled in S2 A2.
+
+- With all of `updates`, `inOrOut`, `usableOrNot` at value "now", the conclusion had value "now" at every level and code, in every model (0 failures): a check of the program against the proof.
+- **Without `inOrOut`** (the other two holding): the conclusion fails in every such model (for example 2,943 of 2,943 in S2 A1, two-valued codes). The value of the conclusion at n = 0 equalled the value of `inOrOut` in every model.
+- **Without `usableOrNot`** (the other two holding): the conclusion fails in 915 of 1,023 such models in S2 A1. Smallest: one configuration within the guard, its one step and its permission both holding "later": at n = 1 neither kept nor lost has value "now".
+- On its two-valued cases the model agreed with the literal one (364 cases compared, 0 mismatches).
+- Limit: this is first-order reasoning over fixed finite carriers. It does not evaluate `InClosedFamily` (a quantifier over families), and that it speaks for Lean without axioms is my claim, not a checked one.
+
+**The two lists: what would test them** (argued, not run, not in Lean). A model with an infinite carrier and a statement that the either-or without the list gives a principle that is not provable, in the way `Iteration.singleton_rise_needs_em` is cited in `PredicateIteration.lean` l. 22:
+
+- `everyValue`: configurations `start` and `t o` for o in Nat; one move, `start → t o` keeping the value o; guard at `t o` is `f o = false` for a given `f : Nat → Bool`; codes the singletons. `updates`, `inOrOut`, `usableOrNot`, `everyMove` hold. Then `KeptFor 1 {start}` is `∀ o, f o = false` and `Lost 1 start` is `∃ o, f o = true`: the either-or at n = 1 is the limited principle of omniscience for `f`.
+- `everyMove`: the same with the moves in Nat (`start —a→ t a`, one value): `KeptFor 1` is `∃ a, f a = false`, `Lost 1` is `∀ a, f a = true`.
+
+A Lean theorem of that shape for each list, and one for each decision (guard `fun _ => p`, or `allowed fun _ _ => p`, gives `p ∨ ¬ p`), would test the four premises in the package's own way.
+
+## Other things noticed (outside my question)
+
+1. **`inOrOut` is the conclusion at level 0.** `KeptFor … 0 (decode c)` unfolds to `∀ s, decode c s → guard s`, which is `codeGuard decode guard c`; `Lost … 0 c` unfolds to `Outside decode guard c`. The proof's first case is `| 0, c => inOrOut c` (l. 106). The brief's T3 reads "Part C needs a premise that hands in the outcome (for example that `KeptFor` or `Lost` is decided)", and the implementer's report says "It assumes no decision about either outcome" (REPORT l. 5). At n = 0 that sentence is not so. The brief itself listed `inOrOut`, and the three-valued run shows it cannot be dropped, so the theorem is not at fault; the telling should say that the either-or at level 0 is a premise and the theorem carries it to every level.
+2. **`everyValue` does not depend on the code or the move.** Its body is `∃ values : List O, ∀ o, o ∈ values` (ll. 91 to 92), which mentions neither `c` nor `a`. The report's "That list may depend on the code and move" (REPORT l. 97) says more than the premise does: it is "`O` is listed", asked only if some guarded code has a usable move. Section 6 shows what a dependent premise could be: a list such that every value's class seen is the class seen at a listed value (3 values in Drain).
+3. **The losing bound is not needed for `closed_or_lost_within`.** The first half splits at `all.length + 1` and then calls `lostReading_shortens` to come down one level (ll. 140 to 142). Split at `all.length`, the kept branch still goes through `coded_kept_iff_closed` and the lost branch is already at `all.length`; the implementer says so (REPORT l. 76). Then `every` could be the package's weaker `within` (guarded codes only, `Keeping.lean` l. 361), which is also the count section 4 supports. Whether T4 is met by a use of the bound that the proof arranged for itself is for the owner to weigh.
+4. **`updates` could ask less**: only of inhabited classes seen (section 2). Drain's code `.empty` exists to meet the present form at values no configuration reaches.
+5. Where `updates` fails, a code can be neither for some levels and then lost: a sampled S3 A1 O2 case has a code kept to level 1, neither at 2 and 3, lost from 4 (`program/out/rnd_3_1_2.json`, the k = 4 witness).
+
+## Files
+
+All under `/Users/ren/theories/tmp/fm/centre22/readers/program/`:
+
+- `naive.py` (literal model), `fast.py` (bitmask model), `crosscheck.py`, `dup.py`
+- `sweep.py`, `run_all.sh`, `summary.py`; results `out/*.json`, `out/summary.txt`, `out/run_all.log`
+- `witness.py` → `out/witness.txt` (W2, W3a, W3b, W4, W4o)
+- `drain.py` → `out/drain_lmax2.txt`, `out/drain_lmax3.txt`
+- `heyting.py` → `out/heyting.txt`
+
+To rerun: `bash run_all.sh` then `python3 summary.py` (about four minutes of one core in all, one process at a time).

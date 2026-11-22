@@ -1,0 +1,263 @@
+"""AI-written (Claude Fable, reader 'program'), 22 November 2026.
+
+One pass over a cell (nS configurations, nA moves, nO values), every process and guard of the
+cell (or a random sample), and for each a set of code families (subfamilies of the classes):
+  mode all     every subfamily of the classes
+  mode full    only the family of all classes
+  mode rnd:K   the full family and K random subfamilies
+It gathers what questions 1 to 5 ask. Usage:
+  python3 sweep.py nS nA nO mode [shard/of] [sample=N seed=S] [variants]
+Output: one JSON object on stdout.
+"""
+import json
+import random
+import sys
+import time
+from itertools import product
+from fast import options, tables, guarded_classes, kept_levels, lost_levels, rel_tables, describe
+
+nS, nA, nO = int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3])
+mode = sys.argv[4]
+shard, of = 0, 1
+sample, seed = None, 1
+variants = False
+for arg in sys.argv[5:]:
+    if "/" in arg:
+        shard, of = map(int, arg.split("/"))
+    elif arg.startswith("sample="):
+        sample = int(arg[7:])
+    elif arg.startswith("seed="):
+        seed = int(arg[5:])
+    elif arg == "variants":
+        variants = True
+rng = random.Random(seed)
+nB = 1 << nS
+N = nB + 1                 # levels 0..N; no family of classes has more than nB members
+FULL = (1 << nB) - 1
+REL = rel_tables(nS)
+opts = options(nS, nO) if (nO > 0 or nS * nA == 0) else None
+if opts is None:
+    print(json.dumps({"cell": [nS, nA, nO], "skipped": "no map into an empty type of values"}))
+    sys.exit(0)
+popcount = lambda x: bin(x).count("1")
+members = [[B for B in range(nB) if fam >> B & 1] for fam in range(1 << nB)] if nB <= 8 else None
+
+
+def fams_for():
+    if mode == "all":
+        return range(1 << nB)
+    if mode == "full":
+        return [FULL]
+    k = int(mode.split(":")[1])
+    out = [FULL]
+    for _ in range(k):
+        dens = rng.random()
+        f = 0
+        for B in range(nB):
+            if rng.random() < dens:
+                f |= 1 << B
+        out.append(f)
+    return out
+
+
+def processes():
+    if sample is None:
+        for i, combo in enumerate(product(opts, repeat=nS * nA)):
+            if i % of == shard:
+                yield combo
+    else:
+        for _ in range(sample):
+            yield tuple(rng.choice(opts) for _ in range(nS * nA))
+
+
+st = {
+    "cell": [nS, nA, nO], "mode": mode, "shard": [shard, of], "sample": sample, "seed": seed,
+    "cases": 0,                       # (process, guard, family)
+    "code_levels": 0,                 # (case, code, n) looked at, n = 0..N
+    # Q1
+    "q1_both": 0,                     # Lost n c and KeptFor n (decode c): the theorem says never
+    "q1_by_level": {str(n): {"kept_only": 0, "lost_only": 0, "neither": 0, "both": 0}
+                    for n in range(3)},
+    "q1_lost_next_and_kept": 0,       # Lost (n+1) c and KeptFor n: shows the levels are not slack
+    "q1_cov_empty_class_code": 0, "q1_cov_empty_class_lost": 0,
+    "q1_cov_guarded_code_with_unusable_move": 0,
+    # Q2
+    "q2_full_neither": 0, "q2_full_code_levels": 0,
+    "q2_sub_cases": 0, "q2_sub_cases_with_neither": 0,
+    "q2_updR_cases": 0, "q2_updR_neither": 0,          # restricted `updates` holds
+    "q2_updR_but_not_unrestricted_cases": 0,           # ... and codes ARE missing elsewhere
+    "q2_updNE_cases": 0, "q2_updNE_neither": 0,        # `updates` asked only of inhabited seen classes
+    "q2_noupdR_cases": 0, "q2_noupdR_cases_without_neither": 0,
+    "q2_smallest_neither": None,
+    # Q4
+    "q4_bound_k_fail": 0,             # L[k+1] != L[k]
+    "q4_bound_g_fail": 0,             # L[g+1] != L[g], g = number of guarded codes
+    "q4_max_first_lost_by_k_g": {},   # "k,g" -> largest least losing level
+    "q4_witness_first_lost_eq_k": {},
+    "q4_kept_max_edge_by_g_updR": {},   # g -> largest n with Kept n and not Kept n+1 (updates holds)
+    "q4_kept_max_edge_by_g_noupd": {},
+    "q4_kept_bound_fail_updR": 0,     # updates holds, yet Kept g and not Kept for ever
+    "q4_kept_bound_fail_noupd": 0,
+    # Q5
+    "q5_full_codes": 0, "q5_full_mismatch": 0,
+    "q5_updR_codes": 0, "q5_updR_mismatch": 0,
+    "q5_noupd_neither_closed_nor_lost": 0, "q5_noupd_both": 0,
+    # Q3 variants
+    "q3": {v: {"both": 0, "smallest_both": None, "neither_all_cases": 0,
+               "upd_cases": 0, "upd_neither": 0, "bound_k_fail": 0,
+               "closed_and_lost": 0}
+           for v in ("super", "sub")} if variants else None,
+}
+t0 = time.time()
+for combo in processes():
+    usable, seen = tables(nS, nA, nO, combo)
+    guards = range(1 << nS) if sample is None else [rng.randrange(1 << nS)]
+    for guard in guards:
+        K0 = guarded_classes(nS, guard)
+        Ks = kept_levels(nB, nA, usable, seen, K0, N)
+        Kinf = Ks[N]
+        # classes seen after a usable move from a guarded class, per class: for `updates`
+        need = [0] * nB      # bitmask of classes that must be coded if B is a guarded code
+        need_ne = [0] * nB
+        some_unusable = 0    # guarded classes with a move not usable
+        for B in range(nB):
+            if K0 >> B & 1:
+                for a in range(nA):
+                    if usable[B][a]:
+                        for m in seen[B][a]:
+                            need[B] |= 1 << m
+                            if m:
+                                need_ne[B] |= 1 << m
+                    else:
+                        some_unusable |= 1 << B
+        allneed = [0] * nB   # unrestricted updates: every code, every move, every value
+        for B in range(nB):
+            for a in range(nA):
+                for m in seen[B][a]:
+                    allneed[B] |= 1 << m
+        for fam in fams_for():
+            codes = members[fam] if members else [B for B in range(nB) if fam >> B & 1]
+            k = len(codes)
+            st["cases"] += 1
+            Ls = lost_levels(codes, nA, usable, seen, K0, fam, N, REL["exact"])
+            g = popcount(fam & K0)
+            updR = all((need[B] & ~fam) == 0 for B in codes)
+            updNE = all((need_ne[B] & ~fam) == 0 for B in codes)
+            updF = all((allneed[B] & ~fam) == 0 for B in codes)
+            st["code_levels"] += k * (N + 1)
+            if fam & 1:
+                st["q1_cov_empty_class_code"] += 1
+                if Ls[N] & 1:
+                    st["q1_cov_empty_class_lost"] += 1
+            if fam & some_unusable:
+                st["q1_cov_guarded_code_with_unusable_move"] += 1
+            any_neither = False
+            for n in range(N + 1):
+                both = Ls[n] & Ks[n] & fam
+                neither = fam & ~Ls[n] & ~Ks[n]
+                if both:
+                    st["q1_both"] += popcount(both)
+                if n < N and (Ls[n + 1] & Ks[n] & fam):
+                    st["q1_lost_next_and_kept"] += popcount(Ls[n + 1] & Ks[n] & fam)
+                if n < 3:
+                    d = st["q1_by_level"][str(n)]
+                    d["both"] += popcount(both)
+                    d["neither"] += popcount(neither)
+                    d["kept_only"] += popcount(fam & Ks[n] & ~Ls[n])
+                    d["lost_only"] += popcount(fam & Ls[n] & ~Ks[n])
+                if neither:
+                    any_neither = True
+                    if fam == FULL:
+                        st["q2_full_neither"] += popcount(neither)
+                    if updR:
+                        st["q2_updR_neither"] += popcount(neither)
+                    if updNE:
+                        st["q2_updNE_neither"] += popcount(neither)
+                    key = (k, n)
+                    cur = st["q2_smallest_neither"]
+                    if cur is None or key < tuple(cur["k_n"]):
+                        c = (neither & -neither).bit_length() - 1
+                        st["q2_smallest_neither"] = {
+                            "k_n": [k, n], "code": [s for s in range(nS) if c >> s & 1],
+                            "case": describe(nS, nA, nO, combo, guard, fam),
+                            "updates_restricted_holds": updR}
+            if fam == FULL:
+                st["q2_full_code_levels"] += k * (N + 1)
+            else:
+                st["q2_sub_cases"] += 1
+                st["q2_sub_cases_with_neither"] += any_neither
+            if updR:
+                st["q2_updR_cases"] += 1
+                st["q2_updR_but_not_unrestricted_cases"] += (not updF)
+            else:
+                st["q2_noupdR_cases"] += 1
+                st["q2_noupdR_cases_without_neither"] += (not any_neither)
+            if updNE:
+                st["q2_updNE_cases"] += 1
+            # Q4, the losing side
+            if Ls[k + 1] != Ls[k] if k + 1 <= N else False:
+                st["q4_bound_k_fail"] += 1
+            if Ls[g + 1] != Ls[g]:
+                st["q4_bound_g_fail"] += 1
+            first = 0
+            for n in range(1, N + 1):
+                if Ls[n] != Ls[n - 1]:
+                    first = n
+            key = "%d,%d" % (k, g)
+            if first > st["q4_max_first_lost_by_k_g"].get(key, -1):
+                st["q4_max_first_lost_by_k_g"][key] = first
+            if first == k and k >= 1 and str(k) not in st["q4_witness_first_lost_eq_k"]:
+                st["q4_witness_first_lost_eq_k"][str(k)] = describe(nS, nA, nO, combo, guard, fam)
+            # Q4, the kept side: largest n with a code kept for n and not for n + 1
+            edge = -1
+            for n in range(N):
+                if (Ks[n] & ~Ks[n + 1]) & fam:
+                    edge = n
+            tgt = st["q4_kept_max_edge_by_g_updR"] if updR else st["q4_kept_max_edge_by_g_noupd"]
+            if edge > tgt.get(str(g), -1):
+                tgt[str(g)] = edge
+            if g <= N and (Ks[g] & ~Kinf) & fam:
+                st["q4_kept_bound_fail_updR" if updR else "q4_kept_bound_fail_noupd"] += 1
+            # Q5: in a closed family (largest closed family = Kinf, see crosscheck.py)
+            # against Lost at the number of codes
+            Lk = Ls[k] if k <= N else Ls[N]
+            closed = Kinf & fam
+            mism = (closed ^ (fam & ~Lk))
+            if fam == FULL:
+                st["q5_full_codes"] += k
+                st["q5_full_mismatch"] += popcount(mism)
+            if updR:
+                st["q5_updR_codes"] += k
+                st["q5_updR_mismatch"] += popcount(mism)
+            else:
+                st["q5_noupd_neither_closed_nor_lost"] += popcount(fam & ~closed & ~Lk)
+                st["q5_noupd_both"] += popcount(closed & Lk)
+            if variants:
+                for v in ("super", "sub"):
+                    q = st["q3"][v]
+                    Lv = lost_levels(codes, nA, usable, seen, K0, fam, N, REL[v])
+                    rel = REL[v]
+                    upd = all(all(fam & rel[m] for m in range(nB) if need[B] >> m & 1)
+                              for B in codes)
+                    q["upd_cases"] += upd
+                    if k + 1 <= N and Lv[k + 1] != Lv[k]:
+                        q["bound_k_fail"] += 1
+                    if Kinf & Lv[N] & fam:
+                        q["closed_and_lost"] += popcount(Kinf & Lv[N] & fam)
+                    for n in range(N + 1):
+                        both = Lv[n] & Ks[n] & fam
+                        neither = fam & ~Lv[n] & ~Ks[n]
+                        if both:
+                            q["both"] += popcount(both)
+                            cur = q["smallest_both"]
+                            if cur is None or (k, n) < tuple(cur["k_n"]):
+                                c = (both & -both).bit_length() - 1
+                                q["smallest_both"] = {
+                                    "k_n": [k, n], "code": [s for s in range(nS) if c >> s & 1],
+                                    "case": describe(nS, nA, nO, combo, guard, fam)}
+                        if neither:
+                            q["neither_all_cases"] += popcount(neither)
+                            if upd:
+                                q["upd_neither"] += popcount(neither)
+st["seconds"] = round(time.time() - t0, 1)
+print(json.dumps(st))

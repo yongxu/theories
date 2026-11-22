@@ -1,0 +1,24 @@
+start 07:42:20
+{
+  "tree": "/Users/ren/tmp/fm/build12",
+  "modules": 20,
+  "ran": [
+    "Becoming.ScratchInTime",
+    "BecomingScratchInTimeAxiomAudit"
+  ],
+  "reused": 19,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchInTime": {
+      "theorems": 19,
+      "declarations": 22,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchInTime": 0.622,
+    "BecomingScratchInTimeAxiomAudit": 0.297
+  }
+}
+exit 0 build 208
+end 07:42:24

@@ -1,0 +1,41 @@
+"""AI-written (Claude Fable, reader 'program'), 22 November 2026.
+The sweeps take the codes to be distinct classes. Here, with the literal model, several codes may
+name one class (decode not one-to-one), at random: lost_not_kept, the either-or where `updates`
+holds, the bound at the number of codes, and that two codes of one class are lost alike."""
+import random
+from naive import Model
+from fast import options
+
+rng = random.Random(5)
+st = {"cases": 0, "both": 0, "updates_cases": 0, "neither_with_updates": 0, "bound_fail": 0,
+      "same_class_differ": 0, "cases_with_repeats": 0}
+for _ in range(4000):
+    nS, nA, nO = rng.choice([1, 2, 3]), rng.choice([0, 1, 2]), rng.choice([1, 2])
+    opts = options(nS, nO)
+    step, sense, allowed = set(), {}, set()
+    for s in range(nS):
+        for a in range(nA):
+            ts, senses, al = rng.choice(opts)
+            for t, o in zip(ts, senses):
+                step.add((s, a, t)); sense[(s, a, t)] = o
+            if al:
+                allowed.add((s, a))
+    guard = {s for s in range(nS) if rng.random() < 0.7}
+    k = rng.randrange(1, 7)
+    decode = {i: frozenset(s for s in range(nS) if rng.random() < 0.5) for i in range(k)}
+    M = Model(range(nS), range(nA), range(nO), step, sense, guard, allowed, decode)
+    st["cases"] += 1
+    st["cases_with_repeats"] += len(set(decode.values())) < k
+    upd = M.updates(True)
+    st["updates_cases"] += upd
+    for c in M.C:
+        for n in range(k + 3):
+            kept, lost = M.KeptFor(n, decode[c]), M.Lost(n, c)
+            st["both"] += kept and lost
+            st["neither_with_updates"] += upd and not kept and not lost
+            if lost and not M.Lost(k, c):
+                st["bound_fail"] += 1
+            for d in M.C:
+                if decode[d] == decode[c] and M.Lost(n, d) != lost:
+                    st["same_class_differ"] += 1
+print(st)

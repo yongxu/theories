@@ -1,0 +1,42 @@
+start 07:22:58
+{
+  "tree": "/Users/ren/tmp/fm/build12",
+  "modules": 54,
+  "ran": [
+    "Becoming.ScratchChoice",
+    "BecomingScratchChoiceAxiomAudit",
+    "Becoming.ScratchChoiceEither",
+    "BecomingScratchChoiceEitherAxiomAudit",
+    "Becoming.ScratchChoiceCases",
+    "BecomingScratchChoiceCasesAxiomAudit"
+  ],
+  "reused": 51,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchChoice": {
+      "theorems": 15,
+      "declarations": 20,
+      "with_axioms": {}
+    },
+    "Becoming.ScratchChoiceEither": {
+      "theorems": 6,
+      "declarations": 6,
+      "with_axioms": {}
+    },
+    "Becoming.ScratchChoiceCases": {
+      "theorems": 36,
+      "declarations": 42,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchChoice": 0.373,
+    "BecomingScratchChoiceAxiomAudit": 0.201,
+    "Becoming.ScratchChoiceEither": 1.067,
+    "BecomingScratchChoiceEitherAxiomAudit": 0.347,
+    "Becoming.ScratchChoiceCases": 1.008,
+    "BecomingScratchChoiceCasesAxiomAudit": 0.317
+  }
+}
+exit 0 build 40
+end 07:23:04

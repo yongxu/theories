@@ -1,0 +1,123 @@
+"""AI-written (Claude Fable, reader 'program'), 22 November 2026.
+Adds up the JSON objects of sweep.py in out/ and prints what questions 1 to 5 ask."""
+import glob
+import json
+import os
+
+here = os.path.dirname(os.path.abspath(__file__))
+runs = []
+for p in sorted(glob.glob(os.path.join(here, "out", "*.json"))):
+    d = json.load(open(p))
+    d["_name"] = os.path.basename(p)[:-5]
+    runs.append(d)
+runs = [d for d in runs if "skipped" not in d]
+
+
+def group(d):
+    return ("exhaustive " if d["sample"] is None else "sampled ") + "S%d A%d O%d" % tuple(d["cell"])
+
+
+groups = {}
+for d in runs:
+    groups.setdefault(group(d), []).append(d)
+tot = lambda ds, key: sum(d[key] for d in ds)
+
+print("cells (S configurations, A moves, O values; a case = process x guard x family of codes)")
+print("%-24s %10s %12s %8s %s" % ("cell", "cases", "code-levels", "seconds", "family mode"))
+for g, ds in groups.items():
+    print("%-24s %10d %12d %8.1f %s" % (g, tot(ds, "cases"), tot(ds, "code_levels"),
+                                        tot(ds, "seconds"), ds[0]["mode"]))
+print("ALL: cases %d, (case, code, level) triples %d, seconds %.0f"
+      % (tot(runs, "cases"), tot(runs, "code_levels"), tot(runs, "seconds")))
+
+print("\nQ1 lost_not_kept: (case, code, n) with Lost n c and KeptFor n (decode c):", tot(runs, "q1_both"))
+for n in "012":
+    row = {k: sum(d["q1_by_level"][n][k] for d in runs) for k in ("kept_only", "lost_only", "neither", "both")}
+    print("   n = %s: %s" % (n, row))
+print("   Lost (n+1) c with KeptFor n (decode c) (allowed; shows no slack):", tot(runs, "q1_lost_next_and_kept"))
+print("   cases with the empty class a code:", tot(runs, "q1_cov_empty_class_code"),
+      "; of them the empty class lost at some level:", tot(runs, "q1_cov_empty_class_lost"))
+print("   empty-class-lost by number of moves:",
+      {a: sum(d["q1_cov_empty_class_lost"] for d in runs if d["cell"][1] == a) for a in (0, 1, 2, 3)})
+print("   cases with a guarded code and a move not usable from it:",
+      tot(runs, "q1_cov_guarded_code_with_unusable_move"))
+print("   cases with no move at all (A0):", sum(d["cases"] for d in runs if d["cell"][1] == 0))
+
+print("\nQ2 kept_or_lost")
+print("   every class a code: (case, code, n) looked at %d, neither kept nor lost: %d"
+      % (tot(runs, "q2_full_code_levels"), tot(runs, "q2_full_neither")))
+print("   proper subfamilies: cases %d, with some code neither at some level: %d"
+      % (tot(runs, "q2_sub_cases"), tot(runs, "q2_sub_cases_with_neither")))
+print("   cases where `updates` (guarded codes, usable moves) holds: %d; neither there: %d; "
+      "of those cases, codes ARE missing at an unguarded code or an unusable move in: %d"
+      % (tot(runs, "q2_updR_cases"), tot(runs, "q2_updR_neither"),
+         tot(runs, "q2_updR_but_not_unrestricted_cases")))
+print("   cases where `updates` is asked only of INHABITED classes seen: %d; neither there: %d"
+      % (tot(runs, "q2_updNE_cases"), tot(runs, "q2_updNE_neither")))
+print("   cases where `updates` fails: %d; of them with every code decided at every level anyway: %d"
+      % (tot(runs, "q2_noupdR_cases"), tot(runs, "q2_noupdR_cases_without_neither")))
+print("   smallest neither, per cell that has one (k codes, level n):")
+for g, ds in groups.items():
+    ws = [d["q2_smallest_neither"] for d in ds if d["q2_smallest_neither"]]
+    if ws:
+        w = min(ws, key=lambda w: tuple(w["k_n"]))
+        print("     %-24s k,n = %s code %s case %s" % (g, w["k_n"], w["code"], json.dumps(w["case"])))
+    else:
+        print("     %-24s none" % g)
+
+print("\nQ3 the two halves of `Names`")
+vs = [d for d in runs if d["q3"]]
+print("   cases with the variants computed:", tot(vs, "cases"))
+for v, text in (("super", "the code's class CONTAINS the class seen"),
+                ("sub", "the code's class lies INSIDE the class seen")):
+    q = lambda key: sum(d["q3"][v][key] for d in vs)
+    print("   %s (%s):" % (v, text))
+    print("      lost and kept together (case, code, n): %d; in a closed family and lost: %d"
+          % (q("both"), q("closed_and_lost")))
+    print("      neither, over all cases: %d; cases where every class seen after a usable move "
+          "from a guarded code has such a code: %d, neither there: %d; bound at k fails: %d"
+          % (q("neither_all_cases"), q("upd_cases"), q("upd_neither"), q("bound_k_fail")))
+    ws = [(tuple(d["cell"]), d["q3"][v]["smallest_both"]) for d in vs if d["q3"][v]["smallest_both"]]
+    if ws:
+        cell, w = min(ws, key=lambda cw: (cw[0], tuple(cw[1]["k_n"])))
+        print("      smallest lost-and-kept: cell %s k,n = %s code %s case %s"
+              % (cell, w["k_n"], w["code"], json.dumps(w["case"])))
+
+print("\nQ4 the bounds")
+print("   cases where Lost (k+1) differs from Lost k (k = number of codes):", tot(runs, "q4_bound_k_fail"))
+print("   cases where Lost (g+1) differs from Lost g (g = number of GUARDED codes):", tot(runs, "q4_bound_g_fail"))
+table = {}
+for d in runs:
+    for key, v in d["q4_max_first_lost_by_k_g"].items():
+        k, g = map(int, key.split(","))
+        table[(k, g)] = max(table.get((k, g), -1), v)
+print("   largest least-losing level found, by k codes (rows) and g guarded codes (columns):")
+ks = sorted({k for k, g in table})
+gs = sorted({g for k, g in table})
+print("      k\\g " + " ".join("%3d" % g for g in gs))
+for k in ks:
+    if k <= 8:
+        print("      %3d " % k + " ".join(("%3d" % table[(k, g)]) if (k, g) in table else "  ." for g in gs))
+print("   k reached (least-losing level = k) for k =",
+      sorted(k for (k, g), v in table.items() if v == k and k > 0),
+      "; always with g = k:", all(g == k for (k, g), v in table.items() if v == k and k > 0))
+print("   level g reached for (k, g):", sorted((k, g) for (k, g), v in table.items() if v == g and g > 0)[:60])
+print("   level above g anywhere:", any(v > g for (k, g), v in table.items()))
+for name, text in (("q4_kept_max_edge_by_g_updR", "`updates` holds"),
+                   ("q4_kept_max_edge_by_g_noupd", "`updates` fails")):
+    t = {}
+    for d in runs:
+        for g, v in d[name].items():
+            t[int(g)] = max(t.get(int(g), -1), v)
+    print("   kept side, %s: largest n with a code kept for n and not n+1, by g guarded codes: %s"
+          % (text, dict(sorted(t.items()))))
+print("   kept for g steps and not for ever: with `updates` %d cases, without %d cases"
+      % (tot(runs, "q4_kept_bound_fail_updR"), tot(runs, "q4_kept_bound_fail_noupd")))
+
+print("\nQ5 closed_or_lost_within")
+print("   every class a code: codes %d, 'in a closed family' differs from 'not Lost at the number of codes': %d"
+      % (tot(runs, "q5_full_codes"), tot(runs, "q5_full_mismatch")))
+print("   any family where `updates` holds: codes %d, differs: %d"
+      % (tot(runs, "q5_updR_codes"), tot(runs, "q5_updR_mismatch")))
+print("   families where `updates` fails: codes in no closed family and not lost: %d; in a closed family and lost: %d"
+      % (tot(runs, "q5_noupd_neither_closed_nor_lost"), tot(runs, "q5_noupd_both")))

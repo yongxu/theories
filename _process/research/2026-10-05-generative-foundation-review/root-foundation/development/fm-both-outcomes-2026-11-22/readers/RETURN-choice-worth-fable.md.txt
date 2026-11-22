@@ -1,0 +1,141 @@
+# Return: what the build "a choice against every outcome" shows, what it does not, and the smallest honest landing
+
+*AI-written (Claude Fable 5.2), 22 November 2026, 07:40 WIB by the clock; a reader who took no part. Read only: nothing built, run or edited; line counts are by a script over the texts. Estimates of unbuilt proofs are marked as estimates.*
+
+**Read whole:** `choice/ScratchChoice.lean.txt` (C), `ScratchChoiceEither.lean.txt` (E), `ScratchChoiceCases.lean.txt` (K), `choice/REPORT.md`, `last-build.log.txt`, the brief, `AFTER-TWO-SIDES.md`, `two-sides/ScratchTwoSides.lean.txt` (T), `Becoming/PredicateIteration.lean`. **Read in part:** `GuardHorizon.lean` ll. 1 to 420 (GH), `Keeping.lean` ll. 64 to 100 and 266 to 395, `Undecided.lean` ll. 379 to 389, `Lasting.lean` ll. 696 to 702 and 842 to 856, `Prelude.lean` ll. 810 to 820, the two trials from l. 440 and l. 316, the declaration lists (not the proofs) of `ScratchKeptForViable.lean` and `ScratchDrainOnTheLaw.lean`, `git blame` of GH ll. 86 to 216 and 291 to 339.
+
+## The answer in short
+
+- **Shows:** with no reading and through a reading, never-both and one-or-the-other at each horizon are each one call of the same two lemmas about positions (`stage_disjoint`, C l. 128; `stage_either`, E l. 60). The losing step is one definition for both. The Lean is as the report says; every fact of the report I checked holds. The fixed sentence of V1b, and the brief's "the eleven entered on 22 November", need one correction of dating (section 5a).
+- **Does not show:** a join by the owner's test. No proof of a statement older than 22 November goes away because of the general module. The statement with both outcomes and a bound is NOT shared: it is assembled separately in each case from that case's own kept-side bound. The general bounded statement (item 6) has one case.
+- **Lines:** the report's 226 against 96 is confirmed by recount. The two shared lemmas each cost more, with what it takes to fit the cases to them, than the two direct proofs they replace (20 against 12 built lines for never-both; 68 against about 45 for one-or-the-other, the 45 an estimate).
+- **Landing:** neither D1 nor D2 as posed. The smallest honest one shares only the losing step and its five small lemmas and proves never-both and one-or-the-other directly in each home: about +101 declaration lines against D1's +172.
+
+## 1. The ledger (V9), recounted
+
+**Convention (the frozen one):** physical lines of `def`, `theorem`, `example` with their statements and bodies; no docstrings, blanks, imports, `namespace`, `section`, `variable`, `include`, `open`, `local notation`. Note that under it the premises of the either-or cost nothing on either side: they stand in `variable` blocks (E ll. 10 to 21, 70 to 72; K ll. 241 to 249; T ll. 90 to 97).
+
+| | declaration lines | all source lines but docstrings and blanks |
+|---|---:|---:|
+| L1, Module 1: definitions and item 1: 26; item 2: 10; item 3: 4; item 4: 14; item 5: 33; item 6: 14 | **101** | 147 |
+| L2, Part A (3 equations 3; 4 new 18; 11 copies 32; 11 checks 11): 64. Part B: 61 | **125** | 172 |
+| L3, GH ll. 141 to 142, 298 to 302, 318 to 338 | **21** | 21 |
+| L3 for all eleven (adds GH ll. 153 to 156, 166 to 170, 175 to 177, 181 to 183, 187 to 190) | 40 | 40 |
+| L4, T ll. 18 to 143 | **75** | 87 |
+| Part C (outside the ledger) | 74 | 80 |
+
+**226 against 96 confirmed** (226 against 115 with all eleven). The report's every count agrees with mine.
+
+**What the ledger compares is not like for like, and it is not what a landing does.** L4 is scratch and in no git object: a landing removes none of it. And L2 holds 11 copies and 14 checks a landing drops, and statements T did not have. Three sharper counts:
+
+- *Never-both, said once against said twice (both sides built text):* `steps_disjoint` 4 + `stage_disjoint` 5 + `Config.lost_not_viable` 4 + `kept_below` 3 + `Reading.lost_not_kept` 4 = **20**; against GH `lost_not_viable` 6 + T `lost_not_kept` 6 = **12**.
+- *One-or-the-other, said once against said twice:* `steps_either` 23 + `stage_either` 7 + `listed_outcomes` 4 + `Config.viable_or_lost` 4 + `listed_partners` 10 + `kept_above` 3 + `seen_outcomes` 13 + `Reading.kept_or_lost` 4 = **68**; against T's `kept_or_lost` 26, plus about 2 for the weaker list of values, plus a direct `viable_or_lost` in GH that I estimate at 17 = **about 45** (estimate; see D2).
+- *Why the reading costs 26 lines to fit:* item 5's `outcomes` asks a list of POSITIONS on which `next` is decided. The reading has a list of values and only the existence of a code for each (`updates`). So `listed_partners` (a finite choice over the listed values, K ll. 230 to 239, which brings the import of `Likeness` for `finBelow`) and `seen_outcomes` (K ll. 263 to 275) build a list of codes that the direct proof never needs: T l. 125 searches the values and asks `updates` at each. The weaker list of values costs the direct proof one line (after the search, `KeptFor.mono sub (kept v listed)` at the listed value above).
+
+**Module 1 theorems that nothing in the cases calls:** `stays_iff_all`, `out_within_length`, `out_at_ok_length`, `out_iff_not_stays` (12 lines). **What the reading calls of Module 1:** the definitions (`Lost := Out …`, K l. 199) and two theorems, `stage_disjoint` and `stage_either`. Items 2, 3 and 6 are called by the configurations case only.
+
+**Item 6 is written twice inside the build.** Compare E ll. 94 to 96 with K ll. 298 to 300, E ll. 104 to 105 with K ll. 308 to 309, E ll. 113 to 114 with K ll. 317 to 318: `Reading.closed_or_lost_within`, `lost_at_guarded_length`, `lost_iff_not_kept` are `closed_or_out`, `out_at_ok_length`, `out_iff_not_stays` term for term, with `coded_kept_iff_closed` for `stays_iff_closed` and `closed_never_lost` for `closed_never_out`. 14 lines there, 13 here. The configurations case has the bounded statement as one call of item 6 and has neither corollary under its own name.
+
+### What a landing would add and remove (declaration lines; docstrings and setup not counted)
+
+| design | adds | removes | net | assumed |
+|---|---:|---:|---:|---|
+| **D1** general module | 101 (module) + 18 (GH: `enabled_or_not`, `listed_outcomes`, `viable_or_lost`, `closed_or_lost`) + 32 (GH's eleven as calls) + 61 (Part B) = 212 | 40 (GH's eleven as landed) | **+172** | all built text; Module 1 untrimmed (trimmed of the four uncalled theorems: +160) |
+| **D2** no general module | reading: definitions 11, `lost_not_kept` 6, `closed_never_lost` 4, `kept_or_lost` about 28, the statement 6, two corollaries 7 = about 62; GH: `enabled_or_not` 4, `viable_or_lost` direct about 17, `closed_or_lost` about 6 = about 27 | 0 | **about +89** | T's built text with three repairs I wrote out but did not build; the 17 is a recursion I drafted on T ll. 105 to 130 with configurations for codes |
+| D2 keeping the losing bound with nothing decided through a reading | + T's `lostReading_mono`, `_start`, `_commutes`, `_shortens`, `_within_length` = 21 | 0 | about +110 | built text |
+| **D3** the losing step shared, nothing else (my proposal, section 5c) | `outStep`, `Out`, `out_mono`, `out_start`, `out_commutes`, `out_shortens`, `out_within_length` 20; GH's four loss lemmas as calls 9; GH either-or about 27; reading 58 | 13 | **about +101** | as D2 for the direct proofs |
+
+Part C (74 lines) is the same in each and rests on two scratch modules of another session that are not in the package.
+
+**Said once and said twice:**
+
+| | once | twice or more |
+|---|---|---|
+| D1 | the two steps; the losing step's five lemmas; the one-step never-both and its recursion; the one-step search and its recursion | the bounded statement and its two corollaries (item 6 and the reading's, term for term, 14 and 13 lines); the kept bound three times (item 2; GH as calls of it; `coded_kept_iff_closed` with its own proof on another step); **two kept steps on codes** (`Keeping.readingStep`, and `stayStep` on codes whose `kept_below` and `kept_above`, K ll. 210 and 254, are the two halves of `iter_iff_kept`'s step clause, `Keeping` ll. 371 to 374, again) |
+| D2 | each kept bound in its home | the losing step's definition (and its five lemmas, 13 + 21 lines, if the undecided bound is kept: the first build's T1 fault); the never-both induction (6 + 6); the search (about 17 + 28) |
+| D3 | the losing step and its five lemmas; each kept bound | the never-both induction (6 + 6); the search (about 17 + 28) |
+
+## 2. What is new as statements
+
+Whichever design. "Join" means it ties two things the package has; "claim" that it could fail on a case.
+
+| statement | premises | what it is |
+|---|---|---|
+| **Through a reading.** `Lost` as a rising iterate; monotone, start, commuting, and "lost at any horizon implies lost at the list's length" with nothing decided | none; none; moves listed; moves listed and a list holding every code | A join: the rising half of the law of what a list holds (`iter_within_length`) reaches a reading, with no `updates` and no decision. **But Part B names no theorem for it** (B.1 "adds zero wrappers"): it exists only as `out_within_length` at an instance nobody wrote. And without the either-or `Lost` is only a sufficient condition for not being kept, so this bounds a sufficient condition. |
+| `lost_not_kept`, `closed_never_lost` | none | A join and a claim: it is what gives `Lost` a meaning against `KeptFor` and `InClosedFamily`. By the program reader it fails if codes may contain the class seen instead of naming it. Worth having. |
+| `kept_or_lost` | moves listed; `updates`; `inOrOut`; `usableOrNot`; `someValues` | The content of the whole build. With `lost_not_kept` it says: keeping a coded class for n steps is DECIDED at every horizon, and not being kept has a positive certificate. A claim (each premise can fail; "each premise is needed" is not in this run). |
+| `closed_or_lost_within` | those five and the guarded codes listed | Three lines assembling `kept_or_lost` at one horizon, the landed `coded_kept_iff_closed` and `closed_never_lost`. Bookkeeping as a proof; it is the sentence one tells. |
+| `lost_at_guarded_length` | the same six | Bookkeeping. **In negative form the package has it already with two premises:** from `within` and `updates`, `coded_kept_iff_closed.mp` then `keptFor_of_closed` give kept at the length implies kept at every n, so not kept at n implies not kept at the length. What is new is only the positive form, through `lost_iff_not_kept`. |
+| `lost_iff_not_kept` | the five, no list of codes | Bookkeeping (the two lemmas together), and the form the cases actually use (K l. 363 turns the filed `together_not_kept_none` into `Lost 3`). |
+| **With no reading.** `viable_or_lost` | moves listed; EVERY configuration listed; guard decided; step decided | A join inside GH: it completes `lost_not_viable` to an equivalence, so `lost_shortens` (rising, nothing decided) and `viable_iff_closed` (falling) become two sides of one thing. Both sides are of 22 November; `Viable` and `Closed` are of 18 October. |
+| `Config.closed_or_lost` | those and the guarded configurations listed | Assembly. Note it still needs every configuration listed (for `enabled_or_not` and `listed_outcomes`); the second list only sharpens the number. |
+| items 4, 5, 6 for positions of any type | as in the report | A third statement of each thing. Of use only if a case calls it for less than its own proof. |
+
+**Is the whole of it the known determinacy of a finite safety game on knowledge sets?** Yes. The codes are the knowledge sets, the player picks the move, the value seen is the opponent's reply, `InClosedFamily` is a post-fixed point of the controllable predecessor, `Lost` is the opponent's attractor to "some configuration outside, or no usable move", and the bound is the count of safe positions. What saying it here adds, precisely:
+
+1. **The premises, constructively, with no axiom.** What must be on a list: the moves; the guarded codes; for each guarded code and usable move, values whose seen classes hold every seen class. What need not: configurations (through a reading none is listed), unguarded codes, the values themselves (the level reading has all of `Nat`). What must be decided: each code within the guard or a configuration outside (this IS the either-or at horizon 0, `stage_either` l. 64, and the docstrings say so); usability at guarded codes. No decidable equality, no instance, no list without repeats.
+2. **The split by premises:** never-both from nothing; the kept bound from `within` and `updates`; the rising bound from listings alone; one-or-the-other from five.
+3. **The losing bound with nothing decided** is NOT part of the both-outcomes statement. Neither bounded statement calls item 3 (the report's lists of calls; I checked the proofs). For configurations it landed at 04:16 as `lost_shortens`; this build adds the all-horizons form (`out_within_length`; no `lost_within_length` found in GH ll. 216 to 384) and its reach to codes, unnamed there.
+4. **"The reading as a case of the no-reading statement": the Lean does not have this** (section 3).
+
+## 3. Is the reading "a case of the statement with no reading"? No.
+
+Checked: `Config.closed_or_lost` (K ll. 60 to 65) is one call of `closed_or_out`. `Reading.closed_or_lost_within` (K ll. 295 to 300) calls `kept_or_lost`, `Viability.coded_kept_iff_closed` and `closed_never_lost`; it names no theorem of `Config`, of GH, or of items 2 and 6. Its bound comes from `Keeping`'s landed theorem, which is the falling law on `readingStep`, a different step from `stayStep` on codes, with a closed notion of another type (a family of classes, not a set of positions). The trial of B.5 shows what routing it through item 2 costs: 10 lines against 8, and the family of classes is still built by hand.
+
+Nor is the reading an instance of GH's own form: GH's "live" is `Enabled P s a` (a successor exists) and its "bad" is `¬ guard s`; the reading's are `Usable P allowed (decode c) a` and a witness `Outside`. Both are instances of the positions form, which is why that form takes `live`, `dead`, `bad` as separate parameters.
+
+**The true sentence.** With no reading and through a reading, "never both" and "one or the other" at each horizon are each one call of the same two lemmas about positions with a choice of moves against every outcome; the statement that a position is in a closed set or lost at the list's length is proved separately in each case, from that case's own kept-side bound.
+
+**Sentences that say more than the Lean:**
+
+1. "The reading is a case of the statement with no reading: its positions are codes." (The bounded statement through a reading calls nothing of the no-reading case and nothing of item 6.)
+2. "One theorem gives both outcomes and the bound for positions of any type; `GuardHorizon` and `Keeping` are its two cases." (Item 6 has one case.)
+3. "Through a reading, keeping is the staying step on codes." (Below it with no premise, above it only under `updates`; the landed kept step is `readingStep`; no theorem here states `Stays` on codes against `KeptFor`.)
+4. "The bound on the losing side through a reading is the law's rising bound." (It is the kept side's count, carried over by the either-or at that one horizon; the rising bound is at the count of ALL codes and is not called.)
+5. "An older result becomes a case." (Section 5a.)
+
+## 4. What it does not have
+
+**The general module (C and E, read whole).** Its vocabulary is: a type of positions, a type of moves, four predicates `ok bad live dead`, a relation `next`, a relation `under`, lists. In it: no quantity and nothing that runs down (no number but the horizon and a list's length; no order on positions); no share; no selection (no score, rank, judge or anything chosen again from what was chosen); nothing that sustains anything; no lock (it does not even state that `Out` rises with the horizon); no time of reading (`next` has no before and after of a value; that lives in `Seen`, in the case); nothing on how two ways of lasting stand to each other. There is no course in it either: no history, no plan, no trajectory; "stays for n" is membership in an iterate. The level is in the Drain case, not in any law.
+
+**The gap sentence, clause by clause, against `Reading.closed_or_lost_within`:**
+
+| clause | met? |
+|---|---|
+| "in one statement" | Yes, one conjunction. So did the first module's. |
+| "both outcomes" | Yes, and exclusive. |
+| "a choice" | Yes: some move on the kept side, every move on the losing side. |
+| "a reading" | Yes, through codes that name the classes seen exactly (`updates`). |
+| "of a course … the side where it ends" | **Weakest.** `Lost` is of a class of configurations not told apart, not of a course, and it is not an ending. On Drain each start alone is viable at every horizon (`start_viable` in the other session's module) while the two together are `Lost` at 3: what is lost is one choice good for all that cannot be told apart. `Lost` also holds where no move is usable and nothing leaves the guard. Even with no reading, `L n s` says every choice can be answered into leaving or stopping within n, not that the course ends. |
+| "a bound on the ending side" | **By transfer.** In the proof the losing disjunct passes through `id` (K l. 299); the length does its work on the kept disjunct (`coded_kept_iff_closed`). That the number bounds the ending is the corollary `lost_at_guarded_length`, proved by refuting the closed side, and already had in negative form from landed theorems. Legitimate in a decided game, where the two bounds are one; but it is the kept side's bound read across a decision, and nobody should tell it as the rising law at work. |
+
+So the statement meets the sentence as the first module's did, with lighter premises (guarded codes only; values up to inclusion) and with both readings of Drain under it. It is not thereby the centre: the sentence it meets describes a shape, and the shape is filled by a decided finite game.
+
+## 5. Verdict
+
+**(a) V9 and V1b.**
+V9: 226 against 96 stands, and goes against the general module more plainly when counted lemma by lemma (section 1): neither shared lemma pays for itself over two cases. The module is not justified by economy.
+V1b: not met. The two trials are as the report says (11 lines against 3; 15 against 3; both removed). Two corrections to how it is worded:
+- **"The eleven entered the package on 22 November" is wrong for one.** `closed_viable`'s statement is of 18 October (`git blame` GH ll. 152 to 153: `0ec305704`); only its proof is of 22 November (ll. 154 to 156: `2121516ee`), where its own four-line induction became a call of `postfixed_in_iter`. So an older statement does come out as a call here (K ll. 82 to 84, checked by `rfl` at l. 145, one line for two). It shows nothing for Module 1: `closed_stays` (C l. 62) is that same call of `postfixed_in_iter` with a name put between. The join is the law's and landed at 04:16.
+- The fixed words "no statement older than 22 November comes out as a case" are of TWO candidates tried. The cases with one side idle were left out of the run. True as worded: no proof of a statement older than 22 November goes away because of the general module; two were tried and came out three and five times longer.
+
+**(b) Join or lemma.** By the owner's test: not a join. It is two lemmas (`stage_disjoint`, `stage_either`), each used twice, both uses new this morning; and one definition said once (the losing step, with five one-line lemmas), also for two things of this morning. V8 is met for the two per-horizon lemmas and not for the bounded statement.
+
+**(c) D1, D2, or neither.** Neither as posed.
+- Against D1: about +172 lines for statements D3 has at about +101; it leaves two kept steps on codes in the package, item 6 written twice, four general theorems nothing calls, and the reading's home importing `Likeness` for a list lemma the direct proof does not need. It would put a module named for a general law into the core on the strength of two uses from one night. That is the shape rule 4 warns of from the other side: a page added, not an old result made a case.
+- Against D2 with the five losing lemmas restated: it is the first build's T1 fault, landed.
+- **Smallest honest landing (D3):** (1) the losing step for positions, with `out_mono`, `out_start`, `out_commutes`, `out_shortens`, `out_within_length`, in a small module that imports only `PredicateIteration`; GH's `lost_mono`, `lost_start`, `lost_commutes`, `lost_shortens` become calls with statements unchanged (the `rfl` checks of K ll. 160 to 169 show this works); the reading's `Lost` is defined on it and gets the undecided bound as a named call. (2) In GH: `viable_or_lost` and `closed_or_lost` by a direct recursion. (3) Beside `Keeping`: `lost_not_kept` and `closed_never_lost` (no premise), `kept_or_lost` with the weaker list of values, `closed_or_lost_within` split at the length with guarded codes only, `lost_iff_not_kept`; `lost_at_guarded_length` only if wanted in positive form. Told as: two lemmas and their assembly, the known determinacy of a finite safety game with its decisions as premises.
+- **Before even that:** D3's direct proofs are unbuilt (my estimates); a reader who did not write them checks the docstrings; and the Drain cases cannot land until the other session's two modules do, so until then the package would hold the statements with no case in which both outcomes occur.
+- **What would turn this to D1:** one statement older than 22 November that calls `stage_either` or `stage_disjoint` in no more lines than its own proof (the idle-side candidates: `Lasting.Lasts`, `KeepableStep.keepStep`, `CommonResponse.regionStep` and `reachStep`). Until one does, items 4, 5 and 6 stay in scratch.
+
+**(d) The board.**
+*May be written, if claimed:* "Scratch, not landed: keeping through a reading has a losing side as a rising iterate on codes; it never holds together with keeping (no premise); where the moves are listed, each usable move's values are covered by a list, each class seen has an exact code and two decisions are given for every code, a code's class is in a closed family or lost at the count of the listed guarded codes, never both; `GuardHorizon` has the same with no reading; the two share two lemmas at each horizon and each takes its bound from its own kept side; this is the determinacy of a finite safety game with its decisions as premises; no proof of an older statement goes away (two tried), and it costs 226 declaration lines against 96."
+*May not:* "One theorem now gives both outcomes of a course with a choice, a reading and a bound on the ending side, with `GuardHorizon` and `Keeping` as its two cases."
+
+## 6. Other things seen (outside the question)
+
+- **The two cases ask premises of different kinds.** With no reading the decisions are derived from a list of every configuration and a decided step; through a reading no configuration is listed and the two decisions are assumed outright. A telling that puts the two side by side should say so.
+- **No single use in Part C has a guarded code on each side.** Under the level reading all six guarded codes are kept (the only lost codes are the two outside the guard at horizon 0, by the premise `level_in_or_out` itself); under the reading that keeps nothing every code is lost (the earlier reader's computation; not rechecked by me). Both outcomes appear for the one class of the two starts across the two readings, which is what Part C asked. In the cases the theorem turns filed negative facts into `Lost` facts and yields nothing else (K ll. 363 to 377).
+- **Imports, by a script over the `import` lines:** neither `Undecided` nor `Likeness` reaches `Keeping` or `GuardHorizon`, so no design makes a cycle. `Keeping` reaches 12 modules today, `Undecided` 37, `Likeness` 39. Every design needs `Undecided.each_or_some` (9 lines) wherever the search is proved; only D1 needs `Likeness`.
+- **Checked of the report and found so:** 68 declarations and 57 theorems against the log; the three equations and eleven statement checks present; `ScratchChoice` imports only `PredicateIteration`; the proof-line table of A.2; both lists of calls; the premises word for word; no premise of items 5, 6, A.3, B.3, B.4 mentions a horizon, an iterate or a predicate variable; the only recursions of Module 1 are on the horizon. I did not rerun the build or the axiom audit.
+- The docstrings of `steps_either`, `kept_or_lost` and the bounded statements carry the instruction "say this premise is the conclusion at horizon 0 or 1" inside the statement's own sentence and read badly ("an exclusively ok position with exclusively staying outcomes", E ll. 25 to 27). For the docstring reader.

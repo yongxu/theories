@@ -1,0 +1,123 @@
+# Exactly what a reading must distinguish on the mixed Drain class
+
+**Suppose equality of reading values is decided. At every horizon of two steps or more, `mixed` is kept exactly when the reading gives different values to the two possible first steps of move `false`.** Every reading keeps `mixed` for one step. A reading that distinguishes those two steps keeps it for every finite horizon.
+
+The starting class consists of `(true, 2)` and `(false, 1)`. The guard requires a nonzero level, and every move is allowed. Move `true` takes `(false, 1)` to zero, so the first move must be `false`. Its two possible steps both end at level 1.
+
+| Start | Move | End | Reading value |
+|---|---|---|---|
+| `(true, 2)` | `false` | `(true, 1)` | `sense (true, 2) false (true, 1)` |
+| `(false, 1)` | `false` | `(false, 1)` | `sense (false, 1) false (false, 1)` |
+
+AI-written by Codex, 22 November 2026. [Lean module](/Users/ren/tmp/fm/build12/Becoming/ScratchInTime.lean) · [Saved report](/Users/ren/theories/tmp/fm/centre22/in-time/REPORT.md)
+
+### The exact condition
+
+The following statements use `Drain.process`, `Drain.above` and `everyMove`. A reading of steps has type `sense : Bool × Nat → Bool → Bool × Nat → O`, with `O : Type`.
+
+**`mixed_kept_two_implies_values_ne`** gives necessity for any such reading. It has no equality-decision premise.
+
+```lean
+KeptFor Drain.process sense Drain.above everyMove 2 mixed →
+  sense (true, 2) false (true, 1) ≠ sense (false, 1) false (false, 1)
+```
+
+If the two steps give the same value, the class seen at that value contains both lanes at level 1. By `KeptFor.mono`, keeping that class for a further step would keep `ones`, contradicting `ones_not_kept_one`.
+
+**`mixed_kept_of_values_ne`** takes the explicit hypothesis `eqOrNot : ∀ x y : O, x = y ∨ x ≠ y`. If the two displayed values differ, it proves `∀ n, KeptFor Drain.process sense Drain.above everyMove n mixed`.
+
+The proof takes the starting guard directly from `code_within` and chooses move `false` using `usable_all`. It compares the observed value with the value of the true-lane step. If equal, every endpoint seen lies in the true lane because the false-lane step gives a different value. If unequal, every endpoint seen lies in the false lane. This includes an observation reached by neither step, whose seen class is empty. In both branches `KeptFor.mono` restricts `ones_in_lane_kept` to the seen class for the remaining horizon.
+
+**`mixed_kept_add_two_iff_values_ne`** takes the same `eqOrNot` hypothesis and any `n : Nat`.
+
+```lean
+KeptFor Drain.process sense Drain.above everyMove (n + 2) mixed ↔
+  sense (true, 2) false (true, 1) ≠ sense (false, 1) false (false, 1)
+```
+
+Forward, the proof applies `KeptFor.shorter` once for each of the `n` extra steps, then calls `mixed_kept_two_implies_values_ne`. Backward, it calls `mixed_kept_of_values_ne` at `n + 2`.
+
+### The readings on `mixed`
+
+| Declaration | Statement | What the proof calls |
+|---|---|---|
+| `mixed` | `mixed s` means `s = (true, 2) ∨ s = (false, 1)`. | Predicate definition. |
+| `keepsLane` | The reading of steps returns the lane reached, with values in `Bool`. | Defined by `fun _ _ t => t.1`. |
+| `mixed_kept_one` | Every reading of steps into `Type` keeps `mixed` for one step. | Uses `keptFor_one_iff.mpr` with move `false`. `code_within` and `succ_not_zero` give the starting guard, `usable_all` gives usability, and `decode_next` puts both endpoints in `ones`, where `ones_kept_zero` gives the guard. |
+| `mixed_not_kept_two_none_not_level` | Both `noneRead` and `Drain.keepsLevel` fail to keep `mixed` for two steps. | Calls `mixed_kept_two_implies_values_ne` twice. Under `noneRead` both steps give `()`. Under `Drain.keepsLevel` both give `1`. Each equality holds by `rfl`. |
+| `mixed_kept_lane` | `keepsLane` keeps `mixed` for every horizon. | I replaced the previous proof with a shorter call to `mixed_kept_of_values_ne`. Cases on the two Booleans supply `eqOrNot`. The two step values are `true` and `false`, whose inequality follows from `Bool.noConfusion`. The shared proof supplies the guard through `code_within`. |
+| `mixed_kept_end` | The reading of steps that keeps the configuration reached keeps `mixed` for every horizon. | `KeptFor.finer` applied to `mixed_kept_lane`, with `Prod.fst` recovering the lane from the endpoint by `rfl`. |
+| `mixed_kept_two_lane_not_none_not_level` | At two steps `keepsLane` keeps `mixed`, while `noneRead` and `Drain.keepsLevel` each fail to keep it. | Pairs `mixed_kept_lane 2` with `mixed_not_kept_two_none_not_level`. |
+
+The module header names both two-step counterexamples to reading independence, `Viability.Matching.keeping_matters` in the package and `mixed_kept_two_lane_not_none_not_level` on Drain. The Drain docstrings for readings quantified over `O : Type` now say “into `Type`”. The necessity docstring identifies the two steps by start, move and end. [Package example](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean:508)
+
+### General statements in `Becoming.Viability`
+
+**`keptFor_one_iff`** holds for any process `P : Process S A`, reading of steps `sense : S → A → S → O`, guard `guard : S → Prop`, allowed moves `allowed : S → A → Prop`, and class `B : S → Prop`. The types of configurations, moves and values have independent universes.
+
+```lean
+KeptFor P sense guard allowed 1 B ↔
+  (∀ s, B s → guard s) ∧
+    ∃ a, Usable P allowed B a ∧ ∀ s t, B s → P.step s a t → guard t
+```
+
+The proof uses `KeptFor` and `Seen` by definition. Forward, for a step from `s` to `t`, it applies the guard at the actual value `sense s a t`. Backward, each member of a seen class supplies a starting configuration in `B` and a step to its endpoint, so the endpoint condition gives the guard there. Both directions retain the same usable move.
+
+**`keptFor_one_iff_change_reading`** holds with the same process, guard, allowed moves and class, for any second reading of steps `sense' : S → A → S → O'`. The value types `O : Type w` and `O' : Type z` may inhabit different universes.
+
+```lean
+KeptFor P sense guard allowed 1 B ↔ KeptFor P sense' guard allowed 1 B
+```
+
+The proof calls `keptFor_one_iff` once for each reading and composes the first equivalence with the reverse of the second.
+
+**Package search.** I found neither general statement in the package. I searched `Keeping.lean` and its five direct importers for horizon-one statements, and searched the package’s Lean sources for `KeptFor`. The direct importers were `Becoming.lean`, `GuardHorizon.lean`, `JointKeeping.lean`, `ReadingLoop.lean` and `ReflexivePrediction.lean`. The nearby result `ChoicePoint.keptFor_each_not_joint` proves a one-step failure for a particular process and class. [Keeping definition](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean:95) · [ChoicePoint theorem](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointKeeping.lean:365)
+
+### Drain statements in `Becoming.ScratchInTime`
+
+Every theorem below uses `Drain.process`, the nonzero-level guard `Drain.above`, and `everyMove`, which allows every move. “Every reading of steps” means every `sense : Bool × Nat → Bool → Bool × Nat → O` for every `O : Type`. Horizons range over `Nat`.
+
+| Declaration | Statement | What the proof calls |
+|---|---|---|
+| `ones` | `ones s` means `s = (true, 1) ∨ s = (false, 1)`. | Predicate definition. |
+| `ones_kept_zero` | Both lanes together at level 1 are kept for zero steps under every reading of steps. | `congrArg Prod.snd` gives level 1 in either lane. Equality symmetry and transitivity and `succ_not_zero 0` rule out level zero. |
+| `ones_not_kept_one` | No reading of steps keeps both lanes together at level 1 for one step. | `keptFor_one_iff.mp` supplies a single move whose endpoints must satisfy the guard. Move `true` takes `(false, 1)` to `(false, 0)`. Move `false` takes `(true, 1)` to `(true, 0)`. Each branch closes by `rfl`. |
+| `twos_kept_level` | Both lanes together at level 2 are kept for every horizon under `Drain.keepsLevel`, which reads the level reached. | Restates `Drain.together_kept_level`. |
+| `twos_kept_two_not_three_none` | Under `noneRead`, which keeps nothing, both lanes together at level 2 are kept for two steps and fail to be kept for three. | Pairs `ScratchDrainOnTheLaw.together_kept_two_none` and `Drain.together_not_kept_none`. |
+| `ones_in_lane_kept` | For each lane `b`, the class `fun s => ones s ∧ s.1 = b` is kept for every horizon under every reading of steps. | Calls `Drain.lane_kept`. Membership supplies the lane equality, and `ones_kept_zero` supplies the guard. This replaces the singleton formulation. |
+| `ones_not_kept_one_twos_kept_level_ones_in_lane_kept` | No reading of steps keeps both lanes together at level 1 for one step. The level reading keeps both lanes together at level 2 for every horizon. Every reading of steps keeps the part of `ones` in each lane for every horizon. | Conjoins `ones_not_kept_one`, `twos_kept_level` and `ones_in_lane_kept`. |
+| `twos_kept_two` | Both lanes together at level 2 are kept for two steps under every reading of steps. | Applies `KeptFor.finer` to `ScratchDrainOnTheLaw.together_kept_two_none`. Sending every value to `()` gives `noneRead` on each step by `rfl`. |
+| `twos_kept_one` | Both lanes together at level 2 are kept for one step under every reading of steps. | Applies `KeptFor.shorter` to `twos_kept_two sense`. |
+| `ones_zero_not_one_twos_two` | Under each reading of steps, both lanes together at level 1 are kept for zero steps and fail to be kept for one, and both lanes together at level 2 are kept for two steps. | Conjoins `ones_kept_zero sense`, `ones_not_kept_one sense` and `twos_kept_two sense` for that same reading. |
+
+In the lane theorem, `b` restricts the starting class before a move is chosen. The reading `sense s a t` gives the value of a step after the move. For both lanes starting together at level 2, the first horizon at which the level reading and the reading that keeps nothing differ is three. Both keep that class through two steps. At three steps the level reading keeps it and the reading that keeps nothing fails.
+
+### Builds
+
+This follow-up took two builds. Build 207 stopped because the local proof that shortens the horizon referred to itself without a recursive binding. Changing that binding to `let rec` fixed it. Build 208 exited 0 with no warnings and no axioms reported for any of the 22 declarations.
+
+Nine numbered builds used the requested wrapper in total. Build 200 failed on equality patterns, builds 201–203 passed, build 204 compiled with an unused-binder warning, and builds 205–206 passed cleanly before this follow-up. I ran no separate Lean command, gate or tests, started no agents, and made no changes to the package or Git. [Build 208 log](/Users/ren/tmp/fm/build12/build-208.log)
+
+```json
+{
+  "tree": "/Users/ren/tmp/fm/build12",
+  "modules": 20,
+  "ran": [
+    "Becoming.ScratchInTime",
+    "BecomingScratchInTimeAxiomAudit"
+  ],
+  "reused": 19,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchInTime": {
+      "theorems": 19,
+      "declarations": 22,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchInTime": 0.622,
+    "BecomingScratchInTimeAxiomAudit": 0.297
+  }
+}
+```

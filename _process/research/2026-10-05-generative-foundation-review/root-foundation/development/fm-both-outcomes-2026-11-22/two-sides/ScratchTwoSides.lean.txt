@@ -1,0 +1,217 @@
+import Becoming.Keeping
+import Becoming.Undecided
+import Becoming.ScratchKeptForViable
+import Becoming.ScratchDrainOnTheLaw
+
+/-! AI-written scratch module for the two outcomes of keeping through a reading. -/
+
+namespace Becoming.Viability
+
+open Generative Iteration
+
+universe u v w z
+
+variable {S : Type u} {A : Type v} {O : Type w} {C : Type z}
+  {P : Process S A} {sense : S → A → S → O} {guard : S → Prop} {allowed : S → A → Prop}
+  {decode : C → S → Prop}
+
+/-- The code names exactly the configurations in the given class. -/
+def Names (decode : C → S → Prop) (d : C) (B : S → Prop) : Prop :=
+  ∀ s, decode d s ↔ B s
+
+/-- Some configuration in the code's class is outside the guard. -/
+def Outside (decode : C → S → Prop) (guard : S → Prop) (c : C) : Prop :=
+  ∃ s, decode c s ∧ ¬ guard s
+
+/-- Some configuration is outside the guard, or each move is unusable or has a value
+after which a code in X names exactly the class seen. -/
+def lostReadingStep (P : Process S A) (sense : S → A → S → O) (guard : S → Prop)
+    (allowed : S → A → Prop) (decode : C → S → Prop) (X : C → Prop) (c : C) : Prop :=
+  Outside decode guard c ∨ ∀ a, ¬ Usable P allowed (decode c) a ∨
+    ∃ o d, Names decode d (Seen P sense (decode c) a o) ∧ X d
+
+/-- A code is lost by horizon n if it belongs to the n-th iterate of the losing step
+from codes with a configuration outside the guard. -/
+def Lost (P : Process S A) (sense : S → A → S → O) (guard : S → Prop)
+    (allowed : S → A → Prop) (decode : C → S → Prop) : Nat → C → Prop :=
+  iter (lostReadingStep P sense guard allowed decode) (Outside decode guard)
+
+local notation "Ψ" => lostReadingStep P sense guard allowed decode
+local notation "L" => Lost P sense guard allowed decode
+
+/-- Enlarging the set of losing successor codes preserves a loss step. -/
+theorem lostReading_mono : MonotoneStep Ψ :=
+  fun sub _ h => h.imp id fun each a => (each a).imp id fun ⟨o, d, names, lost⟩ =>
+    ⟨o, d, names, sub d lost⟩
+
+/-- A code with a configuration outside the guard belongs to the first loss step from such codes. -/
+theorem lostReading_start (c : C) : Outside decode guard c → Ψ (Outside decode guard) c :=
+  Or.inl
+
+/-- If every move is on a list, the loss step commutes with implication to every proposition. -/
+theorem lostReading_commutes {moves : List A} (everyMove : ∀ a, a ∈ moves) (G : Prop) :
+    CommutesWithImplication Ψ G :=
+  fun W c h finish => h.elim (fun outside => finish (.inl outside)) fun each =>
+    gather_listed (D := fun a => ¬ Usable P allowed (decode c) a ∨
+        ∃ o d, Names decode d (Seen P sense (decode c) a o) ∧ W d) moves
+      (fun a _ give => (each a).elim (fun unusable => give (.inl unusable))
+        fun ⟨o, d, names, k⟩ => k fun w => give (.inr ⟨o, d, names, w⟩))
+      (fun replies => finish (.inr fun a => replies a (everyMove a)))
+
+/-- If every code and move is listed, loss one step past the code-list length implies loss
+at that length. -/
+theorem lostReading_shortens {all : List C} (every : ∀ c, c ∈ all) {moves : List A}
+    (everyMove : ∀ a, a ∈ moves) {c : C} : L (all.length + 1) c → L all.length c :=
+  iter_shortens lostReading_mono lostReading_start (lostReading_commutes everyMove _)
+    (fun d _ => every d)
+
+/-- If every code and move is listed, loss at any horizon implies loss at the code-list length. -/
+theorem lostReading_within_length {all : List C} (every : ∀ c, c ∈ all) {moves : List A}
+    (everyMove : ∀ a, a ∈ moves) {c : C} : ∀ n, L n c → L all.length c :=
+  iter_within_length lostReading_mono lostReading_start (lostReading_commutes everyMove _)
+    (fun d _ => every d)
+
+/-- A code lost at horizon n has a class that cannot be kept for n steps. -/
+theorem lost_not_kept : ∀ n c, L n c → ¬ KeptFor P sense guard allowed n (decode c)
+  | 0, _, ⟨s, held, outside⟩, kept => outside (kept s held)
+  | _ + 1, _, .inl ⟨s, held, outside⟩, kept => outside (kept.1 s held)
+  | n + 1, _, .inr replies, ⟨_, a, usable, next⟩ =>
+    (replies a).elim (fun unusable => unusable usable) fun ⟨o, d, names, lost⟩ =>
+      lost_not_kept n d lost (KeptFor.mono (fun s => (names s).mp) (next o))
+
+/-- If a closed family contains a code's class, the code escapes loss at every horizon. -/
+theorem closed_never_lost {c : C} :
+    InClosedFamily P sense guard allowed (decode c) → ∀ n, ¬ L n c :=
+  fun ⟨F, held, within, closed⟩ n lost =>
+    lost_not_kept n c lost (keptFor_of_closed F within closed n held)
+
+section Listed
+
+variable {moves : List A} (everyMove : ∀ a, a ∈ moves)
+  (everyValue : ∀ c, codeGuard decode guard c → ∀ a, Usable P allowed (decode c) a →
+    ∃ values : List O, ∀ o, o ∈ values)
+  (updates : ∀ c, codeGuard decode guard c → ∀ a, Usable P allowed (decode c) a → ∀ o,
+    ∃ d, Names decode d (Seen P sense (decode c) a o))
+  (inOrOut : ∀ c, codeGuard decode guard c ∨ Outside decode guard c)
+  (usableOrNot : ∀ c, codeGuard decode guard c → ∀ a,
+    Usable P allowed (decode c) a ∨ ¬ Usable P allowed (decode c) a)
+
+include everyMove everyValue updates inOrOut usableOrNot
+
+/-- Suppose all moves are listed, every code is guarded or has a configuration outside,
+and usability is decided on guarded codes. If each usable move from a guarded code admits
+a list of all values and an exact successor code at each value, then at every horizon
+each code's class is kept or the code is lost. -/
+theorem kept_or_lost : ∀ n c, KeptFor P sense guard allowed n (decode c) ∨ L n c
+  | 0, c => inOrOut c
+  | n + 1, c => match inOrOut c with
+    | .inr outside => .inr (.inl outside)
+    | .inl safe =>
+      let seen := Seen P sense (decode c)
+      let bad (a : A) := ¬ Usable P allowed (decode c) a ∨
+        ∃ o d, Names decode d (seen a o) ∧ L n d
+      let good (a : A) := Usable P allowed (decode c) a ∧
+        ∀ o, KeptFor P sense guard allowed n (seen a o)
+      have sides (a : A) : bad a ∨ good a := match usableOrNot c safe a with
+        | .inr no => .inl (.inl no)
+        | .inl usable => match everyValue c safe a usable with
+          | ⟨values, listed⟩ =>
+            have atValue (o : O) : KeptFor P sense guard allowed n (seen a o) ∨
+                ∃ d, Names decode d (seen a o) ∧ L n d :=
+              match updates c safe a usable o with
+              | ⟨d, names⟩ =>
+                (kept_or_lost n d).imp
+                  (KeptFor.mono (fun s => (names s).mpr)) (fun lost => ⟨d, names, lost⟩)
+            match Undecided.each_or_some (l := values) (fun o _ => atValue o) with
+            | .inl kept => .inr ⟨usable, fun o => kept o (listed o)⟩
+            | .inr ⟨o, _, reply⟩ => .inl (.inr ⟨o, reply⟩)
+      match Undecided.each_or_some (l := moves) (fun a _ => sides a) with
+      | .inl replies => .inr (.inr fun a => replies a (everyMove a))
+      | .inr ⟨a, _, usable, next⟩ => .inl ⟨safe, a, usable, next⟩
+
+/-- Suppose every code and move is listed, each code is guarded or has a configuration
+outside, and usability is decided on guarded codes. If each usable move from a guarded code
+admits a list of all values and an exact successor code at each value, then exactly one
+outcome holds for each code. Its class lies in a closed family or the code is lost by the
+code-list length. -/
+theorem closed_or_lost_within {all : List C} (every : ∀ d, d ∈ all) {c : C} :
+    (InClosedFamily P sense guard allowed (decode c) ∨ L all.length c) ∧
+    ¬ (InClosedFamily P sense guard allowed (decode c) ∧ L all.length c) :=
+  ⟨(kept_or_lost everyMove everyValue updates inOrOut usableOrNot (all.length + 1) c).imp
+     (fun kept => (coded_kept_iff_closed (fun d _ => every d) updates).mp (KeptFor.shorter kept))
+     (lostReading_shortens every everyMove),
+   fun ⟨closed, lost⟩ => closed_never_lost closed all.length lost⟩
+
+end Listed
+
+end Becoming.Viability
+
+namespace Becoming.ScratchTwoSides
+
+open Viability ScratchKeptForViable ScratchDrainOnTheLaw ScratchDrainOnTheLaw.Lv
+
+local notation "N" => Lost Drain.process noneRead Drain.above everyMove decode
+
+/-- Both drain moves are on the list containing false and true. -/
+theorem moves_listed : ∀ a : Bool, a ∈ [false, true]
+  | false => .head _
+  | true => .tail _ (.head _)
+
+/-- The reading that keeps nothing has its only value on the singleton list. -/
+theorem unit_listed : ∀ o : Unit, o ∈ [()]
+  | () => .head _
+
+/-- Each pair of levels codes a class within the drain guard or contains a lane at zero. -/
+theorem none_in_or_out (c : Code) : codeGuard decode Drain.above c ∨ Outside decode Drain.above c :=
+  have zeroOrNonzero : ∀ k : Lv, k.val = 0 ∨ k.val ≠ 0
+    | l0 => .inl rfl
+    | l1 => .inr (succ_not_zero 0)
+    | l2 => .inr (succ_not_zero 1)
+  match zeroOrNonzero c.1, zeroOrNonzero c.2 with
+  | .inl zero, _ => .inr ⟨(true, c.1.val), .inl rfl, fun above => above zero⟩
+  | _, .inl zero => .inr ⟨(false, c.2.val), .inr rfl, fun above => above zero⟩
+  | .inr first, .inr second => .inl (code_within c first second)
+
+/-- Each move is usable or unusable from each pair of levels when every drain move is allowed. -/
+theorem none_usable_or_not (c : Code) (a : Bool) :
+    Usable Drain.process everyMove (decode c) a ∨ ¬ Usable Drain.process everyMove (decode c) a :=
+  .inl (usable_all (decode c) a)
+
+/-- Under the reading that keeps nothing, the two starts together are lost by the length
+of the nine-code list. -/
+theorem starts_lost_within_none : N allNone.length (l2, l2) :=
+  (closed_or_lost_within moves_listed (fun _ _ _ _ => ⟨[()], unit_listed⟩)
+    (fun c _ => updatesNone c) none_in_or_out (fun c _ => none_usable_or_not c)
+    everyNone (c := (l2, l2))).1.elim
+    (fun closed => False.elim (starts_in_no_closed_family_none_direct closed)) id
+
+/-- Under the reading that keeps nothing, three is the least horizon at which the two
+starts together are lost. -/
+theorem starts_first_lost_none : N 3 (l2, l2) ∧ ∀ n, N n (l2, l2) → 3 ≤ n :=
+  have step {c : Code} {n : Nat} (replies : ∀ a, N n (move c a)) : N (n + 1) c :=
+    .inr fun a => .inr ⟨(), move c a, fun t => ⟨fun held =>
+      match decode_move c a t held with
+      | ⟨s, before, reached⟩ => ⟨s, before, reached, rfl⟩, seen_in⟩, replies a⟩
+  have three : N 3 (l2, l2) := step fun a => step fun b => step fun e =>
+    match Drain.losing a b e with
+    | ⟨lane, zero⟩ =>
+      have start : decode (l2, l2) (lane, 2) := Drain.start_of lane
+      have first := decode_next (l2, l2) a _ start
+      have second := decode_next _ b _ first
+      ⟨_, decode_next _ e _ second, fun above => above zero⟩
+  have least : ∀ n, N n (l2, l2) → 3 ≤ n
+    | 0, lost => False.elim (lost_not_kept 0 _ lost (KeptFor.shorter (KeptFor.shorter together_kept_two_none)))
+    | 1, lost => False.elim (lost_not_kept 1 _ lost (KeptFor.shorter together_kept_two_none))
+    | 2, lost => False.elim (lost_not_kept 2 _ lost together_kept_two_none)
+    | k + 3, _ => Nat.succ_le_succ (Nat.succ_le_succ (Nat.succ_le_succ (Nat.zero_le k)))
+  ⟨three, least⟩
+
+/-- Under the reading that keeps the level reached, a closed family contains the two starts
+together and their code escapes loss at every horizon. -/
+theorem starts_closed_never_lost_level :
+    InClosedFamily Drain.process Drain.keepsLevel Drain.above everyMove Drain.starts ∧
+    ∀ n, ¬ Lost Drain.process Drain.keepsLevel Drain.above everyMove decodeL n .both :=
+  ⟨starts_in_closed_family_level,
+   closed_never_lost (decode := decodeL) (c := .both) starts_in_closed_family_level⟩
+
+end Becoming.ScratchTwoSides

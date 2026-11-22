@@ -1,0 +1,135 @@
+## 1. Build result against T1–T6
+
+- **T1 passed.** Part A built clean. Each loss bound is one call to the corresponding iteration theorem, with no new induction on codes.
+- **T2 passed.** Parts A and B use the same horizon for loss and keeping, including zero. A closed family excludes loss at every horizon.
+- **T3 passed.** Part C proves the alternatives constructively from decisions about the guard and usability. It assumes no decision about either outcome.
+- **T4 passed.** The proof splits one step past the code-list length. The kept branch uses `coded_kept_iff_closed` and the losing branch uses `lostReading_shortens`.
+- **T5 passed.** All 20 declarations, including all 16 theorems, have empty axiom reports.
+- **T6 passed.** Part D built clean. For the same two starts, the unit reading first loses at three steps and the level reading never loses. No requested part remains open.
+
+## 2. Declarations, premises and proof calls
+
+The general declarations are in `Becoming.Viability`. The types `S A O C` are configurations, moves, values and codes, respectively, in independent universes. The parameters are `P : Process S A`, `sense : S → A → S → O`, `guard : S → Prop`, `allowed : S → A → Prop` and `decode : C → S → Prop`. The statements below use the module’s local notation. [ScratchTwoSides.lean](/Users/ren/tmp/fm/build12/Becoming/ScratchTwoSides.lean)
+
+**Part A.** The four definitions have no hypotheses beyond their parameters.
+
+```lean
+def Names (decode : C → S → Prop) (d : C) (B : S → Prop) : Prop :=
+  ∀ s, decode d s ↔ B s
+
+def Outside (decode : C → S → Prop) (guard : S → Prop) (c : C) : Prop :=
+  ∃ s, decode c s ∧ ¬ guard s
+
+def lostReadingStep (P : Process S A) (sense : S → A → S → O) (guard : S → Prop)
+    (allowed : S → A → Prop) (decode : C → S → Prop) (X : C → Prop) (c : C) : Prop :=
+  Outside decode guard c ∨ ∀ a, ¬ Usable P allowed (decode c) a ∨
+    ∃ o d, Names decode d (Seen P sense (decode c) a o) ∧ X d
+
+def Lost (P : Process S A) (sense : S → A → S → O) (guard : S → Prop)
+    (allowed : S → A → Prop) (decode : C → S → Prop) : Nat → C → Prop :=
+  iter (lostReadingStep P sense guard allowed decode) (Outside decode guard)
+
+local notation "Ψ" => lostReadingStep P sense guard allowed decode
+local notation "L" => Lost P sense guard allowed decode
+```
+
+| Theorem | Statement and premises | Proof calls |
+|---|---|---|
+| `lostReading_mono` | `MonotoneStep Ψ` | `Or.imp` twice. The supplied inclusion carries the losing successor code into the larger predicate. |
+| `lostReading_start` | For every `c`, `Outside decode guard c → Ψ (Outside decode guard) c`. | `Or.inl` supplies the outside witness. |
+| `lostReading_commutes` | Given `everyMove : ∀ a, a ∈ moves`, for every `G : Prop`, `CommutesWithImplication Ψ G`. | `gather_listed` collects one reply per listed move. `everyMove` supplies the reply for an arbitrary move. |
+| `lostReading_shortens` | Given `every : ∀ c, c ∈ all` and `everyMove`, `L (all.length + 1) c → L all.length c`. | One call to `Iteration.iter_shortens` with `lostReading_mono`, `lostReading_start`, `lostReading_commutes` and code coverage from `every`. |
+| `lostReading_within_length` | With the same two premises, `∀ n, L n c → L all.length c`. | One call to `Iteration.iter_within_length` with the same arguments. |
+| `lost_not_kept` | `∀ n c, L n c → ¬ KeptFor P sense guard allowed n (decode c)`. | Induction on `n`. An outside witness contradicts the guard. For the move chosen by keeping, unusability contradicts usability, or `KeptFor.mono` carries the kept continuation to the losing code’s class and the induction hypothesis applies. |
+
+**Part B.** `closed_never_lost` states, for any code `c`,
+
+```lean
+InClosedFamily P sense guard allowed (decode c) → ∀ n, ¬ L n c
+```
+
+The family witness gives `KeptFor` at the requested `n` by `keptFor_of_closed`. Then `lost_not_kept` excludes loss there.
+
+**Part C.** Both theorems take the following five explicit hypotheses, with `moves : List A`.
+
+```lean
+(everyMove : ∀ a, a ∈ moves)
+(everyValue : ∀ c, codeGuard decode guard c → ∀ a, Usable P allowed (decode c) a →
+  ∃ values : List O, ∀ o, o ∈ values)
+(updates : ∀ c, codeGuard decode guard c → ∀ a, Usable P allowed (decode c) a → ∀ o,
+  ∃ d, Names decode d (Seen P sense (decode c) a o))
+(inOrOut : ∀ c, codeGuard decode guard c ∨ Outside decode guard c)
+(usableOrNot : ∀ c, codeGuard decode guard c → ∀ a,
+  Usable P allowed (decode c) a ∨ ¬ Usable P allowed (decode c) a)
+```
+
+```lean
+theorem kept_or_lost : ∀ n c, KeptFor P sense guard allowed n (decode c) ∨ L n c
+
+theorem closed_or_lost_within {all : List C} (every : ∀ d, d ∈ all) {c : C} :
+    (InClosedFamily P sense guard allowed (decode c) ∨ L all.length c) ∧
+    ¬ (InClosedFamily P sense guard allowed (decode c) ∧ L all.length c)
+```
+
+`kept_or_lost` starts with `inOrOut` at zero. At a guarded successor stage, `usableOrNot` handles unusable moves. For a usable move, `updates` supplies an exact code at each value. The induction hypothesis and `KeptFor.mono` give either keeping of the seen class or a losing code naming it. `Undecided.each_or_some` first splits over the values supplied by `everyValue`, then over the moves covered by `everyMove`. The result gives either one usable move whose every continuation is kept, or a losing reply for every move.
+
+- **Alternatives, first conjunct.** All five hypotheses give `kept_or_lost` at `all.length + 1`. On the kept branch, `KeptFor.shorter` gives keeping at `all.length`. The forward direction of `coded_kept_iff_closed` then uses `updates` and guarded-code coverage from `fun d _ => every d` to give a closed family. On the losing branch, `lostReading_shortens` uses `every` and `everyMove` to bring loss down to that same length. Starting the split at the length itself would also prove the alternatives using the keeping bound alone.
+- **Exclusion, second conjunct.** `closed_never_lost` at `all.length` uses only the alleged closed family and loss. The list supplies the numeral for this application. Its coverage, the moves, the values, the updates and both decisions play no role in exclusion.
+
+**Part D.** The seven declarations in `Becoming.ScratchTwoSides` have no additional hypotheses. Here `N` abbreviates `Lost Drain.process noneRead Drain.above everyMove decode`, and `everyMove` is the drain’s permission to use every move.
+
+| Theorem | Statement | Proof calls |
+|---|---|---|
+| `moves_listed` | `∀ a : Bool, a ∈ [false, true]` | Boolean cases and the head and tail constructors of list membership. |
+| `unit_listed` | `∀ o : Unit, o ∈ [()]` | The unit case and the head constructor. |
+| `none_in_or_out` | For every `c : Code`, `codeGuard decode Drain.above c ∨ Outside decode Drain.above c`. | Cases on the three levels and `succ_not_zero` decide zero for each lane. A zero lane witnesses outside. Two nonzero lanes give `code_within`. |
+| `none_usable_or_not` | For every `c : Code` and `a : Bool`, `Usable Drain.process everyMove (decode c) a ∨ ¬ Usable Drain.process everyMove (decode c) a`. | `Or.inl` applied to `usable_all`. |
+| `starts_lost_within_none` | `N allNone.length (l2, l2)` | `closed_or_lost_within` uses the four preceding case theorems, `updatesNone` and `everyNone`. The existing `starts_in_no_closed_family_none_direct` rules out the closed branch. |
+| `starts_first_lost_none` | `N 3 (l2, l2) ∧ ∀ n, N n (l2, l2) → 3 ≤ n` | `decode_move` and `seen_in` name each successor. `Drain.losing`, `Drain.start_of` and three uses of `decode_next` give a zero-level witness. `together_kept_two_none`, `KeptFor.shorter` and `lost_not_kept` exclude horizons 0, 1 and 2. `Nat.zero_le` and `Nat.succ_le_succ` give the inequality at later horizons. |
+| `starts_closed_never_lost_level` | `InClosedFamily Drain.process Drain.keepsLevel Drain.above everyMove Drain.starts ∧ ∀ n, ¬ Lost Drain.process Drain.keepsLevel Drain.above everyMove decodeL n .both` | `ScratchDrainOnTheLaw.starts_in_closed_family_level` gives the family. `closed_never_lost` applies to its code `.both`. |
+
+## 3. Choice of loss step and changes to premises
+
+I used the disjunction in the brief for each move. An unusable move supplies its own reply. The other reply exhibits a value and an exact code for its seen class. This form lets `gather_listed` establish commutation before any usability decision is available. Pointwise `Names` supplies both inclusions where they are needed. Part A transfers keeping from the seen class to the code. Part C transfers it from the code to the seen class.
+
+An empty class has no `Outside` witness. With a move available it is kept at every horizon by `keptFor_empty`, so same-horizon exclusion applies. If the move type is empty, the universal reply holds vacuously at the first successor horizon, and successor keeping would require a move.
+
+Part B drops all listing and update premises. The finite-horizon split in Part C drops the code list. It asks for usability decisions only on guarded codes, and for updates and a list of values only after a usable move from a guarded code. That list may depend on the code and move and must cover every value of `O`. No premise was added and no requested conclusion was weakened.
+
+## 4. The two drain readings
+
+Both starts have level two, one in each lane. With `noneRead`, every move returns the same observation `()`. Choosing `true` and then `false` keeps both lanes above zero for two steps. In any three moves, one lane experiences at least two decreases. The direct loss proof follows that lane through the three exact successor codes to a configuration at zero. Thus **three is the first losing horizon**. Applying Part C independently gives loss at **nine**, the length of `allNone`.
+
+With `Drain.keepsLevel`, choosing `true` first leaves the true lane at two and the false lane at one. The observed level identifies the lane, whose matching move preserves its level. The existing `ScratchDrainOnTheLaw.starts_in_closed_family_level` places the two starts together in a closed family. Part B therefore excludes loss for `.both` at **every horizon**. The reading takes values in `Nat`, so even at this guarded class and usable move there is no list of all values of its type. Part C’s value-list premise cannot be supplied here.
+
+## 5. Final build and scope
+
+I ran the prescribed wrapper **five times**, always with `ScratchTwoSides`. Builds 1, 2, 4 and 5 were clean and each has its numbered source snapshot. Build 3 rejected a recursive call that repeated the fixed section parameters. Correcting the call preserved the statement. Part D took one build. The final source matches snapshot 5.
+
+I ran no other Lean command, Lake command, test, gate or `check_becoming.py`. I started no agents, performed no Git operations and made no package edits. The two supplied scratch modules were read only. This report and the new module are AI-written by Codex. [Saved report](/Users/ren/theories/tmp/fm/centre22/two-sides/REPORT.md) · [Final build log](/Users/ren/tmp/fm/build12/build-5.log)
+
+Build 5 exited 0 and produced this JSON.
+
+```json
+{
+  "tree": "/Users/ren/tmp/fm/build12",
+  "modules": 48,
+  "ran": [
+    "Becoming.ScratchTwoSides",
+    "BecomingScratchTwoSidesAxiomAudit"
+  ],
+  "reused": 47,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchTwoSides": {
+      "theorems": 16,
+      "declarations": 20,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchTwoSides": 2.357,
+    "BecomingScratchTwoSidesAxiomAudit": 0.294
+  }
+}
+```

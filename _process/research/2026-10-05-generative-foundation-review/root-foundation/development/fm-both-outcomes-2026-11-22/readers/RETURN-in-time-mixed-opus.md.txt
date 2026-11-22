@@ -1,0 +1,155 @@
+# Reader's return: the `mixed` class in ScratchInTime
+
+*AI-written (Claude Opus, a reader who took no part), 22 November 2026. Read only. I ran no Lean, lake, build, gate or test. The build log was read, not rerun. Checked by `cmp`: the `.txt` is byte for byte `/Users/ren/tmp/fm/build12/Becoming/ScratchInTime.lean`, last written 07:33:39, before build 206 began (07:33:41; exit 0; 17 theorems, 20 declarations, `"with_axioms": {}`, `"unclean": []`). The counts agree with the file: 11 older theorems and 6 new ones, plus the defs `ones`, `mixed` and `keepsLane`. Line numbers are of the `.txt` unless a file is named.*
+
+## The answers in short
+
+1. Each of the eight additions is a proof of its statement, and each proves it for the reason the statement suggests. Both `rfl` calls are right. Both `KeptFor.mono` calls and the `KeptFor.finer` call go in the right direction.
+2. Every docstring says its statement and has at most three sentences. They say "move" where they mean a step, and "every reading of steps" where the statement means readings into `Type`. No name says more than its statement. The module header is now out of date.
+3. Yes: `mixed_kept_two_lane_not_none_not_level` (ll. 185-189), at horizon 2. That is the least horizon at which two readings of steps can differ: horizon 1 by `keptFor_one_iff_change_reading`, horizon 0 by the definition. `mixed_kept_two_implies_values_ne` gives a necessary condition, and it is exact as far as it goes. Its converse holds classically, and constructively wherever equality on the values is decidable. For every `O : Type` it is not provable without a classical principle. The module does not claim the converse.
+4. The last sentence of the telling rests on one theorem for the comparison and on a second theorem for "least horizon". "The one safe first move" is a remark read from the proof. "Registering the level does not" is false as worded: a reading of the level a step *starts* from keeps `mixed`. It is unfair to the level reached, which keeps `Drain.starts` at every horizon. A corrected telling is given in section 4.
+5. Nothing here is a law. Nothing relates the result to a quantity that runs down, a share, or "early enough". The Drain session's weight is right for the direction page. Against `Matching.keeping_matters` it adds two things the package lacks: a statement over every reading of what a reading must tell apart, and a reading that is not constant on the class's steps and still fails at two steps. Both belong in a record, not on the direction page.
+
+## 1. Each addition against the Lean it rests on
+
+**`mixed` (l. 125)** is `fun s => s = (true, 2) ∨ s = (false, 1)`. It is definitionally `ScratchDrainOnTheLaw.decode (.l2, .l1)` (DrainOnTheLaw l. 62, an `abbrev`; `Lv.val` reduces). The proofs rely on this defeq at ll. 135, 137 and 172.
+
+**`keepsLane` (l. 128)** is `fun _ _ t => t.1`, with values in `Bool`. Right.
+
+**`mixed_kept_one` (ll. 132-138)** is right.
+- It goes through `keptFor_one_iff.mpr`. The guard comes from `code_within (.l2, .l1) (succ_not_zero 1) (succ_not_zero 0)`, which is `∀ s, decode (l2,l1) s → Drain.above s`.
+- The move is `false`, with `usable_all mixed false`.
+- `decode_next (.l2, .l1) false s held` gives `decode (l1, l1) (Drain.next s false)`, and `decode (l1, l1)` is definitionally `ones`.
+- `Eq.subst (motive := Drain.above) (Eq.symm step)` carries the guard at `next s false` to `t`, and `step : t = next s false` (`process` at KeptForViable l. 272).
+- The binder `sense` is used only to feed `ones_kept_zero sense`, where it is idle (`KeptFor … 0` does not mention the reading). The theorem is reading-independent for the reason the statement suggests (one step).
+
+**`mixed_kept_two_implies_values_ne` (ll. 143-155)** is right.
+- **The move `true` (ll. 147-149).** `afterMove` is taken at the value `sense (false,1) true (false,0)`. Its `.1` is the guard on the class seen, applied to `(false, 0)` with the witness `⟨(false,1), Or.inr rfl, rfl, rfl⟩`. The step `rfl` is `(false,0) = next (false,1) true = (false, 1-1)` (KeptForViable l. 269). The guard `Drain.above (false,0)` is `0 ≠ 0`, applied to `rfl`. So the class is not kept because the move `true` puts lane false at level 0 at the very next configuration. This is a failure already at the guard of the class seen, the first conjunct of `KeptFor … 1`, so the move `true` does not even keep `mixed` for one step. This case does not use `same`, as it should not.
+- **The move `false` (ll. 150-155).** It sets `o := sense (false,1) false (false,1)`. `included` shows `∀ t, ones t → Seen … mixed false o t`:
+  - `(true,1)` is reached from `(true,2)`: the step is `rfl`, since `next (true,2) false = (true, 2-1)`, and the value is `same : sense (true,2) false (true,1) = sense (false,1) false (false,1)`, which is `o` by zeta.
+  - `(false,1)` is reached from `(false,1)` by `rfl` (`next_own`'s case), with the value `rfl`.
+  - `KeptFor.mono : (∀ s, B s → C s) → KeptFor n C → KeptFor n B` (Keeping l. 276) is called with `B = ones` and `C = Seen … mixed false o`. This is the right direction: the class seen holds `ones`, so its being kept would give `ones` kept. `ones_not_kept_one sense` refutes that.
+  - The failure rests on the level-1 theorem and is not proved afresh, as FOLLOWUP-3 asked.
+- The match on `kept.2` covers both Boolean moves, so no case is left. Nothing else carries the proof.
+
+**`mixed_not_kept_two_none_not_level` (ll. 160-164)** is right. Both `rfl`s hold by definition:
+- `noneRead (true,2) false (true,1) = noneRead (false,1) false (false,1)` is `() = ()` (KeptForViable l. 26).
+- `Drain.keepsLevel (true,2) false (true,1) = Drain.keepsLevel (false,1) false (false,1)` is `(true,1).2 = (false,1).2`, that is `1 = 1` (KeptForViable l. 281: `keepsLevel` reads `t.2`, the level reached).
+- The endpoints are named in the statement, so no `next` has to reduce here.
+
+**`mixed_kept_lane` (ll. 168-174)** is right.
+- At `0` it uses `(mixed_kept_one keepsLane).1`, which is the guard on `mixed`. Only the guard is used, and `code_within` would do.
+- At `n+1` it takes the move `false` and, for each value `b : Bool`, `KeptFor.mono (C := fun s => ones s ∧ s.1 = b)`. Each class seen lies inside that `C`:
+  - `seen_in (c := (.l2,.l1)) (a := false)` (DrainOnTheLaw l. 120) gives `decode (move (l2,l1) false) t`, that is `decode (l1,l1) t = ones t`.
+  - The fourth component of the witness is `keepsLane s false t = b`, which is `t.1 = b`.
+- `ones_in_lane_kept keepsLane b n` (l. 80, through `Drain.lane_kept`) keeps `C` for `n`. The direction is right: what is seen is narrower than `C`.
+
+**`mixed_kept_end` (ll. 178-179)** is right. It is `KeptFor.finer Prod.fst (fun _ _ _ => rfl)`. `KeptFor.finer` (Keeping ll. 293-296) takes `forget : F → O` with `forget (fine s a t) = sense s a t` and carries `KeptFor sense` to `KeptFor fine`. Here `fine = endRead` (into `Bool × Nat`), `sense = keepsLane`, and `Prod.fst (endRead s a t) = t.1 = keepsLane s a t` holds by `rfl`. The direction is right: `endRead` is finer, and `keepsLane` is read off it.
+
+**`mixed_kept_two_lane_not_none_not_level` (ll. 185-189)** is right. It is `⟨mixed_kept_lane 2, mixed_not_kept_two_none_not_level⟩`, with the anonymous constructor flattening the right-nested `∧`.
+
+**Could any proof pass for another reason?** No. Each case that matters uses the fact its statement turns on:
+- the value equation `same` in the `false` case;
+- the level-0 guard in the `true` case;
+- the lane equation in `mixed_kept_lane`.
+
+## 2. Docstrings and names
+
+All docstrings have at most three sentences. Each says its statement, with these differences:
+
+- **`mixed_kept_two_implies_values_ne` (ll. 140-142)** says "gives different values to the move `false` from `(true, 2)` to `(true, 1)` and the move `false` from `(false, 1)` to `(false, 1)`". A reading gives values to steps (start, move, end), not to moves. Replacement: "With the nonzero-level guard and every move allowed, any reading of steps into `Type` that keeps `mixed` for two steps gives different values to the step of the move `false` from `(true, 2)` to `(true, 1)` and the step of the move `false` from `(false, 1)` to `(false, 1)`."
+- **`mixed_kept_one` (ll. 130-131)** says "every reading of steps" where the statement binds `{O : Type}`. The same holds of `mixed_kept_two_implies_values_ne`. Add "into `Type`", as the previous reader asked for the older Drain theorems. `mixed_kept_one` could be stated for every universe through `keptFor_one_iff_change_reading`; it is not.
+- **`keepsLane` (l. 127)** is exact. It sits in `ScratchInTime`, not beside `Drain.keepsLevel` in `Drain`. That does not matter for scratch.
+- **The rest are exact:** `mixed` (l. 124), `mixed_not_kept_two_none_not_level` (ll. 157-159), `mixed_kept_lane` (ll. 166-167), `mixed_kept_end` (ll. 176-177, "the configuration reached" being `endRead`), and the final conjunction (ll. 181-184).
+- **The module header (ll. 4-6)** says only "At two steps the analogue of `keptFor_one_iff_change_reading` fails already in the package, by `Viability.Matching.keeping_matters`." It is now out of date, because the module itself shows the failure on Drain. Replacement line: "At two steps the analogue of `keptFor_one_iff_change_reading` fails: in the package by `Viability.Matching.keeping_matters`, and on Drain here by `mixed_kept_two_lane_not_none_not_level`."
+
+**Names.** No name says more than its statement.
+- `mixed` says nothing about what the class is. It is harmless in scratch, but a name such as `trueTwoFalseOne` would carry the class.
+- `mixed_kept_two_implies_values_ne` does not say which values; its docstring does.
+- The final name lists exactly its three conjuncts.
+
+## 3. A theorem in which the reading makes a difference
+
+**Yes: `mixed_kept_two_lane_not_none_not_level` (ll. 185-189).** The class is `mixed`, the horizon is 2, and the guard is `Drain.above` with `everyMove`. On the kept side is `keepsLane`. On the not-kept side are `noneRead` and `Drain.keepsLevel`. Beside it, `mixed_kept_lane` and `mixed_kept_end` hold at every horizon, for `keepsLane` and `endRead`.
+
+**The least horizon.** Horizon 1 is reading-independent by `keptFor_one_iff_change_reading` (l. 32). Horizon 0 is reading-independent by the definition (Keeping l. 97, which does not mention `sense`), and no theorem states this. So 2 is the least horizon at which any two readings of steps can differ, and here they do. The pairing of these facts is not one theorem.
+
+**What a reading must register.** `mixed_kept_two_implies_values_ne` states, for every reading into `Type`, a condition on the reading itself: it must tell apart two named steps. It is a necessary condition, not a characterization.
+
+**The converse, worked on paper.** Write `v1 := sense (true,2) false (true,1)` and `v2 := sense (false,1) false (false,1)`, and suppose `v1 ≠ v2`.
+- Take the move `false`, the only candidate. The class seen at a value `o` is `{(true,1) | v1 = o} ∪ {(false,1) | v2 = o}`. Its guard holds, since everything in it is at level 1.
+- At `o = v1` it is `{(true,1)}`, and at `o = v2` it is `{(false,1)}`. At a third value it is empty. `KeptFor` asks of the empty class only a usable move, which always exists here (`usable_all`; Keeping's `keptFor_empty`, l. 306, gives every horizon). The empty class is therefore kept, and so is a part of `ones` in one lane (`ones_in_lane_kept`).
+- **Something decided is needed.** To use `Drain.lane_kept` (or the next move inside `keptFor_one_iff`), one must name the lane `b` with `Lane b C`. Lane `true` needs `¬ (v2 = o)`; lane `false` needs `¬ (v1 = o)`. From `v1 ≠ v2` one gets `¬ (v1 = o ∧ v2 = o)`, but the proof needs `¬ (v1 = o) ∨ ¬ (v2 = o)`. That is the De Morgan step that in general requires weak excluded middle.
+- **So the converse:**
+  - holds **classically** for every `O : Type`, at horizon 2 and at every horizon `n ≥ 2` (and at 0 and 1 by `mixed_kept_one`);
+  - holds **constructively** for `O` with decidable equality: `Unit`, `Bool`, `Nat`, `Bool × Nat`, every reading in this module;
+  - is **not provable without a classical principle** at the generality of every `O : Type`. Taking `O := Prop`, the instance would yield `¬P ∨ ¬¬P` for an arbitrary `P`, given propext.
+- **The module does not claim it.** No statement and no docstring gives the converse. With `[DecidableEq O]` it could be stated as an iff at every `n ≥ 2`: that would be the exact form of "what must be registered". It is not built.
+
+## 4. The proposed telling, clause by clause
+
+| Clause | Theorem |
+|---|---|
+| "On the built process Drain, with every move allowed and the guard 'level not zero', take the class of lane true at level 2 together with lane false at level 1." | `mixed` (l. 125); `Drain.process`, `Drain.above`, `everyMove` |
+| "It is kept for one step under every reading of steps into `Type`" | `mixed_kept_one` |
+| "(as any class is alike under every reading at one step)" | `keptFor_one_iff_change_reading` (every universe) |
+| "It is kept for two steps only by a reading that gives different values to the two steps…" | `mixed_kept_two_implies_values_ne` |
+| "…the one safe first move takes from the two configurations" | **not there** as a theorem. It is the `true` case inside the proof (ll. 147-149), resting on `next (false,1) true = (false,0)` by `rfl` (`Drain.next_other` at level 1, KeptForViable l. 290). The theorem names the two steps instead. |
+| "The reading that keeps nothing and the reading that keeps the level reached give those two steps one value" | the two `rfl`s at ll. 163-164; by definition, not stated |
+| "and do not keep it for two steps" | `mixed_not_kept_two_none_not_level` |
+| "the reading that keeps only the lane reached keeps it at every horizon" | `mixed_kept_lane` (and `mixed_kept_end` for `endRead`) |
+| "So on this class, at the least horizon…, registering the lane keeps the class, registering the level does not, and registering nothing does not." | The three-way comparison is one theorem, `mixed_kept_two_lane_not_none_not_level`. "The least horizon" is a second theorem side by side, `keptFor_one_iff_change_reading`, plus the definition at 0. "Registering X" stands for three named readings, not for every reading that registers X. |
+
+**"Registering the level does not" is wrong as worded.** It is right only of `Drain.keepsLevel`, the level *reached*. A reading of the level the step starts from, `fun s _ _ => s.2`, gives 2 and 1 to the two steps. By the converse (constructive here, since `Nat` has decidable equality) it keeps `mixed` at every horizon. This is unbuilt, but it is a two-line case of the converse.
+
+**It is also unfair to the level reached across classes.** On `Drain.starts` (both lanes at level 2), `Drain.keepsLevel` keeps the class at every horizon (`Drain.together_kept_level`, restated as `twos_kept_level`, l. 66), while `noneRead` fails at 3. There the first move `true` sends the two lanes to different levels, so the level reached tells the lane. On `mixed` the move `false` sends both to level 1, so it tells nothing.
+
+**Gaps in the Lean.**
+- "Registering the lane keeps it" for every reading from which the lane can be read off follows by `KeptFor.finer` from `mixed_kept_lane`. Only `endRead` is built.
+- That `keepsLane` keeps `Drain.starts` is not proved anywhere. It cannot come from `together_kept_end` by `finer`, which goes from coarser to finer.
+
+**What a careful sentence must add.** What a reading must register depends on the class. On `mixed` the one move that keeps the class for one step ends both lanes at the same level, so the level reached tells nothing there. On both lanes at level 2 the same reading tells the lane and keeps the class at every horizon.
+
+**Corrected telling.**
+
+> On the built process Drain, with every move allowed and the guard "level not zero", take the class of lane true at level 2 together with lane false at level 1 (`mixed`). It is kept for one step under every reading of steps into `Type` (`mixed_kept_one`), as any class is alike under every reading of steps at one step (`keptFor_one_iff_change_reading`). Any reading of steps into `Type` that keeps it for two steps gives different values to the step of the move `false` from (true, 2) to (true, 1) and the step of the move `false` from (false, 1) to (false, 1) (`mixed_kept_two_implies_values_ne`); in the proof, the move `true` puts lane false at level 0 at once. The reading that keeps nothing and the reading that keeps the level reached give those two steps one value and do not keep the class for two steps; the reading that keeps only the lane reached, and the reading that keeps the configuration reached, keep it at every horizon (`mixed_kept_two_lane_not_none_not_level`, `mixed_kept_lane`, `mixed_kept_end`). So on this class, at two steps, the least horizon at which a reading of steps can make a difference, the reading of the lane reached keeps the class and the readings of the level reached and of nothing do not. This is not a ranking of readings: on both lanes at level 2 the reading of the level reached keeps the class at every horizon (`Drain.together_kept_level`), because there the first move sends the two lanes to different levels, while here the one move that survives sends both to level 1. What a reading must tell apart is fixed by the class and its moves, not by the reading alone.
+
+## 5. What it is not
+
+- **No law.** Every new theorem is about one class on one built process with one guard. Nothing is quantified over processes except the older `keptFor_one_iff*`.
+- **No quantity, share or "early enough".** The level runs down by `next_other`, but no theorem relates keeping or failing to how much level is left, or to a share. "Early enough" appears nowhere.
+- **Against `Matching.keeping_matters`** (Keeping ll. 506-511). Its case already shows a difference at two steps: `keepsBit` keeps `starts`, and `keepsNothing` does not. Those are the only readings in it, and the only negative `KeptFor` in the package at two steps (grep: Keeping ll. 498 and 510; besides it only `keptFor_each_not_joint` at one step, JointKeeping l. 370). `mixed` adds three things:
+  1. A statement over every reading into `Type` of what a reading must tell apart, `mixed_kept_two_implies_values_ne`. The package has no theorem that quantifies over readings to conclude something about the reading.
+  2. A failing reading that is not `keepsNothing`. `Drain.keepsLevel` is not constant on the process's steps, and on another class it keeps at every horizon. Note that every reading is "finer than nothing" (`forget` to `Unit`), so the point is not fineness. The point is that it registers differences and not the one this class needs.
+  3. The same reading keeping one class and failing another on the same process at the least horizon. That needs `together_kept_level` beside `mixed_not_kept_two_none_not_level`, which is two theorems; no single theorem conjoins them.
+- **The weight.** "One more built case on a process with no share" is the right weight for the direction page. The three additions above deserve one line in the record (the board row, or the study note) and no line on the direction page. If anything goes toward the package, it is (1), best in its exact form: an iff under `[DecidableEq O]`, which is not built.
+
+## 6. Other findings
+
+- **Said more than once in the module:**
+  - `mixed_not_kept_two_none_not_level` and `mixed_kept_lane 2` are restated in the final conjunction.
+  - `ones_not_kept_one` is stated at l. 57 and again inside ll. 90 and 116.
+  - `Drain.together_kept_level` is imported and restated at ll. 66 and 93.
+  - `ScratchDrainOnTheLaw.together_kept_two_none` and `Drain.together_not_kept_none` are restated at l. 73.
+  - `twos_kept_one` is `KeptFor.shorter` of `twos_kept_two`.
+  - The conjunctions `ones_not_kept_one_twos_kept_level_ones_in_lane_kept` and `ones_zero_not_one_twos_two` hold nothing new.
+- **To leave behind if anything goes toward the package:** all restatements and conjunctions; `twos_kept_one`; and `mixed_kept_end` (a one-line `finer` of `mixed_kept_lane`). Keep `keptFor_one_iff`, `keptFor_one_iff_change_reading`, `ones_not_kept_one`, `mixed_kept_two_implies_values_ne` (or its iff form), and one theorem of the comparison.
+- **Idle binders:**
+  - `sense` in `ones_kept_zero` (horizon 0).
+  - `sense` in `mixed_kept_one` and `ones_not_kept_one`, which are reading-independent by a theorem of the same module.
+  - In `mixed_kept_lane`, the call `(mixed_kept_one keepsLane).1` is used only for the guard, which `code_within` gives directly.
+- **The namespace** is still `ScratchInTime`, and no statement is about time.
+
+## Verdict
+
+**Yes.** The case may be pointed to as a built case, with the telling of section 4 as corrected here: a scratch module, not in the package, with no axiom by the log of build 206, read and not rerun.
+
+What changed from the proposed telling:
+- "the one safe first move" is replaced by the two named steps, and the move `true` is said to fail inside the proof;
+- "registering the level" becomes "the reading of the level reached";
+- the last sentence is said as one theorem plus `keptFor_one_iff_change_reading` for "least";
+- the sentence on `Drain.starts` under the level reached is added, so the comparison is not read as a ranking of readings;
+- "into `Type`" is said;
+- nothing in the telling may suggest that differing values suffice. That converse is not in the module and holds only classically, or constructively for values with decidable equality.
+
+Small mends to the file: the header line (section 2) and "step" for "move" in the docstring of `mixed_kept_two_implies_values_ne`.

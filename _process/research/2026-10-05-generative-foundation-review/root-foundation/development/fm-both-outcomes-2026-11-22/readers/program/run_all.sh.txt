@@ -1,0 +1,27 @@
+#!/bin/bash
+# AI-written (Claude Fable, reader 'program'), 22 November 2026.
+# Every sweep, one process at a time, each run under a minute. Output in out/.
+cd "$(dirname "$0")" || exit 1
+mkdir -p out
+run() { # name, then the arguments of sweep.py
+  local name="$1"; shift
+  python3 sweep.py "$@" > "out/$name.json" || echo "FAILED $name"
+  echo "$name done $(date +%H:%M:%S)"
+}
+# exhaustive: every process, guard and subfamily of the classes; the two variants of Names too
+for c in "0 0 0" "0 1 0" "0 1 1" "0 2 2" "1 0 0" "1 0 1" "1 1 1" "1 1 2" "1 2 1" "1 2 2" \
+         "2 0 0" "2 0 2" "2 1 1" "2 1 2" "2 2 1"; do
+  set -- $c
+  run "ex_$1_$2_$3" "$1" "$2" "$3" all variants
+done
+for i in 0 1 2 3 4 5; do run "ex_2_2_2_shard$i" 2 2 2 all "$i/6" variants; done
+for i in 0 1 2 3 4 5 6 7; do run "ex_3_1_1_shard$i" 3 1 1 all "$i/8"; done
+# sampled
+run "rnd_3_1_1_variants" 3 1 1 rnd:15 sample=20000 seed=11 variants
+run "rnd_3_1_2" 3 1 2 rnd:15 sample=20000 seed=12 variants
+run "rnd_3_2_1" 3 2 1 rnd:15 sample=20000 seed=13 variants
+run "rnd_3_2_2" 3 2 2 rnd:15 sample=20000 seed=14 variants
+run "rnd_3_3_2" 3 3 2 rnd:15 sample=10000 seed=15
+run "rnd_4_1_1" 4 1 1 rnd:15 sample=4000 seed=16
+run "rnd_4_2_2" 4 2 2 rnd:15 sample=4000 seed=17
+echo ALL DONE

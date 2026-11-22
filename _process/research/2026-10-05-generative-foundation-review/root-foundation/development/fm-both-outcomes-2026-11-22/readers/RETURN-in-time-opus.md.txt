@@ -1,0 +1,132 @@
+# Reader's return: ScratchInTime
+
+*AI-written (Claude Opus, reader who took no part), 22 November 2026. Read only. I ran nothing: no Lean, lake, build, gate or tests. The build log was read, not rerun. `diff` shows the `.txt` matches `/Users/ren/tmp/fm/build12/Becoming/ScratchInTime.lean` byte for byte.*
+
+## 1. Each statement against the Lean it rests on
+
+Definitions used:
+- `KeptFor` (Keeping.lean ll. 95-99): `| 0, B => ∀ s, B s → guard s`; `| n+1, B => guard on B ∧ ∃ a, Usable P allowed B a ∧ ∀ o, KeptFor … n (Seen P sense B a o)`.
+- `Seen` (l. 78-80): `∃ s, B s ∧ P.step s a t ∧ sense s a t = o`.
+- `Usable` (l. 89-90): `∀ s, B s → allowed s a ∧ Enabled P s a`.
+- `Drain.process` step is `t = next s a` (KeptForViable l. 272). `next` (ll. 265-269) keeps the level on the matching move and applies `k - 1` on the other. `above s := s.2 ≠ 0`. `everyMove := True`. `noneRead := ()`. `keepsLevel := t.2`.
+
+**`ones` (l. 11).** This is a definition. It has the same form as `Drain.starts` with level 1.
+
+**`ones_kept_zero` (ll. 15-21).** At horizon 0 the goal is `∀ s, ones s → s.2 ≠ 0`. Each disjunct gives `level : s.2 = 1` by `congrArg Prod.snd`. Then `level.symm.trans zero : 1 = 0` is refuted by `succ_not_zero 0`, since `1` is definitionally `Nat.succ 0`. The proof is correct. `sense` does not occur in `KeptFor … 0`, so "under every reading" is idle here: the binder quantifies over a parameter the statement does not use.
+
+**`ones_not_kept_one` (ll. 25-33).** The proof is correct.
+- `kept.2 : ∃ a, Usable … ones a ∧ ∀ o, ∀ t, Seen … ones a o t → t.2 ≠ 0`.
+- Case `a = true`. `o := sense (false,1) true (false,0)` and `t := (false,0)`. The Seen witness is `⟨(false,1), Or.inr rfl, rfl, rfl⟩`:
+  - `ones (false,1)` holds by `Or.inr rfl`.
+  - `P.step (false,1) true (false,0)` unfolds to `(false,0) = next (false,1) true = (false, 1-1)`. The `rfl` closes it because `1 - 1` reduces to `0`.
+  - The third `rfl` gives `sense … = o` by the choice of `o`.
+- The result is `(false,0).2 ≠ 0`, that is `0 = 0 → False`. The final `rfl : 0 = 0` closes it against `Drain.above`.
+- Case `a = false` is symmetric: `next (true,1) false = (true,0)`.
+- The `Usable` component is discarded (`_`, ll. 28 and 31).
+
+The proof never uses anything about `sense`. The value `o` is taken to be whatever the step gives, and that is available for every reading. This is not a hidden fault, but it is the main point under question 4: at horizon 1, `KeptFor` does not depend on `sense` at all. `∀ o, ∀ t, Seen sense B a o t → guard t` is equivalent to `∀ s t, B s → step s a t → guard t`. The module does not state this equivalence.
+
+**`twos_kept_level` (ll. 37-39).** This is exactly `Drain.together_kept_level` (KeptForViable l. 406), the same type renamed. It is correct.
+
+**`twos_kept_two_not_three_none` (ll. 43-46).** The pair `⟨together_kept_two_none, together_not_kept_none⟩` has the stated types (DrainOnTheLaw l. 191, KeptForViable l. 347). It is correct.
+
+**`one_lane_kept` (ll. 50-55).** `Drain.lane_kept sense n b : Lane b C → KeptFor … n C`, with `C` inferred as `fun s => s = (b,1)`. `Lane b C` is `∀ x, C x → x.1 = b ∧ x.2 ≠ 0`.
+- `congrArg Prod.fst same : x.1 = (b,1).1`, which is definitionally `b`.
+- `(congrArg Prod.snd same).symm.trans zero : (b,1).2 = 0`, which is definitionally `1 = 0`, refuted by `succ_not_zero 0`.
+
+The proof is correct.
+
+**`three_cases` (ll. 62-68).** It conjoins the three theorems above. The first conjunct's `∀ {O : Type}` binder matches the implicit `{O}` of `ones_not_kept_one`. It is correct.
+
+**`twos_kept_two` (ll. 72-75).** `KeptFor.finer` (Keeping l. 293) has the form `{F : Type z} {fine : S → A → S → F} (forget : F → O) (consistent : ∀ s a t, forget (fine s a t) = sense s a t) : KeptFor … sense … n B → KeptFor … fine … n B`.
+- The named arguments set `sense := noneRead` (so the coarse `O := Unit`) and `fine := sense` (so `F :=` the theorem's `O : Type`, z = 0).
+- `forget := fun _ => ()`. `consistent` holds by `rfl`, since both sides reduce to `()`.
+- The direction is right: from kept under the coarser reading (`noneRead`) to kept under the finer one (any `sense`).
+- Universes: the theorem holds for every `O : Type`, as stated. `finer` would allow every `Type z`, but the module states only `Type`.
+
+It is correct. Content: anything kept under `noneRead` is kept under every reading, because `noneRead` is the coarsest. So the third conjunct carries no information about readings. It is the `noneRead` fact carried over.
+
+**`twos_kept_one` (ll. 79-81).** `KeptFor.shorter` applied to the above. It is correct.
+
+**`one_step_of_slack` (ll. 86-90).** It conjoins the three theorems. It is correct.
+
+**Vacuity and trivial guards.**
+- No premise is vacuous. The classes are nonempty, and the guard `above` is not trivial.
+- For an empty `O` no `sense : Bool × Nat → Bool → Bool × Nat → O` exists, since S and A are inhabited. The "every reading" statements are vacuous only there, which is harmless.
+- **`Usable` contributes nothing in this module.** With `everyMove` and the total, deterministic `Drain.process`, every move is usable from every class (`usable_all`, DrainOnTheLaw l. 185). In `ones_not_kept_one` it is thrown away.
+- The only part of the `n+1` clause that does work is its quantifier order: `∃ a` once for the class, then `∀ o`.
+
+## 2. Each docstring against its statement
+
+- `ones`, `ones_kept_zero`, `twos_kept_level`, `twos_kept_two_not_three_none`, `one_lane_kept`, `twos_kept_two` and `twos_kept_one` say their statements. One caveat: "under every reading" means readings `S → A → S → O` with `O : Type`. No docstring says the reading is of a step, or that `O` lives in `Type`.
+- `ones_not_kept_one` and `three_cases` say "no reading keeps both lanes together at level 1 for one step." This is literally right for readings of steps into `Type`. It invites the reading "not even a reading that tells the lane", and that is false for a reading taken before the first move (see 3).
+- `one_step_of_slack`: the docstring matches the statement. **The name says more than the statement**, and on its natural reading it says something false:
+  - Under every reading, level 1 gives exactly 0 steps.
+  - Level 2 gives at least 2 steps under every reading, and exactly 2 under `noneRead`.
+  - So one more level gives two more steps here, not one.
+  - Nothing in the module or its imports states a general relation between levels and steps.
+  - Proposed names: `ones_fail_at_one_twos_kept_two`, or `level_one_and_level_two_every_reading`.
+- `three_cases` is a bland name. It is acceptable, but it says nothing about what the three cases are.
+
+## 3. The intended telling, clause by clause
+
+| Clause | Theorem |
+|---|---|
+| "both lanes at level 1 are kept for one step under no reading of steps" | `ones_not_kept_one` (readings `S → A → S → O`, `O : Type`) |
+| "each lane alone at level 1 is kept at every horizon under every reading" | `one_lane_kept` |
+| "both lanes at level 2 are kept for two steps under every reading" | `twos_kept_two` |
+| "at every horizon under the reading that keeps the level reached" | `twos_kept_level` |
+| "for two steps and not three under the reading that keeps nothing" | `twos_kept_two_not_three_none` |
+| "The reason is of KeptFor's form…" | **No theorem.** A remark about the definition `Viability.KeptFor` (Keeping.lean ll. 98-99: `∃ a, Usable P allowed B a ∧ ∀ o, …`) and `Seen` (l. 80). |
+
+The "reason" sentence has two halves, and only one of them does the work.
+
+- **"The first move is chosen for the whole class."** This is right, and it is the operative part: one `∃ a` for the whole class, before any `o`.
+- **"A reading there is of a step, so a value is kept only after a move."** This is right about the definition, but at horizon 1 it is idle. As shown under 1, `KeptFor … 1 B` is the same for every `sense`. So "under no reading of steps" adds nothing to "under `noneRead`". The level-1 failure is the plain fact that each move lowers the unmatched lane to 0 (`next_other`, KeptForViable l. 290), and the class holds both lanes.
+
+What makes the clause about time true is a contrast that the module has only in pieces. A reading of steps can see the start: `sense s a t` takes `s`, so `fun s _ _ => s.1` gives the lane exactly. It still cannot save `ones`, because its value comes after the first move. If the lane were known before the first move, each lane alone would be kept forever (`one_lane_kept`), and `ones` is the union of the two.
+
+**A reading of the START is not of the form `S → A → S → O`.** `KeptFor` has no such reading, and the module never formalises "known before the first move" as a reading. A statement like `∀ o, KeptFor n (fun s => ones s ∧ s.1 = o)` would do it. `one_lane_kept` gives that only after the class is rewritten. So the telling's contrast between "of a step" and "before" rests on a remark and on `one_lane_kept` read as a reading of the start. No theorem says it.
+
+Other limits a careful person would read past:
+- "no reading" covers `O : Type` only. It would extend to every universe, but that is not stated.
+- "every move allowed" and the nonzero-level guard are premises of every clause. The telling's first sentence does not name them.
+
+## 4. What would make the case trivial or misleading
+
+- **Not kept for 1 step at level 1 is reading-free.** It is "every move loses a lane". With the sense-independence of `KeptFor` at horizon 1 (true, but not stated in the module), "under no reading" adds no content beyond `noneRead`. Telling it as "no reading saves the class" suggests readings were tried and failed, when at this horizon they cannot enter at all.
+- **The level-2 contrast is partly about the level, not the reading.**
+  - Under `noneRead` the class is kept 2 steps, so both of the "two steps under every reading" are owed to the level alone. `twos_kept_two` is the `noneRead` fact carried over by `finer`.
+  - The reading matters only beyond 2: it gives every horizon under `keepsLevel` against 2-not-3 under `noneRead`.
+  - So the reading's effect shows only between `twos_kept_level` and `twos_kept_two_not_three_none`, both imported. It does not show between level 1 and level 2.
+  - The module's new content (`ones_kept_zero`, `ones_not_kept_one`, `twos_kept_two`, `one_step_of_slack`) contains no comparison in which the reading makes a difference.
+- **`Usable` is trivial** throughout (everyMove, total process).
+
+The smallest true sentence the module supports: on `Drain`, with every move allowed and the guard "level ≠ 0", both lanes at level 1 together cannot be kept for one step, whatever reading of steps (into `Type`). The first move is chosen once for both, and each move puts one lane at 0. Yet each lane alone at level 1 is kept forever. At level 2 the same pair is kept two steps with no reading at all, and forever when the reading gives the level after each move. So a reading of steps, even one that tells the lane exactly, comes after the first move, and on this process it can help only where the class survives the first move.
+
+It does not support:
+- that readings come too late in general;
+- any relation between levels and steps ("one step of slack");
+- that a reading taken before the first move would save `ones` (not formalised as a reading);
+- anything about `allowed` restricted, or a guard other than `above`;
+- any law named "early enough" or "in time".
+
+## 5. Other findings
+
+- **Duplicated statements, not marked as such.**
+  - `twos_kept_level` is `Drain.together_kept_level` renamed.
+  - `twos_kept_two_not_three_none` is the first two conjuncts of `ScratchDrainOnTheLaw.edge_two_codes_nine` (DrainOnTheLaw ll. 203-206). It is also conjuncts 2 of `Drain.reading_matters` (KeptForViable l. 421) together with `together_kept_two_none`.
+  - The brief asked for these restatements, but the docstrings do not say they are restatements.
+- **`one_lane_kept`** is `Drain.lane_kept` at level 1. It is the level-1 analogue of `Drain.alone_kept_none` (l. 315), but for every reading.
+- **`twos_kept_two`** has no docstring hint that its content is reading-free: it holds because `noneRead` already keeps the class.
+- **Unused hypotheses.**
+  - The binder `sense` is unused in substance in `ones_kept_zero` (absent at horizon 0) and in `ones_not_kept_one` (irrelevant at horizon 1).
+  - In `one_step_of_slack`, the first two conjuncts' `sense` is likewise idle. Only the third conjunct ranges over `sense` in a way that matters, and there `finer` handles it.
+- **Build log.** 9 theorems, 10 declarations, `"with_axioms": {}`, `"unclean": []`, exit 0 (build 202). This agrees with the module's count. It was read, not rerun.
+- **REPORT.md** says `ones_not_kept_one` "Uses `KeptFor` and `Seen` by definition". That is accurate, and it notes nothing beyond that.
+
+**Verdict: no.** This must change before the module may be pointed to as a built case:
+- Rename `one_step_of_slack` (e.g. `ones_fail_at_one_twos_kept_two`).
+- Replace "the reason is of KeptFor's form: a reading there is of a step…" with what the Lean bears: the first move is chosen once for the whole class (the `∃ a` of `KeptFor`, Keeping.lean l. 99), and at horizon 1 the reading of steps cannot matter at all. Better: prove `KeptFor P sense g al 1 B ↔ KeptFor P noneRead g al 1 B` and cite it.
+- Say that "no reading" means readings of steps into `Type`, that a reading before the first move is not of that form, and that the contrast with such a reading rests on `one_lane_kept` read as "the lane known before the first move", not on a theorem about readings.
+- Say that both of the two steps at level 2 are owed to the level (`noneRead`), and that the reading's effect shows only beyond 2 (imported theorems).

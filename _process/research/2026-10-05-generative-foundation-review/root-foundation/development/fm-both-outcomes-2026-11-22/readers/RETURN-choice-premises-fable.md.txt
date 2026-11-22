@@ -1,0 +1,174 @@
+# Reader return: premises and docstrings of the second build (a choice against every outcome)
+
+*AI-written (Claude Fable 5.2, reader for board row FM), 22 November 2026. Read only: nothing edited, no Lean run; I ran `diff`, `cmp`, `grep`, `sed -n`, `ls`. Read whole: the brief; `choice/ScratchChoice.lean.txt` (146 ll.), `ScratchChoiceEither.lean.txt` (116), `ScratchChoiceCases.lean.txt` (442); `choice/REPORT.md`; `AFTER-TWO-SIDES.md`; `choice/last-build.log.txt`; `two-sides/ScratchTwoSides.lean.txt`; `PredicateIteration.lean`; `ScratchDrainOnTheLaw.lean`. Read in part: `GuardHorizon.lean` ll. 60–359; `Keeping.lean` ll. 64–393; `Undecided.lean` ll. 370–399; `GenerativeCore.lean` ll. 20–32 (`Enabled`); `Prelude.lean` ll. 806–822; `ScratchKeptForViable.lean` by its declaration lines only; the two trials at ll. 450–520 and 320–350. Not read: the other readers' returns. The three `.lean.txt` copies are byte-identical (`cmp`) to the working files and to the `clean-40` snapshots. That the modules elaborate rests on the log, not on me; the types below I followed by hand.*
+
+## Answer first
+
+1. **No premise of the ten theorems hands in the outcome, except the one the brief declared: the either-or at horizon 0.** `okOrBad` / `guardOrNot` / `inOrOut` is the conclusion at horizon 0 by definition. Nothing else mentions a horizon, `Stays`, `Out`, `KeptFor`, `Lost`, `Viable` or `iter`; none is an instance argument or a classical principle; none quantifies over predicates. The family premises are discharged in the cases with no premise except `updates`, which enters at exactly three places (section 1.4).
+2. **The docstrings say what `okOrBad` and `liveOrDead` are in 2 of the 12 statements that carry them, and in the general module on the wrong theorem**: on `steps_either`, whose statement has no horizon, and not on `stage_either` or `stays_or_out`, where it would be literally true. What they say is true under one reading of "exclusively" and "sole move", and a person cannot be expected to find that reading.
+3. **Every part of `outcomes` is used; `someValues` is used exactly; neither excludes a case the first module admitted.** Two things neither docstring nor report says: `someValues` (as `everyValue` before it) carries a decision of whether `O` has a member; and under item 6's own premises `bad` is forced equivalent to `¬ ok`, and `dead` to `¬ live` at ok positions, so the four free predicates are free only below item 6.
+4. **V4's premises are word for word** (`diff`: identical to the first module's ll. 90, 93–97 and to the brief's ll. 100–102).
+5. **One docstring phrase admits a false reading**: "listed values whose seen classes cover the others by inclusion" (four docstrings) can be read as cover by a union; the premise is containment in ONE listed value's class, and the union reading names a weaker premise from which the proof does not go.
+6. `everyMove` is still one name for two things in `ScratchChoiceCases` (list premise l. 241; "every move allowed" ll. 326–328).
+
+## 1. Premises of the ten theorems
+
+### 1.1 The premises, word for word, once each
+
+General (`ScratchChoiceEither`):
+
+| | Premise | Asks | Outcome in disguise? |
+|---|---|---|---|
+| G1 | `(everyMove : ∀ a, a ∈ moves)` (l. 12) | every move is on one list | No. A list. |
+| G2 | `(okOrBad : ∀ t, ok t ∨ bad t)` (l. 13) | each position is ok or bad | **Yes, openly, at horizon 0**: `Stays 0 t ∨ Out 0 t` unfolds to it. Mentions no horizon. |
+| G3 | `(liveOrDead : ∀ t, ok t → ∀ a, live t a ∨ dead t a)` (l. 14) | at ok positions each move is live or dead | Only in a corner: recoverable from the conclusion at horizon 1 where there is one move in all, `t` is ok and not bad, and no outcome is bad. In general it asks more than the conclusion gives back. |
+| G4 | `(outcomes : ∀ t, ok t → ∀ a, live t a → ∃ l : List T, (∀ u', u' ∈ l → next t a u' ∨ ¬ next t a u') ∧ ∀ u, next t a u → ∃ u', u' ∈ l ∧ next t a u' ∧ under u u')` (ll. 19–21) | each live move at an ok position has a list on which being an outcome is decided, and each outcome stands in `under` to a listed outcome | No. Speaks of `next`, `under`, a list. |
+| G4= | the same with `u = u'` for `under u u'` (ll. 70–72) | the list holds every outcome | No. |
+| G5 | `(apart : ∀ t, ok t → bad t → False) (exclusive : ∀ t a, live t a → dead t a → False)` (l. 83) | the two pairs exclude each other | No. |
+| G6 | `(within : ∀ t, ok t → t ∈ all)` (ll. 91, 102) | every ok position is on the list whose length is the horizon | No. A list. |
+
+Classically the conclusion of `steps_either` follows from G2, G3 and `either` alone (at an ok position: some live move has all outcomes in X, or each move is dead or live with an outcome not in X, hence in Y). So G1, G4, `under` and `down` are the finite search and nothing a classical reader would count as content. That is the plain sense in which they cannot be the outcome.
+
+### 1.2 The ten theorems
+
+| Theorem | Premises in the statement's order | Where each is used |
+|---|---|---|
+| `steps_either` (ll. 31–33) | G1, G2, G3, G4, `(either : ∀ u, X u ∨ Y u)`, `(down : ∀ u u', under u u' → X u' → X u)` | G2 l. 34 (at `t` only); G3 l. 39; G4 l. 41; `either` l. 46 (only at listed outcomes); `down` l. 49; G1 l. 52 |
+| `stage_either` (ll. 60–63) | G1–G4, `(zero : ∀ t, ok t → stage 0 t)`, `(above : ∀ n t, stayStep ok live next (stage n) t → stage (n + 1) t)`, `(down : ∀ n u u', under u u' → stage n u' → stage n u)` | G2 and `zero` l. 64; all four and `down n` handed to `steps_either` l. 65; `above` l. 66 |
+| `stays_or_out` (l. 79) | G1, G2, G3, G4= | handed to `stage_either` l. 80; family by `(fun _ => id) (fun _ _ => id) (fun _ _ _ same h => same.symm ▸ h)` |
+| `closed_or_out` (ll. 91–93) | G1, G2, G3, G4=, G5, G6 | l. 94 `stays_or_out`; G6 l. 95 `stays_iff_closed`; G5 l. 96 `closed_never_out` |
+| `Config.viable_or_lost` (Cases l. 52) | `(everyMove : ∀ a, a ∈ moves)`, `(every : ∀ s, s ∈ states)`, `(guardOrNot : ∀ s, guard s ∨ ¬ guard s)`, `(stepOrNot : ∀ s a t, P.step s a t ∨ ¬ P.step s a t)` (ll. 29–31) | l. 53: `guardOrNot` as G2; `every`, `stepOrNot` through `enabled_or_not` as G3 and through `listed_outcomes` as G4= |
+| `Config.closed_or_lost` (ll. 60–62) | the same four, then `(within : ∀ x, guard x → x ∈ all)` | ll. 63–65 `closed_or_out`; G5 by `(fun _ h no => no h) (fun _ _ h no => no h)` |
+| `Reading.kept_or_lost` (l. 285) | `everyMove`, `updates`, `inOrOut`, `usableOrNot`, `someValues` (ll. 241–249, quoted in section 3) | ll. 286–288: `inOrOut` as G2, `usableOrNot` as G3, `seen_outcomes updates someValues` as G4, `kept_above updates` as `above` |
+| `Reading.closed_or_lost_within` (ll. 295–297) | the five, then `(within : ∀ c, codeGuard decode guard c → c ∈ all)` | l. 298 `kept_or_lost`; `within`, `updates` l. 299 into the landed `coded_kept_iff_closed`; l. 300 `closed_never_lost` (no premise) |
+| `Reading.lost_at_guarded_length` (ll. 306–307) | the same six | l. 308 `closed_or_lost_within` |
+| `Reading.lost_iff_not_kept` (l. 316) | the five | l. 317 `kept_or_lost`; `lost_not_kept` (no premise) |
+
+Of the case premises: `guardOrNot` is `Viable P guard 0 s ∨ L 0 s` by definition, and `inOrOut` is `K 0 c ∨ L 0 c` by definition (`KeptFor … 0 B` is `∀ s, B s → guard s`; `Lost … 0` is `Outside decode guard`). `guardOrNot`, `stepOrNot` and `usableOrNot` are excluded middle at one named predicate each, taken as plain hypotheses; no principle over all propositions. `every` (a list of ALL configurations) is more than item 5 asks: item 5 wants a list per live move, and the configuration case pays for it with the whole state space listed; the brief asked for that form. Every included variable is used in every theorem that carries it (I followed each term).
+
+### 1.3 The family premises
+
+They do not hand in the outcome: `stage` stands in the conclusion as it is, so a larger family gives a weaker conclusion (`stage := fun _ _ => True` satisfies all three and the conclusion is trivial). `zero` and `above` say the family is above the staying step; `down` that each stage goes down along `under`. A family that also meets `stage_disjoint`'s `zero` and `below` agrees pointwise with `Stays` (by `iter_iff_stages`); so what the generality buys, as far as I can see, is two things: never-both through a reading with no `updates`, and `outcomes` up to `under` in place of a list of every outcome code (which cannot be listed where two codes name one class).
+
+### 1.4 Where they are discharged, and where `updates` enters
+
+- No reading: `stage := Viable P guard`. `stage_either`'s three by `(fun _ => id) (fun _ _ => id) (fun _ _ _ same h => same.symm ▸ h)` (Cases ll. 54–55); `stage_disjoint`'s two by `(fun _ => id) (fun _ _ => id)` (l. 139). No premise.
+- Reading: `stage := K`. `stage_disjoint`'s `zero` by `fun _ => id`, `below` by `kept_below` (ll. 210–212, no premise). `stage_either`'s `zero` by `fun _ => id`, `down` by `fun _ _ _ sub => KeptFor.mono sub` (l. 288), no premise.
+- **`updates` enters at three places and no other**: (i) `kept_above` l. 255, `updates c safe a usable o`, which is the `above` argument at l. 288; (ii) `seen_outcomes` l. 269, `listed_partners (xs := values) (fun o _ => updates c safe a usable o)`, which is the `outcomes` argument at l. 287; (iii) `closed_or_lost_within` l. 299, into the landed kept bound. The report says the same; it is right.
+
+### 1.5 Are `okOrBad`/`inOrOut` and `liveOrDead`/`usableOrNot` said to be what they are, and is it true as worded?
+
+Said in two docstrings: `steps_either` (Either ll. 25–27) and `kept_or_lost` (Cases ll. 280–282). Not said in `stage_either`, `stays_or_out`, `closed_or_out`, `out_at_ok_length`, `out_iff_not_stays`, `viable_or_lost`, `closed_or_lost`, `closed_or_lost_within`, `lost_at_guarded_length`, `lost_iff_not_kept`.
+
+- `steps_either`: "take ok or bad at each position (the horizon-zero alternative)". **The statement has no horizon.** The gloss is true of `stays_or_out` at 0, by definition. It is not true of `steps_either`'s own conclusion: with no move at all `outStep Y t` holds everywhere and the conclusion says nothing of ok or bad.
+- `steps_either`: "(the horizon-one alternative for a sole move at an exclusively ok position with exclusively staying outcomes)". True of `stays_or_out` at 1 under this reading, which I checked both ways: there is one move in all (not: one live move); `t` is ok and not bad; every outcome is ok and none is bad. Then `Stays 1 t ∨ Out 1 t` holds exactly when `live t a ∨ dead t a` does. For `steps_either` itself the exact fact is another and simpler: at X everything and Y nothing, with one move in all, at a position ok and not bad, the conclusion is `live t a ∨ dead t a`, with no condition on outcomes.
+- `kept_or_lost`: "(the horizon-zero alternative)": true by definition. "(the horizon-one alternative for a sole move whose outcomes are exclusively guarded)": true read as: one move in all, at a guarded code, every code naming exactly a class seen after the move guarded. "Exclusively" adds nothing there (`codeGuard` and `Outside` exclude each other by definition).
+- The report's own sentence (REPORT l. 78) says it correctly and readably; the docstrings compress it past following.
+
+So: true as worded only for a reader who already knows what is meant; placed on the one theorem where it is not the statement; absent where it is. Replacement text in section 4.
+
+## 2. `under`, `outcomes`, `someValues`
+
+**Every part of `outcomes` is used in `steps_either`.** From `outcomes t safe a usable` (l. 41) come `l`, `decided`, `cover`. `decided` is used at l. 44, to give at each listed `u` either `next t a u → X u` or `next t a u ∧ Y u`. `cover u step` is taken apart at l. 49 as `⟨v, mem, reached, rel⟩` and all three are used: `down u v rel (all v mem reached)`. The middle conjunct `next t a u'` is needed: the search gives, for a listed non-outcome, only the vacuous `next t a v → X v`, so without `reached` nothing is known of `X v`.
+
+**Could it be weaker?** Not in strength. In form it could be simpler: the first conjunct and `next t a u'` together are the same as "a list of outcomes representing every outcome" (`(∀ u', u' ∈ l → next t a u') ∧ ∀ u, next t a u → ∃ u', u' ∈ l ∧ under u u'`), each form giving the other by filtering the list with the decisions. The reading supplies exactly that already: `seen_outcomes` answers `decided` by `.inl` at every listed code (l. 271), so the decision does no work there. With no reading it does (`stepOrNot` over `states`), and the present form saves that case a filter. `either` is used only at listed outcomes of `t`, and `okOrBad` only at `t`; no gain in narrowing them.
+
+**`someValues` is used exactly as stated.** `seen_outcomes` l. 272: `cover o` gives `⟨v, listed, sub⟩`; `listed` finds the exact code of `v` on the list (l. 273); `sub` is used once, in the one direction it has: `(exactName s).mpr (sub s ((names s).mp h))` (l. 275). No other use.
+
+**It excludes nothing the first module's premise admitted.** `everyValue` (`∃ values : List O, ∀ o, o ∈ values`) gives `someValues` with `o' := o`. With `O` empty both are met by `[]`. What happens there: no outcome code exists (`seenNext` needs a value), the list of codes is empty, the search over outcomes returns "all" vacuously (l. 48), so a guarded code with a usable move has a staying step into every X and its class is kept at every horizon. That agrees with `KeptFor` (its `∀ o` is empty). It is not an oddity of the process: `sense : S → A → S → O` with `O` empty and a move in hand forces `S` empty, so every class is empty.
+
+**What neither says.** At any guarded code with a usable move, `someValues` yields `(O → False) ∨ Nonempty O`: the list is empty or it is not. So the premise carries a third decision, of whether a value exists, which the conclusion does not need (with `S := O := PLift p`, one code for the whole of `S`, guard true, the class is kept for ever and `someValues` cannot be supplied without deciding `p`). `everyValue` carried the same. It is a decision about `O`, not about the outcome, and V3 as frozen does not count it; the telling of the premises should name three decisions, not two.
+
+## 3. V4: the reading's premises
+
+`diff` of the first module's ll. 93–97 against `ScratchChoiceCases` ll. 242–246: identical. `everyMove` (first module l. 90, here l. 241): identical. `someValues` (brief ll. 100–102, here ll. 247–249): identical apart from indentation.
+
+```lean
+(everyMove : ∀ a, a ∈ moves)
+(updates : ∀ c, codeGuard decode guard c → ∀ a, Usable P allowed (decode c) a → ∀ o,
+  ∃ d, Names decode d (Seen P sense (decode c) a o))
+(inOrOut : ∀ c, codeGuard decode guard c ∨ Outside decode guard c)
+(usableOrNot : ∀ c, codeGuard decode guard c → ∀ a,
+  Usable P allowed (decode c) a ∨ ¬ Usable P allowed (decode c) a)
+(someValues : ∀ c, codeGuard decode guard c → ∀ a, Usable P allowed (decode c) a →
+  ∃ values : List O, ∀ o, ∃ o', o' ∈ values ∧
+    ∀ s, Seen P sense (decode c) a o s → Seen P sense (decode c) a o' s)
+(within : ∀ c, codeGuard decode guard c → c ∈ all)
+```
+
+`Names` and `Outside` are defined again in `Becoming.Choice.Reading` (ll. 187, 190) with the first module's bodies, so "word for word" holds of the text; the constants are new ones.
+
+| Result | Theorem | Premises |
+|---|---|---|
+| never both | `lost_not_kept` (l. 216), `closed_never_lost` (l. 223) | none |
+| the kept bound | landed `Viability.coded_kept_iff_closed` (`Keeping.lean` l. 380) | `within : ∀ c, (∀ s, decode c s → guard s) → c ∈ all`; `updates : ∀ c, (∀ s, decode c s → guard s) → ∀ a, Usable P allowed (decode c) a → ∀ o, ∃ d, ∀ s, decode d s ↔ Seen P sense (decode c) a o s` (ll. 361–363) |
+| the losing bound, nothing decided | `Choice.out_shortens`, `out_within_length` (ScratchChoice ll. 102, 108) | `everyMove : ∀ a, a ∈ moves`; `within : ∀ x, (bad x → Out bad dead next all.length t) → x ∈ all`, at the reading `∀ x, (Outside decode guard x → Lost … all.length c) → x ∈ all` |
+| one or the other | `kept_or_lost` | `everyMove`, `updates`, `inOrOut`, `usableOrNot`, `someValues` |
+| the statement | `closed_or_lost_within` | those five and `within` (guarded codes) |
+| losing bound at the count of guarded codes | `lost_at_guarded_length` | the same six |
+| lost iff not kept | `lost_iff_not_kept` | the five |
+
+Two notes. The losing bound with nothing decided is **not instantiated for the reading anywhere in the three modules** (not found in what was read: the three modules whole); B.1 asked for no wrapper, so that `out_within_length` serves there is by `Lost := Out …` and is unbuilt at the reading's types. And its `within` is the one premise in the build that does name `Out` and a horizon; it is the law's own premise and outside V3's list of items.
+
+## 4. Every docstring against its statement
+
+All 68 named declarations and the 14 examples have a docstring of at most three sentences; none tells how a proof goes; hypotheses come once and in the statement's order in every one I checked (in `stage_either` the two halves of `outcomes` are swapped). These say more, less, or something else:
+
+**Says something the statement does not hold**
+
+1. `steps_either` (Either ll. 25–30), statement `∀ t, stayStep ok live next X t ∨ outStep bad dead next Y t`. The two parentheses speak of horizons; the statement has none (section 1.5). "Take ok or bad at each position" and "X holds below each of its members" are not sentences a person parses. Replace: *"Suppose every move is listed, each position is ok or bad, and at each ok position each move is live or dead. Suppose each live move at an ok position has a list on which being an outcome of it is decided, and each of its outcomes stands in `under` to a listed outcome. If every position is in X or in Y, and X holds of u whenever u stands in `under` to a member of X, then each position has a staying step into X or an out step into Y."*
+2. `kept_or_lost` (Cases ll. 279–284), statement `∀ n c, K n c ∨ L n c`. "Give every value … an exact code": the class seen at the value gets the code. Replace: *"Suppose every move is listed; each class seen after a usable move from a guarded code's class has a code naming exactly it; each code's class is within the guard or has a configuration outside it; each move is usable or not from each guarded code's class; and each usable move from a guarded code's class has a list of values such that every class seen after it lies inside the class seen at one listed value. Then for every n each code's class is kept for n steps or the code is lost at horizon n. At n = 0 the conclusion is the third premise by definition; at n = 1, where there is one move in all, at a guarded code all of whose outcome codes are guarded, it amounts to the fourth."*
+3. `out_shortens`, `out_within_length` (ScratchChoice ll. 99–101, 105–107). "With nothing decided, listing all positions suffices for this cover": a list of all positions always suffices; the sentence reads as if only then. Replace (first): *"Suppose every move is listed and a list holds every position x such that, if x is bad, t is out at the horizon of that list's length. If t is out one step past that horizon, it is out at it. A list of every position meets the second premise, with nothing decided."* Second: the same with *"If t is out at any horizon, it is out at that one."*
+4. `level_closed_or_lost` (Cases ll. 425–428), statement `(F (decodeL c) ∨ V guardedLevels.length c) ∧ ¬ (…)`. "Has unboundedly many possible value labels and meets the premises for this alternative" is not in the statement, and suggests more than is the case: the value type is `Nat`, and from the eight coded classes no value of three or more is ever seen (`unseen_high`). Replace: *"In the drain with the positive-level guard, all moves allowed and the reading that keeps the level reached, for every level code its class lies in a closed family or the code is lost at horizon six, the count of guarded level codes, and not both. The values are natural numbers; from the coded classes none of three or more is seen, and the list of values supplied is 0, 1, 2."*
+
+**Admits a false reading**
+
+5. "listed values whose seen classes cover the others by inclusion" (`kept_or_lost` l. 282; `closed_or_lost_within` l. 292; `lost_at_guarded_length` l. 304; `lost_iff_not_kept` l. 313). Read as cover by a union it is a weaker premise than the one stated, and the proof does not go from it: the search tests only the listed values' codes, and a class inside the union of two kept classes need not be kept (one move must serve the whole class). I have not shown the statement unprovable from the weaker premise; classically the conclusion follows from `updates`, `inOrOut` and `usableOrNot` alone. `seen_outcomes` (l. 260) has it right: "each class seen lies inside one seen at a listed value". Use that wording in all four.
+6. `stays_or_out` (Either ll. 76–78): "Each position stays or is out at every horizon" reads also as "stays, or is out at every horizon". Replace: *"Suppose every move is listed, each position is ok or bad, at each ok position each move is live or dead, and each live move at an ok position has a list holding all its outcomes on which being an outcome is decided. Then for every n each position stays for n steps or is out at horizon n. At n = 0 the conclusion is the second premise by definition; at n = 1, where there is one move in all, at a position ok and not bad whose outcomes are all ok and none bad, it amounts to the third."* This is where the brief's "the docstring says so" belongs.
+
+**Says less**
+
+7. `stage_either` (ll. 55–59): no "for every n"; "cover positions by ok or bad". Replace: *"Suppose every move is listed, each position is ok or bad, at each ok position each move is live or dead, and each live move at an ok position has a list on which being an outcome of it is decided and to a member of which each of its outcomes stands in `under`. Suppose stage 0 holds of every ok position, stage n + 1 holds wherever there is a staying step into stage n, and each stage holds of u whenever u stands in `under` to one of its members. Then for every n each position is in stage n or out at horizon n."*
+8. `viable_or_lost` (Cases ll. 50–51): "lost" is no definition in `Config`; `guardOrNot` is not said to be the conclusion at 0. Replace: *"Suppose every move and every configuration is listed, the guard is decided at each configuration and each step is decided. Then for every n each configuration is viable for n steps or is in the n-th iterate of the disjunctive loss step from the configurations where the guard fails. At n = 0 the conclusion is the third premise by definition."*
+9. `kept_below` (ll. 208–209), statement `K (n + 1) c → Φ (K n) c`: "kept for one more step … one step fewer" names no n. Replace: *"If the class of a code is kept for n + 1 steps, the code has a staying step into the codes whose classes are kept for n steps."*
+10. `listed_partners` (ll. 228–229) and `unit_values` (ll. 354–355): the existence of the list is not said. For the first: *"If each member of a list xs is related to something, there is a list ys such that each member of ys has a member of xs related to it and each member of xs is related to a member of ys."*
+11. `listed_outcomes` (ll. 42–43): "each move" for "each move at each configuration"; "an equal listed outcome for every outcome" for "every outcome is on the list".
+12. `Lost` (ll. 197–198) and `Out` (ScratchChoice l. 27): true by their letter, and nowhere is the brief's trap answered in plain words. Add to `Lost`: *"A guarded code from whose class no move is usable is lost at horizon 1, though no configuration of its class is outside the guard."* To `Out`: *"A position all of whose moves are dead is out at horizon 1 whether or not anything bad is reached."*
+13. `closed_or_lost_within`, `lost_at_guarded_length`: "the code-list length" for the length of the list of guarded codes. `lost_iff_not_kept` and `out_iff_not_stays`: "unable to keep", "unable to stay" for "not kept", "not staying"; the statements have a negation and no modality.
+14. Example l. 24: an equation of propositions told as "is stay-closed"; say "is by definition the proposition that".
+
+The first sentences in the imperative ("List every move, take …, decide …") followed by a bare conclusion (`stays_or_out`, `stage_either`, `kept_or_lost`) leave out the "if … then"; the package's own style is "Suppose … Then" (`PredicateIteration.lean`).
+
+**Drain.** The numbers are said for what they are: `starts_first_lost_none` "This is their first losing horizon" (3, with the second conjunct `∀ n, N n (l2, l2) → 3 ≤ n` behind it); `starts_lost_at_four` "the list length four, the count of guarded codes" (the four listed pairs are exactly the guarded ones). Six in `level_closed_or_lost` is called "the list length" only; it is the count of guarded level codes, the empty class among them. Guard ("positive-level"), condition on moves ("all moves allowed") and reading are named in each theorem whose statement has them. The statements are of the codes `(l2, l2)` and `.both`; "the two starts together" is their class.
+
+**One name for two things.**
+- `everyMove`: the list premise (ScratchChoice ll. 53, 94; Either l. 12; Cases ll. 29, 125, 131, 241) and `ScratchKeptForViable.everyMove`, "every move allowed" (Cases ll. 326–328). The brief forbade this and itself prescribed the first use word for word; the second is another session's name. Renaming the list premise is the only way out.
+- `within`: two types in ScratchChoice (l. 70 `∀ t, ok t → t ∈ all`; l. 95 `∀ x, (bad x → Out bad dead next all.length t) → x ∈ all`).
+- `outcomes`: two types in Either (l. 19 with `under`, l. 70 with `=`). `zero`: opposite inclusions in `stage_disjoint` and `stage_either`. `down`: of X and of the family.
+- `K`: a closed set in ScratchChoice and `Config`; the kept family `fun n c => KeptFor …` in `Reading` (l. 204). `L`: two notations (ll. 27/115 and 203). `all`: a list everywhere, and a proof name in `steps_either` l. 48.
+- `Lost`, `Names`, `Outside`, `closed_or_lost_within`, `kept_or_lost`, `lost_not_kept`, `closed_never_lost`, `starts_first_lost_none`, `starts_closed_never_lost_level` also name different declarations in the first scratch module (`Becoming.Viability`, `Becoming.ScratchTwoSides`). Not imported, so no clash; two meanings in one tree.
+- "alternative" in three docstrings means "the either-or"; a person reads "another option".
+
+## 5. Empty and odd cases
+
+- **No moves.** `stayStep` holds nowhere and `outStep` everywhere, so every position is out at every horizon from 1, the ok ones too, though nothing happens at all. All theorems stay true (`steps_either` l. 52 on the empty list gives the out step). This agrees with the landed notions (`Viable … (n + 1)` asks an enabled move). "Out" and "lost" there mean "cannot go on staying", not "leaves"; no docstring says so (item 12 above).
+- **No positions.** Everything vacuous; the bounded statements need a `t`.
+- **`ok` and `bad` both at a position** (allowed in items 1 to 3, `steps_either`, `stage_either`, `stays_or_out`). Nothing false: the either-or is then inclusive, such a position is out at 0 and may sit in a stay-closed set. What goes is the gloss on `liveOrDead`: at a position ok and bad, `Out 1` holds through `bad` and the conclusion at 1 says nothing of live or dead. That is what "exclusively ok" in the docstring is for.
+- **`live` and `dead` both at a move.** The same: inclusive, nothing false.
+- **What item 6's premises force.** `okOrBad` with `apart` gives `bad t ↔ ¬ ok t` and `ok t ∨ ¬ ok t`; `liveOrDead` with `exclusive` gives `dead t a ↔ ¬ live t a` at ok positions. So in `closed_or_out`, `out_at_ok_length`, `out_iff_not_stays` and both cases' statements, the separate `bad` and `dead` are `¬ ok` and `¬ live` up to equivalence, and ok is decided everywhere. The four free predicates do work only in the theorems with fewer premises (never-both; the either-or without exclusions; the losing bound). Through a reading this reads: under the five premises keeping is decided at every horizon (`K n c ∨ ¬ K n c`) and `Outside` is `¬ codeGuard`.
+- **A live move with no outcome** stays vacuously: `∀ u, next t a u → X u` is empty, so the position stays at every horizon and alone forms a stay-closed set, though no step is taken. By the letter of `stayStep`'s docstring that is right; "stays for n steps" then names no course of n steps. `GuardHorizon` rules it out: `Enabled P s a` is `∃ t, P.step s a t` (`GenerativeCore.lean` l. 27). The general module does not ask `live t a → ∃ u, next t a u`, and through a reading it can happen: a usable move whose seen classes have no code has no outcome on codes. That is why the reading's stage is `K` and not `Stays` on codes, and why `kept_above` needs `updates`; `Lost` on codes stays sound without `updates` (lost implies not kept) and may under-report.
+- **A list with repeats or extra members.** Every theorem holds; the horizon is the list's length, so "the count of guarded codes" is exact only for a list without repeats that holds nothing else. Both Drain lists are such.
+
+## 6. Verdicts
+
+- **V3: not triggered, with the declared exception.** In items 5 and 6, A.3, B.3 and B.4 no premise names `Stays`, `Out`, `KeptFor`, `Lost`, `Viable` or `iter`, is an instance argument, a classical principle, or a quantification over predicates; the only horizon index is in the family premises, each discharged with no premise but `updates` at the three places named. The either-or at horizon 0 is a premise, as the brief said it must be; the telling duty that came with it is met in 2 of 12 docstrings.
+- **V4: not triggered.** B.4 lists guarded codes only (l. 295), and its premises are those written, identical by `diff`.
+- **V5: not triggered.** `level_closed_or_lost` (ll. 429–433) supplies each of B.3's premises for the level reading: `updatesLevel`, `level_in_or_out`, usability by `.inl (usable_all …)`, `[0, 1, 2]` by `level_values`, `levels_within`. The decisions are met trivially (no move is ever unusable).
+- **V7: not triggered, by the log read and not rerun.** `with_axioms: {}` for all three modules (15, 6 and 36 theorems; 20, 6 and 42 declarations), build 40, and the files read are byte-identical to that build's snapshots. The 14 anonymous examples are outside the audit.
+
+## 7. Anything else
+
+- By my reading of the definitions (not built): under the level reading all six guarded codes lie in closed families and the two unguarded ones are lost at horizon 0, so that application has no code lost at a positive horizon. Each outcome at a positive horizon is had only across the two readings.
+- `Config.viable_or_lost` and `closed_or_lost` hold for `S A : Type` only (the second `variable` line, Cases l. 22, shadows l. 14); no docstring says it.
+- Five premises are told again in each of four reading docstrings, and four in each of five general ones. They fit three sentences and are hard to read; a section comment naming the premises once would let each docstring be short, if the rule "each hypothesis once" is taken per section.
+- The report's facts that bear on my question I found as stated: the premises by result (its l. 168), where `updates` enters (l. 172), the horizon-one sentence (l. 78), `ListTests.mem_bools` (`Prelude.lean` l. 472), `exists_pairs_over` at universe zero (`Prelude.lean` ll. 785, 812).

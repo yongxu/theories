@@ -1,0 +1,9 @@
+A follow-up to the same module, from the session that wrote the Drain case, which read your module whole and found no fault. One addition, so that "one step of slack" is stated and not only seen across two theorems. Same rules as before (build only with /Users/ren/tmp/fm/run-build12.sh <n> ScratchInTime, numbers from 202; no axiom; docstrings of at most three sentences that say exactly the statement; edit only ScratchInTime.lean; start no agents; another implementer is building other modules in the same tree, the wrapper waits its turn).
+
+Add:
+
+1. Both lanes together at level 2 are kept for two steps under EVERY reading: `∀ {O : Type} (sense : Bool × Nat → Bool → Bool × Nat → O), KeptFor Drain.process sense Drain.above everyMove 2 Drain.starts`, from `ScratchDrainOnTheLaw.together_kept_two_none` by `Viability.KeptFor.finer` (Keeping.lean l. 293: a finer map of the steps keeps what a coarser one keeps; every reading is finer than the one into Unit). If `KeptFor.finer`'s universes or form do not allow it for every `O : Type`, say what blocks it and prove it directly.
+2. Its corollary for one step, by `KeptFor.shorter`.
+3. One theorem that conjoins, under every reading: both lanes at level 1 kept for 0 steps and not for 1; both lanes at level 2 kept for 2 steps. Docstring: only what the conjuncts say (levels, lanes, readings, horizons).
+
+Leave the existing six theorems as they are. Then update /Users/ren/theories/tmp/fm/centre22/in-time/REPORT.md with the new statements, what each calls, and the last build's JSON. Return the updated report as your final answer.

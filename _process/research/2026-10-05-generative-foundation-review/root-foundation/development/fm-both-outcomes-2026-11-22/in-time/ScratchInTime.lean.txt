@@ -1,0 +1,230 @@
+import Becoming.ScratchKeptForViable
+import Becoming.ScratchDrainOnTheLaw
+
+/-! AI-written (Codex), 22 November 2026. Scratch case for board row FM.
+At two steps the analogue of `keptFor_one_iff_change_reading` fails: in the package by `Viability.Matching.keeping_matters`, and on Drain here by `mixed_kept_two_lane_not_none_not_level`.
+-/
+
+namespace Becoming.Viability
+
+open Generative
+
+universe u v w z
+
+variable {S : Type u} {A : Type v} {O : Type w} {P : Process S A}
+variable {sense : S → A → S → O} {guard : S → Prop} {allowed : S → A → Prop} {B : S → Prop}
+
+/-- For any reading of steps, a class is kept for one step exactly when the guard holds
+throughout the class and some move is allowed and enabled throughout it and leads only
+to configurations satisfying the guard from every configuration in the class. -/
+theorem keptFor_one_iff :
+    KeptFor P sense guard allowed 1 B ↔
+      (∀ s, B s → guard s) ∧ ∃ a, Usable P allowed B a ∧ ∀ s t, B s → P.step s a t → guard t :=
+  ⟨fun ⟨within, a, usable, afterMove⟩ =>
+     ⟨within, a, usable, fun s t held step =>
+       afterMove (sense s a t) t ⟨s, held, step, rfl⟩⟩,
+   fun ⟨within, a, usable, guarded⟩ =>
+     ⟨within, a, usable, fun _ t ⟨s, held, step, _⟩ => guarded s t held step⟩⟩
+
+/-- For any process, guard, allowed moves, class and two readings of steps into any two
+types, the class is kept for one step under the first reading of steps exactly when it
+is kept for one step under the second. -/
+theorem keptFor_one_iff_change_reading {O' : Type z} {sense' : S → A → S → O'} :
+    KeptFor P sense guard allowed 1 B ↔ KeptFor P sense' guard allowed 1 B :=
+  (keptFor_one_iff (sense := sense)).trans (keptFor_one_iff (sense := sense')).symm
+
+end Becoming.Viability
+
+namespace Becoming.ScratchInTime
+
+open Viability ScratchKeptForViable
+
+/-- The class consisting of both lanes at level 1. -/
+def ones : Bool × Nat → Prop := fun s => s = (true, 1) ∨ s = (false, 1)
+
+/-- With the nonzero-level guard and every move allowed, both lanes together at level 1
+are kept for zero steps under every reading of steps into `Type`. -/
+theorem ones_kept_zero {O : Type} (sense : Bool × Nat → Bool → Bool × Nat → O) :
+    KeptFor Drain.process sense Drain.above everyMove 0 ones :=
+  fun s held =>
+    have level : s.2 = 1 := match (held : s = (true, 1) ∨ s = (false, 1)) with
+      | .inl same => congrArg Prod.snd same
+      | .inr same => congrArg Prod.snd same
+    fun zero => succ_not_zero 0 (level.symm.trans zero)
+
+/-- With the nonzero-level guard and every move allowed, no reading of steps into `Type` keeps both lanes
+together at level 1 for one step. -/
+theorem ones_not_kept_one {O : Type} (sense : Bool × Nat → Bool → Bool × Nat → O) :
+    ¬ KeptFor Drain.process sense Drain.above everyMove 1 ones :=
+  fun kept => match (keptFor_one_iff.mp kept).2 with
+    | ⟨true, _, guarded⟩ => guarded (false, 1) (false, 0) (Or.inr rfl) rfl rfl
+    | ⟨false, _, guarded⟩ => guarded (true, 1) (true, 0) (Or.inl rfl) rfl rfl
+
+/-- With the nonzero-level guard and every move allowed, both lanes together at level 2
+are kept for every horizon under the reading of steps that keeps the level reached.
+This restates `Drain.together_kept_level`. -/
+theorem twos_kept_level :
+    ∀ n, KeptFor Drain.process Drain.keepsLevel Drain.above everyMove n Drain.starts :=
+  Drain.together_kept_level
+
+/-- With the nonzero-level guard and every move allowed, the reading of steps that keeps nothing
+keeps both lanes together at level 2 for two steps and fails to keep them for three.
+This restates `ScratchDrainOnTheLaw.together_kept_two_none` and `Drain.together_not_kept_none`. -/
+theorem twos_kept_two_not_three_none :
+    KeptFor Drain.process noneRead Drain.above everyMove 2 Drain.starts ∧
+      ¬ KeptFor Drain.process noneRead Drain.above everyMove 3 Drain.starts :=
+  ⟨ScratchDrainOnTheLaw.together_kept_two_none, Drain.together_not_kept_none⟩
+
+/-- With the nonzero-level guard and every move allowed, for each lane the part of `ones`
+in that lane is kept for every horizon under every reading of steps into `Type`. -/
+theorem ones_in_lane_kept {O : Type} (sense : Bool × Nat → Bool → Bool × Nat → O)
+    (b : Bool) (n : Nat) :
+    KeptFor Drain.process sense Drain.above everyMove n (fun s => ones s ∧ s.1 = b) :=
+  Drain.lane_kept sense n b (fun s held => ⟨held.2, ones_kept_zero sense s held.1⟩)
+
+/-- With the nonzero-level guard and every move allowed, no reading of steps into `Type` keeps both lanes
+together at level 1 for one step. With the same guard and moves, both lanes together at
+level 2 are kept for every horizon under the reading of steps that keeps the level reached.
+With the same guard and moves, the part of `ones` in each lane is kept for every horizon
+under every reading of steps into `Type`. -/
+theorem ones_not_kept_one_twos_kept_level_ones_in_lane_kept :
+    (∀ {O : Type} (sense : Bool × Nat → Bool → Bool × Nat → O),
+      ¬ KeptFor Drain.process sense Drain.above everyMove 1 ones) ∧
+    (∀ n, KeptFor Drain.process Drain.keepsLevel Drain.above everyMove n Drain.starts) ∧
+    (∀ {O : Type} (sense : Bool × Nat → Bool → Bool × Nat → O) (b : Bool) (n : Nat),
+      KeptFor Drain.process sense Drain.above everyMove n (fun s => ones s ∧ s.1 = b)) :=
+  ⟨ones_not_kept_one, twos_kept_level, ones_in_lane_kept⟩
+
+/-- With the nonzero-level guard and every move allowed, both lanes together at level 2
+are kept for two steps under every reading of steps into `Type`. This is
+`ScratchDrainOnTheLaw.together_kept_two_none` for the reading of steps into `Unit`,
+carried to every reading of steps into `Type` by `KeptFor.finer`. -/
+theorem twos_kept_two {O : Type} (sense : Bool × Nat → Bool → Bool × Nat → O) :
+    KeptFor Drain.process sense Drain.above everyMove 2 Drain.starts :=
+  KeptFor.finer (fine := sense) (sense := noneRead) (fun _ => ()) (fun _ _ _ => rfl)
+    ScratchDrainOnTheLaw.together_kept_two_none
+
+/-- With the nonzero-level guard and every move allowed, both lanes together at level 2
+are kept for one step under every reading of steps into `Type`. -/
+theorem twos_kept_one {O : Type} (sense : Bool × Nat → Bool → Bool × Nat → O) :
+    KeptFor Drain.process sense Drain.above everyMove 1 Drain.starts :=
+  KeptFor.shorter (twos_kept_two sense)
+
+/-- With the nonzero-level guard and every move allowed, under every reading of steps into `Type` both lanes
+together at level 1 are kept for zero steps and fail to be kept for one step, and both
+lanes together at level 2 are kept for two steps. -/
+theorem ones_zero_not_one_twos_two {O : Type} (sense : Bool × Nat → Bool → Bool × Nat → O) :
+    KeptFor Drain.process sense Drain.above everyMove 0 ones ∧
+    (¬ KeptFor Drain.process sense Drain.above everyMove 1 ones) ∧
+    KeptFor Drain.process sense Drain.above everyMove 2 Drain.starts :=
+  ⟨ones_kept_zero sense, ones_not_kept_one sense, twos_kept_two sense⟩
+
+open ScratchDrainOnTheLaw
+
+/-- The class consisting of lane `true` at level 2 and lane `false` at level 1. -/
+def mixed : Bool × Nat → Prop := fun s => s = (true, 2) ∨ s = (false, 1)
+
+/-- The reading of steps that keeps only the lane reached. -/
+def keepsLane : Bool × Nat → Bool → Bool × Nat → Bool := fun _ _ t => t.1
+
+/-- With the nonzero-level guard and every move allowed, `mixed` is kept for one step
+under every reading of steps into `Type`. -/
+theorem mixed_kept_one {O : Type} (sense : Bool × Nat → Bool → Bool × Nat → O) :
+    KeptFor Drain.process sense Drain.above everyMove 1 mixed :=
+  keptFor_one_iff.mpr
+    ⟨code_within (.l2, .l1) (succ_not_zero 1) (succ_not_zero 0), false, usable_all mixed false,
+     fun s _ held step =>
+       have inOnes : ones (Drain.next s false) := decode_next (.l2, .l1) false s held
+       Eq.subst (motive := Drain.above) (Eq.symm step) (ones_kept_zero sense _ inOnes)⟩
+
+/-- With the nonzero-level guard and every move allowed, any reading of steps into `Type` that keeps
+`mixed` for two steps gives different values to the step of the move `false` from `(true, 2)`
+to `(true, 1)` and the step of the move `false` from `(false, 1)` to `(false, 1)`. -/
+theorem mixed_kept_two_implies_values_ne {O : Type} (sense : Bool × Nat → Bool → Bool × Nat → O) :
+    KeptFor Drain.process sense Drain.above everyMove 2 mixed →
+      sense (true, 2) false (true, 1) ≠ sense (false, 1) false (false, 1) :=
+  fun kept same => match kept.2 with
+    | ⟨true, _, afterMove⟩ =>
+      (afterMove (sense (false, 1) true (false, 0))).1 (false, 0)
+        ⟨(false, 1), Or.inr rfl, rfl, rfl⟩ rfl
+    | ⟨false, _, afterMove⟩ =>
+      let o := sense (false, 1) false (false, 1)
+      have included : ∀ t, ones t → Seen Drain.process sense mixed false o t
+        | _, .inl rfl => ⟨(true, 2), Or.inl rfl, rfl, same⟩
+        | _, .inr rfl => ⟨(false, 1), Or.inr rfl, rfl, rfl⟩
+      ones_not_kept_one sense (KeptFor.mono included (afterMove o))
+
+/-- With the nonzero-level guard and every move allowed, `mixed` fails to be kept for two
+steps under the reading of steps that keeps nothing and under the reading of steps that
+keeps the level reached. -/
+theorem mixed_not_kept_two_none_not_level :
+    (¬ KeptFor Drain.process noneRead Drain.above everyMove 2 mixed) ∧
+    (¬ KeptFor Drain.process Drain.keepsLevel Drain.above everyMove 2 mixed) :=
+  ⟨fun kept => mixed_kept_two_implies_values_ne noneRead kept rfl,
+   fun kept => mixed_kept_two_implies_values_ne Drain.keepsLevel kept rfl⟩
+
+/-- For a reading of steps into a type `O : Type`, suppose each pair of values is equal or
+unequal. With the nonzero-level guard and every move allowed, if the reading gives different
+values to the steps of move `false` from `(true, 2)` to `(true, 1)` and from `(false, 1)`
+to `(false, 1)`, then `mixed` is kept for every horizon. -/
+theorem mixed_kept_of_values_ne {O : Type} (eqOrNot : ∀ x y : O, x = y ∨ x ≠ y)
+    (sense : Bool × Nat → Bool → Bool × Nat → O)
+    (different : sense (true, 2) false (true, 1) ≠ sense (false, 1) false (false, 1)) :
+    ∀ n, KeptFor Drain.process sense Drain.above everyMove n mixed :=
+  have within : ∀ s, mixed s → Drain.above s :=
+    code_within (.l2, .l1) (succ_not_zero 1) (succ_not_zero 0)
+  fun
+    | 0 => within
+    | n + 1 => ⟨within, false, usable_all mixed false, fun o =>
+      have keepInLane (b : Bool)
+          (fromTrue : sense (true, 2) false (true, 1) = o → true = b)
+          (fromFalse : sense (false, 1) false (false, 1) = o → false = b) :
+          KeptFor Drain.process sense Drain.above everyMove n (Seen Drain.process sense mixed false o) :=
+        have inside : ∀ t, Seen Drain.process sense mixed false o t → ones t ∧ t.1 = b
+          | _, ⟨_, .inl rfl, rfl, read⟩ => ⟨Or.inl rfl, fromTrue read⟩
+          | _, ⟨_, .inr rfl, rfl, read⟩ => ⟨Or.inr rfl, fromFalse read⟩
+        KeptFor.mono inside (ones_in_lane_kept sense b n)
+      match eqOrNot (sense (true, 2) false (true, 1)) o with
+      | .inl same => keepInLane true (fun _ => rfl)
+          (fun other => False.elim (different (same.trans other.symm)))
+      | .inr apart => keepInLane false (fun same => False.elim (apart same)) (fun _ => rfl)⟩
+
+/-- For a reading of steps into a type `O : Type`, suppose each pair of values is equal or
+unequal. With the nonzero-level guard and every move allowed, for every natural number `n`,
+`mixed` is kept for `n + 2` steps exactly when the reading gives different values to the steps
+of move `false` from `(true, 2)` to `(true, 1)` and from `(false, 1)` to `(false, 1)`. -/
+theorem mixed_kept_add_two_iff_values_ne {O : Type} (eqOrNot : ∀ x y : O, x = y ∨ x ≠ y)
+    (sense : Bool × Nat → Bool → Bool × Nat → O) (n : Nat) :
+    KeptFor Drain.process sense Drain.above everyMove (n + 2) mixed ↔
+      sense (true, 2) false (true, 1) ≠ sense (false, 1) false (false, 1) :=
+  let rec toTwo : ∀ k, KeptFor Drain.process sense Drain.above everyMove (k + 2) mixed →
+      KeptFor Drain.process sense Drain.above everyMove 2 mixed
+    | 0, kept => kept
+    | k + 1, kept => toTwo k (KeptFor.shorter kept)
+  ⟨fun kept => mixed_kept_two_implies_values_ne sense (toTwo n kept),
+   fun different => mixed_kept_of_values_ne eqOrNot sense different (n + 2)⟩
+
+/-- With the nonzero-level guard and every move allowed, `mixed` is kept for every horizon
+under the reading of steps that keeps only the lane reached. -/
+theorem mixed_kept_lane : ∀ n, KeptFor Drain.process keepsLane Drain.above everyMove n mixed :=
+  mixed_kept_of_values_ne (O := Bool) (fun x y => match x, y with
+    | true, true | false, false => Or.inl rfl
+    | true, false | false, true => Or.inr (fun same => Bool.noConfusion same))
+    keepsLane (fun same => Bool.noConfusion same)
+
+/-- With the nonzero-level guard and every move allowed, `mixed` is kept for every horizon
+under the reading of steps that keeps the configuration reached. -/
+theorem mixed_kept_end : ∀ n, KeptFor Drain.process endRead Drain.above everyMove n mixed :=
+  fun n => KeptFor.finer Prod.fst (fun _ _ _ => rfl) (mixed_kept_lane n)
+
+/-- With the nonzero-level guard and every move allowed, `mixed` is kept for two steps
+under the reading of steps that keeps only the lane reached. It fails to be kept for
+two steps under the reading of steps that keeps nothing and under the reading of steps
+that keeps the level reached. -/
+theorem mixed_kept_two_lane_not_none_not_level :
+    KeptFor Drain.process keepsLane Drain.above everyMove 2 mixed ∧
+    (¬ KeptFor Drain.process noneRead Drain.above everyMove 2 mixed) ∧
+    (¬ KeptFor Drain.process Drain.keepsLevel Drain.above everyMove 2 mixed) :=
+  ⟨mixed_kept_lane 2, mixed_not_kept_two_none_not_level⟩
+
+end Becoming.ScratchInTime

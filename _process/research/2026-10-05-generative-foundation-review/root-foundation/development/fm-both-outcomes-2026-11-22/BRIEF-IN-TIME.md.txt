@@ -1,0 +1,38 @@
+# Brief: one built case in which a reading is fine enough and comes too late
+
+*AI-written (Claude Fable, board row FM), 22 November 2026, frozen before the implementer ran (hash in `FROZEN-IN-TIME.sha256.txt`). Scratch only: outside the package, in no git object. You are the implementer. A clean failure, told with what blocked it, is a result. This is a built CASE, not a law: state nothing general.*
+
+## What we are doing
+
+`/Users/ren/theories` draws a map of how anything forms, persists, changes and ends, with its core proved in Lean 4 with **no axioms** (every declaration has an empty axiom report). Read `AGENTS.md` at the repository root (one page). The direction asks for an account in which what sustains a course "keeps making a difference, early enough". Another session built a small process, `Drain` (in `/Users/ren/tmp/fm/build12/Becoming/ScratchKeptForViable.lean`, namespace `Becoming.ScratchKeptForViable`; read the whole `Drain` section, ll. 255 to the end, and `ScratchDrainOnTheLaw.lean` ll. 180 to 200 and 400 to 440): a configuration is a lane (`Bool`) and a level (`Nat`); the move that matches the lane keeps the level, the other lowers it by one; the guard `Drain.above` is "the level is not zero"; every move is allowed (`everyMove`). Keeping through a reading is `Viability.KeptFor` in `Becoming/Keeping.lean` (read ll. 70 to 100 and 270 to 325: `Seen`, `Usable`, `KeptFor`, `KeptFor.mono`, `keptFor_of_closed`): the chooser does not know the lane; after each move the reading gives a value, which narrows the class of configurations that could stand now. **The value comes after the move.**
+
+Already proved there, with both lanes at level 2 (`Drain.starts`): under the reading that keeps the level reached (`Drain.keepsLevel`) the class is kept at every horizon (`Drain.together_kept_level`); under the reading that keeps nothing (`noneRead`) it is kept for 2 steps (`ScratchDrainOnTheLaw.together_kept_two_none`) and not for 3 (`Drain.together_not_kept_none`). And a class within one lane is kept at every horizon under any reading (`Drain.lane_kept`).
+
+A reader inferred, and it is not yet built: **with both lanes at level 1, no reading saves the class**, because the first move is chosen before any value is kept and either move puts one lane at zero.
+
+## The module
+
+Write `/Users/ren/tmp/fm/build12/Becoming/ScratchInTime.lean`, module `Becoming.ScratchInTime`, importing `Becoming.ScratchKeptForViable` and `Becoming.ScratchDrainOnTheLaw` (do not edit them) and what it needs of the package. Its own namespace `Becoming.ScratchInTime`.
+
+**Build only with** `/Users/ren/tmp/fm/run-build12.sh <n> ScratchInTime`, numbering your builds from 200. Clean means `exit 0`, `"unclean": []`, `"with_axioms": {}`. Run nothing else of Lean: no `lake`, no `check_becoming.py` (never with `--help`: it is a real run), no gate, no tests. Up to about 15 builds. Proofs as terms, in the package's style. A plain docstring on every declaration, at most three sentences, that says exactly its statement with its premises (name the guard, that every move is allowed, and which reading): no more, no less, never how the proof goes.
+
+Let `ones : Bool × Nat → Prop := fun s => s = (true, 1) ∨ s = (false, 1)` (both lanes at level 1, in the form of `Drain.starts`).
+
+1. `ones` is kept for 0 steps under every reading: `∀ {O : Type} (sense : Bool × Nat → Bool → Bool × Nat → O), KeptFor Drain.process sense Drain.above everyMove 0 ones`.
+2. **`ones` is not kept for 1 step under ANY reading**: `∀ {O : Type} (sense : Bool × Nat → Bool → Bool × Nat → O), ¬ KeptFor Drain.process sense Drain.above everyMove 1 ones`. (Whatever move is chosen, the lane it does not match goes to level 0, and that configuration is in the class seen at the value its own step gives.)
+3. Beside it, restated by one call each of what is already there, so that the three stand in one place with their premises: (a) both lanes at level 2 under the reading that keeps the level: kept at every horizon; (b) both lanes at level 2 under the reading that keeps nothing: kept for 2 and not for 3; (c) ONE lane at level 1 (the class `fun s => s = (b, 1)` for each `b`) under every reading: kept at every horizon (by `Drain.lane_kept`).
+4. One theorem that conjoins 2, 3(a) and 3(c), with a docstring that says only what the three conjuncts say.
+
+Nothing else. Do not state "early enough", "in time" or any general principle in a docstring: say the levels, the lanes, the readings and the horizons.
+
+## What counts as nothing gained (frozen)
+
+- **W1.** 2 holds only for particular readings (then say which and what blocks the general one), or only with a premise on `sense`.
+- **W2.** Any of 3 is not a call of what is there (then say what was missing).
+- **W3.** Any declaration with an axiom. (`nomatch` on an equation between numbers brought `propext` on 22 November; use `Nat.noConfusion` or `ScratchKeptForViable.succ_not_zero`. `simp`, `omega`, `decide` on propositions with free variables often bring axioms. Equations between pairs: use `congrArg Prod.snd` or `Prod.mk.inj`, and check the axiom report.)
+
+Write only under `/Users/ren/tmp/fm/build12/` and `/Users/ren/theories/tmp/fm/centre22/in-time/` (your report). Change nothing in the repository or in git. Start no agents.
+
+## What to return
+
+Your whole report as your final answer, also saved as `/Users/ren/theories/tmp/fm/centre22/in-time/REPORT.md`: every statement as it stands with its premises and what its proof calls; the last build's JSON; the number of builds; what you did not do. Give no verdict on W1 to W3 beyond the facts each asks for.

@@ -1,0 +1,268 @@
+# Reader return: calls (are the two cases calls of the same statements?)
+
+*AI-written (Claude Opus, reader for board row FM), 22 November 2026. Read only. I edited nothing, ran no Lean, and ran read-only git (`log -S`, `show`) and `cmp`. What I read: the brief `BRIEF-A-CHOICE-AGAINST-EVERY-OUTCOME.md`; `choice/ScratchChoice.lean.txt`, `ScratchChoiceEither.lean.txt` and `ScratchChoiceCases.lean.txt`, all three whole (each is byte-identical to its file in `/Users/ren/tmp/fm/build12/Becoming/`, checked with `cmp`); `choice/REPORT.md`; `choice/last-build.log.txt`; both trials at the stated lines; the last two sections of `AFTER-TWO-SIDES.md`; the package's `PredicateIteration.lean` whole, `GuardHorizon.lean` whole, `Keeping.lean` ll. 74–391, `Undecided.lean` l. 381, `Prelude.lean` ll. 783–830, `Likeness.lean` ll. 405–440 and 925–973, `Decidedness.lean` l. 1049, `Lasting.lean` ll. 108–112, 556–620, 699–703 and 844–856; `two-sides/ScratchTwoSides.lean.txt` ll. 15–155; and a grep of the two Drain scratch modules. I did not read anything else.*
+
+## Answer first
+
+The two cases are calls of the same one-step statements: both reach `steps_disjoint` through `stage_disjoint`, and `steps_either` through `stage_either`. **Above that level, everything is written twice.** These all exist twice, side by side, with the same shape:
+
+- the statement with both outcomes;
+- its two corollaries;
+- "a closed set is never out";
+- the kept side's bound.
+
+Item 6 (`closed_or_out`) is stated for `Stays`/`StayClosed` only, so the reading cannot call it.
+
+The reading also gets a second kept step on codes. Its two bridge lemmas, `kept_below` and `kept_above`, are the two halves of the landed `iter_iff_kept`'s step clause, written again for that other step.
+
+One Module 2 helper, `enabled_or_not`, is a search of its own, where the landed `Decided.exists_of_listed` (Likeness l. 413, imported) gives it in one line.
+
+## 1. The two call paths, traced by hand
+
+**Config: `Config.closed_or_lost` (Cases ll. 60–65)**
+
+- It calls `closed_or_out` (Either l. 91). The arguments are:
+  - `everyMove`;
+  - `guardOrNot` as `okOrBad`;
+  - `fun s _ => enabled_or_not every stepOrNot s` as `liveOrDead`;
+  - `fun s _ a _ => listed_outcomes every stepOrNot s a` as `outcomes` (with `under := Eq`);
+  - `(fun _ h no => no h)` as `apart`;
+  - `(fun _ _ h no => no h)` as `exclusive`;
+  - `within`.
+
+  Its statement meets `Closed` through the `rfl` identity `Closed P guard K = StayClosed guard (Enabled P) P.step K` (l. 25).
+- `closed_or_out`, ll. 94–96, calls three theorems:
+  - `stays_or_out` (l. 79), which calls `stage_either` at `stage := iter …`. Its clauses are `zero = fun _ => id`, `above = fun _ _ => id` and `down = fun _ _ _ same h => same.symm ▸ h`.
+  - `(stays_iff_closed within).mp` (ScratchChoice l. 86), which calls `stays_closed` (`Iteration.iter_postfixed stay_mono stay_ok within`) and `closed_stays` (`Iteration.postfixed_in_iter stay_mono …`).
+  - `closed_never_out` (l. 140), which calls `stays_disjoint` (l. 135). That calls `stage_disjoint` with `zero = fun _ => id` and `below = fun _ _ => id`, and `closed_stays`.
+- `stage_either` (Either l. 60) recurses on the horizon. Its successor step is `steps_either` (l. 31), which calls `Undecided.each_or_some` twice.
+- `stage_disjoint` (ScratchChoice l. 128) recurses on the horizon. Its successor step is `steps_disjoint` (l. 121), a direct term.
+- `enabled_or_not` is one `Undecided.each_or_some` over `states`. `listed_outcomes` is a direct term.
+
+**Reading: `Reading.closed_or_lost_within` (Cases ll. 295–300)**
+
+- It calls three theorems:
+  - `kept_or_lost … all.length c` (l. 285);
+  - `(Viability.coded_kept_iff_closed within updates).mp` (landed, Keeping l. 380);
+  - `closed_never_lost` (l. 223).
+- `kept_or_lost` calls `stage_either` at `stage := K`, `under := inclusion of decoded classes`. Its arguments are:
+  - `inOrOut` and `usableOrNot` as `okOrBad` and `liveOrDead`;
+  - `seen_outcomes updates someValues` as `outcomes`;
+  - `zero = fun _ => id`;
+  - `above = kept_above updates`;
+  - `down = fun _ _ _ sub => KeptFor.mono sub`.
+
+  From there it is the same `stage_either` and the same `steps_either` as the config path.
+- `seen_outcomes` (l. 263) calls `listed_partners` (l. 230). That calls `choiceOver_fin`, `finBelow`, `mem_finBelow`, `ListTests.mem_map_iff`/`mem_map_of` and `List.get_of_mem`.
+- `closed_never_lost` calls `keptFor_of_closed` (landed, Keeping l. 316, its own recursion) and `lost_not_kept` (l. 216).
+- `lost_not_kept` calls `stage_disjoint` at `stage := K`, with `zero = fun _ => id` and `below = kept_below`. From there it is the same `steps_disjoint`.
+- The landed `coded_kept_iff_closed` calls:
+  - `iter_postfixed reading_mono` on the **landed `readingStep`** (not `stayStep`);
+  - `iter_iff_kept`;
+  - `Seen.mono`;
+  - `keptFor_of_closed`.
+
+**Where the paths part**
+
+They share only items 4 and 5: `stage_disjoint` → `steps_disjoint`, and `stage_either` → `steps_either`. They part in three places:
+
+- **The family.** The config path takes `stage := iter (stayStep …) ok` (`Stays`); `Viable` is never in the statement's path. The reading takes `stage := KeptFor … n (decode ·)`.
+- **The kept side's bound.**
+  - Config: Module 1 item 2 (`stays_iff_closed`, which is `iter_postfixed` on `stayStep`).
+  - Reading: the landed `coded_kept_iff_closed` (`iter_postfixed` on `readingStep`).
+
+  So both bounds are the same package lemma `Iteration.iter_postfixed`, but at two different steps on two different position types. Item 2 is used by the config case only.
+- **"Closed means never out."**
+  - Config: `closed_stays`, which is `postfixed_in_iter`.
+  - Reading: `keptFor_of_closed`, a recursion of its own in Keeping, not a case of `postfixed_in_iter`.
+
+**Item 3.** Neither path calls `out_shortens` or `out_within_length`.
+
+- `out_shortens` is called once in the build: by the copy `Config.lost_shortens` (Cases l. 133, `out_shortens everyMove (fun z _ => every z)`).
+- `out_within_length` is called nowhere in the three modules (not found in what was read).
+
+## 2. Each theorem: a call, or its own work
+
+**ScratchChoice**
+
+| Theorem | What it is |
+|---|---|
+| `stay_mono`, `out_mono` | Own one-step terms. They are `GuardHorizon.choice_mono` (l. 141) and `lost_mono` (l. 298) term for term, with the names renamed. |
+| `stay_ok` | `And.left` |
+| `out_start` | `Or.inl` |
+| `out_commutes` | `gather_listed`. The body (ll. 55–59) is the landed `GuardHorizon.lost_commutes` body (ll. 328–332) term for term, with `¬ Enabled P s a` → `dead t a` and `answers` → `replies`. |
+| `closed_stays` | `postfixed_in_iter` |
+| `stays_closed` | `iter_postfixed` |
+| `stays_iff_all` | `iter_iff_all` |
+| `stays_iff_closed` | A call of the two above |
+| `out_shortens` | `iter_shortens` |
+| `out_within_length` | `iter_within_length` |
+| `steps_disjoint` | Own two-line term. It is the successor case of landed `lost_not_viable` (ll. 321–323), made one step. |
+| `stage_disjoint` | Own recursion on the horizon; its successor case is one call of `steps_disjoint`. |
+| `stays_disjoint` | Call of `stage_disjoint` |
+| `closed_never_out` | Call |
+
+**ScratchChoiceEither**
+
+| Theorem | What it is |
+|---|---|
+| `steps_either` | Own: 20 lines, two `each_or_some` calls (outer over moves, inner over the outcome list). This is the same two-level search as the first module's `kept_or_lost` (ScratchTwoSides ll. 105–131: outer over moves, inner over values), cut to one step and made general in X and Y. |
+| `stage_either` | Own horizon recursion, 3 lines; one call of `steps_either` per step. |
+| `stays_or_out` | Call |
+| `closed_or_out` | Call |
+| `out_at_ok_length` | Call |
+| `out_iff_not_stays` | Call |
+
+`steps_either` is not a third copy of a search in the package. `Likeness.unmatched_of_not_forth` (l. 957) searches with `Decided` (p ∨ ¬p) at every proposition, through `Decided.exists_not_of_listed`. `steps_either` asks only `X u ∨ Y u` and calls the landed `each_or_some`. Neither is a case of the other without a decision. The first module's search is superseded rather than duplicated (it is not landed, and it is not imported).
+
+**ScratchChoiceCases, configurations**
+
+- **`enabled_or_not` (ll. 37–40) is its own search, written again.** It does `Undecided.each_or_some` over `states`. The landed `Decided.exists_of_listed every (fun t => stepOrNot s a t)` (Likeness l. 413, 14 October) has exactly this type, because `Decided p := p ∨ ¬ p` and `Enabled P s a := ∃ t, P.step s a t` (GenerativeCore l. 27). Likeness is already imported (Cases l. 2).
+- `listed_outcomes` is a direct term (`⟨states, …, ⟨u, every u, step, rfl⟩⟩`). The package has nothing it repeats.
+- `viable_or_lost` is a call of `stage_either` at `Viable`.
+- `closed_or_lost` is a call of `closed_or_out`.
+
+**ScratchChoiceCases, reading**
+
+- **`kept_below` (ll. 210–212) and `kept_above` (ll. 254–256) are the two halves of the landed `iter_iff_kept`'s step clause, written again for another step.** The landed clause (Keeping ll. 371–374) gives `readingStep (K n) c ↔ K (n+1) c`. One direction is `KeptFor.mono` through a cover. The other is `updates c h a usable o` then `KeptFor.mono (fun s => (eqv s).mp)`.
+  - The scratch step `Φ = stayStep codeGuard Usable seenNext` is universal over exact codes, where `readingStep` is existential over covering codes. So the free direction and the `updates` direction swap places.
+  - `kept_below` is `KeptFor.mono (fun s => (names s).mp)`, needing no premise.
+  - `kept_above` is `updates c safe a usable o` then `KeptFor.mono (fun s => (names s).mpr)`.
+
+  The removed trial confirms that together they are exactly `iter_iff_stages`'s `next` premise for the new step: `trial-coded-via-stays.clean-35` has `fun n d => ⟨kept_above updates n d, kept_below n d⟩`. So the reading now has two kept steps on codes: the landed `readingStep`, and `stayStep` on codes. Each of them meets `KeptFor` under `updates`.
+- `lost_not_kept` (l. 216) is one call of `stage_disjoint`. It replaces the first module's own 5-line recursion (ScratchTwoSides ll. 75–80) and is not a copy of it.
+- **`listed_partners` (ll. 230–239) is its own list lemma.** Landed `Becoming.exists_pairs_over` (Prelude l. 812) gives pairs `D` with `D.map Prod.fst = l`; mapping `Prod.snd` over them would give the same result in a few lines. But it is fixed at `{α β : Type}` (Prelude l. 785), and here `O : Type w`, `C : Type z`. So the report's reason holds. The rule-4 route would be to free that lemma's universes and call it. The implementer went through `choiceOver_fin` and `finBelow` instead: a second route to a list of witnesses, by finite choice on indices. Nothing else in the package that turns "each listed x has a y" into a list was found in what was read (grep of statement shapes in `Becoming/*.lean`; `InquirySufficiency.finite_choice`).
+- `seen_outcomes` is a call of `listed_partners` plus glue.
+- `kept_or_lost` is a call of `stage_either`.
+- **`closed_or_lost_within`, `lost_at_guarded_length` and `lost_iff_not_kept` (ll. 295–318) are `closed_or_out`, `out_at_ok_length` and `out_iff_not_stays` (Either ll. 91–114) written again.** Each pair has the same proof text with other names. For example `⟨(… all.length c).imp (bound).mp id, fun ⟨…⟩ => never …⟩` against the same term, and `.1.elim (fun … => (never … n out).elim) id` against the same term. `closed_never_lost` (l. 223) is `closed_never_out` (ScratchChoice l. 140) again, with `keptFor_of_closed` in place of `closed_stays`.
+
+  An item 6 over `stage` would have served both cases. It would take the item 4/5 premises plus `H t → ∀ n, stage n t` and `stage all.length t → H t`, in about 4 lines.
+  - Config would discharge those two premises with `closed_stays` and `stays_iff_closed.mp`.
+  - The reading would discharge them with `keptFor_of_closed` and `coded_kept_iff_closed.mp`.
+- `lost_iff_not_kept` and `out_iff_not_stays` need no list at all. They are the same two-line term on two families.
+
+**Overlap with the package's listed-and-decided lemmas.** `enabled_or_not` is a duplicate of `Decided.exists_of_listed`. `listed_outcomes` is not. `steps_either` is not (different premise shape).
+
+## 3. The family form
+
+**What discharges each clause**
+
+| Clause | Config, `Stays` (statement path) | Config, `Viable` (`viable_or_lost`, copy `lost_not_viable`) | Reading, `K n c = KeptFor … n (decode c)` |
+|---|---|---|---|
+| `zero` (disjoint and either) | `fun _ => id` | `fun _ => id` | `fun _ => id` (`KeptFor 0` is `codeGuard` by definition) |
+| `below` | `fun _ _ => id` | `fun _ _ => id` (`Viable (n+1)` unfolds to `stayStep … (Viable n)`) | `kept_below`, no premise |
+| `above` | `fun _ _ => id` | `fun _ _ => id` | `kept_above updates` |
+| `down` | `same.symm ▸ h` | `same.symm ▸ h` | `fun _ _ _ sub => KeptFor.mono sub` |
+
+**Where `updates` enters:** in exactly three places.
+
+- `above` (`kept_above`);
+- `outcomes` (`seen_outcomes`: one exact code per listed value, through `listed_partners`);
+- the landed kept bound (`coded_kept_iff_closed`).
+
+It does not enter `zero`, `below`, `down`, or anything on the never-both side. `someValues` enters only `seen_outcomes`.
+
+**Is it a real generality?** Only the reading uses `stage` other than the iterate, and only the reading uses `under` other than `Eq`.
+
+- `Viable` is no second family: its clauses are all definitional, and `iter_iff_viable` is `iter_iff_stages … Iff.rfl Iff.rfl`. It is the iterate under another name.
+- So the family form and `under` are one statement with two parameters that one case needs.
+- `stage := KeptFor` is bought to get `down` for free from `KeptFor.mono`. With `stage := Stays` on codes, `down` along inclusion would need an induction of its own.
+
+**Could the reading be a case without `under`?** Not with these premises. With `under := Eq`, `outcomes` would need a list holding every code `d` with `seenNext c a d`, with `seenNext` decided on it.
+
+- Two codes can name one class. So every code naming a seen class must be listed, and `∃ o, ∀ s, decode d s ↔ Seen …` must be decided for each one. That is a decision about classes, which the premises do not give and the level reading (values in `Nat`) would not meet from `[0, 1, 2]`.
+- Weakening `someValues` back to "all values listed" (the first module's `everyValue`) still leaves `under` as "names the same class": an equivalence, not `Eq`.
+- Taking classes themselves as positions would need equality of predicates (`propext`/`funext`).
+
+So `under` is the price of the reading. Inclusion is forced by the weakened `someValues`.
+
+## 4. The eleven `GuardHorizon` copies
+
+Which call is each:
+
+| Copy | Calls |
+|---|---|
+| `choice_mono` | `stay_mono` (Module 1) |
+| `closed_viable` | bridge `iter_iff_viable` + `closed_stays` |
+| `viable_closed` | bridge + `stays_closed` |
+| `viable_persists` | earlier copy `viable_closed` (`.2`) |
+| `viable_iff_every_horizon` | earlier copies `closed_viable` and `viable_closed`; its text is identical to landed ll. 181–183 |
+| `viable_iff_closed` | bridge + `stays_iff_closed` |
+| `lost_mono` | `out_mono` |
+| `lost_start` | `out_start` |
+| `lost_commutes` | `out_commutes` |
+| `lost_shortens` | `out_shortens` |
+| `lost_not_viable` | `stage_disjoint` at `Viable`, no bridge |
+
+**What `example : @copy = @GuardHorizon.name := rfl` checks.** Both sides are proofs, so by proof irrelevance they are definitionally equal as soon as their types unify. The check therefore says only that the two statements are definitionally equal after unfolding. It would **not** catch:
+
+- (a) a copy with a proof of its own, such as a recursion instead of a call, so it says nothing about whether a copy is a call;
+- (b) binder kinds, explicit against implicit, which definitional equality ignores;
+- (c) a copy less universe-polymorphic than the landed one, because universe metavariables on the landed side can be set to 0;
+- (d) a statement stated through other definitions that unfold to the same thing (this one is intended);
+- (e) the docstrings.
+
+It would catch argument order and real differences in the statements.
+
+**"Two proofs of their own went."**
+
+- In the copies, yes. `lost_commutes` is `out_commutes everyMove G` (l. 127). `lost_not_viable` is one call of `stage_disjoint` (ll. 138–139).
+- In the build as a whole, no. The 5-line commuting proof now sits in `out_commutes` term for term. The horizon induction now sits in `stage_disjoint` plus `steps_disjoint` (2 + 2 lines).
+- `GuardHorizon.lean` is unedited, so today each proof exists twice: landed and in Module 1.
+- `not_viable_of_loss` (`loseStep`) is untouched, as the brief said.
+
+## 5. The removed trials, and the claim about older statements
+
+**The line counts.**
+
+- `Reaches.not_lasts` (clean-33 ll. 456–467) has an 11-line body (ll. 457–467, counting the lambda line), against landed Lasting ll. 701–703 (3 lines).
+- `reaches_of_not_lasts` (ll. 476–493) has a body of 15–16 lines depending on whether the lambda line is counted, against landed ll. 852–855 (3 lines plus a match line).
+- Both counts are fair to within a line.
+
+**A shorter route?** I see no honest route much shorter than these. Inlining `edge` and `L` saves at most two lines each.
+
+- `Lasts` and `Reaches` quantify over every admissible disturbance, the opponent's choice. `stayStep` and `outStep` have the player's choice.
+- So the trials have to build an auxiliary one-move game (`Unit` moves, a fixed `a₀`, or `next s`). They then carry `Reaches` into `Out` by `Basin.of_reaches`, and `Out` into `Reaches` by `Funnel.reaches`.
+- `Reaches` is not `Out` at `dead := ¬ adm`: that would turn `adm a → …` into `¬ adm a ∨ …` and need a decision.
+- Even a short route would be an embedding through an auxiliary game, not the landed statement as an instance. The brief itself puts `Lasting.Lasts` among the one-side-idle cases that were not in this run.
+
+**"No statement older than 22 November comes out as a case": wrong in its letter for this build.**
+
+- `git log -S` gives these dates:
+  - 18 October (0ec305704): `GuardHorizon.closed_viable` and `def Closed`;
+  - 15 October (4262eb2f6): `keptFor_of_closed`;
+  - 22 November 04:16 (2121516ee): `choiceStep`, `lostStep`, `lost_commutes`, `lost_not_viable`, `viable_closed`, `viable_iff_closed`, `coded_kept_iff_closed`, `iter_iff_kept`, `readingStep`.
+- `git show 0ec305704` shows `closed_viable` with the same statement as now.
+- So `Config.closed_viable` (Cases l. 82) is a statement from 18 October. It comes out as a call of Module 1's `closed_stays`, its statement is checked by `rfl`, and it takes 1 line against 2.
+- But it is a case of item 2 (the falling law) only. That already happened at 04:16, when the landed proof became `postfixed_in_iter`.
+- The brief's sentence that A.2's eleven "entered the package on 22 November" is wrong for `closed_viable`.
+- What does hold: no statement older than 22 November comes out as a case of items 4, 5 or 6.
+
+## 6. Verdicts
+
+- **V8: met in its letter, not in substance.**
+  - Met: both statements reach the same `stage_disjoint` → `steps_disjoint` and the same `stage_either` → `steps_either` (section 1).
+  - Not met: the statement with both outcomes, its two corollaries, "a closed set is never out" and the kept bound are each written twice (section 2).
+  - The join is of the two one-step lemmas, and costs a second kept step on codes.
+- **V1a: met.**
+  - The three `rfl` equations and the eleven checks elaborate.
+  - `lost_commutes` and `lost_not_viable` are calls in the copies.
+  - No copy is longer than its landed proof by more than a line (`viable_closed`: 1 against 2).
+  - `ScratchChoice` imports only `PredicateIteration` (l. 1).
+  - As the brief says, this shows no join. The two "gone" proofs moved into Module 1 term for term, and `GuardHorizon` still holds them.
+- **V1b: holds for the new content, wrong as worded.** Both Lasting trials are fairly counted and longer (11 and 15 against 3). But `closed_viable` (18 October) does come out as a call with its statement unchanged and fewer lines, through item 2 only. The words should say "no statement older than 22 November comes out as a case of items 4 to 6".
+- **V2: not triggered.**
+  - Module 1's only recursions are on the horizon (`stage_disjoint`, `stage_either`).
+  - Every bound is one call of the `PredicateIteration` law: `iter_postfixed`, `postfixed_in_iter`, `iter_iff_all`, `iter_shortens`, `iter_within_length`.
+  - `listed_partners`, added in Module 2, has no recursion of its own.
+  - V2 does not cover Module 2's own search in `enabled_or_not`, which duplicates `Decided.exists_of_listed`.
+
+## Other things seen (outside my question)
+
+- `out_within_length` is called by nothing in the build. The report's "B.1 adds zero wrappers" means the reading's losing bound with nothing decided is named, never instantiated.
+- `everyMove` names two things again in one file, which the brief forbade:
+  - Reading l. 241: the list premise `∀ a, a ∈ moves`;
+  - DrainCases ll. 326–328: `ScratchKeptForViable.everyMove`, the allowed relation.
+
+  At l. 363 `ListTests.mem_bools` is passed into the first while the notation carries the second.
+- The report's ledger counts 226 lines against 96. About 14 of those lines are the parallel item-6 statements for the reading (Cases ll. 295–318), which a general item 6 would remove. The reading's statement lines in L2 are not all new content.

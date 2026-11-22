@@ -1,0 +1,152 @@
+"""AI-written (Claude Fable, reader 'program', board row FM), 22 November 2026.
+
+The same definitions as naive.py on bitmasks, for exhaustive sweeps. A class is a bitmask of
+configurations (an int below 2**nS); a set of classes is a bitmask over those ints. The codes
+are a family of classes without repeats (decode is the inclusion), so a set of codes is also a
+bitmask over classes. crosscheck.py compares this file with naive.py.
+
+A process is given per (s, a) as (successors, values kept at them, allowed). Two reductions,
+both read off the definitions: `sense` matters only at triples where the step holds (`Seen`
+asks the step first), and `allowed s a` matters only where `a` is enabled at `s` (`Usable` asks
+both), so where a move is not enabled `allowed` is not varied.
+"""
+from itertools import product
+
+
+def options(nS, nO):
+    opts = []
+    for T in range(1 << nS):
+        ts = tuple(t for t in range(nS) if T >> t & 1)
+        if not ts:
+            opts.append(((), (), False))
+            continue
+        for senses in product(range(nO), repeat=len(ts)):
+            for al in (False, True):
+                opts.append((ts, senses, al))
+    return opts
+
+
+def tables(nS, nA, nO, combo):
+    """combo[s * nA + a] = (successors, senses, allowed). Returns usable[B][a] and
+    seen[B][a] = tuple over o of the class seen."""
+    nB = 1 << nS
+    us1 = [[False] * nA for _ in range(nS)]
+    sn1 = [[None] * nA for _ in range(nS)]
+    for s in range(nS):
+        for a in range(nA):
+            ts, senses, al = combo[s * nA + a]
+            us1[s][a] = bool(al and ts)
+            row = [0] * nO
+            for t, o in zip(ts, senses):
+                row[o] |= 1 << t
+            sn1[s][a] = row
+    usable = [None] * nB
+    seen = [None] * nB
+    usable[0] = [True] * nA
+    seen[0] = [tuple([0] * nO) for _ in range(nA)]
+    for B in range(1, nB):
+        low = B & -B
+        s = low.bit_length() - 1
+        rest = B ^ low
+        usable[B] = [usable[rest][a] and us1[s][a] for a in range(nA)]
+        seen[B] = [tuple(x | y for x, y in zip(seen[rest][a], sn1[s][a])) for a in range(nA)]
+    return usable, seen
+
+
+def guarded_classes(nS, guard):
+    """bitmask over classes B with B inside guard"""
+    K0 = 0
+    ng = ~guard
+    for B in range(1 << nS):
+        if B & ng == 0:
+            K0 |= 1 << B
+    return K0
+
+
+def kept_levels(nB, nA, usable, seen, K0, N):
+    """Ks[n] = bitmask over classes kept for n steps, n = 0..N"""
+    Ks = [K0]
+    K = K0
+    for _ in range(N):
+        K2 = 0
+        for B in range(nB):
+            if K0 >> B & 1:
+                uB = usable[B]
+                sB = seen[B]
+                for a in range(nA):
+                    if uB[a]:
+                        ok = True
+                        for m in sB[a]:
+                            if not (K >> m) & 1:
+                                ok = False
+                                break
+                        if ok:
+                            K2 |= 1 << B
+                            break
+        Ks.append(K2)
+        if K2 == K:
+            Ks.extend([K2] * (N + 1 - len(Ks)))
+            break
+        K = K2
+    return Ks
+
+
+def rel_tables(nS):
+    """REL[variant][m] = bitmask over classes D that 'name' the class m under the variant."""
+    nB = 1 << nS
+    exact = [1 << m for m in range(nB)]
+    sup = [0] * nB
+    sub = [0] * nB
+    for m in range(nB):
+        for D in range(nB):
+            if m & ~D == 0:
+                sup[m] |= 1 << D
+            if D & ~m == 0:
+                sub[m] |= 1 << D
+    return {"exact": exact, "super": sup, "sub": sub}
+
+
+def lost_levels(codes, nA, usable, seen, K0, fam, N, REL):
+    """Ls[n] = bitmask over the codes (classes in fam) lost at n, n = 0..N.
+    codes = list of the classes in fam."""
+    L = fam & ~K0
+    Ls = [L]
+    for _ in range(N):
+        L2 = 0
+        for B in codes:
+            if not (K0 >> B) & 1:
+                L2 |= 1 << B
+                continue
+            uB = usable[B]
+            sB = seen[B]
+            lost = True
+            for a in range(nA):
+                if uB[a]:
+                    hit = False
+                    for m in sB[a]:
+                        if L & REL[m]:
+                            hit = True
+                            break
+                    if not hit:
+                        lost = False
+                        break
+            if lost:
+                L2 |= 1 << B
+        Ls.append(L2)
+        if L2 == L:
+            Ls.extend([L2] * (N + 1 - len(Ls)))
+            break
+        L = L2
+    return Ls
+
+
+def describe(nS, nA, nO, combo, guard, fam):
+    """a case as plain data, for the report"""
+    steps = []
+    for s in range(nS):
+        for a in range(nA):
+            ts, senses, al = combo[s * nA + a]
+            steps.append({"s": s, "a": a, "to": list(ts), "values": list(senses), "allowed": al})
+    cls = lambda B: [s for s in range(nS) if B >> s & 1]
+    return {"nS": nS, "nA": nA, "nO": nO, "steps": steps, "guard": cls(guard),
+            "codes": [cls(B) for B in range(1 << nS) if fam >> B & 1]}

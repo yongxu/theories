@@ -1,0 +1,412 @@
+# Two predicate steps at one horizon
+
+*AI-written source read for Ren, 22 November 2026.*
+
+**GuardHorizon proves exclusion twice**, once for `loseStep` and once for `lostStep`. A theorem saying that every state is viable or lost at each horizon was **not found in what was read**. Positive either-or theorems do exist elsewhere. The clearest concern a history fitting or being separated, a stock staying above a need or crossing it, and a finite stretch agreeing throughout or exhibiting a first difference.
+
+**The proposed induction is sound. The scratch coverage proof fits it. The scratch exclusion proof does not fit pointwise disjointness on codes.** A covering code and an exact losing code can name the same class. There is a two-code counterexample below.
+
+## 1. The general law and its bound
+
+`PredicateIteration.lean:77` defines `iter` by `| 0 => V₀` and `| n + 1 => Φ (iter Φ V₀ n)`. Write `V n` and `W n` for the two iterates. For any relation `H` on their predicate spaces, `H V₀ W₀` and `∀ X Y, H X Y → H (Φ X) (Ψ Y)` imply `∀ n, H (V n) (W n)`. Zero is the start and the successor is the step applied to the induction hypothesis. The carriers can even differ. Coverage takes `H X Y := ∀ c, X c ∨ Y c`. Exclusion takes `H X Y := ∀ c, ¬ (X c ∧ Y c)` and **requires its own base**. Neither induction needs monotonicity, lists, decisions or commutation with implication.
+
+The general mathematical statement **already is invariance on a product**. Take `next (X,Y) = (Φ X, Ψ Y)` and `K (X,Y) = H X Y` in `Lasting.lean:474`:
+
+```lean
+theorem closed_orbit {K : S → Prop} (closed : ∀ x, K x → K (next x)) {s : S} (held : K s) :
+    ∀ n, K (Law.orbit next s n)
+```
+
+The orbit's projections obey the two iterate equations. `Tolerance.iter_eq_orbit` at 238 identifies predicate iteration with `Law.orbit`. `Invariant.run` in `Frame.lean:286` and `WindowedWaiting.invariant` at 199 give the run versions. `Tolerance.KeepsInclusionInto.course` at 257 transports pointwise implication between two different steps. `Iteration.imp_iff_iter_gives` in `PredicateIteration.lean:219` relates two iterates through implication to `G` under monotonicity and `CommutesWithImplication Ψ G`. A named theorem concluding a disjunction of two independent `Iteration.iter` terms was **not found in what was read**.
+
+**Only the falling bound is needed for the paired finite result.** Let `N = all.length`. Assume `MonotoneStep Φ`, `∀ c, Φ V₀ c → V₀ c` and `∀ c, V₀ c → c ∈ all`. Split at `N`. The left branch gives `∀ n, V n c` by `iter_iff_all` at 153. The right branch already is `W N c`. Exclusion at `N` rules out both. Moreover, any `W m c` rules out the all-stages branch by exclusion at `m`, hence gives `W N c`. This also bounds the rising side, without commutation or even rising monotonicity. Independently, `iter_within_length` at 255 needs an ascending start, monotonicity, commutation to `G := W N c` and a list covering every `x` satisfying `W₀ x → G`. `Iteration.singleton_rise_needs_em` in `RisingIteration.lean:28` tests unconditional shortening on a singleton.
+
+Below, each proposed **split** assumes `∀ d, X d ∨ Y d` for arbitrary `X,Y`. An exact list of successors enumerates all and only the actual successors. A list of ambient states plus decided edges also works. The finite search used repeatedly is `Undecided.lean:381`:
+
+```lean
+theorem each_or_some {A B : X → Prop} : ∀ {l : List X}, (∀ x, x ∈ l → A x ∨ B x) →
+    (∀ x, x ∈ l → A x) ∨ ∃ x, x ∈ l ∧ B x
+```
+
+## 2. Choosing a move against every outcome
+
+**GuardHorizon.** Here are the two loss steps and the falling step (`GuardHorizon.lean:137, 226, 294`):
+
+```lean
+def choiceStep (X : S → Prop) (s : S) : Prop :=
+  guard s ∧ ∃ a, Enabled P s a ∧ ∀ t, P.step s a t → X t
+
+def loseStep {A : Type v} (P : Process S A) (guard X : S → Prop) (s : S) : Prop :=
+  ¬ guard s ∨ ∀ a, Enabled P s a → ∃ t, P.step s a t ∧ X t
+
+def lostStep (P : Process S A) (guard X : S → Prop) (s : S) : Prop :=
+  ¬ guard s ∨ ∀ a, ¬ Enabled P s a ∨ ∃ t, P.step s a t ∧ X t
+```
+
+The starts are `guard` and `fun t => ¬ guard t`. `Viable` at 88 uses the choice-step recursion, identified with its iterate by `iter_iff_viable` at 147. The two exclusions, without game premises, are
+
+```lean
+-- GuardHorizon.lean:231
+theorem not_viable_of_loss {S A : Type} {P : Process S A} {guard : S → Prop} :
+    ∀ n s, iter (loseStep P guard) (fun y => ¬ guard y) n s → ¬ Viable P guard n s
+
+-- GuardHorizon.lean:318
+theorem lost_not_viable {S A : Type} {P : Process S A} {guard : S → Prop} : ∀ n s,
+    iter (lostStep P guard) (fun t => ¬ guard t) n s → ¬ Viable P guard n s
+```
+
+Both preserve disjointness on arbitrary inputs. Take the enabled move on the left and its losing reply on the right. Guard failure and disability contradict the corresponding left premises. `lost_implies_lose` at 305 is unconditional. `lost_iff_lose` at 309 needs `∀ s a, Enabled P s a ∨ ¬ Enabled P s a` for the reverse implication.
+
+The proposed splits are `choiceStep P guard X s ∨ lostStep P guard Y s` and the same with `loseStep`. Decide the guard, list all moves, and list exact outcomes per move. The empty outcome list decides disability. For each enabled move, either all outcomes have `X` or one has `Y`. A second finite search yields a good move or a reply to every move. No state-space list is needed for this horizon split. For the falling bound, `viable_iff_every_horizon` at 181 and `viable_iff_closed` at 187 list **only guarded states**. For the independent rising bound, `lost_shortens` at 336 lists **all states and moves** and uses `lost_commutes` at 326, without guard or edge decisions. The unrestricted `loseStep` shortening tests at 242 and 266 decide negations and arbitrary propositions, respectively. The unlisted-move `lostStep` test is at 343 and 379.
+
+**Keeping through a reading.** `Keeping.lean:95` defines `KeptFor` on classes by
+
+```lean
+  | 0, B => ∀ s, B s → guard s
+  | n + 1, B => (∀ s, B s → guard s) ∧
+      ∃ a, Usable P allowed B a ∧ ∀ o, KeptFor P sense guard allowed n (Seen P sense B a o)
+```
+
+The package also has this falling step **on codes** (`Keeping.lean:349`):
+
+```lean
+def readingStep (P : Process S A) (sense : S → A → S → O) (guard : S → Prop)
+    (allowed : S → A → Prop) (decode : C → S → Prop) (X : C → Prop) (c : C) : Prop :=
+  codeGuard decode guard c ∧ ∃ a, Usable P allowed (decode c) a ∧
+    ∀ o, coveredBy decode X (Seen P sense (decode c) a o)
+```
+
+`coveredBy decode X B` at 339 means `∃ d, X d ∧ ∀ s, B s → decode d s`. `codeGuard` at 343 means `∀ s, decode c s → guard s`. `iter_iff_kept` at 369 requires an exact code for each observation after a usable move from a guarded code. `coded_kept_iff_closed` at 380 also lists the guarded codes and identifies keeping at that length with membership in a closed family.
+
+In `ScratchTwoSides.lean.txt:19, 23, 28, 35` the exact bodies of `Names`, `Outside`, `lostReadingStep` and `Lost` are respectively
+
+```lean
+  ∀ s, decode d s ↔ B s
+
+  ∃ s, decode c s ∧ ¬ guard s
+
+  Outside decode guard c ∨ ∀ a, ¬ Usable P allowed (decode c) a ∨
+    ∃ o d, Names decode d (Seen P sense (decode c) a o) ∧ X d
+
+  iter (lostReadingStep P sense guard allowed decode) (Outside decode guard)
+```
+
+The positive loss iterate was **not found in what was read** of the package. Scratch `lost_not_kept` at 75 and `closed_never_lost` at 83 have no listing or decision premise. Its independent rising bounds at 63 and 69 list all codes and moves. The exact alternatives at 105 and 137 have these section premises at 90–99:
+
+```lean
+variable {moves : List A} (everyMove : ∀ a, a ∈ moves)
+  (everyValue : ∀ c, codeGuard decode guard c → ∀ a, Usable P allowed (decode c) a →
+    ∃ values : List O, ∀ o, o ∈ values)
+  (updates : ∀ c, codeGuard decode guard c → ∀ a, Usable P allowed (decode c) a → ∀ o,
+    ∃ d, Names decode d (Seen P sense (decode c) a o))
+  (inOrOut : ∀ c, codeGuard decode guard c ∨ Outside decode guard c)
+  (usableOrNot : ∀ c, codeGuard decode guard c → ∀ a,
+    Usable P allowed (decode c) a ∨ ¬ Usable P allowed (decode c) a)
+
+include everyMove everyValue updates inOrOut usableOrNot
+
+theorem kept_or_lost : ∀ n c, KeptFor P sense guard allowed n (decode c) ∨ L n c
+
+theorem closed_or_lost_within {all : List C} (every : ∀ d, d ∈ all) {c : C} :
+    (InClosedFamily P sense guard allowed (decode c) ∨ L all.length c) ∧
+    ¬ (InClosedFamily P sense guard allowed (decode c) ∧ L all.length c)
+```
+
+`L` abbreviates `Lost P sense guard allowed decode`. The split `readingStep … X c ∨ lostReadingStep … Y c` works: take an exact successor code, use the pointwise alternative there, use exact naming as a cover on the keeping branch, then gather over values and moves. No code list is needed. Splitting at a list's length and using `coded_kept_iff_closed` would weaken the bounded theorem's coverage requirement to **guarded codes only**.
+
+**Counterexample to one-step coded exclusion.** Take one guarded state, one enabled and allowed self-loop, one move, one observation, and two codes naming the same singleton. Put one code in `X` and the other in `Y`. The first covers the seen class and the second names it exactly. Both output steps hold at the same code. All the scratch lists and decisions exist. Line 80 instead uses downward closure of `KeptFor` on classes. A relation that *is* preserved on code predicates is “no `Y`-code's class is contained in an `X`-code's class.” A usable move on the larger class remains usable on the smaller, and `Seen` preserves inclusion (`Keeping.lean:271`). An exact losing successor inside a kept cover contradicts this stronger relation at the preceding stage. Using the semantic class predicate directly also retains the premise-free scratch exclusion.
+
+## 3. Regions, lasting, continuation and endpoints
+
+**A region and a path out.** `CommonResponse.lean:167, 197` gives the two steps in namespace `Becoming`:
+
+```lean
+def regionStep (X : S → Prop) (s : S) : Prop := Q s ∧ ∀ t, R s t → X t
+
+def reachStep (R : S → S → Prop) (W₀ X : S → Prop) (y : S) : Prop :=
+  W₀ y ∨ ∃ t, R y t ∧ X t
+```
+
+Take `W₀ := fun t => ¬ Q t`. Split into `(Q s ∧ ∀ t, R s t → X t) ∨ (¬ Q s ∨ ∃ t, R s t ∧ Y t)`. Exclusion needs no premise. Coverage follows from a decision of `Q s` and an exact successor list at `s`. Independent `Q,W₀` can already fail to cover or exclude at zero. `held_iff_iter` at 175 lists only `Q`-states. `held_iff_iter_pred_length` at 189 and `closure_iff_reach_within` at 227 give **both bounds at `n`** for an exhaustive list of length `n+1`. `reach_commutes` at 208 needs no decision. The two bounds are proved separately. A positive region-or-exit theorem at every horizon was **not found in what was read**.
+
+- **Kernel or witnessed escape.** `Viability.lean:58` defines `Kernel P guard s` as `∀ t, Reach P s t → guard t`. At 80 and 86 it is the bounded region for `R := Steps P`. `Reaching.iter_reach_iff_trace` in `ReachableRanges.lean:513` gives the exact positive alternative with `B := fun t => ¬ guard t`: `∃ t as, as.length ≤ k ∧ Trace P y as t ∧ B t`. A guarded dead end is in this kernel and fails choice viability at horizon one.
+- **An item possible or absent along every short trace.** `PossibleWithin P adm k s x` at `ReachableRanges.lean:306` is `∃ t as, as.length ≤ k ∧ Trace P s as t ∧ adm t x`. Use the same split with `W₀ t := adm t x`, `Q t := ¬ adm t x`. `PossibleWithin.mono` at 557 gives growth. `possible_iff_within_of_pred_le` at 550 gives the exhaustive-state-list predecessor bound. `WithinMoves` in `Labelled.lean:924` uses the target `∀ c, bundle c → realized t c`. Deciding that whole target suffices.
+- **Lasting under every disturbance or one bad disturbance prefix.** `Lasting.iter_region_iff_lasts` at 251 uses `R := Steps (disturbed f adm)`. `kernel_iff_lasts_length` at 259 lists the guarded states. Here list exact admissible disturbances and decide the guard for the split. On one given history, `guarded_upto_iff` at 313 and `guarded_none_iff` at 326 identify still running and stopped, assuming a guarded start and `[DecidablePred guard]`. `GuardedStep.lean:91` tests the first `n` source states of the cut law, excluding the endpoint.
+
+**Universal lasting and universal reaching are a different pair.** The definitions at `Lasting.lean:111, 562` are
+
+```lean
+def Lasts (f : S → A → S) (adm : A → Prop) (guard : S → Prop) : Nat → S → Prop
+  | 0, s => guard s
+  | n + 1, s => guard s ∧ ∀ a, adm a → Lasts f adm guard n (f s a)
+
+def Reaches (f : S → A → S) (adm : A → Prop) (target : S → Prop) : Nat → S → Prop
+  | 0, s => target s
+  | n + 1, s => target s ∨ ∀ a, adm a → Reaches f adm target n (f s a)
+```
+
+Their old exclusion at 699 and their determined-law dual at 854 are
+
+```lean
+theorem Reaches.not_lasts {a₀ : A} (h₀ : adm a₀) : ∀ {n : Nat} {s : S},
+    Reaches f adm target n s → ¬ Lasts f adm (fun x => ¬ target x) n s
+
+theorem reaches_iff_not_lasts [DecidablePred target] {n : Nat} {s : S} :
+    Reaches (determined next) (fun _ => True) target n s ↔
+      ¬ Lasts (determined next) (fun _ => True) (fun x => ¬ target x) n s
+```
+
+The admitted `a₀` lets exclusion follow the same move on both sides. With no admissible disturbance and a false target, both sides hold at horizon one. Coverage would require `(¬ target s ∧ ∀ a, adm a → X (f s a)) ∨ (target s ∨ ∀ a, adm a → Y (f s a))`. On two states with a non-target start, let one admitted move stay and another enter the target. At horizon one neither side holds, even with every list and decision. The positive dual to universal reaching is **one path staying outside**: pair `keepStep (disturbed f adm) (fun s => ¬ target s)` with the `Reaches` step, listing the admissible successors and deciding the target. On a determined law there is just one successor, so the original universal pair does cover. `reaches_iff_orbit` at 739 gives the witnessed hit by `n`, `LastingRuns.lean:234` gives the trace dual and `Lasting.lean:865` tests the decision at zero. No state list is needed for this deterministic split. On an exhaustive state list the region and reach predecessor bounds apply.
+
+**Continuing, keepable, and reachable at an exact length.** These use the same existential/universal split, but in different directions. Each alternative below is about the state in the same row.
+
+| Falling step and start | Proposed rising step and start | What the package proves |
+|---|---|---|
+| `Parting.lean:409`, `def courseStep (X : S → Prop) (s : S) : Prop := ∃ a t, P.step s a t ∧ X t`, from `True` | `∀ t, Steps P s t → Y t`, from `False`. Every possible continuation runs out within the horizon. A leaf first loses at one. | `iter_iff_continues` at 420 gives `Lasting.Continues` (957). `continues_any` at 434 gives all lengths from the exhaustive state-list length. |
+| `KeepableStep.lean:73`, `def keepStep (P : Process S A) (g X : S → Prop) (s : S) : Prop := g s ∧ courseStep P X s`, from `g` | `¬ g s ∨ ∀ t, Steps P s t → Y t`, from `¬ g`. Every attempted continuation leaves the guard or runs out of moves. | `keepable_iff_count` at 81 lists all states and identifies the bound with `Keepable`, defined in `JointKeeping.lean:91` as `∃ r : Run P, r.state 0 = s ∧ ∀ n, g (r.state n)`. `not_keepable_invariant_iff` at 98 of `KeepableStep` concerns transport of a negation along a transition. |
+| `Attraction.lean:120`, `def predStep (P : Process S A) (X : S → Prop) (s : S) : Prop := ∃ t, Steps P t s ∧ X t`, from `True` | `∀ t, Steps P t s → Y t`, from `False`. All **predecessor** chains run out before length `n`. | `iter_iff_reachable` at 128 and `reachable_iff_all` at 147 use `Reachable P n s := ∃ x as, as.length = n ∧ Trace P x as s` (`Recurrence.lean:118`). All states are listed for the bound. |
+
+In each row `pair` is the falling expression on `X` or the rising expression on `Y`. List exact successors for the first two, exact predecessors for the third, and decide `g` for the guarded row. Exclusion matches an existential witness against the universal reply, without decisions. `Withholding.answers` and `givesFirst` already supply the right-hand operators with the appropriate orientation. The cross-module identifications and positive splits were **not found in what was read**. Continuation already has the negative-form split at `Lasting.lean:975`:
+
+```lean
+theorem Continues.decided {P : Process S A} (branching : FinitelyBranching P) :
+    ∀ (n : Nat) (s : S), Decided (Continues P n s)
+```
+
+`FinitelyBranching` at 966 is `∀ s, ∃ l : List S, ∀ t, (∃ a, P.step s a t) ↔ t ∈ l`. `Decided p` means `p ∨ ¬ p` (`Decidedness.lean:100`). `Parting.live_iff_continues` at 476 also supplies a Boolean test from listed states and moves and decidable steps.
+
+There is an already exact **indexed** attraction statement. `Attraction.lean:164` defines `DrawnInto next R s` as `¬ R s ∧ ∃ n, R (orbit next s n)`. `lost_drawn` at 258 gives `¬ Reachable next n s → DrawnInto next (Reachable next n) s` without premises. The converse is its first projection. `Branching.lean:365, 475` gives the every-run version. An either-or using this particular region would amount to deciding exact-length reach. Unindexed `Drawn` at `Attraction.lean:169` quantifies over absorbing regions. On an exhaustive list `drawn_iff_not_reachable_count` at 384 identifies it with loss at the list length. On an infinite type `pred_drawn_keeps` at 474 gives `Drawn Nat.pred 1 ∧ KeepsPossibilities Nat.pred`. With branching, `Branching.lean:618` exhibits possible attraction and return together.
+
+## 4. Likeness and a witnessed difference
+
+The two falling steps are in `Likeness.lean:1080` and `GrammarCandidates.lean:564`:
+
+```lean
+def alikeStep (F : Frame S A C) (G : Frame S' A C) (X : S × S' → Prop) (p : S × S') : Prop :=
+  AlikeTo F G 0 p.1 p.2 ∧
+    (∀ a t, F.P.step p.1 a t → ∃ t', G.P.step p.2 a t' ∧ X (t, t')) ∧
+    (∀ a t', G.P.step p.2 a t' → ∃ t, F.P.step p.1 a t ∧ X (t, t'))
+
+def inquiryStep (R E : «际» S) (X : S × S → Prop) (p : S × S) : Prop :=
+  E p.1 p.2 ∧ (∀ v, R p.1 v → ∃ v', R p.2 v' ∧ X (v, v')) ∧
+    (∀ v', R p.2 v' → ∃ v, R p.1 v ∧ X (v, v'))
+```
+
+Their starts are agreement on claims, `∀ c, F.realized s c ↔ G.realized s' c` (`AlikeTo` at 886), and `E` (`«诘»` at 527). `iter_iff_alikeTo` at 1094 and `iter_iff_inquiry` at 575 identify the stages. For likeness, split into `alikeStep F G X p` or **a claim realized on just one side, or an actual move and outcome on either side such that every same-move reply on the other leads to a pair in `Y`**. For inquiry, split into `inquiryStep R E X p` or `¬ E p.1 p.2` or the analogous unmatched step without a move label. Exclusion takes the matching reply. For coverage, list moves and exact outcomes on both sides, list claims and decide realization. Inquiry needs only exact successors and a decision of `E`. An empty reply list witnesses an unmatched move. With `p = (s,s')` and `M p` the witnessed claim disagreement, the proposed right-hand step is
+
+```lean
+M p ∨ (∃ a t, F.P.step s a t ∧ ∀ t', G.P.step s' a t' → Y (t,t')) ∨
+      (∃ a t', G.P.step s' a t' ∧ ∀ t, F.P.step s a t → Y (t,t'))
+```
+
+Likeness already decides the depth predicate (`Likeness.lean:976, 1893`):
+
+```lean
+theorem AlikeTo.decided (moves : ∃ l : List A, ∀ a, a ∈ l) (claims : ∃ l : List C, ∀ c, c ∈ l)
+    (finite : FiniteDecided F) (finite' : FiniteDecided G) :
+    ∀ k s s', Decided (AlikeTo F G k s s')
+
+theorem OutcomesListed.alikeTo_decided (moves : ∃ l : List A, ∀ a, a ∈ l)
+    (claims : ∃ l : List C, ∀ c, c ∈ l) (listed : OutcomesListed F) (listed' : OutcomesListed G) :
+    ∀ k s s', Decided (AlikeTo F G k s s')
+```
+
+`FiniteDecided` at 928 lists states and decides steps and realization. `OutcomesListed` at 1831 lists exact outcomes per state/move and decides realization. Under the respective premises, `apart_of_not_alikeTo` at 1027 and `OutcomesListed.apart_of_not_alikeTo` at 1939 conclude `∃ φ, BranchingTest.Holds F s φ ∧ ¬ BranchingTest.Holds G s' φ` given `¬ AlikeTo F G k s s'`. **Neither conclusion bounds the depth of `φ`.** Such a test can coexist with shallow likeness. Full likeness excludes it by `Alike.holds_iff` at 857. A positive rising iterate for a mismatch **by the given depth** was **not found in what was read**.
+
+`alike_iff_at_cover` at 1181 lists only claim-agreeing pairs. `alike_iff_alikeTo_pairs` at 1190 gives the product bound. With finite decided frames and listed moves and claims the bounds sharpen to `N−1` within one frame (1342) and `N+N'−1` across two (1372). `inquiry_iff_all` in `GrammarCandidates.lean:585` lists only `E`-pairs. `core_iff_inquiry` at 591 also needs symmetry of `E`. `«层即诘»` at 616 identifies the older stages. `Refining` in `Refinement.lean:86` gives decreasing equivalences without requiring any common step operator.
+
+**On two determined courses**, `AgreeTo` in `Identification.lean:1574` has clauses `| 0, s, s' => o s = o s'` and `| k + 1, s, s' => o s = o s' ∧ AgreeTo next o k (next s) (next s')`. Its opposite is a witnessed unequal observation by `k`. Split into `(o s = o s' ∧ X (next s,next s')) ∨ (o s ≠ o s' ∨ Y (next s,next s'))`, deciding only the observation comparison. `agreeTo_iff` at 1579 uses `n ≤ k`. `AgreeTo.decided` at 1621 uses a closed list and decided comparisons on its members. `sameFuture_iff_within` at 1852 gets the all-time criterion from times `n < l.length - 1` for two starts in a closed list without comparison decisions. `Law.alikeTo_labelled_iff` in `Distinguishing.lean:124` uses `n < k` when the moves carry the observations.
+
+**On two fixed runs**, `PartAt` in `Parting.lean:144` is `(∀ n, n < t → reg (r.state n) = reg (r'.state n)) ∧ reg (r.state t) ≠ reg (r'.state t)`. The rising side is `∃ t ≤ n, PartAt … t`. First parting *at* `n` does not rise. Pair agreement through `n` with first difference by `n` using the same comparison on the two tails. `unparted_iff` at 175 uses `[DecidableEq R]` to identify all-run agreement with absence of any first parting. `free_parts_after` at 679 permits late parting. Parting does not end either course.
+
+## 5. Waiting and restoration
+
+`Withholding.lean:98, 102, 106` defines `waitsAll up s a := s a ∧ ∀ b, up b a → s b`, `answers up s a := ∀ b, up b a → s b` and `givesFirst src up s a := src a ∨ answers up s a`. `Tolerance.allWithheld` at 220 is `fun _ => False`.
+
+- **Clear chain or giving restored.** `Tolerance.Clear` at 399 has constructors `here (a : α) : Clear src up 0 a a` and `step {k : Nat} {b c a : α} : Clear src up k b c → up c a → ¬ src a → Clear src up (k + 1) b a`. Fix the endpoint and leave the initial point free. `∃ b, Clear src up n b a` starts true and, by `Clear.last` at 415, steps by `¬ src a ∧ ∃ b, up b a ∧ X b`. Split this against `src a ∨ ∀ b, up b a → Y b` from total withholding. `clear_withholds` at 438 excludes both with no premise. `gives_of_no_clear` at 446 and `restores_iff` at 457 need only `∀ a, src a ∨ ¬ src a`. The latter states `(∀ s, (Law.run (givesFirst src up) s).state n a) ↔ ∀ b, ¬ Clear src up n b a`. For the **positive chain** split, also list exact incoming waits. Source decisions alone do not select a predecessor. An exhaustive formation list then bounds both sides by the falling argument in section 1. `restores_from` at 466 instead assumes a given length with no clear chain anywhere.
+- **Ordinary chain or giving restored.** `Withholding.Chain` at 110 drops `¬ src a` from the step constructor. The split becomes `(∃ b, up b a ∧ X b) ∨ (∀ b, up b a → Y b)` from `True,False`. `Tolerance.answers_restores_iff` at 474 gives `(∀ s, (Law.run (answers up) s).state n a) ↔ ∀ b, ¬ Chain up n b a` with **no** decision. Exact incoming lists suffice for the positive split. With `up := Steps P` this is also the endpoint pair in `Attraction`.
+- **Giving with memory or an initial withholding reaches it.** `Withholding.Within` at 115 is `∃ j, j ≤ k ∧ Chain up j b a`. `waitsAll_closed` at 186 says `(Law.run (waitsAll up) s).state n a ↔ ∀ b, Within up n b a → s b`. `withholding_spreads` at 216 gives exclusion from `¬ s b`, a chain of length `k`, and `k ≤ n`. Split `waitsAll up X a ∨ (Y a ∨ ∃ b, up b a ∧ Y b)` from `s, fun b => ¬ s b`. The right iterate means `∃ b, Within up n b a ∧ ¬ s b`. Decide initial giving and list incoming waits for coverage. The region/reach bounds apply with waits reversed.
+- **Positive tolerance.** `Tolerance.lean:200` defines `tolerating tol ups s a := AllBut s (tol a) (ups a)`. Giving from total withholding rises by 278 and 330. Split “more than `tol a` positions in `ups a` have `X`” against `AllBut Y (tol a) (ups a)`, starting from `True,False`. The input already lists the waits. Count positions, including repeated formations, using the alternative at each position. `allBut_iff_count` at 619 handles Boolean tests and `tolerating_zero` at 209 recovers `answers`. The falling iterate of positive withholding certificates at general tolerance was **not found in what was read**.
+
+## 6. Explicit positive alternatives elsewhere in the package
+
+**Fitting records or being separated.** `Retrodiction.lean:53, 63, 92` uses `(routeAt : H → D → R) (emit : R → Q → O)`:
+
+```lean
+def Fits (h : H) : List (Record D Q O) → Prop
+  | [] => True
+  | r :: rs => emit (routeAt h r.date) r.probe = r.report ∧ Fits h rs
+
+def Separated (g h : H) : List (D × Q) → Prop
+  | [] => False
+  | p :: ps => emit (routeAt g p.1) p.2 ≠ emit (routeAt h p.1) p.2 ∨ Separated g h ps
+
+theorem fits_or_separated [DecidableEq O] (g h : H) : ∀ ps : List (D × Q),
+    Fits routeAt emit g (acquire routeAt emit h ps) ∨ Separated routeAt emit g h ps
+```
+
+`not_fits_of_separated` at 85 gives exclusion without a decision. At head probe `p` let `e` be equality of the two reports. Split `(e ∧ X ps) ∨ (¬ e ∨ Y ps)` on the tail. Report equality suffices. To use one fixed operator, take the remaining list as state, inspect its head, call the input predicate on its tail, and give the empty-list outputs `True,False`. Start everywhere at `True,False`. Iterating for the record length recovers both list recursions.
+
+**Finite windows.** For a fixed course, use state `i` and successor `i+1`. Split `(P i ∧ X (i+1)) ∨ (Q i ∨ Y (i+1))`. For strict windows start at `True,False`, for inclusive windows at `P,Q`. For an earliest witness with all previous `P` use `Q i ∨ (P i ∧ Y (i+1))` on the right. Pointwise `P i ∨ Q i` gives coverage and pointwise incompatibility gives exclusion. The following declarations give the exact alternatives and the decisions each actually uses:
+
+```lean
+-- ReadOffInTime.lean:196
+theorem first_of_decided {P Q : Nat → Prop} (decided : ∀ t, P t ∨ Q t) :
+    ∀ n, (∀ t, t ≤ n → P t) ∨ ∃ m, m ≤ n ∧ Q m ∧ ∀ t, t < m → P t
+
+-- Novelty.lean:67
+theorem upto_or_fails (p : Nat → Prop) [∀ n, Decidable (p n)] :
+    ∀ N, (∀ n, n ≤ N → p n) ∨ ∃ n, n ≤ N ∧ ¬ p n
+
+-- MoveFormation.lean:587
+theorem throughout_or_fails (p : Nat → Prop) [∀ n, Decidable (p n)] :
+    ∀ N, (∀ n, n < N → p n) ∨ ∃ n, n < N ∧ ¬ p n
+
+-- Amounts.lean:506
+theorem unmarked_or_marked {P : Nat → Prop} (decide : ∀ t, P t ∨ ¬ P t) (S : Nat) :
+    ∀ n, (∃ N, S ≤ N ∧ N < S + n ∧ ¬ P N) ∨ ∀ t, S ≤ t → t < S + n → P t
+
+-- Exhaustion.lean:60
+theorem all_or_below (h : Nat → Nat) (m : Nat) :
+    ∀ N, (∀ j, j < N → m ≤ h j) ∨ ∃ j, j < N ∧ h j < m
+
+-- ReadingSchedule.lean:110
+theorem read_or_unread [DecidableEq X] (s : Nat → X) (x : X) (T : Nat) :
+    ∀ k, (∃ j, j < k ∧ s (T + j) = x) ∨ Unread s x T k
+
+-- LastChange.lean:162
+theorem decided_within [DecidableEq S] (r : Run P) (T : Nat) :
+    ∀ n, (∃ k, k < n ∧ r.state (T + k + 1) ≠ r.state (T + k)) ∨
+      ∀ k, k < n → r.state (T + k + 1) = r.state (T + k)
+
+-- Regulation.lean:1294
+theorem first_or_nowhere {P : Nat → Prop} [DecidablePred P] :
+    ∀ n, (∀ i, i < n → ¬ P i) ∨ ∃ r, r < n ∧ P r ∧ ∀ i, i < r → ¬ P i
+
+-- Stock.lean:347
+theorem search (g : Nat → Nat) (N : Nat) :
+    ∀ L, (∃ n, N ≤ n ∧ n < N + L ∧ 0 < g n) ∨ (∀ n, N ≤ n → n < N + L → g n = 0)
+
+-- Founding.lean:217
+theorem changed_or_none (G : Generations α) :
+    ∀ t, (∀ s, s < t → G.raisedAt s = 0 ∧ G.loweredAt s = 0) ∨
+      ∃ s, s < t ∧ (0 < G.raisedAt s ∨ 0 < G.loweredAt s)
+
+-- GrammarLaws.lean:2473
+theorem GrammarLaws.stage_search (b : α → Bool) (u : Nat → List α) (M : Nat) : ∀ n,
+    (∃ t, M ≤ t ∧ t < M + n ∧ ∃ y, y ∈ u (t + 1) ∧ b y = true) ∨
+      ∀ t, M ≤ t → t < M + n → ∀ y, y ∈ u (t + 1) → b y ≠ true
+
+-- CausalGrowth.lean:239
+theorem searchBelow_or (p : Nat → Prop) (decided : ∀ z, p z ∨ ¬ p z) :
+    ∀ n, (∃ z, z < n ∧ p z) ∨ ¬ ∃ z, z < n ∧ p z
+```
+
+`Unread` at `ReadingSchedule.lean:92` is `∀ j, j < k → s (T + j) ≠ x`. `first_of_decided` allows `P,Q` to overlap. `firstApart_of_apart` at 219 applies it to admissions, assuming agreement for all group members or a particular disagreeing member at each time. The bound in these searches is the given window. An arbitrary stream can have its first failure arbitrarily late.
+
+**A stock through a horizon.** `Optimum.lean:4308` defines `Keeps (m n : Nat) (x : Nat → Nat) : Prop := ∀ t, t ≤ n + 1 → m ≤ x t`. The offset matters. Lines 4476, 4496 and 4510 state:
+
+```lean
+theorem keeps_or_falls {x : Nat → Nat} (start : m ≤ x 0) :
+    ∀ n, Keeps m n x ∨ ∃ t, t ≤ n ∧ (∀ u, u ≤ t → m ≤ x u) ∧ x (t + 1) < m
+
+theorem keeps_or_drops {x : Nat → Nat} (start : m ≤ x 0) (n : Nat) :
+    Keeps m n x ∨ ∃ t, t ≤ n ∧ m ≤ x t ∧ x (t + 1) < m
+
+theorem keeps_or_below {x : Nat → Nat} : Keeps m n x ∨ ∃ t, t ≤ n + 1 ∧ x t < m
+```
+
+The three loss witnesses give the first crossing, a crossing edge, and a low time, respectively. Each contradicts `Keeps` at its low time. Use the finite-window split with `P i := m ≤ x i`. Only the first two require an initially met need.
+
+**Units along a way.** `LineOnAStock.lean:242, 254` gives the list versions, with the same head/tail split as records:
+
+```lean
+theorem line_or_none {S : U → Prop} [DecidablePred S] :
+    ∀ w : List U, (∀ u, u ∈ w → ¬ S u) ∨ ∃ u, u ∈ w ∧ S u
+
+theorem met_or_unmet (need : U → Nat) (z : Nat) :
+    ∀ w : List U, (∀ u, u ∈ w → need u ≤ z) ∨ ∃ u, u ∈ w ∧ z < need u
+```
+
+**Related statements with different quantifiers.**
+
+- `MapInstances.lean:157`, `Horizon.lean:378` and `HistoryIdeals.lean:461` genuinely say “or”, but leave one witness unbounded:
+
+```lean
+theorem ends_or_reaches {E : «际» (Nat × F)} {x : Nat × F}
+    (decided : ∀ y, «所及» (continuationStep R) E x y →
+      «有后» (continuationStep R) E y ∨ ¬ «有后» (continuationStep R) E y) :
+    ∀ k, «有终» (continuationStep R) E x ∨
+      ∃ y, «所及» (continuationStep R) E x y ∧ y.1 = x.1 + k
+
+theorem false_below_or_true (s : Nat → Bool) : ∀ h, (∀ t, t < h → s t = false) ∨ ∃ t, s t = true
+
+theorem least_true_or_below (s : Nat → Bool) : ∀ n,
+    (∀ m, m < n → s m = false) ∨ ∃ k, (∀ m, m < k → s m = false) ∧ s k = true
+```
+
+  An ended branch can coexist with another that continues. `GrammarLaws.lean:1329` excludes the short ended branch alongside a longer course under a local fixed-successor premise. A Boolean stream first true after the searched prefix satisfies both alternatives in the last two statements.
+
+- `Dependence.lean:234` and `WindowedWaiting.lean:736` give genuine local or per-time alternatives:
+
+```lean
+theorem kept_or_broken {t : Nat} {g : F} {c : C} (depends : W.requires t g c)
+    (met : W.need t g c ≤ W.level t c) : W.Kept t g c ∨ W.Broken t g c
+
+theorem exactly_one : ∀ n,
+    (¬ (Law.run (answers Waits) oneWithheld).state n first ∧
+      (Law.run (answers Waits) oneWithheld).state n second) ∨
+    ((Law.run (answers Waits) oneWithheld).state n first ∧
+      ¬ (Law.run (answers Waits) oneWithheld).state n second)
+```
+
+  `Kept` and `Broken` at `Dependence.lean:142, 146` compare the need at `t` with the levels at `t` and `t+1`. `kept_not_broken` at 240 is unconditional. The next comparison uses a new time. In the windowed example the two sides actually exchange places (`echo` at 722). Neither example supplies falling and rising stages.
+
+- Two quantitative horizon alternatives strengthen the surviving branch with an arithmetic estimate:
+
+```lean
+-- RegimeMargin.lean:890
+theorem falls_or_bound {g : Nat → Nat} {H Y b x : Nat} (most : AtMost g Y) (yle : Y ≤ H)
+    (hb : H ≤ b) : ∀ n, (∃ k, k ≤ n ∧ (Law.run (step g H) x).state k < b) ∨
+      ((Law.run (step g H) x).state n + (H - Y) * n ≤ x ∧ b ≤ (Law.run (step g H) x).state n)
+
+-- LoopReturn.lean:396
+theorem settled_or_fallen {f : Nat → Nat} (mono : ∀ x y, x ≤ y → f x ≤ f y) {d : Nat}
+    (down : f d ≤ d) :
+    ∀ n, (∃ k, k ≤ n ∧ f ((Law.run f d).state k) = (Law.run f d).state k) ∨ (Law.run f d).state n + n ≤ d
+```
+
+  A finite-window split can find a crossing or certify that every comparison in the window passed. The rate estimate requires the dynamics. The two `LoopReturn` conclusions can both hold already at zero for a fixed start.
+
+- `SeedReach.lean:49, 113, 117` gives `FromSeed P seed x := ∃ s, seed s ∧ Reach P s x` and `Separated P seed x := ∃ I : S → Prop, (∀ s, seed s → I s) ∧ Invariant P I ∧ ¬ I x`, with `Separated P seed x ↔ ¬ FromSeed P seed x`. This separation certificate concerns reach at *any* length. `Testing.lean:190, 196` instead pairs a shrinking observational class with exclusion of a claim: `AlikeThroughUpTo … t := ∀ s, s ≤ t → W.AlikeThrough obs g l l' s` and `Excludes … t := ∀ l', claim l' → ¬ W.AlikeThroughUpTo obs g l l' t`. `Excludes.later` at 313 and `class_excludes_iff` at 376 give growth and disjointness. Excluding a class of histories quantifies over every candidate. A witness that one history differs at one time does not exclude the others. To split constructively into a surviving candidate or a mismatch for every candidate, one sufficient presentation lists the claim histories and decides the observations on the prefix.
+- Adding parity constraints shrinks the satisfying assignments and preserves an exhibited contradiction. `Gluing.lean:298, 455` states:
+
+```lean
+theorem met_or_contradicts [DecidableEq C] : ∀ (xs : List C), Distinct xs →
+    ∀ rs : List (ParityConstraint C),
+      (∃ v : C → Bool, ∀ r, r ∈ rs → r.value xs v = r.odd) ∨
+        ∃ ks, (∀ k, k ∈ ks → k ∈ rs) ∧ Contradicts xs ks
+
+theorem global_or_contradicts [DecidableEq C] (distinct : Distinct S.claims) (all : List K) :
+    (∃ v : C → Bool, ∀ k, k ∈ all → S.support k v) ∨
+      ∃ ks, (∀ k, k ∈ ks → k ∈ all) ∧ S.Contradicts ks
+```
+
+  `Contradicts` at 210 and 372 says that the selected constraints count every listed claim evenly and require odd parity. `unmet_of_contradicts` at 396 gives exclusion in the context formulation. An assignment satisfying a prefix can fail the next constraint while some other assignment works. A `pair` premise asking for a new satisfying assignment or a contradictory selection after every extension would leave the elimination problem in the premise. The source proves it by elimination on claims.
+
+## 7. Counter-cases and ranking
+
+**There is no counterexample with the stated start and a genuinely preserved `pair`.** The iterate equations preclude one. Three small cases locate the limits.
+
+1. On `Unit`, identity steps and true starts preserve both coverage and disjointness *of inputs*. Both outcomes nevertheless hold at every stage: the disjointness base fails.
+2. On `Unit`, let `Φ X := False` everywhere, `Ψ Y := Y`, `V₀ := False` and `W₀ := True`. Exactly one side holds on the entire actual orbit. Universal `pair` fails on the covered input `X := True, Y := False`. Conversely, if both steps ignore their inputs and return `P,Q`, applying `pair` to `True,False` gives exactly `∀ c, P c ∨ Q c`. In this case the induction only repeats the split assumed in the premise.
+3. The two synonymous codes in section 2 refute pointwise coded exclusion. The two admitted disturbances in section 3 refute coverage of two universal branches. On one state with an arbitrary guard `p`, an unconditional viable-or-lost theorem would already give `p ∨ ¬ p` at zero.
+
+| Rank | What would join |
+|---|---|
+| **1. Older proofs becoming instances** | Both GuardHorizon exclusions, `Lasting.Reaches.not_lasts` with an admitted move, and `Tolerance.clear_withholds`. For older **positive** splits, `first_of_decided`, `read_or_unread`, `keeps_or_falls` and `fits_or_separated` have explicit witnesses. `Continues.decided` can also follow from the positive run-out split and exclusion. |
+| **2. New statements joining existing operators** | GuardHorizon viable-or-lost on a presented game. Region-or-exit across `CommonResponse`, `Viability`, `Lasting` and `ReachableRanges`. Continue-or-run-out and reachable-or-exhausted-past via `answers`. Keepable-or-forced-failure via `givesFirst`. Clear-chain-or-restored with exact incoming lists. The scratch keeping split already exists outside the package. Its exclusion needs the relation between decoded classes. |
+| **3. New positive witnesses** | The bounded unmatched-move tree for `AlikeTo` and `«诘»`, and the counted obstruction for positive tolerance. An unbounded distinguishing test or a decision of a negation does not by itself supply the proposed bounded witness. |
+| **4. Forced fits** | Universal reaching against universal safety under competing disturbances, unindexed attraction against arbitrary-horizon reachability, first parting *at* a time against continuation, and single-transition or alternating alternatives. For parity constraints the horizon induction does little of the classification proof. |
+
+**Scope.** I used `PLACES.md` to find candidates and opened all **409** `.lean` modules under the supplied `Becoming/` directory programmatically for a source and declaration scan. I searched across line breaks for disjunctions, `Decided`, iteration and its local aliases, horizon recursions, exclusions, witnesses and uses of the named steps. I read `PredicateIteration.lean` and `ScratchTwoSides.lean.txt` in full, read the adjacent scratch report, and inspected the definition, statement or proof passages in the modules identified above. The remaining modules received the package-wide scan. Only `PredicateIteration.lean` was read end to end among the 409 package modules. Each absence finding refers to that coverage. I ran no Lean, Lake, gate, tests or checker, and started no agents. The proposed instances and counter-cases are mathematical readings. [Saved report](/Users/ren/theories/tmp/fm/centre22/readers/sweep/REPORT.md)

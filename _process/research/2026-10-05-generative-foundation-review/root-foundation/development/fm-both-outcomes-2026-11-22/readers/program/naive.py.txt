@@ -1,0 +1,153 @@
+"""AI-written (Claude Fable, reader 'program', board row FM), 22 November 2026.
+
+A literal transcription into Python of the Lean definitions, on finite carriers.
+No speed; every quantifier is written as the Lean has it. Sources read:
+
+GenerativeCore.lean l. 23-29:
+    structure Process (State) (Action) where step : State -> Action -> State -> Prop
+    def Enabled P s a := exists t, P.step s a t
+Keeping.lean l. 78-99, 333-343:
+    Seen P sense B a o t := exists s, B s /\\ P.step s a t /\\ sense s a t = o
+    Usable P allowed B a := forall s, B s -> allowed s a /\\ Enabled P s a
+    KeptFor 0 B := forall s, B s -> guard s
+    KeptFor (n+1) B := (forall s, B s -> guard s) /\\
+        exists a, Usable B a /\\ forall o, KeptFor n (Seen B a o)
+    InClosedFamily B := exists F, F B /\\ (forall D, F D -> forall s, D s -> guard s) /\\
+        forall D, F D -> exists a, Usable D a /\\ forall o, F (Seen D a o)
+    codeGuard decode guard c := forall s, decode c s -> guard s
+PredicateIteration.lean l. 77-79:
+    iter Phi V0 0 = V0 ; iter Phi V0 (n+1) = Phi (iter Phi V0 n)
+ScratchTwoSides.lean.txt l. 19-37:
+    Names decode d B := forall s, decode d s <-> B s
+    Outside decode guard c := exists s, decode c s /\\ not guard s
+    lostReadingStep X c := Outside c \\/ forall a, not Usable (decode c) a \\/
+        exists o d, Names decode d (Seen (decode c) a o) /\\ X d
+    Lost := iter lostReadingStep Outside
+"""
+from itertools import combinations
+
+
+class Model:
+    def __init__(self, S, A, O, step, sense, guard, allowed, decode, names="exact"):
+        """S, A, O: lists. step: set of (s, a, t). sense: dict (s, a, t) -> o (needed on step
+        triples only; `Seen` asks the step first). guard: set of s. allowed: set of (s, a).
+        decode: dict code -> frozenset of s (codes are the keys; two codes may share a class).
+        names: 'exact' is the module's `Names`; 'super' and 'sub' are the two halves, for
+        question 3 only."""
+        self.S, self.A, self.O = list(S), list(A), list(O)
+        self.step, self.sense = set(step), dict(sense)
+        self.guard, self.allowed = set(guard), set(allowed)
+        self.decode = {c: frozenset(B) for c, B in decode.items()}
+        self.C = list(self.decode)
+        self.names = names
+        self._kept = {}
+        self._lost = {}
+
+    def Enabled(self, s, a):
+        return any((s, a, t) in self.step for t in self.S)
+
+    def Seen(self, B, a, o):
+        return frozenset(t for t in self.S
+                         if any(s in B and (s, a, t) in self.step and self.sense[(s, a, t)] == o
+                                for s in self.S))
+
+    def Usable(self, B, a):
+        return all(((s, a) in self.allowed and self.Enabled(s, a)) for s in B)
+
+    def KeptFor(self, n, B):
+        B = frozenset(B)
+        key = (n, B)
+        if key not in self._kept:
+            within = all(s in self.guard for s in B)
+            if n == 0:
+                r = within
+            else:
+                r = within and any(
+                    self.Usable(B, a) and all(self.KeptFor(n - 1, self.Seen(B, a, o))
+                                              for o in self.O)
+                    for a in self.A)
+            self._kept[key] = r
+        return self._kept[key]
+
+    def Names(self, d, B):
+        D = self.decode[d]
+        if self.names == "exact":
+            return all((s in D) == (s in B) for s in self.S)
+        if self.names == "super":   # the code's class contains the class seen
+            return all((s in D) for s in B)
+        if self.names == "sub":     # the code's class lies inside the class seen
+            return all((s in B) for s in D)
+        raise ValueError(self.names)
+
+    def Outside(self, c):
+        return any(s in self.decode[c] and s not in self.guard for s in self.S)
+
+    def codeGuard(self, c):
+        return all(s in self.guard for s in self.decode[c])
+
+    def lostReadingStep(self, X, c):
+        return self.Outside(c) or all(
+            (not self.Usable(self.decode[c], a)) or any(
+                self.Names(d, self.Seen(self.decode[c], a, o)) and X(d)
+                for o in self.O for d in self.C)
+            for a in self.A)
+
+    def Lost(self, n, c):
+        key = (n, c)
+        if key not in self._lost:
+            if n == 0:
+                r = self.Outside(c)
+            else:
+                r = self.lostReadingStep(lambda d: self.Lost(n - 1, d), c)
+            self._lost[key] = r
+        return self._lost[key]
+
+    def all_classes(self):
+        out = []
+        for r in range(len(self.S) + 1):
+            for comb in combinations(self.S, r):
+                out.append(frozenset(comb))
+        return out
+
+    def InClosedFamily_bruteforce(self, B):
+        """exists F over ALL families of classes; only for |S| <= 3."""
+        B = frozenset(B)
+        classes = self.all_classes()
+        m = len(classes)
+        for bits in range(1 << m):
+            F = {classes[i] for i in range(m) if bits >> i & 1}
+            if B not in F:
+                continue
+            if not all(all(s in self.guard for s in D) for D in F):
+                continue
+            if all(any(self.Usable(D, a) and all(self.Seen(D, a, o) in F for o in self.O)
+                       for a in self.A) for D in F):
+                return True
+        return False
+
+    def InClosedFamily(self, B):
+        """Largest family closed in the sense of the definition, by removing classes until
+        nothing is removed; B lies in some closed family exactly where it lies in the largest
+        (a union of closed families is closed). Checked against the brute force in crosscheck.py."""
+        B = frozenset(B)
+        F = {D for D in self.all_classes() if all(s in self.guard for s in D)}
+        while True:
+            F2 = {D for D in F
+                  if any(self.Usable(D, a) and all(self.Seen(D, a, o) in F for o in self.O)
+                         for a in self.A)}
+            if F2 == F:
+                return B in F
+            F = F2
+
+    # premises of Part C that a two-valued finite model can state
+    def updates(self, restricted=True):
+        for c in self.C:
+            if restricted and not self.codeGuard(c):
+                continue
+            for a in self.A:
+                if restricted and not self.Usable(self.decode[c], a):
+                    continue
+                for o in self.O:
+                    if not any(self.Names(d, self.Seen(self.decode[c], a, o)) for d in self.C):
+                        return False
+        return True

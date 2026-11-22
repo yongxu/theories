@@ -1,0 +1,180 @@
+# Reader's return: the brief on paper (`BRIEF-A-CHOICE-AGAINST-EVERY-OUTCOME.md`)
+
+*AI-written (Claude Fable, reader for board row FM), 22 November 2026. Read only. No Lean was run: every proof, count of a call's lines and model below is on paper and unbuilt. Lines of landed proofs are counted from the files.*
+
+**Read whole:** the brief; `PredicateIteration.lean`; `GuardHorizon.lean`; `Keeping.lean` ll. 60 to 409; `ScratchTwoSides.lean.txt`; `ScratchDrainOnTheLaw.lean`; `ScratchKeptForViable.lean`; `AFTER-TWO-SIDES.md`; `RETURN-calls-opus.md`; `sweep/REPORT.md`. **In part:** `Lasting.lean` (the ranges named), `KeepableStep.lean` ll. 55 to 102, `Tolerance.lean` ll. 226 to 264, `Undecided.lean` ll. 370 to 392, `CommonResponse.lean` l. 167, `Viability.lean` l. 159, `RETURN-premises-fable.md` (sections 1, 3, 6, other), `RETURN-program-fable.md` (verdict, sections 4 to 6, the premises section), `run-build12.sh`.
+
+## The findings, worst first
+
+1. **B.3 asks a one-step statement that is not provable with `someValues` as written.** The empty side breaks it (model below). The premises reader's weaker list was proved for the induction on classes (`keptFor_empty`); the brief moved it onto a one-step lemma for `readingStep`, where it fails.
+2. **Module 1.7, V6, B.2 and B.3 contradict each other.** The brief says the package already has the relation, offers to state it anyway, counts stating it as V6, and makes B.2(b) and B.3 depend on it. The `closed_orbit` route needs a lemma the package does not have.
+3. **Module 1.2 as worded does not give `viable_persists` or `viable_closed` as calls, and A.2 does not name the bridge or `closed_viable`.** Eight of the ten landed proofs are already calls of 0 to 2 lines; V1's count is decided by two theorems.
+4. **Module 1.4 is worded for iterates; the Opus reader's form over a family below the step (its sections 5 and 6) makes `lost_not_viable` a call with no bridge and B.2(a) a call with no `updates`.** The brief says less than that reader found.
+5. **Module 1.5 leaves the form of the outcome list open; only one form serves A.3.** A.3's "guarded configurations only" needs two lists.
+6. Smaller: 1.3 against "exactly the premises it uses"; 1.6's second corollary; four name clashes not in Traps (one of them names a different step); D.1 misses `regionStep`; "In short" 1 says more than was found; E's pointer and a fifth premise; V2's wording.
+
+Sound as they stand, on paper: A.1 (both `rfl`, and `Closed`); Module 1.1, 1.3's two calls, 1.4's and 1.5's one-step proofs, 1.6's statement and both corollaries; B.1, B.2(b), B.4 and its corollaries; C.1 (four guarded codes), C.2's premises, C.3; D.2, D.3; all four statements of E; every line number checked (`Lasting` 111, 251, 474, 562, 699, 844, 865; `Tolerance` 238; `KeepableStep` 73; `Undecided` 381; `Dependence` 159; `RootForms` 197).
+
+## 1. Are the steps and `Closed` the brief's by definition?
+
+Yes, all three, by `rfl`.
+
+- `choiceStep` (l. 137, `P guard` explicit, `Type u`, `Type v`): `guard s ∧ ∃ a, Enabled P s a ∧ ∀ t, P.step s a t → X t`. The brief's `keepStep` takes `ok live next` in that order (`bad`, `dead` are not in its body, so not arguments). `keepStep guard (Enabled P) P.step` unfolds to the same term. `Enabled` (`GenerativeCore.lean` l. 27, `∃ t, P.step s a t`) is not unfolded.
+- `lostStep` (l. 294): `¬ guard s ∨ ∀ a, ¬ Enabled P s a ∨ ∃ t, P.step s a t ∧ X t`. `loseStep (fun t => ¬ guard t) (fun s a => ¬ Enabled P s a) P.step` is that after beta.
+- `GuardHorizon.Closed` (l. 125, `S A : Type`, `P guard K` explicit) is `∀ s, K s → guard s ∧ ∃ a, …`; the brief's `Closed K := ∀ t, K t → keepStep ok live next K t` unfolds to it.
+
+**Finding (names).** The brief's `loseStep` is `GuardHorizon.lostStep`. `GuardHorizon.loseStep` (l. 226) is the OTHER step, `Enabled P s a → ∃ t, …`, not Module 1's. `keepStep` is also `Viability.keepStep` (`KeepableStep.lean` l. 73, the step of D.3); `Kept` is `GuardHorizon.Kept` (l. 493, an inductive of traces); `Closed` is `GuardHorizon.Closed`. Traps names only `Lost` and `Outside`. Also the brief declares the five relations explicit (`variable … (ok bad …)`), which lengthens every call in A.4's table.
+
+Replacement, added to the second Trap:
+
+> Four working names are taken where Module 2 opens `GuardHorizon`: `loseStep` (`GuardHorizon.lean` l. 226) is there the step with `Enabled P s a → …`, which is NOT Module 1's; Module 1's losing step is `GuardHorizon.lostStep` (l. 294). `keepStep` is `Viability.keepStep` (`KeepableStep.lean` l. 73), `Kept` is `GuardHorizon.Kept` (l. 493), `Closed` is `GuardHorizon.Closed` (l. 125). Choose names that say which, and do not call Module 1's losing step `loseStep`. In Module 1's theorems take `ok bad live dead next` as implicit arguments (as `GuardHorizon` takes `{P guard}`); explicit only in the definitions.
+
+## 2. The ten landed theorems of A.2
+
+Lines of the landed proof term (after `:=`; statement and docstring not counted), and the call on paper:
+
+| Theorem (l.) | Statement | Landed proof | As a call | Lines |
+|---|---|---|---|---|
+| `choice_mono` (141) | `MonotoneStep (choiceStep P guard)` | 1, own term | Module 1.1 | 1 |
+| `viable_persists` (166) | `(within : ∀ x, guard x → x ∈ all) (kept : Viable P guard all.length y) : ∃ a, Enabled P y a ∧ ∀ z, P.step y a z → Viable P guard all.length z` | 2, a call of `iter_persists` through `iter_iff_viable` twice | needs `Kept all.length t → Kept (all.length + 1) t`, NOT in 1.2 as worded | 2 if added; 4 from 1.2's second iff used both ways |
+| `viable_closed` (175) | `Closed P guard (Viable P guard all.length)` | 1, calls `viable_guard`, `viable_persists` | unchanged if it may call the copy of `viable_persists`; else needs `Closed (Kept all.length)`, not in 1.2 | 1 or 2 |
+| `viable_iff_every_horizon` (181) | `Viable P guard all.length s ↔ ∀ n, Viable P guard n s` | 1, calls `closed_viable` (not on A.2's list) and `viable_closed` | 1.2's first iff, bridge on both sides | 2 |
+| `viable_iff_closed` (187) | `Viable P guard all.length s ↔ ∃ K, Closed P guard K ∧ K s` | 2, calls `viable_closed`, `closed_viable` | `(iter_iff_viable _ s).symm.trans` of 1.2's second iff | 1 |
+| `lost_mono` (298) | `MonotoneStep (lostStep P guard)` | 1, own term | 1.1 | 1 |
+| `lost_start` (302) | `¬ guard s → lostStep P guard (fun t => ¬ guard t) s` | 0 (`Or.inl` on the statement's line) | 1.1 | 0 |
+| `lost_commutes` (326) | `(everyMove : ∀ a, a ∈ moves) (G : Prop) : CommutesWithImplication (lostStep P guard) G` | 5, own term (`gather_listed`) | 1.1 | 1 |
+| `lost_shortens` (336) | `(every : ∀ s, s ∈ all) (everyMove) : L (all.length + 1) y → L all.length y` | 1, a call of `iter_shortens` | 1.3 | 1 |
+| `lost_not_viable` (318) | `∀ n s, iter (lostStep P guard) (fun t => ¬ guard t) n s → ¬ Viable P guard n s` | 4, own induction | 1.4 with `(iter_iff_viable n s).mpr`; with finding 4's form, no bridge | 2 |
+
+Landed total 18. As calls about 12 to 14. Nothing needs a premise the landed theorem lacks. The five `viable_*` and `lost_not_viable` are at `S A : Type`, as `iter_iff_viable` is; the other four are at `Type u`, `Type v`.
+
+**Findings.**
+
+- 1.2 lists two iffs only. `viable_persists` and `viable_closed` need the closedness of `Kept all.length` as its own statement (inside the second iff it is hidden under `∃ K`), and 1.4's "a position in a closed set is lost at no horizon" and the landed `closed_viable` need `Closed K → ∀ n t, K t → Kept n t`.
+- The `viable_*` statements are of `Viable`, a recursion, not of the iterate. "By definition" holds of the steps and `Closed`, not of `Viable`; every kept-side call goes through the landed `iter_iff_viable` (l. 147). A.2 does not say it may be called, nor whether a copy may call another copy.
+- Eight of the ten are already calls of `PredicateIteration` or of each other, or one-line terms. "Its own proof gone" can be true of two: `lost_commutes` and `lost_not_viable`. The other eight can at best stay equal.
+- `not_viable_of_loss` (l. 231), the same refutation for `GuardHorizon.loseStep`, is silently left out; that step is not Module 1's.
+
+Replacement for Module 1.2:
+
+> 2. **The kept side's bound**, as calls of the falling law (`iter_persists` or `iter_postfixed`, `postfixed_in_iter`, `iter_iff_all`; no induction on a list of your own), with only the ok positions listed (`within : ∀ t, ok t → t ∈ all`). Four statements, each on its own: `Closed K → ∀ n t, K t → Kept n t` (no list); `Closed (Kept all.length)`; `Kept all.length t ↔ ∀ n, Kept n t`; `Kept all.length t ↔ ∃ K, Closed K ∧ K t`.
+
+Replacement for A.2 and A.4:
+
+> 2. **Each of these landed theorems again, statement copied unchanged** (in a namespace of yours, same names): `choice_mono`, `closed_viable`, `viable_persists`, `viable_closed`, `viable_iff_every_horizon`, `viable_iff_closed`, `lost_mono`, `lost_start`, `lost_commutes`, `lost_shortens`, `lost_not_viable`. A call may be of Module 1, of the landed bridge `GuardHorizon.iter_iff_viable` (l. 147, which stays: `Viable` is a recursion, not the iterate), or of an earlier copy in your namespace. `not_viable_of_loss` (l. 231) is left out: its step `GuardHorizon.loseStep` is not Module 1's.
+> 4. **A table**: for each, the lines of the package's proof term (after `:=`, statement and docstring not counted: 1, 2, 2, 1, 1, 2, 1, 0, 5, 1, 4 in the order above) and the lines of yours, and one of: a call of Module 1; unchanged word for word; a call of the same law as before. Do not cram lines. Expected before you build: `lost_commutes` and `lost_not_viable` lose proofs of their own; the others were already calls and stay equal or within a line.
+
+Replacement for V1's last sentence:
+
+> **This is the test of whether Module 1 is a join or only a restatement**, and it is decided by three things: the two steps and `Closed` by `rfl`; `lost_commutes` and `lost_not_viable` as calls with their proofs gone; no other call longer than the proof it replaces by more than a line. Say in the report that the other eight were already calls.
+
+## 3. Module 1.2, 1.3, 1.4, 1.5
+
+**1.2.** Premises met. `keepStep ok live next X t → ok t` is the `start` of `iter_pred`; `within : ∀ t, ok t → t ∈ all` is the law's `∀ x, V₀ x → x ∈ all`. Only ok positions are needed.
+
+**1.3.** `iter_shortens (mono) (start : ∀ y, W₀ y → Ψ W₀ y) (comm : CommutesWithImplication Ψ (I all.length y)) (within : ∀ x, (W₀ x → I all.length y) → x ∈ all) : I (all.length + 1) y → I all.length y`; `iter_within_length`, same premises, `∀ n, I n y → I all.length y`. For the losing step the list must hold every `x` with `bad x → Lost all.length t`: every position that is not bad, and every bad one where `t` is lost at the length. With nothing decided that is supplied only by every position. **Finding:** the brief asks "exactly the premises it uses" and also "every position listed"; the law's premise is the weaker one. An implementer following the letter has two letters.
+
+Replacement for 1.3:
+
+> 3. **The losing side's bound with nothing decided**, as ONE call each of `iter_shortens` and `iter_within_length`, with every move listed and the law's own list premise `within : ∀ x, (bad x → Lost all.length t) → x ∈ all`: `Lost (all.length + 1) t → Lost all.length t`; `∀ n, Lost n t → Lost all.length t`. The docstring says that with nothing decided this premise is met by a list of every position (`fun x _ => every x`), which is how A.2's `lost_shortens` and B.1 supply it.
+
+And in Traps, for "it asks the bad positions on the list too": "it asks every position that is not bad, and every bad one where the conclusion holds; with nothing decided, every position".
+
+**1.4, one step, on paper.** Given `∀ t, X t → Y t → False`: from `keepStep X t` take `ok t`, `a`, `live t a`, `∀ u, next t a u → X u`; from `loseStep Y t`, `bad t` contradicts `ok t`; else at `a`, `dead t a` contradicts `live t a`, or `u` with `next t a u`, `Y u` contradicts `X u`. No gap. The second exclusion is used only where `ok t` holds.
+
+**Finding 4.** The Opus reader (section 5, `below_never_both`; section 6) gave the form that makes both older refutations calls. Replacement for 1.4:
+
+> 4. **Never both**, for a family below the keeping step. From `∀ t, ok t → bad t → False`, `∀ t a, live t a → dead t a → False`, `zero : ∀ t, stage 0 t → ok t` and `below : ∀ n t, stage (n + 1) t → keepStep ok live next (stage n) t`, and nothing else: `∀ n t, stage n t → Lost n t → False`. Its cases, each one line: `stage := Kept` (so `Kept n t → Lost n t → False`, and a position in a closed set is lost at no horizon); in Module 2, `stage := Viable P guard` with `zero` and `below` the identity (`lost_not_viable`, no bridge), and `stage n c := KeptFor … n (decode c)` with `below` by `KeptFor.mono` through `Names` (B.2(a), no `updates`). The one-step lemma is stated on its own; the induction on the horizon is this theorem's and is three lines.
+
+(Check of the last case: `KeptFor (n + 1) (decode c)` gives `⟨h, a, usable, next⟩`; for `d` with `Names decode d (Seen … a o)`, `KeptFor.mono (fun s => (names s).mp) (next o)` is `KeptFor n (decode d)`. The exclusions are `codeGuard c → Outside c → False` and `Usable → ¬ Usable → False`.)
+
+**1.5, one step, on paper.** Given `∀ u, X u ∨ Y u`. At `t`: `bad t` gives the losing step. With `ok t`, for each listed move: `dead t a` goes to the losing side as it is; with `live t a`, take the list `l`; each listed `u` gives `(next t a u → X u) ∨ (next t a u ∧ Y u)` (from the decision of `next`, then the cover); `each_or_some` over `l`, then over the moves. No gap.
+
+- `live t a ∨ dead t a` at ok positions is enough. `dead` need not be `¬ live`: a dead move is handed to the losing side unchanged, and `live` is used only on the other branch.
+- **The two forms are not two choices.** An exact list (`∀ u, next t a u ↔ u ∈ l`) gives the other form at once (every listed `u` is an outcome, so decided). So the weaker is: a list holding every outcome, `next` decided on it. The exact form needs no decision but cannot be supplied in A.3 without filtering a list by a decision (an induction on a list). A.3 needs the weaker form.
+
+Replacement in 1.5, for "and the outcomes … choose, and say why)":
+
+> and the outcomes of a live move from an ok position: `∀ t, ok t → ∀ a, live t a → ∃ l : List T, (∀ u, next t a u → u ∈ l) ∧ ∀ u, u ∈ l → next t a u ∨ ¬ next t a u`. (An exact list is the case in which every listed position is an outcome; say so in the docstring.)
+
+## 4. Module 1.6
+
+Both corollaries hold. Either-or at `all.length`; the kept branch gives a closed set (1.2), and `Kept n t` for every `n`, which with `Lost n t` is excluded (1.4): so `Lost n t → Lost all.length t`, with no commuting and no bad position listed. `Lost n t ↔ ¬ Kept n t`: left to right is 1.4, right to left is 1.5 at `n`. **Finding:** the second uses no list of positions; "under the same premises" asks one.
+
+Replacement: "… `∀ n, Lost … n t → Lost … all.length t` under the same premises (…), and, from 5's premises and 4's two exclusions alone (no list of positions), `Lost … n t ↔ ¬ Kept … n t` at every horizon."
+
+V2 as worded can be read against this bound. Replacement: "**V2.** Module 1 has an induction on a list of its own, or a bound whose list is not discharged by a call of the law in `PredicateIteration`, directly or through 1.2 (1.6's losing bound comes through 1.2, 1.4 and 1.5 and is not a failure of this)."
+
+## 5. Part B
+
+**The reordered step.** `∃ d, (∃ o, Names … d (Seen … a o)) ∧ Y d` against `∃ o d, Names … ∧ X d`: an iff, not `rfl`. `lost_not_kept` and the either-or go through with the pair re-nested.
+
+**B.2(b): true with no premise.** Relation `H X Y := ∀ c e, Y c → X e → (∀ s, decode c s → decode e s) → False`. Starts: a configuration of `c` outside the guard is in `decode e`, which is guarded. Step: `Outside c` as at the start; `¬ Usable (decode c) a` against `Usable (decode e) a` narrowed to `decode c`; else `d'` naming `Seen (decode c) a o` with `Y d'`, and `readingStep X e` gives `d` with `X d` and `Seen (decode e) a o ⊆ decode d`, and `decode d' = Seen (decode c) a o ⊆ Seen (decode e) a o` by `Seen.mono`: `H X Y` at `d'`, `d`. No gap. (a) from (b) needs `iter_iff_kept`, so `updates`; with finding 4's form (a) is a call without it.
+
+Replacement for B.2's last two sentences: "(a) is a call of Module 1.4 with `stage n c := KeptFor … n (decode c)`; (b) is a call of Module 1.7 with `H X Y := ∀ c e, Y c → X e → (∀ s, decode c s → decode e s) → False`. Say if either is not."
+
+**B.3: the one-step statement is not provable as asked.** With the empty side, in the branch where every listed value is covered, a value on the empty side needs some code in `X` (`coveredBy` asks `∃ d, X d ∧ …`); where no value is listed there is none in hand, and the values cannot be searched.
+
+Model: `S := Empty`, `A := Unit`, `O := PLift p`, `C := Unit`, no steps, `decode := fun _ _ => False`, `sense := fun s _ _ => nomatch s`. Moves `[()]`; `updates` (any code names the empty class); `inOrOut` (guarded, vacuously); `usableOrNot` (usable, vacuously); `someValues` by `[]` with the empty side. `X := fun _ => False`, `Y := fun _ => True`, so `∀ d, X d ∨ Y d`. Then `readingStep … X ()` gives `∀ o : PLift p, False`, that is `¬ p`; the losing step at `()` gives `∃ o : PLift p, …`, that is `p`. The asked statement would give `¬ p ∨ p` for every `p`.
+
+`kept_or_lost` itself stays provable with the empty side, by an induction on classes (`keptFor_empty a n`, the move in hand): that is the premises reader's changed line, and it calls `updates` only at listed values.
+
+The empty side adds nothing where a value is listed: an empty class lies inside every class. Without it, the one-step proof is: for listed `o'`, `updates` gives `d'`, the cover gives `X d'` (then `d'` covers every `Seen o ⊆ Seen o'`) or `Y d'` (the losing reply); `each_or_some` over the values, then the moves. No gap; `updates` is used at listed values only. The bridge `iter_iff_kept` and `coded_kept_iff_closed` still need `updates` at every value, and the latter the guarded codes listed.
+
+Replacement for `someValues` and the sentence before it:
+
+```lean
+(someValues : ∀ c, codeGuard decode guard c → ∀ a, Usable P allowed (decode c) a →
+  ∃ values : List O, ∀ o, ∃ o', o' ∈ values ∧
+    ∀ s, Seen P sense (decode c) a o s → Seen P sense (decode c) a o' s)
+```
+
+> (An empty class seen lies inside every listed value's class, so no empty side is asked. Do not add one: with "or the class seen is empty" the one-step statement `(∀ d, X d ∨ Y d) → ∀ c, readingStep … X c ∨ loseStep … Y c` decides whether `O` has a member. What is given up: a guarded code with a usable move, all of whose classes seen are empty, where no value of `O` can be named.)
+
+And "In short" 4: "… each value's seen class lies inside a listed value's seen class is enough (the premises reader's form also allowed an empty class with no listed value, by `keptFor_empty`; that form serves the induction on classes and not the one-step lemma of B.3)."
+
+**B.3's question.** The kept side on codes is Module 1's `keepStep` only up to `updates` (`KeptFor` below it with no premise, above it with `updates`). The either-or as a call of 1.5 needs, of a list holding every code that names a class seen, `(∃ o, Names decode d (Seen …)) ∨ ¬ …` decided: a premise the landed law lacks, and the list is not the guarded codes. So it stays its own one-step lemma, as the brief foresees.
+
+**B.4.** True with only the guarded codes listed: `kept_or_lost` at `all.length`, `coded_kept_iff_closed within updates`, and (a) with `keptFor_of_closed`. The losing bound at that count: the kept branch gives a closed family, so kept at every `n`, excluded by (a). `Lost n c ↔ ¬ KeptFor … n (decode c)` needs no list of codes.
+
+## 6. Part C
+
+- **Four guarded codes**: `codeGuard decode Drain.above c` holds exactly where both levels are not `l0`; `within` is provable (a code with `l0` has `(true, 0)` or `(false, 0)` in its class). `someValues` by `[()]`.
+- **Level reading.** By `seen_starts` and `seen_single` every class seen at a value from 3 on is empty. So `[0, 1, 2]` meets the replaced `someValues` (a value from 3 on goes to the listed 0). Six of the eight codes are guarded. `updatesLevel` gives `updates` at every value. V5 does not arise. Replacement in C.2: "`someValues` by `[0, 1, 2]` (from 3 on the class seen is empty, so inside the class seen at 0)".
+- **C.3 is true, and of every reading.** The class `fun s => s.2 = 1` is the two lanes at level 1. Kept for 0: `1 ≠ 0`. Not for 1: the move `true` takes `(false, 1)` to `(false, 0)`, the move `false` takes `(true, 1)` to `(true, 0)`, and the class seen at that step's own value holds it. Replacement: "… State it for every reading `sense`, on classes with `KeptFor`, no codes: kept for 0 steps and not for 1."
+
+## 7. Parts D and E
+
+**D.1: true, and it says less than the sweep found.** `Lasts` is already an iterate, of `regionStep (Steps (disturbed f adm)) guard` (`iter_region_iff_lasts`, l. 251). `CommonResponse.regionStep` (l. 167, `Q s ∧ ∀ t, R s t → X t`) is Module 1's keeping step with one move and `live := True`; `reachStep` (`W₀ y ∨ ∃ t, R y t ∧ X t`) is the losing step with `dead := False`. A bridge from `Lasts`'s recursion would write `iter_region_iff_lasts` again. With no admissible disturbance both sides hold (`live := True`; with `Enabled` it would fail).
+
+Replacement for D.1:
+
+> 1. The case with no choice among moves is `CommonResponse.regionStep` (l. 167) against `reachStep`: with one move (`Unit`), `live := fun _ _ => True`, `dead := fun _ _ => False`, `next := fun s _ t => R s t`, the one-step iffs `keepStep … X s ↔ regionStep R Q X s` and `loseStep … Y s ↔ reachStep R (fun s => ¬ Q s) Y s`, and the either-or it then has, with its premises. `Lasting.Lasts` (l. 111) is its case through the landed `iter_region_iff_lasts` (l. 251): do not write that bridge again.
+
+**D.2: true as asked; expect it longer.** Both steps are universal over disturbances, so it is not a case of the game; `h₀` is what the one-step exclusion uses. The landed proofs are 3 and 3 lines; a step for `Reaches`, its monotonicity and its bridge are at least six before either call. Add: "Expected: longer; then say so and keep neither."
+
+**D.3: true.** `keepStep g (fun s m => P.step s m.1 m.2) (fun _ m u => u = m.2) X s ↔ KeepableStep.keepStep P g X s`. Write `live` and `next` with projections, not a pattern on the pair.
+
+**E: all four true as worded**, each by one model at a fixed carrier. `ok := fun _ => p`, `bad := fun _ => ¬ p` on `Unit`, horizon 0. `live := fun _ _ => p`, `dead := fun _ _ => ¬ p`, no outcomes, horizon 1. Moves `Nat`, `live () a := f a = false`, `dead () a := f a = true`, no outcomes: `(∃ a, f a = false) ∨ ∀ a, f a = true`. Positions `Option Nat`, from `none` every `some o` an outcome, `ok (some o) := f o = false`, `bad (some o) := f o = true`: `(∀ o, f o = false) ∨ ∃ o, f o = true`. **Findings:** the pointer is wrong (the models are in the section "Part C premises that a two-valued program cannot test", under "The two lists", which is the last but two); with 1.5's replaced form there is a fifth premise, and it is needed too (`next false () u := u = true ∧ p`, `ok true := False`, `bad true := True`: the either-or at 1 is `¬ p ∨ p`). Replacement: "… (the program reader's two models: `RETURN-program-fable.md`, section 'Part C premises that a two-valued program cannot test', under 'The two lists'); and without the decision of `next` on the list, every proposition would be decided."
+
+## 8. Anything else
+
+**Module 1.7 and V6 (finding 2).** `closed_orbit` gives `K (Law.orbit next s n)` for one law on one type; at the pair of predicates the result is about `Law.orbit` of the pair, and no package theorem takes that to the two `iter`s (`iter_eq_orbit` is of one step). So the call needs a new lemma with an induction of its own and is longer than the three-line statement. The sweep said the statement "already is invariance on a product"; "the package already has that" is one lemma more than it found. As worded, option 1 trips V6 by the brief's own claim, option 2 cannot be shorter, and if V6 removes 1.7 then B.2 and B.3 ("the relation of Module 1.7") cannot be met.
+
+Replacement for 1.7:
+
+> 7. **The relation kept along two iterations.** State it once: for `Φ` on `T`, `Ψ` on `T'`, any `H : (T → Prop) → (T' → Prop) → Prop`, `H V₀ W₀` and `∀ X Y, H X Y → H (Φ X) (Ψ Y)` give `∀ n, H (iter Φ V₀ n) (iter Ψ W₀ n)`. Its docstring says it is `Lasting.closed_orbit` (l. 474) at the law `(X, Y) ↦ (Φ X, Ψ Y)`, stated here because the package has no theorem taking `Law.orbit` of that pair to the two `iter`s; do not import `Lasting` or `Tolerance` for it. 5 is one call of it from its one-step lemma, and so are B.2(b) and B.3. 4 is not (its kept side is a family, not an iterate).
+
+Replacement for V6: "**V6.** With the relation's own lines counted, 5, B.2(b) and B.3 take more lines as its calls than as three inductions of their own (then say so; the relation stays, since B is worded on it, and is told as a lemma that saves nothing)."
+
+Replacement for "In short" 6, second sentence: "The sweep found it to be invariance along an orbit (`Lasting.closed_orbit` l. 474) at a pair of predicates; the package has no theorem that takes that orbit to the two iterates."
+
+**"In short" 1 says more than was found.** "The kept sides are one step too" is true with no reading. The landed kept side through a reading, `readingStep`, is not that step for any `next` (at each value it asks SOME code in `X` holding the class seen; never-both fails for it in one step, as item 6 says). Replacement: "The kept side with no reading is one step too: `ok t ∧ ∃ a, live t a ∧ ∀ u, next t a u → X u` (`GuardHorizon.choiceStep` by definition). Through a reading the landed kept step `Keeping.readingStep` is not of that form; the step of that form on codes has `KeptFor … n (decode c)` below it with no premise and above it under `updates`."
+
+**A.3.** The either-or needs a list holding the outcomes of enabled moves from guarded configurations, and those may be unguarded; the bound's list need hold only the guarded ones. Two lists. `Enabled` decided follows from the steps decided on a list of every configuration (`each_or_some`). Replacement for A.3's first sentence and last clause:
+
+> 3. New: `viable_or_lost : ∀ n s, Viable P guard n s ∨ L n s` from: the moves on a list; `guard s ∨ ¬ guard s`; and for guarded `s`, `Enabled P s a ∨ ¬ Enabled P s a`, and for enabled `a` a list holding every `t` with `P.step s a t`, the step decided on it (a list of every configuration with the steps decided gives both). And `closed_or_lost` with a SECOND list `all` of the guarded configurations only (`within : ∀ x, guard x → x ∈ all`), whose length is the horizon: the outcomes' lists are not shortened to it.
+
+**The header** says "frozen before the implementer ran (hash in `FROZEN-CHOICE.sha256.txt`)"; neither that file nor `tmp/fm/centre22/choice/` exists yet.
+
+Saved at `/Users/ren/theories/tmp/fm/centre22/readers/RETURN-brief-paper-fable.md`.

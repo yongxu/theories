@@ -1,0 +1,123 @@
+# Reader's return: ScratchInTime after its mend
+
+*AI-written (Claude Fable, a reader who took no part), 22 November 2026. Read only. I ran no Lean, lake, build, gate or test. The build log was read, not rerun. Checked by `diff` and file times: the `.txt` is byte for byte the built `/Users/ren/tmp/fm/build12/Becoming/ScratchInTime.lean`, last written 07:17:16, before build 203 began at 07:17:29 (exit 0, 11 theorems, 12 declarations, `"with_axioms": {}`, `"unclean": []`). Line numbers are of the `.txt` unless a file is named.*
+
+## The answers in short
+
+1. Both general statements are right for every process, guard, condition on moves, class and readings into any types. Their docstrings say their statements. Neither was found in the package. They are the definition of `KeptFor` unfolded at one step. The analogous statement fails at horizon 2, by a theorem the package already has.
+2. The four demands: (a) met for the theorem names, (b) met, (c) met except that "into `Type`" is said only in REPORT.md, (d) met.
+3. No docstring says more than its statement except in the universe of the values. All are of at most three sentences.
+4. Every clause of the proposed telling but the last sentence is borne by a theorem. The last sentence is a reading of several theorems side by side, and "at the second move" is wrong for what is proved: the two readings differ at three steps. The telling also leaves out the one fact that makes a difference at all (not kept for three with no reading).
+5. No.
+
+## 1. The general statement
+
+**The proofs.** `KeptFor P sense guard allowed 1 B` unfolds (Keeping.lean ll. 97-99, `Seen` l. 80) to
+
+`(∀ s, B s → guard s) ∧ ∃ a, Usable P allowed B a ∧ ∀ o t, (∃ s, B s ∧ P.step s a t ∧ sense s a t = o) → guard t`.
+
+- Forward (ll. 21-23): `afterMove (sense s a t) t ⟨s, held, step, rfl⟩`. The value is taken to be the one the step gives. Right.
+- Backward (ll. 24-25): `fun _ t ⟨s, held, step, _⟩ => guarded s t held step`. The equation on the value is not used. Right.
+- `keptFor_one_iff_change_reading` (l. 32): the first statement at `sense`, composed with its reverse at `sense'`. Right.
+
+**The edges.** One term covers all of them; there is no case split to get wrong.
+- Universes: `universe u v w z`, `S : Type u`, `A : Type v`, `O : Type w`, `O' : Type z` (ll. 10-13, 30). These are Keeping.lean's own (ll. 68-72, l. 293). Each signature takes only `P sense guard allowed B` (and `sense'`).
+- An empty type of values: a reading into it exists only where `S` or `A` is empty. With `A` empty both sides are false (no move). With `S` empty and a move in hand both sides are true.
+- An empty class: both sides hold exactly where there is a move, which agrees with the premise of `keptFor_empty` (Keeping.lean l. 306).
+- A nonempty class with no step from it: `Usable` asks `Enabled P s a`, which is `∃ t, P.step s a t` (GenerativeCore.lean ll. 27-29), on both sides, so both are false. The last conjunct alone would hold vacuously; the statement keeps `Usable` beside it.
+
+**The docstrings.** The first (ll. 15-17) says the right side exactly: "some move is allowed and enabled throughout it" is `Usable P allowed B a`, and "leads only to configurations satisfying the guard from every configuration in the class" is `∀ s t, B s → P.step s a t → guard t`, of the same move. No more, no less. It names only the reading as arbitrary; process, guard, condition on moves and class are arbitrary too. The second (ll. 27-29) is its statement exactly.
+
+**Already in the package: not found.** What I read:
+- Exactly five files have `import Becoming.Keeping` (`Becoming.lean`, `GuardHorizon`, `JointKeeping`, `ReadingLoop`, `ReflexivePrediction`), as the implementer says. Of the package's live sources only `Keeping.lean` and `JointKeeping.lean` contain `KeptFor`. I read every declaration of `Keeping.lean` and every use in `JointKeeping.lean`.
+- `keptFor_iff_plan` at `n = 1` (Keeping.lean l. 187) does not say it. It holds only for listed values (`Fin k`). Its right side, `∃ p : Plan A (Fin k) 1, p.Keeps P listed guard allowed B`, unfolds by `Plan.Keeps` (ll. 130-132) to `(∀ s, B s → guard s) ∧ Usable P allowed B p.first ∧ ∀ o t, Seen P listed B p.first o t → guard t`. The reading is still there, in `Seen` and in the type of the plan. The `O → Plan A O 0` it carries holds nothing (every value is `stop`), so the plan form at one step is the definition again with `∃ a` written `∃ p`.
+- `ChoicePoint.keptFor_each_not_joint` (JointKeeping.lean ll. 366-375): its third conjunct is a failure at one step for every reading, for one process, and its proof (ll. 373-375) does the same step inline: `after (sense .split true .left) .left ⟨.split, rfl, rfl, rfl⟩`. With `keptFor_one_iff` that conjunct becomes a case of it.
+- `keptFor_of_closed`, `Certificate.keptFor`, `Kernel.keptFor` ("whatever the steps keep") give keeping at every horizon from a closed family, one direction. `KeptFor.finer` gives coarser to finer at every horizon. None is the equivalence, and none gives finer to coarser at one step.
+- Outside the package, in the imported scratch module: `keptFor_none_iff_list` at `n = 1` (KeptForViable l. 240) and `keptFor_end_succ_iff` at `n = 0` (l. 199) are this right side for `noneRead` and for `endRead`, with every move allowed and `S A : Type`, the second under two premises it does not need there.
+
+**Worth having.** It is an unfolding. The only step that is not `Iff.rfl` is that `∀ o, (∃ s, … ∧ sense s a t = o) → Q` is `∀ s, … → Q`. Anyone who writes out `KeptFor` at one step reads it off. It was nonetheless not seen by the first form of this module, and the package's `keptFor_each_not_joint` quantifies over the reading at one step in the same way without saying that the quantifier is idle. What it is worth is a boundary. The package says a reading can matter (`Matching.keeping_matters`, at two steps) and nowhere says that it cannot at one. The two together say that two is the least horizon at which a reading of steps can matter. That pairing is not in this module. It is a lemma to keep, told as an unfolding of the definition, not a result.
+
+**It fails at horizon 2.** `Viability.Matching.keeping_matters` (Keeping.lean ll. 508-511) is the refutation, in the package: the same process, guard and moves keep `starts` for 2 steps under `keepsBit` and not under `keepsNothing`. The imported Drain theorems show a difference only at horizon 3, for `Drain.starts`: `together_kept_two_none` (kept 2, `noneRead`), `together_not_kept_none` (not 3, `noneRead`), `together_kept_level` and `together_kept_end` (every horizon).
+
+On Drain itself there is a class that differs at horizon 2. This is on paper, built nowhere: `mixed := fun s => s = (true, 2) ∨ s = (false, 1)`.
+- It is kept for one step under every reading: the move `false` gives `(true, 1)` and `(false, 1)`.
+- At two steps the first move must be `false`, since `true` puts `(false, 1)` at `(false, 0)`. The class seen after it at the value `o` holds `(true, 1)` where `sense (true, 2) false (true, 1) = o` and `(false, 1)` where `sense (false, 1) false (false, 1) = o`.
+- Under `noneRead`, and under `Drain.keepsLevel` (both values are 1), the class seen is `ones`, which is not kept for one step (`ones_not_kept_one`). So `mixed` is not kept for two.
+- Under `endRead` each class seen lies in one lane above zero, so `mixed` is kept at every horizon (`Drain.lane_kept`).
+
+I did not look for a smaller case and do not claim this one is the smallest.
+
+## 2. The first reader's four demands
+
+- **(a) Met for the theorems.** `one_step_of_slack` is gone; l. 114 is `ones_zero_not_one_twos_two`. `three_cases` is `ones_not_kept_one_twos_kept_level_ones_in_lane_kept` (l. 88). Each name lists its conjuncts and no more. The module and namespace are still `ScratchInTime` (l. 36). No statement in it is about "in time"; the first reader said the module supports no law of that name; the follow-up did not ask for this rename.
+- **(b) Met.** Stated at ll. 18-32. `ones_not_kept_one` rests on it: l. 57, `match (keptFor_one_iff.mp kept).2 with`. I followed it: `guarded (false, 1) (false, 0) (Or.inr rfl) rfl rfl` needs `(false, 0) = next (false, 1) true` (by `rfl`, `1 - 1` reduces) and ends with `rfl : 0 = 0` against `Drain.above`. The other case is symmetric. Right.
+- **(c) Met, with one thing left.** Every docstring that speaks of a quantified or named reading says "reading of steps" (ll. 15, 27-29, 44, 53, 62, 68, 77, 83-87, 97-99, 106, 111). The lane is stated as a part of `ones`: l. 80, `KeptFor Drain.process sense Drain.above everyMove n (fun s => ones s ∧ s.1 = b)`. The statement is right: `Drain.lane_kept sense n b` wants `Lane b C`, that is `∀ x, C x → x.1 = b ∧ x.2 ≠ 0`, and gets `⟨held.2, ones_kept_zero sense s held.1⟩`. Its docstring (ll. 76-77) says the statement and nothing of a reading taken before the first move. Left: the first reader asked that "no reading" be said to mean readings into `Type`. Every Drain theorem binds `{O : Type}`. REPORT.md l. 31 says so; no docstring does.
+- **(d) Met.** L. 63: "This restates `Drain.together_kept_level`." L. 70 names both theorems restated. Ll. 97-99 say `twos_kept_two` is the theorem for the reading into `Unit` carried by `KeptFor.finer`.
+
+## 3. Each docstring against its statement
+
+| Declaration | Lines | Sentences | Against the statement |
+|---|---|---|---|
+| `keptFor_one_iff` | 15-17 | 1 | exact (see 1) |
+| `keptFor_one_iff_change_reading` | 27-29 | 1 | exact |
+| `ones` | 40 | 1 | exact |
+| `ones_kept_zero` | 43-44 | 1 | exact; "every move allowed" and "every reading of steps" are idle at horizon 0, where `KeptFor` mentions neither |
+| `ones_not_kept_one` | 53-54 | 1 | exact but for the universe: "no reading of steps" is `{O : Type}` |
+| `twos_kept_level` | 61-63 | 2 | exact |
+| `twos_kept_two_not_three_none` | 68-70 | 2 | exact |
+| `ones_in_lane_kept` | 76-77 | 1 | exact but for the universe |
+| `ones_not_kept_one_twos_kept_level_ones_in_lane_kept` | 83-87 | 3 | exact but for the universe |
+| `twos_kept_two` | 96-99 | 2 | exact but for the universe |
+| `twos_kept_one` | 105-106 | 1 | exact but for the universe |
+| `ones_zero_not_one_twos_two` | 111-113 | 1 | exact but for the universe |
+
+Two things hold of the docstrings of the nine Drain theorems. None names the process: each says "lanes" and "level" where the statement says `Drain.process`. And where one says "every reading of steps" or "no reading of steps", it says more than `{O : Type}` by the universe only. `ones_not_kept_one` could be stated for every universe now, by `keptFor_one_iff_change_reading`; it is not. Nothing else says more, less or something else.
+
+## 4. The proposed telling, clause by clause
+
+| Clause | Theorem |
+|---|---|
+| "For any process, being kept for one step does not depend on the reading of steps" | `keptFor_one_iff_change_reading` (ll. 30-32) |
+| "it is the guard on the class and one usable move all of whose steps from the class stay within the guard" | `keptFor_one_iff` (ll. 18-20); "stay within" is "end within" |
+| "both lanes together at level 1 are kept for no step beyond the start" | `ones_kept_zero`, `ones_not_kept_one`. That no longer horizon holds needs `KeptFor.shorter` (Keeping.lean l. 285) besides; it is not stated. |
+| "since each move puts one lane at zero" | no statement here; it is inside the proof (ll. 58-59), and is `Drain.next_other` (KeptForViable l. 290) at level 1 |
+| "the part of that class in one lane is kept at every horizon under every reading of steps" | `ones_in_lane_kept` (readings into `Type`) |
+| "both lanes together at level 2 are kept for two steps with no reading" | `ScratchDrainOnTheLaw.together_kept_two_none`, restated at l. 71 |
+| "and at every horizon when the reading gives the level after each move" | `Drain.together_kept_level`, restated at l. 64 |
+| "So on this process a reading of steps first makes a difference at the second move" | **not there** |
+| "and only for a class that survives the first" | **not there** as a statement; follows in two lines from `keptFor_one_iff_change_reading` and `KeptFor.shorter`, which nobody has written |
+
+**The telling leaves out the fact its conclusion needs.** It says level 2 is kept for two steps with no reading and at every horizon with the level reading. It does not say level 2 is *not* kept for three with no reading (`Drain.together_not_kept_none`, restated at l. 73). Without that, nothing in the telling shows a reading making any difference.
+
+**"First makes a difference at the second move" is not right for what is proved.** Three things are being run together:
+- No difference at one step: a theorem, for every process (`keptFor_one_iff_change_reading`).
+- A difference on this process: only between imported theorems, for `Drain.starts`, at three steps. At two steps the class is kept under every reading (`twos_kept_two`), so at the second step nothing differs. REPORT.md l. 46 says the same: "the first horizon at which the two named readings differ is three."
+- That the second move is the first one a value read can change: true of the form of `KeptFor` (one `∃ a` for the class, then `∀ o`, then the next `∃ a`). It is a remark about the definition. No theorem states it.
+
+A difference at two steps exists on Drain on paper (`mixed`, in 1) and in the package on another process (`Matching.keeping_matters`). Neither is in this module or its imports.
+
+**The corrected telling.**
+
+> For any process, guard and condition on moves, whether a class is kept for one step is the same under every reading of steps (`keptFor_one_iff_change_reading`): it is that the guard holds on the class and one move usable from the class has every step it takes from the class end within the guard (`keptFor_one_iff`). This is `KeptFor` unfolded at one step. On the built process Drain, with every move allowed and the guard "level not zero", and for readings of steps into `Type`: both lanes together at level 1 are within the guard and are not kept for one step, since each move puts the lane it does not match at zero (`ones_kept_zero`, `ones_not_kept_one`); the part of that class in one lane is kept at every horizon under every reading of steps (`ones_in_lane_kept`); both lanes together at level 2 are kept for two steps under every reading of steps (`twos_kept_two`), are not kept for three under the reading that keeps nothing (`Drain.together_not_kept_none`), and are kept at every horizon under the reading that gives the level after each move (`Drain.together_kept_level`). So in what is proved on this process the two readings agree at one and two steps and differ at three. As a reading of the definition, and no theorem: the first move is chosen for the whole class before any value is kept, so a value can change only the moves from the second on, and both lanes at level 1 are not kept as far as a second move.
+
+## 5. Is there a new theorem holding a comparison in which the reading makes a difference?
+
+**No.**
+- `keptFor_one_iff` and `keptFor_one_iff_change_reading` say the reading makes no difference.
+- `ones_kept_zero`, `ones_not_kept_one`, `ones_in_lane_kept`, `twos_kept_two`, `twos_kept_one` and `ones_zero_not_one_twos_two` each hold alike for every reading.
+- `ones_not_kept_one_twos_kept_level_ones_in_lane_kept` has two conjuncts for every reading and one positive for `keepsLevel`, with no negative under another reading beside it.
+- The only pair in which a reading makes a difference is `twos_kept_level` with `twos_kept_two_not_three_none` (ll. 64-74). Both are restatements, marked as such, of what `Drain.reading_matters` (KeptForViable ll. 421-426) and `edge_two_codes_nine` (DrainOnTheLaw ll. 203-207) already conjoin.
+
+What would make it yes, and would use this module's own `ones`: the class `mixed` of 1. Not kept for two steps under `noneRead` or `keepsLevel`, because the class seen after the one safe first move is `ones` (`ones_not_kept_one`). Kept at every horizon under `endRead`, because each class seen is a part of `ones` in one lane (`ones_in_lane_kept`, or `Drain.lane_kept`). That would be a difference at two steps, the least horizon `keptFor_one_iff_change_reading` allows, and in it the lane becomes known by a reading of the first step. Checked by hand only.
+
+## Other findings
+
+- **Said more than once.** Of 11 theorems, two restate imported theorems, two only conjoin theorems of this module, and `twos_kept_one` is `KeptFor.shorter` of the one above. `ones_not_kept_one` is stated three times (ll. 55, 89, 116) and `Drain.together_kept_level` three times (imported, ll. 64, 91). The follow-ups asked for each of these; if any of it goes toward the package, the conjunctions and restatements are what to leave behind.
+- **An idle binder remains.** In `ones_not_kept_one` the `∀ sense` adds nothing over one reading, now by a theorem of the same module. The docstring "no reading of steps keeps…" is literally right and still invites "readings were tried"; the telling should lead with the general statement, as the corrected one does.
+- **REPORT.md** is accurate where I checked it: the five importers, the search, the `ChoicePoint` remark, l. 46 on horizon three, the build JSON (identical to `last-build.log.txt` and to `build-203.log`).
+
+## Verdict
+
+**(i) Yes.** `keptFor_one_iff` and `keptFor_one_iff_change_reading` may be told as a general statement of the package's own definition, in these terms: they are `KeptFor` unfolded at one step; they sit in a scratch module, not in the package; no axiom by the log of build 203, read and not rerun. They should not be told as a result about readings or about time.
+
+**(ii) Yes, with the telling as corrected in 4, and not with the telling as proposed.** What changed: "not kept for three under the reading that keeps nothing" is added; the last sentence is replaced by "agree at one and two steps and differ at three"; the remark about the second move is marked as a reading of the definition; "into `Type`" is said. The pointer should not carry the name "in time". The answer to 5 is no, so by the Drain session's own condition the case gives nothing for the direction page as it stands.

@@ -1,0 +1,111 @@
+# Brief: one scratch Lean module, both sides of keeping through a reading
+
+*AI-written (Claude Fable, board row FM), 22 November 2026, frozen before the implementer ran (hash in `FROZEN-TWO-SIDES.sha256.txt`). Scratch only: outside the package, in no git object. You are the implementer. A clean failure, told with what blocked it, is a result.*
+
+## What we are doing
+
+`/Users/ren/theories` draws a map of how anything forms, persists, changes and ends, with its core proved in Lean 4 with **no axioms** (every declaration has an empty axiom report). Read `AGENTS.md` at the repository root (one page).
+
+A read of every module of the package found one thing missing at a definite place: **no module has, in one statement, both outcomes of a course with a choice in it, a reading in it, and a bound on the side where it ends.** Tonight a law entered the package that gives one side. Read these first, whole:
+
+- `Becoming/PredicateIteration.lean` (namespace `Becoming.Iteration`): `iter`, `MonotoneStep`, `iter_persists`, `iter_iff_all`, `iter_largest`, `iter_iff_stages`; and for a rising step, `givesStep`, `CommutesWithImplication`, `iter_succ`, `iter_gives_persists`, `iter_shortens`, `iter_within_length`; the list lemma `gather_listed`.
+- `Becoming/Keeping.lean`: `Seen`, `Usable`, `KeptFor` (ll. 76 to 98), and the section added tonight: `InClosedFamily`, `coveredBy`, `codeGuard`, `readingStep`, `iter_iff_kept`, `coded_kept_iff_closed`.
+- `Becoming/GuardHorizon.lean`, the section on loss: `lostStep`, `lost_mono`, `lost_start`, `lost_commutes`, `lost_shortens`, `lost_not_viable`. **This is the pattern for Part A**: there with no reading, here through one.
+- `Becoming/Undecided.lean` l. 381, `each_or_some`: every member of a list passes one of two tests, so all pass the first or some passes the second.
+
+(The package is `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`.)
+
+`Viability.coded_kept_iff_closed` is the kept side through a reading: for a type of codes `C` with `decode : C → S → Prop`, where a list holds every code whose class lies within the guard and every class seen after a usable move from such a code has a code naming exactly it, the class of a code is kept for as many steps as the list is long exactly where it lies in a closed family, that is, is kept for ever. Your task is the other side, and the two together.
+
+## The module
+
+Write `/Users/ren/tmp/fm/build12/Becoming/ScratchTwoSides.lean`, module `Becoming.ScratchTwoSides`, importing only modules of the package (for Part D also the two scratch modules named there, which are already in that tree: do not edit them).
+
+**Build only with** `/Users/ren/tmp/fm/run-build12.sh <n> <Module> [<Module> …]` (module names without `Becoming.`; usually just `ScratchTwoSides`). Clean means `exit 0`, `"unclean": []`, `"with_axioms": {}`. Run nothing else of Lean: no `lake`, no `check_becoming.py` (never with `--help`: it is a real run), no gate, no tests. Up to about 50 builds; save the module after each clean build as `/Users/ren/tmp/fm/build12/ScratchTwoSides.clean-<n>.lean.txt`. Proofs as terms, in the package's style; a plain docstring on every declaration that says exactly its statement with its premises, never how the proof goes.
+
+Section variables as in `Keeping`'s reading section: `{S A O C}`, `{P : Process S A}`, `{sense : S → A → S → O}`, `{guard : S → Prop}`, `{allowed : S → A → Prop}`, `{decode : C → S → Prop}`.
+
+### Part A. The losing side, said positively, and its bound
+
+A code names what a class comes to after a move and a value kept: write `Names decode d B := ∀ s, decode d s ↔ B s` (or use the form `updates` has). Define, on codes,
+
+```lean
+/-- Some configuration of the code's class is outside the guard. -/
+def Outside (decode : C → S → Prop) (guard : S → Prop) (c : C) : Prop := ∃ s, decode c s ∧ ¬ guard s
+
+/-- The class is outside the guard somewhere, or each move is not usable from it or has a value
+kept after which a code in X names exactly the class seen. -/
+def lostReadingStep … (X : C → Prop) (c : C) : Prop :=
+  Outside decode guard c ∨
+    ∀ a, ¬ Usable P allowed (decode c) a ∨
+      ∃ o d, (∀ s, decode d s ↔ Seen P sense (decode c) a o s) ∧ X d
+```
+
+(choose the exact form that goes through; say what you chose and why). `Lost n c := iter (lostReadingStep …) (Outside decode guard) n c`: whatever move is chosen from what the reading keeps, some value kept leads to a class that is lost one step sooner.
+
+1. It is monotone; the start lies inside its own step; with the moves on a list (`everyMove : ∀ a, a ∈ moves`) it commutes with every proposition (`Iteration.CommutesWithImplication`), by `gather_listed`.
+2. **The bound, as ONE call of `Iteration.iter_shortens` / `iter_within_length`**: with every code listed (`every : ∀ c, c ∈ all`) and the moves listed, `Lost (all.length + 1) c → Lost all.length c`, and from any height `∀ n, Lost n c → Lost all.length c`. No induction on a list of codes of your own.
+3. **It refutes keeping, level for level**: `Lost n c → ¬ KeptFor P sense guard allowed n (decode c)`, for every `n`, with no list (a short induction on `n`; `KeptFor.mono` carries a kept class to a class inside it). Check the levels: a class with a configuration outside the guard is `Lost 0` and fails `KeptFor 0`.
+
+### Part B. Never both
+
+With the premises of `coded_kept_iff_closed` (and `every` for the codes, which gives its `within`): `InClosedFamily P sense guard allowed (decode c) → ∀ n, ¬ Lost n c`. One or two lines from Part A.3 and `keptFor_of_closed`.
+
+### Part C. One or the other, where the game is listed and decided
+
+Premises, each stated plainly as a hypothesis (no type class, nothing hidden):
+- `every : ∀ c, c ∈ all` (codes), `everyMove : ∀ a, a ∈ moves`, `everyValue : ∀ o, o ∈ values` (the values a step can keep, on a list);
+- `updates : ∀ c a, Usable P allowed (decode c) a → ∀ o, ∃ d, ∀ s, decode d s ↔ Seen P sense (decode c) a o s` (ask it only of guarded codes if that goes through);
+- `inOrOut : ∀ c, codeGuard decode guard c ∨ Outside decode guard c` (each coded class is within the guard or has a configuration outside it);
+- `usableOrNot : ∀ c a, Usable P allowed (decode c) a ∨ ¬ Usable P allowed (decode c) a`.
+
+Prove, by induction on `n` with `Undecided.each_or_some` over the values and over the moves:
+
+```lean
+theorem kept_or_lost : ∀ n c, KeptFor P sense guard allowed n (decode c) ∨ Lost n c
+```
+
+and from it, with Parts A and B and `coded_kept_iff_closed`, **the statement this brief is for**:
+
+```lean
+/-- Where the codes, the moves and the values kept are each on a list, every class seen after a
+usable move has a code, and being within the guard and being usable are decided of each coded
+class: the class of a code lies in a closed family, or it is lost within as many steps as there
+are codes; and not both. -/
+theorem closed_or_lost_within :
+    (InClosedFamily P sense guard allowed (decode c) ∨ Lost all.length c) ∧
+    ¬ (InClosedFamily P sense guard allowed (decode c) ∧ Lost all.length c)
+```
+
+Say exactly which premises each half uses. If a premise can be weakened (the list of values asked only where a move is usable; `updates` only of guarded codes), weaken it and say so; if a premise I did not list is needed, say which and why.
+
+### Part D. One built case with a level that falls
+
+`/Users/ren/tmp/fm/build12/Becoming/` holds two scratch modules of another session, unchanged copies: `ScratchKeptForViable.lean` (its `Drain`: configurations `Bool × Nat`, a lane and a level; the move that matches the lane keeps the level, the other lowers it; the guard `Drain.above`, the level is not zero; two starts, `Drain.starts`) and `ScratchDrainOnTheLaw.lean` (codes for it under two readings: `Code` with `decode`, `allNone`, `everyNone`, `updatesNone` for the reading that keeps nothing; `LCode`, `decodeL` and their lists for the reading that keeps the level reached; read it whole). Import them and state, for the two starts together:
+
+1. under the reading that keeps nothing: `Lost` at the list's length (the theorem of Part C needs its decisions for these nine codes: prove `inOrOut`, `usableOrNot` and the list of values for this case; the values are of type `Unit` or whatever that reading's values are), and, by direct computation if short, the least level at which it is lost (the other session found the class kept for 2 steps and not for 3);
+2. under the reading that keeps the level reached: in a closed family (already there as a theorem: name it), so by Part B never lost.
+
+So that one process, with a level that a wrong move lowers, has both outcomes of Part C's statement, and which one holds depends on what the reading keeps. If the level reading's values (all of `Nat`) cannot be listed, Part C's either-or cannot be applied to it: say so; the kept side does not need it.
+
+Only if Parts A to C are clean, and not more than about twelve builds on it.
+
+## What counts as nothing gained (frozen)
+
+- **T1.** The bound of Part A.2 needs an induction on a list of codes of its own, or more than monotone, the start inside its step, commuting and the lists.
+- **T2.** Part A.3 or Part B fails, or holds only with the levels shifted (then say by how much and which side is wrong).
+- **T3.** Part C needs a premise that hands in the outcome (for example that `KeptFor` or `Lost` is decided), or a classical principle, or any axiom.
+- **T4.** `closed_or_lost_within` is only `kept_or_lost` at one `n` with names changed: that is, neither half uses the bound. (The first half must use `coded_kept_iff_closed` to get from kept-for-the-list's-length to a closed family; say where each bound is used.)
+- **T5.** Any declaration with an axiom.
+- **T6.** Part D does not come out, or comes out only for a trivial reading.
+
+## Traps
+
+- `nomatch` on an equation between numbers brought `propext` on 22 November; use `Nat.noConfusion` or a lemma of `Prelude`. `simp`, `omega`, `decide` on propositions with free variables often bring axioms.
+- `Keeping`'s names are in `namespace Viability`; `PredicateIteration`'s in `namespace Iteration`; `GuardHorizon`'s loss section is the nearest worked pattern.
+- An empty class: `Seen … a o` may hold of nothing; `KeptFor (n + 1)` of an empty class still asks for some move (usable vacuously). Check your `Lost` against it: an empty class has no configuration outside the guard.
+- Write only under `/Users/ren/tmp/fm/build12/` and `/Users/ren/theories/tmp/fm/centre22/two-sides/` (your report). Change nothing in the repository or in git. Start no further agents.
+
+## What to return
+
+Your whole report as your final answer, also saved as `/Users/ren/theories/tmp/fm/centre22/two-sides/REPORT.md`: (1) in six lines: what built clean, what did not, T1 to T6; (2) every definition and theorem as it stands, with its premises, and what each proof calls; for `closed_or_lost_within`, which premise each half uses; (3) what you chose for `lostReadingStep` and why; any premise weakened or added; (4) Part D: the statements, or what blocked it; (5) the last build's log (its JSON), the number of builds, what you did not do.

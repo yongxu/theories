@@ -1,0 +1,35 @@
+# A read-only sweep: pairs of a falling and a rising step in the Lean package
+
+*AI-written brief (Claude Fable, board row FM), 22 November 2026. You are a reader. Read only: edit nothing in the repository, run no Lean, no lake, no gate, no tests, no check_becoming.py; start no agents. Your whole report is your final answer; also save it as /Users/ren/theories/tmp/fm/centre22/readers/sweep/REPORT.md (the only file you write).*
+
+## What we are doing
+
+/Users/ren/theories draws a map of how anything forms, persists, changes and ends, with its core proved in Lean 4 with no axioms. Read AGENTS.md at the repository root (one page). The package is `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/` (409 modules). A listing of what each module holds is in `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/places-2026-11-21/PLACES.md` (one page a module); use it to find candidates, then open the Lean itself: the listing is unchecked.
+
+Last night a law landed: `Becoming/PredicateIteration.lean` (namespace `Becoming.Iteration`). Read it whole. `iter Φ V₀ n` iterates a step on predicates; for a monotone step that takes its start inside itself (a FALLING side: what is still held after n steps) the iterate at a list's length is the iterate at every length (`iter_iff_all`, `iter_persists`); for a monotone step whose start lies inside its own step and that commutes with implication (a RISING side: what has been given up within n steps) the iterate one above the list's length comes down to the length (`iter_shortens`, `iter_within_length`). Older results came out as cases (CommonResponse, Viability, Lasting, Parting, GuardHorizon, Keeping, Likeness, Attraction, GrammarCandidates, KeepableStep, ReachableRanges, Tolerance).
+
+A scratch module, not in the repository, now pairs the two sides for one kind of course: `/Users/ren/theories/tmp/fm/centre22/two-sides/ScratchTwoSides.lean.txt` (read it whole; its report is beside it). It defines `Lost` on codes as a rising iterate, proves `Lost n c → ¬ KeptFor n (decode c)` (never both, no premise), and, where the game is listed and two things are decided, `kept_or_lost : ∀ n c, KeptFor … n (decode c) ∨ Lost … n c` and `closed_or_lost_within`.
+
+Reading its proof, I think the either-or uses nothing of readings: `iter Φ V₀ (n+1)` is `Φ (iter Φ V₀ n)` by definition, so for ANY pair of steps Φ (falling) and Ψ (rising) on one type with
+- `start : ∀ c, V₀ c ∨ W₀ c`, and
+- `pair : ∀ X Y, (∀ d, X d ∨ Y d) → ∀ c, Φ X c ∨ Ψ Y c`
+one gets `∀ n c, iter Φ V₀ n c ∨ iter Ψ W₀ n c` by a three-line induction; likewise never-both from `∀ X Y, (∀ d, ¬ (X d ∧ Y d)) → ∀ c, ¬ (Φ X c ∧ Ψ Y c)`; and with a list, "held at every stage, or given up within the list's length, never both". That is a design, not built.
+
+## Your task
+
+Sweep the whole package for PAIRS: a notion that falls with the number of steps (kept, viable, held, lasting, continuing, alike, within a region, in a kernel …) and a notion that rises (lost, reached, told apart, drawn, escaped, parted, broken …) about the same course. For each pair you find, open the Lean and report:
+
+1. The two notions with module, line and exact statement of their definitions (or the step of which each is an iterate, if it already is one: e.g. `GuardHorizon.choiceStep` and `lostStep`; `Keeping.readingStep`; `Likeness.alikeStep`; `CommonResponse.regionStep` and `reachStep`; `Parting.courseStep`; `Attraction`'s `predStep`).
+2. What the package ALREADY proves between the two: never both (name, line, premises)? one or the other (name, line, premises: what is listed, what is decided)? a bound on each side? If a statement of either-or exists anywhere in the package, quote it exactly with its premises: I believe `GuardHorizon` has only `lost_not_viable`, and I want to be told if I am wrong anywhere.
+3. Whether the design above would make it a case: write the one-step `pair` premise as it would read for THAT pair, and say what would have to be listed and decided for it to hold. Say plainly where the pair is NOT of this shape (for example the two notions live on different types, one on classes and one on codes; or the rising notion is not the complement of the falling one even classically; or the step is not monotone).
+4. Whether the rising notion is missing altogether (a falling side with only a negation as its other side), and what its positive wording would be.
+
+Then, separately:
+
+5. Is the design's general statement already in the package under another name (search for theorems whose conclusion is a disjunction of two iterates or of two notions indexed by a horizon)? Name anything close.
+6. Is there anything in the design that fails: a pair for which `pair` holds one step at a time but the either-or at every horizon is false, or for which the general theorem would be vacuous because `pair` already is the outcome? Give the smallest counter-case you can construct, or say you found none and where you looked.
+7. Rank the pairs: which would be real joins (an older proved either-or or never-both becoming a call of the general statement), which would be new statements the package lacks, which are forced fits.
+
+## How to report
+
+Findings with evidence: module, line, quoted Lean. Say what you read and what you did not open. Where you say something is absent, say it as "not found in what was read" and list what was read. Count modules opened. Do not soften a finding and do not praise.

@@ -1,0 +1,24 @@
+start 06:17:55
+{
+  "tree": "/Users/ren/tmp/fm/build12",
+  "modules": 48,
+  "ran": [
+    "Becoming.ScratchTwoSides",
+    "BecomingScratchTwoSidesAxiomAudit"
+  ],
+  "reused": 47,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchTwoSides": {
+      "theorems": 16,
+      "declarations": 20,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchTwoSides": 2.357,
+    "BecomingScratchTwoSidesAxiomAudit": 0.294
+  }
+}
+exit 0 build 5
+end 06:18:01

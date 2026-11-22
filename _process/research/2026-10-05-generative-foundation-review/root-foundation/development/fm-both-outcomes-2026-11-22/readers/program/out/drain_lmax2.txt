@@ -1,0 +1,43 @@
+levels 0..2, 6 configurations
+
+-- noneRead: nine codes; updates (guarded, usable): True ; updates (every code, move): True
+   every code guarded or with a configuration outside: True ; guarded codes: [(1, 1), (1, 2), (2, 1), (2, 2)]
+   every move usable from every coded class: True
+   Lost n (l2,l2), n = 0..10: [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1]
+   KeptFor n starts, n = 0..10: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+   least losing level of each code: {(0, 0): 0, (0, 1): 0, (0, 2): 0, (1, 0): 0, (1, 1): 1, (1, 2): 2, (2, 0): 0, (2, 1): 2, (2, 2): 3}
+   Lost 9 (l2,l2): True ; starts in a closed family: False
+   no code is both lost and kept at a level 0..10: True ; every code is one or the other at each level 0..10: True
+   over the 8 lists of three moves, the lower of the two levels reached: [0, 0, 0, 0, 0, 0, 0, 0]
+   over the 4 lists of two moves: [((False, False), 0), ((False, True), 1), ((True, False), 1), ((True, True), 0)]
+
+-- keepsLevel: eight codes, values 0..4; updates (guarded, usable): True; updates (every code, move): True
+   Lost n both, n = 0..12: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+   KeptFor n starts, n = 0..12: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+   starts in a closed family: True
+   least losing level of each code (None = not lost at 0..12): {'both': None, 'empty': None, "('single', True, 0)": 0, "('single', True, 1)": None, "('single', True, 2)": None, "('single', False, 0)": 0, "('single', False, 1)": None, "('single', False, 2)": None}
+   every code one or the other at each level 0..12: True ; never both: True
+   distinct classes seen per (code, move), over the values 0..49:
+     both                   move False: 3 classes: [] at the other 48 values; [(True, 1)] at [1]; [(False, 2)] at [2]
+     both                   move True : 3 classes: [] at the other 48 values; [(False, 1)] at [1]; [(True, 2)] at [2]
+     empty                  move False: 1 classes: [] at the other 50 values
+     empty                  move True : 1 classes: [] at the other 50 values
+     ('single', True, 0)    move False: 2 classes: [(True, 0)] at [0]; [] at the other 49 values
+     ('single', True, 0)    move True : 2 classes: [(True, 0)] at [0]; [] at the other 49 values
+     ('single', True, 1)    move False: 2 classes: [(True, 0)] at [0]; [] at the other 49 values
+     ('single', True, 1)    move True : 2 classes: [] at the other 49 values; [(True, 1)] at [1]
+     ('single', True, 2)    move False: 2 classes: [] at the other 49 values; [(True, 1)] at [1]
+     ('single', True, 2)    move True : 2 classes: [] at the other 49 values; [(True, 2)] at [2]
+     ('single', False, 0)   move False: 2 classes: [(False, 0)] at [0]; [] at the other 49 values
+     ('single', False, 0)   move True : 2 classes: [(False, 0)] at [0]; [] at the other 49 values
+     ('single', False, 1)   move False: 2 classes: [] at the other 49 values; [(False, 1)] at [1]
+     ('single', False, 1)   move True : 2 classes: [(False, 0)] at [0]; [] at the other 49 values
+     ('single', False, 2)   move False: 2 classes: [] at the other 49 values; [(False, 2)] at [2]
+     ('single', False, 2)   move True : 2 classes: [] at the other 49 values; [(False, 1)] at [1]
+   most distinct classes seen at one (code, move): 3
+   the list [0, 1, 2] gives, at every (code, move), every class seen at a value 0..49: True
+   the list [1, 2, 3] gives, at every (code, move), every class seen at a value 0..49: False
+   the list [0, 1, 2, 3] gives, at every (code, move), every class seen at a value 0..49: True
+   with only the values [0, 1, 2]: kept and lost levels of the eight codes at n = 0..12 the same as with all values: True []
+   with only the values [1, 2, 3]: kept and lost levels of the eight codes at n = 0..12 the same as with all values: True []
+   with only the values [1, 2]: kept and lost levels of the eight codes at n = 0..12 the same as with all values: True []

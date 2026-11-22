@@ -1,0 +1,193 @@
+# Reader: calls (Opus), on ScratchTwoSides
+
+*AI-written (Claude Opus, reader for board row FM), 22 November 2026. Read only. No Lean was run, so every term below that is not quoted from a file is written by hand and has not been checked by Lean.*
+
+**What was read, whole:** `tmp/fm/centre22/two-sides/ScratchTwoSides.lean.txt` (217 lines); `Becoming/PredicateIteration.lean` (276 lines); `Becoming/Keeping.lean` ll. 70-99 (`Seen`, `Usable`, `KeptFor`) and ll. 270-391 (`Seen.mono`, `KeptFor.mono`, `KeptFor.shorter`, `KeptFor.finer`, `keptFor_empty`, `keptFor_of_closed`, the `Readings` section through `coded_kept_iff_closed`); `Becoming/GuardHorizon.lean` ll. 80-128 (`Viable`) and ll. 150-195, and the whole `Loss` section ll. 218-386; `Becoming/Undecided.lean` ll. 360-400 (`each_or_some`, `kept_from`); the brief and the implementer's REPORT.md.
+**Read in part:** `ScratchDrainOnTheLaw.lean` ll. 58-70 and 141-200, and its list of declarations; `ScratchKeptForViable.lean` ll. 326-356, and its list of declarations; `Junctures.lean` ll. 215-275.
+**Grep of the package** for theorem names matching `*_or_lost`, `viable_or*`, `kept_or*`, `iter_or*`, `not_both`, `never_both`, `dual*`, and for `Viable P guard n s ∨` and `∨ iter (lostStep`. It found no either-or of keeping and loss and no general never-both of two iterates. Its hits `Dependence.kept_or_broken`, `TurningInTime.kept_or_marked` and `Identity.not_both` were not opened.
+
+## 1. Each theorem: a call, or an induction of its own
+
+| l. | Theorem | What its proof is | Already in the package under another name? |
+|---|---|---|---|
+| 43 | `lostReading_mono` | Its own term, no call: `fun sub _ h => h.imp id fun each a => (each a).imp id fun ⟨o, d, names, lost⟩ => ⟨o, d, names, sub d lost⟩` | **It is GuardHorizon `lost_mono` written again** (l. 299: `fun sub _ h => h.imp id fun each a => (each a).imp id fun ⟨t, st, lost⟩ => ⟨t, st, sub t lost⟩`), with `⟨o, d, names⟩` in place of `⟨t, st⟩`. It cannot be a call as the definitions stand (see §6). |
+| 48 | `lostReading_start` | `Or.inl` | The same term as GuardHorizon `lost_start` (l. 302). |
+| 52 | `lostReading_commutes` | Its own term. It calls `gather_listed` (PredicateIteration l. 60) with `D := fun a => ¬ Usable … ∨ ∃ o d, Names … ∧ W d`, list `moves`. | **It is GuardHorizon `lost_commutes` (ll. 328-332) written again** line for line: the same `h.elim (fun … => finish (.inl …)) fun each => gather_listed (D := …) moves (fun a _ give => (each a).elim (fun … => give (.inl …)) fun ⟨…, k⟩ => k fun w => give (.inr ⟨…, w⟩)) (fun … => finish (.inr fun a => … (everyMove a)))`. Only the names and `D` differ. |
+| 63 | `lostReading_shortens` | A call: `iter_shortens lostReading_mono lostReading_start (lostReading_commutes everyMove _) (fun d _ => every d)`. | It has the same shape as GuardHorizon `lost_shortens` (l. 338: `iter_shortens lost_mono lost_start (lost_commutes everyMove _) (fun z _ => every z)`). Being a call, it is not a duplicate proof. |
+| 69 | `lostReading_within_length` | A call: `iter_within_length` with the same four arguments. | — **Not used anywhere in the module** (grep: l. 69 only). |
+| 75 | `lost_not_kept` | **Its own induction on `n`** (three equations, ll. 76-80). It calls `KeptFor.mono (fun s => (names s).mp)` at the successor and recurses at `lost_not_kept n d`. | **It is GuardHorizon `lost_not_viable` (ll. 318-323) written again** (also `not_viable_of_loss`, ll. 229-234), with `KeptFor.mono` through `Names` in place of `keeps t st`. The cases are the same: at zero, the start contradicts the guard. At a successor, the `Outside`/`¬ guard` disjunct contradicts the guard. Otherwise the kept side's move `a` is taken and the reply at `a` is split: not usable/enabled contradicts usable/enabled, or a successor is lost one step sooner and the induction applies. The package has no general never-both of two steps (not found in what was read). See §5. |
+| 83 | `closed_never_lost` | A call: `lost_not_kept n c lost (keptFor_of_closed F within closed n held)`. | — |
+| 105 | `kept_or_lost` | **Its own induction on `n`**, with two calls of `Undecided.each_or_some` (over the values, l. 125; over the moves, l. 128) and `KeptFor.mono (fun s => (names s).mpr)` (l. 124). | No either-or of keeping and loss was found in what was read. GuardHorizon has none for `Viable`/`lostStep`. Its successor case is a one-step statement that mentions no `n`, and the induction itself is a general two-iterate either-or that is not in `PredicateIteration`. See §4. |
+| 137 | `closed_or_lost_within` | A call: `kept_or_lost` at `all.length + 1`; `KeptFor.shorter`; `coded_kept_iff_closed (fun d _ => every d) updates`, `.mp`; `lostReading_shortens every everyMove`; `closed_never_lost`. | See §2: the call of `lostReading_shortens` can be removed. |
+| 156 | `moves_listed` | Its own case analysis on `Bool`. | The same statement exists in the package: `EventualWideningInstances.listed : ∀ f : Bool, f ∈ [false, true]` (ll. 432 and 700, in two namespaces). |
+| 161 | `unit_listed` | Its own case analysis on `Unit`. | The same statement exists: `KeepingWidening` l. 1967, `theorem every : ∀ c : Unit, c ∈ [()]`. |
+| 165 | `none_in_or_out` | Its own case analysis on `Lv`, ×2 levels. It calls `succ_not_zero` and `code_within`. | Not found in what was read. |
+| 176 | `none_usable_or_not` | A call: `.inl (usable_all (decode c) a)`. | — |
+| 182 | `starts_lost_within_none` | A call: `closed_or_lost_within …` then `.1.elim` with `starts_in_no_closed_family_none_direct`. | It is weaker than the first conjunct of the next theorem: `N 3` gives `N 9` by `Iteration.iter_succ lostReading_mono lostReading_start`, six times. |
+| 190 | `starts_first_lost_none` | **Its own computation.** A local `step` (ll. 191-194) builds `N (n+1) c` from replies by unfolding `lostReadingStep`. `three` (ll. 195-201) walks three moves with `Drain.losing`, `Drain.start_of`, `decode_next`. `least` is a case analysis on `n` calling `lost_not_kept` and `together_kept_two_none`. | **`three` repeats the content of `ScratchKeptForViable.Drain.together_not_kept_none`** (l. 347), which uses the same `losing`/`start_of` walk. It could be a call of `kept_or_lost` (§7). `least` is a call pattern. |
+| 211 | `starts_closed_never_lost_level` | A call: `starts_in_closed_family_level` and `closed_never_lost`. | — |
+
+In summary, seven of sixteen theorems are their own proofs. Of these, `lostReading_mono`, `lostReading_commutes` and `lost_not_kept` are GuardHorizon's loss-section proofs written again with codes in place of configurations. `kept_or_lost` is new as an outcome, but its induction is generic (§4). `moves_listed` and `unit_listed` duplicate filed theorems. `three` inside `starts_first_lost_none` repeats a filed computation.
+
+## 2. `closed_or_lost_within`: where each bound is used, and the split at `all.length`
+
+The proof (ll. 140-143):
+
+```lean
+⟨(kept_or_lost everyMove everyValue updates inOrOut usableOrNot (all.length + 1) c).imp
+   (fun kept => (coded_kept_iff_closed (fun d _ => every d) updates).mp (KeptFor.shorter kept))
+   (lostReading_shortens every everyMove),
+ fun ⟨closed, lost⟩ => closed_never_lost closed all.length lost⟩
+```
+
+- **The kept bound** (`coded_kept_iff_closed`, `.mp`) is used once, in the left branch of the first conjunct (l. 141), after `KeptFor.shorter` brings `all.length + 1` down to `all.length`.
+- **The losing bound** (`lostReading_shortens`) is used once, in the right branch of the first conjunct (l. 142), to bring `L (all.length + 1) c` down to `L all.length c`.
+- The second conjunct uses neither bound. It uses `closed_never_lost`, that is, `keptFor_of_closed` and `lost_not_kept`.
+
+**The split at `all.length` proves the same statement.** By hand, unchecked:
+
+```lean
+⟨(kept_or_lost everyMove everyValue updates inOrOut usableOrNot all.length c).imp
+   (coded_kept_iff_closed (fun d _ => every d) updates).mp id,
+ fun ⟨closed, lost⟩ => closed_never_lost closed all.length lost⟩
+```
+
+The types match: `kept_or_lost … all.length c : KeptFor … all.length (decode c) ∨ L all.length c`, the left branch is exactly the left side of `coded_kept_iff_closed`, and the right is the goal's right disjunct. The implementer's own REPORT says the same: "Starting the split at the length itself would also prove the alternatives using the keeping bound alone."
+
+- **No premise of the theorem falls away.** `every` is still needed as `within` for `coded_kept_iff_closed`. `updates` is still needed there and by `kept_or_lost`. `everyMove`, `everyValue`, `inOrOut` and `usableOrNot` are still needed by `kept_or_lost`.
+- **What falls away:** the calls of `KeptFor.shorter` and of `lostReading_shortens`.
+- **So `lostReading_shortens` is used nowhere that the final statement needs.** Its one use (l. 142) is on a detour of one step up and one step down. `lostReading_within_length` is used nowhere in the module.
+
+T4 as frozen ("neither half uses the bound"; "the first half must use `coded_kept_iff_closed`") is passed by the letter, since the kept bound is used. But the REPORT's line "the losing branch uses `lostReading_shortens`" is true only of a removable step. The losing side's bound (Part A.2) contributes nothing to `closed_or_lost_within`.
+
+## 3. Does each bound follow from the other with the either-or?
+
+Below, `len := all.length`, `KC := coded_kept_iff_closed (fun d _ => every d) updates`, and `KL := kept_or_lost everyMove everyValue updates inOrOut usableOrNot`. Both derivations are by hand and unchecked.
+
+**(a) The losing bound from the kept bound.** Under the theorem's premises, `∀ n, L n c → L len c` follows from `kept_or_lost`, `coded_kept_iff_closed` and `closed_never_lost`, with no use of `lostReading_*`:
+
+```lean
+fun n lost => (KL len c).elim
+  (fun kept => False.elim (closed_never_lost (KC.mp kept) n lost)) id
+```
+
+It needs the kept bound, since `closed_never_lost` at an arbitrary `n` goes through `keptFor_of_closed`. From `kept_or_lost` and `lost_not_kept` alone it is blocked: they give `KeptFor len ∨ L len`, and `lost_not_kept` excludes `KeptFor n` only at the same `n`. Without a bound, `KeptFor len` does not give `KeptFor n` for `n > len`. With `n ≤ len`, `lost_not_kept` and `KeptFor.shorter` (repeatedly) would suffice, but the bound is for every `n`.
+
+So, under Part C's premises, `lostReading_within_length` is a corollary of the kept side. Standing alone, it holds under fewer premises: only `every` and `everyMove`, with no `updates`, no decisions and no values list. That is what it has over (a).
+
+**(b) The kept bound from the losing bound.** The direction `.mp` of `coded_kept_iff_closed`, `KeptFor len (decode c) → InClosedFamily … (decode c)`, follows from `lostReading_within_length`, `kept_or_lost`, `lost_not_kept` and `updates`. Take the family of classes covered by a code that is never lost:
+
+```lean
+-- F B := ∃ d, (∀ n, ¬ L n d) ∧ ∀ s, B s → decode d s
+have never (d) (k : KeptFor … len (decode d)) : ∀ n, ¬ L n d :=
+  fun n lost => lost_not_kept len d (lostReading_within_length every everyMove n lost) k
+fun kept => ⟨F, ⟨c, never c kept, fun _ b => b⟩,
+  -- guard: kept_or_lost 0 d is inOrOut d; Outside d is L 0 d, excluded
+  fun B ⟨d, nl, sub⟩ s b => ((KL 0 d).resolve_right (nl 0)) s (sub s b),
+  -- closed: kept_or_lost (len+1) d, the lost side excluded
+  fun B ⟨d, nl, sub⟩ => match (KL (len + 1) d) with
+    | .inr lost => absurd lost (nl _)
+    | .inl ⟨safe, a, usable, next⟩ => ⟨a, fun s b => usable s (sub s b), fun o =>
+        match updates d safe a usable o with
+        | ⟨e, names⟩ => ⟨e, never e (KeptFor.mono (fun s => (names s).mpr) (next o)),
+            fun t seen => (names t).mpr (Seen.mono sub seen)⟩⟩⟩
+```
+
+(`resolve_right` is written for brevity. The constructive form is `.elim id (fun o => absurd o (nl 0))`, since `L 0 d` is `Outside … d` by `iter`'s first equation.) This uses `every` only through the losing bound, not as `within` for `iter_postfixed`. **So each bound follows from the other under Part C's premises.** `closed_or_lost_within` needs exactly one of them, and the module proves both.
+
+Both bounds reduce to the same induction on a list, `Iteration.extend_at_places`. The kept bound reaches it by `iter_postfixed` → `iter_persists`. The losing bound reaches it by `iter_shortens` → `iter_gives_persists` → `iter_persists (gives_mono …)`.
+
+## 4. `kept_or_lost`: its successor case is one step with no `n`
+
+In the successor case (ll. 107-130), `n` enters only through `L n d` (ll. 112, 120) and `KeptFor … n (seen a o)` (ll. 114, 119). It enters through the induction hypothesis in just one place, `(kept_or_lost n d)` at l. 123, applied to the code `d` that `updates` gives. Everything else does not depend on `n`: `inOrOut c`, `usableOrNot`, `everyValue`, `updates`, the two `each_or_some`, and `KeptFor.mono`. So the case is the following one-step statement, with `Φ := readingStep P sense guard allowed decode` (Keeping l. 355) and `Ψ := lostReadingStep …`:
+
+```lean
+theorem reading_or_lost_step (everyMove) (everyValue) (updates) (inOrOut) (usableOrNot) :
+    ∀ (X Y : C → Prop), (∀ d, X d ∨ Y d) → ∀ c, Φ X c ∨ Ψ Y c
+```
+
+Its proof is ll. 107-130 with `kept_or_lost n d` replaced by `split d`. At each value, `X d` gives `⟨d, X d, fun s => (names s).mpr⟩ : coveredBy decode X (seen a o)`, and `Y d` gives `⟨d, names, Y d⟩`. The good side becomes `Usable ∧ ∀ o, coveredBy decode X (seen a o)`, and the final `.inl ⟨safe, a, usable, next⟩` is `Φ X c` by definition. The zero case `inOrOut` is the either-or of the two starts, because `iter Φ codeGuard 0 = codeGuard` and `iter Ψ Outside 0 = Outside`.
+
+The general theorem is not found in what was read (`PredicateIteration` whole has no statement about two iterates). It needs no monotonicity:
+
+```lean
+theorem iter_either {Φ Ψ : (T → Prop) → T → Prop} {V₀ W₀ : T → Prop}
+    (zero : ∀ t, V₀ t ∨ W₀ t) (step : ∀ X Y, (∀ t, X t ∨ Y t) → ∀ t, Φ X t ∨ Ψ Y t) :
+    ∀ n t, iter Φ V₀ n t ∨ iter Ψ W₀ n t
+  | 0 => zero
+  | n + 1 => step _ _ (iter_either zero step n)
+```
+
+Then, by hand:
+
+```lean
+kept_or_lost n c = (iter_either inOrOut (reading_or_lost_step …) n c).imp (iter_iff_kept updates n c).mp id
+```
+
+**The bridge is `Viability.iter_iff_kept` (Keeping l. 369), `.mp`.** It turns `iter Φ (codeGuard decode guard) n c` into `KeptFor … n (decode c)`. `KeptFor` is defined by recursion on classes `S → Prop` (Keeping ll. 95-99), and `Lost` is an iterate on codes. `iter_iff_kept` is what puts the kept side on codes. Its cost is the premise `updates : ∀ c, (∀ s, decode c s → guard s) → ∀ a, Usable … (decode c) a → ∀ o, ∃ d, ∀ s, decode d s ↔ Seen … s`. That is the module's `updates` with `Names` and `codeGuard` unfolded (both are a `def`/`abbrev` of exactly that form), so the bridge adds no premise to `kept_or_lost`, which already has it. The `.mp` direction needs no `updates` mathematically: its half of the proof, Keeping ll. 371-372, is `KeptFor.mono sub hd` alone. But `iter_iff_kept` as stated takes `updates` for both directions together.
+
+The content of `kept_or_lost` is therefore `reading_or_lost_step`: the two `each_or_some` and the decisions. Its induction on `n` is generic.
+
+## 5. `lost_not_kept`: could it be a general never-both?
+
+It is GuardHorizon `lost_not_viable` written again (§1). A general never-both in the iterate form
+
+```lean
+theorem iter_never_both (zero : ∀ t, V₀ t → W₀ t → False)
+    (step : ∀ X Y, (∀ t, X t → Y t → False) → ∀ t, Φ X t → Ψ Y t → False) :
+    ∀ n t, iter Φ V₀ n t → iter Ψ W₀ n t → False
+```
+
+**does not apply with `Φ = readingStep` as defined.** Its `step` premise is false there. `readingStep X c` gives, at each value, a covering code `e` with `X e` and `Seen ⊆ decode e`. The reply in `Ψ Y c` gives a possibly different code `d` with `Names d Seen` and `Y d`. If `X` and `Y` are disjoint and `d ≠ e` name the same class, both can hold. It would need `X` closed under narrower codes, which is true of `iter Φ codeGuard n` only through `iter_iff_kept` + `KeptFor.mono`, and so costs `updates`. `lost_not_kept` as stated has no `updates`.
+
+Without that cost, the never-both is stated over a family below a step:
+
+```lean
+theorem below_never_both {stage : Nat → T → Prop}
+    (zero : ∀ t, stage 0 t → W₀ t → False)
+    (below : ∀ n t, stage (n + 1) t → Φ' (stage n) t)
+    (step : ∀ X Y, (∀ t, X t → Y t → False) → ∀ t, Φ' X t → Ψ Y t → False) :
+    ∀ n t, stage n t → iter Ψ W₀ n t → False
+```
+
+To get `lost_not_kept`, take `stage n d := KeptFor … n (decode d)` and `Φ' X c := codeGuard decode guard c ∧ ∃ a, Usable … (decode c) a ∧ ∀ o d, Names decode d (Seen … (decode c) a o) → X d`. Then `below` is `KeptFor.mono (fun s => (names s).mp)`, as at l. 80, with no `updates`. `step` is the three-way contradiction of ll. 77-79. `zero` is l. 76. Not found in what was read.
+
+## 6. GuardHorizon's loss section: written again, and one statement for both
+
+The scratch module writes GuardHorizon's loss section again with codes in place of configurations:
+
+| GuardHorizon (configurations) | ScratchTwoSides (codes) | How |
+|---|---|---|
+| `lostStep` (l. 294): `¬ guard s ∨ ∀ a, ¬ Enabled P s a ∨ ∃ t, P.step s a t ∧ X t` | `lostReadingStep` (l. 28): `Outside decode guard c ∨ ∀ a, ¬ Usable P allowed (decode c) a ∨ ∃ o d, Names decode d (Seen …) ∧ X d` | Same shape. |
+| `lost_mono` (l. 298) | `lostReading_mono` | Term repeated. |
+| `lost_start` (l. 302) | `lostReading_start` | `Or.inl` both. |
+| `lost_commutes` (l. 326) | `lostReading_commutes` | Term repeated. |
+| `lost_shortens` (l. 336) | `lostReading_shortens` | Same call. |
+| `lost_not_viable` (l. 318) | `lost_not_kept` | Induction repeated. |
+
+**It cannot be a call of GuardHorizon as the definitions stand.**
+
+- Over a process on codes `Pc.step c a d := ∃ o, Names decode d (Seen … a o)`, the start of `lostStep` is `¬ guardC`. With `guardC := codeGuard`, that is `¬ codeGuard c`, which is constructively weaker than `Outside c`. They agree only given `inOrOut`.
+- `¬ Enabled Pc c a` is not `¬ Usable … (decode c) a`. A usable move with no code for some seen class is "not enabled" on codes.
+- GuardHorizon's `lost_not_viable` is stated at `{S A : Type}`, universe 0, and the scratch module's `C`, `A` are in arbitrary universes.
+
+**ONE statement could give both.** Generalise the step to `lossStep (bad : T → Prop) (dead : T → A → Prop) (next : T → A → T → Prop) X t := bad t ∨ ∀ a, dead t a ∨ ∃ u, next t a u ∧ X u`, and prove `mono`, `start` (`Or.inl`), `commutes` (by `gather_listed`), `shortens` and `within_length` once, plus `below_never_both` (§5) for the refutation.
+
+- `lostStep P guard` is definitionally `lossStep (¬ guard ·) (fun s a => ¬ Enabled P s a) P.step`.
+- `lostReadingStep` is that with `bad := Outside decode guard`, `dead c a := ¬ Usable … (decode c) a`, `next c a d := ∃ o, Names decode d (Seen … (decode c) a o)`. This holds up to the order `∃ o d, Names ∧ X d` against `∃ d, (∃ o, Names) ∧ X d`, which is not definitional. Redefining `lostReadingStep` in the second order makes it definitional.
+- `lost_not_viable` is `below_never_both` with `stage := Viable P guard`. Its `below` is the definition of `Viable (n+1)`.
+
+Then `lostReading_mono/start/commutes/shortens/within_length` and `lost_not_kept`, and GuardHorizon's `lost_mono/start/commutes/shortens/not_viable`, would all be calls. Not found in the package in what was read.
+
+## 7. Other things noticed
+
+- **`starts_first_lost_none`'s `three` (ll. 195-201) could be a call.** `Drain.starts` and `decode (l2, l2)` agree by `Iff.rfl` (`starts_code`, DrainOnTheLaw l. 141), so by hand, unchecked:
+  ```lean
+  (kept_or_lost moves_listed (fun _ _ _ _ => ⟨[()], unit_listed⟩) (fun c _ => updatesNone c) none_in_or_out (fun c _ => none_usable_or_not c) 3 (l2, l2)).elim (fun kept => False.elim (Drain.together_not_kept_none kept)) id
+  ```
+  This removes the local `step` helper and the walk that repeats `together_not_kept_none`'s use of `Drain.losing`. Lean has not checked whether `KeptFor … 3 (decode (l2, l2))` is accepted where `KeptFor … 3 Drain.starts` is expected. If it is not, insert `KeptFor.mono (fun s => (starts_code s).mpr)`.
+- **`starts_lost_within_none` is implied by `N 3`** through `iter_succ lostReading_mono lostReading_start`. It is the only place `closed_or_lost_within` is applied, so in Part D the general theorem gives a weaker fact (loss by 9) than the direct computation (loss at 3).
+- **`everyValue`'s list may depend on `c` and `a`, but it must cover all of `O`** (`∀ o, o ∈ values`). In effect, "`O` is listed, wherever some guarded code has a usable move". The dependence adds no generality.
+- **The name `everyMove` means two things** in one file. It is the list premise in `section Listed` (l. 90), and `ScratchKeptForViable.everyMove`, the relation allowing every move, in the notation at l. 153 and in `none_usable_or_not`.
+- **The definitions `Names`, `Outside`, `lostReadingStep` and `Lost` are placed in `Becoming.Viability`,** the package's namespace. The names `Lost` and `Outside` are also defined elsewhere in the package (`Dependence.lean` l. 159, `RootForms.lean` l. 197), in other namespaces as far as was seen.
+- **The REPORT's T4 line overstates the use of the losing bound** (§2). Its T1 line holds: the bound is one call of `iter_shortens` / `iter_within_length`, with no list induction of its own. But T1 does not ask whether the losing side's other proofs repeat GuardHorizon's, and they do (§1, §6).

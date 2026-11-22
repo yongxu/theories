@@ -1,0 +1,292 @@
+**All three scratch modules built cleanly. Item 5’s `under` form serves both cases.** Build 40 audited 68 named declarations, including 57 theorems. Every axiom report was empty. All requested final statements built. The two older proofs were removed after measurement. One discarded implementation of the list-of-partners lemma brought in `propext`.
+
+Both bounded statements reach the same one-step exclusion and the same one-step alternative. They use different kept bounds. Under the Drain reading that keeps nothing, the first losing horizon is **3** and the guarded-code bound is **4**. The level reading admits **3 representative values** and **6 guarded codes**. The declaration ledger is **226 lines against 96** under the frozen source ranges.
+
+AI-written by Codex, 22 November 2026, board row FM. [Saved report](/Users/ren/theories/tmp/fm/centre22/choice/REPORT.md) · [ScratchChoice](/Users/ren/tmp/fm/build12/Becoming/ScratchChoice.lean) · [ScratchChoiceEither](/Users/ren/tmp/fm/build12/Becoming/ScratchChoiceEither.lean) · [ScratchChoiceCases](/Users/ren/tmp/fm/build12/Becoming/ScratchChoiceCases.lean)
+
+## 1. General statements and premises
+
+The namespace is `Becoming.Choice`. Positions `T` and moves `A` have independent universes. Theorems infer `ok`, `bad`, `live`, `dead` and `next`. The following definitions fix the suppressed arguments in the tables.
+
+```lean
+stayStep ok live next X t := ok t ∧ ∃ a, live t a ∧ ∀ u, next t a u → X u
+outStep bad dead next Y t := bad t ∨ ∀ a, dead t a ∨ ∃ u, next t a u ∧ Y u
+Stays ok live next := iter (stayStep ok live next) ok
+Out bad dead next := iter (outStep bad dead next) bad
+StayClosed ok live next K := ∀ t, K t → stayStep ok live next K t
+```
+
+The steps and closure are direct definitions. Both horizon definitions call `Iteration.iter`. Write `m = all.length` and `H t = ∃ K, StayClosed ok live next K ∧ K t`. The shared hypotheses below are ordinary arguments.
+
+```lean
+(everyMove : ∀ a, a ∈ moves)
+(okOrBad : ∀ t, ok t ∨ bad t)
+(liveOrDead : ∀ t, ok t → ∀ a, live t a ∨ dead t a)
+(outcomes : ∀ t, ok t → ∀ a, live t a → ∃ l : List T,
+  (∀ u', u' ∈ l → next t a u' ∨ ¬ next t a u') ∧
+  ∀ u, next t a u → ∃ u', u' ∈ l ∧ next t a u' ∧ under u u')
+(apart : ∀ t, ok t → bad t → False)
+(exclusive : ∀ t a, live t a → dead t a → False)
+```
+
+“Search” below means the first four hypotheses. In the equality case the last conjunct is `u = u'`. “Exclusions” means `apart` and `exclusive`. The two occurrences of `within` have different types.
+
+```lean
+-- Falling bound and item 6
+(within : ∀ t, ok t → t ∈ all)
+-- Item 3, at the particular t
+(within : ∀ x, (bad x → Out bad dead next all.length t) → x ∈ all)
+```
+
+| Item | Theorem | Premises and result | Proof |
+|---|---|---|---|
+| 1 | `stay_mono` | `MonotoneStep (stayStep ok live next)` | Directly maps every outcome, 1 proof line |
+| 1 | `out_mono` | `MonotoneStep (outStep bad dead next)` | Maps the exhibited outcome, 2 proof lines |
+| 1 | `stay_ok` | `stayStep X t → ok t` | `And.left` |
+| 1 | `out_start` | `bad t → outStep bad t`, with input predicate `bad` | `Or.inl` |
+| 1 | `out_commutes` | `everyMove` gives `CommutesWithImplication (outStep bad dead next) G` for every `G` | `gather_listed` |
+| 2 | `closed_stays` | `StayClosed K → ∀ n t, K t → Stays n t` | `postfixed_in_iter`, `stay_mono` |
+| 2 | `stays_closed` | Falling `within` gives `StayClosed (Stays m)` | `iter_postfixed`, `stay_mono`, `stay_ok` |
+| 2 | `stays_iff_all` | Falling `within` gives `Stays m t ↔ ∀ n, Stays n t` | `iter_iff_all`, `stay_mono`, `stay_ok` |
+| 2 | `stays_iff_closed` | Falling `within` gives `Stays m t ↔ H t` | `stays_closed`, `closed_stays` |
+| 3 | `out_shortens` | `everyMove`, item 3 `within` give `Out (m + 1) t → Out m t` | One call of `iter_shortens` with `out_mono`, `out_start`, `out_commutes` |
+| 3 | `out_within_length` | Same two premises give `∀ n, Out n t → Out m t` | One call of `iter_within_length` with the same three arguments |
+| 4 | `steps_disjoint` | Exclusions and `∀ t, X t → Y t → False` give `∀ t, stayStep X t → outStep Y t → False` | Direct one-step proof, 2 lines |
+| 4 | `stage_disjoint` | Exclusions and the `zero, below` premises below give `∀ n t, stage n t → Out n t → False` | Horizon recursion, 2 proof lines, one successor call of `steps_disjoint` |
+| 4 | `stays_disjoint` | Exclusions give `∀ n t, Stays n t → Out n t → False` | `stage_disjoint` with `stage := Stays` |
+| 4 | `closed_never_out` | Exclusions, `StayClosed K`, `K t` give `∀ n, ¬ Out n t` | `stays_disjoint`, `closed_stays` |
+| 5 | `steps_either` | Search, `∀ u, X u ∨ Y u`, and `∀ u u', under u u' → X u' → X u` give `∀ t, stayStep X t ∨ outStep Y t` | 20 proof lines, two calls of `Undecided.each_or_some`, over outcomes and moves |
+| 5 | `stage_either` | Search and the `zero, above, down` premises below give `∀ n t, stage n t ∨ Out n t` | Horizon recursion, 3 proof lines, one successor call of `steps_either` |
+| 5 | `stays_or_out` | Equality search gives `∀ n t, Stays n t ∨ Out n t` | `stage_either` with equality transport |
+| 6 | `closed_or_out` | Equality search, exclusions and falling `within` give `(H t ∨ Out m t) ∧ ¬ (H t ∧ Out m t)` | `stays_or_out`, `stays_iff_closed`, `closed_never_out` |
+| 6 | `out_at_ok_length` | Same premises give `∀ n, Out n t → Out m t` | `closed_or_out`, `closed_never_out` |
+| 6 | `out_iff_not_stays` | Equality search and exclusions give `Out n t ↔ ¬ Stays n t` for every `n, t` | `stays_disjoint`, `stays_or_out` |
+
+```lean
+-- stage_disjoint
+(zero : ∀ t, stage 0 t → ok t)
+(below : ∀ n t, stage (n + 1) t → stayStep ok live next (stage n) t)
+
+-- stage_either
+(zero : ∀ t, ok t → stage 0 t)
+(above : ∀ n t, stayStep ok live next (stage n) t → stage (n + 1) t)
+(down : ∀ n u u', under u u' → stage n u' → stage n u)
+```
+
+**V2 and V3.** Module 1 contains two recursions, both on the horizon. The only search over lists calls existing package lemmas. Every bound goes through the falling or rising law in `PredicateIteration`. Item 2 restates the falling bound for this step. Item 3 stands independently of item 6 and of both bounded case theorems.
+
+The search data have no horizon, predicate-quantified oracle, instance argument or classical principle. `X, Y` and the stage premises describe the family to which the general lemmas apply. At horizon zero, `okOrBad` is exactly `Stays 0 t ∨ Out 0 t`. At an ok position with one move, when the position cannot be bad and every outcome stays and cannot be bad, the horizon-one alternative gives `live t a ∨ dead t a`. Those exclusions matter for the general predicates, which may otherwise overlap. Both concrete cases have them.
+
+## 2. Configurations, including V1a
+
+The namespace is `Becoming.Choice.Config`. These three equations built as anonymous `rfl` examples.
+
+```lean
+choiceStep P guard = stayStep guard (Enabled P) P.step
+lostStep P guard = outStep (fun s => ¬ guard s) (fun s a => ¬ Enabled P s a) P.step
+Closed P guard K = StayClosed guard (Enabled P) P.step K
+```
+
+Write `L := iter (GuardHorizon.lostStep P guard) (fun s => ¬ guard s)`. The two helpers and the two new theorems have these hypotheses, in the combinations shown.
+
+```lean
+(everyMove : ∀ a, a ∈ moves)
+(every : ∀ s, s ∈ states)
+(guardOrNot : ∀ s, guard s ∨ ¬ guard s)
+(stepOrNot : ∀ s a t, P.step s a t ∨ ¬ P.step s a t)
+(within : ∀ x, guard x → x ∈ all)
+```
+
+| Theorem | Premises and result | Proof |
+|---|---|---|
+| `enabled_or_not` | `every, stepOrNot` give `Enabled P s a ∨ ¬ Enabled P s a` | `Undecided.each_or_some` on `states` |
+| `listed_outcomes` | `every, stepOrNot` give the equality form of `outcomes` at each `s, a` | Uses `states` and represents each actual outcome by itself |
+| `viable_or_lost` | First four premises give `∀ n s, Viable P guard n s ∨ L n s` | `stage_either`, both helpers, identity stage clauses, equality transport |
+| `closed_or_lost` | All five give `((∃ K, Closed P guard K ∧ K s) ∨ L m s) ∧ ¬ ((∃ K, Closed P guard K ∧ K s) ∧ L m s)` | `closed_or_out` and both helpers. The horizon is `all.length` |
+
+Every A.2 theorem has its own `example : @<copy> = @GuardHorizon.<name> := rfl`. All eleven compiled. The table gives proof-body lines, counting a term on the declaration line as one. The general `choice_mono`, `lost_mono`, `lost_start`, `lost_commutes` and `lost_shortens` preserve independent universes. The viability and closed-set statements retain `S A : Type`.
+
+| Copy | Statement with process and guard understood | Calls | Landed → copy |
+|---|---|---|---:|
+| `choice_mono` | `MonotoneStep (choiceStep P guard)` | `stay_mono` | 1 → 1 |
+| `closed_viable` | `Closed P guard K → ∀ n s, K s → Viable P guard n s` | `iter_iff_viable`, `closed_stays` | 2 → 1 |
+| `viable_persists` | `within` and viability at `m, y` give `∃ a, Enabled P y a ∧ ∀ z, P.step y a z → Viable P guard m z` | Copy of `viable_closed`, second projection | 2 → 1 |
+| `viable_closed` | `within` gives `Closed P guard (Viable P guard m)` | `iter_iff_viable`, `stays_closed` | 1 → 2 |
+| `viable_iff_every_horizon` | `within` gives `Viable P guard m s ↔ ∀ n, Viable P guard n s` | Copies of `closed_viable`, `viable_closed` | 1 → 1 |
+| `viable_iff_closed` | `within` gives `Viable P guard m s ↔ ∃ K, Closed P guard K ∧ K s` | `iter_iff_viable`, `stays_iff_closed` | 2 → 1 |
+| `lost_mono` | `MonotoneStep (lostStep P guard)` | `out_mono` | 1 → 1 |
+| `lost_start` | `¬ guard s → lostStep P guard (fun t => ¬ guard t) s` | `out_start` | 1 → 1 |
+| `lost_commutes` | `everyMove` gives `CommutesWithImplication (lostStep P guard) G` for each `G` | `out_commutes` | 5 → 1 |
+| `lost_shortens` | Every state on `all`, then `everyMove`, give `L (m + 1) y → L m y` | `out_shortens` | 1 → 1 |
+| `lost_not_viable` | `∀ n s, L n s → ¬ Viable P guard n s` | `stage_disjoint` directly at `Viable P guard` | 4 → 2 |
+
+The copies remove the local commuting argument and the local loss induction. Three already-composed proofs also got one line shorter. The largest increase was one line. `ScratchChoice` imports only `Becoming.PredicateIteration`. `GuardHorizon.not_viable_of_loss` remains outside the construction. Its step takes a proof of enabling as an argument to a reply.
+
+## 3. Reading codes, including V4
+
+The namespace is `Becoming.Choice.Reading`. Its four definitions are as follows.
+
+```lean
+Names decode d B := ∀ s, decode d s ↔ B s
+Outside decode guard c := ∃ s, decode c s ∧ ¬ guard s
+seenNext P sense decode c a d := ∃ o, Names decode d (Seen P sense (decode c) a o)
+Lost P sense guard allowed decode :=
+  Out (Outside decode guard) (fun c a => ¬ Usable P allowed (decode c) a)
+    (seenNext P sense decode)
+```
+
+The first three are direct definitions. `Lost` calls `Out`. Write `K n c := KeptFor P sense guard allowed n (decode c)`, `L n c := Lost P sense guard allowed decode n c` and `F c := InClosedFamily P sense guard allowed (decode c)`. Here `Φ` is `stayStep` on codes, using `codeGuard`, `Usable` from the code’s class, and `seenNext`. The landed `Viability.readingStep` asks for a covering code in its input at each value. `Φ` tests every exact successor code. The new loss step uses the general definition directly. The old scratch witness order was `∃ o d, Names … ∧ Y d`. The new order is `∃ d, (∃ o, Names …) ∧ Y d`, so identifying the old and new formulas requires repacking the witnesses. Loss also includes having no usable move.
+
+The reading’s hypotheses are the following.
+
+```lean
+(everyMove : ∀ a, a ∈ moves)
+(updates : ∀ c, codeGuard decode guard c → ∀ a, Usable P allowed (decode c) a → ∀ o,
+  ∃ d, Names decode d (Seen P sense (decode c) a o))
+(inOrOut : ∀ c, codeGuard decode guard c ∨ Outside decode guard c)
+(usableOrNot : ∀ c, codeGuard decode guard c → ∀ a,
+  Usable P allowed (decode c) a ∨ ¬ Usable P allowed (decode c) a)
+(someValues : ∀ c, codeGuard decode guard c → ∀ a, Usable P allowed (decode c) a →
+  ∃ values : List O, ∀ o, ∃ o', o' ∈ values ∧
+    ∀ s, Seen P sense (decode c) a o s → Seen P sense (decode c) a o' s)
+(within : ∀ c, codeGuard decode guard c → c ∈ all)
+```
+
+| Theorem | Premises and result | Proof |
+|---|---|---|
+| `kept_below` | `K (n+1) c → Φ (K n) c` | `KeptFor.mono`, from the exact code into the seen class |
+| `lost_not_kept` | `∀ n c, L n c → ¬ K n c` | One `stage_disjoint` call at `K`, using `kept_below` |
+| `closed_never_lost` | `F c → ∀ n, ¬ L n c` | `lost_not_kept`, `keptFor_of_closed` |
+| `listed_partners` | From `∀ x, x ∈ xs → ∃ y, R x y`, obtain `∃ ys, (∀ y, y ∈ ys → ∃ x, x ∈ xs ∧ R x y) ∧ ∀ x, x ∈ xs → ∃ y, y ∈ ys ∧ R x y` | Added general lemma, 10 declaration lines, 7 proof lines, no recursion of its own |
+| `kept_above` | `updates` gives `Φ (K n) c → K (n+1) c` | `updates` at the requested value, then `KeptFor.mono` from the seen class into its exact code |
+| `seen_outcomes` | `updates, someValues`, a guarded `c` and a usable `a` give item 5’s `outcomes` for `seenNext` and class inclusion | `listed_partners`. Every listed code already has a value witnessing that it is an outcome |
+| `kept_or_lost` | First five reading hypotheses give `∀ n c, K n c ∨ L n c` | One `stage_either` call with `seen_outcomes`, `kept_above`, `KeptFor.mono` |
+| `closed_or_lost_within` | All six give `(F c ∨ L m c) ∧ ¬ (F c ∧ L m c)` | `kept_or_lost` at `m`, landed `coded_kept_iff_closed`, `closed_never_lost` |
+| `lost_at_guarded_length` | All six give `∀ n, L n c → L m c` | `closed_or_lost_within`, `closed_never_lost` |
+| `lost_iff_not_kept` | First five give `L n c ↔ ¬ K n c` | `lost_not_kept`, `kept_or_lost` |
+
+**Premises by result.** Never-both has no listing, decision or update premise. The landed kept bound uses only `within, updates`. The two losing bounds with nothing decided use `everyMove` and `∀ x, (Outside decode guard x → L m c) → x ∈ all`. A list of all codes discharges the latter. The per-horizon alternative uses the first five reading premises. The bounded statement adds only guarded-code coverage. A covering list may have repeats or extra codes, so its length is a bound.
+
+B.1 adds zero wrappers. Monotonicity, start, commuting, one-step shortening and the bound from every horizon are respectively `out_mono`, `out_start`, `out_commutes`, `out_shortens` and `out_within_length`.
+
+For B.3, `under d e := ∀ s, decode d s → decode e s`. Stage zero is the code guard. `down` is `KeptFor.mono`. The two uses of `updates` in B.3 are to produce a named code at every value in `kept_above`, and to select one exact code per listed value in `seen_outcomes`. B.4 also supplies it to the landed kept bound. `inOrOut` is the entire reading alternative at zero. At a guarded code with a sole move and all successor classes guarded, the alternative at one gives the usability decision.
+
+`Becoming.exists_pairs_over` in `Prelude.lean` fixes both types at universe zero. The added list lemma works with independent universes. It uses landed finite choice on list indices and maps the chosen function over `finBelow`. This accounts for the additional `Becoming.Likeness` import in the cases file.
+
+## 4. The two Drain readings, including V5
+
+All declarations here are in `Becoming.Choice.DrainCases`. The guard is `Drain.above`, the level being nonzero. `ScratchKeptForViable.everyMove` allows every move. The move-list proof is the distinct package term `ListTests.mem_bools` for `[true, false]`. Each case theorem below has only the arguments or premises shown.
+
+| Declaration | Statement | Definition or proof |
+|---|---|---|
+| `guardedPairs` | `[(l1,l1), (l1,l2), (l2,l1), (l2,l2)]` | List literal |
+| `pairs_within` | `∀ c, codeGuard decode Drain.above c → c ∈ guardedPairs` | Six pattern clauses on pairs |
+| `pair_in_or_out` | Each pair is guarded or has a member outside | Level cases, `succ_not_zero`, `code_within` |
+| `unit_values` | For every pair and move, a list of `Unit` values covers every seen class by inclusion under `noneRead` | `[()]`, one value case |
+| `starts_first_lost_none` | `Lost 3 (l2,l2) ∧ ∀ n, Lost n (l2,l2) → 3 ≤ n` under `noneRead` | `lost_iff_not_kept` and `Drain.together_not_kept_none` give loss at 3. Cases at 0, 1, 2 use `lost_not_kept`, `together_kept_two_none` and zero to two calls of `KeptFor.shorter`. The remaining case uses `Nat.zero_le` and `Nat.succ_le_succ` |
+| `starts_lost_at_four` | `Lost guardedPairs.length (l2,l2)` under `noneRead` | `closed_or_lost_within`, `pairs_within`, `starts_in_no_closed_family_none_direct` |
+| `guardedLevels` | `.both, .empty`, and each Boolean lane alone at `l1` or `l2` | Six-element list literal |
+| `levels_within` | `∀ c, codeGuard decodeL Drain.above c → c ∈ guardedLevels` | Cases on the code, using the guard to exclude singleton level zero |
+| `level_in_or_out` | Each level code is guarded or has a member outside | Code cases, `Drain.starts_within`, `succ_not_zero` |
+| `unseen_high` | For every move, `k, c, s`, the class seen from `decodeL c` at `k+3` excludes `s` | Code cases, `eqv_false`, `seen_starts`, `seen_single` |
+| `level_values` | At every code and move, each value’s seen class lies inside one seen at a member of `[0,1,2]` | Cases at 0, 1, 2 and `k+3`. The last uses `unseen_high` and representative 0 |
+| `level_closed_or_lost` | For every level code, closed-family membership or loss at `guardedLevels.length`, and never both | B.4 with `updatesLevel`, `level_in_or_out`, `usable_all`, `level_values`, `levels_within`, `ListTests.mem_bools` |
+| `starts_closed_never_lost_level` | The two starts together lie in a closed family under `Drain.keepsLevel`, and `∀ n, ¬ Lost n .both` | `starts_in_closed_family_level`, `closed_never_lost` |
+
+The constant-reading calls use `updatesNone`, `pair_in_or_out`, `usable_all` and `unit_values`. No move sequence was reconstructed for loss at 3. For the level reading the value type is `Nat`, including labels absent from all coded outcomes. Its decision premises hold for all eight codes. At the two starts its closed branch was already supplied by the kept-side theorem. Applying the alternative adds no new kept fact there.
+
+## 5. The two call lists, V8
+
+Each list follows scratch theorem calls to their first package or Lean-library theorem. Ordinary logical operations used along these paths include conjunction and existential introduction and elimination, `Or.imp`, `Or.elim`, `Or.symm`, `Iff.mp`, `id`, reflexivity and equality transport.
+
+**A.3, `Config.closed_or_lost`**
+
+1. `closed_or_lost → closed_or_out, enabled_or_not, listed_outcomes`. `enabled_or_not → Undecided.each_or_some`. `listed_outcomes` uses the supplied listing, step decision and reflexivity.
+2. `closed_or_out → stays_or_out, stays_iff_closed, closed_never_out`.
+3. `stays_or_out → stage_either → steps_either → Undecided.each_or_some` twice. The stage call recurses on the preceding horizon.
+4. `stays_iff_closed → stays_closed, closed_stays`. `stays_closed → Iteration.iter_postfixed, stay_mono, stay_ok`. `closed_stays → Iteration.postfixed_in_iter, stay_mono`. `stay_ok → And.left`.
+5. `closed_never_out → stays_disjoint, closed_stays`. `stays_disjoint → stage_disjoint → steps_disjoint`. The stage call recurses on the preceding horizon. `steps_disjoint` and `stay_mono` use direct terms.
+
+**B.4, `Reading.closed_or_lost_within`**
+
+1. `closed_or_lost_within → kept_or_lost, Viability.coded_kept_iff_closed, closed_never_lost`.
+2. `kept_or_lost → stage_either, seen_outcomes, kept_above, Viability.KeptFor.mono`. `stage_either → steps_either → Undecided.each_or_some` twice, with the same horizon recursion as A.3.
+3. `seen_outcomes → listed_partners` with `someValues` and `updates`. `listed_partners → Viability.choiceOver_fin, List.get_mem, finBelow, Nat.le_refl, ListTests.mem_map_iff, List.get_of_mem, ListTests.mem_map_of, mem_finBelow`, using the index’s `isLt`. `choiceOver_fin` calls `InquirySufficiency.finite_choice`.
+4. `kept_above → Viability.KeptFor.mono` with `updates`. The landed `coded_kept_iff_closed` directly names `Iteration.iter_postfixed`, `reading_mono`, `iter_iff_kept`, `Seen.mono` and `keptFor_of_closed`, using `coveredBy` to form the family.
+5. `closed_never_lost → lost_not_kept, Viability.keptFor_of_closed`. `lost_not_kept → stage_disjoint, kept_below`. `stage_disjoint → steps_disjoint` with the same horizon recursion as A.3. `kept_below → Viability.KeptFor.mono`.
+
+Both paths reach items 4 and 5. A.3 calls item 6 directly. B.4 assembles its own pair using the bound on decoded classes. Neither path calls item 3, commuting, or shortening. The represented outcome relation lets the reading use the same search while retaining every possible exact code in its universal staying step.
+
+## 6. The older candidates and the kept-bound trial
+
+**V1b.** Both older candidates compiled with `rfl` statement checks and empty axiom reports in build 33. For `Lasting.Reaches.not_lasts`, the premise is a particular admissible disturbance. The trial follows that disturbance, uses `Basin.of_reaches` to obtain `Out`, and applies `stage_disjoint` to `Lasts`. Its proof took **11 lines against 3**. For `Lasting.reaches_of_not_lasts`, the landed premise is `[DecidablePred target]` for a determined law. The trial uses `stage_either` with a unit move and singleton successor list, then `Funnel.reaches` to obtain `Reaches`. Its proof took **15 lines against 3**. Both counts include the line beginning the proof lambda. The landed `Reaches` successor quantifies over every admissible disturbance. Both trials were removed from the working module. [Checked trial](/Users/ren/tmp/fm/build12/ScratchChoiceCases.clean-33.lean.txt:456)
+
+no statement older than 22 November comes out as a case
+
+**B.5.** Yes. Build 35 checked `@coded_via_stays = @Viability.coded_kept_iff_closed` by `rfl`. The trial uses the original premises `within, updates`. Two lines identify the staying iterate with `KeptFor` using `iter_iff_stages`, `stay_mono`, `kept_above` and `kept_below`. Item 2’s `stays_iff_closed` then supplies a closed set of codes. Turning that into a closed family of classes still uses `coveredBy`, `updates` and `Seen.mono`. The reverse direction remains `keptFor_of_closed`. With the two stage lemmas available, the proof took **10 lines against the landed 8**. The trial is in its clean snapshot. B.4 calls the landed theorem. [Checked alternative](/Users/ren/tmp/fm/build12/ScratchChoiceCases.clean-35.lean.txt:324)
+
+## 7. Ledger, V9
+
+I counted physical lines of `def`, `theorem` and requested `example` declarations, statements and bodies together. This includes local helpers inside proofs and all 14 anonymous A checks. Imports, section commands, shared variable and notation lines, comments and blanks are outside this count. A second count below exposes the effect of that convention.
+
+| Measure | Declaration lines |
+|---|---:|
+| L1, Module 1, items 1 through 6 | 26 + 10 + 4 + 14 + 33 + 14 = **101** |
+| L2, Module 2, Parts A and B | 64 + 61 = **125** |
+| L3, the three specified `GuardHorizon` ranges | **21** |
+| L4, `ScratchTwoSides` lines 18–143 | **75** |
+| L1 + L2 against L3 + L4 | **226 against 96** |
+
+The frozen L3 ranges contain six of the eleven A.2 declarations. Counting all eleven gives **40** landed declaration lines and **32** in the copies, or **21** landed proof-body lines and **13** in the copies. Using all eleven for L3 gives **226 against 115**. The six in the specified ranges have **13** proof-body lines. Counting *all* nonblank, noncomment source lines, including setup, gives L1 **147**, L2 **172**, L3 **21**, L4 **87**. Part C has 74 declaration lines outside L2. The temporary older and B.5 alternatives are outside the ledger.
+
+## 8. Build record, V7
+
+There were **21 wrapper builds**, numbered 20–40. Clean builds were 20, 21, 24, 25, 26, 30, 31, 33, 35, 38 and 40. Builds 22, 23, 27–29, 32, 34, 36 and 39 had elaboration errors. Build 37 compiled with two unused-variable warnings and reported `propext` for the `List.ofFn` partner-list variant and eight dependent declarations. Build 38 replaced that term with finite choice and the package’s index listing. Every named target of every clean build has its numbered snapshot. The three working files match their build-40 snapshots byte for byte.
+
+Every named definition and theorem inventoried above has axiom set `{}`. The final module totals are 20, 6 and 42 declarations, each with `with_axioms: {}`. The 14 anonymous `rfl` examples compiled and are outside the wrapper’s named-declaration registry. Only the specified wrapper was used for Lean. The package, git and the other implementer’s module received no edits. The idle-side cases, `ScratchInTime` and premise-necessity theorems were outside this run.
+
+Two details qualify earlier expectations. Several existing one- or two-line calls shortened, as the A.2 table records. Also, `[0,1,2]` suffices for the level reading even without an empty-class disjunct, because the empty class at a higher label lies inside the class seen at 0. The earlier reader’s four-label suggestion also covers it.
+
+The final wrapper log records `exit 0 build 40`, from 07:22:58 to 07:23:04. [Full log](/Users/ren/tmp/fm/build12/build-40.log)
+
+```json
+{
+  "tree": "/Users/ren/tmp/fm/build12",
+  "modules": 54,
+  "ran": [
+    "Becoming.ScratchChoice",
+    "BecomingScratchChoiceAxiomAudit",
+    "Becoming.ScratchChoiceEither",
+    "BecomingScratchChoiceEitherAxiomAudit",
+    "Becoming.ScratchChoiceCases",
+    "BecomingScratchChoiceCasesAxiomAudit"
+  ],
+  "reused": 51,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchChoice": {
+      "theorems": 15,
+      "declarations": 20,
+      "with_axioms": {}
+    },
+    "Becoming.ScratchChoiceEither": {
+      "theorems": 6,
+      "declarations": 6,
+      "with_axioms": {}
+    },
+    "Becoming.ScratchChoiceCases": {
+      "theorems": 36,
+      "declarations": 42,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchChoice": 0.373,
+    "BecomingScratchChoiceAxiomAudit": 0.201,
+    "Becoming.ScratchChoiceEither": 1.067,
+    "BecomingScratchChoiceEitherAxiomAudit": 0.347,
+    "Becoming.ScratchChoiceCases": 1.008,
+    "BecomingScratchChoiceCasesAxiomAudit": 0.317
+  }
+}
+```

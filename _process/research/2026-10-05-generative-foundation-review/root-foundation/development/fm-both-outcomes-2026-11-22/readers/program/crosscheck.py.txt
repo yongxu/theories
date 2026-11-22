@@ -1,0 +1,66 @@
+"""AI-written (Claude Fable, reader 'program'), 22 November 2026.
+
+Compares fast.py with the literal naive.py on random cases, and the largest-closed-family
+computation of InClosedFamily with the brute force over ALL families of classes (|S| <= 3).
+Where a move is not enabled, `allowed` is set at random in the naive model (the fast model does
+not vary it), so the reduction stated in fast.py is tested too.
+"""
+import random
+import sys
+from naive import Model
+from fast import options, tables, guarded_classes, kept_levels, lost_levels, rel_tables
+
+random.seed(int(sys.argv[1]) if len(sys.argv) > 1 else 1)
+trials = int(sys.argv[2]) if len(sys.argv) > 2 else 3000
+bad = 0
+brute = 0
+for trial in range(trials):
+    nS = random.choice([0, 1, 2, 2, 3, 3, 3])
+    nA = random.choice([0, 1, 1, 2, 2])
+    nO = random.choice([1, 1, 2, 2, 3])
+    opts = options(nS, nO)
+    combo = [random.choice(opts) for _ in range(nS * nA)]
+    guard = random.randrange(1 << nS)
+    nB = 1 << nS
+    fam = random.randrange(1 << nB)
+    usable, seen = tables(nS, nA, nO, combo)
+    K0 = guarded_classes(nS, guard)
+    N = nB + 2
+    Ks = kept_levels(nB, nA, usable, seen, K0, N)
+    codes = [B for B in range(nB) if fam >> B & 1]
+    REL = rel_tables(nS)
+    step, sense, allowed = set(), {}, set()
+    for s in range(nS):
+        for a in range(nA):
+            ts, senses, al = combo[s * nA + a]
+            for t, o in zip(ts, senses):
+                step.add((s, a, t))
+                sense[(s, a, t)] = o
+            if (al if ts else random.random() < 0.5):
+                allowed.add((s, a))
+    cls = lambda B: frozenset(s for s in range(nS) if B >> s & 1)
+    for variant in ("exact", "super", "sub"):
+        Ls = lost_levels(codes, nA, usable, seen, K0, fam, N, REL[variant])
+        M = Model(range(nS), range(nA), range(nO), step, sense, cls(guard), allowed,
+                  {B: cls(B) for B in codes}, names=variant)
+        for n in range(N + 1):
+            for B in range(nB):
+                if variant == "exact" and M.KeptFor(n, cls(B)) != bool(Ks[n] >> B & 1):
+                    bad += 1
+                    print("KEPT MISMATCH", nS, nA, nO, combo, guard, n, B)
+            for B in codes:
+                if M.Lost(n, B) != bool(Ls[n] >> B & 1):
+                    bad += 1
+                    print("LOST MISMATCH", variant, nS, nA, nO, combo, guard, fam, n, B)
+    M = Model(range(nS), range(nA), range(nO), step, sense, cls(guard), allowed, {})
+    for B in range(nB):
+        g = M.InClosedFamily(cls(B))
+        if g != bool(Ks[N] >> B & 1):
+            bad += 1
+            print("CLOSED (largest family) vs kept-at-the-end MISMATCH", combo, guard, B)
+        if nS <= 2 or (nS == 3 and trial % 10 == 0):
+            brute += 1
+            if M.InClosedFamily_bruteforce(cls(B)) != g:
+                bad += 1
+                print("CLOSED brute force MISMATCH", combo, guard, B)
+print("trials", trials, "mismatches", bad, "brute-force closed-family comparisons", brute)

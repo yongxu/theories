@@ -1,0 +1,158 @@
+### heyting.py 1 1 allH
+nS 1 nA 1 codes allH 3 levels 0..4 sample None
+   models 27
+   sequent_fail 0
+   lost_and_kept_not_refuted 0
+   bound_fail 0
+   concl0_differs_from_inOrOut 0
+   no_inOrOut_rest_hold 18
+   no_inOrOut_rest_hold_concl_fails 18
+   no_usableOrNot_rest_hold 3
+   no_usableOrNot_rest_hold_concl_fails 3
+   no_updates_rest_hold 0
+   no_updates_rest_hold_concl_fails 0
+   all_hold 6
+   first case: no_inOrOut guard (0,) step (s,a,t order) (0,) allowed (0,) conclusion at n=0..3: [1, 2, 2, 2]
+   first case: no_usableOrNot guard (2,) step (s,a,t order) (1,) allowed (1,) conclusion at n=0..3: [2, 1, 1, 1]
+real 0.10
+user 0.01
+sys 0.01
+### heyting.py 1 1 crisp
+nS 1 nA 1 codes crisp 2 levels 0..3 sample None
+   models 27
+   sequent_fail 0
+   lost_and_kept_not_refuted 0
+   bound_fail 0
+   concl0_differs_from_inOrOut 0
+   no_inOrOut_rest_hold 9
+   no_inOrOut_rest_hold_concl_fails 9
+   no_usableOrNot_rest_hold 3
+   no_usableOrNot_rest_hold_concl_fails 3
+   no_updates_rest_hold 0
+   no_updates_rest_hold_concl_fails 0
+   all_hold 15
+   two_valued_cases_compared 8
+   first case: no_inOrOut guard (1,) step (s,a,t order) (0,) allowed (0,) conclusion at n=0..3: [1, 2, 2, 2]
+   first case: no_usableOrNot guard (2,) step (s,a,t order) (1,) allowed (1,) conclusion at n=0..3: [2, 1, 1, 1]
+real 0.10
+user 0.01
+sys 0.01
+### heyting.py 1 2 allH
+nS 1 nA 2 codes allH 3 levels 0..4 sample None
+   models 243
+   sequent_fail 0
+   lost_and_kept_not_refuted 0
+   bound_fail 0
+   concl0_differs_from_inOrOut 0
+   no_inOrOut_rest_hold 162
+   no_inOrOut_rest_hold_concl_fails 162
+   no_usableOrNot_rest_hold 45
+   no_usableOrNot_rest_hold_concl_fails 39
+   no_updates_rest_hold 0
+   no_updates_rest_hold_concl_fails 0
+   all_hold 36
+   first case: no_inOrOut guard (0,) step (s,a,t order) (0, 0) allowed (0, 0) conclusion at n=0..3: [1, 2, 2, 2]
+   first case: no_usableOrNot guard (2,) step (s,a,t order) (0, 1) allowed (0, 1) conclusion at n=0..3: [2, 1, 1, 1]
+real 0.13
+user 0.04
+sys 0.01
+### heyting.py 1 2 crisp
+nS 1 nA 2 codes crisp 2 levels 0..3 sample None
+   models 243
+   sequent_fail 0
+   lost_and_kept_not_refuted 0
+   bound_fail 0
+   concl0_differs_from_inOrOut 0
+   no_inOrOut_rest_hold 81
+   no_inOrOut_rest_hold_concl_fails 81
+   no_usableOrNot_rest_hold 45
+   no_usableOrNot_rest_hold_concl_fails 39
+   no_updates_rest_hold 0
+   no_updates_rest_hold_concl_fails 0
+   all_hold 117
+   two_valued_cases_compared 32
+   first case: no_inOrOut guard (1,) step (s,a,t order) (0, 0) allowed (0, 0) conclusion at n=0..3: [1, 2, 2, 2]
+   first case: no_usableOrNot guard (2,) step (s,a,t order) (0, 1) allowed (0, 1) conclusion at n=0..3: [2, 1, 1, 1]
+real 0.13
+user 0.03
+sys 0.01
+### heyting.py 2 1 crisp
+nS 2 nA 1 codes crisp 4 levels 0..5 sample None
+   models 6561
+   sequent_fail 0
+   lost_and_kept_not_refuted 0
+   bound_fail 0
+   concl0_differs_from_inOrOut 0
+   no_inOrOut_rest_hold 2943
+   no_inOrOut_rest_hold_concl_fails 2943
+   no_usableOrNot_rest_hold 1023
+   no_usableOrNot_rest_hold_concl_fails 915
+   no_updates_rest_hold 168
+   no_updates_rest_hold_concl_fails 152
+   all_hold 1681
+   two_valued_cases_compared 256
+   first case: no_inOrOut guard (0, 1) step (s,a,t order) (0, 0, 0, 0) allowed (0, 0) conclusion at n=0..3: [1, 2, 2, 2]
+   first case: no_usableOrNot guard (0, 2) step (s,a,t order) (0, 0, 0, 1) allowed (0, 1) conclusion at n=0..3: [2, 1, 1, 1]
+   first case: no_updates guard (0, 2) step (s,a,t order) (0, 0, 1, 2) allowed (0, 2) conclusion at n=0..3: [2, 1, 1, 1]
+real 1.43
+user 1.33
+sys 0.01
+### heyting.py 2 1 allH
+nS 2 nA 1 codes allH 9 levels 0..10 sample None
+   models 6561
+   sequent_fail 0
+   lost_and_kept_not_refuted 0
+   bound_fail 0
+   concl0_differs_from_inOrOut 0
+   no_inOrOut_rest_hold 4644
+   no_inOrOut_rest_hold_concl_fails 4644
+   no_usableOrNot_rest_hold 473
+   no_usableOrNot_rest_hold_concl_fails 473
+   no_updates_rest_hold 0
+   no_updates_rest_hold_concl_fails 0
+   all_hold 256
+   first case: no_inOrOut guard (0, 0) step (s,a,t order) (0, 0, 0, 0) allowed (0, 0) conclusion at n=0..3: [1, 2, 2, 2]
+   first case: no_usableOrNot guard (2, 2) step (s,a,t order) (0, 0, 0, 1) allowed (0, 1) conclusion at n=0..3: [2, 1, 1, 1]
+real 5.08
+user 4.94
+sys 0.03
+### heyting.py 2 2 crisp 20000 5
+nS 2 nA 2 codes crisp 4 levels 0..5 sample 20000
+   models 20000
+   sequent_fail 0
+   lost_and_kept_not_refuted 0
+   bound_fail 0
+   concl0_differs_from_inOrOut 0
+   no_inOrOut_rest_hold 8028
+   no_inOrOut_rest_hold_concl_fails 8028
+   no_usableOrNot_rest_hold 4033
+   no_usableOrNot_rest_hold_concl_fails 3485
+   no_updates_rest_hold 456
+   no_updates_rest_hold_concl_fails 392
+   all_hold 3504
+   two_valued_cases_compared 68
+   first case: no_inOrOut guard (2, 1) step (s,a,t order) (2, 1, 2, 2, 2, 2, 0, 1) allowed (0, 2, 0, 0) conclusion at n=0..3: [1, 1, 2, 2]
+   first case: no_usableOrNot guard (0, 2) step (s,a,t order) (0, 2, 0, 0, 0, 1, 1, 2) allowed (1, 2, 1, 1) conclusion at n=0..3: [2, 1, 1, 1]
+   first case: no_updates guard (2, 0) step (s,a,t order) (1, 2, 2, 1, 0, 0, 1, 1) allowed (2, 0, 1, 1) conclusion at n=0..3: [2, 1, 1, 1]
+real 7.16
+user 7.02
+sys 0.04
+### heyting.py 2 2 allH 4000 6
+nS 2 nA 2 codes allH 9 levels 0..10 sample 4000
+   models 4000
+   sequent_fail 0
+   lost_and_kept_not_refuted 0
+   bound_fail 0
+   concl0_differs_from_inOrOut 0
+   no_inOrOut_rest_hold 2380
+   no_inOrOut_rest_hold_concl_fails 2380
+   no_usableOrNot_rest_hold 403
+   no_usableOrNot_rest_hold_concl_fails 365
+   no_updates_rest_hold 0
+   no_updates_rest_hold_concl_fails 0
+   all_hold 44
+   first case: no_inOrOut guard (1, 1) step (s,a,t order) (0, 2, 1, 2, 2, 2, 0, 0) allowed (2, 2, 2, 2) conclusion at n=0..3: [1, 1, 1, 1]
+   first case: no_usableOrNot guard (2, 2) step (s,a,t order) (2, 0, 2, 1, 0, 2, 1, 1) allowed (1, 2, 0, 0) conclusion at n=0..3: [2, 2, 1, 1]
+real 5.12
+user 5.00
+sys 0.04

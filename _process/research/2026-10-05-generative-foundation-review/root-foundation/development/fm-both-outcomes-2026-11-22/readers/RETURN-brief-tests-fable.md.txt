@@ -1,0 +1,160 @@
+# Return: reader of the brief, its tests (Fable)
+
+*AI-written (Claude Fable, a reader who took no part; board row FM), 22 November 2026. Read only. No Lean was run: every "goes through", every model and every proposed check below is by hand and unchecked by Lean.*
+
+**Read whole:** `BRIEF-A-CHOICE-AGAINST-EVERY-OUTCOME.md` (152 lines; "brief l." below); `AFTER-TWO-SIDES.md`; `PredicateIteration.lean`; `GuardHorizon.lean` ("GH l."); `Keeping.lean` ll. 64-100 and 265-410; `ScratchTwoSides.lean.txt`; `RETURN-calls-opus.md`. **In part:** the sweep's report, sections 1-3 and 7; `RETURN-premises-fable.md` to the end of its section 1; `ScratchDrainOnTheLaw.lean` (ll. 54-215, 396-449 and its declarations); `ScratchKeptForViable.lean` ll. 259-360; `Lasting.lean`, `KeepableStep.lean`, `Tolerance.lean`, `Undecided.lean` at the lines the brief names; `CommonResponse.lean` ll. 159-232. A script over the `import` lines of the package gave the import closures. **Not opened:** the program and decisions returns (known here only through `AFTER-TWO-SIDES.md`).
+
+## In short
+
+1. **V1 to V7 can all pass while the reading is not a case of anything in Module 1 except the losing step.** The brief's two offered forms of the outcomes premise (l. 59) cannot be met by codes, B.3 gives the exit (l. 105), B.2(a) is allowed its own induction (l. 96), and no V asks whether B.4 calls items 4 to 6. The likely build: items 4, 5, 6 have one case each (GuardHorizon; two of the three are new theorems there), and the report says "said once". This is the first build's T1 again, one level up.
+2. **V1 is passed by construction.** `keepStep` and `loseStep` are GuardHorizon's two steps with their parameters named (brief ll. 45, 48 against GH ll. 138, 295), so the `rfl`s and "no new premise" cannot fail. Its only live clause is a line count, and that one is decided by bookkeeping: of the ten theorems of A.2, five are already one- or two-line calls of the law, and only two proofs have content that would go (`lost_commutes`, five lines; `lost_not_viable`, four lines, the one induction on the horizon).
+3. **B.3 as written cannot be built by the route it prescribes.** With the empty side in `someValues`, the one-step statement for `readingStep` and arbitrary X, Y gives `¬ p ∨ p` for every `p` (model below). The level reading does not need the empty side (`[0, 1, 2, 3]`).
+4. **Item 7 and V6 are decided before the build, and contradict B.3.** The brief's own point 6 says the package has the general theorem, so adding it trips V6's first clause; the other route needs `Lasting` and `Tolerance` imported into Module 1 and a new induction to split a product orbit. If the inductions are kept (V6's own instruction), B.3's "no induction on `n` of its own" cannot be met.
+5. **V2 by its letter fails the brief's own item 6** (a bound that is not a call of the law).
+6. **Module 1 as one file cannot sit under GuardHorizon cheaply.** `each_or_some` is in `Undecided` (34 modules in its import closure; none is among GuardHorizon's 14). A.2 "in a namespace of yours" never tests whether GuardHorizon could import what it is supposed to call.
+7. **Names.** Module 1's `loseStep` is GuardHorizon's `lostStep`; `GuardHorizon.loseStep` (GH l. 226) is the OTHER loss step, which is not the case. Also taken: `GuardHorizon.Kept` (GH l. 493, an inductive), `GuardHorizon.Closed` (GH l. 125), `KeepableStep.keepStep` (l. 73). The trap list names only `Lost` and `Outside`.
+8. **Too large; the deciding part is a subordinate question inside B.3.** Order and cuts at the end.
+
+## 1. The tests V1 to V7
+
+### V1
+
+**Cheapest pass with nothing gained.** Copy GH ll. 142, 299, 302, 328-332 into Module 1 with `ok bad live dead next` for `guard`, `¬ guard`, `Enabled P`, `¬ Enabled P`, `P.step`. A.1 is then `rfl` and each A.2 theorem a one-line application. The table of A.4 is won because Module 1's lines are not in it, helpers of Module 2 (a private `viable ↔ Kept` bridge) are not in it, and "on the whole" lets `lost_commutes` (5 to 1) pay for whatever grows. Any parametrisation of any module passes this.
+
+**An honest build can fail it for no fault of the design.** `Viable` is a recursion, not an iterate (GH l. 88), so every call for `viable_persists`, `viable_closed`, `viable_iff_every_horizon`, `viable_iff_closed` goes through `iter_iff_viable` and cannot be shorter than GH ll. 169-170, 177, 183, 189-190, which already are calls of `iter_persists` and `postfixed_in_iter` chained through each other. Rerouting them through Module 1 adds a layer and removes nothing.
+
+**"Statement copied unchanged" is not checkable as text.** GH's statements depend on section variables (`variable {P guard}`, GH l. 162), on `{S A : Type}` against `Type u`, and on `local notation "L"` (GH l. 314). A copy in another namespace with another `L` or other `open`s is the same text and may be another statement.
+
+**Is it the coordinating session's test, fully? No.** (a) "Its own induction gone": one of the ten has one. `not_viable_of_loss` (GH l. 231), the twin induction in the same section, is not on the list and Module 1 does not reach it (its step has `Enabled → ∃`, not `¬ Enabled ∨ ∃`). (b) "No more lines than it has" is per result; V1 says "on the whole". (c) "An OLD result as a case of another": a module is always the `rfl` case of its own parametrisation. The test needs a second, separately written result to come out as a case. (d) It does not ask that the old module could import the new one.
+
+**Replacement for V1 (brief l. 134):**
+
+> **V1 (GuardHorizon is the case; necessary, not sufficient).** (a) A.1's two equations are not `rfl`. (b) For some theorem of A.2 the check `example : @<yours> = @GuardHorizon.<name> := rfl` does not elaborate (two proofs are equal by `rfl` exactly when their statements agree up to unfolding, with binder order and universes; if this form of check itself will not elaborate, say so and write each statement with `GuardHorizon.`-qualified names, no notation and no `open` of Module 1). (c) Module 1's items 1 to 4 import anything outside GuardHorizon's present imports. **Passing V1 does not show a join:** `keepStep` and `loseStep` are GuardHorizon's steps with their parameters named, so GuardHorizon is their case by construction. Whether Module 1 joins anything is V8.
+
+**Replacement for A.2 (brief l. 75):**
+
+> 2. As calls of Module 1, statements unchanged (check of V1 (b)): `choice_mono`, `lost_mono`, `lost_start`, `lost_commutes`, `lost_shortens`, `lost_not_viable`. Only two of these have a proof with content (`lost_commutes`, GH ll. 328-332; `lost_not_viable`, GH ll. 320-323, the one induction on the horizon): say so in the report and claim no more. Do NOT reroute `viable_persists`, `viable_closed`, `viable_iff_every_horizon`, `viable_iff_closed`: they are already calls of the law through `iter_iff_viable`. `not_viable_of_loss` (GH l. 231) stays an induction of its own; say that Module 1 does not reach it.
+
+**Replacement for A.4 (brief l. 84):**
+
+> 4. **A ledger, four numbers** (lines of declarations with their statements; no docstrings, no blank lines; every helper counted where it stands): L1, Module 1 by item; L2, Module 2 Parts A and B; L3, the lines of GH ll. 141-142, 298-302, 318-338 that the calls replace; L4, `ScratchTwoSides` ll. 18-143, which is what the reading costs without Module 1. Report them; do not cram, do not pad, do not judge.
+
+### V2
+
+**Cheapest pass.** Put any list recursion in Module 2: a filter that builds exact outcome lists for A.3, or a search written out for Part C. V2 names Module 1 only.
+**Honest failure by the letter.** Item 6's `∀ n, Lost n t → Lost all.length t` is a bound and is not a call of the law (it is items 2, 4, 5).
+
+**Replacement (brief l. 135):**
+
+> **V2.** Module 1 or Module 2 has a recursion on a list of its own (a search is a call of `Undecided.each_or_some`, a gathering a call of `gather_listed`), or item 2 or item 3 is not a call of the law in `PredicateIteration`. Item 6's losing bound is a call of items 2, 4 and 5 and is not under this test.
+
+### V3
+
+**Cheapest pass.** Item 5 asks for the outcomes "in the weakest form that goes through" (l. 59). The weakest form is the search itself: `∀ X Y, (∀ u, X u ∨ Y u) → (∀ u, next t a u → X u) ∨ ∃ u, next t a u ∧ Y u`. It names no horizon, so V3 passes; it is weaker than both lists, so the letter of item 5 prefers it; and it hands the whole content of the either-or to each case. In `ScratchTwoSides` the induction is ll. 106-107 and one recursive call at l. 123; the search is ll. 108-130. "No induction of its own" saves three lines.
+**Honest failure by a strict reading.** At a position with one move whose outcomes are all ok, `live t a ∨ dead t a` IS `Kept 1 t ∨ Lost 1 t` (given the two exclusions). So a premise does hand in the outcome at horizon 1 there, and nothing can avoid it. And D.2's statement "unchanged" carries `[DecidablePred target]`, a type class deciding.
+
+**Replacement (brief l. 136):**
+
+> **V3.** A premise of items 5 and 6, A.3, B.3 or B.4 mentions `Kept`, `Lost`, `KeptFor`, `iter` or a horizon; or quantifies over predicates on positions (that hands in the search whole); or is an instance argument or a classical principle. Premises speak only of `ok`, `bad`, `live`, `dead`, `next` (in the cases: the guard, `Enabled`, `Usable`, the step, `decode`, `Seen`) and of lists. Two premises are instances of the conclusion and the docstrings say so: `ok t ∨ bad t` is the either-or at horizon 0; `live t a ∨ dead t a`, at a position with one move whose outcomes are all ok, is the either-or at horizon 1.
+
+### V4
+
+**Cheapest pass.** The first clause cannot fail: the brief itself defines the reading's losing step as `loseStep (…)` (ll. 90-93). The premise clause is by name, so each named premise can be strengthened under its name (`updates` or `usableOrNot` of every code; a non-empty list in `someValues`). And B.4 can be `(kept_or_lost … all.length c).imp (coded_kept_iff_closed within updates).mp id` with `kept_or_lost` from its own lemma and never-both from B.2(a)'s own induction: no theorem of Module 1 called.
+**Honest failure.** The empty side of `someValues` (next section) pushes an honest implementer to add "some value exists", which V4 forbids.
+
+**Replacement (brief l. 137):**
+
+> **V4.** B.4 needs every code listed, or a premise stronger than these as written: `everyMove : ∀ a, a ∈ moves`; `within : ∀ c, codeGuard decode guard c → c ∈ all`; `updates`, `inOrOut`, `usableOrNot` word for word as `ScratchTwoSides` ll. 93-97; `someValues` as in B.3. (Through a reading only the LOSING step is Module 1's by definition; the kept step is the landed `readingStep`, which is not `keepStep`. Say so; do not report "the reading is the case by definition".)
+
+### V5
+
+**Cheapest pass.** Supply the premises, instantiate B.4 at `.both`, then prove "in a closed family" by the filed `starts_in_closed_family_level` and "lost at no horizon" by never-both. B.4's conclusion is used for nothing. This cannot be mended in C.2: the left side can only be had from the kept side, which then gives the rest. Under the level reading the lost codes are the two `.single b l0`, lost at horizon 0 (my reading of `lane_kept` and `keptFor_empty`); under the reading that keeps nothing all nine are lost (the decisions reader's computation, as `AFTER-TWO-SIDES.md` reports it). No one instantiation has both outcomes above horizon 0. V5 is sound as a test of the premises; C.2 is an instance check and should be called that (replacement under Part C).
+
+### V6
+
+**Cheapest pass.** State the general theorem (four lines), make 4 and 5 one-line calls of it from one-step lemmas, and report the calls as shorter by not counting the one-step lemmas; or assert unbuilt what the own inductions "would be".
+**Decided before the build.** Brief l. 24 already says the package has the theorem (`closed_orbit` with `iter_eq_orbit`), so the first clause fails if it is added. The other route needs `Lasting` (39 modules in its closure) and `Tolerance` (17) under Module 1, and a lemma that the product orbit's two projections are the two iterates, which is a new induction on `n`. A structural recursion of three lines is not beaten by a call that needs a bridge. `AFTER-TWO-SIDES.md` (06:29) says so already.
+**It contradicts B.3.** If the inductions are kept, "`kept_or_lost` … with no induction on `n` of its own (the relation of Module 1.7 …)" (l. 105) has nothing to call.
+
+**Replacement for item 7 (brief l. 68) and V6 (l. 139): cut V6; item 7 becomes:**
+
+> 7. **No general theorem for a relation kept along two iterations.** It is three lines and the package has it as invariance of an orbit; a call of that needs `Lasting` and `Tolerance` under Module 1. Items 4 and 5 and B.3 are each a recursion on the horizon of at most four lines whose successor case is ONE application of a one-step lemma. The one-step lemmas are theorems in their own right, for arbitrary X and Y, with docstrings: `(∀ t, X t → Y t → False) → ∀ t, keepStep … X t → loseStep … Y t → False`, and `(∀ t, X t ∨ Y t) → ∀ t, keepStep … X t ∨ loseStep … Y t`. They are the content; the recursion is told as three lines.
+
+### V7
+
+Sound and mechanical. One line to add, so that an axiom from a tactic in a Part C computation is not read as a verdict on Module 1: "Report axioms per declaration and per module."
+
+## 2. Module 1, item by item
+
+1. **The two steps.** Sound; it is GH's terms with names changed, which is the design.
+2. **The kept bound.** Cheapest pass: two wrappers of `iter_iff_all`, `iter_postfixed`, `postfixed_in_iter`. Gains nothing by itself: the kept bound is already said once (the law) with two landed cases (GH ll. 181-190; `Keeping` l. 380), and `coded_kept_iff_closed` cannot become a case (`readingStep` is not `keepStep`). **Add to the item:** "This is an ingredient of item 6 and is not reported as a join: it is a third statement of the law's bound."
+3. **The losing bound with nothing decided.** Sound (two one-line calls). **Add:** "Nothing in item 6, A.3 or B.4 calls it; it stands beside them. If your report shows one of them calling it, a detour has been taken."
+4. **Never both.** Sound.
+5. **One or the other.** The hole of V3, and the fork that decides the design. An exact list forces GuardHorizon to build filtered lists (a list recursion in Module 2); the superset form costs GuardHorizon one line. Neither form is met by codes: the outcomes of a move from a code are the codes `d` with `∃ o, Names decode d (Seen …)`, two codes can name one class, and naming is not decided. **Replacement for the outcomes clause (brief l. 59):**
+
+> … and the outcomes of a live move from an ok position inside a list on which `next` is decided: `∀ t, ok t → ∀ a, live t a → ∃ l : List T, (∀ u, next t a u → u ∈ l) ∧ ∀ u, u ∈ l → next t a u ∨ ¬ next t a u` (an exact list is its case). Do not weaken this to a statement about every pair of predicates. This form is not met by codes; B.0 asks what form is.
+
+6. **The statement.** Sound, given V2's rewording.
+7. Replaced above.
+
+**Also for Module 1 (brief l. 36):** "Two files. `ScratchChoice`: items 1 to 4, importing `Becoming.PredicateIteration` only. `ScratchChoiceEither`: items 5 and 6, importing `Becoming.Undecided` for `each_or_some`. Name the steps so that nothing collides: Module 1's losing step is GuardHorizon's `lostStep`, and `GuardHorizon.loseStep` (l. 226) is a different step; `GuardHorizon.Kept` (l. 493), `GuardHorizon.Closed` (l. 125) and `KeepableStep.keepStep` (l. 73) exist."
+
+## 3. Module 2, part by part
+
+**A.1.** Cannot fail. **A.2, A.4.** Replaced above. **A.3.** "Weaken where you can" and "if the either-or's own premises allow that" (ll. 76, 83) leave the signature to the implementer; the cheapest pass weakens nothing and takes one list of every configuration, so "the guarded configurations only" is not tested. **Replacement:** "`viable_or_lost` from: `everyMove`; `every : ∀ s, s ∈ states` (for the outcomes); `guard s ∨ ¬ guard s`; `P.step s a t ∨ ¬ P.step s a t` (derive `Enabled P s a ∨ ¬ Enabled P s a` by `each_or_some`, do not assume it). `closed_or_lost` with a second list `within : ∀ s, guard s → s ∈ all`, the bound at `all.length`."
+
+**B.1.** Cheapest pass: five one-line wrappers, which are five more declarations saying nothing new. **Replacement:** "State none of them again. In the report, name the theorem of Module 1 that serves for each."
+
+**B.2.** (a) keeps its own induction; (b) is used by nothing (B.4's second half is (a) with `keptFor_of_closed`). So through a reading item 4 is called by nothing, and there are two inductions for never-both where the first build had one. I checked (b) by hand: it holds with no premise (a usable move from the wider class is usable from the narrower; `Seen.mono`). **Replacement:** "(b) is optional and last; if stated, say it is used by nothing here. Say in the report that item 4 has no use through a reading unless B.0 succeeds."
+
+**B.3, the premise.** The one-step statement `(∀ d, X d ∨ Y d) → ∀ c, readingStep … X c ∨ loseStep … Y c` does not follow from the premises listed. Model: `S := Empty`, `A := Unit`, `O := PLift p`, `C := Unit`, `decode () := fun _ => False`. Every `Seen` class is empty, so `someValues` holds with `[]` and the empty side; `updates`, `inOrOut`, `usableOrNot`, the list of moves hold. With `X := fun _ => False`, `Y := fun _ => True`: `readingStep X ()` is `∀ o : PLift p, ∃ d, False ∧ …`, that is `¬ p`; `loseStep Y ()` is `∃ o : PLift p, …`, that is `p`. So the statement gives `¬ p ∨ p`. (`kept_or_lost` itself is true there: an empty class is kept, by `keptFor_empty`. It is the arbitrary X that breaks; the premises reader's repair was an induction on `KeptFor`, not a one-step lemma.) An implementer must then strengthen the relation, or keep an induction, or add a premise: each against some letter of the brief. **Replacement for `someValues` (brief ll. 99-103) and C.2's list:**
+
+> ```lean
+> (someValues : ∀ c, codeGuard decode guard c → ∀ a, Usable P allowed (decode c) a →
+>   ∃ values : List O, ∀ o, ∃ o', o' ∈ values ∧
+>     ∀ s, Seen P sense (decode c) a o s → Seen P sense (decode c) a o' s)
+> ```
+> (no empty side: with it the one-step statement for arbitrary X decides whether a value exists). For the level reading: `[0, 1, 2, 3]`.
+
+**B.3, the question (l. 105).** "Settle it and say; if it costs a premise … leave" is the exit an exact implementer takes at once, since the cost is plain on reading. Yet this question is the design. **Replacement: a new first part, B.0, before items 2, 3, 6 and Parts A.2, C:**
+
+> **B.0 (first; this decides the design).** Try the reading as a call of items 4 and 5 themselves: positions the codes, `ok := codeGuard decode guard`, `bad := Outside decode guard`, `live c a := Usable P allowed (decode c) a`, `dead` its negation, `next c a d := ∃ o, Names decode d (Seen …)`. Report with lines: (i) the bridge `iter (keepStep …) (codeGuard …) n c ↔ KeptFor … n (decode c)` from `updates` (it is a twin of the landed `iter_iff_kept`: say that the reading then has two coded kept steps); (ii) the form of item 5's outcomes premise that BOTH cases meet, if there is one. On paper, unchecked: a list of outcomes such that every outcome lies below a listed one, for a relation `below` that `ok`, `live` and `next` respect (equality for GuardHorizon; inclusion of classes for the reading, by `updates`, `Seen.mono` and `someValues`), with "kept at `n`" going down along `below` by one more recursion. Give it at most 25 builds. If it stands: B.4 and A.3 are calls of the same items 4 and 5; say what it cost. If not: say what blocked it in the first line of the report, keep the reading's either-or as its own one-step lemma, and report that items 4, 5, 6 have one case each.
+
+**B.4.** Sound as a statement. Needs V8 (below).
+
+**C.1.** "The case's own edge, as in `ScratchTwoSides`" (l. 118) is the hand walk of ll. 191-201, which repeats `Drain.together_not_kept_none`. This is the one place the either-or can do work in the case: a "not kept" turned into a "lost". **Replacement:** "`Lost 3 (l2, l2)` from the filed `Drain.together_not_kept_none` through B.4's corollary `Lost n c ↔ ¬ KeptFor … n (decode c)`: no walk, no `step` helper. `Lost 4` then by `iter_succ`. Not below 3 from `together_kept_two_none`."
+**C.2.** **Replacement for its last sentence:** "State B.4 for every `c : LCode` as one theorem. Say in its docstring and in the report that this is a check that a reading with unboundedly many values meets the premises; the theorem's conclusion gives nothing there that the kept side did not have."
+**C.3.** It uses no code and nothing of Modules 1 and 2; it passes or fails apart from the design. **Cut it from this run** (it is row DJ's kind of statement).
+
+**D.1.** The package already has the pair with one move: `regionStep` and `reachStep` (`CommonResponse` ll. 167, 197), with `region_mono`, `reach_mono`, `reach_commutes` proved there and `Lasting.iter_region_iff_lasts` (l. 251) landed. As written, D.1 invites a second bridge for `Lasts` by a new `iter_iff_stages`. These three are also the only landed proofs OUTSIDE GuardHorizon that could come out as cases of Module 1's steps (by a pointwise `↔`, not `rfl`). **Replacement:** "D.1: `regionStep R Q X s ↔ keepStep Q (fun _ (_ : Unit) => True) (fun s _ t => R s t) X s` and the like for `reachStep`; then `region_mono`, `reach_mono`, `reach_commutes` as calls, lines against lines; `Lasts` through the landed `iter_region_iff_lasts`, no new bridge; the either-or (in the region for `n` steps, or out within `n`)."
+**D.2.** `Reaches` (l. 562) answers every admissible disturbance; Module 1's losing step answers with some outcome. With one move it is not `loseStep` (the sweep, section 3: "a different pair"), so D.2 can only test the three-line relation of item 7, with a bridge for `Reaches` counted, against proofs of three lines (ll. 701-703, 847-849). The result is known. **Cut D.2.**
+**D.3.** Sound as a bridge and a new either-or; it removes no old proof. Tell it as a new statement.
+
+**E.** Its first two parts are the docstring facts again: at horizon 0 the either-or is `ok t ∨ bad t`, so "every proposition would be decided" is one line with `T := Unit`; likewise `live ∨ dead` at horizon 1. Only the two list parts have content, and they depend on the final form of item 5's premise. **Separate run.**
+
+**The docstring rule (l. 34).** It is in no V and the implementer certifies itself, as in the first build. A docstring that says the statement symbol for symbol at any length meets it. **Add:** "At most three sentences; each hypothesis once, in the statement's order; if that cannot be done the statement wants splitting: say so. You do not certify docstrings; a reader will."
+
+## 4. What would show the design is not a join
+
+V1 is not that test. **Two tests to add after V7:**
+
+> **V8 (the join).** For B.4 and for A.3's `closed_or_lost`, list every theorem the proof names, down to the package. Module 1 joins the two cases only if both are calls of the same item 4 and the same item 5. If B.4 calls neither, then items 4, 5, 6 are said once and used once, and the build shows this and no more: the losing step is one step for both cases (items 1 and 3), and the either-or is two lemmas. It is told as that, and Module 1's items 2, 4, 5, 6 are told as GuardHorizon's with its parameters named.
+>
+> **V9 (the ledger).** If L1 + L2 > L3 + L4 (A.4), Module 1 costs more lines than the copy it prevents plus the proofs it replaces. Report the numbers; a reader decides what they mean.
+
+**Replacement for "What to return" (1) (brief l. 152):** "(1) in eight lines: what built clean, what did not. For V1 to V9 report the facts each asks for (the checks, the premises word for word, the lists of calls, the ledger). Give no verdict of passed or failed: a reader gives it."
+
+## 5. Size and order
+
+Too large for one run, and the part that decides the design sits last in B.3 as a question with an exit. Seven items and five parts will be filled from the top: items 1 to 3 and A.1, A.2 are sure and cheap, and they will be the bulk of a report that looks complete.
+
+**Run 1, in this order:** Module 1 items 1 and 4 with their one-step lemma; item 5 in the fixed form with its one-step lemma; A.1; A.3's `viable_or_lost`; **B.0**; then items 2, 6; A.3's `closed_or_lost`; B.3, B.4; A.2 (six) with the checks; C.1; C.2; item 3 (two lines); the ledger and the lists of calls.
+**Cut:** item 7's general theorem and V6; B.1's restatements; C.3; D.2; B.2(b) unless B.0 fails and time remains.
+**Run 2, separate, after a reader has read run 1:** D.1 through `regionStep` and `reachStep`, D.3, and E's two list parts. D gives new statements and three small old proofs as cases; E depends on the premise forms run 1 settles. Neither bears on whether Module 1 is a join of GuardHorizon and the reading.
+
+## 6. Not done, and how sure
+
+- No Lean: the `rfl` check of V1 (b), the model against B.3, B.2(b) without premises, and the `below` form in B.0 are by hand.
+- The import closures are from `import` lines by script (GuardHorizon 14 modules; `Undecided` 34; `Lasting` 39; `Tolerance` 17; only `OpenedCorrection` imports GuardHorizon).
+- Line counts of GH proofs are of proof bodies as they stand in the file.
+- I did not check the program reader's models, on which Part E rests, or whether `Becoming.Choice` stays free of clashes beyond a search for `namespace Choice` (none found).

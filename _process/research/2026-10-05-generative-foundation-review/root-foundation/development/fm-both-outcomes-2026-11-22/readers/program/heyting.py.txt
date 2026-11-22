@@ -1,0 +1,171 @@
+"""AI-written (Claude Fable, reader 'program'), 22 November 2026.
+
+A model in which a proposition has three values, not two: 0 (never), 1 (not yet, later), 2 (now).
+This is the Heyting algebra of the two-step chain (a Kripke frame with two worlds). and = min,
+or = max, a -> b is 2 where a <= b and b otherwise, not a is a -> 0; a quantifier over a finite
+carrier is min or max. Reasoning that decides nothing is sound in it: whatever follows from
+premises without excluded middle has a value at least the least value of the premises. So a
+case where every premise but one has value 2 and the conclusion does not is a case where that
+one premise is doing work. It tests `inOrOut` and `usableOrNot`, which hold of every two-valued
+case. It does NOT test the lists (`everyMove`, `everyValue`): the carriers here are finite and
+the same at both worlds.
+
+guard, step, allowed take values in {0,1,2}. `sense` is a function (one value kept). The codes
+are every three-valued predicate on the configurations ('allH', so every class seen has an
+exact code) or only the two-valued ones ('crisp').
+Usage: python3 heyting.py nS nA family [sample seed]
+"""
+import random
+import sys
+from itertools import product
+
+nS, nA = int(sys.argv[1]), int(sys.argv[2])
+family = sys.argv[3]
+sample = int(sys.argv[4]) if len(sys.argv) > 4 else None
+rng = random.Random(int(sys.argv[5]) if len(sys.argv) > 5 else 1)
+H = (0, 1, 2)
+S = range(nS)
+A = range(nA)
+
+
+def imp(a, b):
+    return 2 if a <= b else b
+
+
+def neg(a):
+    return imp(a, 0)
+
+
+def iff(a, b):
+    return min(imp(a, b), imp(b, a))
+
+
+codes = list(product(H if family == "allH" else (0, 2), repeat=nS))
+k = len(codes)
+N = k + 1
+stats = {"models": 0, "sequent_fail": 0, "lost_and_kept_not_refuted": 0, "bound_fail": 0,
+         "concl0_differs_from_inOrOut": 0,
+         "no_inOrOut_rest_hold": 0, "no_inOrOut_rest_hold_concl_fails": 0,
+         "no_usableOrNot_rest_hold": 0, "no_usableOrNot_rest_hold_concl_fails": 0,
+         "no_updates_rest_hold": 0, "no_updates_rest_hold_concl_fails": 0,
+         "all_hold": 0}
+wit = {}
+
+
+def models():
+    if sample is None:
+        for guard in product(H, repeat=nS):
+            for step in product(H, repeat=nS * nA * nS):
+                for allowed in product(H, repeat=nS * nA):
+                    yield guard, step, allowed
+    else:
+        for _ in range(sample):
+            yield (tuple(rng.choice(H) for _ in range(nS)),
+                   tuple(rng.choice(H) for _ in range(nS * nA * nS)),
+                   tuple(rng.choice(H) for _ in range(nS * nA)))
+
+
+for guard, step, allowed in models():
+    stats["models"] += 1
+    st = lambda s, a, t: step[(s * nA + a) * nS + t]
+    al = lambda s, a: allowed[s * nA + a]
+    enabled = [[max((st(s, a, t) for t in S), default=0) for a in A] for s in S]
+
+    def seen(B, a):
+        return tuple(max((min(B[s], st(s, a, t)) for s in S), default=0) for t in S)
+
+    def usable(B, a):
+        return min((imp(B[s], min(al(s, a), enabled[s][a])) for s in S), default=2)
+
+    def within(B):
+        return min((imp(B[s], guard[s]) for s in S), default=2)
+
+    kept = {}
+
+    def keptfor(n, B):
+        key = (n, B)
+        if key not in kept:
+            w = within(B)
+            if n == 0:
+                kept[key] = w
+            else:
+                kept[key] = min(w, max((min(usable(B, a), keptfor(n - 1, seen(B, a)))
+                                        for a in A), default=0))
+        return kept[key]
+
+    def names(d, B):
+        return min((iff(d[s], B[s]) for s in S), default=2)
+
+    def outside(c):
+        return max((min(c[s], neg(guard[s])) for s in S), default=0)
+
+    US = {c: [usable(c, a) for a in A] for c in codes}
+    SE = {c: [seen(c, a) for a in A] for c in codes}
+    NM = {c: [[names(d, SE[c][a]) for d in codes] for a in A] for c in codes}
+    OUT = {c: outside(c) for c in codes}
+    L = dict(OUT)
+    Ls = [L]
+    for n in range(N):
+        L2 = {}
+        for c in codes:
+            body = min((max(neg(US[c][a]),
+                            max((min(NM[c][a][i], L[d]) for i, d in enumerate(codes)), default=0))
+                        for a in A), default=2)
+            L2[c] = max(OUT[c], body)
+        Ls.append(L2)
+        L = L2
+    updates = min(imp(within(c), min((imp(US[c][a], max(NM[c][a], default=0)) for a in A),
+                                     default=2)) for c in codes)
+    inOrOut = min(max(within(c), OUT[c]) for c in codes)
+    usableOrNot = min(imp(within(c), min((max(US[c][a], neg(US[c][a])) for a in A), default=2))
+                      for c in codes)
+    concl = [min(max(keptfor(n, c), Ls[n][c]) for c in codes) for n in range(N + 1)]
+    worst = min(concl)
+    prem = min(updates, inOrOut, usableOrNot)
+    if family == "crisp" and all(v != 1 for v in guard + step + allowed):
+        # a two-valued case: must agree with the literal two-valued model
+        from naive import Model
+        stp = {(s, a, t) for s in S for a in A for t in S if st(s, a, t) == 2}
+        M = Model(S, A, ["u"], stp, {e: "u" for e in stp}, {s for s in S if guard[s] == 2},
+                  {(s, a) for s in S for a in A if al(s, a) == 2},
+                  {c: {s for s in S if c[s] == 2} for c in codes})
+        stats["two_valued_cases_compared"] = stats.get("two_valued_cases_compared", 0) + 1
+        for c in codes:
+            for n in range(N + 1):
+                if (keptfor(n, c) == 2) != M.KeptFor(n, M.decode[c]) or keptfor(n, c) == 1 \
+                        or (Ls[n][c] == 2) != M.Lost(n, c) or Ls[n][c] == 1:
+                    stats["two_valued_mismatch"] = stats.get("two_valued_mismatch", 0) + 1
+    if any(prem > v for v in concl):
+        stats["sequent_fail"] += 1
+        wit.setdefault("sequent_fail", (guard, step, allowed))
+    if any(min(Ls[n][c], keptfor(n, c)) != 0 for c in codes for n in range(N + 1)):
+        stats["lost_and_kept_not_refuted"] += 1
+        wit.setdefault("lost_and_kept", (guard, step, allowed))
+    if any(Ls[k + 1][c] > Ls[k][c] for c in codes):
+        stats["bound_fail"] += 1
+        wit.setdefault("bound_fail", (guard, step, allowed))
+    if concl[0] != inOrOut:
+        stats["concl0_differs_from_inOrOut"] += 1
+    if prem == 2:
+        stats["all_hold"] += 1
+    if updates == 2 and usableOrNot == 2 and inOrOut < 2:
+        stats["no_inOrOut_rest_hold"] += 1
+        if worst < 2:
+            stats["no_inOrOut_rest_hold_concl_fails"] += 1
+            wit.setdefault("no_inOrOut", (guard, step, allowed, concl[:4]))
+    if updates == 2 and inOrOut == 2 and usableOrNot < 2:
+        stats["no_usableOrNot_rest_hold"] += 1
+        if worst < 2:
+            stats["no_usableOrNot_rest_hold_concl_fails"] += 1
+            wit.setdefault("no_usableOrNot", (guard, step, allowed, concl[:4]))
+    if inOrOut == 2 and usableOrNot == 2 and updates < 2:
+        stats["no_updates_rest_hold"] += 1
+        if worst < 2:
+            stats["no_updates_rest_hold_concl_fails"] += 1
+            wit.setdefault("no_updates", (guard, step, allowed, concl[:4]))
+print("nS", nS, "nA", nA, "codes", family, k, "levels 0..%d" % N, "sample", sample)
+for key, v in stats.items():
+    print("  ", key, v)
+for key, v in wit.items():
+    print("   first case:", key, "guard", v[0], "step (s,a,t order)", v[1], "allowed", v[2],
+          ("conclusion at n=0..3: %s" % (v[3],)) if len(v) > 3 else "")

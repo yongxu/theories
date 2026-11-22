@@ -1,0 +1,146 @@
+import Becoming.PredicateIteration
+
+/-! AI-written scratch, board row FM. A move to keep every outcome, and a reply to every move. -/
+
+namespace Becoming.Choice
+
+open Iteration
+
+universe u v
+
+variable {T : Type u} {A : Type v}
+
+/-- The position is ok and has a live move every outcome of which belongs to X. -/
+def stayStep (ok : T → Prop) (live : T → A → Prop) (next : T → A → T → Prop)
+    (X : T → Prop) (t : T) : Prop :=
+  ok t ∧ ∃ a, live t a ∧ ∀ u, next t a u → X u
+
+/-- The position is bad, or each move there is dead or has an outcome in Y. -/
+def outStep (bad : T → Prop) (dead : T → A → Prop) (next : T → A → T → Prop)
+    (Y : T → Prop) (t : T) : Prop :=
+  bad t ∨ ∀ a, dead t a ∨ ∃ u, next t a u ∧ Y u
+
+/-- Staying for n steps is membership in the n-th iterate of the staying step from ok. -/
+def Stays (ok : T → Prop) (live : T → A → Prop) (next : T → A → T → Prop) :=
+  iter (stayStep ok live next) ok
+
+/-- Being out at horizon n is membership in the n-th iterate of the out step from bad. -/
+def Out (bad : T → Prop) (dead : T → A → Prop) (next : T → A → T → Prop) :=
+  iter (outStep bad dead next) bad
+
+/-- Each member of K has a staying step into K. -/
+def StayClosed (ok : T → Prop) (live : T → A → Prop) (next : T → A → T → Prop)
+    (K : T → Prop) : Prop := ∀ t, K t → stayStep ok live next K t
+
+variable {ok bad : T → Prop} {live dead : T → A → Prop} {next : T → A → T → Prop}
+
+/-- Enlarging the class of outcomes preserves a staying step. -/
+theorem stay_mono : MonotoneStep (stayStep ok live next) :=
+  fun sub _ ⟨safe, a, usable, later⟩ => ⟨safe, a, usable, fun u step => sub u (later u step)⟩
+
+/-- Enlarging the class of outcomes preserves an out step. -/
+theorem out_mono : MonotoneStep (outStep bad dead next) :=
+  fun sub _ h => h.imp id fun each a => (each a).imp id fun ⟨u, step, lost⟩ =>
+    ⟨u, step, sub u lost⟩
+
+/-- A position with a staying step into X is ok. -/
+theorem stay_ok {X : T → Prop} (t : T) : stayStep ok live next X t → ok t := And.left
+
+/-- A bad position belongs to the out step from the bad positions. -/
+theorem out_start (t : T) : bad t → outStep bad dead next bad t := Or.inl
+
+/-- If every move is listed, the out step commutes with implication to each proposition. -/
+theorem out_commutes {moves : List A} (everyMove : ∀ a, a ∈ moves) (G : Prop) :
+    CommutesWithImplication (outStep bad dead next) G :=
+  fun W t h finish => h.elim (fun fail => finish (.inl fail)) fun each =>
+    gather_listed (D := fun a => dead t a ∨ ∃ u, next t a u ∧ W u) moves
+      (fun a _ give => (each a).elim (fun no => give (.inl no))
+        fun ⟨u, step, k⟩ => k fun w => give (.inr ⟨u, step, w⟩))
+      (fun replies => finish (.inr fun a => replies a (everyMove a)))
+
+/-- Every member of a stay-closed set stays for every horizon. -/
+theorem closed_stays {K : T → Prop} (closed : StayClosed ok live next K) :
+    ∀ n t, K t → Stays ok live next n t :=
+  postfixed_in_iter stay_mono (fun t h => (closed t h).1) closed
+
+variable {all : List T}
+
+section Falling
+
+variable (within : ∀ t, ok t → t ∈ all)
+
+include within in
+/-- If all ok positions are listed, the positions staying for the list length are stay-closed. -/
+theorem stays_closed : StayClosed ok live next (Stays ok live next all.length) :=
+  iter_postfixed stay_mono stay_ok within
+
+include within in
+/-- If all ok positions are listed, staying for the list length is equivalent to staying
+for every horizon. -/
+theorem stays_iff_all {t : T} : Stays ok live next all.length t ↔ ∀ n, Stays ok live next n t :=
+  iter_iff_all stay_mono stay_ok within
+
+include within in
+/-- If all ok positions are listed, staying for the list length is equivalent to membership
+in some stay-closed set. -/
+theorem stays_iff_closed {t : T} :
+    Stays ok live next all.length t ↔ ∃ K, StayClosed ok live next K ∧ K t :=
+  ⟨fun h => ⟨_, stays_closed within, h⟩, fun ⟨_, closed, held⟩ => closed_stays closed _ t held⟩
+
+end Falling
+
+section Rising
+
+variable {moves : List A} (everyMove : ∀ a, a ∈ moves) {t : T}
+  (within : ∀ x, (bad x → Out bad dead next all.length t) → x ∈ all)
+
+include everyMove within
+
+/-- List every move and every x where bad x implies that t is out at the position-list length.
+With nothing decided, listing all positions suffices for this cover. Being out one step past
+that length implies being out at it. -/
+theorem out_shortens : Out bad dead next (all.length + 1) t → Out bad dead next all.length t :=
+  iter_shortens out_mono out_start (out_commutes everyMove _) within
+
+/-- List every move and every x where bad x implies that t is out at the position-list length.
+With nothing decided, listing all positions suffices for this cover. Being out at any horizon
+implies being out at the position-list length. -/
+theorem out_within_length : ∀ n, Out bad dead next n t → Out bad dead next all.length t :=
+  iter_within_length out_mono out_start (out_commutes everyMove _) within
+
+end Rising
+
+section Exclusion
+
+variable (apart : ∀ t, ok t → bad t → False) (exclusive : ∀ t a, live t a → dead t a → False)
+
+include apart exclusive
+
+/-- If ok excludes bad and live excludes dead, disjoint classes X and Y have disjoint staying
+and out steps respectively. -/
+theorem steps_disjoint {X Y : T → Prop} (disjoint : ∀ t, X t → Y t → False) :
+    ∀ t, stayStep ok live next X t → outStep bad dead next Y t → False :=
+  fun t ⟨safe, a, usable, stays⟩ h => h.elim (apart t safe) fun each =>
+    (each a).elim (exclusive t a usable) fun ⟨u, step, out⟩ => disjoint u (stays u step) out
+
+/-- Suppose ok excludes bad and live excludes dead. If stage zero lies inside ok and each
+successor stage lies inside the staying step of its predecessor, no stage meets Out at its horizon. -/
+theorem stage_disjoint {stage : Nat → T → Prop} (zero : ∀ t, stage 0 t → ok t)
+    (below : ∀ n t, stage (n + 1) t → stayStep ok live next (stage n) t) :
+    ∀ n t, stage n t → Out bad dead next n t → False
+  | 0, t, h => apart t (zero t h)
+  | n + 1, t, h => steps_disjoint apart exclusive (stage_disjoint zero below n) t (below n t h)
+
+/-- If ok excludes bad and live excludes dead, staying for n steps excludes being out at n. -/
+theorem stays_disjoint : ∀ n t, Stays ok live next n t → Out bad dead next n t → False :=
+  stage_disjoint apart exclusive (fun _ => id) (fun _ _ => id)
+
+/-- If ok excludes bad and live excludes dead, every member of a stay-closed set escapes Out
+at every horizon. -/
+theorem closed_never_out {K : T → Prop} (closed : StayClosed ok live next K) {t : T} (held : K t) :
+    ∀ n, ¬ Out bad dead next n t :=
+  fun n => stays_disjoint apart exclusive n t (closed_stays closed n t held)
+
+end Exclusion
+
+end Becoming.Choice

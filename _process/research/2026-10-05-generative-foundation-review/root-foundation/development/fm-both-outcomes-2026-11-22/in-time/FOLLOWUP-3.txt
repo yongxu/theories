@@ -1,0 +1,14 @@
+A third follow-up to the same module. A second reader who took no part read the mend (its return: /Users/ren/theories/tmp/fm/centre22/readers/RETURN-in-time-mended-fable.md; read its sections 1, 4 and 5). It found everything right, and that NO new theorem of the module holds a comparison in which the reading makes a difference. It gave, checked by hand only, a class on Drain where two readings differ at TWO steps, the least horizon `keptFor_one_iff_change_reading` allows. Build that. Same rules as before (build only with /Users/ren/tmp/fm/run-build12.sh <n> ScratchInTime, numbers from 204 and below 220; no axiom; docstrings of at most three sentences that say exactly the statement, "reading of steps" for a reading, naming the guard and that every move is allowed; edit only ScratchInTime.lean; start no agents; another implementer is building other modules in the same tree, the wrapper waits its turn). You report facts and give no verdicts.
+
+Let `mixed : Bool × Nat → Prop := fun s => s = (true, 2) ∨ s = (false, 1)` (lane true at level 2 and lane false at level 1).
+
+1. `mixed` is kept for one step under every reading of steps (the move `false` leads to `(true, 1)` and `(false, 1)`), by `keptFor_one_iff`.
+2. `mixed` is NOT kept for two steps under the reading of steps that keeps nothing (`noneRead`), and NOT under the one that keeps the level reached (`Drain.keepsLevel`): the first move must be `false` (the move `true` puts `(false, 1)` at level 0), and the class seen after it, at the one value both steps give, holds both `(true, 1)` and `(false, 1)`, which is not kept for one step. Use `ones_not_kept_one` (with `KeptFor.mono` if the class seen contains `ones` rather than being it) so that the failure rests on the level-1 theorem and is not proved afresh.
+3. `mixed` IS kept at every horizon under the reading of steps that keeps the configuration a step ended in (`endRead`, ScratchKeptForViable l. 23): after the move `false` each class seen lies in one lane above level zero (`Drain.lane_kept`; see how `Drain.together_kept_end`, l. 413, does it for `Drain.starts`).
+4. One theorem conjoining 2 and 3 at two steps, named by what it holds (for instance `mixed_kept_two_end_not_none_not_level`): `KeptFor … endRead … 2 mixed ∧ ¬ KeptFor … noneRead … 2 mixed ∧ ¬ KeptFor … Drain.keepsLevel … 2 mixed`.
+
+If any of 1 to 3 is false as stated (the reader's check was by hand), say exactly what fails and state what is true instead; do not force it.
+
+5. In the module's header comment (not in a docstring), one line: at two steps the analogue of `keptFor_one_iff_change_reading` fails already in the package, by `Viability.Matching.keeping_matters` (Keeping.lean l. 508).
+
+Leave the other theorems as they are. Then update /Users/ren/theories/tmp/fm/centre22/in-time/REPORT.md (the new statements as they stand and what each calls, the last build's JSON, the number of builds) and return it as your final answer.

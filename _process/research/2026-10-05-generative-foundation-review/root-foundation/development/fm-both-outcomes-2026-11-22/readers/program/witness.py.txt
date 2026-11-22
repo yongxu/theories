@@ -1,0 +1,78 @@
+"""AI-written (Claude Fable, reader 'program'), 22 November 2026.
+
+Concrete cases, each evaluated with the literal model (naive.py), every definition printed.
+  W2   the smallest case where a code's class is neither kept nor lost (question 2)
+  W3a  `Names` weakened to "the code's class CONTAINS the class seen": lost and kept together
+  W3b  `Names` weakened to "the code's class lies INSIDE the class seen": neither
+  W4   the chain: k codes, the least losing level is k; kept for k - 1 and not for k
+  W4o  the chain with a configuration outside the guard at its end: k codes, level k - 1
+"""
+from naive import Model
+
+U = "u"   # the one value kept
+
+
+def show(title, M, levels, codes=None):
+    print("==", title)
+    print("   S", M.S, "A", M.A, "O", M.O, "guard", sorted(M.guard))
+    print("   steps", sorted(M.step), "allowed", sorted(M.allowed))
+    print("   codes", {c: sorted(B) for c, B in M.decode.items()}, "names:", M.names)
+    print("   updates (guarded codes, usable moves):", M.updates(True),
+          "| updates (every code and move):", M.updates(False))
+    for c in (codes or M.C):
+        row = []
+        for n in levels:
+            row.append("n=%d kept=%s lost=%s" % (n, "T" if M.KeptFor(n, M.decode[c]) else "F",
+                                                "T" if M.Lost(n, c) else "F"))
+        print("   code", c, "class", sorted(M.decode[c]), "codeGuard", M.codeGuard(c),
+              "Outside", M.Outside(c), "|", "; ".join(row),
+              "| in a closed family:", M.InClosedFamily(M.decode[c]))
+
+
+# W2: two configurations, one move, one value, one code.
+M = Model(S=[0, 1], A=["a"], O=[U], step={(1, "a", 0)}, sense={(1, "a", 0): U},
+          guard={1}, allowed={(1, "a")}, decode={"c": {1}})
+show("W2: neither kept nor lost at n = 1 (the class seen, {0}, has no code)", M, range(4))
+print("   Usable from {1}:", M.Usable({1}, "a"), "| Seen:", sorted(M.Seen({1}, "a", U)))
+M2 = Model(S=[0, 1], A=["a"], O=[U], step={(1, "a", 0)}, sense={(1, "a", 0): U},
+           guard={1}, allowed={(1, "a")}, decode={"c": {1}, "d": {0}})
+show("W2 with the missing code added: decided again", M2, range(4))
+
+# W3a: a code that only contains the class seen.
+kw = dict(S=[0, 1], A=["a"], O=[U], step={(0, "a", 0)}, sense={(0, "a", 0): U},
+          guard={0}, allowed={(0, "a")}, decode={"c": {0}, "big": {0, 1}})
+show("W3a exact Names: {0} stays at 0, kept for ever, never lost", Model(**kw), range(4))
+show("W3a Names as containment (class seen inside the code's class): lost AND kept at n = 1",
+     Model(names="super", **kw), range(4))
+
+# W3b: a code that lies inside the class seen.
+kw = dict(S=[0, 1, 2], A=["a"], O=[U], step={(0, "a", 1), (0, "a", 2), (1, "a", 1)},
+          sense={(0, "a", 1): U, (0, "a", 2): U, (1, "a", 1): U},
+          guard={0, 1}, allowed={(0, "a"), (1, "a")}, decode={"c": {0}, "part": {1}})
+show("W3b exact Names, the class seen {1,2} has no code: neither at n = 1", Model(**kw), range(3))
+show("W3b Names as 'inside the class seen': still neither (the part {1} is kept), never both",
+     Model(names="sub", **kw), range(3))
+
+# W4: the chain. Configurations 1..k, all within the guard; the one move takes i to i - 1;
+# nothing follows 1. Codes: the k classes {i}.
+for k in (2, 3, 4, 5, 6):
+    S = list(range(1, k + 1))
+    step = {(i, "a", i - 1) for i in S if i >= 2}
+    M = Model(S=S, A=["a"], O=[U], step=step, sense={e: U for e in step}, guard=set(S),
+              allowed={(i, "a") for i in S}, decode={i: {i} for i in S})
+    first = {c: min(n for n in range(k + 3) if M.Lost(n, c)) for c in M.C}
+    edge = {c: max(n for n in range(k + 3) if M.KeptFor(n, M.decode[c])
+                   and not M.KeptFor(n + 1, M.decode[c])) for c in M.C}
+    guarded = sum(M.codeGuard(c) for c in M.C)
+    print("== W4 chain, k = %d codes, %d guarded: updates %s; least losing level per code %s; "
+          "largest n kept-and-not-n+1 per code %s; lost at k - 1: %s; lost at k: %s"
+          % (k, guarded, M.updates(True), first, edge, M.Lost(k - 1, k), M.Lost(k, k)))
+    # the same with 0 outside the guard below 1: codes {0}..{k-1}
+    S = list(range(0, k))
+    step = {(i, "a", i - 1) for i in S if i >= 1}
+    M = Model(S=S, A=["a"], O=[U], step=step, sense={e: U for e in step}, guard=set(S) - {0},
+              allowed={(i, "a") for i in S}, decode={i: {i} for i in S})
+    first = {c: min(n for n in range(k + 3) if M.Lost(n, c)) for c in M.C}
+    guarded = sum(M.codeGuard(c) for c in M.C)
+    print("== W4o chain ending outside the guard, k = %d codes, %d guarded: least losing level "
+          "per code %s" % (k, guarded, first))
