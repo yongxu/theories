@@ -1,0 +1,29 @@
+#!/bin/bash
+# Bring the worktree to main, add the module, register it, carry row GR's two replacements. No trailers on commits.
+set -euo pipefail
+L=/Users/ren/tmp/fm/land14; WT=/Users/ren/tmp/fm/wt
+LB=experiments/integrated-correction/general-framework/generative-basis/lean/becoming
+cd $WT
+test -z "$(git status --porcelain)"
+git merge --ff-only main 2>&1 | tail -1
+git rev-parse --short=9 HEAD > $L/base.txt
+test -f $LB/Becoming/SampledSelection.lean || { echo "row GR's landing is not on main yet"; exit 3; }
+cp /Users/ren/tmp/fm/build14/returns/LevelAlone.landing-form.lean $LB/Becoming/LevelAlone.lean
+git add $LB/Becoming/LevelAlone.lean
+git commit -q -m "Lean: a reading of the level alone, over every marking that does not mark the start's level (LevelAlone)
+
+AI-written (Claude Fable, board row FM, with a last repair by a reader of another kind of model).
+One new module importing Becoming.TurningInTime; no other module changes."
+python3 -B $L/02_register.py
+python3 -c "import json;json.load(open('theories/becoming/results/data/regions.json'))"
+python3 -B -c "import ast,sys;ast.parse(open('$LB/check_becoming.py').read())"
+git add $LB/Becoming.lean $LB/README.md $LB/check_becoming.py theories/becoming/results/data/regions.json
+git commit -q -m "The root, the README, the checker's list and scope, and the region of the new module LevelAlone (before the core run)
+
+AI-written (Claude Fable, board row FM)."
+python3 -B $L/03_gr.py && { git add $LB/Becoming.lean $LB/check_becoming.py; git commit -q -m "Two sentences of row GR's account of SampledSelection, in row GR's words at its asking: the levels with and without a part are what is separated
+
+AI-written; the wording is row GR's (the session that holds that row), carried here because its one core run was used
+and this landing's core run covers both files. No statement or proof changes."; } || echo "row GR's replacements NOT applied: tell row GR"
+git log --oneline -4 | cat
+git status --short | head

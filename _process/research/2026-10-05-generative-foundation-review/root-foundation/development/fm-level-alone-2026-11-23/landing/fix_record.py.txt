@@ -1,0 +1,18 @@
+# AI-written (row FM). After a core run: point the record at the current receipt, and at the module and the note as they stand.
+import json,hashlib,datetime
+WT='/Users/ren/tmp/fm/wt/'; LB='experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
+S=open('/Users/ren/tmp/fm/land14/stamp.txt').read().strip()
+p=WT+'theories/becoming/results/records/a-reading-of-the-level-alone.json'; d=json.load(open(p))
+rec=f'{LB}/becoming-checks/{S}/verification.json'
+def sha(q): return hashlib.sha256(open(WT+q,'rb').read()).hexdigest()
+for r in d['references']:
+    if r['role']=='receipt': r['path']=rec
+    r['sha256']=sha(r['path'])
+d['proof_bindings'][0]['receipt']=rec
+vs=(f"Machine-checked by the consolidated Lean 4.29.1 checker (receipt {S}): the declarations cited, in one new module, have empty axiom reports; the checker verifies core purity. "
+    "AI-written from frozen briefs: three forms read by four readers who took no part; a fourth by a reader of another kind of model on its findings; a reader of that repair, whose mends to the tellings were applied in its words. "
+    "Statements compared by script between the third form and the fourth, whose code the landed form keeps. A further reader and the coordinating session read the record and accounts.")
+assert len(vs)<=600,len(vs)
+d['validation_scope']['en']=vs
+d['reviewed_at_utc']=datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S+00:00')
+open(p,'w').write(json.dumps(d,ensure_ascii=False,indent=1)+'\n'); print('record points at',S,'; validation_scope',len(vs))

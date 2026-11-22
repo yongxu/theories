@@ -1,0 +1,25 @@
+#!/bin/bash
+# The landing's gate, once, against main. It does not merge.
+set -u
+L=/Users/ren/tmp/fm/land14; n="${1:-1}"
+cd /Users/ren/tmp/fm/wt || exit 9
+busy() { ps -axo pid=,args= | grep -E '^ *[0-9]+ [^ ]*[Pp]ython[^ ]* (-[A-Za-z]+ )*[^ ]*(scratch_build\.py|gate\.py|check_becoming\.py)( |$)' > /dev/null; }
+while busy; do sleep 10; done
+test -z "$(git status --porcelain)" || { echo "worktree not clean"; git status --short | head; exit 8; }
+git merge-base --is-ancestor main HEAD || { echo "main has moved: merge it, rerun proof_uses and the render, then gate"; exit 6; }
+date '+gate start %H:%M:%S'
+python3 -B tools/research/gate.py run --base main > $L/gate-$n.log 2>&1; g=$?
+echo "gate exit $g"; date '+gate end %H:%M:%S'
+python3 - "$n" <<'PY'
+import json, sys
+s=open(f'/Users/ren/tmp/fm/land14/gate-{sys.argv[1]}.log').read()
+try:
+    d=json.loads(s[s.index('{'):s.rindex('}')+1]); r=d['results']
+    print('tree',d.get('tree'),'checks',len(r),'not passed',{k:v['status'] for k,v in r.items() if v['status'] not in ('passed','reused')})
+    for k,v in r.items():
+        if v['status'] not in ('passed','reused'): print('  ',k,':',json.dumps(v)[:700])
+    open('/Users/ren/tmp/fm/land14/gate.tree','w').write(f"{d.get('tree')} {len(r)}\n")
+except Exception as e:
+    print('could not parse',e); print(s[-2500:])
+PY
+git rev-parse --short=9 HEAD

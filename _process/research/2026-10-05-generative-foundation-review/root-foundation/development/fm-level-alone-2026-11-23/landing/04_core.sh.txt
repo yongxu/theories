@@ -1,0 +1,18 @@
+#!/bin/bash
+# The core run, once, through the machine's hold. Waits while any gate, core run or scratch build is alive.
+L=/Users/ren/tmp/fm/land14; log=$L/core-run.log
+busy() { ps -axo pid=,args= | grep -E '^ *[0-9]+ [^ ]*[Pp]ython[^ ]* (-[A-Za-z]+ )*[^ ]*(scratch_build\.py|gate\.py|check_becoming\.py)( |$)' > /dev/null; }
+while busy; do sleep 10; done
+cd /Users/ren/tmp/fm/wt || exit 9
+date '+start %H:%M:%S' > "$log"
+python3 -B tools/research/gate.py hold -- python3 -B experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py >> "$log" 2>&1
+echo "exit $? " >> "$log"; date '+end %H:%M:%S' >> "$log"
+python3 - <<'PY'
+import json
+s=open('/Users/ren/tmp/fm/land14/core-run.log').read(); print(s[:20].strip())
+try:
+    d=json.loads(s[s.index('{'):s.rindex('}')+1])
+    print(json.dumps({k:d.get(k) for k in ('status','lean_steps_run','lean_steps_reused','lean_wall_seconds','core_axioms','receipt')}))
+except Exception as e: print('no JSON summary:',e)
+print(s[-900:])
+PY

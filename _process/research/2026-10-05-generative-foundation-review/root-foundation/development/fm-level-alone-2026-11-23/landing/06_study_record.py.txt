@@ -1,0 +1,89 @@
+# AI-written (row FM). File the study folder as text, then write the record bound to the source, the receipt and the note.
+import pathlib, shutil, json, hashlib, datetime, sys
+WT=pathlib.Path('/Users/ren/tmp/fm/wt'); B=pathlib.Path('/Users/ren/tmp/fm/build14')
+LBr='experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
+DEVr='_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-level-alone-2026-11-23'
+dst=WT/DEVr; S=open('/Users/ren/tmp/fm/land14/stamp.txt').read().strip()
+if not dst.exists():
+    dst.mkdir(parents=True)
+    def put(src,rel):
+        out=dst/rel; out.parent.mkdir(parents=True,exist_ok=True); assert not out.exists(),out; shutil.copyfile(src,out)
+    put('/Users/ren/tmp/fm/land14/NOTE.md','NOTE.md')
+    for f in ['PAPER.md','BRIEF.md','BRIEF-2.md','BRIEF-2-ADDENDUM.md','BRIEF-3.md','ASTRA-BRIEF.md','ASTRA-REPAIR.md','MENDS-after-the-build.md',
+              'FROZEN.sha256.txt','FROZEN.clock.txt','FROZEN-2.sha256.txt','FROZEN-2.clock.txt','FROZEN-3.sha256.txt','FROZEN-3.clock.txt',
+              'compare_rows.py','compare_rows.out','apply_reader4.py','RowsLA.lean','build.sh']:
+        put(B/f, f if f.endswith('.txt') else f+'.txt')
+    put(B/'rows-tree-third.txt','rows-third-form.txt'); put(B/'rows-tree-13.txt','rows-landed-form.txt')
+    for p in sorted((B/'returns').iterdir()):
+        if p.name=='LevelAlone.final-form.lean': name='LevelAlone.fourth-form.lean.txt'
+        elif p.name=='LevelAlone.landing-form.lean': continue
+        else: name=p.name if p.name.endswith('.txt') else p.name+'.txt'
+        put(p,'returns/'+name)
+    for p in sorted((B/'search').glob('*.py')): put(p,'search/'+p.name+'.txt')
+    for f in ['premises_search.json','premises_search.examples.json']:
+        if (B/'search'/f).exists(): put(B/'search'/f,'search/'+f+'.txt')
+    for p in sorted(B.glob('build-*.log')): put(p,'build/'+p.name+'.txt')
+    R=pathlib.Path('/Users/ren/theories/tmp/fm/direction22')
+    put(R/'READ-four-sentences-2026-11-23.md','READ-four-sentences.md.txt'); put(R/'FORECAST-before-the-read.md','FORECAST-before-the-read.md.txt')
+    for f in ['rising_window.py','wall_check.py','small_failure.py']: put(R/'rising'/f,'search/first/'+f+'.txt')
+    print('filed', sum(1 for _ in dst.rglob('*') if _.is_file()))
+def sha(p): return hashlib.sha256(open(WT/p,'rb').read()).hexdigest()
+src=LBr+'/Becoming/LevelAlone.lean'; rec=LBr+f'/becoming-checks/{S}/verification.json'; note=DEVr+'/NOTE.md'
+N='Becoming.LevelAlone.'
+laws=[
+ ("A reading by the levels it marks and one correction: at a marked level the way after a step is one fixed correction of the way, elsewhere the way's step as it was. It is the way's step as it was outside the marks; with every corrected way of a kept kind, the way after a step at a marked level is of that kind; with the way's step as it was keeping the kind too, every step keeps it.",
+  ['readBy','readBy_outside','readBy_turns','readBy_kept','level']),
+ ("Given the common premises (the correction sets a way of a kept kind that the way's step as it was keeps, and such ways use H2; nothing is given from nothing; giving is short of H2 below y2 and meets it wherever both y2 <= z and z + H2 <= hi; the step under no use keeps every level up to hi within hi; a positive need at most H2 + y2; the use rises strictly along the way's own orbit for the first hi steps; the start is at most hi; the level of the course as it was is the start's at every step before D and not at D) and given that this level, once below H2 + y2, is below it at the next step: some marking that does not mark the start's level gives a line that never ends exactly where the level at step D + 1 is at or above H2 + y2.",
+  ['silent_at_start_iff_next_of_stays_below']),
+ ("Under the same premises, some marking that does not mark the start's level gives a line that never ends exactly where the marking of every level other than the start's does.",
+  ['silent_at_start_iff_marking_all_but_start']),
+ ("Where the corrected use H2 is no more than the use of the start's way, and the use never falls along the way's orbit, a level of the course as it was below H2 + y2 is followed by a level below it (asking of giving only that nothing is given from nothing and that it is short of H2 below y2); the same from a strict rise for the first hi steps with the cap. So, with the common premises and H2 no more than the first use, the equivalence with the level at step D + 1 holds.",
+  ['stays_below_of_le','stays_below_of_le_of_rises','silent_at_start_iff_next_of_le']),
+ ("Where the step under no use does not fall as the level rises, the use never falls along the way's orbit and the start's own step does not raise the level, the level of the course as it was never rises; the same from a strict rise for the first hi steps with nothing given from nothing and the start at most hi. So, with the common premises, for any corrected use, the equivalence with the level at step D + 1 holds.",
+  ['level_never_rises','level_never_rises_of_rises','silent_at_start_iff_next']),
+ ("Under the premises of the law before: such a marking exists exactly where the levels of the course as it was are recoverable at step D + 1 (the turns to the standing use H2 feasible, the need met at every step asked); under no such marking does the line never end, exactly where those levels have a point of no return at or before step D + 1; and, with H2 + y2 <= hi, such a marking exists exactly where the use as it was at step D and y2 together are at most the level at step D.",
+  ['silent_at_start_iff_recoverable_next','silent_at_start_none_iff_no_return','next_above_iff_draw','silent_at_start_iff_use']),
+ ("Three worked courses under these laws. Twelve (giving min z (12 - z), level twelve, a draw of three rising by one, a return to three): under no marking silent at twelve does the line never end; the level is ten at step five and four at step six. Seven (giving min z (7 - z), level seven, a draw of one rising by one, a return to one): under some marking silent at seven the line never ends. Rising (giving 0, 3, 1, 1, 0 at what is left 0 to 4, level three, a draw of one rising by one, a return to one): under some marking silent at three the line never ends, the level of the course as it was rises from step 1 to step 2, and the step under no use falls from one left to two left.",
+  ['Twelve.none_unending','Twelve.level_at_five_six','Twelve.mono_and_still','Seven.some_unending','Seven.mono_and_still','Rising.some_unending','Rising.level_rises','Rising.not_mono_at_one_two','cap_mono']),
+ ("Two worked courses on which the law for any corrected use fails with one premise missing. On each, every other premise of that law holds (stated as one conjunction), some marking silent at the start's level gives a line that never ends, and the level at step D + 1 is below H2 + y2; so the missing premise does not hold: on WithoutMono the step under no use falls as the level rises, on WithoutStill the start's own step raises the level.",
+  ['WithoutMono.other_premises','WithoutMono.marked_at_five_unending','WithoutMono.some_unending','WithoutMono.next_below','WithoutMono.not_mono_at_one_two','WithoutMono.not_mono',
+   'WithoutStill.giving_mono','WithoutStill.other_premises','WithoutStill.marked_at_six_unending','WithoutStill.some_unending','WithoutStill.next_below','WithoutStill.start_step','WithoutStill.not_still']),
+]
+decls=[N+d for _,ds in laws for d in ds]
+text=open(WT/src).read()
+for d in decls:
+    base=d.split('.')[-1]; assert ('theorem '+base in text) or ('def '+base in text), d
+title="A reading of the level alone, over every marking that does not mark the start's level"
+record={
+ "schema_version":2,"id":"a-reading-of-the-level-alone","title":{"en":title},"kind":"theorem","status":"recorded-checked","family":"F01",
+ "reviewed_at_utc":datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S+00:00'),
+ "statement":{"en":"With one fixed correction at marked levels and the level first differing from the start's at step D: if the level, once below H2 + y2, stays below, some marking silent at the start's level gives a line that never ends exactly where the level at step D + 1 is at or above H2 + y2."},
+ "laws":[{"en":en,"declarations":[N+d for d in ds]} for en,ds in laws],
+ "hypotheses":[
+  {"en":"No axiom. The correction is supplied, with that it sets a way of a kept kind which the way's step as it was keeps and whose ways use one amount; so the laws range over which levels a marking marks and not over what the correction does."},
+  {"en":"The regime at the corrected use, the cap on the level, a use that rises strictly for the first hi steps, the step D with the level at the start's before it and not at it, and, law by law, that the level once below H2 + y2 stays below, or the corrected use no more than the first use, or a step under no use that does not fall as the level rises with a start whose own step does not raise the level, are hypotheses of the theorems. That such a step D exists is not a statement here."}],
+ "does_not_show":[
+  {"en":"That any actual selection, reward, judge, market or training run meets these premises, or that what it does when a level is marked is one fixed correction: the response is handed in, not derived.","kind":"correspondence"},
+  {"en":"Anything of a reading that reads more than the level (the way, the step, or the levels before), of a marking that marks the start's level, or of a correction that takes effect at the step from the marked level: the pair's step has the one-step lag built in, and on Twelve the two stated levels (ten, then four) are all that is stated of it.","kind":"scope","witness":N+"Twelve.level_at_five_six"},
+  {"en":"That the earliest marking's being in time makes a later one too late: only that where the marking of every level other than the start's fails, every marking silent at the start's level fails.","kind":"converse"},
+  {"en":"The recoverable, no-return and use forms where the level may rise: they are stated only under the premises from which the level never rises.","kind":"scope"},
+  {"en":"That either of the two premises of the law for any corrected use is the least that would do: each has one course on which the law as stated fails without it, both with the corrected use above the first use.","kind":"scope","witness":N+"WithoutMono.not_mono"},
+  {"en":"Any condition on the regime's numbers that says on which side of the equivalence a course falls, and any law of Becoming.TurningInTime as a case.","kind":"non-implication"}],
+ "counterexamples":[],
+ "standard_boundaries":["no-ethical-premise","no-evaluation","discrete-steps","formal-not-empirical","names-provisional","omission-not-refutation"],
+ "validation_scope":{"en":f"Machine-checked by the consolidated Lean 4.29.1 checker (receipt {S}): the declarations cited, in one new module, have empty axiom reports; the checker verifies core purity. AI-written from briefs frozen beforehand: three forms read by four readers who took no part, a fourth form by a reader of another kind of model on its own findings, and a last reader whose mends to the tellings were applied in its words and not read again; statements compared by script between forms. No person has read it."},
+ "next_delta":{"en":"The recoverable and no-return forms under the one premise that a level once below H2 + y2 stays below, in place of a level that never rises; argued by two readers on paper and open on the row that keeps Becoming.TurningInTime."},
+ "correspondence":{"en":"A selection whose draw rises step by step while the level it lives on does not yet differ: of every way of reading the level alone that stays silent while the level is where it started, none can be in time unless the one that acts as soon as the level differs is; where that one is too late, what would have to be read is not the level."},
+ "canonical_source":src,"aliases":[title]+decls,
+ "dependencies":[
+  {"id":"turning-in-time","relation":"formal-reuse","detail":{"en":"Its split of a line's never ending at the first marked step, its exact level for a kept kind, its law that a use rising against a capped level leaves nothing, and its recoverable and no-return laws, each used as it stands."}},
+  {"id":"margin-of-a-regime","relation":"formal-reuse","detail":{"en":"Its step of a level under a use and a giving, and its premises on giving (nothing from nothing, short below a margin, meeting from it, keeping within a cap)."}}],
+ "related":[],
+ "references":[
+  {"path":src,"role":"proof","declarations":decls,"sha256":sha(src)},
+  {"path":rec,"role":"receipt","sha256":sha(rec)},
+  {"path":note,"role":"review","sha256":sha(note)}],
+ "proof_bindings":[{"source":src,"receipt":rec,"sha256_pointer":"/source_sha256/Becoming.LevelAlone","success_pointer":"/status","success_value":"passed"}],
+ "history":[{"en":"23 November 2026: added, on board row FM, from the row's order of 22 November (the sentences on a selection set against the Lean, then one tried whole as a claim that can fail). AI-written (Claude Fable, with a last repair of the module by a reader of another kind of model). The briefs, the forms, what each reader changed and what it cost are in the study note."}]}
+out=WT/'theories/becoming/results/records/a-reading-of-the-level-alone.json'
+open(out,'w').write(json.dumps(record,ensure_ascii=False,indent=1)+'\n'); print('record written', len(decls),'declarations')

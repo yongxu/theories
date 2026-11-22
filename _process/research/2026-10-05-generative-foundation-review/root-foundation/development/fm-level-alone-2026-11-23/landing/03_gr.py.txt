@@ -1,0 +1,11 @@
+# AI-written (row FM). Row GR's two replacements, each applied only if its old text occurs exactly once.
+import sys
+LB='/Users/ren/tmp/fm/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
+r1o="In `Missed` a part within the closure\n  and beyond the closure read at the even steps is separated by a selection through the selector's\n  couplings and by none read at the even steps."
+r1n="In `Missed`, of a part within the closure and beyond the closure read at the even steps, the levels\n  with and without it are separated by a selection through the selector's couplings and by none read\n  at the even steps."
+r2o='    "selects the sampled levels with and without a part beyond that closure alike; in a built case a part "\n    "within the closure and beyond the closure read at the even steps is separated by a selection through "\n    "the selector\'s couplings and by none read at the even steps. "'
+r2n='    "selects the sampled levels with and without a part beyond that closure alike; in a built case, of a "\n    "part within the closure and beyond the closure read at the even steps, the levels with and without it "\n    "are separated by a selection through the selector\'s couplings and by none read at the even steps. "'
+a=open(LB+'/Becoming.lean').read(); b=open(LB+'/check_becoming.py').read()
+n1,n2=a.count(r1o),b.count(r2o); print('matches:',n1,n2)
+if n1!=1 or n2!=1: sys.exit(1)
+open(LB+'/Becoming.lean','w').write(a.replace(r1o,r1n)); open(LB+'/check_becoming.py','w').write(b.replace(r2o,r2n))

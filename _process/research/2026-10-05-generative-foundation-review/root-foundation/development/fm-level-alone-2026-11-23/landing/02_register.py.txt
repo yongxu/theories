@@ -1,0 +1,41 @@
+# AI-written (row FM). Register Becoming.LevelAlone: root import and account, README row, checker's list and scope, region.
+import re,json
+LB='/Users/ren/tmp/fm/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
+T='/Users/ren/tmp/fm/land14/texts/'
+# root
+p=LB+'/Becoming.lean'; s=open(p).read()
+imp='import Becoming.TurningInTime\n'; assert s.count(imp)==1
+s=s.replace(imp,imp+'import Becoming.LevelAlone\n')
+L=s.split('\n')
+i=[k for k,l in enumerate(L) if l.startswith('* `Becoming.TurningInTime` (L2')]; assert len(i)==1,i
+j=next(k for k in range(i[0]+1,len(L)) if L[k].startswith('* `Becoming.'))
+L[j:j]=open(T+'root_bullet.txt').read().rstrip('\n').split('\n')
+open(p,'w').write('\n'.join(L))
+# README
+p=LB+'/README.md'; L=open(p).read().split('\n')
+i=[k for k,l in enumerate(L) if l.startswith('| L2 | [`Becoming.TurningInTime`]')]; assert len(i)==1,i
+L.insert(i[0]+1,open(T+'readme_row.txt').read().strip())
+open(p,'w').write('\n'.join(L))
+# checker
+p=LB+'/check_becoming.py'; s=open(p).read()
+k='"Becoming.TurningInTime",'; print('occurrences of the module in the checker:',s.count(k))
+m=re.search(r'^CORE = \[.*?^\s*\]|^CORE = \[[^\n]*(\n[^\n]*)*?\]',s,re.M)
+c0=s.index('CORE = ['); c1=s.index(']',c0)
+seg=s[c0:c1]; assert seg.count(k)==1, seg.count(k)
+s=s[:c0]+seg.replace(k,k+' "Becoming.LevelAlone",')+s[c1:]
+anchor='    "LineOnAStock: a line on a stock'; assert s.count(anchor)==1
+words=open(T+'scope.txt').read().strip().split(' '); lines=[]; cur=''
+for w in words:
+    if len(cur)+1+len(w)>100: lines.append(cur); cur=w
+    else: cur=(cur+' '+w).strip()
+lines.append(cur)
+block=''.join('    "'+l+' "\n' for l in lines)
+s=s.replace(anchor,block+anchor)
+open(p,'w').write(s)
+# region
+p='/Users/ren/tmp/fm/wt/theories/becoming/results/data/regions.json'; s=open(p).read()
+tail='\n  }\n }\n}'; assert s.rstrip('\n').endswith(tail), repr(s[-40:])
+body=s.rstrip('\n')[:-len(tail)]
+add=('\n  },\n  "Becoming.LevelAlone": {\n   "region": "map",\n   "base": "general",\n   "note": "FM a reading of the level alone: over every marking that does not mark the start\'s level, when some such marking gives a line that never ends, under each law\'s stated premises"\n  }\n }\n}')
+open(p,'w').write(body+add+('\n' if s.endswith('\n') else ''))
+print('registered')

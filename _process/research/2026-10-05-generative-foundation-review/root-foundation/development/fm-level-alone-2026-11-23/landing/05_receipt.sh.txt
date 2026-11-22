@@ -1,0 +1,26 @@
+#!/bin/bash
+# Check the receipt binds the new module's bytes and passed; commit it; run the print of uses between proofs; commit it.
+set -euo pipefail
+L=/Users/ren/tmp/fm/land14; cd /Users/ren/tmp/fm/wt
+LB=experiments/integrated-correction/general-framework/generative-basis/lean/becoming
+S=$(git status --porcelain "$LB/becoming-checks" | sed -n 's#^?? .*/becoming-checks/\([^/]*\)/$#\1#p' | tail -1)
+test -n "$S"; echo "$S" > $L/stamp.txt
+python3 - "$LB" "$S" <<'PY'
+import json,sys,hashlib
+LB,S=sys.argv[1],sys.argv[2]
+v=json.load(open(f'{LB}/becoming-checks/{S}/verification.json')); assert v['status']=='passed', v['status']
+h=hashlib.sha256(open(f'{LB}/Becoming/LevelAlone.lean','rb').read()).hexdigest()
+assert v['source_sha256']['Becoming.LevelAlone']==h
+live=json.load(open(f'{LB}/becoming-verification.json'))
+print('passed; steps run',live.get('lean_steps_run'),'reused',live.get('lean_steps_reused'),'wall',live.get('lean_wall_seconds'),'core_axioms',live.get('core_axioms'))
+PY
+git add "$LB/becoming-verification.json" "$LB/becoming-checks/$S"
+git commit -q -m "FM: the core run's receipt ($S), passed, for the new module LevelAlone
+
+AI-written (Claude Fable, board row FM). The receipt binds the bytes of Becoming.LevelAlone."
+python3 -B tools/research/gate.py hold -- python3 -B tools/research/proof_uses.py > $L/proof-uses.log 2>&1; echo "proof_uses exit $?"; tail -3 $L/proof-uses.log
+git add theories/becoming/results/atlas/proof-uses
+git commit -q -m "FM: the print of uses between proofs after LevelAlone entered the package (proof_uses.py)
+
+AI-written (Claude Fable, board row FM). Computed, not typed." || echo "nothing changed under proof-uses"
+git log --oneline -3 | cat; git status --short | head -5

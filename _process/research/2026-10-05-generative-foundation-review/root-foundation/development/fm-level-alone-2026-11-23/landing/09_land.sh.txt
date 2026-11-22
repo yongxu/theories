@@ -1,0 +1,21 @@
+#!/bin/bash
+# The landing onto main: the Queue clause and the row's sentence, one commit, fast-forward. Stops if main has moved.
+set -euo pipefail
+L=/Users/ren/tmp/fm/land14
+read TREE N < $L/gate.tree; test -n "$TREE"
+LISTING="$1"
+cd /Users/ren/tmp/fm/wt
+test -z "$(git status --porcelain)"
+git merge-base --is-ancestor main HEAD || { echo "main has moved since the merge: stop"; exit 6; }
+test "$(git rev-parse HEAD^{tree} | cut -c1-12)" = "$TREE" || { echo "the gate was of another tree"; exit 7; }
+TIP=$(git rev-parse --short=9 HEAD); BASE=$(git rev-parse --short=9 main); S=$(cat $L/stamp.txt); T=$(date '+%H:%M')
+python3 $L/apply_board14.py "$T" "$TREE" "$N" "$TIP" "$BASE" "$S" "$LISTING"
+git add _process/BECOMING-WORKBOARD.md
+git commit -q -m "Board: a reading of the level alone over every marking that does not mark the start's level, landed, on the Queue line; row FM says the claim's landing is made and what it still owes
+
+AI-written (Claude Fable, board row FM)."
+cd /Users/ren/theories
+test "$(git rev-parse --abbrev-ref HEAD)" = main
+test "$(git rev-parse --short=9 main)" = "$BASE" || { echo "main moved under the landing: stop"; exit 6; }
+git merge --ff-only fm-full-map-1121 2>&1 | tail -1
+git log --oneline -2 | cat

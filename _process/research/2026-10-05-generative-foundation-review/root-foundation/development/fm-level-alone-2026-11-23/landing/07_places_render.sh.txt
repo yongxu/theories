@@ -1,0 +1,24 @@
+#!/bin/bash
+# The listing of places, then the render LAST (through the hold), then the checks. Commits each. Stops at the first failure.
+set -euo pipefail
+L=/Users/ren/tmp/fm/land14; cd /Users/ren/tmp/fm/wt
+P=_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/places-2026-11-21
+( cd $P && python3 -B build_places.py > $L/build_places.log 2>&1 ) ; tail -2 $L/build_places.log | cut -c1-200
+if [ -n "$(git status --porcelain $P)" ]; then git add $P; git commit -q -m "The listing of places after LevelAlone entered the package (build_places.py, run in the landing by row DJ's rule)
+
+AI-written (Claude Fable, board row FM). Computed, not typed."; fi
+busy() { ps -axo pid=,args= | grep -E '^ *[0-9]+ [^ ]*[Pp]ython[^ ]* (-[A-Za-z]+ )*[^ ]*(scratch_build\.py|gate\.py|check_becoming\.py)( |$)' > /dev/null; }
+while busy; do sleep 10; done
+python3 -B tools/research/gate.py hold -- make research-render > $L/render.log 2>&1; echo "render exit $?"
+git add -A . >/dev/null 2>&1
+git commit -q -m "FM: generated pages after a reading of the level alone entered the package (render)
+
+AI-written (Claude Fable, board row FM). Generated, not typed." || echo "render changed nothing"
+python3 -B tools/research/research.py check --strict-fresh > $L/check-strict.json 2>&1 && echo "strict check exit 0" || echo "strict check exit NONZERO"
+python3 - <<'PY'
+import json
+s=open('/Users/ren/tmp/fm/land14/check-strict.json').read()
+d=json.loads(s[s.index('{'):s.rindex('}')+1]); print('errors',[e[:200] for e in d.get('errors',[])][:8]); print('drift',len(d.get('source_drift',[])))
+PY
+python3 -B -m unittest tools.research.tests.test_atlas > $L/test_atlas.log 2>&1; tail -2 $L/test_atlas.log
+git status --short | head -5; git log --oneline -3 | cat
