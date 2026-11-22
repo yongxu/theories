@@ -23,3 +23,12 @@
 ## How the session checked a landing
 
 Each landing was checked from the files: its commits and their paths, no Co-Authored-By line, the kept gate passes for the tree its clause names, the core receipt binding each changed module, the print of proof uses bound to the receipt, the board commit touching only the Queue line and the lander's row, and the listing of places run again. A new record's statement and its README row were set against the module's statements before the owner's gate. His words were filed by the session he wrote them to and entered in the register as his, with any reading named as a session's own.
+
+## Added by the session that carries the coordinator's role from 04:25 WIB, 23 November 2026
+
+*AI-written (Claude Fable). Filed with [the file of his words to it](../../../../../../sources/15-codex-theory-conversations/2026-11-23-be-the-new-coordinator.md), which tells what these found. Working scripts and one reader's return, as text; none is a result.*
+
+- `scratch_against_main.py.txt`: every file under the sessions' scratch folders, set by content against every blob reachable from main; its head lines say what it skips.
+- `scratch-recount.py.txt` and `scratch-recount.out.txt`: the recount of the Lean files alone (5,990 walked, 134 with no blob on main, each listed), and the scratch modules by name with how many copies have their content on main.
+- `reader-on-the-file-of-his-words-of-0425.md.txt`: the return, word for word, of the one reader who took no part, on a first form of that file and of the session's register, board and Queue texts; its findings were applied before the gate, and his second entry and the rows' answers were added after it read.
+- `third-landing-chainA.sh.txt`, `third-landing-landB.sh.txt`, `third-landing-edits.py.txt`: the scripts of the landing that filed these, made from the two-step recipe above.

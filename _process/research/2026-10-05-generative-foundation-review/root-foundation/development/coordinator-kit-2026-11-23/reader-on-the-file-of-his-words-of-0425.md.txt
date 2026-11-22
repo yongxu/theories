@@ -1,0 +1,128 @@
+AI-written. The return of one independent reader (Claude Fable, a subagent of the session that carries the coordinator's role from 04:25 WIB, 23 November 2026), word for word, on a first form of that session's file of his words of 04:25 and of its register, board and Queue texts. It read before his second entry of 04:39 and the rows' answers were added. 175,144 tokens and 23 tool uses by the run's own count, against about 150 thousand said.
+
+**Independent read of the five texts: findings**
+
+Ren's sentence is letter for letter the transcript's first user line (2026-11-22T21:25:42.505Z, 04:25:42 WIB) in text 1, `way_now` and `register`. The AGENTS.md phrase is exact, and "What is not said" is sound. The faults are in the scratch counts, in the last section, and in the clause.
+
+## A. False, or more, less or other than the source
+
+**A1. Text 1, "What it found on main": "Of the 36 scratch modules found by name (`Scratch….lean`, the three printing stubs aside), every copy is on main byte for byte".**
+- Source: `/Users/ren/tmp/coord2/recount.out` lists 34 `Scratch*.lean` names, 3 of them stubs. That leaves 31 (29 modules and two `as-built` variants), in 101 copies, each matched. "36" is nowhere in it.
+- Replace: "Of the 31 scratch files found by name (`Scratch….lean`: 29 modules and two as-built variants, the three printing stubs aside), each of the 101 copies has its exact content among the blobs reachable from main."
+
+**A2. Clause: "every scratch Lean module found by name under the four sessions' scratch folders is on main byte for byte".**
+- Source: `recount.out` has `ScratchAllStub.lean 2 0`, `ScratchAtlasStub.lean 2 0`, `ScratchCasesStub.lean 6 0`. "Every" is false as worded.
+- Replace: "every scratch Lean module found by name under those folders, three printing stubs aside, has its exact content at some commit of main".
+
+**A3. Text 1 and clause: "5,856 are on main byte for byte" / "is on main byte for byte".**
+- Source: `recount.py` tests against `git rev-list --objects main`, which is every blob at any commit, not the head tree. In the head tree the scratch modules stand as `…/Scratch….lean.txt` in study folders (34 files), not in the package.
+- Replace: "5,856 have their exact content at some commit of main (now or earlier; the scratch modules as `.lean.txt` in study folders, none in the package)".
+
+**A4. Text 1: "(AI-written; from the files, 04:27 to 04:45 WIB)".**
+- Source: the file was written at 04:34:54 WIB (transcript line 483; mtime 04:35), and the clock read 04:39 when I checked. 04:45 was a forecast.
+- Replace with the clock at the last check actually made.
+
+**A5. Text 1: "the four rows' branches were its ancestors".**
+- Source: there are three rows. `git worktree list` shows four branches (`dj-line-on-a-stock`, `dj-uses-between-proofs`, `fm-full-map-1121`, `gr-sampled-selection`) and the former coordinator's detached worktree. All are ancestors of `406758f15` and clean, which I checked.
+- Replace: "the three rows' four branches, and the commit the former coordinator's worktree stood at, were its ancestors".
+
+**A6. Text 1: "A fifth session, which he had asked for a report at 00:35 WIB, had changed nothing."**
+- Source: transcript line 83, the session "Project status and roadmap": "This is read from the board … as of 00:35 on 23 November. I changed nothing". 00:35 is the time of its reading, and "changed nothing" is its own word. That he asked, or when, is not in what the writer was shown (8 of 60 messages).
+- Replace: "A fifth session ("Project status and roadmap") says in its report, read as of 00:35 WIB, that it changed nothing."
+
+**A7. Text 1: "it landed the one landing it had in flight, which files his sentence of 03:46".**
+- At 04:39 main was still `406758f15` and `sources/15-codex-theory-conversations/2026-11-23-merge-everything-a-unified-head.md` did not exist. The past tense, and the link in the head paragraph, hold only if this lands after it.
+- Likewise "No row has read it", "no row has agreed" and "which no row has read" (text 1, `way_now`, `register`, clause): the writer messaged row DJ at 04:40 (transcript line 617, which I did not read through). Check each at landing.
+
+**A8. Item 2: "the law of what a list holds, six older theorems as calls … By that row's own account it touched no sentence of the idea".**
+- Source, DIRECTION.md, "An order for row FM": "six more older theorems became calls, four of them calls of that law, one a call of one of the four, and one a call of its own twin"; and "none of row FM's work of 22 November touched a sentence of "The idea"".
+- Replace: "six older theorems made calls, four of them of that law … By that row's own account none of its work of 22 November touched a sentence of the idea".
+
+**A9. Item 3: "It showed that 25 of the 79 negatives … had been said too widely, and that few roads wait among what the atlas already tells."**
+- Source: "25 were said too widely or are no longer so"; and the survey "suggests, from one pass and one definition of a road, that few roads are waiting … among what the atlas already tells and the candidates, and says nothing of theorems the atlas does not tell". Two corrections to that survey are also owed (its aid "had missed every notion of the three modules beside the package").
+- Replace: "It showed that 25 of the 79 … had been said too widely or are no longer so; and one survey, from one pass and one definition of a road, with two corrections owed, suggests that few roads wait among what the atlas already tells."
+
+**A10. Item 4: ""early enough" is three clocks that no statement found compares. Both tries came back on paper as older laws in a row."**
+- Source: "with no statement found that compares all three", and "One statement names the last two together". Then: "By the order's own test in the paragraph above, this is what would count against it: both tries came back as older laws in a row, on paper."
+- The text leaves out the row's own verdict, though its preface says it follows the row's verdict.
+- Replace: "…three clocks, of which no statement found compares all three. Both tries came back on paper as older laws in a row, which by the order's own test, as that row tells it, is what would count against the order."
+
+**A11. "What the head points to next": "The two modules of 23 November and the lock's turn laws each say part of "unless that running down makes a difference to the selection early enough"".**
+- Source: row GR's record, "Does not show": "Anything of a rule set again from the share it favours, of the pace of a reading or of a turn in time." Board row GR: "told to row FM, which answered at 00:11 WIB that it sees no crossing". The direction page tells the module as what a coarser reading "selects alike".
+- Row GR would not sign this.
+- Replace: "`LevelAlone` and the lock's turn laws each state a condition for a turn in time, each on its own carrier. `SampledSelection` states none: it says what a selection read at coarser steps selects alike, and its record lists a turn in time and the pace of a reading among what it does not show. That it bears on "makes a difference to the selection" is this session's reading."
+
+**A12. Same paragraph: "By each record's own list of what it does not show, none has two of these."**
+- Source: only row GR's list says this. `LevelAlone`'s list names no share, rule or coarser step; it has "any law of Becoming.TurningInTime as a case". "With no share, rule or lock" is the direction page's sentence. The lock's turn laws have no record named.
+- Replace: "Row GR's record lists a rule set again from a share and a turn in time among what it does not show; the direction page says of `LevelAlone` that it has no share, rule or lock; this session found none of the three with two."
+
+**A13. Same paragraph: "The direction page already names what would count: a statement that has two of them, or a theorem in which what a marking sets comes out as a conclusion."**
+- Source: "What would count against this telling: a statement that names two of those carriers, or the level's clock with either of the other two, or that states two of them together without naming them; or a theorem in which what a marking sets comes out as a conclusion."
+- The page's carriers are "what couples into a formation, which needs a level meets, and what a rule set again from its share reads". They are not the text's three, and it is "against this telling", not a next step.
+- Replace: "The direction page names, as what would count against its own telling, a statement naming two of the first sentence's three carriers, or the level's clock with either other clock, or a theorem in which what a marking sets comes out as a conclusion. That a statement with two of the three named here is the like of the first is this session's reading."
+
+**A14. Same paragraph, the paper model.** Taken under C.
+
+**A15. "The reading": "Each began from something the aim says and asked the Lean for it … The first three began from what the Lean already holds".**
+- Source for the fifth: board row GR, "What it asks: what `Sampling` asks of the laws of one step …, asked of selection through couplings on a web"; "Needs `Sampling` and `Selection` as they stand". DIRECTION.md: it "took up one thing its searches of 22 November had not found joined", and "that the aim's "at which grain" already asks this is its reading, not his" (row FM's session's reading).
+- By its own row the fifth began from two modules the Lean has, as the first way did.
+- Three tries that did begin from the aim came to nothing and are not among the five:
+  - the first step of 20 November ("It did not come out: no statement was found that places the two ways");
+  - row FM's two tries of 22 November at one statement with both outcomes ("did not come out");
+  - the built case with two requirements of 21 November ("So this reading is turned back").
+- Replacement is under C.
+
+## B. Lesser
+
+- **"One entry, his, typed."** The transcript shows a user line, not how it was entered. Replace: "One entry, his."
+- **"hashed every file under the four sessions' scratch folders".** `scratch_against_main.py` skips worktrees, folders with a lakefile, `build`, `.cache`, links and empty files, and does not hash files over 30 MB. Say so.
+- **"a dump or lister file, which prints and states nothing".** None was opened. Replace: "by name a dump or lister file". In the clause, add "by name and folder" before the kinds; "build stubs" there also stands for generated audits, signatures and preludes, and dumps are dropped.
+- **"the four of 21 November that the direction page tells as outside the package".** About eleven scratch modules of 21 November are in the head tree. Replace: "the scratch modules of 21 November".
+- **"Stale or open on the head, as the session … told it".** This is a selection. Its message also named the ten unmerged branches and two stashes, and that rows DJ's and FM's clauses of the night do not end "AI-written". Say "among what it told". The three items kept are right: I counted 243 of 378 unpushed commits with the trailer, and no `.lean` changed in the 15 commits since `2cb0beba0`.
+- **"the four sessions' ways of working"** (text 1's reading of "Find out…", `way_now`, clause). The section tells five ways, of three rows and none of the former coordinator's. Replace: "the ways of working of 20 to 23 November".
+- **"in three days"** against "between 20 and 23 November". The five items are of 21 to 23 November; pick one.
+- **"It does not rank rows or sessions".** Each way named is one row's, so a reader will take it as a ranking. Say that plainly, or drop the sentence.
+- **"what rows FM and GR landed was checked with row DJ's listing and prints".** The direction page says the lookups on that print served row FM's read, and that the print "was made before the two modules of 23 November landed". The landed forms were checked "by the lister", and I did not establish whose that is. Replace: "rows FM and GR used the listing of places and ran lookups on row DJ's print, which was made before their modules landed".
+- **Item 1, "found exclusions between renewing and consuming and no passage".** The source adds "So the step claims no absence". Add "among the statements it judged".
+- **Item 3, "It gave no new statement".** This is the writer's summary, on no row's page; mark it as such.
+- **Item 4.** The source's "(as far as `TurningInTime` was searched; it was not read whole)" is dropped.
+- **Item 5.**
+  - "a part that a reading at every step separates": the source says "some selection … read at every step up to step 2".
+  - "small" is the fourth reader's word on the board ("a small real join resting on its general lemmas, the case a witness"); attribute it.
+  - The record's "does not meet activity needing support" is left out.
+- **"AGENTS.md asks, for alignment, that…".** AGENTS.md says "we want to design an alignment in which what sustains humans and AI keeps making a difference, early enough, to how they select together", with a second clause. Replace "asks" with "wants".
+- **"Row DJ's page of 20 November on what such a model must have".** The board says "what a model of the two ways would have to have"; "such" here points at the paper model of units. Use the board's words.
+- **`register`, "lie furthest toward the aim, which no row has read".** The antecedent reads as the aim. Replace: "…toward the aim; no row has read this reading."
+- **`register`, "the unified head is main as it stood after the three rows' landings of that hour".** Text 1 does not say "the unified head is", and the head moves again with the former coordinator's landing. Replace: "main, on which the three rows had landed what they held (03:57 to 04:27 WIB)".
+- **Sound.** `coordinator_line` holds: the title is "Coordinator session review" in the transcript, and the handover at 04:31 is that session's message "The seat is yours", sent 21:31:48Z. `way_now` holds apart from the points above.
+
+## C. The section "Which way of working lies furthest toward the aim"
+
+**The five items.**
+- Item 1 is fair; its first two sentences are the page's own.
+- Item 2 is fair but for the count and scope (A8).
+- Item 3 over-says twice (A9), and its first verdict is the writer's.
+- Item 4 is fair on `LevelAlone`. It leaves out the row's verdict on its own order and widens the clocks sentence (A10).
+- Item 5 is fair to the direction page and the record, with the lesser points above.
+
+**"The reading" claims more than the items support.** The line it draws, between starting from the aim and starting from what the Lean holds, fails for the fifth way by row GR's own row, and the aim-first tries that came to nothing are left out (A15). What the sources support:
+
+> "The fourth and fifth ended in landed statements about a reading itself (when one can be in time; what a coarser one cannot separate). The fourth began from AGENTS.md's sentences on a selection; the fifth, by its row, from two modules the Lean has, and that the aim's "at which grain" asks for it is row FM's reading. Other tries that began from the aim (20 November; row FM's two of 22 November) did not come out, and by row FM's own test its two tries of 23 November count against its order. Neither module places the two ways."
+
+**The paper model of 19 and 20 November.** The paragraph says three things the direction page does not:
+
+- **"What stands nearest to it".** The page ranks nothing as nearest to a derived response. It says of the candidate condition: "by that reader the lock does not do the joining in it, and the fall's reaching the rule is not in it". Of 20 November it says: "with the rule that does not favour held from the first move something goes on for ever too, so the rule's change is what keeps something going only as against going on favouring". Both are left out.
+- **"the fall leaves the counted unit with nothing".** The page: "draws the level below the need of the unit the rule counts, that unit leaves nothing". The unit leaves no offspring; the text says something else.
+- **"such a model".** This joins row DJ's page of 20 November to this model. The page was of a model of the two ways where the level is itself kept.
+
+Replace:
+
+> "As this session reads it, the nearest thing is on paper, in a model that is not in the Lean: … a course found by program on which what multiplies draws the level below the need of the unit the rule counts, that unit leaves nothing, and the rule set again no longer favours. Set among the other courses on 20 November, the rule's change keeps something going only as against going on favouring; with the counted unit's need one less the rule never stops favouring and the course ends. The candidate condition is not proved, and by its one reader the fall's reaching the rule is not in it."
+
+## D. Not read
+
+- **Lean and records:** no Lean and no proof. Of the two records, only "Does not show". The record of the list law not at all.
+- **Direction page:** "Where we are heading" from "Which two" through the table, "The idea", "What we have found so far" and "How we work on it" were not read. "What is not there" and "We are far from it" were read.
+- **Board:** rows DJ and FM only at their heads, tails and grepped passages; row GR in about two thirds. The Queue line and line 0 were not read, so "five landings stand" and the placeholders are unchecked.
+- **Scripts and output:** the output of `scratch_against_main.py` (no `audit.pkl` in the folder), so "some thousands" is unchecked. `board_1123i.py` and the chain and land scripts were not read. None of the 134 files was opened.
+- **Sessions:** the other sessions' reports and the 04:40 message to row DJ beyond its first lines. I did not establish whether the writer read all three records, or whose the lister is.

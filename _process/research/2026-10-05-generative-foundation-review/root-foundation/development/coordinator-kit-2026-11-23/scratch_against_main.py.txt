@@ -1,0 +1,40 @@
+# What is in the rows' scratch folders and on no commit reachable from main (by content).
+import os, subprocess, hashlib, sys, collections
+REPO='/Users/ren/theories'
+blobs=set()
+out=subprocess.run(['git','-C',REPO,'rev-list','--objects','main'],capture_output=True,text=True).stdout
+for l in out.splitlines():
+    blobs.add(l.split(' ',1)[0])
+def gh(p):
+    try:
+        b=open(p,'rb').read()
+    except Exception: return None
+    return hashlib.sha1(b'blob %d\0'%len(b)+b).hexdigest()
+SKIP={'.lake','.git','node_modules','__pycache__','build','.cache'}
+roots=sys.argv[1:]
+EXT={'.lean','.md','.txt','.py','.json','.sh','.js','.mjs','.html','.csv','.log','.out',''}
+res=collections.defaultdict(list)
+for r in roots:
+    for d,ds,fs in os.walk(r):
+        # skip git worktrees and build trees
+        if os.path.exists(os.path.join(d,'.git')) and d!=r: ds[:]=[]; continue
+        if os.path.exists(os.path.join(d,'lakefile.lean')) or os.path.exists(os.path.join(d,'lakefile.toml')) or os.path.exists(os.path.join(d,'lake-manifest.json')):
+            res[(r,'LAKE-TREE')].append(d); ds[:]=[]; continue
+        ds[:]=[x for x in ds if x not in SKIP]
+        for f in fs:
+            p=os.path.join(d,f)
+            if os.path.islink(p): continue
+            e=os.path.splitext(f)[1]
+            try: sz=os.path.getsize(p)
+            except: continue
+            if sz==0: continue
+            h=gh(p) if sz<30_000_000 else None
+            if h in blobs: continue
+            res[(r,e)].append((p,sz,os.path.getmtime(p)))
+import time
+for (r,e),v in sorted(res.items()):
+    if e=='LAKE-TREE':
+        print(f'{r} lake trees (not walked): {len(v)}'); continue
+    print(f'{r} {e or "(none)"}: {len(v)} files not on main by content, {sum(x[1] for x in v)//1024} KB')
+import pickle
+pickle.dump(dict(res),open(os.path.join(os.path.dirname(__file__),'audit.pkl'),'wb'))

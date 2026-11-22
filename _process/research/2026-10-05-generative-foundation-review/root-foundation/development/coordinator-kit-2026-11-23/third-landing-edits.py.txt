@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+"""AI-written (the session Ren told on 23 November 2026, 04:25 WIB, to be the new coordinator). His words to it:
+one sentence on the board's Coordinator line, one on its line on the way now, one entry in the register of his
+words. Run in a checkout root, after the sources file is in place and before the Queue trim. Each exact string once.
+Made from /Users/ren/tmp/rw/words14/board_1123h.py."""
+import json
+
+
+def sub(t, old, new, where):
+    n = t.count(old)
+    assert n == 1, f'{where}: expected once, found {n}: {old[:70]!r}'
+    return t.replace(old, new)
+
+
+W = '/Users/ren/tmp/coord2/'
+B = '_process/BECOMING-WORKBOARD.md'
+R = '_process/RESEARCH-DIRECTIVES.md'
+S = 'sources/15-codex-theory-conversations/2026-11-23-be-the-new-coordinator.md'
+HIS = '../' + S
+Z = ("Be the new coordinator. Look at the 4 other sessions. Find out the latest, most new, most direction aligned "
+     "towards to the full pictures solution and approaches, and then create a unified main as the head.")
+src = open(S, encoding='utf-8').read()
+assert src.count('> ' + Z + '\n') == 1
+T = json.load(open(W + 'board_1123i_texts.json', encoding='utf-8'))
+for k in ('coordinator_line', 'way_now', 'register'):
+    assert '\n' not in T[k], k
+t = open(B, encoding='utf-8').read()
+OLD_C = "any session that keeps that bullet current carries the role."
+t = sub(t, OLD_C, OLD_C + ' ' + T['coordinator_line'], 'the Coordinator line')
+OLD_W = T['way_now_anchor']
+assert OLD_W.endswith('*')
+t = sub(t, OLD_W, OLD_W[:-1] + ' ' + T['way_now'] + '*', 'the way now')
+open(B, 'w', encoding='utf-8').write(t)
+r = open(R, encoding='utf-8').read()
+ANCHOR = T['register_anchor']
+assert r.count(ANCHOR) == 1 and 'Ren on a new coordinator and a unified main' not in r
+r = r.replace(ANCHOR, T['register'] + "\n\n" + ANCHOR)
+open(R, 'w', encoding='utf-8').write(r)
+print('edited', B, 'and', R)

@@ -1,0 +1,30 @@
+# AI-written. Recount of Lean files under the sessions' scratch folders against main, by content (git blob hash).
+import os,subprocess,hashlib,collections,re
+blobs=set(l.split(' ',1)[0] for l in subprocess.run(['git','-C','/Users/ren/theories','rev-list','--objects','main'],capture_output=True,text=True).stdout.splitlines())
+def gh(p):
+    b=open(p,'rb').read(); return hashlib.sha1(b'blob %d\0'%len(b)+b).hexdigest()
+roots=['/Users/ren/tmp/dj','/Users/ren/tmp/fm','/Users/ren/tmp/gr','/Users/ren/tmp/coordinator','/Users/ren/tmp/rw/words14','/Users/ren/theories/tmp']
+tot=on=0; off=[]
+for r in roots:
+    for d,ds,fs in os.walk(r):
+        if os.path.exists(os.path.join(d,'.git')) and d!=r: ds[:]=[]; continue
+        ds[:]=[x for x in ds if x not in ('.lake','.git','node_modules','__pycache__')]
+        for f in fs:
+            if not f.endswith('.lean'): continue
+            p=os.path.join(d,f)
+            if os.path.islink(p) or os.path.getsize(p)==0: continue
+            tot+=1
+            if gh(p) in blobs: on+=1
+            else: off.append(p)
+print('lean files walked',tot,'on main by content',on,'not',len(off))
+kinds=re.compile(r'(AxiomAudit|Signatures)\.lean$|/prelude-only/|Stub\.lean$|before|/readers/_|DUMP|AARow|Rows\.lean$|coordinator-wording|items1-|three-block|cut-cases|new-need-unmet')
+print('not of a named kind:',[p for p in off if not kinds.search(p)])
+names=collections.defaultdict(lambda:[0,0])
+for r in roots:
+    for d,ds,fs in os.walk(r):
+        if '/.lake' in d: continue
+        for f in fs:
+            if f.startswith('Scratch') and f.endswith('.lean'):
+                p=os.path.join(d,f); names[f][0]+=1; names[f][1]+=gh(p) in blobs
+for k,(a,b) in sorted(names.items()): print(k,a,b)
+print('\n'.join(off))

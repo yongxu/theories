@@ -1,0 +1,170 @@
+lean files walked 5990 on main by content 5856 not 134
+not of a named kind: []
+ScratchAllStub.lean 2 0
+ScratchAtlasStub.lean 2 0
+ScratchBelowEndsUptake.lean 3 3
+ScratchCasesStub.lean 6 0
+ScratchChoice.lean 2 2
+ScratchChoiceCases.lean 2 2
+ScratchChoiceEither.lean 2 2
+ScratchComparison.lean 8 8
+ScratchCovering.lean 2 2
+ScratchDrainEdge.lean 2 2
+ScratchDrainEdgeLaw.lean 2 2
+ScratchDrainOnTheLaw.lean 4 4
+ScratchEdgeCases.lean 4 4
+ScratchEdgeLaw.lean 12 12
+ScratchInTime.lean 2 2
+ScratchKeepableStep.lean 6 6
+ScratchKeptEdge.lean 2 2
+ScratchKeptForViable.as-built-3.lean 1 1
+ScratchKeptForViable.lean 10 10
+ScratchMixedWay.lean 4 4
+ScratchNoReturn.as-built-5.lean 1 1
+ScratchNoReturn.lean 2 2
+ScratchPositionTerms.lean 2 2
+ScratchReach.lean 3 3
+ScratchRenewalBridge.lean 2 2
+ScratchStayOrTurn.lean 2 2
+ScratchStepInAmounts.lean 2 2
+ScratchTakesTheWhole.lean 3 3
+ScratchTwoRequirements.lean 2 2
+ScratchTwoSides.lean 2 2
+ScratchUnitsCarrier.lean 2 2
+ScratchUnitsTurn.lean 2 2
+ScratchUnitsTurnCheck.lean 2 2
+ScratchViableEdge.lean 6 6
+/Users/ren/tmp/dj/TurningInTime.before-fix.lean
+/Users/ren/tmp/dj/TurningInTime.before-lock-fix.lean
+/Users/ren/tmp/dj/together/AARowDJ5.lean
+/Users/ren/tmp/dj/batch21/amounts/.build/BecomingScratchStepInAmountsAxiomAudit.lean
+/Users/ren/tmp/dj/batch19/mixed/.build/BecomingScratchMixedWayAxiomAudit.lean
+/Users/ren/tmp/dj/batch19/covering/.build/BecomingScratchCoveringAxiomAudit.lean
+/Users/ren/tmp/dj/batch26/.build/BecomingScratchDrainEdgeLawAxiomAudit.lean
+/Users/ren/tmp/dj/batch28/AARowAtlas22.lean
+/Users/ren/tmp/dj/batch28/.build/BecomingScratchAtlasStubAxiomAudit.lean
+/Users/ren/tmp/dj/batch28/.build/Becoming/ScratchAtlasStub.lean
+/Users/ren/tmp/dj/batch28/Becoming/ScratchAtlasStub.lean
+/Users/ren/tmp/dj/batch17/takes-the-whole/.build/BecomingScratchTakesTheWholeAxiomAudit.lean
+/Users/ren/tmp/dj/batch17/below-ends-uptake/.build/BecomingScratchBelowEndsUptakeAxiomAudit.lean
+/Users/ren/tmp/dj/batch17/reach-and-held-value/.build/BecomingScratchReachAxiomAudit.lean
+/Users/ren/tmp/dj/batch29/AARowOverlaps22.lean
+/Users/ren/tmp/dj/batch29/.build/BecomingScratchAllStubAxiomAudit.lean
+/Users/ren/tmp/dj/batch29/.build/Becoming/ScratchAllStub.lean
+/Users/ren/tmp/dj/batch29/Becoming/ScratchAllStub.lean
+/Users/ren/tmp/dj/batch18/position-terms/.build/BecomingScratchPositionTermsAxiomAudit.lean
+/Users/ren/tmp/dj/batch27/.build/BecomingScratchDrainOnTheLawAxiomAudit.lean
+/Users/ren/tmp/dj/batch25/.build/BecomingScratchDrainEdgeAxiomAudit.lean
+/Users/ren/tmp/dj/batch22/.build/BecomingScratchUnitsTurnCheckAxiomAudit.lean
+/Users/ren/tmp/dj/batch22/.build/BecomingScratchUnitsTurnAxiomAudit.lean
+/Users/ren/tmp/dj/batch22/.build/BecomingScratchKeepableStepAxiomAudit.lean
+/Users/ren/tmp/dj/batch23/.build/BecomingScratchRenewalBridgeAxiomAudit.lean
+/Users/ren/tmp/dj/batch23/.build/BecomingScratchUnitsCarrierAxiomAudit.lean
+/Users/ren/tmp/dj/batch24/.build/BecomingScratchStayOrTurnAxiomAudit.lean
+/Users/ren/tmp/dj/batch24/.build/BecomingScratchNoReturnAxiomAudit.lean
+/Users/ren/tmp/dj/batch24/.build/BecomingScratchTwoRequirementsAxiomAudit.lean
+/Users/ren/tmp/dj/batch24/.build/BecomingScratchKeptForViableAxiomAudit.lean
+/Users/ren/tmp/fm/build11/.build/prelude-only/GenerativeCore.lean
+/Users/ren/tmp/fm/build7/.build/BecomingScratchEdgeLawAxiomAudit.lean
+/Users/ren/tmp/fm/build9/.build/BecomingScratchEdgeLawAxiomAudit.lean
+/Users/ren/tmp/fm/build9/.build/BecomingScratchEdgeCasesAxiomAudit.lean
+/Users/ren/tmp/fm/build10/.build/BecomingGrammarCandidatesAxiomAudit.lean
+/Users/ren/tmp/fm/build10/.build/BecomingToleranceSignatures.lean
+/Users/ren/tmp/fm/build10/.build/BecomingGrammarCandidatesSignatures.lean
+/Users/ren/tmp/fm/build10/.build/BecomingToleranceAxiomAudit.lean
+/Users/ren/tmp/fm/build10/.build/BecomingKeepingSignatures.lean
+/Users/ren/tmp/fm/build10/.build/BecomingAttractionSignatures.lean
+/Users/ren/tmp/fm/build10/.build/BecomingKeepingAxiomAudit.lean
+/Users/ren/tmp/fm/build10/.build/BecomingAttractionAxiomAudit.lean
+/Users/ren/tmp/fm/build10/.build/BecomingViabilitySignatures.lean
+/Users/ren/tmp/fm/build10/.build/BecomingViabilityAxiomAudit.lean
+/Users/ren/tmp/fm/build10/.build/BecomingPredicateIterationAxiomAudit.lean
+/Users/ren/tmp/fm/build10/.build/BecomingRefinementAxiomAudit.lean
+/Users/ren/tmp/fm/build10/.build/BecomingRefinementSignatures.lean
+/Users/ren/tmp/fm/build10/.build/BecomingGuardHorizonAxiomAudit.lean
+/Users/ren/tmp/fm/build10/.build/BecomingGuardHorizonSignatures.lean
+/Users/ren/tmp/fm/build10/.build/BecomingLikenessSignatures.lean
+/Users/ren/tmp/fm/build10/.build/BecomingCommonResponseAxiomAudit.lean
+/Users/ren/tmp/fm/build10/.build/BecomingLikenessAxiomAudit.lean
+/Users/ren/tmp/fm/build10/.build/BecomingRisingIterationAxiomAudit.lean
+/Users/ren/tmp/fm/build10/.build/BecomingCommonResponseSignatures.lean
+/Users/ren/tmp/fm/build10/.build/prelude-only/GenerativeCore.lean
+/Users/ren/tmp/fm/build8/.build/BecomingScratchEdgeLawAxiomAudit.lean
+/Users/ren/tmp/fm/build1/.build/BecomingKeepableStepAxiomAudit.lean
+/Users/ren/tmp/fm/build1/.build/prelude-only/GenerativeCore.lean
+/Users/ren/tmp/fm/build6/.build/BecomingScratchEdgeCasesAxiomAudit.lean
+/Users/ren/tmp/fm/build3/.build/BecomingScratchViableEdgeAxiomAudit.lean
+/Users/ren/tmp/fm/build4/.build/BecomingScratchKeptEdgeAxiomAudit.lean
+/Users/ren/tmp/fm/build12/.build/BecomingScratchChoiceEitherAxiomAudit.lean
+/Users/ren/tmp/fm/build12/.build/BecomingScratchChoiceAxiomAudit.lean
+/Users/ren/tmp/fm/build12/.build/BecomingScratchInTimeAxiomAudit.lean
+/Users/ren/tmp/fm/build12/.build/BecomingScratchChoiceCasesAxiomAudit.lean
+/Users/ren/tmp/fm/build12/.build/BecomingScratchTwoSidesAxiomAudit.lean
+/Users/ren/tmp/fm/build5/.build/BecomingScratchEdgeLawAxiomAudit.lean
+/Users/ren/tmp/fm/build2/.build/BecomingScratchComparisonAxiomAudit.lean
+/Users/ren/tmp/fm/build13/before-v1/.build/BecomingScratchCasesStubAxiomAudit.lean
+/Users/ren/tmp/fm/build13/before-v1/.build/Becoming/ScratchCasesStub.lean
+/Users/ren/tmp/fm/build13/before-v1/Becoming/ScratchCasesStub.lean
+/Users/ren/tmp/fm/build13/kit-v1/Rows.lean
+/Users/ren/tmp/fm/build13/before/.build/BecomingScratchCasesStubAxiomAudit.lean
+/Users/ren/tmp/fm/build13/before/.build/Becoming/ScratchCasesStub.lean
+/Users/ren/tmp/fm/build13/before/Becoming/ScratchCasesStub.lean
+/Users/ren/tmp/fm/build13/after/.build/BecomingGrammarCandidatesAxiomAudit.lean
+/Users/ren/tmp/fm/build13/after/.build/BecomingScratchCasesStubAxiomAudit.lean
+/Users/ren/tmp/fm/build13/after/.build/BecomingToleranceSignatures.lean
+/Users/ren/tmp/fm/build13/after/.build/BecomingGrammarCandidatesSignatures.lean
+/Users/ren/tmp/fm/build13/after/.build/BecomingToleranceAxiomAudit.lean
+/Users/ren/tmp/fm/build13/after/.build/BecomingLastingAxiomAudit.lean
+/Users/ren/tmp/fm/build13/after/.build/BecomingLastingSignatures.lean
+/Users/ren/tmp/fm/build13/after/.build/BecomingLikenessSignatures.lean
+/Users/ren/tmp/fm/build13/after/.build/BecomingLikenessAxiomAudit.lean
+/Users/ren/tmp/fm/build13/after/.build/prelude-only/GenerativeCore.lean
+/Users/ren/tmp/fm/build13/after/.build/Becoming/ScratchCasesStub.lean
+/Users/ren/tmp/fm/build13/after/Becoming/ScratchCasesStub.lean
+/Users/ren/tmp/fm/build14/tree/.build/BecomingLevelAloneAxiomAudit.lean
+/Users/ren/tmp/fm/build14/tree-third/.build/BecomingLevelAloneAxiomAudit.lean
+/Users/ren/theories/tmp/fm/whole/landing-draft/before-repair-Becoming/Keeping.lean
+/Users/ren/theories/tmp/fm/whole/landing-draft/before-repair-Becoming/Likeness.lean
+/Users/ren/theories/tmp/fm/whole/landing-draft/before-repair-Becoming/Viability.lean
+/Users/ren/theories/tmp/fm/whole/landing-draft/before-repair-Becoming/RisingIteration.lean
+/Users/ren/theories/tmp/fm/whole/landing-draft/before-repair-Becoming/Parting.lean
+/Users/ren/theories/tmp/fm/whole/landing-draft/before-repair-Becoming/ReachableRanges.lean
+/Users/ren/theories/tmp/fm/whole/landing-draft/before-repair-Becoming/PredicateIteration.lean
+/Users/ren/theories/tmp/fm/whole/landing-draft/before-repair-Becoming/Lasting.lean
+/Users/ren/theories/tmp/fm/whole/landing-draft/before-repair-Becoming/CommonResponse.lean
+/Users/ren/theories/tmp/fm/whole/landing-draft/before-repair-Becoming/Tolerance.lean
+/Users/ren/theories/tmp/fm/whole/landing-draft/before-repair-Becoming/GuardHorizon.lean
+/Users/ren/theories/tmp/r7/one-model/check/step18/TRY-DUMP2.lean
+/Users/ren/theories/tmp/r7/one-model/check/dump/GRAPH-DUMP.lean
+/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-C/three-block.lean
+/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-B/LineOnAStock.items1-7a-green.lean
+/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-B/LineOnAStock.before-B.lean
+/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-B/LineOnAStock.items1-6-green.lean
+/Users/ren/theories/tmp/r7/one-model/check/round9/coordinator-wording/LineOnAStockCases.lean
+/Users/ren/theories/tmp/r7/one-model/check/round9/coordinator-wording/TurningInTime.lean
+/Users/ren/theories/tmp/r7/one-model/check/round9/coordinator-wording/LineOnAStock.lean
+/Users/ren/theories/tmp/r7/one-model/check/round9/coordinator-wording/WayOfUnits.lean
+/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-R2/before/LineOnAStockCases.lean
+/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-R2/before/TurningInTime.lean
+/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-R2/before/LineOnAStock.lean
+/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-R2/before/WayOfUnits.lean
+/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-RL/cut-cases.lean
+/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-RL/new-need-unmet.lean
+/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-RL/before/TurningInTime.lean
+/Users/ren/theories/tmp/r7/one-model/check/try18/GRAPH-DUMP.lean
+/Users/ren/theories/tmp/r7/one-model/check/try18/TRY-DUMP.lean
+/Users/ren/theories/tmp/r7/one-model/lean-scratch/.build/BecomingTurningInTimeAxiomAudit.lean
+/Users/ren/theories/tmp/r7/one-model/lean-scratch/.build/BecomingTurningInTimeSignatures.lean
+/Users/ren/theories/tmp/r7/one-model/lean-scratch/.build/prelude-only/GenerativeCore.lean
+/Users/ren/theories/tmp/r7/nr/lean/.build/BecomingTurningInTimeAxiomAudit.lean
+/Users/ren/theories/tmp/r7/nr/lean/.build/BecomingTurningInTimeSignatures.lean
+/Users/ren/theories/tmp/r7/nr/lean/.build/prelude-only/GenerativeCore.lean
+/Users/ren/theories/tmp/r7/the-loop/lean/.build/BecomingTurningInTimeAxiomAudit.lean
+/Users/ren/theories/tmp/r7/wu2/lean/.build/prelude-only/GenerativeCore.lean
+/Users/ren/theories/tmp/r7/tt/lean/.build/BecomingTurningInTimeAxiomAudit.lean
+/Users/ren/theories/tmp/r7/tt/lean/.build/BecomingGrammarPathAxiomAudit.lean
+/Users/ren/theories/tmp/r7/tt/lean/.build/BecomingGrammarPathSignatures.lean
+/Users/ren/theories/tmp/r7/tt/lean/.build/prelude-only/GenerativeCore.lean
+/Users/ren/theories/tmp/r7/tt/readers/_GrammarPath.r2.lean
+/Users/ren/theories/tmp/r7/tt/readers/_GuardedStep.r2.lean
+/Users/ren/theories/tmp/r7/tt/readers/_TurningInTime.r2.lean
