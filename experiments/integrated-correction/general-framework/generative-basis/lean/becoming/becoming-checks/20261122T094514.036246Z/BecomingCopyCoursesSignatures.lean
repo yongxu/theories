@@ -1,0 +1,14 @@
+import Becoming.CopyCourses
+#check @Becoming.CopyCourses.swap_course_iff
+#check @Becoming.CopyCourses.run_copies
+#check @Becoming.CopyCourses.run_drawn
+#check @Becoming.CopyCourses.runs_draw_lt_iff
+#check @Becoming.CopyCourses.runs_draw_midpoint
+#check @Becoming.CopyCourses.inspection_step_matches_iff
+#check @Becoming.CopyCourses.inspection_course_keeps_counts
+#check @Becoming.CopyCourses.length_setAt
+#check @Becoming.CopyCourses.exchangeAt_length
+#check @Becoming.CopyCourses.inspectAt_length
+#check @Becoming.CopyCourses.inspection_course_length
+#check @Becoming.CopyCourses.inspection_course_keeps_template
+#check @Becoming.CopyCourses.doubling_course_iff

@@ -1,0 +1,25 @@
+import Becoming.Labels
+#print axioms Becoming.Learning.prefix_map
+#print axioms Becoming.Identification.firstFit_mem
+#print axioms Becoming.Identification.firstFit_map
+#print axioms Becoming.Learnable.Begins
+#print axioms Becoming.Learnable.decBegins
+#print axioms Becoming.Learnable.byTable
+#print axioms Becoming.Learnable.entryOf
+#print axioms Becoming.Learnable.tableOf
+#print axioms Becoming.Learnable.mem_map_of
+#print axioms Becoming.Learnable.tableOf_length
+#print axioms Becoming.Learnable.entryOf_name_length
+#print axioms Becoming.Learnable.tableOf_names
+#print axioms Becoming.Learnable.begins_entryOf
+#print axioms Becoming.Learnable.table_predicts
+#print axioms Becoming.Learnable.learnable_iff_table
+#print axioms Becoming.Learnable.label_of_predicts
+#print axioms Becoming.Learnable.labels_of_still
+#print axioms Becoming.Learnable.predicts_with_labels
+#print axioms Becoming.Learnable.ahead_with_labels
+#print axioms Becoming.LearnableRuns.table_predicts
+#print axioms Becoming.LearnableRuns.learnable_iff_table
+#print axioms Becoming.LearnableRuns.labels_of_still
+#print axioms Becoming.LearnableRuns.predicts_with_labels
+#print axioms Becoming.LearnableRuns.ahead_with_labels

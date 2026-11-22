@@ -1,0 +1,14 @@
+'Becoming.Viability.keepable_step_iff' does not depend on any axioms
+'Becoming.Viability.keepStep' does not depend on any axioms
+'Becoming.Viability.keep_mono' does not depend on any axioms
+'Becoming.Viability.keepable_iff_count' does not depend on any axioms
+'Becoming.Viability.not_keepable_invariant_iff' does not depend on any axioms
+'Becoming.Viability.not_keepable_step' does not depend on any axioms
+'Becoming.Viability.not_keepable_run' does not depend on any axioms
+'Becoming.Viability.ChoicePoint.afterSplit' does not depend on any axioms
+'Becoming.Viability.ChoicePoint.keepable_gained' does not depend on any axioms
+'Becoming.Viability.ChoicePoint.keepable_gained_along_run' does not depend on any axioms
+'Becoming.Viability.Successor.process' does not depend on any axioms
+'Becoming.Viability.Successor.atOne' does not depend on any axioms
+'Becoming.Viability.Successor.nowhere_keepable' does not depend on any axioms
+'Becoming.Viability.Successor.not_keepable_kept_complement_not' does not depend on any axioms

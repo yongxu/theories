@@ -1,0 +1,77 @@
+Becoming.LineOnAStock.MultiplyingTakersCase.late : ∀ (t : Nat),
+  Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+      Becoming.LineOnAStock.nothingGiven Becoming.LineOnAStock.Doubling.use ([()], 3) (t + 3) =
+    ([], 0)
+Becoming.LineOnAStock.MultiplyingTakersCase.family_late : ∀ (t : Nat),
+  Becoming.LineageRegimes.MultiplyingTakers.generations.family (t + 3) = []
+Becoming.LineOnAStock.MultiplyingTakersCase.agree : ∀ (t : Nat),
+  (Becoming.LineageRegimes.MultiplyingTakers.generations.family t).length =
+      (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+            Becoming.LineOnAStock.nothingGiven Becoming.LineOnAStock.Doubling.use ([()], 3) t).fst.length ∧
+    Becoming.LineageRegimes.MultiplyingTakers.web.level t 0 =
+        (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+            Becoming.LineOnAStock.nothingGiven Becoming.LineOnAStock.Doubling.use ([()], 3) t).snd ∧
+      ((∃ p,
+          p ∈ Becoming.LineageRegimes.MultiplyingTakers.generations.family t ∧
+            Becoming.LineageRegimes.MultiplyingTakers.web.active t p) ↔
+        Becoming.LineOnAStock.Goes Becoming.LineOnAStock.Doubling.need
+          (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+            Becoming.LineOnAStock.nothingGiven Becoming.LineOnAStock.Doubling.use ([()], 3) t))
+Becoming.LineOnAStock.MultiplyingTakersCase.multiplying_takers : (∀ (t : Nat),
+    (Becoming.LineageRegimes.MultiplyingTakers.generations.family t).length =
+        (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+              Becoming.LineOnAStock.nothingGiven Becoming.LineOnAStock.Doubling.use ([()], 3) t).fst.length ∧
+      Becoming.LineageRegimes.MultiplyingTakers.web.level t 0 =
+          (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+              Becoming.LineOnAStock.nothingGiven Becoming.LineOnAStock.Doubling.use ([()], 3) t).snd ∧
+        ((∃ p,
+            p ∈ Becoming.LineageRegimes.MultiplyingTakers.generations.family t ∧
+              Becoming.LineageRegimes.MultiplyingTakers.web.active t p) ↔
+          Becoming.LineOnAStock.Goes Becoming.LineOnAStock.Doubling.need
+            (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+              Becoming.LineOnAStock.nothingGiven Becoming.LineOnAStock.Doubling.use ([()], 3) t))) ∧
+  (∃ t,
+      ¬∃ p,
+          p ∈ Becoming.LineageRegimes.MultiplyingTakers.generations.family t ∧
+            Becoming.LineageRegimes.MultiplyingTakers.web.active t p) ∧
+    ¬Becoming.«不穷»
+        (Becoming.LineOnAStock.net Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+          Becoming.LineOnAStock.nothingGiven Becoming.LineOnAStock.Doubling.use)
+        Becoming.«一» ([()], 3)
+Becoming.LineOnAStock.DrainCase.late : ∀ (t : Nat),
+  Becoming.LineOnAStock.course Becoming.LineOnAStock.DrainCase.need Becoming.LineOnAStock.DrainCase.kids
+      Becoming.LineOnAStock.DrainCase.gift Becoming.LineOnAStock.DrainCase.use
+      ([Becoming.LineOnAStock.DrainCase.Kind.r, Becoming.LineOnAStock.DrainCase.Kind.d0], 11) (t + 10) =
+    ([], 0)
+Becoming.LineOnAStock.DrainCase.gift_eq : ∀ (φ : Becoming.LineageDrawdown.Drain.Phase) (k : Nat → List Nat),
+  Becoming.LineageDrawdown.Drain.giveOf true φ k 1 0 =
+    Becoming.LineOnAStock.DrainCase.gift (Becoming.LineageDrawdown.Drain.levelOf φ 0)
+Becoming.LineOnAStock.DrainCase.need_agrees : ∀ (p : Nat), 4 ≤ p + Becoming.LineOnAStock.DrainCase.gift p ↔ 1 ≤ p
+@Becoming.LineOnAStock.DrainCase.empty_of : ∀ {l : List Becoming.LineOnAStock.DrainCase.Kind},
+  (∀ (u : Becoming.LineOnAStock.DrainCase.Kind), u ∈ l → Becoming.LineOnAStock.DrainCase.isD u = true) →
+    (∀ (u : Becoming.LineOnAStock.DrainCase.Kind), u ∈ l → ¬Becoming.LineOnAStock.DrainCase.isD u = true) → l = []
+Becoming.LineOnAStock.DrainCase.drain : (∀ (t : Nat),
+    ((Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP true)).family t).length =
+        (Becoming.LineOnAStock.course Becoming.LineOnAStock.DrainCase.need Becoming.LineOnAStock.DrainCase.kids
+              Becoming.LineOnAStock.DrainCase.gift Becoming.LineOnAStock.DrainCase.use
+              ([Becoming.LineOnAStock.DrainCase.Kind.r, Becoming.LineOnAStock.DrainCase.Kind.d0], 11) t).fst.length ∧
+      (Becoming.LineageDrawdown.Drain.web true (Becoming.LineageDrawdown.Drain.courseP true)).level t 0 +
+            Becoming.LineOnAStock.DrainCase.gift
+              ((Becoming.LineageDrawdown.Drain.web true (Becoming.LineageDrawdown.Drain.courseP true)).level t 0) =
+          (Becoming.LineOnAStock.course Becoming.LineOnAStock.DrainCase.need Becoming.LineOnAStock.DrainCase.kids
+              Becoming.LineOnAStock.DrainCase.gift Becoming.LineOnAStock.DrainCase.use
+              ([Becoming.LineOnAStock.DrainCase.Kind.r, Becoming.LineOnAStock.DrainCase.Kind.d0], 11) t).snd ∧
+        (Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP true)).sum t =
+          Becoming.LineOnAStock.taken Becoming.LineOnAStock.DrainCase.use
+            (Becoming.LineOnAStock.course Becoming.LineOnAStock.DrainCase.need Becoming.LineOnAStock.DrainCase.kids
+                Becoming.LineOnAStock.DrainCase.gift Becoming.LineOnAStock.DrainCase.use
+                ([Becoming.LineOnAStock.DrainCase.Kind.r, Becoming.LineOnAStock.DrainCase.Kind.d0], 11) t).fst) ∧
+  (∀ (t : Nat),
+      (Becoming.LineageDrawdown.Drain.flow true (Becoming.LineageDrawdown.Drain.courseP true)).give t 1 0 =
+        Becoming.LineOnAStock.DrainCase.gift
+          ((Becoming.LineageDrawdown.Drain.web true (Becoming.LineageDrawdown.Drain.courseP true)).level t 0)) ∧
+    (∀ (p : Nat), 4 ≤ p + Becoming.LineOnAStock.DrainCase.gift p ↔ 1 ≤ p) ∧
+      ∃ n,
+        ∀ (k : Nat),
+          n ≤ k →
+            (Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP true)).family k = []

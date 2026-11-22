@@ -1,0 +1,19 @@
+import Becoming.LastingRuns
+#print axioms Becoming.LastingRuns.run_history_from
+#print axioms Becoming.LastingRuns.lasts_iff_runs
+#print axioms Becoming.LastingRuns.guarded_upto_iff
+#print axioms Becoming.LastingRuns.guarded_none_iff
+#print axioms Becoming.LastingRuns.courses_iff_of_exact
+#print axioms Becoming.LastingRuns.drained_of_courses
+#print axioms Becoming.LastingRuns.collapse_leaves
+#print axioms Becoming.LastingRuns.stays_below_iff
+#print axioms Becoming.LastingRuns.reaches_iff_runs
+#print axioms Becoming.LastingRuns.runs_iff_of_exact
+#print axioms Becoming.LastingRuns.reaches_trans_runs
+#print axioms Becoming.LastingRuns.search_runs_need_decision
+#print axioms Becoming.LastingRuns.determined_lasts_iff_courses
+#print axioms Becoming.LastingRuns.reaches_iff_not_lasts_courses
+#print axioms Becoming.LastingRuns.dual_needs_decision_courses
+#print axioms Becoming.LastingRuns.numeric_needs_decision_courses
+#print axioms Becoming.LastingRuns.reaches_excludes_courses
+#print axioms Becoming.LastingRuns.needs_admissible_runs

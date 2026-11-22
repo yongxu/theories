@@ -1,0 +1,6 @@
+import Becoming.SignificanceStatements
+#print axioms Becoming.SignificanceStatements.noOutside_iff_paths_livingSignificance
+#print axioms Becoming.SignificanceStatements.paths_extension_iff_grammar
+#print axioms Becoming.SignificanceStatements.paths_comparison_grammar
+#print axioms Becoming.SignificanceStatements.widens_iff_retains_adds_root
+#print axioms Becoming.SignificanceStatements.paths_one_object_root

@@ -1,0 +1,114 @@
+@Becoming.Joining.LeftUnit.unique : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.Associative → ∀ {e f a : F}, J.LeftUnit e a → J.LeftUnit f a → e = f
+@Becoming.Joining.RightUnit.unique : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.Associative → ∀ {e f a : F}, J.RightUnit e a → J.RightUnit f a → e = f
+@Becoming.Joining.TwoSidedUnit.self : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.HasUnits → ∀ {e : F}, J.TwoSidedUnit e → J e e e
+@Becoming.Joining.units_unique : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.Associative →
+    J.HasUnits →
+      ∀ (a : F),
+        (∃ e, J.LeftUnit e a ∧ ∀ (f : F), J.LeftUnit f a → f = e) ∧
+          ∃ e, J.RightUnit e a ∧ ∀ (f : F), J.RightUnit f a → f = e
+@Becoming.Joining.commonUnit_of_joined : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.Associative → J.HasUnits → ∀ {a b c : F}, J a b c → J.CommonUnit a b
+@Becoming.Joining.commonUnit_of_composable : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.Associative → J.HasUnits → ∀ {a b : F}, J.Composable a b → J.CommonUnit a b
+@Becoming.Joining.LeftUnit.of_joined : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.Associative → J.Functional → ∀ {a b c e : F}, J a b c → J.LeftUnit e a → J.LeftUnit e c
+@Becoming.Joining.RightUnit.of_joined : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.Associative → J.Functional → ∀ {a b c e : F}, J a b c → J.RightUnit e b → J.RightUnit e c
+@Becoming.Joining.ChainComplete.composable : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.ChainComplete → ∀ {a b : F}, J.CommonUnit a b → J.Composable a b
+@Becoming.Joining.composable_iff_commonUnit : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.Associative → J.HasUnits → J.ChainComplete → ∀ (a b : F), J.Composable a b ↔ J.CommonUnit a b
+@Becoming.Joining.chainComplete_iff_commonUnit_suffices : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.Associative → J.Functional → J.HasUnits → (J.ChainComplete ↔ ∀ (a b : F), J.CommonUnit a b → J.Composable a b)
+@Becoming.Joining.units_agree : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.Associative →
+    ∀ (left right left' right' : F → F),
+      (∀ (a : F), J.LeftUnit (left a) a) →
+        (∀ (a : F), J.RightUnit (right a) a) →
+          (∀ (a : F), J.LeftUnit (left' a) a) →
+            (∀ (a : F), J.RightUnit (right' a) a) → ∀ (a : F), left a = left' a ∧ right a = right' a
+@Becoming.Joining.twoSidedUnit_transport : ∀ {F : Type u_1} {G : Type u_2} {J : Becoming.Joining F}
+  {K : Becoming.Joining G} {f : F → G},
+  (∀ (a b : F), f a = f b → a = b) →
+    (∀ (b : G), ∃ a, f a = b) →
+      (∀ (a b c : F), J a b c ↔ K (f a) (f b) (f c)) → ∀ (e : F), J.TwoSidedUnit e ↔ K.TwoSidedUnit (f e)
+@Becoming.Joining.leftUnit_transport : ∀ {F : Type u_1} {G : Type u_2} {J : Becoming.Joining F} {K : Becoming.Joining G}
+  {f : F → G},
+  (∀ (a b : F), f a = f b → a = b) →
+    (∀ (b : G), ∃ a, f a = b) →
+      (∀ (a b c : F), J a b c ↔ K (f a) (f b) (f c)) → ∀ (e a : F), J.LeftUnit e a ↔ K.LeftUnit (f e) (f a)
+@Becoming.Joining.rightUnit_transport : ∀ {F : Type u_1} {G : Type u_2} {J : Becoming.Joining F}
+  {K : Becoming.Joining G} {f : F → G},
+  (∀ (a b : F), f a = f b → a = b) →
+    (∀ (b : G), ∃ a, f a = b) →
+      (∀ (a b c : F), J a b c ↔ K (f a) (f b) (f c)) → ∀ (e a : F), J.RightUnit e a ↔ K.RightUnit (f e) (f a)
+@Becoming.Joining.TwoSidedUnit.of_iff : ∀ {F : Type u_1} {J K : Becoming.Joining F},
+  (∀ (a b c : F), J a b c ↔ K a b c) → ∀ {e : F}, K.TwoSidedUnit e → J.TwoSidedUnit e
+Becoming.Joining.atMostOnce_functional : Becoming.Joining.atMostOnce.Functional
+Becoming.Joining.atMostOnce_assoc : Becoming.Joining.atMostOnce.Associative
+Becoming.Joining.atMostOnce_twoSidedUnit : Becoming.Joining.atMostOnce.TwoSidedUnit false
+Becoming.Joining.atMostOnce_has_units : Becoming.Joining.atMostOnce.HasUnits
+Becoming.Joining.atMostOnce_commonUnit_not_composable : Becoming.Joining.atMostOnce.CommonUnit true true ∧
+  ¬Becoming.Joining.atMostOnce.Composable true true
+Becoming.Joining.atMostOnce_not_chainComplete : ¬Becoming.Joining.atMostOnce.ChainComplete
+@Becoming.Fragment.Traces.ext : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {f g : Becoming.Fragment.Traces P}, f.val = g.val → f = g
+@Becoming.Fragment.joining_functional : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A),
+  (Becoming.Fragment.joining P).Functional
+@Becoming.Fragment.joining_assoc : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A),
+  (Becoming.Fragment.joining P).Associative
+@Becoming.Fragment.idle_twoSidedUnit : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A) (s : S),
+  (Becoming.Fragment.joining P).TwoSidedUnit (Becoming.Fragment.idleTrace P s)
+@Becoming.Fragment.has_units : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A),
+  (Becoming.Fragment.joining P).HasUnits
+@Becoming.Fragment.chainComplete : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A),
+  (Becoming.Fragment.joining P).ChainComplete
+@Becoming.Fragment.leftUnit_iff : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  (e a : Becoming.Fragment.Traces P),
+  (Becoming.Fragment.joining P).LeftUnit e a ↔ e = Becoming.Fragment.idleTrace P a.val.start
+@Becoming.Fragment.rightUnit_iff : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  (e a : Becoming.Fragment.Traces P),
+  (Becoming.Fragment.joining P).RightUnit e a ↔ e = Becoming.Fragment.idleTrace P a.val.finish
+@Becoming.Fragment.composable_iff_commonUnit : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  (a b : Becoming.Fragment.Traces P),
+  (Becoming.Fragment.joining P).Composable a b ↔ (Becoming.Fragment.joining P).CommonUnit a b
+@Becoming.Fragment.twoSidedUnit_iff_idle : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  (e : Becoming.Fragment.Traces P),
+  (Becoming.Fragment.joining P).TwoSidedUnit e ↔ ∃ s, e = Becoming.Fragment.idleTrace P s
+@Becoming.Fragment.idleTrace_injective : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A) (s t : S),
+  Becoming.Fragment.idleTrace P s = Becoming.Fragment.idleTrace P t → s = t
+@Becoming.Fragment.twoSidedUnit_stays_once : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  (e : Becoming.Fragment.Traces P),
+  (Becoming.Fragment.joining P).TwoSidedUnit e →
+    ∃ s, e = Becoming.Fragment.idleTrace P s ∧ ∀ (t : S), e = Becoming.Fragment.idleTrace P t → t = s
+@Becoming.Fragment.units_unique : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  (a : Becoming.Fragment.Traces P),
+  (∃ e,
+      (Becoming.Fragment.joining P).LeftUnit e a ∧
+        ∀ (f : Becoming.Fragment.Traces P), (Becoming.Fragment.joining P).LeftUnit f a → f = e) ∧
+    ∃ e,
+      (Becoming.Fragment.joining P).RightUnit e a ∧
+        ∀ (f : Becoming.Fragment.Traces P), (Becoming.Fragment.joining P).RightUnit f a → f = e
+@Becoming.Fragment.LeftUnit.of_joined : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {a b c e : Becoming.Fragment.Traces P},
+  Becoming.Fragment.joining P a b c →
+    (Becoming.Fragment.joining P).LeftUnit e a → (Becoming.Fragment.joining P).LeftUnit e c
+@Becoming.Fragment.RightUnit.of_joined : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {a b c e : Becoming.Fragment.Traces P},
+  Becoming.Fragment.joining P a b c →
+    (Becoming.Fragment.joining P).RightUnit e b → (Becoming.Fragment.joining P).RightUnit e c
+@Becoming.Fragment.once_trace_cases : ∀ {s t : Bool} {w : List Unit},
+  Generative.Trace Becoming.Fragment.once s w t → w = [] ∧ s = t ∨ w = [()] ∧ s = false ∧ t = true
+@Becoming.Fragment.steps_reads_mp : ∀ {a b c : Bool},
+  Becoming.Fragment.stepsImage a b c → Becoming.Joining.atMostOnce a b c
+@Becoming.Fragment.steps_reads_mpr : ∀ {a b c : Bool},
+  Becoming.Joining.atMostOnce a b c → Becoming.Fragment.stepsImage a b c
+Becoming.Fragment.steps_reads : ∀ (a b c : Bool), Becoming.Fragment.stepsImage a b c ↔ Becoming.Joining.atMostOnce a b c
+Becoming.Fragment.stepsImage_functional : Becoming.Fragment.stepsImage.Functional
+Becoming.Fragment.stepsImage_assoc : Becoming.Fragment.stepsImage.Associative
+Becoming.Fragment.stepsImage_has_units : Becoming.Fragment.stepsImage.HasUnits
+Becoming.Fragment.stepsImage_not_chainComplete : ¬Becoming.Fragment.stepsImage.ChainComplete
