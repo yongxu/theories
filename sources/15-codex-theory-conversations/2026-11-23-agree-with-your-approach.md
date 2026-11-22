@@ -4,7 +4,7 @@
 
 ## Ren's words
 
-*Context (AI-authored):* three times that evening the session had ended a turn with the same question to him, shown by the app with two buttons, "Not yet" and "Yes, measure first": "Should the atlas also draw, from Lean, where a theorem's statement names another dynamic's notion?" He had not answered it. The layer the "also" points back to is the one he had agreed to the evening before ([his words](2026-11-22-yes-build-it-links-drawn-from-the-lean.md)).
+*Context (AI-authored):* that evening the session had put the same question to him at the end of five of its messages, and twice of those the app showed it with two buttons, "Not yet" and "Yes, measure first" (this line first said "three times", a number typed and not counted; a reader for the coordinating session counted the transcript, and the session counted it again): "Should the atlas also draw, from Lean, where a theorem's statement names another dynamic's notion?" He had not answered it. The layer the "also" points back to is the one he had agreed to the evening before ([his words](2026-11-22-yes-build-it-links-drawn-from-the-lean.md)).
 
 22 November, 23:59:52 WIB (16:59:52 UTC, transcript stamp):
 
