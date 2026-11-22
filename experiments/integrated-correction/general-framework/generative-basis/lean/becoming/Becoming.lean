@@ -2402,9 +2402,9 @@ tagged instance or application.
   read. Withholding a part commutes with the reading, each relatum listed once, so every selection
   through the couplings read at the coarser steps, of a formation within the closure read there,
   selects the sampled levels with and without a part beyond that closure alike
-  (`Flow.unselected_beyond_coupling` at the sampled flow). In `Missed` a part within the closure
-  and beyond the closure read at the even steps is separated by a selection through the selector's
-  couplings and by none read at the even steps. A leaf joining `Becoming.Sampling` and
+  (`Flow.unselected_beyond_coupling` at the sampled flow). In `Missed`, of a part within the closure and beyond the closure read at the even steps, the levels
+  with and without it are separated by a selection through the selector's couplings and by none read
+  at the even steps. A leaf joining `Becoming.Sampling` and
   `Becoming.Selection`.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
