@@ -962,7 +962,7 @@
         "Becoming.LineOnAStock.ways_alike",
         "Becoming.LineOnAStock.within_along"
       ],
-      "sha256": "024010a91cf7c8193b433d2b5f9e6447353812f00521004efc5757ab5379a99a"
+      "sha256": "5c7ce2c3e2c72f271b56900ca336a998abcba646714d5ce01df9c324ce8f4c40"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStockCases.lean",
@@ -984,7 +984,7 @@
         "Becoming.LineOnAStock.MultiplyingTakersCase.late",
         "Becoming.LineOnAStock.MultiplyingTakersCase.multiplying_takers"
       ],
-      "sha256": "9cc20f55f6e3733486499cfbaccc5163ba8cd106485e7e8dd539864aafe84e5a"
+      "sha256": "d1e4a27b93fe0783bd55e097d866e9786be26a7c01ae6e162190088feaa549db"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261116T014928.328589Z/verification.json",
@@ -1050,19 +1050,25 @@
       "path": "sources/15-codex-theory-conversations/2026-11-13-the-map-one-model.md",
       "role": "provenance",
       "sha256": "c6da20b1b08bd8e27e3c60717063361eab651bed2a64ca14f6ec12f4fd8c4b4c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T223138.659438Z/verification.json",
+      "role": "receipt",
+      "sha256": "9dffe9a99119a9921018fb7a8b71e392c7ec2e1301a80130344c10b4f1db9ee3",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261116T014928.328589Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T223138.659438Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LineOnAStock",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStockCases.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261116T014928.328589Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T223138.659438Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LineOnAStockCases",
       "success_pointer": "/status",
       "success_value": "passed"

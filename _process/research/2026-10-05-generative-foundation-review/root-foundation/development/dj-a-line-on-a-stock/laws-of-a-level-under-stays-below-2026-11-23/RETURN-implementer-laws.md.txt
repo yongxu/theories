@@ -1,0 +1,243 @@
+M1 RETURN (board row DJ, scratch tree /Users/ren/tmp/dj/below23/tree1). AI-written, 23 November 2026.
+
+M1 is done and clean in 2 of the 13 builds. The nine new theorems build with exactly the table's premises, the four required old theorems are direct calls of their namesakes with statements unchanged, and the test of use builds. The lister was not run, because only build.sh was allowed.
+
+FILES
+- /Users/ren/tmp/dj/below23/tree1/Becoming/TurningInTime.lean: M1 as built (sha256 begins 18aeaaddd4ddc6b7; main's copy begins d411822eee8ad3c5). 3,151 lines became 3,335.
+- /Users/ren/tmp/dj/below23/tree1/Becoming/LevelAlone.lean: the scratch test of use. NOT TO BE LANDED; take it out before anything is copied from tree1.
+- /Users/ren/tmp/dj/below23/tree1/build-1.log and build-2.log.
+- /Users/ren/tmp/dj/below23/tree1/kit-m1/: apply.py (regenerates the M1 file from main's text by exact replacements), test_of_use.py, sizes.py, m1.diff.
+- Nothing under /Users/ren/theories was changed.
+
+BUILDS
+| n | Modules | Exit | Time | Result |
+|---|---|---|---|---|
+| 1 | TurningInTime | 0 | 05:10:13 to 05:10:21, 8 s | unclean [], 89 theorems, 116 declarations, with_axioms {} |
+| 2 | LevelAlone (scratch copy, over tree1's TurningInTime) | 0 | 05:11:27 to 05:11:34, 7 s | unclean [], 39 theorems, 52 declarations, with_axioms {} |
+
+Build 1 was the first whole draft. No error, warning, `sorry`, axiom, new import, tactic or `set_option`.
+
+THE NINE NEW STATEMENTS (signatures as written)
+
+1. Placed just after `later_le`:
+```
+theorem above_before_of_stays_below {X : Nat → Nat} {c : Nat}
+    (below : ∀ t, X t < c → X (t + 1) < c) {j : Nat} : ∀ {T : Nat}, j ≤ T → c ≤ X T → c ≤ X j
+```
+2. Before `turned_meets_of_above`:
+```
+theorem turned_meets_of_above_of_stays_below {X : Nat → Nat} {giving : Nat → Nat}
+    {H y hi need T : Nat}
+    (below : ∀ t, X t < H + y → X (t + 1) < H + y) (high : X T ≤ hi)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (within : need ≤ H + y) (low : H + y ≤ X T) : ∀ t, need ≤ turned X giving H T t
+```
+3. Before `turned_meets_iff`:
+```
+theorem turned_meets_iff_of_stays_below {X : Nat → Nat} {giving : Nat → Nat} {H y hi need T : Nat}
+    (below : ∀ t, X t < H + y → X (t + 1) < H + y) (high : X T ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y) :
+    (∀ t, need ≤ turned X giving H T t) ↔ H + y ≤ X T
+```
+4. Before `recoverable_of_above`:
+```
+theorem recoverable_of_above_of_stays_below {X : Nat → Nat} {giving : Nat → Nat}
+    {H y hi need N : Nat}
+    (below : ∀ t, X t < H + y → X (t + 1) < H + y) (high : X N ≤ hi)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (within : need ≤ H + y) (low : H + y ≤ X N) :
+    Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N
+```
+5. Before `above_of_recoverable` (no bound, no `hi`):
+```
+theorem above_of_recoverable_of_stays_below {X : Nat → Nat} {giving : Nat → Nat} {H y need N : Nat}
+    (below : ∀ t, X t < H + y → X (t + 1) < H + y)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (needs : 0 < need) (rec : Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N) :
+    H + y ≤ X N
+```
+6. Before `recoverable_iff_above`:
+```
+theorem recoverable_iff_above_of_stays_below {X : Nat → Nat} {giving : Nat → Nat}
+    {H y hi need N : Nat}
+    (below : ∀ t, X t < H + y → X (t + 1) < H + y) (high : X N ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y) :
+    Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N ↔ H + y ≤ X N
+```
+7. Before `noReturnAt_iff_first_below`:
+```
+theorem noReturnAt_iff_first_below_of_stays_below {X : Nat → Nat} {giving : Nat → Nat}
+    {H y hi need N : Nat}
+    (below : ∀ t, X t < H + y → X (t + 1) < H + y) (high : ∀ n, n ≤ N → X n ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y) :
+    NoReturnAt (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N ↔
+      X N < H + y ∧ ∀ n, n < N → H + y ≤ X n
+```
+8. Before `recoverable_decided`:
+```
+private theorem recoverable_decided_of_stays_below {X : Nat → Nat} {giving : Nat → Nat}
+    {H y hi need : Nat}
+    (below : ∀ t, X t < H + y → X (t + 1) < H + y) (high : ∀ t, X t ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y) :
+    ∀ m, Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) m ∨
+      ¬ Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) m
+```
+9. Before `noReturnAt_of_below` (after `met_of_recoverable`):
+```
+theorem noReturnAt_of_below_of_stays_below {X : Nat → Nat} {giving : Nat → Nat} {H y hi need : Nat}
+    (below : ∀ t, X t < H + y → X (t + 1) < H + y) (high : ∀ t, X t ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y) {n : Nat} (under : X n < H + y) :
+    ∃ N, N ≤ n ∧ NoReturnAt (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N
+```
+No general law needed a premise beyond `below` and `X i ≤ hi` at the table's indices.
+
+PROOFS OF THE NEW LAWS (sizes: lines at 100 columns, non-space characters)
+| Theorem | Size | How it is proved |
+|---|---|---|
+| `above_before_of_stays_below` | 3, 158 | The text of `LevelAlone.above_before` (LA 183 to 187) with the name changed: structural recursion on the proof of `j ≤ T`. No helper declaration. |
+| `turned_meets_of_above_of_stays_below` | 8, 385 | The old proof with `high` for `Nat.le_trans (later_le fall (Nat.zero_le T)) top`, and `above_before_of_stays_below below ge low` for `Nat.le_trans low (later_le fall ge)`. |
+| `turned_meets_iff_of_stays_below` | 2, 102 | The two directions. |
+| `recoverable_of_above_of_stays_below` | 2, 138 | The old proof, calling the general R1 if. |
+| `above_of_recoverable_of_stays_below` | 10, 366 | The old proof; the branch `N < T` is `above_before_of_stays_below below (Nat.le_of_lt lt) (above_of_turned_meets nothing short needs meetT)`. |
+| `recoverable_iff_above_of_stays_below` | 2, 120 | The two directions. |
+| `noReturnAt_iff_first_below_of_stays_below` | 9, 395 | The old proof with `iff` taking `n ≤ N` (`high n le`); the pattern name `below` became `under`. |
+| `recoverable_decided_of_stays_below` | 4, 215 | The old proof with `high m`. |
+| `noReturnAt_of_below_of_stays_below` | 4, 189 | The old proof over the general lemmas. |
+
+M1 is thin, as the brief forecast: every new proof is the old proof with one lemma swapped or a premise passed through.
+
+THE OLD THEOREMS
+Every old statement is identical as source text to main's (checked by script for the eight, and for `fall_by`, `later_le`, `above_of_turned_meets`, `met_of_recoverable`, `noReturn_exists`, `turns_in_time_iff_before`). No declaration was removed, renamed or moved.
+
+Rewritten as one direct call of the namesake, all four KEPT:
+| Theorem | Old | New |
+|---|---|---|
+| `turned_meets_of_above` | 9 lines, 420 | 2 lines, 137 |
+| `above_of_recoverable` | 10, 360 | 2, 92 |
+| `noReturnAt_iff_first_below` | 7, 299 | 3, 163 |
+| `recoverable_decided` | 4, 179 | 3, 155 |
+
+- `turned_meets_of_above`:
+  `turned_meets_of_above_of_stays_below (fun t lt => Nat.lt_of_le_of_lt (fall t) lt) (Nat.le_trans (later_le fall (Nat.zero_le T)) top) meets keeps within low`
+- `above_of_recoverable`:
+  `above_of_recoverable_of_stays_below (fun t lt => Nat.lt_of_le_of_lt (fall t) lt) nothing short needs rec`
+- `noReturnAt_iff_first_below`:
+  `noReturnAt_iff_first_below_of_stays_below (fun t lt => Nat.lt_of_le_of_lt (fall t) lt) (fun n _ => Nat.le_trans (later_le fall (Nat.zero_le n)) top) nothing short meets keeps needs within`
+- `recoverable_decided`:
+  `recoverable_decided_of_stays_below (fun t lt => Nat.lt_of_le_of_lt (fall t) lt) (fun t => Nat.le_trans (later_le fall (Nat.zero_le t)) top) nothing short meets keeps needs within`
+
+They are kept because each builds with its statement unchanged, has fewer lines and fewer characters, and its namesake is the head of the proof by the text. These sizes agree with the attacker's paper figures except 163 against its 162.
+
+Left as they stand, proofs byte for byte, docstring one clause longer:
+- `turned_meets_iff` (1 line, 85)
+- `recoverable_of_above` (2, 121)
+- `recoverable_iff_above` (1, 87)
+- `noReturnAt_of_below` (2, 156)
+
+Callers after this:
+- `turned_meets_iff_of_stays_below` and `noReturnAt_of_below_of_stays_below` have no caller in the package; the scratch test calls the second.
+- `recoverable_iff_above_of_stays_below` is called by the general R3.
+- `recoverable_of_above` is now called only by `recoverable_iff_above`.
+
+UNTOUCHED, by script
+- Everything before the first new lemma is identical to main except three added lines in the head note.
+- Everything from `noReturnAt_of_below`'s statement to the end of the file is identical: `asItWas_falls`, `course_turned`, `noReturn_exists`, `turns_in_time_iff_before`, section 8.
+- `later_le` and `fall_by` are as they were.
+- Section 7's opening comment (1973 to 1993 on main) was not touched.
+
+THE TEST OF USE: BUILT (build 2, no axioms)
+Both theorems are stated under the premises of `silent_at_start_iff_next_of_stays_below`: `sets stays uses nothing short meets keeps₀ needs within rises high rest differs below`, with no `mono` and no `still`. They are appended before `end LevelAlone` under a heading "SCRATCH TEST OF USE. NOT TO BE LANDED."; nothing else in the copy changed.
+
+```
+theorem scratch_silent_at_start_iff_recoverable_next_of_stays_below {t alone : W → W}
+    {Kept : W → Prop} {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat}
+    (sets …) (stays …) (uses …) (nothing …) (short …) (meets …) (keeps₀ : RegimeMargin.Keeps giving 0 hi)
+    (needs …) (within …) (rises …) (high : x₀ ≤ hi) (rest …) (differs …)
+    (below : ∀ j, level alone giving use w x₀ j < H₂ + y₂ → level alone giving use w x₀ (j + 1) < H₂ + y₂) :
+    (∃ (marked : Nat → Prop) (_ : DecidablePred marked), ¬ marked x₀ ∧
+        «不穷» (net need (readBy marked t alone) (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x₀))
+      ↔ Recoverable (Turned (fun j => level alone giving use w x₀ j) giving H₂) (MeetsNeed need)
+          (fun t _ => level alone giving use w x₀ t) (D + 1) :=
+  (silent_at_start_iff_next_of_stays_below sets stays uses nothing short meets keeps₀ needs within
+      rises high rest differs below).trans
+    (recoverable_iff_above_of_stays_below (X := fun j => level alone giving use w x₀ j) below
+      (level_within keeps₀ high (D + 1)) nothing short meets
+      (fun _ le => kept_within keeps₀ H₂ le) needs within).symm
+```
+```
+theorem scratch_silent_at_start_none_iff_no_return_of_stays_below  (same binders) :
+    (∀ (marked : Nat → Prop) [DecidablePred marked], ¬ marked x₀ →
+        ¬ «不穷» (net need (readBy marked t alone) (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x₀))
+      ↔ ∃ N, N ≤ D + 1 ∧
+          NoReturnAt (Turned (fun j => level alone giving use w x₀ j) giving H₂) (MeetsNeed need)
+            (fun t _ => level alone giving use w x₀ t) N
+```
+- The second is the proof of `silent_at_start_none_iff_no_return` with three swaps:
+  - `noReturnAt_of_below_of_stays_below (X := …) below (level_within keeps₀ high) nothing short meets (fun _ le => kept_within keeps₀ H₂ le) needs within under` for the `noReturnAt_of_below` call;
+  - the core law for `silent_at_start_iff_next`;
+  - the first scratch theorem for `silent_at_start_iff_recoverable_next`.
+- The calls are the attacker's D10 as written.
+- The bound at `D + 1` and the bound at every step both come from `level_within` with no change.
+- The table's forms fit their one prospective user; no premise or form is missing.
+
+DOCSTRINGS AS THEY NOW STAND
+
+Head note, three lines added after "`recoverable_iff_above`)." at the end of the section 7 bullet:
+"The four laws of any level course `X` are also stated under less (ending `_of_stays_below`): for a course that never rises, a level once below `H + y` staying below it (`below`); for the start at most `hi`, the level at most `hi` at `T`, at `N`, up to `N` or at every step, by the law (`high`)."
+
+New:
+- `above_before_of_stays_below`: "**Where a level once below `c` stays below it, a level at or above `c` at a step is at or above it at every earlier step.** With every level of `X` below `c` below `c` at the next step (`below`): `j ≤ T` and `c ≤ X T` give `c ≤ X j`; `below` read backward, the order on `Nat` being decided. `below` asks less than a course that never rises (`fall`): `fall` gives it at every `c`, by `Nat.lt_of_le_of_lt` (so in the four laws of this section proved as cases), and a course that rises can meet it (by hand, not a Lean statement here: the levels 3, 3, 4, 4, 0, 0, … at `c = 2`)."
+- `turned_meets_of_above_of_stays_below`: "**The course turned at `T` meets the need at every step where `H + y ≤ X T`, for a course whose level once below `H + y` stays below it** (R1, if, under less). With every level of `X` below `H + y` below it at the next step (`below`), the level at the step of the turn at most `hi` (`high : X T ≤ hi`), giving meeting `H` from `y` up to `hi` (`meets`), the step under `H` keeping the level within `hi` (`keeps`), and the need at most `H + y` (`within`). Up to the turn the need is met by `below` read backward (`above_before_of_stays_below`); after it by `RegimeMargin.holds`, which asks the bound of the level the turn starts from, `X T`, and of no other. `below` asks less than a course that never rises (`above_before_of_stays_below`), and `high` less than such a course starting at most `hi`; `turned_meets_of_above` is the case. The bound cannot be dropped (by hand, not a Lean statement: `H = 5`, `y = 1`, `hi = 6`, giving five at one and nothing elsewhere, a need of one, the levels 7, 0, 0, …; every other premise holds at `T = 0`, and the turn at step 0 runs 7, 2, 0, below the need)."
+- `turned_meets_iff_of_stays_below`: "**R1 under less. The course turned at `T` meets the need at every step exactly where `H + y ≤ X T`, for a course whose level once below `H + y` stays below it.** With `below` and the level at the step of the turn at most `hi` (`high : X T ≤ hi`) in place of `turned_meets_iff`'s `fall` and `top`, and its other premises: nothing given from nothing, giving short of `H` below `y`, meeting it from `y` up to `hi`, the step under `H` keeping the level within `hi`, and a positive need at most `H + y`. The if direction uses `below`, `high`, `meets`, `keeps` and `within` (`turned_meets_of_above_of_stays_below`, which tells why the bound is at `T` and that it cannot be dropped); the only-if direction `nothing`, `short` and `needs` (`above_of_turned_meets`). `below` asks less than a course that never rises (`above_before_of_stays_below`). `turned_meets_iff` asks more and concludes the same; its proof is not a call of this law."
+- `recoverable_of_above_of_stays_below`: "**Where `H + y ≤ X N`, `X` is recoverable at `N`, for a course whose level once below `H + y` stays below it** (R2, if, under less): the course turned at `N` agrees with `X` up to `N` and meets the need at every step. With `below`, the level at the step of the turn at most `hi` (`high : X N ≤ hi`), giving meeting `H` from `y` up to `hi` (`meets`), the step under `H` keeping the level within `hi` (`keeps`), and the need at most `H + y` (`within`); by `turned_meets_of_above_of_stays_below` at `T := N`, which tells why the bound is at the step of the turn and that it cannot be dropped. `below` asks less than a course that never rises (`above_before_of_stays_below`). `recoverable_of_above` asks more and concludes the same; its proof is not a call of this law."
+- `above_of_recoverable_of_stays_below` (the narration moved here): "**Where `X` is recoverable at `N`, `H + y ≤ X N`, for a course whose level once below `H + y` stays below it** (R2, only if, under less). With `below`, nothing given from nothing, giving short of `H` below `y`, and a positive need; no bound on the level is asked. By `RegimeMargin.ends_below`. A turn at `T` at or before `N` that meets the need is at or above `H + y` from `T` on, `X N` among them, and there nothing about `X` is used; a turn at `T` after `N` has `H + y ≤ X T`, so `H + y ≤ X N` by `below` read backward (`above_before_of_stays_below`). `below` asks less than a course that never rises (`above_before_of_stays_below`); `above_of_recoverable` is the case."
+- `recoverable_iff_above_of_stays_below`: "**R2 under less. `X` is recoverable at `N` exactly where `H + y ≤ X N`, for a course whose level once below `H + y` stays below it**, with the turns of `X` to `H` as the feasible courses and the need met at every step as what is asked. With `below` and the level at `N` at most `hi` (`high : X N ≤ hi`) in place of `recoverable_iff_above`'s `fall` and `top`, and its other premises: nothing given from nothing, giving short of `H` below `y`, meeting it from `y` up to `hi`, the step under `H` keeping the level within `hi`, and a positive need at most `H + y`. The if direction uses `below`, `high`, `meets`, `keeps` and `within` (`recoverable_of_above_of_stays_below`); the only-if direction `below`, `nothing`, `short` and `needs` (`above_of_recoverable_of_stays_below`). The bound is at `N` because the course that recovers there is the turn at `N`, and it cannot be dropped (by hand, the course told at `turned_meets_of_above_of_stays_below`: its level at step 0 is at or above `H + y` and it is not recoverable there, the turn at 0 and every later turn coming below the need). `below` asks less than a course that never rises (`above_before_of_stays_below`). `recoverable_iff_above` asks more and concludes the same; its proof is not a call of this law."
+- `noReturnAt_iff_first_below_of_stays_below`: "**R3 under less. The point of no return of `X`, a step, is the first step at which its level is below `H + y`, for a course whose level once below `H + y` stays below it.** With `below` and the level at most `hi` at every step up to `N` (`high : ∀ n, n ≤ N → X n ≤ hi`) in place of `noReturnAt_iff_first_below`'s `fall` and `top`, and its other premises: nothing given from nothing, giving short of `H` below `y`, meeting it from `y` up to `hi`, the step under `H` keeping the level within `hi`, and a positive need at most `H + y`. By `recoverable_iff_above_of_stays_below` at `N` and at each step before it, each with the bound at its own step, the step of the turn that recovers there. With no bound the law fails (by hand, the course told at `turned_meets_of_above_of_stays_below`: its point of no return is step 0, where its level is not below `H + y`). `below` asks less than a course that never rises (`above_before_of_stays_below`); `noReturnAt_iff_first_below` is the case."
+- `recoverable_decided_of_stays_below` (private): "Recoverability of `X` is decided at every step, for a course whose level once below `H + y` stays below it, through `recoverable_iff_above_of_stays_below`'s two directions. With `below` and the level at most `hi` at every step (`high : ∀ t, X t ≤ hi`) in place of `recoverable_decided`'s `fall` and `top`, and its other premises: nothing given from nothing, giving short of `H` below `y`, meeting it from `y` up to `hi`, the step under `H` keeping the level within `hi`, and a positive need at most `H + y`. The bound is used at a step only where the level there is at or above `H + y`, as the bound of the turn at that step."
+- `noReturnAt_of_below_of_stays_below`: "**Where `X` comes below `H + y`, it has a point of no return no later, for a course whose level once below `H + y` stays below it.** With `below` and the level at most `hi` at every step (`high : ∀ t, X t ≤ hi`) in place of `noReturnAt_of_below`'s `fall` and `top`, and its other premises (nothing given from nothing, giving short of `H` below `y`, meeting it from `y` up to `hi`, the step under `H` keeping the level within `hi`, a positive need at most `H + y`): where `X n < H + y` (`under`; `noReturnAt_of_below` names that premise `below`) there is a point of no return `N ≤ n`; by `noReturnAt_of_past`, recoverability decided through `recoverable_iff_above_of_stays_below`'s two directions. `high`, `meets`, `keeps` and `within` serve only to decide recoverability at each step, the bound at a step being that of the turn at it; that `X` is not recoverable at `n` uses `below`, `nothing`, `short` and `needs`. Here it is not said that the bound cannot be dropped: it enters only the deciding. `below` asks less than a course that never rises (`above_before_of_stays_below`). `noReturnAt_of_below` asks more and concludes the same; its proof is not a call of this law."
+
+Changed, the four rewritten ("a case of"):
+- `turned_meets_of_above`: "… and the need at most `H + y` (`within`); a case of `turned_meets_of_above_of_stays_below`, `fall` giving `below` and, with `top`, the bound at `T`." This replaces "by `RegimeMargin.holds`".
+- `above_of_recoverable`: "**Where `X` is recoverable at `N`, `H + y ≤ X N`** (R2, only if). With `X` never rising (`fall`), nothing given from nothing, giving short of `H` below `y`, and a positive need; a case of `above_of_recoverable_of_stays_below`, `fall` giving `below`."
+- `noReturnAt_iff_first_below`, appended: "A case of `noReturnAt_iff_first_below_of_stays_below`, `fall` giving `below` and, with `top`, the bound at every step."
+- `recoverable_decided`: "Recoverability of `X` is decided at every step: a case of `recoverable_decided_of_stays_below`, `fall` giving `below` and, with `top`, the bound at every step. Under `recoverable_iff_above`'s premises: `X` never rising (`fall`) and starting at most `hi` (`top`), nothing given from nothing, giving short of `H` below `y`, meeting it from `y` up to `hi`, the step under `H` keeping the level within `hi`, and a positive need at most `H + y`."
+
+Changed, the four left as they stand (one sentence appended, the rest as on main):
+- `turned_meets_iff`: "It follows from `turned_meets_of_above_of_stays_below` through `turned_meets_of_above`."
+- `recoverable_of_above`: "It follows from `turned_meets_of_above_of_stays_below` through `turned_meets_of_above`."
+- `recoverable_iff_above`: "Through these two it follows from `turned_meets_of_above_of_stays_below` and `above_of_recoverable_of_stays_below`."
+- `noReturnAt_of_below`: "It follows from `recoverable_decided_of_stays_below` and `above_of_recoverable_of_stays_below` through `recoverable_decided` and `above_of_recoverable`."
+
+No docstring says "passage", "last chance", or that a point of no return lies after the start. Every new line is at most 100 columns. The two hand courses are marked "by hand, not a Lean statement"; I recomputed both against `RegimeMargin.step g H x = (x - H) + g (x - H)`, `Meets`, `Keeps` and `Short` as defined, and they hold by hand.
+
+FOUND FALSE OR LOOSE IN THE BRIEF
+1. "A general law's docstring says the bound … cannot be dropped" is not supported for `noReturnAt_of_below_of_stays_below` and `recoverable_decided_of_stays_below`.
+   - The hand course does not break them: its point of no return is step 0, so the conclusion holds.
+   - By my reasoning, not Lean: with excluded middle the conclusion needs no bound at all, since a least step that is not recoverable exists once one does. There the bound serves only the deciding.
+   - I wrote that in those two docstrings, and kept "cannot be dropped" for R1 if, R2 and R3, where the hand course does break the law.
+2. The brief does not say in which sense "which old law is its case" holds for the four theorems left as they stand. For the five whose old law is not a call, I wrote "asks more and concludes the same; its proof is not a call of this law".
+3. The old docstring of `above_of_recoverable` said "a turn at `T` before `N`" where the proof's case is `T ≤ N`. The moved narration says "at or before".
+4. Tellings made loose by the rewrite, in places I was told not to touch:
+   - `noReturn_exists`'s docstring and the head note (main lines 189 to 190) say recoverability is decided "through `recoverable_iff_above`". After the rewrite `recoverable_decided` goes through the general law's directions and no longer uses `recoverable_of_above`. It is still true of the statements, but not of the route.
+   - The same older sentence stands in `noReturnAt_of_below`; my appended sentence gives the route.
+   - Section 7's opening comment does not tell the general laws.
+5. Not false, noted: section 7 begins at main line 1973 (its comment) and 1995 (`section PointOfNoReturn`), not 1990.
+
+NOT DONE
+- The lister (`Rows.lean`, `compare.py`): no row before or after. Keeping rules 1 and 2 are met by source text only: statements identical as strings, each rewritten proof an application of its namesake.
+- No separate `#print axioms` scratch file. The build's own audit printed the axioms of every public declaration of both modules, none with any; the two private theorems are covered through the public ones that call them.
+- No core run, gate, test suite, proof-uses print, root telling in `Becoming.lean`, mapping rows or generated pages: owed at the landing.
+- `LevelAlone.above_before` was not made a call of `above_before_of_stays_below`: row FM's, recorded as owed.
+- `later_le` was not rewritten as a call of the new lemma (the attacker's D5 note); the brief keeps it.
+- The docstrings were not read by a second reader.
+- Builds 3 to 13 were not used.

@@ -1,0 +1,64 @@
+start 05:14:18
+{
+  "tree": "/Users/ren/tmp/dj/below23/tree2",
+  "modules": 165,
+  "ran": [
+    "Becoming.LineOnAStock",
+    "BecomingLineOnAStockAxiomAudit",
+    "BecomingLineOnAStockSignatures",
+    "Becoming.LineOnAStockCases",
+    "BecomingLineOnAStockCasesAxiomAudit",
+    "BecomingLineOnAStockCasesSignatures",
+    "Becoming.WayOfUnits",
+    "BecomingWayOfUnitsAxiomAudit",
+    "BecomingWayOfUnitsSignatures",
+    "Becoming.LineOnAStock.PreludeOnly",
+    "Becoming.LineOnAStockCases.PreludeOnly",
+    "Becoming.WayOfUnits.PreludeOnly"
+  ],
+  "reused": 328,
+  "unclean": [],
+  "audits": {
+    "Becoming.LineOnAStock": {
+      "theorems": 113,
+      "declarations": 188,
+      "with_axioms": {}
+    },
+    "Becoming.LineOnAStockCases": {
+      "theorems": 9,
+      "declarations": 15,
+      "with_axioms": {}
+    },
+    "Becoming.RegimeMargin": {
+      "theorems": 246,
+      "declarations": 336,
+      "with_axioms": {}
+    },
+    "Becoming.Stock": {
+      "theorems": 45,
+      "declarations": 57,
+      "with_axioms": {}
+    },
+    "Becoming.WayOfUnits": {
+      "theorems": 68,
+      "declarations": 88,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.LineOnAStock": 2.104,
+    "BecomingLineOnAStockAxiomAudit": 0.639,
+    "BecomingLineOnAStockSignatures": 0.58,
+    "Becoming.LineOnAStockCases": 0.668,
+    "BecomingLineOnAStockCasesAxiomAudit": 0.393,
+    "BecomingLineOnAStockCasesSignatures": 0.397,
+    "Becoming.WayOfUnits": 0.732,
+    "BecomingWayOfUnitsAxiomAudit": 0.462,
+    "BecomingWayOfUnitsSignatures": 0.422,
+    "Becoming.LineOnAStock.PreludeOnly": 1.99,
+    "Becoming.LineOnAStockCases.PreludeOnly": 0.502,
+    "Becoming.WayOfUnits.PreludeOnly": 0.587
+  }
+}
+exit 0 build 16
+end 05:14:24

@@ -1,0 +1,122 @@
+MUST, DOCSTRINGS
+
+1. `/Users/ren/tmp/dj/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean` lines 2152-2153 (`turned_meets_iff`): "It follows from `turned_meets_of_above_of_stays_below` through `turned_meets_of_above`."
+   - The proof term is `⟨above_of_turned_meets …, turned_meets_of_above …⟩`. Only the if direction reaches the new law; `above_of_turned_meets` calls none (rows-after: uses `above_of_turned_meets`, `turned_meets_of_above`). "It" says the whole iff.
+   - Replacement for the last two lines (95 and 35 columns):
+   ```
+   (`above_of_turned_meets`). Its if direction follows from `turned_meets_of_above_of_stays_below`
+   through `turned_meets_of_above`. -/
+   ```
+
+2. Same file, line 2386 (`noReturnAt_of_below`): "by `noReturnAt_of_past`, recoverability decided through `recoverable_iff_above`."
+   - The proof is `noReturnAt_of_past (recoverable_decided …) …`. By compare-output.txt, `recoverable_decided` no longer uses `above_of_recoverable` or `recoverable_of_above`, so nothing of `recoverable_iff_above` is on the route. The docstring's own last sentence gives the other route.
+   - Replacement for line 2386 (89 columns):
+   ```
+   `N ≤ n`; by `noReturnAt_of_past`, recoverability decided by `recoverable_decided`. `top`,
+   ```
+   - The same sentence stands at head note lines 189-190 and in `noReturn_exists`'s docstring (2491-2492), outside the brief's bounds and recorded in NOTE.md; replacements are under LESSER.
+
+3. `/Users/ren/tmp/dj/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean` line 5200: "a course that never rises meets both".
+   - False as written: a course that never rises meets `below`, but meets the bound only from a start at most `hi` (every case proof uses `top`).
+   - Replacement: "such a course meets both" (the clause just before names "a course that never rises from a start at most `hi`").
+
+MUST, OTHER TEXT
+
+1. `/Users/ren/tmp/dj/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md` line 400: the same words, the same replacement, "such a course meets both".
+
+2. `/Users/ren/tmp/dj/wt/theories/becoming/results/records/turning-in-time.json`, last law, "en": "A course that never rises meets both; one that rises can."
+   - The first half is false in the same way. The second is a hand course told with no mark of how far it has been seen.
+   - Replacement for the two sentences: "Such a course meets both; one that rises can (by hand, not a Lean statement: the levels 3, 3, 4, 4, 0, 0, … with H + y = 2 and hi = 4)."
+   - I recomputed it: `below` holds (only 0 is under 2 and it stays 0), and every level is at most 4.
+
+3. Same law, "zh". Three differences from the English:
+   - it drops the four theorem names, so "（T；N；至 N 各步；每一步）" has no list to map onto;
+   - "只要求" reads as "only requires", while the other premises stay;
+   - "从不上升者两者皆满足" is false as in the English.
+   - Replacement: "上述水位进程诸律（turned_meets_iff、recoverable_iff_above、noReturnAt_iff_first_below、noReturnAt_of_below）在更弱前提下成立：以「水位一旦低于 H + y 便保持低于」（below）代「X 从不上升」，以「所用转向之步水位 ≤ hi」（依次为 T；N；至 N 各步；每一步）代「起点 ≤ hi」，其余前提不变。从不上升且起点 ≤ hi 者两者皆满足；上升的进程也可满足（手算，非 Lean 陈述：水位 3、3、4、4、0、0、…，H + y = 2，hi = 4）。"
+
+4. `/Users/ren/tmp/dj/wt/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/laws-of-a-level-under-stays-below-2026-11-23/NOTE.md` line 3: "What a reader who took no part changed in this note and in the docstrings is said at its end."
+   - The note ends with "Cost"; no such section exists yet. Add it, or cut the sentence.
+
+LESSER
+
+1. Root line 5200 and README line 400, "with the level at most `hi` at the step of each turn the law uses". Not false, but it does not say the four forms: R3's premise (every step up to `N`) cannot be recovered without the proof. The record does say them.
+   - Replacement: "… at the step of each turn the law uses (at `T`; at `N`; at every step up to `N`), in place of …".
+   - The fourth theorem named there, `noReturnAt_of_below_of_stays_below`, has no content told: the root never tells `noReturnAt_of_below`. Optional addition after its name: "(where the level comes below `H + y` there is a point of no return no later)".
+
+2. TurningInTime head note, lines 195-197: "for a course that never rises, a level once below …; for the start at most `hi`, the level …" can be read as a claim about courses that never rise. Replacement (97, 95, 97 columns; "by the law" dropped to fit):
+   ```
+     The four laws of any level course `X` are also stated under less (ending `_of_stays_below`): in
+     place of never rising, a level once below `H + y` staying below it (`below`); in place of the
+     start at most `hi`, the level at most `hi` at `T`, at `N`, up to `N` or at every step (`high`).
+   ```
+
+3. TurningInTime line 2046 (`above_before_of_stays_below`): "(so in the four laws of this section proved as cases)".
+   - True of `turned_meets_of_above`, `above_of_recoverable`, `noReturnAt_iff_first_below` and `recoverable_decided`.
+   - The head note's "four laws" are a different four, three of which are not cases.
+   - Replacement (99 columns): "`Nat.lt_of_le_of_lt` (so in each theorem of this section proved as a case), and a course that rises".
+
+4. "`below` asks less than a course that never rises (`above_before_of_stays_below`)", at seven places (2088, 2136, 2169, 2199, 2238, 2275, 2369). The parenthesis cites a theorem whose statement does not give this; its docstring tells it. See "shown or only said" under CHECKED. Exact form would be "(told at `above_before_of_stays_below`)"; it needs a re-wrap at most places.
+
+5. TurningInTime line 2043: "With every level of `X` below `c` below `c` at the next step". Replacement within the line: "With a level of `X` below `c` staying so at the next step (`below`):".
+
+6. The two siblings of MUST 2, same file:
+   - line 190 (99 columns): "  as in `recoverable_iff_above`, and that the course is not recoverable at step `x` needs only that";
+   - line 2492 (98 columns): "each step as in `recoverable_iff_above`; that the course is not recoverable at step `x` needs only".
+
+7. `/Users/ren/tmp/dj/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean` line 73 (row 7): "`B`'s and `C`'s together more than it".
+   - "Together" can be read as `B`'s and `C`'s kids pooled, and "it" has two referents.
+   - The numbers: `A` 3 against `B, B` 2; `B` 1 against `C, B` 2; `C` 1 against `A` 3.
+   - Replacement (100 columns): "`HigherStartEnds` (`A`'s kids together take less than it, `B`'s more than `B`, `C`'s more than `C`),".
+
+8. LineOnAStock re-wraps left short lines inside paragraphs: "There is a step `n` with" (`falls_to_unmet`), "(`way_while_met`)." (`need_unmet`), "holds (`Holds`)." (`unending_iff_holds`), "need is met." (`KidHigherNeed`). Cosmetic.
+
+9. Record, `validation_scope`: "core run of 23 November" is a forecast until the run. The figures are the lister's and scratch builds 1 and 17's. `proof_bindings` still carries main's sha256 (d411822e…); the file as it stands is 18aeaadd…. The new history entry lacks the "Bound to core run …" and reader sentences the 21 November entry has.
+
+10. NOTE.md:
+    - line 7, "Ren wrote": the source says how the words were entered is not known and that the second "reads as spoken". Use "said".
+    - line 45, "(of which only `Rising.level_rises` is Lean)": `Rising.some_unending` decides `rest`, `differs` and 2 ≤ the level at step 3 inside its proof. Suggest "(of which Lean states only `Rising.level_rises`)".
+    - line 38, "every declaration … private ones too": the lister skips Lean's generated names.
+    - line 39, "no axiom in any declaration": the audit counts public declarations (116 for TurningInTime).
+    - line 52: 697,629 is over the restated stop of 0.6 million by 97,629, and the sentence does not say so.
+
+11. TurningInTime's section 7 opening comment (1976-1996) still tells only the never-rising laws. The moved first line of `above_of_recoverable`'s docstring is 101 columns, as on main.
+
+CHECKED AND FOUND AS WRITTEN
+
+- **Part 1, nine new theorems.** Every premise named, the form and index of each bound (`X T`; `X N`; none; `∀ n ≤ N`; `∀ t` twice), each "if / only if" with the premises each direction uses, and `under` against `below` all match statement and proof.
+- **"A case of" and "not a call of this law".** All agree with the source and with compare-output.txt: four old theorems have the namesake at the head; `turned_meets_iff`, `recoverable_of_above`, `recoverable_iff_above`, `noReturnAt_of_below` have unchanged terms. `recoverable_iff_above`'s "through these two" is right.
+- **Rising course 3, 3, 4, 4, 0, 0, … at c = 2.** `below` holds and `fall` fails at step 1.
+- **Course H = 5, y = 1, hi = 6, g 1 = 5, need 1, levels 7, 0, 0, ….**
+  - `FromNothing`, `Short`, `Meets` (only z = 1), `Keeps` (the step from 6 is 6, from 0 to 5 is 0), `within`, `low` and `below` hold; only `X 0 ≤ hi` fails.
+  - The turn at 0 runs 7, 2, 0.
+  - It is not recoverable at 0 (later turns pass through `X 1 = 0`), and the point of no return is step 0, where the level is not below 6.
+  - So "cannot be dropped" holds for R1 if, R2 and R3; "not said" for the existence law is honest.
+- **"Asks less": shown or only said.** In Lean, that a fall gives `below` exists only inline in the four case proofs, not as a named statement. That a rising course can meet it is by hand, and the docstring says so.
+- **Part 2, rows 1 to 30 and root line 5293.** All true against `even`, `grows` (both forms), `keeps` on a line, and the cases' numbers (KidsNeedMore 2 against 4 and 1 against 2; KidHigherNeed, Doubling, ProperLine 1 against 2; TwoForOne 2 against 1+1).
+  - Row 29 is true: `d0` 2 against `d1, d1` 4, `d1` 2 against 2.
+  - Every place left is rightly left (single kid, a total, a name, or a negative).
+  - A search of the flattened text of the four files, root and README found no other place.
+- **Part 3.** None of the seven narrates a proof no longer its own. `strong_below` was the only one and is mended; `Stock.total_append` has no docstring; "decided along the way" and "Decided with no premise" still hold.
+- **Part 4, counts.** From rows-after.txt, rows of module `Becoming.TurningInTime`:
+  - 116 with names not beginning `_private` (89 kind theorem, 27 kind def), 36 private, all theorems.
+  - rows-before.txt gives 108 (81 + 27) and 35 by the same count, so 116, 89 and 36 are right.
+  - "Declarations" means the module's own named public definitions and theorems, Lean's generated names left out. The build audit prints the same 116 and 89.
+- **Part 4, the rest.** The record's eight declarations and its history entry match. Its laws name 116 declarations. `LevelAlone` imports the module, and its core law's premise is `below`. The root and README clauses are the same words.
+- **Part 5.** 883, 892, none gone, no statement changed, nine new and eleven changed are as compare-output.txt has them. 27 places. Six builds (1, 2, 14, 15, 16, 17), all exit 0, `unclean` empty, `with_axioms` empty. Also checked:
+  - the frozen hashes match;
+  - the claim commit (05:01:48) precedes the first build (05:10:13);
+  - the two laws with no caller have none;
+  - the link to his words resolves and the words are there;
+  - Rising by hand gives recoverable at step 3 and not at step 4, with H = y = 1, hi = 4;
+  - 235,630 + 461,999 = 697,629.
+
+NOT CHECKED
+
+- No Lean, build, test or gate was run; no file was changed. Proofs and "no statement changed" rest on compare-output.txt and the build logs as given.
+- The token figures themselves, and what was said beforehand to the coordinating session.
+- The board, the generated pages, the places listing, mapping rows, and whether the landing tool rewrites the record's sha256.
+- Records, chapters and other pages outside the landing's files for the telling of kids without "together".
+- The test-of-use file beyond its two calls and docstrings. `LevelAlone`'s lines 563 and 591 were seen by grep only.
+- LineOnAStock's unchanged docstrings were searched by pattern, not read whole.
+- The Chinese of the record's other laws.

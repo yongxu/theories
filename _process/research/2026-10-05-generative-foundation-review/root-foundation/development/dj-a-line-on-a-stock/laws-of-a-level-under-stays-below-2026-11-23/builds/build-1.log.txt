@@ -1,0 +1,28 @@
+start 05:10:13
+{
+  "tree": "/Users/ren/tmp/dj/below23/tree1",
+  "modules": 150,
+  "ran": [
+    "Becoming.TurningInTime",
+    "BecomingTurningInTimeAxiomAudit",
+    "BecomingTurningInTimeSignatures",
+    "Becoming.TurningInTime.PreludeOnly"
+  ],
+  "reused": 298,
+  "unclean": [],
+  "audits": {
+    "Becoming.TurningInTime": {
+      "theorems": 89,
+      "declarations": 116,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.TurningInTime": 3.095,
+    "BecomingTurningInTimeAxiomAudit": 0.498,
+    "BecomingTurningInTimeSignatures": 0.521,
+    "Becoming.TurningInTime.PreludeOnly": 2.65
+  }
+}
+exit 0 build 1
+end 05:10:21

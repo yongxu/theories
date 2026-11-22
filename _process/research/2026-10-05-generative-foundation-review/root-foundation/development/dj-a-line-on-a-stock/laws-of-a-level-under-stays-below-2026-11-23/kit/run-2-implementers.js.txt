@@ -1,0 +1,44 @@
+export const meta = {
+  name: 'build-three-laws-under-below',
+  description: 'Two implementers in scratch trees: the three laws of TurningInTime under a weaker premise; the docstrings and calls owed beside them',
+  phases: [{ title: 'Build', detail: 'two writers on separate files, scratch builds one at a time, at most 25 between them' }],
+}
+const ROOT = '/Users/ren/theories'
+const PKG = ROOT + '/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming'
+const DIR = ROOT + '/tmp/r7/one-model/check/below23'
+const S = '/Users/ren/tmp/dj/below23'
+const COMMON = `What we are doing, so that you know the whole and not only your task. The repository at ${ROOT} holds "the theory of becoming": a map of how anything forms, persists, changes and ends, with its core proved in Lean 4 (the package's modules are ${PKG}/*.lean; no Mathlib, the proofs are term-style over Lean's core). On 23 November a new module, LevelAlone, landed whose core law asks of a course only that a level once below a point of no return stays below; the older module TurningInTime states its laws on recoverability and no return under more than they use. One Lean landing now states them under the weaker premise, with the old laws coming back as calls, and brings up small things owed in neighbouring modules. The brief, attacked by a reader before any build, is ${DIR}/BRIEF.md: read it WHOLE first, and its section "After" governs wherever it differs from what is above it. The attacker's return, with its paper proofs and the calls written out, is ${DIR}/RETURN-attack.md.txt.
+
+House rules, all of them stops.
+- Work ONLY in your scratch tree (named below). Change no file under ${ROOT}. Nothing is pushed or sent.
+- Build ONLY with: ${S}/build.sh <tree> <n> <Module> [<Module> ...]  (module names without "Becoming."; n is the build's number, counted by you from the number given below). It waits while any other Lean build is alive, runs the package's scratch_build.py once, and prints the errors and the tail; the full log is <tree>/build-<n>.log, which also prints the axioms of every declaration of each named module. Run each build in the foreground with a long timeout (up to 10 minutes; the machine is busy and another writer builds too). NO other Lean, no core run, no gate, no test suite.
+- AT MOST the number of builds given below. Think on paper before each; read the errors whole. If you are not clean within your builds, stop and report where you are.
+- Term-style proofs as in the module: no tactics that the file does not already use, no new import, no \`sorry\`, no axiom, no warning, no \`set_option\`.
+- No statement of any existing theorem or definition changes, binder names and binder kinds included; no declaration is removed or renamed; nothing moves except where the brief says.
+- Stop at about 170,000 tokens of your own work and report what is done and what is not.
+
+Your return is plain text: for each member, what you did, the old and new proof with their sizes (lines at 100 columns; non-space characters), kept or put back and why; every build with its number, the modules, exit code and how long; for every new or changed docstring the sentence as it now stands; anything in the brief you found false; and what you did not do.`
+
+phase('Build')
+const [a, b] = await parallel([
+  () => agent(`${COMMON}
+
+YOUR PART: M1, in the scratch tree ${S}/tree1 (it holds Becoming/TurningInTime.lean, a copy of main's). Builds numbered 1 to 13: AT MOST 13.
+1. Add the nine new theorems of the "After" table (above_before_of_stays_below public; the six public laws; recoverable_decided_of_stays_below private; noReturnAt_of_below_of_stays_below), each with exactly the premises of the table and every other premise the old law's, placed just before the old theorem each generalises (the first lemma just after \`later_le\`). \`later_le\` and \`fall_by\` stay as they are.
+2. Rewrite as ONE direct call of its namesake, statement unchanged: turned_meets_of_above, above_of_recoverable, noReturnAt_iff_first_below, recoverable_decided. Leave as they stand: turned_meets_iff, recoverable_iff_above, recoverable_of_above, noReturnAt_of_below. Touch nothing else in the module: noReturn_exists, turns_in_time_iff_before, section 8 and everything before line 1990 stay byte for byte, except the head note, which may gain at most three lines telling the general laws.
+3. Docstrings as the brief and its "After" say (what each general law asks and concludes; that \`below\` is weaker than a course that never rises; that the bound is at the index of the turn and cannot be dropped; "a case of" for the four rewritten, "follows from" for the four left; the proof narration of above_of_recoverable moves to its general law). Do not write "passage", "last chance", or that a point of no return lies after the start.
+4. Build TurningInTime (build 1 on your first whole draft, not law by law).
+5. THE TEST OF USE. When TurningInTime builds clean: copy ${PKG}/LevelAlone.lean into ${S}/tree1/Becoming/LevelAlone.lean and append, at the end of its namespace and marked plainly as a scratch test that is not to be landed, two theorems: its form in \`Recoverable\` (find the existing one near its line 563, which calls \`recoverable_iff_above\` with \`fall\` from \`level_never_rises_of_rises\`) and its no-return form (near line 591, which calls \`noReturnAt_of_below\`), each stated under the premises of its CORE law \`silent_at_start_iff_next_of_stays_below\` (so with \`below\` and without \`mono\` and \`still\`), proved by \`recoverable_iff_above_of_stays_below\` and \`noReturnAt_of_below_of_stays_below\` with the bound from that module's \`level_within\`. The attacker wrote the calls on paper (its D10). Change nothing else in that copy. Build LevelAlone. Report the two statements and whether they built; if they do not, say exactly which premise or form is missing: that is a finding about the table, not a failure of yours.
+6. Report, beside the common return: the nine new statements as written (signature only), and the result of the test of use.`, { label: 'implementer of the three laws', phase: 'Build' }),
+  () => agent(`${COMMON}
+
+YOUR PART: M2 and M3, in the scratch tree ${S}/tree2 (it holds Becoming/LineOnAStock.lean, LineOnAStockCases.lean, RegimeMargin.lean, Stock.lean, WayOfUnits.lean, copies of main's). Builds numbered 14 to 25: AT MOST 12.
+M3 first (it is what can fail to build). For each member read its entry in ${ROOT}/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-said-more-than-once-2026-11-22/returns/CHECK-cheap-calls-opus.md.txt (in that file "M1", "M2", "M3" are ITS failure codes, not this brief's members) and the attacker's item 7, then the declaration as it stands:
+- LineOnAStock: \`course_fixed\` as a call of \`Learnable.orbit_of_still\`; \`line_or_none\` and \`met_or_unmet\` as calls of \`gather_listed\`; \`strong_below\` as a call of \`Identification.below_upto\`.
+- Stock: \`search\` as a call of \`Amounts.unmarked_or_marked\`; \`total_append\` as a call of \`Becoming.total_append\` with the arguments in its order.
+- RegimeMargin: \`run_within\` as the ONE-LINE \`Lasting.closed_orbit band high\` (a form with named arguments is 2 lines to 2 and is put back).
+The keeping rule for each (the brief's, items 1 to 4): the statement unchanged binder by binder; the named law used; no induction of its own left; strictly fewer lines (at 100 columns) AND no more non-space characters than the old proof; no new import. A member that fails is PUT BACK byte for byte and reported with the figures. Build the three modules together on your first whole draft (build 14: LineOnAStock Stock RegimeMargin), not member by member; RegimeMargin has many importers, which the landing's core run rebuilds, not you.
+Then M2. In LineOnAStock.lean mend every place where the premises \`even\` (\`taken use (kids u) = use u\`), \`grows\` (\`use u < lineTake S use (kids u)\` and its forms) and \`keeps\` on a line are told of a unit's kids without saying they are of the kids together. The "After" section lists 27 places by line and says which need rewording and which are left; use that list, check each against the premise it tells, and read the module's docstrings for tellings in other words a pattern search missed. Do the same at LineOnAStockCases.lean lines 84 and 188 and WayOfUnits.lean line 100. Docstrings and comments only: no statement and no proof changes there. (The root file's line is mended at the landing by the session, not by you.) Then one last build of all five modules of your tree.
+Report, beside the common return: a table of every docstring place changed (file, line on main, old sentence, new sentence) and every listed place you left with why.`, { label: 'implementer of the docstrings and calls', phase: 'Build' }),
+])
+return { laws: a, tidy: b }

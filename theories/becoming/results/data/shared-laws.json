@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261122T194452.040858Z",
- "core_sources_sha256": "c895f22fb4b732be9270ea3200ea2ac72ce336f7f95b2ca74453a2c234164503",
+ "core_receipt": "20261122T223138.659438Z",
+ "core_sources_sha256": "4b3737f00b30c00d883b4941e59148cadcbabaa80ebfff42b1dc8b9e56bd1484",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,16 +58,16 @@
   ]
  },
  "counts": {
-  "laws": 4424,
+  "laws": 4426,
   "no_declarations": 9,
   "outside": 391,
   "grammar": 1073,
-  "balance, represented": 637,
+  "balance, represented": 638,
   "anchor, not reached": 134,
-  "no shared law": 2180,
+  "no shared law": 2181,
   "vocabulary_only": 105,
   "closure": 590,
-  "balance": 905,
+  "balance": 906,
   "return": 254,
   "lumping": 92,
   "order": 105
@@ -56010,6 +56010,32 @@
     ],
     "grammar": true,
     "dependence": "grammar"
+   },
+   {
+    "law": 44,
+    "declarations": [
+     "Becoming.TurningInTime.turned_meets_of_above_of_stays_below",
+     "Becoming.TurningInTime.turned_meets_iff_of_stays_below",
+     "Becoming.TurningInTime.recoverable_of_above_of_stays_below",
+     "Becoming.TurningInTime.above_of_recoverable_of_stays_below",
+     "Becoming.TurningInTime.recoverable_iff_above_of_stays_below",
+     "Becoming.TurningInTime.noReturnAt_iff_first_below_of_stays_below",
+     "Becoming.TurningInTime.noReturnAt_of_below_of_stays_below"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 45,
+    "declarations": [
+     "Becoming.TurningInTime.above_before_of_stays_below"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
    }
   ],
   "two-act-worlds-carry-the-difference": [
@@ -67929,7 +67955,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "9269ddfd170214b88be0e1cddffe5f8c9287f51e312f9bac7ce385a971b66b08",
+   "modules_sha256": "60229b676aab1601fdbc6a118ecf7d702c5a9df5735537f34815f4a4f36f8272",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

@@ -33,8 +33,8 @@
 {"name": "Becoming.Stock.repeat_needs", "uses": ["Becoming.Stock.cycles_need"]}
 {"name": "Becoming.Stock.replenishes_of_draws", "uses": ["Becoming.Stock.flat_of_none", "Becoming.Stock.search", "Becoming.le_dest"]}
 {"name": "Becoming.Stock.room_balanced", "uses": ["Becoming.add_right_cancel", "Becoming.add_sub_of_le"]}
-{"name": "Becoming.Stock.search", "uses": []}
-{"name": "Becoming.Stock.total_append", "uses": []}
+{"name": "Becoming.Stock.search", "uses": ["Becoming.Amounts.unmarked_or_marked"]}
+{"name": "Becoming.Stock.total_append", "uses": ["Becoming.total_append"]}
 {"name": "Becoming.Stock.total_cycles", "uses": ["Becoming.Stock.total_append"]}
 {"name": "Becoming.Stock.trace_balance", "uses": []}
 {"name": "Becoming.Stock.trace_exhausts", "uses": []}

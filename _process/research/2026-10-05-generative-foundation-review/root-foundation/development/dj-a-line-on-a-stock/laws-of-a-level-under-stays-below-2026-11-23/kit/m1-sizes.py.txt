@@ -1,0 +1,44 @@
+import re, math, sys
+from pathlib import Path
+old = Path("/Users/ren/tmp/dj/below23/before/TurningInTime.lean").read_text()
+new = Path("/Users/ren/tmp/dj/below23/tree1/Becoming/TurningInTime.lean").read_text()
+
+def decl(text, name):
+    m = re.search(r"^(private )?theorem " + re.escape(name) + r"[ \n]", text, flags=re.M)
+    if not m: return None
+    start = m.start()
+    end = text.find("\n\n", start)
+    body = text[start:end]
+    # statement ends at the first ":=" at end of a line, or (pattern-matching form) before the first "\n  |"
+    k = body.find(":=\n")
+    if k < 0 or (body.find("\n  | ") >= 0 and body.find("\n  | ") < k):
+        k = body.find("\n  | "); stmt, proof = body[:k], body[k+1:]
+    else:
+        stmt, proof = body[:k+2], body[k+3:]
+    return stmt, proof
+
+def size(proof):
+    lines = sum(max(1, math.ceil(len(l) / 100)) for l in proof.split("\n"))
+    chars = len(re.sub(r"\s", "", proof))
+    return lines, chars
+
+olds = ["fall_by", "later_le", "turned_meets_of_above", "above_of_turned_meets", "turned_meets_iff", "recoverable_of_above",
+        "above_of_recoverable", "recoverable_iff_above", "noReturnAt_iff_first_below", "recoverable_decided",
+        "met_of_recoverable", "noReturnAt_of_below", "noReturn_exists", "turns_in_time_iff_before"]
+for n in olds:
+    a, b = decl(old, n), decl(new, n)
+    print(f"{n}: statement same {a[0] == b[0]}; proof same {a[1] == b[1]}; old {size(a[1])} new {size(b[1])}")
+news = ["above_before_of_stays_below", "turned_meets_of_above_of_stays_below", "turned_meets_iff_of_stays_below",
+        "recoverable_of_above_of_stays_below", "above_of_recoverable_of_stays_below", "recoverable_iff_above_of_stays_below",
+        "noReturnAt_iff_first_below_of_stays_below", "recoverable_decided_of_stays_below", "noReturnAt_of_below_of_stays_below"]
+for n in news:
+    assert decl(old, n) is None
+    s, p = decl(new, n)
+    print(f"NEW {n}: proof {size(p)}")
+    if "-v" in sys.argv: print(s)
+# what lies outside the changed span
+i0 = old.index("/-- **A level whose course under `H` meets a positive need"); j0 = new.index("/-- **Where a level once below `c` stays below it")
+print("before the first new lemma, apart from the head note:", old[:i0] == new[:j0].replace(new[new.index("  The four laws of any level course"):new.index("* **Three courses from one start**")], ""))
+t = "theorem noReturnAt_of_below {X"
+print("from noReturnAt_of_below's statement to the end:", old[old.index(t):] == new[new.index(t):])
+print("lines old", old.count("\n"), "new", new.count("\n"))

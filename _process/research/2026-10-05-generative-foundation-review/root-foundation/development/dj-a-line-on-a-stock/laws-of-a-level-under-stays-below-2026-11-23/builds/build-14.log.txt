@@ -1,0 +1,62 @@
+start 05:07:43
+{
+  "tree": "/Users/ren/tmp/dj/below23/tree2",
+  "modules": 153,
+  "ran": [
+    "Becoming.RegimeMargin",
+    "BecomingRegimeMarginAxiomAudit",
+    "BecomingRegimeMarginSignatures",
+    "Becoming.ReadOffInTime",
+    "Becoming.TurningInTime",
+    "Becoming.LineOnAStock",
+    "BecomingLineOnAStockAxiomAudit",
+    "BecomingLineOnAStockSignatures",
+    "Becoming.Stock",
+    "BecomingStockAxiomAudit",
+    "BecomingStockSignatures",
+    "Becoming.RegimeMargin.PreludeOnly",
+    "Becoming.ReadOffInTime.PreludeOnly",
+    "Becoming.TurningInTime.PreludeOnly",
+    "Becoming.LineOnAStock.PreludeOnly",
+    "Becoming.Stock.PreludeOnly"
+  ],
+  "reused": 296,
+  "unclean": [],
+  "audits": {
+    "Becoming.LineOnAStock": {
+      "theorems": 113,
+      "declarations": 188,
+      "with_axioms": {}
+    },
+    "Becoming.Stock": {
+      "theorems": 45,
+      "declarations": 57,
+      "with_axioms": {}
+    },
+    "Becoming.RegimeMargin": {
+      "theorems": 246,
+      "declarations": 336,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.RegimeMargin": 3.657,
+    "BecomingRegimeMarginAxiomAudit": 0.789,
+    "BecomingRegimeMarginSignatures": 0.585,
+    "Becoming.ReadOffInTime": 0.959,
+    "Becoming.TurningInTime": 1.17,
+    "Becoming.LineOnAStock": 2.061,
+    "BecomingLineOnAStockAxiomAudit": 0.614,
+    "BecomingLineOnAStockSignatures": 0.563,
+    "Becoming.Stock": 2.662,
+    "BecomingStockAxiomAudit": 0.409,
+    "BecomingStockSignatures": 0.406,
+    "Becoming.RegimeMargin.PreludeOnly": 3.179,
+    "Becoming.ReadOffInTime.PreludeOnly": 0.789,
+    "Becoming.TurningInTime.PreludeOnly": 1.056,
+    "Becoming.LineOnAStock.PreludeOnly": 2.065,
+    "Becoming.Stock.PreludeOnly": 2.15
+  }
+}
+exit 0 build 14
+end 05:07:56

@@ -110,7 +110,7 @@
 {"name": "Becoming.RegimeMargin.Coupled.Indexed.run_below", "uses": ["Becoming.Lasting.orbit_mono", "Becoming.RegimeMargin.Coupled.Indexed.step_mono"]}
 {"name": "Becoming.RegimeMargin.Coupled.Indexed.run_below_of", "uses": ["Becoming.Lasting.orbit_mono"]}
 {"name": "Becoming.RegimeMargin.Coupled.Indexed.run_shift", "uses": []}
-{"name": "Becoming.RegimeMargin.Coupled.Indexed.run_within", "uses": []}
+{"name": "Becoming.RegimeMargin.Coupled.Indexed.run_within", "uses": ["Becoming.Lasting.closed_orbit"]}
 {"name": "Becoming.RegimeMargin.Coupled.Indexed.setAt_below", "uses": []}
 {"name": "Becoming.RegimeMargin.Coupled.Indexed.setAt_within", "uses": []}
 {"name": "Becoming.RegimeMargin.Coupled.Indexed.stays_at", "uses": []}

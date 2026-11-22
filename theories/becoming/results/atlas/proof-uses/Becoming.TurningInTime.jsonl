@@ -14,7 +14,9 @@
 {"name": "Becoming.TurningInTime.Three.share_read_goes_on", "uses": ["Becoming.RegimeMargin.keeps_of_below", "Becoming.RegimeMargin.meets_of_below", "Becoming.RegimeMargin.short_of_below", "Becoming.TurningInTime.locked_turns_in_time_share_iff", "Becoming.TurningInTime.share_corrected_on_course", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.Three.share_held_orbit"]}
 {"name": "Becoming.TurningInTime.Three.turned_and_ends", "uses": ["Becoming.Law.stepWhile_none_iff", "Becoming.Law.stepWhile_steps_iff", "Becoming.Law.stepWhile_unending_iff", "Becoming.TurningInTime.kind_ends_while_net_goes"]}
 {"name": "Becoming.TurningInTime.Three.unlocked_goes_on", "uses": ["Becoming.Law.stepWhile_unending_iff", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.Three.unlocked_alone_orbit", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.Three.unlocked_orbit"]}
-{"name": "Becoming.TurningInTime.above_of_recoverable", "uses": ["Becoming.TurningInTime.above_of_turned_meets", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.above_after", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.later_le"]}
+{"name": "Becoming.TurningInTime.above_before_of_stays_below", "uses": []}
+{"name": "Becoming.TurningInTime.above_of_recoverable", "uses": ["Becoming.TurningInTime.above_of_recoverable_of_stays_below"]}
+{"name": "Becoming.TurningInTime.above_of_recoverable_of_stays_below", "uses": ["Becoming.TurningInTime.above_before_of_stays_below", "Becoming.TurningInTime.above_of_turned_meets", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.above_after"]}
 {"name": "Becoming.TurningInTime.above_of_turned_meets", "uses": ["_private.Becoming.TurningInTime.0.Becoming.TurningInTime.above_after", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.turned_before"]}
 {"name": "Becoming.TurningInTime.agrees_until_marked", "uses": []}
 {"name": "Becoming.TurningInTime.alike_along", "uses": ["Becoming.Law.stepWhile_fixed", "Becoming.TurningInTime.toEnd_of_unmarked", "Becoming.«同行之迭»", "Becoming.«至终有常局定后则同行»"]}
@@ -46,12 +48,16 @@
 {"name": "Becoming.TurningInTime.locked_turns_in_time_on_window_iff", "uses": ["Becoming.TurningInTime.locked_alone_not_below", "Becoming.TurningInTime.turns_in_time_iff_kept_below", "Becoming.TurningInTime.window_alone_outside", "Becoming.TurningInTime.window_corrected"]}
 {"name": "Becoming.TurningInTime.locked_turns_in_time_share_iff", "uses": ["Becoming.TurningInTime.locked_alone_not_below", "Becoming.TurningInTime.turns_in_time_iff", "Becoming.TurningInTime.window_share_alone_outside", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.share_kept", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.share_turns"]}
 {"name": "Becoming.TurningInTime.net_zero", "uses": []}
-{"name": "Becoming.TurningInTime.noReturnAt_iff_first_below", "uses": ["Becoming.TurningInTime.recoverable_iff_above"]}
+{"name": "Becoming.TurningInTime.noReturnAt_iff_first_below", "uses": ["Becoming.TurningInTime.noReturnAt_iff_first_below_of_stays_below", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.later_le"]}
+{"name": "Becoming.TurningInTime.noReturnAt_iff_first_below_of_stays_below", "uses": ["Becoming.TurningInTime.recoverable_iff_above_of_stays_below"]}
 {"name": "Becoming.TurningInTime.noReturnAt_of_below", "uses": ["Becoming.TurningInTime.above_of_recoverable", "Becoming.noReturnAt_of_past", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.recoverable_decided"]}
+{"name": "Becoming.TurningInTime.noReturnAt_of_below_of_stays_below", "uses": ["Becoming.TurningInTime.above_of_recoverable_of_stays_below", "Becoming.noReturnAt_of_past", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.recoverable_decided_of_stays_below"]}
 {"name": "Becoming.TurningInTime.noReturn_exists", "uses": ["Becoming.noReturnAt_of_past", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.asItWas_falls", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.met_of_recoverable", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.recoverable_decided"]}
 {"name": "Becoming.TurningInTime.pair_adaptive", "uses": []}
 {"name": "Becoming.TurningInTime.recoverable_iff_above", "uses": ["Becoming.TurningInTime.above_of_recoverable", "Becoming.TurningInTime.recoverable_of_above"]}
+{"name": "Becoming.TurningInTime.recoverable_iff_above_of_stays_below", "uses": ["Becoming.TurningInTime.above_of_recoverable_of_stays_below", "Becoming.TurningInTime.recoverable_of_above_of_stays_below"]}
 {"name": "Becoming.TurningInTime.recoverable_of_above", "uses": ["Becoming.TurningInTime.turned_meets_of_above", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.turned_before"]}
+{"name": "Becoming.TurningInTime.recoverable_of_above_of_stays_below", "uses": ["Becoming.TurningInTime.turned_meets_of_above_of_stays_below", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.turned_before"]}
 {"name": "Becoming.TurningInTime.regime_step_eq", "uses": ["Becoming.Naturals.add_sub_cancel", "Becoming.Naturals.sub_add_cancel", "Becoming.sub_eq_zero_of_le"]}
 {"name": "Becoming.TurningInTime.rises_from", "uses": []}
 {"name": "Becoming.TurningInTime.rising_meets_level", "uses": ["Becoming.first_of_decided", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.takes_at_hi"]}
@@ -61,7 +67,9 @@
 {"name": "Becoming.TurningInTime.toEnd_iff", "uses": ["Becoming.Law.stepWhile_goesAlike_iff", "Becoming.Law.stepWhile_toEnd_iff", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.need_decided"]}
 {"name": "Becoming.TurningInTime.toEnd_of_unmarked", "uses": ["Becoming.TurningInTime.kind_toEnd_of_unmarked"]}
 {"name": "Becoming.TurningInTime.turned_meets_iff", "uses": ["Becoming.TurningInTime.above_of_turned_meets", "Becoming.TurningInTime.turned_meets_of_above"]}
-{"name": "Becoming.TurningInTime.turned_meets_of_above", "uses": ["Becoming.RegimeMargin.holds", "Becoming.le_dest", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.later_le", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.turned_after", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.turned_before"]}
+{"name": "Becoming.TurningInTime.turned_meets_iff_of_stays_below", "uses": ["Becoming.TurningInTime.above_of_turned_meets", "Becoming.TurningInTime.turned_meets_of_above_of_stays_below"]}
+{"name": "Becoming.TurningInTime.turned_meets_of_above", "uses": ["Becoming.TurningInTime.turned_meets_of_above_of_stays_below", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.later_le"]}
+{"name": "Becoming.TurningInTime.turned_meets_of_above_of_stays_below", "uses": ["Becoming.RegimeMargin.holds", "Becoming.TurningInTime.above_before_of_stays_below", "Becoming.le_dest", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.turned_after", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.turned_before"]}
 {"name": "Becoming.TurningInTime.turns_in_time_iff", "uses": ["Becoming.Optimum.level_le_start", "Becoming.TurningInTime.asItWas_way", "Becoming.TurningInTime.turns_in_time_iff_kept_below", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.kept_run", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.regime_levels"]}
 {"name": "Becoming.TurningInTime.turns_in_time_iff_before", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.NoReturnAt.recoverable_iff", "Becoming.TurningInTime.above_of_turned_meets", "Becoming.TurningInTime.course_turned", "Becoming.TurningInTime.noReturn_exists", "Becoming.TurningInTime.recoverable_iff_above", "Becoming.TurningInTime.turned_meets_of_above", "Becoming.TurningInTime.unending_iff_first_marked", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.asItWas_falls"]}
 {"name": "Becoming.TurningInTime.turns_in_time_iff_kept_below", "uses": ["Becoming.Optimum.ends_within", "Becoming.TurningInTime.asItWas_way", "Becoming.TurningInTime.unending_iff_above_kept_below", "Becoming.TurningInTime.unending_iff_first_marked", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.regime_levels"]}
@@ -103,7 +111,8 @@
 {"name": "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.later_le", "uses": ["Becoming.le_dest", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.fall_by"]}
 {"name": "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.met_of_recoverable", "uses": []}
 {"name": "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.need_decided", "uses": []}
-{"name": "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.recoverable_decided", "uses": ["Becoming.TurningInTime.above_of_recoverable", "Becoming.TurningInTime.recoverable_of_above"]}
+{"name": "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.recoverable_decided", "uses": ["_private.Becoming.TurningInTime.0.Becoming.TurningInTime.later_le", "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.recoverable_decided_of_stays_below"]}
+{"name": "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.recoverable_decided_of_stays_below", "uses": ["Becoming.TurningInTime.above_of_recoverable_of_stays_below", "Becoming.TurningInTime.recoverable_of_above_of_stays_below"]}
 {"name": "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.regime_levels", "uses": ["Becoming.Naturals.lt_of_add_lt_add_left", "Becoming.Naturals.sub_add_cancel", "Becoming.Optimum.never_rises", "Becoming.Optimum.sub_le_sub_left_of_le", "Becoming.RegimeMargin.Adjusted.draw_pos", "Becoming.RegimeMargin.Adjusted.left_below", "Becoming.TurningInTime.regime_step_eq", "Becoming.le_of_add_le_add_right", "Becoming.sub_eq_zero_of_le"]}
 {"name": "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.regroup_orbit", "uses": ["_private.Becoming.TurningInTime.0.Becoming.TurningInTime.regroup_step"]}
 {"name": "_private.Becoming.TurningInTime.0.Becoming.TurningInTime.regroup_step", "uses": []}

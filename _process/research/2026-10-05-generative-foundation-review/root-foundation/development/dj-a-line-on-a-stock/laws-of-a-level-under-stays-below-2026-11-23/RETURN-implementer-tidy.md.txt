@@ -1,0 +1,159 @@
+RETURN: M3 and M2, scratch tree /Users/ren/tmp/dj/below23/tree2 (AI-written, Claude Fable, 23 November 2026)
+
+All seven M3 members build as calls and are kept; M2 is done at all 27 listed places and the three outside the module. Three builds were used (14, 15, 16) of the twelve allowed, all exit 0 with no error, warning, `sorry` or axiom. No file under /Users/ren/theories was changed. The lister was not run, so keeping rules 1 and 2 rest on text and on the builds, not on the lister.
+
+## Builds
+
+| Build | Modules | Exit | Wall time | Outcome |
+|---|---|---|---|---|
+| 14 | LineOnAStock, Stock, RegimeMargin | 0 | 13 s (05:07:43 to 05:07:56) | `unclean` empty; `with_axioms` empty for all three (113/188, 45/57, 246/336 theorems/declarations). First whole draft of M3, clean first time. |
+| 15 | LineOnAStock, LineOnAStockCases, RegimeMargin, Stock, WayOfUnits | 0 | 9 s (05:13:16 to 05:13:25) | `unclean` empty; `with_axioms` empty for all five. After M2. |
+| 16 | the same five | 0 | 6 s (05:14:18 to 05:14:24) | `unclean` empty; `with_axioms` empty for all five (LineOnAStockCases 9/15, WayOfUnits 68/88). After one further docstring change; this is the final state. |
+
+Logs are `/Users/ren/tmp/dj/below23/tree2/build-14.log`, `build-15.log` and `build-16.log`. Each build also ran the checker's Signatures and prelude-only steps for the rebuilt modules, and they passed.
+
+Final files (sha256, first 12 hex digits):
+- `LineOnAStock.lean` bd1608529e5d
+- `LineOnAStockCases.lean` d1e4a27b93fe
+- `RegimeMargin.lean` 94adc91e175b
+- `Stock.lean` caba0fdee5b4
+- `WayOfUnits.lean` 47be42133e64
+
+## M3: seven members, all KEPT
+
+Sizes are of the proof only: lines at 100 columns after the statement, and non-space characters. The new character counts include the two of `:=`.
+
+| Member (line on main) | Law called | Old proof | New proof | Verdict |
+|---|---|---|---|---|
+| `LineOnAStock.course_fixed` (1345) | `Learnable.orbit_of_still` | 2 lines, 77 | 1 line, 31 | kept |
+| `LineOnAStock.line_or_none` (242) | `gather_listed` | 8 lines, 202 | 2 lines, 101 | kept |
+| `LineOnAStock.met_or_unmet` (254) | `gather_listed` | 8 lines, 217 | 2 lines, 109 | kept |
+| `LineOnAStock.strong_below` (296) | `Identification.below_upto` | 3 lines, 124 | 1 line, 31 | kept |
+| `Stock.search` (347) | `Amounts.unmarked_or_marked` | 12 lines, 406 | 2 lines, 134 | kept |
+| `Stock.total_append` (62) | `Becoming.total_append` | 3 lines, 112 | 1 line, 37 | kept |
+| `RegimeMargin.Coupled.Indexed.run_within` (2495) | `Lasting.closed_orbit` | 2 lines, 40 | 1 line, 30 | kept |
+
+The new proofs as they stand:
+
+```lean
+-- course_fixed
+    ∀ k, course need kids giving use s k = s :=
+  Learnable.orbit_of_still fixed
+-- line_or_none
+    ∀ w : List U, (∀ u, u ∈ w → ¬ S u) ∨ ∃ u, u ∈ w ∧ S u :=
+  fun w => gather_listed (D := fun u => ¬ S u) w
+    (fun u mem k => (Decidable.em (S u)).elim (fun su => .inr ⟨u, mem, su⟩) k) Or.inl
+-- met_or_unmet
+    ∀ w : List U, (∀ u, u ∈ w → need u ≤ z) ∨ ∃ u, u ∈ w ∧ z < need u :=
+  fun w => gather_listed (D := fun u => need u ≤ z) w
+    (fun u mem k => (Nat.lt_or_ge z (need u)).elim (fun lt => .inr ⟨u, mem, lt⟩) k) Or.inl
+-- strong_below
+    ∀ M m, m < M → P m :=
+  Identification.below_upto step
+-- Stock.search
+    ∀ L, (∃ n, N ≤ n ∧ n < N + L ∧ 0 < g n) ∨ (∀ n, N ≤ n → n < N + L → g n = 0) :=
+  fun L => (Amounts.unmarked_or_marked (P := fun n => g n = 0) (fun n => Decidable.em (g n = 0))
+    N L).imp (fun ⟨n, le, lt, ne⟩ => ⟨n, le, lt, Nat.pos_of_ne_zero ne⟩) id
+-- Stock.total_append
+theorem total_append (q : A → Nat) :
+    ∀ xs ys : List A, total (xs ++ ys) q = total xs q + total ys q :=
+  fun xs ys => Becoming.total_append q ys xs
+-- RegimeMargin ... run_within
+    ∀ n i, (Law.run (step Drawn.whole G H) s).state n i ≤ hi :=
+  Lasting.closed_orbit band high
+```
+
+The old proofs are main's, untouched in the repository: equation-compiler inductions in all seven, with `by cases` inside `line_or_none` and `met_or_unmet`.
+
+The rule, item by item:
+- **Statement unchanged.** For six members a script confirmed the statement text equals main's modulo whitespace, with ` :=` appended; `run_within` was checked by eye, since the script found the other `run_within` of that file. With comments stripped, the only code differences from main in the three modules are these seven proofs.
+- **`total_append` layout.** Its statement is re-broken onto two lines, because the one-line statement is 99 columns and ` :=` would make it 102. The binders are the same; the declaration goes from 4 lines to 3.
+- **Named law used, no induction left.** Each new proof is a single application of the named law, and none refers to itself. `Becoming.total_append` resolves to `Flow`'s theorem, not to `Stock.total_append`: a self-reference with the arguments swapped would not have compiled.
+- **No new import.** Every callee is in the import closure, by my own script over the import lines.
+- **`run_within`.** The one-line form elaborated; the form with named arguments was not needed.
+
+One docstring changed in M3, beyond the brief's letter: `strong_below`.
+- Old: "Strong induction on a number, by induction on a bound."
+- New: "Strong induction on a number: `Identification.below_upto`."
+- Why: the old sentence narrated a proof that is no longer this theorem's own.
+- To undo, restore the old sentence; nothing else depends on it.
+
+No other M3 docstring was touched.
+
+## M2: docstrings and comments only
+
+With comments stripped, `LineOnAStockCases.lean` and `WayOfUnits.lean` are identical to main. Every changed line is at most 100 columns. Where an insertion overflowed, the passage was re-wrapped to the end of its sentence or docstring, so the diff is larger than the table (LineOnAStock: 133 lines removed, 126 added, including M3).
+
+| # | File, line on main | Old | New |
+|---|---|---|---|
+| 1 | LOS 45 (head note, Rise) | each unit's kids of `S` take more than it | each unit's kids of `S` together take more than it |
+| 2 | LOS 60 (bullet title) | **A way whose kids take more comes to an unmet need within `hi + 1` steps, … | **A way each of whose units has kids that together take more than it comes to an unmet need within `hi + 1` steps, … |
+| 3 | LOS 63 | every unit's kids taking more (asked of every unit) | every unit's kids together taking more than it (asked of every unit) |
+| 4 | LOS 83 | where each unit's kids take what it takes (`even`) | where each unit's kids together take what it takes (`even`) |
+| 5 | LOS 92 (title) | ## Kids that take more, the same, or less | ## A unit's kids together taking more than it, the same, or less |
+| 6 | LOS 96 | (`line_ends`; kids taking no less: `fall`) | (`line_ends`; its kids of the line together taking no less than it: `fall`) |
+| 7 | LOS 97 | (`A`'s kids take less than it, `B`'s and `C`'s more) | (`A`'s kids together take less than it, `B`'s and `C`'s together more than it) |
+| 8 | LOS 120 | No exact condition for a way whose kids take more, or less, never ending | No exact condition for a way each of whose units has kids that together take more than it, or less, never ending |
+| 9 | LOS 631 (`rise`) | For any decidable `S` (no closure is asked) whose units' kids with `S` take more than the unit (`grows : …`) | For any decidable `S` (no closure is asked) each of whose units has kids with `S` that together take more than it (`grows : …`) |
+| 10 | LOS 640 (`draw_holds`) | With the kids with `S` taking at least what the unit takes (`keeps`) | With the kids with `S` together taking at least what the unit takes (`keeps`) |
+| 11 | LOS 767–768 (`fall`) | whose units' kids of the line take at least what the unit took (`keeps`) | whose units' kids of the line together take at least what the unit took (`keeps`) |
+| 12 | LOS 836 (`ends_high`) | a line `S` (`closed`) whose kids of the line take more than the unit (`grows`) | a line `S` (`closed`) each of whose units has kids of the line that together take more than it (`grows`) |
+| 13 | LOS 900 (`line_ends`) | whose units' kids of the line take more than the unit (`grows`) | each of whose units has kids of the line that together take more than it (`grows`) |
+| 14 | LOS 924 (`way_ends`) | every unit's kids taking more than it (`grows`) | every unit's kids together taking more than it (`grows`) |
+| 15 | LOS 943 (`kids_of_grows`) | Where every unit's kids take more than it (`grows`), every unit has kids. | Where every unit's kids together take more than it (`grows`), every unit has kids. |
+| 16 | LOS 972 (`allKids_rises`) | Where every unit's kids take more than it (`grows`), all the kids of a way take at least … | Where every unit's kids together take more than it (`grows`), all the kids of a way take at least … |
+| 17 | LOS 996 (`need_unmet`) | every unit's kids taking more than it (`grows`, asked of every unit of the type) | every unit's kids together taking more than it (`grows`, asked of every unit of the type) |
+| 18 | LOS 1042 (`falls_to_unmet`, title) | **A way whose kids take more, its kids needing no more than their parent, comes within `hi + 1` steps to a level below a need the start met.** | **A way each of whose units has kids that together take more than it, kids needing no more than their parent, comes within `hi + 1` steps to a level below a need the start met.** |
+| 19 | LOS 1082 (`one_need_ends`) | every unit's kids taking more than it (`grows`) | every unit's kids together taking more than it (`grows`) |
+| 20 | LOS 1118 (section title) | ## 10. The middle case: kids that take what their parent took | ## 10. The middle case: each unit's kids together take what it takes |
+| 21 | LOS 1124 (`taken_allKids`) | Where each unit's kids take what it takes (`even`) | Where each unit's kids together take what it takes (`even`) |
+| 22 | LOS 1227 (`unending_iff_holds`) | With each unit's kids taking what it takes (`even`) | With each unit's kids together taking what it takes (`even`) |
+| 23 | LOS 1500 (`KidsNeedMore`) | every unit's kids take more than it | every unit's kids together take more than it |
+| 24 | LOS 1545 (`KidHigherNeed`) | every unit's kids take two, more than its one | every unit's kids together take two, more than its one |
+| 25 | LOS 1638 (`TwoForOne`) | `P`'s two kids `Q` take two, what it takes | `P`'s two kids `Q` together take two, what it takes |
+| 26 | LOS 1753 (`Doubling`) | the unit's kids take two, more than its one | the unit's kids together take two, more than its one |
+| 27 | LOS 1944 (`ProperLine`) | whose kids take two, more than its one | whose kids together take two, more than its one |
+| 28 | LineOnAStockCases 84 | the unit's kids taking two, more than its one | the unit's kids together taking two, more than its one |
+| 29 | LineOnAStockCases 188 | closed; one need, four; kids taking no less; | closed; one need, four; each drawer's kids of the line together taking no less than it; |
+| 30 | WayOfUnits 100 | (its middle case, kids taking what their parent takes) | (its middle case, a unit's kids together taking what it takes) |
+
+Checked against the premise or the case's own numbers:
+- Rows 1, 9, 12, 13 tell `grows` on a line (`∀ u, S u → use u < lineTake S use (kids u)`); rows 10, 11 tell `keeps` on a line (`≤`); rows 2, 3, 14 to 19 tell `∀ u, use u < taken use (kids u)`; rows 4, 20, 21, 22, 30 tell `even`.
+- Row 7 (`HigherStartEnds`): `A` takes 3 and its kids `B, B` take 2; `B` takes 1 and its kids `C, B` take 2; `C` takes 1 and its kid `A` takes 3.
+- Row 23: `A` takes 2, kids `B, A, B` take 4; `B` takes 1, kids `B, B` take 2.
+- Rows 24, 26, 27, 28: two kids taking 1 each against a parent's 1. Row 25: `P` takes 2, two `Q` take 1 each.
+
+One row to decide: row 29 fails the brief's "nothing gained" test by its letter. In `DrainCase` the sentence was already true of each kid: `d0` takes 2 and its kids `d1, d1` take 2 each; `d1` takes 2 and its kid takes 2. I changed it because the sentence lists the premises of `fall`, and that premise is of the kids together. Put the old sentence back if the test is to be applied by the case.
+
+Listed places left, with why:
+- **LOS 1583** ("its kid takes one, what it takes"), **1596–1597** ("the kid takes what its parent takes"), **1900** ("whose kid takes what it takes"): one kid in each case (`kids _ = [()]`), so true as written.
+- **LOS 606** ("what `S` takes of its kids"): already a total.
+- **LOS 107**: "equal in place of more" is a name.
+- **LOS 74, 78, 1055**: already say "together".
+
+Found by reading, in other words, and left:
+- **LOS 923** "A way whose units grow ends"; **73, 898** "A line that grows ends"; **1081** "A way that grows, in a world of one need"; **1580** "Equal in place of more". These name the premise and do not say anything of each kid.
+- **LOS 972 and 1124, the conclusions** ("all the kids of a way take at least what the way takes and its length"; "all the kids of a way take what the way takes"). These are totals over all the kids, a different statement from the three premises, so I left them outside the brief. "Together" would fit there too if the session wants it.
+- **LOS 1211** "No premise on what the kids take": a negative, true either way.
+- **WayOfUnits 398** "(each unit's kid takes what it takes, …)": one kid, since `kids u = [u]`.
+- **LOS 1639** "`Q`'s one kid takes one": one kid.
+
+Changes of wording beyond an inserted word:
+- Rows 2, 5, 8, 18, 20 (titles), 3, 6, 7, 9, 12, 13 are reworded in line 74's form, as the "After" section asks.
+- Row 20 also changes "their parent took" to "it takes".
+- Row 30 says "a unit's" where the others say "each unit's", so that the line stays within 100 columns without re-wrapping the bullet.
+- Row 11 keeps the original "took".
+
+## Found false or imprecise in the brief
+
+- **Main's commit.** The brief names main `52fc707a4`; HEAD is now `b2d45afe5`. The five files in tree2 were byte-identical to the working tree's when I started, and all line numbers above are those files'.
+- **Line length.** `LineOnAStock.lean` on main has 171 lines over 100 columns, and `Stock.lean` has 7, including the old `total_append` statement at 103. "Lines at 100 columns" is therefore a counting rule, not a property of these files. I kept every line I wrote within 100.
+- **Attacker's item 7.** Every paper judgement held at the build. The `total_append` statement needed re-breaking, which the attacker did not foresee.
+
+## Not done
+
+- **The lister** (`Rows.lean`, `compare.py`) was not run, because the house rule allowed no Lean but `build.sh`. One thing only the lister can show: whether the generated name of the instance binder of `line_or_none` (`inst._@.Becoming.LineOnAStock.14478535._hygCtx._hyg.6` in `before/rows.txt`) is the same after the proof changed. I expect so but did not see it.
+- **Importers.** No module that imports `RegimeMargin`, `Stock` or `LineOnAStock` was rebuilt beyond `TurningInTime` and `ReadOffInTime` (rebuilt by build 14 as part of LineOnAStock's closure), `LineOnAStockCases` and `WayOfUnits`. No core run, no gate, no test suite, no `proof_uses.py`.
+- **`Becoming.lean` 5293** is not mine, as told.
+- **Owed at the landing, noticed in passing:** the places listing `dj-a-line-on-a-stock/places-2026-11-21/place/LineOnAStock.md` quotes the module and wants `build_places.py` rerun. The section titles changed in rows 5 and 20 are quoted elsewhere only in historical records.
+- Nothing was committed, pushed or sent.

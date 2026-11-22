@@ -1,0 +1,90 @@
+start 05:15:43
+{
+  "tree": "/Users/ren/tmp/dj/below23/all",
+  "modules": 166,
+  "ran": [
+    "Becoming.TurningInTime",
+    "BecomingTurningInTimeAxiomAudit",
+    "BecomingTurningInTimeSignatures",
+    "Becoming.LineOnAStock",
+    "BecomingLineOnAStockAxiomAudit",
+    "BecomingLineOnAStockSignatures",
+    "Becoming.LineOnAStockCases",
+    "BecomingLineOnAStockCasesAxiomAudit",
+    "BecomingLineOnAStockCasesSignatures",
+    "Becoming.WayOfUnits",
+    "BecomingWayOfUnitsAxiomAudit",
+    "BecomingWayOfUnitsSignatures",
+    "Becoming.LevelAlone",
+    "BecomingLevelAloneAxiomAudit",
+    "BecomingLevelAloneSignatures",
+    "Becoming.TurningInTime.PreludeOnly",
+    "Becoming.LineOnAStock.PreludeOnly",
+    "Becoming.LineOnAStockCases.PreludeOnly",
+    "Becoming.WayOfUnits.PreludeOnly",
+    "Becoming.LevelAlone.PreludeOnly"
+  ],
+  "reused": 326,
+  "unclean": [],
+  "audits": {
+    "Becoming.TurningInTime": {
+      "theorems": 89,
+      "declarations": 116,
+      "with_axioms": {}
+    },
+    "Becoming.LineOnAStock": {
+      "theorems": 113,
+      "declarations": 188,
+      "with_axioms": {}
+    },
+    "Becoming.Stock": {
+      "theorems": 45,
+      "declarations": 57,
+      "with_axioms": {}
+    },
+    "Becoming.RegimeMargin": {
+      "theorems": 246,
+      "declarations": 336,
+      "with_axioms": {}
+    },
+    "Becoming.LineOnAStockCases": {
+      "theorems": 9,
+      "declarations": 15,
+      "with_axioms": {}
+    },
+    "Becoming.WayOfUnits": {
+      "theorems": 68,
+      "declarations": 88,
+      "with_axioms": {}
+    },
+    "Becoming.LevelAlone": {
+      "theorems": 37,
+      "declarations": 50,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.TurningInTime": 2.795,
+    "BecomingTurningInTimeAxiomAudit": 0.668,
+    "BecomingTurningInTimeSignatures": 0.68,
+    "Becoming.LineOnAStock": 2.241,
+    "BecomingLineOnAStockAxiomAudit": 0.607,
+    "BecomingLineOnAStockSignatures": 0.554,
+    "Becoming.LineOnAStockCases": 0.639,
+    "BecomingLineOnAStockCasesAxiomAudit": 0.388,
+    "BecomingLineOnAStockCasesSignatures": 0.385,
+    "Becoming.WayOfUnits": 0.706,
+    "BecomingWayOfUnitsAxiomAudit": 0.459,
+    "BecomingWayOfUnitsSignatures": 0.417,
+    "Becoming.LevelAlone": 0.804,
+    "BecomingLevelAloneAxiomAudit": 0.44,
+    "BecomingLevelAloneSignatures": 0.399,
+    "Becoming.TurningInTime.PreludeOnly": 2.466,
+    "Becoming.LineOnAStock.PreludeOnly": 2.1,
+    "Becoming.LineOnAStockCases.PreludeOnly": 0.482,
+    "Becoming.WayOfUnits.PreludeOnly": 0.545,
+    "Becoming.LevelAlone.PreludeOnly": 0.571
+  }
+}
+exit 0 build 17
+end 05:15:52

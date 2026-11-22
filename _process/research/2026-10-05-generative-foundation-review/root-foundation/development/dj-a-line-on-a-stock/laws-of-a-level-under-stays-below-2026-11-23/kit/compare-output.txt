@@ -1,0 +1,58 @@
+before 883 after 892
+GONE 0 []
+STATEMENT CHANGED 0 []
+NEW 9
+   theorem Becoming.TurningInTime.above_before_of_stays_below | uses [] | recursors ['Nat.le.brecOn']
+   theorem Becoming.TurningInTime.above_of_recoverable_of_stays_below | uses ['Becoming.TurningInTime.above_before_of_stays_below', 'Becoming.TurningInTime.above_of_turned_meets', '_private.Becoming.TurningInTime.0.Becoming.TurningInTime.above_after'] | recursors []
+   theorem Becoming.TurningInTime.noReturnAt_iff_first_below_of_stays_below | uses ['Becoming.TurningInTime.recoverable_iff_above_of_stays_below'] | recursors []
+   theorem Becoming.TurningInTime.noReturnAt_of_below_of_stays_below | uses ['Becoming.TurningInTime.above_of_recoverable_of_stays_below', 'Becoming.noReturnAt_of_past', '_private.Becoming.TurningInTime.0.Becoming.TurningInTime.recoverable_decided_of_stays_below'] | recursors []
+   theorem Becoming.TurningInTime.recoverable_iff_above_of_stays_below | uses ['Becoming.TurningInTime.above_of_recoverable_of_stays_below', 'Becoming.TurningInTime.recoverable_of_above_of_stays_below'] | recursors []
+   theorem Becoming.TurningInTime.recoverable_of_above_of_stays_below | uses ['Becoming.TurningInTime.turned_meets_of_above_of_stays_below', '_private.Becoming.TurningInTime.0.Becoming.TurningInTime.turned_before'] | recursors []
+   theorem Becoming.TurningInTime.turned_meets_iff_of_stays_below | uses ['Becoming.TurningInTime.above_of_turned_meets', 'Becoming.TurningInTime.turned_meets_of_above_of_stays_below'] | recursors []
+   theorem Becoming.TurningInTime.turned_meets_of_above_of_stays_below | uses ['Becoming.RegimeMargin.holds', 'Becoming.TurningInTime.above_before_of_stays_below', 'Becoming.le_dest', '_private.Becoming.TurningInTime.0.Becoming.TurningInTime.turned_after', '_private.Becoming.TurningInTime.0.Becoming.TurningInTime.turned_before'] | recursors []
+   theorem _private.Becoming.TurningInTime.0.Becoming.TurningInTime.recoverable_decided_of_stays_below | uses ['Becoming.TurningInTime.above_of_recoverable_of_stays_below', 'Becoming.TurningInTime.recoverable_of_above_of_stays_below'] | recursors []
+PROOF TERM CHANGED 11
+   Becoming.LineOnAStock.course_fixed
+     head Nat.brecOn -> Becoming.Learnable.orbit_of_still
+     uses  - []  + ['Becoming.Learnable.orbit_of_still']
+     recursors ['Nat.brecOn'] -> []
+   Becoming.LineOnAStock.line_or_none
+     head List.brecOn -> Becoming.gather_listed
+     uses  - []  + ['Becoming.gather_listed']
+     recursors ['List.brecOn'] -> []
+   Becoming.LineOnAStock.met_or_unmet
+     head List.brecOn -> Becoming.gather_listed
+     uses  - []  + ['Becoming.gather_listed']
+     recursors ['List.brecOn'] -> []
+   Becoming.LineOnAStock.strong_below
+     head Nat.brecOn -> Becoming.Identification.below_upto
+     uses  - []  + ['Becoming.Identification.below_upto']
+     recursors ['Nat.brecOn'] -> []
+   Becoming.RegimeMargin.Coupled.Indexed.run_within
+     head Nat.brecOn -> Becoming.Lasting.closed_orbit
+     uses  - []  + ['Becoming.Lasting.closed_orbit']
+     recursors ['Nat.brecOn'] -> []
+   Becoming.Stock.search
+     head Nat.brecOn -> Or.imp
+     uses  - []  + ['Becoming.Amounts.unmarked_or_marked']
+     recursors ['Nat.brecOn'] -> []
+   Becoming.Stock.total_append
+     head List.brecOn -> Becoming.total_append
+     uses  - []  + ['Becoming.total_append']
+     recursors ['List.brecOn'] -> []
+   Becoming.TurningInTime.above_of_recoverable
+     head Becoming.TurningInTime.above_of_recoverable.match_1_1 -> Becoming.TurningInTime.above_of_recoverable_of_stays_below
+     uses  - ['Becoming.TurningInTime.above_of_turned_meets', '_private.Becoming.TurningInTime.0.Becoming.TurningInTime.above_after', '_private.Becoming.TurningInTime.0.Becoming.TurningInTime.later_le']  + ['Becoming.TurningInTime.above_of_recoverable_of_stays_below']
+     recursors [] -> []
+   Becoming.TurningInTime.noReturnAt_iff_first_below
+     head Iff.intro -> Becoming.TurningInTime.noReturnAt_iff_first_below_of_stays_below
+     uses  - ['Becoming.TurningInTime.recoverable_iff_above']  + ['Becoming.TurningInTime.noReturnAt_iff_first_below_of_stays_below', '_private.Becoming.TurningInTime.0.Becoming.TurningInTime.later_le']
+     recursors [] -> []
+   Becoming.TurningInTime.turned_meets_of_above
+     head Or.elim -> Becoming.TurningInTime.turned_meets_of_above_of_stays_below
+     uses  - ['Becoming.RegimeMargin.holds', 'Becoming.le_dest', '_private.Becoming.TurningInTime.0.Becoming.TurningInTime.turned_after', '_private.Becoming.TurningInTime.0.Becoming.TurningInTime.turned_before']  + ['Becoming.TurningInTime.turned_meets_of_above_of_stays_below']
+     recursors [] -> []
+   _private.Becoming.TurningInTime.0.Becoming.TurningInTime.recoverable_decided
+     head Or.elim -> _private.Becoming.TurningInTime.0.Becoming.TurningInTime.recoverable_decided_of_stays_below
+     uses  - ['Becoming.TurningInTime.above_of_recoverable', 'Becoming.TurningInTime.recoverable_of_above']  + ['_private.Becoming.TurningInTime.0.Becoming.TurningInTime.later_le', '_private.Becoming.TurningInTime.0.Becoming.TurningInTime.recoverable_decided_of_stays_below']
+     recursors [] -> []

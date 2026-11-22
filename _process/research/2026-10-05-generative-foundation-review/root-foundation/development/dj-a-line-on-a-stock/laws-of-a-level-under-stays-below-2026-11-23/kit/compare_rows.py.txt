@@ -1,0 +1,31 @@
+"""Set the rows Lean printed of main (before/rows.txt) beside the rows of the scratch build (after/rows.txt).
+AI-written (Claude Fable, board row DJ), 23 November 2026. usage: python3 -B compare_rows.py BEFORE AFTER
+It reports: declarations gone, declarations new, and for every declaration in both whether its statement is the same
+binder by binder (kind, universe names, each binder's kind, name and type, the conclusion), and for a theorem how the
+head of its proof term, the package theorems it uses and its recursors changed. Names Lean makes for instance binders
+carry a number that moves with the file's text; the number is dropped before comparing."""
+import json, re, sys
+def rows(p):
+    out = {}
+    for l in open(p):
+        if l.startswith('ROW '):
+            r = json.loads(l[4:]); out[r['name']] = r
+    return out
+norm = lambda s: re.sub(r'inst\._@\.[A-Za-z0-9_.]*?_hyg\.\d+', 'inst', s)
+def sig(r): return (r['kind'], tuple(r['levels']), tuple(norm(x) for x in r['sig']))
+b, a = rows(sys.argv[1]), rows(sys.argv[2])
+gone = sorted(set(b) - set(a)); new = sorted(set(a) - set(b))
+changed_sig = sorted(n for n in set(a) & set(b) if sig(a[n]) != sig(b[n]))
+changed_proof = sorted(n for n in set(a) & set(b) if (a[n]['head'], a[n]['uses'], a[n]['recursors']) != (b[n]['head'], b[n]['uses'], b[n]['recursors']))
+print('before', len(b), 'after', len(a))
+print('GONE', len(gone), gone)
+print('STATEMENT CHANGED', len(changed_sig), changed_sig)
+print('NEW', len(new))
+for n in new: print('  ', a[n]['kind'], n, '| uses', a[n]['uses'], '| recursors', a[n]['recursors'])
+print('PROOF TERM CHANGED', len(changed_proof))
+for n in changed_proof:
+    print('  ', n)
+    print('     head', b[n]['head'], '->', a[n]['head'])
+    print('     uses  -', sorted(set(b[n]['uses']) - set(a[n]['uses'])), ' +', sorted(set(a[n]['uses']) - set(b[n]['uses'])))
+    print('     recursors', b[n]['recursors'], '->', a[n]['recursors'])
+json.dump({'gone': gone, 'new': new, 'statement_changed': changed_sig, 'proof_changed': changed_proof}, open('compare.json', 'w'), indent=1)

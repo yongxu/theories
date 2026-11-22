@@ -1,0 +1,125 @@
+import Lean
+import Becoming.TurningInTime
+import Becoming.LineOnAStock
+import Becoming.Stock
+import Becoming.RegimeMargin
+import Becoming.LineOnAStockCases
+import Becoming.WayOfUnits
+
+/-! For every declaration of six modules (private ones too): its kind, its universe names, its statement binder by
+binder as Lean holds it (binder kind, name, type; bound variables as indices), and for a theorem the head of its
+proof term, the package theorems its term uses and the recursors in it. Run once against a build of main and once
+against the scratch build, to set the two side by side. AI-written (Claude Fable, board row DJ), 23 November 2026,
+after `AllProofHeads.lean` and row FM's `Rows.lean`. -/
+
+open Lean
+
+partial def aaStrip : Expr → Expr
+  | .lam _ _ b _ => aaStrip b
+  | .mdata _ e => aaStrip e
+  | .letE _ _ _ b _ => aaStrip b
+  | e => e
+
+def valueOf (ci : ConstantInfo) : Option Expr :=
+  match ci with
+  | .thmInfo t => some t.value
+  | .defnInfo d => some d.value
+  | .opaqueInfo o => some o.value
+  | _ => none
+
+/-- The constants in the proof term of `n`, following constants declared under `n`'s own name. -/
+partial def usedBy (env : Environment) (n : Name) : NameSet :=
+  let rec go (todo : List Name) (seen out : NameSet) : NameSet :=
+    match todo with
+    | [] => out
+    | c :: rest =>
+      if seen.contains c then go rest seen out else
+      let seen := seen.insert c
+      match (env.find? c).bind valueOf with
+      | none => go rest seen out
+      | some v =>
+        let (more, out) := v.getUsedConstants.foldl (init := (rest, out)) fun (acc : List Name × NameSet) u =>
+          if u != n && n.isPrefixOf u then (u :: acc.1, acc.2) else (acc.1, acc.2.insert u)
+        go more seen out
+  go [n] {} {}
+
+/-- A recursor of a recursive inductive type, or one of the toolchain's wrappers around one (after row FM's kit,
+`tmp/fm/cases22/kit/Rows.lean`: the first form of this file took a name ending `rec`, `recOn`, `brecOn`,
+`binductionOn` or `fix` and so missed `Nat.strongRecOn` and counted `Eq.rec`). -/
+def isRecursor (env : Environment) (c : Name) : Bool :=
+  match c with
+  | .str p s =>
+    if s == "rec" || s == "recOn" || s == "brecOn" || s == "binductionOn" then
+      (match env.find? p with | some (.inductInfo v) => v.isRec | _ => true)
+    else s == "fix" || s == "fixF" || s == "recAux" || s == "strongRecOn" || s == "caseStrongRecOn"
+      || s == "induction" || s == "recursion" || s == "inductionOn" || s == "induct"
+  | _ => false
+
+def digitsAfter (s pre : String) : Bool :=
+  s.startsWith pre && (s.drop pre.length).length > 0 && (s.drop pre.length).all (fun ch => ch.isDigit || ch == '_')
+
+/-- Lean's own generated names: equation lemmas, matchers, abstracted proofs and the like (after row FM's kit: the
+first form of this file dropped every name whose last part began `eq_`, and with it the package's own theorems so
+named). -/
+def skipLast (c : Name) : Bool :=
+  match c with
+  | .str _ s => digitsAfter s "eq_" || s == "eq_def" || s == "eq_unfold" || s == "injEq" || s == "inj"
+      || s == "sizeOf_spec" || s == "noConfusion" || digitsAfter s "match_" || s.startsWith "_"
+      || digitsAfter s "proof_" || s == "rec" || s == "recOn" || s == "casesOn" || s == "below" || s == "brecOn"
+      || s == "binductionOn" || s == "ibelow" || s == "noConfusionType" || s == "ctorIdx" || s == "toCtorIdx" || s == "ofNat"
+      || s == "ctorElim" || s == "ctorElimType"
+  | .num _ _ => true
+  | _ => false
+
+def jsonList (xs : List String) : String := "[" ++ ", ".intercalate (xs.map String.quote) ++ "]"
+
+
+def MODS : List Name := [`Becoming.TurningInTime, `Becoming.LineOnAStock, `Becoming.Stock, `Becoming.RegimeMargin,
+  `Becoming.LineOnAStockCases, `Becoming.WayOfUnits]
+
+partial def binders : Expr → List String → List String
+  | .forallE n d b bi, acc =>
+    let k := match bi with
+      | .default => "(" | .implicit => "{" | .strictImplicit => "{{" | .instImplicit => "["
+    binders b (acc ++ [k ++ toString n ++ " : " ++ toString d])
+  | .mdata _ e, acc => binders e acc
+  | e, acc => acc ++ ["|- " ++ toString e]
+
+#eval show CoreM Unit from do
+  let env ← getEnv
+  let mods := env.header.moduleNames
+  let mut rows : Array (String × String) := #[]
+  for (c, ci) in env.constants.map₁.toList do
+    if skipLast c then continue
+    match env.getModuleIdxFor? c with
+    | none => continue
+    | some idx =>
+      let m := mods[idx.toNat]!
+      if !MODS.contains m then continue
+      let kind := match ci with
+        | .thmInfo _ => "theorem" | .defnInfo _ => "def" | .inductInfo _ => "inductive" | .ctorInfo _ => "constructor"
+        | .recInfo _ => "recursor" | .opaqueInfo _ => "opaque" | .axiomInfo _ => "axiom" | .quotInfo _ => "quot"
+      if kind == "recursor" then continue
+      let sig := binders ci.type []
+      let lv := ci.levelParams.map toString
+      let (hd, pkg, recs) := match ci with
+        | .thmInfo t =>
+          let hd := match (aaStrip t.value).getAppFn.constName? with
+            | some h => (toString h).quote
+            | none => "null"
+          let used := (usedBy env c).toList
+          let pkg := used.filter fun u => match env.find? u with
+            | some (.thmInfo _) => (match env.getModuleIdxFor? u with
+                | some j => (`Becoming).isPrefixOf mods[j.toNat]!
+                | none => false)
+            | _ => false
+          (hd, pkg, used.filter (isRecursor env))
+        | _ => ("null", [], [])
+      let srt := fun (l : List Name) => (l.map toString).toArray.qsort (· < ·) |>.toList
+      rows := rows.push (toString m ++ " " ++ toString c,
+        "{\"module\": " ++ (toString m).quote ++ ", \"name\": " ++ (toString c).quote ++ ", \"kind\": " ++ kind.quote
+          ++ ", \"levels\": " ++ jsonList lv ++ ", \"sig\": " ++ jsonList sig ++ ", \"head\": " ++ hd
+          ++ ", \"uses\": " ++ jsonList (srt pkg) ++ ", \"recursors\": " ++ jsonList (srt recs) ++ "}")
+  for (_, r) in rows.qsort (fun a b => a.1 < b.1) do
+    IO.println ("ROW " ++ r)
+  IO.println s!"COUNT {rows.size}"

@@ -1,0 +1,70 @@
+-- What was appended, before `end LevelAlone`, to a scratch copy of Becoming/LevelAlone.lean as it stood on main at b2d45afe5,
+-- to test that the general laws fit their one prospective user. Built once in scratch (build 2). Not landed.
+
+/-! ## SCRATCH TEST OF USE. NOT TO BE LANDED.
+
+AI-written, 23 November 2026, board row DJ's scratch tree. The two theorems below exist only to check
+that `TurningInTime`'s laws with the ending `_of_stays_below` fit this module's core law: its form in
+`Recoverable` and its no-return form, stated under the premises of
+`silent_at_start_iff_next_of_stays_below` (with `below`, without `mono` and `still`). They are handed
+to row FM as text and are not part of any landing. -/
+
+/-- SCRATCH TEST, NOT TO BE LANDED. `silent_at_start_iff_recoverable_next` under the core law's
+premises: `below` in place of `mono` and `still`. By `silent_at_start_iff_next_of_stays_below` and
+`recoverable_iff_above_of_stays_below`, the bound at `D + 1` from `level_within`. -/
+theorem scratch_silent_at_start_iff_recoverable_next_of_stays_below {t alone : W → W}
+    {Kept : W → Prop} {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat}
+    (sets : ∀ v, Kept (t v)) (stays : ∀ v, Kept v → Kept (alone v)) (uses : ∀ v, Kept v → use v = H₂)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps₀ : RegimeMargin.Keeps giving 0 hi)
+    (needs : 0 < need) (within : need ≤ H₂ + y₂)
+    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1)))
+    (high : x₀ ≤ hi) (rest : ∀ j, j < D → level alone giving use w x₀ j = x₀)
+    (differs : level alone giving use w x₀ D ≠ x₀)
+    (below : ∀ j, level alone giving use w x₀ j < H₂ + y₂ →
+      level alone giving use w x₀ (j + 1) < H₂ + y₂) :
+    (∃ (marked : Nat → Prop) (_ : DecidablePred marked), ¬ marked x₀ ∧
+        «不穷» (net need (readBy marked t alone) (fun w x => RegimeMargin.step giving (use w) x)) «一»
+          (w, x₀))
+      ↔ Recoverable (Turned (fun j => level alone giving use w x₀ j) giving H₂) (MeetsNeed need)
+          (fun t _ => level alone giving use w x₀ t) (D + 1) :=
+  (silent_at_start_iff_next_of_stays_below sets stays uses nothing short meets keeps₀ needs within
+      rises high rest differs below).trans
+    (recoverable_iff_above_of_stays_below (X := fun j => level alone giving use w x₀ j) below
+      (level_within keeps₀ high (D + 1)) nothing short meets
+      (fun _ le => kept_within keeps₀ H₂ le) needs within).symm
+
+/-- SCRATCH TEST, NOT TO BE LANDED. `silent_at_start_none_iff_no_return` under the core law's
+premises: `below` in place of `mono` and `still`. Below `H₂ + y₂` at `D + 1`,
+`noReturnAt_of_below_of_stays_below` gives the point, the bound at every step from `level_within`. -/
+theorem scratch_silent_at_start_none_iff_no_return_of_stays_below {t alone : W → W}
+    {Kept : W → Prop} {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat}
+    (sets : ∀ v, Kept (t v)) (stays : ∀ v, Kept v → Kept (alone v)) (uses : ∀ v, Kept v → use v = H₂)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps₀ : RegimeMargin.Keeps giving 0 hi)
+    (needs : 0 < need) (within : need ≤ H₂ + y₂)
+    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1)))
+    (high : x₀ ≤ hi) (rest : ∀ j, j < D → level alone giving use w x₀ j = x₀)
+    (differs : level alone giving use w x₀ D ≠ x₀)
+    (below : ∀ j, level alone giving use w x₀ j < H₂ + y₂ →
+      level alone giving use w x₀ (j + 1) < H₂ + y₂) :
+    (∀ (marked : Nat → Prop) [DecidablePred marked], ¬ marked x₀ →
+        ¬ «不穷» (net need (readBy marked t alone) (fun w x => RegimeMargin.step giving (use w) x)) «一»
+          (w, x₀))
+      ↔ ∃ N, N ≤ D + 1 ∧
+          NoReturnAt (Turned (fun j => level alone giving use w x₀ j) giving H₂) (MeetsNeed need)
+            (fun t _ => level alone giving use w x₀ t) N :=
+  ⟨fun all => (Nat.lt_or_ge (level alone giving use w x₀ (D + 1)) (H₂ + y₂)).elim
+    (fun under => noReturnAt_of_below_of_stays_below (X := fun j => level alone giving use w x₀ j)
+      below (level_within keeps₀ high) nothing short meets
+      (fun _ le => kept_within keeps₀ H₂ le) needs within under)
+    (fun above =>
+      match (silent_at_start_iff_next_of_stays_below (t := t) sets stays uses nothing short meets
+          keeps₀ needs within rises high rest differs below).mpr above with
+      | ⟨marked, dec, silent, never⟩ => absurd never (@all marked dec silent)),
+   fun ⟨_, le, point⟩ marked dec silent never =>
+    point.1 (Recoverable.earlier
+      ((scratch_silent_at_start_iff_recoverable_next_of_stays_below sets stays uses nothing short
+        meets keeps₀ needs within rises high rest differs below).mp
+          ⟨marked, dec, silent, never⟩) le)⟩
+

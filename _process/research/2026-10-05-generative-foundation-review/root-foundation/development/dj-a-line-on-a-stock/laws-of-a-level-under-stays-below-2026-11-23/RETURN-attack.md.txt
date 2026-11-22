@@ -1,0 +1,261 @@
+ATTACK ON /Users/ren/theories/tmp/r7/one-model/check/below23/BRIEF.md
+
+Read only: no Lean, build, test or gate was run, and no file was changed. Paths: TIT = .../lean/becoming/Becoming/TurningInTime.lean, LA = LevelAlone.lean, LOS = LineOnAStock.lean, RM = RegimeMargin.lean (same folder). The Becoming/ folder is identical between `52fc707a4` and HEAD `406758f15`. Throughout, c = H + y.
+
+The mathematics of M1 holds on paper and the brief's count of three uses is right. The defects are in the Why, in the form of the bound, in one binder name, in the keeping rule and "as calls" test, and in M2's counts.
+
+## DEFECTS
+
+**D1 (Why, false).** "whose core law asks of the course as it was only that a level once below `H₂ + y₂` stays below (`below`)".
+- Evidence: `silent_at_start_iff_next_of_stays_below` (LA:398-408) also asks `rises` (404), `high`, `rest` (405), `differs` (406), all of the course as it was. LA head note 52 says the core "additionally" asks `below`.
+- The reader the brief cites corrected this same telling: astra-read.txt line 97, "`below` is one **additional** fact. The law also asks `rises`, `high`, `rest` and `differs`."
+- MUST: "whose core law asks, beside the common premises (`rises`, `high`, `rest`, `differs` among them), that a level once below `H₂ + y₂` stays below (`below`), where laws A and B ask more."
+
+**D2 (Why, false).** "Its forms in the notions `Recoverable` and `NoReturnAt` are given only where the level never rises, because the three laws … that carry those notions (R1 `turned_meets_iff`, R2 `recoverable_iff_above`, R3 `noReturnAt_iff_first_below`) ask a course that never rises".
+- Evidence: LA calls only `recoverable_iff_above` (LA:563) and `noReturnAt_of_below` (LA:591). LA:236-239 says "the other two are not called". R1 does not mention `Recoverable` or `NoReturnAt`.
+- MUST: "because the two laws of `TurningInTime` those forms call, `recoverable_iff_above` (R2) and `noReturnAt_of_below`, ask `fall` and `top`; R1 and R3 are not called there and are generalised with them because they share the two lemmas."
+
+**D3 (Why, imprecise).** "A reader … argued on paper that they hold under `below`".
+- Evidence: the bullet (astra-read.txt line 63) argues R2 in both directions and "Recoverability can then be decided at each index, which gives S5's first failure". It assumes "its independent upper bound `level_within`", which is a bound at every index. R3 is not named there.
+- SHOULD: "argued R2 and the deciding step under `below` and a bound at every index; R1's if half is inside that argument; R3 is this session's own paper argument."
+
+**D4 (Why, unfiled words).** "Ren, 23 November 04:39 WIB, to the coordinating session: sessions that did not finish their work should finish those parts and then merge."
+- Evidence: no file in sources/15-codex-theory-conversations/ contains "04:39". The files of 23 November hold words of 00:00/00:02 ("let's first merge back, then finish them on latest main") and "agree with your approach".
+- SHOULD: point to the filed words, or say "not yet filed; this session's reading, held loosely". It is a paraphrase used as the reason for the landing.
+
+**D5 (M1, the private lemma already exists).** "a private lemma: from `below …`, `j ≤ T` and `c ≤ X T`, conclude `c ≤ X j`".
+- Evidence: this is `LevelAlone.above_before` (LA:183-187, private), used at LA:384 and LA:418 for the same purpose.
+- LA imports TIT, so TIT cannot call it. The landing therefore leaves the lemma stated twice.
+- MUST: name the lemma in the brief; say it is LA:183's statement, written again because the import runs the other way; record as owed to row FM that LA's copy becomes a call of TIT's. Decide now whether TIT's is public for that.
+- SHOULD: note that `later_le` (TIT:2034) is one call of it: `above_before (fun t lt => Nat.lt_of_le_of_lt (fall t) lt) le (Nat.le_refl _)`. `fall_by` would then have no user.
+
+**D6 (M1, form of the bound contradicts itself).** "a bound on the level, in the weakest form that builds: `X T ≤ hi` (or `X N ≤ hi`) where the law is at one index, `∀ t, X t ≤ hi` where it ranges over indices."
+- R3 needs the bound only at n ≤ N. By another proof it needs it only at N and N−1.
+- `noReturnAt_of_below` needs it only at m < n, because from n on `below` read forward gives "not recoverable" with no bound.
+- So "weakest that builds" and "`∀ t`" name different statements, and the choice is left to taste.
+- MUST fix the forms and drop "weakest form that builds":
+  - R1 if and iff: `high : X T ≤ hi`.
+  - R2 if and iff: `high : X N ≤ hi`.
+  - R2 only-if: none.
+  - R3: `high : ∀ n, n ≤ N → X n ≤ hi`.
+  - `recoverable_decided_of_stays_below` and `noReturnAt_of_below_of_stays_below`: `high : ∀ t, X t ≤ hi`, with a note that the proof uses less.
+
+**D7 (M1, impossible by its letter).** "Each takes, in place of `fall` and `top`: `below : ∀ t, …` … Every other premise is the old law's, unchanged."
+- Evidence: `noReturnAt_of_below` already has `(below : X n < H + y)` (TIT:2211). The general law would have two binders named `below`.
+- MUST: name both in the brief, for example the closure stays `below` (LA's name) and the level premise becomes `under : X n < H + y` in the new theorem only.
+
+**D8 (keeping rule 3 and "as calls": passable by letter, and three cannot be met).** "At least R1, R2 and R3 must come out as calls, directly or through their two directions"; "the proof is no more lines than the old".
+
+Only two old proofs touch `later_le`: `turned_meets_of_above` and `above_of_recoverable`. Rewriting those two alone makes R1, R2 and R3 "calls through their directions" with every iff untouched. R3 has no "two directions" of its own; today it calls `recoverable_iff_above` (TIT:2166).
+
+Sizes, old against a direct call of the namesake (lines at 100 columns; non-space characters):
+
+| Old theorem | Old | Direct call | Result |
+|---|---|---|---|
+| `turned_meets_of_above` | 9 lines, 420 | 2 lines, 137 | fits |
+| `above_of_recoverable` | 10, 360 | 2, 92 | fits |
+| `noReturnAt_iff_first_below` | 7, 299 | 2-3, 162 | fits |
+| `recoverable_decided` | 4, 179 | 2-3, 155 | fits |
+| `recoverable_of_above` | 2, 121 | 2, 136 | lines equal, characters more |
+| `turned_meets_iff` | 1, 85 | 2, 146 | cannot |
+| `recoverable_iff_above` | 1, 87 | 2, 151 | cannot |
+| `noReturnAt_of_below` | 2, 156 | 3, 160 | cannot |
+
+- "Lines" is gameable: TIT has 609 lines over 100 characters (longest 189), so a 168-character one-line call passes "no more lines".
+- "may equal the old in characters" does not say whether more is allowed (`recoverable_of_above`).
+- "M1 fails whole if R1, R2 or R3 does not come back as a call" conflicts with "the old proof is put back" when a call fails rule 3.
+- MUST replace with a table:
+  - Direct calls of the namesake, required: `turned_meets_of_above`, `above_of_recoverable`, `noReturnAt_iff_first_below`, `recoverable_decided`.
+  - Left as they stand, not calls of their namesakes: `turned_meets_iff`, `recoverable_iff_above`, `noReturnAt_of_below`. They reach the general laws only through the halves. The record says `turned_meets_iff_of_stays_below` and `noReturnAt_of_below_of_stays_below` have no caller after the landing.
+  - `recoverable_of_above`: rewritten only if characters are not counted; say which.
+  - Lines are counted at 100 columns. M1 fails whole only if one of the four required calls does not build with its statement unchanged.
+  - Rule 2's "named law" is the namesake for each row.
+
+**D9 (test wording loose).** "M1 fails whole if a general law needs a premise beyond `below` and a bound on the level".
+- `fall` itself is "a bound on the level" by the letter.
+- SHOULD: "beyond `below` and `X i ≤ hi` at the indices D6 names".
+
+**D10 ("thin" cannot fail, and nothing tests the use).** "M1 is thin … that is what the paper says it will be."
+- The laws will have no caller but their own cases. Nothing checks that the forms fit the one prospective user.
+- On paper they fit: `(silent_at_start_iff_next_of_stays_below … below).trans (recoverable_iff_above_of_stays_below (X := fun j => level alone giving use w x₀ j) below (level_within keeps₀ high (D + 1)) nothing short meets (fun _ le => kept_within keeps₀ H₂ le) needs within).symm`, and likewise `noReturnAt_of_below_of_stays_below below (level_within keeps₀ high) …`.
+- SHOULD: add as a test one scratch-only build of LA's two forms under the core's premises (not landed, counted in the 25), or put these calls in the brief. Say that no built course separates in this landing: the course below is by hand, on `Rising`, where only `level_rises` is Lean.
+
+**D11 (docstrings).** "The old laws' docstrings gain one clause naming the general law they are now a case of."
+- For the three left as they stand, "a case of" is not shown by a proof term.
+- `above_of_recoverable`'s docstring (TIT:2121-2122) narrates a proof ("H + y ≤ X T ≤ X N") that will no longer be its own.
+- SHOULD: write "follows from" where there is no direct call. Allow the proof narration to move to the general law. Require the general docstring to say the bound is at the index of the turn and cannot be dropped (counter-course in the course section below).
+
+**D12 (M2 count wrong by half).** "About a dozen docstrings and lines of the head note".
+
+I find 27 places in LOS that tell these premises of the kids without "together":
+- Head note: 45, 60, 63, 83, 92, 96, 97, 120.
+- Law docstrings and section titles: 631, 640, 767-768, 836, 900, 924, 943, 972, 996, 1042, 1082, 1118, 1124, 1227.
+- Worked cases: 1500, 1545, 1638, 1753, 1944.
+
+Already true as written, because there is one kid; leave these: 1583, 1596-1597, 1900. Line 606 ("what `S` takes of its kids") and line 107 (a name) are fine.
+
+The each-kid reading is false, not merely loose, at:
+- 97: `B` takes 1, its kids `C, B` take 1 each and 2 together (LOS:1796-1806).
+- 1500: `A` takes 2, its kid `B` takes 1.
+- 943: `kids_of_grows` would be false of a unit with no kids.
+- Every `even` sentence: in TwoForOne, `P` takes 2 and each `Q` takes 1.
+
+Lines 640 and 767 tell `keeps` (≤ on a line), not `grows`. "its forms" does not say whether they are in.
+
+"Together" alone is not enough at:
+- the titles 60, 92, 120, 1042, 1118 ("A way whose kids take more");
+- 63 ("taking more", with no object);
+- 96 ("kids taking no less");
+- 97 (needs it twice);
+- 1545, 1753, 1944 ("take two, more than its one" becomes "together take two");
+- 631, 836, 900 ("whose units' kids … take more than the unit" becomes "each of whose units has kids of the line that together take more than it", as line 74 already says).
+
+MUST: put this list in the brief with a verdict per line. Say `keeps` on a line is included. Stopping at a dozen leaves the module saying it two ways.
+
+**D13 (M2, false count).** "The four places that already say it are left."
+- "together" occurs at LOS 26, 74, 78, 1055 only. Line 26 is of two ways side by side, not of kids.
+- MUST: "The three places (74, 78, 1055)".
+
+**D14 (M2 scope).** The same telling without "together" stands at Becoming.lean:5293, LineOnAStockCases.lean:84 and 188, and WayOfUnits.lean:100.
+- SHOULD: include them, or name them as left and owed.
+
+**D15 (M3, names and one entry).**
+- The checker's file uses "M1", "M2", "M3" as failure codes (its section 4: "M3 as placed", "M1:", "M2:"). Its line 364 says of `run_within`: "With named arguments it is safe but 2 → 2 (M2)". An implementer told to "read each member's entry" meets the brief's own member names meaning failure. SHOULD: say so.
+- MUST for `run_within`: only the one-line `Lasting.closed_orbit band high` can pass rule 3. The named-argument form is 2 → 2 and is put back. Say that in advance.
+
+**D16 (tools).**
+- "no axiom" (rule 4) is not checked by build.sh, which only greps the log for the word. SHOULD: add `#print axioms` lines for the new and rewritten declarations in the scratch tree, or say it is first known at the gate.
+- "no declaration is added … except the new ones M1 names", but the private lemma has no name (see D5).
+- The scratch tree /Users/ren/tmp/dj/below23/tree does not exist yet; only build.sh does.
+- SHOULD: say what seven new public theorems owe outside the modules at landing (the root telling at Becoming.lean:5200, the proof-uses step, generated pages). "Nothing outside the four modules changes" reads as if nothing is owed.
+
+## ITEM 1. USES OF `fall` IN SECTION 7 (TIT:1973-2402)
+
+The brief's count is right: three uses, all through `later_le`.
+
+Real uses:
+- (a) TIT:2080, `later_le fall (Nat.zero_le T)` then `top`: X T ≤ X 0 ≤ hi. This is the only use of `top`.
+- (b) TIT:2082, `later_le fall ge`: X T ≤ X t for t ≤ T.
+- (c) TIT:2134, `later_le fall (Nat.le_of_lt lt)`: X T ≤ X N for N < T.
+
+Definitions: `fall_by` (TIT:2030) is used only by `later_le` (TIT:2037).
+
+Pass-throughs only:
+- `turned_meets_iff` 2105; `recoverable_of_above` 2117; `recoverable_iff_above` 2152.
+- `noReturnAt_iff_first_below` 2166; `recoverable_decided` 2187, 2188; `noReturnAt_of_below` 2213, 2214.
+- `noReturn_exists` 2326-2328 and `turns_in_time_iff_before` 2376-2379, 2398-2400, both with `regime.1` from `asItWas_falls`.
+
+No `fall` at all: `above_of_turned_meets`, `above_after`, `above_of_run_meets`, `met_of_recoverable`, `course_turned`.
+
+Outside section 7, `later_le` is called three times in section 8, with `(X := …)` named: TIT:2835, 2847, 2918. It and its binder name must stay.
+
+No use needs more than `below` read backward for (b) and (c). Use (a) is not derivable from `below` and `top`; it is replaced by a premise.
+
+## ITEM 2. PAPER PROOFS
+
+L0. From `below`, j ≤ T and c ≤ X T: c ≤ X j. If X j < c, `below` applied T − j times gives X T < c, a contradiction. Order on Nat is decided.
+
+G-R1 if (premises `below`, X T ≤ hi, `meets`, `keeps`, need ≤ c, c ≤ X T):
+- For t ≤ T: turned = X t, and need ≤ c ≤ X t by L0.
+- For t = T + k: turned = the run under H from X T. `RegimeMargin.holds` (RM:730-732) asks exactly c ≤ x and x ≤ hi at x = X T and gives X T ≤ run k, so need ≤ c ≤ X T ≤ run k.
+- The bound is at the one index T. `below` is used only before T. `within` is the old premise.
+
+G-R1 only-if: unchanged, nothing of X.
+
+G-R2 if (`below`, X N ≤ hi, …): the witness is the turn at N, by G-R1 if at T = N.
+
+G-R2 only-if (`below`, `nothing`, `short`, `needs`; no bound): from `rec` take the turn T, agreeing up to N and meeting the need.
+- N < T: `above_of_turned_meets` gives c ≤ X T, and L0 gives c ≤ X N.
+- T ≤ N: `above_after` gives c ≤ turned N, and turned N = l' N = X N by `eq` and `agree` (TIT:2135-2137). No property of X is used, as the brief says.
+
+G-R3 (`below`, bound at n ≤ N):
+- Forward: if c ≤ X N then Rec N by G-R2 if (bound at N), a contradiction. For n < N, Rec n gives c ≤ X n with no bound.
+- Backward: X N < c gives ¬Rec N with no bound. For n < N, c ≤ X n gives Rec n by G-R2 if (bound at n).
+- So the "∀ n < N" half needs the bound at each n < N by this proof, not at every index. By turning at N − 1 it needs only X (N−1) ≤ hi.
+
+Decidability survives: for each m split X m < c (not recoverable, no bound) or c ≤ X m (recoverable, bound at m). It needs the bound at every m at or above c.
+
+G-noReturnAt_of_below: `noReturnAt_of_past` (ReadOffInTime.lean:632) asks decided at all n, hence `∀ t` as stated.
+
+No general law needs a premise the brief does not allow.
+
+## ITEM 3. A COURSE THAT SEPARATES
+
+By hand; these are the numbers of `LevelAlone.Rising` (LA:789-820).
+- g 1 = 3, g 2 = 1, g 3 = 1, g = 0 elsewhere. H = 1, y = 1, hi = 4, need = 1, c = 2.
+- X = 3, 3, 4, 4, 0, 0, …
+- `nothing`: g 0 = 0. `short`: g 0 < 1. `meets`: g z ≥ 1 for z = 1, 2, 3.
+- `keeps`: the step under 1 from 0, 1, 2, 3, 4 is 0, 0, 4, 3, 4.
+- `below`: only X t = 0 is under 2, and it stays 0. Bound: every X t ≤ 4.
+- `fall` fails at t = 1 (X 2 = 4 > 3), which `Rising.level_rises` proves in Lean. The old R2 cannot be applied at any N.
+- General R2 at N = 3: 2 ≤ 4, recoverable. The turn at 3 runs 3, 3, 4, 4, then 3 + g 3 = 4 for ever.
+- General R2 at N = 4: X 4 = 0 < 2, not recoverable. Turns at T ≥ 4 are 0 at step 4; turns at T ≤ 3 are 3 or 4 at a step where X differs.
+- General R3: the point of no return is step 4.
+
+The bound cannot be dropped:
+- H = 5, y = 1, hi = 6, g 1 = 5, g = 0 elsewhere, need 1, X = 7, 0, 0, …
+- All regime premises and `below` hold, and 6 ≤ X 0.
+- The turn at 0 runs 7, 2, 0 and fails the need. Turns at T ≥ 1 pass through X 1 = 0. X 0 = 7 > hi.
+
+## ITEM 4. THE OLD LAWS AS CALLS
+
+- "a fall gives `below`" is one line and correct: `fun t lt => Nat.lt_of_le_of_lt (fall t) lt`.
+- The bound is available in every form:
+  - at one index: `Nat.le_trans (later_le fall (Nat.zero_le T)) top`;
+  - `∀ t`: `fun t => Nat.le_trans (later_le fall (Nat.zero_le t)) top`;
+  - `∀ n ≤ N`: the same with `fun n _ =>`.
+- The calls and which cannot be shorter are in D8. Rule 3's exception can be met by its letter with long lines, and by rewriting only two proofs.
+
+## ITEM 5. WHO ELSE USES THESE
+
+- LA:563, `recoverable_iff_above`, positional with `(X := …)`. LA:591, `noReturnAt_of_below`.
+- TIT:2326 `recoverable_decided`; 2376 `recoverable_iff_above (N := n) (X := …)`; 2385 `above_of_turned_meets`; 2398 `turned_meets_of_above`.
+- TIT:2519 (`Three.noReturn`), `noReturnAt_iff_first_below` with X, giving, H, y, hi, need, N all named.
+- No other module of Becoming/ uses them. Unchanged statements, implicit binder names included, suffice for all.
+- `_of_stays_below` occurs only in `LevelAlone.silent_at_start_iff_next_of_stays_below` (LA:398). No proposed name clashes with it. The only clash is the binder in D7.
+
+## ITEM 6. M2
+
+See D12-D14: 27 places, not a dozen. Three already say "together", not four. Three single-kid sentences are true as written. About ten need rewording, not an inserted word.
+
+## ITEM 7. M3 AS IT STANDS TODAY
+
+Line numbers in the checker's entries still match main; every callee is in the import closure (by script over the `import` lines).
+
+- **`LOS.course_fixed`** (1345-1348, 2 proof lines) to `Learnable.orbit_of_still fixed`. `course` is an abbrev of `Law.orbit` (LOS:163). 2 → 1. Likely kept.
+- **`LOS.line_or_none`** (242-251) and **`met_or_unmet`** (254-…) to `gather_listed`. It is now at PredicateIteration.lean:60, in namespace `Becoming` (before `namespace Iteration` at 69), so it resolves unqualified. The terms fit the statement. 8 → 2 each. Likely kept.
+- **`LOS.strong_below`** (296-300) to `Identification.below_upto step` (Identification.lean:273). Same statement up to names. 3 → 1. Likely kept. It is then a bare alias, with two callers at LOS:891 and 1220.
+- **`Stock.search`** (347-360) to `Amounts.unmarked_or_marked` (Amounts.lean:506, no section variable in force). 12 → 2. Likely kept. `Nat.pos_of_ne_zero` is already used in the package.
+- **`Stock.total_append`** (62-65) to `fun xs ys => Becoming.total_append q ys xs` (Flow.lean:179, namespace `Becoming`). Argument order fits. 3 → 1. Likely kept, if the qualified name does not resolve to the theorem itself; on paper it does not.
+- **`RM.run_within`** (2495-2498) to `Lasting.closed_orbit band high` (Lasting.lean:474). RM imports Lasting directly. `Band` (RM:2425) is `∀ x, K x → K (next x)` at K = "every level ≤ hi". The fit needs `Band` unfolded, K and `next` found by unification, and `Law.orbit` against `(Law.run …).state`. The one-liner is plausible. With named arguments it is 2 → 2 and put back.
+
+None is impossible as written.
+
+## ITEM 8. THE TESTS
+
+See D8, D9, D10, D12.
+
+Already in the Lean under another name:
+- The private lemma (D5).
+- The argument "`below` backward gives the prefix its need by `within`" (LA:383-384, in `all_but_start_of_next`).
+- The half after the turn (`unending_iff_above`, TIT:1017).
+
+No theorem on `Recoverable`, `NoReturnAt` or `turned` under a stays-below premise was found by name search over Becoming/*.lean. The general ones in ReadOffInTime (601-637) ask nothing of a level.
+
+## ITEM 9. THE WHY
+
+See D1-D4.
+
+True as written:
+- LevelAlone landed 23 November (`f38142a3e`, 02:26).
+- The ending `_of_stays_below` is row FM's.
+- The cited bullet is the last of the reader's section 2.
+
+## NOT CHECKED
+
+- Nothing was elaborated: the higher-order unification in `run_within`, the name resolution of `Becoming.total_append` inside `Stock.total_append`, and every call written above are on paper.
+- Whether the lister shows indirect uses, and what `scratch_build.py` does with LevelAlone.
+- Ren's words of 04:39 (no transcript read). Whether the claim sentence is on main's board.
+- Atlas mapping rows, generated pages and signature checks owed by new public theorems.
+- LOS docstrings were found by pattern search, not by reading all 2,143 lines; a telling in other words may be missed. LineOnAStockCases and WayOfUnits were grepped only.
+- The hand courses were computed by me, not by Lean, except `Rising.level_rises`.

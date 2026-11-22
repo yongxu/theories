@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-21T15:22:57+00:00",
+  "reviewed_at_utc": "2026-11-22T22:35:00+00:00",
   "statement": {
     "en": "On a way and a level cut by a need, under the regime's premises the line never ends exactly where the course as it was, the need met, is first marked and its level one step later is at or above the kept kind's point of no return. Unmarked and losing more than it is given, it ends where the net ends.",
     "zh": "一种延续的方式连同一个水位，水位不足所需即无后继。在体制的前提下，线不穷，当且仅当照旧的进程在所需一直满足之下第一次落在标记水位，而一步之后的水位不低于所保持之类的不可返回点。无标记而所失多于所得，则线终于网尽之处。"
@@ -379,6 +379,26 @@
         "Becoming.TurningInTime.Three.share_read_goes_on"
       ],
       "zh": "Three.share_read_goes_on：窗口 [8, 9) 把份额设为零（zeroShare）、规则设为 false，自九处的 (3, true, 0)：进程为 ((3, true, 1), 8)，此后对每个 n 为 ((0, false, n + 2), 6)；线不穷（经 locked_turns_in_time_share_iff 于 T = 1），自第 2 步起份额低于三、规则为 false。"
+    },
+    {
+      "en": "The laws of a level course above (turned_meets_iff, recoverable_iff_above, noReturnAt_iff_first_below, noReturnAt_of_below) hold under less: in place of X never rising, a level once below H + y stays below it (below); in place of a start at most hi, the level is at most hi at the step of each turn used (in turn: T; N; every step up to N; every step). The other premises are unchanged.",
+      "zh": "上述水位进程诸律（turned_meets_iff、recoverable_iff_above、noReturnAt_iff_first_below、noReturnAt_of_below）于更弱前提成立：以「水位一旦低于 H + y 便保持低于」（below）代「X 从不上升」，以「所用转向之步水位 ≤ hi」（依次 T；N；至 N 各步；每步）代「起点 ≤ hi」，余者不变。",
+      "declarations": [
+        "Becoming.TurningInTime.turned_meets_of_above_of_stays_below",
+        "Becoming.TurningInTime.turned_meets_iff_of_stays_below",
+        "Becoming.TurningInTime.recoverable_of_above_of_stays_below",
+        "Becoming.TurningInTime.above_of_recoverable_of_stays_below",
+        "Becoming.TurningInTime.recoverable_iff_above_of_stays_below",
+        "Becoming.TurningInTime.noReturnAt_iff_first_below_of_stays_below",
+        "Becoming.TurningInTime.noReturnAt_of_below_of_stays_below"
+      ]
+    },
+    {
+      "en": "A course that never rises from a start at most hi meets both; under the first alone a level at or above H + y at a step is at or above it at every earlier step (above_before_of_stays_below). A course that rises can meet both (by hand, not a Lean statement: the levels 3, 3, 4, 4, 0, 0, … with H + y = 2 and hi = 4).",
+      "zh": "从不上升且起点 ≤ hi 者两者皆满足；仅凭前者，某步水位 ≥ H + y 则此前各步亦然（above_before_of_stays_below）。上升的进程也可满足（手算，非 Lean 陈述：水位 3、3、4、4、0、0、…，H + y = 2，hi = 4）。",
+      "declarations": [
+        "Becoming.TurningInTime.above_before_of_stays_below"
+      ]
     }
   ],
   "hypotheses": [
@@ -486,7 +506,7 @@
     "conditional-not-universal"
   ],
   "validation_scope": {
-    "en": "Pure core, axiom reports empty (core run of 21 November: 108 public declarations, 81 of them theorems, and 35 private lemmas); imported by Becoming.LineOnAStock and Becoming.WayOfUnits, in the Lean's second layer only through two theorems it imports. Compositions of landed theorems (Optimum's, RegimeMargin's, the root's, the joined two-level step, RuleCapture's lock) with one split at the first marked level; the witnesses computed. Written by AI agents and read by AI agents set to refute it, the laws of 16 November among them; no person's review of it is recorded yet."
+    "en": "Pure core, axiom reports empty (core run of 23 November: 116 public declarations, 89 of them theorems, and 36 private lemmas); imported by Becoming.LineOnAStock, Becoming.WayOfUnits and Becoming.LevelAlone, in the Lean's second layer only through two theorems it imports. Compositions of landed theorems (Optimum's, RegimeMargin's, the root's, the joined two-level step, RuleCapture's lock) with one split at the first marked level; the witnesses computed. Written by AI agents and read by AI agents set to refute it, the laws of 16 November among them; no person's review of it is recorded yet."
   },
   "next_delta": {
     "en": "Prove ClosedCapture's and PoolFromCourse's courses instances of the pair, so that their own-loop theorems are derived below from agrees_until_marked; move «类闭则本类常闭» and first_of_decided down, putting the module in the first layer; give the step T in closed form by Optimum.reread_deadline_iff; a test on a trained system, held."
@@ -958,9 +978,17 @@
         "Becoming.TurningInTime.Three.share_read_goes_on",
         "Becoming.TurningInTime.unending_from",
         "Becoming.TurningInTime.unending_iff_marked_at",
-        "Becoming.TurningInTime.unending_iff_first_marked_wide"
+        "Becoming.TurningInTime.unending_iff_first_marked_wide",
+        "Becoming.TurningInTime.above_before_of_stays_below",
+        "Becoming.TurningInTime.turned_meets_of_above_of_stays_below",
+        "Becoming.TurningInTime.turned_meets_iff_of_stays_below",
+        "Becoming.TurningInTime.recoverable_of_above_of_stays_below",
+        "Becoming.TurningInTime.above_of_recoverable_of_stays_below",
+        "Becoming.TurningInTime.recoverable_iff_above_of_stays_below",
+        "Becoming.TurningInTime.noReturnAt_iff_first_below_of_stays_below",
+        "Becoming.TurningInTime.noReturnAt_of_below_of_stays_below"
       ],
-      "sha256": "d411822eee8ad3c5c1539b0a776da13b40e80685aff5dadf4fc007908871edf1"
+      "sha256": "ebca02e0d226c79ab54711f17c18b05dd50fb480d5aa45b2faf850101b6f5d70"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T133009.897615Z/verification.json",
@@ -1037,12 +1065,18 @@
       "role": "receipt",
       "declarations": [],
       "sha256": "50d10e324f666ae1d2af11aaf3bf1ec048150581d39711a57563811df353d11c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T223138.659438Z/verification.json",
+      "role": "receipt",
+      "sha256": "9dffe9a99119a9921018fb7a8b71e392c7ec2e1301a80130344c10b4f1db9ee3",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T133506.986317Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T223138.659438Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.TurningInTime",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1066,6 +1100,9 @@
     },
     {
       "en": "21 November 2026, board row FM (Ren's words of that day, sources/15-codex-theory-conversations/2026-11-21-a-full-map-with-its-centre.md): unending_from, unending_iff_marked_at and unending_iff_first_marked_wide added above unending_iff_first_marked, from a scratch module of that day by an AI worker under the session holding row DJ. unending_iff_first_marked's statement is unchanged; its proof, 53 lines, is now a call of the wide law, 3 lines, the premise that the course as it was comes below the need giving the wide law's weaker one. The wide law's proof is the old proof generalised and split in two lemmas, within this module: it is not a case of a result proved elsewhere before. The module goes from 3,092 to 3,151 lines. One law's text and declarations extended; nothing renumbered. The tellings were read before the core run by an AI reader who took no part, eleven lesser places mended. Bound to core run 20261121T133506.986317Z."
+    },
+    {
+      "en": "23 November 2026, board row DJ: above_before_of_stays_below and seven laws ending _of_stays_below added beside the laws of a level course, with a private deciding lemma. turned_meets_of_above, above_of_recoverable, noReturnAt_iff_first_below and the private recoverable_decided are now calls of their namesakes, their statements unchanged; turned_meets_iff, recoverable_of_above, recoverable_iff_above and noReturnAt_of_below stand as they were. Two laws appended; nothing renumbered. The first premise is that of Becoming.LevelAlone's core law, landed the same day by row FM. A reader attacked the brief before any build, and Lean's print of the changed modules before and after shows no statement changed. Bound to core run 20261122T223138.659438Z. Every new and changed docstring was read against its statement by a reader who took no part, before that run."
     }
   ]
 }

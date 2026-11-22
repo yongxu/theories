@@ -1,0 +1,28 @@
+start 05:11:27
+{
+  "tree": "/Users/ren/tmp/dj/below23/tree1",
+  "modules": 151,
+  "ran": [
+    "Becoming.LevelAlone",
+    "BecomingLevelAloneAxiomAudit",
+    "BecomingLevelAloneSignatures",
+    "Becoming.LevelAlone.PreludeOnly"
+  ],
+  "reused": 300,
+  "unclean": [],
+  "audits": {
+    "Becoming.LevelAlone": {
+      "theorems": 39,
+      "declarations": 52,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.LevelAlone": 2.563,
+    "BecomingLevelAloneAxiomAudit": 1.433,
+    "BecomingLevelAloneSignatures": 1.39,
+    "Becoming.LevelAlone.PreludeOnly": 2.133
+  }
+}
+exit 0 build 2
+end 05:11:34

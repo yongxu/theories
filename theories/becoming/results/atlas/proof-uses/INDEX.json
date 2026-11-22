@@ -4,13 +4,13 @@
  "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
  "toolchain": "leanprover/lean4:v4.29.1",
  "printed_from": {
-  "commit": "44b7d93930b3e2835e40b098b8a329ec4d8da02f",
-  "core_run": "20261122T194452.040858Z"
+  "commit": "c9f7a506393259d54714a7e966fb12b2426ee7c4",
+  "core_run": "20261122T223138.659438Z"
  },
- "core_sources_sha256": "c895f22fb4b732be9270ea3200ea2ac72ce336f7f95b2ca74453a2c234164503",
+ "core_sources_sha256": "4b3737f00b30c00d883b4941e59148cadcbabaa80ebfff42b1dc8b9e56bd1484",
  "modules": {
   "Becoming": {
-   "source_sha256": "86817cd2ae6ec19041fcda7ca777236ae4277f728b585b39c9e05a9039050894",
+   "source_sha256": "76962859973903b85e40f1305f0d239f81bad6dcb2b0cd218945bd1f4c61331d",
    "theorems": 0
   },
   "Becoming.Acceptance": {
@@ -826,11 +826,11 @@
    "theorems": 60
   },
   "Becoming.LineOnAStock": {
-   "source_sha256": "024010a91cf7c8193b433d2b5f9e6447353812f00521004efc5757ab5379a99a",
+   "source_sha256": "5c7ce2c3e2c72f271b56900ca336a998abcba646714d5ce01df9c324ce8f4c40",
    "theorems": 113
   },
   "Becoming.LineOnAStockCases": {
-   "source_sha256": "9cc20f55f6e3733486499cfbaccc5163ba8cd106485e7e8dd539864aafe84e5a",
+   "source_sha256": "d1e4a27b93fe0783bd55e097d866e9786be26a7c01ae6e162190088feaa549db",
    "theorems": 9
   },
   "Becoming.LineageDrawdown": {
@@ -1182,7 +1182,7 @@
    "theorems": 20
   },
   "Becoming.RegimeMargin": {
-   "source_sha256": "29eb0052ed43d2a4f4ee56d6df6fed01f9fb445f6e3b6d0634a7eee94fcf3e02",
+   "source_sha256": "94adc91e175b6eb0c70037dcc005e0e4a76b283f07d01a801bb86bdd115993b1",
    "theorems": 251
   },
   "Becoming.Regions": {
@@ -1470,7 +1470,7 @@
    "theorems": 21
   },
   "Becoming.Stock": {
-   "source_sha256": "7bb21fc140b314378ac4aadc0f1190e636b35e5afcf0b70b761d2cc99a49a66d",
+   "source_sha256": "caba0fdee5b4b1aa26bf86901da6708affb2f41baba1dee5d29a461ce2f1b2d9",
    "theorems": 45
   },
   "Becoming.StrengthFlows": {
@@ -1542,8 +1542,8 @@
    "theorems": 35
   },
   "Becoming.TurningInTime": {
-   "source_sha256": "d411822eee8ad3c5c1539b0a776da13b40e80685aff5dadf4fc007908871edf1",
-   "theorems": 116
+   "source_sha256": "ebca02e0d226c79ab54711f17c18b05dd50fb480d5aa45b2faf850101b6f5d70",
+   "theorems": 125
   },
   "Becoming.TypicalRuns": {
    "source_sha256": "6275413d0a64c1c9455ca41bee62a42db5397e1bd7d5dd6987ccfe4ff2ee6905",
@@ -1594,7 +1594,7 @@
    "theorems": 29
   },
   "Becoming.WayOfUnits": {
-   "source_sha256": "98ce34656cc7437c485ee7bfcc0858610e72e72bb3fcf08584188592a1e07f52",
+   "source_sha256": "47be42133e64c40b36d97132dba4ee23e446b09282e5d437edcc4122cf9549e9",
    "theorems": 68
   },
   "Becoming.Weighted": {
@@ -1668,7 +1668,7 @@
  },
  "counts": {
   "modules": 414,
-  "theorems": 20765,
+  "theorems": 20774,
   "uses_without_row": 20
  }
 }

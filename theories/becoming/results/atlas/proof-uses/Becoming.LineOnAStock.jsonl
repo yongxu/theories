@@ -39,7 +39,7 @@
 {"name": "Becoming.LineOnAStock.born_alike", "uses": ["Becoming.LineOnAStock.born_eq_length", "Becoming.LineOnAStock.ways_alike"]}
 {"name": "Becoming.LineOnAStock.born_eq_length", "uses": ["Becoming.LineOnAStock.family_eq", "Becoming.SelectionTerm.Generations.born_eq"]}
 {"name": "Becoming.LineOnAStock.course_asItWas", "uses": ["Becoming.LineOnAStock.after_of_met"]}
-{"name": "Becoming.LineOnAStock.course_fixed", "uses": []}
+{"name": "Becoming.LineOnAStock.course_fixed", "uses": ["Becoming.Learnable.orbit_of_still"]}
 {"name": "Becoming.LineOnAStock.course_generation", "uses": ["Becoming.LineOnAStock.after_of_met", "Becoming.LineOnAStock.taken_generation"]}
 {"name": "Becoming.LineOnAStock.decide_le_congr", "uses": []}
 {"name": "Becoming.LineOnAStock.draw_holds", "uses": ["Becoming.LineOnAStock.draw_rises"]}
@@ -68,7 +68,7 @@
 {"name": "Becoming.LineOnAStock.lineTake_true", "uses": ["Becoming.total_congr"]}
 {"name": "Becoming.LineOnAStock.line_ends", "uses": ["Becoming.LineOnAStock.ends_all", "Becoming.LineOnAStock.gone_after", "Becoming.le_total_of_mem"]}
 {"name": "Becoming.LineOnAStock.line_from_line", "uses": ["Becoming.LineOnAStock.mem_after_iff"]}
-{"name": "Becoming.LineOnAStock.line_or_none", "uses": []}
+{"name": "Becoming.LineOnAStock.line_or_none", "uses": ["Becoming.gather_listed"]}
 {"name": "Becoming.LineOnAStock.mem_after_iff", "uses": ["Becoming.LineOnAStock.after_flatMap", "Becoming.LineOnAStock.mem_cond", "Becoming.LineOnAStock.mem_cond_of", "Becoming.ListTests.mem_flatMap_iff"]}
 {"name": "Becoming.LineOnAStock.mem_allKids_iff", "uses": ["Becoming.LineOnAStock.allKids_flatMap", "Becoming.ListTests.mem_flatMap_iff"]}
 {"name": "Becoming.LineOnAStock.mem_cond", "uses": []}
@@ -76,7 +76,7 @@
 {"name": "Becoming.LineOnAStock.mem_generation", "uses": ["Becoming.LineOnAStock.mem_after_iff", "Becoming.LineOnAStock.mem_allKids_iff"]}
 {"name": "Becoming.LineOnAStock.mem_of_ne_nil", "uses": []}
 {"name": "Becoming.LineOnAStock.met_of_alike_le", "uses": ["Becoming.LineOnAStock.after_length_lt"]}
-{"name": "Becoming.LineOnAStock.met_or_unmet", "uses": []}
+{"name": "Becoming.LineOnAStock.met_or_unmet", "uses": ["Becoming.gather_listed"]}
 {"name": "Becoming.LineOnAStock.need_in_after", "uses": ["Becoming.LineOnAStock.mem_after_iff"]}
 {"name": "Becoming.LineOnAStock.need_unmet", "uses": ["Becoming.LineOnAStock.course_asItWas", "Becoming.LineOnAStock.generation_mem", "Becoming.LineOnAStock.generations_rise", "Becoming.LineOnAStock.kids_of_grows", "Becoming.LineOnAStock.mem_of_ne_nil", "Becoming.LineOnAStock.met_or_unmet", "Becoming.LineOnAStock.way_while_met", "Becoming.TurningInTime.rising_takes_all", "Becoming.first_of_decided"]}
 {"name": "Becoming.LineOnAStock.needs_after_iff", "uses": ["Becoming.LineOnAStock.mem_after_iff", "Becoming.LineOnAStock.mem_of_ne_nil"]}
@@ -98,7 +98,7 @@
 {"name": "Becoming.LineOnAStock.strip_neg", "uses": []}
 {"name": "Becoming.LineOnAStock.strip_pos", "uses": []}
 {"name": "Becoming.LineOnAStock.strip_strip", "uses": ["Becoming.LineOnAStock.strip_neg", "Becoming.LineOnAStock.strip_pos"]}
-{"name": "Becoming.LineOnAStock.strong_below", "uses": []}
+{"name": "Becoming.LineOnAStock.strong_below", "uses": ["Becoming.Identification.below_upto"]}
 {"name": "Becoming.LineOnAStock.taken_allKids", "uses": ["Becoming.LineOnAStock.allKids_flatMap", "Becoming.SelectionTerm.Generations.total_flatMap", "Becoming.total_congr"]}
 {"name": "Becoming.LineOnAStock.taken_below", "uses": ["Becoming.LineOnAStock.mem_generation", "Becoming.LineOnAStock.step_zero"]}
 {"name": "Becoming.LineOnAStock.taken_generation", "uses": ["Becoming.LineOnAStock.taken_allKids"]}

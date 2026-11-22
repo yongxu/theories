@@ -1,0 +1,89 @@
+# Brief: three laws of `TurningInTime` under a weaker premise, and the tidyings owed beside them
+
+*AI-written (Claude Fable, board row DJ), 23 November 2026. Written before any build. Frozen when its hash stands in `FROZEN.sha256.txt`; what an attack changes goes under "After" and nothing above it is edited.*
+
+## Why
+
+On 23 November row FM landed `Becoming.LevelAlone`, whose core law asks of the course as it was only that a level once below `H₂ + y₂` stays below (`below`). Its forms in the notions `Recoverable` and `NoReturnAt` are given only where the level never rises, because the three laws of `Becoming.TurningInTime` that carry those notions (R1 `turned_meets_iff`, R2 `recoverable_iff_above`, R3 `noReturnAt_iff_first_below`) ask a course that never rises (`fall`) and starts at most `hi` (`top`). A reader of another kind of model argued on paper that they hold under `below` (row FM's study folder `fm-level-alone-2026-11-23/returns/astra-read.txt`, section 2, last bullet). Ren, 23 November 04:39 WIB, to the coordinating session: sessions that did not finish their work should finish those parts and then merge. This is the seam between the two rows' modules, and the session that keeps `TurningInTime` takes it. It advances a join: older laws become cases of more general ones.
+
+## Members
+
+**M1. In `Becoming/TurningInTime.lean`, its section 7 (lines 1990 to 2400 on main `52fc707a4`).** By the session's reading of the proofs: `fall` is used there only through the private `later_le`, in three places. In `turned_meets_of_above`: (a) `X T ≤ X 0 ≤ hi`, a bound; (b) `X T ≤ X t` for `t ≤ T`, so that the need is met before the turn. In `above_of_recoverable`: (c) `X T ≤ X N` for `N < T`. (b) and (c) are: a level at or above `H + y` at a later step is at or above it at an earlier one, which is `below` read backward.
+
+To build, as new public theorems beside the old ones, names with the ending `_of_stays_below` (row FM's module uses that ending):
+
+- a private lemma: from `below : ∀ t, X t < c → X (t + 1) < c`, `j ≤ T` and `c ≤ X T`, conclude `c ≤ X j`;
+- `turned_meets_of_above_of_stays_below`, `turned_meets_iff_of_stays_below` (R1);
+- `recoverable_of_above_of_stays_below`, `above_of_recoverable_of_stays_below`, `recoverable_iff_above_of_stays_below` (R2);
+- `noReturnAt_iff_first_below_of_stays_below` (R3);
+- `noReturnAt_of_below_of_stays_below`, with a private `recoverable_decided_of_stays_below`.
+
+Each takes, in place of `fall` and `top`: `below : ∀ t, X t < H + y → X (t + 1) < H + y`, and a bound on the level, in the weakest form that builds: `X T ≤ hi` (or `X N ≤ hi`) where the law is at one index, `∀ t, X t ≤ hi` where it ranges over indices. `above_of_recoverable_of_stays_below` should need no bound. Every other premise is the old law's, unchanged.
+
+Then the old theorems, **their statements unchanged binder by binder**, are proved as calls: a fall gives `below` (`fun t lt => Nat.lt_of_le_of_lt (fall t) lt`) and, with `top`, the bound (`later_le fall (Nat.zero_le _)` then `top`). At least R1, R2 and R3 must come out as calls, directly or through their two directions.
+
+Docstrings: each new law says what it asks and what it concludes, in the module's own style; that `below` is weaker than a course that never rises (a fall gives it; a course can rise and still meet it); which old law is its case; and it does not say "passage", "last chance", or that a point of no return lies after the start. The old laws' docstrings gain one clause naming the general law they are now a case of. The module's head note gains at most three lines. No other statement of the module changes, and `noReturn_exists`, `turns_in_time_iff_before` and section 8 are not touched.
+
+**M2. Docstrings of `Becoming/LineOnAStock.lean`.** The premises `even` (`taken use (kids u) = use u`) and `grows` (`use u < lineTake S use (kids u)`, and its forms) are of a unit's kids together. About a dozen docstrings and lines of the head note tell them as "its kids take what it takes" or "take more than it", which reads as of each kid. Add "together" (or "between them") at each. No statement and no proof changes. The four places that already say it are left.
+
+**M3. Calls that row FM's checker of 22 November found** (`fm-said-more-than-once-2026-11-22/returns/CHECK-cheap-calls-opus.md.txt`, its sections 1 to 3; read each member's entry there before touching it): in `LineOnAStock`, `course_fixed` (class i) and `line_or_none`, `met_or_unmet`, `strong_below` (class ii); in `Stock`, `search` and `total_append`; in `RegimeMargin`, `run_within` as a call of `Lasting.closed_orbit` (marked there as plausible, needing a build).
+
+## The keeping rule (row FM's of 22 November, for M1's old theorems and for M3)
+
+A rewritten proof is kept only if all hold; otherwise the old proof is put back and the member is reported as built and left, with the figures:
+
+1. The statement is the same binder by binder as on main, by the lister (below), and no declaration is added, removed or renamed except the new ones M1 names.
+2. The named law is used in the proof term, by the lister.
+3. For M3: no induction of its own is left, and the proof is strictly fewer lines and no more non-space characters than the old. For M1's old theorems: the proof is no more lines than the old (a call with two short arguments may equal the old in characters; that is allowed here and only here, since the gain is the case and not the length).
+4. No new import, no `sorry`, no axiom, no warning; nothing outside the four modules changes.
+
+## What would count as nothing gained, written first
+
+- M1 fails whole if a general law needs a premise beyond `below` and a bound on the level; or if R1, R2 or R3 does not come back as a call with its statement unchanged. Then no part of M1 lands and the record says why.
+- M1 is thin, and is to be said so in the record, if every new law's proof is the old proof with one lemma swapped: that is what the paper says it will be. The claim is not that anything deep is added; it is that the laws were stated under more than they use, and that `LevelAlone`'s forms can then be stated under its core's premise. Whether that second step is taken is row FM's.
+- M2 is nothing gained wherever "together" is added to a sentence that was already true of each kid; a reader checks each changed sentence against its premise.
+- An M3 member that fails the keeping rule is put back.
+
+## Tools and limits
+
+- Scratch tree: `/Users/ren/tmp/dj/below23/tree/Becoming/` holds copies of the four modules as changed; build with `/Users/ren/tmp/dj/below23/build.sh <n> <Module> ...`, which waits while a gate, a core run or another scratch build is alive, runs the package's `scratch_build.py` once and prints the errors. **At most 25 builds in all.** Build the smallest set that tests a change (a module and, where its statements are used downstream, `LevelAlone` for `TurningInTime`; the modules that import `RegimeMargin`, `Stock` or `LineOnAStock` are rebuilt by the core run, not here, unless a statement changed, which it must not).
+- The lister: `/Users/ren/tmp/fm/build13/kit/Rows.lean` and `compare.py` beside it (row FM's; they print every declaration's statement binder by binder with the head of its proof term, what it uses and its recursors). The rows of main before any change are made first and kept as `before/`.
+- This Mac is busy: no core run, no gate, no test suite; they come at the landing. Change no file of the repository: work only in the scratch tree. Nothing is pushed or sent.
+- Report: for each member, the old and new proof (lines, non-space characters), the lister's row before and after, kept or put back and why; every build with its number and outcome; anything in the brief found false.
+
+## After (23 November, after one reader attacked the brief and before any build; `RETURN-attack.md.txt`)
+
+*Nothing above is edited. What follows replaces what it names. The attack confirmed the fact M1 rests on (three uses of `fall`, all through `later_le`, at TIT 2080, 2082, 2134; `top` used once, at 2080) and worked every general law on paper under the premises allowed; it found the defects below.*
+
+**The Why, corrected.** `LevelAlone`'s core law asks, beside its common premises (`rises`, `high`, `rest`, `differs` among them), that a level once below `H₂ + y₂` stays below (`below`); its laws A and B ask more. Its forms in `Recoverable` and `NoReturnAt` call two laws of `TurningInTime`, `recoverable_iff_above` (R2) and `noReturnAt_of_below`, which ask `fall` and `top`; R1 and R3 are not called there and are generalised with them because they share the two lemmas. The reader of another kind of model argued R2 and the deciding step under `below` and a bound at every index; R1's if half is inside that argument; R3 under these premises is this session's paper argument and the attacker's. Ren's words of 04:39 WIB are as the coordinating session relayed them and were not yet filed when this was written; that they ask for this landing is this session's reading, held loosely.
+
+**M1, fixed forms.** The closure premise is named `below` throughout, as in `LevelAlone`. The bound is named `high` and has exactly these forms, with no choice left to the build:
+
+| New theorem | In place of `fall` and `top` |
+|---|---|
+| `above_before_of_stays_below` (public; `below`, `j ≤ T`, `c ≤ X T` give `c ≤ X j`) | `below` only |
+| `turned_meets_of_above_of_stays_below`, `turned_meets_iff_of_stays_below` | `below`, `high : X T ≤ hi` |
+| `recoverable_of_above_of_stays_below`, `recoverable_iff_above_of_stays_below` | `below`, `high : X N ≤ hi` |
+| `above_of_recoverable_of_stays_below` | `below`, no bound |
+| `noReturnAt_iff_first_below_of_stays_below` | `below`, `high : ∀ n, n ≤ N → X n ≤ hi` |
+| `recoverable_decided_of_stays_below` (private), `noReturnAt_of_below_of_stays_below` | `below`, `high : ∀ t, X t ≤ hi`; in the last, the level premise of the old law is named `under : X n < H + y`, since `below` is taken |
+
+The first lemma is `LevelAlone.above_before` (private there, LA 183) written again in `TurningInTime` because the import runs the other way; it is public so that `LevelAlone`'s copy can become a call of it, which is row FM's to do or leave and is recorded as owed to it. `later_le` and `fall_by` stay as they are, binder names included: section 8 calls `later_le` three times with `(X := …)` named.
+
+**M1, which old theorems become calls** (replacing "At least R1, R2 and R3 must come out as calls" and rule 3's exception). Lines are counted at 100 columns.
+
+- Rewritten as one direct call of its namesake, required: `turned_meets_of_above`, `above_of_recoverable`, `noReturnAt_iff_first_below`, `recoverable_decided`. The attacker's sizes on paper: 9 lines to 2, 10 to 2, 7 to 2 or 3, 4 to 2 or 3.
+- Left as they stand: `turned_meets_iff`, `recoverable_iff_above`, `recoverable_of_above`, `noReturnAt_of_below`. A direct call would be longer; they reach the general laws through the theorems they already call. The record says so, and says that `turned_meets_iff_of_stays_below` and `noReturnAt_of_below_of_stays_below` have no caller in the package after the landing.
+- M1 fails whole only if one of the four required calls does not build with its statement unchanged, or a general law needs a premise beyond `below` and `X i ≤ hi` at the indices of the table.
+
+**A test of use, added.** The general laws will have no caller but their own cases, so one scratch-only build checks that they fit the one prospective user: in a scratch copy of `LevelAlone`, its form in `Recoverable` and its no-return form stated under the core's premises, by `recoverable_iff_above_of_stays_below` and `noReturnAt_of_below_of_stays_below` with the bound from that module's `level_within`. That text is not landed; it is handed to row FM. If it does not build, the forms of the table are wrong for their use and the record says so. No built course separates the general laws from the old in this landing; the separating course is `LevelAlone.Rising` by hand (only `Rising.level_rises` is Lean), and the record gives the attacker's two hand courses, the second showing the bound cannot be dropped, as hand courses.
+
+**Docstrings.** A general law's docstring says the bound is at the index of the turn and cannot be dropped. An old law rewritten as a call says "a case of" its namesake; one left as it stands says "follows from" the general laws through what it calls. A proof narration that is no longer the theorem's own (in `above_of_recoverable`) moves to the general law.
+
+**M2, the list.** Not a dozen: 27 places in `LineOnAStock.lean`, by the attacker's pattern search (lines on main): head note 45, 60, 63, 83, 92, 96, 97, 120; docstrings and section titles 631, 640, 767 to 768, 836, 900, 924, 943, 972, 996, 1042, 1082, 1118, 1124, 1227; worked cases 1500, 1545, 1638, 1753, 1944. `keeps` on a line (640, 767) is included. Left as true of a single kid: 1583, 1596 to 1597, 1900; 606 and 107 are fine. Three places already say it (74, 78, 1055), not four. Where a word inserted is not enough the sentence is reworded as line 74 has it ("each of whose units has kids of the line that together take more than it"): the titles at 60, 92, 120, 1042, 1118; 63; 96; 97 (twice); 631, 836, 900; and 1545, 1753, 1944 ("together take two"). The same telling stands outside the module at `Becoming.lean` 5293, `LineOnAStockCases.lean` 84 and 188, and `WayOfUnits.lean` 100, and is mended there too, so the scratch tree holds those three files as well; no statement or proof in them changes. The implementer reads the module for tellings in other words that a pattern search misses and reports each place changed with its old and new sentence.
+
+**M3.** The checker's file uses "M1", "M2", "M3" as its own failure codes; they are not this brief's members. For `RegimeMargin`'s `run_within` only the one-line `Lasting.closed_orbit band high` can pass rule 3; a form with named arguments is 2 lines to 2 and is put back. The attacker found every callee in its module's import closure and judged all seven likely kept on paper; nothing was elaborated.
+
+**Rule 4 and the tools.** "No axiom" is checked in scratch by `#print axioms` for each new and each rewritten declaration, in a scratch file that imports the changed modules; it is not left to the gate. The scratch tree is made by copying the modules from main before the first build. Owed at the landing and not the implementer's: the root's telling in `Becoming.lean` for the new public theorems, the core run and its receipt, the print of uses, the records the changed modules feed, and the generated pages.
+
+**Cost.** The attacker took 235,630 tokens by the run's record, against 150,000 it was sized at. Told to the coordinating session with this file's hash. The implementer follows only after the claim is on main.
