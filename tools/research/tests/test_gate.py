@@ -1377,7 +1377,11 @@ class ProofUsesTests(GateCase):
         self.assertFails(result, 'Becoming.A, Becoming.B', 'Becoming.A: the source hash differs', first='the print is behind the Lean')
         self.assertEqual(result['errors'][0], 'the print is behind the Lean: run ' + self.COMMAND)
         self.assertEqual((result['bound'], result['kind'], result['modules_behind']), (False, 'not bound', ['Becoming.A', 'Becoming.B']))
-        self.assertFalse(any('GATE_PROOF_USES' in e for e in result['errors']), result)  # the step was left out: run it
+        # the step was left out: the first thing said is to run it; the escape is named only for where the tool
+        # itself refuses or fails on that run
+        self.assertNotIn('GATE_PROOF_USES', result['errors'][0], result)
+        self.assertEqual([e for e in result['errors'] if 'GATE_PROOF_USES' in e],
+                         [f'if the tool itself refuses or fails on that run: {gate.PROOF_USES_ESCAPE}'], result)
 
     def test_a_bound_that_is_not_true_is_not_bound(self):
         self.answering({'bound': 'false', 'problems': [], 'modules_behind': []})  # a string is not the answer yes

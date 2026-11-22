@@ -23,7 +23,7 @@ The default run needs Lean and is told as a Lean run. It is not part of the rend
 1. It reads the core receipt (becoming-verification.json) and refuses unless the receipt passed, binds the current
    bytes of every module it lists, and no Lean file it would compile differs from HEAD. So the print is of the bytes
    of one commit and of one core run, and both are written in the index.
-2. It writes a stub that imports every module the receipt lists into tmp/proof-uses-tree/ (one fixed directory this
+2. It writes a stub that imports every module the receipt lists into tmp/.build/proof-uses-tree/ (one fixed directory this
    tool owns; tmp/ is git-ignored) and builds it with the package's scratch_build.py, so every import is restored
    from the checker's shared cache and only the stub and its audit are run. Before building it says how many steps
    the cache lacks and refuses more than a few (--max-steps, default 3) unless --build is given: a cold cache would
@@ -88,7 +88,10 @@ LEAN_ROOT = str(Path(PACKAGE).parent)
 DIRECTORY = 'theories/becoming/results/atlas/proof-uses'
 INDEX = 'INDEX.json'
 # The one scratch directory this tool owns, and the stub module it builds there.
-TREE = 'tmp/proof-uses-tree'
+# Under a folder named .build, which the Lean catalogue and the gate's look at the worktree both skip: the stub and the
+# printer are Lean files, and left anywhere else under tmp/ they make the gate refuse the tree as more than its commit
+# (found by a replay on 22 November 2026, the first time the gate ran after the tool in one worktree).
+TREE = 'tmp/.build/proof-uses-tree'
 STUB = 'ProofUsesStub'
 # Steps the cache may lack before the run refuses without --build: the stub's compile and its audit, and one spare.
 MAX_STEPS = 3

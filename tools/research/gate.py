@@ -1047,6 +1047,7 @@ def proof_uses_check(base='main') -> dict:
                 else:  # the tool's own word for the kind where it gives one, else what bound and damage say
                     kind = kind if kind in ('not bound', 'damaged') else ('damaged' if bound else 'not bound')
                     errors.append(f'{PROOF_USES_BEHIND if kind == "not bound" else PROOF_USES_DAMAGED}: {RUN_PROOF_USES}')
+                    errors.append(f'if the tool itself refuses or fails on that run: {PROOF_USES_ESCAPE}')
                     if not bound:
                         errors.append(f'the index does not bind the core receipt; behind for {len(behind)} module(s)'
                                       + (f': {", ".join(behind)}' if behind else ''))

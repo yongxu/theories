@@ -62,6 +62,14 @@ def printed(by_module, count=None, uses=None, before=()):
 
 
 class Root(unittest.TestCase):
+    def test_the_tools_tree_lies_where_the_catalogue_and_the_gate_do_not_look(self):
+        """The stub and the printer are Lean files. The gate refuses a worktree that holds an ignored .lean file the
+        Lean catalogue would read, so the tree must lie under a folder the catalogue skips (AI-written, 22 November
+        2026, after a replay in which the gate refused the tree the tool had just printed in)."""
+        from tools.research.lean_catalogue import EXCLUDED
+        self.assertTrue(any(f'/{x}/' in f'/{proof_uses.TREE}/' for x in EXCLUDED), proof_uses.TREE)
+        self.assertTrue(proof_uses.TREE.startswith('tmp/'))
+
     """A temporary repository root holding a receipt and, once written, a print."""
 
     def setUp(self):
