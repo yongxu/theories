@@ -8,7 +8,7 @@ The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.
 
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), [B](b.md), **C**, [D](d.md), [E](e.md), [F](f.md), [G](g.md), [H](h.md).
 
-The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*.
+The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*. The lines on uses between proofs, last in an entry's section, are no part of the curated layer: they are computed at each render from what Lean printed of its proof terms and from the declarations the entries list, and typed by no one; they too create no result.
 
 17 of the atlas's 186 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
 
@@ -59,6 +59,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - It derives neither that taking more yields more offspring, nor that offspring carry their parents' target, nor that winners shape the rule. ([target-capture.md#does-not-show--未表明](../../records/target-capture.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [02-MAP.md#capture](../../../chapters/02-MAP.md#capture), [02-MAP.md#r-target-capture](../../../chapters/02-MAP.md#r-target-capture)
+- **Uses between proofs.** None found. A use Lean's printer did not follow would not show here, and a chain that ends at a theorem listed here is shown where it starts ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="capture-through-the-rule"></a>
 ### Capture through the rule
@@ -89,6 +90,15 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Left by drift, as a reading not stated as instances: a favouring rule read from the share that leaves the disfavoured kind a positive weight at every mixed count. ([02-MAP.md#which-locks-noise-leaves](../../../chapters/02-MAP.md#which-locks-noise-leaves))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [02-MAP.md#r-capture-through-the-rule](../../../chapters/02-MAP.md#r-capture-through-the-rule), [02-MAP.md#r-two-rules-lock-together](../../../chapters/02-MAP.md#r-two-rules-lock-together), [02-MAP.md#which-locks-noise-leaves](../../../chapters/02-MAP.md#which-locks-noise-leaves), [07-SIGNIFICANCE.md#alignment-without-premise](../../../chapters/07-SIGNIFICANCE.md#alignment-without-premise), [COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions](../../../COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.RuleCapture.Alternating.before_locked`, in `Becoming.RuleCapture.Reversed.not_absorbed`, listed under [A threshold reading, read one step late, from a start against it](f.md#threshold-reading-read-late-alternates).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.RuleCapture.favouring_locks`: in `Becoming.RuleShaping.covering_locks`, listed under [The capacity to shape the rule, selected by what comes back to it](#shaping-the-rule-selected-by-what-comes-back).
+    - `Becoming.RuleCapture.locked_stays`: in `Becoming.ClosedCapture.lock_outlives_loss`, listed under [Closed capture (meta-attractor, in the glossary's sense) (元吸引子)](#closed-capture); in `Becoming.ClosedCapture.agreeing_stays`, listed under [Readers drawn from the selected](#readers-drawn-from-the-selected); in `Becoming.DrawnShaping.drawn_locks` and `Becoming.DrawnShaping.drawn_from_below`, listed under [The critical mass: what comes back to the shapers, read by readers drawn from the selected](#shaping-read-by-readers-drawn-from-the-selected); in `Becoming.ChoiceCountCapture.counted_locks` and `Becoming.ChoiceCountCapture.counted_locks_down`, listed under [A chooser's rule read from the count of its choices](#capture-by-counted-choices); in `Becoming.ChoiceCountCapture.counted_locks` and `Becoming.ChoiceCountCapture.counted_locks_down`, listed under [A habit read as capture by counted choices](#habit-lock-in-active-inference).
+    - `Becoming.RuleCapture.perturbation_absorbed`: in `Becoming.ClosedCapture.reading_absorbed`, listed under [Closed capture (meta-attractor, in the glossary's sense) (元吸引子)](#closed-capture).
+    - `Becoming.RuleCapture.uniform_locks`: in `Becoming.ClosedCapture.readers_uniform_locks`, listed under [Closed capture (meta-attractor, in the glossary's sense) (元吸引子)](#closed-capture); in `Becoming.ClosedCapture.Drawn.through_locks`, listed under [Readers drawn from the selected](#readers-drawn-from-the-selected).
+  - *Listed here and under another dynamic, by hand.* `Becoming.RuleCapture.locked_stays`, also under [A counter-rule read from the share it selects](#a-counter-rule-read-from-its-own-share); `Becoming.RuleCapture.uniform_locks`, also under [A counter-rule read from the share it selects](#a-counter-rule-read-from-its-own-share); `Becoming.RuleCapture.Reversed.not_absorbed`, also under [A counter-rule read from the share it selects](#a-counter-rule-read-from-its-own-share). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="closed-capture"></a>
 ### Closed capture (meta-attractor, in the glossary's sense) (元吸引子)
@@ -128,6 +138,14 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Whether a capture loop (§9) is 生成 at some pair of classes. ([02-MAP.md#open](../../../chapters/02-MAP.md#open))
 - **Beyond its couplings.** Where every step adds at least one to what lies beyond (Accrues), from a locked configuration the loss at step t is at least t above where it started, so it passes every bound, while the course stays locked. That what lies beyond the share is a loss to any formation is a significance's to say; here it is a count the loop does not read.
 - **Sources.** [02-MAP.md#capture](../../../chapters/02-MAP.md#capture), [02-MAP.md#r-closed-capture](../../../chapters/02-MAP.md#r-closed-capture), [02-MAP.md#r-rules-that-change-themselves-in-the-grammar](../../../chapters/02-MAP.md#r-rules-that-change-themselves-in-the-grammar), [02-MAP.md#t7](../../../chapters/02-MAP.md#t7), [COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions](../../../COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.RuleCapture.locked_stays`, in `Becoming.ClosedCapture.lock_outlives_loss`; `Becoming.RuleCapture.perturbation_absorbed`, in `Becoming.ClosedCapture.reading_absorbed`; `Becoming.RuleCapture.uniform_locks`, in `Becoming.ClosedCapture.readers_uniform_locks`, listed under [Capture through the rule](#capture-through-the-rule).
+    - `Becoming.RuleCapture.uniform_locks`, in `Becoming.ClosedCapture.readers_uniform_locks`; `Becoming.RuleCapture.locked_stays`, in `Becoming.ClosedCapture.lock_outlives_loss`, listed under [A counter-rule read from the share it selects](#a-counter-rule-read-from-its-own-share).
+    - `Becoming.Law.unending_iff_steps`, in `Becoming.ClosedCapture.lock_line`; `Becoming.Law.unending_alike`, in `Becoming.ClosedCapture.loss_ends_line`, listed under [A regularity kept and left along its own line](h.md#a-regularity-kept-and-changed).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.ClosedCapture.lock_outlives_loss`: in `Becoming.ChoiceCountCapture.counted_outlives_loss`, listed under [A chooser's rule read from the count of its choices](#capture-by-counted-choices); in `Becoming.ChoiceCountCapture.counted_outlives_loss`, listed under [A habit read as capture by counted choices](#habit-lock-in-active-inference).
+  - *Listed here and under another dynamic, by hand.* `Becoming.ClosedCapture.turned_by_loss`, also under [A counter-rule read from the share it selects](#a-counter-rule-read-from-its-own-share). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="readers-drawn-from-the-selected"></a>
 ### Readers drawn from the selected
@@ -166,6 +184,14 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That the readers are minds, institutions or a culture: that is a reading (D58, D67). Nor the calibration of any of this to the present world. ([readers-drawn-from-the-selected.md#does-not-show--未表明](../../records/readers-drawn-from-the-selected.md#does-not-show--未表明))
 - **Beyond its couplings.** Read late, both favouring the carriers, the lock holds while the loss grows and every other reader reads it.
 - **Sources.** [02-MAP.md#r-readers-drawn-from-the-selected](../../../chapters/02-MAP.md#r-readers-drawn-from-the-selected), [02-MAP.md#t7](../../../chapters/02-MAP.md#t7)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.RuleCapture.locked_stays`, in `Becoming.ClosedCapture.agreeing_stays`; `Becoming.RuleCapture.uniform_locks`, in `Becoming.ClosedCapture.Drawn.through_locks`, listed under [Capture through the rule](#capture-through-the-rule).
+    - `Becoming.RuleCapture.uniform_locks`, in `Becoming.ClosedCapture.Drawn.through_locks`; `Becoming.RuleCapture.locked_stays`, in `Becoming.ClosedCapture.agreeing_stays`, listed under [A counter-rule read from the share it selects](#a-counter-rule-read-from-its-own-share).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.ClosedCapture.Drawn.pool_reads_iff`: in `Becoming.DrawnShaping.drawn_reads_iff`, listed under [The critical mass: what comes back to the shapers, read by readers drawn from the selected](#shaping-read-by-readers-drawn-from-the-selected).
+    - `Becoming.ClosedCapture.Drawn.pool_against`: in `Becoming.DrawnShaping.drawn_against`, listed under [The critical mass: what comes back to the shapers, read by readers drawn from the selected](#shaping-read-by-readers-drawn-from-the-selected); in `Becoming.ReadInTime.at_most_one_between`, listed under [The loss read in time by the others, joined to the critical mass](#loss-read-in-time-by-the-others).
+    - `Becoming.ClosedCapture.Thinned.read_late_kept`: in `Becoming.ReadInTime.kept_iff` and `Becoming.ReadInTime.kept_once_favoured`, listed under [The loss read in time by the others, joined to the critical mass](#loss-read-in-time-by-the-others).
 
 <a id="shaping-the-rule-selected-by-what-comes-back"></a>
 ### The capacity to shape the rule, selected by what comes back to it
@@ -213,6 +239,11 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Graded capacities to shape the rule, groups that form or assort by the share, a gain growing with the number of domains captured, gains passing between domains. ([02-MAP.md#open](../../../chapters/02-MAP.md#open))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back](../../../chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back), [02-MAP.md#r-shaping-selected-among-groups](../../../chapters/02-MAP.md#r-shaping-selected-among-groups), [07-SIGNIFICANCE.md#alignment-without-premise](../../../chapters/07-SIGNIFICANCE.md#alignment-without-premise), [COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions](../../../COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.RuleCapture.favouring_locks`, in `Becoming.RuleShaping.covering_locks` (told above as a case), listed under [Capture through the rule](#capture-through-the-rule).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.RuleShaping.favours_iff`: in `Becoming.PoolFromCourse.borne_by_shapers_favours_iff` and `Becoming.PoolFromCourse.borne_by_others_favours_iff`, listed under [The lock draws its readers out](#the-lock-draws-its-readers-out); in `Becoming.PairSelection.assorted_favours_iff`, listed under [Offspring read from giving that waits](e.md#offspring-read-from-giving-that-waits).
 
 <a id="shaping-read-by-readers-drawn-from-the-selected"></a>
 ### The critical mass: what comes back to the shapers, read by readers drawn from the selected
@@ -258,6 +289,17 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That risk dominance decides which state one member arising fixes more often: the two can part under strong selection. ([drawn-shaping-drawn-one-at-a-time.md#does-not-show--未表明](../../records/drawn-shaping-drawn-one-at-a-time.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected](../../../chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected), [02-MAP.md#r-drawn-shaping-drawn-one-at-a-time](../../../chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time), [02-MAP.md#which-locks-noise-leaves](../../../chapters/02-MAP.md#which-locks-noise-leaves), [02-MAP.md#t7](../../../chapters/02-MAP.md#t7), [07-SIGNIFICANCE.md#alignment-without-premise](../../../chapters/07-SIGNIFICANCE.md#alignment-without-premise), [COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions](../../../COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Drift.Replacement.fixationBy`, in `Becoming.DrawnReplacement.fixation`, listed under [The ends of drift absorb; fixation, with and without selection in the draw](a.md#fixation-by-drift).
+    - `Becoming.RuleCapture.locked_stays`, in `Becoming.DrawnShaping.drawn_locks` and `Becoming.DrawnShaping.drawn_from_below`, listed under [Capture through the rule](#capture-through-the-rule).
+    - `Becoming.ClosedCapture.Drawn.pool_reads_iff`, in `Becoming.DrawnShaping.drawn_reads_iff`; `Becoming.ClosedCapture.Drawn.pool_against`, in `Becoming.DrawnShaping.drawn_against`, listed under [Readers drawn from the selected](#readers-drawn-from-the-selected).
+    - `Becoming.RuleCapture.locked_stays`, in `Becoming.DrawnShaping.drawn_locks` and `Becoming.DrawnShaping.drawn_from_below`, listed under [A counter-rule read from the share it selects](#a-counter-rule-read-from-its-own-share).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.DrawnShaping.drawn_reads_iff`: in `Becoming.ReadInTime.late_never_falls` and `Becoming.ReadInTime.at_most_one_between`, listed under [The loss read in time by the others, joined to the critical mass](#loss-read-in-time-by-the-others).
+    - `Becoming.DrawnShaping.critical_iff`: in `Becoming.ReadInTime.least_iff`, listed under [The loss read in time by the others, joined to the critical mass](#loss-read-in-time-by-the-others).
+    - `Becoming.DrawnShaping.drawn_locks`: in `Becoming.ReadInTime.late_never_falls`, `Becoming.ReadInTime.kept_early_iff`, `Becoming.ReadInTime.at_most_one_between` and `Becoming.ReadInTime.kept_once_favoured`, listed under [The loss read in time by the others, joined to the critical mass](#loss-read-in-time-by-the-others).
+    - `Becoming.DrawnShaping.drawn_from_below`: in `Becoming.ReadInTime.at_most_one_between`, listed under [The loss read in time by the others, joined to the critical mass](#loss-read-in-time-by-the-others).
 
 <a id="loss-read-in-time-by-the-others"></a>
 ### The loss read in time by the others, joined to the critical mass
@@ -302,6 +344,14 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That a trained judge reads as such a pool: the one frozen test of the timing law on one (LA2, experiments/self-rewarding-lock) found one note in nine turned it, so the law did not apply there. ([loss-read-in-time-by-the-others.md#does-not-show--未表明](../../records/loss-read-in-time-by-the-others.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [02-MAP.md#r-loss-read-in-time-by-the-others](../../../chapters/02-MAP.md#r-loss-read-in-time-by-the-others), [07-SIGNIFICANCE.md#alignment-without-premise](../../../chapters/07-SIGNIFICANCE.md#alignment-without-premise), [COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions](../../../COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.ClosedCapture.Drawn.pool_against`, in `Becoming.ReadInTime.at_most_one_between`; `Becoming.ClosedCapture.Thinned.read_late_kept`, in `Becoming.ReadInTime.kept_iff` and `Becoming.ReadInTime.kept_once_favoured`, listed under [Readers drawn from the selected](#readers-drawn-from-the-selected).
+    - `Becoming.DrawnShaping.drawn_reads_iff`, in `Becoming.ReadInTime.late_never_falls` and `Becoming.ReadInTime.at_most_one_between`; `Becoming.DrawnShaping.critical_iff`, in `Becoming.ReadInTime.least_iff`; `Becoming.DrawnShaping.drawn_locks`, in `Becoming.ReadInTime.late_never_falls`, `Becoming.ReadInTime.kept_early_iff`, `Becoming.ReadInTime.at_most_one_between` and `Becoming.ReadInTime.kept_once_favoured`; `Becoming.DrawnShaping.drawn_from_below`, in `Becoming.ReadInTime.at_most_one_between`, listed under [The critical mass: what comes back to the shapers, read by readers drawn from the selected](#shaping-read-by-readers-drawn-from-the-selected).
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.ReadInTime.at_most_one_between` → `Becoming.ClosedCapture.Drawn.pool_reads` → `Becoming.ClosedCapture.Drawn.pool_reads_iff`, listed under [Readers drawn from the selected](#readers-drawn-from-the-selected).
+    - `Becoming.ReadInTime.turned_iff` → `Becoming.ClosedCapture.Thinned.read_in_time_turns` → `Becoming.ClosedCapture.agreeing_stays`, listed under [Readers drawn from the selected](#readers-drawn-from-the-selected).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
 
 <a id="capture-by-counted-choices"></a>
 ### A chooser's rule read from the count of its choices
@@ -336,6 +386,15 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - For a rule read from the count of its choices: more than two policies, intermediate precision, a score that changes with the outcomes, the split among policies that explain a trial equally, a law with a bound for additive counting, and a frozen test of whether a count of choices reverses under a standing score (§9). ([02-MAP.md#open](../../../chapters/02-MAP.md#open))
 - **Beyond its couplings.** Joined to a coordinate that neither the counts nor the score reads, rising by at least one at every step, from counts at or above the threshold with the rule in force read from them the coordinate stands at least b + t at step t while the course stays locked and neither the share nor the rule is below its start; under the hypotheses of the blindness law (World), a part acting only beyond the coupling closure does not change the choice.
 - **Sources.** [02-MAP.md#r-capture-by-counted-choices](../../../chapters/02-MAP.md#r-capture-by-counted-choices), [02-MAP.md#which-locks-noise-leaves](../../../chapters/02-MAP.md#which-locks-noise-leaves)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Flow.unselected_beyond_coupling`, in `Becoming.ChoiceCountCapture.unchosen_beyond_coupling`, listed under [Selection blind beyond the coupling closure](b.md#unselected-beyond-the-coupling-closure).
+    - `Becoming.RuleCapture.locked_stays`, in `Becoming.ChoiceCountCapture.counted_locks` (told above as a case) and `Becoming.ChoiceCountCapture.counted_locks_down`, listed under [Capture through the rule](#capture-through-the-rule).
+    - `Becoming.ClosedCapture.lock_outlives_loss`, in `Becoming.ChoiceCountCapture.counted_outlives_loss`, listed under [Closed capture (meta-attractor, in the glossary's sense) (元吸引子)](#closed-capture).
+    - `Becoming.RuleCapture.locked_stays`, in `Becoming.ChoiceCountCapture.counted_locks` (told above as a case) and `Becoming.ChoiceCountCapture.counted_locks_down`, listed under [A counter-rule read from the share it selects](#a-counter-rule-read-from-its-own-share).
+    - `Becoming.Flow.unselected_beyond_coupling`, in `Becoming.ChoiceCountCapture.unchosen_beyond_coupling`, listed under [Where seeking rests: more than now never does, above all others never for two](d.md#seeking-boundary).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+  - *Listed here and under another dynamic, by hand.* `Becoming.ChoiceCountCapture.counted_locks`, also under [A habit read as capture by counted choices](#habit-lock-in-active-inference); `Becoming.ChoiceCountCapture.counted_locks_down`, also under [A habit read as capture by counted choices](#habit-lock-in-active-inference); `Becoming.ChoiceCountCapture.counted_outlives_loss`, also under [A habit read as capture by counted choices](#habit-lock-in-active-inference). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="self-reproducing-selection-across-carriers"></a>
 ### Self-reproducing selection across carriers (the corpus's meta-attractor)
@@ -354,6 +413,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Whether a capture loop (§9) is 生成 at some pair of classes. ([02-MAP.md#open](../../../chapters/02-MAP.md#open))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [02-MAP.md#capture](../../../chapters/02-MAP.md#capture), [02-MAP.md#open](../../../chapters/02-MAP.md#open)
+- **Uses between proofs.** Not read: this entry lists no theorem of the print, so no line can be computed for it ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="capture-reaching-the-routes-of-correction"></a>
 ### Capture reaching the routes of 明 (the second order)
@@ -371,6 +431,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Open.** None.
 - **Beyond its couplings.** Not stated.
 - **Sources.** [02-MAP.md#capture](../../../chapters/02-MAP.md#capture)
+- **Uses between proofs.** Not read: this entry lists no theorem of the print, so no line can be computed for it ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="selection-for-narrowing-what-couples-in"></a>
 ### Rewarding those who break the routes of correction (the third order)
@@ -388,6 +449,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Open.** None.
 - **Beyond its couplings.** enlarging the gap between reach and what couples in as capability grows
 - **Sources.** [02-MAP.md#capture](../../../chapters/02-MAP.md#capture)
+- **Uses between proofs.** Not read: this entry lists no theorem of the print, so no line can be computed for it ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="habit-lock-in-active-inference"></a>
 ### A habit read as capture by counted choices
@@ -416,6 +478,13 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That capture by counted choices is a loss or a gain: no evaluation enters, and a result that ranks courses states the order its theorem takes. ([capture-by-counted-choices.md#does-not-show--未表明](../../records/capture-by-counted-choices.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [02-MAP.md#r-capture-by-counted-choices](../../../chapters/02-MAP.md#r-capture-by-counted-choices), [02-MAP.md#which-locks-noise-leaves](../../../chapters/02-MAP.md#which-locks-noise-leaves), [08-METHOD.md#known-results](../../../chapters/08-METHOD.md#known-results)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.RuleCapture.locked_stays`, in `Becoming.ChoiceCountCapture.counted_locks` (told above as a case) and `Becoming.ChoiceCountCapture.counted_locks_down`, listed under [Capture through the rule](#capture-through-the-rule).
+    - `Becoming.ClosedCapture.lock_outlives_loss`, in `Becoming.ChoiceCountCapture.counted_outlives_loss`, listed under [Closed capture (meta-attractor, in the glossary's sense) (元吸引子)](#closed-capture).
+    - `Becoming.RuleCapture.locked_stays`, in `Becoming.ChoiceCountCapture.counted_locks` (told above as a case) and `Becoming.ChoiceCountCapture.counted_locks_down`, listed under [A counter-rule read from the share it selects](#a-counter-rule-read-from-its-own-share).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+  - *Listed here and under another dynamic, by hand.* `Becoming.ChoiceCountCapture.counted_locks`, also under [A chooser's rule read from the count of its choices](#capture-by-counted-choices); `Becoming.ChoiceCountCapture.counted_locks_down`, also under [A chooser's rule read from the count of its choices](#capture-by-counted-choices); `Becoming.ChoiceCountCapture.counted_outlives_loss`, also under [A chooser's rule read from the count of its choices](#capture-by-counted-choices). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="a-counter-rule-read-from-its-own-share"></a>
 ### A counter-rule read from the share it selects
@@ -441,6 +510,13 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That any actual rule reads the share it selects, or reads it monotonically: the premise ReadsShare of the law beneath this reading. ([capture-through-the-rule.md#does-not-show--未表明](../../records/capture-through-the-rule.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [07-SIGNIFICANCE.md#alignment-without-premise](../../../chapters/07-SIGNIFICANCE.md#alignment-without-premise), [02-MAP.md#r-capture-through-the-rule](../../../chapters/02-MAP.md#r-capture-through-the-rule), [02-MAP.md#r-closed-capture](../../../chapters/02-MAP.md#r-closed-capture)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.RuleCapture.Alternating.before_locked`, in `Becoming.RuleCapture.Reversed.not_absorbed`, listed under [A threshold reading, read one step late, from a start against it](f.md#threshold-reading-read-late-alternates).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.RuleCapture.uniform_locks`: in `Becoming.ClosedCapture.readers_uniform_locks`, listed under [Closed capture (meta-attractor, in the glossary's sense) (元吸引子)](#closed-capture); in `Becoming.ClosedCapture.Drawn.through_locks`, listed under [Readers drawn from the selected](#readers-drawn-from-the-selected).
+    - `Becoming.RuleCapture.locked_stays`: in `Becoming.ClosedCapture.lock_outlives_loss`, listed under [Closed capture (meta-attractor, in the glossary's sense) (元吸引子)](#closed-capture); in `Becoming.ClosedCapture.agreeing_stays`, listed under [Readers drawn from the selected](#readers-drawn-from-the-selected); in `Becoming.DrawnShaping.drawn_locks` and `Becoming.DrawnShaping.drawn_from_below`, listed under [The critical mass: what comes back to the shapers, read by readers drawn from the selected](#shaping-read-by-readers-drawn-from-the-selected); in `Becoming.ChoiceCountCapture.counted_locks` and `Becoming.ChoiceCountCapture.counted_locks_down`, listed under [A chooser's rule read from the count of its choices](#capture-by-counted-choices); in `Becoming.ChoiceCountCapture.counted_locks` and `Becoming.ChoiceCountCapture.counted_locks_down`, listed under [A habit read as capture by counted choices](#habit-lock-in-active-inference).
+  - *Listed here and under another dynamic, by hand.* `Becoming.RuleCapture.uniform_locks`, also under [Capture through the rule](#capture-through-the-rule); `Becoming.RuleCapture.locked_stays`, also under [Capture through the rule](#capture-through-the-rule); `Becoming.RuleCapture.Reversed.not_absorbed`, also under [Capture through the rule](#capture-through-the-rule); `Becoming.RuleCapture.Alternating.never_locked`, also under [A threshold reading, read one step late, from a start against it](f.md#threshold-reading-read-late-alternates); `Becoming.ClosedCapture.turned_by_loss`, also under [Closed capture (meta-attractor, in the glossary's sense) (元吸引子)](#closed-capture). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="a-code-formed-between-formations"></a>
 ### A code formed between formations
@@ -492,6 +568,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That names in use are coined deliberately, or that a coined form is heard. ([synonyms-and-coined-forms.md#does-not-show--未表明](../../records/synonyms-and-coined-forms.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [05-COLLECTIVES.md#r-a-code-formed-between-formations](../../../chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations), [05-COLLECTIVES.md#r-imposing-a-code-breaks-the-symmetry](../../../chapters/05-COLLECTIVES.md#r-imposing-a-code-breaks-the-symmetry), [05-COLLECTIVES.md#r-synonyms-and-coined-forms](../../../chapters/05-COLLECTIVES.md#r-synonyms-and-coined-forms), [05-COLLECTIVES.md#shared-codes](../../../chapters/05-COLLECTIVES.md#shared-codes)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+  - *Listed here and under another dynamic, by hand.* `Becoming.SharedCodes.impose_agrees`, also under [A merged distinction returns only from a form held outside, or by coining](g.md#merged-distinctions-stay-merged); `Becoming.SharedCodes.impose_loses_iff`, also under [A merged distinction returns only from a form held outside, or by coining](g.md#merged-distinctions-stay-merged); `Becoming.SharedCodes.source_loses_nothing`, also under [A merged distinction returns only from a form held outside, or by coining](g.md#merged-distinctions-stay-merged); `Becoming.SharedCodes.run_from_imposition`, also under [A merged distinction returns only from a form held outside, or by coining](g.md#merged-distinctions-stay-merged); `Becoming.SharedCodes.outside_needed`, also under [A merged distinction returns only from a form held outside, or by coining](g.md#merged-distinctions-stay-merged); `Becoming.SharedCodes.outside_returns`, also under [A merged distinction returns only from a form held outside, or by coining](g.md#merged-distinctions-stay-merged); `Becoming.SharedCodes.written_rests`, also under [A merged distinction returns only from a form held outside, or by coining](g.md#merged-distinctions-stay-merged); `Becoming.SharedCodes.coined_returns`, also under [A merged distinction returns only from a form held outside, or by coining](g.md#merged-distinctions-stay-merged). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="a-code-held-as-counts"></a>
 ### A code held as counts, learned from what is heard
@@ -532,6 +612,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - How long agreement takes, which asymmetry actual conventions start from, or whether they form this way. ([a-code-held-as-counts.md#does-not-show--未表明](../../records/a-code-held-as-counts.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [05-COLLECTIVES.md#r-a-code-held-as-counts](../../../chapters/05-COLLECTIVES.md#r-a-code-held-as-counts)
+- **Uses between proofs.** None found. A use Lean's printer did not follow would not show here, and a chain that ends at a theorem listed here is shown where it starts ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="a-reading-against-the-share-does-not-ratchet"></a>
 ### A reading against the share does not ratchet
@@ -553,6 +634,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That a course read against the share is never locked at a step, or that its share falls. ([a-reading-against-the-share-does-not-ratchet.md#does-not-show--未表明](../../records/a-reading-against-the-share-does-not-ratchet.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [02-MAP.md#r-a-reading-against-the-share-does-not-ratchet](../../../chapters/02-MAP.md#r-a-reading-against-the-share-does-not-ratchet)
+- **Uses between proofs.** None found. A use Lean's printer did not follow would not show here, and a chain that ends at a theorem listed here is shown where it starts ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="the-lock-draws-its-readers-out"></a>
 ### The lock draws its readers out
@@ -626,5 +708,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Who bears the loss read off the course too, the shaping choosing where its losses fall, joined to the capacity's selection across a stretch. ([02-MAP.md#r-on-whom-the-loss-falls](../../../chapters/02-MAP.md#r-on-whom-the-loss-falls))
 - **Beyond its couplings.** The loss, beyond the share: it removes the readers who would read it, and once they are gone nothing in the loop reads it; borne by the others it is a return to the shapers that no reader of the loss registers.
 - **Sources.** [02-MAP.md#10-readers-the-course-removes](../../../chapters/02-MAP.md#10-readers-the-course-removes), [02-MAP.md#r-a-pool-read-off-the-course](../../../chapters/02-MAP.md#r-a-pool-read-off-the-course), [02-MAP.md#r-the-lock-draws-its-readers-out](../../../chapters/02-MAP.md#r-the-lock-draws-its-readers-out), [02-MAP.md#r-on-whom-the-loss-falls](../../../chapters/02-MAP.md#r-on-whom-the-loss-falls)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.RuleShaping.favours_iff`, in `Becoming.PoolFromCourse.borne_by_shapers_favours_iff` and `Becoming.PoolFromCourse.borne_by_others_favours_iff`, listed under [The capacity to shape the rule, selected by what comes back to it](#shaping-the-rule-selected-by-what-comes-back).
+    - `Becoming.RuleCapture.Alternating.before_locked`, in `Becoming.PoolFromCourse.Borne.others_locked`, listed under [A threshold reading, read one step late, from a start against it](f.md#threshold-reading-read-late-alternates).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
 
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), [B](b.md), **C**, [D](d.md), [E](e.md), [F](f.md), [G](g.md), [H](h.md).

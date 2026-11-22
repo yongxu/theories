@@ -8,7 +8,7 @@ The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.
 
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), [B](b.md), [C](c.md), [D](d.md), **E**, [F](f.md), [G](g.md), [H](h.md).
 
-The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*.
+The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*. The lines on uses between proofs, last in an entry's section, are no part of the curated layer: they are computed at each render from what Lean printed of its proof terms and from the declarations the entries list, and typed by no one; they too create no result.
 
 10 of the atlas's 186 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
 
@@ -63,6 +63,12 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Which laws beyond those stated restore a general family: the condition is exact under giving first (Tolerance.restores_iff) and without memory (Tolerance.answers_restores_iff), and with memory none restores (Tolerance.waitsAll_never_restores). ([05-COLLECTIVES.md#open](../../../chapters/05-COLLECTIVES.md#open))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [05-COLLECTIVES.md#giving-waits](../../../chapters/05-COLLECTIVES.md#giving-waits), [05-COLLECTIVES.md#r-giving-that-waits-on-giving](../../../chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Withholding.answers_closed`: in `Becoming.Tolerance.answers_restores_iff`, listed under [Restoring giving from total withholding](#restoring-giving-from-the-worst-start).
+    - `Becoming.Withholding.withholding_returns`: in `Becoming.WindowedWaiting.Pair.echo_returns`, listed under [A pair tolerates only within a window](#a-pair-tolerates-only-within-a-window).
+  - *Listed here and under another dynamic, by hand.* `Becoming.Withholding.answers_closed`, also under [Without memory, a withholding returns around every loop of waits](f.md#withholding-returns-around-a-loop); `Becoming.Withholding.gives_without_chain`, also under [Without memory, a withholding returns around every loop of waits](f.md#withholding-returns-around-a-loop); `Becoming.Withholding.Line.passes_out_exact`, also under [Without memory, a withholding returns around every loop of waits](f.md#withholding-returns-around-a-loop); `Becoming.Withholding.withholding_returns`, also under [Without memory, a withholding returns around every loop of waits](f.md#withholding-returns-around-a-loop); `Becoming.Withholding.Ring.answers_circulates`, also under [Without memory, a withholding returns around every loop of waits](f.md#withholding-returns-around-a-loop); `Becoming.Withholding.Ring.answers_returns`, also under [Without memory, a withholding returns around every loop of waits](f.md#withholding-returns-around-a-loop). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="restoring-giving-from-the-worst-start"></a>
 ### Restoring giving from total withholding
@@ -101,6 +107,13 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Which laws beyond those stated restore a general family: the condition is exact under giving first (Tolerance.restores_iff) and without memory (Tolerance.answers_restores_iff), and with memory none restores (Tolerance.waitsAll_never_restores). ([05-COLLECTIVES.md#open](../../../chapters/05-COLLECTIVES.md#open))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [05-COLLECTIVES.md#r-restoring-giving-from-the-worst-start](../../../chapters/05-COLLECTIVES.md#r-restoring-giving-from-the-worst-start)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Withholding.answers_closed`, in `Becoming.Tolerance.answers_restores_iff`, listed under [Giving that waits on giving](#giving-that-waits-on-giving).
+    - `Becoming.Tolerance.KeepsInclusionInto.course`, in `Becoming.Tolerance.KeepsInclusion.course` (told above as a case), listed under [Thresholds of waiting](#thresholds-of-waiting).
+    - `Becoming.Withholding.answers_closed`, in `Becoming.Tolerance.answers_restores_iff`, listed under [Without memory, a withholding returns around every loop of waits](f.md#withholding-returns-around-a-loop).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Tolerance.withheld_kept`: in `Becoming.Tolerance.Triad.total_kept`, listed under [Thresholds of waiting](#thresholds-of-waiting); in `Becoming.WindowedWaiting.window_withheld_kept`, listed under [A pair tolerates only within a window](#a-pair-tolerates-only-within-a-window).
 
 <a id="thresholds-of-waiting"></a>
 ### Thresholds of waiting
@@ -146,6 +159,14 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Thresholds of tolerance on a general web, whose conditions depend on others than themselves, are not stated: the web reading is stated only where each formation depends on its own condition alone. ([thresholds-of-waiting.md#next--下一步](../../records/thresholds-of-waiting.md#next--下一步))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [05-COLLECTIVES.md#r-thresholds-of-waiting](../../../chapters/05-COLLECTIVES.md#r-thresholds-of-waiting), [05-COLLECTIVES.md#r-tolerance-monotone-across-laws](../../../chapters/05-COLLECTIVES.md#r-tolerance-monotone-across-laws), [COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions](../../../COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Tolerance.withheld_kept`, in `Becoming.Tolerance.Triad.total_kept` (told above as a case), listed under [Restoring giving from total withholding](#restoring-giving-from-the-worst-start).
+    - `Becoming.Iteration.postfixed_in_iter`, in `Becoming.Tolerance.kept_set` (told above as a case), listed under [The largest class a step preserves, reached at a list's length (步所保之最大类，至列表之长而得)](h.md#kept-at-the-length-of-a-list).
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.Tolerance.giftWeb_tolerating` → `Becoming.Tolerance.web_activity_tolerating` → `Becoming.Tolerance.KeepsInclusion.course_iff` → `Becoming.Tolerance.KeepsInclusion.course`, listed under [Restoring giving from total withholding](#restoring-giving-from-the-worst-start).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Tolerance.KeepsInclusionInto.course`: in `Becoming.Tolerance.KeepsInclusion.course`, listed under [Restoring giving from total withholding](#restoring-giving-from-the-worst-start); in `Becoming.WindowedWaiting.window_mono`, listed under [A pair tolerates only within a window](#a-pair-tolerates-only-within-a-window).
 
 <a id="a-pair-tolerates-only-within-a-window"></a>
 ### A pair tolerates only within a window
@@ -196,6 +217,14 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That the readings as tit-for-tat, tit-for-two-tats, win-stay lose-shift or grim trigger carry the literature's results on stability or noise. ([a-pair-tolerates-only-within-a-window.md#does-not-show--未表明](../../records/a-pair-tolerates-only-within-a-window.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [05-COLLECTIVES.md#r-a-pair-tolerates-only-within-a-window](../../../chapters/05-COLLECTIVES.md#r-a-pair-tolerates-only-within-a-window)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Withholding.withholding_returns`, in `Becoming.WindowedWaiting.Pair.echo_returns` (told above as a case), listed under [Giving that waits on giving](#giving-that-waits-on-giving).
+    - `Becoming.Tolerance.withheld_kept`, in `Becoming.WindowedWaiting.window_withheld_kept` (told above as a case), listed under [Restoring giving from total withholding](#restoring-giving-from-the-worst-start).
+    - `Becoming.Tolerance.KeepsInclusionInto.course`, in `Becoming.WindowedWaiting.window_mono` (told above as a case), listed under [Thresholds of waiting](#thresholds-of-waiting).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.WindowedWaiting.gives_unless_errs`: in `Becoming.WindowedWaiting.Pair.alternator_gives_odd_within`, listed under [Without memory, a withholding returns around every loop of waits](f.md#withholding-returns-around-a-loop).
+  - *Listed here and under another dynamic, by hand.* `Becoming.WindowedWaiting.Pair.echo`, also under [Without memory, a withholding returns around every loop of waits](f.md#withholding-returns-around-a-loop); `Becoming.WindowedWaiting.Pair.echo_returns`, also under [Without memory, a withholding returns around every loop of waits](f.md#withholding-returns-around-a-loop); `Becoming.WindowedWaiting.Pair.alternator_received_within`, also under [Without memory, a withholding returns around every loop of waits](f.md#withholding-returns-around-a-loop). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="errors-by-chance-in-a-pair-keeping-mutual-withholding"></a>
 ### Errors by chance in a pair keeping mutual withholding
@@ -234,6 +263,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That errors in any actual pair are one-way, or independent of the pair's history. ([errors-by-chance-in-a-pair-keeping-mutual-withholding.md#does-not-show--未表明](../../records/errors-by-chance-in-a-pair-keeping-mutual-withholding.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [05-COLLECTIVES.md#r-errors-by-chance-in-a-pair-keeping-mutual-withholding](../../../chapters/05-COLLECTIVES.md#r-errors-by-chance-in-a-pair-keeping-mutual-withholding)
+- **Uses between proofs.** None found. A use Lean's printer did not follow would not show here, and a chain that ends at a theorem listed here is shown where it starts ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="offspring-read-from-giving-that-waits"></a>
 ### Offspring read from giving that waits
@@ -280,6 +310,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That giving, a window or any law of giving is better, or that any actual organism, institution or trained system meets the counts. ([offspring-read-from-giving-that-waits.md#does-not-show--未表明](../../records/offspring-read-from-giving-that-waits.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits](../../../chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.RuleShaping.favours_iff`, in `Becoming.PairSelection.assorted_favours_iff` (told above as a case), listed under [The capacity to shape the rule, selected by what comes back to it](c.md#shaping-the-rule-selected-by-what-comes-back).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
 
 <a id="what-decides-giving-against-keeping-on-a-flow"></a>
 ### What decides giving against keeping on a flow
@@ -328,6 +362,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That offspring are a line's level beyond this reading, or the share laws' premise: the pair formula follows here only for a pair's run so read. ([what-decides-giving-against-keeping-on-a-flow.md#does-not-show--未表明](../../records/what-decides-giving-against-keeping-on-a-flow.md#does-not-show--未表明))
 - **Beyond its couplings.** The sharing pair's gain is carried by the resumed renewal, an inflow from beyond the pair.
 - **Sources.** [05-COLLECTIVES.md#r-what-decides-giving-against-keeping-on-a-flow](../../../chapters/05-COLLECTIVES.md#r-what-decides-giving-against-keeping-on-a-flow)
+- **Uses between proofs.** None found. A use Lean's printer did not follow would not show here, and a chain that ends at a theorem listed here is shown where it starts ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="what-giving-that-waits-draws-on"></a>
 ### What giving that waits draws on
@@ -361,6 +396,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That the pair supplies the child's unit: the descent under needs one and two shows only that the giver's support decides whether it can give. ([what-giving-that-waits-draws-on.md#does-not-show--未表明](../../records/what-giving-that-waits-draws-on.md#does-not-show--未表明))
 - **Beyond its couplings.** Read with the receiver as the family and the giver as the beyond, the asymmetric rise is exactly the giver's slack and the symmetric gift breaks the giver's dependence.
 - **Sources.** [05-COLLECTIVES.md#r-what-giving-that-waits-draws-on](../../../chapters/05-COLLECTIVES.md#r-what-giving-that-waits-draws-on)
+- **Uses between proofs.** None found. A use Lean's printer did not follow would not show here, and a chain that ends at a theorem listed here is shown where it starts ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="a-circular-wait-needs-a-reserve-present"></a>
 ### A circular dependence: maintenance running or a wait no one can begin
@@ -392,6 +428,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That an actual joint activity meets the projections, the support or the one-step availability: they are supplied. ([joint-plans-from-a-supported-start.md#does-not-show--未表明](../../records/joint-plans-from-a-supported-start.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [05-COLLECTIVES.md#grounded-start](../../../chapters/05-COLLECTIVES.md#grounded-start), [05-COLLECTIVES.md#r-joint-plans-from-a-supported-start](../../../chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start)
+- **Uses between proofs.** Not read: this entry lists no theorem of the print, so no line can be computed for it ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="cooperation-read-as-giving-that-waits"></a>
 ### Cooperation read as giving that waits on giving
@@ -410,5 +447,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That cooperation is good, or which giving supports 生生. ([giving-that-waits-on-giving.md#does-not-show--未表明](../../records/giving-that-waits-on-giving.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [05-COLLECTIVES.md#giving-waits](../../../chapters/05-COLLECTIVES.md#giving-waits), [05-COLLECTIVES.md#r-thresholds-of-waiting](../../../chapters/05-COLLECTIVES.md#r-thresholds-of-waiting), [05-COLLECTIVES.md#grounded-start](../../../chapters/05-COLLECTIVES.md#grounded-start), [05-COLLECTIVES.md#kept-together](../../../chapters/05-COLLECTIVES.md#kept-together), [02-MAP.md#r-whether-a-loop-closes-a-difference](../../../chapters/02-MAP.md#r-whether-a-loop-closes-a-difference)
+- **Uses between proofs.** Not read: this entry lists no theorem of the print, so no line can be computed for it ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), [B](b.md), [C](c.md), [D](d.md), **E**, [F](f.md), [G](g.md), [H](h.md).

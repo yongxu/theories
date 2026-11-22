@@ -8,7 +8,7 @@ The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.
 
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), [B](b.md), [C](c.md), **D**, [E](e.md), [F](f.md), [G](g.md), [H](h.md).
 
-The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*.
+The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*. The lines on uses between proofs, last in an entry's section, are no part of the curated layer: they are computed at each render from what Lean printed of its proof terms and from the declarations the entries list, and typed by no one; they too create no result.
 
 22 of the atlas's 186 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
 
@@ -80,6 +80,15 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Targets met along a course rather than at a configuration (more than now), choices divided between the seeker and others, and probabilistic enough. ([the-boundary-of-enough-under-undetermined-laws.md#does-not-show--未表明](../../records/the-boundary-of-enough-under-undetermined-laws.md#does-not-show--未表明))
 - **Beyond its couplings.** Where a seeking locked onto a target that cannot be met at rest draws on what stands, with the rest of the exchange fixed and balance on what couples in, its losses beyond its coupling closure do not return through its own feedback.
 - **Sources.** [03-KNOWING.md#r-seeking-boundary](../../../chapters/03-KNOWING.md#r-seeking-boundary), [03-KNOWING.md#r-the-boundary-of-enough-under-undetermined-laws](../../../chapters/03-KNOWING.md#r-the-boundary-of-enough-under-undetermined-laws), [03-KNOWING.md#learning](../../../chapters/03-KNOWING.md#learning), [03-KNOWING.md#r-selection-through-couplings](../../../chapters/03-KNOWING.md#r-selection-through-couplings)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Law.succ_open`, in `Becoming.succ_more`, listed under [Lossless exchange can continue and return](f.md#lossless-exchange-continues-and-returns).
+    - `Becoming.Flow.change_recurs_iff`, in `Becoming.Flow.more_needs_unrun`, listed under [The rest theorem](g.md#continued-change-needs-openness).
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.more_needs_open` → `Becoming.unlisted_of_new` → `Becoming.unheld_of_new`, listed under [Recurrence under every law of change](f.md#recurrence-without-premise).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Flow.unselected_beyond_coupling`: in `Becoming.ChoiceCountCapture.unchosen_beyond_coupling`, listed under [A chooser's rule read from the count of its choices](c.md#capture-by-counted-choices).
+  - *Listed here and under another dynamic, by hand.* `Becoming.Law.rests_iff`, also under [Locked seeking (无明)](#locked-seeking); `Becoming.Law.more_never_rests`, also under [Locked seeking (无明)](#locked-seeking); `Becoming.Law.aboveAll_never_rests`, also under [Locked seeking (无明)](#locked-seeking); `Becoming.Enough.law_possibly_iff_assured`, also under [A run round a loop keeps changing](f.md#a-run-round-a-loop-keeps-changing); `Becoming.Enough.Free.stays_meet_not_assured`, also under [A run round a loop keeps changing](f.md#a-run-round-a-loop-keeps-changing); `Becoming.Flow.unselected_beyond_coupling`, also under [Selection blind beyond the coupling closure](b.md#unselected-beyond-the-coupling-closure). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="locked-seeking"></a>
 ### Locked seeking (无明)
@@ -102,6 +111,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Hijacking, how such targets form and pass on and how winning selects them, is not stated here. ([seeking-boundary.md#does-not-show--未表明](../../records/seeking-boundary.md#does-not-show--未表明))
 - **Beyond its couplings.** Where a seeking locked onto a target that cannot be met at rest draws on what stands, with the rest of the exchange fixed and balance on what couples in, its losses beyond its coupling closure do not return through its own feedback.
 - **Sources.** [03-KNOWING.md#r-the-boundary-of-enough-under-undetermined-laws](../../../chapters/03-KNOWING.md#r-the-boundary-of-enough-under-undetermined-laws), [03-KNOWING.md#r-seeking-boundary](../../../chapters/03-KNOWING.md#r-seeking-boundary), [02-MAP.md#capture](../../../chapters/02-MAP.md#capture), [07-SIGNIFICANCE.md#r-what-training-installs](../../../chapters/07-SIGNIFICANCE.md#r-what-training-installs), [03-KNOWING.md#r-where-a-formations-acts-return](../../../chapters/03-KNOWING.md#r-where-a-formations-acts-return)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+  - *Listed here and under another dynamic, by hand.* `Becoming.Law.rests_iff`, also under [Where seeking rests: more than now never does, above all others never for two](#seeking-boundary); `Becoming.Law.more_never_rests`, also under [Where seeking rests: more than now never does, above all others never for two](#seeking-boundary); `Becoming.Law.aboveAll_never_rests`, also under [Where seeking rests: more than now never does, above all others never for two](#seeking-boundary). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="obscuration-and-reopening"></a>
 ### Obscuration and reopening (偏蔽，复通)
@@ -120,6 +133,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Neither 03's reading nor 07's cites a law of when a measure becomes fixed, or of a blocked relation regaining effect. Beside them, not cited by them, in one named history of the periphery: reopening, inspecting and taking up repairs the changed history's judgment, using up the inspection available; reopening and taking up without inspection does not, nor does reopening with no inspection left (a witness, not of every closed practice). ([03-KNOWING.md#r-adaptive-closure-cannot-resolve](../../../chapters/03-KNOWING.md#r-adaptive-closure-cannot-resolve))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [03-KNOWING.md#r-the-boundary-of-enough-under-undetermined-laws](../../../chapters/03-KNOWING.md#r-the-boundary-of-enough-under-undetermined-laws), [07-SIGNIFICANCE.md#r-what-training-installs](../../../chapters/07-SIGNIFICANCE.md#r-what-training-installs)
+- **Uses between proofs.** Not read: this entry lists no theorem of the print, so no line can be computed for it ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="what-a-course-chosen-through-its-model-does-not-test"></a>
 ### What a course chosen through its model does not test
@@ -173,6 +187,11 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Which explanation holds of an actual formation's acts. ([acts-alike-from-a-model-or-from-an-order.md#does-not-show--未表明](../../records/acts-alike-from-a-model-or-from-an-order.md#does-not-show--未表明))
 - **Beyond its couplings.** Reading [AI reading, new]: what tells such worlds apart comes from beyond the formation's own selection: an act that risks the task, or a reading from outside.
 - **Sources.** [03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test](../../../chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test), [03-KNOWING.md#r-acts-alike-from-a-model-or-from-an-order](../../../chapters/03-KNOWING.md#r-acts-alike-from-a-model-or-from-an-order), [03-KNOWING.md#the-reading-loop](../../../chapters/03-KNOWING.md#the-reading-loop), [03-KNOWING.md#r-a-reading-informed-and-revalued](../../../chapters/03-KNOWING.md#r-a-reading-informed-and-revalued)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Blanket.Blanketed.agent_through_sensory`, in `Becoming.ReadingLoop.sensed_alike_iff` and `Becoming.ReadingLoop.alike_within`, listed under [Runaway, and the distance to the break that does not couple in](#a-break-read-only-by-threshold).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.ReadingLoop.Loop.rests_of_unrefuted`: in `Becoming.HeldForReading.SignLoop.rests_unread`, listed under [What holding an act for a reading is worth: a listing that fixes the sign and never meets the stop](#a-stop-passed-by-a-listing-that-fixes-the-sign).
 
 <a id="what-seeking-cannot-separate"></a>
 ### What seeking cannot separate
@@ -209,6 +228,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That actual agents' likelihoods tie what matters, or that a design built on the epistemic drive fails. ([what-seeking-cannot-separate.md#does-not-show--未表明](../../records/what-seeking-cannot-separate.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [03-KNOWING.md#r-what-seeking-cannot-separate](../../../chapters/03-KNOWING.md#r-what-seeking-cannot-separate), [03-KNOWING.md#r-selection-when-the-lumping-changes](../../../chapters/03-KNOWING.md#r-selection-when-the-lumping-changes), [03-KNOWING.md#r-expected-free-energy-and-its-terms](../../../chapters/03-KNOWING.md#r-expected-free-energy-and-its-terms)
+- **Uses between proofs.** None found. A use Lean's printer did not follow would not show here, and a chain that ends at a theorem listed here is shown where it starts ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="a-stop-passed-by-a-listing-that-fixes-the-sign"></a>
 ### What holding an act for a reading is worth: a listing that fixes the sign and never meets the stop
@@ -244,6 +264,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That the model lists, with positive weight, candidates of both rankings of two alternatives neither of which reaches the other: the choices do not fix it. ([what-holding-for-a-reading-is-worth.md#does-not-show--未表明](../../records/what-holding-for-a-reading-is-worth.md#does-not-show--未表明))
 - **Beyond its couplings.** Reading [AI reading, new]: what tells a misspecified model it is wrong comes from beyond its own selection, and a stop it can pass over is not yet a change that reaches the system.
 - **Sources.** [03-KNOWING.md#r-what-holding-for-a-reading-is-worth](../../../chapters/03-KNOWING.md#r-what-holding-for-a-reading-is-worth), [03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test](../../../chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test), [07-SIGNIFICANCE.md#executable](../../../chapters/07-SIGNIFICANCE.md#executable)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.ReadingLoop.Loop.rests_of_unrefuted`, in `Becoming.HeldForReading.SignLoop.rests_unread`, listed under [What a course chosen through its model does not test](#what-a-course-chosen-through-its-model-does-not-test).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
 
 <a id="a-prediction-read-by-what-it-predicts"></a>
 ### A prediction read by what it predicts
@@ -283,6 +307,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Convergence of repeated retraining with losses: only repeated publication of the last outcome on a chain is stated. ([a-prediction-read-by-what-it-predicts.md#does-not-show--未表明](../../records/a-prediction-read-by-what-it-predicts.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [03-KNOWING.md#r-a-prediction-read-by-what-it-predicts](../../../chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+  - *Listed here and under another dynamic, by hand.* `Becoming.ReflexivePrediction.none_right_of_moves`, also under [Repeated publication under negation](f.md#publication-under-negation-alternates); `Becoming.ReflexivePrediction.rests_iff_right`, also under [Repeated publication under negation](f.md#publication-under-negation-alternates); `Becoming.ReflexivePrediction.Negating.alternates`, also under [Repeated publication under negation](f.md#publication-under-negation-alternates). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="a-break-read-only-by-threshold"></a>
 ### Runaway, and the distance to the break that does not couple in
@@ -325,6 +353,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That the split is one law across domains, and "only where" as a necessity outside these models, are conjectured (T6). ([03-KNOWING.md#break-seen-coming](../../../chapters/03-KNOWING.md#break-seen-coming))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [02-MAP.md#r-runaway-distance-uncoupled](../../../chapters/02-MAP.md#r-runaway-distance-uncoupled), [03-KNOWING.md#r-the-markov-blanket-as-a-coupling-structure](../../../chapters/03-KNOWING.md#r-the-markov-blanket-as-a-coupling-structure), [03-KNOWING.md#break-seen-coming](../../../chapters/03-KNOWING.md#break-seen-coming)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Blanket.Blanketed.agent_through_sensory`: in `Becoming.ReadingLoop.sensed_alike_iff` and `Becoming.ReadingLoop.alike_within`, listed under [What a course chosen through its model does not test](#what-a-course-chosen-through-its-model-does-not-test); in `Becoming.ListingValuation.through_sensed`, listed under [A reading informed and revalued along one law: the updates commute, the courses do not](#a-reading-informed-and-revalued).
 
 <a id="a-reading-kept-by-its-update"></a>
 ### A reading kept by its update, and the reading its own history carries
@@ -367,6 +399,12 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Probabilistic belief or noise: the reading is possibilistic, a set of worlds. ([a-reading-kept-by-its-update.md#does-not-show--未表明](../../records/a-reading-kept-by-its-update.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [03-KNOWING.md#r-a-reading-kept-by-its-update](../../../chapters/03-KNOWING.md#r-a-reading-kept-by-its-update), [03-KNOWING.md#r-a-response-common-over-a-reading](../../../chapters/03-KNOWING.md#r-a-response-common-over-a-reading)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Iteration.iter_largest`, in `Becoming.held_iff_iter` (told above as a case), listed under [The largest class a step preserves, reached at a list's length (步所保之最大类，至列表之长而得)](h.md#kept-at-the-length-of-a-list).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Viability.kernel_iff_held`: in `Becoming.Viability.kernel_iff_iter` and `Becoming.Viability.kernel_iff_iter_pred_length`, listed under [Never leaving a guard, conditions kept together, and lasting](h.md#never-leaving-a-guard).
+    - `Becoming.held_iff_iter`: in `Becoming.Viability.kernel_iff_iter`, listed under [Never leaving a guard, conditions kept together, and lasting](h.md#never-leaving-a-guard).
 
 <a id="what-training-installs"></a>
 ### What training installs
@@ -414,6 +452,12 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Which law a trained system's acts follow beyond where training can install one. ([03-KNOWING.md#open](../../../chapters/03-KNOWING.md#open))
 - **Beyond its couplings.** With the laws reading what has stood, the rest through coupling, the first candidate through its members' coupling and both courses feasible, candidates agreeing on every condition coupled into the reward's coupling closure (drawn through both courses) are trained alike by every training through it.
 - **Sources.** [07-SIGNIFICANCE.md#r-what-training-installs](../../../chapters/07-SIGNIFICANCE.md#r-what-training-installs)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.act_courses_unselected`, in `Becoming.Training.trained_alike_beyond_closure`, listed under [Selection blind beyond the coupling closure](b.md#unselected-beyond-the-coupling-closure).
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.Training.outrun_settles_iff` → `Becoming.Training.outrun_reading_same` → `Becoming.Flow.outrun_reading_alike`, listed under [The rest outruns the renewal](b.md#the-rest-outruns-the-renewal).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
 
 <a id="what-a-commuting-law-keeps-apart"></a>
 ### What a commuting law keeps apart, and what a learner's symmetry fixes
@@ -456,6 +500,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That keeping or erasing a difference is better. ([what-a-commuting-law-keeps-apart.md#does-not-show--未表明](../../records/what-a-commuting-law-keeps-apart.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [01-ROOT.md#r-what-a-commuting-law-keeps-apart](../../../chapters/01-ROOT.md#r-what-a-commuting-law-keeps-apart), [05-COLLECTIVES.md#r-a-commuting-learner-drives-no-unread-choice](../../../chapters/05-COLLECTIVES.md#r-a-commuting-learner-drives-no-unread-choice), [05-COLLECTIVES.md#t3](../../../chapters/05-COLLECTIVES.md#t3)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+  - *Listed here and under another dynamic, by hand.* `Becoming.Law.Commutes.self_apart`, also under [A map moving every value never rests along its run](f.md#a-map-moving-every-value-never-rests); `Becoming.Weighted.Commutes.carried`, also under [What an optimum does beyond what couples in](b.md#what-an-optimum-does-beyond-what-couples-in); `Becoming.Weighted.Commutes.fixed_expect`, also under [What an optimum does beyond what couples in](b.md#what-an-optimum-does-beyond-what-couples-in); `Becoming.Weighted.Commutes.start_expect`, also under [What an optimum does beyond what couples in](b.md#what-an-optimum-does-beyond-what-couples-in); `Becoming.Weighted.Commutes.of_samples`, also under [What an optimum does beyond what couples in](b.md#what-an-optimum-does-beyond-what-couples-in); `Becoming.Weighted.Reinforcing.expect_equal`, also under [What an optimum does beyond what couples in](b.md#what-an-optimum-does-beyond-what-couples-in); `Becoming.Weighted.Reinforcing.oneSided`, also under [What an optimum does beyond what couples in](b.md#what-an-optimum-does-beyond-what-couples-in); `Becoming.Weighted.Pooling.share_rises`, also under [What an optimum does beyond what couples in](b.md#what-an-optimum-does-beyond-what-couples-in). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="readings-within-what-they-read"></a>
 ### A family of readings within what it reads
@@ -490,6 +538,12 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - The rhythm is shown periodic for the two-valued negation only; for any other map moving every value, only that revision never rests. ([readings-within-what-they-read.md#does-not-show--未表明](../../records/readings-within-what-they-read.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [03-KNOWING.md#r-readings-within-what-they-read](../../../chapters/03-KNOWING.md#r-readings-within-what-they-read)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Diagonal.flip_moves`, in `Becoming.Diagonal.unfolding_open`, listed under [A map moving every value never rests along its run](f.md#a-map-moving-every-value-never-rests).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Diagonal.revision_never_rests`: in `Becoming.Undecided.liar_two_valued_never_rests`, listed under [The liar's revision never rests with two values; with three, from all undecided, it rests undecided](f.md#revision-with-an-undecided-value).
+  - *Listed here and under another dynamic, by hand.* `Becoming.Diagonal.revision_never_rests`, also under [A map moving every value never rests along its run](f.md#a-map-moving-every-value-never-rests); `Becoming.Diagonal.negation_never_rests`, also under [A map moving every value never rests along its run](f.md#a-map-moving-every-value-never-rests); `Becoming.Diagonal.negation_returns`, also under [A map moving every value never rests along its run](f.md#a-map-moving-every-value-never-rests). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="adaptive-closure-cannot-resolve"></a>
 ### Adaptive closure: a reference changed outside what is retained is not resolved from the view
@@ -520,6 +574,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That reopening suffices: it repairs only with an inspection that can still be made. ([adaptive-closure-cannot-resolve.md#does-not-show--未表明](../../records/adaptive-closure-cannot-resolve.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [03-KNOWING.md#r-adaptive-closure-cannot-resolve](../../../chapters/03-KNOWING.md#r-adaptive-closure-cannot-resolve)
+- **Uses between proofs.** Not read: this entry lists no theorem of the print, so no line can be computed for it ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="correction-is-not-calibration"></a>
 ### Correction is not calibration: references recover the report, and later change defeats it
@@ -555,6 +610,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That a calibration stays valid: a change of the channels after it defeats the report. ([correction-is-not-calibration.md#does-not-show--未表明](../../records/correction-is-not-calibration.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [03-KNOWING.md#r-correction-is-not-calibration](../../../chapters/03-KNOWING.md#r-correction-is-not-calibration)
+- **Uses between proofs.** Not read: this entry lists no theorem of the print, so no line can be computed for it ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="learning-by-refutation"></a>
 ### Extrapolation by elimination
@@ -598,6 +654,12 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - The exact rest step of elimination. ([03-KNOWING.md#open](../../../chapters/03-KNOWING.md#open))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [03-KNOWING.md#r-learning-by-refutation](../../../chapters/03-KNOWING.md#r-learning-by-refutation), [03-KNOWING.md#refutation](../../../chapters/03-KNOWING.md#refutation)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.Learning.diagonal_open` → `Becoming.unlisted_of_new` → `Becoming.unheld_of_new`, listed under [Recurrence under every law of change](f.md#recurrence-without-premise).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Learning.diagonal_not_lasso`: in `Becoming.Parting.free_unbounded`, listed under [Recurrence under every law of change](f.md#recurrence-without-premise).
 
 <a id="a-cascade-at-the-histories-reached"></a>
 ### A cascade at the histories reached, and readers reading readers
@@ -637,6 +699,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That a pool's later selection keeps a coupling one member's act carries. ([a-cascade-at-the-histories-reached.md#does-not-show--未表明](../../records/a-cascade-at-the-histories-reached.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [05-COLLECTIVES.md#r-a-cascade-at-the-histories-reached](../../../chapters/05-COLLECTIVES.md#r-a-cascade-at-the-histories-reached), [05-COLLECTIVES.md#r-readers-reading-readers](../../../chapters/05-COLLECTIVES.md#r-readers-reading-readers), [05-COLLECTIVES.md#pools](../../../chapters/05-COLLECTIVES.md#pools)
+- **Uses between proofs.** None found. A use Lean's printer did not follow would not show here, and a chain that ends at a theorem listed here is shown where it starts ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="a-pool-that-recruits-through-itself"></a>
 ### A pool that recruits through itself
@@ -673,6 +736,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - How pools form, last and resist capture beyond recruitment through their own coupling; a pool whose rule and members are both formed through what it reads (resisting a capture that hides a loss needs a member admitted by what the pool does not yet read). ([05-COLLECTIVES.md#open](../../../chapters/05-COLLECTIVES.md#open))
 - **Beyond its couplings.** It comes to couple into a loss only as its course without the loss would.
 - **Sources.** [05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself](../../../chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself), [07-SIGNIFICANCE.md#alignment-without-premise](../../../chapters/07-SIGNIFICANCE.md#alignment-without-premise), [COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions](../../../COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions)
+- **Uses between proofs.** None found. A use Lean's printer did not follow would not show here, and a chain that ends at a theorem listed here is shown where it starts ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="selection-when-the-lumping-changes"></a>
 ### Which selections survive and remain executable when the lumping changes
@@ -722,6 +786,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - The run's history of lumpings is defined of the run, not retained by it: an actual memory that keeps it and effects the model leaves out are not shown. ([selection-when-the-lumping-changes.md#does-not-show--未表明](../../records/selection-when-the-lumping-changes.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [03-KNOWING.md#r-selection-when-the-lumping-changes](../../../chapters/03-KNOWING.md#r-selection-when-the-lumping-changes), [03-KNOWING.md#r-what-seeking-cannot-separate](../../../chapters/03-KNOWING.md#r-what-seeking-cannot-separate), [03-KNOWING.md#r-a-revision-that-opens-a-correction](../../../chapters/03-KNOWING.md#r-a-revision-that-opens-a-correction)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Stock.feasible_iff_covered`: in `Becoming.Stock.repeat_covered_iff`, listed under [Activity forms reference revision and makes it recur](h.md#recurring-reference-revision).
 
 <a id="a-wrong-projection-admitted-at-every-step"></a>
 ### A wrong projection admitted at every step while the move goes in step with what it leaves out
@@ -754,6 +822,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Random or undetermined processes are not treated. ([experiment-needs-return.md#does-not-show--未表明](../../records/experiment-needs-return.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [03-KNOWING.md#r-experiment-needs-return](../../../chapters/03-KNOWING.md#r-experiment-needs-return), [03-KNOWING.md#testing](../../../chapters/03-KNOWING.md#testing)
+- **Uses between proofs.** None found. A use Lean's printer did not follow would not show here, and a chain that ends at a theorem listed here is shown where it starts ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="evidence-through-change"></a>
 ### Evidence through change: readings propagated through admitted changes, and a change recorded as none
@@ -791,6 +860,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That a certificate which passes is sound when a change is understated: the actual world can fall outside the possible ones. ([evidence-through-change.md#does-not-show--未表明](../../records/evidence-through-change.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [03-KNOWING.md#r-evidence-through-change](../../../chapters/03-KNOWING.md#r-evidence-through-change)
+- **Uses between proofs.** Not read: this entry lists no theorem of the print, so no line can be computed for it ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="encounter-selection-and-revision"></a>
 ### Chosen encounters: records only narrow the candidates, and a wrong unique binding can meet the stopping rule
@@ -834,6 +904,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - The primary developmental evidence constrains automatic transfer without identifying a unique mechanism or evolutionary history. ([encounter-selection-and-revision.md#does-not-show--未表明](../../records/encounter-selection-and-revision.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [03-KNOWING.md#r-encounter-selection-and-revision](../../../chapters/03-KNOWING.md#r-encounter-selection-and-revision)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.CrossSituational.narrows`: in `Becoming.SharedCodes.kept_bars`, listed under [A merged distinction returns only from a form held outside, or by coining](g.md#merged-distinctions-stay-merged).
 
 <a id="a-reading-informed-and-revalued"></a>
 ### A reading informed and revalued along one law: the updates commute, the courses do not
@@ -879,5 +953,9 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That a formation computes by these counts, or that its listing, weights and valuation are formed as supplied: they are supplied, their formation outside these counts. ([a-reading-informed-and-revalued.md#does-not-show--未表明](../../records/a-reading-informed-and-revalued.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [03-KNOWING.md#r-a-reading-informed-and-revalued](../../../chapters/03-KNOWING.md#r-a-reading-informed-and-revalued), [03-KNOWING.md#r-acts-alike-from-a-model-or-from-an-order](../../../chapters/03-KNOWING.md#r-acts-alike-from-a-model-or-from-an-order)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Blanket.Blanketed.agent_through_sensory`, in `Becoming.ListingValuation.through_sensed`, listed under [Runaway, and the distance to the break that does not couple in](#a-break-read-only-by-threshold).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
 
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), [B](b.md), [C](c.md), **D**, [E](e.md), [F](f.md), [G](g.md), [H](h.md).

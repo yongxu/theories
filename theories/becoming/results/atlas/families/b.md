@@ -8,7 +8,7 @@ The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.
 
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), **B**, [C](c.md), [D](d.md), [E](e.md), [F](f.md), [G](g.md), [H](h.md).
 
-The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*.
+The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*. The lines on uses between proofs, last in an entry's section, are no part of the curated layer: they are computed at each render from what Lean printed of its proof terms and from the declarations the entries list, and typed by no one; they too create no result.
 
 26 of the atlas's 186 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
 
@@ -82,6 +82,21 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - It does not say which taker ought to take less. ([own-count-misses-joint-excess.md#does-not-show--未表明](../../records/own-count-misses-joint-excess.md#does-not-show--未表明))
 - **Beyond its couplings.** A taker not depending on the condition, or depending at a lower need, can continue while the renewal and those depending at such a need end. Which part makes the difference to such a loss is joint-difference-making's.
 - **Sources.** [05-COLLECTIVES.md#r-own-count-misses-joint-excess](../../../chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess), [COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions](../../../COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Flow.never_returns_below`, in `Becoming.Flow.stays_below` (told above as a case), listed under [Loss of renewal for good](a.md#loss-of-renewal-for-good).
+    - `Becoming.Flow.never_returns_below`, in `Becoming.Flow.stays_below` (told above as a case), listed under [Two-sided regulation, and regulation that reads late](h.md#two-sided-regulation-and-late-reading).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Flow.joint_keeps`: in `Becoming.Flow.level_kept`, listed under [What taking all that is given excludes](#what-taking-all-excludes).
+    - `Becoming.Flow.excess_bounded`: in `Becoming.Flow.beyond_given_bounded`, listed under [Where a rising take ends](#where-a-rising-take-ends).
+    - `Becoming.Flow.stays_below`: in `Becoming.Flow.outrun_below`, listed under [The rest outruns the renewal](#the-rest-outruns-the-renewal); in `Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.three_end`, listed under [Risk minimization on a shared renewal](#risk-minimization-on-a-shared-renewal); in `Becoming.Flow.seeking_exhausts`, listed under [Where a rising take ends](#where-a-rising-take-ends); in `Becoming.Flow.race_ends_greatest`, listed under [Position does not protect](#position-does-not-protect).
+    - `Becoming.Flow.ends_below`: in `Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.three_end`, listed under [Risk minimization on a shared renewal](#risk-minimization-on-a-shared-renewal); in `Becoming.Flow.seeking_exhausts`, listed under [Where a rising take ends](#where-a-rising-take-ends).
+    - `Becoming.Flow.joint_excess_ends`: in `Becoming.Flow.full_taking_ends`, listed under [What taking all that is given excludes](#what-taking-all-excludes); in `Becoming.Flow.held_excess_ends`, listed under [An order with a set point](#what-a-set-point-optimum-does-beyond); in `Becoming.Flow.race_ends_greatest`, `Becoming.Race.greatest_ends` and `Becoming.Clearing.greatest_continues`, listed under [Position does not protect](#position-does-not-protect).
+    - `Becoming.Flow.joint_excess_ends_at`: in `Becoming.Flow.full_taking_ends_at`, listed under [What taking all that is given excludes](#what-taking-all-excludes).
+    - `Becoming.Exceeding.own_not_joint`: in `Becoming.FreeEnergyGuarantees.SharedModels.alike_not_one`, listed under [Risk minimization on a shared renewal](#risk-minimization-on-a-shared-renewal).
+    - `Becoming.Exceeding.all_end`: in `Becoming.FreeEnergyGuarantees.SharedModels.alike_not_one`, listed under [Risk minimization on a shared renewal](#risk-minimization-on-a-shared-renewal).
+    - `Becoming.Alone.all_continue`: in `Becoming.FreeEnergyGuarantees.SharedModels.alike_not_one`, listed under [Risk minimization on a shared renewal](#risk-minimization-on-a-shared-renewal).
+  - *Listed here and under another dynamic, by hand.* `Becoming.Flow.excess_bounded`, also under [Consumption ends with its feeders](a.md#consumption-ends-with-feeders); `Becoming.Flow.ends_below`, also under [Loss of renewal for good](a.md#loss-of-renewal-for-good). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="joint-difference-making"></a>
 ### A loss made only together
@@ -123,6 +138,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - How, under overdetermination, the judgment that a joint activity consumes reaches each participant. ([joint-difference-making.md#next--下一步](../../records/joint-difference-making.md#next--下一步))
 - **Beyond its couplings.** Under overdetermination, but-for and participation come apart: in Pool a drawer's part makes no difference, yet the relational reading counts it as consuming. In the renewable witness no finite set of a formation's own events makes the run-level difference.
 - **Sources.** [05-COLLECTIVES.md#r-joint-difference-making](../../../chapters/05-COLLECTIVES.md#r-joint-difference-making), [joint-difference-making.md#laws--规律](../../records/joint-difference-making.md#laws--规律)
+- **Uses between proofs.** None found. A use Lean's printer did not follow would not show here, and a chain that ends at a theorem listed here is shown where it starts ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="the-rest-outruns-the-renewal"></a>
 ### The rest outruns the renewal
@@ -157,6 +173,15 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That restraint is better: the laws say where a reading cannot see it, not that seeing it is owed. ([the-rest-outruns-the-renewal.md#does-not-show--未表明](../../records/the-rest-outruns-the-renewal.md#does-not-show--未表明))
 - **Beyond its couplings.** Where the rest outruns a renewal gated at m, from a level below n + m, whatever a member outside the rest takes, the level stays below m from then on and every formation depending on the condition at a need of at least m ends. With need one, in two such flows every score that reads the condition only from the rest's end on scores them alike, however the member's act differs.
 - **Sources.** [05-COLLECTIVES.md#r-the-rest-outruns-the-renewal](../../../chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal), [05-COLLECTIVES.md#t3](../../../chapters/05-COLLECTIVES.md#t3)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Flow.ends_below_at`, in `Becoming.Flow.outrun_ends` (told above as a case), listed under [Loss of renewal for good](a.md#loss-of-renewal-for-good).
+    - `Becoming.Flow.stays_below`, in `Becoming.Flow.outrun_below` (told above as a case), listed under [Own count misses joint excess](#own-count-misses-joint-excess).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Flow.outrun_excess`: in `Becoming.Flow.excess_of_takesAll`, listed under [What taking all that is given excludes](#what-taking-all-excludes).
+    - `Becoming.Flow.outrun_below`: in `Becoming.FreeEnergyGuarantees.RiskAndNeeds.need_ends` and `Becoming.FreeEnergyGuarantees.RiskAndNeeds.expectation_not_course`, listed under [Risk minimization on a shared renewal](#risk-minimization-on-a-shared-renewal).
+    - `Becoming.Flow.outrun_ends`: in `Becoming.FreeEnergyGuarantees.RiskAndNeeds.need_ends`, listed under [Risk minimization on a shared renewal](#risk-minimization-on-a-shared-renewal).
+    - `Becoming.Flow.outrun_reading_alike`: in `Becoming.FreeEnergyGuarantees.RiskAndNeeds.restraint_unread`, listed under [Risk minimization on a shared renewal](#risk-minimization-on-a-shared-renewal).
 
 <a id="what-taking-all-excludes"></a>
 ### What taking all that is given excludes
@@ -192,6 +217,12 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Which course is to be taken: the excluding and the sharing course are not ranked, and the extent derived from the first's want does not separate them. ([what-taking-all-excludes.md#does-not-show--未表明](../../records/what-taking-all-excludes.md#does-not-show--未表明))
 - **Beyond its couplings.** In the excluding and sharing witnesses the levels admit every member alike at every step: exclusion acts through the taking, not the levels.
 - **Sources.** [05-COLLECTIVES.md#r-what-taking-all-excludes](../../../chapters/05-COLLECTIVES.md#r-what-taking-all-excludes)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Flow.joint_keeps`, in `Becoming.Flow.level_kept`; `Becoming.Flow.joint_excess_ends`, in `Becoming.Flow.full_taking_ends` (told above as a case); `Becoming.Flow.joint_excess_ends_at`, in `Becoming.Flow.full_taking_ends_at` (told above as a case), listed under [Own count misses joint excess](#own-count-misses-joint-excess).
+    - `Becoming.Flow.outrun_excess`, in `Becoming.Flow.excess_of_takesAll` (told above as a case), listed under [The rest outruns the renewal](#the-rest-outruns-the-renewal).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Flow.level_kept`: in `Becoming.Flow.level_kept_of_plans`, listed under [Division by exclusive footprints](h.md#division-by-exclusive-footprints).
 
 <a id="what-an-optimum-does-beyond-what-couples-in"></a>
 ### What an optimum does beyond what couples in
@@ -266,6 +297,13 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - What a learner does from a start preferring one value, or that noise wears such a preference away beyond the Pooling witness. ([a-commuting-learner-drives-no-unread-choice.md#does-not-show--未表明](../../records/a-commuting-learner-drives-no-unread-choice.md#does-not-show--未表明))
 - **Beyond its couplings.** With room, every optimum of a rising order stands at the least level beyond among the eligible outcomes and breaks exactly the dependences beyond that some eligible outcome breaks; where activity needs support and a broken dependence persists at a need no weaker, its formation is not active after the step.
 - **Sources.** [05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in](../../../chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in), [05-COLLECTIVES.md#r-room-read-off-the-exchange](../../../chapters/05-COLLECTIVES.md#r-room-read-off-the-exchange), [05-COLLECTIVES.md#optimum-definitions](../../../chapters/05-COLLECTIVES.md#optimum-definitions), [05-COLLECTIVES.md#t3](../../../chapters/05-COLLECTIVES.md#t3), [05-COLLECTIVES.md#r-a-commuting-learner-drives-no-unread-choice](../../../chapters/05-COLLECTIVES.md#r-a-commuting-learner-drives-no-unread-choice)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Flow.Balances.beyond_falls_exactly`, in `Becoming.Flow.Balances.family_le_iff` and `Becoming.Flow.keeping_optimum_takes_slack`, listed under [What a rise draws from beyond](#what-a-rise-draws-from-beyond).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Optimum.least_iff`: in `Becoming.Optimum.least_below_iff`, listed under [An order with a set point](#what-a-set-point-optimum-does-beyond).
+    - `Becoming.Optimum.optimum_beyond`: in `Becoming.Optimum.nearing_as_rising`, listed under [An order with a set point](#what-a-set-point-optimum-does-beyond); in `Becoming.Optimum.mutual_as_one`, listed under [Several optimizers](#several-optimizers-drain-by-their-joint-capacity); in `Becoming.Optimum.course_beyond`, listed under [Re-optimizing at every step](#re-optimizing-above-a-renewal-ends-it).
+  - *Listed here and under another dynamic, by hand.* `Becoming.Weighted.Commutes.carried`, also under [What a commuting law keeps apart, and what a learner's symmetry fixes](d.md#what-a-commuting-law-keeps-apart); `Becoming.Weighted.Commutes.fixed_expect`, also under [What a commuting law keeps apart, and what a learner's symmetry fixes](d.md#what-a-commuting-law-keeps-apart); `Becoming.Weighted.Commutes.start_expect`, also under [What a commuting law keeps apart, and what a learner's symmetry fixes](d.md#what-a-commuting-law-keeps-apart); `Becoming.Weighted.Commutes.of_samples`, also under [What a commuting law keeps apart, and what a learner's symmetry fixes](d.md#what-a-commuting-law-keeps-apart); `Becoming.Weighted.Reinforcing.expect_equal`, also under [What a commuting law keeps apart, and what a learner's symmetry fixes](d.md#what-a-commuting-law-keeps-apart); `Becoming.Weighted.Reinforcing.oneSided`, also under [What a commuting law keeps apart, and what a learner's symmetry fixes](d.md#what-a-commuting-law-keeps-apart); `Becoming.Weighted.Pooling.share_rises`, also under [What a commuting law keeps apart, and what a learner's symmetry fixes](d.md#what-a-commuting-law-keeps-apart). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="what-a-set-point-optimum-does-beyond"></a>
 ### An order with a set point
@@ -322,6 +360,13 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - For orders with a set point: which optimum is taken where several reach the set point, which decides keeping wherever a step can lose what it takes; conflicting set points on a shared condition; a weighted term traded against the set point; several nearing optimizers read off an exchange; and, over a horizon under noise, whether a set point on later states makes reserves worth holding, so that a rising drive on stores returns. ([05-COLLECTIVES.md#open](../../../chapters/05-COLLECTIVES.md#open))
 - **Beyond its couplings.** At the set point the class asks nothing of what lies beyond; in a witness, where a step can lose what it takes, the order by distance has the draining step among its optima beside the keeping one. Among the outcomes open to a part, every optimum standing below its set point takes the part's whole capacity beyond, where every rising optimum stands.
 - **Sources.** [05-COLLECTIVES.md#r-what-a-set-point-optimum-does-beyond](../../../chapters/05-COLLECTIVES.md#r-what-a-set-point-optimum-does-beyond)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Flow.joint_excess_ends`, in `Becoming.Flow.held_excess_ends`, listed under [Own count misses joint excess](#own-count-misses-joint-excess).
+    - `Becoming.Optimum.least_iff`, in `Becoming.Optimum.least_below_iff`; `Becoming.Optimum.optimum_beyond`, in `Becoming.Optimum.nearing_as_rising`, listed under [What an optimum does beyond what couples in](#what-an-optimum-does-beyond-what-couples-in).
+    - `Becoming.Flow.Balances.beyond_falls_exactly`, in `Becoming.Flow.Balances.atSetPoint_draws` (told above as a case), listed under [What a rise draws from beyond](#what-a-rise-draws-from-beyond).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Optimum.HeldPair.held_end`: in `Becoming.FreeEnergyGuarantees.SharedModels.held_not_one`, listed under [Risk minimization on a shared renewal](#risk-minimization-on-a-shared-renewal).
 
 <a id="others-drawing-first-end-the-base"></a>
 ### Others drawing first end the base
@@ -363,6 +408,18 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - The optimum where a level of greatest gain is out of reach; holding a level where what stands at it falls below it; several optimizers ranking whole courses. ([05-COLLECTIVES.md#open](../../../chapters/05-COLLECTIVES.md#open))
 - **Beyond its couplings.** Where others first draw from what an optimizer leaves, leaving K t z, what stands for it, K t z + R (K t z), is at most the level, a capacity covers what stands at the start and at nothing, and the weighting falls at every step over a horizon of at least two steps, every optimum of every order rising with the weighted draw ends the stock at once and breaks every dependence on it with a positive need met at the start.
 - **Sources.** [05-COLLECTIVES.md#r-others-drawing-first-end-the-base](../../../chapters/05-COLLECTIVES.md#r-others-drawing-first-end-the-base), [05-COLLECTIVES.md#optimum-definitions](../../../chapters/05-COLLECTIVES.md#optimum-definitions)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Optimum.Next.outpaced_greatest`, in `Becoming.Optimum.Next.exhausting_frontier` and `Becoming.Optimum.Next.frontier_exhausts`, listed under [Weighting later draws less](#a-weighting-faster-than-renewal-ends-the-base).
+    - `Becoming.Optimum.frontier_rebuilds`, in `Becoming.Optimum.Holding.doubling_drawn_first`; `Becoming.Optimum.frontier_rebuilt`, in `Becoming.Optimum.Holding.doubling_drawn_first`, listed under [Every optimum rebuilds a depleted base](h.md#optima-rebuild-a-depleted-base).
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.Optimum.Next.frontier_of_gainsMost` → `Becoming.Optimum.Next.weighted_le_of_gains` → `Becoming.Optimum.Next.drawable_le_of_gains` → `Becoming.Amounts.le_by_exchange`, listed under [The least loss as a premise of rest](g.md#least-loss-rest).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Optimum.Next.frontier_below`: in `Becoming.Optimum.frontier_below_weighted`, listed under [Weighting later draws less](#a-weighting-faster-than-renewal-ends-the-base).
+    - `Becoming.Optimum.Next.exhausting_frontier`: in `Becoming.Optimum.exhausting_frontier`, listed under [Weighting later draws less](#a-weighting-faster-than-renewal-ends-the-base).
+    - `Becoming.Optimum.Next.frontier_exhausts`: in `Becoming.Optimum.frontier_exhausts`, listed under [Weighting later draws less](#a-weighting-faster-than-renewal-ends-the-base).
+    - `Becoming.Optimum.Next.frontier_leaves`: in `Becoming.Optimum.frontier_leaves`, listed under [Weighting later draws less](#a-weighting-faster-than-renewal-ends-the-base).
+    - `Becoming.Optimum.Next.frontier_rebuilds`: in `Becoming.Optimum.frontier_rebuilds`, listed under [Every optimum rebuilds a depleted base](h.md#optima-rebuild-a-depleted-base).
 
 <a id="drawers-in-turn"></a>
 ### Several drawers: drawers in turn and at once
@@ -413,6 +470,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Revision that is not a best response; perfect profiles drawing at once where some portion returns more than one for one. ([05-COLLECTIVES.md#open](../../../chapters/05-COLLECTIVES.md#open))
 - **Beyond its couplings.** Where each portion returns less than one for one, along no profile does any drawer draw more than where all draw everything, and what the drain breaks lies beyond every drawer. With two drawers sharing by halves the drain is still perfect while holding the level draws each more over a long horizon.
 - **Sources.** [05-COLLECTIVES.md#r-drawers-in-turn](../../../chapters/05-COLLECTIVES.md#r-drawers-in-turn), [05-COLLECTIVES.md#optimum-definitions](../../../chapters/05-COLLECTIVES.md#optimum-definitions)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Optimum.Holding.gated_alike`, in `Becoming.Optimum.Holding.gated_in_turn`, listed under [Courses over a horizon](#horizon-optima-hold-the-greatest-renewal).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
 
 <a id="coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it"></a>
 ### Coupled for each step
@@ -448,6 +509,11 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That the need ought to be kept or a coupling set: no evaluation enters; the laws say which profiles a coupling leaves perfect. ([coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it.md#does-not-show--未表明](../../records/coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it.md#does-not-show--未表明))
 - **Beyond its couplings.** In turn, with two drawers or more and no floor and a positive need, whatever the renewal, every perfect profile leaves nothing at every step before the horizon where the coupling a step is below the need. Drawing at once, where no portion reaches the need and none returns more than one for one, drawing everything is perfect at every coupling; under that profile, in the two shores witness, the need is met at no step.
 - **Sources.** [05-COLLECTIVES.md#r-coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it](../../../chapters/05-COLLECTIVES.md#r-coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it), [COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions](../../../COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.Optimum.Coupled.drains_below` → `Becoming.Optimum.Coupled.drains_at` → `Becoming.Optimum.InTurn.leaves_floor`, listed under [Several drawers: drawers in turn and at once](#drawers-in-turn).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
 
 <a id="a-race-for-position-draws-everything"></a>
 ### A race for position
@@ -484,6 +550,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [Conjecture, from an earlier account; not formalized.] The ends a selection for position can reach: a frozen mutual destruction, a deadlocked structure of power, the parts coming to read themselves as one whole, collapse, and winner takes all; which of them the theorems of position, capture and joint excess admit, and under which hypotheses. ([05-COLLECTIVES.md#open](../../../chapters/05-COLLECTIVES.md#open))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [05-COLLECTIVES.md#r-a-race-for-position-draws-everything](../../../chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything)
+- **Uses between proofs.** None found. A use Lean's printer did not follow would not show here, and a chain that ends at a theorem listed here is shown where it starts ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 <a id="several-optimizers-drain-by-their-joint-capacity"></a>
 ### Several optimizers
@@ -518,6 +585,12 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - What each takes outside a mutual best response. ([05-COLLECTIVES.md#open](../../../chapters/05-COLLECTIVES.md#open))
 - **Beyond its couplings.** At a mutual best response a condition beyond every one's family stands at what the formations outside them leave less their joint capacity, or at nothing; in the witness each take is within the slack of a need while the joint draw leaves it below the need.
 - **Sources.** [05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity](../../../chapters/05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity), [05-COLLECTIVES.md#optimum-cases](../../../chapters/05-COLLECTIVES.md#optimum-cases), [COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions](../../../COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Optimum.optimum_beyond`, in `Becoming.Optimum.mutual_as_one`, listed under [What an optimum does beyond what couples in](#what-an-optimum-does-beyond-what-couples-in).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Optimum.MutualBest.full`: in `Becoming.Optimum.Renewing.restrained_course_not_best`, listed under [Re-optimizing at every step](#re-optimizing-above-a-renewal-ends-it).
+    - `Becoming.Optimum.mutual_beyond`: in `Becoming.Optimum.mutual_course_beyond`, listed under [Re-optimizing at every step](#re-optimizing-above-a-renewal-ends-it).
 
 <a id="re-optimizing-above-a-renewal-ends-it"></a>
 ### Re-optimizing at every step
@@ -565,6 +638,13 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That the loss is a harm, or that a capacity within the renewal or a coupling is better: no evaluation enters; less in the store is by the optimizer's own order. ([re-optimizing-above-a-renewal-ends-it.md#does-not-show--未表明](../../records/re-optimizing-above-a-renewal-ends-it.md#does-not-show--未表明))
 - **Beyond its couplings.** Over a balanced course of mutual best responses, where the formations outside every optimizer give a condition beyond every optimizer's family at most r a step and what they take with the optimizers' joint capacity there exceeds r at every step, a dependence on it at a positive need throughout, met at the start, is lost for good, however small each capacity.
 - **Sources.** [05-COLLECTIVES.md#r-re-optimizing-above-a-renewal-ends-it](../../../chapters/05-COLLECTIVES.md#r-re-optimizing-above-a-renewal-ends-it), [05-COLLECTIVES.md#optimum-cases](../../../chapters/05-COLLECTIVES.md#optimum-cases)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Optimum.optimum_beyond`, in `Becoming.Optimum.course_beyond` (told above as a case), listed under [What an optimum does beyond what couples in](#what-an-optimum-does-beyond-what-couples-in).
+    - `Becoming.Optimum.MutualBest.full`, in `Becoming.Optimum.Renewing.restrained_course_not_best`; `Becoming.Optimum.mutual_beyond`, in `Becoming.Optimum.mutual_course_beyond` (told above as a case), listed under [Several optimizers](#several-optimizers-drain-by-their-joint-capacity).
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.Optimum.drawn_bounded_iff` → `Becoming.Optimum.ended_drawn_le` → `Becoming.Optimum.ends_within` → `Becoming.Amounts.falls_by_stretch`, listed under [The least loss as a premise of rest](g.md#least-loss-rest).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
 
 <a id="a-weighting-faster-than-renewal-ends-the-base"></a>
 ### Weighting later draws less
@@ -601,6 +681,16 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - The optimum where the next level does not rise with the level below y (an overcompensating renewal) or the gain has several peaks; that the rising course is then not an optimum. ([optima-rebuild-a-depleted-base.md#does-not-show--未表明](../../records/optima-rebuild-a-depleted-base.md#does-not-show--未表明))
 - **Beyond its couplings.** Where w (t + 1) (z + R z) < w t z for every positive z, with a capacity covering s + R s and R 0 and a horizon of at least two steps, every optimum ends its own stock at the first step, breaking every dependence on it with a positive need met at the start.
 - **Sources.** [05-COLLECTIVES.md#r-a-weighting-faster-than-renewal-ends-the-base](../../../chapters/05-COLLECTIVES.md#r-a-weighting-faster-than-renewal-ends-the-base), [05-COLLECTIVES.md#r-optima-rebuild-a-depleted-base](../../../chapters/05-COLLECTIVES.md#r-optima-rebuild-a-depleted-base), [05-COLLECTIVES.md#optimum-cases](../../../chapters/05-COLLECTIVES.md#optimum-cases), [COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions](../../../COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Optimum.Next.frontier_below`, in `Becoming.Optimum.frontier_below_weighted` (told above as a case); `Becoming.Optimum.Next.exhausting_frontier`, in `Becoming.Optimum.exhausting_frontier` (told above as a case); `Becoming.Optimum.Next.frontier_exhausts`, in `Becoming.Optimum.frontier_exhausts` (told above as a case); `Becoming.Optimum.Next.frontier_leaves`, in `Becoming.Optimum.frontier_leaves` (told above as a case), listed under [Others drawing first end the base](#others-drawing-first-end-the-base).
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.Optimum.Holding.logistic_weighted` → `Becoming.Optimum.weighted_holding_frontier` → `Becoming.Optimum.weighted_frontier` → `Becoming.Optimum.frontier_of_gainsMost` → `Becoming.Optimum.Next.frontier_of_gainsMost`, listed under [Others drawing first end the base](#others-drawing-first-end-the-base).
+    - `Becoming.Optimum.Holding.logistic_weighted` → `Becoming.Optimum.frontier_gains_weighted` → (three more between) → `Becoming.Optimum.Next.drawable_le_of_gains` → `Becoming.Amounts.le_by_exchange`, listed under [The least loss as a premise of rest](g.md#least-loss-rest).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Optimum.Next.outpaced_greatest`: in `Becoming.Optimum.Next.exhausting_frontier` and `Becoming.Optimum.Next.frontier_exhausts`, listed under [Others drawing first end the base](#others-drawing-first-end-the-base).
+    - `Becoming.Optimum.exhausting_frontier`: in `Becoming.Optimum.Holding.doubling_rebuilds`, listed under [Every optimum rebuilds a depleted base](h.md#optima-rebuild-a-depleted-base).
+    - `Becoming.Optimum.frontier_exhausts`: in `Becoming.Optimum.Holding.doubling_rebuilds`, listed under [Every optimum rebuilds a depleted base](h.md#optima-rebuild-a-depleted-base).
 
 <a id="horizon-optima-hold-the-greatest-renewal"></a>
 ### Courses over a horizon
@@ -656,6 +746,11 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Valuing what is left where the most left is not regrown in one step; several optimizers ranking whole courses. ([05-COLLECTIVES.md#open](../../../chapters/05-COLLECTIVES.md#open))
 - **Beyond its couplings.** In a witness under a gate, where some level of greatest renewal meets a need and some do not, holding at the need and holding below are both optima and take the same: the order by the draw takes in nothing of the dependence. A dependence above every level of greatest renewal, met at the start, is broken at the first step at every worth on what is left.
 - **Sources.** [05-COLLECTIVES.md#r-horizon-optima-hold-the-greatest-renewal](../../../chapters/05-COLLECTIVES.md#r-horizon-optima-hold-the-greatest-renewal), [05-COLLECTIVES.md#r-valuing-what-is-left-at-the-horizon](../../../chapters/05-COLLECTIVES.md#r-valuing-what-is-left-at-the-horizon), [05-COLLECTIVES.md#r-valuing-what-is-left-at-any-worth](../../../chapters/05-COLLECTIVES.md#r-valuing-what-is-left-at-any-worth), [05-COLLECTIVES.md#optimum-cases](../../../chapters/05-COLLECTIVES.md#optimum-cases)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Optimum.Holding.gated_alike`: in `Becoming.Optimum.Holding.gated_in_turn`, listed under [Several drawers: drawers in turn and at once](#drawers-in-turn).
+    - `Becoming.Optimum.holding_most`: in `Becoming.Optimum.continued_holding_stepwise_frontier`, listed under [A coupling for each step kept](h.md#a-step-coupling-keeps-at-every-horizon).
 
 <a id="keeping-forgoes-the-renewal-at-the-need"></a>
 ### What keeping forgoes, and a coupling against it
@@ -690,6 +785,12 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That the dependence ought to be kept or a coupling set: no evaluation enters; the laws say which optima a coupling leaves. ([keeping-forgoes-the-renewal-at-the-need.md#does-not-show--未表明](../../records/keeping-forgoes-the-renewal-at-the-need.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [05-COLLECTIVES.md#r-keeping-forgoes-the-renewal-at-the-need](../../../chapters/05-COLLECTIVES.md#r-keeping-forgoes-the-renewal-at-the-need), [05-COLLECTIVES.md#optimum-cases](../../../chapters/05-COLLECTIVES.md#optimum-cases)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.Optimum.Holding.logistic_coupled` → `Becoming.Optimum.continued_breaking_frontier` → `Becoming.Optimum.holding_most`, listed under [Courses over a horizon](#horizon-optima-hold-the-greatest-renewal).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Web.frontier_breaks_below`: in `Becoming.Web.frontier_breaks_stepwise_long`, listed under [A coupling for each step kept](h.md#a-step-coupling-keeps-at-every-horizon).
 
 <a id="what-a-rise-draws-from-beyond"></a>
 ### What a rise draws from beyond
@@ -749,6 +850,11 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Replenishment from outside the whole. ([05-COLLECTIVES.md#open](../../../chapters/05-COLLECTIVES.md#open))
 - **Beyond its couplings.** Past the slack of the dependences there one breaks, unseen by a selection rewarding the rise; in Diversion the store's rise ends the dweller, unseen by the selection through the taker; in TwoDrawers each take is within the joint slack, the joint draw ends a third formation, and one drawer's restraint keeps it.
 - **Sources.** [05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond](../../../chapters/05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond), [05-COLLECTIVES.md#r-raising-what-couples-in-draws-from-beyond](../../../chapters/05-COLLECTIVES.md#r-raising-what-couples-in-draws-from-beyond), [05-COLLECTIVES.md#r-a-rise-past-the-inflow-is-drawn-from-beyond](../../../chapters/05-COLLECTIVES.md#r-a-rise-past-the-inflow-is-drawn-from-beyond), [COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions](../../../COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Flow.Balances.beyond_falls_exactly`: in `Becoming.Flow.Balances.family_le_iff` and `Becoming.Flow.keeping_optimum_takes_slack`, listed under [What an optimum does beyond what couples in](#what-an-optimum-does-beyond-what-couples-in); in `Becoming.Flow.Balances.atSetPoint_draws`, listed under [An order with a set point](#what-a-set-point-optimum-does-beyond).
+  - *Listed here and under another dynamic, by hand.* `Becoming.Flow.Balances.broken_iff`, also under [Restraint within the joint slack keeps the need](h.md#restraint-within-the-joint-slack); `Becoming.Flow.Balances.broken_shared`, also under [Restraint within the joint slack keeps the need](h.md#restraint-within-the-joint-slack); `Becoming.Flow.Balances.kept_of_restrained`, also under [Restraint within the joint slack keeps the need](h.md#restraint-within-the-joint-slack); `Becoming.TwoDrawers.broken`, also under [Restraint within the joint slack keeps the need](h.md#restraint-within-the-joint-slack); `Becoming.TwoDrawers.restrained_kept`, also under [Restraint within the joint slack keeps the need](h.md#restraint-within-the-joint-slack). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="risk-minimization-on-a-shared-renewal"></a>
 ### Risk minimization on a shared renewal
@@ -785,6 +891,13 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Conditions under which a shared reading of the joint outcome keeps a collective going. ([risk-minimization-on-a-shared-renewal.md#next--下一步](../../records/risk-minimization-on-a-shared-renewal.md#next--下一步))
 - **Beyond its couplings.** In the held pair, a witness, each goal is met, each store at its set point, while the pool's renewal ends from step two, unseen by either; neither couples into the pool.
 - **Sources.** [05-COLLECTIVES.md#r-risk-minimization-on-a-shared-renewal](../../../chapters/05-COLLECTIVES.md#r-risk-minimization-on-a-shared-renewal), [05-COLLECTIVES.md#r-the-rest-outruns-the-renewal](../../../chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal), [05-COLLECTIVES.md#r-what-a-set-point-optimum-does-beyond](../../../chapters/05-COLLECTIVES.md#r-what-a-set-point-optimum-does-beyond)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Flow.ends_below`, in `Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.three_end`, listed under [Loss of renewal for good](a.md#loss-of-renewal-for-good).
+    - `Becoming.Flow.stays_below`, in `Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.three_end`; `Becoming.Flow.ends_below`, in `Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.three_end`; `Becoming.Exceeding.own_not_joint`, in `Becoming.FreeEnergyGuarantees.SharedModels.alike_not_one`; `Becoming.Exceeding.all_end`, in `Becoming.FreeEnergyGuarantees.SharedModels.alike_not_one`; and 1 more in the data file, listed under [Own count misses joint excess](#own-count-misses-joint-excess).
+    - `Becoming.Flow.outrun_below`, in `Becoming.FreeEnergyGuarantees.RiskAndNeeds.need_ends` (told above as a case) and `Becoming.FreeEnergyGuarantees.RiskAndNeeds.expectation_not_course`; `Becoming.Flow.outrun_ends`, in `Becoming.FreeEnergyGuarantees.RiskAndNeeds.need_ends` (told above as a case); `Becoming.Flow.outrun_reading_alike`, in `Becoming.FreeEnergyGuarantees.RiskAndNeeds.restraint_unread` (told above as a case), listed under [The rest outruns the renewal](#the-rest-outruns-the-renewal).
+    - `Becoming.Optimum.HeldPair.held_end`, in `Becoming.FreeEnergyGuarantees.SharedModels.held_not_one`, listed under [An order with a set point](#what-a-set-point-optimum-does-beyond).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
 
 <a id="where-a-rising-take-ends"></a>
 ### Where a rising take ends
@@ -817,6 +930,12 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That the rising take is a case of the meta-attractor: the rise is supplied here, not derived from what taking gains (D46). ([where-a-rising-take-ends.md#does-not-show--未表明](../../records/where-a-rising-take-ends.md#does-not-show--未表明))
 - **Beyond its couplings.** Where renewal depends on what it renews and the seeker stays active while the level is at least m, from a step within the window on every formation depending on the condition at such a need is inactive.
 - **Sources.** [02-MAP.md#r-where-a-rising-take-ends](../../../chapters/02-MAP.md#r-where-a-rising-take-ends)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Flow.ends_below`, in `Becoming.Flow.seeking_exhausts`, listed under [Loss of renewal for good](a.md#loss-of-renewal-for-good).
+    - `Becoming.Flow.excess_bounded`, in `Becoming.Flow.beyond_given_bounded`, listed under [Consumption ends with its feeders](a.md#consumption-ends-with-feeders).
+    - `Becoming.Flow.excess_bounded`, in `Becoming.Flow.beyond_given_bounded`; `Becoming.Flow.stays_below`, in `Becoming.Flow.seeking_exhausts`; `Becoming.Flow.ends_below`, in `Becoming.Flow.seeking_exhausts`, listed under [Own count misses joint excess](#own-count-misses-joint-excess).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
 
 <a id="position-does-not-protect"></a>
 ### Position does not protect
@@ -861,6 +980,13 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [Conjecture, from an earlier account; not formalized.] The ends a selection for position can reach: a frozen mutual destruction, a deadlocked structure of power, the parts coming to read themselves as one whole, collapse, and winner takes all; which of them the theorems of position, capture and joint excess admit, and under which hypotheses. ([05-COLLECTIVES.md#open](../../../chapters/05-COLLECTIVES.md#open))
 - **Beyond its couplings.** In the clearing witness, what the continuing greatest part ends has significance only under a significance (Conditional): under the continuation condition, one significance counting the loss and not the only one, the clearer's part loses the dweller from every standpoint, and where nothing has significance an empty predicate counts no loss, though the dweller still ends.
 - **Sources.** [05-COLLECTIVES.md#r-relative-position-is-zero-sum](../../../chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum), [05-COLLECTIVES.md#r-what-position-reads](../../../chapters/05-COLLECTIVES.md#r-what-position-reads)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Flow.ends_below_at`, in `Becoming.Flow.ends_at_race_end` (told above as a case), listed under [Loss of renewal for good](a.md#loss-of-renewal-for-good).
+    - `Becoming.Flow.stays_below`, in `Becoming.Flow.race_ends_greatest`; `Becoming.Flow.joint_excess_ends`, in `Becoming.Flow.race_ends_greatest`, `Becoming.Race.greatest_ends` and `Becoming.Clearing.greatest_continues`, listed under [Own count misses joint excess](#own-count-misses-joint-excess).
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.Clearing.loss_needs_significance` → `Becoming.Clearing.clearer_loses_dweller` → `Becoming.Clearing.admitted_all_without` → `Becoming.Flow.WithheldLevels.unique`, listed under [What closes what can form: a net draw on a required condition](g.md#closing-needs-net-draw).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
 
 <a id="no-finite-part-bears-taking"></a>
 ### No finite part bears taking
@@ -908,6 +1034,14 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Real amounts, damping strengths, continuous time, infinitely many conditions. ([02-MAP.md#open](../../../chapters/02-MAP.md#open))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [02-MAP.md#r-no-finite-part-bears-taking](../../../chapters/02-MAP.md#r-no-finite-part-bears-taking), [02-MAP.md#r-far-conveying-runs-the-family-down](../../../chapters/02-MAP.md#r-far-conveying-runs-the-family-down)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.Flow.conveyed_loses` → `Becoming.Flow.takers_within_on` → `Becoming.Amounts.losses_within`, listed under [The least loss as a premise of rest](g.md#least-loss-rest).
+    - `Becoming.Flow.Balances.taking_not_recurring` → `Becoming.Flow.taking_not_recurring_from` → `Becoming.Amounts.family_rests_of_archimedean` → `Becoming.Amounts.rests_of_archimedean`, listed under [The least loss as a premise of rest](g.md#least-loss-rest).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Cycle.closed_more`: in `Becoming.World.exchange_needs`, listed under [The rest theorem](g.md#continued-change-needs-openness).
+  - *Listed here and under another dynamic, by hand.* `Becoming.Flow.Dissipative.opens`, also under [A continuing family cannot go unfed from beyond](h.md#continuing-self-fed-from-beyond); `Becoming.Flow.Dissipative.finite_taking_not_recurring`, also under [A continuing family cannot go unfed from beyond](h.md#continuing-self-fed-from-beyond); `Becoming.Cycle.closed_more`, also under [A closed cycle sustains unceasing arising, without dissipation](f.md#closed-cycle-without-dissipation). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="whole-drawing-beyond-renewal-ends"></a>
 ### A whole drawing beyond renewal ends
@@ -944,6 +1078,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That actual collectives meet the premises, above all that new members arise only where what is drawn stands at their need: that is the reading carried by OPENING's sentence. ([whole-drawing-beyond-renewal-ends.md#does-not-show--未表明](../../records/whole-drawing-beyond-renewal-ends.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [05-COLLECTIVES.md#r-whole-drawing-beyond-renewal-ends](../../../chapters/05-COLLECTIVES.md#r-whole-drawing-beyond-renewal-ends)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Flow.family_excess_ends`, in `Becoming.Web.Whole.family_excess_ends`, listed under [Groups with less leave nothing; groups on one family end together](a.md#selection-among-groups-by-ending).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
 
 <a id="loss-beyond-a-region"></a>
 ### Loss beyond a region
@@ -974,6 +1112,11 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - An empirical target, not a premise: that reality generally develops more shared and more responsive renewal forbids nothing measurable as stated. A part can go on while closing what lies beyond its dependence (Clearing.loses_beyond), so persistence alone does not select widening; over which runs, or how fast, it should hold is unsaid. ([02-MAP.md#open](../../../chapters/02-MAP.md#open))
 - **Beyond its couplings.** From step 2 on the dweller beyond the clearer and its source is admitted without the clearer's part and not with it; the region along dependence omits the dweller, whose habitat the clearer draws on: drawing is not dependence.
 - **Sources.** [07-SIGNIFICANCE.md#r-loss-beyond-a-region](../../../chapters/07-SIGNIFICANCE.md#r-loss-beyond-a-region)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.Clearing.loses_beyond` → `Becoming.Clearing.admitted_without` → `Becoming.Flow.WithheldLevels.unique`, listed under [What closes what can form: a net draw on a required condition](g.md#closing-needs-net-draw).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
 
 <a id="the-test-season-meets-the-optimum-laws"></a>
 ### LA4's season
@@ -1011,6 +1154,13 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Room over a course of steps with the learner choosing again at each: room here is over a season's outcomes. ([the-test-season-meets-the-optimum-laws.md#does-not-show--未表明](../../records/the-test-season-meets-the-optimum-laws.md#does-not-show--未表明))
 - **Beyond its couplings.** Every optimum of every order rising with the catch empties the bay; seven times the catch plus the bay left ranks eligible seasons as the catch first and the bay second, so that score's optima empty it too.
 - **Sources.** [05-COLLECTIVES.md#r-the-test-season-meets-the-optimum-laws](../../../chapters/05-COLLECTIVES.md#r-the-test-season-meets-the-optimum-laws), [05-COLLECTIVES.md#t3](../../../chapters/05-COLLECTIVES.md#t3)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.Optimum.Season.bay_drained` → `Becoming.Optimum.least_of_shared` → `Becoming.Optimum.least_of_room`, listed under [What an optimum does beyond what couples in](#what-an-optimum-does-beyond-what-couples-in).
+    - `Becoming.Optimum.Season.bay_drained` → `Becoming.Optimum.least_of_shared` → `Becoming.Optimum.Shared.room`, listed under [What an optimum does beyond what couples in](#what-an-optimum-does-beyond-what-couples-in).
+    - `Becoming.Optimum.Season.after_drained` → `Becoming.Optimum.Season.lex_rising` → `Becoming.Optimum.Rising.mono`, listed under [What an optimum does beyond what couples in](#what-an-optimum-does-beyond-what-couples-in).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
 
 <a id="unselected-beyond-the-coupling-closure"></a>
 ### Selection blind beyond the coupling closure
@@ -1124,6 +1274,17 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Which class a center's own line runs under, and that significance is own closure: a free significance is the case of what the dynamics leave open. ([route-b-universal-form-closed.md#does-not-show--未表明](../../records/route-b-universal-form-closed.md#does-not-show--未表明))
 - **Beyond its couplings.** In Clearing, a witness, every selection through the clearer's couplings selects the cleared and the spared world alike at every step while the dweller is ended in the first and not the second; every pool holding the dweller separates them, while everything outside the clearer's part exchanges alike in them: separated, not responded. In Diversion, a witness, a selection through the taker's couplings holds of the flow drawing from the dweller's source and fails of the undiverted one, and every such selection selects it alike with a supplying flow that reaches nothing beyond, the dweller unsupported only in the first of those two. A consequence of an act beyond the union of the closures is, at no step, a selection through the pooled coupling of a group within it; a formation whose admission the act changes lies beyond the acting pool's closure and separates the flows. With the same formations present, both courses balanced at a condition and on what couples into formations outside the part's responsive reach, those conditions alike at the start, each formation outside the part exchanging alike where the courses are alike through its couplings, and nothing within the reach exchanging with the condition from step s on, the courses are alike there at a later step exactly where they are alike at s: a difference neither opens nor closes. From a returning standpoint, for any coupling by level, what lies beyond its coupling closure has, read as own closure along affecting and held de se, no significance from it at any step (Flow.returning_beyond_coupling).
 - **Sources.** [03-KNOWING.md#r-selection-through-couplings](../../../chapters/03-KNOWING.md#r-selection-through-couplings), [07-SIGNIFICANCE.md#r-the-gap-for-ones-own-act](../../../chapters/07-SIGNIFICANCE.md#r-the-gap-for-ones-own-act), [05-COLLECTIVES.md#r-what-pooled-coupling-reaches](../../../chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches), [05-COLLECTIVES.md#r-what-a-pools-acts-respond-to](../../../chapters/05-COLLECTIVES.md#r-what-a-pools-acts-respond-to), [02-MAP.md#r-where-two-courses-rejoin](../../../chapters/02-MAP.md#r-where-two-courses-rejoin), [07-SIGNIFICANCE.md#r-selection-read-off-continuations](../../../chapters/07-SIGNIFICANCE.md#r-selection-read-off-continuations), [07-SIGNIFICANCE.md#r-where-the-blindness-lifts](../../../chapters/07-SIGNIFICANCE.md#r-where-the-blindness-lifts), [07-SIGNIFICANCE.md#r-route-b-universal-form-closed](../../../chapters/07-SIGNIFICANCE.md#r-route-b-universal-form-closed), [07-SIGNIFICANCE.md#r-covering-by-the-returning-formations](../../../chapters/07-SIGNIFICANCE.md#r-covering-by-the-returning-formations), [07-SIGNIFICANCE.md#beyond-coupling](../../../chapters/07-SIGNIFICANCE.md#beyond-coupling)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.ownClosure_not_unrestricted_of_acyclic`, in `Becoming.routeB_universal_closed`, listed under [Mutual dependence, and the exponential pace that loops of couplings give](h.md#mutual-dependence-and-its-pace).
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.Clearing.within_closure_unseparated` → `Becoming.Clearing.admitted_without` → `Becoming.Flow.WithheldLevels.unique`, listed under [What closes what can form: a net draw on a required condition](g.md#closing-needs-net-draw).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Flow.unselected_beyond_coupling`: in `Becoming.ChoiceCountCapture.unchosen_beyond_coupling`, listed under [A chooser's rule read from the count of its choices](c.md#capture-by-counted-choices).
+    - `Becoming.act_courses_unselected`: in `Becoming.Training.trained_alike_beyond_closure`, listed under [What training installs](d.md#what-training-installs).
+    - `Becoming.act_courses_unselected_throughout`: in `Becoming.reader_kept_alike`, listed under [A selection read off the pool its own course gives registers no removal](#selection-read-off-its-own-survivors); in `Becoming.line_standing_unselected`, listed under [Readings carried along a line, told apart by its standing late only within its coupling closure](h.md#readings-carried-and-filtered).
+    - `Becoming.significance_courses_unselected`: in `Becoming.line_standing_unselected_of_reads`, listed under [Readings carried along a line, told apart by its standing late only within its coupling closure](h.md#readings-carried-and-filtered).
+  - *Listed here and under another dynamic, by hand.* `Becoming.Flow.unselected_beyond_coupling`, also under [Where seeking rests: more than now never does, above all others never for two](d.md#seeking-boundary). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="selection-read-off-its-own-survivors"></a>
 ### A selection read off the pool its own course gives registers no removal
@@ -1160,6 +1321,11 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - A reading in time for a pool read off the course: reading-a-loss-in-time states it for a group fixed across the two courses. ([a-loss-read-before-its-point-of-no-return.md#does-not-show--未表明](../../records/a-loss-read-before-its-point-of-no-return.md#does-not-show--未表明))
 - **Beyond its couplings.** In the witness where the dweller's line renews the source, the course removing it removes the selecting line too, and selection by persistence read off the course's pool still passes it: what turns there is the line's own persistence, not the selection read off its survivors (Habitat.clearedBack_removes_both, Habitat.clearedBack_survivors_pass).
 - **Sources.** [07-SIGNIFICANCE.md#r-a-selection-removing-its-readers](../../../chapters/07-SIGNIFICANCE.md#r-a-selection-removing-its-readers), [07-SIGNIFICANCE.md#readings-persist](../../../chapters/07-SIGNIFICANCE.md#readings-persist)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.act_courses_unselected_throughout`, in `Becoming.reader_kept_alike` (told above as a case), listed under [Selection blind beyond the coupling closure](#unselected-beyond-the-coupling-closure).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.reader_kept_alike`: in `Becoming.standingCount_unselected`, listed under [Readings revised at descent: a share moving by selection and revision, locked where closed under revision](h.md#readings-revised-spread-and-locked).
 
 <a id="reading-a-loss-in-time"></a>
 ### Reading in time: a selection read off continuation reads a loss before its point of no return, or too late
@@ -1213,5 +1379,11 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That the first step apart comes when the route arrives: what arrives can stay within the members' margins. ([when-a-selection-read-off-continuation-reads.md#does-not-show--未表明](../../records/when-a-selection-read-off-continuation-reads.md#does-not-show--未表明))
 - **Beyond its couplings.** In FourReaders the dweller still stands at the point of no return and ends a step later; a reader of its own continuation is first apart only then, after the loss has happened (FourReaders.dweller_late, a witness).
 - **Sources.** [07-SIGNIFICANCE.md#reading-in-time](../../../chapters/07-SIGNIFICANCE.md#reading-in-time), [07-SIGNIFICANCE.md#r-when-a-selection-read-off-continuation-reads](../../../chapters/07-SIGNIFICANCE.md#r-when-a-selection-read-off-continuation-reads), [07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return](../../../chapters/07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return), [07-SIGNIFICANCE.md#r-the-route-is-the-relation-in-time](../../../chapters/07-SIGNIFICANCE.md#r-the-route-is-the-relation-in-time)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.FourReaders.recoverable_iff_regime` → `Becoming.FourReaders.regime_point` → `Becoming.RegimeMargin.ends_iff_below`, listed under [The point of no return of a regime](a.md#margin-of-a-regime).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.NoReturnAt.recoverable_iff`: in `Becoming.TurningInTime.turns_in_time_iff_before`, listed under [A line that ends where the net ends, or while the net goes on](a.md#turning-in-time).
 
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), **B**, [C](c.md), [D](d.md), [E](e.md), [F](f.md), [G](g.md), [H](h.md).
