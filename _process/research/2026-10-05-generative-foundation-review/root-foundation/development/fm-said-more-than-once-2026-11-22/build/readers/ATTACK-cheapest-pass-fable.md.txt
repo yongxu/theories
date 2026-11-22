@@ -1,0 +1,149 @@
+# Attack on the brief "eleven old inductions made calls": the cheapest pass that gains nothing
+
+*AI-written (Claude Fable 5.2, model id claude-fable-5-2), a reader for board row FM, 22 November 2026, 15:56 to 16:20 (+07). Read only: no Lean run, no build, nothing in the repository edited but this file. OPENED = I read the source or ran the command myself; TOLD = I rely on a document. "Not built" = the Lean term was not elaborated by anyone.*
+
+Files read, by sha256 (first 16): brief `1eb90123c9a102d2`; `Rows.lean` `a2294fb805d03d4a`; `compare.py` `e876a47a5499efdf`; `members.json` `66955f16b95da035`; `run-after.sh` `b8ee0fd0b1869573`; `run-stub.sh` `8241ce8d742e665f`. **`compare.py` changed while I was reading** (my first read, of 6,557 bytes, had no `HEADS`; the file of 15:55:59, 7,198 bytes, adds "of those, with an induction of their own" from row DJ's list). Everything below is of the later file. Simulations ran on a byte copy of `compare.py` in my scratchpad with main's `rows.txt` on both sides; they exercise the source checks (C5, C6, C7, the line counts), not C1 to C3.
+
+## 0. The answer
+
+The cheapest pass is to change nothing: `compare.py` then prints `C1 to C7: all pass` (run 0 below). The cheapest pass with all eleven "kept as calls" and every line of `compare.txt` clean, none of them a call of the law:
+
+```lean
+theorem kept_along … (h : E s s') : ∀ n, E (orbit next s n) (orbit next s' n) :=
+  fun n => (fun _ => Nat.recAux h (fun _ ih => keeps _ _ ih) n) @KeepsRelation.run
+```
+
+(not built). The member's own induction, written with a wrapper of `Nat.rec` that `isRecursor` does not list, one line shorter because `| 0 =>` and `| n + 1 =>` share a line, with the expected name as a dead argument. `inductions after []`, `expected uses missing []`, 2 → 1 lines, statement untouched, no declaration added, C1 to C7 pass. The same shape serves all eleven. That the lister is blind to it is not a guess: on main it already prints `inductions []` for two theorems whose proof head is `Nat.strongRecOn` (H1).
+
+For the honest build the holes that matter are not that one. They are: the line rule (six of the eleven paper calls have **more** text than the induction they replace and pass by packing; a proof begun on the statement's line is counted short by rule 3 as written), member 3 standing on member 1, member 10 being a twin and not a case, and the last line of `compare.txt` saying `all pass` over anything rule 4 forbids. Section 4 ranks them.
+
+## 1. What each check tests, and what it lets through
+
+| Check | What the code tests (OPENED, `compare.py` and `Rows.lean` line by line) | What it lets through |
+|---|---|---|
+| **C1** `compare.py:62-64` | The set of (module, name, kind) over rows. A row exists for a constant of the eight modules unless `c.isInternal || skipLast c` (`Rows.lean:73`). | Every `private` declaration (`Name.isInternal` is true of any name with a component beginning `_`, so of `_private.…`; toolchain `Lean/Data/Name.lean:124-127`, OPENED). Every declaration whose last name part begins `eq_`, `match_`, `proof_`, `_`, or is `inj`, `injEq`, `sizeOf_spec`, `noConfusion` (`Rows.lean:45-50`): a new `theorem eq_aux` or `def proof_x` is no row. Every declaration of a module that is not one of the eight (`Rows.lean:78`). Attributes, `protected`, docstrings: not in a row. |
+| **C2** `:65-66` | `levels`, `binders`, `body` equal for every name in both row sets. `toString` of an `Expr` is `Expr.dbgToString` (`Lean/Expr.lean:1496`); in main's rows it shows universe levels (`Becoming.Frame.{u, v, w}`), bound variables as indices, inner binder names and kinds (`forall (a : #2)`, `forall {x : #1}`). No row contains `mdata`, so how it prints is not seen. | Nothing semantic that I could find, for the 1,393 listed. Not covered: the declarations C1 does not list. Sound as far as read. Possible false FAIL: none found (the hygiene numbers in about 100 statements, `…_hygCtx._hyg.n`, are keyed to the declaration's name, `Lean/Elab/Command.lean:553-575`, and moving a theorem does not change them). |
+| **C3** `:67-69` | For theorems not among the eleven: `head`, `uses`, `recursors` equal. | Values of `def`s (left to C6). Possible false FAIL, not verifiable without Lean: a moved block (`«核则不可致诘»`, head its own `match_1_1`) whose matcher Lean shares with an earlier theorem after the move would change `head`. In main's rows no theorem has a matcher of another declaration as head. |
+| **C5** `:100-101` | Lines beginning `import ` equal. | Nothing C6 does not also see. Redundant. |
+| **C6** `:102-118` | With every member's block and the three "moved with" blocks cut out of both files, and runs of blank lines collapsed, the remaining lines are equal in order. A block is: from the `/--` line reached by walking up through non-blank lines, to the first blank line after the header (`block()`, `:33-51`). | **Where** any block sits: `may_move` is read nowhere in `compare.py` (`grep -c may_move` → 0), so all eleven members and the three blocks may go anywhere in their module. **Everything inside a member's block in the after file**: its docstring, lines between docstring and header, and any further command after the proof with no blank line before it (`open Iteration`, `private def …`, `attribute […]`). False FAIL: a block moved to the very end of a file leaves a trailing blank line and C6 fails (seen in my first simulation). |
+| **C7** `:119` | The three "moved with" blocks, as `block()` cuts them, are equal line for line. | Nothing found. (If a blank line after one is removed, the block swallows its neighbour and C7 fails: good.) |
+| MEMBER line `:70-89` | Prints facts. **None enters `ok`.** | A kept member with an induction left, a missing name, no fewer lines, a line of 118 characters, a reworded docstring: the last line still says `all pass`. |
+| `inductions after` | `recursors` minus `NOT_INDUCTION`; `recursors` = constants used by the term and by auxiliaries **under the theorem's own name** (`Rows.lean:36`) whose last name part is `brecOn`, `rec`, `recOn`, `binductionOn` or `fix` (`:40-43`). | H1 to H4 below. |
+| `expected uses missing` | The names are in `uses` (package theorems used by the term and its own auxiliaries). | Presence only: a dead argument satisfies it. `uses` lists **theorems** of modules named `Becoming.*` only (`Rows.lean:92-96`): a `def` that is a proof is never shown, nor any of the 23 theorems of `GenerativeCore` (module name without the prefix; OPENED, `Frame.lean:3`). |
+| `with an induction of their own` | `HEADS.get(u)` from the list Lean printed **on main**. | Always non-empty for an honest call (`postfixed_in_iter`, `iter_pred`, `iter_within`, `KeepsRelation.run`, `closed_orbit`, `iter_eq_orbit` are all `['Nat.brecOn']` there, OPENED), so the signal is buried. Stale for member 3: `Alike.alikeTo` stays `['Nat.brecOn']` on main's list whether member 1 was kept or not. Silent for any name not on main's list (a helper added in the after tree): `HEADS.get` gives `None`, read as "no induction". |
+| Build clean, no axiom (rule 4, first bullet) | **Nothing in `compare.py`.** There is no C4. `scratch_build.py` exits 0 on a warning (`unclean`, `:100-105`) and audits axioms only for the modules named on its command line; `run-stub.sh` names only the stub. | `sorry` with a dead mention of the expected names: C1 to C7 pass and the MEMBER line is clean. Seen only by whoever reads `build-<n>.log`. |
+| Rows are of these sources | **Nothing.** `rows.txt` and the `.lean` files are read separately. | A source edited (or a member put back) after the last `run-stub.sh`: line counts of the new text beside rows of the old term. |
+
+## 2. The holes, each with its cheapest exploit and the smallest change that closes it
+
+**H1. An induction through a wrapper the lister does not name. OPENED.** `Nat.recAux` (`Init/Data/Nat/Basic.lean:38`), `Nat.strongRecOn` and `Nat.caseStrongRecOn` (`Init/WF.lean:246, 255`), `WellFounded.induction`, `WellFounded.recursion`, `WellFounded.fixF` (`Init/WF.lean:92, 87, 98`), `Nat.div.inductionOn` (`Init/Data/Nat/Div/Basic.lean:59`) all exist in the toolchain (v4.29.1); none ends in a listed suffix, and none is a package theorem, so it appears in **no field of the row**. Evidence that this is live: main's list has `Becoming.Regulation.lateReturn_course_balances | head Nat.strongRecOn | recursors ['Eq.rec'] | inductions []` and `Becoming.TimedResponse.levels_alike_before | head Nat.strongRecOn | recursors [] | inductions []` (sources: `induction t using Nat.strongRecOn`, `Regulation.lean:1063`, `TimedResponse.lean:104`). Functional induction (`f.induct`) is a further candidate; how it would show I could not determine without Lean.
+*Exploit:* the term in section 0; or `by intro n; induction n using Nat.strongRecOn with …`.
+*Closes it (Rows.lean; one rerun of the before rows):* print what the term uses outside the package, so nothing is invisible, and count a recursor by the type being recursive, not by a list of exceptions:
+```lean
+def isRecursor (env : Environment) (c : Name) : Bool :=
+  match c with
+  | .str p s =>
+    if s == "rec" || s == "recOn" || s == "brecOn" || s == "binductionOn" then
+      (match env.find? p with | some (.inductInfo v) => v.isRec | _ => true)
+    else s == "fix" || s == "fixF" || s == "recAux" || s == "strongRecOn" || s == "caseStrongRecOn"
+      || s == "induction" || s == "recursion" || s == "inductionOn" || s == "induct"
+  | _ => false
+-- and, beside `recs`:
+        let foreign := used.filter fun u => match env.find? u with
+          | some (.inductInfo _) | some (.ctorInfo _) | none => false
+          | some _ => match env.getModuleIdxFor? u with
+              | some j => !(`Becoming).isPrefixOf mods[j.toNat]! | none => true
+-- printed as  ", \"foreign\": " ++ jsonList (srt foreign)
+```
+and in `compare.py` print `outside the package {a['foreign']}` on the MEMBER line and fail the member (H9) when a name there has a last part matching `(?i)rec|induct|fix|below|sorry` and is not `Eq.rec`, `Eq.recOn`, `Eq.ndrec`, `HEq.rec`, `HEq.recOn`. The name list alone is the same kind of test as before (the next unlisted wrapper passes); the `foreign` print is what closes it, because an honest call's list is short (`Iff.mp`, `Iff.mpr`, `And.casesOn`, `Exists.casesOn`, `Eq.mpr`, `congrFun`, the numerals) and a reader sees anything else. `foreign` also shows `sorryAx` and the `GenerativeCore` theorems.
+
+**H2. `Acc.rec` is listed by Lean and then dropped. OPENED** (`compare.py:13`). Induction on accessibility (`(Nat.lt_wfRel.wf.apply n).rec …`) is strong induction and prints `inductions after []`. No theorem of the eight modules has `Acc.rec` in main's rows (census of `before/rows.txt`), so the exception buys nothing here. *Closes it:* remove `"Acc.rec"` from `NOT_INDUCTION` (with H1's `isRec` test the set can go altogether, plus the `ndrec` names).
+
+**H3. A declaration added inside a member's block. OPENED at the source level** (simulation: after member 2's proof, with no blank line, an `open Iteration` line and a four-line `private def selfAux … | 0, _ => … | k + 1, _ => …` holding member 3's old induction; member 3 as `fun k s => (fun _ => selfAux F k s) (Alike.alikeTo k (Alike.refl F s))`: `PASS C6 Likeness`, `PASS C7`, `C1 to C7: all pass`, member 2 "proof lines 7 -> 6", member 3 "4 -> 1"). By reading `Rows.lean`: the private name is no row (C1), a `def` is not in `uses`, and its `brecOn` is not under the member's name, so `inductions after []`. Not built. Members 1, 2 and 3 have four, five and three lines of slack to hide it in.
+*Closes it (compare.py, no Lean):* one line of a member's block may begin a command, the header:
+```python
+CMD = re.compile(r"\s*(@\[|#|(private|protected|theorem|lemma|def|abbrev|instance|example|open|variable|universe|attribute|local|scoped|notation|infixl?|infixr|prefix|postfix|macro|macro_rules|syntax|elab|set_option|section|namespace|end|noncomputable|omit|include|mutual|deriving)\b)")
+extra_cmd = [l for l in src_a[sa + 1:ea] if CMD.match(l)]
+```
+and fail the member when `extra_cmd` is not empty or `same_doc` is false (H9). In `Rows.lean`, to make C1 see private declarations: test `privateToUserName c` instead of `c` at line 73, and narrow `eq_`/`proof_` in `skipLast` to names followed by digits.
+
+**H4. A changed or added module that is not one of the eight. OPENED.** `scratch_build.py:42-49, 57-62` takes every `.lean` under the tree as that module's source. Six of the names a member is to call live outside the eight: the law (`PredicateIteration.lean`), `Parting.iter_iff_continues` (`Parting.lean:420`), `Branching.iter_iff_reachable` (`Attraction.lean:128`; it is not in main's rows at all), `Law.KeepsRelation.run` (`IdentificationRuns.lean:313`). A copy of any of them in `after/Becoming/` with a lemma added, or a statement altered to make a call fit, is built into every member module, and no check looks: simulation with a changed `PredicateIteration.lean` in the tree, `compare.py` silent, `all pass`.
+*Closes it (compare.py):*
+```python
+allowed = {m["module"] + ".lean" for m in members} | {"ScratchCasesStub.lean"}
+stray = sorted(str(p.relative_to(ROOT / "after")) for p in (ROOT / "after").rglob("*.lean")
+               if ".build" not in p.parts and (p.parent != ROOT / "after" / "Becoming" or p.name not in allowed))
+say("C8 only the eight modules in the after tree", not stray, f"other Lean files: {stray}")
+```
+and the stub equal to `before/Becoming/ScratchCasesStub.lean`.
+
+**H5. The line rule counts a proof begun on the statement's line short. OPENED** (simulation, member 8, text of the paper call with `:= fun n s held =>` on the statement's last line: `proof lines 4 -> 1`, for three and a half lines of proof; `statement text same False`, a fact). Rule 3 as written allows it: "the statement's last line is the first line from `theorem` on that ends with `:=` **or is followed by a line beginning with `|`**", and the paper calls of members 4 and 8 each have a line beginning `|`. "So the proof begins on a new line" is a consequence drawn, not a rule. The pressure is exactly here: the brief says members 4, 7, 8, 9 are undone by one more line. Also: a statement line ending `:= by` with no later `:=` or `|` gives `p = None` and `compare.py` dies at `ea - pa` (`:76`) with no output at all.
+*Closes it.* Brief, rule 3: "The statement keeps its lines character for character; ` :=` is added at the end of its last line and nothing else is on that line. The proof is every line after it to the next blank line." Code, in place of the after side's `pa`:
+```python
+n_stmt = pb - sb
+want = [l.rstrip() for l in src_b[sb:pb]]
+stmt_ok = [l.rstrip() for l in src_a[sa:sa + n_stmt]] in (want, want[:-1] + [want[-1] + " :="])
+pa = sa + n_stmt
+```
+and `stmt_ok` enters H9's check.
+
+**H6. "Strictly fewer lines" is passed by packing. OPENED (counts by script on the present sources and the paper terms).**
+
+| # | lines now → paper | non-space characters now → paper | the old proof refilled to 100 columns |
+|---|---|---|---|
+| 1 | 7 → 3 | 240 → 173 | 3 lines |
+| 2 | 7 → 2 | 226 → 126 | 3 |
+| 3 | 4 → 1 | 114 → 30 | 2 |
+| 4 | 7 → 5 | 216 → **247** | 4 |
+| 5 | 4 → 2 | 138 → 126 | 3 |
+| 6 | 5 → 3 | 207 → **222** | 3 |
+| 7 | 3 → 2 | 96 → **139** | 2 |
+| 8 | 4 → 3 | 122 → **194** | 2 |
+| 9 | 4 → 3 | 140 → **165** | 2 |
+| 10 | 2 → 1 | 37 → 23 | 1 |
+| 11 | 2 → 1 | 40 → **47** | 1 |
+
+Six paper calls (4, 6, 7, 8, 9, 11) are longer in text than the inductions they replace; they have fewer lines because the old proofs are laid out loosely and the calls are filled to 100. Laid out alike, only members 2, 3 and 5 are shorter. So a build in which all eleven pass rule 4 can remove "about twenty lines" and add text, and the brief's own criterion ("says the same in as many lines through a detour") is met by line breaks. Total 1,576 → 1,492. (The paper call of member 1 has a line of 102 characters; rewrapped it still fits three.)
+*Closes it.* Smallest: `compare.py` prints `characters {nb_b} -> {nb_a}` (`len(re.sub(r"\s+", "", "\n".join(proof)))`) on the MEMBER line, and the brief's "no gain" paragraph names the measure. If it is to be a rule: "kept only if it has strictly fewer lines and no more characters that are not spaces"; on paper that puts back 4, 6, 7, 8, 9 and 11. Which measure is the owner's choice; as it stands the test can be met while "shorter" is not gained.
+
+**H7. Member 3 stands on member 1. OPENED** (`members.json`: member 3's one expected name is `Becoming.Alike.alikeTo`). If member 1 is put back (the checker's own doubt: the pattern in a `fun` with implicit binders, `bisim` where `alikeStep` is expected), member 3 as `fun k s => (Alike.refl F s).alikeTo k` passes every bullet of rule 4 and is a call of an induction of 14 October, not of the law. *Closes it.* Rule 4, one sentence: "Member 3 is kept only if member 1 is kept." And `carry` from the after rows where it has them: `after[u]["recursors"] if u in after else HEADS.get(u, ["not on main's list"])`.
+
+**H8. Member 10 is a twin, not a case. OPENED** (`IdentificationRuns.lean:313-316` against `GrammarCourse.lean:120-123`). `KeepsRelation.run {T} {rel : S → S → Prop} (keeps : KeepsRelation T rel) {x y} (related : rel x y) : ∀ n, rel ((run T x).state n) ((run T y).state n)` and `kept_along {next} {E : «际» S} (keeps : KeepsRelation next E) {s s'} (h : E s s') : ∀ n, E (orbit next s n) (orbit next s' n)` have the same premises and the same conclusion (`«际» S` is `S → S → Prop`, `Grammar.lean:47`; `Law.run_state` is `rfl`, `Recurrence.lean:325`), and the same two-line proof. Blame: 22 October and 23 October. The brief's "calls of an older general member" and "an OLD proof becomes a case of a more general law" hold of member 11 (`closed_orbit` at one class) and not of member 10. No check can tell; it passes cleanly. *Closes it.* One sentence in the brief: "Member 10's target has the same statement up to `(run T x).state n` for `orbit next s n`; kept, it shows one of two twins calling the other."
+
+**H9. `all pass` says nothing of rule 4. OPENED** (run 0: nothing changed, eleven inductions standing, eleven names missing: `C1 to C7: all pass`; simulation: a line of 118 characters, a reworded docstring, a member moved 800 lines: `all pass`). *Closes it (compare.py, after the MEMBER print):*
+```python
+if changed:
+    say(f"R4 member {m['n']}", not ind and not missing and lines_a < lines_b and wide <= WIDTH and same_doc
+        and stmt_ok and not extra_cmd, "kept: no induction, expected names used, fewer lines, width, docstring, "
+        "statement lines, nothing else in its block")
+```
+and the last line counts kept and put back: `f"{kept} kept, {11 - kept} unchanged"`.
+
+**H10. Moves are not checked. OPENED** (simulation: member 3, `may_move: false`, moved from l. 1205 to after l. 2011: `PASS C6`). A free move lets a member call any later theorem of its module. *Closes it:* in `strip()`, record for each block the number of kept non-blank lines above it, and for each member with `may_move` false require that number equal before and after (`say("C9 …")`); print it for the others.
+
+**H11. Rows not tied to sources; build log not read. OPENED** (section 1). *Closes it:* `run-stub.sh` names the changed modules as targets too and ends with `(cd "$tree/Becoming" && shasum -a 256 *.lean) > "$tree/rows.sources.sha256"`; `compare.py` recomputes the hashes (`say("C0 rows are of these sources", …)`) and reads `after/build-stub.log`: `"unclean": []`, every `with_axioms` `{}`, no `"failed"` (`say("C4 clean build, no axiom", …)`).
+
+## 3. `block()` on the present sources, and the unchanged case
+
+OPENED (a copy of `block()` run on main's eight files): each of the eleven headers and the three "moved with" headers is found exactly once, and the block is the right declaration with its whole docstring (members 7 and 9 have docstrings of three and two lines). Proof lines 7, 7, 4, 7, 4, 5, 3, 4, 4, 2, 2 and statement lines 916, 899, 1205, 533, 601, 231, 303, 222, 164, 120, 2495: as in the brief's table. No docstring of the fourteen has a blank line inside (one would be cut there). The eleven statement lines are dated by blame as the table says (14, 14, 15, 23 Oct, 6 Nov, 14, 19, 16, 13, 23, 22 Oct). All twelve expected names of `members.json` are on main's list. Nothing between Likeness 925 and 1097, Lasting 244 and 256, GrammarCandidates 547 and 579 names a moved theorem (grep).
+
+With nothing changed and no after sources: three `PASS`, eleven MEMBER lines each with `inductions after ['Nat.brecOn']` and its names missing, eight `SOURCE …: no changed copy`, then `C1 to C7: all pass (the MEMBER lines are facts to read, not checks)`.
+
+## 4. Which matter for this build
+
+Eleven small proofs, terms on paper, an implementer who follows the letter.
+
+**Matter (the honest path meets them):**
+- **H6** the line measure: on paper six members pass with more text than before. This decides what "about twenty lines removed" means.
+- **H5** proof on the statement's line: the one-line margin of members 4, 7, 8, 9 is where a layout change is tempting, and rule 3's letter permits it for 4 and 8.
+- **H7** member 3 on member 1, and **H8** member 10 a twin: both pass cleanly and are not what the brief says would be shown.
+- **H9** `all pass` over a kept member that breaks rule 4, and **H11** rows of an earlier source: slips, not exploits, and each is a few lines of script.
+- The `carry` field as coded (always non-empty for an honest call, stale for member 3) will be read wrongly.
+
+**Cheap to close, unlikely from this implementer:** H1 and H2 (but the lister's blindness is a fact about main already, so `inductions after []` is not yet the fact it is named), H3, H4, H10.
+
+**Theoretical:** a `def` that is a proof, or a `GenerativeCore` theorem, doing the work unseen in `uses`; matcher sharing failing C3 for a moved block; a block moved to the end of a file failing C6; attributes on a member; `mdata` in a statement.
+
+## 5. Not done, and limits
+
+No Lean was run: every exploit term is unbuilt, and what `Rows.lean` would print for it is from reading the code and the toolchain sources. How `f.induct`, matcher sharing and `mdata` appear in rows is undetermined. I did not read the other readers' returns in this folder. The suggested code was not run.

@@ -1,0 +1,370 @@
+# Check: the cheap calls (no new statement, no new import)
+
+*AI-written (Claude Opus, a checker alone, for board row FM), 22 November 2026. Read only: nothing in the repository edited except this file; no Lean written or run, no lake, no build, no gate, no tests. Every term below is on paper and unbuilt. Scripts are in `/private/tmp/claude-501/-Users-ren-theories/21947b1b-65d1-45e4-bdb9-d3582a76bb12/scratchpad/cc/`: `lib.py` computes import closures from the `import` lines of all 409 modules and runs `git blame`, `run.py` does the joins, `cands_out.json` holds the results, and `cmp.py` compares the Astra-quoted statements with the source.*
+
+Path prefix: `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`. "Blame" is `git blame` of the member's statement line. Where a line was moved, blame gives the date of the move (for example 866370911, 2026-10-20, for much of `Prelude`). Callers come from the `uses` field of `lean-list/all-proof-heads.jsonl`, joined by script. "In closure" is by script.
+
+## Summary
+
+- **OPENED.** **72 members pass points 1 to 3 on paper**: 10 of class (i), 29 → 14 proof lines; 62 of class (ii), 386 → 104. Six of the 72 are only PLAUSIBLE until a build. Every other member the returns claim as a cheap call fails or is dropped; each is listed in section 4 with its reason.
+- **Class (i) gains few lines (−15).** The ten are `kept_along`, `AlikeTo.of_succ`, `«诘之降»`, `stage_mono`, `run_within` and five "a still configuration is its own orbit". Each is 2 to 7 lines now, and the two that lose most need a reorder or a 22-November bridge. What a build would gain there is a link (a case row), not lines.
+- **Nearly all of the line gain is class (ii)**: list membership, totals, bounded search, Bool case splits. By addendum point 1 it is tidying under rule 4.
+- **Claims of the returns not confirmed as cheap calls.**
+  - Pigeonholes reader: 2 of its 5 `total_le_of_support` cases need a theorem moved down (the reader itself says so), and all 3 of its existence forms are M3 as placed (it says that too).
+  - Search reader: its rank-3 `Learning.decideSeen` fails on a universe. That one was not part of its eleven.
+  - Horizons reader: `«诘之降»` passes only once `iter_pred` is qualified (`Iteration.iter_pred`). The reader's term would not resolve where the member stands.
+  - Astra: the in-place rows that fail are listed in section 4; 6 rows need a build to settle.
+  - Detail is under "What fails" and "What could not be confirmed".
+
+---
+
+## 1. The Claude readers' claims
+
+### Search reader, "rank 0" (eleven)
+
+**R1. OPENED.** `HistoryIdeals` l. 461 (blame 951dcdcbe, 2026-10-19).
+- Member: `theorem least_true_or_below (s : Nat → Bool) : ∀ n, (∀ m, m < n → s m = false) ∨ ∃ k, (∀ m, m < k → s m = false) ∧ s k = true`. Its proof is an equation-compiler induction of 11 lines.
+- Callee: `Change` l. 392, `theorem or_first (s : Nat → Bool) : ∀ n, clear s n = true ∨ ∃ m, m < n ∧ clear s m = true ∧ s m = true` (namespace `Clear`, blame 2026-10-10). It is used with l. 387, `theorem false_before (s : Nat → Bool) {t : Nat} (c : clear s t = true) {i : Nat} (lt : i < t) : s i = false`.
+- Call:
+  ```lean
+  fun n => (Clear.or_first s n).imp (fun c m lt => Clear.false_before s c lt)
+    fun ⟨k, _, c, yes⟩ => ⟨k, fun m lt => Clear.false_before s c lt, yes⟩
+  ```
+- Binders: `s` is explicit in all three. In `false_before`, `{t}` and `{i}` are inferred from `c` and `lt`. No bridge is needed. `HistoryIdeals` imports `Change` directly. Statement unchanged: yes.
+- Lines 11 → 2. Class (ii). One caller, in its own module.
+
+**R2. OPENED.** `Stock` l. 347 (2026-10-14).
+- Member: `theorem search (g : Nat → Nat) (N : Nat) : ∀ L, (∃ n, N ≤ n ∧ n < N + L ∧ 0 < g n) ∨ (∀ n, N ≤ n → n < N + L → g n = 0)`.
+- Callee: `Amounts` l. 506 (2026-10-23), `theorem unmarked_or_marked {P : Nat → Prop} (decide : ∀ t, P t ∨ ¬ P t) (S : Nat) : ∀ n, (∃ N, S ≤ N ∧ N < S + n ∧ ¬ P N) ∨ ∀ t, S ≤ t → t < S + n → P t`. No section variable is in force there: the `variable (M)` of l. 100 ends at l. 388.
+- Call:
+  ```lean
+  fun L => (Amounts.unmarked_or_marked (P := fun n => g n = 0) (fun n => Decidable.em (g n = 0))
+    N L).imp (fun ⟨n, le, lt, ne⟩ => ⟨n, le, lt, Nat.pos_of_ne_zero ne⟩) id
+  ```
+- Bridge: `Nat.pos_of_ne_zero`, and `Decidable.em` at Nat equality. Neither brings an axiom (TOLD for core). In closure. Statement unchanged: yes.
+- Lines 12 → 2. Class (ii). One caller, in its own module.
+
+**R3. OPENED.** `CausalGrowth` l. 239 (2026-10-28).
+- Member: `theorem searchBelow_or (p : Nat → Prop) (decided : ∀ z, p z ∨ ¬ p z) : ∀ n, (∃ z, z < n ∧ p z) ∨ ¬ ∃ z, z < n ∧ p z`.
+- Callee: `Decidedness` l. 148 (2026-10-12), `theorem Decided.exists_below {P : Nat → Prop} {M : Nat} : ∀ {U : Nat}, (∀ t, M ≤ t → t < U → Decided (P t)) → Decided (∃ t, M ≤ t ∧ t < U ∧ P t)`. Here `Decided p := p ∨ ¬ p` (l. 100, a `def`, matched on with `.inl`/`.inr` as the callee itself does).
+- Call:
+  ```lean
+  fun n => match Decided.exists_below (P := p) (M := 0) (U := n) fun z _ _ => decided z with
+    | .inl ⟨z, _, below, holds⟩ => .inl ⟨z, below, holds⟩
+    | .inr absent => .inr fun ⟨z, below, holds⟩ => absent ⟨z, Nat.zero_le z, below, holds⟩
+  ```
+- Bridge: `Nat.zero_le`, for the offset 0. In closure. Statement unchanged: yes.
+- Lines 9 → 3. Class (ii). One caller, in its own module.
+
+**R4. OPENED.** `Refinement` l. 77 (2026-10-15).
+- Member: `theorem not_not_within {P : X → Prop} (each : ∀ x, ¬ ¬ P x) : ∀ l : List X, ¬ ¬ ∀ x, x ∈ l → P x`, with `X : Type u`.
+- Callee: `Prelude` l. 718 (2026-11-01), `theorem not_not_all {P : β → Prop} : ∀ {E : List β}, (∀ b, b ∈ E → ¬ ¬ P b) → ¬ ¬ ∀ b, b ∈ E → P b`, with `β : Type v`.
+- Call: `fun l => not_not_all (E := l) fun x _ => each x`. Astra's equivalent is `fun l => gather_listed (G := False) l (fun x _ => each x)`, which is also in closure.
+- Statement unchanged: yes. Lines 5 → 1. Class (ii). One caller (`Identification`).
+
+**R5. OPENED.** `Decidedness` l. 136 (2026-10-12).
+- Member: `theorem Decided.exists_mem {β : Type} {P : β → Prop} : ∀ {l : List β}, (∀ b, b ∈ l → Decided (P b)) → Decided (∃ b, b ∈ l ∧ P b)`.
+- Callee: the same statement at `Type u`, l. 1049 (2026-10-19), **later in the same file**.
+- The callee cannot simply follow its user. `exists_mem` is used at l. 761, 772 and 972, before l. 1049, and in `Listing`. So `exists_listed` (l. 1049–1058) has to move above l. 136.
+- No `universe` is declared in the file's first `namespace Becoming` block: the only declarations are at l. 1041 and l. 1084. A `universe u` line has to be added there to keep the statement word for word.
+- Call: `fun {l} => Decided.exists_listed (l := l)`.
+- Lines 8 → 1, plus a 10-line move and 1 line. Class (ii). Five callers (3 in `Decidedness`, 2 in `Listing`).
+
+**R6. OPENED.** `Undecided` l. 381 (2026-10-19).
+- Member: `theorem each_or_some {A B : X → Prop} : ∀ {l : List X}, (∀ x, x ∈ l → A x ∨ B x) → (∀ x, x ∈ l → A x) ∨ ∃ x, x ∈ l ∧ B x`, with `X : Type u`.
+- Callee: `PredicateIteration` l. 60 (blame 4135a134b, **2026-11-22**), `theorem gather_listed {D : A → Prop} {G : Prop} : ∀ (members : List A), (∀ a, a ∈ members → (D a → G) → G) → ((∀ a, a ∈ members → D a) → G) → G`, with `A : Type u`.
+- Call:
+  ```lean
+  fun {l} each => gather_listed (D := A) l
+    (fun x mem k => (each x mem).elim k fun b => .inr ⟨x, mem, b⟩) Or.inl
+  ```
+- `G` is fixed by the expected type. In closure. Statement unchanged: yes.
+- Lines 7 → 2. Class (ii). Two callers (`Undecided`, `Junctures`).
+
+**R7, R8. OPENED.** `LineOnAStock` l. 242 and l. 254 (2026-11-16; `U : Type`).
+- R7 member: `theorem line_or_none {S : U → Prop} [DecidablePred S] : ∀ w : List U, (∀ u, u ∈ w → ¬ S u) ∨ ∃ u, u ∈ w ∧ S u`.
+- R7 call:
+  ```lean
+  fun w => gather_listed (D := fun u => ¬ S u) w
+    (fun u mem k => (Decidable.em (S u)).elim (fun su => .inr ⟨u, mem, su⟩) k) Or.inl
+  ```
+  The instance binder stays, and `Decidable.em` uses it.
+- R8 member: `theorem met_or_unmet (need : U → Nat) (z : Nat) : ∀ w : List U, (∀ u, u ∈ w → need u ≤ z) ∨ ∃ u, u ∈ w ∧ z < need u`.
+- R8 call:
+  ```lean
+  fun w => gather_listed (D := fun u => need u ≤ z) w
+    (fun u mem k => (Nat.lt_or_ge z (need u)).elim (fun lt => .inr ⟨u, mem, lt⟩) k) Or.inl
+  ```
+  `z ≥ need u` is `need u ≤ z` by `GE.ge`, as the present proof already uses.
+- Both: unchanged; in closure. Lines 8 → 2 each. Class (ii). One caller each, in their own module.
+- Astra's form of these two calls `Undecided.each_or_some`. `Undecided` is **not** in `LineOnAStock`'s closure (Astra's own table says +1), so only the `gather_listed` form is cheap.
+
+**R9. OPENED.** `WideningOnTheMap` l. 237 (2026-10-30).
+- Member: `theorem new_in_list_or_none (dec : ∀ n x, Q n x ∨ ¬ Q n x) (n : Nat) : ∀ l : List X, (∃ x, x ∈ l ∧ Q (n + 1) x ∧ ¬ Q n x) ∨ ∀ x, x ∈ l → Q (n + 1) x → Q n x`, with section variables `{X : Type} {Q : Nat → X → Prop}`.
+- Call through `gather_listed`:
+  ```lean
+  fun l => gather_listed (D := fun x => Q (n + 1) x → Q n x) l
+    (fun x mem k => match dec (n + 1) x, dec n x with
+      | _, .inl earlier => k fun _ => earlier
+      | .inr absent, _ => k fun held => absurd held absent
+      | .inl held, .inr before => .inl ⟨x, mem, held, before⟩) Or.inr
+  ```
+  The match is exhaustive over the four cases.
+- Or through `Undecided.each_or_some` (Astra, 3 lines), also in closure.
+- Unchanged. Lines 13 → 5 (or 3). Class (ii). One caller, in its own module.
+
+**R10. OPENED.** `Contacts` l. 54 (2026-10-14).
+- Member: `theorem mem_or_not (i : I) : ∀ l : List I, i ∈ l ∨ i ∉ l`, under `variable {I : Type} [DecidableEq I]`.
+- Callee: `Dissipation` l. 173, `def decideMem [DecidableEq α] (a : α) : (l : List α) → Decidable (a ∈ l)`, with `α : Type`.
+- Call: `fun l => @Decidable.em (i ∈ l) (decideMem i l)`.
+- Unchanged; in closure. Lines 10 → 1. Class (ii). Three callers, in its own module.
+- Astra's term `em (i ∈ l)` would take core's instance for list membership. Whether that instance brings `propext` was **not checked**. The `decideMem` form avoids the question.
+
+**R11. OPENED.** `InAmounts` l. 1088 (2026-10-21).
+- Member: `theorem decide_mem (h : Bool) : ∀ ds : List Bool, h ∈ ds ∨ ¬ h ∈ ds`.
+- Call: `fun ds => @Decidable.em (h ∈ ds) (decideMem h ds)`, at core's `DecidableEq Bool`.
+- Unchanged. Lines 8 → 1. Class (ii). One caller.
+- Side effect: `decide_eq` (l. 1078, below) loses one of its two callers.
+
+**Search reader's eleven: confirmed 11 of 11. 99 → 22 lines, or 20 with R9 through `each_or_some`.**
+
+### Horizons reader
+
+**H1. OPENED.** `GrammarCourse` l. 120 (blame d13346ced, 2026-10-23).
+- Member: `theorem kept_along {next : S → S} {E : «际» S} (keeps : KeepsRelation next E) {s s' : S} (h : E s s') : ∀ n, E (orbit next s n) (orbit next s' n)`.
+- Callee: `IdentificationRuns` l. 313 (2026-10-22), `theorem KeepsRelation.run {T : S → S} {rel : S → S → Prop} (keeps : KeepsRelation T rel) {x y : S} (related : rel x y) : ∀ n, rel ((run T x).state n) ((run T y).state n)`.
+- `«际» S := S → S → Prop` (`Grammar` l. 47, an `abbrev`). `(run next s).state = orbit next s := rfl` (`Recurrence` l. 325; `run` is `⟨orbit next s, …⟩`).
+- Call: `KeepsRelation.run keeps h`. The implicits `T := next` and `rel := E` come from `keeps`.
+- Direct import. Unchanged. Lines 2 → 1.
+- **Class (i).** A relation kept by each step holds along the course. The definition `Law.KeepsRelation` is the same one (`IdentificationRuns` l. 310). One caller, in its own module.
+- Astra's form (`R` = `WindowedWaiting.course_rel`) is not in closure: none of the members imports `WindowedWaiting`.
+
+**H2. OPENED.** `Likeness` l. 899 (blame f3218d788, 2026-10-14).
+- Member: `theorem AlikeTo.of_succ {F : Frame S A C} {G : Frame S' A C} : ∀ {k : Nat} {s : S} {s' : S'}, AlikeTo F G (k + 1) s s' → AlikeTo F G k s s'`.
+- Bridges, all of 2026-11-22: `iter_iff_alikeTo : ∀ n (p : S × S'), iter (alikeStep F G) agree n p ↔ AlikeTo F G n p.1 p.2` (l. 1094), `alike_mono` (l. 1086), and `Iteration.iter_pred : ∀ n y, iter Φ V₀ (n + 1) y → iter Φ V₀ n y`, whose `mono` and `start` are explicit (`PredicateIteration` l. 103).
+- Call:
+  ```lean
+  fun {k s s'} h => (iter_iff_alikeTo k (s, s')).mp
+    (iter_pred alike_mono (fun _ h => h.1) k (s, s') ((iter_iff_alikeTo (k + 1) (s, s')).mpr h))
+  ```
+  The `start` is `.1` of `alikeStep`, which is `AlikeTo F G 0 p.1 p.2`.
+- **Reorder:** `of_succ` and `down_to` (l. 899–913) move to after l. 1098, inside section `Matching`, where `open Iteration` (l. 1076) and `variable {F G}` (l. 933) are in force. By grep, no use of either lies between l. 913 and l. 1098; the later users are at l. 1239, 1270–1273, 1348, 1380, 1999 and 2007.
+- Unchanged. Lines 7 → 2, plus the move. Class (i). Four callers, all in its own module.
+- Addendum point 4: the bridge is of row FM's own landing of 22 November ("`AlikeTo`'s"). The member itself is old and still carries its own `Nat.brecOn` (Lean list), so it is not already a call. Told so.
+
+**H3. OPENED.** `GrammarCandidates` l. 601 (2026-11-06).
+- Member: `theorem «诘之降» {R E : «际» α} : ∀ k u u', «诘» R E (k + 1) u u' → «诘» R E k u u'`.
+- Bridges, of 2026-11-22: `iter_iff_inquiry` (l. 575) and `inquiry_mono` (l. 569). Both are before the member.
+- **Correction to the return.** `open Iteration` (l. 558) sits inside section `ListedPairs`, which ends at l. 598, and the member is at l. 601. The reader's unqualified `iter_pred` does not resolve there. With the qualification:
+  ```lean
+  fun k u u' h => (iter_iff_inquiry (R := R) (E := E) k (u, u')).mp
+    (Iteration.iter_pred inquiry_mono (fun _ h => h.1) k (u, u') ((iter_iff_inquiry (k + 1) (u, u')).mpr h))
+  ```
+- Universes: `α : Type u` (section `Inquiry`, l. 523) against `S : Type u`. Unchanged. Lines 4 → 3. Class (i). One caller (l. 622).
+
+**Horizons reader: 3 of 3 confirmed, one with the qualification above.**
+
+### Pigeonholes reader
+
+**P1. OPENED.** `Dissipation` l. 129 (2026-10-09 12:15).
+- Member: `theorem total_le_at {q : α → Nat} {a : α} (only : ∀ b, 0 < q b → b = a) : ∀ {as : List α}, Distinct as → total as q ≤ q a`.
+- Callee: `total_le_of_support` at l. 143 (2026-10-09 15:52), **later in the same file**. It has to move above l. 129; it uses only `total_append`, `mem_remove` and `List.append_of_mem`.
+- Call:
+  ```lean
+  fun distinct => Nat.le_trans
+    (total_le_of_support (m := [a]) distinct fun b _ pos =>
+      Eq.subst (motive := fun x => x ∈ [a]) (only b pos).symm (.head []))
+    (Nat.le_of_eq (Nat.add_zero (q a)))
+  ```
+  `total [a] q` reduces to `q a + 0` by `total`'s equations (`Prelude` l. 760), as the member's own proof uses.
+- Unchanged. Lines 9 → 4, plus the reorder. Class (ii). **29 callers** (9 in `Weightings`).
+
+**P2. OPENED.** `Listing` l. 190 (2026-10-13).
+- Member: `theorem total_eq_of_same {q : α → Nat} : ∀ {s s' : List α}, Distinct s → Distinct s' → (∀ a, a ∈ s ↔ a ∈ s') → total s q = total s' q`.
+- Call:
+  ```lean
+  fun distinct distinct' same => Nat.le_antisymm
+    (total_le_of_support distinct fun a mem _ => (same a).mp mem)
+    (total_le_of_support distinct' fun a mem _ => (same a).mpr mem)
+  ```
+- In closure. Unchanged. Lines 19 → 3. Class (ii). Two callers, in its own module.
+
+**P5. OPENED.** `ReadingSchedule` l. 203 (2026-10-21).
+- Member: `theorem total_is_le_one [DecidableEq X] (y : X) : ∀ {cs : List X}, Distinct cs → total cs (fun c => if y = c then 1 else 0) ≤ 1`.
+- Call:
+  ```lean
+  fun distinct => Nat.le_trans
+    (total_le_at (a := y) (fun b pos => if same : y = b then same.symm else
+        absurd (Nat.lt_of_lt_of_le pos (Nat.le_of_eq (if_neg same))) (Nat.lt_irrefl 0)) distinct)
+    (Nat.le_of_eq (if_pos rfl))
+  ```
+  This calls the present P1, not its new form. The instance is used by `if` only, as now.
+- Risk, not checked: whether `?q` is fixed from the expected type before `only` is elaborated.
+- Unchanged. Lines 9 → 4. Class (ii). One caller.
+
+**Pigeonholes reader: 3 of its 5 confirmed.** `Population.length_le_count` (l. 122) and `count_le_of_sub` (l. 156) **fail as placed**: `Dissipation` is not in `Population`'s closure, and `Dissipation` imports `Population`, so a cycle. The reader's own Q3 moves `total_le_of_support` down into `Population`, which is a relocation, not a call in place. **Its three existence forms all fail M3 as placed**: `ReadOffInTime` is not in `Regulation`'s closure (+105), and it would make a cycle for `Likeness` and `HistoryIdeals`. The reader said so itself. `HistoryIdeals.least_true_or_below` is cheap anyway as R1.
+
+---
+
+## 2. The Astra report's rows whose call names a declaration at its present place
+
+**OPENED.** For all 56 such rows `cmp.py` compared the quoted statement with the source, and all are identical. I opened each member's section variables and universes and the callee's binders.
+
+Universes: every list callee here is in `Prelude`'s `ListTests` (`variable {α : Type u} {β : Type v}`, l. 221) or `section Once` (`Type u`, l. 662), so it is universe-polymorphic. No member below is narrowed.
+
+- **S (`ListTests.mem_append_iff`, `Prelude` l. 268, `{a : α} : ∀ {l m}, a ∈ l ++ m ↔ a ∈ l ∨ a ∈ m`; `mem_cons_iff` l. 257).** All pass with Astra's terms, `M := ListTests.mem_append_iff` written qualified outside `ListTests`:
+  - `Prelude` l. 514, 522, 526, 608 and 531, and l. 509 via `mem_cons_iff.mp`. All are after l. 268 and 257.
+  - `Entropy` l. 923; `Cuts` l. 346 and 354; `Weighted` l. 323; `Granularity` l. 78; `GrammarLaws` l. 544.
+  - Lines 6, 5, 4, 2, 2, 2, 2, 2, 2, 2, 2, 2 → 1 each. Class (ii).
+  - Callers: `Prelude.mem_cons_cases` 202, `mem_append_of_left`/`_right` 13 each, `mem_append_cases` 12, `mem_appended_left` 10; the rest 1 to 7.
+- **T (`ListTests.mem_map_iff`, l. 343; `mem_map_of`, l. 350).** All pass:
+  - `Joining` l. 796 (Type u, Type v); `Prelude` l. 557 and 998 (in `ListTests`, after l. 343); `Labels` l. 127 (`Type _`).
+  - `Population` l. 101 (`fun {_} m => ListTests.mem_map_of m`) and l. 105.
+  - `Imbalance` l. 46 (`Option.some.inj`); `Counting` l. 448 (`nomatch` on distinct constructors).
+  - Lines 10, 3, 6, 2, 4, 2, 2, 2 → 1. Class (ii). Callers: `Population.mem_map_of` 41, `Prelude.preimage_of_mem_map` 39.
+- **V.** `Entropy` l. 938 → `fun {_} dl apart => Becoming.distinct_append dl dm apart`. The qualification avoids resolving to itself inside `EntropyLists.`. 6 → 1.
+- **W.** `LineOnAStock` l. 296 `strong_below` → `Identification.below_upto step`. The statements agree up to binder names. 3 → 1.
+- **Z (`GrammarLaws` l. 389, `length_replicate (x : α) : ∀ n, …`).**
+  - `ReaderRebuilding` l. 271: `GrammarLaws.length_replicate j n`.
+  - `RuleRebuilding` l. 305: `GrammarLaws.length_replicate a n`.
+  - `Recurrence` l. 281: `GrammarLaws.length_replicate ()`.
+  - 4, 4, 2 → 1.
+- **AA.** `Prelude` l. 647 (`TreeSearch.append_nil`, `Type`) → `ListTests.append_nil` (l. 478). `TreeSearch` l. 125 → `ListTests.append_assoc`. 2 → 1 each.
+- **AH.** `Frontier` l. 258, `decided_of_decidable (p) [inst : Decidable p] : Decided p` → `Decidable.em p`. `InAmounts` l. 1078, `decide_eq (p : Bool) : ∀ x, x = p ∨ ¬ x = p` → `fun x => Decidable.em (x = p)`. 3 → 1 and 7 → 1. Both proofs are now `match`es; neither has an induction.
+- **AI.** `OrderNormal` l. 1246 → `fun b => (Clear.cases b).symm`. `Change` l. 375 → `fun b => ListTests.false_of_not_true (b := b)` (`¬ b = true` against `b = true → False`, defeq). 2 → 1 each.
+- **AK.** `HexagramLaws` l. 666 → `fun {_} => ListTests.any_true_iff.mp`. 5 → 1.
+- **C.** `ExchangePremises` l. 116 `not_not_listed` (17 lines, `List.brecOn`):
+  ```lean
+  fun {ps} dist no => not_not_all (E := ps) (P := fun a => q a ∨ ¬ q a)
+    (fun a _ k => k (.inr fun h => k (.inl h))) (fun dec => no (listed_of_em q dist dec))
+  ```
+  `listed_of_em` is at l. 94 < 116; `not_not_all` is in `Prelude`. Checked by hand: `no : ¬ ∃ l, …` and the result is `False`. 17 → 2. One caller.
+- **D.** `Identification` l. 1610 `Law.AgreeTo.of_succ` → `fun {k s t} h => agreeTo_iff.mpr fun i le => (agreeTo_iff.mp h) i (Nat.le_succ_of_le le)`. `agreeTo_iff` is at l. 1579, in the same section `Classes` with the variables `next` and `o`. 2 → 1. Class (ii): a weakening of a bounded quantifier through its own characterisation.
+- **E.**
+  - `Undecided` l. 460 `stage_mono` → `fun {_} le => kept_from (Q := fun j => Le (stage sys m i) (stage sys j i)) (fun j h => h.trans (stage_up sys j i)) (.refl _) le`. `kept_from` is at l. 392. 4 → 2. **No callers** (Lean list). Class (i) by the addendum's seed (d), though the call says only that a stepwise rise holds over any span.
+  - `RegimeMargin` l. 2495 `run_within` → `Lasting.closed_orbit band high`, with `K := fun x => ∀ i, x i ≤ hi` and `next := step Drawn.whole G H`. `Band` (l. 2425) is exactly `∀ x, K x → K (next x)`. PLAUSIBLE only (see section 5). Class (i).
+- **H (`Learnable` l. 150, `theorem orbit_of_still {s : S} (still : next s = s) (n : Nat) : Law.orbit next s n = s`, with `next` a section variable).** It is itself a call of `Seeking`'s `Law.fixed_rests` (l. 151). Pass, in closure:
+  - `HexagramLaws` l. 128: `Learnable.orbit_of_still still`.
+  - `ReadOffInTime` l. 1050: `Learnable.orbit_of_still fixed`.
+  - `LineOnAStock` l. 1345: `course` is an `abbrev` of `Law.orbit (step …)` (l. 163).
+  - `SharedCodes` l. 1593 and 1597: `(next := least) (s := .a/.b) rfl`. `least .a` reduces to `.a`, as the present proof already relies on.
+  - 2 → 1 each. **Class (i)**: a configuration the law leaves unchanged is its own course. Callers: 3, 1, 9, 1, 1.
+- **P (`Weightings` l. 2465, `leastDrawn_drawsPast`; all of 23–24 Oct, no induction, a case split on `W.decSomeFalls`).**
+  - l. 3311 `storeDrawn` and l. 4728 `routedDrawn` pass on paper with Astra's terms. Their `take` agrees with `leastDrawn (pick := fun _ => f)` only at listed conditions, through `total_congr_on` (`Population`, in closure) and `if_pos`. 14 → 7 and 15 → 8.
+  - l. 2933 `sharedDrawn` (14 → 3) and l. 3889 `gradedStoreDrawn` (15 → 1, a call of `storeDrawn_drawsPast`) are PLAUSIBLE (see section 5).
+  - Class (ii): what is shared is how the flows' `take` fields were built.
+- **U.**
+  - `ReadingsSpread` l. 288 → `fun {ps} h => total_congr_on (as := ps) h`. 3 → 1.
+  - `Stock` l. 62 → `fun xs ys => Becoming.total_append q ys xs` (argument order differs; qualified against itself). 3 → 1.
+- **Y.** `WitnessRefinementRuns` l. 220 `any_congr` → `fun l => any_congr_on (l := l) fun x _ => same x`. `any_congr_on` is **later** (l. 235): a reorder. 4 → 1. **No callers.**
+- **AN.**
+  - `Population` l. 730 → `fun {_ _ _} m => (between_of_mem_steps m).2`.
+  - `Prelude` l. 1129 → `(between_of_mem_steps m).1` (l. 852 < 1129).
+  - `HistorySums` l. 635 → `fun N T i => steps_of_within (T := T) (n := N) (k := i)`.
+  - 5, 3, 6 → 1. Callers 26, 28, 1.
+- **AO.** `Identification` l. 1750 `choose_below` (13 lines):
+  ```lean
+  fun m each => match steps_choice (P := P) 0 m
+      (fun t mem => each t (Nat.zero_add m ▸ (between_of_mem_steps mem).2)) with
+    | ⟨f, h⟩ => ⟨f, fun t lt => h t (steps_of_within (Nat.zero_le t) ((Nat.zero_add m).symm ▸ lt))⟩
+  ```
+  `Decidedness`, `Prelude` and `Population` are in closure. The bridge is `Nat.zero_add`, because `0 + m` does not reduce at a variable. 13 → 3.
+- **AP.** `DrawHistory` l. 180, 216 and 229 (Astra's terms, `ListTests.all_sound` on `steps 0 9` with `rfl`). PLAUSIBLE only (see section 5). 10 → 2, 3, 3.
+
+---
+
+## 3. The build list (pass 1 to 3 on paper), by module
+
+Importers are counted by script: how many of the 409 modules have that module in their closure, which is what a core run re-elaborates beyond the module itself. † = PLAUSIBLE, needs a build. R = reorder inside the file.
+
+| Module (importers) | Members, term as above | Class |
+|---|---|---|
+| Prelude (400) | `mem_append_cases`, `mem_append_of_left`, `mem_append_of_right`, `mem_appended_left`, `mem_middle`, `mem_cons_cases`, `preimage_of_mem_map`, `ListTests.none_not_mem_map_some`, `TreeSearch.append_nil`, `steps_mem` | ii |
+| GrammarLaws (387) | `mem_middle` | ii |
+| Change (320) | `Clear.false_of_not` | ii |
+| Population (317) | `mem_map_of`, `mem_of_map`, `steps_within` | ii |
+| Dissipation (314) | `total_le_at` (R) | ii |
+| InAmounts (297) | `decide_mem`, `decide_eq` | ii |
+| Recurrence (252) | `Branching.units_length` | ii |
+| Decidedness (146) | `Decided.exists_mem` (R, plus `universe u`) | ii |
+| Refinement (100) | `not_not_within` | ii |
+| Likeness (97) | `AlikeTo.of_succ` (R) | i |
+| Identification (79) | `Law.AgreeTo.of_succ`, `Law.choose_below` | ii |
+| Weighted (70) | `mem_appended_right` | ii |
+| HistoryIdeals (68) | `least_true_or_below` | ii |
+| Entropy (62) | `EntropyLists.mem_append_cases`, `EntropyLists.distinct_append` | ii |
+| Imbalance (58) | `mem_of_some_mem` | ii |
+| Weightings (26) | `sharedDrawn_drawsPast`†, `storeDrawn_drawsPast`, `routedDrawn_drawsPast`, `gradedStoreDrawn_drawsPast`† | ii |
+| GrammarCourse (23) | `Law.kept_along` | i |
+| Frontier (21) | `decided_of_decidable` | ii |
+| Undecided (18) | `each_or_some` (ii); `stage_mono` (i) | ii, i |
+| Stock (9) | `search`, `total_append` | ii |
+| RegimeMargin (8) | `run_within`† | i |
+| Joining (7) | `exists_of_mem_map` | ii |
+| TreeSearch (7) | `append_assoc` | ii |
+| Contacts (5) | `mem_or_not` | ii |
+| ReadOffInTime (4) | `FourReaders.orbit_of_fixed` | i |
+| Counting (3) | `ground_not_member` | ii |
+| GrammarCandidates (3) | `«诘之降»` | i |
+| Granularity (3) | `mem_joined_right` | ii |
+| CausalGrowth (2) | `searchBelow_or` | ii |
+| LineOnAStock (2) | `line_or_none`, `met_or_unmet`, `strong_below` (ii); `course_fixed` (i) | ii, i |
+| OrderNormal (2) | `bool_cases` | ii |
+| SharedCodes (2) | `Path.stays_a`, `Path.stays_b` | i |
+| HexagramLaws (1) | `Hexagram.any_sound` (ii); `Hexagram.orbit_still` (i) | ii, i |
+| ExchangePremises (1) | `not_not_listed` | ii |
+| Listing (1) | `total_eq_of_same` | ii |
+| ReadingSchedule (1) | `total_is_le_one` | ii |
+| Cuts, DrawHistory, HistorySums, Labels, ReaderRebuilding, ReadingsSpread, RuleRebuilding, WideningOnTheMap, WitnessRefinementRuns (0 each) | `mem_append_cases`, `mem_append_right`; `below_four`†, `keeps_two`†, `keeps_three`†; `mem_steps`; `Learnable.mem_map_of`; `total_congr_mem`; `length_replicate'` (RuleRebuilding), `length_replicate` (ReaderRebuilding); `new_in_list_or_none`; `any_congr` (R) | ii |
+
+**Cost, by script.**
+- Every landing above touches `Prelude`, so it re-elaborates 401 modules (every module with `Prelude` in its closure).
+- Without the `Prelude` members it still re-elaborates 389, through `GrammarLaws`, `Change`, `Population`, `Dissipation` and `InAmounts`.
+- The Claude readers' set alone (16 modules) re-elaborates 318.
+- The class (i) set alone (9 modules) re-elaborates 102.
+- The 26 modules with at most 10 importers re-elaborate 62 together.
+
+**Ledger.**
+- Class (i): 10 members, 29 → 14 proof lines (−15).
+- Class (ii): 62 members, 386 → 104 (−282). Of these, 57 are firm on paper: 327 → 92.
+- Counted beyond that: the reorders R5 (10 lines moved and 1 `universe` line), H2 (15 lines moved), P1 (22 lines moved) and Y1 (6 lines moved). The moves add no lines.
+
+No member loses a premise. `Likeness.FirstAt.of_holds`'s fuel premise is in the failing F1 group, so it is not shown here.
+
+## 4. What fails, with the reason
+
+**M3 as placed (the callee is not in the closure, or it would make a cycle):**
+- `Population.length_le_count`, `count_le_of_sub`: cycle with `Dissipation`.
+- `Regulation.first_or_nowhere`: `ReadOffInTime` not in closure (+105). `Likeness.FirstAt.of_holds`, `HistoryIdeals.least_true_or_below` via `first_of_decided`: cycle.
+- `Prelude.not_not_all` via `gather_listed`: cycle.
+- `Identification.orbit_held`, `WindowedWaiting.invariant` via `Lasting.closed_orbit`: not in closure (`WindowedWaiting` +25).
+- `Ranking.level_never_falls` via `Recurrence.never_falls_over`: not in closure.
+- `Learnable.orbit_of_still` not in closure for `LoopReturn` l. 158, `TreeSearch` l. 320, `ReflexivePrediction` l. 95 and l. 100, and `Training` l. 653. It would make a cycle for `Attraction` l. 468, `Description` l. 335 and `Seeking` l. 128. `Seeking`'s `Law.fixed_rests` is not in closure for those modules either (script).
+- `Identification.position_of_mem` via `HexagramSequences.memberAt_of_mem`: cycle.
+- `SelectionTerm.total_flatMap` via `Reproduction.total_bind`: cycle. `Typicality` l. 179 and its six neighbours (l. 172, 186, 193, 200, 627, 632) via `Flow`: not in closure (+6). `Amounts.total_steps_add`, `Prelude.total_congr`: cycle.
+- `HexagramSites.all_congr` via `FaultEnvelopes.all_congr`: not in closure.
+- `Population.distinct_map` via `SituationTraces`: cycle.
+- Astra B rows calling `Undecided.each_or_some` from `LineOnAStock`, `Centers`, `Population`, `RelativePosition`, `Arising`, `Readout`, `Decidedness` (l. 1049, 1067), `GrammarLaws`, `Likeness` (l. 421, 429, 1804), `Frontier` and `Weightings`: `Undecided` is not in their closures (Astra's own table). The two `LineOnAStock` rows pass instead as R7 and R8.
+- `Premises.fuel_mem_or`: `Undecided` not in closure (+18). Astra's other in-place `F` row (`kept_along` via `course_rel`) fails, but that member passes as H1.
+
+**M1:**
+- `Learning.decideSeen` via `Population.decideSome`. The search reader's (b″) misses the universe: `Learning`'s section `Lumping` has `I : Type u` (l. 842 context), and `decideSome` has `α : Type` (`Population` l. 192). It is also a `def`, so its unfolding would change.
+- `HexagramSequences.anyStep_sound`: its statement names `anyStep`, which is not `List.any` until that definition is changed (Astra charges the change).
+
+**Dropped as already a call:** `WayOfUnits.course_fixed` (l. 1057). Its head is `Eq.trans`, and it already calls `LineOnAStock.course_fixed`.
+
+**M2:** `Population.length_le_of_sub` via `length_le_of_matched` (2 → 2, Astra's own row).
+
+## 5. What could not be confirmed on paper (six) and what was not tried
+
+**PLAUSIBLE, needs a build:**
+- `DrawHistory.below_four`, `keeps_two`, `keeps_three`. The `rfl` has to evaluate `(steps 0 9).all (fun t => decide …) = true` through the nested `if`s of `giving` (l. 177). The present proofs close each case by `by decide`, which suggests it reduces, but a term-mode `rfl` was not run.
+- `Weightings.sharedDrawn_drawsPast`. It needs `(sharedDrawn …).take t f` to be defeq to `(leastDrawn … (pick := fun _ => f)).take t f`. The two `take` fields are textually identical, under the same instances.
+- `Weightings.gradedStoreDrawn_drawsPast`. Its `take` is `storeDrawn`'s (l. 3758) and its `present` is `sharedDrawn`'s through `gradedDrawn` (l. 3406), but its `give` differs from `storeDrawn`'s. The one-line call therefore relies on `isDefEq` unfolding `DrawsPast` (l. 1892, which reads only `present`, `take` and `stock`) after the arguments fail to match.
+- `RegimeMargin.run_within`. Astra's one-line term relies on higher-order unification for `K` and `next`. With named arguments it is safe but 2 → 2 (M2).
+
+**Not checked:** whether core's `Decidable (a ∈ l)` instance, which Astra's `em (i ∈ l)` would use, brings an axiom. Replaced by `decideMem`.
+
+**Untried:** every Astra row whose call needs a move or a new statement. That is families A, B (except the two above), E (except two), F, I, J, K, M, O, Q, U (except two), Y (except one), AC, AD, AE, AF, AG, AJ, AL, AM and AQ, and the proof-text register from l. 1009. None was checked here.
+
+**Not verified anywhere:** no call was built and no `#print axioms` was run. "Passes 1 to 3" means two statements and a term read by hand, binder by binder, plus the import closure by script.

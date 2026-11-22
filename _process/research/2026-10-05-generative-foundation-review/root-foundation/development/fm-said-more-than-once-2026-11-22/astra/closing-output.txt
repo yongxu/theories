@@ -1,0 +1,19 @@
+OPENED — [Full report with the family tables, paper calls, declaration histories, import closures, ranking, and near misses](/Users/ren/theories/tmp/fm/once22/astra/REPORT.md)
+
+OPENED — **Q1.** I opened all **409 modules** with a source reader. Zero were searched without opening. I indexed 20,438 theorem bodies and worked through **39 families covering 296 declarations**. The appendix records 969 groups of matching proof text. Their semantic classification remains incomplete.
+
+OPENED — **Q2.** The two largest joins use existing statements. `first_of_decided` preserves the witness and everything known before it. `each_or_some` needs a disjunction only at listed elements. Outside the seeds, the later `OutcomesListed` theorem in `Likeness` covers an older 34-line branching-test induction once the finite outcome list is constructed. The report gives that construction and charges its lines.
+
+OPENED — **Q3.** The import graph has **907 direct edges** among the 409 modules. Each proposed placement adds zero modules to its callers’ closures. Several require moving existing declarations. For widening, the bridge already lives in `ReachableRanges`, which imports `EventualWidening`. A direct import back would cycle.
+
+OPENED — **Q4.** The worked ledger is **1,784 → 1,023 lines**, a paper saving of **761** including the shared proofs and bridges. Of 189 older bodies with proposed calls, 177 become strictly shorter. No Lean was run.
+
+OPENED — **Q5.** Finite-prefix search ranks first, with **23 older proofs shortened and 168 lines saved**. Listed search ranks second, with **17 and 108**. The 34-line `Likeness` example belongs to an unseeded family saving **56 lines** across eight older proofs. At the other end, `iter_pred` and `iter_succ` were both added on 22 November. Their shared call takes the same two lines as either original proof. M2 and M4 both hold for that pair.
+
+OPENED — **Q6.** Four substitutions failed on paper. They lose an ordered list of witnesses, an equation identifying the computed cutoff, the transition needed to shorten a course, or the identity of the world being inspected. The last is the clearest false positive. `ReadingsPersist:1014` and `ReadingsSpread:899` have identical printed statements and proof scripts, yet their constructors resolve to different worlds.
+
+── cx · ok · session 01a201db-635a-7f42-b9e3-c7a07f1e8950 · gpt-6.2-astra/xhigh · bypass (mirrors Claude) · 7745s · 18791.9k tokens · 244 cmds
+continue: cx -r 01a201db-635a-7f42-b9e3-c7a07f1e8950 "…"
+log: /Users/ren/.cache/cx/runs/20261122-130444-90483
+exit 0
+end 15:13:50

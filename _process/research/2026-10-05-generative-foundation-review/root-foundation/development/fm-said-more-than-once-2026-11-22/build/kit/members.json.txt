@@ -1,0 +1,20 @@
+[
+ {"n": 1, "module": "Likeness", "name": "Becoming.Alike.alikeTo", "header": "theorem Alike.alikeTo ", "date": "14 Oct", "may_move": true,
+  "uses": ["Becoming.Iteration.postfixed_in_iter", "Becoming.iter_iff_alikeTo"], "not_uses": [], "needs": []},
+ {"n": 2, "module": "Likeness", "name": "Becoming.AlikeTo.of_succ", "header": "theorem AlikeTo.of_succ ", "date": "14 Oct", "may_move": true,
+  "uses": ["Becoming.Iteration.iter_pred", "Becoming.iter_iff_alikeTo"], "not_uses": [], "needs": []},
+ {"n": 3, "module": "Likeness", "name": "Becoming.AlikeTo.self", "header": "theorem AlikeTo.self ", "date": "15 Oct", "may_move": false,
+  "uses": ["Becoming.Alike.alikeTo"], "not_uses": [], "needs": [1]},
+ {"n": 4, "module": "GrammarCandidates", "name": "Becoming.«对称有常则不可诘»", "header": "theorem «对称有常则不可诘» ", "date": "23 Oct", "may_move": true,
+  "uses": ["Becoming.Iteration.postfixed_in_iter", "Becoming.iter_iff_inquiry"], "not_uses": [], "needs": []},
+ {"n": 5, "module": "GrammarCandidates", "name": "Becoming.«诘之降»", "header": "theorem «诘之降» ", "date": "6 Nov", "may_move": false,
+  "uses": ["Becoming.Iteration.iter_pred", "Becoming.iter_iff_inquiry"], "not_uses": [], "needs": []},
+ {"n": 6, "module": "Lasting", "name": "Becoming.Lasting.lasts_of_kernel", "header": "theorem lasts_of_kernel ", "date": "14 Oct", "may_move": true,
+  "uses": ["Becoming.Iteration.postfixed_in_iter", "Becoming.Lasting.iter_region_iff_lasts"], "not_uses": ["Becoming.Viability.kernel_certificate", "Becoming.Viability.kernel_iff_held"], "needs": []},
+ {"n": 7, "module": "Tolerance", "name": "Becoming.Tolerance.withheld_kept", "header": "theorem withheld_kept ", "date": "19 Oct", "may_move": false,
+  "uses": ["Becoming.Iteration.iter_within", "Becoming.Tolerance.iter_eq_orbit"], "not_uses": [], "needs": []},
+ {"n": 8, "module": "Onward", "name": "Becoming.Onward.KeepsMoving.continues", "header": "theorem KeepsMoving.continues ", "date": "16 Oct", "may_move": false,
+  "uses": ["Becoming.Iteration.postfixed_in_iter", "Becoming.Parting.iter_iff_continues"], "not_uses": [], "needs": []},
+ {"n": 10, "module": "GrammarCourse", "name": "Becoming.Law.kept_along", "header": "theorem kept_along ", "date": "23 Oct", "may_move": false,
+  "uses": ["Becoming.Law.KeepsRelation.run"], "not_uses": [], "needs": []}
+]

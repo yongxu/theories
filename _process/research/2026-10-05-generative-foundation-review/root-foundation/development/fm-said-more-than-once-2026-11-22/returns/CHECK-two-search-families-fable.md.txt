@@ -1,0 +1,485 @@
+# Check: the two search families, (a) / A and (b) / B, with the cost side
+
+*AI-written (Claude Fable, a checker for board row FM who took no part in the sweep), 22 November 2026, 15:30 to 15:50 +07 by the clock. Read only: no Lean written or run, no lake, no build, no gate, no tests; nothing tracked was edited (this file is under the ignored `tmp/`). Every call below is a term on paper, checked by hand against both statements and by no Lean. Tree read: main `d8adcda71`. Scripts (import closures from the `import` lines, joins against the Lean-printed list and the records, line counts of the terms written here) are in `/private/tmp/claude-501/-Users-ren-theories/21947b1b-65d1-45e4-bdb9-d3582a76bb12/scratchpad/chk-two-search-fable/`.*
+
+**Conventions.** Modules are under `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`. Proof lines are counted as the search reader counted them: from the first line after the statement through the proof's last line. Calls are wrapped at 100 columns and their lines counted by script from the text printed here (the package itself keeps no such limit: 12,969 of its 301,817 lines are longer). "The reader" is the search reader (`RETURN-search-fable.md`); "Astra" is `astra/REPORT.md`.
+
+## The outcome in short
+
+- **OPENED.** Both families pass the entry condition. (a): one statement on paper (`first_below`, 3 + 10 lines) has all 21 of the reader's members as named substitutions, statements unchanged; 229 proof lines become 76 as calls plus the 13 (20 members without `stage_search`: 216 become 80). (b): `gather_listed` as it stands has the reader's 14 and two more Astra found as calls; 144 proof lines become 38, nothing new written.
+- **Both are class (ii), deciding and searching.** No member's call says anything of a going-on; no premise falls from any statement; the atlas gains no row.
+- **The cost side decides.** Either full landing changes `Prelude`: 401 modules re-elaborated (not 409), and **136 records are bound to `Prelude`'s source alone**. (a) in full: 21 sources, 186 of 568 records re-bound, for 136 lines. (b) in full: 15 sources, 174 records, for 106 lines. Both in one landing: 33 sources, 215 records, 242 lines.
+- **Verdict.** Neither family is worth a landing that opens `Prelude` for it. Eight of the old theorems become calls with no new statement, no move and no import: 7 sources, 90 modules, 15 records, 85 lines become 19. That part is worth doing as tidying. If `Prelude` is changed for another reason, (a) and (b) go together in that landing, since the 136 are then paid once and the two add 79 records between them.
+
+## 1. The two readers' lists reconciled
+
+### Family (a) / A
+
+**OPENED** (statement and proof of every row named here, at the lines given in section 2).
+
+- The reader has 21 members, a1 to a21. All 21 are rows of Astra's table A. Astra's table has 29 rows; the other eight:
+  - three it keeps as they are, already calls: `Optimum.keeps_or_drops` l. 4496, `Regulation.first_index` l. 1305, `Clear.first_of_true` (`Change` l. 402);
+  - `Optimum.keeps_or_below` l. 4510, counted by Astra 5 → 1: its proof is already a call of `keeps_or_drops` (no recursor in the Lean list; OPENED). Left out by the addendum's point 4;
+  - `Likeness.drops_somewhere` l. 498 (own induction, 4 lines → 4: M2, as Astra says) and `Optimum.last_before` l. 2586 (own induction, 5 → 4). Both walk back from `n` to the last step before a change; the call finds the first such step instead, which the statement allows. One line gained between them;
+  - `Clear.or_first` (`Change` l. 392, 6 → 2), a call only after `Limit.clear_of_below` (`LimitVerification` l. 160, 4 lines, an induction of its own) is moved down into `Change`. The reader put `or_first` among the near misses because he did not find "false below `n` gives `clear s n = true`"; it exists, at that line, above `Change`. As things stand `or_first` is the general statement for a14, not a case.
+- Astra's "23 / 24 / 23" is: 24 rows with a call written, 23 shorter, `drops_somewhere` the one that is not.
+- **The two proposals are not the same statement.** The reader's is new: `first_below`, strict end, the disjunction asked only below the bound. Astra's is the existing a1, `first_of_decided` (`≤` end, the disjunction asked at every step), moved to `Prelude` under its name, plus a new strict-end adapter of 6 lines that calls it. Each gives the other: `first_below` gives a1 in 3 lines; a1 gives the adapter in 4; the adapter gives `first_below` only with the bound put into the predicates.
+- **Which has more members as calls.** The reader's has 21 of 21 as one substitution each, a1 among them. Astra's has the same other 20 and keeps a1's 13 lines as the proof. The `≤` members (a2, a13, a18) are a line shorter on a1 itself; the two whose hypothesis holds only below the bound (a19, a20) need the bound padded into the predicates there (5 lines each by Astra; 5 and 4 on `first_below`). Astra's way moves a declaration that one record lists and four records' pages name; the reader's leaves a1 where it is. The ledgers differ by a few lines. Section 2 is written on `first_below` because every member is then one substitution into one statement.
+- **Corrections to the reader.** a19's proof is 14 lines (150 to 163), not 13. His a4 call is printed on 7 lines and counted 6. His a11 verdict (12 against 13, M2) keeps the count `«计»`; with `GrammarLaws.found_or_all` (l. 2229, same module) deciding the step it is 9. "At most 243 closures grow by one" is 245 by script. His import claims for (a) and (b) are otherwise confirmed (section 3).
+- **Astra's A ledger (260 → 92) is TOLD**, with five terms checked on paper and found right: `Novelty`, `Amounts`, `Optimum` l. 4476, `Optimum` l. 2586, `Change` l. 392. Its terms mostly leave `P` and `Q` to be inferred; where the step's decision is built with an anonymous constructor (`Founding`), that is at risk and untried.
+
+### Family (b) / B
+
+**OPENED.**
+
+- The reader has the statement `gather_listed` and 14 members, b1 to b14. Astra splits them: b1 to b12 are in its family B, with b1 (`Undecided.each_or_some`) as the statement; b13 and b14 are in its family C, with `gather_listed` as the statement.
+- **Astra has three the reader does not:**
+  - `Weighting.exceeds_or_includes` (`Weightings` l. 1084), a list induction of its own, 12 lines, 20 October by blame. A member the reader missed (b15 below);
+  - `not_not_listed` (`ExchangePremises` l. 116), 17 lines with its own induction, which repeats the body of `listed_of_em` (l. 94) under a double negation. It is a call of `not_not_all` and `listed_of_em` as they stand (b16 below);
+  - `Requirement.decided_included_bool` (`Frontier` l. 264): no induction (no recursor in the Lean list), a 16-line case split over four decisions. A case by statement over the list `[true, false]`; not an induction said again. Not in my ledger.
+- Astra also shortens four wrappers that are already calls of `Decided.exists_listed` (`Likeness` l. 421, 429, 1804; `Decidedness` l. 1067: no recursor in the Lean list). Left out by the addendum's point 4.
+- **The two proposals are not the same statement, and `gather_listed` is the stronger.** It gives `each_or_some` at `G :=` the disjunction (2 lines) and `not_not_all` at `G := False` (1 line). `each_or_some` gives neither `gather_listed` nor `not_not_all`: from `(D a → G) → G` no disjunction is had with nothing decided. So `gather_listed` has more members as calls: all of Astra's B and all of its C. `each_or_some` kept as a middle step makes nine plain-disjunction members one line each instead of two, at the price of moving it to `Prelude` as well.
+- **A third statement neither weighs:** `GrammarLaws.found_or_all` (b2, 1 November) and `each_or_some` give each other in a line, and `GrammarLaws` is already in the closure of every member module but `Prelude` and `PredicateIteration`.
+
+## 2. The entry condition
+
+### (a): the statement
+
+On paper, in namespace `Becoming` (the reader's, re-checked line by line; the name is free in the package):
+
+```lean
+theorem first_below {P Q : Nat → Prop} :
+    ∀ n, (∀ t, t < n → P t ∨ Q t) →
+      (∀ t, t < n → P t) ∨ ∃ m, m < n ∧ Q m ∧ ∀ t, t < m → P t
+  | 0, _ => .inl fun _ lt => absurd lt (Nat.not_lt_zero _)
+  | n + 1, decided =>
+    match first_below n fun t lt => decided t (Nat.lt_succ_of_lt lt) with
+    | .inr ⟨m, lt, fails, before⟩ => .inr ⟨m, Nat.lt_succ_of_lt lt, fails, before⟩
+    | .inl all => match decided n (Nat.lt_succ_self n) with
+      | .inr fails => .inr ⟨n, Nat.lt_succ_self n, fails, all⟩
+      | .inl holds => .inl fun t lt => match Nat.lt_or_ge t n with
+        | .inl before => all t before
+        | .inr after =>
+          Eq.subst (motive := P) (Nat.le_antisymm (Nat.le_of_lt_succ lt) after).symm holds
+```
+
+**Binders, for all 21. OPENED** for the statements; the rule about section variables is my understanding of the toolchain and untried. Every member is a theorem (each has a row in the Lean-printed list of theorems); none is a definition returning data. Each call keeps the statement's text and binders as they are, adds `:=`, and replaces the equation lines by a `fun`. A theorem's section variables are fixed by its statement, so none is gained or lost. An instance stays in the statement and is turned into the disjunction inside the proof by `Decidable.em`: `theorem em (p : Prop) [Decidable p] : p ∨ ¬p := byCases Or.inl Or.inr` (toolchain v4.29.1, `Init/Core.lean` l. 1121; `byCases`, l. 1116, is a match on the instance). OPENED there: no axiom in the term. The package already uses it 30 times in 8 modules (`LastChange` l. 169, `LineOnAStock` l. 245, both OPENED). An explicit `dec` (a17, b4) is passed as `@Decidable.em (P t) (dec t)`. Where the lower end of a stretch is put into the predicates (a4, a11, a19) the step is split by `if h : S ≤ t then … else …` on `Nat.decLe`; the package already writes `if last : p N then` in proofs (`MoveFormation` l. 594). No call turns a disjunction into an instance. Not verified by `#print axioms`.
+
+**The members.** Names are the full names of the Lean list less `Becoming.`. "Blame" is the date of the statement's line.
+
+| # | Member, module and line, blame | As `first_below` with | Now → call |
+|---|---|---|---|
+| a1 | `first_of_decided`, `ReadOffInTime` 196, 10 Nov | `n + 1`; `P`, `Q` as they are; `<` to `≤` both sides | 13 → 3 |
+| a2 | `upto_or_fails`, `Novelty` 67, 14 Oct | `N + 1`; `P := p`, `Q := ¬ p`; first dropped | 10 → 3 |
+| a3 | `throughout_or_fails`, `MoveFormation` 587, 15 Oct | `N`; `P := p`, `Q := ¬ p`; first dropped | 12 → 2 |
+| a4 | `Amounts.unmarked_or_marked`, `Amounts` 506, 23 Oct | `S + n`; `P t := S ≤ t → P t`, `Q t := S ≤ t ∧ ¬ P t`; sides swapped | 10 → 5 |
+| a5 | `all_or_below`, `Exhaustion` 60, 19 Oct | `N`; `P j := m ≤ h j`, `Q j := h j < m` | 11 → 2 |
+| a6 | `ReadingSchedule.read_or_unread`, 110, 21 Oct | `k`; `P j := s (T + j) ≠ x`, `Q j := s (T + j) = x`; swapped | 8 → 3 |
+| a7 | `LastChange.decided_within`, 162, 18 Oct | `n`; `P k :=` the equation at `T + k`, `Q k :=` its negation; swapped | 9 → 3 |
+| a8 | `Regulation.first_or_nowhere`, 1294, 19 Oct | `n`; `P := ¬ P`, `Q := P`; nothing else | 7 → 1 |
+| a9 | `Stock.search`, 347, 14 Oct | `N + L`; `P n := N ≤ n → g n = 0`, `Q n := N ≤ n ∧ 0 < g n` (written through a4) | 12 → 2 |
+| a10 | `Founding.changed_or_none`, 217, 22 Oct | `t`; `P s :=` both zero, `Q s :=` one positive | 11 → 5 |
+| a11 | `GrammarLaws.stage_search`, 2473, 1 Nov | `M + n`; `P t := M ≤ t → ∀ y ∈ u (t + 1), b y ≠ true`, `Q t := M ≤ t ∧ ∃ y …` | 13 → 9 |
+| a12 | `CausalGrowth.searchBelow_or`, 239, 28 Oct | `n`; `P := ¬ p`, `Q := p`; swapped | 9 → 2 |
+| a13 | `Optimum.keeps_or_falls`, 4476, 21 Oct | `n + 1 + 1`; `P u := m ≤ x u`, `Q u := x u < m`; the first failing step is not 0 by `start` | 14 → 6 |
+| a14 | `HistoryIdeals.least_true_or_below`, 461, 19 Oct | `n`; `P m := s m = false`, `Q m := s m = true`; bound dropped | 11 → 2 |
+| a15 | `false_below_or_true`, `Horizon` 378, 16 Oct | as a14; bound and first dropped | 11 → 4 |
+| a16 | `Undecided.some_undecided_or_none`, 596, 19 Oct | `N`; `P i := (w i).decided = true`, `Q i := w i = u`; swapped | 16 → 5 |
+| a17 | `Reproduction.search`, 353, 20 Oct | `T`; `P := ¬ P`, `Q := P`; the all-side refuted by the premise | 10 → 3 |
+| a18 | `Frequency.Rows.decide_rows`, `Frequency` 988, 16 Oct | `N + 1`; `P n := ∃ m, R n m = true`, `Q n := ∀ m, R n m = false`; by `lpo` | 11 → 3 |
+| a19 | `Decided.exists_below`, `Decidedness` 148, 12 Oct | `U`; `P t := M ≤ t → ¬ P t`, `Q t := M ≤ t ∧ P t`; uses the hypothesis below the bound | 14 → 5 |
+| a20 | `Presence.weakly_exists_below`, 618, 28 Oct | `U`; `P := ¬ P`, `Q := ¬ ¬ P`; the hypothesis is the member's own | 11 → 4 |
+| a21 | `LLPO.FirstAt.of_holds`, `Likeness` 1722, 16 Oct | `k + 1`; `P := ¬ α`, `Q := α`; `N` and `k < N` unused | 6 → 4 |
+
+The calls:
+
+- **a1 first_of_decided** (3 lines)
+  ```lean
+    fun n => (first_below (n + 1) fun t _ => decided t).imp
+      (fun all t le => all t (Nat.lt_succ_of_le le))
+      fun ⟨m, lt, fails, before⟩ => ⟨m, Nat.le_of_lt_succ lt, fails, before⟩
+  ```
+- **a2 upto_or_fails** (3 lines)
+  ```lean
+    fun N => (first_below (P := p) (Q := fun n => ¬ p n) (N + 1) fun n _ => Decidable.em (p n)).imp
+      (fun all n le => all n (Nat.lt_succ_of_le le))
+      fun ⟨n, lt, fails, _⟩ => ⟨n, Nat.le_of_lt_succ lt, fails⟩
+  ```
+- **a3 throughout_or_fails** (2 lines)
+  ```lean
+    fun N => (first_below (P := p) (Q := fun n => ¬ p n) N fun n _ => Decidable.em (p n)).imp id
+      fun ⟨n, lt, fails, _⟩ => ⟨n, lt, fails⟩
+  ```
+- **a4 unmarked_or_marked** (5 lines)
+  ```lean
+    fun n => (first_below (P := fun t => S ≤ t → P t) (Q := fun t => S ≤ t ∧ ¬ P t) (S + n)
+      fun t _ => if from_ : S ≤ t then (decide t).imp (fun marked _ => marked) fun un => ⟨from_, un⟩
+        else .inl fun le => absurd le from_).elim
+      (fun marked => .inr fun t from_ below => marked t below from_)
+      fun ⟨N, below, ⟨from_, unmarked⟩, _⟩ => .inl ⟨N, from_, below, unmarked⟩
+  ```
+- **a5 all_or_below** (2 lines)
+  ```lean
+    fun N => (first_below (P := fun j => m ≤ h j) (Q := fun j => h j < m) N
+      fun j _ => (Nat.lt_or_ge (h j) m).symm).imp id fun ⟨j, below, low, _⟩ => ⟨j, below, low⟩
+  ```
+- **a6 read_or_unread** (3 lines)
+  ```lean
+    fun k => (first_below (P := fun j => s (T + j) ≠ x) (Q := fun j => s (T + j) = x) k
+      fun j _ => (Decidable.em (s (T + j) = x)).symm).symm.imp
+        (fun ⟨j, lt, read, _⟩ => ⟨j, lt, read⟩) id
+  ```
+- **a7 decided_within** (3 lines)
+  ```lean
+    fun n => (first_below (P := fun k => r.state (T + k + 1) = r.state (T + k))
+      (Q := fun k => r.state (T + k + 1) ≠ r.state (T + k)) n fun _ _ => Decidable.em _).symm.imp
+        (fun ⟨k, lt, ne, _⟩ => ⟨k, lt, ne⟩) id
+  ```
+- **a8 first_or_nowhere** (1 line)
+  ```lean
+    fun n => first_below (P := fun i => ¬ P i) (Q := P) n fun i _ => (Decidable.em (P i)).symm
+  ```
+- **a9 Stock.search, through a4 as it stands** (2 lines)
+  ```lean
+    fun L => (Amounts.unmarked_or_marked (P := fun n => g n = 0) (fun n => Decidable.em (g n = 0))
+      N L).imp (fun ⟨n, le, lt, ne⟩ => ⟨n, le, lt, Nat.pos_of_ne_zero ne⟩) id
+  ```
+- **a10 changed_or_none** (5 lines)
+  ```lean
+    fun t => (first_below (P := fun s => G.raisedAt s = 0 ∧ G.loweredAt s = 0)
+      (Q := fun s => 0 < G.raisedAt s ∨ 0 < G.loweredAt s) t fun s _ =>
+        (Nat.eq_zero_or_pos (G.raisedAt s)).elim (fun up => (Nat.eq_zero_or_pos (G.loweredAt s)).elim
+          (fun down => .inl ⟨up, down⟩) fun down => .inr (.inr down)) fun up => .inr (.inl up)).imp id
+      fun ⟨s, lt, changed, _⟩ => ⟨s, lt, changed⟩
+  ```
+- **a11 stage_search** (9 lines)
+  ```lean
+    fun n => (first_below (P := fun t => M ≤ t → ∀ y, y ∈ u (t + 1) → b y ≠ true)
+      (Q := fun t => M ≤ t ∧ ∃ y, y ∈ u (t + 1) ∧ b y = true) (M + n) fun t _ =>
+        if lo : M ≤ t then (GrammarLaws.found_or_all (A := ∃ y, y ∈ u (t + 1) ∧ b y = true)
+            (B := fun y => b y ≠ true) (D := u (t + 1)) fun y my =>
+              (Decidable.em (b y = true)).imp (fun yes => ⟨y, my, yes⟩) id).symm.imp
+          (fun none _ => none) fun found => ⟨lo, found⟩
+        else .inl fun le => absurd le lo).elim
+      (fun none => .inr fun t lo hi => none t hi lo)
+      fun ⟨t, hi, ⟨lo, found⟩, _⟩ => .inl ⟨t, lo, hi, found⟩
+  ```
+- **a12 searchBelow_or** (2 lines)
+  ```lean
+    fun n => (first_below (P := fun z => ¬ p z) (Q := p) n fun z _ => (decided z).symm).symm.imp
+      (fun ⟨z, below, holds, _⟩ => ⟨z, below, holds⟩) fun none ⟨z, below, holds⟩ => none z below holds
+  ```
+- **a13 keeps_or_falls** (6 lines)
+  ```lean
+    fun n => match first_below (P := fun u => m ≤ x u) (Q := fun u => x u < m) (n + 1 + 1)
+        fun u _ => (Nat.lt_or_ge (x u) m).symm with
+      | .inl all => .inl fun t le => all t (Nat.lt_succ_of_le le)
+      | .inr ⟨0, _, lt, _⟩ => absurd start (Nat.not_le_of_gt lt)
+      | .inr ⟨t + 1, below, lt, before⟩ => .inr ⟨t, Nat.le_of_lt_succ (Nat.lt_of_succ_lt_succ below),
+          fun u le => before u (Nat.lt_succ_of_le le), lt⟩
+  ```
+- **a14 least_true_or_below** (2 lines)
+  ```lean
+    fun n => (first_below (P := fun m => s m = false) (Q := fun m => s m = true) n
+      fun m _ => Clear.cases (s m)).imp id fun ⟨k, _, yes, before⟩ => ⟨k, before, yes⟩
+  ```
+- **a15 false_below_or_true** (4 lines)
+  ```lean
+    fun h => (first_below (P := fun t => s t = false) (Q := fun t => s t = true) h
+      fun t _ => match s t with
+        | false => .inl rfl
+        | true => .inr rfl).imp id fun ⟨t, _, yes, _⟩ => ⟨t, yes⟩
+  ```
+- **a16 some_undecided_or_none** (5 lines)
+  ```lean
+    fun N => (first_below (P := fun i => (w i).decided = true) (Q := fun i => w i = u) N
+      fun i _ => match w i with
+        | .u => .inr rfl
+        | .t => .inl rfl
+        | .f => .inl rfl).symm.imp (fun ⟨i, lt, at_u, _⟩ => ⟨i, lt, at_u⟩) id
+  ```
+- **a17 Reproduction.search** (3 lines)
+  ```lean
+    fun T not_all => (first_below (P := fun t => ¬ P t) (Q := P) T
+      fun t _ => (@Decidable.em (P t) (dec t)).symm).elim (fun all => absurd all not_all)
+        fun ⟨t, lt, holds, _⟩ => ⟨t, lt, holds⟩
+  ```
+- **a18 decide_rows** (3 lines)
+  ```lean
+    fun N => (first_below (P := fun n => ∃ m, R n m = true) (Q := fun n => ∀ m, R n m = false)
+      (N + 1) fun n _ => lpo (R n)).imp (fun all n le => all n (Nat.lt_succ_of_le le))
+        fun ⟨n, _, nowhere, _⟩ => ⟨n, nowhere⟩
+  ```
+- **a19 Decided.exists_below** (5 lines)
+  ```lean
+    fun {U} decided => (first_below (P := fun t => M ≤ t → ¬ P t) (Q := fun t => M ≤ t ∧ P t) U
+      fun t below => if from_ : M ≤ t then Or.imp (fun fails _ => fails) (fun holds => ⟨from_, holds⟩)
+        (Or.symm (decided t from_ below)) else .inl fun le => absurd le from_).elim
+      (fun none => .inr fun ⟨t, from_, below, holds⟩ => none t below from_ holds)
+      fun ⟨t, below, ⟨from_, holds⟩, _⟩ => .inl ⟨t, from_, below, holds⟩
+  ```
+- **a20 weakly_exists_below** (4 lines)
+  ```lean
+    fun {U} weakly => match first_below (P := fun t => ¬ P t) (Q := fun t => ¬ ¬ P t) U weakly with
+      | .inl none => .inl fun ⟨t, below, holds⟩ => none t below holds
+      | .inr ⟨t, below, unrefuted, _⟩ =>
+        .inr fun absent => unrefuted fun holds => absent ⟨t, below, holds⟩
+  ```
+- **a21 FirstAt.of_holds** (4 lines)
+  ```lean
+    fun _ k _ holds => match first_below (P := fun t => ¬ α t) (Q := α) (k + 1)
+        fun t _ => Or.symm (decided t) with
+      | .inl none => absurd holds (none k (Nat.lt_succ_self k))
+      | .inr ⟨i, _, first, before⟩ => ⟨i, first, fun ⟨t, _, below, earlier⟩ => before t below earlier⟩
+  ```
+
+Three of them are also calls of what already stands, with no new statement (the reader's rank 0, re-checked):
+
+- **a12alt searchBelow_or, through a19 as it stands** (3 lines)
+  ```lean
+    fun n => match Decided.exists_below (P := p) (M := 0) (U := n) fun z _ _ => decided z with
+      | .inl ⟨z, _, below, holds⟩ => .inl ⟨z, below, holds⟩
+      | .inr absent => .inr fun ⟨z, below, holds⟩ => absent ⟨z, Nat.zero_le z, below, holds⟩
+  ```
+- **a14alt least_true_or_below, through Clear.or_first as it stands** (2 lines)
+  ```lean
+    fun n => (Clear.or_first s n).imp (fun c m lt => Clear.false_before s c lt)
+      fun ⟨k, _, c, yes⟩ => ⟨k, fun m lt => Clear.false_before s c lt, yes⟩
+  ```
+
+and a9 as printed above, which calls a4 as it stands.
+
+**The five with a stretch from an offset, M2 member by member. OPENED.**
+
+- **a6 `read_or_unread`, a7 `decided_within`: no reindexing at all.** The offset is inside the predicate (`s (T + j)`, `r.state (T + k)`) and the stretch is `j < k` from zero. 3 lines against 8 and against 9. M2 not met.
+- **a4 `unmarked_or_marked`: no reindexing needed.** The lower end goes into the predicates (Astra's way) and the bound is `S + n`. 5 lines against 10. The reader's reindexing by `le_dest` and `lt_of_add_lt_add_left` is 6 to 7. M2 not met.
+- **a9 `Stock.search`:** 2 lines as a call of a4 (both readers), 6 straight from the statement, against 12. M2 not met.
+- **a11 `stage_search`:** 9 lines against 13 by the term above, with `found_or_all` deciding each stage in place of the count; 12 if the count is kept. By the count M2 is not met. The gain is 4 lines for a nested term harder to read than the induction, and `GrammarLaws.count_pos_of_mem` (l. 2032) would be left with no caller (the Lean list has `stage_search` as its only one). I would leave a11 as it is.
+
+**No member of the 21 is longer or equal as a call.** The least gains: a21 (6 → 4), a11 (13 → 9). a21's proof is not the family's induction: it is a descent on `N` as fuel that already calls a19 (the Lean list shows both the recursor and the use). It is a case by statement; what goes is that descent.
+
+**Risks in the terms, all untried:** `id` across a definition (`Unread` in a6, `Keeps` in a13); `match w i with` abstracting in a16 and `match s t with` in a15; `Or.symm` and `Or.imp` applied to a term whose type is written `Decided …` (a19, a21: written as functions for that reason); implicit-binder lambdas `fun {U} …` (a19, a20).
+
+### (b): the statement
+
+`gather_listed`, as it stands at `PredicateIteration` l. 60 (22 November by blame; `Becoming.gather_listed`, declared before `namespace Iteration` opens):
+
+```lean
+theorem gather_listed {D : A → Prop} {G : Prop} : ∀ (members : List A),
+    (∀ a, a ∈ members → (D a → G) → G) → ((∀ a, a ∈ members → D a) → G) → G
+```
+
+| # | Member, module and line, blame | As `gather_listed` with | Now → call |
+|---|---|---|---|
+| b1 | `Undecided.each_or_some`, 381, 19 Oct | `D := A`; `G :=` the conclusion | 7 → 2 |
+| b2 | `GrammarLaws.found_or_all`, 2229, 1 Nov | `D := B`; `G := A ∨ ∀ …` | 8 → 1 |
+| b3 | `search`, `Population` 180, 9 Oct | `D := p`; instance by `Decidable.em` | 8 → 2 |
+| b4 | `Flow.search`, `Centers` 140, 22 Oct | `D x := ¬ p x`; explicit `decided` | 8 → 2 |
+| b5 | `LineOnAStock.line_or_none`, 242, 16 Nov | `D u := ¬ S u` | 8 → 2 |
+| b6 | `LineOnAStock.met_or_unmet`, 254, 16 Nov | `D u := need u ≤ z` | 8 → 2 |
+| b7 | `RelativePosition.below_somewhere_or_not`, 155, 19 Oct | `D q := f q ≤ g q` | 8 → 2 |
+| b8 | `Steps.new_in_list_or_none`, `WideningOnTheMap` 237, 30 Oct | `D x := Q (n + 1) x → Q n x` | 13 → 4 |
+| b9 | `Web.rises_or_still`, `Arising` 130, 9 Oct | `D c := ¬ W.Rises t c` | 8 → 3 |
+| b10 | `Readout.commonWitness_or_covered`, 175, 14 Oct | `D d := ¬ d ∈ b → d ∈ a` | 11 → 5 |
+| b11 | `Decided.exists_mem`, `Decidedness` 136, 12 Oct | b12 at `Type` | 8 → 1 |
+| b12 | `Decided.exists_listed`, `Decidedness` 1049, 19 Oct | `D b := ¬ P b`; `G := Decided (∃ …)` | 8 → 3 |
+| b13 | `not_not_all`, `Prelude` 718, 1 Nov | `D := P`; `G := False` | 7 → 1 |
+| b14 | `not_not_within`, `Refinement` 77, 15 Oct | b13 with the hypothesis at every `x` | 5 → 1 |
+| b15 | `Weighting.exceeds_or_includes`, `Weightings` 1084, 20 Oct | `D x := a x = true → b x = true` | 12 → 5 |
+| b16 | `not_not_listed`, `ExchangePremises` 116, 19 Oct | b13 at `P a := q a ∨ ¬ q a`, then `listed_of_em` | 17 → 2 |
+
+- **b1 each_or_some** (2 lines)
+  ```lean
+    fun {l} each => gather_listed (D := A) l
+      (fun x mem k => (each x mem).elim k fun b => .inr ⟨x, mem, b⟩) Or.inl
+  ```
+- **b2 found_or_all** (1 line)
+  ```lean
+    fun {D} each => gather_listed (D := B) D (fun x mem k => (each x mem).elim Or.inl k) Or.inr
+  ```
+- **b3 search (Population)** (2 lines)
+  ```lean
+    fun l => gather_listed (D := p) l
+      (fun a mem k => (Decidable.em (p a)).elim k fun lacks => .inl ⟨a, mem, lacks⟩) Or.inr
+  ```
+- **b4 Flow.search (Centers)** (2 lines)
+  ```lean
+    fun xs => gather_listed (D := fun x => ¬ p x) xs (fun x mem k =>
+      (@Decidable.em (p x) (decided x)).elim (fun holds => .inl ⟨x, mem, holds⟩) k) Or.inr
+  ```
+- **b5 line_or_none** (2 lines)
+  ```lean
+    fun w => gather_listed (D := fun u => ¬ S u) w
+      (fun u mem k => (Decidable.em (S u)).elim (fun su => .inr ⟨u, mem, su⟩) k) Or.inl
+  ```
+- **b6 met_or_unmet** (2 lines)
+  ```lean
+    fun w => gather_listed (D := fun u => need u ≤ z) w
+      (fun u mem k => (Nat.lt_or_ge z (need u)).elim (fun lt => .inr ⟨u, mem, lt⟩) k) Or.inl
+  ```
+- **b7 below_somewhere_or_not** (2 lines)
+  ```lean
+    fun ps => gather_listed (D := fun q => f q ≤ g q) ps
+      (fun q mem k => (Nat.lt_or_ge (g q) (f q)).elim (fun lt => .inl ⟨q, mem, lt⟩) k) Or.inr
+  ```
+- **b8 new_in_list_or_none** (4 lines)
+  ```lean
+    fun l => gather_listed (D := fun x => Q (n + 1) x → Q n x) l (fun x mem k =>
+      (dec n x).elim (fun earlier => k fun _ => earlier) fun before => (dec (n + 1) x).elim
+        (fun held => .inl ⟨x, mem, held, before⟩) fun absent => k fun held => absurd held absent)
+      Or.inr
+  ```
+- **b9 rises_or_still** (3 lines)
+  ```lean
+    fun cs => gather_listed (D := fun c => ¬ W.Rises t c) cs
+      (fun c mem k => (Decidable.em (W.level t c < W.level (t + 1) c)).elim
+        (fun rises => .inl ⟨c, mem, rises⟩) k) Or.inr
+  ```
+- **b10 commonWitness_or_covered** (5 lines)
+  ```lean
+    fun roster => gather_listed (D := fun d => ¬ d ∈ b → d ∈ a) roster
+      (fun d mem k => match decideMem d a, decideMem d b with
+        | .isTrue inA, _ => k fun _ => inA
+        | .isFalse _, .isTrue inB => k fun nb => absurd inB nb
+        | .isFalse na, .isFalse nb => .inl ⟨d, mem, na, nb⟩) Or.inr
+  ```
+- **b11 Decided.exists_mem, through b12 placed before it** (1 line)
+  ```lean
+    fun decided => Decided.exists_listed decided
+  ```
+- **b12 Decided.exists_listed** (3 lines)
+  ```lean
+    fun {l} decided => gather_listed (D := fun b => ¬ P b) l
+      (fun b mem k => Or.elim (decided b mem) (fun holds => .inl ⟨b, mem, holds⟩) k)
+      fun none => .inr fun ⟨b, mem, holds⟩ => none b mem holds
+  ```
+- **b13 not_not_all** (1 line)
+  ```lean
+    fun {E} each => gather_listed (D := P) (G := False) E each
+  ```
+- **b14 not_not_within, through b13 as it stands** (1 line)
+  ```lean
+    fun l => not_not_all (E := l) fun x _ => each x
+  ```
+- **b15 Weighting.exceeds_or_includes** (5 lines)
+  ```lean
+    fun items => gather_listed (D := fun x => a x = true → b x = true) items
+      (fun x mem k => match ha : a x, hb : b x with
+        | true, false => .inl ⟨x, mem, ha, hb⟩
+        | true, true => k fun _ => hb
+        | false, _ => k fun admits => Bool.noConfusion (ha.symm.trans admits)) Or.inr
+  ```
+- **b16 not_not_listed, through b13 and listed_of_em as they stand** (2 lines)
+  ```lean
+    fun {ps} distinct no => not_not_all (E := ps) (P := fun a => q a ∨ ¬ q a)
+      (fun a _ k => k (.inr fun yes => k (.inl yes))) fun em => no (listed_of_em q distinct em)
+  ```
+
+**Binders.** All theorems; statements and binders stand. Named instances stay (`[decide : ∀ a, Decidable (p a)]` in b3, `[DecidablePred S]` in b5, `[DecidableEq D]` of the section in b10). b11 needs b12 to stand before it: b12 and `universe u` (now at l. 1041) move up past l. 136 in `Decidedness`. No member is longer or equal as a call.
+
+**Risks, untried:** `Or.inr` and `Or.inl` as the last argument across a definition (`Still` in b9, `IncludesOn` in b15, `CommonWitness` in b10); `.inl` and `.inr` where `G` is written `Decided …` (b12).
+
+## 3. Where the one statement would live
+
+**OPENED** (by script from the `import Becoming.…` lines of the 409 files: 907 edges, as Astra counts).
+
+**(a)**
+
+- The 21 member modules, each with itself, have in common `Grammar`, `GrammarMap`, `GrammarLaws`, `Prelude`. Strictly below all 21: `Grammar`, `GrammarMap`, `Prelude`. So there are modules below all members other than `Prelude`: `Grammar` and `GrammarMap` (neither imports `Prelude`; they hold the grammar, not arithmetic), and `GrammarLaws` itself, which holds a11 and is below the other 20. `Amounts` (a4's module) is below the other 19 and not below `GrammarLaws`.
+- **Is the statement already there under some name? Not found in what was read.** Searched by shape, not by name: every theorem of `Prelude`, `Decidedness`, `Undecided`, `GrammarLaws`, `Grammar`, `GrammarMap`, `Amounts`, `Change` and `PredicateIteration` whose proof has a recursor on `Nat` in the Lean list and whose statement has a disjunction or `Decided`. In `Prelude`: only `split_at_head` l. 1075 (a pigeonhole step). In `Decidedness`: only a19. In `Undecided`: only a16. In `GrammarLaws`: a11 and two traces. `Grammar` and `GrammarMap`: none.
+- With the statement in `Prelude` or in `GrammarLaws`: no import added, no closure grows, no cycle.
+- Importing the present owner instead is out: `ReadOffInTime` (closure 139) would add 72 to 135 modules to a member and make a cycle for twelve. Astra's table, re-derived for seven entries, all as printed.
+
+**(b)**
+
+- The member modules have only `Prelude` in common. `gather_listed` is in `PredicateIteration` (imports `Prelude` only; 144 modules have it in their closure; its one caller outside its own recursion is `GuardHorizon.lost_commutes`).
+- **Have it in their closure now:** `Undecided` (b1), `LineOnAStock` (b5, b6), `WideningOnTheMap` (b8), `Refinement` (b14, a direct import). **Do not:** `GrammarLaws` (b2), `Population` (b3), `Centers` (b4), `RelativePosition` (b7), `Arising` (b9), `Readout` (b10), `Decidedness` (b11, b12), `Weightings` (b15), `ExchangePremises` (b16, which needs only `not_not_all`), and `Prelude` (b13).
+- **Only b13 forces the move.** `Prelude` importing `PredicateIteration` is a cycle, since `PredicateIteration` imports `Prelude`. For the other modules an import adds one module to the closure; through `GrammarLaws` that reaches 245 closures.
+- Moved into `Prelude` before l. 718: it needs only `mem_cons_cases` (l. 509) and `universe u` (l. 50), both there. No closure changes, no cycle. What changes besides the two sources: the module docstring of `PredicateIteration` (l. 31), the package `README.md`, and the record `kept-at-the-length-of-a-list`, whose declaration list names `Becoming.gather_listed` under that file.
+- Astra's own B (move `each_or_some` to `Prelude`): its table of what importing `Undecided` would cost, re-derived for eight entries, all as printed.
+
+## 4. The cost side
+
+**OPENED** (by script; step time from `/Users/ren/tmp/rw/words14/core_run_estimate.py`, which only reads the committed receipt and the cache).
+
+- **A change to `Prelude` re-elaborates 401 modules, not 409.** Eight have no `Prelude` in their closure: `Grammar`, `GrammarMap`, `GrammarReadings`, `GrammarTesting`, `Ideals`, `MapRegions`, `Segmentation`, `ShownOrder`. By today's cache: 1,600 steps, 1,824 s of step time one at a time. The whole package is 1,632 steps and 1,857 s; the addendum's 1,639 and 2,393 s are an earlier receipt's.
+- **Records** (568 under `theories/becoming/results/records/`): a record is counted when a `proof_bindings` source is a changed file. 136 are bound to `Prelude.lean`.
+
+| Landing | Sources changed | Modules re-elaborated | Step time | Records bound to a changed source | Proof lines now → after |
+|---|---:|---:|---:|---:|---:|
+| `Prelude` alone, for scale | 1 | 401 | 1,824 s | 136 | |
+| (a) in full, statement in `Prelude`, 20 members | 21 | 401 | 1,824 s | 186 | 216 → 80 |
+| (a) in full, statement in `GrammarLaws` | 21 | 388 | 1,775 s | 98 | 216 → 80 |
+| (b) in full, `gather_listed` moved to `Prelude` | 15 | 401 | 1,824 s | 174 | 144 → 38 |
+| (a) and (b) in one landing, `Prelude` | 33 | 401 | 1,824 s | 215 | 360 → 118 |
+| (a) and (b), `GrammarLaws` as home, b13 left | 32 | 390 | 1,781 s | 156 | 353 → 117 |
+| (a) with no new statement: a9, a12, a14 | 3 | 82 | 324 s | 9 | 32 → 7 |
+| (b) with no move: b1, b5, b6, b8, b16 | 4 | 24 | 103 s | 6 | 53 → 12 |
+| the last two together | 7 | 90 | 351 s | 15 | 85 → 19 |
+| the last, with b14 and b11 (`Refinement`, `Decidedness`) | 9 | 166 | 677 s | 29 | 98 → 21 |
+
+- Beyond `Prelude`'s 136, the member modules add 50 records for (a), 38 for (b), 79 for both.
+- A member's own module can cost more than the home: `Population` (b3) has 317 modules above it and 37 records bound; `Arising` (b9) 334 and 18; `Amounts` (a4) 341 and 13; `Decidedness` (a19, b11, b12) 146 and 14.
+- **A proof change alters no record's declaration list.** Each member is named in the declaration lists of 0 to 4 records (most in one). A move does alter one: `gather_listed` (1 record), and in Astra's design `first_of_decided` (1 record lists it; 4 records' pages name it).
+
+**Callers** (the Lean list's `uses`, confirmed by grep of the names):
+
+- (a), helpers called once, in their own module (13 of 21): a3, a5, a6, a7, a8, a9, a10, a11, a12, a14, a16, a18, a21. Called once from another module: a2 (`KeepingWidening`). In their own module only: a13 (8 callers), a17 (2). Across modules: a1 (6 callers in `ReadOffInTime`, `TurningInTime`, `LineOnAStock`), a4 (4 in `Amounts`, `HeldPossible`, `RegimeMargin`), a15 (3 in `Horizon`, `LimitVerification`, `Verification`), a19 (6 in `Decidedness`, `Likeness`, `ReorderingGrowth`), a20 (2 in `Presence`, `ReorderingGrowth`).
+- (b), called once in their own module: b4, b5, b6, b7, b8, b9, b10, b16. Own module only: b2 (2), b15 (2). Across modules: b3 (10 callers in 8 modules), b12 (10 in 6), b13 (8 in 5), b11 (5 in 2), b1 (2 in 2), b14 (1, in `Identification`). `gather_listed` itself: 1 caller.
+
+No caller changes: every statement stands.
+
+## 5. The ledger, by my counts
+
+**OPENED** for the lines now; the lines as calls are of the terms printed in section 2, counted by script, unbuilt.
+
+**(a)**
+
+| | Now | As calls |
+|---|---:|---:|
+| a1 to a21 (a19 at 14) | 229 | 76 |
+| `first_below`, once (3 + 10) | | 13 |
+| **All 21** | **229** | **89** |
+| Without a11 (left as it is) | 216 | 80 |
+
+Difference: 140, or 136 with a11 left. Every bridge is inside a member's count: the padding of the lower end (a4, a11, a19), the step's decision (a10, a15, a16), `<` against `≤` (a1, a2, a13, a18). The reader's 215 → 85 differs by a19's line and by five terms I wrote shorter or longer by a line or two. Members for which the call is no shorter: none; a11 is the one I would still leave.
+
+**(b)**
+
+| | Now | As calls |
+|---|---:|---:|
+| b1 to b14 | 115 | 31 |
+| b15, b16 | 29 | 7 |
+| `gather_listed` (2 + 6, moved, not added) | | 0 |
+| **All 16** | **144** | **38** |
+
+Difference: 106 (the reader's fourteen: 84, against his 83). Members for which the call is no shorter: none. With `each_or_some` moved as well and used as the middle step, nine members lose one more line each; not counted.
+
+Astra's ledgers (A 260 → 92, B 147 → 39, C 51 → 26) are TOLD apart from the terms named in section 1.
+
+## 6. Class and verdict
+
+**Class.** Both families are class (ii), deciding and searching, by the addendum's point 1. OPENED for what that rests on: every member is a statement about a decided property on a stretch or a list; the calls drop no premise from any member; `N` and `k < N` in a21 stay in its statement unused. The one link between modules a full landing would make is each member naming a lemma of `Prelude`.
+
+**M1 to M5.**
+
+- **(a).** M1: holds for none of the 21. It holds for `Clear.or_first` as things stand (a case only after a move). M2: holds for `Likeness.drops_somewhere` (4 = 4) and in effect for `Optimum.last_before` (5 → 4); a11 is 9 against 13 and marginal; it holds for none of the other 20. M3: does not hold with `Prelude` or `GrammarLaws` as home; holds for importing `ReadOffInTime`. M4: no, every member's statement line is of 12 October to 10 November. M5: not by the letter, since each feature is used (two predicates by a1, a5, a10, a13 to a16, a18; the first by a1, a8, a13, a14, a21; the hypothesis below the bound by a19 and a20). That last feature is the one a build may drop: a19 and a20 can pad the bound into the predicates, at 5 lines each.
+- **(b).** M1: holds for none of the 16; `Frontier`'s is not an induction said again. M2: holds for none (least gain b14, 5 → 1); the wrappers already calls are out. M3: holds for b13 if done by import (a cycle), not if `gather_listed` is moved. M4: no for the members; the statement itself is of 22 November. M5: no, the statement exists and has a caller.
+
+**Verdict, in numbers.**
+
+- **(a) as a landing of its own: no.** 136 lines out of 301,817, 20 old theorems made calls, against 21 sources changed, 401 modules re-elaborated and 186 of 568 records re-bound; 13 of the 21 are helpers called once in their own module, and nothing on the map is joined.
+- **(b) as a landing of its own: no.** 106 lines, 16 old theorems, against 15 sources, 401 modules, 174 records. It does make the statement of 22 November carry sixteen older results, and `PredicateIteration`'s own docstring already says `not_not_all` is its case; that is said once already, in words.
+- **Both in one landing** pays `Prelude` once: 33 sources, 215 records, 242 lines. That is 0.9 of a record re-bound for each line removed. Still no, for itself.
+- **The joins that open neither `Prelude` nor any module with many above it: yes.** a9, a12, a14, b1, b5, b6, b8, b16: 7 sources, 90 modules, 351 s of step time, 15 records, 85 lines become 19, no new statement, no move, no import. `Stock.search` then names `Amounts.unmarked_or_marked`, `searchBelow_or` names `Decided.exists_below`, `least_true_or_below` names `Clear.or_first`, and `not_not_listed` becomes a corollary of `listed_of_em`. One small landing, or taken when those modules are next changed.
+- **If `Prelude` is changed for another reason**, (a) and (b) go in that landing together: the 136 are paid by it, and the members add 50 and 38 records (79 together). Then b3, b9, a4 and the `Decidedness` members cost nothing more in modules, since everything above them is rebuilt anyway.
+- If a home is wanted that is not `Prelude`: `GrammarLaws` already holds two members and a generic list lemma, is below every member module but `Prelude` and `PredicateIteration`, and has 12 records bound against 136. (a) there is 98 records in place of 186. It leaves `not_not_all` with its own induction and puts a lemma on numbers in the grammar's laws.
+
+## What was and was not checked
+
+- **Opened:** statement and proof of all 21 of (a), of Astra's eight further rows of A, of b1 to b16 and `gather_listed`, of the five wrappers (`Likeness` l. 413, 421, 429, 1804; `Decidedness` l. 1067) and `Frontier` l. 264; the definitions the statements use (`Keeps`, `Unread`, `Decided`, `WeaklyDecided`, `FirstAt`, `LPO`, `clear`, `Clear.cases`, `Clear.false_before`, `Rises`, `Still`, `CommonWitness`, `Value.decided`, `ExceedsOn`, `IncludesOn`, `Included`); `Decidable.em`, `byCases`, `Or.symm`, `Or.imp` in the toolchain source.
+- **By script:** closures for 409 modules; blame of every member's statement line; the Lean list joined to every member (head, recursor, uses, callers); records joined on `proof_bindings` sources and on declaration lists; step time by the estimate script; line counts and widths of every term here.
+- **Not done:** nothing built; no call checked by Lean; no `#print axioms`. Every "→ call" figure is of an unbuilt term.
+- **Not checked:** Astra's A, B and C ledgers beyond the terms named; the reader's sub-families (b′) and (b″) and his claim that (a) is not usefully a case of (b); whether more members exist. A scan of the Lean list for other inductions of these shapes (head a recursor on `Nat` or `List`, a disjunction or a double negation in the statement) gave 43 and 38 statements, read as statements only: none looked like another member of (a); for (b), `InAmounts.not_not_totalOf_le` l. 508, `Dissipation.Enclosed.around_not_not` l. 518 and `Entropy.changes_member` l. 1086 were opened and are not cases in a line (the first would need a lemma that totals keep an order, untried). The scan misses a theorem whose head is not the recursor.
+- **The scratchpad.** The folder I first used (`…/scratchpad/chk/`) is shared with other checkers running at the same time, and three of my files there (`calls.txt`, `blame.sh`, and so the first assembly of this report) were overwritten by theirs after I had run them. Every figure here is from a run of my own script in the same command that wrote it; the terms were typed again and re-counted in a folder of my own, with the same counts.
+- **Record counts** are of files bound, not of reviews: by `_process/RESULT-WORKFLOW.md` a re-point that changes nothing a record says is made by `tools/research/repoint.py` and logged once a landing; I did not run it or measure it.

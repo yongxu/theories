@@ -1,0 +1,11 @@
+Kept members **1, 2, 3, 4, 5, 6, 7 and 10** as calls.
+
+Put back member **8**, `Onward.KeepsMoving.continues`, byte for byte. Lean accepted the call, but the comparison printed `proof lines 4 -> 2; characters that are not spaces 122 -> 152`.
+
+The final comparison covered all 886 declarations and printed `whole-build checks all pass`.
+
+[Report](/Users/ren/tmp/fm/build13/report/REPORT.md) · [Final comparison](/Users/ren/tmp/fm/build13/report/compare.txt) · [Six scratch modules](/Users/ren/tmp/fm/build13/after/Becoming/)
+
+── cx · ok · session 01a2028b-a7fe-7911-b8e9-4a5957b4bba1 · gpt-6.2-astra/xhigh · bypass (mirrors Claude) · 524s · 3692.2k tokens · 58 cmds
+continue: cx -r 01a2028b-a7fe-7911-b8e9-4a5957b4bba1 "…"
+log: /Users/ren/.cache/cx/runs/20261122-161716-86708

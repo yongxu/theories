@@ -1,0 +1,225 @@
+# CHECK: goings-on (the class (i) families, and more cases for the law of 22 November)
+
+*AI-written (Claude Fable, a checker alone, board row FM), 22 November 2026. Read only: nothing in the repository edited but this file; no Lean written, run or built; no agents. Every call below is on paper and was tried by no one. Scripts (import closures, the join against the Lean list, blame, the atlas and record counts) are in `/private/tmp/claude-501/-Users-ren-theories/21947b1b-65d1-45e4-bdb9-d3582a76bb12/scratchpad/chk/`. Lean paths are under `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`.*
+
+**Conventions.** Proof lines are the physical lines after the statement's last line to the end of the declaration. Dates are `git blame` of the statement's first line. A closure is the set of package modules a module imports, itself left out (the horizons reader's figures are 1 to 4 higher, which fits counting the module and the names outside the package; no verdict of theirs changes). "Re-elaborated" is the module and every module with it in its closure. "Records" is the number of the 568 records that cite the touched Lean file as a source (Lean sources are bound by exact bytes); which of them would need more than a re-point I did not check.
+
+## Headline
+
+1. **OPENED. Nine theorems of 13 October to 6 November still carry an induction that the law of 22 November already has, in modules where the bridge to an iterate is already landed and costs no premise.** Six are `Iteration.postfixed_in_iter` or a call of one ("a class the step preserves lies in every iterate"), two are `Iteration.iter_pred`, one is `Iteration.iter_within`. No new statement, no new bridge, no import: 45 proof lines become 24. Seven of the nine are in none of the four returns (searched by name and by file and line; the Astra report has none of them); the other two are the horizons reader's (c-i), which I confirm.
+2. **OPENED. The readers' largest class (i) saving is not one.** `Lasting.orbit_mono` (9 lines to 1 in both the horizons return and Astra's family F) has no induction of its own: the Lean list gives head `Eq.subst`, `inductions` empty, `uses` `Invariant.reach`, `Lasting.orbit_pair`, `Run.reach`. It is already a call of the closure law of 9 October. By the addendum's point 4 it leaves the ledger; family (d-i) falls from 11 lines saved to 3, and to 1 without a move that re-elaborates 253 modules.
+3. **Class (i) by substance, after checking:** the cases of the law (item 1); the cascade pair (Astra's Q); the widening pair (the link is already a theorem); a kept relation along a law's course (one clean item); a class closed under a law along its orbit (one clean item). **Re-classed (ii):** the fixed points (Astra's H), `kept_from` (the horizons reader's (c-ii)/(d-ii), Astra's E), the pigeonholes (E1, E2, Astra's J and K).
+
+## 1. From the Lean list
+
+### 1a. OPENED (by script). Already calls of the law: not finds
+
+39 of the 20,519 rows have a declaration of `Becoming.Iteration.` in `uses`; 16 are inside `PredicateIteration` (14) and `RisingIteration` (2). The 23 outside, by module, with what each calls:
+
+- `Attraction`: `Branching.iter_iff_reachable` (`iter_iff_stages`), `Branching.reachable_iff_all` (`iter_iff_all`)
+- `CommonResponse`: `held_iff_iter` (`iter_largest`), `held_iff_iter_pred_length` (`iter_persists_from_all`, `iter_pred`), `reach_within_pred_length` (`iter_within_pred_length`)
+- `GrammarCandidates`: `iter_iff_inquiry` (`iter_iff_stages`), `inquiry_iff_all` (`iter_iff_all`)
+- `GuardHorizon`: `iter_iff_viable` (`iter_iff_stages`), `closed_viable` (`postfixed_in_iter`), `viable_persists` (`iter_persists`), `lost_shortens` (`iter_shortens`), `lost_shortening_distributes` (`iter_succ`)
+- `KeepableStep`: `Viability.keepable_iff_count` (`iter_largest`)
+- `Keeping`: `Viability.iter_iff_kept` (`iter_iff_stages`), `Viability.coded_kept_iff_closed` (`iter_postfixed`)
+- `Lasting`: `iter_region_iff_lasts` (`iter_iff_stages`)
+- `Likeness`: `iter_iff_alikeTo` (`iter_iff_stages`), `alike_at_cover` (`iter_persists`)
+- `Parting`: `iter_iff_continues` (`iter_iff_stages`), `continues_persists` (`iter_persists`), `continues_any` (`iter_iff_all`)
+- `ReachableRanges`: `Reaching.iter_reach_iff_trace` (`iter_iff_stages`)
+- `Tolerance`: `kept_set` (`postfixed_in_iter`)
+
+Beside the namespace: `remove_mem` is used by `Refinement.DistinctUnder.length_le`, `gather_listed` by `GuardHorizon.lost_commutes`. `uses` is one call deep, so a theorem that calls one of these 23 does not show.
+
+### 1b. OPENED (by script, then by reading). The population
+
+2,638 rows have `inductions` non-empty. For each I took the statement from the source; 92 could not be placed by name (generated `brecOn` rows, helpers under a `where`, short names that occur twice in a module); I read those 92 names, and the one that touches a bridged notion, `Branching.lost_stays`, I opened. Bridges found by grep, all of 22 November by blame: `iter_iff_viable` (GuardHorizon:147), `iter_iff_kept` (Keeping:369), `iter_region_iff_lasts` (Lasting:251), `iter_iff_continues` (Parting:420), `iter_iff_alikeTo` (Likeness:1094), `iter_iff_inquiry` (GrammarCandidates:575), `iter_iff_reachable` (Attraction:128), `iter_reach_iff_trace` (ReachableRanges:513), `held_iff_iter` (CommonResponse:175), `kernel_iff_iter` (Viability:80), `keepable_iff_count` (KeepableStep:81), `iter_eq_orbit` (Tolerance:238). No other was found. 143 own-induction theorems name a bridged notion or a notion beside one in their statement (two keyword passes); I read all 143 statements and opened in full the ones below.
+
+### 1c. OPENED. The finds: nine old theorems that are cases of the law
+
+For each: the bridge has no hypothesis, so it costs the member no premise; the statement stands binder for binder (each call is a new body under the member's statement as it is); all are theorems.
+
+| # | Member | Date | Is | Proof lines now → as a call | Listed in a dynamic of the atlas |
+|---|---|---|---|---|---|
+| 1 | `Alike.alikeTo`, Likeness:916 | 14 Oct | `postfixed_in_iter` through `iter_iff_alikeTo` | 7 → 3 | no |
+| 2 | `AlikeTo.of_succ`, Likeness:899 | 14 Oct | `iter_pred` through `iter_iff_alikeTo` | 7 → 2 | no |
+| 3 | `AlikeTo.self`, Likeness:1205 | 15 Oct | a call of #1 at `Alike.refl` | 4 → 1 | no |
+| 4 | `«对称有常则不可诘»`, GrammarCandidates:533 | 23 Oct | `postfixed_in_iter` through `iter_iff_inquiry` | 7 → 5 | no |
+| 5 | `«诘之降»`, GrammarCandidates:601 | 6 Nov | `iter_pred` through `iter_iff_inquiry` | 4 → 2 | no |
+| 6 | `Lasting.lasts_of_kernel`, Lasting:231 | 14 Oct | `postfixed_in_iter` through `iter_region_iff_lasts` | 5 → 3 | no; its one caller `kernel_iff_lasts` is, in `never-leaving-a-guard` |
+| 7 | `Tolerance.withheld_kept`, Tolerance:303 | 19 Oct | `iter_within` through `iter_eq_orbit` | 3 → 2 | yes: `restoring-giving-from-the-worst-start` |
+| 8 | `Onward.KeepsMoving.continues`, Onward:222 | 16 Oct | `postfixed_in_iter` through `Parting.iter_iff_continues` | 4 → 3 | no |
+| 9 | `Branching.fed_keeps`, Branching:164 | 13 Oct | `postfixed_in_iter` through `iter_iff_reachable` | 4 → 3 | no |
+
+45 → 24. #2 and #5 are the horizons reader's (c-i); the other seven are new to the sweep.
+
+**The statements, and the calls.**
+
+1. `theorem Alike.alikeTo {F : Frame S A C} {G : Frame S' A C} : ∀ (k : Nat) {s : S} {s' : S'}, Alike F G s s' → AlikeTo F G k s s'`. `Alike` is `∃ B, Bisimulation F G B ∧ B s s'` (Labelled:302), and `Bisimulation F G B` (Labelled:293) unfolds to exactly: B lies inside agreement on claims, and `alikeStep F G` (Likeness:1080) takes B into itself. So the class K is B, the start is agreement on claims:
+```lean
+  fun k {s s'} ⟨B, bisim, related⟩ => (iter_iff_alikeTo k (s, s')).mp (Iteration.postfixed_in_iter
+    alike_mono (K := fun p => B p.1 p.2) (fun p h => (bisim p.1 p.2 h).1) (fun p h => bisim p.1 p.2 h)
+    k (s, s') related)
+```
+2. `theorem AlikeTo.of_succ {F : Frame S A C} {G : Frame S' A C} : ∀ {k : Nat} {s : S} {s' : S'}, AlikeTo F G (k + 1) s s' → AlikeTo F G k s s'`:
+```lean
+  fun {k s s'} h => (iter_iff_alikeTo k (s, s')).mp (Iteration.iter_pred alike_mono (fun _ m => m.1)
+    k (s, s') ((iter_iff_alikeTo (k + 1) (s, s')).mpr h))
+```
+3. `theorem AlikeTo.self (F : Frame S A C) : ∀ (k : Nat) (s : S), AlikeTo F F k s s`: `fun k s => (Alike.refl F s).alikeTo k` (`Alike.refl`, Labelled:334; the dot form is already used at Likeness:1170).
+4. `theorem «对称有常则不可诘» {R E S : «际» α} (hSE : «则» S E) (hs : «则» S («逆» S)) (hc : «有常» R S) : ∀ k u u', S u u' → «诘» R E k u u'`. The class is S:
+```lean
+  fun k u u' h => (iter_iff_inquiry k (u, u')).mp (Iteration.postfixed_in_iter inquiry_mono
+    (K := fun p => S p.1 p.2) (fun p s => hSE p.1 p.2 s)
+    (fun p s => ⟨hSE p.1 p.2 s, («有常之逐点» R S).mp hc p.1 p.2 s, fun v' r' =>
+      match («有常之逐点» R S).mp hc p.2 p.1 (hs p.1 p.2 s) v' r' with
+      | ⟨v, r, t⟩ => ⟨v, r, hs v' v t⟩⟩) k (u, u') h)
+```
+5. `theorem «诘之降» {R E : «际» α} : ∀ k u u', «诘» R E (k + 1) u u' → «诘» R E k u u'`:
+```lean
+  fun k u u' h => (iter_iff_inquiry k (u, u')).mp (Iteration.iter_pred inquiry_mono (fun _ m => m.1)
+    k (u, u') ((iter_iff_inquiry (k + 1) (u, u')).mpr h))
+```
+(The horizons reader wrote `iter_pred` bare; the member stands after `end ListedPairs`, where `open Iteration` is closed, so it is `Iteration.iter_pred`.)
+
+6. `theorem lasts_of_kernel : ∀ (n : Nat) {s : S}, Kernel (disturbed f adm) guard s → Lasts f adm guard n s`. The class is the kernel; that it lies in the guard and that every step keeps it is `Viability.kernel_certificate` (Viability:100; `Invariant P I` is `∀ s a t, P.step s a t → I s → I t`, Frame:265):
+```lean
+  fun n {s} kept => (iter_region_iff_lasts n s).mp (Iteration.postfixed_in_iter (region_mono _ _)
+    (kernel_certificate _ guard).within (fun y k => ⟨(kernel_certificate _ guard).within y k,
+      fun t ⟨a, st⟩ => (kernel_certificate _ guard).closed y a t st k⟩) n s kept)
+```
+7. `theorem withheld_kept (keeps : KeepsInclusion next) (empty : ∀ a, ¬ next allWithheld a) : ∀ n a, ¬ (Law.run next allWithheld).state n a`. `allWithheld` is `fun _ => False` (Tolerance:220), so `empty` is word for word the law's premise that the step takes the start into itself, and the conclusion is "every iterate lies in the start":
+```lean
+  fun n a gives => Iteration.iter_within ((monotone_iff_keepsInclusion next).mpr keeps) empty n a
+    (Eq.mpr (congrFun (iter_eq_orbit next allWithheld n) a) gives)
+```
+(`congrFun`, not `funext`: the second is `Quot.sound`.)
+
+8. `theorem KeepsMoving.continues {K : S → Prop} (moving : KeepsMoving P K) : ∀ (n : Nat) (s : S), K s → Lasting.Continues (within P K) n s`. `KeepsMoving P K` (Onward:206) is by definition `∀ s, K s → courseStep P K s`:
+```lean
+  fun n s held => (Parting.iter_iff_continues n s).mp (Iteration.postfixed_in_iter
+    (Parting.course_mono (within P K)) (fun _ _ => trivial) (fun y h => match moving y h with
+      | ⟨a, t, step, kept⟩ => ⟨a, t, ⟨step, h, kept⟩, kept⟩) n s held)
+```
+9. `theorem fed_keeps (fed : ∀ s, ∃ x a, P.step x a s) : ∀ n s, Reachable P n s`. The class is every configuration:
+```lean
+  fun n s => (iter_iff_reachable n s).mp (Iteration.postfixed_in_iter pred_mono
+    (K := fun _ => True) (fun _ _ => trivial)
+    (fun y _ => match fed y with | ⟨x, a, step⟩ => ⟨x, ⟨a, step⟩, trivial⟩) n s trivial)
+```
+
+**Order inside the modules (no import changes; closures by script: all six modules have `PredicateIteration` and their bridge in the closure now).** Likeness: ll. 898 to 924 (`of_succ`, `down_to`, `Alike.alikeTo`) go after `iter_iff_alikeTo` (l. 1097); nothing between l. 925 and l. 1097 uses them (grep). Lasting: `lasts_of_kernel` and `kernel_iff_lasts` (ll. 230 to 243) go after l. 255; nothing between uses them. GrammarCandidates: `«对称有常则不可诘»` and `«核则不可致诘»` (ll. 531 to 546) go after `iter_iff_inquiry` (l. 578) and before `core_iff_inquiry` (l. 589), which uses the second. Onward, Branching, Tolerance: nothing moves.
+
+**What would count against these, said before any build.** A pattern in a `fun` with implicit binders (#1) may need a `match` and a fourth line. `bisim p.1 p.2 h` must be accepted where `alikeStep F G K p` is expected, which needs `alikeStep` and `AlikeTo F G 0` unfolded (#1); the same kind of unfolding in #4, #6, #7. A moved theorem binds `F`, `G` (or `S`) that the section also has as variables. If a call comes out one line longer than written, M2 holds for #4, #7, #8, #9 (each is one or two lines shorter on paper).
+
+### 1d. OPENED. Theorems about a bridged notion that are not cases, or no shorter
+
+- `Lasting.Continues.down` (Lasting:970, 16 Oct): a case of `iter_pred` through `iter_iff_continues`, statement unchanged, `fun n s h => (iter_iff_continues n s).mp (Iteration.iter_pred (course_mono P) (fun _ _ => trivial) n s ((iter_iff_continues (n + 1) s).mpr h))`: 2 → 2. The bridge is in Parting, which imports Lasting (cycle, by script); its three declarations would move into Lasting. **M2** (equal). Agrees with both readers.
+- `Onward.continues_of_run` (Onward:86, 16 Oct): `postfixed_in_iter` with K "is on the run": 2 → 3. **M2.**
+- `Tolerance.rises_from_withheld` (Tolerance:278, 19 Oct): `iter_succ` through `iter_eq_orbit`, statement unchanged, but two casts: 2 → 3. **M2.** `rises_le` (283) repeats it step by step.
+- `Tolerance.KeepsInclusionInto.course` (257): compares the iterates of two steps; the law has no lemma for that (the comparison is inside the proof of `iter_iff_stages` only). Not a case.
+- `Viability.KeptFor.shorter` (Keeping:285) and `keptFor_of_closed` (316), 15 Oct: through `iter_iff_kept` the bridge costs `updates` and reaches only classes `decode c`; the members hold of every class with no premise. **M1**, as both readers say. A bridge at the type of classes (a step on families of classes; `KeptFor` at n + 1 is by definition that step at n, Keeping:95) was not found in what was read (grep of `iter` in Keeping and JointKeeping); it would be a new definition and two new theorems, about 8 lines, to take 3 + 4 proof lines to 2 + 2. **M2.** Not proposed.
+- `Lasting.Ladder.lasts` (145) and `Necessary.of_lasts` (162), 14 Oct: a level-indexed family below, or above, the iterates: each is one half of `iter_iff_stages`. No landed lemma states a half; a call would need a new statement and comes to 3 lines against 3. **M5 with M2.** Not proposed.
+- `GuardHorizon.dViable_iff` (476, 18 Oct): two recursions with the same clauses; `iter_iff_stages` then `iter_iff_viable`, with the present body as the clause: 6 → 6. **M2.**
+- `GuardHorizon.not_viable_of_loss` (231), `lost_not_viable` (318): of 22 November (**M4**), and neither is an induction the law has.
+- `«层即诘»` (GrammarCandidates:616, 6 Nov): `«层»` keeps the stage before and `«诘»` only the class, so the clause `inquiryStep («层» n) ↔ «层» (n + 1)` needs the stages to fall, itself an induction. **M1.**
+- `«核在每层之内»` (GrammarTesting:45, 23 Oct, the same commit as #4): the same induction as #4 with `«层»` for `«诘»` and the core for S. As a call it is one line, `fun k x y h => («层即诘» k x y).mpr («核则不可致诘» h k)`, statement unchanged; but both lemmas are in GrammarCandidates, which imports GrammarTesting (cycle), and the theorem is used in GrammarTesting (l. 58, and l. 132 through `«可分则不在核»`) and in RoomNet (ll. 729, 945), which does not import GrammarCandidates (+2 modules). **M3.** Said twice and not joinable where it stands.
+- `Branching.Returns.reachable_from` with `Returns.reachable` (Recurrence:377, 385, 20 Oct): returning is preserved by `predStep` (`Returns.pred`), so `Returns.reachable` is `postfixed_in_iter`; but the bridge is in Attraction, which imports Recurrence (cycle; moving it down, ll. 120 to 140, adds `PredicateIteration` to Recurrence and re-elaborates 253 modules), and the helper's statement (the start returns too) is more than the law gives, so its induction would stay. **M3.**
+- `Branching.lost_stays` (Recurrence:353), `Law.Reachable.back` (Pace:88): `Reachable.earlier` repeated; `Reachable.earlier` itself has no induction (Lean list: head a matcher, `inductions` empty). Not cases.
+- `Tolerance.thin_absorbed` (387): `postfixed_in_iter` with `iter_shift` and a cast, against 2 lines. **M2** (estimated, the term not written).
+- Symmetry and transitivity at each depth (`AlikeTo.symm`, `AlikeTo.trans`, `«诘之对称»`), the deciding theorems (`AlikeTo.decided`, `Continues.decided`, `live_iff_continues`), the characterisations by traces, histories and orbits (`Lasts.trace`, `Lasts.histories`, `lasts_of_histories`, `lasts_of_courses`, `alikeTo_frameBy_iff`, `alikeTo_labelled_iff`), `KeptFor.mono`, `KeptFor.finer`, `KeptFor.guard_mono`, and the instances: none is an induction the law has.
+- No bridge: `Lasting.Reaches` (twelve own-induction theorems; `Reaches.succ`, Lasting:630, would be `iter_succ`) and `Law.AgreeTo` (seven). Not found in what was read: grep of `iter` in Lasting gives ll. 252 and 261 only. A new bridge for `Reaches` is about 6 lines to save 1. **M2.**
+
+## 2. The readers' class (i) candidates
+
+**(c-i), `AlikeTo.of_succ` and `«诘之降»` as `iter_pred`. OPENED: confirmed** (items 2 and 5 above; 11 → 4, not 5). None of M1 to M5.
+
+**(d-i), "a kept relation along the courses of laws, six times". OPENED: one clean item, not six.**
+- `Lasting.orbit_mono` (14 Oct) is already a call (headline 2). Left out. Replacing it by `course_rel` would trade a call of the closure law (`Invariant.reach`, Frame, 9 October; the docstring says so) for a call of a lemma of 1 November: for the map that is a join unmade.
+- `Law.kept_along` (GrammarCourse:120, 23 Oct) is `Law.KeepsRelation.run` (IdentificationRuns:313; 22 Oct by blame, the day it was moved there; 19 October in SharedCodes is TOLD from Astra's name search) with the same definition `Law.KeepsRelation`, and GrammarCourse imports IdentificationRuns directly (script). `kept_along keeps h := KeepsRelation.run keeps h`: statement unchanged if `(run next s).state n` is accepted as `orbit next s n` (`Law.run_state` is `rfl`, Recurrence:325). 2 → 1, no move. This is the one item.
+- `RegimeMargin.…run_alike_of` (2458, 22 Oct): `Law.KeepsRelation.run (rel := fun a b => ∀ j, a j = b j) reads same`, statement unchanged, but RegimeMargin does not have IdentificationRuns in its closure (script). `Tolerance.KeepsInclusionInto.course` (257, 22 Oct) is between two laws and needs `WindowedWaiting.course_rel` (212, 1 Nov), which none of the members imports (script; WindowedWaiting imports Tolerance, so the other way is a cycle). Both need `course_rel` moved to Recurrence: 253 of 409 modules re-elaborated, 77 records citing the touched files, for 3 lines (10 → 7 with the alias). **M2 in effect, by the cost side.**
+- A seventh member no reader lists: `Steps.course_of_constant` (Change:874, 23 Oct), a constant relation along the successor on numbers; Change and Recurrence do not import one another. Not ranked.
+- Class: (i). The statement carries a notion the map has, a relation the step keeps (`Law.KeepsRelation`, which `Law.constant_iff_keeps`, GrammarCourse:112, shows to be the grammar's `«有常»` at a law's step). `WindowedWaiting.course_congr` (laws equal at every state have one course) is congruence of equality: (ii).
+
+**(c-ii)/(d-ii) and Astra's E, `Undecided.kept_from` about sixteen times. OPENED (the lemma, `holds_below`, and two calls); the rest TOLD. Re-classed (ii).** `kept_from {Q : Nat → Prop} (next : ∀ k, Q k → Q (k + 1)) {j} (start : Q j) {k} (le : j ≤ k) : Q k` is induction on `≤` restated; it carries no step, course or class, and a row "a case of `kept_from`" would say nothing of a going-on. The calls I tried on paper hold (`holds_below` with `Q k := P k x → P b x`; `Reaches.mono` with `Reaches.succ`). Where it stands it is **M3** (adding Undecided to Recurrence or GrammarMap is a cycle, by script); in Prelude it re-elaborates 401 of 409 modules and touches a file 139 records cite, for about 16 lines.
+
+**(d) one class along a determined law's orbit** (`Lasting.closed_orbit`, `WindowedWaiting.invariant`, `Law.orbit_held`, `RegimeMargin.…run_within`, `Law.Absorbing.orbit`, `Invariant.run`, `Run.stays`). OPENED. Class (i) by statement. As calls of `kept_from` or of `Invariant.run` each is 2 lines against 2: **M2**, as the horizons reader says. As calls of `Lasting.closed_orbit` (14 Oct): `run_within band high := Lasting.closed_orbit (K := fun x => ∀ i, x i ≤ hi) band high` (RegimeMargin:2495, 22 Oct; `Band`, l. 2424, is the premise word for word; RegimeMargin imports Lasting), 2 → 1, statement unchanged. `orbit_held` (Identification:1539): Identification does not have Lasting (script), **M3**. `WindowedWaiting.invariant`: +25 modules, **M3**. Astra's "every module has the site in its closure" holds only after `closed_orbit` is moved to Recurrence (253 modules).
+
+**Astra's D (transport between horizons).** OPENED. Its rows are the items above: `AlikeTo.of_succ` a case; `Continues.down` M2; `KeptFor.shorter` M1; `AgreeTo.of_succ` as a line from `agreeTo_iff` is tidying, not a join; `PossibleWithin.mono` and `Recoverable.earlier` have the `≤` inside the definition and no induction.
+
+**Astra's H (a fixed point stays fixed). OPENED (`Seeking.fixed_rests` l. 128, `Learnable.orbit_of_still` l. 150, `HexagramLaws.orbit_still` l. 128). Re-classed (ii).** The induction is congruence of equality along an orbit (`(congrArg next ih).trans still`); the class kept is one point. The member that carries a notion (`fixed_rests`, 12 October: a target met at a fixed state is met at rest) is not what the thirteen would call; they would call its target-free projection. A row would repeat the member's own premise. As tidying it is real and partly free: `HexagramLaws`, `ReadOffInTime`, `LineOnAStock`, `WayOfUnits`, `SharedCodes` already have `Learnable` in their closure (script), so their six theorems are `Learnable.orbit_of_still still` with no move (10 modules, 11 records; the five beside `HexagramLaws.orbit_still` are TOLD from Astra's table).
+
+**Astra's Q (the cascade). OPENED (Cascade ll. 60 to 110, ReachedCascade ll. 40 to 97). Class (i), and the plainest join in the readers' lists.** `Turns.acts_alike_of_cascade` and `law_alike_of_cascade` (Cascade:101, 89; 29 Oct) assume the premise on every list of earlier acts; `acts_alike_along` and `law_alike_along` (ReachedCascade:87, 76; 4 Nov) assume it only at the histories reached. The older law is a case of the later:
+```lean
+-- acts_alike_of_cascade (7 → 1)
+  acts_alike_along (fun n late => cascade n late (T.coupling n w) (T.coupling n w') (T.acts w n)) alike
+-- law_alike_of_cascade (5 → 2)
+  law_alike_along (fun n late => cascade n late (T.coupling n w) (T.coupling n w') (T.acts w n)) alike
+    before
+```
+Checked against `LawAlikeAlong` (ReachedCascade:58) and `ReadsOnlyActsFrom` (Cascade:79): statements unchanged, no premise added or lost. ReachedCascade imports Cascade (script), so `LawAlikeAlong` and the two theorems (they use only `acts`, `AlikeBefore`) move down into Cascade: no import, no cycle. 12 → 3. None of M1 to M5. Both ends are already listed in one dynamic (`a-cascade-at-the-histories-reached`), so no row between dynamics is gained; the Lean would say what the atlas already lists together.
+
+**The pigeonholes reader's (e), Astra's I, J, K.**
+- **E3 / I, no list holds what keeps widening. OPENED (ReachableRanges ll. 311, 571 to 590, 826 to 833; EventualWidening ll. 292, 318 to 345). Class (i); the link already exists.** `Web.KeepsWidening.not_listed_via_chain` (27 Oct) proves the web's statement from the chain's law, so the map's link is a theorem since then. What remains is the web's own induction: `Web.KeepsWidening.gathers := fun n => match keeps.chain.gathers n with | ⟨xs, m, length, distinct, all⟩ => ⟨xs, T + m, Nat.le_add_right T m, length, distinct, all⟩` and `not_listed := fun keeps => keeps.chain.not_listed ⟨fs, fun _ f _ => every f⟩`, both statements unchanged (confirmed). The chain's definition, two theorems and the bridge move down into EventualWidening (script: ReachableRanges imports it, not the reverse). 13 lines; 38 modules, 9 records. None of M1 to M5. For the map: nothing new.
+- **E1 / J, the sequence pigeonhole twice (`Prelude.revisits_within`, `Description.shared_below`). OPENED at the statements only; the call TOLD. Re-classed (ii).** Both are the counting fact; neither is listed in a dynamic; a row would say "the pigeonhole is the pigeonhole". The recurrences that are laws of a going-on already call `revisits_within`. A build touches Prelude (401 modules).
+- **E2 / K, the totals and lengths over a list without repetition. TOLD. Class (ii):** bookkeeping about lists and numbers. Its one statement moves into Population (318 modules re-elaborated).
+
+## 3. The surviving class (i) families
+
+**S1. Cases of `Becoming.Iteration` (PredicateIteration:146, 103, 108; all in every member's closure now).** Members: the nine of 1c. Statements unchanged; bridges cost no premise; no import; three reorders inside modules. Dates 13 October to 6 November: **M4 does not hold** (only the bridges are of 22 November). No new statement: **M5 does not hold.** Callers (statements unchanged, so untouched): `Alike.alikeTo` at Likeness 1163, 1170, 1183, 1345, 1376, 1510 and Distinguishing 78, 215; `of_succ` at Likeness 913, 1239, 1270 to 1273, 1999, 2007; `AlikeTo.self` at 1239, 1253, 1254; `withheld_kept` at Tolerance 491, 860 and WindowedWaiting 999; the other five have one caller each.
+
+| Module | Members | Lines | Re-elaborated | Records |
+|---|---|---|---|---|
+| Likeness | 1, 2, 3 | 18 → 6 | 98 | 15 |
+| GrammarCandidates | 4, 5 | 11 → 7 | 4 | 4 |
+| Tolerance | 7 | 3 → 2 | 5 | 3 |
+| Onward | 8 | 4 → 3 | 21 | 5 |
+| Lasting | 6 | 5 → 3 | 83 | 13 |
+| Branching | 9 | 4 → 3 | 130 | 12 |
+| all six | nine | 45 → 24 | 134 | 44 |
+
+What a row would say: a bisimulation, a symmetric constant relation inside a class, the kernel of a guard, a family that keeps moving, and "every configuration is fed" are each a class its step preserves, and "alike to every depth", "told apart at no stage", "lasts every horizon", "courses of every length", "had at every step" are each that class lying in every iterate. With `closed_viable` and `kept_set`, already calls, that is seven notions under one sentence of the law, five of them now with their own induction. In the atlas only #7 has both ends listed (`Tolerance.withheld_kept` in `restoring-giving-from-the-worst-start`; the law in `kept-at-the-length-of-a-list`); #6 sits under a dynamic that already names the law (`never-leaving-a-guard` lists `kernel_iff_iter`); likeness, the inquiry stages, `KeepsMoving.continues` and `fed_keeps` are in no dynamic's declarations (grep of `dynamics.json`), so for them a case row has no end to attach to yet.
+
+**S2. The cascade (the one statement: `Turns.acts_alike_along`, with `law_alike_along`).** As in section 2. 2 modules re-elaborated, 2 records.
+
+**S3. Widening (the one statement: `Reaching.KeepsWidening.gathers`, `not_listed`).** As in section 2.
+
+**S4. A kept relation along a law's course (the one statement: `Law.KeepsRelation.run`).** `kept_along` only; GrammarCourse, 24 modules, 2 records.
+
+**S5. A closed class along a law's orbit (the one statement: `Lasting.closed_orbit`).** `run_within` only; RegimeMargin, 9 modules, 11 records. `run_within` is listed in `regime-in-any-amounts`; `closed_orbit` in no dynamic.
+
+## 4. Verdict
+
+**Class (i), ranked by what a build would give the map.** Everything is on paper.
+
+*Old results made cases of the law already in the package:*
+1. **Likeness** (#1, #2, #3; 14 and 15 October): the notion's inductions on depth all become the law's (`alike_at_cover` already is). 12 lines. None of M1 to M5. The dearest to land (98 modules, 15 records).
+2. **The inquiry stages** (#4, #5; 23 October, 6 November): the grammar's twin of likeness. 4 lines. None of M1 to M5. Cheap (4 modules, 4 records).
+3. **`Tolerance.withheld_kept`** (#7; 19 October): 1 line; the only find that could give a row between two dynamics both listed now. Cheap (5 modules, 3 records). M2 if the casts take a third line.
+4. **`Lasting.lasts_of_kernel`** (#6; 14 October): 2 lines; its dynamic already names the law. 83 modules, 13 records.
+5. **`Onward.KeepsMoving.continues`** (#8; 16 October) and **`Branching.fed_keeps`** (#9; 13 October): 1 line each; M2 if a line longer. 21 and 130 modules.
+
+The four cheapest together (GrammarCandidates, Tolerance, Onward: #4, #5, #7, #8) re-elaborate 28 modules and touch files 11 records cite.
+
+*Old results made cases of an older general member:*
+
+6. **The cascade pair** (29 October, as cases of the law of 4 November): 9 lines, none of M1 to M5, 2 modules. No new row between dynamics.
+7. **`Law.kept_along`** as `Law.KeepsRelation.run`: 1 line, a plain duplicate, no move.
+8. **`run_within`** as `Lasting.closed_orbit`: 1 line.
+9. **The widening pair**: 13 lines, the link already a theorem.
+
+*Class (i) and not worth a build:* `Continues.down`, `continues_of_run`, `rises_from_withheld`, `dViable_iff`, the one-class members as `Invariant.run` (M2); `KeptFor.shorter`, `keptFor_of_closed`, `«层即诘»` (M1); `«核在每层之内»`, `Returns.reachable`, `orbit_held`, `WindowedWaiting.invariant`, the rest of (d-i) (M3 or its cost); `Ladder.lasts`, `Necessary.of_lasts` (M5 with M2); `not_viable_of_loss`, `lost_not_viable` (M4).
+
+**Called class (i) by a reader, re-classed (ii), with the reason:**
+- **`kept_from`** ((c-ii)/(d-ii), Astra's E): induction on `≤` restated; links only into Prelude.
+- **The fixed points** (Astra's H): congruence of equality along an orbit; the row would repeat the member's premise.
+- **The sequence pigeonhole** (E1, Astra's J) and **the list pigeonhole and totals** (E2, Astra's K): counting.
+- **`course_congr`**, and `AgreeTo.of_succ` from `agreeTo_iff` (rows of Astra's F and D): congruence, and a definition unfolded.
+- **Left out by the addendum's point 4:** `Lasting.orbit_mono`, already a call.
+
+## 5. Untried, and the limits of this check
+
+- No call was built; "statement unchanged" was tried on paper against the two statements and the definitions named, nothing more.
+- The 2,638 own-induction theorems were not all opened: 143 statements read by keyword, about 60 opened in full. A theorem about a bridged notion stated through a local notation or an abbreviation I did not search for would be missed. The Lean list does not show an induction carried by a helper (`Returns.reachable` is such a one).
+- The atlas: names matched in `dynamics.json` only; how a case row is entered, and what the mapping rows bind, not checked.
+- The search reader's return (families a, b) was not read: class (ii) seeds, not this part. E2, E4, F0 to F2 of the pigeonholes return are TOLD. Of the Astra report I read the summary, families D, E, F, H, I, J, K, Q, the ranking and the near misses, and searched the rest by name and by file and line.
+- Step times from the cache were not computed; the cost side is in modules and records.

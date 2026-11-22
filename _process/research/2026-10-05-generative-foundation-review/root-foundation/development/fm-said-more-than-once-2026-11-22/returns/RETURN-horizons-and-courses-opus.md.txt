@@ -1,0 +1,224 @@
+# Return: horizons-and-courses (families (c) and (d)), reader Claude Opus
+
+*AI-written (Claude Opus, a reader alone), 22 November 2026. Read only. I edited nothing in the repository, wrote and ran no Lean, and ran no build or test. Imports were computed by a script over the `import` lines (`clos.py`, kept in my scratchpad). Dates come from `git log -S 'theorem <name>' -- <file> | tail -1`. Every call below is written on paper and was never built.*
+
+**Convention for proof lines.** I count the physical lines of the proof after the statement: the equation lines, or the term lines after `:=`. A `by` that sits on the statement line is not counted. Paths are relative to `.../lean/becoming/Becoming/`.
+
+## Summary
+
+There are three real candidates, each small. No member loses a premise.
+
+1. **(c-i) Two old down-steps become one call of `Iteration.iter_pred` through a bridge landed on 22 November.** `AlikeTo.of_succ` and `«诘之降»`: 11 lines become 5.
+2. **(d-i) A kept relation along the courses of laws is written six times.** `WindowedWaiting.course_rel`, moved to `Recurrence`, has five others as one-line calls. One of them, `GrammarCourse.Law.kept_along`, is an outright duplicate of `IdentificationRuns.Law.KeepsRelation.run`: same definition, same law, and the needed import is already there. 19 lines become 8, most of the saving from `Lasting.orbit_mono`.
+3. **(c-ii)/(d-ii) The step "from one step to every later step" is written about sixteen times.** These are each notion's second small induction. `Undecided.kept_from` (19 October) is the one lemma, and `Likeness.holds_below` is a one-line case of it. It would have to move to `Prelude` (import closure 0). The saving is about 1 line a site, and for about six sites none at all (M2).
+
+Not cases: `KeptFor.shorter` (M1), `Continues.down` and `Reachable.earlier` (M3 and M2), `AgreeTo.of_succ` (M2), and every one-class law member (M2).
+
+---
+
+## Q1. Families: members, statements, proof lines, dates
+
+### (c) A longer horizon gives every shorter one, said notion by notion
+
+**(c-i) "n + 1 gives n", the notion's own recursion.** All OPENED.
+
+| member | module:line | statement (word for word) | proof lines | entered |
+|---|---|---|---|---|
+| `Iteration.iter_pred` | PredicateIteration:103 | `theorem iter_pred : ∀ n y, iter Φ V₀ (n + 1) y → iter Φ V₀ n y` (with `mono : MonotoneStep Φ`, `start : ∀ y, Φ V₀ y → V₀ y`) | 2 | 2026-11-22 |
+| `Viability.KeptFor.shorter` | Keeping:285 | `theorem KeptFor.shorter : ∀ {n : Nat} {B : S → Prop}, KeptFor P sense guard allowed (n + 1) B → KeptFor P sense guard allowed n B` | 3 | 2026-10-15 |
+| `Lasting.Continues.down` | Lasting:970 | `theorem Continues.down {P : Process S A} : ∀ (n : Nat) (s : S), Continues P (n + 1) s → Continues P n s` | 2 | 2026-10-16 |
+| `Likeness.AlikeTo.of_succ` | Likeness:899 | `theorem AlikeTo.of_succ {F : Frame S A C} {G : Frame S' A C} : ∀ {k : Nat} {s : S} {s' : S'}, AlikeTo F G (k + 1) s s' → AlikeTo F G k s s'` | 7 | 2026-10-14 |
+| `Identification.AgreeTo.of_succ` | Identification:1610 | `theorem AgreeTo.of_succ : ∀ {k : Nat} {s s' : S}, AgreeTo next o (k + 1) s s' → AgreeTo next o k s s'` | 2 | 2026-10-15 |
+| `«诘之降»` | GrammarCandidates:601 | `theorem «诘之降» {R E : «际» α} : ∀ k u u', «诘» R E (k + 1) u u' → «诘» R E k u u'` | 4 | 2026-11-06 |
+| `Branching.Reachable.earlier` | Recurrence:348 | `theorem Reachable.earlier {n : Nat} {s : S} : Reachable P (n + 1) s → Reachable P n s` | 2 | 2026-10-11 |
+
+I looked for others and found none. OPENED by a statement-extraction script over all 409 modules, then by opening the hits. There is no down lemma for `Viable` (GuardHorizon has only `viable_guard`), for `Lasts` (only `Lasts.within`), for `Optimum.Keeps` (l. 4308 is a definition with `∀ t, t ≤ n + 1 → …`, and no horizon lemma was found) or for `WithinMoves` (`WithinMoves.before`, Labelled:931, is a shift by one step, not a horizon). This is "not found in what was read", not "absent".
+
+Rising "n gives n + 1": `Lasting.Reaches.succ` (Lasting:630, 3 lines, 2026-10-14) and `Iteration.iter_succ` (PredicateIteration:225, 2 lines, 2026-11-22).
+
+**(c-ii) "N at n gives N at every m ≤ n" (or every m ≥ n, or every n + k): the second small induction.** All OPENED.
+
+| member | module:line | statement | proof lines | entered |
+|---|---|---|---|---|
+| `Undecided.kept_from` | Undecided:392 | `theorem kept_from {Q : Nat → Prop} (next : ∀ k, Q k → Q (k + 1)) {j : Nat} (start : Q j) {k : Nat} (le : j ≤ k) : Q k` | 3 (tactic `induction le`) | 2026-10-19 |
+| `holds_below` | Likeness:489 | `theorem holds_below {X : Type u} {P : Nat → X → Prop} (down : ∀ k x, P (k + 1) x → P k x) {x : X} {b : Nat} : ∀ {a : Nat}, b ≤ a → P a x → P b x` | 4 (tactic) | 2026-10-14 |
+| `AlikeTo.down_to` | Likeness:910 | `… ∀ {a : Nat}, b ≤ a → AlikeTo F G a s s' → AlikeTo F G b s s'` | 2 (already a call of `holds_below`) | 2026-10-14 |
+| `Reaches.add` | Lasting:637 | `theorem Reaches.add {n : Nat} {s : S} (reaches : Reaches f adm target n s) : ∀ j, Reaches f adm target (n + j) s` | 2 | 2026-10-14 |
+| `Reaches.mono` | Lasting:643 | `theorem Reaches.mono {n m : Nat} {s : S} (reaches : Reaches f adm target n s) (le : n ≤ m) : Reaches f adm target m s` | 3 (tactic `induction le`) | 2026-10-14 |
+| `Branching.lost_stays` | Recurrence:353 | `theorem lost_stays {n : Nat} {s : S} (lost : ¬ Reachable P n s) : ∀ k, ¬ Reachable P (n + k) s` | 2 | 2026-10-11 |
+| `Law.Reachable.back` | Pace:88 | `theorem Law.Reachable.back {S : Type u} {next : S → S} {n : Nat} {s : S} : ∀ k, Law.Reachable next (n + k) s → Law.Reachable next n s` | 2 | 2026-10-19 |
+| `Settling.seen_stays` | Settling:345 | `theorem seen_stays (f : Nat → Bool) {m : Nat} (yes : seen f m = true) : ∀ k, seen f (m + k) = true` | 2 | 2026-10-18 |
+| `reachedListed_add` | BalanceRegions:267 | `… (reached : reachedListed rel us a n x = true) : ∀ k, reachedListed rel us a (n + k) x = true` | 2 | 2026-11-01 |
+| `Presence.count_le_add` | Presence:148 | `theorem count_le_add (p : Nat → Bool) (m : Nat) : ∀ k, count p m ≤ count p (m + k)` | 2 | 2026-10-28 |
+| `Presence.count_mono` | Presence:151 | `theorem count_mono (p : Nat → Bool) {m m' : Nat} (le : m ≤ m') : count p m ≤ count p m'` | 2 (via `le_dest`) | 2026-10-28 |
+| `Frequency.count_mono` | Frequency:154 | `theorem count_mono (on : Nat → Bool) {s t : Nat} (le : s ≤ t) : count on s ≤ count on t` | 3 (tactic) | 2026-10-16 |
+| `carriedWithin_mono` | Loops:304 | `theorem carriedWithin_mono {j j' : Nat} (le : j ≤ j') (t : Nat) (c : C) : carriedWithin cs part σ k present δ j t c ≤ carriedWithin cs part σ k present δ j' t c` | 3 (tactic) | 2026-10-16 |
+| `withinBound_mono` | Loops:786 | `theorem withinBound_mono (M D j : Nat) {s t : Nat} (le : s ≤ t) : withinBound M D j s ≤ withinBound M D j t` | 3 (tactic) | 2026-10-16 |
+| `geomBound_mono` | Loops:792 | `theorem geomBound_mono (M D : Nat) {s t : Nat} (le : s ≤ t) : geomBound M D s ≤ geomBound M D t` | 3 (tactic) | 2026-10-16 |
+| `step_reaches_of_le` | GrammarMap:413 | `theorem step_reaches_of_le : ∀ {z n : Nat}, z ≤ n → «所及» step «一» z n` | 4 (tactic) | 2026-10-31 |
+| `stays_from_fixed` | LoopReturn:163 | `theorem stays_from_fixed {f : Nat → Nat} {d k : Nat} (fixed : f ((Law.run f d).state k) = (Law.run f d).state k) {n : Nat} (le : k ≤ n) : (Law.run f d).state n = (Law.run f d).state k` | 3 (tactic) | 2026-10-19 |
+| `Absorbing.orbit` | Attraction:181 | `theorem Absorbing.orbit {next : S → S} {R : S → Prop} (absorbing : Absorbing next R) {s : S} {n : Nat} (enters : R (Law.orbit next s n)) : ∀ k, R (Law.orbit next s (n + k))` | 2 | 2026-10-12 |
+| `steps_mono` | Prelude:1142 | `theorem steps_mono (q : Nat → Nat) (T n : Nat) : ∀ m, total (steps T n) q ≤ total (steps T (n + m)) q` | 3 | 2026-11-01 |
+| (inline `stays`) | Junctures:269–275 | inside `leads_bound`, an `induction le` on `all.length ≤ m` | 4 | (inside a theorem) |
+
+### (d) What every step keeps holds along the whole course
+
+All OPENED.
+
+**At a law `S → S`, one class:**
+- `Lasting.closed_orbit`, Lasting:474: `theorem closed_orbit {K : S → Prop} (closed : ∀ x, K x → K (next x)) {s : S} (held : K s) : ∀ n, K (Law.orbit next s n)`. 2 lines; 2026-10-14.
+- `WindowedWaiting.invariant`, WindowedWaiting:199: `theorem invariant {S : Type u} {next : S → S} {s : S} (P : S → Prop) (start : P s) (closed : ∀ x, P x → P (next x)) : ∀ n, P ((Law.run next s).state n)`. 2 lines; 2026-11-01. Its docstring says it "is `Lasting.closed_orbit` on `Law.run`", but it is not a call, and WindowedWaiting does not import Lasting.
+- `Law.orbit_held`, Identification:1539: `theorem orbit_held {next : S → S} {l : List S} (closed : ∀ s, s ∈ l → next s ∈ l) {s : S} (mem : s ∈ l) : ∀ n, Law.orbit next s n ∈ l`. 2 lines; 2026-10-13.
+- `run_within`, RegimeMargin:2495: `theorem run_within {hi : Nat} (band : Band G H hi) {s : ι → Nat} (high : ∀ i, s i ≤ hi) : ∀ n i, (Law.run (step Drawn.whole G H) s).state n i ≤ hi`. 2 lines; 2026-10-21. `Band` (l. 2425) is `∀ x, (∀ i, x i ≤ hi) → ∀ i, step Drawn.whole G H x i ≤ hi`: the class is closed under the law.
+
+**At laws `S → S` and `S' → S'`, a relation:**
+- `WindowedWaiting.course_rel`, WindowedWaiting:212: `theorem course_rel {S : Type u} {S' : Type v} {next : S → S} {next' : S' → S'} (R : S → S' → Prop) {s : S} {s' : S'} (start : R s s') (step : ∀ x y, R x y → R (next x) (next' y)) : ∀ n, R ((Law.run next s).state n) ((Law.run next' s').state n)`. 2 lines; 2026-11-01.
+- `Law.KeepsRelation.run`, IdentificationRuns:313: `theorem KeepsRelation.run {T : S → S} {rel : S → S → Prop} (keeps : KeepsRelation T rel) {x y : S} (related : rel x y) : ∀ n, rel ((run T x).state n) ((run T y).state n)`. 2 lines; 2026-10-22.
+- `Law.kept_along`, GrammarCourse:120: `theorem kept_along {next : S → S} {E : «际» S} (keeps : KeepsRelation next E) {s s' : S} (h : E s s') : ∀ n, E (orbit next s n) (orbit next s' n)`. 2 lines; 2026-10-23. It uses the same `Law.KeepsRelation` (the only definition, IdentificationRuns:310), and GrammarCourse imports IdentificationRuns directly.
+- `run_alike_of`, RegimeMargin:2458: `theorem run_alike_of {f : (ι → Nat) → (ι → Nat)} (reads : ReadsPointwise f) {x y : ι → Nat} (same : ∀ j, x j = y j) : ∀ n i, (Law.run f x).state n i = (Law.run f y).state n i`. 2 lines; 2026-10-22.
+- `Tolerance.KeepsInclusionInto.course`, Tolerance:257: `theorem KeepsInclusionInto.course {next' : (α → Prop) → α → Prop} (keeps : KeepsInclusionInto next next') {s s' : α → Prop} (sub : ∀ a, s a → s' a) : ∀ n a, (Law.run next s).state n a → (Law.run next' s').state n a`. 2 lines; 2026-10-22.
+- `Lasting.orbit_mono`, Lasting:399: `theorem orbit_mono (mono : ∀ a b, rel a b → rel (g a) (g b)) {a b : V} (below : rel a b) : ∀ n, rel (Law.orbit g a n) (Law.orbit g b n)`. 9 lines; 2026-10-14. It is already a call, of `Invariant.reach` on the pair law, through `orbit_pair` (Lasting:391, 2 lines, 2026-10-28, used nowhere else) and two `Eq.subst`.
+
+**At a process with moves (a `Run P`):**
+- `Invariant.run`, Frame:286: `theorem Invariant.run {P : Process S A} {I : S → Prop} (inv : Invariant P I) (r : Run P) (start : I (r.state 0)) : ∀ n, I (r.state n)`. 2 lines; 2026-10-09.
+- `Run.stays`, Attraction:517: `theorem Run.stays (r : Run P) {R : S → Prop} {n : Nat} (keeps : ∀ k, AbsorbingUnder P R (r.act (n + k))) (inside : R (r.state n)) : ∀ k, R (r.state (n + k))`. 2 lines; 2026-10-12.
+- `Invariant.reach` (Frame, 2026-10-09) goes by the closure, not by induction. `Pace.stays` and `Pace.stays_turned` (2026-10-28) and `RuleCapture.locked_stays` (2026-10-19) are already calls down to it.
+
+**At `Nat` with successor:** `Undecided.kept_from`, as above.
+
+**Members that genuinely differ (OPENED):**
+- `Viability.keptFor_of_closed`, Keeping:316. A family of classes, with a move chosen per class and the class seen per observation (5 lines, 2026-10-15).
+- `Lasting.Ladder.lasts`, Lasting:145. A level-indexed family that descends; it is a funnel, not a closed class (3 lines, 2026-10-14).
+- `GuardHorizon.closed_viable`. A choice of move; already a call of `postfixed_in_iter` through `iter_iff_viable` (2026-10-18; made a call on 22 Nov).
+- `Iteration.postfixed_in_iter`. Inclusion into the iterates of a monotone predicate step (2026-11-22).
+- `ReadingLoop.closed_of_keptBy`, 2026-10-30. Not a member: it proves the closedness (`«闭»`), which is the premise of the family, not its conclusion along a course.
+
+---
+
+## Q2. The one statement, and every call, checked by hand
+
+### (c-i) Through the landed iterate bridges (OPENED, both statements)
+
+**`AlikeTo.of_succ` as a case of `iter_pred` through `iter_iff_alikeTo` (Likeness:1094).** The bridge holds with no premise, `alike_mono` gives the monotonicity, and the start lies in itself because `alikeStep F G agree p → agree p` is `.1`.
+
+```lean
+theorem AlikeTo.of_succ {F : Frame S A C} {G : Frame S' A C} :
+    ∀ {k : Nat} {s : S} {s' : S'}, AlikeTo F G (k + 1) s s' → AlikeTo F G k s s' :=
+  fun {k s s'} h => (iter_iff_alikeTo k (s, s')).mp (iter_pred alike_mono (fun _ h => h.1) k (s, s')
+    ((iter_iff_alikeTo (k + 1) (s, s')).mpr h))
+```
+
+- **Checks.** The implicit `k s s'` are bound explicitly. `iter_pred`'s `mono` and `start` are explicit (`variable (mono) (start)` with `include`), followed by explicit `n y`. `F` and `G` of `iter_iff_alikeTo` (section variable, l. 933) are inferred from `h`. There is no `<`/`≤` issue and no offset.
+- **Statement unchanged: yes.**
+- **Order cost.** The bridge is at l. 1094 and the member at l. 899. `of_succ` and `down_to` must move to just after l. 1098. Their users in between: only `down_to` (l. 913). Later users (1239, 1270–1273, 1348, 1380, 1999, 2007) are unaffected.
+- **Lines.** 7 become 2.
+
+**`«诘之降»` as a case of `iter_pred` through `iter_iff_inquiry` (GrammarCandidates:575).** `inquiry_mono` gives the monotonicity, and the start is `fun _ h => h.1 : E p.1 p.2`.
+
+```lean
+theorem «诘之降» {R E : «际» α} : ∀ k u u', «诘» R E (k + 1) u u' → «诘» R E k u u' :=
+  fun k u u' h => (iter_iff_inquiry (R := R) (E := E) k (u, u')).mp
+    (iter_pred inquiry_mono (fun _ h => h.1) k (u, u') ((iter_iff_inquiry (k + 1) (u, u')).mpr h))
+```
+
+- **Checks.** `α : Type u` (l. 51 and on) and the section's `S : Type u` are both polymorphic. The member already comes after the bridge (l. 601 > 575). Its users are its own recursion and l. 622.
+- **Statement unchanged: yes.**
+- **Lines.** 4 become 3.
+
+**Not cases through a bridge:**
+- **`KeptFor.shorter`: NOT a case (M1).** `iter_iff_kept` (Keeping:369) needs `updates` (every observation after a usable move has a code naming exactly the class seen). It speaks only of coded classes `decode c`, while `KeptFor.shorter` holds of every `B : S → Prop` with no premise.
+- **`Continues.down`.** The bridge `iter_iff_continues` is in Parting, which imports Lasting, so the call would be a cycle. Moving `courseStep`, `course_mono` and `iter_iff_continues` (3 declarations, Parting namespace) into Lasting is possible, but the call is then 2 lines against 2. M2 and M3.
+- **`Reachable.earlier`.** The bridge `iter_iff_reachable` is in Attraction, which imports Recurrence: a cycle. Recurrence does not import PredicateIteration (adding it costs +1 module). The bridge is 13 lines; the member is 2. M2 and M3.
+- **`AgreeTo.of_succ`.** No landed bridge. On paper `agreeTo_iff.trans alikeTo_frameBy_iff.symm` makes `AgreeTo` the `AlikeTo` of `Law.frameBy` (both have the right side `∀ n ≤ k, o (orbit …) = o (orbit …)`). Identification does not import Likeness (+2 modules, no cycle), and the call would be 2 lines against 2. M2. It is a possible link, not a gain.
+- **`Reaches.succ` (rising).** No landed bridge. A `reachStep`-style bridge to `iter_succ` would be new (about 5 lines) to replace 3. M2.
+
+### (c-ii) and (d): one lemma for the step to every step: `kept_from` (OPENED)
+
+**`holds_below` is a case of `kept_from`.** Take `Q k := P k x → P b x`; the start is `id` and the step composes `down`:
+
+```lean
+theorem holds_below … : ∀ {a : Nat}, b ≤ a → P a x → P b x :=
+  fun le => kept_from (Q := fun k => P k x → P b x) (fun k back h => back (down k x h)) id le
+```
+
+- **Checks.** `next : ∀ k, Q k → Q (k+1)`, `start : Q b`, `le : b ≤ a`, result `Q a`. `x` and `b` are named binders of the statement.
+- **Statement unchanged: yes.** Lines: 4 become 1.
+
+So the falling direction (`n+1 → n` gives `every m ≤ n`) and the rising direction are one lemma. The lemma has no `Decidable`, `Classical` or `propext`; it is an `induction` on `Nat.le`, as both are now.
+
+**Calls (each statement unchanged: yes; checked against the binders above):**
+
+| member | call on paper | lines now → as call |
+|---|---|---|
+| `Reaches.mono` | `kept_from (Q := fun m => Reaches f adm target m s) (fun _ r => Reaches.succ r) reaches le` | 3 → 1 |
+| `Reaches.add` | `fun j => kept_from (Q := fun m => Reaches f adm target m s) (fun _ r => Reaches.succ r) reaches (Nat.le_add_right n j)` | 2 → 1 |
+| `Frequency.count_mono` | `kept_from (Q := fun m => count on s ≤ count on m) (fun m ih => Nat.le_trans ih (count_le_succ on m)) (Nat.le_refl _) le` | 3 → 2 |
+| `carriedWithin_mono`, `withinBound_mono`, `geomBound_mono` | the same shape with `carriedWithin_le_succ`, `withinBound_le_succ`, `Nat.le_add_right _ _` | 3 → 2, three times |
+| `step_reaches_of_le` | `@fun z _ le => kept_from (Q := fun m => «所及» step «一» z m) (fun _ ih => «所及之传递» ih (.inr (.one ⟨rfl, trivial⟩))) (.inl rfl) le` | 4 → 2 |
+| `stays_from_fixed` | `kept_from (Q := fun m => (Law.run f d).state m = (Law.run f d).state k) (fun _ ih => (congrArg f ih).trans fixed) rfl le` (`state (m+1)` is `f (state m)` by definition, as the present tactic proof already uses) | 3 → 2 |
+| `steps_mono` (in Prelude, after `kept_from`) | `fun m => kept_from (Q := fun j => total (steps T n) q ≤ total (steps T j) q) (fun j h => Nat.le_trans h (Nat.le_trans (Nat.le_add_right _ _) (Nat.le_of_eq (steps_last q T j).symm))) (Nat.le_refl _) (Nat.le_add_right n m)` | 3 → 2 |
+| `Presence.count_mono`; `count_le_add` | `kept_from (Q := fun j => count p m ≤ count p j) (fun j h => Nat.le_trans h (count_le_succ p j)) (Nat.le_refl _) le`; then `count_le_add p m k := count_mono p (Nat.le_add_right m k)` | 2+2 → 2+1 |
+| `seen_stays` | `fun k => kept_from (Q := fun j => seen f j = true) (fun j h => (run f).step j h) yes (Nat.le_add_right m k)` | 2 → 1 |
+| Junctures inline `stays` | `kept_from (Q := fun m => leadsWithin all edge s m z = leadsWithin all edge s all.length z) (fun _ ih => …step… ) rfl le` | 4 → 2 |
+| `reachedListed_add`, `Absorbing.orbit`, `Branching.lost_stays` (`Q j := ¬ Reachable P j s`, step `fun _ no r => no r.earlier`), `Law.Reachable.back` (via `holds_below`) | each 2 lines | 2 → 2, **M2** |
+
+**The law-carrier one-class members as `kept_from` at `j = 0`.** For example, `closed_orbit = fun n => kept_from (Q := fun m => K (Law.orbit next s m)) (fun _ h => closed _ h) held (Nat.zero_le n)`. The same works for `WindowedWaiting.invariant`, `orbit_held`, `run_within` (step `fun _ h => band _ h`), `Invariant.run` (step `fun m h => inv _ _ _ (r.step m) h`) and `Run.stays` (with `Q m := R (r.state (n + m))`, step `fun m h => keeps m _ _ h (r.step (n + m))`, start `inside`, `Nat.zero_le k`). Each is 2 lines against 2 now: **M2**. They are cases with their statements unchanged, but gain nothing.
+
+### (d-i) The relation members: one statement, `course_rel`, moved down (OPENED)
+
+`WindowedWaiting.course_rel` has every relation member as a one-line case. In each, `step` has the exact type of the member's hypothesis once the member's `def` is unfolded, and `Law.run`'s state is `Law.orbit` by definition (`Law.run_state … := rfl`, Recurrence:325).
+
+- `KeepsRelation.run keeps related := course_rel rel related keeps` (with `next' := T`).
+- `kept_along keeps h := course_rel E h keeps`. Without any move it is also `KeepsRelation.run keeps h`, already imported. **This is a duplicate as it stands.**
+- `run_alike_of reads same := course_rel (fun a b => ∀ j, a j = b j) same reads`. `ReadsPointwise f` is `∀ x y, (∀ j, x j = y j) → ∀ i, f x i = f y i`, and the statement `∀ n i` stands.
+- `KeepsInclusionInto.course keeps sub := course_rel (fun x y => ∀ a, x a → y a) sub keeps`. The statement `∀ n a` stands.
+- `orbit_mono mono below := course_rel rel below mono` (with `next = next' = g`). The 9 lines become 1, and `orbit_pair` is left with no user (I propose no retirement; rule 4 says to retire only what one's own landing replaces).
+- The one-class members via `course_rel (fun x (_ : Unit) => K x) …` cost 2 lines: no gain.
+
+Statement unchanged: yes for all five.
+
+---
+
+## Q3. Where it would live (computed from the `import` lines)
+
+Sizes are the number of modules in the import closure.
+
+- **(c-i).** Likeness (39) and GrammarCandidates (5) already import PredicateIteration. No import is added and there is no cycle; it costs only moving two declarations inside Likeness.
+- **(d-i).** The lowest common module is Recurrence (closure 6; it defines `Law.orbit` and `Law.run`). It is in the closure of WindowedWaiting (21), Lasting (42), Tolerance (20), RegimeMargin (68), IdentificationRuns (91) and GrammarCourse (92). Moving `course_rel` into Recurrence's `Law` namespace adds no import to any member and makes no cycle. WindowedWaiting keeps a one-line `course_rel := Law.course_rel` for its own users. Calling the present `course_rel` where it stands is impossible: none of the members imports WindowedWaiting.
+- **(c-ii).** `kept_from` is in Undecided (closure 37). Lasting, Likeness, Frequency, Loops, LoopReturn, Settling, BalanceRegions, Recurrence, Attraction and Pace do not import it. Adding Undecided grows Recurrence by 32 **with a cycle**, GrammarMap by 37 **with a cycle**, BalanceRegions by 19, Frequency and Loops by 12. That is M3 for Undecided as the home. **Prelude** (closure 0) is in the closure of every member except GrammarMap. GrammarMap imports only `Becoming.Grammar`, and adding Prelude costs +1 with no cycle; whether the Grammar modules avoid Prelude on purpose I did not establish. So `kept_from` would move to Prelude, and `Undecided.kept_from` would stay as a one-line alias for its four users (Undecided:420, 496; Junctures:266, 274).
+- **WindowedWaiting.invariant → Lasting.closed_orbit**, as its docstring says: adding Lasting to WindowedWaiting grows the closure by 25 modules (no cycle). **M3.**
+- **Continues.down**: Parting imports Lasting (cycle). **Reachable.earlier**: Attraction imports Recurrence (cycle).
+
+## Q4. The ledger
+
+Each general statement is counted once on both sides, and every alias and bridge is counted.
+
+| family | now | as calls | difference |
+|---|---|---|---|
+| (c-i) `AlikeTo.of_succ` + `«诘之降»` | 7 + 4 = 11 | 2 + 3 = 5 (bridges landed, 0 new) | −6 |
+| (d-i) relations: `course_rel`, `KeepsRelation.run`, `kept_along`, `run_alike_of`, `KeepsInclusionInto.course`, `orbit_mono` | 2 + 2 + 2 + 2 + 2 + 9 = 19 | 2 (moved) + 1 (alias) + 1 × 5 = 8 | −11 (9 of it `orbit_mono`) |
+| (d-i) without moving: `kept_along := KeepsRelation.run keeps h` only | 2 | 1 | −1 |
+| (c-ii) `kept_from` + 16 sites + Junctures inline | 3 + 49 = 52 | 3 (moved) + 1 (alias) + 31 = 35, plus 1 import line in GrammarMap | −16 |
+| (d) one-class law/run members (7) | 14 | 14 | 0 (M2) |
+
+## Q5. Rank, and which of M1 to M5 holds
+
+1. **(d-i) relations along two laws' courses.** Five members older than 22 November become calls, and 11 lines go. No premise falls away. RegimeMargin, Tolerance, Lasting, IdentificationRuns and GrammarCourse would each call one `Law.course_rel` in Recurrence, which they already import. The duplicate `kept_along`/`KeepsRelation.run` (Oct 22 and Oct 23, same definition) is the cleanest single item and needs no move. M1: no. M2: no (for `orbit_mono`, strongly no). M3: no. M4: no. M5: no; `course_rel` exists already and has callers.
+2. **(c-i) two down-steps as `iter_pred` through bridges.** Members of 14 October and 6 November; 6 lines go. Two old notions' own recursions become one law's step, a real join to `Becoming.Iteration`. No premise falls. Only the bridges are of 22 November, so M4 does not hold. M1 to M5: none.
+3. **(c-ii)/(d-ii) `kept_from` in Prelude.** About 16 sites older than 22 November, 16 lines, one induction said once instead of about sixteen times, and `holds_below` becomes a case of `kept_from`. No premise falls. The links are only into Prelude, so this adds no join in the map. M2 holds for about 6 of the sites (2 lines → 2). M3 holds if the home stays Undecided, and not if it is Prelude.
+
+**Rejected:**
+- `KeptFor.shorter`: M1, through the `updates` premise.
+- `Continues.down`, `Reachable.earlier`: M2 and M3.
+- `AgreeTo.of_succ`, `Reaches.succ`: M2.
+- One-class law/run members: M2.
+- `WindowedWaiting.invariant` as a call of `closed_orbit`: M3.
+
+## Q6. Near misses (do not send a build after these)
+
+1. **`KeptFor.shorter` through `iter_iff_kept`.** The bridge costs a premise (`updates`) and covers only coded classes. The horizon lemma has neither restriction (M1).
+2. **`ReadOffInTime.Recoverable.earlier` (601, 2026-10-10), `Reaching.PossibleWithin.mono` (ReachableRanges:557, 2026-10-27), `Run.AgreeUpTo.mono` (Horizon:213, 2026-10-16) and `Optimum.Keeps` (4308).** The `≤` is inside the definition (`∀ s ≤ N`, `as.length ≤ k`), and the horizon lemma is one `Nat.le_trans` with no induction. Routing them through `iter_succ` and `kept_from` would be longer (M1/M2).
+3. **The comparison of the 21 November note.** It ran over `closed_viable`, `keptFor_of_closed` and `locked_ends_rising`, and I do not propose it again. The (d-i) layer above lies below it, at a plain law with no choice and no reading. `keptFor_of_closed` (a family, with a move chosen per class) and `Ladder.lasts` (a level-indexed funnel) are not cases of `course_rel` or of `kept_from` with their statements unchanged in a line (M1). `postfixed_in_iter` would need `iter = Law.orbit`, which is `Tolerance.iter_eq_orbit`, proved by induction, and Tolerance imports PredicateIteration: a cycle (M3).
+4. **`Dependence.ceases_at_a_step` / `arises_at_a_step` (Dependence:102, 112).** These are an `induction le` whose motive carries a quantified hypothesis. They are a `kept_from` case only with the contrapositive motive `Q m := ¬ p m → ¬ ∀ s, T ≤ s → s < m → …`, and the step is as long as the present one (M2).
+
+**Aside (family (g), TOLD-level).** `Frequency.count` (Frequency:139, `count on t + (bif on t then 1 else 0)`) and `Presence.count` (Presence:129, `cond (p m) (count p m + 1) (count p m)`) are two definitions of one count. They are extensionally equal and not literally the same, and each has its own `count_mono`. I opened both definitions and did not check who imports whom.

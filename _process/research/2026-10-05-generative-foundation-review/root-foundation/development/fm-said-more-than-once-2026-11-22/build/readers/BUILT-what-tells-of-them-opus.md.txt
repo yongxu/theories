@@ -1,0 +1,198 @@
+# What in the repository tells of the seven, and what the change makes false or stale
+
+*AI-written (Claude Opus 5.5, reader for board row FM, 22 November 2026). Read-only. I took no part in the brief, the build or the earlier reads. I ran no Lean, no build, no gate and no git command that writes. I used grep/rg, small Python readers over the JSON and `git log -S`, and I diffed the four changed copies against main. Every finding is marked **OPENED** (I opened the file and line and read the sentence) or **TOLD** (taken from a script's output or another file without opening the source itself).*
+
+Names searched, across all tracked and untracked files outside `tmp/`, `**/history/**` and `becoming-checks/**`: the seven (`Alike.alikeTo`, `AlikeTo.of_succ`, `AlikeTo.self`, `«对称有常则不可诘»`, `«诘之降»`, `lasts_of_kernel`, `Law.kept_along`) and the three that move with them (`AlikeTo.down_to`, `«核则不可致诘»`, `kernel_iff_lasts`). That gave 257 files. `kept_along` alone also matches `Gated.kept_along`, `Regulation.kept_along`, `share_kept_along` and `losses_kept_along`, which are other theorems. I set those apart by context.
+
+What the diff does (OPENED, diff of main against `/Users/ren/tmp/fm/build13/after/Becoming/*.lean`):
+- **Likeness.** `AlikeTo.of_succ`, `AlikeTo.down_to` and `Alike.alikeTo` move from 899, 910 and 916 to 1072, 1078 and 1084, into `section Matching`. `AlikeTo.self` moves from 1205 to 1196.
+- **GrammarCandidates.** `«对称有常则不可诘»` and `«核则不可致诘»` move from 533 and 544 to 565 and 573. `«诘之降»` moves from 601 to 598.
+- **Lasting.** `lasts_of_kernel` and `kernel_iff_lasts` move from 231 and 240 to 243 and 250.
+- **GrammarCourse.** `Law.kept_along` stays at 120.
+- **Imports.** No import line changes.
+
+---
+
+## A. The Lean package's docstrings and module headers
+
+**A1. Nothing in the Lean tells how any of the seven is proved.** OPENED.
+- **Members' docstrings.** Read in main and in the after copies: the same, and none says "by induction", "directly" or "by recursion".
+- **The four module headers.** `Likeness.lean` 60–72 and `GrammarCandidates.lean` 33–40 name `«核则不可致诘»`, `iter_iff_alikeTo` and `iter_iff_inquiry`. `Lasting.lean` 20–31 names `kernel_iff_lasts` and `iter_region_iff_lasts`. `GrammarCourse.lean` header: nothing. None of them says how a member is proved.
+- **Searches.** grep for `induction|recursion|directly|its own|does not use|case of` in the four modules gives only unrelated hits: Likeness 492 and Lasting 645 are `induction le with` in other proofs, GrammarCourse 171 is `induction line with`, GrammarCandidates 146 is `induction h with`.
+- **Effect.** None of these becomes false.
+
+**A2. `Becoming/PredicateIteration.lean` header, lines 3–32.** OPENED. It names the law's own declarations and says `iter_iff_stages` lets "a notion defined by recursion on the number of steps ... be identified with an iterate" (25–26). It lists no cases and no notion that keeps its own induction. Nothing in it is made false or incomplete.
+
+**A3. Root `Becoming.lean`, 1148–1150.** OPENED.
+- **The sentence.** "The kinds of keeping, likeness to depth and reach along a relation are stated as cases in the modules of those notions."
+- **Effect.** It does not claim to be complete, and it stays true. It did not name stages of inquiry (`iter_iff_inquiry`) before this change either. It does not become false. Adding "stages of inquiry, lasting" is a choice, not a debt.
+- **Other module bullets.** GrammarCandidates 3533, Lasting 3797, Likeness 3892 and 5341, GrammarCourse 4713: none says how a member is proved.
+
+**A4. README.md of the package.** OPENED. The row for PredicateIteration (line 32) and the rows for the four modules (35, 292, 298, 332) list no cases and say nothing about how a member is proved. Not affected.
+
+**A5. Other modules that use the seven.** OPENED, by name only.
+- **Where they are used.** Likeness 1239–1273, 1348, 1380, 1999 and 2007; GrammarCandidates 594 and 622; GrammarCourse 279; `CountedCodes` and `SharedCodes` cite `Law.KeepsRelation.run`. No docstring describes any of the seven's proofs.
+- **`SharedCodes.lean` 73 and 77.** These cite `Law.KeepsRelation.run`, which is now also the body of `Law.kept_along`. Nothing there is false.
+
+## B. Records (`theories/becoming/results/records/*.json`)
+
+**B1. Records bound to the four files, counted by script.** TOLD (script output).
+
+| Module | Records with a `proof_bindings` source on it | Records with a `references` entry (with `sha256`) on it |
+|---|---|---|
+| Likeness | 13 | 15 |
+| GrammarCandidates | 3 | 4 |
+| Lasting | 13 | 13 |
+| GrammarCourse | 1 | 2 |
+
+- **Union.** **28 bound, 30 referencing.**
+- **Bound (28):**
+  - **Likeness:** a-law-through-a-projection-along-one-run, a-law-through-changing-coupling-along-one-run, a-law-through-coupling-along-one-run, branching-target-uniqueness, branching-tests-bisimulation, determinacy-up-to-likeness, joint-code-plan-lifting, joint-decomposition-lifting, joint-target-uniqueness, lifting-where-branching-is-finite, tests-fix-likeness-where-determined, the-present-on-causal-set-growth, unanchored-incidence-collapse.
+  - **GrammarCandidates:** candidate-theorems-of-the-corpus, kept-at-the-length-of-a-list, testing-within-the-net.
+  - **Lasting:** coupled-regimes, coupled-webs, identification-where-runs-part, kept-at-the-length-of-a-list, lifting-where-branching-is-finite, market-finite-support-obstruction, market-partial-correction-boundary, market-supported-finite-transition, regime-in-any-amounts, threshold-in-the-state-plane, where-a-run-goes-on, where-a-run-of-a-regime-comes-to-rest, whether-a-loop-closes-a-difference.
+  - **GrammarCourse:** wen-in-the-grammar.
+- **Referencing but not bound (2):** `merge-of-a-part-kept-by-the-rest` (Likeness) and `processes-represented-both-ways` (Likeness, GrammarCandidates, GrammarCourse).
+  - Their reference `sha256` values equal the current bytes of main (checked by script).
+  - So they drift with this change and must be re-pointed too, though no binding names them.
+  - `tools/research/repoint.py` lines 1–8 and 14–19 (OPENED): `--paths` re-points references and `--receipt/--lean` rebinds bindings. Both are needed.
+- **Category:** (ii), re-point only.
+- **Effect on the board sentence.** "records bound to those files are re-pointed" leaves out 2 of the 30.
+
+**B2. Records that name one of the ten.** TOLD (script walk of every string). All are names in `laws[i].declarations`, `references[i].declarations` or `aliases`, except two `related`/`correspondence` sentences on `kernel_iff_lasts`. Each record:
+- **tests-fix-likeness-where-determined.** `references/1/declarations` 16, 17, 43 and 112: `AlikeTo.of_succ`, `Alike.alikeTo`, `AlikeTo.down_to`, `AlikeTo.self`.
+- **candidate-theorems-of-the-corpus.** law 4: `«核则不可致诘»`. References: `«对称有常则不可诘»` and `«核则不可致诘»`.
+- **testing-within-the-net.** law 2: `«诘之降»`. Also in references.
+- **market-supported-finite-transition.** law 2: `kernel_iff_lasts`. Also `related/3/detail`: "The dual of kernel_iff_lasts: what no course leaves is what lasts every horizon".
+- **lifting-where-branching-is-finite.** `correspondence` and `related/0/detail`: "Its kernel_iff_lasts is the dual: what no course leaves is what lasts every horizon, with no finite branching or principle needed."
+- **wen-in-the-grammar.** law 0: `Law.kept_along`. Also in references.
+
+What they say: no record says how one of the ten is proved. A walk of every string of the 30 records for `induct|recursion|directly|its own|case of|Iteration.|归纳|递归|l. N|.lean:N|line N` finds nothing about these ten (TOLD). Every sentence above is about a statement, and the statements do not change. **No record's words become false.** Category (ii) for all.
+
+**B3. The law's record, `kept-at-the-length-of-a-list.json`.** OPENED (printed fields).
+- **`statement` (line 12).** "... Keeping under every course, along some course, by choice and through a reading are cases." Still true. It is a list of kinds, not of theorems.
+- **`laws` 0–13.** The laws say nothing about which outside theorems call them. Law 13 ("stands beside the law and is not a case of it") is about `Reaching.guarded_not_keepsWidening`, not about the seven. Its proof chain (`not_keepsWidening_of_listed` → `_along`, `listed_along_of_listed`, `Onward.reach_of_run`, `Run.*`) names none of the ten. ReachableRanges, Onward and Labelled contain none of the ten names (grep count 0). I did not run the lister, so "reaches no declaration" stays TOLD past that depth.
+- **`related` (line 271).** "Likeness to depth at the number of pairs is a case of the law." Still true.
+- **`history/0` (line 550).** "Parting.continues_persists, continues_any, GuardHorizon.closed_viable and Tolerance.kept_set keep their statements and became calls; ..." This is a dated history entry, so it does not become false. After the landing the record no longer names every older statement that became a call of the law.
+- **Precedent.** The landing of 22 November added a history note to `identification-where-runs-part` (history/13) and to `tests-fix-likeness-where-determined` (history/24) when proofs there became calls. It also added `PredicateIteration.lean` declarations to `identification-where-runs-part` references/46. `repoint.py` line 8 asks for a history note only where "the claim, the premises, the scope or a declaration list" change. So such a note is **optional, not owed**, if the landing leaves declaration lists alone.
+- **`validation_scope` (line 231).** Names receipt 20261121T212524.793950Z. 22 of the 30 records' scopes name a receipt other than their present bindings, and this is usual after a re-point. Not false.
+
+**B4. No record or page says a member is NOT a case of the law or stands beside it.** OPENED/TOLD. The only "stands beside" sentences in the records are law 13 and history/2 of the law's record (Reaching). See C3 for a dated return that says this of `kernel_iff_lasts`.
+
+## C. Atlas, map data and the direction page
+
+**C1. Atlas entry `kept-at-the-length-of-a-list`, mechanism (`theories/becoming/results/atlas/entries/dynamics.json` line 36589).** OPENED.
+- **The passage.** "Theorems the Lean proves by calling a declaration of the law: held_iff_iter ...; GuardHorizon.viable_persists ...; Viability.keepable_iff_count ...; Viability.coded_kept_iff_closed ...; reach_within_pred_length ...; Branching.reachable_iff_all ..."
+- **Not exhaustive.** The list already leaves out calls that exist now: `AlikeTo.steady_within` (`iter_persists`), `Parting.continues_persists`, `Tolerance.kept_set`, `kernel_iff_lasts_length` and others. So it is a selection of the case rows, not a complete list. It does not become false.
+- **Category.** Atlas data, hand-kept. No change owed.
+
+**C2. Dynamic `never-leaving-a-guard` (H) lists `Becoming.Lasting.kernel_iff_lasts` as a law** (`dynamics.json` 36101, row at 36407). OPENED.
+- **The change.** After the landing, `kernel_iff_lasts`'s proof term reaches `Iteration.postfixed_in_iter` through `lasts_of_kernel` (after copy, Lasting 243–255).
+- **DJ's rule.** `_process/DIRECTION.md` 124 (OPENED) says "A row was entered only on a theorem whose proof term, as Lean prints it, uses a declaration of the law or a theorem that does". Under it, `kernel_iff_lasts` would now qualify as a case row. The atlas does not say it is not one.
+- **Effect.** Nothing becomes false. The board already hands it to DJ ("row DJ looks at `lasts_of_kernel` after the landing").
+- **DIRECTION.md 124 itself.** "eight case rows on six dynamics"; "Six rows count". These count rows that were entered, and they stay true.
+
+**C3. Dated study files that say `kernel_iff_lasts` does not call the law.** OPENED. Category (iv). These become false of the tree after the landing and are left as dated files.
+- **`.../dj-a-line-on-a-stock/the-list-law-on-the-atlas-2026-11-22/RETURN-attack.md.txt` line 59:** "`Lasting.kernel_iff_lasts` (Lasting.lean:240) are all proved directly". **Line 72:** "The listed laws `kernel_largest`, `kernel_iff_certificate` and `Lasting.kernel_iff_lasts` make no call of the law."
+- **Same folder, `FROZEN-THE-LIST-LAW-ON-THE-ATLAS.md.txt` line 36:** "no law that `never-leaving-a-guard` or `where-the-possible-grows` lists calls a declaration of the law".
+- **Same folder, `NOTE.md` line 11:** "no law that `never-leaving-a-guard` or `where-the-possible-grows` then listed calls a declaration of the law". The word "then" keeps this one true.
+
+**C4. Map cards and atlas rows that cite Lasting by line.** OPENED. These are hand-kept data, not generated. No checker reads the line numbers: I found nothing in `tools/research/*.py` that checks "l. N" or "File.lean:N" against source. `lineage.py` 665–680 checks quotes in `lineage.json` only.
+- **`theories/becoming/results/map/cards.json` 24586:** "... — becoming/Becoming/Lasting.lean:152". In main, `lasts_iff_ladder` is at 156. Already stale; this change does not move it.
+- **`cards.json` 24605:** "... — becoming/Becoming/Lasting.lean:458". `avoids_iff_closed` is at 481 in main and 479 after.
+- **`dynamics.json` 36491:** "orbit_through orbit_eq_history (Lasting.lean:476)". `orbit_eq_history` is at 492 in main and 490 after.
+- **Effect.** All three were already wrong before the change, and the change moves two of them a further 2 lines. No other `.lean:N` citation in `results/map/*.json` or `atlas/entries/*.json` names the four modules.
+
+**C5. Map cards.** OPENED. The card for `kept-at-the-length-of-a-list` (`laws`, `misfit`, `built_cases: []`) says nothing of outside cases. No card tells how the ten are proved.
+
+**C6. `_process/DIRECTION.md`.** OPENED. It names none of the ten. Line 124 is covered in C2.
+
+## D. Chapters, the account's pages and the review dossiers
+
+**D1. Chapters and review dossiers.** OPENED.
+- **Where the names appear.**
+  - `theories/becoming/chapters/03-KNOWING.md` 119 names `«核则不可致诘»`.
+  - `chapters/06-CLASSICAL-TEXTS.md` 149 and 196 name `«核则不可致诘»`.
+  - `chapters/04-LIFE.md` 253 is `Gated.kept_along_iff`, another theorem.
+  - `review/CLASSICAL-TEXTS.md` 368 names `«核则不可致诘»`.
+  - `review/LOGIC.md` 413 and 929 quote the **statement** of `«核则不可致诘»`, which is unchanged and only moved.
+- **The dossier check.** `review-packet/check_dossiers.py` 19–21 (OPENED) checks a quoted theorem "whole or up to its proof". The statement is unchanged, so the check is unaffected.
+- **What is missing.** No chapter, dossier or `theories/becoming/*.md` page names `Alike.alikeTo`, `AlikeTo.of_succ`, `AlikeTo.self`, `«对称有常则不可诘»`, `«诘之降»`, `lasts_of_kernel` or `Law.kept_along`. None tells how they are proved, and none tells the law's cases (`PredicateIteration` appears only in `RESULTS.md` 647, a list row).
+- **Effect.** Nothing false.
+
+## E. Generated files (category i)
+
+**E1. Files that carry lines or hashes of the four files.** TOLD/OPENED.
+- **`theories/becoming/results/lean-declarations/*.md`** (`tools/research/lean_catalogue.py`), for example `becoming-core-part-3.md` 4216 "`Lasting.lean#L231` | 231" and `becoming-core-part-4.md` 387 "`Likeness.lean#L899` | 899".
+- **`theories/becoming/results/data/lean-index.json`**: lines and `contents_by_sha256`.
+- **`becoming-verification.json`** and the core-run folder.
+- **The record pages** `results/records/*.md`: no lines, only lists of declarations.
+- **Effect.** The render rewrites all of these. Lines change for every declaration below the first moved block in each module.
+
+**E2. `theories/becoming/results/data/shared-laws.json` and the "shared laws" shown under each law on the record pages.** OPENED. **Not mentioned by the board sentence.**
+- **What it measures.** `tools/research/shared_laws.py` 1–35: "the shared laws each law of a record rests on, by the Lean dependencies of its declarations ... it follows the constants the law's declarations' types and values use (proofs ...)". It lists `«核则不可致诘»`, `kernel_iff_lasts`, `«诘之降»` and `Law.kept_along` under record laws.
+- **Why it matters here.** The landing changes the proof dependencies of seven declarations, and through them of every theorem that uses them.
+- **The gate will not rerun it.** `tools/research/gate.py` 283–287 runs it only `when='laws_changed'`, and `laws_changed` (1005–1016) is true only where a record's `laws` change. Here none do.
+- **What the check does instead.** `registry.shared_laws_status` (901–926) will report `core_sources_current: false`. It is "never an error".
+- **Would the measure differ?** Whether any law's shared-law set or `dependence` changes is unmeasured. The new constants are from `PredicateIteration` (imports only Prelude), `CommonResponse.regionStep/region_mono`, `Viability.kernel_step_iff` (which uses the same `Reach.*` as the old proof of `lasts_of_kernel`) and `Law.KeepsRelation.run`. By reading, I find no anchor among them (`WithinClosure`, `«所闭»`, `GoAlikeUnder`, `«同行»`, `«广»`, `revisits_within`, ...). That is plausible, not shown.
+- **What the landing should do.** Rerun `shared_laws.py` after the core run, or say in the clause that it is left measured on the old sources.
+
+## F. The listing of places
+
+**F1. What a rebuild changes.** OPENED, `places-2026-11-21/build_places.py` 1–20 and 136–156.
+- **What it reads.**
+  - Readers' returns, word for word.
+  - `joins()`, which reads only `references[].path` of records and `records` of atlas dynamics. It does not read `sha256` and "nothing is read in the Lean".
+  - For `same_statements` only, theorem lines of package files named by scratch checks. None of the 10 entries in `places.json` `same_statements` touches the four modules (script).
+- **What changes.** The landing changes no reference path and no dynamic's list of records. So a rebuild would write the same bytes: it is a no-op, by my reading of the script (I did not run it).
+- **Effect on the board sentence.** "and the listing of places rebuilt" is harmless but says a step that changes nothing.
+
+**F2. Reader-quoted line numbers in place pages.** OPENED. Category (iv): returns as filed, not computed, and not mended by a rebuild. They were already stale before this change.
+
+| Place page | Theorem | Line quoted | Main | After |
+|---|---|---|---|---|
+| `place/GrammarCandidates.md` | `«对称有常则不可诘»` | 528 (lines 17, 46, 47) | 533 | 565 |
+| `place/GrammarCandidates.md` | `«核则不可致诘»` | 539 (lines 11, 17, 21, 22, 52) | 544 | 573 |
+| `place/GrammarCandidates.md` | `«诘之降»` | 552 (line 50) | 601 | 598 |
+| `place/Lasting.md` | `kernel_iff_lasts` | 236 (lines 18, 42, 50, 51, 64, 66, 70) | 240 | 250 |
+| `place/GrammarCourse.md` | `Law.kept_along` | 120 (lines 44, 45) | 120 | 120 (still right) |
+
+- **The same text** is in `places.json`.
+- **`place/Likeness.md`** quotes no line for these ten.
+
+## G. Dated study notes that cite these theorems by line (category iv, left as they are)
+
+**G1. Tracked dated files that cite one of the ten by line.** TOLD (one rg pattern for "name (l. N)", "l.N theorem name", "File.lean:N", "name (N)"), and each file then OPENED at the hit. Most were already off before this change.
+- **`fm-whole-read-2026-11-22/`.**
+  - `returns/whole-a.json` 2251 and 2305; `returns/whole-b.json` 2349, 2350 and 2403; `returns/whole-c.json` 529; `returns/whole-c-settle.json` 1441; `whole-c-edge.json`; `whole-c-edge2.json`; `whole-edge.json`.
+  - `third/settle-13.md.txt` 367, 369 and 386; `third/edge3-03.md.txt` 207, 209 and 226; `third/edge-13.md.txt` 245; `third/settle-07.md.txt` 1074 and 1077.
+  - `AFTER-WHOLE-READ.md.txt`.
+- **`fm-the-law-of-what-a-list-holds-2026-11-22/`.** `lean-edge-law/sweep/REPORT.md.txt` 63 (`«诘之降»` 552, `«核则不可致诘»` 539); `BRIEF-LEAN-EDGE-CASES.md.txt` (`«核则不可致诘»` l. 539).
+- **`dj-a-line-on-a-stock/`.** `negatives-against-the-listing-2026-11-22/results.json` (`lasts_of_kernel, kernel_iff_lasts (227-240)`); `no-return-2026-11-21/read-older-and-already-stated.md.txt` (`kernel_iff_lasts` 236).
+- **`tt-turning-in-time/map/`.** `process.md` (`Lasting.lean:236`) and `root-rest.md` (`«对称有常则不可诘»` 528, `«核则不可致诘»` 539; `Law.kept_along` 120 still right).
+- **No tooling reads these lines** (C4). No check will fail on them.
+
+**G2. `fm-the-law-of-what-a-list-holds-2026-11-22/NOTE.md`.** OPENED, whole, 1,212 words. It names none of the ten. It does not list the law's cases by theorem, and it does not say which notions keep their own induction. "A sweep of all 407 modules ... named older results as further cases" (17) stays true. Nothing in it becomes false.
+
+## H. The board (`_process/BECOMING-WORKBOARD.md` line 57, the claim of 16:28 WIB)
+
+**H1.** OPENED. The claim names each member correctly. That includes "`Law.kept_along` as a call of its twin `Law.KeepsRelation.run`", which is not a call of `Iteration` (after copy GrammarCourse 120–122; `IdentificationRuns.lean` 313–316, itself an induction).
+- **Bridges.** I checked with `git log -S` that the bridges `iter_iff_alikeTo`, `iter_iff_inquiry` and `iter_region_iff_lasts` landed on 22 November. `Viability.kernel_step_iff` dates from 14 October and is not a bridge, and the claim does not call it one.
+- **The headline.** "old inductions as calls of a law the package already has" covers member 10 only through the separate clause "one of two twins said once". That is accurate as worded.
+
+---
+
+## Is the board sentence true as worded?
+
+"No statement, declaration, import or record's telling changes; records bound to those files are re-pointed and the listing of places rebuilt."
+
+- **"No statement, declaration, import ... changes."** True by the diff: no import line changes, and no declaration is added or removed. Statement lines differ only by the trailing ` :=` in term form; compare.txt checks binders, and I did not repeat that. Three blocks change position within their modules. That is not a change of declaration, but it moves lines.
+- **"No record's telling changes."** True. No record says how one of the ten is proved, or that one is not a case (B2–B4). No history note is owed if declaration lists are left alone (`repoint.py` 8).
+- **"records bound to those files are re-pointed".** Incomplete. 30 records carry a `sha256` reference to the four files, and 28 of them are also bound. `merge-of-a-part-kept-by-the-rest` and `processes-represented-both-ways` drift and must be re-pointed too (B1).
+- **"the listing of places rebuilt".** A no-op by the script's inputs (F1). It also leaves the reader-quoted line numbers in three place pages stale, as they already were (F2).
+- **Omitted.** `shared-laws.json` follows proof dependencies. The gate will not rerun it, because no record's laws change, and the check will only report it stale (E2).
+
+Words that are true:
+
+"No statement, import or record's telling changes, and no declaration is added, removed or renamed (three blocks move within their modules). The 30 records that reference those files are re-pointed to their bytes, 28 of them also rebound to the new core run; the listing of places needs no rebuild (it reads only records' reference paths and the atlas's record lists, which do not change). The render rewrites the declaration pages and lean-index; shared-laws.json, which follows proof dependencies, is [rerun after the core run | left measured on the sources before this change, which the check reports]."
+
+If the landing reruns `shared_laws.py`, keep the first bracket; if not, the second.

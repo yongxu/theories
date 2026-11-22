@@ -1,0 +1,209 @@
+#!/usr/bin/env python3
+"""Compare the rows Lean printed before and after (kit/Rows.lean), the sources and the build log.
+
+usage: python3 -B compare.py            (reads ../before, ../after, the package at main)
+
+Checks C0 to C10 are of the whole build; R4 is rule 4 of the brief, for each member whose proof changed. It reports
+facts; it gives no verdict on what the work means. AI-written (Claude Fable, board row FM), 22 November 2026;
+rewritten the same day after two readers attacked the first form (tmp/fm/cases22/readers/ATTACK-*.md)."""
+import hashlib, json, pathlib, re, sys
+KIT = pathlib.Path(__file__).resolve().parent
+ROOT = KIT.parent
+PKG = pathlib.Path("/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming")
+WIDTH = 100
+# a line inside a member's block that begins a command other than the member's own header
+CMD = re.compile(r"\s*(@\[|#|(private|protected|theorem|lemma|def|abbrev|instance|example|open|variable|universe|attribute"
+                 r"|local|scoped|notation|infixl?|infixr|prefix|postfix|macro|macro_rules|syntax|elab|set_option|section"
+                 r"|namespace|end|noncomputable|omit|include|mutual|deriving)\b)")
+# a name from outside the package that an honest call has no use for
+SUSPECT = re.compile(r"(?i)(rec|induct|fix|below|sorry|choice|propext|sound|iterat|fold|loop|wellfounded)")
+FINE = {"Eq.rec", "Eq.recOn", "Eq.ndrec", "Eq.mpr", "Eq.mp", "HEq.rec", "HEq.recOn", "And.rec", "And.casesOn", "Exists.rec",
+        "Exists.casesOn", "Or.rec", "Or.casesOn", "Iff.rec", "Iff.casesOn", "False.rec", "False.elim", "True.rec",
+        "Prod.rec", "Prod.casesOn", "PProd.rec", "PProd.casesOn", "Nat.rec", "Nat.casesOn", "Eq.casesOn", "PUnit.rec",
+        "PUnit.casesOn", "Unit.casesOn", "Nat.below", "Nat.brecOn"}
+# main's six modules when the before rows were printed (sha256; git: unchanged since the commits of 22 November 04:16)
+BEFORE_SHA = {"Likeness": "c09f09936ba686d570f06afc43a2c2b746a15e43a3320d8ce94c0793c4a7c8e0",
+              "GrammarCandidates": "2fa88ad3ec028830037114cd43671ccbff0f1e0b6d0c78bce11b9ac8ee1b6d28",
+              "Lasting": "4c9174a15c4b2d231adfaaca47a503c73b363a87711950c1ec5ee0db24ba9cb5",
+              "Tolerance": "0396f461645750097b19c6dd4703b87a1bda35c2bf3aaaa140e8c66e9f310c2c",
+              "Onward": "025c021e950e028796acffa360c17499db3388147224805b88d11e0e2a4d0b21",
+              "GrammarCourse": "f3928375fd01ea446f97cad742df0deac94283b467472d7b773341e84090ca0e"}
+MOVED_ALSO = {"Likeness": ["theorem AlikeTo.down_to "], "Lasting": ["theorem kernel_iff_lasts "],
+              "GrammarCandidates": ["theorem «核则不可致诘» "]}
+
+def rows(side):
+    out = {}
+    for line in (ROOT / side / "rows.txt").read_text().splitlines():
+        if line.startswith("ROW "):
+            r = json.loads(line[4:]); out[r["name"]] = r
+    return out
+
+def block(lines, header):
+    """The declaration whose statement starts with `header`: (first line of its doc comment, the statement's first
+    line, one past the block's last line), 0-based. The block runs to the first blank line."""
+    starts = [i for i, l in enumerate(lines) if l.lstrip().startswith(header)]
+    assert len(starts) == 1, (header, starts)
+    s = starts[0]
+    d = s
+    while d > 0 and lines[d - 1].strip() != "":
+        d -= 1
+        if lines[d].lstrip().startswith("/--"): break
+    if not lines[d].lstrip().startswith("/--"): d = s
+    e = s
+    while e < len(lines) and lines[e].strip() != "": e += 1
+    return d, s, e
+
+def proof_start(lines, s, e):
+    """In main's source: one past the statement's last line (the first line from the header on that ends with ':=' or
+    is followed by a line beginning with '|')."""
+    for i in range(s, e):
+        if lines[i].rstrip().endswith(":=") or (i + 1 < e and lines[i + 1].lstrip().startswith("|")):
+            return i + 1
+    raise AssertionError(("no proof start", lines[s]))
+
+def chars(lines): return len(re.sub(r"\s+", "", "\n".join(lines)))
+# a count in which a name counts once however long it is (a fact beside the two the rule uses)
+TOK = re.compile(r"«[^»]*»|[^\W\d][\w'!?]*(?:\.[^\W\d][\w'!?]*|\.\d+)*|\d+|=>|:=|\S")
+def toks(lines): return len(TOK.findall("\n".join(lines)))
+
+def main():
+    members = json.loads((KIT / "members.json").read_text())
+    before, after = rows("before"), rows("after")
+    names = {m["name"] for m in members}
+    ok = True
+    def say(tag, good, text):
+        nonlocal ok
+        ok = ok and good
+        print(("PASS " if good else "FAIL ") + tag + ": " + text)
+
+    # C0 the rows are of these sources
+    want = (ROOT / "after" / "rows.sources.sha256").read_text().split("\n") if (ROOT / "after" / "rows.sources.sha256").exists() else []
+    now = sorted(f"{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.name}" for p in (ROOT / "after" / "Becoming").glob("*.lean"))
+    say("C0 the after rows are of the after sources", sorted(l for l in want if l) == now, f"{len(now)} Lean files in the after tree hashed")
+    # C4 the build that made the rows: clean, every changed module audited, no axiom
+    log = (ROOT / "after" / "build-stub.log").read_text() if (ROOT / "after" / "build-stub.log").exists() else ""
+    try:
+        d = json.loads(log[log.index("{"):log.rindex("}") + 1])
+    except ValueError:
+        d = {}
+    audited = sorted(d.get("audits", {}))
+    in_tree = sorted("Becoming." + p.stem for p in (ROOT / "after" / "Becoming").glob("*.lean"))
+    with_ax = {k: v["with_axioms"] for k, v in d.get("audits", {}).items() if v.get("with_axioms")}
+    say("C4 clean build, every changed module audited, no axiom", bool(d) and d.get("unclean") == [] and "exit 0 stub after" in log
+        and audited == in_tree and not with_ax, f"unclean {d.get('unclean')}; audited {audited}; with axioms {with_ax}")
+    # C8 only the six modules and the stub in the after tree
+    allowed = {m["module"] + ".lean" for m in members} | {"ScratchCasesStub.lean"}
+    stray = sorted(str(p.relative_to(ROOT / "after")) for p in (ROOT / "after").rglob("*.lean")
+                   if ".build" not in p.parts and (p.parent != ROOT / "after" / "Becoming" or p.name not in allowed))
+    same_stub = (ROOT / "after/Becoming/ScratchCasesStub.lean").read_bytes() == (ROOT / "before/Becoming/ScratchCasesStub.lean").read_bytes()
+    say("C8 only copies of the six modules in the after tree, the stub untouched", not stray and same_stub, f"other Lean files: {stray}; stub same {same_stub}")
+
+    kb = {(r["module"], n, r["kind"]) for n, r in before.items()}
+    ka = {(r["module"], n, r["kind"]) for n, r in after.items()}
+    say("C1 declarations (private ones too)", kb == ka, f"before {len(kb)}, after {len(ka)}, only before {sorted(kb - ka)[:8]}, only after {sorted(ka - kb)[:8]}")
+    diff = [n for n in before if n in after and any(before[n][k] != after[n][k] for k in ("levels", "binders", "body"))]
+    say("C2 every statement as Lean holds it", not diff, f"{len(before)} declarations compared; differing: {diff[:12]}")
+    other = [n for n in before if n in after and n not in names and before[n]["kind"] == "theorem"
+             and any(before[n][k] != after[n][k] for k in ("head", "uses", "recursors", "foreign"))]
+    say("C3 no other proof changed", not other, f"theorems outside the members whose head, uses, inductions or outside names differ: {other[:12]}")
+
+    by_mod = {}
+    for m in members: by_mod.setdefault(m["module"], []).append(m)
+    src = {}
+    for mod in by_mod:
+        b = (PKG / (mod + ".lean")).read_text().splitlines()
+        pa = ROOT / "after" / "Becoming" / (mod + ".lean")
+        src[mod] = (b, pa.read_text().splitlines() if pa.exists() else b, pa.exists())
+
+    stale = [mod for mod in by_mod if hashlib.sha256((PKG / (mod + ".lean")).read_bytes()).hexdigest() != BEFORE_SHA[mod]]
+    say("C12 main's six modules are the bytes the before rows were printed from", not stale, f"changed since: {stale}")
+    # outside names that a proof of the six modules with no induction listed already uses on main
+    seen = {u for r in before.values() if r["kind"] == "theorem" and not r["recursors"] for u in r["foreign"]}
+    facts, kept = {}, set()
+    for m in members:
+        n = m["name"]; b, a = before.get(n), after.get(n)
+        sb_, sa_, _ = src[m["module"]]
+        db, sb, eb = block(sb_, m["header"]); da, sa, ea = block(sa_, m["header"])
+        pb = proof_start(sb_, sb, eb); n_stmt = pb - sb
+        want_stmt = [l.rstrip() for l in sb_[sb:pb]]
+        got_stmt = [l.rstrip() for l in sa_[sa:sa + n_stmt]]
+        # the statement keeps its lines character for character; ' :=' may be added at the end of its last line only
+        stmt_ok = got_stmt in (want_stmt, want_stmt[:-1] + [want_stmt[-1] + " :="])
+        pa = sa + n_stmt
+        proof_b, proof_a = sb_[pb:eb], sa_[pa:ea]
+        changed = proof_b != proof_a or got_stmt != want_stmt
+        f = dict(changed=changed, lines=(len(proof_b), len(proof_a)), chars=(chars(proof_b), chars(proof_a)),
+                 wide=max((len(l) for l in sa_[sa:ea]), default=0), same_doc=sb_[db:sb] == sa_[da:sa], stmt_ok=stmt_ok,
+                 extra_cmd=[l.strip()[:60] for l in sa_[sa + 1:ea] if CMD.match(l)], same_block=sb_[db:eb] == sa_[da:ea],
+                 new_outside=sorted(u for u in (a["foreign"] if a else []) if u not in seen),
+                 ind=(a["recursors"] if a else ["?"]),
+                 missing=[u for u in m["uses"] if not a or u not in a["uses"]],
+                 forbidden=[u for u in m["not_uses"] if a and u in a["uses"]],
+                 suspect=sorted(u for u in (a["foreign"] if a else []) if SUSPECT.search(u) and u not in FINE))
+        facts[m["n"]] = f
+        print(f"MEMBER {m['n']} {n}: proof changed {changed}; proof lines {f['lines'][0]} -> {f['lines'][1]}; characters that are not "
+              f"spaces {f['chars'][0]} -> {f['chars'][1]}; tokens, a name counting once {toks(proof_b)} -> {toks(proof_a)}; widest line after {f['wide']} (cap {WIDTH}); docstring same {f['same_doc']}; "
+              f"statement lines kept {stmt_ok}; other commands in its block {f['extra_cmd']}; head {b['head']} -> {a['head'] if a else '?'}; "
+              f"inductions after {f['ind']}; expected uses missing {f['missing']}; uses it may not have {f['forbidden']}; "
+              f"uses after {a['uses'] if a else '?'}; from outside the package {a['foreign'] if a else '?'}; of those, to be looked at {f['suspect']}; "
+              f"of those, in no proof of the six modules on main that has no induction {f['new_outside'] if changed else '(unchanged)'}")
+    for m in members:
+        f = facts[m["n"]]
+        if not f["changed"]: continue
+        good = (not f["ind"] and not f["missing"] and not f["forbidden"] and not f["suspect"] and f["lines"][1] < f["lines"][0]
+                and f["chars"][1] <= f["chars"][0] and f["wide"] <= WIDTH and f["same_doc"] and f["stmt_ok"] and not f["extra_cmd"])
+        f["good"] = good
+    for m in members:
+        f = facts[m["n"]]
+        if not f["changed"]: continue
+        needs_ok = all(facts[k].get("good") for k in m["needs"])
+        good = f["good"] and needs_ok
+        if good: kept.add(m["n"])
+        say(f"R4 member {m['n']}", good, "changed, and: no induction of its own, the expected names used, none it may not use, nothing to look at "
+            "from outside the package, strictly fewer lines, no more characters, width, docstring, statement lines, nothing else in its block"
+            + (f", and member(s) {m['needs']} kept" if m["needs"] else "") + ("" if good else "  -- ONE OF THESE DOES NOT HOLD: put it back"))
+
+    loose = [m["n"] for m in members if not facts[m["n"]]["changed"] and not facts[m["n"]]["same_block"]]
+    say("C11 a member whose proof is unchanged stands byte for byte as on main, docstring to last line", not loose, f"members that do not: {loose}")
+    for mod, ms in by_mod.items():
+        sb_, sa_, has = src[mod]
+        if not has:
+            print(f"SOURCE {mod}: no changed copy in the after tree"); continue
+        say(f"C5 {mod} imports", [l for l in sb_ if l.startswith("import ")] == [l for l in sa_ if l.startswith("import ")], "import lines compared")
+        def strip(lines):
+            cut, where, blocks = [], {}, {}
+            for m in ms:
+                d, s, e = block(lines, m["header"]); cut.append((d, e, m["header"]))
+            for h in MOVED_ALSO.get(mod, []):
+                d, s, e = block(lines, h); cut.append((d, e, h)); blocks[h] = lines[d:e]
+            keep, out = [], []
+            for i, l in enumerate(lines):
+                hit = [h for d, e, h in cut if d <= i < e]
+                if hit:
+                    for h in hit: where.setdefault(h, len([x for x in keep if x.strip()]))
+                else: keep.append(l)
+            for l in keep:
+                if l.strip() == "" and out and out[-1].strip() == "": continue
+                out.append(l)
+            while out and out[-1].strip() == "": out.pop()
+            return out, where, blocks
+        rest_b, where_b, blocks_b = strip(sb_); rest_a, where_a, blocks_a = strip(sa_)
+        say(f"C6 {mod} rest of the source", rest_b == rest_a, "every line outside the members' blocks (and the blocks allowed to move with them) "
+            "unchanged and in order" if rest_b == rest_a else f"differs: {len(rest_b)} lines before, {len(rest_a)} after")
+        say(f"C7 {mod} blocks that move with a member", blocks_b == blocks_a, f"{sorted(blocks_b)} compared byte for byte")
+        movers = [m for m in ms if m["may_move"]]
+        fixed = [m["header"] for m in ms if not m["may_move"]]
+        say(f"C9 {mod} members that may not move", all(where_b[h] == where_a[h] for h in fixed), f"{[(h.strip(), where_b[h], where_a[h]) for h in fixed]}")
+        movable = [m["header"] for m in movers] + MOVED_ALSO.get(mod, [])
+        moved = [h.strip() for h in movable if where_b[h] != where_a[h]]
+        need = any(m["n"] in kept for m in movers)
+        say(f"C10 {mod} a move only where a kept member needs it", need or not moved, f"moved: {moved}; a member that may move is kept: {need}; "
+            "each moved block's kept lines above before -> after, and the kept line now above it: "
+            f"{[(h.strip(), where_b[h], where_a[h], [x for x in rest_a if x.strip()][where_a[h] - 1].strip()[:60] if where_a[h] else '') for h in movable if where_b[h] != where_a[h]]}")
+    changed = [k for k, f in facts.items() if f["changed"]]
+    print(f"SUMMARY: {len(kept)} kept as calls {sorted(kept)}; {len(changed) - len(kept)} changed and failing rule 4; "
+          f"{len(members) - len(changed)} unchanged; whole-build checks {'all pass' if ok else 'SOME FAIL'}")
+    return 0
+
+if __name__ == "__main__":
+    sys.exit(main())

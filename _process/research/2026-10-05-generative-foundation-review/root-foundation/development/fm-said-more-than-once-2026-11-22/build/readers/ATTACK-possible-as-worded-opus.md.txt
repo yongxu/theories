@@ -1,0 +1,358 @@
+# Attack on BRIEF-OLD-INDUCTIONS-AS-CASES: is each thing possible as worded?
+
+*AI-written (Claude Opus 5.5, reader for board row FM), 22 November 2026. Read only: no Lean run, no build, no
+git write. "OPENED" = I read the source or ran a read-only command; "TOLD" = I rely on a document. Lean sources
+are under `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`
+(cited as `Module:line`). Elaboration claims are on paper: what Lean 4.29.1 (`lean-toolchain`) is expected to do,
+not what it did.*
+
+## 0. The short answer
+
+- All eleven are possible as worded, as far as paper goes: every bridge and lemma is in the module's import
+  closure, every expected-uses name in `members.json` is the name Lean prints, every statement can stay
+  binder for binder at a destination that exists, and nothing between an old and a new place uses a moved name.
+- One checker term breaks rule 3 as written: member 1, line 2 is 102 characters wide. It fits in 3 lines, or 2,
+  once rebalanced (section 3).
+- On paper, I expect no member to fail rule 4. The members with the least margin are 7 and 8 (one line each).
+- The test is met by the letter in three places while the claim may not be (section 4): member 7's bridge
+  `iter_eq_orbit` carries its own `Nat.brecOn` and is dated 22 November. Member 6's checker term reaches an
+  induction on traces through `kernel_certificate`, three calls down, which `compare.py` does not see. Member 3
+  passes even if member 1 is put back.
+- Rule 1 cannot be followed to the letter by any member: every one of the eleven proofs is in equation form
+  (`| 0 => …`), so a term proof needs ` :=` added to the statement's last line. `compare.py` strips the
+  `:=` and counts the text as the same. The brief does not say this is allowed (section 5).
+
+## 1. Facts checked against the brief's table (OPENED)
+
+Line, statement end and proof lines come from `compare.py`'s own `block()`, imported read-only and run on main's
+sources. Dates come from `git blame --date=short -L <line>,<line>` of the statement's first line.
+
+| # | Statement at | Proof lines (rule 3) | Blame of first line | Brief |
+|---|---|---|---|---|
+| 1 | Likeness:916 | 918–924 = 7 | f3218d788 2026-10-14 | agrees |
+| 2 | Likeness:899 | 901–907 = 7 | f3218d788 2026-10-14 | agrees |
+| 3 | Likeness:1205 | 1206–1209 = 4 | cb1d433a1 2026-10-15 | agrees |
+| 4 | GrammarCandidates:533 | 535–541 = 7 | 706b80293 2026-10-23 | agrees |
+| 5 | GrammarCandidates:601 | 602–605 = 4 | 64c9bacd1 2026-11-06 | agrees |
+| 6 | Lasting:231 | 233–237 = 5 | 14fa5d035 2026-10-14 | agrees |
+| 7 | Tolerance:303 | 305–307 = 3 | ac92686e1 2026-10-19 | agrees |
+| 8 | Onward:222 | 224–227 = 4 | 6fe701698 2026-10-16 | agrees |
+| 9 | Branching:164 | 165–168 = 4 | 8b486cfa9 2026-10-13 | agrees |
+| 10 | GrammarCourse:120 | 122–123 = 2 | d13346ced 2026-10-23 | agrees |
+| 11 | RegimeMargin:2495 | 2497–2498 = 2 | 14e98910f 2026-10-22 | agrees |
+
+Each member's whole block blames to one date (`git blame -L` over the block, counted by date). All the
+statement lines, with ` :=` added, are at most 89 characters wide.
+
+The bridges are all of 22 November (blame): `iter_iff_alikeTo` Likeness:1094, `iter_iff_inquiry`
+GrammarCandidates:574, `iter_region_iff_lasts` Lasting:251, `Parting.iter_iff_continues` Parting:420,
+`Branching.iter_iff_reachable` Attraction:128, and `Tolerance.iter_eq_orbit` Tolerance:238 (commit c25bda51e, "older
+results as cases of the law of what a list holds"). The two older callees are from before their members:
+`Law.KeepsRelation.run` first appears 2026-10-19 (`git log -S`, 364fdd6ff; it was moved to IdentificationRuns:313
+on 22 October), and `Lasting.closed_orbit` dates from 2026-10-14 (Lasting:474).
+
+Import closures, computed from the `import` lines by a read-only script (OPENED):
+
+| Module | Needs | In its closure |
+|---|---|---|
+| Likeness | PredicateIteration, Labelled (`Alike.refl`) | yes |
+| GrammarCandidates | PredicateIteration | yes (direct) |
+| Lasting | PredicateIteration, CommonResponse (`region_mono`), Viability | yes |
+| Tolerance | PredicateIteration, Recurrence | yes |
+| Onward | Parting | yes (direct) |
+| Branching | Attraction (`iter_iff_reachable`, `pred_mono`) | yes (direct) |
+| GrammarCourse | IdentificationRuns | yes (direct) |
+| RegimeMargin | Lasting | yes (direct) |
+
+`RisingIteration` also opens a namespace `Iteration`, but it is in none of the six closures. So no name clashes
+under `open Iteration`.
+
+## 2. Names in `members.json` against what Lean prints (OPENED)
+
+Each name was checked against before/rows.txt or `all-proof-heads.jsonl` and against the source namespace:
+
+- `Becoming.Iteration.{postfixed_in_iter, iter_pred, iter_within}`: PredicateIteration, namespace Iteration
+  (l. 69).
+- `Becoming.iter_iff_alikeTo` (rows); `Becoming.iter_iff_inquiry` (rows); `Becoming.Lasting.iter_region_iff_lasts`
+  (rows); `Becoming.Tolerance.iter_eq_orbit` (rows).
+- `Becoming.Parting.iter_iff_continues` (heads; Parting, namespace Parting l. 84).
+- `Becoming.Branching.iter_iff_reachable` (heads; module Attraction, `namespace Branching` at Attraction:113).
+- `Becoming.Law.KeepsRelation.run` (heads); `Becoming.Lasting.closed_orbit` (heads); `Becoming.Alike.alikeTo` (rows).
+
+All eleven member names and headers match rows.txt, and each header is unique in its module.
+
+## 3. Member by member: does the term have the member's type? (on paper, OPENED)
+
+Lemma signatures, read at PredicateIteration:69–152:
+`postfixed_in_iter {S} {Φ} {V₀} (mono) {K} (inside : ∀ y, K y → V₀ y) (post : ∀ y, K y → Φ K y) : ∀ n y, K y →
+iter Φ V₀ n y` (`omit start in`), and `iter_pred`/`iter_within {S} {Φ} {V₀} (mono) (start : ∀ y, Φ V₀ y → V₀ y)`.
+
+The same remark holds for every `postfixed_in_iter` call. Its output `iter Φ V₀ n y` depends on the explicit
+`n y`, so Lean's app elaborator does not push the expected type in before the arguments. `K` and `V₀` are fixed
+by the arguments, as Miller patterns at a bound variable, or at `finalize`. Wherever a pattern argument meets a
+type headed by a metavariable, the match is postponed until then.
+
+**1. `Alike.alikeTo`.** `Bisimulation F G B` (Labelled:293) is exactly
+`∀ s s', B s s' → claims ∧ forth (… ∧ B t t') ∧ back (… ∧ B t t')`, and `alikeStep F G X p` (Likeness:1080) is
+`AlikeTo F G 0 p.1 p.2 ∧ forth (… ∧ X (t, t')) ∧ back`. With `K := fun p => B p.1 p.2`:
+- `post` is `bisim p.1 p.2 h` up to beta and projection.
+- `inside` needs `(∀ c, …) ≡ AlikeTo F G 0 p.1 p.2`. That holds by unfolding the structurally recursive
+  `AlikeTo` at `0`.
+
+So the term has the type. The pattern `⟨B, bisim, related⟩` on `Alike` (a def, `∃ B, …`) has a precedent at
+Labelled:340 and Labelled:347. `fun k {s s'} …` stops the implicit lambda; there is a precedent at Likeness:860.
+
+The checker's term as written breaks the width rule: its widths are [98, **102**, 22]. Rebalanced, with
+`alike_mono` moved up and `open Iteration` in scope in section Matching, it is [99, 91, 22]. `K` can also be
+inferred from `inside` (`h : ?K p` checked against `B p.1 p.2`, a pattern at `p`), which gives 2 lines of
+[99, 84]:
+```lean
+  fun k {s s'} ⟨B, bisim, related⟩ => (iter_iff_alikeTo k (s, s')).mp (postfixed_in_iter alike_mono
+    (fun p h => (bisim p.1 p.2 h).1) (fun p h => bisim p.1 p.2 h) k (s, s') related)
+```
+In the 2-line form, `V₀` is first set to the unfolded `fun p => ∀ c, …` and then must meet `agree` at
+`finalize`. That is the same unfolding of `AlikeTo` at `0`, so it is low risk. The pattern variable `B` is not
+a constructor in scope (grep).
+
+**2. `AlikeTo.of_succ`.** The checker's term is correct. `(fun _ m => m.1)` gives `start`, as in
+`alike_at_cover` (Likeness:1105). Width is [100, 57], at the cap. After the move `open Iteration` is in
+scope, and `iter_pred` bare gives [90, 57]. 7 → 2.
+
+**3. `AlikeTo.self`.** `fun k s => (Alike.refl F s).alikeTo k` has the type, with `G := F` and `u' := u`.
+`Alike.refl (F) (s) : Alike F F s s` is at Labelled:334. The dot form, with the `Alike` argument after `k`, has
+precedents at Likeness:1170 and 1183. It is 39 wide; 4 → 1.
+
+Order: `Alike.refl` is imported, and `Alike.alikeTo` lands at about l. 1099, before 1205. So yes, both come
+before `AlikeTo.self` after member 1 moves. Uses: `Alike.alikeTo` and `Alike.refl`.
+
+**4. `«对称有常则不可诘»`.** The pieces have the types needed:
+- `«有常之逐点» R S : «有常» R S ↔ ∀ u u', S u u' → ∀ v, R u v → ∃ v', R u' v' ∧ S v v'` (Grammar:343).
+- `«则» S E` is `∀ x y, S x y → E x y`, and `«逆» S` is `fun x y => S y x` (Grammar:57, 60).
+- `inquiryStep R E X p` (GrammarCandidates:563) is `E p.1 p.2 ∧ forth ∧ back`.
+
+So the checker's term has the type, with widths [91, 56, 75, 65, 53] and 7 → 5. `K` is inferable from `inside`
+(`s : ?K p` checked against `S p.1 p.2`). At the destination `open Iteration` is in scope (ListedPairs,
+l. 558), which gives 4 lines of [81, 89, 78, 53]:
+```lean
+  fun k u u' h => (iter_iff_inquiry k (u, u')).mp (postfixed_in_iter inquiry_mono
+    (fun p s => hSE p.1 p.2 s) (fun p s => ⟨hSE p.1 p.2 s, («有常之逐点» R S).mp hc p.1 p.2 s,
+      fun v' r' => match («有常之逐点» R S).mp hc p.2 p.1 (hs p.1 p.2 s) v' r' with
+      | ⟨v, r, t⟩ => ⟨v, r, hs v' v t⟩⟩) k (u, u') h)
+```
+
+**5. `«诘之降»`.** The checker's term is correct. It stands after `end ListedPairs` (598), so `open Iteration`
+is not in scope and `Iteration.iter_pred` is needed, as the checker says. Width is [100, 57], at the cap;
+4 → 2. `iter_iff_inquiry` and `inquiry_mono` keep implicit `{S} {R E}` after the section ends (rows).
+
+**6. `Lasting.lasts_of_kernel`.** The pieces:
+- `Kernel P guard s := ∀ t, Reach P s t → guard t` (Viability:58).
+- `Certificate` has the fields `within : ∀ s, K s → guard s` and `closed : Invariant P K` (Viability:62).
+- `Invariant P I := ∀ s a t, P.step s a t → I s → I t` (Frame:265).
+- `regionStep R Q X s := Q s ∧ ∀ t, R s t → X t` (CommonResponse:167).
+- `Steps P s t := ∃ a, P.step s a t` (Frame:241).
+
+So the checker's term has the type, with widths [97, 93, 81] and 5 → 3.
+- The three `kernel_certificate _ guard` holes are fixed by `kept` and `st`.
+- The pattern `⟨a, st⟩` meets `?R y t` before `?R` is known. The match is postponed, and `?R` is set by the
+  final unification with the `.mp` argument type.
+
+It uses more than the law and the bridge (section 4). The term below has the same lines and calls only the old
+proof's own lemmas (`Reach.refl/trans/of_step`, Frame:217–224), widths [87, 94, 77]:
+```lean
+  fun n {s} kept => (iter_region_iff_lasts n s).mp (postfixed_in_iter (region_mono _ _)
+    (K := Kernel _ guard) (fun y k => k y (Reach.refl _ y)) (fun y k => ⟨k y (Reach.refl _ y),
+      fun t ⟨_, st⟩ u r => k u (Reach.trans (Reach.of_step st) r)⟩) n s kept)
+```
+Here `(K := …)` is needed, because `k y …` applies a value whose type is still `?K y`.
+
+**7. `Tolerance.withheld_kept`.** The term has the type:
+- `start` is `empty`. `∀ y, next ?V₀ y → ?V₀ y` against `∀ a, ¬ next allWithheld a` unfolds `Not`, sets
+  `?V₀ := allWithheld`, then unfolds `allWithheld` (Tolerance:220, `fun _ => False`) to meet `False`.
+- The result `allWithheld a` is accepted as `False`.
+- `gives : (Law.run next allWithheld).state n a` is definitionally `Law.orbit … n a` (`Law.run_state` is
+  `rfl`, Recurrence:325).
+
+It stands in section Keeps, so `open Iteration` is not in scope and the `Iteration.` prefix is needed.
+`monotone_iff_keepsInclusion (Φ)` has an explicit `Φ` (Tolerance:232). Widths are [97, 66]; 3 → 2.
+`(iter_eq_orbit next allWithheld n ▸ gives)` gives [97, 46], still 2 lines.
+
+**8. `Onward.KeepsMoving.continues`.** The pieces:
+- `KeepsMoving P K := ∀ s, K s → ∃ a t, P.step s a t ∧ K t` (Onward:206).
+- `(within P K).step s a t` unfolds to `P.step s a t ∧ K s ∧ K t` (Onward:210).
+- `Parting.course_mono (P)` is explicit (`variable (P)` at Parting:406); `iter_iff_continues` takes `{P}`
+  (`variable {P}`, Parting:416).
+
+So the term has the type. `K` comes from `moving y h`, and `V₀ := fun _ => True` from `trivial`. There is no
+`open Iteration` in Onward, so the names are qualified. Widths are [82, 93, 70]; 4 → 3.
+
+It does not fit in 2 lines. `(Parting.course_mono _)` would leave `⟨step, h, kept⟩` facing `Process.step ?P …`,
+a projection of a metavariable that is not headed by one. The anonymous constructor would then fail, not
+postpone.
+
+**9. `Branching.fed_keeps`.** `predStep P X s := ∃ t, Steps P t s ∧ X t` (Attraction:120), and
+`Reachable P n s := ∃ x as, …` (Recurrence:118). So the term has the type; widths [79, 45, 88], 4 → 3. `K` is
+inferable from `⟨…, trivial⟩` at `?K x`, which gives 2 lines of [100, 88]:
+```lean
+  fun n s => (iter_iff_reachable n s).mp (Iteration.postfixed_in_iter pred_mono (fun _ _ => trivial)
+    (fun y _ => match fed y with | ⟨x, a, step⟩ => ⟨x, ⟨a, step⟩, trivial⟩) n s trivial)
+```
+
+**10. `Law.kept_along`.** The two statements:
+- `KeepsRelation.run {T} {rel} (keeps) {x y} (related) : ∀ n, rel ((run T x).state n) ((run T y).state n)`
+  (IdentificationRuns:313).
+- The member's statement is `∀ n, E (orbit next s n) (orbit next s' n)`.
+
+So it is an instance up to `rfl`: `run` is `⟨orbit next s, …⟩` (Recurrence:322), and the projection reduces.
+`Law.KeepsRelation` (IdentificationRuns:310) is the definition both statements use; rows say
+`Becoming.Law.KeepsRelation`. It can be written with no named argument: `  KeepsRelation.run keeps h` (27 wide)
+or `  keeps.run h`. 2 → 1.
+
+**11. `RegimeMargin.Coupled.Indexed.run_within`.** The two statements:
+- `closed_orbit {S} {next} {K} (closed : ∀ x, K x → K (next x)) {s} (held : K s) : ∀ n, K (Law.orbit next s n)`
+  (Lasting:474).
+- `Band G H hi := ∀ x, (∀ i, x i ≤ hi) → ∀ i, step Drawn.whole G H x i ≤ hi` (RegimeMargin:2425).
+
+So it is an instance: `K := fun x => ∀ i, x i ≤ hi` and `next := step Drawn.whole G H`, with
+`orbit ≡ (run …).state` by `rfl` as in member 10.
+
+On paper it works without named arguments. Checking `band` against `∀ x, ?K x → ?K (?next x)` unfolds `Band`
+by lazy delta. That gives `?K x =?= ∀ i, x i ≤ hi` (a pattern), then `?next x i =?= step … x i` (a pattern in
+two variables). The expected type is not pushed in first: the output depends on the implicit `{s}` binder, so
+no non-pattern `?K (orbit …)` problem arises.
+
+The forms:
+- `  Lasting.closed_orbit band high` (32 wide).
+- If Lean refuses that, `  Lasting.closed_orbit (K := fun x => ∀ i, x i ≤ hi) band high` (62 wide) is also one
+  line. Either way 2 → 1.
+
+The brief's "member 11 passes only if Lean unifies `K` and `next` without named arguments" is wrong as to the
+consequence. A named argument is not something new under rule 4.
+
+## 4. Is each "expected to call" really the named law at work? (OPENED, from the heads file and sources)
+
+`all-proof-heads.jsonl` records, for each callee, the inductions in its own proof term:
+
+| Callee | Its own inductions | Date |
+|---|---|---|
+| `postfixed_in_iter`, `iter_pred`, `iter_within`, `iter_iff_stages` | `Nat.brecOn` (the law) | 22 Nov |
+| `iter_iff_alikeTo`, `iter_iff_inquiry`, `iter_region_iff_lasts`, `Parting.iter_iff_continues`, `iter_iff_reachable` | none; each is a call of `iter_iff_stages` | 22 Nov |
+| **`Tolerance.iter_eq_orbit`** | **`Nat.brecOn`** | **22 Nov** |
+| `Law.KeepsRelation.run` | `Nat.brecOn` | 19 Oct |
+| `Lasting.closed_orbit` | `Nat.brecOn` | 14 Oct |
+
+- **Members 1, 2, 4, 5, 8, 9.** The law's lemma does the work (a class `K` kept, or the start kept). The bridge
+  only renames, and carries no induction.
+- **Member 7.** `iter_within` does the keeping, but the member now also rests on `iter_eq_orbit`. That is a
+  Nat induction of that same night, which identifies `iter` with `Law.orbit` (Tolerance:238–242).
+  - "inductions after []" passes by its letter, while the member's induction is in part relocated into a
+    22-November bridge. This is the pattern of the earlier briefs.
+  - `compare.py`'s column "with an induction of their own" will show it, because it is in main's heads file.
+  - It cannot be avoided as worded: `iter` and `orbit` are different recursions, and `members.json` requires
+    `iter_eq_orbit` in the uses.
+- **Member 6.** The checker's term calls `Viability.kernel_certificate`, which has no induction of its own. But
+  its chain goes `kernel_certificate` → `kernel_iff_held` → `reach_iff_withinClosure` →
+  `withinClosure_of_trace`, and the last carries `Generative.Trace.brecOn`. So an induction on traces is used
+  three calls down. `compare.py` looks only at direct uses, so it will not show this.
+  The old proof used `Reach.refl/trans/of_step`, which have no inductions in the heads file. The Reach term in
+  section 3 keeps exactly those, so the only induction it adds is the law's.
+- **Member 3.** It is a call of member 1 at `Alike.refl`. If member 1 is put back, member 3 still passes every
+  test by its letter (`inductions after []`, `Alike.alikeTo` in uses), while it calls member 1's own induction.
+  The brief does not make member 3 depend on member 1. Separately, `compare.py`'s "carry" column takes main's
+  heads, so it lists `Alike.alikeTo` as carrying an induction even when member 1 is kept.
+- **Member 10.** `KeepsRelation.run` is the same statement up to `rfl` and has the same two-clause proof. The
+  call removes a duplicate; the induction stays in a theorem 4 days older. It is not the iteration law.
+- **Member 11.** `closed_orbit` is more general (any `K`), and `run_within` is its instance at the band's
+  predicate. The induction is `closed_orbit`'s, 8 days older.
+
+## 5. The three moves (OPENED: grep of every name, including dot forms)
+
+**Likeness: `of_succ`, `down_to` and `Alike.alikeTo` (898–924) go to after `iter_iff_alikeTo` (1094–1097).**
+- *Users in between.* I grepped `of_succ|down_to|alikeTo\b|\.alikeTo` over 850–1300. The only hits between
+  925 and 1093 are `apart_of_not_alikeTo` (1027–1071) and `SameBranchingTests.alikeTo` (1067), which are
+  other names. `same.alikeTo` at 1153 resolves to `SameBranchingTests.alikeTo`. Every use of a moved name is
+  after 1097 (1163, 1170, 1183, 1239, 1270–1273).
+- *Scope at the destination.* Universe names are the same: `universe u v w u' w'` (l. 164), and `RelationsAmong`'s
+  `universe u'' x` ended at 853 before the old place. The variables are the same: `{S S' A C}` (l. 409).
+  - `variable {F} {G}` (l. 933) is shadowed by each theorem's own `{F} {G}` binders, so it is not included.
+  - Rows give levels `[u, v, w, u']` and binders `S S' A C F G …` for all three, the same as `iter_iff_alikeTo`.
+- *Hazards in section Matching.*
+  - `local notation "agree"` (1092) makes `agree` a token. Neither the moved texts nor the new proofs use it.
+  - `variable {pairs}` (1099) and the explicit `variable (all) (all')` (1108) would be included only if
+    mentioned; no proof mentions them. `local notation "N"` (1109) is a token after that line.
+- *Destination that keeps the statements identical:* after the blank line 1098, before `variable {pairs …}`.
+  Lines 1099–1117 and after `end Matching` also work, with `Iteration.` prefixes there.
+- *Ordering.* `of_succ` must stay before `down_to`, which uses it at 913. If only one of members 1 and 2 is
+  kept, the brief does not say whether `down_to` and the other block still move.
+
+**GrammarCandidates: `«对称有常则不可诘»` and `«核则不可致诘»` (532–546) go to after `iter_iff_inquiry` (574–578)
+and before `core_iff_inquiry` (589).**
+- *Users in between.* By grep, the names occur only at 539, 541, 546 (inside the blocks) and 594 (in
+  `core_iff_inquiry`), plus the module doc at 35. Nothing between 547 and 578 uses them.
+- *Scope at the destination.* ListedPairs is nested inside section Inquiry, so `variable {α : Type u}` (523) is
+  still in scope and nothing is auto-bound. ListedPairs' own `variable {S : Type u} {R E : «际» S}` (560) is
+  shadowed by the binders `{R E S : «际» α}` and `{R E : «际» α}`, so it is not included.
+  - The only universe is `u` (l. 47). Rows give levels `[u]` and binders `α R E S …`, unchanged.
+  - `open Iteration` is in scope there (558), and nothing in the moved texts resolves differently: there are no
+    Iteration names among them.
+- *Destination that keeps the statements identical:* after the blank line 579, before
+  `variable {all} (within) {x y}` (580). It is the only clean window: after 580 it still works (`within` is
+  explicit and unmentioned), but it sits next to the `include within in` lines.
+
+**Lasting: `lasts_of_kernel` and `kernel_iff_lasts` (230–243) go to after `iter_region_iff_lasts` (251–255).**
+- *Users in between.* Grep shows only 235 and 242, inside the blocks. Nothing between 244 and 255 uses them.
+- *Scope at the destination.* Section Disturbances (245–262) has only `open Iteration`, and no `variable` or
+  `universe` lines. The variables `{f adm guard}` (137) and `{S A}` (105) and the universes `u v w` (99) are the
+  same, so the statements are identical. Rows give levels `[u, v]`.
+- *Placement.* Put the blocks after the blank line 256, before `kernel_iff_lasts_length`'s docstring. Not
+  directly before `end Disturbances` (262): line 261 has no blank after it, and `compare.py`'s `block()` ends a
+  block at the first blank line, so the block would take in `end Disturbances` and C6/C7 would fail.
+
+**Hygiene names (C2).** No statement of a member or a moved block contains `_hygCtx` names (rows; arrow binders
+are the stable `a._@._internal._hyg.0`). `_hygCtx` hashes also look independent of position: `Pos.ctorIdx` in
+Likeness.Parting and in Lasting.Fan, two modules, share 1404496646. So a move should not change any other row's
+binders.
+
+**Matchers (C3).** No theorem in the eight modules has another declaration's matcher as its head (0 found). So a
+member losing its matcher should not change another theorem's head.
+
+## 6. Rule 4: which do I expect to fail, and the shortest term on paper
+
+On paper, none fails rule 4 once member 1 is rebalanced. The shortest terms I can write, all no wider than 100:
+
+| # | Lines before → shortest on paper | Term (section 3) | Margin | Main risk |
+|---|---|---|---|---|
+| 1 | 7 → 2 (3 with `K` named) | rebalanced | wide | the checker's line 2 is 102 wide |
+| 2 | 7 → 2 | `iter_pred` bare after the move | wide | none seen |
+| 3 | 4 → 1 | `(Alike.refl F s).alikeTo k` | wide | depends on member 1 for its meaning |
+| 4 | 7 → 4 (5 as the checker wrote it) | `K` inferred | 2–3 | postponed `match` inside a constructor |
+| 5 | 4 → 2 | the checker's | 2 | at the width cap (100) |
+| 6 | 5 → 3 | the checker's, or the Reach form | 2 | pattern on `?R y t` postponed until `finalize` |
+| 7 | 3 → 2 | the checker's, or the `▸` form | **1** | unfolding `Not` and `allWithheld` |
+| 8 | 4 → 3 | the checker's | **1** | 2 lines impossible (see member 8) |
+| 9 | 4 → 2 (3 with `K` named) | `K` inferred | 1–2 | at the width cap in the 2-line form |
+| 10 | 2 → 1 | `KeepsRelation.run keeps h` | 1 | none seen |
+| 11 | 2 → 1 | `Lasting.closed_orbit band high` | 1 | if refused, the named form is still 1 line |
+
+Fallbacks where elaboration differs from paper:
+- Member 6: write `(region_mono (Steps (disturbed f adm)) guard)` explicitly. That may add a fourth line,
+  4 < 5, still kept.
+- Member 7: `(Eq.mpr (congrFun …) gives)`. There is no third line to spare.
+- Member 8: none shorter than 3 lines; any extra line puts it back.
+
+## 7. What the brief asks that cannot be done as worded, and kit facts
+
+1. **Rule 1 against equation-form proofs.** All eleven proofs begin with `|` lines. A term proof needs ` :=`
+   appended to the statement's last line, or a `:=` line of its own. Either is an edit to a statement line.
+   `compare.py` (l. 79–80) strips a trailing `:=`, so "statement text same" holds, but rule 1 does not say this
+   is allowed.
+2. **Rule 2 with only one of members 1 and 2 kept.** It is underdetermined whether `down_to` and the other
+   block still move. `compare.py`'s C6 always strips all three moved blocks, so it cannot see a move left behind.
+3. **"Build only the module you changed, not its importers"** cannot hold for the rows step. `run-stub.sh`
+   builds the stub of the eight modules, whose 110-module closure includes importers of the changed modules:
+   12 modules depend on Likeness, 22 on Branching, 10 on Lasting (script); up to 24 are rebuilt.
+4. **`compare.py`'s "with an induction of their own" column** uses main's heads file. It is stale for member
+   3's callee, and it lists the law's lemmas for every member (noise). It does not follow uses below the first
+   level, so member 6's induction on traces through `kernel_certificate` is invisible to it.
+5. **The brief's forecast for member 11** ("passes only if … without named arguments") is wrong, as said in
+   section 3.
+6. **There is no C4** in the brief's list or in `compare.py`. This is consistent, not an error.

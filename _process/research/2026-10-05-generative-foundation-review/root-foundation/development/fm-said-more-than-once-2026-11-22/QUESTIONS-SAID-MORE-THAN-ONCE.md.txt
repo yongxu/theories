@@ -1,0 +1,37 @@
+# A sweep, not a build: inductions the package says more than once
+
+*AI-written (Claude Fable, board row FM), 22 November 2026; frozen before any reader ran (hash and clock in `FROZEN-QUESTIONS.sha256.txt`). No Lean is written, built or changed by this sweep. Its best outcome is a ranked list of candidates on paper, each with its test named, to be tried later by a build; not a finding.*
+
+## Why this
+
+Ren's direction for this row (21 November): a full map with formal link proof, done elegantly, with its centre. Two tries at the centre today came back as not the centre (a decided finite game; a file with two standstills). What did work, the night before, was of another kind: a reader saw that one induction was written in many modules, it was said once (`Becoming/PredicateIteration.lean`), and a dozen older theorems became calls with their statements unchanged, several losing premises. AGENTS.md rule 4: prefer the proof that makes an old result a case of another; each thing said once. The coordinating session's test for a join: an OLD result comes out as a case, its statement unchanged, its own induction gone, and no more lines than it has.
+
+This morning's sweep for another purpose met, in passing, twelve theorems in twelve modules that are one induction: a decided property on a stretch of steps holds throughout or fails somewhere (`ReadOffInTime.first_of_decided` l. 196, `Novelty.upto_or_fails` l. 67, `MoveFormation.throughout_or_fails` l. 587, whose own docstring says it is stated again "so that this module does not import `Becoming.Entropy`", `Amounts.unmarked_or_marked` l. 506, `Exhaustion.all_or_below` l. 60, `ReadingSchedule.read_or_unread` l. 110, `LastChange.decided_within` l. 162, `Regulation.first_or_nowhere` l. 1294, `Stock.search` l. 347, `Founding.changed_or_none` l. 217, `GrammarLaws.stage_search` l. 2473, `CausalGrowth.searchBelow_or` l. 239; and `Optimum.keeps_or_falls` l. 4476 with its two neighbours). Nobody has looked for such families on purpose.
+
+## What counts as nothing found (written first)
+
+- **M1.** A family's members are alike only in shape: no one statement has the others as cases with their statements unchanged (different quantifiers, a first witness against any witness, a `Decidable` instance against a disjunction as hypothesis, that cannot be bridged in a line).
+- **M2.** As calls the members are not shorter: the call with whatever bridge it needs has as many lines as the induction it replaces.
+- **M3.** The general statement cannot sit below its cases without an import that makes a cycle, or that grows a module's import closure by more than a few modules (say which, from the `import` lines).
+- **M4.** The family's members are all of 22 November (this row's own landing of that night): then it is tidying one night's work and is said so.
+- **M5.** The "general statement" would be new and more general than anything a case needs (a statement nobody calls but the cases that were fine without it).
+
+## The questions
+
+**Q1. Families.** Find every family of two or more theorems in the package whose PROOFS are one induction or one case analysis under different names. Seeds, each to be opened and then widened by search: (a) a decided property on a stretch of steps or below a bound: holds throughout or fails somewhere, with or without "first" (the twelve above); (b) the same over a list (`Undecided.each_or_some` l. 381, `Likeness`'s `Decided.exists_of_listed`, `exists_not_of_listed`, `forall_of_listed`, `LineOnAStock.line_or_none` l. 242 and `met_or_unmet` l. 254, `Iteration.gather_listed`, `Prelude.not_not_all`, `Prelude.exists_pairs_over`); (c) what holds at a longer horizon holds at every shorter one, said notion by notion (`KeptFor.shorter`, `Lasting.Continues.down`, `ReadOffInTime.Recoverable.earlier`, `PossibleWithin.mono`, `Viable`'s, `AlikeTo`'s, and the rest: is each a case of `Iteration.iter_pred` or `iter_succ` where the notion is already an iterate, or of one two-line lemma?); (d) a property kept by every step holds along the whole course (`Lasting.closed_orbit` l. 474, `Frame.Invariant.run`, `WindowedWaiting.invariant`, `Tolerance.KeepsInclusionInto.course`, `Undecided.kept_from` l. 392, `Iteration.postfixed_in_iter`); (e) no list holds what keeps growing, and the pigeonholes (`Reaching.KeepsWidening.not_listed`, `Web.KeepsWidening.not_listed`, `Population.length_le_of_sub`, the recurrences); (f) an exact least value (`RegimeMargin.leading_exact` and whatever else finds a least or first one by a bounded search); (g) anything else you meet: two theorems with the same proof term up to names.
+
+For each family: every member with module, line, statement word for word, the lines of its proof, and the date it entered (`git log -S` on its name: before 22 November, or of that day).
+
+**Q2. The one statement.** For each family: which member, or which statement on paper, has the others as cases. Write, for each other member, the call on paper (the term), and say whether its statement is unchanged; where a bridge is needed (an instance turned into a disjunction, `<` against `≤`, an offset), write it and count its lines.
+
+**Q3. Where it would live.** From the `import` lines (by script, not by guess): the lowest module all members import; whether the general statement is already at or below it; what imports would have to be added, and what that does to each member module's import closure. Is there a cycle?
+
+**Q4. The ledger.** For each family: lines of the members' proofs now; lines as calls, the general statement counted once and every bridge counted. The difference.
+
+**Q5. Rank.** Order the families by what a build would gain: members older than 22 November made calls; lines removed; premises that would fall away (say which, if any member carries a premise the general statement shows it does not need); modules that would gain a dependency on one another and so a formal link. Say of each family which of M1 to M5 holds, if any.
+
+**Q6. What is NOT a duplicate though it looks like one.** Give the three or four nearest misses, each with the reason (M1), so that a build is not sent after them.
+
+## How
+
+One Astra 6.2 read-only pass over all 409 modules (the only reader that can open many); three Claude readers, each alone, each on two of the seed families (a) with (b); (c) with (d); (e) with (f), opening every member and writing the calls on paper; then one checker who took no part on the top three families: every "is a case with its statement unchanged" tried on paper against the two statements, and the import claims re-derived by script. **Every answer is led by OPENED or TOLD.** No Lean, no lake, no build, no gate, no core run. Cap: about 2 million tokens on the Claude side and about 15 million on Astra's (what the larger pass buys: families nobody seeded).

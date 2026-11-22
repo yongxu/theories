@@ -1,0 +1,339 @@
+# CHECK of the note "Inductions the package says more than once", sentence by sentence
+
+*AI-written (Claude Fable 5.2, model id `claude-fable-5-2`), a checker for board row FM, 22 November 2026, after 16:46 (+07). I took no part in the sweep, the checks, the brief, the build or the earlier reads. Read only: this file is the one thing written; no Lean, no build, no gate, no git command that writes (`git blame`, `git log -1`, `git status`, `git show` only). Scripts of my own (the two list files compared, the names searched in the returns, the note's links, a token count by the kit's own rule) are in `/private/tmp/claude-501/-Users-ren-theories/21947b1b-65d1-45e4-bdb9-d3582a76bb12/scratchpad/chknote/`.*
+
+Read whole: `NOTE.md`; the questions, their hash file, the addendum; `lean-list/README.md`; the four `CHECK-*` returns; the seven returns under `build/readers/`; both forms of the brief with `FROZEN-BRIEF.sha256.txt`; `build/report/REPORT.md`, the two comparison files of the last sources and the MEMBER lines of the three earlier ones; `kit/members.json`; the members' rows before and after; `/Users/ren/tmp/dj/batch29/README.md`. Read in part: the three `RETURN-*` (headers, summaries, the lines searched), `astra/REPORT.md` (by line, for the names searched), `kit/Rows.lean` and `kit/compare-after-second-look.py` (what C1 to C4 compare). Opened in Lean: `PredicateIteration.lean` ll. 60 to 160 and 218 to 232; main's `Likeness` 896 to 926 and 1203 to 1210, `GrammarCandidates` 529 to 547 and 599 to 606, `GrammarCourse` 115 to 124, `Grammar` 338 to 352, `IdentificationRuns` 308 to 318, `Tolerance` 300 to 308; and the landing copies `/Users/ren/tmp/fm/build13/after/Becoming/{Likeness 1044-1100, 1192-1200; GrammarCandidates 538-602; GrammarCourse 115-124}`.
+
+Verdict words: **HOLDS** (source, place); **MORE** (says more than its source); **LESS** (says less in a way that misleads); **WRONG**; **NOT FOUND** (in what was read); **TOLD** (the session's own record, no source filed; left as it is). Each entry that is not HOLDS or TOLD has its replacement in the last section, numbered R1 and on.
+
+## Facts established by this check, used below
+
+- **The frozen hashes.** `QUESTIONS-SAID-MORE-THAN-ONCE.md` hashes to `d0a7535a…` as its hash file says (frozen 13:04:26; the Astra run's log folder is `20261122-130444`). The brief and the five kit files hash as `FROZEN-BRIEF.sha256.txt` says (frozen 16:17:09; the implementer's log folder is `20261122-161716`). The seventh frozen hash, of `before/rows.txt`, has no file under `build/` to be checked against.
+- **The last sources.** The four `.lean` files and the stub in `/Users/ren/tmp/fm/build13/after/Becoming/` hash as `after/rows.sources.sha256` says; `report/compare.txt` and `report/compare-after-second-look.txt` there are byte for byte the two filed under `build/report/`. Diff of each landing copy against main's HEAD: Likeness 54 changed lines, GrammarCandidates 37, GrammarCourse 5, Onward 0. Main at this check is `f7a3d51ae` and still has the old proofs: every "landed" in the note is true only once the landing is made.
+- **Blame of the statement's first line on main**: `Alike.alikeTo` 14 Oct, `AlikeTo.of_succ` 14 Oct, `AlikeTo.self` 15 Oct, `«对称有常则不可诘»` 23 Oct, `«诘之降»` 6 Nov, `Law.kept_along` 23 Oct, `Law.KeepsRelation.run` 22 Oct, `lasts_of_kernel` 14 Oct, `withheld_kept` 19 Oct, `KeepsMoving.continues` 16 Oct, `fed_keeps` 13 Oct, `run_within` 22 Oct. All as the table says.
+- **The two list files, by script.** First form (the copy under `lean-list/` and row DJ's `all-proof-heads.first.jsonl` are the same bytes, sha256 `f3019677…`): 20,519 rows, 2,638 with `inductions`. Corrected: 20,567 and 2,709. Of the rows in both: 68 gain an induction (63 `Nat.recAux`, 2 `Nat.strongRecOn`, 2 `Acc.rec`, 1 `Becoming.Closure.induction`), 3 lose one (`TurningInTime.Three.read_to_ten` and `held_at_six`, shown before through `Bool.rec`; `ContingentPlans.run_iff_trace`, through `Decidable.rec`). 48 rows are new: 45 whose last name begins `eq_` and 3 whose last name begins `match_` (`Joining.match_incident`, `Joining.match_incident_of_em`, `OneStep.Chain.match_back`); 6 of the 48 carry an induction. 2,638 + 68 − 3 + 6 = 2,709. None of the 74 newly seen inductions is in a module that holds a bridge or a call of the law (the fourteen modules of the goings-on check, section 1a and 1b).
+- **Names of the changed rows in the note and the returns** (a theorem's last name on a line that also names its module): of the 68, two (`ReaderRebuilding.length_replicate`, `RuleRebuilding.length_replicate'`: Astra report ll. 546, 547, cheap-calls check ll. 228, 318). Of the 48, **six**, all in the Astra report's register of proof text (after l. 1009), none in its family tables (ll. 21 to 903): ll. 2245, 2434, 2436, 5126, 10546, 10547. The note has five; the one it lacks is `GrammarLaws.eq_true_of_not_false` (l. 2434, "Text group 139"). None of the 3 is named anywhere.
+- **Tokens by the kit's rule** (`TOK` of `compare-after-second-look.py`, run on the texts in `REPORT.md`): my count gives 52 for member 8's old proof and 32 for member 7's call, as the sources print; member 8's accepted call (build 6) is 65 tokens against 52. No source gives that last figure.
+- **Calls of `Law.KeepsRelation.run`.** By the corrected list seven other theorems use it. Six write the name in full (`CountedCodes` 210, 231, 249, 466; `IdentificationRuns` 335; `SharedCodes` 909); the seventh, `SharedCodes` 936, writes `commutes.keepsRelation.run fixed.symm n`. `IdentificationRuns` 316, which the built-proofs reader lists among "every other call", is the lemma's own recursive call.
+- **The atlas.** `dynamics.json` names none of the six landed theorems (`kept_along` occurs there only as `Gated.kept_along_iff` and `RuleCapture.share_kept_along`).
+- **The build's footer** (`gpt-6.2-astra/xhigh · 524s · 3692.2k tokens · 58 cmds`) is in `/Users/ren/theories/tmp/fm/cases22/astra/cx-output.txt`. It is not among the files under `build/`.
+- **A source that disagrees with its own files.** Row DJ's README says the list was corrected at "13:5x WIB"; its files are of 16:18 and 16:19, and the attack that prompted it was written at 16:10. The note's "the same hour" and "the same afternoon" fit the files.
+
+## The note, in order
+
+### Title and head note (ll. 1 to 3)
+
+1. Title. **HOLDS** ("6 kept as calls [1, 2, 3, 4, 5, 10]", `compare-after-second-look.txt`, last line).
+2. "AI-written (Claude Fable, board row FM), 22 November 2026." **TOLD.**
+3. "A record of an afternoon: a read-only sweep … the small build that followed …" **HOLDS** (clocks: 13:04:26 to 16:46).
+4. "In the sweep's sections every "is a case" was tried on paper by the one reader named; what Lean has seen is in the section on the build." **HOLDS** (each return's head note: on paper, unbuilt).
+5. "The finding is on the board, in row FM." **TOLD** (the board at `f7a3d51ae` has row FM's claim; the landed sentence is not there yet).
+
+### Why (l. 7)
+
+6. "Ren's direction for this row (21 November) is a full map with formal link proof, done elegantly, with its centre." **HOLDS** (`sources/15-…/2026-11-21-a-full-map-with-its-centre.md`, his words of about 19:50; the board's row FM names itself as the session he told). The link resolves from a folder under `…/root-foundation/development/`.
+7. "Two tries at the centre on 22 November came back as not the centre." **HOLDS** (QUESTIONS, "Why this"; both linked notes exist).
+8. "What had worked the night before … a dozen older theorems became calls with their statements unchanged." **HOLDS** (QUESTIONS, same paragraph; the linked note exists).
+9. "Rule 4 of `AGENTS.md` asks for exactly that." **HOLDS** (rule 4: "Prefer the proof that makes an old result a case of another").
+10. "Nobody had looked for such families on purpose." **HOLDS** (QUESTIONS, last sentence of its second paragraph).
+
+### What was asked, and of whom (ll. 11 to 17)
+
+11. "Six questions, frozen with their hash and clock before any reader ran …" **HOLDS** (hash recomputed; Q1 to Q6 as listed).
+12. "Five ways to find nothing were written first (M1 … M5)." **HOLDS** (QUESTIONS, "What counts as nothing found").
+13. "Three Claude readers, each alone, each on two seeded families." **HOLDS** (the three returns' titles: a and b; c and d; e and f).
+14. "One pass by an implementer of another kind of model (Astra 6.2) over all 409 modules (its report: 296 rows in 39 families)." Numbers **HOLD** (`astra/cx-output.txt`; lean-list check section 3). "implementer" **WRONG**: `astra/PROMPT.txt` l. 3, "You are a reader, alone. Read only". **R1.**
+15. "A list printed by Lean, made by the session that holds row DJ at this row's asking: …" **HOLDS** (`lean-list/README.md`; addendum point 7).
+16. "The readers and checkers had its first form: 20,519 theorems, 2,638 with an induction of their own." Counts **HOLD** (script). "The readers" **MORE**: none of the three `RETURN-*` and nowhere the Astra report or its prompt mentions the list (grep of `all-proof-heads`, `Lean list`, `lean-list`, `printed by Lean`: 0 in each); the addendum has it asked for at 13:16, after the readers had started. The four checks use it (3 to 18 mentions each), and so do the two attacks on the brief. **R2.**
+17. "That form undercounted, as a later reader found." **HOLDS** (attack H1; row DJ's README, last paragraph).
+18. "The questions were frozen without being attacked." **HOLDS** (addendum, title and head note).
+19. "The coordinating session's seven points came after; they were applied at the checking stage." **HOLDS** (addendum, seven points, 13:07:46; "These points are the checker's instructions").
+20. "The two that changed most: … class i … class ii …; and the ledger needs a cost side." **HOLDS** (addendum points 1 and 2).
+21. "Four checkers who took no part, one question each." **HOLDS** (four files; each head note).
+
+### What the checkers left standing (ll. 21 to 29)
+
+22. "Everything in this section is on paper." **HOLDS.**
+23. Item 1, "Nine theorems of 13 October to 6 November … costs no premise." **HOLDS** (goings-on check, headline 1 and section 1c).
+24. Item 1, "Six are `Iteration.postfixed_in_iter` or a call of one … one is `Iteration.iter_within`: [nine names]." **HOLDS** (same table).
+25. Item 1, "No new statement, bridge or import; three reorders inside a module; 45 proof lines against 24." **MORE** in one phrase: the check has "three reorders inside modules", one each in Likeness, Lasting and GrammarCandidates (section 1c, "Order inside the modules"). **R3.**
+26. Item 1, "Seven of the nine are in none of the four returns: the goings-on checker found them by starting from the bridges." **HOLDS** (headline 1; section 1b).
+27. Item 1, "By script … 134 of 409 modules …, and 44 records cite the six files." **HOLDS** (section 3, table, last row).
+28. Item 2, the whole sentence. Figures **HOLD** (goings-on check section 2 and verdict items 6 to 9; cheap-calls check section 5 for "only plausible"). Two things do not: "as cases of an older general member" is **WRONG** of the cascade pair, which the same sentence dates 29 October against a law of 4 November (the check: "The older law is a case of the later"; the slip is in the check's own heading too); and "13 lines" **LESS**: it is 13 lines fewer (the check's verdict list counts lines saved; the pigeonholes return l. 252, "13 or 14 lines fewer"), and what moves is "the chain's definition, two theorems and the bridge". **R4.**
+29. Item 3, both sentences. **HOLDS** (goings-on check, headline 2; corrected list: head `Eq.subst`, no induction).
+30. Item 4. **HOLDS** (goings-on check, verdict, "Called class (i) by a reader, re-classed (ii)"; it also re-classes `course_congr` and `AgreeTo.of_succ`, which the note leaves out without harm).
+31. Item 5, "The two search families (… 21 to 23 members; … 16) each have one statement with every member as a named substitution, statements unchanged." **MORE**: the check wrote the 21 of the search reader as substitutions into a statement that is new and on paper (`first_below`), and the 16 as calls of `gather_listed` as it stands, three of them through another member (b11, b14, b16); 23 is the other checker's count ("at least 23 theorems in 23 modules", lean-list check section 5), and of its two further members one (`Closing.split`) has a call written by that checker and the other (`Clear.or_first`) is "a case only after a move". **R5.**
+32. Item 5, "Both are class (ii)." **HOLDS** (search check, section 6).
+33. Item 5, "Their checker's verdict … (401 modules compiled again; 136 of 568 records are bound to `Prelude`'s source alone)." **HOLDS** (search check, "The outcome in short", third and fourth bullets).
+34. Item 5, "Eight of the members become calls … : tidying, to be taken when those modules are next changed." Figures **HOLD**. **LESS**: the verdict is "One small landing, or taken when those modules are next changed" (section 6, fourth bullet). **R6.**
+35. Item 5, "If `Prelude` is changed for another reason, both families go in that landing." **HOLDS.**
+36. Item 6, both sentences. **HOLDS** (cheap-calls check, Summary first bullet; section 3, "Cost").
+37. Item 7. **HOLDS** (lean-list check, section 3 and "May be said" 3 and 4).
+
+### What may not be said (ll. 33 to 39)
+
+38. "In the words of the checker against the Lean list, which gives the grounds for each:" **MORE**: the five bullets are shortened and in part re-worded (the first is taken from "May be said" 2), and bullet 4 leaves one of the checker's finds out. **R7.**
+39. Bullet 1. **HOLDS** (lean-list check, "May not be said" 1 and "May be said" 2).
+40. Bullet 2, "Any line figure as a finding. Astra's "761 lines" … 106 lines and not 91". **HOLDS** ("May not be said" 2).
+41. Bullet 2, "about four fifths of its savings, and about nine tenths of the three Claude returns', rest on calls tried by nobody but their writer." **MORE**: the source's figures are of what that one checker tried ("the calls I tried on paper carry 165" of 838; "about 52" of 392), and it says "What another checker did on the top three was not before me". The cheap-calls check tried 72 calls and the search check wrote 37; the note itself reports both. **R8.**
+42. Bullet 3. **HOLDS** ("May not be said" 3). The 41 is of the first form; the note says so further down.
+43. Bullet 4, first sentence. **LESS**: the source's list has a fifth find, "a gathering family of three whose statement is already in place" (two results of October as 3-line calls of `GrammarLaws.found`, no move, no new statement: section 1 (e) 2), and has "40", not "about 40". **R9.**
+44. Bullet 4, "What may be said is "not found in what was read"." **HOLDS.**
+45. Bullet 5, both sentences. **HOLDS** ("May not be said" 5).
+
+### The build that followed (ll. 43 to 63)
+
+46. "The first item above was put to Lean the same afternoon, with the first of the four class (i) items beside it." **HOLDS** (the brief's table: members 1 to 8 and 10).
+47. "What landed is small: six theorems in three modules …, 31 proof lines for 13, no statement, declaration or import changed." **HOLDS** (7+7+4+7+4+2 = 31; 3+2+1+4+2+1 = 13; C1, C2, C5). **LESS**: five theorem blocks changed place in their modules (C10: three in Likeness, two in GrammarCandidates, each now directly under its bridge), which moves the lines of everything between; the built-what-tells reader's corrected board sentence says so. **R10.**
+48. "A brief was written with its tests first: a Lean file that prints … what it uses from outside the package), …" **MORE**: the first form of the lister printed "the head of its proof term, the package theorems the term uses and its recursors" (first form of the brief, "The tests"); "the constants that carry an induction" and "what it uses from outside the package" came from the attack (H1), as the note itself says under "What the tests taught". **R11.**
+49. "Two readers attacked the brief and the tests before any build." **HOLDS** (attack returns of 16:10 and 16:12; the build began 16:17:16).
+50. "two more, at the caution of the session that holds row DJ, said of each theorem which premise of the law its old proof had argued." "at the caution of the session that holds row DJ": **NOT FOUND** in any filed source (the brief says only "two more readers"). "of each theorem" **MORE**: both returns are of ten, members 1 to 10 (PREMISES-fable, last line: "The eleventh member of the brief (`run_within`) was not in my task and was not read"). **R12.**
+51. "The brief was rewritten and frozen." **HOLDS** (hashes recomputed).
+52. "An implementer of another kind of model (Astra 6.2) built nine calls in scratch in nine minutes." **HOLDS**: nine calls accepted by Lean (members 1 to 7 and 10 kept, member 8 at build 6: `REPORT.md`); 524 s by the footer, which is not filed (see R31 and R34). The report signs itself "AI-written by Codex"; the footer names `gpt-6.2-astra`.
+53. "Three readers then read the result: …" **HOLDS** (three returns; the second look ran while the build finished, as the note says later).
+54. "The rule for keeping a call, frozen before the build: …" **HOLDS** (brief, rule 4).
+55. "After the build two readers showed that the second half can be met by one-letter local names, so a call was kept only if it is also no longer with names alike and by tokens (a name counting once)." **HOLDS** (second look, section 4; built-proofs reader, (b)). Tried on each of the six kept: with names alike 171, 132, 30, 200, 126, 23 against 240, 226, 114, 216, 138, 37; tokens 68, 54, 12, 104, 52, 3 against 80, 88, 54, 126, 96, 18.
+56. "That is stricter than the brief, and it is this session's judgement, made after the build." **HOLDS** as said of itself.
+57. Row 1. **HOLDS**, and exactly true of the term: `(iter_iff_alikeTo k (s, s')).mp (postfixed_in_iter alike_mono (K := fun p => B p.1 p.2) …)` with `B` from the pattern `⟨B, bisim, related⟩` (landing copy, Likeness 1083 to 1088). Counts as MEMBER 1.
+58. Row 2. **HOLDS**, exactly: `.mpr` at k + 1, `iter_pred alike_mono (fun _ m => m.1)`, `.mp` at k (1071 to 1075). Counts as MEMBER 2.
+59. Row 3. **HOLDS**, exactly: `fun k s => (Alike.refl F s).alikeTo k` (1196 to 1197). Counts as MEMBER 3.
+60. Row 4. Counts **HOLD** (MEMBER 4: 7 → 4, 216 → 200, 126 → 104; `uses after` has `«有常之逐点»`). The outcome cell is loose: "its premises from `«有常之逐点»`" is true of the forth and back halves of `post` only; `inside` and the first conjunct are `hSE`, and the back half also takes `hs` twice (landing copy, GrammarCandidates 564 to 570, against main 533 to 541, where each piece stands in the same place). **MORE**, slightly. **R13.**
+61. Row 5. **HOLDS**, exactly (597 to 600; `Iteration.iter_pred`, the bridge both ways). Counts as MEMBER 5.
+62. Row 10. **HOLDS**, exactly: `KeepsRelation.run keeps h` (landing copy, GrammarCourse 120 to 122); the twin's statement line is of 22 October by blame. Counts as MEMBER 10.
+63. Row 6. Figures **HOLD**: 3 lines, 174 against 5 and 207 (`as-built-with-member-6/compare.txt`); 174 against 170 and 80 against 79 (second look, section 4; `as-built-with-member-6/compare-after-second-look.txt`); 205 against 207 on four lines (built-proofs reader, member 6 (b), a term on paper). "No shorter" **WRONG** against the cell's own "205 against 207 on four lines against five". **R14.**
+64. Row 7. "2 lines, 94 characters against 3 and 96" **HOLDS** (`as-the-implementer-left-it/compare.txt`). "the two characters are `h` for the old proof's `gives`" **WRONG**: with `gives` the call is 102 against 96 (second look, 0.4 and section 4); the margin of two exists only through the short name. **LESS**: by tokens the call is shorter, 42 → 32 (same table). "Two readers: …" **HOLDS** (both premises returns, member 7 (b)). **R15.**
+65. Row 8. **HOLDS** (`REPORT.md`, build 6: 2 lines, 152 against 4 and 122).
+66. Row 9. **MORE**, slightly: one reader's verdict is "DETOUR" (PREMISES-opus), the other's "CASE WITH A REMAINDER, on the side of DETOUR" (PREMISES-fable). The parenthesis **HOLDS** of both. **R16.**
+67. Row 11. "not built" **HOLDS** (brief: "the second's module is left for another row"). "the row that has an owed change there": **TOLD.**
+68. "By Lean, on the last sources: all 886 declarations … no theorem outside the six … the build is clean with no axiom." Against the two files as they stand: C1 886 and 886, none only before or after; C2 "886 declarations compared; differing: []"; C3 "theorems outside the members whose head, uses, inductions or outside names differ: []"; C4 "unclean []; … with axioms {}", audited: GrammarCandidates, GrammarCourse, Likeness, Onward and the stub. Three things say more than those lines. "bodies": C2 compares `levels`, `binders` and `body` of the type, the statement's body; the values of definitions are not compared by Lean's rows (the attack: "Values of `def`s (left to C6)"). "no theorem outside the six": C3 is over the theorems of the six modules; right after "the six modules" the phrase reads as the whole package, which nothing compared. "the build": the scratch build of the changed copies and the stub (`REPORT.md`: "The package-wide build, gate and test suite were not run"). **MORE.** **R17.**
+69. "The term of member 4 that landed is a reader's, in the old proof's own names and lemma, built again after the implementer's term had taken another route (it opened `«有常»` by definition)." **HOLDS**: the landing copy is the built-proofs reader's text character for character (its return, member 4, "LAND WITH THIS CHANGE"); the implementer's term is in `REPORT.md` (216 → 180, no `«有常之逐点»` in `uses`).
+70. "member 10 is written as the package writes its seven other calls of that lemma." **WRONG** by one: six of the seven other theorems write the name in full, the seventh the dot form (facts above). The reader's "every other call" counted the lemma's own recursive call. **R18.**
+
+### What may be said of each (ll. 65 to 72)
+
+71. The heading, "(the built-proofs reader's sentences, in its return)". **WRONG** as an attribution for part of what follows: that reader read members 1 to 6 and 10 ("Members 7 and 8, which are not among the seven"); the quoted "a class the step preserves lies in every iterate" and "each iterate lies in the one before" are the law's sentences as the premises readers give them; the last bullet is the brief's and the goings-on check's. **R19.**
+72. Bullet "Members 1 and 4". **HOLDS** (both premises returns, "Across the ten"; built-proofs reader, 1 (e): "May not: "the old proof's argument is now the law's premises" (the old proof argued at the class `Alike`, through `Alike.realized`, `Alike.step` and `Alike.symm` …)").
+73. Bullet "Members 2 and 5". **HOLDS** (built-proofs reader, 5 (e)). **LESS**: member 2's "may not" is dropped: "any count of inductions saved: the call runs the law's induction and the bridge's twice" (2 (e); 1 (a): "Two of the law's inductions run … where the old proof ran one"). The note counts lines only, so nothing in it is false; the limit belongs here. **R20.**
+74. Bullet "Member 3". **HOLDS** (3 (e)).
+75. Bullet "Member 10". **HOLDS** (10 (e)).
+76. Bullet "Members 6, 7 and 8: "Lean accepts the call and it is no shorter, so the old proof stands"." The quoted sentence is **NOT FOUND** in any return. "it is no shorter" is **WRONG** of member 7 by one count in the sources (tokens 42 → 32) and of member 6 by another (205 against 207). "That is a fact for the map and is not "not a case"": the session's own; the built-proofs reader has "recorded, like 7 and 8, as a call Lean accepts". **R21.**
+77. Bullet "The landing adds no statement and no row to the atlas. None of the six is on a dynamic's list." **HOLDS** (brief, last bullet of "What would make this build gain nothing"; goings-on check 1c for members 1 to 5; my grep of `dynamics.json` for `Law.kept_along`).
+
+### A lemma the law lacks (l. 74)
+
+78. "found by a premises reader: the order-dual of `postfixed_in_iter` (the step monotone, the start within K, the step taking K into K; then every iterate within K)." **HOLDS** (PREMISES-opus, 7 (b) and "Across the ten": "a class Q with `Φ Q ⊆ Q` and V₀ ⊆ Q bounds every iterate"). The mathematics is right: at 0 the iterate is the start, within K; at n + 1 it is `Φ (iter n)`, within `Φ K` by monotonicity and the hypothesis of induction, within K by the premise. One induction.
+79. "At K the start it is `iter_within` by one induction where the present proof has two." **HOLDS**: with K the start the first premise is trivial and the second is `start`; `iter_within` as it stands (`PredicateIteration.lean` 108 to 110) recurses on n and at each step calls `iter_pred`, itself an induction (103 to 105). PREMISES-fable gives the one-induction term and proposes nothing.
+80. "and `withheld_kept` would be a plain case with its own argument." **HOLDS** of the argument (PREMISES-opus: "7 would be its plain case at Q = V₀"). **LESS**: the theorem speaks of `Law.run … .state`, the lemma of `iter`, so the call would still pass through `Tolerance.iter_eq_orbit`, which has an induction of its own (both premises returns, 7 (c)). **R22.**
+81. "Not built." **HOLDS** (no such lemma in `PredicateIteration.lean`; nothing in `REPORT.md`).
+
+### What the tests taught (ll. 77 to 80)
+
+82. "The first lister decided "has an induction" by the end of a constant's name, and on main already printed none for two theorems proved by `Nat.strongRecOn`." **HOLDS** (attack H1; both rows confirmed in the first form by script).
+83. "A test that is blind on main is found by running it on main and reading what it says of proofs one knows." A lesson, no fact to check.
+84. "It now decides by whether the type is recursive, names the toolchain's wrappers, and prints everything a proof uses from outside the package; the session that holds row DJ corrected its list the same hour." **HOLDS** (brief, "The tests"; second look H1; files of 16:18). **LESS**: the second look found a wrapper on no list (`Fin.hIterate`), which shows only among the outside names, and that a package definition carrying an induction shows in no field (H1, "Left open"). **R23.**
+85. ""Shorter" is not one number. Six of the paper calls had more text … filled to 100 columns; a character count is met by short names; tokens with names counting once moved least under both." First two clauses **HOLD** (attack H6: members 4, 6, 7, 8, 9, 11; second look section 4). "moved least under both": **NOT FOUND** as a measurement; by the count's definition (second look: "a token is a name, a number or a symbol, a name counting once") it moves under neither. **R24.**
+86. "Three of nine calls that Lean accepts are no shorter by any fair count." Nine and three **HOLD**. "by any fair count" **WRONG** of two of the three, by counts in the sources: member 7 is shorter by tokens (42 → 32), by lines (3 → 2) and by characters as built (96 → 94), and longer only with `gives` (102) or against the old proof in one-letter names (94 against 84); member 6 is shorter by lines and by characters in the old proof's names (205 against 207), longer by tokens (80 against 79) and against the old proof in one-letter names (174 against 170). Member 8 is longer by characters (152 against 122) and by tokens (65 against 52, my count; in no source). **R25.**
+87. "A test's own summary line said "all pass" over an unchanged tree." **HOLDS** (attack, section 0 and H9).
+88. "Every rule now enters a check, and the unchanged case is said as such." **MORE**: the second look has H9 closed for changed members and, with its C11, for unchanged ones; H10 stays open by the brief's own rule 3 (where a block may move to is not checked); rule 6 has no check. The summary does count the unchanged ("3 unchanged"). **R26.**
+89. "The second form of the tests was read again while the build ran; it reproduced the real output byte for byte on a copy and found two more ways through that the real build did not take." **HOLDS** (second look 0.1, 0.2; it also found one crash and one false FAIL, neither met by the real build).
+
+### The list was corrected afterwards (ll. 84 to 91)
+
+90. "A reader attacking the test kit … found that the list took a recursor by the end of its name, so an induction made through a wrapper (`Nat.strongRecOn`, `Nat.recAux`) did not show, and that it left out every theorem whose last name begins `eq_`." First half **HOLDS** (attack H1). Second half **LESS**: the attack's C1 row names `eq_`, `match_`, `proof_` and `_`, and three of the 48 the first form left out begin `match_` (script). Row DJ's README has the same slip ("48 of the package's own" under `eq_`). **R27a.**
+91. "The session that holds row DJ printed it again the same afternoon: 20,567 theorems, 2,709 …; 68 …, 3 no longer, 48 newly listed." **HOLDS** (script; README). The four figures do not add up without one more: 6 of the 48 carry an induction. **R27b.**
+92. "Both counts are floors." **HOLDS** (README: "The count of inductions is still a floor"; second look H3: `skipLast` still drops a user's `h.eq_1`).
+93. "One pass of this note and the returns against the corrected list, by script (…)". Repeated by my own script, with the results in 94 to 97.
+94. "Of the 68, two are named in the returns: … each now shown with `Nat.recAux`." **HOLDS.**
+95. "So the figure "41 of the 189 call rows have no induction of their own" was read from the first form and may be 39; it was not recounted." **HOLDS** (both rows are table rows with a printed call, ll. 546, 547, dated 1 and 2 November).
+96. "Of the 48 newly listed, five are named in the Astra report (…); none has an induction." **WRONG** by one: six (the sixth `GrammarLaws.eq_true_of_not_false`, l. 2434). None of the six has an induction: **HOLDS.**
+97. "How the checker's join counted rows missing from the list was not looked into." It can be said: all six stand in the register after l. 1009, and the checker has "All 296 are theorems (each is in the Lean list)" (section 3), so no table row was missing from the first form. **R28.**
+98. "`Lasting.orbit_mono` is unchanged: head `Eq.subst`, no induction." **HOLDS** (script).
+99. "The nine theorems of item 1 each had an induction in the first form already; the first form could only miss inductions." First half **HOLDS** (each `Nat.brecOn` in both forms). Second half **WRONG** against the note's own "3 no longer": the first form showed three inductions that are none. **R29.**
+
+### What it taught (ll. 95 to 97)
+
+100. "The find of the sweep came from the checking stage and from the other end: …" **HOLDS** (goings-on check, 1b and headline 1).
+101. "The Lean-printed list made that a join of two tables." **MORE**: the check joined, then read: "143 own-induction theorems name a bridged notion … I read all 143 statements and opened in full the ones below" (1b), and its section 5 says "about 60 opened in full". **R30.**
+102. "A cost side changes the rank. By lines the search families lead; by what a landing compiles again and re-binds they are last." **HOLDS** (Astra's closing output, Q5; search check verdict; addendum of 15:16, point 1).
+103. "The Lean list does not show an induction carried by a helper, and a reader that opens every module still misses a family: neither replaces the other." **HOLDS** (goings-on check section 5; lean-list check 2.4).
+
+### What it cost (ll. 101 to 103)
+
+104. "Astra 6.2, by its own footer: 18.8 million tokens against a stated cap of 15 million." **HOLDS** (`astra/cx-output.txt`: 18791.9k; QUESTIONS, "How").
+105. "Claude side: 2.58 million tokens (three readers 0.92, four checkers 1.66) against a stated cap of 2 million." Cap **HOLDS**; figures **TOLD** (0.92 + 1.66 = 2.58).
+106. "Both caps were overrun; the Claude overrun was first told to the coordinating session as "about 2.1" before the checkers had finished." **HOLDS** (addendum of 15:16:27, point 4; the search check ran 15:30 to 15:50).
+107. "The Lean list: one run of 23 seconds by the session that holds row DJ, and one more for its correction." **HOLDS** (README) and **TOLD** (the second run).
+108. "Astra 6.2: 3.7 million tokens." **HOLDS** by a file that is not filed (facts above). **R31.**
+109. "Claude side: 1.66 million in seven readers (the two attacks 0.49, the two on premises 0.31, the second look 0.35, the two on the result 0.52)." **TOLD.** The four parts add to 1.67, not 1.66: one of the five figures is off by 0.01 or rounded; only the session's records can say which. No replacement given.
+110. "Lean: scratch builds of single modules, one core run for the landing (100 of 409 …, 5.4 minutes of step time), one gate for the claim and one for the landing." Scratch builds **HOLD** (`REPORT.md`, builds 1 to 6 and the stub runs). The rest **TOLD**, and of things not finished at this check.
+
+### Where it is (ll. 107 to 111)
+
+111. First bullet. **HOLDS** (three files).
+112. "`returns/`: the three readers' returns and the four checks of the sweep." **HOLDS.**
+113. "`astra/`: the sweep's prompt and report (11,343 lines)." **HOLDS** (`wc -l`). **LESS**: the folder also holds `cx-output.txt`, the only source of the footer the cost paragraph cites. **R32.**
+114. "`lean-list/`: … as the readers had them." **MORE**, as entry 16. "4.7 MB", "23 seconds": **HOLD** (4,679,931 bytes; README). **R33.**
+115. "`build/`: … the members' rows before and after." **HOLDS** (every folder and file named is there; `kit/compare-after-second-look.py` is the second look's mended copy, sha256 `eec4a246…` as its return says). **LESS**: `PROMPT-astra.txt` is there and not named; the implementer's closing output is not there. **R34.**
+116. "The whole rows (886 a side) are printed again by `kit/Rows.lean` in seconds and are not filed." 886 **HOLDS**; "in seconds" **TOLD**. **LESS**: with the rows unfiled, the frozen hash of `before/rows.txt` in `FROZEN-BRIEF.sha256.txt` has nothing here to be checked against. **R34.**
+
+### Links
+
+All 34 links resolve: the four that climb out of the folder from a folder under `…/root-foundation/development/`; the 30 inside it at the path given, or at that path without its last `.txt` (the five that already end in `.txt` here: the two hash files and the two comparison files, twice for the questions' hash).
+
+## What the note should say and does not
+
+- **What the third reader of the result found.** The note links `BUILT-what-tells-of-them-opus.md` and reports nothing from it. That reader read the build with member 6 still in it. Sentence offered, from its sections A, B, D and E2: "The third reader, reading the build while member 6 was still in it, found no docstring, record, chapter or atlas entry that says how any of the members is proved, so none becomes false; two records reference the changed files without being bound to them and are re-pointed with the rest; `shared-laws.json` follows proof dependencies and the gate does not rerun it." (Place: after the paragraph "By Lean, on the last sources".) Its section C3, on dated files that say `kernel_iff_lasts` makes no call of the law, no longer applies: member 6 was left.
+- **No reader read the last sources before this check.** The second look and the two readers of the result read the tree with the implementer's member 4 and with member 6; the last sources (member 6 put back, member 4 and member 10 rewritten) were seen by Lean and the comparison. I have now read the three landing copies at the members and found them as the note tells.
+- **The limits in R20, R22, R23 and R27b** (inductions run underneath; the bridge the dual lemma would still need; what the lister still cannot see; six newly listed theorems that carry an induction).
+- **The 74 inductions the first form missed were outside the population the goings-on checker read** (said in R29). By my script none of them is in one of the fourteen modules that hold a bridge or a call of the law; whether one is about a bridged notion from another module was not looked into, by me or by anyone.
+
+## Count
+
+Entries checked: 116 (a sentence, a table row or a list item each).
+
+- Replaced: 37 entries, through 34 numbered replacements (R27 has two parts for entries 90 and 91; R28 covers entries 96 and 97; R34 covers entries 115 and 116). The entries: 14, 16, 25, 28, 31, 34, 38, 41, 43, 47, 48, 50, 60, 63, 64, 66, 68, 70, 71, 73, 76, 80, 84, 85, 86, 88, 90, 91, 96, 97, 99, 101, 108, 113, 114, 115, 116.
+- TOLD and left as they are: 5 (entries 2, 5, 105, 109, 110). One clause of entry 67 is TOLD too; its row is counted among the HOLDS.
+- No fact to check: 2 (entry 83, a lesson; entry 93, which describes the pass that entries 94 to 97 repeat).
+- HOLDS as they stand: 116 − 37 − 5 − 2 = 72.
+
+## The replacements
+
+**R1** (l. 14).
+Old: `- One pass by an implementer of another kind of model (Astra 6.2) over all 409 modules ([its report](astra/REPORT.md.txt): 296 rows in 39 families).`
+New: `- One read-only pass by a reader of another kind of model (Astra 6.2) over all 409 modules ([its report](astra/REPORT.md.txt): 296 rows in 39 families).`
+
+**R2** (l. 15).
+Old: `The readers and checkers had its first form: 20,519 theorems, 2,638 with an induction of their own.`
+New: `The four checkers, and later the readers of the build, had its first form: 20,519 theorems, 2,638 with an induction of their own; the three readers' returns and the Astra report do not use it.`
+
+**R3** (l. 23).
+Old: `No new statement, bridge or import; three reorders inside a module; 45 proof lines against 24.`
+New: `No new statement, bridge or import; three reorders, each inside its own module (Likeness, Lasting, GrammarCandidates); 45 proof lines against 24.`
+
+**R4** (l. 24).
+Old: `2. **Four more class (i) items, as cases of an older general member**: `Law.kept_along` is `Law.KeepsRelation.run` (2 lines against 1, no move); `run_within` is `Lasting.closed_orbit` (2 against 1, only plausible until built); the cascade pair of 29 October are cases of the law of 4 November at the histories reached (12 against 3, with a definition and two theorems moved down a module); the web's widening pair are calls of the chain's law (13 lines, with the chain's law moved down a module; the link between the two has been a theorem since 27 October).`
+New: `2. **Four more class (i) items, as cases of a general member already in the package**: `Law.kept_along` is `Law.KeepsRelation.run` (2 lines against 1, no move); `run_within` is `Lasting.closed_orbit` (2 against 1, only plausible until built); the cascade pair of 29 October are cases of the later law of 4 November at the histories reached (12 against 3, with a definition and two theorems moved down a module); the web's widening pair are calls of the chain's law (13 lines fewer, with the chain's definition, its two theorems and the bridge moved down a module; the link between the two has been a theorem since 27 October).`
+
+**R5** (l. 27).
+Old: `5. **The two search families** (a decided property on a stretch of steps, 21 to 23 members; the same over a list, 16) each have one statement with every member as a named substitution, statements unchanged.`
+New: `5. **The two search families** (a decided property on a stretch of steps, 21 members by their checker's count and 23 by the checker against the Lean list; the same over a list, 16) each have one statement, for the first a new one on paper and for the second `gather_listed` as it stands; their checker wrote each of the 21 as a named substitution and each of the 16 as a call, statements unchanged.`
+
+**R6** (l. 27).
+Old: `Eight of the members become calls with no new statement, move or import (7 sources, 90 modules, 15 records, 85 lines against 19): tidying, to be taken when those modules are next changed.`
+New: `Eight of the members become calls with no new statement, move or import (7 sources, 90 modules, 15 records, 85 lines against 19): tidying, as one small landing or taken when those modules are next changed.`
+
+**R7** (l. 33).
+Old: `In the words of the checker against the Lean list, which gives the grounds for each:`
+New: `After the checker against the Lean list, shortened here; its return gives the grounds for each:`
+
+**R8** (l. 36).
+Old: `Astra's "761 lines" is a count of calls printed by one writer; in the two families re-measured the calls took 106 lines and not 91; about four fifths of its savings, and about nine tenths of the three Claude returns', rest on calls tried by nobody but their writer.`
+New: `Astra's "761 lines" is a count of calls printed by one writer; in the two families re-measured the calls took 106 lines and not 91; about four fifths of its savings, and about nine tenths of the three Claude returns', rest on calls that this checker did not try, and what the other three checkers tried was not before it.`
+
+**R9** (l. 38).
+Old: `- "The sweep found the families", or "nothing else was found": the reader that opened all 409 modules does not have the list-pigeonhole family another reader ranks first; one check, in four families only, found a further search member, a third sequence pigeonhole, five more list-pigeonhole candidates and about 40 horizon lemmas nobody named; three seeded families were not checked against the Lean list.`
+New: `- "The sweep found the families", or "nothing else was found": the reader that opened all 409 modules does not have the list-pigeonhole family another reader ranks first; one check, in four families only, found a further search member, a third sequence pigeonhole, a gathering family of three whose statement is already in place, five more list-pigeonhole candidates and 40 horizon lemmas nobody named; seeds (d), (f) and (g) were not checked against the Lean list.`
+
+**R10** (l. 43).
+Old: `What landed is small: six theorems in three modules (`Likeness`, `GrammarCandidates`, `GrammarCourse`), 31 proof lines for 13, no statement, declaration or import changed.`
+New: `What landed is small: six theorems in three modules (`Likeness`, `GrammarCandidates`, `GrammarCourse`), 31 proof lines for 13, no statement, declaration or import changed; five theorem blocks moved inside their modules to stand under their bridges (three in `Likeness`, two in `GrammarCandidates`).`
+
+**R11** (l. 45).
+Old: `A brief was written with its tests first: a Lean file that prints every declaration of the touched modules (its statement binder by binder as Lean holds it, the head of its proof, the package theorems it uses, the constants that carry an induction, what it uses from outside the package), run on main before and on the scratch tree after, and a script that compares the two and the sources.`
+New: `A brief was written with its tests first: a Lean file that prints every declaration of the touched modules (its statement binder by binder as Lean holds it, the head of its proof, the package theorems it uses and its recursors; after the attack, the constants that carry an induction and what it uses from outside the package), run on main before and on the scratch tree after, and a script that compares the two and the sources.`
+
+**R12** (l. 45).
+Old: `Two readers attacked the brief and the tests before any build ([the cheapest pass that gains nothing](build/readers/ATTACK-cheapest-pass-fable.md.txt), [possible as worded](build/readers/ATTACK-possible-as-worded-opus.md.txt)); two more, at the caution of the session that holds row DJ, said of each theorem which premise of the law its old proof had argued ([one](build/readers/PREMISES-fable.md.txt), [the other](build/readers/PREMISES-opus.md.txt)).`
+New: `Two readers attacked the brief and the tests before any build ([the cheapest pass that gains nothing](build/readers/ATTACK-cheapest-pass-fable.md.txt), [possible as worded](build/readers/ATTACK-possible-as-worded-opus.md.txt)); two more, at the caution of the session that holds row DJ (this session's record; no source of it is filed here), said of each of ten of the eleven theorems which premise of the law its old proof had argued, `run_within` not being given them ([one](build/readers/PREMISES-fable.md.txt), [the other](build/readers/PREMISES-opus.md.txt)).`
+
+**R13** (l. 54, the table's row 4).
+Old: `| 4 | `«对称有常则不可诘»` (23 Oct) | a call of `Iteration.postfixed_in_iter`, through `iter_iff_inquiry`, its premises from `«有常之逐点»` as the old proof had them | 7 → 4, 216 → 200, 126 → 104 |`
+New: `| 4 | `«对称有常则不可诘»` (23 Oct) | a call of `Iteration.postfixed_in_iter` at S, through `iter_iff_inquiry`; constancy is taken through `«有常之逐点»` and symmetry through `hs`, each where the old proof took it | 7 → 4, 216 → 200, 126 → 104 |`
+
+**R14** (l. 57, row 6).
+Old: `| 6 | `Lasting.lasts_of_kernel` (14 Oct) | **left.** Lean accepts the call (3 lines, 174 characters against 5 and 207); with the old proof's local names shortened to one letter as the call's are it is 174 against 170, with the call written in the old proof's names 205 against 207 on four lines against five, and 80 tokens against 79. No shorter; the old proof stands. | |`
+New: `| 6 | `Lasting.lasts_of_kernel` (14 Oct) | **left.** Lean accepts the call (3 lines, 174 characters against 5 and 207); with the old proof's local names shortened to one letter as the call's are it is 174 against 170, with the call written on paper in the old proof's names 205 against 207 on four lines against five, and 80 tokens against 79. Longer by tokens and with names shortened alike, two characters shorter in the old names; the old proof stands. | |`
+
+**R15** (l. 58, row 7).
+Old: `| 7 | `Tolerance.withheld_kept` (19 Oct) | **left.** Lean accepts the call (2 lines, 94 characters against 3 and 96); the two characters are `h` for the old proof's `gives`. Two readers: the law's statement hypothesis for hypothesis, but the old proof is one direct induction and the law's is two. | |`
+New: `| 7 | `Tolerance.withheld_kept` (19 Oct) | **left.** Lean accepts the call (2 lines, 94 characters against 3 and 96, 32 tokens against 42); the margin of two characters comes from `h` where the old proof says `gives`, and with `gives` the call is 102 against 96. Two readers: the law's statement hypothesis for hypothesis, but the old proof is one direct induction and the law's is two. | |`
+
+**R16** (l. 60, row 9).
+Old: `| 9 | `Branching.fed_keeps` (13 Oct) | **not built.** Two readers, each alone: a detour (the old proof extends a trace at its start, the law at its end; the bridge does the reversal). | |`
+New: `| 9 | `Branching.fed_keeps` (13 Oct) | **not built.** Two readers, each alone: for one a detour, for the other a case with a remainder on the side of a detour (the old proof extends a trace at its start, the law at its end; the bridge does the reversal). | |`
+
+**R17** (l. 63).
+Old: `By Lean, on the last sources: all 886 declarations of the six modules first in the build have the same universe names, binders and bodies before and after; none is added or removed; no theorem outside the six has a different proof head, uses or inductions; the build is clean with no axiom ([the comparison](build/report/compare.txt), [the same with two more checks and the token count](build/report/compare-after-second-look.txt), [the members' rows before and after](build/rows-of-the-members.before.jsonl.txt), [after](build/rows-of-the-members.after.jsonl.txt)).`
+New: `By Lean, on the last sources: all 886 declarations of the six modules first in the build have the same universe names, binders and statement bodies before and after; none is added or removed; among the theorems of those six modules, none but the six made calls has a different proof head, uses, inductions or names from outside the package; the scratch build of the changed modules and the stub is clean with no axiom ([the comparison](build/report/compare.txt), [the same with two more checks and the token count](build/report/compare-after-second-look.txt), [the members' rows before and after](build/rows-of-the-members.before.jsonl.txt), [after](build/rows-of-the-members.after.jsonl.txt)).`
+
+**R18** (l. 63).
+Old: `The term of member 4 that landed is a reader's, in the old proof's own names and lemma, built again after the implementer's term had taken another route (it opened `«有常»` by definition); member 10 is written as the package writes its seven other calls of that lemma.`
+New: `The term of member 4 that landed is a reader's, in the old proof's own names and lemma, built again after the implementer's term had taken another route (it opened `«有常»` by definition); member 10 is written `KeepsRelation.run keeps h`, the name in full, as six of the seven other theorems that call that lemma write it (the seventh, `SharedCodes` l. 936, uses the dot form).`
+
+**R19** (l. 65).
+Old: `**What may be said of each, and what may not** (the built-proofs reader's sentences, in its return):`
+New: `**What may be said of each, and what may not** (after the built-proofs reader's sentences in its return for members 1 to 5 and 10; the rest after the two premises readers, the brief and the goings-on check):`
+
+**R20** (l. 68).
+Old: `- Members 2 and 5: each is "each iterate lies in the one before" at its step. Not "one theorem now": two calls of one lemma at two steps, and nothing here relates the steps.`
+New: `- Members 2 and 5: each is "each iterate lies in the one before" at its step. Not "one theorem now": two calls of one lemma at two steps, and nothing here relates the steps. Nor any count of inductions saved: each call runs the law's induction and the bridge's twice where the old proof ran one.`
+
+**R21** (l. 71).
+Old: `- Members 6, 7 and 8: "Lean accepts the call and it is no shorter, so the old proof stands". That is a fact for the map and is not "not a case".`
+New: `- Members 6, 7 and 8: Lean accepts each call and the old proof stands, on the counts and grounds in the table. That is a fact for the map and is not "not a case".`
+
+**R22** (l. 74).
+Old: `At K the start it is `iter_within` by one induction where the present proof has two, and `withheld_kept` would be a plain case with its own argument.`
+New: `At K the start it is `iter_within` by one induction where the present proof has two, and `withheld_kept` would be a plain case with its own argument, still read through `iter_eq_orbit`, which has an induction of its own.`
+
+**R23** (l. 77).
+Old: `It now decides by whether the type is recursive, names the toolchain's wrappers, and prints everything a proof uses from outside the package; the session that holds row DJ corrected its list the same hour.`
+New: `It now decides by whether the type is recursive, names nine of the toolchain's wrappers, and prints everything a proof uses from outside the package; a wrapper on no list (`Fin.hIterate` is one) shows only among those outside names, and an induction inside a package definition shows in no field; the session that holds row DJ corrected its list the same hour.`
+
+**R24** (l. 78).
+Old: `Six of the paper calls had more text than the inductions they replaced and fewer lines only by being filled to 100 columns; a character count is met by short names; tokens with names counting once moved least under both.`
+New: `Six of the paper calls had more text than the inductions they replaced and fewer lines only by being filled to 100 columns; a character count is met by short names; a count of tokens, a name counting once, changes under neither.`
+
+**R25** (l. 78).
+Old: `Three of nine calls that Lean accepts are no shorter by any fair count.`
+New: `Of the nine calls that Lean accepts, three were left: member 8 is longer by characters (152 against 122); member 6 is longer by tokens (80 against 79) and by characters once the old proof's names are shortened as the call's are (174 against 170); member 7 is shorter by tokens (32 against 42) and longer by characters once its `h` is written `gives` as the old proof has it (102 against 96).`
+
+**R26** (l. 79).
+Old: `Every rule now enters a check, and the unchanged case is said as such.`
+New: `Rule 4 now enters a check for each changed member, a member left unchanged must stand byte for byte as on main, and the summary line counts kept, failing and unchanged.`
+
+**R27** (l. 84, two sentences).
+Old (a): `A reader attacking the test kit of the build that followed found that the list took a recursor by the end of its name, so an induction made through a wrapper (`Nat.strongRecOn`, `Nat.recAux`) did not show, and that it left out every theorem whose last name begins `eq_`.`
+New (a): `A reader attacking the test kit of the build that followed found that the list took a recursor by the end of its name, so an induction made through a wrapper (`Nat.strongRecOn`, `Nat.recAux`) did not show, and that it left out every theorem whose last name begins `eq_` or `match_`.`
+Old (b): `The session that holds row DJ printed it again the same afternoon: 20,567 theorems, 2,709 with an induction of their own; 68 theorems newly seen as carrying one, 3 no longer, 48 newly listed.`
+New (b): `The session that holds row DJ printed it again the same afternoon: 20,567 theorems, 2,709 with an induction of their own; 68 theorems newly seen as carrying one, 3 no longer, 48 newly listed (45 whose last name begins `eq_`, 3 `match_`), 6 of them carrying one.`
+
+**R28** (l. 89).
+Old: `- Of the 48 newly listed, five are named in the Astra report (`Gluing.Cycle.eq_of_even`, `Interacting.eq_true_of_not_false`, `Joining.Once.eq_of_mem_single`, `RevisionPlans.eq_zero_of_add_eq_zero_left` and `_right`); none has an induction. How the checker's join counted rows missing from the list was not looked into.`
+New: `- Of the 48 newly listed, six are named in the Astra report (`Gluing.Cycle.eq_of_even`, `GrammarLaws.eq_true_of_not_false`, `Interacting.eq_true_of_not_false`, `Joining.Once.eq_of_mem_single`, `RevisionPlans.eq_zero_of_add_eq_zero_left` and `_right`); none has an induction. All six stand in its register of proof text (after l. 1009), not in its 296 table rows, each of which the checker found in the first form of the list.`
+
+**R29** (l. 91).
+Old: `- The nine theorems of item 1 each had an induction in the first form already; the first form could only miss inductions.`
+New: `- The nine theorems of item 1 each show an induction (`Nat.brecOn`) in both forms. The first form missed 68 inductions and showed 3 that are none (through `Bool.rec` and `Decidable.rec`, recursors of types that are not recursive); the 68, and the 6 newly listed that carry one, were not in the population the goings-on checker read.`
+
+**R30** (l. 95).
+Old: `The Lean-printed list made that a join of two tables.`
+New: `The Lean-printed list made that a join of two tables and a read of 143 statements.`
+
+**R31** (l. 103).
+Old: `The build. Astra 6.2: 3.7 million tokens.`
+New: `The build. Astra 6.2, by its own footer: 3.7 million tokens in 524 seconds.`
+(With `/Users/ren/theories/tmp/fm/cases22/astra/cx-output.txt` filed as `build/astra-cx-output.txt`; see R34.)
+
+**R32** (l. 109).
+Old: `- `astra/`: the sweep's prompt and report (11,343 lines).`
+New: `- `astra/`: the sweep's prompt, its report (11,343 lines) and its closing output with the footer.`
+
+**R33** (l. 110).
+Old: `- `lean-list/`: the Lean file that printed the first form of the list and its readme, as the readers had them.`
+New: `- `lean-list/`: the Lean file that printed the first form of the list and its readme, as the checkers had them.`
+
+**R34** (l. 111).
+Old: `- `build/`: the brief in both forms with its hashes; `kit/` (the lister, the comparison as frozen and as mended after the second look, the member list, the two run scripts); `readers/` (seven returns); `report/` (the implementer's report, the comparisons of the last sources, and the two earlier states: as the implementer left it with member 7, and as built with member 6); the members' rows before and after. The whole rows (886 a side) are printed again by `kit/Rows.lean` in seconds and are not filed.`
+New: `- `build/`: the brief in both forms with its hashes; the implementer's prompt and its closing output with the footer; `kit/` (the lister, the comparison as frozen and as mended after the second look, the member list, the two run scripts); `readers/` (seven returns); `report/` (the implementer's report, the comparisons of the last sources, and the two earlier states: as the implementer left it with member 7, and as built with member 6); the members' rows before and after. The whole rows (886 a side) are printed again by `kit/Rows.lean` in seconds and are not filed, so the frozen hash of `before/rows.txt` has no file here to be checked against.`
+(The second clause of the first sentence is true once the closing output is filed; without it, leave "the implementer's prompt" only and keep R31's old sentence.)

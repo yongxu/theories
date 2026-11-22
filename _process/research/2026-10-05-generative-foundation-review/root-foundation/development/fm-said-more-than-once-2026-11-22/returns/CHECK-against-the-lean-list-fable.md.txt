@@ -1,0 +1,293 @@
+# CHECK: against the list printed by Lean (families a, b, c, e; the disagreements; the Astra report's numbers)
+
+*AI-written (Claude Fable, a checker who took no part in what is checked, board row FM), 22 November 2026. Read only: nothing in the repository edited but this file; no Lean written or run, no lake, no build, no gate, no test. Scripts (an index from the Lean list's names to source lines, statement and proof extents, import closures, a parser of the Astra report's tables, `git blame` of statement lines) are in the session scratchpad `/private/tmp/claude-501/-Users-ren-theories/21947b1b-65d1-45e4-bdb9-d3582a76bb12/scratchpad/chk/`. Every call below is a term on paper, unbuilt. Module names are files under `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`.*
+
+**Each answer is led by OPENED (statement and proof opened by me at the line given) or TOLD (from a listing, a script over statement text, or a return).**
+
+## In short
+
+- **OPENED.** Family (a) has one more member nobody named (`Closing.split`, `Closing` l. 280), and one the two Claude readers set aside wrongly (`Change.Clear.or_first`: the converse lemma they did not find is `LimitVerification.clear_of_below` l. 160). As PROOFS, 18 of the search reader's 21 are one induction; 3 state the same and are proved otherwise (`Presence.weakly_exists_below`, `Reproduction.search`, `Likeness.FirstAt.of_holds`, which already calls `Decided.exists_below` inside its own recursion).
+- **OPENED.** Family (e) has members nobody named: `Diagonal.stock_unheld` (l. 188, 27 lines) is a 3-line case of `Description.shared_below`; `Decidedness.Recurs.steps_found` (l. 702) and `Locality.ceasing_steps_found` (l. 651) are 3-line cases of the existing `GrammarLaws.found` (l. 2210) with no move and no new statement; `Weightings.total_le_at_on` (l. 3960) is a 4-line case of `Dissipation.total_le_of_support`.
+- **TOLD (by script) and OPENED (four of them).** "From one step to every later step" has at least 40 inductions that neither the horizons reader (17) nor the Astra report (8 more) named.
+- **OPENED/TOLD.** The Astra report's arithmetic holds: 296 rows, 39 families, 1,784 → 1,023, 189 call rows of which 177 shorter as printed. Every row names a theorem that is at that line with that statement and that proof length by the report's own convention; 288 rows are before 22 November by blame. Of 27 sampled calls 26 typecheck on paper; 1 does not as printed. But 41 of the 189 call rows are on proofs with no induction of their own, the list-pigeonhole family the pigeonholes reader ranks first is nowhere in the report, and about four fifths of its line savings rest on calls tried by nobody but their writer.
+
+---
+
+## 1. Completeness against the list printed by Lean
+
+**How (TOLD, by script).** `lean-list/all-proof-heads.jsonl`: 20,519 rows, 2,638 with an induction of their own (`Nat.brecOn` 1,470, `List.brecOn` 765, `Nat.rec` 22, `Nat.le.rec` 22, `Nat.le.brecOn` 12, the rest on other types). 20,332 rows were tied to a source line by name; 187 were not (auxiliary names; 44 of these carry a recursor, 4 on `Nat` and 2 on `List`, all `where`-helpers). For each family the statement of every candidate was extracted from the source and filtered on its text, the filtered statements were all read by me, and the candidates were then opened. A filter on text does not see a disjunction or a bound hidden wholly behind a definition: such a member is "not found in what was read".
+
+### (a) Bounded search on a stretch of steps
+
+**Coverage.** 1,492 theorems with `Nat.brecOn` or `Nat.rec` (1,539 declaration sites). 138 statements passed the filter (a disjunction, a `Decided`/`WeaklyDecided`/`Decidable`, or "not all … so some") and were read; 27 proofs opened.
+
+**Named by the readers, with an induction of their own (TOLD from the returns, each confirmed in the Lean list):** the search reader's 21 (a1 to a21); the Astra report's family A adds `Change.Clear.or_first` (l. 392), `Likeness.drops_somewhere` (l. 498) and `Optimum.last_before` (l. 2586). 24 in all.
+
+**Found by me and not named: one.**
+
+**OPENED.** `Closing` l. 280 (blame 436f1226d, 2026-10-16), proof 19 lines (l. 284 to 302):
+
+```lean
+theorem Closing.split {T : Nat} {v : Nat → C} :
+    ∀ {m : Nat}, Coupled cs part (strengthsBefore (T + 1) k) present v m →
+      Coupled cs part (strengthsBefore T k) present v m ∨
+        ∃ i s, i < m ∧ CouplesAt cs part k present T s (v i) (v (i + 1))
+```
+
+with `Coupled … v j := ∀ i, i < j → Couples … (v i) (v (i + 1))` (`Loops` l. 346). Its proof is the family's induction: the recursive call on `m`, then the last link decided by `couples_before_iff` (`Closing` l. 118) and `Nat.lt_or_ge u T`, then the bound extended by `Nat.lt_or_ge i m`. The decision exists only for `i < m` (it comes from `chain i lt`). As a call of the search reader's `first_below` (on paper, 9 lines against 19):
+
+```lean
+  fun {m} chain => (first_below
+      (P := fun i => Couples cs part (strengthsBefore T k) present (v i) (v (i + 1)))
+      (Q := fun i => ∃ s, CouplesAt cs part k present T s (v i) (v (i + 1))) m fun i lt =>
+        match couples_before_iff.mp (chain i lt) with
+        | ⟨u, s, below, at_⟩ => match Nat.lt_or_ge u T with
+          | .inl early => .inl (couples_before_iff.mpr ⟨u, s, early, at_⟩)
+          | .inr late => .inr ⟨s, Nat.le_antisymm (Nat.le_of_lt_succ below) late ▸ at_⟩).imp id
+    fun ⟨i, lt, ⟨s, at_⟩, _⟩ => ⟨i, s, lt, at_⟩
+```
+
+Statement unchanged: yes (binders kept; `id` crosses the definition `Coupled`, the same risk the search reader names for `Unread` and `Keeps`). It is a third member that needs the hypothesis only below the bound (with `Decided.exists_below` and `weakly_exists_below`): over the Astra report's `B`, whose hypothesis is at every step, it needs a guard `i < m →` in `P` and two or three more lines. Callers (Lean list): 2, one in `Observation`.
+
+**Opened and set aside (each OPENED):**
+- `Lasting.reaches_of_not_lasts` l. 844: "not lasting outside the target, so reaching it", for a determined law. The recursion is the notion's own (the state moves with `n`); 3 lines. M2.
+- `LastChange.settles_or_changes` l. 138: an iterated search that returns a function of `m` changes. M1.
+- `Presence.table_of` l. 591: a table chosen from decisions (a finite choice). M1.
+- `Diagonal.stock_unheld` l. 188: a pigeonhole; see (e).
+- `Retrodiction.fits_or_separated` l. 92 (a list): see (b).
+
+**Read as statements only (TOLD by my listing):** a search along a relation's course, not a stretch of steps: `GrammarLaws.trace` l. 2242, `trace_on` l. 2419, `MapInstances.ends_or_reaches` l. 157. And the kind the search reader met in passing ("within n steps it has rested, or it has moved by n"), to whose five I add `Refinement.Refining.steady_or_grown` l. 126, `Reserve.decays_by_on` l. 226, `WayOfUnits.carrier_falls` l. 640, `RenewalBound.renewal_within_rank_bound` l. 101: ten theorems, worked by nobody, untried.
+
+### (b) The same over a list
+
+**Coverage.** 774 theorems with `List.brecOn` or `List.rec`. 90 statements passed the filter (a disjunction, a decision, or a double negation) and were read; 5 proofs opened.
+
+**Named, with an induction of their own:** the search reader's 14 (b1 to b14) and `gather_listed`; the Astra report's family B adds `Weightings.exceeds_or_includes` (l. 1084, OPENED: a member, 12 lines).
+
+**Found by me and not named: none that is a member.** Opened and set aside:
+- **OPENED.** `Retrodiction.fits_or_separated` l. 92 (6 lines): all-or-first-failure over a list, but both sides are recursive definitions (`Fits`, `Separated`). M2.
+- **OPENED.** `Lasting.list_throughout_not_not` l. 989 (12 lines, 2026-10-16) and `Likeness.EitherThroughout.list` l. 1813 (13 lines, 2026-10-14): "one member of a list holds a decreasing family throughout, where at each step some member holds it"; the first concludes under a double negation, the second under the premise `EitherThroughout`. A pair nobody named. Not family (b), and not one statement with the other as its case in a line: M1 as they stand; untried further.
+
+### (e) The list pigeonhole, and "one more distinct member than fits"
+
+**Coverage.** All 2,638 theorems with an induction (2,666 sites). 31 statements passed the filter (`Distinct` or `Pairwise` with a length, total or count; or the names gathers, not_listed, unheld, revisit) and were read; 11 proofs opened.
+
+**Named by the pigeonholes reader, with an induction of their own:** E1 four, E2 fifteen (its a, b and d to n; m and n are two theorems each; its c is a call), E3 two (the two `gathers`; the two `not_listed` have no induction).
+
+**Found by me and not named:**
+
+1. **OPENED. A third proof of the sequence pigeonhole.** `Diagonal` l. 188 (blame 6ef63a95e, 2026-10-13, the same commit as `shared_below`), proof 27 lines:
+
+   ```lean
+   theorem stock_unheld {same : B → B → Prop} (symm : ∀ b b', same b b' → same b' b)
+       (trans : ∀ b b' b'', same b b' → same b' b'' → same b b'') :
+       ∀ (L : Nat) (r : Nat → A → B) (d : Nat → A → B),
+         (∀ m n, m < n → ¬ ∀ x, same (d m x) (d n x)) → ¬ ∀ n, ∃ i, i < L ∧ ∀ x, same (r i x) (d n x)
+   ```
+
+   It is proved by its own induction on `L`, "by halving the sequence into its even and odd places". On paper it is a case of `Description.shared_below` (l. 419), which also uses no decision:
+
+   ```lean
+     fun L r d differ H =>
+       match shared_below L (fun n i => ∀ x, same (r i x) (d n x)) (fun n _ => H n) with
+       | ⟨t, t', _, lt, _, h, h'⟩ => differ t t' lt fun x => trans _ _ _ (symm _ _ (h x)) (h' x)
+   ```
+
+   Statement unchanged: yes. 27 lines become 3. By script `Description` has `Diagonal` in its closure, so the call needs `shared_below` below `Diagonal`: the move to `Prelude` that the pigeonholes reader (E1) and the Astra report (J) both propose serves it. Where it stands: M3 (a cycle).
+
+2. **OPENED. A gathering family of three, with its statement already in the members' closure.**
+   - `GrammarLaws` l. 2210 (2026-11-01), proof 5 lines over the helper `found_cons` (l. 2196): `theorem GrammarLaws.found {marks : α → Prop} (each : ∀ M, ∃ x, M ≤ τ x ∧ marks x) : ∀ n M, ∃ D : List α, ∃ U, Distinct D ∧ D.length = n ∧ M ≤ U ∧ ∀ x, x ∈ D → M ≤ τ x ∧ τ x < U ∧ marks x` (`τ : α → Nat` implicit, l. 2173).
+   - `Decidedness` l. 702 (2026-10-12), proof 14 lines: `theorem Recurs.steps_found {e : α → Nat → Prop} (recurs : Recurs as e) (M : Nat) : ∀ k, ∃ E U, Distinct E ∧ E.length = k ∧ M ≤ U ∧ ∀ t, t ∈ E → M ≤ t ∧ t < U ∧ ∃ a, a ∈ as ∧ e a t` (`Recurs as e := ∀ N, ∃ t a, N ≤ t ∧ a ∈ as ∧ e a t`, `Change` l. 236).
+   - `Locality` l. 651 (2026-10-11), proof 15 lines: `theorem ceasing_steps_found (ceasing : ∀ M, ∃ t a, M ≤ t ∧ CeasesToBe (p a) t) (N : Nat) : ∀ k, ∃ E U, Distinct E ∧ E.length = k ∧ N ≤ U ∧ ∀ t, t ∈ E → N ≤ t ∧ t < U ∧ ∃ a, CeasesToBe (p a) t`.
+
+   The last two are one proof text with one predicate changed. Both are `GrammarLaws.found` at `α := Nat`, `τ := fun t => t`:
+
+   ```lean
+   -- Recurs.steps_found
+     fun k => GrammarLaws.found (τ := fun t => t) (marks := fun t => ∃ a, a ∈ as ∧ e a t)
+       (fun U => match recurs U with
+         | ⟨t, a, later, member, happens⟩ => ⟨t, later, a, member, happens⟩) k M
+   -- ceasing_steps_found
+     fun k => GrammarLaws.found (τ := fun t => t) (marks := fun t => ∃ a, CeasesToBe (p a) t)
+       (fun U => match ceasing U with | ⟨t, a, later, ceases⟩ => ⟨t, later, a, ceases⟩) k N
+   ```
+
+   Statements unchanged: yes, up to beta. 29 lines become 6. By script `GrammarLaws` is in the closure of `Decidedness` and of `Locality`: no import, no move, no new statement; two results of October become cases of one of 1 November. `GrammarLaws.found_unrefuted` (l. 2220) is its twin under a double negation; `KeepingWidening.KeepsWidening.distinct_configs` (l. 260) and `Entropy.seen_changes` (l. 1103) gather distinct things of other kinds (TOLD by statement; not cases in a line).
+
+3. **OPENED. More members of the reader's E2 (totals over a list without repetition).** `Weightings` l. 3960 (2026-10-24), proof 10 lines: `theorem total_le_at_on {q : α → Nat} {a : α} : ∀ {as : List α}, (∀ b, b ∈ as → 0 < q b → b = a) → Distinct as → total as q ≤ q a`. It is `Dissipation.total_le_at` with the premise restricted to members, proved again. As a call of `Dissipation.total_le_of_support` (in `Weightings`' closure by script):
+
+   ```lean
+     fun only distinct => Nat.le_trans
+       (total_le_of_support (m := [a]) distinct fun b mem pos =>
+         Eq.subst (motive := fun x => x ∈ [a]) (only b mem pos).symm (.head []))
+       (Nat.le_of_eq (Nat.add_zero (q a)))
+   ```
+
+   Statement unchanged: yes. 10 lines become 4. **TOLD (statement read, proof not opened but for `emitted_le_one`):** the same induction over a list without repetition in `Resolution.emitted_le_one` l. 1816 (8), `Continuity.total_edge` l. 336 (14), `Optimum.total_raise_at` l. 1055 (13), `Population.total_le_mark` l. 322 (13). Calls not written: untried.
+
+### (c) "At n + 1 gives at n" and "at n gives at every m ≤ n"
+
+**Coverage.** 1,526 theorems with an induction on `Nat` or on `Nat.le` (1,573 sites). By shape of statement: 6 "n + 1 gives n", 6 "n gives n + 1", 92 "a bound or an offset" read; 16 proofs opened.
+
+- **"n + 1 gives n" (TOLD by script; `KeptFor.shorter`, `Continues.down`, `AgreeTo.of_succ` and `iter_pred` OPENED by me).** The six with an induction of their own are exactly the six the horizons reader and the Astra report name (`iter_pred`, `KeptFor.shorter`, `Continues.down`, `AlikeTo.of_succ`, `AgreeTo.of_succ`, `«诘之降»`). None found beyond them. `Branching.Reachable.earlier` (`Recurrence` l. 348), the reader's seventh, has no induction by the Lean list (OPENED: a case split on a trace).
+- **"n gives n + 1".** Named: `Reaches.succ`, `iter_succ`, `leadsWithin_up`, `extend_at_places`. **Found, not named (OPENED):** `Tolerance.rises_from_withheld` l. 278 (2 lines) and `WideningOnTheMap.Arriving.includes` l. 370 (5 lines). Each is its notion's own recursion; 2 lines against 2 for the first. M2, untried.
+- **"At n gives at every later (or earlier) step".** Named with an induction of their own: 17 by the horizons reader (its table of twenty less two calls and one inline), 8 more by the Astra report's family E. **Found by script and not named: 40**, 26 of them with a proof of at most three lines (148 proof lines in all): `Admission` 308, `Branching` 819, `Change` 383 (`Clear.mono`), `Continuation` 395, `Counterfactual` 333, `Diagonal` 149, `DrawHistory` 74, `Enough` 129, `Entropy` 1252, `Frequency` 1177 and 1239, `HeldPossible` 758, `Identification` 1169 and 1630, `KeepingWidening` 488, `Learning` 382, 656 and 664, `LineageRegions` 731, `Loops` 650 and 802, `MapRegions` 341, `Openness` 505, `Optimum` 2255, 2357, 6877 and 9476, `OrderNormal` 665, `ReadOffInTime` 372, `ReadingsPersist` 647, `ReflexivePrediction` 131, `RegimeMargin` 2844, `Remainder` 420, `RenewalFlow` 366, `Reproduction` 389, `SharedCodes` 485 and 495, `Tolerance` 283 and 366, `Withholding` 201. Each has `Nat.brecOn`, `Nat.le.rec` or `Nat.le.brecOn` in the Lean list. **OPENED** of these: `Enough.settled_at` l. 129 and `LastChange.still_stays` l. 286 are one statement up to how the step is put (`∀ n, T ≤ n → …` against `∀ k, … (T + k) …`), the second in a module that imports the first: 2 lines against 2 with a bridge, M2. "What never falls is monotone" is proved four times: `Recurrence.never_falls_over` l. 201, `Openness.grows_between` l. 505, `Entropy.nonfalling_from` l. 1252, `Ranking.level_never_falls` l. 256 (the report names the first and last). `Change.Clear.mono` l. 383 is a "holds at t, so at every i ≤ t" by induction on `Nat.le`.
+
+  What this says: "about sixteen times" (the horizons reader) is an undercount by a factor of four, and the family is the one the addendum's point 5 describes: any induction on a number with a one-line step. Each is a case of `Undecided.kept_from` with a named `Q`, and nearly all are 2 lines against 2. M2 holds for most of the 65. The scan was by shape (`n + k`, or `a ≤ b`); "from 0 along the whole course" (seed d) was not scanned.
+
+---
+
+## 2. Where the returns disagree
+
+### 2.1 Family (a): 21 against 23 or 24
+
+**OPENED** (all 23 proofs). The Astra report's table A has 29 rows: one kept (`first_of_decided`), 24 with a printed call, 4 kept as they are. Its "23 shortened" and "23 recursive / 24 calls / 23 shorter" are these:
+
+| Astra row | Search reader | Settled from the Lean |
+|---|---|---|
+| `Optimum.keeps_or_below` l. 4510, 5 → 1 | "already a call of `keeps_or_falls`; not a duplicate" | The reader is right. No induction in the Lean list (head a match, uses `keeps_or_drops`). Under the addendum's point 4 it is left out. |
+| `GrammarLaws.stage_search` l. 2473, 13 → 5 | a11: "12 against 13, M2, leave it" | The report is right on paper. Its call decides each stage by `each_or_some` on the list `u (t + 1)` and puts `M ≤ t` inside the predicates, so no offset bridge. I checked the term against both statements: it typechecks on paper. It holds only if both `B` and `each_or_some` are visible in `GrammarLaws` (both in `Prelude`); the docstring "The count decides each stage" would no longer be true. |
+| `Change.Clear.or_first` l. 392, 6 → 2, with `clear_of_below` moved | "needs `(∀ t, t < n → s t = false) → clear s n = true`, not found in what I read": M2 (and the same in the pigeonholes return) | The lemma exists: `LimitVerification` l. 160, `theorem clear_of_below (s : Nat → Bool) : ∀ {k : Nat}, (∀ j, j < k → s j = false) → clear s k = true` (4 lines, 2026-10-19; it uses only `bool_and_true`, which `or_first` uses too). M2 does not hold. The printed call has one ill-typed sub-term (section 3). |
+| `Likeness.drops_somewhere` l. 498, 4 → 4; `Optimum.last_before` l. 2586, 5 → 4 | "met in passing": a change located at a step, another family, M2 likely | Both are right: cases, and no shorter (the second is 5 → 5 with the legend expanded, section 3). |
+| 20 others (19 calls and the kept `first_of_decided`) | a1 to a21 less a11 | Agreed members. |
+
+Three further points, all **OPENED**:
+- **The general statement.** The search reader writes a new `first_below` (13 lines: strict bound, the hypothesis only below the bound). The report moves the existing `first_of_decided` to `Prelude` and adds a 6-line adapter `B` (strict bound, hypothesis everywhere). Both typecheck on paper (I checked `first_below`'s proof and `B`). `B` is also a new statement. Members that have their decision only below the bound (`Decided.exists_below`, `weakly_exists_below`, `Closing.split`) pay a guard under `B` and nothing under `first_below`.
+- **`HistoryIdeals.least_true_or_below`** has three calls on paper: over `Clear.or_first` and `Clear.false_before` (search reader, 2 lines, no new statement, no move; checked: typechecks on paper); over `first_of_decided` (pigeonholes reader, 5 lines); over `B` (report, 3 lines). The first is the cheapest and stands alone.
+- **As proofs.** 18 of the 21 follow one scheme: structural recursion on the bound; the recursive call first; then the last step decided; then the bound extended by a split of the index into below and equal. They differ only in where the step's decision comes from (an instance, a disjunction handed in, `Nat.lt_or_ge`, a match on a `Bool` or a `Value`, `LPO`, a count). Three do not: `Presence.weakly_exists_below` l. 618 matches the recursive call and the last step together, with three outcomes; `Reproduction.search` l. 353 decides the last step first and rebuilds its hypothesis for the recursive call; `Likeness.FirstAt.of_holds` l. 1722 recurses on fuel `N`, descends to an earlier witness, and at each stage **already calls `Decided.exists_below`** (Lean list: `uses` has it). `Closing.split` and `Clear.or_first` follow the scheme: 20 of 23.
+
+### 2.2 Family (b): 14 against 17
+
+**OPENED.** The report's 17 "shortened" are 12 with an induction of their own and 5 without (Lean list): `Likeness` l. 421, 429 and 1804 and `Decidedness` l. 1067 are already calls of `Decided.exists_listed` (the search reader says so and leaves them out); `Frontier.decided_included_bool` l. 264 is a 16-line case table with no recursion (a member by statement at the list `[true, false]`, not an induction said again). Of the 12, eleven are the search reader's; the twelfth is `Weightings.exceeds_or_includes` (missed by the search reader). The search reader's other three (`each_or_some` itself, `Prelude.not_not_all`, `Refinement.not_not_within`) are in the report's family C or kept.
+
+- **Which statement.** The search reader's is `gather_listed` (22 November) with `each_or_some` as a 2-line case; the report's is `each_or_some` (19 October), with `gather_listed` only for the doubly negated ones. I checked the reader's call `gather_listed (D := A) l (fun x mem k => (each x mem).elim k fun b => .inr ⟨x, mem, b⟩) Or.inl` against both statements: it typechecks on paper. The converse does not go (a continuation `(D a → G) → G` gives no disjunction). So the report's sentence in its first near miss, "M1 for substituting the three listed theorems for each other", is too wide: one of the three substitutions holds.
+- **`Premises.fuel_mem_or` l. 680.** The search reader: not a member (no `DecidableEq` on that `Relatum`). The report (family AB): a 3-line case of `each_or_some` with the decision against `.fuel` by cases on the constructor. I checked the term: it typechecks on paper. The reader's verdict holds for the route by `decideMem` and not for the theorem.
+- Settled membership with an induction of their own and a call on paper: the reader's 14, `exceeds_or_includes`, `fuel_mem_or`: 16.
+
+### 2.3 `KeptFor.shorter`, `Continues.down`, `AgreeTo.of_succ`
+
+**OPENED** (`Keeping` l. 285 and l. 362 to 372; `Lasting` l. 970; `Parting` l. 405 to 423; `Identification` l. 1579 to 1612).
+- `KeptFor.shorter`: the two agree. The report's family D keeps it ("Keep the raw successor induction", 3 → 3) for the reader's reason: `iter_iff_kept` carries the premise `updates` and speaks of decoded codes; the theorem holds of every `B`. M1.
+- `Continues.down`: the two agree on M2 (2 → 2 in both). On M3 they say the same thing in two ways: where the bridge stands it is a cycle (`Parting` has `Lasting` in its closure: by script, yes); with `courseStep`, `course_mono`, `iter_iff_continues` moved into `Lasting` it is not (`Lasting` has `PredicateIteration` in its closure: by script, yes).
+- `AgreeTo.of_succ`: they differ. The reader: no landed bridge, 2 against 2 through `Likeness`, M2. The report: 2 → 1 by `agreeTo_iff` (l. 1579, in the same module, earlier): `fun {k s t} h => agreeTo_iff.mpr fun i le => (agreeTo_iff.mp h) i (Nat.le_succ_of_le le)`. Checked: typechecks on paper, one line. It removes the recursion and gains a line; it joins nothing to `Iteration`.
+- The report's four rows of 22 November in D and E (`iter_pred`, `iter_succ`, `iter_within`, `postfixed_in_iter` as calls of `kept_from`, each 2 → 2) are M2 and M4 by its own account.
+
+### 2.4 The reader's list pigeonholes against the report's I and K
+
+- **OPENED.** The report's I is the reader's E3 (the widening pair) with the same two calls and the same 13 lines. No disagreement. I checked `fun keeps => keeps.chain.not_listed ⟨fs, fun _ f _ => every f⟩` against `Web.KeepsWidening.chain` and `Reaching.KeepsWidening.not_listed`: it typechecks on paper.
+- **TOLD (search of the report) and OPENED (the statement and two calls).** The reader's E2, its first rank (`Dissipation.total_le_of_support` l. 143 with `total_le_at`, `Listing.total_eq_of_same`, `length_le_count`, `count_le_of_sub`, `ReadingSchedule.total_is_le_one` as cases; 59 lines), **is nowhere in the Astra report**: none of `Dissipation` 129 or 143, `Population` 122 or 156, `Listing` 190, `ReadingSchedule` 203 appears in its 39 tables or in its register of 969 groups. I checked the reader's calls for `total_le_at` and `total_eq_of_same` against the statements: both typecheck on paper. The family stands on one reader's word, and section 1 adds members to it.
+- **OPENED.** The report's K is the small corner of E2 that the reader set aside: `length_le_of_matched` as the statement, `Population.length_le_of_sub` (2 → 2; already a call, of `length_le_count`) and `Refinement.DistinctUnder.length_le` (8 → 2 with a new 5-line `DR`). The reader: 8 against 6, M2. Both make it a saving of 2 or 3 lines.
+- **OPENED.** E1 against J (the sequence pigeonhole): the same route (`revisits_within` over `shared_below` with `memberAt_of_mem`; checked, typechecks on paper). They differ on `Prelude.split_at_head`: the reader's ledger (86 → 49) drops its 29 lines without saying that a theorem is deleted; the report keeps it as an 11-line call of `split_top` at `L := 1` (checked: typechecks on paper, with a tactic block). By the Lean list `split_at_head` has one caller, `revisits_within`. With the statement kept, E1 saves 28 lines by the report's calls, and not 37.
+
+### 2.5 `leading_exact` and the first-place searches
+
+**OPENED** (`Change` l. 359 to 406, `LimitVerification` l. 160, `Likeness` l. 1722, `Regulation` l. 1294; `RegimeMargin` l. 1550 by script at its statement only).
+- `leading_exact`: the pigeonholes reader (F0) and the report (N, 28 → 28) agree it is said once and called. A second proof of its statement: not found in what was read (by them or here; no sweep for it was made here).
+- The first place in existence form: the three agree on the members. They differ on `Clear.or_first` (settled in 2.1: a case, 6 → 2) and on how many lines `least_true_or_below` takes (2.1).
+- The search as a function (`leading`, `firstWhere`, `clear`, `hitTime`): the reader (F2) and the report's second near miss agree: not one statement, M1 or a changed definition.
+
+### 2.6 Smaller differences
+
+- **TOLD (by script).** The import figures of the search reader, of the pigeonholes reader and of the Astra report agree with my closures (907 edges; `Likeness` 36, `Regulation` 35, `ReadOffInTime` 139, `Undecided` 34; 144 modules with `PredicateIteration`; eight modules without `Prelude`; `Regulation` +105, `Likeness` +103 with a cycle, `HistoryIdeals` +106 with a cycle for an import of `ReadOffInTime`). The horizons reader's closure sizes are each 3 or 4 too large (`Lasting` 42 for 39, `Recurrence` 6 for 5, `Undecided` 37 for 34), and two of its deltas with them (`Recurrence` +32 for +29, `GrammarMap` +37 for +33). No verdict of its changes.
+- **OPENED.** `Decided.imp` exists (`Likeness` l. 436) with another meaning (`Decided p → Decided q → Decided (p → q)`): a `.imp` written by dot on a term whose type is `Decided _`, in or above `Likeness`, resolves to it. `Decided` is a `def`, so `.elim` and `.symm` reach `Or` only by unfolding. The search reader names this risk; the calls of both writers that I checked do not hit `Decided.imp`.
+
+---
+
+## 3. The Astra report's numbers
+
+**TOLD (by script over the report's tables) and OPENED (the sampled members and calls).**
+
+**Its arithmetic.** 39 families and 296 table rows: yes. Each family's ledger is the sum of its rows and its shared lines; the ledgers sum to 1,784 → 1,023 (946 in rows, 77 in new shared statements), difference 761: yes. 288 rows are dated before 22 November and 8 of that day; 189 of the 288 have a printed call, 177 of them shorter as printed: yes. The 969 groups of its register were not recounted.
+
+**All 296 rows, by script.**
+- The member is at that line with that statement, word for word up to spacing: 296 of 296.
+- The proof has the stated lines, by the report's own convention (from the first proof token, so a line ending `:= by` or a proof on the statement's line counts): 296 of 296. The Claude readers count from the next line, so some of their figures are one lower (`Decided.exists_below` 13 against 14; `kept_from` 3 against 4).
+- All 296 are theorems (each is in the Lean list).
+- Before 22 November by `git blame` of the statement's line: 288 of 296. The 8 of that day are the 8 the report marks (`PredicateIteration` l. 60, 103, 108, 146, 225; `GuardHorizon` l. 147; `Likeness` l. 1094; `Parting` l. 420). For 38 rows blame is later than the report's `git log -S` date (moves into `Prelude` on 20 October, 1 and 6 November, and the like), never earlier, never across 22 November.
+
+**The sample.** Rule: every seventh row of the 296 in table order (rows 7, 14, …, 294): 42 rows in 26 families (A 4; D, E, U, AL 3 each; B, H, O, S, T 2 each; sixteen families 1 each). 27 have a printed call, 15 are kept rows.
+
+| Checked | Held |
+|---|---|
+| At that line with that statement | 42 of 42 |
+| Proof lines as stated | 42 of 42 |
+| Date before 22 November by blame, or marked as of that day | 42 of 42 (40 before; `gather_listed` and `iter_iff_alikeTo` of 22 November, so marked) |
+| The printed call typechecks on paper against the member's statement with its binders | 26 of 27 |
+
+**The row that did not hold.** Row 28, `Change.Clear.or_first` l. 392: `fun n => (B (Clear.cases ∘ s) n).imp (Limit.clear_of_below s) (fun ⟨i,lt,yes,pre⟩ => ⟨i,lt,Limit.clear_of_below s pre,yes⟩)`. `Clear.cases : ∀ b : Bool, b = false ∨ b = true` is a dependent function; `Function.comp` does not compose it. With `fun t => Clear.cases (s t)` in its place the term typechecks on paper at the same length.
+
+**The 26 that held, with what each rests on** (all against the statements opened):
+- Rows 7, 14, 21 (`Regulation` 1294, `Undecided` 596, `Decidedness` 148): over `B`; row 21 uses `.elim` on a `Decided` term (2.6).
+- Rows 35, 42 (`RelativePosition` 155, `Likeness` 429): over `each_or_some`; row 42 is already a call.
+- Row 56 (`Likeness` 899): over `iter_pred` through `iter_iff_alikeTo`; needs l. 1076 to 1098 moved above l. 899.
+- Rows 77, 84, 91 (`Identification` 1539, `Remainder` 497, `Recurrence` 201): over `closed_orbit` (moved to `Recurrence`) and `kept_from` (moved to `Prelude`); row 91 is 2 → 2.
+- Row 98 (`RegimeMargin` 2458): `course_rel` moved to `Recurrence`.
+- Rows 105, 112 (`WayOfUnits` 1057, `Seeking` 128): over `orbit_of_still`; row 105 is already a call (of `LineOnAStock.course_fixed`); `course` is an `abbrev` of the orbit, so the term holds.
+- Row 119 (`EventualWidening` 339): section 2.4.
+- Row 126 (`Prelude` 1075): section 2.4.
+- Row 154 (`Likeness` 976): over `OutcomesListed.alikeTo_decided` with the new adapters `V` and `X` (19 lines; both checked on paper). The reordering it needs is possible by the Lean list: of the `OutcomesListed` theorems the calls use, none uses a theorem declared between l. 937 and l. 1830 but `Decided.forall_in`, which the report moves too.
+- Row 161 (`Weightings` 3311): over `leastDrawn_drawsPast` with `total_congr_on`.
+- Rows 175, 189 (`Cuts` 354, `Counting` 448): over `mem_append_iff` and `mem_map_iff`.
+- Rows 203, 210 (`Prelude` 1031, `SelectionTerm` 441): row 203 needs `total_congr_on` moved from `Population` into `Prelude`; row 210 needs `Reproduction.total_bind` moved below `SelectionTerm` (by script `Reproduction` has `SelectionTerm` in its closure; the report says to put it in `Flow`).
+- Row 217 (`Junctures` 196): over a new 7-line `AnyOn`.
+- Row 245 (`Frontier` 258): `Decidable.em p`.
+- Row 252 (`Standing` 180): over a new 14-line `J`.
+- Row 273 (`Locality` 178): over `Units`' theorem at resolution `fun _ => 1`; the conclusion does not mention `r`, so no bridge.
+- Row 287 (`DrawHistory` 180): `ListTests.all_sound` on `steps 0 9` with `rfl`; it rests on `rfl` evaluating a nine-entry Boolean table.
+- Row 294 (`Parting` 555): over new `HIT` and `FL` (the report itself says the reduction of `List.find?` at a cons has to be checked by Lean).
+
+**What the sample does not show, found beside it.**
+- **Lines as printed.** The one-letter names of the legend (`F`, `B`, `L`, `em`, `swap`, `trim`) do not all "expand in place". With real names put for them and a limit of 100 columns, 14 of the 41 calls of families A and B need one more line (two for `Readout` l. 175): 91 printed lines become 106. Three rows then stop being shorter (`Optimum` 2586: 5 → 5; `Likeness` 421 and 429: 3 → 3). Families A and B alone: 168 and 108 become about 159 and 102. Other families were not re-measured.
+- **One call uses `simpa`.** Row 274, `Locality` l. 189: `by simpa only [Nat.one_mul] using …`. The package already uses `simp` (52 places by grep), so it is not foreign; whether that term stays free of axioms only Lean can say.
+
+**Members that are already calls, or that have no induction (the join with the Lean list).** Of the 189 call rows, 148 have an induction of their own (the report says 146) and 41 have none. Those 41 carry 199 of the 838 lines the call rows save.
+- Already calls of the family's statement or a neighbour of it, ten rows: `Optimum` 4510; `Likeness` 421, 429, 1804; `Decidedness` 1067; `Lasting` 399 (`orbit_mono`, 9 → 1: a real saving, of a detour and not of an induction); `WayOfUnits` 1057; `EventualWidening` 339; `ReachableRanges` 831; `Population` 149. Together 24 lines of the ledger.
+- Six families have no member with an induction of its own: P (4 rows), AH (2), AI (2), AJ (2), AM (2), AP (3). They are copied proof text and case tables (86 lines of the 761). In AL six of seven call rows, in O five of eight, in B five of seventeen have none.
+- **M4.** No family is of 22 November alone. The 8 rows of that day sit in C (1), D (6) and E (1); in D three of the six printed calls are for theorems of that day, each 2 → 2.
+
+---
+
+## 4. Families nobody seeded: the first eight by the report's rank
+
+Classes by the addendum's point 1: (i) a law of a going-on; (ii) deciding and searching, and with it what is plain tidying of list lemmas. The class is my reading of the statements.
+
+1. **H, "a fixed point stays fixed" (OPENED: `Seeking` 128, `HexagramLaws` 128, `TreeSearch` 320, `Learnable` 150, `WayOfUnits` 1057).** `next s = s → ∀ n, Law.orbit next s n = s`: fourteen theorems of twelve modules have an induction of their own for it, most of them the same two lines. Class (i), and thin: a rest stays a rest. The one statement, `Learnable.orbit_of_still` (2026-10-14), exists but is itself a call of `Seeking`'s `Law.fixed_rests`, and is in the closure of only 5 of the 13 member modules (by script): it would be moved to `Recurrence` and given a new 2-line proof.
+2. **U, "additivity and congruence of the total" (TOLD from the report's rows, statements matched by script; OPENED `SelectionTerm` 441 against `Reproduction` 282, one proof text twice).** Local copies, mostly in `Typicality` for `List (List Bool)`, of `total_add`, `total_mul`, `total_le`, `total_congr_on`. Class (ii) as tidying: sums over a list, no going-on. The statements exist (`Flow` 132, 145, 155; `Population` 260; `Resolution` 826; `Reproduction` 282) but are not below all members (`Amounts` and `Prelude` would cycle): moved to `Prelude` or `Flow`.
+3. **S, "membership in an appended list" (TOLD; row 175 OPENED).** Eleven local lemmas that are one direction of `ListTests.mem_append_iff`. Class (ii) as tidying. The one statement exists (`Prelude` l. 268) and is in every member's closure, above the members in `Prelude` itself: no move, nothing new.
+4. **O, "branching tests on listed outcomes" (OPENED: `Likeness` 928 to 990, 1831 to 1902).** Eight theorems under `FiniteDecided` (all states listed, every transition decided) repeat eight under `OutcomesListed` (each move's outcomes listed) of the same day; three of the eight have an induction of their own (`AlikeTo.decided`, `apart_from_listed`, `apart_of_not_alikeTo`, the last 34 lines). Class (i) by what it is about (when two courses are alike to a depth, and what test tells them apart), though its statements are of deciding; the join is a premise shown to imply a weaker one. The statements exist in the same module, later in the file; new are the two adapters `V` and `X` (19 lines) and a reordering.
+5. **T, "preimages of list-map members" (TOLD; row 189 OPENED).** Eight local lemmas that are `ListTests.mem_map_iff` in one direction. Class (ii) as tidying. The statement exists (`Prelude` l. 343), in every member's closure: no move.
+6. **AL, "balance and dissipation at unit resolution" (OPENED: `Units` 51 to 80 and 138 to 148, `Locality` 172 to 186).** Seven laws of a flow balanced on a family (`Flow`, `Locality`, `Dissipation`, 11 October) are the case `r := fun _ => 1` of `Units`' laws at a variable resolution (12 October), proved again there. Class (i): a case row would say that the fixed unit is one resolution among others. The statements exist but are above the members (`Units` imports `Resolution`; a direct import is a cycle): definitions and seven theorems would move down into `Flow`, `Locality` and `Dissipation`. Six of its seven old members have no induction.
+7. **P, "a draw past stock" (OPENED: `Weightings` 1892, 2379 to 2480, 3172 to 3328).** Five theorems "in this constructed flow `f` draws past the family's stock" with one 12 to 15 line proof text, the flow's name changed. Class: neither a search nor an induction; witness constructions, tidying. The statement exists (`leastDrawn_drawsPast` l. 2465) in the same module above the others: no move. No member has an induction.
+8. **AQ, "the first successful entry in a list" (OPENED: `Parting` 527 to 568; TOLD for `Identification` 673 to 695).** `firstFit` and `firstLive` are `List.find?` under other names, each with its own soundness and completeness inductions. Class (ii). `Prelude`'s `find_some`, `mem_of_find_some`, `find_none_iff` exist and are in the closure; new are three bridges `HIT`, `FL`, `FF` (19 lines), and the report itself notes M2 for a single wrapper.
+
+By class: of the eight, H, O and AL are (i) with reservations; U, S, T, P and AQ are tidying. Of the report's first two ranks, A and B are (ii) by the addendum.
+
+---
+
+## 5. What may be said of the sweep, and what may not
+
+### May be said
+
+1. The package has at least 23 theorems in 23 modules, each with an induction of its own and each older than 22 November by blame of its statement, that state one thing: a property decided on a stretch of steps holds throughout or fails somewhere. (Rests on `RETURN-search-fable.md` Q1 family (a); `astra/REPORT.md` family A, row `Change:392`; this check sections 1 (a) and 2.1; `lean-list/all-proof-heads.jsonl`.)
+2. As proofs, 20 of the 23 are one induction (recursion on the bound; the shorter stretch first; then the last step decided; then the bound extended), differing only in where the step's decision comes from; 3 state the same and are proved otherwise. (Rests on this check section 2.1, every proof opened.)
+3. Every one of the 296 rows of the Astra report's tables names a theorem that is at that line with that statement and that many proof lines by the report's convention; 288 are before 22 November by blame; its totals add up as printed. (Rests on `astra/REPORT.md` l. 21 to 903; this check section 3.)
+4. Of 27 printed calls sampled by a fixed rule from 19 of its families, 26 typecheck on paper against the member's statement with its binders, and the one that does not is mended at the same length. (Rests on this check section 3.)
+5. A statement placed in `Prelude` adds no import and no cycle for any member named, and re-elaborates 401 of the 409 modules; the import figures of the search reader, the pigeonholes reader and the Astra report agree with one another and with a fresh computation from the `import` lines. (Rests on `RETURN-search-fable.md` Q3; `astra/REPORT.md` l. 961 to 1005; this check section 2.6.)
+
+### May not be said
+
+1. **"One induction said twenty times" as a sentence about proofs.** Of the 20 the search reader counts, 17 are that induction as proofs; `FirstAt.of_holds` already calls the search lemma inside another recursion, and two others split the cases otherwise. It is true of statements (each is a case on paper) and of 20 of 23 as proofs.
+2. **"761 lines are saved", or any line figure as a finding.** The figure is a count of calls printed with one-letter names by one writer; in the two families re-measured the calls take 106 lines and not 91, and three rows stop being shorter; nothing was built. **About four fifths of it rests on calls tried by nobody but their writer:** of the 838 lines the report's call rows save, the calls I tried on paper carry 165 (the 27 sampled, and `stage_search`, `exceeds_or_includes`, `AgreeTo.of_succ`, `fuel_mem_or`, `revisits_within`). Of the three Claude returns' 392 lines, the calls I tried carry about 52 (`least_true_or_below`, `each_or_some`, `total_le_at`, `total_eq_of_same`, `AlikeTo.of_succ`, the web's `not_listed`, `revisits_within`): about nine tenths untried. Where two writers wrote calls for the same member (some forty members), that is two writings, not a check. What another checker did on the top three was not before me.
+3. **"189 old inductions become calls."** 41 of the 189 have no induction of their own: ten are already calls, six whole families are copied text or case tables. The count with an induction is 148, of which 138 shorter as printed.
+4. **"The sweep found the families", or "nothing else was found".** The reader that opened all 409 modules does not have the list-pigeonhole family that another reader ranks first. This check, in four families only, found one more search member, a third sequence pigeonhole, a gathering family of three whose statement is already in place, five more list-pigeonhole candidates, and 40 horizon lemmas nobody named. Families (d), (f) and (g) were not checked against the Lean list. What may be said is "not found in what was read".
+5. **That these are joins of the map, or what a landing costs.** By the addendum the largest families (A, B, and of the unseeded U, S, T, P, AQ) are deciding, searching or list tidying: a lemma said once, with no case row that says anything of a going-on. No return has a cost side. By script only: a home in `Prelude` re-elaborates 401 modules, in `Population` 318, in `Recurrence` 253; of the 23 members of (a), 13 are helpers called once in their own module and 8 have callers in other modules (`Clear.or_first` 7 callers in 6 modules). Records whose bound hashes would change: untried.
+
+---
+
+## What was not done
+
+- Nothing was built; no call here or in the returns has been seen by Lean. Universe levels of the moved statements were taken from the returns (TOLD) except where a section says otherwise.
+- Families (d), (f) and (g) were not checked against the Lean list. For (c) the scan was by shape of statement and does not reach "from 0 along the whole course".
+- Of the Astra report: 42 of 296 rows sampled for the calls (all 296 for line, statement, length and date); the register of 969 groups was only searched; line counts with the legend expanded were re-measured for families A and B only.
+- The five list-pigeonhole candidates of section 1 (e) 3, the ten "rested or moved by n" theorems and the pair `list_throughout_not_not` / `EitherThroughout.list` have no call written: untried.
+- The cost side beyond counts of modules (records, hashes, mapping rows, step seconds) was not computed.

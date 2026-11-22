@@ -1,0 +1,458 @@
+# Return: reader "search", families (a) and (b)
+
+*AI-written (Claude Fable, reader for board row FM), 22 November 2026. Read only: no Lean written into the repository, nothing built, no lake, no gate. Every call below is a term on paper, unbuilt. Scripts (declaration index, searches, import closures) are in the session scratchpad, not in the repository.*
+
+**Conventions.** Path prefix for every module: `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`. "Proof lines" = the lines from the first line after the statement (the first `|` equation line, or the first line of the term after `:=`) through the proof's last line; statement and docstring not counted. Dates are from `git log -S '<kind name>' --format='%h %ad' --date=short -- <file> | tail -1` (first entry into that file). Estimated call lengths assume the 100-column limit and are ±1 line a member.
+
+**Headline.**
+- (a) is one induction said 20 times (13 seeds less one, plus 8 found by search). One statement on paper, 13 lines, in `Prelude`, has 20 of them as calls with statements unchanged: about 215 proof lines become about 85 (the statement counted). No import changes, no cycle. It is not in `Prelude` now under any name. `GrammarLaws.stage_search` is a case in statement but not shorter as a call (M2).
+- (b) already has its one statement: `gather_listed` (`PredicateIteration.lean` l. 60, of 22 November). 14 older list inductions are 1 to 5 line calls of it (two of them through another member): 115 proof lines become about 32. It has to sit in `Prelude` for one of them (`not_not_all`: a cycle otherwise), and there it saves seven added imports.
+- (a) is not usefully a case of (b): the bridge over a list of steps is no shorter than the direct lemma and loses the first failing step, which five members need.
+- Eleven theorems become calls with no new statement and no import change (Q5, rank 0): 99 proof lines become about 22.
+- Correction to the brief: `gather_listed` is `Becoming.gather_listed`, declared at l. 60 before `namespace Iteration` opens at l. 69; it is not `Iteration.gather_listed`. `ListTests` and `Iteration` are namespaces (in `Prelude.lean` and `PredicateIteration.lean`), not modules.
+
+---
+
+## Q1. Families
+
+### Family (a): a decided property on a stretch of steps
+
+**OPENED** (every statement and proof below opened by me at the lines given).
+
+Seeds:
+
+| # | Module, line | Statement (word for word) | Proof lines | Entered |
+|---|---|---|---|---|
+| a1 | `ReadOffInTime` 196 | `theorem first_of_decided {P Q : Nat → Prop} (decided : ∀ t, P t ∨ Q t) : ∀ n, (∀ t, t ≤ n → P t) ∨ ∃ m, m ≤ n ∧ Q m ∧ ∀ t, t < m → P t` | 13 (198–210) | 401d8b124 2026-11-10 |
+| a2 | `Novelty` 67 | `theorem upto_or_fails (p : Nat → Prop) [∀ n, Decidable (p n)] : ∀ N, (∀ n, n ≤ N → p n) ∨ ∃ n, n ≤ N ∧ ¬ p n` | 10 (69–78) | 29355c532 2026-10-14 |
+| a3 | `MoveFormation` 587 | `theorem throughout_or_fails (p : Nat → Prop) [∀ n, Decidable (p n)] : ∀ N, (∀ n, n < N → p n) ∨ ∃ n, n < N ∧ ¬ p n` | 12 (589–600) | e936f8ee6 2026-10-20 |
+| a4 | `Amounts` 506 | `theorem unmarked_or_marked {P : Nat → Prop} (decide : ∀ t, P t ∨ ¬ P t) (S : Nat) : ∀ n, (∃ N, S ≤ N ∧ N < S + n ∧ ¬ P N) ∨ ∀ t, S ≤ t → t < S + n → P t` | 10 (508–517) | 423800365 2026-10-23 |
+| a5 | `Exhaustion` 60 | `theorem all_or_below (h : Nat → Nat) (m : Nat) : ∀ N, (∀ j, j < N → m ≤ h j) ∨ ∃ j, j < N ∧ h j < m` | 11 (62–72) | de368fc53 2026-10-19 |
+| a6 | `ReadingSchedule` 110 | `theorem read_or_unread [DecidableEq X] (s : Nat → X) (x : X) (T : Nat) : ∀ k, (∃ j, j < k ∧ s (T + j) = x) ∨ Unread s x T k` (`Unread s x T k := ∀ j, j < k → s (T + j) ≠ x`, l. 92) | 8 (112–119) | e603c661f 2026-10-21 |
+| a7 | `LastChange` 162 | `theorem decided_within [DecidableEq S] (r : Run P) (T : Nat) : ∀ n, (∃ k, k < n ∧ r.state (T + k + 1) ≠ r.state (T + k)) ∨ ∀ k, k < n → r.state (T + k + 1) = r.state (T + k)` | 9 (165–173) | 35aa2f28b 2026-10-18 |
+| a8 | `Regulation` 1294 | `theorem first_or_nowhere {P : Nat → Prop} [DecidablePred P] : ∀ n, (∀ i, i < n → ¬ P i) ∨ ∃ r, r < n ∧ P r ∧ ∀ i, i < r → ¬ P i` | 7 (1296–1302) | ce980ac0a 2026-10-19 |
+| a9 | `Stock` 347 | `theorem search (g : Nat → Nat) (N : Nat) : ∀ L, (∃ n, N ≤ n ∧ n < N + L ∧ 0 < g n) ∨ (∀ n, N ≤ n → n < N + L → g n = 0)` | 12 (349–360) | f7fffe761 2026-10-14 |
+| a10 | `Founding` 217 | `theorem changed_or_none (G : Generations α) : ∀ t, (∀ s, s < t → G.raisedAt s = 0 ∧ G.loweredAt s = 0) ∨ ∃ s, s < t ∧ (0 < G.raisedAt s ∨ 0 < G.loweredAt s)` | 11 (220–230) | bc8203f70 2026-10-22 |
+| a11 | `GrammarLaws` 2473 | `theorem GrammarLaws.stage_search (b : α → Bool) (u : Nat → List α) (M : Nat) : ∀ n, (∃ t, M ≤ t ∧ t < M + n ∧ ∃ y, y ∈ u (t + 1) ∧ b y = true) ∨ ∀ t, M ≤ t → t < M + n → ∀ y, y ∈ u (t + 1) → b y ≠ true` | 13 (2476–2488) | f3feb401b 2026-11-01 |
+| a12 | `CausalGrowth` 239 | `theorem searchBelow_or (p : Nat → Prop) (decided : ∀ z, p z ∨ ¬ p z) : ∀ n, (∃ z, z < n ∧ p z) ∨ ¬ ∃ z, z < n ∧ p z` | 9 (241–249) | b6d4f1493 2026-10-28 |
+| a13 | `Optimum` 4476 | `theorem keeps_or_falls {x : Nat → Nat} (start : m ≤ x 0) : ∀ n, Keeps m n x ∨ ∃ t, t ≤ n ∧ (∀ u, u ≤ t → m ≤ x u) ∧ x (t + 1) < m` (`Keeps m n x := ∀ t, t ≤ n + 1 → m ≤ x t`, l. 4308) | 14 (4478–4491) | ac5044d2f 2026-10-21 |
+
+`Optimum.keeps_or_drops` (l. 4496, proof 1 line) and `keeps_or_below` (l. 4510, proof 5 lines), both e0bc2a630 2026-10-21, are already calls of `keeps_or_falls`; they carry no induction and are not duplicates.
+
+Found by search (Nat recursions whose statement is a disjunction or a `Decided`/`WeaklyDecided` of a bounded quantifier, or "not all below, so some below"; 45 + 18 + 21 candidates read as statements, the ones below opened):
+
+| # | Module, line | Statement | Proof lines | Entered |
+|---|---|---|---|---|
+| a14 | `HistoryIdeals` 461 | `theorem least_true_or_below (s : Nat → Bool) : ∀ n, (∀ m, m < n → s m = false) ∨ ∃ k, (∀ m, m < k → s m = false) ∧ s k = true` | 11 (463–473) | 951dcdcbe 2026-10-19 |
+| a15 | `Horizon` 378 | `theorem false_below_or_true (s : Nat → Bool) : ∀ h, (∀ t, t < h → s t = false) ∨ ∃ t, s t = true` | 11 (379–389) | 173204087 2026-10-16 |
+| a16 | `Undecided` 596 | `theorem some_undecided_or_none (w : Nat → Value) : ∀ N, (∃ i, i < N ∧ w i = u) ∨ ∀ i, i < N → (w i).decided = true` | 16 (598–613) | 698ef803c 2026-10-19 |
+| a17 | `Reproduction` 353 | `theorem search {P : Nat → Prop} (dec : ∀ t, Decidable (P t)) : ∀ T, ¬ (∀ t, t < T → ¬ P t) → ∃ t, t < T ∧ P t` | 10 (355–364) | af9488b43 2026-10-20 |
+| a18 | `Frequency` 988 | `theorem decide_rows (R : Nat → Nat → Bool) (lpo : LPO) : ∀ N, (∀ n, n ≤ N → ∃ m, R n m = true) ∨ ∃ n, ∀ m, R n m = false` | 11 (990–1000) | f42e8653b 2026-10-16 |
+| a19 | `Decidedness` 148 | `theorem Decided.exists_below {P : Nat → Prop} {M : Nat} : ∀ {U : Nat}, (∀ t, M ≤ t → t < U → Decided (P t)) → Decided (∃ t, M ≤ t ∧ t < U ∧ P t)` | 13 (150–162) | 9f588b568 2026-10-12 |
+| a20 | `Presence` 618 | `theorem weakly_exists_below {P : Nat → Prop} : ∀ {U : Nat}, (∀ t, t < U → WeaklyDecided (P t)) → WeaklyDecided (∃ t, t < U ∧ P t)` | 11 (620–630) | 34e8f9185 2026-10-28 |
+| a21 | `Likeness` 1722 | `theorem FirstAt.of_holds {α : Nat → Prop} (decided : ∀ k, Decided (α k)) : ∀ N k, k < N → α k → ∃ i, FirstAt α i` (`FirstAt α k := α k ∧ ¬ ∃ t, 0 ≤ t ∧ t < k ∧ α t`) | 6 (1724–1729) | a83bf5501 2026-10-16 |
+
+a14 and a15 are one proof term but for one tuple field (`.inr ⟨n, below, e⟩` against `.inr ⟨h, e⟩`), in two modules of which one (`HistoryIdeals`) imports the other (`Horizon`) directly.
+
+All 21 are before 22 November. **M4 does not hold.**
+
+### Family (b): the same over a list
+
+**OPENED.**
+
+| # | Module, line | Statement | Proof lines | Entered |
+|---|---|---|---|---|
+| b0 | `PredicateIteration` 60 | `theorem gather_listed {D : A → Prop} {G : Prop} : ∀ (members : List A), (∀ a, a ∈ members → (D a → G) → G) → ((∀ a, a ∈ members → D a) → G) → G` | 6 (62–67) | 4135a134b **2026-11-22** |
+| b1 | `Undecided` 381 | `theorem each_or_some {A B : X → Prop} : ∀ {l : List X}, (∀ x, x ∈ l → A x ∨ B x) → (∀ x, x ∈ l → A x) ∨ ∃ x, x ∈ l ∧ B x` | 7 (383–389) | 698ef803c 2026-10-19 |
+| b2 | `GrammarLaws` 2229 | `theorem GrammarLaws.found_or_all {A : Prop} {B : α → Prop} : ∀ {D : List α}, (∀ x, x ∈ D → A ∨ B x) → A ∨ ∀ x, x ∈ D → B x` | 8 (2231–2238) | f3feb401b 2026-11-01 |
+| b3 | `Population` 180 | `theorem search {p : α → Prop} [decide : ∀ a, Decidable (p a)] : ∀ l : List α, (∃ a, a ∈ l ∧ ¬ p a) ∨ ∀ a, a ∈ l → p a` | 8 (182–189) | 6106b6515 2026-10-09 |
+| b4 | `Centers` 140 | `theorem search {p : F → Prop} (decided : ∀ x, Decidable (p x)) : ∀ xs : List F, (∃ x, x ∈ xs ∧ p x) ∨ (∀ x, x ∈ xs → ¬ p x)` | 8 (142–149) | 7d05030b2 2026-10-22 |
+| b5 | `LineOnAStock` 242 | `theorem line_or_none {S : U → Prop} [DecidablePred S] : ∀ w : List U, (∀ u, u ∈ w → ¬ S u) ∨ ∃ u, u ∈ w ∧ S u` | 8 (244–251) | a54163054 2026-11-16 |
+| b6 | `LineOnAStock` 254 | `theorem met_or_unmet (need : U → Nat) (z : Nat) : ∀ w : List U, (∀ u, u ∈ w → need u ≤ z) ∨ ∃ u, u ∈ w ∧ z < need u` | 8 (256–263) | a54163054 2026-11-16 |
+| b7 | `RelativePosition` 155 | `theorem below_somewhere_or_not (f g : P → Nat) : ∀ ps : List P, (∃ q, q ∈ ps ∧ g q < f q) ∨ ∀ q, q ∈ ps → f q ≤ g q` | 8 (157–164) | 51ccc3d7d 2026-10-19 |
+| b8 | `WideningOnTheMap` 237 | `theorem new_in_list_or_none (dec : ∀ n x, Q n x ∨ ¬ Q n x) (n : Nat) : ∀ l : List X, (∃ x, x ∈ l ∧ Q (n + 1) x ∧ ¬ Q n x) ∨ ∀ x, x ∈ l → Q (n + 1) x → Q n x` | 13 (239–251) | 669dab92b 2026-10-30 |
+| b9 | `Arising` 130 | `theorem rises_or_still (t : Nat) : ∀ cs : List C, (∃ c, c ∈ cs ∧ W.Rises t c) ∨ W.Still cs t` (`Still cs t := ∀ c, c ∈ cs → ¬ W.Rises t c`; `Rises t c := W.level t c < W.level (t + 1) c`) | 8 (131–138) | e936f8ee6 2026-10-20 |
+| b10 | `Readout` 175 | `theorem commonWitness_or_covered (a b : List D) : ∀ roster : List D, CommonWitness roster a b ∨ ∀ d ∈ roster, ¬ d ∈ b → d ∈ a` (`CommonWitness roster a b := ∃ d, d ∈ roster ∧ ¬ d ∈ a ∧ ¬ d ∈ b`) | 11 (177–187) | 18ae24ed0 2026-10-14 |
+| b11 | `Decidedness` 136 | `theorem Decided.exists_mem {β : Type} {P : β → Prop} : ∀ {l : List β}, (∀ b, b ∈ l → Decided (P b)) → Decided (∃ b, b ∈ l ∧ P b)` | 8 (138–145) | 9f588b568 2026-10-12 |
+| b12 | `Decidedness` 1049 | `theorem Decided.exists_listed {β : Type u} {P : β → Prop} : ∀ {l : List β}, (∀ b, b ∈ l → Decided (P b)) → Decided (∃ b, b ∈ l ∧ P b)` | 8 (1051–1058) | 831fcaf73 2026-10-19 |
+| b13 | `Prelude` 718 | `theorem not_not_all {P : β → Prop} : ∀ {E : List β}, (∀ b, b ∈ E → ¬ ¬ P b) → ¬ ¬ ∀ b, b ∈ E → P b` | 7 (720–726) | e5951932b 2026-11-01 |
+| b14 | `Refinement` 77 | `theorem not_not_within {P : X → Prop} (each : ∀ x, ¬ ¬ P x) : ∀ l : List X, ¬ ¬ ∀ x, x ∈ l → P x` | 5 (79–83) | cb1d433a1 2026-10-15 |
+
+b11 and b12 are the same statement and the same eight proof lines in one module, differing only in `Type` against `Type u` (b12's docstring says so: "`Decided.exists_mem` for types of every universe").
+
+Already calls, no induction of their own (OPENED): `Decidedness.Decided.exists_not_in` l. 1067 (4 lines); `Likeness.Decided.exists_of_listed` l. 413, `forall_of_listed` l. 421, `exists_not_of_listed` l. 429 (3 lines each, f3218d788 2026-10-14), `Decided.forall_in` l. 1804 (3 lines). They are calls of `Decided.exists_listed`. Not members. (The four each repeat the step `(decided b).of_not_not fun fails => absent ⟨b, fails⟩`; each would be one line shorter over `each_or_some`, which gives the `∀` directly. A gain of a line each: M2, not proposed.)
+
+**Sub-family (b′): membership in a list is decided** (OPENED):
+
+| # | Module, line | Statement | Proof lines | Entered |
+|---|---|---|---|---|
+| m0 | `Dissipation` 173 | `def decideMem [DecidableEq α] (a : α) : (l : List α) → Decidable (a ∈ l)` | 8 | eb700342e 2026-10-09 |
+| m1 | `Contacts` 54 | `theorem mem_or_not (i : I) : ∀ l : List I, i ∈ l ∨ i ∉ l` (under `variable {I : Type} [DecidableEq I]`, l. 46) | 10 (55–64) | f7fffe761 2026-10-14 |
+| m2 | `InAmounts` 1088 | `theorem decide_mem (h : Bool) : ∀ ds : List Bool, h ∈ ds ∨ ¬ h ∈ ds` | 8 (1089–1096) | 4b6693ad3 2026-10-21 |
+| m3 | `Listing` 259 | `def decideIn (a : α) : (l : List α) → (∀ b, b ∈ l → Decidable (a = b)) → Decidable (a ∈ l)` | 8 | cfee6329e 2026-10-13 |
+| m4 | `Premises` 680 | `theorem fuel_mem_or : ∀ cs : List Relatum, Relatum.fuel ∈ cs ∨ ¬ Relatum.fuel ∈ cs` | 8 | e5b619372 2026-10-09 |
+
+**Sub-family (b″): `Decidable`-valued search over a list** (OPENED): `Population.decideSome` l. 192 (`def decideSome {p : α → Prop} [decide : ∀ a, Decidable (p a)] : ∀ l : List α, Decidable (∃ a, a ∈ l ∧ p a)`, 8 lines, b24963f19 2026-10-09) and `Learning.decideSeen` l. 842 (`def decideSeen [DecidableEq K] (π : I → K) (x : I) : (data : List I) → Decidable (∃ d, d ∈ data ∧ π d = π x)`, 12 lines, 9087ad082 2026-10-12). `Weightings.decSomeEq` l. 2244 and `decSomeFalls` l. 2252 are already calls of `decideSome`.
+
+`Prelude.exists_pairs_over` l. 812 and "`ListTests`' lemmas of that kind": see Q6 (not members). I found no all-or-some induction in the `ListTests` namespace (`Prelude` l. 219–486, 960–1012): its list recursions are Boolean `iff`s (`all_true_iff` l. 279, `any_true_iff` l. 286, `find_none_iff` l. 390), a different statement.
+
+---
+
+## Q2. The one statement
+
+### (a)
+
+**OPENED** for what the members need; the statement itself is on paper.
+
+No existing member has all the others as cases:
+- The instance forms (a2, a3, a8, a17 with its explicit `dec`) cannot serve the hypothesis forms (a1, a4, a12): a `Decidable` instance cannot be made from a `p ∨ ¬ p` in `Prop`. The other way is one term: `Decidable.em (p : Prop) [Decidable p] : p ∨ ¬ p` (core; proved by `byCases`, no axiom: TOLD for core, not run here; OPENED that the package already uses it 30 times in 8 modules, e.g. `LastChange` l. 169, `LineOnAStock` l. 245, so the no-axiom state already holds with it).
+- One predicate (`P t ∨ ¬ P t`) cannot serve a1 (`P t ∨ Q t`, `Q` not `¬ P`), a5 (`m ≤ h j` against `h j < m`) or a18 (LPO gives `∃ … = true` against `∀ … = false`) without a further bridge; two predicates serve the one-predicate members at `Q := fun t => ¬ P t`.
+- Without the first failing step, a1, a8, a13, a14 and a21 are not cases. With it, the others drop the last component.
+- The `≤ n` form (a1 as it stands) gives a `< N` member only through a case split on `N` (0, successor): two more lines for each of twelve members. The `< n` form gives the `≤ n` members at `n + 1` with `Nat.lt_succ_of_le` / `Nat.le_of_lt_succ`: no split.
+- From 0, not from an offset: 16 members are from 0 (two of them with the offset inside the predicate, a6, a7); 4 have `S ≤ t ∧ t < S + n` (a4, a9, a11) or `M ≤ t ∧ t < U` (a19). An offset statement would cost every 0-based call a `0 + n` rewrite.
+- A hypothesis decided only below the bound: a19 and a20 have it, and their callers use the bound (`ReorderingGrowth` l. 281 and l. 313 use `kj`; `Decidedness` l. 761 uses `lo`, `hi`). It costs the global-hypothesis members `fun t _ => decided t` and nothing else.
+
+So, on paper, in `Prelude` (namespace `Becoming`):
+
+```lean
+theorem first_below {P Q : Nat → Prop} :
+    ∀ n, (∀ t, t < n → P t ∨ Q t) →
+      (∀ t, t < n → P t) ∨ ∃ m, m < n ∧ Q m ∧ ∀ t, t < m → P t
+  | 0, _ => .inl fun _ lt => absurd lt (Nat.not_lt_zero _)
+  | n + 1, decided =>
+    match first_below n fun t lt => decided t (Nat.lt_succ_of_lt lt) with
+    | .inr ⟨m, lt, fails, before⟩ => .inr ⟨m, Nat.lt_succ_of_lt lt, fails, before⟩
+    | .inl all => match decided n (Nat.lt_succ_self n) with
+      | .inr fails => .inr ⟨n, Nat.lt_succ_self n, fails, all⟩
+      | .inl holds => .inl fun t lt => match Nat.lt_or_ge t n with
+        | .inl before => all t before
+        | .inr after =>
+          Eq.subst (motive := P) (Nat.le_antisymm (Nat.le_of_lt_succ lt) after).symm holds
+```
+
+3 statement lines, 10 proof lines. Its last three lines are `MoveFormation` l. 596–599 word for word. Every feature is needed by a named member (M5 does not hold): two predicates by a1, a5, a18; the first by a1, a8, a13, a14, a21; the bounded hypothesis by a19, a20. If the bounded hypothesis is thought one feature too many, drop it and leave a19 and a20 as they are (24 lines stay).
+
+The calls. Each keeps the member's statement word for word, with `fun n => …` after the unchanged `: ∀ n, …`. Checked by hand against both statements; **unbuilt**.
+
+- **a1** `first_of_decided`. Statement unchanged: yes. 3 lines.
+  ```lean
+    fun n => (first_below (n + 1) fun t _ => decided t).imp
+      (fun all t le => all t (Nat.lt_succ_of_le le))
+      fun ⟨m, lt, fails, before⟩ => ⟨m, Nat.le_of_lt_succ lt, fails, before⟩
+  ```
+  `≤ n` against `< n + 1` on both sides; `∀ t, t < m → P t` unchanged.
+- **a2** `upto_or_fails`. Unchanged: yes. 3 lines. Instance to disjunction by `Decidable.em`.
+  ```lean
+    fun N => (first_below (P := p) (Q := fun n => ¬ p n) (N + 1) fun n _ => Decidable.em (p n)).imp
+      (fun all n le => all n (Nat.lt_succ_of_le le))
+      fun ⟨n, lt, fails, _⟩ => ⟨n, Nat.le_of_lt_succ lt, fails⟩
+  ```
+- **a3** `throughout_or_fails`. Unchanged: yes. 2 lines.
+  ```lean
+    fun N => (first_below (P := p) (Q := fun n => ¬ p n) N fun n _ => Decidable.em (p n)).imp id
+      fun ⟨n, lt, fails, _⟩ => ⟨n, lt, fails⟩
+  ```
+- **a4** `unmarked_or_marked`. Unchanged: yes. 6 lines (the offset bridge is 3 of them: `le_dest` and `Naturals.lt_of_add_lt_add_left`, both `Prelude`, l. 55 and l. 934).
+  ```lean
+    fun n => match first_below (P := fun j => P (S + j)) (Q := fun j => ¬ P (S + j)) n
+        fun j _ => decide (S + j) with
+      | .inr ⟨j, lt, unmarked, _⟩ =>
+        .inl ⟨S + j, Nat.le_add_right S j, Nat.add_lt_add_left lt S, unmarked⟩
+      | .inl marked => .inr fun t from_ below => match le_dest from_ with
+        | ⟨j, at_⟩ => Eq.subst (motive := P) at_.symm (marked j (Naturals.lt_of_add_lt_add_left
+            (Eq.subst (motive := fun x => x < S + n) at_ below)))
+  ```
+- **a5** `all_or_below`. Unchanged: yes. 2 lines. Two predicates used as given; no instance.
+  ```lean
+    fun N => (first_below (P := fun j => m ≤ h j) (Q := fun j => h j < m) N
+      fun j _ => (Nat.lt_or_ge (h j) m).symm).imp id fun ⟨j, below, low, _⟩ => ⟨j, below, low⟩
+  ```
+  (`Nat.lt_or_ge a b : a < b ∨ a ≥ b`; `a ≥ b` unfolds to `b ≤ a`.)
+- **a6** `read_or_unread`. Unchanged: yes. 3 lines. The offset is inside the predicate; `id` at `Unread` by unfolding the definition.
+  ```lean
+    fun k => (first_below (P := fun j => s (T + j) ≠ x) (Q := fun j => s (T + j) = x) k
+      fun j _ => (Decidable.em (s (T + j) = x)).symm).symm.imp
+        (fun ⟨j, lt, read, _⟩ => ⟨j, lt, read⟩) id
+  ```
+- **a7** `decided_within`. Unchanged: yes. 3 lines.
+  ```lean
+    fun n => (first_below (P := fun k => r.state (T + k + 1) = r.state (T + k))
+      (Q := fun k => r.state (T + k + 1) ≠ r.state (T + k)) n fun _ _ => Decidable.em _).symm.imp
+        (fun ⟨k, lt, ne, _⟩ => ⟨k, lt, ne⟩) id
+  ```
+- **a8** `first_or_nowhere`. Unchanged: yes. 1 line. It is the statement itself at `P := ¬ P`, `Q := P`.
+  ```lean
+    fun n => first_below (P := fun i => ¬ P i) (Q := P) n fun i _ => (Decidable.em (P i)).symm
+  ```
+- **a9** `Stock.search`. Unchanged: yes. 2 lines, as a call of a4 (`Stock` imports `Amounts`; no new statement needed for this one).
+  ```lean
+    fun L => (Amounts.unmarked_or_marked (P := fun n => g n = 0) (fun n => Decidable.em (g n = 0))
+      N L).imp (fun ⟨n, le, lt, ne⟩ => ⟨n, le, lt, Nat.pos_of_ne_zero ne⟩) id
+  ```
+- **a10** `changed_or_none`. Unchanged: yes. 7 lines (4 are the step's decision).
+  ```lean
+    fun t => (first_below (P := fun s => G.raisedAt s = 0 ∧ G.loweredAt s = 0)
+      (Q := fun s => 0 < G.raisedAt s ∨ 0 < G.loweredAt s) t fun s _ =>
+        match Nat.eq_zero_or_pos (G.raisedAt s), Nat.eq_zero_or_pos (G.loweredAt s) with
+        | .inl up, .inl down => .inl ⟨up, down⟩
+        | .inr up, _ => .inr (.inl up)
+        | _, .inr down => .inr (.inr down)).imp id fun ⟨s, lt, changed, _⟩ => ⟨s, lt, changed⟩
+  ```
+- **a11** `GrammarLaws.stage_search`. A case in statement; as a call 12 lines against 13: the step's decision is itself a search of a list by the count `«计»` (5 lines, kept as they are) and the offset bridge is 4. **M2 holds: leave it.**
+- **a12** `searchBelow_or`. Unchanged: yes. 2 lines.
+  ```lean
+    fun n => (first_below (P := fun z => ¬ p z) (Q := p) n fun z _ => (decided z).symm).symm.imp
+      (fun ⟨z, below, holds, _⟩ => ⟨z, below, holds⟩) fun none ⟨z, below, holds⟩ => none z below holds
+  ```
+  It is also a 3-line call of the existing a19 at `M := 0` (`CausalGrowth` imports `Decidedness`): the extra `0 ≤ t` is discharged by `Nat.zero_le`.
+  ```lean
+    fun n => match Decided.exists_below (P := p) (M := 0) (U := n) fun z _ _ => decided z with
+      | .inl ⟨z, _, below, holds⟩ => .inl ⟨z, below, holds⟩
+      | .inr absent => .inr fun ⟨z, below, holds⟩ => absent ⟨z, Nat.zero_le z, below, holds⟩
+  ```
+- **a13** `keeps_or_falls`. Unchanged: yes. 6 lines. Uses the first: `∀ u, u ≤ t → m ≤ x u` is "`P` before the first failing step"; the first failing step is not 0 by `start`.
+  ```lean
+    fun n => match first_below (P := fun u => m ≤ x u) (Q := fun u => x u < m) (n + 1 + 1)
+        fun u _ => (Nat.lt_or_ge (x u) m).symm with
+      | .inl all => .inl fun t le => all t (Nat.lt_succ_of_le le)
+      | .inr ⟨0, _, lt, _⟩ => absurd start (Nat.not_le_of_gt lt)
+      | .inr ⟨t + 1, below, lt, before⟩ => .inr ⟨t, Nat.le_of_lt_succ (Nat.lt_of_succ_lt_succ below),
+          fun u le => before u (Nat.lt_succ_of_le le), lt⟩
+  ```
+- **a14** `least_true_or_below`. Unchanged: yes. 2 lines, and **with no new statement**: it is a case of `Change.Clear.or_first` (l. 392) through `Clear.false_before` (l. 387); `HistoryIdeals` imports `Change` directly.
+  ```lean
+    fun n => (Clear.or_first s n).imp (fun c m lt => Clear.false_before s c lt)
+      fun ⟨k, _, c, yes⟩ => ⟨k, fun m lt => Clear.false_before s c lt, yes⟩
+  ```
+- **a15** `false_below_or_true`. Unchanged: yes. 4 lines (`Horizon` does not import `Change`, so the Boolean case is inline).
+  ```lean
+    fun h => (first_below (P := fun t => s t = false) (Q := fun t => s t = true) h
+      fun t _ => match e : s t with
+        | false => .inl e
+        | true => .inr e).imp id fun ⟨t, _, yes, _⟩ => ⟨t, yes⟩
+  ```
+- **a16** `some_undecided_or_none`. Unchanged: yes. 5 lines against 16. Unbuilt risk: the `match w i with` must abstract `w i` in the expected type.
+  ```lean
+    fun N => (first_below (P := fun i => (w i).decided = true) (Q := fun i => w i = u) N
+      fun i _ => match w i with
+        | .u => .inr rfl
+        | .t => .inl rfl
+        | .f => .inl rfl).symm.imp (fun ⟨i, lt, at_u, _⟩ => ⟨i, lt, at_u⟩) id
+  ```
+- **a17** `Reproduction.search`. Unchanged: yes. 4 lines. `dec` is an explicit function, so `@Decidable.em (P t) (dec t)`.
+  ```lean
+    fun T not_all => match first_below (P := fun t => ¬ P t) (Q := P) T
+        fun t _ => (@Decidable.em (P t) (dec t)).symm with
+      | .inl all => absurd all not_all
+      | .inr ⟨t, lt, holds, _⟩ => ⟨t, lt, holds⟩
+  ```
+- **a18** `decide_rows`. Unchanged: yes. 3 lines. (`LPO := ∀ s : Nat → Bool, (∃ n, s n = true) ∨ ∀ n, s n = false`, `Change` l. 361.)
+  ```lean
+    fun N => (first_below (P := fun n => ∃ m, R n m = true) (Q := fun n => ∀ m, R n m = false) (N + 1)
+      fun n _ => lpo (R n)).imp (fun all n le => all n (Nat.lt_succ_of_le le))
+        fun ⟨n, _, nowhere, _⟩ => ⟨n, nowhere⟩
+  ```
+- **a19** `Decided.exists_below`. Unchanged: yes. 7 lines against 13. The lower end `M ≤ t` goes into the predicates, so no arithmetic.
+  ```lean
+    fun {U} decided => match first_below (P := fun t => ¬ (M ≤ t ∧ P t)) (Q := fun t => M ≤ t ∧ P t) U
+        fun t below => match Nat.decLe M t with
+          | isTrue from_ => ((decided t from_ below).imp (fun holds => ⟨from_, holds⟩)
+              fun fails both => fails both.2).symm
+          | isFalse early => .inl fun both => early both.1 with
+      | .inr ⟨t, below, ⟨from_, holds⟩, _⟩ => .inl ⟨t, from_, below, holds⟩
+      | .inl none => .inr fun ⟨t, from_, below, holds⟩ => none t below ⟨from_, holds⟩
+  ```
+- **a20** `weakly_exists_below`. Unchanged: yes. 3 lines. `WeaklyDecided p := ¬ p ∨ ¬ ¬ p` (`Decidedness` l. 912) is `P t ∨ Q t` at `P := ¬ P`, `Q := ¬ ¬ P`.
+  ```lean
+    fun {U} weakly => match first_below (P := fun t => ¬ P t) (Q := fun t => ¬ ¬ P t) U weakly with
+      | .inl none => .inl fun ⟨t, below, holds⟩ => none t below holds
+      | .inr ⟨t, below, unrefuted, _⟩ => .inr fun absent => unrefuted fun holds => absent ⟨t, below, holds⟩
+  ```
+- **a21** `FirstAt.of_holds`. Unchanged: yes. 4 lines against 6, and its recursion on `N` goes: `N` and `k < N` are fuel only (both callers, `Likeness` l. 1782 and l. 1785, pass `(k + 1) k (Nat.lt_succ_self k)`).
+  ```lean
+    fun _ k _ holds => match first_below (P := fun t => ¬ α t) (Q := α) (k + 1)
+        fun t _ => (decided t).symm with
+      | .inl none => absurd holds (none k (Nat.lt_succ_self k))
+      | .inr ⟨i, _, first, before⟩ => ⟨i, first, fun ⟨t, _, below, earlier⟩ => before t below earlier⟩
+  ```
+
+**Is (a) a case of (b) over a list of the steps below a bound?** OPENED. No, not to any gain.
+- The index lists that exist: `steps T N` (`Prelude` l. 765; `between_of_mem_steps` l. 852 in `Prelude`, the converse `mem_steps` only in `HistorySums` l. 635); `Undecided.upto n` (`Prelude` l. 777; `mem_upto` l. 1331 gives `i < n → i ∈ upto n`; the converse was not found anywhere); `downFrom K` for `≤ K` (`Prelude` l. 1312, both directions l. 1316 and l. 1323); `finBelow` (`Likeness` l. 1422, a list of `Fin n`, with `mem_finBelow` l. 1430; closure 36, not below the members).
+- The package does this once: `Undecided.steady_or_rises` l. 478 calls `each_or_some (l := upto N)` and leaves the `∃` side as `i ∈ upto N` because there is no converse.
+- A bridge needs both directions of membership (the `∀` side needs `t < n → t ∈ list`, the `∃` side `t ∈ list → t < n`), so 2 to 3 lines a call, the same as a direct call of `first_below`; and a missing converse lemma (about 5 lines) or `finBelow` and `mem_finBelow` moved into `Prelude` (8 lines).
+- A list gives any witness, not the first; `Interleavings.split_first` (l. 135) has a first for a Boolean test as a split `L = A ++ f :: B`, which says nothing of numeric order without more bridge. a1, a8, a13, a14, a21 need the first.
+- The direct lemma is 10 proof lines. The bridge is not shorter and gives less.
+
+### (b)
+
+**OPENED.** The one statement exists: `gather_listed` (b0). Every other member is a call of it; `each_or_some` (b1) is its first case and the readable form for the plain disjunctions.
+
+- **b1** `each_or_some`. Unchanged: yes. 2 lines.
+  ```lean
+    fun {l} each => gather_listed (D := A) l
+      (fun x mem k => (each x mem).elim k fun b => .inr ⟨x, mem, b⟩) Or.inl
+  ```
+  (`G` is the conclusion; `k : A x → G`.)
+- **b2** `found_or_all`. Unchanged: yes. 1 line.
+  ```lean
+    fun {D} each => gather_listed (D := B) D (fun x mem k => (each x mem).elim Or.inl k) Or.inr
+  ```
+- **b3** `Population.search`. Unchanged: yes. 2 lines.
+  ```lean
+    fun l => gather_listed (D := p) l
+      (fun a mem k => (Decidable.em (p a)).elim k fun lacks => .inl ⟨a, mem, lacks⟩) Or.inr
+  ```
+- **b4** `Centers.search`. Unchanged: yes. 2 lines.
+  ```lean
+    fun xs => gather_listed (D := fun x => ¬ p x) xs (fun x mem k =>
+      (@Decidable.em (p x) (decided x)).elim (fun holds => .inl ⟨x, mem, holds⟩) k) Or.inr
+  ```
+- **b5** `line_or_none`. Unchanged: yes. 2 lines.
+  ```lean
+    fun w => gather_listed (D := fun u => ¬ S u) w
+      (fun u mem k => (Decidable.em (S u)).elim (fun su => .inr ⟨u, mem, su⟩) k) Or.inl
+  ```
+- **b6** `met_or_unmet`. Unchanged: yes. 2 lines.
+  ```lean
+    fun w => gather_listed (D := fun u => need u ≤ z) w
+      (fun u mem k => (Nat.lt_or_ge z (need u)).elim (fun lt => .inr ⟨u, mem, lt⟩) k) Or.inl
+  ```
+- **b7** `below_somewhere_or_not`. Unchanged: yes. 2 lines.
+  ```lean
+    fun ps => gather_listed (D := fun q => f q ≤ g q) ps
+      (fun q mem k => (Nat.lt_or_ge (g q) (f q)).elim (fun lt => .inl ⟨q, mem, lt⟩) k) Or.inr
+  ```
+- **b8** `new_in_list_or_none`. Unchanged: yes. 5 lines against 13.
+  ```lean
+    fun l => gather_listed (D := fun x => Q (n + 1) x → Q n x) l
+      (fun x mem k => match dec (n + 1) x, dec n x with
+        | _, .inl earlier => k fun _ => earlier
+        | .inr absent, _ => k fun held => absurd held absent
+        | .inl held, .inr before => .inl ⟨x, mem, held, before⟩) Or.inr
+  ```
+- **b9** `rises_or_still`. Unchanged: yes. 3 lines. (`Decidable.em` at the unfolded `W.level t c < W.level (t + 1) c`; `Rises` and `Still` by unfolding.)
+  ```lean
+    fun cs => gather_listed (D := fun c => ¬ W.Rises t c) cs
+      (fun c mem k => (Decidable.em (W.level t c < W.level (t + 1) c)).elim
+        (fun rises => .inl ⟨c, mem, rises⟩) k) Or.inr
+  ```
+- **b10** `commonWitness_or_covered`. Unchanged: yes. 5 lines against 11.
+  ```lean
+    fun roster => gather_listed (D := fun d => ¬ d ∈ b → d ∈ a) roster
+      (fun d mem k => match decideMem d a, decideMem d b with
+        | .isTrue inA, _ => k fun _ => inA
+        | .isFalse _, .isTrue inB => k fun nb => absurd inB nb
+        | .isFalse na, .isFalse nb => .inl ⟨d, mem, na, nb⟩) Or.inr
+  ```
+- **b12** `Decided.exists_listed`. Unchanged: yes. 3 lines.
+  ```lean
+    fun {l} decided => gather_listed (D := fun b => ¬ P b) l
+      (fun b mem k => Or.elim (decided b mem) (fun holds => .inl ⟨b, mem, holds⟩) k)
+      fun none => .inr fun ⟨b, mem, holds⟩ => none b mem holds
+  ```
+- **b11** `Decided.exists_mem`. Unchanged: yes. 1 line, `fun decided => Decided.exists_listed decided`, **with no new statement and no import**; it needs b12 to stand before it in the file (b12 is at l. 1049, b11 at l. 136).
+- **b13** `not_not_all`. Unchanged: yes. 1 line: `fun {E} each => gather_listed (D := P) (G := False) E each` (`¬ ¬ X` is `(X → False) → False`). `PredicateIteration`'s own docstring at l. 59 says this. It needs `gather_listed` in `Prelude` before it.
+- **b14** `not_not_within`. Unchanged: yes. 1 line, **no new statement, no import**: `fun l => not_not_all (E := l) fun x _ => each x`.
+
+Sub-family (b′), **no new statement, imports present** (`Contacts` and `InAmounts` both have `Dissipation` in their closures):
+- **m1** `Contacts.mem_or_not`: `fun l => @Decidable.em (i ∈ l) (decideMem i l)`. Unchanged: yes. 1 line against 10.
+- **m2** `InAmounts.decide_mem`: `fun ds => @Decidable.em (h ∈ ds) (decideMem h ds)`. Unchanged: yes. 1 line against 8.
+- m3 `Listing.decideIn` is the general one of the two `def`s (decisions only at the members) but sits above m0 (`Listing` closure 27, `Dissipation` 15), and both are data; not proposed.
+
+Sub-family (b″): `Learning.decideSeen` is `decideSome (p := fun d => π d = π x) data` (1 line against 12; `Learning` imports `Population`; both its uses are `match decideSeen … with`, l. 849 and l. 871). It is a `def` in `Type`: the type is unchanged but its unfolding changes, which only a build can clear. `Weightings.decSomeEq` already does exactly this.
+
+---
+
+## Q3. Where it would live
+
+**OPENED** (closures computed by script from the `import Becoming.…` lines of the 409 files).
+
+**(a)**
+- The thirteen seed modules' common closure (each with itself) is `{Prelude, Grammar, GrammarMap, GrammarLaws}`; the highest module all import is **`GrammarLaws`**, which itself holds a member (a11). `Grammar` and `GrammarMap` do not import `Prelude`. So the home below all is **`Prelude`** (imports nothing; every member module has it: the only modules without `Prelude` in their closure are `GrammarTesting`, `GrammarReadings`, `Ideals`, `Grammar`, `MapRegions`, `GrammarMap`, `Segmentation`, `ShownOrder`).
+- `Decidedness` (closure 22) is **not** common: of the seeds, `Novelty`, `MoveFormation`, `Amounts`, `Exhaustion`, `ReadingSchedule`, `LastChange`, `Regulation`, `Stock`, `Founding`, `GrammarLaws` do not import it; only `ReadOffInTime`, `CausalGrowth`, `Optimum` do. `Undecided` (closure 34) is imported by `CausalGrowth` alone of the thirteen.
+- **Is the general statement already in `Prelude`? Not found.** I read the list of all its declarations (1340 lines): the only Nat recursion with a disjunction is `split_at_head` l. 1075 (a pigeonhole step); `le_succ_cases` l. 1043 is a helper. Nor in `GrammarLaws` beyond a11.
+- The nearest that exist: `Amounts.unmarked_or_marked` (a4; `Amounts` closure 4 = `Prelude`, `Grammar`, `GrammarMap`, `GrammarLaws`; in the closure of every member module except `GrammarLaws`), with an offset, one predicate, no first; `Decidedness.Decided.exists_below` (a19); `Regulation.first_or_nowhere` (a8, closure 35); `ReadOffInTime.first_of_decided` (a1, closure 139, near the top).
+- With `first_below` in `Prelude`: **no import added anywhere, no closure changes, no cycle.** No new module-to-module dependency arises either: the link is at the level of theorems.
+
+**(b)**
+- Common closure of the member modules: `{Prelude}`.
+- `gather_listed` is in `PredicateIteration` (imports `Prelude` only; closure 1; 144 of 409 modules have it in their closure; direct importers: `GrammarCandidates`, `Attraction`, `Refinement`, `RisingIteration`, `CommonResponse`, `Tolerance`).
+- Already importing it: `Undecided` (b1), `LineOnAStock` (b5, b6), `WideningOnTheMap` (b8), `Likeness`, `Refinement` (b14). Not importing it: `GrammarLaws` (b2), `Population` (b3), `Centers` (b4), `RelativePosition` (b7), `Arising` (b9), `Readout` (b10), `Decidedness` (b11, b12), `Prelude` (b13).
+- For `Prelude` (b13) an import of `PredicateIteration` is a **cycle**. For the other seven it adds exactly one module to the closure; through `GrammarLaws` that one module reaches every module above it not already having it (at most 409 − 22 − 144 = 243 closures grow by one).
+- Moving `gather_listed` (2 + 6 lines and its docstring) into `Prelude` beside `not_not_all`: zero closure change for every module, no cycle, `PredicateIteration` and `GuardHorizon` l. 329 keep calling it by the same name. It is of 22 November, row FM's own landing.
+
+---
+
+## Q4. The ledger
+
+**OPENED** for the lines now; the lines as calls are counts of the terms written above (unbuilt).
+
+**(a)**, the 20 that gain (a11 left out, M2):
+
+| | now | as call |
+|---|---|---|
+| a1 13, a2 10, a3 12, a4 10, a5 11, a6 8, a7 9, a8 7, a9 12, a10 11, a12 9, a13 14 | 126 | 3+3+2+6+2+3+3+1+2+7+2+6 = 40 |
+| a14 11, a15 11, a16 16, a17 10, a18 11, a19 13, a20 11 | 83 | 2+4+5+4+3+7+3 = 28 |
+| a21 6 | 6 | 4 |
+| `first_below`, counted once (3 + 10) | | 13 |
+| **Total** | **215** | **85** |
+
+Difference: about **130 lines**. Bridges are inside the counts (the offset bridge in a4, the step decisions in a10, a15, a16, a19). For the twelve seeds alone: 126 against 40 + 13 = 53, difference 73. With a11 as a call too it would be 228 against 97: one line gained for a harder proof to read.
+
+Without any new statement (a9 over a4, a12 over a19, a14 over `Clear.or_first`): 32 lines become 7.
+
+**(b)**
+
+| | now | as call |
+|---|---|---|
+| b1 7, b2 8, b3 8, b4 8, b5 8, b6 8, b7 8, b8 13, b9 8, b10 11, b11 8, b12 8, b13 7, b14 5 | 115 | 2+1+2+2+2+2+2+5+3+5+1+3+1+1 = 32 |
+| `gather_listed` (exists; 2 + 6, moved not added) | | 0 new |
+| **Total** | **115** | **32** |
+
+Difference: **83 lines**, no bridge lemma. (b′): m1 10 + m2 8 = 18 become 2. (b″): 12 become 1, pending a build.
+
+---
+
+## Q5. Rank
+
+**OPENED** for the counts; the ranking is my judgement of them.
+
+0. **The joins that need no new statement and no import change** (do first; each stands alone):
+   `HistoryIdeals.least_true_or_below` over `Change.Clear.or_first` (11 → 2); `Stock.search` over `Amounts.unmarked_or_marked` (12 → 2); `CausalGrowth.searchBelow_or` over `Decided.exists_below` (9 → 3); `Refinement.not_not_within` over `Prelude.not_not_all` (5 → 1); `Decided.exists_mem` over `Decided.exists_listed`, same module, a reorder (8 → 1); `Undecided.each_or_some` (7 → 2), `LineOnAStock.line_or_none` and `met_or_unmet` (16 → 4), `WideningOnTheMap.new_in_list_or_none` (13 → 5) over `gather_listed`, already in their closures; `Contacts.mem_or_not` and `InAmounts.decide_mem` over `Dissipation.decideMem` (18 → 2). **99 lines become 22; eleven theorems, all older than 22 November, become calls; one of them (`Stock.search`) makes `Stock` name `Amounts`, one (`least_true_or_below`) makes `HistoryIdeals` name `Change`'s `Clear`, one (`searchBelow_or`) makes `CausalGrowth` name `Decidedness`: links between modules that already import one another but do not yet call one another for this.** None of M1 to M5.
+
+1. **Family (a) over `first_below` in `Prelude`.** 20 members older than 22 November made calls; about 130 lines removed; one new 13-line statement; no import change. A premise that falls away: `Likeness.FirstAt.of_holds` carries `N` and `k < N` only as fuel for its recursion (the statement would keep them if it is to stay unchanged; a later step could drop them and simplify its two callers). `Reproduction.search`, `Horizon.false_below_or_true`, `Frequency.decide_rows` are shown to be the same search as `Regulation.first_or_nowhere` with the first forgotten. M1: no. M2: only for a11 (`stage_search`, left) and for `Change.Clear.or_first` (Q6). M3: no. M4: no. M5: no, with the bounded hypothesis the one feature to weigh (two members need it).
+
+2. **Family (b) in full over `gather_listed` moved to `Prelude`.** Beyond rank 0: `GrammarLaws.found_or_all`, `Population.search`, `Centers.search`, `RelativePosition.below_somewhere_or_not`, `Arising.rises_or_still`, `Readout.commonWitness_or_covered`, `Decided.exists_listed`, `Prelude.not_not_all`: 66 lines become 19. No premise falls away. With rank 0 this makes the 22 November statement carry fourteen October and November results (b11 through b12, b14 through b13), which is the kind of join the row wants; the cost is a move of 8 lines between two modules. M3 would hold if it were done by imports instead of the move (a cycle at `Prelude`).
+
+3. **(b″)** `Learning.decideSeen` over `Population.decideSome`: 12 → 1, a `def`; only after a build.
+
+Neither family gives a new formal link between regions of the map: both are below the map, in the logic of bounded search. What a build would gain is fewer lines and one name where there are twenty.
+
+---
+
+## Q6. What is not a duplicate though it looks like one
+
+**OPENED** unless marked.
+
+1. **`CausalGrowth.searchBelow`** (l. 168, `def searchBelow (p : Nat → Prop) [DecidablePred p] : (n : Nat) → Decidable (∃ z, z < n ∧ p z)`), and with it `Population.decideSome`, `Dissipation.decideMem`, `Listing.decideIn`. Same recursion as (a) and (b), but the result is data in `Type`. A `Decidable` cannot be made from the `Prop` statement, and the `Prop` statement from the `def` serves only the instance-form members. M1. `searchBelow_or` stands beside `searchBelow` for exactly this reason.
+2. **`Change.Clear.or_first`** (l. 392, `∀ n, clear s n = true ∨ ∃ m, m < n ∧ clear s m = true ∧ s m = true`). It says a14's content through the computed Boolean `clear`; its induction is 6 lines and needs no case on the last step. As a call of `first_below` it would need `(∀ t, t < n → s t = false) → clear s n = true`, which was not found in what I read (only the other direction, `false_before` l. 387). M2. It is the general statement for a14, not a case.
+3. **`Locality.rises_or_le`** (l. 87, `∀ n, r (N + n) ≤ r N ∨ ∃ s, N ≤ s ∧ r s < r (s + 1)`). The left side is not "at every step" but its telescoped consequence; a call would need a second induction for that. 6 lines now. M1/M2.
+4. **`GrammarLaws.stage_search`** (a11): a case, not shorter. M2 (above).
+5. **`Prelude.exists_pairs_over`** (l. 812, `(∀ a, a ∈ l → ∃ b, Q a b) → ∃ D : List (α × β), D.map Prod.fst = l ∧ ∀ x, x ∈ D → Q x.1 x.2`). A recursion on a list that builds a list of witnesses (a finite choice), not all-or-some. Through `gather_listed` its `finish` argument would be the theorem itself. M1.
+6. **`Interleavings.split_first`** (l. 135): the first member passing a Boolean test, as a split of the list. Alone of its kind; `gather_listed` gives no first. Not a family.
+7. **`Premises.fuel_mem_or`** (l. 680): looks like m1 and m2, but its `Relatum` has no `DecidableEq` (no `deriving` in `Premises.lean`), so `decideMem` does not apply without adding an instance. M1 as it stands.
+8. **`Frequency.decide_rows`** is the other way round: it looks special (LPO) and is a plain case (a18).
+
+**Met in passing, for the (g) reader; statements seen, only four proofs opened (`Optimum.last_before`, `LoopReturn.last_positive`, `SelectionTerm.moved_unbalanced`, `Openness.comes_after_unrefuted`), the rest TOLD by my search listing:**
+- *A change over a stretch is located at a step* (what holds at one end and fails at the other changes across some step): `Optimum.last_before` l. 2586 (the plain form: `{P} [DecidablePred P] (first : P 0) : ∀ {n}, ¬ P n → ∃ T, T < n ∧ P T ∧ ¬ P (T + 1)`), `LoopReturn.last_positive` l. 320, `SelectionTerm.moved_unbalanced` l. 581, `WideningOnTheMap.change_located` l. 173, `Admission.comes_within_not_not` l. 223, `Openness.comes_after_unrefuted` l. 709, `Stuttering.crossing` l. 95, `Frequency.marked_between` l. 165, `DrawHistory.leaving_needs_a_lower_draw` l. 85, `Rejoining.exchange_apart_of_change` l. 106, `Feedback.Balances.differs_before` l. 582, `Gated.change_located`. Each proof opened is 4 to 6 lines, so calls may be no shorter (M2 likely); `change_located` is derivable from `first_below` in about 5 lines against its 5.
+- *Within n steps it has rested, or it has moved by n*: `ReflexivePrediction.again_or_risen` l. 138, `LoopReturn.settled_or_fallen` l. 396, `RegimeMargin.falls_or_bound` l. 890, `Training.rested_or_risen` l. 692, `BalanceRegions.reachedListed_grows_or_stays` l. 300. Their second disjunct is a bound that grows with `n`, so they are not family (a); they look like one another and belong with (e).
+
+---
+
+## What was and was not checked
+
+- Opened: every statement and proof listed as a member; the definitions the statements use (`Keeps`, `Unread`, `clear`, `Still`, `Rises`, `CommonWitness`, `Decided`, `WeaklyDecided`, `LPO`, `FirstAt`, `Value.decided`); the callers that decide which features are needed (`ReorderingGrowth` l. 276–318, `Decidedness` l. 755–775, `Likeness` l. 1584–1592, 1706–1730, 1782–1785, `Undecided` l. 476–486); `Prelude`'s declaration list whole; `PredicateIteration` l. 1–70 and its declaration list.
+- By script: import closures for all 409 modules; searches over an index of 28,061 declarations.
+- Not done: nothing built; no call checked by Lean. The risks I see in the terms: `match w i with` abstracting in a16; `id` across a definition (`Unread`, `Keeps`, `Still`) in a6, a13, b9; implicit-binder lambdas `fun {U} …`, `fun {l} …` in a19, a20, b1, b2, b12, b13; `.symm`, `.imp`, `.elim` by dot notation on a term whose type is `Decided …` (written as `Or.elim` in b12 for that reason; a19, a21 use `.imp`/`.symm` on `Decided` and may need `Or.imp`/`Or.symm`).
+- Axioms: the lemmas the calls use from core are already used in the package (counted by grep over the 409 files: `Decidable.em` 30, `Nat.eq_zero_or_pos` 65, `Nat.add_lt_add_left` 94, `Nat.lt_succ_of_le` 102, `Nat.lt_of_succ_lt_succ` 66, `Nat.pos_of_ne_zero` 62, `Nat.lt_or_ge` 437, `Nat.not_le_of_gt` 227, `Nat.decLe` 46, `Nat.zero_le` 910; `Or.imp` as `(…).imp` 8 times, e.g. `Optimum` l. 4498; `Or.elim` as `(…).elim`, e.g. `LineOnAStock` l. 245). The one little-used name is `Or.symm` (once in the package by that name); it is a two-case term and can be written as a `match` where doubted. No `Classical`, no `propext` enters by what is written here. Not verified by `#print axioms`.
+- The search may have missed members whose recursion is not written with `| 0 … =>` and `| … + 1 … =>` equation lines, or whose statement hides the bounded quantifiers behind a definition other than those I opened.

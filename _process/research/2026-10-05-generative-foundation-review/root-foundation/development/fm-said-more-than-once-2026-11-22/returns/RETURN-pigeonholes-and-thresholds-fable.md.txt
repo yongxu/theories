@@ -1,0 +1,269 @@
+# RETURN: pigeonholes-and-thresholds (families e and f)
+
+*AI-written (Claude Fable, one reader alone, board row FM), 22 November 2026. Read only: no Lean written, built or run; nothing in the repository edited but this file. Every call below is on paper, unbuilt. Paths are under `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`.*
+
+**Conventions.** Proof lines = physical lines after the statement's last line (the line ending `:=`, or the last line before the first `|` equation) to the declaration's last line, counted by script (`/private/tmp/claude-501/-Users-ren-theories/21947b1b-65d1-45e4-bdb9-d3582a76bb12/scratchpad/ext.py`). Dates are `git log -S '<theorem name>' -- <file> | tail -1`: the day the name entered that file, so a moved theorem shows its move (said where I saw it). Imports are from the `import` lines by script (`imports.py`, same folder; 409 modules). OPENED = statement and proof opened by me at the line given. TOLD = seen only in a grep line.
+
+## Headline
+
+- **(e) The pigeonhole is not said once.** The sequence form is proved twice by the same two inductions (`Prelude.revisits_within`, `Description.shared_below`). The list form is proved by the same remove-one-member induction at least eight times in seven modules (a, b, d, e, f, h, i, k below, and j through `remove_mem`); one existing theorem (`Dissipation.total_le_of_support`) has five of the others as cases with their statements unchanged (59 proof lines fewer, no import added). The recurrences are already calls of `revisits_within` (about 25 call sites). The widening pair (`Reaching`/`Web` `gathers`, `not_listed`) is one induction twice, already admitted in the Lean by `not_listed_via_chain`.
+- **(f) The law of the exact least value (`leading_exact`) is said once and called.** What is constructed again is beneath it: the first place of a decided property is proved five times in existence form, and the search function exists four times (`leading`, `firstWhere`, `clear`, `hitTime`). Three existence forms are cases of `first_of_decided` (10 lines fewer). The function forms join only by changing a definition: not recommended.
+- **M4:** no family here is of 22 November. Of that day are only `Iteration.extend_at_places`, the place of `remove_mem` (statement of 15 October, moved from `Refinement`), and the proof body of `Parting.continues_any` (statement of 16 October).
+
+---
+
+# Family (e)
+
+## E1. The sequence pigeonhole, proved twice
+
+**Q1. OPENED.** Members (all before 22 November):
+
+| # | Module, line | Statement, word for word | Proof lines | Entered |
+|---|---|---|---|---|
+| 1 | `Prelude` 1075 | `theorem split_at_head {α : Type u} {g : Nat → α} {a : α} {l : List α} : ∀ K, (∀ n, n ≤ K → g n = a ∨ g n ∈ l) → (∃ i j, i < j ∧ j ≤ K ∧ g i = g j) ∨ (∀ n, n ≤ K → g n ∈ l) ∨ (∃ m, m ≤ K ∧ g m = a ∧ ∀ n, n ≤ K → n ≠ m → g n ∈ l)` | 29 | Prelude 6 Nov; first in `Recurrence` 11 Oct, then `GrammarLaws` 26 Oct |
+| 2 | `Prelude` 1111 | `theorem revisits_within {α : Type u} : ∀ (l : List α) (g : Nat → α), (∀ n, n ≤ l.length → g n ∈ l) → ∃ i j, i < j ∧ j ≤ l.length ∧ g i = g j` | 13 | same history |
+| 3 | `Description` 383 | `theorem split_top {P : Nat → Nat → Prop} {L : Nat} : ∀ K, (∀ n, n ≤ K → P n L ∨ ∃ i, i < L ∧ P n i) → (∃ t t', t < t' ∧ t' ≤ K ∧ P t L ∧ P t' L) ∨ (∀ n, n ≤ K → ∃ i, i < L ∧ P n i) ∨ (∃ m, m ≤ K ∧ P m L ∧ ∀ n, n ≤ K → n ≠ m → ∃ i, i < L ∧ P n i)` | 28 | 13 Oct |
+| 4 | `Description` 419 | `theorem shared_below : ∀ (L : Nat) (P : Nat → Nat → Prop), (∀ n, n ≤ L → ∃ i, i < L ∧ P n i) → ∃ t t' i, t < t' ∧ t' ≤ L ∧ P t i ∧ P t' i` | 16 | 13 Oct |
+
+3 is 1 and 4 is 2 with "equal to a member of the list" replaced by "related to a number below L": same case split, same `skipAt` step. `shared_below`'s docstring says `revisits_within` "is the form with a list and equality". Callers of 4: `Description` 462, `Identification` 322 (both `P := SameAhead o`). Callers of 2: about 25 (E4).
+
+**Q2. The one statement.** `revisits_within` cannot give `shared_below` in a line: a relation gives no function `g` without a finite choice. The other way works, with no new statement:
+
+```lean
+-- revisits_within as a case of shared_below (on paper)
+fun l g held =>
+  match shared_below l.length (fun n i => g n = Law.memberAt (g 0) l i)
+      (fun n le => match memberAt_of_mem (d := g 0) (held n le) with
+        | ⟨i, lt, same⟩ => ⟨i, lt, same.symm⟩) with
+  | ⟨i, j, _, lt, le, h, h'⟩ => ⟨i, j, lt, le, h.trans h'.symm⟩
+```
+
+Checked by hand: `shared_below` at `L := l.length` wants `∀ n, n ≤ l.length → ∃ i, i < l.length ∧ g n = memberAt (g 0) l i`; `HexagramSequences.memberAt_of_mem` (l. 238, OPENED, 3 lines, 19 Oct, `α : Type u`) is `s ∈ l → ∃ n, n < l.length ∧ Law.memberAt d l n = s`, turned by `.symm`. The result gives `g i = memberAt … k` and `g j = memberAt … k`, so `g i = g j`; `i < j` and `j ≤ l.length` as stated. Quantifier order `∀ l g` kept. No instance, no axiom. **Statement unchanged: yes.** Bridge: `memberAt_of_mem`, which exists and would move (`Law.memberAt` is already in `Prelude`).
+
+Alternative (new statement, so M5 has to be weighed): one list-and-relation form `∀ (l : List α) (P : Nat → α → Prop), (∀ n, n ≤ l.length → ∃ b, b ∈ l ∧ P n b) → ∃ t t' b, t < t' ∧ t' ≤ l.length ∧ P t b ∧ P t' b`, with `revisits_within` at `P n b := g n = b` (2 lines) and `shared_below` at `l := Undecided.upto L` (4 lines, using `Prelude.mem_upto` l. 1331 and `Undecided.upto_length` l. 430, which `Description` does not import and would move too). I prefer the first: nothing new is stated.
+
+**Q3.** `Description` imports `Prelude` (script: yes); `Prelude` imports nothing. `split_top`, `shared_below` and `memberAt_of_mem` use only `Prelude` names (`skipAt`, `le_succ_cases`, `Law.memberAt`); moving them into `Prelude` adds no import to any module and makes no cycle.
+
+**Q4.** Now 29 + 13 + 28 + 16 = 86. As calls: 28 + 16 (once) + 5 = 49; `memberAt_of_mem` moves, 0 net. **37 fewer.** (Alternative: about 51; about 35 fewer.)
+
+Verdict: none of M1 to M5 with the first route.
+
+## E2. The list pigeonhole: one remove-one-member induction, many times
+
+**Q1. OPENED** (each line given). All in `Type` unless said.
+
+| # | Module, line | Statement, word for word | Proof lines | Entered |
+|---|---|---|---|---|
+| a | `Prelude` 695 | `theorem length_le_of_matched {S : α → β → Prop} : ∀ {l : List α} {m : List β}, Distinct l → (∀ a, a ∈ l → ∃ b, b ∈ m ∧ S a b) → (∀ a a' b, a ∈ l → a' ∈ l → S a b → S a' b → a = a') → l.length ≤ m.length` (`Type u`, `Type v`) | 18 | Prelude 1 Nov (moved there) |
+| b | `Population` 122 | `theorem length_le_count {q : α → Nat} : ∀ {xs ps : List α}, Distinct xs → (∀ a, a ∈ xs → a ∈ ps ∧ 0 < q a) → xs.length ≤ count ps q` | 22 | 26 Oct |
+| c | `Population` 149 | `theorem length_le_of_sub {l m : List α} (distinct : Distinct l) (sub : ∀ a, a ∈ l → a ∈ m) : l.length ≤ m.length` | 2 (a call of b) | 9 Oct |
+| d | `Population` 156 | `theorem count_le_of_sub {q : α → Nat} : ∀ {l m : List α}, Distinct l → (∀ a, a ∈ l → 0 < q a → a ∈ m) → count l q ≤ m.length` | 19 | 9 Oct |
+| e | `Population` 281 | `theorem marks_le_of_sub {q r : α → Prop} [∀ a, Decidable (q a)] [∀ a, Decidable (r a)] : ∀ {l m : List α}, Distinct l → Distinct m → (∀ a, a ∈ l → q a → a ∈ m ∧ r a) → total l (fun a => mark (q a)) ≤ total m (fun a => mark (r a))` | 25 | 9 Oct |
+| f | `Dissipation` 143 | `theorem total_le_of_support {q : α → Nat} : ∀ {l m : List α}, Distinct l → (∀ a, a ∈ l → 0 < q a → a ∈ m) → total l q ≤ total m q` | 19 | 9 Oct |
+| g | `Dissipation` 129 | `theorem total_le_at {q : α → Nat} {a : α} (only : ∀ b, 0 < q b → b = a) : ∀ {as : List α}, Distinct as → total as q ≤ q a` | 9 | 9 Oct |
+| h | `Listing` 190 | `theorem total_eq_of_same {q : α → Nat} : ∀ {s s' : List α}, Distinct s → Distinct s' → (∀ a, a ∈ s ↔ a ∈ s') → total s q = total s' q` | 19 | 13 Oct |
+| i | `TypicalRuns` 88 | `theorem sum_listing (f : α → Nat) : ∀ {l m : List α}, Distinct l → Distinct m → (∀ x, x ∈ l ↔ x ∈ m) → counting.sum l f = counting.sum m f` (`α : Type u`) | 26, and helpers `split_of_mem` 3, `mem_of_mem_drop` 3, `mem_drop_or` 4, `distinct_drop` 8 | 17 Oct |
+| j | `Refinement` 65 | `theorem DistinctUnder.length_le {R : X → X → Prop} (refl : ∀ x, R x x) : ∀ {s l : List X}, DistinctUnder R s → (∀ x, x ∈ s → x ∈ l) → s.length ≤ l.length` (`Type u`; by `remove_mem`) | 8 | 15 Oct |
+| k | `InAmounts` 468 | `theorem totalOf_support {a : X → A} : ∀ {U D : List X}, Distinct U → Distinct D → (∀ x, x ∈ D → x ∈ U) → (∀ x, x ∈ U → ¬ x ∈ D → ¬¬ M.le (a x) M.zero) → ¬¬ (M.le (M.totalOf U a) (M.totalOf D a) ∧ M.le (M.totalOf D a) (M.totalOf U a))` | 33 | 20 Oct |
+| l | `ReadingSchedule` 203 | `theorem total_is_le_one [DecidableEq X] (y : X) : ∀ {cs : List X}, Distinct cs → total cs (fun c => if y = c then 1 else 0) ≤ 1` | 9 | 21 Oct |
+| m | `HeldForReading` 940; `Interleavings` 1441 | `theorem total_single {z₀ : K} {v : Nat} : ∀ {zs : List K}, List.Pairwise (fun a b => a ≠ b) zs → z₀ ∈ zs → total zs (fun z => if z₀ = z then v else 0) = v`; the other is the same with `f = c` | 9; 10 | 30 Oct; 20 Oct |
+| n | `PredicateIteration` 42, 114 | `theorem remove_mem : ∀ {l : List X} {x : X}, x ∈ l → ∃ l' : List X, l'.length + 1 = l.length ∧ ∀ y, y ∈ l → y = x ∨ y ∈ l'` and `theorem extend_at_places : ∀ (n : Nat) (left : List S), left.length = n → (∀ z, V₀ z → z ∈ left ∨ iter Φ V₀ (n + 1) z) → ∀ y, iter Φ V₀ n y → iter Φ V₀ (n + 1) y` (namespace `Iteration`, with `mono` and `start` of its section) | 12; 15 | place of 22 Nov; `remove_mem` first in `Refinement` 15 Oct; `extend_at_places` of 22 Nov |
+
+Already calls (OPENED): `Decidedness.length_eq_of_same` 504 (two calls of c), `Dissipation.total_eq_of_supports` 166, `OneStep.covered_tally` 2734, `Sampling.total_gate` 342 (each two calls of f), `LoopReturn.total_at` 852, `Entropy.total_unit` 2092, `Entropy.total_at` 1796, `Weightings.total_drawnUnit` 2295 (calls of g), `Listing.NumbersBy.unique` 695, `GrammarLaws.census_le` 2051, `Identity` 620, 701, 756 (calls of a; `Identity` TOLD). `length_le_of_sub` has 16 call sites (grep).
+
+**Q2. The one statement is f, `total_le_of_support`, which exists.** Cases, each written and checked:
+
+```lean
+-- g  total_le_at (now 9 lines)
+fun distinct => Nat.le_trans
+  (total_le_of_support (m := [a]) distinct fun b _ pos =>
+    Eq.subst (motive := fun x => x ∈ [a]) (only b pos).symm (.head []))
+  (Nat.le_of_eq (Nat.add_zero (q a)))
+```
+`total [a] q` is `q a + 0` by the equations of `total`. Statement unchanged: **yes**.
+
+```lean
+-- h  Listing.total_eq_of_same (now 19 lines)
+fun distinct distinct' same => Nat.le_antisymm
+  (total_le_of_support distinct fun a mem _ => (same a).mp mem)
+  (total_le_of_support distinct' fun a mem _ => (same a).mpr mem)
+```
+The pattern `Decidedness.length_eq_of_same` used a day earlier. Statement unchanged: **yes**.
+
+```lean
+-- b  length_le_count (now 22 lines)
+fun distinct within => Nat.le_trans
+  (Nat.le_of_eq ((total_ones xs).symm.trans
+    (total_congr_on fun a mem => (sign_eq_one (within a mem).2).symm)))
+  (total_le_of_support (q := fun a => sign (q a)) distinct fun a mem _ => (within a mem).1)
+```
+`count ps q` is by definition `total ps fun a => sign (q a)` (`Flow` 109). `total_ones` (`Flow` 175), `sign_eq_one` (`Flow` 98), `total_congr_on` (`Population` 260, would stand above). Statement unchanged: **yes**.
+
+```lean
+-- d  count_le_of_sub (now 19 lines)
+fun distinct sub => Nat.le_trans
+  (total_le_of_support (q := fun a => sign (q a)) distinct fun a mem pos =>
+    sub a mem (Nat.lt_of_lt_of_le pos (sign_le (q a))))
+  (Nat.le_trans (total_le m fun a _ => sign_le_one (q a)) (Nat.le_of_eq (total_ones m)))
+```
+`sign_le`, `sign_le_one`, `total_le` are `Flow` 116, 124, 132. Statement unchanged: **yes**.
+
+```lean
+-- l  ReadingSchedule.total_is_le_one (now 9 lines), through g
+fun distinct => Nat.le_trans
+  (total_le_at (a := y) (fun b pos => if same : y = b then same.symm else
+      absurd (Nat.lt_of_lt_of_le pos (Nat.le_of_eq (if_neg same))) (Nat.lt_irrefl 0)) distinct)
+  (Nat.le_of_eq (if_pos rfl))
+```
+The `DecidableEq X` instance is used by `if` only, as now. Statement unchanged: **yes**.
+
+No call uses `Classical` or `propext`; `Decidable` enters only where the member already carries the instance.
+
+Not cases of f:
+- **e `marks_le_of_sub`**: two quantities, one on each side. It is a case only of a statement on paper, `∀ {l m}, Distinct l → (∀ a, a ∈ l → 0 < q a → a ∈ m ∧ q a ≤ r a) → total l q ≤ total m r` (proof: f's induction with `r` on the right, about 21 lines), by `fun distinct _ sub => G' distinct fun a mem pos => match sub a mem (mark_pos.mp pos) with | ⟨inm, ra⟩ => ⟨inm, Nat.le_trans (mark_le_one _) (Nat.le_of_eq (mark_one ra).symm)⟩`. That statement would show the premise `Distinct m` of e is not needed. It is new and only e needs it beyond f: **M5 in part**; I do not rank it.
+- **a `length_le_of_matched`**: a relation between two types; neither f's case nor f its case. `length_le_of_sub` is a case of either (`S := fun a b => a = b`, 2 lines); it is 2 lines now.
+- **j `DistinctUnder.length_le`**: a case of a with a 3-line bridge (`DistinctUnder R s → Distinct s` from `refl`; `Listing.DistinctUnder.distinct` l. 652 is that proof under `Equivalence R`, in a module `Refinement` does not import): 8 lines against 6. **M2**.
+- **i `sum_listing`**: `α : Type u` and `Weights.sum` at `counting`, where `total` and f are in `Type`. Statement unchanged: **no** (universe), unless `total` is made universe-polymorphic and `total_eq_sum` (l. 136, now for `List (List Bool)` only) made general. **M1 as it stands.** Its four helpers repeat `List.append_of_mem`, `Population.mem_insert`, `InAmounts.mem_insert_cases`, and `Prelude.not_mem_of_middle` with `Population.distinct_remove`, for the same reason.
+- **k `totalOf_support`**: an abstract amount with doubly negated conclusions. **M1.**
+- **m `total_single` twice**: `HeldForReading`'s docstring says it repeats `Interleavings`' "outside this module's imports" (script: neither imports the other). As calls of g with `le_total_of_mem` they need `Pairwise (≠) → Distinct` (`Exclusion.distinct_of_nodup` l. 306, TOLD; import not checked): about 5 lines against 9 each. **M2, not ranked.**
+- **n `extend_at_places`**: see Q6.
+
+**Q3.** By script: `Dissipation` imports `Population`; `Listing`, `ReadingSchedule`, `LoopReturn`, `OneStep`, `KeepingWidening`, `LineageRegimes`, `LossMatching` import `Dissipation`; `Population` does not import `Dissipation`. So b and d (in `Population`) are below f. f uses `Flow.total_append`, `Prelude.mem_remove`, `List.append_of_mem`: all in `Population`'s closure. Moving f (and `total_congr_on` up) into `Population` before l. 122 adds no import anywhere and makes no cycle; g, h, l need nothing moved. Lowest module common to b, d, f, g, h, l: `Population`.
+
+**Q4.** Now g 9 + h 19 + b 22 + d 19 + l 9 = 78, with f 19. As calls, as written above: 4 + 3 + 4 + 4 + 4 = 19, f 19 once. **59 fewer**, five members older than 22 November made calls, no new statement, no bridge lemma beyond ones that exist.
+
+## E3. No list holds what keeps widening
+
+**Q1. OPENED.**
+
+| Module, line | Statement, word for word | Proof lines | Entered |
+|---|---|---|---|
+| `ReachableRanges` 571 | `theorem KeepsWidening.gathers {Q : Nat → X → Prop} (keeps : KeepsWidening Q) : ∀ n, ∃ xs : List X, ∃ m, xs.length = n ∧ Distinct xs ∧ ∀ x, x ∈ xs → Q m x` (namespace `Reaching`) | 8 | 27 Oct |
+| `ReachableRanges` 583 | `theorem KeepsWidening.not_listed {Q : Nat → X → Prop} (keeps : KeepsWidening Q) : ¬ ∃ ys : List X, ∀ n x, Q n x → x ∈ ys` | 4 | 27 Oct |
+| `EventualWidening` 323 | `theorem KeepsWidening.gathers {T : Nat} (keeps : W.KeepsWidening itself l T) : ∀ n, ∃ xs : List F, ∃ S, T ≤ S ∧ xs.length = n ∧ Distinct xs ∧ ∀ f, f ∈ xs → W.Admits (l S) S f` (namespace `Web`) | 11 | 25 Oct |
+| `EventualWidening` 339 | `theorem KeepsWidening.not_listed {fs : List F} (every : ∀ f, f ∈ fs) {T : Nat} : ¬ W.KeepsWidening itself l T` | 5 | 25 Oct |
+| `ReachableRanges` 831 | `theorem Web.KeepsWidening.not_listed_via_chain {fs : List F} (every : ∀ f, f ∈ fs) {T : Nat} : ¬ W.KeepsWidening Web.itself l T` | 1 | 27 Oct |
+| `ReachableRanges` 786 | `theorem Web.KeepsWidening.chain {T : Nat} (keeps : W.KeepsWidening Web.itself l T) : Reaching.KeepsWidening (fun n f => W.Admits (l (T + n)) (T + n) f)` (the bridge) | 11 | 27 Oct |
+
+`not_listed_via_chain` and `Web.KeepsWidening.not_listed` are one statement proved twice, and the Lean says so ("re-derived from the chain law"). The web's own induction stands because `EventualWidening` is below `ReachableRanges`.
+
+**Q2.** One statement: the chain's `gathers` and `not_listed`.
+```lean
+-- Web.KeepsWidening.gathers
+fun n => match keeps.chain.gathers n with
+  | ⟨xs, m, length, distinct, all⟩ => ⟨xs, T + m, Nat.le_add_right T m, length, distinct, all⟩
+-- Web.KeepsWidening.not_listed  (the body of not_listed_via_chain)
+fun keeps => keeps.chain.not_listed ⟨fs, fun _ f _ => every f⟩
+```
+Checked: `all : ∀ x, x ∈ xs → (fun n f => W.Admits (l (T + n)) (T + n) f) m x` is `W.Admits (l (T + m)) (T + m) x` by beta, the web's clause at `S := T + m`; the web's extra `T ≤ S` is `Nat.le_add_right`; any witness on both sides. `F : Type` in both modules. Statements unchanged: **yes**, both. The consumers of the web's `gathers` (`ComparingCourses` 228, `KeepingWidening` at its call l. 370, OPENED) are untouched.
+
+**Q3.** `EventualWidening` does not import `ReachableRanges` (the reverse holds; adding it would be a cycle). So `Reaching.KeepsWidening` (def, l. 311), its `gathers` and `not_listed`, and `Web.KeepsWidening.chain` would move down into `EventualWidening`. They use `mem_cons_cases`, `le_dest` (`Prelude`), `length_le_of_sub` (`Population`, imported directly), `includesAcross_itself_iff`, `exceedsAcross_itself_iff` (`ContinuedClasses` 533, 540, imported directly). No import added, no cycle.
+
+**Q4.** Now 8 + 4 + 11 + 5 + 1 = 29 (`chain` 11 either way). As calls: 8 + 4 + 2 + 1, and `not_listed_via_chain` is then the same theorem twice (retire, or 1 line): 15 or 16. **13 or 14 fewer.**
+
+## E4. The recurrences: already one statement, called
+
+**OPENED:** `Recurrence.revisits_of_held` 161 (`{g : Nat → S} {l : List S} (held : ∀ n, g n ∈ l) : Revisits g`, 2 lines, 11 Oct), `revisits_from` 166 (`… (T : Nat) : ∃ i j, T ≤ i ∧ i < j ∧ g i = g j`, 2, 11 Oct), `unheld_of_new` 173, `unlisted_of_new` 179, `Labelled.Run.revisits_from` 883 (1 line, the same at `g := r.state`, 19 Oct), `Attraction.enters_returning_within` 393 (4, 22 Oct), `Branching`'s `Run.enters_returning` 256 (7, 13 Oct), `Learning.lasso_of_held` 495 (24, 12 Oct), `Onward.returning_of_continues` 133 (18, 16 Oct), `Settling.loop_of_recurs` 205, `GrammarLaws` 1648 and 1681, `UnitMatchings.FrameMatch.le` 94, `Recurrence.returns_of_reachable` 622 and `Lossless.returns` 613 (calls of the grammar's laws). **TOLD** (grep line only): `GrammarConditionals` 271, `InAmounts` 211, `LeastLoss` 607, `LastChange` 113, `Loops` 412, `Remainder` 600, `RegimeMargin` 2866, `Hexagrams` 381 and 728, `Novelty` 92, `Entropy` 1464 and 1484, `Experiment` 251.
+
+Each is `revisits_within` (or its alias) and then its own bookkeeping. None re-proves the pigeonhole. The "enters what returns" theorems are not one statement (Q6). The line `match revisits_within … with | ⟨i, _, lt, le, same⟩ => match gap_of_lt lt with | ⟨d, gap⟩` recurs in about eight; a lemma for it would save a line each: **M2**.
+
+`Onward.KeepsMoving.run` 231 (2 lines) and `Onward.run_of_continues` 157 (2) are calls of `returning_of_continues`. `Parting.continues_any` 434 is a 2-line call of `Iteration.iter_iff_all` since 22 November.
+
+Three docstrings name a place the pigeonhole no longer is: `Recurrence` l. 153 ("proved once in `Becoming.GrammarLaws`"), `Onward` l. 63 and `Description` l. 418 ("of `Becoming.Recurrence`"); it is in `Prelude`.
+
+---
+
+# Family (f)
+
+## F0. The law of the exact least value: said once
+
+**OPENED** `RegimeMargin` 1497 to 1585 (all 21 or 22 October):
+- `def leading (b : Nat → Bool) : Nat → Nat | 0 => 0 | k + 1 => if leading b k = k ∧ b k = true then k + 1 else leading b k`
+- `theorem leading_le (b : Nat → Bool) : ∀ k, leading b k ≤ k` (5); `theorem leading_true (b : Nat → Bool) : ∀ k x, x < leading b k → b x = true` (11); `theorem leading_false (b : Nat → Bool) : ∀ k, leading b k < k → b (leading b k) = false` (13); `theorem leading_congr {b b' : Nat → Bool} (same : ∀ x, b x = b' x) : ∀ k, leading b k = leading b' k` (5)
+- `theorem leading_exact {P : Nat → Prop} {d : Nat → Bool} {hi : Nat} (down : ∀ a b, b ≤ hi → P b → a ≤ b → P a) (exact : ∀ a, a ≤ hi → (P a ↔ d a = true)) : ∀ a, a ≤ hi → (P a ↔ a < leading d (hi + 1))` (l. 1550, 6)
+- `theorem leading_falls {P Q : Nat → Prop} {d e : Nat → Bool} {hi : Nat} (exactP : ∀ a, a ≤ hi → (P a ↔ d a = true)) (exactQ : ∀ a, a ≤ hi → (Q a ↔ e a = true)) (implies : ∀ a, a ≤ hi → Q a → P a) : leading e (hi + 1) ≤ leading d (hi + 1)` (l. 1562, 7)
+- `theorem leading_eq {d : Nat → Bool} {hi t : Nat} (exact : ∀ a, a ≤ hi → (a < t ↔ d a = true)) (reach : t ≤ hi + 1) : leading d (hi + 1) = t` (9; calls `leading_exact`)
+
+Calls (TOLD by grep): `leading_exact` at 1646, 2691, 2988; `leading_falls` at 1658, 2706, 3001; `leading_eq` 1723; the four thresholds (1599, 2674, 2969, 3287) are all `leading … (hi + 1)`. No second statement of this law was found in what I read. I did not open every module: a sweep of all 409 for a downward-closed reading with an exact check is not done here.
+
+## F1. The first place of a decided property, in existence form: five proofs
+
+**Q1. OPENED.**
+
+| Module, line | Statement, word for word | Proof lines | Entered |
+|---|---|---|---|
+| `ReadOffInTime` 196 | `theorem first_of_decided {P Q : Nat → Prop} (decided : ∀ t, P t ∨ Q t) : ∀ n, (∀ t, t ≤ n → P t) ∨ ∃ m, m ≤ n ∧ Q m ∧ ∀ t, t < m → P t` | 13 | 10 Nov |
+| `Regulation` 1294 | `theorem first_or_nowhere {P : Nat → Prop} [DecidablePred P] : ∀ n, (∀ i, i < n → ¬ P i) ∨ ∃ r, r < n ∧ P r ∧ ∀ i, i < r → ¬ P i` | 7 | 19 Oct |
+| `Likeness` 1722 | `theorem FirstAt.of_holds {α : Nat → Prop} (decided : ∀ k, Decided (α k)) : ∀ N k, k < N → α k → ∃ i, FirstAt α i`, with `def FirstAt (α : Nat → Prop) (k : Nat) : Prop := α k ∧ ¬ ∃ t, 0 ≤ t ∧ t < k ∧ α t` | 6 | 16 Oct |
+| `HistoryIdeals` 461 | `theorem least_true_or_below (s : Nat → Bool) : ∀ n, (∀ m, m < n → s m = false) ∨ ∃ k, (∀ m, m < k → s m = false) ∧ s k = true` | 11 | 19 Oct |
+| `Change` 392 | `theorem or_first (s : Nat → Bool) : ∀ n, clear s n = true ∨ ∃ m, m < n ∧ clear s m = true ∧ s m = true` (namespace `Clear`) | 6 | 10 Oct |
+
+Already calls: `Regulation.first_index` 1305 (3 lines), `Web.firstApart_of_apart` (`ReadOffInTime` 219), `Clear.first_of_true` (`Change` 402); `first_of_decided` is called at `ReadOffInTime` 635, `LineOnAStock` 1020 and five places in `TurningInTime` (TOLD). The four older proofs predate it. These overlap seed (a), which lists `first_of_decided` and `first_or_nowhere`.
+
+**Q2. The one statement is `first_of_decided`.**
+
+```lean
+-- Regulation.first_or_nowhere (now 7)
+  | 0 => .inl fun _ lt => absurd lt (Nat.not_lt_zero _)
+  | n + 1 => match first_of_decided (P := fun i => ¬ P i) (Q := P)
+        (fun t => (Decidable.em (P t)).symm) n with
+    | .inl all => .inl fun i lt => all i (Nat.le_of_lt_succ lt)
+    | .inr ⟨r, le, holds, before⟩ => .inr ⟨r, Nat.lt_succ_of_le le, holds, before⟩
+```
+`<` against `≤`: the bound `i < n + 1` is `i ≤ n`, and `0` is its own line. The instance becomes the disjunction by `Decidable.em` (a case split on the instance, no axiom) and `Or.symm`. First witness on both sides. Statement unchanged: **yes**. 5 lines.
+
+```lean
+-- Likeness.FirstAt.of_holds (now 6)
+fun _ k _ holds => match first_of_decided (P := fun t => ¬ α t) (Q := α)
+    (fun t => Or.symm (decided t)) k with
+  | .inl none => absurd holds (none k (Nat.le_refl k))
+  | .inr ⟨m, _, here, before⟩ => ⟨m, here, fun ⟨t, _, below, ht⟩ => before t below ht⟩
+```
+`Decided p` is `p ∨ ¬ p` (`Decidedness` 100), a hypothesis already. Statement unchanged: **yes**. 4 lines. The call uses neither `N` nor `k < N`: they are the fuel of the present recursion, and the general statement shows the premise `k < N` is not needed (the statement keeps it; its callers at `Likeness` 1782, 1785 pass `k + 1`).
+
+```lean
+-- HistoryIdeals.least_true_or_below (now 11)
+  | 0 => .inl fun m h => absurd h (Nat.not_lt_zero m)
+  | n + 1 => match first_of_decided (P := fun t => s t = false) (Q := fun t => s t = true)
+        (fun t => Clear.cases (s t)) n with
+    | .inl all => .inl fun m h => all m (Nat.le_of_lt_succ h)
+    | .inr ⟨k, _, yes, before⟩ => .inr ⟨k, before, yes⟩
+```
+`Clear.cases : ∀ b : Bool, b = false ∨ b = true` (`Change` 371; `HistoryIdeals` imports `Change`). The member's conclusion has no bound on `k`; the call drops the one it gets. Statement unchanged: **yes**. 5 lines.
+
+`Clear.or_first`: not in a line. It needs `clear s n = true` from `∀ m, m < n → s m = false`, an induction not found beside `Clear.false_before` (its converse). **M2.**
+
+**Q3.** By script: `Regulation` does not import `ReadOffInTime` (adding it would grow its closure by 105 modules), nor do `Likeness` (103) or `HistoryIdeals` (106); `ReadOffInTime` imports `Likeness`, `HistoryIdeals`, `Change`, and all of `Regulation`'s closure but not `Regulation`. So `first_of_decided`, which uses only `Nat` lemmas, would move down. Lowest module all five import: `Change` (closure 13); `Prelude` also serves. No import added, no cycle. As stated where it is: **M3**.
+
+**Q4.** Now 13 + 7 + 6 + 11 + 6 = 43. As calls: 13 + 5 + 4 + 5 + 6 (`or_first` stays) = 33. **10 fewer**, three members older than 22 November made calls.
+
+## F2. The search as a function: four constructions (not a join)
+
+**OPENED:** `RegimeMargin.leading` 1497 (21 Oct; lemmas above, 34 lines); `OrderNormal.firstWhere` 111 (13 Oct): `def firstWhere (P : Nat → Bool) : Nat → Nat → Nat | a, 0 => a | a, n + 1 => cond (P a) a (firstWhere P (a + 1) n)`, with `firstWhere_ge` 115 (5), `firstWhere_before` 123 (`∀ (a n j : Nat), a ≤ j → j < firstWhere P a n → P j = false`, 11), `firstWhere_found` 139 (`∀ (a n i : Nat), a ≤ i → i < a + n → P i = true → firstWhere P a n ≤ i ∧ P (firstWhere P a n) = true`, 11), `firstWhere_congr` 154 (9), used at `OrderNormal` 571 and `Presence` 220; `Change.clear` 365 (10 Oct; `Clear.mono`, `false_before`); `Lasting.hitTime` 776 (14 Oct; `hitTime_stable` 13, `hitTime_of_reaches` 9, `hitTime_lowers` 6).
+
+`leading b k` is the value of `firstWhere (fun x => !b x) 0 k`, and `leading_true`, `leading_false`, `leading_le`, `leading_congr` are `firstWhere_before`, `firstWhere_found`, an upper bound, `firstWhere_congr`. A join would (1) change the definition of `leading` (theorem statements stand word for word; a definition's body does not), (2) need two lemmas `firstWhere` lacks (`firstWhere P a n ≤ a + n`; `firstWhere P a n < a + n → P (firstWhere P a n) = true`, about 12 lines), (3) need `RegimeMargin` to import `OrderNormal` (script: not imported; closure grows by 5: `IdleRemoval`, `OrderNormal`, `Reordering`, `Sampling`, `Stuttering`) or `firstWhere` to move down with `Reordering.cond_of_true` and `lt_of_le_ne`. 34 lines against about 18. **M3, and a changed definition: not a case with its statement unchanged.** `hitTime` and `clear` are **M1** against both (Q6).
+
+---
+
+# Q5. Rank
+
+1. **E2, the totals over a list without repetition** (`total_le_of_support` as the one statement). Five members before 22 November made calls (`total_le_at`, `Listing.total_eq_of_same`, `length_le_count`, `count_le_of_sub`, `ReadingSchedule.total_is_le_one`); 59 lines fewer; no premise falls; no import added (one theorem moves from `Dissipation` down to `Population`); `Population`'s counts and `Listing`'s sums become cases of `Dissipation`'s law. None of M1 to M5. Left out: `marks_le_of_sub` (M5 in part), `sum_listing` (M1, universe), `totalOf_support` (M1), `DistinctUnder.length_le` and the two `total_single` (M2).
+2. **E1, the sequence pigeonhole twice.** `Prelude.split_at_head` and `revisits_within` become a 5-line call of `Description.shared_below`; 37 lines fewer; no premise falls; no import added (three declarations move into `Prelude`); the pigeonhole all the recurrences call becomes a case of the one `Description` and `Identification` call. None of M1 to M5.
+3. **E3, the widening pair.** `Web.KeepsWidening.gathers` and `not_listed` become calls of the chain's; 13 or 14 lines fewer; about 26 lines move from `ReachableRanges` to `EventualWidening`; `not_listed_via_chain` becomes redundant. None of M1 to M5; known to the Lean since 27 October.
+4. **F1, the first place.** Three members made calls of `first_of_decided`; 10 lines fewer; the fuel premise `k < N` of `FirstAt.of_holds` shown unneeded; M3 unless the statement moves to `Change` or `Prelude`. Overlaps seed (a).
+5. **Not worth a build:** `DistinctUnder.length_le` (M2, 2 lines), `Clear.or_first` (M2), `leading` on `firstWhere` (M3 and a changed definition), a lemma for `revisits_within` with `gap_of_lt` (M2).
+
+E4 (recurrences) and F0 (`leading_exact`) are said once and called: nothing to do.
+
+# Q6. Near misses
+
+1. **`Iteration.extend_at_places` (with `remove_mem`) against the pigeonhole.** It removes a listed member per step, as E2's induction does, but it is about the iterates of a monotone step on predicates; no sequence of states and no count of a list appears, and neither statement gives the other in a line. **M1.** Likewise the two routes to "a course as long as the list goes on": `Parting.continues_any` (by the list law) and `Onward.run_of_continues` (by `revisits_within`). `continues_any` would be a 2-line case of `run_of_continues` (`match run_of_continues every h with | ⟨r, start⟩ => start ▸ continues_of_run r n 0`), but `Onward` imports `Parting` (script; the reverse is a cycle) and it is already 2 lines: **M3, M2.**
+2. **`HeldPossible.Run.not_keepsWidening_of_returns`** (l. 193, 5 lines, 27 Oct; `(r : Run P) (F : S → X → Prop) {N : Nat} (returns : ∀ d, ∃ m, N + d ≤ m ∧ r.state m = r.state N) : ¬ Reaching.KeepsWidening (fun n => F (r.state n))`): no list and no count; it uses a return. Not a case of `Reaching.KeepsWidening.not_listed`. **M1.**
+3. **`length_le_of_sub` against `revisits_within`** (list form against sequence form). To get the first from the second one indexes the list and needs that a list without repetition has different members at different places: a bridge induction as long as the 18-line direct proof. **M2.** `UnitMatchings.FrameMatch.le` does this for numbers by call.
+4. **The theorems "within finitely many configurations a course enters what returns"**: `Attraction.enters_returning_within` (`∃ n, n < all.length ∧ Returns next (orbit next s n)`), `Run.enters_returning` in `Branching` (`∃ n, Returns P (r.state n)`, a process, the list holding the run only), `Learning.lasso_of_held` (`∃ i q, i + q + 1 ≤ l.length ∧ Lasso … i q`), `Onward.returning_of_continues`. `Law.Returns` and `Branching.Returns` are different notions; the lasso needs the bound on `i + q + 1`, which `Returns` does not carry. **M1.**
+5. **`Lasting.hitTime` against `leading` and `firstWhere`**: the same count-up-to-a-bound recursion, but along an orbit, and its lemmas are of another kind (stable under a larger bound, lowered by a step). **M1.** `Interleavings.firstAt` (l. 1234) counts own exchanges: **M1.** `Identification.firstFit` (673), `leastFit` (993) and `Parting.firstLive` (531) are first members of a list: seed (b).
+6. **Theorems named `not_listed` that are not this family**: `KeepingWidening` 2710 (a numeric bound on the listed fuel, no pigeonhole), `ComparingCourses.wide_not_listed` 1213 and `ReachableRanges` 1179 (calls), `PremisesTogether` 127 (TOLD). `Entropy.gathers` 2160 is a witness.
+
+# What was not done
+
+Not opened: `Identity`, `Counting.length_le_stock`, `Locality` 163, `Standing`, `Openness` 388, `Exclusion` 306 to 322, `Weightings` beyond l. 2295, `PlaceTransitionNets`, `Hexagrams`, most of `Entropy` and `Novelty`. A full sweep for a second `leading_exact` was not made. No call was built: each is checked against the two statements by hand only.

@@ -1,0 +1,13 @@
+You are the implementer for one small Lean 4 build in the repository at /Users/ren/theories. Read the brief first and follow it to the letter:
+
+  /Users/ren/theories/tmp/fm/cases22/BRIEF-OLD-INDUCTIONS-AS-CALLS.md
+
+It tells you what the repository is for, what is asked (nine theorems, each to become a call of a law the package already has, in copies of six modules in a scratch tree), the rules, the tests that were written before you run, how to build, and what to report. The paper terms and the readers' returns it names are your starting material; nobody has built any of them.
+
+Hard limits, repeated from the brief:
+- Write only under /Users/ren/tmp/fm/build13/after/Becoming/ (copies of the six modules) and /Users/ren/tmp/fm/build13/report/. Edit nothing under /Users/ren/theories. Run no git command that writes. Change nothing in /Users/ren/tmp/fm/build13/kit/ or /Users/ren/tmp/fm/build13/before/.
+- This Mac is shared and busy. Build only with /Users/ren/tmp/fm/build13/kit/run-after.sh and /Users/ren/tmp/fm/build13/kit/run-stub.sh, one run at a time, each waited for; never start lake, the gate, check_becoming.py or a second copy of a run that is alive. Do not run the test suite or build the whole package.
+- A member that fails rule 4 is put back byte for byte; for one that fails only on length, get the shortest call to build first, record it, then put it back.
+- The report is facts: what was done, the text of each proof, what Lean and compare.py printed. No verdicts, no sentence on what the result means.
+
+When the last compare.txt is of the last sources, write /Users/ren/tmp/fm/build13/report/REPORT.md as the brief asks and finish with a short summary: which members are kept, which put back and why (in the comparison's own words), and where the files are.

@@ -1,0 +1,305 @@
+# Nine Lean proof calls in the scratch tree
+
+*AI-written by Codex, 22 November 2026.*
+
+The final stub run audited the six module copies and the stub. It printed
+
+```text
+exit 0 stub after
+end 16:24:03
+lean exit 0 ; rows 886 ; err bytes        0
+```
+
+## Proof counts
+
+| Member | Theorem | Disposition | Proof lines, before → final | Characters that are not spaces, before → final |
+|---|---|---|---:|---:|
+| 1 | `Alike.alikeTo` | Kept as a call | 7 → 3 | 240 → 161 |
+| 2 | `AlikeTo.of_succ` | Kept as a call | 7 → 2 | 226 → 116 |
+| 3 | `AlikeTo.self` | Kept as a call | 4 → 1 | 114 → 30 |
+| 4 | `«对称有常则不可诘»` | Kept as a call | 7 → 4 | 216 → 180 |
+| 5 | `«诘之降»` | Kept as a call | 4 → 2 | 138 → 122 |
+| 6 | `Lasting.lasts_of_kernel` | Kept as a call | 5 → 3 | 207 → 174 |
+| 7 | `Tolerance.withheld_kept` | Kept as a call | 3 → 2 | 96 → 94 |
+| 8 | `Onward.KeepsMoving.continues` | Put back | 4 → 4 | 122 → 122 |
+| 10 | `Law.kept_along` | Kept as a call | 2 → 1 | 37 → 10 |
+
+For the eight kept calls, the only change to a statement line was appending ` :=` to its last line. C2 compared the universe names, binders and statement bodies of all 886 declarations. The locations below are the final theorem header lines.
+
+## Proofs and build attempts
+
+### 1. `Alike.alikeTo`
+
+Final proof in `Likeness.lean` at theorem line 1084.
+
+```lean
+  fun k {s s'} ⟨B, bisim, related⟩ => (iter_iff_alikeTo k (s, s')).mp
+    (postfixed_in_iter alike_mono (K := fun p => B p.1 p.2)
+      (fun p h => (bisim p.1 p.2 h).1) (fun p => bisim p.1 p.2) k (s, s') related)
+```
+
+Moved from line 916 to line 1084 in section `Matching`, after `AlikeTo.down_to`. The proof binds the two implicit states and unpacks the bisimulation witness. Its predicate on pairs is `fun p => B p.1 p.2`.
+
+### 2. `AlikeTo.of_succ`
+
+Final proof in `Likeness.lean` at theorem line 1072.
+
+```lean
+  fun {k s s'} h => (iter_iff_alikeTo k (s, s')).mp (iter_pred alike_mono (fun _ m => m.1)
+    k (s, s') ((iter_iff_alikeTo (k + 1) (s, s')).mpr h))
+```
+
+Moved from line 899 to line 1072 in section `Matching`, immediately after `iter_iff_alikeTo`. The unchanged block of `AlikeTo.down_to` follows at line 1078. The proof binds the implicit depth and both implicit states. The section already opens `Iteration`.
+
+### 3. `AlikeTo.self`
+
+Final proof in `Likeness.lean` at theorem line 1196.
+
+```lean
+  fun k s => (Alike.refl F s).alikeTo k
+```
+
+The theorem stays in its original position relative to the surrounding declarations. Lean takes both frames from `Alike.refl F s`. The comparison prints `and member(s) [1] kept`.
+
+### 4. `«对称有常则不可诘»`
+
+Final proof in `GrammarCandidates.lean` at theorem line 565.
+
+```lean
+  fun k x y h => (iter_iff_inquiry k (x, y)).mp (postfixed_in_iter inquiry_mono
+    (fun p => hSE p.1 p.2) (fun _ s => ⟨hSE _ _ s, fun v r => hc _ v ⟨_, s, r⟩,
+      fun v r => match hc _ v ⟨_, hs _ _ s, r⟩ with
+      | ⟨w, t, q⟩ => ⟨w, t, hs _ _ q⟩⟩) k (x, y) h)
+```
+
+Moved from line 533 to line 565 in section `ListedPairs`, immediately after `iter_iff_inquiry`. The unchanged block of `«核则不可致诘»` follows at line 573. The proof applies `hc` to a witness of relational composition in each direction. It uses `hs` on the input and output of the reverse match.
+
+Build 1 tried this call (4 proof lines and 180 characters that are not spaces). Lean printed the following diagnostic twice.
+
+```lean
+  fun k x y h => (iter_iff_inquiry k (x, y)).mp (postfixed_in_iter inquiry_mono
+    (fun p => hSE p.1 p.2) (fun p s => ⟨hSE _ _ s, fun v r => hc _ v ⟨_, s, r⟩,
+      fun v r => match hc _ v ⟨_, hs _ _ s, r⟩ with
+      | ⟨w, t, q⟩ => ⟨w, t, hs _ _ q⟩⟩) k (x, y) h)
+```
+
+```text
+Becoming/GrammarCandidates.lean:568:32: warning: unused variable `p`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+```
+
+### 5. `«诘之降»`
+
+Final proof in `GrammarCandidates.lean` at theorem line 598.
+
+```lean
+  fun k x y h => (iter_iff_inquiry k (x, y)).mp (Iteration.iter_pred inquiry_mono (fun _ m => m.1)
+    k (x, y) ((iter_iff_inquiry (k + 1) (x, y)).mpr h))
+```
+
+The theorem stays after `end ListedPairs`. The call in that scope uses `Iteration.iter_pred`.
+
+### 6. `Lasting.lasts_of_kernel`
+
+Final proof in `Lasting.lean` at theorem line 243.
+
+```lean
+  fun n {s} h => (iter_region_iff_lasts n s).mp (postfixed_in_iter (region_mono _ _)
+    (K := Kernel _ guard) (fun y k => k y (.refl _ _)) (fun y k => ⟨k y (.refl _ _),
+      fun t ⟨a, st⟩ => (kernel_step_iff.mp k).2 a t st⟩) n s h)
+```
+
+Moved from line 231 to line 243 in section `Disturbances`, immediately after `iter_region_iff_lasts`. The unchanged block of `kernel_iff_lasts` follows at line 250. The proof binds the implicit state and supplies `K := Kernel _ guard`. The two guard proofs use `Reach.refl`. The successor proof unpacks the step witness and calls `kernel_step_iff.mp`.
+
+### 7. `Tolerance.withheld_kept`
+
+Final proof in `Tolerance.lean` at theorem line 303.
+
+```lean
+  fun n a h => Iteration.iter_within (fun {_ _} => keeps _ _) empty n a
+    ((iter_eq_orbit next allWithheld n).symm ▸ h)
+```
+
+The theorem stays at line 303. The lambda supplies the two implicit predicate arguments of the monotone step from `keeps`, whose predicate arguments are explicit. The cast uses the symmetric equality on the hypothesis at `a`.
+
+Build 1 tried this call (2 proof lines and 81 characters that are not spaces). Lean printed the following diagnostic twice.
+
+```lean
+  fun n => iter_eq_orbit next allWithheld n ▸
+    Iteration.iter_within (fun {_ _} => keeps _ _) empty n
+```
+
+```text
+Becoming/Tolerance.lean:305:11: error: invalid `▸` notation, expected result type of cast is 
+  ∀ (a : α), ¬(Law.run next allWithheld).state n a
+however, the equality 
+  iter_eq_orbit next allWithheld n
+of type 
+  Iteration.iter next allWithheld n = Law.orbit next allWithheld n
+does not contain the expected result type on either the left or the right hand side
+```
+
+### 8. `Onward.KeepsMoving.continues`
+
+Final proof in `Onward.lean` at theorem line 222.
+
+```lean
+  | 0, _, _ => trivial
+  | n + 1, s, held =>
+    match moving s held with
+    | ⟨a, t, step, kept⟩ => ⟨a, t, ⟨step, held, kept⟩, KeepsMoving.continues moving n t kept⟩
+```
+
+The theorem stays at line 222. After restoration, `cmp` on the scratch and package copies of `Onward.lean` exited 0.
+
+Build 2 tried this call (3 proof lines and 169 characters that are not spaces). Lean printed the following diagnostic twice.
+
+```lean
+  fun n s h => (Parting.iter_iff_continues n s).mp (Iteration.postfixed_in_iter
+    (Parting.course_mono _) (fun _ _ => trivial) (fun y k => match moving y k with
+      | ⟨a, t, st, kt⟩ => ⟨a, t, ⟨st, k, kt⟩, kt⟩) n s h)
+```
+
+```text
+Becoming/Onward.lean:226:33: error: Invalid `⟨...⟩` notation: The expected type `?m.28.1 y a t` is not an inductive type
+
+Note: This notation can only be used when the expected type is an inductive type with a single constructor
+```
+
+Build 3 tried this call (3 proof lines and 159 characters that are not spaces). Lean printed the following diagnostic twice.
+
+```lean
+  fun n s => (Parting.iter_iff_continues n s).mp ∘ Iteration.postfixed_in_iter
+    (Parting.course_mono (within P K)) (by trivial) (fun y h =>
+      let ⟨a, t, b, c⟩ := moving y h; ⟨a, t, ⟨b, h, c⟩, c⟩) n s
+```
+
+```text
+Becoming/Onward.lean:225:43: error: Tactic `assumption` failed
+
+S : Type u
+A : Type v
+P : Process S A
+K : S → Prop
+moving : KeepsMoving P K
+n : Nat
+s : S
+⊢ ∀ (y : S), K y → True
+```
+
+Build 4 tried this call (3 proof lines and 158 characters that are not spaces). The build log printed `exit 0 build 4`, `"unclean": []` and `"with_axioms": {}` for Onward.
+
+```lean
+  fun n s => (Parting.iter_iff_continues n s).mp ∘ Iteration.postfixed_in_iter
+    (Parting.course_mono _) (fun _ _ => ⟨⟩) (fun y h =>
+      let ⟨a, t, b, c⟩ := moving y h; ⟨a, t, And.intro b ⟨h, c⟩, c⟩) n s
+```
+
+Build 5 tried this call (2 proof lines and 150 characters that are not spaces). Lean printed the following diagnostic twice.
+
+```lean
+  fun n s => (Parting.iter_iff_continues n s).mp ∘ Iteration.postfixed_in_iter (Parting.course_mono
+    _) (fun _ _ => ⟨⟩) (fun y h => let ⟨a, t, b, c⟩ := moving y h; ⟨a, t, ⟨b, h, c⟩, c⟩) n s
+```
+
+```text
+Becoming/Onward.lean:225:74: error: Invalid `⟨...⟩` notation: The expected type `?m.30.1 y a t` is not an inductive type
+
+Note: This notation can only be used when the expected type is an inductive type with a single constructor
+```
+
+Build 6 and the first stub run accepted this call. It has 2 proof lines and 152 characters that are not spaces.
+
+```lean
+  fun n s => (Parting.iter_iff_continues n s).mp ∘ Iteration.postfixed_in_iter (Parting.course_mono
+    ⟨_⟩) (fun _ _ => ⟨⟩) (fun y h => let ⟨a, t, b, c⟩ := moving y h; ⟨a, t, ⟨b, h, c⟩, c⟩) n s
+```
+
+The comparison before restoration printed
+
+```text
+MEMBER 8 Becoming.Onward.KeepsMoving.continues: proof changed True; proof lines 4 -> 2; characters that are not spaces 122 -> 152; widest line after 99 (cap 100); docstring same True; statement lines kept True; other commands in its block []; head Nat.brecOn -> Function.comp; inductions after []; expected uses missing []; uses it may not have []; uses after ['Becoming.Iteration.postfixed_in_iter', 'Becoming.Parting.course_mono', 'Becoming.Parting.iter_iff_continues']; from outside the package ['And.casesOn', 'Exists.casesOn', 'Function.comp', 'Generative.Process.step', 'Iff.mp']; of those, to be looked at []
+FAIL R4 member 8: changed, and: no induction of its own, the expected names used, none it may not use, nothing to look at from outside the package, strictly fewer lines, no more characters, width, docstring, statement lines, nothing else in its block  -- ONE OF THESE DOES NOT HOLD: put it back
+```
+
+### 10. `Law.kept_along`
+
+Final proof in `GrammarCourse.lean` at theorem line 120.
+
+```lean
+  keeps.run h
+```
+
+The theorem stays at line 120. Lean accepted `keeps.run h` with the original orbit conclusion. The state projection of `Law.run` reduces to `Law.orbit`.
+
+## Brief, paper terms and kit
+
+- The paper version of member 1 in `CHECK-goings-on-fable.md` has a line of 102 characters. The kept block has a widest line of 82.
+- For members 4, 6, 7 and 8, the paper calls in that file have 247, 222, 139 and 194 characters that are not spaces. The built calls had 180, 174, 94 and 152. Member 6 used the permitted kernel-step route.
+- Section 3 of `ATTACK-possible-as-worded-opus.md` says member 8 does not fit in two lines. The two-line call in build 6 compiled with `Parting.course_mono ⟨_⟩`. Its character count exceeded 122.
+- That reader placed the `iter_iff_inquiry` header at package line 574. Its docstring is at line 574 and the header is at line 575.
+- The final comparison printed PASS for C0 through C10. The five kit files and the before rows matched their hashes in `FROZEN-BRIEF.sha256.txt`.
+
+## What was not tried
+
+Members 9 (`Branching.fed_keeps`) and 11 (`RegimeMargin.Coupled.Indexed.run_within`) were outside the build. The member 6 routes through `Viability.kernel_certificate` and `kernel_iff_held` were not tried. Every distinct call submitted for the nine members appears above. The package-wide build, gate and test suite were not run.
+
+## Final compare.txt
+
+```text
+PASS C0 the after rows are of the after sources: 7 Lean files in the after tree hashed
+PASS C4 clean build, every changed module audited, no axiom: unclean []; audited ['Becoming.GrammarCandidates', 'Becoming.GrammarCourse', 'Becoming.Lasting', 'Becoming.Likeness', 'Becoming.Onward', 'Becoming.ScratchCasesStub', 'Becoming.Tolerance']; with axioms {}
+PASS C8 only copies of the six modules in the after tree, the stub untouched: other Lean files: []; stub same True
+PASS C1 declarations (private ones too): before 886, after 886, only before [], only after []
+PASS C2 every statement as Lean holds it: 886 declarations compared; differing: []
+PASS C3 no other proof changed: theorems outside the members whose head, uses, inductions or outside names differ: []
+MEMBER 1 Becoming.Alike.alikeTo: proof changed True; proof lines 7 -> 3; characters that are not spaces 240 -> 161; widest line after 82 (cap 100); docstring same True; statement lines kept True; other commands in its block []; head Nat.brecOn -> Becoming.Alike.alikeTo.match_1_1; inductions after []; expected uses missing []; uses it may not have []; uses after ['Becoming.Iteration.postfixed_in_iter', 'Becoming.alike_mono', 'Becoming.iter_iff_alikeTo']; from outside the package ['And.casesOn', 'And.left', 'Exists.casesOn', 'Generative.Process.step', 'Iff.mp', 'OfNat.ofNat', 'Prod.fst', 'Prod.snd', 'instOfNatNat']; of those, to be looked at []
+MEMBER 2 Becoming.AlikeTo.of_succ: proof changed True; proof lines 7 -> 2; characters that are not spaces 226 -> 116; widest line after 90 (cap 100); docstring same True; statement lines kept True; other commands in its block []; head Nat.brecOn -> Iff.mp; inductions after []; expected uses missing []; uses it may not have []; uses after ['Becoming.Iteration.iter_pred', 'Becoming.alike_mono', 'Becoming.iter_iff_alikeTo']; from outside the package ['And.left', 'Generative.Process.step', 'HAdd.hAdd', 'Iff.mp', 'Iff.mpr', 'OfNat.ofNat', 'Prod.fst', 'Prod.snd', 'instAddNat', 'instHAdd', 'instOfNatNat']; of those, to be looked at []
+MEMBER 3 Becoming.AlikeTo.self: proof changed True; proof lines 4 -> 1; characters that are not spaces 114 -> 30; widest line after 82 (cap 100); docstring same True; statement lines kept True; other commands in its block []; head Nat.brecOn -> Becoming.Alike.alikeTo; inductions after []; expected uses missing []; uses it may not have []; uses after ['Becoming.Alike.alikeTo', 'Becoming.Alike.refl']; from outside the package []; of those, to be looked at []
+MEMBER 4 Becoming.«对称有常则不可诘»: proof changed True; proof lines 7 -> 4; characters that are not spaces 216 -> 180; widest line after 79 (cap 100); docstring same True; statement lines kept True; other commands in its block []; head Nat.brecOn -> Iff.mp; inductions after []; expected uses missing []; uses it may not have []; uses after ['Becoming.Iteration.postfixed_in_iter', 'Becoming.inquiry_mono', 'Becoming.iter_iff_inquiry']; from outside the package ['And.casesOn', 'Exists.casesOn', 'Iff.mp', 'Prod.fst', 'Prod.snd']; of those, to be looked at []
+MEMBER 5 Becoming.«诘之降»: proof changed True; proof lines 4 -> 2; characters that are not spaces 138 -> 122; widest line after 98 (cap 100); docstring same True; statement lines kept True; other commands in its block []; head Nat.brecOn -> Iff.mp; inductions after []; expected uses missing []; uses it may not have []; uses after ['Becoming.Iteration.iter_pred', 'Becoming.inquiry_mono', 'Becoming.iter_iff_inquiry']; from outside the package ['And.left', 'HAdd.hAdd', 'Iff.mp', 'Iff.mpr', 'OfNat.ofNat', 'Prod.fst', 'Prod.snd', 'instAddNat', 'instHAdd', 'instOfNatNat']; of those, to be looked at []
+MEMBER 6 Becoming.Lasting.lasts_of_kernel: proof changed True; proof lines 5 -> 3; characters that are not spaces 207 -> 174; widest line after 84 (cap 100); docstring same True; statement lines kept True; other commands in its block []; head Nat.brecOn -> Iff.mp; inductions after []; expected uses missing []; uses it may not have []; uses after ['Becoming.Iteration.postfixed_in_iter', 'Becoming.Lasting.iter_region_iff_lasts', 'Becoming.Reach.refl', 'Becoming.Viability.kernel_step_iff', 'Becoming.region_mono']; from outside the package ['And.right', 'Exists.casesOn', 'Generative.Process.step', 'Iff.mp']; of those, to be looked at []
+MEMBER 7 Becoming.Tolerance.withheld_kept: proof changed True; proof lines 3 -> 2; characters that are not spaces 96 -> 94; widest line after 89 (cap 100); docstring same True; statement lines kept True; other commands in its block []; head Nat.brecOn -> Becoming.Iteration.iter_within; inductions after []; expected uses missing []; uses it may not have []; uses after ['Becoming.Iteration.iter_within', 'Becoming.Tolerance.iter_eq_orbit']; from outside the package ['Eq.rec', 'Eq.symm', 'Not', 'Unit']; of those, to be looked at []
+MEMBER 8 Becoming.Onward.KeepsMoving.continues: proof changed False; proof lines 4 -> 4; characters that are not spaces 122 -> 122; widest line after 93 (cap 100); docstring same True; statement lines kept True; other commands in its block []; head Nat.brecOn -> Nat.brecOn; inductions after ['Nat.brecOn']; expected uses missing ['Becoming.Iteration.postfixed_in_iter', 'Becoming.Parting.iter_iff_continues']; uses it may not have []; uses after []; from outside the package ['And.casesOn', 'Exists.casesOn', 'Generative.Process.step', 'HAdd.hAdd', 'Nat.below', 'Nat.brecOn', 'Nat.casesOn', 'OfNat.ofNat', 'instAddNat', 'instHAdd', 'instOfNatNat', 'trivial']; of those, to be looked at []
+MEMBER 10 Becoming.Law.kept_along: proof changed True; proof lines 2 -> 1; characters that are not spaces 37 -> 10; widest line after 87 (cap 100); docstring same True; statement lines kept True; other commands in its block []; head Nat.brecOn -> Becoming.Law.KeepsRelation.run; inductions after []; expected uses missing []; uses it may not have []; uses after ['Becoming.Law.KeepsRelation.run']; from outside the package []; of those, to be looked at []
+PASS R4 member 1: changed, and: no induction of its own, the expected names used, none it may not use, nothing to look at from outside the package, strictly fewer lines, no more characters, width, docstring, statement lines, nothing else in its block
+PASS R4 member 2: changed, and: no induction of its own, the expected names used, none it may not use, nothing to look at from outside the package, strictly fewer lines, no more characters, width, docstring, statement lines, nothing else in its block
+PASS R4 member 3: changed, and: no induction of its own, the expected names used, none it may not use, nothing to look at from outside the package, strictly fewer lines, no more characters, width, docstring, statement lines, nothing else in its block, and member(s) [1] kept
+PASS R4 member 4: changed, and: no induction of its own, the expected names used, none it may not use, nothing to look at from outside the package, strictly fewer lines, no more characters, width, docstring, statement lines, nothing else in its block
+PASS R4 member 5: changed, and: no induction of its own, the expected names used, none it may not use, nothing to look at from outside the package, strictly fewer lines, no more characters, width, docstring, statement lines, nothing else in its block
+PASS R4 member 6: changed, and: no induction of its own, the expected names used, none it may not use, nothing to look at from outside the package, strictly fewer lines, no more characters, width, docstring, statement lines, nothing else in its block
+PASS R4 member 7: changed, and: no induction of its own, the expected names used, none it may not use, nothing to look at from outside the package, strictly fewer lines, no more characters, width, docstring, statement lines, nothing else in its block
+PASS R4 member 10: changed, and: no induction of its own, the expected names used, none it may not use, nothing to look at from outside the package, strictly fewer lines, no more characters, width, docstring, statement lines, nothing else in its block
+PASS C5 Likeness imports: import lines compared
+PASS C6 Likeness rest of the source: every line outside the members' blocks (and the blocks allowed to move with them) unchanged and in order
+PASS C7 Likeness blocks that move with a member: ['theorem AlikeTo.down_to '] compared byte for byte
+PASS C9 Likeness members that may not move: [('theorem AlikeTo.self', 1026, 1026)]
+PASS C10 Likeness a move only where a kept member needs it: moved: ['theorem Alike.alikeTo', 'theorem AlikeTo.of_succ', 'theorem AlikeTo.down_to']; a member that may move is kept: True
+PASS C5 GrammarCandidates imports: import lines compared
+PASS C6 GrammarCandidates rest of the source: every line outside the members' blocks (and the blocks allowed to move with them) unchanged and in order
+PASS C7 GrammarCandidates blocks that move with a member: ['theorem «核则不可致诘» '] compared byte for byte
+PASS C9 GrammarCandidates members that may not move: [('theorem «诘之降»', 463, 463)]
+PASS C10 GrammarCandidates a move only where a kept member needs it: moved: ['theorem «对称有常则不可诘»', 'theorem «核则不可致诘»']; a member that may move is kept: True
+PASS C5 Lasting imports: import lines compared
+PASS C6 Lasting rest of the source: every line outside the members' blocks (and the blocks allowed to move with them) unchanged and in order
+PASS C7 Lasting blocks that move with a member: ['theorem kernel_iff_lasts '] compared byte for byte
+PASS C9 Lasting members that may not move: []
+PASS C10 Lasting a move only where a kept member needs it: moved: ['theorem lasts_of_kernel', 'theorem kernel_iff_lasts']; a member that may move is kept: True
+PASS C5 Tolerance imports: import lines compared
+PASS C6 Tolerance rest of the source: every line outside the members' blocks (and the blocks allowed to move with them) unchanged and in order
+PASS C7 Tolerance blocks that move with a member: [] compared byte for byte
+PASS C9 Tolerance members that may not move: [('theorem withheld_kept', 253, 253)]
+PASS C10 Tolerance a move only where a kept member needs it: moved: []; a member that may move is kept: False
+PASS C5 Onward imports: import lines compared
+PASS C6 Onward rest of the source: every line outside the members' blocks (and the blocks allowed to move with them) unchanged and in order
+PASS C7 Onward blocks that move with a member: [] compared byte for byte
+PASS C9 Onward members that may not move: [('theorem KeepsMoving.continues', 188, 188)]
+PASS C10 Onward a move only where a kept member needs it: moved: []; a member that may move is kept: False
+PASS C5 GrammarCourse imports: import lines compared
+PASS C6 GrammarCourse rest of the source: every line outside the members' blocks (and the blocks allowed to move with them) unchanged and in order
+PASS C7 GrammarCourse blocks that move with a member: [] compared byte for byte
+PASS C9 GrammarCourse members that may not move: [('theorem kept_along', 96, 96)]
+PASS C10 GrammarCourse a move only where a kept member needs it: moved: []; a member that may move is kept: False
+SUMMARY: 8 kept as calls [1, 2, 3, 4, 5, 6, 7, 10]; 0 changed and failing rule 4; 1 unchanged; whole-build checks all pass
+```

@@ -1,0 +1,178 @@
+# Second look at the kit of "old inductions as calls": are the holes closed, and can the comparison be trusted
+
+*AI-written (Claude Fable 5.2, model id claude-fable-5-2), a reader for board row FM, 22 November 2026, 16:17 to 16:42 (+07). Read only: no Lean run, no build, no script of the kit run in place, nothing written but this file. Every run below is of a byte copy of `compare.py` (sha256 `f4ba82dd…`, as frozen) on trees built in my scratchpad from copies. OPENED = I read the source or ran the command myself; TOLD = I rely on a document. "Not built" = no one elaborated the Lean term. "Rows forged" = in a simulation the after rows are main's rows with a member's row rewritten by me to what `Rows.lean` would print by my reading of it; such a run tests `compare.py`, not Lean.*
+
+Files read, sha256 first 16: brief `0f27f6d97af9ab08`; `Rows.lean` `caf24e6164526d7f`; `compare.py` `f4ba82dd44b0ba44`; `members.json` `c4833129959bdeaa`; `run-stub.sh` `a09c2b0538126d82`; `run-after.sh` `b8ee0fd0b1869573`; `before/rows.txt` `f1823e9f7a97a22d`. All equal `FROZEN-BRIEF.sha256.txt`, and the copies under `/Users/ren/tmp/fm/build13/kit/` are the same bytes (OPENED).
+
+**The build finished while I read** (`after/build-stub.log` ends 16:26:48; `report/compare.txt` 16:26). So section 3 is of the real output, on a copy.
+
+## 0. The answer
+
+1. **On the real build nothing I found makes a PASS false.** The frozen `compare.py`, run on my copy of the real after tree, reproduces `report/compare.txt` byte for byte. A plain `diff` of each after source against main shows only the members' blocks, the three moved groups and ` :=`. Of 886 rows exactly seven differ, each in `head`, `uses`, `recursors`, `foreign` only. The mended comparison of section 5 gives 40 PASS and 0 FAIL on the same copy.
+2. **Of H1 to H11: seven are closed as coded and worded (H2, H4, H5, H6, H7, H8 in the brief only, H11 but for two edges); four are closed in part (H1, H3, H9, H10).** Two exploits still pass every line, both simulated: an induction through `Fin.hIterate`, which no list names (H1), and a helper declaration hidden between the docstring and the header of a member whose proof is unchanged, which no check reads (H3 with H9).
+3. **One crash, one false FAIL, no false PASS on an honest build.** `compare.py` dies with `KeyError` when two cut blocks stand with no blank line between them. C6 fails falsely if a moved block is put where main has no blank line (directly before `end Disturbances`). Neither happened on the real build.
+4. **The rule "strictly fewer lines and no more characters" is coded as worded.** What it measures depends on line filling and on the length of local names. Member 6 as kept: 207 → 174 characters and 5 → 3 lines; against its old proof with one-letter local names it is 170 → 174, against the old proof refilled to 100 columns 3 → 3 lines, and by tokens 79 → 80. Member 7 as the implementer left it passed by 2 characters (96 → 94) with `h` where the old proof says `gives`; with `gives` it is 102.
+5. **`REPORT.md` and `report/compare.txt` are of different trees.** The report's table and its embedded comparison say eight kept, member 7 among them; `report/compare.txt` says seven and `SOURCE Tolerance: no changed copy`. The Tolerance copy is under `report/as-the-implementer-left-it/`. Who took it out and why is not in what I read.
+
+## 1. H1 to H11, by the code
+
+| Hole | In the brief | In the code | Left open; cheapest pass |
+|---|---|---|---|
+| **H1** wrapper the lister does not name | closed as worded ("constants that carry an induction … and everything it uses from outside the package") | **closed in part.** `Rows.lean:44-51` lists `rec`, `recOn`, `brecOn`, `binductionOn` of a recursive type and nine wrapper names; `:112-116` prints every outside constant; `compare.py:19-23, 127, 137` fails a changed member on an outside name matching `rec\|induct\|fix\|below\|sorry\|choice\|propext\|sound` outside `FINE`. | `Fin.hIterate` and `Fin.hIterateFrom` (toolchain `Init/Data/Fin/Iterate.lean:53, 29`, OPENED): `(P : Nat → Sort _) {n} (init : P 0) (f : ∀ i : Fin n, P i.val → P (i.val+1)) : P n`. In neither list. Exploit below. Also still unseen in every field: a package `def` (not a theorem) that carries an induction (`Rows.lean:105-116`: `uses` holds package theorems, `foreign` holds what is outside). An induction three calls down in a package theorem shows only as a name in `uses after`. |
+| **H2** `Acc.rec` dropped | not needed | **closed.** `NOT_INDUCTION` is gone; `Acc.rec` is listed if `Acc` is recursive by `v.isRec` (by reading; not run), and matches the pattern too. | none found |
+| **H3** a declaration inside a member's block | closed (rule 1, rule 4 "no other command inside its block") | **closed for a member whose proof changed**: `CMD` and `same_doc` enter R4 (`:123, 138`; simulations `b-open-after-proof`, `b-private-theorem-in-block`, `b-attribute-between-docstring-and-header`, `b-docstring-reworded`: all `FAIL R4`). Private declarations are rows (`Rows.lean:86`; main has three, `termAgree`, `termAgree_1`, `termN`, OPENED). **Not closed for a member whose proof is unchanged**: its block is cut out of C6 and its facts enter no check (see H9). And `skipLast` (`Rows.lean:57-63`) still drops any name whose last part is `eq_1`, `match_1`, `proof_1`, `inj`, `injEq`, `eq_def`, `eq_unfold`, `noConfusion`, `sizeOf_spec` or begins with `_`: a user can declare `theorem h.eq_1 …`, and it is no row. | Exploit below. |
+| **H4** another module in the tree | closed (rule 1, C8) | **closed.** `:85-89`; simulations `c8-stray-module`, `c8-stray-outside-Becoming`, `c8-stub-changed`: `FAIL C8` (and C0, C4 for the first). | none |
+| **H5** proof begun on the statement's line | closed (rule 2) | **closed.** `:113-119`: the statement's lines must equal main's, or main's with exactly ` :=` appended to the last; the proof is counted from the line after. `proof_start` now reads only main, so it cannot die on an after file. Simulations on member 8: proof on the statement's line, `:= by` there, `:=` with no space, with two spaces: `statement lines kept False`, `FAIL R4`. ` :=` with trailing spaces is accepted. `:=` on a line of its own keeps the statement and costs a proof line. | none |
+| **H6** fewer lines by packing | closed as a rule (rule 4, lines and characters) | **closed as worded.** `:137-138`: `lines after < lines before and chars after <= chars before`; `chars()` drops all whitespace. | Section 4: what the two counts measure. |
+| **H7** member 3 on member 1 | closed (rule 4, last bullet) | **closed.** `members.json` `"needs": [1]`; `:143`. Member 1 put back, or changed and failing: `FAIL R4 member 3` (simulations `v5d`, `v5e`). | none |
+| **H8** member 10 a twin | closed in the brief (table row 10; "three things are not shown") | nothing, and nothing could be | none; it is a sentence, and it is there |
+| **H9** `all pass` over a broken rule 4 | closed (rule 4 "the comparison's line `R4 member n` says PASS"; rule 5) | **closed for changed members** (R4 goes through `say`, so it enters the last line; SUMMARY counts kept and failing). **Not for unchanged members**: `docstring same`, `other commands in its block`, the width and the statement lines of a member with `proof changed False` are printed and enter nothing. Simulations `u1` (`@[simp]` put on unchanged member 7) and `u2` (its docstring replaced): `docstring same False`, `whole-build checks all pass`. | with H3, below |
+| **H10** moves not checked | closed in part: rule 3 says which blocks may move, not where to | **closed for the five that may not move** (C9, `:178`: kept non-blank lines above the block, equal before and after; member 3 moved up: `FAIL C9 (1026, 972)`). **For members 1, 2, 4, 6 and the three blocks, which may move is checked (C10) and where to is not**: the three Likeness blocks put directly below member 3, or 1,562 kept lines further down near the end of the file, pass C6, C9 and C10 (simulations `v4b`, `v4d`). Brief and code agree; the attack's point (a moved member may call any later theorem of its module) stands for 1, 2, 4, 6. | I did not look for a later theorem that would serve; on the real build each group stands directly under its bridge (section 3). |
+| **H11** rows not tied to sources; log not read | closed (C0, C4) | **closed.** C0 `:70-72`, C4 `:74-83`; simulations: no hash file, a source edited after the rows, no log, an unclean step, an axiom, a module not audited, a failed build: each FAILs. | Two edges. `run-stub.sh:21` writes the hashes after the build, from the files as they then are: an edit during the build gives hashes of bytes that were not built. And the before side: `compare.py:104` reads main's package live; nothing ties those bytes to `before/rows.txt` (`before/rows.sources.sha256` holds the stub only). At my read the six modules were unchanged in git since 04:16 and the one commit after the before rows (`f7a3d51ae`, 16:28) is a board commit (OPENED). |
+
+**The H1 exploit, simulated** (`h1-hIterate-member-1-rewrapped`; rows forged; not built):
+
+```lean
+theorem Alike.alikeTo … : ∀ (k : Nat) {s : S} {s' : S'}, Alike F G s s' → AlikeTo F G k s s' :=
+  fun k => (fun _ _ => Fin.hIterate (fun k => ∀ {s s'}, Alike F G s s' → AlikeTo F G k s s')
+    (·.realized) fun _ ih _ _ h => ⟨h.realized, fun _ _ p => match h.step p with
+      | ⟨t, q, j⟩ => ⟨t, q, ih j⟩, fun _ _ p => match h.symm.step p with
+      | ⟨t, q, j⟩ => ⟨t, q, ih j.symm⟩⟩) @postfixed_in_iter @iter_iff_alikeTo
+```
+
+Member 1's own induction, 7 → 4 lines, 240 → 234 characters, the two expected names as dead arguments: `inductions after []`, `to be looked at []`, `PASS R4 member 1`. Its one trace is `Fin.hIterate` in "from outside the package". The character rule makes it dear (it fits by 6 characters, with one-letter names); for the short members it does not fit at all.
+
+**The H3 exploit, simulated** (`h3-underscore-helper-in-unchanged-member-4's-block`; rows forged; not built). In GrammarCandidates, member 4 left as on main; between its docstring and its header, member 5's old induction under another name (I used `_h`; the toolchain's comment at `Lean/Data/Name.lean:122` says the frontend does not allow a leading underscore, though I found no check that refuses one; `theorem h.eq_1` is dropped by `skipLast` just the same); member 5 as `fun k u u' h => (fun _ _ => _h k u u' h) @Iteration.iter_pred @iter_iff_inquiry`. Result: `PASS C1` (the helper is no row), `PASS C6` (it lies in a cut block), `PASS R4 member 5` (4 → 1 lines, 138 → 63), `whole-build checks all pass`. Traces: `docstring same False` on member 4's line, and the helper's name in member 5's `uses after`.
+
+## 2. `compare.py` on an honest build
+
+63 trees, each a copy of main's modules with edits made by script, run through the frozen `compare.py`. OPENED throughout; rows forged where a member is to count as a call.
+
+| Asked | Found |
+|---|---|
+| `block()` | On main each of the nine headers and the three moved-with headers is found once, each docstring whole (member 7's has three lines). Proof lines and characters as in the brief's table: 7/240, 7/226, 4/114, 7/216, 4/138, 5/207, 3/96, 4/122, 2/37. In every after tree the same. |
+| statement-lines rule | Accepts ` :=` appended; refuses a proof begun on the statement's line (H5 above). |
+| C6 | Passes with the three moves made as the readers placed them. **False FAIL**: blocks put directly before `end Disturbances`, each followed by a blank line as rule 3 asks: `differs: 1172 lines before, 1173 after`, because main has no blank line there (`v7a`). A proof continued after a blank line is counted short and gets `PASS R4`, and C6 then fails on the lines left outside the block (`b-proof-continued-after-a-blank-line`): caught, at the other check. |
+| C7 | Equal blocks pass; a block not followed by a blank line swallows its neighbour and fails. |
+| C9, member 3 at 1205 | Its count of kept lines above is 1026 before and 1026 after with the three blocks at l. 1098, directly above it, directly below it, or near the end of the file: cut blocks are not counted, so they cannot shift it. |
+| C10 | Blocks moved with no mover kept: FAIL (`v5a`, `v5f`; and GrammarCandidates when member 4 fails R4). Either of members 1, 2 kept lets all three Likeness blocks move (`v5b`, `v5c`). |
+| R4 `needs` | As H7. |
+| **crash** | Two cut blocks with no blank line between them (the blank between `of_succ` and `down_to` lost at the destination): `KeyError: 'theorem AlikeTo.down_to '` at `compare.py:180`, after that module's C9 line; no SUMMARY, exit 1 (`v6a`). `where.setdefault(hit[0], …)` records only the first of two overlapping blocks. |
+| SUSPECT and FINE | `Iff.mp`, `Iff.mpr`, `And.casesOn`, `Exists.casesOn`, `congrFun`, `Eq.mpr`, `absurd`, `trivial`, `True.intro`: none flagged. The pattern is searched in the whole dotted name (`:127`), so `List.IsPrefix.refl`, `List.isPrefixOf`, `Directed.mono`, `Precedes`, `Std.Format.prefixJoin` would be flagged; none is a name these calls use. Census of main's rows: 147 distinct outside names; the flagged ones are `List.below`, `List.brecOn`, `List.Mem.brecOn`, `List.Mem.below.casesOn`, `Generative.Trace.brecOn`, `Generative.Trace.below.casesOn`, `Nat.le.rec`, and **no theorem with no induction listed has a flagged name**. `funext` and `Classical.em` are not matched by name; C4's axiom audit is what sees them. |
+| `isRecursor`, census | All nine members: `['Nat.brecOn']`. Over 490 theorems: `Nat.brecOn` 81, `List.brecOn` 18, `BranchingTest.brecOn` 14, `Nat.rec` 3, and nine more of recursive types. The two `Nat.strongRecOn` cases the attack named are in modules outside these six, so the rows cannot show that suffix at work. |
+| what it would list in an honest call | Nothing, by the code: `casesOn` is not a listed suffix; `And.rec`, `Eq.rec`, `Exists.rec` have parents that are not recursive. The one package declaration whose last part is a listed wrapper name is `induction` at `EdgeClosure.lean:48` (grep), a real induction principle. On the real build all seven kept rows have `recursors []`. |
+| C3 when a member loses its matcher | Safe. The toolchain caches matchers per module (`Lean/Meta/Match/Match.lean:1068-1098`) but with `asyncMode := .local`, and theorem bodies are elaborated asynchronously (`Lean/Elab/MutualDef.lean:1240`); in main's rows all 81 theorems with `Nat.brecOn` have a `Nat.casesOn` of their own and none has another declaration's matcher as head. On the real build no row outside the seven differs. |
+| C2 when blocks move | Safe on the real build (886 compared, none differing, three groups moved). 235 statements carry hygiene names; their context is the module name with a hash of the declaration's name or the command's text (`Lean/Elab/Command.lean:553-575`), not a position. |
+| C4 | The six modules are in the checker's `CORE`, where `check_becoming.py:5088` asserts no axiom, so main cannot fail "no axiom". A waiting note on stderr before the JSON parses; text with a brace before it gives `FAIL … unclean None` (it arises only when a step is unclean, so the FAIL is right and the reason shown is not). |
+| SUMMARY | "whole-build checks" includes the R4 lines: one member failing rule 4 and nothing else gives `SOME FAIL` (`v3g`). The words are loose; the direction is the safe one. |
+
+## 3. The real build, on a copy
+
+Copied to my scratchpad at 16:36: the five after sources and the stub, `rows.txt`, `rows.sources.sha256`, `build-stub.log`. The copied sources match the hash file. OPENED.
+
+- The frozen `compare.py` on the copy: output identical to `/Users/ren/tmp/fm/build13/report/compare.txt` (`diff`, no output).
+- Plain `diff` against main: Likeness 54 lines, GrammarCandidates 37, Lasting 28, GrammarCourse 5, Onward 0 (its hash is main's). Every changed line is a member's proof, ` :=` on a statement's last line, or a moved block with its blank line.
+- Rows: 886 and 886, same names; seven differ (members 1, 2, 3, 4, 5, 6, 10), each in `head`, `uses`, `recursors`, `foreign`; members 7 and 8 as on main.
+- My own recount of lines and characters agrees with the MEMBER lines: 7→3/240→161, 7→2/226→116, 4→1/114→30, 7→4/216→180, 4→2/138→122, 5→3/207→174, 2→1/37→10.
+- Where the moved groups stand (mended C10 print): each directly under the last line of its bridge (`iter_iff_alikeTo`, `iter_iff_inquiry`, `iter_region_iff_lasts`).
+- No kept member uses an outside name that main's induction-free proofs of these modules do not already use.
+- Member 6 uses `Becoming.Viability.kernel_step_iff`, `Becoming.Reach.refl`, `Becoming.region_mono` beside the two expected names; neither barred name. Whether `kernel_step_iff` carries an induction the rows cannot say (Viability is not one of the six).
+- Member 4's call applies `hc` directly where the paper term went through `«有常之逐点»`; its `uses after` are the two expected names and `inquiry_mono`.
+
+## 4. "Strictly fewer lines and no more characters"
+
+Coded as worded (`:57`, `:119`, `:137-138`): the proof is every line after the statement's lines to the first blank line; all whitespace is dropped; the docstring and statement are not counted, nor the ` :=`. Ways round it that the code refuses: text on the statement's line (H5), text after a blank line (C6), a line over 100 (`wide`), a local macro or helper (C1, R4; but see H3).
+
+What is left is what the two counts measure. Counts by script on the real after sources and main; "one-letter" renames the old proof's own local names (`alike`, `step`, `joined`, `claims`, `forth`, `back`, `kept`, `admitted`, `reach`) to one letter; "refilled" joins the old proof's words and wraps at 100 columns (a count of text, not a layout Lean checked); a token is a name, a number or a symbol, a name counting once.
+
+| # | lines old → new | old refilled | characters old → new | old with one-letter names | tokens old → new |
+|---|---|---|---|---|---|
+| 1 | 7 → 3 | 3 | 240 → 161 | 168 | 80 → 68 |
+| 2 | 7 → 2 | 3 | 226 → 116 | 146 | 88 → 54 |
+| 3 | 4 → 1 | 2 | 114 → 30 | 102 | 54 → 12 |
+| 4 | 7 → 4 | 4 | 216 → 180 | 216 | 126 → 102 |
+| 5 | 4 → 2 | 3 | 138 → 122 | 138 | 96 → 52 |
+| 6 | 5 → 3 | 3 | 207 → 174 | **170** | 79 → **80** |
+| 10 | 2 → 1 | 1 | 37 → 10 | 37 | 18 → 2 |
+| 7, as left by the implementer | 3 → 2 | 2 | 96 → 94 | **84** | 42 → 32 |
+
+Laid out alike, "strictly fewer lines" holds of 2, 3 and 5; "no more characters" with names alike fails of 6 (174 against 170) and of 7 as left (94 against 84; its call with the old proof's `gives` for `h` is 102 against 96). Member 5's call names its lambdas `x y` where the statement says `u u'`; with `u u'` it is 126, still under 138. The rule is the brief's and the code follows it; which of these counts is meant by "shorter" is the owner's.
+
+## 5. What to mend in `compare.py`, as exact code
+
+None of this changes a line of the real build's verdict (run on the copy: 40 PASS, 0 FAIL, same seven kept). It costs no Lean run. Tested on the real copy and on the simulations: the two exploits and the unchanged-member cases now FAIL, the crash is gone, the honest trees pass as before. The mended copy is at `/private/tmp/claude-501/-Users-ren-theories/21947b1b-65d1-45e4-bdb9-d3582a76bb12/scratchpad/secondlook/mended/compare.py` (sha256 `eec4a2462333efaf…`; a scratchpad can be cleared, so the diff below is the record).
+
+1. **C11**: a member whose proof is unchanged stands byte for byte as on main, docstring to last line. Closes H3 and H9 for unchanged members.
+2. **No crash** when two cut blocks touch.
+3. **C12**: main's six modules are the bytes the before rows were printed from (hashes taken at my read; git shows them unchanged since 04:16).
+4. `iterat|fold|loop|wellfounded` added to the pattern (catches `Fin.hIterate`), and a print of the outside names that no induction-free proof of the six modules on main uses. The print is a fact for the reader, not a FAIL: an honest call may use a new innocent name (`congrFun` is one main's induction-free proofs here do not use).
+5. Prints only: where each moved block now stands; tokens beside lines and characters.
+
+Against the frozen `compare.py`; the `-` and `+` lines are exact, the context lines are trimmed.
+
+```diff
+@@ -16,11 +16,18 @@
+ # a name from outside the package that an honest call has no use for
+-SUSPECT = re.compile(r"(?i)(rec|induct|fix|below|sorry|choice|propext|sound)")
++SUSPECT = re.compile(r"(?i)(rec|induct|fix|below|sorry|choice|propext|sound|iterat|fold|loop|wellfounded)")
+ FINE = {"Eq.rec", "Eq.recOn", "Eq.ndrec", "Eq.mpr", "Eq.mp", "HEq.rec", "HEq.recOn", "And.rec", "And.casesOn", "Exists.rec",
+         "Exists.casesOn", "Or.rec", "Or.casesOn", "Iff.rec", "Iff.casesOn", "False.rec", "False.elim", "True.rec",
+         "Prod.rec", "Prod.casesOn", "PProd.rec", "PProd.casesOn", "Nat.rec", "Nat.casesOn", "Eq.casesOn", "PUnit.rec",
+         "PUnit.casesOn", "Unit.casesOn", "Nat.below", "Nat.brecOn"}
++# main's six modules when the before rows were printed (sha256; git: unchanged since the commits of 22 November 04:16)
++BEFORE_SHA = {"Likeness": "c09f09936ba686d570f06afc43a2c2b746a15e43a3320d8ce94c0793c4a7c8e0",
++              "GrammarCandidates": "2fa88ad3ec028830037114cd43671ccbff0f1e0b6d0c78bce11b9ac8ee1b6d28",
++              "Lasting": "4c9174a15c4b2d231adfaaca47a503c73b363a87711950c1ec5ee0db24ba9cb5",
++              "Tolerance": "0396f461645750097b19c6dd4703b87a1bda35c2bf3aaaa140e8c66e9f310c2c",
++              "Onward": "025c021e950e028796acffa360c17499db3388147224805b88d11e0e2a4d0b21",
++              "GrammarCourse": "f3928375fd01ea446f97cad742df0deac94283b467472d7b773341e84090ca0e"}
+ MOVED_ALSO = {"Likeness": ["theorem AlikeTo.down_to "], "Lasting": ["theorem kernel_iff_lasts "],
+               "GrammarCandidates": ["theorem «核则不可致诘» "]}
+@@ -55,6 +62,9 @@
+ def chars(lines): return len(re.sub(r"\s+", "", "\n".join(lines)))
++# a count in which a name counts once however long it is (a fact beside the two the rule uses)
++TOK = re.compile(r"«[^»]*»|[^\W\d][\w'!?]*(?:\.[^\W\d][\w'!?]*|\.\d+)*|\d+|=>|:=|\S")
++def toks(lines): return len(TOK.findall("\n".join(lines)))
+@@ -105,6 +115,10 @@
+         src[mod] = (b, pa.read_text().splitlines() if pa.exists() else b, pa.exists())
+ 
++    stale = [mod for mod in by_mod if hashlib.sha256((PKG / (mod + ".lean")).read_bytes()).hexdigest() != BEFORE_SHA[mod]]
++    say("C12 main's six modules are the bytes the before rows were printed from", not stale, f"changed since: {stale}")
++    # outside names that a proof of the six modules with no induction listed already uses on main
++    seen = {u for r in before.values() if r["kind"] == "theorem" and not r["recursors"] for u in r["foreign"]}
+     facts, kept = {}, set()
+@@ -120,17 +134,19 @@
+-                 extra_cmd=[l.strip()[:60] for l in sa_[sa + 1:ea] if CMD.match(l)],
++                 extra_cmd=[l.strip()[:60] for l in sa_[sa + 1:ea] if CMD.match(l)], same_block=sb_[db:eb] == sa_[da:ea],
++                 new_outside=sorted(u for u in (a["foreign"] if a else []) if u not in seen),
+                  ind=(a["recursors"] if a else ["?"]),
+@@
+-              f"spaces {f['chars'][0]} -> {f['chars'][1]}; widest line after {f['wide']} (cap {WIDTH}); docstring same {f['same_doc']}; "
++              f"spaces {f['chars'][0]} -> {f['chars'][1]}; tokens, a name counting once {toks(proof_b)} -> {toks(proof_a)}; widest line after {f['wide']} (cap {WIDTH}); docstring same {f['same_doc']}; "
+@@
+-              f"uses after {a['uses'] if a else '?'}; from outside the package {a['foreign'] if a else '?'}; of those, to be looked at {f['suspect']}")
++              f"uses after {a['uses'] if a else '?'}; from outside the package {a['foreign'] if a else '?'}; of those, to be looked at {f['suspect']}; "
++              f"of those, in no proof of the six modules on main that has no induction {f['new_outside'] if changed else '(unchanged)'}")
+@@ -147,6 +163,8 @@
+             + (f", and member(s) {m['needs']} kept" if m["needs"] else "") + ("" if good else "  -- ONE OF THESE DOES NOT HOLD: put it back"))
+ 
++    loose = [m["n"] for m in members if not facts[m["n"]]["changed"] and not facts[m["n"]]["same_block"]]
++    say("C11 a member whose proof is unchanged stands byte for byte as on main, docstring to last line", not loose, f"members that do not: {loose}")
+     for mod, ms in by_mod.items():
+@@ -162,7 +180,7 @@
+                 if hit:
+-                    where.setdefault(hit[0], len([x for x in keep if x.strip()]))
++                    for h in hit: where.setdefault(h, len([x for x in keep if x.strip()]))
+                 else: keep.append(l)
+@@ -179,7 +197,9 @@
+-        say(f"C10 {mod} a move only where a kept member needs it", need or not moved, f"moved: {moved}; a member that may move is kept: {need}")
++        say(f"C10 {mod} a move only where a kept member needs it", need or not moved, f"moved: {moved}; a member that may move is kept: {need}; "
++            "each moved block's kept lines above before -> after, and the kept line now above it: "
++            f"{[(h.strip(), where_b[h], where_a[h], [x for x in rest_a if x.strip()][where_a[h] - 1].strip()[:60] if where_a[h] else '') for h in movable if where_b[h] != where_a[h]]}")
+```
+
+Not mended here, because each costs a Lean run on both sides or touches a frozen script: `skipLast` narrowed to names Lean generated (C11 makes the gap unreachable from a member's block, and C6 and C7 cover the rest of the source); a field for package `def`s a proof uses; `run-stub.sh` hashing the sources before it builds.
+
+## 6. Not done, and limits
+
+No Lean was run. The two exploit terms are unbuilt, and what `Rows.lean` would print for them is from reading it and the toolchain. That `Acc` counts as recursive for `isRec`, and that the frontend accepts a declaration named `_h`, are not verified. The scan of the toolchain for induction principles under innocent names was a pattern over `Init` and `Std` and found the `hIterate` family only; it is not a proof there is no other. "Refilled" lines are a count of text, not a layout anyone compiled. I did not read `REPORT.md` beyond its table, its section on member 7 and its headings, nor the build logs 1 to 6. I did not check the Lean of the kept calls against their statements: the rows and the clean build are what say Lean accepted them.

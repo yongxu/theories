@@ -1,0 +1,23 @@
+#!/bin/bash
+# usage: run-stub.sh before|after
+# Wait until no other Lean build, gate or core run is alive; build the stub of that tree and every changed module in
+# it once (unchanged imports come from the shared cache), with the axiom audit of each; write the hashes of the
+# sources the rows are of; then print the rows with one Lean run.
+side="$1"; tree=/Users/ren/tmp/fm/build13/$side
+test -d "$tree/Becoming" || exit 8
+log=$tree/build-stub.log
+targets=""
+for f in "$tree"/Becoming/*.lean; do targets="$targets Becoming.$(basename "$f" .lean)"; done
+busy() { ps -axo pid=,args= | grep -E '^ *[0-9]+ [^ ]*[Pp]ython[^ ]* .*(scratch_build|gate\.py|check_becoming)' > /dev/null; }
+while busy; do sleep 10; done
+cd /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming || exit 9
+date '+start %H:%M:%S' > "$log"
+python3 -B scratch_build.py "$tree" $targets >> "$log" 2>&1
+code=$?
+echo "exit $code stub $side" >> "$log"
+date '+end %H:%M:%S' >> "$log"
+tail -c 1200 "$log"
+test $code -eq 0 || exit $code
+( cd "$tree/Becoming" && shasum -a 256 *.lean ) > "$tree/rows.sources.sha256"
+LEAN_PATH=$tree/.build "$(elan which lean)" /Users/ren/tmp/fm/build13/kit/Rows.lean > "$tree/rows.txt" 2> "$tree/rows.err"
+echo "lean exit $? ; rows $(grep -c '^ROW ' "$tree/rows.txt") ; err bytes $(wc -c < "$tree/rows.err")"

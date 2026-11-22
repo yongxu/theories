@@ -1,0 +1,83 @@
+import Lean
+import Becoming
+
+/-! For every theorem declared in a module of the package: its module, its name, the head constant of its proof term
+after the leading binders, the package theorems that occur in the term, and the recursors in it. Lean's auxiliary
+declarations under the theorem's own name (matchers, abstracted proofs) are followed, so what they use is counted as
+the theorem's. AI-written (Claude Fable, board row DJ), 22 November 2026; after the atlas kit's `aaRow`. -/
+
+open Lean
+
+partial def aaStrip : Expr → Expr
+  | .lam _ _ b _ => aaStrip b
+  | .mdata _ e => aaStrip e
+  | .letE _ _ _ b _ => aaStrip b
+  | e => e
+
+def valueOf (ci : ConstantInfo) : Option Expr :=
+  match ci with
+  | .thmInfo t => some t.value
+  | .defnInfo d => some d.value
+  | .opaqueInfo o => some o.value
+  | _ => none
+
+/-- The constants in the proof term of `n`, following constants declared under `n`'s own name. -/
+partial def usedBy (env : Environment) (n : Name) : NameSet :=
+  let rec go (todo : List Name) (seen out : NameSet) : NameSet :=
+    match todo with
+    | [] => out
+    | c :: rest =>
+      if seen.contains c then go rest seen out else
+      let seen := seen.insert c
+      match (env.find? c).bind valueOf with
+      | none => go rest seen out
+      | some v =>
+        let (more, out) := v.getUsedConstants.foldl (init := (rest, out)) fun (acc : List Name × NameSet) u =>
+          if u != n && n.isPrefixOf u then (u :: acc.1, acc.2) else (acc.1, acc.2.insert u)
+        go more seen out
+  go [n] {} {}
+
+def isRecursor (c : Name) : Bool :=
+  match c with
+  | .str _ s => s == "brecOn" || s == "rec" || s == "recOn" || s == "binductionOn" || s == "fix" || s == "below"
+  | _ => false
+
+def skipLast (c : Name) : Bool :=
+  match c with
+  | .str _ s => s.startsWith "eq_" || s == "injEq" || s == "inj" || s == "sizeOf_spec" || s == "noConfusion"
+      || s.startsWith "match_" || s.startsWith "_" || s.startsWith "proof_"
+  | .num _ _ => true
+  | _ => false
+
+def jsonList (xs : List String) : String := "[" ++ ", ".intercalate (xs.map String.quote) ++ "]"
+
+#eval show CoreM Unit from do
+  let env ← getEnv
+  let mods := env.header.moduleNames
+  let mut rows : Array (String × String) := #[]
+  for (c, ci) in env.constants.map₁.toList do
+    match ci with
+    | .thmInfo t =>
+      if c.isInternal || skipLast c then continue
+      match env.getModuleIdxFor? c with
+      | none => continue
+      | some idx =>
+        let m := mods[idx.toNat]!
+        if !(`Becoming).isPrefixOf m then continue
+        let hd := match (aaStrip t.value).getAppFn.constName? with
+          | some h => (toString h).quote
+          | none => "null"
+        let used := (usedBy env c).toList
+        let pkg := used.filter fun u => match env.find? u with
+          | some (.thmInfo _) => (match env.getModuleIdxFor? u with
+              | some j => (`Becoming).isPrefixOf mods[j.toNat]!
+              | none => false)
+          | _ => false
+        let recs := used.filter isRecursor
+        let srt := fun (l : List Name) => (l.map toString).toArray.qsort (· < ·) |>.toList
+        rows := rows.push (toString m ++ " " ++ toString c,
+          "{\"module\": " ++ (toString m).quote ++ ", \"name\": " ++ (toString c).quote ++ ", \"head\": " ++ hd
+            ++ ", \"uses\": " ++ jsonList (srt pkg) ++ ", \"recursors\": " ++ jsonList (srt recs) ++ "}")
+    | _ => continue
+  for (_, r) in rows.qsort (fun a b => a.1 < b.1) do
+    IO.println ("ROW " ++ r)

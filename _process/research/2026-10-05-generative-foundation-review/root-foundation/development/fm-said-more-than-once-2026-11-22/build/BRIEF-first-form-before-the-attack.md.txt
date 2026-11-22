@@ -1,0 +1,80 @@
+# Brief: eleven old inductions made calls of a law the package already has
+
+*AI-written (Claude Fable, board row FM), 22 November 2026. For an implementer who takes no part in checking. Not yet frozen while this line stands without a hash beside it in `FROZEN-BRIEF.sha256.txt`.*
+
+## What we are doing
+
+The repository draws a map of how anything forms, persists, changes and ends, with its core proved in Lean so that any mind can check it (`AGENTS.md` at the repository root says this in full; read its first section and its seven rules). The present aim of this row: a full map whose links are Lean theorems, each thing said once. A link counts when an OLD proof becomes a case of a more general law, its statement unchanged and its own induction gone.
+
+On 22 November a law landed, `Becoming.Iteration` in `Becoming/PredicateIteration.lean`: a monotone step on predicates, applied again and again from a start. A read-only sweep then found, on paper, that nine theorems of 13 October to 6 November still carry an induction that this law already has, in modules where the bridge from the notion to an iterate is already landed. Two more theorems are, on paper, calls of an older general member. Nobody has built any of it. This build finds out, member by member, whether Lean agrees.
+
+## What is asked
+
+Make each of the eleven theorems below a call, in a copy of its module in the scratch tree, and report what Lean and the scripts say. Nothing in the repository is edited.
+
+Lean sources are under `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`. The terms the sweep's checker wrote on paper are in `/Users/ren/theories/tmp/fm/once22/returns/CHECK-goings-on-fable.md`, section 1c (members 1 to 9, with the order inside the modules and what the checker said would count against them) and section 2 (members 10 and 11). They are a start, not the answer: they were tried by no one.
+
+| # | Module | Theorem (line now) | Statement line dated | Proof lines now | Expected to call |
+|---|---|---|---|---|---|
+| 1 | Likeness | `Alike.alikeTo` (916) | 14 Oct | 7 | `Iteration.postfixed_in_iter` through `iter_iff_alikeTo` |
+| 2 | Likeness | `AlikeTo.of_succ` (899) | 14 Oct | 7 | `Iteration.iter_pred` through `iter_iff_alikeTo` |
+| 3 | Likeness | `AlikeTo.self` (1205) | 15 Oct | 4 | member 1 at `Alike.refl` |
+| 4 | GrammarCandidates | `«对称有常则不可诘»` (533) | 23 Oct | 7 | `Iteration.postfixed_in_iter` through `iter_iff_inquiry` |
+| 5 | GrammarCandidates | `«诘之降»` (601) | 6 Nov | 4 | `Iteration.iter_pred` through `iter_iff_inquiry` |
+| 6 | Lasting | `lasts_of_kernel` (231) | 14 Oct | 5 | `Iteration.postfixed_in_iter` through `iter_region_iff_lasts` |
+| 7 | Tolerance | `withheld_kept` (303) | 19 Oct | 3 | `Iteration.iter_within` through `iter_eq_orbit` |
+| 8 | Onward | `KeepsMoving.continues` (222) | 16 Oct | 4 | `Iteration.postfixed_in_iter` through `Parting.iter_iff_continues` |
+| 9 | Branching | `fed_keeps` (164) | 13 Oct | 4 | `Iteration.postfixed_in_iter` through `iter_iff_reachable` |
+| 10 | GrammarCourse | `Law.kept_along` (120) | 23 Oct | 2 | `Law.KeepsRelation.run` (IdentificationRuns) |
+| 11 | RegimeMargin | `Coupled.Indexed.run_within` (2495) | 22 Oct | 2 | `Lasting.closed_orbit` |
+
+The exact names Lean must show in each member's `uses` afterwards are in `/Users/ren/tmp/fm/build13/kit/members.json`.
+
+## The rules
+
+1. **Only the eleven proofs change.** No statement, binder, docstring, import, `open`, `variable`, `universe`, attribute or notation is added, removed or altered. No declaration is added (no helper lemma, no `private` or `local` anything) and none is removed or renamed. A name from `Becoming.Iteration` is written qualified where `open Iteration` is not already in scope at that place.
+2. **A theorem may move inside its own module only where the brief says so**, and only as a whole block (docstring, statement, proof) with nothing else touched: members 1 and 2 with `AlikeTo.down_to` between them (Likeness), member 4 with `«核则不可致诘»` (GrammarCandidates), member 6 with `kernel_iff_lasts` (Lasting). The three blocks that move with a member move byte for byte. Where a block lands (inside a section or after it) is the implementer's choice; the statement as Lean holds it must come out the same (rule 4).
+3. **Lines.** A member's proof is every line after its statement's last line; the statement's last line is the first line from `theorem` on that ends with `:=` or is followed by a line beginning with `|`. So the proof begins on a new line, as it does now. No line of a changed member is wider than 100 characters. Names are written as the package writes them.
+4. **A member is kept as a call only if all of these hold; otherwise it is put back byte for byte** (and a move made only for it is undone), and reported with the shortest call that was tried and what Lean said:
+   - its module builds with no error and no warning, and the axiom audit the build prints shows no axiom for any declaration of the module;
+   - its row after shows no induction (`inductions after []` in the comparison), and every name listed for it in `members.json` is in its `uses`;
+   - its proof has **strictly fewer** lines than before;
+   - the comparison's C1, C2, C3, C5, C6, C7 pass with it in.
+5. **No verdicts.** The report says what was done and what Lean and the scripts printed. Whether a member is "a case", "a join", "worth it" is not for the report.
+
+## The tests, written before the build
+
+A Lean file, `/Users/ren/tmp/fm/build13/kit/Rows.lean`, prints for every declaration of the eight modules its name, kind, universe names, and its statement binder by binder as Lean holds it (binder names, binder kinds, types), and for every theorem the head of its proof term, the package theorems the term uses and its recursors, following Lean's auxiliary declarations under the theorem's own name. It was run on main's bytes: `/Users/ren/tmp/fm/build13/before/rows.txt` (1,393 rows). `kit/compare.py` then checks:
+
+- **C1** the declarations of the eight modules (module, name, kind) are the same set before and after;
+- **C2** every one of them has the same universe names, binders and body before and after (all 1,393, not only the members);
+- **C3** no theorem outside the eleven has a different head, `uses` or recursors;
+- **C5** each changed module's `import` lines are identical;
+- **C6** with the eleven members' blocks and the three blocks allowed to move with them taken out, the rest of each changed source is line for line the same, in order;
+- **C7** the three blocks that move with a member are byte for byte the same;
+- and it prints, per member, proof lines before and after, the widest line, whether the docstring and the statement text are the same, the head before and after, the inductions left, expected `uses` missing, and the whole `uses` after.
+
+## What would make this build gain nothing, said before it runs
+
+- A member whose call is not strictly shorter than its own induction is **no gain** for that member (it says the same in as many lines through a detour). The checker's own forecast: members 4, 7, 8 and 9 are each one or two lines shorter on paper, so one more line undoes them; member 11 passes only if Lean unifies `K` and `next` without named arguments.
+- A call that needs anything new (a lemma, a statement, an import, an `open`) is not a call of a law the package already has, and is put back.
+- If a member's `uses` shows the expected names but the work is done by another existing theorem that carries the induction, that is to be seen in the printed `uses` and is reported plainly, not hidden.
+- Even if all eleven pass, the build adds no statement and no row to the atlas; it removes about twenty lines. What it would show is only this: that Lean accepts each of these older results as a call of the named law with its statement untouched. Nothing more is to be said of it in the report.
+
+## How to build (one Lean run at a time; this Mac is shared)
+
+- Put the changed copy of a module at `/Users/ren/tmp/fm/build13/after/Becoming/<Module>.lean` (start from a byte copy of the package file). Write nowhere else except `/Users/ren/tmp/fm/build13/report/`.
+- Build named modules: `/Users/ren/tmp/fm/build13/kit/run-after.sh <n> <Module> [<Module> …]` (`<n>` a fresh number each time; it waits for any other build, gate or core run, builds once, logs to `after/build-<n>.log`). Build only the module you changed, not its importers: the statements do not change, and the importers are built once at the end by the session that wrote this brief. Never run two builds at once and never start `lake`, the gate or `check_becoming.py`.
+- When the modules you keep changed all build: `/Users/ren/tmp/fm/build13/kit/run-stub.sh after` (builds a stub importing the eight modules, then prints `after/rows.txt`), then `python3 -B /Users/ren/tmp/fm/build13/kit/compare.py > /Users/ren/tmp/fm/build13/report/compare.txt`. Repeat after any change, so that the last `rows.txt` and `compare.txt` are of the last sources.
+- Do not edit anything under `/Users/ren/theories`, run no git command that writes, and change nothing in `kit/` or `before/`. If a script in `kit/` is wrong, say so in the report and stop using the check it gets wrong; do not mend it.
+
+## What to report
+
+`/Users/ren/tmp/fm/build13/report/REPORT.md`, with:
+
+1. Per member: kept as a call or put back; the proof as it now stands (the text); proof lines before and after; where it stands in the module if it moved; every call that was tried and failed, with Lean's message; anything about its statement, universes or binders that had to be worked around.
+2. The last `compare.txt` in full, and the number of the last build log of each changed module.
+3. Anything in the brief, the checker's terms or the kit that turned out wrong.
+4. What was not tried.
+
+Facts only. No sentence on what the result means.

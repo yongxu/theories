@@ -1,0 +1,246 @@
+# BUILT: the seven new proofs themselves, read against the law, the old proofs and their new places
+
+*AI-written (Claude Fable 5.2, model id `claude-fable-5-2`), a reader alone for board row FM, 22 November 2026, about 16:40. I took no part in the brief, the kit, the build or the earlier reads. Read only: nothing edited in the repository or under `/Users/ren/tmp/fm/build13`; no Lean, no build, no gate, no git command that writes. This file is the one thing written. Every term I propose below is ON PAPER: no Lean has seen it. OPENED = I read the lines named. TOLD = taken from the report, `compare.txt` or an earlier reader.*
+
+Paths. Main: `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/` (written `main:`). The changed copies: `/Users/ren/tmp/fm/build13/after/Becoming/` (written `after:`). The law: `main:PredicateIteration.lean` (`postfixed_in_iter` l. 146, `iter_pred` l. 103, `iter_iff_stages` l. 88).
+
+The measure. I counted with the kit's own rule (`kit/compare.py` `chars`: non-blank proof lines; all white space removed; code points). My script gives the kit's figures for all seven old and built proofs (240/161, 226/116, 114/30, 216/180, 138/122, 207/174, 37/10), so the figures for rewritten terms below are on the same scale. OPENED.
+
+## The answer in short
+
+- **The law at work with the old argument as premises**: 2, 5 (exactly as the PREMISES readers said); 1 (at the witness bisimulation, as they said: another instance than the old proof's, which was at `Alike`); 3 (through 1); 6 (a mixed route: the guard from `Reach.refl` as the old base did, the step from `kernel_step_iff.mp`). **4 took another route than the readers read**: it no longer uses `«有常之逐点»`; it applies the constancy hypothesis to a witness of the composition, opening the definition of `«有常»`. **10 is not the law at all**: one twin calling the other.
+- **Nothing in the seven can break silently.** Each leans on some definition unfolding (listed per member); a change to any of them fails the build at that theorem. What can go unseen is not a break but a dropped link: member 4's row no longer shows `«有常之逐点»`, member 1's no longer `Alike.realized`, `Alike.step`, `Alike.symm` (before and after rows, OPENED).
+- **Fair length.** With the old proofs' kind of names and the modules' layout: 1, 2, 3, 4, 5, 10 stay strictly shorter in lines and in characters. **6 does not hold in characters**: 205 (step witness left `st`) or 209 (`step`) against 207, and the old proof written in the built term's kind of names is 160 to 170 against the built 174. Its 33 characters of margin are `k` and `h` for `kept` (21), `.refl` for `Reach.refl` (10), and 2.
+- **Verdicts.** 1, 2, 3, 5, 10: LAND AS BUILT. 4: LAND WITH THIS CHANGE (through `«有常之逐点»`, names `u u'`; text below, needs one build). 6: LAND WITH THIS CHANGE (the old proof's names; text below), and the board may not call it shorter; if the standard that put member 7 back (a margin of two characters through a short name) is applied to all, 6 is LEFT.
+
+## Member by member
+
+### 1. `Alike.alikeTo` (`after:Likeness.lean` 1083 to 1088)
+
+```lean
+  fun k {s s'} ⟨B, bisim, related⟩ => (iter_iff_alikeTo k (s, s')).mp
+    (postfixed_in_iter alike_mono (K := fun p => B p.1 p.2)
+      (fun p h => (bisim p.1 p.2 h).1) (fun p => bisim p.1 p.2) k (s, s') related)
+```
+
+**(a) What the term does.** OPENED (`main:Labelled.lean` 293 to 303, `after:Likeness.lean` 1052 to 1068).
+- It opens the hypothesis `Alike F G s s'` as `∃ B, Bisimulation F G B ∧ B s s'` by a pattern in the binder (the row's head is the auxiliary `Alike.alikeTo.match_1_1`).
+- `mono` := `alike_mono`. `K` := the witness B on pairs, written out.
+- `inside` := `(bisim p.1 p.2 h).1`: the first conjunct of the bisimulation clause, taken as `AlikeTo F G 0 p.1 p.2`.
+- `post` := `fun p => bisim p.1 p.2`: the hypothesis `Bisimulation F G B` itself, with nothing proved.
+- Then the bridge `.mp`. Two of the law's inductions run (`postfixed_in_iter`, and `iter_iff_stages` inside the bridge) where the old proof ran one.
+- **Not the old proof's instance.** The old proof's class was `Alike` itself (through `Alike.realized`, `Alike.step`, `Alike.symm`; before row `uses`). The built term's class is B, and its `uses` are `postfixed_in_iter`, `alike_mono`, `iter_iff_alikeTo` only. Both PREMISES readers foresaw this and it is what was built. On paper the instance at `K := fun p => Alike F G p.1 p.2` is 6 lines and 271 characters against 7 and 240: longer than the old proof, so the old argument to the letter is not available as a shorter call.
+- **What it leans on.** `post` type-checks only because the body of `Bisimulation` (Labelled 294 to 297) is, conjunct for conjunct and in the same order, the body of `alikeStep` (Likeness 1052 to 1055) once `AlikeTo F G 0` unfolds to the claims clause and `(fun p => B p.1 p.2) (t, t')` reduces to `B t t'`. Three definitions (`Bisimulation`, `alikeStep`, `AlikeTo` at 0) plus `Alike` as an existential. The package already leans on the same coincidence: `AlikeTo.bisimulation` (`after:` 1129 to 1131, `fun s s' alike => steady s s' alike`) and the two `Iff.rfl` of `iter_iff_alikeTo`. A change to any of the three fails the build here, at a term that names none of them. Loud, not silent.
+
+**(b) Fair length.** `h` renamed to the old proof's `joined`: 3 lines, 171 characters, widest 92; or 4 lines (one premise a line), 171. Old 7, 240. Still strictly shorter in both. The old proof in one- and two-letter names is 180: the built 161 is shorter that way round too.
+
+**(c)** Not cramped. `(K := …)` is written out, the pattern `⟨B, bisim, related⟩` is Labelled's own (ll. 359, 383). I would change `(fun p h => (bisim p.1 p.2 h).1)` to `(fun p joined => (bisim p.1 p.2 joined).1)`; no line.
+
+**(e)** May: "`Alike.alikeTo` is `Iteration.postfixed_in_iter` at the witness bisimulation, read through `iter_iff_alikeTo`: the bisimulation is the premise that the matching step preserves the class, with nothing proved; its own induction is gone." May not: "the old proof's argument is now the law's premises" (the old proof argued at the class `Alike`, through `Alike.realized`, `Alike.step` and `Alike.symm`, none of which the new term uses).
+
+**Verdict: LAND AS BUILT.**
+
+### 2. `AlikeTo.of_succ` (`after:Likeness.lean` 1071 to 1075)
+
+```lean
+  fun {k s s'} h => (iter_iff_alikeTo k (s, s')).mp (iter_pred alike_mono (fun _ m => m.1)
+    k (s, s') ((iter_iff_alikeTo (k + 1) (s, s')).mpr h))
+```
+
+**(a)** OPENED. Bridge `.mpr` at k + 1; `iter_pred` with `mono` := `alike_mono` and `start` := `fun _ m => m.1` (the first conjunct of `alikeStep` from agreement is agreement: the old base `alike.1`); bridge `.mp` at k. The route the PREMISES readers read, no other. It leans on `alikeStep` unfolding to a conjunction whose first conjunct is the start, as its neighbour `alike_at_cover` does with the same `(fun _ m => m.1)` (`after:` 1096). Three traversals (bridge, law, bridge) for the old one.
+
+**(b)** With `alike` for `h` and `m` (the old proof's name): 2 lines, 132 characters, widest 86. Old 7, 226. Strictly shorter in both. Old proof in short names: 158; still longer than the built 116.
+
+**(c)** Laid out and named as `alike_at_cover` two theorems below it (`fun h => (iter_iff_alikeTo _ (s, s')).mp (iter_persists alike_mono (fun _ m => m.1) within …`). A maintainer of this section wrote that shape already. Nothing to change.
+
+**(e)** May: "`AlikeTo.of_succ` is `Iteration.iter_pred` for the matching step from agreement on claims, through `iter_iff_alikeTo` both ways; the start premise is the first conjunct, as the old base case was." May not: "one induction where there were two" or any count of inductions saved: the call runs the law's induction and the bridge's twice.
+
+**Verdict: LAND AS BUILT.**
+
+### 3. `AlikeTo.self` (`after:Likeness.lean` 1196 to 1197)
+
+`fun k s => (Alike.refl F s).alikeTo k`
+
+**(a)** OPENED. Member 1 at `Alike.refl` (`⟨_, Bisimulation.eq F, rfl⟩`, Labelled 334). With member 1 at K := B this is the law at the identity relation, its `post` being `Bisimulation.eq` (which eliminates an equality by `cases`, Labelled 306 to 309; the old proof walked the diagonal and eliminated none). Its row shows `Alike.alikeTo` and `Alike.refl` only: two calls from the law. Leans on nothing new.
+
+**(b)** 1 line, 30 characters; no local name to lengthen. Old 4, 114.
+
+**(c)** As a maintainer would write it.
+
+**(e)** May: "`AlikeTo.self` is `Alike.alikeTo` at `Alike.refl`; through it, the law at the identity bisimulation." May not: "`AlikeTo.self` is a call of `Becoming.Iteration`" (its term names no lemma of the law, and it is a case of the law only while member 1 is a call).
+
+**Verdict: LAND AS BUILT** (only together with 1).
+
+### 4. `«对称有常则不可诘»` (`after:GrammarCandidates.lean` 564 to 570)
+
+```lean
+  fun k x y h => (iter_iff_inquiry k (x, y)).mp (postfixed_in_iter inquiry_mono
+    (fun p => hSE p.1 p.2) (fun _ s => ⟨hSE _ _ s, fun v r => hc _ v ⟨_, s, r⟩,
+      fun v r => match hc _ v ⟨_, hs _ _ s, r⟩ with
+      | ⟨w, t, q⟩ => ⟨w, t, hs _ _ q⟩⟩) k (x, y) h)
+```
+
+**(a) What the term does.** OPENED (`main:Grammar.lean` 54, 57, 60, 340 to 351; `after:` 548 to 562).
+- `mono` := `inquiry_mono`; K is not written, Lean finds `fun p => S p.1 p.2` from `inside`.
+- `inside` := `fun p => hSE p.1 p.2`: the old base.
+- `post`, first conjunct: `hSE _ _ s`, as the old proof.
+- `post`, forth: `fun v r => hc _ v ⟨_, s, r⟩`. Here `hc : «有常» R S` is applied as a function to a pair of points and an anonymous witness of `«而» («逆» S) R`. That is `«有常»` unfolded to `«则» («而» («逆» S) R) («而» R («逆» S))` and then `«则»` and `«而»` unfolded, and the result `∃ w, R p.2 w ∧ «逆» S w v` is taken as the forth clause `∃ v', R p.2 v' ∧ S v v'` by unfolding `«逆»` again. **The old proof went through `(«有常之逐点» R S).mp hc`; the built term does not use that lemma** (before row `uses`: `['Becoming.«有常之逐点»']`; after: `postfixed_in_iter`, `inquiry_mono`, `iter_iff_inquiry`). What it does is the body of `«有常之逐点»`'s forward half (Grammar 346 to 348) written inline in another module.
+- `post`, back: the same with `hs _ _ s` turning the pair first and `hs _ _ q` turning the outcome back: the old proof's two uses of symmetry, in the same places.
+- So the content of the premises is the old proof's (constancy gives forth, symmetry turns it into back), and PREMISES-fable's "the paper term's `post` is these three components character for character" does not hold of the built term: the constancy step changed route.
+- **What it leans on.** The literal form of `«有常»` as `E˘;R ⊆ R;E˘`, and of `«而»` as an existential with the middle point first. In what I grepped, every pointwise use of a constancy hypothesis outside `Grammar.lean` goes through `«有常之逐点»` (70 mentions in 14 modules; in this module `core_iff_inquiry` in the same section, and ll. 703, 706 and 714 of main; `Change.lean` 878, 890; `GrammarCourse.lean` `constant_iff_keeps`); I did not open all 14. If `«有常»` is restated (Grammar 437 already proves another form), the lemma is re-proved once and those uses stand; this theorem fails the build. Loud, not silent; but it is the one new term of the seven that opens a definition its old proof reached only through the definition's own lemma.
+
+**(b) Fair length.** Names as the old proof (`u u' h`, `v r`, `v' r'`, `s`):
+- built route: 4 lines, 187 characters, widest 81;
+- through `«有常之逐点»`, with blanks for the inferable points: 4 lines, 200, widest 81;
+- through `«有常之逐点»` with every point written as the old proof wrote it (`p.1 p.2` for `u u'`): 5 lines, 217.
+Old 7, 216. Strictly shorter in both on the first two; not on the third (217 against 216). Blanks for inferable arguments are the package's habit (`keeps _ _`, `Reach.refl _ s`), so I count the second as fair. The saving of the built route over the lemma's route is 13 characters and was not needed to pass.
+
+**(c) Cramped: yes.** (i) The statement binds `k u u'` and the proof calls them `x y`. (ii) `s` names a proof of `S …`, in a section where `S` is also a type (see (d)); `t` names a proof of `R`, which this module calls `r`; `q`. (iii) `hc _ v ⟨_, s, r⟩` and `hc _ v ⟨_, hs _ _ s, r⟩`: an anonymous constructor for a composition the reader has to reconstruct from `«有常»`'s definition, with the points left blank, so which way the symmetric turn goes cannot be read off. (iv) a `match` inside an anonymous constructor inside an argument, closed by `⟩) k (x, y) h)` after the match arm. I would change (i) to (iii) by the text below; (iv) stays (undoing it costs two lines: 6 lines, 200 characters, still under 7 and 216).
+
+**(e)** May (as built): "`«对称有常则不可诘»` is `postfixed_in_iter` at S for the inquiry step from E, through `iter_iff_inquiry`: S inside E is `inside`; constancy gives the forth match and symmetry turns it into the back match." May not (as built): "its premises are discharged as the old proof discharged them" (the built term no longer calls `«有常之逐点»`; it opens `«有常»`). With the change below that sentence may be written.
+
+**Verdict: LAND WITH THIS CHANGE** (on paper; needs one build of GrammarCandidates and the comparison again; by my count R4 holds: 4 lines against 7, 200 against 216, widest 81):
+
+```lean
+  fun k u u' h => (iter_iff_inquiry k (u, u')).mp (postfixed_in_iter inquiry_mono
+    (fun p => hSE p.1 p.2) (fun _ h => ⟨hSE _ _ h, («有常之逐点» R S).mp hc _ _ h,
+      fun v' r' => match («有常之逐点» R S).mp hc _ _ (hs _ _ h) v' r' with
+      | ⟨v, r, s⟩ => ⟨v, r, hs _ _ s⟩⟩) k (u, u') h)
+```
+
+Both shapes already stand in this module with the points left blank, which is why I expect Lean to take it: `(«有常之逐点» «歧网之步» S).mp hc _ _ s …` (main 703, 706) and `(«有常之逐点» «歧网之步» S).mp hc _ _ (hs _ _ s) …` (main 714). OPENED. What is untried is their use as components of `post` under `postfixed_in_iter`. If Lean refuses it, or no further build is to be spent: the built term is true and may land with `x y` renamed `u u'` (183 characters; a renaming of bound names only), and the board then says that the constancy lemma is no longer used.
+
+### 5. `«诘之降»` (`after:GrammarCandidates.lean` 597 to 600)
+
+```lean
+  fun k x y h => (iter_iff_inquiry k (x, y)).mp (Iteration.iter_pred inquiry_mono (fun _ m => m.1)
+    k (x, y) ((iter_iff_inquiry (k + 1) (x, y)).mpr h))
+```
+
+**(a)** OPENED. Member 2's term at the inquiry step: bridge `.mpr`, `iter_pred` with `inquiry_mono` and `start` := first conjunct (the old base `⟨e, _, _⟩ => e`), bridge `.mp`. The route the readers read. Leans on `inquiryStep` unfolding to a conjunction with E first, as `inquiry_iff_all` (`after:` 583) does with the same `(fun _ m => m.1)`.
+
+**(b)** With the statement's `u u'`: 126 characters; in two lines the first is exactly 100 wide (the cap); in three lines the widest is 64. Old 4, 138. Strictly shorter in both either way (2 or 3 lines; 126). The old proof's names were already one letter, so there is no reverse gain. 10 of the characters are the qualifier `Iteration.`, needed because the theorem stands after `end ListedPairs`.
+
+**(c)** The first line is 98 wide. This section already has a proof line of 100 (`inquiry_iff_all`, `after:` 583), so it is the section's own density. The one thing I would change is `x y` to `u u'`, to match the statement; that puts line 1 at 100, or costs a line (3 against 4, still fewer).
+
+**(e)** May: "`«诘之降»` is `Iteration.iter_pred` for the inquiry step from E, through `iter_iff_inquiry` both ways: the sentence of `AlikeTo.of_succ` at the grammar's step." May not: "`«诘之降»` and `AlikeTo.of_succ` are now one theorem" (two calls of one lemma at two steps; nothing in this build relates the two steps to each other).
+
+**Verdict: LAND AS BUILT.**
+
+### 6. `Lasting.lasts_of_kernel` (`after:Lasting.lean` 242 to 247)
+
+```lean
+  fun n {s} h => (iter_region_iff_lasts n s).mp (postfixed_in_iter (region_mono _ _)
+    (K := Kernel _ guard) (fun y k => k y (.refl _ _)) (fun y k => ⟨k y (.refl _ _),
+      fun t ⟨a, st⟩ => (kernel_step_iff.mp k).2 a t st⟩) n s h)
+```
+
+**(a) What the term does.** OPENED (`main:Viability.lean` 58 to 59, 120 to 130; `main:Frame.lean` 215 to 222, 241; `after:` 236 to 240).
+- `mono` := `region_mono _ _`; K := `Kernel _ guard`, the process left for Lean to find from the last argument.
+- `inside` := `fun y k => k y (.refl _ _)`: the kernel hypothesis applied as a function (`Kernel` unfolded to `∀ t, Reach P s t → guard t`) at `Reach.refl`. This is the old base `kept s (Reach.refl _ s)`, not `(kernel_step_iff.mp k).1`.
+- `post`, first conjunct: the same expression again.
+- `post`, second conjunct: `fun t ⟨a, st⟩ => (kernel_step_iff.mp k).2 a t st`: `Steps P y t` opened as `∃ a, P.step y a t` by a pattern in the binder, then the step half of `kernel_step_iff`, whose own proof (Viability 122 to 123) is the old proof's `kept t (Reach.trans (Reach.of_step step) reach)`.
+- So: a mixed route. The lemma `kernel_step_iff` is used for half of its forward content and the other half is re-derived twice from the definition. The brief allowed either source; the built term takes one from each, and the reason is length (`k y (.refl _ _)` is 11 characters, `(kernel_step_iff.mp k).1` is 23). The old proof's `⟨admitted, rfl⟩` (the disturbed step built by hand) now lives only in the bridge (`after:` 239).
+- After row `uses`: `postfixed_in_iter`, `iter_region_iff_lasts`, `Reach.refl`, `kernel_step_iff`, `region_mono`. Gone: `Reach.of_step`, `Reach.trans` (inside `kernel_step_iff` now). The barred names are not there.
+- **What it leans on.** `Kernel` as a `∀` (as the old proof did); `Steps` as an existential and `regionStep` as a conjunction (new here; the bridge beside it leans on both too). And `.refl _ _`: a leading dot resolved through the head `Reach` of the expected type, `Reach` being a `def`. The package writes `Reach.refl` in full at every other place I grepped (`Branching.lean` 589, 590, 698; `CausalGrowth.lean` 473; `EdgeClosure.lean` 42; `Junctures.lean` 359, 421; the old proof itself); this would be the one leading-dot use. All loud if they change.
+
+**(b) Fair length. This is the member that does not hold.** Old 5 lines, 207 characters.
+- `kept` for `h` and `k` (the old proof's name for the kernel hypothesis), `Reach.refl _ t` written as the old proof wrote it, the step witness left `st`: 4 lines, **205**, widest 87.
+- the same with `step` (Viability's name; `st` is the name `alike_mono` and `inquiry_mono` use): **209**.
+- both premises from `kernel_step_iff` (`.1` and `.2`), fair names: 4 lines, **223**; in the built term's names: 3 lines, 198.
+- the reverse: the OLD proof in the built term's kind of names (`k`, `h`, `r`): 5 lines, **170**; with `.refl` too, **160**. Both under the built 174.
+- Where the 33 characters of margin are: `k`/`h` for `kept`, 21; `.refl` for `Reach.refl`, 10; 2 left.
+So: strictly fewer lines holds (3 or 4 against 5). No fewer characters holds only by names: at equal naming the call is two characters shorter, two longer, or four to fourteen longer, depending on which equal naming. The honest figure is "about as long".
+
+**(c) Cramped: yes.** `k` for a kernel proof stands next to `(K := …)` and in a module where `k` is a number everywhere else; `h`; the line break inside `⟨k y (.refl _ _),` in the middle of an argument; `.refl`. I would change all four by the text below; it costs one line (4 against the old 5).
+
+**(e)** May: "`lasts_of_kernel` is `postfixed_in_iter` at the kernel for the region step of the disturbed process, through `iter_region_iff_lasts`: the kernel lies in the guard by `Reach.refl`, each step keeps it by `kernel_step_iff`; its own induction is gone; one line fewer, about as many characters." May not: "shorter", or "174 characters for 207" given as a gain (the 174 is `k`, `h`, `st` and `.refl`); and not "its premises are discharged by `Reach.refl`, `Reach.trans`, `Reach.of_step` as the old proof argued them" (the step half is `kernel_step_iff`).
+
+**Verdict: LAND WITH THIS CHANGE** (a renaming of bound names and `Reach.refl` written out, so I expect Lean to take it as it took the built term, but it is on paper; by my count R4 holds by two characters: 4 lines against 5, 205 against 207, widest 87):
+
+```lean
+  fun n {s} kept => (iter_region_iff_lasts n s).mp (postfixed_in_iter (region_mono _ _)
+    (K := Kernel _ guard) (fun t kept => kept t (Reach.refl _ t))
+    (fun t kept => ⟨kept t (Reach.refl _ t),
+      fun u ⟨a, st⟩ => (kernel_step_iff.mp kept).2 a u st⟩) n s kept)
+```
+
+One thing only the session can settle: member 7 was put back because its margin (94 against 96) exists only through a one-letter name. In fair names member 6 has the same margin of two characters, and it rests on `st`. If that standard is applied to all, 6 is LEFT with the old proof and recorded, like 7 and 8, as a call Lean accepts. What separates 6 from 7 in the readers' terms: its induction is the law's own (PREMISES, both), there is no cast, and the line count holds either way. I land it on those grounds and would not argue with the other reading.
+
+### 10. `Law.kept_along` (`after:GrammarCourse.lean` 119 to 122)
+
+`keeps.run h`
+
+**(a)** OPENED (`main:IdentificationRuns.lean` 310 to 316; `main:Recurrence.lean` 236 to 240, 321 to 325). Not the law. A call of `Law.KeepsRelation.run`, which keeps its own induction (`| 0 => related`, `| n + 1 => keeps _ _ (…)`): the induction has moved one theorem over, as the brief said beforehand. Leans on `(Law.run T x).state n` reducing to `orbit T x n` (the package states this as `run_state … := rfl`, Recurrence 325) and on `«际» S` being an `abbrev`. Loud if either changes.
+
+**(b)** 1 line, 10 characters; written out as the package writes it elsewhere, `KeepsRelation.run keeps h`: 1 line, 23. Old 2, 37. Strictly shorter in both.
+
+**(c)** The package writes this name in full at every other call (`CountedCodes.lean` 210, 231, 249, 466; `SharedCodes.lean` 909; `IdentificationRuns.lean` 316, 335), and `keeps.run` reads beside `Law.run` (the run of a law) as if `keeps` had a run. I would write `KeepsRelation.run keeps h`; no line.
+
+**(e)** May: "`Law.kept_along` and `Law.KeepsRelation.run` are one theorem stated twice (orbit; the run's state; equal by `rfl`); the later is now a call of the earlier." May not: "a case of `Becoming.Iteration`", "a join", or "its induction is gone from the package".
+
+**Verdict: LAND AS BUILT.**
+
+## (b) in one table
+
+Lines; characters that are not spaces. "Fair" = the old proof's kind of names, the module's layout; all fair terms on paper.
+
+| # | old | built | fair | strictly shorter in both, fair? |
+|---|---|---|---|---|
+| 1 | 7; 240 | 3; 161 | 3; 171 | yes |
+| 2 | 7; 226 | 2; 116 | 2; 132 | yes |
+| 3 | 4; 114 | 1; 30 | 1; 30 | yes |
+| 4 | 7; 216 | 4; 180 | 4; 187 (built route) / 4; 200 (through `«有常之逐点»`) | yes (5; 217 only if every point is written out) |
+| 5 | 4; 138 | 2; 122 | 2 or 3; 126 | yes |
+| 6 | 5; 207 | 3; 174 | 4; 205 (`st`) / 4; 209 (`step`) | lines yes; characters by 2, or no |
+| 10 | 2; 37 | 1; 10 | 1; 23 | yes |
+
+The reverse test (old proof in the built term's kind of names) changes nothing for 1 (180 against 161) and 2 (158 against 116); for 6 it gives 160 to 170 against 174.
+
+## (d) The three moves
+
+**Likeness** (`after:` 1046 `section Matching`, `open Iteration` 1048; the block at 1071 to 1088, between `iter_iff_alikeTo` and `variable {pairs …}` 1090). OPENED.
+- No use of the three names between the old place (896) and the new (grep; and the build is clean, TOLD).
+- The section has no title comment or docstring. Its name fits (`alikeStep` is the matching step). None of the three docstrings says "above", "below" or "next".
+- The three statements carry their own `{F : Frame S A C} {G : Frame S' A C}` while `variable {F … } {G …}` (905) is in scope and every other theorem of the section uses the variables. Harmless (the binders shadow; C2 TOLD), but they read as written for another place.
+- `local notation "agree"` (1063) makes `agree` a token from there on; none of the moved text uses it as a name.
+- The module header's bullet for this stretch is "**Likeness at the number of pairs**" (ll. 66 to 73). It names none of the three theorems (it did not before either), and the three involve no list. Nothing in the header is false; a reader matching bullets to sections finds three theorems about every pair of frames in the stretch the header tells as being about listed pairs.
+
+**GrammarCandidates** (`after:` 540 `section ListedPairs`, `open Iteration` 542, `variable {S : Type u} {R E : «际» S}` 544; the block at 564 to 575, between `iter_iff_inquiry` and `variable {all …}` 577). OPENED.
+- **`S` is two things within twenty lines.** The section's `S` is the carrier type (`inquiryStep (R E : «际» S) (X : S × S → Prop)`, `iter_iff_inquiry : ∀ n (p : S × S)`), and the moved theorem binds `{R E S : «际» α}`: `S` a relation on `α`, with `R E` rebound too. Lean is content (shadowing; C2 TOLD). To a reader the theorem now reads wrongly at first sight, and the built proof adds `s` for a proof of `S p.1 p.2`. This is the one place of the three moves that I would call a misreading waiting to happen. It cannot be mended under rule 1 (no binder changes); my text for member 4 at least takes the lower-case `s` off the hypothesis.
+- The section is named for listed pairs and the two moved theorems have no list; they stand before the `variable {all …} (within …)` line and so take nothing from it; `inquiryStep`, `inquiry_mono` and `iter_iff_inquiry` were already there with no list.
+- Docstrings: none positional. The header (ll. 34 to 40) names `«核则不可致诘»` before `iter_iff_inquiry` and the source now has them the other way; the header's order was already not the source's (`«致诘不尽»`), and it says nothing of order.
+- `«诘之降»` stays after `end ListedPairs` and uses `inquiry_mono` and `iter_iff_inquiry` from inside it, with `Iteration.` written.
+
+**Lasting** (`after:` 230 `section Disturbances`, `open Iteration` 232; the block at 242 to 253, between `iter_region_iff_lasts` and `kernel_iff_lasts_length`). OPENED.
+- The section's name fits both theorems (each is about `disturbed f adm`). No positional docstring. `kernel_iff_lasts` still finds `Lasts.trace` (222) above it.
+- The header tells `kernel_iff_lasts` in its first bullet, "Lasting a horizon" (l. 23 to 24), and tells this section in its second, "Lasting as repeated steps" (ll. 27 to 30), which names `iter_region_iff_lasts` and `kernel_iff_lasts_length` only. Still true; `kernel_iff_lasts` now stands in the source inside the stretch the second bullet describes. The first bullet already ran past this section before the move (`guarded_upto_iff`).
+
+Not opened for (d): anything outside the four modules that cites these theorems by line or by position (the listing of places, records). TOLD by the board's own rule that the listing is rebuilt when a module changes.
+
+## Verdicts together
+
+| # | verdict |
+|---|---|
+| 1 | LAND AS BUILT |
+| 2 | LAND AS BUILT |
+| 3 | LAND AS BUILT, only with 1 |
+| 4 | LAND WITH THIS CHANGE (through `«有常之逐点»`, `u u'`; one build) |
+| 5 | LAND AS BUILT |
+| 6 | LAND WITH THIS CHANGE (the old proof's names); LEFT if member 7's standard is applied to all |
+| 10 | LAND AS BUILT |
+
+## What would count against this reading
+
+- If Lean refuses my text for member 4, the lemma's route may cost more than 200 characters, and the choice is then the built term (constancy opened) or the old proof.
+- If a reader holds that `kept` is not owed to the new term of member 6 (the destination's neighbour `iter_region_iff_lasts` uses `h`, `ha`), the built 174 stands as fair and 6 is plainly shorter. I held to the old proof's names because the old proof is what the count is against.
+- If "the law at work" is judged only by the row's `uses`, member 4 as built is no different from member 4 as changed. The difference is which definitions the term opens, which the rows do not print.
+- If a later reader finds a pointwise use of constancy outside `Grammar.lean` that already opens `«有常»`, my "the one new term that opens a definition" for member 4 is too strong; `GrammarTransport.lean` 417 to 419 does read `«有常»` as a `«则»` of two compositions, at the level of the relations, not of points.
+
+## Not opened, not done
+
+- No Lean. Every rewritten term and every count of a rewritten term is of text on paper.
+- `kit/Rows.lean` and `compare.py` beyond `chars` and the header; the build logs. That the build is clean, the statements unchanged and the rows as printed is TOLD from `compare.txt`; the before and after rows of the seven I read myself.
+- The two ATTACK returns, beyond a search for these terms.
+- `holds_below`; the proofs of `Reach.trans` and `Reach.of_step`; the 14 modules that mention `«有常»`, beyond grep and the lines cited.
+- Members 7 and 8, which are not among the seven.

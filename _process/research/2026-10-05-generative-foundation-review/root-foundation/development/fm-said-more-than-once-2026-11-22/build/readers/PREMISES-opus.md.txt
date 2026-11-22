@@ -1,0 +1,211 @@
+# PREMISES: which premise of the law was each old proof's own argument (row FM, 22 November)
+
+*AI-written (Claude Opus 5.5), a reader for row FM. I took no part in the sweep or the law. Read
+only: no Lean run, no build, no git write. Line numbers are of the tree at d8adcda71. OPENED = I read
+the Lean myself; TOLD = taken from the sweep (`tmp/fm/once22/returns/CHECK-goings-on-fable.md`) or
+another file without opening it.*
+
+Paths below are relative to
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`.
+
+## The law, as it is (OPENED, PredicateIteration.lean)
+
+- `MonotoneStep Φ` (l. 82): `∀ {X Y}, (∀ z, X z → Y z) → ∀ y, Φ X y → Φ Y y`.
+- `postfixed_in_iter` (l. 146): premises `mono`; `inside : ∀ y, K y → V₀ y`; `post : ∀ y, K y → Φ K y`.
+  Proof: `| 0 => inside | n + 1 => fun y h => mono (postfixed_in_iter inside post n) y (post y h)`:
+  induction on n, generalised over y; at the step, `post` at y first, then the IH under `mono`.
+  `start` is omitted for it (l. 144).
+- `iter_pred` (l. 103): `mono`; `start : ∀ y, Φ V₀ y → V₀ y`. Proof `| 0 => start | n + 1 => mono (iter_pred n)`.
+- `iter_within` (l. 108): same premises; proof `| n + 1, y, h => iter_within n y (iter_pred mono start n y h)`:
+  two nested inductions (iter_within peels one level through `iter_pred`, which is its own induction).
+- `iter_iff_stages` (l. 87): `mono`, `zero`, `next` clauses as iffs; one generic induction.
+
+## 1. `Alike.alikeTo` (Likeness:916) as `postfixed_in_iter` through `iter_iff_alikeTo` (1094). OPENED
+
+(a) Premises. `mono` = `alike_mono` (1086). Start V₀ = `agree` = `AlikeTo F G 0` (l. 1092). The
+proposed call takes K = the witness bisimulation B; `inside` = `(bisim p.1 p.2 h).1`, `post` =
+`bisim p.1 p.2 h` (Bisimulation, Labelled:293, is word for word "B lies in alikeStep F G B"
+once `alikeStep`'s first conjunct `AlikeTo F G 0` is unfolded to the claims iff, l. 887).
+The old proof's class is not B but **Alike F G itself**: base `| 0, _, _, alike => alike.realized`
+(l. 918) is `inside` for K = Alike; the step `⟨alike.realized, … alike.step step …, …
+alike.symm.step step' … joined.symm⟩` (ll. 920-923) is `post` for K = Alike, assembled from
+`Alike.realized`, `Alike.step` (Labelled:348, 355) and, for the back clause, `Alike.symm`
+(Labelled:338, through `Bisimulation.converse`). Every premise's content is in the old proof. The
+old proof argues one thing beyond them: it gets the back clause by symmetry of likeness, which the
+law does not need (the back clause is in `Bisimulation` directly). The call drops this; nothing is
+lost.
+(b) Same induction: on k, generalised over the pair (the IH is used at `t, t'`), with the step
+"match at the pair, then IH at the outcomes", which is `mono (IH) y (post y h)` fused into one
+term. The old proof's K (Alike) differs from the call's K (B); both are instances of the one lemma.
+(c) Bridge: `iter_iff_stages` with `Iff.rfl` for both clauses (ll. 1096-1097). No premise, no
+restriction (all pairs of S × S'), notion unchanged. No own induction.
+(d) "A bisimulation is a class of pairs inside agreement on claims that the matching step
+preserves, so it lies in every iterate from agreement, which is likeness to every depth." True to
+the Lean.
+(e) **CASE** (with a small remainder only in the old proof: the symmetry detour for the back clause,
+which the call does not need).
+
+## 2. `AlikeTo.of_succ` (Likeness:899) as `iter_pred` through `iter_iff_alikeTo`. OPENED
+
+(a) `mono` = `alike_mono`; `start` = `fun _ m => m.1` (alikeStep from agreement implies agreement).
+Old base `| 0, _, _, alike => alike.1` (l. 901) is that `start` word for word. The step (ll. 902-906)
+rebuilds the triple with `AlikeTo.of_succ joined` under the two matches: that is `mono (iter_pred n)`
+with `alike_mono`'s body inlined.
+(b) Same induction (on k, generalised over the pair, IH at the outcomes).
+(c) As 1.
+(d) "The matching step takes agreement into agreement, so each depth of likeness lies within the one
+before." True.
+(e) **CASE.**
+
+## 3. `AlikeTo.self` (Likeness:1205) as a call of 1 at `Alike.refl`. OPENED
+
+Old proof (ll. 1206-1209): base `fun _ => Iff.rfl`; step `⟨fun _ => Iff.rfl, fun _ t step => ⟨t,
+step, AlikeTo.self F k t⟩, …⟩`. That is `postfixed_in_iter` at K = the diagonal, with `inside` =
+`Iff.rfl` and `post` = "each step is matched by itself", which is the body of `Bisimulation.eq`
+(Labelled:304, proved there by `cases same`). `Alike.refl F s = ⟨_, Bisimulation.eq F, rfl⟩`
+(Labelled:334). With call 1 at K = B, `(Alike.refl F s).alikeTo k` is exactly member 1's argument
+at B = equality: the old proof is that argument written out again. (If 1 kept its old proof, with
+K = Alike, the call would go through `Alike.symm` and `Alike.step` instead; still a case, less
+direct.) Same induction (on k, generalised over s). **CASE** (through 1).
+
+## 4. `«对称有常则不可诘»` (GrammarCandidates:533) as `postfixed_in_iter` through `iter_iff_inquiry` (575). OPENED
+
+(a) `mono` = `inquiry_mono` (568); V₀ = E on pairs; K = S. `inside` = `hSE`: old base
+`| 0, u, u', h => hSE u u' h` (l. 535) and first conjunct `hSE u u' h` (l. 537). `post`: the forth
+match from constancy, `(«有常之逐点» R S).mp hc u u' h v r` (l. 538); the back match from constancy at
+the converse pair `(hs u u' h)` with the result turned back by `hs v' v s` (ll. 540-541). The
+proposed call's `post` is the same three pieces. Symmetry is the member's own premise, consumed
+inside `post`; it is needed (the back clause is not otherwise available), so it is not a remainder.
+(b) Same induction (on k, generalised over u u').
+(c) `iter_iff_stages` with `Iff.rfl` both clauses (ll. 577-578). Universe: member α : Type u,
+bridge S : Type u; no restriction.
+(d) "A symmetric relation inside E that is constant under R is a class of pairs the inquiry step
+preserves, so it lies in every stage of inquiry." True; "constant and symmetric" together are the
+`post` premise, neither alone.
+(e) **CASE.** Same sentence as 1 (the inquiry step is the matching step with E for claims, unlabelled).
+
+## 5. `«诘之降»` (GrammarCandidates:601) as `iter_pred` through `iter_iff_inquiry`. OPENED
+
+Old base `| 0, _, _, ⟨e, _, _⟩ => e` (l. 602) is `start` (`fun _ m => m.1`); step (ll. 603-605) is
+`mono (iter_pred k)` with `inquiry_mono` inlined. Same induction. Bridge as 4. **CASE.** Same sentence
+as 2.
+
+## 6. `Lasting.lasts_of_kernel` (Lasting:231) as `postfixed_in_iter` through `iter_region_iff_lasts` (251). OPENED
+
+(a) `mono` = `region_mono _ _` (CommonResponse:170); V₀ = guard; K = `Kernel (disturbed f adm) guard`
+(Viability:58, `∀ t, Reach P s t → guard t`). `inside`: old base `kept s (Reach.refl _ s)` (l. 233)
+and first conjunct (l. 234). `post`'s closure part: `lasts_of_kernel n (fun t reach => kept t
+(Reach.trans (Reach.of_step …) reach))` (ll. 235-237) proves "the kernel at s gives the kernel at
+f s a", inline from the definition of Kernel. The proposed call takes both from
+`Viability.kernel_certificate` (Viability:100), which proves them by a different route (through
+`kernel_iff_held` and the grammar's `«所闭之承在内»`, `«所闭之承闭»`, CommonResponse:136, 141). Same
+content, imported proof. The call could equally inline the old two lines; the choice of
+`kernel_certificate` is a join (the kernel is a certificate), not something the old proof argued.
+(b) Same induction (on n, generalised over s; IH at f s a). The law's step quantifies over
+`Steps (disturbed f adm) s t`, the old one over `∀ a, adm a`; the bridge's successor clause converts.
+(c) `iter_iff_stages` with `Iff.rfl` at zero and a short inline iff at the successor (ll. 253-255):
+no premise, no restriction (the bridge is at `disturbed f adm`, which is the member's own process),
+no own induction.
+(d) "The kernel of a guard is a class inside the guard that every disturbed step keeps, so it lies in
+every iterate of the region step, which is lasting every horizon." True.
+(e) **CASE** (the call's `post` goes through `kernel_certificate`, a proof the old theorem did not
+use; same content).
+
+## 7. `Tolerance.withheld_kept` (Tolerance:303) as `iter_within` through `iter_eq_orbit` (238). OPENED
+
+(a) `mono` = `(monotone_iff_keepsInclusion next).mpr keeps` (l. 232: the two are the same up to
+binder order). `start` = `empty`: with `allWithheld = fun _ => False` (l. 220), `∀ a, ¬ next
+allWithheld a` is `∀ a, next V₀ a → V₀ a` word for word. Both premises are exactly the member's.
+(b) **Not the same induction.** Old (ll. 305-307): `| n + 1 => fun a gives => empty a (keeps _ _ (IH …)
+a gives)`: state (n+1) = next (state n) ⊆ next V₀ ⊆ V₀, one induction, `mono` applied to the IH
+"state n ⊆ V₀". `iter_within` instead peels iter (n+1) ⊆ iter n by `iter_pred` (its own induction)
+and then uses its IH: two nested inductions, `mono` applied to `iter_pred n`, not to "iter n ⊆ V₀".
+The old proof is the order-dual of `postfixed_in_iter` (a class above the start that the step maps
+into itself bounds every iterate), at the class V₀ itself; the law has no lemma stating that dual.
+(c) `iter_eq_orbit` is proved by **its own induction** (`| n + 1 => congrArg Φ (…)`, ll. 240-241),
+not by `iter_iff_stages`; it gives an equality of predicates, used through `congrFun`. No premise,
+no restriction. After the change the induction on n has two homes: `iter_eq_orbit` and the law's.
+`Law.run next s).state` reduces to `orbit` by `run_state` (Recurrence:325, rfl).
+(d) "Under a step that keeps inclusion, if the step of nothing is nothing, then every iterate from
+nothing is nothing." True to the Lean; but "every iterate lies in the start" is reached in the law
+through the falling chain, which the old argument does not use.
+(e) **CASE WITH A REMAINDER.** The sentence and both premises are the law's exactly; the remainder is
+on the law's side: the call brings in `iter_pred` (the chain), which the old proof never argued, and
+the old one-induction proof is not `iter_within`'s proof. A record should say "the statement of
+`iter_within`", not "`iter_within`'s argument".
+
+## 8. `Onward.KeepsMoving.continues` (Onward:222) as `postfixed_in_iter` through `Parting.iter_iff_continues` (420). OPENED
+
+(a) `mono` = `Parting.course_mono (within P K)` (Parting:413); V₀ = True, `inside` trivial (old base
+`| 0, _, _ => trivial`, l. 224). K = K; `post` needs K ⊆ `courseStep (within P K) K`. `KeepsMoving P K`
+(Onward:206) is K ⊆ `courseStep P K`, **for P, not for `within P K`** (the sweep's "by definition
+∀ s, K s → courseStep P K s" is right but is P's step); the step within needs `⟨step, held, kept⟩`,
+and that is what the old proof builds (l. 227). Same content.
+(b) Same induction (on n, generalised over s, IH at t).
+(c) `iter_iff_stages` with `Iff.rfl` both clauses (l. 422). No premise, no restriction.
+(d) "A family that keeps moving is a class the course step within it preserves, so it lies in every
+iterate from everything, which is having courses of every length within it." True.
+(e) **CASE.**
+
+## 9. `Branching.fed_keeps` (Branching:164) as `postfixed_in_iter` through `iter_iff_reachable` (Attraction:128). OPENED
+
+(a) `mono` = `pred_mono` (Attraction:124); V₀ = True; K = True; `inside` trivial; `post` = "every s
+has a predecessor" = `fed s`. The premise's content (`fed`) is in the old proof.
+(b) **Not the same induction.** `Reachable P n s` is `∃ x as, as.length = n ∧ Trace P x as s`
+(Recurrence:118), and `Trace` grows at its **start** (`.cons step path`). The old proof
+(ll. 165-168) holds s fixed (the IH is used at the same s, `fed_keeps fed n s`), and applies `fed`
+to the **start** y of the trace it found, prepending one step. The law applies `post` at the
+**endpoint** s (a predecessor x of s) and the IH at x: generalised over the state, recursion at the
+other end of the trace. Same premise, used at the other end, in an induction with a different
+generalisation.
+(c) The bridge's zero clause is short, but its successor clause (Attraction:130-140) is the work of
+turning a trace grown at the end into one grown at the start (`trace_append_iff`,
+`List.dropLast_concat_getLast`, `ListTests.length_append`). No premise, no restriction, notion
+unchanged, no own induction (it is `iter_iff_stages`); but the reversal it carries is exactly what
+separates the old argument from the law's.
+(d) "Where every configuration has a predecessor, everything is a class the predecessor step
+preserves, so everything lies in every iterate, which is being the end of a trace of every length."
+True to the Lean as a statement; it is not what the old proof argued.
+(e) **DETOUR.** The call is shorter; the old proof's argument (extend at the start, s fixed) is not
+the law's (extend at the end, generalised), and the bridge does the turning.
+
+## 10. `Law.kept_along` (GrammarCourse:120) as `Law.KeepsRelation.run` (IdentificationRuns:313). OPENED
+
+Statements: `KeepsRelation next E → E s s' → ∀ n, E (orbit next s n) (orbit next s' n)` against
+`KeepsRelation T rel → rel x y → ∀ n, rel ((run T x).state n) ((run T y).state n)`. `«际» S` is an
+`abbrev` for `S → S → Prop` (Grammar:47); `(run T x).state = orbit T x` is rfl (`run_state`,
+Recurrence:325, by the definition at 322). The same statement up to rfl unfoldings. Proofs:
+`| 0 => h | n + 1 => keeps _ _ (kept_along keeps h n)` against `| 0 => related | n + 1 => keeps _ _
+(KeepsRelation.run keeps related n)`: the same induction, character for character. GrammarCourse
+imports IdentificationRuns (l. 2). **CASE (a plain duplicate).** Not a case of `Becoming.Iteration`:
+the induction is along an orbit of configurations, not on iterates of a step on predicates.
+
+## Across the ten
+
+Same sentence of the law:
+- **A class the step preserves lies in every iterate** (`postfixed_in_iter`): 1, 3, 4, 6, 8 as cases;
+  9 reaches the sentence only by a detour. 1 and 4 are the one sentence twice (the matching step,
+  labelled with claims / unlabelled with E); 3 is 1 at equality.
+- **The step takes the start into itself, so each iterate lies in the one before** (`iter_pred`):
+  2 and 5, again the one sentence at the matching step and the inquiry step.
+- **The same, so every iterate lies in the start** (`iter_within`): 7, statement only.
+- 10 is a duplicate within the orbit laws, not of this law.
+
+Not to let stand as written: **9** as "a case of `postfixed_in_iter`" on a board or record. It may
+be filed as "its statement is the law's sentence at K = everything, through a bridge that reverses
+the trace", not as the old argument. **7** should be filed as "the statement of `iter_within`", with
+the note that the old one-induction proof is the order-dual of `postfixed_in_iter`, a lemma the law
+does not have; if that lemma were added (a class Q with `Φ Q ⊆ Q` and V₀ ⊆ Q bounds every iterate),
+7 would be its plain case at Q = V₀. For 1 and 6 the proposed calls use a different K (B for Alike)
+or a different proof of `post` (`kernel_certificate`) than the old proof; both are still the law's
+premises and nothing else.
+
+What would count against this reading: if a reader holds that "the same induction" should be judged
+only up to the bridge's iff (then 9's end-reversal is the bridge's business and 9 is a case), or that
+any proof from the same two premises is "the argument" (then 7 is a plain case). I judged by where
+each premise is applied in the recursion. If a build finds that `bisim p.1 p.2 h` is not accepted as
+`alikeStep F G K p` without unfolding `AlikeTo F G 0`, that touches 1's call, not this verdict.
+
+Not opened: `Reach.trans`, `Reach.of_step`, `kernel_iff_held` and the `«所闭之承»` lemmas' proofs (I
+read their statements only); `trace_append_iff`; the callers of the ten (TOLD from the sweep); the
+import closures (TOLD); dates (TOLD); whether the calls as written elaborate (no Lean run, by brief).

@@ -1,0 +1,22 @@
+# A read-only sweep of the whole Lean package: inductions it says more than once
+
+*AI-written brief (Claude Fable, board row FM), 22 November 2026. You are a reader, alone. Read only: edit nothing in the repository; write and run no Lean, no lake, no gate, no tests, no check_becoming.py; start no agents. Read-only git, grep and small scripts over the source text (for instance to compute import closures from `import` lines, or to compare proof terms) are fine and wanted. Your whole report is your final answer; also save it as /Users/ren/theories/tmp/fm/once22/astra/REPORT.md (the only file you write; scripts go in your own scratch space).*
+
+## What we are doing
+
+/Users/ren/theories draws a map of how anything forms, persists, changes and ends, with its core proved in Lean 4 with no axioms. Read AGENTS.md at the repository root (one page): rule 4 says prefer the proof that makes an old result a case of another; each thing said once. The package is `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/` (409 modules; a page a module in `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/places-2026-11-21/PLACES.md`: use it to find, then open the Lean; the listing is unchecked).
+
+The night before, one induction that was written in many modules was said once (`Becoming/PredicateIteration.lean`: read it whole, and its note `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-the-law-of-what-a-list-holds-2026-11-22/NOTE.md`), and a dozen older theorems became calls with their statements unchanged. Nobody has looked for other such families on purpose.
+
+## Your task
+
+**The questions Q1 to Q6, with what counts as nothing found (M1 to M5) and the seed families (a) to (g), are frozen in `/Users/ren/theories/tmp/fm/once22/QUESTIONS-SAID-MORE-THAN-ONCE.md`. Read that file whole first and answer all six for the whole package.** You are the only reader who opens every module: besides the seeds, look for families nobody seeded (Q1 (g)). Useful ways in: theorems defined by structural recursion `| 0 => … | n + 1 => …` whose successor case splits on a decision and extends a bound; theorems by recursion on a list `| [] => … | x :: l => …` that gather or search; pairs of theorems whose proof terms agree up to renaming (compare normalised text by script); docstrings that say "stated here so that this module does not import", "the same as", "as in", "again"; local copies of a Prelude lemma.
+
+For every member of every family give module, line, the statement word for word, the number of lines of its proof, and the date it entered (`git log -S` on the declaration's name: before 22 November 2026, or of that day). For every claimed case write the call on paper (the term) and say whether the member's statement would be unchanged. For imports use the `import` lines by script and say what you computed.
+
+## How to report
+
+- Lead every answer with one word: OPENED (from a statement and proof you opened, with file and line) or TOLD (from a listing or a docstring).
+- A table per family; then the ranking of Q5 with, for each family, which of M1 to M5 holds if any; then Q6's near misses.
+- Say what you did not open, and how many modules you opened against how many you only searched by text. Where something is absent say "not found in what was read".
+- Do not soften, do not praise, and propose no new general statement that no member needs (M5). If the sweep finds only the seeded families, or finds that they are alike only in shape, say so plainly.

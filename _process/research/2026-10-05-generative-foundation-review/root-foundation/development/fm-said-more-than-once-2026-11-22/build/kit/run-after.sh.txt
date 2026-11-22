@@ -1,0 +1,15 @@
+#!/bin/bash
+# usage: run-after.sh <n> <Module> [<Module> ...]     (module names without "Becoming.")
+# Wait until no other Lean build, gate or core run is alive, then build the named modules of the after tree once.
+n="${1:-0}"; shift
+tree=/Users/ren/tmp/fm/build13/after
+log=$tree/build-$n.log
+mods=""; for m in "$@"; do mods="$mods Becoming.$m"; done
+busy() { ps -axo pid=,args= | grep -E '^ *[0-9]+ [^ ]*[Pp]ython[^ ]* .*(scratch_build|gate\.py|check_becoming)' > /dev/null; }
+while busy; do sleep 10; done
+cd /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming || exit 9
+date '+start %H:%M:%S' > "$log"
+python3 -B scratch_build.py "$tree" $mods >> "$log" 2>&1
+echo "exit $? build $n" >> "$log"
+date '+end %H:%M:%S' >> "$log"
+tail -c 6000 "$log"
