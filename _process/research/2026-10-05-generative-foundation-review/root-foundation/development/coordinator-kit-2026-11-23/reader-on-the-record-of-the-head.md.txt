@@ -1,0 +1,135 @@
+TEXT 1: /Users/ren/tmp/rw/words14/unified_1123/2026-11-23-merge-everything-a-unified-head.md
+(Read twice: it was edited at 04:31:54 WIB while I read, transcript line 116325, adding the sentence on 04:25. Verdicts are on the later form, 5,070 characters.)
+
+Head and context
+- Title, "I want to merge everything and create a unified head": HOLDS (contiguous words of transcript line 115978).
+- "23 November 2026, 03:46 WIB. Ren's words in a Claude Code desktop session ... kept verbatim": HOLDS (line 115978, stamp 2026-11-22T20:46:08.268Z, userType external).
+- "(the coordinating session, which keeps the board's queue and the register...)": SAYS-OTHER at the hour of landing. The file's own last section says both pass to another session. Reword: "which kept ... until this landing".
+- "One entry, his, typed.": SAYS-MORE in "typed". The transcript holds a user string and does not show how it was entered. Reword: "One entry, his."
+- "The time is the transcript's stamp, converted to WIB (UTC+7)": HOLDS.
+- "Earlier that night, to other sessions: ... and ...": HOLDS (both files are on main; titles as quoted; 00:00/00:02 WIB and 23:59/00:03 WIB).
+- Context, "the whole gate had passed ... two new Lean modules, a record, paragraphs on the direction page and files of his words had landed since midnight from four sessions ... nothing of its own was running ... nothing was pushed": SAYS-MORE in "since midnight from four sessions". The report (line 115974, 20:45:04Z) says "What is on main from tonight" and gives no midnight and no count of sessions. Reword: "had landed that night". The rest HOLDS.
+- "Three other sessions each held a worktree.": HOLDS, from git and not from the report (result 115993: dj/wt and dj/wt-layer, fm/wt, gr/wt; row DJ held two).
+- "03:46:08 WIB, 23 November (20:46:08 UTC on the 22nd...)" and the quoted sentence: HOLDS, character for character.
+
+The reading
+- "One head on main that holds all that every session has: nothing the work needs left only in ...": HOLDS as a labelled reading.
+- "'The most advanced and complete form of our direction' it read as the furthest state of the work, which is that head.": HOLDS as a labelled reading; see Missing 1.
+- "It did not read the sentence as a word to rewrite ... and changed neither.": HOLDS (neither AGENTS.md nor _process/DIRECTION.md is in `git diff --name-only 44571d551..406758f15`; the scripts touch neither).
+
+What it found in git (I redid all ten branches at file level, a whole-line pickaxe on every file never on main, and both stashes including the older one's untracked files)
+- "Main stood at `44571d551`.": HOLDS.
+- "Each of the six worktrees stood at a commit of main with nothing uncommitted, but for the app's launch file...": HOLDS (115993 at 03:46:57; the same at my recount).
+- "Ten branches of 3 to 13 November ... two stashes, of 31 October and 13 November.": HOLDS (ten; committer dates 11-03 04:45 to 11-13 10:53; stashes 2026-10-31 15:06 and 2026-11-13 12:38).
+- "For every file each of them changed, the test was whether main holds that content now or held it at some commit.": SAYS-MORE.
+  - The file test ran on the ten branches (call 116015) and on stash@{0} (116043).
+  - On stash@{1} it never ran: 116029 took only `git stash show --stat | tail -6`; at 04:28 (116234, 116248) the session listed six tracked names and searched the board line by its first 70 characters. That was after its 03:50 reply had already said of both stashes "Their hand-written lines all reached main later".
+  - stash@{1} has a third parent (41f949e59, "untracked files on el-claim") with 8 files that `git stash show` does not list. No call of the session names it.
+  - My test of those 8: five are the same as main now; NOTE.md and WS.md of el-evolution-on-the-root were on main at 577ff0ab2; the sources file of 31 October was on main at 446abf0e5.
+  - Reword: "For every tracked file each branch and the later stash changed, the test was ...; of the older stash the board line was searched for, and its eight untracked files, tested by this file's reader, are on main now (five) or were (three)."
+- "Two branches (`fv`, `t2-statement`) are the same as main in every file.": HOLDS as "in every file they changed" (9 of 9 each). Add those two words.
+- "Three (`tt-records-theorem`, `claude/epic-mirzakhani-e296ee`, `t2-life-cycle`) hold only content main once held and has since changed.": SAYS-OTHER for t2-life-cycle (4 files: 2 same as main now, 2 once on main). Reword: "hold only content main holds now or once held".
+- "generated pages (`wu-kit`, `ue31-design`)": HOLDS for wu-kit (its six are the manifest and five pages the manifest lists). SAYS-OTHER for ue31-design.
+  - Its one file is experiments/README.md, which the generated manifest on main does not name and which reads as a hand-kept index.
+  - The branch's line is the row for state-named-in-advance as of 3 November ("designed and frozen 3 Nov 2026; nothing downloaded or run"). Main has two rows naming that folder in later wording.
+  - Reword: "generated pages (`wu-kit`); one row of the experiments index as worded on 3 November, which main has in a later form (`ue31-design`)".
+- "a board with a claim row that reached main in another commit (`rae-salvage-claim`)": HOLDS (the whole added line was once on main's board; 13abd063d).
+- "three files whose changed sentences reached main in the batched pass of 7 November and were revised after (`t1-premises-follow`)": SAYS-MORE.
+  - THESES-STANDINGS.md: 108 of 109 added lines are on main now word for word, first in 012a12fff (7 November); only the head line's four figures differ.
+  - SCIENCES.md: three lines never on main whole; they differ from main's nearest lines by 1, 29 and 1 words; the phrases are on main since 012a12fff.
+  - READING-BUDGETS.md: two lines never on main. "since TS3 of 4 November" and "sciences 145" occur nowhere in main's history of that page. The session's check (116043) names this page in its heading but greps SCIENCES.md only.
+  - Reword: "of three files, one is on main word for word but for its head line's times; one has its changed sentences on main since 7 November, a few words apart; of the third, two lines of reading-time figures were not found on main (`t1-premises-follow`)".
+- "an early form of the atlas tool and its test, in two copies, where main has the tool in its later form (`aa-atlas-v1`)": SAYS-OTHER, small. The test is one blob in both places (34111fa9e); the tool's two copies differ (e766c5397, 78e8c6bb6). Main's atlas.py has 2,919 lines against 490. Reword: "the atlas tool in two early forms and its test".
+- "The stashes' hand-written lines all reached main later.": SAYS-MORE.
+  - The session's test (116051) matched the first 60 characters of each added line in main's history, and only for stash@{0}.
+  - By whole lines, the older stash's board line was once on main.
+  - In stash@{0}, six hand-written lines were never on main as they stand: BRIEF.md, goals/generative-alignment.json, COLLECTIVE-DIRECTION.md, ONE-PAGE.md, THE-THEORY-OF-BECOMING.md, USES-EXAMPLES.md. They differ from main's present lines by 2 to 26 words (mostly "more", "the"; 26 of 439 in USES-EXAMPLES.md).
+  - Reword: "The older stash's board line reached main word for word; the later stash's hand-written lines reached main in wordings a few words apart (matched by each line's first sixty characters)."
+- "So nothing was merged from them, and all twelve are left as they are; nothing is deleted.": HOLDS (ten branches, two stashes, 226 branches and 429 salvage refs at 03:46 and now).
+
+What the three rows landed
+- Row DJ, "(clause of 03:57 WIB, content tip `28dd6b05b`)": HOLDS (Queue line; DJ's message of 20:58:08Z).
+- Row GR, "... not landed in AGENTS.md (`42fa89147`; no clause, the row's cell tells it)": HOLDS (row GR's cell; no GR clause on the Queue line).
+- Row FM, "... (clause of 04:27 WIB, content tip `a23c69e34`)": HOLDS. It leaves out "the row's words for the direction page as they were sent", which the clause names.
+- "Each then answered that it holds nothing more that the work needs.": HOLDS, read with the bullet after it. DJ: "I have nothing more", having said its older scratch was sampled. GR: "What I hold now: nothing." FM: "nothing as text ... that main lacks and the work needs".
+- "Main stood at `406758f15` after them.": HOLDS.
+
+What that head does not hold
+- "What the board's line 0 lists as open and his to say.": HOLDS. Line 0's own head says "what is open, none of it asked of him now"; "his to say" is the session's phrase.
+- "Scratch ...: outputs that their filed printers make again, build caches and logs": SAYS-MORE. Row DJ also leaves "the lookups I ran on it for rows FM and GR", not filed and not made again by a printer (20:52:09Z). Row GR leaves "the draft copies" (20:53:36Z). Reword: add "row DJ's lookups for rows FM and GR, which its record says are not filed, and row GR's draft copies".
+- "row DJ's scratch of earlier days was checked by sample ... as its row says": HOLDS.
+- "Statements not yet written, which rows DJ and FM name on the board.": HOLDS. Row GR's cell also names one item open ("the same question asked of a pool's selections is not started").
+
+The checks
+- "The whole gate passed on main at `2cb0beba0` (48 checks, 03:25 to 03:38 WIB), before his sentence.": HOLDS (full_1123.log: tree d546381a4b72, 03:25:38 to 03:38:18, failed [], rc 0; 48 passes kept).
+- "Every commit after it is text, each with its own gate, the last of 24 checks": SAYS-MORE.
+  - Passes kept: 44571d551's tree 11, 28dd6b05b's 10, 42fa89147's 11, a23c69e34's 24.
+  - The board commits 52fc707a4 and 406758f15, the head, have none.
+  - The session's own message of 21:31:48Z says "The head itself has had no whole-gate run".
+  - Reword: "Every commit after it is text; each landing's content tip passed its own gate, the last (`a23c69e34`) of 24 checks; the board commits after them, the head among them, had a board check only."
+- "no Lean changed after the whole gate": HOLDS (2cb0beba0..406758f15: 42 files, .md, .json and .txt only).
+
+What is not said
+- "He did not say to push, and nothing was pushed.": HOLDS (main is 378 ahead of origin/main, which is 364 plus the 14 commits since).
+- "He did not say that any session is to be closed, that the direction page or AGENTS.md is to change, or what comes next.": SAYS-MORE.
+  - True to the letter: he named no page and no session.
+  - But "the most advanced and complete form of our direction" can be read as asking for the direction itself in a more complete form, and "everything is stopped at the point that it can just stop" as a word about stopping. Those readings are mine, not his.
+  - Reword: "He named no push, no page and no session. That his sentence asks no change to the direction page or AGENTS.md, and closes no session, is the session's reading."
+- "At 04:25 WIB, while the rows were landing what is told above, he opened another session and told it to be the new coordinator and to create a unified main as the head": SAYS-OTHER.
+  - His words (transcript /Users/ren/.claude/projects/-Users-ren-theories/cfd31500-eab1-459c-800f-a61782d42ff6.jsonl, line 2, 2026-11-22T21:25:42.505Z): "Be the new coordinator. Look at the 4 other sessions. Find out the latest, most new, most direction aligned towards to the full pictures solution and approaches, and then create a unified main as the head."
+  - The paraphrase drops the two middle sentences, which say what the head is to be made from.
+  - Only row FM's gate was running then (04:16:30 to 04:26:55); DJ had landed at 03:57 and GR by 04:07.
+  - Reword: quote the four sentences whole, with "at 04:25:42 WIB, while row FM's gate ran".
+- "his words to it are that session's to file, and after the landing that carries this file the Queue line, line 0 and the register are that session's to keep": SAYS-MORE.
+  - He named no line and no register.
+  - It is that session's reading: "My reading of his words, not his: he asks for the seat to move, so from your answer on I keep the Queue line, line 0 and the register" (line 116295).
+  - "After the landing that carries this file" is this session's own term (116310: "I land it").
+  - No answer from that session is in the transcript up to line 116344 (04:40 WIB).
+  - Reword: "that session reads this as the seat moving and this session reads it so too, neither reading his; this session told it that this one landing goes first, and it had not answered when this was written."
+- "Whether everything had stopped the session looked for itself: no gate, core run or build was alive at 03:46 WIB...": HOLDS (115993: nothing listed under live heavy processes at 03:46:57).
+
+TEXT 2: key "register" of /Users/ren/tmp/rw/words14/board_1123h_written.json
+- Link text "Ren on merging everything into a unified head": SAYS-OTHER, small. His words are "merge everything and create a unified head". Reword: "Ren on merging everything and a unified head".
+- "(entry written ... by an AI session, the coordinator's, from the record)": SAYS-OTHER at the hour of landing. After 04:25 "the coordinator" names two sessions. Reword: "the session that kept the register until then".
+- "to the coordinating session, after its report that the whole gate had passed ..., “...”": HOLDS; the quotation is character for character.
+- "What is his: that sentence.": HOLDS.
+- "He did not say to push": HOLDS.
+- "did not say that the direction page or AGENTS.md is to change, and did not say which sessions are to be closed or what comes next": SAYS-MORE, as in Text 1. "which sessions are to be closed" also presumes that some are. Reword as in Text 1.
+- "That session's reading, given in the record as its own: one head on main ...": HOLDS.
+- "by a test of every file they changed, the ten older branches ... and the two stashes hold nothing main lacks, and are left as they are": SAYS-MORE.
+  - The test looks for exact file contents on main now or at some commit. It failed for 25 files of five branches and 15 of the stashes, which were then judged by lines and phrases. It did not cover the older stash's untracked files.
+  - What main lacks in those forms: generated pages, the early atlas tool, earlier wordings, and READING-BUDGETS's two lines of figures.
+  - A later reader could take "hold nothing main lacks" as leave to delete them.
+  - Reword: "tested file by file against main and its history and, where that failed, line by line, the ten older branches and the two stashes hold, beyond what main has or had, generated pages, an early atlas tool and earlier wordings of lines main has in later ones, with two lines of reading-time figures not found on main; nothing was merged from them and all twelve are left as they are".
+- "rows DJ, GR and FM landed what they still held outside main, and each answered that it holds nothing more": SAYS-MORE. The rows left scratch on purpose; DJ sampled its older scratch; FM's answer is "nothing as text". Reword: "landed what they named as needed and still outside main, and each answered that it holds nothing more that the work needs (scratch they say can be made again is left; row DJ's older scratch was sampled, not audited)".
+- "main stood at `406758f15` after them.": HOLDS.
+- "What that head does not hold is told in the record.": HOLDS.
+- "Nothing here releases a push, a sending or a paid run.": HOLDS.
+
+TEXT 3: key "way_now_added"
+- "At 03:46 WIB he wrote to the coordinating session "..."": HOLDS. The two sentences before it place it in the night of 23 November; "on the 23rd" would remove any doubt.
+- "([his words](...), with how that session read it, what it and three rows then did, and what the head on main does not hold)": HOLDS.
+- "he did not say to push, and nothing is pushed": HOLDS.
+- "(sentence added on 23 November by the coordinator)": SAYS-OTHER, as in Text 2. Reword: "by the session that kept this line until then".
+
+TEXT 4: /Users/ren/tmp/rw/words14/board_1123h_clause_template.txt
+- "Ren's sentence of 03:46 WIB ... landed 23 November HH:MM WIB (content tip `TIPC`, on `BASE`; gate of that tree, `TREE`: NCHECKS checks, none failed": NOT-OPENED (filled at landing by board_1123h_landB.sh).
+- "his sentence verbatim with the coordinating session's reading named as its own": HOLDS, but for the "did not say" sentences marked above.
+- "an entry in the register of his words and one sentence on the board's line on the way now": HOLDS (board_1123h.py; both anchors occur once on main).
+- "by a test of every file they changed, the ten branches ... hold nothing main lacks, and are left as they are": SAYS-MORE, as in Text 2.
+- "rows DJ, GR and FM landed what they still held outside main and each answered that it holds nothing more": SAYS-MORE, as in Text 2.
+- "every worktree stood at a commit of main with nothing uncommitted but the app's launch file...": HOLDS (03:46:57, 04:28:20 and my recount).
+- "the whole gate passed at `2cb0beba0` and no Lean and no tool has changed since": HOLDS at 406758f15. Add "the head's own tree has had no whole-gate run".
+- "neither the direction page nor AGENTS.md is changed by this landing": HOLDS (board_1123h.py, board_1123h_chainA.sh and board_1123h_landB.sh add only the sources file, the register, the board, its history file and three generated indexes).
+- "read before the gate by one reader who took no part, whose findings are applied": NOT-OPENED. It is true only once the above is applied.
+- "the Queue line trimmed so that five landings stand": NOT-OPENED (scripted: four kept, then this clause; landB asserts five).
+- "AI-written; not pushed": HOLDS.
+
+MISSING
+1. His words of 04:25:42 WIB are on no board text (Texts 2, 3 and 4) and only paraphrased in Text 1. A reader of the board alone would take 03:46 as his last word on the head and this session as the coordinator. Those words name a task the 03:46 reading left out ("Find out the latest, most new, most direction aligned..."), so whether the head at 406758f15 is what he asked for is open; that is my reading.
+2. The record does not say what the coordinating session itself holds outside main. By its own message (line 116310): "The kit is not in the repository" (trim scripts, landed_clause.py, the board chains, full_1123.log, three readers' returns, all under /Users/ren/tmp/rw/words14/), and an unfiled line of his, "continue, fable is back" (22 November, 21:10 WIB).
+3. The 429 salvage refs were counted and not examined. The file's list of places where work could lie (worktree, branch, stash, scratch, context) leaves them out.
+4. /Users/ren/theories/.git/gc.log (02:24:53, 23 November) reads "warning: There are too many unreachable loose objects; run 'git prune' to remove them." gc.pruneExpire is "never". The record mentions neither this nor the automatic pack row FM reported at 21:27:33Z. Git's own advice there is the act rule 5 forbids.
+5. The session told the new coordinator that about 243 unpushed commits carry a Co-Authored-By line against his rule of 19 October. I did not verify it; the record does not say it.
+6. /Users/ren/tmp/rw/words14/board_1123h_body.txt, the commit body, repeats "hold nothing main lacks", "each answered that it holds nothing more" and "whose findings are applied". Change it with the texts.
+7. What the file test cannot see, unsaid in the record: content that reached main in other words or at another path; states inside a branch that its tip no longer has; untracked files in a stash. "Was on main at some commit" also means main has since changed it, and the test does not show that the change was meant.

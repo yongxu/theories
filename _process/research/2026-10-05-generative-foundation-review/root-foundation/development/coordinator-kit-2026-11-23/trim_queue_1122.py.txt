@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+"""AI-written. The coordinator's trim of the Queue line, 17 November 2026: keep the five latest landings on the
+line and move the older ones' clauses, unchanged but for re-pointed links, to the board's history file, at the end
+of the section that holds the clauses moved since 10 November. Run in a checkout root; edits two files, commits
+nothing. Made from /Users/ren/tmp/rw/queue/trim_queue.py, with two changes: a landing is recognised by
+"landed … (content tip" however the clause words what lies between; the clauses go to the end of their own
+section, not the end of the file (two sections now follow it); and the landings moved are written oldest first. The line is cut by character offsets, so what
+stays is byte for byte what stood."""
+import re, sys
+sys.path.insert(0, 'tools/research')
+import gate
+B = '_process/BECOMING-WORKBOARD.md'
+H = '_process/history/workboard/BECOMING-WORKBOARD-2026-10-11_to_2026-10-17.md'
+KEEP = 5
+PREFIX = '- **Queue:**'
+t = open(B, encoding='utf-8').read()
+lines = t.split('\n')
+qi = next(i for i, l in enumerate(lines) if l.startswith(PREFIX))
+assert sum(l.startswith(PREFIX) for l in lines) == 1
+raw = lines[qi]
+body0 = len(raw) - len(raw[len(PREFIX):].lstrip())  # offset of the body in the raw line
+body = raw[body0:]
+assert body.strip() == gate.queue_line(t)
+
+def cut_with_offsets(line):
+    """gate.clauses, keeping where each clause starts in the line."""
+    out, depth, start = [], 0, 0
+    for i, ch in enumerate(line):
+        depth += ch in '([' and 1 or ch in ')]' and -1 or 0
+        if depth <= 0 and ch in '.;' and (i + 1 == len(line) or line[i + 1] == ' '):
+            seg = line[start:i + 1]
+            out.append((start + (len(seg) - len(seg.lstrip())), seg.strip()))
+            start = i + 1
+            depth = 0
+    if line[start:].strip():
+        seg = line[start:]
+        out.append((start + (len(seg) - len(seg.lstrip())), seg.strip()))
+    return out
+
+co = cut_with_offsets(body)
+c = [x for _, x in co]
+assert c == gate.clauses(gate.queue_line(t)), 'the cut differs from the gate\'s'
+assert not gate.HEAD_CLAUSE.search(c[0]), 'a clause holds the head'
+LANDING = re.compile(r"^[A-Za-z`«][^;(]{0,220}?\blanded\b[^;(]{0,40}\(content tip")  # 22 Nov: a clause may begin with a code name in backticks, or with a small letter (the clause of 17:28)
+starts = [i for i, x in enumerate(c) if LANDING.match(x)]
+end = next(i for i, x in enumerate(c) if x.startswith('The landed clauses before these'))
+assert all(s < end for s in starts), 'a landing after the pointer to the history file'
+print('landings on the line:', len(starts))
+for s in starts:
+    print('  ', s, c[s][:88])
+if len(starts) <= KEEP:
+    print('nothing to move'); sys.exit(0)
+cut = starts[KEEP]
+# the landings moved, oldest first (the section reads oldest to newest; the line reads newest first), each
+# landing's clauses in their own order
+bounds = starts[KEEP:] + [end]
+groups = [c[bounds[i]:bounds[i + 1]] for i in range(len(bounds) - 1)]
+moved = [x for g in reversed(groups) for x in g]
+assert sorted(moved) == sorted(c[cut:end])
+new_body = body[:co[cut][0]] + body[co[end][0]:]
+lines[qi] = raw[:body0] + new_body
+new = '\n'.join(lines)
+# what stays is what stood: every clause of the old line is on the new line or among the moved, once each
+assert gate.clauses(gate.queue_line(new)) == c[:cut] + c[end:]
+open(B, 'w', encoding='utf-8').write(new)
+
+def repoint(s):
+    def fix(m):
+        u = m.group(1)
+        if re.match(r'[a-z]+://|mailto:', u): return m.group(0)
+        u = ('../../BECOMING-WORKBOARD.md' + u) if u.startswith('#') else ('../../../' + u[3:]) if u.startswith('../') else ('../../' + u)
+        return '](' + u + ')'
+    return re.sub(r'\]\(([^)\s]+)\)', fix, s)
+
+HEAD = "## The board's Queue line: landed clauses moved off it from 10 November 2026"
+h = open(H, encoding='utf-8').read()
+assert h.count(HEAD) == 1
+a = h.index(HEAD)
+nxt = h.find('\n## ', a + len(HEAD))
+assert nxt != -1, 'expected a section after the moved clauses'
+section = h[a:nxt]
+kept_tail = section[len(section.rstrip('\n')):]  # the blank line(s) before the next heading
+h2 = h[:a] + section.rstrip('\n') + '\n' + '\n'.join(repoint(x) for x in moved) + kept_tail + h[nxt:]
+assert len(h2) == len(h) + sum(len(repoint(x)) + 1 for x in moved)
+open(H, 'w', encoding='utf-8').write(h2)
+print('moved', len(moved), 'clauses,', sum(map(len, moved)), 'chars; landings kept', KEEP)
+print('first moved:', moved[0][:70])
+print('last moved :', moved[-1][:70])
+print('links re-pointed:', sum(len(re.findall(r'\]\(([^)\s]+)\)', x)) for x in moved))

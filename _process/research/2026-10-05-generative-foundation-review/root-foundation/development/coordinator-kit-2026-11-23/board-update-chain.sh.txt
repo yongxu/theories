@@ -1,0 +1,62 @@
+#!/bin/bash
+# AI-written (the coordinator's session, 23 November 2026). On a new branch from main: the board edits of board_1123c.py, the Queue trim, a check that every
+# moved clause stands in the history file once more than before, the board gate, a commit, the render with its
+# commit if pages changed, then the landing gate. Lands nothing.
+set -uo pipefail
+W=/Users/ren/tmp/rw/words14
+TIP=${1:?the tip of main expected, nine characters}
+cd /Users/ren/tmp/rw/wm2/wt || exit 1
+[ -z "$(git status --short)" ] || { echo "worktree not clean"; exit 1; }
+tip=$(git -C /Users/ren/theories rev-parse --short=9 main)
+[ "$tip" = "$TIP" ] || { echo "main is at $tip"; exit 1; }
+git rev-parse -q --verify refs/heads/coord-board-1123c >/dev/null && { echo "branch exists"; exit 1; }
+git checkout -q -b coord-board-1123c main
+python3 -B $W/board_1123c.py || exit 1
+python3 - <<'PY' || exit 1
+import sys
+sys.path.insert(0,'tools/research')
+import gate
+t=open('_process/BECOMING-WORKBOARD.md',encoding='utf-8').read()
+open('/Users/ren/tmp/rw/words14/board_1123c_clauses_before.txt','w',encoding='utf-8').write('\n'.join(gate.clauses(gate.queue_line(t))))
+PY
+python3 -B $W/trim_queue_1122.py > $W/board_1123c_trim.log 2>&1 || exit 1
+python3 - <<'PY' || exit 1
+import sys, subprocess, collections
+sys.path.insert(0,'tools/research')
+import gate
+H='_process/history/workboard/BECOMING-WORKBOARD-2026-10-11_to_2026-10-17.md'
+before=open('/Users/ren/tmp/rw/words14/board_1123c_clauses_before.txt',encoding='utf-8').read().split('\n')
+t=open('_process/BECOMING-WORKBOARD.md',encoding='utf-8').read()
+after=gate.clauses(gate.queue_line(t))
+# the line: what stays keeps its order; nothing new
+i=0
+for c in after:
+    while i < len(before) and before[i] != c: i += 1
+    assert i < len(before), 'a clause on the new line is not on the old, or out of order: ' + c[:60]
+    i += 1
+gone=list((collections.Counter(before)-collections.Counter(after)).elements())
+assert len(before)-len(after)==len(gone) and gone
+# the history file: its lines at main, then the moved clauses added as whole lines, each once more than before
+old=subprocess.run(['git','show','main:'+H],capture_output=True,text=True).stdout.split('\n')
+new=open(H,encoding='utf-8').read().split('\n')
+added=collections.Counter(new)-collections.Counter(old)
+removed=collections.Counter(old)-collections.Counter(new)
+assert not removed, 'a line of the history file is gone'
+assert sum(added.values())==len(gone), (sum(added.values()), len(gone))
+open('/Users/ren/tmp/rw/words14/board_1123c_trim.log','a').write(f"\ngone {len(gone)} clauses, {sum(map(len,gone))} chars; first: {gone[0][:70]}; history gained {sum(added.values())} lines, lost none; order kept\n")
+PY
+GATE_BOARD_REWRITE="the coordinator's trim of the Queue line to five landings" python3 -B tools/research/gate.py board --base main > $W/board_1123c_boardgate.json 2>&1 || { echo "board gate failed"; exit 1; }
+git add _process/BECOMING-WORKBOARD.md _process/history/workboard/BECOMING-WORKBOARD-2026-10-11_to_2026-10-17.md _process/RESEARCH-DIRECTIVES.md
+git -c commit.gpgsign=false commit -q -m "$(cat $W/board_1123c_subject.txt)" -m "$(cat $W/board_1123c_body.txt)" -m "AI-written (the coordinator's session)." || exit 1
+python3 -B tools/research/research.py render > $W/board_1123c_render.log 2>&1; rc=$?
+echo "render rc=$rc" >> $W/board_1123c_render.log; git status --short >> $W/board_1123c_render.log
+[ $rc = 0 ] || exit 1
+other=$(git status --short | grep -v -E '^ M (_process/(DIRECTIVE-INDEX\.md|architecture/generated-manifest\.json)|sources/README\.md)$')
+[ -z "$other" ] || { echo "unexpected render paths" >> $W/board_1123c_render.log; exit 1; }
+if [ -n "$(git status --short)" ]; then
+  git add _process/DIRECTIVE-INDEX.md _process/architecture/generated-manifest.json sources/README.md 2>/dev/null
+  git -c commit.gpgsign=false commit -q -m "Rendered: the generated pages after the board's and the register's lines of the first hours of 23 November" -m "Generated pages only, from tools/research/research.py render." -m "AI-written (the coordinator's session)." 2>/dev/null
+  echo "render committed" >> $W/board_1123c_render.log
+else echo "render changed nothing" >> $W/board_1123c_render.log; fi
+L=$W/board_1123c_gate.log; date > $L
+GATE_BOARD_REWRITE="the coordinator's trim of the Queue line to five landings" python3 -B tools/research/gate.py run --base main >> $L 2>&1; echo "gate rc=$?" >> $L; date >> $L

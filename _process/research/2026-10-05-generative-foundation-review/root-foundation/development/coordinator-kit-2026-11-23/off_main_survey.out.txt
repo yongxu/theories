@@ -1,0 +1,51 @@
+main 406758f15
+worktree /Users/ren/theories: HEAD 406758f15 ancestor of main True; uncommitted: M .claude/launch.json
+worktree /Users/ren/tmp/dj/wt: HEAD 52fc707a4 ancestor of main True; uncommitted: none
+worktree /Users/ren/tmp/dj/wt-layer: HEAD 52fc707a4 ancestor of main True; uncommitted: none
+worktree /Users/ren/tmp/fm/wt: HEAD 406758f15 ancestor of main True; uncommitted: none
+worktree /Users/ren/tmp/gr/wt: HEAD 42fa89147 ancestor of main True; uncommitted: none
+worktree /Users/ren/tmp/rw/wm2/wt: HEAD 44571d551 ancestor of main True; uncommitted: none
+10 branches not merged into main; 429 salvage refs (counted, not examined)
+branch aa-atlas-v1 (2 commits past 34a3b6c97): 10 files | SAME 2 | WAS 4 | NEVER 4
+    NEVER _process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/phase1/scratch-tool/tools/research/atlas.py
+    NEVER _process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/phase1/scratch-tool/tools/research/tests/test_atlas.py
+    NEVER tools/research/atlas.py
+    NEVER tools/research/tests/test_atlas.py
+branch claude/epic-mirzakhani-e296ee (1 commits past a1b112c08): 2 files | SAME 0 | WAS 2 | NEVER 0
+branch fv (2 commits past 14b0276fb): 9 files | SAME 9 | WAS 0 | NEVER 0
+branch rae-salvage-claim (1 commits past 2cab7e44a): 1 files | SAME 0 | WAS 0 | NEVER 1
+    NEVER _process/BECOMING-WORKBOARD.md
+branch t1-premises-follow (1 commits past 8ebf3f1be): 3 files | SAME 0 | WAS 0 | NEVER 3
+    NEVER _process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/READING-BUDGETS.md
+    NEVER _process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/THESES-STANDINGS.md
+    NEVER theories/becoming/review/SCIENCES.md
+branch t2-life-cycle (2 commits past 5fe9a9fec): 4 files | SAME 2 | WAS 2 | NEVER 0
+branch t2-statement (2 commits past 82e5f6d5d): 9 files | SAME 9 | WAS 0 | NEVER 0
+branch tt-records-theorem (1 commits past 1de41849b): 2 files | SAME 0 | WAS 2 | NEVER 0
+branch ue31-design (10 commits past 109c8d10f): 10 files | SAME 8 | WAS 1 | NEVER 1
+    NEVER experiments/README.md
+branch wu-kit (5 commits past 1de41849b): 21 files | SAME 2 | WAS 13 | NEVER 6
+    NEVER _process/architecture/generated-manifest.json
+    NEVER _process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md
+    NEVER _process/research/README.md
+    NEVER theories/becoming/results/records/a-way-of-units.md
+    NEVER theories/becoming/results/records/going-alike-up-to-the-nets-end.md
+    NEVER theories/becoming/results/records/turning-in-time.md
+stash@{0} tracked: 22 files | SAME 0 | WAS 11 | NEVER 11
+    NEVER GOALS.md
+    NEVER README.md
+    NEVER RESEARCH.md
+    NEVER _process/BRIEF.md
+    NEVER _process/architecture/generated-manifest.json
+    NEVER _process/goals/generative-alignment.json
+    NEVER theories/becoming/COLLECTIVE-DIRECTION.md
+    NEVER theories/becoming/ONE-PAGE.md
+    NEVER theories/becoming/THE-THEORY-OF-BECOMING.md
+    NEVER theories/becoming/USES-EXAMPLES.md
+    NEVER theories/becoming/results/README.md
+stash@{1} tracked: 6 files | SAME 0 | WAS 2 | NEVER 4
+    NEVER _process/BECOMING-WORKBOARD.md
+    NEVER _process/architecture/generated-manifest.json
+    NEVER _process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md
+    NEVER _process/research/README.md
+stash@{1} untracked: 8 files | SAME 5 | WAS 3 | NEVER 0

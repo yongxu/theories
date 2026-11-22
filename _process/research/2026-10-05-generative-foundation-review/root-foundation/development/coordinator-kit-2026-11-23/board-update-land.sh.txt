@@ -1,0 +1,19 @@
+#!/bin/bash
+# AI-written (the coordinator's session, 23 November 2026). Lands branch coord-board-1123c on main by fast-forward,
+# after the gate on the branch passed. The main checkout must hold nothing but .claude/launch.json.
+# Nothing is pushed (AGENTS.md, rule 7).
+set -euo pipefail
+LOG=/Users/ren/tmp/rw/words14/board_1123c_gate.log
+grep -q '^gate rc=0$' "$LOG" || { echo "gate not green: $(tail -1 "$LOG")"; exit 1; }
+cd /Users/ren/theories || exit 1
+[ "$(git branch --show-current)" = main ] || { echo "not on main"; exit 1; }
+tip=$(git rev-parse --short=9 main)
+[ "$tip" = "${1:?the tip of main expected}" ] || { echo "main moved to $tip; rebase the branch first"; exit 1; }
+git status --short | grep -v '^ M .claude/launch.json$' | grep . && { echo "checkout not clean"; exit 1; }
+git merge --ff-only coord-board-1123c 2>&1 | tail -4
+git log --oneline -3 | cut -c1-110
+git status --short
+cd /Users/ren/tmp/rw/wm2/wt || exit 1
+git checkout -q --detach main
+echo "worktree at $(git rev-parse --short=9 HEAD), detached"
+date

@@ -1,0 +1,87 @@
+WAY_NOW_ADDED
+
+1. "The same night" — HOLDS. His two lines to row DJ's session are stamped 16:59:52.209Z and 17:03:49.385Z (23:59:52 WIB on the 22nd, 00:03:49 WIB on the 23rd), the same night as the "first minutes of 23 November" sentence before it. The phrase asserts no order.
+2. "he asked the session that holds row DJ to explain and suggest an approach" — HOLDS. His line is "explain and suggest approach that align with our direction" (transcript a5a43704, line 12523); the paraphrase says less. "The session that holds row DJ" reads rightly after "another session, one that held no row".
+3. "and wrote of what it suggested "agree with your approach" ([his words])" — the quotation HOLDS character for character; "of what it suggested" SAYS-MORE (small).
+   - Evidence: his line is those four words only. What it agrees with stands in the record under "How the session reads it (AI-written, held loosely)", line 27: "The second agrees with the approach as it was put to him that night". Record line 13: the session's message ended on a question with two buttons, and "His answer is neither button's label".
+   - Row DJ's row and the direction page use the same form, but here it is the coordinator's sentence.
+   - Smallest rewording: "and, after its answer and suggestion, wrote "agree with your approach"" (the register entry's own form).
+4. "what it suggested, what that row then ran and what it found are in row DJ's row and in a paragraph of the direction page" — HOLDS. Row DJ: "The suggestion was not to draw such lines across the whole atlas, and to try one piece first. That piece is landed … No passage between two sides stands." DIRECTION.md line 130 tells the same three.
+5. "that he has not read" — SAYS-MORE (small; the board's standing usage).
+   - Evidence: no file shows a not-reading. The page says of itself "he has not read it" (line 130, row DJ's words). The paragraph was committed at 01:07:24 +0700 (1ceef9027) and reached main with aa0673e87 at 01:15:24. Row DJ's transcript has no typed line of his after 17:03:49Z, through its last stamp 19:25:43Z.
+   - Smallest rewording: "which by the page he has not read", or "written after his last line to that session and not put to him".
+6. "(sentence added on 23 November by the coordinator)" — HOLDS.
+
+LINE0_G_ADDED
+
+1. "on 23 November (content tip `e8858d5dc`, landed 01:14 WIB)" — HOLDS by the Queue clause ("landed 23 November 01:14 WIB (content tip `e8858d5dc`, on `6c5fe7aeb`"). Git stamps e8858d5dc at 01:11:37 and the board commit aa0673e87 at 01:15:24 +0700; 01:14 is the clause's own time.
+2. "one paragraph by the session that keeps the page, "The pairs set against a print of what statements name"" — HOLDS. `git diff 6c5fe7aeb..aa0673e87 -- _process/DIRECTION.md` shows 2 lines added, 0 removed, one paragraph with that title (the page adds "(23 November)" inside the italics).
+3. "on a step it ran after he wrote "agree with your approach" of what it had suggested" — "ran after he wrote" HOLDS (record line 21: the print was begun "after both his messages (at 00:06 WIB …)"). "of what it had suggested" SAYS-MORE (small), same evidence as way-now 3. Smallest rewording: "on a step it ran after its suggestion and his "agree with your approach"".
+4. "and on what the step found and did not find ([its record](…NOTE.md))" — HOLDS. The link resolves from `_process/`; the paragraph has "So the step claims no absence" and "None is a passage between two sides".
+5. "by the page a reader who took no part set the paragraph against the record" — HOLDS. DIRECTION.md line 130, last sentence: "AI-written; a reader who took no part set it against the record; he has not read it."
+6. "the coordinator read the paragraph, checked the landing's form" — HOLDS. Coordinator's transcript: 18:15:47Z "Check row DJ's landing from the files: commits, paths, kept gate passes, the clause and the board checks"; 18:18:54Z and 19:26:32Z read the paragraph.
+7. "and set none of its figures against the readers' returns" — HOLDS as a self-report. No tool call of the coordinator's between 18:08Z and 19:28Z that I listed opens the returns. The returns themselves: NOT-OPENED by me.
+
+LINE0_J_ADDED
+
+1. "Also started on a session's reading: row GR's module `Becoming.SampledSelection`, claimed and landed on 23 November on that session's reading of his line "let's first merge back, then finish them on latest main"" — HOLDS.
+   - Claim commit 90c4aef88 is stamped 00:41:35 +0700; landing e43324d06 is stamped 02:24:46.
+   - Row GR: "Claimed 23 November 2026 (AI-written), on that session's reading of Ren's line to it of 00:02 WIB that day".
+   - The line is character for character in transcript 868c5bf5-08f0-40ff-808e-018ac5a4de59.jsonl, user line 2026-11-22T17:02:02.018Z, and in the sources file line 21.
+2. "he did not say what "them" covers." — HOLDS of that message (three pasted lines of the session's report and the one line). The sources file's own correction of 01:16 WIB says the same.
+3. "The Queue line's clause of 02:24 WIB and row GR tell what landed, who read it" — HOLDS.
+4. "and what was read by no one" — SAYS-MORE.
+   - Evidence: neither text says of anything that no one read it. The clause: "four readers who took no part read the tests or the module …, the fourth reading the statements and proofs as they stand, and the coordinating session set the record and the README row against the 29 statements, while four sentences of the account, the README row and the record's wording changed after the fourth read". Row GR: the study note "has the tests, what four readers changed and what the row does not show".
+   - Smallest rewording: "tell what landed, who read what, and what changed after the fourth reader's read".
+5. "the coordinator checked that landing from the files (" — HOLDS. Coordinator's transcript: tool calls at 19:25:18Z, 19:25:32Z, 19:25:49Z.
+6. "the receipt binds the module and the root" — HOLDS, recounted. The sha256 of `Becoming/SampledSelection.lean` (50aaf833114b3d24…) and of `Becoming.lean` (e176d3a6e512cdfe…) equal `source_sha256["Becoming.SampledSelection"]` and `["Becoming"]`. The receipt's status is passed, utc 20261122T175942.715137Z.
+7. "the print of uses between proofs is bound to the receipt" — HOLDS. `proof_uses.py --check` run now: "kind": "bound", "sources_bound": true, "problems": [], core_run 20261122T175942.715137Z.
+8. "and shows the proof of `Flow.sample_unselected_beyond_coupling` naming `Flow.unselected_beyond_coupling`" — HOLDS. The print line (one of 29) has uses `Becoming.Flow.BalancesOn.sample`, `Becoming.Flow.WithheldLevels.sample`, `Becoming.Flow.unselected_beyond_coupling`.
+9. "the tree the clause names has the twelve passes run on it and the other twenty are kept for the tree before the record's region was entered" — HOLDS, recounted. There are 12 files `66ecfd55639d….json` under `.git/gate/passes` (tree of 2840eec4d, written 02:21 to 02:24). There are 31 files `42941d43a923….json` (tree of 2655b2a44), 20 of them checks not among the twelve; 12 + 20 = 32.
+10. "no existing module but the root changed" — HOLDS. `git diff --name-status aa0673e87..e43324d06` shows, outside the run's snapshot folder, M `Becoming.lean` and A `Becoming/SampledSelection.lean` and no other `.lean`. The clause it points to says "no existing module changed" and row GR says "no existing module is edited"; the new wording is the exact one.
+11. "and set the record's statement and the README row against the module's statements" — SAYS-MORE: a board reader takes it as of the forms that landed.
+   - Its read was at 18:11:00 to 18:12:39Z (01:11 to 01:12 WIB) on branch tip 1c6619f6e. It printed the module's docstrings and signatures (18:11:06Z) and the record's JSON from the branch (18:11:50Z). The README row it had as quoted in row GR's message of 18:10:49Z; no tool call opens README.md.
+   - It sent four wording points at 18:12:39Z, among them that the statement names no premises and that the README row says a part "is separated".
+   - Commit 8c98c6c5b (01:12:54 WIB) then replaced the statement (now "Under a strict reading from step 0, with balance at the fine steps, …") and reworded the README row.
+   - Row GR's message of 18:13:03Z gave the new wordings, and the coordinator answered at 18:13:23Z: "Your four changes are taken as you give them."
+   - From then to its last stamp (19:28:33Z) no tool call opens the record or the README.
+   - Smallest rewording: "and, before the landing, set the record and the README row as they then stood against the module's statements; both were reworded on its points (commit `8c98c6c5b`), and it took the new wordings as that session gave them and opened neither file again".
+12. "without reading a proof" — SAYS-OTHER (small).
+   - Evidence: its first print (18:11:00Z, `sed -n '1,110p'` of the module from the branch) covers lines 96 to 108, the term proofs of `Strict.le` and `Strict.covers`. The file is as landed: the receipt binds it and no commit after 00:58:46 changed it. Its second print (18:11:06Z, from line 111) holds docstrings and signatures only.
+   - Smallest rewording: "against the module's statements and not against its proofs".
+
+REGISTER
+
+1. Title and link, "(entry written on 23 November 2026 by an AI session, the coordinator's, from the record)" — HOLDS, except the two places below that are not from the record (items 3 and 8).
+2. "to the session that holds row DJ, which by the record had three times that evening ended a turn asking him “Should the atlas also draw, from Lean, where a theorem's statement names another dynamic's notion?” and had no answer" — SAYS-OTHER on the count only; the attribution, the quotation and "had no answer" hold.
+   - The record says it (line 7), and the quotation is exact in the record and in the transcript.
+   - In the transcript the question closed a turn with the app's two buttons twice: the `ask` at 14:57:40Z and 15:17:07Z (21:57 and 22:17 WIB).
+   - It also stands in the closing text of five messages: 14:57:50Z in other words ("Should the atlas also draw that from Lean — not yet, or yes, measure first?"), then 14:59:10Z, 15:09:34Z, 15:17:11Z and 15:17:24Z as "should the atlas also draw, from Lean, where a theorem's statement names another dynamic's notion — not yet, or yes, measure first?".
+   - That is two or five, not three. "Had no answer" holds: he typed nothing between 14:10:49Z ("continue, fable is back") and 16:59:52Z.
+   - Smallest rewording: "which by the record had that evening ended turns asking him “…” and had no answer".
+3. "“explain and suggest approach that align with our direction” (22 November, 23:59 WIB)" — HOLDS (16:59:52.209Z, exact).
+4. "and, after that session's answer and suggestion, “agree with your approach” (23 November, 00:03 WIB)" — HOLDS (answer 17:01:43Z; his line 17:03:49.385Z, exact).
+5. "What is his: those two lines." — HOLDS.
+6. "What the suggestion was is in the record in that session's words: not to draw such lines across the whole atlas, and to try one piece first." — HOLDS (record line 21; transcript 17:01:43Z "Do not draw it across the whole atlas now … Instead, draw one piece").
+7. "Three sentences of what he had been told before the second line were not as the records have them" — HOLDS (record line 21, the italic sentence).
+8. "(four counts, and “the strictest fifty”, of which 39 had been judged)" — SAYS-OTHER, twice.
+   - "the strictest fifty" is not in the record the entry says it is written from; the record has "the fifty strictest" (line 21). The quoted words are the transcript's (17:01:43Z "judged the strictest fifty of this kind"; 17:18:33Z ""The strictest fifty" was 39.").
+   - "39 had been judged" is in neither. Record: "row FM's survey took 39 as candidates … the other eleven its script left out". Message of 17:18:33Z: "Its script took 39 of them as candidates and left out eleven."
+   - Smallest rewording: "(four counts, and the fifty candidates called the strictest, of which row FM's survey took 39 as candidates)".
+9. "the record gives both forms and says he was told the corrected figures at 00:18 WIB" — HOLDS (record line 21; assistant text 17:18:33.436Z with the table of told and recounted figures).
+10. "and by the coordinator's look at that session's transcript at 02:27 WIB he had written nothing further to it" — HOLDS. Coordinator's tool call at 19:27:00Z printed only "end of his later messages to row DJ". My own read finds no typed line of his after 17:03:49Z; later user lines are cross-session messages, task notifications and one command message.
+11. "That session's reading, given in the record as its own: that the second line agrees with the approach as put to him and is not a yes to a layer of statement links on the atlas." — HOLDS (record line 27).
+12. "What was done on it: the piece, landed the same night with a record and one paragraph on the direction page; the Queue line's clause of 01:14 WIB on the board tells what it found." — HOLDS.
+13. "Nothing was entered on the atlas, and that no layer is proposed is that row's judgment." — HOLDS. Clause: "no atlas file changed, and nothing entered on the atlas"; "is the row's judgment and not a test's outcome". `git diff 6c5fe7aeb..aa0673e87` touches no path under `results/atlas`, no `.lean` and no tool.
+14. "The record holds no word of his on the piece's record or on the paragraph." — HOLDS. "Record" means two things in one sentence; "The file of his words holds no word of his on …" reads more surely.
+15. "Nothing here releases a push, a sending or a paid run." — HOLDS (the record's own last sentence).
+
+MISSING
+
+- Neither board text says the step as run was not quite what was put to him. Record line 23: the message he answered spoke of "the notions in which the two ways and the selection paragraph are stated"; the step took the four pairs and left the selection sentences to row FM.
+- Neither board text says that three sentences he had been told were corrected to him only after his line (00:18 WIB) and that he has written nothing to that session since. The register has it. A reader of the board alone would take the agreement as covering what ran and the figures as told.
+- Every earlier sentence of the way-now line on a word of his carries a "he did not say …"; this one has none. If one is added, it has to be marked as that session's reading (record line 27).
+- "Three times" also stands in the sources file (line 7, with "shown by the app with two buttons", which the transcript gives twice) and in row DJ's row ("put to him three times"). An appended correction there is row DJ's session's to make.
+- Form: the way-now line now ends "…by the coordinator).*"; the new sentence has to go before the closing asterisk to stay inside the dated passage.
+- Not opened by me: the readers' returns of the piece; row FM's survey data on what was done with the 39 (only its note's "the 39 candidates"); the other session's transcript beyond the one line.
+- Checks run: read-only, 19 tool calls; `proof_uses.py --check` once, as the brief named; no build, no gate, no Lean, no write.

@@ -1,0 +1,57 @@
+#!/bin/bash
+# AI-written (the coordinator's session, 23 November 2026). Step B: after the gate of the content tree passed,
+# the landed clause is written at the head of the Queue line with that tree, its count of checks and the clock,
+# the board is checked and committed, and the branch is landed on main by fast-forward.
+# Nothing is pushed (AGENTS.md, rule 7).
+set -euo pipefail
+W=/Users/ren/tmp/rw/words14
+BASE=${1:?the tip of main expected}
+LOG=$W/board_1123h_gate.log
+grep -q '^gate rc=0$' "$LOG" || { echo "gate not green: $(tail -1 "$LOG")"; exit 1; }
+cd /Users/ren/tmp/rw/wm2/wt || exit 1
+[ "$(git branch --show-current)" = coord-board-1123h ] || { echo "not on the branch"; exit 1; }
+[ -z "$(git status --short)" ] || { echo "worktree not clean"; exit 1; }
+[ "$(git -C /Users/ren/theories rev-parse --short=9 main)" = "$BASE" ] || { echo "main moved; rebase and gate again"; exit 1; }
+cmp -s /Users/ren/tmp/rw/words14/unified_1123/2026-11-23-merge-everything-a-unified-head.md sources/15-codex-theory-conversations/2026-11-23-merge-everything-a-unified-head.md || { echo "the draft changed after it was copied"; exit 1; }
+TREE=$(git rev-parse HEAD^{tree} | cut -c1-12); TIPC=$(git rev-parse --short=9 HEAD); NOW=$(date '+%H:%M')
+TREE=$TREE TIPC=$TIPC NOW=$NOW BASE=$BASE python3 - <<'PY'
+import json, os, re, sys
+sys.path.insert(0, 'tools/research')
+import gate
+W = '/Users/ren/tmp/rw/words14/'
+t = open(W + 'board_1123h_gate.log', encoding='utf-8').read()
+d = json.loads(t[t.find('{'):t.rfind('}') + 1])
+assert d['tree'] == os.environ['TREE'], (d['tree'], os.environ['TREE'])
+assert d['failed'] == [], d['failed']
+n = len(d['results'])
+clause = open(W + 'board_1123h_clause_template.txt', encoding='utf-8').read().strip()
+for k, v in (('HH:MM', os.environ['NOW']), ('TIPC', os.environ['TIPC']), ('BASE', os.environ['BASE']),
+             ('TREE', d['tree']), ('NCHECKS', str(n))):
+    assert clause.count(k) == 1, k
+    clause = clause.replace(k, v)
+assert '\n' not in clause
+B = '_process/BECOMING-WORKBOARD.md'
+s = open(B, encoding='utf-8').read()
+P = '- **Queue:** '
+assert s.count('\n' + P) == 1
+s = s.replace('\n' + P, '\n' + P + clause + ' ')
+open(B, 'w', encoding='utf-8').write(s)
+c = gate.clauses(gate.queue_line(s))
+L = re.compile(r"^[A-Za-z`«][^;(]{0,220}?\blanded\b[^;(]{0,40}\(content tip")
+k = sum(bool(L.match(x)) for x in c)
+assert k == 5, k
+assert c[0] == clause, (c[0][:80], clause[:80])
+open(W + 'board_1123h_clause.txt', 'w', encoding='utf-8').write(clause + '\n')
+print('clause written;', k, 'landings on the line;', len(clause), 'characters')
+PY
+GATE_BOARD_REWRITE="the coordinator's trim of the Queue line to five landings" python3 -B tools/research/gate.py board --base main > $W/board_1123h_boardgate2.json 2>&1 || { echo "board check failed"; tail -20 $W/board_1123h_boardgate2.json; exit 1; }
+git add _process/BECOMING-WORKBOARD.md
+git -c commit.gpgsign=false commit -q -m "Board: his sentence of 23 November on a unified head, with what was gathered onto main after it, landed, on the Queue line" -m "The landed clause of the landing whose content tip is $TIPC, written after its gate." -m "AI-written (the coordinator's session)."
+cd /Users/ren/theories || exit 1
+[ "$(git branch --show-current)" = main ] || { echo "not on main"; exit 1; }
+[ "$(git rev-parse --short=9 main)" = "$BASE" ] || { echo "main moved"; exit 1; }
+git status --short | grep -v '^ M .claude/launch.json$' | grep . && { echo "checkout not clean"; exit 1; }
+git merge --ff-only coord-board-1123h 2>&1 | tail -3
+git log --oneline -4 | cut -c1-110
+cd /Users/ren/tmp/rw/wm2/wt && git checkout -q --detach main
+echo "worktree at $(git rev-parse --short=9 HEAD), detached"; date

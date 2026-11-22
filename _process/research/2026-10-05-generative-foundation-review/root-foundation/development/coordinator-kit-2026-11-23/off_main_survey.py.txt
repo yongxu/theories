@@ -1,0 +1,53 @@
+#!/usr/bin/env python3
+"""AI-written (the session that kept the queue until 23 November 2026). What stands off main, tested file by file.
+Run in /Users/ren/theories; reads only. For each branch not merged into main and each stash: every file it changed
+since its fork point (and a stash's untracked files) is counted as SAME (main holds that exact content now), WAS
+(some commit of main's history added or removed that exact blob) or NEVER (main never held the file in that exact
+form). NEVER does not mean lost and SAME/WAS does not mean meant: the test sees exact file contents only, not a
+sentence reworded on its way to main, not content moved to another path, and not states inside a branch that its
+tip no longer has."""
+import subprocess
+
+
+def git(*a):
+    return subprocess.run(['git', *a], capture_output=True, text=True).stdout
+
+
+def judge(rev, path):
+    blob = git('rev-parse', f'{rev}:{path}').strip()
+    cur = git('rev-parse', '-q', '--verify', f'main:{path}').strip()
+    if blob == cur:
+        return 'SAME'
+    return 'WAS' if git('log', 'main', '--format=%h', '-1', '--find-object=' + blob).strip() else 'NEVER'
+
+
+def report(name, rev, paths):
+    out = {'SAME': [], 'WAS': [], 'NEVER': []}
+    for p in paths:
+        out[judge(rev, p)].append(p)
+    print(f'{name}: {len(paths)} files | SAME {len(out["SAME"])} | WAS {len(out["WAS"])} | NEVER {len(out["NEVER"])}')
+    for p in out['NEVER']:
+        print('    NEVER', p)
+
+
+print('main', git('rev-parse', '--short=9', 'main').strip())
+for line in git('worktree', 'list', '--porcelain').split('\n'):
+    if line.startswith('worktree '):
+        w = line.split(' ', 1)[1]
+        head = subprocess.run(['git', '-C', w, 'rev-parse', 'HEAD'], capture_output=True, text=True).stdout.strip()
+        anc = subprocess.run(['git', 'merge-base', '--is-ancestor', head, 'main']).returncode == 0
+        dirty = subprocess.run(['git', '-C', w, 'status', '--short'], capture_output=True, text=True).stdout.strip()
+        print(f'worktree {w}: HEAD {head[:9]} ancestor of main {anc}; uncommitted: {dirty or "none"}')
+branches = [b for b in git('for-each-ref', '--no-merged=main', '--format=%(refname:short)', 'refs/heads').split('\n') if b]
+print(len(branches), 'branches not merged into main;', len(git('for-each-ref', 'refs/salvage').strip().split('\n')),
+      'salvage refs (counted, not examined)')
+for b in branches:
+    mb = git('merge-base', 'main', b).strip()
+    rows = [l.split('\t') for l in git('diff', '--name-status', '--no-renames', mb, b).strip().split('\n') if l]
+    report(f'branch {b} ({git("rev-list", "--count", mb + ".." + b).strip()} commits past {mb[:9]})', b,
+           [r[-1] for r in rows if r[0] != 'D'])
+for i, _ in enumerate([l for l in git('stash', 'list').split('\n') if l]):
+    s = f'stash@{{{i}}}'
+    report(f'{s} tracked', s, [l for l in git('stash', 'show', '--name-only', s).strip().split('\n') if l])
+    if git('rev-parse', '-q', '--verify', s + '^3').strip():
+        report(f'{s} untracked', s + '^3', [l for l in git('ls-tree', '-r', '--name-only', s + '^3').strip().split('\n') if l])

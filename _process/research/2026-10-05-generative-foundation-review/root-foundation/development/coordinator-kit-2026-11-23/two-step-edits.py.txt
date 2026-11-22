@@ -1,0 +1,63 @@
+#!/usr/bin/env python3
+"""AI-written (the coordinator's session, 23 November 2026). His sentence of 03:46 WIB on a unified head: one
+sentence on the board's line on the way now and one entry in the register of his words, his sentence as his and
+the session's reading named as its own. Run in a checkout root, after the sources file is in place and before the
+Queue trim. Each exact string once."""
+import json
+
+
+def sub(t, old, new, where):
+    n = t.count(old)
+    assert n == 1, f'{where}: expected once, found {n}: {old[:70]!r}'
+    return t.replace(old, new)
+
+
+W = '/Users/ren/tmp/rw/words14/'
+B = '_process/BECOMING-WORKBOARD.md'
+R = '_process/RESEARCH-DIRECTIVES.md'
+S = 'sources/15-codex-theory-conversations/2026-11-23-merge-everything-a-unified-head.md'
+HIS = '../' + S
+Z = ("I think at this time everything is stopped at the point that it can just stop, and I want to merge "
+     "everything and create a unified head that is the most advanced and complete form of our direction.")
+src = open(S, encoding='utf-8').read()
+assert src.count('> ' + Z + '\n') == 1
+N = ("Be the new coordinator. Look at the 4 other sessions. Find out the latest, most new, most direction aligned "
+     "towards to the full pictures solution and approaches, and then create a unified main as the head.")
+assert N in src
+t = open(B, encoding='utf-8').read()
+OLD = ("which by the page he has not read (sentence added on 23 November by the coordinator).*")
+WAY = (f"At 03:46 WIB on the 23rd he wrote to the session that then kept this line \"{Z}\" ([his words]({HIS}), "
+       "with how that session read it, what it and three rows then did, what the head on main does not hold and "
+       "what its test of the branches not merged cannot see); he named no push, and nothing is pushed. At 04:25 "
+       f"WIB he opened another session and wrote to it \"{N}\"; those words are that session's to file. Both "
+       "sessions read them as the seat moving, which is their reading and not his, and these are the last "
+       "sentences the earlier one adds here (added on 23 November by the session that kept this line until "
+       "then).")
+t = sub(t, OLD, OLD[:-1] + ' ' + WAY + '*', 'the way now')
+open(B, 'w', encoding='utf-8').write(t)
+r = open(R, encoding='utf-8').read()
+ANCHOR = "[Ren on a suggested approach to links drawn from statements, 23 November 2026]("
+E = (f"[Ren on merging everything and a unified head, 23 November 2026]({HIS}) (entry written on 23 November "
+     "2026 by an AI session, the one that kept this register until then, from the record): to that session, "
+     f"after its report that the whole gate had passed at the end of the night's phase, “{Z}” What is his: that "
+     "sentence. He named no push, no page and no session; that his sentence asks no change to the direction "
+     "page or [AGENTS.md](../AGENTS.md) and closes no session is that session's reading. That session's "
+     "reading, given in the record as its own: one head on main that holds all that every session has, with "
+     "nothing the work needs left only in a worktree, a branch not merged, a stash, a scratch folder or a "
+     "session's context. What was done on it: tested file by file against main and its history and, where that "
+     "failed, line by line, the ten older branches not merged into main and the two stashes hold, beyond what "
+     "main has or had, generated pages, an early atlas tool and earlier wordings of lines main has in later "
+     "ones, with two lines of reading-time figures not found on main; nothing was merged from them and all "
+     "twelve are left as they are. Rows DJ, GR and FM landed what they named as needed and still outside main, "
+     "and each answered that it holds nothing more that the work needs (scratch they say can be made again is "
+     "left; row DJ's older scratch was sampled, not audited); that session filed its own kit; main stood at "
+     "`406758f15` before its landing. What that head does not hold is told in the record. At 04:25 WIB he told "
+     f"another session “{N}”; those words are that session's to file and to enter here, and whether the head "
+     "told above is what they ask for is that session's to say. Nothing here releases a push, a sending or a "
+     "paid run.")
+assert r.count(ANCHOR) == 1 and 'Ren on merging everything and a unified head' not in r
+r = r.replace(ANCHOR, E + "\n\n" + ANCHOR)
+open(R, 'w', encoding='utf-8').write(r)
+json.dump({'way_now_added': WAY, 'register': E}, open(W + 'board_1123h_written.json', 'w', encoding='utf-8'),
+          ensure_ascii=False, indent=1)
+print('edited', B, 'and', R)

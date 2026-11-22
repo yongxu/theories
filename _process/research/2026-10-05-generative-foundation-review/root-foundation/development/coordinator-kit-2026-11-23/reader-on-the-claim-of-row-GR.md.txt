@@ -1,0 +1,121 @@
+Opened (00:22–00:29 WIB, read-only; helper scripts only in the session scratchpad): the four transcripts (868c5bf5 GR session, 21947b1b row FM, d9ccfc76 coordinator, a5a43704 row DJ), the words file, TESTS.md, build1.log, tree/ and withdrawn/, board and register on main, `git show 82737d606`, `git worktree list`, the 412 proof-uses files, and `board_1123a_row.txt`, `board_1123a_clause_template.txt`, `board_1123a.py`, `chainA.sh`, `landB.sh`.
+
+The JSON row (written 00:21:19) is no longer the row that lands. `board_1123a.py` reads `board_1123a_row.txt` (00:22:54), which is verbatim the row put to the GR session at 17:22:47Z and answered "yes to the revised row as you would land it" at 17:22:53Z. I give both.
+
+**TEXT 1a. row, as in the JSON (first form)**
+
+1. Title "GR: selection through couplings, and the lock's two-level course, read at coarser steps": SAYS-OTHER. TESTS.md, "After the reader's attack": "**Part 2 is withdrawn by its own test, unbuilt.** … Nothing of part 2 lands." Rewording: the revised title.
+2. Owner cell "Claude Code desktop session "Abstract mathematics…" (Claude Fable; opened 22 November 2026; holds no other row)": HOLDS.
+3. "Claimed 23 November 2026 (AI-written), on that session's reading of Ren's line to it of 00:02 WIB … ([his words], with what he did not say)": HOLDS. The line is stamped 2026-11-22T17:02:02.018Z and the quotation is character for character.
+4. "New modules only; no existing module is edited.": SAYS-OTHER in the plural since 00:21. Rewording: "One new module at most; …".
+5. "What it asks … and of the lock's course read at stretches.": SAYS-OTHER for the second half (withdrawn).
+6. "two claims that can fail: a part … that no selection at the coarser steps registers; and one start locked at no step …": SAYS-OTHER.
+   - The second claim is withdrawn (TESTS: "P6 is the mirror of the pair `RuleCapture.Alternating` and `Reversed`").
+   - The first says more than S6, which is of selections "through the formation's couplings". The replaced S6 (vi) requires "some selection at the coarser steps, under a wider coupling by level, separating them".
+   - Rewording: the revised row's sentence.
+7. "Nothing gained if: part 1 is `Web.selects_alike_iff` at a sample with no built case": HOLDS (N1 with N3).
+8. "the blindness law … does not use both `Flow.unselected_beyond_coupling` and a law of `Sampling` on balance": HOLDS (N2; all names are in the print).
+9. "part 2 is `Pace.paced_stretch` said again, … one of twelve named theorems": SAYS-OTHER. The twelve recount to twelve (M2) and all are in the print, but part 2 is withdrawn.
+10. "The tests are … (sha256 fc03b9f7… as first frozen, 00:14 WIB)": HOLDS. The first 6,280 bytes still hash to fc03b9f7…; the session printed that hash at 17:14:42Z and the file was born 00:14:42. The whole file is now dc1669e0… (written 00:20:58 and 00:22:50).
+11. "Before they were frozen a draft of part 1 had been written and built once in scratch (00:13 WIB; it failed in its built case), which the tests file tells": HOLDS. build1.log is 00:13:45–52; its errors at lines 171 and 172 are inside `Between.coarse_not_fine`; TESTS l.3 tells it.
+12. "drafts of both modules stand in the scratch tree": SAYS-OTHER. tree/Becoming holds SampledSelection.lean only (rewritten 00:21:25); SampledPace.lean is in withdrawn/.
+13. "nothing is built again before this claim is on main": HOLDS at 00:29 (one build log, no SampledSelection.olean), but it is a promise.
+    - Evidence it may not hold as worded: at 17:09:59Z the session wrote "Lean runs: I will tell you before each", and the 17:13:45Z build ran with no message before it.
+    - Rewording: "by the scratch folder's files at HH:MM nothing has been built since", checked at landing.
+14. "A reader who took no part is attacking the tests.": SAYS-OTHER. The reader returned at 17:20:19Z (177,366 tokens). Rewording: as in the revised row.
+15. "Of the count …: not what is moved": HOLDS (words file).
+16. "it is reported after the landing as whatever it then is": SAYS-MORE. The tests now give two outcomes in which no module lands. Rewording: "if a module lands, it is reported after as whatever it then is".
+17. "Caps: 14 scratch builds, … readers 600 thousand tokens.": HOLDS (TESTS l.51).
+18. Workspace cell: HOLDS (no worktree of its own; /Users/ren/tmp/gr absent); it omits withdrawn/.
+19. "Needs `Sampling`, `Selection`, `Pace`, `RuleCapture`, `ClosedCapture`": SAYS-OTHER for the last three. The session wrote to row DJ at 17:21:41Z: "Nothing near `Pace`, `RuleCapture`, `ClosedCapture` or `TurningInTime` will land from me"; the draft imports only Sampling and Selection.
+20. "Feeds: row FM's read … (told to row FM, which answered that it sees no crossing)": HOLDS. FM wrote at 17:11:51.866Z: "No crossing: my read of the four sentences is not started and builds nothing."
+    - Not on main: FM has since written "The first read for my order is done" (17:15:08Z) and "I stop on the four sentences here" (17:22:36Z).
+    - What stands is its offer "Send me the statement when it is proved and I set it beside the first sentence of the paragraph".
+    - Rewording: add "at 00:11 WIB" to "answered".
+
+**TEXT 1b. row, as in board_1123a_row.txt (the form that lands)**
+
+1. Title, owner cell, "Claimed …": HOLDS.
+2. "One new module at most; no existing module is edited.": HOLDS.
+3. "What it asks … asked of selection through couplings on a web.": HOLDS.
+4. "The claim that can fail: a part … that no selection through the selector's couplings at the coarser steps registers, though the sampled levels with and without it differ.": HOLDS against S6 (i), (iv), (v). The tests' words are "the formation's couplings" and "separating"; "selector" is from the session's message of 17:21:37Z.
+5. "its text as first frozen hashes to sha256 fc03b9f7…, and what a reader's attack changed stands below that text under "After the reader's attack"": HOLDS.
+6. "As first written the claim had a second part, …": HOLDS.
+7. "A reader who took no part attacked the tests before any build that counts (177 thousand tokens), and that part is withdrawn by its own test, unbuilt": HOLDS. The reader was a subagent the claiming session launched on its own brief (17:15:01Z); the only build log is build1.log.
+8. "by the reader's finding, which the writer takes, its lock statements were `RuleCapture.locked_stays` and `turn_locked` re-indexed …, and its built case the mirror of `RuleCapture.Alternating` with `Reversed`": HOLDS as attributed. The tests add "up to one rewrite from `paced` to `Law.orbit`", and the reader says "computed by hand from the definitions … not from Lean".
+9. "Of the first part the tests were replaced by stricter ones.": HOLDS.
+10. "No module lands, and the row closes as a dictionary with one lemma, if … or if a second reader …": HOLDS against "The live ones: …" (but see Missing 5).
+11. "Before the tests were first frozen … built once …; nothing is built again before this claim is on main.": HOLDS, with the same promise as 1a.13.
+12. "it is reported after the landing as whatever it then is": SAYS-MORE, as 1a.16.
+13. "Caps: 14 scratch builds, of which that one is used; … of which the attack used 177 thousand.": HOLDS. "that one is used" rests on the session's yes of 17:22:53Z; the tests file says only that the build "counts for nothing".
+14. Workspace cell; "Needs `Sampling` and `Selection` …": HOLDS.
+15. Feeds: HOLDS, with the note at 1a.20.
+
+**TEXT 2. way_now_added**
+
+1. "In the first minutes of 23 November he wrote to the session he had written to on the evening of the 22nd ([those words]), which held no row": SAYS-OTHER by ambiguity only; the facts hold (00:00:22 and 00:02:02 WIB, same session as the file of the 22nd).
+   - The sentences just before it on that board line are about "that session", row FM's, to which he also wrote that evening; he wrote to row DJ's as well.
+   - Rewording: "he wrote to a third session, one that held no row and to which he had written on the evening of the 22nd ([those words](…))".
+2. ""report what have you done" and, under three lines of its report that he pasted, "let's first merge back, then finish them on latest main"": HOLDS, both character for character. The paste is the heading "What I did not do" and three lines; they stand in the session's report of 17:00:52Z as "- " items and were pasted as "* ".
+3. "he did not say which of the pasted lines "them" covers": SAYS-MORE. The negative is true, but "which of the pasted lines" writes as his that "them" is among them; that is the session's reading (words file: "The session reads it as the things the pasted lines say were not done"). Rewording: "he did not say what "them" covers".
+4. "On its own reading of that line the session claimed row GR, in the table below": HOLDS (17:09:59Z "My reading, mine to answer for").
+5. "(sentence added on 23 November by the coordinator)": SAYS-OTHER, a count. Two sentences are added. Rewording: "(two sentences added …)".
+
+**TEXT 3. line0_i_new for line0_i_old**
+
+1. The old string stands exactly once on main's line 0.
+2. "it has not been put to him since it was marked behind": HOLDS by the record (row DJ's row; the message of 82737d606). The only sources of 21–22 November that name the page are two files of 21 November; nothing later was found.
+3. "which row DJ's row also says since its mend of 22 November, `82737d606`": HOLDS. The commit is dated 2026-11-22 22:16:47 +0700; the row now reads "its own head note marked it behind at 16:18 that day, and it has not been put to him since."
+4. What the old text said and the new drops (he was shown it on 21 November at his asking) is still told by the next sentence of line 0.
+
+**TEXT 4. register**
+
+1. Head and "(entry written on 23 November 2026 by an AI session, the coordinator's, from the record)": HOLDS.
+2. "in the first minutes of 23 November, to the session …, which held no board row, “report what have you done”": HOLDS.
+3. "under three lines … (under “What I did not do”: “…”, “…”, “…”), “let's first merge back, then finish them on latest main”": HOLDS, each character for character.
+4. "What is his: those two lines; the three pasted lines are the session's, pasted by him.": HOLDS.
+5. "He did not say which of the pasted lines “them” covers or what finishing each would be": SAYS-MORE, as TEXT 2.3. Rewording: "He did not say what “them” covers or what finishing would be".
+6. "and he did not say to push": HOLDS.
+7. "“merge back” was met, the four worktrees then open each standing at a commit of main with nothing uncommitted (the coordinator checked the same)": HOLDS. The session checked at 17:03:21Z and the coordinator at 17:11:06Z; mine at 00:23 found each of the four linked worktrees at an ancestor of main with empty status.
+8. "“them” covers Lean, words for the direction page given to the session that keeps it, and a landing, with nothing landed in AGENTS.md": HOLDS, shortened. It leaves out the record's reading of the third pasted line: "For the count from the print of proof terms, it writes Lean where a statement can fail and does not take the count as what to move".
+9. "On that reading the session claimed row GR on the board.": HOLDS.
+10. "He has read neither the row nor the tests it names.": SAYS-MORE. No file shows what he has read.
+    - That session's transcript has no line of his after 17:02:02Z.
+    - Its replies to him at 17:16:36Z, 17:19:44Z, 17:21:49Z and 17:22:55Z name row GR and link TESTS.md.
+    - He was at the machine: he wrote to row DJ's session at 17:03:49Z.
+    - Rewording: "The record holds no word of his on the row or on the tests it names."
+11. "No other row's work is changed by this entry." / "Nothing here releases a push, a sending or a paid run.": HOLDS.
+
+**TEXT 5. Queue clause**
+
+The template of 00:23:31 differs from the clause given in four places: "has no worktree"; "agreed to after a reader's attack on its tests withdrew the claim's second part"; "a conflict"; "the coordinating session's texts".
+
+1. "Row GR claimed and Ren's two lines of the first minutes of 23 November filed": SAYS-MORE. Read alone it covers all his lines of those minutes; he also wrote "agree with your approach" to row DJ's session at 2026-11-22T17:03:49.385Z (00:03:49 WIB), which this landing does not file. Rewording: "Ren's two lines to that session of the first minutes of 23 November".
+2. "landed … (content tip `TIPC`, on `BASE`; gate of that tree, `TREE`: N checks, none failed": NOT-OPENED, filled at landing (landB.sh asserts no check failed).
+3. "written by the session he wrote to, which held no row and no worktree": HOLDS.
+4. "carried by the coordinating session at its request": HOLDS (17:09:59Z "you carry, or you give me the head; your choice"; 17:15:14Z "ready for you to carry").
+5. "the file the same byte for byte as that session's draft": NOT-OPENED, nothing is copied yet. Both scripts cmp; the draft is now 2,367 bytes, sha256 e5c348fd…, last written 00:19:37, as the coordinator read it at 00:20:11.
+6. "set his two lines and the three pasted lines against that session's transcript and found them there": HOLDS (the coordinator's script of 17:20:11Z; my own comparison agrees).
+7. "in the coordinating session's wording of that session's claim, which that session agreed to": SAYS-OTHER of the JSON row; HOLDS of the row file.
+   - The yes of 17:19:42Z was to the first form; at 17:21:37Z the session asked that the row say part 2 is withdrawn.
+   - The template's "a reader's attack … withdrew the claim's second part" says other: the writer withdrew it (TESTS: "What the writer takes"). Rewording: "agreed to after it withdrew the claim's second part on a reader's attack on its tests".
+8. "an entry in the register of his words, his two lines as his and that session's reading named as its own": HOLDS, except register sentence 10, which is neither.
+9. "one sentence on the board's line on the way now": SAYS-OTHER. Two sentences. Rewording: "two sentences".
+10. "line 0 (i) now points to row DJ's mended row where it stated the conflict": HOLDS.
+11. "read before the gate by one reader who took no part": HOLDS so far (at 00:29:17 there is no branch coord-board-1123a, no gate process, main at 82737d606). The reader was given the first form of the row and the first wording of the clause; I opened the row file and the template unasked. The clause does not say whether the findings were taken.
+12. "the Queue line trimmed so that five landings stand": NOT-OPENED (main has five now; landB.sh asserts five).
+13. "no Lean; AI-written; not pushed": HOLDS as planned (chainA.sh adds no Lean path).
+
+**Missing, that a careful reader would expect**
+
+1. The words file, landed byte for byte, says under "What it claimed": "new modules that ask of selection through couplings on a web, and of the lock's two-level course, … with what would count as nothing gained written down before any build."
+   - "before any build" is against build1.log (00:13:45–52), TESTS.md (born 00:14:42, whose line 3 tells the build) and the row's own "Before the tests were first frozen a draft … built once".
+   - What preceded the build is the three-item list in the session's message of 17:09:59Z, which the file does not cite.
+   - "and of the lock's two-level course" is stale since 00:21.
+   - The coordinator's message of 17:19:29Z said "Nothing else in the file needs changing." Mend it before the copy, or say in the register and clause that the file's reading section predates the withdrawal and errs on "before any build".
+2. "“merge back” was met" rests on the four worktrees. `git branch --no-merged main` lists ten branches (newest wu-kit, 13 November 10:53); both sessions listed them (17:02:26Z, 17:11:06Z) and neither the record nor the register names them. He did not say what is to be merged back.
+3. The main checkout carries ` M .claude/launch.json`; "nothing uncommitted" is true of the four linked worktrees only.
+4. His other lines of the same minutes, to row DJ's session, are in no file of sources/ on main: "explain and suggest approach that align with our direction" (16:59:52Z, 23:59:52 WIB on the 22nd) and "agree with your approach" (17:03:49Z).
+5. The revised row drops N2, which still stands in the first-frozen text: the blindness law's proof term must use both `Flow.unselected_beyond_coupling` and a law of `Sampling` on balance, "Checked by the lister". The tests end "a clause met means that part does not land", so the row's two conditions are not all of them.
+6. The row does not say the hash is of the file's first 6,280 bytes, so a reader cannot recompute it. It also does not say that `tmp/` is ignored by git (`.gitignore:23`), so the tests are not in the repository.
+7. Outside the five texts: the session's first messages (17:09:59Z to the coordinator, 17:10:08Z to row DJ) say "Ren told this session at 00:02 WIB to finish the Lean it had not started". Row FM repeated it as "at Ren's word to it" to row DJ and the coordinator (17:15:08Z, 17:15:14Z). The row corrects this to "on that session's reading"; nothing tells rows FM and DJ.

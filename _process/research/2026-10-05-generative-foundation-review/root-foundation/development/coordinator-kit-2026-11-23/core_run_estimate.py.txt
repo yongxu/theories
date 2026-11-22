@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+"""AI-written (the coordinator's session, 22 November 2026). An estimate, not a measurement: how much Lean step
+time a core run would rerun if the named modules of Becoming/ changed. It reads the committed receipt's step
+keys and, for each, the seconds the checker's cache kept when the step last ran; a changed module reruns its own
+steps and those of every module that imports it, directly or not. Usage: core_run_estimate.py Module [Module ...]
+Run from anywhere; reads only. The wall time is less (steps run six at once by default) and more under load."""
+import json, os, re, glob, sys
+B = '/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/'
+C = os.path.expanduser('~/.cache/becoming-lean/')
+keys = json.load(open(B + 'becoming-verification.json'))['lean_steps']['keys']
+sec = {}
+for n, k in keys.items():
+    try: sec[n] = json.load(open(C + k + '.json')).get('seconds', 0)
+    except OSError: sec[n] = 0
+imp = {}
+for p in glob.glob(B + 'Becoming/*.lean'):
+    imp[os.path.basename(p)[:-5]] = re.findall(r'^import Becoming\.(\S+)', open(p, encoding='utf-8').read(), re.M)
+rev = {}
+for m, ds in imp.items():
+    for d in ds: rev.setdefault(d, set()).add(m)
+def down(m):
+    seen, st = set(), [m]
+    while st:
+        for y in rev.get(st.pop(), ()):
+            if y not in seen: seen.add(y); st.append(y)
+    return seen
+def mod(n):
+    a = re.match(r'Becoming\.([A-Za-z0-9_]+)', n)
+    if a: return a.group(1)
+    a = re.match(r'Becoming([A-Za-z0-9_]+?)(AxiomAudit|Signatures)\.log$', n)
+    return a.group(1) if a and a.group(1) in imp else None
+changed = sys.argv[1:]
+bad = [m for m in changed if m not in imp]
+if bad: sys.exit('not a module of Becoming/: ' + ', '.join(bad))
+R = set(changed)
+for m in changed: R |= down(m)
+t = sum(s for n, s in sec.items() if mod(n) in R)
+print(f'whole package: {len(keys)} steps, {sum(sec.values()):.0f} s of step time')
+print(f'changed {len(changed)} module(s): {len(R)} of {len(imp)} modules rebuilt, '
+      f'{sum(1 for n in keys if mod(n) in R)} steps, {t:.0f} s = {t/60:.1f} min of step time one at a time')
