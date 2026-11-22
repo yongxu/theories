@@ -4,13 +4,13 @@
  "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
  "toolchain": "leanprover/lean4:v4.29.1",
  "printed_from": {
-  "commit": "eb2ef8cb0b53358e810e65289552664d3d474c8d",
-  "core_run": "20261122T192648.959660Z"
+  "commit": "44b7d93930b3e2835e40b098b8a329ec4d8da02f",
+  "core_run": "20261122T194452.040858Z"
  },
- "core_sources_sha256": "dddba3f7f3ad668fbe4805069e068b87c9bb55769c138cad941cc8f4fd68ae72",
+ "core_sources_sha256": "c895f22fb4b732be9270ea3200ea2ac72ce336f7f95b2ca74453a2c234164503",
  "modules": {
   "Becoming": {
-   "source_sha256": "fbf7cf037b053f39a919de7349491797015ab9820641390a12e8b5bae34de9d2",
+   "source_sha256": "86817cd2ae6ec19041fcda7ca777236ae4277f728b585b39c9e05a9039050894",
    "theorems": 0
   },
   "Becoming.Acceptance": {
