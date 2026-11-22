@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-21T22:37:13+00:00",
+  "reviewed_at_utc": "2026-11-22T05:12:52+00:00",
   "statement": {
     "en": "Where a list holds every member of a start that a monotone step takes into itself, what is in the iterate at the list's length is in every iterate, and is the largest class in the start the step preserves. Keeping under every course, along some course, by choice and through a reading are cases.",
     "zh": "单调之步把起始类带入其自身，且一列表容纳起始类的每个成员时：在列表长度处之迭代中的，就在每一迭代中，且它是起始类之内该步所保持的最大类。每条进程下的保持、沿某条进程的保持、凭选择的保持与经由读取的保持，皆为其例。"
@@ -88,8 +88,8 @@
       ]
     },
     {
-      "en": "For a monotone step whose start lies inside its own step, and a proposition G: the step commutes with G when, for every class W, if it holds of the states where G follows from 'W gives G', then G follows from 'the step of W gives G'. Where it does and a list holds every state, if the iterate at the list's length gives G so does the next; and where G is that a state y is in that iterate, y in any iterate is in it.",
-      "zh": "对单调之步（起始类在其自身之步内）与命题 G：若对每一类 W，该步对“由‘W 给出 G’可得 G”之处成立时，由“W 之步给出 G”可得 G，称该步与 G 可交换。可交换且一列表容纳每个状态时：列表长度处之迭代给出 G，则下一迭代亦然；G 为“y 在该迭代中”时，在任一迭代中的 y 即在该迭代中。",
+      "en": "For a monotone step whose start lies inside its own step, and a proposition G: the step commutes with G when, for every class W, if it holds of the states where G follows from 'W gives G', then G follows from 'the step of W gives G'. Where it does and a list holds every state at which membership in the start gives G (a list of every state does), if the iterate at the list's length gives G so does the next; and where G is that a state y is in that iterate, y in any iterate is in it.",
+      "zh": "对单调之步（起始类在其自身之步内）与命题 G：若对每一类 W，该步对“由‘W 给出 G’可得 G”之处成立时，由“W 之步给出 G”可得 G，称该步与 G 可交换。可交换且一列表容纳每个“在起始类中便给出 G”的状态时（容纳每个状态的列表即是）：列表长度处之迭代给出 G，则下一迭代亦然；G 为“y 在该迭代中”时，在任一迭代中的 y 即在该迭代中。",
       "declarations": [
         "Becoming.Iteration.givesStep",
         "Becoming.Iteration.CommutesWithImplication",
@@ -173,8 +173,8 @@
       ]
     },
     {
-      "en": "Where a list holds every configuration within a guard, along no run does what is possible within a fixed number of steps, read as the configurations within the guard, keep widening.",
-      "zh": "一列表容纳守卫之内的每个构形时：沿任何运行，在固定步数内可能者（读作守卫之内的构形）皆不持续变宽。",
+      "en": "Where a list holds every configuration within a guard, along no run does what is possible within a fixed number of steps, read as the configurations within the guard, keep widening. This stands beside the law and is not a case of it: its proof is a call of the older statement for a list that holds the whole possible from a run's start, and uses no declaration of the iteration.",
+      "zh": "一列表容纳守卫之内的每个构形时：沿任何运行，在固定步数内可能者（读作守卫之内的构形）皆不持续变宽。此条在律之旁，非其一例：其证调用旧有之陈述（一列表容纳自运行起点起的全部可能者），不用迭代之任何声明。",
       "declarations": [
         "Becoming.Reaching.guarded_not_keepsWidening"
       ]
@@ -211,6 +211,11 @@
       "en": "That a level of the losing step fails to come down: the theorems of deciding are implications from a supposed coming down, and refute nothing.",
       "zh": "失之步的某一层不落回：关于可判定的诸定理都是自所设之“落回”出发的蕴涵，并不否证什么。",
       "kind": "converse"
+    },
+    {
+      "en": "That the number of an iterate is a time: it counts applications of the step. In several of the cases it is a number of steps or moves of a course; no statement of the law itself reads it so.",
+      "zh": "迭代之序号即时间：它数的是该步施用的次数。在若干例中它是一条进程的步数或动数；此律自身的陈述无一如此读之。",
+      "kind": "scope"
     }
   ],
   "counterexamples": [],
@@ -548,6 +553,10 @@
     {
       "en": "22 November 2026, board row FM: the next step no longer names Branching.reach_within_listed, which lost its two unneeded premises in place in the landing that followed this one (record reaching-before-and-after-a-juncture). No law changed. Bound to core run 20261121T223556.393134Z for ReachableRanges.lean, where one docstring sentence about that theorem changed.",
       "zh": "2026年11月22日，工作板条目 FM：下一步不再提 Branching.reach_within_listed，它已在随后的落地中就地去掉两个不需要的前提（见记录 reaching-before-and-after-a-juncture）。诸律不变。ReachableRanges.lean 中关于该定理的一句文档已改，绑定于核心运行 20261121T223556.393134Z。"
+    },
+    {
+      "en": "22 November 2026, board row FM: two corrections of the telling, found by readers of the atlas entry for this law (board row DJ, study folder the-list-law-on-the-atlas-2026-11-22) and set against the Lean by the session that holds row FM. Law 7 said that a list holds every state; the Lean asks a list of every state at which membership in the start gives G (Iteration.iter_gives_persists, iter_shortens, iter_within_length), which a list of every state meets; iter_within_pred_length does ask a list of every state. Law 14 (Reaching.guarded_not_keepsWidening) stands beside the law: its proof calls Reaching.not_keepsWidening_of_listed and no declaration of PredicateIteration. Added to what is not shown: the number of an iterate is not read as a time by the law. No Lean changed and no statement of the Lean is told differently otherwise; the title is unchanged. AI-written (Claude Fable, board row FM).",
+      "zh": "2026年11月22日，工作板条目 FM：对表述的两处更正，由此律之图谱条目的读者发现（工作板条目 DJ，研究文件夹 the-list-law-on-the-atlas-2026-11-22），并由持有条目 FM 的会话对照 Lean 核对。第七条原称“一列表容纳每个状态”；Lean 所要求的是容纳每个“在起始类中便给出 G”的状态的列表（Iteration.iter_gives_persists、iter_shortens、iter_within_length），容纳每个状态的列表满足之；iter_within_pred_length 则确实要求容纳每个状态的列表。第十四条（Reaching.guarded_not_keepsWidening）在此律之旁：其证调用 Reaching.not_keepsWidening_of_listed，不用 PredicateIteration 的任何声明。“未表明者”中增一条：此律不把迭代之序号读作时间。Lean 未改，其余表述不变；标题不变。AI 撰写（Claude Fable，工作板条目 FM）。"
     }
   ]
 }
