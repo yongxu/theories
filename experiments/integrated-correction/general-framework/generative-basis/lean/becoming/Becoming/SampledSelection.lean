@@ -39,8 +39,9 @@ formation's couplings can tell apart, and that it is blind beyond the coupling c
   coarser steps, are the levels without it of the flow read there, where the reading is strict
   and starts at step 0 and each relatum is listed once at every fine step
   (`Flow.WithheldLevels.sample`, from `Flow.BalancesOn.sample` of `Becoming.Sampling` and
-  `Flow.sample_withhold_taken`, `Flow.sample_withhold_given`). This lemma is what the module adds
-  to the two it joins.
+  `Flow.sample_withhold_taken`, `Flow.sample_withhold_given`). This lemma, with
+  `Flow.exchanges_sample` and `Flow.withinCoupling_sample` above, is what the module adds to the
+  two it joins.
 * **Blind beyond the coupling closure read at the coarser step.** With those three premises, the
   levels without a part given at the fine steps, and balance at the fine steps on what couples in
   at the coarser: every selection through the couplings read at the coarser steps, of a formation
@@ -60,14 +61,20 @@ formation's couplings can tell apart, and that it is blind beyond the coupling c
   within the selector's coupling closure and beyond the closure read at the even steps
   (`Missed.within_fine_beyond_coarse`). A selection through the selector's couplings separates
   the levels with and without the part (`Missed.fine_separates`); no selection through them read
-  at the even steps separates the sampled levels (`Missed.coarse_blind`, by the law above),
-  though selections through them up to the first step read already tell histories apart
-  (`Missed.coarse_reads`), those levels differ at a step read, and a selection at the even steps under coupling by level to every condition separates
+  at the even steps separates the sampled levels (`Missed.coarse_blind`, by the law above; the
+  levels being written out, their likeness at the steps read can also be checked directly, so
+  the case shows the law's premises met together and not that the law is needed for it),
+  though a selection through them up to the first step read tells two constant histories apart
+  that differ on the second condition (`Missed.coarse_reads`), those levels differ at a step read, and a selection at the even steps under coupling by level to every condition separates
   them (`Missed.coarse_differs`).
 
 What this is and is not. The selector's requirement in `Missed` is put at a step the reading
 skips; the case shows that this can be, as `Strobe` shows it of activity, and does not show that
-any actual reading skips what a selector requires. That a selection is through a selector's
+any actual reading skips what a selector requires. In `Missed` the selector gives across the
+step at which its own requirement is unmet, and the part takes with nothing drawn: the case meets
+balance and listing once and not `Web.Dependent` or `Flow.Taking`, the rest of the exchange being
+fixed as the law has it; were the gift to stop with the requirement, a selection at the even
+steps would separate the levels. That a selection is through a selector's
 couplings is supplied, as in `Becoming.Selection`. Nothing here is about the lock, the pace of a
 rule or a turn in time: a second part on the lock's two-level course read at stretches was
 withdrawn before it was built, its statements being `RuleCapture.locked_stays` and `turn_locked`
