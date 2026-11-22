@@ -81,14 +81,14 @@ theorem agree (t : Nat) :
 which the premises of `way_ends` hold.** The first conjunct is `agree` at every step. On the course
 here the premises of `way_ends` hold with `hi = 3` (checked where the law is applied in the proof; they
 are not conjuncts of this statement): nothing given from nothing, the step under no draw
-keeping every level up to three within three, the unit's kids taking two, more than its one, its need
-positive, its kids needing what it needs, the start three. Its conclusion, a step at which no need is
-met here, read back through `agree`, is the second conjunct, a step at which no member of the built
-example's family is active; the third is that the net here ends. The second conjunct gives nothing
-about the example that its own Lean did not: `agree` at step 2 is proved from the example's own
-`LineageRegimes.MultiplyingTakers.inactive`, which is that conjunct at step 2. The step is not
-bounded, and the example's own stop statement (that not every member of its first three families is
-active at its step) is not concluded here. -/
+keeping every level up to three within three, the unit's kids together taking two, more than its
+one, its need positive, its kids needing what it needs, the start three. Its conclusion, a step at
+which no need is met here, read back through `agree`, is the second conjunct, a step at which no
+member of the built example's family is active; the third is that the net here ends. The second
+conjunct gives nothing about the example that its own Lean did not: `agree` at step 2 is proved from
+the example's own `LineageRegimes.MultiplyingTakers.inactive`, which is that conjunct at step 2. The
+step is not bounded, and the example's own stop statement (that not every member of its first three
+families is active at its step) is not concluded here. -/
 theorem multiplying_takers :
     (∀ t, (LineageRegimes.MultiplyingTakers.generations.family t).length =
         (course Doubling.need Doubling.kids nothingGiven Doubling.use ([()], 3) t).1.length ∧
@@ -185,14 +185,15 @@ it from one up, meets four exactly where the pool meets one (`need_agrees`, the 
 which no term of `Drain` appears; Drain's need one is read from its source, not stated here). By
 computation to step 9 and both empty from step 10 (`late`, `LineageDrawdown.Drain.familyP_eq`).
 The premises of `fall` hold at the line of the drawers (checked where the law is applied in the proof,
-not conjuncts of this statement: closed; one need, four; kids taking no less;
-the gift at nothing below four; from step 1, `([d1, d1], 11)`, taking four, more than every gift); its
-conclusion, a step from which no drawer is in the way, with every unit here a drawer from step 1
-(`never_in` at the units that are not: `r` leaves nothing and drawers leave drawers), makes the way
-empty from there, and read back through the size equality, the last conjunct, a step from which the
-built example's family is empty. That conjunct gives nothing about the example that its own Lean did
-not: the size equality from step 10 is proved from `LineageDrawdown.Drain.familyP_eq`, which with
-`familyP`'s own definition already gives the family empty from step 10. `fall` does not bound the step. -/
+not conjuncts of this statement: closed; one need, four; each drawer's kids of the line together
+taking no less than it; the gift at nothing below four; from step 1, `([d1, d1], 11)`, taking four,
+more than every gift); its conclusion, a step from which no drawer is in the way, with every unit
+here a drawer from step 1 (`never_in` at the units that are not: `r` leaves nothing and drawers
+leave drawers), makes the way empty from there, and read back through the size equality, the last
+conjunct, a step from which the built example's family is empty. That conjunct gives nothing about
+the example that its own Lean did not: the size equality from step 10 is proved from
+`LineageDrawdown.Drain.familyP_eq`, which with `familyP`'s own definition already gives the family
+empty from step 10. `fall` does not bound the step. -/
 theorem drain :
     (∀ t, ((LineageDrawdown.Drain.generations (LineageDrawdown.Drain.courseP true)).family t).length =
         (course need kids gift use ([r, d0], 11) t).1.length ∧

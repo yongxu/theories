@@ -59,10 +59,9 @@ variable {S : Type u} {A : Type}
 
 /-! ## Totals -/
 
-theorem total_append (q : A → Nat) : ∀ xs ys : List A, total (xs ++ ys) q = total xs q + total ys q
-  | [], ys => (Nat.zero_add (total ys q)).symm
-  | x :: xs, ys =>
-    (congrArg (q x + ·) (total_append q xs ys)).trans (Nat.add_assoc _ _ _).symm
+theorem total_append (q : A → Nat) :
+    ∀ xs ys : List A, total (xs ++ ys) q = total xs q + total ys q :=
+  fun xs ys => Becoming.total_append q ys xs
 
 /-! ## Balance -/
 
@@ -345,19 +344,9 @@ theorem product_repeat_iff {S' : Type u} {R : Process S' A} {draw replenish : A 
 
 /-- Either some step of `[N, N + L)` has `0 < g n`, or quiet does. Decided with no premise. -/
 theorem search (g : Nat → Nat) (N : Nat) :
-    ∀ L, (∃ n, N ≤ n ∧ n < N + L ∧ 0 < g n) ∨ (∀ n, N ≤ n → n < N + L → g n = 0)
-  | 0 => .inr fun _ le lt => absurd lt (Nat.not_lt_of_le le)
-  | L + 1 =>
-    match search g N L with
-    | .inl ⟨n, le, lt, pos⟩ => .inl ⟨n, le, Nat.lt_trans lt (Nat.lt_succ_self _), pos⟩
-    | .inr quiet =>
-      match h : g (N + L) with
-      | 0 => .inr fun n le lt =>
-          match Nat.lt_or_ge n (N + L) with
-          | .inl lt' => quiet n le lt'
-          | .inr ge => (congrArg g (Nat.le_antisymm (Nat.le_of_lt_succ lt) ge)).trans h
-      | k + 1 => .inl ⟨N + L, Nat.le_add_right N L, Nat.lt_succ_self _,
-          Nat.lt_of_lt_of_le (Nat.succ_pos k) (Nat.le_of_eq h.symm)⟩
+    ∀ L, (∃ n, N ≤ n ∧ n < N + L ∧ 0 < g n) ∨ (∀ n, N ≤ n → n < N + L → g n = 0) :=
+  fun L => (Amounts.unmarked_or_marked (P := fun n => g n = 0) (fun n => Decidable.em (g n = 0))
+    N L).imp (fun ⟨n, le, lt, ne⟩ => ⟨n, le, lt, Nat.pos_of_ne_zero ne⟩) id
 
 /-- With no replenishment across a stretch, a balanced amount does not rise across it. -/
 theorem flat_of_none {x d g : Nat → Nat} (bal : ∀ n, x (n + 1) + d n = x n + g n) {N j : Nat}

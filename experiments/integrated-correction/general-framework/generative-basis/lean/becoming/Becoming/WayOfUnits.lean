@@ -97,7 +97,7 @@ and level are this model's labels, not terms of the root.
   way takes, step, course and net are this module's (`after_unit`, `taken_unit`, `step_unit`,
   `course_unit`, `net_unit`; the two nets never end from the same configurations, `unending_unit`), as
   are its `Holds` and `Regime` (`holds_unit`, `regime_unit`). Derived from `LineOnAStock`'s laws, six:
-  `unending_iff_holds` (its middle case, kids taking what their parent takes), `fixed_while`
+  `unending_iff_holds` (its middle case, a unit's kids together taking what it takes), `fixed_while`
   (`LineOnAStock.course_generation`), `unending_taken_below`, `course_fixed`, `step_falls` (the same
   statement as `LineOnAStock.step_lowers`, from `TurningInTime.held_above`) and the decision of `Goes`
   (`goesDecidable`). `unending_of_fixed` is proved here from `course_fixed`, along the lines of

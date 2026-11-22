@@ -2493,9 +2493,8 @@ theorem within_draw (rises : ∀ i, Rises Drawn.whole (G i)) {hi : Nat} (band : 
 
 /-- A run from a state within a band stays within it. -/
 theorem run_within {hi : Nat} (band : Band G H hi) {s : ι → Nat} (high : ∀ i, s i ≤ hi) :
-    ∀ n i, (Law.run (step Drawn.whole G H) s).state n i ≤ hi
-  | 0 => high
-  | n + 1 => band _ (run_within band high n)
+    ∀ n i, (Law.run (step Drawn.whole G H) s).state n i ≤ hi :=
+  Lasting.closed_orbit band high
 
 /-- **In a band under mutual support, what is left of each condition never rises along a run.** -/
 theorem left_falls (rises : ∀ i, Rises Drawn.whole (G i)) {hi : Nat} (band : Band G H hi)

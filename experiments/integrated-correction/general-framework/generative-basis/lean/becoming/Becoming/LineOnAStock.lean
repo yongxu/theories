@@ -42,7 +42,8 @@ met they are those of `w` (`needs_kept`).
 ## Laws of the way that ask nothing of the giving
 
 * **Rise** (`rise`, one step, any decidable `S`, any level): where every unit of `S` is met and each
-  unit's kids of `S` take more than it, what `S` takes rises by at least its number of units.
+  unit's kids of `S` together take more than it, what `S` takes rises by at least its number of
+  units.
 * **What is lost of a line does not come back** (`never_in`, `gone_from`): with no unit outside a line
   `S` leaving a unit of it (`closed`), a line with no unit at a step has none after;
   `SelectionTerm.Generations.kept_of_descent` at the course as generations.
@@ -57,19 +58,19 @@ met they are those of `w` (`needs_kept`).
 
 Each docstring names all its premises.
 
-* **A way whose kids take more comes to an unmet need within `hi + 1` steps, the way until then not
-  depending on the stock** (`need_unmet`): with nothing given from nothing and the step under no draw
-  keeping every level up to `hi` within `hi` (`RegimeMargin.Keeps giving 0 hi`), a way that is not
-  empty, starting at most `hi`, every unit's kids taking more (asked of every unit) and every
-  descendant of the way needing something, every need met at the start, comes to an unmet need at a
-  step from 1 to `hi + 1`; up to it the way is the generation, in which no giving, use or level
-  appears (`way_while_met`). Through the course as it was under `allKids` (`after_of_met`,
-  `course_asItWas`), by `TurningInTime.rising_takes_all`. With kids needing no more than their parent
-  (`down`), the level by then is below a need the start met (`falls_to_unmet`); without `down` it need
-  not have fallen (`KidHigherNeed`). In a world of one need, the net ends within `hi + 1` steps
-  (`one_need_ends`); a lock whose share is a number of drawers ends through the same
-  `TurningInTime.rising_takes_all`, not through `need_unmet` (`TurningInTime.locked_ends_rising`,
-  `count_rises`).
+* **A way each of whose units has kids that together take more than it comes to an unmet need within
+  `hi + 1` steps, the way until then not depending on the stock** (`need_unmet`): with nothing given
+  from nothing and the step under no draw keeping every level up to `hi` within `hi`
+  (`RegimeMargin.Keeps giving 0 hi`), a way that is not empty, starting at most `hi`, every unit's
+  kids together taking more than it (asked of every unit) and every descendant of the way needing
+  something, every need met at the start, comes to an unmet need at a step from 1 to `hi + 1`; up to
+  it the way is the generation, in which no giving, use or level appears (`way_while_met`). Through
+  the course as it was under `allKids` (`after_of_met`, `course_asItWas`), by
+  `TurningInTime.rising_takes_all`. With kids needing no more than their parent (`down`), the level
+  by then is below a need the start met (`falls_to_unmet`); without `down` it need not have fallen
+  (`KidHigherNeed`). In a world of one need, the net ends within `hi + 1` steps (`one_need_ends`); a
+  lock whose share is a number of drawers ends through the same `TurningInTime.rising_takes_all`,
+  not through `need_unmet` (`TurningInTime.locked_ends_rising`, `count_rises`).
 * **A line that grows ends** (`line_ends`): with the stock so bounded and a closed line each of whose
   units has kids of the line that together take more than it, needs something, and has kids that need
   no more than it, the line is gone from some step on; for the line of every unit, the net ends
@@ -80,8 +81,8 @@ Each docstring names all its premises.
 * **What a way that goes on takes** (`taken_below`): with nothing given from nothing and every
   descendant of the start needing something, below the level at every step after which some need is
   still met; on a net that never ends, the account holds for every `N` (`account_unending`).
-* **The middle case, exact** (`unending_iff_holds`): where each unit's kids take what it takes
-  (`even`), every unit has kids (`some`), kids need no more than their parent (`down`), every
+* **The middle case, exact** (`unending_iff_holds`): where each unit's kids together take what it
+  takes (`even`), every unit has kids (`some`), kids need no more than their parent (`down`), every
   descendant of the way needs something (`needs`), nothing is given from nothing (`nothing`), the start
   is at most `hi` (`high`), and `Regime` holds at every way the course reaches with some need met there
   and at every step before (`along`): the net never ends exactly where, some need met at every step
@@ -89,13 +90,13 @@ Each docstring names all its premises.
   its case `kids u = [u]`. In `TwoForOne` only `P`'s offspring are not itself (`Q` leaves itself), the
   course is fixed from step 1, and the instance uses the "if" side at `k = 0`.
 
-## Kids that take more, the same, or less
+## A unit's kids together taking more than it, the same, or less
 
 Each law asks its case of every unit (`grows`: `way_ends`, `need_unmet`, `falls_to_unmet`,
-`one_need_ends`; `even`:
-`unending_iff_holds`), or of every unit of a closed line (`line_ends`; kids taking no less: `fall`). A
-way that mixes them, as `HigherStartEnds` (`A`'s kids take less than it, `B`'s and `C`'s more), falls
-under none.
+`one_need_ends`; `even`: `unending_iff_holds`), or of every unit of a closed line (`line_ends`; its
+kids of the line together taking no less than it: `fall`). A way that mixes them, as
+`HigherStartEnds` (`A`'s kids together take less than it, `B`'s more than `B`, `C`'s more than `C`),
+falls under none.
 
 ## What is given and not derived
 
@@ -117,11 +118,11 @@ and levels, in `LineOnAStockCases`.
 
 ## What is not here
 
-No exact condition for a way whose kids take more, or less, never ending; `HigherStartEnds` shows
-that, with one way, whether the net ends is not monotone in the start level. Losses of units that
-take something, the regime read as a `Web` with a `Flow` (a reading only; `account` is the plain
-balance kept here), and a lock on these units are not here. Nothing here is about a
-trained system.
+No exact condition for a way each of whose units has kids that together take more than it, or less,
+never ending; `HigherStartEnds` shows that, with one way, whether the net ends is not monotone in
+the start level. Losses of units that take something, the regime read as a `Web` with a `Flow` (a
+reading only; `account` is the plain balance kept here), and a lock on these units are not here.
+Nothing here is about a trained system.
 
 Every declaration has an empty axiom report.
 -/
@@ -240,27 +241,15 @@ theorem lineCount_pos {S : U → Prop} [DecidablePred S] {u : U} (su : S u) {w :
 
 /-- Every unit of a way has `S` or not; decided along the way. -/
 theorem line_or_none {S : U → Prop} [DecidablePred S] :
-    ∀ w : List U, (∀ u, u ∈ w → ¬ S u) ∨ ∃ u, u ∈ w ∧ S u
-  | [] => .inl fun _ m => nomatch m
-  | v :: w => (Decidable.em (S v)).elim (fun h => .inr ⟨v, .head w, h⟩) fun h =>
-      (line_or_none w).elim
-        (fun nm => .inl fun u m => by
-          cases m with
-          | head => exact h
-          | tail _ m' => exact nm u m')
-        (fun ⟨u, m, su⟩ => .inr ⟨u, .tail v m, su⟩)
+    ∀ w : List U, (∀ u, u ∈ w → ¬ S u) ∨ ∃ u, u ∈ w ∧ S u :=
+  fun w => gather_listed (D := fun u => ¬ S u) w
+    (fun u mem k => (Decidable.em (S u)).elim (fun su => .inr ⟨u, mem, su⟩) k) Or.inl
 
 /-- At a level, either every unit of a way has its need met, or some unit's need is above it. -/
 theorem met_or_unmet (need : U → Nat) (z : Nat) :
-    ∀ w : List U, (∀ u, u ∈ w → need u ≤ z) ∨ ∃ u, u ∈ w ∧ z < need u
-  | [] => .inl fun _ m => nomatch m
-  | v :: w => (Nat.lt_or_ge z (need v)).elim (fun lt => .inr ⟨v, .head w, lt⟩) fun le =>
-      (met_or_unmet need z w).elim
-        (fun all => .inl fun u m => by
-          cases m with
-          | head => exact le
-          | tail _ m' => exact all u m')
-        (fun ⟨u, m, lt⟩ => .inr ⟨u, .tail v m, lt⟩)
+    ∀ w : List U, (∀ u, u ∈ w → need u ≤ z) ∨ ∃ u, u ∈ w ∧ z < need u :=
+  fun w => gather_listed (D := fun u => need u ≤ z) w
+    (fun u mem k => (Nat.lt_or_ge z (need u)).elim (fun lt => .inr ⟨u, mem, lt⟩) k) Or.inl
 
 /-- Whether some unit of a way has its need met at `x`, computed along the way. -/
 def anyMet (need : U → Nat) (x : Nat) : List U → Bool
@@ -292,12 +281,10 @@ theorem mem_of_ne_nil : ∀ {l : List U}, l ≠ [] → ∃ v, v ∈ l
   | [], ne => absurd rfl ne
   | v :: l, _ => ⟨v, .head l⟩
 
-/-- Strong induction on a number, by induction on a bound. -/
+/-- Strong induction on a number: `Identification.below_upto`. -/
 theorem strong_below {P : Nat → Prop} (step : ∀ m, (∀ m', m' < m → P m') → P m) :
-    ∀ M m, m < M → P m
-  | 0, m, lt => absurd lt (Nat.not_lt_zero m)
-  | M + 1, m, lt => step m fun m' lt' =>
-      strong_below step M m' (Nat.lt_of_lt_of_le lt' (Nat.le_of_lt_succ lt))
+    ∀ M m, m < M → P m :=
+  Identification.below_upto step
 
 /-! ## 3. The one relation with two ends -/
 
@@ -628,17 +615,19 @@ theorem draw_rises [DecidablePred S] {bonus : U → Nat}
     rw [Nat.add_add_add_comm, lineTake_append]
     exact Nat.add_le_add head (draw_rises more fun v m => met v (.tail u m))
 
-/-- **Rise.** For any decidable `S` (no closure is asked) whose units' kids with `S` take more than
-the unit (`grows : ∀ u, S u → use u < lineTake S use (kids u)`): if every unit of `w` with `S` has its
-need met at `x`, what `S` takes of the way after the step is at least what it takes of `w` plus the
-number of units of `w` with `S`. One step, any level; by `draw_rises` with a bonus of one. -/
+/-- **Rise.** For any decidable `S` (no closure is asked) each of whose units has kids with `S` that
+together take more than it (`grows : ∀ u, S u → use u < lineTake S use (kids u)`): if every unit of
+`w` with `S` has its need met at `x`, what `S` takes of the way after the step is at least what it
+takes of `w` plus the number of units of `w` with `S`. One step, any level; by `draw_rises` with a
+bonus of one. -/
 theorem rise [DecidablePred S] (grows : ∀ u, S u → use u < lineTake S use (kids u)) {x : Nat} {w : List U}
     (met : ∀ u, u ∈ w → S u → need u ≤ x) :
     lineTake S use w + lineCount S w ≤ lineTake S use (after need kids w x) :=
   draw_rises (bonus := fun _ => 1) (fun u h => Nat.succ_le_of_lt (grows u h)) met
 
-/-- With the kids with `S` taking at least what the unit takes (`keeps`), and every unit of `w` with
-`S` met at `x`, what `S` takes does not fall at the step. By `draw_rises` with a bonus of nothing. -/
+/-- With the kids with `S` together taking at least what the unit takes (`keeps`), and every unit of
+`w` with `S` met at `x`, what `S` takes does not fall at the step. By `draw_rises` with a bonus of
+nothing. -/
 theorem draw_holds [DecidablePred S] (keeps : ∀ u, S u → use u ≤ lineTake S use (kids u)) {x : Nat} {w : List U}
     (met : ∀ u, u ∈ w → S u → need u ≤ x) :
     lineTake S use w ≤ lineTake S use (after need kids w x) :=
@@ -764,12 +753,13 @@ theorem fall_from [DecidablePred S] (closed : ∀ u v, v ∈ kids u → S v → 
         (fun given => fall_low closed one (k := k + 1)
           (Nat.lt_of_le_of_lt (Nat.le_of_eq given) low))
 
-/-- **Fall.** For a line `S` (`closed`) of one need `m` (`one : ∀ u, S u → need u = m`), whose units'
-kids of the line take at least what the unit took (`keeps`), with `giving 0 < m` (`low`): from a
-configuration `(w, x)` at which what `S` takes of `w` is more than `giving z` at every `z` (`over`,
-given, not derived), there is a step from which no unit of the line is in the way. While the level
-meets `m` the line is met, what it takes does not fall (`draw_holds`) and the level falls or goes to
-`giving 0` (`step_overdrawn`); below `m` the line leaves nothing (`gone_after`). -/
+/-- **Fall.** For a line `S` (`closed`) of one need `m` (`one : ∀ u, S u → need u = m`), whose
+units' kids of the line together take at least what the unit took (`keeps`), with `giving 0 < m`
+(`low`): from a configuration `(w, x)` at which what `S` takes of `w` is more than `giving z` at
+every `z` (`over`, given, not derived), there is a step from which no unit of the line is in the
+way. While the level meets `m` the line is met, what it takes does not fall (`draw_holds`) and the
+level falls or goes to `giving 0` (`step_overdrawn`); below `m` the line leaves nothing
+(`gone_after`). -/
 theorem fall [DecidablePred S] (closed : ∀ u v, v ∈ kids u → S v → S u) {m : Nat}
     (one : ∀ u, S u → need u = m)
     (keeps : ∀ u, S u → use u ≤ lineTake S use (kids u)) (low : giving 0 < m)
@@ -832,18 +822,18 @@ theorem ends_low (keeps : RegimeMargin.Keeps giving 0 hi) (closed : ∀ u v, v �
       (below_after closed down s.1 s.2) with
   | ⟨_, nm⟩ => none_shift nm
 
-/-- The step of `ends_all`'s induction at a level at or above `m`. With `nothing`, `keeps`, a line `S`
-(`closed`) whose kids of the line take more than the unit (`grows`), whose units need something
-(`needs`) and whose kids need no more than their parent (`down`), and the claim `Ends` at every
-`m' < m` (`ih`): from every configuration `s` at most `hi` whose line needs at most `m`, at a level at
-least `m`, with `hi + 1` at most what the line takes of `s.1` plus `k`, some step has no unit of the
-line met. While the level stays at or above `m` the line is met and what it takes rises by at least one
-at each step (`rise`), and it is at most the level, so at most `hi`, else the step leaves nothing,
-below a positive need; so within `k` steps no unit of the line is left or the level falls below `m`,
-where `ih` applies (`ends_low`). This is the arithmetic of `TurningInTime.rising_takes_all` (a take that rises against a
-capped level) for a line among other units, argued again here, not derived from it; of the laws here
-only `need_unmet` and those derived from it (`falls_to_unmet`, `one_need_ends`) rest on
-`TurningInTime.rising_takes_all`. -/
+/-- The step of `ends_all`'s induction at a level at or above `m`. With `nothing`, `keeps`, a line
+`S` (`closed`) each of whose units has kids of the line that together take more than it (`grows`),
+whose units need something (`needs`) and whose kids need no more than their parent (`down`), and the
+claim `Ends` at every `m' < m` (`ih`): from every configuration `s` at most `hi` whose line needs at
+most `m`, at a level at least `m`, with `hi + 1` at most what the line takes of `s.1` plus `k`, some
+step has no unit of the line met. While the level stays at or above `m` the line is met and what it
+takes rises by at least one at each step (`rise`), and it is at most the level, so at most `hi`,
+else the step leaves nothing, below a positive need; so within `k` steps no unit of the line is left
+or the level falls below `m`, where `ih` applies (`ends_low`). This is the arithmetic of
+`TurningInTime.rising_takes_all` (a take that rises against a capped level) for a line among other
+units, argued again here, not derived from it; of the laws here only `need_unmet` and those derived
+from it (`falls_to_unmet`, `one_need_ends`) rest on `TurningInTime.rising_takes_all`. -/
 theorem ends_high [DecidablePred S] (nothing : RegimeMargin.FromNothing giving)
     (keeps : RegimeMargin.Keeps giving 0 hi) (closed : ∀ u v, v ∈ kids u → S v → S u)
     (grows : ∀ u, S u → use u < lineTake S use (kids u)) (needs : ∀ u, S u → 0 < need u)
@@ -897,10 +887,10 @@ theorem ends_all [DecidablePred S] (nothing : RegimeMargin.FromNothing giving)
 
 /-- **A line that grows ends.** With nothing given from nothing (`nothing`), the step under no draw
 keeping every level up to `hi` within `hi` (`keeps`), the start at most `hi` (`high`), and a line `S`
-(`closed`: no unit outside it leaves a unit of it) whose units' kids of the line take more than the
-unit (`grows`), whose units need something (`needs`), and whose kids need no more than their parent
-(`down`): there is a step from which no unit of the line is in the way. No bound on that step is
-stated. By `ends_all` at the total of the needs of `w`, and `gone_after`. -/
+(`closed`: no unit outside it leaves a unit of it) each of whose units has kids of the line that
+together take more than it (`grows`), whose units need something (`needs`), and whose kids need no
+more than their parent (`down`): there is a step from which no unit of the line is in the way. No
+bound on that step is stated. By `ends_all` at the total of the needs of `w`, and `gone_after`. -/
 theorem line_ends [DecidablePred S] (nothing : RegimeMargin.FromNothing giving)
     (keeps : RegimeMargin.Keeps giving 0 hi) (closed : ∀ u v, v ∈ kids u → S v → S u)
     (grows : ∀ u, S u → use u < lineTake S use (kids u)) (needs : ∀ u, S u → 0 < need u)
@@ -921,10 +911,10 @@ theorem lineTake_true (w : List U) : lineTake (fun _ => True) use w = taken use 
   total_congr (fun _ => rfl) w
 
 /-- **A way whose units grow ends.** With nothing given from nothing, the step under no draw keeping
-every level up to `hi` within `hi`, the start at most `hi`, every unit's kids taking more than it
-(`grows`), every need positive (`needs`) and kids needing no more than their parent (`down`): at some
-step no unit's need is met, and the net from `(w, x)` ends. `line_ends`' route at the line of every
-unit. -/
+every level up to `hi` within `hi`, the start at most `hi`, every unit's kids together taking more
+than it (`grows`), every need positive (`needs`) and kids needing no more than their parent
+(`down`): at some step no unit's need is met, and the net from `(w, x)` ends. `line_ends`' route at
+the line of every unit. -/
 theorem way_ends {hi : Nat} (nothing : RegimeMargin.FromNothing giving)
     (keeps : RegimeMargin.Keeps giving 0 hi)
     (grows : ∀ u, use u < taken use (kids u)) (needs : ∀ u, 0 < need u)
@@ -940,7 +930,7 @@ theorem way_ends {hi : Nat} (nothing : RegimeMargin.FromNothing giving)
       Nat.not_le_of_gt (nm u mu trivial) le
     ⟨⟨k, stop⟩, fun never => stop (Law.stepWhile_unending_iff.mp never k)⟩
 
-/-- Where every unit's kids take more than it (`grows`), every unit has kids. -/
+/-- Where every unit's kids together take more than it (`grows`), every unit has kids. -/
 theorem kids_of_grows (grows : ∀ u, use u < taken use (kids u)) : ∀ u, kids u ≠ [] :=
   fun u e => Nat.not_lt_zero _ (Eq.subst (motive := fun l => use u < taken use l) e (grows u))
 
@@ -969,9 +959,9 @@ theorem way_while_met {w : List U} {x n : Nat}
   (congrArg Prod.fst (course_asItWas n met)).trans
     ((TurningInTime.asItWas_way _ _ (w, x) n).trans (generation_orbit w n).symm)
 
-/-- Where every unit's kids take more than it (`grows`), all the kids of a way take at least what the
-way takes and its length: `rise` at the line of every unit, with every need met (at need nothing),
-where the way after the step is all the kids (`after_of_met`). -/
+/-- Where every unit's kids together take more than it (`grows`), all the kids of a way take at
+least what the way takes and its length: `rise` at the line of every unit, with every need met (at
+need nothing), where the way after the step is all the kids (`after_of_met`). -/
 theorem allKids_rises (grows : ∀ u, use u < taken use (kids u)) (w : List U) :
     taken use w + w.length ≤ taken use (allKids kids w) :=
   Eq.subst (motive := fun l => taken use w + w.length ≤ taken use l)
@@ -993,11 +983,12 @@ theorem generations_rise (grows : ∀ u, use u < taken use (kids u)) {w : List U
 
 /-- **A need comes to be unmet, the way unchanged by the stock until then.** With nothing given from
 nothing (`nothing`), the step under no draw keeping every level up to `hi` within `hi` (`keeps`), every
-unit's kids taking more than it (`grows`, asked of every unit of the type), every unit of every
-generation of `w` needing something (`needs`, asked only of the descendants of `w`), the start at most
-`hi` (`high`), a way that is not empty (`ne`) and every need met at the start (`met`): there is a step
-`n` with `0 < n ≤ hi + 1` at which some unit of the way has its need unmet, every need met at every
-step before it, and up to it the way at step `j` is the `j`-th generation of `w` (`way_while_met`).
+unit's kids together taking more than it (`grows`, asked of every unit of the type), every unit of
+every generation of `w` needing something (`needs`, asked only of the descendants of `w`), the start
+at most `hi` (`high`), a way that is not empty (`ne`) and every need met at the start (`met`): there
+is a step `n` with `0 < n ≤ hi + 1` at which some unit of the way has its need unmet, every need met
+at every step before it, and up to it the way at step `j` is the `j`-th generation of `w`
+(`way_while_met`).
 Were every need met up to `hi + 1`, the course would be the course as it was under `allKids`
 (`course_asItWas`), what it takes rising at each step (`generations_rise`), and its level at `hi + 1`
 nothing (`TurningInTime.rising_takes_all`), while a unit there needs something. Kids needing no more
@@ -1039,10 +1030,11 @@ theorem need_unmet {hi : Nat} (nothing : RegimeMargin.FromNothing giving)
     | n + 1, le, unmet, before => ⟨n + 1, Nat.succ_pos n, le, before,
         fun _ lj => way_while_met fun i li => before i (Nat.lt_of_lt_of_le li lj), unmet⟩
 
-/-- **A way whose kids take more, its kids needing no more than their parent, comes within `hi + 1`
-steps to a level below a need the start met.** The premises are `need_unmet`'s (`nothing`, `keeps`,
-`grows` asked of every unit of the type, `needs` asked only of the descendants of `w`, `high`, `ne`,
-`met`), with kids needing no more than their parent (`down`). There is a step `n` with
+/-- **A way each of whose units has kids that together take more than it, kids needing no more than
+their parent, comes within `hi + 1` steps to a level below a need the start met.** The premises are
+`need_unmet`'s (`nothing`, `keeps`, `grows` asked of every unit of the type, `needs` asked only of
+the descendants of `w`, `high`, `ne`, `met`), with kids needing no more than their parent (`down`).
+There is a step `n` with
 `0 < n ≤ hi + 1` such that every need is met at every step before `n`; up to `n` the way at step `j`
 is `generation kids j w`, in which no giving, use or level appears: it is the way of every course from
 `w` on which every need is met until then (`way_while_met`), and what it takes rises at each of those
@@ -1079,18 +1071,18 @@ theorem falls_to_unmet {hi : Nat} (nothing : RegimeMargin.FromNothing giving)
 /-! ## 9. In a world of one need -/
 
 /-- **A way that grows, in a world of one need, ends within `hi + 1` steps.** With every unit needing
-`n` (`one`), `0 < n` (`pos`), every unit's kids taking more than it (`grows`), nothing given from
-nothing (`nothing`), the step under no draw keeping every level up to `hi` within `hi` (`keeps`) and
-the start at most `hi` (`high`): within `hi + 1` steps the net from `(w, x)` reaches a configuration
-that conditions nothing, its way the generation of `w` at that step. Where no need is met at the start
-(the way empty, or `x` below `n`) that is step 0; otherwise every need is met there, and by
-`need_unmet` the first step with an unmet need, at which with one need none is met. So it rests on
-`TurningInTime.rising_takes_all`, the one law on which a lock whose share is a number of drawers
-also ends (`TurningInTime.locked_ends_rising` through `ends_with_net_rising`, with
+`n` (`one`), `0 < n` (`pos`), every unit's kids together taking more than it (`grows`), nothing
+given from nothing (`nothing`), the step under no draw keeping every level up to `hi` within `hi`
+(`keeps`) and the start at most `hi` (`high`): within `hi + 1` steps the net from `(w, x)` reaches a
+configuration that conditions nothing, its way the generation of `w` at that step. Where no need is
+met at the start (the way empty, or `x` below `n`) that is step 0; otherwise every need is met
+there, and by `need_unmet` the first step with an unmet need, at which with one need none is met. So
+it rests on `TurningInTime.rising_takes_all`, the one law on which a lock whose share is a number of
+drawers also ends (`TurningInTime.locked_ends_rising` through `ends_with_net_rising`, with
 `TurningInTime.count_rises`). With needs that differ, `way_ends` (no bound on the step) holds
 instead where every need is positive (`needs`) and kids need no more than their parent (`down`); it
-asks both. Without `down` the net
-can go on with every other premise of `way_ends` holding (`KidsNeedMore.all_but_down`). -/
+asks both. Without `down` the net can go on with every other premise of `way_ends` holding
+(`KidsNeedMore.all_but_down`). -/
 theorem one_need_ends {hi n : Nat} (one : ∀ u, need u = n) (pos : 0 < n)
     (grows : ∀ u, use u < taken use (kids u)) (nothing : RegimeMargin.FromNothing giving)
     (keeps : RegimeMargin.Keeps giving 0 hi) {w : List U} {x : Nat} (high : x ≤ hi) :
@@ -1115,14 +1107,14 @@ theorem one_need_ends {hi n : Nat} (one : ∀ u, need u = n) (pos : 0 < n)
 
 end All
 
-/-! ## 10. The middle case: kids that take what their parent took -/
+/-! ## 10. The middle case: each unit's kids together take what it takes -/
 
 section Even
 
 variable {need : U → Nat} {kids : U → List U} {use : U → Nat} {giving : Nat → Nat}
 
-/-- Where each unit's kids take what it takes (`even`), all the kids of a way take what the way
-takes: `SelectionTerm.Generations.total_flatMap` with `allKids_flatMap`. -/
+/-- Where each unit's kids together take what it takes (`even`), all the kids of a way take what the
+way takes: `SelectionTerm.Generations.total_flatMap` with `allKids_flatMap`. -/
 theorem taken_allKids (even : ∀ u, taken use (kids u) = use u) (w : List U) :
     taken use (allKids kids w) = taken use w :=
   (congrArg (taken use) (allKids_flatMap w)).trans
@@ -1224,12 +1216,13 @@ theorem reaches_holds {y : Nat → Nat} {hi : Nat} {w : List U} {x : Nat}
     (total w need + 1) (total w need) (Nat.lt_succ_self _) x 0 (Nat.le_refl x)
     (fun _ mu _ => le_total_of_mem mu)
 
-/-- **The middle case: when the net never ends (exact).** With each unit's kids taking what it takes
-(`even`), every unit having kids (`some`), kids needing no more than their parent (`down`), every
-unit of every generation of `w` needing something (`needs`), nothing given from nothing (`nothing`),
-the start at most `hi` (`high`), and `Regime` at every way the course reaches with some need met there
-and at every step before, the start's included (`along`): the net from `(w, x)` never ends exactly
-where, some need met at every step before, the course comes to a configuration that holds (`Holds`).
+/-- **The middle case: when the net never ends (exact).** With each unit's kids together taking what
+it takes (`even`), every unit having kids (`some`), kids needing no more than their parent (`down`),
+every unit of every generation of `w` needing something (`needs`), nothing given from nothing
+(`nothing`), the start at most `hi` (`high`), and `Regime` at every way the course reaches with some
+need met there and at every step before, the start's included (`along`): the net from `(w, x)` never
+ends exactly where, some need met at every step before, the course comes to a configuration that
+holds (`Holds`).
 Left to right by `reaches_holds` (with `step_lowers`, from `TurningInTime.held_above`; `even`, `some`
 and `high` are not used there); right to left, from a holding configuration the way is the
 generations, taking the same (`course_generation`), their needs at most the level (`generation_below`),
@@ -1343,9 +1336,8 @@ theorem account_unending (nothing : RegimeMargin.FromNothing giving) {s : List U
 
 /-- A configuration the step leaves as it is stays so. `WayOfUnits.course_fixed` is its case. -/
 theorem course_fixed {s : List U × Nat} (fixed : step need kids giving use s = s) :
-    ∀ k, course need kids giving use s k = s
-  | 0 => rfl
-  | k + 1 => (congrArg (step need kids giving use) (course_fixed fixed k)).trans fixed
+    ∀ k, course need kids giving use s k = s :=
+  Learnable.orbit_of_still fixed
 
 /-- **A course that comes to a configuration its step leaves as it is, some need met there and at
 every step before, never ends.** By `course_fixed` and `Law.orbit_add`. -/
@@ -1497,11 +1489,11 @@ theorem fixed : step need kids hump10 use ([B, A, B], 8) = ([B, A, B], 8) := rfl
 
 /-- **Kids that need more than their parent: every other premise of `way_ends` holds, and the net
 never ends.** On `hump10` with `hi = 10`: nothing is given from nothing, the step under no draw keeps
-every level up to ten within ten, every unit's kids take more than it, every need is positive and the
-start `8` is at most ten; `down` fails (`B`, a kid of `A`, needs nine, `A` four). From
-`([B, A, B], 8)`: `A` is met and leaves `B, A, B`, both `B` are not met and leave nothing, and what is
-taken, four, is given back; the step leaves the configuration as it is (`fixed`) and the net never
-ends. So `way_ends` does not hold without `down`. -/
+every level up to ten within ten, every unit's kids together take more than it, every need is
+positive and the start `8` is at most ten; `down` fails (`B`, a kid of `A`, needs nine, `A` four).
+From `([B, A, B], 8)`: `A` is met and leaves `B, A, B`, both `B` are not met and leave nothing, and
+what is taken, four, is given back; the step leaves the configuration as it is (`fixed`) and the net
+never ends. So `way_ends` does not hold without `down`. -/
 theorem all_but_down :
     RegimeMargin.FromNothing hump10 ∧ RegimeMargin.Keeps hump10 0 10 ∧
       (∀ u, use u < taken use (kids u)) ∧ (∀ u, 0 < need u) ∧ 8 ≤ 10 ∧
@@ -1542,8 +1534,9 @@ def kids (_ : Kind) : List Kind := [B, B]
 /-- **Kept countermodel: without `down`, the unmet need of `need_unmet` can be a kid's greater need at
 a level that has not fallen.** On `min z (12 - z)` (`TurningInTime.Three.giving`) with `hi = 12`, from
 `([A], 12)`, every premise of `need_unmet` holds: nothing is given from nothing, the step under no draw
-keeps every level up to twelve within twelve, every unit's kids take two, more than its one, every
-descendant needs something, the start is at most twelve, the way is not empty and `A`'s need is met.
+keeps every level up to twelve within twelve, every unit's kids together take two, more than its
+one, every descendant needs something, the start is at most twelve, the way is not empty and `A`'s
+need is met.
 `down` fails (`B`, a kid of `A`, needs thirteen, `A` one). The course at step 1 is `([B, B], 12)`: the
 level is the start level, and `B`'s need thirteen is above it, so the first unmet step is 1 and the
 level there has not fallen below any need the start met (argued from these conjuncts: at the start
@@ -1635,11 +1628,11 @@ def kids : Kind → List Kind
   | Q => [Q]
 
 /-- **The middle case with offspring that are not the unit itself, by the law.** On `min z (12 - z)`
-(`TurningInTime.Three.giving`), with `y := id` and `hi := 12`: `P`'s two kids `Q` take two, what it
-takes, and `Q`'s one kid takes one; every unit has kids, needs one and leaves kids needing one;
-nothing is given from nothing; the start four is at most twelve. From `([P], 4)` the course is
-`([Q, Q], 4)` at every step from 1 on, both ways taking two, at which `Regime` holds (giving short of
-two below two, meeting two from two up to twelve, the step under two keeping the level within
+(`TurningInTime.Three.giving`), with `y := id` and `hi := 12`: `P`'s two kids `Q` together take two,
+what it takes, and `Q`'s one kid takes one; every unit has kids, needs one and leaves kids needing
+one; nothing is given from nothing; the start four is at most twelve. From `([P], 4)` the course is
+`([Q, Q], 4)` at every step from 1 on, both ways taking two, at which `Regime` holds (giving short
+of two below two, meeting two from two up to twelve, the step under two keeping the level within
 twelve); and `([P], 4)` holds (its need met, four at or above two and two). So by
 `unending_iff_holds` the net from `([P], 4)` never ends. -/
 theorem holds_by_law :
@@ -1750,8 +1743,8 @@ theorem course_values :
    fun never => absurd (Law.stepWhile_unending_iff.mp never 5) (by decide)⟩
 
 /-- **The doubling way as a case of `way_ends`.** `FromNothing` and `Keeps` at no draw up to twelve
-hold of `min z (12 - z)`; the unit's kids take two, more than its one; its need is one; its kids need
-what it needs. -/
+hold of `min z (12 - z)`; the unit's kids together take two, more than its one; its need is one; its
+kids need what it needs. -/
 theorem ends_by_law :
     (∃ n, ¬ Goes need (course need kids TurningInTime.Three.giving use ([()], 12) n)) ∧
       ¬ «不穷» (net need kids TurningInTime.Three.giving use) «一» ([()], 12) :=
@@ -1941,10 +1934,10 @@ def isD : Kind → Bool
   | O => false
 
 /-- **A case of `line_ends` with a line that is a proper part of the way.** On `min z (12 - z)` with
-`hi = 12`, the line of `D` (no `O` leaves a `D`), whose kids take two, more than its one, needing one,
-its kids needing what it needs: from `([D, O], 12)` there is a step from which no `D` is in the way,
-by the law. By computation: the ways are `D O`, `D D O`, `D D D D O` at twelve, then 9 units at
-twelve, 17 at six and 33 at nothing; the way is empty at nothing from step 6 on. -/
+`hi = 12`, the line of `D` (no `O` leaves a `D`), whose kids together take two, more than its one,
+needing one, its kids needing what it needs: from `([D, O], 12)` there is a step from which no `D`
+is in the way, by the law. By computation: the ways are `D O`, `D D O`, `D D D D O` at twelve, then
+9 units at twelve, 17 at six and 33 at nothing; the way is empty at nothing from step 6 on. -/
 theorem gone :
     (∃ n, ∀ k, n ≤ k → ∀ u, u ∈ (course need kids TurningInTime.Three.giving use ([D, O], 12) k).1 →
       ¬ isD u = true) ∧
