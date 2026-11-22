@@ -4,9 +4,25 @@
     {
       "name": "film-dev",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["drafts/2026-10-03-the-game-of-winning/v3/dev-server.mjs"],
+      "runtimeArgs": [
+        "drafts/2026-10-03-the-game-of-winning/v3/dev-server.mjs"
+      ],
       "port": 5291,
       "autoPort": true
+    },
+    {
+      "name": "rw-site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "5307",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "/Users/ren/tmp/rw/site"
+      ],
+      "port": 5307
     }
   ]
 }
