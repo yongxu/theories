@@ -1,0 +1,211 @@
+Refutation of R2.json: 32 entries read against the Lean. Result: 5 FALL, 20 STAND NARROWED, 7 STAND. No Lean was run and no file was written or changed.
+
+Paths: `B/` = `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`
+
+## The 28 standing verdicts
+
+**D01 `«尽则非无终»` (B/GrammarMap.lean:252): STANDS NARROWED.**
+- The quote is exact, and both notions are said of the same `x`, `R`, `L`.
+- The label IMPLIES says more than the statement: `«有终»` is not given, only `¬ ¬ «有终» R L x`.
+- True sentence: what ends on every branch cannot be refuted to reach an end; `«有终»` itself needs D02's premise.
+- The proof is a real induction, not a call.
+
+**D02 `«尽而续可定则有终»` (GrammarMap.lean:261-262): STANDS.**
+- The quote is exact, and the proof is an induction.
+- The premise `«有后» y ∨ ¬ «有后» y` does not assume an end; `«亡»` is `¬ «有后»` (B/Grammar.lean:141).
+
+**D03 `«尽则有终当且仅当排中»` (GrammarMap.lean:584-587): STANDS NARROWED.**
+- The statement asserts no implication between the sides.
+- Its backward half is one call of D02 with the decidability premise met by excluded middle (line 587), and adds nothing to D02.
+- Its forward half rests on the built case `Map.StepWhere` (line 586).
+- The carrier is `β : Type` only; the docstring's "every carrier" is universe 0 in the statement.
+
+**D18 `Run.generation_of_heldKeepsWidening` (B/HeldPossible.lean:420-424): STANDS NARROWED.**
+- One call: `Steps.generation_iff_begins.mpr` of `r.begins_of_heldKeepsWidening`; the docstring says "the landed law restated on the map".
+- The `«不穷»` half of this `«全生成»` is automatic under `«一»` on `Steps.next` (line 406, `endless` holds for every `x`).
+- So "generates" here says only that after every moment some step has `¬ Same (r.state n) (r.state (n+1))`.
+- True sentence: with `decided`, the possible-with-the-part-held keeping widening gives a located change of the part after every moment.
+- WIDENS is read correctly (`Q n x → Q (n + d) x`, B/ReachableRanges.lean:311-312).
+- See "missed" item 2: this is the same fact as E15.
+
+**D21 `Steps.generation_of_reachingKeepsWidening` (B/WideningOnTheMap.lean:301-303): STANDS NARROWED.**
+- One call: `generation_of_keepsWidening wdec (keepsWidening_iff_from_zero.mp keeps)`. It is the case `N = 0` of the theorem at line 184, nothing added.
+- The `«不穷» next (includes Q)` half of the conclusion is the premise's own nothing-lost half (`buqiong_includes_iff`, line 186).
+- Only "a line under `same Q` begins after every moment" is derived, and that uses `wdec`.
+
+**D22 `Steps.wem_of_generation_of_keepsWidening` (WideningOnTheMap.lean:407-412): FALLS.**
+- Both readers' notes already say the statement does not assert WIDENS → GENERATES; the label IMPLIES is therefore not true of it.
+- Both notions occur only inside the hypothesis `forward`; the conclusion is `¬ P ∨ ¬¬ P`.
+- My verdict: NAME ONLY as a placing. It prices D21's premise by the built chain `arriving P`, which keeps widening whatever `P` is (`Arriving.keepsWidening`, line 389).
+- It holds only for chains `Nat → Nat → Prop` at moment 0.
+
+**D23 `Steps.dne_of_keepsWidening_of_generation` (WideningOnTheMap.lean:435-439): FALLS, same ground.**
+- GENERATES → WIDENS is hypothesised (`back`), not asserted; the conclusion is `P` from `¬¬ P`.
+- My verdict: NAME ONLY as a placing, resting on the built chain `dawning P` (`Dawning.generation`, line 427).
+- It does not show the converse false.
+
+**D24 `Web.generation_of_keepsWidening_byName` (WideningOnTheMap.lean:489-494): STANDS NARROWED.**
+- One call: `Steps.generation_of_keepsWidening wdec (keepsWidening_itself_iff.mp keeps)`.
+- It is line 184 read on the chain `fun t f => W.Admits (l t) t f`; the same remark on the lasting half applies as in D21.
+- WIDENS is read correctly (`IncludesAcrossFrom ∧ KeepsOpening`, B/EventualWidening.lean:282-293).
+
+**D25 `Web.kept_by_name_and_generation_on_moments` (WideningOnTheMap.lean:513-523): STANDS NARROWED.**
+- It is a pairing of two theorems with nothing added (lines 522-523).
+- The KEEPS half uses `keeps.1` only: `kept_of_includes_by_name keeps.1 …`. So `«全守»` follows from nothing lost, not from widening.
+- A course that only loses nothing (it need not open anything) gets the same conclusion, so WIDENS → KEEPS should read "nothing lost → `«全守»`".
+- The second half is D24.
+
+**E01 `«生生不息»` (B/Grammar.lean:660): STANDS NARROWED.**
+- The quote is exact, with the same `x`, `R`, `E`.
+- The wall is on the renewing-into relation, not on `x`'s line under `E`.
+- GrammarMap.lean:360 and 367 give `«生生» R E x ↔ «延» («复生至» R E) «一» x` and `«息» R E x ↔ «尽» («复生至» R E) «一» x`.
+- So `«息» R E x` is not `«退化» R E x`. `«一之下皆息»` (Grammar.lean:682) puts everything under `«息»` at class `«一»`, where a line can still be `«不穷»`.
+- True sentence: renewal without end and ceasing of renewal exclude each other; nothing is said of `x`'s own line lasting or degenerating.
+
+**E05 `«尽则非不穷»` (GrammarMap.lean:248-249): STANDS.**
+- Same `x`, `R`, `L`.
+- It is a corollary by two calls, `«延尽不并» h («不穷则延» n)`, weaker than `«延尽不并»` (line 233). Both readers said so.
+
+**E06 `«生成则延»` and E07 `«守则延»` (GrammarMap.lean:289-293): STANDS NARROWED, both.**
+- Each is a projection of the definition: `⟨S, hx, hS, _⟩ => ⟨S, hx, hS⟩`.
+- `«延»` is the first two conjuncts of `«生成»` (lines 274-276) and of `«守»` (line 280).
+- LASTING here is the some-branch `«延»`, not `«不穷»`.
+
+**E08 `Flow.generation_of_brief` (B/KeepingWidening.lean:707-715): STANDS.**
+- The premise `endless` is handed through as the first conjunct (`⟨endless, …⟩`).
+- What is added, from `brief` and `start`, is a carrying renewal ahead of every point.
+- The docstring's "within K steps" is not in the conclusion.
+
+**E09 `Web.generation_of_one_step_supports` (KeepingWidening.lean:818-833): STANDS.**
+- E1's note "E08 with K = 0" is wrong. E08's `brief` at `K = 0` says nothing is ever supported; this `brief` (`W.Supported t g → ¬ W.Supported (t + 1) g`) is `K = 1`.
+- Here every step of the line is a carrying renewal (`⟨y, w, .inl rfl, step, …⟩`), on any `R` and any `L` finer than activity.
+
+**E10 `Map.outside_of_not_endless` (B/MapInstances.lean:117-119): STANDS NARROWED.**
+- The statement is `¬ «不穷» → ¬ «全生成» ∧ ¬ «全守»`, proved by `⟨fun g => h g.1, fun k => h k.1⟩`: a first-conjunct projection.
+- The forward forms `«全生成» → «不穷»` and `«全守» → «不穷»` are the definitions, not this statement; from this statement alone only `→ ¬¬ «不穷»` follows.
+- It concerns the strong forms, not `«生成»` or `«守»`.
+
+**E11 `Web.keeping_of_carried_on` (MapInstances.lean:236-247): STANDS.**
+- `endless` is handed through as the first conjunct.
+- The premise `on` is close to the second conjunct in other words: "nothing becomes active that was not active and carried on as itself" against "no carrying renewal ahead" (through `carries_iff`).
+
+**E15 `Run.not_unending_of_heldKeepsWidening` (HeldPossible.lean:382-386): STANDS NARROWED.**
+- The quote is exact, and there is no premise beyond `keeps`.
+- ACROSS holds only as "two readings of one run and one part": the chain of possibles, and the line under `Same`. It is not two courses.
+- True sentence: on one run, the possible-with-the-part-held keeping widening excludes, at every moment `N`, that the part is held from `N` without end (`Steps.buqiong_iff`, B/Change.lean:765).
+- See "missed" item 2.
+
+**E19 `Web.UnderminingOn.exceeded` (B/Retaining.lean:134-142): STANDS NARROWED.**
+- The readers' quote is elided ("..."), not exact; the conclusion and premises are as they say.
+- One call of `exceeded_of_below`. The match `⟨_, g, depends, _, below⟩` discards `W.draws t f c` and `MetAbove`.
+- So `f` and the drawing play no part. Only `W.level (t + 1) c < W.need t g c` for a dependant `g` is used.
+- True sentence: where the level after a step is below a dependant's need, any path `l` handed in as admitting that dependant after the step exceeds the levels.
+- The comparison is of two paths at the same steps, not earlier against later. `Exceeds l W.level` is read in the right order.
+
+**E20 `Web.Includes.not_undermining` (Retaining.lean:148-152): STANDS NARROWED.**
+- One call: `includes.not_exceeded (undermining.exceeded holds admits)`, the contrapositive of E19.
+- The three premises together deny `UnderminingOn`'s last conjunct for every dependant: `includes` with `admits` gives `need (t+1) g c ≤ level (t+1) c`, and `holds` gives `need t g c ≤ need (t+1) g c`.
+- The path `l` is a detour and the order on what can form is used at one step only.
+- True sentence: where the levels after the step still admit every dependant of `c`, no event at the step undermines `c`. This is not a placing of widening against consuming.
+
+**E21 `Flow.Balances.includes_of_renewed` (Retaining.lean:317-346): STANDS.**
+- The proof is a real argument.
+- `Includes W.level l` is read in the right order (with the part at least as wide as without it); it is stronger than "does not narrow", which is the next theorem (line 349).
+- `Renewed` is said of conditions and the conclusion of two level paths, with and without the part; neither is earlier against later.
+
+**E22 `Flow.Balances.includes_of_renewingIn` (Retaining.lean:357-361): STANDS NARROWED.**
+- One call of E21, with `RenewingIn f` unfolded at the conditions drawn on (`renewing f member t c (Or.inr drawn)`). Nothing added.
+
+**F13 `ClosedCapture.lock_line` (B/GrammarRegularity.lean:320-344): STANDS NARROWED.**
+- The first conjunct is as quoted; the second (`«异»` under `sameValue loss` at every step) is in the statement.
+- What lasts is lockedness: `«不穷»` is under `lockedAlike` on a total step, which from a `Locked` start means Locked at every step.
+- The first conjunct is `lock_outlives_loss … .2.1` (B/ClosedCapture.lean:307) re-read through `Law.unending_iff_steps`.
+- True sentence: LOCK at step 0 gives LOCK at every step. Nothing is said of the course, or of what sustains it, lasting.
+- `Locked` is read in the right order (`favours p.2 ∧ M.le p.2 (h p.1 p.2)`, B/RuleCapture.lean:160-161).
+
+**F15 `NoReturnAt.recoverable_iff` (B/ReadOffInTime.lean:607-612): STANDS NARROWED.**
+- The quote is exact.
+- The passage is handed in: `NoReturnAt` is by definition `¬ Recoverable … N ∧ ∀ n, n < N → Recoverable … n` (lines 595-596).
+- The statement adds only `¬ Recoverable` at every `n ≥ N`, by `Recoverable.earlier` (line 601). That holds because `AgreeUpTo` to a later step gives it to an earlier one.
+- With `N = 0` no step is recoverable, so there is no passage.
+- True sentence: given a point of no return at `N`, the course is recoverable exactly at the steps before `N`, possibly none.
+- `Recoverable` is the availability of a keeping course, not a turn taken.
+
+**F16 `noReturnAt_of_past` (ReadOffInTime.lean:632-637): STANDS NARROWED.**
+- One call of `first_of_decided`, with `NoReturnAt` unfolded (`⟨m, le, fails, before⟩`).
+- It is a least-step principle for any decided predicate; nothing in it is particular to the two sides.
+- The index moves (`n` in the premise, some `N ≤ n` in the conclusion), and `N = 0` is not excluded.
+
+**F18 `TurningInTime.locked_turns_in_time_share_iff` (B/TurningInTime.lean:1876-1917): FALLS as PASSAGE kind p.**
+- The statement is an iff. Its left side is an outcome: `«不穷»` of the corrected line (`windowAfterShare`) from the start.
+- Its right side is a condition fixed by the start and parameters, stated on the uncorrected course (`asItWas (windowAlone …)`).
+- On the other range it gives only `¬ «不穷»` of the corrected line. That is not the lock's own ending and not `«尽»` or `«有终»`.
+- The lock's own outcome is not a conjunct, and nothing says the lasting course leaves or keeps the lock.
+- `locked` is used once, to feed `locked_alone_not_below` (line 1910) and so meet `uses₁` through `draws` (line 1917).
+- One call of `turns_in_time_iff` with instances.
+- My verdict: under LOCK at the start (used only to bound the use from below), an iff between LASTING of the corrected line and an unnamed in-time condition. It is neither PASSAGE nor EQUIVALENT between listed notions.
+- The readers' quote is elided, not exact; the content matches.
+
+**F19 `TurningInTime.noReturnAt_of_below` (TurningInTime.lean:2207-2214): FALLS as PASSAGE kind t.**
+- One call of F16 (`noReturnAt_of_past`), with decidedness from `recoverable_decided` and non-recoverability from `above_of_recoverable`.
+- No premise places the course on the turn's side; both readers' notes say so.
+- `N = 0` is not excluded, in which case there is no step on the turn's side.
+- `Turned` is named as the feasible class inside `NoReturnAt`.
+- My verdict: IMPLIES from level premises (no listed notion) to NO RETURN at some `N ≤ n`, index moved; TURN IN TIME is NAME ONLY (a carrier, inside an unfolding).
+
+**F20 `TurningInTime.noReturn_exists` (TurningInTime.lean:2311-2329): FALLS as PASSAGE kind t, same ground.**
+- One call of `noReturnAt_of_past`, with `asItWas_falls`, `recoverable_decided` and `met_of_recoverable`.
+- The premises are overdraw premises; `Locked` is not in the statement.
+- `N = 0` is not excluded (it depends on `H₂ + y₂ ≤ x`, which is not assumed).
+- My verdict: as F19.
+
+## The four sample entries
+
+**D13 `Rooms.Matched.rows` (B/RoomNet.lean:371-384): STANDS as BUILT CASE; no general statement hidden.**
+- Seven of the eleven conjuncts are named general walls applied to the case: `«全生成全守不并»`, `«全守有终不并»`, `«守退化不并»`, and `«守则后守»` for the two `«后守»`.
+- The case facts are `«守»` at two occurrences, `«全守»` (through `keeping`, not itself a conjunct), and `¬ «生成»` at `kept m`.
+- That last one is a real case fact, since `«生成»` and `«守»` are not exclusive in general (`«生守相杂»`, GrammarMap.lean:553).
+
+**E12 `Rooms.heated_unended` (RoomNet.lean:652-656): STANDS as BUILT CASE.**
+- The second conjunct is the unnamed general exclusion `«不穷» → ¬ «有终»`, one line from the definitions (`ends (unended y hy)`). Both readers saw this.
+- A grep of `B/*.lean` for `¬ «有终» R L x` and for `不穷…不并` found it under no name of its own; nearest is `«有常则无终»` (GrammarMap.lean:111-112).
+- The first conjunct is one call of `«有常则往不穷»`.
+- The neighbour `«温不穷当且仅当有给»` (line 632) is the general statement in the parameter `c`; it is another statement.
+
+**F04 `Renewable.kept_part_not_renewal` (B/JointKeeping.lean:394-408): STANDS as BUILT CASE, with a caution.**
+- The `Kernel` conjunct for the focal formation is proved by `fun _ _ => trivial`: its guard cannot fail in this process.
+- So the lasting set beside renewing and consuming is a trivially true one.
+- Conjuncts 2 to 5 are `class_belongs_to_the_run` restated.
+- No general placing is hidden; only `Kernel.run` is called.
+
+**F17 `ReadingsPersist.Habitat.cleared_removes_its_readers` (B/ReadingsPersist.lean:1318-1328): BUILT CASE hides a general wall.**
+- The conjunct `¬ AllPersist slotsOf cleared` is one call of `not_allPersist_of_removes` (line 578): `RemovesLine slotsOf l i → ¬ AllPersist slotsOf l`, for every course.
+- `RemovesItsReaders` contains `∃ i, readers i ∧ RemovesLine slotsOf l i` (lines 555-557).
+- So every course under `RemovesItsReaders` is outside `AllPersist`: "under X and not Y" is a WALL in general, not a fact of this case.
+- The case-specific content is that `SurvivorsPersist` holds of `cleared` and `AllPersist` of `keep`.
+- `AllPersist.survivors` (line 583) is the general implication the other way between the two lasting notions.
+
+## What both readers missed
+
+1. **E01.** GrammarMap.lean:360 and 367 make `«生生不息»` the wall `«延尽不并»` on the relation `«复生至» R E` at class `«一»`. So `«生生»` as LASTING has a Lean anchor, and `«息»` is degeneration of the line of renewals, not of `x`'s line.
+2. **D18 and E15 are one fact at two strengths, given two verdicts (IMPLIES and ACROSS).**
+   - Both conclude that the part changes again and again on the same run.
+   - E15 is the negative form (`¬ ∀ i, Same …`); D18 is the located form, with `decided`.
+   - Either both are IMPLIES/WALL of one run under two readings, or both are ACROSS.
+3. **F16, F19 and F20 are one law, given two verdicts.** F19 and F20 are each one call of F16; F16 was called IMPLIES and the other two PASSAGE.
+4. **E19.** The proof discards `draws` and `MetAbove`, so the formation `f` does no work.
+5. **E20.** The path `l` is a detour; the premises jointly deny the definition's last conjunct.
+6. **F17.** The general exclusion `not_allPersist_of_removes`.
+7. **F04.** The `Kernel` conjunct is `trivial`.
+8. **D21 and D24.** Each is one call of `Steps.generation_of_keepsWidening` (WideningOnTheMap.lean:184). The lasting half of the conclusion repeats the premise's inclusion half; D2 noted that for both, while the one-call status was not seen in the notes as read.
+9. **D03.** The carrier is `β : Type`.
+10. **F18.** `locked` serves only to bound the use from below along the uncorrected course.
+
+## Not read
+
+- `FROZEN.md`, `DIRECTION.md`, the chapters and the `fm-` folders, as instructed. Which notions are "listed" for a side is therefore taken from the readers.
+- `R1.json`.
+- Called theorems' bodies: `turns_in_time_iff`, `locked_alone_not_below`, `first_of_decided`, `class_belongs_to_the_run`, `«有常则往不穷»`, `keepsWidening_iff_chain`, `itself_keeps`, `passes_or_carried_on` beyond its statement.
+- Definitions: `Kernel`, `Keepable`, `WithheldLevels`, `Balances`, `Taking`, `Raises`, `ReadsShare`, `net`, `windowAfterShare`, `asItWas`, `Turned`, `MeetsNeed`, `AgreeUpTo`, `IncludesAcross`, `ExceedsAcross`, `«后守»`, and RoomNet's `net`, `alike`, `start`, `kept`.
+- The neighbours the readers cite as D14, D19, E13, E23, E24.
+- Reader notes past the lengths my display showed for entries not re-printed. For those, "the readers did not note" is not claimed; the list above is of points absent from the notes as read.

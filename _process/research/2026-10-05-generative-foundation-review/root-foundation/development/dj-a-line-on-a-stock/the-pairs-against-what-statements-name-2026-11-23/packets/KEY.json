@@ -1,0 +1,1614 @@
+{
+ "A01": {
+  "theorem": "Becoming.Oscillation.readings",
+  "module": "Becoming.Arising",
+  "line": 581,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "A02": {
+  "theorem": "Becoming.Clearing.undermines_within_renewal",
+  "module": "Becoming.Clearing",
+  "line": 167,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "A03": {
+  "theorem": "Becoming.Clearing.renewing_over_resource",
+  "module": "Becoming.Clearing",
+  "line": 280,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "A04": {
+  "theorem": "Becoming.Web.renewingAlong_not_consumingAlong",
+  "module": "Becoming.ContinuedClasses",
+  "line": 92,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "A05": {
+  "theorem": "Becoming.MergeClass.readings",
+  "module": "Becoming.ContinuedClasses",
+  "line": 316,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "A06": {
+  "theorem": "Becoming.Web.universal_connects",
+  "module": "Becoming.Correspondence",
+  "line": 324,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "through a definition",
+  "rests_on_a_reading": []
+ },
+ "A07": {
+  "theorem": "Becoming.Web.one_use_connects",
+  "module": "Becoming.Correspondence",
+  "line": 339,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "through a definition",
+  "rests_on_a_reading": []
+ },
+ "A08": {
+  "theorem": "Becoming.Web.renewed_not_consumed",
+  "module": "Becoming.Dependence",
+  "line": 218,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "A09": {
+  "theorem": "Becoming.Web.kept_or_broken",
+  "module": "Becoming.Dependence",
+  "line": 233,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.Web.Broken as P3.consuming",
+   "Becoming.Web.Kept as P3.renewing"
+  ]
+ },
+ "A10": {
+  "theorem": "Becoming.Web.kept_not_broken",
+  "module": "Becoming.Dependence",
+  "line": 240,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.Web.Broken as P3.consuming",
+   "Becoming.Web.Kept as P3.renewing"
+  ]
+ },
+ "A11": {
+  "theorem": "Becoming.Web.RenewingAt.not_undermining",
+  "module": "Becoming.Dependence",
+  "line": 337,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "A12": {
+  "theorem": "Becoming.Web.RenewingAt.not_breaking",
+  "module": "Becoming.Dependence",
+  "line": 343,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.Web.BreakingAt as P3.consuming"
+  ]
+ },
+ "A13": {
+  "theorem": "Becoming.Web.not_renewing_at_of_broken",
+  "module": "Becoming.Dependence",
+  "line": 352,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.Web.Broken as P3.consuming"
+  ]
+ },
+ "A14": {
+  "theorem": "Becoming.Renewable.prefix_does_not_decide",
+  "module": "Becoming.Horizon",
+  "line": 105,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "A15": {
+  "theorem": "Becoming.Renewable.whole_run_includes_overdraw",
+  "module": "Becoming.Horizon",
+  "line": 155,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "A16": {
+  "theorem": "Becoming.Renewable.amount_reading",
+  "module": "Becoming.Horizon",
+  "line": 167,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "A17": {
+  "theorem": "Becoming.Feedback.prefix_does_not_decide",
+  "module": "Becoming.HorizonWebs",
+  "line": 98,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "A18": {
+  "theorem": "Becoming.HorizonWebs.prefix_does_not_decide",
+  "module": "Becoming.HorizonWebs",
+  "line": 124,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "A19": {
+  "theorem": "Becoming.Web.reidentify_step",
+  "module": "Becoming.Identity",
+  "line": 215,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.Web.Broken as P3.consuming",
+   "Becoming.Web.Kept as P3.renewing"
+  ]
+ },
+ "B01": {
+  "theorem": "Becoming.Dormancy.classes",
+  "module": "Becoming.Identity",
+  "line": 2174,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "B02": {
+  "theorem": "Becoming.Overshoot.ends_through_feeder",
+  "module": "Becoming.Interdependence",
+  "line": 372,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "B03": {
+  "theorem": "Becoming.Renewable.class_belongs_to_the_run",
+  "module": "Becoming.Labelled",
+  "line": 561,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "B04": {
+  "theorem": "Becoming.Crossing.loss_does_not_decide",
+  "module": "Becoming.Labelled",
+  "line": 655,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.Web.Broken as P3.consuming",
+   "Becoming.Web.Kept as P3.renewing"
+  ]
+ },
+ "B05": {
+  "theorem": "Becoming.Renewable.stepwise_includes_before_escalation",
+  "module": "Becoming.Labelled",
+  "line": 697,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "B06": {
+  "theorem": "Becoming.Renewable.dip_breaks_without_consuming",
+  "module": "Becoming.Labelled",
+  "line": 714,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "B07": {
+  "theorem": "Becoming.Renewable.broken_formation",
+  "module": "Becoming.Labelled",
+  "line": 728,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.Web.Broken as P3.consuming"
+  ]
+ },
+ "B08": {
+  "theorem": "Becoming.Renewable.dip_within_two",
+  "module": "Becoming.Labelled",
+  "line": 813,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.Web.BreakingAt as P3.consuming",
+   "Becoming.Web.UnderminingFor as P3.consuming"
+  ]
+ },
+ "B09": {
+  "theorem": "Becoming.Renewable.finite_reading_withholds_renewal",
+  "module": "Becoming.LabelledRoles",
+  "line": 160,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "B10": {
+  "theorem": "Becoming.Optimum.Holding.doubling_capacity",
+  "module": "Becoming.Optimum",
+  "line": 9392,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.Web.Broken as P3.consuming",
+   "Becoming.Web.Kept as P3.renewing"
+  ]
+ },
+ "B11": {
+  "theorem": "Becoming.Hibernation.readings",
+  "module": "Becoming.Persistence",
+  "line": 341,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "B12": {
+  "theorem": "Becoming.World.kept_broken_reidentify",
+  "module": "Becoming.Persistence",
+  "line": 577,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.Web.Broken as P3.consuming",
+   "Becoming.Web.Kept as P3.renewing"
+  ]
+ },
+ "B13": {
+  "theorem": "Becoming.World.classes_still",
+  "module": "Becoming.Persistence",
+  "line": 865,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "B14": {
+  "theorem": "Becoming.World.classes_fixed",
+  "module": "Becoming.Persistence",
+  "line": 898,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "B15": {
+  "theorem": "Becoming.Hibernation.world_readings",
+  "module": "Becoming.Persistence",
+  "line": 1121,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "B16": {
+  "theorem": "Becoming.Ranking.wholeRun_of_renewed",
+  "module": "Becoming.Ranking",
+  "line": 143,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "through a definition",
+  "rests_on_a_reading": []
+ },
+ "B17": {
+  "theorem": "Becoming.Ranking.stepwise_of_renewed",
+  "module": "Becoming.Ranking",
+  "line": 150,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "through a definition",
+  "rests_on_a_reading": []
+ },
+ "B18": {
+  "theorem": "Becoming.Ranking.renewed_extends_iff",
+  "module": "Becoming.Ranking",
+  "line": 158,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "through a definition",
+  "rests_on_a_reading": []
+ },
+ "C01": {
+  "theorem": "Becoming.Ranking.renewed_active_extends_iff",
+  "module": "Becoming.Ranking",
+  "line": 170,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "through a definition",
+  "rests_on_a_reading": []
+ },
+ "C02": {
+  "theorem": "Becoming.Ranking.ThirdParty.renewal_needed",
+  "module": "Becoming.Ranking",
+  "line": 895,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "through a definition",
+  "rests_on_a_reading": []
+ },
+ "C03": {
+  "theorem": "Becoming.Omitted.loses_own",
+  "module": "Becoming.Regions",
+  "line": 304,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "C04": {
+  "theorem": "Becoming.SupportGatedWebs.formation_does_not_decide",
+  "module": "Becoming.RenewalFlow",
+  "line": 258,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "C05": {
+  "theorem": "Becoming.SupportGatedWebs.own_trajectory_does_not_decide",
+  "module": "Becoming.RenewalFlow",
+  "line": 270,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "C06": {
+  "theorem": "Becoming.SupportGatedWebs.jointly_consuming",
+  "module": "Becoming.RenewalFlow",
+  "line": 283,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "C07": {
+  "theorem": "Becoming.SupportGatedWebs.fluctuating_neither",
+  "module": "Becoming.RenewalFlow",
+  "line": 314,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "C08": {
+  "theorem": "Becoming.SupportRecovery.recovered_neither",
+  "module": "Becoming.RenewalFlow",
+  "line": 444,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "C09": {
+  "theorem": "Becoming.SupportRecovery.recovered_web_neither",
+  "module": "Becoming.RenewalFlow",
+  "line": 457,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "C10": {
+  "theorem": "Becoming.Web.RenewingInWithin.not_undermining_for",
+  "module": "Becoming.Restoration",
+  "line": 168,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.Web.UnderminingFor as P3.consuming"
+  ]
+ },
+ "C11": {
+  "theorem": "Becoming.Web.RenewingInWithin.not_consuming",
+  "module": "Becoming.Restoration",
+  "line": 175,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "C12": {
+  "theorem": "Becoming.Slowing.slowing_recovery",
+  "module": "Becoming.Restoration",
+  "line": 309,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "C13": {
+  "theorem": "Becoming.Preemption.within_renewal_yet_loses",
+  "module": "Becoming.Retaining",
+  "line": 470,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "C14": {
+  "theorem": "RelationalRenewal.renewed_not_consumed",
+  "module": "RelationalRenewal",
+  "line": 138,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "C15": {
+  "theorem": "RelationalRenewal.renewing_not_consuming",
+  "module": "RelationalRenewal",
+  "line": 143,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "C16": {
+  "theorem": "RelationalRenewal.fluctuating_neither",
+  "module": "RelationalRenewal",
+  "line": 216,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "C17": {
+  "theorem": "RelationalRenewal.Law.formation_does_not_decide",
+  "module": "RelationalRenewal",
+  "line": 520,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "C18": {
+  "theorem": "RelationalRenewal.Law.own_trajectory_does_not_decide",
+  "module": "RelationalRenewal",
+  "line": 543,
+  "cell": "P3 within",
+  "sides": [
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D01": {
+  "theorem": "Becoming.«尽则非无终»",
+  "module": "Becoming.GrammarMap",
+  "line": 251,
+  "cell": "P1 within",
+  "sides": [
+   "P1.degenerates",
+   "P1.reaches_an_end"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D02": {
+  "theorem": "Becoming.«尽而续可定则有终»",
+  "module": "Becoming.GrammarMap",
+  "line": 259,
+  "cell": "P1 within",
+  "sides": [
+   "P1.degenerates",
+   "P1.reaches_an_end"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D03": {
+  "theorem": "Becoming.«尽则有终当且仅当排中»",
+  "module": "Becoming.GrammarMap",
+  "line": 580,
+  "cell": "P1 within",
+  "sides": [
+   "P1.degenerates",
+   "P1.reaches_an_end"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D04": {
+  "theorem": "Becoming.OwnCondition.rising_kept",
+  "module": "Becoming.KeepingWidening",
+  "line": 1219,
+  "cell": "P1 within",
+  "sides": [
+   "P1.generates",
+   "P1.keeps"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D05": {
+  "theorem": "Becoming.Saturated.lasting_kept",
+  "module": "Becoming.KeepingWidening",
+  "line": 1864,
+  "cell": "P1 within",
+  "sides": [
+   "P1.generates",
+   "P1.keeps"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D06": {
+  "theorem": "Becoming.LineageRegimes.Handover.both_fates",
+  "module": "Becoming.LineageRegimes",
+  "line": 1041,
+  "cell": "P1 within",
+  "sides": [
+   "P1.degenerates",
+   "P1.generates"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D07": {
+  "theorem": "Becoming.LineageRegimes.stock_forces_neither",
+  "module": "Becoming.LineageRegimes",
+  "line": 1082,
+  "cell": "P1 within",
+  "sides": [
+   "P1.degenerates",
+   "P1.generates"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D08": {
+  "theorem": "Becoming.LineageRegions.StandingRelay.grain_decides_region",
+  "module": "Becoming.LineageRegions",
+  "line": 846,
+  "cell": "P1 within",
+  "sides": [
+   "P1.generates",
+   "P1.keeps"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D09": {
+  "theorem": "Becoming.LineageRegions.Chain.chain",
+  "module": "Becoming.LineageRegions",
+  "line": 1017,
+  "cell": "P1 within",
+  "sides": [
+   "P1.degenerates",
+   "P1.generates"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D10": {
+  "theorem": "Becoming.LineageRegions.Courses.same_terms_two_fates",
+  "module": "Becoming.LineageRegions",
+  "line": 1616,
+  "cell": "P1 within",
+  "sides": [
+   "P1.degenerates",
+   "P1.generates"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D11": {
+  "theorem": "Becoming.Rooms.Unheated.rows",
+  "module": "Becoming.RoomNet",
+  "line": 269,
+  "cell": "P1 within",
+  "sides": [
+   "P1.generates",
+   "P1.keeps",
+   "P1.reaches_an_end"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D12": {
+  "theorem": "Becoming.Rooms.«平衡守而有终»",
+  "module": "Becoming.RoomNet",
+  "line": 287,
+  "cell": "P1 within",
+  "sides": [
+   "P1.degenerates",
+   "P1.generates",
+   "P1.keeps",
+   "P1.reaches_an_end"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D13": {
+  "theorem": "Becoming.Rooms.Matched.rows",
+  "module": "Becoming.RoomNet",
+  "line": 369,
+  "cell": "P1 within",
+  "sides": [
+   "P1.degenerates",
+   "P1.generates",
+   "P1.keeps",
+   "P1.reaches_an_end"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D14": {
+  "theorem": "Becoming.Rooms.«给如所取则全守»",
+  "module": "Becoming.RoomNet",
+  "line": 388,
+  "cell": "P1 within",
+  "sides": [
+   "P1.generates",
+   "P1.keeps"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D15": {
+  "theorem": "Becoming.Rooms.Overshooting.single_line_tested",
+  "module": "Becoming.RoomNet",
+  "line": 489,
+  "cell": "P1 within",
+  "sides": [
+   "P1.generates",
+   "P1.keeps"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D16": {
+  "theorem": "Becoming.Rooms.Overshooting.rows",
+  "module": "Becoming.RoomNet",
+  "line": 529,
+  "cell": "P1 within",
+  "sides": [
+   "P1.degenerates",
+   "P1.generates",
+   "P1.keeps",
+   "P1.reaches_an_end"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D17": {
+  "theorem": "Becoming.Rooms.«给过所取则生守相杂»",
+  "module": "Becoming.RoomNet",
+  "line": 551,
+  "cell": "P1 within",
+  "sides": [
+   "P1.generates",
+   "P1.keeps"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D18": {
+  "theorem": "Becoming.Run.generation_of_heldKeepsWidening",
+  "module": "Becoming.HeldPossible",
+  "line": 415,
+  "cell": "P1 x P2",
+  "sides": [
+   "P1.generates",
+   "P2.widens_or_narrows"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D19": {
+  "theorem": "Becoming.Oscillating.generation_without_widening",
+  "module": "Becoming.HeldPossible",
+  "line": 905,
+  "cell": "P1 x P2",
+  "sides": [
+   "P1.generates",
+   "P2.widens_or_narrows"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D20": {
+  "theorem": "Becoming.ClosedCycle.generation_without_widening",
+  "module": "Becoming.KeepingWidening",
+  "line": 1626,
+  "cell": "P1 x P2",
+  "sides": [
+   "P1.generates",
+   "P2.widens_or_narrows"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D21": {
+  "theorem": "Becoming.Steps.generation_of_reachingKeepsWidening",
+  "module": "Becoming.WideningOnTheMap",
+  "line": 299,
+  "cell": "P1 x P2",
+  "sides": [
+   "P1.generates",
+   "P2.widens_or_narrows"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D22": {
+  "theorem": "Becoming.Steps.wem_of_generation_of_keepsWidening",
+  "module": "Becoming.WideningOnTheMap",
+  "line": 405,
+  "cell": "P1 x P2",
+  "sides": [
+   "P1.generates",
+   "P2.widens_or_narrows"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D23": {
+  "theorem": "Becoming.Steps.dne_of_keepsWidening_of_generation",
+  "module": "Becoming.WideningOnTheMap",
+  "line": 433,
+  "cell": "P1 x P2",
+  "sides": [
+   "P1.generates",
+   "P2.widens_or_narrows"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D24": {
+  "theorem": "Becoming.Web.generation_of_keepsWidening_byName",
+  "module": "Becoming.WideningOnTheMap",
+  "line": 487,
+  "cell": "P1 x P2",
+  "sides": [
+   "P1.generates",
+   "P2.widens_or_narrows"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "D25": {
+  "theorem": "Becoming.Web.kept_by_name_and_generation_on_moments",
+  "module": "Becoming.WideningOnTheMap",
+  "line": 508,
+  "cell": "P1 x P2",
+  "sides": [
+   "P1.generates",
+   "P1.keeps",
+   "P2.widens_or_narrows"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "E01": {
+  "theorem": "Becoming.«生生不息»",
+  "module": "Becoming.Grammar",
+  "line": 657,
+  "cell": "P0 x P1",
+  "sides": [
+   "P0.lasting",
+   "P1.degenerates"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.«生生» as P0.lasting"
+  ]
+ },
+ "E02": {
+  "theorem": "Becoming.«亡而息之例»",
+  "module": "Becoming.GrammarConditionals",
+  "line": 47,
+  "cell": "P0 x P1",
+  "sides": [
+   "P0.ceasing",
+   "P1.degenerates"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "E03": {
+  "theorem": "Becoming.«有亡而不全生成之例»",
+  "module": "Becoming.GrammarConditionals",
+  "line": 237,
+  "cell": "P0 x P1",
+  "sides": [
+   "P0.ceasing",
+   "P1.generates"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "E04": {
+  "theorem": "Becoming.«止而不入之例»",
+  "module": "Becoming.GrammarLaws",
+  "line": 1797,
+  "cell": "P0 x P1",
+  "sides": [
+   "P0.no_return",
+   "P1.degenerates"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.«入» as P0.no_return"
+  ]
+ },
+ "E05": {
+  "theorem": "Becoming.«尽则非不穷»",
+  "module": "Becoming.GrammarMap",
+  "line": 247,
+  "cell": "P0 x P1",
+  "sides": [
+   "P0.lasting",
+   "P1.degenerates"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "E06": {
+  "theorem": "Becoming.«生成则延»",
+  "module": "Becoming.GrammarMap",
+  "line": 289,
+  "cell": "P0 x P1",
+  "sides": [
+   "P0.lasting",
+   "P1.generates"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "E07": {
+  "theorem": "Becoming.«守则延»",
+  "module": "Becoming.GrammarMap",
+  "line": 292,
+  "cell": "P0 x P1",
+  "sides": [
+   "P0.lasting",
+   "P1.keeps"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "E08": {
+  "theorem": "Becoming.Flow.generation_of_brief",
+  "module": "Becoming.KeepingWidening",
+  "line": 703,
+  "cell": "P0 x P1",
+  "sides": [
+   "P0.lasting",
+   "P1.generates"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "E09": {
+  "theorem": "Becoming.Web.generation_of_one_step_supports",
+  "module": "Becoming.KeepingWidening",
+  "line": 812,
+  "cell": "P0 x P1",
+  "sides": [
+   "P0.lasting",
+   "P1.generates"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "E10": {
+  "theorem": "Becoming.Map.outside_of_not_endless",
+  "module": "Becoming.MapInstances",
+  "line": 117,
+  "cell": "P0 x P1",
+  "sides": [
+   "P0.lasting",
+   "P1.generates",
+   "P1.keeps"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "E11": {
+  "theorem": "Becoming.Web.keeping_of_carried_on",
+  "module": "Becoming.MapInstances",
+  "line": 233,
+  "cell": "P0 x P1",
+  "sides": [
+   "P0.lasting",
+   "P1.keeps"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "E12": {
+  "theorem": "Becoming.Rooms.heated_unended",
+  "module": "Becoming.RoomNet",
+  "line": 650,
+  "cell": "P0 x P1",
+  "sides": [
+   "P0.lasting",
+   "P1.reaches_an_end"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "E13": {
+  "theorem": "Becoming.RaisedEveryOther.both",
+  "module": "Becoming.HeldPossible",
+  "line": 813,
+  "cell": "P0 x P1 x P2",
+  "sides": [
+   "P0.lasting",
+   "P1.degenerates",
+   "P2.widens_or_narrows"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.«生生» as P0.lasting"
+  ]
+ },
+ "E14": {
+  "theorem": "Becoming.FromTheDynamics.Alternating.joined",
+  "module": "Becoming.FromTheDynamics",
+  "line": 415,
+  "cell": "P0 x P2",
+  "sides": [
+   "P0.lasting",
+   "P2.widens_or_narrows"
+  ],
+  "level": "through a definition",
+  "rests_on_a_reading": []
+ },
+ "E15": {
+  "theorem": "Becoming.Run.not_unending_of_heldKeepsWidening",
+  "module": "Becoming.HeldPossible",
+  "line": 379,
+  "cell": "P0 x P2",
+  "sides": [
+   "P0.lasting",
+   "P2.widens_or_narrows"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "E16": {
+  "theorem": "Becoming.Flow.persisting_consistent_with_selfConcern",
+  "module": "Becoming.PersistingChoices",
+  "line": 491,
+  "cell": "P0 x P2",
+  "sides": [
+   "P0.lasting",
+   "P2.widens_or_narrows"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "E17": {
+  "theorem": "Becoming.PersistingChoices.Forgoing.persists_not_selfConcerned",
+  "module": "Becoming.PersistingChoices",
+  "line": 745,
+  "cell": "P0 x P2",
+  "sides": [
+   "P0.lasting",
+   "P2.widens_or_narrows"
+  ],
+  "level": "through a definition",
+  "rests_on_a_reading": []
+ },
+ "E18": {
+  "theorem": "Becoming.Direction.grounded_widening_selected",
+  "module": "Becoming.Direction",
+  "line": 317,
+  "cell": "P2 x P3",
+  "sides": [
+   "P2.widens_or_narrows",
+   "P3.consuming"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "E19": {
+  "theorem": "Becoming.Web.UnderminingOn.exceeded",
+  "module": "Becoming.Retaining",
+  "line": 132,
+  "cell": "P2 x P3",
+  "sides": [
+   "P2.widens_or_narrows",
+   "P3.consuming"
+  ],
+  "level": "through an unfolded part",
+  "rests_on_a_reading": []
+ },
+ "E20": {
+  "theorem": "Becoming.Web.Includes.not_undermining",
+  "module": "Becoming.Retaining",
+  "line": 144,
+  "cell": "P2 x P3",
+  "sides": [
+   "P2.widens_or_narrows",
+   "P3.consuming"
+  ],
+  "level": "through an unfolded part",
+  "rests_on_a_reading": []
+ },
+ "E21": {
+  "theorem": "Becoming.Flow.Balances.includes_of_renewed",
+  "module": "Becoming.Retaining",
+  "line": 317,
+  "cell": "P2 x P3",
+  "sides": [
+   "P2.widens_or_narrows",
+   "P3.renewing"
+  ],
+  "level": "through an unfolded part",
+  "rests_on_a_reading": []
+ },
+ "E22": {
+  "theorem": "Becoming.Flow.Balances.includes_of_renewingIn",
+  "module": "Becoming.Retaining",
+  "line": 354,
+  "cell": "P2 x P3",
+  "sides": [
+   "P2.widens_or_narrows",
+   "P3.renewing"
+  ],
+  "level": "through an unfolded part",
+  "rests_on_a_reading": []
+ },
+ "E23": {
+  "theorem": "Becoming.Preemption.renewingAt_consuming_narrows",
+  "module": "Becoming.Retaining",
+  "line": 488,
+  "cell": "P2 x P3",
+  "sides": [
+   "P2.widens_or_narrows",
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "E24": {
+  "theorem": "Becoming.Preemption.not_undermining_yet_loses",
+  "module": "Becoming.Significance",
+  "line": 476,
+  "cell": "P2 x P3",
+  "sides": [
+   "P2.widens_or_narrows",
+   "P3.consuming"
+  ],
+  "level": "through an unfolded part",
+  "rests_on_a_reading": []
+ },
+ "F01": {
+  "theorem": "Becoming.Growth.ceases",
+  "module": "Becoming.Arising",
+  "line": 321,
+  "cell": "P0 x P3",
+  "sides": [
+   "P0.lasting",
+   "P3.consuming"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.Web.Unceasing as P0.lasting"
+  ]
+ },
+ "F02": {
+  "theorem": "Becoming.Turnover.identified",
+  "module": "Becoming.Identity",
+  "line": 1481,
+  "cell": "P0 x P3",
+  "sides": [
+   "P0.lasting",
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.Web.Unceasing as P0.lasting"
+  ]
+ },
+ "F03": {
+  "theorem": "Becoming.Turnover.reidentified",
+  "module": "Becoming.Identity",
+  "line": 1511,
+  "cell": "P0 x P3",
+  "sides": [
+   "P0.lasting",
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.Web.Unceasing as P0.lasting"
+  ]
+ },
+ "F04": {
+  "theorem": "Becoming.Renewable.kept_part_not_renewal",
+  "module": "Becoming.JointKeeping",
+  "line": 387,
+  "cell": "P0 x P3",
+  "sides": [
+   "P0.lasting",
+   "P3.consuming",
+   "P3.renewing"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.Viability.Keepable as P0.lasting",
+   "Becoming.Viability.Kernel as P0.lasting"
+  ]
+ },
+ "F05": {
+  "theorem": "Becoming.World.shuttle_world",
+  "module": "Becoming.Space",
+  "line": 306,
+  "cell": "P0 x P3",
+  "sides": [
+   "P0.ceasing",
+   "P0.lasting",
+   "P3.consuming"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.World.ArisingRecurs as P0.lasting"
+  ]
+ },
+ "F06": {
+  "theorem": "Becoming.World.selfDrawing_world",
+  "module": "Becoming.Space",
+  "line": 361,
+  "cell": "P0 x P3",
+  "sides": [
+   "P0.ceasing",
+   "P0.lasting",
+   "P3.consuming"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.World.ArisingRecurs as P0.lasting"
+  ]
+ },
+ "F07": {
+  "theorem": "Becoming.World.mutualism_world",
+  "module": "Becoming.Space",
+  "line": 388,
+  "cell": "P0 x P3",
+  "sides": [
+   "P0.ceasing",
+   "P0.lasting",
+   "P3.consuming"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.World.ArisingRecurs as P0.lasting"
+  ]
+ },
+ "F08": {
+  "theorem": "Becoming.World.drawdown_world",
+  "module": "Becoming.Space",
+  "line": 427,
+  "cell": "P0 x P3",
+  "sides": [
+   "P0.ceasing",
+   "P0.lasting",
+   "P3.consuming"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.World.ArisingRecurs as P0.lasting"
+  ]
+ },
+ "F09": {
+  "theorem": "Becoming.World.grazing_world",
+  "module": "Becoming.Space",
+  "line": 772,
+  "cell": "P0 x P3",
+  "sides": [
+   "P0.lasting",
+   "P3.consuming"
+  ],
+  "level": "through a definition",
+  "rests_on_a_reading": [
+   "Becoming.World.ArisingRecurs as P0.lasting"
+  ]
+ },
+ "F10": {
+  "theorem": "Becoming.World.seedbank_world",
+  "module": "Becoming.Space",
+  "line": 844,
+  "cell": "P0 x P3",
+  "sides": [
+   "P0.ceasing",
+   "P3.consuming"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "F11": {
+  "theorem": "Becoming.World.living_crosses",
+  "module": "Becoming.Space",
+  "line": 1061,
+  "cell": "P0 x P3",
+  "sides": [
+   "P0.lasting",
+   "P3.consuming"
+  ],
+  "level": "through a definition",
+  "rests_on_a_reading": [
+   "Becoming.World.ArisingRecurs as P0.lasting"
+  ]
+ },
+ "F12": {
+  "theorem": "Becoming.World.living_crosses_ceasing",
+  "module": "Becoming.Space",
+  "line": 1074,
+  "cell": "P0 x P3",
+  "sides": [
+   "P0.ceasing",
+   "P3.consuming"
+  ],
+  "level": "through a definition",
+  "rests_on_a_reading": []
+ },
+ "F13": {
+  "theorem": "Becoming.ClosedCapture.lock_line",
+  "module": "Becoming.GrammarRegularity",
+  "line": 320,
+  "cell": "P0 x P4",
+  "sides": [
+   "P0.lasting",
+   "P4.lock_or_its_reverse"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "F14": {
+  "theorem": "Becoming.ClosedCapture.Beyond.closed_line",
+  "module": "Becoming.GrammarRegularity",
+  "line": 369,
+  "cell": "P0 x P4",
+  "sides": [
+   "P0.lasting",
+   "P4.lock_or_its_reverse"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "F15": {
+  "theorem": "Becoming.NoReturnAt.recoverable_iff",
+  "module": "Becoming.ReadOffInTime",
+  "line": 606,
+  "cell": "P0 x P4",
+  "sides": [
+   "P0.no_return",
+   "P4.turn_in_time"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "F16": {
+  "theorem": "Becoming.noReturnAt_of_past",
+  "module": "Becoming.ReadOffInTime",
+  "line": 630,
+  "cell": "P0 x P4",
+  "sides": [
+   "P0.no_return",
+   "P4.turn_in_time"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "F17": {
+  "theorem": "Becoming.ReadingsPersist.Habitat.cleared_removes_its_readers",
+  "module": "Becoming.ReadingsPersist",
+  "line": 1313,
+  "cell": "P0 x P4",
+  "sides": [
+   "P0.lasting",
+   "P4.lock_or_its_reverse"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": [
+   "Becoming.RemovesItsReaders as P4.lock_or_its_reverse"
+  ]
+ },
+ "F18": {
+  "theorem": "Becoming.TurningInTime.locked_turns_in_time_share_iff",
+  "module": "Becoming.TurningInTime",
+  "line": 1852,
+  "cell": "P0 x P4",
+  "sides": [
+   "P0.lasting",
+   "P4.lock_or_its_reverse"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "F19": {
+  "theorem": "Becoming.TurningInTime.noReturnAt_of_below",
+  "module": "Becoming.TurningInTime",
+  "line": 2200,
+  "cell": "P0 x P4",
+  "sides": [
+   "P0.no_return",
+   "P4.turn_in_time"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "F20": {
+  "theorem": "Becoming.TurningInTime.noReturn_exists",
+  "module": "Becoming.TurningInTime",
+  "line": 2299,
+  "cell": "P0 x P4",
+  "sides": [
+   "P0.no_return",
+   "P4.turn_in_time"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "F21": {
+  "theorem": "Becoming.TurningInTime.Three.read_at_eight_ends",
+  "module": "Becoming.TurningInTime",
+  "line": 2682,
+  "cell": "P0 x P4",
+  "sides": [
+   "P0.lasting",
+   "P4.lock_or_its_reverse"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "F22": {
+  "theorem": "Becoming.TurningInTime.Three.read_to_ten",
+  "module": "Becoming.TurningInTime",
+  "line": 2771,
+  "cell": "P0 x P4",
+  "sides": [
+   "P0.lasting",
+   "P4.lock_or_its_reverse"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "F23": {
+  "theorem": "Becoming.TurningInTime.Three.unlocked_goes_on",
+  "module": "Becoming.TurningInTime",
+  "line": 2950,
+  "cell": "P0 x P4",
+  "sides": [
+   "P0.lasting",
+   "P4.lock_or_its_reverse"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ },
+ "F24": {
+  "theorem": "Becoming.TurningInTime.Three.share_read_goes_on",
+  "module": "Becoming.TurningInTime",
+  "line": 3090,
+  "cell": "P0 x P4",
+  "sides": [
+   "P0.lasting",
+   "P4.lock_or_its_reverse"
+  ],
+  "level": "direct",
+  "rests_on_a_reading": []
+ }
+}

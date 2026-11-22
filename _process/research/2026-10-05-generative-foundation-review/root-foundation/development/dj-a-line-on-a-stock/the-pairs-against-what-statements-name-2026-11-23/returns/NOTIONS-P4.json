@@ -1,0 +1,269 @@
+{
+ "pair": "P4",
+ "sides": [
+  {
+   "side": "LOCK (a rule set again from the share it already favours, which then stays)",
+   "notions": [
+    {
+     "name": "Becoming.RuleCapture.Locked",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
+     "line": 158,
+     "basis": "docstring",
+     "quote": "\"**Locked**: the rule in force favours, and it is not above what the reading of the share gives.\" (docstring, RuleCapture.lean:156-157; the chapter, 02-MAP section 10, names it: \"a lock read off the share (`RuleCapture.Locked`)\")",
+     "says": "Of one configuration (share, rule): `favours p.2 ∧ M.le p.2 (h p.1 p.2)`, the rule in force favours and is not above the rule the reading gives at that share.",
+     "grain": "at one configuration of a course (a step); 'for good' is only ever said by a theorem quantifying over later steps. Its arguments (order, favours, reading) are free, so the same definition with `reverse order` and `disfavours` is what sections 9 and 10 call 'locked the other way' and 'turned for good' (see notes)."
+    },
+    {
+     "name": "Becoming.RuleCapture.ReadsShare",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
+     "line": 148,
+     "basis": "chapter",
+     "quote": "02-MAP section 9, r-capture-through-the-rule: \"the rule read at each reading step be a monotone function of the share (`ReadsShare`)\" and, same paragraph, \"The lock belongs to how the rule reads, not the share it favours\"; section 11 lists it among \"§9's premises that keep a lock (`Raises`, `ReadsShare`, favouring kept upward, no `Accrues`)\"",
+     "says": "Of a reading `h`: for all shares x ≤ y and any two rules in force, the rule read at y is not below the rule read at x (the rule read is a monotone function of the share alone).",
+     "grain": "of the reading (the law), at every share; not of a course or step. It is the 'rule set again from the share' half of the side and is taken as a premise by the lock's theorems (54 statements name it), so a later reader may prefer to count it a premise under N-b; I list it because the chapter says the lock belongs to it."
+    },
+    {
+     "name": "Becoming.ClosedCapture.Unread",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
+     "line": 128,
+     "basis": "chapter",
+     "quote": "02-MAP section 9: the definition of 元吸引子, \"nothing in it reading what lies beyond the share\", with r-closed-capture \"where neither the next share nor the rule read reads the beyond (`Unread`)\" and the section's opening \"where every level of the loop reads only the share, a loss it does not read leaves it locked however large\"",
+     "says": "Of a selection step `f` and a reading `h` on pairs (share, beyond): the next share and the rule read are the same whatever lies beyond the share (definition at line 131; the table's line 128 is the docstring's first line).",
+     "grain": "of the law (step and reading), whole course; it states the loop's being closed to what lies beyond, not that a configuration is locked. Without ReadsShare and a favouring start it gives invariance only (`courses_alike_iff_unread`), so it states the side only together with them."
+    },
+    {
+     "name": "Becoming.ClosedCapture.lockedAlike",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean",
+     "line": 286,
+     "basis": "docstring",
+     "quote": "\"Two configurations of the joined two-level step alike in whether share and rule are locked.\" (docstring, GrammarRegularity.lean:285); 02-MAP section 9, r-rules-that-change-themselves-in-the-grammar: \"the line under the class of being locked or not never ends\"",
+     "says": "A relation on configurations ((share, loss), rule, step count): p and q are alike where `Locked M favours hA` holds of the one's (share, rule) exactly when it holds of the other's.",
+     "grain": "a class (two configurations compared), each at a step; it is Locked read as a class of the grammar, so it is the same notion as Locked, not a second one."
+    },
+    {
+     "name": "Becoming.PoolFromCourse.NotReadmitted",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+     "line": 122,
+     "basis": "reading",
+     "quote": "docstring: \"**The selection brings no reader of the beyond back** once none is in the pool.\"; 02-MAP section 10: \"brings no reader of the beyond back once none is present (`PoolFromCourse.NotReadmitted` ... supplied), then from a locked step with no reader present none is present again, the course is locked at every later step\". Neither says in so many words that it states the lock; my reading: it is the 'which then stays' half on the readers' side.",
+     "says": "Of a presence predicate and a selection step: from any configuration where no reader of the beyond is present, the next configuration has none present either.",
+     "grain": "of the law, from a configuration with no reader present on; a supplied premise (2 statements name it), kept apart as a reading."
+    }
+   ]
+  },
+  {
+   "side": "TURN IN TIME (a course that is read, or turns, before its point of no return)",
+   "notions": [
+    {
+     "name": "Becoming.TurningInTime.Turned",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+     "line": 2002,
+     "basis": "docstring",
+     "quote": "\"**The feasible courses**: the courses over one condition that are `X` turned to `H` at some step `T`, the start included.\" (docstring, TurningInTime.lean:2000-2001); 02-MAP section 11: \"with its turns to one standing use at any step as the feasible courses\"",
+     "says": "Of a level course `l` over one condition: there is a step T such that at every step l equals `turned X giving H T`.",
+     "grain": "a whole course, turned at some one step T (any T: it says 'turned', not 'in time'; 'in time' is said only when it is the `feasible` argument of Recoverable with MeetsNeed as `keeps`)."
+    },
+    {
+     "name": "Becoming.TurningInTime.turned",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+     "line": 1997,
+     "basis": "docstring",
+     "quote": "\"**The course `X` turned at step `T` to the standing use `H`**: `X t` at every step `t` up to `T`, and from there the level's course under `RegimeMargin.step giving H` from `X T`.\" (docstring, TurningInTime.lean:1995-1996); 02-MAP section 11: \"the line's level course is the course as it was turned one step after its first marked step (`TurningInTime.course_turned`)\"",
+     "says": "A function giving a level course: X up to step T, and after T the orbit of the regime's step under the one standing use H from X T.",
+     "grain": "a course, from a named step T on; a construction (the turned course itself), not a property. It is the general construction, not a built example, so I list it here; a stricter N-b would move it to the carriers."
+    },
+    {
+     "name": "Becoming.Recoverable",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean",
+     "line": 589,
+     "basis": "chapter",
+     "quote": "02-MAP section 11, r-turning-in-time: \"the course is recoverable at a step exactly where its level there is at or above `H + y`; so its point of no return ... is the first step at which its level is below §5's point of no return\"; docstring: \"**Recoverable at a step**: some course among the feasible ones, agreeing with `l` at every step up to `N`, keeps what `keeps` asks of a course.\"",
+     "says": "Of a course l and a step N, given `feasible` and `keeps`: some feasible course agreeing with l up to N satisfies `keeps`.",
+     "grain": "at a step of a course ('before its point of no return' is exactly this holding at the step)."
+    },
+    {
+     "name": "Becoming.NoReturnAt",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean",
+     "line": 594,
+     "basis": "docstring",
+     "quote": "\"**The point of no return of a course**: the first step at which it is not recoverable.\" (docstring, ReadOffInTime.lean:593); 02-MAP section 11: \"the line never ends exactly where that step comes before the point of no return of the course as it was (`TurningInTime.turns_in_time_iff_before`)\"",
+     "says": "Of a course l and a step N: l is not recoverable at N and is recoverable at every earlier step.",
+     "grain": "at one step (the first such); it states the boundary the side is said against, neither the turn nor the lock. Listed here because 'in time' is 'before this step'; it is also where 'too late' begins, and I found no separate non-theorem name for 'too late' in what I read."
+    },
+    {
+     "name": "Becoming.Web.ReadableInTime",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean",
+     "line": 645,
+     "basis": "docstring",
+     "quote": "\"**Readable in time**: the first step at which a selection read off the group's continuations can tell the losing course `l` from `l'` is a step at which `l` is still recoverable.\" (docstring, ReadOffInTime.lean:643-644)",
+     "says": "Of a web, a group and two courses: there is a step T that is the first at which some member of the group is admitted under one course and not the other, and l is recoverable at T.",
+     "grain": "of a pair of whole courses and a group on a web; 02-MAP section 11 says this selection side is \"not instantiated on the pair\" of TurningInTime, so it and Turned do not meet in a statement the chapter names."
+    },
+    {
+     "name": "Becoming.Web.ReadsInTime",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean",
+     "line": 651,
+     "basis": "docstring",
+     "quote": "\"**A family of selections reads in time**: it tells the losing course `l` from `l'` apart at a step at which `l` is still recoverable.\" (docstring, ReadOffInTime.lean:649-650)",
+     "says": "Of a family of selections indexed by step and two courses: there is a step T at which the family tells l from l' apart (`TellsApartAt`) and l is recoverable at T.",
+     "grain": "of a family of selections over a pair of whole courses."
+    },
+    {
+     "name": "Becoming.PoolFromCourse.Stands",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+     "line": 255,
+     "basis": "reading",
+     "quote": "docstring: \"**The readers of the loss stand while it is below `K`.**\"; 02-MAP section 10: \"be gone from `K` on, their standing hanging on what the loss takes (`PoolFromCourse.windowRead`, `PoolFromCourse.Stands`)\". Neither says it states the turn; my reading: it says a reader of the beyond is still in the pool at a configuration, which in section 10 is where a reading can still reach the rule, and its failing is the lock's side (\"Gone, they are not readmitted\").",
+     "says": "Of a configuration (share, loss) and a bound K: the loss is below K.",
+     "grain": "at a configuration; a bound on the loss, with the reading 'readers stand' given only by its name and docstring. Kept apart as a reading."
+    }
+   ]
+  }
+ ],
+ "carriers": [
+  {
+   "name": "Becoming.RuleCapture.Raises",
+   "why": "Premise many laws take (38 statements): selection under a favouring rule does not lower the share. The chapter lists it among \"§9's premises that keep a lock\" but also says \"The lock belongs to how the rule reads, not the share it favours\", so it is the selection's premise (target capture), not the lock's notion."
+  },
+  {
+   "name": "Becoming.RuleCapture.CarrierCounts",
+   "why": "Structure the count statements are stated on (two counts, second positive), read as a population or as a rule; with its fields carrier, other, and order, select, proportional, threshold, margin, byMargin, hi, lo, twoToOne."
+  },
+  {
+   "name": "Becoming.RuleCapture.CarrierCounts.favours",
+   "why": "The direction of a rule (each carrier leaves at least as many as each other); it is the `favours` argument of Locked and a premise of 101 statements. With CarrierCounts.disfavours it says which way, not that a course is locked or turned."
+  },
+  {
+   "name": "Becoming.RuleCapture.CarrierCounts.disfavours",
+   "why": "As favours, the other direction; the `favours` argument when Locked is read 'the other way'."
+  },
+  {
+   "name": "Becoming.RuleCapture.reverse",
+   "why": "An order read the other way round; the device by which 'turned for good' is written as Locked in the other direction."
+  },
+  {
+   "name": "Becoming.ClosedCapture.Accrues",
+   "why": "Premise (25 statements): every step adds at least one to what lies beyond the share. States the loss growing, neither side."
+  },
+  {
+   "name": "Becoming.ClosedCapture.join",
+   "why": "Built law: the share's own step with a step beyond the share; with joinRead, loopPart and (in GrammarRegularity) ClosedCapture.loss, the configuration the closed-capture statements are stated on."
+  },
+  {
+   "name": "Becoming.ClosedCapture.joinRead",
+   "why": "The share's reading read on the pair (share, beyond); a carrier of the closed loop's statements."
+  },
+  {
+   "name": "Becoming.ClosedCapture.loopPart",
+   "why": "Projection: of a configuration, the share, rule and step count, leaving out the beyond. What `Unread`'s class is taken on; TurningInTime.windowRegroup uses it as 'the way'."
+  },
+  {
+   "name": "Becoming.ClosedCapture.favouredAlike",
+   "why": "A class: two configurations alike in whether the rule in force favours. Used to state that a line under favouring ends (`loss_ends_line`, 'one sufficient way out'); the class the statement is on, not a notion of a turn."
+  },
+  {
+   "name": "Becoming.ClosedCapture.Drawn.pool",
+   "why": "Built reading: the rule read as the pool of readers counted as the population counts them; with Drawn.poolRead. The reading the section 9 pool theorems are stated on."
+  },
+  {
+   "name": "Becoming.ClosedCapture.Thinned.lossPool",
+   "why": "Built reading: the others read the rule as v while the loss is below N and as w from then on. It carries 'read late' as a parameter N; whether late or in time is said by theorems (`kept_iff`, `turned_iff`), not by this definition. With Thinned.course."
+  },
+  {
+   "name": "Becoming.ClosedCapture.Thinned.inTime",
+   "why": "Built example (witness course): \"The loss read by the others from the start.\" Named for the outcome but a course of particular numbers; the outcome is `Thinned.inTime_turned`, a theorem."
+  },
+  {
+   "name": "Becoming.ClosedCapture.Thinned.late",
+   "why": "Built example (witness course): \"The same readers reading the same loss once it has reached three.\" The 'read late' name in the Lean that I found for this pair; a built course, its outcome `Thinned.late_kept` is a theorem. Likewise Becoming.RuleCapture.Reversed.late and Becoming.ChoiceCountCapture.Witness.Stale.late are reading schedules whose first reading is one step late (built examples)."
+  },
+  {
+   "name": "Becoming.ReadInTime.shapedLossPool",
+   "why": "Abbreviation: Thinned.lossPool over three rules after shaping; with ReadInTime.course, ReadInTime.lossCourse, ReadInTime.Window.readFrom and Window.twoToTwo, the courses the timing theorems are stated on. ReadInTime has no non-theorem declaration for 'kept' or 'turned' in the table; both are theorem statements."
+  },
+  {
+   "name": "Becoming.PoolFromCourse.windowRead",
+   "why": "Built reading: the readers of the loss read it as hL while it lies in [N, K), elsewhere the rule is read off the share. The window is its parameters; with withBound, boundRead, boundOrder, liftShare, twoShares, bear, borneStep and the namespaces Drained and Borne (built examples)."
+  },
+  {
+   "name": "Becoming.TurningInTime.pair",
+   "why": "The step the section 11 statements are on: a way and a level, taken to (after w x, left w x); with TurningInTime.net (a next only where the level meets the need), the carrier of both endings."
+  },
+  {
+   "name": "Becoming.TurningInTime.asItWas",
+   "why": "The step with `alone` at every level, 'the course as it was': the unturned course against which a turn is said, and which section 11 identifies with section 9's course read off the share (`join_is_asItWas`). A built law both sides are stated on; see notes."
+  },
+  {
+   "name": "Becoming.TurningInTime.AloneOutside",
+   "why": "Premise many laws take (22 statements): outside the marked levels the way after a step is `alone` of the way. It fixes where the level can make a difference (the marks), which the chapter says are \"given, not derived\"; it states neither side."
+  },
+  {
+   "name": "Becoming.TurningInTime.windowAlone",
+   "why": "The way's step where the rule is read off the share alone (the lock's step as it was) on the regrouped configuration; with windowRegroup, windowAfter, windowLeft, windowAfterShare, the carriers by which section 10's window course is a course of the pair."
+  },
+  {
+   "name": "Becoming.TurningInTime.Three.giving",
+   "why": "Built example (witness `TurningInTime.Three`), with Three.use, left, after, shareOrder, ruleOrder, lockShare, lockRead, lockUse, lockAfter, riseShare, riseAfter, noRule, drawerUse, zeroShare."
+  },
+  {
+   "name": "Becoming.ChoiceCountCapture.choose",
+   "why": "Built selection on CarrierCounts (the chosen policy's count rises by one), with ChoiceCountCapture.weighted (the rule read from weighted counts), foldAfter, memberFolds, byScore and the Witness namespace; the lock there is said with RuleCapture.Locked and Raises/ReadsShare by theorems."
+  },
+  {
+   "name": "Becoming.Web.FirstApart",
+   "why": "The first step at which some member of a group is admitted under one course and not the other; with Web.TellsApartAt it is the 'read' half inside ReadableInTime and ReadsInTime, but by itself says nothing of recoverability, so it is a component both a timely and a late reading share."
+  },
+  {
+   "name": "Becoming.FourReaders.web",
+   "why": "Built example (the FourReaders namespace of ReadOffInTime: Formation, Place, Stop, flow, levels, Feasible, DwellerKept, Early and others); judged from the table's names and lines only, bodies not opened."
+  }
+ ],
+ "refused": [
+  {
+   "name": "Becoming.TurningInTime.MeetsNeed",
+   "why": "\"What is asked of a course: the need met at every step.\" It is the `keeps` argument of Recoverable in section 11: going on at all (the need met throughout), not a turn and not a lock. No chapter or docstring words say it states either side."
+  },
+  {
+   "name": "Becoming.PoolFromCourse.ReadsThroughPresent",
+   "why": "Supplied premise: where no reader of the beyond is in the pool the rule read is the share-readers' rule. It ties the pool to the reading (how the model is built); it does not say that the loop is closed or stays so, which NotReadmitted and Locked do."
+  },
+  {
+   "name": "Becoming.LineOnAStock.Holds",
+   "why": "\"A configuration from which what its way takes holds\" (also Becoming.WayOfUnits.Holds): the level is at or above what the way takes. It is section 5's holding regime at a way of units, the far side of a point of no return of a level, not a reading or turn of a course before it. The module account of LineOnAStock (first 135 lines, searched for 'turn', 'lock', 'in time', 'no return') says \"a lock on these units are not here\" (line 123) and names the lock only through TurningInTime's theorems. LineOnAStock.Goes, Regime, Needing, Below, NoneMet, Ends, Alike, after, taken, left, net, course are carriers or premises of that model; I found no notion there stating either side of P4."
+  },
+  {
+   "name": "Becoming.Law.stepWhile",
+   "why": "A law's step cut where it cannot go on (GuardedStep): the carrier of 'the net ends'. Opened only through TurningInTime.net's body; states neither side."
+  },
+  {
+   "name": "Becoming.StandsLate",
+   "why": "ReadingsPersist: \"A group of relata stands at arbitrarily late steps under a level history.\" 'Late' here is persistence at ever later steps, not a reading made late."
+  },
+  {
+   "name": "Becoming.Regulation.ReadsLate",
+   "why": "\"The rule reads ℓ steps late\": a regulator's rule depends only on the record up to t − ℓ. A delay of a regulator in section 8's regulation, not the others' late reading of a loss in a lock; only the docstring's first lines were read. Becoming.Flow.RelaysLate (same file, line 1182) and Becoming.Frequency.readsLate (Frequency.lean:745) likewise: delays in other models, docstrings only."
+  },
+  {
+   "name": "Becoming.RuleShaping.shaped",
+   "why": "Not opened. From the chapter (r-shaping-the-rule-selected-by-what-comes-back) it is the rule after shaping, a built rule on CarrierCounts; with RuleShaping.byBack, thresholdBack, thenBy, held, Grouped and DrawnShaping.drawn, drawnRead, drawnCourse and DrawnReplacement.up, down, stay, whole, at_ these are rules, readings and chain weights the lock's theorems are stated on (carriers by the chapter's telling), refused as side notions without opening the Lean."
+  },
+  {
+   "name": "Becoming.Law.Absorbing",
+   "why": "Attraction.lean:159, with Becoming.AbsorbingUnder and Becoming.Ratchet.next: found by name search only, not opened. They belong to section 2 (return and attraction); sections 9 to 11 of the chapter do not name them, so nothing I read says they state the lock."
+  },
+  {
+   "name": "Becoming.ReadingSchedule.Unread",
+   "why": "ReadingSchedule.lean:91, found by name only, not opened; another module's notion of the same name as ClosedCapture.Unread. Not named in sections 9 to 11."
+  },
+  {
+   "name": "Becoming.RuleRebuilding.Closed",
+   "why": "RuleRebuilding (Closed, Held, Gone, NoHolder, Steady, Ends and about 75 more rows) and RuleHandoff: not opened and not named in sections 9 to 11; listed so a later reader knows they were seen in the table and left."
+  },
+  {
+   "name": "Becoming.Captured.next",
+   "why": "Capture.lean:151, with Becoming.offspringCount: the module the chapter's r-target-capture rests on (`share_rises`, `Law.perturbation_reabsorbed`). Not opened; by the chapter it is a selection raising a target's share with no rule read from the share, so a carrier before the lock, not the lock."
+  }
+ ],
+ "not_read": "Read whole: 02-MAP.md lines 395 to 526 (sections 9, 10, 11). Read in the Lean, definitions and docstrings only (no proofs, no theorem judged): RuleCapture.lean lines 1-60 of the module account, 125-165, 460-500 and the definitions near 575-586, 676-690, 715-726, 836-848; ClosedCapture.lean definitions at 120-145, 212-226, 266-276, 338-362, 398-418, 486-495, 550-560, 596-602, 775-810, 930-950 and the two statements `Thinned.kept_iff` and `Thinned.turned_iff` (893-928) only to see how 'kept' and 'turned' are written; TurningInTime.lean 335-372, 1312-1340, 1778-1786, 1985-2012, 2400-2420, 2520-2550, 2582-2592, 2674-2680 and a search of its first 330 lines; ReadOffInTime.lean 128-143, 228-260, 575-598, 636-655; GrammarRegularity.lean 272-297; PoolFromCourse.lean 110-134, 244-258, 392-408, 492-504; ReadInTime.lean 122-140, 203-210, 658-664; LineOnAStock.lean 5-40, 146-150, 183-200, 414-418, 786-814 and a search of its first 135 lines; a few docstring lines each of ChoiceCountCapture, Regulation, ReadingsPersist, Frequency, WayOfUnits. Not read: the module accounts at the top of ClosedCapture, PoolFromCourse, ReadInTime, ReadOffInTime, ChoiceCountCapture (only RuleCapture's first 60 lines and LineOnAStock's first 40 were read as accounts); the whole of RuleShaping, DrawnShaping, DrawnReplacement, Capture, Pace, GuardedStep, RegimeMargin, Attraction, RuleRebuilding, RuleHandoff, ReadingSchedule, BeyondCoupling, WayOfUnits beyond one docstring; the FourReaders namespace bodies; GenerativeCore, RelationalRenewal and InquirySufficiency (the three modules beside the package) were not opened and not searched; chapters 03, 05, 07 (07 section 3.6 'reading in time', which the docstrings of Recoverable and ReadableInTime belong to, was not read); the records and study notes. The table was searched by name pattern (lock, turn, intime, noreturn, recover, late, kept, window, captur, deadline, early, unread, absorb, ratchet) and by module for the candidate modules; a notion of this pair under another name in an unsearched module would have been missed. FROZEN.md was not read. No Lean, build or test was run; no file was written.",
+ "notes": "AI-written (Claude Fable). 1. Two notions that are one. In sections 9 and 10 the Lean has no non-theorem declaration for 'turned', 'turned for good', 'kept' or 'read in time' that I found in RuleCapture, ClosedCapture, ReadInTime, PoolFromCourse or ChoiceCountCapture (table rows of those modules, and the definitions opened). 'Kept for good' is written `∀ k, Locked order favours (poolRead u w) ...` and 'turned for good' is written `∀ k, Locked (reverse order) disfavours (poolRead u w) ...` (ClosedCapture.lean:900-923, `Thinned.kept_iff`, `Thinned.turned_iff`). So in the capture modules the turn is the same definition as the lock with the order reversed: a script that takes `Locked` as the lock's notion will find it on both sides of every such theorem, and a theorem naming only `Locked` may be placing a lock against a turn. `ClosedCapture.lockedAlike` is `Locked` as a class, the same notion again. 2. The two sides are named in different vocabularies that the chapter says are joined only in part. The turn has its own non-theorem names only in section 11's vocabulary (TurningInTime.turned, Turned; Recoverable, NoReturnAt, Web.ReadableInTime, Web.ReadsInTime in ReadOffInTime, on level courses and webs), where the lock has no name of its own: section 11 brings the lock in by `RuleCapture.Locked` on the regrouped configuration (`locked_closed`, `locked_alone`, `locked_ends_with_net`). The chapter (section 11, 'What is given') says the selection side (`FirstApart`, `ReadableInTime`) \\\"is not instantiated on the pair\\\" and that the lock's courses are identified with the pair's \\\"at a need of nothing\\\". So statements naming Locked together with Turned/Recoverable/NoReturnAt should be expected only in TurningInTime, if at all; I did not check, since I judge no theorem. 3. 'In time' and 'late' are nowhere a property by themselves in what I read: in section 9 they are the parameter N of `Thinned.lossPool` / `ReadInTime.shapedLossPool` and the counts at the reading step; in section 10 the parameters N and K of `PoolFromCourse.windowRead`; in section 11 the marked levels (a free predicate, \\\"given, not derived\\\") and `Recoverable` at a step. The only definitions named `inTime` and `late` are built witness courses (ClosedCapture.Thinned.inTime, .late), listed as carriers. 4. `TurningInTime.asItWas` ('the course as it was') is the nearest thing to a name for the unturned course; the chapter identifies section 9's course read off the share with it (`join_is_asItWas`). Its docstring says only what the step is, so I left it a carrier; a reader who wants a lock-side notion in section 11's vocabulary would look there first. 5. Three placements are judgment and could go the other way: ReadsShare (a premise, listed on the lock's side on the chapter's sentence that the lock belongs to how the rule reads), Unread (the loop's closedness, a condition and not the lock), and NoReturnAt (the boundary, listed under the turn). NotReadmitted and Stands are basis 'reading' and kept apart. 6. Chapter sentences the non-theorem declarations do not carry, as far as read: the opening of section 9, \\\"a deadline bounds that window\\\" (no definition named deadline or window in ReadInTime's table rows; it is the theorem `ReadInTime.deadline`); \\\"the point of no return belongs to the share's course\\\" (a Reading in section 9; NoReturnAt is defined on level courses over conditions and section 11 joins it only to courses that never rise, not to the share's course); and 'critical mass' (no definition of that name among the rows searched; DrawnShaping.CriticalMass is a witness namespace). 7. The table's line numbers sometimes point at a docstring's first line (ClosedCapture.Unread: table 128, `def` at 131) and sometimes at the `def` (RuleCapture.Locked 158); the lines given above are the table's."
+}

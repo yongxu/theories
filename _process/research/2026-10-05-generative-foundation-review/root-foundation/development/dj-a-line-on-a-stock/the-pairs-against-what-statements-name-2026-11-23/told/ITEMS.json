@@ -1,0 +1,2138 @@
+{
+ "items": [
+  {
+   "item": "A04",
+   "theorem": "Becoming.Web.renewingAlong_not_consumingAlong",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
+   "lines": [
+    92,
+    96
+   ],
+   "cell": "P3 within",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "WALL",
+    "WALL"
+   ],
+   "from_to": [
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ],
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(renewing : W.RenewingAlong R t g) : ¬ W.ConsumingAlong R t g",
+    "(renewing : W.RenewingAlong R t g) : ¬ W.ConsumingAlong R t g"
+   ],
+   "handed_in": [
+    "Nothing beyond the near side's notion. W, the continuation R, the step t and the formation g are arbitrary and the same on both sides.",
+    "Nothing beyond the near-side notion: any web W, any continuation R, any step t and formation g."
+   ]
+  },
+  {
+   "item": "A08",
+   "theorem": "Becoming.Web.renewed_not_consumed",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+   "lines": [
+    218,
+    220
+   ],
+   "cell": "P3 within",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "WALL",
+    "WALL"
+   ],
+   "from_to": [
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ],
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(renewed : W.Renewed c) : ¬ W.Consumed c",
+    "(renewed : W.Renewed c) : ¬ W.Consumed c"
+   ],
+   "handed_in": [
+    "Nothing beyond the near side's notion; W and c arbitrary.",
+    "Nothing: any web W, any condition c."
+   ]
+  },
+  {
+   "item": "A09",
+   "theorem": "Becoming.Web.kept_or_broken",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+   "lines": [
+    233,
+    238
+   ],
+   "cell": "P3 within",
+   "rests_on_a_reading": [
+    "Becoming.Web.Broken as P3.consuming",
+    "Becoming.Web.Kept as P3.renewing"
+   ],
+   "verdicts": [
+    "COVERS",
+    "COVERS"
+   ],
+   "from_to": [
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ],
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [
+    "three-outcomes-of-a-loss"
+   ],
+   "quotes": [
+    "(depends : W.requires t g c) (met : W.need t g c ≤ W.level t c) : W.Kept t g c ∨ W.Broken t g c",
+    "(depends : W.requires t g c) (met : W.need t g c ≤ W.level t c) : W.Kept t g c ∨ W.Broken t g c"
+   ],
+   "handed_in": [
+    "depends: g requires c at t; met: the need is met at t (need ≤ level at t). Neither is a notion of either side.",
+    "`depends : W.requires t g c` and `met : W.need t g c ≤ W.level t c`: the dependence holds at t and is met at t."
+   ]
+  },
+  {
+   "item": "A10",
+   "theorem": "Becoming.Web.kept_not_broken",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+   "lines": [
+    240,
+    241
+   ],
+   "cell": "P3 within",
+   "rests_on_a_reading": [
+    "Becoming.Web.Broken as P3.consuming",
+    "Becoming.Web.Kept as P3.renewing"
+   ],
+   "verdicts": [
+    "WALL",
+    "WALL"
+   ],
+   "from_to": [
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ],
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(kept : W.Kept t g c) : ¬ W.Broken t g c",
+    "(kept : W.Kept t g c) : ¬ W.Broken t g c"
+   ],
+   "handed_in": [
+    "Nothing beyond the near side's notion.",
+    "Nothing."
+   ]
+  },
+  {
+   "item": "A11",
+   "theorem": "Becoming.Web.RenewingAt.not_undermining",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+   "lines": [
+    337,
+    341
+   ],
+   "cell": "P3 within",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "WALL",
+    "WALL"
+   ],
+   "from_to": [
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ],
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [
+    "07"
+   ],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(renewing : W.RenewingAt t f) : ¬ W.UnderminingAt t f",
+    "(renewing : W.RenewingAt t f) : ¬ W.UnderminingAt t f"
+   ],
+   "handed_in": [
+    "Nothing beyond the near side's notion.",
+    "Nothing."
+   ]
+  },
+  {
+   "item": "A12",
+   "theorem": "Becoming.Web.RenewingAt.not_breaking",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+   "lines": [
+    343,
+    345
+   ],
+   "cell": "P3 within",
+   "rests_on_a_reading": [
+    "Becoming.Web.BreakingAt as P3.consuming"
+   ],
+   "verdicts": [
+    "WALL",
+    "WALL"
+   ],
+   "from_to": [
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ],
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(renewing : W.RenewingAt t f) : ¬ W.BreakingAt t f",
+    "(renewing : W.RenewingAt t f) : ¬ W.BreakingAt t f"
+   ],
+   "handed_in": [
+    "Nothing beyond the near side's notion.",
+    "Nothing."
+   ]
+  },
+  {
+   "item": "A13",
+   "theorem": "Becoming.Web.not_renewing_at_of_broken",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+   "lines": [
+    352,
+    356
+   ],
+   "cell": "P3 within",
+   "rests_on_a_reading": [
+    "Becoming.Web.Broken as P3.consuming"
+   ],
+   "verdicts": [
+    "WALL",
+    "ACROSS"
+   ],
+   "from_to": [
+    [
+     "CONSUMING",
+     "RENEWING",
+     ""
+    ],
+    [
+     "CONSUMING",
+     "RENEWING",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(joins : W.Participates t f c) (broken : W.Broken t g c) : ¬ W.RenewingAt t f",
+    "(joins : W.Participates t f c) (broken : W.Broken t g c) : ¬ W.RenewingAt t f"
+   ],
+   "handed_in": [
+    "joins: f participates in c at t (requires it or draws on it). This is the link between what Broken is said of (g's dependence on c) and what RenewingAt is said of (f's event).",
+    "`joins : W.Participates t f c`: f requires or draws on c at t. This is what joins the broken dependence of g to the event of f."
+   ]
+  },
+  {
+   "item": "B09",
+   "theorem": "Becoming.Renewable.finite_reading_withholds_renewal",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LabelledRoles.lean",
+   "lines": [
+    160,
+    169
+   ],
+   "cell": "P3 within",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "ACROSS",
+    "ACROSS"
+   ],
+   "from_to": [
+    [
+     "CONSUMING",
+     "RENEWING",
+     ""
+    ],
+    [
+     "CONSUMING",
+     "RENEWING",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(sound : ∀ r, reading r → ¬ (conditions.dependence.along r).ConsumingIn .focal) :\n    ∃ r, (conditions.dependence.along r).RenewingIn .focal ∧ ¬ reading r",
+    "(sound : ∀ r, reading r → ¬ (conditions.dependence.along r).ConsumingIn .focal) : ∃ r, (conditions.dependence.along r).RenewingIn .focal ∧ ¬ reading r"
+   ],
+   "handed_in": [
+    "h : Nat; reading : Run process → Prop; decided : ∀ r r', r.AgreeUpTo h r' → reading r → reading r' (the reading is fixed by the first h steps of a run). The process and conditions are the built ones of Renewable, so the statement is general over horizons and readings but not over processes.",
+    "h : Nat; reading : Run process → Prop; decided : ∀ r r', r.AgreeUpTo h r' → reading r → reading r' (the reading is fixed by the first h steps); sound (the reading includes no run in which focal consumes); and the built Renewable.process and conditions, which are fixed objects, not variables."
+   ]
+  },
+  {
+   "item": "B10",
+   "theorem": "Becoming.Optimum.Holding.doubling_capacity",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+   "lines": [
+    9392,
+    9451
+   ],
+   "cell": "P3 within",
+   "rests_on_a_reading": [
+    "Becoming.Web.Broken as P3.consuming",
+    "Becoming.Web.Kept as P3.renewing"
+   ],
+   "verdicts": [
+    "BUILT CASE",
+    "PASSAGE"
+   ],
+   "from_to": [
+    [
+     "RENEWING",
+     "CONSUMING",
+     "under X and not Y in one built setting (floor oneUnit: Kept), under Y and not X in the other (no floor: Broken); the 'not' follows from the two definitions at one step and is not stated"
+    ],
+    [
+     "CONSUMING",
+     "RENEWING",
+     "p"
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [
+    "drawers-in-turn"
+   ],
+   "quotes": [
+    "(web (onSource (InTurn.levels (fun _ z => z + z) rules 2 3))).Kept 0 .dweller .source) ∧\n    ∀ rules, InTurn.Perfect (fun _ z => z + z) (fun _ _ _ => 0) rules 2 2 →\n      (web (onSource (InTurn.levels (fun _ z => z + z) rules 2 3))).Broken 0 .dweller .source",
+    "(∀ rules, InTurn.Perfect (fun _ z => z + z) oneUnit rules 2 2 → rules 0 0 3 = 3 ∧ (web (onSource (InTurn.levels (fun _ z => z + z) rules 2 3))).Kept 0 .dweller .source) ∧ ∀ rules, InTurn.Perfect (fun _ z => z + z) (fun _ _ _ => 0) rules 2 2 → (web (onSource (InTurn.levels (fun _ z => z + z) rules 2 3))).Broken 0 .dweller .source"
+   ],
+   "handed_in": [
+    "For each conjunct: a profile `rules` and that it is perfect (InTurn.Perfect, growth doubling `fun _ z => z + z`, 2 drawers, horizon 2) within the stated floor: `oneUnit` (every drawer after the first must leave all but one unit) for Kept, `fun _ _ _ => 0` (no floor) for Broken. Fixed by the witness: starting level 3, a dweller needing two, the web read on the source.",
+    "The parameter is the floor on what each drawer must leave (the capacity of the others' draw): value 'oneUnit' gives Kept, value '(fun _ _ _ => 0)' gives Broken; these are two stated values, not ranges. Also handed in: rules and its being InTurn.Perfect for that floor; the built game (what stands after a step is twice what is left, two drawers, two steps, the source read from three, a dweller on the source)."
+   ]
+  },
+  {
+   "item": "B16",
+   "theorem": "Becoming.Ranking.wholeRun_of_renewed",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
+   "lines": [
+    143,
+    148
+   ],
+   "cell": "P3 within",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "WALL",
+    "WALL"
+   ],
+   "from_to": [
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ],
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(renewed : ∀ c, (U w).Renewed c)\n    (e : F × Nat) : wholeRun U w e ↔ (U w).active e.2 e.1",
+    "(renewed : ∀ c, (U w).Renewed c) (e : F × Nat) : wholeRun U w e ↔ (U w).active e.2 e.1  — with wholeRun U w e := (U w).active e.2 e.1 ∧ ¬ (U w).ConsumingIn e.1"
+   ],
+   "handed_in": [
+    "U : W → Web F C (a family of courses, each a web); w; e : F × Nat (a formation and a step). Nothing besides the near-side premise; `wholeRun U w e` unfolds to `(U w).active e.2 e.1 ∧ ¬ (U w).ConsumingIn e.1`.",
+    "U : W → Web F C and the course w; the event e. The denial of consuming is delivered only for formations at events where they are active (the right side of the iff)."
+   ]
+  },
+  {
+   "item": "B17",
+   "theorem": "Becoming.Ranking.stepwise_of_renewed",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
+   "lines": [
+    150,
+    156
+   ],
+   "cell": "P3 within",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "WALL",
+    "WALL"
+   ],
+   "from_to": [
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ],
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(renewed : ∀ c, (U w).Renewed c)\n    (e : F × Nat) : stepwise U w e ↔ (U w).active e.2 e.1",
+    "(renewed : ∀ c, (U w).Renewed c) (e : F × Nat) : stepwise U w e ↔ (U w).active e.2 e.1  — with stepwise U w e := (U w).active e.2 e.1 ∧ ¬ (U w).UnderminingAt e.2 e.1"
+   ],
+   "handed_in": [
+    "U : W → Web F C; w; e : F × Nat. Nothing besides the near-side premise; `stepwise U w e` unfolds to `(U w).active e.2 e.1 ∧ ¬ (U w).UnderminingAt e.2 e.1`.",
+    "U : W → Web F C and the course w; the event e. The denial of undermining is delivered only for events at which the formation is active."
+   ]
+  },
+  {
+   "item": "B18",
+   "theorem": "Becoming.Ranking.renewed_extends_iff",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
+   "lines": [
+    158,
+    168
+   ],
+   "cell": "P3 within",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "ACROSS",
+    "ACROSS"
+   ],
+   "from_to": [
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ],
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [
+    "07"
+   ],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(renewed : ∀ c, (U w').Renewed c) :\n    (ExtendsUnder (wholeRun U) w w' ↔ (∀ e, wholeRun U w e → (U w').active e.2 e.1) ∧\n      ∃ e, (U w').active e.2 e.1 ∧ ¬ wholeRun U w e)",
+    "(renewed : ∀ c, (U w').Renewed c) : (ExtendsUnder (wholeRun U) w w' ↔ (∀ e, wholeRun U w e → (U w').active e.2 e.1) ∧ ∃ e, (U w').active e.2 e.1 ∧ ¬ wholeRun U w e) ∧ (ExtendsUnder (stepwise U) w w' ↔ (∀ e, stepwise U w e → (U w').active e.2 e.1) ∧ ∃ e, (U w').active e.2 e.1 ∧ ¬ stepwise U w e)"
+   ],
+   "handed_in": [
+    "U : W → Web F C; two courses w and w'. Nothing besides the near-side premise, which is on w' only. `ExtendsUnder reading w w'` is: w' includes every event w does, and one more (Ranking.lean 109-112).",
+    "U : W → Web F C; two courses w and w'; the order ExtendsUnder (one course includes every event the other does under the reading, and one more). Nothing is assumed of the other course w."
+   ]
+  },
+  {
+   "item": "C01",
+   "theorem": "Becoming.Ranking.renewed_active_extends_iff",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
+   "lines": [
+    170,
+    183
+   ],
+   "cell": "P3 within",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "ACROSS",
+    "ACROSS"
+   ],
+   "from_to": [
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ],
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(renewed : ∀ c, (U w').Renewed c) (always : ∀ t f, (U w').active t f) : (ExtendsUnder (wholeRun U) w w' ↔ ∃ e, ¬ wholeRun U w e) ∧ (ExtendsUnder (stepwise U) w w' ↔ ∃ e, ¬ stepwise U w e)",
+    "(renewed : ∀ c, (U w').Renewed c) (always : ∀ t f, (U w').active t f) : (ExtendsUnder (wholeRun U) w w' ↔ ∃ e, ¬ wholeRun U w e) ∧ (ExtendsUnder (stepwise U) w w' ↔ ∃ e, ¬ stepwise U w e)"
+   ],
+   "handed_in": [
+    "`always : ∀ t f, (U w').active t f` (every formation active at every step of the renewing course); a family of courses U : W → Web F C and a second, arbitrary course w; the two readings wholeRun and stepwise, through which alone the consuming notions enter.",
+    "always : every formation active at every step of course w'; the family of courses U and the two courses w, w'. (Renewed is asked of EVERY condition of w', not of one formation's conditions.)"
+   ]
+  },
+  {
+   "item": "C06",
+   "theorem": "Becoming.SupportGatedWebs.jointly_consuming",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RenewalFlow.lean",
+   "lines": [
+    283,
+    296
+   ],
+   "cell": "P3 within",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "ACROSS",
+    "ACROSS"
+   ],
+   "from_to": [
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ],
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [
+    "02"
+   ],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(SupportGated.web (alone start renew need d1)).RenewingIn .focal ∧ (SupportGated.web (alone start renew need d2)).RenewingIn .focal ∧ (SupportGated.web (together start renew need d1 d2)).ConsumingIn .focal ∧ ∃ T, ∀ t, T ≤ t → ¬ (SupportGated.web (together start renew need d1 d2)).active t .focal ∧ ¬ (SupportGated.web (together start renew need d1 d2)).active t .sustaining",
+    "(SupportGated.web (alone start renew need d1)).RenewingIn .focal ∧ (SupportGated.web (alone start renew need d2)).RenewingIn .focal ∧ (SupportGated.web (together start renew need d1 d2)).ConsumingIn .focal"
+   ],
+   "handed_in": [
+    "`within1 : ∀ t, d1 t ≤ renew`, `within2 : ∀ t, d2 t ≤ renew` (each draw alone within the renewal), `joint : ∀ t, renew < d1 t + d2 t` (together above it at every step), `positive : 0 < need`, `supported : need ≤ start`; the family's own laws `alone` and `together`.",
+    "within1 : ∀ t, d1 t ≤ renew; within2 : ∀ t, d2 t ≤ renew; joint : ∀ t, renew < d1 t + d2 t; positive : 0 < need; supported : need ≤ start; and the built family of laws `alone` and `together`"
+   ]
+  },
+  {
+   "item": "C10",
+   "theorem": "Becoming.Web.RenewingInWithin.not_undermining_for",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Restoration.lean",
+   "lines": [
+    168,
+    173
+   ],
+   "cell": "P3 within",
+   "rests_on_a_reading": [
+    "Becoming.Web.UnderminingFor as P3.consuming"
+   ],
+   "verdicts": [
+    "WALL",
+    "WALL"
+   ],
+   "from_to": [
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ],
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(renewing : W.RenewingInWithin p f) : ¬ W.UnderminingFor p t f",
+    "(renewing : W.RenewingInWithin p f) : ¬ W.UnderminingFor p t f"
+   ],
+   "handed_in": [
+    "Nothing beyond the near side's notion. The same p stands on both sides; t is any step; W is any web (section variable).",
+    "nothing beyond the near-side notion; any web W, any step t; the SAME p stands on both sides"
+   ]
+  },
+  {
+   "item": "C11",
+   "theorem": "Becoming.Web.RenewingInWithin.not_consuming",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Restoration.lean",
+   "lines": [
+    175,
+    178
+   ],
+   "cell": "P3 within",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "WALL",
+    "WALL"
+   ],
+   "from_to": [
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ],
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(renewing : W.RenewingInWithin p f) : ¬ W.ConsumingIn f",
+    "(renewing : W.RenewingInWithin p f) : ¬ W.ConsumingIn f"
+   ],
+   "handed_in": [
+    "Nothing beyond the near side's notion; p is any cycle length, W any web.",
+    "nothing beyond the near-side notion; any web W, any p"
+   ]
+  },
+  {
+   "item": "C14",
+   "theorem": "RelationalRenewal.renewed_not_consumed",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean",
+   "lines": [
+    138,
+    141
+   ],
+   "cell": "P3 within",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "WALL",
+    "WALL"
+   ],
+   "from_to": [
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ],
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(renewed : Renewed U c) : ¬ Consumed U c",
+    "(renewed : Renewed U c) : ¬ Consumed U c"
+   ],
+   "handed_in": [
+    "Nothing beyond the near side's notion; U is any Unfolding F C.",
+    "nothing beyond the near-side notion; any unfolding U, any condition c"
+   ]
+  },
+  {
+   "item": "C15",
+   "theorem": "RelationalRenewal.renewing_not_consuming",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean",
+   "lines": [
+    143,
+    146
+   ],
+   "cell": "P3 within",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "WALL",
+    "WALL"
+   ],
+   "from_to": [
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ],
+    [
+     "RENEWING",
+     "CONSUMING",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [
+    "loss-of-renewal-for-good",
+    "loss-of-renewal-for-good"
+   ],
+   "quotes": [
+    "(renewing : RenewingIn U f) : ¬ ConsumingIn U f",
+    "(renewing : RenewingIn U f) : ¬ ConsumingIn U f"
+   ],
+   "handed_in": [
+    "Nothing beyond the near side's notion; U is any Unfolding F C.",
+    "nothing beyond the near-side notion; any unfolding U, any formation f"
+   ]
+  },
+  {
+   "item": "D01",
+   "theorem": "Becoming.«尽则非无终»",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+   "lines": [
+    251,
+    257
+   ],
+   "cell": "P1 within",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "DEGENERATES",
+     "REACHES AN END",
+     ""
+    ],
+    [
+     "DEGENERATES",
+     "REACHES AN END",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [
+    "02"
+   ],
+   "atlas_dynamics_listing_it": [
+    "degeneration-from-a-horizon"
+   ],
+   "quotes": [
+    "(h : «尽» R L x) : ¬ ¬ «有终» R L x",
+    "(h : «尽» R L x) : ¬ ¬ «有终» R L x"
+   ],
+   "handed_in": [
+    "No further premise. What is given is weaker than the far side's notion: 有终 only under a double negation.",
+    "nothing beyond 尽 itself; but the conclusion is only the double negation of 有终, not 有终"
+   ]
+  },
+  {
+   "item": "D02",
+   "theorem": "Becoming.«尽而续可定则有终»",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+   "lines": [
+    259,
+    270
+   ],
+   "cell": "P1 within",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "DEGENERATES",
+     "REACHES AN END",
+     ""
+    ],
+    [
+     "DEGENERATES",
+     "REACHES AN END",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [
+    "02"
+   ],
+   "atlas_dynamics_listing_it": [
+    "degeneration-from-a-horizon"
+   ],
+   "quotes": [
+    "(h : «尽» R L x) : (∀ y, «所及» R L x y → «有后» R L y ∨ ¬ «有后» R L y) → «有终» R L x",
+    "(h : «尽» R L x) : (∀ y, «所及» R L x y → «有后» R L y ∨ ¬ «有后» R L y) → «有终» R L x"
+   ],
+   "handed_in": [
+    "That at every point y the line from x reaches, having a successor is decided: ∀ y, «所及» R L x y → «有后» R L y ∨ ¬ «有后» R L y.",
+    "that going on (有后) is decided, yes or no, at every point the coarse line from x reaches"
+   ]
+  },
+  {
+   "item": "D03",
+   "theorem": "Becoming.«尽则有终当且仅当排中»",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+   "lines": [
+    580,
+    587
+   ],
+   "cell": "P1 within",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "DEGENERATES",
+     "REACHES AN END",
+     ""
+    ],
+    [
+     "DEGENERATES",
+     "REACHES AN END",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [
+    "02"
+   ],
+   "atlas_dynamics_listing_it": [
+    "degeneration-from-a-horizon"
+   ],
+   "quotes": [
+    "(∀ (β : Type) (R L : «际» β) (x : β), «尽» R L x → «有终» R L x) ↔ ∀ P : Prop, P ∨ ¬ P",
+    "(∀ (β : Type) (R L : «际» β) (x : β), «尽» R L x → «有终» R L x) ↔ ∀ P : Prop, P ∨ ¬ P"
+   ],
+   "handed_in": [
+    "Excluded middle for every proposition (∀ P : Prop, P ∨ ¬ P), which stands as the other side of the iff; the quantification over every carrier type, R, L and x.",
+    "excluded middle for every proposition: the statement says the implication 尽 → 有终, taken at every carrier, relation and point, holds exactly when excluded middle does"
+   ]
+  },
+  {
+   "item": "D07",
+   "theorem": "Becoming.LineageRegimes.stock_forces_neither",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean",
+   "lines": [
+    1082,
+    1100
+   ],
+   "cell": "P1 within",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "BUILT CASE",
+    "ACROSS"
+   ],
+   "from_to": [
+    [
+     "GENERATES",
+     "DEGENERATES",
+     "no case is exhibited in the statement: two denied universals over gated pair courses with stock s (not every one degenerates; not every one generates). By its proof: a pair, one under GENERATES and not DEGENERATES, one under DEGENERATES and not GENERATES"
+    ],
+    [
+     "DEGENERATES",
+     "GENERATES",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [
+    "04"
+   ],
+   "atlas_dynamics_listing_it": [
+    "ending-laws-as-regimes-on-a-lineage"
+   ],
+   "quotes": [
+    "(¬ ∀ L W G, GatedPairCourse s L W G → «退化» (lineStep L W (oneKind Bool)) (W.kindClass (oneKind Bool)) (0, true)) ∧ ¬ ∀ L W G, GatedPairCourse s L W G → «生成» (lineStep L W (oneKind Bool)) (W.kindClass (oneKind Bool)) W.carrierClass (0, true)",
+    "(¬ ∀ L W G, GatedPairCourse s L W G → «退化» (lineStep L W (oneKind Bool)) (W.kindClass (oneKind Bool)) (0, true)) ∧ ¬ ∀ L W G, GatedPairCourse s L W G → «生成» (lineStep L W (oneKind Bool)) (W.kindClass (oneKind Bool)) W.carrierClass (0, true)"
+   ],
+   "handed_in": [
+    "0 < s; GatedPairCourse s L W G (balanced, acting, dependent, every relatum embodied, Descended, first generation [true], giving gated at need one, stock s at step 0).",
+    "0 < s; GatedPairCourse s L W G (balanced, acting, dependent, embodied, descended generations, first generation [true], giving gated at need one, stock s at step 0) stands as the antecedent inside each denied universal"
+   ]
+  },
+  {
+   "item": "D09",
+   "theorem": "Becoming.LineageRegions.Chain.chain",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean",
+   "lines": [
+    1017,
+    1053
+   ],
+   "cell": "P1 within",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "BUILT CASE",
+    "ACROSS"
+   ],
+   "from_to": [
+    [
+     "GENERATES",
+     "DEGENERATES",
+     "one built web and flow, three points: GENERATES at (0, 1) at the web's classes and at (1, 2) at the admitted-level classes; DEGENERATES at (0, 0); no denial stated"
+    ],
+    [
+     "GENERATES",
+     "DEGENERATES",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "«生成» (lineStep flow web (oneKind Nat)) (web.kindClass (oneKind Nat)) web.carrierClass (0, 1) ∧ «生成» (lineStep flow web (oneKind Nat)) ((web.admitting web.level).kindClass (oneKind Nat)) (web.admitting web.level).carrierClass (1, 2) ∧ «退化» (lineStep flow web (oneKind Nat)) (web.kindClass (oneKind Nat)) (0, 0)",
+    "«生成» (lineStep flow web (oneKind Nat)) (web.kindClass (oneKind Nat)) web.carrierClass (0, 1) ∧ «生成» (lineStep flow web (oneKind Nat)) ((web.admitting web.level).kindClass (oneKind Nat)) (web.admitting web.level).carrierClass (1, 2) ∧ «退化» (lineStep flow web (oneKind Nat)) (web.kindClass (oneKind Nat)) (0, 0)"
+   ],
+   "handed_in": [
+    "No premise. The built Chain web, flow and generations; stated of them: acting, dependent, embodied, Descended, first-supported offspring, read by number, exact transmission, every generation nonempty, concordance 1 at step 0.",
+    "nothing; one built web, flow and generations (namespace Chain). Stated alongside: Acting, Dependent, embodied, Descended, FirstSupportedOffspring, ByNumber, exact transmission at every step, every generation nonempty, concordance 1 at step 0."
+   ]
+  },
+  {
+   "item": "D18",
+   "theorem": "Becoming.Run.generation_of_heldKeepsWidening",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean",
+   "lines": [
+    415,
+    424
+   ],
+   "cell": "P1 x P2",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "WIDENS",
+     "GENERATES",
+     ""
+    ],
+    [
+     "WIDENS",
+     "GENERATES",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [
+    "07"
+   ],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(keeps : Reaching.KeepsWidening (fun n => Reaching.PossibleHeld P Same adm (r.state n))) (N : Nat) : «全生成» Steps.next «一» (fun n m => Same (r.state n) (r.state m)) N",
+    "(keeps : Reaching.KeepsWidening (fun n => Reaching.PossibleHeld P Same adm (r.state n))) (N : Nat) : «全生成» Steps.next «一» (fun n m => Same (r.state n) (r.state m)) N"
+   ],
+   "handed_in": [
+    "A run r of the process P; that holding is decided between successive states: ∀ n, Same (r.state n) (r.state (n + 1)) ∨ ¬ Same (r.state n) (r.state (n + 1)). Section variables P, Same, adm.",
+    "a run r of the process P; decided : ∀ n, Same (r.state n) (r.state (n + 1)) ∨ ¬ Same (r.state n) (r.state (n + 1)) (holding is decided between each state and the next)"
+   ]
+  },
+  {
+   "item": "D21",
+   "theorem": "Becoming.Steps.generation_of_reachingKeepsWidening",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean",
+   "lines": [
+    299,
+    303
+   ],
+   "cell": "P1 x P2",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "WIDENS",
+     "GENERATES",
+     ""
+    ],
+    [
+     "WIDENS",
+     "GENERATES",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(wdec : ∀ n x, ¬ Q n x ∨ ¬¬ Q n x) (keeps : Reaching.KeepsWidening Q) : «全生成» next (includes Q) (same Q) 0",
+    "(wdec : ∀ n x, ¬ Q n x ∨ ¬¬ Q n x) (keeps : Reaching.KeepsWidening Q) : «全生成» next (includes Q) (same Q) 0"
+   ],
+   "handed_in": [
+    "That each point is, at each moment, refuted or unrefuted: ∀ n x, ¬ Q n x ∨ ¬¬ Q n x. The chain Q : Nat → X → Prop.",
+    "wdec : ∀ n x, ¬ Q n x ∨ ¬¬ Q n x (each point is, at each moment, refuted or unrefuted)"
+   ]
+  },
+  {
+   "item": "D22",
+   "theorem": "Becoming.Steps.wem_of_generation_of_keepsWidening",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean",
+   "lines": [
+    405,
+    412
+   ],
+   "cell": "P1 x P2",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "WIDENS",
+     "GENERATES",
+     ""
+    ],
+    [
+     "WIDENS",
+     "GENERATES",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(forward : ∀ Q : Nat → Nat → Prop, KeepsWideningFrom Q 0 → «全生成» next (includes Q) (same Q) 0) (P : Prop) : ¬ P ∨ ¬¬ P",
+    "(forward : ∀ Q : Nat → Nat → Prop, KeepsWideningFrom Q 0 → «全生成» next (includes Q) (same Q) 0) (P : Prop) : ¬ P ∨ ¬¬ P"
+   ],
+   "handed_in": [
+    "The implication WIDENS → GENERATES itself, for every chain Q : Nat → Nat → Prop, stands as the hypothesis (`forward`). What is concluded is weak excluded middle for every proposition.",
+    "the implication WIDENS → GENERATES itself is what is handed in (as the hypothesis 'forward', for every chain on Nat); the conclusion is weak excluded middle for every proposition"
+   ]
+  },
+  {
+   "item": "D23",
+   "theorem": "Becoming.Steps.dne_of_keepsWidening_of_generation",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean",
+   "lines": [
+    433,
+    439
+   ],
+   "cell": "P1 x P2",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "GENERATES",
+     "WIDENS",
+     ""
+    ],
+    [
+     "GENERATES",
+     "WIDENS",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(back : ∀ Q : Nat → Nat → Prop, «全生成» next (includes Q) (same Q) 0 → KeepsWideningFrom Q 0) (P : Prop) (unrefuted : ¬¬ P) : P",
+    "(back : ∀ Q : Nat → Nat → Prop, «全生成» next (includes Q) (same Q) 0 → KeepsWideningFrom Q 0) (P : Prop) (unrefuted : ¬¬ P) : P"
+   ],
+   "handed_in": [
+    "The implication GENERATES → WIDENS itself, for every chain Q : Nat → Nat → Prop, stands as the hypothesis (`back`). What is concluded is that every proposition not refuted holds (double-negation elimination, i.e. excluded middle).",
+    "the implication GENERATES → WIDENS itself is what is handed in (hypothesis 'back', for every chain on Nat), with ¬¬P; the conclusion is P (double-negation elimination, hence excluded middle)"
+   ]
+  },
+  {
+   "item": "D24",
+   "theorem": "Becoming.Web.generation_of_keepsWidening_byName",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean",
+   "lines": [
+    487,
+    494
+   ],
+   "cell": "P1 x P2",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "WIDENS",
+     "GENERATES",
+     ""
+    ],
+    [
+     "WIDENS",
+     "GENERATES",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(keeps : W.KeepsWidening itself l T) : «全生成» Steps.next (Steps.includes fun t f => W.Admits (l t) t f) (Steps.same fun t f => W.Admits (l t) t f) T",
+    "(keeps : W.KeepsWidening itself l T) : «全生成» Steps.next (Steps.includes fun t f => W.Admits (l t) t f) (Steps.same fun t f => W.Admits (l t) t f) T"
+   ],
+   "handed_in": [
+    "That admission is, at each moment, refuted or unrefuted: ∀ t f, ¬ W.Admits (l t) t f ∨ ¬¬ W.Admits (l t) t f. Section variables: a web W, levels l, a step T.",
+    "wdec : ∀ t f, ¬ W.Admits (l t) t f ∨ ¬¬ W.Admits (l t) t f (admission is, at each moment, refuted or unrefuted); a web W, a course of levels l, a moment T"
+   ]
+  },
+  {
+   "item": "D25",
+   "theorem": "Becoming.Web.kept_by_name_and_generation_on_moments",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean",
+   "lines": [
+    508,
+    523
+   ],
+   "cell": "P1 x P2",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "WIDENS",
+     "KEEPS (on the occurrences) and GENERATES (on the moments)",
+     ""
+    ],
+    [
+     "WIDENS",
+     "KEEPS (of each admitted occurrence) and GENERATES (of the course's moments)",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(keeps : W.KeepsWidening itself l T) : (∀ S f, T ≤ S → W.Admits (l S) S f → «全守» (continuationStep itself) (W.admitting l).activityClass (W.admitting l).carrierClass (S, f) ∧ ¬ «全生成» (continuationStep itself) (W.admitting l).activityClass (W.admitting l).carrierClass (S, f)) ∧ «全生成» Steps.next (Steps.includes fun t f => W.Admits (l t) t f) (Steps.same fun t f => W.Admits (l t) t f) T",
+    "(∀ S f, T ≤ S → W.Admits (l S) S f → «全守» (continuationStep itself) (W.admitting l).activityClass (W.admitting l).carrierClass (S, f) ∧ ¬ «全生成» (continuationStep itself) (W.admitting l).activityClass (W.admitting l).carrierClass (S, f)) ∧ «全生成» Steps.next (Steps.includes fun t f => W.Admits (l t) t f) (Steps.same fun t f => W.Admits (l t) t f) T"
+   ],
+   "handed_in": [
+    "For the first half: T ≤ S and W.Admits (l S) S f (the formation is admitted at a step from T on). For the second half: wdec, ∀ t f, ¬ W.Admits (l t) t f ∨ ¬¬ W.Admits (l t) t f. Section variables W, l, T.",
+    "wdec : ∀ t f, ¬ W.Admits (l t) t f ∨ ¬¬ W.Admits (l t) t f; for the first half also T ≤ S and W.Admits (l S) S f (the occurrence is admitted at or after T)"
+   ]
+  },
+  {
+   "item": "E01",
+   "theorem": "Becoming.«生生不息»",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
+   "lines": [
+    657,
+    665
+   ],
+   "cell": "P0 x P1",
+   "rests_on_a_reading": [
+    "Becoming.«生生» as P0.lasting"
+   ],
+   "verdicts": [
+    "WALL",
+    "WALL"
+   ],
+   "from_to": [
+    [
+     "LASTING (生生, by a reader's reading)",
+     "DEGENERATES (息)",
+     ""
+    ],
+    [
+     "LASTING (生生, listed by a reader's reading only)",
+     "DEGENERATES (息)",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [
+    "01",
+    "06",
+    "07"
+   ],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(h : «生生» R E x) : ¬ «息» R E x",
+    "(h : «生生» R E x) : ¬ «息» R E x"
+   ],
+   "handed_in": [
+    "nothing; R, E and x are arbitrary and the same on both sides",
+    "nothing: R, E and x are arbitrary and the same on both sides"
+   ]
+  },
+  {
+   "item": "E05",
+   "theorem": "Becoming.«尽则非不穷»",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+   "lines": [
+    247,
+    249
+   ],
+   "cell": "P0 x P1",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "WALL",
+    "WALL"
+   ],
+   "from_to": [
+    [
+     "DEGENERATES (尽)",
+     "LASTING (不穷)",
+     ""
+    ],
+    [
+     "DEGENERATES (尽)",
+     "LASTING (不穷)",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [
+    "02"
+   ],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(h : «尽» R L x) : ¬ «不穷» R L x",
+    "(h : «尽» R L x) : ¬ «不穷» R L x"
+   ],
+   "handed_in": [
+    "nothing; R, L, x arbitrary and the same on both sides",
+    "nothing"
+   ]
+  },
+  {
+   "item": "E06",
+   "theorem": "Becoming.«生成则延»",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+   "lines": [
+    289,
+    290
+   ],
+   "cell": "P0 x P1",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "GENERATES (生成)",
+     "LASTING (延)",
+     ""
+    ],
+    [
+     "GENERATES (生成)",
+     "LASTING (延)",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(h : «生成» R L E x) : «延» R L x",
+    "(h : «生成» R L E x) : «延» R L x"
+   ],
+   "handed_in": [
+    "nothing",
+    "nothing"
+   ]
+  },
+  {
+   "item": "E07",
+   "theorem": "Becoming.«守则延»",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+   "lines": [
+    292,
+    293
+   ],
+   "cell": "P0 x P1",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "KEEPS (守)",
+     "LASTING (延)",
+     ""
+    ],
+    [
+     "KEEPS (守)",
+     "LASTING (延)",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(h : «守» R L E x) : «延» R L x",
+    "(h : «守» R L E x) : «延» R L x"
+   ],
+   "handed_in": [
+    "nothing",
+    "nothing"
+   ]
+  },
+  {
+   "item": "E08",
+   "theorem": "Becoming.Flow.generation_of_brief",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean",
+   "lines": [
+    703,
+    715
+   ],
+   "cell": "P0 x P1",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "LASTING (不穷)",
+     "GENERATES (全生成)",
+     ""
+    ],
+    [
+     "LASTING (不穷)",
+     "GENERATES (全生成)",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [
+    "07"
+   ],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(endless : «不穷» (Web.continuationStep (Web.passingContinuation (L.PassesSupport W))) (W.admitting W.level).activityClass x) : «全生成» (Web.continuationStep (Web.passingContinuation (L.PassesSupport W))) (W.admitting W.level).activityClass (W.admitting W.level).carrierClass x",
+    "(endless : «不穷» (Web.continuationStep (Web.passingContinuation (L.PassesSupport W))) (W.admitting W.level).activityClass x) : «全生成» (Web.continuationStep (Web.passingContinuation (L.PassesSupport W))) (W.admitting W.level).activityClass (W.admitting W.level).carrierClass x"
+   ],
+   "handed_in": [
+    "brief : ∀ t g, ¬ ∀ i, i ≤ K → W.Supported (t + i) g (no formation supported at K + 1 steps running); start : W.Supported x.1 x.2; the relation is fixed (carry on, or pass support) and the class is activity of the admitting web. Section variables L : Flow F C, W : Web F C.",
+    "brief: no formation is supported at K + 1 consecutive steps (∀ t g, ¬ ∀ i, i ≤ K → W.Supported (t + i) g); start: the occurrence x is supported (W.Supported x.1 x.2). The relation (carry on, or pass support) and the classes (activity as coarse, carrier as fine) are fixed by the statement."
+   ]
+  },
+  {
+   "item": "E09",
+   "theorem": "Becoming.Web.generation_of_one_step_supports",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean",
+   "lines": [
+    812,
+    833
+   ],
+   "cell": "P0 x P1",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "LASTING (不穷)",
+     "GENERATES (全生成)",
+     ""
+    ],
+    [
+     "LASTING (不穷)",
+     "GENERATES (全生成)",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(start : W.Supported x.1 x.2) (endless : «不穷» (continuationStep R) L x) : «全生成» (continuationStep R) L (W.admitting W.level).carrierClass x",
+    "(endless : «不穷» (continuationStep R) L x) : «全生成» (continuationStep R) L (W.admitting W.level).carrierClass x"
+   ],
+   "handed_in": [
+    "within : ∀ x y, L x y → (W.admitting W.level).activityClass x y (the class is finer than activity); brief : ∀ t g, W.Supported t g → ¬ W.Supported (t + 1) g (no support two steps running); start : W.Supported x.1 x.2. R (the continuation) and L (the class) are otherwise arbitrary. Section variable W : Web F C.",
+    "within: the class L is finer than activity (∀ x y, L x y → activityClass x y); brief: no formation supported at two steps running (W.Supported t g → ¬ W.Supported (t + 1) g); start: x supported. R is any continuation."
+   ]
+  },
+  {
+   "item": "E10",
+   "theorem": "Becoming.Map.outside_of_not_endless",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
+   "lines": [
+    117,
+    120
+   ],
+   "cell": "P0 x P1",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "GENERATES (全生成) and KEEPS (全守)",
+     "LASTING (不穷)",
+     ""
+    ],
+    [
+     "LASTING (不穷), denied",
+     "GENERATES (全生成) and KEEPS (全守), both denied",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(h : ¬ «不穷» R L x) : ¬ «全生成» R L E x ∧ ¬ «全守» R L E x",
+    "(h : ¬ «不穷» R L x) : ¬ «全生成» R L E x ∧ ¬ «全守» R L E x"
+   ],
+   "handed_in": [
+    "nothing",
+    "nothing"
+   ]
+  },
+  {
+   "item": "E11",
+   "theorem": "Becoming.Web.keeping_of_carried_on",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
+   "lines": [
+    233,
+    247
+   ],
+   "cell": "P0 x P1",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "LASTING (不穷)",
+     "KEEPS (全守)",
+     ""
+    ],
+    [
+     "LASTING (不穷)",
+     "KEEPS (全守)",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(endless : «不穷» (continuationStep R) W.activityClass x) (on : ∀ s f, S ≤ s → W.active (s + 1) f → W.active s f ∧ R s f f) : «全守» (continuationStep R) W.activityClass W.carrierClass x",
+    "(endless : «不穷» (continuationStep R) W.activityClass x) (on : ∀ s f, S ≤ s → W.active (s + 1) f → W.active s f ∧ R s f f) : «全守» (continuationStep R) W.activityClass W.carrierClass x"
+   ],
+   "handed_in": [
+    "start : W.active x.1 x.2; on : from step S on, every formation active after a step was active before it and carried on as itself. Section variables W : Web F C, R : Nat → F → F → Prop.",
+    "start: x is active (W.active x.1 x.2); on: from step S on, every formation active after a step was active before it and carried on as itself (R s f f). R is any continuation."
+   ]
+  },
+  {
+   "item": "E15",
+   "theorem": "Becoming.Run.not_unending_of_heldKeepsWidening",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean",
+   "lines": [
+    379,
+    386
+   ],
+   "cell": "P0 x P2",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "ACROSS",
+    "ACROSS"
+   ],
+   "from_to": [
+    [
+     "WIDENS (Reaching.KeepsWidening)",
+     "LASTING (不穷), denied",
+     ""
+    ],
+    [
+     "WIDENS (KeepsWidening)",
+     "LASTING (不穷), denied",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [
+    "07"
+   ],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(keeps : Reaching.KeepsWidening (fun n => Reaching.PossibleHeld P Same adm (r.state n))) (N : Nat) : ¬ «不穷» Steps.next (fun n m => Same (r.state n) (r.state m)) N",
+    "(keeps : Reaching.KeepsWidening (fun n => Reaching.PossibleHeld P Same adm (r.state n))) (N : Nat) : ¬ «不穷» Steps.next (fun n m => Same (r.state n) (r.state m)) N"
+   ],
+   "handed_in": [
+    "r : Run P (a course, defined at every moment); nothing else",
+    "a run r of the process P; the relation Same (the part held) and adm are section parameters. No further premise."
+   ]
+  },
+  {
+   "item": "E16",
+   "theorem": "Becoming.Flow.persisting_consistent_with_selfConcern",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+   "lines": [
+    491,
+    518
+   ],
+   "cell": "P0 x P2",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "ACROSS"
+   ],
+   "from_to": [
+    [
+     "LASTING (Generations.Persists)",
+     "WIDENS (through Weighting.IncreasingInOwnOn, built from WidensOn)",
+     ""
+    ],
+    [
+     "LASTING (Generations.Persists)",
+     "WIDENS or NARROWS (WidensOn, only in antecedents: in `stake` and inside IncreasingInOwnOn)",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [
+    "07"
+   ],
+   "atlas_dynamics_listing_it": [
+    "persisting-filters-what-was-chosen"
+   ],
+   "quotes": [
+    "(persists : G.Persists) ... (stake : ∀ a b, ch.Met a b → Weighting.WidensOn items a b → Weighting.AddsOwn items own a b → ¬ ends a ∧ ends b) : ∃ P : «际» (Y → Bool), (∀ a, ¬ P a a) ∧ (∀ a b c, P a b → P b c → P a c) ∧ ch.Accords P ∧ Weighting.IncreasingInOwnOn ch.Met items own (fun b a => P a b)",
+    "(persists : G.Persists) ... (stake : ∀ a b, ch.Met a b → Weighting.WidensOn items a b → Weighting.AddsOwn items own a b → ¬ ends a ∧ ends b) : ∃ P : «际» (Y → Bool), (∀ a, ¬ P a a) ∧ (∀ a b c, P a b → P b c → P a c) ∧ ch.Accords P ∧ Weighting.IncreasingInOwnOn ch.Met items own (fun b a => P a b)"
+   ],
+   "handed_in": [
+    "balances : L.Balances W; acting : L.Acting W; dependent : W.Dependent; descended : Descended L W G; gated; coupled (every member of every cohort needs at least m of some listed condition); realized : a chosen course that `ends` is an overdraw of ds from a short stock; none : «无环» ch.Shown (the choices come from some strict order); stake : on the pairs met, a widens b adding own only where a does not end and b does.",
+    "balances, acting, dependent (laws of the flow and web); descended (the cohorts descend in the flow); gated and coupled (givers and cohort members depend on the family ds at need at least m); realized (a chosen course that 'ends' is realized as an overdraw of the family from a short stock); none (no cycle in what the choices show, i.e. they come from some strict order); stake (on the pairs met, a course widens another and adds to the own continuation only where it does not end and the other does). `ends` is an arbitrary predicate on courses, tied to the line only by `realized`."
+   ]
+  },
+  {
+   "item": "E19",
+   "theorem": "Becoming.Web.UnderminingOn.exceeded",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+   "lines": [
+    132,
+    142
+   ],
+   "cell": "P2 x P3",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "CONSUMING (Web.UnderminingOn)",
+     "WIDENS or NARROWS, one half only: Web.Exceeds l W.level (not a listed notion; Web.Widens is not named)",
+     ""
+    ],
+    [
+     "CONSUMING (UnderminingOn)",
+     "WIDENS or NARROWS: only `Exceeds`, one conjunct of Widens, not a listed notion",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(undermining : W.UnderminingOn t f c) ... : W.Exceeds l W.level",
+    "(undermining : W.UnderminingOn t f c) ... : W.Exceeds l W.level"
+   ],
+   "handed_in": [
+    "holds : ∀ g, W.requires t g c → W.requires (t + 1) g c ∧ W.need t g c ≤ W.need (t + 1) g c (every dependence on c holds across the step at no smaller need); admits : ∀ g, W.requires t g c → W.Admits (l (t + 1)) (t + 1) g (the other path l admits after the step every formation depending on c before it). l is otherwise any level path.",
+    "holds: every dependence on the condition c at t still holds after the step at no smaller need; admits: the level path l admits after the step every formation that depended on c at t. l is any such path."
+   ]
+  },
+  {
+   "item": "E20",
+   "theorem": "Becoming.Web.Includes.not_undermining",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+   "lines": [
+    144,
+    152
+   ],
+   "cell": "P2 x P3",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "WALL",
+    "WALL"
+   ],
+   "from_to": [
+    [
+     "WIDENS or NARROWS, one half only: Web.Includes W.level l (not a listed notion)",
+     "CONSUMING (Web.UnderminingOn)",
+     ""
+    ],
+    [
+     "WIDENS or NARROWS: `Includes W.level l`, an unlisted conjunct of Widens (the web's levels admit all that l admits)",
+     "CONSUMING (UnderminingOn)",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [
+    "07"
+   ],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(includes : W.Includes W.level l) ... : ¬ W.UnderminingOn t f c",
+    "(includes : W.Includes W.level l) ... : ¬ W.UnderminingOn t f c"
+   ],
+   "handed_in": [
+    "holds : ∀ g, W.requires t g c → W.requires (t + 1) g c ∧ W.need t g c ≤ W.need (t + 1) g c; admits : ∀ g, W.requires t g c → W.Admits (l (t + 1)) (t + 1) g",
+    "holds and admits, as in E19: the dependences on c hold across the step at no smaller need, and l admits after the step every formation that depended on c before it."
+   ]
+  },
+  {
+   "item": "E21",
+   "theorem": "Becoming.Flow.Balances.includes_of_renewed",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+   "lines": [
+    317,
+    346
+   ],
+   "cell": "P2 x P3",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "RENEWING (Web.Renewed)",
+     "WIDENS or NARROWS, one half only: Web.Includes W.level l (not a listed notion)",
+     ""
+    ],
+    [
+     "RENEWING (Renewed)",
+     "WIDENS or NARROWS: `Includes W.level l` (unlisted): the levels with the part are not narrower than those without",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(renewed : ∀ t f c, part f = true → W.draws t f c → W.Renewed c) : W.Includes W.level l",
+    "(renewed : ∀ t f c, part f = true → W.draws t f c → W.Renewed c) : W.Includes W.level l"
+   ],
+   "handed_in": [
+    "balances : L.Balances W; taking : L.Taking W; without : L.WithheldLevels part W l (l is the levels without the part). Section variables L, W, part.",
+    "balances (the flow balances on the web); taking (only active formations take, and only from what they draw on); without (l is the level path with the part's doing withheld)."
+   ]
+  },
+  {
+   "item": "E22",
+   "theorem": "Becoming.Flow.Balances.includes_of_renewingIn",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+   "lines": [
+    354,
+    361
+   ],
+   "cell": "P2 x P3",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "RENEWING (Web.RenewingIn)",
+     "WIDENS or NARROWS, one half only: Web.Includes W.level l (not a listed notion)",
+     ""
+    ],
+    [
+     "RENEWING (RenewingIn)",
+     "WIDENS or NARROWS: `Includes W.level l` (unlisted): the part does not narrow",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(renewing : ∀ f, part f = true → W.RenewingIn f) : W.Includes W.level l",
+    "(renewing : ∀ f, part f = true → W.RenewingIn f) : W.Includes W.level l"
+   ],
+   "handed_in": [
+    "balances : L.Balances W; taking : L.Taking W; without : L.WithheldLevels part W l",
+    "balances, taking, without, as in E21."
+   ]
+  },
+  {
+   "item": "F13",
+   "theorem": "Becoming.ClosedCapture.lock_line",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean",
+   "lines": [
+    320,
+    344
+   ],
+   "cell": "P0 x P4",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "LOCK",
+     "LASTING",
+     ""
+    ],
+    [
+     "LOCK",
+     "LASTING",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [
+    "02"
+   ],
+   "atlas_dynamics_listing_it": [
+    "closed-capture"
+   ],
+   "quotes": [
+    "(locked : Locked M favours hA (a, g)) : «不穷» (Law.step (Pace.step (join fA fB) (joinRead hA) reads)) (lockedAlike M favours hA) ((a, b), g, 0)",
+    "(locked : Locked M favours hA (a, g)) : «不穷» (Law.step (Pace.step (join fA fB) (joinRead hA) reads)) (lockedAlike M favours hA) ((a, b), g, 0)"
+   ],
+   "handed_in": [
+    "raises : Raises P favours fA; monotone : ReadsShare P M hA; upper (favouring kept upward in M); accrues : Accrues fB (used for the second conjunct, the loss altering at every step). The class lockedAlike and the step are given by the statement, not handed in.",
+    "raises : Raises P favours fA; monotone : ReadsShare P M hA; upper : favouring kept upward along M; accrues : Accrues fB; the step is the joined two-level step with the rule read by `joinRead hA` (off the share), on any schedule `reads`; any start loss b."
+   ]
+  },
+  {
+   "item": "F15",
+   "theorem": "Becoming.NoReturnAt.recoverable_iff",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean",
+   "lines": [
+    606,
+    612
+   ],
+   "cell": "P0 x P4",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "PASSAGE",
+    "PASSAGE"
+   ],
+   "from_to": [
+    [
+     "TURN IN TIME",
+     "NO RETURN",
+     "t"
+    ],
+    [
+     "TURN IN TIME",
+     "NO RETURN",
+     "t"
+    ]
+   ],
+   "chapters_naming_it_by_script": [
+    "02",
+    "07"
+   ],
+   "atlas_dynamics_listing_it": [
+    "reading-a-loss-in-time"
+   ],
+   "quotes": [
+    "(point : NoReturnAt feasible keeps l N) {n : Nat} : Recoverable feasible keeps l n ↔ n < N",
+    "(point : NoReturnAt feasible keeps l N) {n : Nat} : Recoverable feasible keeps l n ↔ n < N"
+   ],
+   "handed_in": [
+    "Only `point : NoReturnAt feasible keeps l N` (itself the far side's notion). feasible, keeps and l are arbitrary; no other premise.",
+    "point : NoReturnAt feasible keeps l N (a notion of the far side); feasible and keeps arbitrary."
+   ]
+  },
+  {
+   "item": "F16",
+   "theorem": "Becoming.noReturnAt_of_past",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean",
+   "lines": [
+    630,
+    637
+   ],
+   "cell": "P0 x P4",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "IMPLIES",
+    "IMPLIES"
+   ],
+   "from_to": [
+    [
+     "TURN IN TIME (denied: not recoverable at n)",
+     "NO RETURN",
+     ""
+    ],
+    [
+     "TURN IN TIME, denied (not recoverable at n)",
+     "NO RETURN",
+     ""
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [],
+   "quotes": [
+    "(past : ¬ Recoverable feasible keeps l n) : ∃ N, N ≤ n ∧ NoReturnAt feasible keeps l N",
+    "(past : ¬ Recoverable feasible keeps l n) : ∃ N, N ≤ n ∧ NoReturnAt feasible keeps l N"
+   ],
+   "handed_in": [
+    "decided : ∀ n, Recoverable feasible keeps l n ∨ ¬ Recoverable feasible keeps l n (recoverability decided at each step). Nothing else; feasible, keeps, l arbitrary.",
+    "decided : ∀ n, Recoverable feasible keeps l n ∨ ¬ Recoverable feasible keeps l n (recoverability decided at each step)."
+   ]
+  },
+  {
+   "item": "F18",
+   "theorem": "Becoming.TurningInTime.locked_turns_in_time_share_iff",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+   "lines": [
+    1852,
+    1917
+   ],
+   "cell": "P0 x P4",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "PASSAGE",
+    "PASSAGE"
+   ],
+   "from_to": [
+    [
+     "LOCK",
+     "LASTING",
+     "p"
+    ],
+    [
+     "LOCK",
+     "LASTING",
+     "p"
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [
+    "turning-in-time"
+   ],
+   "quotes": [
+    "(locked : Locked M favours hA (w.1, w.2.1)) ... «不穷» (net need (windowAfterShare fA hA sA hL N K) (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x) ↔ ∃ T, (∀ j, j < T → need ≤ (...orbit... j).2 ∧ ¬ (N ≤ (...).2 ∧ (...).2 < K)) ∧ need ≤ (... T).2 ∧ (N ≤ (... T).2 ∧ (... T).2 < K) ∧ H₂ + y₂ ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) (fun w x => RegimeMargin.step giving (use w) x)) (w, x) (T + 1)).2",
+    "(locked : Locked M favours hA (w.1, w.2.1)) ... «不穷» (net need (windowAfterShare fA hA sA hL N K) (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x) ↔ ∃ T, (∀ j, j < T → need ≤ (...) j).2 ∧ ¬ (N ≤ (...) j).2 ∧ (...) j).2 < K)) ∧ need ≤ (...) T).2 ∧ (N ≤ (...) T).2 ∧ (...) T).2 < K) ∧ H₂ + y₂ ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) (fun w x => RegimeMargin.step giving (use w) x)) (w, x) (T + 1)).2"
+   ],
+   "handed_in": [
+    "The window and what it sets: sA, hL, N, K, sets (inside [N, K) the share becomes Low and the rule kept), lowRule, lowStays. The lock's law premises: raises, monotone, upper. The kept kind's use: uses (= H₂). The regime: nothing, short, meets, keeps; needs (0 < need), within (need ≤ H₂ + y₂); short₁. The overdraw of the course as it was: draws (use at least H₁ where share and rule are not below the start's), below (x < H₁ + y₁), high (x ≤ hi).",
+    "sA, hL, N, K (the window and what it sets); raises, monotone, upper (the lock's premises); sets, lowRule, lowStays (the window sets a Low share and a kept rule; off a Low share the rule read is kept; Low stays under a kept rule); uses (use H₂ at Low share and kept rule); nothing, short, meets, keeps (the regime at H₂, y₂, hi); needs, within (0 < need ≤ H₂ + y₂); short₁ (giving short of H₁ below y₁); draws (use at least H₁ where share and rule are not below the start's); below (x < H₁ + y₁); high (x ≤ hi)."
+   ]
+  },
+  {
+   "item": "F19",
+   "theorem": "Becoming.TurningInTime.noReturnAt_of_below",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+   "lines": [
+    2200,
+    2214
+   ],
+   "cell": "P0 x P4",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "PASSAGE",
+    "PASSAGE"
+   ],
+   "from_to": [
+    [
+     "TURN IN TIME",
+     "NO RETURN",
+     "t"
+    ],
+    [
+     "TURN IN TIME",
+     "NO RETURN",
+     "t"
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [
+    "turning-in-time"
+   ],
+   "quotes": [
+    "(below : X n < H + y) : ∃ N, N ≤ n ∧ NoReturnAt (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N",
+    "(below : X n < H + y) : ∃ N, N ≤ n ∧ NoReturnAt (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N"
+   ],
+   "handed_in": [
+    "fall (X never rises), top (X 0 ≤ hi), nothing, short, meets, keeps (the regime under the use H), needs (0 < need), within (need ≤ H + y), below (X n < H + y). None is a listed notion.",
+    "fall (X never rises); top (X 0 ≤ hi); nothing, short, meets, keeps (the regime at H, y, hi); needs, within (0 < need ≤ H + y); below (X n < H + y). None is a listed notion of either side."
+   ]
+  },
+  {
+   "item": "F20",
+   "theorem": "Becoming.TurningInTime.noReturn_exists",
+   "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+   "lines": [
+    2299,
+    2329
+   ],
+   "cell": "P0 x P4",
+   "rests_on_a_reading": [],
+   "verdicts": [
+    "PASSAGE",
+    "PASSAGE"
+   ],
+   "from_to": [
+    [
+     "TURN IN TIME",
+     "NO RETURN",
+     "t"
+    ],
+    [
+     "TURN IN TIME",
+     "NO RETURN",
+     "t"
+    ]
+   ],
+   "chapters_naming_it_by_script": [],
+   "atlas_dynamics_listing_it": [
+    "turning-in-time"
+   ],
+   "quotes": [
+    "∃ N, N ≤ x ∧ NoReturnAt (Turned (fun j => (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2) giving H₂) (MeetsNeed need) (fun t _ => (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2) N",
+    "∃ N, N ≤ x ∧ NoReturnAt (Turned (fun j => (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2) giving H₂) (MeetsNeed need) (fun t _ => (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2) N"
+   ],
+   "handed_in": [
+    "nothing, short, meets, keeps (the regime under the use H₂, up to hi), needs (0 < need), within (need ≤ H₂ + y₂), short₁ (giving short of H₁ below y₁), uses₁ (every way on alone's orbit from w uses at least H₁), below (x < H₁ + y₁), high (x ≤ hi). None is a listed notion.",
+    "nothing, short, meets, keeps (the regime at H₂, y₂, hi); needs, within (0 < need ≤ H₂ + y₂); short₁ (giving short of H₁ below y₁); uses₁ (every way on alone's orbit from w uses at least H₁); below (x < H₁ + y₁); high (x ≤ hi). None is a listed notion of either side; no premise on a lock, the marks or a kept kind."
+   ]
+  }
+ ],
+ "linked_passages": [
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "branches",
+   "found": true,
+   "lines": [
+    16,
+    16
+   ],
+   "names": 0
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "capture",
+   "found": true,
+   "lines": [
+    395,
+    395
+   ],
+   "names": 0
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "map-on-the-world",
+   "found": true,
+   "lines": [
+    55,
+    57
+   ],
+   "names": 5
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "not-shown",
+   "found": true,
+   "lines": [
+    527,
+    527
+   ],
+   "names": 0
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "open",
+   "found": true,
+   "lines": [
+    537,
+    537
+   ],
+   "names": 0
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-becoming-finite-horizon",
+   "found": true,
+   "lines": [
+    127,
+    131
+   ],
+   "names": 11
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-becoming-return-grades",
+   "found": true,
+   "lines": [
+    124,
+    126
+   ],
+   "names": 4
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-generation-and-degeneration-at-two-grains",
+   "found": true,
+   "lines": [
+    23,
+    54
+   ],
+   "names": 73
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-regulation-from-one-side-and-locally",
+   "found": true,
+   "lines": [
+    381,
+    383
+   ],
+   "names": 5
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-relational-renewal-classification",
+   "found": true,
+   "lines": [
+    115,
+    117
+   ],
+   "names": 7
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-supported-renewal-recovery",
+   "found": true,
+   "lines": [
+    135,
+    137
+   ],
+   "names": 2
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-the-lock-draws-its-readers-out",
+   "found": true,
+   "lines": [
+    475,
+    477
+   ],
+   "names": 26
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-turning-in-time",
+   "found": true,
+   "lines": [
+    499,
+    513
+   ],
+   "names": 73
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "runs",
+   "found": true,
+   "lines": [
+    110,
+    114
+   ],
+   "names": 4
+  },
+  {
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "turning-in-time",
+   "found": true,
+   "lines": [
+    491,
+    491
+   ],
+   "names": 0
+  },
+  {
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-selection-through-couplings",
+   "found": true,
+   "lines": [
+    26,
+    34
+   ],
+   "names": 9
+  },
+  {
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-re-optimizing-above-a-renewal-ends-it",
+   "found": true,
+   "lines": [
+    221,
+    221
+   ],
+   "names": 15
+  },
+  {
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-what-a-rise-draws-from-beyond",
+   "found": true,
+   "lines": [
+    160,
+    164
+   ],
+   "names": 14
+  },
+  {
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-a-loss-read-before-its-point-of-no-return",
+   "found": true,
+   "lines": [
+    260,
+    280
+   ],
+   "names": 24
+  },
+  {
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-becoming-stepwise-reading",
+   "found": true,
+   "lines": [
+    170,
+    172
+   ],
+   "names": 4
+  },
+  {
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-four-cases-of-a-part",
+   "found": true,
+   "lines": [
+    56,
+    58
+   ],
+   "names": 17
+  },
+  {
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-keeping-widening-is-generation-losing-nothing",
+   "found": true,
+   "lines": [
+    120,
+    124
+   ],
+   "names": 23
+  },
+  {
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-the-run-classes-and-widening",
+   "found": true,
+   "lines": [
+    72,
+    83
+   ],
+   "names": 7
+  },
+  {
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "reading-in-time",
+   "found": true,
+   "lines": [
+    245,
+    249
+   ],
+   "names": 0
+  }
+ ]
+}

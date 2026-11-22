@@ -1,0 +1,542 @@
+{
+ "pair": "P2",
+ "sides": [
+  {
+   "side": "WIDENING",
+   "notions": [
+    {
+     "name": "Becoming.Web.Widens",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
+     "line": 153,
+     "basis": "chapter",
+     "grain": "two level paths over a whole run (every step included, some step exceeded); of a part where one path is the levels without it",
+     "quote": "07 section 2, r-four-cases-of-a-part: \"`l` *widens* `l'` when it includes and exceeds it\"; docstring Regions.lean:149: \"The level path `l` widens `l'`\"",
+     "says": "W.Includes l l' and W.Exceeds l l': l admits at every step every formation l' admits, and at some step one more."
+    },
+    {
+     "name": "Becoming.«广»",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+     "line": 2723,
+     "basis": "docstring",
+     "grain": "on the grammar: any two relations on one carrier, no steps",
+     "quote": "docstring GrammarLaws.lean:2723: \"`R` widens `S` (广): it relates whatever `S` relates and exceeds it\"; chapter line 67 calls it \"the grammar's widening, «广»\"",
+     "says": "«则» S R and «逾» R S: R relates whatever S relates and relates some pair S does not."
+    },
+    {
+     "name": "Becoming.Web.WidensWithin",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnWidening.lean",
+     "line": 72,
+     "basis": "docstring",
+     "grain": "within a decided region of formations, over a whole run",
+     "quote": "docstring OwnWidening.lean:70: \"Within the decided region `region`, the level path `l` widens `l'`\"",
+     "says": "At every step l admits every member of the region l' admits, and at some step a member l' does not."
+    },
+    {
+     "name": "Becoming.Web.WidensAlong",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Growth.lean",
+     "line": 60,
+     "basis": "chapter",
+     "grain": "along a reading of one web's formations in another's, over a whole run",
+     "quote": "07 section 2, r-widening-along-a-reading: \"`l'` widens `l` where it admits, read, every formation `l` admits ... (`Web.WidensAlong`)\"; docstring: \"**Widening along a reading**\"",
+     "says": "IncludesAlong and ExceedsAlong: l' of W' admits the reading of all l admits, and at some step a formation that is the reading of none l admits."
+    },
+    {
+     "name": "Becoming.Web.WidensAcross",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
+     "line": 492,
+     "basis": "docstring",
+     "grain": "one level path over a stretch from step T to step U, along a continuation",
+     "quote": "docstring ContinuedClasses.lean:490: \"**Widening across a stretch along a continuation**: inclusion and exceeding from `T` to `U`\"",
+     "says": "IncludesAcross and ExceedsAcross from T to U: everything admitted at T is linked to something admitted at U, and something admitted at U is linked to nothing admitted at T."
+    },
+    {
+     "name": "Becoming.Web.EventuallyWidens",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean",
+     "line": 97,
+     "basis": "chapter",
+     "grain": "from some step on, on every tail",
+     "quote": "07 section 2, r-eventual-widening: \"One level path *eventually widens* another where, from some step on, it widens it on every tail\"; docstring: \"**Eventual widening**\"",
+     "says": "There is a T such that for every S at or after T the tail of l from S widens the tail of l' on the web from S."
+    },
+    {
+     "name": "Becoming.Web.WidensWithoutEnd",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean",
+     "line": 111,
+     "basis": "docstring",
+     "grain": "whole run, exceeding at arbitrarily late steps",
+     "quote": "docstring EventualWidening.lean:109: \"**Widening without end**: `l` includes `l'` at every step and exceeds it at arbitrarily late steps\"",
+     "says": "W.Includes l l' and W.ExceedsLate l l'."
+    },
+    {
+     "name": "Becoming.Web.WidensUpTo",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean",
+     "line": 116,
+     "basis": "docstring",
+     "grain": "over the stretch up to a step h",
+     "quote": "docstring EventualWidening.lean:114: \"**Wider up to a step**: up to step `h`, `l` admits every formation `l'` admits, and at some step up to `h` one it does not\"",
+     "says": "Inclusion at every step up to h and exceeding at some step up to h."
+    },
+    {
+     "name": "Becoming.Web.WidensOrEventually",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean",
+     "line": 122,
+     "basis": "docstring",
+     "grain": "whole run or late tails (a join of two listed notions)",
+     "quote": "docstring EventualWidening.lean:121: \"Widening, or eventual widening.\"",
+     "says": "W.Widens l l' or W.EventuallyWidens l l'."
+    },
+    {
+     "name": "Becoming.Web.KeepsWidening",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean",
+     "line": 290,
+     "basis": "chapter",
+     "grain": "one course (one level path), from a step T on, along a continuation R",
+     "quote": "07 section 2, r-eventual-widening: \"A course *keeps widening* along a continuation where nothing admitted is lost and something keeps being opened (`Web.KeepsWidening`)\"",
+     "says": "IncludesAcrossFrom R l T and KeepsOpening R l T: from T on nothing admitted is lost across any stretch, and after every step something is admitted that continues nothing admitted there."
+    },
+    {
+     "name": "Becoming.Web.WidensWithLag",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean",
+     "line": 115,
+     "basis": "chapter",
+     "grain": "whole run, with some lag in steps",
+     "quote": "07 section 2, r-comparing-two-courses-on-what-they-admit: \"*widens it with a lag* where it includes it with some lag and the other includes it with none (`Web.WidensWithLag`)\"",
+     "says": "IncludesWithLag l l' and not IncludesWithLag l' l."
+    },
+    {
+     "name": "Becoming.Web.WidensOrWithLag",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean",
+     "line": 119,
+     "basis": "docstring",
+     "grain": "whole run (a join of two listed notions)",
+     "quote": "docstring ComparingCourses.lean:118: \"Widening, or widening with a lag.\"",
+     "says": "W.Widens l l' or W.WidensWithLag l l'."
+    },
+    {
+     "name": "Becoming.Web.WidensOrWithFormationLag",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean",
+     "line": 297,
+     "basis": "docstring",
+     "grain": "whole run, lag varying with the formation",
+     "quote": "docstring ComparingCourses.lean:296: \"Widening, or the strict part of inclusion with a lag varying with the formation.\"",
+     "says": "W.Widens l l', or IncludesWithFormationLag l l' without the converse."
+    },
+    {
+     "name": "Becoming.Web.WidensOrEachLater",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean",
+     "line": 301,
+     "basis": "docstring",
+     "grain": "whole run, a lag for each admission",
+     "quote": "docstring ComparingCourses.lean:300: \"Widening, or the strict part of inclusion with a lag for each admission.\"",
+     "says": "W.Widens l l', or IncludesEachLater l l' without the converse."
+    },
+    {
+     "name": "Becoming.Web.WidensOrWithLagAlong",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean",
+     "line": 437,
+     "basis": "docstring",
+     "grain": "whole run, lag along a continuation R",
+     "quote": "docstring ComparingCourses.lean:436: \"Widening, or the strict part of inclusion with some lag along `R`.\"",
+     "says": "W.Widens l l', or inclusion later along R with some lag without the converse."
+    },
+    {
+     "name": "Becoming.Run.RangeWidens",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean",
+     "line": 215,
+     "basis": "docstring",
+     "grain": "two courses of any process, offset for offset from their starts, over the whole courses",
+     "quote": "docstring ReachableRanges.lean:214: \"Range widening of courses: including and exceeding.\"",
+     "says": "r.RangeIncludes adm r' and r.RangeExceeds adm r'."
+    },
+    {
+     "name": "Becoming.Reaching.Widens",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean",
+     "line": 286,
+     "basis": "chapter",
+     "grain": "of two configurations, over all courses from each (what can be reached)",
+     "quote": "07 section 2, r-what-a-course-keeps-reachable: \"*widens what can be reached* over it where it covers it and some course from it is included by no course from the other (`Reaching.Widens`)\"",
+     "says": "Covers P adm s s', and some course from s is range-included by no course from s'."
+    },
+    {
+     "name": "Becoming.Reaching.WidensWithLag",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean",
+     "line": 843,
+     "basis": "docstring",
+     "grain": "of two configurations, over families of courses, with some lag",
+     "quote": "docstring ReachableRanges.lean:841: \"**Widening what can be reached with a lag**: covering with some lag and covered back with none\"",
+     "says": "Some d with CoversLater d s s', and no d with CoversLater d s' s."
+    },
+    {
+     "name": "Becoming.Reaching.WidensOrLater",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean",
+     "line": 848,
+     "basis": "docstring",
+     "grain": "of two configurations (a join of two listed notions)",
+     "quote": "docstring ReachableRanges.lean:846: \"**The lagged order**: widening what can be reached, or widening it with a lag\"",
+     "says": "Read from its docstring and the chapter only (the body below line 851 was not opened): Reaching.Widens or Reaching.WidensWithLag."
+    },
+    {
+     "name": "Becoming.Reaching.KeepsWidening",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean",
+     "line": 309,
+     "basis": "docstring",
+     "grain": "one chain of predicates over the steps, read from its first step on",
+     "quote": "docstring ReachableRanges.lean:307: \"**Keeping widening**, 07's form for a chain of predicates: nothing held is lost from a step to any later one, and after every step something not held there is held later\"",
+     "says": "For all n d x, Q n x gives Q (n+d) x, and for every n some later step holds an x not held at n."
+    },
+    {
+     "name": "Becoming.Steps.KeepsWideningFrom",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean",
+     "line": 98,
+     "basis": "docstring",
+     "grain": "one chain of predicates on a course's moments, from a moment N on",
+     "quote": "docstring WideningOnTheMap.lean:96: \"**Keeping widening from `N`**, 07's form for a chain of predicates\"; 07 section 2, r-keeping-widening-is-generation-losing-nothing: \"keeping widening from a moment\"",
+     "says": "From N on Steps.includes Q holds across every stretch, and after every step S some later U holds an x not held at S."
+    },
+    {
+     "name": "Becoming.Weighting.WidensOn",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+     "line": 436,
+     "basis": "docstring",
+     "grain": "on a finite list of items, two Boolean admissions, no steps",
+     "quote": "docstring Weightings.lean:435: \"On the listed items, `a` widens `b`: it admits every item `b` admits, and one more.\"",
+     "says": "IncludesOn items a b and ExceedsOn items a b."
+    },
+    {
+     "name": "Becoming.Weighting.WidensBy",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+     "line": 683,
+     "basis": "docstring",
+     "grain": "on a finite list, by one listed item alone",
+     "quote": "docstring Weightings.lean:681: \"On the listed items `a` widens `b` by `x` alone\"",
+     "says": "IncludesOn items a b, x listed, a admits x and b does not, and (last conjunct, cut off at line 686, read from the docstring) nothing else beyond b."
+    },
+    {
+     "name": "Becoming.Weighting.WidensByOne",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
+     "line": 190,
+     "basis": "docstring",
+     "grain": "on a finite list, by some one item; a relation of the grammar on admissions",
+     "quote": "docstring PremiseWitnesses.lean:189: \"One widening by one listed item alone: `a` widens `b` by some `x` alone.\"",
+     "says": "There is an x with WidensBy items x a b."
+    }
+   ]
+  },
+  {
+   "side": "NARROWING",
+   "notions": [
+    {
+     "name": "Becoming.Web.Widens",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
+     "line": 153,
+     "basis": "docstring",
+     "grain": "the same definition with its two level paths exchanged; of a part: the levels without it widen the levels with it",
+     "quote": "module account Regions.lean:37-38: \"A part is generative where the levels with it widen those without it, degenerative where those without it widen those with it\"; module account Admission.lean:69: \"it *narrows*, the converse\"; Retaining.lean:348: \"does not narrow: the levels without it do not widen those with it\"",
+     "says": "Narrowing is stated as W.Widens l W.level, l the levels without the part: the same Includes-and-Exceeds with the arguments the other way round; no declaration of its own was found for it."
+    }
+   ]
+  }
+ ],
+ "carriers": [
+  {
+   "name": "Becoming.Web",
+   "why": "the structure admission and every Web.* comparison is stated on (World.lean:55)"
+  },
+  {
+   "name": "Becoming.Flow",
+   "why": "the exchange the part's taking and giving are read on; carrier of the balance theorems"
+  },
+  {
+   "name": "Becoming.World",
+   "why": "carrier of Space.lean's laws"
+  },
+  {
+   "name": "Becoming.Run",
+   "why": "a course of a process; carrier of Run.RangeWidens and the Reaching notions"
+  },
+  {
+   "name": "Becoming.Web.Admits",
+   "why": "admission at a step (Admission.lean:377); what every comparison counts, not a side"
+  },
+  {
+   "name": "Becoming.Web.admitted",
+   "why": "what a level path admits as a relation of the grammar; the carrier on which Web.Widens is «广»"
+  },
+  {
+   "name": "Becoming.Flow.WithheldLevels",
+   "why": "the levels without a part; premise of every theorem comparing a part (118 statements)"
+  },
+  {
+   "name": "Becoming.Web.Includes",
+   "why": "the inclusion half (Admission.lean:387); widening, narrowing, keeping the same all use it; states neither side alone"
+  },
+  {
+   "name": "Becoming.Web.Exceeds",
+   "why": "the exceeding half (Admission.lean:391); holds of widening, of narrowing reversed, and both ways of mixed"
+  },
+  {
+   "name": "Becoming.Web.IncludesAlong",
+   "why": "half of WidensAlong (Growth.lean:50)"
+  },
+  {
+   "name": "Becoming.Web.ExceedsAlong",
+   "why": "half of WidensAlong (Growth.lean:55)"
+  },
+  {
+   "name": "Becoming.Web.IncludesAcross",
+   "why": "half of WidensAcross (ContinuedClasses.lean:482)"
+  },
+  {
+   "name": "Becoming.Web.ExceedsAcross",
+   "why": "half of WidensAcross and of KeepsOpening (ContinuedClasses.lean:487)"
+  },
+  {
+   "name": "Becoming.Web.IncludesAcrossFrom",
+   "why": "the nothing-lost half of Web.KeepsWidening (EventualWidening.lean:280); holds also of a course that only keeps"
+  },
+  {
+   "name": "Becoming.Web.KeepsOpening",
+   "why": "the opening half of Web.KeepsWidening (EventualWidening.lean:285); holds also of a course that opens while losing"
+  },
+  {
+   "name": "Becoming.Web.IncludesFrom",
+   "why": "inclusion from a step on (EventualWidening.lean:102); a half"
+  },
+  {
+   "name": "Becoming.Web.ExceedsLate",
+   "why": "exceeding at arbitrarily late steps (EventualWidening.lean:107); a half"
+  },
+  {
+   "name": "Becoming.Web.after",
+   "why": "the web from a step on; device for reading tails"
+  },
+  {
+   "name": "Becoming.Web.tailFrom",
+   "why": "a level path from a step on; device for reading tails"
+  },
+  {
+   "name": "Becoming.Web.AdmitsAlikeFrom",
+   "why": "a static course from a step (EventualWidening.lean:295); the comparison class set against keeping widening, neither side"
+  },
+  {
+   "name": "Becoming.Web.IncludesWithLag",
+   "why": "inclusion with some lag (ComparingCourses.lean:111); a half of WidensWithLag"
+  },
+  {
+   "name": "Becoming.Web.IncludesLater",
+   "why": "inclusion with lag d (ComparingCourses.lean:106); a half; body not opened"
+  },
+  {
+   "name": "Becoming.Web.IncludesWithFormationLag",
+   "why": "a half of WidensOrWithFormationLag; body not opened"
+  },
+  {
+   "name": "Becoming.Web.IncludesEachLater",
+   "why": "a half of WidensOrEachLater; body not opened"
+  },
+  {
+   "name": "Becoming.Web.IncludesLaterAlong",
+   "why": "a half of WidensOrWithLagAlong; body not opened"
+  },
+  {
+   "name": "Becoming.Run.RangeIncludes",
+   "why": "half of Run.RangeWidens (ReachableRanges.lean:206)"
+  },
+  {
+   "name": "Becoming.Run.RangeExceeds",
+   "why": "half of Run.RangeWidens (ReachableRanges.lean:211)"
+  },
+  {
+   "name": "Becoming.Reaching.Covers",
+   "why": "the covering half of Reaching.Widens (ReachableRanges.lean:282); a preorder, neither side"
+  },
+  {
+   "name": "Becoming.Reaching.CoversLater",
+   "why": "covering with lag d; half of Reaching.WidensWithLag"
+  },
+  {
+   "name": "Becoming.Reaching.Possible",
+   "why": "the whole possible from a configuration (ReachableRanges.lean:299); what widening or narrowing of the possible is read on (Tasks.lean:935 says a delivery \"narrows the whole possible strictly\" of it)"
+  },
+  {
+   "name": "Becoming.Reaching.PossibleWithin",
+   "why": "the possible within k steps; a predicate chain that keeping widening is read on"
+  },
+  {
+   "name": "Becoming.Reaching.PossibleHeld",
+   "why": "the possible with a part held (HeldPossible.lean:215); the chain the theorems on the held possible keep widening on"
+  },
+  {
+   "name": "Becoming.Reaching.heldMoves",
+   "why": "the moves holding a part (HeldPossible.lean:210); a process built from a process"
+  },
+  {
+   "name": "Becoming.Steps.includes",
+   "why": "nothing lost along the moments (WideningOnTheMap.lean:92); the inclusion half of keeping widening, a preorder"
+  },
+  {
+   "name": "Becoming.Steps.same",
+   "why": "the same possible (WideningOnTheMap.lean:95); the fine class of the representation on the map"
+  },
+  {
+   "name": "Becoming.Weighting.IncludesOn",
+   "why": "half of WidensOn (Weightings.lean:428)"
+  },
+  {
+   "name": "Becoming.Weighting.ExceedsOn",
+   "why": "half of WidensOn (Weightings.lean:432)"
+  },
+  {
+   "name": "Becoming.Flow.OpenedByOpened",
+   "why": "what carries a range (first form); the chapter says it \"is invisible to widening\"; not opened in the Lean"
+  },
+  {
+   "name": "Becoming.Flow.OpenedByOpenedWithin",
+   "why": "what carries a range (recency form); a premise, not a side; not opened in the Lean"
+  },
+  {
+   "name": "Becoming.Flow.PassesSupport",
+   "why": "continuation by passing support; premise of the theorems on what keeping widening needs; not opened"
+  },
+  {
+   "name": "Becoming.Flow.BeginsAlong",
+   "why": "a beginning along a continuation; premise/consequent of those theorems; not opened"
+  },
+  {
+   "name": "Becoming.CausalGrowth.Finer.narrow",
+   "why": "built example: the narrower course of a witness pair (CausalGrowth.lean:1541); the theorem after it says the wider course widens its stems"
+  },
+  {
+   "name": "Becoming.CausalGrowth.Finer.narrowPast",
+   "why": "built example: that course's pasts (CausalGrowth.lean:1515)"
+  },
+  {
+   "name": "Becoming.Weighting.AnotherReads.narrow",
+   "why": "built example: an admission on two items, the narrower of a pair (RoutesToC.lean:490)"
+  },
+  {
+   "name": "Becoming.Weighting.Restraint.narrow",
+   "why": "built example: the same in another witness (RoutesToC.lean:563)"
+  },
+  {
+   "name": "Becoming.OwnCondition.web",
+   "why": "witness web of the eventual-widening theorems (76 statements); with OwnCondition.rising/burst/full/rung, built examples, not opened"
+  },
+  {
+   "name": "Becoming.KindRelay.Form",
+   "why": "witness type of the kind relay (94 statements); with the other KindRelay.*, Ladder.*, OpeningChain.*, ClosedCycle.*, LagWitness.*, MergedWitness.*, Saturated.*, Loosening.*, Source.*, OwnDrawing.*, Steps.moving/growing/arriving/dawning/twice/marked: built examples by their names and the chapter's witness lists, not opened"
+  }
+ ],
+ "refused": [
+  {
+   "name": "Becoming.Web.Keeps",
+   "why": "Regions.lean:160: each path includes the other; the third of the four cases (\"neutral\" in Admission.lean:87), neither side"
+  },
+  {
+   "name": "Becoming.Web.Mixed",
+   "why": "Regions.lean:164: each exceeds the other; the fourth case, which the chapter says widening alone does not settle"
+  },
+  {
+   "name": "Becoming.«齐»",
+   "why": "GrammarLaws.lean:2726: the grammar's keeping the same"
+  },
+  {
+   "name": "Becoming.«杂»",
+   "why": "GrammarLaws.lean:2729: the grammar's mixed"
+  },
+  {
+   "name": "Becoming.«逾»",
+   "why": "GrammarLaws.lean:2720: the grammar's exceeding; a half, as Web.Exceeds"
+  },
+  {
+   "name": "Becoming.Web.LosesBeyond",
+   "why": "Regions.lean:103: at one step, some formation outside a region is admitted by the other levels and not by these; a loss at a step, not narrowing (no inclusion clause; a mixed part loses beyond too). Nearest thing found to a declaration on the narrowing side; kept out because neither chapter nor docstring calls it narrowing"
+  },
+  {
+   "name": "Becoming.Web.AdmitsWithin",
+   "why": "Regions.lean:98: inclusion within a region at one step; a half"
+  },
+  {
+   "name": "Becoming.Web.Retains",
+   "why": "Retaining.lean:67: with a significance brought in; the chapter says retaining is inclusion only under the continuation condition; body not opened"
+  },
+  {
+   "name": "Becoming.Web.Adds",
+   "why": "Retaining.lean:72: with a significance; adding is exceeding only under the condition; body not opened"
+  },
+  {
+   "name": "Becoming.ChoiceOccasions.OwnWidensMet",
+   "why": "PersistingChoices.lean:329: widening on the listing joined with adding to the own continuation and being met together; a compound premise of an order, not widening itself; body read only to its first line"
+  },
+  {
+   "name": "Becoming.Web.KeepsWhatKept",
+   "why": "ComparingCourses.lean:522: a course keeps what another keeps from some step on; a necessary condition of the lagged orders by the chapter, not widening; body not opened"
+  },
+  {
+   "name": "Becoming.Web.TailOrder",
+   "why": "ComparingCourses.lean:499: by the chapter, the strict part of lagged inclusion from some step joined to widening or eventual widening; a further order, its docstring not opened"
+  },
+  {
+   "name": "Becoming.Web.ListedOrder",
+   "why": "ComparingCourses.lean:239: by the chapter, ranking keeping widening by name over admitting alike; an order ranking one widening notion over a static course, not opened"
+  },
+  {
+   "name": "Becoming.Reaching.Lexical",
+   "why": "ReachableRanges.lean:592: by the chapter, realized widening or same realized range and widening what can be reached; a two-tier order, not opened"
+  },
+  {
+   "name": "Becoming.World.ArisingRecurs",
+   "why": "Space.lean:190: Space's opening account says of arising and ceasing recurring \"this reading is not what the pair names (D2)\""
+  },
+  {
+   "name": "Becoming.World.CeasingRecurs",
+   "why": "Space.lean:194: same sentence of Space's account; not narrowing"
+  },
+  {
+   "name": "Becoming.Narrowing.narrowed",
+   "why": "Narrowing.lean:201: a belief over candidate rules narrowed by observations; narrowing of candidates held, not of what can form. The same holds of the other Becoming.Narrowing.* names (Rule, Observation, Fits, learn, answer, Settles, Safe, Maximal, revise, acquire, transport, repertoire, observe, sense, encode, oneSample, twoSamples, onCons), read from the module account lines 1-30 only"
+  },
+  {
+   "name": "Becoming.NarrowingRuns.record",
+   "why": "NarrowingRuns.lean: the same learning notion on runs of the pure observation (account lines 1-14); with SafeFor and GreatestFor"
+  },
+  {
+   "name": "Becoming.LearnedGrouping.narrow",
+   "why": "LearnedGrouping.lean:225: a built state \"After two encounters of the first word\"; with narrowCourse (line 432), an example course of sounds"
+  },
+  {
+   "name": "Becoming.ReadingsSpread.Commons.isNarrow",
+   "why": "ReadingsSpread.lean:997: \"The narrow readings: those that do not read the dweller\"; a class of readings"
+  },
+  {
+   "name": "Becoming.ReadingsSpread.Commons.narrow",
+   "why": "ReadingsSpread.lean:1003: the narrow readings' count among a population; a count on a built example"
+  },
+  {
+   "name": "Becoming.Transactions.narrowedScope",
+   "why": "Transactions.lean:551: an installation \"with its scope narrowed to nothing\"; a built example of another subject"
+  },
+  {
+   "name": "Becoming.Law.Reachable",
+   "why": "Recurrence.lean:490: Attraction.lean:245 heads a section \"The future narrows\", but what stands under it are theorems on what can be had n steps on; the definition was not opened and neither heading nor chapter section 2 says it states narrowing"
+  },
+  {
+   "name": "Becoming.Continuity.Closes",
+   "why": "Continuity.lean:86: a family closed under a relation among listed relata; not closing of what can form"
+  },
+  {
+   "name": "Becoming.OpenedCorrection.OpensAlong",
+   "why": "OpenedCorrection.lean:86: a course opens a correction (a fitting uniform policy comes to exist); another subject"
+  },
+  {
+   "name": "Becoming.Web.grow",
+   "why": "Growth.lean:126: by the chapter a growth adds formations and conditions; a construction on webs that widening along a reading is then asked of; not opened"
+  },
+  {
+   "name": "Becoming.Flow.GrownBy",
+   "why": "Cuts.lean:498: the Web.Widens docstring says growth by new kinds \"is not compared here\"; not opened"
+  }
+ ],
+ "not_read": "Read: 07-SIGNIFICANCE.md lines 49-131 (section 2 through r-what-can-be-born-next; lines 133-137 seen only through a grep hit; section 4.4 on weightings not read); the table by grep for widen/narrow and a second grep for related names; in the Lean, only the docstring and body of each definition listed under sides, plus the module accounts of Space.lean (lines 1-60 of its opening), Regions.lean (1-50), Admission.lean (60-96), Narrowing.lean (1-30), NarrowingRuns.lean (1-14), OwnWidening.lean (1-16). Not read: the module accounts of EventualWidening, KeepingWidening, EventualWideningInstances, ComparingCourses, ReachableRanges, HeldPossible, WideningOnTheMap, Growth, ContinuedClasses, Weightings, CausalGrowth, Tasks, Direction, Retaining (only grep lines), Attraction (only lines 245-262); the bodies of every name marked \"not opened\" among carriers and refused; all witness namespaces (KindRelay, Ladder, OpeningChain, ClosedCycle, OwnCondition, LagWitness, MergedWitness, Saturated, Loosening, Source, OwnDrawing, Steps.moving and its neighbours), taken as built examples from their names and the chapter's witness lists; the rest of Space.lean after line 60; the three modules beside the package (GenerativeCore, RelationalRenewal, InquirySufficiency: the table has 84 rows from them, none with widen or narrow in its name, and none was opened); the records under results/records; the direction page; FROZEN.md (not opened, as told). The table was searched by name only: a non-theorem declaration that states widening or narrowing under a name without \"widen\", \"narrow\", 广, Includes, Exceeds, Covers, Possible, Keeps, Mixed, Closes, Opens or Lexical would not have been found. No Lean, build or test was run; no file was written.",
+ "notes": "1. NARROWING has no declaration of its own, in what was searched. The table's grep for \"narrow\" (case-insensitive) returned no definition of narrowing what can form; the names it returned are a learning module (Becoming.Narrowing, NarrowingRuns), built examples, and a class of readings. Narrowing is said by the one definition Becoming.Web.Widens with its two paths exchanged (Regions.lean:37-38, Admission.lean:69 \"it *narrows*, the converse\", Retaining.lean:348). So the two sides of P2 are one notion read in two directions: a script that looks for theorems naming notions of two sides will find no P2 pair by names alone, since Web.Widens is on both lists. Which side a statement is on is in the order of the arguments (levels without the part first = narrowing: `W.Widens l W.level`, Retaining.lean:351).\n2. Some narrowing statements do not name Web.Widens at all: Clearing.narrows (Clearing.lean:262-263) is stated as `web.Includes l web.level ∧ web.Exceeds l web.level`, the two halves unfolded. A script keyed on Widens misses it; one keyed on Includes and Exceeds would need to read the argument order. Tasks.lean:935-938 (Catalysis.narrows, \"narrows the whole possible strictly\") is said by its docstring of Reaching.Possible; its statement was not opened.\n3. No \"keeps narrowing\", \"eventually narrows\" or narrowing-with-lag notion was found in the table grep; the long-run and lagged forms exist on the widening side only, and of them the keeping forms (Web.KeepsWidening, Reaching.KeepsWidening, Steps.KeepsWideningFrom) are about ONE course, not a comparison of two, so they have no converse reading as narrowing. A course that loses without end has, in what was read, no named notion (the nearest is the heading \"The future narrows\" in Attraction.lean:245, with theorems on Law.Reachable under it, not opened beyond 18 lines).\n4. Notions that the chapter says are one, joined by theorems I did not open: Web.Widens and «广» at what the paths admit (`Web.widens_iff`, Regions.lean account line 43); Web.KeepsWidening by name and Reaching.KeepsWidening (`Web.keepsWidening_iff_chain`); Steps.KeepsWideningFrom and Reaching.KeepsWidening shifted (`Steps.keepsWideningFrom_iff_shift`); WidensAlong along the identity and Widens (chapter line 93). The WidensOr* names are joins of a listed notion with a lagged or late one; they were listed because their docstrings say \"Widening, or ...\", and a later reader may prefer to treat them as orders rather than as the side.\n5. Grain: widening is stated at eight grains in what was read (whole run of two level paths; within a region; along a reading between webs; across a stretch of one path; late tails; up to a step; two courses of any process; two configurations over all their courses; a finite listing with no steps; the grammar with no steps), narrowing only at the first, by reversal.\n6. Chapter sentences the Lean does not carry as a declaration, in what was read: \"Widening and narrowing are more and less future ... patterns within becoming, not good and evil\" (07 line 90) has widening defined and narrowing only as its converse; the run-classes table's \"narrows\" and \"does not narrow\" are theorem names over `W.Widens l W.level`. Space.lean's opening account says \"Ren's \\\"generative\\\" and \\\"degenerative\\\" read as widening and narrowing what can form\" but Space declares neither; its own pair (World.ArisingRecurs, World.CeasingRecurs) it says \"is not what the pair names\".\n7. The Web.Widens docstring limits it: it counts admissions of members of the fixed type F, so \"growth by new kinds ... is not compared here\" (Regions.lean:149-152).\n8. The three chapter anchors named in the brief (four cases, run classes, keeping widening is generation losing nothing) introduce by definition only Web.Widens (with Keeps and Mixed), and the chain form of keeping widening with Steps.includes and Steps.same; the other widening notions listed with basis \"chapter\" are from neighbouring paragraphs of the same section 2, and those with basis \"docstring\" are not named in the lines of section 2 I read, except where the quote says so."
+}

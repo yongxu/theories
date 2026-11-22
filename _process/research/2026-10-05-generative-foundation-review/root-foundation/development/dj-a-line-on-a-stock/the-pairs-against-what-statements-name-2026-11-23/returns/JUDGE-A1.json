@@ -1,0 +1,600 @@
+{
+ "packet": "A",
+ "answers": [
+  {
+   "item": "A01",
+   "verdict": "BUILT CASE",
+   "from_side": "RENEWING",
+   "to_side": "CONSUMING",
+   "kind": "under both",
+   "quote": "(∀ n, web.UnderminingAt (2 * n) .oscillator) ∧ web.RenewingInWithin 2 .oscillator",
+   "handed_in": "Nothing: no premise. The web is built (Oscillation.web: one condition whose level goes 2,1,2,1,...; the oscillator needs 2, is active and draws where the level is 2).",
+   "converse": "None named. The case refutes 'RenewingInWithin p f → no event of f is UnderminingAt' (here p = 2): the wall of A11 (RenewingAt against UnderminingAt at a step) does not pass to renewal over cycles.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.UnderminingAt",
+     "of_what": "the oscillator's event (one built formation at a step), through the single condition it draws on and itself requires",
+     "grain": "a step; said at every even step 2*n",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.RenewingInWithin",
+     "of_what": "the oscillator as a formation: every condition it participates in at any step is met again within 2 steps",
+     "grain": "a whole run, read over cycles of two steps",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "One formation in one web is under both sides, at different grains: undermining at each even step, renewing over cycles of two. The statement does not place one as leading to the other. The docstring says more than the statement: 'every arising' (the statement says every even step, including step 0, and names no arising), and 'which the source restores' (the statement names no source; RenewingInWithin says only that the level is back within two steps). The whole-run RenewingIn is not named; by A11 with renewing_at_active it could not hold here, but that is not in this statement."
+  },
+  {
+   "item": "A02",
+   "verdict": "BUILT CASE",
+   "from_side": "RENEWING",
+   "to_side": "CONSUMING",
+   "kind": "under both, but of different things: the condition the clearer requires is Renewed; the clearer's event at step 1 is UnderminingAt",
+   "quote": "(∀ t c, web.requires t .clearer c → c = .resource) ∧ (∀ t, web.active t .clearer ∧ web.Supported t .clearer) ∧ web.Renewed .resource ∧ ... web.UnderminingAt 1 .clearer ∧ ∀ n, ¬ web.active (n + 2) .dweller",
+   "handed_in": "Nothing: no premise; web and flow are built (Clearing.web, Clearing.flow). The other conjuncts (Balances, Dissipative, Dependent, FedFromBeyond, WithinJoint) are stated of the same built case.",
+   "converse": "None named. The case refutes 'every condition a formation requires is Renewed (and it is active and supported at every step) → none of its events is undermining': renewal of what is required, without what is drawn on, does not exclude undermining.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.Renewed",
+     "of_what": "a condition, .resource, the only condition the clearer requires (not the clearer as a formation; RenewingIn/RenewingAt of the clearer are not asserted)",
+     "grain": "a whole run: every dependence on it kept at every step",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.UnderminingAt",
+     "of_what": "the clearer's event at step 1 (through some condition it draws on; in the built web the habitat, which the dweller requires; the statement does not name the condition)",
+     "grain": "a step: step 1",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "The statement also carries an ACROSS that is not between the two listed sides: the clearer undermines at step 1 and another formation, the dweller, is 'not active' from step 2 on ('∀ n, ¬ web.active (n + 2) .dweller'), a ceasing said by bare `active`, not by a listed notion. The statement does not say the dweller's inactivity is because of the undermining; the docstring's 'depending on the habitat' and 'its clearing of the habitat' are not in the statement (UnderminingAt hides the condition under ∃). A03 says the same case more exactly (regional renewing held, RenewingAt denied)."
+  },
+  {
+   "item": "A03",
+   "verdict": "BUILT CASE",
+   "from_side": "RENEWING",
+   "to_side": "CONSUMING",
+   "kind": "under both (RenewingOver the resource, and UnderminingAt, of the same event at step 1); the unrestricted RenewingAt stands denied of that event",
+   "quote": "(∀ t, web.RenewingOver (· = .resource) t .clearer) ∧ (∀ t c, web.requires t .clearer c → c = .resource) ∧ web.UnderminingAt 1 .clearer ∧ ¬ web.RenewingAt 1 .clearer",
+   "handed_in": "Nothing: no premise; the web is built (Clearing.web). The region (· = .resource) is chosen in the statement.",
+   "converse": "None named. Refutes 'RenewingOver region t f → ¬ UnderminingAt t f', even where the region holds every condition f requires: A11's wall does not hold for renewal over a region. The last conjunct is A11's contrapositive in this instance.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.RenewingOver",
+     "of_what": "the clearer's event, over the region of conditions {resource} (the one condition it requires)",
+     "grain": "a step, said at every step t",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.RenewingAt",
+     "of_what": "the clearer's event at step 1, over every condition it participates in",
+     "grain": "a step: step 1",
+     "denied": true,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.UnderminingAt",
+     "of_what": "the clearer's event at step 1 (through a condition it draws on outside the region)",
+     "grain": "a step: step 1",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "One event (clearer, step 1) is under regional renewing and under undermining, and not under RenewingAt. Docstring's 'so it keeps its own support' is not a conjunct of this statement (it is in A02), and 'its draw on the habitat' names a condition the statement leaves under ∃. The docstring otherwise says what the statement says."
+  },
+  {
+   "item": "A04",
+   "verdict": "WALL",
+   "from_side": "RENEWING",
+   "to_side": "CONSUMING",
+   "kind": "",
+   "quote": "(renewing : W.RenewingAlong R t g) : ¬ W.ConsumingAlong R t g",
+   "handed_in": "Nothing beyond the near side's notion. W, the continuation R, the step t and the formation g are arbitrary and the same on both sides.",
+   "converse": "No converse named. '¬ ConsumingAlong → RenewingAlong' is not stated (a continuation can be neither: some continuing formation participates in a condition that is neither Renewed nor Consumed).",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.RenewingAlong",
+     "of_what": "the continuation from formation g at step t under R: every formation continuing it, every condition each takes part in (at the step where it continues) is Renewed",
+     "grain": "from step t on, every branch of the continuation",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.ConsumingAlong",
+     "of_what": "the same continuation from g at t under the same R: some formation continuing it draws on a Consumed condition",
+     "grain": "from step t on, some branch",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "General, no extra premise. The docstring ('exclude each other') says what the statement gives; one direction is stated and the other is its contrapositive. The exclusion is A08 (Renewed against Consumed of a condition) carried to the continuation: the proof calls Web.renewed_not_consumed on the one condition drawn on."
+  },
+  {
+   "item": "A05",
+   "verdict": "BUILT CASE",
+   "from_side": "RENEWING",
+   "to_side": "CONSUMING",
+   "kind": "under both (RenewingIn as named; ConsumingAlong the merge), with RenewingAlong denied",
+   "quote": "web.RenewingIn .first ∧ web.ConsumingAlong merge 0 .first ∧ ¬ web.RenewingAlong merge 0 .first",
+   "handed_in": "Nothing: no premise; web and the continuation `merge` are built (MergeClass: first and second at step 0 both continue as .merged, which draws on the spent condition at step 1).",
+   "converse": "None named. Refutes 'RenewingIn f → RenewingAlong R t f' and 'RenewingIn f → ¬ ConsumingAlong R t f': the whole-run class of a formation as named does not give its class along a continuation.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.RenewingIn",
+     "of_what": "the formation .first as named: every condition it participates in at any step is Renewed",
+     "grain": "a whole run",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.ConsumingAlong",
+     "of_what": "the continuation from .first at step 0 under `merge`: some formation continuing it (in the built web the merged formation at step 1, not .first itself) draws on a Consumed condition",
+     "grain": "from step 0 on, some branch",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.RenewingAlong",
+     "of_what": "the same continuation from .first at step 0",
+     "grain": "from step 0 on, every branch",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "The two sides are said of different readings of 'the first': the formation under its name (renewing) and the line that continues it through the merge (consuming). The third conjunct is A04's wall applied here, so the docstring's 'the two exclude each other' is shown only as this instance (RenewingAlong against ConsumingAlong); RenewingIn and ConsumingAlong are precisely shown NOT to exclude each other. 'Read off the merge, not its name' is a telling; the statement gives the three facts."
+  },
+  {
+   "item": "A06",
+   "verdict": "NAME ONLY",
+   "from_side": "RENEWING",
+   "to_side": "CONSUMING",
+   "kind": "",
+   "quote": "(W.adjoin .universal).Renewed none ∧ (∀ e, ((W.adjoin .universal).interaction own sig).living e ↔ (W.interaction own sig).living e) ∧ ((W.adjoin .universal).interaction own sig).Connected",
+   "handed_in": "Nothing: W, own, sig are arbitrary section variables; the adjoined condition (.universal: level 1, every formation requires it at need 1 and draws on it) is built.",
+   "converse": "",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.Renewed",
+     "of_what": "the adjoined condition `none` of the enlarged web",
+     "grain": "a whole run",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.UnderminingAt (inside the unfolding of interaction.living)",
+     "of_what": "each event (formation, step), in the enlarged web and in W, on the two sides of an iff",
+     "grain": "a step",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "UnderminingAt enters only through the definition of `living` (active and not undermining), on both sides of an invariance iff: the living events are the same before and after adjoining. The statement is about connection through interaction being cheap, not about renewing against consuming. What lies nearest a placing is implicit: adjoining a Renewed condition that everyone draws on adds no undermining to any active event. The proof gets it from the level never falling below the need (`Nat.lt_irrefl 1 fell`), an unstated case of 'a kept dependence is not undermined on'. The statement does not say this as a relation between the sides. Docstring's 'Its content is that every formation draws on and depends on it' is a comment, not in the statement."
+  },
+  {
+   "item": "A07",
+   "verdict": "NAME ONLY",
+   "from_side": "RENEWING",
+   "to_side": "CONSUMING",
+   "kind": "",
+   "quote": "(alive : (W.interaction own sig).living d) : (W.adjoin (.single d)).Renewed none ∧ (∀ e, ((W.adjoin (.single d)).interaction own sig).living e ↔ (W.interaction own sig).living e) ∧ ((W.adjoin (.single d)).interaction own sig).Connected",
+   "handed_in": "alive: the event d is living in W (active and not undermining). W, own, sig arbitrary; the adjoined condition (.single d: level 1, every formation requires it at need 1, drawn on only by d's formation at d's step) is built from d.",
+   "converse": "",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.Renewed",
+     "of_what": "the adjoined condition `none` of the enlarged web",
+     "grain": "a whole run",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.UnderminingAt (inside the unfolding of interaction.living)",
+     "of_what": "the event d in W (premise), and each event in both webs (the iff)",
+     "grain": "a step",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "As A06: the consuming notion is named only inside `living`, as denied, in a premise (d is active and not undermining) and on both sides of an invariance iff. The premise is used for connection (one living drawing event links all), not to place renewing with respect to consuming. Implicit only: one event drawing on a Renewed condition does not thereby become undermining. Docstring agrees with the statement."
+  },
+  {
+   "item": "A08",
+   "verdict": "WALL",
+   "from_side": "RENEWING",
+   "to_side": "CONSUMING",
+   "kind": "",
+   "quote": "(renewed : W.Renewed c) : ¬ W.Consumed c",
+   "handed_in": "Nothing beyond the near side's notion; W and c arbitrary.",
+   "converse": "No docstring; no converse named. '¬ Consumed c → Renewed c' is not stated (a condition whose level dips below a need and comes back is neither).",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.Renewed",
+     "of_what": "a condition c: every dependence on it, by any formation",
+     "grain": "a whole run: kept across every step",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.Consumed",
+     "of_what": "the same condition c: some dependence on it holding at some step T",
+     "grain": "from an event on: at every step after T the level is below that need",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "General, of one condition in one web. The two notions exclude each other and do not exhaust: there is a middle the statement does not speak of. The proof uses only the step T → T+1 of the Consumed dependence."
+  },
+  {
+   "item": "A09",
+   "verdict": "COVERS",
+   "from_side": "RENEWING",
+   "to_side": "CONSUMING",
+   "kind": "",
+   "quote": "(depends : W.requires t g c) (met : W.need t g c ≤ W.level t c) : W.Kept t g c ∨ W.Broken t g c",
+   "handed_in": "depends: g requires c at t; met: the need is met at t (need ≤ level at t). Neither is a notion of either side.",
+   "converse": "",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.Kept (RENEWING by a reader's reading only)",
+     "of_what": "one dependence: formation g on condition c, across the step from t",
+     "grain": "a step",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.Broken (CONSUMING by a reader's reading only)",
+     "of_what": "the same dependence of g on c across the same step",
+     "grain": "a step",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "Everything of the stated kind (a dependence that holds and is met at t) is kept or broken across the step; with A10 the two are exclusive, so met dependences are split in two at each step. An unmet dependence is under neither. Both notions are listed under their sides by a reader's reading only: they are of a single dependence at a single step, not of a formation or a course."
+  },
+  {
+   "item": "A10",
+   "verdict": "WALL",
+   "from_side": "RENEWING",
+   "to_side": "CONSUMING",
+   "kind": "",
+   "quote": "(kept : W.Kept t g c) : ¬ W.Broken t g c",
+   "handed_in": "Nothing beyond the near side's notion.",
+   "converse": "No docstring; no converse named here. '¬ Broken → Kept' holds only with the premises of A09 (the dependence holds and is met at t).",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.Kept (RENEWING by a reader's reading only)",
+     "of_what": "one dependence: g on c, across the step from t",
+     "grain": "a step",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.Broken (CONSUMING by a reader's reading only)",
+     "of_what": "the same dependence across the same step",
+     "grain": "a step",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "General, same t, g, c on both sides. Kept does not contain `requires`; Broken does. The exclusion turns only on the level after the step (need ≤ level (t+1) against level (t+1) < need)."
+  },
+  {
+   "item": "A11",
+   "verdict": "WALL",
+   "from_side": "RENEWING",
+   "to_side": "CONSUMING",
+   "kind": "",
+   "quote": "(renewing : W.RenewingAt t f) : ¬ W.UnderminingAt t f",
+   "handed_in": "Nothing beyond the near side's notion.",
+   "converse": "No converse named. '¬ UnderminingAt t f → RenewingAt t f' is not stated and fails in general (an inactive formation; or one that only requires, and does not draw on, a condition whose dependence the step breaks).",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.RenewingAt",
+     "of_what": "a formation's event: f at t, active, with every dependence (of any formation) on every condition f participates in kept across the step",
+     "grain": "a step",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.UnderminingAt",
+     "of_what": "the same event: f at t draws on some condition that after the step is below some dependence's present need",
+     "grain": "a step",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "General, one event at one step. The docstring's 'so not breaking' is not in this statement; it is A12. A01 and A03 show the wall does not extend to renewal over cycles or over a region."
+  },
+  {
+   "item": "A12",
+   "verdict": "WALL",
+   "from_side": "RENEWING",
+   "to_side": "CONSUMING",
+   "kind": "",
+   "quote": "(renewing : W.RenewingAt t f) : ¬ W.BreakingAt t f",
+   "handed_in": "Nothing beyond the near side's notion.",
+   "converse": "No docstring; no converse named.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.RenewingAt",
+     "of_what": "a formation's event: f at t",
+     "grain": "a step",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.BreakingAt (CONSUMING by a reader's reading only)",
+     "of_what": "the same event: f at t draws on a condition on which the step breaks some formation's dependence",
+     "grain": "a step",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "General. The proof goes through A11 by 'a breaking relation is undermining' (BreakingOn.undermining), so this wall is a case of A11's."
+  },
+  {
+   "item": "A13",
+   "verdict": "WALL",
+   "from_side": "CONSUMING",
+   "to_side": "RENEWING",
+   "kind": "",
+   "quote": "(joins : W.Participates t f c) (broken : W.Broken t g c) : ¬ W.RenewingAt t f",
+   "handed_in": "joins: f participates in c at t (requires it or draws on it). This is the link between what Broken is said of (g's dependence on c) and what RenewingAt is said of (f's event).",
+   "converse": "No converse named. Nothing says that an event not within renewal has a broken dependence among its conditions (it may be inactive, or a dependence may be unmet before and after).",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.Broken (CONSUMING by a reader's reading only)",
+     "of_what": "the dependence of a formation g (which may be other than f) on condition c, across the step from t",
+     "grain": "a step",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.RenewingAt",
+     "of_what": "the event of formation f at t, where f participates in c",
+     "grain": "a step",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "The two notions are said of different things at the same step, joined by the handed-in participation: a broken dependence of g on c, and the event of any f taking part in c. It is a wall because RenewingAt of f is by definition about every formation's dependence on f's conditions; the proof is the unfolding of RenewingAt with A10. The statement does not put f on the consuming side: Participates may be requiring without drawing, so f need not be BreakingAt or UnderminingAt. An event can thus be not renewing without being breaking. The docstring's 'an event whose step breaks a dependence on a condition it participates in' matches the statement."
+  },
+  {
+   "item": "A14",
+   "verdict": "BUILT CASE",
+   "from_side": "RENEWING",
+   "to_side": "CONSUMING",
+   "kind": "pair of built runs for each h: the consuming run is under both (RenewingAt at every step before h; ConsumingIn of the whole run); the renewing run is under RENEWING at both grains",
+   "quote": "∀ h : Nat, ∃ renewing consuming : Run process, renewing.AgreeUpTo h consuming ∧ (∀ t, t < h → consuming.act t = 2) ∧ (∀ t, t < h → (conditions.dependence.along renewing).RenewingAt t .focal ∧ (conditions.dependence.along consuming).RenewingAt t .focal) ∧ (conditions.dependence.along renewing).RenewingIn .focal ∧ (conditions.dependence.along consuming).ConsumingIn .focal",
+   "handed_in": "Nothing: no premise; process, conditions and the runs are built (Renewable). Stated beside the two sides: the runs agree up to h (same states through h, same acts before h); the consuming run's act is 2 at each step before h.",
+   "converse": "None named. The pair refutes '(∀ t < h, RenewingAt t f) → RenewingIn f' and '(∀ t < h, RenewingAt t f) → ¬ ConsumingIn f' for every h: stepwise renewal over any finite prefix does not give the whole-run class. It also shows that agreement up to h does not decide between RenewingIn and ConsumingIn.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.RenewingAt",
+     "of_what": "the focal formation's event, in each of the two runs",
+     "grain": "a step: every step t < h",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.RenewingIn",
+     "of_what": "the focal formation in the run named `renewing`",
+     "grain": "a whole run",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.ConsumingIn",
+     "of_what": "the focal formation in the other run, `consuming`",
+     "grain": "a whole run (some draw on a condition that, from some step on, never meets a need again; the statement gives no index for that step)",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "Not a PASSAGE: of the consuming run the statement gives RenewingAt at steps t < h and ConsumingIn with its steps under ∃, so no later index is stated (that the consumption falls at or after h can be inferred from Kept, but is not said). The two whole-run classes are said of two different runs (across runs), while the step-grain renewing is said of both. The docstring's 'drawing beyond renewal' is its reading of 'act t = 2'; the statement gives the number only. 'Then one renews and the other consumes' matches."
+  },
+  {
+   "item": "A15",
+   "verdict": "BUILT CASE",
+   "from_side": "RENEWING",
+   "to_side": "CONSUMING",
+   "kind": "under X and not Y (RenewingIn held; ConsumingIn denied), of one built run for each h",
+   "quote": "∃ r : Run process, (∀ t, t < h → r.act t = 2) ∧ (conditions.dependence.along r).RenewingIn .focal ∧ ∀ t, (conditions.along r).active t .focal ∧ ¬ RelationalRenewal.ConsumingIn (conditions.along r) .focal",
+   "handed_in": "Nothing: no premise (h arbitrary); the run is built. Beside the two sides: act t = 2 before h; focal active at every t.",
+   "converse": "None named. What the case refutes lies outside the two listed sides: 'RenewingIn f → every draw is within the amount renewed' (the run draws 2 at each step before h and still renews).",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.RenewingIn",
+     "of_what": "the focal formation in the web along the built run r (conditions.dependence.along r)",
+     "grain": "a whole run",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "RelationalRenewal.ConsumingIn",
+     "of_what": "the focal formation in the static unfolding along the same run (conditions.along r), a different structure from the web the renewing is said in",
+     "grain": "a whole run (the notion has no step; the ∀ t in front of it binds only `active`)",
+     "denied": true,
+     "which_reading": ""
+    }
+   ],
+   "note": "As a placing of the two sides this adds nothing to the general wall (renewing_not_consuming; the proof gets the denial from RenewingIn through the static reading): renewing and not consuming, of one run. The docstring says more than the statement: 'every event of its focal formation is ... not consuming' reads as a per-event denial, but the denied notion is the whole-run ConsumingIn repeated under ∀ t; no stepwise consuming notion (UnderminingAt, BreakingAt) is denied. 'One beyond renewal' is a reading of act = 2. 'The renewing run above' (A14's) is not in the statement, which says only ∃ r."
+  },
+  {
+   "item": "A16",
+   "verdict": "BUILT CASE",
+   "from_side": "RENEWING",
+   "to_side": "CONSUMING",
+   "kind": "pair of built runs: one under RENEWING, the other under CONSUMING; neither is stated under both, and each side is said of a different run",
+   "quote": "∃ r c : Run process, (conditions.dependence.along r).RenewingIn .focal ∧ (conditions.dependence.along c).ConsumingIn .focal ∧ ∀ t, t < h → ¬ r.act t ≤ 1 ∧ ¬ c.act t ≤ 1",
+   "handed_in": "Nothing: no premise (h arbitrary); runs built. The first two conjuncts are about the amount reading itself (act t ≤ 1 is fixed by the history through t+1; withinRenewal meets it at every step) and name neither side.",
+   "converse": "None named. The pair refutes 'RenewingIn f → act t ≤ 1 at every step' (whole-run renewing does not give drawing within the amount at each step), and shows the amount reading fails alike before h in a renewing and in a consuming run, so that failing it before h does not tell them apart.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.RenewingIn",
+     "of_what": "the focal formation in the web along run r",
+     "grain": "a whole run",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.ConsumingIn",
+     "of_what": "the focal formation in the web along another run c",
+     "grain": "a whole run",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "The two sides are said of two different runs and placed with respect to each other only through a third reading, the amount 'act t ≤ 1', denied of both at every step before h. Unlike A14, this statement does not say the two runs agree up to h; the docstring's 'both runs above' points to A14's runs, which the statement's ∃ does not fix. 'Escapes the horizon' and 'draws no more than is renewed' are tellings of the first conjunct and of act ≤ 1."
+  },
+  {
+   "item": "A17",
+   "verdict": "BUILT CASE",
+   "from_side": "RENEWING",
+   "to_side": "CONSUMING",
+   "kind": "pair of built unfoldings for each h: one (schedule stopping h) under RENEWING, the other (schedule continuing) under CONSUMING; neither is stated under both",
+   "quote": "(law h (stopping h)).start = (law h continuing).start ∧ (∀ t, t < h → stopping h t = continuing t) ∧ RenewingIn (law h (stopping h)).unfolding .focal ∧ ConsumingIn (law h continuing).unfolding .focal",
+   "handed_in": "Nothing: no premise (h arbitrary); the law and both draw schedules are built (stopping h t = 2 before h, then 1; continuing = 2 throughout). Beside the sides: same start; schedules equal before h.",
+   "converse": "None named. The pair shows that the same start and the same draws before h do not decide between RenewingIn and ConsumingIn, for every h.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "RelationalRenewal.RenewingIn",
+     "of_what": "the focal formation in the unfolding of the law under the schedule that stops at h",
+     "grain": "a whole run",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "RelationalRenewal.ConsumingIn",
+     "of_what": "the focal formation in the unfolding of the same law under the schedule that never stops",
+     "grain": "a whole run",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "Each side is said of a different built course; what differs between them is the schedule from h on. I do not answer PASSAGE kind p: the statement gives two built schedules, not two ranges of a parameter, and no course is carried from one side to the other. Unlike A14, no stepwise renewal before h is stated here. The docstring says more: 'two units, one beyond renewal' (the statement only equates the schedules before h), and 'the renewing schedule never reaches the threshold below which renewal stops, so the feedback does not change the horizon result' (in the proof, `supported`, not in the statement)."
+  },
+  {
+   "item": "A18",
+   "verdict": "BUILT CASE",
+   "from_side": "RENEWING",
+   "to_side": "CONSUMING",
+   "kind": "pair of built webs for each h: one under RENEWING, the other under CONSUMING; neither is stated under both",
+   "quote": "(∀ t, t ≤ h → (Web.static (Feedback.law h (Feedback.stopping h)).unfolding).level t () = (Web.static (Feedback.law h Feedback.continuing).unfolding).level t ()) ∧ (Web.static (Feedback.law h (Feedback.stopping h)).unfolding).RenewingIn .focal ∧ (Web.static (Feedback.law h Feedback.continuing).unfolding).ConsumingIn .focal",
+   "handed_in": "Nothing: no premise (h arbitrary); both webs are the static webs of the built law under the two built schedules. Beside the sides: the level of the one condition is the same in both webs at every t ≤ h.",
+   "converse": "None named. The pair shows that equal levels of the shared condition up to h do not decide between RenewingIn and ConsumingIn on webs, for every h.",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.RenewingIn",
+     "of_what": "the focal formation in the static web of the law under the schedule stopping at h",
+     "grain": "a whole run",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.ConsumingIn",
+     "of_what": "the focal formation in the static web of the law under the schedule continuing",
+     "grain": "a whole run",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "A17 carried to webs (the proof transfers it by static_renewingIn and static_consumingIn). Each side is of a different web; they share the level path through step h. The docstring's 'two draw schedules that agree before h' is not a conjunct here (it is in A17); the statement gives equal levels up to h instead. 'Stops overdrawing' is a telling of the schedule's definition."
+  },
+  {
+   "item": "A19",
+   "verdict": "NAME ONLY",
+   "from_side": "RENEWING",
+   "to_side": "CONSUMING",
+   "kind": "",
+   "quote": "((W.reidentify σ).Kept t x c ↔ W.Kept t (σ.old t x) c) ∧ ((W.reidentify σ).Broken t x c ↔ W.Broken t (σ.old t x) c)",
+   "handed_in": "Nothing: W, the re-identification σ, t, x, c arbitrary.",
+   "converse": "",
+   "opened_file": true,
+   "sides": [
+    {
+     "side": "RENEWING",
+     "notion": "Becoming.Web.Kept (RENEWING by a reader's reading only)",
+     "of_what": "a dependence of formation x (under the new naming) on c, against the same dependence under the old name σ.old t x",
+     "grain": "a step",
+     "denied": false,
+     "which_reading": ""
+    },
+    {
+     "side": "CONSUMING",
+     "notion": "Becoming.Web.Broken (CONSUMING by a reader's reading only)",
+     "of_what": "the same dependence, new naming against old",
+     "grain": "a step",
+     "denied": false,
+     "which_reading": ""
+    }
+   ],
+   "note": "Each iff stays within one side: keeping is unchanged by re-identification, and breaking is unchanged by re-identification, as two separate conjuncts (with Supported as a third). Nothing is said of keeping with respect to breaking; each is named as something a re-naming carries over. The docstring says the same."
+  }
+ ],
+ "not_read": ""
+}

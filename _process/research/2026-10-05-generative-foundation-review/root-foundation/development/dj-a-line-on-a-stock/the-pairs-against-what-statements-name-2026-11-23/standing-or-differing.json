@@ -1,0 +1,1257 @@
+[
+ {
+  "item": "A04",
+  "theorem": "Web.renewingAlong_not_consumingAlong",
+  "cell": "P3 within",
+  "verdicts": [
+   "WALL",
+   "WALL"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ],
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "A08",
+  "theorem": "Web.renewed_not_consumed",
+  "cell": "P3 within",
+  "verdicts": [
+   "WALL",
+   "WALL"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ],
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "A09",
+  "theorem": "Web.kept_or_broken",
+  "cell": "P3 within",
+  "verdicts": [
+   "COVERS",
+   "COVERS"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [
+   "three-outcomes-of-a-loss"
+  ],
+  "from_to": [
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ],
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ]
+  ],
+  "reading": [
+   "Becoming.Web.Broken as P3.consuming",
+   "Becoming.Web.Kept as P3.renewing"
+  ]
+ },
+ {
+  "item": "A10",
+  "theorem": "Web.kept_not_broken",
+  "cell": "P3 within",
+  "verdicts": [
+   "WALL",
+   "WALL"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ],
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ]
+  ],
+  "reading": [
+   "Becoming.Web.Broken as P3.consuming",
+   "Becoming.Web.Kept as P3.renewing"
+  ]
+ },
+ {
+  "item": "A11",
+  "theorem": "Web.RenewingAt.not_undermining",
+  "cell": "P3 within",
+  "verdicts": [
+   "WALL",
+   "WALL"
+  ],
+  "chapters_naming_it": [
+   "07"
+  ],
+  "atlas": [],
+  "from_to": [
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ],
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "A12",
+  "theorem": "Web.RenewingAt.not_breaking",
+  "cell": "P3 within",
+  "verdicts": [
+   "WALL",
+   "WALL"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ],
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ]
+  ],
+  "reading": [
+   "Becoming.Web.BreakingAt as P3.consuming"
+  ]
+ },
+ {
+  "item": "A13",
+  "theorem": "Web.not_renewing_at_of_broken",
+  "cell": "P3 within",
+  "verdicts": [
+   "WALL",
+   "ACROSS"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "CONSUMING",
+    "RENEWING",
+    ""
+   ],
+   [
+    "CONSUMING",
+    "RENEWING",
+    ""
+   ]
+  ],
+  "reading": [
+   "Becoming.Web.Broken as P3.consuming"
+  ]
+ },
+ {
+  "item": "B09",
+  "theorem": "Renewable.finite_reading_withholds_renewal",
+  "cell": "P3 within",
+  "verdicts": [
+   "ACROSS",
+   "ACROSS"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "CONSUMING",
+    "RENEWING",
+    ""
+   ],
+   [
+    "CONSUMING",
+    "RENEWING",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "B10",
+  "theorem": "Optimum.Holding.doubling_capacity",
+  "cell": "P3 within",
+  "verdicts": [
+   "BUILT CASE",
+   "PASSAGE"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [
+   "drawers-in-turn"
+  ],
+  "from_to": [
+   [
+    "RENEWING",
+    "CONSUMING",
+    "under X and not Y in one built setting (floor oneUnit: Kept), under Y and not X in the other (no floor: Broken); the 'not' follows from the two definitions at one step and is not stated"
+   ],
+   [
+    "CONSUMING",
+    "RENEWING",
+    "p"
+   ]
+  ],
+  "reading": [
+   "Becoming.Web.Broken as P3.consuming",
+   "Becoming.Web.Kept as P3.renewing"
+  ]
+ },
+ {
+  "item": "B16",
+  "theorem": "Ranking.wholeRun_of_renewed",
+  "cell": "P3 within",
+  "verdicts": [
+   "WALL",
+   "WALL"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ],
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "B17",
+  "theorem": "Ranking.stepwise_of_renewed",
+  "cell": "P3 within",
+  "verdicts": [
+   "WALL",
+   "WALL"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ],
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "B18",
+  "theorem": "Ranking.renewed_extends_iff",
+  "cell": "P3 within",
+  "verdicts": [
+   "ACROSS",
+   "ACROSS"
+  ],
+  "chapters_naming_it": [
+   "07"
+  ],
+  "atlas": [],
+  "from_to": [
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ],
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "C01",
+  "theorem": "Ranking.renewed_active_extends_iff",
+  "cell": "P3 within",
+  "verdicts": [
+   "ACROSS",
+   "ACROSS"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ],
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "C06",
+  "theorem": "SupportGatedWebs.jointly_consuming",
+  "cell": "P3 within",
+  "verdicts": [
+   "ACROSS",
+   "ACROSS"
+  ],
+  "chapters_naming_it": [
+   "02"
+  ],
+  "atlas": [],
+  "from_to": [
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ],
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "C10",
+  "theorem": "Web.RenewingInWithin.not_undermining_for",
+  "cell": "P3 within",
+  "verdicts": [
+   "WALL",
+   "WALL"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ],
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ]
+  ],
+  "reading": [
+   "Becoming.Web.UnderminingFor as P3.consuming"
+  ]
+ },
+ {
+  "item": "C11",
+  "theorem": "Web.RenewingInWithin.not_consuming",
+  "cell": "P3 within",
+  "verdicts": [
+   "WALL",
+   "WALL"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ],
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "C14",
+  "theorem": "RelationalRenewal.renewed_not_consumed",
+  "cell": "P3 within",
+  "verdicts": [
+   "WALL",
+   "WALL"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ],
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "C15",
+  "theorem": "RelationalRenewal.renewing_not_consuming",
+  "cell": "P3 within",
+  "verdicts": [
+   "WALL",
+   "WALL"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [
+   "loss-of-renewal-for-good",
+   "loss-of-renewal-for-good"
+  ],
+  "from_to": [
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ],
+   [
+    "RENEWING",
+    "CONSUMING",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "D01",
+  "theorem": "«尽则非无终»",
+  "cell": "P1 within",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [
+   "02"
+  ],
+  "atlas": [
+   "degeneration-from-a-horizon"
+  ],
+  "from_to": [
+   [
+    "DEGENERATES",
+    "REACHES AN END",
+    ""
+   ],
+   [
+    "DEGENERATES",
+    "REACHES AN END",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "D02",
+  "theorem": "«尽而续可定则有终»",
+  "cell": "P1 within",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [
+   "02"
+  ],
+  "atlas": [
+   "degeneration-from-a-horizon"
+  ],
+  "from_to": [
+   [
+    "DEGENERATES",
+    "REACHES AN END",
+    ""
+   ],
+   [
+    "DEGENERATES",
+    "REACHES AN END",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "D03",
+  "theorem": "«尽则有终当且仅当排中»",
+  "cell": "P1 within",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [
+   "02"
+  ],
+  "atlas": [
+   "degeneration-from-a-horizon"
+  ],
+  "from_to": [
+   [
+    "DEGENERATES",
+    "REACHES AN END",
+    ""
+   ],
+   [
+    "DEGENERATES",
+    "REACHES AN END",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "D07",
+  "theorem": "LineageRegimes.stock_forces_neither",
+  "cell": "P1 within",
+  "verdicts": [
+   "BUILT CASE",
+   "ACROSS"
+  ],
+  "chapters_naming_it": [
+   "04"
+  ],
+  "atlas": [
+   "ending-laws-as-regimes-on-a-lineage"
+  ],
+  "from_to": [
+   [
+    "GENERATES",
+    "DEGENERATES",
+    "no case is exhibited in the statement: two denied universals over gated pair courses with stock s (not every one degenerates; not every one generates). By its proof: a pair, one under GENERATES and not DEGENERATES, one under DEGENERATES and not GENERATES"
+   ],
+   [
+    "DEGENERATES",
+    "GENERATES",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "D09",
+  "theorem": "LineageRegions.Chain.chain",
+  "cell": "P1 within",
+  "verdicts": [
+   "BUILT CASE",
+   "ACROSS"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "GENERATES",
+    "DEGENERATES",
+    "one built web and flow, three points: GENERATES at (0, 1) at the web's classes and at (1, 2) at the admitted-level classes; DEGENERATES at (0, 0); no denial stated"
+   ],
+   [
+    "GENERATES",
+    "DEGENERATES",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "D18",
+  "theorem": "Run.generation_of_heldKeepsWidening",
+  "cell": "P1 x P2",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [
+   "07"
+  ],
+  "atlas": [],
+  "from_to": [
+   [
+    "WIDENS",
+    "GENERATES",
+    ""
+   ],
+   [
+    "WIDENS",
+    "GENERATES",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "D21",
+  "theorem": "Steps.generation_of_reachingKeepsWidening",
+  "cell": "P1 x P2",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "WIDENS",
+    "GENERATES",
+    ""
+   ],
+   [
+    "WIDENS",
+    "GENERATES",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "D22",
+  "theorem": "Steps.wem_of_generation_of_keepsWidening",
+  "cell": "P1 x P2",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "WIDENS",
+    "GENERATES",
+    ""
+   ],
+   [
+    "WIDENS",
+    "GENERATES",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "D23",
+  "theorem": "Steps.dne_of_keepsWidening_of_generation",
+  "cell": "P1 x P2",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "GENERATES",
+    "WIDENS",
+    ""
+   ],
+   [
+    "GENERATES",
+    "WIDENS",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "D24",
+  "theorem": "Web.generation_of_keepsWidening_byName",
+  "cell": "P1 x P2",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "WIDENS",
+    "GENERATES",
+    ""
+   ],
+   [
+    "WIDENS",
+    "GENERATES",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "D25",
+  "theorem": "Web.kept_by_name_and_generation_on_moments",
+  "cell": "P1 x P2",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "WIDENS",
+    "KEEPS (on the occurrences) and GENERATES (on the moments)",
+    ""
+   ],
+   [
+    "WIDENS",
+    "KEEPS (of each admitted occurrence) and GENERATES (of the course's moments)",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "E01",
+  "theorem": "«生生不息»",
+  "cell": "P0 x P1",
+  "verdicts": [
+   "WALL",
+   "WALL"
+  ],
+  "chapters_naming_it": [
+   "01",
+   "06",
+   "07"
+  ],
+  "atlas": [],
+  "from_to": [
+   [
+    "LASTING (生生, by a reader's reading)",
+    "DEGENERATES (息)",
+    ""
+   ],
+   [
+    "LASTING (生生, listed by a reader's reading only)",
+    "DEGENERATES (息)",
+    ""
+   ]
+  ],
+  "reading": [
+   "Becoming.«生生» as P0.lasting"
+  ]
+ },
+ {
+  "item": "E05",
+  "theorem": "«尽则非不穷»",
+  "cell": "P0 x P1",
+  "verdicts": [
+   "WALL",
+   "WALL"
+  ],
+  "chapters_naming_it": [
+   "02"
+  ],
+  "atlas": [],
+  "from_to": [
+   [
+    "DEGENERATES (尽)",
+    "LASTING (不穷)",
+    ""
+   ],
+   [
+    "DEGENERATES (尽)",
+    "LASTING (不穷)",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "E06",
+  "theorem": "«生成则延»",
+  "cell": "P0 x P1",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "GENERATES (生成)",
+    "LASTING (延)",
+    ""
+   ],
+   [
+    "GENERATES (生成)",
+    "LASTING (延)",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "E07",
+  "theorem": "«守则延»",
+  "cell": "P0 x P1",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "KEEPS (守)",
+    "LASTING (延)",
+    ""
+   ],
+   [
+    "KEEPS (守)",
+    "LASTING (延)",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "E08",
+  "theorem": "Flow.generation_of_brief",
+  "cell": "P0 x P1",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [
+   "07"
+  ],
+  "atlas": [],
+  "from_to": [
+   [
+    "LASTING (不穷)",
+    "GENERATES (全生成)",
+    ""
+   ],
+   [
+    "LASTING (不穷)",
+    "GENERATES (全生成)",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "E09",
+  "theorem": "Web.generation_of_one_step_supports",
+  "cell": "P0 x P1",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "LASTING (不穷)",
+    "GENERATES (全生成)",
+    ""
+   ],
+   [
+    "LASTING (不穷)",
+    "GENERATES (全生成)",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "E10",
+  "theorem": "Map.outside_of_not_endless",
+  "cell": "P0 x P1",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "GENERATES (全生成) and KEEPS (全守)",
+    "LASTING (不穷)",
+    ""
+   ],
+   [
+    "LASTING (不穷), denied",
+    "GENERATES (全生成) and KEEPS (全守), both denied",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "E11",
+  "theorem": "Web.keeping_of_carried_on",
+  "cell": "P0 x P1",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "LASTING (不穷)",
+    "KEEPS (全守)",
+    ""
+   ],
+   [
+    "LASTING (不穷)",
+    "KEEPS (全守)",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "E15",
+  "theorem": "Run.not_unending_of_heldKeepsWidening",
+  "cell": "P0 x P2",
+  "verdicts": [
+   "ACROSS",
+   "ACROSS"
+  ],
+  "chapters_naming_it": [
+   "07"
+  ],
+  "atlas": [],
+  "from_to": [
+   [
+    "WIDENS (Reaching.KeepsWidening)",
+    "LASTING (不穷), denied",
+    ""
+   ],
+   [
+    "WIDENS (KeepsWidening)",
+    "LASTING (不穷), denied",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "E16",
+  "theorem": "Flow.persisting_consistent_with_selfConcern",
+  "cell": "P0 x P2",
+  "verdicts": [
+   "IMPLIES",
+   "ACROSS"
+  ],
+  "chapters_naming_it": [
+   "07"
+  ],
+  "atlas": [
+   "persisting-filters-what-was-chosen"
+  ],
+  "from_to": [
+   [
+    "LASTING (Generations.Persists)",
+    "WIDENS (through Weighting.IncreasingInOwnOn, built from WidensOn)",
+    ""
+   ],
+   [
+    "LASTING (Generations.Persists)",
+    "WIDENS or NARROWS (WidensOn, only in antecedents: in `stake` and inside IncreasingInOwnOn)",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "E19",
+  "theorem": "Web.UnderminingOn.exceeded",
+  "cell": "P2 x P3",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "CONSUMING (Web.UnderminingOn)",
+    "WIDENS or NARROWS, one half only: Web.Exceeds l W.level (not a listed notion; Web.Widens is not named)",
+    ""
+   ],
+   [
+    "CONSUMING (UnderminingOn)",
+    "WIDENS or NARROWS: only `Exceeds`, one conjunct of Widens, not a listed notion",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "E20",
+  "theorem": "Web.Includes.not_undermining",
+  "cell": "P2 x P3",
+  "verdicts": [
+   "WALL",
+   "WALL"
+  ],
+  "chapters_naming_it": [
+   "07"
+  ],
+  "atlas": [],
+  "from_to": [
+   [
+    "WIDENS or NARROWS, one half only: Web.Includes W.level l (not a listed notion)",
+    "CONSUMING (Web.UnderminingOn)",
+    ""
+   ],
+   [
+    "WIDENS or NARROWS: `Includes W.level l`, an unlisted conjunct of Widens (the web's levels admit all that l admits)",
+    "CONSUMING (UnderminingOn)",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "E21",
+  "theorem": "Flow.Balances.includes_of_renewed",
+  "cell": "P2 x P3",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "RENEWING (Web.Renewed)",
+    "WIDENS or NARROWS, one half only: Web.Includes W.level l (not a listed notion)",
+    ""
+   ],
+   [
+    "RENEWING (Renewed)",
+    "WIDENS or NARROWS: `Includes W.level l` (unlisted): the levels with the part are not narrower than those without",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "E22",
+  "theorem": "Flow.Balances.includes_of_renewingIn",
+  "cell": "P2 x P3",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "RENEWING (Web.RenewingIn)",
+    "WIDENS or NARROWS, one half only: Web.Includes W.level l (not a listed notion)",
+    ""
+   ],
+   [
+    "RENEWING (RenewingIn)",
+    "WIDENS or NARROWS: `Includes W.level l` (unlisted): the part does not narrow",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "F13",
+  "theorem": "ClosedCapture.lock_line",
+  "cell": "P0 x P4",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [
+   "02"
+  ],
+  "atlas": [
+   "closed-capture"
+  ],
+  "from_to": [
+   [
+    "LOCK",
+    "LASTING",
+    ""
+   ],
+   [
+    "LOCK",
+    "LASTING",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "F15",
+  "theorem": "NoReturnAt.recoverable_iff",
+  "cell": "P0 x P4",
+  "verdicts": [
+   "PASSAGE",
+   "PASSAGE"
+  ],
+  "chapters_naming_it": [
+   "02",
+   "07"
+  ],
+  "atlas": [
+   "reading-a-loss-in-time"
+  ],
+  "from_to": [
+   [
+    "TURN IN TIME",
+    "NO RETURN",
+    "t"
+   ],
+   [
+    "TURN IN TIME",
+    "NO RETURN",
+    "t"
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "F16",
+  "theorem": "noReturnAt_of_past",
+  "cell": "P0 x P4",
+  "verdicts": [
+   "IMPLIES",
+   "IMPLIES"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [],
+  "from_to": [
+   [
+    "TURN IN TIME (denied: not recoverable at n)",
+    "NO RETURN",
+    ""
+   ],
+   [
+    "TURN IN TIME, denied (not recoverable at n)",
+    "NO RETURN",
+    ""
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "F18",
+  "theorem": "TurningInTime.locked_turns_in_time_share_iff",
+  "cell": "P0 x P4",
+  "verdicts": [
+   "PASSAGE",
+   "PASSAGE"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [
+   "turning-in-time"
+  ],
+  "from_to": [
+   [
+    "LOCK",
+    "LASTING",
+    "p"
+   ],
+   [
+    "LOCK",
+    "LASTING",
+    "p"
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "F19",
+  "theorem": "TurningInTime.noReturnAt_of_below",
+  "cell": "P0 x P4",
+  "verdicts": [
+   "PASSAGE",
+   "PASSAGE"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [
+   "turning-in-time"
+  ],
+  "from_to": [
+   [
+    "TURN IN TIME",
+    "NO RETURN",
+    "t"
+   ],
+   [
+    "TURN IN TIME",
+    "NO RETURN",
+    "t"
+   ]
+  ],
+  "reading": []
+ },
+ {
+  "item": "F20",
+  "theorem": "TurningInTime.noReturn_exists",
+  "cell": "P0 x P4",
+  "verdicts": [
+   "PASSAGE",
+   "PASSAGE"
+  ],
+  "chapters_naming_it": [],
+  "atlas": [
+   "turning-in-time"
+  ],
+  "from_to": [
+   [
+    "TURN IN TIME",
+    "NO RETURN",
+    "t"
+   ],
+   [
+    "TURN IN TIME",
+    "NO RETURN",
+    "t"
+   ]
+  ],
+  "reading": []
+ }
+]

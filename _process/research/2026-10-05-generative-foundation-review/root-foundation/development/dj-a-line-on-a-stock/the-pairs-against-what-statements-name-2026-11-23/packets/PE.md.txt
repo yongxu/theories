@@ -1,0 +1,737 @@
+# Packet E: 24 statements
+
+*Built by script from Lean's own print of what each statement names. The columns "premises name" and "conclusion names" show where a listed notion stands after the outer ∀ and → are peeled, and nothing more: a denied notion stands as the conclusion's, an iff or a conjunction is all conclusion, a carrier's type stands among the premises. Section variables are not shown; the file and lines are given so that you can open the statement where it is unclear.*
+
+## E01  `Becoming.«生生不息»`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean`, lines 657 to 665.
+
+- premises name: `Becoming.«生生»`  — listed under: going on at all: LASTING  (some by a reader's reading only)
+- conclusion names: `Becoming.«息»`  — listed under: on the grammar: a pattern DEGENERATES
+
+```lean
+/-- **Renewal without end does not cease (生生不息).** The two exclude each other by construction:
+one is the greatest family that keeps renewing, the other the least property closed under
+renewing into. -/
+theorem «生生不息» {R E : «际» α} {x : α} (h : «生生» R E x) : ¬ «息» R E x := by
+```
+
+## E02  `Becoming.«亡而息之例»`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean`, lines 47 to 52.
+
+- conclusion names: `Becoming.«亡»`  — listed under: going on at all: CEASING
+- conclusion names: `Becoming.«息»`  — listed under: on the grammar: a pattern DEGENERATES
+
+```lean
+/-- **Ending and ceasing, without alteration (亡而息之例).** One occurrence with nothing after it ends
+under every class, ceases (`«息»`: it renews into nothing), and does not alter. -/
+theorem «亡而息之例» :
+    ∃ (R E F : «际» Unit), «亡» R E () ∧ «息» R F () ∧ ¬ ∃ y, «异» R F E () y :=
+```
+
+## E03  `Becoming.«有亡而不全生成之例»`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean`, lines 237 to 241.
+
+- conclusion names: `Becoming.«亡»`  — listed under: going on at all: CEASING
+- conclusion names: `Becoming.«全生成»`  — listed under: on the grammar: a pattern GENERATES
+
+```lean
+/-- **Something ends, and it is not 全生成 (有亡而不全生成之例).** The short line: `true` has no
+successor, so not everything is continued, and the line from `false` reaches an end, so it is not
+全生成. -/
+theorem «有亡而不全生成之例» : «亡» Map.short «一» true ∧ ¬ «全生成» Map.short «一» «静» false :=
+```
+
+## E04  `Becoming.«止而不入之例»`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean`, lines 1797 to 1818.
+
+- conclusion names: `Becoming.«入»`  — listed under: going on at all: NO RETURN  (some by a reader's reading only)
+- conclusion names: `Becoming.«尽»`  — listed under: on the grammar: a pattern DEGENERATES
+
+```lean
+/-- **At rest and not drawn in**: on two occurrences, a line falls once and then stays at a fixed
+point. Its falls end and do not recur, and the place it rests at is not drawn in, since that place
+reaches itself. A fixed point is at rest without being drawn, so rest is not a case of `«入»`. -/
+theorem «止而不入之例» : ∃ (Q F : «际» Bool) (g : Nat → Bool),
+    (∀ t, Q (g t) (g (t + 1))) ∧ (∃ t, F (g t) (g (t + 1))) ∧
+      «尽» («而» («所闭» Q) F) «一» (g 0) ∧ ¬ «屡» F g ∧ ¬ «入» Q (g 1) := by
+```
+
+## E05  `Becoming.«尽则非不穷»`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, lines 247 to 249.
+
+- premises name: `Becoming.«尽»`  — listed under: on the grammar: a pattern DEGENERATES
+- conclusion names: `Becoming.«不穷»`  — listed under: going on at all: LASTING
+
+```lean
+/-- What ends on every branch does not go on along every branch. -/
+theorem «尽则非不穷» {R L : «际» α} {x : α} (h : «尽» R L x) : ¬ «不穷» R L x :=
+```
+
+## E06  `Becoming.«生成则延»`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, lines 289 to 290.
+
+- premises name: `Becoming.«生成»`  — listed under: on the grammar: a pattern GENERATES
+- conclusion names: `Becoming.«延»`  — listed under: going on at all: LASTING
+
+```lean
+theorem «生成则延» {R L E : «际» α} {x : α} (h : «生成» R L E x) : «延» R L x :=
+```
+
+## E07  `Becoming.«守则延»`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, lines 292 to 293.
+
+- premises name: `Becoming.«守»`  — listed under: on the grammar: a pattern KEEPS
+- conclusion names: `Becoming.«延»`  — listed under: going on at all: LASTING
+
+```lean
+theorem «守则延» {R L E : «际» α} {x : α} (h : «守» R L E x) : «延» R L x :=
+```
+
+## E08  `Becoming.Flow.generation_of_brief`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean`, lines 703 to 715.
+
+- premises name: `Becoming.«不穷»`  — listed under: going on at all: LASTING
+- conclusion names: `Becoming.«全生成»`  — listed under: on the grammar: a pattern GENERATES
+
+```lean
+/-- **Brief supports make every lasting supported line generation.** Where no formation is supported
+at `K + 1` consecutive steps, every supported occurrence whose line along "carry on, or pass
+support" never ends is 全生成: ahead of every point of the line lies a passing of support, within
+`K` steps. -/
+theorem generation_of_brief {K : Nat} (brief : ∀ t g, ¬ ∀ i, i ≤ K → W.Supported (t + i) g)
+    {x : Nat × F} (start : W.Supported x.1 x.2)
+    (endless : «不穷» (Web.continuationStep (Web.passingContinuation (L.PassesSupport W)))
+      (W.admitting W.level).activityClass x) :
+    «全生成» (Web.continuationStep (Web.passingContinuation (L.PassesSupport W)))
+      (W.admitting W.level).activityClass (W.admitting W.level).carrierClass x :=
+```
+
+## E09  `Becoming.Web.generation_of_one_step_supports`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean`, lines 812 to 833.
+
+- premises name: `Becoming.«不穷»`  — listed under: going on at all: LASTING
+- conclusion names: `Becoming.«全生成»`  — listed under: on the grammar: a pattern GENERATES
+
+```lean
+/-- **Where supports last one step, every endless supported line generates**: where no formation
+is supported at two steps running, along every continuation and under every class finer than
+activity, every supported occurrence whose line never ends is 全生成 at (that class, one
+formation). Each step of the line ends where a formation arises, which begins a carrier
+(`begins_of_arises`). `Flow.generation_of_brief` takes any bound on supports, along passing of
+support under activity. -/
+theorem generation_of_one_step_supports {R : Nat → F → F → Prop} {L : «际» (Nat × F)}
+    (within : ∀ x y, L x y → (W.admitting W.level).activityClass x y)
+    (brief : ∀ t g, W.Supported t g → ¬ W.Supported (t + 1) g) {x : Nat × F}
+    (start : W.Supported x.1 x.2) (endless : «不穷» (continuationStep R) L x) :
+    «全生成» (continuationStep R) L (W.admitting W.level).carrierClass x :=
+```
+
+## E10  `Becoming.Map.outside_of_not_endless`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean`, lines 117 to 120.
+
+- premises name: `Becoming.«不穷»`  — listed under: going on at all: LASTING
+- conclusion names: `Becoming.«全生成»`  — listed under: on the grammar: a pattern GENERATES
+- conclusion names: `Becoming.«全守»`  — listed under: on the grammar: a pattern KEEPS
+
+```lean
+/-- A line that does not go on lies outside generation and keeping. -/
+theorem outside_of_not_endless {R L E : «际» α} {x : α} (h : ¬ «不穷» R L x) :
+    ¬ «全生成» R L E x ∧ ¬ «全守» R L E x :=
+```
+
+## E11  `Becoming.Web.keeping_of_carried_on`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean`, lines 233 to 247.
+
+- premises name: `Becoming.«不穷»`  — listed under: going on at all: LASTING
+- conclusion names: `Becoming.«全守»`  — listed under: on the grammar: a pattern KEEPS
+
+```lean
+/-- **Keeping on the base.** An endless line from an active occurrence along which, from step `S`
+on, every active formation was active before the step and carried on as itself keeps: no carrying
+renewal lies ahead of its occurrence at step `x.1 + S`. -/
+theorem keeping_of_carried_on {x : Nat × F} {S : Nat} (start : W.active x.1 x.2)
+    (endless : «不穷» (continuationStep R) W.activityClass x)
+    (on : ∀ s f, S ≤ s → W.active (s + 1) f → W.active s f ∧ R s f f) :
+    «全守» (continuationStep R) W.activityClass W.carrierClass x :=
+```
+
+## E12  `Becoming.Rooms.heated_unended`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean`, lines 650 to 656.
+
+- conclusion names: `Becoming.«不穷»`  — listed under: going on at all: LASTING
+- conclusion names: `Becoming.«有终»`  — listed under: on the grammar: the whole line REACHES AN END (not degeneration)
+
+```lean
+/-- **In a heated room no line of warmth from the set level ends, and none reaches an end**, at every
+positive margin: Y of `«有常则往不穷»` where its Z holds, and so the Z of `«有终则粗不有常»` fails. -/
+theorem heated_unended {m c : Nat} (hm : 1 ≤ m) (hc : 1 ≤ c) :
+    «不穷» (net m c) alike (start m) ∧ ¬ «有终» (net m c) alike (start m) :=
+```
+
+## E13  `Becoming.RaisedEveryOther.both`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean`, lines 813 to 822.
+
+- conclusion names: `Becoming.«生生»`  — listed under: going on at all: LASTING  (some by a reader's reading only)
+- conclusion names: `Becoming.«息»`  — listed under: on the grammar: a pattern DEGENERATES
+- conclusion names: `Becoming.Reaching.KeepsWidening`  — listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments)
+
+```lean
+/-- **Growth relative to what is held and renewal without end, both at once, with a fixed whole
+possible**: the possible with the rule held keeps widening, every formation is possible from every
+configuration of the course, and the course's moments under the rule held renew without end from
+moment `0`, so moment `0` does not cease (`«生生不息»`). -/
+theorem both :
+    Reaching.KeepsWidening (fun k => Reaching.PossibleHeld process Same adm (course.state k)) ∧
+    (∀ k y, Reaching.Possible process adm (course.state k) y) ∧
+    «生生» Steps.next (fun i j => Same (course.state i) (course.state j)) 0 ∧
+    ¬ «息» Steps.next (fun i j => Same (course.state i) (course.state j)) 0 :=
+```
+
+## E14  `Becoming.FromTheDynamics.Alternating.joined`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean`, lines 415 to 447.
+
+- conclusion names: `Becoming.SelectionTerm.Generations.Persists`  — listed under: going on at all: LASTING
+- conclusion names, through a definition: `Becoming.Weighting.IncreasingInOwnOn (built from Becoming.Weighting.WidensOn)`  — listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments)
+
+```lean
+/-- **A joint witness.** On two formations standing in turn, both listed: the flow balances, only
+active formations give, activity needs support, it is mutually dependent and every formation's acts
+return; with each standpoint's line under its least class the condition holds at every returning
+formation; the line of descent through the two persists, each formation standing again and again
+and every member of every cohort being the formation standing then, a returning formation, and never
+overdraws its family; the web's actual levels
+are listed by no finite listing; and the chooser, offered keeping or ending, keeps, consistent with a
+strict order according with the choice, so putting keeping above draining, and increasing in its own
+continuation on the occasion met. -/
+theorem joined :
+    (∀ g : Bool, g ∈ both) ∧
+      flow.Balances web ∧ flow.Acting web ∧ web.Dependent ∧ flow.MutuallyDependent web ∧
+      (∀ c, flow.ReachReturns web c) ∧
+      (∀ (c : flow.Returning web) x, «所及» (flow.Affects web) («后类» (flow.Affects web) c.1) c.1 x) ∧
+      SelectionTerm.Flow.Descended flow web generations ∧ generations.Persists ∧
+      (∀ b N, ∃ t, N ≤ t ∧ stands t = b) ∧
+      (∀ t y, y ∈ generations.family t → y = stands t ∧ flow.ReachReturns web y) ∧
+      (∀ T n, ¬ ((∀ k, k < n → flow.replenishment both (T + k) < flow.uptake both (T + k)) ∧
+        web.stock both T < n + 1)) ∧
+      (∀ items : List (Nat × Bool), ¬ web.ListsAdmitted items web.level) ∧
+      ∃ P : «际» (Bool → Bool), (∀ a, ¬ P a a) ∧ (∀ a b c, P a b → P b c → P a c) ∧
+        choices.Accords P ∧ P keep drain ∧
+        Weighting.IncreasingInOwnOn choices.Met both own (fun b a => P a b) :=
+```
+
+## E15  `Becoming.Run.not_unending_of_heldKeepsWidening`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean`, lines 379 to 386.
+
+- premises name: `Becoming.Reaching.KeepsWidening`  — listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments)
+- conclusion names: `Becoming.«不穷»`  — listed under: going on at all: LASTING
+
+```lean
+/-- **Along a course, the possible with a part held keeps widening only where no line under the
+part, read on the course's moments, is unending** (`«不穷»`, `Steps.buqiong_iff`): from no moment
+does the course continue under the part without end. -/
+theorem Run.not_unending_of_heldKeepsWidening (r : Run P)
+    (keeps : Reaching.KeepsWidening (fun n => Reaching.PossibleHeld P Same adm (r.state n)))
+    (N : Nat) : ¬ «不穷» Steps.next (fun n m => Same (r.state n) (r.state m)) N :=
+```
+
+## E16  `Becoming.Flow.persisting_consistent_with_selfConcern`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean`, lines 491 to 518.
+
+- premises name: `Becoming.SelectionTerm.Generations.Persists`  — listed under: going on at all: LASTING
+- premises name: `Becoming.Weighting.WidensOn`  — listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments)
+- conclusion names, through a definition: `Becoming.Weighting.IncreasingInOwnOn (built from Becoming.Weighting.WidensOn)`  — listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments)
+
+```lean
+/-- **A persisting line's choices are consistent with self-concern on the occasions it met, where only
+ending was at stake.** Under the laws of `persists_never_overdraws`, let the line persist, let a chosen
+course that ends what the line depends on be realized as an overdraw of the family from a short stock
+(`realized`), let the choices come from some strict order, and let a course on the occasions met add to the
+own continuation beyond one it widens only where it does not end and the other does (`stake`). Then some
+strict order according with the choices is increasing in its own continuation on the pairs met. -/
+theorem Flow.persisting_consistent_with_selfConcern {X Y O : Type} {L : Flow X X} {W : Web X X}
+    (balances : L.Balances W) (acting : L.Acting W) (dependent : W.Dependent)
+    {G : SelectionTerm.Generations X} (descended : SelectionTerm.Flow.Descended L W G)
+    {ds : List X} {m : Nat}
+    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
+      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
+    (coupled : ∀ s p, p ∈ G.family s → ∃ e, e ∈ ds ∧ W.requires s p e ∧ m ≤ W.need s p e)
+    (persists : G.Persists)
+    {ch : ChoiceOccasions (Y → Bool) O} {items : List Y} {own : Y → Bool}
+    {ends : (Y → Bool) → Prop}
+    (realized : ∀ o, ends (ch.pick o) → ∃ T n,
+      (∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) ∧ W.stock ds T < n + m)
+    (none : «无环» ch.Shown)
+    (stake : ∀ a b, ch.Met a b → Weighting.WidensOn items a b → Weighting.AddsOwn items own a b →
+      ¬ ends a ∧ ends b) :
+    ∃ P : «际» (Y → Bool), (∀ a, ¬ P a a) ∧ (∀ a b c, P a b → P b c → P a c) ∧ ch.Accords P ∧
+      Weighting.IncreasingInOwnOn ch.Met items own (fun b a => P a b) :=
+```
+
+## E17  `Becoming.PersistingChoices.Forgoing.persists_not_selfConcerned`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean`, lines 745 to 755.
+
+- conclusion names: `Becoming.SelectionTerm.Generations.Persists`  — listed under: going on at all: LASTING
+- conclusion names, through a definition: `Becoming.Weighting.IncreasingInOwnOn (built from Becoming.Weighting.WidensOn)`  — listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments)
+
+```lean
+/-- **A persisting chooser that is not self-concerned.** The flow balances, only active formations give,
+activity needs support, the cohorts descend and the line persists; the chooser's choice accords with a
+strict order, and no choice ends the own continuation; and no strict order according with its choice is
+increasing in its own continuation on the occasion met. -/
+theorem persists_not_selfConcerned :
+    flow.Balances web ∧ flow.Acting web ∧ web.Dependent ∧
+      SelectionTerm.Flow.Descended flow web generations ∧ generations.Persists ∧
+      choices.Accords order ∧ (∀ o, ¬ Weighting.EndsOwn items own (choices.pick o)) ∧
+      ¬ ∃ P : «际» (Item → Bool), (∀ a, ¬ P a a) ∧ (∀ a b c, P a b → P b c → P a c) ∧
+        choices.Accords P ∧ Weighting.IncreasingInOwnOn choices.Met items own (fun b a => P a b) :=
+```
+
+## E18  `Becoming.Direction.grounded_widening_selected`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean`, lines 317 to 364.
+
+- premises name: `Becoming.Web.Widens`  — listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments)
+- premises name: `Becoming.Web.UnderminingAt`  — listed under: on the web: CONSUMING
+- premises name, through a definition: `Becoming.Web.valuation (built from Becoming.Web.UnderminingAt)`  — listed under: on the web: CONSUMING
+
+```lean
+/-- **The direction from the evaluation row.** Where the evaluation's grounds hold on a connected
+web and the continuation of what does not live has significance, decided as in
+`Web.unrestricted_iff_grounds_beyond`, the continuation condition holds; so on the web's level
+paths it is living significance over admission, and a widening is an extension of the moves'
+frame and retains and adds what has significance from every standpoint (`Web.paths_one_object`,
+`Direction.extension_iff_widens`). Under the conditions of `Direction.widening_selected_by_pool`,
+the admission that tells the widening world from the narrowed one is the continuation of a
+formation with significance from every standpoint, admitted by the widening world and not by the
+other, beyond the acting group's coupling closure, selected through the pooled coupling of every
+group holding it from its step on and through no pool within that closure. The scope comes from
+the grounds widened to what does not live; no comparison is taken: the theorem says what a
+selection of the widening world over the narrowed one goes through, not that it occurs. -/
+theorem Direction.grounded_widening_selected {A : Type} {law : ExchangeLaw F C}
+    {L L' : Flow F C} {W' : Web F C} {obs : F → C → Prop} {part : F → Bool}
+    {group : F → Prop} (own : Pos → F × Nat → Prop)
+    (connected : (W.valuation own fun p e => sig p e.2 e.1).Connected) (p₀ : Pos)
+    {e₀ : F × Nat} (alive₀ : W.active e₀.2 e₀.1 ∧ ¬ W.UnderminingAt e₀.2 e₀.1)
+    (decided : ∀ e : F × Nat, (W.active e.2 e.1 ∧ ¬ W.UnderminingAt e.2 e.1) ∨
+      ¬ (W.active e.2 e.1 ∧ ¬ W.UnderminingAt e.2 e.1))
+    (grounds : (W.valuation own fun p e => sig p e.2 e.1).Grounds)
+    (beyond : ∀ p (e : F × Nat), ¬ (W.active e.2 e.1 ∧ ¬ W.UnderminingAt e.2 e.1) →
+      sig p e.2 e.1)
+    (through : law.Through W obs part)
+    (follows : L.Follows law part W.level) (follows' : L'.Follows law part W'.level)
+    (balances : L.Balances W) (balances' : L'.Balances W')
+    (present : ∀ t, L.present t = L'.present t) (start : ∀ c, W.level 0 c = W'.level 0 c)
+    (acts : ∀ f, group f → L.ActsAlikeWithin L' W W' obs part f)
+    (widens : W.Widens W'.level W.level) :
+    LivingSignificance W.paths (fun _ => True) (fun _ e => ∀ p, sig p e.2 e.1) ∧
+      (∀ outcome : A → Nat → C → Nat,
+        Extension (Direction.frame W outcome) (fun _ => True) W.level W'.level) ∧
+      (∀ p, W.Retains sig p W'.level W.level ∧ W.Adds sig p W'.level W.level) ∧
+      ∃ s x, (∀ p, sig p s x) ∧ W.Admits (W'.level s) s x ∧ ¬ W.Admits (W.level s) s x ∧
+        ¬ WithinClosureOf (L.CoupledFromEither W L' obs) group x ∧
+        (∀ pool : F → Prop, pool x → ∀ t, s ≤ t →
+          W.SelectsThroughAll obs pool t (fun l => W.Admits (l s) s x)) ∧
+        ∀ pool : F → Prop,
+          (∀ g, pool g → WithinClosureOf (L.CoupledFromEither W L' obs) group g) →
+          ∀ t, ¬ W.SelectsThroughAll obs pool t (fun l => W.Admits (l s) s x) :=
+```
+
+## E19  `Becoming.Web.UnderminingOn.exceeded`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean`, lines 132 to 142.
+
+- premises name: `Becoming.Web.UnderminingOn`  — listed under: on the web: CONSUMING
+
+```lean
+/-- **An undermining event leaves the levels exceeded.** Where every dependence on the condition
+holds across the step at no smaller need, and a level path admits after the step every formation
+depending on the condition before it, that path exceeds the levels. -/
+theorem UnderminingOn.exceeded {l : Nat → C → Nat} {t : Nat} {f : F} {c : C}
+    (undermining : W.UnderminingOn t f c)
+    (holds : ∀ g, W.requires t g c → W.requires (t + 1) g c ∧ W.need t g c ≤ W.need (t + 1) g c)
+    (admits : ∀ g, W.requires t g c → W.Admits (l (t + 1)) (t + 1) g) : W.Exceeds l W.level :=
+```
+
+## E20  `Becoming.Web.Includes.not_undermining`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean`, lines 144 to 152.
+
+- conclusion names: `Becoming.Web.UnderminingOn`  — listed under: on the web: CONSUMING
+
+```lean
+/-- **Keeping what can form excludes undermining where the other path meets the dependences.** The
+levels include a level path admitting after a step every formation depending on a condition before
+it, through dependences that hold across the step at no smaller need, only if no event at the step
+undermines that condition. -/
+theorem Includes.not_undermining {l : Nat → C → Nat} (includes : W.Includes W.level l) {t : Nat}
+    {f : F} {c : C}
+    (holds : ∀ g, W.requires t g c → W.requires (t + 1) g c ∧ W.need t g c ≤ W.need (t + 1) g c)
+    (admits : ∀ g, W.requires t g c → W.Admits (l (t + 1)) (t + 1) g) : ¬ W.UnderminingOn t f c :=
+```
+
+## E21  `Becoming.Flow.Balances.includes_of_renewed`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean`, lines 317 to 346.
+
+- premises name: `Becoming.Web.Renewed`  — listed under: on the web: RENEWING
+
+```lean
+/-- **A part whose draws fall on renewed conditions keeps what can form.** In a balanced flow where
+only active formations take, and only from what they draw on, let every condition a member of the
+part draws on at some step be renewed over the run (every dependence on it kept at every step).
+Then the levels with the part include those without it. -/
+theorem Balances.includes_of_renewed (balances : L.Balances W) (taking : L.Taking W)
+    {l : Nat → C → Nat} (without : L.WithheldLevels part W l)
+    (renewed : ∀ t f c, part f = true → W.draws t f c → W.Renewed c) : W.Includes W.level l :=
+```
+
+## E22  `Becoming.Flow.Balances.includes_of_renewingIn`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean`, lines 354 to 361.
+
+- premises name: `Becoming.Web.RenewingIn`  — listed under: on the web: RENEWING
+
+```lean
+/-- **A part of renewing formations keeps what can form.** Where every member renews over the run
+every condition it takes part in (`Web.RenewingIn`), the levels with the part include those
+without it. -/
+theorem Balances.includes_of_renewingIn (balances : L.Balances W) (taking : L.Taking W)
+    {l : Nat → C → Nat} (without : L.WithheldLevels part W l)
+    (renewing : ∀ f, part f = true → W.RenewingIn f) : W.Includes W.level l :=
+```
+
+## E23  `Becoming.Preemption.renewingAt_consuming_narrows`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean`, lines 488 to 508.
+
+- conclusion names: `Becoming.Web.Widens`  — listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments)
+- conclusion names: `Becoming.Web.ConsumingIn`  — listed under: on the web: CONSUMING
+- conclusion names: `Becoming.Web.RenewingAt`, `Becoming.Web.RenewingIn`  — listed under: on the web: RENEWING
+
+```lean
+/-- **Within renewal at its step, consuming over the run, and narrowing.** The drawer's event at
+the first step is within renewal (the stepwise class), the drawer is consuming over the run (the
+dependence of `false` on the condition, held from the second step, is met at no later step), it
+does not renew over the run, and the levels without its part widen those with it. So the stepwise
+class and the run class overlap at this event, and the run class is the one that tells the part's
+place in the order on what can form (`Flow.Balances.includes_of_renewingIn`). -/
+theorem renewingAt_consuming_narrows {l : Nat → Unit → Nat}
+    (without : flow.WithheldLevels drawerPart web l) :
+    web.RenewingAt 0 true ∧ web.ConsumingIn true ∧ ¬ web.RenewingIn true ∧ web.Widens l web.level :=
+```
+
+## E24  `Becoming.Preemption.not_undermining_yet_loses`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean`, lines 476 to 512.
+
+- conclusion names: `Becoming.Web.UnderminingAt`  — listed under: on the web: CONSUMING
+
+```lean
+/-- Living, yet closing a possibility. The flow balances, only active formations give, and only
+active formations take, and only from what they draw on; activity needs support. The drawer's
+event at the first step is active and not undermining, since no dependence on the condition has
+formed. Yet `false` is admitted at every step without the drawer's part and supported at no step
+after the first with it: the part narrows what can form. Under the continuation condition it loses a continuation
+with significance from every standpoint, so the levels with it do not retain what has
+significance without it. -/
+theorem not_undermining_yet_loses {l : Nat → Unit → Nat}
+    (without : flow.WithheldLevels drawerPart web l) {sig : Pos → Nat → Bool → Prop}
+    (unrestricted : Unrestricted sig) (p : Pos) :
+    flow.Balances web ∧ flow.Acting web ∧ flow.Taking web ∧ web.Dependent ∧
+      (web.active 0 true ∧ ¬ web.UnderminingAt 0 true) ∧
+      (∀ t, web.Admits (l t) t false ∧ ¬ web.Supported (t + 1) false) ∧
+      web.Includes l web.level ∧ web.Adds sig p l web.level ∧ ¬ web.Retains sig p web.level l :=
+```
+
+# The notions named in this packet, each definition whole
+
+## `Becoming.«生生»`
+
+Listed under: going on at all: LASTING — BY A READER'S READING ONLY. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean`, line 254.
+
+```lean
+/-- Renewal without end (生生, as continuation and renewal only): `x` lies in some family of
+occurrences each of which conditions a beginning whose line goes on and reaches a member of the
+family again.
+It is the greatest such family. It does not yet tell renewal that sustains life from turnover
+that destroys it; that takes more than continuation (`PLAN.md` §七). -/
+def «生生» (R E : «际» α) (x : α) : Prop :=
+  ∃ S : α → Prop,
+    (∀ z, S z → ∃ y w, R z y ∧ «生» R E y ∧ «相续» R E y w ∧ S w) ∧ S x
+```
+
+## `Becoming.«息»`
+
+Listed under: on the grammar: a pattern DEGENERATES. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean`, line 648.
+
+```lean
+/-- Ceasing (息), defined positively and inductively along renewing into: `x` ceases where
+everything `x` renews into ceases; where `x` renews into nothing, it ceases at once. It is the least
+property so closed, the dual of renewal without end (`«生生»`, the greatest family that keeps
+renewing). Both are said on the same relation (`«复生至»`), in which each occurs positively; the
+relation itself contains the negative condition of beginning (`«生»`). That every chain of renewals
+from a ceasing occurrence is finite is not stated. -/
+inductive «息» (R E : «际» α) : α → Prop
+  | mk {x : α} : (∀ w, «复生至» R E x w → «息» R E w) → «息» R E x
+```
+
+## `Becoming.«亡»`
+
+Listed under: going on at all: CEASING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean`, line 140.
+
+```lean
+/-- Ends (亡): nothing continues it. -/
+def «亡» (R E : «际» α) (x : α) : Prop := ¬ «有后» R E x
+```
+
+## `Becoming.«全生成»`
+
+Listed under: on the grammar: a pattern GENERATES. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, line 78.
+
+```lean
+/-- Generation in the strong form (全生成): the coarse line from `x` never ends, and ahead of every
+point of it lies a carrying renewal. -/
+def «全生成» (R L E : «际» α) (x : α) : Prop :=
+  «不穷» R L x ∧ ∀ y, «所及» R L x y → ∃ z w, «所及» R L y z ∧ «传» R L E z w
+```
+
+## `Becoming.«入»`
+
+Listed under: going on at all: NO RETURN — BY A READER'S READING ONLY. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean`, line 1474.
+
+```lean
+/-- Drawn in (入): some region closed under `R` that `x` lies outside holds something `x` reaches. -/
+def «入» (R : «际» α) (x : α) : Prop := ∃ P : α → Prop, «闭» R P ∧ ¬ P x ∧ ∃ y, «及» R x y ∧ P y
+```
+
+## `Becoming.«尽»`
+
+Listed under: on the grammar: a pattern DEGENERATES. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, line 227.
+
+```lean
+/-- Ending on every branch (尽): every continuation from `x` ends on every branch; inductively, `x`
+ends on every branch where everything continuing it does. -/
+inductive «尽» (R L : «际» α) : α → Prop
+  | mk {x : α} : (∀ y, «续» R L x y → «尽» R L y) → «尽» R L x
+```
+
+## `Becoming.«不穷»`
+
+Listed under: going on at all: LASTING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean`, line 241.
+
+```lean
+/-- The line from `x` never ends (不穷): every occurrence it reaches has a successor. That some
+endless chain of occurrences then exists is a further step, which takes dependent choice. -/
+def «不穷» (R E : «际» α) (x : α) : Prop :=
+  ∀ y, (x = y ∨ «相续» R E x y) → «有后» R E y
+```
+
+## `Becoming.«生成»`
+
+Listed under: on the grammar: a pattern GENERATES. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, line 272.
+
+```lean
+/-- Generation (生成): along some branch the pattern goes on and a carrying renewal lies ahead of
+every point of it. -/
+def «生成» (R L E : «际» α) (x : α) : Prop :=
+  ∃ S : α → Prop, S x ∧ (∀ z, S z → ∃ w, S w ∧ «续» R L z w) ∧
+    ∀ z, S z → ∃ u v, S u ∧ S v ∧ «所及» R L z u ∧ «传» R L E u v
+```
+
+## `Becoming.«延»`
+
+Listed under: going on at all: LASTING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, line 223.
+
+```lean
+/-- Going on along some branch (延): `x` lies in a family each member of which is continued, under
+`L`, by a member. -/
+def «延» (R L : «际» α) (x : α) : Prop := ∃ S : α → Prop, S x ∧ ∀ z, S z → ∃ w, S w ∧ «续» R L z w
+```
+
+## `Becoming.«守»`
+
+Listed under: on the grammar: a pattern KEEPS. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, line 278.
+
+```lean
+/-- Keeping (守): along some branch the pattern goes on with no carrying renewal on it. -/
+def «守» (R L E : «际» α) (x : α) : Prop :=
+  ∃ S : α → Prop, S x ∧ (∀ z, S z → ∃ w, S w ∧ «续» R L z w) ∧ ∀ u v, S u → S v → ¬ «传» R L E u v
+```
+
+## `Becoming.«全守»`
+
+Listed under: on the grammar: a pattern KEEPS. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, line 83.
+
+```lean
+/-- Keeping in the strong form (全守): the coarse line from `x` never ends, and from some point on no
+carrying renewal lies ahead. -/
+def «全守» (R L E : «际» α) (x : α) : Prop :=
+  «不穷» R L x ∧ ∃ y, «所及» R L x y ∧ ∀ z w, «所及» R L y z → ¬ «传» R L E z w
+```
+
+## `Becoming.«有终»`
+
+Listed under: on the grammar: the whole line REACHES AN END (not degeneration). File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`, line 88.
+
+```lean
+/-- Reaching an end (有终): some point the coarse line from `x` reaches ends. This is not degeneration
+(`«退化»`, ending on every branch). -/
+def «有终» (R L : «际» α) (x : α) : Prop := ∃ y, «所及» R L x y ∧ «亡» R L y
+```
+
+## `Becoming.Reaching.KeepsWidening`
+
+Listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments). File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean`, line 309.
+
+```lean
+/-- **Keeping widening**, 07's form for a chain of predicates: nothing held is lost from a step to
+any later one, and after every step something not held there is held later. -/
+def KeepsWidening (Q : Nat → X → Prop) : Prop :=
+  (∀ n d x, Q n x → Q (n + d) x) ∧ ∀ n, ∃ d x, Q (n + d) x ∧ ¬ Q n x
+```
+
+## `Becoming.SelectionTerm.Generations.Persists`
+
+Listed under: going on at all: LASTING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean`, line 421.
+
+```lean
+/-- A line *persists through arbitrarily late cohorts*: past every step some cohort of descent has a
+member. -/
+def Persists {X : Type} (G : SelectionTerm.Generations X) : Prop :=
+  ∀ N, ∃ s y, N ≤ s ∧ y ∈ G.family s
+```
+
+## `Becoming.Weighting.IncreasingInOwnOn`
+
+Listed under: a definition built from a listed notion. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean`, line 6035.
+
+```lean
+/-- An order is *increasing in its own continuation on the pairs `met` relates*: wherever `met` relates
+`a` to `b` and `a` widens `b` adding to what `own` marks, it ranks `a` above `b`. `R b a` reads "`a` is
+ranked above `b`", as in `IncreasingInOwn`. -/
+def IncreasingInOwnOn (met : (X → Bool) → (X → Bool) → Prop) (items : List X) (own : X → Bool)
+    (R : (X → Bool) → (X → Bool) → Prop) : Prop :=
+  ∀ a b, met a b → WidensOn items a b → AddsOwn items own a b → R b a
+```
+
+## `Becoming.Weighting.WidensOn`
+
+Listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments). File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean`, line 436.
+
+```lean
+/-- On the listed items, `a` widens `b`: it admits every item `b` admits, and one more. -/
+def WidensOn (items : List X) (a b : X → Bool) : Prop :=
+  IncludesOn items a b ∧ ExceedsOn items a b
+```
+
+## `Becoming.Web.Widens`
+
+Listed under: what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments). File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean`, line 153.
+
+```lean
+/-- The level path `l` widens `l'`: it admits every formation `l'` admits and, at some step, one
+more. A part whose levels widen those without it is generative. Widening counts admissions of
+members of the fixed type `F` at the needs the web gives: a formation or requirement of a kind not
+in `F` widens nothing, so growth by new kinds (as along `Flow.GrownBy`) is not compared here. -/
+def Widens (l l' : Nat → C → Nat) : Prop :=
+  W.Includes l l' ∧ W.Exceeds l l'
+```
+
+## `Becoming.Web.UnderminingAt`
+
+Listed under: on the web: CONSUMING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 322.
+
+```lean
+/-- A formation's event at `t` is undermining when one of its relations is. -/
+def UnderminingAt (t : Nat) (f : F) : Prop :=
+  ∃ c, W.UnderminingOn t f c
+```
+
+## `Becoming.Web.valuation`
+
+Listed under: a definition built from a listed notion. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean`, line 250.
+
+```lean
+/-- Formation events of a web read stepwise. An event is living when its formation is
+active and it is not undermining: it does not draw on a condition at a step after which
+the condition is below both the present need of a dependence on it and a need of that
+dependence met while it held. Two events are related when their
+formations participate in a common condition at their steps. Standpoints, their regions
+and significance remain supplied. -/
+def Web.valuation {F Cond : Type} (W : Web F Cond) (own sig : Pos → F × Nat → Prop) :
+    Valuation Pos (F × Nat) where
+  living e := W.active e.2 e.1 ∧ ¬ W.UnderminingAt e.2 e.1
+  related e e' := ∃ c, W.Participates e.2 e.1 c ∧ W.Participates e'.2 e'.1 c
+  own := own
+  sig := sig
+```
+
+## `Becoming.Web.UnderminingOn`
+
+Listed under: on the web: CONSUMING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 314.
+
+```lean
+/-- A formation's relation to a condition at `t` is undermining: it draws on the
+condition at a step after which the condition is below a dependence's present need and
+below a need of that dependence it met while the dependence held. Other formations may
+take part. -/
+def UnderminingOn (t : Nat) (f : F) (c : C) : Prop :=
+  W.draws t f c ∧ ∃ g, W.requires t g c ∧ W.MetAbove t g c (W.level (t + 1) c) ∧
+    W.level (t + 1) c < W.need t g c
+```
+
+## `Becoming.Web.Renewed`
+
+Listed under: on the web: RENEWING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 149.
+
+```lean
+/-- Every dependence on the condition is kept at every step. -/
+def Renewed (c : C) : Prop :=
+  ∀ t g, W.requires t g c → W.Kept t g c
+```
+
+## `Becoming.Web.RenewingIn`
+
+Listed under: on the web: RENEWING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 166.
+
+```lean
+def RenewingIn (f : F) : Prop :=
+  ∀ t c, W.Participates t f c → W.Renewed c
+```
+
+## `Becoming.Web.ConsumingIn`
+
+Listed under: on the web: CONSUMING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 169.
+
+```lean
+def ConsumingIn (f : F) : Prop :=
+  ∃ t c, W.draws t f c ∧ W.Consumed c
+```
+
+## `Becoming.Web.RenewingAt`
+
+Listed under: on the web: RENEWING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 292.
+
+```lean
+/-- A formation's event at `t` is within renewal: it is active, and the step keeps
+every dependence on every condition it participates in. -/
+def RenewingAt (t : Nat) (f : F) : Prop :=
+  W.active t f ∧ ∀ c, W.Participates t f c → ∀ g, W.requires t g c → W.Kept t g c
+```

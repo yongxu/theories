@@ -1,0 +1,529 @@
+# Packet B: 18 statements
+
+*Built by script from Lean's own print of what each statement names. The columns "premises name" and "conclusion names" show where a listed notion stands after the outer ∀ and → are peeled, and nothing more: a denied notion stands as the conclusion's, an iff or a conjunction is all conclusion, a carrier's type stands among the premises. Section variables are not shown; the file and lines are given so that you can open the statement where it is unclear.*
+
+## B01  `Becoming.Dormancy.classes`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean`, lines 2174 to 2188.
+
+- conclusion names: `Becoming.Web.ConsumingIn`  — listed under: on the web: CONSUMING
+- conclusion names: `Becoming.Web.RenewingIn`  — listed under: on the web: RENEWING
+
+```lean
+/-- Named apart, the early formation renews in the run, its spring keeping it, and the
+late one consumes. Joined across the dormant step, with continuity kept in both namings,
+the formation named early consumes and does not renew. -/
+theorem classes :
+    web.RenewingIn .early ∧ web.ConsumingIn .late ∧
+    joined.ConsumingIn .early ∧ ¬ joined.RenewingIn .early :=
+```
+
+## B02  `Becoming.Overshoot.ends_through_feeder`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean`, lines 372 to 414.
+
+- conclusion names: `Becoming.Web.UnderminingAt`  — listed under: on the web: CONSUMING
+- conclusion names: `Becoming.Web.RenewingOver`  — listed under: on the web: RENEWING
+
+```lean
+/-- An ending returns through a feeder. The flow balances, only active formations give, and
+only active formations take, and only from what they draw on; activity needs support. At the
+first step `true` is within renewal over the one condition it requires and keeps its own
+support across the step, while its draw undermines `false`'s dependence, and `false` feeds
+`true`'s condition. `false` is unsupported from the second step on, so from the second step
+`true` is active for at most one step, and from the third step on nothing is supported. -/
+theorem ends_through_feeder :
+    flow.Balances web ∧ flow.Acting web ∧ flow.Taking web ∧ web.Dependent ∧
+      web.RenewingOver (web.requires 0 true) 0 true ∧ web.Supported 1 true ∧
+      web.UnderminingAt 0 true ∧
+      flow.FedBy web (true, 0) (false, 0) ∧
+      (∀ t, 1 ≤ t → ¬ web.Supported t false) ∧
+      (∀ n, (∀ k, k < n → web.active (1 + k) true) → n ≤ 1) ∧
+      ∀ t f, 2 ≤ t → ¬ web.Supported t f :=
+```
+
+## B03  `Becoming.Renewable.class_belongs_to_the_run`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean`, lines 561 to 579.
+
+- conclusion names: `RelationalRenewal.ConsumingIn`  — listed under: on the web: CONSUMING
+- conclusion names: `RelationalRenewal.RenewingIn`  — listed under: on the web: RENEWING
+
+```lean
+/-- One process, one initial configuration, the focal formation active at every step
+of both runs: drawing within renewal is renewing, drawing beyond it consumes the
+condition of the sustaining formation, which ends. -/
+theorem class_belongs_to_the_run :
+    withinRenewal.state 0 = beyondRenewal.state 0 ∧
+    (∀ t, conditions.active (withinRenewal.state t) .focal ∧
+      conditions.active (beyondRenewal.state t) .focal) ∧
+    RenewingIn (conditions.along withinRenewal) .focal ∧
+    ConsumingIn (conditions.along beyondRenewal) .focal ∧
+    ∀ t, 1 ≤ t → ¬ conditions.active (beyondRenewal.state t) .sustaining := by
+```
+
+## B04  `Becoming.Crossing.loss_does_not_decide`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean`, lines 655 to 687.
+
+- conclusion names: `Becoming.Web.Broken`, `Becoming.Web.Consumed`, `Becoming.Web.Lost`  — listed under: on the web: CONSUMING  (some by a reader's reading only)
+- conclusion names: `Becoming.Web.Kept`  — listed under: on the web: RENEWING  (some by a reader's reading only)
+
+```lean
+/-- One process, one configuration, three outcomes after a break of the same
+dependence. Each run breaks the formation's dependence on the first condition at its
+first step, read at the start of the step. In the first the formation ends and the
+loss has no return. In the second the dependence dissolves as one on the second
+condition forms, the formation stays active, and the loss has no return. In the third
+the formation waits, the condition is renewed, and the same dependence is kept again
+from then on. The move that makes the break selects the formation's mode, so the break
+does not determine the next configuration. Read at the end of the step, only the
+restoring run breaks anything, and in the ending run the dependence dissolves. -/
+theorem loss_does_not_decide :
+    ending.state 0 = transforming.state 0 ∧ transforming.state 0 = restoring.state 0 ∧
+    (dependence.along ending).Broken 0 () .first ∧
+    (dependence.along transforming).Broken 0 () .first ∧
+    (dependence.along restoring).Broken 0 () .first ∧
+    (dependence.along ending).Lost .first ∧
+    (∀ t, 0 < t → ¬ (dependence.along ending).active t ()) ∧
+    (dependence.along transforming).Lost .first ∧
+    (dependence.along transforming).Dissolves 0 () .first ∧
+    (dependence.along transforming).Forms 0 () .second ∧
+    (∀ t, (dependence.along transforming).active t ()) ∧
+    ¬ (dependence.along restoring).Consumed .first ∧
+    (∀ t, 2 ≤ t → (dependence.along restoring).active t () ∧
+      (dependence.along restoring).requires t () .first ∧
+      (dependence.along restoring).Kept t () .first) := by
+```
+
+## B05  `Becoming.Renewable.stepwise_includes_before_escalation`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean`, lines 697 to 708.
+
+- conclusion names: `Becoming.Web.ConsumingIn`  — listed under: on the web: CONSUMING
+- conclusion names: `Becoming.Web.RenewingAt`  — listed under: on the web: RENEWING
+
+```lean
+/-- The whole-run reading counts the focal formation as consuming, while the stepwise
+reading includes its first event, which drew within renewal, and not its second. -/
+theorem stepwise_includes_before_escalation :
+    (conditions.dependence.along escalating).ConsumingIn .focal ∧
+    (conditions.dependence.along escalating).RenewingAt 0 .focal ∧
+    ¬ (conditions.dependence.along escalating).RenewingAt 1 .focal := by
+```
+
+## B06  `Becoming.Renewable.dip_breaks_without_consuming`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean`, lines 714 to 726.
+
+- conclusion names: `Becoming.Web.ConsumingIn`  — listed under: on the web: CONSUMING
+- conclusion names: `Becoming.Web.RenewingAt`  — listed under: on the web: RENEWING
+
+```lean
+/-- The whole-run reading does not count the focal formation as consuming, since the
+condition returns, while the stepwise reading withholds its first event, whose step
+breaks the sustaining formation's dependence. -/
+theorem dip_breaks_without_consuming :
+    ¬ (conditions.dependence.along dipping).ConsumingIn .focal ∧
+    ¬ (conditions.dependence.along dipping).RenewingAt 0 .focal := by
+```
+
+## B07  `Becoming.Renewable.broken_formation`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean`, lines 728 to 738.
+
+- conclusion names: `Becoming.Web.Broken`, `Becoming.Web.UnderminingAt`  — listed under: on the web: CONSUMING  (some by a reader's reading only)
+- conclusion names: `Becoming.Web.RenewingAt`  — listed under: on the web: RENEWING
+
+```lean
+/-- The formation whose dependence breaks is not within renewal at that step, and it is
+not undermining: it draws on nothing. -/
+theorem broken_formation :
+    (conditions.dependence.along escalating).active 1 .sustaining ∧
+    (conditions.dependence.along escalating).Broken 1 .sustaining () ∧
+    ¬ (conditions.dependence.along escalating).RenewingAt 1 .sustaining ∧
+    ¬ (conditions.dependence.along escalating).UnderminingAt 1 .sustaining :=
+```
+
+## B08  `Becoming.Renewable.dip_within_two`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean`, lines 813 to 828.
+
+- conclusion names: `Becoming.Web.BreakingAt`, `Becoming.Web.UnderminingFor`  — listed under: on the web: CONSUMING  (some by a reader's reading only)
+- conclusion names: `Becoming.Web.RenewingInWithin`  — listed under: on the web: RENEWING
+
+```lean
+/-- Over cycles of two the dip is included, by the run and by the event: the condition
+returns within two steps, though the first step breaks the sustaining formation's
+dependence. -/
+theorem dip_within_two :
+    (conditions.dependence.along dipping).RenewingInWithin 2 .focal ∧
+    ¬ (conditions.dependence.along dipping).UnderminingFor 2 0 .focal ∧
+    (conditions.dependence.along dipping).BreakingAt 0 .focal := by
+```
+
+## B09  `Becoming.Renewable.finite_reading_withholds_renewal`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LabelledRoles.lean`, lines 160 to 169.
+
+- premises name: `Becoming.Web.ConsumingIn`  — listed under: on the web: CONSUMING
+- conclusion names: `Becoming.Web.RenewingIn`  — listed under: on the web: RENEWING
+
+```lean
+/-- A reading decided by the first `h` steps of a run, including no run in which the focal
+formation consumes, excludes a run in which it renews. -/
+theorem finite_reading_withholds_renewal (h : Nat) (reading : Run process → Prop)
+    (decided : ∀ r r', r.AgreeUpTo h r' → reading r → reading r')
+    (sound : ∀ r, reading r → ¬ (conditions.dependence.along r).ConsumingIn .focal) :
+    ∃ r, (conditions.dependence.along r).RenewingIn .focal ∧ ¬ reading r :=
+```
+
+## B10  `Becoming.Optimum.Holding.doubling_capacity`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean`, lines 9392 to 9451.
+
+- conclusion names: `Becoming.Web.Broken`  — listed under: on the web: CONSUMING  (some by a reader's reading only)
+- conclusion names: `Becoming.Web.Kept`  — listed under: on the web: RENEWING  (some by a reader's reading only)
+
+```lean
+/-- **The capacity witness: a limit on the other's draw makes restraint the best response.** What
+stands after a step is twice what is left; over two steps, the first of two drawers can take any
+amount and the second one unit a step. The profile in which the first leaves everything at the first
+step from two up, and draws everything otherwise, and the second takes its unit, is perfect within
+these floors. In every such perfect profile, from three, the second takes its unit, so what the first
+leaves returns to it twice, less one: the first leaves everything at the first step, the source stands
+at four after it and a dweller needing two, met at three, is kept across the first step. With no
+floor every perfect profile breaks it there. -/
+theorem doubling_capacity :
+    InTurn.Perfect (fun _ z => z + z) oneUnit keeping 2 2 ∧
+    (∀ rules, InTurn.Perfect (fun _ z => z + z) oneUnit rules 2 2 →
+      rules 0 0 3 = 3 ∧ (web (onSource (InTurn.levels (fun _ z => z + z) rules 2 3))).Kept 0 .dweller .source) ∧
+    ∀ rules, InTurn.Perfect (fun _ z => z + z) (fun _ _ _ => 0) rules 2 2 →
+      (web (onSource (InTurn.levels (fun _ z => z + z) rules 2 3))).Broken 0 .dweller .source :=
+```
+
+## B11  `Becoming.Hibernation.readings`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean`, lines 341 to 421.
+
+- conclusion names: `Becoming.Web.ConsumingIn`  — listed under: on the web: CONSUMING
+- conclusion names: `Becoming.Web.RenewingIn`  — listed under: on the web: RENEWING
+
+```lean
+/-- **What holds fixes the class across a held dormancy that Identity's continuity, read both
+ways, leaves open.** Activity needs support. The hibernator is dormant at the second step and
+holds there by its den; its waking is arising in activity and not read through what holds,
+while the forager arises in both. Exchanging the two from the third step on keeps every
+continuing activity and every continuing dependence, read both ways, yet breaks the
+hibernator's holding across its waking; under it the formation named the hibernator consumes
+and does not renew, while the hibernator renews. Under every re-identification keeping the names
+of what holds, the hibernator renews. -/
+theorem readings :
+    web.Dependent ∧ ¬ web.active 1 .hibernator ∧ web.Holds 1 .hibernator ∧
+    web.Arises 1 .hibernator ∧ ¬ (web.persisting web.Holds).Arises 1 .hibernator ∧
+    web.Arises 1 .forager ∧ (web.persisting web.Holds).Arises 1 .forager ∧
+    exchange.KeepsActive web ∧ exchange.back.KeepsActive (web.reidentify exchange) ∧
+    exchange.KeepsTenure web ∧ exchange.back.KeepsTenure (web.reidentify exchange) ∧
+    ¬ exchange.KeepsActive (web.persisting web.Holds) ∧
+    web.RenewingIn .hibernator ∧ (web.reidentify exchange).ConsumingIn .hibernator ∧
+    ¬ (web.reidentify exchange).RenewingIn .hibernator ∧
+    ∀ σ : Reidentify Formation Formation, σ.KeepsActive (web.persisting web.Holds) →
+      (web.reidentify σ).RenewingIn (σ.new 0 .hibernator) :=
+```
+
+## B12  `Becoming.World.kept_broken_reidentify`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean`, lines 577 to 592.
+
+- conclusion names: `Becoming.Web.Broken`  — listed under: on the web: CONSUMING  (some by a reader's reading only)
+- conclusion names: `Becoming.Web.Kept`  — listed under: on the web: RENEWING  (some by a reader's reading only)
+
+```lean
+/-- **Keeping and breaking are fixed by conservation.** Under every naming keeping a balanced
+world balanced, each step keeps and breaks exactly the dependences it keeps and breaks, read
+through the naming at the step. -/
+theorem kept_broken_reidentify (balanced : w.Balanced) {σ : Reidentify w.Relatum R'}
+    (kept : (w.reidentify σ).Balanced) (t : Nat) (x y : R') :
+    ((w.reidentify σ).web.Kept t x y ↔ w.web.Kept t (σ.old t x) (σ.old t y)) ∧
+    ((w.reidentify σ).web.Broken t x y ↔ w.web.Broken t (σ.old t x) (σ.old t y)) :=
+```
+
+## B13  `Becoming.World.classes_still`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean`, lines 865 to 894.
+
+- conclusion names: `Becoming.Web.ConsumingIn`  — listed under: on the web: CONSUMING
+- conclusion names: `Becoming.Web.RenewingIn`  — listed under: on the web: RENEWING
+
+```lean
+/-- and a relatum renews, consumes and arises exactly where the one it names does. -/
+theorem classes_still (x : R') :
+    ((w.reidentify σ).web.RenewingIn x ↔ w.web.RenewingIn (σ.old 0 x)) ∧
+    ((w.reidentify σ).web.ConsumingIn x ↔ w.web.ConsumingIn (σ.old 0 x)) ∧
+    ∀ t, ((w.reidentify σ).web.Arises t x ↔ w.web.Arises t (σ.old 0 x)) :=
+```
+
+## B14  `Becoming.World.classes_fixed`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean`, lines 898 to 907.
+
+- conclusion names: `Becoming.Web.ConsumingIn`  — listed under: on the web: CONSUMING
+- conclusion names: `Becoming.Web.RenewingIn`  — listed under: on the web: RENEWING
+
+```lean
+/-- **Where standing after every step sets every relatum apart, identity across steps is a fact
+of the unfolding**: under every naming keeping a balanced world balanced, each relatum renews,
+consumes and arises exactly where the relatum it names at the first step does. -/
+theorem classes_fixed (balanced : w.Balanced)
+    (apart : ∀ t c d, w.web.level (t + 1) c = w.web.level (t + 1) d → c = d)
+    {σ : Reidentify w.Relatum R'} (kept : (w.reidentify σ).Balanced) (x : R') :
+    ((w.reidentify σ).web.RenewingIn x ↔ w.web.RenewingIn (σ.old 0 x)) ∧
+    ((w.reidentify σ).web.ConsumingIn x ↔ w.web.ConsumingIn (σ.old 0 x)) ∧
+    ∀ t, ((w.reidentify σ).web.Arises t x ↔ w.web.Arises t (σ.old 0 x)) :=
+```
+
+## B15  `Becoming.Hibernation.world_readings`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean`, lines 1121 to 1145.
+
+- conclusion names: `Becoming.Web.ConsumingIn`  — listed under: on the web: CONSUMING
+- conclusion names: `Becoming.Web.RenewingIn`  — listed under: on the web: RENEWING
+
+```lean
+/-- **In `Hibernation`, identity across the dormancy is a reading, not a fact of the
+unfolding.** Read as a world, its formations standing at nothing, it balances, and so does its
+reading with the hibernator and the forager exchanged from the third step on: the exchange fits
+every relation of the world, conservation included, and keeps Identity's continuity of activity
+and of dependence both ways (`Hibernation.readings`). Under it the formation named the hibernator
+consumes and does not renew; the hibernator renews. Only keeping the names of what holds
+excludes the exchange. -/
+theorem Hibernation.world_readings :
+    (World.ofRoles Flow.still Hibernation.web).Balanced ∧
+    ((World.ofRoles Flow.still Hibernation.web).reidentify
+      (Hibernation.exchange.roles (C :=  [proof cut]
+```
+
+## B16  `Becoming.Ranking.wholeRun_of_renewed`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean`, lines 143 to 148.
+
+- premises name: `Becoming.Web.Renewed`  — listed under: on the web: RENEWING
+- conclusion names, through a definition: `Becoming.Ranking.wholeRun (built from Becoming.Web.ConsumingIn)`  — listed under: on the web: CONSUMING
+
+```lean
+/-- In a course that renews every condition the whole-run reading includes exactly the
+active events: nothing there consumes. -/
+theorem wholeRun_of_renewed {U : W → Web F C} {w : W} (renewed : ∀ c, (U w).Renewed c)
+    (e : F × Nat) : wholeRun U w e ↔ (U w).active e.2 e.1 :=
+```
+
+## B17  `Becoming.Ranking.stepwise_of_renewed`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean`, lines 150 to 156.
+
+- premises name: `Becoming.Web.Renewed`  — listed under: on the web: RENEWING
+- conclusion names, through a definition: `Becoming.Ranking.stepwise (built from Becoming.Web.UnderminingAt)`  — listed under: on the web: CONSUMING
+
+```lean
+/-- In a course that renews every condition the stepwise reading includes exactly the active
+events: nothing there undermines. -/
+theorem stepwise_of_renewed {U : W → Web F C} {w : W} (renewed : ∀ c, (U w).Renewed c)
+    (e : F × Nat) : stepwise U w e ↔ (U w).active e.2 e.1 :=
+```
+
+## B18  `Becoming.Ranking.renewed_extends_iff`
+
+File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean`, lines 158 to 168.
+
+- premises name: `Becoming.Web.Renewed`  — listed under: on the web: RENEWING
+- conclusion names, through a definition: `Becoming.Ranking.stepwise (built from Becoming.Web.UnderminingAt)`, `Becoming.Ranking.wholeRun (built from Becoming.Web.ConsumingIn)`  — listed under: on the web: CONSUMING
+
+```lean
+/-- The law of comparison with a renewing course, for every family of courses: under either
+reading, a course that renews every condition extends another exactly when it is active at
+every event the other includes and at some event the other withholds. -/
+theorem renewed_extends_iff {U : W → Web F C} {w w' : W}
+    (renewed : ∀ c, (U w').Renewed c) :
+    (ExtendsUnder (wholeRun U) w w' ↔ (∀ e, wholeRun U w e → (U w').active e.2 e.1) ∧
+      ∃ e, (U w').active e.2 e.1 ∧ ¬ wholeRun U w e) ∧
+    (ExtendsUnder (stepwise U) w w' ↔ (∀ e, stepwise U w e → (U w').active e.2 e.1) ∧
+      ∃ e, (U w').active e.2 e.1 ∧ ¬ stepwise U w e) :=
+```
+
+# The notions named in this packet, each definition whole
+
+## `Becoming.Web.ConsumingIn`
+
+Listed under: on the web: CONSUMING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 169.
+
+```lean
+def ConsumingIn (f : F) : Prop :=
+  ∃ t c, W.draws t f c ∧ W.Consumed c
+```
+
+## `Becoming.Web.RenewingIn`
+
+Listed under: on the web: RENEWING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 166.
+
+```lean
+def RenewingIn (f : F) : Prop :=
+  ∀ t c, W.Participates t f c → W.Renewed c
+```
+
+## `Becoming.Web.UnderminingAt`
+
+Listed under: on the web: CONSUMING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 322.
+
+```lean
+/-- A formation's event at `t` is undermining when one of its relations is. -/
+def UnderminingAt (t : Nat) (f : F) : Prop :=
+  ∃ c, W.UnderminingOn t f c
+```
+
+## `Becoming.Web.RenewingOver`
+
+Listed under: on the web: RENEWING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean`, line 234.
+
+```lean
+/-- A formation's event at `t` is within renewal over a region of conditions: it is active,
+and the step keeps every dependence on every condition of the region it takes part in. -/
+def RenewingOver (region : C → Prop) (t : Nat) (f : F) : Prop :=
+  W.active t f ∧ ∀ c, region c → W.Participates t f c → ∀ g, W.requires t g c → W.Kept t g c
+```
+
+## `RelationalRenewal.ConsumingIn`
+
+Listed under: on the web: CONSUMING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean`, line 135.
+
+```lean
+def ConsumingIn (U : Unfolding F C) (f : F) : Prop :=
+  ∃ c, U.draws f c ∧ Consumed U c
+```
+
+## `RelationalRenewal.RenewingIn`
+
+Listed under: on the web: RENEWING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean`, line 132.
+
+```lean
+def RenewingIn (U : Unfolding F C) (f : F) : Prop :=
+  ∀ c, Participates U f c → Renewed U c
+```
+
+## `Becoming.Web.Broken`
+
+Listed under: on the web: CONSUMING — BY A READER'S READING ONLY. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 145.
+
+```lean
+/-- The step from `t` breaks `g`'s dependence on `c`: met at `t`, not after the step. -/
+def Broken (t : Nat) (g : F) (c : C) : Prop :=
+  W.requires t g c ∧ W.need t g c ≤ W.level t c ∧ W.level (t + 1) c < W.need t g c
+```
+
+## `Becoming.Web.Consumed`
+
+Listed under: on the web: CONSUMING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 153.
+
+```lean
+/-- A dependence holding at some step is not met at any later step. It need not have
+been met at that step; `Lost` requires that. -/
+def Consumed (c : C) : Prop :=
+  ∃ g T, W.requires T g c ∧ ∀ t, T < t → W.level t c < W.need T g c
+```
+
+## `Becoming.Web.Lost`
+
+Listed under: on the web: CONSUMING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 158.
+
+```lean
+/-- A met dependence is broken and never met again: a formed relationship is lost. -/
+def Lost (c : C) : Prop :=
+  ∃ g T, W.Broken T g c ∧ ∀ t, T < t → W.level t c < W.need T g c
+```
+
+## `Becoming.Web.Kept`
+
+Listed under: on the web: RENEWING — BY A READER'S READING ONLY. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 141.
+
+```lean
+/-- The step from `t` keeps `g`'s dependence on `c`: met at `t` and after the step. -/
+def Kept (t : Nat) (g : F) (c : C) : Prop :=
+  W.need t g c ≤ W.level t c ∧ W.need t g c ≤ W.level (t + 1) c
+```
+
+## `Becoming.Web.RenewingAt`
+
+Listed under: on the web: RENEWING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 292.
+
+```lean
+/-- A formation's event at `t` is within renewal: it is active, and the step keeps
+every dependence on every condition it participates in. -/
+def RenewingAt (t : Nat) (f : F) : Prop :=
+  W.active t f ∧ ∀ c, W.Participates t f c → ∀ g, W.requires t g c → W.Kept t g c
+```
+
+## `Becoming.Web.BreakingAt`
+
+Listed under: on the web: CONSUMING — BY A READER'S READING ONLY. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 303.
+
+```lean
+/-- A formation's event at `t` is breaking when one of its relations is. -/
+def BreakingAt (t : Nat) (f : F) : Prop :=
+  ∃ c, W.BreakingOn t f c
+```
+
+## `Becoming.Web.UnderminingFor`
+
+Listed under: on the web: CONSUMING — BY A READER'S READING ONLY. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Restoration.lean`, line 81.
+
+```lean
+/-- A formation's event at `t` undermines for `p` steps: it draws on a condition at a
+step after which, at each of the next `p` steps, the condition is below a dependence's
+present need and below a need of that dependence it met while the dependence held. -/
+def UnderminingFor (p t : Nat) (f : F) : Prop :=
+  ∃ c, W.draws t f c ∧ ∃ g, W.requires t g c ∧
+    ∀ k, 0 < k → k ≤ p →
+      W.MetAbove t g c (W.level (t + k) c) ∧ W.level (t + k) c < W.need t g c
+```
+
+## `Becoming.Web.RenewingInWithin`
+
+Listed under: on the web: RENEWING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Restoration.lean`, line 76.
+
+```lean
+/-- A formation renews over cycles of `p` in the run: every condition it participates in
+is renewed within `p`. -/
+def RenewingInWithin (p : Nat) (f : F) : Prop :=
+  ∀ t c, W.Participates t f c → W.RenewedWithin p c
+```
+
+## `Becoming.Web.Renewed`
+
+Listed under: on the web: RENEWING. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean`, line 149.
+
+```lean
+/-- Every dependence on the condition is kept at every step. -/
+def Renewed (c : C) : Prop :=
+  ∀ t g, W.requires t g c → W.Kept t g c
+```
+
+## `Becoming.Ranking.wholeRun`
+
+Listed under: a definition built from a listed notion. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean`, line 120.
+
+```lean
+/-- The whole-run reading of a family of courses, each a web: active and not consuming over the
+run. -/
+def wholeRun (U : W → Web F C) (w : W) (e : F × Nat) : Prop :=
+  (U w).active e.2 e.1 ∧ ¬ (U w).ConsumingIn e.1
+```
+
+## `Becoming.Ranking.stepwise`
+
+Listed under: a definition built from a listed notion. File `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean`, line 125.
+
+```lean
+/-- The stepwise reading: active and not undermining. It is the `living` of `Web.valuation`
+(`Ranking.stepwise_iff`, in `Becoming.Relevance`). -/
+def stepwise (U : W → Web F C) (w : W) (e : F × Nat) : Prop :=
+  (U w).active e.2 e.1 ∧ ¬ (U w).UnderminingAt e.2 e.1
+```

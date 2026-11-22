@@ -1,0 +1,67 @@
+export const meta = {
+  name: 'judge-statements-naming-two-sides',
+  description: 'Two readers a packet, each alone, judge 128 Lean statements that name notions of two sides',
+  phases: [
+    { title: 'Judge', detail: 'six packets, two readers each, not shown each other' },
+  ],
+}
+
+const ROOT = '/Users/ren/theories'
+const DIR = ROOT + '/tmp/r7/one-model/check/statements23'
+
+const BRIEF = (g) => `What we are doing, so that you know the whole and not only your task. The repository at ${ROOT} holds "the theory of becoming": a map of how anything forms, persists, changes and ends, with its core proved in Lean 4. Its aim asks that two ways of going on be placed with respect to each other and to going on at all. The two ways are not named in the Lean; the account has several pairs that come near them, kept apart: on the grammar a pattern GENERATES, KEEPS or DEGENERATES (and, of a whole line, REACHES AN END, which is not degeneration); what can form WIDENS or NARROWS; on the web a formation is RENEWING or CONSUMING; a LOCK (a rule set again from the share it already favours) against a TURN IN TIME; and going on at all: LASTING, CEASING, NO RETURN. Each of these is a "side". A script has found, from Lean's own print, statements that name notions of two different sides. Naming is not placing. Your task: for each statement in one packet, say from the statement itself how it places the two sides with respect to each other, or that it does not.
+
+Your packet: ${DIR}/packets/P${g}.md . Read it whole first. It carries each statement as it stands in the Lean (docstring and statement, proof cut) and, at its end, the definition of every listed notion the statements name.
+
+House rules.
+- Do NOT open these, at all: ${DIR}/FROZEN.md and anything else in ${DIR} other than your packet; ${ROOT}/_process/DIRECTION.md; any folder whose name begins "fm-" under ${ROOT}/_process/research; the chapters under ${ROOT}/theories/becoming/chapters/. They hold forecasts and tellings you are to judge without. (AGENTS.md is in your context already and tells you to start from other pages; for this task do not.)
+- You MAY open the Lean file of a statement, at the lines given, where the packet does not show enough: a section variable, a local definition the statement uses, the few lines of a proof where a verdict turns on what is called. Do not read whole modules.
+- Answer from the STATEMENT, whatever verb its docstring uses ("forces", "makes", "breaks", "is"). Where the docstring says more or less than the statement, say so in "note".
+- This Mac is busy: run no Lean, no build, no test; change and write no file. Your structured return is everything.
+- Stop at about 80,000 tokens of your own reading. If you cannot finish, answer the items you read and list the rest under not_read.
+
+The verdicts. Give exactly one for each item.
+- PASSAGE from side X to side Y: the premises place a course (a run, an orbit, a line, a population over steps) on X and the statement places THAT SAME course on Y, with what changes quoted: kind "t", an index (X at a step and Y at a later one or from one on; quote both indices), or kind "p", a parameter (the one statement gives Y on one stated range and X's own outcome on the other; quote both ranges).
+- IMPLIES X → Y: of one thing at one index, X with stated further premises gives Y. Say every premise added, and whether the statement or its docstring names a converse or its failure.
+- EQUIVALENT: an iff between a notion of X and a notion of Y said of one thing at one index (with what else is on either side).
+- WALL: nothing under X's notion (with the premises stated) is under Y's: the two exclude each other.
+- COVERS: a disjunction: everything of a stated kind is under one of several sides.
+- BUILT CASE: a built example and no general statement. Say which: "under both", "under X and not Y", or "under neither"; and, where two built examples in one statement are set against each other, what the pair shows.
+- ACROSS: X is said of one going-on and Y of another (for example one formation consumes and another ceases). Never answer NAME ONLY for this.
+- NAME ONLY: a listed notion is named as a carrier, a type, inside the unfolding of a definition, or of something beside the point, and the statement says nothing of the two sides with respect to each other. Say why.
+
+With each verdict, for every side the statement names: of WHAT the notion is said (a formation, a condition, a part, two level paths, a share and a rule, a point of a line under which classes), at which GRAIN (a step, a stretch, a whole run, from an event on, some branch, every branch), and whether it stands DENIED. For a notion listed as "WIDENS or NARROWS" say which the order of its arguments gives, and why; for one listed as "a LOCK or the same notion with the order reversed" say which. Quote the part of the statement your verdict rests on, exactly. List what is handed in: every premise that is not itself a notion of the near side.
+
+Two cautions from an earlier trial of these verdicts. A statement like "KeepsWidening ... → ¬ 不穷 ..." may deny lasting of something other than the course (a line under another class): then it is not a WALL between widening and lasting; say of what each is said. And a built case that refutes a converse (X without Y) is worth its sentence: say which implication it refutes.`
+
+const SCHEMA = {
+  type: 'object',
+  properties: {
+    packet: { type: 'string' },
+    answers: { type: 'array', items: { type: 'object', properties: {
+      item: { type: 'string', description: 'the item id, e.g. A07' },
+      verdict: { type: 'string', enum: ['PASSAGE', 'IMPLIES', 'EQUIVALENT', 'WALL', 'COVERS', 'BUILT CASE', 'ACROSS', 'NAME ONLY'] },
+      from_side: { type: 'string', description: 'X: the near side, in the words of the list (e.g. RENEWING), or empty' },
+      to_side: { type: 'string', description: 'Y: the far side, or empty' },
+      kind: { type: 'string', description: 'for PASSAGE: t or p; for BUILT CASE: under both / under X and not Y / under neither; else empty' },
+      quote: { type: 'string', description: 'the exact part of the statement the verdict rests on' },
+      handed_in: { type: 'string' },
+      sides: { type: 'array', items: { type: 'object', properties: {
+        side: { type: 'string' }, notion: { type: 'string' }, of_what: { type: 'string' }, grain: { type: 'string' },
+        denied: { type: 'boolean' }, which_reading: { type: 'string', description: 'for WIDENS/NARROWS or LOCK/reverse: which, and why; else empty' },
+      }, required: ['side', 'notion', 'of_what', 'grain', 'denied'] } },
+      converse: { type: 'string', description: 'whether a converse or its failure is named, and where' },
+      opened_file: { type: 'boolean', description: 'true if you opened the Lean file for this item' },
+      note: { type: 'string' },
+    }, required: ['item', 'verdict', 'from_side', 'to_side', 'kind', 'quote', 'handed_in', 'sides', 'note'] } },
+    not_read: { type: 'string' },
+  },
+  required: ['packet', 'answers', 'not_read'],
+}
+
+phase('Judge')
+const PACKETS = ['A', 'B', 'C', 'D', 'E', 'F']
+const jobs = []
+for (const g of PACKETS) for (const k of [1, 2]) jobs.push({ g, k })
+const out = await parallel(jobs.map(j => () => agent(BRIEF(j.g) + `\n\nReturn the structure asked for; "packet" is "${j.g}". (You are reader ${j.k} of this packet; another reader judges it alone and you will not see each other's answers.)`, { label: `judge ${j.g}${j.k}`, phase: 'Judge', schema: SCHEMA }).then(r => ({ packet: j.g, reader: j.k, result: r }))))
+return out

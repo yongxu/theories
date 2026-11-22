@@ -1,0 +1,164 @@
+RECOUNT (as written / as recounted, by python3 over the filed JSON, printing to stdout only)
+
+- Rows of the print: 20,616 / 20,616 (statements23.json at /Users/ren/theories/tmp/r7/one-model/check/statements23/; its sha256 is e564bbab…, which matches FROZEN.sha256.txt; the file is 8,192,278 bytes, so 8.2 MB holds).
+- Notions in the print: 10,470 / 10,470.
+- Stated theorems: 20,444 / 20,444 (20,616 less the 172 counted in candidates.closed.json under rows_not_stated_theorems). Rows with line 0: 32 / 32.
+- Private theorems: 36 / 36, by grep of `private theorem|lemma` under becoming/Becoming. 35 / 35 of them are in TurningInTime.lean and 1 is in GuardedStep.lean.
+- Sides: twelve / 12. Notions: 116 / 116, none duplicated. On a list by a reader's reading only: 29 / 29.
+- Candidates: 232 / 232 (210 direct, 17 through a definition, 5 through an unfolded part).
+- Candidates naming only P0 sides: 62 / 62. The other control candidates: 42 / 42 (one P0-only candidate is also a control). Judged: 128 / 128, and they match packets/KEY.json exactly.
+- Controls: 219 / 219. Among the candidates: 43 / 43. Not among them: 176 / 176. Passages: 24 / 24.
+- Judged that rest on a reading: 25 / 25. Of the 49 that rest on a reading: 7 / 7.
+- Same verdict from both readers: 123 / 123. Differed: 5 / 5. Agreed general verdicts: 44 / 44. The others: 79 / 79. Reread: eight / 8 (R1 has 20 entries, R2 has 32, and 20 + 32 = 44 + 8).
+- Every table cell, rows and totals, recounts as written: 55/31/6/11 wall, 4 across, 1 covers/2/9,5,2; 17/12/0/3/2/1,2,0; 8/2/0/6/0/0,4,2; 7/2/1/3+1/0/1,3,0; 12/4/0/6+2/0/4,4,0; 5/3/0/1/1/0,1,0; 12/12/0/none/0; 12/6/0/4+2/0/0,3,3; All 128/72/7/44/5/15,22,7. Stands, narrowed, falls: 15/22/7 from RESULT-49.json. Counting from the refuters' sections gives the same: R1 has 9/5/2 among its 16 and R2 has 6/17/5 among its 28.
+- The three readers of the five differences: A13 and D09 are 2 of 3, B10 is 2 of 3, and D07 and E16 have no two agreeing, so "two" holds.
+- "Told" counts: 9 (one by name, F18) / 9 (F18); 2 / 2; 12 / 12; 26 / 26.
+- No candidate pairs P4 with itself or with P1, P2 or P3. This holds across all 232 candidates.
+- The source file's figures: 388 of 2,172, 117 pairs, 2,244 and 1,936 / all the same, using the worktree's dynamics.json and the 23 Nov print, under my reading of the definition. I did not recount the earlier 380/2,162/114/2,210/1,905 (the 22 Nov list is not filed), the 39 of 50, or the 354.
+- Overlaps addendum: 84 notions / 84. The three E2 theorems name Generative.Process / yes. The three listed RelationalRenewal notions are named by none of the packeted theorems / yes, and that includes E5.
+- Could not recount: 2 minutes 42 seconds, the token figures, 00:06 WIB, "fourteen additions each opened by the session".
+
+MUST
+
+1. NOTE line 3: "What a reader who took no part changed in this note is said at its end."
+   - Source: the note ends at "Cost" and has no such section.
+   - Replace: add the section once this check is applied, or remove the sentence until then.
+
+2. NOTE line 69 (T1/T2): "By the letter of T2(a) three statements stand that place one side with respect to another and that the sources do not tell."
+   - Source: RESULT-49.json and RETURN-told.md.txt.
+   - Ten stand and are NOT TOLD THERE: A08, A10, A11, A12, C11, C14, C15, E09, E11, E21. Eleven more stand narrowed and are NOT TOLD THERE.
+   - Nine more stand or stand narrowed and are told only in a chapter place outside the T1 sources, which by the letter of T1 is not told: D01, D02, D03, D18, E01, E05, E08, E15, F13.
+   - Leaving all but three is the session's own sorting under the exclusions in "After" (one call of a told law, a definition unfolded). No reader made it, and it is recorded nowhere item by item.
+   - The sorting is also uneven. D01 and D02 are real inductions (R2), and E08 is no one call. E11's premise is "close to the conclusion in other words" (R2), yet it is kept while A08 and A11 are set aside.
+   - Replace: "Thirty statements stand, whole or narrowed, that the T1 sources (the page's paragraphs, the linked passages, row FM's note) do not tell. Nine of them are named in a chapter place just outside the linked passages. Of the other 21, the session, not a reader, set aside as definitions unfolded or as calls of other statements the walls of renewing with consuming (A08 to A12, B16, B17, C10, C11, C14, C15) and the rest listed in [a table to be added]. That leaves three: …"
+   - Then list the set-aside items with the reason for each.
+
+3. DIRECTION paragraph: "Three stand that those paragraphs and their passages do not tell, none of them between the two ways the aim names."
+   - Source: the same as item 2. In addition, the T1 sources include row FM's note.
+   - Replace: "Of those that stand, 21 are not told in those paragraphs, their passages or row FM's survey, and nine more only in chapter places outside the passages. Most are walls of renewing against consuming at one step or one condition, projections, or calls of other statements, and three are general statements that tell something new; none sets the two sides of one named pair against each other by a passage."
+
+4. NOTE line 74, and the DIRECTION paragraph's "By the rule written before the step ran, nothing is drawn on the atlas from it and no layer of statement links is proposed": "By the rule written first, with so little that the sources do not tell: nothing is drawn on any page of the map by this step, and the print stays a lookup. No layer of statement links is proposed for the atlas."
+   - Source: FROZEN.md.txt. T1 ("print stays a lookup") applies only when nothing is gained. The note's own T2(a) and T2(b) were met, so T1 did not hold. T3 did not fall, so no rule forbids proposing a layer.
+   - The only rule written first that applies is "Nothing is entered on the atlas by this step; whether anything is drawn there is decided after T1 to T4 are answered."
+   - Replace in the note: "As the frozen file says, this step enters nothing on the atlas. T1 did not hold as written: T2(a) and (b) were met. Keeping the print as a lookup and proposing no layer of statement links is the session's judgment from how little is untold, not a test's outcome."
+   - Make the matching change in the paragraph.
+
+5. NOTE line 80: "It does not place the two ways with respect to each other, and it found no statement that does."
+   - Source: the walls of renewing against consuming that stand (A08, A10, A11, C10, C11, C14, C15; R1). They are statements that place the page's chosen two ways, as exclusion. WALL is one of the frozen kinds of placing.
+   - Replace: "It found no passage between any two sides. What it found between renewing and consuming are exclusions at one step or of one condition, which is the page's existing reading that the two exclude each other. It does not place the two ways nearer."
+
+6. DIRECTION paragraph: "narrowing, the turn and the lock's ending are stated by the shape of statements and by no notion of their own."
+   - Source: the attack's main finding says "mostly by unfolding, not by a notion".
+   - "After" limits the turn claim to "the turn in the capture modules … and the turn laws of TurningInTime". sides.closed.json gives P4.turn_in_time five notions of its own (TurningInTime.Turned, turned, Recoverable, Web.ReadableInTime, Web.ReadsInTime).
+   - Replace: "…that narrowing, the turn in the capture modules and in the turn laws of TurningInTime, and the lock's ending are stated mostly by the shape of statements, not by a notion of their own."
+
+7. NOTE line 69: "No sentence of the sources of the form "not found" was contradicted."
+   - Source: no return reports this check. RETURN-told decided "told" only.
+   - Replace: "Whether any 'not found' sentence of the sources is contradicted was not given to a reader; the session saw none." Or have a reader check it.
+
+8. NOTE line 35: "Two readers who took no part then tried to refute the 44 agreed verdicts … and reread eight of the 79 others."
+   - Source: FROZEN.md.txt "After", The judging, plans "One reader … then tries to refute … and rereads every fifth NAME ONLY and BUILT CASE in the packets' order". That would be 15 (A06, A17, B03, B08, B15, C07, C16, D06, D13, D19, E12, E23, F04, F09, F17). Eight were reread.
+   - Add: "The frozen plan had one refuter and every fifth of the 79 (15); two refuters ran, and eight of the 15 were reread (A06, B03, B15, C16, D13, E12, F04, F17)."
+
+9. NOTE lines 55 and 65, and the T1 bullet's "26 not told", "two stand that the sources do not tell", etc.
+   - Source: RETURN-told.md.txt, "What I did not read". Chapters outside the linked passages were only searched by each theorem's last name component, so "a chapter that tells a statement in words without its name … would be missed".
+   - Lines 7 to 10 of the same return name three places just outside the ranges (02:59, 02:439, 07:116) that "would change answers if counted" for D01, D02, D03, E05, F13, D18, E01 and E15.
+   - Add after the "Told" counts: "Outside the linked passages the reader searched chapters by theorem name only; three places just outside the ranges decide eight of the answers."
+
+10. NOTE line 65: "an endless line no support of which lasts a step is generation with every step a carrying renewal (`Web.generation_of_one_step_supports` …)".
+    - Source: Lean, KeepingWidening.lean 818 to 824. The premise is `brief : ∀ t g, Supported t g → ¬ Supported (t+1) g`, under every class finer than activity, from a supported start. The conclusion is `«全生成» … carrierClass x` only. "Every step a carrying renewal" is in the proof term (R2), not the statement.
+    - Replace: "where no formation is supported at two steps running, every supported occurrence whose line never ends is 全生成, under any class finer than activity (in its proof, the carrying renewal lies at the very next step)".
+
+11. NOTE line 61: "With widening: the six statements are calls of one law that chapter 07 tells … The refuter narrows one of them: the half that says a formation is kept follows from nothing being lost".
+    - Source: RETURN-refuter-R2. D18 is a call of `Run.begins_of_heldKeepsWidening` through `Steps.generation_iff_begins`, not of `Steps.generation_of_keepsWidening`. D25 pairs two theorems. D22 and D23 price the premise. R2 narrows four (D18, D21, D24, D25), and the table says 0, 4, 2.
+    - Replace: "D21 and D24 are each one call of `Steps.generation_of_keepsWidening`, which chapter 07 tells. D18 is one call of the held-possible law, which chapter 07 also tells (07:116). D25 pairs D24 with `kept_of_includes_by_name`. D22 and D23 price the premise and fell as placings. The refuter narrowed the other four; in D25 the 'kept' half follows from nothing lost, not from widening."
+
+12. Overlaps NOTE addendum: "The packets of E2 were built from a Lean-printed list … of the seven theorems packeted, three name one of those notions".
+    - Source: make_packets.py.txt lines 55 to 61 (named_by reads `stm`), line 88 (E4 uses `stm`) and the E5 loop (named_by). E2 has six theorems and E4 one. E5's eight laws also took "other" entries from the same list, and E5-L5 (`Settling.keeps_changing_iff`) names `Generative.Process` too.
+    - Replace: "The packets of E2, E4 and E5 were built using … (line 19, used by `named_by` and for E4's modules). Of the fifteen theorems packeted, four name one of those notions (`Generative.Process`, in `Juncture.possiblyDrawn`, `Juncture.returns`, `PossiblyDrawn.passes_juncture` and `Settling.keeps_changing_iff`), and no dynamic lists it. The three listed notions are named by none of the fifteen." The conclusion stands.
+
+LESSER
+
+1. NOTE line 72: "'fewer than five, more likely none' held".
+   - FROZEN says "fewer than five, more likely none or one", and of passages of kind (t).
+   - The note also leaves out forecasts that failed: "P0 with every pair many, most of them NAME ONLY" (no agreed NAME ONLY in any P0 cell), and "a wall (`Web.renewing_not_consuming`)" (not a candidate, R1 item 3). Say so.
+
+2. NOTE line 70 (T3): "seven of 128 were name only".
+   - True of the agreed verdicts. The third reader gave two more (D07, E16), and the refuters turned B18, C01, D22 and D23 to NAME ONLY as placings. Add this.
+
+3. NOTE line 53: "In one, a built case rests on a general wall".
+   - Of the eight, R1 found B03 to be the h = 0 case of `Horizon.prefix_does_not_decide`. R2 found that seven of D13's conjuncts are named general walls applied, and that E12's second conjunct is an unnamed general exclusion. Only F17 was called a hidden general wall.
+   - Replace: "In four of the eight the refuters named a general statement behind the case; only in F17 is the case's 'under X and not Y' a general wall (`not_allPersist_of_removes`)."
+
+4. NOTE line 63 and the DIRECTION paragraph on `includes_of_renewed`.
+   - RETURN-told E21 is NOT TOLD THERE, with "told with less than is proved" only as a borderline. The page's sentence ("a part of renewing formations…", DIR line 23) is, per the told reader at E22, the weaker form of `includes_of_renewingIn`, which is one call of `includes_of_renewed`. Chapter 07:77 tells `not_narrows_of_renewed`.
+   - In the paragraph, cite `Flow.Balances.includes_of_renewingIn` (one call of `includes_of_renewed`). In the note, say "by the told reader's borderline".
+
+5. NOTE line 69, T2(b).
+   - A04 has the told reader's borderline: "if 'later' does not cover the event itself, this is NOT TOLD THERE". DIR:33 presents it as worked on paper from two laws, not as this theorem.
+   - For C06 the reader also notes that the cited name is the RelationalRenewal twin, that the end of both formations is untold, and that the sentence says "can". Keep these.
+
+6. NOTE line 65: "an endless line on which nothing becomes active that was not carried on is keeping".
+   - Lean, MapInstances.lean 236 to 240, has it from an active start and from a step S on, with the conclusion 全守 at step x.1 + S. Add "from some step on".
+
+7. NOTE line 65: `ClosedCapture.lock_line` "narrowed to: locked at the start is locked at every step".
+   - R2 also keeps the second conjunct: each step alters the loss under `sameValue loss`. Add it.
+
+8. NOTE line 65, lock and turn.
+   - F16 (`noReturnAt_of_past`) stands narrowed as a least-step principle for any decided predicate (R2). Name it.
+
+9. DIRECTION paragraph: "72 were read as built cases with no general statement".
+   - Say "were read by both as built cases". Of those reread, refuters found general statements behind some (LESSER 3).
+
+10. DIRECTION paragraph: "what stands is mostly walls that are the two definitions' opposite inequalities at one step".
+    - That is R1's reading of the walls of renewing against consuming only. E01, E05 and E20 are walls of other kinds (R2). Say "the walls of renewing against consuming are, by one refuter's reading of the proof heads, …".
+
+11. NOTE line 59: "so the step-grain walls place nothing about the whole-run classes".
+    - R1 item 5 names A09, A10, A11, A12 and B17, and A09 is a cover. Name them.
+
+12. NOTE line 81: the three lookups "answered in seconds".
+    - No filed output supports them. File the queries and outputs, or say they are unfiled.
+
+13. NOTE line 22: "Not taken from the attack".
+    - "After" also did not take the request to drop the count column from the missing-reader's table. Add it.
+
+14. NOTE line 26.
+    - "After" also says the generated theorems that the printer's filter drops are not in the print. Add it.
+
+15. NOTE line 78: "says nothing of the 176 controls".
+    - The judging also says nothing of the 62 P0-only candidates and the 42 control candidates. Add them.
+
+16. Source file: "a print made after both his messages (00:06 WIB)".
+    - statements23.json was last written at 00:10:12, one second before the first freeze stamp of 00:10:13. With a 2 m 42 s run, that run began at about 00:07:30.
+    - Either 00:06 is the start of an earlier print, and then "run once" in the note is wrong, or the time is off. Say which.
+
+On (d), order and time:
+- FROZEN.md.txt hashes to a6f61a2f…, the second FROZEN.md value. FROZEN.as-first-frozen.md.txt hashes to 9b61f704…, which is the first value and the one the attack quotes.
+- In the session's own folder, the attack and notion returns have mtimes of 00:27:55 to 00:28:01, FROZEN.md 00:31:04 (matching the clock), the packets 00:31:52, and the judge files 00:42:50. That is consistent with "After" being written before the judges ran.
+- These are file times only, and they may be copy times. The 00:10 freeze can be shown only by FROZEN.clock.txt and by the attack quoting the first hash.
+
+On (c): E09, E11 and E21 stand by R2 and are NOT TOLD THERE by the told reader, so "stand that the sources do not tell" is true of all three, within the reader's name-search limit.
+- E09's telling says more than its statement (MUST 10).
+- E21: the Lean conclusion is `W.Includes W.level l`, and `not_narrows_of_renewed` is proved from it. "Says more than its tellings" is true. The told reader's verdict is NOT TOLD THERE, with "told with less than is proved" as a borderline only.
+- "Says more than this page" is accurate only by way of `includes_of_renewingIn` (LESSER 4).
+
+On (e):
+- Every clause of the DIRECTION paragraph is in the note or the returns, apart from those in MUST 3, 4 and 6.
+- The paragraph adds nothing to Ren's words beyond a close paraphrase of his first message.
+- "None is a passage" is scoped to the judged statements.
+- "Three stand that … do not tell" reads as a claim of absence that the told reader's own limits do not support (MUST 3 and 9).
+- It makes no claim that the map is nearer its aim.
+- Its closing "a reader who took no part set it against the record" is true only once this check is applied.
+
+NOT CHECKED
+- The token figures and that each overrun was told to the other sessions.
+- The 2 m 42 s run time, and the times of Ren's messages.
+- That the session opened each of the fourteen additions.
+- The judges' brief (not filed), including "told which files not to open" and "whatever its docstring's verb".
+- The three lookups.
+- The pre-correction figures of 22 November, "39 of 50" and "354".
+- That the 22 November list missed the three modules by a wrong module-name test.
+- The attack's 140/32 split beyond the totals.
+- The Lean statements other than E09, E11, E21 and E22. I took the refuters' readings of the rest as given.
+- Whether the five verdicts not refuted are right.
+- Chapter text, beyond the DIRECTION lines 19, 23 and 33 and the one 07:77 hit.

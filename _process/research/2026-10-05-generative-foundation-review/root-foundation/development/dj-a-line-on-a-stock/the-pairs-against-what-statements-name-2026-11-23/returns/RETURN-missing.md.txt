@@ -1,0 +1,93 @@
+AI-written (Claude Fable). I ran no Lean, build or test and wrote nothing in the repository; I did not open FROZEN.md. Five small scripts and three lists in my scratchpad did the searching and quote-matching; they are not part of this return.
+
+**What the check found**
+- All 110 names on the side lists are in the table exactly, at the lines the readers gave.
+- All 132 quoted phrases I tested are in the files: 101 beside the declaration, 6 in the module's own account, 1 in another module's account (`Viability.Kernel`), 24 in chapters 02 and 07.
+- No side holds only notions by "reading" as returned. NARROWING holds no declaration of its own.
+
+## ADD
+
+Lines are the table's. "n" is the number of statements naming it.
+
+| # | Pair, side | Full name | File:line | Basis | Quote | Grain |
+|---|---|---|---|---|---|---|
+| 1 | P0 LASTING | `Becoming.«不穷»` | Grammar.lean:241 | docstring | "The line from `x` never ends (不穷): every occurrence it reaches has a successor." | The whole line from an occurrence, on the grammar, under a class; n=119 |
+| 2 | P0 LASTING | `Becoming.«延»` | GrammarMap.lean:223 | docstring and chapter | "Going on along some branch (延)"; 02-MAP:21 "延 (yán, goes on)" | From a point, along some branch; n=17 |
+| 3 | P0 CEASING | `Becoming.«亡»` | Grammar.lean:140 | docstring | "Ends (亡): nothing continues it." | At one occurrence, under a class; n=102 |
+| 4 | P0 CEASING | `Becoming.«有终»` | GrammarMap.lean:88 | docstring | "Reaching an end (有终): some point the coarse line from `x` reaches ends." (I matched only its next sentence, "This is not degeneration") | Some point of the whole coarse line; n=25 |
+| 5 | P0 CEASING | `Becoming.«新而有终»` | GrammarMap.lean:92 | docstring | "Renewing and still ending (新而终): a carrying renewal on a coarse line that ends." | 有终 with a carrying renewal on the line; n=4 |
+| 6 | P0 CEASING (second pair; stays in P1) | `Becoming.«尽»`, `Becoming.«退化»`, `Becoming.«息»` | GrammarMap.lean:227, :282; Grammar.lean:648 | docstring | "Ending on every branch (尽)"; "Degeneration (退化): the pattern ends on every branch."; "Ceasing (息), defined positively and inductively along renewing into" | Every branch from a point; 息 only along renewing into |
+| 7 | P0 CEASING | `Becoming.World.CeasingRecurs` | Space.lean:194 | docstring | "Ceasing recurs: some relatum ceases at arbitrarily late steps." | Whole run; some relatum each time; not an ending of the world; n=33 |
+| 8 | P0 CEASING | `Becoming.ceasings` | Change.lean:423 | docstring | "How many members of a finite family cease to be across the step from `t`." | Across one step; a count of `CeasesToBe`; n=40 |
+| 9 | P0 LASTING | `Becoming.World.ArisingRecurs` | Space.lean:190 | same as `Web.Unceasing` | "Arising recurs: some relatum arises at arbitrarily late steps."; body is `w.web.Unceasing` | Same as `Web.Unceasing`; n=53 |
+| 10 | P0 NO RETURN | `Becoming.Law.Merges` | Recurrence.lean:480 | same as `Branching.Merges` | "`next` takes two distinct configurations to one (`merges_iff`); merging as a process at `process next`." | Of a determined law; n=14 |
+| 11 | P0 NO RETURN | `Becoming.Branching.NecessarilyDrawnInto`, `Becoming.Branching.PossiblyDrawnInto`, `Becoming.«入»` | Branching.lean:364, :360; GrammarLaws.lean:1474 | reading | "`s` is necessarily drawn into `R`: it lies outside `R` and every run from it enters `R`."; "Drawn in (入): some region closed under `R` that `x` lies outside holds something `x` reaches." | Twins of the listed Drawn family; n=10, 5, 12 |
+| 12 | P0 LASTING | `Becoming.Onward.KeepsMoving` | Onward.lean:205 | reading | "A family keeps moving: from each member some step leads to a member."; module title "Onward: where a run goes on" | A family of configurations of a process; the shape of 延; n=9 |
+| 13 | P0 LASTING | `Becoming.«生生»` | Grammar.lean:254 | reading | "Renewal without end (生生, as continuation and renewal only)" | Along renewing into; the docstring says renewal, not lasting; n=14 |
+| 14 | P4 LOCK | `Becoming.RemovesItsReaders` | ReadingsPersist.lean:552 | reading | "**A selection removing its own readers** (the meta-attractor's shape, stated with the pool read off the course)"; 07-SIGNIFICANCE:741 "this is the meta-attractor's shape" | A selection at one whole course; no rule and no share in it; n=1 |
+
+- **Rows 1 to 6:** the P0 reader searched English names only, so the grammar's own going on and ending were not on P0's lists. The P1 reader refused 不穷 and 延 for P1, rightly, and asked for them as a marker.
+- **Row 8:** `ceasings` stands with the listed `Becoming.GrammarLaws.ceasing`. If counts are carriers, move both.
+- **Row 9:** the script matches names, so `Web.Unceasing` alone misses these 53 statements.
+- **Row 11:** add these only if the Drawn family stays; if it goes, they go with it.
+- **Row 14:** no reader listed it; the P0 reader refused it as P4's and the P4 reader never saw it.
+
+## REMOVE
+
+- **`Becoming.«有终»`, `Becoming.«新而有终»` from P1 degenerates.** The docstring denies it ("This is not degeneration") and the reader says the chapter does too. They state an ending, so P0 CEASING (rows 4 and 5). Statements such as `«全生成有终不并»` are then found as a P1 notion against a P0 notion, if the script pairs across pairs.
+- **`Becoming.LineOnAStock.Ends` from P0 CEASING.** Its docstring calls it "The claim at `m`": a packaged universal statement for an induction, not a notion.
+- **`Becoming.Web.Broken` from P0 CEASING.** The docstring says "breaks", of one dependence across one step. Keeping it makes 83 statements name CEASING. It stays under P3 consuming by reading.
+- **`Becoming.Law.DrawnInto` from P0 NO RETURN.** By itself it does not say the region is never left, as the reader notes. Carrier.
+- **`Becoming.Branching.Returns`, `Becoming.Law.Returns`, `Becoming.Recoverable` from P0 NO RETURN.** They state the opposite (coming back; still recoverable). The script cannot see a negation, so 69, 39 and 11 statements would count as naming NO RETURN. Make them carriers or a separate "complement" marker.
+- **`Becoming.NoReturnAt` from P4 TURN IN TIME.** It states the first step at which a course is not recoverable, the opposite of in time. It stays in P0 NO RETURN by docstring.
+- **`Becoming.PoolFromCourse.Stands` from P4 TURN.** The body is `p.2 < K`, a bound on the loss. Carrier, with `windowRead`.
+
+## MOVE
+
+- **`Becoming.Viability.Kernel`: basis docstring to reading.** The words on lasting are in Lasting.lean's account. A search of Viability.lean for "last" and "persist" found nothing.
+- **`Becoming.Web.Unceasing`, `Becoming.Web.UnceasingFrom`: basis docstring to reading, kept apart.** The docstring says arising does not cease, not that anything lasts. `World.ArisingRecurs` follows them.
+- **`Becoming.RuleCapture.ReadsShare`: side notion to carrier (a premise).** Chapter 02:510 lists it among "§9's premises that keep a lock (`Raises`, `ReadsShare`, …)", the same sentence by which `Raises` was made a carrier; 54 statements take it. This is a judgment; the P4 reader flagged it too.
+- **`Becoming.Web.Lost` within P0: NO RETURN to CEASING**, at the grain "for good along the one run", beside `Web.Ends`. "Never met again" and "never active" are one shape. `Becoming.Web.Consumed` (n=22) goes with it if P0 wants that grain. Both stay in P3. NO RETURN then keeps what ranges over alternative courses.
+- **`Becoming.Branching.Merges`: basis chapter to reading.** The sentence is at 02-MAP:208. The reader reports it is marked "**Reading** [AI reading, D65]"; I did not check the mark.
+- **`Becoming.«息»` in P1:** keep, with the basis written as "chapter, a theorem's telling (`«息即尽»`)". Its own docstring puts it in P0 CEASING.
+
+## One notion under two sides or two pairs
+
+- **`Becoming.Web.Widens`, both sides of P2.** True as a fact: narrowing is the same definition with its arguments exchanged. I confirmed the quotes at Regions.lean:37, Admission.lean:69 and Retaining.lean:348. A table search for narrow, loses, shrink and closes, and opening `Web.LosesBeyond`, `Web.Retains`, `Web.Adds`, `Web.Excludes` and `Web.ExcludesWithin`, found no narrowing declaration. For name-matching it is useless: a statement naming only `Web.Widens` must not count as placing two sides unless the argument order is read.
+- **`Becoming.RuleCapture.Locked`.** Listed only under LOCK, but by the P4 reader's note 1 the turn in the capture modules is `Locked` with `reverse` and `disfavours`. The script needs the same warning.
+- **`Becoming.Web.Broken` (P3 and P0):** P3 only, as above.
+- **`Becoming.Web.Lost` (P3 and P0):** right in both, with the grain changed in P0.
+- **`Becoming.Recoverable`, `Becoming.NoReturnAt` (P4 and P0):** `Recoverable` to P4 TURN only; `NoReturnAt` to P0 NO RETURN only.
+- **Listed in one pair, refused in another, rightly:** `Steps.KeepsWideningFrom`, `Web.Unceasing`, `Web.Consumed`, `StandsLate`.
+
+## Readings: agree or not
+
+- **Agree:** `Web.Kept`; `Web.BreakingAt`, `BreakingOn`, `UnderminingFor`, `UnderminingAlong`; `Web.Broken` under P3; `PoolFromCourse.NotReadmitted`; `Viability.Keepable`, `GuardHorizon.Viable`, `Viability.KeptFor`; `Lasting.Continues`, `Lasting.Unbounded`; `Web.Continued`; `RemovesLine`.
+- **Agree in part:** `Law.Drawn`, `Branching.NecessarilyDrawn`, `Branching.PossiblyDrawn`. An absorbing or invariant region is in the body, but the docstrings say attraction. The P1 reader refused the grammar's twin «入» as attraction; treat all alike.
+- **Disagree:** 有终, 新而有终, `LineOnAStock.Ends`, `Web.Broken` under P0, `Law.DrawnInto`, both `Returns`, `PoolFromCourse.Stands`. Reasons are under REMOVE.
+
+## Carriers and notions
+
+- **Notions listed as refused or carriers that state a side of another pair:** 不穷, 延, 亡 (P1) and `World.ArisingRecurs`, `World.CeasingRecurs` (P2), all for P0.
+- **Carriers listed as notions:** `ReadsShare`, `PoolFromCourse.Stands`, `Law.DrawnInto`, the two `Returns`, `LineOnAStock.Ends`.
+- **Left as it is:** `TurningInTime.turned` is a construction; its docstring names it.
+
+## NAMES NOT IN THE TABLE
+
+None. The 110 side names and the 239 carrier and refused names I typed out are all there exactly. The refused entry "Becoming.Law.Returns (as NO RETURN proper)" is a note, not a name. Names given only inside a "why" sentence were not checked.
+
+## Opened and not added
+
+- **Running down:** `Becoming.Flow.RunsDown` (n=19), `Becoming.Flow.RunsDownOn` (n=40), `Becoming.OneStep.RunsDown` (n=13). Balance with dissipation on a family across a step. The docstrings say "runs down" and no pair's word; not found in chapters 01 to 08 by name. The direction's "run down" may want them as a marker.
+- **Drawing past a stock:** `Becoming.Flow.DrawsPast` (n=57): "`f` draws past the family's stock". Same footing as the refused `Flow.Overdraws`; the docstring does not say consuming.
+- **Premises in RegimeMargin:** `FromNothing`, `Short`, `Root`, `Meets`, `Keeps`, `Lowered`, `Adjusted.StaysShort`, `Adjusted.StaysMet`, `Drawn`, `Drawn.Rises`, `Drawn.Below`, `Coupled.Indexed.KeepsBelow`, `Coupled.Indexed.StaysWithin`.
+- **What can still be had:** `Branching.KeepsPossibilities`, `Law.KeepsPossibilities` ("no possibility is ever lost": neither widening nor narrowing); `Branching.Lossless` (by its row and the P0 reader's refusal; body not opened), `Law.Lossless`; `Law.SameFuture`; `Law.Reachable`. "The future narrows" at Attraction.lean:245 is a section heading over theorems.
+- **Other subjects or carriers:** `Lasting.Reaches`, `Funnel`, `Basin`; `Flow.ReachedInTime`, `Flow.StepInTime`; `Turns`; `OpenedCorrection.Correctable`, `OpensAlong`; `World.Living`, `World.drawdown`, `World.draining`; `SurvivorsPersist`; «成坏», «至终有常»; `Web.Holds`; `Law.Absorbing`; `Ratchet.next`; `Web.TellsApartAt`; `Web.Decays`, `LivesOn`, `SelfBearing`, `GainsSupport`, `Unloosened`, `activityOnward`; `VanishFrom` (over conditions, not steps); `SettledFrom`; `Recurs`; `World.RestsFrom` (rest); `Branching.keeping`; `Flow.lost`; «住»; `GuardHorizon.Kept`, `Viability.Certificate`.
+- **Same footing as two listed readings:** `GuardHorizon.DViable` (n=4) and `Viability.Plan.Keeps` (n=12) are twins of `Viable` and `KeptFor`, if the session wants them.
+
+## Not checked
+
+- **Table search.** By name only, mostly with a floor of 5 to 9 statements, in three ways: side words per pair, the unlisted declarations of about 40 modules, and every unlisted top-level, Web, Flow, Law, Branching, Run, World, Steps and Reaching name. A side notion named by fewer statements, or in a nested namespace under a name without those words, was not seen. Constructors were skipped throughout.
+- **Quotes.** Roughly a fifth of the readers' quoted phrases were not matched: most second quotes from the chapters, and a few module-account lines (among them Dependence.lean lines 33 and 64 and the accounts of Restoration and ContinuedClasses). The "says" fields were not checked against bodies, except for those shown in opening the candidates.
+- **Not opened.** The three modules beside the package; RuleRebuilding, RuleHandoff, ReadingSchedule, RuleShaping, DrawnShaping, Capture beyond their rows; witness namespaces; any proof or theorem statement.
+- **Chapters and direction page.** Read only at the phrases matched and at 02:7, 02:21, 07:741. I did not confirm which chapter section was named to the P0 reader.

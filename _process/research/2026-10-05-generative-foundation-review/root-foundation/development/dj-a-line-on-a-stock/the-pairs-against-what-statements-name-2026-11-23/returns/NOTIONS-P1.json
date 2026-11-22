@@ -1,0 +1,391 @@
+{
+ "pair": "P1",
+ "sides": [
+  {
+   "side": "generates",
+   "notions": [
+    {
+     "name": "Becoming.«生成»",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+     "line": 272,
+     "basis": "docstring",
+     "grain": "from a point, along some branch (a family closed under continuation under L); two classes L (coarse) and E (fine)",
+     "quote": "\"Generation (生成): along some branch the pattern goes on and a carrying renewal lies ahead of every point of it.\" (docstring, GrammarMap.lean 272-273); chapter 02 section 1, Definition: \"*Generation* (生成, shēngchéng): along some branch (such a family) the pattern goes on and from every member a carrying renewal between members lies ahead\"",
+     "says": "There is a family S holding x, each member continued under L by a member, and from every member z some members u, v with u reached from z on the L-line and a carrying renewal «传» R L E u v."
+    },
+    {
+     "name": "Becoming.«全生成»",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+     "line": 78,
+     "basis": "docstring",
+     "grain": "the whole coarse line from x (every point it reaches); the strong form",
+     "quote": "\"Generation in the strong form (全生成): the coarse line from `x` never ends, and ahead of every point of it lies a carrying renewal.\" (docstring, GrammarMap.lean 78-79); chapter: \"全生成, every point the line reaches has a continuation (不穷) and from each some carrying renewal can be reached\"",
+     "says": "«不穷» R L x, and for every y reached from x there are z, w with z reached from y and «传» R L E z w."
+    },
+    {
+     "name": "Becoming.«阶生成»",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+     "line": 350,
+     "basis": "docstring",
+     "grain": "at an order k of a sequence of classes Es; some branch",
+     "quote": "\"Generation at every order (阶生成), read on some branch.\" (docstring, GrammarMap.lean 350); chapter: \"generation at order `k` (the class `Es (k + 1)` going on through renewals at `Es k`)\"",
+     "says": "It is «生成» R (Es (k + 1)) (Es k) x: generation with the coarse class the next class of the sequence and the fine class the k-th."
+    },
+    {
+     "name": "Becoming.«阶全生成»",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+     "line": 192,
+     "basis": "docstring",
+     "grain": "at an order k of a sequence of classes Es; the whole line (strong form)",
+     "quote": "\"a sequence of classes `Es` reads generation at order `k` as the order-`k + 1` pattern continuing through order-`k` renewals\" (docstring, GrammarMap.lean 192-193); chapter: \"全生成 at order `k`\"",
+     "says": "It is «全生成» R (Es (k + 1)) (Es k) x."
+    }
+   ]
+  },
+  {
+   "side": "keeps",
+   "notions": [
+    {
+     "name": "Becoming.«守»",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+     "line": 278,
+     "basis": "docstring",
+     "grain": "from a point, along some branch; no carrying renewal anywhere on that branch (strict keeping)",
+     "quote": "\"Keeping (守): along some branch the pattern goes on with no carrying renewal on it.\" (docstring, GrammarMap.lean 278); chapter: \"*keeping* (守, shǒu): along some branch it goes on with no carrying renewal between members\"",
+     "says": "There is a family S holding x, each member continued under L by a member, and no two members u, v of S stand in «传» R L E u v."
+    },
+    {
+     "name": "Becoming.«全守»",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+     "line": 83,
+     "basis": "docstring",
+     "grain": "the whole coarse line from x; from some point it reaches on (earlier renewals allowed); the strong form",
+     "quote": "\"Keeping in the strong form (全守): the coarse line from `x` never ends, and from some point on no carrying renewal lies ahead.\" (docstring, GrammarMap.lean 83-84); chapter: \"全守, 不穷 and from some point it reaches no carrying renewal can be reached, renewals before that point allowed\"",
+     "says": "«不穷» R L x, and some y reached from x is such that no z reached from y has a carrying renewal «传» R L E z w to any w."
+    },
+    {
+     "name": "Becoming.«后守»",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean",
+     "line": 78,
+     "basis": "docstring",
+     "grain": "along some branch; from a point of that branch reached from x on",
+     "quote": "\"Keeping from some point on (后守): along some branch the pattern goes on, and from a point of that branch reached from `x` no carrying renewal lies on it.\" (docstring, MapRegions.lean 78-79); chapter: \"*Keeping from some point on* (后守, hòushǒu) closes the gap\" and \"every point is 生成, 后守 or 退化\"",
+     "says": "There is a family S holding x and closed under continuation under L, and a member z of S reached from x such that no members u, v of S with u reached from z stand in «传» R L E u v."
+    }
+   ]
+  },
+  {
+   "side": "degenerates",
+   "notions": [
+    {
+     "name": "Becoming.«退化»",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+     "line": 282,
+     "basis": "docstring",
+     "grain": "from a point, on every branch; one class L only (no fine class)",
+     "quote": "\"Degeneration (退化): the pattern ends on every branch.\" (docstring, GrammarMap.lean 282); chapter: \"*degeneration* (退化, tuìhuà) is 尽\"",
+     "says": "It is «尽» R L x by definition (def «退化» R L x := «尽» R L x)."
+    },
+    {
+     "name": "Becoming.«尽»",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+     "line": 227,
+     "basis": "chapter",
+     "grain": "from a point, on every branch (inductive); one class L",
+     "quote": "chapter 02 section 1, Definition: \"尽 (jìn, ends): everything continuing `x` ends (inductive)\" and \"*degeneration* (退化, tuìhuà) is 尽\"; docstring (GrammarMap.lean 227-228): \"Ending on every branch (尽)\"",
+     "says": "Inductive predicate with one constructor: «尽» R L x holds where «尽» R L y holds of every y with «续» R L x y (so at once where nothing continues x)."
+    },
+    {
+     "name": "Becoming.«新而尽»",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+     "line": 285,
+     "basis": "docstring",
+     "grain": "from a point, on every branch, with a carrying renewal ahead added; a conjunction, not a region",
+     "quote": "\"Renewing and still ending (新而尽): a carrying renewal ahead, and an end on every branch.\" (docstring, GrammarMap.lean 285); chapter row on witnesses: \"renews and still ends on every branch: renewal does not decide the region\"",
+     "says": "«尽» R L x together with some u reached from x and v with «传» R L E u v."
+    },
+    {
+     "name": "Becoming.«息»",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
+     "line": 648,
+     "basis": "chapter",
+     "grain": "along renewing into («复生至»), under the one; NOT the pattern's own line under a coarse class. The chapter's sentence is a theorem's telling («息即尽», GrammarMap.lean 367: «息» R E x ↔ «尽» («复生至» R E) «一» x), not the definition's own words",
+     "quote": "chapter 02 section 1, theorem table: \"Read along renewing into (复生至) under the one, ... ceasing (息) is ending on every branch.\" The docstring itself (Grammar.lean 648-653) says only \"Ceasing (息), defined positively and inductively along renewing into\" and names no degeneration.",
+     "says": "Inductive predicate with one constructor: «息» R E x holds where «息» R E w holds of every w that x renews into («复生至» R E x w); at once where x renews into nothing."
+    },
+    {
+     "name": "Becoming.«有终»",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+     "line": 88,
+     "basis": "reading",
+     "grain": "the whole coarse line from x; some one point it reaches ends (existential); the third of the strong forms",
+     "quote": "Against listing it: docstring (GrammarMap.lean 88-89) \"Reaching an end (有终): some point the coarse line from `x` reaches ends. This is not degeneration (`«退化»`, ending on every branch).\"; chapter: \"有终 (yǒuzhōng, reaches an end), some point the line reaches ends, which is not degeneration\". For listing it apart: chapter \"Three *strong forms* read the whole line from `x`: 全生成 ... 全守 ... 有终\"; module account (GrammarMap.lean 20-23) \"The strong forms exclude each other ... they cover every point (`«全三域之周»`)\".",
+     "says": "Some y reached from x on the L-line (x itself or later) has no continuation under L («亡» R L y). WHY reading: neither source says it states degeneration and both deny it; I list it apart because in the strong-form trichotomy it stands in the third place, where 退化 stands among the some-branch regions, so a statement naming 全生成 or 全守 with 有终 places the generating or keeping strong form against ending."
+    },
+    {
+     "name": "Becoming.«新而有终»",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+     "line": 92,
+     "basis": "reading",
+     "grain": "the whole coarse line from x; 有终 with a carrying renewal on the line added; a conjunction",
+     "quote": "docstring (GrammarMap.lean 92): \"Renewing and still ending (新而终): a carrying renewal on a coarse line that ends.\"; module table (GrammarMap.lean 18): \"renewing and still ending: a carrying renewal on a line that ends\"",
+     "says": "«有终» R L x together with some z reached from x and w with «传» R L E z w. WHY reading: it goes wherever 有终 goes, and 有终 is itself here only by reading."
+    }
+   ]
+  }
+ ],
+ "carriers": [
+  {
+   "name": "Becoming.«传»",
+   "why": "GrammarMap.lean 60. The step relation (carrying renewal: «续» R L x y ∧ «生» R E y) by whose presence ahead or absence generation and keeping are both defined. Not a side: the chapter says of the short-life witness \"renewal does not decide the region\", and 新而尽 has a 传 on a line that degenerates. Named in 35 statements, so the later script should not take a statement naming 传 as naming the generating side."
+  },
+  {
+   "name": "Becoming.«所及»",
+   "why": "GrammarMap.lean 68. Reach on the coarse line including the start (x = y ∨ «相续» R L x y); the range every strong form quantifies over. 112 statements name it."
+  },
+  {
+   "name": "Becoming.«际»",
+   "why": "Grammar.lean 46. A relation on a carrier; the type every side is stated on."
+  },
+  {
+   "name": "Becoming.«续»",
+   "why": "Grammar.lean 123. Continuation relative to a class («合» R E); the step all sides are stated on."
+  },
+  {
+   "name": "Becoming.«相续»",
+   "why": "Grammar.lean 128. The line: transitive closure of «续»."
+  },
+  {
+   "name": "Becoming.«有后»",
+   "why": "Grammar.lean 134. Has a successor in a line; the premise of deciding going on in `«尽而续可定则有终»` and the body of 不穷."
+  },
+  {
+   "name": "Becoming.«一»",
+   "why": "Grammar.lean 68. The full relation, used as the coarse class in the witnesses and the calibrations."
+  },
+  {
+   "name": "Becoming.«静»",
+   "why": "Grammar.lean 71. Identity, used as the fine class in the witnesses."
+  },
+  {
+   "name": "Becoming.Map.step",
+   "why": "GrammarMap.lean 382. Built example: the successor net on Nat, the endless chain of `Map.Endless.*`."
+  },
+  {
+   "name": "Becoming.Map.half",
+   "why": "GrammarMap.lean 427. Built example helper (block of two) for `Endless.generation_in_pairs`."
+  },
+  {
+   "name": "Becoming.Map.pairs",
+   "why": "GrammarMap.lean 433. Built example: the class of lying in one block of two."
+  },
+  {
+   "name": "Becoming.Map.still",
+   "why": "GrammarMap.lean 456. Built example: one occurrence conditioning itself (witness of 全守 and 守)."
+  },
+  {
+   "name": "Becoming.Map.short",
+   "why": "GrammarMap.lean 463. Built example: the short life of two occurrences (witness of 有终, 尽, 新而尽)."
+  },
+  {
+   "name": "Becoming.Map.StepWhere.relation",
+   "why": "GrammarMap.lean 508. Built example: the short life gated by a proposition P, for the calibration `«尽则有终当且仅当排中»`."
+  },
+  {
+   "name": "Becoming.Map.Branch",
+   "why": "GrammarMap.lean 532. Built example carrier: a root, a chain and a still occurrence (for 生守相杂)."
+  },
+  {
+   "name": "Becoming.Map.fork",
+   "why": "GrammarMap.lean 535. Built example relation on Map.Branch."
+  },
+  {
+   "name": "Becoming.Map.Stage",
+   "why": "MapRegions.lean 174. Built example carrier: three occurrences in a row (the line that renews once and then stays)."
+  },
+  {
+   "name": "Becoming.Map.once",
+   "why": "MapRegions.lean 178. Built example relation on Map.Stage (`Map.Once.*`)."
+  },
+  {
+   "name": "Becoming.Map.Settles.seen",
+   "why": "MapRegions.lean 325. Built example helper for the LPO/WLPO calibration."
+  },
+  {
+   "name": "Becoming.Map.Settles.turning",
+   "why": "MapRegions.lean 330. Built example helper (alternation)."
+  },
+  {
+   "name": "Becoming.Map.Settles.sequence",
+   "why": "MapRegions.lean 335. Built example: a sequence that turns until p first holds and stays after."
+  },
+  {
+   "name": "Becoming.Map.Depleted.web",
+   "why": "MapInstances.lean 556. Built example web (one formation, condition running out)."
+  },
+  {
+   "name": "Becoming.Map.Depleted.every",
+   "why": "MapInstances.lean 581. Built example continuation (every step)."
+  },
+  {
+   "name": "Becoming.Map.Undecided.web",
+   "why": "MapInstances.lean 634. Built example web for `Map.end_of_gone_iff_excluded_middle`."
+  },
+  {
+   "name": "Becoming.Map.Undecided.continuation",
+   "why": "MapInstances.lean 642. Built example continuation gated by P."
+  },
+  {
+   "name": "Becoming.Web.continuationStep",
+   "why": "Identity.lean 907 (table line). 缘 on occurrences (t, f) read off a continuation: the relation at which the World theorems of section 1 instance the grammar's regions. Only its docstring and first line opened."
+  },
+  {
+   "name": "Becoming.Web.activityClass",
+   "why": "Arising.lean 697 (table line). The coarse class of the World reading (MapInstances account: \"the coarse class, the pattern, is activity\"). Not opened; from the MapInstances account."
+  },
+  {
+   "name": "Becoming.Web.carrierClass",
+   "why": "PatternPassing.lean 337 (table line). The fine class of the World reading (\"activity together with one formation\"). Not opened; from the MapInstances account."
+  },
+  {
+   "name": "Becoming.Web.itself",
+   "why": "ContinuedClasses.lean 198 (table line). The continuation by names alone, under which nothing is 全生成. Not opened; from the MapInstances account."
+  },
+  {
+   "name": "Becoming.Web.passingContinuation",
+   "why": "PatternPassing.lean 329 (table line). The passing continuation under which 传 is a passing to an arising carrier. Not opened; from the MapInstances account."
+  },
+  {
+   "name": "Becoming.Web.kindClass",
+   "why": "KeepingWidening.lean 753 (table line). The kind class at which `Web.every_branch_ends_of_gone` is instanced. Not opened."
+  },
+  {
+   "name": "Becoming.Web.kindGrains",
+   "why": "KeepingWidening.lean 757. Docstring read: \"The grains of a kind, for the map's orders (`«阶全生成»`)\": a sequence of classes handed to 阶全生成, not a side."
+  },
+  {
+   "name": "Becoming.Web.Lineage",
+   "why": "Identity.lean 882. A lineage under a continuation; MapInstances: \"a coarse line from an active occurrence is a lineage under `R`\". The line the World theorems are stated on."
+  },
+  {
+   "name": "Becoming.Steps.next",
+   "why": "Arising.lean 626 (table line). The next-step relation on moments, the 缘 of the calibration `Map.generates_iff_changes` and of WideningOnTheMap and HeldPossible statements of 全生成. Not opened."
+  },
+  {
+   "name": "Becoming.Steps.includes",
+   "why": "WideningOnTheMap.lean 92. \"Nothing lost\": the preorder put in the place of the coarse class when keeping widening is read as 全生成. A class-place carrier, not a side."
+  },
+  {
+   "name": "Becoming.Steps.same",
+   "why": "WideningOnTheMap.lean 95. \"The same possible\": the fine class of that reading."
+  },
+  {
+   "name": "Becoming.LineageRegions.continuation",
+   "why": "LineageRegions.lean 207. The lineage continuation (carrying on or descent within a kind); a relation regions are read along. Docstring only."
+  },
+  {
+   "name": "Becoming.LineageRegions.lineStep",
+   "why": "LineageRegions.lean 213. 缘 on occurrences read off the lineage continuation. Docstring only."
+  }
+ ],
+ "refused": [
+  {
+   "name": "Becoming.«延»",
+   "why": "GrammarMap.lean 223. \"Going on along some branch (延)\": x lies in a family each member of which is continued under L. It is the part 生成, 守 and 后守 have in common (their first two conjuncts), so it states no ONE side; the Lean has it against 尽 (`«延尽不并»`, `«延尽之定当且仅当排中»`), i.e. not-degenerating undivided between generating and keeping. 17 statements name it. See notes: the session may want it as a marker of 'goes on, generating or keeping not said'."
+  },
+  {
+   "name": "Becoming.«不穷»",
+   "why": "Grammar.lean 241. \"The line from `x` never ends (不穷): every occurrence it reaches has a successor.\" The first conjunct of both 全生成 and 全守, so it states neither; the calibration sets it against 有终 (`«不穷有终之定当且仅当排中»`, which the chapter says is \"a dichotomy of 不穷 against 有终, not of 全生成 against 有终\"). 119 statements name it."
+  },
+  {
+   "name": "Becoming.«生生»",
+   "why": "Grammar.lean 254. Renewal without end. Not generation: the chapter's Reading says \"The map's 生成 ... is not 生生 and never overlaps degeneration\"; its docstring says \"It does not yet tell renewal that sustains life from turnover that destroys it\". By theorem it is 延 along renewing into (`«生生即延»`), and 延 is no one side."
+  },
+  {
+   "name": "Becoming.«复生»",
+   "why": "Grammar.lean 149. Renews (conditions a beginning that goes on). GrammarMap's account: \"Renewal by itself (`«复生»`) cannot tell renewal that sustains a pattern from turnover that ends it\"."
+  },
+  {
+   "name": "Becoming.«复生至»",
+   "why": "Grammar.lean 643. Renewing into; the relation 生生 and 息 are said on. A relation, not a side."
+  },
+  {
+   "name": "Becoming.«粗复生»",
+   "why": "Grammar.lean 471. Renewal at the grain of a class; a renewal notion, and GrammarMap's account says the coarse net \"is not used here\"."
+  },
+  {
+   "name": "Becoming.«亡»",
+   "why": "Grammar.lean 140. \"Ends (亡): nothing continues it.\" One of the root's four marks, at a single point; the body of 有终 uses it. Neither chapter section 1 nor its docstring calls it degeneration; a point that is 亡 meets 尽's constructor vacuously, which I read from the bodies and did not look for as a theorem."
+  },
+  {
+   "name": "Becoming.«住»",
+   "why": "Grammar.lean 143. \"Abides (住): continues something and is continued.\" A mark at a point, not the map's keeping: it says nothing of a carrying renewal or a second class."
+  },
+  {
+   "name": "Becoming.«生»",
+   "why": "Grammar.lean 137. \"Begins (生): nothing it is a continuation of.\" A mark at a point and an ingredient of 传; not generation (生成)."
+  },
+  {
+   "name": "Becoming.«异»",
+   "why": "Grammar.lean 146. Alteration: continues under E while a finer class tells apart. The chapter has `«传则异»` (a carrying renewal is an alteration); not a side. `Becoming.«化»` (GrammarReadings.lean 47) is the same form by `«化之二说同形»` and is refused with it."
+  },
+  {
+   "name": "Becoming.«有常»",
+   "why": "Grammar.lean 338. Constancy of a class under 缘. A premise of `«有常则无终»` (\"A coarse class constant under 缘 has no end from a continued point\"), not a statement of keeping. `Becoming.«自持»` (Grammar.lean 573) is «有常» by definition and is refused with it."
+  },
+  {
+   "name": "Becoming.«通»",
+   "why": "GrammarReadings.lean 111. 不穷 along 缘 and along its converse; a reading of a classical unit built from 不穷, which is itself no one side."
+  },
+  {
+   "name": "Becoming.«复»",
+   "why": "GrammarReadings.lean 96. Return: the line from x comes back to x. Section 2's matter (return), not a region of section 1."
+  },
+  {
+   "name": "Becoming.Web.Widens",
+   "why": "Regions.lean 153. Its docstring says \"A part whose levels widen those without it is generative\" and the module account says \"A part is generative where the levels with it widen those without it, degenerative where those without it widen those with it\". Refused for P1 because it compares two level paths on a web by what they admit (P2's widening), not a pattern on the grammar; chapter section 1's Reading: \"The generation of a part's lines read here is not that widening.\""
+  },
+  {
+   "name": "Becoming.Web.Keeps",
+   "why": "Regions.lean 160. \"keep what can form the same: each admits what the other admits\". The word is 'keep' but it is P2's middle case between two level paths, not 守."
+  },
+  {
+   "name": "Becoming.Web.Mixed",
+   "why": "Regions.lean 164. Each level path exceeds the other; P2's fourth case. Not the map's mixed region 生守相杂, which is a theorem (`Map.«生守相杂»`), not a declaration."
+  },
+  {
+   "name": "Becoming.Steps.KeepsWideningFrom",
+   "why": "WideningOnTheMap.lean 98. 07's keeping widening for a chain of predicates. The module proves it to be 全生成 at (nothing lost, the same possible) under two premises (`Steps.generation_iff_keepsWidening`); that is a theorem joining P2 to P1, and the definition itself states widening, not generation."
+  },
+  {
+   "name": "Becoming.Web.Unceasing",
+   "why": "Arising.lean 96. \"Arising does not cease: some formation arises at arbitrarily late steps.\" MapInstances has it as what 全生成 gives under the passing continuation (`Web.generation_arises_late`); a consequence on the World, section 3.2's notion, not a statement of generation."
+  },
+  {
+   "name": "Becoming.Flow.BeginsAlong",
+   "why": "KeepingWidening.lean 889. A passing of support that begins a line of R; docstring says \"Read on the map, it begins a line\". An event at a step, an ingredient like 传, not a side. Only the first lines of its docstring were read."
+  },
+  {
+   "name": "Becoming.GrammarLaws.ceasing",
+   "why": "GrammarLaws.lean 1848. The list of units before a step that no unit after continues (a census count of 亡 across a step); a list, not a region. `Becoming.GrammarLaws.arising` (1853) likewise for 生."
+  },
+  {
+   "name": "Becoming.«屡»",
+   "why": "GrammarLaws.lean 1748. Steps of F recur along a line g. The section on rest uses 尽 as a sufficient condition for falls not recurring; rest (section 4), not a region of section 1."
+  },
+  {
+   "name": "Becoming.«入»",
+   "why": "GrammarLaws.lean 1474. Drawn in to a closed region; attraction (section 2), not a side."
+  },
+  {
+   "name": "Becoming.«相尽»",
+   "why": "GrammarCandidates.lean 480. \"Wholly in each other (相盡)\"; shares the character 尽 only. Likewise `Becoming.«歧网».«无尽»` (GrammarCandidates.lean 653), a constructor of a built branching net."
+  },
+  {
+   "name": "RelationalRenewal.RenewingIn",
+   "why": "RelationalRenewal.lean 132 (table line). Not opened. Named in MapInstances' account as a 'name class' that \"never read[s] as generation\"; it is P3's notion. `RelationalRenewal.ConsumingIn` (135) likewise."
+  }
+ ],
+ "not_read": "Read in full or nearly: chapter 02 lines 13-61 (section 1 with its three anchors and the Bases paragraph before it); GrammarMap.lean module account, every non-theorem declaration and the theorem heads of lines 180-360; MapRegions.lean lines 1-100 and its definitions; MapInstances.lean lines 1-75 (the account stops for me partway through its third regime) and its four definitions; Grammar.lean lines 1-75 and the definitions at 124-153, 236-262, 470-476, 566-578, 640-660. Opened only at single definitions: GrammarLaws.lean, GrammarCandidates.lean, GrammarReadings.lean, Regions.lean (account lines 1-60 and five definitions), WideningOnTheMap.lean (lines 1-50, 88-100), Arising.lean 94-100, Identity.lean two docstrings. NOT read: the bodies of any proof; the rest of MapInstances' account and all its theorems; KeepingWidening.lean, LineageRegions.lean, LineageRegimes.lean, LineageDrawdown.lean, HeldPossible.lean, RoomNet.lean, RoomRuns.lean, GrammarTransport.lean, GrammarConditionals.lean, GrammarCases.lean, GrammarPath.lean, GrammarCourse.lean, GrammarTesting.lean, Amounts.lean, InAmounts.lean, ProcessRepresentation.lean, WorldRepresentation.lean, SelectionShift.lean beyond what two searches printed (their names in the table, one docstring line each where a keyword matched, and the lines where a region's name occurs); the three modules beside the package (GenerativeCore, RelationalRenewal, InquirySufficiency: names from the table only); the record generation-and-degeneration-at-two-grains.md and degeneration-from-a-horizon.md; chapters 01, 05, 07; the rest of chapter 02; FROZEN.md (not opened, as told); statements23.json, Statements23.lean.txt and the returns folder (not opened). How the package was searched: (1) the table grepped for the Chinese names of section 1 and for the three map modules; (2) every .lean file under Becoming/ scanned by a script for def/abbrev/structure/inductive declarations whose body, up to the first blank line or docstring, names 生成, 守, 退化, 延, 尽, 全生成, 全守, 有终, 后守, 新而尽, 新而有终, 阶生成, 阶全生成, 息 or 生生: outside GrammarMap and MapRegions it found only Grammar's 生生 and 息 (a structure field after an inner docstring would escape this script); (3) the same files scanned for declarations whose docstring contains generat, degenerat, 退化, 生成, 守, 'goes on', 'every branch', 'some branch', 'never ends', 'endless', 'without end', 'carrying renewal', 'the map', 'region', 'reaches an end', 'unceasing', 'ceas' (the broad form was cut at 100 hits, at Interdependence.lean; modules J to Z were rescanned with a narrower list that dropped 'region', 'ceas' and 'generat', so a J-Z docstring using only those three words was not seen, except that an earlier scan for generat/degenerat/生成/守/退化 covered all modules). No Lean, build, test or gate was run; no file was written or changed.",
+ "notes": "AI-written (Claude Fable). Lines are the table's (the docstring's first line); the `def` keyword stands one to three lines below.\n\n1. Two names, one notion. `«退化»` is `«尽»` by definition (GrammarMap.lean 284: def «退化» R L x := «尽» R L x). Statements name either (55 and 22); a statement naming 尽 and no 退化 still states the degenerating side. `«阶生成»` and `«阶全生成»` are likewise 生成 and 全生成 at the classes Es (k+1), Es k.\n\n2. Keeping is three notions that are not one. 守 (no renewal anywhere on the branch) and 全守 (whole line, quiet from some point) each give 后守 (`«守则后守»`, `«全守则后守»`), and neither gives the other (`Map.Once.keeping`, `Map.Once.not_keeps`). The chapter's first Definition names 守 as keeping; its coverage theorem uses 后守 as the region (\\\"every point is 生成, 后守 or 退化\\\"). So the keeping side of the some-branch trichotomy is 后守, with 守 its strict case.\n\n3. Two trichotomies at two grains, and the third place differs. Some branch / every branch: 生成, 后守 (or 守), 退化. Whole line (strong forms): 全生成, 全守, 有终. The chapter and the docstring both say 有终 \\\"is not degeneration\\\"; I listed 有终 and 新而有终 under degenerates with basis \\\"reading\\\" only so that statements such as `«全生成有终不并»` and `«全守有终不并»` are not lost to the later script. If the session holds to the docstrings, drop those two and the degenerating side has no strong-form notion: not found in GrammarMap.lean, MapRegions.lean or MapInstances.lean.\n\n4. Going on, undivided. `«延»` and `«不穷»` state that the pattern goes on without saying whether by renewing; they are refused as sides. The Lean's plainest placements of 'not degenerating' against 'degenerating' are stated on them (`«延尽不并»`, `«尽则非不穷»`, `«不穷则延»`, and the calibrations). A script that looks only for statements naming two sides will miss these unless 延 and 不穷 are given to it as a fourth marker.\n\n5. 息 and 生生. I listed `«息»` under degenerates on the chapter's sentence, with its grain: it is 尽 only by the theorem `«息即尽»` and only at the relation `«复生至» R E` under `«一»`, which is not the pattern's line under a coarse class. `«生生»` is the matching 延 (`«生生即延»`) and so is refused with 延. A statement naming 息 with 生成 or 守 would be at two different relations; the judge of such a statement should be told.\n\n6. 新而尽 is a conjunction (尽 and a carrying renewal ahead). A statement naming it alone already has renewal and degeneration together; it is the Lean's own form of \\\"renewal does not decide the region\\\".\n\n7. On the World nothing new is defined. The four non-theorem declarations of MapInstances.lean are witnesses (webs and continuations). The World theorems of section 1 state the grammar's own 全生成, 全守, 有终, 退化 at `Web.continuationStep R` with `Web.activityClass`, `Web.carrierClass` or `Web.kindClass`. The chapter says so: \\\"These instance the strong forms; the some-branch regions are not read on the World\\\".\n\n8. Chapter sentences with no non-theorem declaration behind them, in what was read (GrammarMap, MapRegions, MapInstances, Grammar): the mixed region (生守相杂) is a theorem, `Map.«生守相杂»`, with no definition of a mixed region; \\\"transformation\\\" in the Reading paragraph (\\\"generation, keeping, transformation and degeneration overlap\\\") has no region of its own there, the nearest declarations being the marks 异 and 化; \\\"the boundary between going on and ending\\\" is carried by the calibration theorems, not by a declaration.\n\n9. The words 'generative', 'degenerative' and 'keep' also stand in Regions.lean for P2's notions (`Web.Widens`, `Web.Keeps`, `Web.Mixed`), in the docstring and the module account. By the letter of rule N-a the docstring of `Web.Widens` says \\\"is generative\\\"; I refused it for P1 because the chapter's Reading says the map's generation \\\"is not that widening\\\". Whoever reads P2 should have it.\n\n10. 传 is listed as a carrier, not as generation at a step. If the session wants a step-grain notion of the generating side there is none other in what was read; 传 is what generation has ahead of every point and keeping lacks, and it also stands on lines that end."
+}

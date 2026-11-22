@@ -1,0 +1,81 @@
+"""Packets for the judges of step 3: the candidates to be judged, grouped by cell, each with its statement as it
+stands in the Lean (docstring and statement, the proof cut) and the notions it names; then every listed notion named
+in the packet, its definition whole. AI-written (Claude Fable, board row DJ), 23 November 2026.
+usage: python3 -B make_packets.py   (reads candidates.closed.json, writes packets/P*.md and packets/KEY.json)"""
+import json, re, collections
+from pathlib import Path
+import candidates as C
+HERE = Path(__file__).parent
+d, receipt = C.load(); src = C.source_of(receipt)
+defs = {x['name']: x for x in d['notions']}
+cand = json.load(open(HERE / 'candidates.closed.json'))
+sides = cand['sides']
+side_of = {n: s for s, v in sides.items() for k in ('direct', 'reading') for n in v[k]}
+basis = {n: k for s, v in sides.items() for k in ('direct', 'reading') for n in v[k]}
+text = {}
+def lines(module):
+    if module not in text: text[module] = open(src[module]).read().split('\n')
+    return text[module]
+def statement(t):
+    seg = lines(t['module'])[t['line'] - 1:t['end']]
+    out = []
+    for l in seg:
+        s = l.rstrip()
+        if s.endswith(':=') or s.endswith(':= by') or re.search(r':=\s*by\s*$', s):
+            out.append(l); break
+        m = re.search(r'\s:=\s', l)
+        if m and not l.lstrip().startswith(('/--', '--')) and '/--' not in ''.join(out[-1:]) and out and not any('/--' in o and '-/' not in ''.join(out) for o in out):
+            out.append(l[:m.start()] + ' :=  [proof cut]'); break
+        out.append(l)
+        if len(out) >= 70: out.append('  [cut at 70 lines]'); break
+    return '\n'.join(out)
+def definition(n):
+    x = defs[n]; seg = lines(x['module'])[x['line'] - 1:x['end']]
+    return '\n'.join(seg[:40])
+def cell(r):
+    ps = sorted({x.split('.')[0] for x in r['all_sides']}); return ' x '.join(ps) if len(ps) > 1 else ps[0] + ' within'
+judged = [r for r in cand['candidates'] if cell(r) != 'P0 within' and not r['control']]
+judged.sort(key=lambda r: (cell(r), r['module'], r['line']))
+groups = collections.OrderedDict([
+    ('A', [r for r in judged if cell(r) == 'P3 within'][0:19]),
+    ('B', [r for r in judged if cell(r) == 'P3 within'][19:37]),
+    ('C', [r for r in judged if cell(r) == 'P3 within'][37:]),
+    ('D', [r for r in judged if cell(r) in ('P1 within', 'P1 x P2')]),
+    ('E', [r for r in judged if cell(r) in ('P2 x P3', 'P0 x P2', 'P0 x P1 x P2', 'P0 x P1')]),
+    ('F', [r for r in judged if cell(r) in ('P0 x P3', 'P0 x P4')]),
+])
+assert sum(len(v) for v in groups.values()) == len(judged) == 128, (sum(len(v) for v in groups.values()), len(judged))
+SIDE_WORDS = {
+ 'P1.generates': 'on the grammar: a pattern GENERATES', 'P1.keeps': 'on the grammar: a pattern KEEPS',
+ 'P1.degenerates': 'on the grammar: a pattern DEGENERATES', 'P1.reaches_an_end': 'on the grammar: the whole line REACHES AN END (not degeneration)',
+ 'P2.widens_or_narrows': 'what can form WIDENS or NARROWS (one notion says both: read which from the order of the arguments)',
+ 'P3.renewing': 'on the web: RENEWING', 'P3.consuming': 'on the web: CONSUMING',
+ 'P4.lock_or_its_reverse': 'a LOCK (a rule set again from the share it already favours), or the same notion with the order reversed (read which)',
+ 'P4.turn_in_time': 'a TURN IN TIME', 'P0.lasting': 'going on at all: LASTING', 'P0.ceasing': 'going on at all: CEASING', 'P0.no_return': 'going on at all: NO RETURN'}
+(HERE / 'packets').mkdir(exist_ok=True)
+key = {}
+for g, rows in groups.items():
+    out = [f'# Packet {g}: {len(rows)} statements', '',
+           '*Built by script from Lean\'s own print of what each statement names. The columns "premises name" and "conclusion names" show where a listed notion stands after the outer ∀ and → are peeled, and nothing more: a denied notion stands as the conclusion\'s, an iff or a conjunction is all conclusion, a carrier\'s type stands among the premises. Section variables are not shown; the file and lines are given so that you can open the statement where it is unclear.*', '']
+    named = collections.OrderedDict()
+    for i, r in enumerate(rows, 1):
+        iid = f'{g}{i:02d}'
+        key[iid] = {'theorem': r['name'], 'module': r['module'], 'line': r['line'], 'cell': cell(r), 'sides': r['all_sides'], 'level': r['level'], 'rests_on_a_reading': r['rests_on_a_reading']}
+        out += [f'## {iid}  `{r["name"]}`', '', f'File `{src[r["module"]]}`, lines {r["line"]} to {r["end"]}.', '']
+        for col, lab in (('premises_direct', 'premises name'), ('conclusion_direct', 'conclusion names'), ('premises_through', 'premises name, through a definition'), ('conclusion_through', 'conclusion names, through a definition')):
+            for s, ns in sorted(r[col].items()):
+                out.append(f'- {lab}: {", ".join("`" + n + "`" for n in ns)}  — listed under: {SIDE_WORDS[s]}' + ('  (some by a reader\'s reading only)' if any(basis.get(n) == 'reading' for n in ns) else ''))
+                for n in ns:
+                    base = n.split(' (built from ')
+                    named[base[0]] = None
+                    if len(base) > 1: named[base[1].rstrip(')')] = None
+        out += ['', '```lean', statement(r), '```', '']
+    out += ['# The notions named in this packet, each definition whole', '']
+    for n in named:
+        if n not in defs: continue
+        x = defs[n]
+        tag = SIDE_WORDS[side_of[n]] + (' — BY A READER\'S READING ONLY' if basis[n] == 'reading' else '') if n in side_of else 'a definition built from a listed notion'
+        out += [f'## `{n}`', '', f'Listed under: {tag}. File `{src[x["module"]]}`, line {x["line"]}.', '', '```lean', definition(n), '```', '']
+    (HERE / 'packets' / f'P{g}.md').write_text('\n'.join(out))
+    print(g, len(rows), len('\n'.join(out)), 'chars', collections.Counter(cell(r) for r in rows))
+json.dump(key, open(HERE / 'packets' / 'KEY.json', 'w'), indent=1, ensure_ascii=False)

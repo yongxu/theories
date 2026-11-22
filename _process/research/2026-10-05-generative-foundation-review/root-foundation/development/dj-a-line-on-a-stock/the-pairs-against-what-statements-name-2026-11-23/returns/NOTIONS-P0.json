@@ -1,0 +1,541 @@
+{
+ "pair": "P0",
+ "sides": [
+  {
+   "side": "LASTING",
+   "notions": [
+    {
+     "name": "Becoming.Lasting.Lasts",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean",
+     "line": 109,
+     "basis": "docstring",
+     "quote": "\"**Lasting a horizon.** `Lasts f adm guard n s`: `s` is within the guard and, for `n` more steps, so is every configuration an admissible disturbance takes it to.\" (module account, Lasting.lean:13-14; the declaration's docstring at 107-108 repeats it)",
+     "says": "By recursion on n: the guard holds at s, and for n+1 also Lasts n holds at f s a for every admissible a.",
+     "grain": "for a number n of steps; from a start; of staying within a supplied guard; against every admissible disturbance"
+    },
+    {
+     "name": "Becoming.Viability.Kernel",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean",
+     "line": 57,
+     "basis": "docstring",
+     "quote": "\"the kernel of `Becoming.Viability` is what lasts every horizon (`kernel_iff_lasts`)\" (module account of Lasting.lean:23-24); its own docstring, Viability.lean:56: \"the configurations from which no course leaves it\"",
+     "says": "Every configuration reachable from s is within the guard.",
+     "grain": "over every course and all steps; from a start; of a supplied guard"
+    },
+    {
+     "name": "Becoming.HistoryIdeals.GoesOn",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryIdeals.lean",
+     "line": 349,
+     "basis": "docstring",
+     "quote": "\"An ideal of words goes on where it has words longer than every length.\" (docstring, HistoryIdeals.lean:348)",
+     "says": "For every n the ideal has a member word longer than n.",
+     "grain": "of a whole history given as an ideal of words; its opposite in the file is HasLongest (settles), not an ending"
+    },
+    {
+     "name": "Becoming.Stretches.GoesOn",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryIdeals.lean",
+     "line": 826,
+     "basis": "docstring",
+     "quote": "\"A history goes on where it has stretches beyond every horizon.\" (docstring, HistoryIdeals.lean:825)",
+     "says": "For every horizon h the ideal has a stretch whose horizon is beyond h.",
+     "grain": "of a whole history given as an ideal of stretches of a process"
+    },
+    {
+     "name": "Becoming.SelectionTerm.Generations.Persists",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+     "line": 421,
+     "basis": "docstring",
+     "quote": "\"A line *persists through arbitrarily late cohorts*: past every step some cohort of descent has a member.\" (docstring, PersistingChoices.lean:421-422; section head 417 \"A line that persists, on the World\")",
+     "says": "For every N there is a step s at or after N and a y in the cohort G.family s.",
+     "grain": "over a whole run; of a line of descent (cohorts), not of one member"
+    },
+    {
+     "name": "Becoming.StandsLate",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
+     "line": 420,
+     "basis": "docstring",
+     "quote": "section head \"Persistence read off a course\" (ReadingsPersist.lean:418) over \"A group of relata stands at arbitrarily late steps under a level history.\" (419)",
+     "says": "For every N some member of the group has a positive level at a step at or after N.",
+     "grain": "over a whole run; of a group of relata, read off a level history; some member, not a fixed one"
+    },
+    {
+     "name": "Becoming.AllPersist",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
+     "line": 543,
+     "basis": "docstring",
+     "quote": "\"**Selection by persistence, read off a fixed pool**: every listed line persists.\" (docstring, ReadingsPersist.lean:542)",
+     "says": "StandsLate holds of the slots of every index i.",
+     "grain": "over a whole run; of every line of a fixed pool; named a selection in its docstring, so it is a selection's notion as much as lasting's"
+    },
+    {
+     "name": "Becoming.Web.Unceasing",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
+     "line": 96,
+     "basis": "docstring",
+     "quote": "\"Arising does not cease: some formation arises at arbitrarily late steps.\" (docstring, Arising.lean:95); 02-MAP.md:151 \"arising is *unceasing* where something arises at arbitrarily late steps\"",
+     "says": "For every N some formation arises (inactive then active) across a step at or after N.",
+     "grain": "over a whole run; of arising in the web (some formation each time), NOT of any one formation or course going on"
+    },
+    {
+     "name": "Becoming.Web.UnceasingFrom",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
+     "line": 584,
+     "basis": "docstring",
+     "quote": "\"Under `R`, formations arise at arbitrarily late steps.\" (docstring, Identity.lean:583)",
+     "says": "For every N some formation arises under the continuation R (active after, continuing nothing active before) at a step at or after N.",
+     "grain": "over a whole run; of arising under a supplied continuation R; same caveat as Web.Unceasing"
+    },
+    {
+     "name": "Becoming.Viability.Keepable",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointKeeping.lean",
+     "line": 90,
+     "basis": "reading",
+     "quote": "\"A guard is **keepable** from `s` where some run from `s` stays within it.\" (docstring, JointKeeping.lean:89); the docstring says keeping, not lasting; I read it as lasting along some course, the existential twin of Kernel",
+     "says": "Some run starting at s has the guard at every step.",
+     "grain": "over a whole run; some course (not every); from a start; of a supplied guard"
+    },
+    {
+     "name": "Becoming.GuardHorizon.Viable",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean",
+     "line": 86,
+     "basis": "reading",
+     "quote": "\"**The guard is kept for `n` steps**: it holds, and for `n` more steps some enabled move leads only to configurations keeping it for one step fewer.\" (docstring, GuardHorizon.lean:86-87); says kept, not lasts; the same recursion as Lasts with a chosen move in place of every disturbance",
+     "says": "By recursion on n: the guard holds at s, and some enabled move leads only to configurations Viable for n.",
+     "grain": "for n steps; by some choice of move, against every outcome of it; from a start; of a guard"
+    },
+    {
+     "name": "Becoming.Viability.KeptFor",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean",
+     "line": 92,
+     "basis": "reading",
+     "quote": "\"**Kept for `n` steps through what the steps keep.** The guard holds throughout the class, and, with steps to go, some move usable from the class leaves ... a class kept for one step fewer.\" (docstring, Keeping.lean:92-94); says kept, not lasts",
+     "says": "By recursion on n over a class B of configurations: the guard holds throughout B and some usable move leaves, for every value seen, a class kept for n.",
+     "grain": "for n steps; of a class of configurations a reader cannot tell apart; by some usable move"
+    },
+    {
+     "name": "Becoming.Lasting.Continues",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean",
+     "line": 956,
+     "basis": "reading",
+     "quote": "\"Some course of `n` steps starts at `s`.\" (docstring, Lasting.lean:955); it stands in the module named Lasting, but neither it nor the 40 lines of the module account I read call it lasting",
+     "says": "By recursion: true at 0; at n+1 some step from s leads to a t from which a course of n steps starts.",
+     "grain": "for n steps; that a course of that length exists from a start (no guard)"
+    },
+    {
+     "name": "Becoming.Lasting.Unbounded",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean",
+     "line": 961,
+     "basis": "reading",
+     "quote": "\"Courses of every length start at `s`.\" (docstring, Lasting.lean:960); same basis as Lasting.Continues",
+     "says": "Continues P n s for every n.",
+     "grain": "every finite length; from a start; not one endless course (the module account's lines 86-87 tie the step from this to a run to a principle)"
+    },
+    {
+     "name": "Becoming.Web.Continued",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
+     "line": 765,
+     "basis": "reading",
+     "quote": "\"Under `R`, `g` is continued across the step from `t`: some formation active after the step continues it.\" (docstring, Identity.lean:763-764); it is the clause whose failure, with activity, is Web.CeasesFrom",
+     "says": "Some formation active at t+1 stands in R t g to it.",
+     "grain": "across one step; of a formation; under a supplied continuation R (it may go on as another name)"
+    }
+   ]
+  },
+  {
+   "side": "CEASING",
+   "notions": [
+    {
+     "name": "Becoming.CeasesToBe",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
+     "line": 278,
+     "basis": "docstring",
+     "quote": "\"A determination ceases to be across the step from `t`: it holds at `t` and fails after the step.\" (docstring, Change.lean:276-277; section head 271 \"Coming to be and ceasing to be\")",
+     "says": "p t and not p (t+1), for any p : Nat → Prop.",
+     "grain": "across one step; of any determination in time (not only a thing's being there)"
+    },
+    {
+     "name": "Becoming.Web.Ceases",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
+     "line": 478,
+     "basis": "docstring",
+     "quote": "\"A formation ceases across the step from `t`: active at `t`, not active after it.\" (docstring, Change.lean:477)",
+     "says": "W.active t f and not W.active (t+1) f.",
+     "grain": "across one step; of a formation on a web; it may be active again later"
+    },
+    {
+     "name": "Becoming.Web.CeasesToStand",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
+     "line": 482,
+     "basis": "docstring",
+     "quote": "\"A condition ceases to stand across the step from `t`: a positive standing at `t`, none after it.\" (docstring, Change.lean:481-482)",
+     "says": "The level of c is positive at t and not positive at t+1.",
+     "grain": "across one step; of a condition's level on a web"
+    },
+    {
+     "name": "Becoming.Web.CeasesFrom",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
+     "line": 770,
+     "basis": "docstring",
+     "quote": "\"Under `R`, `g` ceases across the step from `t`: active before it, and continued by no formation active after it.\" (docstring, Identity.lean:768-769)",
+     "says": "W.active t g and not W.Continued R t g.",
+     "grain": "across one step; of a formation; under a supplied continuation R"
+    },
+    {
+     "name": "Becoming.GrammarLaws.ceasing",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+     "line": 1848,
+     "basis": "docstring",
+     "quote": "\"The units before a step that no unit after continues, under a continuation decided by `k`: they cease across the step.\" (docstring, GrammarLaws.lean:1846-1847)",
+     "says": "The sublist of `before` whose members no member of `after` continues under the Boolean k.",
+     "grain": "across one step; a list of units (a function, not a predicate); under a decided continuation; census"
+    },
+    {
+     "name": "Becoming.Web.Ends",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+     "line": 133,
+     "basis": "docstring",
+     "quote": "\"The formation's activity ends: from some step on it is never active.\" (docstring, Wholes.lean:132; module account, Wholes.lean:22: \"*ends* when from some step on it is never active (`Web.Ends`)\")",
+     "says": "There is a T with f inactive at every step from T on.",
+     "grain": "from some step on, over the rest of the run; of a formation; its body is an ending for good along the one run (see notes)"
+    },
+    {
+     "name": "Becoming.RegimeMargin.Coupled.Ends",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+     "line": 2085,
+     "basis": "docstring",
+     "quote": "\"**A condition ends**: from some step on, the level `part` reads off the state is nothing.\" (docstring, RegimeMargin.lean:2085)",
+     "says": "There is an N from which the level `part` reads off the run of the coupled step from s is zero at every step.",
+     "grain": "from some step on; of one condition's level; on the run of the two-condition regime step"
+    },
+    {
+     "name": "Becoming.RegimeMargin.Coupled.Indexed.Ends",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+     "line": 2122,
+     "basis": "docstring",
+     "quote": "\"**A level ends**: from some step on, the level `part` reads off the state is nothing.\" (docstring, RegimeMargin.lean:2122)",
+     "says": "There is an N from which `part` of the run of the indexed step from s is zero at every step.",
+     "grain": "from some step on; of one read level; on the run of the indexed regime step"
+    },
+    {
+     "name": "Becoming.RegimeMargin.Coupled.Indexed.EndsUnder",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+     "line": 2812,
+     "basis": "docstring",
+     "quote": "\"**A condition ends under a law**: from some step on, its level is nothing.\" (docstring, RegimeMargin.lean:2812-2813)",
+     "says": "There is an N from which the run of the law f from s has level 0 at condition c at every step.",
+     "grain": "from some step on; of a condition; under any determined law on levels"
+    },
+    {
+     "name": "Becoming.RuleRebuilding.Gone",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean",
+     "line": 242,
+     "basis": "docstring",
+     "quote": "\"The end: level `0` and no member.\" (docstring, RuleRebuilding.lean:241)",
+     "says": "The state's level is 0 and it has no holders and no others.",
+     "grain": "at a state; of the rule-rebuilding model only (a model's own state predicate)"
+    },
+    {
+     "name": "Becoming.RuleRebuilding.Ends",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean",
+     "line": 212,
+     "basis": "docstring",
+     "quote": "\"The step ends everything where the level is `0` or the take exceeds what the level and the renewal can give.\" (docstring, RuleRebuilding.lean:210-211)",
+     "says": "The level is 0 or the level plus the rule's renewal is less than the take.",
+     "grain": "at a step; of the rule-rebuilding model only; the condition under which that model's step empties the state"
+    },
+    {
+     "name": "Becoming.RemovesLine",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
+     "line": 547,
+     "basis": "reading",
+     "quote": "\"**A course removes a line from the pool it gives**: the line is alive at the start and, from some step on, is not.\" (docstring, ReadingsPersist.lean:545-546); says removes, not ceases or ends; the body is an ending of a line",
+     "says": "The line is alive in the course at step 0 and there is a T from which it is alive at no step.",
+     "grain": "from some step on; of a line (its slots), read off a level course"
+    },
+    {
+     "name": "Becoming.Web.Broken",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+     "line": 145,
+     "basis": "reading",
+     "quote": "\"The step from `t` breaks `g`'s dependence on `c`: met at `t`, not after the step.\" (docstring, Dependence.lean:145); it is CeasesToBe's shape said of a dependence being met, in words of breaking",
+     "says": "g's need of c is met at t and not met after the step (body read only through its docstring and the line above it; the definition's own line was not shown).",
+     "grain": "across one step; of a dependence of a formation on a condition; borders P3"
+    },
+    {
+     "name": "Becoming.LineOnAStock.Ends",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean",
+     "line": 812,
+     "basis": "reading",
+     "quote": "\"The claim at `m`: from every configuration at most `hi` whose line needs at most `m`, some step has no unit of the line met.\" (docstring, LineOnAStock.lean:810-811); named Ends, but the docstring calls it a claim",
+     "says": "From every state with stock at most hi and line below m, some step of the course has no unit of the line met.",
+     "grain": "a packaged universal claim for an induction; of a line on a stock; at some step, not from then on"
+    }
+   ]
+  },
+  {
+   "side": "NO RETURN",
+   "notions": [
+    {
+     "name": "Becoming.NoReturnAt",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean",
+     "line": 594,
+     "basis": "docstring",
+     "quote": "\"**The point of no return of a course**: the first step at which it is not recoverable.\" (docstring, ReadOffInTime.lean:593); 07-SIGNIFICANCE.md:261 \"The point of no return is the first step at which the course is not recoverable (`NoReturnAt`)\"",
+     "says": "The course is not Recoverable at N and is Recoverable at every earlier step.",
+     "grain": "at one step (the first such); of a course of levels; relative to supplied feasible courses and a supplied thing to keep"
+    },
+    {
+     "name": "Becoming.Recoverable",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean",
+     "line": 589,
+     "basis": "docstring",
+     "quote": "\"**Recoverable at a step**: some course among the feasible ones, agreeing with `l` at every step up to `N`, keeps what `keeps` asks of a course.\" (docstring, ReadOffInTime.lean:587-588, under the section head 583 \"The point of no return, on courses\")",
+     "says": "Some feasible course agreeing with l up to N keeps what is asked; this is the side's complement, and NO RETURN is its negation.",
+     "grain": "at a step; of a course; relative to supplied feasible courses and keeps; listed as the complement, not as the side itself"
+    },
+    {
+     "name": "Becoming.Web.Lost",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+     "line": 158,
+     "basis": "docstring",
+     "quote": "\"A met dependence is broken and never met again: a formed relationship is lost.\" (docstring, Dependence.lean:157)",
+     "says": "Some dependence on c is broken across a step T and the level of c is below that need at every later step.",
+     "grain": "from an event on; of a condition (some dependence on it); along the one run, with no alternative courses; twin of Web.Consumed, which is P3's"
+    },
+    {
+     "name": "Becoming.Law.Drawn",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Attraction.lean",
+     "line": 167,
+     "basis": "reading",
+     "quote": "\"`s` is drawn: some absorbing region draws it in, so `s` lies in the basin of an attractor.\" with Absorbing's \"a region the law never leaves\" (docstrings, Attraction.lean:165-166 and 158); neither says no return; I read it so because the course enters a region it never leaves and s lies outside it",
+     "says": "Some region R is absorbing under next and s is outside R with its orbit entering R.",
+     "grain": "from a start; over the whole course; under a determined law; the region is existential, so what cannot be returned to is unnamed"
+    },
+    {
+     "name": "Becoming.Law.DrawnInto",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Attraction.lean",
+     "line": 162,
+     "basis": "reading",
+     "quote": "\"`s` is drawn into `R`: it lies outside `R` and its course enters `R`. Where `R` is absorbing, the configurations drawn into it are its basin.\" (docstring, Attraction.lean:160-161)",
+     "says": "s is outside R and some point of its orbit is in R; by itself it does not say R is never left.",
+     "grain": "from a start; of entering a given region; no return only together with Absorbing"
+    },
+    {
+     "name": "Becoming.Branching.NecessarilyDrawn",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Branching.lean",
+     "line": 372,
+     "basis": "reading",
+     "quote": "\"`s` is necessarily drawn: some region the process never leaves necessarily draws it in.\" (docstring, Branching.lean:371)",
+     "says": "Some invariant region R has s outside it and every run from s entering it.",
+     "grain": "from a start; over every run of a branching process; region existential"
+    },
+    {
+     "name": "Becoming.Branching.PossiblyDrawn",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Branching.lean",
+     "line": 368,
+     "basis": "reading",
+     "quote": "\"`s` is possibly drawn: some region the process never leaves possibly draws it in.\" (docstring, Branching.lean:367)",
+     "says": "Some invariant region R has s outside it and some configuration reachable from s inside it.",
+     "grain": "from a start; some course; a no return that can happen, not one that has"
+    },
+    {
+     "name": "Becoming.Branching.Returns",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+     "line": 124,
+     "basis": "reading",
+     "quote": "\"`s` returns: some step from `s` leads to a configuration from which `s` can be had again.\" (docstring, Recurrence.lean:123-124); it states coming back, the complement; the module account of Irreversibility.lean:6 says \"Whether a configuration can be returned to is a property of the whole law\"",
+     "says": "Some step from s leads to a t from which s is reachable.",
+     "grain": "of a configuration under a process; some course; complement of the side, and a recurrence (a period), not a turning back of a course"
+    },
+    {
+     "name": "Becoming.Law.Returns",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+     "line": 484,
+     "basis": "reading",
+     "quote": "\"`s` comes back after some steps (`returns_iff`): returning as a process (`Branching.Returns`, read on reach) at `process next`.\" (docstring, Recurrence.lean:483-484)",
+     "says": "Branching.Returns at the process of the determined law next (body not shown in what I read; taken from the docstring and the neighbouring abbrevs).",
+     "grain": "of a configuration under a determined law; complement of the side"
+    },
+    {
+     "name": "Becoming.Branching.Merges",
+     "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+     "line": 133,
+     "basis": "chapter",
+     "quote": "02-MAP.md:208, marked \"**Reading** [AI reading, D65]\": \"Irreversibility in computation, heat, extinction and forgetting is one merge of configurations, read through these theorems\"; the docstring (Recurrence.lean:132) says only \"`P` takes two distinct configurations to one.\"",
+     "says": "Two distinct configurations step to one configuration.",
+     "grain": "of a whole process (somewhere two go to one); what cannot be recovered is which past it was, not a course that can no longer be turned; the chapter sentence is itself marked a reading"
+    }
+   ]
+  }
+ ],
+ "carriers": [
+  {
+   "name": "Becoming.Dependence.active",
+   "why": "Activity of a formation at a step (World.lean:50, 710 statements): what Web.Ceases, Web.Ends, Web.Continued and Web.Unceasing are stated of; being there at a step is not a side."
+  },
+  {
+   "name": "Becoming.Web",
+   "why": "The web (World.lean:55, 2,636 statements): the structure the web notions are stated on."
+  },
+  {
+   "name": "Generative.Process",
+   "why": "The process (1,130 statements) Lasting, Viability and Recurrence are stated on; with Generative.Trace and Becoming.Run, Becoming.Law.run, Becoming.Law.orbit, Becoming.Law.process."
+  },
+  {
+   "name": "Becoming.Invariant",
+   "why": "A region a process never leaves (Frame.lean:264, 50 statements): a premise many laws take; it is lasting where the region is a guard and no return where it is an end, so by itself neither. Law.absorbing_iff_invariant (Attraction.lean:490) makes Law.Absorbing the same thing."
+  },
+  {
+   "name": "Becoming.Law.Absorbing",
+   "why": "\"a region the law never leaves\" (Attraction.lean:158-159): the same closure premise for a determined law; Law.Drawn and Law.DrawnInto are built on it."
+  },
+  {
+   "name": "Becoming.AbsorbingUnder",
+   "why": "The same closure for one move of a process (Attraction.lean:495)."
+  },
+  {
+   "name": "Becoming.ClosedUnder",
+   "why": "Frame.lean:84, 29 statements; not opened; by name and place a closure premise like Invariant."
+  },
+  {
+   "name": "Becoming.Web.Holds",
+   "why": "Persistence.lean:115: activity widened by a held dependence (\"keeps it in the unfolding\"); a predicate at a step that ceasing can be re-read through, not a side."
+  },
+  {
+   "name": "Becoming.Web.persisting",
+   "why": "Persistence.lean:120: builds a web with another activity predicate; a construction."
+  },
+  {
+   "name": "Becoming.Web.Present",
+   "why": "PatternPassing.lean:95: a pattern is present at a step where some formation carries it; being there at a step, of a pattern."
+  },
+  {
+   "name": "Becoming.Flow.LineAlive",
+   "why": "ReadingsPersist.lean:375: a line's cohort has a member at a step; being there at a step, of a line."
+  },
+  {
+   "name": "Becoming.AliveIn",
+   "why": "ReadingsPersist.lean:533: a line has a standing slot at a step; what StandsLate-style persistence and RemovesLine are stated of."
+  },
+  {
+   "name": "Becoming.Run.AgreeUpTo",
+   "why": "Two courses agree up to a step (29 statements): the relation Recoverable is stated with."
+  },
+  {
+   "name": "Becoming.TurningInTime.Turned",
+   "why": "TurningInTime.lean:2002: the feasible courses supplied to Recoverable in one model (a course turned to a standing use at some step); a premise instance."
+  },
+  {
+   "name": "Becoming.TurningInTime.MeetsNeed",
+   "why": "TurningInTime.lean:2007: what is asked of a course there (the need met at every step); the `keeps` supplied to Recoverable."
+  },
+  {
+   "name": "Becoming.Lasting.Ladder",
+   "why": "Lasting.lean:115: a family of levels certifying lasting (lasts_iff_ladder); a certificate a law takes, with Becoming.Lasting.Necessary (122) and Becoming.Lasting.Drains (129, the family under which a start leaves the guard within n steps)."
+  },
+  {
+   "name": "Becoming.Viability.disturbed",
+   "why": "Viability.lean:157, 39 statements: the process of a law under admissible disturbances that Lasts and Kernel are compared on; with Becoming.Viability.history."
+  },
+  {
+   "name": "Becoming.Web.Whole",
+   "why": "Wholes.lean:124: a whole active exactly while some part is; the structure the ending and persisting of wholes are stated on, with Becoming.Web.Listed."
+  },
+  {
+   "name": "Becoming.Irreversibility.flip",
+   "why": "Irreversibility.lean:30: a built example (every configuration to its negation), the law that returns; with Becoming.DeadEnd.law (Labelled.lean:243), the built example that does not."
+  },
+  {
+   "name": "Becoming.Web.ByPassing",
+   "why": "PatternPassing.lean:104: the passing premise under which a pattern lasts only while carriers pass it on (02-MAP.md:190); a premise, with Becoming.Web.PassesAt."
+  }
+ ],
+ "refused": [
+  {
+   "name": "Becoming.Web.Continues",
+   "why": "Identity.lean:574: f continues some formation active before the step; read from the later formation, its failure is arising under R (Web.ArisesFrom), not ceasing. Web.Continued is the one whose failure is ceasing."
+  },
+  {
+   "name": "Becoming.Web.Arises",
+   "why": "Arising.lean:92, with Becoming.Web.ArisesFrom and Becoming.ComesToBe: coming to be across a step. P0's three sides have no side for forming; they are the mirror of Web.Ceases and CeasesToBe."
+  },
+  {
+   "name": "Becoming.LastChange.StillFrom",
+   "why": "LastChange.lean:69: from step T on the run does not change. It is rest, a configuration held; its docstring says neither lasting nor ending, and a run at rest may be either."
+  },
+  {
+   "name": "Becoming.Enough.Rests",
+   "why": "Enough.lean:54: a run comes to rest with a target met; rest again, with Becoming.Enough.Stays (a step that leaves a configuration as it is)."
+  },
+  {
+   "name": "Becoming.Web.Brief",
+   "why": "Wholes.lean:137: never active at two steps d apart; a bound on how long one stretch of activity is, taken as a premise of the laws on wholes; no docstring calls it ending."
+  },
+  {
+   "name": "Becoming.SurvivorsPersist",
+   "why": "ReadingsPersist.lean:538: from some step on every line alive persists; a conditional joining being alive late to StandsLate, named a selection; it relates rather than states a side."
+  },
+  {
+   "name": "Becoming.RemovesItsReaders",
+   "why": "ReadingsPersist.lean:552: \"the meta-attractor's shape\": a selection holding at a course that removes a line of its readers. P4's (or the selection's); built on RemovesLine."
+  },
+  {
+   "name": "Becoming.Branching.KeepsPossibilities",
+   "why": "Recurrence.lean:121: \"no possibility is ever lost\": every configuration reachable at every step. It is about what can still form, P2's ground, not an end; Becoming.Law.KeepsPossibilities likewise."
+  },
+  {
+   "name": "Becoming.Branching.Lossless",
+   "why": "Recurrence.lean:130: the process merges nothing; the negation-side of Merges; left to whoever takes Merges, not listed twice."
+  },
+  {
+   "name": "Becoming.Web.Restored",
+   "why": "Restoration.lean:69: a dependence met again at a later step; its docstring says \"this is not a configuration coming back\". Renewal's notion (P3), with RestoredWithin and RenewedWithin."
+  },
+  {
+   "name": "Becoming.Web.Consumed",
+   "why": "Dependence.lean:153: a dependence not met at any later step. Its body has the for-good shape of Web.Lost, but it is the consuming side of P3; left to that reader."
+  },
+  {
+   "name": "Becoming.ReturnsAlong",
+   "why": "Frame.lean:158 (36 statements), with Becoming.Returning and Becoming.Flow.Returning (FlowCenters.lean:107, 182) and Becoming.Flow.ReachReturns: \"elements returning along a relation, each a standpoint and its own center\"; another sense of return (centres). ReturnsAlong's own body was not opened."
+  },
+  {
+   "name": "Becoming.GroupEnding.Ended",
+   "why": "GroupEnding.lean:100: every group with less of the amount than another leaves no offspring; a premise about selection among groups at one generation, not a course ending; Becoming.GroupEnding.EndedBy likewise."
+  },
+  {
+   "name": "Becoming.StopsBy",
+   "why": "Frequency.lean:694: no coupling reads d into c at a step from N on. It is an ending of a coupling in the schedule, a premise of the frequency laws; no docstring ties it to a thing or course ending. Borderline; a later reader may move it to CEASING at the grain of a coupling."
+  },
+  {
+   "name": "Becoming.RecursOrStops",
+   "why": "Frequency.lean:787: a logical dichotomy (every row holds somewhere or some row nowhere), equivalent to LPO; a principle, not a side."
+  },
+  {
+   "name": "Becoming.Amounts.NoEndlessFall",
+   "why": "InAmounts.lean:116: no amount falls without end; a premise about the amounts (well-foundedness), with Becoming.Amounts.EndlessFall and FallsStop."
+  },
+  {
+   "name": "Becoming.Queue.gone",
+   "why": "Population.lean:777: a count of how many have left a queue before a step; a number, not an ending."
+  },
+  {
+   "name": "Becoming.OneStep.Continues",
+   "why": "OneStep.lean:2698: what stands after each step is what stands before the next, up to order; a consistency premise between steps, not lasting."
+  },
+  {
+   "name": "Becoming.ReaderRebuilding.EndsAt",
+   "why": "ReaderRebuilding.lean:488: in one model, the reader is present after h-1 steps and gone after h; a model's horizon abbreviation; only its docstring was read."
+  },
+  {
+   "name": "Becoming.HistoryIdeals.HasLongest",
+   "why": "HistoryIdeals.lean:346, with Becoming.Stretches.HasLatest (823): \"settles\"; the opposite of GoesOn in that file, said as settling, not as ending."
+  },
+  {
+   "name": "Becoming.Law.Returns (as NO RETURN proper)",
+   "why": "Listed above only as the complement. No definition was found that states \"t cannot get back to s\": the theorems read (Irreversibility.deadEnd_no_return, Labelled.not_returns_iff_loses) state it inline as ¬ Reach P t s."
+  }
+ ],
+ "not_read": "Not read: FROZEN.md (as told). Chapter 02-MAP.md was searched for the pair's words and for definition names, not read through; 01-ROOT.md and 07-SIGNIFICANCE.md were read at one sentence each; no other chapter. Of the Lean, I read only the declarations quoted, with these module accounts: Lasting.lean lines 1-40 and 86-92, Irreversibility.lean 1-31, Persistence.lean 5-24, and greps of ReadOffInTime.lean and Wholes.lean. The package has 409 files and the table 10,470 rows; I searched the table by name patterns (last, ceas, return, recover, end, gone, persist, surviv, alive, kernel, viab, stays, stops, absorb, lost, still, never, always and a few more), so a notion that states a side under a name outside those patterns was not found by this search. Seen in the table and not opened: Becoming.Lasting.Reaches, Funnel, Basin, Variant, hitTime, determined, FinitelyBranching; Becoming.Viability.Certificate; Becoming.GuardHorizon.DViable, Return, lostStep, last; Becoming.Alternatives.Survives; Becoming.LiftSurvives; Becoming.Clearing.DwellerEnded, EitherEnded, resourceGone, dwellerLive; Becoming.Blanket.ThresholdDrain.ended; Becoming.Crossing.Mode (its constructors ended, active); Becoming.Accretion.alive and the other example-level `alive` lists; Becoming.ReadingLoop.Continues; Becoming.RuleRebuilding.EndsUp; Becoming.LoopReturn.* ; Becoming.Regulation.lateReturn; Becoming.Optimum.AtOnce.ReturnsLess; Becoming.Sequences.Eventually; Becoming.UnrestrictedEventually; Becoming.Limit.Sequences.EventuallyFalse; Becoming.SettledFrom (docstring only); Becoming.VanishFrom; Becoming.Web.Still; Becoming.Web.stateClass; Becoming.Acceptance.Maintains; Becoming.Feedback.stopping; Becoming.PatternRelay.stopped; Becoming.RuleCapture.Locked (87 statements; the chapter's \\\"locked for good\\\" lives there and in ClosedCapture, ReadInTime, DrawnShaping, none opened); Becoming.Flow.lost and the other `lost` counts; Becoming.Web.Diminished; Becoming.BoundaryInvariant, StandpointInvariant. Of the three modules beside the package, only their rows in the table were looked at (GenerativeCore, InquirySufficiency: no candidate by name; RelationalRenewal.Consumed, ConsumingIn, Renewed, RenewingIn are P3's), no file opened. For Becoming.Law.Returns, Becoming.Web.Broken, Becoming.RuleRebuilding.Ends (abbrev), Becoming.SelectionTerm.Generations.Persists and Becoming.ReaderRebuilding.EndsAt the docstring and signature were read and the body line partly or not. About 95,000 tokens were read; I stopped there.",
+ "notes": "AI-written (Claude Fable); a reading of definitions only, no theorem judged, nothing run, nothing written.\n\n1. The chapter does not carry this pair by definition names. In 02-MAP.md I found, of all the names listed, only `Web.Unceasing` (line 151) and the word Irreversibility (lines 99, 208); 01-ROOT.md:91 names the theorem `CeasesToBe.not_comes`; 07-SIGNIFICANCE.md:261 names `Recoverable` and `NoReturnAt`. So nearly every basis here is a docstring or module account, not the chapter.\n\n2. LASTING has no single notion. It is said in at least five unjoined shapes, as far as the definitions go: staying within a supplied guard (Lasts, Kernel, Keepable, Viable, KeptFor); a history having stretches beyond every horizon (the two GoesOn); a line or group having members at arbitrarily late steps (Generations.Persists, StandsLate, AllPersist); arising at arbitrarily late steps (Web.Unceasing, UnceasingFrom); being continued across one step under a continuation (Web.Continued). I found no definition saying of one formation on a web that it lasts (active at every step, or from a step on): on the web, lasting of a formation appears only as the negation of Web.Ends or Web.Ceases. Looked in: the table by the patterns named under not_read, and Wholes.lean, Change.lean, Identity.lean, Arising.lean, Persistence.lean at the places opened.\n\n3. Web.Unceasing: its docstring says \"Arising does not cease\", so by rule N-a it is listed under LASTING, but it states that new things keep starting, not that any thing or course goes on; a web can have unceasing arising while every formation is brief. 02-MAP.md:151 says \"Arising is activity starting, not §1's generation\", and 02-MAP.md:154 says \"unceasing arising is strictly stronger than recurring renewal\"; it is not a class of a formation, so I do not read it as P3's side, though theorems join it to renewal. A later reader may prefer to keep it apart from the other lasting notions.\n\n4. CEASING is two grains that are different statements: across one step (CeasesToBe, Web.Ceases, CeasesToStand, CeasesFrom, GrammarLaws.ceasing, Web.Broken), after which the thing may be active again; and from some step on (Web.Ends, the three RegimeMargin Ends, RemovesLine). The second grain is already \"for good\" along the one run: Web.Ends says \"never active\" from some step on. So CEASING at that grain and NO RETURN are one shape there, and the difference the Lean keeps is another one: Recoverable and NoReturnAt quantify over alternative feasible courses (what could still be done), while Web.Ends, Web.Lost and the regime's Ends speak of the one run. In the single-condition regime, ending is not a definition at all: `RegimeMargin.ends_iff_below` (RegimeMargin.lean:676, 741) states it inline as ∃ n, state n = 0.\n\n5. NO RETURN proper has one definition that says it in words, NoReturnAt, with Recoverable as its complement, and Web.Lost for a dependence (\"never met again\"). For a configuration under a law I found no definition of not returning: `Branching.Returns` and `Law.Returns` state coming back (a period on the orbit), and the theorems opened state no return inline as ¬ Reach P t s. The drawn notions (Law.Drawn, Law.DrawnInto, Branching.NecessarilyDrawn, PossiblyDrawn) are listed on my reading only: they say a course enters a region never left, and no docstring calls that no return. Law.Absorbing and Becoming.Invariant are put with the carriers because the same closure is lasting when the region is a guard and no return when it is an end.\n\n6. Notions that are other pairs' as much as this one's: Web.Consumed and Web.Broken (P3, consuming); Web.Lost (P3's neighbour: Consumed with the dependence once met); Branching.KeepsPossibilities and Merges or Lossless (P2, what can still form; Merges is tied to irreversibility only by a chapter sentence marked an AI reading); AllPersist, SurvivorsPersist, RemovesLine, RemovesItsReaders (selection and P4; \"the meta-attractor's shape\"); Recoverable and NoReturnAt (P4's turn in time: 07 §3.6 and TurningInTime use them, with Turned as the feasible courses); RuleCapture.Locked, not opened, is where \"locked for good\" would be P4's.\n\n7. Table lines: the table's line for a declaration is sometimes its docstring's line and sometimes the definition's (Web.Broken is 145 in the table, its `def` at 146). I give the table's.\n\n8. A chapter sentence the definitions do not carry as one notion: the aim's \"can no longer be turned\". Recoverable is the nearest (some feasible course agreeing so far still keeps what is asked), and it takes the feasible courses and what is kept as supplied premises."
+}

@@ -1,0 +1,37 @@
+export const meta = {
+  name: 'check-the-record-of-the-pairs',
+  description: 'One reader who took no part sets the record and one paragraph of the direction page against the returns',
+  phases: [{ title: 'Check', detail: 'recount, and find sentences that say more, less or other than their sources' }],
+}
+const WT = '/Users/ren/tmp/dj/wt'
+const D = WT + '/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/the-pairs-against-what-statements-name-2026-11-23'
+phase('Check')
+const r = await agent(`You took no part in what follows. In a git worktree at ${WT} (a copy of the repository "the theory of becoming": a map of how anything forms, persists, changes and ends, its core proved in Lean 4) a session has written the record of one step and one paragraph of the direction page. Every note this session wrote in the last two days said more than its sources before a reader set it right. Your task is to be that reader: set each sentence against what it rests on, and return what must change.
+
+What the step was, in short: the direction page's aim asks that two ways of going on be placed with respect to each other; the page names several pairs that come near them. A Lean print of what every statement names was made; readers listed the Lean notions that state each side; a script found theorems naming two sides; two readers judged each of 128, alone; a third read five differences; two refuters attacked 44 agreed verdicts; one reader decided which are already told.
+
+To check:
+1. ${D}/NOTE.md, every sentence.
+2. In ${WT}/_process/DIRECTION.md, the one paragraph that begins "*The pairs set against a print of what statements name (23 November).*" (use git diff in ${WT} to see exactly what was added to that file).
+3. ${WT}/sources/15-codex-theory-conversations/2026-11-23-agree-with-your-approach.md: only its figures and its sentences about what the session did ("What he had been told", "How the session reads it"); his quoted words and their times you cannot check and need not.
+4. The paragraph added at the end of ${WT}/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/overlaps-from-the-roads-survey-2026-11-22/NOTE.md (git diff shows it).
+
+Against:
+- ${D}/FROZEN.as-first-frozen.md.txt and ${D}/FROZEN.md.txt (the plan, forecast and tests; "After" holds the corrections), FROZEN.clock.txt, FROZEN.sha256.txt.
+- ${D}/returns/: RETURN-attack.md.txt, RETURN-missing.md.txt, NOTIONS-P*.json, JUDGE-*.json and JUDGED-by-item.json, RETURN-third.md.txt, RETURN-refuter-R1.md.txt, RETURN-refuter-R2.md.txt, RETURN-told.md.txt.
+- ${D}/RESULT-49.json, standing-or-differing.json, sides.closed.json, candidates.closed.json, controls.json, packets/KEY.json, and the scripts candidates.py.txt, controls.py.txt, make_packets.py.txt.
+- The Lean, where a sentence of the note says what a theorem states: under ${WT}/experiments/integrated-correction/general-framework/generative-basis/lean/ (the package is becoming/Becoming/; RelationalRenewal.lean is under deeper/). Open the statement; you need not read proofs beyond a few lines.
+- The chapters and the direction page, where the note says what they tell: ${WT}/theories/becoming/chapters/ and ${WT}/_process/DIRECTION.md.
+
+Do:
+(a) RECOUNT every figure in the note and the paragraph from the JSON files with a short script of your own (python3, seconds; write nothing in the worktree, use a scratch path under /tmp or print to stdout): the table's every cell, 232, 128, 62, 42, 219, 43, 176, 116, twelve, 29, 25, 7, 123, 44, 79, eight, 15/22/7, the "told" counts, 20,616 and 20,444 and 10,470 and 36 and 35 as far as the files let you (say which you could not recount; the print itself, 8 MB, is at /Users/ren/theories/tmp/r7/one-model/check/statements23/statements23.json if you want it).
+(b) For every sentence that reports what a reader found: open that reader's return and check the sentence says what the return says, no more and no less, with the reader's own limits kept ("in what it read", "by its reading of the proof heads", a borderline it named). Look hardest at the section "What stands, by pair", at "The tests, answered", and at "What it shows of the map".
+(c) For the three statements the note says "stand that the sources do not tell" and for Flow.Balances.includes_of_renewed "says more than its tellings": open the Lean statement, the refuter's entry and the told-reader's entry, and say whether the note's sentence is true of all three.
+(d) Check the claims of order and time against FROZEN.clock.txt and the hashes (does FROZEN.md.txt hash to the second value recorded; was "After" written before the judges as the note says, as far as the files show).
+(e) The direction paragraph: is each clause in the note or the returns; does it say anything of Ren's words beyond quoting them; does any clause read as a claim of absence, or as the map being nearer its aim?
+(f) Anything the note leaves out that a reader of it would need in order not to be misled.
+
+House rules. This Mac is busy: run no Lean, no build, no test, no gate. Change no file in the worktree. Nothing is pushed or sent. Say what you did not check; the token figures and the times of Ren's messages you cannot check.
+
+Return plain text: first the recount (each figure: as written, as recounted); then a list "MUST" (the sentence quoted, what the source says with file and place, and a replacement sentence in plain words that is true of the source); then "LESSER" (same form, shorter); then "NOT CHECKED". Stop at about 110,000 tokens of your own reading; if you cannot finish, say which sections are unchecked.`, { label: 'checker of the record', phase: 'Check', model: 'opus' })
+return r
