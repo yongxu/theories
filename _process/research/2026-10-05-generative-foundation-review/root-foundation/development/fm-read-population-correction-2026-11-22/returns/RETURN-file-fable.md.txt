@@ -1,0 +1,294 @@
+# Return of the reader "file": Q1 and Q2 on `PopulationCorrection.lean`
+
+*AI-written (Claude Fable 5.2, one reader alone), 22 November 2026. Read only: no Lean, lake, build, gate or test was run; nothing in the repository was edited; no agent was started. Every "derived by hand" below is my arithmetic from opened statements and is not machine-checked.*
+
+**Read whole:** `experiments/market-generativity/meta-attractor/PopulationCorrection.lean` (694 lines, every statement and every proof; its sha256 `0a590213…30aed` equals the receipt's and the frozen copy in `population-verification/`); `CollectiveDestruction.lean` (271 lines, its import); `PopulationRealization.lean` (120 lines, beside it); `POPULATION-README.md`; `population-verification.json` with `check_population.py` and a sample of `population-verification/Audit.txt`; `theories/meta-attractor/COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md` ll. 115 to 213; the frozen questions; `two-ways-table-2026-11-20/NOTE.md` whole; `fm-both-outcomes-2026-11-22/NOTE.md` whole; `_process/DIRECTION.md` ll. 1 to 44.
+**Not opened:** any module of the package (Q3, Q4, Q8, Q9 are other readers'); `ResponseCapacity`, `RecursiveSelection`; `population_experiment.py`; `GenerativeCore.lean`. So this return says nothing of N1, N2's second half or N5; it gives what Q1 and Q2 hand to them.
+
+## The answers in short
+
+1. **OPENED.** There is no single statement with both regimes. There is ONE iff about one event ("at some step the reserve covers the fee", l. 504) and TWO one-way theorems side by side with complementary premises on the same expression (`shortfall : … < fee`, l. 526; `enough : fee ≤ …`, l. 555). No theorem states the either-or of the two regimes, their exclusion, or an iff for either regime. They follow in a few lines; they are not in the file.
+2. **OPENED.** Neither outcome is an ending of the course and neither is a change that goes on. Both are fixed points of the reduced state: `⟨N, fee, cap⟩` (l. 579) and `⟨0, B, 0⟩` with `B < fee` (l. 594). The constructive outcome is a standstill in these coordinates.
+3. **OPENED.** Nothing reads the capacity (l. 39 to 44). The payoff is in no theorem about the course. The "selecting" is the definition `allocated` (l. 33); "optimal" is of one step, of changed slots only, under the flag at the time of revision, with `others` free.
+4. **OPENED.** The schedule `k` is a parameter, a function of the step index only, universally quantified. It decides the outcome, not only the time, but only in a band and only before the first funding (by hand: `B₀ + r₀ < fee ≤ B₀ + triangle r₀`).
+5. **OPENED.** What decides is fixed at the start: `s.reserve + available k s.renewing s.renewing` against `fee`. No course passes from one regime to the other. The rule switches at most once (unfunded to funded) and never back.
+6. **OPENED, the instance by hand.** The destructive region is absorbing under `next` but is left by the file's own `topup` for exactly `fee − B` (l. 516 at `s = ⟨0,B,0⟩`), after which capacity returns to `cap`. Nothing in the model is lost for good against a transfer of at most `fee`.
+
+## Q1. What the file states, exactly
+
+### The definitions, word for word (OPENED)
+
+```lean
+-- l. 9
+structure State where
+  renewing : Nat
+  reserve : Nat
+  capacity : Nat
+  deriving DecidableEq, Repr
+-- l. 15
+def funded (fee : Nat) (s : State) : Bool := decide (fee ≤ s.reserve)
+-- l. 17
+def payoff (active : Bool) (others : Int) (race : Bool) : Int :=
+  6 + CollectiveDestruction.utility 2 1 (if active then 3 else 0) others race
+-- CollectiveDestruction.lean l. 9
+def utility (benefit harm charge others : Int) (race : Bool) : Int :=
+  if race then benefit - harm * (others + 1) - charge else -harm * others
+-- l. 33
+def allocated (N k : Nat) (active : Bool) (r : Nat) : Nat :=
+  if active then min N (r + k) else r - k
+-- l. 36
+def inflow (N : Nat) (active : Bool) (r : Nat) : Nat :=
+  r + if active then 3 * (N - r) else 0
+-- l. 39
+def next (N fee cap k : Nat) (s : State) : State :=
+  let active := funded fee s
+  { renewing := allocated N k active s.renewing
+    reserve := min fee (s.reserve - (if active then fee else 0) +
+      inflow N active s.renewing)
+    capacity := min cap (s.capacity + s.renewing - (N - s.renewing)) }
+-- l. 46
+def history (N fee cap : Nat) (k : Nat → Nat) (s : State) : Nat → State
+  | 0 => s
+  | t + 1 => next N fee cap (k t) (history N fee cap k s t)
+-- l. 83
+def slotAction (r i : Nat) : Bool := decide (r ≤ i)
+-- l. 103
+def triangle : Nat → Nat
+  | 0 => 0
+  | n+1 => triangle n + (n+1)
+-- l. 130
+def Doomed (fee : Nat) (s : State) : Prop := s.reserve + triangle s.renewing < fee
+-- l. 381, 385 (the ledger)
+def offCount (k : Nat → Nat) (r : Nat) : Nat → Nat
+  | 0 => r
+  | t+1 => offCount k r t - k t
+def available (k : Nat → Nat) (r : Nat) : Nat → Nat
+  | 0 => 0
+  | t+1 => available k r t + offCount k r t
+-- l. 246
+def topup (fee extra : Nat) (s : State) : State :=
+  {s with reserve := min fee (s.reserve+extra)}
+```
+
+All subtraction is on `Nat` (cut at zero). `payoff` values, by hand from l. 17 and l. 9: unfunded, race `7 − others`, not race `6 − others`; funded, race `4 − others`, not race `6 − others`.
+
+### The statements, word for word (OPENED), with what carries each proof
+
+```lean
+-- l. 24   carried by: cases on Bool, simp unfolding, omega
+theorem strict_revision_advantage (active : Bool) (others : Int) :
+    payoff active others active < payoff active others (!active)
+-- l. 85   carried by: cases, simp_all [slotAction, allocated], omega; then l. 20
+theorem revised_slot_is_optimal (N k r i : Nat) (active : Bool) (others : Int)
+    (hi : i < N)
+    (changed : slotAction r i ≠ slotAction (allocated N k active r) i) (a : Bool) :
+    payoff active others a ≤ payoff active others (slotAction (allocated N k active r) i)
+-- l. 50   carried by: simp unfolding
+theorem unfunded_step (N fee cap k : Nat) (s : State) (h : s.reserve < fee) :
+    next N fee cap k s =
+      ⟨s.renewing-k, min fee (s.reserve+s.renewing),
+        min cap (s.capacity+s.renewing-(N-s.renewing))⟩
+-- l. 57   carried by: omega, simp only, congr, omega
+theorem funded_step (N fee cap k : Nat) (s : State)
+    (hr : s.renewing ≤ N) (hf : fee ≤ N) (hb : fee ≤ s.reserve) :
+    next N fee cap k s =
+      ⟨min N (s.renewing+k), fee,
+        min cap (s.capacity+s.renewing-(N-s.renewing))⟩
+-- l. 94   carried by: induction on t, funded_step, count_history
+theorem correction_stays_funded (N fee cap : Nat) (k : Nat → Nat) (s : State)
+    (hr : s.renewing ≤ N) (hf : fee ≤ N) (hb : fee ≤ s.reserve) (t : Nat) :
+    fee ≤ (history N fee cap k s t).reserve
+-- l. 132  carried by: unfunded_step, contribution_upper_bound (l. 124), omega
+theorem doom_step (N fee cap k : Nat) (s : State) (hk : 1 ≤ k)
+    (hd : Doomed fee s) : Doomed fee (next N fee cap k s)
+-- l. 141  carried by: induction, doom_step
+theorem doom_history (N fee cap : Nat) (k : Nat → Nat) (s : State)
+    (hk : ∀ t, 1 ≤ k t) (hd : Doomed fee s) (t : Nat) :
+    Doomed fee (history N fee cap k s t)
+-- l. 205  carried by: induction, by_cases on funded, the two step lemmas, omega
+theorem funded_or_replacement_bound (N fee cap : Nat) (k : Nat → Nat) (s : State)
+    (hk : ∀ t, 1 ≤ k t) (hr : s.renewing ≤ N) (hf : fee ≤ N) (t : Nat) :
+    fee ≤ (history N fee cap k s t).reserve ∨
+      (history N fee cap k s t).renewing ≤ s.renewing-t
+-- l. 231  carried by: (→) doom_history; (←) unit_speed_activation (l. 220) at t = s.renewing
+theorem exact_unit_speed_activation_boundary (N fee cap : Nat) (s : State)
+    (hr : s.renewing ≤ N) (hf : fee ≤ N) :
+    (∃ t, fee ≤ (history N fee cap (fun _ => 1) s t).reserve) ↔
+      fee ≤ s.reserve + triangle s.renewing
+-- l. 282  carried by: doomed_replacement_bound, doom_history, extinct_unfunded_history, history_add
+theorem destructive_region_reached (N fee cap : Nat) (k : Nat → Nat) (s : State)
+    (hN : 1 ≤ N) (hk : ∀ t, 1 ≤ k t) (hd : Doomed fee s) :
+    ∃ t, ∀ u, (history N fee cap k s (t+u)).renewing = 0 ∧
+      (history N fee cap k s (t+u)).reserve < fee ∧
+      (history N fee cap k s (t+u)).capacity = 0
+-- l. 328  carried by: funded_full_population, correction_stays_funded, full_renewing_history
+theorem funded_constructive_region_reached (N fee cap : Nat) (k : Nat → Nat) (s : State)
+    (hN : 1 ≤ N) (hf : fee ≤ N) (hr : s.renewing ≤ N)
+    (hk : ∀ t, 1 ≤ k t) (hb : fee ≤ s.reserve) :
+    ∃ t, ∀ u, (history N fee cap k s (t+u)).renewing = N ∧
+      fee ≤ (history N fee cap k s (t+u)).reserve ∧
+      cap ≤ (history N fee cap k s (t+u)).capacity
+-- l. 496  carried by: actual_or_unfunded_ledger (l. 464; induction, step lemmas, omega)
+theorem funding_iff_ledger (N fee cap : Nat) (k : Nat → Nat) (s : State)
+    (hr : s.renewing ≤ N) (hf : fee ≤ N) (t : Nat) :
+    fee ≤ (history N fee cap k s t).reserve ↔ fee ≤ s.reserve+available k s.renewing t
+-- l. 504  carried by: funding_iff_ledger, contributions_bounded (l. 456), omega
+theorem exact_schedule_activation_boundary (N fee cap : Nat) (k : Nat → Nat) (s : State)
+    (hr : s.renewing ≤ N) (hf : fee ≤ N) (hk : ∀ t, 1 ≤ k t) :
+    (∃ t, fee ≤ (history N fee cap k s t).reserve) ↔
+      fee ≤ s.reserve+available k s.renewing s.renewing
+-- l. 524  carried by: the ledger at t = s.renewing, off_count_bound, then l. 282
+theorem schedule_shortfall_is_destructive (N fee cap : Nat) (k : Nat → Nat) (s : State)
+    (hN : 1 ≤ N) (hr : s.renewing ≤ N) (hf : fee ≤ N) (hk : ∀ t, 1 ≤ k t)
+    (shortfall : s.reserve+available k s.renewing s.renewing < fee) :
+    ∃ t, ∀ u, (history N fee cap k s (t+u)).renewing = 0 ∧
+      (history N fee cap k s (t+u)).reserve < fee ∧
+      (history N fee cap k s (t+u)).capacity = 0
+-- l. 594  carried by: unfunded_step, simp, omega
+theorem destructive_region_absorbing (N fee cap k B : Nat) (hb : B < fee) :
+    next N fee cap k ⟨0,B,0⟩ = ⟨0,B,0⟩
+```
+
+After l. 524, the other statements of an outcome (OPENED):
+
+```lean
+-- l. 553
+theorem schedule_sufficiency_is_constructive (N fee cap : Nat) (k : Nat → Nat) (s : State)
+    (hN : 1 ≤ N) (hr : s.renewing ≤ N) (hf : fee ≤ N) (hk : ∀ t, 1 ≤ k t)
+    (enough : fee ≤ s.reserve+available k s.renewing s.renewing) :
+    ∃ t, ∀ u, (history N fee cap k s (t+u)).renewing = N ∧
+      fee ≤ (history N fee cap k s (t+u)).reserve ∧
+      cap ≤ (history N fee cap k s (t+u)).capacity
+-- l. 576
+theorem schedule_sufficiency_reaches_full_state (N fee cap : Nat) (k : Nat → Nat) (s : State)
+    (hN : 1 ≤ N) (hr : s.renewing ≤ N) (hf : fee ≤ N) (hk : ∀ t, 1 ≤ k t)
+    (enough : fee ≤ s.reserve+available k s.renewing s.renewing) :
+    ∃ t, ∀ u, history N fee cap k s (t+u) = ⟨N,fee,cap⟩
+-- l. 600 (decide)
+theorem slow_recovery_has_real_loss :
+    (history 6 6 12 (fun _ => 1) exampleStart 4).capacity = 0
+-- l. 603 (decide for t < 4, then l. 310)
+theorem boosted_growth_preserves_floor (t : Nat) :
+    4 ≤ (history 6 6 12 (fun j => j+1) (topup 6 1 exampleStart) t).capacity
+-- l. 646 (one step, with a leak)
+theorem exact_funded_leak_tolerance (N fee cap k leak : Nat) (s : State)
+    (hfee : 0 < fee) (hb : s.reserve = fee) :
+    fee ≤ (leakingNext N fee cap k leak s).reserve ↔
+      fee + leak ≤ inflow N true s.renewing
+-- l. 653
+theorem all_renewing_leak_tolerance … (hr : s.renewing = N) :
+    fee ≤ (leakingNext N fee cap k leak s).reserve ↔ fee + leak ≤ N
+-- l. 660, 667 (decide, N = 6): one_unit_diversion_breaks_zero_margin,
+--   identical_local_ordering_different_funding
+-- l. 677: arbitrary_finite_horizon_defection is of CollectiveDestruction.payoff
+--   (the two-position stage game), not of this file's course.
+```
+
+Also bearing on the outcomes, before l. 524: `full_renewing_history` (l. 310), `extinct_unfunded_history` (l. 264), `exact_schedule_topup` (l. 516), `actual_or_unfunded_ledger` (l. 464), `faster_replacement_reduces_available` (l. 398), `unit_available_is_triangle` (l. 427), `contributions_stop` (l. 446), `history_add` (l. 257).
+
+**No bound is stated in any regime theorem.** OPENED: ll. 282, 328, 524, 553, 576 conclude `∃ t, ∀ u, …`. The witnesses are in the proof terms only: `s.renewing + z.capacity` (l. 298), `N + cap` (l. 337), each plus `s.renewing` for the schedule forms (ll. 548, 565), plus one (l. 581). Stated bounds are in the lemmas: l. 148 (`renewing ≤ s.renewing - t` while doomed), l. 161, l. 174 (`N ≤ t` gives `renewing = N` once funded), l. 446 (`available k r (r+u) = available k r r`).
+
+### Supplied and not derived (OPENED, each a definition or a numeral)
+
+- The two actions (a `Bool`), and the payoff's numbers 6, 2, 1 and the charge 3 (l. 17 to 18).
+- The reserve's law: one unit from each renewing contract in either regime, three from each other contract only while funded (`inflow`, l. 36); the fee spent only when funded; the cap of the reserve at the fee (`min fee`, l. 42).
+- The law that moves the number renewing: `allocated` (l. 33), with its direction taken from the flag and its size `k` taken from the schedule; that all `k` revisions are used.
+- The schedule `k : Nat → Nat` and `1 ≤ k t`.
+- The law of capacity (l. 44): plus one a renewing contract, minus one each other, floor zero, cap `cap`.
+- `fee ≤ N` and `s.renewing ≤ N` as premises of every result about the funded side.
+- The receipts `7`, `8`, `6`, `5` (ll. 617 to 619).
+
+### Axioms (TOLD: by `population-verification.json` and `Audit.txt`; I ran no audit)
+
+`propext, Quot.sound` for: `strict_revision_advantage`, `unfunded_step`, `funded_step`, `correction_stays_funded`, `doom_step`, `doom_history`, `funded_or_replacement_bound`, `exact_unit_speed_activation_boundary`, `destructive_region_reached`, `funding_iff_ledger`, `exact_schedule_activation_boundary`, `schedule_shortfall_is_destructive`, `destructive_region_absorbing`. `propext, Classical.choice, Quot.sound` for: `revised_slot_is_optimal`, `full_renewing_history`, `funded_constructive_region_reached`, `schedule_sufficiency_is_constructive`, `schedule_sufficiency_reaches_full_state`, `exact_schedule_topup`, `exact_unit_speed_topup`, the two leak iffs, `boosted_growth_preserves_floor`. None for the definitions and for the five closed `decide` theorems. The checker forbids `sorry`, `admit`, `native_decide`, `axiom`. OPENED: every proof in the file is induction on the step, a case split on `funded`, unfolding by `simp`, and `omega`; the only thing used from the import is the definition `utility` (and, at l. 674, `CollectiveDestruction.payoff`). `CollectiveDestruction.rank_entry` and `invariant_history` (its general certificates, ll. 244, 263) are not called.
+
+### One statement with both outcomes, or two side by side?
+
+**OPENED. Two side by side, with one iff about a first event between them.**
+
+- The iff (l. 504) has on its left "at some step the reserve covers the fee" and on its right an inequality of the start. Its two sides are "ever funded" and "never funded". It says nothing of `renewing` or `capacity`.
+- The regimes are l. 524 (premise `… < fee`) and l. 553 or l. 576 (premise `fee ≤ …`): two implications. Not found in the file: `(∃ t, ∀ u, … = ⟨N,fee,cap⟩) ↔ fee ≤ …`; the same for the destructive region; a disjunction of the two regimes; a statement that they exclude each other. (Exclusion would need `1 ≤ N` and a common later step; a few lines; not written.)
+- At each single step there is an either-or with exclusion: `actual_or_unfunded_ledger` (l. 464), funded with the ledger covering the fee, or the state equal to the ledger and short of the fee. It is of the status at step `t`, not of the regimes.
+- `funded_or_replacement_bound` (l. 205) is an either-or without exclusion (both hold at `t = 0` from a funded start). It is the bound inside `CollectiveDestruction.rank_entry`'s proof (l. 248) with the closed set "funded" and the rank `renewing`; but the rank does not fall strictly outside the closed set at `renewing = 0`, so the closed set need not be entered. That failure of descent at zero is the destructive outcome.
+
+So "both ends of one law" is true to the Lean in this sense only: one expression of the start, compared with the fee, is the premise of two theorems and the right side of one iff.
+
+### Is the constructive outcome absorbing too?
+
+**OPENED. Yes, for ever, and it is a fixed point.** `full_renewing_history` (l. 310): from `renewing = N` and `fee ≤ reserve`, for every `t` and every schedule (no `hk` premise), `renewing = N ∧ fee ≤ reserve ∧ min cap (s.capacity+t) ≤ capacity`. `schedule_sufficiency_reaches_full_state` (l. 576): the history equals `⟨N,fee,cap⟩` from some step on. The wider funded set is closed under every schedule, `k = 0` included (`correction_stays_funded`, l. 94, no `hk`). There is no one-step theorem for it named like `destructive_region_absorbing`. By hand, without `fee ≤ N` it fails: `N = 1, fee = 2`, state `⟨1,2,_⟩` gives next reserve `min 2 (0+1) = 1`.
+
+### The schedule `k`
+
+**OPENED. A parameter.** It is an argument of `history`, a function of the step index and not of the state; every general theorem is for all `k` (with `∀ t, 1 ≤ k t` where the count must move). No statement has `∃ k`, and none has a quantifier over `k` inside another. Nothing in the model chooses it.
+
+- **The outcome depends on it, not only the time.** The boundary's right side has `available k …`. General: a pointwise faster schedule leaves no more available (`faster_replacement_reduces_available`, l. 398). By `decide` for `N = fee = 6, cap = 12`, start `⟨3,0,12⟩`: `k = 1` funds at step 3 (l. 348) and comes to all renewing (l. 367); `k t = t+1` comes to `⟨0,5,0⟩` for good (ll. 350, 353).
+- **Where it does not matter.** `Doomed` (the shortfall at `k = 1`) is kept under every schedule with `1 ≤ k t` (l. 141); a funded start stays funded under every schedule (l. 94). After the first funding and inside the doomed region `k` moves only the time.
+- **By hand, not a statement of the file:** `funding_iff_ledger` at `t = 1` gives funded at step 1 exactly where `fee ≤ B₀ + r₀`, whatever `k`; with ll. 398, 427, 432 every schedule has `r₀ ≤ available k r₀ r₀ ≤ triangle r₀`. So `k` decides exactly in the band `B₀ + r₀ < fee ≤ B₀ + triangle r₀`. Also by hand: "not `Doomed`" is "some schedule with `1 ≤ k t` funds" (l. 220 with `k = 1`; l. 141). The file states neither.
+- **`1 ≤ k t` is what makes the doom.** By hand from l. 50: with `k = 0` and one contract renewing the reserve rises by `renewing` each step and is funded. The premise that at least one slot is revised every step, and that every revision is used, is supplied.
+
+Read as an adversary only at l. 141 ("under every schedule"). In the boundary `k` is on both sides; that is a parameter of the law. A careful person could call the `∀ k` of l. 141 adversarial; nothing in the file plays against it.
+
+### At the boundary itself
+
+**OPENED.** Equality `fee = s.reserve + available k s.renewing s.renewing` is on the constructive side (`enough` is `≤`, l. 555). There is no third outcome and no state that stays on the boundary. The file's own example is the equality case: `⟨3,0,12⟩`, `k = 1`, `0 + (3+2+1) = 6 = fee`. TOLD (by `population-experiment.json`, which I checked by hand for the first four steps): its course is `⟨3,0,12⟩, ⟨2,3,12⟩, ⟨1,5,10⟩, ⟨0,6,6⟩, ⟨1,6,0⟩, …, ⟨6,6,12⟩`. So at the boundary the constructive course passes through none renewing, and capacity is nothing at step 4 (`slow_recovery_has_real_loss`, l. 600, OPENED) before it returns. "None renewing" and "capacity at nothing" are therefore not what tells the two regimes apart along the way; only "for good" does.
+
+### One `N` by `decide`, or general
+
+**OPENED.** For `N = fee = 6, cap = 12` only: `slow_bootstraps` (348), `growth_closes_bootstrap` (350), `growth_eventually_destructive` (353), `speed_one_eventually_constructive` (367), `slow_recovery_has_real_loss` (600), `boosted_growth_preserves_floor` (603), `one_unit_diversion_breaks_zero_margin` (659), `identical_local_ordering_different_funding` (667). Every other theorem is for all `N, fee, cap, k, s` under its premises; `unprotected_collective_loss` (l. 28) for all `N ≥ 3`. The payoff's and the inflow's numbers are fixed numerals throughout.
+
+### Is the payoff in any theorem about the course?
+
+**OPENED. No.** `payoff` occurs at ll. 17, 21, 25, 29, 88 only (grep). `next` and `history` do not mention it. The one bridge is `revised_slot_is_optimal` (l. 85), a statement about `allocated` at one step. Exactly what it says and does not:
+
+- Of a slot whose action `allocated` changed, the new action is at least as good as either action in the stage payoff. Nothing of slots left unchanged (the README's table: "inherited contracts can remain currently suboptimal").
+- `others : Int` is free. No statement ties it to `N − r` or to anything in `State`. The ordering is strict dominance in the stage (the gap does not depend on `others`).
+- The flag in the payoff is the flag passed to `allocated`: in `next` that is `funded fee s`, the state at revision. By the header (ll. 5 to 6) the revised contract governs the next generation. Derived by hand on the file's example: at step 2 (`⟨1,5,10⟩`, unfunded) the last renewing slot is revised to racing; at step 3 the state is `⟨0,6,6⟩`, funded, where racing is strictly worse by 2. So the slot the theorem calls optimal operates under the other flag at the one switch. The header says "No repeated-game optimality claim is made".
+- No statement has `payoff` together with `inflow`, `privateReceipts`, `reserve` or `capacity`. The charge 3 in the payoff and the 3 in `inflow` are two numerals. Capacity is not in the payoff: exhausting it costs no slot anything.
+
+So the selecting is supplied (the definition `allocated` and its full use), and "optimal" is of one step.
+
+## Q2. The quantity that decides
+
+**OPENED.** The start's `s.reserve + available k s.renewing s.renewing`, compared with `fee`; at `k = 1` it is `s.reserve + triangle s.renewing` (l. 427). `available` is "a counterfactual ledger, not an additional physical process" (the file's comment, l. 379): what the renewing contracts would pay in if correction never acted, a sum that stops growing after `s.renewing` steps (l. 446).
+
+**Is it a potential that never rises along the unfunded course?** OPENED for what is stated, by hand for the rest.
+
+- Stated: the set `reserve + triangle renewing < fee` is kept by every step with `1 ≤ k` (l. 132); the set `fee ≤ reserve + triangle renewing` is kept by every step at `k = 1` (l. 182). The arithmetic is `r + triangle (r-k) ≤ triangle r` (l. 124), with equality at `k = 1` (l. 107); the ledger alone is conserved at `k = 1` (`unit_ledger_conservation`, l. 418).
+- By hand from l. 50 and l. 124: on an unfunded step with `1 ≤ k`, `reserve + triangle renewing` does not rise; it is unchanged at `k = 1` unless the cap cuts. Not found in the file: that inequality stated of `next`.
+- For a general schedule the quantity for the rest of the course would be `reserve + available (shifted k) renewing renewing`. Not found in the file: any statement that this is kept along the unfunded course. The file avoids it: it evaluates the ledger from the start at the fixed step `s.renewing` (ll. 510 to 514, 530 to 535).
+- On the funded course it is not a potential: the reserve is `fee` and `renewing` rises, so it rises.
+
+**Is it the course's whole memory?** OPENED: no. The state is three numbers and the course from a step on depends on them and on the rest of the schedule (`history_add`, l. 257). The quantity decides one bit (which regime) and, at `k = 1`, that bit is a function of `reserve + triangle renewing` alone. It does not hold the capacity, and the lowest capacity on the way differs between courses with the same regime (ll. 600, 603: nothing, or at least four).
+
+**What runs down.** OPENED. On the unfunded course the number renewing, by `k` a step (l. 52), and with it what can still be paid in. Capacity runs down while fewer than half renew and rises while more than half do (l. 44). The reserve does not run down: unfunded, it rises by `renewing` (`min fee (s.reserve+s.renewing)`, l. 52) and at none renewing stands still (l. 267); funded, it is `fee` (l. 60). So the level that is read is one that only rises to its cap, and the amounts that fall are a count and a capacity that nothing needs.
+
+**Who gives to whom.** OPENED. Each renewing contract gives one to the reserve at every step and one to capacity; each other contract takes one from capacity and, while funded, is charged three into the reserve. The reserve pays `fee` while funded, to no one in the model (`expenditure`, l. 620), and what exceeds the cap leaves (`released`, l. 621; `treasury_accounted`, l. 632). Nothing is given back to a renewing contract by any statement: its payoff is `6 − others` with `others` free.
+
+**What reads what.** OPENED, from `next` (ll. 39 to 44).
+
+- `funded` reads the reserve against the fee, one `Bool`.
+- `allocated` reads that `Bool` for its direction, `k` for its size, and the count `renewing` and `N` only to add, subtract and cut. It reads no share (`renewing` over `N` occurs nowhere) and not the capacity.
+- `inflow` reads the `Bool`, the count and `N`.
+- The capacity's law reads the capacity, the count, `N` and `cap`.
+- **Nothing reads the capacity.** It occurs only in its own field and in conclusions (grep: ll. 44, 53, 61 and conclusions). `PopulationRealization` does not read it either: its step is gated by `parts` (l. 34), and `destructive_economy_with_actual_successors` (l. 106) proves successors enabled at every step with capacity at nothing. The destructive course goes on; it does not end.
+
+**Does the reserve ever fall once it covers the fee?** OPENED: under `renewing ≤ N` and `fee ≤ N`, never below the fee (l. 94); a start above the fee is cut to the fee at the first step (l. 60). The rule therefore switches at most once and one way. With a leak it can (l. 646); with `fee > N` no theorem speaks (by hand it falls).
+
+**Is the rule set from a share, a count or a level?** OPENED: from a level, as one bit; the level is fed by a count (one a renewing contract a step). The table's "rule set again from a share" is whole here only if "the reserve that the counts feed" is read as a share; I do not read it so.
+
+**Can it be turned?** OPENED, the instance by hand. `exact_schedule_topup` (l. 516) at `s = ⟨0,B,0⟩`, where `available k 0 0 = 0` by l. 386: correction is funded at some step exactly where `fee − B ≤ extra`; then l. 576 gives `⟨N,fee,cap⟩`. So the absorbing region is left by a transfer of at most `fee`, at any step, and capacity comes back whole. "For good" is under `next` alone. The theory page says the same of capacity (l. 147: "a depleted v can subsequently recover", "not indispensable material support").
+
+## Where this reading could be disputed
+
+- **"Two statements, not one."** One could say the iff of l. 504 with `correction_stays_funded` is the one law, the regimes being corollaries. As derivations, yes; as statements, the iff is of an event and the regimes are two implications.
+- **"`k` is a parameter."** l. 141 can be read as "against every schedule". No statement plays a schedule against anything.
+- **"The selecting is supplied."** One could say `revised_slot_is_optimal` makes `allocated` the outcome of selecting. It certifies the direction of the changed slots at one step under the flag of that step; it derives neither the number changed, nor its full use, nor `others`.
+- **"A level, not a share."** The count feeds the level one for one, so with `N` fixed a count is a share times `N`. But the rule reads the accumulated reserve, not the present count.
+- **"Standstill."** The file's own page (l. 169) says the full carrier history has changing generation identities and need not converge. In `PopulationRealization` the generation index and `consumed` rise at both outcomes alike (l. 46); that is a counter, the same in the destructive course.
+
+## What Q1 and Q2 hand to N1 to N5
+
+- **N3, within the file: yes.** What looks like a rule set again is the definition `allocated` with the `Bool` of `funded`; what looks like a level running down is `1 ≤ k t` with full use of revisions acting on a count, and the capacity's law acting on a number nothing reads; what looks like selecting is one stage comparison with `others` free.
+- **N2, its first half: yes.** The two outcomes are two starts of one quantity compared with a threshold. No course passes between the regimes; the only passage is from unfunded to funded, once. Whether the package has that comparison in general I did not open.
+- **Dictionary or two sides with no theorem between?** Inside the file there is a theorem between the sides (l. 504) and two implications; that is more than two sides apart and less than one either-or. Against the package I opened nothing, so I report neither.
+- **Not found in what was read** (the file whole, its import, `PopulationRealization`, the README, the receipt, the theory page ll. 115 to 213): units that multiply or leave offspring (slots are fixed at `N`); anything that needs the capacity; a rule read from a share; a way in which forms change and more can go on after (both outcomes are fixed points of the three numbers); a bound in the statement of either regime; a statement with both regimes.

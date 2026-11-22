@@ -1,0 +1,249 @@
+# Reader "lock" (Q3, Q9): `PopulationCorrection` against the lock, the turn in time, `RegimeMargin` and the law of a list
+
+*AI-written (Claude Opus, a reader working alone for board row FM), 22 November 2026. This was a read only. I edited nothing in the repository, and I wrote or ran no Lean, build, gate or tests. In this report, "argued" means an argument on paper from statements I opened. It is not a Lean statement and nothing has checked it.*
+
+**What was read.**
+- `experiments/market-generativity/meta-attractor/PopulationCorrection.lean`, ll. 1–616. I read all definitions and the Q1 statements, and the proofs where they show what is used. I did not read ll. 617–694 (receipts, leak, drained, finite-horizon defection).
+- `CollectiveDestruction.utility`, l. 9.
+- In the package:
+  - `TurningInTime.lean`: ll. 1–230 (module telling), 338–380 (`pair`, `asItWas`, `net`, `AloneOutside`) and 1277–1970 (the lock section whole: `locked_closed`, `windowAlone`, `locked_ends_with_net_regime`, `locked_ends_rising`, `count_rises`, `windowAfterShare`, `locked_turns_in_time_share_iff`, `share_corrected_stays`, `share_corrected_on_course`). Also 1972–2402 (§7 whole: `turned`, `Turned`, `MeetsNeed`, `recoverable_iff_above`, `noReturnAt_iff_first_below`, `noReturnAt_of_below`, `course_turned`, `noReturn_exists`, `turns_in_time_iff_before`).
+  - `RuleCapture.lean`: `Raises` l. 145, `ReadsShare` l. 150, `Locked` l. 160, `turn_locked` l. 169.
+  - `Pace.lean`: `turn` l. 101, `step` l. 107.
+  - `ClosedCapture.lean`: ll. 268–330 (`Accrues`, `loss_grows`, `turned_by_loss`, `lock_outlives_loss`).
+  - `RegimeMargin.lean`: ll. 1–100 (telling), 245–280 (`step`, `FromNothing`, `Short`, `Meets`, `Keeps`, `AtMost`), 700–760 (`ends_below`, `stays_ended`, `ends_beyond_giving`, `holds`, `ends_iff_below`), 855–917 (`orbit_ge`, `not_before`, `step_falls_by`, `falls_or_bound`, `falls_within`) and 1490–1560 (`leading`, `leading_exact`).
+  - `ReadOffInTime.lean` ll. 580–640.
+  - `PredicateIteration.lean`, all of it.
+- Chapter 2: §9's `r-closed-capture` paragraph and §11 down to the witness `Three`.
+- Notes: the two-ways table's note, section 1, and the both-outcomes note.
+
+**What I did not open:** `Optimum.kept_iff_within`, `Lasting.orbit_reaches_iff_variant`, `Lasting.closed_orbit`, `Stock.repeat_covered_iff`, `RegimeMargin.Adjusted.*` beyond the telling, and `turns_in_time_iff` / `unending_iff_above` beyond the module telling. Their callers' statements, which I opened, give their premises.
+
+**Does this repeat earlier work?** No step here repeats the DJ session's tries that are listed in the questions. The table note's section 1 already said that nothing reads capacity and that the reserve does not fall once it covers the fee. I re-derived both from the Lean below (OPENED) and did not take them from the note.
+
+---
+
+## 0. The file's step, as opened
+
+OPENED, `PopulationCorrection.lean` ll. 9–48:
+
+```
+15 def funded (fee : Nat) (s : State) : Bool := decide (fee ≤ s.reserve)
+33 def allocated (N k : Nat) (active : Bool) (r : Nat) : Nat :=
+34   if active then min N (r + k) else r - k
+36 def inflow (N : Nat) (active : Bool) (r : Nat) : Nat :=
+37   r + if active then 3 * (N - r) else 0
+39 def next (N fee cap k : Nat) (s : State) : State :=
+40   let active := funded fee s
+41   { renewing := allocated N k active s.renewing
+42     reserve := min fee (s.reserve - (if active then fee else 0) +
+43       inflow N active s.renewing)
+44     capacity := min cap (s.capacity + s.renewing - (N - s.renewing)) }
+```
+
+Six things follow from this.
+- **The schedule.** `k t` is the number of slots that revise at step `t` (`history`, l. 48).
+- **The rule.** `funded` is not stored. It is recomputed at every step from the reserve.
+- **The reserve rises while correction is unfunded.** Unfunded (l. 52): `⟨s.renewing-k, min fee (s.reserve+s.renewing), …⟩`. Each renewing slot pays one into the reserve. So under no correction the reserve rises by the number renewing, while that number falls by `k`.
+- **Funded stays funded.** Funded (l. 60), under `hr : s.renewing ≤ N`, `hf : fee ≤ N` and `hb : fee ≤ s.reserve`, the reserve becomes exactly `fee`. This is `correction_stays_funded`, l. 94.
+- **Nothing reads capacity.** Capacity appears only on the right of its own update (l. 44). No other field and no `funded` reads it.
+- **No need, and a total step.** Nothing in the file cuts the course when a level falls below anything.
+
+The boundary is `exact_schedule_activation_boundary` (OPENED, ll. 504–507):
+
+```
+(hr : s.renewing ≤ N) (hf : fee ≤ N) (hk : ∀ t, 1 ≤ k t) :
+(∃ t, fee ≤ (history N fee cap k s t).reserve) ↔ fee ≤ s.reserve+available k s.renewing s.renewing
+```
+
+Here `available k r r` is the sum of the counterfactual renewing counts `offCount k r 0 … offCount k r (r-1)` (ll. 381–387). The proof uses three things:
+- `funding_iff_ledger` (l. 496): at each `t`, funded iff `fee ≤ s.reserve + available k s.renewing t`. It rests on `actual_or_unfunded_ledger`, l. 464, which says the unfunded reserve is exactly `s.reserve + available … t`.
+- `contributions_bounded` (l. 456): `available k r t ≤ available k r r`.
+- `contributions_stop` (l. 446): contributions stop after `r` steps, because `off_count_bound` (l. 407) gives `offCount k r t ≤ r - t`.
+
+**One statement with both outcomes?** OPENED. There is no single statement. `exact_schedule_activation_boundary` is one iff about reaching funding. The two regions are two further theorems under the same condition and its negation, side by side:
+- `schedule_shortfall_is_destructive`, l. 524, with premise `shortfall : … < fee`;
+- `schedule_sufficiency_is_constructive`, l. 553, with premise `enough : fee ≤ …`.
+
+---
+
+## Q3. Against the lock and the turn in time
+
+### Q3.1 Field-by-field map
+
+OPENED on both sides. "—" means I found no counterpart.
+
+| file | lock (`TurningInTime` §6 with `RuleCapture`) | turn in time / `RegimeMargin` |
+|---|---|---|
+| `renewing` r | The share `A` (way's first part, stepped by `fA`). The favoured share is the racing count `N - r`, or `r` with the order reversed. | Part of the way `W`. |
+| `reserve` B | — Neither share nor rule can hold it (§Q3.2(a)). | Nearest is the level `x` that the window reads (marked levels `fee ≤ x`). But the file's unfunded update `min fee (B + r)` adds an amount that depends on the way, so it is not `RegimeMargin.step giving (use w) x = (x - use w) + giving (x - use w)` (`RegimeMargin` l. 249), where `giving` reads the level alone. |
+| `capacity` v | The loss that nothing reads (`ClosedCapture`'s beyond `B`, `fB` any; `locked_closed` l. 1291: "No `Accrues` is used: the step on what lies beyond the share is any `fB`"). | On ways with `2r ≤ N` and `v ≤ cap` its update `min cap ((v + r) - (N - r))` equals `RegimeMargin.step (fun _ => 0) (N - 2r) v`, i.e. use `N - 2r` and giving nothing (argued: Nat arithmetic on l. 44). On ways with `2r > N` it rises by `2r - N`, which no regime step with a level-only giving produces. |
+| `fee` | — | The threshold of the marked levels (`marked := fun x => fee ≤ x`). After one step the reserve is at most `fee` (`post_step_bounds` l. 570), so the window is `[fee, fee + 1)` from then on. |
+| `funded` | The rule `R := Bool`, with `favours := (· = false)` on the destructive reading. But it is read off the reserve and not off the share (§Q3.2(a)). | The kept kind (once marked, stays marked: `correction_stays_funded`). |
+| `allocated` | `fA`, the share's step under the rule. Supplied. | `after` / `alone` on the way. `AloneOutside marked alone after` holds with `alone (r, t) = (r - k t, t + 1)` (argued from l. 33). |
+| `inflow` | — `ReadsShare` reads the share, not a flow from it. | — `giving` reads the level, not the way. |
+| schedule `k : Nat → Nat` | — `Pace`'s `reads : Nat → Bool` says when the rule is read. `k` is how many slots revise, which is a different thing. A time-varying `k` would have to enter `fA` through the step count. | — `RegimeMargin`'s draw `H` is standing (constant). |
+| `cap` | — | `hi` in `Keeps` for capacity. |
+| `N` (slots) | — | — Not the window bound `N` of `windowAfterShare`. |
+| (nothing) | — | `need`, `0 < need` (`needs`) and the net (`net`, l. 358): the file's step is total, and no level is needed for it to go on. |
+
+### Q3.2 Each package law, premise by premise
+
+**(a) `locked_turns_in_time_share_iff` (l. 1876).** OPENED.
+
+*What it states.* Take a `Locked` way `w` at level `x < H₁ + y₁`, with `x ≤ hi`. The net `net need (windowAfterShare …) (fun w x => RegimeMargin.step giving (use w) x)` never ends from `(w, x)` exactly where there is a step `T` of the course as it was with all of:
+- the need met at every `j < T`, with no level in `[N, K)` before `T`;
+- the need met at `T`, and the level at `T` in `[N, K)`;
+- `H₂ + y₂ ≤` the level at `T + 1`.
+
+*Premises, and what in the file would discharge each:*
+- `raises : Raises P favours fA` (`∀ x g, favours g → P.le x (f x g)`, RuleCapture l. 145). Take the share to be `r` alone, ordered by `≥`, and the favoured rule to be unfunded. Then `allocated N k false r = r - k ≤ r` discharges it. But the share cannot then carry the reserve. If the share is `(r, B)`, the unfunded step sends `B` to `min fee (B + r)`, which is below `B` wherever `B > fee` (l. 42). Then `Raises`, which quantifies over every share, fails for any order in which a higher reserve counts as a higher share. Restricting to a subtype `B ≤ fee` was not tried.
+- `monotone : ReadsShare P M hA` (`∀ x y g g', P.le x y → M.le (h x g) (h y g')`, l. 150). **Nothing discharges it.** The file's rule is read off the reserve (l. 15), and the reserve is accumulated history. There are three ways to place the reserve, and each fails:
+  - In the share: under the unfunded rule the reserve rises (l. 52), and a higher reserve reads the rule toward funded. The reading then moves against the favoured rule, which is the opposite of what `ReadsShare` with `upper` keeps.
+  - In the rule `R`: `ReadsShare` asks the reading to be monotone "whatever rules the two readings meet", so it cannot depend on a reserve carried in the old rule.
+  - Ordered away (an order on `r` only): two shares equal in `r` and different in `B` read different rules. That forces `M` to equate `true` and `false`, and then `upper` fails.
+
+  This is argued from the definitions. I did not try every preorder, and a reader could dispute it by giving an encoding of the reserve that I did not think of.
+- `upper`. Holds trivially for any `M` with `false` and `true` incomparable. Not needed once `monotone` has failed.
+- `sets`, `lowRule`, `lowStays` (window sets a `Low` share and a `kept` rule; the rule read off a `Low` share is `kept`; a `kept` rule keeps a `Low` share `Low`).
+  - Nearest in the file: once funded, the reserve stays at `fee` (`funded_step` l. 57, under `hr`, `hf`, `hb`), and `renewing` rises to `N` (`funded_replacement_bound` l. 161).
+  - With `Low := fee ≤ B`, `lowStays` is the shape of `funded_step`'s reserve conjunct. It is discharged by the supplied charges (`1` and `3`, l. 37) with `hf : fee ≤ N`: `fee ≤ s.reserve - fee + s.renewing + 3*(N - s.renewing)` (l. 62).
+  - `sets` has no counterpart. Funding does not *set* the share. It changes the direction in which `allocated` moves it.
+- `uses` (kept kind uses `H₂`), `nothing`, `short`, `meets`, `keeps` (regime giving at `H₂`), `needs`, `within`, `short₁`, `draws`, `below`, `high`.
+  - **Nothing in the file discharges `uses`, `meets`, `needs` or `within`.** The level that the window reads would be the reserve, and its funded update `min fee (B - fee + r + 3(N-r))` depends on the way, so it is not a regime step.
+  - On capacity instead: `nothing` and `keeps` hold for giving `0`. `short` holds trivially for any `y` when `H > 0`. `meets` fails for `H > 0` on any band where `y + H ≤ hi`. `needs` has nothing.
+
+*Verdict.* Not the same law in other names, and not a case. The same shape with roles turned (§Q3.3).
+
+**(b) `locked_ends_rising` (l. 1499).** OPENED.
+
+*What it states:* "`∃ n t, n ≤ hi + 1 ∧ «迭» (net need after (fun w x => RegimeMargin.step giving (use w) x)) n (w, x) t ∧ (∀ v, ¬ net … t v) ∧ t.1 = Law.orbit (windowAlone fA hA reads) w n ∧ Locked …`".
+
+*The best pairing:* level := capacity, `need := 1` (supplied by me, not the file), giving `0`, use `N - 2r`, no marks (`marked := fun _ => False`, so `outside` and `un` hold, since the way's step never reads capacity).
+- `nothing`, `keeps` (`Keeps 0 0 hi`: the step `x ↦ x` stays within `hi`) and `high` (`v ≤ cap =: hi`) are discharged.
+- `raises`, `monotone`, `upper` and `locked` are not (as in (a)).
+- `more` (`∀ v …, use v < use (windowAlone fA hA reads v)`) fails at `r = 0`. There `r - k = 0`, so the use stays at `N` and does not rise. `more` is asked at every way not below the start, and the `r = 0` ways are among them.
+
+Even where it applies, the regime form holds only on ways with `2r ≤ N`. So the pair's step (defined at every way) would agree with the file's only along the part of the orbit where `2r ≤ N`. That agreement is a lemma not stated anywhere I read.
+
+The file proves its ending by its own arithmetic: `destructive_region_reached` l. 282, witness `t := s.renewing + z.capacity` (l. 298), through `extinct_unfunded_history` l. 264.
+
+*Verdict.* Same shape (a course that ends within a bound), not a case.
+
+**(c) `recoverable_iff_above` (l. 2146).** OPENED.
+
+*What it states:* "`Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N ↔ H + y ≤ X N`". The premises are:
+- `fall : ∀ t, X (t + 1) ≤ X t` and `top : X 0 ≤ hi`;
+- `nothing`, `short`, `meets`, `keeps` at `H`, `y`, `hi`;
+- `needs`, `within`.
+
+The feasible courses are `X` turned to the standing use `H` at some step (`turned`, l. 1999).
+
+*In the file, the quantity that decides does not fall.* Along the unfunded course, `actual_or_unfunded_ledger` (l. 464, right disjunct) gives `reserve_t = s.reserve + available k s.renewing t`. So the reserve plus what the renewing can still pay is the same at every step before funding, `s.reserve + available k r r`. That potential is the only candidate for `X`, and it is constant (argued). `fall` holds trivially, but:
+- No family of feasible courses in the file plays the part of `Turned`. The file's only alternatives are `topup` (l. 246), `leakingNext` (l. 641) and `drainedNext` (l. 664).
+- `RegimeMargin`'s premises (`meets`, `needs`, `within`) have nothing to discharge them.
+
+*What the file's own statement gives instead.* Its own statement shows that the outcome has no point of no return in time.
+
+At the absorbing state `⟨0, B, 0⟩` with `B < fee` (`destructive_region_absorbing` l. 594), `exact_schedule_topup` (OPENED, ll. 516–519) gives `(∃ t, fee ≤ (history … (topup fee extra s) t).reserve) ↔ fee-(s.reserve+available k s.renewing s.renewing) ≤ extra`. With `s.renewing = 0` this reads `fee - B ≤ extra`, because `available k 0 0 = 0` by l. 386. `schedule_sufficiency_is_constructive` (l. 553) then takes that start to all renewing with capacity at `cap`.
+
+So the "for good" of the destructive region is absorbing under the file's step alone. A top-up of `fee - B` leaves it at whatever step it comes, and lost capacity comes back. Before `r` reaches 0 the needed top-up is the same constant `fee - (s.reserve + available k r r)` at every step (argued from the ledger and `history_add` l. 257; I did not check the shift of `offCount` in Lean).
+
+In the package's law the turn is possible only while a falling level is at or above `H + y`. In the file nothing that decides falls, and what falls (capacity) is read by nothing.
+
+*Verdict.* Not a case. The role is turned in time: the package's window to turn closes, and the file's does not.
+
+**(d) The two callers of `noReturnAt_of_past`** (`noReturnAt_of_below` l. 2207, call at l. 2213; `noReturn_exists` l. 2311, call at l. 2325). OPENED.
+
+Both need recoverability decided at each step and failing at some step. They get both through `recoverable_iff_above` (via `recoverable_decided`) and `above_of_recoverable` / `asItWas_falls`. So neither can be fed from the file without (c).
+
+`noReturnAt_of_past` itself (`ReadOffInTime` l. 632) needs only "decided" and "past", so any choice of feasible courses for the file meets it trivially:
+- **Feasible = the file's own course alone.** Recoverability does not depend on the step. The point of no return is step 0 for a short start, and there is none otherwise.
+- **Feasible = top-ups bounded by some `E`.** Again step 0 or none, because the needed top-up is constant.
+
+Argued, not Lean.
+
+*Verdict.* Nothing in the file makes either caller's statement apply. The generic lemma applies with a point at 0, which tells nothing about time.
+
+**(e) Chapter 2 §9 and §11 as told** (TOLD, then checked against the Lean above).
+- *§9 (`r-closed-capture`):* "where every level of the loop reads only the share, a loss it does not read leaves it locked however large". The file has the loss that nothing reads (capacity), but its loop does not read only the share: it reads the reserve.
+- *§9:* "a reading favouring at no loss above a bound unlocks the course" (`ClosedCapture.turned_by_loss`, OPENED l. 291). This is the nearest turned law; see §Q3.3.
+- *§11:* "the line never ends exactly where there is such a step `T` and the level of the course as it was at `T + 1` is at or above `H₂ + y₂`". The file has no line that ends (its step is total), no need, and no kept kind with a standing use.
+
+### Q3.3 What exactly is turned, and whether a turned law is stated
+
+OPENED on both sides.
+
+**1. Feedback on the reading.**
+- *Lock:* `Raises` with `ReadsShare` and `upper` (`turn_locked`, RuleCapture l. 169). Under the favoured rule the share rises, and the rule read off a higher share stays favouring. The feedback on the rule is positive.
+- *File, unfunded:* the favoured (racing) count rises under `allocated` (supplied). But the rule is read off the reserve, which the *unfavoured* (renewing) fill at one each (l. 37). Under the favoured rule the reading moves *toward* turning, and the feedback on the rule is negative. Whether the turn comes depends on whether the favoured rule drains the unfavoured before they have paid `fee`. That is the ledger `s.reserve + available k r r` against `fee`.
+- *Where a lock appears in the file:* only at the end (`r = 0`), where the inflow stops (`min fee (B + 0) = B`) and `⟨0,B,0⟩` is a fixed point (l. 594). It is a fixed point, not a moving lock.
+
+**2. Which side holds itself.**
+- *Lock:* the favouring rule's region is closed (`locked_closed` l. 1291) while the unread level falls.
+- *File:* the *correcting* rule's region is closed (`correction_stays_funded` l. 94), and under it the unread level rises to `cap` and stands. `schedule_sufficiency_reaches_full_state` l. 576: `history … (t+u) = ⟨N,fee,cap⟩` for all `u`.
+
+The constructive outcome is a fixed state, i.e. a standstill. Note `locked_closed` allows any `fB`, so a closed region with an unread level that rises is covered *in shape* by `locked_closed`. It is not covered as a case, because the file's funded rule is not read off a share (Q3.2(a)).
+
+**3. What triggers the turn.**
+- *Lock (window):* a falling level enters `[N, K)`, and the turn in time needs the level still at or above `H₂ + y₂` one step later.
+- *File:* a rising level (the reserve) reaches `fee`, a reachability `∃ t`. Once reached it stays (l. 94), so `∃ t` is "from some step on, always".
+
+**4. Who pays whom.**
+- *Lock:* the favoured are raised by the selection (`Raises`), and the level under the lock pays the use `H₁` (`draws`).
+- *File:* the renewing pay `1` each into the reserve at every step. Once funded, the reserve pays `fee` and the racing are charged `3` each (l. 37). The renewing are not paid by anything modelled; their payoff is `payoff`, l. 17, which no field reads.
+
+**Is a turned law stated in the package?** The nearest is `ClosedCapture.turned_by_loss` (OPENED, ll. 291–295). It states: where `turns : ∀ p g, N ≤ p.2 → ¬ favours (h p g)` and `accrues : Accrues fB` (`∀ p g, p.2 + 1 ≤ fB p g`, l. 273), the rule in force at `r + 1`, after a reading step `r` with `N ≤ b + r`, does not favour.
+
+The map: the accumulator `p.2` := reserve, `N` := `fee`, and `h` reads the accumulator. This is an accumulating quantity crossing a bound and turning the rule, the file's mechanism.
+
+`Accrues` fails in the file exactly where its content lies. `min fee (B + r) = B` at `r = 0`, and the inflow is bounded by `available k r r`, which the unfavoured rule itself shrinks (`faster_replacement_reduces_available` l. 398). There is also a one-step lag: `Pace.turn` reads the old configuration (`Pace` l. 102), while the file's `funded` acts at the step it reads.
+
+So the package has the turn by an accumulation that never stops. A turned law in which the accumulation is bounded by what the drained side can still pay, with the exact ledger boundary, was not found in what was read.
+
+---
+
+## Q9. A case with the statement unchanged, or beside?
+
+**Law of a list: `iter_iff_all` (l. 153), `iter_within_length` (l. 255).** OPENED.
+
+*What `iter_iff_all` states:* "under `mono : MonotoneStep Φ`, `start : ∀ y, Φ V₀ y → V₀ y` and `within : ∀ x, V₀ x → x ∈ all`: `iter Φ V₀ all.length y ↔ ∀ n, iter Φ V₀ n y`".
+
+*The file's boundary has a similar form.* `exact_schedule_activation_boundary`'s proof turns `∃ t` into "at `t = s.renewing`" (l. 514: `⟨s.renewing, …⟩`). That is an unbounded quantifier over steps reduced to one step at a count.
+
+*The mechanisms differ.*
+- The file's bound is the falling count `r`: contributions stop at `r` (`contributions_stop` l. 446, by `off_count_bound` l. 407).
+- `iter_iff_all`'s bound is the length of a list that covers the start, which is a pigeonhole on listed states.
+- `within` fails for the file's states as typed (`State` is three `Nat`s) and, more decisively, for a time-varying schedule. `history` depends on `k t`, so a configuration of the course must carry `t`, and `V₀` is then infinite.
+- With a constant `k`, and states bounded after the first step (`count_bound` l. 68; `post_step_bounds` l. 570: `reserve ≤ fee`, `capacity ≤ cap`), a list of the `(N+1)(fee+1)(cap+1)` bounded states would exist. Then `iter_iff_all` with `Φ X s := ¬ funded fee s ∧ X (next … s)` would give "never funded iff unfunded for that many steps". That bound is far weaker than `r`, and it says nothing of the right side `fee ≤ s.reserve + available k r r`. Argued, not Lean.
+- `iter_within_length` adds `CommutesWithImplication`, which has nothing in the file to meet it.
+
+*Verdict.* It stands beside the law of a list and is not a case with the statement unchanged.
+
+**`RegimeMargin`'s point of no return.** OPENED.
+
+`ends_iff_below` (l. 741) states: "`(∃ n, (Law.run (step g H) x).state n = 0) ↔ x < H + y`", for one level under a standing draw `H` and a giving `g` read off the level, under `pos`, `short`, `nothing`, `meets`, `keeps`, `high`.
+- The file's decisive pair (reserve rising by `r`, `r` falling by `k t`) is two quantities with a time-varying draw. That is not one `Law.run (step g H)`.
+- On the falling count alone, at a constant schedule `k t = c`, the unfunded `renewing` is `RegimeMargin.step (fun _ => 0) c r = r - c`. So `offCount (fun _ => c) r t` equals `(Law.run (step (fun _ => 0) c) r).state t` (argued by unfolding l. 383 and l. 249, not checked). `ends_beyond_giving` (l. 721) then gives "gone within `r` steps".
+
+  This is a dictionary for one piece (the file's `off_count_bound` at constant `k`), and with giving `0` the point of no return `H + y` is vacuous: every positive level ends.
+
+`falls_or_bound` (l. 890) states: "`(∃ k, k ≤ n ∧ state k < b) ∨ (state n + (H - Y) * n ≤ x ∧ b ≤ state n)`" under `AtMost g Y`, `Y ≤ H`, `H ≤ b`. The file's `funded_or_replacement_bound` (l. 205) is "`fee ≤ reserve_t ∨ renewing_t ≤ s.renewing - t`".
+- Both say "crossed a threshold, or a linear bound holds".
+- In `falls_or_bound` the level that crosses and the level that is bounded are one level. In the file they are two (the reserve crosses, the count is bounded), and the crossing is upward.
+- Under a map `b := fee`, `H - Y := 1`, they agree only in shape, not word for word.
+
+*Verdict.* `RegimeMargin` matches in shape, and as a dictionary only for the count at a constant schedule. The file's boundary is not a case of `RegimeMargin`'s point of no return with its statement unchanged.
+
+---
+
+## Which of N1 to N5 holds
+
+- **The lock (`TurningInTime` §6 and §7, `RuleCapture.Locked`):** N4. No package statement has the file's boundary as a case, because `ReadsShare` cannot hold of a rule read off an accumulator that the unfavoured fill, and the regime premises have nothing to discharge them. A join would need a lock law whose rule is read off an accumulated level fed by the unfavoured, with accrual bounded by what they can still pay (`turned_by_loss` without `Accrues`), and a need. Neither side has that. N3 holds of the file as to what carries the look:
+  - the share's motion is the supplied `allocated`;
+  - the giving is the supplied `inflow` (charges `1` and `3`);
+  - the level that runs down is the supplied capacity update, which nothing reads.
+- **`RegimeMargin`:** N1 only for one piece. The unfunded count at a constant schedule is `Law.run (step (fun _ => 0) c)`, a dictionary, and its giving of `0` makes `H + y` vacuous. For the boundary itself, N4. Its first half matches N2, a start quantity against a threshold, constant along the unfunded course by `actual_or_unfunded_ledger`. But it is not a case of `ends_iff_below` or `recoverable_iff_above`, the two N2 comparisons that I opened.
+- **The law of a list:** none of N1 to N5 holds as worded. It stands beside: the shape is "every step iff the step at a count", but `within` fails for a time-varying schedule. At a constant schedule a list of bounded states would give only a far weaker bound and not the ledger.
+- **N5:** not established from this read. `exact_schedule_activation_boundary` / `funding_iff_ledger` (an exact boundary of reaching a turn by a bounded accumulation) has no counterpart in what was read. That is "not found in what was read", not "absent", and it is the arithmetic of supplied laws (N3).
+
+**Plainly.** What this read found is two dictionary pieces, each the same thing in two vocabularies: the count as a regime run at constant `k`, and `lowStays` as `funded_step`'s reserve conjunct. The rest are two sides with no theorem between them: the file's boundary beside `locked_turns_in_time_share_iff`, `recoverable_iff_above`, `ends_iff_below` and `iter_iff_all`, each matching in shape with roles turned. The one substantive difference I found, from the file's own statements, is the top-up result in Q3.2(c): the destructive outcome has no point of no return in time.

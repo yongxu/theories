@@ -1,0 +1,21 @@
+# A read-only pass by a reader of another kind: one October file outside the package against the package
+
+*AI-written brief (Claude Fable, board row FM), 22 November 2026. You are a reader, alone. Read only: edit nothing in the repository; write and run no Lean, no lake, no gate, no tests, no check_becoming.py; start no agents. Read-only git and grep are fine. Your whole report is your final answer; also save it as /Users/ren/theories/tmp/fm/outside22/astra/REPORT.md (the only file you write).*
+
+## What we are doing
+
+/Users/ren/theories draws a map of how anything forms, persists, changes and ends, with its core proved in Lean 4 with no axioms. Read AGENTS.md at the repository root (one page), and of `_process/DIRECTION.md` the first section (to "Which two") and the section "What is not there". The package is `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/` (409 modules; a page a module in `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/places-2026-11-21/PLACES.md`: use it to find, then open the Lean; the listing is unchecked).
+
+The direction asks for two ways of going on placed with respect to each other: a way of selecting that uses up what it or others rest on and can no longer be turned; and a way in which forms change, the going on continues and more can go on after it (not the keeping of a base the same). This morning two scratch builds stated both outcomes of a choice through a reading with a bound, and readers found that shape filled by a decided finite game with nothing of the map in it (`_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-both-outcomes-2026-11-22/NOTE.md`: read it). The direction page names ONE place where both ends of one law stand in a model with a reserve, a fee, contracts that revise and a capacity: `experiments/market-generativity/meta-attractor/PopulationCorrection.lean` (8 October, 694 lines, outside the package), and says no join of the package to it was looked for beyond a search by name.
+
+## Your task
+
+**The questions Q1 to Q10, with what would count as nothing found (N1 to N5), are frozen in `/Users/ren/theories/tmp/fm/outside22/QUESTIONS-POPULATION-CORRECTION.md`. Read that file whole first and answer Q1 to Q10** (not Q11). It names what another session already read and tried, which you do not do again; read that session's table note (`…/dj-a-line-on-a-stock/two-ways-table-2026-11-20/NOTE.md`, section 1) first: it already says much against taking this file for the centre.
+
+Read `PopulationCorrection.lean` whole. For the package side, sweep widely: you are the reader who can open many modules. Beyond the modules the questions name (`TurningInTime`, `RegimeMargin`, `ReadOffInTime`, `Optimum`, `Regulation`, `Stock`, `Lasting`, `RuleCapture`, `RuleShaping`, `RuleRebuilding`, `ReadingLoop`, `PredicateIteration`), search the whole package for any law with the file's form: a count that a supplied law moves up while a threshold is met and down while it is not; a reserve fed by a count; an exact activation boundary given by a potential (the start's level plus what can still be paid in); an absorbing region below a threshold; a rule that switches once. Name each candidate with module, line and statement, and say whether the file's boundary is the same law in other names, a case under a map you give field by field, the same shape with the roles turned, or only alike.
+
+## How to report
+
+- Lead every answer with one word: OPENED (from a statement you opened, with file and line) or TOLD (from a listing, a note, a docstring).
+- Quote Lean with line numbers. Where something is absent say "not found in what was read" and list what was read; count the modules opened.
+- The read may come back empty (N1 to N5): say so plainly if it does. Do not soften, do not praise, do not propose a model. If you state a join for Q7, apply the test: which proof older than 22 November gets shorter by it; if none, say it is not a join and what it is instead.

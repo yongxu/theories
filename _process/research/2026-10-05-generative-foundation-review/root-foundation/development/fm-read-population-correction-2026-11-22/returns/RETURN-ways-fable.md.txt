@@ -1,0 +1,120 @@
+# Return: ways (Q5, Q6, Q7, Q10)
+
+*AI-written (Claude Fable, a reader alone, for board row FM), 22 November 2026. Read only. No Lean, lake, build, gate or test was run. One in-memory program (nothing written) checked my paper claims about the step law for N ≤ 7; it checks my arithmetic, not the Lean. "The file" is `experiments/market-generativity/meta-attractor/PopulationCorrection.lean`; bare line numbers are its lines.*
+
+## What was read
+
+- Whole: the file (694 lines, statements and most proofs); `POPULATION-README.md`; `COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md` ll. 117–217; the frozen questions; `fm-both-outcomes-2026-11-22/NOTE.md`; `two-ways-table-2026-11-20/NOTE.md`; `choice/ScratchChoice.lean.txt` and `ScratchChoiceEither.lean.txt`; `_process/DIRECTION.md` ll. 1–117 (first section and "What is not there", l. 42 and l. 44, word for word).
+- Opened at the statement only: `PopulationRealization.lean` ll. 40–50, 78–80, 99–109; `CollectiveDestruction.utility` l. 9; in the package `Lasting.orbit_reaches_iff_variant` (l. 831), `Optimum.kept_iff_within` (l. 2342), `Optimum.keeps_or_falls` (l. 4476), `Stock.repeat_covered_iff` (l. 319), `PredicateIteration` `iter`, `iter_iff_all`, `iter_within_length` (ll. 77, 153, 255), `RegimeMargin.step` and its premises (ll. 249–265), `TurningInTime` `asItWas`, `net`, `AloneOutside` (ll. 347–369), `turns_in_time_iff` (l. 1129), `locked_ends_rising` (l. 1499), `count_rises` (l. 1532), `locked_turns_in_time_share_iff` (l. 1876), `recoverable_iff_above` (l. 2146), `RuleCapture` `Raises`, `ReadsShare`, `Locked` (ll. 145–161).
+- Not read: `ResponseCapacity`, `RecursiveSelection`, the market files, `RuleRebuilding`, `RuleShaping`, `ReadingLoop`, `GuardHorizon`, `ScratchChoiceCases`, the other 400 package modules, PLACES.md.
+- Repeats of what was already done: Q10's items 1 to 5 confirm sentences of the table's note, section 1 (slots revise, no offspring, no slot needs a level, nothing reads capacity, the reserve does not fall once it covers the fee). What is beyond that note is marked "new" below.
+
+## The step law, as used below (OPENED, ll. 33–66)
+
+State `(r, B, v)` = (renewing, reserve, capacity). `active := fee ≤ B` (l. 15). Unfunded (`unfunded_step`, l. 50, premise `B < fee` only): `r' = r − k`, `B' = min fee (B + r)`, `v' = min cap (v + r − (N − r))`. Funded (`funded_step`, l. 57, premises `r ≤ N`, `fee ≤ N`, `fee ≤ B`): `r' = min N (r + k)`, `B' = fee`, capacity as before. Capacity occurs only in its own line (l. 44); `funded`, `payoff`, `allocated`, `inflow` do not take it.
+
+## Q5. Against this morning's shape
+
+**OPENED** (file ll. 50–66, 94–101, 130–146, 205–244, 346–365, 398–405, 496–514, 570–598; scratch `stayStep`, `outStep`, `StayClosed`, `closed_or_out` with its premises).
+
+**1. The file has no theorem that the outcome is the same for every schedule.** `exact_schedule_activation_boundary` (l. 504) has the schedule on both sides:
+
+```
+(∃ t, fee ≤ (history N fee cap k s t).reserve) ↔ fee ≤ s.reserve+available k s.renewing s.renewing
+```
+
+The threshold `available k r r` depends on `k`. The file's own pair shows the schedule deciding: from `⟨3,0,12⟩`, N = fee = 6, `fun _ => 1` funds at step 3 (`slow_bootstraps`, l. 348) and `fun t => t+1` gives `⟨0,5,10⟩` at step 2 and the destructive end (`growth_closes_bootstrap`, l. 350; `growth_eventually_destructive`, l. 353). What is the same for every schedule is narrower:
+
+- from a funded state, for every `k` with no premise on it at all: `correction_stays_funded` (l. 94; it has `hr`, `hf`, `hb`, and no `hk`);
+- from a `Doomed` state (`B + triangle r < fee`, l. 130), for every `k` with `1 ≤ k`: `doom_step`, `doom_history` (ll. 132, 141).
+
+So the choice is idle on those two sides and not idle between them. On paper from `unfunded_step` (mine, checked by program for N ≤ 7, not a theorem of the file): if `fee ≤ B + r` the next step is funded whatever `k`; so the schedule decides exactly on the band `B + r < fee ≤ B + triangle r`, which needs `r ≥ 2` (7 of the 42 unfunded positions at N = fee = 6). New.
+
+**2. If `k t` were a move: the three castings, and what each either-or would say.** Positions `(r, B)` (capacity can be dropped: nothing reads it); `ok := B < fee` (with `r ≤ N`), `bad := fee ≤ B`; moves `k ∈ {1..N}` (a `k ≥ N` acts as `N` where `r ≤ N`), `live := 1 ≤ k`, `dead := k < 1`.
+
+- *(A) The chooser does not want correction funded* (`next t a u := u = next N fee cap a t`, one outcome a move). Largest stay-closed set: `{B + r < fee}` (move `k ≥ r` gives `(0, B + r)`, which is `Doomed`). Out, under every move, at horizon 1 where `fee ≤ B + r`. The threshold `B + r` is in no theorem of the file (not found in the file read whole; it is the boundary at the constant schedule `N`, an evaluation the file does not make; it has only `unit_available_is_triangle`, l. 427).
+- *(B) The schedule is the set of outcomes and there is one move* (`next t () u := ∃ k, 1 ≤ k ∧ u = next … k t`). `StayClosed Doomed` is `doom_step` word for word under that map; out within `r` steps is `unit_speed_activation` (l. 220). The either-or is then `exact_unit_speed_activation_boundary` (l. 231) with `doom_history`: no choice in it, and the either-or says less than the file, since it gives some closed set and the file gives it in closed form (`triangle`).
+- *(C) The chooser wants correction funded.* That is reaching, not staying; as a staying game with `ok := funded` every move keeps it (`correction_stays_funded`) and every unfunded position is bad at horizon zero, so the either-or is its own premise `okOrBad`.
+
+The file's general boundary (threshold `B + available k r r`) is none of these: it is the case of a fixed schedule, with no move and one outcome a step. And the file's two outcomes are not the two sides in any casting: the either-or's sides are "unfunded for ever" against "funded within a count"; the two fates (all renewing at the caps; none renewing with capacity nothing) each need a further reach-then-stay theorem (`funded_constructive_region_reached`, l. 328; `destructive_region_reached`, l. 282). Capacity is on neither side.
+
+**3. Why the either-or would have nothing to do.** Not because the choice is idle everywhere, but: (i) every move has one outcome (the step is a function), so "against every outcome" is empty; (ii) one move is best at every position for each chooser: the largest `k` for the one against funding, `k = 1` for the one for it, by `faster_replacement_reduces_available` (l. 398) with `unit_available_is_triangle`; the search over moves collapses to a constant schedule, where the file's own boundary already answers in closed form; (iii) no reading: a chooser who saw only the bit `funded` would lose nothing, since the best move is constant. Composing (ii) into "some schedule funds exactly where `fee ≤ B + triangle r`" is mine; the theory page tells it (l. 171), no one theorem states it.
+
+**4. By whom.** By no one in the file. `k` is a supplied capability ("revision capacity kₜ is supplied", theory page l. 121; "full use of revision opportunities", README l. 33). A chooser for funding would pick the least revision allowed. The premise `1 ≤ k t` is what makes a boundary exist: with `k = 0` allowed, `unfunded_step` gives `B' = B + r, r' = r`, and every start with `r ≥ 1` funds (paper, checked by program); `doom_step` fails without `hk`. New.
+
+**5. Listed states, and the bound.** The file lists nothing (no `List State`, no finiteness; not found in the file read whole). A listing is available: `count_bound` (l. 68) and `post_step_bounds` (l. 570) put every state after the first step in `[0,N] × [0,fee] × [0,cap]`. The either-or's bound would be the count of listed ok positions, `(N+1)·fee` without capacity (42 at N = fee = 6); the true horizons are 1 (casting A) and `r ≤ N` (casting B). The file's count is another thing: the number renewing at the start, a quantity that falls by at least one each unfunded step (`funded_or_replacement_bound`, l. 205), and it is in the proofs only (witness `s.renewing`, ll. 244, 514); the boundary's statement has a bare `∃ t`.
+
+**Verdict.** Formally a built case could be made, with a level in the position. It would be a re-telling: a dictionary in which the either-or does no work and says less than the file. And on the staying side what is kept for ever is "the reserve never reaches the fee": kept by a potential that no move raises (`B + triangle r` never rises on the unfunded course: `contribution_upper_bound`, l. 124). That is the case the morning's note cautions about.
+
+*Where this could be disputed:* someone may hold that casting A is a real choice against funding. It is, on 7 of 42 positions, with one constant best move; I do not think that carries an either-or.
+
+## Q6. Against the direction's sentence
+
+**OPENED** (ll. 15–44, 85–101, 130–146, 246–255, 264–344, 516–598, 600, 641–665; `PopulationRealization` ll. 78–80, 106–109).
+
+**The constructive outcome is a standstill.** `schedule_sufficiency_reaches_full_state` (l. 576):
+
+```
+∃ t, ∀ u, history N fee cap k s (t+u) = ⟨N,fee,cap⟩
+```
+
+The state is literally equal at every later step: all slots hold one kind of contract, the reserve stands at its cap (which is the fee), capacity at its cap. What goes on there is throughput at fixed rates (fee spent, `N` paid in, `N − fee` released: `treasury_accounted`, l. 632; capacity `+N` cut at `cap`). No form changes; `N`, `fee`, `cap` and the two kinds are parameters of the whole history; the file has no statement of anything that can go on after which could not before (not found in the file read whole). It is the keeping of a state the same. It fits the page's older wording ("keeps remaking what it rests on": the renewing contracts pay the fee that keeps the rule that keeps them renewing), which is the wording the note of 21 November says does not say the second way. It is not the second way.
+
+*Disputable:* (a) `PopulationRealization.distinct_generation_carriers` (l. 78) gives different carriers each generation; opened: `identity` is `(generation, slot)` and they differ because the generation number differs, a counter that runs the same in the destructive outcome (`lineage_accounting`, l. 46). (b) The docstring's "next generation" (l. 5): the state holds a count only.
+
+**The destructive outcome is a fixed point too, and the selecting in it goes on.**
+
+- *Who selects, by what rule.* No chooser acts in the dynamics: `allocated` (l. 33) moves the count by a supplied law. The selecting is one theorem beside it: `revised_slot_is_optimal` (l. 85), any slot whose action changes takes the action that pays more at that step, for any `others`. The rule is `active`, a threshold on the reserve (l. 15). That all available revisions are used, and how many, is supplied.
+- *What is used up.* The count renewing (to 0) and capacity (to 0; `extinct_unfunded_history`, l. 264). Capacity is read by nothing, in either outcome, by the definition of `next`: nothing rests on it in the Lean (the theory page says so, l. 147). The count renewing is what the correction's reserve is fed from (`inflow`, l. 36). So what is used up that something rests on is the contributors, and what rests on them is the correction, not the selecting.
+- *Does the selecting use up what it rests on?* No. The racing contracts rest on nothing that runs down; they go on at the fixed point (`destructive_economy_with_actual_successors`, `PopulationRealization` l. 106: generations stay enabled with capacity 0). It is nearer the page's own sentence at l. 68, a loop that goes on while what others rest on is gone, with the "others" outside the Lean.
+- *Not turnable.* `destructive_region_absorbing` (l. 594):
+
+```
+theorem destructive_region_absorbing (N fee cap k B : Nat) (hb : B < fee) :
+    next N fee cap k ⟨0,B,0⟩ = ⟨0,B,0⟩
+```
+
+One premise, `B < fee`; every `N`, `cap`, `k`. Earlier, `Doomed` is kept by every step with `1 ≤ k` (`doom_step`). Both are against the schedule only. A transfer from outside turns it: `exact_schedule_topup` (l. 516), and then by `schedule_sufficiency_reaches_full_state` the course from `⟨0, fee, 0⟩` comes to `⟨N,fee,cap⟩`, capacity back from nothing (composition mine). Capacity also passes through 0 on a constructive course (`slow_recovery_has_real_loss`, l. 600). So nothing is lost for good in the model except under its own law.
+
+**Not-turnable does not tell the two outcomes apart.** New. Funded is kept by every schedule with no premise on `k` (l. 94), `Doomed` by every schedule with `1 ≤ k` (l. 141). Each end is left only by something outside the law (`topup`; `leakingNext`, `drainedNext`, ll. 641, 664). The file's picture is two absorbing fixed points and a band between them; no course passes from one to the other.
+
+**So:** neither outcome is the second way. The destructive one is the first way in part, on three readings each open to dispute: that a supplied law of revision with a stage-best theorem beside it is a selecting; that "what others rest on" may be the contributors (the correction's) or a capacity nothing reads; that "can no longer be turned" means by no schedule. *A further dispute:* a slot's payoff falls as more race (`unprotected_collective_loss`, l. 28), which one could call the selecting lowering what it lives on; no slot needs a payoff, and payoffs do not enter `next`.
+
+## Q7. What a join would be
+
+**OPENED** for the three candidates below; no join is stated.
+
+- *As a case of `Lasting.orbit_reaches_iff_variant` (l. 831).* For a constant schedule and target `funded`: in shape only. The law gives "reaches within `n` exactly where some variant exists"; the file's content is the closed form of the threshold. The reach half via a variant still needs the closure that `actual_or_unfunded_ledger` (l. 464) proves, against the file's one line (l. 514). A schedule that varies does not fit `next : S → S` without time in the state. No proof gets shorter.
+- *As a case of the scratch either-or or `iter_iff_all`.* Q5: a re-telling, the either-or idle.
+- *As a case of `turns_in_time_iff` (l. 1129) or `locked_turns_in_time_share_iff` (l. 1876).* In shape, with roles turned, and under no map word for word. Alike: both right sides are stated on the course left as it was (file l. 379, "a counterfactual ledger", with `funding_iff_ledger`, l. 496; package `asItWas`). The map fails at the fields: (i) the level's step is `RegimeMargin.step g H x = (x − H) + g (x − H)` (l. 249): the giving reads only what is left of the level, while the reserve's rise `B + r` comes from the count; (ii) the law asks `0 < need` on the level drawn, and here nothing needs capacity and what needs the reserve is the correction; (iii) it asks a standing overdraw (`uses₁`, `below`), and here the read level rises; (iv) its last conjunct, enough left after the turn, is empty here: once funded, funded whatever `r` is. Turned: there the read level falls and the turn must come while enough is left; here the read level rises and the turn must come before what feeds it is revised away.
+
+**The test.** No proof older than 22 November gets shorter in either direction. A package proof cannot call the file (outside the package, axioms allowed by its receipt, proofs by `omega`, `simp`, `decide`; it imports only `CollectiveDestruction`, and no package file names it: search by name repeated, none). The file's proofs are arithmetic inductions of a few lines that a general law with listings or variants handed in would lengthen. By the row's test it is not a join. What it is: two sides with no theorem between them; made a case, one more built case beside the others.
+
+**N4, three lines, no model proposed.** Neither side has: (1) the level that runs down under the favoured kind as what the units or the rule's reading need, so that its fall reaches the rule (in the file capacity's fall reaches nothing; in `locked_ends_rising` the level making no difference while the need is met is a premise); (2) a going-on outcome that is not a fixed point (in the file all is parameters; the package's law of widening is of a chain handed in, not of a way of selecting, by the page l. 11, told); (3) what a unit gives coming from somewhere (capacity's `+ r` and the receipts are from nothing, l. 44 and l. 617).
+
+With Q6: even a join found here would place an absorbing zero against a standstill, which is not the two ways.
+
+## Q10. What it lacks of "What is not there" (page l. 42, with l. 44)
+
+**OPENED** for the file's side; the page's words about package places are **TOLD** (the page).
+
+1. *Units.* In part. Slots `i < N`, individual only through `slotAction r i := decide (r ≤ i)` (l. 83); the state has a count.
+2. *That each need a level.* Not. No slot needs anything (`payoff`, l. 17, reads `active`, `others`, `race`). One thing needs a level: the correction, the reserve at the fee (l. 15).
+3. *And leave offspring.* Not. `allocated` moves the count by at most `k` within a fixed `N` (`count_bound`, l. 68; `revision_quota`, l. 79). The step does not scale with `r`, and from `r = 0` a funded step gives `min N k` renewing (`funded_step`): renewing contracts come where none stood (new). *Disputable:* the table held "multiplies" whole by a settling, a count that grows by a law of the step.
+4. *A rule set again from their share.* In part. The rule (`active`) is set at each step from the reserve, fed by a count (`inflow`). A count, not a share; a threshold; from the count of the kind the unfunded rule does not favour. It does work only before the first funding: once funded it stays whatever the count is, and it switches at most once. *Disputable:* the table held this whole.
+5. *That level as what they need.* Not. Three roles on three quantities: what is needed is the reserve, which unfunded never falls (`B' = min fee (B + r)`); what runs down is capacity, which nothing needs, and the count.
+6. *Each doing work.* Capacity does none: no premise or threshold of any boundary names it; it is a third conjunct appended to the two ends.
+7. *The fall reaching the rule* (the page's course of 19 November, and "the fall's reaching the rule is not in it"). Not. The rule changes by the reserve filling, not by a fall; capacity's fall reaches nothing. In part, the page's "the rule's change is what keeps something going as against going on favouring": the ledger `offCount`/`available` (ll. 381–387) is the course with the rule held.
+8. *A lock on a needed level without the fall handed in* (the page on §11, and l. 40). Reversed, not supplied: here the fall of capacity is brought about by the rule's staying and nothing needs it; there the level is needed and the fall is handed in. The package's `locked_ends_rising` already has an overdraw brought about on a needed level, so the file adds nothing there.
+9. *What a unit adds to what others draw on* (page l. 44). In part. Renewing contracts add one each to capacity and racing ones take one each (l. 44 of the file); what is added comes from nowhere, as in the try of 17 November.
+10. *A choosing.* In part: the stage-best action of a revised slot, no chooser over a course ("No repeated-game optimality claim is made", l. 6).
+11. *Renewing or consuming named with the lock.* By name only: `renewing` is a field counting contracts, not the web's class.
+
+Of the three in the page's first sentence the file has none whole and one in part. The page's own parenthesis ("slots revise and leave no offspring and no slot needs a level") is as the Lean has it.
+
+## The N's, as far as these four questions reach
+
+- **N3 holds.** What makes it look like the two ways is supplied: the rule set again and the count moving, in `allocated` and `funded` (ll. 15, 33); the level that runs down, in the capacity line of `next` (l. 44); the standing at the caps, in the two `min`s (ll. 42, 44).
+- **N4 holds** for Q7.
+- **N1, N2, N5:** not settled here. From what I opened, no package law has the file's statement; `orbit_reaches_iff_variant` has it only in shape. Not looked for beyond the statements listed at the top.
+- Plainly: Q5 came back as a dictionary, Q7 as two sides with no theorem between them, and by Q6 the file does not have the second way at either end.

@@ -1,0 +1,282 @@
+# Checker "cases": every claimed case, dictionary and map, set against the statements
+
+*AI-written (Claude Opus, a checker who took no part in the read, board row FM), 22 November 2026. Read only: nothing in the repository was edited; no Lean, lake, build, gate, test or check_becoming.py was run; no agent was started. Two small Python programs were run in memory to check arithmetic claims (marked "by program"); they check my arithmetic, not the Lean. "PC" is `experiments/market-generativity/meta-attractor/PopulationCorrection.lean`; package modules are under `…/lean/becoming/Becoming/`.*
+
+**Opened:** PC ll. 1–130, 255–345, 375–600 (definitions, the step lemmas, the ledger section, the boundary, both regimes, `post_step_bounds`, `destructive_region_absorbing`); `population-verification/Audit.txt` whole (104 lines). Package: `RegimeMargin` ll. 244–268, 715–745, 1497–1558, 2040–2050, 2117, 2638–2645, 2800–2990; `Lasting` ll. 100–200, 540–640, 730–745, 831–833; `TurningInTime` ll. 338–480; `RuleCapture` ll. 140–200; `Pace` ll. 95–120; `ReadingLoop` ll. 150–180; `ClosedCapture` ll. 268–300; `Stock` ll. 110–163; `ReaderRebuilding` ll. 84–88; `Optimum` ll. 6812–6822, 6874–6880; `Countdown` ll. 95–170; `HistorySums` (its header and list of statements). The six returns whole, the frozen questions and the addendum. `MarketInstances.lean`: its imports and four call sites only.
+**Not opened:** `Optimum.kept_iff_within`, `Regulation`, `RuleShaping`, `RuleRebuilding`, `Reserve`, `PredicateIteration`, `ChoiceCountCapture`, `DrawnReplacement`, `Flow`, `RenewalFlow`, `RoomNet` and the other candidates in Astra's table beyond what the returns quote. Where my class rests on a quote in a return and not on a statement I opened, I say TOLD.
+
+## The two facts everything below turns on
+
+1. **The file's step, as it stands (PC ll. 33–44):**
+```lean
+def allocated (N k : Nat) (active : Bool) (r : Nat) : Nat :=
+  if active then min N (r + k) else r - k
+def inflow (N : Nat) (active : Bool) (r : Nat) : Nat :=
+  r + if active then 3 * (N - r) else 0
+def next (N fee cap k : Nat) (s : State) : State :=
+  let active := funded fee s
+  { renewing := allocated N k active s.renewing
+    reserve := min fee (s.reserve - (if active then fee else 0) + inflow N active s.renewing)
+    capacity := min cap (s.capacity + s.renewing - (N - s.renewing)) }
+```
+2. **The boundary's proof (PC ll. 504–514)** is `funding_iff_ledger` (l. 496, itself a case split on `actual_or_unfunded_ledger`, l. 464, a 33-line induction), then `contributions_bounded` (l. 456) and the witness `s.renewing`. All of the boundary's content is in l. 464 and in `contributions_stop`/`off_count_bound` (ll. 407, 446). Any package law that "has" the boundary must either do the work of l. 464 or take it as a premise.
+
+**A finding none of the readers made (by program, not Lean).** The boundary's premises `hr : s.renewing ≤ N` and `hf : fee ≤ N` are not needed for its statement. Over 200,000 random cases (N to 6, fee to 12, renewing to 10, reserve to 15, quotas 1 to 4), `(∃ t, fee ≤ reserve_t) ↔ fee ≤ B + available k r r` held with no failures, including where `r > N` and `fee > N`. The bounded form `(∃ j ≤ n, fee ≤ reserve_j) ↔ fee ≤ B + available k r n` also held with no failures, with quotas from 0, so it does not need `hk` either. The file needs `hr` and `hf` only because l. 464's funded branch uses `funded_step`. This matters for Lasting below.
+
+## 1. Every claim of the forms asked, statement against statement
+
+### 1.1 `RegimeMargin.Coupled.Indexed.ends_iff_below_within` (l. 2984): who is right
+
+Claimed by: level-and-rule (Fable), Q4 ("N2 holds, in shape … its premise `KeepsBelow` is false of the file's `next` as written (it fails where `renewing > N`)"); Astra, Q9 ("a restricted **paper case** … clipping inputs to `N,fee`").
+
+OPENED. The premise:
+```lean
+-- RegimeMargin l. 2818
+def KeepsBelow (f : (ι → Nat) → (ι → Nat)) : Prop :=
+  ∀ x y, Below Drawn.whole x y → Below Drawn.whole (f x) (f y)
+-- l. 2117: def Below (x y : ι → V) : Prop := ∀ i, D.le (x i) (y i)
+```
+and the conclusion `EndsUnder f i (setAt y i a) ↔ a < thresholdWithin f cs B hi y i`, where `EndsUnder f c s := ∃ N, ∀ k, (Law.run f s).state (N + k) c = 0` (l. 2814) and `thresholdWithin` is `leading` of a finite check run for `(B + 1) ^ cs.length` steps (ll. 2953–2960).
+
+**Both are right, about different statements.**
+- **Fable is right of `next` as written.** `KeepsBelow` quantifies over every state. Take `x = ⟨N+5, fee−1, c⟩` and `y = ⟨N+5, fee, c⟩` with `k = 1`, so `x ≤ y` coordinatewise. `x` is unfunded, and `allocated` gives `N+5−1 = N+4` (l. 34). `y` is funded, and gives `min N (N+6) = N`. Then `N+4 > N`, so the order fails. Generally the count coordinate fails exactly where `r − k > N`. A second failure the reader did not name: the reserve coordinate fails where `fee > N`. At `r = 0`, `x = ⟨0, fee−1, c⟩` goes to reserve `fee − 1`, and `y = ⟨0, fee, c⟩` goes to `min fee (0 + 3N)`, which is below `fee − 1` once `3N < fee − 1`. So the premise needs `fee ≤ N` as well as `r ≤ N`.
+- **Astra is right of a projected, clipped step.** Fix one constant quota `c ≥ 1`, with `1 ≤ N` and `fee ≤ N`. Take `ι` with two conditions (count, reserve), drop capacity (nothing reads it, ll. 39–44), and define
+  `f x := let r := min N (x count); b := min fee (x reserve); (allocated N c (decide (fee ≤ b)) r, min fee (b + r))`.
+  - **Order.** `min` is monotone. In the count coordinate, the unfunded branch `r − c` is below the funded branch `min N (r' + c)` whenever `r ≤ r' ≤ N`. The reserve coordinate is a clipped sum. So `f` keeps the order at every state, and `KeepsBelow f` holds.
+  - **Agreement with the file.** On the box `r ≤ N`, `b ≤ fee`, `f` agrees with the file's step projected. This is `unfunded_step` (l. 50) below the fee. At `b = fee`, it is `funded_step` (l. 57) with `hr` and `hf`: the funded reserve is `fee`, and `min fee (fee + r) = fee`. The box is kept (`count_bound` l. 68, `post_step_bounds` l. 570).
+  - **The other premises.** `StaysWithin f B (setAt y count N)` holds with `B := N` (because `fee ≤ N`). `covers` holds for a two-element list.
+
+**The restricted statement that is true.** Fix `1 ≤ c`, `1 ≤ N`, `fee ≤ N`, `b ≤ fee` and `a ≤ N`, and let `f` be the clipped two-coordinate step at constant quota `c`. Then:
+`EndsUnder f count (setAt y count a) ↔ a < thresholdWithin f [count, reserve] N N y count`, where `y reserve = b`.
+- PC l. 524 (shortfall) and l. 553 (enough, with `1 ≤ N`, so the count is `N ≠ 0` from some step on) give `EndsUnder … ↔ b + available (fun _ => c) a a < fee`.
+- So `thresholdWithin` is the least `a` with `fee ≤ b + available (fun _ => c) a a`. That least `a` exists and is at most `N`, because `available` at `a = N` is at least `N`, which is at least `fee`.
+
+**Class (b).** What the restriction leaves out:
+- a constant schedule only, where the file has every `k : Nat → Nat`;
+- clipped inputs, or a domain cut to the box;
+- capacity projected away;
+- the third conjunct of either regime;
+- the threshold as an amount.
+
+The package's statement says that an exact threshold in the initial count exists for an order-keeping, bounded step. It does no work toward the file's amount. The file's ll. 464, 524 and 553 compute the package's `thresholdWithin`, not the reverse. No line of the file's proof is replaced; the instance would add the clipping and the agreement on the box.
+
+### 1.2 `Lasting.reaches_iff_of_exact` (l. 625) with `Funnel` and `Basin` (ll. 568–578)
+
+Claimed by: Astra, Q7 ("A paper case of bounded reaching"); also Q4 for `orbit_reaches_iff_variant` ("This is a case for bounded reaching").
+
+OPENED:
+```lean
+structure Funnel … where
+  base : ∀ x, F 0 x → target x
+  descends : ∀ k x, F (k + 1) x → target x ∨ ∀ a, adm a → F k (f x a)
+structure Basin … where
+  holds : ∀ k x, target x → L k x
+  gathers : ∀ k x, (∀ a, adm a → L k (f x a)) → L (k + 1) x
+theorem reaches_iff_of_exact {C} (funnel : Funnel f adm target C)
+    (basin : Basin f adm target C) (n : Nat) (s : S) : Reaches f adm target n s ↔ C n s
+```
+
+**What `C` must be.** The state is `(j, s)` with a clock `j` (the quota varies), `adm := fun _ => True`, `f (j, s) () := (j+1, next N fee cap (k j) s)` and `target (j, s) := fee ≤ s.reserve`. Then
+`C n (j, s) := fee ≤ s.reserve + available (fun i => k (j + i)) s.renewing n`, which is Astra's `C`, checked.
+
+**What discharging it is.**
+- `base`: `available … 0 = 0`, so `C 0` is the target. One line.
+- `holds`: if `fee ≤ B` then `fee ≤ B + anything`. One line.
+- `descends` and `gathers` both need the first-term identity `available k' r (n+1) = r + available (fun i => k' (i+1)) (r − k' 0) n`.
+  - The file has no such lemma. PC l. 387 adds the last term (`available k r (t+1) = available k r t + offCount k r t`), so this is a new induction that shifts `offCount` with the schedule.
+  - Then, on an unfunded state, `unfunded_step` (l. 50) together with clipping at the fee.
+
+That is the induction of `actual_or_unfunded_ledger` (l. 464) done again, in the other order of summation. The instance, read through `reaches_iff_orbit` (l. 739), states `(∃ j ≤ n, fee ≤ reserve_j) ↔ fee ≤ B + available k r n`.
+
+**Class (a) for that bounded statement. A re-telling by the addendum's point 3.** Each of the package law's four fields is discharged by the file's own arithmetic, re-derived, and the package law does no further work: its proof is two applications of the field structures. It is not the file's boundary: the boundary still needs `contributions_bounded` (l. 456) at `n = r` to go from `∃ j ≤ n` to `∃ t`. No older proof gets shorter. Astra says the same ("None identified"), and that holds.
+
+One thing the instance would say that the file does not state: the bounded reach-iff with no `hr`, `hf` or `hk`. `descends` and `gathers` use only `unfunded_step`, which has the premise `B < fee` alone. By program (above) that statement is true. It follows equally from a premise-free variant of l. 464 inside the file, so it is no join.
+
+`orbit_reaches_iff_variant` (l. 831, OPENED: `(∃ k, k ≤ n ∧ target (Law.orbit next s k)) ↔ ∃ V : S → Nat, V s ≤ n ∧ ∀ x, V x ≤ n → target x ∨ V (next x) < V x`) holds of every determined law with a decided target. Its right side has no amount, so instantiating it gives nothing of the file's right side. **UNRELATED as a case of the boundary**: the left side is an instance of the left side, and nothing more.
+
+### 1.3 The "dictionary pieces"
+
+**(i) The unfunded count at a constant schedule as `Law.run (RegimeMargin.step (fun _ => 0) c)`.** Claimed by: lock (Opus), Q9 ("a dictionary for one piece"). Also: level-and-rule's capacity at `r = 0` as `step (fun _ => 0) N`, and lock's capacity on `2r ≤ N` as `step (fun _ => 0) (N − 2r)`.
+- OPENED: `def step (g : Nat → Nat) (H x : Nat) : Nat := (x - H) + g (x - H)` (l. 248). With `g = fun _ => 0` this is `x − H`. `offCount (fun _ => c) r (t+1) = offCount (fun _ => c) r t − c` (PC l. 383). They are equal by a 3-line induction, so **(a)**, as a definition.
+- The package law it brings, `ends_beyond_giving` (l. 721: `(Law.run (step g H) x).state x = 0` under `∀ z, g z < H` and `FromNothing g`), gives `offCount c r r = 0`. That is weaker than PC's `off_count_bound` (l. 407: `offCount k r t ≤ r − t` for every `t` and every schedule with `1 ≤ k t`, a 3-line proof). The point of no return `H + y` is vacuous at giving `0`.
+- Capacity at `r = 0` as `step (fun _ => 0) N` holds only for `v ≤ cap` (the `min cap` must be idle). It gives the third conjunct of `extinct_unfunded_history` (l. 264) as an equality at `t = v`. **(a)** on `v ≤ cap`.
+- Capacity on `2r ≤ N`: the use `N − 2r` is read from the way, so it is a regime step whose draw changes with another coordinate. It is **(b)**, restricted to the stretch where `2r ≤ N` and `v ≤ cap`.
+- None shortens a proof.
+
+**(ii) `lowStays` as `funded_step`'s reserve conjunct.** Claimed by: lock (Opus), Q3.2(a) ("`lowStays` is the shape of `funded_step`'s reserve conjunct"). The reader does not open `lowStays`'s Lean beyond its own paraphrase "a `kept` rule keeps a `Low` share `Low`". With `Low := fee ≤ B` and `kept := true`, the implication `fee ≤ B ∧ rule = true → fee ≤ B'` is what `funded_step` gives (PC l. 57, under `hr` and `hf`).
+- But `lowStays` is one premise of `locked_turns_in_time_share_iff`, whose other premises (`ReadsShare`, `uses`, `meets`, `needs`, `within`) the same reader shows fail. A premise that is met inside a law that does not apply is no case.
+- Class: **(a) for one premise in isolation; UNRELATED as a case of the law**. The reader's own verdict, "not a case", stands.
+
+**(iii) The funded half against `RuleCapture.locked_stays`.** Claimed by: level-and-rule, Q8 ("`Raises` met only on `renewing ≤ N`, `reserve ≤ fee`, and it **is** `funded_step`. Then `locked_stays` is `correction_stays_funded`").
+
+OPENED: `Raises P favours f := ∀ x g, favours g → P.le x (f x g)` (l. 145); `ReadsShare` (l. 150); `Locked M favours h p := favours p.2 ∧ M.le p.2 (h p.1 p.2)` (l. 160); `locked_stays` concludes `∀ k, Locked M favours h (paced f h reads c (t + k))` (l. 182); `Pace.turn f h true p = (f p.1 p.2, h p.1 p.2)` (Pace l. 101).
+
+The map:
+- `S := (renewing, reserve)` with the product order;
+- `R := Bool` with `false ≤ true` and `favours := (· = true)`;
+- `h x _ := funded fee x`;
+- `f x g` := the file's step with `active := g` forced. That is not `next`: `next` computes `active` itself.
+
+**Corrections to the claim:**
+- (1) **`Raises` is not `funded_step`.** `Raises` asks `f x true` at every `x`, including `B < fee`, where the forced-funded step gives reserve `min fee (0 + r + 3(N − r)) = fee`. That is a different computation from `funded_step`, whose premise is `hb : fee ≤ s.reserve`. It is a sibling lemma of the same size, and it holds only on the subtype `r ≤ N ∧ B ≤ fee`, with `fee ≤ N`.
+- (2) **A start above the fee is outside the subtype.** `correction_stays_funded` (l. 94) allows `fee < B₀`, where `Raises` fails: the step lowers `B₀` to `fee`.
+- (3) **There is a one-step lag.** `paced` carries the rule read before the step. Its fast coordinate equals the file's `history` only while `funded` is constant. That holds here, but it is an extra lemma, proved jointly with the lock.
+
+**Class (b)**: restricted to `r ≤ N`, `B ≤ fee`, `fee ≤ N`, a step with the rule as an argument, and a `paced = history` lemma. It would replace the 6-line induction of l. 94 with more than 6 lines.
+
+**(iv) The funded half against `ReadingLoop.closed_of_keptBy`.** Claimed by: level-and-rule, Q8.
+
+OPENED: `KeptBy world sense update B := ∀ m w a w', B m w → world w a w' → B (update m a (sense w')) w'` (l. 166); `closed_of_keptBy : «闭» (joint world sense update act) (Sound B)` (l. 171).
+
+The map: the state that reads is the reserve; the world carries `(count now, count before)`, because `update` sees the world after the step and the file's reserve update reads the count before it; the world relation lets every quota be taken; capacity is dropped. `KeptBy` of `fee ≤ B ∧ r ≤ N` is `funded_step` with `count_bound`. **Class (b)**, under that encoding of the world with the earlier count carried. Its conclusion is a closed set, which is `correction_stays_funded` again. Nothing is shortened.
+
+The reader's second claim is TOLD: I did not open `potential_preserved_at_unit_speed` (l. 182). It is that, at unit speed, `KeptBy` holds of `fee ≤ B + triangle r`. It has the same class, (b), at `k = 1`.
+
+**(v) `doom_history` against `Lasting.Ladder.lasts`.** Claimed by: level-and-rule, Q4 ("A case, with the file's lemma as the premise; the induction it saves is five lines"). Also Astra's table (`Lasting.closed_orbit`, "exact invariant-propagation component").
+
+OPENED: `Ladder` has `within : ∀ k x, C k x → guard x` and `descends : ∀ k x a, adm a → C (k + 1) x → C k (f x a)` (ll. 116–119); `Lasts.histories` (l. 192) gives `guard (history f s d k)` for `k ≤ n` on every admissible history.
+
+The map: `f s a := next N fee cap a s`, `adm a := 1 ≤ a`, `guard := Doomed fee`, and the constant ladder `C _ := Doomed fee`. `within` is the identity, and `descends` is `doom_step` (l. 132), word for word. **Class (a).** Two lemmas remain owed:
+- the identification of `Lasting.history f s d` with PC's `history N fee cap d s`, which recurse at opposite ends;
+- the choice `n := t`.
+
+The saving (5 lines, l. 141) is spent on the first.
+
+**(vi) Astra's "exact map to the package's pair step and agreement up to a mark" (`TurningInTime` ll. 343–478).**
+
+OPENED:
+- `def pair (after : W → Nat → W) (left : W → Nat → Nat) (s : W × Nat) : W × Nat := (after s.1 s.2, left s.1 s.2)`;
+- `AloneOutside marked alone after := ∀ w x, ¬ marked x → after w x = alone w`;
+- `agrees_until_marked : ∀ n, (∀ j, j < n → ¬ marked (Law.orbit (asItWas alone left) s j).2) → Law.orbit (pair after left) s n = Law.orbit (asItWas alone left) s n`.
+
+The map:
+- `x := reserve`, `w := (clock, renewing, capacity)`, `marked x := fee ≤ x`;
+- `after` and `alone` as Astra's table gives them;
+- `left` := the reserve line of `next` (l. 42), read off the old way.
+
+`AloneOutside` is discharged by unfolding `allocated` at `active = false` (l. 34). That is definitional, so this is **class (a)**, for `agrees_until_marked`: up to the first funding, the actual course is the course with the rule held.
+
+That is half of the right disjunct of PC l. 464 (`renewing = offCount …`). The other half, the closed form `reserve = s.reserve + available …` of the as-it-was orbit, still needs the same induction, because the as-it-was orbit's reserve is the clipped `min fee (B + r)` iterated. In l. 464 both halves are one induction step (`simp only [h.1,h.2.1,available,offCount]`), so no lines come out. It is not the boundary. Astra says so ("It stops before the lock-and-turn theorem"), and that holds.
+
+**(vii) Other pieces named as cases or dictionaries in the returns.**
+- **`Stock.covered_iff_prefix` (l. 157).** Claimed by level-and-rule ("that closed form word for word") and by Astra ("an exact case for the counterfactual **word**").
+  - OPENED: `Covered draw replenish n (a :: as) := draw a ≤ n ∧ Covered … (n − draw a + replenish a) as` (l. 112).
+  - The map uses letters indexed `0 … t−1` with draw `0` and replenish `offCount k r j`, then one letter with draw `fee`, from stock `B`. `Covered` is then `fee ≤ B + available k r t`, because every earlier prefix test is `0 ≤ …`.
+  - **(a)** for the ledger inequality as a `Covered` predicate. The theorem's content, that the actual capped course meets it, is l. 464 and is not touched.
+- **`ReaderRebuilding.read` (l. 87, `if l < m then (if l + k < m then l + k else m) else l`).** At `l = B < fee`, `m = fee` and `k = r` this is `min fee (B + r)`, the unfunded reserve line. **(a)**, a coincidence of one definition with no theorem attached.
+- **`Optimum.Next.rise` (l. 6816) with `rise_stays` (l. 6877).** `rise (t+1) = if G t (rise t) ≤ y then G t (rise t) else y`, which with `G t x = x + offCount k r t` and `y = fee` is `min fee (rise t + offCount t)`. It equals PC's reserve coordinate at every `t` only by l. 464 (below the fee) and l. 57 (at it). That is what Astra says, and it holds. Its use of the package is **(a)** for the reserve coordinate, a re-telling: the identification is the file's own lemma.
+- **`Optimum.kept_iff_within` (l. 2342), quoted by level-and-rule.** Not opened by me; TOLD by the quote. The "degenerate instance" sets `g := fee` and `d := fee`, and the premise `step : ∀ t, x (t + 1) = x t + g t − d t` then asks `reserve_t = fee` at every step. That is the conclusion to be shown. **UNRELATED as a case**: the premise handed in is the result.
+- **`funded_or_replacement_bound` (PC l. 205) against `RegimeMargin.falls_or_bound` (l. 890); `locked_ends_rising`; `locked_turns_in_time_share_iff`; `recoverable_iff_above`; `iter_iff_all` for the boundary; `ClosedCapture.turned_by_loss`.** Each is called "same shape", "matches in shape" or "related shape with roles turned" (lock Q3, Q9; ways Q7; Astra Q3).
+  - None comes with a map under which every premise is discharged. The lock reader shows that `ReadsShare`, `uses`, `meets`, `needs` and `within` have nothing to discharge them, and Astra and ways say the same.
+  - For `turned_by_loss` (OPENED l. 291), a map is given: accumulator := reserve, `N := fee`. But its premise is `Accrues fB := ∀ p g, p.2 + 1 ≤ fB p g` (l. 273), and that is false of the file at every state with `r = 0` or `B = fee` (`min fee (B + r)`). Accrual holds only while `r ≥ 1` and `B < fee`, and that set is not closed under the step.
+  - By the addendum's point 1, **UNRELATED**, all of them.
+- **`iter_iff_all` at a constant quota over the bounded states** (lock Q9). On paper it gives "unfunded for `L` steps iff for ever", with `L` the length of a list of states. **(b)** of a weaker statement that is not the boundary. It is UNRELATED to the boundary.
+- **Astra's `noReturnAt_of_past` paper instance (`ReadOffInTime` l. 632).** Not opened by me beyond the returns' quotes. The lock reader and Astra agree that it holds trivially of any decided family, and that its content (first non-recoverable step 2 on the fast example) comes from PC ll. 130–146, 231 and 257. **(a)** of a generic lemma; the work is the file's.
+- **Neighbours (Opus), Q11.**
+  - "MarketInstances … a dictionary in the sense of N1." It is about another file. I checked only that `MarketInstances.lean` imports `Becoming.Viability` and `Becoming.Lasting` and calls `guarded_never_fails_iff` (l. 118), `Lasting.exhausts` (l. 207) and `Lasting.some_avoids_iff` (ll. 362, 364), and names `orbit_reaches_iff_funnel` (l. 672). So the direction "package law → market instance" holds where checked.
+  - "ResponseCapacity … agrees with `repeat_covered_iff` only in shape": UNRELATED by point 1.
+  - Neither bears on PC's boundary.
+
+## 2. Q7 and every statement on paper offered as a join
+
+Ways (Fable) offers none. It argues "none" from three tries: `orbit_reaches_iff_variant`, the scratch either-or with `iter_iff_all`, and the lock and turn. That "none" was argued, not assumed. Astra offers `reaches_iff_of_exact` and itself says it is not a join. The level-and-rule and lock readers offer pieces, not a join.
+
+The four tests applied to every offer:
+
+| Offer | Says only the two definitions again? | Package theorem doing work | File lines replaced | Older proof shorter |
+|---|---|---|---|---|
+| `reaches_iff_of_exact` with Astra's `C` | Yes: the fields are the ledger induction re-done (1.2) | none; two field projections | none (l. 464 re-proved in another order) | none |
+| `ends_iff_below_within`, clipped | No: it adds that an exact threshold exists | `leading_exact` via `endsUnder_of_below` | none; the file computes the threshold the package leaves as a check | none |
+| `agrees_until_marked` | Yes, by `rfl` for `AloneOutside` | the 6-line induction of l. 476 | none separable from l. 464 | none |
+| `locked_stays`, `closed_of_keptBy`, `Ladder.lasts` | Yes: each premise is a file lemma (`funded_step`, `doom_step`) | an invariant induction | l. 94 (6 lines) or l. 141 (5 lines), each paid back by an identification lemma | none |
+
+**A candidate nobody tried, found by search.**
+- **The law.** `Countdown.completes_iff` (OPENED, l. 164): `(∃ t, ticks tick (work s + 1) s = some t ∧ done t) ↔ work s + 1 ≤ fuel s` under `CountedWork`. That structure asks, while busy, that one tick does one unit of work for one unit of fuel, with `finish` and `stall` (ll. 101–105).
+- **The map.** Ticks are single units of contribution, not the file's steps; `work + 1 := fee − B`; `fuel :=` what the ledger can still pay. The right side then reads `fee − B ≤ available k r r`, which is the boundary for `B < fee`.
+- **Why it fails.**
+  - (1) A file step pays `r_t` units at once, so `advance` (`work t + 1 = work s ∧ fuel t + 1 = fuel s`) holds only of a unit-tick refinement. Mapping unit ticks back to steps is l. 464 again.
+  - (2) `stall` (`fuel s = 0 → tick s = none`) makes the course stop. The file's course goes on at `⟨0,B,0⟩` (l. 594).
+  - (3) `done` would have to be "the reserve covers the fee", reached on the tick that pays the last unit. That is the iff of l. 464 restated per unit.
+- **The test.** The two definitions said again, with the unit refinement as new work. The package theorem does work only on a course the file does not have. No file line is replaced, and nothing shorter. A re-telling.
+
+## 3. Q5: the three castings (ways, Q5 §2), by the addendum's point 2
+
+What would the scratch either-or say of the model that `exact_schedule_activation_boundary`, `doom_history` and `correction_stays_funded` do not already say?
+
+- **(A), against funding, moves `k`.** The stay-closed set `{B + r < fee}` is l. 504 at the constant schedule `k = fun _ => N`. With `r ≤ N`, `offCount N r 1 = 0`, so `available (fun _ => N) r r = r`. The reader's "the threshold `B + r` is in no theorem of the file" is true of the file's text, but it is l. 504 instantiated, not something the either-or adds. That the largest `k` is best is `faster_replacement_reduces_available` (l. 398).
+- **(B), the schedule as outcomes.** `StayClosed Doomed` is `doom_step`, and "out within `r`" is `unit_speed_activation` (l. 220). The reader says this, and it holds.
+- **(C), for funding.** `ok := funded` is closed by `correction_stays_funded` (l. 94), and the either-or is its own premise `okOrBad`.
+
+**A re-telling.** Each side of each casting is one of the three named theorems, or l. 504 at one schedule. The either-or adds only "the bound is the length of a list", which is coarser than the file's `r`. This holds as the reader argued it.
+
+Astra's casting (guard "funded or `r > 0`"; winning set `fee ≤ B + triangle r`) is likewise l. 231 with l. 141, also a re-telling. Astra calls it "a paper re-telling", and that holds.
+
+## 4. N6: what would have to be ported for the surviving (a) and (b) to be statements of the package
+
+**Survivors.** The pieces classed (a) or (b) above are:
+- the clipped `ends_iff_below_within` instance;
+- the bounded `reaches_iff_of_exact` instance;
+- `agrees_until_marked`;
+- `Ladder.lasts` for `doom_history`;
+- `locked_stays` and `closed_of_keptBy` for the funded half;
+- the `step (fun _ => 0) c` count;
+- `covered_iff_prefix` for the ledger inequality.
+
+None is the boundary. For any of them to be a statement of the package, the file's model has to be inside the package with no axioms.
+
+**What would be ported.**
+- **Definitions (10):** `State`, `funded`, `allocated`, `inflow`, `next`, `history`, `offCount`, `available`, `triangle`, `Doomed`.
+  - Not needed: `payoff`, `CollectiveDestruction.utility`, `slotAction`, `topup`, the receipts and `leakingNext`. Nothing in the boundary or the regimes reads them.
+- **The boundary's closure (11 theorems):** `unfunded_step`, `funded_step`, `count_bound`, `count_history`, `available_monotone`, `off_count_bound`, `contributions_stop`, `contributions_bounded`, `actual_or_unfunded_ledger`, `funding_iff_ledger`, `exact_schedule_activation_boundary`.
+- **Both regimes and the absorbing point (19 more):**
+  - the destructive side: `triangle_drop`, `triangle_monotone`, `contribution_upper_bound`, `doom_step`, `doom_history`, `doomed_replacement_bound`, `history_add`, `extinct_unfunded_history`, `destructive_region_reached`, `schedule_shortfall_is_destructive`;
+  - the constructive side: `correction_stays_funded`, `funded_replacement_bound`, `funded_full_population`, `full_renewing_history`, `funded_constructive_region_reached`, `schedule_sufficiency_is_constructive`, `post_step_bounds`, `schedule_sufficiency_reaches_full_state`;
+  - `destructive_region_absorbing`.
+
+  About **30 of the 61**.
+- **New lemmas for the instances**, none in the file:
+  - the first-term identity for `available` with a shifted schedule (for 1.2);
+  - the clipping and the agreement on the box (for 1.1);
+  - the identification of PC's `history` with `Lasting.history` and with `paced` (for (iii) and (v)).
+
+**What the audit says (OPENED, `Audit.txt`).** It lists axioms per declaration, not per tactic. Of the 61 theorems:
+- 5 depend on no axiom: the closed `decide` instances `slow_bootstraps`, `growth_closes_bootstrap`, `slow_recovery_has_real_loss`, `one_unit_diversion_breaks_zero_margin` and `identical_local_ordering_different_funding`;
+- 3 depend on `[propext]` only: `triangle_drop`, `history_add` and `post_step_bounds`, each closed by `simp` or `cases`/`simp` alone;
+- 40 depend on `[propext, Quot.sound]`;
+- 13 depend on `[propext, Classical.choice, Quot.sound]`. Among the ported ones these are `full_renewing_history`, `funded_constructive_region_reached`, `schedule_sufficiency_is_constructive` and `schedule_sufficiency_reaches_full_state`.
+
+**Inference from that pattern.** This is not a per-tactic receipt. In this file `decide` carries none. `simp` carries `propext`. Every theorem whose proof uses `omega` (79 lines with it) carries `propext` and `Quot.sound`. `Classical.choice` comes in with `simp_all` or `simp` closing goals in the 13. Every one of the about 30 theorems to be ported depends on at least `propext`, so each would be re-proved without `omega` or `simp`.
+
+**Proposed: nothing.**
+
+## 5. Table
+
+| Claim (who, where) | Class |
+|---|---|
+| `ends_iff_below_within` is false of `next` as written (level-and-rule Q4) | Correct; it also fails where `fee > N` |
+| `ends_iff_below_within`, restricted paper case with clipped inputs (Astra Q9) | (b): constant quota, clipped box, capacity dropped; existence of the threshold only |
+| `reaches_iff_of_exact`, "paper case of bounded reaching" (Astra Q7) | (a) of a bounded form of l. 496, not of the boundary; a re-telling (point 3) |
+| `orbit_reaches_iff_variant`, "case for bounded reaching" (Astra Q4; ways Q7) | UNRELATED to the boundary (generic left side only) |
+| Count at constant `k` as `Law.run (step (fun _ => 0) c)` (lock Q9) | (a), as a definition; nothing of the boundary |
+| Capacity at `r = 0` as `step (fun _ => 0) N` (level-and-rule Q4) | (a) on `v ≤ cap` |
+| Capacity on `2r ≤ N` as `step (fun _ => 0) (N − 2r)` (lock Q3.1) | (b), on `2r ≤ N`, `v ≤ cap` |
+| `lowStays` as `funded_step`'s reserve conjunct (lock Q3.2) | (a) for one premise; UNRELATED as a case of the law |
+| `locked_stays` is `correction_stays_funded` (level-and-rule Q8) | (b): subtype `r ≤ N`, `B ≤ fee`, a forced-rule step, a lag lemma; `Raises` is not `funded_step` |
+| `closed_of_keptBy` with `funded_step` (level-and-rule Q8) | (b): world carrying the earlier count; capacity dropped |
+| `Ladder.lasts` is `doom_history` (level-and-rule Q4); `closed_orbit` (Astra) | (a), with `doom_step` as `descends`; a history-identification lemma owed |
+| Pair step and agreement up to a mark (Astra Q3) | (a) for `agrees_until_marked`; half of l. 464's right disjunct |
+| `covered_iff_prefix`, the ledger word for word (level-and-rule Q4; Astra Q4) | (a) for the ledger inequality only |
+| `ReaderRebuilding.read`, the unfunded reserve update (Astra Q8) | (a), one definition |
+| `Optimum.Next.rise`, the reserve projection (Astra Q8) | (a) via l. 464 and l. 57; a re-telling |
+| `kept_iff_within`, a degenerate instance (level-and-rule Q4) | UNRELATED: the premise is the conclusion |
+| `falls_or_bound` against l. 205, "matches in shape" (lock Q9) | UNRELATED |
+| `locked_turns_in_time_share_iff`, `locked_ends_rising`, `recoverable_iff_above`, "roles turned" (lock, ways, Astra) | UNRELATED (no map with premises discharged) |
+| `turned_by_loss`, the nearest turned law (lock Q3.3) | UNRELATED (`Accrues` false at `r = 0` and at `B = fee`) |
+| `iter_iff_all` at a constant quota over bounded states (lock Q9) | (b) of a weaker statement; UNRELATED to the boundary |
+| `noReturnAt_of_past`, paper instance (Astra Q3) | (a) of a generic lemma; the content is the file's |
+| Q5 castings A, B, C (ways) and Astra's casting | Re-telling |
+| `Countdown.completes_iff` (tried here; nobody had) | Re-telling; needs a unit-tick refinement that is l. 464 again |
+| MarketInstances, a dictionary (neighbours Q11) | (a) where checked; another file, nothing of PC |
+| ResponseCapacity against `repeat_covered_iff`, "only in shape" (neighbours Q11) | UNRELATED |
+
+**After this check there is no statement of the package of which the file's boundary, `exact_schedule_activation_boundary`, is a case with its statement unchanged.** The nearest is `ends_iff_below_within`, and it holds only of a clipped, constant-quota projection. Even there it states that a threshold exists, which the file's own ll. 464, 524 and 553 are needed to identify.

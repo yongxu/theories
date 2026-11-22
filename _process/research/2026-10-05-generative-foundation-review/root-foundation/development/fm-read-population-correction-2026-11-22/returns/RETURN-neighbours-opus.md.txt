@@ -1,0 +1,238 @@
+# Q11 return: four neighbours of `PopulationCorrection`, read against the package
+
+*AI-written (Claude Opus, reader "neighbours", board row FM), 22 November 2026. Read only: no Lean, no build, no gate, no tests. Every finding is led by OPENED (a statement I opened, with file and line) or TOLD.*
+
+Paths are shortened: `MA/` = `experiments/market-generativity/meta-attractor/`, `MF/` = `experiments/market-generativity/formal/`, `B/` = the package's `Becoming/`.
+
+## 0. What `PopulationCorrection` has (to read the four against)
+
+- OPENED `MA/PopulationCorrection.lean` l. 9-44. The state is `renewing reserve capacity : Nat`. `next` sets `renewing := allocated N k active s.renewing` (`if active then min N (r + k) else r - k`, l. 33-34), `reserve := min fee (s.reserve - (if active then fee else 0) + inflow N active s.renewing)` with `inflow = r + if active then 3 * (N - r) else 0` (l. 36-37), and `capacity := min cap (s.capacity + s.renewing - (N - s.renewing))`, where `active := funded fee s = decide (fee ≤ s.reserve)`.
+- OPENED l. 504-513, `exact_schedule_activation_boundary`. Its premises are `hr : s.renewing ≤ N`, `hf : fee ≤ N` and `hk : ∀ t, 1 ≤ k t`. It states `(∃ t, fee ≤ (history … t).reserve) ↔ fee ≤ s.reserve + available k s.renewing s.renewing`. This is one iff about reaching funding. It is not a statement of both ends.
+- OPENED l. 524-551 and 553-568. The two ends are two theorems, `schedule_shortfall_is_destructive` and `schedule_sufficiency_is_constructive`, that share one condition. OPENED l. 576-592, `schedule_sufficiency_reaches_full_state`: `∃ t, ∀ u, history N fee cap k s (t+u) = ⟨N,fee,cap⟩`. **The constructive end is a fixed state, a standstill.** OPENED l. 594-598, `destructive_region_absorbing`: `B < fee → next N fee cap k ⟨0,B,0⟩ = ⟨0,B,0⟩`.
+- OPENED: nothing in `next` reads `capacity`. The rule (`active`) is read from the reserve, and the counts feed the reserve.
+- OPENED receipt `MA/population-verification.json`: `"axioms": ["Classical.choice", "Quot.sound", "propext"]`.
+
+What PC lacks, as the question frames it: anything that multiplies, a level that the going-on needs (capacity is read by nothing), a rule set again more than once (`active` turns at most once on each course), and a reading.
+
+---
+
+## 1. `MA/ResponseCapacity.lean` (456 lines, `import Std` only; README `MA/RESPONSE-README.md`)
+
+**State and step.** OPENED, l. 171-181:
+```
+structure State where
+  response : Nat
+  support : Nat
+def step (demand investment : Nat) (s : State) : State :=
+  if s.support=0 then s else
+  {response := s.response+2*investment-missed demand s.response,
+   support := s.support + min demand s.response - (missed demand s.response+investment)}
+```
+`missed demand response = demand - response` (l. 125). `run demand policy s` iterates `step demand (policy t x) x` (l. 182-184). A first part (l. 9-120) is a scalar `support` with supplied `repair`/`loss` streams.
+
+**Main statements, every premise.** All OPENED:
+- `exact_no_investment_viability` (l. 318): `(∀ t, 0 < (run demand (fun _ _ => 0) s t).support) ↔ 0 < s.support ∧ demand ≤ s.response`. No premise.
+- `all_locally_optimal_policies_eventually_halt` (l. 438). Premises: `hopt : LocallyOptimal demand policy s` and `hc : s.response < demand`. Conclusion: `∃ t, ∀ u, (run demand policy s (t+u)).support=0`. `LocallyOptimal` (l. 385) is defined as: at every `t`, with `x := run … t`, `policy t x ≤ x.support ∧ ∀ i ≤ x.support, (step demand i x).support ≤ (step demand (policy t x) x).support`. So the policy's criterion is next-step support only.
+- `one_step_recovery_iff` (l. 345). Premises: `0 < s.support` and `s.response < demand`. Statement: `(∃ investment ≤ s.support, 0 < (step …).support ∧ demand ≤ (step …).response) ↔ missed ≤ s.support ∧ 2*missed < s.support + s.response`.
+- Also used: `loss_of_support_absorbing` (l. 185: `s.support=0 → step demand investment s = s`), `full_response_history` (l. 249: with `0 < s.support` and `demand ≤ s.response`, `run … t = ⟨s.response, s.support+demand*t⟩`), and `optimal_live_history_matches_greedy` (l. 407).
+
+**Supplied, not derived.** OPENED in the code, TOLD in the README. Supplied are: the constant demand, the conversion of one unit of investment into two of response, support produced from handled demand, impairment from unhandled demand, and the absorbing law at zero. The absorbing law is the definition's first branch, `if s.support=0 then s`. It is not derived.
+
+**Axioms.** OPENED in the receipt `MA/response-verification.json`: `["Classical.choice", "Quot.sound", "propext"]`. The proofs are carried by `omega`, `simp`, `split` and induction, with `decide` for the numerical witnesses.
+
+**Q2 (what runs down, who gives, what reads what).** OPENED:
+- With zero investment and `response < demand`, response falls by at least one a step (`no_investment_insufficient_response_drop`, l. 200). At zero response, support falls by `demand` a step (`zero_response_history`, l. 214: `⟨0, v - demand*t⟩`).
+- Handled demand gives to support. Investment takes from support and gives twice as much to response.
+- The selecting criterion (`LocallyOptimal`) reads only next-step support. `immediate_support_prefers_no_investment` (l. 188) shows that response, which later support rests on, makes no difference to that criterion.
+- The step's own guard reads support (`if s.support=0`). So here a level is needed: the going-on stops at zero.
+
+**Q6 (is either outcome the second way?).** OPENED:
+- The failing outcome is: run down, then absorbed at zero, for good. The "for good" is supplied by the definition. The README says so in its own words: "rebuilding from zero is outside its law" (TOLD).
+- The lasting outcome is `full_response_history`: response stays fixed and support piles up linearly. Nothing changes form, and no more can go on afterwards. One number accumulates. `expansion_margin` (l. 369) widens only by a supplied `addedResponse`. **Not the second way.** It is a state kept the same, with a counter that grows. It is not a standstill in the letter, because support rises, but nothing else moves.
+
+**Q10 (units with a level and offspring; a rule set again from a share; the level as what they need).** OPENED:
+- Units: none. There is one organization, with no offspring and no share.
+- A level that is needed: whole, but for that one organization, not for units (`step`'s guard).
+- A rule set again: the policy is an arbitrary `Nat → State → Nat`. It is not set from any share or count.
+
+**What it has that PC lacks.** OPENED:
+- (i) A level that the going-on needs. In PC, nothing reads capacity.
+- (ii) A selection given as a criterion over *all* policies meeting it, rather than one supplied law. That criterion reads next support and not response.
+- (iii) The exact condition under which a turn exists one step ahead (`one_step_recovery_iff`).
+
+The ruin of the selection (l. 438) and the existence of a recovering move (l. 345) are two theorems side by side. No statement joins them: neither "the selection halts although a turn existed until step t" nor anything else of that kind. Nothing multiplies here.
+
+**Against the package.** I opened `B/Stock.lean` l. 319, `repeat_covered_iff`: `(∀ k, Covered draw replenish n (repeatCourse w k)) ↔ Covered draw replenish n w ∧ total w draw ≤ total w replenish`. `exact_no_investment_viability` agrees with it **only in shape** (lasting for ever iff the first pass is covered and the return covers the draw). Under no map I can name do they agree word for word. ResponseCapacity has two coupled numbers, response is eroded by misses, and there is no list of actions. Whether it is a case of `Lasting.lasts_iff_ladder` or `Lasting.exhausts` I did not check: I found their names only (`B/Lasting.lean` l. 156, 445) and did not open their statements. By N2 it is a comparison of a start with a threshold (`demand ≤ s.response`).
+
+---
+
+## 2. `MA/RecursiveSelection.lean` (377 lines, `import GenerativeCore`, the old core and not the package; README `MA/README.md`)
+
+**State and step.** OPENED, l. 10-58:
+```
+structure State where  condition : Nat; carrier : Nat; parts : Nat
+def selected (q : Nat) : Bool := decide (3 ≤ q)
+def update (q : Nat) : Nat := if 3 ≤ q then min 8 (q - 1 + 2) else q - 1
+def cycle (arrivals : Nat) (s : State) : State :=
+  if 0 < s.parts then ⟨update s.condition, s.carrier + 1, s.parts - 1 + arrivals⟩ else s
+```
+
+**Main statements.** All OPENED:
+- `exact_basin` (l. 149). Premise `hu : q ≤ 8`. Statement: `(∃ t, iterate update q t = 8) ↔ 3 ≤ q`.
+- `saturated_turnover` (l. 227). Premises: `0 < s.parts`, `3 ≤ s.condition`, `s.condition ≤ 8` and `8 ≤ t`. Statement: `(history 1 s t).condition = 8 ∧ (history 1 s (t+1)).carrier ≠ (history 1 s t).carrier`.
+- `finite_supply_stops` (l. 249): `¬ Generative.Enabled (process 0) (history 0 s s.parts) ()`.
+- `delayed_escape_budget` (l. 315). Premises: `3 ≤ q` and `q ≤ 8`. Statement: `(∃ u ≤ budget, iterate update q t - u < 3) ↔ min 8 (q+t) - 2 ≤ budget`.
+- `no_passive_classifier` (l. 304): no `classifier : (Nat → Nat) → Bool` gives `true` on `iterate update 3` and `false` on `iterate substituted 3`.
+- `moving_boundary_certificate` (l. 81): a next threshold is kept when `nextThreshold + wear ≤ threshold + returned`. The next threshold is supplied.
+
+**Supplied.** OPENED: the threshold 3, the return of 2, the wear of 1, the cap of 8, the arrivals, and the carrier as a counter. The README says the same (TOLD).
+
+**Axioms.** OPENED in the receipt `MA/verification.json`, which covers RecursiveSelection and MarketGenerativity among its sources: `["Classical.choice", "Quot.sound", "propext"]`. The proofs are carried by `omega` and `simp`, with `decide` for witnesses.
+
+**Q2.** OPENED:
+- Parts run down when no part arrives (`finite_parts` l. 235: `s.parts - t`). The condition runs down on the low branch (`low_history` l. 133: `q - t`).
+- Activity A gives two units back to the condition. Arrivals give parts, and they are supplied.
+- `selected` reads the condition. `cycle` reads parts. The selection never reads parts, and no theorem puts the two in one statement: none says "selected stays true while parts run out". The nearest is `invariant_without_activity` (l. 254): `cycle 1 ⟨8,0,0⟩ = ⟨8,0,0⟩ ∧ ¬Enabled`. That is a high stored condition with nothing going on, given as a witness.
+- A reading: a classifier of the condition's history cannot tell the two sources apart (l. 304).
+
+**Q6.** OPENED. `saturated_turnover` is the nearest of all five files to "forms change and the going on continues". The docstring (l. 224-225) says: "The attracting object is a region of organized relations, not a fixed full state."
+
+I dispute this reading. What changes is `carrier : Nat`, a counter raised by one on every step. A carrier has no property except its index. Parts are held the same by `arrivals = 1` (`carrier_supply` l. 160: `(cycle 1 s).parts = s.parts`), and the condition stands at 8. Nothing widens and no more can go on afterwards. **It is the keeping of a state the same, with a label that increments.** A reader who takes "a new carrier each step" for "forms change" would be reading the name of the field, not the statement.
+
+The losing side, `exact_basin`'s other branch, is a monotone run-down with no selecting that uses anything up. Parts are not used by the selection: they are used by every cycle alike.
+
+**Q10.** OPENED:
+- Units: one slot, with successive carriers. Each carrier needs a part (`core_enabled_iff` l. 102: `Enabled ↔ 0 < s.parts`), so whole in part as "a level they need". There are no offspring, since a carrier is replaced, not reproduced.
+- No share.
+- A rule set again: `moving_boundary_certificate` takes the next threshold as supplied, so it is not set from a share or count.
+
+**What it has that PC lacks.** OPENED:
+- A reading (`no_passive_classifier`, and `uniform_delayed_escape` l. 351 on an interval of states not told apart).
+- A level that the going-on needs (parts).
+- A lock that tightens with time: the budget to escape grows to `min 8 (q+t) - 2` (l. 315), and `one_round_closes_budget` (l. 326) shows a budget of 1 closed after one round. This tightening is bounded by the cap: at a budget of 6, escape stays possible for ever. So it is not "can no longer be turned" in the absolute, only for a fixed budget.
+
+Nothing multiplies here. By N2, `exact_basin` is a comparison of a start with a threshold on a monotone two-branch law. I did not open the package's `Lasting.orbit_reaches_iff_variant` to give the map.
+
+---
+
+## 3. `MF/MarketGenerativity.lean` (558 lines, `import Std`)
+
+**State and step.** OPENED, l. 151-153 and 197-203:
+```
+structure State (n : Nat) where (x q w budget : Rat) stock : Fin n → Rat
+def operatingStep p s d :=
+  { x := shareStep s.x p.eta (gap p.fine s.q p.lobby p.cost)
+    q := qualityStep s.q p.alpha p.beta s.w (installed s.budget p.fee) d.error
+    w := influenceStep s.w p.mu p.lambda s.x
+    budget := reserveStep s.budget p.fee p.levy p.cap
+    stock := fun j => supportStep (s.stock j) (p.depreciation j) (p.renewal j)
+      (p.damage j) s.x (p.baseline j) (d.shock j) }
+```
+The pieces, OPENED at l. 12-23:
+- `shareStep x eta g = x+eta*x*(1-x)*g` and `gap = fine*q+lobby-cost`.
+- `influenceStep w mu lambda x = (1-mu)*w+mu*lambda*(1-x)`.
+- `qualityStep = clip01 ((1-alpha*u-beta*w)*q+alpha*u-error)`.
+- `reserveStep = min cap (budget-fee*installed budget fee+levy)`.
+- `supportStep = max 0 ((1-depreciation)*stock+(renewal+damage)*x-damage-baseline-shock)`.
+
+**Main statements.** All OPENED:
+- `share_strictly_increases` (l. 83). Premises: `0 < x`, `x < 1`, `0 < eta`, `0 < g`. Statement: `x < shareStep x eta g`.
+- `safe_history_never_fails` (l. 299). Premises: `hc : Certificate p b`, a structure of 21 fields (l. 159-181), among them `levy_covers_fee : p.fee ≤ p.levy`, `correction_boundary : p.beta*b.wb*b.qb+b.epsilon ≤ p.alpha*(1-b.qb)` and `support_boundary`; `h0 : Safe p b initial`; and `hd : ∀ t, Admissible b (disturbances t)`. Statement: every guarded history is `some (history …)`.
+- `capture_overwhelms_correction` (l. 372) and `profitable_depletion` (l. 365) are `decide +kernel` witnesses at single numbers.
+
+**Supplied.** OPENED: every parameter, the constant levy, the floors, and the disturbances. The file says (l. 3-4): "The policy, charges, reserve levy, measurement bounds, causal stock effects and protected floors are supplied inputs."
+
+**Axioms.** OPENED: the `#print axioms` lines at l. 520 onward, and the receipt `MF/verification.json`: `["Classical.choice", "Quot.sound", "propext"]`. The proofs are carried by `grind`, with `decide +kernel` for the example.
+
+**What grows, by what law, and is anything used up.** OPENED, `shareStep` l. 13. The renewing share `x` (renewing profit minus extracting profit is `gap`, `profits_difference` l. 25) grows by a replicator law, `x + η·x·(1−x)·g`, where `g` reads the rule `q`.
+- `x` is a fraction of a fixed whole, kept in `[0,1]` (`share_step_bounds` l. 69). Its growth draws on nothing: no term of the step takes the share's growth out of any level.
+- What is used up is `stock`. It depreciates, and when `x` is small it falls (`FiniteSupportObstruction.next_support_loss`, `MF/FiniteSupportObstruction.lean` l. 90, OPENED at its statement: with `5 ≤ stock`, `x ≤ 1/6` and `0 ≤ shock`, the next stock is at most `stock − 1`).
+- So "a share that grows" is a share, not units that multiply. When the share grows, stock is fed, not used up. The running down comes from the *other* share, `1−x`, through `-damage + (renewal+damage)·x`.
+
+**Q2.** OPENED from the step's letter. No field of `operatingStep` other than `stock` reads `s.stock`: `x` reads `q`, `q` reads `w` and `budget`, `w` reads `x`, and `budget` reads `budget`. **What sustains (stock) makes no difference to the selection.** Stock is read only by the guard `essentialReady` (l. 269). The reserve is given a constant `levy` a step, which is supplied and not paid by either share. `excluded_recipient_harm_does_not_stop_market` (l. 508, a witness) shows a stock below its floor while the market runs on, because that stock is not essential.
+
+**Rule set again from a share.** OPENED. `q`, the collectible exposure that decides the sign of `gap`, is set every step. It is lowered by `beta*w`, where `w` is moved toward `lambda*(1−x)`, the extracting share. This is a rule set again from a share at every step, not once, and **PC lacks it**. It is a supplied law; no theorem derives it.
+
+**Q6.** OPENED. The kept outcome is `Safe p b` held at all times (`rectangle_all_times` l. 259): the course stays in a box. That is the keeping of a state within bounds, not a form changing. The failing outcome is `guardedStep … none = none` (`failed_market_absorbing` l. 291, by `rfl`). "For good" is again supplied by the definition. **Neither outcome is the second way.**
+
+**Q10.** OPENED: no units and no offspring; a share. The level (stock) is needed by the guard, not by the share's units. A rule is set again from the share at every step (above).
+
+---
+
+## 4. `MF/MarketInstances.lean` (719 lines; imports `Becoming.Viability`, `Becoming.Lasting`, `MarketGenerativity`, `FiniteSupportObstruction`, `PartialRegimeTransition`)
+
+**State and step.** OPENED: those of MarketGenerativity, plus the reduced regime law.
+- `MF/RegimeBoundary.lean` l. 214-218: `OperatingState := Rat × Rat × Rat` and `step … s := (shareStep s.1 eta (fine*(s.2.1-theta)), qualityStep s.2.1 alpha beta s.2.2 1 0, influenceStep s.2.2 mu lambda s.1)`.
+- `MF/RegimeAttraction.lean` l. 11: `family beta := step (1/4) beta 1 (1/5) 4 (1/4) (3/8)`.
+- The reduced law has **no stock and no reserve**, and correction is always installed (`u = 1`).
+
+**Main statements.** All OPENED:
+- `never_fails_iff` (l. 100). No premise beyond `p b s`. No admissible guarded history fails iff `∃ K, K s ∧ (∀ x, K x → essentialReady p b x) ∧ ∀ x e, Admissible b e → K x → K (operatingStep p x e)`. Its proof is `… .trans (guarded_never_fails_iff (worst_admissible b))`, a package law.
+- `forces_failure_instance` (l. 201). Premises: `PairPhysical initial`, `5 ≤ stock`, `∀ n, 0 ≤ shock`, `initial.x * radius (3/2) 1 N ≤ 1/6` and `initial.stock 0 < 5 + N`. Statement: `guarded beta d initial N = none`, for every correction schedule `beta`. It is proved by `Lasting.exhausts`.
+- `landing_boundary_instance` (l. 658). Premises: `0 ≤ b` and `b ≤ 3/4`. Statement: `(∀ s, physical s → 0 < s.1 → ∃ n, Landing (path b s n)) ↔ b ≤ 5/12`. The other side is `fixed_point_instance` (l. 407): `middle b` never lands, by `Lasting.fixed_avoids`.
+- `Landing` (`MF/RegimeTransition.lean` l. 143) is `physical s ∧ 3/4 ≤ s.1 ∧ 1/2 ≤ s.2.1 ∧ s.2.2 ≤ 1/4`.
+
+**Supplied.** OPENED: everything that MarketGenerativity supplies, and the gain estimates of the regime modules. I did not open those modules' proofs.
+
+**Axioms.** OPENED in the audit log `MF/market-instances-checks/20261101T114325.150839Z/MarketInstancesAxiomAudit.log`: 53 declarations, each `[propext, Classical.choice, Quot.sound]`.
+
+**Against the package: N1/N5 holds for this file by its own construction.** OPENED in the proofs above. Its statements are the package's laws in market names, with the market's step as the law:
+- `never_fails_iff` ← `Viability.guarded_never_fails_iff`
+- `forces_failure_instance` ← `Lasting.exhausts`
+- `cover_ladder` (l. 252) ← `Lasting.Ladder`
+- `never_lands_iff` (l. 353) ← `Lasting.some_avoids_iff`
+- `lands_iff_funnel` (l. 673) ← `Lasting.orbit_reaches_iff_funnel`
+
+The direction is package law → market instance. It is a dictionary in the sense of N1, and chapter 5 §10 tells it as such (TOLD: "a rational market model as their periphery instance").
+
+**Q2, Q6, Q10.**
+- OPENED: `forces_failure_instance` is the one statement in the four files where a selection that does not read the level runs that level down whatever correction is chosen. The share grows at most by 3/2, stock is taken a unit a step, and the course fails by step `N`.
+- That is one side only. It is a sufficient condition (TOLD in ch. 5 §10: "a conservative obstruction, not an exact viability boundary"), and "for good" is `none` by definition.
+- `landing_boundary_instance` is the one statement with both outcomes. It is over a *parameter* `b`, not a course. Neither side has a level. The non-landing side is a fixed point (a standstill) and the landing side is reaching a box. Neither is the second way.
+- Q10: as in MarketGenerativity.
+
+---
+
+## 5. Does any of the four have what PC lacks?
+
+Each item below is OPENED, at the statements cited above.
+- **Something that multiplies:** none of the four. MarketGenerativity's `x` is a share that grows by a replicator law of the profit gap. It is bounded by 1, draws on no level, and leaves no offspring. In none of the four files is anything used up by growth. What is used up, stock, falls from the other share's damage and from depreciation.
+- **A level that what goes on needs:** ResponseCapacity's support (the step stops at 0) and RecursiveSelection's parts (`Enabled ↔ 0 < parts`) have it whole, for one organization or one slot. In the market it is needed only by the guard. PC lacks it.
+- **A rule set again more than once:** MarketGenerativity/MarketInstances have it: `q` is moved every step by influence, which follows the extracting share. It is a supplied law. PC lacks it.
+- **A reading:** RecursiveSelection (`no_passive_classifier`; `uniform_delayed_escape` on an interval of states not told apart). ResponseCapacity's `LocallyOptimal` is a criterion that reads one number, next support, and not response. PC lacks both.
+- **What sustains makes no difference to the selection:** whole by the step's letter in MarketGenerativity (no field but `stock` reads `stock`). It is the same in RecursiveSelection (`selected` does not read parts) and in PC (capacity is read by nothing).
+
+In all four files the absorbing end is supplied by definition, not proved of a law: `if s.support=0 then s`; `cycle … else s`; `guardedStep … none = none` by `rfl`. This is N3 for every "can no longer be turned" in them.
+
+**What the tries came back as.** These are two sides with no theorem between them, and one dictionary. MarketInstances is the dictionary (the package's laws in market names). ResponseCapacity has the ruin of the selection (l. 438) and the existence of a turn (l. 345) as two theorems with nothing joining them. RecursiveSelection has the tightening lock (l. 315), the reading (l. 304) and the parts that run down (l. 249) as separate theorems over separate fields.
+
+## 6. What I did not open
+
+- `MF/RegimeAttraction.lean`, beyond `physical`, `family`, `high`, `low` and `middle` at l. 8-16. This includes `high_coupled_history_never_fails` and the two attracting ends at β = 1/2.
+- `MF/RegimeBoundary.lean`, beyond `margin` and `step`.
+- `MF/RegimeTransition.lean`, beyond `Landing`.
+- `MF/PartialRegimeTransition.lean`.
+- `MF/FiniteSupportObstruction.lean`, beyond its definitions and `next_support_loss`.
+- MarketInstances l. 260-340 and 425-640 (the reaching section's estimates).
+- MarketGenerativity l. 415-500 (the collar and the exclusion parameters).
+- `MA/MarketDiagnosis.lean`, `MA/CarrierDiagnosis.lean` and the other files of `MA/`.
+- `MF/README.md`. The READMEs were read only in part: `MA/README.md` to its carrier section, and `MA/RESPONSE-README.md` whole.
+- In the package: only `B/Stock.lean` l. 300-335. I did not open the statements of `Lasting.exhausts`, `lasts_iff_ladder`, `guarded_none_iff`, `orbit_reaches_iff_variant` and `Viability.guarded_never_fails_iff`, so what I say of them is TOLD from their use in MarketInstances.
+- I checked no proof by build.
+
+## 7. The nearest single statement to both ways in one course
+
+Of the five files, the nearest single statement is `ResponseCapacity.exact_no_investment_viability` (`MA/ResponseCapacity.lean` l. 318), read with `optimal_live_history_matches_greedy` (l. 407). Together they say that every course chosen by the immediate-support criterion is the zero-investment course while it lives. So l. 318 is the exact boundary of the selected course itself:
+- It lasts for ever iff `0 < support ∧ demand ≤ response`.
+- Otherwise response, which the criterion does not read, runs down, then support runs down, then the course stops for good.
+
+It is one course and one iff. There is a selection that does not read what it rests on, a level that is needed, and an end that is absorbing. Other candidates fall further short:
+- PC's boundary (l. 504) is about reaching funding, and its two ends are two theorems.
+- MarketInstances' two-sided statement (l. 658) is over a parameter, and its law has no level.
+
+What l. 318 exactly lacks:
+- (a) The second way. The lasting side is `⟨response, support + demand*t⟩` (l. 249): one number piling up while everything else stands still. Nothing changes form and nothing more goes on afterwards.
+- (b) Anything that multiplies, any share, and any rule set again. The criterion is fixed, and the policy is zero.
+- (c) That the losing side is a *selection's* doing *while a turn existed*. That needs l. 345 or the witness `investment_has_real_opportunity_cost` (l. 194, `decide`), and neither is in the statement.
+- (d) A derived "for good": it is the step's first branch.
+- (e) Being more than N2. It compares the start with a threshold (`demand ≤ response`) on a law that is monotone on each side. It agrees in shape with `Stock.repeat_covered_iff` (`B/Stock.lean` l. 319), and I name no map under which they agree word for word.
