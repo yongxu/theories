@@ -8,8 +8,8 @@ Every record in the directive groups `15-*`, `16-*` of [sources](../sources/READ
 
 | Date | Record | Kind | Title | In register |
 |---|---|---|---|---|
-| 2026-11-22 | [2026-11-22-yes-build-it-links-drawn-from-the-lean.md](../sources/15-codex-theory-conversations/2026-11-22-yes-build-it-links-drawn-from-the-lean.md) | record | Ren: "Yes, build it" |  |
-| 2026-11-22 | [2026-11-22-does-our-map-have-a-centre.md](../sources/15-codex-theory-conversations/2026-11-22-does-our-map-have-a-centre.md) | question | Ren: "where is the center of the map of the surface of earth? does our map really have a "center"?" |  |
+| 2026-11-22 | [2026-11-22-yes-build-it-links-drawn-from-the-lean.md](../sources/15-codex-theory-conversations/2026-11-22-yes-build-it-links-drawn-from-the-lean.md) | record | Ren: "Yes, build it" | yes |
+| 2026-11-22 | [2026-11-22-does-our-map-have-a-centre.md](../sources/15-codex-theory-conversations/2026-11-22-does-our-map-have-a-centre.md) | question | Ren: "where is the center of the map of the surface of earth? does our map really have a "center"?" | yes |
 | 2026-11-21 | [2026-11-21-why-is-this-a-selection.md](../sources/15-codex-theory-conversations/2026-11-21-why-is-this-a-selection.md) | decision | Ren: "why is this a selection? explain"; and "let's do it in the best way that is right for other direction" | yes |
 | 2026-11-21 | [2026-11-21-the-current-path-keep-moving.md](../sources/15-codex-theory-conversations/2026-11-21-the-current-path-keep-moving.md) | direction | Ren: "we want the "full picture", we want unified "map" - i think the current path is worth to keep moving" | yes |
 | 2026-11-21 | [2026-11-21-high-and-ultracode-fable-astra-opus.md](../sources/15-codex-theory-conversations/2026-11-21-high-and-ultracode-fable-astra-opus.md) | record | Ren: "Still use Fable for the most important parts, but GPT Astra 6.2 is really smart in many ways" | yes |
