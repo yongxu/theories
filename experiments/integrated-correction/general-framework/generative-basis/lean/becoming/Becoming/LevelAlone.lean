@@ -54,8 +54,12 @@ it too. Law B (`silent_at_start_iff_next_of_le`) derives this from the common pr
 w` (`le`), which includes a return to the start's own use. Law A (`silent_at_start_iff_next`)
 derives it for any corrected use from the common premises, order preservation of `z + giving z`
 (`mono`), and a first step that does not raise the level (`still`). On A's original course no later
-first hit finds a higher level. B only needs the threshold implication. The recoverable, no-return
-and use forms call A. The use form also asks `H₂ + y₂ ≤ hi` (`fits`). Two public statements are
+first hit finds a higher level. B only needs the threshold implication. The recoverable and
+no-return forms are stated under the common premises and `below`
+(`silent_at_start_iff_recoverable_next_of_stays_below`,
+`silent_at_start_none_iff_no_return_of_stays_below`), by the laws of `Becoming.TurningInTime` that
+end `_of_stays_below`; under A's premises they are calls of those. The use form calls A and also
+asks `H₂ + y₂ ≤ hi` (`fits`). Two public statements are
 called by no law over markings: `level_never_rises` and `stays_below_of_le`. They ask a use that
 never falls at any step (`up`) where `level_never_rises_of_rises` and `stays_below_of_le_of_rises`
 ask `high`, `rises` and, respectively, `nothing` and `keeps₀`. `next_above_iff_draw` is the one step
@@ -89,19 +93,13 @@ Argued by a reader, not built as weaker marking laws:
   `differs` suffices without `rest`: mark `X D`, take its first occurrence up to `D`, and carry the
   threshold backward by `below`. On `Seven`, `D = 5` breaks the forward implication without `rest`.
   On `Twelve`, `D = 4` breaks the reverse implication without `differs`.
-* The recoverable and no-return forms can use `below` and the level bound from `keeps₀` and `high`
-  in place of global non-rise. For a successful feasible turn later than the index, `below` carries
-  its threshold back. A successful turn at or before the index agrees with the course as it was at
-  the index, and a kept run that never ends is at or above the threshold at every step, so the level
-  at the index is at or above it. At an above-threshold index the prefix meets the need by `below`
-  and `within`, and the kept run succeeds from that index. Deciding the inequality then gives the
-  first failure of recoverability.
 
 The marking-free criteria cover readings silent at `x₀`; the `readBy` facts and the per-marking
 lemma also allow a marked start. Nothing here derives the correction or changes when it takes
 effect. Not shown here: anything of a reading that reads more than the level (the way, the step, or
-the levels before); anything of a correction with its own argument for the marked level; the
-recoverable, no-return and use forms under `below` or `le` alone (argued above, not built); any
+the levels before); anything of a correction with its own argument for the marked level; the use
+form under `below` or `le` alone (not argued and not built; the recoverable and no-return forms
+under `below` are statements); any
 condition on the regime's numbers for success (for failure only `hi < H₂ + y₂`, by hand, above). A
 course on which a law fails without a premise is given for `mono` and `still` (Lean), for `below`
 (`WithoutMono`: Lean for the core, by hand for the corollary) and for `rest`, `differs` and the
@@ -178,14 +176,6 @@ private theorem level_within {alone : W → W} {giving : Nat → Nat} {use : W �
       (use (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x₀) j).1)
       (level_within (alone := alone) (use := use) (w := w) keeps₀ high j)
 
-/-- If each level below `c` stays below at the next step (`below`), then `c ≤ X T` implies
-`c ≤ X j` for every `j ≤ T`, by decidable order on `Nat`. -/
-private theorem above_before {X : Nat → Nat} {c : Nat} (below : ∀ j, X j < c → X (j + 1) < c)
-    {j : Nat} : ∀ {T : Nat}, j ≤ T → c ≤ X T → c ≤ X j
-  | _, .refl, above => above
-  | _, @Nat.le.step _ m le, above => above_before below le
-      ((Nat.lt_or_ge (X m) c).elim (fun lt => absurd above (Nat.not_le_of_gt (below m lt))) id)
-
 /-- If `H₂ ≤ use w` (`le`) and use does not fall at steps `j < n` (`up`), the use is at least
 `H₂` at each step up to `n`. -/
 private theorem use_from {alone : W → W} {use : W → Nat} {w : W} {H₂ n : Nat} (le : H₂ ≤ use w)
@@ -234,9 +224,10 @@ private theorem never_rises_before {alone : W → W} {giving : Nat → Nat} {use
 /-- When `z + giving z` preserves order (`mono`), use never falls (`up`) and the first step
 does not raise the level (`still`), the level never rises. Its conclusion has the form of the
 premise `fall` of `turned_meets_iff`, `recoverable_iff_above`, `noReturnAt_iff_first_below` and
-`noReturnAt_of_below` of `Becoming.TurningInTime`. No law in this module calls this theorem:
-`recoverable_iff_above` and `noReturnAt_of_below` are called here with `level_never_rises_of_rises`
-as `fall`, and the other two are not called. In the calls found in `TurningInTime` (searched by
+`noReturnAt_of_below` of `Becoming.TurningInTime`. No law in this module calls this theorem, and
+none of those four is called here: this module's recoverable and no-return forms call the laws of
+`Becoming.TurningInTime` that end `_of_stays_below`, with `below` from `level_never_rises_of_rises`
+under law A. In the calls found in `TurningInTime` (searched by
 name), `fall` comes from `asItWas_falls` under `nothing`, `short₁`,
 `uses₁` and `below` (giving short of the original draw, a floor on every original use and a start
 below the original threshold). Other modules were searched by name, not read whole.
@@ -381,7 +372,7 @@ private theorem all_but_start_of_next {t alone : W → W} {Kept : W → Prop}
     «不穷» (net need (readBy (fun x => x ≠ x₀) t alone)
         (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x₀) :=
   have met : ∀ j, j ≤ D → need ≤ level alone giving use w x₀ j := fun _ le =>
-    Nat.le_trans within (above_before below (Nat.le_succ_of_le le) enough)
+    Nat.le_trans within (above_before_of_stays_below below (Nat.le_succ_of_le le) enough)
   (reading_in_time_iff (marked := fun x => x ≠ x₀) sets stays uses nothing short meets keeps₀
     needs within rises high).mpr
     ⟨D, fun j lt => ⟨met j (Nat.le_of_lt lt), fun ne => ne (rest j lt)⟩,
@@ -415,7 +406,7 @@ theorem silent_at_start_iff_next_of_stays_below {t alone : W → W} {Kept : W �
         rises high).mp never with
     | ⟨T, _, _, markedT, enough⟩ => (Nat.lt_or_ge T D).elim
         (fun lt => absurd (Eq.subst (motive := marked) (rest T lt) markedT) silent)
-        (fun ge => above_before below (Nat.succ_le_succ ge) enough),
+        (fun ge => above_before_of_stays_below below (Nat.succ_le_succ ge) enough),
    fun enough => ⟨fun x => x ≠ x₀, inferInstance, fun ne => ne rfl,
      all_but_start_of_next sets stays uses nothing short meets keeps₀ needs within rises high rest
        differs below enough⟩⟩
@@ -538,10 +529,75 @@ theorem silent_at_start_iff_next {t alone : W → W} {Kept : W → Prop} {giving
     (fun j lt => Nat.lt_of_le_of_lt
       (level_never_rises_of_rises mono still nothing high rises j) lt)
 
-/-- Under law A's premises, some marking silent at `x₀` gives a line that never ends exactly
-when the original levels are `Recoverable` at `D + 1`. Feasible courses turn to the standing use
-`H₂`; the need must be met at every step. The lag puts the test one step after the first difference.
-`recoverable_iff_above` takes `fall` from `level_never_rises_of_rises`. -/
+/-- Under the common premises and `below`, some marking silent at `x₀` gives a line that never
+ends exactly when the original levels are `Recoverable` at `D + 1`. Feasible courses turn to the
+standing use `H₂`; the need must be met at every step. The lag puts the test one step after the
+first difference. Neither `mono` nor `still` is asked, so the original level may rise. By
+`silent_at_start_iff_next_of_stays_below` and `recoverable_iff_above_of_stays_below` of
+`Becoming.TurningInTime`, whose bound at `D + 1` is `level_within` from `keeps₀` and `high`. -/
+theorem silent_at_start_iff_recoverable_next_of_stays_below {t alone : W → W} {Kept : W → Prop}
+    {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat}
+    (sets : ∀ v, Kept (t v)) (stays : ∀ v, Kept v → Kept (alone v)) (uses : ∀ v, Kept v → use v = H₂)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps₀ : RegimeMargin.Keeps giving 0 hi)
+    (needs : 0 < need) (within : need ≤ H₂ + y₂)
+    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1)))
+    (high : x₀ ≤ hi) (rest : ∀ j, j < D → level alone giving use w x₀ j = x₀)
+    (differs : level alone giving use w x₀ D ≠ x₀)
+    (below : ∀ j, level alone giving use w x₀ j < H₂ + y₂ →
+      level alone giving use w x₀ (j + 1) < H₂ + y₂) :
+    (∃ (marked : Nat → Prop) (_ : DecidablePred marked), ¬ marked x₀ ∧
+        «不穷» (net need (readBy marked t alone) (fun w x => RegimeMargin.step giving (use w) x)) «一»
+          (w, x₀))
+      ↔ Recoverable (Turned (fun j => level alone giving use w x₀ j) giving H₂) (MeetsNeed need)
+          (fun t _ => level alone giving use w x₀ t) (D + 1) :=
+  (silent_at_start_iff_next_of_stays_below sets stays uses nothing short meets keeps₀ needs within
+      rises high rest differs below).trans
+    (recoverable_iff_above_of_stays_below (X := fun j => level alone giving use w x₀ j) below
+      (level_within keeps₀ high (D + 1)) nothing short meets
+      (fun _ le => kept_within keeps₀ H₂ le) needs within).symm
+
+/-- Under the common premises and `below`, every marking silent at `x₀` satisfies `¬ «不穷»`
+exactly when there is a point of no return `N ≤ D + 1` for the same feasible turns and need as in
+`silent_at_start_iff_recoverable_next_of_stays_below`. The bound includes the lag and permits
+`N = 0`. The universal negation exhibits no end. Neither `mono` nor `still` is asked. Below
+threshold, `noReturnAt_of_below_of_stays_below` of `Becoming.TurningInTime` supplies the point, its
+bound at every step from `level_within`. Conversely, a successful marking silent at `x₀` would
+witness recoverability at `D + 1`, hence at `N` by `Recoverable.earlier` of
+`Becoming.ReadOffInTime`, contradicting `NoReturnAt`. -/
+theorem silent_at_start_none_iff_no_return_of_stays_below {t alone : W → W} {Kept : W → Prop}
+    {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat}
+    (sets : ∀ v, Kept (t v)) (stays : ∀ v, Kept v → Kept (alone v)) (uses : ∀ v, Kept v → use v = H₂)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps₀ : RegimeMargin.Keeps giving 0 hi)
+    (needs : 0 < need) (within : need ≤ H₂ + y₂)
+    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1)))
+    (high : x₀ ≤ hi) (rest : ∀ j, j < D → level alone giving use w x₀ j = x₀)
+    (differs : level alone giving use w x₀ D ≠ x₀)
+    (below : ∀ j, level alone giving use w x₀ j < H₂ + y₂ →
+      level alone giving use w x₀ (j + 1) < H₂ + y₂) :
+    (∀ (marked : Nat → Prop) [DecidablePred marked], ¬ marked x₀ →
+        ¬ «不穷» (net need (readBy marked t alone) (fun w x => RegimeMargin.step giving (use w) x)) «一»
+          (w, x₀))
+      ↔ ∃ N, N ≤ D + 1 ∧
+          NoReturnAt (Turned (fun j => level alone giving use w x₀ j) giving H₂) (MeetsNeed need)
+            (fun t _ => level alone giving use w x₀ t) N :=
+  ⟨fun all => (Nat.lt_or_ge (level alone giving use w x₀ (D + 1)) (H₂ + y₂)).elim
+    (fun under => noReturnAt_of_below_of_stays_below (X := fun j => level alone giving use w x₀ j)
+      below (level_within keeps₀ high) nothing short meets
+      (fun _ le => kept_within keeps₀ H₂ le) needs within under)
+    (fun above =>
+      match (silent_at_start_iff_next_of_stays_below (t := t) sets stays uses nothing short meets
+          keeps₀ needs within rises high rest differs below).mpr above with
+      | ⟨marked, dec, silent, never⟩ => absurd never (@all marked dec silent)),
+   fun ⟨_, le, point⟩ marked dec silent never =>
+    point.1 (Recoverable.earlier
+      ((silent_at_start_iff_recoverable_next_of_stays_below sets stays uses nothing short meets
+        keeps₀ needs within rises high rest differs below).mp ⟨marked, dec, silent, never⟩) le)⟩
+
+/-- Under law A's premises, the same equivalence with `Recoverable` at `D + 1`: a call of
+`silent_at_start_iff_recoverable_next_of_stays_below`, with `below` from
+`level_never_rises_of_rises`. -/
 theorem silent_at_start_iff_recoverable_next {t alone : W → W} {Kept : W → Prop}
     {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat}
     (sets : ∀ v, Kept (t v)) (stays : ∀ v, Kept v → Kept (alone v)) (uses : ∀ v, Kept v → use v = H₂)
@@ -558,18 +614,15 @@ theorem silent_at_start_iff_recoverable_next {t alone : W → W} {Kept : W → P
           (w, x₀))
       ↔ Recoverable (Turned (fun j => level alone giving use w x₀ j) giving H₂) (MeetsNeed need)
           (fun t _ => level alone giving use w x₀ t) (D + 1) :=
-  (silent_at_start_iff_next sets stays uses nothing short meets keeps₀ needs within rises high
-      rest differs mono still).trans
-    (recoverable_iff_above (X := fun j => level alone giving use w x₀ j)
-      (level_never_rises_of_rises mono still nothing high rises) high nothing short meets
-      (fun _ le => kept_within keeps₀ H₂ le) needs within).symm
+  silent_at_start_iff_recoverable_next_of_stays_below sets stays uses nothing short meets keeps₀
+    needs within rises high rest differs
+    (fun j lt => Nat.lt_of_le_of_lt
+      (level_never_rises_of_rises mono still nothing high rises j) lt)
 
-/-- Under law A's premises, every marking silent at `x₀` satisfies `¬ «不穷»` exactly when
-there is a point of no return `N ≤ D + 1` for the same feasible turns and need as in
-`silent_at_start_iff_recoverable_next`. The bound includes the lag and permits `N = 0`.
-The universal negation exhibits no end. Below threshold, `noReturnAt_of_below` supplies the point.
-Conversely, a successful marking silent at `x₀` would witness recoverability at `D + 1`, hence at
-`N` by `Recoverable.earlier` of `Becoming.ReadOffInTime`, contradicting `NoReturnAt`. -/
+/-- Under law A's premises, the same equivalence with a point of no return `N ≤ D + 1`, which
+permits `N = 0`; the universal negation exhibits no end. A call of
+`silent_at_start_none_iff_no_return_of_stays_below`, with `below` from
+`level_never_rises_of_rises`. -/
 theorem silent_at_start_none_iff_no_return {t alone : W → W} {Kept : W → Prop}
     {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat}
     (sets : ∀ v, Kept (t v)) (stays : ∀ v, Kept v → Kept (alone v)) (uses : ∀ v, Kept v → use v = H₂)
@@ -587,18 +640,10 @@ theorem silent_at_start_none_iff_no_return {t alone : W → W} {Kept : W → Pro
       ↔ ∃ N, N ≤ D + 1 ∧
           NoReturnAt (Turned (fun j => level alone giving use w x₀ j) giving H₂) (MeetsNeed need)
             (fun t _ => level alone giving use w x₀ t) N :=
-  ⟨fun all => (Nat.lt_or_ge (level alone giving use w x₀ (D + 1)) (H₂ + y₂)).elim
-    (fun below => noReturnAt_of_below (X := fun j => level alone giving use w x₀ j)
-      (level_never_rises_of_rises mono still nothing high rises) high nothing short meets
-      (fun _ le => kept_within keeps₀ H₂ le) needs within below)
-    (fun above =>
-      match (silent_at_start_iff_next (t := t) sets stays uses nothing short meets keeps₀ needs
-          within rises high rest differs mono still).mpr above with
-      | ⟨marked, dec, silent, never⟩ => absurd never (@all marked dec silent)),
-   fun ⟨_, le, point⟩ marked dec silent never =>
-    point.1 (Recoverable.earlier
-      ((silent_at_start_iff_recoverable_next sets stays uses nothing short meets keeps₀ needs within
-        rises high rest differs mono still).mp ⟨marked, dec, silent, never⟩) le)⟩
+  silent_at_start_none_iff_no_return_of_stays_below sets stays uses nothing short meets keeps₀
+    needs within rises high rest differs
+    (fun j lt => Nat.lt_of_le_of_lt
+      (level_never_rises_of_rises mono still nothing high rises j) lt)
 
 /-- Under law A's premises and `H₂ + y₂ ≤ hi` (`fits`), some marking silent at `x₀` gives a
 line that never ends exactly when the original use at `D` plus `y₂` is at most `X D`.
