@@ -1,0 +1,1000 @@
+{
+ "main": "0db3aaacc",
+ "candidates": [
+  {
+   "name": "Becoming.Law.Drawn.not_returns",
+   "module": "Becoming.Attraction",
+   "premises_only": [
+    "attraction-is-not-returning"
+   ],
+   "conclusion_only": [
+    "recurrence-without-premise"
+   ],
+   "premise_notions": [
+    "Becoming.Law.Drawn"
+   ],
+   "conclusion_notions": [
+    "Becoming.Law.Returns"
+   ],
+   "listed_under": [
+    "attraction-is-not-returning"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.ChoiceCountCapture.counted_outlives_loss",
+   "module": "Becoming.ChoiceCountCapture",
+   "premises_only": [
+    "closed-capture"
+   ],
+   "conclusion_only": [
+    "capture-by-counted-choices",
+    "capture-through-the-rule"
+   ],
+   "premise_notions": [
+    "Becoming.ClosedCapture.Accrues"
+   ],
+   "conclusion_notions": [
+    "Becoming.ChoiceCountCapture.choose",
+    "Becoming.ChoiceCountCapture.weighted",
+    "Becoming.RuleCapture.Locked"
+   ],
+   "listed_under": [
+    "capture-by-counted-choices",
+    "habit-lock-in-active-inference"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Clearing.loses_beyond",
+   "module": "Becoming.Clearing",
+   "premises_only": [
+    "closing-needs-net-draw"
+   ],
+   "conclusion_only": [
+    "loss-beyond-a-region"
+   ],
+   "premise_notions": [
+    "Becoming.Flow.WithheldLevels"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.LosesBeyond"
+   ],
+   "listed_under": [
+    "loss-beyond-a-region"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.ClosedCapture.Thinned.kept_iff",
+   "module": "Becoming.ClosedCapture",
+   "premises_only": [
+    "closed-capture"
+   ],
+   "conclusion_only": [
+    "capture-through-the-rule"
+   ],
+   "premise_notions": [
+    "Becoming.ClosedCapture.Accrues"
+   ],
+   "conclusion_notions": [
+    "Becoming.RuleCapture.Locked"
+   ],
+   "listed_under": [
+    "readers-drawn-from-the-selected"
+   ],
+   "named_by_an_exit_or_transition": true
+  },
+  {
+   "name": "Becoming.ClosedCapture.Thinned.read_in_time_turns",
+   "module": "Becoming.ClosedCapture",
+   "premises_only": [
+    "closed-capture",
+    "readers-drawn-from-the-selected"
+   ],
+   "conclusion_only": [
+    "capture-through-the-rule"
+   ],
+   "premise_notions": [
+    "Becoming.ClosedCapture.Accrues",
+    "Becoming.ClosedCapture.Drawn.pool"
+   ],
+   "conclusion_notions": [
+    "Becoming.RuleCapture.Locked"
+   ],
+   "listed_under": [],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.ClosedCapture.Thinned.read_late_kept",
+   "module": "Becoming.ClosedCapture",
+   "premises_only": [
+    "closed-capture",
+    "readers-drawn-from-the-selected"
+   ],
+   "conclusion_only": [
+    "capture-through-the-rule"
+   ],
+   "premise_notions": [
+    "Becoming.ClosedCapture.Accrues",
+    "Becoming.ClosedCapture.Drawn.pool"
+   ],
+   "conclusion_notions": [
+    "Becoming.RuleCapture.Locked"
+   ],
+   "listed_under": [
+    "readers-drawn-from-the-selected"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.ClosedCapture.Thinned.rule_read",
+   "module": "Becoming.ClosedCapture",
+   "premises_only": [
+    "closed-capture"
+   ],
+   "conclusion_only": [
+    "readers-drawn-from-the-selected"
+   ],
+   "premise_notions": [
+    "Becoming.ClosedCapture.Accrues"
+   ],
+   "conclusion_notions": [
+    "Becoming.ClosedCapture.Drawn.pool"
+   ],
+   "listed_under": [],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.ClosedCapture.Thinned.turned_iff",
+   "module": "Becoming.ClosedCapture",
+   "premises_only": [
+    "closed-capture"
+   ],
+   "conclusion_only": [
+    "capture-through-the-rule"
+   ],
+   "premise_notions": [
+    "Becoming.ClosedCapture.Accrues"
+   ],
+   "conclusion_notions": [
+    "Becoming.RuleCapture.Locked"
+   ],
+   "listed_under": [
+    "readers-drawn-from-the-selected"
+   ],
+   "named_by_an_exit_or_transition": true
+  },
+  {
+   "name": "Becoming.Law.Commutes.halfway_returns",
+   "module": "Becoming.Commuting",
+   "premises_only": [
+    "a-map-moving-every-value-never-rests"
+   ],
+   "conclusion_only": [
+    "returning-where-the-course-branches"
+   ],
+   "premise_notions": [
+    "Becoming.Diagonal.Moves"
+   ],
+   "conclusion_notions": [
+    "Becoming.Branching.Returns"
+   ],
+   "listed_under": [],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Flow.Balances.never_revisits_of_carries",
+   "module": "Becoming.Entropy",
+   "premises_only": [
+    "an-arrow-leaves-change-not-recurring"
+   ],
+   "conclusion_only": [
+    "lossless-exchange-continues-and-returns"
+   ],
+   "premise_notions": [
+    "Becoming.Flow.CarriesHistory"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.Revisits"
+   ],
+   "listed_under": [],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Web.never_revisits_of_arrow",
+   "module": "Becoming.Entropy",
+   "premises_only": [
+    "an-arrow-leaves-change-not-recurring"
+   ],
+   "conclusion_only": [
+    "lossless-exchange-continues-and-returns"
+   ],
+   "premise_notions": [
+    "Becoming.Web.Arrow"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.Revisits"
+   ],
+   "listed_under": [
+    "an-arrow-leaves-change-not-recurring"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Flow.More.unceasing_reidentified",
+   "module": "Becoming.Identity",
+   "premises_only": [
+    "more-needs-renewers"
+   ],
+   "conclusion_only": [
+    "unceasing-generation-needs-renewal"
+   ],
+   "premise_notions": [
+    "Becoming.Flow.More"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.Unceasing"
+   ],
+   "listed_under": [],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Flow.More.unceasing_reidentified_covering",
+   "module": "Becoming.Identity",
+   "premises_only": [
+    "more-needs-renewers"
+   ],
+   "conclusion_only": [
+    "unceasing-generation-needs-renewal"
+   ],
+   "premise_notions": [
+    "Becoming.Flow.More"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.Unceasing"
+   ],
+   "listed_under": [],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Branching.Juncture.possiblyDrawn",
+   "module": "Becoming.Junctures",
+   "premises_only": [
+    "every-loss-passes-a-juncture"
+   ],
+   "conclusion_only": [
+    "necessarily-drawn-is-not-returning"
+   ],
+   "premise_notions": [
+    "Becoming.Branching.Juncture"
+   ],
+   "conclusion_notions": [
+    "Becoming.Branching.PossiblyDrawn"
+   ],
+   "listed_under": [],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Branching.Juncture.returns",
+   "module": "Becoming.Junctures",
+   "premises_only": [
+    "every-loss-passes-a-juncture"
+   ],
+   "conclusion_only": [
+    "returning-where-the-course-branches"
+   ],
+   "premise_notions": [
+    "Becoming.Branching.Juncture"
+   ],
+   "conclusion_notions": [
+    "Becoming.Branching.Returns"
+   ],
+   "listed_under": [],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Branching.PossiblyDrawn.passes_juncture",
+   "module": "Becoming.Junctures",
+   "premises_only": [
+    "necessarily-drawn-is-not-returning",
+    "returning-where-the-course-branches"
+   ],
+   "conclusion_only": [
+    "every-loss-passes-a-juncture"
+   ],
+   "premise_notions": [
+    "Becoming.Branching.PossiblyDrawn",
+    "Becoming.Branching.Returns"
+   ],
+   "conclusion_notions": [
+    "Becoming.Branching.Juncture"
+   ],
+   "listed_under": [],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Branching.loss_passes_juncture",
+   "module": "Becoming.Junctures",
+   "premises_only": [
+    "returning-where-the-course-branches"
+   ],
+   "conclusion_only": [
+    "every-loss-passes-a-juncture"
+   ],
+   "premise_notions": [
+    "Becoming.Branching.Returns"
+   ],
+   "conclusion_notions": [
+    "Becoming.Branching.Juncture"
+   ],
+   "listed_under": [
+    "every-loss-passes-a-juncture"
+   ],
+   "named_by_an_exit_or_transition": true
+  },
+  {
+   "name": "Becoming.Branching.loss_passes_juncture_decided",
+   "module": "Becoming.Junctures",
+   "premises_only": [
+    "returning-where-the-course-branches"
+   ],
+   "conclusion_only": [
+    "every-loss-passes-a-juncture"
+   ],
+   "premise_notions": [
+    "Becoming.Branching.Returns"
+   ],
+   "conclusion_notions": [
+    "Becoming.Branching.Juncture"
+   ],
+   "listed_under": [],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Branching.loss_passes_juncture_decided_from",
+   "module": "Becoming.Junctures",
+   "premises_only": [
+    "returning-where-the-course-branches"
+   ],
+   "conclusion_only": [
+    "every-loss-passes-a-juncture"
+   ],
+   "premise_notions": [
+    "Becoming.Branching.Returns"
+   ],
+   "conclusion_notions": [
+    "Becoming.Branching.Juncture"
+   ],
+   "listed_under": [],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Branching.loss_passes_juncture_from",
+   "module": "Becoming.Junctures",
+   "premises_only": [
+    "returning-where-the-course-branches"
+   ],
+   "conclusion_only": [
+    "every-loss-passes-a-juncture"
+   ],
+   "premise_notions": [
+    "Becoming.Branching.Returns"
+   ],
+   "conclusion_notions": [
+    "Becoming.Branching.Juncture"
+   ],
+   "listed_under": [],
+   "named_by_an_exit_or_transition": true
+  },
+  {
+   "name": "Becoming.Branching.loss_passes_juncture_listed",
+   "module": "Becoming.Junctures",
+   "premises_only": [
+    "returning-where-the-course-branches"
+   ],
+   "conclusion_only": [
+    "every-loss-passes-a-juncture"
+   ],
+   "premise_notions": [
+    "Becoming.Branching.Returns"
+   ],
+   "conclusion_notions": [
+    "Becoming.Branching.Juncture"
+   ],
+   "listed_under": [
+    "every-loss-passes-a-juncture"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Flow.keeping_optimum_takes_slack",
+   "module": "Becoming.Optimum",
+   "premises_only": [
+    "what-an-optimum-does-beyond-what-couples-in"
+   ],
+   "conclusion_only": [
+    "three-outcomes-of-a-loss"
+   ],
+   "premise_notions": [
+    "Becoming.Optimum.Rising",
+    "Becoming.Optimum.Room"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.Broken"
+   ],
+   "listed_under": [
+    "what-an-optimum-does-beyond-what-couples-in"
+   ],
+   "named_by_an_exit_or_transition": true
+  },
+  {
+   "name": "Becoming.Web.Next.frontier_ends_drawn_first",
+   "module": "Becoming.Optimum",
+   "premises_only": [
+    "others-drawing-first-end-the-base"
+   ],
+   "conclusion_only": [
+    "three-outcomes-of-a-loss"
+   ],
+   "premise_notions": [
+    "Becoming.Optimum.Next.leftBy"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.Broken"
+   ],
+   "listed_under": [
+    "others-drawing-first-end-the-base"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Web.Next.frontier_ends_drawn_more",
+   "module": "Becoming.Optimum",
+   "premises_only": [
+    "others-drawing-first-end-the-base"
+   ],
+   "conclusion_only": [
+    "three-outcomes-of-a-loss"
+   ],
+   "premise_notions": [
+    "Becoming.Optimum.Next.leftBy"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.Broken"
+   ],
+   "listed_under": [
+    "others-drawing-first-end-the-base"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Web.mutual_broken_iff_capacity",
+   "module": "Becoming.Optimum",
+   "premises_only": [
+    "several-optimizers-drain-by-their-joint-capacity",
+    "what-an-optimum-does-beyond-what-couples-in"
+   ],
+   "conclusion_only": [
+    "three-outcomes-of-a-loss"
+   ],
+   "premise_notions": [
+    "Becoming.Optimum.MutualBest",
+    "Becoming.Optimum.Rising"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.Broken"
+   ],
+   "listed_under": [
+    "several-optimizers-drain-by-their-joint-capacity"
+   ],
+   "named_by_an_exit_or_transition": true
+  },
+  {
+   "name": "Becoming.Web.optimum_broken_iff",
+   "module": "Becoming.Optimum",
+   "premises_only": [
+    "what-an-optimum-does-beyond-what-couples-in"
+   ],
+   "conclusion_only": [
+    "three-outcomes-of-a-loss"
+   ],
+   "premise_notions": [
+    "Becoming.Optimum.Rising",
+    "Becoming.Optimum.Room"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.Broken"
+   ],
+   "listed_under": [
+    "what-an-optimum-does-beyond-what-couples-in"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Web.optimum_broken_iff_capacity",
+   "module": "Becoming.Optimum",
+   "premises_only": [
+    "what-an-optimum-does-beyond-what-couples-in"
+   ],
+   "conclusion_only": [
+    "three-outcomes-of-a-loss"
+   ],
+   "premise_notions": [
+    "Becoming.Optimum.Rising"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.Broken"
+   ],
+   "listed_under": [
+    "what-an-optimum-does-beyond-what-couples-in"
+   ],
+   "named_by_an_exit_or_transition": true
+  },
+  {
+   "name": "Becoming.Web.optimum_ends_beyond",
+   "module": "Becoming.Optimum",
+   "premises_only": [
+    "what-an-optimum-does-beyond-what-couples-in"
+   ],
+   "conclusion_only": [
+    "three-outcomes-of-a-loss"
+   ],
+   "premise_notions": [
+    "Becoming.Optimum.Rising",
+    "Becoming.Optimum.Room"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.Broken"
+   ],
+   "listed_under": [
+    "what-an-optimum-does-beyond-what-couples-in"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.PoolFromCourse.stands_not_readmitted",
+   "module": "Becoming.PoolFromCourse",
+   "premises_only": [
+    "closed-capture"
+   ],
+   "conclusion_only": [
+    "the-lock-draws-its-readers-out"
+   ],
+   "premise_notions": [
+    "Becoming.ClosedCapture.Accrues"
+   ],
+   "conclusion_notions": [
+    "Becoming.PoolFromCourse.NotReadmitted",
+    "Becoming.PoolFromCourse.Stands"
+   ],
+   "listed_under": [
+    "the-lock-draws-its-readers-out"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.PoolFromCourse.window_order_kept",
+   "module": "Becoming.PoolFromCourse",
+   "premises_only": [
+    "capture-through-the-rule"
+   ],
+   "conclusion_only": [
+    "the-lock-draws-its-readers-out"
+   ],
+   "premise_notions": [
+    "Becoming.RuleCapture.ReadsShare"
+   ],
+   "conclusion_notions": [
+    "Becoming.PoolFromCourse.windowRead"
+   ],
+   "listed_under": [
+    "the-lock-draws-its-readers-out"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.PoolFromCourse.window_removed_unregistered",
+   "module": "Becoming.PoolFromCourse",
+   "premises_only": [
+    "closed-capture"
+   ],
+   "conclusion_only": [
+    "the-lock-draws-its-readers-out"
+   ],
+   "premise_notions": [
+    "Becoming.ClosedCapture.Accrues"
+   ],
+   "conclusion_notions": [
+    "Becoming.PoolFromCourse.windowRead"
+   ],
+   "listed_under": [
+    "the-lock-draws-its-readers-out"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Flow.More.unceasing",
+   "module": "Becoming.Population",
+   "premises_only": [
+    "more-needs-renewers"
+   ],
+   "conclusion_only": [
+    "unceasing-generation-needs-renewal"
+   ],
+   "premise_notions": [
+    "Becoming.Flow.More"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.Unceasing"
+   ],
+   "listed_under": [
+    "more-needs-renewers"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Flow.More.unceasing_covering",
+   "module": "Becoming.Population",
+   "premises_only": [
+    "more-needs-renewers"
+   ],
+   "conclusion_only": [
+    "unceasing-generation-needs-renewal"
+   ],
+   "premise_notions": [
+    "Becoming.Flow.More"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.Unceasing"
+   ],
+   "listed_under": [],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Run.rangeIncludes_conditions_iff",
+   "module": "Becoming.ReachableRanges",
+   "premises_only": [
+    "becoming-renewal-reading"
+   ],
+   "conclusion_only": [
+    "closing-needs-net-draw"
+   ],
+   "premise_notions": [
+    "Becoming.Conditions"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.Includes"
+   ],
+   "listed_under": [],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Run.rangeWidens_conditions_iff",
+   "module": "Becoming.ReachableRanges",
+   "premises_only": [
+    "becoming-renewal-reading"
+   ],
+   "conclusion_only": [
+    "closing-needs-net-draw"
+   ],
+   "premise_notions": [
+    "Becoming.Conditions"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.Widens"
+   ],
+   "listed_under": [],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.ReadInTime.deadline",
+   "module": "Becoming.ReadInTime",
+   "premises_only": [
+    "shaping-read-by-readers-drawn-from-the-selected"
+   ],
+   "conclusion_only": [
+    "capture-through-the-rule"
+   ],
+   "premise_notions": [
+    "Becoming.DrawnShaping.drawn"
+   ],
+   "conclusion_notions": [
+    "Becoming.RuleCapture.Locked"
+   ],
+   "listed_under": [
+    "loss-read-in-time-by-the-others"
+   ],
+   "named_by_an_exit_or_transition": true
+  },
+  {
+   "name": "Becoming.ReadInTime.kept_iff",
+   "module": "Becoming.ReadInTime",
+   "premises_only": [
+    "closed-capture"
+   ],
+   "conclusion_only": [
+    "capture-through-the-rule"
+   ],
+   "premise_notions": [
+    "Becoming.ClosedCapture.Accrues"
+   ],
+   "conclusion_notions": [
+    "Becoming.RuleCapture.Locked"
+   ],
+   "listed_under": [
+    "loss-read-in-time-by-the-others"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.ReadInTime.kept_once_favoured",
+   "module": "Becoming.ReadInTime",
+   "premises_only": [
+    "shaping-read-by-readers-drawn-from-the-selected"
+   ],
+   "conclusion_only": [
+    "capture-through-the-rule"
+   ],
+   "premise_notions": [
+    "Becoming.DrawnShaping.drawn"
+   ],
+   "conclusion_notions": [
+    "Becoming.RuleCapture.Locked"
+   ],
+   "listed_under": [
+    "loss-read-in-time-by-the-others"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.ReadInTime.kept_past_least",
+   "module": "Becoming.ReadInTime",
+   "premises_only": [
+    "shaping-read-by-readers-drawn-from-the-selected"
+   ],
+   "conclusion_only": [
+    "capture-through-the-rule"
+   ],
+   "premise_notions": [
+    "Becoming.DrawnShaping.drawn"
+   ],
+   "conclusion_notions": [
+    "Becoming.RuleCapture.Locked"
+   ],
+   "listed_under": [],
+   "named_by_an_exit_or_transition": true
+  },
+  {
+   "name": "Becoming.ReadInTime.turned_iff",
+   "module": "Becoming.ReadInTime",
+   "premises_only": [
+    "closed-capture"
+   ],
+   "conclusion_only": [
+    "capture-through-the-rule"
+   ],
+   "premise_notions": [
+    "Becoming.ClosedCapture.Accrues",
+    "Becoming.DrawnShaping.drawn"
+   ],
+   "conclusion_notions": [
+    "Becoming.DrawnShaping.drawn",
+    "Becoming.RuleCapture.Locked"
+   ],
+   "listed_under": [
+    "loss-read-in-time-by-the-others"
+   ],
+   "named_by_an_exit_or_transition": true
+  },
+  {
+   "name": "Becoming.Web.firstApart_of_apart",
+   "module": "Becoming.ReadOffInTime",
+   "premises_only": [
+    "closing-needs-net-draw"
+   ],
+   "conclusion_only": [
+    "reading-a-loss-in-time"
+   ],
+   "premise_notions": [
+    "Becoming.Web.Admits"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.FirstApart"
+   ],
+   "listed_under": [],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Web.too_late_of_own",
+   "module": "Becoming.ReadOffInTime",
+   "premises_only": [
+    "closing-needs-net-draw"
+   ],
+   "conclusion_only": [
+    "reading-a-loss-in-time"
+   ],
+   "premise_notions": [
+    "Becoming.Web.Admits"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.ReadableInTime"
+   ],
+   "listed_under": [
+    "reading-a-loss-in-time"
+   ],
+   "named_by_an_exit_or_transition": true
+  },
+  {
+   "name": "Becoming.RemovesLine.not_standsLate",
+   "module": "Becoming.ReadingsPersist",
+   "premises_only": [
+    "selection-read-off-its-own-survivors"
+   ],
+   "conclusion_only": [
+    "readings-carried-and-filtered"
+   ],
+   "premise_notions": [
+    "Becoming.RemovesLine"
+   ],
+   "conclusion_notions": [
+    "Becoming.StandsLate"
+   ],
+   "listed_under": [
+    "selection-read-off-its-own-survivors"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.RegimeMargin.Adjusted.fates",
+   "module": "Becoming.RegimeMargin",
+   "premises_only": [
+    "where-a-run-of-a-regime-comes-to-rest"
+   ],
+   "conclusion_only": [
+    "margin-of-a-regime"
+   ],
+   "premise_notions": [
+    "Becoming.RegimeMargin.Adjusted.Band",
+    "Becoming.RegimeMargin.Adjusted.Rises"
+   ],
+   "conclusion_notions": [
+    "Becoming.RegimeMargin.step"
+   ],
+   "listed_under": [
+    "threshold-in-the-state-plane"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Flow.Balances.mutual_atSetPoint_breaks",
+   "module": "Becoming.SetPointOptimum",
+   "premises_only": [
+    "what-a-set-point-optimum-does-beyond"
+   ],
+   "conclusion_only": [
+    "three-outcomes-of-a-loss"
+   ],
+   "premise_notions": [
+    "Becoming.Optimum.Nearing"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.Broken"
+   ],
+   "listed_under": [
+    "what-a-set-point-optimum-does-beyond"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Optimum.Nearing.not_rising",
+   "module": "Becoming.SetPointOptimum",
+   "premises_only": [
+    "what-a-set-point-optimum-does-beyond"
+   ],
+   "conclusion_only": [
+    "what-an-optimum-does-beyond-what-couples-in"
+   ],
+   "premise_notions": [
+    "Becoming.Optimum.Nearing"
+   ],
+   "conclusion_notions": [
+    "Becoming.Optimum.Rising"
+   ],
+   "listed_under": [
+    "what-a-set-point-optimum-does-beyond"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.Web.ConsumingThrough.consumingIn",
+   "module": "Becoming.Substitution",
+   "premises_only": [
+    "substitution-preserves-consumption"
+   ],
+   "conclusion_only": [
+    "joint-difference-making"
+   ],
+   "premise_notions": [
+    "Becoming.Web.ConsumingThrough"
+   ],
+   "conclusion_notions": [
+    "Becoming.Web.ConsumingIn"
+   ],
+   "listed_under": [],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.TurningInTime.locked_alone_not_below",
+   "module": "Becoming.TurningInTime",
+   "premises_only": [
+    "capture-through-the-rule"
+   ],
+   "conclusion_only": [
+    "turning-in-time"
+   ],
+   "premise_notions": [
+    "Becoming.RuleCapture.Locked",
+    "Becoming.RuleCapture.Raises",
+    "Becoming.RuleCapture.ReadsShare"
+   ],
+   "conclusion_notions": [
+    "Becoming.TurningInTime.windowAlone"
+   ],
+   "listed_under": [
+    "turning-in-time"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.TurningInTime.locked_at_class",
+   "module": "Becoming.TurningInTime",
+   "premises_only": [
+    "capture-through-the-rule"
+   ],
+   "conclusion_only": [
+    "what-a-regularity-takes-in"
+   ],
+   "premise_notions": [
+    "Becoming.RuleCapture.Locked",
+    "Becoming.RuleCapture.Raises",
+    "Becoming.RuleCapture.ReadsShare"
+   ],
+   "conclusion_notions": [
+    "Becoming.«所缘同于»",
+    "Becoming.«本类至终有常»"
+   ],
+   "listed_under": [
+    "turning-in-time"
+   ],
+   "named_by_an_exit_or_transition": false
+  },
+  {
+   "name": "Becoming.TurningInTime.locked_turns_in_time_share_iff",
+   "module": "Becoming.TurningInTime",
+   "premises_only": [
+    "capture-through-the-rule"
+   ],
+   "conclusion_only": [
+    "margin-of-a-regime",
+    "turning-in-time"
+   ],
+   "premise_notions": [
+    "Becoming.RuleCapture.Locked",
+    "Becoming.RuleCapture.Raises",
+    "Becoming.RuleCapture.ReadsShare"
+   ],
+   "conclusion_notions": [
+    "Becoming.RegimeMargin.step",
+    "Becoming.TurningInTime.asItWas",
+    "Becoming.TurningInTime.net",
+    "Becoming.TurningInTime.windowAfterShare",
+    "Becoming.TurningInTime.windowAlone"
+   ],
+   "listed_under": [
+    "turning-in-time"
+   ],
+   "named_by_an_exit_or_transition": false
+  }
+ ]
+}

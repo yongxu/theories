@@ -1,0 +1,3446 @@
+{
+ "main": "10742ca6f",
+ "list_sha256_16": "1f7f88bed4bb6307",
+ "links": [
+  {
+   "from": "a-cascade-along-total-dependence",
+   "to": "support-beyond-a-band-can-cycle",
+   "witnesses": [
+    [
+     "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_within",
+     "Becoming.RegimeMargin.Coupled.Indexed.returns_within"
+    ],
+    [
+     "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_within",
+     "Becoming.RegimeMargin.Coupled.Indexed.repeats"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "a-cascade-along-total-dependence",
+   "to": "threshold-in-the-state-plane",
+   "witnesses": [
+    [
+     "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below",
+     "Becoming.RegimeMargin.leading_exact"
+    ],
+    [
+     "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls",
+     "Becoming.RegimeMargin.leading_falls"
+    ],
+    [
+     "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within",
+     "Becoming.RegimeMargin.leading_exact"
+    ]
+   ],
+   "count": 4
+  },
+  {
+   "from": "a-cascade-along-total-dependence",
+   "to": "where-a-run-of-a-regime-comes-to-rest",
+   "witnesses": [
+    [
+     "Becoming.RegimeMargin.Coupled.threshold_falls",
+     "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls"
+    ],
+    [
+     "Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest",
+     "Becoming.RegimeMargin.Coupled.Indexed.rests_by"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "a-code-formed-between-formations",
+   "to": "merged-distinctions-stay-merged",
+   "witnesses": [
+    [
+     "Becoming.SharedCodes.run_from_imposition",
+     "Becoming.SharedCodes.source_loses_nothing"
+    ],
+    [
+     "Becoming.SharedCodes.run_from_imposition",
+     "Becoming.SharedCodes.run_imposed_stays"
+    ],
+    [
+     "Becoming.SharedCodes.run_from_imposition",
+     "Becoming.SharedCodes.impose_loses_iff"
+    ]
+   ],
+   "count": 5
+  },
+  {
+   "from": "a-counter-rule-read-from-its-own-share",
+   "to": "capture-through-the-rule",
+   "witnesses": [
+    [
+     "Becoming.RuleCapture.Reversed.not_absorbed",
+     "Becoming.RuleCapture.locked_rises",
+     "Becoming.RuleCapture.locked_stays"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "a-counter-rule-read-from-its-own-share",
+   "to": "threshold-reading-read-late-alternates",
+   "witnesses": [
+    [
+     "Becoming.RuleCapture.Reversed.not_absorbed",
+     "Becoming.RuleCapture.Alternating.before_locked"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "a-course-that-only-returns",
+   "to": "where-the-possible-grows",
+   "witnesses": [
+    [
+     "Becoming.Oscillating.returning_has_both",
+     "Becoming.Run.not_keepsWidening_of_returns"
+    ],
+    [
+     "Becoming.Oscillating.generation_without_widening",
+     "Becoming.Oscillating.converse_fails"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "a-line-on-a-stock",
+   "to": "margin-of-a-regime",
+   "witnesses": [
+    [
+     "Becoming.LineOnAStock.unending_iff_holds",
+     "Becoming.RegimeMargin.holds"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "a-line-on-a-stock",
+   "to": "readings-revised-spread-and-locked",
+   "witnesses": [
+    [
+     "Becoming.LineOnAStock.never_in",
+     "Becoming.SelectionTerm.Generations.kept_of_descent",
+     "Becoming.SelectionTerm.Generations.kept_iff"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "a-line-on-a-stock",
+   "to": "turning-in-time",
+   "witnesses": [
+    [
+     "Becoming.LineOnAStock.step_lowers",
+     "Becoming.TurningInTime.held_above"
+    ],
+    [
+     "Becoming.LineOnAStock.ends_low",
+     "Becoming.TurningInTime.kept_within"
+    ],
+    [
+     "Becoming.LineOnAStock.ends_high",
+     "Becoming.TurningInTime.kept_within"
+    ]
+   ],
+   "count": 16
+  },
+  {
+   "from": "a-map-moving-every-value-never-rests",
+   "to": "what-a-commuting-law-keeps-apart",
+   "witnesses": [
+    [
+     "Becoming.Law.Commutes.self_apart",
+     "Becoming.Law.Commutes.apart"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "a-pair-tolerates-only-within-a-window",
+   "to": "giving-that-waits-on-giving",
+   "witnesses": [
+    [
+     "Becoming.WindowedWaiting.Pair.echo_returns",
+     "Becoming.Withholding.withholding_returns"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "a-pair-tolerates-only-within-a-window",
+   "to": "restoring-giving-from-the-worst-start",
+   "witnesses": [
+    [
+     "Becoming.WindowedWaiting.window_withheld_kept",
+     "Becoming.Tolerance.withheld_kept"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "a-pair-tolerates-only-within-a-window",
+   "to": "thresholds-of-waiting",
+   "witnesses": [
+    [
+     "Becoming.WindowedWaiting.window_mono",
+     "Becoming.Tolerance.KeepsInclusionInto.course"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "a-pair-tolerates-only-within-a-window",
+   "to": "withholding-returns-around-a-loop",
+   "witnesses": [
+    [
+     "Becoming.WindowedWaiting.Pair.echo_returns",
+     "Becoming.Withholding.withholding_returns"
+    ],
+    [
+     "Becoming.WindowedWaiting.Pair.alternator_received",
+     "Becoming.WindowedWaiting.Pair.alternator_received_within"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "a-pattern-lasts-through-passing",
+   "to": "whole-persists-through-generation",
+   "witnesses": [
+    [
+     "Becoming.Web.begins_within",
+     "Becoming.Web.Covered.arises_within"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "a-prediction-read-by-what-it-predicts",
+   "to": "publication-under-negation-alternates",
+   "witnesses": [
+    [
+     "Becoming.ReflexivePrediction.Negating.alternates",
+     "Becoming.ReflexivePrediction.Negating.none_right"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "a-reader-rebuilt-from-its-stock-ends-with-it",
+   "to": "the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "witnesses": [
+    [
+     "Becoming.ReaderRebuilding.«以储买时当且仅当取于储»",
+     "Becoming.ReaderRebuilding.«断而有储则读者存»"
+    ],
+    [
+     "Becoming.ReaderRebuilding.«以储买时当且仅当取于储»",
+     "Becoming.ReaderRebuilding.«断则取于供者尽»"
+    ],
+    [
+     "Becoming.ReaderRebuilding.«以储买时当且仅当取于储»",
+     "Becoming.ReaderRebuilding.«不复建者尽»"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "a-reading-informed-and-revalued",
+   "to": "a-break-read-only-by-threshold",
+   "witnesses": [
+    [
+     "Becoming.ListingValuation.through_sensed",
+     "Becoming.Blanket.Blanketed.agent_through_sensory"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "a-reading-kept-by-its-update",
+   "to": "kept-at-the-length-of-a-list",
+   "witnesses": [
+    [
+     "Becoming.held_iff_iter",
+     "Becoming.Iteration.iter_largest"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "a-rule-rebuilt-from-the-members-it-limits",
+   "to": "a-rule-with-no-holder-does-not-return",
+   "witnesses": [
+    [
+     "Becoming.RuleRebuilding.«改额为零则持尽»",
+     "Becoming.RuleRebuilding.«额零则持尽»"
+    ],
+    [
+     "Becoming.RuleRebuilding.«恒取逾生则尽»",
+     "Becoming.RuleRebuilding.«恒取逾生则减»"
+    ],
+    [
+     "Becoming.RuleRebuilding.«稳者恒持当且仅当在带»",
+     "Becoming.RuleRebuilding.«不及任则持尽»"
+    ]
+   ],
+   "count": 10
+  },
+  {
+   "from": "a-rule-with-no-holder-does-not-return",
+   "to": "a-rule-rebuilt-from-the-members-it-limits",
+   "witnesses": [
+    [
+     "Becoming.RuleRebuilding.«改额为零则持尽»",
+     "Becoming.RuleRebuilding.«额零则持尽»"
+    ],
+    [
+     "Becoming.RuleRebuilding.«无持而门开逾生则尽»",
+     "Becoming.RuleRebuilding.«无持者不复»"
+    ],
+    [
+     "Becoming.RuleRebuilding.«无持而门开逾生则尽»",
+     "Becoming.RuleRebuilding.«恒取逾生则尽»"
+    ]
+   ],
+   "count": 5
+  },
+  {
+   "from": "a-run-round-a-loop-keeps-changing",
+   "to": "seeking-boundary",
+   "witnesses": [
+    [
+     "Becoming.Enough.law_possibly_iff_assured",
+     "Becoming.SeekingRuns.rests_iff"
+    ],
+    [
+     "Becoming.Enough.Free.stays_meet_not_assured",
+     "Becoming.Enough.possibly_rests_iff"
+    ],
+    [
+     "Becoming.Enough.Free.stays_meet_not_assured",
+     "Becoming.Enough.assured_iff"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "a-run-round-a-loop-keeps-changing",
+   "to": "when-the-runs-of-a-process-settle",
+   "witnesses": [
+    [
+     "Becoming.Settling.keeps_changing_iff",
+     "Becoming.Settling.loop_of_recurs"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "a-step-coupling-keeps-at-every-horizon",
+   "to": "horizon-optima-hold-the-greatest-renewal",
+   "witnesses": [
+    [
+     "Becoming.Optimum.continued_holding_stepwise_frontier",
+     "Becoming.Optimum.holding_most"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "a-step-coupling-keeps-at-every-horizon",
+   "to": "keeping-forgoes-the-renewal-at-the-need",
+   "witnesses": [
+    [
+     "Becoming.Web.frontier_breaks_stepwise_long",
+     "Becoming.Web.frontier_breaks_below"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "a-stop-passed-by-a-listing-that-fixes-the-sign",
+   "to": "what-a-course-chosen-through-its-model-does-not-test",
+   "witnesses": [
+    [
+     "Becoming.HeldForReading.SignLoop.rests_unread",
+     "Becoming.ReadingLoop.Loop.rests_of_unrefuted"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "a-weighting-faster-than-renewal-ends-the-base",
+   "to": "least-loss-rest",
+   "witnesses": [
+    [
+     "Becoming.Optimum.Holding.logistic_weighted",
+     "Becoming.Optimum.frontier_gains_weighted",
+     "Becoming.Optimum.frontier_gains_of_most",
+     "Becoming.Optimum.Next.frontier_gains_of_most",
+     "Becoming.Optimum.Next.weighted_lt_of_gains",
+     "Becoming.Optimum.Next.drawable_lt_of_gains",
+     "Becoming.Optimum.Next.drawable_le_of_gains",
+     "Becoming.Amounts.le_by_exchange"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "a-weighting-faster-than-renewal-ends-the-base",
+   "to": "others-drawing-first-end-the-base",
+   "witnesses": [
+    [
+     "Becoming.Optimum.exhausting_frontier",
+     "Becoming.Optimum.Next.exhausting_frontier"
+    ],
+    [
+     "Becoming.Optimum.frontier_exhausts",
+     "Becoming.Optimum.Next.frontier_exhausts"
+    ],
+    [
+     "Becoming.Optimum.frontier_below_weighted",
+     "Becoming.Optimum.Next.frontier_below"
+    ]
+   ],
+   "count": 5
+  },
+  {
+   "from": "an-arrow-leaves-change-not-recurring",
+   "to": "lossless-exchange-continues-and-returns",
+   "witnesses": [
+    [
+     "Becoming.World.no_arrow",
+     "Becoming.World.arising_revisits"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "attraction-is-not-returning",
+   "to": "kept-at-the-length-of-a-list",
+   "witnesses": [
+    [
+     "Becoming.Law.drawn_iff_not_reachable_count",
+     "Becoming.Branching.reachable_iff_all"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "attraction-is-not-returning",
+   "to": "lossless-exchange-continues-and-returns",
+   "witnesses": [
+    [
+     "Becoming.Law.succ_drawn_lossless",
+     "Becoming.Law.succ_open"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "attraction-is-not-returning",
+   "to": "returning-where-the-course-branches",
+   "witnesses": [
+    [
+     "Becoming.Law.drawn_iff_not_reachable_count",
+     "Becoming.Law.drawn_iff_lost",
+     "Becoming.Law.returns_iff_always_reachable",
+     "Becoming.Branching.Returns.reachable"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "becoming-renewal-reading",
+   "to": "least-loss-rest",
+   "witnesses": [
+    [
+     "Becoming.falls_not_recurring",
+     "Becoming.Amounts.rests"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "capture-by-counted-choices",
+   "to": "a-counter-rule-read-from-its-own-share",
+   "witnesses": [
+    [
+     "Becoming.ChoiceCountCapture.counted_locks",
+     "Becoming.RuleCapture.locked_stays"
+    ],
+    [
+     "Becoming.ChoiceCountCapture.counted_locks_down",
+     "Becoming.RuleCapture.locked_stays"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "capture-by-counted-choices",
+   "to": "capture-through-the-rule",
+   "witnesses": [
+    [
+     "Becoming.ChoiceCountCapture.counted_locks",
+     "Becoming.RuleCapture.locked_stays"
+    ],
+    [
+     "Becoming.ChoiceCountCapture.counted_locks_down",
+     "Becoming.RuleCapture.locked_stays"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "capture-by-counted-choices",
+   "to": "closed-capture",
+   "witnesses": [
+    [
+     "Becoming.ChoiceCountCapture.counted_outlives_loss",
+     "Becoming.ClosedCapture.lock_outlives_loss"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "capture-by-counted-choices",
+   "to": "habit-lock-in-active-inference",
+   "witnesses": [
+    [
+     "Becoming.ChoiceCountCapture.counted_chooses",
+     "Becoming.ChoiceCountCapture.counted_locks"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "capture-by-counted-choices",
+   "to": "seeking-boundary",
+   "witnesses": [
+    [
+     "Becoming.ChoiceCountCapture.unchosen_beyond_coupling",
+     "Becoming.Flow.unselected_beyond_coupling"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "capture-by-counted-choices",
+   "to": "unselected-beyond-the-coupling-closure",
+   "witnesses": [
+    [
+     "Becoming.ChoiceCountCapture.unchosen_beyond_coupling",
+     "Becoming.Flow.unselected_beyond_coupling"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "capture-through-the-rule",
+   "to": "a-counter-rule-read-from-its-own-share",
+   "witnesses": [
+    [
+     "Becoming.RuleCapture.Reversed.not_absorbed",
+     "Becoming.RuleCapture.locked_rises",
+     "Becoming.RuleCapture.locked_stays"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "capture-through-the-rule",
+   "to": "threshold-reading-read-late-alternates",
+   "witnesses": [
+    [
+     "Becoming.RuleCapture.Reversed.not_absorbed",
+     "Becoming.RuleCapture.Alternating.before_locked"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "closed-capture",
+   "to": "a-counter-rule-read-from-its-own-share",
+   "witnesses": [
+    [
+     "Becoming.ClosedCapture.lock_outlives_loss",
+     "Becoming.RuleCapture.locked_stays"
+    ],
+    [
+     "Becoming.ClosedCapture.readers_uniform_locks",
+     "Becoming.RuleCapture.uniform_locks"
+    ],
+    [
+     "Becoming.ClosedCapture.loss_ends_line",
+     "Becoming.ClosedCapture.turned_by_loss"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "closed-capture",
+   "to": "a-regularity-kept-and-changed",
+   "witnesses": [
+    [
+     "Becoming.ClosedCapture.lock_line",
+     "Becoming.Law.unending_iff_steps"
+    ],
+    [
+     "Becoming.ClosedCapture.loss_ends_line",
+     "Becoming.Law.unending_alike"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "closed-capture",
+   "to": "capture-through-the-rule",
+   "witnesses": [
+    [
+     "Becoming.ClosedCapture.lock_outlives_loss",
+     "Becoming.RuleCapture.locked_stays"
+    ],
+    [
+     "Becoming.ClosedCapture.reading_absorbed",
+     "Becoming.RuleCapture.perturbation_absorbed"
+    ],
+    [
+     "Becoming.ClosedCapture.readers_uniform_locks",
+     "Becoming.RuleCapture.uniform_locks"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "closed-cycle-without-dissipation",
+   "to": "becoming-renewal-reading",
+   "witnesses": [
+    [
+     "Becoming.Web.dissipation_arising_not_recurring",
+     "Becoming.falls_not_recurring"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "closed-cycle-without-dissipation",
+   "to": "continued-change-needs-openness",
+   "witnesses": [
+    [
+     "Becoming.World.exchange_needs",
+     "Becoming.World.exposed_world"
+    ],
+    [
+     "Becoming.World.comes_to_rest_unrefuted",
+     "Becoming.World.comes_to_rest_unrefuted_from"
+    ],
+    [
+     "Becoming.World.exchange_needs",
+     "Becoming.World.throughput_world",
+     "Becoming.World.rests_unrefuted"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "closed-cycle-without-dissipation",
+   "to": "continuing-self-fed-from-beyond",
+   "witnesses": [
+    [
+     "Becoming.World.exchange_needs",
+     "Becoming.witnesses_not_dissipative",
+     "Becoming.Flow.Dissipative.one_taking_not_recurring",
+     "Becoming.Flow.Dissipative.finite_taking_not_recurring"
+    ],
+    [
+     "Becoming.World.exchange_needs",
+     "Becoming.World.throughput_world",
+     "Becoming.World.throughput_arising",
+     "Becoming.Throughput.throughput"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "closed-cycle-without-dissipation",
+   "to": "more-needs-renewers",
+   "witnesses": [
+    [
+     "Becoming.Recycle.closed_unceasing",
+     "Becoming.Web.Unceasing.activeRenewer_recurs"
+    ],
+    [
+     "Becoming.Oscillation.unceasing",
+     "Becoming.Web.Unceasing.activeRenewer_recurs"
+    ],
+    [
+     "Becoming.World.exchange_needs",
+     "Becoming.witnesses_not_dissipative",
+     "Becoming.Pulse.pulsed"
+    ]
+   ],
+   "count": 5
+  },
+  {
+   "from": "closed-cycle-without-dissipation",
+   "to": "no-finite-part-bears-taking",
+   "witnesses": [
+    [
+     "Becoming.World.exchange_needs",
+     "Becoming.witnesses_not_dissipative",
+     "Becoming.Cycle.closed_more"
+    ],
+    [
+     "Becoming.World.exchange_needs",
+     "Becoming.witnesses_not_dissipative",
+     "Becoming.Flow.Dissipative.one_taking_not_recurring",
+     "Becoming.Flow.Dissipative.finite_taking_not_recurring"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "closed-cycle-without-dissipation",
+   "to": "unceasing-generation-needs-renewal",
+   "witnesses": [
+    [
+     "Becoming.Recycle.closed_unceasing",
+     "Becoming.Web.Unceasing.activeRenewer_recurs"
+    ],
+    [
+     "Becoming.Oscillation.unceasing",
+     "Becoming.Web.Unceasing.activeRenewer_recurs"
+    ],
+    [
+     "Becoming.World.exchange_needs",
+     "Becoming.witnesses_not_dissipative",
+     "Becoming.Steady.steady",
+     "Becoming.Flow.uptake_needs_replenishment"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "closed-cycle-without-dissipation",
+   "to": "what-keeping-widening-needs",
+   "witnesses": [
+    [
+     "Becoming.KindRelay.not_keepsWidening_supportedPassing",
+     "Becoming.Flow.not_keepsWidening_along_supportedPassing"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "confined-rise-within-a-whole",
+   "to": "selection-among-groups-by-ending",
+   "witnesses": [
+    [
+     "Becoming.Founding.Flow.survivors_independent",
+     "Becoming.GroupEnding.Flow.family_childless",
+     "Becoming.GroupEnding.Flow.inactive_childless"
+    ],
+    [
+     "Becoming.Founding.Flow.survivors_independent",
+     "Becoming.GroupEnding.Flow.family_childless",
+     "Becoming.Flow.family_excess_ends"
+    ],
+    [
+     "Becoming.Founding.Flow.confined_ends",
+     "Becoming.GroupEnding.Flow.family_childless",
+     "Becoming.GroupEnding.Flow.inactive_childless"
+    ]
+   ],
+   "count": 4
+  },
+  {
+   "from": "continued-change-needs-openness",
+   "to": "ceasing-needs-arising",
+   "witnesses": [
+    [
+     "Becoming.World.rest_needs_census",
+     "Becoming.World.census_one_way"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "continued-change-needs-openness",
+   "to": "closed-cycle-without-dissipation",
+   "witnesses": [
+    [
+     "Becoming.World.exchange_needs",
+     "Becoming.witnesses_not_dissipative",
+     "Becoming.Oscillation.unceasing"
+    ],
+    [
+     "Becoming.World.exchange_needs",
+     "Becoming.witnesses_not_dissipative",
+     "Becoming.Cycle.closed_more"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "continued-change-needs-openness",
+   "to": "continuing-self-fed-from-beyond",
+   "witnesses": [
+    [
+     "Becoming.World.exchange_needs",
+     "Becoming.witnesses_not_dissipative",
+     "Becoming.Flow.Dissipative.one_taking_not_recurring",
+     "Becoming.Flow.Dissipative.finite_taking_not_recurring"
+    ],
+    [
+     "Becoming.World.exchange_needs",
+     "Becoming.World.throughput_world",
+     "Becoming.World.throughput_arising",
+     "Becoming.Throughput.throughput"
+    ],
+    [
+     "Becoming.World.rest_needs_standing",
+     "Becoming.World.throughput_world",
+     "Becoming.World.throughput_arising",
+     "Becoming.Throughput.throughput"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "continued-change-needs-openness",
+   "to": "falls-that-end-do-not-recur",
+   "witnesses": [
+    [
+     "Becoming.Flow.change_stops_unrefuted_around",
+     "Becoming.Flow.change_stops_unrefuted",
+     "Becoming.Amounts.rests_unrefuted"
+    ],
+    [
+     "Becoming.World.rest_few",
+     "Becoming.Flow.change_stops_unrefuted",
+     "Becoming.Amounts.rests_unrefuted"
+    ],
+    [
+     "Becoming.World.arising_stops_unrefuted",
+     "Becoming.World.arising_stops_unrefuted_from",
+     "Becoming.Flow.change_stops_unrefuted",
+     "Becoming.Amounts.rests_unrefuted"
+    ]
+   ],
+   "count": 6
+  },
+  {
+   "from": "continued-change-needs-openness",
+   "to": "least-loss-rest",
+   "witnesses": [
+    [
+     "Becoming.Flow.change_stops_unrefuted_around",
+     "Becoming.Flow.change_stops_unrefuted",
+     "Becoming.Amounts.rests_unrefuted"
+    ],
+    [
+     "Becoming.World.rest_few",
+     "Becoming.Flow.change_stops_unrefuted",
+     "Becoming.Amounts.rests_unrefuted"
+    ],
+    [
+     "Becoming.World.arising_stops_unrefuted",
+     "Becoming.World.arising_stops_unrefuted_from",
+     "Becoming.Flow.change_stops_unrefuted",
+     "Becoming.Amounts.rests_unrefuted"
+    ]
+   ],
+   "count": 6
+  },
+  {
+   "from": "continued-change-needs-openness",
+   "to": "more-needs-renewers",
+   "witnesses": [
+    [
+     "Becoming.World.exchange_needs",
+     "Becoming.witnesses_not_dissipative",
+     "Becoming.Pulse.pulsed"
+    ],
+    [
+     "Becoming.World.exchange_needs",
+     "Becoming.witnesses_not_dissipative",
+     "Becoming.Oscillation.not_more"
+    ],
+    [
+     "Becoming.World.exchange_needs",
+     "Becoming.witnesses_not_dissipative",
+     "Becoming.Steady.steady",
+     "Becoming.Flow.uptake_needs_replenishment"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "continued-change-needs-openness",
+   "to": "no-finite-part-bears-taking",
+   "witnesses": [
+    [
+     "Becoming.World.exchange_needs",
+     "Becoming.witnesses_not_dissipative",
+     "Becoming.Cycle.closed_more"
+    ],
+    [
+     "Becoming.World.exchange_needs",
+     "Becoming.witnesses_not_dissipative",
+     "Becoming.Flow.Dissipative.one_taking_not_recurring",
+     "Becoming.Flow.Dissipative.finite_taking_not_recurring"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "continued-change-needs-openness",
+   "to": "rest-exactly-where-falls-stop",
+   "witnesses": [
+    [
+     "Becoming.World.rests_unrefuted",
+     "Becoming.World.InAmounts.rests_unrefuted_of_stops"
+    ],
+    [
+     "Becoming.World.rests_unrefuted_enclosed",
+     "Becoming.World.InAmounts.rests_unrefuted_enclosed_of_noEndlessFall",
+     "Becoming.World.InAmounts.rests_unrefuted_enclosed_of_stops"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "continued-change-needs-openness",
+   "to": "unceasing-generation-needs-renewal",
+   "witnesses": [
+    [
+     "Becoming.World.exchange_needs",
+     "Becoming.witnesses_not_dissipative",
+     "Becoming.Steady.steady",
+     "Becoming.Flow.uptake_needs_replenishment"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "continuing-self-fed-from-beyond",
+   "to": "becoming-renewal-reading",
+   "witnesses": [
+    [
+     "Becoming.Flow.rising_opens",
+     "Becoming.Flow.rising_not_recurring_on",
+     "Becoming.Flow.rising_not_recurring_from",
+     "Becoming.falls_not_recurring"
+    ],
+    [
+     "Becoming.Flow.rising_fed_from_beyond",
+     "Becoming.Flow.rising_fed_from_beyond_from",
+     "Becoming.Flow.rising_draws_in_from",
+     "Becoming.Flow.rising_not_recurring_from",
+     "Becoming.falls_not_recurring"
+    ],
+    [
+     "Becoming.Web.embodiedArising_draws_in",
+     "Becoming.Flow.standing_draws_in",
+     "Becoming.Flow.rising_draws_in",
+     "Becoming.Flow.rising_draws_in_from",
+     "Becoming.Flow.rising_not_recurring_from",
+     "Becoming.falls_not_recurring"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "continuing-self-fed-from-beyond",
+   "to": "least-loss-rest",
+   "witnesses": [
+    [
+     "Becoming.Flow.Dissipative.opens",
+     "Becoming.Flow.taking_not_recurring_within",
+     "Becoming.Flow.taking_not_recurring_from",
+     "Becoming.Amounts.family_rests_of_archimedean",
+     "Becoming.Amounts.rests_of_archimedean"
+    ],
+    [
+     "Becoming.Flow.fed_from_beyond",
+     "Becoming.Flow.fed_from_beyond_from",
+     "Becoming.Flow.taking_draws_in_from",
+     "Becoming.Flow.taking_not_recurring_from",
+     "Becoming.Amounts.family_rests_of_archimedean",
+     "Becoming.Amounts.rests_of_archimedean"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "continuing-self-fed-from-beyond",
+   "to": "no-finite-part-bears-taking",
+   "witnesses": [
+    [
+     "Becoming.Flow.Dissipative.finite_taking_not_recurring",
+     "Becoming.Flow.Dissipative.opens"
+    ],
+    [
+     "Becoming.rest_needs_quantum",
+     "Becoming.Asymptote.not_balanced",
+     "Becoming.Flow.Balances.taking_not_recurring"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+   "to": "drawers-in-turn",
+   "witnesses": [
+    [
+     "Becoming.Optimum.Coupled.drains_below",
+     "Becoming.Optimum.Coupled.drains_at",
+     "Becoming.Optimum.InTurn.leaves_floor"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "degeneration-from-a-horizon",
+   "to": "a-pattern-lasts-through-passing",
+   "witnesses": [
+    [
+     "Becoming.Web.stopped_degenerates",
+     "Becoming.Web.stopped_gone",
+     "Becoming.Web.ByPassing.ends_within"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "division-by-exclusive-footprints",
+   "to": "what-taking-all-excludes",
+   "witnesses": [
+    [
+     "Becoming.Flow.level_kept_of_plans",
+     "Becoming.Flow.level_kept"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "drawers-in-turn",
+   "to": "horizon-optima-hold-the-greatest-renewal",
+   "witnesses": [
+    [
+     "Becoming.Optimum.Holding.gated_in_turn",
+     "Becoming.Optimum.Holding.gated_alike"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "ending-laws-as-regimes-on-a-lineage",
+   "to": "degeneration-from-a-horizon",
+   "witnesses": [
+    [
+     "Becoming.LineageRegimes.degeneration_of_family_excess",
+     "Becoming.Web.kind_every_branch_ends_of_gone"
+    ],
+    [
+     "Becoming.LineageRegimes.dissipation_degenerates_every_member",
+     "Becoming.LineageRegions.degeneration_of_dissipation",
+     "Becoming.LineageRegions.degeneration_of_empty",
+     "Becoming.Web.ends_of_ends_at"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "ending-laws-as-regimes-on-a-lineage",
+   "to": "generation-and-degeneration-at-two-grains",
+   "witnesses": [
+    [
+     "Becoming.LineageRegimes.stock_forces_neither",
+     "Becoming.«生成退化不并»"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "ending-laws-as-regimes-on-a-lineage",
+   "to": "least-loss-rest",
+   "witnesses": [
+    [
+     "Becoming.Reproduction.Flow.reproducing_within",
+     "Becoming.Flow.takers_within_on",
+     "Becoming.Amounts.losses_within"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "every-loss-passes-a-juncture",
+   "to": "kept-at-the-length-of-a-list",
+   "witnesses": [
+    [
+     "Becoming.Branching.reach_within_listed",
+     "Becoming.Reaching.reach_within_of_pred_le",
+     "Becoming.Reaching.trace_within_pred_length",
+     "Becoming.closure_iff_reach_within",
+     "Becoming.reach_within_pred_length"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "fixation-by-drift",
+   "to": "selection-among-groups-by-ending",
+   "witnesses": [
+    [
+     "Becoming.Drift.Flow.ended_falls_back",
+     "Becoming.GroupEnding.Flow.raises_of_inactive"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "giving-that-waits-on-giving",
+   "to": "withholding-returns-around-a-loop",
+   "witnesses": [
+    [
+     "Becoming.Withholding.gives_without_chain",
+     "Becoming.Withholding.answers_closed"
+    ],
+    [
+     "Becoming.Withholding.Line.passes_out_exact",
+     "Becoming.Withholding.gives_without_chain"
+    ],
+    [
+     "Becoming.Withholding.withholding_returns",
+     "Becoming.Withholding.answers_closed"
+    ]
+   ],
+   "count": 4
+  },
+  {
+   "from": "habit-lock-in-active-inference",
+   "to": "a-counter-rule-read-from-its-own-share",
+   "witnesses": [
+    [
+     "Becoming.ChoiceCountCapture.counted_locks",
+     "Becoming.RuleCapture.locked_stays"
+    ],
+    [
+     "Becoming.ChoiceCountCapture.counted_locks_down",
+     "Becoming.RuleCapture.locked_stays"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "habit-lock-in-active-inference",
+   "to": "capture-by-counted-choices",
+   "witnesses": [
+    [
+     "Becoming.ChoiceCountCapture.counted_locks",
+     "Becoming.ChoiceCountCapture.weighted_reads"
+    ],
+    [
+     "Becoming.ChoiceCountCapture.counted_locks_down",
+     "Becoming.ChoiceCountCapture.weighted_reads"
+    ],
+    [
+     "Becoming.ChoiceCountCapture.counted_outlives_loss",
+     "Becoming.ChoiceCountCapture.weighted_reads"
+    ]
+   ],
+   "count": 5
+  },
+  {
+   "from": "habit-lock-in-active-inference",
+   "to": "capture-through-the-rule",
+   "witnesses": [
+    [
+     "Becoming.ChoiceCountCapture.counted_locks",
+     "Becoming.RuleCapture.locked_stays"
+    ],
+    [
+     "Becoming.ChoiceCountCapture.counted_locks_down",
+     "Becoming.RuleCapture.locked_stays"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "habit-lock-in-active-inference",
+   "to": "closed-capture",
+   "witnesses": [
+    [
+     "Becoming.ChoiceCountCapture.counted_outlives_loss",
+     "Becoming.ClosedCapture.lock_outlives_loss"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "keeping-forgoes-the-renewal-at-the-need",
+   "to": "horizon-optima-hold-the-greatest-renewal",
+   "witnesses": [
+    [
+     "Becoming.Optimum.Holding.logistic_coupled",
+     "Becoming.Optimum.continued_breaking_frontier",
+     "Becoming.Optimum.holding_most"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "kind-relay-keeps-widening-within-kinds",
+   "to": "what-keeping-widening-needs",
+   "witnesses": [
+    [
+     "Becoming.KindRelay.Fed.requirements_not_dissipated",
+     "Becoming.Flow.not_keepsWidening_of_dissipated_requirements"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "late-relay-oscillates",
+   "to": "two-sided-regulation-and-late-reading",
+   "witnesses": [
+    [
+     "Becoming.Regulation.relay_threshold",
+     "Becoming.Regulation.held_oscillates"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "learning-by-refutation",
+   "to": "recurrence-without-premise",
+   "witnesses": [
+    [
+     "Becoming.Learning.diagonal_open",
+     "Becoming.unlisted_of_new",
+     "Becoming.unheld_of_new"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "least-loss-rest",
+   "to": "falls-that-end-do-not-recur",
+   "witnesses": [
+    [
+     "Becoming.Amounts.rests_unrefuted",
+     "Becoming.«尽则不或屡»"
+    ],
+    [
+     "Becoming.Amounts.rests_unrefuted",
+     "Becoming.Amounts.falls_end"
+    ],
+    [
+     "Becoming.Amounts.rests",
+     "Becoming.Amounts.rests_unrefuted"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "least-loss-rest",
+   "to": "rest-exactly-where-falls-stop",
+   "witnesses": [
+    [
+     "Becoming.Amounts.rests_of_finite_reading",
+     "Becoming.Amounts.rests_unrefuted_of_finite_reading"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "least-loss-rest",
+   "to": "returning-where-the-course-branches",
+   "witnesses": [
+    [
+     "Becoming.Branching.loss_needs_merge",
+     "Becoming.Branching.Lossless.loses_nothing",
+     "Becoming.Branching.Lossless.recurs"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "locked-seeking",
+   "to": "seeking-boundary",
+   "witnesses": [
+    [
+     "Becoming.Law.more_never_rests",
+     "Becoming.more_not_at_rest"
+    ],
+    [
+     "Becoming.Law.aboveAll_never_rests",
+     "Becoming.aboveAll_unique"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "loss-beyond-a-region",
+   "to": "closing-needs-net-draw",
+   "witnesses": [
+    [
+     "Becoming.Clearing.loses_beyond",
+     "Becoming.Clearing.admitted_without",
+     "Becoming.Flow.WithheldLevels.unique"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "loss-read-in-time-by-the-others",
+   "to": "readers-drawn-from-the-selected",
+   "witnesses": [
+    [
+     "Becoming.ReadInTime.kept_iff",
+     "Becoming.ClosedCapture.Thinned.read_late_kept"
+    ],
+    [
+     "Becoming.ReadInTime.at_most_one_between",
+     "Becoming.ClosedCapture.Drawn.pool_against"
+    ],
+    [
+     "Becoming.ReadInTime.kept_once_favoured",
+     "Becoming.ClosedCapture.Thinned.read_late_kept"
+    ]
+   ],
+   "count": 8
+  },
+  {
+   "from": "loss-read-in-time-by-the-others",
+   "to": "shaping-read-by-readers-drawn-from-the-selected",
+   "witnesses": [
+    [
+     "Becoming.ReadInTime.late_never_falls",
+     "Becoming.DrawnShaping.drawn_reads_iff"
+    ],
+    [
+     "Becoming.ReadInTime.late_never_falls",
+     "Becoming.DrawnShaping.drawn_locks"
+    ],
+    [
+     "Becoming.ReadInTime.kept_early_iff",
+     "Becoming.DrawnShaping.drawn_locks"
+    ]
+   ],
+   "count": 9
+  },
+  {
+   "from": "lossless-exchange-continues-and-returns",
+   "to": "an-arrow-leaves-change-not-recurring",
+   "witnesses": [
+    [
+     "Becoming.Passing.history_without_arrow",
+     "Becoming.Passing.no_arrow"
+    ],
+    [
+     "Becoming.Passing.no_arrow",
+     "Becoming.Web.never_revisits_of_arrow"
+    ],
+    [
+     "Becoming.Flow.Balances.unending_change_revisits",
+     "Becoming.Flow.Balances.rests_of_never_revisits"
+    ]
+   ],
+   "count": 4
+  },
+  {
+   "from": "margin-of-a-regime",
+   "to": "least-loss-rest",
+   "witnesses": [
+    [
+     "Becoming.RegimeMargin.ends_below",
+     "Becoming.RegimeMargin.Adjusted.ends_below",
+     "Becoming.RegimeMargin.Adjusted.orbit_bound",
+     "Becoming.Amounts.falls_by_stretch"
+    ],
+    [
+     "Becoming.RegimeMargin.ends_iff_below",
+     "Becoming.RegimeMargin.Adjusted.ends_iff_below",
+     "Becoming.RegimeMargin.Adjusted.ends_below",
+     "Becoming.RegimeMargin.Adjusted.orbit_bound",
+     "Becoming.Amounts.falls_by_stretch"
+    ],
+    [
+     "Becoming.RegimeMargin.stays_ended",
+     "Becoming.RegimeMargin.Adjusted.stays_ended",
+     "Becoming.RegimeMargin.Adjusted.ends_below",
+     "Becoming.RegimeMargin.Adjusted.orbit_bound",
+     "Becoming.Amounts.falls_by_stretch"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "merged-distinctions-stay-merged",
+   "to": "a-code-formed-between-formations",
+   "witnesses": [
+    [
+     "Becoming.SharedCodes.run_from_imposition",
+     "Becoming.SharedCodes.source_loses_nothing"
+    ],
+    [
+     "Becoming.SharedCodes.run_from_imposition",
+     "Becoming.SharedCodes.impose_loses_iff"
+    ],
+    [
+     "Becoming.SharedCodes.run_from_imposition",
+     "Becoming.SharedCodes.impose_agrees"
+    ]
+   ],
+   "count": 4
+  },
+  {
+   "from": "merged-distinctions-stay-merged",
+   "to": "encounter-selection-and-revision",
+   "witnesses": [
+    [
+     "Becoming.SharedCodes.kept_bars",
+     "Becoming.CrossSituational.narrows"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "more-needs-renewers",
+   "to": "becoming-renewal-reading",
+   "witnesses": [
+    [
+     "Becoming.Web.dissipation_arising_not_recurring",
+     "Becoming.falls_not_recurring"
+    ],
+    [
+     "Becoming.Web.Unceasing.rises",
+     "Becoming.Web.depletion_not_recurring",
+     "Becoming.falls_not_recurring"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "more-needs-renewers",
+   "to": "closed-cycle-without-dissipation",
+   "witnesses": [
+    [
+     "Becoming.Oscillation.not_more",
+     "Becoming.Oscillation.unceasing"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "more-needs-renewers",
+   "to": "least-loss-rest",
+   "witnesses": [
+    [
+     "Becoming.Flow.More.replenishment_unbounded",
+     "Becoming.Flow.More.replenishment_unbounded_from",
+     "Becoming.Amounts.replenishment_unbounded",
+     "Becoming.Amounts.family_rests_of_archimedean",
+     "Becoming.Amounts.rests_of_archimedean"
+    ],
+    [
+     "Becoming.Flow.More.renewers_unbounded",
+     "Becoming.Flow.More.renewers_unbounded_from",
+     "Becoming.Flow.More.replenishment_unbounded_from",
+     "Becoming.Amounts.replenishment_unbounded",
+     "Becoming.Amounts.family_rests_of_archimedean",
+     "Becoming.Amounts.rests_of_archimedean"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "more-needs-renewers",
+   "to": "unceasing-generation-needs-renewal",
+   "witnesses": [
+    [
+     "Becoming.Recycle.closed_unceasing",
+     "Becoming.Web.Unceasing.activeRenewer_recurs"
+    ],
+    [
+     "Becoming.Web.Unceasing.activeRenewer_recurs",
+     "Becoming.Web.Unceasing.rises"
+    ],
+    [
+     "Becoming.Flow.uptake_needs_replenishment",
+     "Becoming.Flow.uptake_needs_replenishment_from"
+    ]
+   ],
+   "count": 4
+  },
+  {
+   "from": "never-leaving-a-guard",
+   "to": "a-reading-kept-by-its-update",
+   "witnesses": [
+    [
+     "Becoming.Viability.kernel_iff_iter",
+     "Becoming.held_iff_iter"
+    ],
+    [
+     "Becoming.Viability.kernel_iff_iter",
+     "Becoming.Viability.kernel_iff_held"
+    ],
+    [
+     "Becoming.Viability.kernel_iff_iter_pred_length",
+     "Becoming.Viability.kernel_iff_held"
+    ]
+   ],
+   "count": 6
+  },
+  {
+   "from": "never-leaving-a-guard",
+   "to": "becoming-renewal-reading",
+   "witnesses": [
+    [
+     "Becoming.Renewable.kept_part_not_renewal",
+     "Becoming.Renewable.class_belongs_to_the_run"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "never-leaving-a-guard",
+   "to": "kept-at-the-length-of-a-list",
+   "witnesses": [
+    [
+     "Becoming.Viability.keepable_iff_count",
+     "Becoming.Iteration.iter_largest"
+    ],
+    [
+     "Becoming.Viability.kernel_iff_iter_pred_length",
+     "Becoming.held_iff_iter_pred_length",
+     "Becoming.Iteration.iter_pred"
+    ],
+    [
+     "Becoming.Viability.kernel_iff_iter_pred_length",
+     "Becoming.held_iff_iter_pred_length",
+     "Becoming.Iteration.iter_persists_from_all",
+     "Becoming.Iteration.iter_persists"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "no-finite-part-bears-taking",
+   "to": "continuing-self-fed-from-beyond",
+   "witnesses": [
+    [
+     "Becoming.Flow.Dissipative.finite_taking_not_recurring",
+     "Becoming.Flow.Dissipative.opens"
+    ],
+    [
+     "Becoming.Flow.More.opens",
+     "Becoming.Flow.Dissipative.opens"
+    ],
+    [
+     "Becoming.Flow.opens_of_arising",
+     "Becoming.Flow.Dissipative.opens"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "no-finite-part-bears-taking",
+   "to": "least-loss-rest",
+   "witnesses": [
+    [
+     "Becoming.Flow.conveyed_loses",
+     "Becoming.Flow.takers_within_on",
+     "Becoming.Amounts.losses_within"
+    ],
+    [
+     "Becoming.Flow.Balances.taking_not_recurring",
+     "Becoming.Flow.taking_not_recurring_from",
+     "Becoming.Amounts.family_rests_of_archimedean",
+     "Becoming.Amounts.rests_of_archimedean"
+    ],
+    [
+     "Becoming.Flow.Dissipative.opens",
+     "Becoming.Flow.taking_not_recurring_within",
+     "Becoming.Flow.taking_not_recurring_from",
+     "Becoming.Amounts.family_rests_of_archimedean",
+     "Becoming.Amounts.rests_of_archimedean"
+    ]
+   ],
+   "count": 4
+  },
+  {
+   "from": "offspring-read-from-giving-that-waits",
+   "to": "shaping-the-rule-selected-by-what-comes-back",
+   "witnesses": [
+    [
+     "Becoming.PairSelection.assorted_favours_iff",
+     "Becoming.RuleShaping.favours_iff"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "optima-rebuild-a-depleted-base",
+   "to": "a-weighting-faster-than-renewal-ends-the-base",
+   "witnesses": [
+    [
+     "Becoming.Optimum.Holding.doubling_rebuilds",
+     "Becoming.Optimum.frontier_exhausts"
+    ],
+    [
+     "Becoming.Optimum.Holding.doubling_rebuilds",
+     "Becoming.Optimum.exhausting_frontier"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "optima-rebuild-a-depleted-base",
+   "to": "least-loss-rest",
+   "witnesses": [
+    [
+     "Becoming.Optimum.frontier_rebuilt",
+     "Becoming.Optimum.Next.frontier_rebuilt",
+     "Becoming.Optimum.Next.frontier_gains_of_most",
+     "Becoming.Optimum.Next.weighted_lt_of_gains",
+     "Becoming.Optimum.Next.drawable_lt_of_gains",
+     "Becoming.Optimum.Next.drawable_le_of_gains",
+     "Becoming.Amounts.le_by_exchange"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "optima-rebuild-a-depleted-base",
+   "to": "others-drawing-first-end-the-base",
+   "witnesses": [
+    [
+     "Becoming.Optimum.frontier_rebuilds",
+     "Becoming.Optimum.Next.frontier_rebuilds"
+    ],
+    [
+     "Becoming.Optimum.rebuilding_frontier",
+     "Becoming.Optimum.Next.rebuilding_frontier",
+     "Becoming.Optimum.Next.frontier_of_gainsMost"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "others-drawing-first-end-the-base",
+   "to": "a-weighting-faster-than-renewal-ends-the-base",
+   "witnesses": [
+    [
+     "Becoming.Optimum.Next.exhausting_frontier",
+     "Becoming.Optimum.Next.outpaced_greatest"
+    ],
+    [
+     "Becoming.Optimum.Next.frontier_exhausts",
+     "Becoming.Optimum.Next.outpaced_greatest"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "others-drawing-first-end-the-base",
+   "to": "least-loss-rest",
+   "witnesses": [
+    [
+     "Becoming.Optimum.Next.frontier_of_gainsMost",
+     "Becoming.Optimum.Next.weighted_le_of_gains",
+     "Becoming.Optimum.Next.drawable_le_of_gains",
+     "Becoming.Amounts.le_by_exchange"
+    ],
+    [
+     "Becoming.Optimum.Next.frontier_below",
+     "Becoming.Optimum.Next.frontier_gains_of_most",
+     "Becoming.Optimum.Next.weighted_lt_of_gains",
+     "Becoming.Optimum.Next.drawable_lt_of_gains",
+     "Becoming.Optimum.Next.drawable_le_of_gains",
+     "Becoming.Amounts.le_by_exchange"
+    ],
+    [
+     "Becoming.Optimum.Next.frontier_leaves",
+     "Becoming.Optimum.Next.ended_outdrawn",
+     "Becoming.Optimum.Next.weighted_lt_of_gains",
+     "Becoming.Optimum.Next.drawable_lt_of_gains",
+     "Becoming.Optimum.Next.drawable_le_of_gains",
+     "Becoming.Amounts.le_by_exchange"
+    ]
+   ],
+   "count": 4
+  },
+  {
+   "from": "others-drawing-first-end-the-base",
+   "to": "optima-rebuild-a-depleted-base",
+   "witnesses": [
+    [
+     "Becoming.Optimum.Holding.doubling_drawn_first",
+     "Becoming.Optimum.frontier_rebuilt"
+    ],
+    [
+     "Becoming.Optimum.Holding.doubling_drawn_first",
+     "Becoming.Optimum.frontier_rebuilds"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "overcompensating-giving-cycles",
+   "to": "where-a-run-of-a-regime-comes-to-rest",
+   "witnesses": [
+    [
+     "Becoming.RegimeMargin.Adjusted.comes_to_rest",
+     "Becoming.RegimeMargin.Adjusted.rests_from"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "overshoot-beyond-the-gap",
+   "to": "supported-renewal-recovery",
+   "witnesses": [
+    [
+     "Becoming.Flow.crosses_of_below",
+     "Becoming.Flow.withinGap_iff_of_below",
+     "Becoming.Flow.net_give_raises_at"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "overshoot-beyond-the-gap",
+   "to": "two-sided-regulation-and-late-reading",
+   "witnesses": [
+    [
+     "Becoming.Flow.not_at_of_beyond",
+     "Becoming.Flow.withinGap_iff_between"
+    ],
+    [
+     "Becoming.Flow.crosses_of_above",
+     "Becoming.Flow.withinGap_iff_of_above",
+     "Becoming.Flow.withinGap_iff_between"
+    ],
+    [
+     "Becoming.Flow.crosses_of_below",
+     "Becoming.Flow.withinGap_iff_of_below",
+     "Becoming.Flow.withinGap_iff_between"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "overshooting-thermostat-alternates",
+   "to": "where-the-possible-grows",
+   "witnesses": [
+    [
+     "Becoming.Rooms.Overshooting.not_widening",
+     "Becoming.Run.not_keepsWidening_of_returns"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "own-count-misses-joint-excess",
+   "to": "consumption-ends-with-feeders",
+   "witnesses": [
+    [
+     "Becoming.Pair.no_web",
+     "Becoming.Flow.excess_bounded"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "own-count-misses-joint-excess",
+   "to": "loss-of-renewal-for-good",
+   "witnesses": [
+    [
+     "Becoming.Flow.ends_below",
+     "Becoming.Flow.ends_below_at"
+    ],
+    [
+     "Becoming.Flow.stays_below",
+     "Becoming.Flow.never_returns_below"
+    ],
+    [
+     "Becoming.Exceeding.all_end",
+     "Becoming.Flow.ends_below"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "own-count-misses-joint-excess",
+   "to": "two-sided-regulation-and-late-reading",
+   "witnesses": [
+    [
+     "Becoming.Flow.stays_below",
+     "Becoming.Flow.never_returns_below"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "persisting-filters-what-was-chosen",
+   "to": "mutual-dependence-and-its-pace",
+   "witnesses": [
+    [
+     "Becoming.FromTheDynamics.Alternating.joined",
+     "Becoming.Flow.returning_downstream_iff_mutuallyDependent"
+    ],
+    [
+     "Becoming.FromTheDynamics.Alternating.joined",
+     "Becoming.FromTheDynamics.Alternating.returns",
+     "Becoming.Flow.MutuallyDependent.reachReturns"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "persisting-filters-what-was-chosen",
+   "to": "selection-among-groups-by-ending",
+   "witnesses": [
+    [
+     "Becoming.GroupEnding.Flow.coupled_generation_childless",
+     "Becoming.GroupEnding.Flow.family_childless",
+     "Becoming.GroupEnding.Flow.inactive_childless"
+    ],
+    [
+     "Becoming.GroupEnding.Flow.coupled_generation_childless",
+     "Becoming.GroupEnding.Flow.family_childless",
+     "Becoming.Flow.family_excess_ends"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "position-does-not-protect",
+   "to": "closing-needs-net-draw",
+   "witnesses": [
+    [
+     "Becoming.Clearing.loss_needs_significance",
+     "Becoming.Clearing.clearer_loses_dweller",
+     "Becoming.Clearing.admitted_without",
+     "Becoming.Flow.WithheldLevels.unique"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "position-does-not-protect",
+   "to": "loss-of-renewal-for-good",
+   "witnesses": [
+    [
+     "Becoming.Flow.ends_at_race_end",
+     "Becoming.Flow.ends_below_at"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "position-does-not-protect",
+   "to": "own-count-misses-joint-excess",
+   "witnesses": [
+    [
+     "Becoming.Flow.race_ends_greatest",
+     "Becoming.Flow.stays_below"
+    ],
+    [
+     "Becoming.Flow.race_ends_greatest",
+     "Becoming.Flow.joint_excess_ends"
+    ],
+    [
+     "Becoming.Race.greatest_ends",
+     "Becoming.Flow.joint_excess_ends"
+    ]
+   ],
+   "count": 4
+  },
+  {
+   "from": "publication-under-negation-alternates",
+   "to": "a-prediction-read-by-what-it-predicts",
+   "witnesses": [
+    [
+     "Becoming.ReflexivePrediction.Negating.none_right",
+     "Becoming.ReflexivePrediction.none_right_of_moves"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "re-optimizing-above-a-renewal-ends-it",
+   "to": "least-loss-rest",
+   "witnesses": [
+    [
+     "Becoming.Web.lost_iff",
+     "Becoming.Web.lost_over",
+     "Becoming.Optimum.ends_within",
+     "Becoming.Amounts.falls_by_stretch"
+    ],
+    [
+     "Becoming.Web.course_kept_iff",
+     "Becoming.Optimum.kept_iff_within",
+     "Becoming.Optimum.ends_within",
+     "Becoming.Amounts.falls_by_stretch"
+    ],
+    [
+     "Becoming.Web.mutual_course_lost",
+     "Becoming.Web.lost_over",
+     "Becoming.Optimum.ends_within",
+     "Becoming.Amounts.falls_by_stretch"
+    ]
+   ],
+   "count": 8
+  },
+  {
+   "from": "re-optimizing-above-a-renewal-ends-it",
+   "to": "several-optimizers-drain-by-their-joint-capacity",
+   "witnesses": [
+    [
+     "Becoming.Optimum.mutual_course_beyond",
+     "Becoming.Optimum.mutual_beyond"
+    ],
+    [
+     "Becoming.Optimum.Renewing.restrained_course_not_best",
+     "Becoming.Optimum.MutualBest.full"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "re-optimizing-above-a-renewal-ends-it",
+   "to": "what-an-optimum-does-beyond-what-couples-in",
+   "witnesses": [
+    [
+     "Becoming.Optimum.course_beyond",
+     "Becoming.Optimum.optimum_beyond"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "readers-drawn-from-the-selected",
+   "to": "a-counter-rule-read-from-its-own-share",
+   "witnesses": [
+    [
+     "Becoming.ClosedCapture.Drawn.through_locks",
+     "Becoming.RuleCapture.uniform_locks"
+    ],
+    [
+     "Becoming.ClosedCapture.agreeing_stays",
+     "Becoming.RuleCapture.locked_stays"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "readers-drawn-from-the-selected",
+   "to": "capture-through-the-rule",
+   "witnesses": [
+    [
+     "Becoming.ClosedCapture.Drawn.through_locks",
+     "Becoming.RuleCapture.uniform_locks"
+    ],
+    [
+     "Becoming.ClosedCapture.agreeing_stays",
+     "Becoming.RuleCapture.locked_stays"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "reading-a-loss-in-time",
+   "to": "margin-of-a-regime",
+   "witnesses": [
+    [
+     "Becoming.FourReaders.recoverable_iff_regime",
+     "Becoming.FourReaders.regime_point",
+     "Becoming.RegimeMargin.ends_iff_below"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "readings-carried-and-filtered",
+   "to": "persisting-filters-what-was-chosen",
+   "witnesses": [
+    [
+     "Becoming.Flow.carried_keeping_above_ending",
+     "Becoming.Flow.persisting_keeping_above_ending"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "readings-carried-and-filtered",
+   "to": "readings-revised-spread-and-locked",
+   "witnesses": [
+    [
+     "Becoming.Flow.lineOf_carries",
+     "Becoming.SelectionTerm.Generations.kept_of_descent",
+     "Becoming.SelectionTerm.Generations.kept_iff"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "readings-carried-and-filtered",
+   "to": "unselected-beyond-the-coupling-closure",
+   "witnesses": [
+    [
+     "Becoming.line_standing_unselected",
+     "Becoming.act_courses_unselected_throughout"
+    ],
+    [
+     "Becoming.line_standing_unselected_of_reads",
+     "Becoming.significance_courses_unselected"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "readings-revised-spread-and-locked",
+   "to": "ending-laws-as-regimes-on-a-lineage",
+   "witnesses": [
+    [
+     "Becoming.Flow.carriers_drawn_down",
+     "Becoming.LineageDrawdown.below_iff"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "readings-revised-spread-and-locked",
+   "to": "selection-read-off-its-own-survivors",
+   "witnesses": [
+    [
+     "Becoming.standingCount_unselected",
+     "Becoming.reader_kept_alike"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "readings-within-what-they-read",
+   "to": "a-map-moving-every-value-never-rests",
+   "witnesses": [
+    [
+     "Becoming.Diagonal.unfolding_open",
+     "Becoming.Diagonal.flip_moves"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "recurrence-without-premise",
+   "to": "learning-by-refutation",
+   "witnesses": [
+    [
+     "Becoming.Parting.free_unbounded",
+     "Becoming.Learning.diagonal_not_lasso"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "recurrence-without-premise",
+   "to": "returning-where-the-course-branches",
+   "witnesses": [
+    [
+     "Becoming.Law.returns_iff_keeps",
+     "Becoming.Branching.Returns.reachable"
+    ],
+    [
+     "Becoming.Law.rise_not_lossless",
+     "Becoming.Branching.rise_not_lossless",
+     "Becoming.Branching.Lossless.no_rise",
+     "Becoming.Branching.Lossless.recurs"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "recurring-reference-revision",
+   "to": "becoming-renewal-reading",
+   "witnesses": [
+    [
+     "Becoming.ContinuingRevision.no_run_without_return",
+     "Becoming.Run.not_of_depletion"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "recurring-reference-revision",
+   "to": "selection-when-the-lumping-changes",
+   "witnesses": [
+    [
+     "Becoming.Stock.repeat_covered_iff",
+     "Becoming.Stock.feasible_iff_covered"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "reserve-defers-ending",
+   "to": "becoming-renewal-reading",
+   "witnesses": [
+    [
+     "Becoming.Web.Carries.active_not_recurring",
+     "Becoming.Web.active_not_recurring_from",
+     "Becoming.falls_not_recurring"
+    ],
+    [
+     "Becoming.Web.Carries.consumed_lasts",
+     "Becoming.Web.active_not_recurring_from",
+     "Becoming.falls_not_recurring"
+    ],
+    [
+     "Becoming.Web.Carries.coextinct_lasts",
+     "Becoming.Web.active_not_recurring_from",
+     "Becoming.falls_not_recurring"
+    ]
+   ],
+   "count": 4
+  },
+  {
+   "from": "reserve-defers-ending",
+   "to": "dormancy-over-a-stretch",
+   "witnesses": [
+    [
+     "Becoming.Web.Carries.ends_within",
+     "Becoming.Web.ends_within_from",
+     "Becoming.Web.ends_within_on"
+    ],
+    [
+     "Becoming.Web.Carries.chain_ends",
+     "Becoming.Web.chain_ends_from",
+     "Becoming.Web.ends_within_from",
+     "Becoming.Web.ends_within_on"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "rest-at-every-resolution",
+   "to": "continued-change-needs-openness",
+   "witnesses": [
+    [
+     "Becoming.World.rests_unrefuted_refinement_counted",
+     "Becoming.World.rests_unrefuted_enclosed"
+    ],
+    [
+     "Becoming.World.rests_unrefuted_without_refinement",
+     "Becoming.World.rests_unrefuted_enclosed"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "rest-exactly-where-falls-stop",
+   "to": "falls-that-end-do-not-recur",
+   "witnesses": [
+    [
+     "Becoming.Amounts.whole_worldsRest",
+     "Becoming.Amounts.whole_noEndlessFall",
+     "Becoming.Amounts.noEndlessFall_of_fallsAtLeast",
+     "Becoming.Amounts.rests_unrefuted"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "rest-exactly-where-falls-stop",
+   "to": "least-loss-rest",
+   "witnesses": [
+    [
+     "Becoming.Amounts.rests_unrefuted_of_finite_reading",
+     "Becoming.Amounts.falls_within_reading"
+    ],
+    [
+     "Becoming.Amounts.whole_worldsRest",
+     "Becoming.Amounts.whole_noEndlessFall",
+     "Becoming.Amounts.noEndlessFall_of_fallsAtLeast",
+     "Becoming.Amounts.rests_unrefuted"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "restoring-giving-from-the-worst-start",
+   "to": "giving-that-waits-on-giving",
+   "witnesses": [
+    [
+     "Becoming.Tolerance.answers_restores_iff",
+     "Becoming.Withholding.answers_closed"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "restoring-giving-from-the-worst-start",
+   "to": "thresholds-of-waiting",
+   "witnesses": [
+    [
+     "Becoming.Tolerance.KeepsInclusion.course",
+     "Becoming.Tolerance.KeepsInclusionInto.course"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "restoring-giving-from-the-worst-start",
+   "to": "withholding-returns-around-a-loop",
+   "witnesses": [
+    [
+     "Becoming.Tolerance.answers_restores_iff",
+     "Becoming.Withholding.answers_closed"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "restraint-within-the-joint-slack",
+   "to": "what-a-rise-draws-from-beyond",
+   "witnesses": [
+    [
+     "Becoming.Flow.Balances.broken_shared",
+     "Becoming.Flow.Balances.broken_iff"
+    ],
+    [
+     "Becoming.TwoDrawers.shared",
+     "Becoming.TwoDrawers.broken"
+    ],
+    [
+     "Becoming.TwoDrawers.shared",
+     "Becoming.Flow.Balances.broken_shared"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "returning-novelty-forgetting-on-levels",
+   "to": "recurrence-without-premise",
+   "witnesses": [
+    [
+     "Becoming.Web.revisits_of_bounded",
+     "Becoming.revisits_from"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "revision-with-an-undecided-value",
+   "to": "a-map-moving-every-value-never-rests",
+   "witnesses": [
+    [
+     "Becoming.Undecided.liar_two_valued_never_rests",
+     "Becoming.Diagonal.revision_never_rests"
+    ],
+    [
+     "Becoming.Undecided.liar_two_valued_never_rests",
+     "Becoming.Diagonal.flip_moves"
+    ],
+    [
+     "Becoming.Undecided.liar_undecided",
+     "Becoming.Undecided.liar_two_valued_moves",
+     "Becoming.Diagonal.flip_moves"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "revision-with-an-undecided-value",
+   "to": "readings-within-what-they-read",
+   "witnesses": [
+    [
+     "Becoming.Undecided.liar_two_valued_never_rests",
+     "Becoming.Diagonal.revision_never_rests"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "risk-minimization-on-a-shared-renewal",
+   "to": "loss-of-renewal-for-good",
+   "witnesses": [
+    [
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.three_end",
+     "Becoming.Flow.ends_below"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "risk-minimization-on-a-shared-renewal",
+   "to": "own-count-misses-joint-excess",
+   "witnesses": [
+    [
+     "Becoming.FreeEnergyGuarantees.SharedModels.alike_not_one",
+     "Becoming.Exceeding.own_not_joint"
+    ],
+    [
+     "Becoming.FreeEnergyGuarantees.SharedModels.alike_not_one",
+     "Becoming.Exceeding.all_end"
+    ],
+    [
+     "Becoming.FreeEnergyGuarantees.SharedModels.alike_not_one",
+     "Becoming.Alone.all_continue"
+    ]
+   ],
+   "count": 5
+  },
+  {
+   "from": "risk-minimization-on-a-shared-renewal",
+   "to": "the-rest-outruns-the-renewal",
+   "witnesses": [
+    [
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.need_ends",
+     "Becoming.Flow.outrun_ends"
+    ],
+    [
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.need_ends",
+     "Becoming.Flow.outrun_below"
+    ],
+    [
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.restraint_unread",
+     "Becoming.Flow.outrun_reading_alike"
+    ]
+   ],
+   "count": 4
+  },
+  {
+   "from": "risk-minimization-on-a-shared-renewal",
+   "to": "what-a-set-point-optimum-does-beyond",
+   "witnesses": [
+    [
+     "Becoming.FreeEnergyGuarantees.SharedModels.held_not_one",
+     "Becoming.Optimum.HeldPair.held_end"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "rule-raised-every-other-step",
+   "to": "where-the-possible-grows",
+   "witnesses": [
+    [
+     "Becoming.RaisedEveryOther.whole_every",
+     "Becoming.RaisedRule.whole_every"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "seeking-boundary",
+   "to": "continued-change-needs-openness",
+   "witnesses": [
+    [
+     "Becoming.Flow.more_needs_unrun",
+     "Becoming.Flow.change_recurs_iff"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "seeking-boundary",
+   "to": "locked-seeking",
+   "witnesses": [
+    [
+     "Becoming.SeekingRuns.rests_iff",
+     "Becoming.Law.rests_iff"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "seeking-boundary",
+   "to": "lossless-exchange-continues-and-returns",
+   "witnesses": [
+    [
+     "Becoming.succ_more",
+     "Becoming.Law.succ_open"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "seeking-boundary",
+   "to": "recurrence-without-premise",
+   "witnesses": [
+    [
+     "Becoming.more_needs_open",
+     "Becoming.unlisted_of_new",
+     "Becoming.unheld_of_new"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "seeking-boundary",
+   "to": "unselected-beyond-the-coupling-closure",
+   "witnesses": [
+    [
+     "Becoming.Flow.unselected_beyond_coupling",
+     "Becoming.Flow.uncoupled_beyond_coupling"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "selection-read-off-its-own-survivors",
+   "to": "unselected-beyond-the-coupling-closure",
+   "witnesses": [
+    [
+     "Becoming.reader_kept_alike",
+     "Becoming.act_courses_unselected_throughout"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "several-optimizers-drain-by-their-joint-capacity",
+   "to": "what-an-optimum-does-beyond-what-couples-in",
+   "witnesses": [
+    [
+     "Becoming.Optimum.mutual_as_one",
+     "Becoming.Optimum.optimum_beyond"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "shaping-read-by-readers-drawn-from-the-selected",
+   "to": "a-counter-rule-read-from-its-own-share",
+   "witnesses": [
+    [
+     "Becoming.DrawnShaping.drawn_locks",
+     "Becoming.RuleCapture.locked_stays"
+    ],
+    [
+     "Becoming.DrawnShaping.drawn_from_below",
+     "Becoming.RuleCapture.locked_stays"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "shaping-read-by-readers-drawn-from-the-selected",
+   "to": "capture-through-the-rule",
+   "witnesses": [
+    [
+     "Becoming.DrawnShaping.drawn_locks",
+     "Becoming.RuleCapture.locked_stays"
+    ],
+    [
+     "Becoming.DrawnShaping.drawn_from_below",
+     "Becoming.RuleCapture.locked_stays"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "shaping-read-by-readers-drawn-from-the-selected",
+   "to": "fixation-by-drift",
+   "witnesses": [
+    [
+     "Becoming.DrawnReplacement.fixation",
+     "Becoming.Drift.Replacement.fixationBy"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "shaping-read-by-readers-drawn-from-the-selected",
+   "to": "readers-drawn-from-the-selected",
+   "witnesses": [
+    [
+     "Becoming.DrawnShaping.drawn_reads_iff",
+     "Becoming.ClosedCapture.Drawn.pool_reads_iff"
+    ],
+    [
+     "Becoming.DrawnShaping.drawn_against",
+     "Becoming.ClosedCapture.Drawn.pool_against"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "shaping-the-rule-selected-by-what-comes-back",
+   "to": "capture-through-the-rule",
+   "witnesses": [
+    [
+     "Becoming.RuleShaping.covering_locks",
+     "Becoming.RuleCapture.favouring_locks"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "support-beyond-a-band-can-cycle",
+   "to": "a-cascade-along-total-dependence",
+   "witnesses": [
+    [
+     "Becoming.RegimeMargin.Coupled.Relay.threshold_beyond_band",
+     "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within"
+    ],
+    [
+     "Becoming.RegimeMargin.Coupled.Relay.second_alone",
+     "Becoming.RegimeMargin.Coupled.drains",
+     "Becoming.RegimeMargin.Coupled.Indexed.drains"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "support-beyond-a-band-can-cycle",
+   "to": "where-a-run-of-a-regime-comes-to-rest",
+   "witnesses": [
+    [
+     "Becoming.RegimeMargin.Coupled.comes_to_rest",
+     "Becoming.RegimeMargin.Coupled.rests_by",
+     "Becoming.RegimeMargin.Coupled.Indexed.rests_by"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "the-last-change-of-a-run",
+   "to": "a-run-round-a-loop-keeps-changing",
+   "witnesses": [
+    [
+     "Becoming.LastChange.assured_iff_of_lpo",
+     "Becoming.Settling.assured_no_undoable",
+     "Becoming.Settling.settles_no_undoable",
+     "Becoming.Settling.not_settles_of_recurs"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "the-last-change-of-a-run",
+   "to": "seeking-boundary",
+   "witnesses": [
+    [
+     "Becoming.LastChange.assured_iff_of_lpo",
+     "Becoming.Settling.assured_no_undoable",
+     "Becoming.Enough.assured_iff"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "the-last-change-of-a-run",
+   "to": "when-the-runs-of-a-process-settle",
+   "witnesses": [
+    [
+     "Becoming.LastChange.lpo_iff_settles",
+     "Becoming.Settling.OneWay.lpo_of_settles"
+    ],
+    [
+     "Becoming.LastChange.assured_iff_of_lpo",
+     "Becoming.Settling.assured_no_undoable",
+     "Becoming.Settling.settles_no_undoable",
+     "Becoming.Settling.not_settles_of_recurs"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "the-lock-draws-its-readers-out",
+   "to": "shaping-the-rule-selected-by-what-comes-back",
+   "witnesses": [
+    [
+     "Becoming.PoolFromCourse.borne_by_shapers_favours_iff",
+     "Becoming.RuleShaping.favours_iff"
+    ],
+    [
+     "Becoming.PoolFromCourse.borne_by_others_favours_iff",
+     "Becoming.RuleShaping.favours_iff"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "the-lock-draws-its-readers-out",
+   "to": "threshold-reading-read-late-alternates",
+   "witnesses": [
+    [
+     "Becoming.PoolFromCourse.Borne.others_locked",
+     "Becoming.RuleCapture.Alternating.before_locked"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "the-rest-outruns-the-renewal",
+   "to": "loss-of-renewal-for-good",
+   "witnesses": [
+    [
+     "Becoming.Flow.outrun_ends",
+     "Becoming.Flow.ends_below_at"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "the-rest-outruns-the-renewal",
+   "to": "own-count-misses-joint-excess",
+   "witnesses": [
+    [
+     "Becoming.Flow.outrun_below",
+     "Becoming.Flow.stays_below"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "the-selection-term-and-a-lineages-fate",
+   "to": "degeneration-from-a-horizon",
+   "witnesses": [
+    [
+     "Becoming.LineageRegions.generation_degenerates_iff",
+     "Becoming.LineageRegions.degeneration_of_empty",
+     "Becoming.Web.ends_of_ends_at"
+    ],
+    [
+     "Becoming.LineageRegions.Courses.positive_but_last",
+     "Becoming.LineageRegions.Courses.upTo_degenerates",
+     "Becoming.LineageRegions.degeneration_of_empty",
+     "Becoming.Web.ends_of_ends_at"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "to": "a-reader-rebuilt-from-its-stock-ends-with-it",
+   "witnesses": [
+    [
+     "Becoming.ReaderRebuilding.«以储买时当且仅当取于储»",
+     "Becoming.ReaderRebuilding.«断而有储则读者存»"
+    ],
+    [
+     "Becoming.ReaderRebuilding.«以储买时当且仅当取于储»",
+     "Becoming.ReaderRebuilding.«断则取于供者尽»"
+    ],
+    [
+     "Becoming.ReaderRebuilding.«以储买时当且仅当取于储»",
+     "Becoming.ReaderRebuilding.«不复建者尽»"
+    ]
+   ],
+   "count": 4
+  },
+  {
+   "from": "the-test-season-meets-the-optimum-laws",
+   "to": "what-an-optimum-does-beyond-what-couples-in",
+   "witnesses": [
+    [
+     "Becoming.Optimum.Season.bay_drained",
+     "Becoming.Optimum.least_of_shared",
+     "Becoming.Optimum.least_of_room"
+    ],
+    [
+     "Becoming.Optimum.Season.bay_drained",
+     "Becoming.Optimum.least_of_shared",
+     "Becoming.Optimum.Shared.room"
+    ],
+    [
+     "Becoming.Optimum.Season.after_drained",
+     "Becoming.Optimum.Season.lex_rising",
+     "Becoming.Optimum.Rising.mono"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "threshold-in-the-state-plane",
+   "to": "margin-of-a-regime",
+   "witnesses": [
+    [
+     "Becoming.RegimeMargin.threshold_regime",
+     "Becoming.RegimeMargin.holds"
+    ],
+    [
+     "Becoming.RegimeMargin.threshold_regime",
+     "Becoming.RegimeMargin.ends_below"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "threshold-in-the-state-plane",
+   "to": "overcompensating-giving-cycles",
+   "witnesses": [
+    [
+     "Becoming.RegimeMargin.Adjusted.falls_iff",
+     "Becoming.RegimeMargin.Adjusted.comes_to_rest"
+    ],
+    [
+     "Becoming.RegimeMargin.Adjusted.fates",
+     "Becoming.RegimeMargin.Adjusted.comes_to_rest"
+    ],
+    [
+     "Becoming.RegimeMargin.Adjusted.falls_iff_below",
+     "Becoming.RegimeMargin.Adjusted.falls_of_below",
+     "Becoming.RegimeMargin.Adjusted.comes_to_rest"
+    ]
+   ],
+   "count": 4
+  },
+  {
+   "from": "threshold-in-the-state-plane",
+   "to": "where-a-run-of-a-regime-comes-to-rest",
+   "witnesses": [
+    [
+     "Becoming.RegimeMargin.Adjusted.falls_iff",
+     "Becoming.RegimeMargin.Adjusted.comes_to_rest"
+    ],
+    [
+     "Becoming.RegimeMargin.Adjusted.fates",
+     "Becoming.RegimeMargin.Adjusted.comes_to_rest"
+    ],
+    [
+     "Becoming.RegimeMargin.Adjusted.comes_to_rest",
+     "Becoming.RegimeMargin.Adjusted.rests_from"
+    ]
+   ],
+   "count": 5
+  },
+  {
+   "from": "thresholds-of-waiting",
+   "to": "kept-at-the-length-of-a-list",
+   "witnesses": [
+    [
+     "Becoming.Tolerance.kept_set",
+     "Becoming.Iteration.postfixed_in_iter"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "thresholds-of-waiting",
+   "to": "restoring-giving-from-the-worst-start",
+   "witnesses": [
+    [
+     "Becoming.Tolerance.Triad.total_kept",
+     "Becoming.Tolerance.withheld_kept"
+    ],
+    [
+     "Becoming.Tolerance.giftWeb_tolerating",
+     "Becoming.Tolerance.web_activity_tolerating",
+     "Becoming.Tolerance.KeepsInclusion.course_iff",
+     "Becoming.Tolerance.KeepsInclusion.course"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "turning-in-time",
+   "to": "a-line-on-a-stock",
+   "witnesses": [
+    [
+     "Becoming.WayOfUnits.unending_iff_holds",
+     "Becoming.LineOnAStock.unending_iff_holds"
+    ],
+    [
+     "Becoming.WayOfUnits.unending_taken_below",
+     "Becoming.LineOnAStock.unending_taken_below"
+    ],
+    [
+     "Becoming.WayOfUnits.takes_nothing_iff_alone",
+     "Becoming.WayOfUnits.goes_iff_alone",
+     "Becoming.WayOfUnits.fixed_while",
+     "Becoming.LineOnAStock.course_generation"
+    ]
+   ],
+   "count": 10
+  },
+  {
+   "from": "turning-in-time",
+   "to": "a-regularity-kept-and-changed",
+   "witnesses": [
+    [
+     "Becoming.Law.stepWhile_unending_iff",
+     "Becoming.Law.unending_iff_steps"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "turning-in-time",
+   "to": "least-loss-rest",
+   "witnesses": [
+    [
+     "Becoming.TurningInTime.ends_with_net",
+     "Becoming.Optimum.ends_within",
+     "Becoming.Amounts.falls_by_stretch"
+    ],
+    [
+     "Becoming.TurningInTime.unending_iff_above_kept_below",
+     "Becoming.Optimum.ends_within",
+     "Becoming.Amounts.falls_by_stretch"
+    ],
+    [
+     "Becoming.TurningInTime.turns_in_time_iff_kept_below",
+     "Becoming.Optimum.ends_within",
+     "Becoming.Amounts.falls_by_stretch"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "turning-in-time",
+   "to": "margin-of-a-regime",
+   "witnesses": [
+    [
+     "Becoming.WayOfUnits.takes_nothing_ends",
+     "Becoming.RegimeMargin.ends_below"
+    ],
+    [
+     "Becoming.TurningInTime.turned_meets_iff",
+     "Becoming.TurningInTime.turned_meets_of_above",
+     "Becoming.RegimeMargin.holds"
+    ],
+    [
+     "Becoming.TurningInTime.turns_in_time_iff_before",
+     "Becoming.TurningInTime.turned_meets_of_above",
+     "Becoming.RegimeMargin.holds"
+    ]
+   ],
+   "count": 7
+  },
+  {
+   "from": "turning-in-time",
+   "to": "reading-a-loss-in-time",
+   "witnesses": [
+    [
+     "Becoming.TurningInTime.turns_in_time_iff_before",
+     "Becoming.NoReturnAt.recoverable_iff"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "turning-in-time",
+   "to": "what-a-regularity-takes-in",
+   "witnesses": [
+    [
+     "Becoming.«有常当且仅当至终有常可续»",
+     "Becoming.«有常则至终有常»"
+    ],
+    [
+     "Becoming.«后不定则至终有常可不同行»",
+     "Becoming.«有常则至终有常»"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "two-sided-regulation-and-late-reading",
+   "to": "late-relay-oscillates",
+   "witnesses": [
+    [
+     "Becoming.Regulation.held_oscillates",
+     "Becoming.Regulation.held_crosses"
+    ],
+    [
+     "Becoming.Regulation.held_oscillates",
+     "Becoming.Regulation.crossing_oscillates"
+    ],
+    [
+     "Becoming.Regulation.relay_threshold",
+     "Becoming.Regulation.held_oscillates"
+    ]
+   ],
+   "count": 4
+  },
+  {
+   "from": "two-sided-regulation-and-late-reading",
+   "to": "overshoot-beyond-the-gap",
+   "witnesses": [
+    [
+     "Becoming.Flow.never_at_of_beyond",
+     "Becoming.Flow.not_at_of_beyond"
+    ],
+    [
+     "Becoming.Flow.crosses_of_above",
+     "Becoming.Flow.withinGap_iff_of_above",
+     "Becoming.Flow.withinGap_iff_between"
+    ],
+    [
+     "Becoming.Flow.crosses_of_below",
+     "Becoming.Flow.withinGap_iff_of_below",
+     "Becoming.Flow.withinGap_iff_between"
+    ]
+   ],
+   "count": 5
+  },
+  {
+   "from": "two-sided-regulation-and-late-reading",
+   "to": "supported-renewal-recovery",
+   "witnesses": [
+    [
+     "Becoming.Flow.crosses_of_below",
+     "Becoming.Flow.withinGap_iff_of_below",
+     "Becoming.Flow.net_give_raises_at"
+    ],
+    [
+     "Becoming.Flow.regulates",
+     "Becoming.Flow.regulates_at",
+     "Becoming.Flow.gap_falls",
+     "Becoming.Flow.net_give_raises_at"
+    ],
+    [
+     "Becoming.Flow.settles",
+     "Becoming.Flow.settles_from",
+     "Becoming.Flow.settles_at",
+     "Becoming.Flow.regulates_at",
+     "Becoming.Flow.gap_falls",
+     "Becoming.Flow.net_give_raises_at"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "unceasing-generation-needs-renewal",
+   "to": "becoming-renewal-reading",
+   "witnesses": [
+    [
+     "Becoming.Web.dissipation_arising_not_recurring",
+     "Becoming.falls_not_recurring"
+    ],
+    [
+     "Becoming.Flow.uptake_needs_replenishment_from",
+     "Becoming.falls_not_recurring"
+    ],
+    [
+     "Becoming.Web.Unceasing.rises",
+     "Becoming.Web.depletion_not_recurring",
+     "Becoming.falls_not_recurring"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "unceasing-generation-needs-renewal",
+   "to": "more-needs-renewers",
+   "witnesses": [
+    [
+     "Becoming.Recycle.closed_unceasing",
+     "Becoming.Web.Unceasing.activeRenewer_recurs"
+    ],
+    [
+     "Becoming.Tide.unrelated_depletion",
+     "Becoming.Web.Unceasing.activeRenewer_recurs"
+    ],
+    [
+     "Becoming.Web.Unceasing.activeRenewer_recurs",
+     "Becoming.Web.Unceasing.rises"
+    ]
+   ],
+   "count": 4
+  },
+  {
+   "from": "unselected-beyond-the-coupling-closure",
+   "to": "closing-needs-net-draw",
+   "witnesses": [
+    [
+     "Becoming.Clearing.within_closure_unseparated",
+     "Becoming.Clearing.admitted_without",
+     "Becoming.Flow.WithheldLevels.unique"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "unselected-beyond-the-coupling-closure",
+   "to": "mutual-dependence-and-its-pace",
+   "witnesses": [
+    [
+     "Becoming.routeB_universal_closed",
+     "Becoming.ownClosure_not_unrestricted_of_acyclic"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "waxing-and-waning-returns",
+   "to": "a-map-moving-every-value-never-rests",
+   "witnesses": [
+    [
+     "Becoming.Hexagram.waxWane_moves",
+     "Becoming.Hexagram.complement_moves",
+     "Becoming.Diagonal.flip_moves"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "waxing-and-waning-returns",
+   "to": "recurrence-without-premise",
+   "witnesses": [
+    [
+     "Becoming.Hexagram.waxWane_returns",
+     "Becoming.Law.lossless_iff_returns"
+    ],
+    [
+     "Becoming.Hexagram.every_returns_iff",
+     "Becoming.Law.lossless_iff_returns"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "what-a-commuting-law-keeps-apart",
+   "to": "what-an-optimum-does-beyond-what-couples-in",
+   "witnesses": [
+    [
+     "Becoming.Weighted.Commutes.fixed_expect",
+     "Becoming.Weighted.Commutes.carried"
+    ],
+    [
+     "Becoming.Weighted.Commutes.start_expect",
+     "Becoming.Weighted.Commutes.carried"
+    ],
+    [
+     "Becoming.Weighted.Reinforcing.expect_equal",
+     "Becoming.Weighted.Commutes.fixed_expect"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "what-a-course-chosen-through-its-model-does-not-test",
+   "to": "a-break-read-only-by-threshold",
+   "witnesses": [
+    [
+     "Becoming.ReadingLoop.sensed_alike_iff",
+     "Becoming.Blanket.Blanketed.agent_through_sensory"
+    ],
+    [
+     "Becoming.ReadingLoop.alike_within",
+     "Becoming.Blanket.Blanketed.agent_through_sensory"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "what-a-regularity-takes-in",
+   "to": "not-going-out-of-a-region",
+   "witnesses": [
+    [
+     "Becoming.«所经必同»",
+     "Becoming.«定则内至外之线有出步»"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "what-a-rise-draws-from-beyond",
+   "to": "restraint-within-the-joint-slack",
+   "witnesses": [
+    [
+     "Becoming.Flow.Balances.broken_shared",
+     "Becoming.Flow.Balances.broken_iff"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "what-a-set-point-optimum-does-beyond",
+   "to": "own-count-misses-joint-excess",
+   "witnesses": [
+    [
+     "Becoming.Flow.held_excess_ends",
+     "Becoming.Flow.joint_excess_ends"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "what-a-set-point-optimum-does-beyond",
+   "to": "what-a-rise-draws-from-beyond",
+   "witnesses": [
+    [
+     "Becoming.Flow.Balances.atSetPoint_draws",
+     "Becoming.Flow.Balances.beyond_falls_exactly"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "what-a-set-point-optimum-does-beyond",
+   "to": "what-an-optimum-does-beyond-what-couples-in",
+   "witnesses": [
+    [
+     "Becoming.Optimum.least_below_iff",
+     "Becoming.Optimum.least_iff"
+    ],
+    [
+     "Becoming.Optimum.nearing_as_rising",
+     "Becoming.Optimum.optimum_beyond"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "what-an-optimum-does-beyond-what-couples-in",
+   "to": "what-a-commuting-law-keeps-apart",
+   "witnesses": [
+    [
+     "Becoming.Weighted.Commutes.fixed_expect",
+     "Becoming.Weighted.Commutes.carried"
+    ],
+    [
+     "Becoming.Weighted.Commutes.start_expect",
+     "Becoming.Weighted.Commutes.carried"
+    ],
+    [
+     "Becoming.Weighted.Reinforcing.expect_equal",
+     "Becoming.Weighted.Commutes.fixed_expect"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "what-an-optimum-does-beyond-what-couples-in",
+   "to": "what-a-rise-draws-from-beyond",
+   "witnesses": [
+    [
+     "Becoming.Flow.Balances.family_le_iff",
+     "Becoming.Flow.Balances.beyond_falls_exactly"
+    ],
+    [
+     "Becoming.Flow.keeping_optimum_takes_slack",
+     "Becoming.Flow.Balances.beyond_falls_exactly"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "what-keeping-widening-needs",
+   "to": "closed-cycle-without-dissipation",
+   "witnesses": [
+    [
+     "Becoming.ClosedCycle.bounded_while_opening",
+     "Becoming.ClosedCycle.stock_one"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "what-keeping-widening-needs",
+   "to": "falls-that-end-do-not-recur",
+   "witnesses": [
+    [
+     "Becoming.Flow.not_keepsWidening_of_dissipated_requirements",
+     "Becoming.Flow.not_keepsOpening_of_dissipated_requirements",
+     "Becoming.falls_stop_unrefuted",
+     "Becoming.Amounts.rests_unrefuted"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "what-keeping-widening-needs",
+   "to": "least-loss-rest",
+   "witnesses": [
+    [
+     "Becoming.Flow.not_keepsWidening_of_dissipated_requirements",
+     "Becoming.Flow.not_keepsOpening_of_dissipated_requirements",
+     "Becoming.falls_stop_unrefuted",
+     "Becoming.Amounts.rests_unrefuted"
+    ],
+    [
+     "Becoming.Web.KeepsWidening.replenishment_unbounded",
+     "Becoming.Flow.More.replenishment_unbounded_from",
+     "Becoming.Amounts.replenishment_unbounded",
+     "Becoming.Amounts.family_rests_of_archimedean",
+     "Becoming.Amounts.rests_of_archimedean"
+    ],
+    [
+     "Becoming.Web.KeepsWidening.renewers_unbounded",
+     "Becoming.Flow.More.renewers_unbounded_from",
+     "Becoming.Flow.More.replenishment_unbounded_from",
+     "Becoming.Amounts.replenishment_unbounded",
+     "Becoming.Amounts.family_rests_of_archimedean",
+     "Becoming.Amounts.rests_of_archimedean"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "what-keeping-widening-needs",
+   "to": "returning-novelty-forgetting-on-levels",
+   "witnesses": [
+    [
+     "Becoming.Web.KeepsWidening.from_rest_or_open",
+     "Becoming.Flow.rise_from_rest_or_open"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "what-taking-all-excludes",
+   "to": "own-count-misses-joint-excess",
+   "witnesses": [
+    [
+     "Becoming.Flow.full_taking_ends_at",
+     "Becoming.Flow.joint_excess_ends_at"
+    ],
+    [
+     "Becoming.Flow.full_taking_ends",
+     "Becoming.Flow.joint_excess_ends"
+    ],
+    [
+     "Becoming.Flow.level_kept",
+     "Becoming.Flow.joint_keeps"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "what-taking-all-excludes",
+   "to": "the-rest-outruns-the-renewal",
+   "witnesses": [
+    [
+     "Becoming.Flow.excess_of_takesAll",
+     "Becoming.Flow.outrun_excess"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "what-training-installs",
+   "to": "the-rest-outruns-the-renewal",
+   "witnesses": [
+    [
+     "Becoming.Training.outrun_settles_iff",
+     "Becoming.Training.outrun_reading_same",
+     "Becoming.Flow.outrun_reading_alike"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "what-training-installs",
+   "to": "unselected-beyond-the-coupling-closure",
+   "witnesses": [
+    [
+     "Becoming.Training.trained_alike_beyond_closure",
+     "Becoming.act_courses_unselected"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "when-the-runs-of-a-process-settle",
+   "to": "a-run-round-a-loop-keeps-changing",
+   "witnesses": [
+    [
+     "Becoming.Settling.keeps_changing_iff_loop",
+     "Becoming.Settling.recurs_of_loop"
+    ],
+    [
+     "Becoming.Settling.OneWay.never_keeps_changing",
+     "Becoming.Settling.keeps_changing_iff"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "where-a-rising-take-ends",
+   "to": "consumption-ends-with-feeders",
+   "witnesses": [
+    [
+     "Becoming.Flow.beyond_given_bounded",
+     "Becoming.Flow.excess_bounded"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "where-a-rising-take-ends",
+   "to": "loss-of-renewal-for-good",
+   "witnesses": [
+    [
+     "Becoming.Flow.seeking_exhausts",
+     "Becoming.Flow.ends_below"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "where-a-rising-take-ends",
+   "to": "own-count-misses-joint-excess",
+   "witnesses": [
+    [
+     "Becoming.Flow.beyond_given_bounded",
+     "Becoming.Flow.excess_bounded"
+    ],
+    [
+     "Becoming.Flow.seeking_exhausts",
+     "Becoming.Flow.stays_below"
+    ],
+    [
+     "Becoming.Flow.seeking_exhausts",
+     "Becoming.Flow.ends_below"
+    ]
+   ],
+   "count": 3
+  },
+  {
+   "from": "where-a-run-of-a-regime-comes-to-rest",
+   "to": "a-cascade-along-total-dependence",
+   "witnesses": [
+    [
+     "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls",
+     "Becoming.RegimeMargin.Coupled.Indexed.ends_of_below"
+    ],
+    [
+     "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls",
+     "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_ending",
+     "Becoming.RegimeMargin.Coupled.Indexed.ends_iff",
+     "Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "where-a-run-of-a-regime-comes-to-rest",
+   "to": "least-loss-rest",
+   "witnesses": [
+    [
+     "Becoming.LastChange.still_within",
+     "Becoming.Amounts.unmarked_within"
+    ],
+    [
+     "Becoming.RegimeMargin.Coupled.Indexed.rests_by",
+     "Becoming.Amounts.unmarked_within"
+    ],
+    [
+     "Becoming.RegimeMargin.rests_within",
+     "Becoming.BandRest.rests_on_band",
+     "Becoming.LastChange.still_within"
+    ]
+   ],
+   "count": 4
+  },
+  {
+   "from": "where-a-run-of-a-regime-comes-to-rest",
+   "to": "threshold-in-the-state-plane",
+   "witnesses": [
+    [
+     "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls",
+     "Becoming.RegimeMargin.leading_falls"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "where-the-possible-grows",
+   "to": "a-course-that-only-returns",
+   "witnesses": [
+    [
+     "Becoming.Oscillating.converse_fails",
+     "Becoming.Oscillating.rule_changes"
+    ],
+    [
+     "Becoming.Oscillating.returning_has_both",
+     "Becoming.Oscillating.returns"
+    ],
+    [
+     "Becoming.Oscillating.returning_has_both",
+     "Becoming.Oscillating.held_widens"
+    ]
+   ],
+   "count": 5
+  },
+  {
+   "from": "where-the-possible-grows",
+   "to": "kept-at-the-length-of-a-list",
+   "witnesses": [
+    [
+     "Becoming.Reaching.possible_iff_within_of_pred_le",
+     "Becoming.Reaching.reach_within_of_pred_le",
+     "Becoming.Reaching.trace_within_pred_length",
+     "Becoming.closure_iff_reach_within",
+     "Becoming.reach_within_pred_length"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "whole-drawing-beyond-renewal-ends",
+   "to": "selection-among-groups-by-ending",
+   "witnesses": [
+    [
+     "Becoming.Web.Whole.family_excess_ends",
+     "Becoming.Flow.family_excess_ends"
+    ]
+   ],
+   "count": 1
+  },
+  {
+   "from": "whole-persists-through-generation",
+   "to": "whole-drawing-beyond-renewal-ends",
+   "witnesses": [
+    [
+     "Becoming.Web.Covered.needs_new",
+     "Becoming.Web.Covered.needs_arising",
+     "Becoming.Web.Listed.end_without_arising"
+    ],
+    [
+     "Becoming.Web.Whole.needs_arising",
+     "Becoming.Web.Covered.needs_arising",
+     "Becoming.Web.Listed.end_without_arising"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "withholding-returns-around-a-loop",
+   "to": "a-pair-tolerates-only-within-a-window",
+   "witnesses": [
+    [
+     "Becoming.WindowedWaiting.Pair.alternator_received_within",
+     "Becoming.WindowedWaiting.gives_unless_errs"
+    ],
+    [
+     "Becoming.WindowedWaiting.Pair.alternator_gives_odd_within",
+     "Becoming.WindowedWaiting.gives_unless_errs"
+    ]
+   ],
+   "count": 2
+  },
+  {
+   "from": "withholding-returns-around-a-loop",
+   "to": "giving-that-waits-on-giving",
+   "witnesses": [
+    [
+     "Becoming.Withholding.gives_without_chain",
+     "Becoming.Withholding.answers_closed"
+    ],
+    [
+     "Becoming.Withholding.Line.passes_out_exact",
+     "Becoming.Withholding.gives_without_chain"
+    ],
+    [
+     "Becoming.Withholding.withholding_returns",
+     "Becoming.Withholding.answers_closed"
+    ]
+   ],
+   "count": 5
+  }
+ ]
+}
