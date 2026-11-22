@@ -93,6 +93,10 @@ As the frozen file says, this step enters nothing on the atlas. **Keeping the pr
 - 29 of the 116 notions are on a side's list by a reader's reading; 25 of the 128 statements judged, and 7 of the 49 above, name a side only through one.
 - The judges read statements, and proofs only at a few lines; the refuters read the first lines of proofs.
 
+## Filed from scratch on 23 November, so that nothing the work used lies only there
+
+In `of-22-november/`, four files of the evening of 22 November that earlier records lean on and that were in scratch only. `AllStatements.lean.txt` is the printer of that evening's list of what statements name, with the wrong test of a module's name that this record tells; its output is not filed and is replaced by this record's print. `candidate-passages.json` holds the fifty candidates made from that list, of which row FM's survey of roads took 39 as its items C01 to C39; that survey's script reads them from a scratch path. `links_from_lean.py.txt` and `links-from-lean.json` are the first measure of links read off proof terms, the one [the record of the map as represented](../the-map-as-represented-2026-11-22/NOTE.md) corrected and replaced with its own script. None of the four is a result, and none was read again for this filing.
+
 ## Cost
 
 By the runs' records: 1,161,511 tokens for the seven readers of the first run, against 1.0 million said beforehand; 1,304,193 for the twelve judges and 675,565 for the third reader, the two refuters and the reader of "told", against 1.8 million said for all of step 3, restated at 2.0 million when the judges had returned and before anything else started; 189,312 for the checker of this note. Each overrun was told to both other sessions before the next stage ran.

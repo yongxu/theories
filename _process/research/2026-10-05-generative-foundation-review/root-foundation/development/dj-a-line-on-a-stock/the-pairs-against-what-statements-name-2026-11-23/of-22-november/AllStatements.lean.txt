@@ -1,0 +1,62 @@
+import Lean
+import Becoming
+
+/-! For every theorem declared in a module of the package: the package's declarations that are not theorems
+(definitions, structures, inductive types and their constructors) occurring in the types of its statement's binders,
+and those occurring in what is left after the binders. A candidate list for passages: a statement whose premises speak
+of one dynamic's notions and whose conclusion speaks of another's. AI-written (Claude Fable, board row DJ),
+22 November 2026. It reads statements only and says nothing of what a statement means. -/
+
+open Lean
+
+def digitsAfter (s pre : String) : Bool :=
+  s.startsWith pre && (s.drop pre.length).length > 0 && (s.drop pre.length).all (fun ch => ch.isDigit || ch == '_')
+
+def skipLast (c : Name) : Bool :=
+  match c with
+  | .str _ s => digitsAfter s "eq_" || s == "eq_def" || s == "eq_unfold" || s == "injEq" || s == "inj"
+      || s == "sizeOf_spec" || s == "noConfusion" || digitsAfter s "match_" || s.startsWith "_"
+      || digitsAfter s "proof_"
+  | .num _ _ => true
+  | _ => false
+
+def jsonList (xs : List String) : String := "[" ++ ", ".intercalate (xs.map String.quote) ++ "]"
+
+partial def split : Expr → Array Expr → Array Expr × Expr
+  | .forallE _ d b _, acc => split b (acc.push d)
+  | .mdata _ e, acc => split e acc
+  | e, acc => (acc, e)
+
+#eval show CoreM Unit from do
+  let env ← getEnv
+  let mods := env.header.moduleNames
+  let inPkg := fun (u : Name) => match env.getModuleIdxFor? u with
+    | some j => (`Becoming).isPrefixOf mods[j.toNat]! || (`Generative).isPrefixOf mods[j.toNat]!
+    | none => false
+  let notion := fun (u : Name) => inPkg u && !u.isInternal && !skipLast u && match env.find? u with
+    | some (.thmInfo _) => false
+    | some _ => true
+    | none => false
+  let srt := fun (l : List Name) => (l.map toString).toArray.qsort (· < ·) |>.toList
+  let mut rows : Array (String × String) := #[]
+  for (c, ci) in env.constants.map₁.toList do
+    match ci with
+    | .thmInfo t =>
+      if c.isInternal || skipLast c then continue
+      match env.getModuleIdxFor? c with
+      | none => continue
+      | some idx =>
+        let m := mods[idx.toNat]!
+        if !(`Becoming).isPrefixOf m then continue
+        let (doms, body) := split t.type #[]
+        let mut hyp : NameSet := {}
+        for d in doms do
+          for u in d.getUsedConstants do
+            if notion u then hyp := hyp.insert u
+        let concl := (body.getUsedConstants.toList.filter notion)
+        rows := rows.push (toString m ++ " " ++ toString c,
+          "{\"module\": " ++ (toString m).quote ++ ", \"name\": " ++ (toString c).quote
+            ++ ", \"in_binders\": " ++ jsonList (srt hyp.toList) ++ ", \"in_conclusion\": " ++ jsonList (srt concl) ++ "}")
+    | _ => continue
+  for (_, r) in rows.qsort (fun a b => a.1 < b.1) do
+    IO.println ("ROW " ++ r)
