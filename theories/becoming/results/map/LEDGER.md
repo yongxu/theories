@@ -15,7 +15,7 @@ The layer under [the map](THE-MAP.md): the account's theorems and tests, filed o
 
 ![The web: eleven kinds of role and the ties between them, each tie with four squares filled where a general theorem shows what makes it begin, last, change or end](the-web.svg)
 
-*How to read the picture.* Each box is a kind of role. Each arrow is a kind of tie between two roles, heavier where more of the 185 dynamics speak of it; a dynamic is one pattern of [the atlas](../atlas/ATLAS.md), with the theorems about it. The four squares under a tie stand for begins, lasts, changes and ends (生 住 异 亡). A filled square: a general theorem shows what makes it so. A square with a small mark inside: only a built case shows it, an example that it can happen. An empty square: no theorem written up here shows it. A green dot: a prediction written down before its test was run, and then scored for or against, names a theorem on this tie. A green ring: a test with such a verdict bears on a dynamic that speaks of it. A tie gathers theorems on separate models that each name this kind of tie; an arrow is not a route.
+*How to read the picture.* Each box is a kind of role. Each arrow is a kind of tie between two roles, heavier where more of the 186 dynamics speak of it; a dynamic is one pattern of [the atlas](../atlas/ATLAS.md), with the theorems about it. The four squares under a tie stand for begins, lasts, changes and ends (生 住 异 亡). A filled square: a general theorem shows what makes it so. A square with a small mark inside: only a built case shows it, an example that it can happen. An empty square: no theorem written up here shows it. A green dot: a prediction written down before its test was run, and then scored for or against, names a theorem on this tie. A green ring: a test with such a verdict bears on a dynamic that speaks of it. A tie gathers theorems on separate models that each name this kind of tie; an arrow is not a route.
 
 **[The same ledger to operate](the-web.html)** shows every theorem with its conditions and every case with its predictions: choose a tie, a role, a dynamic or a test. (GitHub shows that file as source; [it opens here](https://yongxu.github.io/theories/theories/becoming/results/map/the-web.html).) The same data as pages: [what the theorems say, tie by tie](LAWS.md), [every dynamic, by tie](DYNAMICS.md) and [every test as a case](CASES.md).
 
@@ -50,7 +50,7 @@ A theorem's sentence uses these words and its model's own terms; a case uses its
 | a reading | 读法 | What something holds of what it meets: a view, a prediction, a rank, a code from senses to forms. | a reading; prediction; code; record | [12](LAWS.md#role-reading) |
 | what it is of | 所读者 | What a reading is of, or the standard it is read against. | what a reading is of; the standard it is read against | 0 |
 
-102 principal theorems name no role: they hold of anything that goes on (凡相续者), every course, every process, every relation. 23 dynamics are made of such theorems alone. They are the web's legend: [what staying, leaving, returning and resting mean on every tie](LAWS.md#anything-that-goes-on).
+107 principal theorems name no role: they hold of anything that goes on (凡相续者), every course, every process, every relation. 24 dynamics are made of such theorems alone. They are the web's legend: [what staying, leaving, returning and resting mean on every tie](LAWS.md#anything-that-goes-on).
 
 ## The ties
 
@@ -124,27 +124,27 @@ For 89 of the 295 frozen predictions the tests' own records name where the predi
 
 | | |
 |---|---|
-| Dynamics placed | 185; 23 of them hold of anything that goes on and name no role |
+| Dynamics placed | 186; 24 of them hold of anything that goes on and name no role |
 | Ties between roles | 19 drawn; 39 thinner ones listed |
-| Principal theorems written up | 786 write-ups of 739 Lean theorems; 732 of the 739 are among the 2,115 Lean theorems the atlas lists with premises. Counting a theorem once in a place: 428 on a tie, 222 on one role, 102 on anything that goes on |
+| Principal theorems written up | 791 write-ups of 744 Lean theorems; 736 of the 744 are among the 2,125 Lean theorems the atlas lists with premises. Counting a theorem once in a place: 428 on a tie, 222 on one role, 107 on anything that goes on |
 | Drawn ties where no general theorem shows | a beginning: 14 (on 1, one built case does); a lasting: 8; a change: 19 (on 2, one built case does); an end: 13 |
 | Tests | 66; in 47 at least one frozen prediction got a verdict |
 | Frozen predictions | 295: 117 agreed, 8 not rejected, 64 disagreed, 17 could not tell, 89 with no verdict; 18 more entries were not frozen |
 | Conditions assessed in cases | 598: 274 met, 106 failed, 218 not checked |
 | Bridges the tests rest on | 327: 49 held, 58 failed, 66 by construction, 154 not checked |
 | Lean theorems a prediction names | 145; 70 are among the atlas's theorems with premises, 75 are not |
-| Dynamics a test bears on | 36 of 185 |
+| Dynamics a test bears on | 36 of 186 |
 | Drawn ties and the tests | a frozen prediction with a verdict names a theorem on 4; a test with such a verdict bears on a dynamic of 7 more; none on 8 |
 
 ## What it does not hold
 
 - **The kinds do not hold everything.** Every card says what of its dynamic the roles, ties, marks, forms and frames leave out: most often amounts, theorems that name no role, and conclusions that fit no form. The note is on the ledger to operate, under each dynamic.
 - **A tie gathers separate models.** Roles of two models are drawn as one place where each model names that kind of role. Where no proof joins the two models, that sameness is a reading. Each tie's section says how many dynamics its theorems come from; the picture draws one line.
-- **Only principal theorems are written up.** A card takes its dynamic's main results and most of the theorems its exits and transitions cite: 739 Lean theorems, where the atlas lists 2,115 with premises.
+- **Only principal theorems are written up.** A card takes its dynamic's main results and most of the theorems its exits and transitions cite: 744 Lean theorems, where the atlas lists 2,125 with premises.
 - **The question a theorem is filed under is a reading of its statement.** A theorem written up on several cards can be read under a different question on each; in a place it counts once, by the write-up of the course itself.
 - **A filled square says a general theorem concludes that mark, not how much is known.** One theorem fills it.
 - **A prediction's place rests on a reading of its test's record:** whether it was frozen, which conditions were met, and what was seen. The reading is the case's; the test's folder is the record.
-- **A condition is given by its name in the atlas's ledger.** The ledger keeps its statement, and for 6 theorems it lists none.
+- **A condition is given by its name in the atlas's ledger.** The ledger keeps its statement, and for 7 theorems it lists none.
 - **The Chinese is provisional.**
 
 ## How it was made

@@ -12,7 +12,7 @@ The atlas's views: **the atlas** · [the premise ledger](PREMISES.md) · [the te
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](vocabulary.json), [entries](entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*.
 
-185 dynamics, by family. It is a catalogue to look things up in, not to read through: each family has a page, which opens with its index, and an entry's section there holds the rest.
+186 dynamics, by family. It is a catalogue to look things up in, not to read through: each family has a page, which opens with its index, and an entry's section there holds the rest.
 
 | Family | Dynamics |
 |---|---:|
@@ -23,7 +23,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 | [E. Waiting and reciprocity](families/e.md) | 10 |
 | [F. Cycles and alternation](families/f.md) | 24 |
 | [G. Closure and stagnation](families/g.md) | 18 |
-| [H. Kept regions, renewal, generation](families/h.md) | 37 |
+| [H. Kept regions, renewal, generation](families/h.md) | 38 |
 
 <a id="family-a"></a>
 ## A. Absorption and ending
@@ -258,6 +258,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 | <a id="renewing-consuming-formation"></a><a id="renewing-and-consuming-formation"></a>[Renewing and consuming formation](families/h.md#renewing-consuming-formation) | [renewing-consuming-formation](../records/renewing-consuming-formation.md) | periphery | recorded-checked (theorem) | 3 | 4 |
 | <a id="a-regularity-kept-and-changed"></a><a id="a-regularity-kept-and-left-along-its-own-line"></a>[A regularity kept and left along its own line](families/h.md#a-regularity-kept-and-changed) | [a-regularity-kept-and-changed](../records/a-regularity-kept-and-changed.md) | root | recorded-checked (theorem) | 1 | 3 |
 | <a id="never-leaving-a-guard"></a><a id="never-leaving-a-guard-conditions-kept-together-and-lasting"></a>[Never leaving a guard, conditions kept together, and lasting](families/h.md#never-leaving-a-guard) | [market-protected-continuation](../records/market-protected-continuation.md), [conditions-kept-together](../records/conditions-kept-together.md), [market-supported-finite-transition](../records/market-supported-finite-transition.md), [market-partial-correction-boundary](../records/market-partial-correction-boundary.md) | any process | recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem) | 4 | 11 |
+| <a id="kept-at-the-length-of-a-list"></a><a id="the-largest-class-a-step-preserves-reached-at-a-lists-length-步所保之最大类至列表之长而得"></a>[The largest class a step preserves, reached at a list's length (步所保之最大类，至列表之长而得)](families/h.md#kept-at-the-length-of-a-list) | [kept-at-the-length-of-a-list](../records/kept-at-the-length-of-a-list.md) | any type | recorded-checked (theorem) | 0 | 8 |
 | <a id="succession-on-a-funded-carrier"></a><a id="succession-on-a-carrier-provided-for-migration"></a>[Succession on a carrier provided for migration](families/h.md#succession-on-a-funded-carrier) | [succession-on-a-funded-carrier](../records/succession-on-a-funded-carrier.md) | periphery | recorded-checked (theorem) | 3 | 3 |
 | <a id="joint-practice-forms-continuation"></a><a id="joint-practice-forms-further-participation-and-continuation"></a>[Joint practice forms further participation and continuation](families/h.md#joint-practice-forms-continuation) | [joint-practice-forms-continuation](../records/joint-practice-forms-continuation.md) | periphery | recorded-checked (theorem) | 2 | 2 |
 | <a id="copying-from-a-stock"></a><a id="copying-from-a-stock-recurrent-formation-and-inherited-arrangement"></a>[Copying from a stock: recurrent formation and inherited arrangement](families/h.md#copying-from-a-stock) | [recurrent-chain-assembly](../records/recurrent-chain-assembly.md), [inherited-structural-copying](../records/inherited-structural-copying.md), [copying-b-fold](../records/copying-b-fold.md) | any type | recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem) | 2 | 4 |

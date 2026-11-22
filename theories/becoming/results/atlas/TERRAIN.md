@@ -1068,7 +1068,7 @@ flowchart LR
 
 ## H. Kept regions, renewal, generation
 
-37 dynamics, 76 exits.
+38 dynamics, 76 exits.
 
 ```mermaid
 flowchart LR
@@ -1102,27 +1102,28 @@ flowchart LR
   n27["A regularity kept and left along its own line"]
   n28["Never leaving a guard, conditions kept together, and lasting"]
   n29["Not going out of a region"]:::other
-  n30["Succession on a carrier provided for migration"]
-  n31["Joint practice forms further participation and continuation"]
-  n32["Copying from a stock: recurrent formation and inherited…"]
-  n33["The regime in any amounts, and its runs over the reals"]
-  n34["Recovery after interrupted change"]
-  n35["Every optimum rebuilds a depleted base"]
-  n36["Weighting later draws less"]:::other
-  n37["A goal along a lineage, need drift along a lineage, and…"]
-  n38["The selection term and a lineage's fate"]
-  n39["Persisting is a filter on what was chosen: keeping above…"]
-  n40["Groups with less leave nothing' groups on one family end…"]:::other
-  n41["What training installs"]:::other
-  n42["The lock draws its readers out"]:::other
-  n43["Readings carried along a line, told apart by its standing…"]
-  n44["Selection blind beyond the coupling closure"]:::other
-  n45["A selection read off the pool its own course gives…"]:::other
-  n46["Readings revised at descent: a share moving by selection…"]
-  n47["A reading kept by its update, and the reading its own…"]:::other
-  n48["A formed goal revised, and the operations it goes on through"]
-  n49["What a line must hold, and what a regularity takes in"]
-  n50["Growth by attachment, and what a cut returns"]
+  n30["The largest class a step preserves, reached at a list's…"]
+  n31["Succession on a carrier provided for migration"]
+  n32["Joint practice forms further participation and continuation"]
+  n33["Copying from a stock: recurrent formation and inherited…"]
+  n34["The regime in any amounts, and its runs over the reals"]
+  n35["Recovery after interrupted change"]
+  n36["Every optimum rebuilds a depleted base"]
+  n37["Weighting later draws less"]:::other
+  n38["A goal along a lineage, need drift along a lineage, and…"]
+  n39["The selection term and a lineage's fate"]
+  n40["Persisting is a filter on what was chosen: keeping above…"]
+  n41["Groups with less leave nothing' groups on one family end…"]:::other
+  n42["What training installs"]:::other
+  n43["The lock draws its readers out"]:::other
+  n44["Readings carried along a line, told apart by its standing…"]
+  n45["Selection blind beyond the coupling closure"]:::other
+  n46["A selection read off the pool its own course gives…"]:::other
+  n47["Readings revised at descent: a share moving by selection…"]
+  n48["A reading kept by its update, and the reading its own…"]:::other
+  n49["A formed goal revised, and the operations it goes on through"]
+  n50["What a line must hold, and what a regularity takes in"]
+  n51["Growth by attachment, and what a cut returns"]
   e1(["a witness: balanced, only active formations giving and activity…"])
   n2 -.->|witness| e1
   e2(["a witness: balanced, only active formations giving and activity…"])
@@ -1174,76 +1175,76 @@ flowchart LR
   e19(["witness: at β = 5/12, for every ε ' 0 a constant adverse quality…"])
   n28 -.->|witness| e19
   e20(["the carrier's step is blocked: step returns none, so no successor…"])
-  n30 -->|sufficient| e20
+  n31 -->|sufficient| e20
   e21(["the carrier's step is blocked: step returns none, so no successor…"])
-  n30 -->|sufficient| e21
+  n31 -->|sufficient| e21
   e22(["witness (financed): the aggregate market state is safe under the…"])
-  n30 -.->|witness| e22
+  n31 -.->|witness| e22
   e23(["witness: in the declared machine, a handoff to those present '1, 2…"])
-  n31 -.->|witness| e23
+  n32 -.->|witness| e23
   e24(["witness: in the declared machine, enrolling worker 1 after attempt…"])
-  n31 -.->|witness| e24
+  n32 -.->|witness| e24
   e25(["witness: two rounds from one mature chain with the blocks for three…"])
-  n32 -.->|witness| e25
+  n33 -.->|witness| e25
   e26(["witness: from a pool of eight tokens of one kind and eight units of…"])
-  n32 -.->|witness| e26
+  n33 -.->|witness| e26
   e27(["witness: with nine units and no reserved stop, after the first actual…"])
-  n34 -.->|witness| e27
+  n35 -.->|witness| e27
   e28(["witness: a fault deleting the pending marker of a partly changed…"])
-  n34 -.->|witness| e28
+  n35 -.->|witness| e28
   e29(["the supervisor stops: every admissible schedule from an armed device…"])
-  n34 -->|sufficient| e29
+  n35 -->|sufficient| e29
   e30(["every admitted course longer than the margin from a valid…"])
-  n34 -->|sufficient| e30
+  n35 -->|sufficient| e30
   e31(["witness: with interruption bound one and deadline fifteen, an…"])
-  n34 -.->|witness| e31
-  n35 -.->|witness| n36
+  n35 -.->|witness| e31
+  n36 -.->|witness| n37
   e32(["witness: a course read by offspring number, exact at step 0 and not…"])
-  n38 -.->|witness| e32
+  n39 -.->|witness| e32
   e33(["witness: concordance with the mark positive at every step before N…"])
-  n38 -.->|witness| e33
+  n39 -.->|witness| e33
   e34(["witness: reproduction simply stopped, the mark a label rather than a…"])
-  n38 -.->|witness| e34
-  n38 -->|sufficient| n39
+  n39 -.->|witness| e34
   n39 -->|sufficient| n40
+  n40 -->|sufficient| n41
   e35(["the self-preservation half of instrumental convergence, where a…"])
-  n39 -.->|reading| e35
-  n39 -.->|reading| n41
-  n39 -.->|reading| n42
-  n43 -->|sufficient| n39
-  n43 -->|sufficient| n44
+  n40 -.->|reading| e35
+  n40 -.->|reading| n42
+  n40 -.->|reading| n43
+  n44 -->|sufficient| n40
+  n44 -->|sufficient| n45
   e36(["witness: where the dweller's line renews the source, the line reading…"])
-  n43 -.->|witness| e36
-  n43 -.->|witness| n45
-  n43 -.->|reading| n46
-  n46 -.->|reading| n47
+  n44 -.->|witness| e36
+  n44 -.->|witness| n46
+  n44 -.->|reading| n47
+  n47 -.->|reading| n48
   e37(["the region's carriers at T + n + 1 are exactly the revisions into it…"])
-  n46 -->|sufficient| e37
-  n46 -->|sufficient| n44
-  n46 -.->|witness| n45
+  n47 -->|sufficient| e37
+  n47 -->|sufficient| n45
+  n47 -.->|witness| n46
   e38(["witness: where the dweller's line renewed the source, the narrow…"])
-  n46 -.->|witness| e38
-  n46 -.->|argued| n42
+  n47 -.->|witness| e38
+  n47 -.->|argued| n43
   e39(["witness: under a real access loss, an acquired attendance goal…"])
-  n48 -.->|witness| e39
+  n49 -.->|witness| e39
   e40(["witness: under a real access loss, revision without response leaves…"])
-  n48 -.->|witness| e40
+  n49 -.->|witness| e40
   e41(["witness: with access loss and transition loss together…"])
-  n48 -.->|witness| e41
+  n49 -.->|witness| e41
   e42(["witness: reform from a revised state whose work is one unit fails…"])
-  n48 -.->|witness| e42
+  n49 -.->|witness| e42
   e43(["for a class E, everything downstream of m lies on its line under E…"])
-  n49 ==>|exact| e43
+  n50 ==>|exact| e43
   e44(["not everything downstream of m lies on its line under E: the line…"])
-  n49 -->|sufficient| e44
+  n50 -->|sufficient| e44
   e45(["witness (Unclosed): under a constant class holding the member with a…"])
-  n49 -.->|witness| e45
+  n50 -.->|witness| e45
   e46(["witness (Inconstant): a class holding the member's effects that is…"])
-  n49 -.->|witness| e46
+  n50 -.->|witness| e46
   e47(["with the grown link (p, n) cut, its ends lie apart: p and n are not…"])
-  n50 -->|sufficient| e47
+  n51 -->|sufficient| e47
   e48(["witness: with the retaining edge (0, 7) aggregated onto the chain…"])
-  n50 -.->|witness| e48
+  n51 -.->|witness| e48
   e49(["it is not the case that the formation f is active at arbitrarily late…"])
   n21 -->|sufficient| e49
   e50(["the process has no run: where every admissible step lowers a…"])
@@ -1277,6 +1278,7 @@ flowchart LR
 | [Renewing and consuming formation](families/h.md#renewing-consuming-formation) | 1. the renewal rate below its initial value at every step from the first on: ∀ k, (path law c0 demand (1 + k)).renew < c0.renew (sufficient; dropping [pressure within renewal](premises/h.md#renewingformation-withinrenewal))<br>2. nothing forms at any step from the budget on: ∀ n, budget c0 ≤ n → formed law c0 demand n = 0, with budget c0 = stock + tri renew (sufficient; dropping [pressure within renewal](premises/h.md#renewingformation-withinrenewal))<br>3. each part alone within renewal forms at every step, and the formation sharing the conditions, under any allocation within what forms jointly, is nothing at every step from the budget on (sufficient; dropping [pressure within renewal](premises/h.md#renewingformation-withinrenewal)) | — |
 | [A regularity kept and left along its own line](families/h.md#a-regularity-kept-and-changed) | 1. a step that continues under E and leaves E's core: y continues x under E and the core of E does not make x and y alike («异» R E («核» R E) x y) (necessary; dropping [a step kept under the core](premises/h.md#grammarregularity-kept-step), [a line kept under the core](premises/h.md#grammarregularity-kept-line)) | — |
 | [Never leaving a guard, conditions kept together, and lasting](families/h.md#never-leaving-a-guard) | 1. witness (ChoicePoint): from the configuration split each of two guards is keepable, kept along some run, while no run keeps the two together (witness)<br>2. [Not going out of a region](families/a.md#not-going-out-of-a-region) (exact)<br>3. for β above 5/12 (with 0 ≤ β ≤ 3/4), not every physical state with positive share lands: some never reaches the protection region, exactly as the margin at quality 3/8 under the worst influence is negative (exact; dropping [a correction strength at most 5/12](premises/h.md#partialregimetransition-beta-le-five-twelfths))<br>4. witness: at β = 5/12, for every ε > 0 a constant adverse quality error e with 0 < e < ε and a physical state with positive share whose history under that noisy law never lands (witness; dropping [the regime step with no extra quality error](premises/h.md#regimeboundary-step-error-free)) | [Not going out of a region](families/a.md#not-going-out-of-a-region) (exact) |
+| [The largest class a step preserves, reached at a list's length (步所保之最大类，至列表之长而得)](families/h.md#kept-at-the-length-of-a-list) | **none: no exit is stated** | — |
 | [Succession on a carrier provided for migration](families/h.md#succession-on-a-funded-carrier) | 1. the carrier's step is blocked: step returns none, so no successor generation is realized at that step (sufficient; dropping [a safe start](premises/h.md#marketgenerativity-safe))<br>2. the carrier's step is blocked: step returns none, so no successor generation is realized at that step (sufficient; dropping [a replacement part present](premises/h.md#alignmentsuccession-parts-pos))<br>3. witness (financed): the aggregate market state is safe under the certificate at the raised fee while the carrier with no part cannot take its step (witness; dropping [a replacement part present](premises/h.md#alignmentsuccession-parts-pos)) | — |
 | [Joint practice forms further participation and continuation](families/h.md#joint-practice-forms-continuation) | 1. witness: in the declared machine, a handoff to those present [1, 2, 3, 4, 5], which leaves out the first reviewer 0, before the round of reviewer 0 and worker 1 makes the run fail (run … = none): the practice round does not complete (witness; dropping [a practice round that ran](premises/h.md#machineinstances-round-ran))<br>2. witness: in the declared machine, enrolling worker 1 after attempt, response and revision but before a tested retry makes the run fail (run … = none): no admission without a tested review (witness) | — |
 | [Copying from a stock: recurrent formation and inherited arrangement](families/h.md#copying-from-a-stock) | 1. witness: two rounds from one mature chain with the blocks for three chains and 26 units of support, one short of the 27 the two rounds draw, end with chains of 8, 8, 8 and 7 components, one token left in the pool and all 26 units spent; the 32 units of material are all kept, and four mature chains are not reached (witness; dropping [a stock covering the rounds' draws](premises/h.md#copying-covered))<br>2. witness: from a pool of eight tokens of one kind and eight units of support, growth stalls after one token, with seven tokens and seven units left: work remains while the pool does not supply the other kind the word needs (witness) | — |
@@ -1350,6 +1352,8 @@ flowchart LR
 | `Becoming.RuleRebuilding.drain_of` | — | `Becoming.RuleRebuilding.«不及任则持尽»` ([The ends of a rule rebuilt from its members: no holder, and the end, do not return](families/a.md#a-rule-with-no-holder-does-not-return))<br>`Becoming.RuleRebuilding.«额零则持尽»` ([The ends of a rule rebuilt from its members: no holder, and the end, do not return](families/a.md#a-rule-with-no-holder-does-not-return))<br>`Becoming.RuleRebuilding.«不及任则持尽»` ([A rule rebuilt from the members it limits](families/h.md#a-rule-rebuilt-from-the-members-it-limits))<br>`Becoming.RuleRebuilding.«额零则持尽»` ([A rule rebuilt from the members it limits](families/h.md#a-rule-rebuilt-from-the-members-it-limits)) | A, H |
 | `Becoming.«自不复生则息»` | — | `Becoming.RaisedRule.ceases` ([Where the possible grows](families/g.md#where-the-possible-grows))<br>`Becoming.CopyDown.ceases` ([Where the possible grows](families/g.md#where-the-possible-grows))<br>`Becoming.RaisedRule.ceases` ([Growth relative to what is held with renewal without end: the rule raised every other step](families/h.md#rule-raised-every-other-step))<br>`Becoming.CopyDown.ceases` ([Growth relative to what is held with renewal without end: the rule raised every other step](families/h.md#rule-raised-every-other-step)) | G, H |
 | `Becoming.RegimeMargin.leading_falls` | [One law of exact thresholds, and the threshold in the plane of level and recent giving](families/a.md#threshold-in-the-state-plane) | `Becoming.RegimeMargin.Coupled.Indexed.threshold_falls` ([An end cascading along total dependence](families/a.md#a-cascade-along-total-dependence))<br>`Becoming.RegimeMargin.Coupled.Indexed.threshold_falls_within` ([An end cascading along total dependence](families/a.md#a-cascade-along-total-dependence))<br>`Becoming.RegimeMargin.Coupled.Indexed.threshold_falls` ([Where a run of a regime comes to rest](families/g.md#where-a-run-of-a-regime-comes-to-rest)) | A, G |
+| `Becoming.Iteration.iter_largest` | [The largest class a step preserves, reached at a list's length (步所保之最大类，至列表之长而得)](families/h.md#kept-at-the-length-of-a-list) | `Becoming.held_iff_iter` ([A reading kept by its update, and the reading its own history carries](families/d.md#a-reading-kept-by-its-update))<br>`Becoming.Viability.keepable_iff_count` ([Never leaving a guard, conditions kept together, and lasting](families/h.md#never-leaving-a-guard)) | D, H |
+| `Becoming.Reaching.reach_within_of_pred_le` | — | `Becoming.Branching.reach_within_listed` ([Every loss passes a juncture](families/a.md#every-loss-passes-a-juncture))<br>`Becoming.Reaching.possible_iff_within_of_pred_le` ([Where the possible grows](families/g.md#where-the-possible-grows)) | A, G |
 | `Becoming.act_courses_unselected_throughout` | [Selection blind beyond the coupling closure](families/b.md#unselected-beyond-the-coupling-closure) | `Becoming.reader_kept_alike` ([A selection read off the pool its own course gives registers no removal](families/b.md#selection-read-off-its-own-survivors))<br>`Becoming.line_standing_unselected` ([Readings carried along a line, told apart by its standing late only within its coupling closure](families/h.md#readings-carried-and-filtered)) | B, H |
 | `Becoming.Flow.ends_below_at` | [Loss of renewal for good](families/a.md#loss-of-renewal-for-good) | `Becoming.Flow.ends_below` ([Own count misses joint excess](families/b.md#own-count-misses-joint-excess))<br>`Becoming.Flow.outrun_ends` ([The rest outruns the renewal](families/b.md#the-rest-outruns-the-renewal))<br>`Becoming.Flow.ends_at_race_end` ([Position does not protect](families/b.md#position-does-not-protect)) | A, B |
 | `Becoming.Learning.lasso_of_held` | — | `Becoming.Run.moves_lasso_of_whole_held` ([Recurrence under every law of change](families/f.md#recurrence-without-premise))<br>`Becoming.Run.moves_lasso_of_rest_held` ([Recurrence under every law of change](families/f.md#recurrence-without-premise))<br>`Becoming.Run.moves_lasso_of_part_held` ([Recurrence under every law of change](families/f.md#recurrence-without-premise)) | F |
@@ -1364,6 +1368,7 @@ flowchart LR
 | `Becoming.Amounts.rests` | [The least loss as a premise of rest](families/g.md#least-loss-rest) | `Becoming.falls_not_recurring` ([Renewal and consumption classify runs](families/h.md#becoming-renewal-reading)) | G, H |
 | `Becoming.BandRest.rests_on_band` | — | `Becoming.RegimeMargin.rests_within` ([Where a run of a regime comes to rest](families/g.md#where-a-run-of-a-regime-comes-to-rest)) | G |
 | `Becoming.Branching.Lossless.returns` | — | `Becoming.Onward.KeepsMoving.returns` ([When the runs of a process settle](families/g.md#when-the-runs-of-a-process-settle)) | G |
+| `Becoming.Branching.reachable_iff_all` | [The largest class a step preserves, reached at a list's length (步所保之最大类，至列表之长而得)](families/h.md#kept-at-the-length-of-a-list) | `Becoming.Law.drawn_iff_not_reachable_count` ([Drawn exactly where it does not return](families/a.md#attraction-is-not-returning)) | A, H |
 | `Becoming.Branching.rise_not_lossless` | — | `Becoming.Law.rise_not_lossless` ([Recurrence under every law of change](families/f.md#recurrence-without-premise)) | F |
 | `Becoming.Countdown.invariant_iff_reach` | — | `Becoming.Countdown.admitted_invariant_iff` ([Recovery after interrupted change](families/h.md#recoverable-mediated-change)) | H |
 | `Becoming.Counts.across_step` | — | `Becoming.Web.Grade.across_step` ([A whole of every part ends with one part; the grade between it and a whole of some part](families/a.md#a-whole-of-every-part)) | A |
@@ -1395,6 +1400,7 @@ flowchart LR
 | `Becoming.Flow.uptake_needs_replenishment_from` | [Unceasing arising needs renewal](families/g.md#unceasing-generation-needs-renewal) | `Becoming.Flow.uptake_needs_replenishment` ([More needs more renewers; unceasing arising needs renewal](families/h.md#more-needs-renewers)) | G, H |
 | `Becoming.GuardHorizon.uniform_policy_iff_fiber_feasible` | — | `Becoming.OpenedCorrection.correctable_iff` ([A revision of a reading that opens a correction, along one process](families/h.md#a-revision-that-opens-a-correction)) | H |
 | `Becoming.Hexagram.first_return_of` | — | `Becoming.Hexagram.orderNext_first_return` ([The law of waxing and waning (消息之律)](families/f.md#waxing-and-waning-returns)) | F |
+| `Becoming.Iteration.postfixed_in_iter` | [The largest class a step preserves, reached at a list's length (步所保之最大类，至列表之长而得)](families/h.md#kept-at-the-length-of-a-list) | `Becoming.Tolerance.kept_set` ([Thresholds of waiting](families/e.md#thresholds-of-waiting)) | E, H |
 | `Becoming.Law.Commutes.apart` | [What a commuting law keeps apart, and what a learner's symmetry fixes](families/d.md#what-a-commuting-law-keeps-apart) | `Becoming.Law.Commutes.self_apart` ([A map moving every value never rests along its run](families/f.md#a-map-moving-every-value-never-rests)) | D, F |
 | `Becoming.Law.lossless_iff_returns` | [Recurrence under every law of change](families/f.md#recurrence-without-premise) | `Becoming.Hexagram.every_returns_iff` ([The law of waxing and waning (消息之律)](families/f.md#waxing-and-waning-returns)) | F |
 | `Becoming.Law.merged_stays` | — | `Becoming.SharedCodes.resolved_alike_merged` ([A merged distinction returns only from a form held outside, or by coining](families/g.md#merged-distinctions-stay-merged)) | G |
@@ -1448,6 +1454,8 @@ flowchart LR
 | `Becoming.bounded_not_recurring` | — | `Becoming.Flow.taking_needs_refinement` ([Rest at every resolution](families/g.md#rest-at-every-resolution)) | G |
 | `Becoming.carried_roundTrip` | — | `Becoming.carried_pow_around` ([Mutual dependence, and the exponential pace that loops of couplings give](families/h.md#mutual-dependence-and-its-pace)) | H |
 | `Becoming.exact_of_reading_before` | — | `Becoming.Saturation.exact` ([A coupling saturated by what it has carried](families/g.md#a-coupling-saturated-by-what-it-has-carried)) | G |
+| `Becoming.held_iff_iter` | [A reading kept by its update, and the reading its own history carries](families/d.md#a-reading-kept-by-its-update) | `Becoming.Viability.kernel_iff_iter` ([Never leaving a guard, conditions kept together, and lasting](families/h.md#never-leaving-a-guard)) | D, H |
+| `Becoming.held_iff_iter_pred_length` | — | `Becoming.Viability.kernel_iff_iter_pred_length` ([Never leaving a guard, conditions kept together, and lasting](families/h.md#never-leaving-a-guard)) | H |
 | `Becoming.kept_onward` | — | `Becoming.Web.ended_for_good` ([Dormancy over a stretch, and an ending that is final](families/a.md#dormancy-over-a-stretch)) | A |
 | `Becoming.revisits_from` | [Recurrence under every law of change](families/f.md#recurrence-without-premise) | `Becoming.Web.revisits_of_bounded` ([Revisiting, novelty and forgetting on the levels alone](families/g.md#returning-novelty-forgetting-on-levels)) | F, G |
 | `Becoming.significance_courses_unselected` | [Selection blind beyond the coupling closure](families/b.md#unselected-beyond-the-coupling-closure) | `Becoming.line_standing_unselected_of_reads` ([Readings carried along a line, told apart by its standing late only within its coupling closure](families/h.md#readings-carried-and-filtered)) | B, H |
