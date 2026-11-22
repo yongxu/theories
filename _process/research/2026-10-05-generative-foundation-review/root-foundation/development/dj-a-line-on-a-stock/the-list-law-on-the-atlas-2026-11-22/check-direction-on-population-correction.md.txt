@@ -1,0 +1,53 @@
+*An AI reader who took no part's return (run as Claude Opus, 117,816 tokens), word for word from the agent's transcript. It set the direction page's corrected sentences on `PopulationCorrection.lean` (22 November 2026, after row FM's read) against that file, row FM's note and `RegimeMargin.Adjusted.fates`, as the corrections first stood; its twelve findings are applied on the page in its words. Filed in this folder because it rode the same landing.*
+
+I found 3 MUST and 9 LESSER findings in the three changed lines.
+
+**1. MUST: the second outcome as "a state that then repeats" is stated nowhere, and the page does not say so.** The changed text says this twice:
+- Line 13: "two theorems side by side take the two sides of one inequality each to a state that then repeats".
+- Line 15: "Each outcome is a state that then repeats, so neither course ends".
+
+`schedule_shortfall_is_destructive` (PopulationCorrection.lean l. 524–529) gives only three properties from some step on: `renewing = 0 ∧ reserve < fee ∧ capacity = 0`. The reserve is not fixed. That the course is then one repeated state needs `destructive_region_absorbing` (l. 594), which says `next … ⟨0,B,0⟩ = ⟨0,B,0⟩` for `B < fee` under every `k`. No theorem puts the two together. NOTE.md l. 14 says "the two composed on paper", and the page's "on paper" covers only the top-up. Only the first outcome is stated as a repeated state, in `schedule_sufficiency_reaches_full_state` (l. 576).
+- Line 13, replace with: "where two theorems side by side take the two sides of one inequality, one to a state that then repeats and the other, with a third theorem and on paper, to one too".
+- Line 15, replace with: "Each outcome is a state that then repeats (the first by `schedule_sufficiency_reaches_full_state`; the second on paper, from `schedule_shortfall_is_destructive` with `destructive_region_absorbing`, by which a state with none renewing, the reserve below the fee and capacity at nothing is its own next under every quota), so neither course ends;".
+
+**2. MUST: "the first is the first way only on readings that can be disputed" names the wrong outcome.** In the changed text "the first" is the outcome with all renewing; the top-up clause uses it that way ("taking it to the first"). The note says this of the destructive outcome. NOTE.md l. 19: "The destructive outcome is the first way only on three readings a careful person could dispute". It also leaves out part of the first reading. Replace with: "the second is the first way only on three readings that can be disputed (that a supplied law of revision, with a one-step theorem beside it, is a selecting; …".
+
+**3. MUST: "of the three things of 'What is not there' the file has none whole and one in part, a rule set at each step from a reserve fed by a count" is not in the note.** It is one reader's return: RETURN-ways-fable.md l. 104 and l. 113 ("Of the three in the page's first sentence the file has none whole and one in part"). It is also repeated in "What is not there" as "a read of 22 November, told above, found none of the three whole". Put "By that record" in front of it and it reads as the note's checked finding, which it is not. The claim matches the Lean: `next` sets `active := funded fee s`, and `inflow` feeds the reserve from the count.
+- Replace with: "and, by one reader of that read, of the three things of "What is not there" the file has none whole and one in part, …".
+- In "What is not there", replace with: "where one reader of a read of 22 November, told above, found none of the three whole".
+
+**4. LESSER: "whether correction is funded at any step" can be read as "at every step".** `exact_schedule_activation_boundary` (l. 504–507) has `∃ t`, and NOTE.md l. 13 says "at some step". Replace with: "whether correction is funded at some step".
+
+**5. LESSER: the top-up parenthesis, "from the top-up's definition and two of the file's theorems".** NOTE.md l. 14 cites the definition (l. 246) with l. 576 for the top-up taking it to the first, and l. 516 only for "a smaller one does not". The page also drops "at any step" and "by arithmetic for N up to 6". From the Lean the claim is plausible. `topup` sets the reserve to `min fee (reserve + extra)`, which equals the fee here. Then `enough` holds, and l. 576 applies with `renewing = 0 ≤ N`. Replace with: "a top-up of the fee less the reserve, at any step, taking it to the first, and no smaller one (that last on paper, from the top-up's definition with `schedule_sufficiency_reaches_full_state`, and `exact_schedule_topup` for the smaller; no theorem of the file states it)".
+
+**6. LESSER: "the reserve does not fall below the fee once it covers it" states no premises.** It sits in a new sentence, apart from the one that gives them. `correction_stays_funded` (l. 94–96) needs `hr : s.renewing ≤ N` and `hf : fee ≤ N`; NOTE.md l. 43 has "for counts within `N` and `fee ≤ N`". Without `fee ≤ N` the funded step can leave the reserve below the fee. Replace with: "…once it covers it, for a start with no more renewing than slots and a fee no greater than their number".
+
+**7. LESSER: "the course that comes to none renewing is one on which…"** This is the writer's sentence, not the note's. It is the converse of l. 524, and it is borne only on paper, from l. 576 with `1 ≤ N` and l. 504. It is also false if "comes to" means reaching zero once. Take `renewing = 1` and `reserve = fee − 1`: renewing is 0 at step 1, and correction is then funded. "What its schedule can still bring" is `available k renewing renewing`, which the file calls "a counterfactual ledger" (l. 378–379). Replace with: "the course that comes for good to none renewing is one on which the start's reserve, with what its renewing slots bring while the schedule revises them away unfunded, never covers the fee (on paper, from the two theorems and the equivalence)".
+
+**8. LESSER: who was read, and by whom.**
+- "row FM had its statements read" reads as row FM's own statements. Replace with: "row FM had the file's statements read".
+- The third checker checked the note, not the statements (NOTE.md l. 3).
+- "with questions fixed first" leaves out that N6 and three tightenings came after the freeze (NOTE.md l. 9). Replace with: "…by six readers each alone, with questions fixed first (one more and three tightenings after), two checkers of their returns and a third of the record".
+
+**9. LESSER: "no proof older than that day gets shorter either way" has no hedge.** NOTE.md l. 33 gives it as the row's test, where "'None' was argued". Replace with: "and, by the row's test, as argued there, no proof older than that day gets shorter either way".
+
+**10. LESSER: "the read of that day looked and found none".** "What may not be written" (NOTE.md l. 21) allows nothing past "not found in what was read". Replace with: "the read of that day looked, and in what was read found none".
+
+**11. LESSER: the `fates` sentence leaves out three premises.** The statement (RegimeMargin.lean l. 1670–1671) takes `rises : Rises A`, `restsAt : RestsAtDraw A g H` and `band : Band A H hi`, plus `x ≤ hi` and `r ≤ hi`. "Handed in" names the adjustment, regime and band, but not the conditions laid on them. The rest is exact: the start in the band, the threshold, `N ≤ 3 hi + 3`, `StillFrom` (so both fates are rests), and the two fates by `x < threshold` and `threshold ≤ x`. The note's contrast "Its threshold is a finite check; the file's is an amount" (l. 29) is dropped. Replace with: "its adjustment, its regime, its draw and its band are handed in, under three premises: that the adjustment rises with what is left and with the recent giving, rests at the draw exactly where the regime gives the draw, and keeps the band; both fates are rests, and its threshold is a finite check where the file's is an amount".
+
+**12. LESSER: the parenthesis of old wordings is incomplete, and the record's link does not yet resolve in the worktree.**
+- The parenthesis ("Until 22 November this paragraph said…") does not list two changes. "nothing in it reads capacity" became "but capacity's own update", and "the reserve that correction needs" became "the reserve". Add: "that "nothing in it reads capacity",".
+- The record's link (`fm-read-population-correction-2026-11-22/NOTE.md`) does not resolve in /Users/ren/tmp/dj/wt. It exists in /Users/ren/theories and is identical to tmp/fm/outside22/NOTE.md. It resolves only once that record lands.
+
+**Found right:**
+- "all renewing with the reserve at the fee and the capacity at its cap" is exactly `⟨N,fee,cap⟩` (l. 579).
+- "none renewing, the reserve below the fee and capacity at nothing" is exactly the conclusion of l. 524–529.
+- The premises the earlier sentence states (`1 ≤ N`, `hr`, `hf`, `hk`) are all the premises the three theorems have.
+- "No one statement has both outcomes" holds in what I read. `funded_or_replacement_bound` (l. 205) is a disjunction at each step, not the two outcomes.
+- "Nothing in it reads capacity but capacity's own update" is true of the definitions. Capacity appears only at l. 12 and l. 44; `topup`, `leakingNext` and `drainedNext` keep it.
+- "For good only under the file's own step" matches NOTE.md l. 14 and l. 51.
+- Every quotation of the old words matches the minus lines exactly. "No one had set it against…" is unquoted and paraphrased, which is acceptable.
+- `fates` dates from 21 October: the earliest commit on the name is 8345955c2. I did not check that the statement then was the same.
+- On the two ways, nothing beyond the note except finding 2. "Neither … is the second way … three numbers that stand still" is the note's l. 19, and "neither course ends" is its l. 50.
+
+**Not read:** the note's other checkers' reports except by grep, the frozen questions and addendum, the Astra report, the Lean proofs beyond the statements named, and whether the destructive repeat is stated elsewhere in the file under another name (I searched its theorem list only).
