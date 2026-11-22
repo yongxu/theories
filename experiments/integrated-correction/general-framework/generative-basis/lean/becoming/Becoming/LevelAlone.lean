@@ -58,7 +58,9 @@ first hit finds a higher level. B only needs the threshold implication. The reco
 no-return forms are stated under the common premises and `below`
 (`silent_at_start_iff_recoverable_next_of_stays_below`,
 `silent_at_start_none_iff_no_return_of_stays_below`), by the laws of `Becoming.TurningInTime` that
-end `_of_stays_below`; under A's premises they are calls of those. The use form calls A and also
+end `_of_stays_below`; under A's premises `silent_at_start_iff_recoverable_next` and
+`silent_at_start_none_iff_no_return` are calls of the two forms just named. The use form calls A and
+also
 asks `H₂ + y₂ ≤ hi` (`fits`). Two public statements are
 called by no law over markings: `level_never_rises` and `stays_below_of_le`. They ask a use that
 never falls at any step (`up`) where `level_never_rises_of_rises` and `stays_below_of_le_of_rises`
@@ -532,8 +534,8 @@ theorem silent_at_start_iff_next {t alone : W → W} {Kept : W → Prop} {giving
 /-- Under the common premises and `below`, some marking silent at `x₀` gives a line that never
 ends exactly when the original levels are `Recoverable` at `D + 1`. Feasible courses turn to the
 standing use `H₂`; the need must be met at every step. The lag puts the test one step after the
-first difference. Neither `mono` nor `still` is asked, so the original level may rise. By
-`silent_at_start_iff_next_of_stays_below` and `recoverable_iff_above_of_stays_below` of
+first difference. Neither `mono` nor `still` is asked, so the original level may rise (as on `Rising`). By
+`silent_at_start_iff_next_of_stays_below` of this module and `recoverable_iff_above_of_stays_below` of
 `Becoming.TurningInTime`, whose bound at `D + 1` is `level_within` from `keeps₀` and `high`. -/
 theorem silent_at_start_iff_recoverable_next_of_stays_below {t alone : W → W} {Kept : W → Prop}
     {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat}

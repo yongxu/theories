@@ -5218,25 +5218,27 @@ tagged instance or application.
 * `Becoming.LevelAlone` (L2, through `Becoming.TurningInTime`): a reading of the level alone, over
   every marking that does not mark the start's level. A marking is a decided set of levels; under
   it the way after a step at a marked level is one fixed correction, handed in, and elsewhere the
-  way's step as it was (`LevelAlone.readBy`). Under the common premises of the module's head note (the
-  correction sets a way of a kept kind that the way's step as it was keeps and whose ways use `H₂`;
-  nothing is given from nothing, giving is short of `H₂` below `y₂` and meets it wherever both
-  `y₂ ≤ z` and `z + H₂ ≤ hi`, and the step under no use keeps levels up to `hi` within `hi`; a
+  way's step as it was (`LevelAlone.readBy`). Under the common premises of the module's head note
+  (the correction sets a way of a kept kind that the way's step as it was keeps and whose ways use
+  `H₂`; nothing is given from nothing, giving is short of `H₂` below `y₂` and meets it wherever
+  both `y₂ ≤ z` and `z + H₂ ≤ hi`, and the step under no use keeps levels up to `hi` within `hi`; a
   positive need at most `H₂ + y₂`; a use that rises strictly for the first `hi` steps; a start at
-  most `hi`), with `D` the first step at which the level of the
-  course as it was differs from the start's, and given that the course as it was, once below the
-  corrected kind's `H₂ + y₂`, stays below, some marking silent at the start's level gives a line
-  that never ends exactly where the level at step `D + 1` is at or above `H₂ + y₂`
+  most `hi`), with `D` the first step at which the level of the course as it was differs from the
+  start's, and given that the course as it was, once below the corrected kind's `H₂ + y₂`, stays
+  below, some marking silent at the start's level gives a line that never ends exactly where the
+  level at step `D + 1` is at or above `H₂ + y₂`
   (`LevelAlone.silent_at_start_iff_next_of_stays_below`; the `+ 1` is the lag: the step from the
-  first marked level is still taken under the use as it was), and exactly where the marking of every
-  level but the start's does (`silent_at_start_iff_marking_all_but_start`). That one fact is had
-  where the corrected use is no more than the course's first use (`silent_at_start_iff_next_of_le`)
-  and, for any corrected use, where the step under no use does not fall as the level rises and
-  the start's own step does not raise the level (`silent_at_start_iff_next`); under the latter the
-  same is said as recoverable at step `D + 1`, as no such marking succeeding exactly where there is
-  a point of no return at or before it, and, with `H₂ + y₂ ≤ hi` besides, in the
-  use at step `D`. Five worked courses, two of which meet every premise of the latter law but one.
-  A leaf: it makes no law of `Becoming.TurningInTime` a case.
+  first marked level is still taken under the use as it was), and exactly where the marking of
+  every level but the start's does (`silent_at_start_iff_marking_all_but_start`). That one fact is
+  had where the corrected use is no more than the course's first use
+  (`silent_at_start_iff_next_of_le`) and, for any corrected use, where the step under no use does
+  not fall as the level rises and the start's own step does not raise the level
+  (`silent_at_start_iff_next`). Under the common premises and that one fact the same is said as
+  recoverable at step `D + 1`, and as no such marking succeeding exactly where there is a point of
+  no return at or before it (`silent_at_start_iff_recoverable_next_of_stays_below`,
+  `silent_at_start_none_iff_no_return_of_stays_below`); under the latter law's, with `H₂ + y₂ ≤ hi`
+  besides, in the use at step `D`. Five worked courses, two of which meet every premise of the
+  latter law but one. A leaf: it makes no law of `Becoming.TurningInTime` a case.
 * `Becoming.LineOnAStock` (L2, through `Becoming.TurningInTime` and `Becoming.ReadingsPersist`; it imports `Becoming.SelectionTerm` too):
   a line on a stock, units that leave offspring on a renewed
   level (board item DJ). It states no continuation condition and no valuation. A unit has a need, a use
