@@ -1,0 +1,108 @@
+[
+ {
+  "judge_item": "J03",
+  "theorems": [
+   "Becoming.FourReaders.recoverable_iff_regime"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J07",
+  "theorems": [
+   "Becoming.Lasting.avoids_iff_closed"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J11",
+  "theorems": [
+   "Becoming.Flow.level_kept_of_plans"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J15",
+  "theorems": [
+   "Becoming.RuleRebuilding.«恒取逾生则尽»"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J19",
+  "theorems": [
+   "Becoming.Net.rests_unrefuted"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J23",
+  "theorems": [
+   "Becoming.Optimum.frontier_keeps_above"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J27",
+  "theorems": [
+   "Becoming.Flow.Balances.kept_of_restrained"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J31",
+  "theorems": [
+   "Becoming.Regulation.Overshooting.oscillates"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J35",
+  "theorems": [
+   "Becoming.ReadingsPersist.Habitat.cleared_removes_its_readers"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J39",
+  "theorems": [
+   "Becoming.Undecided.monotone_run_rests"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J43",
+  "theorems": [
+   "Becoming.Revising.controlled_revision",
+   "Becoming.OpenedCorrection.Linked.opens_after_replenishing"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J47",
+  "theorems": [
+   "Becoming.Optimum.frontier_keeps_stepwise"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J51",
+  "theorems": [
+   "Becoming.Withholding.gives_without_chain"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J55",
+  "theorems": [
+   "Becoming.standingCount_unselected"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J59",
+  "theorems": [
+   "Becoming.RegimeMargin.Alternation.alternates"
+  ],
+  "where": []
+ }
+]

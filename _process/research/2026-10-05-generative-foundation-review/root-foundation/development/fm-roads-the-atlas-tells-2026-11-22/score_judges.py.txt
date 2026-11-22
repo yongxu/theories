@@ -1,0 +1,20 @@
+# AI-written (Claude Fable, row FM), 22 November 2026. Sets the judges' VERDICT lines against the key.
+import json, re, glob, collections
+key=json.load(open('tmp/fm/roads22/JUDGE-KEY.json'))
+V={}
+for f in sorted(glob.glob('tmp/fm/roads22/readers/JUDGE-*.md')):
+    for line in open(f):
+        m=re.match(r'VERDICT (J\d+) \| verdicts: (.*?) \| from: (.*?) \| to: (.*?) \| change: (.*?) \| side: (.*?) \| strength: (.*)', line.strip())
+        if m:
+            V[m.group(1)]=dict(verdicts=[x.strip() for x in m.group(2).split(',')], frm=[x.strip() for x in m.group(3).split(',')], to=[x.strip() for x in m.group(4).split(',')], change=m.group(5), side=m.group(6), strength=m.group(7))
+def isroad(v): return any(x.startswith('ROAD') for x in v['verdicts'])
+c=collections.Counter(); rows=[]
+for j,q in sorted(key.items()):
+    if q['key'][0]=='S':
+        s=q['store']; v=V[j]
+        road=isroad(v); same_to=s['to'] in v['to']; same_from=s['home'] in v['frm']
+        kind=('ROAD, store pair' if road and same_to and same_from else 'ROAD, other pair' if road else 'N3' if 'N3' in v['verdicts'] else 'N1' if 'N1' in v['verdicts'] else 'other no-road')
+        c[kind]+=1
+        rows.append((j,q['key'],s['home'],s['to'],s['strength'],v['verdicts'],v['frm'],v['to'],v['change']))
+print(dict(c))
+json.dump(dict(V=V,rows=rows),open('tmp/fm/roads22/JUDGE-SCORED.json','w'),ensure_ascii=False,indent=1)

@@ -1,0 +1,530 @@
+# Judge 1: sixteen items against the definition of a road
+
+*AI-written (Claude Fable 5.2, model id claude-fable-5-2), 22 November 2026, as a reader for board row FM. Read only: nothing in the repository was edited, no Lean was run, nothing was built.*
+
+Material used: `tmp/fm/roads22/judge/DEFINITION.md` (whole), `QUEUE-1.json`, `ENTRIES-WITHOUT-EXITS.json` (searched by script; the entries named as opened were printed and read: name, mechanism, and every law with the ledger ids it takes), the ledger `theories/becoming/results/atlas/entries/premises.json`, and the live Lean. No other file under `tmp/fm/roads22/`, no page of the atlas other than the ledger, no record and no study note was opened.
+
+One slip to report. My first search for the theorems ran over the whole package directory and, before I stopped it, printed the heads of `keeps_widening` from frozen copies under `becoming-checks/` (item J25). I used none of it: every statement quoted below was read in the live file named, and J25's was found again there.
+
+Three readings of the definition that I had to settle, said once here because several verdicts turn on them.
+
+1. **The home's own theorem.** N1 says the home is among the dynamics that carry the far end. A theorem on the home's list is, trivially, a law of the home that concludes its own conclusion. I did not count that: on that reading no theorem on a home's list could be a road. I counted the home as carrying the far end where its name says it, or where another of its laws concludes it or takes it. J01, J17, J29 and J45 are roads on this reading and would be N1 on the other.
+2. **A witness without hypotheses.** Where a statement has no hypothesis, I took its conjuncts that are ledger premises as the near end (J21), and answered N0 where it says one property of one built example (J25, J57).
+3. **Two lists.** Where a theorem stands on two entries' lists (J13, J21, J33, J49), I answered from each and say which answer is from which.
+
+Every answer below is OPENED: I read the Lean statement and the entries myself. Where an entry is named and was not opened in full, the sentence says so.
+
+## J01
+
+OPENED. `Becoming.Web.optimum_broken_iff` at `Becoming/Optimum.lean:727`, `Becoming.Web.optimum_ends_beyond` at `Becoming/Optimum.lean:740`, `Becoming.Web.consumed_ends_when_fixed_at` at `Becoming/Dependence.lean:276`; `Web.Broken`, `Web.Supported`, `Web.Dependent` at `Dependence.lean:134-147`; `Web.MetOn` at `DrawnBeyond.lean:96`; `Optimum.Rising`, `Optimum.Room` at `Optimum.lean:550-557`; `Frontier` at `Frontier.lean:72`. Entries opened: `what-an-optimum-does-beyond-what-couples-in`, `three-outcomes-of-a-loss`; ledger rows opened for every premise named below.
+
+Statements.
+
+```lean
+theorem optimum_broken_iff (rising : Optimum.Rising ds better)
+    (room : Optimum.Room ds rest eligible) (optimum : Frontier eligible better (W.level (t + 1)))
+    (met : W.MetOn dep rest t) {c : C} (mem : c ∈ rest) :
+    W.Broken t (dep c) c ↔ ∃ o, eligible o ∧ o c < W.need t (dep c) c
+
+theorem optimum_ends_beyond {obs : F → C → Prop} {members : F → Prop}
+    (rising : Optimum.Rising ds better) (room : Optimum.Room ds rest eligible)
+    (optimum : Frontier eligible better (W.level (t + 1))) (met : W.MetOn dep rest t)
+    (dependent : W.Dependent) (apart : ∀ c, c ∈ rest → ¬ c ∈ ds)
+    (listed : ∀ h c, members h → W.CoupledInto obs h c → c ∈ ds) {c : C} (mem : c ∈ rest)
+    {o : C → Nat} (eligibleO : eligible o) (below : o c < W.need t (dep c) c)
+    (fixed : W.requires (t + 1) (dep c) c ∧ W.need t (dep c) c ≤ W.need (t + 1) (dep c) c) :
+    W.Broken t (dep c) c ∧ ¬ W.active (t + 1) (dep c) ∧ ¬ members (dep c) ∧
+      ∀ h, members h → ¬ W.CoupledInto obs h c
+
+theorem consumed_ends_when_fixed_at {T t : Nat} {g : F} {c : C}
+    (dependent : W.active t g → W.Supported t g)
+    (fixed : W.requires t g c ∧ W.need T g c ≤ W.need t g c) (below : W.level t c < W.need T g c) :
+    ¬ W.active t g
+```
+
+`Web.Broken t g c` is `W.requires t g c ∧ W.need t g c ≤ W.level t c ∧ W.level (t + 1) c < W.need t g c`.
+
+(1) Near end. `rising`, `room`, `optimum` (a level history after the step that is an optimum of an order rising with a family, with room beyond) and `met`. Ledger: `optimum-room` (`Optimum.Room`) is taken by laws of one dynamic only, `what-an-optimum-does-beyond-what-couples-in`; `optimum-rising` by five, `requirement-frontier` by ten, `web-meton` by four, so those place nothing by themselves. The two optimum theorems are on that entry's list (`premises[].law`), with `optimum-rising, optimum-room, requirement-frontier, web-meton, optimum-c-beyond` taken. Near end: `what-an-optimum-does-beyond-what-couples-in`. `consumed_ends_when_fixed_at` has no near end of its own in that dynamic: it is a law of `three-outcomes-of-a-loss` (takes `flow-supported-where-active, web-requires, web-need-not-lower, web-below-earlier-need`).
+
+(2) What changes. (t): `met : W.MetOn dep rest t` (the need met at `t`) and, in `optimum_ends_beyond`, `¬ W.active (t + 1) (dep c)`; in `optimum_broken_iff` the far side is `Broken t`, whose last conjunct is `W.level (t + 1) c < W.need t (dep c) c`. One step, `t` to `t + 1`. (`optimum_broken_iff` is also an iff of a condition on the eligible set, `∃ o, eligible o ∧ o c < W.need t (dep c) c`, with an outcome of the step, so by N7 one passage, condition to outcome, exact.)
+
+(3) Far end.
+- `optimum_broken_iff` concludes `W.Broken t (dep c) c`. Searched the entries for `Broken` and `broken`: `Web.Broken` is on the declarations list of `three-outcomes-of-a-loss` (its law `Web.kept_or_broken` concludes kept or broken); laws concluding a break stand under the home itself (`optimum_broken_iff`, `optimum_broken_iff_capacity`, `ModelStatements.optimum_broken_reading`) and under `what-a-set-point-optimum-does-beyond`, `others-drawing-first-end-the-base`, `drawers-in-turn`, `a-race-for-position-draws-everything`, `several-optimizers-drain-by-their-joint-capacity`, `a-weighting-faster-than-renewal-ends-the-base`, `horizon-optima-hold-the-greatest-renewal`, `what-a-rise-draws-from-beyond`, `restraint-within-the-joint-slack` (found by the search; of these only the two named above were opened in full). The home is among them: outcome side this theorem alone is N1 (the break beyond is what the home's own name and mechanism say an optimum does).
+- Premise side, `optimum_broken_iff` gives: `web-below-earlier-need` (`W.level t c < W.need T g c` with `T := t`, `t := t + 1`, `g := dep c`; taken by `consumed_ends_when_fixed_at` of `three-outcomes-of-a-loss` alone); not given: `flow-supported-where-active`, `web-requires` at `t + 1`, `web-need-not-lower`. It also gives `web-broken` (`Web.Broken`), taken by `Flow.Balances.broken_shared` (`JointDraw.lean:139`, on the lists of `what-a-rise-draws-from-beyond` and `restraint-within-the-joint-slack`); not given: `k3-balance`, `flow-each-take-within-slack`, `flow-present-at-step` (a flow is not among the hypotheses of `optimum_broken_iff` at all).
+- `consumed_ends_when_fixed_at`, with `below` among its hypotheses, concludes `¬ W.active t g`: a law of `three-outcomes-of-a-loss`, whose name carries it ("ended where dependence is fixed").
+- `optimum_ends_beyond` concludes `¬ W.active (t + 1) (dep c)` with `fixed` and `dependent` among its own hypotheses: this is what `consumed_ends_when_fixed_at` concludes (outcome side), all four of that law's premises being given or taken (`dependent : W.Dependent` is the stronger `k3-activity-needing-support`). Its proof term does not call `consumed_ends_when_fixed_at`; it repeats the same two-step inequality inline. Laws of other dynamics conclude the same "below the need, so not active at that step" from other hypotheses: `Flow.ends_below_at` (`Continuation.lean:488`, under `loss-of-renewal-for-good` by the ledger) and `Flow.Balances.breaks_beyond_ends` (`DrawnBeyond.lean:256`, under `what-a-rise-draws-from-beyond`, concluding `W.Broken t (dep c) c ∧ ¬ W.active (t + 1) (dep c)`); both statements read, those two entries not opened in full. The home's name and mechanism do not carry "ended"; only this one law on its list concludes it. The other two conjuncts (`¬ members (dep c)`, no member couples into `c`) are about what is unseen, said at one index; searched no further.
+
+Verdict.
+- `optimum_broken_iff` then `consumed_ends_when_fixed_at`: ROAD IN TWO, `what-an-optimum-does-beyond-what-couples-in` → `three-outcomes-of-a-loss`. The first is exact (iff) to the state `Broken t (dep c) c`; the second is sufficient, and needs `fixed` and `dependent`, which the first does not give.
+- `optimum_ends_beyond` alone: ROAD, same ends, change t, outcome side, sufficient (it takes `fixed`, `dependent`, and the eligible outcome below the need). If "the home is among the dynamics that carry the far end" is read to include the theorem's own place on the home's list, this is N1; I did not read it so, since on that reading no theorem on a home's list could be a road.
+- `optimum_broken_iff` alone, outcome side: N1.
+
+VERDICT J01 | verdicts: ROAD, ROAD IN TWO | from: what-an-optimum-does-beyond-what-couples-in | to: three-outcomes-of-a-loss | change: t | side: outcome | strength: sufficient
+
+## J05
+
+OPENED. `RegimeTransition.supported_finite_transition` at `experiments/market-generativity/formal/RegimeTransition.lean:264` (the file directly under `formal/`; copies of the same file name stand under `formal/transition-verification/`, `formal/partial-transition-verification/` and `formal/finite-support-verification/`, which I did not read). Also read: `Landing` (`RegimeTransition.lean:143`), `positive_seed_finite_landing` (`:146`), `pulse_prefix_executes` (`:225`), `MarketInstances.safe_never_fails` (`formal/MarketInstances.lean:129`), `RegimeAttraction.high_coupled_history_never_fails` (`formal/RegimeAttraction.lean:532`), `AlignmentSuccession.every_generation_executes` (`experiments/market-generativity/meta-attractor/AlignmentSuccession.lean:195`). Entries opened: `never-leaving-a-guard` (whole), `market-model-share-margin-and-ends`, `succession-on-a-funded-carrier`; looked at and set aside as about another model (`RegimeMargin`): `margin-of-a-regime`, `regime-in-any-amounts`, `where-a-run-of-a-regime-comes-to-rest`.
+
+Statement.
+
+```lean
+theorem supported_finite_transition (cost : Rat) (s : OperatingState)
+    (hc : 0 ≤ cost) (hs : physical s) (hx : 0 < s.1) :
+    ∃ N, ∀ initial, cover cost N ≤ initial →
+      (∀ t, t ≤ N → guardedHistory pulseParameters exampleBounds (lift s initial)
+        (fun _ => pulseDisturbance cost) t =
+          some (MarketGenerativity.history pulseParameters (lift s initial)
+            (fun _ => pulseDisturbance cost) t)) ∧
+      (let arrived := MarketGenerativity.history pulseParameters (lift s initial)
+          (fun _ => pulseDisturbance cost) N
+       Safe exampleParameters exampleBounds arrived ∧
+       ∀ k, guardedHistory exampleParameters exampleBounds arrived (fun _ => noShock) k =
+         some (MarketGenerativity.history exampleParameters arrived (fun _ => noShock) k))
+```
+
+(1) Near end. A market state, physical, with positive renewing share, a support stock of at least `cover cost N`, run under the pulse (`pulseParameters`, which is `exampleParameters` with `beta := 0`). Ledger: `regimetransition-cost-nonneg` and `regimetransition-share-pos` are taken by laws of `never-leaving-a-guard` alone (the second has this theorem as its only Lean name); `regimeattraction-physical` by `never-leaving-a-guard` and `market-model-share-margin-and-ends` (`RegimeAttraction.fixed_classification`), so it places nothing by itself. The theorem is on the list of `never-leaving-a-guard`. Near end: `never-leaving-a-guard`.
+
+(2) What changes. (t): the start (`physical s`, `0 < s.1`, at step 0 of the pulse); `∀ t, t ≤ N` the pulse history does not fail; at `N` the arrived state is `Safe`; `∀ k` from there the history under `exampleParameters` does not fail. The parameters also change at `N` (`pulseParameters` to `exampleParameters`), inside the one statement; no twin for another range is named, so not (p).
+
+(3) Far end. Three things concluded.
+- The pulse prefix does not fail for `t ≤ N` given the cover: lasting a stated number of steps; `never-leaving-a-guard` (its name, and `MarketInstances.cover_ladder`, `cover_exact` on its list take `regimetransition-cost-nonneg`).
+- `Safe exampleParameters exampleBounds arrived`: ledger `marketgenerativity-safe` (`MarketGenerativity.Safe`), taken by `MarketInstances.safe_never_fails` and `safe_within_kernel` of `never-leaving-a-guard`, and by `AlignmentSuccession.every_generation_executes` of `succession-on-a-funded-carrier`. In the second the premise reads `Safe (withMigration p migration) b s.economy`, said of a carrier's economy under parameters with a migration cost; the statement here gives `Safe` of `exampleParameters`, and I found no theorem carrying the one to the other. Not a far end there: N5b (a premise two dynamics' laws take, said of something other than this course).
+- `∀ k, guardedHistory exampleParameters exampleBounds arrived (fun _ => noShock) k = some …`: what `MarketInstances.safe_never_fails` concludes (`never-leaving-a-guard`: "no admissible guarded history fails the essential floors"), and, in the same words for the same parameters and disturbance, what `RegimeAttraction.high_coupled_history_never_fails` concludes (`market-model-share-margin-and-ends`, from `HighTube r s` and `5 ≤ stock`, which this statement does not give; the proof here goes through `Landing`, not `HighTube`).
+
+The dynamics that carry the far end are `never-leaving-a-guard` and, for the last conjunct on the outcome side, `market-model-share-margin-and-ends`. The home is among them.
+
+Verdict. N1: the start, the lasting through the pulse, the safe arrival and the never failing after it are all under `never-leaving-a-guard`. Listed apart: the last conjunct is also what a law of `market-model-share-margin-and-ends` concludes (outcome side, sufficient, an existential `N`), which would be the only candidate for a second dynamic; and N5b for `succession-on-a-funded-carrier`.
+
+VERDICT J05 | verdicts: N1, N5b | from: never-leaving-a-guard | to: none | change: t | side: none | strength: sufficient
+
+## J09
+
+OPENED. `Becoming.Tolerance.certified_available_iff` at `Becoming/Tolerance.lean:569`; `Tolerance.certified` (`:543`), `certified_kept` (`:551`); `FaultEnvelopes.certificate`, `separated`, `availability_iff_separated` at `Becoming/FaultEnvelopes.lean:53, 57, 129`. Entries opened: `thresholds-of-waiting` (whole), `restoring-giving-from-the-worst-start`. Searched every entry (name, mechanism, declarations, laws) for `FaultEnvelope`, `availability_iff`, `fault`, `separated`, `envelope`, `certificate`.
+
+Statement.
+
+```lean
+theorem certified_available_iff (a : Domain) :
+    (∀ actual, actual ∈ faults a →
+      (Law.run (certified roster faults) (fun d => !(actual.contains d))).state 1 a = true) ↔
+      separated (roster a) (faults a) :=
+  availability_iff_separated (roster a) (faults a)
+```
+
+`separated roster faults` is `∀ a, a ∈ faults → ∀ b, b ∈ faults → ∃ d, d ∈ roster ∧ ¬ d ∈ a ∧ ¬ d ∈ b`. The proof is the certificate's own iff with the step unfolded: the state at step 1 is the certificate applied to the start.
+
+(1) Near end. A run of the certificate law from a start that withholds exactly within an admitted fault set. The theorem takes no ledger premise (`takes: []`) and stands on the list of `thresholds-of-waiting` as a case of `FaultEnvelopes.availability_iff_separated`. Ledger: `faultenvelopes-separated` (`FaultEnvelopes.separated`) is taken by one law of one dynamic, `Tolerance.certified_kept` of `thresholds-of-waiting`. No other entry holds a declaration of `FaultEnvelopes` or of the certificate law (the other hits for "fault" and "certificate" are `a-stop-passed-by-a-listing-that-fixes-the-sign`, `evidence-through-change`, `never-leaving-a-guard`, `succession-on-a-funded-carrier`, `growth-constrained-fragmentation`, in each the word said of another thing: the hit sentences read, the entries not opened further). The mechanism of `thresholds-of-waiting` as given speaks of the tolerating law and does not mention the certificate law; the three certificate laws are on its list all the same. Near end: `thresholds-of-waiting`.
+
+(2) What changes. An iff of a condition on the rule's parameters (`separated (roster a) (faults a)`) with an outcome of the course (`.state 1 a = true` from each start `fun d => !(actual.contains d)`): by N7 one passage, condition to outcome, exact. Index: the start (step 0, withholding within `actual`) and `state 1`. So (t), one step. A twin for the unseparated side is on the same list (`certified_blocked`, a witness: with `correlated3` every domain withholds at step 1), which would make it (p) between "gives at step 1" and "withholds at step 1"; both sides are giving and withholding under one law.
+
+(3) Far end. "Gives at step 1": giving at a step under a law of waiting. Carried by `thresholds-of-waiting` (`certified_kept` concludes giving at every step; `thin_absorbed`: a thin withholding passes out in one step). `restoring-giving-from-the-worst-start` concludes giving at `n` "from every start", by total withholding; the statement here is of the starts within an admitted fault set only, and gives none of that entry's premises (`tolerance-keepsinclusion` is not shown of `certified`). No other dynamic's name or laws carry it.
+
+Verdict. N1: both sides stand under `thresholds-of-waiting`. (Read without N7 it is N0, a one-step characterisation of when the certificate accepts.)
+
+VERDICT J09 | verdicts: N1 | from: thresholds-of-waiting | to: none | change: t | side: none | strength: exact
+
+## J13
+
+OPENED. `Becoming.World.comes_to_rest_unrefuted` at `Becoming/Openness.lean:599` (and `comes_to_rest_unrefuted_from` at `:582`, which it applies); `World.not_recurring_of_rests_unrefuted` at `Becoming/Space.lean:263`; `Web.Unceasing` at `Becoming/Arising.lean:97`; `World.ArisingRecurs` at `Space.lean:191`. Entries opened: `continued-change-needs-openness`, `closed-cycle-without-dissipation` (name, mechanism, every law with what it takes). Read by their laws' names and premises only, from the search: `rest-at-every-resolution`, `rest-exactly-where-falls-stop`, `unceasing-generation-needs-renewal`, `more-needs-renewers`.
+
+Statement.
+
+```lean
+theorem comes_to_rest_unrefuted (counted : w.Counted)
+    {stand : Nat → List w.Relatum} (standing : w.web.StandingCensus stand)
+    (embodied : w.ArisingEmbodied) (balanced : w.Balanced) (dissipative : w.Dissipative)
+    {T : Nat} (around : ∀ t, T ≤ t → w.flow.AroundStanding stand t) :
+    ¬ ¬ ∃ N, w.RestsFrom N
+```
+
+(1) Near end. A world with a census of the active and of what stands, arising embodied, flow balanced and dissipative, every step from `T` on enclosed around what stands. The theorem stands on two lists with the same seven ids taken (`k3-a-census, web-standingcensus, world-arisingembodied, k3-balance, k3-dissipation, flow-aroundstanding, card-natural-number-amounts`): `continued-change-needs-openness` (named "The rest theorem") and `closed-cycle-without-dissipation`. Ledger: `flow-aroundstanding` and `world-arisingembodied` are taken by laws of those two only, and in `closed-cycle-without-dissipation` by this theorem alone; the other laws on that entry's list are witnesses taking no ledger premise ("each lacking dissipation", its mechanism), with `Web.dissipation_arising_not_recurring`. In `continued-change-needs-openness` four and five laws take them, this one among them. Near end: `continued-change-needs-openness`. The hypotheses do not place a course under `closed-cycle-without-dissipation`: `dissipative` is among them, and that entry's notion is a cycle without it.
+
+(2) What changes. (t): `∀ t, T ≤ t → w.flow.AroundStanding stand t` (from `T` on) and `∃ N, w.RestsFrom N` (from some `N` on, not named, under a double negation).
+
+(3) Far end. Rest from some step on, unrefuted. Carried by `continued-change-needs-openness` (its name; `World.rests_unrefuted`, `rests_unrefuted_enclosed`, `comes_to_rest_unrefuted_from` on its list), by `rest-at-every-resolution` (`World.rests_unrefuted_refinement_counted`, `rests_unrefuted_without_refinement`) and by `rest-exactly-where-falls-stop` (`World.InAmounts.rests_unrefuted_*`, a `RestsFrom` of `InAmounts.lean:311`, another declaration). `Amounts.rests_unrefuted` under `falls-that-end-do-not-recur` and `least-loss-rest` is of another declaration again; not followed. The home is among the carriers.
+
+The conclusion denies a notion other entries carry: by `not_recurring_of_rests_unrefuted` (a second theorem, one line), `¬ ¬ ∃ N, w.RestsFrom N` gives `¬ w.ArisingRecurs`, and `ArisingRecurs` is `w.web.Unceasing`, the notion in the name of `closed-cycle-without-dissipation` ("sustains unceasing arising") and of `unceasing-generation-needs-renewal`, and ledger premise `web-unceasing` (taken by laws of seven dynamics, `more-needs-renewers` and `continued-change-needs-openness` among them).
+
+Verdict. N1 for the passage to rest. Listed apart, a WALL: with this theorem and `not_recurring_of_rests_unrefuted`, no course under these premises has arising recurring, so none is under the notion of `closed-cycle-without-dissipation` or `unceasing-generation-needs-renewal` while the premises hold (the wall needs the second theorem; this statement alone says rest unrefuted). No (d) by this theorem: it takes `k3-dissipation`; that the cycle entry's witnesses lack it is said by those witnesses, not here.
+
+VERDICT J13 | verdicts: N1, WALL | from: continued-change-needs-openness | to: closed-cycle-without-dissipation, unceasing-generation-needs-renewal | change: t | side: none | strength: sufficient
+
+## J17
+
+OPENED. `Becoming.GroupEnding.Flow.coupled_generation_childless` at `Becoming/GroupEnding.lean:238`; `family_childless` (`:208`), `coupled_end_together` (`:351`), `ended_of_family` (`:379`), `all_end` (`:398`) in the same file; `SelectionTerm.Generations.Persists`, `Flow.member_after_never_overdrew`, `Flow.persists_never_overdraws` at `Becoming/PersistingChoices.lean:423, 435, 456`; `Reproduction.Flow.lineage_ends` at `Becoming/Reproduction.lean:613`; `Generations.family`, `size` at `SelectionTerm.lean:421, 425`. Entries opened: `persisting-filters-what-was-chosen`, `selection-among-groups-by-ending`, `ending-laws-as-regimes-on-a-lineage`, `confined-rise-within-a-whole` (name, mechanism, laws with what they take).
+
+Statement.
+
+```lean
+theorem coupled_generation_childless (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) {G : Generations X} (descended : SelectionTerm.Flow.Descended L W G)
+    {ds : List X} {m : Nat}
+    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
+      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
+    {T n : Nat} (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
+    (start : W.stock ds T < n + m) (k : Nat)
+    (coupled : ∀ p, p ∈ G.family (T + n + k) →
+      ∃ e, e ∈ ds ∧ W.requires (T + n + k) p e ∧ m ≤ W.need (T + n + k) p e) (y : X) :
+    ¬ y ∈ G.family (T + n + k + 1)
+```
+
+(1) Near end. Generations of descent on a flow, a family of conditions with gated renewal drawn beyond its renewal for `n` steps from `T` from a stock below `n + m`, and the cohort at `T + n + k` coupled to the family. The theorem is on one list, that of `persisting-filters-what-was-chosen`, taking `k3-balance, k3-only-active-relata-give, k3-activity-needing-support, selectionterm-flow-descended, flow-family-gated, flow-family-excess, flow-family-start-below-n-plus-m, groupending-cohort-coupled`. Ledger: `groupending-cohort-coupled` is taken by this theorem alone; every other id is taken by laws of five or more dynamics (`flow-family-excess` and `flow-family-start-below-n-plus-m` by six each, among them `selection-among-groups-by-ending`, `confined-rise-within-a-whole`, `ending-laws-as-regimes-on-a-lineage`, `whole-drawing-beyond-renewal-ends`, `degeneration-from-a-horizon`), so they place nothing by themselves. By the ledger the near end is `persisting-filters-what-was-chosen`, whose mechanism names this theorem ("the contrapositive of a coupled generation's ending") and whose other laws take the same setting with every cohort coupled (`persistingchoices-every-cohort-coupled`). By notion the hypotheses are also those of `selection-among-groups-by-ending` ("groups on one family end together": `coupled_end_together` takes the same gate, excess, start and descent, with groups of the generation coupled where this takes the whole cohort); the theorem's namespace is that entry's, and it is not on that entry's list.
+
+(2) What changes. (t): `excess : ∀ k, k < n → … (T + k)` and `start` at `T`; `coupled` at `T + n + k`; the conclusion at `T + n + k + 1`, for every `k`. Also (d) against the home: `selectionterm-generations-persists` (`G.Persists`), which the home's laws take, is not taken and is contradicted by the conclusion once every cohort is coupled (`Flow.member_after_never_overdrew` is that step, a second theorem).
+
+(3) Far end. The generation after has no member. It denies the home's notion (a line that persists); by N7 it is answered against the entries about the denial. Laws that conclude a generation or a line empty: `GroupEnding.Flow.all_end` of `selection-among-groups-by-ending` (`G.size (t + 1) = 0` from a generation none of whose members is active; `size` is the length of `family`, so the same thing in another form, by definition and by no named theorem); `Reproduction.Flow.lineage_ends` of `ending-laws-as-regimes-on-a-lineage` (`G.size (W.stock ds 0 + 1) = 0`, from balance and dissipation on a closed family, not from excess); `Founding.Flow.confined_ends` of `confined-rise-within-a-whole` (`lineage G h (T + n + k + 1) = []`, at the same index and from the same gate, excess and start, said of one founded group's line). The mechanism of `selection-among-groups-by-ending` says it in words: "a cohort none of whose members is active leaves no next cohort". Outcome side in each.
+
+Verdict. ROAD, `persisting-filters-what-was-chosen` → `selection-among-groups-by-ending`, `ending-laws-as-regimes-on-a-lineage`, `confined-rise-within-a-whole`: change t, outcome side, sufficient. Two cautions. (i) The home's notion is denied at the far end and a premise of the home is contradicted; were the far end only "does not persist" it would be N2a, a boundary of the home; it is a road because laws of other dynamics conclude the empty generation. (ii) If the near end is taken by notion and not by the ledger, the course stands under `selection-among-groups-by-ending` from the start, and the theorem is N1 inside that dynamic, filed on another entry's list.
+
+VERDICT J17 | verdicts: ROAD | from: persisting-filters-what-was-chosen | to: selection-among-groups-by-ending, ending-laws-as-regimes-on-a-lineage, confined-rise-within-a-whole | change: t | side: outcome | strength: sufficient
+
+## J21
+
+OPENED. `Becoming.Passing.passes` at `Becoming/Entropy.lean:1878` (namespace `Passing` opens at `:1712`; the short name `passes` is also a `def` in `ContextualRuns.lean:184`, `ContingentPlans.lean:72`, `PatternPassing.lean:188`, not these). Also read: `World.no_arrow` (`Entropy.lean:1701`), `Passing.no_arrow` (`:1920`), `Flow.Gainless`, `Flow.Conserving` (`Entropy.lean:156, 160`). Entries opened: `lossless-exchange-continues-and-returns`, `an-arrow-leaves-change-not-recurring`, `continued-change-needs-openness`, `closed-cycle-without-dissipation` (the last two for J13).
+
+Statement.
+
+```lean
+theorem passes :
+    world.Finite ∧ world.Embodied ∧ world.Counted ∧ world.Balanced ∧ flow.Conserving ∧
+    (∀ t, flow.Enclosed t) ∧ (∀ t, flow.Reverses (t + 1) t) ∧
+    world.ArisingRecurs ∧ world.CeasingRecurs ∧ (∀ T, web.Revisits all T) ∧
+    ¬ world.Dissipative ∧ (∀ T N, flow.dissipated all T N = 0) ∧ (∀ t, flow.exchanges all t = 1)
+```
+
+A witness: no hypothesis; thirteen things said of one built world (a unit carried back and forth), each at every step.
+
+(1) Near end. No hypothesis places a course; the conjuncts that are premises do. `world.Finite` (`k3-finite`), `world.Embodied` (`k3-embodiment`), `world.Counted` (`k3-a-census`), `world.Balanced` (`k3-balance`), `∀ t, flow.Enclosed t` (`k3-enclosed`). Ledger: `k3-finite` is taken by laws of `recurrence-without-decidedness`, `continued-change-needs-openness`, `ceasing-needs-arising`; `k3-enclosed` by `no-finite-part-bears-taking`, `continued-change-needs-openness`, `rest-at-every-resolution`; `k3-embodiment` by four; `k3-a-census` by six; `k3-balance` by forty-one. Each alone places nothing. Together they are the premises of `World.rests_unrefuted` (`k3-finite, k3-balance, k3-dissipation, world-arisingembodied`) and `World.rests_unrefuted_enclosed` (`k3-a-census, k3-embodiment, k3-balance, k3-dissipation, k3-enclosed`) of `continued-change-needs-openness`, less one. (`rest-at-every-resolution` takes four of the same with `flow-balancesat` and its own premises on refinement; a second candidate, weaker.) The theorem itself stands on the lists of `lossless-exchange-continues-and-returns` and `an-arrow-leaves-change-not-recurring`, taking nothing.
+
+(2) What changes. Not (t): every conjunct is at every step. Not (p). (d): `¬ world.Dissipative` contradicts `k3-dissipation` (`World.Dissipative`), which the two laws of `continued-change-needs-openness` just named take. No course moves: the statement sets a world with the other premises of the rest theorem beside it, without dissipation.
+
+(3) Far end. `world.ArisingRecurs ∧ world.CeasingRecurs ∧ (∀ T, web.Revisits all T)`: arising and ceasing recur and the configuration comes back. Carried by `lossless-exchange-continues-and-returns` (its name; `Web.Revisits` on its list; `World.arising_revisits` concludes revisiting, under a double negation, from `card-listed, world-every-relatum-listed, k3-embodiment, k3-balance, flow-gainless, web-unceasing`) and by the name of `closed-cycle-without-dissipation` ("A closed cycle sustains unceasing arising, without dissipation"; `passes` is not on its list, its own witnesses are `Recycle`, `ClosedCycle`, `Cycle`, `KindRelay`). `ArisingRecurs` is also ledger premise `web-unceasing`, taken by laws of seven dynamics, so on the premise side it places under none by itself. Toward `an-arrow-leaves-change-not-recurring`: the conjuncts give most of what `World.no_arrow` takes (finite, embodied, balanced, arising recurring; `flow-gainless` is not stated, `Conserving` is, and no theorem named here carries one to the other), and the statement does not mention an arrow; `Passing.no_arrow` does. For that entry this theorem is a case under its law at one index (N3), not a passage.
+
+Verdict. ROAD by (d), `continued-change-needs-openness` → `lossless-exchange-continues-and-returns` (and `closed-cycle-without-dissipation` by its name): drops `k3-dissipation`, outcome side, a witness. The line is a setting beside, as (d) says: one built world, no course moving. Read from the two lists it stands on: inside `lossless-exchange-continues-and-returns` it is that entry's own witness (N1 there); for `an-arrow-leaves-change-not-recurring`, N3.
+
+VERDICT J21 | verdicts: ROAD, N3 | from: continued-change-needs-openness | to: lossless-exchange-continues-and-returns, closed-cycle-without-dissipation | change: d | side: outcome | strength: witness
+
+## J25
+
+OPENED. `Becoming.KindRelay.keeps_widening` at `Becoming/KeepingWidening.lean:2486` (namespace `KindRelay` runs `:1996-2778`; inside it `KindRelay.Runs.keeps_widening` at `:2198` and `KindRelay.Fed.keeps_widening` at `:2714` are other theorems, and four more `keeps_widening` stand earlier in the file under other namespaces). Also read: `Runs.keeps_widening` (`:2198`), `KindRelay.conserving` (`:2476`), `not_keepsWidening_byName` (`:2510`), `returns` (`:2535`), and the heads of `Web.KeepsWidening.distinct_configs`, `passes_every_bound`, `rises_late`, `from_rest_or_open`, `more` (`:260-365`). Entries opened: `kind-relay-keeps-widening-within-kinds`, `what-keeping-widening-needs`, `closed-cycle-without-dissipation` (for J13).
+
+Statement.
+
+```lean
+theorem keeps_widening :
+    web.KeepsWidening (web.withinKind sameKind (flow.PassesSupport web)) web.level 0 :=
+  runs.keeps_widening
+```
+
+One property of one built web (the closed kind relay), from step 0, with no hypothesis.
+
+(1) Near end. None in the statement: no hypothesis, no premise taken (`takes: []` on both lists it stands on, `kind-relay-keeps-widening-within-kinds` and `closed-cycle-without-dissipation`). The witness is the first entry's by its name. That the same relay conserves and returns (the second entry's notion) is said by `KindRelay.conserving` and `KindRelay.returns`, other theorems, not by this one.
+
+(2) What changes. Nothing can be quoted: no index but the start `0` of a property that holds from there on, no parameter, no premise dropped.
+
+(3) Far end. Keeping widening along the continuation within kinds. Carried by the name of `kind-relay-keeps-widening-within-kinds` (the home). `what-keeping-widening-needs` takes ledger premise `web-keepswidening` (`Web.KeepsWidening`) in eight laws, but each law read takes it by name, `W.KeepsWidening itself W.level T`, as the ledger row says ("the laws here read it by name"); the statement gives it along `withinKind sameKind (PassesSupport web)`, and `KindRelay.not_keepsWidening_byName` (on three lists) says that by name this relay keeps widening from no step. So the statement gives no premise a law of `what-keeping-widening-needs` takes: N5b there (one declaration, said of another continuation). `where-the-possible-grows` and `rule-raised-every-other-step` carry `Reaching.KeepsWidening`, another declaration (found by the search, not opened): N5c.
+
+Verdict. N0: a witness's one property, no passage. Were it forced, N1 (the home's own notion of its own witness). No road to `what-keeping-widening-needs`.
+
+VERDICT J25 | verdicts: N0, N5b | from: kind-relay-keeps-widening-within-kinds | to: none | change: none | side: none | strength: witness
+
+## J29
+
+OPENED. `Becoming.Optimum.Holding.doubling_rebuilds` at `Becoming/Optimum.lean:7774` (statement and whole proof, to `:7832`); `Optimum.frontier_exhausts` at `Optimum.lean:7276` and `Optimum.exhausting_frontier` just above it (`:7255-7262`); four theorems of the short name `frontier_exhausts` stand in the file (`:6743`, `:7078`, `:7276`, `:7330`), the one the proof calls being `Optimum.frontier_exhausts` at `:7276`. Entries opened: `optima-rebuild-a-depleted-base`, `a-weighting-faster-than-renewal-ends-the-base`, `horizon-optima-hold-the-greatest-renewal` (name, mechanism, laws with what they take).
+
+Statement.
+
+```lean
+theorem doubling_rebuilds (n : Nat) (w : Nat → Nat) :
+    ((∀ t, t < n + 2 → w (t + 1) ≤ w t ∧ w t < 2 * w (t + 1)) →
+      Frontier (OpenCourse doubling 16 1) (fun b a => weightedOver w doubling a (n + 2 + 1) < weightedOver w doubling b (n + 2 + 1))
+        (rebuilding doubling 8 1 (n + 2)) ∧
+      ∀ x, Frontier (OpenCourse doubling 16 1) (…) x →
+      x 1 = 2 ∧ x 2 = 4 ∧ (∀ t, 2 ≤ t → t < n + 2 → x (t + 1) = 8) ∧
+        x 1 = x 0 + doubling (x 0) ∧ x 2 = x 1 + doubling (x 1) ∧
+        (web (onSource x)).RestoredWithin 1 0 .dweller .source) ∧
+    ((∀ t, t < n + 2 → w t = 2 * w (t + 1)) →
+      Frontier (OpenCourse doubling 16 1) (…) (rebuilding doubling 8 1 (n + 2)) ∧
+      Frontier (OpenCourse doubling 16 1) (…) (holding 1 0 (n + 2))) ∧
+    ((∀ t, t < n + 2 → 2 * w (t + 1) < w t) →
+      ∀ x, Frontier (OpenCourse doubling 16 1) (…) x →
+      ∀ t, t < n + 2 → x (t + 1) = 0)
+```
+
+(`(…)` is the same order each time, the weighted draw over `n + 3` steps; written out in the file.)
+
+(1) Near end. The optima of the weighted draw on the courses open from one, under one renewal law (a source doubling up to eight, capacity sixteen): a witness, taking no ledger premise, on the list of `optima-rebuild-a-depleted-base` alone. The first conjunct's outcome is that entry's name: every optimum draws nothing while the level rises and restores the dweller's dependence (its proof calls `rebuilding_frontier`, `Web.frontier_rebuilds`, `frontier_rebuilt`, all on that entry's list). Near end: `optima-rebuild-a-depleted-base`.
+
+(2) What changes. (p), in the one statement: on `w (t + 1) ≤ w t ∧ w t < 2 * w (t + 1)` the home's outcome (`x 1 = 2 ∧ x 2 = 4 ∧ … x (t + 1) = 8`, restored); on `2 * w (t + 1) < w t` the far end (`∀ t, t < n + 2 → x (t + 1) = 0`); on the boundary `w t = 2 * w (t + 1)` both the rebuilding course and the course ending the source at once are optima.
+
+(3) Far end. `∀ x, Frontier … x → ∀ t, t < n + 2 → x (t + 1) = 0`: every optimum stands at nothing at every step after the start. This is what `Optimum.frontier_exhausts` concludes, in the same form (`∀ t, t < n → x (t + 1) = 0`), a law of `a-weighting-faster-than-renewal-ends-the-base` (takes `optimum-next-rising-weighted, optimum-next-outpaced-strictly, optimum-next-capacity-covers-start, optimum-next-capacity-covers-nothing, optimum-long, requirement-frontier, …`); the proof of the third conjunct is that law applied, its premise `optimum-next-outpaced-strictly` supplied by `doubling_outpaced`. The boundary conjunct's second optimum is `Optimum.exhausting_frontier`, of the same entry. The home's laws conclude rebuilding, not this; the home's mechanism mentions the three ranges of the witness and that is all. Searched for other carriers of "every optimum ends the base at once": `others-drawing-first-end-the-base` (found by name in the search for J01; its laws are of `Optimum.Next`, with others drawing first, which this statement does not have; not opened). `horizon-optima-hold-the-greatest-renewal` is of the undiscounted draw; not a carrier.
+
+Verdict. ROAD, `optima-rebuild-a-depleted-base` → `a-weighting-faster-than-renewal-ends-the-base`: change p (the fall of the weight, less than twofold against more than twofold, both ranges in this one theorem), outcome side, a witness (one renewal law, one start, one capacity). The boundary range gives both outcomes at once.
+
+VERDICT J29 | verdicts: ROAD | from: optima-rebuild-a-depleted-base | to: a-weighting-faster-than-renewal-ends-the-base | change: p | side: outcome | strength: witness
+
+## J33
+
+OPENED. `Becoming.Flow.never_returns_below` at `Becoming/Continuation.lean:450` (with `held_below` `:434`, `stays_below_at` `:424`, `stays_below` `:468`, `ends_below_at` `:488`, `ends_below` `:495`); `Flow.WithinGap`, `Flow.Opposes` at `Becoming/Regulation.lean:256, 261`; `settles` `:375`, `restores_exactly` `:383`. Entries opened: `loss-of-renewal-for-good`, `two-sided-regulation-and-late-reading` (name, mechanism, every law with what it takes); `own-count-misses-joint-excess` (name, start of mechanism, the law `Flow.stays_below`).
+
+Statement.
+
+```lean
+theorem never_returns_below {m T : Nat} {c : C} (balances : ∀ t, T ≤ t → L.BalancesOn W [c] t)
+    (noRaise : ∀ t, T ≤ t → W.level t c < m → L.given t c ≤ L.taken t c)
+    (below : W.level T c < m) (n : Nat) : W.level (T + n) c < m
+```
+
+(1) Near end. A balanced condition whose joint exchange gives no more than it takes wherever the level is below `m`, the level below `m` at `T`. The theorem stands on two lists with the same ids (`flow-balanceson-family-over-stretch, flow-noraise-below, flow-below-m`): `loss-of-renewal-for-good` and `two-sided-regulation-and-late-reading`. Ledger: `flow-noraise-below` has this theorem as its only Lean name and is taken by those two dynamics; `flow-below-m` by five; the balance id by thirteen. So the ledger places the course under neither by itself. By notion: the mechanism of `loss-of-renewal-for-good` has the statement as a sentence of its own ("where the joint exchange gives no more than it takes below m, a level below m never returns to it, gated renewal being the case"), and that of `two-sided-regulation-and-late-reading` has the same sentence followed by "one side is not regulation". Against the second entry the hypotheses are that entry's setting with a premise changed: its laws `regulates`, `settles`, `restores_exactly` take `flow-opposes` (`Opposes`: `(m < level → given < taken) ∧ (level < m → taken < given)`) and `flow-withingap`; `noRaise` contradicts the second half of `Opposes` at every step below `m`, and `WithinGap` is not taken.
+
+(2) What changes. (t): `W.level T c < m` and `W.level (T + n) c < m`, every `n`; the same property at the later index, a staying. (d), read from `two-sided-regulation-and-late-reading`: `flow-opposes` contradicted below `m` (and `flow-withingap` not taken).
+
+(3) Far end. Below `m` at every later step. Outcome side: what `Flow.stays_below_at` concludes (`W.level (T + n) c < m`, `loss-of-renewal-for-good`) and what `Flow.stays_below` concludes (`own-count-misses-joint-excess`, entered in the atlas as a case of this theorem). Premise side: it gives `flow-below-from-t` (`∀ n, W.level (T + n) c < m`), taken by `Flow.ends_below`, on the lists of `loss-of-renewal-for-good` and `own-count-misses-joint-excess`; not given: `k3-activity-needing-support`, `web-requires`, `flow-need-at-least-m`. `Optimum.gated_stays_below` (`re-optimizing-above-a-renewal-ends-it`, by the ledger row of `flow-below-m`) was not read. The name of `loss-of-renewal-for-good` carries it. It is the denial of what `two-sided-regulation-and-late-reading` concludes (`settles`: `W.level t c = m` from a step on).
+
+Verdict. Two answers, by the list it is read from.
+- From `loss-of-renewal-for-good`: N1. Start and end are that dynamic's own notion; the passage in time is a staying.
+- From `two-sided-regulation-and-late-reading`: ROAD by (d) to `loss-of-renewal-for-good` (and to `own-count-misses-joint-excess`, which carries the same far end by `stays_below` and `ends_below`): with `flow-opposes` contradicted on the lower side, a level below `m` is below for good; outcome side (`stays_below_at`), and premise side for `ends_below`; sufficient. No course moves from regulation to loss: the statement sets one-sided regulation beside the two-sided, as (d) says. Its far end is not only "not regulated" (which would be N2a): laws of another dynamic conclude it and go on from it.
+
+VERDICT J33 | verdicts: ROAD, N1 | from: two-sided-regulation-and-late-reading | to: loss-of-renewal-for-good, own-count-misses-joint-excess | change: d | side: outcome | strength: sufficient
+
+## J37
+
+OPENED. `Becoming.PoolCourse.scheduled_apart` at `Becoming/PoolCourse.lean:251` (with `scheduled` `:243`, `scheduled_through` `:246`, `called_apart` `:238`); `Web.SameMembers`, `Web.RecruitsThrough` at `PoolCourse.lean:70, 77`; `Web.AlikeThrough`, `AlikeThroughUpTo`, `AlikeThroughAll` at `Becoming/Testing.lean:186, 190, 224`; `Web.FirstApart`, `TellsApartAt` at `Becoming/ReadOffInTime.lean:137, 143`. Entries opened: `a-pool-that-recruits-through-itself` (whole), `reading-a-loss-in-time` (name, mechanism, laws with what they take). Searched all declarations for `AlikeThrough`, `apart`, `RecruitsThrough`.
+
+Statement.
+
+```lean
+theorem scheduled_apart :
+    (∀ s, s < 2 → web.AlikeThroughAll obs (scheduled s lost) lost spared s) ∧
+      ¬ web.AlikeThroughAll obs (scheduled 2 lost) lost spared 2 ∧ scheduled 2 spared .reader
+```
+
+A witness, no hypothesis: of two built histories (`lost`, `spared`) and a pool that admits the reader at step 2 in every history.
+
+(1) Near end. The built pool, which recruits through itself (`scheduled_through`, another theorem) and before step 2 is alike through all its members. Ledger: `testing-alikethroughall` (`Web.AlikeThroughAll`), `poolcourse-recruitsthrough`, `poolcourse-samemembers` are taken by laws of one dynamic, `a-pool-that-recruits-through-itself`, on whose list the theorem stands (taking nothing). Near end: that dynamic.
+
+(2) What changes. (t): `∀ s, s < 2 → … AlikeThroughAll … s` and `¬ … AlikeThroughAll … 2`.
+
+(3) Far end. Apart through the pool at step 2. This is ledger premise `poolcourse-apart-at` (`¬ W.AlikeThroughAll obs (pool T l) l l' T`), taken by `Web.RecruitsThrough.first_apart` of the same dynamic, whose mechanism says it ("up to the first step at which the pool couples them apart"; "a member that has coupled two histories apart keeps the pool apart", `Web.apart_while_member`, which the proof calls). The home carries it. `reading-a-loss-in-time` carries "the first step apart" as `Web.FirstApart` (some member of a fixed group admitted under one course and not the other at `T`, alike in admission before), another declaration: `AlikeThroughAll` adds the levels of what couples in and takes the pool at each step; no theorem read carries `¬ AlikeThroughAll … 2` with `AlikeThroughAll` before to `FirstApart … 2`. The other entries with `apart` in a declaration (`unselected-beyond-the-coupling-closure`, `turning-in-time`, `position-does-not-protect`, `a-break-read-only-by-threshold`, `what-a-commuting-law-keeps-apart`, `a-reading-informed-and-revalued`, `a-map-moving-every-value-never-rests`, `mutual-dependence-and-its-pace`) hold other declarations; names read, entries not opened.
+
+Verdict. N1: alike before step 2 and apart at it are both the home's notions, said of the home's witness. Toward `reading-a-loss-in-time`: N5c (two declarations, no carrying theorem found).
+
+VERDICT J37 | verdicts: N1, N5c | from: a-pool-that-recruits-through-itself | to: none | change: t | side: none | strength: witness
+
+## J41
+
+OPENED. `Becoming.Optimum.frontier_keeps_stepwise` at `Becoming/Optimum.lean:5449` (namespace `Optimum`, which closes at `:5993`; the theorem of the same short name at `:6032` is `Becoming.Web.frontier_keeps_stepwise`, another law on the same list, not this item). Entries opened: `a-step-coupling-keeps-at-every-horizon`, `keeping-forgoes-the-renewal-at-the-need` (name, mechanism, every law with what it takes); `horizon-optima-hold-the-greatest-renewal` (opened for J29).
+
+Statement.
+
+```lean
+theorem frontier_keeps_stepwise {better : (Nat → Nat) → (Nat → Nat) → Prop}
+    {worth : (Nat → Nat) → Nat} {e : Nat}
+    (rising : ∀ a b, worth a < worth b → better b a)
+    (coupled : ∀ a, OpenCourse R k s a → Keeps m n a → drawnOver R a (n + 1) + c * (n + 1) ≤ worth a)
+    (coupledAt : ∀ a j, OpenCourse R k s a → (∀ t, t ≤ j → m ≤ a t) → a (j + 1) < m → j ≤ n →
+      worth a ≤ drawnOver R a (n + 1) + c * j)
+    (renews : ∀ z, R z ≤ r) (above : ∀ z, m ≤ z → R z ≤ q) (rate : r ≤ q + c) (exceeds : e < c)
+    (greatest : R y = q) (meets : m ≤ s) (ends : m ≤ e) (reach : y ≤ s + R s) (settles : e ≤ y)
+    (drawsDown : s + R s ≤ y + k) (holds : y + q ≤ e + k) (long : 0 < n)
+    {x : Nat → Nat} (front : Frontier (OpenCourse R k s) better x) : Keeps m n x
+```
+
+(1) Near end. An optimum, over the open courses of a renewal law, of an order rising with a worth that adds a coupling `c` for each step the need `m` is met. On the list of `a-step-coupling-keeps-at-every-horizon` alone. Ledger: `optimum-worth-at-least-coupling-when-kept`, `optimum-worth-at-most-coupling-to-fall`, `optimum-r-le-q-plus-c`, `optimum-e-lt-c` are each taken by laws of that one dynamic. Near end: `a-step-coupling-keeps-at-every-horizon`.
+
+(2) What changes. A range of the parameter `c` is among the hypotheses (`rate : r ≤ q + c`, `exceeds : e < c`), and the conclusion is the home's own outcome on it. Twins for other ranges stand on the same list (`Optimum.frontier_breaks_at_end` takes `optimum-c-plus-e-lt-m`; `Web.frontier_breaks_stepwise_long` takes `optimum-q-plus-c-lt-r`; by the ledger ids, statements not read), so (p) could be quoted of the pair, with this theorem on the side of the home's outcome. In this statement alone: `meets : m ≤ s` at the start and `Keeps m n x` through the horizon, a staying.
+
+(3) Far end. `Keeps m n x`: every optimum keeps its level at the need through the horizon. Carried by the home (its name: "A coupling for each step kept"; mechanism: "every optimum … keeps the need at every horizon"; `Web.frontier_keeps_stepwise`, `Optimum.frontier_keeps_met`, `Web.frontier_met_kept` conclude keeping). Also by `keeping-forgoes-the-renewal-at-the-need` (`Optimum.frontier_keeps_above`, `Web.frontier_keeps_above`: a coupling fixed in total with `r n + e < w + q n` leaves only optima keeping; that entry's mechanism ends "A coupling counted for each step met is a-step-coupling-keeps-at-every-horizon's") and, without a coupling, by `horizon-optima-hold-the-greatest-renewal` (`Web.frontier_kept`). The home is among them.
+
+Verdict. N1: the theorem is the home's own outcome on the home's side of the parameter. It would be the near side of a (p) pair with `frontier_breaks_at_end`, a pair this item does not name.
+
+VERDICT J41 | verdicts: N1 | from: a-step-coupling-keeps-at-every-horizon | to: none | change: none | side: none | strength: sufficient
+
+## J45
+
+OPENED. `Becoming.RuleShaping.covering_locks` at `Becoming/RuleShaping.lean:443` (with `byBack` `:424`, `byBack_reads_iff` `:430`); `RuleCapture.Raises`, `ReadsShare`, `Locked` at `Becoming/RuleCapture.lean:145, 150, 160`; `RuleCapture.locked_stays` `:182`, `favouring_locks` `:320`. Entries opened: `shaping-the-rule-selected-by-what-comes-back` (name, mechanism, every law with what it takes), `capture-through-the-rule` (the same). Searched all declarations for `Locked`, `locks`, `RuleCapture`.
+
+Statement.
+
+```lean
+theorem covering_locks {a p c : Nat} {pos : 0 < a} {σ : CarrierCounts → Nat}
+    (mono : ∀ x y, CarrierCounts.order.le x y → σ x ≤ σ y) (covers : ∀ x, c ≤ σ x)
+    {reads : Nat → Bool} {x : CarrierCounts} {s : Nat} (start : c ≤ s) :
+    (∀ t, CarrierCounts.order.le
+        (paced CarrierCounts.select (byBack a p c pos σ) reads (x, shaped a s p c pos) t).1
+        (paced CarrierCounts.select (byBack a p c pos σ) reads (x, shaped a s p c pos) (t + 1)).1) ∧
+      ∀ r, reads r = true → Locked CarrierCounts.order CarrierCounts.favours (byBack a p c pos σ)
+        (paced CarrierCounts.select (byBack a p c pos σ) reads (x, shaped a s p c pos) (r + 1)) :=
+  favouring_locks CarrierCounts.raises (byBack_reads_iff.mpr mono)
+    (fun y _ => favours_iff.mpr (covers y)) ((favours_iff (a := a) (p := p) (pos := pos)).mpr start)
+```
+
+(1) Near end. A course of carriers who shape the rule that selects them, what comes back to them read from the share, monotone in it and covering the cost at every share, the start's rule covering the cost. On the list of `shaping-the-rule-selected-by-what-comes-back` alone. Ledger: `ruleshaping-mono`, `ruleshaping-covers`, `ruleshaping-start-covers` (each with this theorem as its only Lean name) and `ruleshaping-byback` are taken by laws of that one dynamic; `rulecapture-carriercounts-select` by six and `rulecapture-others-present` by ten. Near end: `shaping-the-rule-selected-by-what-comes-back`.
+
+(2) What changes. (t): `start : c ≤ s` of the rule in force at step 0; `∀ t` the share not lower at `t + 1`; `reads r = true → Locked … (paced … (r + 1))`, the step after each reading step.
+
+(3) Far end. `Locked CarrierCounts.order CarrierCounts.favours (byBack …) (…)`. `RuleCapture.Locked` is on the declarations list of `capture-through-the-rule`, whose name and mechanism are of it, and the whole conclusion is what `RuleCapture.favouring_locks` of that entry concludes (outcome side); the proof is that law applied, and the atlas enters this theorem as a case of it. Premise side: `Locked` is ledger premise `rulecapture-locked`, taken by `locked_stays` and `perturbation_absorbed` of `capture-through-the-rule`, and by laws of `closed-capture`, `a-counter-rule-read-from-its-own-share`, `the-lock-draws-its-readers-out` (four dynamics, so it places under none by itself; the last three not opened); not given by this statement: `rulecapture-raises`, `rulecapture-readsshare`, `rulecapture-upper` (the proof supplies the first two by `CarrierCounts.raises` and `byBack_reads_iff`). In the home, no other law concludes or takes `Locked` (`threshold_rises`, `threshold_falls` conclude rising and falling shares; heads read); the home's mechanism has the one sentence "the loop locks", which is this theorem.
+
+Verdict. ROAD, `shaping-the-rule-selected-by-what-comes-back` → `capture-through-the-rule`: change t, outcome side (`favouring_locks`), sufficient. A caution on the kind: the hypotheses are the far dynamic's premises said in the home's terms at the same steps (`mono` is `ReadsShare`, `covers` and `start` are "favours"), and the later index is the far law's own; if "a case, not a passage" is read to cover a case of a law that itself has a later index, this is N3. The definition's N3 says "at one index" and "nothing later", so I answer ROAD.
+
+VERDICT J45 | verdicts: ROAD | from: shaping-the-rule-selected-by-what-comes-back | to: capture-through-the-rule | change: t | side: outcome | strength: sufficient
+
+## J49
+
+OPENED. `Becoming.Regulation.held_oscillates` at `Becoming/Regulation.lean:1759` (with `crossing_oscillates` `:1711`, `held_crosses` `:1726`, read in the same file). Entries opened: `late-relay-oscillates` (name, mechanism, every law with what it takes), `two-sided-regulation-and-late-reading` (opened for J33), `overshoot-beyond-the-gap` (name, mechanism). Searched all names and declarations for `oscillat`, `cycle`, `crossing`.
+
+Statement.
+
+```lean
+theorem held_oscillates (relays : L.RelaysLate W c ℓ a b M)
+    (balances : ∀ t, L.BalancesOn W [c] t) (band : a ≤ b) {x₀ : Nat}
+    (held : ∀ i, i ≤ ℓ → W.level i c = x₀) (just : x₀ + 1 = a)
+    (room : b + 2 ≤ a + (ℓ + 1) * M) (N : Nat) :
+    (∃ t, N ≤ t ∧ b < W.level t c) ∧ ∃ t, N ≤ t ∧ W.level t c < a
+```
+
+(1) Near end. A balanced condition under a relay that reads `ℓ` steps late, from a start held one below the band. On two lists with the same ids (`flow-relayslate, flow-balanceson-family-over-stretch, regulation-a-le-b, regulation-held-start, regulation-start-just-below-a, regulation-room-past-threshold`): `late-relay-oscillates` and `two-sided-regulation-and-late-reading` (there as a case of `crossing_oscillates`). Ledger: `flow-relayslate` and `regulation-held-start` are taken by those two, in the second by this theorem alone and in the first by eight and four laws. Near end: `late-relay-oscillates`; `two-sided-regulation-and-late-reading` holds it too, by its name ("… and regulation that reads late").
+
+(2) What changes. (t): `held : ∀ i, i ≤ ℓ → W.level i c = x₀` and, for every `N`, `∃ t, N ≤ t ∧ b < W.level t c` and `∃ t, N ≤ t ∧ W.level t c < a`. A range of a parameter is among the hypotheses, `room : b + 2 ≤ a + (ℓ + 1) * M`; the other side is on the same lists (`Regulation.relay_threshold`: settles in the band exactly where `a + (ℓ + 1)M ≤ b + 1`, by the two mechanisms; `held_settles`; statements not read), so of the pair (p) could be quoted, settling against leaving both ends.
+
+(3) Far end. Each end of the band passed at arbitrarily late steps. Carried by `late-relay-oscillates` (its name: "settles or leaves both ends without end"; `crossing_oscillates` concludes the same form) and by `two-sided-regulation-and-late-reading` (the theorem on its list; its mechanism's relay sentence). `overshoot-beyond-the-gap` carries oscillation of another kind (an opposing exchange beyond the gap; its `Overshooting.oscillates` is a witness alternating between two values), which this statement neither concludes nor gives premises for; `overcompensating-giving-cycles` and `support-beyond-a-band-can-cycle` are of `RegimeMargin` (names read only). The home is among the carriers, under either list.
+
+Verdict. N1. Both sides of the relay's threshold (settling in the band, leaving both ends) are inside `late-relay-oscillates` by its own name, so the threshold does not part two dynamics here.
+
+VERDICT J49 | verdicts: N1 | from: late-relay-oscillates | to: none | change: t | side: none | strength: sufficient
+
+## J53
+
+OPENED, all six, at the places the queue gives. `Becoming.ReadInTime.kept_once_favoured` (`Becoming/ReadInTime.lean:483`, statement and whole proof), `Becoming.ReadInTime.early` (`:236`), `Becoming.ReadInTime.kept_early_iff` (`:292`), with `ReadInTime.course` (`:139`), `kept_iff` (`:155`), `lossCourse` (`:206`), `late_never_falls` (`:276`); `Becoming.DrawnShaping.drawn_locks` (`Becoming/DrawnShaping.lean:333`, with its proof); `Becoming.ClosedCapture.Thinned.read_late_kept` (`Becoming/ClosedCapture.lean:830`, with `Thinned.course` `:803`, `past_course` `:811`); `Becoming.RuleCapture.locked_stays` (`Becoming/RuleCapture.lean:182`, with `Locked` `:160`, `turn_locked` `:168`). Entries opened (name, mechanism, every law with what it takes): `loss-read-in-time-by-the-others`, `shaping-read-by-readers-drawn-from-the-selected`, `readers-drawn-from-the-selected`, `capture-through-the-rule`. Not opened beyond the ledger rows that name them: `closed-capture`, `a-counter-rule-read-from-its-own-share`, `the-lock-draws-its-readers-out`.
+
+Statements (conclusions in full; binders shortened where marked).
+
+```lean
+-- RuleCapture.locked_stays
+theorem locked_stays (raises : Raises P favours f) (monotone : ReadsShare P M h)
+    (upper : ∀ {g g'}, M.le g g' → favours g → favours g') {c : S × R} {t : Nat}
+    (locked : Locked M favours h (paced f h reads c t)) :
+    ∀ k, Locked M favours h (paced f h reads c (t + k))
+
+-- DrawnShaping.drawn_locks
+theorem drawn_locks {a p c hi lo : Nat} {pos : 0 < a} (step : lo ≤ hi) {reads : Nat → Bool}
+    {x : CarrierCounts} (fav : CarrierCounts.favours (drawn a p c hi lo pos x)) (k : Nat) :
+    Locked CarrierCounts.order CarrierCounts.favours (drawnRead a p c hi lo pos)
+        (drawnCourse a p c hi lo pos reads x k) ∧
+      CarrierCounts.order.le x (drawnCourse a p c hi lo pos reads x k).1 ∧
+      CarrierCounts.order.le (drawn a p c hi lo pos x) (drawnCourse a p c hi lo pos reads x k).2
+
+-- ClosedCapture.Thinned.read_late_kept
+theorem read_late_kept (accrues : Accrues fB) (readers : order.le w u)
+    {c : (CarrierCounts × Nat) × CarrierCounts} {r : Nat} (at_r : reads r = true)
+    (past : N ≤ (course fB u v w N reads c r).1.2)
+    (fav : favours (course fB u v w N reads c r).2)
+    (pfav : favours (pool u w (course fB u v w N reads c r).1.1)) (k : Nat) :
+    c.1.2 + (r + (1 + k)) ≤ (course fB u v w N reads c (r + (1 + k))).1.2 ∧
+      Locked order favours (poolRead u w)
+        ((course fB u v w N reads c (r + (1 + k))).1.1, (course fB u v w N reads c (r + (1 + k))).2) ∧
+      order.le (course fB u v w N reads c (r + 1)).1.1 (course fB u v w N reads c (r + (1 + k))).1.1 ∧
+      order.le (course fB u v w N reads c (r + 1)).2 (course fB u v w N reads c (r + (1 + k))).2
+
+-- ReadInTime.early
+theorem early {x : CarrierCounts} :
+    ∀ t, t ≤ N →
+      ((lossCourse a p c hi lo lo' N pos reads x t).1.1, (lossCourse a p c hi lo lo' N pos reads x t).2) =
+          DrawnShaping.drawnCourse a p c hi lo pos reads x t ∧
+        (lossCourse a p c hi lo lo' N pos reads x t).1.2 = t
+
+-- ReadInTime.kept_early_iff
+theorem kept_early_iff (step : lo ≤ hi) (readers : lo' ≤ hi) {x : CarrierCounts}
+    (fav : CarrierCounts.favours (DrawnShaping.drawn a p c hi lo pos x)) (at_N : reads N = true) :
+    (∀ k, Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead a p c hi lo' pos)
+        ((lossCourse a p c hi lo lo' N pos reads x (N + (1 + k))).1.1,
+          (lossCourse a p c hi lo lo' N pos reads x (N + (1 + k))).2)) ↔
+      CarrierCounts.favours
+        (DrawnShaping.drawn a p c hi lo' pos (DrawnShaping.drawnCourse a p c hi lo pos reads x N).1)
+
+-- ReadInTime.kept_once_favoured
+theorem kept_once_favoured (step : lo ≤ hi) (readers : lo' ≤ hi) {x : CarrierCounts}
+    (fav : CarrierCounts.favours (DrawnShaping.drawn a p c hi lo pos x)) {s : Nat}
+    (favoured : CarrierCounts.favours
+      (DrawnShaping.drawn a p c hi lo' pos (DrawnShaping.drawnCourse a p c hi lo pos reads x s).1))
+    (d : Nat) (at_N : reads (s + d) = true) (k : Nat) :
+    Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead a p c hi lo' pos)
+      ((lossCourse a p c hi lo lo' (s + d) pos reads x (s + d + (1 + k))).1.1,
+        (lossCourse a p c hi lo lo' (s + d) pos reads x (s + d + (1 + k))).2)
+```
+
+How they stand to each other (from the proofs read). `ReadInTime.course` is an `abbrev` for `Thinned.course` at `u := shaped hi`, `v := shaped lo`, `w := shaped lo'`, so the loss course is a case of the thinned course by definition. `drawn_locks` is `locked_stays` applied to a start that is locked at step 0. `kept_once_favoured` is: `early` (the loss course is the drawn course up to the bound, and the loss has reached it), `drawn_locks` (the rule in force favours at `s + d`), `late_never_falls`, then the second conjunct of `Thinned.read_late_kept`. `kept_early_iff` is `early`, `drawn_locks`, then `kept_iff`, whose one direction is `read_late_kept` again.
+
+Each theorem, the three things.
+
+1. `locked_stays`. Near end: a locked configuration of a two-level course (`rulecapture-locked`, with `rulecapture-raises, rulecapture-readsshare, rulecapture-upper`); on the lists of `capture-through-the-rule` and `a-counter-rule-read-from-its-own-share`. Change (t): `paced … t` and `paced … (t + k)`. Far end: `Locked` again. A staying inside `capture-through-the-rule`, whose declaration `Locked` is. N1.
+
+2. `drawn_locks`. Near end: a start the rule read there favours, `lo ≤ hi`. Ledger: `drawnshaping-start-favours` and `drawnshaping-step` are taken by laws of two dynamics, `shaping-read-by-readers-drawn-from-the-selected` and `loss-read-in-time-by-the-others` (the second because its laws speak of the first's course); the theorem is on the first's list, and the notion (above the critical mass) is in the first's name. Change (t): the start and every step `k`. Far end: `Locked` at every step, share and rule not below the start. Carried by the home (its laws `drawn_from_below`, `drawn_locked_either` conclude a lock either way; its mechanism "the course is locked for it") and by `capture-through-the-rule`. N1. It is also a case under `locked_stays` of `capture-through-the-rule` (N3 as to that entry): the start is already locked at step 0.
+
+3. `read_late_kept`. Near end: a reading step at which the loss has reached its bound, the rule in force and the late pool both favouring, the late reading not above the carriers'. Ledger: `closedcapture-thinned-readers` and `closedcapture-favours-read` are taken by laws of `readers-drawn-from-the-selected` alone (on whose list the theorem is); `closedcapture-thinned-past` and `closedcapture-favours-in-force` by that and `loss-read-in-time-by-the-others`; `closedcapture-thinned-losspool` by three; `closedcapture-accrues` by seven. Near end: `readers-drawn-from-the-selected`. Change (t): `r` and `r + (1 + k)`. Far end: locked under the late pool for good while the loss grows: that entry's own sentence ("the lock is kept for good"), also concluded by its `Thinned.kept_iff`. N1.
+
+4. `early`. On no entry's list (searched declarations and laws). For every `t ≤ N` it identifies the loss course's share and rule with the drawn course's, and the loss with `t`. No passage: two courses said to be one at each index up to `N`. N3; it is the carrying theorem between the course of `loss-read-in-time-by-the-others` and that of `shaping-read-by-readers-drawn-from-the-selected`.
+
+5. `kept_early_iff`. Near end: the drawn course from a favoured start, the others reading the loss from a reading step `N`, `lo' ≤ hi`. Ledger: `readintime-readers` is taken by laws of `loss-read-in-time-by-the-others` alone; the two `drawnshaping-…` ids by it and the critical-mass entry; the theorem is on the first's list. Near end: `loss-read-in-time-by-the-others` (whose name is "… joined to the critical mass"). Change: an iff of a condition at step `N` of the drawn course (`favours (drawn … lo' … (drawnCourse … N).1)`) with an outcome `∀ k` at `N + (1 + k)`: by N7 one passage, condition to outcome, exact; (t). Far end: locked under the late reading from `N + 1` for good. Carried by the home (`kept_iff`, `kept_once_favoured`, `kept_next_round_iff`; "every later reading keeps the lock"), by `readers-drawn-from-the-selected` (`read_late_kept`, `Thinned.kept_iff`), and as `Locked` by `capture-through-the-rule` and the critical-mass entry. N1.
+
+6. `kept_once_favoured`. Near end as in 5, with `favoured` at step `s` of the drawn course (`readintime-late-favours`, taken by laws of `loss-read-in-time-by-the-others` alone). Change (t): `s`, the reading step `s + d`, and `s + d + (1 + k)`. Far end as in 5; the conclusion is, by the `abbrev`, the second conjunct of `read_late_kept` at the shaped readings. Sufficient. N1.
+
+The pairs. A road in two needs a first theorem that takes the course out of one dynamic to a state, and a second with that state among its hypotheses. `drawn_locks` gives, of the drawn course, that the rule in force favours at every step; `read_late_kept` takes `fav`, that the rule in force favours at `r`, of the thinned course. The two are said of two courses, and `early` is what carries one to the other (with `past`); `pfav` and `readers` are not given by `drawn_locks`. So `drawn_locks`, `early`, `read_late_kept` chain in three, and `kept_early_iff` and `kept_once_favoured` are that chain in one statement each. Whether the chain is a road between two dynamics turns on the far end: read as `Locked`, every one of the four entries carries it (the first by declaration, the other three by laws that conclude it), the home is always among the carriers, and there is no road. Read as "locked under the others' late reading of a loss", only `readers-drawn-from-the-selected` and `loss-read-in-time-by-the-others` carry it, and the chain would run from `shaping-read-by-readers-drawn-from-the-selected` to those two, change t at the bound `N`, exact in `kept_early_iff`. I answer by the first reading: after the bound the course is again one loop under one pool (`past_course`), the same kind of course with `lo'` for `lo`, so the passage at `N` is a change of a reading inside one family of locked courses, and the entry `loss-read-in-time-by-the-others` is by its own name that join.
+
+Verdict. N1 for `locked_stays`, `drawn_locks`, `read_late_kept`, `kept_early_iff`, `kept_once_favoured`, each inside the entry on whose list it stands; N3 for `early`. No ROAD IN TWO.
+
+VERDICT J53 | verdicts: N1, N3 | from: loss-read-in-time-by-the-others | to: none | change: t | side: none | strength: sufficient
+
+## J57
+
+OPENED. `Becoming.Clearing.narrows` at `Becoming/Clearing.lean:262` (with `clearerPart` `:216`, `withheld` `:235`, `admitted_without` `:246`, `unsupported_with` `:257`, `loses_beyond` `:270`); `Web.Includes`, `Web.Exceeds` at `Becoming/Admission.lean:387, 391`; `Flow.WithheldLevels` at `Admission.lean:507`. The short name `narrows` is also `CrossSituational.narrows` (`CrossSituational.lean:303`) and a theorem at `Tasks.lean:938`; not these. Entries opened: `closing-needs-net-draw` (name, mechanism, every law with what it takes). Searched all declarations for `Clearing`, `Web.Exceeds`, `Web.Includes`, `WithheldLevels`, `narrows`.
+
+Statement.
+
+```lean
+theorem narrows {l : Nat → Place → Nat} (without : flow.WithheldLevels clearerPart web l) :
+    web.Includes l web.level ∧ web.Exceeds l web.level
+```
+
+`Includes l l'` is `∀ t f, W.Admits (l' t) t f → W.Admits (l t) t f`; `Exceeds l l'` is `∃ t f, W.Admits (l t) t f ∧ ¬ W.Admits (l' t) t f`. Of one built web and flow (the clearing): the levels without the clearer's part admit all that the actual levels admit, and at some step something more.
+
+(1) Near end. One hypothesis, `without`, ledger `admission-withheldlevels` (`Flow.WithheldLevels`), taken by laws of six dynamics (`closing-needs-net-draw` with nineteen laws, and `position-does-not-protect`, `loss-beyond-a-region`, `unselected-beyond-the-coupling-closure`, `capture-by-counted-choices`, `seeking-boundary`): it places under none by itself, and it is said of the comparison path, not of a course. The web is the witness `Clearing`, whose other theorems stand on the lists of `loss-beyond-a-region`, `position-does-not-protect`, `unselected-beyond-the-coupling-closure`, `mutual-dependence-and-its-pace`; this theorem is on the list of `closing-needs-net-draw` alone.
+
+(2) What changes. Nothing can be quoted. No index: `Includes` is at every step and `Exceeds` at some step, both of two level paths set side by side, the actual and the one with the part withheld. No parameter. No premise dropped: withholding a part is the comparison itself, which the home's mechanism calls "a comparison of two level paths, not a course closing".
+
+(3) Far end. "Narrows": includes and exceeds. It is the classification of `closing-needs-net-draw` ("a part widens, narrows, keeps the same or is mixed"; `Web.Includes` on its list; `Flow.Balances.narrows_of_consumed`, `Preemption.renewingAt_consuming_narrows`, `ArisingDrawer.arises_narrows` conclude it). No other entry carries `Web.Includes` or `Web.Exceeds` (`encounter-selection-and-revision` has `CrossSituational.narrows`, another declaration). `Clearing.loses_beyond` of `loss-beyond-a-region` concludes `LosesBeyond`, another declaration, by another theorem.
+
+Verdict. N0: a witness classified by a comparison of two level paths; no course passes anywhere. Were it forced, N1 (the home's own notion said of a witness on the home's list). It does not place the clearing under `loss-beyond-a-region`; `loses_beyond` does that, apart.
+
+VERDICT J57 | verdicts: N0 | from: closing-needs-net-draw | to: none | change: none | side: none | strength: witness
+
+## J61
+
+OPENED. `Becoming.Revising.opens_with_correction` at `Becoming/Revision.lean:218` (namespace `Revising` from `:138`; with `State`, `Act`, `P`, `read`, `alike` `:143-161`, `correction_enabled_iff` `:183`, `opened_choice` `:191`, `closed_loses` `:194`, `opens_without_correction` `:210`); `Becoming.OpenedCorrection.Linked.opens` at `Becoming/OpenedCorrection.lean:168` (namespace `Linked` from `:123`; with `Correctable` `:74`, `OpensAlong` `:89`, `finer_keeps` `:95`, `coarser_opens_nothing` `:107`, `widened_correctable` `:115`, `acceptable`, `executable` `:128, 134`, `unlinked_uncorrectable` `:138`, `linked_correctable` `:146`); `Learning.Training.Through` at `Becoming/Learning.lean:931`. Other theorems of the short name `opens` (`Dissipation.lean:452, 486`, `KeepingWidening.lean:2188`, `RoomNet.lean:123`) are not these. Entries opened: `selection-when-the-lumping-changes`, `a-revision-that-opens-a-correction` (name, mechanism, every law with what it takes).
+
+Statements.
+
+```lean
+-- Revising.opens_with_correction
+theorem opens_with_correction :
+    P.step (2, false, false) (.rebuild true) (1, true, false) ∧
+    Learning.Training.Through (alike (1, true, false)) (fun b => b = true) ∧ Enabled P (1, true, false) .correct
+
+-- OpenedCorrection.Linked.opens
+theorem opens (n : Nat) (v : Bool) :
+    OpensAlong P read acceptable executable (n + 2, false, v) (n + 1, true, v)
+```
+
+`OpensAlong P reading acceptable executable x x'` is `(∃ w, Trace P x w x') ∧ ¬ Correctable reading acceptable executable x ∧ Correctable reading acceptable executable x'`. Both are witnesses on one supplied process (`Revising.P`: a stock, a link, a response), without hypotheses; at `n = 0`, `v = false` the second is about the very step the first names.
+
+What each does.
+
+`opens_with_correction`. (1) Near end: no hypothesis; the step is of the named model of `selection-when-the-lumping-changes`, on whose list the theorem stands alone (taking nothing). (2) Change: one step, `P.step (2, false, false) (.rebuild true) (1, true, false)`; of the state before it the statement says nothing more (that the selection is not through the lumping there is `closed_loses`, another theorem). (3) Far end: after the step the selection "is true" is through the reading (`Through (alike (1, true, false)) …`) and the correcting act is enabled. `Learning.Training.Through` is ledger premise `learning-through`, taken by one law of one dynamic, `Revising.old_cannot_select_rebuild` of the home; "remain executable" is in the home's name. The home carries it. Toward `a-revision-that-opens-a-correction`: the third conjunct is, through the `abbrev` `Linked.executable`, ledger premise `openedcorrection-some-act-executable`, taken by `OpenedCorrection.widened_correctable`, which concludes `Correctable` only with every act counted acceptable, the case that entry says does not count ("an opening counts only with the acceptability fixed"). `Through … ∧ Enabled …` is neither `Correctable` under the fixed acceptability nor `OpensAlong`, and no theorem read carries the one to the other (`linked_correctable` is proved from the state directly). So the docstring's word ("opens", "correction") reaches that entry and the statement does not: N5c.
+
+`Linked.opens`. (1) Near end: no hypothesis; a family of starts (`n + 2` units, link off) on the same process. On the list of `a-revision-that-opens-a-correction` alone. That the process is `Revising.P` is a structure the statement is stated on, not a placing under the other entry (N5b as to `selection-when-the-lumping-changes`). (2) Change (t): a trace from `(n + 2, false, v)` to `(n + 1, true, v)`, not correctable at the first, correctable at the second. (3) Far end: a correction opened along a course: `OpensAlong`, the home's declaration and its name. N1.
+
+The pair. Not a road in two: neither has the other's state among its hypotheses (neither has a hypothesis). They say two notions of one step of one process, each under its own entry: a selection formed with the act that uses it enabled (`selection-when-the-lumping-changes`), and a correction opened (`a-revision-that-opens-a-correction`). That is an overlap (N3), and it is an overlap by two theorems with no theorem from one notion to the other, so by a reading (N5c).
+
+Verdict. `opens_with_correction`: N1 in `selection-when-the-lumping-changes` (a one-step witness; N0 if a witness's step is counted no passage), N5c toward `a-revision-that-opens-a-correction`. `Linked.opens`: N1 in `a-revision-that-opens-a-correction`. The pair: no ROAD IN TWO; N3 by a reading.
+
+VERDICT J61 | verdicts: N1, N3, N5c | from: selection-when-the-lumping-changes | to: none | change: t | side: none | strength: witness

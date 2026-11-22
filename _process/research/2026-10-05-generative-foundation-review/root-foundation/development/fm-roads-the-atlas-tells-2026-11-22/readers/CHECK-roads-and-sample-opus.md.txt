@@ -1,0 +1,120 @@
+# Check of the Astra pass: the three proposed roads, a sample of 24, likeness, the N6 citations
+
+*AI-written by Claude Opus 5.5 (claude-opus-5-5), checker A for board row FM, 22 November 2026. Read only: no Lean run, no build, nothing in the repository edited. I read the frozen questions (`QUESTIONS-ROADS.md`), the items, the Astra answers, the store (`dynamics.json`, `premises.json`) and the Lean in `.../lean/becoming/Becoming/`. Ledger counts ("taken by n dynamics") come from a script over every entry's `premises[].takes`. Each answer starts with OPENED (I read the Lean statement and the store entry myself) or TOLD.*
+
+## 1. The three proposed roads
+
+### C21 `Becoming.Web.optimum_ends_beyond` (Optimum.lean 740). Reader: ROAD what-an-optimum-does-beyond-what-couples-in → three-outcomes-of-a-loss, and also N1
+
+OPENED: the theorem, its proof, `Web.optimum_broken_iff` (727), `Web.consumed_ends_when_fixed_at` (Dependence.lean 276), `Flow.ends_below_at` (Continuation.lean 488), and the entries for X, Y and loss-of-renewal-for-good.
+
+- **Near end.** The store's row for this law in X's entry lists 12 ids. The hypotheses `rising`, `room`, `optimum`, `met` and `mem` give `optimum_broken_iff`'s premises: optimum-rising (`Optimum.Rising`, taken by 5 dynamics), optimum-room (`Optimum.Room`, X only), requirement-frontier (`Requirement.Frontier`, 10 dynamics), web-meton (`Web.MetOn`, 4) and optimum-c-beyond (4). On top of these come `dependent : W.Dependent` (k3-activity-needing-support, 26 dynamics), apart (optimum-rest-apart, 4), listed (web-members-couple-within-family, 2), eligibleO (optimum-outcome-eligible, 2), and below, fixed (web-outcome-below-need, web-dependence-persists, web-need-no-weaker, each taken by this law only). The ids that place the course under X are optimum-room and the three X-only ids. The shared ones place it under none by themselves.
+- **What changes.** (t): `(met : W.MetOn dep rest t)` at t, then `¬ W.active (t + 1) (dep c)` at t + 1. `W.Broken t (dep c) c` already spans t to t + 1.
+- **Far end.** `consumed_ends_when_fixed_at` (three-outcomes-of-a-loss) takes flow-supported-where-active, web-requires, web-need-not-lower and web-below-earlier-need. At T := t and t := t + 1 the statement gives all four: `dependent (t+1) (dep c)`, `fixed`, and `level (t+1) c < need t (dep c) c` inside the first conjunct `Broken`. That law also concludes what the statement concludes (`¬ W.active`). So the far end is on both the premise side and the outcome side.
+- **Second far-end dynamic.** `Flow.ends_below_at` of **loss-of-renewal-for-good** (takes flow-supported-where-active, flow-below-m, web-requires, flow-need-at-least-m) is also fully given, with m := need t (dep c) c, and it concludes `¬ W.active t g`. The reader's far-end list leaves this dynamic out.
+- **Not given.** Y's `consumed_ends_when_fixed` (fixed and below at every t > T), Y's `Lost` / `Consumed` (never met again) and Y's `consumed_continues_transformed`. The passage covers one step only.
+- **How it is proved.** The proof calls neither far-end law. It inlines the same step: `Nat.not_le_of_gt broken.2.2 (Nat.le_trans fixed.2 (dependent (t + 1) (dep c) active c fixed.1))`. The far end belongs to Y because Y's law takes what the statement gives, not because a carrying theorem says so.
+- **Verdict.** ROAD X → Y, (t), premise side and outcome side, `sufficient`. Y is two dynamics: three-outcomes-of-a-loss and loss-of-renewal-for-good. No exit of X, of three-outcomes-of-a-loss or of loss-of-renewal-for-good names X with the other (checked by script), so it is not N6. It is not N3, N5, N7 or WALL.
+- **What the reader's N1 means.** The theorem is on X's `declarations` and has a row in X's `premises`. The home therefore "carries" the far end only through this very theorem. No other law of X concludes `¬ active`. If that counted, every listed candidate would be N1. Read that way, the N1 is not a second verdict. It says the atlas already files this passage as one of X's own laws with no `to`. The line stays a road; what is missing is X's law's far end.
+- **Missing from the reader's "against" list:**
+  - the second far-end dynamic, loss-of-renewal-for-good (`Flow.ends_below_at`);
+  - `fixed` (dependence persists, need no weaker at t + 1) is a hypothesis of this law alone in X, so the road starts from a part of X, and the edge must say so;
+  - the passage is one step; Y's law for every later step and `Lost` are not given;
+  - the last two conjuncts (`¬ members (dep c)`, no member couples into c) are X's "unseen", not Y's;
+  - neither far-end law is called in the proof.
+
+### C30 `Becoming.ReadInTime.kept_once_favoured` (ReadInTime.lean 483). Reader: ROAD shaping-read-by-readers-drawn-from-the-selected → loss-read-in-time-by-the-others
+
+OPENED: the theorem and its proof, `early` (236), `kept_early_iff` (292), `Thinned.read_late_kept` (quoted by the reader, ClosedCapture.lean 830), and the entries for X, Y and readers-drawn-from-the-selected.
+
+- **Near end.** The hypotheses give step (drawnshaping-step), fav (drawnshaping-start-favours), readers (readintime-readers), favoured (readintime-late-favours) and at_N (rulecapture-reading-step, 6 dynamics).
+  - drawnshaping-step and drawnshaping-start-favours are taken by laws of **both X and Y** (ledger: `DrawnShaping.drawn_locks` and five ReadInTime laws). By definition 1 they place the course under neither by themselves.
+  - readintime-readers and readintime-late-favours are taken by Y only. `favoured` speaks of X's `drawnCourse` at s, but under Y's late reading lo'. Its ledger id is Y's (statement: "the late reading favours the shapers at the share of the step named of MA4's course").
+  - The theorem is on **Y's** `declarations`, and Y's `premises` row for it lists 13 ids, all of the ones above among them.
+- **What changes.** (t) can be quoted: `favoured` at s; `Locked …` at `s + d + (1 + k)` on `lossCourse … (s + d)`. The course of the conclusion is Y's `lossCourse` throughout. That its prefix up to s + d is X's `drawnCourse` is `early`, which is in the proof, not the statement.
+- **Far end.** It is the left side of Y's `kept_early_iff` at N := s + d, and `.2.1` of `Thinned.read_late_kept` (readers-drawn-from-the-selected), which the proof calls. `Locked` is capture-through-the-rule's declaration, and rulecapture-locked is taken by 4 dynamics: N5b at that end.
+- **Verdict.** Not a ROAD by the definition. The near end does not place the course under X apart from Y, and both ends are Y's: **N1** (inside loss-read-in-time-by-the-others). It is also a case of `Thinned.read_late_kept` (a third dynamic), and N5b for capture-through-the-rule.
+- **Not N6 by the letter, but told already.** X's own entry has an exit, `to` in words, with the twin law `ReadInTime.turned_early_iff` (item X095). It tells this same X-into-ReadInTime passage. The reader answered X095 N1 and C30 ROAD: the same pair, sibling theorems of one module, the same shape.
+- **Missing from the reader's "against" list:** the shared near-end premises; that the theorem is on Y's list; the call of `Thinned.read_late_kept`; X095.
+
+### C39 `Becoming.TurningInTime.locked_turns_in_time_share_iff` (TurningInTime.lean 1876). Reader: ROAD capture-through-the-rule → turning-in-time, exact
+
+OPENED: the theorem, its docstring and proof, `turns_in_time_iff` (1129), `windowAfterShare` (1788), `asItWas` and `net` (347, 358), and the entries for X, Y and the ledger.
+
+- **Near end.**
+  - X's hypotheses: raises (rulecapture-raises, `RuleCapture.Raises`, 6 dynamics), monotone (rulecapture-readsshare, `ReadsShare`, 5), upper (rulecapture-upper, 5) and locked (rulecapture-locked, `RuleCapture.Locked`, 4). Every one is taken by four or more dynamics. Only the notion in X's name, `Locked`, ties the course to X.
+  - The lock serves only to give `turns_in_time_iff`'s `uses₁`, through `locked_alone_not_below`, which is Y's own law.
+  - Everything else comes from Y and the regime. sets, lowRule, lowStays and uses are the window correction. The RegimeMargin premises are taken by 3 to 5 dynamics each, turningintime-within by Y only, optimum-coupled-need-positive by 4.
+  - Y's ledger has **no premises row** for this theorem. These ids come from matching it against `turns_in_time_iff`'s row.
+- **The iff (the task's question).** It is **not** two properties at one index.
+  - The left side, `«不穷» (net need (windowAfterShare …) …) «一» (w, x)`, is an outcome of the corrected pair's course at every step.
+  - The right side, `∃ T, …`, is a condition fixed by the start through the course as it was (`asItWas (windowAlone …)`), at indices T and T + 1.
+  - By N7 this is one passage, condition → outcome, `exact`. The converse is no second road.
+  - Both sides are Y's notions: net, «不穷», asItWas and windowAlone are all on Y's declarations. The passage is `turns_in_time_iff`'s own, and the proof is that single application, with `Kept := Low ∧ kept` and `marked := [N, K)`.
+- **Verdict.** Not a ROAD.
+  - **N1**: inside turning-in-time. Y's own exit "the line never ends: at the first marked step …" with law `turns_in_time_iff`, and Y's "exact threshold" transition, already tell this passage.
+  - **N3** (further case 5) for (capture-through-the-rule, turning-in-time): X's locked course is made the "course as it was" of Y's law with every lock premise kept. No index is quoted at which the course leaves the lock, and along the course as it was it stays locked at every step (`locked_alone_not_below`).
+  - **N5b** for margin-of-a-regime: `RegimeMargin` is the structure the statement is stated on, and its premises are taken by 3 to 5 dynamics.
+  - Not a WALL.
+- **Missing from the reader's "against" list:** that the theorem is on Y's list; that X's premises are shared by 4 to 6 dynamics; the docstring's "the correction reaches the share because the window's reading sets it (`sets`, given), not because the share falls under the corrected rule"; the docstring's "Only the 'if' side has a worked case"; that the named outcome law is the whole proof.
+
+**Of the three:** C21 holds as a road, with a second far-end dynamic the reader missed. C30 and C39 do not hold as roads: N1, with N3 and N5b at the other ends.
+
+## 2. The sample of 24 (N1 / N2a answers)
+
+OPENED for each: a script found the cited declaration at the cited file and line, and the reader's quoted statement is in that file word for word. I read every statement and each home entry's mechanism and declaration list.
+
+| item | reader | mine | why |
+|---|---|---|---|
+| T001 | N1 | N1 | (t), s to step n < length; `Returns` is the home's notion, and other dynamics carry it too |
+| T012 | N1 | N1 | condition (start below threshold) → `Ends`, exact; the change is (p), reader left it null |
+| T045 | N1 | N1 | exact in parameters; (p) rather than the reader's (t) |
+| T077 | N1 | N1 | (t), level at least m by T + (m − level) |
+| T091 | N1 | N1 | exact, (p) |
+| X003 | N1 | **N0** | one configuration at one index: possibly drawn ∧ ¬ necessarily drawn ∧ returns; a separation, not a passage |
+| X013 | N1 | N1 | (t); the near-end ids optimum-renews-at-most and draws-above-renewal are shared with re-optimizing-above-a-renewal-ends-it |
+| X024 | N1 | **N0** (or N2a) | iff of two properties at one index, both the home's; the store's far end is the denial, a boundary of X (further case 1) |
+| X028 | N1 | **N0** | computed threshold values (= 4, = 3) of a built ramp: a count |
+| X032 | N1 | N1 | witness of the home's two fates (law on no dynamic's list) |
+| X067 | N1 | N1 | (p) witness on three ranges of w; `Broken` is N5b |
+| X075 | N2a | N2a | boundary of the home's gated law (inactive from T + n on) with flow-gated dropped (10 dynamics); `active (k+2)` gives continuing_restores only part of its premises (web-requires not given) |
+| X087 | N2a | N2a | denial of the home's notion, no index |
+| X097 | N1 | N1 | exact (t) |
+| X112 | N1 | N1 | sufficient as stated; the store's `necessary` is the contrapositive, and the reader flagged the difference |
+| X128 | N1 | N1 | built run, two tasks |
+| X133 | N1 | N1 | built step with properties at both states |
+| X162 | N1 | N1 | the denial (¬ ClosedAt late) is what the home's entry is about |
+| X164 | N1 | **N2a** | X's law (stock unbounded) denied with a premise dropped: further case 1 |
+| X170 | N1 | **N0** | `ConsumingIn ∧ Keeps` of one built flow at one index: a separation |
+| X188 | N1 | **N2a** | amounts-fallsstop dropped, `¬ RestsFrom` (X's notion denied): further case 1 |
+| X231 | N2a | N2a | computed end state, copying-covered dropped |
+| X242 | N1 | N1 | (t), T + n to T + n + 1 |
+| X250 | N1 | **N2a** | grammarpath-suoyuantongyu dropped, ¬ «所及» (X's notion denied): further case 1 |
+
+- **I would change 7 of 24:** X003, X024, X028, X170 to N0; X164, X188, X250 to N2a. All seven are witness or boundary exits.
+- **No ROAD, overlap or WALL** was missed in the sample. Every change stays among the no-road answers.
+- **The reader is inconsistent on boundaries.** It answers the same form N2a in X075 and X087 but N1 in X164, X188 and X250.
+- **Minor:** the `change` field is null or (t) where (p) fits (T012, T045, T091).
+
+**Is "OPENED" borne out?** Yes, as far as location and quotation go. Across all 393 answers, all 793 cited declarations resolve to the named declaration at the cited file and line. The quoted statement appears in its file word for word for every item. 20 transition items quote a sibling declaration of the item, not the first: T003, T006, T009, T014, T016, T017, T021, T024, T032, T036, T046, T052, T055, T056, T065, T067, T072, T074, T080, T085. Files outside the package are the live ones, not the snapshots in `*-checks/` or `history/`. Whether each entry was read whole cannot be checked by script. The omissions in §1 (a second far-end law, the shared premises, the list the theorem sits on) suggest the entries' ledgers were not always gone through.
+
+## 3. Alike?
+
+OPENED (script over ITEMS.jsonl and ANSWERS.jsonl). 17 exit items have a law that is also a declaration of a transition item. 14 pairs were answered alike (same verdicts, same far-end list). 3 pairs differ, and only in the far-end list; the verdicts are the same:
+
+- **X063 / T033** (`Web.course_kept_iff`, both homes re-optimizing-above-a-renewal-ends-it). Both N1, (p), exact. X063 far end: [re-optimizing-above-a-renewal-ends-it]. T033: the same plus loss-of-renewal-for-good.
+- **X095 / T053** (`ReadInTime.turned_early_iff`; X095's home is shaping-read-by-readers-drawn-from-the-selected, T053's is loss-read-in-time-by-the-others). Both N1, (t), exact.
+  - X095 far end: shaping-read…, loss-read…, capture-through-the-rule.
+  - T053 far end: loss-read…, capture-through-the-rule, readers-drawn-from-the-selected, shaping-read….
+  - X095 is also the twin of C30 (ROAD), which is answered unlike it (§1).
+- **X113 / T057** (`PoolFromCourse.Drained.clock_turned`, both homes the-lock-draws-its-readers-out). Both N1, (t).
+  - Strength: X113 witness, T057 sufficient.
+  - Far end: X113 [the-lock…, capture-through-the-rule]; T057 adds closed-capture.
+
+## 4. The N6 citations
+
+OPENED (script against the store). 40 items carry an N6 verdict. The "42" is the count of verdicts: N6a 10, N6b 30, N6c 2, since some items carry two.
+
+- The 40 items cite 62 exits. Every one exists in the cited entry at the cited number, with the cited `to` (an id) and the cited law.
+- Every N6a item cites at least one exit whose law or `to_law` is the item's theorem. Every N6b item cites an exit with another law. Every N6c item cites one with no law.
+- **One citation does not name the item's pair.** T080 (home a-step-coupling-keeps-at-every-horizon; answer: overlap with keeping-forgoes-the-renewal-at-the-need, N6a, N3) cites horizon-optima-hold-the-greatest-renewal #2 → a-step-coupling-keeps-at-every-horizon. That pair is not the answer's. Its other two citations (keeping-forgoes… #2, a-step-coupling… #3) do name the answer's pair.

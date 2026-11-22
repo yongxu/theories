@@ -1,0 +1,107 @@
+[
+ {
+  "judge_item": "J04",
+  "theorems": [
+   "Becoming.Optimum.frontier_rebuilds"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J08",
+  "theorems": [
+   "Becoming.RaisedEveryOther.both"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J12",
+  "theorems": [
+   "Becoming.Flow.carried_keeping_above_ending"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J16",
+  "theorems": [
+   "Becoming.Web.frontier_breaks_stepwise_long"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J20",
+  "theorems": [
+   "Becoming.Web.Next.frontier_rebuilds"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J24",
+  "theorems": [
+   "Becoming.Flow.settles"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J28",
+  "theorems": [
+   "Becoming.WholeUngated.persists"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J32",
+  "theorems": [
+   "Becoming.RuleRebuilding.«改而成隙则尽»"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J36",
+  "theorems": [
+   "Becoming.RegimeMargin.Coupled.Relay.cycles"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J40",
+  "theorems": [
+   "Becoming.World.arising_iff_ceasing_decided"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J44",
+  "theorems": [
+   "Becoming.WholeWithin.kept"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J48",
+  "theorems": [
+   "Becoming.RuleRebuilding.«改额为零则持尽»"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J52",
+  "theorems": [
+   "Becoming.Lasting.lasts_iff_ladder"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J56",
+  "theorems": [
+   "Becoming.ReadingsSpread.Commons.cleared_spreads"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J60",
+  "theorems": [
+   "Becoming.Flow.crosses_of_above"
+  ],
+  "where": []
+ }
+]

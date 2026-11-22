@@ -1,0 +1,15 @@
+# AI-written (Claude Fable, row FM), 22 November 2026. Draws the checker's sample (seed 2026112202): 12 witness exits and
+# 12 other items among those the reader answered with N1 and N2a only; and lists theorems cited by more than one item.
+import json, random, pathlib, collections
+A=[json.loads(l) for l in open('tmp/fm/roads22/astra/ANSWERS.jsonl')]
+I={json.loads(l)['item']:json.loads(l) for l in open('tmp/fm/roads22/ITEMS.jsonl')}
+rnd=random.Random(2026112202)
+wit=[x for x in A if x['item'][0]=='X' and I[x['item']].get('strength')=='witness' and set(x['verdicts'])<= {'N1','N2a'}]
+oth=[x for x in A if not (x['item'][0]=='X' and I[x['item']].get('strength')=='witness') and set(x['verdicts'])<= {'N1','N2a'}]
+sample=sorted([x['item'] for x in rnd.sample(wit,12)+rnd.sample(oth,12)])
+cnt=collections.defaultdict(list)
+for x in A:
+    for t in x.get('theorems') or []:
+        cnt[t.get('name')].append(x['item'])
+multi={k:sorted(set(v)) for k,v in cnt.items() if len(set(v))>1}
+pathlib.Path('tmp/fm/roads22/CHECKER-A-MATERIAL.json').write_text(json.dumps(dict(roads=['C21','C30','C39'], sample_of_N1_and_N2a=sample, theorems_named_by_more_than_one_item=multi),ensure_ascii=False,indent=1))

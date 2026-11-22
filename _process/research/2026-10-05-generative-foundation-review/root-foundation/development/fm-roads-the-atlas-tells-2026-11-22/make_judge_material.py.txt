@@ -1,0 +1,30 @@
+# AI-written (Claude Fable, row FM), 22 November 2026. Makes the judges' material: the store's entries with exits and
+# transitions removed (not filed: 1.1 MB, remade by this script), and a shuffled unmarked queue of the reader's ROADs,
+# as many items it answered with one of N1, N2a, N3 alone, and the store's lawed exits that name a dynamic. Seed 20261122.
+import json, random, pathlib
+out=pathlib.Path('tmp/fm/roads22/judge'); out.mkdir(exist_ok=True)
+D=json.load(open('theories/becoming/results/atlas/entries/dynamics.json'))
+ids={d['id'] for d in D}
+(out/'ENTRIES-WITHOUT-EXITS.json').write_text(json.dumps([{k:v for k,v in d.items() if k not in ('exits','transitions')} for d in D],ensure_ascii=False,indent=1))
+A=[json.loads(l) for l in open('tmp/fm/roads22/astra/ANSWERS.jsonl')]
+roads=[a for a in A if any(v.startswith('ROAD') for v in a['verdicts'])]
+plain=[a for a in A if len(a['verdicts'])==1 and a['verdicts'][0] in ('N1','N2a','N3') and a['item'][0] in 'CX' and a.get('theorems')]
+rnd=random.Random(20261122)
+non=rnd.sample(plain, len(roads))
+queue=[dict(key=a['item'], theorems=[t.get('name') for t in a['theorems']], files=[(t.get('file'),t.get('line')) for t in a['theorems']]) for a in roads+non]
+n=0
+for d in D:
+    for x in d.get('exits') or []:
+        to=x.get('to')
+        if isinstance(to,str) and to in ids and x.get('law'):
+            n+=1
+            ths=[x['law']] + ([x['to_law']] if x.get('to_law') and x.get('to_law')!=x['law'] else [])
+            queue.append(dict(key=f"S{n:02d}", theorems=ths, files=[], store=dict(home=d['id'], to=to, strength=x.get('strength'), law=x['law'], to_law=x.get('to_law'), drops=x.get('drops'))))
+rnd.shuffle(queue)
+key={}; pub=[]
+for i,q in enumerate(queue,1):
+    j=f"J{i:02d}"; key[j]=q
+    pub.append(dict(judge_item=j, theorems=q['theorems'], where=[f"{f}:{l}" for f,l in q['files'] if f]))
+pathlib.Path('tmp/fm/roads22/JUDGE-KEY.json').write_text(json.dumps(key,ensure_ascii=False,indent=1))
+for b in range(4):
+    (out/f'QUEUE-{b+1}.json').write_text(json.dumps(pub[b::4],ensure_ascii=False,indent=1))

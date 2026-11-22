@@ -1,0 +1,55 @@
+# A survey of roads: passages between dynamics that the Lean already has and the atlas does not draw
+
+*AI-written (Claude Fable, board row FM), 22 November 2026. A read-only survey: no Lean is written, built or changed, nothing is entered on the atlas, and its best outcome is a list on paper, each line with its theorem and its two ends, for the session that holds the atlas (row DJ) to judge. Not frozen while this line stands without a hash beside it in `FROZEN-QUESTIONS.sha256.txt`.*
+
+## Why this
+
+The atlas (`theories/becoming/results/atlas/entries/dynamics.json`, 186 dynamics) links its dynamics in two ways that have been told as one. An **overlap agreed** says two dynamics are one law seen twice: a case row, a joining. A **road** says how a course gets from one dynamic to another: where it passes, under what condition, how strongly that is known. Ren's words of 16 November ask for the second, "phase transitions, attractors, paths clearly mapped out", and on 22 November he asked whether our approach is right for the map "to be represented as the map" ([his words](../../../sources/15-codex-theory-conversations/2026-11-22-does-our-map-have-a-centre.md)). Every join landed this week is of the first kind. By a script of row DJ's on main `10742ca6f` (unchecked): of 329 exits 71 name another dynamic as where they lead and 258 tell the far end in words; of 105 transitions none names a dynamic at either end. So the atlas tells many passages and draws few as roads. Nobody has asked, passage by passage, whether its far end is another dynamic of the atlas.
+
+This survey asks that. It does not ask for a count to raise. A passage that leads to no dynamic of the atlas is as much a finding as one that does: it is either a passage inside one dynamic, or a place the atlas has no chart for.
+
+## What a road is, for this survey
+
+A **road from X to Y** is one theorem of the package whose statement is a passage: its premises place a course (a run of a process, an orbit of a law, a population over generations, a quantity along a parameter) under X's own notion, and its conclusion places that course, later or at another value of the parameter or with one of X's premises dropped, under Y's own notion, X and Y being two different dynamics of the atlas. "Own notion" means a notion the dynamic's entry is about (its name, mechanism and laws tell it), not merely a declaration that appears somewhere in its list.
+
+## What counts as no road (written first)
+
+- **N1. Inside one dynamic.** Both ends are states, regimes or stages of the home dynamic's own notion (below and above its threshold, before and after its deadline). Expected of most transitions. Not a road between dynamics; it is a passage drawn where it belongs.
+- **N2. To no dynamic.** The far end is told in words that are no dynamic's own notion. Then say which: (a) a consequence or a property, not a place (a bound, a count, "is decided"); (b) a going-on in its own right that the atlas has no dynamic for: a **blank**, to be recorded with its words and its theorem.
+- **N3. An overlap, not a road.** The theorem identifies two notions (an iff with no course moving, "X is exactly Y"), or contains one in the other with nothing changing ("every X is a Y"): the same law seen twice, or one inside another. To be listed apart as an overlap candidate, not as a road.
+- **N4. A witness only.** The theorem is about one built example (a named small process): it shows that a course can pass, not when. At most a road of strength `witness`, said as that.
+- **N5. A match by name.** The far end shares a word or a declaration with dynamic Y but Y's entry is about something else. No road.
+- **N6. Already drawn.** An exit of the home dynamic already names Y with this law.
+- **N7. The direction is not in the statement.** An iff both of whose sides are places gives two candidate roads or none; an implication read backwards gives none. Say which way the statement goes, quoting it.
+
+## The material
+
+- `INDEX-OF-DYNAMICS.md`: every dynamic's id, name, the start of its mechanism, its declarations (by script from the store).
+- `ITEMS.jsonl`, 393 items (by script): **T001 to T098**, the transitions that tell two ends in words, each with its declarations; **X001 to X256**, the exits whose far end is told in words and that name a law (38 exact, 50 sufficient, 27 necessary, 141 witness); **C01 to C39**, theorems that a Lean-printed list crossed with the atlas shows with a notion of one dynamic only in the premises and a notion of another only in the conclusion, and that no exit or transition names (row DJ's aid: a floor and a list of places to look first; it sees only notions listed under a dynamic, shows no direction for an iff, and a listed notion does not make a statement about that dynamic).
+- The store itself and the Lean package (`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`), to open.
+- Out of scope, said so that it is not taken as checked: the 71 exits that already name a dynamic; the 15 exits with no law; the 7 transitions with no `between`; any passage the atlas does not tell at all and the aid does not show.
+
+## The questions, of each item
+
+**Q1. The statement.** Open the theorem named (the transition's first declaration that states the passage; the exit's `law`; the candidate's theorem). Quote its statement. Is it a passage in the sense above: what moves (a course, a parameter), from what to what? If the declaration named is a definition, or the passage is spread over several theorems, say so and name the one that carries it, if one does.
+
+**Q2. The far end.** Without looking for a hoped-for answer: is what the conclusion places the course under the own notion of a dynamic of the atlas other than the home dynamic? Search the index by notion, not by word; open the entry of any dynamic you name. Answer one of: **ROAD home → Y** (name Y; quote the sentence of Y's entry that makes the conclusion's notion Y's own); **N1**; **N2a**; **N2b** (a blank: give the far end's words); **N3** (name the two notions, and Y if the other notion is a dynamic's own); **N4**; **N5** (name the Y that only matches by name); **N6**; **N7**. For a candidate C, the "home" is the dynamic whose notion is in the premises; both ends are in question.
+
+**Q3. The strength, as the statement has it.** `exact` (an iff whose one side is the condition and whose other side is the passage), `sufficient` (an implication to the passage), `necessary` (the passage implies the condition), `witness` (a built example). Where the store's strength differs from what the statement says, say so.
+
+**Q4. What the atlas would need to say so.** For a ROAD: the fields as the store has them (`to` the id of Y, `law`, `edge` in words taken from the statement and no further, `strength`), and what would count against entering it (a premise of the theorem that Y's entry does not have; a notion that is Y's only under a reading).
+
+**Every answer is led by OPENED (you read the statement in the Lean and the entry in the store yourself) or TOLD.** An item you could not open is listed as not read, not guessed.
+
+## How
+
+One read-only pass by a reader of another kind of model (Astra 6.2) over all 393 items. Claude readers, each alone, over the transitions and the exits of strength exact, sufficient or necessary and the candidates (252 items), divided by the atlas's families so that a reader holds a region; the 141 witness exits are read by the Astra pass only, and that is said of whatever comes of them. Then, for every item some reader calls a ROAD: a judge who took no part and is not told the answer is shown the theorem's statement and the index and asked which dynamic's own notion, if any, the conclusion is; a road stands only where the judge names the same Y. Then a checker on the list as a whole: every ROAD's statement opened against both entries, the blanks (N2b) read for whether each is a place or only a phrase, and the disagreements between the readers and the Astra pass listed, not resolved by vote.
+
+Cap, stated before the run: about 3.5 million tokens on the Claude side and about 15 million on Astra's. No Lean, no lake, no build, no gate, no core run.
+
+## What the survey may and may not conclude
+
+- It may list: roads with their theorems that at least one reader, the blind judge and the checker agree on; overlaps met on the way; blanks; passages inside one dynamic. Each line says who read it.
+- It may not say how many roads the map has, nor that a region has none: only what was found in what was read.
+- It enters nothing on the atlas. Whether a line becomes an exit that names a dynamic is row DJ's, by its own rules and its own readers.
+- A ROAD here is a claim that a recognition holds between a statement and two entries; that a statement is about a dynamic, no proof gives.

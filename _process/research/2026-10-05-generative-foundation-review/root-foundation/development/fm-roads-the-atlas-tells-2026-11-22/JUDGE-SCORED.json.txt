@@ -1,0 +1,1911 @@
+{
+ "V": {
+  "J01": {
+   "verdicts": [
+    "ROAD",
+    "ROAD IN TWO"
+   ],
+   "frm": [
+    "what-an-optimum-does-beyond-what-couples-in"
+   ],
+   "to": [
+    "three-outcomes-of-a-loss"
+   ],
+   "change": "t",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J05": {
+   "verdicts": [
+    "N1",
+    "N5b"
+   ],
+   "frm": [
+    "never-leaving-a-guard"
+   ],
+   "to": [
+    "none"
+   ],
+   "change": "t",
+   "side": "none",
+   "strength": "sufficient"
+  },
+  "J09": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "thresholds-of-waiting"
+   ],
+   "to": [
+    "none"
+   ],
+   "change": "t",
+   "side": "none",
+   "strength": "exact"
+  },
+  "J13": {
+   "verdicts": [
+    "N1",
+    "WALL"
+   ],
+   "frm": [
+    "continued-change-needs-openness"
+   ],
+   "to": [
+    "closed-cycle-without-dissipation",
+    "unceasing-generation-needs-renewal"
+   ],
+   "change": "t",
+   "side": "none",
+   "strength": "sufficient"
+  },
+  "J17": {
+   "verdicts": [
+    "ROAD"
+   ],
+   "frm": [
+    "persisting-filters-what-was-chosen"
+   ],
+   "to": [
+    "selection-among-groups-by-ending",
+    "ending-laws-as-regimes-on-a-lineage",
+    "confined-rise-within-a-whole"
+   ],
+   "change": "t",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J21": {
+   "verdicts": [
+    "ROAD",
+    "N3"
+   ],
+   "frm": [
+    "continued-change-needs-openness"
+   ],
+   "to": [
+    "lossless-exchange-continues-and-returns",
+    "closed-cycle-without-dissipation"
+   ],
+   "change": "d",
+   "side": "outcome",
+   "strength": "witness"
+  },
+  "J25": {
+   "verdicts": [
+    "N0",
+    "N5b"
+   ],
+   "frm": [
+    "kind-relay-keeps-widening-within-kinds"
+   ],
+   "to": [
+    "none"
+   ],
+   "change": "none",
+   "side": "none",
+   "strength": "witness"
+  },
+  "J29": {
+   "verdicts": [
+    "ROAD"
+   ],
+   "frm": [
+    "optima-rebuild-a-depleted-base"
+   ],
+   "to": [
+    "a-weighting-faster-than-renewal-ends-the-base"
+   ],
+   "change": "p",
+   "side": "outcome",
+   "strength": "witness"
+  },
+  "J33": {
+   "verdicts": [
+    "ROAD",
+    "N1"
+   ],
+   "frm": [
+    "two-sided-regulation-and-late-reading"
+   ],
+   "to": [
+    "loss-of-renewal-for-good",
+    "own-count-misses-joint-excess"
+   ],
+   "change": "d",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J37": {
+   "verdicts": [
+    "N1",
+    "N5c"
+   ],
+   "frm": [
+    "a-pool-that-recruits-through-itself"
+   ],
+   "to": [
+    "none"
+   ],
+   "change": "t",
+   "side": "none",
+   "strength": "witness"
+  },
+  "J41": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "a-step-coupling-keeps-at-every-horizon"
+   ],
+   "to": [
+    "none"
+   ],
+   "change": "none",
+   "side": "none",
+   "strength": "sufficient"
+  },
+  "J45": {
+   "verdicts": [
+    "ROAD"
+   ],
+   "frm": [
+    "shaping-the-rule-selected-by-what-comes-back"
+   ],
+   "to": [
+    "capture-through-the-rule"
+   ],
+   "change": "t",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J49": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "late-relay-oscillates"
+   ],
+   "to": [
+    "none"
+   ],
+   "change": "t",
+   "side": "none",
+   "strength": "sufficient"
+  },
+  "J53": {
+   "verdicts": [
+    "N1",
+    "N3"
+   ],
+   "frm": [
+    "loss-read-in-time-by-the-others"
+   ],
+   "to": [
+    "none"
+   ],
+   "change": "t",
+   "side": "none",
+   "strength": "sufficient"
+  },
+  "J57": {
+   "verdicts": [
+    "N0"
+   ],
+   "frm": [
+    "closing-needs-net-draw"
+   ],
+   "to": [
+    "none"
+   ],
+   "change": "none",
+   "side": "none",
+   "strength": "witness"
+  },
+  "J61": {
+   "verdicts": [
+    "N1",
+    "N3",
+    "N5c"
+   ],
+   "frm": [
+    "selection-when-the-lumping-changes"
+   ],
+   "to": [
+    "none"
+   ],
+   "change": "t",
+   "side": "none",
+   "strength": "witness"
+  },
+  "J02": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "a-rule-rebuilt-from-the-members-it-limits"
+   ],
+   "to": [
+    "a-rule-with-no-holder-does-not-return",
+    "a-rule-rebuilt-from-the-members-it-limits"
+   ],
+   "change": "t",
+   "side": "premise",
+   "strength": "sufficient"
+  },
+  "J06": {
+   "verdicts": [
+    "N1",
+    "N5b"
+   ],
+   "frm": [
+    "restoring-giving-from-the-worst-start"
+   ],
+   "to": [
+    "restoring-giving-from-the-worst-start"
+   ],
+   "change": "none",
+   "side": "outcome",
+   "strength": "witness"
+  },
+  "J10": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "errors-by-chance-in-a-pair-keeping-mutual-withholding"
+   ],
+   "to": [
+    "errors-by-chance-in-a-pair-keeping-mutual-withholding"
+   ],
+   "change": "t",
+   "side": "premise",
+   "strength": "sufficient"
+  },
+  "J14": {
+   "verdicts": [
+    "N2a",
+    "N0"
+   ],
+   "frm": [
+    "what-a-rise-draws-from-beyond"
+   ],
+   "to": [
+    "none"
+   ],
+   "change": "d",
+   "side": "none",
+   "strength": "witness"
+  },
+  "J18": {
+   "verdicts": [
+    "ROAD"
+   ],
+   "frm": [
+    "recurring-reference-revision"
+   ],
+   "to": [
+    "becoming-renewal-reading"
+   ],
+   "change": "p",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J22": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "three-outcomes-of-a-loss"
+   ],
+   "to": [
+    "three-outcomes-of-a-loss"
+   ],
+   "change": "t",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J26": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "a-run-round-a-loop-keeps-changing",
+    "when-the-runs-of-a-process-settle"
+   ],
+   "to": [
+    "a-run-round-a-loop-keeps-changing",
+    "when-the-runs-of-a-process-settle"
+   ],
+   "change": "none",
+   "side": "outcome",
+   "strength": "exact"
+  },
+  "J30": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "substitution-preserves-consumption"
+   ],
+   "to": [
+    "substitution-preserves-consumption",
+    "three-outcomes-of-a-loss",
+    "loss-of-renewal-for-good"
+   ],
+   "change": "t",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J34": {
+   "verdicts": [
+    "N3"
+   ],
+   "frm": [
+    "readings-carried-and-filtered"
+   ],
+   "to": [
+    "unselected-beyond-the-coupling-closure"
+   ],
+   "change": "none",
+   "side": "none",
+   "strength": "exact"
+  },
+  "J38": {
+   "verdicts": [
+    "ROAD"
+   ],
+   "frm": [
+    "no-finite-part-bears-taking"
+   ],
+   "to": [
+    "closed-cycle-without-dissipation"
+   ],
+   "change": "d",
+   "side": "outcome",
+   "strength": "witness"
+  },
+  "J42": {
+   "verdicts": [
+    "N3"
+   ],
+   "frm": [
+    "no-finite-part-bears-taking"
+   ],
+   "to": [
+    "an-arrow-leaves-change-not-recurring",
+    "returning-novelty-forgetting-on-levels"
+   ],
+   "change": "none",
+   "side": "premise",
+   "strength": "sufficient"
+  },
+  "J46": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "the-selection-term-and-a-lineages-fate"
+   ],
+   "to": [
+    "the-selection-term-and-a-lineages-fate"
+   ],
+   "change": "none",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J50": {
+   "verdicts": [
+    "N1",
+    "N5b"
+   ],
+   "frm": [
+    "restoring-giving-from-the-worst-start"
+   ],
+   "to": [
+    "restoring-giving-from-the-worst-start"
+   ],
+   "change": "none",
+   "side": "outcome",
+   "strength": "witness"
+  },
+  "J54": {
+   "verdicts": [
+    "N0"
+   ],
+   "frm": [
+    "a-reader-rebuilt-from-its-stock-ends-with-it",
+    "the-stock-buys-time-where-the-rebuild-draws-on-it"
+   ],
+   "to": [
+    "none"
+   ],
+   "change": "none",
+   "side": "none",
+   "strength": "necessary"
+  },
+  "J58": {
+   "verdicts": [
+    "ROAD"
+   ],
+   "frm": [
+    "capture-through-the-rule"
+   ],
+   "to": [
+    "turning-in-time"
+   ],
+   "change": "t",
+   "side": "outcome",
+   "strength": "exact"
+  },
+  "J62": {
+   "verdicts": [
+    "N3"
+   ],
+   "frm": [
+    "unceasing-generation-needs-renewal",
+    "more-needs-renewers"
+   ],
+   "to": [
+    "closed-cycle-without-dissipation"
+   ],
+   "change": "none",
+   "side": "premise",
+   "strength": "witness"
+  },
+  "J03": {
+   "verdicts": [
+    "N3"
+   ],
+   "frm": [
+    "reading-a-loss-in-time"
+   ],
+   "to": [
+    "margin-of-a-regime"
+   ],
+   "change": "none",
+   "side": "outcome",
+   "strength": "exact, witness"
+  },
+  "J07": {
+   "verdicts": [
+    "N1",
+    "N5c"
+   ],
+   "frm": [
+    "never-leaving-a-guard"
+   ],
+   "to": [
+    "never-leaving-a-guard"
+   ],
+   "change": "none",
+   "side": "outcome",
+   "strength": "exact"
+  },
+  "J11": {
+   "verdicts": [
+    "N3"
+   ],
+   "frm": [
+    "division-by-exclusive-footprints"
+   ],
+   "to": [
+    "what-taking-all-excludes"
+   ],
+   "change": "none",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J15": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "a-rule-rebuilt-from-the-members-it-limits"
+   ],
+   "to": [
+    "a-rule-with-no-holder-does-not-return",
+    "a-rule-rebuilt-from-the-members-it-limits"
+   ],
+   "change": "t, p",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J19": {
+   "verdicts": [
+    "N5a",
+    "N3"
+   ],
+   "frm": [
+    "none"
+   ],
+   "to": [
+    "continued-change-needs-openness"
+   ],
+   "change": "none",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J23": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "keeping-forgoes-the-renewal-at-the-need"
+   ],
+   "to": [
+    "keeping-forgoes-the-renewal-at-the-need",
+    "a-step-coupling-keeps-at-every-horizon"
+   ],
+   "change": "p",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J27": {
+   "verdicts": [
+    "N0"
+   ],
+   "frm": [
+    "none"
+   ],
+   "to": [
+    "none"
+   ],
+   "change": "none",
+   "side": "none",
+   "strength": "a bound"
+  },
+  "J31": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "overshoot-beyond-the-gap"
+   ],
+   "to": [
+    "overshoot-beyond-the-gap"
+   ],
+   "change": "none",
+   "side": "outcome",
+   "strength": "witness"
+  },
+  "J35": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "selection-read-off-its-own-survivors"
+   ],
+   "to": [
+    "selection-read-off-its-own-survivors"
+   ],
+   "change": "none",
+   "side": "outcome",
+   "strength": "witness"
+  },
+  "J39": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "revision-with-an-undecided-value"
+   ],
+   "to": [
+    "revision-with-an-undecided-value"
+   ],
+   "change": "none",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J43": {
+   "verdicts": [
+    "N1",
+    "N5b",
+    "N5c"
+   ],
+   "frm": [
+    "selection-when-the-lumping-changes"
+   ],
+   "to": [
+    "none"
+   ],
+   "change": "t",
+   "side": "none",
+   "strength": "witness"
+  },
+  "J47": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "a-step-coupling-keeps-at-every-horizon"
+   ],
+   "to": [
+    "a-step-coupling-keeps-at-every-horizon",
+    "keeping-forgoes-the-renewal-at-the-need"
+   ],
+   "change": "p",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J51": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "giving-that-waits-on-giving"
+   ],
+   "to": [
+    "giving-that-waits-on-giving",
+    "withholding-returns-around-a-loop"
+   ],
+   "change": "t",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J55": {
+   "verdicts": [
+    "N3"
+   ],
+   "frm": [
+    "readings-revised-spread-and-locked"
+   ],
+   "to": [
+    "unselected-beyond-the-coupling-closure",
+    "selection-read-off-its-own-survivors",
+    "readings-carried-and-filtered"
+   ],
+   "change": "none",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J59": {
+   "verdicts": [
+    "ROAD"
+   ],
+   "frm": [
+    "where-a-run-of-a-regime-comes-to-rest"
+   ],
+   "to": [
+    "overcompensating-giving-cycles"
+   ],
+   "change": "d",
+   "side": "outcome",
+   "strength": "witness"
+  },
+  "J04": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "optima-rebuild-a-depleted-base"
+   ],
+   "to": [
+    "optima-rebuild-a-depleted-base",
+    "others-drawing-first-end-the-base"
+   ],
+   "change": "t",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J08": {
+   "verdicts": [
+    "N3"
+   ],
+   "frm": [
+    "rule-raised-every-other-step"
+   ],
+   "to": [
+    "where-the-possible-grows",
+    "generation-and-degeneration-at-two-grains"
+   ],
+   "change": "none",
+   "side": "premise",
+   "strength": "witness"
+  },
+  "J12": {
+   "verdicts": [
+    "N3"
+   ],
+   "frm": [
+    "readings-carried-and-filtered"
+   ],
+   "to": [
+    "persisting-filters-what-was-chosen"
+   ],
+   "change": "none",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J16": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "a-step-coupling-keeps-at-every-horizon"
+   ],
+   "to": [
+    "a-step-coupling-keeps-at-every-horizon",
+    "keeping-forgoes-the-renewal-at-the-need"
+   ],
+   "change": "p",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J20": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "others-drawing-first-end-the-base"
+   ],
+   "to": [
+    "others-drawing-first-end-the-base",
+    "optima-rebuild-a-depleted-base"
+   ],
+   "change": "t",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J24": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "two-sided-regulation-and-late-reading"
+   ],
+   "to": [
+    "two-sided-regulation-and-late-reading"
+   ],
+   "change": "t",
+   "side": "outcome",
+   "strength": "sufficient"
+  },
+  "J28": {
+   "verdicts": [
+    "ROAD"
+   ],
+   "frm": [
+    "whole-drawing-beyond-renewal-ends"
+   ],
+   "to": [
+    "whole-persists-through-generation"
+   ],
+   "change": "d",
+   "side": "premise",
+   "strength": "witness"
+  },
+  "J32": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "a-rule-rebuilt-from-the-members-it-limits"
+   ],
+   "to": [
+    "a-rule-rebuilt-from-the-members-it-limits",
+    "a-rule-with-no-holder-does-not-return"
+   ],
+   "change": "t",
+   "side": "outcome",
+   "strength": "witness"
+  },
+  "J36": {
+   "verdicts": [
+    "N3"
+   ],
+   "frm": [
+    "support-beyond-a-band-can-cycle"
+   ],
+   "to": [
+    "a-cascade-along-total-dependence"
+   ],
+   "change": "none",
+   "side": "premise",
+   "strength": "witness"
+  },
+  "J40": {
+   "verdicts": [
+    "N3"
+   ],
+   "frm": [
+    "recurrence-without-decidedness"
+   ],
+   "to": [
+    "recurrence-without-decidedness",
+    "ceasing-needs-arising"
+   ],
+   "change": "none",
+   "side": "none",
+   "strength": "exact"
+  },
+  "J44": {
+   "verdicts": [
+    "ROAD"
+   ],
+   "frm": [
+    "whole-drawing-beyond-renewal-ends"
+   ],
+   "to": [
+    "whole-persists-through-generation"
+   ],
+   "change": "d",
+   "side": "premise",
+   "strength": "witness"
+  },
+  "J48": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "a-rule-rebuilt-from-the-members-it-limits"
+   ],
+   "to": [
+    "a-rule-with-no-holder-does-not-return",
+    "a-rule-rebuilt-from-the-members-it-limits"
+   ],
+   "change": "t",
+   "side": "premise",
+   "strength": "sufficient"
+  },
+  "J52": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "never-leaving-a-guard"
+   ],
+   "to": [
+    "never-leaving-a-guard"
+   ],
+   "change": "t",
+   "side": "outcome",
+   "strength": "exact"
+  },
+  "J56": {
+   "verdicts": [
+    "ROAD"
+   ],
+   "frm": [
+    "readings-revised-spread-and-locked"
+   ],
+   "to": [
+    "selection-read-off-its-own-survivors"
+   ],
+   "change": "t",
+   "side": "premise",
+   "strength": "witness"
+  },
+  "J60": {
+   "verdicts": [
+    "N1"
+   ],
+   "frm": [
+    "overshoot-beyond-the-gap"
+   ],
+   "to": [
+    "overshoot-beyond-the-gap",
+    "two-sided-regulation-and-late-reading"
+   ],
+   "change": "t",
+   "side": "outcome",
+   "strength": "sufficient"
+  }
+ },
+ "rows": [
+  [
+   "J02",
+   "S43",
+   "a-rule-rebuilt-from-the-members-it-limits",
+   "a-rule-with-no-holder-does-not-return",
+   "sufficient",
+   [
+    "N1"
+   ],
+   [
+    "a-rule-rebuilt-from-the-members-it-limits"
+   ],
+   [
+    "a-rule-with-no-holder-does-not-return",
+    "a-rule-rebuilt-from-the-members-it-limits"
+   ],
+   "t"
+  ],
+  [
+   "J03",
+   "S17",
+   "reading-a-loss-in-time",
+   "margin-of-a-regime",
+   "witness",
+   [
+    "N3"
+   ],
+   [
+    "reading-a-loss-in-time"
+   ],
+   [
+    "margin-of-a-regime"
+   ],
+   "none"
+  ],
+  [
+   "J04",
+   "S08",
+   "a-weighting-faster-than-renewal-ends-the-base",
+   "optima-rebuild-a-depleted-base",
+   "sufficient",
+   [
+    "N1"
+   ],
+   [
+    "optima-rebuild-a-depleted-base"
+   ],
+   [
+    "optima-rebuild-a-depleted-base",
+    "others-drawing-first-end-the-base"
+   ],
+   "t"
+  ],
+  [
+   "J05",
+   "S04",
+   "market-finite-support-obstruction",
+   "never-leaving-a-guard",
+   "sufficient",
+   [
+    "N1",
+    "N5b"
+   ],
+   [
+    "never-leaving-a-guard"
+   ],
+   [
+    "none"
+   ],
+   "t"
+  ],
+  [
+   "J06",
+   "S21",
+   "giving-that-waits-on-giving",
+   "restoring-giving-from-the-worst-start",
+   "witness",
+   [
+    "N1",
+    "N5b"
+   ],
+   [
+    "restoring-giving-from-the-worst-start"
+   ],
+   [
+    "restoring-giving-from-the-worst-start"
+   ],
+   "none"
+  ],
+  [
+   "J07",
+   "S48",
+   "never-leaving-a-guard",
+   "not-going-out-of-a-region",
+   "exact",
+   [
+    "N1",
+    "N5c"
+   ],
+   [
+    "never-leaving-a-guard"
+   ],
+   [
+    "never-leaving-a-guard"
+   ],
+   "none"
+  ],
+  [
+   "J08",
+   "S31",
+   "where-the-possible-grows",
+   "rule-raised-every-other-step",
+   "witness",
+   [
+    "N3"
+   ],
+   [
+    "rule-raised-every-other-step"
+   ],
+   [
+    "where-the-possible-grows",
+    "generation-and-degeneration-at-two-grains"
+   ],
+   "none"
+  ],
+  [
+   "J10",
+   "S23",
+   "a-pair-tolerates-only-within-a-window",
+   "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "sufficient",
+   [
+    "N1"
+   ],
+   [
+    "errors-by-chance-in-a-pair-keeping-mutual-withholding"
+   ],
+   [
+    "errors-by-chance-in-a-pair-keeping-mutual-withholding"
+   ],
+   "t"
+  ],
+  [
+   "J11",
+   "S06",
+   "own-count-misses-joint-excess",
+   "division-by-exclusive-footprints",
+   "sufficient",
+   [
+    "N3"
+   ],
+   [
+    "division-by-exclusive-footprints"
+   ],
+   [
+    "what-taking-all-excludes"
+   ],
+   "none"
+  ],
+  [
+   "J12",
+   "S52",
+   "readings-carried-and-filtered",
+   "persisting-filters-what-was-chosen",
+   "sufficient",
+   [
+    "N3"
+   ],
+   [
+    "readings-carried-and-filtered"
+   ],
+   [
+    "persisting-filters-what-was-chosen"
+   ],
+   "none"
+  ],
+  [
+   "J13",
+   "S27",
+   "closed-cycle-without-dissipation",
+   "continued-change-needs-openness",
+   "sufficient",
+   [
+    "N1",
+    "WALL"
+   ],
+   [
+    "continued-change-needs-openness"
+   ],
+   [
+    "closed-cycle-without-dissipation",
+    "unceasing-generation-needs-renewal"
+   ],
+   "t"
+  ],
+  [
+   "J15",
+   "S42",
+   "a-rule-rebuilt-from-the-members-it-limits",
+   "a-rule-with-no-holder-does-not-return",
+   "sufficient",
+   [
+    "N1"
+   ],
+   [
+    "a-rule-rebuilt-from-the-members-it-limits"
+   ],
+   [
+    "a-rule-with-no-holder-does-not-return",
+    "a-rule-rebuilt-from-the-members-it-limits"
+   ],
+   "t, p"
+  ],
+  [
+   "J16",
+   "S41",
+   "a-step-coupling-keeps-at-every-horizon",
+   "keeping-forgoes-the-renewal-at-the-need",
+   "sufficient",
+   [
+    "N1"
+   ],
+   [
+    "a-step-coupling-keeps-at-every-horizon"
+   ],
+   [
+    "a-step-coupling-keeps-at-every-horizon",
+    "keeping-forgoes-the-renewal-at-the-need"
+   ],
+   "p"
+  ],
+  [
+   "J17",
+   "S51",
+   "persisting-filters-what-was-chosen",
+   "selection-among-groups-by-ending",
+   "sufficient",
+   [
+    "ROAD"
+   ],
+   [
+    "persisting-filters-what-was-chosen"
+   ],
+   [
+    "selection-among-groups-by-ending",
+    "ending-laws-as-regimes-on-a-lineage",
+    "confined-rise-within-a-whole"
+   ],
+   "t"
+  ],
+  [
+   "J18",
+   "S47",
+   "recurring-reference-revision",
+   "becoming-renewal-reading",
+   "sufficient",
+   [
+    "ROAD"
+   ],
+   [
+    "recurring-reference-revision"
+   ],
+   [
+    "becoming-renewal-reading"
+   ],
+   "p"
+  ],
+  [
+   "J19",
+   "S29",
+   "a-token-moved-back-and-forth-on-a-net",
+   "continued-change-needs-openness",
+   "sufficient",
+   [
+    "N5a",
+    "N3"
+   ],
+   [
+    "none"
+   ],
+   [
+    "continued-change-needs-openness"
+   ],
+   "none"
+  ],
+  [
+   "J20",
+   "S07",
+   "others-drawing-first-end-the-base",
+   "optima-rebuild-a-depleted-base",
+   "sufficient",
+   [
+    "N1"
+   ],
+   [
+    "others-drawing-first-end-the-base"
+   ],
+   [
+    "others-drawing-first-end-the-base",
+    "optima-rebuild-a-depleted-base"
+   ],
+   "t"
+  ],
+  [
+   "J21",
+   "S33",
+   "an-arrow-leaves-change-not-recurring",
+   "lossless-exchange-continues-and-returns",
+   "witness",
+   [
+    "ROAD",
+    "N3"
+   ],
+   [
+    "continued-change-needs-openness"
+   ],
+   [
+    "lossless-exchange-continues-and-returns",
+    "closed-cycle-without-dissipation"
+   ],
+   "d"
+  ],
+  [
+   "J22",
+   "S01",
+   "loss-of-renewal-for-good",
+   "three-outcomes-of-a-loss",
+   "necessary",
+   [
+    "N1"
+   ],
+   [
+    "three-outcomes-of-a-loss"
+   ],
+   [
+    "three-outcomes-of-a-loss"
+   ],
+   "t"
+  ],
+  [
+   "J23",
+   "S10",
+   "horizon-optima-hold-the-greatest-renewal",
+   "keeping-forgoes-the-renewal-at-the-need",
+   "sufficient",
+   [
+    "N1"
+   ],
+   [
+    "keeping-forgoes-the-renewal-at-the-need"
+   ],
+   [
+    "keeping-forgoes-the-renewal-at-the-need",
+    "a-step-coupling-keeps-at-every-horizon"
+   ],
+   "p"
+  ],
+  [
+   "J24",
+   "S24",
+   "overshoot-beyond-the-gap",
+   "two-sided-regulation-and-late-reading",
+   "sufficient",
+   [
+    "N1"
+   ],
+   [
+    "two-sided-regulation-and-late-reading"
+   ],
+   [
+    "two-sided-regulation-and-late-reading"
+   ],
+   "t"
+  ],
+  [
+   "J25",
+   "S32",
+   "what-keeping-widening-needs",
+   "kind-relay-keeps-widening-within-kinds",
+   "witness",
+   [
+    "N0",
+    "N5b"
+   ],
+   [
+    "kind-relay-keeps-widening-within-kinds"
+   ],
+   [
+    "none"
+   ],
+   "none"
+  ],
+  [
+   "J26",
+   "S30",
+   "when-the-runs-of-a-process-settle",
+   "a-run-round-a-loop-keeps-changing",
+   "exact",
+   [
+    "N1"
+   ],
+   [
+    "a-run-round-a-loop-keeps-changing",
+    "when-the-runs-of-a-process-settle"
+   ],
+   [
+    "a-run-round-a-loop-keeps-changing",
+    "when-the-runs-of-a-process-settle"
+   ],
+   "none"
+  ],
+  [
+   "J27",
+   "S12",
+   "what-a-rise-draws-from-beyond",
+   "restraint-within-the-joint-slack",
+   "sufficient",
+   [
+    "N0"
+   ],
+   [
+    "none"
+   ],
+   [
+    "none"
+   ],
+   "none"
+  ],
+  [
+   "J28",
+   "S15",
+   "whole-drawing-beyond-renewal-ends",
+   "whole-persists-through-generation",
+   "witness",
+   [
+    "ROAD"
+   ],
+   [
+    "whole-drawing-beyond-renewal-ends"
+   ],
+   [
+    "whole-persists-through-generation"
+   ],
+   "d"
+  ],
+  [
+   "J29",
+   "S49",
+   "optima-rebuild-a-depleted-base",
+   "a-weighting-faster-than-renewal-ends-the-base",
+   "witness",
+   [
+    "ROAD"
+   ],
+   [
+    "optima-rebuild-a-depleted-base"
+   ],
+   [
+    "a-weighting-faster-than-renewal-ends-the-base"
+   ],
+   "p"
+  ],
+  [
+   "J30",
+   "S02",
+   "consumption-ends-with-feeders",
+   "substitution-preserves-consumption",
+   "sufficient",
+   [
+    "N1"
+   ],
+   [
+    "substitution-preserves-consumption"
+   ],
+   [
+    "substitution-preserves-consumption",
+    "three-outcomes-of-a-loss",
+    "loss-of-renewal-for-good"
+   ],
+   "t"
+  ],
+  [
+   "J31",
+   "S38",
+   "two-sided-regulation-and-late-reading",
+   "overshoot-beyond-the-gap",
+   "witness",
+   [
+    "N1"
+   ],
+   [
+    "overshoot-beyond-the-gap"
+   ],
+   [
+    "overshoot-beyond-the-gap"
+   ],
+   "none"
+  ],
+  [
+   "J32",
+   "S45",
+   "a-rule-rebuilt-from-the-members-it-limits",
+   "a-rule-with-no-holder-does-not-return",
+   "witness",
+   [
+    "N1"
+   ],
+   [
+    "a-rule-rebuilt-from-the-members-it-limits"
+   ],
+   [
+    "a-rule-rebuilt-from-the-members-it-limits",
+    "a-rule-with-no-holder-does-not-return"
+   ],
+   "t"
+  ],
+  [
+   "J33",
+   "S39",
+   "two-sided-regulation-and-late-reading",
+   "loss-of-renewal-for-good",
+   "sufficient",
+   [
+    "ROAD",
+    "N1"
+   ],
+   [
+    "two-sided-regulation-and-late-reading"
+   ],
+   [
+    "loss-of-renewal-for-good",
+    "own-count-misses-joint-excess"
+   ],
+   "d"
+  ],
+  [
+   "J34",
+   "S53",
+   "readings-carried-and-filtered",
+   "unselected-beyond-the-coupling-closure",
+   "sufficient",
+   [
+    "N3"
+   ],
+   [
+    "readings-carried-and-filtered"
+   ],
+   [
+    "unselected-beyond-the-coupling-closure"
+   ],
+   "none"
+  ],
+  [
+   "J35",
+   "S54",
+   "readings-carried-and-filtered",
+   "selection-read-off-its-own-survivors",
+   "witness",
+   [
+    "N1"
+   ],
+   [
+    "selection-read-off-its-own-survivors"
+   ],
+   [
+    "selection-read-off-its-own-survivors"
+   ],
+   "none"
+  ],
+  [
+   "J36",
+   "S03",
+   "a-cascade-along-total-dependence",
+   "support-beyond-a-band-can-cycle",
+   "witness",
+   [
+    "N3"
+   ],
+   [
+    "support-beyond-a-band-can-cycle"
+   ],
+   [
+    "a-cascade-along-total-dependence"
+   ],
+   "none"
+  ],
+  [
+   "J37",
+   "S16",
+   "unselected-beyond-the-coupling-closure",
+   "a-pool-that-recruits-through-itself",
+   "witness",
+   [
+    "N1",
+    "N5c"
+   ],
+   [
+    "a-pool-that-recruits-through-itself"
+   ],
+   [
+    "none"
+   ],
+   "t"
+  ],
+  [
+   "J38",
+   "S13",
+   "no-finite-part-bears-taking",
+   "closed-cycle-without-dissipation",
+   "witness",
+   [
+    "ROAD"
+   ],
+   [
+    "no-finite-part-bears-taking"
+   ],
+   [
+    "closed-cycle-without-dissipation"
+   ],
+   "d"
+  ],
+  [
+   "J39",
+   "S25",
+   "a-map-moving-every-value-never-rests",
+   "revision-with-an-undecided-value",
+   "sufficient",
+   [
+    "N1"
+   ],
+   [
+    "revision-with-an-undecided-value"
+   ],
+   [
+    "revision-with-an-undecided-value"
+   ],
+   "none"
+  ],
+  [
+   "J40",
+   "S36",
+   "ceasing-needs-arising",
+   "recurrence-without-decidedness",
+   "exact",
+   [
+    "N3"
+   ],
+   [
+    "recurrence-without-decidedness"
+   ],
+   [
+    "recurrence-without-decidedness",
+    "ceasing-needs-arising"
+   ],
+   "none"
+  ],
+  [
+   "J41",
+   "S11",
+   "keeping-forgoes-the-renewal-at-the-need",
+   "a-step-coupling-keeps-at-every-horizon",
+   "sufficient",
+   [
+    "N1"
+   ],
+   [
+    "a-step-coupling-keeps-at-every-horizon"
+   ],
+   [
+    "none"
+   ],
+   "none"
+  ],
+  [
+   "J42",
+   "S28",
+   "lossless-exchange-continues-and-returns",
+   "an-arrow-leaves-change-not-recurring",
+   "sufficient",
+   [
+    "N3"
+   ],
+   [
+    "no-finite-part-bears-taking"
+   ],
+   [
+    "an-arrow-leaves-change-not-recurring",
+    "returning-novelty-forgetting-on-levels"
+   ],
+   "none"
+  ],
+  [
+   "J43",
+   "S20",
+   "selection-when-the-lumping-changes",
+   "a-revision-that-opens-a-correction",
+   "witness",
+   [
+    "N1",
+    "N5b",
+    "N5c"
+   ],
+   [
+    "selection-when-the-lumping-changes"
+   ],
+   [
+    "none"
+   ],
+   "t"
+  ],
+  [
+   "J44",
+   "S14",
+   "whole-drawing-beyond-renewal-ends",
+   "whole-persists-through-generation",
+   "witness",
+   [
+    "ROAD"
+   ],
+   [
+    "whole-drawing-beyond-renewal-ends"
+   ],
+   [
+    "whole-persists-through-generation"
+   ],
+   "d"
+  ],
+  [
+   "J45",
+   "S18",
+   "shaping-the-rule-selected-by-what-comes-back",
+   "capture-through-the-rule",
+   "sufficient",
+   [
+    "ROAD"
+   ],
+   [
+    "shaping-the-rule-selected-by-what-comes-back"
+   ],
+   [
+    "capture-through-the-rule"
+   ],
+   "t"
+  ],
+  [
+   "J46",
+   "S50",
+   "the-selection-term-and-a-lineages-fate",
+   "persisting-filters-what-was-chosen",
+   "sufficient",
+   [
+    "N1"
+   ],
+   [
+    "the-selection-term-and-a-lineages-fate"
+   ],
+   [
+    "the-selection-term-and-a-lineages-fate"
+   ],
+   "none"
+  ],
+  [
+   "J47",
+   "S09",
+   "horizon-optima-hold-the-greatest-renewal",
+   "a-step-coupling-keeps-at-every-horizon",
+   "sufficient",
+   [
+    "N1"
+   ],
+   [
+    "a-step-coupling-keeps-at-every-horizon"
+   ],
+   [
+    "a-step-coupling-keeps-at-every-horizon",
+    "keeping-forgoes-the-renewal-at-the-need"
+   ],
+   "p"
+  ],
+  [
+   "J48",
+   "S44",
+   "a-rule-rebuilt-from-the-members-it-limits",
+   "a-rule-with-no-holder-does-not-return",
+   "sufficient",
+   [
+    "N1"
+   ],
+   [
+    "a-rule-rebuilt-from-the-members-it-limits"
+   ],
+   [
+    "a-rule-with-no-holder-does-not-return",
+    "a-rule-rebuilt-from-the-members-it-limits"
+   ],
+   "t"
+  ],
+  [
+   "J49",
+   "S40",
+   "two-sided-regulation-and-late-reading",
+   "late-relay-oscillates",
+   "sufficient",
+   [
+    "N1"
+   ],
+   [
+    "late-relay-oscillates"
+   ],
+   [
+    "none"
+   ],
+   "t"
+  ],
+  [
+   "J50",
+   "S26",
+   "withholding-returns-around-a-loop",
+   "restoring-giving-from-the-worst-start",
+   "witness",
+   [
+    "N1",
+    "N5b"
+   ],
+   [
+    "restoring-giving-from-the-worst-start"
+   ],
+   [
+    "restoring-giving-from-the-worst-start"
+   ],
+   "none"
+  ],
+  [
+   "J51",
+   "S22",
+   "giving-that-waits-on-giving",
+   "restoring-giving-from-the-worst-start",
+   "sufficient",
+   [
+    "N1"
+   ],
+   [
+    "giving-that-waits-on-giving"
+   ],
+   [
+    "giving-that-waits-on-giving",
+    "withholding-returns-around-a-loop"
+   ],
+   "t"
+  ],
+  [
+   "J52",
+   "S05",
+   "market-finite-support-obstruction",
+   "never-leaving-a-guard",
+   "exact",
+   [
+    "N1"
+   ],
+   [
+    "never-leaving-a-guard"
+   ],
+   [
+    "never-leaving-a-guard"
+   ],
+   "t"
+  ],
+  [
+   "J54",
+   "S46",
+   "the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "a-reader-rebuilt-from-its-stock-ends-with-it",
+   "necessary",
+   [
+    "N0"
+   ],
+   [
+    "a-reader-rebuilt-from-its-stock-ends-with-it",
+    "the-stock-buys-time-where-the-rebuild-draws-on-it"
+   ],
+   [
+    "none"
+   ],
+   "none"
+  ],
+  [
+   "J55",
+   "S55",
+   "readings-revised-spread-and-locked",
+   "unselected-beyond-the-coupling-closure",
+   "sufficient",
+   [
+    "N3"
+   ],
+   [
+    "readings-revised-spread-and-locked"
+   ],
+   [
+    "unselected-beyond-the-coupling-closure",
+    "selection-read-off-its-own-survivors",
+    "readings-carried-and-filtered"
+   ],
+   "none"
+  ],
+  [
+   "J56",
+   "S56",
+   "readings-revised-spread-and-locked",
+   "selection-read-off-its-own-survivors",
+   "witness",
+   [
+    "ROAD"
+   ],
+   [
+    "readings-revised-spread-and-locked"
+   ],
+   [
+    "selection-read-off-its-own-survivors"
+   ],
+   "t"
+  ],
+  [
+   "J59",
+   "S34",
+   "where-a-run-of-a-regime-comes-to-rest",
+   "overcompensating-giving-cycles",
+   "witness",
+   [
+    "ROAD"
+   ],
+   [
+    "where-a-run-of-a-regime-comes-to-rest"
+   ],
+   [
+    "overcompensating-giving-cycles"
+   ],
+   "d"
+  ],
+  [
+   "J60",
+   "S37",
+   "two-sided-regulation-and-late-reading",
+   "overshoot-beyond-the-gap",
+   "sufficient",
+   [
+    "N1"
+   ],
+   [
+    "overshoot-beyond-the-gap"
+   ],
+   [
+    "overshoot-beyond-the-gap",
+    "two-sided-regulation-and-late-reading"
+   ],
+   "t"
+  ],
+  [
+   "J61",
+   "S19",
+   "selection-when-the-lumping-changes",
+   "a-revision-that-opens-a-correction",
+   "witness",
+   [
+    "N1",
+    "N3",
+    "N5c"
+   ],
+   [
+    "selection-when-the-lumping-changes"
+   ],
+   [
+    "none"
+   ],
+   "t"
+  ],
+  [
+   "J62",
+   "S35",
+   "unceasing-generation-needs-renewal",
+   "closed-cycle-without-dissipation",
+   "witness",
+   [
+    "N3"
+   ],
+   [
+    "unceasing-generation-needs-renewal",
+    "more-needs-renewers"
+   ],
+   [
+    "closed-cycle-without-dissipation"
+   ],
+   "none"
+  ]
+ ]
+}

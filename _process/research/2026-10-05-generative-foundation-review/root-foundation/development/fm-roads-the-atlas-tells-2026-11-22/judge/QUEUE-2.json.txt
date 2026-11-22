@@ -1,0 +1,130 @@
+[
+ {
+  "judge_item": "J02",
+  "theorems": [
+   "Becoming.RuleRebuilding.«不及任则持尽»"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J06",
+  "theorems": [
+   "Becoming.Withholding.Ring.givesFirst_restores"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J10",
+  "theorems": [
+   "Becoming.PairChance.burst_absorbs"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J14",
+  "theorems": [
+   "Becoming.DrawnBeyond.WithinSlack.within_slack",
+   "Becoming.Flow.Balances.beyond_falls_exactly"
+  ],
+  "where": [
+   "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean:568",
+   "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean:142"
+  ]
+ },
+ {
+  "judge_item": "J18",
+  "theorems": [
+   "Becoming.ContinuingRevision.no_run_without_return"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J22",
+  "theorems": [
+   "Becoming.Web.consumed_continues_transformed"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J26",
+  "theorems": [
+   "Becoming.Settling.keeps_changing_iff"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J30",
+  "theorems": [
+   "Becoming.Substitution.persists_consuming"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J34",
+  "theorems": [
+   "Becoming.line_standing_unselected"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J38",
+  "theorems": [
+   "Becoming.Cycle.closed_more"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J42",
+  "theorems": [
+   "Becoming.Flow.Balances.never_revisits"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J46",
+  "theorems": [
+   "Becoming.SelectionShift.Generations.never_empties_of_unbounded"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J50",
+  "theorems": [
+   "Becoming.Withholding.Ring.givesFirst_restores"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J54",
+  "theorems": [
+   "Becoming.ReaderRebuilding.«读者绝则无储»"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J58",
+  "theorems": [
+   "Becoming.TurningInTime.locked_turns_in_time_share_iff",
+   "Becoming.RuleCapture.locked_stays",
+   "Becoming.TurningInTime.locked_alone_not_below",
+   "Becoming.TurningInTime.turns_in_time_iff",
+   "Becoming.TurningInTime.agrees_until_marked",
+   "Becoming.TurningInTime.unending_iff_marked_at"
+  ],
+  "where": [
+   "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean:1876",
+   "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean:182",
+   "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean:1415",
+   "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean:1129",
+   "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean:475",
+   "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean:768"
+  ]
+ },
+ {
+  "judge_item": "J62",
+  "theorems": [
+   "Becoming.Recycle.closed_unceasing"
+  ],
+  "where": []
+ }
+]

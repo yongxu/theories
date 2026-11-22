@@ -1,0 +1,151 @@
+# Check of the note (NOTE.md) against its sources, sentence by sentence
+
+*AI-written (Claude Fable 5.2, model id claude-fable-5-2), 22 November 2026, as a checker for board row FM who took no part in what is checked. Read only: nothing but this file was written; no Lean, build, gate or writing git command was run. Counts are by scripts of my own that only read: over `astra/ANSWERS.jsonl`, `ITEMS.jsonl`, `JUDGE-KEY.json`, `JUDGE-SCORED.json`, the VERDICT lines of the four JUDGE files, `CHECKER-A-MATERIAL.json`, and the store `theories/becoming/results/atlas/entries/dynamics.json`. OPENED: the note, the frozen questions, both checkers' returns whole, the judges' sections for J01, J21, J33, J53, J58, J61 and every VERDICT line, the reader's report head, counts and closing sections, the footer, both scripts. Not opened: the other judge sections, the attack on the definition beyond its head, the reader's register line by line.*
+
+## Links
+
+Every link target of the note exists here without the added `.txt` (or with it where the file already ends in `.txt`): `QUESTIONS-ROADS.md`, `FROZEN-QUESTIONS.sha256.txt`, `QUESTIONS-ROADS.first-form.md`, the two ATTACK files, `astra/REPORT.md`, `astra/ANSWERS.jsonl`, `readers/JUDGE-1.md` to `JUDGE-4.md`, `JUDGE-KEY.json`, `JUDGE-SCORED.json`, the two CHECK files; and of "Where it is": `INDEX-OF-DYNAMICS.md`, `ITEMS.jsonl`, `astra/PROMPT.txt`, `astra/closing-output.txt`, `judge/DEFINITION.md`, `judge/QUEUE-1.json` to `QUEUE-4.json`, `make_material.py`, `make_judge_material.py`, `CHECKER-A-MATERIAL.json`. The three hashes in `FROZEN-QUESTIONS.sha256.txt` match the files as they stand (shasum run now). `astra/cx-output.txt` is a byte-for-byte copy of `closing-output.txt`.
+
+## Recounts
+
+**The store** (script over `dynamics.json`): 186 dynamics; 329 exits; 105 transitions; 71 exits whose `to` is a dynamic's id, none its own home, 56 with a law (30 sufficient, 20 witness, 4 exact, 2 necessary) and 15 without; 258 in words, 256 with a law (141 witness, 50 sufficient, 38 exact, 27 necessary); 98 transitions with a `between`, no end of which names a dynamic. 98 + 256 + 39 = 393. All as the note and the frozen file have them.
+
+**The reader's answers** (script over `ANSWERS.jsonl`): 393 lines, all OPENED; 453 verdicts; 55 items carry more than one. By verdict, and here the count of verdicts equals the count of items for every single verdict: ROAD 3 (C21, C30, C39), N3 22, WALL 5, N1 307, N2a 31, N0 16, N5a 5, N5b 22, N6a 10, N6b 30, N6c 2, N2b 0, N7 0, ROAD IN TWO 0. Grouped: N5 is 27 verdicts on 27 items; N6 is 42 verdicts on 40 items. So "307 items", "27 matches by name" and "40 items already drawn" are each rightly a count of items. What is not right is "the rest": the five counts overlap each other and the lists above them. C21 is ROAD and N1; ten of the 22 overlaps are also N1; four overlaps and three walls are also N6; C02 is N5b and N3. 307 + 31 + 16 + 27 + 40 = 421, against 363 items that are no road, overlap or wall. The reader's report says so ("An item can appear in more than one count"); the note drops it.
+
+**Who had a second reader**: 57 items (3 roads, 3 judged non-roads, 24 sampled, 22 overlaps, 5 walls); 336 had the one reader. Of the 141 witness exits 14 had a second reader (12 in the sample; X071 and X167 with a judge); 127 had the one.
+
+**The 56 exits, from `JUDGE-KEY.json` and the 62 VERDICT lines** (which agree with `JUDGE-SCORED.json` field for field). Rule: a road between the store's own pair where the verdicts include ROAD or ROAD IN TWO, the "from" names the store's home and the "to" names the store's `to`; another road otherwise; then N3 if named, else N1 if named, else other. I get **10, 1, 30, 12, 3**, and among the 10, **4 sufficient and 6 witness** (by the store's strength and by the judge's alike). The note's figures hold by that rule. Three answers carry two of the categories, and the rule decides them:
+
+- J61 (S, `selection-when-the-lumping-changes` to `a-revision-that-opens-a-correction`): verdicts N1, N3, N5c. Taking the first verdict the judge wrote gives 31 and 11. The judge's own words: each theorem N1, the pair "N3 by a reading".
+- J33 (a road between the store's own pair): ROAD, N1, "two answers, by the list it is read from".
+- J21 (the road between another pair): ROAD, N3; the judge's answer for the store's own home is N3.
+
+Of the 10 by change: 5 by a dropped premise (J28, J33, J38, J44, J59), 3 by an index (J17, J45, J56), 2 by a parameter (J18, J29). The frozen file lists a road by a dropped premise apart from roads along which a course moves. Each exit was read by one judge (queues of 16, 16, 15, 15). Of the store's four `exact` exits to a dynamic, which the frozen file says are of N3's form, the judges answered one N3 (J40) and three N1 (J07, J26, J52).
+
+**The three unmarked non-roads** (X148, X071, X167, each answered N1 by the reader): the judges answered N1; N2a and N0; N0. No judge named a road. The frozen file asks that this be reported with the lists; the note does not report it.
+
+## The note, sentence by sentence
+
+| # | sentence (its start) | finding | source |
+|---|---|---|---|
+| 1 | AI-written (Claude Fable, board row FM) | HOLDS | as given |
+| 2 | A record of an evening's read-only survey | HOLDS | frozen l. 3; file times 18:11 to 19:24 |
+| 3 | Nothing here is in the Lean package | HOLDS | frozen l. 77, 78 |
+| 4 | The atlas tells passages in two places (329, 105) | HOLDS | store; frozen l. 7 |
+| 5 | 71 exits name another dynamic | HOLDS | store; frozen l. 7 |
+| 6 | The survey asked, of each passage (39) | HOLDS | frozen l. 15 to 19, 51; ITEMS.jsonl |
+| 7 | The questions were written with what counts as no road first | HOLDS | frozen l. 3, 11, 25; hashes match |
+| 8 | The trial's forecast was put on record | SAYS LESS | frozen l. 11: made "for the 252 items", with percentages the note leaves out |
+| 9 | One read-only pass (393, 34 minutes) | HOLDS | footer: 2051 s; ANSWERS 393 OPENED |
+| 10 | Four judges ... were given 62 theorems | WRONG in "theorems"; SAYS LESS | 62 items naming 77 theorems (74 distinct); one judge an item; `make_judge_material.py` l. 14 gives the reader's cited theorems for the six reader items |
+| 11 | They had the atlas's entries with exits and transitions removed | HOLDS | `make_judge_material.py` l. 8; judges' heads |
+| 12 | A checker opened the three proposed roads ... a sample of 24 | NOT FOUND for "drawn by a seeded script beforehand" | the list is in CHECKER-A-MATERIAL.json; no script here draws it; the rest holds (21 N1 and 3 N2a, single verdicts; 12 witness) |
+| 13 | A second checker opened the reader's 22 overlaps and 5 walls | HOLDS | CHECK-overlaps head |
+| 14 | One road that the reader, a judge and the checker each call a road | HOLDS | ANSWERS C21 (ROAD, N1); JUDGE-1 l. 62 (J01 is C21 in the key); CHECK-roads l. 17 |
+| 15 | `optimum_ends_beyond` (Optimum.lean l. 740), from, to, index, sufficient | HOLDS | all three; Optimum.lean:740 by grep |
+| 16 | The checker adds a second far end | WRONG in "support"; SAYS LESS | CHECK-roads l. 11, 19 to 24; ledger by script |
+| 17 | No exit names the pair | HOLDS; the reader's N1 and the reading the road turns on are dropped | CHECK-roads l. 17, 18; JUDGE-1 l. 11, 57 to 60; store by script |
+| 18 | Two proposed roads that are not confirmed | HOLDS | frozen l. 69 |
+| 19 | C30: the judge and the checker both place it inside | HOLDS | JUDGE-1 l. 474, 476 (J53 is C30); CHECK-roads l. 36 |
+| 20 | C39 ... the checker does not | SAYS MORE and SAYS LESS | CHECK-roads l. 45, 53 to 57 |
+| 21 | It is listed as "reader and judge ROAD, checker otherwise" | HOLDS; a count the frozen file asks for is missing | frozen l. 69 |
+| 22 | Of the reader's 22, the second checker finds | WRONG in "five of them from the candidates" | CHECK-overlaps l. 283 to 292: all six lines, all nine items, are candidates |
+| 23 | The six are in its return ... `Junctures.lean` | HOLDS | CHECK-overlaps l. 167, 177, 187, 284 to 286; store by script: on no list |
+| 24 | All five stand in the statement (a theorem showing that no course ...) | SAYS MORE | CHECK-overlaps l. 237, 267, 273, 274, 277 |
+| 25 | Four are already laws of the near entry | HOLDS | CHECK-overlaps l. 302; store by script (C08 on no list) |
+| 26 | No blank | HOLDS, of the reader's pass | REPORT l. 89; footer; no judge answered N2b |
+| 27 | The rest, by the reader alone | SAYS LESS | REPORT l. 93; recount above |
+| 28 | In the sample of 24 the checker would change 7 | HOLDS; SAYS LESS on which | CHECK-roads l. 94, 95; ITEMS strengths: six of the seven are witness exits |
+| 29 | All 793 declarations ... not borne out everywhere | first half HOLDS; last clause SAYS MORE | CHECK-roads l. 99 |
+| 30 | The atlas's own 56 exits (heading) | HOLDS | key: 56 S items |
+| 31 | Not told what the atlas draws, the judges answered | HOLDS by the rule above; the rule is not said | recount above |
+| 32 | This measures the questions against the store | first half HOLDS; the clause after the colon is NOT FOUND in a source | frozen l. 69 |
+| 33 | It goes to row DJ as a finding | HOLDS | frozen l. 69 |
+| 34 | Of 393 told passages and candidates, one came out a road | HOLDS for roads; SAYS LESS on the forecast | frozen l. 11; 307 of 393 is 78 percent |
+| 35 | That is what was found in what was read | HOLDS; the one-reader limit is dropped from this section | recount above |
+| 36 | It is not a count of the map's roads | HOLDS | frozen l. 53, 76 |
+| 37 | The passages the atlas tells are ... mostly inside one dynamic | HOLDS, by the one reader | 293 of the 354 transitions and exits |
+| 38 | That is not a shortfall of the atlas: a transition is filed where it belongs | SAYS MORE | frozen l. 7 has "an exit told in words is not an undrawn road"; no source checks the filing |
+| 39 | If roads between dynamics are wanted | SAYS MORE | frozen l. 53, 76: nothing outside the told passages and the aid was read |
+| 40 | That is a suggestion from one pass | HOLDS | |
+| 41 | The definition is one reading of "road" | HOLDS | |
+| 42 | The judges' answers on the atlas's own 56 show how much turns on it | HOLDS, a reading | 10 of 56 |
+| 43 | Astra 6.2, by its own footer: 14.9 million | HOLDS | footer: 14948.7k; frozen l. 71 ("about 15 million") |
+| 44 | Claude side: 0.38 million ... 2.02 million | TOLD | 383,201 and 2,017,490 round so; the cap is frozen l. 71; no file here holds the figures |
+| 45 | No Lean was run | HOLDS | every return says so |
+| 46 | Where it is | HOLDS as the folder stood; see below | listing |
+
+## Remarks on the special cares
+
+- **C21.** True in all three sources. The reader: ROAD and also N1. The judge (J01): ROAD for `optimum_ends_beyond` alone, and ROAD IN TWO for `optimum_broken_iff` with `consumed_ends_when_fixed_at`. The checker: ROAD, with `loss-of-renewal-for-good` as a second far end. The judge and the checker each say the road depends on not counting the theorem's own place on the near dynamic's list as that dynamic carrying the far end; the judge says that on the other reading it is N1. The checker lists five things missing from the reader's "against", not two: the second far end; `fixed` is this law's alone; one step only; the last two conjuncts are the near dynamic's "unseen"; neither far-end law is called in the proof. The premises this law alone takes are `web-outcome-below-need`, `web-dependence-persists`, `web-need-no-weaker`. The premise that activity needs support (`k3-activity-needing-support`) is taken by 26 dynamics, so "support" does not belong in the note's sentence.
+- **C30.** As the sources have it. The judge also answers N3 for `early`; the checker also N5b for `capture-through-the-rule` and names X095 as the twin the reader answered N1.
+- **C39.** The checker's grounds are: N1, both sides of the iff being the far dynamic's notions and the proof the single application of `turns_in_time_iff`, a passage that dynamic's own exit and "exact threshold" transition already tell; N3, the locked course being made the "course as it was" with every lock premise kept and no index quoted at which it leaves the lock; N5b for `margin-of-a-regime`. Of the near end the checker says the four lock premises are each taken by four to six dynamics and "Only the notion in X's name, `Locked`, ties the course to X". It does not say the course is placed under none: that inference is the note's. The judge itself writes that a reader who holds an instance is never a passage answers N3, and one who takes `turning-in-time` for the home answers N1.
+- **Overlaps and walls.** 6 lines of 9 items, 8, 5 hold (9 + 8 + 5 = 22). All six lines are candidates. The sixth line (C25 with C26, C10, C11) is told in one entry's mechanism and law, and the checker says whether it is "not yet said" turns on that. "The atlas" in the checker's sense is the store, with `ATLAS.md` and `JOINS.md` searched for theorem names; the crosswalk and the records' pages were not read. Three walls stand more narrowly than the note's parenthesis (C01, C32, C35).
+- **Limits a source states that the note drops.** The reader's counts overlap. Each judged item had one judge. The judges' queue named, for the six reader items, every theorem the reader cited. 336 items and 127 witness exits had the one reader. Six of the seven sample changes fall on the 12 witness exits. The second checker's "Not done". Not in the note and not needed for any sentence of it: the first checker read 17 exit and transition pairs for likeness (14 alike, 3 differing in the far-end list only), where the frozen file names 26 theorems and 53 items; 20 transition items quote a sibling declaration; one N6 citation (T080) does not name the answer's pair.
+- **Where it is.** The script that drew the sample and the script that set the verdicts against the key are not in the folder. Once this file is filed, `readers/` holds three checks.
+
+## Replacements
+
+OLD: The trial's forecast was put on record in the frozen file before the run: roads confirmed 0 to 8, more likely under 5; overlaps 10 to 25; blanks 0 to 5; most items passages inside one dynamic.
+NEW: The trial's forecast, made for the 252 items a Claude reader would then have read, was put on record in the frozen file before the run: roads that a judge and a checker confirm 0 to 8, more likely under 5; overlaps 10 to 25; blanks 0 to 5; passages inside one dynamic 55 to 65 percent; not a passage or an end that is no place 20 to 30 percent.
+
+OLD: - Four judges who took no part and were told no answer were given 62 theorems, unmarked and shuffled: the reader's three proposed roads, three items it had answered "inside one dynamic", and the 56 exits of the atlas that already name a dynamic and have a law.
+NEW: - Four judges who took no part and were told no answer were given 62 items between them, unmarked and shuffled, each item to one judge: the reader's three proposed roads, three items it had answered "inside one dynamic", and the 56 exits of the atlas that already name a dynamic and have a law. For the three proposed roads the queue named every theorem the reader had cited (three for C21, six each for C30 and C39), a law of the far dynamic among them, without saying which was the item's.
+
+OLD: - A checker opened the three proposed roads against both entries and a sample of 24 of the reader's "inside one dynamic" and "no place" answers, drawn by a seeded script beforehand, 12 of them witness exits that had only that one reader ([its return](readers/CHECK-roads-and-sample-opus.md.txt)).
+NEW: - A checker opened the three proposed roads against both entries and a sample of 24 of the reader's "inside one dynamic" and "no place" answers (the list is in the checker's material list; that a seeded script drew it beforehand is told, the script not being among the files), 12 of them witness exits; of the 141 witness exits 127 had that one reader and no other ([its return](readers/CHECK-roads-and-sample-opus.md.txt)).
+
+OLD: The checker adds a second far end the reader missed, `loss-of-renewal-for-good`, and what counts against entering it as it stands: the hypotheses that fix support, dependence and need are this theorem's alone, so the road starts from a part of the near dynamic, and it gives one step and not the far dynamic's law of every later step.
+NEW: The checker adds a second far end the reader missed, `loss-of-renewal-for-good`, and, among what counts against entering it as it stands: the hypothesis that the dependence persists and the need is no weaker at t + 1 is this law's alone in the near dynamic, so the road starts from a part of the near dynamic; it gives one step and not the far dynamic's law of every later step; and its proof calls neither far-end law.
+
+OLD: No exit names the pair.
+NEW: No exit names the pair. The reader also answered it "inside one dynamic"; the judge and the checker do not count that, since the near dynamic carries the far end only through this theorem's own place on its list, and the judge says that on the other reading of the definition it is inside one dynamic.
+
+OLD: `TurningInTime.locked_turns_in_time_share_iff` (C39), from `capture-through-the-rule` to `turning-in-time`: the reader and the judge call it a road, exact; the checker does not: its proof is one application of `turns_in_time_iff`, which the far dynamic's own exit and transition already tell, and the lock premises on the near side are taken by laws of four to six dynamics, so by the definition they place the course under none of them.
+NEW: `TurningInTime.locked_turns_in_time_share_iff` (C39), from `capture-through-the-rule` to `turning-in-time`: the reader and the judge call it a road, exact; the checker does not: both sides of the iff are the far dynamic's notions and the proof is one application of `turns_in_time_iff`, a passage the far dynamic's own exit and transition already tell (inside one dynamic); the near dynamic's locked course is made the "course as it was" of that law with every lock premise kept and no index quoted at which it leaves the lock (an overlap); and the four lock premises are each taken by laws of four to six dynamics, so that only the notion in the near dynamic's name ties the course to it.
+
+OLD: It is listed as "reader and judge ROAD, checker otherwise", not dropped.
+NEW: It is listed as "reader and judge ROAD, checker otherwise", not dropped. On the three items the reader had answered "inside one dynamic" no judge named a road.
+
+OLD: Of the reader's 22, the second checker finds: 6 lines (9 items) that stand and that the atlas does not yet say, five of them from the candidates; 8 that stand and are already case rows; 5 that do not stand as overlaps between two dynamics.
+NEW: Of the reader's 22, the second checker finds: 6 lines (9 items) that stand and that the atlas's store does not yet say, all of them from the candidates, one of the six (four items) told inside one entry's mechanism and law with no link drawn to the other entry; 8 that stand and are already case rows; 5 that do not stand as overlaps between two dynamics. The checker did not read the crosswalk or the records' pages for whether one of them tells an overlap that the store does not.
+
+OLD: All five stand in the statement (a theorem showing that no course under one dynamic's premises is under another's notion).
+NEW: All five stand as walls in the statement, three of them more narrowly than "no course under one dynamic's premises is under another's notion": C01 denies returning of the drawn configuration and not of its course, C32 is against the notion of standing late and not against the other dynamic's built courses, and C35 names no course and is against a premise that laws of five dynamics take.
+
+OLD: **The rest**, by the reader alone except for the sample: 307 items inside one dynamic, 31 whose far end is no place, 16 that state no passage, 27 matches by name, 40 items already drawn.
+NEW: **The other verdicts**, by the reader alone except for the sample, counted by item, an item counted under each verdict it carries (55 items carry more than one; C21 and ten of the 22 overlaps are among those counted inside one dynamic): 307 items inside one dynamic, 31 whose far end is no place, 16 that state no passage, 27 matches by name, 40 items already drawn.
+
+OLD: In the sample of 24 the checker would change 7 verdicts, all between "inside one dynamic", "not a passage" and "no place"; it found no missed road, overlap or wall there.
+NEW: In the sample of 24 the checker would change 7 verdicts, all from "inside one dynamic" to "not a passage" (4) or "no place" (3), six of them among the 12 witness exits; it found no missed road, overlap or wall there.
+
+OLD: All 793 declarations the reader cites are at the file and line cited and every quoted statement is in its file word for word; that the entries were read whole is not borne out everywhere.
+NEW: All 793 declarations the reader cites are at the file and line cited and every quoted statement is in its file word for word; whether each entry was read whole cannot be checked by script, and what the reader left out on the three proposed roads suggests the entries' ledgers were not always gone through.
+
+OLD: Not told what the atlas draws, the judges answered: a road between the atlas's own pair for 10 (4 sufficient, 6 witness); a road between another pair for 1; inside one dynamic for 30; an overlap for 12; other no-road for 3.
+NEW: Not told what the atlas draws, the judges answered, each exit by one judge: a road between the atlas's own pair for 10 (4 sufficient, 6 witness; 5 by a dropped premise, where no course moves, 3 by an index, 2 by a parameter); a road between another pair for 1; inside one dynamic for 30; an overlap for 12; other no-road for 3. Three answers carry two of these and are counted once: one road between the atlas's own pair is also "inside one dynamic" read from the second list its theorem stands on, the road between another pair is an overlap read from the atlas's own home, and one answer names both "inside one dynamic" and an overlap and is counted as an overlap.
+
+OLD: This measures the questions against the store and the store against the questions, and is no answer key either way: a judge who is not shown the intended far end places a statement where its own words place it.
+NEW: This measures the questions against the store and the store against the questions, and is no answer key either way: the judges were shown the theorem and not the exit's home, its words or its far end.
+
+OLD: - Of 393 told passages and candidates, one came out a road by the three readings, which is inside the forecast written before the run.
+NEW: - Of 393 told passages and candidates, one came out a road by the three readings (the reader, one judge, one checker), which is inside the forecast written before the run for confirmed roads; the reader's share of passages inside one dynamic, 307 of 393, is above the forecast's 55 to 65 percent, which was made for 252 of the items.
+
+OLD: That is what was found in what was read.
+NEW: That is what was found in what was read, and 336 of the 393 items had the one reader and no judge or checker.
+
+OLD: That is not a shortfall of the atlas: a transition is filed where it belongs.
+NEW: That is not a shortfall of the atlas: a passage told in words is not an undrawn road.
+
+OLD: - If roads between dynamics are wanted, this survey suggests they are mostly not in the Lean waiting to be drawn.
+NEW: - If roads between dynamics are wanted, this survey suggests that few are waiting among the passages the atlas already tells in words and the 39 candidates; of theorems the atlas does not tell and the aid does not show it says nothing.
+
+OLD: Claude side: 0.38 million in the two attackers and 2.02 million in the four judges and two checkers, against a stated cap of 1.5 million for judges, checkers and the check of this note: overrun before the note was checked.
+NEW: Claude side, told from the session's records and not from a file here: 0.38 million in the two attackers and 2.02 million in the four judges and two checkers, against a stated cap of about 1.5 million for the judge, the checker and the check of this note: overrun before the note was checked.
+
+OLD: The questions in both forms and their hashes; `INDEX-OF-DYNAMICS.md.txt` and `ITEMS.jsonl.txt`, the material made by script; `astra/` (prompt, answers, report, closing output); `judge/` (the definition as the judges had it and their four queues; the entries without exits, 1.1 MB, are remade by `make_judge_material.py` and are not filed); the two scripts that made the material (`make_material.py`, `make_judge_material.py`); `readers/` (two attacks, four judges, two checks); the key and the scored verdicts; the checker's material list.
+NEW: The questions in both forms and their hashes; `INDEX-OF-DYNAMICS.md.txt` and `ITEMS.jsonl.txt`, the material made by script; `astra/` (prompt, answers, report, closing output); `judge/` (the definition as the judges had it and their four queues; the entries without exits, 1.1 MB, are remade by `make_judge_material.py` and are not filed); the two scripts that made the material (`make_material.py`, `make_judge_material.py`); `readers/` (two attacks, four judges, two checks and the check of this note); the key and the scored verdicts; the checker's material list. The script that drew the checker's sample and the script that set the verdicts against the key are not among the files.
+
+## Count
+
+Checked: 46 sentences. HOLDS: 26. Replaced: 20. Of the 20, three correct something wrong ("62 theorems"; "support" among the hypotheses that are this theorem's alone; "five of them from the candidates"), five cut back a sentence that says more than its source (C39's grounds, the walls, the entries read whole, a transition filed where it belongs, roads not in the Lean), one marks a figure as told (the Claude costs), two replace what is not found in the files (the seeded script; the gloss on why the 56 are no answer key), and nine add what a source states and the note leaves out. This is a check by reading and by read-only scripts; no Lean was run.

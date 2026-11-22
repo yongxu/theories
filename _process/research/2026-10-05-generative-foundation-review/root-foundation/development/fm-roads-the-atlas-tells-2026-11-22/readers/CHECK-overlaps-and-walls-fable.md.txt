@@ -1,0 +1,329 @@
+# Check of the 22 overlaps and the 5 walls of the Astra pass
+
+*AI-written (Claude Fable 5.2, model id claude-fable-5-2), 22 November 2026, as a checker for board row FM. Read only: nothing in the repository was edited, no Lean was run, nothing was built or gated. This file is the one thing written.*
+
+## What was read, and how the answers are worded
+
+- The frozen questions (`QUESTIONS-ROADS.md`), whole; the 27 items in `ITEMS.jsonl`; the reader's 27 answers in `astra/ANSWERS.jsonl` and its report's lists.
+- For every item: the statement of each theorem named, in the live Lean under `Becoming/`, and the proof text where the verdict turns on it; both entries in `dynamics.json` (name, mechanism, declarations, law rows with `takes` and `case_of`, exits, transitions, `compose`); the ledger (`premises.json`) for who takes a premise. Every line number below was confirmed by grep against the live file and agrees with the reader's.
+- "The atlas already says" means, in the store: a case row (`premises[].case_of`), a joining (`compose`), an exit that names the other dynamic, or the entry's mechanism in words. `ATLAS.md` and `JOINS.md` were searched for the names of the theorems that are on no list (none appears). The crosswalk (`correspondences.json`) joins outside sources to dynamics and was not searched pair by pair.
+- Verdicts are the task's: OVERLAP STANDS; OVERLAP BY NAME ONLY (N5); A PASSAGE AFTER ALL; NOT AS THE READER SAYS. Where the reader answered "N1, N3" two things are true at once and are said apart: the statement holds a passage inside one dynamic (so by N3's letter, "nothing of (t), (p), (d) can be quoted", it is not a pure N3), and the theorem is an instance of another dynamic's law. For those the verdict is given as OVERLAP STANDS with the passage named.
+- (c) is answered as one of: STATEMENT (the statement alone shows both notions), PROOF (only the proof's text, or the docstring, shows it), BOTH (the statement holds the other dynamic's notion; that it is an instance of that dynamic's law is in the proof).
+- Third dynamics the reader names (for example `habit-lock-in-active-inference`, `generation-and-degeneration-at-two-grains`, `basins-of-a-determined-law`, `waxing-and-waning-returns`, `when-the-runs-of-a-process-settle`) were not opened as entries: what is said of them is TOLD.
+
+## The 22 overlaps
+
+### T013 (reader: N1, N3) · `a-cascade-along-total-dependence` and `threshold-in-the-state-plane`
+
+OPENED. `Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below` (RegimeMargin.lean:2687), `…threshold_falls` (2701), `…ends_iff_within` (2913); `Becoming.RegimeMargin.leading_exact` (1550), `leading_falls` (1562).
+
+- (a) `Ends Drawn.whole G H (fun x => x i) (setAt y i a) ↔ a < threshold G H cs hi y i`. The statement names no declaration of the other dynamic: `threshold` is a definition of the cascade's own section, `leading (ending G H (cs.length * hi + 1) y i) (hi + 1)` (2672). The proof term is `leading_exact (P := …Ends…) (d := ending …) …`; `threshold_falls` is `leading_falls …`. So: the cascade's law is made an instance of the other dynamic's law. `ends_iff_within` is not such an instance (its proof goes through `returns_within`).
+- (b) Cascade: `Ends`, `threshold` are its own (law rows for all three theorems). Threshold-in-the-state-plane: `leading_exact`, `leading_falls` are on its list alone, each with a law row; its name is "One law of exact thresholds". Both own.
+- (c) PROOF. The docstring also says it ("the law of exact thresholds (`leading_exact`) for ending").
+- (d) Already said: two case rows in the cascade's entry, `ends_iff_below` case of `leading_exact` and `threshold_falls` case of `leading_falls`.
+- (e) OVERLAP STANDS, already in the atlas. A passage is also quotable: by N7 the iff has a condition on the start on one side (`a < threshold …`) and an outcome of the course on the other (`Ends`), a (p), exact, inside the cascade (N1). The reader gave `change: null` here and (p) for T056 and T066, which have the same shape.
+
+### T014 (reader: N1, N3) · the same two dynamics
+
+OPENED. `…Indexed.ends_iff_below_within` (RegimeMargin.lean:2984), `…threshold_falls_within` (2997), `…Recent.keepsBelow` (3033).
+
+- (a) `EndsUnder f i (setAt y i a) ↔ a < thresholdWithin f cs B hi y i`; `thresholdWithin` is `leading (endingWithin …) (hi + 1)` (2967). Proof terms: `leading_exact …` and `leading_falls …`. `keepsBelow` supplies a premise (`KeepsBelow (step G H)`) and is no instance.
+- (b) As T013: both own.
+- (c) PROOF (docstrings name `leading_exact` and `leading_falls`).
+- (d) Already said: case rows `ends_iff_below_within` case of `leading_exact`, `threshold_falls_within` case of `leading_falls`.
+- (e) OVERLAP STANDS, already in the atlas; the same (p) inside the cascade as T013.
+
+### T015 (reader: N1, N3) · `ending-laws-as-regimes-on-a-lineage` and `degeneration-from-a-horizon`
+
+OPENED. `Becoming.LineageRegimes.degeneration_of_family_excess` (LineageRegimes.lean:173), `…degeneration_at_stock_horizon` (213); `Becoming.Web.kind_every_branch_ends_of_gone` (KeepingWidening.lean:772).
+
+- (a) Hypotheses `excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)`, `start : W.stock ds T < n + m`, `le : x.1 ≤ T + n`, `depends : … y.1 = T + n → …`; conclusion `«退化» (lineStep L W Q) (W.kindClass Q) x`. The proof is `Web.kind_every_branch_ends_of_gone (W := W) (R := continuation L W Q) active le fun y hy at_ => …`, the `gone` premise discharged by `Flow.below_of_excess` and `Flow.family_ends_below_at`. An instance of the other dynamic's law.
+- (b) `«退化»` at a horizon is the other dynamic's name ("Degeneration from a horizon") and what its law concludes (law row: `web-start-active`, `web-start-le-horizon`, `web-gone-at-horizon`); the home's law rows take `flow-family-excess`, `flow-family-start-below-n-plus-m`, `lineageregimes-family-held-at-horizon`. Both own. The home's law concludes `«退化»` too, which is why the reader's N1 holds.
+- (c) BOTH: the conclusion is the other dynamic's notion in the statement; that it is an instance of its law is in the proof and the docstring ("composing … with EL3's `Web.kind_every_branch_ends_of_gone`").
+- (d) Already said: a case row, `degeneration_of_family_excess` case of `kind_every_branch_ends_of_gone`.
+- (e) OVERLAP STANDS, already in the atlas. A (t) is quotable (excess over steps `T + k`, `k < n`; the line from a start at or before `T + n` ends on every branch), inside one dynamic.
+
+### T035 (reader: N1, N3) · `a-weighting-faster-than-renewal-ends-the-base` and `others-drawing-first-end-the-base`
+
+OPENED. `Becoming.Optimum.frontier_exhausts` (Optimum.lean:7276), `Becoming.Optimum.frontier_leaves` (7290); `Becoming.Optimum.Next.frontier_exhausts` (6743), `Next.frontier_leaves` (6796).
+
+- (a) `frontier_exhausts`: `strictly : ∀ t, t < n → ∀ z, 0 < z → w (t + 1) * (z + R z) < w t * z` … `∀ t, t < n → x (t + 1) = 0`; proof `Next.frontier_exhausts (G := fun _ z => z + R z) rising strictly …`. `frontier_leaves`: `outgrows : ∀ t, t < n → w t * y < w (t + 1) * (y + R y)` … `0 < x 1`; proof `Next.frontier_leaves (G := fun _ z => z + R z) …`. Each is the other dynamic's law at one law of what stands.
+- (b) The home's two theorems are its own (law rows). `Next.frontier_exhausts` and `Next.frontier_leaves` are on the other entry's list alone, each with a law row. They are that entry's general law of what stands `G`; nothing of "others drawing first" (`leftBy`, `frontier_ends_drawn_first`) enters. Own by its laws, not by its name.
+- (c) PROOF. Neither statement nor docstring names `Next`.
+- (d) Already said: case rows `frontier_exhausts` case of `Next.frontier_exhausts`, `frontier_leaves` case of `Next.frontier_leaves` (and two more, for `exhausting_frontier` and `frontier_below_weighted`).
+- (e) OVERLAP STANDS, already in the atlas. A (p) is quotable over the two theorems (weighting falling faster than every positive level renews; some level renewing faster than the weighting falls), inside the home.
+
+### T056 (reader: N1, N3) · `capture-by-counted-choices` with `capture-through-the-rule` and `a-counter-rule-read-from-its-own-share`
+
+OPENED. `Becoming.ChoiceCountCapture.counted_locks` (ChoiceCountCapture.lean:291), `…counted_locks_down` (343), `…weighted_favours_iff` (275); `Becoming.RuleCapture.locked_stays` (RuleCapture.lean:182), `locked_rises` (190).
+
+- (a) `(above : κo * x.other ≤ κc * x.carrier) (reads : Nat → Bool) (t : Nat) : Locked order favours (weighted κc κo pos) (paced choose (weighted κc κo pos) reads (x, weighted κc κo pos x x) t) ∧ order.le … ∧ order.le …`. The conclusion is `RuleCapture.Locked` of a `paced` course: the counted chooser's course is said to be locked in the other dynamic's sense. The proof calls `locked_stays … choose_raises weighted_reads upper locked t` and `locked_rises …`.
+- (b) `choose`, `weighted` are the home's own (`choicecountcapture-choose`, `-weighted`, `-above`). `Locked`, `locked_stays` are `capture-through-the-rule`'s own (on its list; law row `rulecapture-raises`, `-readsshare`, `-upper`, `-locked`). `a-counter-rule-read-from-its-own-share` holds `locked_stays` on its list with the same row; that entry is a reading about a counter-rule and no theorem says the counted chooser is one: with it the match is a shared law (N5b), not an overlap.
+- (c) STATEMENT (`Locked` and `paced` stand in the conclusion); the proof confirms the instance.
+- (d) Already said: the home's law row for `counted_locks` has `case_of` `locked_stays` and `locked_rises`; the family page prints it against both entries.
+- (e) OVERLAP STANDS with `capture-through-the-rule`, already in the atlas; BY NAME ONLY with `a-counter-rule-read-from-its-own-share`. A (p) is quotable over `counted_locks` and `counted_locks_down` (`κo * x.other ≤ κc * x.carrier`; `κc * x.carrier < κo * x.other`), inside the home.
+
+### T066 (reader: N1, N3) · `offspring-read-from-giving-that-waits` and `shaping-the-rule-selected-by-what-comes-back`
+
+OPENED. `Becoming.PairSelection.assorted_favours_iff` (PairSelection.lean:1367), `…assorted_raises_iff` (1376), `…assorted_lowers_iff` (1400); `Becoming.RuleShaping.favours_iff` (RuleShaping.lean:160), `lt_select_iff` (350).
+
+- (a) `CarrierCounts.favours (shaped a (β * n) 0 (γ * n) pos) ↔ γ ≤ β`; `… (CarrierCounts.select x (shaped a (β * n) 0 (γ * n) pos)) … ↔ γ < β`. Each is stated on `RuleShaping.shaped`, the other dynamic's rule after shaping; proofs `favours_iff.trans …` and `(lt_select_iff some).trans …`. `assorted_lowers_iff` calls `falls_strictly` one way and cancels by hand the other.
+- (b) Home: the offspring reading (β, γ, n) is its own. Other: `shaped`, `favours_iff` are its own (law row `ruleshaping-shaped`). `lt_select_iff` is on no list; the case row says so.
+- (c) STATEMENT.
+- (d) Already said three ways: case rows `assorted_favours_iff` case of `favours_iff` and `assorted_raises_iff` case of `lt_select_iff`; two joinings (`compose`) from the home to the other entry, by `assorted_counts` and by `window_echo_shaped`.
+- (e) OVERLAP STANDS, already in the atlas. A (p) is quotable (`γ < β`; `β < γ`), inside the home.
+
+### T072 (reader: N6a, N3) · `late-relay-oscillates` (the item's home) and `two-sided-regulation-and-late-reading`
+
+OPENED. `Becoming.Regulation.held_crosses` (Regulation.lean:1725), `…held_oscillates` (1759), `…crossing_oscillates` (1711).
+
+- (a) `held_oscillates`: `(held : ∀ i, i ≤ ℓ → W.level i c = x₀) (just : x₀ + 1 = a) (room : b + 2 ≤ a + (ℓ + 1) * M) (N : Nat) : (∃ t, N ≤ t ∧ b < W.level t c) ∧ ∃ t, N ≤ t ∧ W.level t c < a`. Its proof ends `exact crossing_oscillates relays balances band …`, the crossing supplied by `held_crosses`.
+- (b) `held_crosses`, `crossing_oscillates` and `held_oscillates` are all on `late-relay-oscillates`'s list with law rows. `held_oscillates` is also on `two-sided-regulation-and-late-reading`'s list, with the identical row. So the instance the reader found (`held_oscillates` of `crossing_oscillates`) lies between two laws of one dynamic; between the two dynamics there is one theorem on two lists, not two notions.
+- (c) PROOF, for what the reader found.
+- (d) Already said: exit 4 of `two-sided-regulation-and-late-reading` names `late-relay-oscillates` with `held_oscillates` as `law` and `to_law`; a case row there, `held_oscillates` case of `crossing_oscillates`.
+- (e) A PASSAGE AFTER ALL, and NOT AS THE READER SAYS on the ends. The item's home is `late-relay-oscillates`, not `two-sided-regulation-and-late-reading` (the reader's `from`). Quotable: (p) across `held_settles` and `held_crosses` (the entry `x₀ + k * M` carried `ℓ M` further within `b`; `beyond : b < x₀ + (ℓ + k) * M`), and (t) (held for `i ≤ ℓ`; both ends passed at steps `N ≤ t` for every `N`). It is inside the home (N1) and drawn already from the other end (N6a). No overlap between two dynamics' own notions is stated.
+
+### T080 (reader: N6a, N3) · `a-step-coupling-keeps-at-every-horizon` and `keeping-forgoes-the-renewal-at-the-need`
+
+OPENED. `Becoming.Optimum.frontier_keeps_stepwise` (Optimum.lean:5449), `Becoming.Web.frontier_breaks_stepwise_long` (6130); `Becoming.Web.frontier_breaks_below` (4908).
+
+- (a) `frontier_breaks_stepwise_long`: `(less : q + w < r) (short : w + e < n + m) … : ∃ t, t ≤ n ∧ W.Broken t f c`; proof `Web.frontier_breaks_below rising draws bounded above (outweighed_stepwise less short) …`. The step coupling's breaking case is an instance of the other dynamic's law for a coupling fixed in total.
+- (b) Home: both theorems its own (law rows; `outweighed_stepwise` too). Other: `Web.frontier_breaks_below` on its list alone, with a law row (`optimum-coupling-below`). Both own.
+- (c) PROOF (the docstring says "Under the premises of `Web.frontier_breaks_below`").
+- (d) Already said: exit 3 of the home names the other dynamic with this theorem as `law` and `to_law`; a case row, `frontier_breaks_stepwise_long` case of `Web.frontier_breaks_below`; exit 2 of the other entry names the home by `frontier_keeps_stepwise`. Exit 3 is an instance drawn as an exit (N3's last sentence).
+- (e) OVERLAP STANDS, already in the atlas, and N6a. A (p) is quotable over the two theorems (`rate : r ≤ q + c`, `exceeds : e < c`; `less : q + w < r`, `short : w + e < n + m`), inside the home.
+
+### X066 (reader: N1, N3) · the same two dynamics as T035
+
+OPENED. `Becoming.Optimum.frontier_leaves` (Optimum.lean:7290); `Becoming.Optimum.Next.frontier_leaves` (6796).
+
+- (a), (b), (c), (d) as T035 for `frontier_leaves`: an instance of `Next.frontier_leaves` at `G := fun _ z => z + R z`; PROOF; the case row says it.
+- (e) OVERLAP STANDS, already in the atlas. The reader's `change: t` is not what the statement holds: the store's `drops` (`optimum-next-outpaced-strictly`) is a (d), and with T035's twin a (p); inside the home.
+
+### X198 (reader: N1, N3) · `unceasing-generation-needs-renewal` (home) and `more-needs-renewers`
+
+OPENED. `Becoming.Flow.uptake_needs_replenishment` (Flow.lean:589), `…uptake_needs_replenishment_from` (571).
+
+- (a) `(balances : L.Balances W) (uptake : ∀ N, ∃ t, N ≤ t ∧ 0 < L.uptake cs t) (T : Nat) : ¬ ∀ t, T ≤ t → L.replenishment cs t = 0`. One necessary condition. It identifies no two notions.
+- (b) The theorem stands on both entries' lists with the same row (`k3-balance`, `flow-uptake-recurs`); both mechanisms carry the same sentence. `uptake_needs_replenishment_from` is on the home's list alone. So the instance the reader reports (balance everywhere discharging balance on the family from `T` on) is between two laws of the home; what joins the two dynamics is a theorem that both list.
+- (c) PROOF, for what the reader found (`uptake_needs_replenishment_from (fun t _ => balances.on cs t) uptake`).
+- (d) Already said: a case row, filed in `more-needs-renewers`, `uptake_needs_replenishment` case of `uptake_needs_replenishment_from`; and the two lists themselves.
+- (e) NOT AS THE READER SAYS. The statement is no N3: no two notions at one index. For the item the answer is the reader's other one (a `necessary` law inside the home, its far end a property). Between the two dynamics the match is a shared declaration (N5b), which the lists and the case row already show.
+
+### X199 (reader: N1, N3, N6b) · `ceasing-needs-arising` (home) and `recurrence-without-decidedness`
+
+OPENED. `Becoming.World.CountedBy.arising_iff_ceasing` (Openness.lean:373); `Becoming.World.arising_iff_ceasing_decided` (Decidedness.lean:843).
+
+- (a) `(counted : w.CountedBy B) (returns : ∀ N, ∃ t, N ≤ t ∧ B t ≤ K) : w.ArisingRecurs ↔ w.CeasingRecurs`. An iff of two properties of one world: N3's first form.
+- (b) Both sides are the home's own notions (its name: "Ceasing needs arising; under a bounded list the two keep pace"). The other entry carries the same two, in its law `arising_iff_ceasing_decided` under `k3-finite` and `world-activity-decided-from-some-step`. The iff does not set a notion of one dynamic against a notion of the other; the two entries state the same iff under different premises. The proof calls `Listed.ceasing_of_returning` and `arising_of_ceasing`, nothing of the other entry; a world counted by a returning bound need not be finite, so this theorem is no case of the other's law.
+- (c) STATEMENT.
+- (d) Already said for the pair: exit 3 of the home names `recurrence-without-decidedness`, `exact`, by `arising_iff_ceasing_decided` (another law: N6b). That exit is itself of N3's form.
+- (e) NOT AS THE READER SAYS, in part: N3 in form, but inside the home. No overlap between the two dynamics is stated by this theorem beyond the pair the atlas already draws by another law.
+
+### X200 (reader: N1, N3, N6b) · the same two dynamics
+
+OPENED. `Becoming.World.arising_iff_ceasing` (Space.lean:255).
+
+- (a) `[∀ t x, Decidable (w.web.active t x)] (finite : w.Finite) : w.ArisingRecurs ↔ w.CeasingRecurs`.
+- (b) As X199. Here the premises (finite, activity decided at every step) would give the other law's premises (finite, decided from some step on), so in content this theorem is contained in `arising_iff_ceasing_decided`; the Lean does not say so: its proof is `arising_iff_ceasing_covering (T := 0) …`, and no theorem derives one from the other. That containment is a reading (further case 4).
+- (c) STATEMENT.
+- (d) As X199: exit 3, N6b.
+- (e) NOT AS THE READER SAYS, in part: N3 in form, inside the home; the pair already drawn by another law.
+
+### C02 (reader: N5b, N3) · `capture-by-counted-choices` and `closed-capture`
+
+OPENED. `Becoming.ChoiceCountCapture.counted_outlives_loss` (ChoiceCountCapture.lean:414); `Becoming.ClosedCapture.lock_outlives_loss` (ClosedCapture.lean:307).
+
+- (a) `(accrues : ClosedCapture.Accrues fB) … (above : κo * x.other ≤ κc * x.carrier) (reads : Nat → Bool) (t : Nat) : b + t ≤ (paced (ClosedCapture.join choose fB) (ClosedCapture.joinRead (weighted κc κo pos)) reads ((x, b), weighted κc κo pos x x) t).1.2 ∧ Locked order favours (weighted κc κo pos) (…) ∧ order.le x … ∧ order.le (weighted κc κo pos x x) …`. The whole proof: `ClosedCapture.lock_outlives_loss choose_raises weighted_reads upper accrues (start_locked (pos := pos) above) t`. The counted chooser's joined course is an instance of closed capture's law, with `fA := choose`, `hA := weighted κc κo pos`, the locked start discharged by `start_locked`.
+- (b) Home: `choose`, `weighted`, the threshold are its own. Other: `lock_outlives_loss` is on `closed-capture`'s list alone, with a law row; `join`, `joinRead` are its construction. `Accrues` by itself is taken by laws of seven dynamics (the reader's N5b at the aid's near end is right); the overlap does not rest on `Accrues` but on the law.
+- (c) BOTH: the statement is stated on `ClosedCapture.join` and `joinRead`; that it is `lock_outlives_loss` at the chooser is the proof's one call. The docstring does not name the law.
+- (d) The atlas says nothing: no case row on `counted_outlives_loss` (only `counted_locks` has one), no exit either way, no joining, neither mechanism names the other. The family page links the theorem's `Accrues` and `Unread` premises to the ledger and stops there.
+- (e) OVERLAP STANDS, not yet said. The statement holds an index (`b + t ≤ …` at step `t`) but both sides at the same `t`: a bound at every step, no (t).
+
+### C10 (reader: N3) · `more-needs-renewers` and `unceasing-generation-needs-renewal`
+
+OPENED. `Becoming.Flow.More.unceasing_reidentified` (Identity.lean:405).
+
+- (a) `(census : W.Census alive) (distinct : ∀ t, Distinct (L.present t)) (taking : L.Taking W) (more : L.More cs) (σ : Reidentify F F') : (W.reidentify σ).Unceasing`. A containment with every premise kept: more without end, under a census, is unceasing arising, here of the reidentified web.
+- (b) `Flow.More` is `more-needs-renewers`'s own (name; `flow-more`, taken by two dynamics). `Web.Unceasing` is in `unceasing-generation-needs-renewal`'s name and on its list; `web-unceasing` is taken by laws of seven dynamics, `more-needs-renewers` among them, whose name's second half is "unceasing arising needs renewal". So both notions are also `more-needs-renewers`'s own; the two entries share seven declarations.
+- (c) STATEMENT. The proof calls `unceasing_reidentified_covering`.
+- (d) This theorem is on no list. The containment it restates is said once: `Flow.More.unceasing` (C25) is a law of `more-needs-renewers`, whose mechanism says "Under a census, with activity decided, the present listing each formation once and only active formations taking, it forces unceasing arising". No case row, exit or joining between the two entries says it; the one link drawn between them is X198's case row. `more-needs-renewers` has no exit.
+- (e) OVERLAP STANDS (the same containment as C25, for every reidentification). Said in one entry's words; not drawn between the two.
+
+### C11 (reader: N3) · the same two dynamics
+
+OPENED. `Becoming.Flow.More.unceasing_reidentified_covering` (Identity.lean:388).
+
+- (a) `(decided : ∀ s f, S ≤ s → Decidable (W.active s f)) (covered : …) (distinct : …) (taking : …) (more : L.More cs) (σ : Reidentify F F') : (W.reidentify σ).Unceasing`. The same containment with covers in place of a census.
+- (b), (d), (e) as C10. (c) STATEMENT; the proof calls `Flow.More.unceasing_covering (L := L.reidentify σ)`. On no list.
+
+### C12 (reader: N3) · `every-loss-passes-a-juncture` and `necessarily-drawn-is-not-returning`
+
+OPENED. `Becoming.Branching.Juncture.possiblyDrawn` (Junctures.lean:110); `Becoming.Branching.possiblyDrawn_iff` (Branching.lean:408).
+
+- (a) `{x : S} (juncture : Juncture P s x) : PossiblyDrawn P x`. Every juncture is possibly drawn, at the one configuration `x`: a containment, nothing later.
+- (b) `Juncture`: the first dynamic's own (its name; on its list). `PossiblyDrawn`: on the second's list; its name carries "necessarily drawn", not this; its law `possiblyDrawn_iff` (law row, takes nothing) is about it and its mechanism defines it. Own by its laws.
+- (c) STATEMENT. The proof calls `possiblyDrawn_iff.mpr` and `juncture.reach`.
+- (d) The atlas says nothing: the theorem is on no list; no case row, exit or joining between the two entries; neither mechanism names the other's notion.
+- (e) OVERLAP STANDS, not yet said.
+
+### C13 (reader: N3) · `every-loss-passes-a-juncture` and `returning-where-the-course-branches`
+
+OPENED. `Becoming.Branching.Juncture.returns` (Junctures.lean:116).
+
+- (a) `{x : S} (from_s : Reach P s x) (juncture : Juncture P s x) : Returns P x`. A juncture for `s` on the course of `s` returns, at the one configuration `x`. A containment with one added premise (`Reach P s x`), kept.
+- (b) `Juncture`: own, as C12. `Branching.Returns`: the second dynamic's own (its name; on its list). `branching-returns` is also taken by `loss_passes_juncture`, there of `s`, not of the juncture.
+- (c) STATEMENT. The proof calls no law of either entry.
+- (d) The atlas says nothing: on no list; no link between the two entries.
+- (e) OVERLAP STANDS, not yet said.
+
+### C14 (reader: N3) · `necessarily-drawn-is-not-returning` (with `returning-where-the-course-branches`) and `every-loss-passes-a-juncture`
+
+OPENED. `Becoming.Branching.PossiblyDrawn.passes_juncture` (Junctures.lean:153); `Becoming.Branching.loss_passes_juncture` (147).
+
+- (a) `(returns : Returns P s) (drawn : PossiblyDrawn P s) : ¬¬ ∃ y, Reach P s y ∧ Juncture P s y`. Not two notions of one configuration: the hypotheses are of `s`, the juncture is at some `y` with `Reach P s y`. The proof opens `drawn` by `possiblyDrawn_iff.mp` and calls `loss_passes_juncture returns path lost`: the second dynamic's notion, opened by its own law, supplies the hypotheses of the first dynamic's law. N3's third form.
+- (b) `PossiblyDrawn`: own by its laws (C12). `Returns`: `returning-where-the-course-branches`'s own, and a premise the juncture law takes. `Juncture`, `loss_passes_juncture`: the first dynamic's own.
+- (c) BOTH: the statement holds all three notions; that it is `loss_passes_juncture` fed by `possiblyDrawn_iff` is the proof.
+- (d) The atlas says nothing: on no list; no link among the three entries.
+- (e) OVERLAP STANDS, not yet said, with a reservation. Of the 22 this is the nearest to a passage: `Reach P s y` places the juncture on the course from `s`. No index is quoted and `Reach` is reflexive (`Reach.refl`), so `y` may be `s`; by the definition's letter ("quote both indices") no (t) can be quoted, and the reader's N3 holds.
+
+### C25 (reader: N3) · `more-needs-renewers` and `unceasing-generation-needs-renewal`
+
+OPENED. `Becoming.Flow.More.unceasing` (Population.lean:1294).
+
+- (a) `[∀ t f, Decidable (W.active t f)] … (census : W.Census alive) (distinct : ∀ t, Distinct (L.present t)) (taking : L.Taking W) (more : L.More cs) : W.Unceasing`. The containment itself, every premise kept, of the whole course.
+- (b) As C10. This theorem is a law of `more-needs-renewers` (law row: `k3-a-census`, `card-listed`, `k3-only-active-relata-take`, `flow-more`, `k3-decided`), and both notions are that entry's own; `Unceasing` is the other entry's own too.
+- (c) STATEMENT. The proof calls `Flow.More.unceasing_covering (S := 0)`.
+- (d) Said in `more-needs-renewers`'s mechanism, in words, and by listing the theorem there. Not drawn between the two entries: no case row, exit or joining for it.
+- (e) OVERLAP STANDS. Whether it counts as "not yet said" turns on (d): it is told inside one entry, and no link to the entry that carries `Unceasing` in its name is drawn.
+
+### C26 (reader: N3) · the same two dynamics
+
+OPENED. `Becoming.Flow.More.unceasing_covering` (Population.lean:1262).
+
+- (a) `(decided : ∀ s f, S ≤ s → Decidable (W.active s f)) (covered : ∀ N, ∃ M, ∃ l : List F, N ≤ M ∧ ∀ f, W.active M f → f ∈ l) (distinct : …) (taking : …) (more : L.More cs) : W.Unceasing`. The general form, of which C25 is the case `S := 0` with a census.
+- (b), (e) as C25. (c) STATEMENT. (d) On no list; the atlas holds only its case C25.
+
+### C36 (reader: N3) · `substitution-preserves-consumption` with `joint-difference-making` and `becoming-renewal-reading`
+
+OPENED. `Becoming.Web.ConsumingThrough.consumingIn` (Substitution.lean:107); definitions `Web.ConsumingIn` (Dependence.lean:169), `Web.ConsumingThrough` (Substitution.lean:74).
+
+- (a) `W.ConsumingThrough f T₀ → W.ConsumingIn f`. A containment at one formation; the proof drops one conjunct of the witness.
+- (b) `ConsumingThrough`: the first dynamic's own. `Web.ConsumingIn`: also the first dynamic's own, since its laws conclude it (`consumingIn_kept_iff`, `consuming_survives_iff`, `persists_consuming`) and its name says "stays consuming". In `joint-difference-making` it is a declaration on the list with no law row; that entry's name ("A loss made only together") does not carry it, and its theorems that mention it are built examples (`Pool.difference_only_together`, Joint.lean:472; `Renewable.depletion_is_joint`, Joint.lean:721). No ledger premise holds it; 22 modules of the package use it. `becoming-renewal-reading` lists `RelationalRenewal.ConsumingIn`, another declaration, in another file; no carrying theorem was named by the reader or found by me.
+- (c) STATEMENT.
+- (d) The atlas draws nothing between the first entry and either of the others, and the theorem is on no list.
+- (e) OVERLAP BY NAME ONLY: N5b against `joint-difference-making` (a declaration on its list, a class many modules use), N5c against `becoming-renewal-reading` (two declarations, no carrying theorem). Inside `substitution-preserves-consumption` the statement is the unfolding of one of its notions into another.
+
+### C38 (reader: N3) · `capture-through-the-rule` and `what-a-regularity-takes-in`
+
+OPENED. `Becoming.TurningInTime.locked_at_class` (TurningInTime.lean:1309); `…locked_closed` (1291); `Becoming.«类闭则本类常闭»` (OwnClass.lean:105); `Becoming.«本类常闭则后皆续»` (GrammarPath.lean:364).
+
+- (a) `(raises : Raises P favours fA) (monotone : ReadsShare P M hA) (upper : …) {m : (A × Nat) × R × Nat} (locked : Locked M favours hA (m.1.1, m.2.1)) : «本类至终有常» (Law.step (Pace.step (join fA fB) (joinRead hA) reads)) (lockedAlike M favours hA) m ∧ «所缘同于» (Law.step …) (lockedAlike M favours hA) m`. At one configuration, a locked member is said to meet the two class conditions. These are two premises of the regularity law `«本类常闭则后皆续»` (`atClass : «本类至终有常» R E m`, `held : «所缘同于» R E m`). The proof is `«类闭则本类常闭» (lockedAlike_class M favours hA) (… locked_closed …) (fun _ _ => .inl ⟨_, rfl⟩)`.
+- (b) Near: `Raises`, `ReadsShare`, `upper`, `Locked` together are the whole row of `capture-through-the-rule`'s law `locked_stays`; `Locked` is on that entry's list alone. `rulecapture-locked` by itself is taken by laws of four dynamics, and the statement is stated on closed capture's `join` and `joinRead`, so `closed-capture` is as much the near end. Far: `«本类至终有常»` and `«所缘同于»` are on `what-a-regularity-takes-in`'s list; `grammarpath-benleizhizhongyouchang` and `grammarpath-suoyuantongyu` are taken by its laws alone. Not given by the statement: `grammarpath-member-conditions` (`∃ w, R m w`) and `grammar-lei` (the proof has it as `lockedAlike_class`).
+- (c) STATEMENT. The law the proof calls, `«类闭则本类常闭»`, is on no list.
+- (d) The atlas says nothing: the theorem is on `turning-in-time`'s list with no law row; `turning-in-time`'s mechanism does not speak of the lock; no case row, exit or joining between `what-a-regularity-takes-in` and `capture-through-the-rule`, `closed-capture` or `turning-in-time`.
+- (e) OVERLAP STANDS, not yet said. It is the frozen questions' own example of further case 5.
+
+## The 5 walls
+
+### C01 (reader: WALL) · `attraction-is-not-returning` against `Law.Returns`
+
+OPENED. `Becoming.Law.Drawn.not_returns` (Attraction.lean:224).
+
+- (a) `(drawn : Drawn next s) : ¬ Returns next s`. The denial is of the same configuration `s`, not of its course: `enters_returning_within` (Attraction.lean:393) has the course of any `s`, within a list, at a returning configuration at a later step.
+- (b) `Drawn`: the first dynamic's own (`law-drawn`, taken by it alone). The denial is that dynamic's own name ("Drawn exactly where it does not return") and one half of its law `drawn_iff_not_returns`; `law-not-returns` is taken by it alone. `Law.Returns` is on `recurrence-without-premise`'s list, whose law `lossless_iff_returns` (Recurrence.lean:654) concludes `∀ s, Returns next s`. Of the reader's seven, four state `Law.Returns` directly (that one; `enters_returning_within`; `Flow.Balances.returns_of_conserving`, Entropy.lean:1480; `Hexagram.waxWane_returns`, Hexagrams.lean:405); three carry `Branching.Returns`, another declaration, joined by `Branching.law_returns_iff` (Branching.lean:533, `Iff.rfl`) for the process of a determined law.
+- (c) STATEMENT.
+- (d) The atlas says it in the first entry's name, mechanism and law row. No exit, case row or joining between `attraction-is-not-returning` and `recurrence-without-premise`.
+- (e) STANDS, as a wall at one configuration against the notion `Returns`. It is not a wall between the courses of the two dynamics: a drawn configuration's course can enter what returns.
+
+### C08 (reader: WALL, N6b) · `an-arrow-leaves-change-not-recurring` against `Web.Revisits`
+
+OPENED. `Becoming.Flow.Balances.never_revisits_of_carries` (Entropy.lean:1578).
+
+- (a) `(balances : L.Balances W) {T : Nat} (carries : L.CarriesHistory W cs T) : ¬ W.Revisits cs T`. The denial holds of the whole course from `T` on.
+- (b) `CarriesHistory`: the first dynamic's own (`flow-carrieshistory`, taken by it alone). `Web.Revisits`: on `lossless-exchange-continues-and-returns`'s list, whose law `unending_change_revisits` (Entropy.lean:1235) concludes `¬¬ W.Revisits cs T`; `returning-novelty-forgetting-on-levels` concludes the same in `returns_of_bounded` (Novelty.lean:106). The denial is also a premise of the first dynamic's own law `rests_of_never_revisits` (`novelty-never-revisits`).
+- (c) STATEMENT.
+- (d) This theorem is on no list. The pair is drawn both ways by other laws (N6b): exit 1 of `lossless-exchange-continues-and-returns` to the arrow entry by `Flow.Balances.never_revisits` (a law on no list), exit 2 of the arrow entry to it by the witness `Passing.passes`. The arrow entry's mechanism says the exclusion in words; the other's says "The record's route to rest, an arrow or never revisiting, is family G's". Nothing is drawn between the arrow entry and `returning-novelty-forgetting-on-levels`.
+- (e) STANDS.
+
+### C09 (reader: WALL, N6b) · the same
+
+OPENED. `Becoming.Web.never_revisits_of_arrow` (Entropy.lean:1265).
+
+- (a) `(arrow : W.Arrow cs T S) : ¬ W.Revisits cs T`.
+- (b) `Arrow`: the first dynamic's own (its name; `web-arrow`, taken by it alone). The rest as C08.
+- (c) STATEMENT.
+- (d) A law of the arrow entry (law row `web-arrow`). The pair as C08.
+- (e) STANDS.
+
+### C32 (reader: WALL, N6b, N6c) · `selection-read-off-its-own-survivors` against `StandsLate`
+
+OPENED. `Becoming.RemovesLine.not_standsLate` (ReadingsPersist.lean:560); definitions `StandsLate` (421), `RemovesLine` (549).
+
+- (a) `{i : I} (removes : RemovesLine slotsOf l i) : ¬ StandsLate (slotsOf i) l`. Near-definitional: removed is "from some step on not alive", standing late is "some slot standing at arbitrarily late steps".
+- (b) `RemovesLine`: the first dynamic's own (`removesline`, taken by it alone). `StandsLate`: on `readings-carried-and-filtered`'s list and in its name ("its standing late"); it is also inside the first dynamic's own selection (`SurvivorsPersist` and `AllPersist` are defined by it). `readings-revised-spread-and-locked` has no declaration with `StandsLate` and no law taking `removesline`: against it the reader's wall is not supported by what was opened.
+- (c) STATEMENT.
+- (d) A law of the first entry (law row `removesline`). The store draws courses the other way: exit 4 of `readings-carried-and-filtered` and exit 4 of `readings-revised-spread-and-locked` each name `selection-read-off-its-own-survivors`, by witnesses in which a built course removes a line; exit 4 of the first entry to `readings-revised-spread-and-locked` has no law.
+- (e) STANDS as a wall against the notion (the removed line standing late). NOT AS THE READER SAYS where it reads "excludes `readings-carried-and-filtered`, `readings-revised-spread-and-locked`": the atlas holds built courses of those models that remove a line, and the wall does not deny them.
+
+### C35 (reader: WALL) · `what-a-set-point-optimum-does-beyond` against `Optimum.Rising`
+
+OPENED. `Becoming.Optimum.Nearing.not_rising` (SetPointOptimum.lean:289).
+
+- (a) `(nearing : Nearing ds s better) (asymm : ∀ o o', better o' o → ¬ better o o') {d : C} (inside : d ∈ ds) : ¬ Rising ds better`. The denial is of the order (the rule), on a family that holds a condition, under asymmetry; no course is named.
+- (b) `Nearing`: the first dynamic's own (`optimum-nearing`, taken by it alone). `Rising`: on `what-an-optimum-does-beyond-what-couples-in`'s list; `optimum-rising` is taken by laws of five dynamics, the first dynamic among them (its mechanism: "Below the set point it rises"). So the wall is against a premise several dynamics take, not against one dynamic's notion alone.
+- (c) STATEMENT.
+- (d) A law of the first entry (law row `optimum-nearing`, `optimum-asymm`, `optimum-family-holds`) and a sentence of its mechanism. Between the two entries the store draws one case row of another kind (`nearing_beyond` case of `beyond_of_ranked`); no exit.
+- (e) STANDS, as: no asymmetric order on a non-empty family meets both `Nearing` and `Rising`, so no law taking `optimum-rising` speaks of an order under `Nearing` with that order and family.
+
+## The two lists
+
+### Overlaps that stand and that the atlas does not yet say
+
+1. **C02** · `Becoming.ChoiceCountCapture.counted_outlives_loss` · ChoiceCountCapture.lean:414 · `capture-by-counted-choices` and `closed-capture` · the counted chooser's course joined to an unread rising coordinate is `ClosedCapture.lock_outlives_loss` at `fA := choose`, `hA := weighted κc κo pos`, its locked start discharged.
+2. **C12** · `Becoming.Branching.Juncture.possiblyDrawn` · Junctures.lean:110 · `every-loss-passes-a-juncture` and `necessarily-drawn-is-not-returning` · a juncture for `s` at `x` is possibly drawn at `x`.
+3. **C13** · `Becoming.Branching.Juncture.returns` · Junctures.lean:116 · `every-loss-passes-a-juncture` and `returning-where-the-course-branches` · a juncture for `s` reachable from `s` returns.
+4. **C14** · `Becoming.Branching.PossiblyDrawn.passes_juncture` · Junctures.lean:153 · `necessarily-drawn-is-not-returning` (and `returning-where-the-course-branches`) and `every-loss-passes-a-juncture` · a returning, possibly drawn `s` has, not not, a juncture for `s` at some `y` it reaches (`y` may be `s`); possible drawing opened by `possiblyDrawn_iff` feeds `loss_passes_juncture`.
+5. **C38** · `Becoming.TurningInTime.locked_at_class` · TurningInTime.lean:1309 · `capture-through-the-rule` (stated on closed capture's joined step; listed under `turning-in-time`) and `what-a-regularity-takes-in` · a locked member meets `«本类至终有常»` and `«所缘同于»` for the class of being locked or not, two premises of `«本类常闭则后皆续»`.
+6. **C25**, with **C26**, **C10**, **C11** the same containment · `Becoming.Flow.More.unceasing` · Population.lean:1294 (`unceasing_covering` 1262; `unceasing_reidentified` Identity.lean:405; `unceasing_reidentified_covering` 388) · `more-needs-renewers` and `unceasing-generation-needs-renewal` · more without end, under a census or covers with activity decided and only active formations taking, is unceasing arising. Told in `more-needs-renewers`'s own mechanism and law; no link to the other entry is drawn, and three of the four theorems are on no list.
+
+Stand and already said (case rows, and for T066 two joinings, for T080 an exit): T013, T014, T015, T035, X066, T056 (with `capture-through-the-rule`), T066, T080.
+
+Do not stand as an overlap between two dynamics' own notions: T072 (a passage inside its home, drawn from the other end; one theorem on two lists), X198 (one theorem on two lists; the instance is inside the home), X199 and X200 (an iff inside the home; the pair drawn by another law), C36 (by name only).
+
+### Walls that stand
+
+1. **C01** · `Becoming.Law.Drawn.not_returns` · Attraction.lean:224 · `attraction-is-not-returning` against `Law.Returns` (`recurrence-without-premise` and the entries that state it) · a drawn configuration does not itself return; its course is not denied a returning configuration later.
+2. **C08** · `Becoming.Flow.Balances.never_revisits_of_carries` · Entropy.lean:1578 · `an-arrow-leaves-change-not-recurring` against `Web.Revisits` (`lossless-exchange-continues-and-returns`, `returning-novelty-forgetting-on-levels`) · a balanced family whose configuration carries its history never revisits from `T` on.
+3. **C09** · `Becoming.Web.never_revisits_of_arrow` · Entropy.lean:1265 · the same two ends · with an arrow from `T` on, no revisit from `T` on.
+4. **C32** · `Becoming.RemovesLine.not_standsLate` · ReadingsPersist.lean:560 · `selection-read-off-its-own-survivors` against `StandsLate` (`readings-carried-and-filtered`) · a removed line does not stand late; a wall against the notion, not against that dynamic's built courses.
+5. **C35** · `Becoming.Optimum.Nearing.not_rising` · SetPointOptimum.lean:289 · `what-a-set-point-optimum-does-beyond` against `Optimum.Rising` (a premise laws of five dynamics take) · no asymmetric nearing order on a non-empty family is rising.
+
+All five are walls in the statement. Four are laws of the near entry already (C01, C09, C32, C35); C08 is on no list. None is drawn in the store as a wall: the store has no field for one.
+
+## The forecast's phrase, "found mainly where the proof is read"
+
+Of the 22:
+
+- **True of 7** (the statement names nothing of the other dynamic; only the proof or docstring does): T013, T014, T035, X066, T080, T072, X198. Five of these the atlas already says by a case row; the other two (T072, X198) do not stand as overlaps between two dynamics.
+- **True in part of 3** (the statement already holds the other dynamic's notion; that the theorem is an instance of its law is in the proof): T015, C02, C14.
+- **Not true of 12** (the statement alone shows it): T056, T066, X199, X200, C10, C11, C12, C13, C25, C26, C36, C38.
+
+Of the overlaps that stand and are not yet said, none was found by the proof alone: C12, C13, C38 and the C25 group are in the statement; C02 and C14 are in part.
+
+## Where the reader's pass differs from what was opened
+
+- T072: `from` is given as `two-sided-regulation-and-late-reading`; the item's home is `late-relay-oscillates`, where both theorems and the law they are an instance of are listed.
+- T013, T014: `change: null`, against (p) for T056 and T066 of the same shape.
+- X066: `change: t`; the statement and the store's `drops` give (d).
+- X198, X199, X200: answered N3 as overlaps between two dynamics; each is inside its home, the other entry sharing the theorem (X198) or carrying the same iff under another premise (X199, X200).
+- C36: `joint-difference-making` and `becoming-renewal-reading` given as overlapping entries; the first holds `ConsumingIn` as a listed declaration only, the second lists another declaration.
+- C32: `readings-revised-spread-and-locked` given as excluded; that entry has no `StandsLate`.
+- C02: both of the reader's answers hold, of different things: N5b of `Accrues` alone, N3 of the law.
+
+## Not done
+
+- No third dynamic's full entry was opened beyond those named above; where a line speaks of one it is TOLD.
+- The crosswalk and the records' own pages were not read for whether a record tells an overlap that the atlas's store does not.
+- The seven dynamics the reader names for C01 were checked by the statement of one law each, not entry by entry.
+- No Lean was run: "the proof calls" is read from the proof's text.

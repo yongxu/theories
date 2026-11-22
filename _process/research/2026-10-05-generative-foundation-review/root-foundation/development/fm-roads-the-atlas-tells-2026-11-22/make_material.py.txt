@@ -1,0 +1,38 @@
+# AI-written (Claude Fable, row FM), 22 November 2026. Makes INDEX-OF-DYNAMICS.md and ITEMS.jsonl from the atlas's store
+# (run from the repository root on main 0db3aaacc; row DJ's candidates at tmp/r7/one-model/check/links22/candidate-passages.json).
+import json, pathlib
+out=pathlib.Path('tmp/fm/roads22')
+D=json.load(open('theories/becoming/results/atlas/entries/dynamics.json'))
+ids={d['id'] for d in D}
+def en(x):
+    if isinstance(x,dict): return x.get('en') or next(iter(x.values()),'')
+    return x or ''
+lines=["# Index of the atlas's dynamics (made by script from dynamics.json on main 0db3aaacc; AI-written, row FM, 22 November 2026)\n",
+       "One block a dynamic: id, family, name, the first 420 characters of its mechanism, its declarations. The full entry is in theories/becoming/results/atlas/entries/dynamics.json.\n"]
+for d in D:
+    decl=d.get('declarations') or []
+    names=[x if isinstance(x,str) else (x.get('name') or x.get('lean') or json.dumps(x,ensure_ascii=False)) for x in decl]
+    lines.append(f"\n## {d['id']}  (family {d.get('family')})\n**{en(d.get('name'))}**\n{en(d.get('mechanism'))[:420]}\nDeclarations: {', '.join(names[:14])}{' …' if len(names)>14 else ''}\n")
+(out/'INDEX-OF-DYNAMICS.md').write_text(''.join(lines))
+items=[]; n=0
+for d in D:
+    for t in d.get('transitions') or []:
+        b=t.get('between')
+        if not b: continue
+        n+=1
+        items.append(dict(item=f"T{n:03d}", kind='transition', home=d['id'], family=d.get('family'), transition_kind=t.get('kind'), condition=en(t.get('condition')), from_words=en(b.get('from')), to_words=en(b.get('to')), declarations=t.get('declarations'), records=t.get('records')))
+n=0
+for d in D:
+    for e in d.get('exits') or []:
+        to=e.get('to')
+        if isinstance(to,str) and to in ids: continue
+        if not e.get('law'): continue
+        n+=1
+        items.append(dict(item=f"X{n:03d}", kind='exit', home=d['id'], family=d.get('family'), strength=e.get('strength'), edge=en(e.get('edge')), to_words=en(to), law=e.get('law'), to_law=e.get('to_law'), drops=e.get('drops'), records=e.get('records')))
+C=json.load(open('tmp/r7/one-model/check/links22/candidate-passages.json'))
+n=0
+for c in C['candidates']:
+    if c.get('named_by_an_exit_or_transition'): continue
+    n+=1
+    items.append(dict(item=f"C{n:02d}", kind='candidate theorem (printed by Lean and crossed with the atlas by row DJ)', theorem=c['name'], module=c['module'], premises_only=c['premises_only'], conclusion_only=c['conclusion_only'], premise_notions=c['premise_notions'], conclusion_notions=c['conclusion_notions'], listed_under=c['listed_under']))
+(out/'ITEMS.jsonl').write_text('\n'.join(json.dumps(i,ensure_ascii=False) for i in items)+'\n')

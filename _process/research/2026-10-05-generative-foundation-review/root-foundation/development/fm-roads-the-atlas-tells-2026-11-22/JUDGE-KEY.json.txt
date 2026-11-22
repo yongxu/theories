@@ -1,0 +1,1065 @@
+{
+ "J01": {
+  "key": "C21",
+  "theorems": [
+   "Becoming.Web.optimum_ends_beyond",
+   "Becoming.Web.optimum_broken_iff",
+   "Becoming.Web.consumed_ends_when_fixed_at"
+  ],
+  "files": [
+   [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    740
+   ],
+   [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    727
+   ],
+   [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+    276
+   ]
+  ]
+ },
+ "J02": {
+  "key": "S43",
+  "theorems": [
+   "Becoming.RuleRebuilding.«不及任则持尽»"
+  ],
+  "files": [],
+  "store": {
+   "home": "a-rule-rebuilt-from-the-members-it-limits",
+   "to": "a-rule-with-no-holder-does-not-return",
+   "strength": "sufficient",
+   "law": "Becoming.RuleRebuilding.«不及任则持尽»",
+   "to_law": "Becoming.RuleRebuilding.«不及任则持尽»",
+   "drops": [
+    "rulerebuilding-teaching-age-below-tenure"
+   ]
+  }
+ },
+ "J03": {
+  "key": "S17",
+  "theorems": [
+   "Becoming.FourReaders.recoverable_iff_regime"
+  ],
+  "files": [],
+  "store": {
+   "home": "reading-a-loss-in-time",
+   "to": "margin-of-a-regime",
+   "strength": "witness",
+   "law": "Becoming.FourReaders.recoverable_iff_regime",
+   "to_law": "Becoming.FourReaders.recoverable_iff_regime",
+   "drops": []
+  }
+ },
+ "J04": {
+  "key": "S08",
+  "theorems": [
+   "Becoming.Optimum.frontier_rebuilds"
+  ],
+  "files": [],
+  "store": {
+   "home": "a-weighting-faster-than-renewal-ends-the-base",
+   "to": "optima-rebuild-a-depleted-base",
+   "strength": "sufficient",
+   "law": "Becoming.Optimum.frontier_rebuilds",
+   "to_law": "Becoming.Optimum.frontier_rebuilds",
+   "drops": [
+    "optimum-next-outpaced-strictly"
+   ]
+  }
+ },
+ "J05": {
+  "key": "S04",
+  "theorems": [
+   "RegimeTransition.supported_finite_transition"
+  ],
+  "files": [],
+  "store": {
+   "home": "market-finite-support-obstruction",
+   "to": "never-leaving-a-guard",
+   "strength": "sufficient",
+   "law": "RegimeTransition.supported_finite_transition",
+   "to_law": "RegimeTransition.supported_finite_transition",
+   "drops": [
+    "finitesupportobstruction-stock-short",
+    "lasting-below-level"
+   ]
+  }
+ },
+ "J06": {
+  "key": "S21",
+  "theorems": [
+   "Becoming.Withholding.Ring.givesFirst_restores"
+  ],
+  "files": [],
+  "store": {
+   "home": "giving-that-waits-on-giving",
+   "to": "restoring-giving-from-the-worst-start",
+   "strength": "witness",
+   "law": "Becoming.Withholding.Ring.givesFirst_restores",
+   "to_law": "Becoming.Withholding.Ring.givesFirst_restores",
+   "drops": []
+  }
+ },
+ "J07": {
+  "key": "S48",
+  "theorems": [
+   "Becoming.Lasting.avoids_iff_closed"
+  ],
+  "files": [],
+  "store": {
+   "home": "never-leaving-a-guard",
+   "to": "not-going-out-of-a-region",
+   "strength": "exact",
+   "law": "Becoming.Lasting.avoids_iff_closed",
+   "to_law": "Becoming.Lasting.avoids_iff_closed",
+   "drops": []
+  }
+ },
+ "J08": {
+  "key": "S31",
+  "theorems": [
+   "Becoming.RaisedEveryOther.both"
+  ],
+  "files": [],
+  "store": {
+   "home": "where-the-possible-grows",
+   "to": "rule-raised-every-other-step",
+   "strength": "witness",
+   "law": "Becoming.RaisedEveryOther.both",
+   "to_law": "Becoming.RaisedEveryOther.both",
+   "drops": [
+    "heldpossible-stays",
+    "heldpossible-possible-listed"
+   ]
+  }
+ },
+ "J09": {
+  "key": "X148",
+  "theorems": [
+   "Becoming.Tolerance.certified_available_iff"
+  ],
+  "files": [
+   [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean",
+    569
+   ]
+  ]
+ },
+ "J10": {
+  "key": "S23",
+  "theorems": [
+   "Becoming.PairChance.burst_absorbs"
+  ],
+  "files": [],
+  "store": {
+   "home": "a-pair-tolerates-only-within-a-window",
+   "to": "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "strength": "sufficient",
+   "law": "Becoming.PairChance.burst_absorbs",
+   "to_law": "Becoming.PairChance.burst_absorbs",
+   "drops": [
+    "windowedwaiting-spaced"
+   ]
+  }
+ },
+ "J11": {
+  "key": "S06",
+  "theorems": [
+   "Becoming.Flow.level_kept_of_plans"
+  ],
+  "files": [],
+  "store": {
+   "home": "own-count-misses-joint-excess",
+   "to": "division-by-exclusive-footprints",
+   "strength": "sufficient",
+   "law": "Becoming.Flow.level_kept_of_plans",
+   "to_law": "Becoming.Flow.level_kept_of_plans",
+   "drops": [
+    "flow-joint-excess"
+   ]
+  }
+ },
+ "J12": {
+  "key": "S52",
+  "theorems": [
+   "Becoming.Flow.carried_keeping_above_ending"
+  ],
+  "files": [],
+  "store": {
+   "home": "readings-carried-and-filtered",
+   "to": "persisting-filters-what-was-chosen",
+   "strength": "sufficient",
+   "law": "Becoming.Flow.carried_keeping_above_ending",
+   "to_law": "Becoming.Flow.carried_keeping_above_ending",
+   "drops": []
+  }
+ },
+ "J13": {
+  "key": "S27",
+  "theorems": [
+   "Becoming.World.comes_to_rest_unrefuted"
+  ],
+  "files": [],
+  "store": {
+   "home": "closed-cycle-without-dissipation",
+   "to": "continued-change-needs-openness",
+   "strength": "sufficient",
+   "law": "Becoming.World.comes_to_rest_unrefuted",
+   "to_law": "Becoming.World.comes_to_rest_unrefuted",
+   "drops": []
+  }
+ },
+ "J14": {
+  "key": "X071",
+  "theorems": [
+   "Becoming.DrawnBeyond.WithinSlack.within_slack",
+   "Becoming.Flow.Balances.beyond_falls_exactly"
+  ],
+  "files": [
+   [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean",
+    568
+   ],
+   [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean",
+    142
+   ]
+  ]
+ },
+ "J15": {
+  "key": "S42",
+  "theorems": [
+   "Becoming.RuleRebuilding.«恒取逾生则尽»"
+  ],
+  "files": [],
+  "store": {
+   "home": "a-rule-rebuilt-from-the-members-it-limits",
+   "to": "a-rule-with-no-holder-does-not-return",
+   "strength": "sufficient",
+   "law": "Becoming.RuleRebuilding.«恒取逾生则尽»",
+   "to_law": "Becoming.RuleRebuilding.«恒取逾生则尽»",
+   "drops": [
+    "rulerebuilding-take-at-most-renewal"
+   ]
+  }
+ },
+ "J16": {
+  "key": "S41",
+  "theorems": [
+   "Becoming.Web.frontier_breaks_stepwise_long"
+  ],
+  "files": [],
+  "store": {
+   "home": "a-step-coupling-keeps-at-every-horizon",
+   "to": "keeping-forgoes-the-renewal-at-the-need",
+   "strength": "sufficient",
+   "law": "Becoming.Web.frontier_breaks_stepwise_long",
+   "to_law": "Becoming.Web.frontier_breaks_stepwise_long",
+   "drops": [
+    "optimum-r-le-q-plus-c"
+   ]
+  }
+ },
+ "J17": {
+  "key": "S51",
+  "theorems": [
+   "Becoming.GroupEnding.Flow.coupled_generation_childless"
+  ],
+  "files": [],
+  "store": {
+   "home": "persisting-filters-what-was-chosen",
+   "to": "selection-among-groups-by-ending",
+   "strength": "sufficient",
+   "law": "Becoming.GroupEnding.Flow.coupled_generation_childless",
+   "to_law": "Becoming.GroupEnding.Flow.coupled_generation_childless",
+   "drops": [
+    "selectionterm-generations-persists"
+   ]
+  }
+ },
+ "J18": {
+  "key": "S47",
+  "theorems": [
+   "Becoming.ContinuingRevision.no_run_without_return"
+  ],
+  "files": [],
+  "store": {
+   "home": "recurring-reference-revision",
+   "to": "becoming-renewal-reading",
+   "strength": "sufficient",
+   "law": "Becoming.ContinuingRevision.no_run_without_return",
+   "to_law": "Becoming.ContinuingRevision.no_run_without_return",
+   "drops": []
+  }
+ },
+ "J19": {
+  "key": "S29",
+  "theorems": [
+   "Becoming.Net.rests_unrefuted"
+  ],
+  "files": [],
+  "store": {
+   "home": "a-token-moved-back-and-forth-on-a-net",
+   "to": "continued-change-needs-openness",
+   "strength": "sufficient",
+   "law": "Becoming.Net.rests_unrefuted",
+   "to_law": "Becoming.Net.rests_unrefuted",
+   "drops": []
+  }
+ },
+ "J20": {
+  "key": "S07",
+  "theorems": [
+   "Becoming.Web.Next.frontier_rebuilds"
+  ],
+  "files": [],
+  "store": {
+   "home": "others-drawing-first-end-the-base",
+   "to": "optima-rebuild-a-depleted-base",
+   "strength": "sufficient",
+   "law": "Becoming.Web.Next.frontier_rebuilds",
+   "to_law": "Becoming.Web.Next.frontier_rebuilds",
+   "drops": [
+    "optimum-next-outpaced-strictly"
+   ]
+  }
+ },
+ "J21": {
+  "key": "S33",
+  "theorems": [
+   "Becoming.Passing.passes"
+  ],
+  "files": [],
+  "store": {
+   "home": "an-arrow-leaves-change-not-recurring",
+   "to": "lossless-exchange-continues-and-returns",
+   "strength": "witness",
+   "law": "Becoming.Passing.passes",
+   "to_law": "Becoming.Passing.passes",
+   "drops": [
+    "web-arrow",
+    "novelty-never-revisits"
+   ]
+  }
+ },
+ "J22": {
+  "key": "S01",
+  "theorems": [
+   "Becoming.Web.consumed_continues_transformed"
+  ],
+  "files": [],
+  "store": {
+   "home": "loss-of-renewal-for-good",
+   "to": "three-outcomes-of-a-loss",
+   "strength": "necessary",
+   "law": "Becoming.Web.consumed_continues_transformed",
+   "to_law": "Becoming.Web.consumed_continues_transformed",
+   "drops": [
+    "web-requires",
+    "flow-need-at-least-m"
+   ]
+  }
+ },
+ "J23": {
+  "key": "S10",
+  "theorems": [
+   "Becoming.Optimum.frontier_keeps_above"
+  ],
+  "files": [],
+  "store": {
+   "home": "horizon-optima-hold-the-greatest-renewal",
+   "to": "keeping-forgoes-the-renewal-at-the-need",
+   "strength": "sufficient",
+   "law": "Becoming.Optimum.frontier_keeps_above",
+   "to_law": "Becoming.Optimum.frontier_keeps_above",
+   "drops": [
+    "optimum-rising-drawn"
+   ]
+  }
+ },
+ "J24": {
+  "key": "S24",
+  "theorems": [
+   "Becoming.Flow.settles"
+  ],
+  "files": [],
+  "store": {
+   "home": "overshoot-beyond-the-gap",
+   "to": "two-sided-regulation-and-late-reading",
+   "strength": "sufficient",
+   "law": "Becoming.Flow.settles",
+   "to_law": "Becoming.Flow.settles",
+   "drops": [
+    "flow-beyond-the-gap"
+   ]
+  }
+ },
+ "J25": {
+  "key": "S32",
+  "theorems": [
+   "Becoming.KindRelay.keeps_widening"
+  ],
+  "files": [],
+  "store": {
+   "home": "what-keeping-widening-needs",
+   "to": "kind-relay-keeps-widening-within-kinds",
+   "strength": "witness",
+   "law": "Becoming.KindRelay.keeps_widening",
+   "to_law": "Becoming.KindRelay.keeps_widening",
+   "drops": [
+    "keepingwidening-contains-supported-passing",
+    "keepingwidening-contains-passings",
+    "flow-dissipateson"
+   ]
+  }
+ },
+ "J26": {
+  "key": "S30",
+  "theorems": [
+   "Becoming.Settling.keeps_changing_iff"
+  ],
+  "files": [],
+  "store": {
+   "home": "when-the-runs-of-a-process-settle",
+   "to": "a-run-round-a-loop-keeps-changing",
+   "strength": "exact",
+   "law": "Becoming.Settling.keeps_changing_iff",
+   "to_law": "Becoming.Settling.keeps_changing_iff",
+   "drops": []
+  }
+ },
+ "J27": {
+  "key": "S12",
+  "theorems": [
+   "Becoming.Flow.Balances.kept_of_restrained"
+  ],
+  "files": [],
+  "store": {
+   "home": "what-a-rise-draws-from-beyond",
+   "to": "restraint-within-the-joint-slack",
+   "strength": "sufficient",
+   "law": "Becoming.Flow.Balances.kept_of_restrained",
+   "to_law": "Becoming.Flow.Balances.kept_of_restrained",
+   "drops": [
+    "web-broken"
+   ]
+  }
+ },
+ "J28": {
+  "key": "S15",
+  "theorems": [
+   "Becoming.WholeUngated.persists"
+  ],
+  "files": [],
+  "store": {
+   "home": "whole-drawing-beyond-renewal-ends",
+   "to": "whole-persists-through-generation",
+   "strength": "witness",
+   "law": "Becoming.WholeUngated.persists",
+   "to_law": "Becoming.WholeUngated.persists",
+   "drops": [
+    "web-whole-arising-depends-on-family"
+   ]
+  }
+ },
+ "J29": {
+  "key": "S49",
+  "theorems": [
+   "Becoming.Optimum.Holding.doubling_rebuilds"
+  ],
+  "files": [],
+  "store": {
+   "home": "optima-rebuild-a-depleted-base",
+   "to": "a-weighting-faster-than-renewal-ends-the-base",
+   "strength": "witness",
+   "law": "Becoming.Optimum.Holding.doubling_rebuilds",
+   "to_law": "Becoming.Optimum.Holding.doubling_rebuilds",
+   "drops": [
+    "optimum-next-gain-rises-below-y",
+    "optimum-next-gain-rises-strictly-below-y",
+    "optimum-next-greatest"
+   ]
+  }
+ },
+ "J30": {
+  "key": "S02",
+  "theorems": [
+   "Becoming.Substitution.persists_consuming"
+  ],
+  "files": [],
+  "store": {
+   "home": "consumption-ends-with-feeders",
+   "to": "substitution-preserves-consumption",
+   "strength": "sufficient",
+   "law": "Becoming.Substitution.persists_consuming",
+   "to_law": "Becoming.Substitution.persists_consuming",
+   "drops": [
+    "flow-requires-while-active"
+   ]
+  }
+ },
+ "J31": {
+  "key": "S38",
+  "theorems": [
+   "Becoming.Regulation.Overshooting.oscillates"
+  ],
+  "files": [],
+  "store": {
+   "home": "two-sided-regulation-and-late-reading",
+   "to": "overshoot-beyond-the-gap",
+   "strength": "witness",
+   "law": "Becoming.Regulation.Overshooting.oscillates",
+   "to_law": "Becoming.Regulation.Overshooting.oscillates",
+   "drops": [
+    "flow-withingap"
+   ]
+  }
+ },
+ "J32": {
+  "key": "S45",
+  "theorems": [
+   "Becoming.RuleRebuilding.«改而成隙则尽»"
+  ],
+  "files": [],
+  "store": {
+   "home": "a-rule-rebuilt-from-the-members-it-limits",
+   "to": "a-rule-with-no-holder-does-not-return",
+   "strength": "witness",
+   "law": "Becoming.RuleRebuilding.«改而成隙则尽»",
+   "to_law": "Becoming.RuleRebuilding.«改而成隙则尽»",
+   "drops": [
+    "rulerebuilding-revisions-in-band"
+   ]
+  }
+ },
+ "J33": {
+  "key": "S39",
+  "theorems": [
+   "Becoming.Flow.never_returns_below"
+  ],
+  "files": [],
+  "store": {
+   "home": "two-sided-regulation-and-late-reading",
+   "to": "loss-of-renewal-for-good",
+   "strength": "sufficient",
+   "law": "Becoming.Flow.never_returns_below",
+   "to_law": "Becoming.Flow.never_returns_below",
+   "drops": [
+    "flow-opposes"
+   ]
+  }
+ },
+ "J34": {
+  "key": "S53",
+  "theorems": [
+   "Becoming.line_standing_unselected"
+  ],
+  "files": [],
+  "store": {
+   "home": "readings-carried-and-filtered",
+   "to": "unselected-beyond-the-coupling-closure",
+   "strength": "sufficient",
+   "law": "Becoming.line_standing_unselected",
+   "to_law": "Becoming.line_standing_unselected",
+   "drops": []
+  }
+ },
+ "J35": {
+  "key": "S54",
+  "theorems": [
+   "Becoming.ReadingsPersist.Habitat.cleared_removes_its_readers"
+  ],
+  "files": [],
+  "store": {
+   "home": "readings-carried-and-filtered",
+   "to": "selection-read-off-its-own-survivors",
+   "strength": "witness",
+   "law": "Becoming.ReadingsPersist.Habitat.cleared_removes_its_readers",
+   "to_law": "Becoming.ReadingsPersist.Habitat.cleared_removes_its_readers",
+   "drops": []
+  }
+ },
+ "J36": {
+  "key": "S03",
+  "theorems": [
+   "Becoming.RegimeMargin.Coupled.Relay.cycles"
+  ],
+  "files": [],
+  "store": {
+   "home": "a-cascade-along-total-dependence",
+   "to": "support-beyond-a-band-can-cycle",
+   "strength": "witness",
+   "law": "Becoming.RegimeMargin.Coupled.Relay.cycles",
+   "to_law": "Becoming.RegimeMargin.Coupled.Relay.cycles",
+   "drops": [
+    "regimemargin-coupled-band"
+   ]
+  }
+ },
+ "J37": {
+  "key": "S16",
+  "theorems": [
+   "Becoming.PoolCourse.scheduled_apart"
+  ],
+  "files": [],
+  "store": {
+   "home": "unselected-beyond-the-coupling-closure",
+   "to": "a-pool-that-recruits-through-itself",
+   "strength": "witness",
+   "law": "Becoming.PoolCourse.scheduled_apart",
+   "to_law": "Becoming.PoolCourse.scheduled_apart",
+   "drops": [
+    "flow-pool-within-group-closure-either"
+   ]
+  }
+ },
+ "J38": {
+  "key": "S13",
+  "theorems": [
+   "Becoming.Cycle.closed_more"
+  ],
+  "files": [],
+  "store": {
+   "home": "no-finite-part-bears-taking",
+   "to": "closed-cycle-without-dissipation",
+   "strength": "witness",
+   "law": "Becoming.Cycle.closed_more",
+   "to_law": "Becoming.Cycle.closed_more",
+   "drops": [
+    "k3-dissipation"
+   ]
+  }
+ },
+ "J39": {
+  "key": "S25",
+  "theorems": [
+   "Becoming.Undecided.monotone_run_rests"
+  ],
+  "files": [],
+  "store": {
+   "home": "a-map-moving-every-value-never-rests",
+   "to": "revision-with-an-undecided-value",
+   "strength": "sufficient",
+   "law": "Becoming.Undecided.monotone_run_rests",
+   "to_law": "Becoming.Undecided.monotone_run_rests",
+   "drops": [
+    "diagonal-moves"
+   ]
+  }
+ },
+ "J40": {
+  "key": "S36",
+  "theorems": [
+   "Becoming.World.arising_iff_ceasing_decided"
+  ],
+  "files": [],
+  "store": {
+   "home": "ceasing-needs-arising",
+   "to": "recurrence-without-decidedness",
+   "strength": "exact",
+   "law": "Becoming.World.arising_iff_ceasing_decided",
+   "to_law": "Becoming.World.arising_iff_ceasing_decided",
+   "drops": []
+  }
+ },
+ "J41": {
+  "key": "S11",
+  "theorems": [
+   "Becoming.Optimum.frontier_keeps_stepwise"
+  ],
+  "files": [],
+  "store": {
+   "home": "keeping-forgoes-the-renewal-at-the-need",
+   "to": "a-step-coupling-keeps-at-every-horizon",
+   "strength": "sufficient",
+   "law": "Becoming.Optimum.frontier_keeps_stepwise",
+   "to_law": "Becoming.Optimum.frontier_keeps_stepwise",
+   "drops": [
+    "optimum-uncoupled"
+   ]
+  }
+ },
+ "J42": {
+  "key": "S28",
+  "theorems": [
+   "Becoming.Flow.Balances.never_revisits"
+  ],
+  "files": [],
+  "store": {
+   "home": "lossless-exchange-continues-and-returns",
+   "to": "an-arrow-leaves-change-not-recurring",
+   "strength": "sufficient",
+   "law": "Becoming.Flow.Balances.never_revisits",
+   "to_law": "Becoming.Flow.Balances.never_revisits",
+   "drops": [
+    "flow-configuration-changes-recur"
+   ]
+  }
+ },
+ "J43": {
+  "key": "S20",
+  "theorems": [
+   "Becoming.Revising.controlled_revision",
+   "Becoming.OpenedCorrection.Linked.opens_after_replenishing"
+  ],
+  "files": [],
+  "store": {
+   "home": "selection-when-the-lumping-changes",
+   "to": "a-revision-that-opens-a-correction",
+   "strength": "witness",
+   "law": "Becoming.Revising.controlled_revision",
+   "to_law": "Becoming.OpenedCorrection.Linked.opens_after_replenishing",
+   "drops": []
+  }
+ },
+ "J44": {
+  "key": "S14",
+  "theorems": [
+   "Becoming.WholeWithin.kept"
+  ],
+  "files": [],
+  "store": {
+   "home": "whole-drawing-beyond-renewal-ends",
+   "to": "whole-persists-through-generation",
+   "strength": "witness",
+   "law": "Becoming.WholeWithin.kept",
+   "to_law": "Becoming.WholeWithin.kept",
+   "drops": [
+    "flow-family-excess"
+   ]
+  }
+ },
+ "J45": {
+  "key": "S18",
+  "theorems": [
+   "Becoming.RuleShaping.covering_locks"
+  ],
+  "files": [],
+  "store": {
+   "home": "shaping-the-rule-selected-by-what-comes-back",
+   "to": "capture-through-the-rule",
+   "strength": "sufficient",
+   "law": "Becoming.RuleShaping.covering_locks",
+   "to_law": "Becoming.RuleShaping.covering_locks",
+   "drops": []
+  }
+ },
+ "J46": {
+  "key": "S50",
+  "theorems": [
+   "Becoming.SelectionShift.Generations.never_empties_of_unbounded"
+  ],
+  "files": [],
+  "store": {
+   "home": "the-selection-term-and-a-lineages-fate",
+   "to": "persisting-filters-what-was-chosen",
+   "strength": "sufficient",
+   "law": "Becoming.SelectionShift.Generations.never_empties_of_unbounded",
+   "to_law": "Becoming.SelectionShift.Generations.never_empties_of_unbounded",
+   "drops": []
+  }
+ },
+ "J47": {
+  "key": "S09",
+  "theorems": [
+   "Becoming.Optimum.frontier_keeps_stepwise"
+  ],
+  "files": [],
+  "store": {
+   "home": "horizon-optima-hold-the-greatest-renewal",
+   "to": "a-step-coupling-keeps-at-every-horizon",
+   "strength": "sufficient",
+   "law": "Becoming.Optimum.frontier_keeps_stepwise",
+   "to_law": "Becoming.Optimum.frontier_keeps_stepwise",
+   "drops": [
+    "optimum-rising-drawn"
+   ]
+  }
+ },
+ "J48": {
+  "key": "S44",
+  "theorems": [
+   "Becoming.RuleRebuilding.«改额为零则持尽»"
+  ],
+  "files": [],
+  "store": {
+   "home": "a-rule-rebuilt-from-the-members-it-limits",
+   "to": "a-rule-with-no-holder-does-not-return",
+   "strength": "sufficient",
+   "law": "Becoming.RuleRebuilding.«改额为零则持尽»",
+   "to_law": "Becoming.RuleRebuilding.«改额为零则持尽»",
+   "drops": [
+    "rulerebuilding-revisions-in-band",
+    "rulerebuilding-quota-at-least-one"
+   ]
+  }
+ },
+ "J49": {
+  "key": "S40",
+  "theorems": [
+   "Becoming.Regulation.held_oscillates"
+  ],
+  "files": [],
+  "store": {
+   "home": "two-sided-regulation-and-late-reading",
+   "to": "late-relay-oscillates",
+   "strength": "sufficient",
+   "law": "Becoming.Regulation.held_oscillates",
+   "to_law": "Becoming.Regulation.held_oscillates",
+   "drops": []
+  }
+ },
+ "J50": {
+  "key": "S26",
+  "theorems": [
+   "Becoming.Withholding.Ring.givesFirst_restores"
+  ],
+  "files": [],
+  "store": {
+   "home": "withholding-returns-around-a-loop",
+   "to": "restoring-giving-from-the-worst-start",
+   "strength": "witness",
+   "law": "Becoming.Withholding.Ring.givesFirst_restores",
+   "to_law": "Becoming.Withholding.Ring.givesFirst_restores",
+   "drops": []
+  }
+ },
+ "J51": {
+  "key": "S22",
+  "theorems": [
+   "Becoming.Withholding.gives_without_chain"
+  ],
+  "files": [],
+  "store": {
+   "home": "giving-that-waits-on-giving",
+   "to": "restoring-giving-from-the-worst-start",
+   "strength": "sufficient",
+   "law": "Becoming.Withholding.gives_without_chain",
+   "to_law": "Becoming.Withholding.gives_without_chain",
+   "drops": [
+    "withholding-chain"
+   ]
+  }
+ },
+ "J52": {
+  "key": "S05",
+  "theorems": [
+   "Becoming.Lasting.lasts_iff_ladder"
+  ],
+  "files": [],
+  "store": {
+   "home": "market-finite-support-obstruction",
+   "to": "never-leaving-a-guard",
+   "strength": "exact",
+   "law": "Becoming.Lasting.lasts_iff_ladder",
+   "to_law": "Becoming.Lasting.lasts_iff_ladder",
+   "drops": [
+    "lasting-below-level"
+   ]
+  }
+ },
+ "J53": {
+  "key": "C30",
+  "theorems": [
+   "Becoming.ReadInTime.kept_once_favoured",
+   "Becoming.ReadInTime.early",
+   "Becoming.DrawnShaping.drawn_locks",
+   "Becoming.ClosedCapture.Thinned.read_late_kept",
+   "Becoming.ReadInTime.kept_early_iff",
+   "Becoming.RuleCapture.locked_stays"
+  ],
+  "files": [
+   [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean",
+    483
+   ],
+   [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean",
+    236
+   ],
+   [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean",
+    333
+   ],
+   [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
+    830
+   ],
+   [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean",
+    292
+   ],
+   [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
+    182
+   ]
+  ]
+ },
+ "J54": {
+  "key": "S46",
+  "theorems": [
+   "Becoming.ReaderRebuilding.«读者绝则无储»"
+  ],
+  "files": [],
+  "store": {
+   "home": "the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "to": "a-reader-rebuilt-from-its-stock-ends-with-it",
+   "strength": "necessary",
+   "law": "Becoming.ReaderRebuilding.«读者绝则无储»",
+   "to_law": "Becoming.ReaderRebuilding.«读者绝则无储»",
+   "drops": [
+    "readerrebuilding-present"
+   ]
+  }
+ },
+ "J55": {
+  "key": "S55",
+  "theorems": [
+   "Becoming.standingCount_unselected"
+  ],
+  "files": [],
+  "store": {
+   "home": "readings-revised-spread-and-locked",
+   "to": "unselected-beyond-the-coupling-closure",
+   "strength": "sufficient",
+   "law": "Becoming.standingCount_unselected",
+   "to_law": "Becoming.standingCount_unselected",
+   "drops": []
+  }
+ },
+ "J56": {
+  "key": "S56",
+  "theorems": [
+   "Becoming.ReadingsSpread.Commons.cleared_spreads"
+  ],
+  "files": [],
+  "store": {
+   "home": "readings-revised-spread-and-locked",
+   "to": "selection-read-off-its-own-survivors",
+   "strength": "witness",
+   "law": "Becoming.ReadingsSpread.Commons.cleared_spreads",
+   "to_law": "Becoming.ReadingsSpread.Commons.cleared_spreads",
+   "drops": []
+  }
+ },
+ "J57": {
+  "key": "X167",
+  "theorems": [
+   "Becoming.Clearing.narrows"
+  ],
+  "files": [
+   [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Clearing.lean",
+    262
+   ]
+  ]
+ },
+ "J58": {
+  "key": "C39",
+  "theorems": [
+   "Becoming.TurningInTime.locked_turns_in_time_share_iff",
+   "Becoming.RuleCapture.locked_stays",
+   "Becoming.TurningInTime.locked_alone_not_below",
+   "Becoming.TurningInTime.turns_in_time_iff",
+   "Becoming.TurningInTime.agrees_until_marked",
+   "Becoming.TurningInTime.unending_iff_marked_at"
+  ],
+  "files": [
+   [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+    1876
+   ],
+   [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
+    182
+   ],
+   [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+    1415
+   ],
+   [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+    1129
+   ],
+   [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+    475
+   ],
+   [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+    768
+   ]
+  ]
+ },
+ "J59": {
+  "key": "S34",
+  "theorems": [
+   "Becoming.RegimeMargin.Alternation.alternates"
+  ],
+  "files": [],
+  "store": {
+   "home": "where-a-run-of-a-regime-comes-to-rest",
+   "to": "overcompensating-giving-cycles",
+   "strength": "witness",
+   "law": "Becoming.RegimeMargin.Alternation.alternates",
+   "to_law": "Becoming.RegimeMargin.Alternation.alternates",
+   "drops": [
+    "regimemargin-giving-rises",
+    "regimemargin-adjusted-rises"
+   ]
+  }
+ },
+ "J60": {
+  "key": "S37",
+  "theorems": [
+   "Becoming.Flow.crosses_of_above"
+  ],
+  "files": [],
+  "store": {
+   "home": "two-sided-regulation-and-late-reading",
+   "to": "overshoot-beyond-the-gap",
+   "strength": "sufficient",
+   "law": "Becoming.Flow.crosses_of_above",
+   "to_law": "Becoming.Flow.crosses_of_above",
+   "drops": [
+    "flow-withingap"
+   ]
+  }
+ },
+ "J61": {
+  "key": "S19",
+  "theorems": [
+   "Becoming.Revising.opens_with_correction",
+   "Becoming.OpenedCorrection.Linked.opens"
+  ],
+  "files": [],
+  "store": {
+   "home": "selection-when-the-lumping-changes",
+   "to": "a-revision-that-opens-a-correction",
+   "strength": "witness",
+   "law": "Becoming.Revising.opens_with_correction",
+   "to_law": "Becoming.OpenedCorrection.Linked.opens",
+   "drops": []
+  }
+ },
+ "J62": {
+  "key": "S35",
+  "theorems": [
+   "Becoming.Recycle.closed_unceasing"
+  ],
+  "files": [],
+  "store": {
+   "home": "unceasing-generation-needs-renewal",
+   "to": "closed-cycle-without-dissipation",
+   "strength": "witness",
+   "law": "Becoming.Recycle.closed_unceasing",
+   "to_law": "Becoming.Recycle.closed_unceasing",
+   "drops": [
+    "web-arising-lowers-quantity"
+   ]
+  }
+ }
+}

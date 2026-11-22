@@ -1,0 +1,644 @@
+{
+ "roads": [
+  "C21",
+  "C30",
+  "C39"
+ ],
+ "sample_of_N1_and_N2a": [
+  "T001",
+  "T012",
+  "T045",
+  "T077",
+  "T091",
+  "X003",
+  "X013",
+  "X024",
+  "X028",
+  "X032",
+  "X067",
+  "X075",
+  "X087",
+  "X097",
+  "X112",
+  "X128",
+  "X133",
+  "X162",
+  "X164",
+  "X170",
+  "X188",
+  "X231",
+  "X242",
+  "X250"
+ ],
+ "theorems_named_by_more_than_one_item": {
+  "Becoming.Law.enters_returning_within": [
+   "C01",
+   "C07",
+   "T001"
+  ],
+  "Becoming.Law.lossless_iff_returns": [
+   "C01",
+   "C07",
+   "T001"
+  ],
+  "Becoming.Flow.Balances.returns_of_conserving": [
+   "C01",
+   "C07",
+   "T001"
+  ],
+  "Becoming.Hexagram.waxWane_returns": [
+   "C01",
+   "C07",
+   "T001"
+  ],
+  "Becoming.Onward.run_iff_returning": [
+   "C01",
+   "C07",
+   "C13",
+   "T001",
+   "X003"
+  ],
+  "Becoming.Branching.loss_passes_juncture": [
+   "C01",
+   "C07",
+   "C12",
+   "C13",
+   "C14",
+   "C15",
+   "C16",
+   "T001",
+   "T002",
+   "X003"
+  ],
+  "Becoming.Branching.law_returns_iff": [
+   "C01",
+   "C07",
+   "T001"
+  ],
+  "Becoming.Branching.Returns.reachable": [
+   "C01",
+   "C07",
+   "C13",
+   "T001",
+   "X003"
+  ],
+  "Becoming.keeps_reach_iff_returns": [
+   "C01",
+   "C07",
+   "T001",
+   "X003"
+  ],
+  "Becoming.TimedResponse.turned_at_juncture": [
+   "T003",
+   "X005"
+  ],
+  "Becoming.TimedResponse.reachedBy_iff_reachedInTime": [
+   "T003",
+   "X005"
+  ],
+  "Becoming.RegimeMargin.ends_iff_below": [
+   "T004",
+   "X011",
+   "X012"
+  ],
+  "Becoming.RegimeMargin.holds": [
+   "T004",
+   "X011"
+  ],
+  "Becoming.TurningInTime.turns_in_time_iff": [
+   "C39",
+   "T007",
+   "X014"
+  ],
+  "Becoming.RegimeMargin.leading_exact": [
+   "T009",
+   "T013",
+   "T014"
+  ],
+  "Becoming.RegimeMargin.Adjusted.falls_iff_below": [
+   "C33",
+   "T009",
+   "X020"
+  ],
+  "Becoming.RegimeMargin.Adjusted.fates": [
+   "C33",
+   "T009",
+   "X020"
+  ],
+  "Becoming.RegimeMargin.Coupled.ends_iff_below": [
+   "T012",
+   "X027"
+  ],
+  "Becoming.RegimeMargin.leading_falls": [
+   "T013",
+   "T014"
+  ],
+  "Becoming.LineageRegimes.degeneration_at_stock_horizon": [
+   "T015",
+   "X240"
+  ],
+  "Becoming.Web.kind_every_branch_ends_of_gone": [
+   "T015",
+   "X032",
+   "X240"
+  ],
+  "Becoming.«三域之周»": [
+   "T015",
+   "X032",
+   "X240"
+  ],
+  "Becoming.LineageRegions.generation_degenerates_iff": [
+   "T015",
+   "X032"
+  ],
+  "Becoming.RuleRebuilding.«不及任则持尽»": [
+   "T020",
+   "X036"
+  ],
+  "FiniteSupportObstruction.finite_support_forces_failure": [
+   "T023",
+   "T088",
+   "T090"
+  ],
+  "Becoming.Web.Carries.ends_within": [
+   "T025",
+   "T026",
+   "X040"
+  ],
+  "Becoming.Web.ends_within_on": [
+   "T025",
+   "T026"
+  ],
+  "RegimeBoundary.exact_floor_boundary": [
+   "T027",
+   "T089",
+   "X041",
+   "X224"
+  ],
+  "RegimeBoundary.exact_low_certificate_boundary": [
+   "T027",
+   "X041"
+  ],
+  "Becoming.Flow.Balances.atSetPoint_broken_iff": [
+   "C20",
+   "T028",
+   "T029",
+   "T032",
+   "T037",
+   "X210"
+  ],
+  "Becoming.Web.mutual_broken_iff_capacity": [
+   "C20",
+   "C34",
+   "C35",
+   "T028",
+   "T029",
+   "T032",
+   "T037",
+   "X210"
+  ],
+  "Becoming.Flow.Balances.broken_iff": [
+   "C20",
+   "C34",
+   "T028",
+   "T029",
+   "T032",
+   "T037",
+   "X070",
+   "X210"
+  ],
+  "Becoming.Web.optimum_broken_iff": [
+   "C20",
+   "C21",
+   "C34",
+   "C35",
+   "T029",
+   "T032",
+   "T037",
+   "X210"
+  ],
+  "Becoming.Optimum.AtOnce.drain_perfect_iff": [
+   "T030",
+   "X058"
+  ],
+  "Becoming.Optimum.Coupled.gated_threshold": [
+   "T031",
+   "X061"
+  ],
+  "Becoming.Web.course_lost_iff": [
+   "T033",
+   "X063"
+  ],
+  "Becoming.Web.course_kept_iff": [
+   "T033",
+   "X063"
+  ],
+  "Becoming.SupportGated.below_for_good": [
+   "T033",
+   "X007",
+   "X009",
+   "X010"
+  ],
+  "Becoming.Optimum.frontier_exhausts": [
+   "C18",
+   "C19",
+   "T035"
+  ],
+  "Becoming.Optimum.frontier_leaves": [
+   "T035",
+   "X056",
+   "X066"
+  ],
+  "Becoming.Optimum.Next.frontier_leaves": [
+   "T035",
+   "X056",
+   "X066"
+  ],
+  "Becoming.Optimum.frontier_breaks_below": [
+   "T036",
+   "X069"
+  ],
+  "Becoming.Optimum.frontier_keeps_above": [
+   "T036",
+   "X069"
+  ],
+  "Becoming.Optimum.keeping_not_frontier": [
+   "T036",
+   "X069"
+  ],
+  "Becoming.ClosedCapture.lock_outlives_loss": [
+   "C02",
+   "C05",
+   "T040",
+   "T057"
+  ],
+  "Becoming.ClosedCapture.Thinned.read_late_kept": [
+   "C05",
+   "C06",
+   "C30",
+   "T040"
+  ],
+  "Becoming.DrawnShaping.drawn_locked_either": [
+   "C29",
+   "T040",
+   "T050",
+   "T053",
+   "T054",
+   "T055",
+   "X095",
+   "X097"
+  ],
+  "Becoming.ChoiceCountCapture.counted_locks": [
+   "T040",
+   "T056",
+   "X098",
+   "X099",
+   "X100",
+   "X101"
+  ],
+  "Becoming.RuleCapture.locked_stays": [
+   "C02",
+   "C04",
+   "C05",
+   "C29",
+   "C30",
+   "C37",
+   "C38",
+   "C39",
+   "T041",
+   "T043",
+   "T053",
+   "T054",
+   "T055",
+   "T056",
+   "T057",
+   "X093",
+   "X095",
+   "X097",
+   "X112",
+   "X113",
+   "X114"
+  ],
+  "Becoming.ClosedCapture.Thinned.kept_iff": [
+   "T043",
+   "X093"
+  ],
+  "Becoming.ClosedCapture.Thinned.turned_iff": [
+   "C04",
+   "T043",
+   "T053"
+  ],
+  "Becoming.RuleShaping.favours_iff": [
+   "T044",
+   "T066",
+   "T067"
+  ],
+  "Becoming.ReadInTime.kept_early_iff": [
+   "C30",
+   "T053"
+  ],
+  "Becoming.ReadInTime.turned_early_iff": [
+   "T053",
+   "X095"
+  ],
+  "Becoming.PoolFromCourse.Drained.clock_turned": [
+   "T057",
+   "X113"
+  ],
+  "Becoming.Regulation.relay_threshold": [
+   "T071",
+   "T078"
+  ],
+  "Becoming.Flow.restores": [
+   "T077",
+   "X007",
+   "X045",
+   "X075"
+  ],
+  "Becoming.Web.frontier_breaks_below": [
+   "T080",
+   "T081",
+   "X211",
+   "X212",
+   "X213"
+  ],
+  "Becoming.Optimum.Holding.burst_met": [
+   "T081",
+   "X213"
+  ],
+  "Becoming.Reproduction.Mutation.falls_of_outrun": [
+   "T085",
+   "X216"
+  ],
+  "Becoming.MarketInstances.lands_iff_margin": [
+   "T089",
+   "X224"
+  ],
+  "PartialRegimeTransition.exact_universal_landing_boundary": [
+   "T089",
+   "X224"
+  ],
+  "PartialRegimeTransition.partial_finite_landing": [
+   "T089",
+   "X224"
+  ],
+  "PartialRegimeTransition.supercritical_positive_fixed_obstruction": [
+   "T089",
+   "X224"
+  ],
+  "PartialRegimeTransition.supercritical_low_box_never_lands": [
+   "T089",
+   "X224"
+  ],
+  "Becoming.MarketInstances.lands_iff_no_closed": [
+   "T089",
+   "X224"
+  ],
+  "Becoming.MarketInstances.fixed_point_instance": [
+   "T089",
+   "X224"
+  ],
+  "Becoming.MarketInstances.margin_iff": [
+   "T089",
+   "X224"
+  ],
+  "Becoming.Countdown.exits": [
+   "T094",
+   "X236"
+  ],
+  "Becoming.Run.locked_in": [
+   "X001",
+   "X002"
+  ],
+  "Becoming.Branching.possiblyDrawn_iff": [
+   "C12",
+   "C14",
+   "X003"
+  ],
+  "Becoming.Restored.returns": [
+   "X007",
+   "X045",
+   "X075"
+  ],
+  "Becoming.Flow.ends_at_race_end": [
+   "X007",
+   "X045",
+   "X075"
+  ],
+  "Becoming.Flow.consumption_ends_with_feeders_at": [
+   "X021",
+   "X022",
+   "X023"
+  ],
+  "Becoming.Flow.joint_keeps": [
+   "X033",
+   "X043",
+   "X045",
+   "X048",
+   "X073",
+   "X077"
+  ],
+  "Becoming.Flow.Balances.beyond_falls_exactly": [
+   "X050",
+   "X071"
+  ],
+  "Becoming.not_allPersist_of_removes": [
+   "X087",
+   "X241"
+  ],
+  "Becoming.RuleCapture.Reversed.not_absorbed": [
+   "X090",
+   "X102"
+  ],
+  "Becoming.ClosedCapture.turned_by_loss": [
+   "X091",
+   "X103"
+  ],
+  "Becoming.ChoiceCountCapture.Witness.moved_locks_down": [
+   "X098",
+   "X100"
+  ],
+  "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_at_once_locks_down": [
+   "X099",
+   "X101"
+  ],
+  "Becoming.SharedCodes.outside_needed": [
+   "X106",
+   "X204"
+  ],
+  "Becoming.SharedCodes.outside_returns": [
+   "X107",
+   "X205"
+  ],
+  "Becoming.SharedCodes.coined_returns": [
+   "X108",
+   "X206"
+  ],
+  "Becoming.Web.separates": [
+   "X129",
+   "X130"
+  ],
+  "TemporalInspection.understated_change_can_leave_false_confidence": [
+   "X135",
+   "X234"
+  ],
+  "Becoming.Run.changes_of_heldKeepsWidening": [
+   "X157",
+   "X159",
+   "X160"
+  ],
+  "Becoming.RaisedEveryOther.held_keeps_widening": [
+   "X159",
+   "X160"
+  ],
+  "Becoming.Web.KeepsWidening.from_rest_or_open": [
+   "X161",
+   "X163",
+   "X164",
+   "X173",
+   "X175"
+  ],
+  "Becoming.Flow.widens_iff_within_margin_at": [
+   "C28",
+   "X165"
+  ],
+  "Becoming.Clearing.narrows": [
+   "C03",
+   "X167"
+  ],
+  "Becoming.Substitution.persists_consuming": [
+   "C36",
+   "X169",
+   "X170",
+   "X256"
+  ],
+  "Becoming.Pool.difference_only_together": [
+   "C36",
+   "X169",
+   "X170",
+   "X256"
+  ],
+  "Becoming.Renewable.class_belongs_to_the_run": [
+   "C36",
+   "X169",
+   "X170",
+   "X256"
+  ],
+  "Becoming.Flow.rise_from_rest_or_open": [
+   "X173",
+   "X175"
+  ],
+  "Becoming.World.arising_opens": [
+   "X177",
+   "X182",
+   "X201"
+  ],
+  "Becoming.World.census_one_way": [
+   "X180",
+   "X201"
+  ],
+  "Becoming.World.arising_opens_refinement_counted": [
+   "X182",
+   "X184"
+  ],
+  "Becoming.Flow.exchange_not_recurring": [
+   "X185",
+   "X186"
+  ],
+  "Becoming.Halving.worlds_need_not_rest": [
+   "X189",
+   "X190"
+  ],
+  "Becoming.Amounts.rests_of_archimedean": [
+   "X190",
+   "X191",
+   "X192"
+  ],
+  "Becoming.RegimeMargin.Adjusted.comes_to_rest": [
+   "C33",
+   "X194"
+  ],
+  "Becoming.Saturation.floored": [
+   "X195",
+   "X196"
+  ],
+  "Becoming.Web.Unceasing.activeRenewer_recurs": [
+   "C10",
+   "C11",
+   "C25",
+   "C26",
+   "X197"
+  ],
+  "Becoming.World.arising_iff_ceasing_decided": [
+   "X199",
+   "X200",
+   "X203"
+  ],
+  "Becoming.Web.consumed_ends_when_fixed_at": [
+   "C18",
+   "C19",
+   "C20",
+   "C21",
+   "C34",
+   "X211"
+  ],
+  "Becoming.Revising.opens_with_correction": [
+   "X214",
+   "X215"
+  ],
+  "Becoming.Flow.lineOf_standsLate": [
+   "C32",
+   "X243"
+  ],
+  "Becoming.Flow.Balances.unending_change_revisits": [
+   "C08",
+   "C09"
+  ],
+  "Becoming.Web.returns_of_bounded": [
+   "C08",
+   "C09"
+  ],
+  "Becoming.Flow.More.unceasing_reidentified_covering": [
+   "C10",
+   "C11"
+  ],
+  "Becoming.Flow.More.unceasing": [
+   "C10",
+   "C11",
+   "C25",
+   "C26"
+  ],
+  "Becoming.Web.sample_unceasing": [
+   "C10",
+   "C11",
+   "C25",
+   "C26"
+  ],
+  "Becoming.Recycle.closed_unceasing": [
+   "C10",
+   "C11",
+   "C25",
+   "C26"
+  ],
+  "Becoming.Shuttle.shuttle": [
+   "C10",
+   "C11",
+   "C25",
+   "C26"
+  ],
+  "Becoming.Cycle.closed_more": [
+   "C10",
+   "C11",
+   "C25",
+   "C26"
+  ],
+  "Becoming.Flow.More.unceasing_covering": [
+   "C11",
+   "C26"
+  ],
+  "Becoming.TurningInTime.locked_alone_not_below": [
+   "C37",
+   "C39"
+  ]
+ }
+}

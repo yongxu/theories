@@ -1,0 +1,137 @@
+[
+ {
+  "judge_item": "J01",
+  "theorems": [
+   "Becoming.Web.optimum_ends_beyond",
+   "Becoming.Web.optimum_broken_iff",
+   "Becoming.Web.consumed_ends_when_fixed_at"
+  ],
+  "where": [
+   "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean:740",
+   "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean:727",
+   "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean:276"
+  ]
+ },
+ {
+  "judge_item": "J05",
+  "theorems": [
+   "RegimeTransition.supported_finite_transition"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J09",
+  "theorems": [
+   "Becoming.Tolerance.certified_available_iff"
+  ],
+  "where": [
+   "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean:569"
+  ]
+ },
+ {
+  "judge_item": "J13",
+  "theorems": [
+   "Becoming.World.comes_to_rest_unrefuted"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J17",
+  "theorems": [
+   "Becoming.GroupEnding.Flow.coupled_generation_childless"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J21",
+  "theorems": [
+   "Becoming.Passing.passes"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J25",
+  "theorems": [
+   "Becoming.KindRelay.keeps_widening"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J29",
+  "theorems": [
+   "Becoming.Optimum.Holding.doubling_rebuilds"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J33",
+  "theorems": [
+   "Becoming.Flow.never_returns_below"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J37",
+  "theorems": [
+   "Becoming.PoolCourse.scheduled_apart"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J41",
+  "theorems": [
+   "Becoming.Optimum.frontier_keeps_stepwise"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J45",
+  "theorems": [
+   "Becoming.RuleShaping.covering_locks"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J49",
+  "theorems": [
+   "Becoming.Regulation.held_oscillates"
+  ],
+  "where": []
+ },
+ {
+  "judge_item": "J53",
+  "theorems": [
+   "Becoming.ReadInTime.kept_once_favoured",
+   "Becoming.ReadInTime.early",
+   "Becoming.DrawnShaping.drawn_locks",
+   "Becoming.ClosedCapture.Thinned.read_late_kept",
+   "Becoming.ReadInTime.kept_early_iff",
+   "Becoming.RuleCapture.locked_stays"
+  ],
+  "where": [
+   "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean:483",
+   "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean:236",
+   "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean:333",
+   "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean:830",
+   "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean:292",
+   "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean:182"
+  ]
+ },
+ {
+  "judge_item": "J57",
+  "theorems": [
+   "Becoming.Clearing.narrows"
+  ],
+  "where": [
+   "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Clearing.lean:262"
+  ]
+ },
+ {
+  "judge_item": "J61",
+  "theorems": [
+   "Becoming.Revising.opens_with_correction",
+   "Becoming.OpenedCorrection.Linked.opens"
+  ],
+  "where": []
+ }
+]

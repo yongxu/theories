@@ -1,0 +1,18 @@
+You are a reader for one read-only survey in the repository at /Users/ren/theories (a Lean 4 package and a map, "the atlas", built on it). Read first, whole, and follow to the letter:
+
+  /Users/ren/theories/tmp/fm/roads22/QUESTIONS-ROADS.md
+
+It says what the survey is for, what a road is, what counts as no road (N0 to N7 and ten further cases), the material, the four questions to answer of each item, and what may and may not be concluded. You are "the reader" of its section "How": one pass over all 393 items of /Users/ren/theories/tmp/fm/roads22/ITEMS.jsonl, answering Q1 to Q4 of each.
+
+Hard limits:
+- READ ONLY. Edit nothing in the repository. Run no Lean, no lake, no build, no gate, no check_becoming.py, no test suite, no git command that writes. This Mac is shared and busy: grep, sed, python scripts that only read are fine; nothing heavy.
+- Write only under /Users/ren/theories/tmp/fm/roads22/astra/ .
+- Answer from the store's full entries (theories/becoming/results/atlas/entries/dynamics.json and premises.json) and from the Lean statement you opened yourself, not from the index and not from an item's own words. Lead every answer with OPENED or TOLD. An item you could not open is "not read", never guessed.
+- No hoped-for answer. The forecast in the questions file is that almost none of the items is a road; a pass that finds few is as good as one that finds many. Do not stretch a verdict to make a road, an overlap or a blank.
+- Facts and verdicts as the questions define them; no sentence on what the whole result means for the map.
+
+Write:
+1. /Users/ren/theories/tmp/fm/roads22/astra/ANSWERS.jsonl : one JSON object a line for every one of the 393 items, in the order of ITEMS.jsonl, with fields: "item"; "read" ("OPENED", "TOLD" or "not read"); "theorems" (a list of {"name" full name, "file", "line"} for every theorem you opened for the item); "statement" (the statement of the theorem that carries the passage, quoted); "verdicts" (a list, each one of "ROAD", "ROAD IN TWO", "N0", "N1", "N2a", "N2b", "N3", "N5a", "N5b", "N5c", "N6a", "N6b", "N6c", "N7", "WALL"); "from" and "to" (dynamic ids; "to" a list where several dynamics carry the far end; null where none); "change" ("t", "p", "d" or null, with "change_quote" the words of the statement that show it); "side" ("premise", "outcome" or null); "strength" as the statement has it, and "store_strength"; "fields" (for a ROAD only: what Q4 asks); "against" (for a ROAD only: what would count against entering it); "note" (anything else, one or two sentences: for N2b the definition and the theorem that takes it; for N3 both notions and both dynamics; for N5 which end; for N6 the exit cited).
+2. /Users/ren/theories/tmp/fm/roads22/astra/REPORT.md : AI-written, saying which model wrote it. The lists the questions allow (roads; roads in two theorems; overlaps; walls; blanks; and a count by verdict of the passages inside one dynamic and the rest), each line with its item id, theorem, file and line, both ends and one sentence of evidence; then the items not read and why; then anything in the questions or the material that turned out wrong or could not be answered as worded; then what you did not do.
+
+Work through the items in order, in batches, writing ANSWERS.jsonl as you go so that a stop loses little. When all 393 lines are written and the report is done, finish with a short summary: counts by verdict, the item ids of every ROAD, ROAD IN TWO, N2b, N3 and WALL, and where the two files are.

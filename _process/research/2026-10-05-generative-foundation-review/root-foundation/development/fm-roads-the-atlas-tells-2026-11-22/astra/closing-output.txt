@@ -1,0 +1,23 @@
+**OPENED all 393 items.** The reader pass identified three proposed roads. Judge and checker confirmation is pending. [ANSWERS.jsonl](/Users/ren/theories/tmp/fm/roads22/astra/ANSWERS.jsonl) · [REPORT.md](/Users/ren/theories/tmp/fm/roads22/astra/REPORT.md)
+
+| Verdict | Count | Item IDs |
+|---|---:|---|
+| ROAD | 3 | C21, C30, C39 |
+| ROAD IN TWO | 0 | None |
+| N2b · Blank | 0 | None |
+| N3 · Overlap | 22 | T013, T014, T015, T035, T056, T066, T072, T080, X066, X198, X199, X200, C02, C10, C11, C12, C13, C14, C25, C26, C36, C38 |
+| WALL | 5 | C01, C08, C09, C32, C35 |
+
+| Other verdict | Count | Other verdict | Count |
+|---|---:|---|---:|
+| N0 | 16 | N5c | 0 |
+| N1 | 307 | N6a | 10 |
+| N2a | 31 | N6b | 30 |
+| N5a | 5 | N6c | 2 |
+| N5b | 22 | N7 | 0 |
+
+Counts overlap where an item received more than one verdict.
+
+── cx · ok · session 01a20302-6692-70c2-8f6e-403bcaee9697 · gpt-6.2-astra/xhigh · bypass (mirrors Claude) · 2051s · 14948.7k tokens · 124 cmds
+continue: cx -r 01a20302-6692-70c2-8f6e-403bcaee9697 "…"
+log: /Users/ren/.cache/cx/runs/20261122-182658-34602

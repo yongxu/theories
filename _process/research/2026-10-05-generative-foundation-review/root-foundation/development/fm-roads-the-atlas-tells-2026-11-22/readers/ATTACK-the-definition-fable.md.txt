@@ -1,0 +1,295 @@
+# Attack on the definition of a road and on N1 to N7, before the questions are frozen
+
+*AI-written. The reader is Claude Fable 5.2 (model id claude-fable-5-2), a subagent for board row FM, 22 November 2026. Read-only: nothing in the repository was edited, no Lean was run, no build, no gate, no git command that writes. Under attack: `tmp/fm/roads22/QUESTIONS-ROADS.md` as it stood with the store at `0db3aaacc`. Counts are by scripts of my own over `theories/becoming/results/atlas/entries/dynamics.json`, `premises.json`, `ITEMS.jsonl` and `INDEX-OF-DYNAMICS.md`; the scripts only read. Lean files are cited as `File.lean:line` under `…/lean/becoming/Becoming/`.*
+
+**OPENED** = I read the Lean statement and the store entry myself. **TOLD** = I have it from the item's text, the index or a field, and did not open the statement.
+
+The one question: how would this survey, answered honestly by its letter, return roads that are not roads, or miss the roads that are there?
+
+---
+
+## 0. The store, counted (OPENED, by script)
+
+| | to a dynamic (`to` an id) | to words | sum |
+|---|---|---|---|
+| exits with a law | 56 (exact 4, sufficient 30, necessary 2, witness 20) | 256 (exact 38, sufficient 50, necessary 27, witness 141) | 312 |
+| exits with no law | 15 (argued 6, a reading 9) | 2 (open 1, a reading 1) | 17 |
+| sum | 71 | 258 | 329 |
+
+Transitions 105: 98 with `between`, 7 without. No `between` end is an id (97 have two texts; one, `loss-read-in-time-by-the-others` transition 2, has `from: null`). The 7 without: five of kind "route (reading)" with no declaration (`four-routes-of-transition` 1 to 4, `what-seeking-cannot-separate` 1) and two with declarations (`margin-of-a-regime` 2, `a-pattern-lasts-through-passing` 1).
+
+`drops` is on 308 exits (all 56 lawed exits to a dynamic, 252 of the 258 to words); it is empty on 19 of the 56 and on 81 of the 252. `to_law` is on exactly the 56 lawed exits to a dynamic and equals `law` on 54; it differs on two (`selection-when-the-lumping-changes` exits 3 and 5: `law` in `Revising`, `to_law` in `OpenedCorrection.Linked`).
+
+**F0a. The out-of-scope list is wrong against the store.** The file says "the 71 exits that already name a dynamic; the 15 exits with no law". The 15 are inside the 71 (every one of them names a dynamic). The exits with no law are 17; the two that tell their far end in words are named nowhere, neither in ITEMS (256 = words with a law) nor out of scope. 71 + 256 + 2 = 329.
+
+**F0b. "T001 to T098, the transitions that tell two ends in words"**: T054 tells one (`from_words` is empty; the store has `from: null`).
+
+**F0c. What `drops` and `to_law` mean in `tools/research/atlas.py`** (OPENED): line 922, "only an exit to a dynamic names the law that places it there" (`to_law`); line 944, "an exit drops the premise its law shows failing"; lines 1946-1947 (the ledger page's own words), "An exit drops the premise its law shows failing as the course leaves"; lines 153-155, "an exact or a sufficient exit gives a condition under which the course leaves; a witness shows one constructed course that leaves, with no condition; a necessary exit says only what leaving requires, not that it happens"; lines 2016-2017, "A route chains exits that name a dynamic without checking that one exit's destination meets the next exit's conditions". So the store's exit is: X with a named premise failing, and where the course then is. It has two law slots, one for leaving and one for arriving. The survey's definition has one theorem and no slot for either; Q4 lists `to`, `law`, `edge`, `strength` and omits `to_law` and `drops` (carried by all 56) and `records` and `source` (required by `PARTS`, line 144).
+
+---
+
+## 1. The definition
+
+### D1. "Own notion" is decided by a quoted sentence, and a sentence can be quoted for three answers
+
+**Item X211** (OPENED). Home `a-step-coupling-keeps-at-every-horizon`, law `Becoming.Web.frontier_breaks_at_end` (`Optimum.lean:6054`), conclusion `∃ t, t ≤ n ∧ W.Broken t f c`, `drops: [optimum-ends-at-need, optimum-m-lt-c]`. Three honest answers, each with its sentence from an entry:
+
+- **N1**: the home's mechanism says "where c + e < m, every optimum breaks it within the horizon".
+- **ROAD → `keeping-forgoes-the-renewal-at-the-need`**: its mechanism says "leaves only optima breaking the dependence within the horizon", and the store's own exit 3 of the same home sends the same conclusion (`∃ t, t ≤ n ∧ W.Broken t f c`, by `Web.frontier_breaks_stepwise_long`, `Optimum.lean:6130`) to that dynamic.
+- **ROAD → `three-outcomes-of-a-loss`**: the only dynamic that lists `Becoming.Web.Broken`; its mechanism says "each step keeps, breaks, forms or dissolves each dependence". The aid already points C18 to C21 and C34 there on that declaration alone.
+
+Entries are written to tell every law on their lists (median mechanism 1,030 characters); 16 mechanisms contain the string "break". "Its name, mechanism and laws tell it" is met by nearly any listed declaration, so the test does not separate "about" from "mentions". Nobody is named as deciding.
+
+**Item C25** (OPENED). `Flow.More.unceasing` (`Population.lean:1294`): `more : L.More cs` with a census gives `W.Unceasing`. The aid: premise end `more-needs-renewers`, conclusion end `unceasing-generation-needs-renewal`. But the premise end's own name is "More needs more renewers; unceasing arising needs renewal", the theorem is on its list, and the two entries share declarations (`Web.Unceasing.rises`, `Flow.uptake_needs_replenishment`, …) and open with the same sentence. Unceasing arising is the own notion of both. The definition assumes a notion has one owner; Q2 asks for one Y.
+
+**Item C01** (OPENED). `Law.Drawn.not_returns` (`Attraction.lean:224`): `Drawn next s → ¬ Returns next s`. `Law.Returns` is listed under `recurrence-without-premise` only; "does not return" is in the name of `attraction-is-not-returning` ("Drawn exactly where it does not return"), of `necessarily-drawn-is-not-returning`, and `returning-where-the-course-branches` lists `Branching.Returns`. Lists are nearly a function (104 of 2,676 declarations sit under more than one dynamic); notions are not.
+
+*Smallest change:* (i) the far end is answered by the **set** of dynamics that carry the notion, the home among them or not; (ii) "carry" is made checkable against a field the store has: the dynamic's `premises[].takes` (ledger ids with Lean names) and what its laws conclude. A road arrives either at **premises a law of Y takes** (Y's law goes on from there) or at **what a law of Y concludes**; the reader says which and names the law. X211 against `three-outcomes-of-a-loss` then reads: `Web.kept_or_broken` concludes Broken (outcome side); the laws about a loss take `web-below-need-after` (below the need at every later step), which a break at one step within a horizon does not give. That is said on the line instead of argued from a sentence.
+
+### D2. The index cannot carry the judgment
+
+OPENED by script: the index shows 39% of the mechanism text (179 of 186 mechanisms exceed 420 characters), cuts 64 of 186 declaration lists (741 of 2,785 declarations not shown) and shows no `premises`, `forbids` or `beyond`. Of the 56 lawed exits the store already draws to a dynamic, the law is shown under Y in the index for 32 (law or `to_law`: 34). What a reader or judge can do from the index is match a declaration name to the block that lists it, which is N5 used as the confirming test.
+
+### D3. "With one of X's premises dropped": a road, or a boundary of X
+
+The store's field says which premise (F0c). With a premise of X failing, the course of the theorem was never under X: the statement compares X with its neighbour, and no course moves.
+
+**Item X001** (OPENED). `Run.leaving_needs` (`Attraction.lean:524`): inside R at n, outside at n + 1, so the move at n does not keep R. `drops: [run-moves-keep, invariant]`, strength necessary. Far end: "outside the region". This is where X stops, not where a course goes.
+
+**Item X115** (OPENED). `Law.rests_iff` (`Seeking.lean:138`), `drops: [seeking-morethannow]`: both sides are the home's own notion ("where seeking rests") with one of its premises not taken. A boundary by the letter of the definition can be called a passage "with one of X's premises dropped" to whichever dynamic tells of rest.
+
+**The store's own practice** (OPENED): `two-sided-regulation-and-late-reading` exit 3 → `loss-of-renewal-for-good`, sufficient, `Flow.never_returns_below` (`Continuation.lean:450`), `drops: [flow-opposes]`. Hypotheses: below m at T, no net giving below m; conclusion: below m at every T + n. Nothing passes from one notion to another in the statement; a class of courses (X without one premise, with a condition) is contained in Y's outcome. So the store's sufficient exit is exactly what N3 calls containment, unless the dropped premise is counted as the change. The definition must say that it is, and the line must carry it.
+
+*Smallest change:* the reader quotes **what changes**, one of three: (t) an index (near end at one step, far end later or from a step on), (p) a parameter range, (d) a dropped premise by its ledger id. With none quotable the answer is N3. A (d) road is listed apart from a (t) or (p) road, since in (d) no course moves.
+
+### D4. "One theorem"
+
+- The store has two-theorem roads: `law ≠ to_law` on two exits (F0c). **Item X214** (store entry OPENED; `OpenedCorrection.lean:168` and `Revision.lean:218` OPENED): its law `OpenedCorrection.Linked.opens` is the `to_law` of `selection-when-the-lumping-changes` exit 3, whose `law` is `Revising.opens_with_correction`. By "one theorem" this road, which the atlas draws, would not be found.
+- 57 of the 98 transition items list two or more declarations, commonly one a side. **Item T036** (`Optimum.frontier_keeps_above`, `Optimum.lean:4614`, OPENED; `Optimum.frontier_breaks_below` TOLD from the item's condition): the statement opened has no course on one side in its hypotheses and on the other in its conclusion; it says "on this range of w (`r * n + e < w + q * n`), this outcome", and the item's condition gives the other range to the other declaration. For a tipping in a parameter the passage is the pair. Q1's "the transition's first declaration that states the passage" leaves the second side unread.
+
+*Smallest change:* an answer **ROAD IN TWO** (both theorems named, the state between them quoted), listed apart; for a transition every declaration is opened and each side placed.
+
+### D5. The near end is assumed, and for transitions and exits it is fixed at the home
+
+**Item T020** (OPENED). Home `a-rule-with-no-holder-does-not-return`; first declaration `RuleRebuilding.«不及任则持尽»` (`RuleRebuilding.lean:658`), which is the `law` of `a-rule-rebuilt-from-the-members-it-limits` exit 2 → the transition's home. The passage arrives at the home. Q2 asks only whether the conclusion is "the own notion of a dynamic other than the home": it is the home's, so N1. The road into the home, which the store draws from the other entry, is neither found nor recognised as drawn.
+
+Same shape, by script (store OPENED, statements OPENED for T036, T072, T080; T021 and T088 TOLD): T021, T036, T072, T080, T088, and exits X009, X069, X130. **T072**: `Regulation.held_oscillates` (`Regulation.lean:1759`) is the law of `two-sided-regulation-and-late-reading` exit 4 → `late-relay-oscillates`, the transition's home; at the home both sides (settles, `Regulation.lean:1364`; oscillates) are its own, so N1 is right there and the same theorem is a drawn road from elsewhere.
+
+**Item C22** (OPENED). `PoolFromCourse.stands_not_readmitted` (`PoolFromCourse.lean:271`): `(accrues : Accrues fB) : NotReadmitted (Stands K) (join fA fB)`. Q2: "the home is the dynamic whose notion is in the premises", so home = `closed-capture`; the conclusion is `the-lock-draws-its-readers-out`'s own; by the letter ROAD `closed-capture` → `the-lock-draws-its-readers-out`. But `ClosedCapture.Accrues` is ledger premise `closedcapture-accrues`, taken by laws of seven dynamics, `the-lock-draws-its-readers-out` among them; the theorem is on that dynamic's own list. It is a law inside Y with one of Y's premises declared in X's namespace. Seven of the 39 candidates (C02, C04, C05, C06, C22, C24, C29) have `closed-capture` as premise end on this declaration alone.
+
+*Smallest change:* both ends are in question for every item; the near end is answered like the far end (which premises of X's laws the hypotheses are, by ledger id); a premise the ledger shows taken by laws of the other end, or of three or more dynamics, places the course under none by itself.
+
+---
+
+## 2. The seven tests
+
+### N1. Inside one dynamic
+
+**Item T080** (OPENED). Home `a-step-coupling-keeps-at-every-horizon`, "tipping in a parameter": `Optimum.frontier_keeps_stepwise` (`Optimum.lean:5449`) on one side, `Web.frontier_breaks_stepwise_long` on the other. N1's parenthesis "(below and above its threshold, before and after its deadline)" answers it N1. The store's exit 3 of the same home draws the far side, by the transition's second declaration, as `keeping-forgoes-the-renewal-at-the-need` (sufficient, `drops: [optimum-r-le-q-plus-c]`). Two readers: N1 and N6. "Expected of most transitions" tells the reader the answer before the search; it is also a count told as an expectation.
+
+*Smallest change:* strike the parenthesis and "Expected of most transitions"; N1 is answered only after the far end has been searched, and means: the home is among the dynamics that carry the far end.
+
+### N2. To no dynamic; blanks
+
+Nothing in N2 says what makes a going-on "in its own right". **Item X138** (OPENED): `Courses.run_stays_iff` (`Courses.lean:733`), far end "the meaning is no longer a candidate after n + k steps … and it stays out at every later step". A consequence (a), a blank (b: an elimination that holds for good), or N1 (the home is `encounter-selection-and-revision`)? Each is defensible. The checker's "a place or only a phrase" has no criterion either, so every blank can be struck or every phrase kept.
+
+*Smallest change:* a three-way test on things that can be looked up. The far end has a definition in the Lean (name it), and (i) a theorem on some dynamic Z's list takes it among its hypotheses: then it is a far end on Z's premise side, to be answered as a ROAD candidate to Z; (ii) a theorem on no dynamic's list takes it: a blank, with the definition and that theorem named; (iii) nothing takes it, or it has no definition: N2a, an end or a property. The checker keeps or strikes a blank by (ii) alone.
+
+### N3. An overlap, against `exact` in Q3
+
+They collide. Q3: exact is "an iff whose one side is the condition and whose other side is the passage". N3: "an iff with no course moving". N7: "an iff both of whose sides are places gives two candidate roads or none".
+
+**Item X200** (OPENED). `World.arising_iff_ceasing` (`Space.lean:255`): `w.ArisingRecurs ↔ w.CeasingRecurs`, store strength exact, `drops: []`. Neither side is a condition; both are properties of one course. N3 by the letter. But the store draws its sibling `World.arising_iff_ceasing_decided` (`Decidedness.lean:843`), the same iff, as exit 3 of the same home → `recurrence-without-decidedness`, exact, and that entry says "arising recurs exactly when ceasing does". Three readers: N3; N7 (two roads or none); ROAD exact on the store's precedent.
+
+All four `exact` exits the store draws to a dynamic are of this form (OPENED): `Lasting.avoids_iff_closed` (`Lasting.lean:481`, `never-leaving-a-guard` → `not-going-out-of-a-region`), `Lasting.lasts_iff_ladder` (`Lasting.lean:156`), `Settling.keeps_changing_iff` (`Settling.lean:302`), `World.arising_iff_ceasing_decided`. By N3 the survey would file the store's own exact roads as overlaps. That may be right, and it is a finding for row DJ; but it has to be known before the survey's list is read against the store, and the questions do not say it.
+
+**Item X011 / T004** (store OPENED, statement TOLD): `RegimeMargin.ends_iff_below`: the start below H + y ↔ the level reaches 0. One side a condition on the start, the other an outcome. This is what Q3's exact means, and N3's "no course moving" must not catch it.
+
+**Containment.** **Item C13** (OPENED): `Juncture.returns` (`Junctures.lean:116`), a juncture on the course of s returns: same configuration, same index, N3. **Item C38** (OPENED): `TurningInTime.locked_at_class` (`TurningInTime.lean:1309`), a locked member meets `«本类至终有常»` and `«所缘同于»`: one dynamic's case made an instance of another's law, the first kind of link. **Item C25** above: all of X's premises kept, nothing later, nothing dropped. A reader who takes "a course … under X's own notion … under Y's own notion" without asking what moved calls each a ROAD.
+
+*Smallest change:* N3 is "nothing of (t), (p), (d) can be quoted"; an iff is sorted by rule (replacement text below).
+
+### N4. A witness only
+
+It is listed as a no-road test and Q2 makes it one of the exclusive answers ("Answer one of: ROAD home → Y …; N4; …"), while its own text says "at most a road of strength `witness`" and Q3 has `witness` as a strength. By the letter all 141 witness exits return "N4" and no far end is named. Those 141 are read by the Astra pass only, so nothing else can show a road missed there. In the store 20 of the 56 lawed exits to a dynamic are witness exits.
+
+**Item X214** (above): a witness exit whose law is the `to_law` of a drawn road. **Item X007** (TOLD: item text; I did not open `Becoming.Restored.returns`): a part inactive at step 1 is active from step 2, `drops: [flow-gated]`; "restored" is told by `three-outcomes-of-a-loss` ("continuing unweakened means restored"); the same law serves X045 and X075 from two other homes. Answered N4, the three lose their far end.
+
+The real no-road risk with a witness is another one: the example carries Y's name or is built in Y's module, and no theorem places it under Y. The store's witness roads carry a `to_law` for this (`reading-a-loss-in-time` exit 3: `FourReaders.recoverable_iff_regime`).
+
+*Smallest change:* N4 leaves the list of answers. A witness is answered through Q2 like any item, `witness` goes in Q3, and it is a ROAD only where a theorem (named) shows the built course under Y.
+
+### N5. A match by name
+
+It speaks of the far end only, and of "a word or a declaration". Three more ways the letter lets a match through:
+
+- **A shared premise as the near end.** C22 above (`Accrues`).
+- **A structure or carrier.** **Item C27** (OPENED): `Run.rangeIncludes_conditions_iff` (`ReachableRanges.lean:263`); the "premise notion" is `Becoming.Conditions`, the structure the statement is stated on; the statement is an identification ("range inclusion of two courses is 07's inclusion"), so N3 too.
+- **Said of another thing than the course.** **Item C07** (OPENED): `Law.Commutes.halfway_returns` (`Commuting.lean:191`): `moves : Diagonal.Moves Eq σ` is said of the exchange σ, not of the law T whose run it is; `a-map-moving-every-value-never-rests` is about a map revising along its own run.
+- **Two declarations, one word.** C07's conclusion is `Branching.Returns (process T) x`: the notion for processes with choices, said of a determined law through `process`. `returning-where-the-course-branches` lists `Branching.Returns`; the entries about a determined law's return are others. Here a theorem carries one to the other (`Branching.law_returns_iff`, `Branching.lean:533`), so it is not a reading; where none does, it is one. Q4 has "a notion that is Y's only under a reading" as something that "would count against entering" a ROAD already called. It belongs among the no-road tests: this is the dictionary row DJ warned of.
+
+### N6. Already drawn
+
+"An exit of the home dynamic already names Y with this law." ITEMS holds only exits to words and candidates "that no exit or transition names", so as worded N6 can almost never fire. The live cases are three, none covered: (a) drawn from the other end's entry with this theorem (T020, T021, T036, T072, T080, T088, X009, X069, X130, X214 by script); (b) the home already names Y by another law; (c) the home, or the other end, names Y with no law (15 exits, argued or a reading): there a theorem found would be the exit's first law, which is the survey's most useful line and has no place to be written. The 15 are also out of scope as items.
+
+### N7. Direction
+
+- **Denied notions.** The aid counts a denied notion as the conclusion's. **Item C09** (OPENED): `Web.never_revisits_of_arrow` (`Entropy.lean:1265`): `W.Arrow cs T S → ¬ W.Revisits cs T`. Aid: premise end `an-arrow-leaves-change-not-recurring`, conclusion end `lossless-exchange-continues-and-returns` (which lists `Web.Revisits`). The theorem is the arrow entry's own law and its conclusion is that entry's name; it shows that no course with an arrow is under the other's notion. By Q2's letter a reader can return ROAD arrow → lossless, the opposite of what is proved. Same shape: C01 (`¬ Returns`), C32 (`RemovesLine.not_standsLate`, `ReadingsPersist.lean:560`), C35 (`Nearing.not_rising`, `SetPointOptimum.lean:289`), C08 (TOLD). The store does draw a denial as a road where the denial is the far entry's own notion: `lossless-exchange-continues-and-returns` exit 1 → the arrow entry by `Flow.Balances.never_revisits` (`Entropy.lean:1181`, conclusion `¬ W.Revisits cs T`). So the rule cannot be "a negation is no road"; it is "no road to the dynamic whose notion is denied".
+- **Necessary laws.** Q3: necessary is "the passage implies the condition". Then the far end stands among the hypotheses and the conclusion is the condition (X001: `leaves : ¬ R (r.state (n + 1))` is a hypothesis). The definition puts the far end in the conclusion, and Q2 and the judge are asked about "the conclusion". For the 27 necessary items the letter either finds no road or takes the condition for the far end. **Item X009** (OPENED): `Web.consumed_continues_transformed` (`Dependence.lean:269`); its conclusion (the dependence weakened) is what the store gives as the far end, at home `three-outcomes-of-a-loss` and again as the drawn exit 2 of `loss-of-renewal-for-good` → that home. And by `atlas.py` 153-155 a necessary exit does not say that any course passes: such a line is a condition on a road, not a road shown taken.
+- **An iff**: see N3.
+
+---
+
+## 3. The candidates C01 to C39
+
+OPENED by script, and 22 of the 39 statements opened.
+
+- "Home" does not make sense for them. `listed_under` is empty for 16; it is the premise end for 11, the **conclusion** end for 8 (C02, C03, C17, C22, C23, C24, C37, C39), and a third dynamic for 4 (C29, C30, C33, C38). **C33** (OPENED): `RegimeMargin.Adjusted.fates` (`RegimeMargin.lean:1670`) is filed under `threshold-in-the-state-plane`; its "premise end" is `where-a-run-of-a-regime-comes-to-rest` (on `Band`, `Rises`) and its "conclusion end" is `margin-of-a-regime` on the term `RegimeMargin.step` appearing in the statement.
+- `premises_only` and `conclusion_only` carry the position of a declaration in an implication. They do not carry: denial (C01, C08, C09, C32, C35); whether the hypothesis is about the course (C07); whether it is a premise many dynamics take (seven on `Accrues`); which side of an iff (C20, C27, C29, C39; the file says this one).
+- Three have two premise ends and two have two conclusion ends; Q2 gives no way to answer for a pair.
+
+*Smallest change:* for a candidate there is no home; X and Y are both named from the statement; `listed_under` is told as where the atlas already tells the theorem; the aid's blind spots are added to the material's description.
+
+---
+
+## 4. The judge
+
+As worded: "shown the theorem's statement and the index and asked which dynamic's own notion, if any, the conclusion is; a road stands only where the judge names the same Y."
+
+- **J1. From the index alone the task is declaration matching** (D2). For C22 the declaration of the conclusion's notion, `PoolFromCourse.NotReadmitted`, is not in the index at all (its list is cut); likewise `TurningInTime.windowAlone` (C37, C39) and three more of C39's.
+- **J2. Reader and judge share the cue.** Since lists are nearly a function, both name the dynamic that lists the conclusion's declaration. On C01 the judge names `recurrence-without-premise` for `¬ Returns` and so confirms a road against the statement. Agreement shows a shared cue, not a recognition made twice.
+- **J3. The judge's queue is all ROADs.** "If any" allows none, but every item shown was called a road by someone. With 186 blocks there is always a nearest. No decoys, no rate of "none" reported.
+- **J4. The judge is asked about the conclusion only**: not the near end (C22), not what changes (C13, C25, C38), not denial (C09), not a necessary law's far end (X001).
+- **J5. "The same Y"** fails a true road where the notion has several owners (C25, C01), and drops it silently: the file does not say that a road the judge does not confirm is listed.
+- **J6. No measure of the instrument.** The store holds 56 lawed exits that already name a dynamic. Shown to the judge with `to` and `to_law` withheld they say what the questions do with roads the atlas has: how many the judge places where the store does, and how many (the four exact at least) the questions call overlaps. Not as an answer key: where the two part is a finding.
+
+## 5. The checker
+
+- It opens ROADs and blanks only. An N1, N2a, N3 or N5 given wrongly is never looked at again, and for the 141 witness items there is one reader, so no disagreement can show it. Missing a road is unguarded.
+- "A place or only a phrase" has no criterion (N2).
+- A check that costs nothing is unused: 26 theorems are named by more than one item (53 items; 11 theorems across two homes, 6 across two families; 15 are a transition and an exit of one home). Whether the items naming one theorem were answered alike is a test of the questions.
+- Short names repeat: two `frontier_keeps_above` in `Optimum.lean` (line 4614 concludes `Keeps m n x`; line 4949 concludes a need met at every step of a web) and two `frontier_keeps_stepwise` (lines 5449 and 6032), three `rests_iff`, two `run_stays_iff`. A statement quoted without file, line and full name can be the wrong theorem; neither Q1 nor the checker asks for them.
+- Readers "divided by the atlas's families so that a reader holds a region": the far end of a road across families lies in a region the reader does not hold and is seen only through the index (D2).
+
+---
+
+## 6. A count made into an aim, in disguise
+
+- Line 3: "its best outcome is a list on paper, each line with its theorem and its two ends". The best outcome is named as roads, six lines before "It does not ask for a count to raise".
+- "Why this": "So the atlas tells many passages and draws few as roads." 71 of 329 and 0 of 105 are set as a shortfall. An exit told in words is not an undrawn road: 81 of the 252 with `drops` drop nothing, and are outcomes the home's own laws tell.
+- The title: "passages between dynamics that the Lean already has and the atlas does not draw" presupposes them.
+- N1: "Expected of most transitions".
+- The stages: only a ROAD is judged and checked, and a ROAD goes forward if "at least one reader" calls it. What is counted, scrutinised and reported is roads; the other three lists are by-products "met on the way".
+- "It may not say how many roads the map has, nor that a region has none": right, and it should also bar comparing families or regions by how many lines each has.
+
+## 7. Ren's words
+
+OPENED: `sources/15-codex-theory-conversations/2026-11-16-no-corners-the-interconnected-map.md` line 17 and `…/2026-11-22-does-our-map-have-a-centre.md`.
+
+- "Ren's words of 16 November ask for the second". His sentence: "if further unification, coherence, one model, whatever we call it, that creates the interconnected map that include meta-attractor(cancer), and the generative, continuation dynamics, fully connected, with phase transitions, attractors, paths clearly mapped out, is what we want, we will keep moving toward this direction". It is conditional ("if … is what we want"); "fully connected" stands beside the three; that the words are "of the second kind" is row DJ's reading, and the source file of 22 November says so under "How the sessions read it … Nothing below is his". He did not say that a path is a theorem from one atlas dynamic to another. The survey also sets "phase transitions" inside one dynamic aside as N1 and has no question about attractors, so of the three it takes one.
+- "on 22 November he asked whether our approach is right for the map 'to be represented as the map'". His words: "we want the map to be represented as "the map" - is our approaching right?" The file joins the two clauses with "for". The source file says "He did not say … what 'represented as the map' asks for", and row DJ's plain sense of it there is "one thing to look at", not roads. Cited in "Why this", it lends a roads survey a ground he did not give.
+- "Every join landed this week is of the first kind": TOLD; not checked here.
+
+---
+
+## 8. Exact replacement text
+
+### R1. Line 3, the clause after "nothing is entered on the atlas,"
+
+> and what it returns is four lists on paper (roads, overlaps, blanks, passages inside one dynamic), each line with its theorem, its ends and who read it, for the session that holds the atlas (row DJ) to judge. None of the four is the wanted one.
+
+### R2. "Why this", from "Ren's words of 16 November" to the end of the first paragraph
+
+> On 16 November Ren wrote of an interconnected map "fully connected, with phase transitions, attractors, paths clearly mapped out" ([his words](../../../sources/15-codex-theory-conversations/2026-11-16-no-corners-the-interconnected-map.md); the sentence is conditional). That these words are of the second kind is row DJ's reading of 22 November, which this row takes; he did not say it, nor that a path is a theorem from one dynamic of the atlas to another. Of the three things he names this survey takes one: a transition inside one dynamic it sets aside (N1), and it asks nothing about attractors. His question of 22 November is not a ground for this survey: he did not say what "represented as the map" asks for. By script on main `0db3aaacc`: of 329 exits 71 name another dynamic (56 with a law, 15 with none) and 258 tell the far end in words (256 with a law, 2 with none); of 105 transitions none names a dynamic at either end. Nobody has asked, passage by passage, whether a far end told in words is another dynamic of the atlas. That is a question not yet read, not a shortfall: an exit told in words is not an undrawn road.
+
+### R3. "What a road is, for this survey": the whole paragraph
+
+> A **road from X to Y**, X and Y two different dynamics of the atlas, is a theorem of the package in whose statement three things can be quoted.
+>
+> 1. **The near end.** Hypotheses that place a course (a run of a process, an orbit of a law, a population over generations, the optima of an order) under X: premises that X's laws take (the ids in X's `premises[].takes`, with the ledger's Lean names) or the notion in X's name. A premise that the ledger shows taken by laws of Y too, or of three or more dynamics, places the course under none of them by itself.
+> 2. **What changes**, one of: **(t)** an index: the near end holds at a step, generation or date and the far end at a later one or from one on; quote both indices. **(p)** a parameter: the statement, or it and its twin for the other side, gives the far end on one stated range of a parameter and X's own outcome on the other; quote both ranges and name both theorems. **(d)** a dropped premise: a premise X's laws take that the theorem does not take or contradicts; name its ledger id (for an exit, the store's `drops`). In (d) no course moves: the statement sets X beside its neighbour, and the line says so. Where none of the three can be quoted it is no road (N3).
+> 3. **The far end.** The part of the statement that places that course under Y: on the **premise side**, it gives premises that a law of Y takes (name the law, the ids given and the ids not given), so that Y's law goes on from there; or on the **outcome side**, it is what a law of Y concludes (name the law). For a `necessary` law the far end stands among the hypotheses and the conclusion is the condition.
+>
+> A notion can be carried by several entries. The far end is answered by every dynamic whose name or laws carry it, not by one; where the home is among them the answer is N1. That a sentence of an entry's mechanism mentions a notion, or that its list holds a declaration, does not make the notion that entry's.
+>
+> Where one theorem takes the course out of X to a state and another, with that state among its hypotheses, places it under Y (the store's `law` and `to_law`), the pair is a **road in two theorems**, listed apart with both named.
+
+### R4. N1
+
+> - **N1. Inside one dynamic.** The home is among the dynamics that carry the far end. Answered only after the search of Q2. The kind of a transition does not decide it: the two sides of a threshold can be two dynamics.
+
+### R5. N2
+
+> - **N2. To no dynamic.** No dynamic's name or laws carry the far end. Then: **(a)** an end or a property: the far end has no definition in the Lean, or no theorem takes it among its hypotheses (a bound, a count, "is decided", "outside the region"). **(b)** a **blank**: it has a definition (name it) and a theorem on no dynamic's list takes it among its hypotheses (name it): something goes on from there and the atlas has no entry for it. If a theorem on some dynamic Z's list takes it, it is neither: answer it as a far end on Z's premise side.
+
+### R6. N3
+
+> - **N3. An overlap, not a road.** Nothing of (t), (p), (d) can be quoted: two notions are said of one thing at one index. An iff between two properties of one course or configuration; an implication with every premise of X kept and nothing later ("every X is a Y"); a theorem that makes one dynamic's case an instance of another's law. Listed apart with both notions and both dynamics. Where the store draws a theorem of this form as an exit (its four `exact` exits to a dynamic are of it), say so; it is still N3 here.
+
+### R7. N4: remove it from "what counts as no road" and from Q2's answers; put this under Q3
+
+> A **witness** is answered through Q2 like any item. It is a road of strength `witness` only where a theorem, named, shows the built course under Y (the store's `to_law`). That the example is built in Y's module or carries Y's word is N5.
+
+### R8. N5
+
+> - **N5. A match by name, at either end.** The statement shares a word, a namespace or a declaration with a dynamic, and (a) the entry is about something else; or (b) the declaration is a premise or carrier that laws of several dynamics take, or a structure the statement is stated on, or is said of something other than the course; or (c) the statement's notion and the entry's are two declarations and no theorem carries one to the other. Under (c) name the carrying theorem, or answer N5: a reading that two notions are the same is not a link.
+
+### R9. N6
+
+> - **N6. Already drawn.** An exit of the atlas, in the home's entry or in the other end's, already names this pair: **(a)** with this theorem as its `law` or `to_law`; **(b)** with another law; **(c)** with no law (argued, or a reading). Say which and cite the exit. Under (b) and (c) the theorem is still listed, as a further law or as a law for an exit that has none, with whether its edge is that exit's edge.
+
+### R10. N7
+
+> - **N7. Direction.** Say which way the statement goes, quoting it. An iff one side of which is a condition on the start, the rule or a parameter and the other an outcome of the course is one passage, from the condition to the outcome, `exact`; its converse is no second road. An iff of two outcomes at different indices gives two candidates, each answered apart. An iff of two properties at one index is N3. A conclusion that denies a notion is no road to a dynamic that carries the notion; it is answered against the dynamics whose entries are about the denial, and where there is none it is N2a, a boundary of X. A theorem that shows no course under X's premises is under Y's notion is a **wall**, listed apart.
+
+### R11. Material: the description of T, of C, and the out-of-scope line
+
+> **T001 to T098**, the transitions with a `between`, each with its declarations (97 tell two ends in words; T054 tells only the far one);
+
+> **C01 to C39** … (row DJ's aid: a floor and a list of places to look first. It shows where a listed declaration stands in an implication and nothing more: it shows no direction for an iff; a denied notion counts as the conclusion's; a premise that laws of many dynamics take is filed under one (`ClosedCapture.Accrues`, in seven of the 39); it does not tell whether a hypothesis is said of the course. A candidate has no home: 16 are on no dynamic's list, 11 on the premise end's, 8 on the conclusion end's, 4 on a third dynamic's.)
+
+> Out of scope, said so that it is not taken as checked: the 71 exits that already name a dynamic (56 with a law; 15 with none, argued or a reading, for which a theorem would be a first law: not looked for here, except as N6c says); the 2 exits in words with no law; the 7 transitions with no `between` (5 routes that are readings, with no declaration, and 2 with declarations); any passage the atlas does not tell at all and the aid does not show.
+
+### R12. Q1, added at its end
+
+> Give the file, the line and the full name: short names repeat across namespaces. For a transition open every declaration, not the first; where each side has its own theorem, say which gives which side.
+
+### R13. Q2
+
+> **Q2. The two ends.** Both ends are in question for every item: the home is where the atlas files the passage, and can be its far end; a candidate has no home. Without looking for a hoped-for answer, in the store and not in the index: (a) the near end, as the definition's 1; (b) what changes, as its 2, quoted; (c) the far end, as its 3: every dynamic whose name or laws carry it, each entry opened, premise side or outcome side. Answer one of: **ROAD X → Y** with (t), (p) or (d) and the side; **ROAD IN TWO**; **N1**; **N2a**; **N2b** (the definition and the theorem that takes it); **N3** (both notions, both dynamics); **N5** (which of a, b, c, at which end); **N6** (a, b or c, the exit cited); **N7** (which clause); **WALL**. A witness and a necessary law are answered the same way; their strength goes in Q3.
+
+### R14. Q3
+
+> **Q3. The strength, as the statement has it.** `exact` (an iff one side of which is a condition on the start, the rule or a parameter and the other the passage; an iff of two properties at one index is N3, not `exact`), `sufficient` (an implication to the passage), `necessary` (the passage, far end included, is among the hypotheses and the conclusion is the condition: what passing requires, not that any course passes), `witness` (a built example, with the theorem that places it under Y). Where the store's strength differs from what the statement says, say so.
+
+### R15. Q4
+
+> **Q4. What the atlas would need to say so.** For a ROAD: `to`, `law`, `to_law` (the theorem that places the course under Y; the same as `law` unless the road is in two theorems), `edge` in words taken from the statement and no further, `strength`, `drops` (ledger ids); `records` and `source` are row DJ's. And what would count against entering it: a hypothesis of the theorem that X's entry does not have and the edge does not say (the road then starts from a part of X); a premise of Y's law that the conclusion does not give (the course reaches Y's word and Y's law does not yet speak of it; a break at one step is not a loss at every later step); a far end that is Y's only through a carrying theorem, named.
+
+### R16. "How", from "Then, for every item some reader calls a ROAD" to the end of that paragraph
+
+> Then a judge who took no part. Its queue, unmarked and shuffled: every item some reader called a ROAD or a ROAD IN TWO; as many again that every reader answered N1, N2a or N3; and the 56 lawed exits of the store that already name a dynamic. The judge is given each theorem's full name, file and line, the Lean to open, and the entries of the store remade by script with `exits` and `transitions` removed and nothing cut; it is not given the item's home, its words or any answer. It is asked the whole of Q2, and "no road" is a full answer. A road is confirmed where the judge quotes a change, the dynamics it names for the far end include the reader's Y, and it answers none of N3, N5, N7 or WALL. A road not confirmed is listed as "reader ROAD, judge otherwise" with both answers, not dropped; an item no reader called a road and the judge does is listed too. Reported with the lists: on how many of the unmarked non-roads the judge named a road; of the 56, how many the judge places where the store does and how many it answers N3 (not an answer key: where the questions and the store part is a finding for row DJ). Then a checker on the lists as wholes: every ROAD opened against both entries in the store; every blank kept or struck by N2b's two things alone; the 26 theorems that more than one item names (53 items) read for whether their items were answered alike; a sample, its size said beforehand, of N1 and N2a answers opened as the ROADs are, the witness items among them, since those have one reader; the disagreements between the readers and the Astra pass listed, not resolved by vote.
+
+### R17. "What the survey may and may not conclude", first two bullets
+
+> - It may list: roads, each with (t), (p) or (d), its side, its strength and who read it, confirmed by the judge and the checker; roads in two theorems; overlaps; walls; blanks; passages inside one dynamic. A road by a dropped premise, a `necessary` road and a `witness` road are each listed under that name and not with roads along which a theorem shows a course moving.
+> - It may not say how many roads the map has, nor that a region has none, nor set families or regions beside each other by how many lines each has: only what was found in what was read.
+
+---
+
+## 9. What I would add to "what counts as no road"
+
+1. **A boundary of X.** A premise of X dropped, or X's own notion denied, and the far end is only "not X" (X001). Answered N2a; never a road by "with one of X's premises dropped" alone.
+2. **A wall.** The theorem shows that no course under X's premises is under Y's notion (C09, C35, C32, C01). Listed apart: it says there is no road there while the premises hold.
+3. **A shared premise or carrier taken for an end.** A ledger premise that laws of several dynamics take (`Accrues`: C22 and six more), a structure the statement is stated on (C27), a hypothesis said of something other than the course (C07).
+4. **Same by a reading.** The statement's notion and the entry's are two declarations with no theorem carrying one to the other. Moved here from Q4.
+5. **A case, not a passage.** The theorem makes X's case an instance of Y's law at one index (C38), or contains X with every premise kept in Y (C25, C13). N3, whatever the verb of the docstring ("makes", "forces", "breaks").
+6. **A word of Y reached, not Y's premises nor what its laws conclude.** The conclusion matches a phrase in Y's mechanism and gives no premise a law of Y takes and nothing a law of Y concludes (X211 against `three-outcomes-of-a-loss`: a break within a horizon, where the laws about a loss take below-the-need at every later step).
+7. **A necessary law with no course shown to pass.** The far end is a hypothesis; no theorem shows it can be met from X. Listed as a condition on a road, under `necessary`.
+8. **A witness placed by its name.** A built example in Y's module or with Y's word, and no theorem placing it under Y.
+9. **Drawn already from the other end** (N6a), so that a transition filed at the far end is neither answered N1 nor returned as new.
+10. **The wrong theorem.** A statement quoted by short name from another namespace; an item so answered is "not read".
+
+## 10. What I did not do
+
+I opened 22 of the 39 candidates' statements and about 25 other statements; the rest of what I cite about items is from their text and the store's fields, marked TOLD where a finding rests on it. I did not read the 141 witness items. I did not check "Every join landed this week is of the first kind". I ran no judge; J2 is an argument from how the lists are built (104 of 2,676 declarations under more than one dynamic), not a measurement.

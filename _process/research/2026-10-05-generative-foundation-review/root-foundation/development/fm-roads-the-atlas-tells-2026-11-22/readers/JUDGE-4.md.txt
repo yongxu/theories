@@ -1,0 +1,222 @@
+# JUDGE-4: fifteen items of QUEUE-4, judged from the statements and the entries
+
+*AI-written (Claude Fable 5.2, model id claude-fable-5-2), 22 November 2026, as a judge for board row FM who took no part in the survey. Read only: nothing in the repository was edited, no Lean, build or gate was run.*
+
+**What was read.** DEFINITION.md whole; QUEUE-4.json; ENTRIES-WITHOUT-EXITS.json and the ledger `premises.json` by script (every entry named below was opened: its mechanism, its declarations and its `premises[]` with `takes`); the live Lean under `.../lean/becoming/Becoming/`. Every answer below is OPENED: the Lean statement and the entries were read by me.
+
+**What was opened by mistake, or nearly.** No file under `tmp/fm/roads22/` other than the two judge files and this return was opened. I listed the file names of `tmp/fm/roads22/readers/` once (five names, none opened). One grep for `Flow.settles` ran over the whole `lean/` tree and printed matching lines from frozen copies under `becoming-checks/`; they were used only to find the name's home, and the statement of J24 is quoted from the live `Regulation.lean`. Neither bears on a verdict.
+
+**Three conventions I used, so they can be checked.**
+1. For a theorem with no hypotheses (a witness), the conjuncts of the statement are read as placing the built course: there is no hypothesis side.
+2. "The home carries the far end" (N1) is answered from the home's name and from its laws other than the item itself and other than hypothesis-free witnesses. That the item is on an entry's list is not counted as that entry carrying its conclusion.
+3. A premise id is said to place a course under X "jointly" where no single id does (each shared) and only X's law takes the whole set; this is said where used (J44).
+
+Short names of the dynamics, used below: ORDB `optima-rebuild-a-depleted-base`; ODFE `others-drawing-first-end-the-base`; ASCK `a-step-coupling-keeps-at-every-horizon`; KFR `keeping-forgoes-the-renewal-at-the-need`; TSR `two-sided-regulation-and-late-reading`; OBG `overshoot-beyond-the-gap`; WDBRE `whole-drawing-beyond-renewal-ends`; WPTG `whole-persists-through-generation`; RRM `a-rule-rebuilt-from-the-members-it-limits`; RNH `a-rule-with-no-holder-does-not-return`; SBBC `support-beyond-a-band-can-cycle`; ACTD `a-cascade-along-total-dependence`; RWD `recurrence-without-decidedness`; CNA `ceasing-needs-arising`; NLG `never-leaving-a-guard`; RRSL `readings-revised-spread-and-locked`; SROS `selection-read-off-its-own-survivors`; RCF `readings-carried-and-filtered`; PFC `persisting-filters-what-was-chosen`; RREOS `rule-raised-every-other-step`; WPG `where-the-possible-grows`.
+
+---
+
+## J04
+
+OPENED. `Becoming.Optimum.frontier_rebuilds`, `Optimum.lean:7566` (namespace `Optimum`, lines 7529 to 7601; the theorem of the same short name at 6979 is `Optimum.Next.frontier_rebuilds`, at 7106 `Web.Next.frontier_rebuilds`, at 7616 `Web.frontier_rebuilds`).
+
+Statement: `(rising : ∀ a b, weightedOver w R a (n + 1) < weightedOver w R b (n + 1) → better b a) (low : s ≤ y) (grows : ∀ z z', z ≤ z' → z' ≤ y → z + R z ≤ z' + R z') (rises : … ≤ …) (strictly : ∀ t, t < n → ∀ z z', z < z' → z' ≤ y → w (t + 1) * (z + R z) + w t * z' < w (t + 1) * (z' + R z') + w t * z) (top : …) (holds : y + R y ≤ k) (rests : R 0 ≤ k) (front : Frontier (OpenCourse R k s) better x) : ∀ t, t < n → rise R y s (t + 1) < y → x (t + 1) = rise R y s (t + 1) ∧ x (t + 1) = x t + R (x t)`.
+
+1. Near end. The hypotheses are exactly the `takes` of ORDB's law of this name (`optimum-next-rising-weighted`, `-start-at-most-y`, `-grows-below-y`, `-gain-rises-below-y`, `-gain-rises-strictly-below-y`, `-greatest`, `-capacity-covers-y`, `-capacity-covers-nothing`, `requirement-frontier`, `-step-before-horizon`, `-rising-below-y`). Every one of these ids is taken by a law of ODFE too (its general `Optimum.Next.frontier_rebuilds`), and five of them (`-rising-weighted`, `-greatest`, `-capacity-covers-y`, `-capacity-covers-nothing`, `-step-before-horizon`) by `a-weighting-faster-than-renewal-ends-the-base` as well; `requirement-frontier` is taken by ten dynamics. What is ORDB's alone is the form: the fixed renewal `z + R z` and `OpenCourse R k s`, and the notion in its name (an optimum rebuilding from a start `s ≤ y`).
+2. What changes. (t): the course starts at `s` (`front`, through `OpenCourse`), `low : s ≤ y`; the conclusion is at `t + 1` for `t < n`.
+3. Far end. "Stands at the rising course's level and draws nothing" is what ORDB's own laws conclude (this one, `Web.frontier_rebuilds`) and what its name says; ODFE's `Optimum.Next.frontier_rebuilds` concludes the same for any law `G` of what stands, and ORDB's entry records this law as its case (`case_of`, `G t z := z + R z`; the proof term at 7577 is a call of it).
+
+The home carries the far end. No dynamic other than ORDB and the one whose general law it is a case of is reached.
+
+VERDICT J04 | verdicts: N1 | from: optima-rebuild-a-depleted-base | to: optima-rebuild-a-depleted-base, others-drawing-first-end-the-base | change: t | side: outcome | strength: sufficient
+
+## J08
+
+OPENED. `Becoming.RaisedEveryOther.both`, `HeldPossible.lean:817` (namespace `RaisedEveryOther`, 726 to 824; other `both` in `GrammarPath.lean:1326`, `Identity.lean:1958`, `ReadInTime.lean:802` are other namespaces).
+
+Statement, no hypotheses: `Reaching.KeepsWidening (fun k => Reaching.PossibleHeld process Same adm (course.state k)) ∧ (∀ k y, Reaching.Possible process adm (course.state k) y) ∧ «生生» Steps.next (fun i j => Same (course.state i) (course.state j)) 0 ∧ ¬ «息» Steps.next (fun i j => Same (course.state i) (course.state j)) 0`.
+
+1. Near end. No hypothesis. The course is `RaisedEveryOther.course`, the built course in RREOS's name ("the rule raised every other step"); the theorem is on RREOS's list, `takes []`.
+2. What changes. Nothing. No step is set against a later one (the first two conjuncts are of the whole course, the last two of moment 0), no parameter has two ranges, no premise of a dynamic is dropped.
+3. Far end, each conjunct. (a) Held-possible keeps widening: this is the ledger premise `heldpossible-held-keepswidening`, taken only by WPG's laws (`Run.changes_of_heldKeepsWidening`, `Run.held_change_recurs_of_keepsWidening`, `Run.adaptive_rule_changes_of_keepsWidening`, `Run.ruleTower_move_above_recurs_of_keepsWidening`); the first takes that id alone, so it goes on from the conjunct. RREOS's name carries the notion too ("growth relative to what is held"). `what-keeping-widening-needs` carries `Web.KeepsWidening`, another declaration (`EventualWidening.lean:292` against `ReachableRanges.lean:311`), with no theorem in the statement carrying one to the other: N5c there. (b) Everything possible from every configuration: RREOS's `whole_every`, a case of WPG's `RaisedRule.whole_every`. (c) `«生生»` at 0 and not `«息»`: RREOS's name ("renewal without end") and its `renews_without_end`; `generation-and-degeneration-at-two-grains` has the law `«生生即延»`, an iff on `«生生»` with `takes []`, so no premise id is given there.
+
+Two notions (growth relative to what is held; renewal without end) said of one built course at once, as the docstring says ("both at once"). The built course meets WPG's premise at no later index than it is RREOS's own.
+
+VERDICT J08 | verdicts: N3 | from: rule-raised-every-other-step | to: where-the-possible-grows, generation-and-degeneration-at-two-grains | change: none | side: premise | strength: witness
+
+## J12
+
+OPENED. `Becoming.Flow.carried_keeping_above_ending`, `ReadingsPersist.lean:616`.
+
+Statement: `(na : (world sig).Nonanticipating) (feasible : (world sig).Feasible present start) (acting : …Acting …) (dependent : …Dependent) (gated : …) (coupled : ∀ s p, p ∈ (((world sig).course present start).lineOf … members first).family s → ∃ e, e ∈ ds ∧ W.requires s p e ∧ m ≤ W.need s p e) (persists : (… .lineOf … members first).Persists) {ch : ChoiceOccasions Sig O} (picks : ∀ o, ch.pick o = sig) (none : «无环» ch.Shown) : ∃ P : «际» Sig, (∀ x, ¬ P x x) ∧ (∀ x y z, P x y → P y z → P x z) ∧ ch.Accords P ∧ ∀ x y, ch.Met x y → ¬ ((world x).course present start).Overdraws … ds m → ((world y).course present start).Overdraws … ds m → P x y`.
+
+1. Near end. RCF: `picks` is `readingspersist-picks-carried`, taken by RCF alone; the course is the one a reading's world law generates and the line is `lineOf` read off it (RCF's declarations, its name "readings carried along a line"). The other ids are shared: `counterfactual-nonanticipating` and `-feasible` (five dynamics each), `flow-family-gated` (five), `persistingchoices-every-cohort-coupled`, `selectionterm-generations-persists`, `choiceoccasions-shown-acyclic` (each RCF and PFC).
+2. What changes. Nothing: no index is set against a later one, no parameter range, and no premise of RCF is dropped. PFC's premises `k3-balance`, `selectionterm-flow-descended`, `persistingchoices-realized` are not taken, but they are discharged in the proof (`course_balances_iff`, `lineOf_descended`, the picks), not denied: the docstring says `realized` "is the identity".
+3. Far end. A strict order according with the choices and ranking a reading that does not overdraw above one that does, on the pairs met: this is what PFC's law `Flow.persisting_keeping_above_ending` (`PersistingChoices.lean:474`) concludes and PFC's name ("keeping above ending, on the occasions met"); also `ChoiceOccasions.keeping_above_ending` there. RCF's entry records the item as `case_of` that law, and the proof term is a call of it.
+
+The theorem makes RCF's case (the line read off the course a carried reading generates) an instance of PFC's law. Both notions: a reading carried along a line; a persisting line's choices consistent with keeping above ending.
+
+VERDICT J12 | verdicts: N3 | from: readings-carried-and-filtered | to: persisting-filters-what-was-chosen | change: none | side: outcome | strength: sufficient
+
+## J16
+
+OPENED. `Becoming.Web.frontier_breaks_stepwise_long`, `Optimum.lean:6130` (namespace `Web`, 6019 to 6167).
+
+Statement: `(rising : ∀ a b, worth a < worth b → better b a) (draws : ∀ a, drawnOver R a (n + 1) ≤ worth a) (bounded : ∀ a, OpenCourse R k s a → Optimum.Keeps m n a → worth a ≤ drawnOver R a (n + 1) + w * (n + 1)) (above : ∀ z, m ≤ z → R z ≤ q) (less : q + w < r) (short : w + e < n + m) (greatest : R y = r) (reach : y ≤ s + R s) (settles : e ≤ y) (drawsDown : s + R s ≤ y + k) (holds : y + r ≤ e + k) (long : 0 < n) (front : Frontier (OpenCourse R k s) better fun t => W.level t c) (depends : ∀ t, W.requires t f c) (need : ∀ t, W.need t f c = m) (start : m ≤ s) : ∃ t, t ≤ n ∧ W.Broken t f c`.
+
+1. Near end. ASCK: `bounded` is `optimum-worth-at-most-coupling-when-kept`, `less` is `optimum-q-plus-c-lt-r`, `short` is `optimum-c-plus-e-lt-n-plus-m`, each taken by ASCK's laws alone; a coupling counted for each step is the notion in its name. `draws`, `greatest`, `holds` (`optimum-worth-at-least-draw`, `-greatest-r`, `-holds-r-to-end`) are taken by KFR's laws too.
+2. What changes. (p): `less : q + w < r` with `short : w + e < n + m` here; ASCK's own outcome on the other range is `Web.frontier_keeps_stepwise` (`Optimum.lean:6032`), `rate : r ≤ q + w`, `exceeds : e < w`, concluding `∀ t, t ≤ n + 1 → W.need t f c ≤ W.level t c`. A (t) can also be quoted: `start : m ≤ s` at the start, `W.Broken t f c` at some `t ≤ n`.
+3. Far end. A dependence broken within the horizon, `∃ t, t ≤ n ∧ W.Broken t f c`: concluded in these words by KFR's laws `Web.frontier_breaks_below` (`Optimum.lean:4908`) and `Web.frontier_breaks_long`, and by ASCK's own `Web.frontier_breaks_at_end` (6054; `frontier_breaks_last` gives it at the `n`-th step). ASCK's entry records the item as `case_of` KFR's `Web.frontier_breaks_below` with the coupling fixed to `w (n + 1)`. Others whose laws conclude a break at a stated step and not within a horizon: `horizon-optima-hold-the-greatest-renewal` (`Web.frontier_broken`, 4062, by its entry at the first step or at the end), `a-weighting-faster-than-renewal-ends-the-base` and ODFE (`Web.Next.frontier_broken`, 7060: `W.Broken 0 f c`). On the premise side, `web-broken` is taken by one law, `Flow.Balances.broken_shared` (listed under `what-a-rise-draws-from-beyond` and `restraint-within-the-joint-slack`), with three ids not given here (`k3-balance`, `flow-each-take-within-slack`, `flow-present-at-step`). `three-outcomes-of-a-loss` declares `Web.Broken` but its laws take below-the-need at later steps, which a break within a horizon does not give: a word reached, not its premises.
+
+Both sides of the threshold are ASCK's own (its laws conclude keeping on one range and breaking on the other), so the home carries the far end. The same conclusion is KFR's law's, of which this is a case with every premise of ASCK kept.
+
+VERDICT J16 | verdicts: N1 | from: a-step-coupling-keeps-at-every-horizon | to: a-step-coupling-keeps-at-every-horizon, keeping-forgoes-the-renewal-at-the-need | change: p | side: outcome | strength: sufficient
+
+## J20
+
+OPENED. `Becoming.Web.Next.frontier_rebuilds`, `Optimum.lean:7106` (namespace `Web.Next`, 7046 to 7131).
+
+Statement: `(rising : ∀ a b, weighted w G a (n + 1) < weighted w G b (n + 1) → better b a) (low : s ≤ y) (grows : ∀ t z z', z ≤ z' → z' ≤ y → G t z ≤ G t z') (keeps : ∀ t, y ≤ G t y) (rises : …) (strictly : …) (top : …) (holds : ∀ t, G t y ≤ k) (rests : ∀ t, G t 0 ≤ k) (front : Frontier (Open G k s) better fun t => W.level t c) : (∀ t, t < n → Optimum.Next.rise G y s (t + 1) < y → W.level (t + 1) c = Optimum.Next.rise G y s (t + 1) ∧ W.level (t + 1) c = G t (W.level t c)) ∧ ∀ f j, j < n → Optimum.Next.rise G y s (j + 1) < y → W.need 0 f c ≤ Optimum.Next.rise G y s (j + 1) → W.RestoredWithin (j + 1) 0 f c`.
+
+1. Near end. The `takes` of ODFE's law of this name. `keeps` is `optimum-next-keeps-y`, taken by ODFE's laws alone; the other ids are taken by ORDB's laws too. The notion in ODFE's name (others drawing first: `leftBy`, a weighting that falls) is not among the hypotheses.
+2. What changes. (t): the start `s` with `low : s ≤ y`; the level at `t + 1`, and `RestoredWithin (j + 1) 0 f c` (a need as it stands at step 0 met by step `j + 1`).
+3. Far end. The condition rebuilt at the rising level: ODFE's own laws (`Optimum.Next.frontier_rebuilds`, this one) and ORDB's name and laws (`Web.frontier_rebuilds`, the same statement with `G t z := z + R z`). `RestoredWithin` (`Restoration.lean:61`): no ledger premise is this declaration and no theorem takes it among its hypotheses (the three uses outside its definition are conclusions in `Optimum.lean`); `becoming-return-grades` takes `web-renewedwithin` and `web-restored`, which quantify over every step and every formation and are not given by one `RestoredWithin` at step 0: N5c against that entry.
+
+The home's own laws conclude the far end; ORDB's law is this one's case.
+
+VERDICT J20 | verdicts: N1 | from: others-drawing-first-end-the-base | to: others-drawing-first-end-the-base, optima-rebuild-a-depleted-base | change: t | side: outcome | strength: sufficient
+
+## J24
+
+OPENED. `Becoming.Flow.settles`, `Regulation.lean:375` (namespace `Flow`, 250 to 475; `settles` in `Dephasing.lean:306` and `Entropy.lean:2031` are `Dephasing…` and `Entropy.Settling`).
+
+Statement: `(balances : L.Balances W) {m T : Nat} {c : C} (within : ∀ k, L.WithinGap W m (T + k) c) (opposes : ∀ k, L.Opposes W m (T + k) c) {t : Nat} (late : T + gap (W.level T c) m ≤ t) : W.level t c = m`.
+
+1. Near end. TSR: `within` is `flow-withingap`, taken by TSR's laws alone (four); `opposes` is `flow-opposes` (TSR and OBG); `late` is `flow-step-past-the-gap` (TSR alone); `k3-balance` is taken by forty-one dynamics.
+2. What changes. (t): the premises at `T + k`, every `k`; the conclusion at every `t` with `T + gap (W.level T c) m ≤ t`.
+3. Far end. The level is `m` from that step on. TSR's own laws conclude it (`settles`, `restores_exactly`, `stock_settles`) and it is the notion of its name. OBG's mechanism has the sentence but its list has no law concluding it. No ledger premise of any dynamic is "the level of a condition is `m` from a step on"; the rest notions elsewhere (`LastChange.StillFrom`, `Enough.Settles`, under `the-last-change-of-a-run`, `where-a-run-of-a-regime-comes-to-rest`) are other declarations on runs of a process, with no theorem here carrying this one to them (N5c). `supported-renewal-recovery`'s `Flow.restores` concludes at least `m`, another conclusion.
+
+VERDICT J24 | verdicts: N1 | from: two-sided-regulation-and-late-reading | to: two-sided-regulation-and-late-reading | change: t | side: outcome | strength: sufficient
+
+## J28
+
+OPENED. `Becoming.WholeUngated.persists`, `Wholes.lean:1243` (namespace `WholeUngated`, 1214 to 1258; `persists` at 1193 is `WholeUnending`, others are in other files).
+
+Statement, no hypotheses: `web.Whole parts .lineage ∧ web.Listed parts Generations.alive ∧ (∀ p, parts p → web.Ends p) ∧ flow.Balances web ∧ flow.Acting web ∧ web.Dependent ∧ (∀ t f, f ∈ flow.present t → ∀ d, d ∈ [()] → 0 < flow.give t f d → ∃ e, e ∈ [()] ∧ web.requires t f e ∧ 1 ≤ web.need t f e) ∧ (∀ k, k < 1 → flow.replenishment [()] (0 + k) < flow.uptake [()] (0 + k)) ∧ web.stock [()] 0 < 1 + 1 ∧ (∀ t, web.active t .lineage) ∧ ∀ t, web.Arises t (.member (t + 1))`.
+
+1. Near end. WDBRE, by the notion in its name and by nine of the ten ids of its law `Web.Whole.family_excess_ends` (`Wholes.lean:323`), each a conjunct: `web-whole`, `web-listed`, `web-ends`, `k3-balance`, `k3-only-active-relata-give`, `k3-activity-needing-support`, `flow-family-gated`, `flow-family-excess`, `flow-family-start-below-n-plus-m`. No one of them is WDBRE's alone (the first three are WPTG's too, the rest are taken by five or more dynamics); a whole together with a family drawn beyond its renewal from a short stock is taken together by that law only.
+2. What changes. (d): `web-whole-arising-depends-on-family`, taken by WDBRE's law alone, is not taken (the built web has `requires _ _ _ := False`; the docstring: "With members arising without depending on the drawn condition, every other premise … holds"). No course moves: the statement sets WDBRE beside its neighbour.
+3. Far end. `(∀ t, web.active t .lineage) ∧ ∀ t, web.Arises t (.member (t + 1))`: the denial of WDBRE's conclusion (no part arises from `T + n` on, the whole ends), so it is answered against the entry about a whole that stays active, WPTG. Premise side: with the first three conjuncts it gives all four ids of WPTG's `Web.Whole.needs_arising` (`Wholes.lean:284`: `web-whole`, `web-listed`, `web-ends`, `web-whole-persists`, the last with `T = 0`), so that law goes on from there; `Whole.needs_new` wants in addition a list of parts (`wholes-list-of-parts`, a free argument). The last conjunct is of the kind `Whole.persists_of_arising` takes (`wholes-part-arises-within-d` at `d = 1`); its second id (`wholes-arisen-part-lasts-d`) is not a conjunct. WDBRE's name and its laws with hypotheses conclude ending, not this; its other witnesses are not counted.
+
+VERDICT J28 | verdicts: ROAD | from: whole-drawing-beyond-renewal-ends | to: whole-persists-through-generation | change: d | side: premise | strength: witness
+
+## J32
+
+OPENED. `Becoming.RuleRebuilding.«改而成隙则尽»`, `RuleRebuilding.lean:1885`.
+
+Statement, no hypotheses: `Band rE 2 ∧ run rE outAndBack 8 (steady rE 2 30) = strands rE 2 [true, false, false] 36 ∧ (∀ i, i < 18 → 0 < sumL (run rE outAndBack i (steady rE 2 30)).holders) ∧ Gone (run rE outAndBack 18 (steady rE 2 30))`.
+
+1. Near end. No hypothesis. The course is the run of the rule `rE` (`⟨3, 2, 6, 4, 2, .members⟩`, taught by members) from `steady rE 2 30` with `Band rE 2`: the steady state in the band, which is RRM's law `«稳者恒持当且仅当在带»` (897) and the notion in RRM's name. The theorem is on RRM's list, `takes []`.
+2. What changes. (t): step 0 (the steady state, in the band); step 8 (`strands … [true, false, false] 36`, a state with gaps); `i < 18` (a holder at every step); step 18 (`Gone`). The revisions of `outAndBack` are the course's own moves, not a parameter with two ranges.
+3. Far end. `Gone` at step 18, the level at nothing with no member. RNH's name carries it ("the end") and its laws conclude or keep it (`«恒取逾生则尽»`, `«无持而门开逾生则尽»`, `«尽而不复»`: `«闭» (net r) Gone`, 457). RRM's laws carry it as well: `«恒取逾生则尽»`, `«尽而不复»`, `«稳开二试»` are on RRM's list with hypotheses, and its mechanism says the family "ends, and the end is closed under the net". The state with gaps at step 8 is RRM's own (`«隙之律»`, `rulerebuilding-strands-of-tenure`, taken by RRM alone). No ledger premise is `Gone`.
+
+The home's laws carry the far end. The two entries share six laws; were they held apart by their names alone (the rule held; its ends), this would be a dated passage from the first to the second at witness strength.
+
+VERDICT J32 | verdicts: N1 | from: a-rule-rebuilt-from-the-members-it-limits | to: a-rule-rebuilt-from-the-members-it-limits, a-rule-with-no-holder-does-not-return | change: t | side: outcome | strength: witness
+
+## J36
+
+OPENED. `Becoming.RegimeMargin.Coupled.Relay.cycles`, `RegimeMargin.lean:3582` (namespace `RegimeMargin.Coupled.Relay`, 3521 to 3681; `cycles_at` and `cycles_need_yield` in `ContinuingRevision.lean` are other names).
+
+Statement, no hypotheses: `Drawn.whole.Rises first ∧ Drawn.whole.Rises second ∧ (∀ a, first a 0 = 0) ∧ (∀ b, second 0 b = 0) ∧ (∀ x, Ends Drawn.whole first second 1 1 Prod.fst (x, 0)) ∧ (∀ y, Ends Drawn.whole first second 1 1 Prod.snd (0, y)) ∧ (∀ n, ((Law.run (step Drawn.whole first second 1 1) (2, 3)).state n).1 ≤ 3 ∧ (…).2 ≤ 3) ∧ ¬ Ends Drawn.whole first second 1 1 Prod.fst (2, 3) ∧ ¬ Ends Drawn.whole first second 1 1 Prod.snd (2, 3) ∧ ∀ N, ¬ LastChange.StillFrom (Law.run (step Drawn.whole first second 1 1) (2, 3)) N`.
+
+1. Near end. No hypothesis. The built pair is SBBC's (its name: support sustaining a cycle beyond a band); the theorem is on SBBC's list, `takes []`.
+2. What changes. Nothing I can quote as the definition asks. No step is set against a later one. Two starts are named, `(x, 0)` or `(0, y)` and `(2, 3)`, but they are a family and a point, not two ranges that divide a parameter, and nothing is said of the other starts; they are different runs of one built law, not one course. No premise is denied in the statement: that the pair keeps no band is another theorem (`threshold_beyond_band`, 3625), not a conjunct.
+3. Far end, each conjunct. `Rises`: `regimemargin-drawn-rises` (SBBC, ACTD, `regime-in-any-amounts`). `∀ a, first a 0 = 0` and `∀ b, second 0 b = 0`: `regimemargin-coupled-first-depends-on-second` and `-second-depends-on-first`, taken by ACTD's laws alone (`Coupled.ends_together`, 3389, whose third id, positive draws, is met by the numerals `1 1`; `Coupled.ends_after`, 3360). Each alone ends: `Coupled.Ends` is `regimemargin-coupled-ends`, taken by ACTD's `Coupled.ends_of_below` (2363) alone, and what ACTD's laws conclude; ACTD's name ("an end cascading along total dependence"). Never still, neither ending, within three: SBBC's own notion; `LastChange.StillFrom` is no ledger premise, and `a-run-round-a-loop-keeps-changing` has `Settling.ChangeRecurs`, another declaration with no theorem here carrying one to the other (N5c).
+
+One built pair is said at once to meet ACTD's premises of total dependence both ways with each condition ending alone, and to cycle from `(2, 3)`: two notions of one built law.
+
+VERDICT J36 | verdicts: N3 | from: support-beyond-a-band-can-cycle | to: a-cascade-along-total-dependence | change: none | side: premise | strength: witness
+
+## J40
+
+OPENED. `Becoming.World.arising_iff_ceasing_decided`, `Decidedness.lean:843` (namespace `World`, from 814).
+
+Statement: `(finite : w.Finite) (decided : ∃ N, ∀ t x, N ≤ t → Decided (w.web.active t x)) : w.ArisingRecurs ↔ w.CeasingRecurs`.
+
+1. Near end. RWD: `k3-finite` and `world-activity-decided-from-some-step` are the `takes` of RWD's law of this name. Neither places a course under a notion of change by itself: they are the size of the world and the decidedness of activity.
+2. What changes. Nothing. Both sides are "at arbitrarily late steps" (`Space.lean:191`, `195`): two properties of one course with no index of one before the other, no parameter range, no premise dropped.
+3. Far end, both sides. `ArisingRecurs` is `web-unceasing`, taken by laws of seven dynamics (RWD, `lossless-exchange-continues-and-returns`, `continued-change-needs-openness`, `an-arrow-leaves-change-not-recurring`, `rest-at-every-resolution`, `unceasing-generation-needs-renewal`, `more-needs-renewers`): a shared premise, placing under none by itself. `CeasingRecurs` is `world-ceasingrecurs`, taken by RWD (`World.arising_not_stopping`) and CNA (`World.arising_of_ceasing`). The same iff is CNA's law `World.arising_iff_ceasing` (`k3-finite`, `k3-decided`), of which the module text says this is the general form ("the case decided by a procedure from the first step").
+
+An iff of two properties at one index. Both notions are RWD's own and CNA's.
+
+VERDICT J40 | verdicts: N3 | from: recurrence-without-decidedness | to: recurrence-without-decidedness, ceasing-needs-arising | change: none | side: none | strength: exact
+
+## J44
+
+OPENED. `Becoming.WholeWithin.kept`, `Wholes.lean:1160` (namespace `WholeWithin`, 1110 to 1167; other `kept` in `FromTheDynamics.lean`, `GroupEnding.lean`, `Identity.lean`, `Keeping.lean`, `PersistingChoices.lean`, `SelectionTerm.lean` are other namespaces).
+
+Statement, no hypotheses: `web.Whole parts .lineage ∧ web.Listed parts Generations.alive ∧ (∀ p, parts p → web.Ends p) ∧ flow.Balances web ∧ flow.Acting web ∧ web.Dependent ∧ (∀ t, flow.WithinJoint t ()) ∧ (∀ t, web.active t .lineage) ∧ ∀ t, web.Arises t (.member (t + 1))`.
+
+1. Near end. WDBRE, more weakly than in J28. Six of the ten ids of `Web.Whole.family_excess_ends` are conjuncts (`web-whole`, `web-listed`, `web-ends`, `k3-balance`, `k3-only-active-relata-give`, `k3-activity-needing-support`); each is shared (the first three with WPTG), and only WDBRE's laws (`family_excess_ends`, `joint_excess_ends`) take the six together. The docstring says "every premise of `Whole.family_excess_ends` but the excess"; the statement does not hold the gate nor the arising's dependence: they are proved apart (`WholeWithin.gated`, 1145; `WholeWithin.arising`, 1150). The notion in WDBRE's name (drawing beyond renewal) is the one denied.
+2. What changes. (d): `flow-family-excess` is contradicted, `∀ t, flow.WithinJoint t ()` (`WithinJoint L t c := L.taken t c ≤ L.given t c`, `Continuation.lean:234`); `flow-family-gated`, `web-whole-arising-depends-on-family` and `flow-family-start-below-n-plus-m` are not in the statement. No course moves.
+3. Far end. As in J28: `(∀ t, web.active t .lineage) ∧ ∀ t, web.Arises t (.member (t + 1))` with the first three conjuncts gives all four ids of WPTG's `Web.Whole.needs_arising`. Besides: `∀ t, WithinJoint` with `flow.Balances web` gives both ids of `Flow.joint_keeps` (`own-count-misses-joint-excess`) and of `Flow.level_kept` (`what-taking-all-excludes`), `k3-balance` and `flow-withinjoint`; the same built flow is under those premises too, at every step, with nothing later (an overlap, listed here and not as a road).
+
+A road by a dropped premise if the six shared ids are allowed to place the course under WDBRE jointly; if they are not, the statement by itself is a built course under WPTG's premises, and what it says of WDBRE is only that its excess is denied. I answer the first and mark it as the weaker of J28 and J44.
+
+VERDICT J44 | verdicts: ROAD | from: whole-drawing-beyond-renewal-ends | to: whole-persists-through-generation | change: d | side: premise | strength: witness
+
+## J48
+
+OPENED. `Becoming.RuleRebuilding.«改额为零则持尽»`, `RuleRebuilding.lean:1457`.
+
+Statement: `{r : Rule} (hm : r.source = .members) {x : St} (hx : Held x) (on : Bool) {c : Nat → Move} (hrev : ∀ i v, (c i).rev = Option.some v → v = 0) : ∀ k, r.tenure ≤ k → sumL (run r c k (step r ⟨on, Option.some 0⟩ x)).holders = 0`.
+
+1. Near end. `hm` is `rulerebuilding-taught-by-members`, `hx` is `rulerebuilding-held`, `hrev` is `rulerebuilding-revisions-to-zero`, with `rulerebuilding-after-tenure`: the `takes` of the law of this name, which is on the lists of RRM and of RNH alike, and each id is taken by laws of exactly those two. By name the hypotheses are RRM's (a rule taught by its members, a holder standing).
+2. What changes. (t): `Held x` at the state before the revision; no holder at every `k` steps after the revised step with `r.tenure ≤ k`.
+3. Far end. No holder (`NoHolder x := sumL x.holders = 0`, 240). Premise side: `rulerebuilding-noholder` is taken by RNH's laws alone: `«无持者改不行»` (737) takes that id only, so it goes on from here; `«无持者额不与»` and `«无持而门开逾生则尽»` take it with ids not given (a second state alike in level, holders and others; entrants on offer, `1 ≤ s`, open entry over the renewal). `«无持者不复»` (698, `«闭» (net r) NoHolder`) keeps it; `rulerebuilding-taught-within` is given by `hm`. RNH's name carries it. RRM's laws carry it too: `«不及任则持尽»` and `«额零则持尽»` conclude no holder after `s` steps and `«无持者不复»` is on its list, and its mechanism says "no holder is left after s steps … no holder stays no holder".
+
+The home's laws carry the far end, and the law is on both lists. As in J32, held apart by their names the two entries would give a dated passage from a holder standing to no holder, sufficient, with the far end a premise only RNH's laws take.
+
+VERDICT J48 | verdicts: N1 | from: a-rule-rebuilt-from-the-members-it-limits | to: a-rule-with-no-holder-does-not-return, a-rule-rebuilt-from-the-members-it-limits | change: t | side: premise | strength: sufficient
+
+## J52
+
+OPENED. `Becoming.Lasting.lasts_iff_ladder`, `Lasting.lean:156` (the name at `Courses.lean:167` is a use of it in `courses_iff_ladder`).
+
+Statement, no hypotheses: `Lasts f adm guard n s ↔ ∃ C : Nat → S → Prop, C n s ∧ Ladder f adm guard C`.
+
+1. Near end. No hypothesis places a course. Read as N7 reads an iff, the right side is a condition on the start (some ladder holds it at level `n`) and the left an outcome of every admissible course (within the guard for `n` more steps). `Ladder` and `Lasts` are no ledger premises; the only entry whose list holds the law is NLG, whose mechanism has the sentence and whose name has "lasting".
+2. What changes. Read so, (t): level `n` at the start; the guard kept for `n` more steps. The iff is near-definitional: `Lasts` is itself a ladder (`lasts_ladder`, 152), so the right side is witnessed by the left.
+3. Far end. Lasting `n` steps: NLG's name and laws (`lasts_iff_ladder`, `kernel_iff_lasts`). `market-finite-support-obstruction` is about the denial (below a drained level no history lasts: `Drains.leaves`), which this statement does not conclude.
+
+One passage from the condition to the outcome, exact, with both ends NLG's. It could as well be called a characterisation that states no passage (N0); either way no second dynamic is reached.
+
+VERDICT J52 | verdicts: N1 | from: never-leaving-a-guard | to: never-leaving-a-guard | change: t | side: outcome | strength: exact
+
+## J56
+
+OPENED. `Becoming.ReadingsSpread.Commons.cleared_spreads`, `ReadingsSpread.lean:1133` (namespace `ReadingsSpread.Commons`, 639 to 1277).
+
+Statement, no hypotheses: `((narrow false .source cleared).sum 0 = 1 ∧ (pop false .source cleared).size 0 = 3) ∧ ((narrow …).sum 1 = 2 ∧ (pop …).size 1 = 4) ∧ (∀ t, (narrow …).sum (t + 2) = 2 ∧ (pop …).size (t + 2) = 3) ∧ ((narrow …).discordAt 0 = 0 ∧ 0 < (narrow …).concordAt 0) ∧ ((narrow …).discordAt 1 = 0 ∧ 0 < (narrow …).concordAt 1) ∧ ((narrow …).concordAt 2 = 0 ∧ (narrow …).discordAt 2 = 0 ∧ (narrow …).concordAt 3 = 0 ∧ (narrow …).discordAt 3 = 0) ∧ (∀ t, (pop …).revisedIn (readOf .source) isNarrow t = 0 ∧ (pop …).revisedOut (readOf .source) isNarrow t = 0) ∧ RemovesLine slotsOf cleared .dweller ∧ StandsLate (slotsOf .focal) cleared ∧ StandsLate (slotsOf .wide) cleared`.
+
+1. Near end. No hypothesis. The built course is placed under RRSL by its conjuncts and RRSL's name (a share moving by selection and revision): the narrow count over the population at steps 0, 1 and from 2 on, selection proper positive across the first two steps, nothing revised in or out at any step. The theorem is on RRSL's list, `takes []`.
+2. What changes. (t), with a weakness. Near end at steps 0 and 1 (`0 < concordAt 0`, `0 < concordAt 1`; the share one of three, two of four). Far end "from one on": `RemovesLine slotsOf l i := AliveIn slotsOf l 0 i ∧ ∃ T, ∀ t, T ≤ t → ¬ AliveIn slotsOf l t i` (`ReadingsPersist.lean:549`). The later index is the `T` inside that definition; no numeral for it stands in the statement, and the statement does not say that it comes after the two steps of spreading.
+3. Far end. `RemovesLine slotsOf cleared .dweller` is the ledger premise `removesline`, taken by SROS's laws alone: `RemovesLine.not_standsLate` and `not_allPersist_of_removes` each take that id only, so both go on from here; SROS's name carries the notion (removal, read off a course's pool). `StandsLate` of the other two lines: declared under RCF, a premise of no law by itself; with the removal it is one inference short of SROS's `readingspersist-course-settles` (`∃ T, ∀ i, StandsLate … ∨ …not alive from T`), which is not a conjunct. `0 < concordAt 0` is `selectionshift-concord-pos-at-t` of `the-selection-term-and-a-lineages-fate`, whose law `goes_on` takes two more ids not given (`reproduction-generations-bynumber`, `selectionshift-exact-from-t`): no placing there. RRSL's laws with hypotheses neither take nor conclude `RemovesLine`; its two sibling witnesses conclude it and are not counted.
+
+A built course on which a reading's share rises by selection proper and a line is removed from some step on: the removal is a premise only SROS's laws take. If the `T` inside `RemovesLine` is not allowed as the later index, this is N3 with the same two dynamics.
+
+VERDICT J56 | verdicts: ROAD | from: readings-revised-spread-and-locked | to: selection-read-off-its-own-survivors | change: t | side: premise | strength: witness
+
+## J60
+
+OPENED. `Becoming.Flow.crosses_of_above`, `Regulation.lean:423` (namespace `Flow`, 250 to 475).
+
+Statement: `{m t : Nat} {c : C} (balances : L.BalancesOn W [c] t) (opposes : L.Opposes W m t c) (above : m < W.level t c) (beyond : ¬ L.WithinGap W m t c) : W.level (t + 1) c < m`.
+
+1. Near end. The four hypotheses are `flow-balanceson-family-over-stretch` (thirteen dynamics), `flow-opposes`, `flow-above-m`, `flow-beyond-the-gap`; the last three are each taken by laws of exactly two dynamics, OBG and TSR, and the law itself is on both lists with the same `takes`. By name the statement is OBG's ("beyond the gap an opposing exchange crosses"); `opposes` alone is the notion of TSR's name (regulation from both sides).
+2. What changes. (t), one step: `m < W.level t c` and `W.level (t + 1) c < m`. Read from TSR, (d): `flow-withingap`, taken by TSR's laws alone, is contradicted (`beyond : ¬ L.WithinGap W m t c`); so read, no course moves and the statement sets TSR beside OBG.
+3. Far end. The level across `m` at the next step: OBG's name and its laws (this one, `crosses_of_below`); TSR's list holds the same two laws. `late-relay-oscillates` has `Web.UpCrossing` and `Web.DownCrossing` (`web-upcrossing`, `web-downcrossing`), other declarations about a band `[a, b]` with no theorem here carrying this one to them (N5c). `overshooting-thermostat-alternates` is a witness in another model whose entry says the laws of regulation on flows are read against it with no instance theorem.
+
+Whichever of the two is taken as the home, it carries the far end: read from OBG the statement is its own law; read from TSR every id that would place the course there is OBG's too, and the law is on TSR's own list. The dropped premise `flow-withingap` is the one thing that tells the two apart.
+
+VERDICT J60 | verdicts: N1 | from: overshoot-beyond-the-gap | to: overshoot-beyond-the-gap, two-sided-regulation-and-late-reading | change: t | side: outcome | strength: sufficient

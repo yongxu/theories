@@ -1,0 +1,39 @@
+# What a road is, and what is no road (an extract of the survey's frozen questions, for a judge; item ids removed)
+
+*AI-written (row FM), 22 November 2026. The answers the judge may give: ROAD X → Y with the change (t, p or d) and the side (premise or outcome); ROAD IN TWO; N0; N1; N2a; N2b; N3; N5a, N5b or N5c; N7; WALL. "No road" is a full answer. N6 (already drawn) cannot be answered by a judge, who is not shown what the atlas draws.*
+
+## What a road is, for this survey
+
+A **road from X to Y**, X and Y two different dynamics of the atlas, is a theorem of the package in whose statement three things can be quoted.
+
+1. **The near end.** Hypotheses that place a course (a run of a process, an orbit of a law, a population over generations, the optima of an order) under X: premises that X's laws take (the ids in X's `premises[].takes`, with the ledger's Lean names) or the notion in X's name. A premise that the ledger shows taken by laws of Y too, or of three or more dynamics, places the course under none of them by itself.
+2. **What changes**, one of: **(t)** an index: the near end holds at a step, generation or date and the far end at a later one or from one on; quote both indices. **(p)** a parameter: the statement, or it and its twin for the other side, gives the far end on one stated range of a parameter and X's own outcome on the other; quote both ranges and name both theorems. **(d)** a dropped premise: a premise X's laws take that the theorem does not take or contradicts; name its ledger id (for an exit, the store's `drops`). In (d) no course moves: the statement sets X beside its neighbour, and the line says so. Where none of the three can be quoted it is no road (N3).
+3. **The far end.** The part of the statement that places that course under Y: on the **premise side**, it gives premises that a law of Y takes (name the law, the ids given and the ids not given), so that Y's law goes on from there; or on the **outcome side**, it is what a law of Y concludes (name the law). For a `necessary` law the far end stands among the hypotheses and the conclusion is the condition.
+
+A notion can be carried by several entries. The far end is answered by every dynamic whose name or laws carry it, not by one; where the home is among them the answer is N1. That a sentence of an entry's mechanism mentions a notion, or that its list holds a declaration, does not make the notion that entry's.
+
+Where one theorem takes the course out of X to a state and another, with that state among its hypotheses, places it under Y (the store's `law` and `to_law`), the pair is a **road in two theorems**, listed apart with both named.
+
+## What counts as no road (written first)
+
+- **N0. Not a passage** (added from the trial). The theorem named states no passage at all: a bound, a count, a characterisation of a rest point, a one-step identity. Say what it states. It is not forced into N1, N2a or N3.
+- **N1. Inside one dynamic.** The home is among the dynamics that carry the far end. Answered only after the search of Q2. The kind of a transition does not decide it: the two sides of a threshold can be two dynamics.
+- **N2. To no dynamic.** No dynamic's name or laws carry the far end. Then: **(a)** an end or a property: the far end has no definition in the Lean, or no theorem takes it among its hypotheses (a bound, a count, "is decided", "outside the region"). **(b)** a **blank**: it has a definition (name it) and a theorem on no dynamic's list takes it among its hypotheses (name it): something goes on from there and the atlas has no entry for it. If a theorem on some dynamic Z's list takes it, it is neither: answer it as a far end on Z's premise side.
+- **N3. An overlap, not a road.** Nothing of (t), (p), (d) can be quoted: two notions are said of one thing at one index. An iff between two properties of one course or configuration; an implication with every premise of X kept and nothing later ("every X is a Y"); a theorem that makes one dynamic's case an instance of another's law. Listed apart with both notions and both dynamics. Where the store draws a theorem of this form as an exit (its four `exact` exits to a dynamic are of it), say so; it is still N3 here.
+- **N5. A match by name, at either end.** The statement shares a word, a namespace or a declaration with a dynamic, and (a) the entry is about something else; or (b) the declaration is a premise or carrier that laws of several dynamics take, or a structure the statement is stated on, or is said of something other than the course; or (c) the statement's notion and the entry's are two declarations and no theorem carries one to the other. Under (c) name the carrying theorem, or answer N5: a reading that two notions are the same is not a link.
+- **N6. Already drawn.** An exit of the atlas, in the home's entry or in the other end's, already names this pair: **(a)** with this theorem as its `law` or `to_law`; **(b)** with another law; **(c)** with no law (argued, or a reading). Say which and cite the exit. Under (b) and (c) the theorem is still listed, as a further law or as a law for an exit that has none, with whether its edge is that exit's edge.
+- **N7. Direction.** Say which way the statement goes, quoting it. An iff one side of which is a condition on the start, the rule or a parameter and the other an outcome of the course is one passage, from the condition to the outcome, `exact`; its converse is no second road. An iff of two outcomes at different indices gives two candidates, each answered apart. An iff of two properties at one index is N3. A conclusion that denies a notion is no road to a dynamic that carries the notion; it is answered against the dynamics whose entries are about the denial, and where there is none it is N2a, a boundary of X. A theorem that shows no course under X's premises is under Y's notion is a **wall**, listed apart.
+
+Further, from the first reader, each to be answered under the test named or listed apart as said:
+
+1. **A boundary of X.** A premise of X dropped, or X's own notion denied, and the far end is only "not X". Answered N2a; never a road by "with one of X's premises dropped" alone.
+2. **A wall.** The theorem shows that no course under X's premises is under Y's notion. Listed apart: it says there is no road there while the premises hold.
+3. **A shared premise or carrier taken for an end.** A ledger premise that laws of several dynamics take (`Accrues`: an item and six more), a structure the statement is stated on, a hypothesis said of something other than the course.
+4. **Same by a reading.** The statement's notion and the entry's are two declarations with no theorem carrying one to the other. Moved here from Q4.
+5. **A case, not a passage.** The theorem makes X's case an instance of Y's law at one index, or contains X with every premise kept in Y. N3, whatever the verb of the docstring ("makes", "forces", "breaks").
+6. **A word of Y reached, not Y's premises nor what its laws conclude.** The conclusion matches a phrase in Y's mechanism and gives no premise a law of Y takes and nothing a law of Y concludes (an item against `three-outcomes-of-a-loss`: a break within a horizon, where the laws about a loss take below-the-need at every later step).
+7. **A necessary law with no course shown to pass.** The far end is a hypothesis; no theorem shows it can be met from X. Listed as a condition on a road, under `necessary`.
+8. **A witness placed by its name.** A built example in Y's module or with Y's word, and no theorem placing it under Y.
+9. **Drawn already from the other end** (N6a), so that a transition filed at the far end is neither answered N1 nor returned as new.
+10. **The wrong theorem.** A statement quoted by short name from another namespace; an item so answered is "not read".
+
