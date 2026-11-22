@@ -503,7 +503,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Mechanism.** Where courses branch, what returns can be had at every step, and every configuration returns exactly where each region the process never leaves keeps every possibility of its own. Keeping every possibility no longer gives returning (three configurations, a witness). Merging nothing gives it along a run whose configurations a list holds, the run taken as given: building one needs a choice at each step. Within listed configurations merging nothing need not give a configuration its return without a run from it (the fork, a witness).
 - **Base.** any process
 - **How far seen.** [returning-where-the-course-branches](../../records/returning-where-the-course-branches.md) recorded-checked (theorem)
-- **Declarations.** `Becoming.Branching.Returns`, `Becoming.Branching.Returns.reachable`, `Becoming.Branching.returns_iff_keepsWithin`, `Becoming.Branching.Lossless.comes_back`, `Becoming.Branching.Lossless.recurs`, `Becoming.Branching.Transit.keeps_not_returns`, `Becoming.Branching.fork_lossless_not_returns`
+- **Declarations.** `Becoming.Branching.Returns`, `Becoming.Branching.Returns.reachable`, `Becoming.Branching.returns_iff_keepsWithin`, `Becoming.Branching.Lossless.comes_back`, `Becoming.Branching.Lossless.recurs`, `Becoming.Branching.Transit.keeps_not_returns`, `Becoming.Branching.fork_lossless_not_returns`, `Becoming.Branching.Juncture.returns`
 - **Hypotheses, quoted from the records.**
   - [returning-where-the-course-branches](../../records/returning-where-the-course-branches.md), hypothesis 1: The laws along runs take a run as given: building a run from every configuration that can move needs choosing a continuation at each step, which is a choice.
   - [returning-where-the-course-branches](../../records/returning-where-the-course-branches.md), hypothesis 2: The laws along runs require a list holding the run's configurations (finitely many configurations); the law that a configuration at which a run begins returns is stated with a list holding every configuration, though the run's coming back to each of its configurations needs only the run's list.
@@ -526,6 +526,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
   - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
     - `Becoming.Branching.Returns.reachable`: in `Becoming.Law.returns_iff_keeps`, listed under [Recurrence under every law of change](#recurrence-without-premise).
+  - *Listed here and under another dynamic, by hand.* `Becoming.Branching.Juncture.returns`, also under [Every loss passes a juncture](a.md#every-loss-passes-a-juncture). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="recurrence-without-selector-revision"></a>
 ### Recurrence without revision of the selector

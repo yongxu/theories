@@ -852,7 +852,9 @@
     "Becoming.keeps_reach_iff_returns",
     "Becoming.same_reach_iff_returns",
     "Becoming.not_returns_iff_loses",
-    "Becoming.Irreversibility.constant_reading_hides_loss"
+    "Becoming.Irreversibility.constant_reading_hides_loss",
+    "Becoming.Branching.Juncture.possiblyDrawn",
+    "Becoming.Branching.PossiblyDrawn.passes_juncture"
    ],
    "base": "any process",
    "hypotheses": [
@@ -976,14 +978,42 @@
     {
      "law": "Becoming.Irreversibility.constant_reading_hides_loss",
      "takes": []
+    },
+    {
+     "law": "Becoming.Branching.PossiblyDrawn.passes_juncture",
+     "takes": [
+      "branching-returns",
+      "branching-possibly-drawn"
+     ],
+     "case_of": [
+      {
+       "law": "Becoming.Branching.loss_passes_juncture",
+       "how": {
+        "en": "loss_passes_juncture with its end t, its list of acts and its two hypotheses path and lost not fixed to terms but taken from the hypothesis that s is possibly drawn, read through possiblyDrawn_iff (a law of this dynamic) as some t reached from s from which s cannot be reached again, the reaching being a trace by definition; returns is passed on. The conclusion is projected under the double negation: of the law's y, a, z with Reach P s y, P.step y a z, Reach P z t, ¬ Reach P z s and Juncture P s y, only y, Reach P s y and Juncture P s y are kept. Dropped: that the course takes its losing step at the juncture, and that the step leads on to t. The proof has no other step. loss_passes_juncture is listed under every-loss-passes-a-juncture (A)."
+       }
+      }
+     ]
     }
    ],
    "uses_between_proofs": {
-    "read": 9,
+    "read": 11,
     "uses": [],
     "chains": [],
     "used_by": [],
-    "shared": [],
+    "shared": [
+     {
+      "theorem": "Becoming.Branching.Juncture.possiblyDrawn",
+      "also_under": [
+       "every-loss-passes-a-juncture"
+      ]
+     },
+     {
+      "theorem": "Becoming.Branching.PossiblyDrawn.passes_juncture",
+      "also_under": [
+       "every-loss-passes-a-juncture"
+      ]
+     }
+    ],
     "not_read": {
      "theorems_of_the_receipt_without_row": [],
      "receipt_declarations_not_theorems": [
@@ -1043,7 +1073,10 @@
     "Becoming.Branching.reach_within_listed",
     "Becoming.Branching.keeps_before_juncture",
     "Becoming.TimedResponse.same_step_unreached",
-    "Becoming.TimedResponse.turned_at_juncture"
+    "Becoming.TimedResponse.turned_at_juncture",
+    "Becoming.Branching.Juncture.possiblyDrawn",
+    "Becoming.Branching.Juncture.returns",
+    "Becoming.Branching.PossiblyDrawn.passes_juncture"
    ],
    "base": "any process",
    "hypotheses": [
@@ -1315,7 +1348,7 @@
     }
    ],
    "uses_between_proofs": {
-    "read": 12,
+    "read": 15,
     "uses": [],
     "chains": [
      {
@@ -1332,7 +1365,26 @@
      }
     ],
     "used_by": [],
-    "shared": [],
+    "shared": [
+     {
+      "theorem": "Becoming.Branching.Juncture.possiblyDrawn",
+      "also_under": [
+       "necessarily-drawn-is-not-returning"
+      ]
+     },
+     {
+      "theorem": "Becoming.Branching.Juncture.returns",
+      "also_under": [
+       "returning-where-the-course-branches"
+      ]
+     },
+     {
+      "theorem": "Becoming.Branching.PossiblyDrawn.passes_juncture",
+      "also_under": [
+       "necessarily-drawn-is-not-returning"
+      ]
+     }
+    ],
     "not_read": {
      "theorems_of_the_receipt_without_row": [],
      "receipt_declarations_not_theorems": [
@@ -11950,6 +12002,27 @@
      "drops": [
       "optimum-rising"
      ],
+     "standing": [
+      {
+       "record": "what-an-optimum-does-beyond-what-couples-in",
+       "status": "recorded-checked",
+       "kind": "theorem"
+      }
+     ]
+    },
+    {
+     "to": "three-outcomes-of-a-loss",
+     "law": "Becoming.Web.optimum_ends_beyond",
+     "edge": {
+      "en": "Under Web.optimum_broken_iff's conditions (an order rising with the family, room beyond, the levels after the step an optimum, each condition beyond depended on at a need met at the step), with activity needing support, the beyond apart from the family, every condition a member of a group couples into in the family, an eligible outcome leaving a condition beyond below the need of the dependence on it, and that dependence still required after the step at a need no weaker: the dependence is broken across the step, and its formation is not active after it, is no member, and no member couples into the condition. That the dependence persists at a need no weaker is taken by this law alone among this dynamic's, and with it the formation reaches the ended outcome of a loss at the one step t + 1: read from the two statements, not by a call, its hypotheses and the break it concludes are those of Web.consumed_ends_when_fixed_at there (T := t), not of Web.consumed_ends_when_fixed at every later step, and it does not give that the loss is without return. The proof calls no law of the far dynamic: it uses Web.optimum_broken_iff and takes the last step in place."
+     },
+     "strength": "sufficient",
+     "records": [
+      "what-an-optimum-does-beyond-what-couples-in"
+     ],
+     "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+     "to_law": "Becoming.Web.optimum_ends_beyond",
+     "drops": [],
      "standing": [
       {
        "record": "what-an-optimum-does-beyond-what-couples-in",
@@ -23604,6 +23677,14 @@
       "choicecountcapture-pos",
       "choicecountcapture-above",
       "rulecapture-others-present"
+     ],
+     "case_of": [
+      {
+       "law": "Becoming.ClosedCapture.lock_outlives_loss",
+       "how": {
+        "en": "lock_outlives_loss with the share and the rule both fixed to pairs of counts under the share order (P and M := CarrierCounts.order), favouring fixed to the rule weighing the first policy at least as much as the second (CarrierCounts.favours), the selection fixed to the choice by the rule (fA := choose), the reading fixed to the counts weighted by the standing score (hA := weighted κc κo pos), and the start fixed to counts x with the rule in force read from them (a := x, g := weighted κc κo pos x x). Four of its hypotheses are discharged: raises by choose_raises, monotone by weighted_reads, upper by CarrierCounts.upper, and locked by start_locked from the threshold κo · other ≤ κc · carrier. Accrues, the coordinate beyond (fB, b), the schedule of reading and the step are passed on as they come, and the conclusion is the general law's with these roles; the proof is that one call. lock_outlives_loss is listed under closed-capture (C)."
+       }
+      }
      ]
     },
     {
@@ -23977,6 +24058,14 @@
       "choicecountcapture-pos",
       "choicecountcapture-above",
       "rulecapture-others-present"
+     ],
+     "case_of": [
+      {
+       "law": "Becoming.ClosedCapture.lock_outlives_loss",
+       "how": {
+        "en": "lock_outlives_loss with the share and the rule both fixed to pairs of counts under the share order (P and M := CarrierCounts.order), favouring fixed to the rule weighing the first policy at least as much as the second (CarrierCounts.favours), the selection fixed to the choice by the rule (fA := choose), the reading fixed to the counts weighted by the standing score (hA := weighted κc κo pos), and the start fixed to counts x with the rule in force read from them (a := x, g := weighted κc κo pos x x). Four of its hypotheses are discharged: raises by choose_raises, monotone by weighted_reads, upper by CarrierCounts.upper, and locked by start_locked from the threshold κo · other ≤ κc · carrier. Accrues, the coordinate beyond (fB, b), the schedule of reading and the step are passed on as they come, and the conclusion is the general law's with these roles; the proof is that one call. lock_outlives_loss is listed under closed-capture (C)."
+       }
+      }
      ]
     },
     {
@@ -36207,7 +36296,8 @@
     "Becoming.Branching.Lossless.comes_back",
     "Becoming.Branching.Lossless.recurs",
     "Becoming.Branching.Transit.keeps_not_returns",
-    "Becoming.Branching.fork_lossless_not_returns"
+    "Becoming.Branching.fork_lossless_not_returns",
+    "Becoming.Branching.Juncture.returns"
    ],
    "base": "any process",
    "hypotheses": [
@@ -36279,7 +36369,7 @@
     }
    ],
    "uses_between_proofs": {
-    "read": 6,
+    "read": 7,
     "uses": [],
     "chains": [],
     "used_by": [
@@ -36291,7 +36381,14 @@
       ]
      }
     ],
-    "shared": [],
+    "shared": [
+     {
+      "theorem": "Becoming.Branching.Juncture.returns",
+      "also_under": [
+       "every-loss-passes-a-juncture"
+      ]
+     }
+    ],
     "not_read": {
      "theorems_of_the_receipt_without_row": [],
      "receipt_declarations_not_theorems": [
@@ -44013,7 +44110,10 @@
     "Becoming.Recycle.closed_unceasing",
     "Becoming.Tide.renewal_without_arising",
     "Becoming.Growth.ceases",
-    "Becoming.Web.not_arises_of_unchanged"
+    "Becoming.Web.not_arises_of_unchanged",
+    "Becoming.Flow.More.unceasing_covering",
+    "Becoming.Flow.More.unceasing_reidentified",
+    "Becoming.Flow.More.unceasing_reidentified_covering"
    ],
    "base": "World",
    "hypotheses": [
@@ -44266,7 +44366,7 @@
     }
    ],
    "uses_between_proofs": {
-    "read": 12,
+    "read": 15,
     "uses": [
      {
       "dynamic": "becoming-renewal-reading",
@@ -44328,6 +44428,24 @@
      },
      {
       "theorem": "Becoming.Tide.renewal_without_arising",
+      "also_under": [
+       "more-needs-renewers"
+      ]
+     },
+     {
+      "theorem": "Becoming.Flow.More.unceasing_covering",
+      "also_under": [
+       "more-needs-renewers"
+      ]
+     },
+     {
+      "theorem": "Becoming.Flow.More.unceasing_reidentified",
+      "also_under": [
+       "more-needs-renewers"
+      ]
+     },
+     {
+      "theorem": "Becoming.Flow.More.unceasing_reidentified_covering",
       "also_under": [
        "more-needs-renewers"
       ]
@@ -49747,7 +49865,7 @@
    },
    "family": "H",
    "mechanism": {
-    "en": "Where, at each arising at which no condition of a finite family rises, one of them falls (a supplied premise, which does not involve the arising formation), unceasing arising leaves the family still from no step on, and where every rise is an active renewer's, renewing stops from no step on. Under balance, uptake at arbitrarily late steps needs replenishment at arbitrarily late steps. Read more as: for every number, from some step on at least that many formations take at every step. Under balance, more without end needs replenishment with no eventual bound and, each formation giving at most a fixed amount, renewers with no eventual bound, though they can be absent at infinitely many steps. Under a census, with activity decided, the present listing each formation once and only active formations taking, it forces unceasing arising; without these it does not. The least take of one whole unit is needed (Halving). A closed cycle sustains unceasing arising, and a tide renews with nothing arising. None ranks more above less."
+    "en": "Where, at each arising at which no condition of a finite family rises, one of them falls (a supplied premise, which does not involve the arising formation), unceasing arising leaves the family still from no step on, and where every rise is an active renewer's, renewing stops from no step on. Under balance, uptake at arbitrarily late steps needs replenishment at arbitrarily late steps. Read more as: for every number, from some step on at least that many formations take at every step. Under balance, more without end needs replenishment with no eventual bound and, each formation giving at most a fixed amount, renewers with no eventual bound, though they can be absent at infinitely many steps. Under a census, with activity decided, the present listing each formation once and only active formations taking, it forces unceasing arising; it does so with no census, given only lists covering the active formations at arbitrarily late steps and, from some step on, each formation taking part listed once, whatever takes active, and activity decided. Without a census (and with no covering lists given), with a formation listed many times in the present, or with takers that are not active, more without end can come with nothing arising (witnesses). The least take of one whole unit is needed (Halving). A closed cycle sustains unceasing arising, and a tide renews with nothing arising. None ranks more above less."
    },
    "records": [
     "more-needs-renewers",
@@ -49780,7 +49898,10 @@
     "Becoming.Pulse.pulsed",
     "Becoming.Oscillation.not_more",
     "Becoming.Recycle.closed_unceasing",
-    "Becoming.Tide.renewal_without_arising"
+    "Becoming.Tide.renewal_without_arising",
+    "Becoming.Flow.More.unceasing_covering",
+    "Becoming.Flow.More.unceasing_reidentified",
+    "Becoming.Flow.More.unceasing_reidentified_covering"
    ],
    "base": "World",
    "hypotheses": [
@@ -50029,7 +50150,7 @@
     }
    ],
    "uses_between_proofs": {
-    "read": 14,
+    "read": 17,
     "uses": [
      {
       "dynamic": "closed-cycle-without-dissipation",
@@ -50123,6 +50244,24 @@
      },
      {
       "theorem": "Becoming.Tide.renewal_without_arising",
+      "also_under": [
+       "unceasing-generation-needs-renewal"
+      ]
+     },
+     {
+      "theorem": "Becoming.Flow.More.unceasing_covering",
+      "also_under": [
+       "unceasing-generation-needs-renewal"
+      ]
+     },
+     {
+      "theorem": "Becoming.Flow.More.unceasing_reidentified",
+      "also_under": [
+       "unceasing-generation-needs-renewal"
+      ]
+     },
+     {
+      "theorem": "Becoming.Flow.More.unceasing_reidentified_covering",
       "also_under": [
        "unceasing-generation-needs-renewal"
       ]
@@ -93890,6 +94029,26 @@
     "Lean"
    ],
    "page": "theories/becoming/results/atlas/premises/g.md"
+  },
+  {
+   "id": "branching-possibly-drawn",
+   "name": {
+    "en": "possibly drawn, under a process"
+   },
+   "statement": {
+    "en": "the configuration s is possibly drawn under the process P: some region the process never leaves possibly draws it in, s lying outside the region and some course from s entering it (Branching.PossiblyDrawn P s)"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.Branching.PossiblyDrawn"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/necessarily-drawn-is-not-returning.md#laws--规律",
+   "seeded_from": [
+    "Lean"
+   ],
+   "page": "theories/becoming/results/atlas/premises/a.md"
   }
  ],
  "bindings": [

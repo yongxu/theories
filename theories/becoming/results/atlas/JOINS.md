@@ -14,11 +14,11 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 
 | What | Measured |
 |---|---:|
-| Exits that name a destination (a dynamic, or a state in words) that a law shows | 312 of 329 |
-| Exits that name a destination no law shows (argued, conjectured, read or open) | 17 of 329 |
+| Exits that name a destination (a dynamic, or a state in words) that a law shows | 313 of 330 |
+| Exits that name a destination no law shows (argued, conjectured, read or open) | 17 of 330 |
 | Dynamics with no exit | 57 of 186 |
 | Transitions that name what they lie between | 97 of 105 |
-| Exits that say which premise they drop (none, where they leave within the premises) | 308 of 329 |
+| Exits that say which premise they drop (none, where they leave within the premises) | 309 of 330 |
 | Dynamics read for the premises their laws take | 186 of 186 |
 | Tests bound to the dynamics they bear on, by the atlas's bindings (only dynamics read for their premises are bound) | 22 of 66 |
 | Tests joined to records exactly: a record cites a file in a folder holding that test alone | 6 of 66 |
@@ -34,12 +34,12 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 
 ## Exits and transitions
 
-329 exits on 186 dynamics. 71 name another dynamic as their destination and 258 name a state in words (17 of these 329 with no law showing it: argued, conjectured, read or open); 0 name none. 161 are witnesses: a constructed example that shows a course can leave, with no condition for it. 57 dynamics have no exit. 97 of 105 transitions name what they lie between (their `between`); the rest have a kind, a condition, declarations and records, and no ends yet.
+330 exits on 186 dynamics. 72 name another dynamic as their destination and 258 name a state in words (17 of these 330 with no law showing it: argued, conjectured, read or open); 0 name none. 161 are witnesses: a constructed example that shows a course can leave, with no condition for it. 57 dynamics have no exit. 97 of 105 transitions name what they lie between (their `between`); the rest have a kind, a condition, declarations and records, and no ends yet.
 
 | Family | Dynamics | With no exit | Exits | Naming a destination | Witnesses | Transitions |
 |---|---:|---:|---:|---:|---:|---:|
 | A. Absorption and ending | 31 | 9 | 47 | 47 | 21 | 32 |
-| B. Drains beyond what couples in | 26 | 3 | 70 | 70 | 33 | 12 |
+| B. Drains beyond what couples in | 26 | 3 | 71 | 71 | 33 | 12 |
 | C. Capture of the selection | 17 | 5 | 26 | 26 | 11 | 18 |
 | D. Locks of knowing | 22 | 7 | 29 | 29 | 19 | 8 |
 | E. Waiting and reciprocity | 10 | 4 | 14 | 14 | 4 | 5 |
@@ -356,6 +356,7 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 | [what-an-optimum-does-beyond-what-couples-in](families/b.md#what-an-optimum-does-beyond-what-couples-in) (exit 1) | the eligible outcomes restricted to those keeping every dependence beyond at its need, with room among them and each need attained by one of them, under balance and nothing gained on the family with the beyond: no dependence beyond is broken across the step, and the family's stock after the step with what the whole loses is its stock before with the slack | sufficient |
 | [what-an-optimum-does-beyond-what-couples-in](families/b.md#what-an-optimum-does-beyond-what-couples-in) (exit 2) | witness (Spilling): two outcomes, the source kept or spilled, the store empty in both; keeping the source is an optimum of the store's order and is not at the least level beyond | witness |
 | [what-an-optimum-does-beyond-what-couples-in](families/b.md#what-an-optimum-does-beyond-what-couples-in) (exit 3) | witness: the satisficing order, ranking an outcome reaching one unit in the store above one that does not, is not rising with the store, and among the splits both the outcome keeping the dweller's need and the outcome draining the source are its optima | witness |
+| [what-an-optimum-does-beyond-what-couples-in](families/b.md#what-an-optimum-does-beyond-what-couples-in) (exit 4) | [three-outcomes-of-a-loss](families/a.md#three-outcomes-of-a-loss) | sufficient |
 | [what-decides-giving-against-keeping-on-a-flow](families/e.md#what-decides-giving-against-keeping-on-a-flow) (exit 1) | one failed renewal takes a formation below its need: keeping, it never stands again; sharing, its partner's slack lifts it, its renewal resumes, and over m + 4 steps the sharing pair's lines exceed the keeping pair's by m, the gain carried by the resumed renewal, an inflow from beyond the pair (a witness) | witness |
 | [what-keeping-widening-needs](families/g.md#what-keeping-widening-needs) (exit 1) | at arbitrarily late steps the rest of the world gives the family more than it takes, or the family is not closed across the step (∀ M, ∃ t, M ≤ t ∧ ((L.withImbalance W).NetGiver cs t none ∨ ¬ L.ClosedAt cs t)) | necessary |
 | [what-keeping-widening-needs](families/g.md#what-keeping-widening-needs) (exit 2) | with balance on the family from T₀ as well, the family is not closed across the step at arbitrarily late steps (∀ M, ∃ t, M ≤ t ∧ ¬ L.ClosedAt cs t): some formation present takes or gives a condition outside it | necessary |
@@ -490,7 +491,7 @@ The theory graph has 3,303 nodes (1,724 text, 568 result, 559 section, 408 modul
 
 ## Declarations
 
-The core run lists 28,008 declarations. The atlas's dynamics name 2,676, of which 2,492 are in the core run's list and the rest in the periphery (the atlas render checks that each is declared in a live Lean file). Of the 2,785 times a dynamic names a declaration, 14 name one that none of the dynamic's own records lists, so the declaration joins the dynamic to no record; 378 of the declarations named are listed by more than one record. The records list 25,612 declarations, 23,359 of them by the core run's name. The Lean catalogue (`lean-index.json`) is loaded in the index the command writes and not read here: the same render writes it later, so a page reading it would lag a render.
+The core run lists 28,008 declarations. The atlas's dynamics name 2,682, of which 2,498 are in the core run's list and the rest in the periphery (the atlas render checks that each is declared in a live Lean file). Of the 2,797 times a dynamic names a declaration, 22 name one that none of the dynamic's own records lists, so the declaration joins the dynamic to no record; 378 of the declarations named are listed by more than one record. The records list 25,612 declarations, 23,359 of them by the core run's name. The Lean catalogue (`lean-index.json`) is loaded in the index the command writes and not read here: the same render writes it later, so a page reading it would lag a render.
 
 ## Ambiguous joins
 

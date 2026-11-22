@@ -212,7 +212,7 @@ flowchart LR
 
 ## B. Drains beyond what couples in
 
-26 dynamics, 70 exits.
+26 dynamics, 71 exits.
 
 ```mermaid
 flowchart LR
@@ -222,38 +222,39 @@ flowchart LR
   n3["The rest outruns the renewal"]
   n4["What taking all that is given excludes"]
   n5["What an optimum does beyond what couples in"]
-  n6["An order with a set point"]
-  n7["Others drawing first end the base"]
-  n8["Every optimum rebuilds a depleted base"]:::other
-  n9["Several drawers: drawers in turn and at once"]
-  n10["Coupled for each step"]
-  n11["A race for position"]
-  n12["Several optimizers"]
-  n13["Re-optimizing at every step"]
-  n14["Weighting later draws less"]
-  n15["Courses over a horizon"]
-  n16["A coupling for each step kept"]:::other
-  n17["What keeping forgoes, and a coupling against it"]
-  n18["What a rise draws from beyond"]
-  n19["Restraint within the joint slack keeps the need"]:::other
-  n20["Risk minimization on a shared renewal"]
-  n21["Where a rising take ends"]
-  n22["Position does not protect"]
-  n23["No finite part bears taking"]
-  n24["A closed cycle sustains unceasing arising, without…"]:::other
-  n25["A whole drawing beyond renewal ends"]
-  n26["A whole persists through the arising of its parts"]:::other
-  n27["Loss beyond a region"]
-  n28["LA4's season"]
-  n29["Selection blind beyond the coupling closure"]
-  n30["A pool that recruits through itself"]:::other
-  n31["Readers drawn from the selected"]:::other
-  n32["A selection read off the pool its own course gives…"]
-  n33["Reading in time: a selection read off continuation reads a…"]
-  n34["The lock draws its readers out"]:::other
-  n35["Readings revised at descent: a share moving by selection…"]:::other
-  n36["The point of no return of a regime"]:::other
-  n37["The loss read in time by the others, joined to the critical…"]:::other
+  n6["Three outcomes of a loss: restored, transformed, or ended…"]:::other
+  n7["An order with a set point"]
+  n8["Others drawing first end the base"]
+  n9["Every optimum rebuilds a depleted base"]:::other
+  n10["Several drawers: drawers in turn and at once"]
+  n11["Coupled for each step"]
+  n12["A race for position"]
+  n13["Several optimizers"]
+  n14["Re-optimizing at every step"]
+  n15["Weighting later draws less"]
+  n16["Courses over a horizon"]
+  n17["A coupling for each step kept"]:::other
+  n18["What keeping forgoes, and a coupling against it"]
+  n19["What a rise draws from beyond"]
+  n20["Restraint within the joint slack keeps the need"]:::other
+  n21["Risk minimization on a shared renewal"]
+  n22["Where a rising take ends"]
+  n23["Position does not protect"]
+  n24["No finite part bears taking"]
+  n25["A closed cycle sustains unceasing arising, without…"]:::other
+  n26["A whole drawing beyond renewal ends"]
+  n27["A whole persists through the arising of its parts"]:::other
+  n28["Loss beyond a region"]
+  n29["LA4's season"]
+  n30["Selection blind beyond the coupling closure"]
+  n31["A pool that recruits through itself"]:::other
+  n32["Readers drawn from the selected"]:::other
+  n33["A selection read off the pool its own course gives…"]
+  n34["Reading in time: a selection read off continuation reads a…"]
+  n35["The lock draws its readers out"]:::other
+  n36["Readings revised at descent: a share moving by selection…"]:::other
+  n37["The point of no return of a regime"]:::other
+  n38["The loss read in time by the others, joined to the critical…"]:::other
   e1(["across a step at which the formations together take from c at most…"])
   n0 -->|sufficient| e1
   n0 -->|sufficient| n1
@@ -275,103 +276,104 @@ flowchart LR
   n5 -.->|witness| e9
   e10(["witness: the satisficing order, ranking an outcome reaching one unit…"])
   n5 -.->|witness| e10
+  n5 -->|sufficient| n6
   e11(["where some eligible outcome stands at the set point, every optimum of…"])
-  n6 ==>|exact| e11
+  n7 ==>|exact| e11
   e12(["witness (Topped): every optimum, among the outcomes open to the…"])
-  n6 -.->|witness| e12
+  n7 -.->|witness| e12
   e13(["witness (Drain): every optimum among the splits of three units of the…"])
-  n6 -.->|witness| e13
+  n7 -.->|witness| e13
   e14(["where nothing stands at nothing and some level y within what stands…"])
-  n7 -->|sufficient| e14
-  n7 -->|sufficient| n8
+  n8 -->|sufficient| e14
+  n8 -->|sufficient| n9
   e15(["witness (a source doubling up to eight, from two, capacity sixteen)…"])
-  n7 -.->|witness| e15
+  n8 -.->|witness| e15
   e16(["drawing at once with no floor, where at some step before the last…"])
-  n9 ==>|exact| e16
+  n10 ==>|exact| e16
   e17(["for one drawer given all that stands, where at some step before the…"])
-  n9 ==>|exact| e17
+  n10 ==>|exact| e17
   e18(["witness (doubling, two drawers in turn over two steps): with a…"])
-  n9 -.->|witness| e18
+  n10 -.->|witness| e18
   e19(["with two drawers or more in turn and no floor, under the gate…"])
-  n10 -->|sufficient| e19
+  n11 -->|sufficient| e19
   e20(["witness…"])
-  n11 -.->|witness| e20
+  n12 -.->|witness| e20
   e21(["from a start at the need, with the withdrawal within the renewal…"])
-  n13 ==>|exact| e21
+  n14 ==>|exact| e21
   e22(["the draw above the renewal before T, and from T on a re-reading that…"])
-  n13 ==>|exact| e22
+  n14 ==>|exact| e22
   e23(["witness (Renewing, two takers of capacity one): at renewal one, a…"])
-  n13 -.->|witness| e23
+  n14 -.->|witness| e23
   e24(["where nothing is renewed at nothing and some level y within the start…"])
-  n14 -->|sufficient| e24
-  n14 -->|sufficient| n8
+  n15 -->|sufficient| e24
+  n15 -->|sufficient| n9
   e25(["witness (the logistic law, from a source at two with capacity two)…"])
-  n14 -.->|witness| e25
+  n15 -.->|witness| e25
   e26(["with what is left at the horizon counted one for one with what is…"])
-  n15 ==>|exact| e26
-  n15 -->|sufficient| n16
-  n15 -->|sufficient| n17
+  n16 ==>|exact| e26
+  n16 -->|sufficient| n17
+  n16 -->|sufficient| n18
   e27(["every optimum, among the open courses, of every order rising with a…"])
-  n17 -->|sufficient| e27
-  n17 -->|sufficient| n16
-  n18 -->|sufficient| n19
+  n18 -->|sufficient| e27
+  n18 -->|sufficient| n17
+  n19 -->|sufficient| n20
   e28(["across the first step, the supplying flow's inflow on the source and…"])
-  n18 -.->|witness| e28
+  n19 -.->|witness| e28
   e29(["with the source one above the dweller's need, the store rises by…"])
-  n18 -.->|witness| e29
+  n19 -.->|witness| e29
   e30(["nothing is discordant at the first step, more offspring going to the…"])
-  n18 -.->|witness| e30
+  n19 -.->|witness| e30
   e31(["two regulators, each reading the shared level, preferring four and…"])
-  n20 -.->|witness| e31
+  n21 -.->|witness| e31
   e32(["in Alone the first formation takes all that is given at every step…"])
-  n21 -.->|witness| e32
+  n22 -.->|witness| e32
   e33(["in Restored the race is one step of joint excess and the part…"])
-  n22 -.->|witness| e33
+  n23 -.->|witness| e33
   e34(["in the clearing witness the clearer, greatest at every step by what…"])
-  n22 -.->|witness| e34
+  n23 -.->|witness| e34
   e35(["a flow with the race's positions at every step…"])
-  n22 -.->|witness| e35
-  n23 -.->|witness| n24
+  n23 -.->|witness| e35
+  n24 -.->|witness| n25
   e36(["the flow balances, gives and takes only while active, keeps activity…"])
-  n23 -.->|witness| e36
-  n25 -.->|witness| n26
+  n24 -.->|witness| e36
+  n26 -.->|witness| n27
   e37(["with a part whose activity never ends, every other premise of…"])
-  n25 -.->|witness| e37
-  n25 -.->|witness| n26
+  n26 -.->|witness| e37
+  n26 -.->|witness| n27
   e38(["valuing the catch only up to 26, the optima among the season's…"])
-  n28 -.->|witness| e38
+  n29 -.->|witness| e38
   e39(["ranked by the ground's catch alone, the optima among the season's…"])
-  n28 -.->|witness| e39
+  n29 -.->|witness| e39
   e40(["where a list holds exactly the members and each member's coupling of…"])
-  n29 ==>|exact| e40
+  n30 ==>|exact| e40
   e41(["in Clearing, every selection through the pooled coupling of the…"])
-  n29 -.->|witness| e41
-  n29 -.->|witness| n30
+  n30 -.->|witness| e41
+  n30 -.->|witness| n31
   e42(["where the rest follows a law reading through its couplings and the…"])
-  n29 -.->|necessary| e42
+  n30 -.->|necessary| e42
   e43(["in Replenishing an actor takes one unit from a condition at step 0…"])
-  n29 -.->|witness| e43
+  n30 -.->|witness| e43
   e44(["two histories are selected alike by every selection read off a…"])
-  n29 ==>|exact| e44
-  n29 -.->|reading| n31
-  n29 -.->|argued| n32
-  n29 -.->|argued| n12
-  n29 -.->|argued| n3
-  n29 -.->|argued| n33
-  n29 -.->|reading| n34
+  n30 ==>|exact| e44
+  n30 -.->|reading| n32
+  n30 -.->|argued| n33
+  n30 -.->|argued| n13
+  n30 -.->|argued| n3
+  n30 -.->|argued| n34
+  n30 -.->|reading| n35
   e45(["read off a fixed pool, selection by persistence fails at every course…"])
-  n32 -->|sufficient| e45
+  n33 -->|sufficient| e45
   e46(["not reached here: the meta-attractor itself, a selection by share…"])
-  n32 -.->|open| e46
-  n32 -.->|reading| n31
-  n32 -.->|reading| n35
-  n32 -.->|argued| n34
+  n33 -.->|open| e46
+  n33 -.->|reading| n32
+  n33 -.->|reading| n36
+  n33 -.->|argued| n35
   e47(["too late: the courses are not readable in time, and no family of…"])
-  n33 -->|sufficient| e47
+  n34 -->|sufficient| e47
   e48(["read only once it has happened: where what is kept includes every…"])
-  n33 -->|sufficient| e48
-  n33 -.->|witness| n36
-  n33 -.->|reading| n37
+  n34 -->|sufficient| e48
+  n34 -.->|witness| n37
+  n34 -.->|reading| n38
   classDef other stroke-dasharray: 3 3
 ```
 
@@ -381,7 +383,7 @@ flowchart LR
 | [A loss made only together](families/b.md#joint-difference-making) | 1. witness (Pool): from three drawers each taking one unit, the first two drawers' parts make the difference only together: withheld together they keep the sustaining formation's dependence, while withheld either alone the same move still breaks it (witness)<br>2. witness (Renewable): at the breaking step, from level one, drawing two breaks the sustaining formation's dependence, while from the same configuration drawing nothing keeps it (witness; dropping [drawing at least two from N on](premises/b.md#renewable-overdraw)) | — |
 | [The rest outruns the renewal](families/b.md#the-rest-outruns-the-renewal) | **none: no exit is stated** | — |
 | [What taking all that is given excludes](families/b.md#what-taking-all-excludes) | 1. under balance, with the take jointly within what is given at every step, the level of c never falls below its start (sufficient; dropping [TakesAll](premises/b.md#flow-takesall), [the other takes part](premises/b.md#flow-other-present), [the other takes from c](premises/b.md#flow-other-takes))<br>2. witness (Sharing): a renewer giving two units a step and two takers each taking one at need one: the take is jointly within what is given, neither taker takes all that is given, the second lives by taking, and all are active at every step (witness; dropping [TakesAll](premises/b.md#flow-takesall)) | — |
-| [What an optimum does beyond what couples in](families/b.md#what-an-optimum-does-beyond-what-couples-in) | 1. the eligible outcomes restricted to those keeping every dependence beyond at its need, with room among them and each need attained by one of them, under balance and nothing gained on the family with the beyond: no dependence beyond is broken across the step, and the family's stock after the step with what the whole loses is its stock before with the slack (sufficient; dropping [an outcome below the need](premises/b.md#web-outcome-below-need))<br>2. witness (Spilling): two outcomes, the source kept or spilled, the store empty in both; keeping the source is an optimum of the store's order and is not at the least level beyond (witness; dropping [Room](premises/b.md#optimum-room))<br>3. witness: the satisficing order, ranking an outcome reaching one unit in the store above one that does not, is not rising with the store, and among the splits both the outcome keeping the dweller's need and the outcome draining the source are its optima (witness; dropping [Rising](premises/b.md#optimum-rising)) | — |
+| [What an optimum does beyond what couples in](families/b.md#what-an-optimum-does-beyond-what-couples-in) | 1. the eligible outcomes restricted to those keeping every dependence beyond at its need, with room among them and each need attained by one of them, under balance and nothing gained on the family with the beyond: no dependence beyond is broken across the step, and the family's stock after the step with what the whole loses is its stock before with the slack (sufficient; dropping [an outcome below the need](premises/b.md#web-outcome-below-need))<br>2. witness (Spilling): two outcomes, the source kept or spilled, the store empty in both; keeping the source is an optimum of the store's order and is not at the least level beyond (witness; dropping [Room](premises/b.md#optimum-room))<br>3. witness: the satisficing order, ranking an outcome reaching one unit in the store above one that does not, is not rising with the store, and among the splits both the outcome keeping the dweller's need and the outcome draining the source are its optima (witness; dropping [Rising](premises/b.md#optimum-rising))<br>4. [Three outcomes of a loss: restored, transformed, or ended where dependence is fixed](families/a.md#three-outcomes-of-a-loss) (sufficient) | [Three outcomes of a loss: restored, transformed, or ended where dependence is fixed](families/a.md#three-outcomes-of-a-loss) (sufficient) |
 | [An order with a set point](families/b.md#what-a-set-point-optimum-does-beyond) | 1. where some eligible outcome stands at the set point, every optimum of the order by distance with the one condition c beyond counted after keeps a need at c exactly where some eligible outcome at the set point keeps it (exact)<br>2. witness (Topped): every optimum, among the outcomes open to the taker, of the order trading the source at a positive weight against the store's gap from its set point meets the dweller's need at the source (witness; dropping [Nearing](premises/b.md#optimum-nearing))<br>3. witness (Drain): every optimum among the splits of three units of the order satisficing at a store of one with the source counted after leaves the source at two, the dweller's need (witness) | — |
 | [Others drawing first end the base](families/b.md#others-drawing-first-end-the-base) | 1. where nothing stands at nothing and some level y within what stands at the start, with what stands at y at least y at every step, rises faster than the weighting falls at each step, over at least two steps, with a capacity drawing down to y and holding it: every optimum of every order rising with the weighted draw stands above nothing after the first step (0 < x 1) (sufficient; dropping [the weighting outpaces what stands, strictly](premises/b.md#optimum-next-outpaced-strictly))<br>2. [Every optimum rebuilds a depleted base](families/h.md#optima-rebuild-a-depleted-base) (sufficient; dropping [the weighting outpaces what stands, strictly](premises/b.md#optimum-next-outpaced-strictly))<br>3. witness (a source doubling up to eight, from two, capacity sixteen): where w (t + 1) ≤ w t < 2 w (t + 1), every optimum alone rebuilds the source (four after the first step, eight after), while with others first drawing all but a quarter every optimum ends it at once and breaks the dweller needing two; where the weighting falls at every step, with others drawing all but half, every optimum ends it; at equal weights, with others drawing all but half, ending at once and holding at two are both optima (witness; dropping [nothing left stands higher](premises/b.md#optimum-next-stands-at-most-level), [the weighting falls at every step](premises/b.md#optimum-next-weighting-falls)) | [Weighting later draws less](families/b.md#a-weighting-faster-than-renewal-ends-the-base) (witness), [Every optimum rebuilds a depleted base](families/h.md#optima-rebuild-a-depleted-base) (sufficient) |
 | [Several drawers: drawers in turn and at once](families/b.md#drawers-in-turn) | 1. drawing at once with no floor, where at some step before the last, the others drawing everything, some drawer's portion of what stands next returns more than one for one on what it alone leaves: drawing everything is not perfect (which profiles are perfect then is not shown) (exact; dropping [no portion returning more than one for one](premises/b.md#optimum-atonce-returns-at-most), [AtOnce.ReturnsLess](premises/b.md#optimum-atonce-returnsless))<br>2. for one drawer given all that stands, where at some step before the last what stands from some b left exceeds what stands from nothing, and b: drawing everything is not perfect (exact; dropping [the whole never returning more than one for one](premises/b.md#optimum-atonce-whole-returns-at-most))<br>3. witness (doubling, two drawers in turn over two steps): with a one-unit floor on the second drawer, the profile keeping is perfect and in every perfect profile the first leaves everything from three, the dweller kept; with no floor, every perfect profile breaks the dweller (witness; dropping [a drawer with no floor](premises/b.md#optimum-inturn-no-floor)) | — |
@@ -1357,6 +1359,7 @@ flowchart LR
 | `Becoming.act_courses_unselected_throughout` | [Selection blind beyond the coupling closure](families/b.md#unselected-beyond-the-coupling-closure) | `Becoming.reader_kept_alike` ([A selection read off the pool its own course gives registers no removal](families/b.md#selection-read-off-its-own-survivors))<br>`Becoming.line_standing_unselected` ([Readings carried along a line, told apart by its standing late only within its coupling closure](families/h.md#readings-carried-and-filtered)) | B, H |
 | `Becoming.Flow.ends_below_at` | [Loss of renewal for good](families/a.md#loss-of-renewal-for-good) | `Becoming.Flow.ends_below` ([Own count misses joint excess](families/b.md#own-count-misses-joint-excess))<br>`Becoming.Flow.outrun_ends` ([The rest outruns the renewal](families/b.md#the-rest-outruns-the-renewal))<br>`Becoming.Flow.ends_at_race_end` ([Position does not protect](families/b.md#position-does-not-protect)) | A, B |
 | `Becoming.Learning.lasso_of_held` | — | `Becoming.Run.moves_lasso_of_whole_held` ([Recurrence under every law of change](families/f.md#recurrence-without-premise))<br>`Becoming.Run.moves_lasso_of_rest_held` ([Recurrence under every law of change](families/f.md#recurrence-without-premise))<br>`Becoming.Run.moves_lasso_of_part_held` ([Recurrence under every law of change](families/f.md#recurrence-without-premise)) | F |
+| `Becoming.ClosedCapture.lock_outlives_loss` | [Closed capture (meta-attractor, in the glossary's sense) (元吸引子)](families/c.md#closed-capture) | `Becoming.ChoiceCountCapture.counted_outlives_loss` ([A chooser's rule read from the count of its choices](families/c.md#capture-by-counted-choices))<br>`Becoming.ChoiceCountCapture.counted_outlives_loss` ([A habit read as capture by counted choices](families/c.md#habit-lock-in-active-inference)) | C |
 | `Becoming.RegimeMargin.leading_exact` | [One law of exact thresholds, and the threshold in the plane of level and recent giving](families/a.md#threshold-in-the-state-plane) | `Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below` ([An end cascading along total dependence](families/a.md#a-cascade-along-total-dependence))<br>`Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within` ([An end cascading along total dependence](families/a.md#a-cascade-along-total-dependence)) | A |
 | `Becoming.RuleCapture.locked_rises` | — | `Becoming.ChoiceCountCapture.counted_locks` ([A chooser's rule read from the count of its choices](families/c.md#capture-by-counted-choices))<br>`Becoming.ChoiceCountCapture.counted_locks` ([A habit read as capture by counted choices](families/c.md#habit-lock-in-active-inference)) | C |
 | `Becoming.RuleCapture.locked_stays` | [Capture through the rule](families/c.md#capture-through-the-rule), [A counter-rule read from the share it selects](families/c.md#a-counter-rule-read-from-its-own-share) | `Becoming.ChoiceCountCapture.counted_locks` ([A chooser's rule read from the count of its choices](families/c.md#capture-by-counted-choices))<br>`Becoming.ChoiceCountCapture.counted_locks` ([A habit read as capture by counted choices](families/c.md#habit-lock-in-active-inference)) | C |
@@ -1368,6 +1371,7 @@ flowchart LR
 | `Becoming.Amounts.rests` | [The least loss as a premise of rest](families/g.md#least-loss-rest) | `Becoming.falls_not_recurring` ([Renewal and consumption classify runs](families/h.md#becoming-renewal-reading)) | G, H |
 | `Becoming.BandRest.rests_on_band` | — | `Becoming.RegimeMargin.rests_within` ([Where a run of a regime comes to rest](families/g.md#where-a-run-of-a-regime-comes-to-rest)) | G |
 | `Becoming.Branching.Lossless.returns` | — | `Becoming.Onward.KeepsMoving.returns` ([When the runs of a process settle](families/g.md#when-the-runs-of-a-process-settle)) | G |
+| `Becoming.Branching.loss_passes_juncture` | [Every loss passes a juncture](families/a.md#every-loss-passes-a-juncture) | `Becoming.Branching.PossiblyDrawn.passes_juncture` ([Necessarily drawn exactly what does not return](families/a.md#necessarily-drawn-is-not-returning)) | A |
 | `Becoming.Branching.reachable_iff_all` | [The largest class a step preserves, reached at a list's length (步所保之最大类，至列表之长而得)](families/h.md#kept-at-the-length-of-a-list) | `Becoming.Law.drawn_iff_not_reachable_count` ([Drawn exactly where it does not return](families/a.md#attraction-is-not-returning)) | A, H |
 | `Becoming.Branching.rise_not_lossless` | — | `Becoming.Law.rise_not_lossless` ([Recurrence under every law of change](families/f.md#recurrence-without-premise)) | F |
 | `Becoming.Countdown.invariant_iff_reach` | — | `Becoming.Countdown.admitted_invariant_iff` ([Recovery after interrupted change](families/h.md#recoverable-mediated-change)) | H |
@@ -1486,7 +1490,7 @@ flowchart LR
 
 *AI-written. Computed at each render from what Lean printed of the theorems each proof uses (the print; what it was made from is under the next paragraph) and from which theorems the entries list; typed by no one, and no result. The lines are last in each dynamic's section on its family's page, for every family, read for its premises or not.*
 
-A line of this kind says that the proof of one theorem, as written, uses another theorem, and that the entries list the two under different dynamics. It says no more. 2,166 of the 20,681 theorems in the print are listed under a dynamic, so these lines are of those; where a chain is shown it runs through the rest. A use is not a case: the using theorem need not be the used one with its roles fixed. It is not a joining and not an exit: it says nothing of a course passing from one dynamic to the other, and its direction is the order of proof, the used theorem declared before its user, which is no direction of change. It cannot see a passage: where going from one dynamic to another is itself what a theorem states, the proof of it need use nothing listed under either, and of the 58 pairs of dynamics with an exit from one to the other, 33 have no line of this kind. Passages proved in Lean that no exit names are not on this page under any kind; that none is shown is not that none is proved. A line is of two theorems, and a dynamic lists many: that one of them is used is not a use of what the dynamic's name says. Which dynamic a theorem is under is kept by hand, so every line rests on the listing as well as on Lean; 103 theorems of the print are listed under more than one dynamic, and where the using theorem is also listed under the used one's dynamic, or the used one under the using one's, the use is shown as a shared listing and not as a use between those two. Only theorems declared in the modules of the core receipt are printed, and definitions are not followed: 17 dynamics list no theorem the print has a row for and can have no line (6 of them list no declaration), and a theorem stated with another dynamic's notion and using none of its theorems has none. The printer follows one call, and every declaration under a theorem's own name (Lean's auxiliary ones, and any theorem a person declared under that name), counting what they use as the theorem's own; a field of a structure that is a proposition has a row, so a proof that takes it from the structure it is given shows as a use, though what it uses is an assumption and not a proved theorem; a use it does not follow is not shown, so where no line is, none was found; 20 names the printed proofs use have no row in the print, and nothing is followed past such a name. A chain through theorems no dynamic lists says where the proofs as written lead, and not that the first needs the last: a theorem between may prove several things of which the next takes one. Such a chain also rests on what is not listed: were a theorem between entered under a dynamic, the chain would stop there. How often a dynamic's theorems are used says they were proved earlier and are called often; it says nothing of that dynamic's place among the others. The figures in this paragraph are counts of what is listed and printed, told so that a reader knows how much the lines cover. They change when a theorem is listed or a proof rewritten, and a change in them is not the map nearer or further.
+A line of this kind says that the proof of one theorem, as written, uses another theorem, and that the entries list the two under different dynamics. It says no more. 2,172 of the 20,681 theorems in the print are listed under a dynamic, so these lines are of those; where a chain is shown it runs through the rest. A use is not a case: the using theorem need not be the used one with its roles fixed. It is not a joining and not an exit: it says nothing of a course passing from one dynamic to the other, and its direction is the order of proof, the used theorem declared before its user, which is no direction of change. It cannot see a passage: where going from one dynamic to another is itself what a theorem states, the proof of it need use nothing listed under either, and of the 59 pairs of dynamics with an exit from one to the other, 34 have no line of this kind. Passages proved in Lean that no exit names are not on this page under any kind; that none is shown is not that none is proved. A line is of two theorems, and a dynamic lists many: that one of them is used is not a use of what the dynamic's name says. Which dynamic a theorem is under is kept by hand, so every line rests on the listing as well as on Lean; 109 theorems of the print are listed under more than one dynamic, and where the using theorem is also listed under the used one's dynamic, or the used one under the using one's, the use is shown as a shared listing and not as a use between those two. Only theorems declared in the modules of the core receipt are printed, and definitions are not followed: 17 dynamics list no theorem the print has a row for and can have no line (6 of them list no declaration), and a theorem stated with another dynamic's notion and using none of its theorems has none. The printer follows one call, and every declaration under a theorem's own name (Lean's auxiliary ones, and any theorem a person declared under that name), counting what they use as the theorem's own; a field of a structure that is a proposition has a row, so a proof that takes it from the structure it is given shows as a use, though what it uses is an assumption and not a proved theorem; a use it does not follow is not shown, so where no line is, none was found; 20 names the printed proofs use have no row in the print, and nothing is followed past such a name. A chain through theorems no dynamic lists says where the proofs as written lead, and not that the first needs the last: a theorem between may prove several things of which the next takes one. Such a chain also rests on what is not listed: were a theorem between entered under a dynamic, the chain would stop there. How often a dynamic's theorems are used says they were proved earlier and are called often; it says nothing of that dynamic's place among the others. The figures in this paragraph are counts of what is listed and printed, told so that a reader knows how much the lines cover. They change when a theorem is listed or a proof rewritten, and a change in them is not the map nearer or further.
 
 **What the print was made from.** Commit `608ff1239364`, the core run of `20261122T094514.036246Z`, leanprover/lean4:v4.29.1: 20,681 theorems in 412 modules. It binds the sources the core receipt names.
 
