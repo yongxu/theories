@@ -1,0 +1,41 @@
+"""AI-written (row FM), 23 November 2026. Find the smallest course on which, without a monotone step,
+a later reading silent at rest is in time and the reading at the first differing level is not (with the lag).
+Also checks the draw form: H2 + y2 <= lv(D+1)  <->  use_D + y2 <= lv D, where its premises hold."""
+import itertools
+def step(tab, u, x):
+    left = x - u if x >= u else 0
+    return left + tab[left]
+def orbit_from(tab, u, x, n=60):
+    xs=[x]
+    for _ in range(n):
+        x=step(tab,u,x); xs.append(x)
+    return xs
+def goes_on(tab,u,x,need=1):
+    seen=set()
+    while True:
+        if x<need: return False
+        if x in seen: return True
+        seen.add(x); x=step(tab,u,x)
+best=None
+for hi in range(3,8):
+    for tab in itertools.product(*[range(0,hi-z+1) for z in range(1,hi+1)]):
+        tab=(0,)+tab
+        mono=all(z+tab[z]<=z+1+tab[z+1] for z in range(hi))
+        if mono: continue
+        for x0 in range(1,hi+1):
+            for u0 in range(1,x0+1):
+                if step(tab,u0,x0)!=x0: continue
+                xs=[x0]; x=x0; j=0
+                while x>=1 and j<40:
+                    x=step(tab,u0+j,x); xs.append(x); j+=1
+                if xs[-1]>=1: continue
+                D=next((j for j,x in enumerate(xs) if x!=x0),None)
+                if D is None or D+1>=len(xs): continue
+                def in_time(T): return all(xs[j]>=1 for j in range(T+1)) and T+1<len(xs) and goes_on(tab,u0,xs[T+1])
+                if in_time(D): continue
+                later=[T for T in range(D+1,len(xs)-1) if xs[T]!=x0 and all(xs[j]!=xs[T] for j in range(T)) and in_time(T)]
+                if later:
+                    cand=(hi,len(xs),tab,x0,u0,xs,D,later,[orbit_from(tab,u0,xs[T+1],6) for T in later[:1]],orbit_from(tab,u0,xs[D+1],8))
+                    if best is None or cand[:2]<best[:2]: best=cand
+    if best: break
+print(best)

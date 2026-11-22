@@ -1,0 +1,13 @@
+# Mends to apply after the readers, not sent to the running implementer
+
+*AI-written (row FM). A message to a running workflow agent starts a second copy, so these wait.*
+
+- From row DJ (23 November): the docstring of S1 `level_never_rises` should say that it is the premise `fall` of `turned_meets_iff`, `recoverable_iff_above` and `noReturnAt_iff_first_below`, so those three now apply to any course with a use that does not fall, which they did not before (the module had `fall` only from a standing overdraw, by the private `asItWas_falls`).
+- From row DJ: S5 from S4 needs "not recoverable at D + 1 gives a first such step": the module's `recoverable_decided` (used by `noReturn_exists`) and `Recoverable.earlier`. If the implementer used excluded middle there, replace by those. Check whether `recoverable_decided` is private; if so, decide through `recoverable_iff_above` and `Nat.decLe`.
+- From row DJ: S2's `meets` is used only at `y₂` itself, which is why `H₂ + y₂ ≤ hi` is asked and no bound on `x`; the docstring may say so.
+
+## Added 23 November 2026, 00:53 WIB (from the clock), from row DJ's run on the four pairs
+
+- S5's telling: `∃ N, N ≤ D + 1 ∧ NoReturnAt … N` does not exclude `N = 0` (a course never recoverable). Nothing in S5 needs it excluded; the docstring must not tell S5 as "a point of no return after the start".
+- S1's docstring: if it is true once built, say that `level_never_rises` also gives the premise that `noReturnAt_of_below` asks (a level course that never rises). Open `noReturnAt_of_below` and check before writing it.
+- For the roads survey's record (owed with the other correction): row DJ's run of 23 November refused C39 (`locked_turns_in_time_share_iff`) a second time, independently: both its judges called it a passage by a parameter and its refuter refused it on my checker's ground and one more (the left side is the corrected line never ending, the right a condition on the uncorrected course; the lock's own outcome is no conjunct; `locked` only bounds the use from below; one call of `turns_in_time_iff`). Its record: `tmp/r7/one-model/check/statements23/RESULT-49.json` until it lands.

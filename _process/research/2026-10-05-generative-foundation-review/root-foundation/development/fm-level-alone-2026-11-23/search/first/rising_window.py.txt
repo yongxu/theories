@@ -1,0 +1,71 @@
+"""AI-written (Claude Fable, row FM), 23 November 2026. A search on small numbers, not a proof.
+
+Question, asked of courses with a draw that rises step by step from a start at rest:
+is there a step at which the LEVEL already differs from the start's and from which a return
+to the start's own draw, held, still keeps the line going?  (The level's step is the Lean's
+RegimeMargin.step: x' = (x - u) + giving (x - u), subtraction truncated.  A read at step T
+means: steps 0..T-1 and the step at T are taken under the rising use; from step T+1 on the
+use is the start's u0, held.  This is the right side of the turn laws: the level one step
+after the first read step decides.)
+"""
+import json, sys
+
+def step(giving, u, x):
+    left = x - u if x >= u else 0
+    return left + giving(left)
+
+def goes_on(giving, u, x, need, hi):
+    seen = set()
+    while True:
+        if x < need: return False
+        if x in seen: return True
+        seen.add(x)
+        x = step(giving, u, x)
+        if x > hi * 4: return True
+
+def course(giving, u0, d, x0, need, n=200):
+    xs = [x0]; x = x0
+    for j in range(n):
+        if x < need: break
+        x = step(giving, u0 + j * d, x); xs.append(x)
+    return xs
+
+def ask(giving, u0, d, x0, need, hi):
+    xs = course(giving, u0, d, x0, need)
+    ends = xs[-1] < need
+    first_diff = next((j for j, x in enumerate(xs) if x != x0), None)
+    # T in time: level at T+1 (after the step at T under the rising use) still kept by u0 held
+    in_time = [T for T in range(len(xs) - 1) if xs[T] >= need and goes_on(giving, u0, xs[T + 1], need, hi)]
+    last = max(in_time) if in_time else None
+    return xs, ends, first_diff, last
+
+def families():
+    for hi in range(4, 41):
+        yield f"min(z,{hi}-z)", hi, (lambda z, hi=hi: min(z, hi - z) if z <= hi else 0)
+    for hi in range(4, 41):
+        for r in range(1, hi):
+            yield f"min(z,{r}) capped {hi}", hi, (lambda z, hi=hi, r=r: min(min(z, r), hi - z) if z <= hi else 0)
+
+rows = []; tally = {}
+for name, hi, g in families():
+    for x0 in range(1, hi + 1):
+        for u0 in range(1, x0 + 1):
+            if step(g, u0, x0) != x0: continue          # start at rest under its own draw
+            for d in (1, 2, 3):
+                for need in (1,):
+                    xs, ends, fd, last = ask(g, u0, d, x0, need, hi)
+                    if not ends: kind = "never ends"
+                    elif fd is None: kind = "no fall"
+                    elif last is None: kind = "no read in time at all"
+                    elif last < fd: kind = "only before the level differs"
+                    else: kind = "some read after the level differs is in time"
+                    fam = name.split('(')[0] + ("…capped" if "capped" in name else "…hi-z")
+                    tally.setdefault((fam, d, kind), 0); tally[(fam, d, kind)] += 1
+                    rows.append((name, x0, u0, d, kind, fd, last, xs[:12]))
+for k in sorted(tally): print(k, tally[k])
+ex = [r for r in rows if r[0] == "min(z,12-z)" and r[1] == 12 and r[2] == 3 and r[3] == 1]
+print("the module's course (giving min z (12 - z), level 12, draw 3 rising by one):", ex)
+for kind in ("some read after the level differs is in time", "only before the level differs"):
+    print(kind, "examples:", [r for r in rows if r[4] == kind][:4])
+json.dump([list(r) for r in rows], open("rising_window.json", "w"))
+print(len(rows), "courses")

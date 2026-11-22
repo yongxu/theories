@@ -1,0 +1,13 @@
+{
+ "H2>u0 / mono / still / agree": 233156,
+ "H2<=u0 / mono / still / agree": 47002,
+ "H2>u0 / mono / not still / agree": 112666,
+ "H2>u0 / not mono / not still / agree": 972581,
+ "H2>u0 / not mono / still / agree": 1475525,
+ "H2<=u0 / mono / not still / agree": 1731,
+ "H2<=u0 / not mono / still / agree": 151629,
+ "H2>u0 / not mono / not still / DISAGREE": 5500,
+ "H2<=u0 / not mono / not still / agree": 8096,
+ "H2>u0 / not mono / still / DISAGREE": 1627,
+ "H2>u0 / mono / not still / DISAGREE": 1
+}

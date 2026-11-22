@@ -1,0 +1,24 @@
+start 01:38:28
+{
+  "tree": "/Users/ren/tmp/fm/build14/tree",
+  "modules": 151,
+  "ran": [
+    "Becoming.LevelAlone",
+    "BecomingLevelAloneAxiomAudit"
+  ],
+  "reused": 150,
+  "unclean": [],
+  "audits": {
+    "Becoming.LevelAlone": {
+      "theorems": 36,
+      "declarations": 49,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.LevelAlone": 2.625,
+    "BecomingLevelAloneAxiomAudit": 0.366
+  }
+}
+exit 0 build 10
+end 01:38:34

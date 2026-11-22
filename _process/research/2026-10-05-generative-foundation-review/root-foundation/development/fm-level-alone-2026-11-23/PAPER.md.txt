@@ -1,0 +1,81 @@
+# A reading of the level alone, quantified: the statement on paper, before any Lean
+
+*AI-written (Claude Fable, board row FM), 23 November 2026. On paper and by search on small numbers; no Lean written, nothing built. For row DJ, who keeps `TurningInTime` and asked for the statement with four things that would count against it, to break before any build. A search shows where a statement fails, not that it holds.*
+
+## What counts as nothing gained (row DJ's four, taken as frozen for this try)
+
+1. **The lag hidden.** If the statement holds only because a reading acts from the step after it fires, that must be in the statement and in its name.
+2. **The resting premise hands in the conclusion.** If with it the proof is two steps of `RegimeMargin.step` unfolded, it is arithmetic on a definition.
+3. **The quantifier over readings does no work.** It must go through `unending_iff_first_marked` as it stands; and if the outcome turns on an inequality, that inequality is the content and the statement is an iff or comes with the built course on its other side.
+4. **It is an old law said again:** `rising_takes_all`, or "a window that lies too low is too late" window by window.
+
+And mine: 5. **A premise that could be dropped.** Each premise is either used by the proof on paper or has a small course that fails without it.
+
+## The setting, in the module's own terms
+
+`W` any type of ways; `alone : W → W` the way's step as it was; `use : W → Nat`; `giving : Nat → Nat`; the level's step `left w x := RegimeMargin.step giving (use w) x`; the course as it was `Law.orbit (asItWas alone left) (w, x₀)`, its level at step `j` written `lv j` below. A kept kind `Kept : W → Prop` whose ways use `H₂`, with the regime at `H₂` as in `turns_in_time_iff` (`nothing`, `short`, `meets`, `keeps` at `H₂` with `y₂`, `hi`; `needs`, `within`).
+
+New here, a reading given by where it fires and one fixed correction:
+
+- `t : W → W`, what a reading sets, with `sets : ∀ v, Kept (t v)` and `stays : ∀ v, Kept v → Kept (alone v)`. This is handed in: the statement quantifies over where a reading fires, not over what it does.
+- For a decidable `marked : Nat → Prop`, the way after a step is `readBy marked v x := if marked x then t v else alone v`. It meets `AloneOutside`, `turns` and `kept` of `turns_in_time_iff` by `sets` and `stays`.
+
+Premises on the course as it was:
+
+- `mono : ∀ z z', z ≤ z' → z + giving z ≤ z' + giving z'` (the step under no draw does not fall as the level rises). Not a notion of `RegimeMargin` today; its docstrings speak of "rising giving".
+- `rises : ∀ j, use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1))` (strict, as `rising_takes_all` asks; the fall needs only that it does not fall).
+- `keeps₀ : RegimeMargin.Keeps giving 0 hi`, `x₀ ≤ hi`.
+- `still : RegimeMargin.step giving (use w) x₀ ≤ x₀`: the start's own draw does not raise the level (a start at rest meets it with equality). Needed by step 3 of the proof where `D = 1`.
+- `rest : ∀ j, j < D → lv j = x₀` and `differs : lv D ≠ x₀`: `D` is the first step at which the level differs from the start's.
+
+## The statement
+
+**Some reading of the level alone that does not fire at the start's level keeps the line going, exactly where the reading that fires at the first level that differs does:**
+
+```
+(∃ (marked : Nat → Prop) (_ : DecidablePred marked), ¬ marked x₀ ∧
+    «不穷» (net need (readBy marked) left) «一» (w, x₀))
+  ↔ need ≤ lv D ∧ H₂ + y₂ ≤ lv (D + 1)
+```
+
+and so, as a wall: **every** reading of the level alone that does not fire at the start's level ends the line, exactly where `lv D < need ∨ lv (D + 1) < H₂ + y₂`.
+
+The right side is of the course as it was only. `lv (D + 1)` is the level after the step taken from the first differing level, still under the old use: that is the lag, and it is in the statement. A name for it should say it: a reading that acts from the next step.
+
+## The proof on paper
+
+1. *The course as it was ends* (`rising_takes_all` with `nothing`, `keeps₀`, `rises`, and `needs`): the premise `asItWasEnds` of `unending_iff_first_marked`.
+2. *For each marking*, by `unending_iff_first_marked` and `unending_iff_above` at the kept kind (the proof of `turns_in_time_iff_kept_below` from its line `ends` on, as it stands): the line never ends exactly where there is a first marked step `T`, the need met up to and at it, with `H₂ + y₂ ≤ lv (T + 1)`. (The bound `lv (T + 1) ≤ hi` that law needs is `kept_within` from `keeps₀`.)
+3. *The levels never rise* (new, about ten lines of argument): `lv (j + 1) ≤ lv j` for every `j ≥ D - 1`. Base: `lv D ≤ lv (D - 1) = x₀`, since `lv D = step (u_{D-1}) x₀ ≤ step u₀ x₀ = lv 1 = x₀` by `mono` and the use not having fallen (`D ≥ 1` since `lv 0 = x₀`; where `D = 1` the base needs `step u₀ x₀ ≤ x₀`, which `rest` does not give: then `lv 1 ≠ x₀` and it may be above. So either `D ≥ 2` is asked, or a premise that the start does not rise, `step giving (use w) x₀ ≤ x₀`. I take the second.) Step: `lv (j + 2) = step u_{j+1} (lv (j + 1)) ≤ step u_j (lv j) = lv (j + 1)`, by `mono` with `u_j ≤ u_{j+1}` and `lv (j + 1) ≤ lv j`.
+4. *Left to right.* A marking with `¬ marked x₀` has its first marked step `T ≥ D` (before `D` every level is `x₀`). By 3, `lv (T + 1) ≤ lv (D + 1)` and `lv T ≤ lv D`, so the right side follows from 2.
+5. *Right to left.* Take `marked := (· = lv D)`, decidable; `¬ marked x₀` by `differs`; its first marked step is `D`; the need is met before it since `need ≤ lv D ≤ x₀`. By 2 the line never ends.
+
+Each of row DJ's tests, by this proof: (1) the lag is the `+ 1` on the right side and is said. (2) `rest` gives only that a marking silent at `x₀` cannot fire before `D`; the conclusion needs 3, which is where `mono` and the rise are used. (3) It goes through `unending_iff_first_marked` for every marking, and the quantifier is discharged by 3 and 4, not by unfolding; the statement is an iff. (4) `rising_takes_all` is used once, for `asItWasEnds`; what is added to "a window too low is too late" is that one reading is the best of all, so the question over all readings is one inequality.
+
+What I hold against it myself: it is a modest law. Its argument is "the level only falls, so the earliest reading is the best one", and whether the wall stands is then two numbers of the course. It says nothing of when those numbers fall the wall's way; that is by built courses below, and a condition on the regime for it is not attempted.
+
+## By search (`wall_check.py`, beside this file)
+
+For each small course at rest under its start's draw, the draw then rising by one, two or three a step, the correction a return to the start's draw, need one: is some marking silent at `x₀` in time, against: is the marking at `lv D` in time.
+
+| | step monotone | step not monotone |
+|---|---|---|
+| with the lag: both yes / both no / disagree | 10,100 / 20,980 / 0 | 22,986 / 47,490 / 21 |
+| without the lag: both yes / both no / disagree | 16,495 / 14,585 / 0 | 38,382 / 32,000 / 115 |
+
+- With a monotone step the two sides never disagreed, with the lag or without it. So the iff does not rest on the lag; the lag moves which side a course falls on (the wall stands in 20,980 of 31,080 with it and 14,585 without).
+- Without a monotone step it fails: giving `0, 5, 10, 11, 0, 5, 5, 7, 5, 0, 0, 2, 1, 0, 0` at what is left 0 to 14, level eleven, draw five rising by one, levels 11, 11, 10, 14, 11, 12, 12, 6, 0: a later reading is in time and the one at the first differing level is not. So `mono` does work, and this course is its kept failure.
+
+## The built courses a Lean form would carry
+
+- *The wall stands:* the module's own `Three.rise_count_ends` course (giving `min z (12 - z)`, level twelve, draw three rising by one; levels 12, 12, 12, 12, 12, 10, 4, 0), return to a draw of three, `H₂ = y₂ = 3`: `D = 5`, `lv 6 = 4 < 6`. No reading of the level that is silent at twelve keeps the line. On this course it stands by the lag: `lv 5 = 10 ≥ 6`, so a return that took effect at once would keep it (row DJ's point 1, confirmed).
+- *The wall does not stand:* giving `min z (7 - z)`, level seven, draw one rising by one; levels 7, 7, 7, 7, 6, 2, 0; `D = 4`, `lv 5 = 2`, and a draw of one holds from two.
+- *Without `mono`:* the course above.
+
+## What it would be in Lean, if it survives
+
+A new module that imports `TurningInTime`, with no edit to that module: `readBy`, the fall (3), the iff, the wall as its corollary, and the three courses. My guess is 150 to 250 lines; not counted. Its claim on the board would say: a claim put to a test that could fail, the first statement of the module's family that quantifies over readings; it makes no older law a case and joins no two places of the map.
+
+## Added after row DJ's read (it tried to break the statement on paper and could not)
+
+*AI-written. Two changes row DJ asked for, both taken into the brief.* (1) The fall of step 3 holds for every `j` from `still` alone with `mono` and a use that does not fall; `rest` is not used there. It is exactly the premise `fall` of `turned_meets_iff`, `recoverable_iff_above` and `noReturnAt_iff_first_below`, which the module so far has only from a standing overdraw; so the right side can be said as `Recoverable … (D + 1)`, and the wall as a point of no return `N ≤ D + 1`. The need clause of the right side follows from the rest (`need ≤ H₂ + y₂ ≤ lv (D + 1) ≤ lv D`) and is dropped. (2) The draw form: with `short`, `meets`, `mono` and `H₂ + y₂ ≤ hi`, `H₂ + y₂ ≤ lv (D + 1)` exactly where the use at `D` plus `y₂` is at most `lv D`. The smallest course found without `mono` on which the statement fails (exhaustive up to a ceiling of seven, none; at eight): giving 0, 2, 0, 3, 0, 2, 2, 0, 0, level eight, draw two rising by one, levels 8, 8, 7, 6, 3, 0.

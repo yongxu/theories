@@ -1,0 +1,78 @@
+"""AI-written (Claude Fable, row FM), 23 November 2026. A search on small numbers, not a proof.
+
+The wall, as an iff: on a course at rest at its start level x0 under a draw that then rises,
+SOME reading of the level alone that does not fire at x0 turns the course in time
+  exactly where  the reading that fires at the first level that differs does:
+  need met at that step D, and the level at D + 1 still kept by the draw returned to.
+A reading = a set of marked levels; it acts from the step after it first fires (the Lean's lag).
+Checked with the lag (the level one step after the read decides) and without (the read level decides).
+Also asked: is the monotone step needed?  Random givings with nothing from nothing are tried too.
+"""
+import itertools, random, json
+
+def step(g, u, x):
+    left = x - u if x >= u else 0
+    return left + g(left)
+
+def goes_on(g, u, x, need, cap=400):
+    seen = set()
+    for _ in range(cap):
+        if x < need: return False
+        if x in seen: return True
+        seen.add(x); x = step(g, u, x)
+    return True
+
+def run(g, u0, d, x0, need, lag, n=120):
+    xs = [x0]; x = x0
+    for j in range(n):
+        if x < need: break
+        x = step(g, u0 + j * d, x); xs.append(x)
+    ends = xs[-1] < need
+    D = next((j for j, x in enumerate(xs) if x != x0), None)
+    def in_time(T):
+        if any(xs[j] < need for j in range(T + 1)): return False
+        if lag:
+            return T + 1 < len(xs) and goes_on(g, u0, xs[T + 1], need)
+        return goes_on(g, u0, xs[T], need)
+    return xs, ends, D, in_time
+
+def some_reading(xs, x0, need, in_time):
+    # a reading that does not fire at x0 first fires at a step T whose level differs from x0 and
+    # from every earlier level... any set of marked levels: first fire = first T with xs[T] marked.
+    # Marking exactly {xs[T]} fires first at the first step whose level equals xs[T].
+    best = []
+    for T in range(len(xs)):
+        if xs[T] == x0: continue
+        first = next(j for j in range(len(xs)) if xs[j] == xs[T])
+        if in_time(first): best.append(first)
+    return best
+
+def fam():
+    for hi in range(4, 31):
+        yield f"min(z,{hi}-z)", hi, True, (lambda z, hi=hi: min(z, hi - z) if z <= hi else 0)
+        for r in range(1, hi):
+            yield f"cap{r}@{hi}", hi, True, (lambda z, hi=hi, r=r: min(min(z, r), hi - z) if z <= hi else 0)
+    rnd = random.Random(23)
+    for i in range(4000):
+        hi = rnd.randint(4, 14)
+        tab = [0] + [rnd.randint(0, hi - z) for z in range(1, hi + 1)]
+        mono = all(z + tab[z] <= z + 1 + tab[z + 1] for z in range(hi))
+        yield f"random{i}:{tab}", hi, mono, (lambda z, tab=tab, hi=hi: tab[z] if z <= hi else 0)
+
+out = {}
+bad = {}
+for lag in (True, False):
+    for name, hi, mono, g in fam():
+        for x0 in range(1, hi + 1):
+            for u0 in range(1, x0 + 1):
+                if step(g, u0, x0) != x0: continue
+                for d in (1, 2, 3):
+                    xs, ends, D, in_time = run(g, u0, d, x0, 1, lag)
+                    if not ends or D is None: continue
+                    lhs = bool(some_reading(xs, x0, 1, in_time))
+                    rhs = in_time(D)
+                    key = (lag, "monotone step" if mono else "step not monotone", lhs, rhs)
+                    out[key] = out.get(key, 0) + 1
+                    if lhs != rhs and key not in bad: bad[key] = (name, x0, u0, d, xs[:14])
+for k in sorted(out): print(k, out[k])
+print("disagreements, one each:"); [print("  ", k, v) for k, v in bad.items()]

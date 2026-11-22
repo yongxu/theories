@@ -1,0 +1,49 @@
+"""AI-written (row FM), 23 November 2026. Smallest courses on which S3 fails with every premise but one met.
+Regime premises checked by the program. Uses rise by one a step from u0 >= 1; need one; correction to H2 > u0."""
+import itertools
+def step(tab,u,x):
+    left = x-u if x>=u else 0
+    return left+tab[left]
+def never_ends(tab,u,x):
+    seen=set()
+    while True:
+        if x<1: return False
+        if x in seen: return True
+        seen.add(x); x=step(tab,u,x)
+def orb(tab,u,x,n=7):
+    xs=[x]
+    for _ in range(n): x=step(tab,u,x); xs.append(x)
+    return xs
+found={}
+for hi in range(3,9):
+    for rest in itertools.product(*[range(0,hi-z+1) for z in range(1,hi+1)]):
+        tab=(0,)+rest
+        mono=all(z+tab[z]<=z+1+tab[z+1] for z in range(hi))
+        for H2 in range(2,hi+1):
+            for y2 in range(0,hi+1):
+                if H2+y2>hi: continue
+                if not (all(tab[z]<H2 for z in range(y2)) and all(tab[z]>=H2 for z in range(y2,hi+1) if z+H2<=hi)): continue
+                for x0 in range(2,hi+1):
+                    for u0 in range(1,H2):
+                        s=step(tab,u0,x0); still=s<=x0
+                        want=None
+                        if (not mono) and s==x0: want="without mono (start at rest)"
+                        if mono and not still: want="without still (giving monotone)"
+                        if want is None or want in found: continue
+                        xs=[x0]; x=x0; j=0
+                        while x>=1 and j<3*hi+3:
+                            x=step(tab,u0+j,x); xs.append(x); j+=1
+                        if xs[-1]>=1: continue
+                        D=next((j for j,v in enumerate(xs) if v!=x0),None)
+                        if D is None or D+1>=len(xs): continue
+                        keepers=[]
+                        for T in range(D,len(xs)-1):
+                            if xs[T]==x0: continue
+                            first=next(j for j in range(len(xs)) if xs[j]==xs[T])
+                            if first==T and all(xs[j]>=1 for j in range(T+1)) and never_ends(tab,H2,xs[T+1]): keepers.append(T)
+                        lhs=bool(keepers); rhs=H2+y2<=xs[D+1]
+                        if lhs!=rhs:
+                            found[want]=dict(hi=hi,giving=tab,H2=H2,y2=y2,x0=x0,u0=u0,levels=xs,D=D,lhs=lhs,rhs=rhs,keepers=keepers,
+                                after_keeper=[orb(tab,H2,xs[T+1]) for T in keepers[:1]],after_D=orb(tab,H2,xs[D+1]))
+    if len(found)==2: break
+for k,v in found.items(): print(k,v)

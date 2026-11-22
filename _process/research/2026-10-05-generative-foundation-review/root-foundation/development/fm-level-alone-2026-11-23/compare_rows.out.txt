@@ -1,0 +1,25 @@
+third form: 65 declarations (49 public); final: 68 (50 public)
+PROOF   public  Becoming.LevelAlone.Rising.some_unending: statement the same; head Iff.mpr -> Iff.mpr; uses +['_private.Becoming.LevelAlone.0.Becoming.LevelAlone.returned_stays_and_uses'] -[]
+PROOF   public  Becoming.LevelAlone.Seven.some_unending: statement the same; head Iff.mpr -> Iff.mpr; uses +['_private.Becoming.LevelAlone.0.Becoming.LevelAlone.returned_stays_and_uses'] -[]
+PROOF   public  Becoming.LevelAlone.WithoutMono.marked_at_five_unending: statement the same; head Iff.mpr -> Iff.mpr; uses +['_private.Becoming.LevelAlone.0.Becoming.LevelAlone.unending_at_fixed'] -['Becoming.Law.stepWhile_unending_iff', '_private.Becoming.LevelAlone.0.Becoming.LevelAlone.WithoutMono.held']
+PROOF   public  Becoming.LevelAlone.WithoutMono.other_premises: statement the same; head And.intro -> And.intro; uses +['_private.Becoming.LevelAlone.0.Becoming.LevelAlone.returned_stays_and_uses'] -[]
+PROOF   public  Becoming.LevelAlone.WithoutStill.marked_at_six_unending: statement the same; head Iff.mpr -> Iff.mpr; uses +['_private.Becoming.LevelAlone.0.Becoming.LevelAlone.unending_at_fixed'] -['Becoming.Law.stepWhile_unending_iff', '_private.Becoming.LevelAlone.0.Becoming.LevelAlone.WithoutStill.held']
+PROOF   public  Becoming.LevelAlone.WithoutStill.other_premises: statement the same; head And.intro -> And.intro; uses +['_private.Becoming.LevelAlone.0.Becoming.LevelAlone.returned_stays_and_uses'] -[]
+CHANGED public  Becoming.LevelAlone.level_never_rises_of_rises: binders 14 -> 13; gone ['keeps₀']; new []; body DIFFERENT (may be index shift)
+ADDED   public  theorem Becoming.LevelAlone.silent_at_start_iff_marking_all_but_start
+PROOF   public  Becoming.LevelAlone.silent_at_start_iff_next_of_stays_below: statement the same; head Iff.intro -> Iff.intro; uses +['_private.Becoming.LevelAlone.0.Becoming.LevelAlone.all_but_start_of_next'] -[]
+CHANGED public  Becoming.LevelAlone.stays_below_of_le: binders 15 -> 14; gone ['pos']; new []; body DIFFERENT (may be index shift)
+CHANGED public  Becoming.LevelAlone.stays_below_of_le_of_rises: binders 18 -> 17; gone ['pos']; new []; body DIFFERENT (may be index shift)
+PROOF   private _private.Becoming.LevelAlone.0.Becoming.LevelAlone.Twelve.next_iff: statement the same; head Becoming.LevelAlone.silent_at_start_iff_next_of_le -> Becoming.LevelAlone.silent_at_start_iff_next_of_le; uses +['_private.Becoming.LevelAlone.0.Becoming.LevelAlone.returned_stays_and_uses'] -[]
+REMOVED private theorem _private.Becoming.LevelAlone.0.Becoming.LevelAlone.WithoutMono.held
+REMOVED private theorem _private.Becoming.LevelAlone.0.Becoming.LevelAlone.WithoutStill.held
+ADDED   private theorem _private.Becoming.LevelAlone.0.Becoming.LevelAlone.all_but_start_of_next
+ADDED   private theorem _private.Becoming.LevelAlone.0.Becoming.LevelAlone.next_zero
+CHANGED private _private.Becoming.LevelAlone.0.Becoming.LevelAlone.nothing_left: binders 13 -> 11; gone ['hi', 'keeps₀', 'high', 'rises']; new ['n', 'zero']; body DIFFERENT (may be index shift)
+ADDED   private theorem _private.Becoming.LevelAlone.0.Becoming.LevelAlone.returned_stays_and_uses
+ADDED   private theorem _private.Becoming.LevelAlone.0.Becoming.LevelAlone.stays_below_at
+REMOVED private theorem _private.Becoming.LevelAlone.0.Becoming.LevelAlone.stays_below_before
+ADDED   private theorem _private.Becoming.LevelAlone.0.Becoming.LevelAlone.unending_at_fixed
+public declarations with statement identical binder by binder: 46
+final form, declarations with a recursor in the term: [('giving_mono', ['Nat.le.brecOn']), ('level_never_rises_of_rises', ['Nat.recAux']), ('above_before', ['Nat.le.brecOn']), ('level_within', ['Nat.brecOn']), ('never_rises_before', ['Nat.brecOn']), ('nothing_left', ['Nat.le.brecOn']), ('rise_orbit', ['Nat.brecOn']), ('unending_at_fixed', ['Nat.recAux']), ('use_from', ['Nat.brecOn'])]
+foreign constants used, final form: 82 []

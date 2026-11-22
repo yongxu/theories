@@ -1,0 +1,139 @@
+# Brief: `Becoming.LevelAlone`, a reading of the level alone, quantified
+
+*AI-written (Claude Fable, board row FM), 23 November 2026. Frozen before any Lean. For one implementer and, after it, readers who took no part.*
+
+## What we are doing, and why this piece
+
+The repository draws a map of how anything forms, persists, changes and ends, with its core proved in Lean so that no one has to be believed. One paragraph of it is about a selection (a reward, a judge, a market, a training run) that uses up what sustains it "while nothing in it yet differs … unless that running down makes a difference to the selection early enough". In the Lean module `Becoming.TurningInTime` every law of turning in time takes the reading as given (a set of marked levels) and says when that reading is in time. This piece asks the question over **all** readings of the level that stay silent at the level the course rests at. It is a claim that can fail: a small course without one premise refutes it (case C3 below). It makes no older law a case; say so and do not dress it up.
+
+The argument on paper, already attacked by the session that keeps `TurningInTime` and not broken, is `PAPER.md` beside this file. Read it first. Two changes that session asked for are in the statements below (the right side said with `Recoverable`; the draw form).
+
+## Where things are
+
+- Package: `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/`. Lean 4.29.1, no Mathlib, the package's own lemmas (`Naturals`, `Law`, `RegimeMargin`, …). **Read only.** Do not edit any file under `/Users/ren/theories`.
+- Read in `Becoming/TurningInTime.lean`: `pair`, `asItWas`, `net`, `AloneOutside` (l. 343 to 370); `asItWas_way` (l. 488); `rises_from`, `kept_within`, `rising_takes_all` (l. 631 to 690); `ends_with_net_rising` (l. 724); `unending_from`, `unending_iff_marked_at`, `unending_iff_first_marked_wide`, `unending_iff_first_marked` (l. 740 to 865); `unending_iff_above_kept_below`, `unending_iff_above` (l. 979 to 1050); the proof of `turns_in_time_iff_kept_below` (l. 1052 to 1116), which is the pattern for step 2; `turned`, `Turned`, `MeetsNeed`, `turned_meets_iff`, `recoverable_iff_above`, `noReturnAt_iff_first_below`, `noReturn_exists`, `turns_in_time_iff_before` (l. 2000 to 2400); the worked courses of `namespace Three` (l. 2405 on) for how a concrete course is proved (`giving`, `RegimeMargin.short_of_below rfl`, `meets_of_below`, `keeps_of_below`, `by decide`, orbit lemmas by induction).
+- Read in `Becoming/ReadOffInTime.lean`: `Recoverable`, `NoReturnAt`, `Recoverable.earlier`, `NoReturnAt.recoverable_iff`, `noReturnAt_of_past` (l. 589 to 637). In `Becoming/RegimeMargin.lean`: `step`, `FromNothing`, `Short`, `Meets`, `Keeps` (l. 249 to 265), `short_of_below` and its kin (l. 930 on).
+- Some lemmas of `TurningInTime` are `private` (`regime_levels`, `takes_at_hi`, `asItWas_falls`); you cannot call them. Go through the public ones or prove what you need afresh in the new module.
+- **Write exactly one file:** `/Users/ren/tmp/fm/build14/tree/Becoming/LevelAlone.lean`, beginning `import Becoming.TurningInTime`.
+- **Build:** `/Users/ren/tmp/fm/build14/build.sh <n>` with `n` = 1, 2, 3, … It compiles only this module (its imports come from a cache), prints errors, and exits 0 only on a clean build with no warning. A run takes from seconds to a few minutes. Never run two at once; never run `lake`, the gate or `check_becoming.py`.
+
+## Rules of the package
+
+No `axiom`, no `sorry`, no `native_decide`, no `Classical`, no `open Classical`, no `simp`, no `omega`. `decide`, `rfl`, `rw`, `exact`, `cases`, `induction`, `match`, `Eq.subst`, `congrArg` and plain terms are what the neighbouring files use; term proofs are preferred, tactic blocks are allowed. Every declaration has a docstring that says exactly what is proved with its premises named, as the neighbouring docstrings do; no docstring says more than its statement. The module head note says the file is AI-written, what is handed in, what is not shown, and that the laws make no older law a case.
+
+## The statements (premises and conclusions are frozen; names, binder order, implicit or explicit, universes and helper lemmas are yours)
+
+Namespace `Becoming.LevelAlone`, with `open TurningInTime` as needed. `W : Type u`.
+
+**S0. A reading by where it fires and one correction.**
+```lean
+def readBy (marked : Nat → Prop) [DecidablePred marked] (t alone : W → W) (v : W) (x : Nat) : W :=
+  if marked x then t v else alone v
+```
+with the three facts the turn laws ask: `AloneOutside marked alone (readBy marked t alone)`; `marked x → Kept (readBy marked t alone v x)` from `sets : ∀ v, Kept (t v)`; `Kept v → Kept (readBy marked t alone v x)` from `sets` and `stays : ∀ v, Kept v → Kept (alone v)`.
+
+**The level of the course as it was.**
+```lean
+def level (alone : W → W) (giving : Nat → Nat) (use : W → Nat) (w : W) (x₀ : Nat) (j : Nat) : Nat :=
+  (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x₀) j).2
+```
+(an `abbrev` if that is easier). Below `lv j` stands for `level alone giving use w x₀ j` and `left` for `fun w x => RegimeMargin.step giving (use w) x`.
+
+**S1. The fall, a law of its own for any use that does not fall.**
+```lean
+theorem level_never_rises
+    (mono : ∀ z z', z ≤ z' → z + giving z ≤ z' + giving z')
+    (up : ∀ j, use (Law.orbit alone w j) ≤ use (Law.orbit alone w (j + 1)))
+    (still : RegimeMargin.step giving (use w) x₀ ≤ x₀) :
+    ∀ j, lv (j + 1) ≤ lv j
+```
+No other premise. (Its docstring says: `mono` is not a notion of `RegimeMargin` today; `Three.giving` meets it, since `z + min z (12 - z) = min (2 * z) 12`.)
+
+**S2. One step, in the draw.**
+```lean
+theorem next_above_iff_draw
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi)
+    (mono : ∀ z z', z ≤ z' → z + giving z ≤ z' + giving z')
+    (fits : H₂ + y₂ ≤ hi) (pos : 0 < H₂ + y₂) (u x : Nat) :
+    H₂ + y₂ ≤ RegimeMargin.step giving u x ↔ u + y₂ ≤ x
+```
+(If a premise turns out unused, drop it and say so. If one more is needed, STOP and report; do not add it silently.)
+
+**The common premises of S3 to S6** (call them Γ):
+```lean
+    (sets : ∀ v, Kept (t v)) (stays : ∀ v, Kept v → Kept (alone v)) (uses : ∀ v, Kept v → use v = H₂)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi)
+    (keeps₀ : RegimeMargin.Keeps giving 0 hi) (needs : 0 < need) (within : need ≤ H₂ + y₂)
+    (mono : ∀ z z', z ≤ z' → z + giving z ≤ z' + giving z')
+    (up : ∀ j, use (Law.orbit alone w j) ≤ use (Law.orbit alone w (j + 1)))
+    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1)))
+    (still : RegimeMargin.step giving (use w) x₀ ≤ x₀) (high : x₀ ≤ hi)
+    (rest : ∀ j, j < D → lv j = x₀) (differs : lv D ≠ x₀)
+```
+`up` is what the fall uses; `rises` (strict, for the first `hi` steps) is what `rising_takes_all` asks, for the one fact that the course as it was comes below the need. State each where it is used.
+
+**S3. The numbers form (a lemma under S4).**
+```lean
+theorem silent_at_rest_iff_next (Γ) :
+    (∃ (marked : Nat → Prop) (_ : DecidablePred marked), ¬ marked x₀ ∧
+        «不穷» (net need (readBy marked t alone) left) «一» (w, x₀))
+      ↔ H₂ + y₂ ≤ lv (D + 1)
+```
+The lag is the `+ 1`: the level after the step taken from the first differing level, still under the old use.
+
+**S4. The form to be told: recoverable one step after the level first differs.**
+```lean
+theorem silent_at_rest_iff_recoverable (Γ) :
+    (∃ (marked : Nat → Prop) (_ : DecidablePred marked), ¬ marked x₀ ∧
+        «不穷» (net need (readBy marked t alone) left) «一» (w, x₀))
+      ↔ Recoverable (Turned lv giving H₂) (MeetsNeed need) (fun t _ => lv t) (D + 1)
+```
+(`lv` here as the function `fun j => level alone giving use w x₀ j`.) By S3 and `recoverable_iff_above` with `fall` from S1 and `top` from `high`.
+
+**S5. The wall.**
+```lean
+theorem silent_at_rest_all_end_iff (Γ) :
+    (∀ (marked : Nat → Prop) [DecidablePred marked], ¬ marked x₀ →
+        ¬ «不穷» (net need (readBy marked t alone) left) «一» (w, x₀))
+      ↔ ∃ N, N ≤ D + 1 ∧
+          NoReturnAt (Turned lv giving H₂) (MeetsNeed need) (fun t _ => lv t) N
+```
+Constructively: recoverability at a step is decided through `recoverable_iff_above`.
+
+**S6. The draw form.**
+```lean
+theorem silent_at_rest_iff_draw (Γ) (fits : H₂ + y₂ ≤ hi) :
+    (∃ (marked : Nat → Prop) (_ : DecidablePred marked), ¬ marked x₀ ∧
+        «不穷» (net need (readBy marked t alone) left) «一» (w, x₀))
+      ↔ use (Law.orbit alone w D) + y₂ ≤ lv D
+```
+By S3, S2 and `asItWas_way`.
+
+## The three worked courses (each in its own namespace; ways are `Nat × Bool`, a draw and whether it has been returned; `use v := v.1`; `alone v := if v.2 then v else (v.1 + 1, false)`; need one)
+
+**C1 `Twelve`: the wall stands, and by the lag.** `giving := TurningInTime.Three.giving` (`min z (12 - z)`), start `((3, false), 12)`, `t _ := (3, true)`, `Kept v := v = (3, true)`, `H₂ = y₂ = 3`, `hi = 12`. The levels are 12, 12, 12, 12, 12, 10, 4, so `D = 5`. Prove:
+- `∀ (marked : Nat → Prop) [DecidablePred marked], ¬ marked 12 → ¬ «不穷» (net 1 (readBy marked t alone) left) «一» ((3, false), 12)` (from S5 or S3);
+- `lv 5 = 10 ∧ lv 6 = 4` (so `3 + 3 ≤ lv 5` and `lv 6 < 3 + 3`: a return that took effect at once would be in time; it is late by the one step).
+
+**C2 `Seven`: the other side.** `giving z := min z (7 - z)`, start `((1, false), 7)`, `t _ := (1, true)`, `Kept v := v = (1, true)`, `H₂ = y₂ = 1`, `hi = 7`. Levels 7, 7, 7, 7, 6, 2, so `D = 4`. Prove:
+- `∃ (marked : Nat → Prop) (_ : DecidablePred marked), ¬ marked 7 ∧ «不穷» (net 1 (readBy marked t alone) left) «一» ((1, false), 7)`.
+
+**C3 `NotMonotone`: without `mono` the statement fails.** `giving` at what is left 0, 1, …, 8 is 0, 2, 0, 3, 0, 2, 2, 0, 0 (and 0 above), start `((2, false), 8)`, `t _ := (2, true)`. The course as it was has levels 8, 8, 7, 6, 3, 0. Prove, each directly on the concrete net (no law of this module applies, since `mono` fails):
+- `lv 0 = 8 ∧ lv 1 = 8 ∧ lv 2 = 7` (seven is the first level that differs);
+- `¬ «不穷» (net 1 (readBy (fun x => x = 7) t alone) left) «一» ((2, false), 8)` (read at the first differing level: 8, 8, 7, then under the draw of two 6, 4, 2, 0);
+- `«不穷» (net 1 (readBy (fun x => x = 6) t alone) left) «一» ((2, false), 8)` (read one step later: 8, 8, 7, 6, then 3, 3, 3, … for ever);
+- `¬ ∀ z z', z ≤ z' → z + giving z ≤ z' + giving z'`.
+Before proving, recompute these courses by hand or by `#eval`/`decide`; if a number here is wrong, STOP and report it.
+
+## What counts as nothing gained, and what you must report
+
+1. If S3's proof does not go through `unending_iff_first_marked` (or `_wide`) for each marking, say how it goes.
+2. If any of `mono`, `up`, `rises`, `still`, `keeps₀`, `rest`, `differs`, `sets`, `stays` is not used by the proof of the theorem that asks it, say which and drop it there.
+3. If a stated theorem is false or you cannot prove it as stated, STOP and report where it breaks; do not weaken a statement, add a premise or change a conclusion on your own.
+4. Report: the final file's line count; every departure from the statements above, however small, with the reason; which premises each theorem's proof used; the number of builds; and the last build's exit line.
+
+A stop: at most 30 builds. If the module does not build clean by then, stop and report the state and the open errors.
+
+Your final message is the report, as text.

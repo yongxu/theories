@@ -1,0 +1,9 @@
+# Addendum to brief 2, from the session that keeps `TurningInTime` (row DJ), which read brief 2 and found law B and the core right on paper
+
+*AI-written (row FM), 23 November 2026, 01:04 WIB. In force with `BRIEF-2.md`.*
+
+1. The core law is **public**. Name it for what it asks; its docstring says that `below` (once below the corrected kind's point of no return, the course as it was stays below) is **weaker than a course that never rises**, so that nobody reads it as the level's falling. Laws A and B are each a call of it.
+2. The core's proof uses only `rest` for "a marking silent at `x₀` first marks at some `T ≥ D`" and only `below` for the rest: left to right, were `lv (D + 1)` below `H₂ + y₂` every later level would be; right to left, `below` read backward from `D + 1` gives `H₂ + y₂ ≤ lv j` for every `j ≤ D + 1`, so the need is met before and at `D` by `within`. The fall is not used there.
+3. **The telling.** Under law B the course as it was may rise where giving is not monotone. So "the level only falls, so the earliest reading is the best" is law A's argument and not the law's. The law's own argument is: once below, it stays below, so the first level that differs is the last chance. Say that one in the head note and at the core.
+4. **Do not write "the case anyone would mean"** or anything like it of law B. What the Lean has is `H₂ ≤ use w`; a return to the start's own use is `H₂ = use w` and is inside it. Say that and no more.
+5. **Do not restate** `turned_meets_iff`, `recoverable_iff_above` or `noReturnAt_iff_first_below` under `below` in this module. S4, S5 and S6 stay under law A's premises. If a proof seems to need one of those three under `below`, STOP and report.

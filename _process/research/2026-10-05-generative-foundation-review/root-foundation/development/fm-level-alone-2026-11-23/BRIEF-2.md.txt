@@ -1,0 +1,79 @@
+# Brief 2: the repair of `Becoming.LevelAlone` after two readers
+
+*AI-written (Claude Fable, board row FM), 23 November 2026. It changes the first brief (`BRIEF.md`, frozen 00:32:09) in four places and leaves the rest of it in force. For one implementer who did not write the first form, and one reader after it.*
+
+## What the readers found (their returns are `returns/reader-1.json`, `returns/reader-2.json`; the first implementer's is `returns/implementer.json`)
+
+The module built clean and every frozen statement is proved as frozen. Two things are wrong with what was frozen, and both are the brief's fault, not the implementer's:
+
+1. **`keeps` follows from `keeps₀`** (`kept_within keeps₀ H₂`). A premise that could be dropped.
+2. **The course `NotMonotone` does not show that `mono` is needed.** It fails `meets` as well (no `y₂` meets `short` and `meets` at its returned draw of two), so it is no course on which the statement fails with `mono` alone dropped. And one reader argued by hand that where the corrected use is no more than the course's first use (`H₂ ≤ use w`), the numbers form needs neither `mono` nor `still`; all three worked courses are of that kind.
+
+A search with the regime's premises checked by the program (`search/premises_search.py`, hand-sized courses, ceilings two to seven, every giving) bears the reader out: with `H₂ ≤ u₀` the two sides agree on all 208,458 courses, monotone or not, still or not; with `H₂ > u₀` they agree wherever `mono` and `still` both hold (233,156) and disagree on some courses where one fails. A search shows where a statement fails, not that it holds.
+
+## The four changes
+
+**Change 1. Drop `keeps` from every theorem** (S3 to S6 and the per-marking lemma). Where `unending_iff_above`, `recoverable_iff_above` or `noReturnAt_of_below` ask `RegimeMargin.Keeps giving H₂ hi`, pass `fun _ le => kept_within keeps₀ H₂ le`. The premises common to the laws are then (Γ′): `sets`, `stays`, `uses`, `nothing`, `short`, `meets`, `keeps₀`, `needs`, `within`, `up`, `rises`, `high`, `rest`, `differs`. `mono` and `still` are no longer in the common list; they are asked where the next change says.
+
+**Change 2. One core law, and the numbers form twice.** What both arguments use of the course as it was is one fact: once its level is below the corrected kind's point of no return, it stays below.
+
+```lean
+/-- core: the numbers form under that one fact -/
+theorem silent_at_start_iff_next_of_stays_below (Γ′)
+    (below : ∀ j, lv j < H₂ + y₂ → lv (j + 1) < H₂ + y₂) :
+    (∃ (marked : Nat → Prop) (_ : DecidablePred marked), ¬ marked x₀ ∧
+        «不穷» (net need (readBy marked t alone) left) «一» (w, x₀))
+      ↔ H₂ + y₂ ≤ lv (D + 1)
+
+/-- B. where the corrected use is no more than the course's first use: no premise on the shape of giving -/
+theorem stays_below_of_le
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (pos : 0 < H₂ + y₂) (le : H₂ ≤ use w)
+    (up : ∀ j, use (Law.orbit alone w j) ≤ use (Law.orbit alone w (j + 1))) :
+    ∀ j, lv j < H₂ + y₂ → lv (j + 1) < H₂ + y₂
+
+theorem silent_at_start_iff_next_of_le (Γ′) (le : H₂ ≤ use w) :
+    (∃ marked …) ↔ H₂ + y₂ ≤ lv (D + 1)
+
+/-- A. for any corrected use, where the level never rises -/
+theorem silent_at_start_iff_next (Γ′)
+    (mono : ∀ z z', z ≤ z' → z + giving z ≤ z' + giving z')
+    (still : RegimeMargin.step giving (use w) x₀ ≤ x₀) :
+    (∃ marked …) ↔ H₂ + y₂ ≤ lv (D + 1)
+```
+On paper. *Only if:* a marking that does not mark `x₀` first fires at some `T ≥ D` (by `rest`); in time means `H₂ + y₂ ≤ lv (T + 1)`; were `lv (D + 1)` below `H₂ + y₂`, `below` would keep every later level below. *If:* the marking `· = lv D`; the need is met up to `D` because `H₂ + y₂ ≤ lv (D + 1)` gives, by `below` read backward one step at a time (order on `Nat` is decided), `H₂ + y₂ ≤ lv D` and `H₂ + y₂ ≤ lv (D - 1) = x₀`. `below` from A's premises: `level_never_rises`. `below` from B's: every use on the course is at least `H₂` (`le`, `up`); if `lv j ≤ use_j` nothing is left and nothing is given (`nothing`, `pos`); otherwise what is left is below `y₂`, so giving is short of `H₂` (`short`) and the sum is below `H₂ + y₂`.
+
+If one of these three is false or needs a premise not listed, STOP and report; do not add it. If a listed premise is unused in a theorem, drop it there and report (the unused-variable linter is on; for instance B may not need `keeps₀` beyond the per-marking lemma, and the core may not need `up`).
+
+S1 `level_never_rises`, S2 `next_above_iff_draw` stay as they are. S4 (recoverable), S5 (no return) and S6 (the use form) stay under A's premises (Γ′ with `mono` and `still`; S6 with `fits`), since `recoverable_iff_above` and `noReturnAt_of_below` ask a level course that never rises.
+
+**Change 3. Replace the course `NotMonotone` by two courses that each meet every premise of A's numbers form but one, with the two sides apart.** Ways, `use` and `alone` as in the first brief (`Nat × Bool`; `use v := v.1`; the draw rises by one until returned), need one. For each, prove in Lean, directly where no law applies:
+- `other_premises`: a conjunction of every premise of `silent_at_start_iff_next` at these values except the one named (so that the course is seen to fail the law for that premise alone);
+- that the one premise fails;
+- the left side holds: `∃ marked …, ¬ marked x₀ ∧ «不穷» …` (give the marking; prove the never ending on the concrete net, as the first form did for `marked_at_six_goes_on`);
+- the right side fails: `¬ (H₂ + y₂ ≤ lv (D + 1))`.
+
+`WithoutMono`: `hi = 6`; giving at what is left 0 to 6 is 0, 5, 1, 2, 0, 0, 0 (0 above); start `((1, false), 3)`; correction `t _ := (5, true)`, `Kept v := v = (5, true)`, `H₂ = 5`, `y₂ = 1`. The course as it was: 3, 3, 6, 5, 6, 6, 0; `D = 2`. `mono` fails at 1, 2 (6 against 3); `still` holds (the start rests). Right side: `5 + 1 ≤ lv 3 = 5` is false. Left side: the marking `· = 5` first fires at step 3, the level one step later is 6, and under the use of five 6 stays 6 for ever.
+
+`WithoutStill`: `hi = 8`; giving at 0 to 8 is 0, 3, 4, 5, 4, 3, 2, 1, 0 (0 above); start `((1, false), 2)`; correction `t _ := (5, true)`, `H₂ = 5`, `y₂ = 3`. The course as it was: 2, 4, 6, 8, 8, 8, 6, 0; `D = 1`. `mono` holds (`z + giving z` runs 0, 4, 6, 8, 8, 8, 8, 8, 8); `still` fails (`step giving 1 2 = 4`). Right side: `5 + 3 ≤ lv 2 = 6` is false. Left side: the marking `· = 6` first fires at step 2, the level one step later is 8, and under the use of five 8 stays 8 for ever.
+
+Recompute both before proving; if a number is wrong, STOP and report. Both have `H₂` above the course's first use, as they must by law B.
+
+`Twelve` and `Seven` stay, their numbers as they are. Prove their main statements from law B (`silent_at_start_iff_next_of_le`), which asks less, and say in a docstring that law A applies to them too (their givings meet `mono` by `cap_mono` and their starts rest).
+
+**Change 4. Names, words and docstrings.** Take every finding of the two readers' returns and of `MENDS-after-the-build.md` (row DJ's five points); for each, mend it or say in your report why not. In particular:
+- The stem `silent_at_rest` becomes `silent_at_start` (the course need not rest: `rest` is empty where `D = 1`). Define the word once in the head note: a marking is *silent at a level* where it does not mark it. Names: `silent_at_start_iff_next_of_stays_below`, `silent_at_start_iff_next_of_le`, `silent_at_start_iff_next`, `silent_at_start_iff_recoverable_next` (S4), `silent_at_start_none_iff_no_return` (S5; the statement is `¬ «不穷»` for every such marking, not an end exhibited), `silent_at_start_iff_use` (S6).
+- Say «不穷» one way: "the line never ends", and its negation "it is not so that the line never ends". Do not write "the wall", "fires", "keeps the line going", "the fall", "the draw form" unless defined once in the head note; plain words are better.
+- The lag is said wherever a right side has `D + 1`, and in S6 (the use there is the use as it was at step `D`, not `H₂`).
+- S1's docstring: it is the premise `fall` of `turned_meets_iff`, `recoverable_iff_above`, `noReturnAt_iff_first_below` and `noReturnAt_of_below`, which the module had only from a standing overdraw; say so, and no more than is so (open each statement first).
+- S5's docstring does not say "after the start": `N = 0` is not excluded.
+- The head note says: what `mono` and `still` are for (law A, any corrected use; each has one course here on which the law fails without it, with the corrected use above the course's first use); that law B asks neither; that the three laws make no older law a case; "every public declaration has an empty axiom report; the private helpers are each used by one"; the list of laws used includes `Recoverable.earlier` of `Becoming.ReadOffInTime`; no absence is claimed of another module beyond "searched, not read whole".
+- The module title: "A reading of the level alone, over every marking that does not mark the start's level".
+
+## Where things are, and the rules
+
+As in `BRIEF.md` (read it and `PAPER.md` first): the package is read-only; one file is written, `/Users/ren/tmp/fm/build14/tree/Becoming/LevelAlone.lean` (it exists: the first form, 594 lines, built clean; copy kept at `returns/LevelAlone.first-form.lean`); build only with `/Users/ren/tmp/fm/build14/build.sh <n>`, starting at `n = 6`, one at a time, at most 25 builds; no `axiom`, `sorry`, `native_decide`, `Classical`, `simp`, `omega`; no git, no lake, no gate.
+
+## Report
+
+As text: the final line count; for each of the four changes what was done; every finding of the two readers and of `MENDS-after-the-build.md` with "mended" or the reason it was not; which premises each theorem's proof uses and which you dropped as unused; any number that was wrong; the number of builds and the last build's exit line; and anything you would hold against the module as it now stands.

@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261122T175942.715137Z",
- "core_sources_sha256": "a19bf91aa8ca7361ed666880c11737f0ae078907c4a17734b728e179aa3afca9",
+ "core_receipt": "20261122T192648.959660Z",
+ "core_sources_sha256": "dddba3f7f3ad668fbe4805069e068b87c9bb55769c138cad941cc8f4fd68ae72",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,16 +58,16 @@
   ]
  },
  "counts": {
-  "laws": 4416,
+  "laws": 4424,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 1066,
+  "grammar": 1073,
   "balance, represented": 637,
   "anchor, not reached": 134,
-  "no shared law": 2179,
+  "no shared law": 2180,
   "vocabulary_only": 105,
   "closure": 590,
-  "balance": 898,
+  "balance": 905,
   "return": 254,
   "lumping": 92,
   "order": 105
@@ -4040,6 +4040,125 @@
      "Becoming.ReadingLoop.history_continues_iff"
     ],
     "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
+  "a-reading-of-the-level-alone": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.LevelAlone.readBy",
+     "Becoming.LevelAlone.readBy_outside",
+     "Becoming.LevelAlone.readBy_turns",
+     "Becoming.LevelAlone.readBy_kept",
+     "Becoming.LevelAlone.level"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.LevelAlone.silent_at_start_iff_next_of_stays_below"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.LevelAlone.silent_at_start_iff_marking_all_but_start"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.LevelAlone.stays_below_of_le",
+     "Becoming.LevelAlone.stays_below_of_le_of_rises",
+     "Becoming.LevelAlone.silent_at_start_iff_next_of_le"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.LevelAlone.level_never_rises",
+     "Becoming.LevelAlone.level_never_rises_of_rises",
+     "Becoming.LevelAlone.silent_at_start_iff_next"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.LevelAlone.silent_at_start_iff_recoverable_next",
+     "Becoming.LevelAlone.silent_at_start_none_iff_no_return",
+     "Becoming.LevelAlone.next_above_iff_draw",
+     "Becoming.LevelAlone.silent_at_start_iff_use"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.LevelAlone.Twelve.none_unending",
+     "Becoming.LevelAlone.Twelve.level_at_five_six",
+     "Becoming.LevelAlone.Twelve.mono_and_still",
+     "Becoming.LevelAlone.Seven.some_unending",
+     "Becoming.LevelAlone.Seven.mono_and_still",
+     "Becoming.LevelAlone.Rising.some_unending",
+     "Becoming.LevelAlone.Rising.level_rises",
+     "Becoming.LevelAlone.Rising.not_mono_at_one_two",
+     "Becoming.LevelAlone.cap_mono"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.LevelAlone.WithoutMono.other_premises",
+     "Becoming.LevelAlone.WithoutMono.marked_at_five_unending",
+     "Becoming.LevelAlone.WithoutMono.some_unending",
+     "Becoming.LevelAlone.WithoutMono.next_below",
+     "Becoming.LevelAlone.WithoutMono.not_mono_at_one_two",
+     "Becoming.LevelAlone.WithoutMono.not_mono",
+     "Becoming.LevelAlone.WithoutStill.giving_mono",
+     "Becoming.LevelAlone.WithoutStill.other_premises",
+     "Becoming.LevelAlone.WithoutStill.marked_at_six_unending",
+     "Becoming.LevelAlone.WithoutStill.some_unending",
+     "Becoming.LevelAlone.WithoutStill.next_below",
+     "Becoming.LevelAlone.WithoutStill.start_step",
+     "Becoming.LevelAlone.WithoutStill.not_still"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
     "grammar": true,
     "dependence": "grammar"
    }
@@ -67810,7 +67929,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "f476b0717fd3242e2997053e87f8e9e23f6f7b0dc44779b1dd853fbcdc702d31",
+   "modules_sha256": "e3c327b7bef891828599d3a7eb6000ef036cc520dcc2eedcfa165cdd076a2b6e",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

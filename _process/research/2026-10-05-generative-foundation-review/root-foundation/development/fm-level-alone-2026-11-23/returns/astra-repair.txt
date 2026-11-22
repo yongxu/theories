@@ -1,0 +1,17 @@
+I edited only [the scratch module](/Users/ren/tmp/fm/build14/tree/Becoming/LevelAlone.lean). It went from **1,084 to 947 lines**. The repair is in the source. **It has not been verified by Lean.**
+
+**Build 11 is blocked before compilation.** I invoked the prescribed script once. Its only matching process is PID 22756, the Python `cx` launcher waiting for this reply. The launcher’s command line contains `check_becoming.py` in the text of the request. The build script therefore waits for the launcher, and the launcher waits for this turn to end. I left the wait mechanism intact. Build 11 has produced no log or exit line. The last recorded exit line is `exit 0 build 10`, for the previous source.
+
+1. **Premises.** I removed `(pos : 0 < H₂ + y₂)` from `stays_below_of_le` and `stays_below_of_le_of_rises`. Both proofs now derive positivity from the level being below the threshold. I removed `(keeps₀ : RegimeMargin.Keeps giving 0 hi)` from `level_never_rises_of_rises`. Its prefix proof gives `X hi ≤ x₀ ≤ hi`, and `rises_from` gives `hi ≤ u hi`. The step from `hi` leaves zero, which persists under any subsequent use. I updated all callers. [Non-rise proof](/Users/ren/tmp/fm/build14/tree/Becoming/LevelAlone.lean:223) · [Threshold proofs](/Users/ren/tmp/fm/build14/tree/Becoming/LevelAlone.lean:422)
+2. **Corollary.** I added `silent_at_start_iff_marking_all_but_start` immediately after the core, with the core’s premises including `below`. Its conclusion equates existence of a successful start-silent marking with success of `fun x => x ≠ x₀`. The core now uses that same marking as its witness. Both proofs share the argument that its first hit is at `D`. The docstring gives the `WithoutMono` failure by hand. [New theorem](/Users/ren/tmp/fm/build14/tree/Becoming/LevelAlone.lean:386)
+3. **Tellings.** I corrected the first-mark lag, the exact range of `Meets`, the `y₂ = 0` case, the meaning of `rest` at `D = 1`, the scope of `t`, and the use of `Recoverable.earlier`. The head note distinguishes eliminating the existential from the older laws’ implicit quantification. It records what the two one-premise failures establish and labels the weaker hypotheses, the counterexample to plain `≤`, the limit of `Rising`, and the correction-to-two version of `Seven` as hand arguments. [Head note](/Users/ren/tmp/fm/build14/tree/Becoming/LevelAlone.lean:8)
+4. **Length.** I put the common premise list in one place, shortened the individual law tellings, and factored the returned-way proofs and fixed-state orbit proofs shared by the courses. I left the six public binder lists explicit because the build was unavailable to verify their elaborated argument order.
+
+A source comparison against the untouched review copy found **exactly the three binder deletions and one new theorem listed above**. No existing public declaration was removed or renamed, and no existing conclusion changed.
+
+What I still hold against the module is that S4 and S5 carry global non-rise because the imported theorems ask for it. The argument under `below` remains on paper. The immediate outstanding check is whether Lean accepts this repair. A fresh launcher request containing just **“Continue the LevelAlone repair from build 11”** avoids the prompt-text match.
+
+── cx · ok · session 01a2048f-2e9c-7241-9414-71088bcde780 · gpt-6.2-astra/xhigh · bypass (mirrors Claude) · 912s · 9280.9k tokens · 70 cmds
+continue: cx -r 01a2048f-2e9c-7241-9414-71088bcde780 "…"
+log: /Users/ren/.cache/cx/runs/20261123-015019-22756
+exit 0

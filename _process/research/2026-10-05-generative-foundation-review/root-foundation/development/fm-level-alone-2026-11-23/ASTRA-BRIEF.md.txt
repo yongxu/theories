@@ -1,0 +1,27 @@
+# A read of one new Lean module against its briefs, by a reader who took no part
+
+You are asked to read, not to write or build. Change no file, run no build, no `lake`, no gate, no test suite, no git command that changes anything. Your final message is your report, as text.
+
+## What this is
+
+The repository draws a map of how anything forms, persists, changes and ends, with a core proved in Lean 4 (no Mathlib, the package's own lemmas) so that nobody has to be believed. A new module, `Becoming.LevelAlone`, is about to be landed beside an existing one, `Becoming.TurningInTime`. Every law of `TurningInTime` about "turning in time" takes a reading as given (a set of marked levels) and says when that reading is in time. The new module asks the question over all markings that do not mark the level the course starts at. It was written from three briefs by three different implementers and read three times by other readers of one kind of model; you are a reader of another kind, and that is the point: say what they would not.
+
+## The files (all under `tmp/fm/build14-read/` in this repository unless a full path is given)
+
+- `LevelAlone.lean`: the module as it stands (1,084 lines). It built clean; `build-10.log` is the last build's log.
+- `BRIEF.md`, `BRIEF-2.md`, `BRIEF-2-ADDENDUM.md`, `BRIEF-3.md`: what was frozen, in order; later briefs change earlier ones.
+- `PAPER.md`: the first argument on paper.
+- `reader-1.json`, `reader-2.json`, `reader-3.json`: the earlier readers' findings; `repairer-3.json`: the last implementer's report, with what it holds against the module.
+- The package it imports, read only: `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean`, `ReadOffInTime.lean`, `RegimeMargin.lean`.
+
+## What to answer, each with evidence (file, line, the words or the term)
+
+1. **Statements.** For each public theorem of `LevelAlone.lean`: is its statement what the briefs, read together, froze? List every difference, however small.
+2. **Premises.** For each law (the core `silent_at_start_iff_next_of_stays_below`, law B `silent_at_start_iff_next_of_le`, law A `silent_at_start_iff_next`, `silent_at_start_iff_recoverable_next`, `silent_at_start_none_iff_no_return`, `silent_at_start_iff_use`, `level_never_rises`, `level_never_rises_of_rises`, `stays_below_of_le`, `stays_below_of_le_of_rises`, `next_above_iff_draw`): read the proof term. Is any premise unused, or does any follow from the others, or could any be weakened with the same proof? Try in particular: is `rest` needed beyond "no level before step `D` is marked"; is `differs` needed in both directions; does `rises` need to be strict; is `keeps₀` needed in law B beyond the per-marking lemma; is `still` needed where `D ≥ 2`.
+3. **Is the core law empty?** Its premise `below` (once the level is below `H₂ + y₂` it stays below) is close to its conclusion. Say plainly whether, with `below` handed in, the theorem is more than the per-marking lemma applied twice; and whether laws A and B, which discharge `below`, carry real content. If you think the module's worth is only in `stays_below_of_le` and `level_never_rises`, say so.
+4. **The five worked courses** (`Twelve`, `Seven`, `WithoutMono`, `WithoutStill`, `Rising`). Recompute each by hand from its giving (the level's step is `RegimeMargin.step g u x = (x - u) + g (x - u)`, subtraction truncated; a marking acts from the step after the first step whose level it marks). Are the numbers in the Lean and in the docstrings right? Does each of `WithoutMono` and `WithoutStill` meet every premise of law A but the one named, and is that checked by Lean or only said? Does `Rising` show what its docstring says it shows?
+5. **Tellings.** The repository's rule: a telling of a proof says exactly what is proved, its premises stated; any other sentence says how far it has been seen (tested, argued, a reading, wanted). Quote every sentence of the head note or of a docstring that says more than its statement proves, or that a careful reader could take for more: in particular anything that suggests the response of a selection is derived here (it is not: one fixed correction `t` is handed in; only where a marking marks is quantified), that the laws hold of an actual selection, that an older law becomes a case, that under law B the level never rises, or that law B is the usual or intended case.
+6. **What could be cut.** The module is long for what it proves. Name, with line ranges, what you would cut or merge without losing a statement or a needed telling: repeated binder lists, docstring sentences that repeat the head note, the threefold form of "never rises" and of "stays below" (a public statement with `up` at every step, a private bounded lemma, a public `_of_rises` form). Say what you would keep public. Be concrete enough that someone could do it from your list.
+7. **Anything else** a reader of another kind would hold against it: a name that misleads, a place where the Lean is correct and the mathematics is trivial, a place where the one-step lag (a marking acts from the next step) is doing the work without being said, a statement that is true for a reason other than the one told.
+
+Do not soften. Where you checked and found nothing, say what you checked. Say at the end what you did not open.

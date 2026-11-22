@@ -1,0 +1,33 @@
+start 00:44:30
+Becoming/LevelAlone.lean:292:72: warning: unused variable `j`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Becoming/LevelAlone.lean:368:8: warning: unused variable `N`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Becoming/LevelAlone.lean:517:39: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.77 = ?m.77
+but is expected to have type
+  RegimeMargin.FromNothing ?m.34
+in the application
+  silent_at_rest_iff_next (fun x => ?m.50) (fun x kind => Eq.subst (Eq.symm kind) rfl)
+    (fun x kind => congrArg draw kind) rfl
+
+{
+  "tree": "/Users/ren/tmp/fm/build14/tree",
+  "modules": 151,
+  "ran": [
+    "Becoming.LevelAlone"
+  ],
+  "reused": 150,
+  "unclean": [],
+  "audits": {},
+  "seconds": {
+    "Becoming.LevelAlone": 3.137
+  },
+  "failed": "Becoming.LevelAlone"
+}
+exit 1 build 1
+end 00:44:38

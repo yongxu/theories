@@ -1,0 +1,32 @@
+# The repair, by you: apply your own read to the module
+
+Your read is taken whole. The mathematics you found is yours to put in; you have the context no one else has. This time you edit and build.
+
+## What to edit and how to build
+
+- Edit exactly one file: `/Users/ren/tmp/fm/build14/tree/Becoming/LevelAlone.lean` (it is the file you read; `tmp/fm/build14-read/LevelAlone.lean` is a copy, leave it).
+- Build only with `/Users/ren/tmp/fm/build14/build.sh <n>`, starting at `n = 11`, one at a time, at most 25 builds. It compiles only this module, prints errors, and exits 0 only on a clean build with no warning; it waits while another session's heavy run is alive, which can take many minutes: wait, do not work around it. Never run `lake`, the gate, `check_becoming.py` or a test suite. No git. Edit nothing under `/Users/ren/theories` (your report goes in your final message).
+- Package rules: no `axiom`, `sorry`, `native_decide`, `Classical`, `simp`, `omega`; the neighbouring files use `decide`, `rfl`, `rw`, `exact`, `cases`, `induction`, `match`, `Eq.subst`, `congrArg` and plain terms. Lean 4.29.1, no Mathlib.
+
+## What to do, in this order (stop adding when your token use nears 1.4 million for this turn; say what you left)
+
+**1. Two premises out (your section 2).** Drop `pos` from `stays_below_of_le` and `stays_below_of_le_of_rises`, deriving positivity from the subthreshold hypothesis. Drop `keeps₀` from `level_never_rises_of_rises` by your argument (the prefix gives `X hi ≤ x₀ ≤ hi`, strict growth gives `hi ≤ u hi`, so nothing is left, and nothing stays nothing). Callers follow. If either does not go through in Lean, leave that statement as it is and say why.
+
+**2. One corollary in (your section 3).** Under the core's premises, public, after the core:
+```lean
+theorem silent_at_start_iff_marking_all_but_start (…the core's premises, `below` included…) :
+    (∃ (marked : Nat → Prop) (_ : DecidablePred marked), ¬ marked x₀ ∧
+        «不穷» (net need (readBy marked t alone) left) «一» (w, x₀))
+      ↔ «不穷» (net need (readBy (fun x => x ≠ x₀) t alone) left) «一» (w, x₀)
+```
+(some marking silent at the start's level works exactly where the one that marks every other level does). If the core's own witness can then be this marking and the proof gets shorter, do that; if not, leave the core's proof. Its docstring says what you said: no search for a level and no foreknowledge of `X D` is needed; and it holds under `below` (on `WithoutMono` the marking of every other level fails where the marking at five works; say that as by hand unless you state it).
+
+**3. Every telling of your section 5, mended as you worded the fault.** In particular: the existing laws already quantify over implicit `marked` and `after`, and what is new is the elimination of the existential over markings into a criterion with no marking in it; a marking marks `X T` and the proof tests `X (T + 1)`; the lag holds at the *first* marked step; `Meets` asks `H₂ ≤ giving z` where both `y₂ ≤ z` and `z + H₂ ≤ hi`; "nothing is asked of giving at `y₂` or above" is false at `y₂ = 0` (say exactly: `giving 0 = 0` and `Short` below `y₂`); the bound in "below a bound" is on time; "a successful marking silent at `x₀`" where the qualifier was missing; `rest` at `D = 1` says `X 0 = x₀`; `t : W → W` and what "a correction that differs from one marked level to another" should say; where `Recoverable.earlier` is used; `Three.giving` above six. Keep out "the last chance". In the section on what `mono` and `still` are for, say what the two courses do establish (deleting either premise from law A as stated makes it false) and what they do not (minimality), and name the weakenings you saw as *argued by a reader, not built*: `mono` only on residuals within `hi`; `still` only where `D = 1`; `rises` replaceable by an exhaustion condition, with your counterexample to plain `≤` told in two lines as by hand; `rest` and `differs` each needed in one direction only; the recoverable and no-return forms not requiring a falling course on paper. Also the limit of `Rising` you named (its only level below the threshold is zero) and that law B does not generalise law A (your `Seven` with a correction to two), each as by hand.
+
+**4. Length (your section 6), as far as it is safe.** First the head note and docstrings (your items 3 and 4): one place for the full premise list, the laws pointing at it with only what changes. Then the courses' mechanics (item 5). Last, and only if you are sure the elaborated public statements and their argument order do not change, the six large signatures (item 1) through a `section` with `variable` and `include`; if in doubt leave them. Do not rename any public declaration. Do not remove any public statement.
+
+The repository's rule for every sentence you write: a telling of a proof says exactly what is proved, its premises named in backticks; anything else says how far it has been seen (by hand, argued, searched, a reading). Plain words; the head note's own vocabulary (marking, silent at a level, the line never ends, the course as it was, the corrected use, the lag). The head note stays marked AI-written, and may say in one clause that the last repair is by a reader of another kind of model.
+
+## Report (your final message, as text)
+
+Line count before and after. For 1 to 4, item by item, what was done and what was left. Every public statement whose binders or conclusion changed, listed exactly (expected: `pos` gone from two, `keeps₀` gone from one, one new theorem; anything else is a departure to name). Builds and the last exit line. What you would still hold against the module.

@@ -1,0 +1,39 @@
+"""AI-written (row FM), 23 November 2026. The smallest course that law B reaches and law A does not:
+every premise of law B holds (checked by the program) with the correction a return to the start's own use,
+the start at rest, the giving not monotone, and the level of the course as it was rising at some step."""
+import itertools
+def step(tab,u,x):
+    left = x-u if x>=u else 0
+    return left+tab[left]
+def never_ends(tab,u,x):
+    seen=set()
+    while True:
+        if x<1: return False
+        if x in seen: return True
+        seen.add(x); x=step(tab,u,x)
+out=[]
+for hi in range(3,8):
+    for rest in itertools.product(*[range(0,hi-z+1) for z in range(1,hi+1)]):
+        tab=(0,)+rest
+        if all(z+tab[z]<=z+1+tab[z+1] for z in range(hi)): continue
+        for u0 in range(1,hi+1):
+            H2=u0
+            for y2 in range(0,hi+1):
+                if H2+y2>hi: continue
+                if not (all(tab[z]<H2 for z in range(y2)) and all(tab[z]>=H2 for z in range(y2,hi+1) if z+H2<=hi)): continue
+                for x0 in range(2,hi+1):
+                    if step(tab,u0,x0)!=x0: continue
+                    xs=[x0]; x=x0; j=0
+                    while x>=1 and j<3*hi+3:
+                        x=step(tab,u0+j,x); xs.append(x); j+=1
+                    if xs[-1]>=1: continue
+                    D=next((j for j,v in enumerate(xs) if v!=x0),None)
+                    if D is None or D+1>=len(xs): continue
+                    rises_somewhere=any(xs[j+1]>xs[j] for j in range(len(xs)-1))
+                    if not rises_somewhere: continue
+                    rhs=H2+y2<=xs[D+1]
+                    out.append((hi,len(xs),not rhs,tab,H2,y2,x0,xs,D,rhs))
+    if out: break
+out.sort()
+for o in out[:6]: print(o)
+print(len(out))

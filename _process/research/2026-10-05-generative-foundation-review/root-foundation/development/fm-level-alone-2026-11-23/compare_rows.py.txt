@@ -1,0 +1,34 @@
+"""AI-written (row FM), 23 November 2026. Compare, binder by binder, every declaration of Becoming.LevelAlone
+as Lean holds it in the third form (the last one a Claude reader read whole) and in the final form."""
+import json,sys
+def load(p):
+    d={}
+    for l in open(p):
+        if l.startswith('ROW '):
+            r=json.loads(l[4:]); d[r['name']]=r
+    return d
+a=load('rows-tree-third.txt'); b=load('rows-tree.txt')
+def pub(n): return '_private' not in n
+def bn(r): return [(x.get('name'),x.get('kind',x.get('info')),x.get('type')) if isinstance(x,dict) else x for x in r['binders']]
+out=[]
+for n in sorted(set(a)|set(b)):
+    tag='public ' if pub(n) else 'private'
+    if n not in a: out.append(f"ADDED   {tag} {b[n]['kind']} {n}"); continue
+    if n not in b: out.append(f"REMOVED {tag} {a[n]['kind']} {n}"); continue
+    ra,rb=a[n],b[n]
+    if ra['kind']!=rb['kind']: out.append(f"KIND    {tag} {n}: {ra['kind']} -> {rb['kind']}")
+    A,B=bn(ra),bn(rb)
+    if A!=B or ra['body']!=rb['body'] or ra['levels']!=rb['levels']:
+        na=[x[0] for x in A]; nb=[x[0] for x in B]
+        gone=[x for x in na if x not in nb]; new=[x for x in nb if x not in na]
+        same_rest = [x for x in A if x[0] not in gone]==[x for x in B if x[0] not in new] if False else None
+        out.append(f"CHANGED {tag} {n}: binders {len(A)} -> {len(B)}; gone {gone}; new {new}; body {'same' if ra['body']==rb['body'] else 'DIFFERENT (may be index shift)'}")
+    elif ra.get('uses')!=rb.get('uses') or ra.get('head')!=rb.get('head'):
+        out.append(f"PROOF   {tag} {n}: statement the same; head {ra.get('head')} -> {rb.get('head')}; uses +{sorted(set(rb.get('uses',[]))-set(ra.get('uses',[])))} -{sorted(set(ra.get('uses',[]))-set(rb.get('uses',[])))}")
+print(f"third form: {len(a)} declarations ({sum(pub(n) for n in a)} public); final: {len(b)} ({sum(pub(n) for n in b)} public)")
+print('\n'.join(out))
+same=[n for n in a if n in b and bn(a[n])==bn(b[n]) and a[n]['body']==b[n]['body'] and pub(n)]
+print(f"public declarations with statement identical binder by binder: {len(same)}")
+rec=[n for n in b if b[n].get('recursors')]
+print('final form, declarations with a recursor in the term:', [(n.split('.')[-1], b[n]['recursors']) for n in rec][:12])
+frn=sorted({f for n in b for f in b[n].get('foreign',[])}); print('foreign constants used, final form:', len(frn), [f for f in frn if 'Classical' in f or 'propext' in f or 'Quot' in f or 'sorry' in f.lower()])

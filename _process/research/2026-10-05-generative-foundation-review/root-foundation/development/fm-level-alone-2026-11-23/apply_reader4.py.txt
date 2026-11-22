@@ -1,0 +1,51 @@
+"""AI-written (row FM), 23 November 2026. Apply the fourth reader's eleven mends to the final form by exact,
+count-checked replacements (whitespace between words free), then re-wrap any comment line over 100 characters."""
+import re,sys
+p='/Users/ren/tmp/fm/build14/tree/Becoming/LevelAlone.lean'
+s=open(p).read()
+def rx(t): return r'\s+'.join(re.escape(w) for w in t.split())
+done=[]
+def rep(old,new,tag):
+    global s
+    m=list(re.finditer(rx(old),s))
+    if len(m)!=1: print(f"!! {tag}: {len(m)} matches for: {old[:70]}"); return
+    s=s[:m[0].start()]+new+s[m[0].end():]; done.append(tag)
+def after(anchor,ins,tag): rep(anchor, anchor+' '+ins, tag)
+after("Nothing here derives the correction or changes when it takes effect.",
+ "Not shown here: anything of a reading that reads more than the level (the way, the step, or the levels before); anything of a correction with its own argument for the marked level; the recoverable, no-return and use forms under `below` or `le` alone (argued above, not built); any condition on the regime's numbers for success (for failure only `hi < H₂ + y₂`, by hand, above). A course on which a law fails without a premise is given for `mono` and `still` (Lean), for `below` (`WithoutMono`: Lean for the core, by hand for the corollary) and for `rest`, `differs` and the strictness of `rises` (by hand, above); for `sets`, `stays`, `uses`, `nothing`, `short`, `meets`, `keeps₀`, `needs`, `within` and `high` none is given.","1")
+rep("Here `readBy` takes one fixed correction `t : W → W`.","Here `readBy` takes one fixed correction `t : W → W`, handed in: the laws range over which levels a marking marks, not over what the correction does.","2a")
+rep("The supplied index `D` is the first difference:","The index `D` is handed in as the first difference (that such a step exists is no Lean statement here):","2b")
+rep("Choosing this marking needs no search for a level and no foreknowledge of the level at `D`.","The marking on the right is named from `x₀` alone: neither `D` nor the level at step `D` occurs in it; `D`, `rest`, `differs` and `below` are still premises of the equivalence. From right to left no premise is used (the marking is silent at `x₀`); from left to right it is the core read forward, then `all_but_start_of_next`.","3a")
+rep("By hand on `WithoutMono`, where `below` fails, it first marks six, arrives at five under the old draw, then reaches zero. The marking of five gives a line that never ends (`WithoutMono.marked_at_five_unending`).","By hand on `WithoutMono`, where `below` fails (the level is five at step three and six at step four, against the threshold six), this marking first marks six, arrives at five under the old draw, then reaches zero, and the line ends; the marking of five gives a line that never ends (`WithoutMono.marked_at_five_unending`). So, by hand, the equivalence is not had without `below`.","3b")
+rep("`TurningInTime.unending_iff_first_marked` already quantifies over implicit `marked` and `after` and gives a criterion for each reading.","`TurningInTime.unending_iff_first_marked` already quantifies over implicit `marked` and `after`: for each reading that is `alone` outside its marks (`outside`), on a course as it was that comes below the need (`asItWasEnds`), it says when the line never ends by the first marked step and the line from the state after that step.","4")
+rep("The core eliminates the existential over markings silent at the start's level `x₀`. Some such marking gives a line that never ends exactly where `H₂ + y₂ ≤ X (D + 1)`.","The core (`silent_at_start_iff_next_of_stays_below`) eliminates the existential over markings silent at the start's level `x₀`: under the premises of the next section, some such marking gives a line that never ends exactly where `H₂ + y₂ ≤ X (D + 1)`.","5a")
+rep("The corollary gives one choice for every successful instance: mark every level except `x₀`.","The corollary (`silent_at_start_iff_marking_all_but_start`), under the same premises, gives one marking that succeeds wherever some marking silent at `x₀` does: the marking of every level except `x₀`.","5b")
+rep("At `D = 1`, `rest` says just `X 0 = x₀`.","At `D = 1`, `rest` says just `X 0 = x₀`. These, `sets` through `differs`, are *the common premises*.","5c")
+n=len(re.findall(rx("the core's common premises"),s)); s=re.sub(rx("the core's common premises"),"the common premises in the head note",s); done.append(f"5d x{n}")
+after("The worked courses call a way's use its *draw*.","*The threshold* is `H₂ + y₂`, and *the corrected use* is `H₂`. A *residual* is what a use leaves of a level before giving is added (`x - u`, nothing where the use is more). *Original* and *old* say: of the course as it was. A marking's *first hit* is its first marked step.","6")
+rep("This supplies the premise `fall` of `turned_meets_iff`, `recoverable_iff_above`, `noReturnAt_iff_first_below` and `noReturnAt_of_below`. In the concrete calls found in `TurningInTime`, `asItWas_falls` derives it under",
+ "Its conclusion has the form of the premise `fall` of `turned_meets_iff`, `recoverable_iff_above`, `noReturnAt_iff_first_below` and `noReturnAt_of_below` of `Becoming.TurningInTime`. No law in this module calls this theorem: `recoverable_iff_above` and `noReturnAt_of_below` are called here with `level_never_rises_of_rises` as `fall`, and the other two are not called. In the calls found in `TurningInTime` (searched by name), `fall` comes from `asItWas_falls` under","7a")
+rep("No name for `mono` on the one-level step was found in `RegimeMargin` by search.","No name for `mono` on the one-level step was found in `RegimeMargin` (searched, not read whole).","7b")
+after("The use form also asks `H₂ + y₂ ≤ hi` (`fits`).","Two public statements are called by no law over markings: `level_never_rises` and `stays_below_of_le`. They ask a use that never falls at any step (`up`) where `level_never_rises_of_rises` and `stays_below_of_le_of_rises` ask `high`, `rises` and, respectively, `nothing` and `keeps₀`. `next_above_iff_draw` is the one step by any use that the use form calls.","8")
+rep("Each public declaration is included in the build's axiom report.","Every public declaration has an empty axiom report; the private helpers are not reported on their own.","9")
+rep("Plain weak growth through `hi` is insufficient. The bounded proofs for A and B can use weak growth through `hi` **and** `hi ≤ use (Law.orbit alone w hi)` so that the step from `hi` leaves zero. By hand: set","The bounded proofs for A and B can use weak growth through `hi` **and** `hi ≤ use (Law.orbit alone w hi)`, so that the step from `hi` leaves zero. Weak growth through `hi` alone is not enough. By hand: set","10a")
+rep("The empty marking succeeds despite `X 7 < 4` for `D = 6`.","So `D = 6`. Every premise of the core, A and B but the strictness of `rises` is met (checked by hand), the empty marking gives a line that never ends, and `X 7 = 2 < 4`: the left side holds and the right side fails.","10b")
+rep("A successful turn at or before the index that witnesses recovery agrees there.","A successful turn at or before the index agrees with the course as it was at the index, and a kept run that never ends is at or above the threshold at every step, so the level at the index is at or above it.","10c")
+rep("At step `j` the level uses the way of the course as it was, `Law.orbit alone w j`, by `asItWas_way`.","The level at step `j + 1` is `RegimeMargin.step giving` from the level at step `j`, under the use of the way of the course as it was at step `j`, `Law.orbit alone w j`. No premise; by `asItWas_way`.","11")
+# re-wrap comment lines over 100 characters (only inside /-! … -/ and /-- … -/ blocks)
+out=[]; incom=False
+for line in s.split('\n'):
+    if '/-' in line: incom=True
+    if incom and len(line)>100:
+        ind=re.match(r'\s*',line).group(0)
+        cont=ind+('  ' if line.lstrip().startswith(('* ','- ')) else '')
+        words=line.strip().split(' '); cur=ind+words[0]
+        for w in words[1:]:
+            if len(cur)+1+len(w)>100: out.append(cur); cur=cont+w
+            else: cur+=' '+w
+        out.append(cur)
+    else: out.append(line)
+    if '-/' in line: incom=False
+s='\n'.join(out)
+open(p,'w').write(s)
+print('applied:',done); print('lines',s.count('\n')+1,'longest',max(len(l) for l in s.split('\n')))

@@ -1,0 +1,58 @@
+"""AI-written (Claude Fable, row FM), 23 November 2026. A search on small numbers, not a proof.
+
+After two readers showed that the course NotMonotone fails `meets` as well as `mono`, so that it does not
+show `mono` is needed: the statement S3 is checked again on small courses WITH the regime's premises
+checked by the program (nothing, short, meets at H2 and y2, the table keeps the level within hi), a use
+rising by one each step from u0, need one, the correction a turn to the standing use H2.
+
+Left side: some marking that does not mark the start's level, acting from the step after it first fires,
+gives a pair's course that never ends (by simulation).  Right side: H2 + y2 <= lv (D + 1).
+Tallied by: is H2 <= u0 (the correction draws no more than the course's first use); does the giving meet
+`mono`; does the start meet `still`.
+"""
+import itertools, json
+def step(tab,u,x):
+    left = x-u if x>=u else 0
+    return left+tab[left]
+def never_ends(tab,u,x,need=1):
+    seen=set()
+    while True:
+        if x<need: return False
+        if x in seen: return True
+        seen.add(x); x=step(tab,u,x)
+tally={}; ex={}
+for hi in range(2,8):
+    for rest in itertools.product(*[range(0,hi-z+1) for z in range(1,hi+1)]):
+        tab=(0,)+rest
+        mono=all(z+tab[z]<=z+1+tab[z+1] for z in range(hi))
+        for H2 in range(0,hi+1):
+            ys=[y for y in range(0,hi+2)
+                if all(tab[z]<H2 for z in range(0,min(y,hi+1)))
+                and all(tab[z]>=H2 for z in range(y,hi+1) if z+H2<=hi)
+                and 1<=H2+y]
+            if not ys: continue
+            for y2 in ys:
+                for x0 in range(1,hi+1):
+                    for u0 in range(0,hi+1):
+                        xs=[x0]; x=x0; j=0
+                        while x>=1 and j<3*hi+3:
+                            x=step(tab,u0+j,x); xs.append(x); j+=1
+                        if xs[-1]>=1: continue
+                        D=next((j for j,v in enumerate(xs) if v!=x0),None)
+                        if D is None or D+1>=len(xs): continue
+                        still=step(tab,u0,x0)<=x0
+                        lhs=False
+                        for T in range(D,len(xs)-1):
+                            if xs[T]==x0: continue
+                            first=next(j for j in range(len(xs)) if xs[j]==xs[T])
+                            if all(xs[j]>=1 for j in range(first+1)) and never_ends(tab,H2,xs[first+1]):
+                                lhs=True; break
+                        rhs = H2+y2<=xs[D+1]
+                        key=("H2<=u0" if H2<=u0 else "H2>u0","mono" if mono else "not mono","still" if still else "not still","agree" if lhs==rhs else "DISAGREE")
+                        tally[key]=tally.get(key,0)+1
+                        if lhs!=rhs and key not in ex: ex[key]=dict(hi=hi,giving=tab,H2=H2,y2=y2,x0=x0,u0=u0,levels=xs,D=D,lhs=lhs,rhs=rhs)
+for k in sorted(tally): print(k,tally[k])
+print("examples of disagreement:")
+for k,v in ex.items(): print(" ",k,v)
+json.dump({" / ".join(k):v for k,v in tally.items()},open("premises_search.json","w"),indent=1)
+json.dump({" / ".join(k):v for k,v in ex.items()},open("premises_search.examples.json","w"),indent=1)

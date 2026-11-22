@@ -1,0 +1,281 @@
+{
+ "schema_version": 2,
+ "id": "a-reading-of-the-level-alone",
+ "title": {
+  "en": "A reading of the level alone, over every marking that does not mark the start's level"
+ },
+ "kind": "theorem",
+ "status": "recorded-checked",
+ "family": "F01",
+ "reviewed_at_utc": "2026-11-22T19:31:11+00:00",
+ "statement": {
+  "en": "With one fixed correction at marked levels and the level first differing from the start's at step D: if the level, once below H2 + y2, stays below, some marking silent at the start's level gives a line that never ends exactly where the level at step D + 1 is at or above H2 + y2."
+ },
+ "laws": [
+  {
+   "en": "A reading by the levels it marks and one correction: at a marked level the way after a step is one fixed correction of the way, elsewhere the way's step as it was. It is the way's step as it was outside the marks; with every corrected way of a kept kind, the way after a step at a marked level is of that kind; with the way's step as it was keeping the kind too, every step keeps it.",
+   "declarations": [
+    "Becoming.LevelAlone.readBy",
+    "Becoming.LevelAlone.readBy_outside",
+    "Becoming.LevelAlone.readBy_turns",
+    "Becoming.LevelAlone.readBy_kept",
+    "Becoming.LevelAlone.level"
+   ]
+  },
+  {
+   "en": "Given the common premises (the correction sets a way of a kept kind that the way's step as it was keeps, and such ways use H2; nothing is given from nothing; giving is short of H2 below y2 and meets it wherever both y2 <= z and z + H2 <= hi; the step under no use keeps every level up to hi within hi; a positive need at most H2 + y2; the use rises strictly along the way's own orbit for the first hi steps; the start is at most hi; the level of the course as it was is the start's at every step before D and not at D) and given that this level, once below H2 + y2, is below it at the next step: some marking that does not mark the start's level gives a line that never ends exactly where the level at step D + 1 is at or above H2 + y2.",
+   "declarations": [
+    "Becoming.LevelAlone.silent_at_start_iff_next_of_stays_below"
+   ]
+  },
+  {
+   "en": "Under the same premises, some marking that does not mark the start's level gives a line that never ends exactly where the marking of every level other than the start's does.",
+   "declarations": [
+    "Becoming.LevelAlone.silent_at_start_iff_marking_all_but_start"
+   ]
+  },
+  {
+   "en": "Where the corrected use H2 is no more than the use of the start's way, and the use never falls along the way's orbit, a level of the course as it was below H2 + y2 is followed by a level below it (asking of giving only that nothing is given from nothing and that it is short of H2 below y2); the same from a strict rise for the first hi steps with the cap. So, with the common premises and H2 no more than the first use, the equivalence with the level at step D + 1 holds.",
+   "declarations": [
+    "Becoming.LevelAlone.stays_below_of_le",
+    "Becoming.LevelAlone.stays_below_of_le_of_rises",
+    "Becoming.LevelAlone.silent_at_start_iff_next_of_le"
+   ]
+  },
+  {
+   "en": "Where the step under no use does not fall as the level rises, the use never falls along the way's orbit and the start's own step does not raise the level, the level of the course as it was never rises; the same from a strict rise for the first hi steps with nothing given from nothing and the start at most hi. So, with the common premises, for any corrected use, the equivalence with the level at step D + 1 holds.",
+   "declarations": [
+    "Becoming.LevelAlone.level_never_rises",
+    "Becoming.LevelAlone.level_never_rises_of_rises",
+    "Becoming.LevelAlone.silent_at_start_iff_next"
+   ]
+  },
+  {
+   "en": "Under the premises of the law before: such a marking exists exactly where the levels of the course as it was are recoverable at step D + 1 (the turns to the standing use H2 feasible, the need met at every step asked); under no such marking does the line never end, exactly where those levels have a point of no return at or before step D + 1; and, with H2 + y2 <= hi, such a marking exists exactly where the use as it was at step D and y2 together are at most the level at step D.",
+   "declarations": [
+    "Becoming.LevelAlone.silent_at_start_iff_recoverable_next",
+    "Becoming.LevelAlone.silent_at_start_none_iff_no_return",
+    "Becoming.LevelAlone.next_above_iff_draw",
+    "Becoming.LevelAlone.silent_at_start_iff_use"
+   ]
+  },
+  {
+   "en": "Three worked courses under these laws. Twelve (giving min z (12 - z), level twelve, a draw of three rising by one, a return to three): under no marking silent at twelve does the line never end; the level is ten at step five and four at step six. Seven (giving min z (7 - z), level seven, a draw of one rising by one, a return to one): under some marking silent at seven the line never ends. Rising (giving 0, 3, 1, 1, 0 at what is left 0 to 4, level three, a draw of one rising by one, a return to one): under some marking silent at three the line never ends, the level of the course as it was rises from step 1 to step 2, and the step under no use falls from one left to two left.",
+   "declarations": [
+    "Becoming.LevelAlone.Twelve.none_unending",
+    "Becoming.LevelAlone.Twelve.level_at_five_six",
+    "Becoming.LevelAlone.Twelve.mono_and_still",
+    "Becoming.LevelAlone.Seven.some_unending",
+    "Becoming.LevelAlone.Seven.mono_and_still",
+    "Becoming.LevelAlone.Rising.some_unending",
+    "Becoming.LevelAlone.Rising.level_rises",
+    "Becoming.LevelAlone.Rising.not_mono_at_one_two",
+    "Becoming.LevelAlone.cap_mono"
+   ]
+  },
+  {
+   "en": "Two worked courses on which the law for any corrected use fails with one premise missing. On each, every other premise of that law holds (stated as one conjunction), some marking silent at the start's level gives a line that never ends, and the level at step D + 1 is below H2 + y2; so the missing premise does not hold: on WithoutMono the step under no use falls as the level rises, on WithoutStill the start's own step raises the level.",
+   "declarations": [
+    "Becoming.LevelAlone.WithoutMono.other_premises",
+    "Becoming.LevelAlone.WithoutMono.marked_at_five_unending",
+    "Becoming.LevelAlone.WithoutMono.some_unending",
+    "Becoming.LevelAlone.WithoutMono.next_below",
+    "Becoming.LevelAlone.WithoutMono.not_mono_at_one_two",
+    "Becoming.LevelAlone.WithoutMono.not_mono",
+    "Becoming.LevelAlone.WithoutStill.giving_mono",
+    "Becoming.LevelAlone.WithoutStill.other_premises",
+    "Becoming.LevelAlone.WithoutStill.marked_at_six_unending",
+    "Becoming.LevelAlone.WithoutStill.some_unending",
+    "Becoming.LevelAlone.WithoutStill.next_below",
+    "Becoming.LevelAlone.WithoutStill.start_step",
+    "Becoming.LevelAlone.WithoutStill.not_still"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "en": "No axiom. The correction is supplied, with that it sets a way of a kept kind which the way's step as it was keeps and whose ways use one amount; so the laws range over which levels a marking marks and not over what the correction does."
+  },
+  {
+   "en": "The regime at the corrected use, the cap on the level, a use that rises strictly for the first hi steps, the step D with the level at the start's before it and not at it, and, law by law, that the level once below H2 + y2 stays below, or the corrected use no more than the first use, or a step under no use that does not fall as the level rises with a start whose own step does not raise the level, are hypotheses of the theorems. That such a step D exists is not a statement here."
+  }
+ ],
+ "does_not_show": [
+  {
+   "en": "That any actual selection, reward, judge, market or training run meets these premises, or that what it does when a level is marked is one fixed correction: the response is handed in, not derived.",
+   "kind": "correspondence"
+  },
+  {
+   "en": "Anything of a reading that reads more than the level (the way, the step, or the levels before), of a marking that marks the start's level, or of a correction that takes effect at the step from the marked level: the pair's step has the one-step lag built in, and on Twelve the two stated levels (ten, then four) are all that is stated of it.",
+   "kind": "scope",
+   "witness": "Becoming.LevelAlone.Twelve.level_at_five_six"
+  },
+  {
+   "en": "That the earliest marking's being in time makes a later one too late: only that where the marking of every level other than the start's fails, every marking silent at the start's level fails.",
+   "kind": "converse"
+  },
+  {
+   "en": "The recoverable, no-return and use forms where the level may rise: they are stated only under the premises from which the level never rises.",
+   "kind": "scope"
+  },
+  {
+   "en": "That either of the two premises of the law for any corrected use is the least that would do: each has one course on which the law as stated fails without it, both with the corrected use above the first use.",
+   "kind": "scope",
+   "witness": "Becoming.LevelAlone.WithoutMono.not_mono"
+  },
+  {
+   "en": "Any condition on the regime's numbers that says on which side of the equivalence a course falls, and any law of Becoming.TurningInTime as a case.",
+   "kind": "non-implication"
+  }
+ ],
+ "counterexamples": [],
+ "standard_boundaries": [
+  "no-ethical-premise",
+  "no-evaluation",
+  "discrete-steps",
+  "formal-not-empirical",
+  "names-provisional",
+  "omission-not-refutation"
+ ],
+ "validation_scope": {
+  "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261122T192648.959660Z): the declarations cited, in one new module, have empty axiom reports; the checker verifies core purity. AI-written from briefs frozen beforehand: three forms read by four readers who took no part, a fourth form by a reader of another kind of model on its own findings, and a last reader whose mends to the tellings were applied in its words and not read again; statements compared by script between forms. No person has read it."
+ },
+ "next_delta": {
+  "en": "The recoverable and no-return forms under the one premise that a level once below H2 + y2 stays below, in place of a level that never rises; argued by two readers on paper and open on the row that keeps Becoming.TurningInTime."
+ },
+ "correspondence": {
+  "en": "A selection whose draw rises step by step while the level it lives on does not yet differ: of every way of reading the level alone that stays silent while the level is where it started, none can be in time unless the one that acts as soon as the level differs is; where that one is too late, what would have to be read is not the level."
+ },
+ "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LevelAlone.lean",
+ "aliases": [
+  "A reading of the level alone, over every marking that does not mark the start's level",
+  "Becoming.LevelAlone.readBy",
+  "Becoming.LevelAlone.readBy_outside",
+  "Becoming.LevelAlone.readBy_turns",
+  "Becoming.LevelAlone.readBy_kept",
+  "Becoming.LevelAlone.level",
+  "Becoming.LevelAlone.silent_at_start_iff_next_of_stays_below",
+  "Becoming.LevelAlone.silent_at_start_iff_marking_all_but_start",
+  "Becoming.LevelAlone.stays_below_of_le",
+  "Becoming.LevelAlone.stays_below_of_le_of_rises",
+  "Becoming.LevelAlone.silent_at_start_iff_next_of_le",
+  "Becoming.LevelAlone.level_never_rises",
+  "Becoming.LevelAlone.level_never_rises_of_rises",
+  "Becoming.LevelAlone.silent_at_start_iff_next",
+  "Becoming.LevelAlone.silent_at_start_iff_recoverable_next",
+  "Becoming.LevelAlone.silent_at_start_none_iff_no_return",
+  "Becoming.LevelAlone.next_above_iff_draw",
+  "Becoming.LevelAlone.silent_at_start_iff_use",
+  "Becoming.LevelAlone.Twelve.none_unending",
+  "Becoming.LevelAlone.Twelve.level_at_five_six",
+  "Becoming.LevelAlone.Twelve.mono_and_still",
+  "Becoming.LevelAlone.Seven.some_unending",
+  "Becoming.LevelAlone.Seven.mono_and_still",
+  "Becoming.LevelAlone.Rising.some_unending",
+  "Becoming.LevelAlone.Rising.level_rises",
+  "Becoming.LevelAlone.Rising.not_mono_at_one_two",
+  "Becoming.LevelAlone.cap_mono",
+  "Becoming.LevelAlone.WithoutMono.other_premises",
+  "Becoming.LevelAlone.WithoutMono.marked_at_five_unending",
+  "Becoming.LevelAlone.WithoutMono.some_unending",
+  "Becoming.LevelAlone.WithoutMono.next_below",
+  "Becoming.LevelAlone.WithoutMono.not_mono_at_one_two",
+  "Becoming.LevelAlone.WithoutMono.not_mono",
+  "Becoming.LevelAlone.WithoutStill.giving_mono",
+  "Becoming.LevelAlone.WithoutStill.other_premises",
+  "Becoming.LevelAlone.WithoutStill.marked_at_six_unending",
+  "Becoming.LevelAlone.WithoutStill.some_unending",
+  "Becoming.LevelAlone.WithoutStill.next_below",
+  "Becoming.LevelAlone.WithoutStill.start_step",
+  "Becoming.LevelAlone.WithoutStill.not_still"
+ ],
+ "dependencies": [
+  {
+   "id": "turning-in-time",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Its split of a line's never ending at the first marked step, its exact level for a kept kind, its law that a use rising against a capped level leaves nothing, and its recoverable and no-return laws, each used as it stands."
+   }
+  },
+  {
+   "id": "margin-of-a-regime",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Its step of a level under a use and a giving, and its premises on giving (nothing from nothing, short below a margin, meeting from it, keeping within a cap)."
+   }
+  }
+ ],
+ "related": [],
+ "references": [
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LevelAlone.lean",
+   "role": "proof",
+   "declarations": [
+    "Becoming.LevelAlone.readBy",
+    "Becoming.LevelAlone.readBy_outside",
+    "Becoming.LevelAlone.readBy_turns",
+    "Becoming.LevelAlone.readBy_kept",
+    "Becoming.LevelAlone.level",
+    "Becoming.LevelAlone.silent_at_start_iff_next_of_stays_below",
+    "Becoming.LevelAlone.silent_at_start_iff_marking_all_but_start",
+    "Becoming.LevelAlone.stays_below_of_le",
+    "Becoming.LevelAlone.stays_below_of_le_of_rises",
+    "Becoming.LevelAlone.silent_at_start_iff_next_of_le",
+    "Becoming.LevelAlone.level_never_rises",
+    "Becoming.LevelAlone.level_never_rises_of_rises",
+    "Becoming.LevelAlone.silent_at_start_iff_next",
+    "Becoming.LevelAlone.silent_at_start_iff_recoverable_next",
+    "Becoming.LevelAlone.silent_at_start_none_iff_no_return",
+    "Becoming.LevelAlone.next_above_iff_draw",
+    "Becoming.LevelAlone.silent_at_start_iff_use",
+    "Becoming.LevelAlone.Twelve.none_unending",
+    "Becoming.LevelAlone.Twelve.level_at_five_six",
+    "Becoming.LevelAlone.Twelve.mono_and_still",
+    "Becoming.LevelAlone.Seven.some_unending",
+    "Becoming.LevelAlone.Seven.mono_and_still",
+    "Becoming.LevelAlone.Rising.some_unending",
+    "Becoming.LevelAlone.Rising.level_rises",
+    "Becoming.LevelAlone.Rising.not_mono_at_one_two",
+    "Becoming.LevelAlone.cap_mono",
+    "Becoming.LevelAlone.WithoutMono.other_premises",
+    "Becoming.LevelAlone.WithoutMono.marked_at_five_unending",
+    "Becoming.LevelAlone.WithoutMono.some_unending",
+    "Becoming.LevelAlone.WithoutMono.next_below",
+    "Becoming.LevelAlone.WithoutMono.not_mono_at_one_two",
+    "Becoming.LevelAlone.WithoutMono.not_mono",
+    "Becoming.LevelAlone.WithoutStill.giving_mono",
+    "Becoming.LevelAlone.WithoutStill.other_premises",
+    "Becoming.LevelAlone.WithoutStill.marked_at_six_unending",
+    "Becoming.LevelAlone.WithoutStill.some_unending",
+    "Becoming.LevelAlone.WithoutStill.next_below",
+    "Becoming.LevelAlone.WithoutStill.start_step",
+    "Becoming.LevelAlone.WithoutStill.not_still"
+   ],
+   "sha256": "9d9dbd17e2bd9541a4df0616c3ff1710735df4913ed3cd3c299ef4cb264fdf7a"
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T192648.959660Z/verification.json",
+   "role": "receipt",
+   "sha256": "d3a293c2b9cffafe67014b40257997a4d9f52b11143050a5aafbe5998a0b77e0"
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-level-alone-2026-11-23/NOTE.md",
+   "role": "review",
+   "sha256": "025cabb49ccef6d72efb603a532310ff4e5a7a0a589d756b3be43a16834893f1"
+  }
+ ],
+ "proof_bindings": [
+  {
+   "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LevelAlone.lean",
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T192648.959660Z/verification.json",
+   "sha256_pointer": "/source_sha256/Becoming.LevelAlone",
+   "success_pointer": "/status",
+   "success_value": "passed"
+  }
+ ],
+ "history": [
+  {
+   "en": "23 November 2026: added, on board row FM, from the row's order of 22 November (the sentences on a selection set against the Lean, then one tried whole as a claim that can fail). AI-written (Claude Fable, with a last repair of the module by a reader of another kind of model). The briefs, the forms, what each reader changed and what it cost are in the study note."
+  }
+ ]
+}

@@ -1,0 +1,594 @@
+import Becoming.TurningInTime
+
+/-!
+# A reading of the level alone, over every place it could fire
+
+AI-written (Claude Fable, board row FM), 23 November 2026.
+
+## What the package already has
+
+`Becoming.TurningInTime` steps a way and a level as a pair and cuts the pair's step where the level is
+below a need (`TurningInTime.net`). Its laws of turning in time named here take the reading as given,
+a set of marked levels with the way after a step at each (`AloneOutside`, `turns`, `kept`), and say
+when that reading is in time (`unending_iff_first_marked`, `unending_iff_above`,
+`turns_in_time_iff_kept_below`, `recoverable_iff_above`). No statement over all readings was found
+there: the module was searched for a statement that quantifies over the marks or over the way after a
+step, not read whole.
+
+## What this module adds
+
+Way, level, need, use, reading and correction are this model's labels, not terms of the root.
+
+* **A reading by where it fires** (`readBy`): at a marked level the way after a step is one fixed
+  correction `t` of the way, elsewhere `alone` of it. It meets `AloneOutside` (`readBy_outside`); with
+  every corrected way of a kind `Kept` (`sets`) the way after a marked step is of that kind
+  (`readBy_turns`), and with `alone` keeping the kind too (`stays`) every step keeps it
+  (`readBy_kept`).
+* **The level of the course as it was** (`level`), and its fall (`level_never_rises`): where the step
+  under no use does not fall as the level rises (`mono`), the use never falls along `alone`'s orbit
+  (`up`), and the start's own step does not raise the level (`still`), the level never rises.
+* **One step, in the draw** (`next_above_iff_draw`): under `nothing`, `short`, `meets`, `mono`,
+  `H₂ + y₂ ≤ hi` and `0 < H₂ + y₂`, a step under the use `u` from the level `x` leaves at least
+  `H₂ + y₂` exactly where `u + y₂ ≤ x`.
+* **Over every marking that is silent at the start's level** (`silent_at_rest_iff_next`,
+  `silent_at_rest_iff_recoverable`, `silent_at_rest_all_end_iff`, `silent_at_rest_iff_draw`). Under
+  the premises named at each law, with `D` the first step at which the level of the course as it was
+  differs from the start's: some marking that does not mark the start's level keeps the line going
+  exactly where the level at step `D + 1` is at or above `H₂ + y₂`; exactly where the level course as
+  it was is recoverable at step `D + 1`; and, with `H₂ + y₂ ≤ hi`, exactly where the use at step `D`
+  and `y₂` together are at most the level at step `D`. No such marking keeps the line going exactly
+  where that course has a point of no return at or before step `D + 1`. The `+ 1` is the lag: a
+  reading that fires at a level sets the way after that step, so the step from that level is still
+  taken under the use as it was.
+* **Three worked courses.** `Twelve`: no marking silent at twelve keeps the line going, though the
+  level at the first step that differs is still at or above `H₂ + y₂`. `Seven`: some marking silent at
+  seven keeps the line going. `NotMonotone`: a giving that does not meet `mono`, on which the line
+  does not go on without end under the marking at the first level that differs and never ends under
+  the marking at the next level.
+
+## What is handed in, and what is not shown
+
+Handed in: the correction `t` and that it sets a way of the kept kind (`sets`), which `alone` keeps
+(`stays`), so the laws range over where a reading fires and not over what it does; the regime at the
+kept kind's use (`uses`, `nothing`, `short`, `meets`, `keeps`, `needs`, `within`); the cap on the
+level (`keeps₀`, `high`); `mono`; a use that never falls (`up`) and rises strictly for `hi` steps
+(`rises`); a start whose own step does not raise the level (`still`); and the step `D` with the
+level at the start's before it and not at it (`rest`, `differs`). That such a step `D` exists is not
+derived. One premise asked follows from another: `keeps` from `keeps₀`, by `kept_within`.
+
+Not shown: anything of a reading that reads more than the level (the way, or the levels before), of
+a marking that marks the start's level, of a correction that differs from one marked level to
+another, or of a correction that takes effect at the step it fires on (the pair's step has the lag
+built in; `Twelve.level_at_five_six` states two numbers and no course without the lag). No condition
+on the regime is given for which side of the laws a course falls on; the two sides are shown
+inhabited by `Twelve` and `Seven` only. That `mono` cannot be dropped is shown on one course
+(`NotMonotone`), not in general, and no premise other than `mono` has a course here that fails
+without it. That an actual selection meets these premises is a recognition no law here gives.
+
+The laws make no older law a case. They are proved from `unending_iff_first_marked`,
+`unending_iff_above`, `rising_takes_all`, `kept_within`, `asItWas_way`, `recoverable_iff_above` and
+`noReturnAt_of_below` of `Becoming.TurningInTime`, for each marking in turn (`reading_in_time_iff`);
+what is added is that the level never rises, so that among the markings silent at the start's level
+the one at the first level that differs turns earliest and no later turn finds a higher level.
+
+Every declaration has an empty axiom report.
+-/
+
+namespace Becoming
+namespace LevelAlone
+
+open TurningInTime
+
+universe u
+
+variable {W : Type u}
+
+/-! ## 1. A reading by where it fires, and the level of the course as it was -/
+
+/-- **A reading by where it fires and one correction**: at a marked level the way after a step is `t`
+of the way, at any other level `alone` of it. -/
+def readBy (marked : Nat → Prop) [DecidablePred marked] (t alone : W → W) (v : W) (x : Nat) : W :=
+  if marked x then t v else alone v
+
+/-- Outside the marked levels the way after a step of `readBy marked t alone` is `alone` of the way.
+No premise. -/
+theorem readBy_outside (marked : Nat → Prop) [DecidablePred marked] (t alone : W → W) :
+    AloneOutside marked alone (readBy marked t alone) :=
+  fun _ _ unmarked => if_neg unmarked
+
+/-- Where every corrected way is of the kept kind (`sets`), the way after a step of
+`readBy marked t alone` at a marked level is of the kept kind. -/
+theorem readBy_turns {marked : Nat → Prop} [DecidablePred marked] {t : W → W} {Kept : W → Prop}
+    (sets : ∀ v, Kept (t v)) (alone : W → W) (v : W) {x : Nat} (at_mark : marked x) :
+    Kept (readBy marked t alone v x) :=
+  Eq.subst (motive := Kept) (show t v = readBy marked t alone v x from (if_pos at_mark).symm) (sets v)
+
+/-- Where every corrected way is of the kept kind (`sets`) and `alone` keeps the kind (`stays`), the
+way after a step of `readBy marked t alone` from a way of the kept kind is of the kept kind, at every
+level. -/
+theorem readBy_kept {marked : Nat → Prop} [DecidablePred marked] {t alone : W → W}
+    {Kept : W → Prop} (sets : ∀ v, Kept (t v)) (stays : ∀ v, Kept v → Kept (alone v)) (v : W)
+    (x : Nat) (kind : Kept v) : Kept (readBy marked t alone v x) :=
+  if at_mark : marked x then readBy_turns sets alone v at_mark
+  else Eq.subst (motive := Kept) (show alone v = readBy marked t alone v x from (if_neg at_mark).symm)
+    (stays v kind)
+
+/-- **The level of the course as it was** from the way `w` at the level `x₀`, after `j` steps: the way
+stepping by `alone` and the level by `RegimeMargin.step giving` under the way's use. -/
+def level (alone : W → W) (giving : Nat → Nat) (use : W → Nat) (w : W) (x₀ : Nat) (j : Nat) : Nat :=
+  (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x₀) j).2
+
+/-- The level of the course as it was one step on is `RegimeMargin.step giving` from the level, under
+the use of the way `alone` taken that many times. No premise. Needed by `level_never_rises` and
+`silent_at_rest_iff_draw`. -/
+private theorem level_succ (alone : W → W) (giving : Nat → Nat) (use : W → Nat) (w : W) (x₀ j : Nat) :
+    level alone giving use w x₀ (j + 1) =
+      RegimeMargin.step giving (use (Law.orbit alone w j)) (level alone giving use w x₀ j) :=
+  congrArg (fun v => RegimeMargin.step giving (use v) (level alone giving use w x₀ j))
+    (asItWas_way alone _ (w, x₀) j)
+
+/-- Where the step under no use keeps every level up to `hi` within `hi` (`keeps₀`) and the start's
+level is at most `hi` (`high`), every level of the course as it was is at most `hi`; by `kept_within`,
+step by step. Needed by `reading_in_time_iff`. -/
+private theorem level_within {alone : W → W} {giving : Nat → Nat} {use : W → Nat} {hi : Nat}
+    {w : W} {x₀ : Nat} (keeps₀ : RegimeMargin.Keeps giving 0 hi) (high : x₀ ≤ hi) :
+    ∀ j, level alone giving use w x₀ j ≤ hi
+  | 0 => high
+  | j + 1 => kept_within keeps₀
+      (use (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x₀) j).1)
+      (level_within (alone := alone) (use := use) (w := w) keeps₀ high j)
+
+/-- A course that never rises at any step (`fall`) is not higher at a later step. Needed by
+`silent_at_rest_iff_next`. -/
+private theorem falls_to {X : Nat → Nat} (fall : ∀ t, X (t + 1) ≤ X t) {j : Nat} :
+    ∀ {T : Nat}, j ≤ T → X T ≤ X j
+  | _, .refl => Nat.le_refl _
+  | _, .step le => Nat.le_trans (fall _) (falls_to fall le)
+
+/-! ## 2. The fall, and one step in the draw -/
+
+/-- **The level of the course as it was never rises, under a use that never falls.** Where the step
+under no use does not fall as the level rises (`mono`: `z + giving z ≤ z' + giving z'` for `z ≤ z'`),
+the use never falls from one step of `alone`'s orbit from `w` to the next (`up`), and the step under
+the start's use does not raise the start's level (`still`): at every step the level one step on is at
+most the level. By induction: the first step is `still`; after it, what a use at least as great
+leaves of a level at most as high is at most as much, and `mono` carries that to the step. `mono`
+says that the step under no use keeps the order of levels. `RegimeMargin` has no name for that of its
+one-level step: it names it of a web's law (`RegimeMargin.Coupled.Indexed.KeepsBelow`), and has it of
+the one-level step from a stronger premise, that giving itself does not fall as what is left rises
+(`RegimeMargin.step_mono`). `TurningInTime.Three.giving` meets `mono` (`cap_mono` at twelve); argued
+here, not a Lean statement: `z + min z (12 - z)` is `min (2 * z) 12` up to twelve and `z` above, while
+that giving itself falls above six. -/
+theorem level_never_rises {alone : W → W} {giving : Nat → Nat} {use : W → Nat} {w : W} {x₀ : Nat}
+    (mono : ∀ z z', z ≤ z' → z + giving z ≤ z' + giving z')
+    (up : ∀ j, use (Law.orbit alone w j) ≤ use (Law.orbit alone w (j + 1)))
+    (still : RegimeMargin.step giving (use w) x₀ ≤ x₀) :
+    ∀ j, level alone giving use w x₀ (j + 1) ≤ level alone giving use w x₀ j
+  | 0 => still
+  | j + 1 =>
+    Nat.le_trans (Nat.le_of_eq (level_succ alone giving use w x₀ (j + 1)))
+      (Nat.le_trans
+        (mono _ _ (Nat.le_trans
+          (Optimum.sub_le_sub_right_of_le (level_never_rises mono up still j) _)
+          (Optimum.sub_le_sub_left_of_le (up j) _)))
+        (Nat.le_of_eq (level_succ alone giving use w x₀ j).symm))
+
+/-- **One step leaves at least `H₂ + y₂` exactly where the use and `y₂` together are at most the
+level.** With nothing given from nothing (`nothing`), giving short of `H₂` below `y₂` (`short`) and
+meeting it from `y₂` up to `hi` (`meets`), the step under no use not falling as the level rises
+(`mono`), `H₂ + y₂ ≤ hi` (`fits`) and `0 < H₂ + y₂` (`pos`): for every use `u` and level `x`,
+`H₂ + y₂ ≤ RegimeMargin.step giving u x` exactly where `u + y₂ ≤ x`. The only-if direction uses
+`nothing`, `short` and `pos` (below `u + y₂` the use leaves nothing, or less than `y₂` at which giving
+is short of `H₂`); the if direction uses `meets`, `fits` and `mono` (at `y₂` left the step gives at
+least `H₂ + y₂`, and no less from more left). -/
+theorem next_above_iff_draw {giving : Nat → Nat} {H₂ y₂ hi : Nat}
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi)
+    (mono : ∀ z z', z ≤ z' → z + giving z ≤ z' + giving z')
+    (fits : H₂ + y₂ ≤ hi) (pos : 0 < H₂ + y₂) (u x : Nat) :
+    H₂ + y₂ ≤ RegimeMargin.step giving u x ↔ u + y₂ ≤ x :=
+  ⟨fun above => (Nat.lt_or_ge x (u + y₂)).elim
+    (fun below => absurd above (Nat.not_le_of_gt ((Nat.lt_or_ge x u).elim
+      (fun lt => Nat.lt_of_le_of_lt
+        (Nat.le_of_eq ((congrArg (fun z => z + giving z) (sub_eq_zero_of_le (Nat.le_of_lt lt))).trans
+          ((Nat.zero_add (giving 0)).trans nothing))) pos)
+      (fun ge =>
+        have left : x - u < y₂ := Naturals.lt_of_add_lt_add_left (k := u)
+          (Nat.lt_of_le_of_lt (Nat.le_of_eq (add_sub_of_le ge)) below)
+        Nat.lt_of_lt_of_le (Nat.add_lt_add left (short _ left))
+          (Nat.le_of_eq (Nat.add_comm y₂ H₂))))))
+    id,
+   fun enough =>
+    Nat.le_trans
+      (Nat.le_trans (Nat.le_of_eq (Nat.add_comm H₂ y₂))
+        (Nat.add_le_add_left
+          (meets y₂ (Nat.le_refl y₂) (Nat.le_trans (Nat.le_of_eq (Nat.add_comm y₂ H₂)) fits)) y₂))
+      (mono y₂ (x - u) (Naturals.le_sub_of_add_le enough))⟩
+
+/-! ## 3. Over every marking that is silent at the start's level -/
+
+/-- For one marking, turning in time under a use that rises: with every corrected way of the kept kind
+(`sets`), which `alone` keeps (`stays`) and whose ways use `H₂` (`uses`); nothing given from nothing
+(`nothing`); giving short of `H₂` below `y₂` (`short`), meeting it from `y₂` up to `hi` (`meets`), the
+step under `H₂` (`keeps`) and the step under no use (`keeps₀`) each keeping the level within `hi`; a
+positive need (`needs`) at most `H₂ + y₂` (`within`); the use rising strictly at each of the first
+`hi` steps of `alone`'s orbit from `w` (`rises`); and the start's level at most `hi` (`high`): the
+line from `(w, x₀)` under `readBy marked t alone` never ends exactly where there is a step `T` of the
+course as it was, the need met and no level marked before it, the need met and the level marked at
+it, and the level at `T + 1` at or above `H₂ + y₂`. The proof follows `turns_in_time_iff_kept_below`'s
+from its line `ends` on: that the course as it was comes below the need is here by `rising_takes_all`
+(`nothing`, `keeps₀`, `high`, `rises`, `needs`), where that law has it from a standing overdraw; the
+line from the way after the marked step is by `unending_iff_above`, the level there within `hi` by
+`level_within`; the split is `unending_iff_first_marked`. Needed by `silent_at_rest_iff_next`. -/
+private theorem reading_in_time_iff {marked : Nat → Prop} [dec : DecidablePred marked]
+    {t alone : W → W} {Kept : W → Prop} {giving : Nat → Nat} {use : W → Nat}
+    {H₂ y₂ hi need : Nat} {w : W} {x₀ : Nat}
+    (sets : ∀ v, Kept (t v)) (stays : ∀ v, Kept v → Kept (alone v)) (uses : ∀ v, Kept v → use v = H₂)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi)
+    (keeps₀ : RegimeMargin.Keeps giving 0 hi) (needs : 0 < need) (within : need ≤ H₂ + y₂)
+    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1)))
+    (high : x₀ ≤ hi) :
+    «不穷» (net need (readBy marked t alone) (fun w x => RegimeMargin.step giving (use w) x)) «一»
+        (w, x₀) ↔
+      ∃ T, (∀ j, j < T → need ≤ level alone giving use w x₀ j ∧
+              ¬ marked (level alone giving use w x₀ j)) ∧
+        need ≤ level alone giving use w x₀ T ∧ marked (level alone giving use w x₀ T) ∧
+        H₂ + y₂ ≤ level alone giving use w x₀ (T + 1) :=
+  have ends : ∃ n, (Law.orbit (asItWas alone
+      (fun w x => RegimeMargin.step giving (use w) x)) (w, x₀) n).2 < need :=
+    ⟨hi + 1, Eq.subst (motive := fun z => z < need)
+      (rising_takes_all nothing keeps₀ high rises).symm needs⟩
+  have above : ∀ T, marked (level alone giving use w x₀ T) →
+      («不穷» (net need (readBy marked t alone) (fun w x => RegimeMargin.step giving (use w) x)) «一»
+        (pair (readBy marked t alone) (fun w x => RegimeMargin.step giving (use w) x)
+          (Law.orbit (asItWas alone
+            (fun w x => RegimeMargin.step giving (use w) x)) (w, x₀) T)) ↔
+        H₂ + y₂ ≤ level alone giving use w x₀ (T + 1)) :=
+    fun T markedT => unending_iff_above (readBy_kept sets stays) uses nothing short meets keeps
+      needs within (readBy_turns sets alone _ markedT) (level_within keeps₀ high (T + 1))
+  (unending_iff_first_marked (readBy_outside marked t alone) ends).trans
+    ⟨fun ⟨T, before, atT, markedT, onward⟩ =>
+      ⟨T, before, atT, markedT, (above T markedT).mp onward⟩,
+     fun ⟨T, before, atT, markedT, enough⟩ =>
+      ⟨T, before, atT, markedT, (above T markedT).mpr enough⟩⟩
+
+/-- **Some marking that is silent at the start's level keeps the line going exactly where the level
+one step after the first that differs is at or above `H₂ + y₂`.** With every corrected way of the kept
+kind (`sets`), which `alone` keeps (`stays`) and whose ways use `H₂` (`uses`); nothing given from
+nothing (`nothing`); giving short of `H₂` below `y₂` (`short`), meeting it from `y₂` up to `hi`
+(`meets`), the step under `H₂` (`keeps`) and the step under no use (`keeps₀`) each keeping the level
+within `hi`; a positive need (`needs`) at most `H₂ + y₂` (`within`); the step under no use not falling
+as the level rises (`mono`); the use never falling along `alone`'s orbit from `w` (`up`) and rising
+strictly at each of its first `hi` steps (`rises`); the step under the start's use not raising the
+start's level (`still`), which is at most `hi` (`high`); and the level of the course as it was at the
+start's level `x₀` at every step before `D` (`rest`) and not at step `D` (`differs`). Then there is a
+decidable marking that does not mark `x₀` under which the line from `(w, x₀)` never ends, the way
+after a step being `readBy marked t alone`, exactly where `H₂ + y₂ ≤ level … (D + 1)`: the level
+after the step taken from the first level that differs, still under the use as it was. For each
+marking the proof goes through `unending_iff_first_marked` (`reading_in_time_iff`). Only if: a marking
+silent at `x₀` first marks at a step `T` not before `D` (`rest`), and the level at `T + 1` is at most
+the level at `D + 1` (`level_never_rises`, from `mono`, `up` and `still`). If: the marking of the one
+level the course has at step `D` does not mark `x₀` (`differs`), first marks at step `D` (`rest`,
+`differs`), and the need is met up to there (`within`, `level_never_rises`). -/
+theorem silent_at_rest_iff_next {t alone : W → W} {Kept : W → Prop} {giving : Nat → Nat}
+    {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat}
+    (sets : ∀ v, Kept (t v)) (stays : ∀ v, Kept v → Kept (alone v)) (uses : ∀ v, Kept v → use v = H₂)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi)
+    (keeps₀ : RegimeMargin.Keeps giving 0 hi) (needs : 0 < need) (within : need ≤ H₂ + y₂)
+    (mono : ∀ z z', z ≤ z' → z + giving z ≤ z' + giving z')
+    (up : ∀ j, use (Law.orbit alone w j) ≤ use (Law.orbit alone w (j + 1)))
+    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1)))
+    (still : RegimeMargin.step giving (use w) x₀ ≤ x₀) (high : x₀ ≤ hi)
+    (rest : ∀ j, j < D → level alone giving use w x₀ j = x₀)
+    (differs : level alone giving use w x₀ D ≠ x₀) :
+    (∃ (marked : Nat → Prop) (_ : DecidablePred marked), ¬ marked x₀ ∧
+        «不穷» (net need (readBy marked t alone) (fun w x => RegimeMargin.step giving (use w) x)) «一»
+          (w, x₀))
+      ↔ H₂ + y₂ ≤ level alone giving use w x₀ (D + 1) :=
+  have fall := level_never_rises (alone := alone) (w := w) mono up still
+  ⟨fun ⟨marked, dec, silent, never⟩ =>
+    match (reading_in_time_iff (dec := dec) sets stays uses nothing short meets keeps keeps₀ needs
+        within rises high).mp never with
+    | ⟨T, _, _, markedT, enough⟩ => (Nat.lt_or_ge T D).elim
+        (fun lt => absurd (Eq.subst (motive := marked) (rest T lt) markedT) silent)
+        (fun ge => Nat.le_trans enough (falls_to fall (Nat.succ_le_succ ge))),
+   fun enough =>
+    have met : ∀ j, j ≤ D → need ≤ level alone giving use w x₀ j := fun _ le =>
+      Nat.le_trans within (Nat.le_trans enough (falls_to fall (Nat.le_succ_of_le le)))
+    ⟨fun x => x = level alone giving use w x₀ D, inferInstance, fun same => differs same.symm,
+      (reading_in_time_iff sets stays uses nothing short meets keeps keeps₀ needs within rises
+        high).mpr
+        ⟨D, fun j lt => ⟨met j (Nat.le_of_lt lt), fun same => differs (same.symm.trans (rest j lt))⟩,
+          met D (Nat.le_refl D), rfl, enough⟩⟩⟩
+
+/-- **Some marking that is silent at the start's level keeps the line going exactly where the level
+course as it was is recoverable one step after its level first differs.** Under
+`silent_at_rest_iff_next`'s premises (`sets`, `stays`, `uses`, `nothing`, `short`, `meets`, `keeps`,
+`keeps₀`, `needs`, `within`, `mono`, `up`, `rises`, `still`, `high`, `rest`, `differs`): there is a
+decidable marking that does not mark `x₀` under which the line from `(w, x₀)` never ends, the way
+after a step being `readBy marked t alone`, exactly where the level course as it was is `Recoverable`
+at step `D + 1`, with its turns to the standing use `H₂` as the feasible courses and the need met at
+every step as what is asked. By `silent_at_rest_iff_next` and `recoverable_iff_above`, whose `fall` is
+`level_never_rises` and whose `top` is `high`. -/
+theorem silent_at_rest_iff_recoverable {t alone : W → W} {Kept : W → Prop} {giving : Nat → Nat}
+    {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat}
+    (sets : ∀ v, Kept (t v)) (stays : ∀ v, Kept v → Kept (alone v)) (uses : ∀ v, Kept v → use v = H₂)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi)
+    (keeps₀ : RegimeMargin.Keeps giving 0 hi) (needs : 0 < need) (within : need ≤ H₂ + y₂)
+    (mono : ∀ z z', z ≤ z' → z + giving z ≤ z' + giving z')
+    (up : ∀ j, use (Law.orbit alone w j) ≤ use (Law.orbit alone w (j + 1)))
+    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1)))
+    (still : RegimeMargin.step giving (use w) x₀ ≤ x₀) (high : x₀ ≤ hi)
+    (rest : ∀ j, j < D → level alone giving use w x₀ j = x₀)
+    (differs : level alone giving use w x₀ D ≠ x₀) :
+    (∃ (marked : Nat → Prop) (_ : DecidablePred marked), ¬ marked x₀ ∧
+        «不穷» (net need (readBy marked t alone) (fun w x => RegimeMargin.step giving (use w) x)) «一»
+          (w, x₀))
+      ↔ Recoverable (Turned (fun j => level alone giving use w x₀ j) giving H₂) (MeetsNeed need)
+          (fun t _ => level alone giving use w x₀ t) (D + 1) :=
+  (silent_at_rest_iff_next sets stays uses nothing short meets keeps keeps₀ needs within mono up
+      rises still high rest differs).trans
+    (recoverable_iff_above (X := fun j => level alone giving use w x₀ j)
+      (level_never_rises mono up still) high nothing short meets keeps needs within).symm
+
+/-- **The wall: no marking that is silent at the start's level keeps the line going, exactly where the
+level course as it was has a point of no return at most one step after its level first differs.**
+Under `silent_at_rest_iff_next`'s premises (`sets`, `stays`, `uses`, `nothing`, `short`, `meets`,
+`keeps`, `keeps₀`, `needs`, `within`, `mono`, `up`, `rises`, `still`, `high`, `rest`, `differs`):
+under every decidable marking that does not mark `x₀` it is not so that the line from `(w, x₀)` never
+ends, the way after a step being `readBy marked t alone`, exactly where there is a step `N ≤ D + 1`
+that is the point of no return (`NoReturnAt`) of the level course as it was, with its turns to the
+standing use `H₂` as the feasible courses and the need met at every step as what is asked. Only if:
+the level at `D + 1` is below `H₂ + y₂` or not; below, `noReturnAt_of_below` gives the point; not
+below, `silent_at_rest_iff_next` gives a marking whose line never ends. If: by
+`silent_at_rest_iff_recoverable` a marking whose line never ends makes the course recoverable at
+`D + 1`, so at `N` (`Recoverable.earlier`). -/
+theorem silent_at_rest_all_end_iff {t alone : W → W} {Kept : W → Prop} {giving : Nat → Nat}
+    {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat}
+    (sets : ∀ v, Kept (t v)) (stays : ∀ v, Kept v → Kept (alone v)) (uses : ∀ v, Kept v → use v = H₂)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi)
+    (keeps₀ : RegimeMargin.Keeps giving 0 hi) (needs : 0 < need) (within : need ≤ H₂ + y₂)
+    (mono : ∀ z z', z ≤ z' → z + giving z ≤ z' + giving z')
+    (up : ∀ j, use (Law.orbit alone w j) ≤ use (Law.orbit alone w (j + 1)))
+    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1)))
+    (still : RegimeMargin.step giving (use w) x₀ ≤ x₀) (high : x₀ ≤ hi)
+    (rest : ∀ j, j < D → level alone giving use w x₀ j = x₀)
+    (differs : level alone giving use w x₀ D ≠ x₀) :
+    (∀ (marked : Nat → Prop) [DecidablePred marked], ¬ marked x₀ →
+        ¬ «不穷» (net need (readBy marked t alone) (fun w x => RegimeMargin.step giving (use w) x)) «一»
+          (w, x₀))
+      ↔ ∃ N, N ≤ D + 1 ∧
+          NoReturnAt (Turned (fun j => level alone giving use w x₀ j) giving H₂) (MeetsNeed need)
+            (fun t _ => level alone giving use w x₀ t) N :=
+  ⟨fun all => (Nat.lt_or_ge (level alone giving use w x₀ (D + 1)) (H₂ + y₂)).elim
+    (fun below => noReturnAt_of_below (X := fun j => level alone giving use w x₀ j)
+      (level_never_rises mono up still) high nothing short meets keeps needs within below)
+    (fun above =>
+      match (silent_at_rest_iff_next (t := t) sets stays uses nothing short meets keeps keeps₀ needs
+          within mono up rises still high rest differs).mpr above with
+      | ⟨marked, dec, silent, never⟩ => absurd never (@all marked dec silent)),
+   fun ⟨_, le, point⟩ marked dec silent never =>
+    point.1 (Recoverable.earlier
+      ((silent_at_rest_iff_recoverable sets stays uses nothing short meets keeps keeps₀ needs within
+        mono up rises still high rest differs).mp ⟨marked, dec, silent, never⟩) le)⟩
+
+/-- **The draw form: some marking that is silent at the start's level keeps the line going exactly
+where, at the first step whose level differs, the use and `y₂` together are at most the level.** Under
+`silent_at_rest_iff_next`'s premises (`sets`, `stays`, `uses`, `nothing`, `short`, `meets`, `keeps`,
+`keeps₀`, `needs`, `within`, `mono`, `up`, `rises`, `still`, `high`, `rest`, `differs`) and
+`H₂ + y₂ ≤ hi` (`fits`): there is a decidable marking that does not mark `x₀` under which the line
+from `(w, x₀)` never ends, the way after a step being `readBy marked t alone`, exactly where the use
+of the way `alone` taken `D` times and `y₂` together are at most the level of the course as it was at
+step `D`. By `silent_at_rest_iff_next`, and `next_above_iff_draw` at the step from `D` (`level_succ`,
+through `asItWas_way`). -/
+theorem silent_at_rest_iff_draw {t alone : W → W} {Kept : W → Prop} {giving : Nat → Nat}
+    {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat}
+    (sets : ∀ v, Kept (t v)) (stays : ∀ v, Kept v → Kept (alone v)) (uses : ∀ v, Kept v → use v = H₂)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi)
+    (keeps₀ : RegimeMargin.Keeps giving 0 hi) (needs : 0 < need) (within : need ≤ H₂ + y₂)
+    (mono : ∀ z z', z ≤ z' → z + giving z ≤ z' + giving z')
+    (up : ∀ j, use (Law.orbit alone w j) ≤ use (Law.orbit alone w (j + 1)))
+    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1)))
+    (still : RegimeMargin.step giving (use w) x₀ ≤ x₀) (high : x₀ ≤ hi)
+    (rest : ∀ j, j < D → level alone giving use w x₀ j = x₀)
+    (differs : level alone giving use w x₀ D ≠ x₀) (fits : H₂ + y₂ ≤ hi) :
+    (∃ (marked : Nat → Prop) (_ : DecidablePred marked), ¬ marked x₀ ∧
+        «不穷» (net need (readBy marked t alone) (fun w x => RegimeMargin.step giving (use w) x)) «一»
+          (w, x₀))
+      ↔ use (Law.orbit alone w D) + y₂ ≤ level alone giving use w x₀ D :=
+  (silent_at_rest_iff_next sets stays uses nothing short meets keeps keeps₀ needs within mono up
+      rises still high rest differs).trans
+    (Eq.subst (motive := fun z => H₂ + y₂ ≤ z ↔
+        use (Law.orbit alone w D) + y₂ ≤ level alone giving use w x₀ D)
+      (level_succ alone giving use w x₀ D).symm
+      (next_above_iff_draw nothing short meets mono fits (Nat.lt_of_lt_of_le needs within) _ _))
+
+/-! ## 4. Three worked courses -/
+
+/-- A way of the worked courses is a draw and whether it has been returned; what it uses is the
+draw. -/
+def draw (v : Nat × Bool) : Nat := v.1
+
+/-- The way's step as it was in the worked courses: a returned draw stays as it is, any other rises
+by one. -/
+def rise (v : Nat × Bool) : Nat × Bool := if v.2 then v else (v.1 + 1, false)
+
+/-- Along `rise` from a draw `a` not returned, the way after `j` steps is the draw `a + j`, not
+returned. Needed by `draw_rises`. -/
+private theorem rise_orbit (a : Nat) : ∀ j, Law.orbit rise (a, false) j = (a + j, false)
+  | 0 => rfl
+  | j + 1 => congrArg rise (rise_orbit a j)
+
+/-- Along `rise` from a draw `a` not returned, the draw rises strictly at every step. Needed by the
+worked courses, for `up` and `rises`. -/
+private theorem draw_rises (a j : Nat) :
+    draw (Law.orbit rise (a, false) j) < draw (Law.orbit rise (a, false) (j + 1)) :=
+  Nat.lt_of_le_of_lt (Nat.le_of_eq (congrArg draw (rise_orbit a j)))
+    (Nat.lt_of_lt_of_le (Nat.lt_succ_self (a + j))
+      (Nat.le_of_eq (congrArg draw (rise_orbit a (j + 1))).symm))
+
+/-- `z + (n - z)` does not fall as `z` rises, at every `n`. No premise. Needed by `cap_mono`. -/
+private theorem cover_mono (n : Nat) {z z' : Nat} (le : z ≤ z') : z + (n - z) ≤ z' + (n - z') :=
+  (Nat.lt_or_ge n z).elim
+    (fun lt => Nat.le_trans
+      (Nat.le_of_eq (congrArg (z + ·) (sub_eq_zero_of_le (Nat.le_of_lt lt))))
+      (Nat.le_trans le (Nat.le_add_right z' (n - z'))))
+    (fun ge => Nat.le_trans (Nat.le_of_eq (add_sub_of_le ge))
+      ((Nat.lt_or_ge n z').elim (fun lt => Nat.le_trans (Nat.le_of_lt lt) (Nat.le_add_right z' _))
+        (fun ge' => Nat.le_of_eq (add_sub_of_le ge').symm)))
+
+/-- **Giving `min z (n - z)` meets `mono`**: `z + min z (n - z) ≤ z' + min z' (n - z')` for `z ≤ z'`,
+at every `n`. No premise. Where `z'` is at most `n - z'` the right side is `z' + z'`, and the left is
+at most `z + z`; otherwise the right side is `z' + (n - z')`, and the left is at most `z + (n - z)`
+(`cover_mono`). -/
+theorem cap_mono (n z z' : Nat) (le : z ≤ z') : z + min z (n - z) ≤ z' + min z' (n - z') :=
+  if h : z' ≤ n - z' then
+    Nat.le_trans (Nat.add_le_add le (Nat.le_trans (RegimeMargin.Peaked.min_le_left' z (n - z)) le))
+      (Nat.le_of_eq (congrArg (z' + ·)
+        (show z' = min z' (n - z') from (if_pos h).symm)))
+  else
+    Nat.le_trans
+      (Nat.le_trans (Nat.add_le_add_left (RegimeMargin.Peaked.min_le_right' z (n - z)) z)
+        (cover_mono n le))
+      (Nat.le_of_eq (congrArg (z' + ·)
+        (show n - z' = min z' (n - z') from (if_neg h).symm)))
+
+namespace Twelve
+
+/-- The correction: a return to a draw of three. -/
+def back (_ : Nat × Bool) : Nat × Bool := (3, true)
+
+/-- `silent_at_rest_iff_next` on this course: giving `min z (12 - z)` (`Three.giving`), from the
+draw three, not returned, at the level twelve, the draw rising by one a step, a return to the draw
+three as the correction and its ways as the kept kind, `H₂ = y₂ = 3`, `hi = 12`, a need of one and
+`D = 5`. Every premise of that law is met here. Needed by `wall_stands`. -/
+private theorem next_iff :
+    (∃ (marked : Nat → Prop) (_ : DecidablePred marked), ¬ marked 12 ∧
+        «不穷» (net 1 (readBy marked back rise)
+          (fun w x => RegimeMargin.step Three.giving (draw w) x)) «一» ((3, false), 12))
+      ↔ 3 + 3 ≤ level rise Three.giving draw (3, false) 12 (5 + 1) :=
+  silent_at_rest_iff_next (Kept := fun v => v = (3, true)) (H₂ := 3) (y₂ := 3) (hi := 12) (D := 5)
+    (fun _ => rfl) (fun _ kind => Eq.subst (motive := fun v => rise v = (3, true)) kind.symm rfl)
+    (fun _ kind => congrArg draw kind) rfl (RegimeMargin.short_of_below rfl)
+    (RegimeMargin.meets_of_below rfl) (RegimeMargin.keeps_of_below rfl)
+    (RegimeMargin.keeps_of_below rfl) (by decide) (by decide) (cap_mono 12)
+    (fun j => Nat.le_of_lt (draw_rises 3 j)) (fun j _ => draw_rises 3 j) (by decide) (by decide)
+    (by decide) (by decide)
+
+/-- **On this course no marking that is silent at twelve keeps the line going.** Giving
+`min z (12 - z)`, from the draw three, not returned, at the level twelve, the draw rising by one a
+step, a need of one, the correction a return to the draw three: under every decidable marking that
+does not mark twelve it is not so that the line never ends, the way after a step being
+`readBy marked back rise`. The levels of the course as it was run 12, 12, 12, 12, 12, 10, 4; the first
+that differs is at step five, and the level at step six is four, below `3 + 3`. By
+`silent_at_rest_iff_next` (`next_iff`). -/
+theorem wall_stands : ∀ (marked : Nat → Prop) [DecidablePred marked], ¬ marked 12 →
+    ¬ «不穷» (net 1 (readBy marked back rise)
+      (fun w x => RegimeMargin.step Three.giving (draw w) x)) «一» ((3, false), 12) :=
+  fun marked dec silent never => absurd (next_iff.mp ⟨marked, dec, silent, never⟩) (by decide)
+
+/-- On this course the level of the course as it was is ten at step five and four at step six: `3 + 3`
+is at most the first and above the second. That a correction taking effect at the step it fires on
+would keep the line going is not stated in Lean. -/
+theorem level_at_five_six : level rise Three.giving draw (3, false) 12 5 = 10 ∧
+    level rise Three.giving draw (3, false) 12 6 = 4 :=
+  ⟨rfl, rfl⟩
+
+end Twelve
+
+namespace Seven
+
+/-- Giving that rises with the level to three at three and four, and falls to nothing at seven. -/
+def giving (z : Nat) : Nat := min z (7 - z)
+
+/-- The correction: a return to a draw of one. -/
+def back (_ : Nat × Bool) : Nat × Bool := (1, true)
+
+/-- **On this course some marking that is silent at seven keeps the line going.** Giving
+`min z (7 - z)`, from the draw one, not returned, at the level seven, the draw rising by one a step,
+a need of one, the correction a return to the draw one: there is a decidable marking that does not
+mark seven under which the line never ends, the way after a step being `readBy marked back rise`. The
+level of the course as it was is seven at steps 0 to 3 and not at step 4, and at step 5 it is at or
+above `1 + 1` (by hand, not stated: the levels run 7, 7, 7, 7, 6, 2). By
+`silent_at_rest_iff_next` at `H₂ = y₂ = 1`, `hi = 7` and `D = 4`, every premise of which is met
+here. -/
+theorem some_marking_keeps :
+    ∃ (marked : Nat → Prop) (_ : DecidablePred marked), ¬ marked 7 ∧
+      «不穷» (net 1 (readBy marked back rise)
+        (fun w x => RegimeMargin.step giving (draw w) x)) «一» ((1, false), 7) :=
+  (silent_at_rest_iff_next (t := back) (alone := rise) (Kept := fun v => v = (1, true))
+    (giving := giving) (use := draw) (H₂ := 1) (y₂ := 1) (hi := 7) (need := 1) (D := 4)
+    (w := (1, false)) (x₀ := 7)
+    (fun _ => rfl) (fun _ kind => Eq.subst (motive := fun v => rise v = (1, true)) kind.symm rfl)
+    (fun _ kind => congrArg draw kind) rfl (RegimeMargin.short_of_below rfl)
+    (RegimeMargin.meets_of_below rfl) (RegimeMargin.keeps_of_below rfl)
+    (RegimeMargin.keeps_of_below rfl) (by decide) (by decide) (cap_mono 7)
+    (fun j => Nat.le_of_lt (draw_rises 1 j)) (fun j _ => draw_rises 1 j) (by decide) (by decide)
+    (by decide) (by decide)).mpr (by decide)
+
+end Seven
+
+namespace NotMonotone
+
+/-- Giving two at one, three at three, two at five and at six, and nothing at every other level. -/
+def giving : Nat → Nat
+  | 1 => 2
+  | 3 => 3
+  | 5 => 2
+  | 6 => 2
+  | _ => 0
+
+/-- The correction: a return to a draw of two. -/
+def back (_ : Nat × Bool) : Nat × Bool := (2, true)
+
+/-- This giving does not meet `mono`: one left gives two, three in all, and two left gives nothing,
+two in all. -/
+theorem not_mono : ¬ ∀ z z', z ≤ z' → z + giving z ≤ z' + giving z' :=
+  fun mono => absurd (mono 1 2 (by decide)) (by decide)
+
+/-- From the draw two, not returned, at the level eight, the draw rising by one a step, the level of
+the course as it was is eight at the start and after one step, and seven after two: seven is the
+first level that differs. -/
+theorem first_differs : level rise giving draw (2, false) 8 0 = 8 ∧
+    level rise giving draw (2, false) 8 1 = 8 ∧ level rise giving draw (2, false) 8 2 = 7 :=
+  ⟨rfl, rfl, rfl⟩
+
+/-- **Marked at seven, the first level that differs, the line does not go on without end.** From the
+draw two, not returned, at the level eight, a need of one, the correction a return to the draw two: at
+step six of the pair's course the need is not met (its levels run 8, 8, 7, 6, 4, 2, 0; those before
+step six are not stated). Proved on the net itself; no law of this module applies (`not_mono`). -/
+theorem marked_at_seven_ends :
+    ¬ «不穷» (net 1 (readBy (fun x => x = 7) back rise)
+      (fun w x => RegimeMargin.step giving (draw w) x)) «一» ((2, false), 8) :=
+  fun never => absurd (Law.stepWhile_unending_iff.mp never 6) (by decide)
+
+/-- Marked at six, the pair's step leaves the returned draw two at the level three as it is. Needed by
+`marked_at_six_goes_on`. -/
+private theorem held : ∀ n, Law.orbit (pair (readBy (fun x => x = 6) back rise)
+    (fun w x => RegimeMargin.step giving (draw w) x)) ((2, true), 3) n = ((2, true), 3)
+  | 0 => rfl
+  | n + 1 => congrArg (pair (readBy (fun x => x = 6) back rise)
+      (fun w x => RegimeMargin.step giving (draw w) x)) (held n)
+
+/-- **Marked at six, one step later, the line never ends.** From the draw two, not returned, at the
+level eight, a need of one, the correction a return to the draw two: the need is met at each of the
+first four steps of the pair's course (its levels run 8, 8, 7, 6; not stated one by one), and at step
+four it is the returned draw two at the level three, which the pair's step leaves as it is (`held`).
+Proved on the net itself, by `unending_from` at step four; no law of this module applies
+(`not_mono`). With `marked_at_seven_ends`: on this course the line never ends under a marking later
+than the one at the first level that differs, under which it does not go on without end. -/
+theorem marked_at_six_goes_on :
+    «不穷» (net 1 (readBy (fun x => x = 6) back rise)
+      (fun w x => RegimeMargin.step giving (draw w) x)) «一» ((2, false), 8) :=
+  (unending_from 4).mpr ⟨by decide, (Law.stepWhile_unending_iff (s := ((2, true), 3))).mpr fun n =>
+    Eq.subst (motive := fun s : (Nat × Bool) × Nat => 1 ≤ s.2) (held n).symm (by decide : 1 ≤ 3)⟩
+
+end NotMonotone
+
+end LevelAlone
+end Becoming

@@ -1,0 +1,122 @@
+import Lean
+import Becoming.LevelAlone
+
+/-! For the six modules of row FM's build "old inductions as calls": every declaration's name and kind, and for
+each theorem its universe names, its statement binder by binder as Lean holds it (names, binder kinds, types, with
+bound variables as indices), the head of its proof, the package theorems its proof term uses, the constants that carry an induction, and
+what it uses from outside the package (following Lean's auxiliary declarations under the theorem's own name).
+Private declarations are rows too. After row DJ's `AllProofHeads.lean`.
+AI-written (Claude Fable, board row FM), 22 November 2026. -/
+
+open Lean
+
+partial def aaStrip : Expr → Expr
+  | .lam _ _ b _ => aaStrip b
+  | .mdata _ e => aaStrip e
+  | .letE _ _ _ b _ => aaStrip b
+  | e => e
+
+def valueOf (ci : ConstantInfo) : Option Expr :=
+  match ci with
+  | .thmInfo t => some t.value
+  | .defnInfo d => some d.value
+  | .opaqueInfo o => some o.value
+  | _ => none
+
+partial def usedBy (env : Environment) (n : Name) : NameSet :=
+  let rec go (todo : List Name) (seen out : NameSet) : NameSet :=
+    match todo with
+    | [] => out
+    | c :: rest =>
+      if seen.contains c then go rest seen out else
+      let seen := seen.insert c
+      match (env.find? c).bind valueOf with
+      | none => go rest seen out
+      | some v =>
+        let (more, out) := v.getUsedConstants.foldl (init := (rest, out)) fun (acc : List Name × NameSet) u =>
+          if u != n && n.isPrefixOf u then (u :: acc.1, acc.2) else (acc.1, acc.2.insert u)
+        go more seen out
+  go [n] {} {}
+
+/-- A constant that carries an induction: the recursor (or a companion) of a type that is recursive, or one of the
+wrappers of the toolchain that are inductions under another name. `Eq.rec`, `And.rec` and the like are not listed:
+their types are not recursive. -/
+def isRecursor (env : Environment) (c : Name) : Bool :=
+  match c with
+  | .str p s =>
+    if s == "rec" || s == "recOn" || s == "brecOn" || s == "binductionOn" then
+      (match env.find? p with | some (.inductInfo v) => v.isRec | _ => true)
+    else s == "fix" || s == "fixF" || s == "recAux" || s == "strongRecOn" || s == "caseStrongRecOn"
+      || s == "induction" || s == "recursion" || s == "inductionOn" || s == "induct"
+  | _ => false
+
+def digitsAfter (s pre : String) : Bool :=
+  s.startsWith pre && (s.drop pre.length).length > 0 && (s.drop pre.length).all (fun ch => ch.isDigit || ch == '_')
+
+/-- Lean's own generated names: equation lemmas, matchers, abstracted proofs and the like. -/
+def skipLast (c : Name) : Bool :=
+  match c with
+  | .str _ s => digitsAfter s "eq_" || s == "eq_def" || s == "eq_unfold" || s == "injEq" || s == "inj"
+      || s == "sizeOf_spec" || s == "noConfusion" || digitsAfter s "match_" || s.startsWith "_"
+      || digitsAfter s "proof_"
+  | .num _ _ => true
+  | _ => false
+
+def jsonList (xs : List String) : String := "[" ++ ", ".intercalate (xs.map String.quote) ++ "]"
+
+def infoName : BinderInfo → String
+  | .default => "explicit" | .implicit => "implicit" | .strictImplicit => "strict" | .instImplicit => "instance"
+
+/-- The statement's binders from the outside in, as Lean holds them, and what is left. -/
+partial def binders : Expr → List String → List String × String
+  | .forallE n d b bi, acc =>
+      binders b (acc ++ ["{\"name\": " ++ (toString n).quote ++ ", \"info\": " ++ (infoName bi).quote
+        ++ ", \"type\": " ++ (toString d).quote ++ "}"])
+  | .mdata _ e, acc => binders e acc
+  | e, acc => (acc, toString e)
+
+def wanted : List Name := [`Becoming.LevelAlone]
+
+#eval show CoreM Unit from do
+  let env ← getEnv
+  let mods := env.header.moduleNames
+  let mut rows : Array (String × String) := #[]
+  for (c, ci) in env.constants.map₁.toList do
+    if skipLast c || (c.isInternal && !isPrivateName c) then continue
+    match env.getModuleIdxFor? c with
+    | none => continue
+    | some idx =>
+      let m := mods[idx.toNat]!
+      if !wanted.contains m then continue
+      let kind := match ci with
+        | .thmInfo _ => "theorem" | .defnInfo _ => "def" | .inductInfo _ => "inductive" | .ctorInfo _ => "ctor"
+        | .axiomInfo _ => "axiom" | .opaqueInfo _ => "opaque" | .recInfo _ => "recursor" | _ => "other"
+      let base := "{\"module\": " ++ (toString m).quote ++ ", \"name\": " ++ (toString c).quote
+        ++ ", \"kind\": " ++ kind.quote ++ ", \"levels\": " ++ jsonList (ci.levelParams.map toString)
+      let (bs, body) := binders ci.type []
+      let stmt := ", \"binders\": [" ++ ", ".intercalate bs ++ "], \"body\": " ++ body.quote
+      match ci with
+      | .thmInfo t =>
+        let hd := match (aaStrip t.value).getAppFn.constName? with
+          | some h => (toString h).quote
+          | none => "null"
+        let used := (usedBy env c).toList
+        let pkg := used.filter fun u => match env.find? u with
+          | some (.thmInfo _) => (match env.getModuleIdxFor? u with
+              | some j => (`Becoming).isPrefixOf mods[j.toNat]!
+              | none => false)
+          | _ => false
+        let recs := used.filter (isRecursor env)
+        -- everything the term uses that is not of the package and not a type or a constructor, so nothing is unseen
+        let foreign := used.filter fun u => match env.find? u with
+          | some (.inductInfo _) | some (.ctorInfo _) | none => false
+          | some _ => match env.getModuleIdxFor? u with
+              | some j => !(`Becoming).isPrefixOf mods[j.toNat]!
+              | none => true
+        let srt := fun (l : List Name) => (l.map toString).toArray.qsort (· < ·) |>.toList
+        rows := rows.push (toString m ++ " " ++ toString c, base ++ stmt ++ ", \"head\": " ++ hd
+          ++ ", \"uses\": " ++ jsonList (srt pkg) ++ ", \"recursors\": " ++ jsonList (srt recs)
+          ++ ", \"foreign\": " ++ jsonList (srt foreign) ++ "}")
+      | _ => rows := rows.push (toString m ++ " " ++ toString c, base ++ stmt ++ "}")
+  for (_, r) in rows.qsort (fun a b => a.1 < b.1) do
+    IO.println ("ROW " ++ r)

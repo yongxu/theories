@@ -1,0 +1,14 @@
+#!/bin/bash
+# usage: build.sh <n>      builds Becoming.LevelAlone from the scratch tree once; log in build-<n>.log
+# Waits while a gate, a core run or another scratch build is alive. Prints the errors and the tail.
+n="${1:-0}"; tree=/Users/ren/tmp/fm/build14/tree; log=/Users/ren/tmp/fm/build14/build-$n.log
+busy() { ps -axo pid=,args= | grep -E '^ *[0-9]+ [^ ]*[Pp]ython[^ ]* (-[A-Za-z]+ )*[^ ]*(scratch_build\.py|gate\.py|check_becoming\.py)( |$)' > /dev/null; }
+while busy; do sleep 10; done
+cd /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming || exit 9
+date '+start %H:%M:%S' > "$log"
+python3 -B scratch_build.py "$tree" Becoming.LevelAlone >> "$log" 2>&1
+code=$?
+echo "exit $code build $n" >> "$log"; date '+end %H:%M:%S' >> "$log"
+grep -nE 'error|warning|sorry|axiom' "$log" | head -60
+tail -c 2500 "$log"
+exit $code

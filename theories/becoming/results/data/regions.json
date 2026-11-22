@@ -2841,6 +2841,11 @@
    "base": "general",
    "note": "PredicateIteration FM: a monotone step on predicates where a list holds the start; kept at the list's length is kept for good; keeping under every course, along some course, by choice and through a reading as cases; the ending side where a step commutes with what a level would give"
   },
+  "a-reading-of-the-level-alone": {
+   "region": "map",
+   "base": "general",
+   "note": "LevelAlone FM: over every marking that does not mark the start's level, when some such marking gives a line that never ends"
+  },
   "selection-through-couplings-at-a-coarser-step": {
    "region": "knowing",
    "base": "general",

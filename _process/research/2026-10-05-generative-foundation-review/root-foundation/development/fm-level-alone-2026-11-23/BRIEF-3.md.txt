@@ -1,0 +1,42 @@
+# Brief 3: a small repair of `Becoming.LevelAlone` after the third reader
+
+*AI-written (Claude Fable, board row FM), 23 November 2026. In force with `BRIEF.md`, `BRIEF-2.md` and `BRIEF-2-ADDENDUM.md`; it changes them in the three places below. For one implementer; the read after it is by a reader of another kind of model.*
+
+The second form (946 lines, `returns/LevelAlone.second-form.lean`, built clean on build 8) was read by a third reader who took no part: `returns/reader-3.json`. Its verdict: sound with mends, one must and six lesser. The repairer's own list of what it holds against the module is in `returns/repairer.json` under `held_against`. Read both.
+
+## Change A. Drop `up` from the five laws that ask it beside `rises` (the reader's must)
+
+`up` (the use never falls, at every step) is asked by laws A and B and by S4, S5, S6, which also ask `rises` (strict, for the first `hi` steps), `nothing`, `keeps₀` and `high`. Everything their proofs take from `up` follows from those: below step `hi`, `up` is `Nat.le_of_lt (rises …)`; and by `rising_takes_all` the level at step `hi + 1` is nothing, and a step from nothing under any use is nothing (`nothing`), so from step `hi + 1` on the level is nothing whatever the use does.
+
+So:
+- One private lemma: under `nothing`, `keeps₀`, `high` and `rises`, the level of the course as it was is nothing at every step from `hi + 1` on.
+- `level_never_rises` (S1) **keeps its statement** (`mono`, `up` at every step, `still`): it stays a law of its own for any use that never falls. Beside it, the form the laws call: under `mono`, `still`, `nothing`, `keeps₀`, `high` and `rises`, `∀ j, level (j + 1) ≤ level j`. Prove it without repeating S1's argument if you can (for instance S1's induction stated once for uses that do not fall *below a bound* `n`, with S1 and this form both from it); choose the shortest honest way and say which.
+- `stays_below_of_le` **keeps its statement** (with `up` at every step). Beside it, the form laws B calls, from `nothing`, `short`, `pos`, `le`, `keeps₀`, `high` and `rises`. Same remark on not repeating the argument.
+- `silent_at_start_iff_next_of_le`, `silent_at_start_iff_next`, `silent_at_start_iff_recoverable_next`, `silent_at_start_none_iff_no_return`, `silent_at_start_iff_use`: `up` is gone from each. The courses' `other_premises` lose their `up` conjunct. The head note's list of what is handed in and its sentences on what laws A and B ask are brought in line.
+
+If the level being nothing from step `hi + 1` cannot be had from those four premises, or a law turns out to need `up` after all, STOP and report.
+
+## Change B. One more worked course: a course law B reaches and law A does not
+
+The repairer notes that nothing in the module shows `below` holding while the level rises, so that law B is not seen to reach further than law A. Add `namespace Rising` (or a better name): `hi = 4`; giving at what is left 0 to 4 is 0, 3, 1, 1, 0 (0 above); start `((1, false), 3)`; correction `t _ := (1, true)` (a return to the start's own use), `Kept v := v = (1, true)`, `H₂ = 1`, `y₂ = 1`, need one. The course as it was: 3, 3, 4, 4, 0, so `D = 2`. Prove:
+- from `silent_at_start_iff_next_of_le`: `∃ marked …, ¬ marked 3 ∧ «不穷» …` (right side `1 + 1 ≤ level 3 = 4`);
+- `level … 1 < level … 2` (the level of the course as it was rises, three to four, so the conclusion of `level_never_rises` fails on it);
+- `¬ (1 + giving 1 ≤ 2 + giving 2)` (so `mono` fails: four against three).
+Recompute first; if a number is wrong, STOP and report. Its docstrings say what it shows: on this course law B applies and law A's premise `mono` and conclusion that the level never rises both fail; one course, not a general statement.
+
+## Change C. The six lesser findings of `returns/reader-3.json`, each mended as the reader words it
+
+1. Say, in the head note's section on what `mono` and `still` are for and at law A, that where `D` is two or more `still` follows from `rest`, and asks something only where `D = 1`, as on `WithoutStill`.
+2. Not "no premise on the shape of giving": say what is asked of giving (`nothing`, `short`, `meets`, `keeps₀`) and that neither `mono` nor `still` is.
+3. The telling of the private `asItWas_falls` in S1's docstring names all four of its premises (`nothing` was left out).
+4. Not "the level only falls … finds the highest level": "the level never rises, so that no later marking finds a higher level".
+5. Add the two one-line statements by `decide` (`¬ (1 + giving 1 ≤ 2 + giving 2)` in `WithoutMono`; `RegimeMargin.step giving (draw (1, false)) 2 = 4` in `WithoutStill`) and point the docstrings at them in place of "by hand". Keep `not_mono` and `not_still` proved through the law.
+6. `Twelve.level_at_five_six`'s docstring as the reader words it.
+
+Also, from the repairer's own list: the module is long. Do not add length that is not asked here; where a docstring can lose a sentence that repeats the head note, let it.
+
+## Rules and report
+
+As before: one file, `/Users/ren/tmp/fm/build14/tree/Becoming/LevelAlone.lean`; build only with `/Users/ren/tmp/fm/build14/build.sh <n>` from `n = 9`, one at a time, at most 15 builds (the script waits while another session's heavy run is alive; wait for it); no `axiom`, `sorry`, `native_decide`, `Classical`, `simp`, `omega`; nothing under `/Users/ren/theories` edited; no git, lake, gate or test suite. Docstrings say exactly what is proved, premises named, in the head note's words.
+
+Report, as text: line count; what was done for A, B and C item by item; which premises each law now asks and uses; how the two bounded forms were proved; any number that was wrong; builds and the last exit line; what you hold against the module as it stands.
