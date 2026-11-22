@@ -1,6 +1,6 @@
 # Row GR: a selection through couplings, read at a coarser step
 
-AI-written (Claude Fable, a Claude Code desktop session that holds board row GR), 23 November 2026. No person has read it.
+AI-written (Claude Fable, a Claude Code desktop session that holds board row GR), 23 November 2026.
 
 ## What was asked, and on whose word
 
