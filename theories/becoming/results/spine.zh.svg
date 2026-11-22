@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1783" width="900" height="1783" role="img" aria-labelledby="spine-title spine-desc" font-family="'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif">
 <title id="spine-title">八章及各章彼此之间有记录的使用</title>
-<desc id="spine-desc">八章围绕文法排成一圈，按其结果数定大小（根 86；生成、守与退化 104；认知、学习与检验 110；生命与演化 46；联合活动与选择 74；古文 16；意义、伦理与对齐 104；方法 21）。章与章之间共有 551 次记为 formal-reuse 的使用，画出 18 个至少 10 次的配对；551 次中有 226 次是逆向的，即章序在前的一章的结果使用章序在后的一章的结果，其所在配对有 10 次或以上时画得较深（章的编号是为阅读，不是证明的次序）。每章到文法的辐条，示该章在文法上陈述其定理的核心模块（根 74 个中 22 个；生成、守与退化 86 个中 19 个；认知、学习与检验 88 个中 14 个；生命与演化 23 个中 8 个；联合活动与选择 28 个中 3 个；古文 10 个中 4 个；意义、伦理与对齐 71 个中 19 个；方法 28 个中 4 个）。117 项核心声明相对于根之边的位置：11 项推导而得，1 项在一个所述的假设之下，6 项为计数，99 项处于一个指明的距离。其下，五条共律各有依于它的核心行与其中达到文法者（闭包 42 行，42 行达到；平衡 54 行，16 行达到，平衡为表示，不推导；有限运行 14 行，14 行达到；归并 2 行，1 行达到；扩大 8 行，1 行达到）。三个方框进入第七章，是排序结果在其定理取用之处所取的假设：以从己方式成立的延续条件（谁的损失算数，单凭自身不排序）、自我关切（即这样一种次序：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切；在延续条件跨越所有步来读、以从己方式成立之处，它在一个有限列表上把每一个扩大都排在上面；生命是否会形成这种次序，尚未表明）与 C（Comparison，对次序的一项要求：在每一个主张都算作活之时，把一个进程排在它所扩大的每一个进程之上）。T1 到 T8 在其所属之处，按检验结局着色。</desc>
+<desc id="spine-desc">八章围绕文法排成一圈，按其结果数定大小（根 86；生成、守与退化 104；认知、学习与检验 110；生命与演化 46；联合活动与选择 74；古文 16；意义、伦理与对齐 104；方法 21）。章与章之间共有 551 次记为 formal-reuse 的使用，画出 18 个至少 10 次的配对；551 次中有 226 次是逆向的，即章序在前的一章的结果使用章序在后的一章的结果，其所在配对有 10 次或以上时画得较深（章的编号是为阅读，不是证明的次序）。每章到文法的辐条，示该章在文法上陈述其定理的核心模块（根 74 个中 22 个；生成、守与退化 86 个中 19 个；认知、学习与检验 88 个中 14 个；生命与演化 23 个中 8 个；联合活动与选择 29 个中 3 个；古文 10 个中 4 个；意义、伦理与对齐 71 个中 19 个；方法 28 个中 4 个）。117 项核心声明相对于根之边的位置：11 项推导而得，1 项在一个所述的假设之下，6 项为计数，99 项处于一个指明的距离。其下，五条共律各有依于它的核心行与其中达到文法者（闭包 42 行，42 行达到；平衡 54 行，16 行达到，平衡为表示，不推导；有限运行 14 行，14 行达到；归并 2 行，1 行达到；扩大 8 行，1 行达到）。三个方框进入第七章，是排序结果在其定理取用之处所取的假设：以从己方式成立的延续条件（谁的损失算数，单凭自身不排序）、自我关切（即这样一种次序：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切；在延续条件跨越所有步来读、以从己方式成立之处，它在一个有限列表上把每一个扩大都排在上面；生命是否会形成这种次序，尚未表明）与 C（Comparison，对次序的一项要求：在每一个主张都算作活之时，把一个进程排在它所扩大的每一个进程之上）。T1 到 T8 在其所属之处，按检验结局着色。</desc>
 <defs>
 <marker id="fwd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8a817c"/></marker>
 <marker id="back" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c1917"/></marker>
@@ -116,7 +116,7 @@
 <text x="450" y="1033.6" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">05</text>
 <text x="450" y="1099.3" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">联合活动与选择</text>
 <text x="450" y="1116.3" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">74 项结果 · 章内使用 81</text>
-<text x="450" y="1133.3" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">28 个模块中 3 个在文法上</text>
+<text x="450" y="1133.3" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">29 个模块中 3 个在文法上</text>
 <circle cx="273.2" cy="952.4" r="24" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
 <text x="273.2" y="958.9" font-size="18" font-weight="bold" text-anchor="middle" fill="#57534e">06</text>
 <text x="285.2" y="998.4" font-size="16" font-weight="bold" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">古文</text>
@@ -204,7 +204,7 @@
 <text x="506" y="1279.3" font-size="14" text-anchor="start" fill="#1c1917">的那一章；曲线旁的数字为其使用次数，15 次</text>
 <text x="506" y="1297.3" font-size="14" text-anchor="start" fill="#1c1917">及以上才标出。这一类由 AI 写成的记录指定；</text>
 <text x="506" y="1315.3" font-size="14" text-anchor="start" fill="#1c1917">登记检查核对接口具备其字段、且其所引是记录</text>
-<text x="506" y="1333.3" font-size="14" text-anchor="start" fill="#1c1917">中带散列的参考文献之一（全部 1289 条这样的</text>
+<text x="506" y="1333.3" font-size="14" text-anchor="start" fill="#1c1917">中带散列的参考文献之一（全部 1291 条这样的</text>
 <text x="506" y="1351.3" font-size="14" text-anchor="start" fill="#1c1917">边中有 884 条，所引的都是 Lean 文件）；没</text>
 <text x="506" y="1369.3" font-size="14" text-anchor="start" fill="#1c1917">有任何检查核对那里的 Lean 是否确实使用所引</text>
 <text x="506" y="1387.3" font-size="14" text-anchor="start" fill="#1c1917">的结果。</text>

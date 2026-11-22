@@ -5157,6 +5157,18 @@
    "page": "theories/becoming/results/records/selection-through-couplings.md"
   },
   {
+   "id": "record:selection-through-couplings-at-a-coarser-step",
+   "type": "result",
+   "record": "selection-through-couplings-at-a-coarser-step",
+   "title": "Selection through couplings at a coarser step",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "unassigned",
+   "base": "",
+   "page": "theories/becoming/results/records/selection-through-couplings-at-a-coarser-step.md"
+  },
+  {
    "id": "record:selection-when-the-lumping-changes",
    "type": "result",
    "record": "selection-when-the-lumping-changes",
@@ -11107,6 +11119,17 @@
    "region": "collective",
    "base": "old-base",
    "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.SampledSelection",
+   "type": "module",
+   "name": "Becoming.SampledSelection",
+   "level": "L1",
+   "theorems": 29,
+   "region": "collective",
+   "base": "general",
+   "on_grammar": false,
    "reaches_grammar": true
   },
   {
@@ -36268,6 +36291,16 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.SampledSelection",
+   "to": "module:Becoming.Sampling",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.SampledSelection",
+   "to": "module:Becoming.Selection",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Sampling",
    "to": "module:Becoming.Locality",
    "type": "imports"
@@ -55558,6 +55591,21 @@
    "from": "record:selection-through-couplings",
    "to": "record:the-markov-blanket-as-a-coupling-structure",
    "type": "related"
+  },
+  {
+   "from": "record:selection-through-couplings-at-a-coarser-step",
+   "to": "module:Becoming.SampledSelection",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:selection-through-couplings-at-a-coarser-step",
+   "to": "record:laws-at-coarser-steps",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:selection-through-couplings-at-a-coarser-step",
+   "to": "record:selection-through-couplings",
+   "type": "formal-reuse"
   },
   {
    "from": "record:selection-when-the-lumping-changes",

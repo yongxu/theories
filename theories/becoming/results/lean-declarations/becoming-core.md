@@ -11,7 +11,7 @@ On each part, theorems and lemmas are individually listed and definitions and ty
 
 ## Becoming pure core
 
-This group's 394 modules are listed on 7 parts of about equal size, the largest 733,777 bytes, under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
+This group's 395 modules are listed on 7 parts of about equal size, the largest 740,739 bytes, under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
 
 | Page | Modules, in the catalogue's order | theorem/lemma occurrences |
 |---|---|---:|
@@ -20,7 +20,7 @@ This group's 394 modules are listed on 7 parts of about equal size, the largest 
 | [Part 3 of 7](../lean-declarations/becoming-core-part-3.md) | 62, from GrammarMap.lean to LearningRuns.lean | 2,749 |
 | [Part 4 of 7](../lean-declarations/becoming-core-part-4.md) | 41, from LeastLoss.lean to OrderNormal.lean | 2,921 |
 | [Part 5 of 7](../lean-declarations/becoming-core-part-5.md) | 51, from OverExchange.lean to ReflexivePrediction.lean | 2,613 |
-| [Part 6 of 7](../lean-declarations/becoming-core-part-6.md) | 55, from RegimeMargin.lean to SetPointOptimum.lean | 2,832 |
+| [Part 6 of 7](../lean-declarations/becoming-core-part-6.md) | 56, from RegimeMargin.lean to SetPointOptimum.lean | 2,861 |
 | [Part 7 of 7](../lean-declarations/becoming-core-part-7.md) | 58, from Settling.lean to InquirySufficiency.lean | 2,713 |
 
 | Module | Page | theorem/lemma |
@@ -343,6 +343,7 @@ This group's 394 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-9faaed7fc7d9"></a>[RunTurns.lean](../lean-declarations/becoming-core-part-6.md#module-9faaed7fc7d9) | part 6 | 10 |
 | <a id="module-f356fab54591"></a>[Runaway.lean](../lean-declarations/becoming-core-part-6.md#module-f356fab54591) | part 6 | 13 |
 | <a id="module-8035f225f44e"></a>[Runs.lean](../lean-declarations/becoming-core-part-6.md#module-8035f225f44e) | part 6 | 17 |
+| <a id="module-6de84bf27726"></a>[SampledSelection.lean](../lean-declarations/becoming-core-part-6.md#module-6de84bf27726) | part 6 | 29 |
 | <a id="module-ec60746f9d0b"></a>[Sampling.lean](../lean-declarations/becoming-core-part-6.md#module-ec60746f9d0b) | part 6 | 88 |
 | <a id="module-1ee6f07c7407"></a>[ScoreRepresentation.lean](../lean-declarations/becoming-core-part-6.md#module-1ee6f07c7407) | part 6 | 16 |
 | <a id="module-b5264900f26d"></a>[SecuredContent.lean](../lean-declarations/becoming-core-part-6.md#module-b5264900f26d) | part 6 | 30 |

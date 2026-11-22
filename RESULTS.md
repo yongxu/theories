@@ -5,7 +5,7 @@
 
 [Home](README.md) · [中文](README.zh.md) · **Read** · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Uses](theories/becoming/USES.md) · **Check** · [Tests](TESTS.md) · [Results](RESULTS.md) · [Proofs](MAP.md#check-the-proofs-yourself) · [Open questions](OPEN-QUESTIONS.md) · [Reviewers](theories/becoming/review/README.md) · **See** · [Atlas](theories/becoming/results/atlas/ATLAS.md) · [Graph](theories/becoming/results/THEORY-GRAPH.md) · [Connections](theories/becoming/results/atlas/CROSSWALK.md) · [How it grew](theories/LINEAGE.md) · [Glossary](GLOSSARY.md) · [Where everything is](MAP.md)
 
-568 registered results: 537 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`), 3 open targets (`open`), 7 superseded (`superseded`) and 1 withdrawn (`withdrawn`). Results not yet migrated keep their existing sources and are not counted here. `recorded-checked` credits an existing Lean receipt and `reviewed-scoped` an existing substantive review; neither certifies a stronger claim. Files, checks and repeated acceptances are not independent results. Each row links the result's record, which names its premises, evidence and boundary.
+569 registered results: 538 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`), 3 open targets (`open`), 7 superseded (`superseded`) and 1 withdrawn (`withdrawn`). Results not yet migrated keep their existing sources and are not counted here. `recorded-checked` credits an existing Lean receipt and `reviewed-scoped` an existing substantive review; neither certifies a stronger claim. Files, checks and repeated acceptances are not independent results. Each row links the result's record, which names its premises, evidence and boundary.
 
 ## Start here
 
@@ -23,7 +23,7 @@ No theorem here evaluates, and the ethics emerges from continuation; each rankin
 <a id="已登记成果--registered-results"></a>
 ## Registered results
 
-By the chapter that states each, in that chapter's order: [Chapter 1](#chapter-01) (86) · [Chapter 2](#chapter-02) (102) · [Chapter 3](#chapter-03) (110) · [Chapter 4](#chapter-04) (46) · [Chapter 5](#chapter-05) (74) · [Chapter 6](#chapter-06) (16) · [Chapter 7](#chapter-07) (104) · [Chapter 8](#chapter-08) (21) · [Stated in no chapter](#not-in-a-chapter) (9).
+By the chapter that states each, in that chapter's order: [Chapter 1](#chapter-01) (86) · [Chapter 2](#chapter-02) (102) · [Chapter 3](#chapter-03) (110) · [Chapter 4](#chapter-04) (46) · [Chapter 5](#chapter-05) (74) · [Chapter 6](#chapter-06) (16) · [Chapter 7](#chapter-07) (104) · [Chapter 8](#chapter-08) (21) · [Stated in no chapter](#not-in-a-chapter) (10).
 
 <a id="chapter-01"></a>
 ### Chapter 1. The root: continuation relative to a class
@@ -646,6 +646,7 @@ By the chapter that states each, in that chapter's order: [Chapter 1](#chapter-0
 | `drawers-in-turn-within-capacities` | [Drawers in turn within capacities](theories/becoming/results/records/drawers-in-turn-within-capacities.md) | theorem | superseded | [Becoming.Optimum.lean](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/Becoming.Optimum.lean) |
 | `kept-at-the-length-of-a-list` | [What a list holds: kept at its length, kept for good](theories/becoming/results/records/kept-at-the-length-of-a-list.md) | theorem | recorded-checked | [PredicateIteration.lean](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PredicateIteration.lean) |
 | `revision-comes-to-drawing-everything` | [Revision comes to drawing everything](theories/becoming/results/records/revision-comes-to-drawing-everything.md) | theorem | superseded | [Becoming.Optimum.lean](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/Becoming.Optimum.lean) |
+| `selection-through-couplings-at-a-coarser-step` | [Selection through couplings at a coarser step](theories/becoming/results/records/selection-through-couplings-at-a-coarser-step.md) | theorem | recorded-checked | [SampledSelection.lean](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SampledSelection.lean) |
 
 <a id="law-families--规律族"></a>
 ## Law families

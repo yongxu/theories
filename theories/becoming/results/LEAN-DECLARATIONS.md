@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 394 | 19,409 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 395 | 19,438 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,072 |
 | [The ethics and the generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -890,6 +890,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [RunTurns.lean](lean-declarations/becoming-core-part-6.md#module-9faaed7fc7d9) | Becoming pure core |
 | [Runaway.lean](lean-declarations/becoming-core-part-6.md#module-f356fab54591) | Becoming pure core |
 | [Runs.lean](lean-declarations/becoming-core-part-6.md#module-8035f225f44e) | Becoming pure core |
+| [SampledSelection.lean](lean-declarations/becoming-core-part-6.md#module-6de84bf27726) | Becoming pure core |
 | [Sampling.lean](lean-declarations/becoming-core-part-6.md#module-ec60746f9d0b) | Becoming pure core |
 | [ScaleRevision.lean](lean-declarations/learning.md#module-dea38234acec) | Learning, prediction and dynamics |
 | [ScientificCompatibility.lean](lean-declarations/inquiry.md#module-6fa299ebe0e7) | Attainable inquiry, contact and process laws |

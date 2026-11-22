@@ -97,7 +97,7 @@ The zero-premise plan lists discrete steps as a commitment of the representation
 - related, not a proved adapter: [rest-at-every-resolution](rest-at-every-resolution.md). The resolution line refines the unit of amounts; this result changes the grain of steps; the two complement each other.
 - related, not a proved adapter: [space-and-its-parts](space-and-its-parts.md). Of a finite world read at a coarser step, that it rests from some step on still cannot be refuted (World.sample_rests_unrefuted).
 
-**Used by:** [continuous-time-as-tower](continuous-time-as-tower.md) · [listing-once-is-decided-identity](listing-once-is-decided-identity.md) · [only-the-order-of-change-shows](only-the-order-of-change-shows.md)
+**Used by:** [continuous-time-as-tower](continuous-time-as-tower.md) · [listing-once-is-decided-identity](listing-once-is-decided-identity.md) · [only-the-order-of-change-shows](only-the-order-of-change-shows.md) · [selection-through-couplings-at-a-coarser-step](selection-through-couplings-at-a-coarser-step.md)
 
 <a id="sources--来源"></a>
 ### Sources
