@@ -131,6 +131,7 @@ Reading (the AI's; Ren agreed with its direction on 14 October 2026): likeness i
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T094514.036246Z/verification.json) | — |
 
 Aliases: `Becoming.determined_iff_named`, `Becoming.goesAlike_iff`, `Becoming.DeterminedAt.stays_alike`, `Becoming.Run.fixesAlike_of_takes`, `Becoming.Run.not_fixesAlike_of_untaken`, `Becoming.Twins.retarget_breaks`, `Becoming.carries_unregistered`, `determinacy up to likeness`, `相同之下的确定`, `Becoming.carries_law_alike_iff`, `Becoming.image_determinedAt_iff`, `Becoming.Run.not_fixesAlike_other_of_new`, `Becoming.Dependence.dichotomy_of_same_level`, `Becoming.Run.not_fixesThroughAlike_of_untaken`
 

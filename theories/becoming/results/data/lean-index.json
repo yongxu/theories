@@ -11141,7 +11141,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
-      "sha256": "2fa88ad3ec028830037114cd43671ccbff0f1e0b6d0c78bce11b9ac8ee1b6d28",
+      "sha256": "bd9bba7ad4e9a4d1901b41e9650d528c7209c8e8f350b26ad39ee241acf7233e",
       "role": "working-source",
       "group": "becoming-core",
       "receipt_layer": "core",
@@ -11189,7 +11189,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCourse.lean",
-      "sha256": "f3928375fd01ea446f97cad742df0deac94283b467472d7b773341e84090ca0e",
+      "sha256": "56354f00375e0e069f9a20c45b4f6f20b952e64485f04eb9ecffd124144fcd27",
       "role": "working-source",
       "group": "becoming-core",
       "receipt_layer": "core",
@@ -12464,7 +12464,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean",
-      "sha256": "c09f09936ba686d570f06afc43a2c2b746a15e43a3320d8ce94c0793c4a7c8e0",
+      "sha256": "7392c948638ba31372c57bd4291f9301c18a9e49aff43588baea5fdece536920",
       "role": "working-source",
       "group": "becoming-core",
       "receipt_layer": "core",
@@ -132007,618 +132007,6 @@
       },
       "print_axioms_commands": 0
     },
-    "2fa88ad3ec028830037114cd43671ccbff0f1e0b6d0c78bce11b9ac8ee1b6d28": {
-      "byte_size": 40546,
-      "line_count": 728,
-      "imports": [
-        "Becoming.GrammarReadings",
-        "Becoming.GrammarTesting",
-        "Becoming.PredicateIteration"
-      ],
-      "declarations": [
-        {
-          "kind": "def",
-          "name": "«能»",
-          "qualified_name_hint": "Becoming.«能»",
-          "line": 54
-        },
-        {
-          "kind": "def",
-          "name": "«所»",
-          "qualified_name_hint": "Becoming.«所»",
-          "line": 57
-        },
-        {
-          "kind": "theorem",
-          "name": "«能所相待»",
-          "qualified_name_hint": "Becoming.«能所相待»",
-          "line": 64
-        },
-        {
-          "kind": "theorem",
-          "name": "«因果互即»",
-          "qualified_name_hint": "Becoming.«因果互即»",
-          "line": 70
-        },
-        {
-          "kind": "theorem",
-          "name": "«二际可偏举»",
-          "qualified_name_hint": "Becoming.«二际可偏举»",
-          "line": 77
-        },
-        {
-          "kind": "theorem",
-          "name": "«同根则不可偏举»",
-          "qualified_name_hint": "Becoming.«同根则不可偏举»",
-          "line": 82
-        },
-        {
-          "kind": "theorem",
-          "name": "«前后相随»",
-          "qualified_name_hint": "Becoming.«前后相随»",
-          "line": 88
-        },
-        {
-          "kind": "def",
-          "name": "«互»",
-          "qualified_name_hint": "Becoming.«互»",
-          "line": 92
-        },
-        {
-          "kind": "theorem",
-          "name": "«互之对称»",
-          "qualified_name_hint": "Becoming.«互之对称»",
-          "line": 95
-        },
-        {
-          "kind": "theorem",
-          "name": "«生亡对偶»",
-          "qualified_name_hint": "Becoming.«生亡对偶»",
-          "line": 100
-        },
-        {
-          "kind": "theorem",
-          "name": "«有生不必有亡»",
-          "qualified_name_hint": "Becoming.«有生不必有亡»",
-          "line": 105
-        },
-        {
-          "kind": "def",
-          "name": "«作者»",
-          "qualified_name_hint": "Becoming.«作者»",
-          "line": 112
-        },
-        {
-          "kind": "def",
-          "name": "«作业»",
-          "qualified_name_hint": "Becoming.«作业»",
-          "line": 115
-        },
-        {
-          "kind": "def",
-          "name": "«处所»",
-          "qualified_name_hint": "Becoming.«处所»",
-          "line": 118
-        },
-        {
-          "kind": "theorem",
-          "name": "«三法相因待»",
-          "qualified_name_hint": "Becoming.«三法相因待»",
-          "line": 122
-        },
-        {
-          "kind": "def",
-          "name": "«非缘»",
-          "qualified_name_hint": "Becoming.«非缘»",
-          "line": 129
-        },
-        {
-          "kind": "theorem",
-          "name": "«无果则缘非缘皆无»",
-          "qualified_name_hint": "Becoming.«无果则缘非缘皆无»",
-          "line": 133
-        },
-        {
-          "kind": "theorem",
-          "name": "«无果则皆非能»",
-          "qualified_name_hint": "Becoming.«无果则皆非能»",
-          "line": 139
-        },
-        {
-          "kind": "theorem",
-          "name": "«及之两端»",
-          "qualified_name_hint": "Becoming.«及之两端»",
-          "line": 144
-        },
-        {
-          "kind": "theorem",
-          "name": "«住因于续»",
-          "qualified_name_hint": "Becoming.«住因于续»",
-          "line": 152
-        },
-        {
-          "kind": "def",
-          "name": "«有相»",
-          "qualified_name_hint": "Becoming.«有相»",
-          "line": 165
-        },
-        {
-          "kind": "theorem",
-          "name": "«知相则有其非»",
-          "qualified_name_hint": "Becoming.«知相则有其非»",
-          "line": 169
-        },
-        {
-          "kind": "theorem",
-          "name": "«离非无相»",
-          "qualified_name_hint": "Becoming.«离非无相»",
-          "line": 173
-        },
-        {
-          "kind": "theorem",
-          "name": "«无色则无虚空之相»",
-          "qualified_name_hint": "Becoming.«无色则无虚空之相»",
-          "line": 177
-        },
-        {
-          "kind": "theorem",
-          "name": "«有相则非亦有相»",
-          "qualified_name_hint": "Becoming.«有相则非亦有相»",
-          "line": 181
-        },
-        {
-          "kind": "theorem",
-          "name": "«非真则假»",
-          "qualified_name_hint": "Becoming.«非真则假»",
-          "line": 186
-        },
-        {
-          "kind": "theorem",
-          "name": "«非假则真»",
-          "qualified_name_hint": "Becoming.«非假则真»",
-          "line": 192
-        },
-        {
-          "kind": "theorem",
-          "name": "«二值之相待»",
-          "qualified_name_hint": "Becoming.«二值之相待»",
-          "line": 199
-        },
-        {
-          "kind": "def",
-          "name": "«二点»",
-          "qualified_name_hint": "Becoming.«二点»",
-          "line": 204
-        },
-        {
-          "kind": "theorem",
-          "name": "«相待之还当且仅当双非可还»",
-          "qualified_name_hint": "Becoming.«相待之还当且仅当双非可还»",
-          "line": 211
-        },
-        {
-          "kind": "theorem",
-          "name": "«遍而无相»",
-          "qualified_name_hint": "Becoming.«遍而无相»",
-          "line": 222
-        },
-        {
-          "kind": "theorem",
-          "name": "«离方无迷»",
-          "qualified_name_hint": "Becoming.«离方无迷»",
-          "line": 228
-        },
-        {
-          "kind": "theorem",
-          "name": "«离觉则皆不觉»",
-          "qualified_name_hint": "Becoming.«离觉则皆不觉»",
-          "line": 233
-        },
-        {
-          "kind": "def",
-          "name": "«始觉»",
-          "qualified_name_hint": "Becoming.«始觉»",
-          "line": 237
-        },
-        {
-          "kind": "theorem",
-          "name": "«始觉依不觉»",
-          "qualified_name_hint": "Becoming.«始觉依不觉»",
-          "line": 240
-        },
-        {
-          "kind": "theorem",
-          "name": "«静之为类»",
-          "qualified_name_hint": "Becoming.«静之为类»",
-          "line": 251
-        },
-        {
-          "kind": "def",
-          "name": "«无定性»",
-          "qualified_name_hint": "Becoming.«无定性»",
-          "line": 254
-        },
-        {
-          "kind": "theorem",
-          "name": "«定性之判»",
-          "qualified_name_hint": "Becoming.«定性之判»",
-          "line": 261
-        },
-        {
-          "kind": "theorem",
-          "name": "«缘生而不自生则无定性»",
-          "qualified_name_hint": "Becoming.«缘生而不自生则无定性»",
-          "line": 274
-        },
-        {
-          "kind": "theorem",
-          "name": "«自缘则常»",
-          "qualified_name_hint": "Becoming.«自缘则常»",
-          "line": 280
-        },
-        {
-          "kind": "theorem",
-          "name": "«念念灭当且仅当无自缘»",
-          "qualified_name_hint": "Becoming.«念念灭当且仅当无自缘»",
-          "line": 286
-        },
-        {
-          "kind": "theorem",
-          "name": "«有成坏当且仅当不自缘»",
-          "qualified_name_hint": "Becoming.«有成坏当且仅当不自缘»",
-          "line": 291
-        },
-        {
-          "kind": "theorem",
-          "name": "«无为无别相»",
-          "qualified_name_hint": "Becoming.«无为无别相»",
-          "line": 300
-        },
-        {
-          "kind": "theorem",
-          "name": "«从缘生非文法之律»",
-          "qualified_name_hint": "Becoming.«从缘生非文法之律»",
-          "line": 307
-        },
-        {
-          "kind": "theorem",
-          "name": "«断则无相续»",
-          "qualified_name_hint": "Becoming.«断则无相续»",
-          "line": 312
-        },
-        {
-          "kind": "theorem",
-          "name": "«缘先果后当且仅当无环»",
-          "qualified_name_hint": "Becoming.«缘先果后当且仅当无环»",
-          "line": 325
-        },
-        {
-          "kind": "def",
-          "name": "«俱有»",
-          "qualified_name_hint": "Becoming.«俱有»",
-          "line": 335
-        },
-        {
-          "kind": "theorem",
-          "name": "«相由则俱有»",
-          "qualified_name_hint": "Becoming.«相由则俱有»",
-          "line": 339
-        },
-        {
-          "kind": "theorem",
-          "name": "«俱有为一念»",
-          "qualified_name_hint": "Becoming.«俱有为一念»",
-          "line": 345
-        },
-        {
-          "kind": "theorem",
-          "name": "«自他随位»",
-          "qualified_name_hint": "Becoming.«自他随位»",
-          "line": 361
-        },
-        {
-          "kind": "theorem",
-          "name": "«他依于自»",
-          "qualified_name_hint": "Becoming.«他依于自»",
-          "line": 367
-        },
-        {
-          "kind": "theorem",
-          "name": "«有自不必有他»",
-          "qualified_name_hint": "Becoming.«有自不必有他»",
-          "line": 372
-        },
-        {
-          "kind": "theorem",
-          "name": "«同异交得»",
-          "qualified_name_hint": "Becoming.«同异交得»",
-          "line": 383
-        },
-        {
-          "kind": "theorem",
-          "name": "«至于无共然后止»",
-          "qualified_name_hint": "Becoming.«至于无共然后止»",
-          "line": 388
-        },
-        {
-          "kind": "theorem",
-          "name": "«至于无别然后至»",
-          "qualified_name_hint": "Becoming.«至于无别然后至»",
-          "line": 394
-        },
-        {
-          "kind": "theorem",
-          "name": "«状所可别»",
-          "qualified_name_hint": "Becoming.«状所可别»",
-          "line": 401
-        },
-        {
-          "kind": "theorem",
-          "name": "«门摄一切»",
-          "qualified_name_hint": "Becoming.«门摄一切»",
-          "line": 408
-        },
-        {
-          "kind": "theorem",
-          "name": "«平等无异»",
-          "qualified_name_hint": "Becoming.«平等无异»",
-          "line": 412
-        },
-        {
-          "kind": "def",
-          "name": "«薪火»",
-          "qualified_name_hint": "Becoming.«薪火»",
-          "line": 416
-        },
-        {
-          "kind": "theorem",
-          "name": "«薪尽火传»",
-          "qualified_name_hint": "Becoming.«薪尽火传»",
-          "line": 420
-        },
-        {
-          "kind": "def",
-          "name": "«攖»",
-          "qualified_name_hint": "Becoming.«攖»",
-          "line": 431
-        },
-        {
-          "kind": "def",
-          "name": "«遍于»",
-          "qualified_name_hint": "Becoming.«遍于»",
-          "line": 434
-        },
-        {
-          "kind": "def",
-          "name": "«端»",
-          "qualified_name_hint": "Becoming.«端»",
-          "line": 437
-        },
-        {
-          "kind": "def",
-          "name": "«有厚»",
-          "qualified_name_hint": "Becoming.«有厚»",
-          "line": 440
-        },
-        {
-          "kind": "theorem",
-          "name": "«端与端俱尽»",
-          "qualified_name_hint": "Becoming.«端与端俱尽»",
-          "line": 443
-        },
-        {
-          "kind": "theorem",
-          "name": "«尺与端或尽或不尽»",
-          "qualified_name_hint": "Becoming.«尺与端或尽或不尽»",
-          "line": 452
-        },
-        {
-          "kind": "theorem",
-          "name": "«尺与尺可相尽»",
-          "qualified_name_hint": "Becoming.«尺与尺可相尽»",
-          "line": 464
-        },
-        {
-          "kind": "def",
-          "name": "«相外»",
-          "qualified_name_hint": "Becoming.«相外»",
-          "line": 475
-        },
-        {
-          "kind": "def",
-          "name": "«不相外»",
-          "qualified_name_hint": "Becoming.«不相外»",
-          "line": 478
-        },
-        {
-          "kind": "def",
-          "name": "«相尽»",
-          "qualified_name_hint": "Becoming.«相尽»",
-          "line": 481
-        },
-        {
-          "kind": "theorem",
-          "name": "«相尽则不相外»",
-          "qualified_name_hint": "Becoming.«相尽则不相外»",
-          "line": 484
-        },
-        {
-          "kind": "def",
-          "name": "«坚白之体»",
-          "qualified_name_hint": "Becoming.«坚白之体»",
-          "line": 488
-        },
-        {
-          "kind": "theorem",
-          "name": "«不相外则相尽当且仅当双非可还»",
-          "qualified_name_hint": "Becoming.«不相外则相尽当且仅当双非可还»",
-          "line": 492
-        },
-        {
-          "kind": "theorem",
-          "name": "«是不俱当»",
-          "qualified_name_hint": "Becoming.«是不俱当»",
-          "line": 510
-        },
-        {
-          "kind": "theorem",
-          "name": "«必或不当当且仅当弱排中»",
-          "qualified_name_hint": "Becoming.«必或不当当且仅当弱排中»",
-          "line": 515
-        },
-        {
-          "kind": "def",
-          "name": "«诘»",
-          "qualified_name_hint": "Becoming.«诘»",
-          "line": 527
-        },
-        {
-          "kind": "theorem",
-          "name": "«对称有常则不可诘»",
-          "qualified_name_hint": "Becoming.«对称有常则不可诘»",
-          "line": 533
-        },
-        {
-          "kind": "theorem",
-          "name": "«核则不可致诘»",
-          "qualified_name_hint": "Becoming.«核则不可致诘»",
-          "line": 544
-        },
-        {
-          "kind": "theorem",
-          "name": "«诘之对称»",
-          "qualified_name_hint": "Becoming.«诘之对称»",
-          "line": 549
-        },
-        {
-          "kind": "def",
-          "name": "inquiryStep",
-          "qualified_name_hint": "Becoming.inquiryStep",
-          "line": 564
-        },
-        {
-          "kind": "theorem",
-          "name": "inquiry_mono",
-          "qualified_name_hint": "Becoming.inquiry_mono",
-          "line": 569
-        },
-        {
-          "kind": "theorem",
-          "name": "iter_iff_inquiry",
-          "qualified_name_hint": "Becoming.iter_iff_inquiry",
-          "line": 575
-        },
-        {
-          "kind": "theorem",
-          "name": "inquiry_iff_all",
-          "qualified_name_hint": "Becoming.inquiry_iff_all",
-          "line": 585
-        },
-        {
-          "kind": "theorem",
-          "name": "core_iff_inquiry",
-          "qualified_name_hint": "Becoming.core_iff_inquiry",
-          "line": 591
-        },
-        {
-          "kind": "theorem",
-          "name": "«诘之降»",
-          "qualified_name_hint": "Becoming.«诘之降»",
-          "line": 601
-        },
-        {
-          "kind": "theorem",
-          "name": "«层在类内»",
-          "qualified_name_hint": "Becoming.«层在类内»",
-          "line": 608
-        },
-        {
-          "kind": "theorem",
-          "name": "«层即诘»",
-          "qualified_name_hint": "Becoming.«层即诘»",
-          "line": 616
-        },
-        {
-          "kind": "theorem",
-          "name": "«层之对称»",
-          "qualified_name_hint": "Becoming.«层之对称»",
-          "line": 627
-        },
-        {
-          "kind": "theorem",
-          "name": "«不可致诘而有常则混而为一»",
-          "qualified_name_hint": "Becoming.«不可致诘而有常则混而为一»",
-          "line": 634
-        },
-        {
-          "kind": "theorem",
-          "name": "«每层不分而有常则核当且仅当每层不分»",
-          "qualified_name_hint": "Becoming.«每层不分而有常则核当且仅当每层不分»",
-          "line": 645
-        },
-        {
-          "kind": "inductive",
-          "name": "«歧网»",
-          "qualified_name_hint": "Becoming.«歧网»",
-          "line": 654
-        },
-        {
-          "kind": "def",
-          "name": "«歧网之步»",
-          "qualified_name_hint": "Becoming.«歧网之步»",
-          "line": 661
-        },
-        {
-          "kind": "theorem",
-          "name": "«歧网之自反»",
-          "qualified_name_hint": "Becoming.«歧网之自反»",
-          "line": 668
-        },
-        {
-          "kind": "theorem",
-          "name": "«链与无尽不可诘»",
-          "qualified_name_hint": "Becoming.«链与无尽不可诘»",
-          "line": 673
-        },
-        {
-          "kind": "theorem",
-          "name": "«甲乙不可诘»",
-          "qualified_name_hint": "Becoming.«甲乙不可诘»",
-          "line": 686
-        },
-        {
-          "kind": "theorem",
-          "name": "«无尽与链不同核»",
-          "qualified_name_hint": "Becoming.«无尽与链不同核»",
-          "line": 699
-        },
-        {
-          "kind": "theorem",
-          "name": "«甲乙不同核»",
-          "qualified_name_hint": "Becoming.«甲乙不同核»",
-          "line": 712
-        },
-        {
-          "kind": "theorem",
-          "name": "«致诘不尽»",
-          "qualified_name_hint": "Becoming.«致诘不尽»",
-          "line": 722
-        }
-      ],
-      "declaration_counts": {
-        "def": 24,
-        "inductive": 1,
-        "theorem": 73
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
     "30050ec7366ef84fa6d2bd71ea8f5998ef0d9975b6841393b7014b147573b715": {
       "byte_size": 13277,
       "line_count": 294,
@@ -217461,6 +216849,244 @@
       },
       "print_axioms_commands": 0
     },
+    "56354f00375e0e069f9a20c45b4f6f20b952e64485f04eb9ecffd124144fcd27": {
+      "byte_size": 22046,
+      "line_count": 398,
+      "imports": [
+        "Becoming.Arising",
+        "Becoming.IdentificationRuns"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "sameValue",
+          "qualified_name_hint": "Becoming.sameValue",
+          "line": 71
+        },
+        {
+          "kind": "theorem",
+          "name": "sameValue_class",
+          "qualified_name_hint": "Becoming.sameValue_class",
+          "line": 73
+        },
+        {
+          "kind": "theorem",
+          "name": "core_within_core_iff",
+          "qualified_name_hint": "Becoming.core_within_core_iff",
+          "line": 83
+        },
+        {
+          "kind": "theorem",
+          "name": "contains_core_iff",
+          "qualified_name_hint": "Becoming.contains_core_iff",
+          "line": 90
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "Becoming.Law.step",
+          "line": 103
+        },
+        {
+          "kind": "theorem",
+          "name": "step_hasSucc_iff",
+          "qualified_name_hint": "Becoming.Law.step_hasSucc_iff",
+          "line": 107
+        },
+        {
+          "kind": "theorem",
+          "name": "constant_iff_keeps",
+          "qualified_name_hint": "Becoming.Law.constant_iff_keeps",
+          "line": 112
+        },
+        {
+          "kind": "theorem",
+          "name": "kept_along",
+          "qualified_name_hint": "Becoming.Law.kept_along",
+          "line": 120
+        },
+        {
+          "kind": "theorem",
+          "name": "core_is_sameFuture",
+          "qualified_name_hint": "Becoming.Law.core_is_sameFuture",
+          "line": 127
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_iff_core",
+          "qualified_name_hint": "Becoming.Law.alike_iff_core",
+          "line": 139
+        },
+        {
+          "kind": "theorem",
+          "name": "keepsAndCarries_iff",
+          "qualified_name_hint": "Becoming.Law.keepsAndCarries_iff",
+          "line": 145
+        },
+        {
+          "kind": "theorem",
+          "name": "coarsest_iff_core",
+          "qualified_name_hint": "Becoming.Law.coarsest_iff_core",
+          "line": 154
+        },
+        {
+          "kind": "theorem",
+          "name": "ends_iff_changes",
+          "qualified_name_hint": "Becoming.Law.ends_iff_changes",
+          "line": 163
+        },
+        {
+          "kind": "theorem",
+          "name": "line_on_orbit",
+          "qualified_name_hint": "Becoming.Law.line_on_orbit",
+          "line": 168
+        },
+        {
+          "kind": "theorem",
+          "name": "reached_while_same",
+          "qualified_name_hint": "Becoming.Law.reached_while_same",
+          "line": 180
+        },
+        {
+          "kind": "theorem",
+          "name": "unending_iff",
+          "qualified_name_hint": "Becoming.Law.unending_iff",
+          "line": 199
+        },
+        {
+          "kind": "theorem",
+          "name": "continues_in_core_iff",
+          "qualified_name_hint": "Becoming.Law.continues_in_core_iff",
+          "line": 216
+        },
+        {
+          "kind": "theorem",
+          "name": "constant_iff_core",
+          "qualified_name_hint": "Becoming.Law.constant_iff_core",
+          "line": 232
+        },
+        {
+          "kind": "theorem",
+          "name": "stays_of_constant",
+          "qualified_name_hint": "Becoming.Law.stays_of_constant",
+          "line": 240
+        },
+        {
+          "kind": "theorem",
+          "name": "core_iff_below",
+          "qualified_name_hint": "Becoming.Law.core_iff_below",
+          "line": 246
+        },
+        {
+          "kind": "theorem",
+          "name": "learnable_iff_core",
+          "qualified_name_hint": "Becoming.Law.learnable_iff_core",
+          "line": 260
+        },
+        {
+          "kind": "theorem",
+          "name": "learnable_of_core_within",
+          "qualified_name_hint": "Becoming.Law.learnable_of_core_within",
+          "line": 274
+        },
+        {
+          "kind": "theorem",
+          "name": "Steps.next_is_step",
+          "qualified_name_hint": "Becoming.Steps.next_is_step",
+          "line": 291
+        },
+        {
+          "kind": "theorem",
+          "name": "SameAhead.is_core",
+          "qualified_name_hint": "Becoming.SameAhead.is_core",
+          "line": 295
+        },
+        {
+          "kind": "theorem",
+          "name": "SameAhead.next_by_root",
+          "qualified_name_hint": "Becoming.SameAhead.next_by_root",
+          "line": 304
+        },
+        {
+          "kind": "theorem",
+          "name": "course_core_iff",
+          "qualified_name_hint": "Becoming.course_core_iff",
+          "line": 311
+        },
+        {
+          "kind": "theorem",
+          "name": "SameAhead.no_continuation",
+          "qualified_name_hint": "Becoming.SameAhead.no_continuation",
+          "line": 318
+        },
+        {
+          "kind": "theorem",
+          "name": "core_iff_below",
+          "qualified_name_hint": "Becoming.core_iff_below",
+          "line": 325
+        },
+        {
+          "kind": "theorem",
+          "name": "statesBelow_iff_core",
+          "qualified_name_hint": "Becoming.statesBelow_iff_core",
+          "line": 330
+        },
+        {
+          "kind": "def",
+          "name": "next",
+          "qualified_name_hint": "Becoming.TwoCourses.next",
+          "line": 346
+        },
+        {
+          "kind": "def",
+          "name": "value",
+          "qualified_name_hint": "Becoming.TwoCourses.value",
+          "line": 351
+        },
+        {
+          "kind": "theorem",
+          "name": "orbit_inl",
+          "qualified_name_hint": "Becoming.TwoCourses.orbit_inl",
+          "line": 355
+        },
+        {
+          "kind": "theorem",
+          "name": "orbit_inr",
+          "qualified_name_hint": "Becoming.TwoCourses.orbit_inr",
+          "line": 359
+        },
+        {
+          "kind": "theorem",
+          "name": "core_iff",
+          "qualified_name_hint": "Becoming.TwoCourses.core_iff",
+          "line": 365
+        },
+        {
+          "kind": "theorem",
+          "name": "core_iff_bounded",
+          "qualified_name_hint": "Becoming.TwoCourses.core_iff_bounded",
+          "line": 375
+        },
+        {
+          "kind": "theorem",
+          "name": "core_exact",
+          "qualified_name_hint": "Becoming.TwoCourses.core_exact",
+          "line": 386
+        }
+      ],
+      "declaration_counts": {
+        "def": 4,
+        "theorem": 32
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "564806b5130602f444eafc5d29d2600a529b2994db5a682bd5787461d53b595e": {
       "byte_size": 27851,
       "line_count": 481,
@@ -280013,6 +279639,1442 @@
         "def": 3,
         "structure": 2,
         "theorem": 8
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "7392c948638ba31372c57bd4291f9301c18a9e49aff43588baea5fdece536920": {
+      "byte_size": 160179,
+      "line_count": 2775,
+      "imports": [
+        "Becoming.Branching",
+        "Becoming.Histories",
+        "Becoming.Decidedness",
+        "Becoming.Refinement"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "RespectsClaims",
+          "qualified_name_hint": "Becoming.RespectsClaims",
+          "line": 175
+        },
+        {
+          "kind": "def",
+          "name": "imageUnder",
+          "qualified_name_hint": "Becoming.imageUnder",
+          "line": 181
+        },
+        {
+          "kind": "theorem",
+          "name": "factors_imageUnder",
+          "qualified_name_hint": "Becoming.factors_imageUnder",
+          "line": 185
+        },
+        {
+          "kind": "theorem",
+          "name": "imageUnder_bisimulation",
+          "qualified_name_hint": "Becoming.imageUnder_bisimulation",
+          "line": 190
+        },
+        {
+          "kind": "theorem",
+          "name": "imageUnder_determinedAt",
+          "qualified_name_hint": "Becoming.imageUnder_determinedAt",
+          "line": 202
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_equivalence",
+          "qualified_name_hint": "Becoming.alike_equivalence",
+          "line": 211
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_respectsClaims",
+          "qualified_name_hint": "Becoming.alike_respectsClaims",
+          "line": 215
+        },
+        {
+          "kind": "theorem",
+          "name": "carries_law_alike_iff",
+          "qualified_name_hint": "Becoming.carries_law_alike_iff",
+          "line": 223
+        },
+        {
+          "kind": "theorem",
+          "name": "eq_equivalence",
+          "qualified_name_hint": "Becoming.eq_equivalence",
+          "line": 237
+        },
+        {
+          "kind": "theorem",
+          "name": "carries_law_named_iff",
+          "qualified_name_hint": "Becoming.carries_law_named_iff",
+          "line": 244
+        },
+        {
+          "kind": "theorem",
+          "name": "image_determinedAt_iff",
+          "qualified_name_hint": "Becoming.image_determinedAt_iff",
+          "line": 266
+        },
+        {
+          "kind": "inductive",
+          "name": "Pos",
+          "qualified_name_hint": "Becoming.Likeness.Parting.Pos",
+          "line": 289
+        },
+        {
+          "kind": "inductive",
+          "name": "Step",
+          "qualified_name_hint": "Becoming.Likeness.Parting.Step",
+          "line": 296
+        },
+        {
+          "kind": "def",
+          "name": "process",
+          "qualified_name_hint": "Becoming.Likeness.Parting.process",
+          "line": 302
+        },
+        {
+          "kind": "def",
+          "name": "claims",
+          "qualified_name_hint": "Becoming.Likeness.Parting.claims",
+          "line": 305
+        },
+        {
+          "kind": "theorem",
+          "name": "going_not_stopped",
+          "qualified_name_hint": "Becoming.Likeness.Parting.going_not_stopped",
+          "line": 309
+        },
+        {
+          "kind": "theorem",
+          "name": "image_not_determinedAt",
+          "qualified_name_hint": "Becoming.Likeness.Parting.image_not_determinedAt",
+          "line": 320
+        },
+        {
+          "kind": "theorem",
+          "name": "carries",
+          "qualified_name_hint": "Becoming.Likeness.Parting.carries",
+          "line": 328
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.not_fixesAlike_other_of_new",
+          "qualified_name_hint": "Becoming.Run.not_fixesAlike_other_of_new",
+          "line": 346
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.new_of_newAlike",
+          "qualified_name_hint": "Becoming.Run.new_of_newAlike",
+          "line": 357
+        },
+        {
+          "kind": "def",
+          "name": "Run.TakesThroughAlike",
+          "qualified_name_hint": "Becoming.Run.TakesThroughAlike",
+          "line": 365
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.not_fixesThroughAlike_of_untaken",
+          "qualified_name_hint": "Becoming.Run.not_fixesThroughAlike_of_untaken",
+          "line": 374
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.not_fixesThroughAlike_of_goAlikeUnder",
+          "qualified_name_hint": "Becoming.Run.not_fixesThroughAlike_of_goAlikeUnder",
+          "line": 395
+        },
+        {
+          "kind": "theorem",
+          "name": "Decided.exists_of_listed",
+          "qualified_name_hint": "Becoming.Decided.exists_of_listed",
+          "line": 413
+        },
+        {
+          "kind": "theorem",
+          "name": "Decided.forall_of_listed",
+          "qualified_name_hint": "Becoming.Decided.forall_of_listed",
+          "line": 421
+        },
+        {
+          "kind": "theorem",
+          "name": "Decided.exists_not_of_listed",
+          "qualified_name_hint": "Becoming.Decided.exists_not_of_listed",
+          "line": 429
+        },
+        {
+          "kind": "theorem",
+          "name": "Decided.imp",
+          "qualified_name_hint": "Becoming.Decided.imp",
+          "line": 436
+        },
+        {
+          "kind": "theorem",
+          "name": "Decided.iff",
+          "qualified_name_hint": "Becoming.Decided.iff",
+          "line": 444
+        },
+        {
+          "kind": "def",
+          "name": "pairedWith",
+          "qualified_name_hint": "Becoming.pairedWith",
+          "line": 452
+        },
+        {
+          "kind": "def",
+          "name": "pairsOf",
+          "qualified_name_hint": "Becoming.pairsOf",
+          "line": 457
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_pairedWith_left",
+          "qualified_name_hint": "Becoming.mem_pairedWith_left",
+          "line": 461
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_pairedWith_right",
+          "qualified_name_hint": "Becoming.mem_pairedWith_right",
+          "line": 466
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_pairsOf",
+          "qualified_name_hint": "Becoming.mem_pairsOf",
+          "line": 471
+        },
+        {
+          "kind": "theorem",
+          "name": "length_pairedWith",
+          "qualified_name_hint": "Becoming.length_pairedWith",
+          "line": 477
+        },
+        {
+          "kind": "theorem",
+          "name": "length_pairsOf",
+          "qualified_name_hint": "Becoming.length_pairsOf",
+          "line": 483
+        },
+        {
+          "kind": "theorem",
+          "name": "holds_below",
+          "qualified_name_hint": "Becoming.holds_below",
+          "line": 489
+        },
+        {
+          "kind": "theorem",
+          "name": "drops_somewhere",
+          "qualified_name_hint": "Becoming.drops_somewhere",
+          "line": 498
+        },
+        {
+          "kind": "theorem",
+          "name": "skip_side",
+          "qualified_name_hint": "Becoming.skip_side",
+          "line": 507
+        },
+        {
+          "kind": "theorem",
+          "name": "skip_succ",
+          "qualified_name_hint": "Becoming.skip_succ",
+          "line": 515
+        },
+        {
+          "kind": "theorem",
+          "name": "stops_decreasing",
+          "qualified_name_hint": "Becoming.stops_decreasing",
+          "line": 528
+        },
+        {
+          "kind": "inductive",
+          "name": "BranchingTest",
+          "qualified_name_hint": "Becoming.BranchingTest",
+          "line": 572
+        },
+        {
+          "kind": "def",
+          "name": "BranchingTest.Holds",
+          "qualified_name_hint": "Becoming.BranchingTest.Holds",
+          "line": 580
+        },
+        {
+          "kind": "def",
+          "name": "SameBranchingTests",
+          "qualified_name_hint": "Becoming.SameBranchingTests",
+          "line": 588
+        },
+        {
+          "kind": "def",
+          "name": "MatchesParts",
+          "qualified_name_hint": "Becoming.MatchesParts",
+          "line": 609
+        },
+        {
+          "kind": "theorem",
+          "name": "MatchesParts.transport",
+          "qualified_name_hint": "Becoming.MatchesParts.transport",
+          "line": 613
+        },
+        {
+          "kind": "theorem",
+          "name": "MatchesParts.comp",
+          "qualified_name_hint": "Becoming.MatchesParts.comp",
+          "line": 622
+        },
+        {
+          "kind": "def",
+          "name": "BisimulationWith",
+          "qualified_name_hint": "Becoming.BisimulationWith",
+          "line": 634
+        },
+        {
+          "kind": "theorem",
+          "name": "BisimulationWith.eq",
+          "qualified_name_hint": "Becoming.BisimulationWith.eq",
+          "line": 639
+        },
+        {
+          "kind": "theorem",
+          "name": "BisimulationWith.converse",
+          "qualified_name_hint": "Becoming.BisimulationWith.converse",
+          "line": 648
+        },
+        {
+          "kind": "theorem",
+          "name": "BisimulationWith.comp",
+          "qualified_name_hint": "Becoming.BisimulationWith.comp",
+          "line": 654
+        },
+        {
+          "kind": "def",
+          "name": "AlikeWith",
+          "qualified_name_hint": "Becoming.AlikeWith",
+          "line": 667
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeWith.refl",
+          "qualified_name_hint": "Becoming.AlikeWith.refl",
+          "line": 672
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeWith.symm",
+          "qualified_name_hint": "Becoming.AlikeWith.symm",
+          "line": 677
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeWith.trans",
+          "qualified_name_hint": "Becoming.AlikeWith.trans",
+          "line": 682
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeWith.alike",
+          "qualified_name_hint": "Becoming.AlikeWith.alike",
+          "line": 690
+        },
+        {
+          "kind": "theorem",
+          "name": "alikeWith_empty_iff",
+          "qualified_name_hint": "Becoming.alikeWith_empty_iff",
+          "line": 695
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeWith.realized",
+          "qualified_name_hint": "Becoming.AlikeWith.realized",
+          "line": 700
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeWith.step",
+          "qualified_name_hint": "Becoming.AlikeWith.step",
+          "line": 707
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeWith.parts",
+          "qualified_name_hint": "Becoming.AlikeWith.parts",
+          "line": 716
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeWith.matchesParts",
+          "qualified_name_hint": "Becoming.AlikeWith.matchesParts",
+          "line": 725
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeWith.functional",
+          "qualified_name_hint": "Becoming.AlikeWith.functional",
+          "line": 731
+        },
+        {
+          "kind": "inductive",
+          "name": "TestWith",
+          "qualified_name_hint": "Becoming.TestWith",
+          "line": 739
+        },
+        {
+          "kind": "def",
+          "name": "TestWith.Holds",
+          "qualified_name_hint": "Becoming.TestWith.Holds",
+          "line": 748
+        },
+        {
+          "kind": "def",
+          "name": "SameTestsWith",
+          "qualified_name_hint": "Becoming.SameTestsWith",
+          "line": 757
+        },
+        {
+          "kind": "theorem",
+          "name": "SameTestsWith.refl",
+          "qualified_name_hint": "Becoming.SameTestsWith.refl",
+          "line": 762
+        },
+        {
+          "kind": "theorem",
+          "name": "SameTestsWith.symm",
+          "qualified_name_hint": "Becoming.SameTestsWith.symm",
+          "line": 767
+        },
+        {
+          "kind": "theorem",
+          "name": "SameTestsWith.trans",
+          "qualified_name_hint": "Becoming.SameTestsWith.trans",
+          "line": 773
+        },
+        {
+          "kind": "theorem",
+          "name": "SameTestsWith.functional",
+          "qualified_name_hint": "Becoming.SameTestsWith.functional",
+          "line": 781
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeWith.holds_iff",
+          "qualified_name_hint": "Becoming.AlikeWith.holds_iff",
+          "line": 787
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeWith.sameTestsWith",
+          "qualified_name_hint": "Becoming.AlikeWith.sameTestsWith",
+          "line": 817
+        },
+        {
+          "kind": "def",
+          "name": "BranchingTest.toWith",
+          "qualified_name_hint": "Becoming.BranchingTest.toWith",
+          "line": 823
+        },
+        {
+          "kind": "theorem",
+          "name": "BranchingTest.holds_toWith",
+          "qualified_name_hint": "Becoming.BranchingTest.holds_toWith",
+          "line": 832
+        },
+        {
+          "kind": "theorem",
+          "name": "SameTestsWith.sameBranchingTests",
+          "qualified_name_hint": "Becoming.SameTestsWith.sameBranchingTests",
+          "line": 847
+        },
+        {
+          "kind": "theorem",
+          "name": "Alike.holds_iff",
+          "qualified_name_hint": "Becoming.Alike.holds_iff",
+          "line": 857
+        },
+        {
+          "kind": "theorem",
+          "name": "Alike.sameBranchingTests",
+          "qualified_name_hint": "Becoming.Alike.sameBranchingTests",
+          "line": 866
+        },
+        {
+          "kind": "theorem",
+          "name": "Alike.functional",
+          "qualified_name_hint": "Becoming.Alike.functional",
+          "line": 872
+        },
+        {
+          "kind": "theorem",
+          "name": "SameBranchingTests.functional",
+          "qualified_name_hint": "Becoming.SameBranchingTests.functional",
+          "line": 879
+        },
+        {
+          "kind": "def",
+          "name": "AlikeTo",
+          "qualified_name_hint": "Becoming.AlikeTo",
+          "line": 886
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeTo.realized",
+          "qualified_name_hint": "Becoming.AlikeTo.realized",
+          "line": 893
+        },
+        {
+          "kind": "structure",
+          "name": "FiniteDecided",
+          "qualified_name_hint": "Becoming.FiniteDecided",
+          "line": 900
+        },
+        {
+          "kind": "theorem",
+          "name": "sameClaims_decided",
+          "qualified_name_hint": "Becoming.sameClaims_decided",
+          "line": 909
+        },
+        {
+          "kind": "theorem",
+          "name": "forth_decided",
+          "qualified_name_hint": "Becoming.forth_decided",
+          "line": 918
+        },
+        {
+          "kind": "theorem",
+          "name": "unmatched_of_not_forth",
+          "qualified_name_hint": "Becoming.unmatched_of_not_forth",
+          "line": 929
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeTo.decided",
+          "qualified_name_hint": "Becoming.AlikeTo.decided",
+          "line": 948
+        },
+        {
+          "kind": "theorem",
+          "name": "BranchingTest.apart_from_listed",
+          "qualified_name_hint": "Becoming.BranchingTest.apart_from_listed",
+          "line": 960
+        },
+        {
+          "kind": "theorem",
+          "name": "apart_of_claims",
+          "qualified_name_hint": "Becoming.apart_of_claims",
+          "line": 981
+        },
+        {
+          "kind": "theorem",
+          "name": "apart_of_not_alikeTo",
+          "qualified_name_hint": "Becoming.apart_of_not_alikeTo",
+          "line": 999
+        },
+        {
+          "kind": "theorem",
+          "name": "SameBranchingTests.alikeTo",
+          "qualified_name_hint": "Becoming.SameBranchingTests.alikeTo",
+          "line": 1039
+        },
+        {
+          "kind": "def",
+          "name": "alikeStep",
+          "qualified_name_hint": "Becoming.alikeStep",
+          "line": 1052
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_mono",
+          "qualified_name_hint": "Becoming.alike_mono",
+          "line": 1058
+        },
+        {
+          "kind": "theorem",
+          "name": "iter_iff_alikeTo",
+          "qualified_name_hint": "Becoming.iter_iff_alikeTo",
+          "line": 1066
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeTo.of_succ",
+          "qualified_name_hint": "Becoming.AlikeTo.of_succ",
+          "line": 1072
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeTo.down_to",
+          "qualified_name_hint": "Becoming.AlikeTo.down_to",
+          "line": 1078
+        },
+        {
+          "kind": "theorem",
+          "name": "Alike.alikeTo",
+          "qualified_name_hint": "Becoming.Alike.alikeTo",
+          "line": 1084
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_at_cover",
+          "qualified_name_hint": "Becoming.alike_at_cover",
+          "line": 1094
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_at_pairs",
+          "qualified_name_hint": "Becoming.alike_at_pairs",
+          "line": 1104
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeTo.steady_within",
+          "qualified_name_hint": "Becoming.AlikeTo.steady_within",
+          "line": 1113
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeTo.steady",
+          "qualified_name_hint": "Becoming.AlikeTo.steady",
+          "line": 1120
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeTo.bisimulation",
+          "qualified_name_hint": "Becoming.AlikeTo.bisimulation",
+          "line": 1129
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_iff_sameBranchingTests",
+          "qualified_name_hint": "Becoming.alike_iff_sameBranchingTests",
+          "line": 1137
+        },
+        {
+          "kind": "theorem",
+          "name": "Alike.decided",
+          "qualified_name_hint": "Becoming.Alike.decided",
+          "line": 1148
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_iff_alikeTo",
+          "qualified_name_hint": "Becoming.alike_iff_alikeTo",
+          "line": 1158
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_iff_at_cover",
+          "qualified_name_hint": "Becoming.alike_iff_at_cover",
+          "line": 1172
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_iff_alikeTo_pairs",
+          "qualified_name_hint": "Becoming.alike_iff_alikeTo_pairs",
+          "line": 1181
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeTo.self",
+          "qualified_name_hint": "Becoming.AlikeTo.self",
+          "line": 1196
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeTo.symm",
+          "qualified_name_hint": "Becoming.AlikeTo.symm",
+          "line": 1200
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeTo.trans",
+          "qualified_name_hint": "Becoming.AlikeTo.trans",
+          "line": 1211
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeTo.refining",
+          "qualified_name_hint": "Becoming.AlikeTo.refining",
+          "line": 1226
+        },
+        {
+          "kind": "def",
+          "name": "AlikeAcross",
+          "qualified_name_hint": "Becoming.AlikeAcross",
+          "line": 1231
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeAcross.refining",
+          "qualified_name_hint": "Becoming.AlikeAcross.refining",
+          "line": 1239
+        },
+        {
+          "kind": "def",
+          "name": "rightsOf",
+          "qualified_name_hint": "Becoming.rightsOf",
+          "line": 1264
+        },
+        {
+          "kind": "def",
+          "name": "bothOf",
+          "qualified_name_hint": "Becoming.bothOf",
+          "line": 1269
+        },
+        {
+          "kind": "theorem",
+          "name": "length_rightsOf",
+          "qualified_name_hint": "Becoming.length_rightsOf",
+          "line": 1273
+        },
+        {
+          "kind": "theorem",
+          "name": "length_bothOf",
+          "qualified_name_hint": "Becoming.length_bothOf",
+          "line": 1278
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_rightsOf",
+          "qualified_name_hint": "Becoming.mem_rightsOf",
+          "line": 1283
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_bothOf_right",
+          "qualified_name_hint": "Becoming.mem_bothOf_right",
+          "line": 1291
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_bothOf_left",
+          "qualified_name_hint": "Becoming.mem_bothOf_left",
+          "line": 1296
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeAcross.decided",
+          "qualified_name_hint": "Becoming.AlikeAcross.decided",
+          "line": 1307
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeTo.steady_within_classes",
+          "qualified_name_hint": "Becoming.AlikeTo.steady_within_classes",
+          "line": 1320
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_iff_alikeTo_classes",
+          "qualified_name_hint": "Becoming.alike_iff_alikeTo_classes",
+          "line": 1330
+        },
+        {
+          "kind": "theorem",
+          "name": "AlikeTo.steady_within_across",
+          "qualified_name_hint": "Becoming.AlikeTo.steady_within_across",
+          "line": 1342
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_iff_alikeTo_across",
+          "qualified_name_hint": "Becoming.alike_iff_alikeTo_across",
+          "line": 1360
+        },
+        {
+          "kind": "theorem",
+          "name": "alikeTo_frameBy_iff",
+          "qualified_name_hint": "Becoming.alikeTo_frameBy_iff",
+          "line": 1372
+        },
+        {
+          "kind": "def",
+          "name": "finBelow",
+          "qualified_name_hint": "Becoming.finBelow",
+          "line": 1410
+        },
+        {
+          "kind": "theorem",
+          "name": "length_finBelow",
+          "qualified_name_hint": "Becoming.length_finBelow",
+          "line": 1414
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_finBelow",
+          "qualified_name_hint": "Becoming.mem_finBelow",
+          "line": 1418
+        },
+        {
+          "kind": "theorem",
+          "name": "room_after",
+          "qualified_name_hint": "Becoming.room_after",
+          "line": 1427
+        },
+        {
+          "kind": "def",
+          "name": "frame",
+          "qualified_name_hint": "Becoming.EndOfPath.frame",
+          "line": 1434
+        },
+        {
+          "kind": "theorem",
+          "name": "finite",
+          "qualified_name_hint": "Becoming.EndOfPath.finite",
+          "line": 1438
+        },
+        {
+          "kind": "theorem",
+          "name": "alikeTo_room",
+          "qualified_name_hint": "Becoming.EndOfPath.alikeTo_room",
+          "line": 1446
+        },
+        {
+          "kind": "theorem",
+          "name": "not_alikeTo_past",
+          "qualified_name_hint": "Becoming.EndOfPath.not_alikeTo_past",
+          "line": 1463
+        },
+        {
+          "kind": "def",
+          "name": "first",
+          "qualified_name_hint": "Becoming.EndOfPath.first",
+          "line": 1480
+        },
+        {
+          "kind": "def",
+          "name": "second",
+          "qualified_name_hint": "Becoming.EndOfPath.second",
+          "line": 1483
+        },
+        {
+          "kind": "theorem",
+          "name": "classes_exact",
+          "qualified_name_hint": "Becoming.EndOfPath.classes_exact",
+          "line": 1488
+        },
+        {
+          "kind": "def",
+          "name": "frame",
+          "qualified_name_hint": "Becoming.OneLoop.frame",
+          "line": 1507
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_iff",
+          "qualified_name_hint": "Becoming.OneLoop.alike_iff",
+          "line": 1512
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_decided_iff_em",
+          "qualified_name_hint": "Becoming.alike_decided_iff_em",
+          "line": 1525
+        },
+        {
+          "kind": "def",
+          "name": "EitherThroughout",
+          "qualified_name_hint": "Becoming.EitherThroughout",
+          "line": 1541
+        },
+        {
+          "kind": "theorem",
+          "name": "EitherThroughout.of_em",
+          "qualified_name_hint": "Becoming.EitherThroughout.of_em",
+          "line": 1549
+        },
+        {
+          "kind": "def",
+          "name": "EitherNever",
+          "qualified_name_hint": "Becoming.EitherNever",
+          "line": 1560
+        },
+        {
+          "kind": "def",
+          "name": "NowhereDecided",
+          "qualified_name_hint": "Becoming.NowhereDecided",
+          "line": 1566
+        },
+        {
+          "kind": "theorem",
+          "name": "eitherThroughout_iff_eitherNever",
+          "qualified_name_hint": "Becoming.eitherThroughout_iff_eitherNever",
+          "line": 1574
+        },
+        {
+          "kind": "theorem",
+          "name": "EitherNever.of_nowhereDecided",
+          "qualified_name_hint": "Becoming.EitherNever.of_nowhereDecided",
+          "line": 1602
+        },
+        {
+          "kind": "theorem",
+          "name": "NowhereDecided.of_em",
+          "qualified_name_hint": "Becoming.NowhereDecided.of_em",
+          "line": 1608
+        },
+        {
+          "kind": "theorem",
+          "name": "EitherThroughout.of_nowhereDecided",
+          "qualified_name_hint": "Becoming.EitherThroughout.of_nowhereDecided",
+          "line": 1612
+        },
+        {
+          "kind": "def",
+          "name": "LLPO",
+          "qualified_name_hint": "Becoming.LLPO",
+          "line": 1625
+        },
+        {
+          "kind": "def",
+          "name": "LLPOForDecided",
+          "qualified_name_hint": "Becoming.LLPOForDecided",
+          "line": 1631
+        },
+        {
+          "kind": "theorem",
+          "name": "succ_inj",
+          "qualified_name_hint": "Becoming.LLPO.succ_inj",
+          "line": 1638
+        },
+        {
+          "kind": "theorem",
+          "name": "two_mul_ne_succ",
+          "qualified_name_hint": "Becoming.LLPO.two_mul_ne_succ",
+          "line": 1642
+        },
+        {
+          "kind": "theorem",
+          "name": "two_mul_inj",
+          "qualified_name_hint": "Becoming.LLPO.two_mul_inj",
+          "line": 1648
+        },
+        {
+          "kind": "theorem",
+          "name": "decided_true",
+          "qualified_name_hint": "Becoming.LLPO.decided_true",
+          "line": 1656
+        },
+        {
+          "kind": "theorem",
+          "name": "eq_false_of_not",
+          "qualified_name_hint": "Becoming.LLPO.eq_false_of_not",
+          "line": 1662
+        },
+        {
+          "kind": "theorem",
+          "name": "of_lpo",
+          "qualified_name_hint": "Becoming.LLPO.of_lpo",
+          "line": 1668
+        },
+        {
+          "kind": "theorem",
+          "name": "of_forDecided",
+          "qualified_name_hint": "Becoming.LLPO.of_forDecided",
+          "line": 1675
+        },
+        {
+          "kind": "theorem",
+          "name": "decidable",
+          "qualified_name_hint": "Becoming.LLPO.decidable",
+          "line": 1682
+        },
+        {
+          "kind": "def",
+          "name": "FirstAt",
+          "qualified_name_hint": "Becoming.LLPO.FirstAt",
+          "line": 1693
+        },
+        {
+          "kind": "theorem",
+          "name": "FirstAt.decided",
+          "qualified_name_hint": "Becoming.LLPO.FirstAt.decided",
+          "line": 1696
+        },
+        {
+          "kind": "theorem",
+          "name": "FirstAt.unique",
+          "qualified_name_hint": "Becoming.LLPO.FirstAt.unique",
+          "line": 1701
+        },
+        {
+          "kind": "theorem",
+          "name": "FirstAt.of_holds",
+          "qualified_name_hint": "Becoming.LLPO.FirstAt.of_holds",
+          "line": 1710
+        },
+        {
+          "kind": "def",
+          "name": "Interleave",
+          "qualified_name_hint": "Becoming.LLPO.Interleave",
+          "line": 1720
+        },
+        {
+          "kind": "theorem",
+          "name": "Interleave.even",
+          "qualified_name_hint": "Becoming.LLPO.Interleave.even",
+          "line": 1723
+        },
+        {
+          "kind": "theorem",
+          "name": "Interleave.odd",
+          "qualified_name_hint": "Becoming.LLPO.Interleave.odd",
+          "line": 1729
+        },
+        {
+          "kind": "theorem",
+          "name": "Interleave.decided",
+          "qualified_name_hint": "Becoming.LLPO.Interleave.decided",
+          "line": 1736
+        },
+        {
+          "kind": "theorem",
+          "name": "eitherNever_iff_llpoForDecided",
+          "qualified_name_hint": "Becoming.eitherNever_iff_llpoForDecided",
+          "line": 1755
+        },
+        {
+          "kind": "theorem",
+          "name": "eitherThroughout_iff_llpoForDecided",
+          "qualified_name_hint": "Becoming.eitherThroughout_iff_llpoForDecided",
+          "line": 1780
+        },
+        {
+          "kind": "theorem",
+          "name": "LLPO.of_eitherThroughout",
+          "qualified_name_hint": "Becoming.LLPO.of_eitherThroughout",
+          "line": 1784
+        },
+        {
+          "kind": "theorem",
+          "name": "Decided.forall_in",
+          "qualified_name_hint": "Becoming.Decided.forall_in",
+          "line": 1792
+        },
+        {
+          "kind": "theorem",
+          "name": "EitherThroughout.list",
+          "qualified_name_hint": "Becoming.EitherThroughout.list",
+          "line": 1801
+        },
+        {
+          "kind": "structure",
+          "name": "OutcomesListed",
+          "qualified_name_hint": "Becoming.OutcomesListed",
+          "line": 1819
+        },
+        {
+          "kind": "theorem",
+          "name": "OutcomesListed.sameClaims_decided",
+          "qualified_name_hint": "Becoming.OutcomesListed.sameClaims_decided",
+          "line": 1827
+        },
+        {
+          "kind": "theorem",
+          "name": "OutcomesListed.matched_decided",
+          "qualified_name_hint": "Becoming.OutcomesListed.matched_decided",
+          "line": 1836
+        },
+        {
+          "kind": "theorem",
+          "name": "OutcomesListed.forth_decided",
+          "qualified_name_hint": "Becoming.OutcomesListed.forth_decided",
+          "line": 1847
+        },
+        {
+          "kind": "theorem",
+          "name": "OutcomesListed.unmatched",
+          "qualified_name_hint": "Becoming.OutcomesListed.unmatched",
+          "line": 1860
+        },
+        {
+          "kind": "theorem",
+          "name": "OutcomesListed.alikeTo_decided",
+          "qualified_name_hint": "Becoming.OutcomesListed.alikeTo_decided",
+          "line": 1881
+        },
+        {
+          "kind": "theorem",
+          "name": "BranchingTest.apart_from_list",
+          "qualified_name_hint": "Becoming.BranchingTest.apart_from_list",
+          "line": 1894
+        },
+        {
+          "kind": "theorem",
+          "name": "OutcomesListed.apart_of_claims",
+          "qualified_name_hint": "Becoming.OutcomesListed.apart_of_claims",
+          "line": 1911
+        },
+        {
+          "kind": "theorem",
+          "name": "OutcomesListed.apart_of_not_alikeTo",
+          "qualified_name_hint": "Becoming.OutcomesListed.apart_of_not_alikeTo",
+          "line": 1927
+        },
+        {
+          "kind": "theorem",
+          "name": "OutcomesListed.alikeTo_of_same",
+          "qualified_name_hint": "Becoming.OutcomesListed.alikeTo_of_same",
+          "line": 1967
+        },
+        {
+          "kind": "theorem",
+          "name": "OutcomesListed.alikeTo_bisimulation",
+          "qualified_name_hint": "Becoming.OutcomesListed.alikeTo_bisimulation",
+          "line": 1977
+        },
+        {
+          "kind": "theorem",
+          "name": "OutcomesListed.alike_iff_sameBranchingTests",
+          "qualified_name_hint": "Becoming.OutcomesListed.alike_iff_sameBranchingTests",
+          "line": 2004
+        },
+        {
+          "kind": "theorem",
+          "name": "apart_of_not_sameBranchingTests",
+          "qualified_name_hint": "Becoming.apart_of_not_sameBranchingTests",
+          "line": 2016
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_of_sameBranchingTests_of_em",
+          "qualified_name_hint": "Becoming.alike_of_sameBranchingTests_of_em",
+          "line": 2032
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_iff_sameBranchingTests_of_em",
+          "qualified_name_hint": "Becoming.alike_iff_sameBranchingTests_of_em",
+          "line": 2059
+        },
+        {
+          "kind": "inductive",
+          "name": "Pos",
+          "qualified_name_hint": "Becoming.EitherStep.Pos",
+          "line": 2073
+        },
+        {
+          "kind": "inductive",
+          "name": "Step",
+          "qualified_name_hint": "Becoming.EitherStep.Step",
+          "line": 2082
+        },
+        {
+          "kind": "def",
+          "name": "frame",
+          "qualified_name_hint": "Becoming.EitherStep.frame",
+          "line": 2092
+        },
+        {
+          "kind": "theorem",
+          "name": "listed",
+          "qualified_name_hint": "Becoming.EitherStep.listed",
+          "line": 2096
+        },
+        {
+          "kind": "theorem",
+          "name": "settled_decided",
+          "qualified_name_hint": "Becoming.EitherStep.settled_decided",
+          "line": 2107
+        },
+        {
+          "kind": "theorem",
+          "name": "either_holds_of",
+          "qualified_name_hint": "Becoming.EitherStep.either_holds_of",
+          "line": 2127
+        },
+        {
+          "kind": "theorem",
+          "name": "either_holds_of_not",
+          "qualified_name_hint": "Becoming.EitherStep.either_holds_of_not",
+          "line": 2143
+        },
+        {
+          "kind": "theorem",
+          "name": "either_settles",
+          "qualified_name_hint": "Becoming.EitherStep.either_settles",
+          "line": 2159
+        },
+        {
+          "kind": "theorem",
+          "name": "sameBranchingTests",
+          "qualified_name_hint": "Becoming.EitherStep.sameBranchingTests",
+          "line": 2171
+        },
+        {
+          "kind": "theorem",
+          "name": "decided_of_alike",
+          "qualified_name_hint": "Becoming.EitherStep.decided_of_alike",
+          "line": 2192
+        },
+        {
+          "kind": "inductive",
+          "name": "Pos",
+          "qualified_name_hint": "Becoming.EitherClaim.Pos",
+          "line": 2207
+        },
+        {
+          "kind": "inductive",
+          "name": "Step",
+          "qualified_name_hint": "Becoming.EitherClaim.Step",
+          "line": 2215
+        },
+        {
+          "kind": "def",
+          "name": "Marked",
+          "qualified_name_hint": "Becoming.EitherClaim.Marked",
+          "line": 2223
+        },
+        {
+          "kind": "def",
+          "name": "frame",
+          "qualified_name_hint": "Becoming.EitherClaim.frame",
+          "line": 2231
+        },
+        {
+          "kind": "theorem",
+          "name": "listed",
+          "qualified_name_hint": "Becoming.EitherClaim.listed",
+          "line": 2235
+        },
+        {
+          "kind": "theorem",
+          "name": "step_decided",
+          "qualified_name_hint": "Becoming.EitherClaim.step_decided",
+          "line": 2243
+        },
+        {
+          "kind": "theorem",
+          "name": "settled_decided",
+          "qualified_name_hint": "Becoming.EitherClaim.settled_decided",
+          "line": 2261
+        },
+        {
+          "kind": "theorem",
+          "name": "either_holds_of",
+          "qualified_name_hint": "Becoming.EitherClaim.either_holds_of",
+          "line": 2273
+        },
+        {
+          "kind": "theorem",
+          "name": "either_holds_of_not",
+          "qualified_name_hint": "Becoming.EitherClaim.either_holds_of_not",
+          "line": 2286
+        },
+        {
+          "kind": "theorem",
+          "name": "either_settles",
+          "qualified_name_hint": "Becoming.EitherClaim.either_settles",
+          "line": 2299
+        },
+        {
+          "kind": "theorem",
+          "name": "sameBranchingTests",
+          "qualified_name_hint": "Becoming.EitherClaim.sameBranchingTests",
+          "line": 2311
+        },
+        {
+          "kind": "theorem",
+          "name": "decided_of_alike",
+          "qualified_name_hint": "Becoming.EitherClaim.decided_of_alike",
+          "line": 2332
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_of_sameBranchingTests_iff_em",
+          "qualified_name_hint": "Becoming.alike_of_sameBranchingTests_iff_em",
+          "line": 2344
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_of_sameBranchingTests_decided_steps_iff_em",
+          "qualified_name_hint": "Becoming.alike_of_sameBranchingTests_decided_steps_iff_em",
+          "line": 2356
+        },
+        {
+          "kind": "inductive",
+          "name": "Pos",
+          "qualified_name_hint": "Becoming.Chains.Pos",
+          "line": 2372
+        },
+        {
+          "kind": "def",
+          "name": "Side",
+          "qualified_name_hint": "Becoming.Chains.Side",
+          "line": 2379
+        },
+        {
+          "kind": "inductive",
+          "name": "Step",
+          "qualified_name_hint": "Becoming.Chains.Step",
+          "line": 2385
+        },
+        {
+          "kind": "def",
+          "name": "frame",
+          "qualified_name_hint": "Becoming.Chains.frame",
+          "line": 2393
+        },
+        {
+          "kind": "def",
+          "name": "depth",
+          "qualified_name_hint": "Becoming.Chains.depth",
+          "line": 2397
+        },
+        {
+          "kind": "theorem",
+          "name": "outcomes",
+          "qualified_name_hint": "Becoming.Chains.outcomes",
+          "line": 2407
+        },
+        {
+          "kind": "theorem",
+          "name": "outcomesListed",
+          "qualified_name_hint": "Becoming.Chains.outcomesListed",
+          "line": 2452
+        },
+        {
+          "kind": "theorem",
+          "name": "on_holds_iff",
+          "qualified_name_hint": "Becoming.Chains.on_holds_iff",
+          "line": 2458
+        },
+        {
+          "kind": "theorem",
+          "name": "sameBranchingTests",
+          "qualified_name_hint": "Becoming.Chains.sameBranchingTests",
+          "line": 2493
+        },
+        {
+          "kind": "theorem",
+          "name": "endless_alike_on",
+          "qualified_name_hint": "Becoming.Chains.endless_alike_on",
+          "line": 2517
+        },
+        {
+          "kind": "theorem",
+          "name": "side_throughout",
+          "qualified_name_hint": "Becoming.Chains.side_throughout",
+          "line": 2525
+        },
+        {
+          "kind": "theorem",
+          "name": "throughout_of_alike",
+          "qualified_name_hint": "Becoming.Chains.throughout_of_alike",
+          "line": 2532
+        },
+        {
+          "kind": "inductive",
+          "name": "Pos",
+          "qualified_name_hint": "Becoming.Unbounded.Pos",
+          "line": 2544
+        },
+        {
+          "kind": "inductive",
+          "name": "Step",
+          "qualified_name_hint": "Becoming.Unbounded.Step",
+          "line": 2551
+        },
+        {
+          "kind": "def",
+          "name": "frame",
+          "qualified_name_hint": "Becoming.Unbounded.frame",
+          "line": 2560
+        },
+        {
+          "kind": "theorem",
+          "name": "rest_holds_iff",
+          "qualified_name_hint": "Becoming.Unbounded.rest_holds_iff",
+          "line": 2565
+        },
+        {
+          "kind": "theorem",
+          "name": "sameBranchingTests",
+          "qualified_name_hint": "Becoming.Unbounded.sameBranchingTests",
+          "line": 2589
+        },
+        {
+          "kind": "theorem",
+          "name": "endless_not_alike_rest",
+          "qualified_name_hint": "Becoming.Unbounded.endless_not_alike_rest",
+          "line": 2606
+        },
+        {
+          "kind": "theorem",
+          "name": "not_alike",
+          "qualified_name_hint": "Becoming.Unbounded.not_alike",
+          "line": 2616
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_of_sameBranchingTests_outcomes_iff",
+          "qualified_name_hint": "Becoming.alike_of_sameBranchingTests_outcomes_iff",
+          "line": 2627
+        },
+        {
+          "kind": "def",
+          "name": "bothOpen",
+          "qualified_name_hint": "Becoming.Choosing.bothOpen",
+          "line": 2643
+        },
+        {
+          "kind": "theorem",
+          "name": "branching_apart",
+          "qualified_name_hint": "Becoming.Choosing.branching_apart",
+          "line": 2648
+        },
+        {
+          "kind": "theorem",
+          "name": "dichotomy_of_same_level",
+          "qualified_name_hint": "Becoming.Dependence.dichotomy_of_same_level",
+          "line": 2667
+        },
+        {
+          "kind": "theorem",
+          "name": "dichotomy_of_determinedAt",
+          "qualified_name_hint": "Becoming.Dependence.dichotomy_of_determinedAt",
+          "line": 2683
+        },
+        {
+          "kind": "theorem",
+          "name": "level_registers",
+          "qualified_name_hint": "Becoming.Dependence.level_registers",
+          "line": 2696
+        },
+        {
+          "kind": "theorem",
+          "name": "sameBranchingTests_fix_iff_llpoForDecided",
+          "qualified_name_hint": "Becoming.ListedOutcomeFrames.sameBranchingTests_fix_iff_llpoForDecided",
+          "line": 2741
+        },
+        {
+          "kind": "theorem",
+          "name": "llpo_of_sameBranchingTests_fix",
+          "qualified_name_hint": "Becoming.ListedOutcomeFrames.llpo_of_sameBranchingTests_fix",
+          "line": 2748
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_iff_sameBranchingTests_of_nowhereDecided",
+          "qualified_name_hint": "Becoming.ListedOutcomeFrames.alike_iff_sameBranchingTests_of_nowhereDecided",
+          "line": 2762
+        }
+      ],
+      "declaration_counts": {
+        "def": 40,
+        "inductive": 12,
+        "structure": 2,
+        "theorem": 181
       },
       "textual_markers": {
         "sorry": [],
@@ -448105,6 +449167,618 @@
       },
       "print_axioms_commands": 29
     },
+    "bd9bba7ad4e9a4d1901b41e9650d528c7209c8e8f350b26ad39ee241acf7233e": {
+      "byte_size": 40354,
+      "line_count": 723,
+      "imports": [
+        "Becoming.GrammarReadings",
+        "Becoming.GrammarTesting",
+        "Becoming.PredicateIteration"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "«能»",
+          "qualified_name_hint": "Becoming.«能»",
+          "line": 54
+        },
+        {
+          "kind": "def",
+          "name": "«所»",
+          "qualified_name_hint": "Becoming.«所»",
+          "line": 57
+        },
+        {
+          "kind": "theorem",
+          "name": "«能所相待»",
+          "qualified_name_hint": "Becoming.«能所相待»",
+          "line": 64
+        },
+        {
+          "kind": "theorem",
+          "name": "«因果互即»",
+          "qualified_name_hint": "Becoming.«因果互即»",
+          "line": 70
+        },
+        {
+          "kind": "theorem",
+          "name": "«二际可偏举»",
+          "qualified_name_hint": "Becoming.«二际可偏举»",
+          "line": 77
+        },
+        {
+          "kind": "theorem",
+          "name": "«同根则不可偏举»",
+          "qualified_name_hint": "Becoming.«同根则不可偏举»",
+          "line": 82
+        },
+        {
+          "kind": "theorem",
+          "name": "«前后相随»",
+          "qualified_name_hint": "Becoming.«前后相随»",
+          "line": 88
+        },
+        {
+          "kind": "def",
+          "name": "«互»",
+          "qualified_name_hint": "Becoming.«互»",
+          "line": 92
+        },
+        {
+          "kind": "theorem",
+          "name": "«互之对称»",
+          "qualified_name_hint": "Becoming.«互之对称»",
+          "line": 95
+        },
+        {
+          "kind": "theorem",
+          "name": "«生亡对偶»",
+          "qualified_name_hint": "Becoming.«生亡对偶»",
+          "line": 100
+        },
+        {
+          "kind": "theorem",
+          "name": "«有生不必有亡»",
+          "qualified_name_hint": "Becoming.«有生不必有亡»",
+          "line": 105
+        },
+        {
+          "kind": "def",
+          "name": "«作者»",
+          "qualified_name_hint": "Becoming.«作者»",
+          "line": 112
+        },
+        {
+          "kind": "def",
+          "name": "«作业»",
+          "qualified_name_hint": "Becoming.«作业»",
+          "line": 115
+        },
+        {
+          "kind": "def",
+          "name": "«处所»",
+          "qualified_name_hint": "Becoming.«处所»",
+          "line": 118
+        },
+        {
+          "kind": "theorem",
+          "name": "«三法相因待»",
+          "qualified_name_hint": "Becoming.«三法相因待»",
+          "line": 122
+        },
+        {
+          "kind": "def",
+          "name": "«非缘»",
+          "qualified_name_hint": "Becoming.«非缘»",
+          "line": 129
+        },
+        {
+          "kind": "theorem",
+          "name": "«无果则缘非缘皆无»",
+          "qualified_name_hint": "Becoming.«无果则缘非缘皆无»",
+          "line": 133
+        },
+        {
+          "kind": "theorem",
+          "name": "«无果则皆非能»",
+          "qualified_name_hint": "Becoming.«无果则皆非能»",
+          "line": 139
+        },
+        {
+          "kind": "theorem",
+          "name": "«及之两端»",
+          "qualified_name_hint": "Becoming.«及之两端»",
+          "line": 144
+        },
+        {
+          "kind": "theorem",
+          "name": "«住因于续»",
+          "qualified_name_hint": "Becoming.«住因于续»",
+          "line": 152
+        },
+        {
+          "kind": "def",
+          "name": "«有相»",
+          "qualified_name_hint": "Becoming.«有相»",
+          "line": 165
+        },
+        {
+          "kind": "theorem",
+          "name": "«知相则有其非»",
+          "qualified_name_hint": "Becoming.«知相则有其非»",
+          "line": 169
+        },
+        {
+          "kind": "theorem",
+          "name": "«离非无相»",
+          "qualified_name_hint": "Becoming.«离非无相»",
+          "line": 173
+        },
+        {
+          "kind": "theorem",
+          "name": "«无色则无虚空之相»",
+          "qualified_name_hint": "Becoming.«无色则无虚空之相»",
+          "line": 177
+        },
+        {
+          "kind": "theorem",
+          "name": "«有相则非亦有相»",
+          "qualified_name_hint": "Becoming.«有相则非亦有相»",
+          "line": 181
+        },
+        {
+          "kind": "theorem",
+          "name": "«非真则假»",
+          "qualified_name_hint": "Becoming.«非真则假»",
+          "line": 186
+        },
+        {
+          "kind": "theorem",
+          "name": "«非假则真»",
+          "qualified_name_hint": "Becoming.«非假则真»",
+          "line": 192
+        },
+        {
+          "kind": "theorem",
+          "name": "«二值之相待»",
+          "qualified_name_hint": "Becoming.«二值之相待»",
+          "line": 199
+        },
+        {
+          "kind": "def",
+          "name": "«二点»",
+          "qualified_name_hint": "Becoming.«二点»",
+          "line": 204
+        },
+        {
+          "kind": "theorem",
+          "name": "«相待之还当且仅当双非可还»",
+          "qualified_name_hint": "Becoming.«相待之还当且仅当双非可还»",
+          "line": 211
+        },
+        {
+          "kind": "theorem",
+          "name": "«遍而无相»",
+          "qualified_name_hint": "Becoming.«遍而无相»",
+          "line": 222
+        },
+        {
+          "kind": "theorem",
+          "name": "«离方无迷»",
+          "qualified_name_hint": "Becoming.«离方无迷»",
+          "line": 228
+        },
+        {
+          "kind": "theorem",
+          "name": "«离觉则皆不觉»",
+          "qualified_name_hint": "Becoming.«离觉则皆不觉»",
+          "line": 233
+        },
+        {
+          "kind": "def",
+          "name": "«始觉»",
+          "qualified_name_hint": "Becoming.«始觉»",
+          "line": 237
+        },
+        {
+          "kind": "theorem",
+          "name": "«始觉依不觉»",
+          "qualified_name_hint": "Becoming.«始觉依不觉»",
+          "line": 240
+        },
+        {
+          "kind": "theorem",
+          "name": "«静之为类»",
+          "qualified_name_hint": "Becoming.«静之为类»",
+          "line": 251
+        },
+        {
+          "kind": "def",
+          "name": "«无定性»",
+          "qualified_name_hint": "Becoming.«无定性»",
+          "line": 254
+        },
+        {
+          "kind": "theorem",
+          "name": "«定性之判»",
+          "qualified_name_hint": "Becoming.«定性之判»",
+          "line": 261
+        },
+        {
+          "kind": "theorem",
+          "name": "«缘生而不自生则无定性»",
+          "qualified_name_hint": "Becoming.«缘生而不自生则无定性»",
+          "line": 274
+        },
+        {
+          "kind": "theorem",
+          "name": "«自缘则常»",
+          "qualified_name_hint": "Becoming.«自缘则常»",
+          "line": 280
+        },
+        {
+          "kind": "theorem",
+          "name": "«念念灭当且仅当无自缘»",
+          "qualified_name_hint": "Becoming.«念念灭当且仅当无自缘»",
+          "line": 286
+        },
+        {
+          "kind": "theorem",
+          "name": "«有成坏当且仅当不自缘»",
+          "qualified_name_hint": "Becoming.«有成坏当且仅当不自缘»",
+          "line": 291
+        },
+        {
+          "kind": "theorem",
+          "name": "«无为无别相»",
+          "qualified_name_hint": "Becoming.«无为无别相»",
+          "line": 300
+        },
+        {
+          "kind": "theorem",
+          "name": "«从缘生非文法之律»",
+          "qualified_name_hint": "Becoming.«从缘生非文法之律»",
+          "line": 307
+        },
+        {
+          "kind": "theorem",
+          "name": "«断则无相续»",
+          "qualified_name_hint": "Becoming.«断则无相续»",
+          "line": 312
+        },
+        {
+          "kind": "theorem",
+          "name": "«缘先果后当且仅当无环»",
+          "qualified_name_hint": "Becoming.«缘先果后当且仅当无环»",
+          "line": 325
+        },
+        {
+          "kind": "def",
+          "name": "«俱有»",
+          "qualified_name_hint": "Becoming.«俱有»",
+          "line": 335
+        },
+        {
+          "kind": "theorem",
+          "name": "«相由则俱有»",
+          "qualified_name_hint": "Becoming.«相由则俱有»",
+          "line": 339
+        },
+        {
+          "kind": "theorem",
+          "name": "«俱有为一念»",
+          "qualified_name_hint": "Becoming.«俱有为一念»",
+          "line": 345
+        },
+        {
+          "kind": "theorem",
+          "name": "«自他随位»",
+          "qualified_name_hint": "Becoming.«自他随位»",
+          "line": 361
+        },
+        {
+          "kind": "theorem",
+          "name": "«他依于自»",
+          "qualified_name_hint": "Becoming.«他依于自»",
+          "line": 367
+        },
+        {
+          "kind": "theorem",
+          "name": "«有自不必有他»",
+          "qualified_name_hint": "Becoming.«有自不必有他»",
+          "line": 372
+        },
+        {
+          "kind": "theorem",
+          "name": "«同异交得»",
+          "qualified_name_hint": "Becoming.«同异交得»",
+          "line": 383
+        },
+        {
+          "kind": "theorem",
+          "name": "«至于无共然后止»",
+          "qualified_name_hint": "Becoming.«至于无共然后止»",
+          "line": 388
+        },
+        {
+          "kind": "theorem",
+          "name": "«至于无别然后至»",
+          "qualified_name_hint": "Becoming.«至于无别然后至»",
+          "line": 394
+        },
+        {
+          "kind": "theorem",
+          "name": "«状所可别»",
+          "qualified_name_hint": "Becoming.«状所可别»",
+          "line": 401
+        },
+        {
+          "kind": "theorem",
+          "name": "«门摄一切»",
+          "qualified_name_hint": "Becoming.«门摄一切»",
+          "line": 408
+        },
+        {
+          "kind": "theorem",
+          "name": "«平等无异»",
+          "qualified_name_hint": "Becoming.«平等无异»",
+          "line": 412
+        },
+        {
+          "kind": "def",
+          "name": "«薪火»",
+          "qualified_name_hint": "Becoming.«薪火»",
+          "line": 416
+        },
+        {
+          "kind": "theorem",
+          "name": "«薪尽火传»",
+          "qualified_name_hint": "Becoming.«薪尽火传»",
+          "line": 420
+        },
+        {
+          "kind": "def",
+          "name": "«攖»",
+          "qualified_name_hint": "Becoming.«攖»",
+          "line": 431
+        },
+        {
+          "kind": "def",
+          "name": "«遍于»",
+          "qualified_name_hint": "Becoming.«遍于»",
+          "line": 434
+        },
+        {
+          "kind": "def",
+          "name": "«端»",
+          "qualified_name_hint": "Becoming.«端»",
+          "line": 437
+        },
+        {
+          "kind": "def",
+          "name": "«有厚»",
+          "qualified_name_hint": "Becoming.«有厚»",
+          "line": 440
+        },
+        {
+          "kind": "theorem",
+          "name": "«端与端俱尽»",
+          "qualified_name_hint": "Becoming.«端与端俱尽»",
+          "line": 443
+        },
+        {
+          "kind": "theorem",
+          "name": "«尺与端或尽或不尽»",
+          "qualified_name_hint": "Becoming.«尺与端或尽或不尽»",
+          "line": 452
+        },
+        {
+          "kind": "theorem",
+          "name": "«尺与尺可相尽»",
+          "qualified_name_hint": "Becoming.«尺与尺可相尽»",
+          "line": 464
+        },
+        {
+          "kind": "def",
+          "name": "«相外»",
+          "qualified_name_hint": "Becoming.«相外»",
+          "line": 475
+        },
+        {
+          "kind": "def",
+          "name": "«不相外»",
+          "qualified_name_hint": "Becoming.«不相外»",
+          "line": 478
+        },
+        {
+          "kind": "def",
+          "name": "«相尽»",
+          "qualified_name_hint": "Becoming.«相尽»",
+          "line": 481
+        },
+        {
+          "kind": "theorem",
+          "name": "«相尽则不相外»",
+          "qualified_name_hint": "Becoming.«相尽则不相外»",
+          "line": 484
+        },
+        {
+          "kind": "def",
+          "name": "«坚白之体»",
+          "qualified_name_hint": "Becoming.«坚白之体»",
+          "line": 488
+        },
+        {
+          "kind": "theorem",
+          "name": "«不相外则相尽当且仅当双非可还»",
+          "qualified_name_hint": "Becoming.«不相外则相尽当且仅当双非可还»",
+          "line": 492
+        },
+        {
+          "kind": "theorem",
+          "name": "«是不俱当»",
+          "qualified_name_hint": "Becoming.«是不俱当»",
+          "line": 510
+        },
+        {
+          "kind": "theorem",
+          "name": "«必或不当当且仅当弱排中»",
+          "qualified_name_hint": "Becoming.«必或不当当且仅当弱排中»",
+          "line": 515
+        },
+        {
+          "kind": "def",
+          "name": "«诘»",
+          "qualified_name_hint": "Becoming.«诘»",
+          "line": 527
+        },
+        {
+          "kind": "theorem",
+          "name": "«诘之对称»",
+          "qualified_name_hint": "Becoming.«诘之对称»",
+          "line": 533
+        },
+        {
+          "kind": "def",
+          "name": "inquiryStep",
+          "qualified_name_hint": "Becoming.inquiryStep",
+          "line": 548
+        },
+        {
+          "kind": "theorem",
+          "name": "inquiry_mono",
+          "qualified_name_hint": "Becoming.inquiry_mono",
+          "line": 553
+        },
+        {
+          "kind": "theorem",
+          "name": "iter_iff_inquiry",
+          "qualified_name_hint": "Becoming.iter_iff_inquiry",
+          "line": 559
+        },
+        {
+          "kind": "theorem",
+          "name": "«对称有常则不可诘»",
+          "qualified_name_hint": "Becoming.«对称有常则不可诘»",
+          "line": 565
+        },
+        {
+          "kind": "theorem",
+          "name": "«核则不可致诘»",
+          "qualified_name_hint": "Becoming.«核则不可致诘»",
+          "line": 573
+        },
+        {
+          "kind": "theorem",
+          "name": "inquiry_iff_all",
+          "qualified_name_hint": "Becoming.inquiry_iff_all",
+          "line": 582
+        },
+        {
+          "kind": "theorem",
+          "name": "core_iff_inquiry",
+          "qualified_name_hint": "Becoming.core_iff_inquiry",
+          "line": 588
+        },
+        {
+          "kind": "theorem",
+          "name": "«诘之降»",
+          "qualified_name_hint": "Becoming.«诘之降»",
+          "line": 598
+        },
+        {
+          "kind": "theorem",
+          "name": "«层在类内»",
+          "qualified_name_hint": "Becoming.«层在类内»",
+          "line": 603
+        },
+        {
+          "kind": "theorem",
+          "name": "«层即诘»",
+          "qualified_name_hint": "Becoming.«层即诘»",
+          "line": 611
+        },
+        {
+          "kind": "theorem",
+          "name": "«层之对称»",
+          "qualified_name_hint": "Becoming.«层之对称»",
+          "line": 622
+        },
+        {
+          "kind": "theorem",
+          "name": "«不可致诘而有常则混而为一»",
+          "qualified_name_hint": "Becoming.«不可致诘而有常则混而为一»",
+          "line": 629
+        },
+        {
+          "kind": "theorem",
+          "name": "«每层不分而有常则核当且仅当每层不分»",
+          "qualified_name_hint": "Becoming.«每层不分而有常则核当且仅当每层不分»",
+          "line": 640
+        },
+        {
+          "kind": "inductive",
+          "name": "«歧网»",
+          "qualified_name_hint": "Becoming.«歧网»",
+          "line": 649
+        },
+        {
+          "kind": "def",
+          "name": "«歧网之步»",
+          "qualified_name_hint": "Becoming.«歧网之步»",
+          "line": 656
+        },
+        {
+          "kind": "theorem",
+          "name": "«歧网之自反»",
+          "qualified_name_hint": "Becoming.«歧网之自反»",
+          "line": 663
+        },
+        {
+          "kind": "theorem",
+          "name": "«链与无尽不可诘»",
+          "qualified_name_hint": "Becoming.«链与无尽不可诘»",
+          "line": 668
+        },
+        {
+          "kind": "theorem",
+          "name": "«甲乙不可诘»",
+          "qualified_name_hint": "Becoming.«甲乙不可诘»",
+          "line": 681
+        },
+        {
+          "kind": "theorem",
+          "name": "«无尽与链不同核»",
+          "qualified_name_hint": "Becoming.«无尽与链不同核»",
+          "line": 694
+        },
+        {
+          "kind": "theorem",
+          "name": "«甲乙不同核»",
+          "qualified_name_hint": "Becoming.«甲乙不同核»",
+          "line": 707
+        },
+        {
+          "kind": "theorem",
+          "name": "«致诘不尽»",
+          "qualified_name_hint": "Becoming.«致诘不尽»",
+          "line": 717
+        }
+      ],
+      "declaration_counts": {
+        "def": 24,
+        "inductive": 1,
+        "theorem": 73
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "bdafc46b1dcffd54c37ef02eff21891715cfcb166556306ce3235ba45ad46a33": {
       "byte_size": 11554,
       "line_count": 280,
@@ -454959,1442 +456633,6 @@
         "unsafe": []
       },
       "print_axioms_commands": 3
-    },
-    "c09f09936ba686d570f06afc43a2c2b746a15e43a3320d8ce94c0793c4a7c8e0": {
-      "byte_size": 160625,
-      "line_count": 2787,
-      "imports": [
-        "Becoming.Branching",
-        "Becoming.Histories",
-        "Becoming.Decidedness",
-        "Becoming.Refinement"
-      ],
-      "declarations": [
-        {
-          "kind": "def",
-          "name": "RespectsClaims",
-          "qualified_name_hint": "Becoming.RespectsClaims",
-          "line": 175
-        },
-        {
-          "kind": "def",
-          "name": "imageUnder",
-          "qualified_name_hint": "Becoming.imageUnder",
-          "line": 181
-        },
-        {
-          "kind": "theorem",
-          "name": "factors_imageUnder",
-          "qualified_name_hint": "Becoming.factors_imageUnder",
-          "line": 185
-        },
-        {
-          "kind": "theorem",
-          "name": "imageUnder_bisimulation",
-          "qualified_name_hint": "Becoming.imageUnder_bisimulation",
-          "line": 190
-        },
-        {
-          "kind": "theorem",
-          "name": "imageUnder_determinedAt",
-          "qualified_name_hint": "Becoming.imageUnder_determinedAt",
-          "line": 202
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_equivalence",
-          "qualified_name_hint": "Becoming.alike_equivalence",
-          "line": 211
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_respectsClaims",
-          "qualified_name_hint": "Becoming.alike_respectsClaims",
-          "line": 215
-        },
-        {
-          "kind": "theorem",
-          "name": "carries_law_alike_iff",
-          "qualified_name_hint": "Becoming.carries_law_alike_iff",
-          "line": 223
-        },
-        {
-          "kind": "theorem",
-          "name": "eq_equivalence",
-          "qualified_name_hint": "Becoming.eq_equivalence",
-          "line": 237
-        },
-        {
-          "kind": "theorem",
-          "name": "carries_law_named_iff",
-          "qualified_name_hint": "Becoming.carries_law_named_iff",
-          "line": 244
-        },
-        {
-          "kind": "theorem",
-          "name": "image_determinedAt_iff",
-          "qualified_name_hint": "Becoming.image_determinedAt_iff",
-          "line": 266
-        },
-        {
-          "kind": "inductive",
-          "name": "Pos",
-          "qualified_name_hint": "Becoming.Likeness.Parting.Pos",
-          "line": 289
-        },
-        {
-          "kind": "inductive",
-          "name": "Step",
-          "qualified_name_hint": "Becoming.Likeness.Parting.Step",
-          "line": 296
-        },
-        {
-          "kind": "def",
-          "name": "process",
-          "qualified_name_hint": "Becoming.Likeness.Parting.process",
-          "line": 302
-        },
-        {
-          "kind": "def",
-          "name": "claims",
-          "qualified_name_hint": "Becoming.Likeness.Parting.claims",
-          "line": 305
-        },
-        {
-          "kind": "theorem",
-          "name": "going_not_stopped",
-          "qualified_name_hint": "Becoming.Likeness.Parting.going_not_stopped",
-          "line": 309
-        },
-        {
-          "kind": "theorem",
-          "name": "image_not_determinedAt",
-          "qualified_name_hint": "Becoming.Likeness.Parting.image_not_determinedAt",
-          "line": 320
-        },
-        {
-          "kind": "theorem",
-          "name": "carries",
-          "qualified_name_hint": "Becoming.Likeness.Parting.carries",
-          "line": 328
-        },
-        {
-          "kind": "theorem",
-          "name": "Run.not_fixesAlike_other_of_new",
-          "qualified_name_hint": "Becoming.Run.not_fixesAlike_other_of_new",
-          "line": 346
-        },
-        {
-          "kind": "theorem",
-          "name": "Run.new_of_newAlike",
-          "qualified_name_hint": "Becoming.Run.new_of_newAlike",
-          "line": 357
-        },
-        {
-          "kind": "def",
-          "name": "Run.TakesThroughAlike",
-          "qualified_name_hint": "Becoming.Run.TakesThroughAlike",
-          "line": 365
-        },
-        {
-          "kind": "theorem",
-          "name": "Run.not_fixesThroughAlike_of_untaken",
-          "qualified_name_hint": "Becoming.Run.not_fixesThroughAlike_of_untaken",
-          "line": 374
-        },
-        {
-          "kind": "theorem",
-          "name": "Run.not_fixesThroughAlike_of_goAlikeUnder",
-          "qualified_name_hint": "Becoming.Run.not_fixesThroughAlike_of_goAlikeUnder",
-          "line": 395
-        },
-        {
-          "kind": "theorem",
-          "name": "Decided.exists_of_listed",
-          "qualified_name_hint": "Becoming.Decided.exists_of_listed",
-          "line": 413
-        },
-        {
-          "kind": "theorem",
-          "name": "Decided.forall_of_listed",
-          "qualified_name_hint": "Becoming.Decided.forall_of_listed",
-          "line": 421
-        },
-        {
-          "kind": "theorem",
-          "name": "Decided.exists_not_of_listed",
-          "qualified_name_hint": "Becoming.Decided.exists_not_of_listed",
-          "line": 429
-        },
-        {
-          "kind": "theorem",
-          "name": "Decided.imp",
-          "qualified_name_hint": "Becoming.Decided.imp",
-          "line": 436
-        },
-        {
-          "kind": "theorem",
-          "name": "Decided.iff",
-          "qualified_name_hint": "Becoming.Decided.iff",
-          "line": 444
-        },
-        {
-          "kind": "def",
-          "name": "pairedWith",
-          "qualified_name_hint": "Becoming.pairedWith",
-          "line": 452
-        },
-        {
-          "kind": "def",
-          "name": "pairsOf",
-          "qualified_name_hint": "Becoming.pairsOf",
-          "line": 457
-        },
-        {
-          "kind": "theorem",
-          "name": "mem_pairedWith_left",
-          "qualified_name_hint": "Becoming.mem_pairedWith_left",
-          "line": 461
-        },
-        {
-          "kind": "theorem",
-          "name": "mem_pairedWith_right",
-          "qualified_name_hint": "Becoming.mem_pairedWith_right",
-          "line": 466
-        },
-        {
-          "kind": "theorem",
-          "name": "mem_pairsOf",
-          "qualified_name_hint": "Becoming.mem_pairsOf",
-          "line": 471
-        },
-        {
-          "kind": "theorem",
-          "name": "length_pairedWith",
-          "qualified_name_hint": "Becoming.length_pairedWith",
-          "line": 477
-        },
-        {
-          "kind": "theorem",
-          "name": "length_pairsOf",
-          "qualified_name_hint": "Becoming.length_pairsOf",
-          "line": 483
-        },
-        {
-          "kind": "theorem",
-          "name": "holds_below",
-          "qualified_name_hint": "Becoming.holds_below",
-          "line": 489
-        },
-        {
-          "kind": "theorem",
-          "name": "drops_somewhere",
-          "qualified_name_hint": "Becoming.drops_somewhere",
-          "line": 498
-        },
-        {
-          "kind": "theorem",
-          "name": "skip_side",
-          "qualified_name_hint": "Becoming.skip_side",
-          "line": 507
-        },
-        {
-          "kind": "theorem",
-          "name": "skip_succ",
-          "qualified_name_hint": "Becoming.skip_succ",
-          "line": 515
-        },
-        {
-          "kind": "theorem",
-          "name": "stops_decreasing",
-          "qualified_name_hint": "Becoming.stops_decreasing",
-          "line": 528
-        },
-        {
-          "kind": "inductive",
-          "name": "BranchingTest",
-          "qualified_name_hint": "Becoming.BranchingTest",
-          "line": 572
-        },
-        {
-          "kind": "def",
-          "name": "BranchingTest.Holds",
-          "qualified_name_hint": "Becoming.BranchingTest.Holds",
-          "line": 580
-        },
-        {
-          "kind": "def",
-          "name": "SameBranchingTests",
-          "qualified_name_hint": "Becoming.SameBranchingTests",
-          "line": 588
-        },
-        {
-          "kind": "def",
-          "name": "MatchesParts",
-          "qualified_name_hint": "Becoming.MatchesParts",
-          "line": 609
-        },
-        {
-          "kind": "theorem",
-          "name": "MatchesParts.transport",
-          "qualified_name_hint": "Becoming.MatchesParts.transport",
-          "line": 613
-        },
-        {
-          "kind": "theorem",
-          "name": "MatchesParts.comp",
-          "qualified_name_hint": "Becoming.MatchesParts.comp",
-          "line": 622
-        },
-        {
-          "kind": "def",
-          "name": "BisimulationWith",
-          "qualified_name_hint": "Becoming.BisimulationWith",
-          "line": 634
-        },
-        {
-          "kind": "theorem",
-          "name": "BisimulationWith.eq",
-          "qualified_name_hint": "Becoming.BisimulationWith.eq",
-          "line": 639
-        },
-        {
-          "kind": "theorem",
-          "name": "BisimulationWith.converse",
-          "qualified_name_hint": "Becoming.BisimulationWith.converse",
-          "line": 648
-        },
-        {
-          "kind": "theorem",
-          "name": "BisimulationWith.comp",
-          "qualified_name_hint": "Becoming.BisimulationWith.comp",
-          "line": 654
-        },
-        {
-          "kind": "def",
-          "name": "AlikeWith",
-          "qualified_name_hint": "Becoming.AlikeWith",
-          "line": 667
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeWith.refl",
-          "qualified_name_hint": "Becoming.AlikeWith.refl",
-          "line": 672
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeWith.symm",
-          "qualified_name_hint": "Becoming.AlikeWith.symm",
-          "line": 677
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeWith.trans",
-          "qualified_name_hint": "Becoming.AlikeWith.trans",
-          "line": 682
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeWith.alike",
-          "qualified_name_hint": "Becoming.AlikeWith.alike",
-          "line": 690
-        },
-        {
-          "kind": "theorem",
-          "name": "alikeWith_empty_iff",
-          "qualified_name_hint": "Becoming.alikeWith_empty_iff",
-          "line": 695
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeWith.realized",
-          "qualified_name_hint": "Becoming.AlikeWith.realized",
-          "line": 700
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeWith.step",
-          "qualified_name_hint": "Becoming.AlikeWith.step",
-          "line": 707
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeWith.parts",
-          "qualified_name_hint": "Becoming.AlikeWith.parts",
-          "line": 716
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeWith.matchesParts",
-          "qualified_name_hint": "Becoming.AlikeWith.matchesParts",
-          "line": 725
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeWith.functional",
-          "qualified_name_hint": "Becoming.AlikeWith.functional",
-          "line": 731
-        },
-        {
-          "kind": "inductive",
-          "name": "TestWith",
-          "qualified_name_hint": "Becoming.TestWith",
-          "line": 739
-        },
-        {
-          "kind": "def",
-          "name": "TestWith.Holds",
-          "qualified_name_hint": "Becoming.TestWith.Holds",
-          "line": 748
-        },
-        {
-          "kind": "def",
-          "name": "SameTestsWith",
-          "qualified_name_hint": "Becoming.SameTestsWith",
-          "line": 757
-        },
-        {
-          "kind": "theorem",
-          "name": "SameTestsWith.refl",
-          "qualified_name_hint": "Becoming.SameTestsWith.refl",
-          "line": 762
-        },
-        {
-          "kind": "theorem",
-          "name": "SameTestsWith.symm",
-          "qualified_name_hint": "Becoming.SameTestsWith.symm",
-          "line": 767
-        },
-        {
-          "kind": "theorem",
-          "name": "SameTestsWith.trans",
-          "qualified_name_hint": "Becoming.SameTestsWith.trans",
-          "line": 773
-        },
-        {
-          "kind": "theorem",
-          "name": "SameTestsWith.functional",
-          "qualified_name_hint": "Becoming.SameTestsWith.functional",
-          "line": 781
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeWith.holds_iff",
-          "qualified_name_hint": "Becoming.AlikeWith.holds_iff",
-          "line": 787
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeWith.sameTestsWith",
-          "qualified_name_hint": "Becoming.AlikeWith.sameTestsWith",
-          "line": 817
-        },
-        {
-          "kind": "def",
-          "name": "BranchingTest.toWith",
-          "qualified_name_hint": "Becoming.BranchingTest.toWith",
-          "line": 823
-        },
-        {
-          "kind": "theorem",
-          "name": "BranchingTest.holds_toWith",
-          "qualified_name_hint": "Becoming.BranchingTest.holds_toWith",
-          "line": 832
-        },
-        {
-          "kind": "theorem",
-          "name": "SameTestsWith.sameBranchingTests",
-          "qualified_name_hint": "Becoming.SameTestsWith.sameBranchingTests",
-          "line": 847
-        },
-        {
-          "kind": "theorem",
-          "name": "Alike.holds_iff",
-          "qualified_name_hint": "Becoming.Alike.holds_iff",
-          "line": 857
-        },
-        {
-          "kind": "theorem",
-          "name": "Alike.sameBranchingTests",
-          "qualified_name_hint": "Becoming.Alike.sameBranchingTests",
-          "line": 866
-        },
-        {
-          "kind": "theorem",
-          "name": "Alike.functional",
-          "qualified_name_hint": "Becoming.Alike.functional",
-          "line": 872
-        },
-        {
-          "kind": "theorem",
-          "name": "SameBranchingTests.functional",
-          "qualified_name_hint": "Becoming.SameBranchingTests.functional",
-          "line": 879
-        },
-        {
-          "kind": "def",
-          "name": "AlikeTo",
-          "qualified_name_hint": "Becoming.AlikeTo",
-          "line": 886
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeTo.realized",
-          "qualified_name_hint": "Becoming.AlikeTo.realized",
-          "line": 893
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeTo.of_succ",
-          "qualified_name_hint": "Becoming.AlikeTo.of_succ",
-          "line": 899
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeTo.down_to",
-          "qualified_name_hint": "Becoming.AlikeTo.down_to",
-          "line": 910
-        },
-        {
-          "kind": "theorem",
-          "name": "Alike.alikeTo",
-          "qualified_name_hint": "Becoming.Alike.alikeTo",
-          "line": 916
-        },
-        {
-          "kind": "structure",
-          "name": "FiniteDecided",
-          "qualified_name_hint": "Becoming.FiniteDecided",
-          "line": 928
-        },
-        {
-          "kind": "theorem",
-          "name": "sameClaims_decided",
-          "qualified_name_hint": "Becoming.sameClaims_decided",
-          "line": 937
-        },
-        {
-          "kind": "theorem",
-          "name": "forth_decided",
-          "qualified_name_hint": "Becoming.forth_decided",
-          "line": 946
-        },
-        {
-          "kind": "theorem",
-          "name": "unmatched_of_not_forth",
-          "qualified_name_hint": "Becoming.unmatched_of_not_forth",
-          "line": 957
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeTo.decided",
-          "qualified_name_hint": "Becoming.AlikeTo.decided",
-          "line": 976
-        },
-        {
-          "kind": "theorem",
-          "name": "BranchingTest.apart_from_listed",
-          "qualified_name_hint": "Becoming.BranchingTest.apart_from_listed",
-          "line": 988
-        },
-        {
-          "kind": "theorem",
-          "name": "apart_of_claims",
-          "qualified_name_hint": "Becoming.apart_of_claims",
-          "line": 1009
-        },
-        {
-          "kind": "theorem",
-          "name": "apart_of_not_alikeTo",
-          "qualified_name_hint": "Becoming.apart_of_not_alikeTo",
-          "line": 1027
-        },
-        {
-          "kind": "theorem",
-          "name": "SameBranchingTests.alikeTo",
-          "qualified_name_hint": "Becoming.SameBranchingTests.alikeTo",
-          "line": 1067
-        },
-        {
-          "kind": "def",
-          "name": "alikeStep",
-          "qualified_name_hint": "Becoming.alikeStep",
-          "line": 1080
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_mono",
-          "qualified_name_hint": "Becoming.alike_mono",
-          "line": 1086
-        },
-        {
-          "kind": "theorem",
-          "name": "iter_iff_alikeTo",
-          "qualified_name_hint": "Becoming.iter_iff_alikeTo",
-          "line": 1094
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_at_cover",
-          "qualified_name_hint": "Becoming.alike_at_cover",
-          "line": 1103
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_at_pairs",
-          "qualified_name_hint": "Becoming.alike_at_pairs",
-          "line": 1113
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeTo.steady_within",
-          "qualified_name_hint": "Becoming.AlikeTo.steady_within",
-          "line": 1122
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeTo.steady",
-          "qualified_name_hint": "Becoming.AlikeTo.steady",
-          "line": 1129
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeTo.bisimulation",
-          "qualified_name_hint": "Becoming.AlikeTo.bisimulation",
-          "line": 1138
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_iff_sameBranchingTests",
-          "qualified_name_hint": "Becoming.alike_iff_sameBranchingTests",
-          "line": 1146
-        },
-        {
-          "kind": "theorem",
-          "name": "Alike.decided",
-          "qualified_name_hint": "Becoming.Alike.decided",
-          "line": 1157
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_iff_alikeTo",
-          "qualified_name_hint": "Becoming.alike_iff_alikeTo",
-          "line": 1167
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_iff_at_cover",
-          "qualified_name_hint": "Becoming.alike_iff_at_cover",
-          "line": 1181
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_iff_alikeTo_pairs",
-          "qualified_name_hint": "Becoming.alike_iff_alikeTo_pairs",
-          "line": 1190
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeTo.self",
-          "qualified_name_hint": "Becoming.AlikeTo.self",
-          "line": 1205
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeTo.symm",
-          "qualified_name_hint": "Becoming.AlikeTo.symm",
-          "line": 1212
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeTo.trans",
-          "qualified_name_hint": "Becoming.AlikeTo.trans",
-          "line": 1223
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeTo.refining",
-          "qualified_name_hint": "Becoming.AlikeTo.refining",
-          "line": 1238
-        },
-        {
-          "kind": "def",
-          "name": "AlikeAcross",
-          "qualified_name_hint": "Becoming.AlikeAcross",
-          "line": 1243
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeAcross.refining",
-          "qualified_name_hint": "Becoming.AlikeAcross.refining",
-          "line": 1251
-        },
-        {
-          "kind": "def",
-          "name": "rightsOf",
-          "qualified_name_hint": "Becoming.rightsOf",
-          "line": 1276
-        },
-        {
-          "kind": "def",
-          "name": "bothOf",
-          "qualified_name_hint": "Becoming.bothOf",
-          "line": 1281
-        },
-        {
-          "kind": "theorem",
-          "name": "length_rightsOf",
-          "qualified_name_hint": "Becoming.length_rightsOf",
-          "line": 1285
-        },
-        {
-          "kind": "theorem",
-          "name": "length_bothOf",
-          "qualified_name_hint": "Becoming.length_bothOf",
-          "line": 1290
-        },
-        {
-          "kind": "theorem",
-          "name": "mem_rightsOf",
-          "qualified_name_hint": "Becoming.mem_rightsOf",
-          "line": 1295
-        },
-        {
-          "kind": "theorem",
-          "name": "mem_bothOf_right",
-          "qualified_name_hint": "Becoming.mem_bothOf_right",
-          "line": 1303
-        },
-        {
-          "kind": "theorem",
-          "name": "mem_bothOf_left",
-          "qualified_name_hint": "Becoming.mem_bothOf_left",
-          "line": 1308
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeAcross.decided",
-          "qualified_name_hint": "Becoming.AlikeAcross.decided",
-          "line": 1319
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeTo.steady_within_classes",
-          "qualified_name_hint": "Becoming.AlikeTo.steady_within_classes",
-          "line": 1332
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_iff_alikeTo_classes",
-          "qualified_name_hint": "Becoming.alike_iff_alikeTo_classes",
-          "line": 1342
-        },
-        {
-          "kind": "theorem",
-          "name": "AlikeTo.steady_within_across",
-          "qualified_name_hint": "Becoming.AlikeTo.steady_within_across",
-          "line": 1354
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_iff_alikeTo_across",
-          "qualified_name_hint": "Becoming.alike_iff_alikeTo_across",
-          "line": 1372
-        },
-        {
-          "kind": "theorem",
-          "name": "alikeTo_frameBy_iff",
-          "qualified_name_hint": "Becoming.alikeTo_frameBy_iff",
-          "line": 1384
-        },
-        {
-          "kind": "def",
-          "name": "finBelow",
-          "qualified_name_hint": "Becoming.finBelow",
-          "line": 1422
-        },
-        {
-          "kind": "theorem",
-          "name": "length_finBelow",
-          "qualified_name_hint": "Becoming.length_finBelow",
-          "line": 1426
-        },
-        {
-          "kind": "theorem",
-          "name": "mem_finBelow",
-          "qualified_name_hint": "Becoming.mem_finBelow",
-          "line": 1430
-        },
-        {
-          "kind": "theorem",
-          "name": "room_after",
-          "qualified_name_hint": "Becoming.room_after",
-          "line": 1439
-        },
-        {
-          "kind": "def",
-          "name": "frame",
-          "qualified_name_hint": "Becoming.EndOfPath.frame",
-          "line": 1446
-        },
-        {
-          "kind": "theorem",
-          "name": "finite",
-          "qualified_name_hint": "Becoming.EndOfPath.finite",
-          "line": 1450
-        },
-        {
-          "kind": "theorem",
-          "name": "alikeTo_room",
-          "qualified_name_hint": "Becoming.EndOfPath.alikeTo_room",
-          "line": 1458
-        },
-        {
-          "kind": "theorem",
-          "name": "not_alikeTo_past",
-          "qualified_name_hint": "Becoming.EndOfPath.not_alikeTo_past",
-          "line": 1475
-        },
-        {
-          "kind": "def",
-          "name": "first",
-          "qualified_name_hint": "Becoming.EndOfPath.first",
-          "line": 1492
-        },
-        {
-          "kind": "def",
-          "name": "second",
-          "qualified_name_hint": "Becoming.EndOfPath.second",
-          "line": 1495
-        },
-        {
-          "kind": "theorem",
-          "name": "classes_exact",
-          "qualified_name_hint": "Becoming.EndOfPath.classes_exact",
-          "line": 1500
-        },
-        {
-          "kind": "def",
-          "name": "frame",
-          "qualified_name_hint": "Becoming.OneLoop.frame",
-          "line": 1519
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_iff",
-          "qualified_name_hint": "Becoming.OneLoop.alike_iff",
-          "line": 1524
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_decided_iff_em",
-          "qualified_name_hint": "Becoming.alike_decided_iff_em",
-          "line": 1537
-        },
-        {
-          "kind": "def",
-          "name": "EitherThroughout",
-          "qualified_name_hint": "Becoming.EitherThroughout",
-          "line": 1553
-        },
-        {
-          "kind": "theorem",
-          "name": "EitherThroughout.of_em",
-          "qualified_name_hint": "Becoming.EitherThroughout.of_em",
-          "line": 1561
-        },
-        {
-          "kind": "def",
-          "name": "EitherNever",
-          "qualified_name_hint": "Becoming.EitherNever",
-          "line": 1572
-        },
-        {
-          "kind": "def",
-          "name": "NowhereDecided",
-          "qualified_name_hint": "Becoming.NowhereDecided",
-          "line": 1578
-        },
-        {
-          "kind": "theorem",
-          "name": "eitherThroughout_iff_eitherNever",
-          "qualified_name_hint": "Becoming.eitherThroughout_iff_eitherNever",
-          "line": 1586
-        },
-        {
-          "kind": "theorem",
-          "name": "EitherNever.of_nowhereDecided",
-          "qualified_name_hint": "Becoming.EitherNever.of_nowhereDecided",
-          "line": 1614
-        },
-        {
-          "kind": "theorem",
-          "name": "NowhereDecided.of_em",
-          "qualified_name_hint": "Becoming.NowhereDecided.of_em",
-          "line": 1620
-        },
-        {
-          "kind": "theorem",
-          "name": "EitherThroughout.of_nowhereDecided",
-          "qualified_name_hint": "Becoming.EitherThroughout.of_nowhereDecided",
-          "line": 1624
-        },
-        {
-          "kind": "def",
-          "name": "LLPO",
-          "qualified_name_hint": "Becoming.LLPO",
-          "line": 1637
-        },
-        {
-          "kind": "def",
-          "name": "LLPOForDecided",
-          "qualified_name_hint": "Becoming.LLPOForDecided",
-          "line": 1643
-        },
-        {
-          "kind": "theorem",
-          "name": "succ_inj",
-          "qualified_name_hint": "Becoming.LLPO.succ_inj",
-          "line": 1650
-        },
-        {
-          "kind": "theorem",
-          "name": "two_mul_ne_succ",
-          "qualified_name_hint": "Becoming.LLPO.two_mul_ne_succ",
-          "line": 1654
-        },
-        {
-          "kind": "theorem",
-          "name": "two_mul_inj",
-          "qualified_name_hint": "Becoming.LLPO.two_mul_inj",
-          "line": 1660
-        },
-        {
-          "kind": "theorem",
-          "name": "decided_true",
-          "qualified_name_hint": "Becoming.LLPO.decided_true",
-          "line": 1668
-        },
-        {
-          "kind": "theorem",
-          "name": "eq_false_of_not",
-          "qualified_name_hint": "Becoming.LLPO.eq_false_of_not",
-          "line": 1674
-        },
-        {
-          "kind": "theorem",
-          "name": "of_lpo",
-          "qualified_name_hint": "Becoming.LLPO.of_lpo",
-          "line": 1680
-        },
-        {
-          "kind": "theorem",
-          "name": "of_forDecided",
-          "qualified_name_hint": "Becoming.LLPO.of_forDecided",
-          "line": 1687
-        },
-        {
-          "kind": "theorem",
-          "name": "decidable",
-          "qualified_name_hint": "Becoming.LLPO.decidable",
-          "line": 1694
-        },
-        {
-          "kind": "def",
-          "name": "FirstAt",
-          "qualified_name_hint": "Becoming.LLPO.FirstAt",
-          "line": 1705
-        },
-        {
-          "kind": "theorem",
-          "name": "FirstAt.decided",
-          "qualified_name_hint": "Becoming.LLPO.FirstAt.decided",
-          "line": 1708
-        },
-        {
-          "kind": "theorem",
-          "name": "FirstAt.unique",
-          "qualified_name_hint": "Becoming.LLPO.FirstAt.unique",
-          "line": 1713
-        },
-        {
-          "kind": "theorem",
-          "name": "FirstAt.of_holds",
-          "qualified_name_hint": "Becoming.LLPO.FirstAt.of_holds",
-          "line": 1722
-        },
-        {
-          "kind": "def",
-          "name": "Interleave",
-          "qualified_name_hint": "Becoming.LLPO.Interleave",
-          "line": 1732
-        },
-        {
-          "kind": "theorem",
-          "name": "Interleave.even",
-          "qualified_name_hint": "Becoming.LLPO.Interleave.even",
-          "line": 1735
-        },
-        {
-          "kind": "theorem",
-          "name": "Interleave.odd",
-          "qualified_name_hint": "Becoming.LLPO.Interleave.odd",
-          "line": 1741
-        },
-        {
-          "kind": "theorem",
-          "name": "Interleave.decided",
-          "qualified_name_hint": "Becoming.LLPO.Interleave.decided",
-          "line": 1748
-        },
-        {
-          "kind": "theorem",
-          "name": "eitherNever_iff_llpoForDecided",
-          "qualified_name_hint": "Becoming.eitherNever_iff_llpoForDecided",
-          "line": 1767
-        },
-        {
-          "kind": "theorem",
-          "name": "eitherThroughout_iff_llpoForDecided",
-          "qualified_name_hint": "Becoming.eitherThroughout_iff_llpoForDecided",
-          "line": 1792
-        },
-        {
-          "kind": "theorem",
-          "name": "LLPO.of_eitherThroughout",
-          "qualified_name_hint": "Becoming.LLPO.of_eitherThroughout",
-          "line": 1796
-        },
-        {
-          "kind": "theorem",
-          "name": "Decided.forall_in",
-          "qualified_name_hint": "Becoming.Decided.forall_in",
-          "line": 1804
-        },
-        {
-          "kind": "theorem",
-          "name": "EitherThroughout.list",
-          "qualified_name_hint": "Becoming.EitherThroughout.list",
-          "line": 1813
-        },
-        {
-          "kind": "structure",
-          "name": "OutcomesListed",
-          "qualified_name_hint": "Becoming.OutcomesListed",
-          "line": 1831
-        },
-        {
-          "kind": "theorem",
-          "name": "OutcomesListed.sameClaims_decided",
-          "qualified_name_hint": "Becoming.OutcomesListed.sameClaims_decided",
-          "line": 1839
-        },
-        {
-          "kind": "theorem",
-          "name": "OutcomesListed.matched_decided",
-          "qualified_name_hint": "Becoming.OutcomesListed.matched_decided",
-          "line": 1848
-        },
-        {
-          "kind": "theorem",
-          "name": "OutcomesListed.forth_decided",
-          "qualified_name_hint": "Becoming.OutcomesListed.forth_decided",
-          "line": 1859
-        },
-        {
-          "kind": "theorem",
-          "name": "OutcomesListed.unmatched",
-          "qualified_name_hint": "Becoming.OutcomesListed.unmatched",
-          "line": 1872
-        },
-        {
-          "kind": "theorem",
-          "name": "OutcomesListed.alikeTo_decided",
-          "qualified_name_hint": "Becoming.OutcomesListed.alikeTo_decided",
-          "line": 1893
-        },
-        {
-          "kind": "theorem",
-          "name": "BranchingTest.apart_from_list",
-          "qualified_name_hint": "Becoming.BranchingTest.apart_from_list",
-          "line": 1906
-        },
-        {
-          "kind": "theorem",
-          "name": "OutcomesListed.apart_of_claims",
-          "qualified_name_hint": "Becoming.OutcomesListed.apart_of_claims",
-          "line": 1923
-        },
-        {
-          "kind": "theorem",
-          "name": "OutcomesListed.apart_of_not_alikeTo",
-          "qualified_name_hint": "Becoming.OutcomesListed.apart_of_not_alikeTo",
-          "line": 1939
-        },
-        {
-          "kind": "theorem",
-          "name": "OutcomesListed.alikeTo_of_same",
-          "qualified_name_hint": "Becoming.OutcomesListed.alikeTo_of_same",
-          "line": 1979
-        },
-        {
-          "kind": "theorem",
-          "name": "OutcomesListed.alikeTo_bisimulation",
-          "qualified_name_hint": "Becoming.OutcomesListed.alikeTo_bisimulation",
-          "line": 1989
-        },
-        {
-          "kind": "theorem",
-          "name": "OutcomesListed.alike_iff_sameBranchingTests",
-          "qualified_name_hint": "Becoming.OutcomesListed.alike_iff_sameBranchingTests",
-          "line": 2016
-        },
-        {
-          "kind": "theorem",
-          "name": "apart_of_not_sameBranchingTests",
-          "qualified_name_hint": "Becoming.apart_of_not_sameBranchingTests",
-          "line": 2028
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_of_sameBranchingTests_of_em",
-          "qualified_name_hint": "Becoming.alike_of_sameBranchingTests_of_em",
-          "line": 2044
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_iff_sameBranchingTests_of_em",
-          "qualified_name_hint": "Becoming.alike_iff_sameBranchingTests_of_em",
-          "line": 2071
-        },
-        {
-          "kind": "inductive",
-          "name": "Pos",
-          "qualified_name_hint": "Becoming.EitherStep.Pos",
-          "line": 2085
-        },
-        {
-          "kind": "inductive",
-          "name": "Step",
-          "qualified_name_hint": "Becoming.EitherStep.Step",
-          "line": 2094
-        },
-        {
-          "kind": "def",
-          "name": "frame",
-          "qualified_name_hint": "Becoming.EitherStep.frame",
-          "line": 2104
-        },
-        {
-          "kind": "theorem",
-          "name": "listed",
-          "qualified_name_hint": "Becoming.EitherStep.listed",
-          "line": 2108
-        },
-        {
-          "kind": "theorem",
-          "name": "settled_decided",
-          "qualified_name_hint": "Becoming.EitherStep.settled_decided",
-          "line": 2119
-        },
-        {
-          "kind": "theorem",
-          "name": "either_holds_of",
-          "qualified_name_hint": "Becoming.EitherStep.either_holds_of",
-          "line": 2139
-        },
-        {
-          "kind": "theorem",
-          "name": "either_holds_of_not",
-          "qualified_name_hint": "Becoming.EitherStep.either_holds_of_not",
-          "line": 2155
-        },
-        {
-          "kind": "theorem",
-          "name": "either_settles",
-          "qualified_name_hint": "Becoming.EitherStep.either_settles",
-          "line": 2171
-        },
-        {
-          "kind": "theorem",
-          "name": "sameBranchingTests",
-          "qualified_name_hint": "Becoming.EitherStep.sameBranchingTests",
-          "line": 2183
-        },
-        {
-          "kind": "theorem",
-          "name": "decided_of_alike",
-          "qualified_name_hint": "Becoming.EitherStep.decided_of_alike",
-          "line": 2204
-        },
-        {
-          "kind": "inductive",
-          "name": "Pos",
-          "qualified_name_hint": "Becoming.EitherClaim.Pos",
-          "line": 2219
-        },
-        {
-          "kind": "inductive",
-          "name": "Step",
-          "qualified_name_hint": "Becoming.EitherClaim.Step",
-          "line": 2227
-        },
-        {
-          "kind": "def",
-          "name": "Marked",
-          "qualified_name_hint": "Becoming.EitherClaim.Marked",
-          "line": 2235
-        },
-        {
-          "kind": "def",
-          "name": "frame",
-          "qualified_name_hint": "Becoming.EitherClaim.frame",
-          "line": 2243
-        },
-        {
-          "kind": "theorem",
-          "name": "listed",
-          "qualified_name_hint": "Becoming.EitherClaim.listed",
-          "line": 2247
-        },
-        {
-          "kind": "theorem",
-          "name": "step_decided",
-          "qualified_name_hint": "Becoming.EitherClaim.step_decided",
-          "line": 2255
-        },
-        {
-          "kind": "theorem",
-          "name": "settled_decided",
-          "qualified_name_hint": "Becoming.EitherClaim.settled_decided",
-          "line": 2273
-        },
-        {
-          "kind": "theorem",
-          "name": "either_holds_of",
-          "qualified_name_hint": "Becoming.EitherClaim.either_holds_of",
-          "line": 2285
-        },
-        {
-          "kind": "theorem",
-          "name": "either_holds_of_not",
-          "qualified_name_hint": "Becoming.EitherClaim.either_holds_of_not",
-          "line": 2298
-        },
-        {
-          "kind": "theorem",
-          "name": "either_settles",
-          "qualified_name_hint": "Becoming.EitherClaim.either_settles",
-          "line": 2311
-        },
-        {
-          "kind": "theorem",
-          "name": "sameBranchingTests",
-          "qualified_name_hint": "Becoming.EitherClaim.sameBranchingTests",
-          "line": 2323
-        },
-        {
-          "kind": "theorem",
-          "name": "decided_of_alike",
-          "qualified_name_hint": "Becoming.EitherClaim.decided_of_alike",
-          "line": 2344
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_of_sameBranchingTests_iff_em",
-          "qualified_name_hint": "Becoming.alike_of_sameBranchingTests_iff_em",
-          "line": 2356
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_of_sameBranchingTests_decided_steps_iff_em",
-          "qualified_name_hint": "Becoming.alike_of_sameBranchingTests_decided_steps_iff_em",
-          "line": 2368
-        },
-        {
-          "kind": "inductive",
-          "name": "Pos",
-          "qualified_name_hint": "Becoming.Chains.Pos",
-          "line": 2384
-        },
-        {
-          "kind": "def",
-          "name": "Side",
-          "qualified_name_hint": "Becoming.Chains.Side",
-          "line": 2391
-        },
-        {
-          "kind": "inductive",
-          "name": "Step",
-          "qualified_name_hint": "Becoming.Chains.Step",
-          "line": 2397
-        },
-        {
-          "kind": "def",
-          "name": "frame",
-          "qualified_name_hint": "Becoming.Chains.frame",
-          "line": 2405
-        },
-        {
-          "kind": "def",
-          "name": "depth",
-          "qualified_name_hint": "Becoming.Chains.depth",
-          "line": 2409
-        },
-        {
-          "kind": "theorem",
-          "name": "outcomes",
-          "qualified_name_hint": "Becoming.Chains.outcomes",
-          "line": 2419
-        },
-        {
-          "kind": "theorem",
-          "name": "outcomesListed",
-          "qualified_name_hint": "Becoming.Chains.outcomesListed",
-          "line": 2464
-        },
-        {
-          "kind": "theorem",
-          "name": "on_holds_iff",
-          "qualified_name_hint": "Becoming.Chains.on_holds_iff",
-          "line": 2470
-        },
-        {
-          "kind": "theorem",
-          "name": "sameBranchingTests",
-          "qualified_name_hint": "Becoming.Chains.sameBranchingTests",
-          "line": 2505
-        },
-        {
-          "kind": "theorem",
-          "name": "endless_alike_on",
-          "qualified_name_hint": "Becoming.Chains.endless_alike_on",
-          "line": 2529
-        },
-        {
-          "kind": "theorem",
-          "name": "side_throughout",
-          "qualified_name_hint": "Becoming.Chains.side_throughout",
-          "line": 2537
-        },
-        {
-          "kind": "theorem",
-          "name": "throughout_of_alike",
-          "qualified_name_hint": "Becoming.Chains.throughout_of_alike",
-          "line": 2544
-        },
-        {
-          "kind": "inductive",
-          "name": "Pos",
-          "qualified_name_hint": "Becoming.Unbounded.Pos",
-          "line": 2556
-        },
-        {
-          "kind": "inductive",
-          "name": "Step",
-          "qualified_name_hint": "Becoming.Unbounded.Step",
-          "line": 2563
-        },
-        {
-          "kind": "def",
-          "name": "frame",
-          "qualified_name_hint": "Becoming.Unbounded.frame",
-          "line": 2572
-        },
-        {
-          "kind": "theorem",
-          "name": "rest_holds_iff",
-          "qualified_name_hint": "Becoming.Unbounded.rest_holds_iff",
-          "line": 2577
-        },
-        {
-          "kind": "theorem",
-          "name": "sameBranchingTests",
-          "qualified_name_hint": "Becoming.Unbounded.sameBranchingTests",
-          "line": 2601
-        },
-        {
-          "kind": "theorem",
-          "name": "endless_not_alike_rest",
-          "qualified_name_hint": "Becoming.Unbounded.endless_not_alike_rest",
-          "line": 2618
-        },
-        {
-          "kind": "theorem",
-          "name": "not_alike",
-          "qualified_name_hint": "Becoming.Unbounded.not_alike",
-          "line": 2628
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_of_sameBranchingTests_outcomes_iff",
-          "qualified_name_hint": "Becoming.alike_of_sameBranchingTests_outcomes_iff",
-          "line": 2639
-        },
-        {
-          "kind": "def",
-          "name": "bothOpen",
-          "qualified_name_hint": "Becoming.Choosing.bothOpen",
-          "line": 2655
-        },
-        {
-          "kind": "theorem",
-          "name": "branching_apart",
-          "qualified_name_hint": "Becoming.Choosing.branching_apart",
-          "line": 2660
-        },
-        {
-          "kind": "theorem",
-          "name": "dichotomy_of_same_level",
-          "qualified_name_hint": "Becoming.Dependence.dichotomy_of_same_level",
-          "line": 2679
-        },
-        {
-          "kind": "theorem",
-          "name": "dichotomy_of_determinedAt",
-          "qualified_name_hint": "Becoming.Dependence.dichotomy_of_determinedAt",
-          "line": 2695
-        },
-        {
-          "kind": "theorem",
-          "name": "level_registers",
-          "qualified_name_hint": "Becoming.Dependence.level_registers",
-          "line": 2708
-        },
-        {
-          "kind": "theorem",
-          "name": "sameBranchingTests_fix_iff_llpoForDecided",
-          "qualified_name_hint": "Becoming.ListedOutcomeFrames.sameBranchingTests_fix_iff_llpoForDecided",
-          "line": 2753
-        },
-        {
-          "kind": "theorem",
-          "name": "llpo_of_sameBranchingTests_fix",
-          "qualified_name_hint": "Becoming.ListedOutcomeFrames.llpo_of_sameBranchingTests_fix",
-          "line": 2760
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_iff_sameBranchingTests_of_nowhereDecided",
-          "qualified_name_hint": "Becoming.ListedOutcomeFrames.alike_iff_sameBranchingTests_of_nowhereDecided",
-          "line": 2774
-        }
-      ],
-      "declaration_counts": {
-        "def": 40,
-        "inductive": 12,
-        "structure": 2,
-        "theorem": 181
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
     },
     "c0e261d5f6fe6b08e9f79e65db9c8e96688a40011b8c3542cd2a5f780a883850": {
       "byte_size": 20878,
@@ -575505,244 +575743,6 @@
       ],
       "declaration_counts": {
         "theorem": 15
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
-    "f3928375fd01ea446f97cad742df0deac94283b467472d7b773341e84090ca0e": {
-      "byte_size": 22072,
-      "line_count": 399,
-      "imports": [
-        "Becoming.Arising",
-        "Becoming.IdentificationRuns"
-      ],
-      "declarations": [
-        {
-          "kind": "def",
-          "name": "sameValue",
-          "qualified_name_hint": "Becoming.sameValue",
-          "line": 71
-        },
-        {
-          "kind": "theorem",
-          "name": "sameValue_class",
-          "qualified_name_hint": "Becoming.sameValue_class",
-          "line": 73
-        },
-        {
-          "kind": "theorem",
-          "name": "core_within_core_iff",
-          "qualified_name_hint": "Becoming.core_within_core_iff",
-          "line": 83
-        },
-        {
-          "kind": "theorem",
-          "name": "contains_core_iff",
-          "qualified_name_hint": "Becoming.contains_core_iff",
-          "line": 90
-        },
-        {
-          "kind": "def",
-          "name": "step",
-          "qualified_name_hint": "Becoming.Law.step",
-          "line": 103
-        },
-        {
-          "kind": "theorem",
-          "name": "step_hasSucc_iff",
-          "qualified_name_hint": "Becoming.Law.step_hasSucc_iff",
-          "line": 107
-        },
-        {
-          "kind": "theorem",
-          "name": "constant_iff_keeps",
-          "qualified_name_hint": "Becoming.Law.constant_iff_keeps",
-          "line": 112
-        },
-        {
-          "kind": "theorem",
-          "name": "kept_along",
-          "qualified_name_hint": "Becoming.Law.kept_along",
-          "line": 120
-        },
-        {
-          "kind": "theorem",
-          "name": "core_is_sameFuture",
-          "qualified_name_hint": "Becoming.Law.core_is_sameFuture",
-          "line": 128
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_iff_core",
-          "qualified_name_hint": "Becoming.Law.alike_iff_core",
-          "line": 140
-        },
-        {
-          "kind": "theorem",
-          "name": "keepsAndCarries_iff",
-          "qualified_name_hint": "Becoming.Law.keepsAndCarries_iff",
-          "line": 146
-        },
-        {
-          "kind": "theorem",
-          "name": "coarsest_iff_core",
-          "qualified_name_hint": "Becoming.Law.coarsest_iff_core",
-          "line": 155
-        },
-        {
-          "kind": "theorem",
-          "name": "ends_iff_changes",
-          "qualified_name_hint": "Becoming.Law.ends_iff_changes",
-          "line": 164
-        },
-        {
-          "kind": "theorem",
-          "name": "line_on_orbit",
-          "qualified_name_hint": "Becoming.Law.line_on_orbit",
-          "line": 169
-        },
-        {
-          "kind": "theorem",
-          "name": "reached_while_same",
-          "qualified_name_hint": "Becoming.Law.reached_while_same",
-          "line": 181
-        },
-        {
-          "kind": "theorem",
-          "name": "unending_iff",
-          "qualified_name_hint": "Becoming.Law.unending_iff",
-          "line": 200
-        },
-        {
-          "kind": "theorem",
-          "name": "continues_in_core_iff",
-          "qualified_name_hint": "Becoming.Law.continues_in_core_iff",
-          "line": 217
-        },
-        {
-          "kind": "theorem",
-          "name": "constant_iff_core",
-          "qualified_name_hint": "Becoming.Law.constant_iff_core",
-          "line": 233
-        },
-        {
-          "kind": "theorem",
-          "name": "stays_of_constant",
-          "qualified_name_hint": "Becoming.Law.stays_of_constant",
-          "line": 241
-        },
-        {
-          "kind": "theorem",
-          "name": "core_iff_below",
-          "qualified_name_hint": "Becoming.Law.core_iff_below",
-          "line": 247
-        },
-        {
-          "kind": "theorem",
-          "name": "learnable_iff_core",
-          "qualified_name_hint": "Becoming.Law.learnable_iff_core",
-          "line": 261
-        },
-        {
-          "kind": "theorem",
-          "name": "learnable_of_core_within",
-          "qualified_name_hint": "Becoming.Law.learnable_of_core_within",
-          "line": 275
-        },
-        {
-          "kind": "theorem",
-          "name": "Steps.next_is_step",
-          "qualified_name_hint": "Becoming.Steps.next_is_step",
-          "line": 292
-        },
-        {
-          "kind": "theorem",
-          "name": "SameAhead.is_core",
-          "qualified_name_hint": "Becoming.SameAhead.is_core",
-          "line": 296
-        },
-        {
-          "kind": "theorem",
-          "name": "SameAhead.next_by_root",
-          "qualified_name_hint": "Becoming.SameAhead.next_by_root",
-          "line": 305
-        },
-        {
-          "kind": "theorem",
-          "name": "course_core_iff",
-          "qualified_name_hint": "Becoming.course_core_iff",
-          "line": 312
-        },
-        {
-          "kind": "theorem",
-          "name": "SameAhead.no_continuation",
-          "qualified_name_hint": "Becoming.SameAhead.no_continuation",
-          "line": 319
-        },
-        {
-          "kind": "theorem",
-          "name": "core_iff_below",
-          "qualified_name_hint": "Becoming.core_iff_below",
-          "line": 326
-        },
-        {
-          "kind": "theorem",
-          "name": "statesBelow_iff_core",
-          "qualified_name_hint": "Becoming.statesBelow_iff_core",
-          "line": 331
-        },
-        {
-          "kind": "def",
-          "name": "next",
-          "qualified_name_hint": "Becoming.TwoCourses.next",
-          "line": 347
-        },
-        {
-          "kind": "def",
-          "name": "value",
-          "qualified_name_hint": "Becoming.TwoCourses.value",
-          "line": 352
-        },
-        {
-          "kind": "theorem",
-          "name": "orbit_inl",
-          "qualified_name_hint": "Becoming.TwoCourses.orbit_inl",
-          "line": 356
-        },
-        {
-          "kind": "theorem",
-          "name": "orbit_inr",
-          "qualified_name_hint": "Becoming.TwoCourses.orbit_inr",
-          "line": 360
-        },
-        {
-          "kind": "theorem",
-          "name": "core_iff",
-          "qualified_name_hint": "Becoming.TwoCourses.core_iff",
-          "line": 366
-        },
-        {
-          "kind": "theorem",
-          "name": "core_iff_bounded",
-          "qualified_name_hint": "Becoming.TwoCourses.core_iff_bounded",
-          "line": 376
-        },
-        {
-          "kind": "theorem",
-          "name": "core_exact",
-          "qualified_name_hint": "Becoming.TwoCourses.core_exact",
-          "line": 387
-        }
-      ],
-      "declaration_counts": {
-        "def": 4,
-        "theorem": 32
       },
       "textual_markers": {
         "sorry": [],

@@ -79,6 +79,7 @@ The two grammar laws (core_within_core_iff, contains_core_iff) moved into Becomi
 | integration | [MAPPING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wl3-wen-grammar/MAPPING.md) | — |
 | statement | [WENLI-AND-BECOMING.md](../../history/WENLI-AND-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T094514.036246Z/verification.json) | — |
 
 Aliases: `文 in the grammar of continuation`, `文入续之文法`, `Becoming.Law.core_is_sameFuture`
 

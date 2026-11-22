@@ -78,6 +78,7 @@ Outcomes per unit in _process/research/2026-10-05-generative-foundation-review/r
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T170123.418765Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T094514.036246Z/verification.json) | — |
 
 Aliases: `Becoming.«三法相因待»`, `Becoming.«不可致诘而有常则混而为一»`, `Becoming.«二值之相待»`, `Becoming.«二际可偏举»`, `Becoming.«俱有»`, `Becoming.«因果互即»`, `Becoming.«定性之判»`, `Becoming.«念念灭当且仅当无自缘»`, `Becoming.«有相则非亦有相»`, `Becoming.«核则不可致诘»`, `Becoming.«相待之还当且仅当双非可还»`, `Becoming.«缘先果后当且仅当无环»`, `Becoming.«能»`, `Becoming.«能所相待»`, `Becoming.«自缘则常»`, `Becoming.«致诘不尽»`
 

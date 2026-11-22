@@ -103,6 +103,7 @@ A law of the formal model. Reading it onto an actual situation asks two recognit
 | proof | [ReachableRanges.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean) | `Becoming.Reaching.guarded_not_keepsWidening`, `Becoming.Reaching.iter_reach_iff_trace`, `Becoming.Reaching.possible_iff_within_of_pred_le`, `Becoming.Reaching.trace_within_pred_length` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T223556.393134Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T094514.036246Z/verification.json) | — |
 
 Aliases: `kept at the length of a list`, `what a list holds`, `列表所容`, `Becoming.Iteration.iter_persists`, `Becoming.Iteration.iter_largest`, `Becoming.Iteration.iter_gives_persists`
 

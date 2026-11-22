@@ -98,6 +98,7 @@ The example compares an actual fragment of the existing one-use process with its
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T094514.036246Z/verification.json) | — |
 
 Aliases: `Generative.ExplanatoryJoiningAnchors.units_same_incidence_questions (retired module)`, `Becoming.Joining.units_alike_in_roles (retired module)`, `Becoming.Joining.RoleTotal.collapse`, `Becoming.Joining.open_map_does_not_force_pair_lifting_by_core (retired module)`
 
