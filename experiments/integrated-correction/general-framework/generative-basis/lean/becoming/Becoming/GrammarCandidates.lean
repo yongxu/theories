@@ -529,22 +529,6 @@ def «诘» (R E : «际» α) : Nat → «际» α
   | k + 1 => fun u u' => E u u' ∧ (∀ v, R u v → ∃ v', R u' v' ∧ «诘» R E k v v') ∧
       (∀ v', R u' v' → ∃ v, R u v ∧ «诘» R E k v v')
 
-/-- What a symmetric constant relation inside `E` relates is told apart at no stage. -/
-theorem «对称有常则不可诘» {R E S : «际» α} (hSE : «则» S E) (hs : «则» S («逆» S))
-    (hc : «有常» R S) : ∀ k u u', S u u' → «诘» R E k u u'
-  | 0, u, u', h => hSE u u' h
-  | k + 1, u, u', h =>
-    ⟨hSE u u' h,
-     fun v r => match («有常之逐点» R S).mp hc u u' h v r with
-       | ⟨v', r', s⟩ => ⟨v', r', «对称有常则不可诘» hSE hs hc k v v' s⟩,
-     fun v' r' => match («有常之逐点» R S).mp hc u' u (hs u u' h) v' r' with
-       | ⟨v, r, s⟩ => ⟨v, r, «对称有常则不可诘» hSE hs hc k v v' (hs v' v s)⟩⟩
-
-/-- **The core is never told apart (核则不可致诘, LZ-14-002, one direction).** -/
-theorem «核则不可致诘» {R E : «际» α} {u u' : α} (h : «核» R E u u') (k : Nat) : «诘» R E k u u' :=
-  match h with
-  | ⟨_, hSE, hs, hc, s⟩ => «对称有常则不可诘» hSE hs hc k u u' s
-
 /-- Stages are symmetric for a symmetric `E`. -/
 theorem «诘之对称» {R E : «际» α} (hE : «则» E («逆» E)) : ∀ k u u', «诘» R E k u u' → «诘» R E k u' u
   | 0, u, u', h => hE u u' h
@@ -577,6 +561,19 @@ theorem iter_iff_inquiry : ∀ n (p : S × S),
   iter_iff_stages (stage := fun n p => «诘» R E n p.1 p.2) inquiry_mono
     (fun _ => Iff.rfl) (fun _ _ => Iff.rfl)
 
+/-- What a symmetric constant relation inside `E` relates is told apart at no stage. -/
+theorem «对称有常则不可诘» {R E S : «际» α} (hSE : «则» S E) (hs : «则» S («逆» S))
+    (hc : «有常» R S) : ∀ k u u', S u u' → «诘» R E k u u' :=
+  fun k u u' h => (iter_iff_inquiry k (u, u')).mp (postfixed_in_iter inquiry_mono
+    (fun p => hSE p.1 p.2) (fun _ h => ⟨hSE _ _ h, («有常之逐点» R S).mp hc _ _ h,
+      fun v' r' => match («有常之逐点» R S).mp hc _ _ (hs _ _ h) v' r' with
+      | ⟨v, r, s⟩ => ⟨v, r, hs _ _ s⟩⟩) k (u, u') h)
+
+/-- **The core is never told apart (核则不可致诘, LZ-14-002, one direction).** -/
+theorem «核则不可致诘» {R E : «际» α} {u u' : α} (h : «核» R E u u') (k : Nat) : «诘» R E k u u' :=
+  match h with
+  | ⟨_, hSE, hs, hc, s⟩ => «对称有常则不可诘» hSE hs hc k u u' s
+
 variable {all : List (S × S)} (within : ∀ p : S × S, E p.1 p.2 → p ∈ all) {x y : S}
 
 include within in
@@ -598,11 +595,9 @@ theorem core_iff_inquiry (sym : «则» E («逆» E)) : «核» R E x y ↔ «�
 end ListedPairs
 
 /-- Each stage of inquiry lies within the one before. -/
-theorem «诘之降» {R E : «际» α} : ∀ k u u', «诘» R E (k + 1) u u' → «诘» R E k u u'
-  | 0, _, _, ⟨e, _, _⟩ => e
-  | k + 1, _, _, ⟨e, f, b⟩ =>
-    ⟨e, fun v r => match f v r with | ⟨v', r', s⟩ => ⟨v', r', «诘之降» k v v' s⟩,
-     fun v' r' => match b v' r' with | ⟨v, r, s⟩ => ⟨v, r, «诘之降» k v v' s⟩⟩
+theorem «诘之降» {R E : «际» α} : ∀ k u u', «诘» R E (k + 1) u u' → «诘» R E k u u' :=
+  fun k x y h => (iter_iff_inquiry k (x, y)).mp (Iteration.iter_pred inquiry_mono (fun _ m => m.1)
+    k (x, y) ((iter_iff_inquiry (k + 1) (x, y)).mpr h))
 
 /-- Each stage lies within the class. -/
 theorem «层在类内» {R E : «际» α} : ∀ k x y, «层» R E k x y → E x y

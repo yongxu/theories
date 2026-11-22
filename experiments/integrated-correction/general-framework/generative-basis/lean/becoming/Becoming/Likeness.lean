@@ -895,34 +895,6 @@ theorem AlikeTo.realized {F : Frame S A C} {G : Frame S' A C} {s : S} {s' : S'} 
   | 0, alike => alike
   | _ + 1, alike => alike.1
 
-/-- Alike to one depth more is alike to depth `k`. -/
-theorem AlikeTo.of_succ {F : Frame S A C} {G : Frame S' A C} :
-    ∀ {k : Nat} {s : S} {s' : S'}, AlikeTo F G (k + 1) s s' → AlikeTo F G k s s'
-  | 0, _, _, alike => alike.1
-  | _ + 1, _, _, ⟨claims, forth, back⟩ =>
-    ⟨claims,
-     fun a t step => match forth a t step with
-      | ⟨t', step', joined⟩ => ⟨t', step', AlikeTo.of_succ joined⟩,
-     fun a t' step' => match back a t' step' with
-      | ⟨t, step, joined⟩ => ⟨t, step, AlikeTo.of_succ joined⟩⟩
-
-/-- Alike to a depth is alike to every lower depth. -/
-theorem AlikeTo.down_to {F : Frame S A C} {G : Frame S' A C} {s : S} {s' : S'} {b : Nat} :
-    ∀ {a : Nat}, b ≤ a → AlikeTo F G a s s' → AlikeTo F G b s s' :=
-  fun le => holds_below (P := fun k (x : S × S') => AlikeTo F G k x.1 x.2)
-    (fun _ _ alike => AlikeTo.of_succ alike) (x := (s, s')) le
-
-/-- Alike configurations are alike to every depth. -/
-theorem Alike.alikeTo {F : Frame S A C} {G : Frame S' A C} :
-    ∀ (k : Nat) {s : S} {s' : S'}, Alike F G s s' → AlikeTo F G k s s'
-  | 0, _, _, alike => alike.realized
-  | k + 1, _, _, alike =>
-    ⟨alike.realized,
-     fun _ _ step => match alike.step step with
-      | ⟨t', step', joined⟩ => ⟨t', step', Alike.alikeTo k joined⟩,
-     fun _ _ step' => match alike.symm.step step' with
-      | ⟨t, step, joined⟩ => ⟨t, step, Alike.alikeTo k joined.symm⟩⟩
-
 /-- A frame is finite and decided: some list holds every configuration, and whether a move takes
 one configuration to another and whether a configuration realizes a claim are decided. -/
 structure FiniteDecided (F : Frame S A C) : Prop where
@@ -1096,6 +1068,25 @@ theorem iter_iff_alikeTo : ∀ n (p : S × S'),
   iter_iff_stages (stage := fun n p => AlikeTo F G n p.1 p.2) alike_mono
     (fun _ => Iff.rfl) (fun _ _ => Iff.rfl)
 
+/-- Alike to one depth more is alike to depth `k`. -/
+theorem AlikeTo.of_succ {F : Frame S A C} {G : Frame S' A C} :
+    ∀ {k : Nat} {s : S} {s' : S'}, AlikeTo F G (k + 1) s s' → AlikeTo F G k s s' :=
+  fun {k s s'} h => (iter_iff_alikeTo k (s, s')).mp (iter_pred alike_mono (fun _ m => m.1)
+    k (s, s') ((iter_iff_alikeTo (k + 1) (s, s')).mpr h))
+
+/-- Alike to a depth is alike to every lower depth. -/
+theorem AlikeTo.down_to {F : Frame S A C} {G : Frame S' A C} {s : S} {s' : S'} {b : Nat} :
+    ∀ {a : Nat}, b ≤ a → AlikeTo F G a s s' → AlikeTo F G b s s' :=
+  fun le => holds_below (P := fun k (x : S × S') => AlikeTo F G k x.1 x.2)
+    (fun _ _ alike => AlikeTo.of_succ alike) (x := (s, s')) le
+
+/-- Alike configurations are alike to every depth. -/
+theorem Alike.alikeTo {F : Frame S A C} {G : Frame S' A C} :
+    ∀ (k : Nat) {s : S} {s' : S'}, Alike F G s s' → AlikeTo F G k s s' :=
+  fun k {s s'} ⟨B, bisim, related⟩ => (iter_iff_alikeTo k (s, s')).mp
+    (postfixed_in_iter alike_mono (K := fun p => B p.1 p.2)
+      (fun p h => (bisim p.1 p.2 h).1) (fun p => bisim p.1 p.2) k (s, s') related)
+
 variable {pairs : List (S × S')}
 
 /-- If a list holds every pair agreeing on claims, likeness to the depth of the list's length
@@ -1202,11 +1193,8 @@ section Classes
 variable {S : Type u} {S' : Type u'} {A : Type v} {C : Type w}
 
 /-- A configuration is alike to itself to every depth. -/
-theorem AlikeTo.self (F : Frame S A C) : ∀ (k : Nat) (s : S), AlikeTo F F k s s
-  | 0, _ => fun _ => Iff.rfl
-  | k + 1, _ =>
-    ⟨fun _ => Iff.rfl, fun _ t step => ⟨t, step, AlikeTo.self F k t⟩,
-     fun _ t step => ⟨t, step, AlikeTo.self F k t⟩⟩
+theorem AlikeTo.self (F : Frame S A C) : ∀ (k : Nat) (s : S), AlikeTo F F k s s :=
+  fun k s => (Alike.refl F s).alikeTo k
 
 /-- Alike to a depth, read the other way. -/
 theorem AlikeTo.symm {F : Frame S A C} {G : Frame S' A C} :

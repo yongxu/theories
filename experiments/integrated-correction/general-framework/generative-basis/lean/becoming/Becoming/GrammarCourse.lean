@@ -118,9 +118,8 @@ theorem constant_iff_keeps {next : S → S} {E : «际» S} :
 
 /-- A kept relation holds at every step of the orbits from related configurations. -/
 theorem kept_along {next : S → S} {E : «际» S} (keeps : KeepsRelation next E) {s s' : S}
-    (h : E s s') : ∀ n, E (orbit next s n) (orbit next s' n)
-  | 0 => h
-  | n + 1 => keeps _ _ (kept_along keeps h n)
+    (h : E s s') : ∀ n, E (orbit next s n) (orbit next s' n) :=
+  KeepsRelation.run keeps h
 
 /-- **文同 is the core (核) of the class of the map's values under the law's step.** Two
 configurations lie in one class of the core exactly where their courses through the map agree at
