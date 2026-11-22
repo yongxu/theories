@@ -1,0 +1,320 @@
+{
+ "groups": [
+  {
+   "group": "SampledSelection",
+   "own_dynamic": false,
+   "own_dynamic_why": "The record describes a selection through a formation's couplings, read at strictly increasing times from step 0, that selects alike the sampled levels with and without a part beyond the coupling closure as read there, that closure lying within the coupling closure. The store has this going-on under unselected-beyond-the-coupling-closure (family B), whose mechanism says: \"With a part withheld and the rest of the exchange fixed, balance at each step on what couples into members of a formation's coupling closure, and every member of the part beyond it, every selection through the couplings of a formation within the closure treats the levels with and without the part alike.\" What the coarser reading adds is where the closure lies (a requirement that holds only at a skipped step couples nothing in), which is that dynamic's own condition. Its open says \"the law's force lies entirely in what actually couples into the selector\". recurring-at-fine-steps-quiet-at-coarser has readings at coarser steps, but of another going-on: \"Read at strictly increasing times, with activity decided, arising or ceasing at arbitrarily late coarse steps is arising or ceasing at arbitrarily late fine steps.\" No statement of the module is of arising, ceasing or rest. In Missed the sampled levels differ at a step read (coarse_differs), so the case is not one of a change that the reading does not show. The record's own 'does not show' excludes a rule set again, the pace of a reading and a turn in time. No dynamic of its own.",
+   "listings": [
+    {
+     "theorem": "Becoming.Flow.sample_unselected_beyond_coupling",
+     "dynamic": "unselected-beyond-the-coupling-closure",
+     "entry_quote": "With a part withheld and the rest of the exchange fixed, balance at each step on what couples into members of a formation's coupling closure, and every member of the part beyond it, every selection through the couplings of a formation within the closure treats the levels with and without the part alike.",
+     "why": "The statement is that sentence for the flow and web read at the times σ. With l the levels without the part, balance on what couples in at the coarser steps, and every member of the part beyond the closure read at σ, every selection through the couplings read at σ of a formation within that closure gives select (atTimes σ W.level) ↔ select (atTimes σ l). It states the blindness itself and would be on this list however it were proved."
+    },
+    {
+     "theorem": "Becoming.Web.SelectsThrough.of_sample",
+     "dynamic": "unselected-beyond-the-coupling-closure",
+     "entry_quote": "Every selection through a selector's couplings selects two histories alike exactly when they are alike through those couplings (near-definitional); that an actual selection goes through them is supplied. [...] what a pool outside the acting part decides by its acts, under laws reading through its members' couplings, is a selection through its pooled coupling.",
+     "why": "Statement: (W.sample σ).SelectsThrough obs g t select gives W.SelectsThrough obs g (σ t) (fun l => select (atTimes σ l)), σ strict. It says which selections are selections through a selector's couplings: one read at coarser steps is one. It has the same form as the entry's sentence on a pool's acts (ExchangeLaw.Through.selectsThroughAll, already listed). Its proof term uses only AlikeThroughUpTo.sample; it is a case of nothing."
+    },
+    {
+     "theorem": "Becoming.Flow.sample_withinCoupling",
+     "dynamic": "unselected-beyond-the-coupling-closure",
+     "entry_quote": "A group's closure is the union of its members' [...] The bound has content only for a pool that leaves some returning formation out: on a finite flow with reach decided every formation lies within the influence closure of a formation whose acts return, so within their pooled coupling closure",
+     "why": "Statement: (L.sample σ).WithinCoupling (W.sample σ) obs f g → L.WithinCoupling W obs f g. It is a law of how far the coupling closure reaches, here under a coarser reading: no less lies beyond the closure read there. The entry states and lists laws of the closure's reach as its own (withinClosureOf_iff, Flow.covered_by_returning), and the closure is this dynamic's term in the store."
+    },
+    {
+     "theorem": "Becoming.Flow.withinCoupling_sample",
+     "dynamic": "unselected-beyond-the-coupling-closure",
+     "entry_quote": "A group's closure is the union of its members' [...] (open) The more couples in, the larger the coupling closure and the smaller the gap: the law's force lies entirely in what actually couples into the selector.",
+     "why": "Statement: σ strict and from step 0, and every dependence a dependence at some step read, give L.WithinCoupling W obs f g → (L.sample σ).WithinCoupling (W.sample σ) obs f g. It says when the closure read at coarser steps is no smaller: the gap grows only through a requirement that holds at no step read. It states the closure's reach by what couples in, the entry's own condition."
+    },
+    {
+     "theorem": "Becoming.Missed.within_fine_beyond_coarse",
+     "dynamic": "unselected-beyond-the-coupling-closure",
+     "entry_quote": "In Clearing the dweller lies beyond the clearer's coupling closure for every coupling by level, though within its reach.",
+     "why": "A built case of the same kind as the entry's own witness sentence: the part lies within the selector's coupling closure and beyond the closure read at the even steps (flow.WithinCoupling web byLevel false true ∧ ¬ (flow.sample twice).WithinCoupling (web.sample twice) byLevel false true). It states where a part lies against the coupling closure. Its proof is by not_within_of_closed on a closed region, not a computation alone."
+    },
+    {
+     "theorem": "Becoming.Missed.coarse_blind",
+     "dynamic": "unselected-beyond-the-coupling-closure",
+     "entry_quote": "(beyond) In Clearing, a witness, every selection through the clearer's couplings selects the cleared and the spared world alike at every step",
+     "why": "A built case of the blindness: every selection through the selector's couplings read at the even steps, up to any t, selects the sampled levels with and without the part alike. The entry lists such witnesses (Clearing.unselected). It is proved by the law at the case, not by computing the levels."
+    }
+   ],
+   "not_listed": [
+    {
+     "theorem": "Becoming.Web.sample_selects_alike_iff",
+     "why": "Its proof term is Web.selects_alike_iff itself at the sampled web, and the module's account says it 'says nothing more'. It is a case of a law the same dynamic lists, so it could carry no row and would add no statement. Unsure that it belongs; nothing entered."
+    },
+    {
+     "theorem": "Becoming.Web.sample_alikeThrough_iff",
+     "why": "Iff.rfl: a definitional reading of AlikeThrough at a sampled web, a step toward of_sample."
+    },
+    {
+     "theorem": "Becoming.Web.AlikeThroughUpTo.sample",
+     "why": "A step toward SelectsThrough.of_sample (its only use); of likeness up to a step, not of a selection."
+    },
+    {
+     "theorem": "Becoming.Web.sample_dependsOn",
+     "why": "Helper for sample_coupledInto."
+    },
+    {
+     "theorem": "Becoming.Web.sample_coupledInto",
+     "why": "A step toward sample_withinCoupling."
+    },
+    {
+     "theorem": "Becoming.Flow.sample_exchanges",
+     "why": "A step toward sample_withinCoupling. It is of an exchange across a coarse step being an exchange at a fine step, which no entry read has as its notion."
+    },
+    {
+     "theorem": "Becoming.Flow.exchanges_sample",
+     "why": "A step toward withinCoupling_sample. It says exchange is not lost at the coarser step, where recurring-at-fine-steps-quiet-at-coarser is of what a coarser reading does not show ('what changes within a step is not shown'). Not that dynamic's notion, and no other entry read has it."
+    },
+    {
+     "theorem": "Becoming.Flow.WithheldLevels.sample",
+     "why": "Carries a premise of the law across the reading. closing-needs-net-draw lists Flow.WithheldLevels and its uniqueness, but its notion is the comparison of what is admitted with and without a part ('a part closes what can form only by a net draw on a required condition'), and this statement compares nothing admitted. Unsure; nothing entered."
+    },
+    {
+     "theorem": "Becoming.Flow.sample_withhold_taken",
+     "why": "Helper for WithheldLevels.sample."
+    },
+    {
+     "theorem": "Becoming.Flow.sample_withhold_given",
+     "why": "Helper for WithheldLevels.sample."
+    },
+    {
+     "theorem": "Becoming.Missed.fine_separates",
+     "why": "A part of the built case: one selection exhibited by Web.separates and a decided inequality. It gives the contrast to coarse_blind, and the entry has a like witness (Diversion.favours), but taken alone it is Web.separates at computed levels. Unsure; nothing entered."
+    },
+    {
+     "theorem": "Becoming.Missed.coarse_reads",
+     "why": "A part of the built case that computes: a selection by Web.separates on two constant histories."
+    },
+    {
+     "theorem": "Becoming.Missed.coarse_differs",
+     "why": "A part of the built case that computes: a decided inequality and a selection by Web.separates under a wider coupling."
+    },
+    {
+     "theorem": "Becoming.Strict.le, Becoming.Strict.covers, Becoming.Flow.unionPresent_withhold, Becoming.Flow.withheld_gated, Becoming.Missed.once, Becoming.Missed.without, Becoming.Missed.balances, Becoming.Missed.twice_ne_one, Becoming.Missed.second_exchanged, Becoming.Missed.coarse_coupled",
+     "why": "Helpers and the computing parts of the built case."
+    },
+    {
+     "theorem": "every theorem of the module, under recurring-at-fine-steps-quiet-at-coarser",
+     "why": "That entry's notion is 'What recurs at fine steps can read as quiet at coarser ones': arising, ceasing and a level that 'can read as still at a coarser grain'. The module's statements are of a selection, a coupling closure, an exchange and withheld levels read at coarser steps. A shared reading at times σ (its listed Strict and Web.sample are in the statements) is a shared definition, not its notion. The module's account calls Strobe 'the like of activity', a likeness and not the same statement."
+    }
+   ],
+   "case_rows": [],
+   "records_to_add": [
+    {
+     "record": "selection-through-couplings-at-a-coarser-step",
+     "dynamic": "unselected-beyond-the-coupling-closure"
+    }
+   ],
+   "notes": "No case row can be entered for this group. Three case relations exist, and each lies inside one dynamic, where the validator refuses a row (atlas.py:1012).\n(1) Flow.sample_unselected_beyond_coupling uses Flow.unselected_beyond_coupling: the print shows the call. It is a case: the law at L.sample σ, W.sample σ and the levels atTimes σ l, with its premise 'without' supplied by WithheldLevels.sample and 'balanced' by BalancesOn.sample from balance at the fine steps and listing once; beyond, within and through are passed unchanged; the conclusion is the law's. Both sit under unselected-beyond-the-coupling-closure. seeking-boundary also lists Flow.unselected_beyond_coupling, which does not help: the row's own dynamic lists it.\n(2) Missed.coarse_blind uses Flow.sample_unselected_beyond_coupling: print yes; a case (the law at Missed's web and flow and the even steps, every premise supplied); same dynamic.\n(3) Web.sample_selects_alike_iff uses Web.selects_alike_iff: print yes; a case by unfolding; not listed.\nThe other uses the print shows are not listed under any dynamic I found by name: Flow.BalancesOn.sample (of the record laws-at-coarser-steps, whose dynamic lists only the recurrence laws), WithinClosure.mono, WithinClosure.of_rel, WithinClosure.refl, not_within_of_closed, Web.separates apart (listed under this same dynamic), Strobe.twice_strict. These are uses, not cases; the uses layer draws them.\nNo listing is made under recurring-at-fine-steps-quiet-at-coarser, so that record's dynamic and this one stay joined only by the definitions Strict and Web.sample in the statements.\nIf premise rows are wanted for the listed laws: 'strict', 'admission-withheldlevels', 'selection-selectsthrough' and 'testing-withincoupling' exist. I found no ledger id (search by id only) for the reading starting at step 0 (σ 0 = 0), for each relatum listed once at every fine step (L.Once), for 'every dependence is a dependence at some step read', or for balance and 'beyond' asked on the closure read at σ (selection-balanced-on-couplings and selection-part-beyond say them of the unsampled closure).\nThe entry's mechanism has no sentence on a reading at coarser steps; one would be needed with the listings.\nDefinitions (atTimes, Missed.web, Missed.flow, Missed.part, Missed.kept, Missed.byLevel, Missed.all) are not listed: the 22 November application added no definition to a dynamic that was there before."
+  },
+  {
+   "group": "LevelAlone",
+   "own_dynamic": false,
+   "own_dynamic_why": "The record describes a way and a level on TurningInTime's pair: the way steps as it was outside the marked levels and is set to one fixed correction at a marked level. Over every marking silent at the start's level, it says when the line never ends: exactly where the level of the course as it was, one step after it first differs from the start's, is at or above H2 + y2. The store has this going-on under turning-in-time (family A): \"Outside a set of marked levels the way after a step is a given function of the way alone (AloneOutside); up to the first marked level of the course as it was, the course is that course. [...] With decided marks, the way after a marked step of a kind every step keeps, every way of which uses exactly H2, [...] the line never ends exactly where, at the first marked step with the need met there and before, the level of the course as it was one step later is at or above H2 + y2.\" The record's laws are that law with the marks ranged over and the correction supplied. The entry's open already says \"How the marked levels, the need and the kept kind come to stand [...]: here they are premises, not derived\", and the record derives none of them. The module's account says \"No older law is made a case here\" and the record says it shows no law of Becoming.TurningInTime as a case. Same pair, same line, same threshold and same one-step lag: no dynamic of its own.",
+   "listings": [
+    {
+     "theorem": "Becoming.LevelAlone.silent_at_start_iff_next_of_stays_below",
+     "dynamic": "turning-in-time",
+     "entry_quote": "With decided marks, the way after a marked step of a kind every step keeps, every way of which uses exactly H2, [...] the line never ends exactly where, at the first marked step with the need met there and before, the level of the course as it was one step later is at or above H2 + y2.",
+     "why": "Statement: under the common premises and 'below', (∃ marked, ¬ marked x₀ ∧ «不穷» (net need (readBy marked t alone) ...) (w, x₀)) ↔ H₂ + y₂ ≤ level ... (D + 1). It is the entry's notion (the pair's line never ending, by the level one step after a mark, against H2 + y2) with the marking ranged over."
+    },
+    {
+     "theorem": "Becoming.LevelAlone.silent_at_start_iff_marking_all_but_start",
+     "dynamic": "turning-in-time",
+     "entry_quote": "Outside a set of marked levels the way after a step is a given function of the way alone (AloneOutside); up to the first marked level of the course as it was, the course is that course.",
+     "why": "Statement: some marking silent at x₀ gives a line that never ends exactly where the marking of every level other than x₀ does. Both sides are the pair's line never ending under a set of marked levels; it is a law of which marks turn the line in time."
+    },
+    {
+     "theorem": "Becoming.LevelAlone.silent_at_start_iff_next_of_le",
+     "dynamic": "turning-in-time",
+     "entry_quote": "the line never ends exactly where, at the first marked step with the need met there and before, the level of the course as it was one step later is at or above H2 + y2",
+     "why": "The same equivalence with the level at step D + 1, under the common premises and H₂ ≤ use w in place of 'below' (law B of the record). The same notion as the core, with its own premises."
+    },
+    {
+     "theorem": "Becoming.LevelAlone.silent_at_start_iff_next",
+     "dynamic": "turning-in-time",
+     "entry_quote": "the line never ends exactly where, at the first marked step with the need met there and before, the level of the course as it was one step later is at or above H2 + y2",
+     "why": "The same equivalence for any corrected use, under 'mono' and 'still' in place of 'below' (law A of the record). The same notion."
+    },
+    {
+     "theorem": "Becoming.LevelAlone.silent_at_start_iff_recoverable_next_of_stays_below",
+     "dynamic": "turning-in-time",
+     "entry_quote": "(open) Its point of no return of a course (Recoverable, NoReturnAt) is used, with the turns of a level course to one standing use as the feasible courses and the need met at every step as what is asked (recoverable_iff_above, noReturnAt_iff_first_below, turns_in_time_iff_before)",
+     "why": "Statement: some marking silent at x₀ gives a line that never ends exactly where the levels of the course as it was are Recoverable at D + 1, with Turned ... H₂ as the feasible courses and MeetsNeed as what is asked. It is the pair's line against the recoverability of its level course, as in the entry's listed turns_in_time_iff_before, with the marking ranged over."
+    },
+    {
+     "theorem": "Becoming.LevelAlone.silent_at_start_none_iff_no_return_of_stays_below",
+     "dynamic": "turning-in-time",
+     "entry_quote": "(open) Its point of no return of a course (Recoverable, NoReturnAt) is used, with the turns of a level course to one standing use as the feasible courses and the need met at every step as what is asked (recoverable_iff_above, noReturnAt_iff_first_below, turns_in_time_iff_before)",
+     "why": "Statement: under every marking silent at x₀ it is not so that the line never ends, exactly where there is N ≤ D + 1 with NoReturnAt (Turned ... H₂) (MeetsNeed need) levels N. It is the pair's line against the point of no return of its level course, the notion of the entry's listed turns_in_time_iff_before, over all such markings."
+    },
+    {
+     "theorem": "Becoming.LevelAlone.silent_at_start_iff_recoverable_next",
+     "dynamic": "turning-in-time",
+     "entry_quote": "(open) Its point of no return of a course (Recoverable, NoReturnAt) is used, with the turns of a level course to one standing use as the feasible courses and the need met at every step as what is asked",
+     "why": "The recoverable form under law A's premises (mono, still). The same statement as the form above with other premises. The entry already lists a law beside its case in this way (noReturnAt_iff_first_below)."
+    },
+    {
+     "theorem": "Becoming.LevelAlone.silent_at_start_none_iff_no_return",
+     "dynamic": "turning-in-time",
+     "entry_quote": "(open) Its point of no return of a course (Recoverable, NoReturnAt) is used, with the turns of a level course to one standing use as the feasible courses and the need met at every step as what is asked",
+     "why": "The no-return form under law A's premises. The same notion as the form under 'below'."
+    },
+    {
+     "theorem": "Becoming.LevelAlone.silent_at_start_iff_use",
+     "dynamic": "turning-in-time",
+     "entry_quote": "the line never ends exactly where, at the first marked step with the need met there and before, the level of the course as it was one step later is at or above H2 + y2",
+     "why": "Statement: under law A's premises and H₂ + y₂ ≤ hi, some marking silent at x₀ gives a line that never ends exactly where use (Law.orbit alone w D) + y₂ ≤ level ... D. It is the same threshold read one step back through the use at the step of the first difference: the lag of the pair's step, which is this dynamic's."
+    },
+    {
+     "theorem": "Becoming.LevelAlone.Twelve.none_unending",
+     "dynamic": "turning-in-time",
+     "entry_quote": "(exit, a witness) Giving min z (12 - z), a use of five as it was and of three for the kept kind, a need of one, from nine: first marked at nine or eight the line never ends (Three.goes_on); first marked at six it turns and ends (Three.turned_and_ends)",
+     "why": "A built course of the same kind as the entry's Three: with Three.giving, from twelve, a draw of three rising by one and a return to three, under no marking silent at twelve does the line never end. It states the pair's line under marks on a case, and is proved by law B at the case, not by computing alone."
+    },
+    {
+     "theorem": "Becoming.LevelAlone.Seven.some_unending",
+     "dynamic": "turning-in-time",
+     "entry_quote": "(exit, a witness) [...] first marked at nine or eight the line never ends (Three.goes_on); first marked at six it turns and ends (Three.turned_and_ends)",
+     "why": "A built course on which some marking silent at the start's level gives a line that never ends; proved by law B at the case."
+    },
+    {
+     "theorem": "Becoming.LevelAlone.Rising.some_unending",
+     "dynamic": "turning-in-time",
+     "entry_quote": "(exit, a witness) [...] first marked at nine or eight the line never ends (Three.goes_on); first marked at six it turns and ends (Three.turned_and_ends)",
+     "why": "A built course on which some marking silent at the start's level gives a line that never ends while the level of the course as it was rises; proved by law B at the case. It is the case that shows 'below' asks less than a level that never rises."
+    }
+   ],
+   "not_listed": [
+    {
+     "theorem": "Becoming.LevelAlone.readBy_outside, Becoming.LevelAlone.readBy_turns, Becoming.LevelAlone.readBy_kept",
+     "why": "They supply turning-in-time's premises (AloneOutside, turns, kept) for the reading by marks. Helpers: none states when a line ends or goes on."
+    },
+    {
+     "theorem": "Becoming.LevelAlone.level_never_rises, Becoming.LevelAlone.level_never_rises_of_rises",
+     "why": "They supply the premise that the level never rises. They are of the level of the course as it was alone; by the module's account no law over markings calls the first."
+    },
+    {
+     "theorem": "Becoming.LevelAlone.stays_below_of_le, Becoming.LevelAlone.stays_below_of_le_of_rises",
+     "why": "They supply the premise 'below'. margin-of-a-regime says 'a positive level below falls at every step and stays nothing' of one standing draw; these are of a use that varies along an orbit, so not its statement. Unsure of any home; nothing entered."
+    },
+    {
+     "theorem": "Becoming.LevelAlone.next_above_iff_draw",
+     "why": "One step of RegimeMargin.step under any use against the threshold of another use: arithmetic that the use form calls. margin-of-a-regime's laws are of a level's course under one standing draw ('a level up to hi ends exactly where it starts below H + y'); this is one step under a different use. Unsure; nothing entered."
+    },
+    {
+     "theorem": "Becoming.LevelAlone.cap_mono, Becoming.LevelAlone.Twelve.level_at_five_six, Becoming.LevelAlone.Twelve.mono_and_still, Becoming.LevelAlone.Seven.mono_and_still, Becoming.LevelAlone.Rising.level_rises, Becoming.LevelAlone.Rising.not_mono_at_one_two",
+     "why": "Parts of the built courses that compute levels or check a premise."
+    },
+    {
+     "theorem": "Becoming.LevelAlone.WithoutMono.other_premises, .marked_at_five_unending, .some_unending, .next_below, .not_mono_at_one_two, .not_mono; Becoming.LevelAlone.WithoutStill.giving_mono, .other_premises, .marked_at_six_unending, .some_unending, .next_below, .start_step, .not_still",
+     "why": "The two courses on which law A fails without one premise. Their headline statements (not_mono, not_still) are of a premise failing, not of a line. The rest are computed parts (the two unending statements by a fixed state and decide, not by a law). Unsure that a failed-premise course belongs on a dynamic's list; nothing entered."
+    },
+    {
+     "theorem": "the two recoverable forms and the two no-return forms, under reading-a-loss-in-time",
+     "why": "That entry defines the notions in the statements ('A course is recoverable at a step where some feasible course agreeing with it so far keeps what is asked [...]; its point of no return is the first step at which it is not'). Its law 'A loss is readable in time exactly where the first step apart comes before that point' has the shape of these forms, with D as the step the level first differs. But its notion is a selection read off a group's continuations on a web. These statements have a marking of levels on the pair, no FirstApart and no web, and turning-in-time's open says the selection side 'is not instantiated, the pair having no web'. The print shows no theorem that dynamic lists in their proof terms (Recoverable.earlier is listed under no dynamic). Unsure; nothing entered there."
+    }
+   ],
+   "case_rows": [
+    {
+     "dynamic": "turning-in-time",
+     "law": "Becoming.LevelAlone.silent_at_start_none_iff_no_return_of_stays_below",
+     "case_of": "Becoming.Web.readableInTime_iff",
+     "case_of_listed_under": "reading-a-loss-in-time",
+     "print_shows_the_call": false,
+     "is_a_case": false,
+     "why": "NOT A ROW; given as the nearest law another dynamic lists. The print of this theorem shows silent_at_start_iff_next_of_stays_below, silent_at_start_iff_recoverable_next_of_stays_below, Recoverable.earlier, TurningInTime.kept_within, TurningInTime.noReturnAt_of_below_of_stays_below and a private level_within; no theorem reading-a-loss-in-time lists is among them. readableInTime_iff is of a first step apart of two courses on a web; this statement has a marking on the pair and no web, so it is not that law at an instance.",
+     "how_en": "(not entered)",
+     "takes": []
+    }
+   ],
+   "records_to_add": [
+    {
+     "record": "a-reading-of-the-level-alone",
+     "dynamic": "turning-in-time"
+    }
+   ],
+   "notes": "No case row can be entered for this group. Every package theorem that the print shows in the listed laws' proof terms is either of this module, of Becoming.TurningInTime (listed, or to be listed, under the same dynamic), or listed under no dynamic I found by name (Recoverable.earlier, RegimeMargin.keeps_of_below, meets_of_below, short_of_below, Naturals.le_sub_of_add_le).\nCase relations inside the dynamic (print yes; a case; no row possible):\n- silent_at_start_iff_next and silent_at_start_iff_next_of_le are the core with 'below' supplied (by level_never_rises_of_rises and by stays_below_of_le_of_rises).\n- silent_at_start_iff_recoverable_next and silent_at_start_none_iff_no_return are the two _of_stays_below forms with 'below' supplied.\n- Seven.some_unending and Rising.some_unending are one direction of law B at a built course.\n- Twelve.none_unending is law B at a built course, through the private next_iff.\nUses of TurningInTime's laws that are not cases:\n- silent_at_start_iff_recoverable_next_of_stays_below is the core joined by Iff.trans to TurningInTime.recoverable_iff_above_of_stays_below at X := the level and N := D + 1. Its left side is not that law's, so it is a use.\n- silent_at_start_none_iff_no_return_of_stays_below uses noReturnAt_of_below_of_stays_below for one direction only.\n- The core uses above_before_of_stays_below once in each direction.\n- The private reading_in_time_iff joins unending_iff_first_marked and unending_iff_above.\nThe entry's mechanism has no sentence on a ranging over markings or on a reading silent at the start's level; the listings rest on its sentences on the first marked step, quoted. A sentence would be needed with them.\nDefinitions (LevelAlone.readBy, LevelAlone.level, draw, rise and the courses' giving and back) are not listed, following the 22 November application. The listed statements are written with readBy and level, so whoever applies this may judge otherwise for those two.\nA link from turning-in-time to reading-a-loss-in-time or to margin-of-a-regime, if wanted, would be an exit or a joining, not a case row; none is proposed.\nIf premise rows are wanted: turningintime-kept, turningintime-uses, turningintime-within, regimemargin-fromnothing, regimemargin-short, regimemargin-meets, optimum-coupled-need-positive and regimemargin-start-level-le-hi exist. I found no ledger id (search by id only) for: every corrected way of the kept kind (sets); alone keeps the kept kind (stays); the step under no use keeping the band (Keeps giving 0 hi); a use rising strictly for the first hi steps; the level at the start's before D and not at D; 'below'; H₂ ≤ use w; mono; still; H₂ + y₂ ≤ hi."
+  },
+  {
+   "group": "TurningInTime-of-stays-below",
+   "own_dynamic": false,
+   "own_dynamic_why": "The record's last two laws say that four laws of a level course already told (the turn at T meets the need exactly where H + y ≤ X T; X is recoverable at N exactly where H + y ≤ X N; the point of no return is the first step below H + y; a course that comes below H + y has one) hold under less: a level once below H + y stays below, and a bound hi on the level at the step of each turn used. The going-on is the one turning-in-time has. Its entry lists the four under the stronger premises (TurningInTime.turned_meets_iff, recoverable_iff_above, noReturnAt_iff_first_below, noReturnAt_of_below), two of them with premise rows, and its open says: \"Its point of no return of a course (Recoverable, NoReturnAt) is used, with the turns of a level course to one standing use as the feasible courses and the need met at every step as what is asked (recoverable_iff_above, noReturnAt_iff_first_below, turns_in_time_iff_before); other continuations are not among the feasible courses.\" The same conclusions under weaker premises are no new going-on.",
+   "listings": [
+    {
+     "theorem": "Becoming.TurningInTime.turned_meets_iff_of_stays_below",
+     "dynamic": "turning-in-time",
+     "entry_quote": "(open) Its point of no return of a course (Recoverable, NoReturnAt) is used, with the turns of a level course to one standing use as the feasible courses and the need met at every step as what is asked [...]; (transition) one step after the first marked level, that level at or above H2 + y2: the line never ends",
+     "why": "Statement: (∀ t, need ≤ turned X giving H T t) ↔ H + y ≤ X T. This is the same proposition as the entry's listed turned_meets_iff, under 'below' and X T ≤ hi in place of 'fall' and X 0 ≤ hi. Whether a turn to the standing use at a step is in time is the entry's threshold, for a level course."
+    },
+    {
+     "theorem": "Becoming.TurningInTime.recoverable_iff_above_of_stays_below",
+     "dynamic": "turning-in-time",
+     "entry_quote": "(law row) TurningInTime.recoverable_iff_above: turningintime-course-never-rises, regimemargin-start-level-le-hi, regimemargin-fromnothing, regimemargin-short, regimemargin-meets, regimemargin-keeps, optimum-coupled-need-positive, turningintime-within, regimemargin-step",
+     "why": "Statement: Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N ↔ H + y ≤ X N. This is the conclusion of the law the entry lists with that row, under less: 'below' for never rising, and the bound at N for the bound at the start. Its premises are implied by the listed law's."
+    },
+    {
+     "theorem": "Becoming.TurningInTime.noReturnAt_iff_first_below_of_stays_below",
+     "dynamic": "turning-in-time",
+     "entry_quote": "(law row) TurningInTime.noReturnAt_iff_first_below: turningintime-course-never-rises, regimemargin-start-level-le-hi, regimemargin-fromnothing, regimemargin-short, regimemargin-meets, regimemargin-keeps, optimum-coupled-need-positive, turningintime-within, regimemargin-step",
+     "why": "Statement: NoReturnAt (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N ↔ X N < H + y ∧ ∀ n, n < N → H + y ≤ X n. This is the conclusion of the listed law under less. The listed law is now proved as its case (the print shows the call), so the general form states the entry's notion at least as much as the case it lists."
+    },
+    {
+     "theorem": "Becoming.TurningInTime.noReturnAt_of_below_of_stays_below",
+     "dynamic": "turning-in-time",
+     "entry_quote": "(open) Its point of no return of a course (Recoverable, NoReturnAt) is used, with the turns of a level course to one standing use as the feasible courses and the need met at every step as what is asked",
+     "why": "Statement: where X n < H + y there is N ≤ n with NoReturnAt (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N. This is the conclusion of the entry's listed noReturnAt_of_below, under 'below' and the bound at every step."
+    }
+   ],
+   "not_listed": [
+    {
+     "theorem": "Becoming.TurningInTime.turned_meets_of_above_of_stays_below",
+     "why": "One direction of turned_meets_iff_of_stays_below. The entry lists none of the halves of the forms it has (turned_meets_of_above, above_of_turned_meets, recoverable_of_above, above_of_recoverable are in the record's law 16 and not on the entry's list); a step toward the equivalence."
+    },
+    {
+     "theorem": "Becoming.TurningInTime.recoverable_of_above_of_stays_below",
+     "why": "One direction of recoverable_iff_above_of_stays_below; as above."
+    },
+    {
+     "theorem": "Becoming.TurningInTime.above_of_recoverable_of_stays_below",
+     "why": "One direction of recoverable_iff_above_of_stays_below; as above."
+    },
+    {
+     "theorem": "Becoming.TurningInTime.above_before_of_stays_below",
+     "why": "Statement: (∀ t, X t < c → X (t + 1) < c) → j ≤ T → c ≤ X T → c ≤ X j. It is an order fact about any sequence of whole numbers and a threshold, with no turn, need, way, giving or line in it. It is a helper, though the record tells it as law 45 and LevelAlone's core calls it. No entry read has it as its notion."
+    },
+    {
+     "theorem": "the four listed above, under reading-a-loss-in-time",
+     "why": "That entry defines Recoverable and NoReturnAt, and lists one witness of the same shape with an exit to margin-of-a-regime (FourReaders.recoverable_iff_regime: 'the cleared course is recoverable exactly while its level stands at that point or above'). So a general law of that shape may state its notion. Against it: the entry's name and laws are of a reading ('a selection read off continuation reads a loss before its point of no return, or too late') and these statements have none. The forms under the stronger premises have been listed under turning-in-time only. A listing there would also bring the record turning-in-time into that dynamic's records. Unsure; nothing entered."
+    },
+    {
+     "theorem": "the four listed above, under margin-of-a-regime",
+     "why": "That entry is of a level from a start under one standing draw ('a level up to hi ends exactly where it starts below H + y'). These are of a course X that need not follow the regime before the turn; they use the regime's laws after the turn (RegimeMargin.holds, ends_below). A use, not its notion."
+    }
+   ],
+   "case_rows": [
+    {
+     "dynamic": "turning-in-time",
+     "law": "Becoming.TurningInTime.turned_meets_iff_of_stays_below",
+     "case_of": "Becoming.RegimeMargin.holds",
+     "case_of_listed_under": "margin-of-a-regime",
+     "print_shows_the_call": false,
+     "is_a_case": false,
+     "why": "NOT A ROW; given as the nearest law another dynamic lists. The print of turned_meets_iff_of_stays_below shows only above_of_turned_meets and turned_meets_of_above_of_stays_below; RegimeMargin.holds is one call down, in the latter. And it is not a case: holds gives the level from X T on after the turn (a start at or above H + y and at most hi holds); the steps up to the turn are by 'below' read backward (above_before_of_stays_below), and the only-if side is by RegimeMargin.ends_below. The statement is of a course turned at T, not of the regime's course from a start.",
+     "how_en": "(not entered)",
+     "takes": []
+    }
+   ],
+   "records_to_add": [],
+   "notes": "The record turning-in-time is already among the dynamic's records; nothing to add.\nNo case row can be entered. What the print shows:\n- noReturnAt_iff_first_below (listed, with a row) uses noReturnAt_iff_first_below_of_stays_below: print yes. It is a case: 'fall' gives 'below' by Nat.lt_of_le_of_lt, 'fall' with 'top' gives the bound at every step up to N, the other premises pass unchanged, and the conclusion is the same. Both are under turning-in-time once the general form is listed, so the validator refuses a row (atlas.py:1012). The general form states the same notion as the law the entry lists, so I list it under turning-in-time; this one row is thereby given up.\n- recoverable_iff_above (listed, with a row): the print shows above_of_recoverable and recoverable_of_above only, no call of recoverable_iff_above_of_stays_below. Not a call, as that law's docstring says.\n- turned_meets_iff (listed): the print shows above_of_turned_meets and turned_meets_of_above; not a call of the _of_stays_below equivalence.\n- noReturnAt_of_below (listed): the print shows above_of_recoverable, noReturnAt_of_past and a private recoverable_decided; not a call of noReturnAt_of_below_of_stays_below.\n- turned_meets_of_above uses turned_meets_of_above_of_stays_below, and above_of_recoverable uses above_of_recoverable_of_stays_below: print yes, each a case ('fall' supplying 'below'); none of the four is listed.\n- noReturnAt_of_below_of_stays_below uses noReturnAt_of_past, which no dynamic lists by my search of names; a use.\nIf premise rows are wanted for the two forms whose stronger versions have rows: regimemargin-fromnothing, regimemargin-short, regimemargin-meets, regimemargin-keeps, optimum-coupled-need-positive and turningintime-within say six of the premises. I found no ledger id for 'below' (a level of X below H + y is below it at the next step: ∀ t, X t < H + y → X (t + 1) < H + y), which is weaker than turningintime-course-never-rises, or for the bound on the level at the step of the turn (X T ≤ hi; X N ≤ hi; ∀ n ≤ N, X n ≤ hi; ∀ t, X t ≤ hi), which regimemargin-start-level-le-hi does not say: that one is of a start."
+  }
+ ],
+ "not_read": "Read whole: SampledSelection.lean; its proof-uses print and LevelAlone's; the 22 November NOTE.md and ENTRY-as-applied; the record page selection-through-couplings-at-a-coarser-step.md and the laws, conditions, does-not-show and dependencies of a-reading-of-the-level-alone.md; the store entries turning-in-time, unselected-beyond-the-coupling-closure, recurring-at-fine-steps-quiet-at-coarser, margin-of-a-regime, reading-a-loss-in-time and seeking-boundary.\n\nRead in part:\n- LevelAlone.lean: lines 1 to 729 whole; lines 729 to 1051 (the worked courses) by docstrings and statements only, proof bodies filtered out.\n- TurningInTime.lean (3,340 lines): lines 170 to 219 and 1975 to 2414 only; of its proof-uses print, only the lines for the level-course laws.\n- turning-in-time.json: laws 16, 17, 19, 20 and 43 to 45, and its dependencies.\n- apply_atlas22.py.txt: to about line 330 (not the tail that writes the assignment files).\n- Selection.lean: the statement of unselected_beyond_coupling only. Sampling.lean: three statements only.\n- closing-needs-net-draw, rest-at-every-resolution, generation-and-degeneration-at-two-grains: entries with long fields cut.\n- premises.json: by a search of ids only. So 'no ledger id found' means not found by id; statements were not searched.\n- atlas.py: lines 975 to 1034 only.\n\nNot opened:\n- Becoming.ReadOffInTime: the statements of Recoverable, NoReturnAt, noReturnAt_of_past, Recoverable.earlier and Web.readableInTime_iff are known to me only through the entries and docstrings that cite them.\n- RegimeMargin's module.\n- The other 177 dynamics of the store: reached only by searches of record ids, declaration names and a dozen words in names and mechanisms. A dynamic that has one of these notions under other words would have been missed.\n- The rendered family pages, cards.json, the mapping rows.\n- The RETURN-* and FROZEN files beside the 22 November note.\n- The study notes of rows GR and FM.\n\nNo Lean, build, test or gate was run; no file was changed. Every call claimed is from the proof-uses print.",
+ "found_wrong_in_the_store": "Nothing false of the Lean was found in the entries read.\n\nChecked against the Lean binders and found to agree:\n- unselected-beyond-the-coupling-closure, row on Flow.unselected_beyond_coupling (Selection.lean:345).\n- turning-in-time, rows on TurningInTime.recoverable_iff_above and noReturnAt_iff_first_below (TurningInTime.lean:2263 and 2306).\n- recurring-at-fine-steps-quiet-at-coarser, rows on Web.sample_unceasing and Web.sample_ceasing (Sampling.lean:207 and 215).\n- reading-a-loss-in-time, row on Web.FirstApart.separates: its remark that the declaration list of unselected-beyond-the-coupling-closure omits Web.separates_all is true of the store, and the print shows the call.\n\nTwo things that are not falsehoods in the store but bear on it:\n1. In the Lean, not the store: TurningInTime.lean:1996 says 'The three laws of a level course are also stated under less', while line 195 of the same file says 'The four laws', and there are four (noReturnAt_of_below_of_stays_below is the fourth).\n2. The turning-in-time entry lists turned_meets_iff and noReturnAt_of_below without premise rows, and the ledger premise turningintime-course-never-rises names only recoverable_iff_above and noReturnAt_iff_first_below in its 'lean', though turned_meets_iff and noReturnAt_of_below take the same premise 'fall' (TurningInTime.lean:2158 and 2396). Incomplete, not false."
+}

@@ -1,0 +1,90 @@
+**Read of the three uncommitted things in /Users/ren/tmp/dj/wt (reading, grep and short python only; no Lean, build, test or gate; no file changed)**
+
+Lean paths below are under `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`. No listing has to be removed. Thirteen sentences need mending.
+
+## MUST
+
+### Part 1: the two mechanism sentence-groups (`theories/becoming/results/atlas/entries/dynamics.json`)
+
+**M1. turning-in-time, first sentence ("Ranged over the markings (LevelAlone): … at or before D + 1.")** Set against `LevelAlone.lean:391-405` (core), `:427-442`, `:540-555`, `:570-586`; all four carry the same premise list.
+- Left out: `nothing` (the same entry's older sentence lists "nothing given from nothing" apart from "the regime's premises"), `needs` and `within` (a positive need at most H₂ + y₂), and that the marking is decided (`∃ marked, ∃ _ : DecidablePred marked`).
+- "a kept kind" does not say who keeps it (`stays : ∀ v, Kept v → Kept (alone v)`).
+- "is recoverable at step D + 1" and "has a point of no return" say more than the statements: they are `Recoverable (Turned X giving H₂) (MeetsNeed need) …` and `NoReturnAt` of the same (`:554`, `:585`). `TurningInTime.lean:1999` says other continuations are not considered; the record's law 6 states both parameters.
+- Replacement: "Ranged over the markings (LevelAlone): with one fixed correction, handed in, that sets a way of a kind the way's step as it was keeps and every way of which uses H₂; nothing given from nothing, giving short of H₂ below y₂ and meeting it from y₂ up to hi, the step under no use keeping levels up to hi within hi; a positive need at most H₂ + y₂; a start at most hi; a use that rises strictly along the way's own orbit for the first hi steps; D handed in as the first step at which the level of the course as it was differs from the start's; and that level, once below H₂ + y₂, below it at the next step: some decided marking that does not mark the start's level gives a line that never ends exactly where the level at step D + 1 is at or above H₂ + y₂, exactly where the marking of every level but the start's does, and exactly where the level course as it was is recoverable at step D + 1, its turns to the standing use H₂ the feasible courses and the need met at every step what is asked; under no such marking does the line never end exactly where that course has, in the same sense, a point of no return at or before D + 1."
+
+**M2. turning-in-time, second sentence ("The premise on the level holds where … does not raise the level.")**
+- `stays_below_of_le_of_rises` (`LevelAlone.lean:475-480`) also asks `nothing`, `short`, `keeps₀`, `high`, `rises`; standing alone the sentence drops them.
+- `level_never_rises_of_rises` (`:253-258`) concludes that the level never rises, under `mono`, `still`, `nothing`, `high`, `rises`. No theorem states the premise from these; the step is inline in the proofs at `:531-532`, `:621-622`, `:647-648`.
+- Replacement: "Under those premises the premise on the level holds where the corrected use is no more than the course's first use (stays_below_of_le_of_rises); and where the step under no use does not fall as the level rises and the start's own step does not raise the level, the level never rises (level_never_rises_of_rises), from which the premise follows by one step made inside the proofs of the forms under those two premises and stated by no theorem of its own."
+
+**M3. turning-in-time, third sentence ("The laws of a level course on recoverability and the point of no return are stated under that premise too …")** It says less than the four listed statements: the mechanism nowhere says what these laws conclude or their other premises, so "too" points at nothing told. The bound differs law by law: `X T ≤ hi` (`TurningInTime.lean:2143`), `X N ≤ hi` (`:2247`), every `n ≤ N` (`:2284`), every step (`:2377`). The step that must keep within hi is under H (`Keeps giving H hi`), not under no use.
+- Replacement: "For a level course X and a standing use H, the feasible courses X turned to H at some step and the need met at every step what is asked, with nothing given from nothing, giving short of H below y and meeting it from y up to hi, the step under H keeping levels within hi and a positive need at most H + y: where a level of X once below H + y is below it at the next step, the course turned at T meets the need at every step exactly where H + y ≤ X T, given X T ≤ hi; X is recoverable at N exactly where H + y ≤ X N, given X N ≤ hi; N is its point of no return exactly where N is the first step with X N < H + y, given X n ≤ hi at every n ≤ N; and where X n < H + y it has a point of no return at or before n, given X t ≤ hi at every step. The same four are also listed under a course that never rises from a start at most hi."
+
+**M4. unselected-beyond-the-coupling-closure, the clause "a selection through the couplings read at the coarser steps is one through the couplings up to the last step read".** `SampledSelection.lean:133-136` gives `W.SelectsThrough obs g (σ t) fun l => select (atTimes σ l)` from `(W.sample σ).SelectsThrough obs g t select`, with `strict`. So it is not the same selection but that selection taken back along the reading, and the index is σ t for a selection up to coarse step t; the clause names no coarse step. The record's law 1 has both.
+- Replacement: "with the reading strict, a selection through a formation's couplings read at the coarser steps, up to a coarse step, taken back along the reading, is a selection through its couplings up to the fine step that coarse step reads (σ t)".
+
+### Part 2: the direction page (`_process/DIRECTION.md`)
+
+**M5. (i) "a part of renewing formations keeps what can form: …".** Conclusion and "so it does not narrow" are right: `Retaining.lean:357-361`, `Web.Includes` at `Admission.lean:388-389`, `Includes.not_exceeded` at `Admission.lean:453`. Two things the theorem asks are understated.
+- `renewing : ∀ f, part f = true → W.RenewingIn f` is the class over the whole run (`Dependence.lean:150-167`). `Retaining.lean:312-313` says the stepwise class is not enough (`Preemption.renewingAt_consuming_narrows`).
+- `without : L.WithheldLevels part W l` (`Admission.lean:507-509`) is named only as "the levels without it".
+- Replacement: "…, a part every member of which renews, over the whole run, every condition it takes part in keeps what can form: the levels with it admit, at every step, every formation that the levels without it admit (`Flow.Balances.includes_of_renewingIn`; the levels without it are those from the same start under the same takes and gives with the part's own withheld), so it does not narrow what can form, and a consuming part …"
+
+**M6. (ii) "Under that one premise the same is also said in the level's own notions … recoverable at step `D + 1` … point of no return at or before `D + 1`".** Both forms ask the common premises and the one premise (`LevelAlone.lean:540-550`, `:570-580`), and "recoverable" is unqualified as in M1.
+- Replacement: "Under the same premises and that one premise the same is also said by recoverability, by two forms row FM landed later that morning on laws of `TurningInTime` stated under less the same morning (told two sentences on): some such marking gives a line that never ends exactly where the level course as it was is recoverable at step `D + 1`, its turns to the standing use `H₂` the feasible courses and the need met at every step what is asked (`silent_at_start_iff_recoverable_next_of_stays_below`), and none does exactly where that course has, in that sense, a point of no return at or before `D + 1` (`silent_at_start_none_iff_no_return_of_stays_below`)."
+- This also mends "(next sentence)": the sentence meant is two on.
+
+**M7. (ii) "every new proof there is an old one with one lemma swapped".** The record it links says "Every new proof is an old proof with one lemma swapped or a premise passed through" (`laws-of-a-level-under-stays-below-2026-11-23/NOTE.md`, line 3).
+- Replacement: "…four of the older theorems (one of them private) are now calls of their namesakes, no statement changed, and every new proof there is an old one with one lemma swapped or a premise passed through".
+
+**M8. (iii) "One proves more than this page tells: under "Which two", "a part of renewing formations does not narrow what can form" is the corollary's form of … ; the sentence was brought up to that law later the same morning."** After change (i) the page tells it, the quoted words no longer stand there as one sentence, and "that law" reads as `includes_of_renewed` while the bullet cites `includes_of_renewingIn`.
+- Replacement: "One proved more than this page then told: under "Which two" it said only that a part of renewing formations does not narrow what can form, where `Flow.Balances.includes_of_renewingIn`, one call of `Flow.Balances.includes_of_renewed`, concludes that the levels with the part include the levels without it; the sentence there was changed later the same morning to tell that conclusion."
+
+### Part 4: `two-modules-on-the-atlas-2026-11-23/NOTE.md`
+
+**M9. "read the three records, the modules and the candidate dynamics' entries whole".** The return's `not_read` says otherwise.
+- Replacement: "One reader, not told the forecast, read `SampledSelection.lean` and one record page whole, `LevelAlone.lean` whole to line 729 and its worked courses by docstrings and statements, `TurningInTime.lean` in two ranges (lines 170 to 219 and 1975 to 2414), the second record by its laws, conditions, does-not-show and dependencies, seven laws of the third, six candidate entries whole and three with long fields cut; the other 177 dynamics were reached only by searches of names (`RETURN-placing.json`, `not_read`)."
+
+**M10. "The forecast for `LevelAlone` and for the laws of `TurningInTime` held."** `FROZEN.md.txt` says "The eight laws are listed under `turning-in-time`, no row"; the reader listed four. The forecast also named the selection's dynamic as where the reader might differ.
+- Replacement: "The forecast for `LevelAlone` held. For the laws of `TurningInTime` it held in the dynamic and in no row, not in the count: it said the eight, and the reader listed four. That the reader might place the sampled laws under the selection's dynamic was named in the forecast as possible."
+
+**M11. "The uses that cross dynamics are uses and not cases, and the layer of uses between proofs draws them at each render."** By the print, no proof term of the 22 names a declaration listed only under another dynamic. `Flow.unselected_beyond_coupling` is also under `seeking-boundary`, but the selection dynamic lists it itself. The reader's words are that the other uses are of theorems no dynamic lists.
+- Replacement: "By the print, no proof term of a newly listed theorem names a declaration that only another dynamic lists; the other uses are of theorems the reader found under no dynamic, by name; the two nearest laws of other dynamics it named (`Web.readableInTime_iff`, `RegimeMargin.holds`) are not in those proof terms."
+
+**M12. "one sentence added to the mechanism of each of the two dynamics".** The diff adds three sentences to turning-in-time and moves the entry's old last sentence after them; one sentence to the other.
+- Replacement: "and a group of sentences added to the mechanism of each (three in `turning-in-time`, before its last sentence; one in the other)".
+
+**M13. Head: "What a reader who took no part changed in this note and in the entries is said at its end."** The note has no such section yet. Add it, or cut the sentence.
+
+## LESSER
+
+- **Mechanism, selection group.** "balance at the fine steps on what couples in at the coarser" leaves out into what (`SampledSelection.lean:265-266`); the record's law 4 uses the same words. Fuller: "balance at every fine step on each condition that couples, as read at the coarser steps, into a formation within the closure as read there". "a part beyond that closure" is every member of the part (`:267`). `sample_withinCoupling` has no premise at all (`:188-189`), which the shared lead-in hides.
+- **Mechanism, turning-in-time.** Nothing tells the listed `silent_at_start_iff_use` (under `mono`, `still` and H₂ + y₂ ≤ hi: exactly where the use at step D and y₂ together are at most the level at step D) or the three listed courses. The new group writes "H₂ + y₂" where the older sentences write "H2 + y2".
+- **DIRECTION (i).** "so it does not narrow" is stated in Lean for the law it calls (`not_narrows_of_renewed`, `Retaining.lean:349`), not for `includes_of_renewingIn`; the step is `Includes.not_exceeded`.
+- **DIRECTION (ii).** "restated" reads as replaced; the next-but-one sentence corrects it ("beside the laws as they stood"). "a bound on the level at the step of each turn" is the record's "of each turn used (in turn: T; N; every step up to N; every step)".
+- **Placing return, quotes.** For `recoverable_iff_above_of_stays_below` and `noReturnAt_iff_first_below_of_stays_below` the entry quote is a premises row (a name and ledger ids). By the frozen file's own test that is a listing by namesake. The `open` sentence quoted for the other two states the notion, and the entry lists `turned` and `Turned`, so all four stand on that quote. For `Flow.sample_withinCoupling` the quote "A group's closure is the union of its members'" shares only a word; the `open` line "The more couples in, the larger the coupling closure and the smaller the gap" is the notion it states.
+- **Placing, consistency.** `WithoutMono.some_unending` and `WithoutStill.some_unending` have the same statement shape as the listed `Seven.some_unending`; the reader left them out by how they are proved and marked itself unsure.
+- **NOTE.**
+  - "as their older namesakes are not": three have older namesakes; `above_before_of_stays_below` has none.
+  - "a premise carried across … by a law of `Sampling`": two premises are carried, one through the module's own `WithheldLevels.sample`.
+  - The reader also said the selection entry needed a sentence; the note reports this only for turning-in-time.
+  - "docstring slip": `TurningInTime.lean:1996` says "The three laws", having named three in that paragraph; a fourth is also stated under less.
+
+## CHECKED AND FOUND AS WRITTEN
+
+- **Mechanism.** The core equivalence, the corollary, and the no-return form's "at or before D + 1" match their statements. So do the main blindness clause (`:263-270`), the two closure clauses (`:188`, `:198`, with strict and step 0 in the group's lead-in), and both Missed clauses (`:395-397`, `:417-419`, every coarse step).
+- **DIRECTION (ii), the composition.** It is said as a composition, and it is right: `stays_below_of_le_of_rises` asks `nothing`, `short`, `le`, `keeps₀`, `high`, `rises`, all but `le` among the forms' premises, and its conclusion is the forms' `below` verbatim. No single theorem states it.
+- **DIRECTION (ii), the rest.** "four of the older theorems are now calls … no statement changed" matches the linked record and the Lean (`:2116`, `:2224`, `:2306`, `:2342`). The landing order matches git (laws 05:31, forms 05:55).
+- **DIRECTION, tone and links.** No changed sentence says what Ren meant or that the map is nearer its aim. The one new link, the record link and the 07 anchor resolve.
+- **The 22 listings.** None refuted. Each statement states its dynamic's notion (`SelectsThrough`, `WithinCoupling`; the pair's line never ending under marks; a course turned to a standing use). No newly listed theorem is used as a helper by another law of general form. Precedents are on the same lists: `ExchangeLaw.Through.selectsThroughAll`, `withinClosureOf_iff`, the four older namesakes.
+- **No case row.** Confirmed from the print for all 22. Every use of a listed declaration is inside the same dynamic, and `tools/research/atlas.py` (the `case_of` check near line 1012) refuses a row naming a declaration of the row's own dynamic.
+- **Not under `recurring-at-fine-steps-quiet-at-coarser`.** I agree by the rule: that entry is of arising, ceasing and a level reading as still, and no statement of the module has activity or rest. The likeness is real (a one-way law with a built case against its converse) and the module itself calls it "the like"; the store then joins the two only by `Strict` and `Web.sample`.
+- **NOTE counts and files.** 22 = 6 + 12 + 4; fifteen not-listed entries; two records; eight public laws, four listed. `store-as-applied.diff.txt` is byte for byte the live diff. `FROZEN.md.txt` matches its hash; clock 05:51:16.
+
+## NOT CHECKED
+
+- The validator, the map's check and the 123 tests; the token figures; that the file was frozen "before any reader".
+- Whether a length cap applies to a mechanism; the replacements above are longer.
+- `Selection.lean`, `Sampling.lean`, `ReadOffInTime.lean` and `RegimeMargin.lean` beyond the definitions cited; `Flow.unselected_beyond_coupling`'s own statement; the proofs of the worked courses' private helpers; `turning-in-time.md` beyond laws 44, 45 and its history line.
+- The other 183 dynamics, except by a search of declaration names; cards, regions, mapping rows and rendered pages.
+- `run-1-placing.js.txt`; the direction page outside the changed sentences, including the unchanged sentence before them that also omits the need's two premises.

@@ -1,0 +1,62 @@
+export const meta = {
+  name: 'place-two-modules-and-eight-laws-on-the-atlas',
+  description: 'One reader, not told the forecast, says where the theorems of two new modules and eight new laws belong in the atlas store, and whether any is a case of a listed law',
+  phases: [{ title: 'Place', detail: 'own dynamic or listing; which theorems; which case rows, by the print and the statement' }],
+}
+const ROOT = '/Users/ren/theories'
+const A = ROOT + '/theories/becoming/results/atlas'
+const LB = ROOT + '/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming'
+const OLD = ROOT + '/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/the-list-law-on-the-atlas-2026-11-22'
+const SCHEMA = {
+  type: 'object',
+  properties: {
+    groups: { type: 'array', items: { type: 'object', properties: {
+      group: { type: 'string', description: 'SampledSelection | LevelAlone | TurningInTime-of-stays-below' },
+      own_dynamic: { type: 'boolean' },
+      own_dynamic_why: { type: 'string', description: 'what going-on the record describes and which dynamic of the store, if any, already has it; quote the entry' },
+      listings: { type: 'array', items: { type: 'object', properties: {
+        theorem: { type: 'string', description: 'full Lean name as in the proof-uses print, e.g. Becoming.LevelAlone.x' },
+        dynamic: { type: 'string', description: 'the dynamic id' },
+        entry_quote: { type: 'string', description: 'the words of that dynamic\'s entry (name, mechanism or a law) that say the notion the statement states' },
+        why: { type: 'string' },
+      }, required: ['theorem', 'dynamic', 'entry_quote', 'why'] } },
+      not_listed: { type: 'array', items: { type: 'object', properties: { theorem: { type: 'string' }, why: { type: 'string' } }, required: ['theorem', 'why'] } },
+      case_rows: { type: 'array', items: { type: 'object', properties: {
+        dynamic: { type: 'string' },
+        law: { type: 'string', description: 'the theorem the row sits on (must be listed under this dynamic by your listings or already)' },
+        case_of: { type: 'string', description: 'the law named, listed under ANOTHER dynamic' },
+        case_of_listed_under: { type: 'string' },
+        print_shows_the_call: { type: 'boolean' },
+        is_a_case: { type: 'boolean', description: 'true only if the statement is the named law at an instance or with a premise supplied, not merely a use' },
+        why: { type: 'string' },
+        how_en: { type: 'string', description: 'the row\'s how text, in the store\'s style, naming every link from the law to the law named' },
+        takes: { type: 'array', items: { type: 'string' }, description: 'ids of ledger premises the law takes; an id already in premises.json, or NEW:<id>|<english text of the premise> for one to be added' },
+      }, required: ['dynamic', 'law', 'case_of', 'case_of_listed_under', 'print_shows_the_call', 'is_a_case', 'why', 'how_en', 'takes'] } },
+      records_to_add: { type: 'array', items: { type: 'object', properties: { record: { type: 'string' }, dynamic: { type: 'string' } }, required: ['record', 'dynamic'] } },
+      notes: { type: 'string' },
+    }, required: ['group', 'own_dynamic', 'own_dynamic_why', 'listings', 'not_listed', 'case_rows', 'records_to_add', 'notes'] } },
+    not_read: { type: 'string' },
+    found_wrong_in_the_store: { type: 'string', description: 'anything in the entries you read that is false of the Lean as it stands, said with file and line; not to be fixed here' },
+  },
+  required: ['groups', 'not_read', 'found_wrong_in_the_store'],
+}
+phase('Place')
+const r = await agent(`What we are doing, so that you know the whole. The repository at ${ROOT} holds "the theory of becoming": a map of how anything forms, persists, changes and ends, with its core proved in Lean 4. The map as data is the atlas: ${A}/entries/dynamics.json (186 dynamics; each has an id, a name, a family, a mechanism, the records it rests on, the Lean declarations listed under it, and premise rows, a row being a law with the ledger premises it takes and, optionally, "case_of": another dynamic's law it is a case of, with "how"), with a ledger of premises (${A}/entries/premises.json). On 23 November three things landed that the store does not name, and the task is to say where, if anywhere, they belong:
+
+1. SampledSelection: module ${LB}/SampledSelection.lean; record ${ROOT}/theories/becoming/results/records/selection-through-couplings-at-a-coarser-step.md (and .json).
+2. LevelAlone: module ${LB}/LevelAlone.lean; record ${ROOT}/theories/becoming/results/records/a-reading-of-the-level-alone.md (and .json).
+3. TurningInTime-of-stays-below: in ${LB}/TurningInTime.lean the eight public theorems whose names end "_of_stays_below" (above_before_, turned_meets_of_above_, turned_meets_iff_, recoverable_of_above_, above_of_recoverable_, recoverable_iff_above_, noReturnAt_iff_first_below_, noReturnAt_of_below_), told in the last two laws of ${ROOT}/theories/becoming/results/records/turning-in-time.md.
+
+What Lean itself says each proof uses is printed in ${A}/proof-uses/Becoming.<Module>.jsonl (one line a theorem: {"name", "uses"}; uses are the package theorems in its proof term). Use it; do not guess a call from a docstring.
+
+The rules, fixed before you were asked (the ones the store's last entry was made under; that entry and how it was applied are at ${OLD}/NOTE.md, ${OLD}/ENTRY-as-applied.md.txt and ${OLD}/apply_atlas22.py.txt, which also show the store's formats for a declaration, a premise row, a case row's "how" and a ledger premise):
+- A DYNAMIC OF ITS OWN only where the record describes a going-on that no dynamic of the store has. To answer, read the candidate dynamics' entries whole in dynamics.json: at least "turning-in-time", "margin-of-a-regime", "unselected-beyond-the-coupling-closure", "seeking-boundary", "recurring-at-fine-steps-quiet-at-coarser", and any other you find by searching the store for the records these three depend on (each record's .json names its dependencies) and for the notions they state (sampling or coarser steps; selection through couplings; a reading of a level; recoverable; no return). The rendered pages are under ${A}/families/ if you prefer prose, but answer from the store.
+- A LISTING. A theorem is newly listed under a dynamic only where, shown the dynamic's entry and the theorem's statement, you judge that it states that dynamic's own notion and would belong on its list whatever it is a case of. Quote the words of the entry. A name, a namespace or a shared word is not enough. Do not list private theorems, helpers, or the parts of a built case that only compute. A theorem may be listed under more than one dynamic only if each passes the test on its own.
+- A CASE ROW sits on a law its dynamic lists and names exactly ONE declaration that the print shows in that law's proof term and that ANOTHER dynamic lists; the statement must be a case of the law named (the law at an instance, or with a premise supplied), not only a use of it; its "how" names every link. A law and its namesake under one dynamic get no row (the validator refuses it). Say for every candidate whether the print shows the call and whether it is a case, and give your reason from the two statements. A use that is not a case is NOT entered as a row: a separate layer of the atlas already draws every use between proofs at each render.
+- A RECORD is added to a dynamic's "records" only where at least one of its theorems is listed there.
+- Where you are unsure, say so and enter nothing: an empty list is a full answer. The store is not to grow so that a module has a home.
+
+For each case row you propose, give "takes": the ledger premises the law takes (see how existing rows of the candidate dynamics name them; ids are in premises.json), as existing ids where one says that premise, or as NEW:<id>|<English text> in the ledger's style where none does. Keep it to the premises the theorem's statement actually asks.
+
+House rules. This Mac is busy: run no Lean, no build, no test, no gate; reading, grep and short python only. Change no file. Nothing is pushed or sent. Say what you did not read. Stop at about 200,000 tokens of your own reading; if you cannot finish, answer the groups you finished and name the rest in not_read.`, { label: 'reader who places the three groups', phase: 'Place', schema: SCHEMA })
+return r

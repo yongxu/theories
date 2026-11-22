@@ -1,0 +1,34 @@
+# Two modules and eight laws of 23 November on the atlas: what may be entered, written before any reader
+
+*AI-written (Claude Fable, board row DJ), 23 November 2026, on main `730c175f9`. Frozen when its hash stands in `FROZEN.sha256.txt`. The forecast is not shown to the first reader.*
+
+## Why
+
+Three things landed on 23 November that the atlas's store (`theories/becoming/results/atlas/entries/dynamics.json`, 186 dynamics) does not name: `Becoming.SampledSelection` (row GR; record `selection-through-couplings-at-a-coarser-step`), `Becoming.LevelAlone` (row FM; record `a-reading-of-the-level-alone`), and eight public laws of `Becoming.TurningInTime` ending `_of_stays_below` (row DJ). By a script on that main: neither record is under any dynamic; four of `LevelAlone`'s 37 public theorems use a law a dynamic lists, all of `turning-in-time`; five of `SampledSelection`'s 29 do, of `unselected-beyond-the-coupling-closure` (and one of `seeking-boundary` too); the eight laws stand beside namesakes that `turning-in-time` lists. The coordinating session, on Ren's words of 23 November that unfinished work be finished before the merge, named this as owed: the map as data lacks the two newest modules. Who holds the atlas is not decided by entering this; the board's line 0 (e) stands.
+
+## The rules (those of 22 November, `the-list-law-on-the-atlas-2026-11-22/FROZEN-THE-LIST-LAW-ON-THE-ATLAS.md.txt`, with what this case adds)
+
+- **A dynamic of its own** only where the record describes a going-on that no dynamic of the store has: said by a reader who is shown the store's candidate dynamics whole and is not told this file's forecast. Otherwise its theorems are listed, where they belong, under dynamics that are there.
+- **A listing.** A theorem is newly listed under a dynamic only where that reader, shown the dynamic's entry and the theorem's statement, judges that it states that dynamic's own notion and would belong on its list whatever it is a case of. A name, a namespace or a shared word is not enough. Private theorems, helpers and the parts of a built case that only compute are not listed.
+- **A case row** sits on a law its dynamic lists and names exactly one declaration that Lean's print (`theories/becoming/results/atlas/proof-uses/`) shows in that law's proof term and that another dynamic lists; the statement must be a case of the law named (the law at an instance, or with a premise supplied), not only a use of it; its `how` names every link. The validator does not allow a case row to name a law of the same dynamic, so a law and its namesake under one dynamic get no row.
+- **A record** is added to a dynamic's `records` only where at least one of its theorems is listed there by the rule above.
+- Nothing is entered where the reader and the print disagree, or where the second reader refutes it. Every "not found" says where it was looked for.
+
+## What would count against it
+
+- A case row that is only a use: then the layer of uses between proofs already draws it at each render, and the row says more than the proof.
+- A listing by name: the reader cannot quote from the dynamic's entry the notion the statement states.
+- A dynamic made so that a module has a home.
+- The store growing with nothing a reader of the map could not already get from the two records. What is claimed is small: that the store names the two modules where they belong, and that the join row GR's Queue clause names (`Sampling` with `Selection`) is drawn as a case link if, and only if, it is one.
+
+## Forecast (the session's, before any reader; not shown to the first reader)
+
+`LevelAlone` is no going-on of its own: its laws are listed under `turning-in-time`, the record added there, no case row (same dynamic). `SampledSelection`'s blindness law is listed under `recurring-at-fine-steps-quiet-at-coarser` with a case row naming `Flow.unselected_beyond_coupling`; `Web.sample_selects_alike_iff` is refused as a case of worth or entered with its docstring's own limit, since the law it calls "states what the definition builds in"; its built case is listed under the same dynamic or left. The eight laws are listed under `turning-in-time`, no row. The reader may differ on where the sampled laws belong (under the selection's dynamic instead).
+
+## Not in this step
+
+The four links of the read of 16 November that wait since 17 November: each needs its own opening against the Lean as it stands; left open on the row. The map's cards, the regions and the terrain are touched only as the validator and the map's check ask.
+
+## Cost, said beforehand to the coordinating session
+
+0.55 million tokens: two readers sized at 250,000 each; a stop if the first takes more than 0.3 million. The applying is by script. No core run.
