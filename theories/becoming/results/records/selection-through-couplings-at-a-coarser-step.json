@@ -7,7 +7,7 @@
  "kind": "theorem",
  "status": "recorded-checked",
  "family": "F04",
- "reviewed_at_utc": "2026-11-22T18:01:00+00:00",
+ "reviewed_at_utc": "2026-11-22T18:07:22+00:00",
  "statement": {
   "en": "Read at coarser steps, a selection through a formation's couplings selects alike the sampled levels with and without any part beyond the coupling closure as read there, a closure that lies within the coupling closure and is smaller only through a requirement holding at no step read."
  },
@@ -182,7 +182,7 @@
   {
    "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gr-sampled-selection-2026-11-23/NOTE.md",
    "role": "review",
-   "sha256": "9372e844ffadc44291b3310eaf7b4eba9fcadd2de5218813e1e48fc8bc0774a9"
+   "sha256": "b33dc4f7ac5d90799061118e4109c879319cf1014e8416c45d1fe1e067b420fa"
   }
  ],
  "proof_bindings": [
