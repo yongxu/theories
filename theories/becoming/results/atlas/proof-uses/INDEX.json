@@ -4,13 +4,13 @@
  "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
  "toolchain": "leanprover/lean4:v4.29.1",
  "printed_from": {
-  "commit": "82406b880993826f6f78c08be650000fe74284e6",
-  "core_run": "20261122T175942.715137Z"
+  "commit": "eb2ef8cb0b53358e810e65289552664d3d474c8d",
+  "core_run": "20261122T192648.959660Z"
  },
- "core_sources_sha256": "a19bf91aa8ca7361ed666880c11737f0ae078907c4a17734b728e179aa3afca9",
+ "core_sources_sha256": "dddba3f7f3ad668fbe4805069e068b87c9bb55769c138cad941cc8f4fd68ae72",
  "modules": {
   "Becoming": {
-   "source_sha256": "e176d3a6e512cdfe67f7521756fe2b36de9fffac90d7b69435e1e48679053bb3",
+   "source_sha256": "fbf7cf037b053f39a919de7349491797015ab9820641390a12e8b5bae34de9d2",
    "theorems": 0
   },
   "Becoming.Acceptance": {
@@ -799,6 +799,10 @@
   },
   "Becoming.LeastLoss": {
    "source_sha256": "9a3b1550dcabc6dff458eb81ee6833e6d90ff0d38175f75c39a46f394e49bd16",
+   "theorems": 55
+  },
+  "Becoming.LevelAlone": {
+   "source_sha256": "9d9dbd17e2bd9541a4df0616c3ff1710735df4913ed3cd3c299ef4cb264fdf7a",
    "theorems": 55
   },
   "Becoming.LevelCoupling": {
@@ -1663,8 +1667,8 @@
   }
  },
  "counts": {
-  "modules": 413,
-  "theorems": 20710,
+  "modules": 414,
+  "theorems": 20765,
   "uses_without_row": 20
  }
 }

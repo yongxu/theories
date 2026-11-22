@@ -1,0 +1,55 @@
+{"name": "Becoming.LevelAlone.Rising.level_rises", "uses": []}
+{"name": "Becoming.LevelAlone.Rising.not_mono_at_one_two", "uses": []}
+{"name": "Becoming.LevelAlone.Rising.some_unending", "uses": ["Becoming.LevelAlone.silent_at_start_iff_next_of_le", "Becoming.RegimeMargin.keeps_of_below", "Becoming.RegimeMargin.meets_of_below", "Becoming.RegimeMargin.short_of_below", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.draw_rises", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.returned_stays_and_uses"]}
+{"name": "Becoming.LevelAlone.Seven.mono_and_still", "uses": ["Becoming.LevelAlone.cap_mono"]}
+{"name": "Becoming.LevelAlone.Seven.some_unending", "uses": ["Becoming.LevelAlone.silent_at_start_iff_next_of_le", "Becoming.RegimeMargin.keeps_of_below", "Becoming.RegimeMargin.meets_of_below", "Becoming.RegimeMargin.short_of_below", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.draw_rises", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.returned_stays_and_uses"]}
+{"name": "Becoming.LevelAlone.Twelve.level_at_five_six", "uses": []}
+{"name": "Becoming.LevelAlone.Twelve.mono_and_still", "uses": ["Becoming.LevelAlone.cap_mono"]}
+{"name": "Becoming.LevelAlone.Twelve.none_unending", "uses": ["_private.Becoming.LevelAlone.0.Becoming.LevelAlone.Twelve.next_iff"]}
+{"name": "Becoming.LevelAlone.WithoutMono.marked_at_five_unending", "uses": ["Becoming.TurningInTime.unending_from", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.unending_at_fixed"]}
+{"name": "Becoming.LevelAlone.WithoutMono.next_below", "uses": []}
+{"name": "Becoming.LevelAlone.WithoutMono.not_mono", "uses": ["Becoming.LevelAlone.WithoutMono.next_below", "Becoming.LevelAlone.WithoutMono.other_premises", "Becoming.LevelAlone.WithoutMono.some_unending", "Becoming.LevelAlone.silent_at_start_iff_next"]}
+{"name": "Becoming.LevelAlone.WithoutMono.not_mono_at_one_two", "uses": []}
+{"name": "Becoming.LevelAlone.WithoutMono.other_premises", "uses": ["Becoming.RegimeMargin.keeps_of_below", "Becoming.RegimeMargin.meets_of_below", "Becoming.RegimeMargin.short_of_below", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.draw_rises", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.returned_stays_and_uses"]}
+{"name": "Becoming.LevelAlone.WithoutMono.some_unending", "uses": ["Becoming.LevelAlone.WithoutMono.marked_at_five_unending"]}
+{"name": "Becoming.LevelAlone.WithoutStill.giving_mono", "uses": ["_private.Becoming.LevelAlone.0.Becoming.LevelAlone.WithoutStill.one_up"]}
+{"name": "Becoming.LevelAlone.WithoutStill.marked_at_six_unending", "uses": ["Becoming.TurningInTime.unending_from", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.unending_at_fixed"]}
+{"name": "Becoming.LevelAlone.WithoutStill.next_below", "uses": []}
+{"name": "Becoming.LevelAlone.WithoutStill.not_still", "uses": ["Becoming.LevelAlone.WithoutStill.next_below", "Becoming.LevelAlone.WithoutStill.other_premises", "Becoming.LevelAlone.WithoutStill.some_unending", "Becoming.LevelAlone.silent_at_start_iff_next"]}
+{"name": "Becoming.LevelAlone.WithoutStill.other_premises", "uses": ["Becoming.LevelAlone.WithoutStill.giving_mono", "Becoming.RegimeMargin.keeps_of_below", "Becoming.RegimeMargin.meets_of_below", "Becoming.RegimeMargin.short_of_below", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.draw_rises", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.returned_stays_and_uses"]}
+{"name": "Becoming.LevelAlone.WithoutStill.some_unending", "uses": ["Becoming.LevelAlone.WithoutStill.marked_at_six_unending"]}
+{"name": "Becoming.LevelAlone.WithoutStill.start_step", "uses": []}
+{"name": "Becoming.LevelAlone.cap_mono", "uses": ["Becoming.RegimeMargin.Peaked.min_le_left'", "Becoming.RegimeMargin.Peaked.min_le_right'", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.cover_mono"]}
+{"name": "Becoming.LevelAlone.level_never_rises", "uses": ["_private.Becoming.LevelAlone.0.Becoming.LevelAlone.never_rises_before"]}
+{"name": "Becoming.LevelAlone.level_never_rises_of_rises", "uses": ["Becoming.TurningInTime.rises_from", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.never_rises_before", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.next_zero", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.nothing_left"]}
+{"name": "Becoming.LevelAlone.next_above_iff_draw", "uses": ["Becoming.Naturals.le_sub_of_add_le", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.step_below"]}
+{"name": "Becoming.LevelAlone.readBy_kept", "uses": ["Becoming.LevelAlone.readBy_turns"]}
+{"name": "Becoming.LevelAlone.readBy_outside", "uses": []}
+{"name": "Becoming.LevelAlone.readBy_turns", "uses": []}
+{"name": "Becoming.LevelAlone.silent_at_start_iff_marking_all_but_start", "uses": ["Becoming.LevelAlone.silent_at_start_iff_next_of_stays_below", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.all_but_start_of_next"]}
+{"name": "Becoming.LevelAlone.silent_at_start_iff_next", "uses": ["Becoming.LevelAlone.level_never_rises_of_rises", "Becoming.LevelAlone.silent_at_start_iff_next_of_stays_below"]}
+{"name": "Becoming.LevelAlone.silent_at_start_iff_next_of_le", "uses": ["Becoming.LevelAlone.silent_at_start_iff_next_of_stays_below", "Becoming.LevelAlone.stays_below_of_le_of_rises"]}
+{"name": "Becoming.LevelAlone.silent_at_start_iff_next_of_stays_below", "uses": ["_private.Becoming.LevelAlone.0.Becoming.LevelAlone.above_before", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.all_but_start_of_next", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.reading_in_time_iff"]}
+{"name": "Becoming.LevelAlone.silent_at_start_iff_recoverable_next", "uses": ["Becoming.LevelAlone.level_never_rises_of_rises", "Becoming.LevelAlone.silent_at_start_iff_next", "Becoming.TurningInTime.kept_within", "Becoming.TurningInTime.recoverable_iff_above"]}
+{"name": "Becoming.LevelAlone.silent_at_start_iff_use", "uses": ["Becoming.LevelAlone.next_above_iff_draw", "Becoming.LevelAlone.silent_at_start_iff_next", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.level_succ"]}
+{"name": "Becoming.LevelAlone.silent_at_start_none_iff_no_return", "uses": ["Becoming.LevelAlone.level_never_rises_of_rises", "Becoming.LevelAlone.silent_at_start_iff_next", "Becoming.LevelAlone.silent_at_start_iff_recoverable_next", "Becoming.Recoverable.earlier", "Becoming.TurningInTime.kept_within", "Becoming.TurningInTime.noReturnAt_of_below"]}
+{"name": "Becoming.LevelAlone.stays_below_of_le", "uses": ["_private.Becoming.LevelAlone.0.Becoming.LevelAlone.stays_below_at", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.use_from"]}
+{"name": "Becoming.LevelAlone.stays_below_of_le_of_rises", "uses": ["Becoming.TurningInTime.rising_takes_all", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.nothing_left", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.stays_below_at", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.use_from"]}
+{"name": "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.Twelve.next_iff", "uses": ["Becoming.LevelAlone.silent_at_start_iff_next_of_le", "Becoming.RegimeMargin.keeps_of_below", "Becoming.RegimeMargin.meets_of_below", "Becoming.RegimeMargin.short_of_below", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.draw_rises", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.returned_stays_and_uses"]}
+{"name": "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.WithoutStill.one_up", "uses": []}
+{"name": "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.above_before", "uses": []}
+{"name": "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.all_but_start_of_next", "uses": ["_private.Becoming.LevelAlone.0.Becoming.LevelAlone.above_before", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.reading_in_time_iff"]}
+{"name": "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.cover_mono", "uses": ["Becoming.add_sub_of_le", "Becoming.sub_eq_zero_of_le"]}
+{"name": "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.draw_rises", "uses": ["_private.Becoming.LevelAlone.0.Becoming.LevelAlone.rise_orbit"]}
+{"name": "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.level_succ", "uses": ["Becoming.TurningInTime.asItWas_way"]}
+{"name": "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.level_within", "uses": ["Becoming.TurningInTime.kept_within"]}
+{"name": "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.never_rises_before", "uses": ["Becoming.Optimum.sub_le_sub_left_of_le", "Becoming.Optimum.sub_le_sub_right_of_le", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.level_succ"]}
+{"name": "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.next_zero", "uses": ["Becoming.sub_eq_zero_of_le", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.level_succ"]}
+{"name": "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.nothing_left", "uses": ["_private.Becoming.LevelAlone.0.Becoming.LevelAlone.next_zero"]}
+{"name": "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.reading_in_time_iff", "uses": ["Becoming.LevelAlone.readBy_kept", "Becoming.LevelAlone.readBy_outside", "Becoming.LevelAlone.readBy_turns", "Becoming.TurningInTime.kept_within", "Becoming.TurningInTime.rising_takes_all", "Becoming.TurningInTime.unending_iff_above", "Becoming.TurningInTime.unending_iff_first_marked", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.level_within"]}
+{"name": "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.returned_stays_and_uses", "uses": []}
+{"name": "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.rise_orbit", "uses": []}
+{"name": "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.stays_below_at", "uses": ["_private.Becoming.LevelAlone.0.Becoming.LevelAlone.level_succ", "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.step_below"]}
+{"name": "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.step_below", "uses": ["Becoming.Naturals.lt_of_add_lt_add_left", "Becoming.add_sub_of_le", "Becoming.sub_eq_zero_of_le"]}
+{"name": "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.unending_at_fixed", "uses": ["Becoming.Law.stepWhile_unending_iff"]}
+{"name": "_private.Becoming.LevelAlone.0.Becoming.LevelAlone.use_from", "uses": []}
