@@ -11633,7 +11633,7 @@
    "type": "module",
    "name": "Becoming.LevelAlone",
    "level": "L2",
-   "theorems": 37,
+   "theorems": 39,
    "region": "map",
    "base": "general",
    "on_grammar": true,
