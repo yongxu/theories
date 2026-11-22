@@ -1,0 +1,80 @@
+{
+ "old_print": "the tree at f7a3d51ae (before the Lean landing cadcf76e5 of 22 November)",
+ "new_print": "the tree at 608ff1239 (the Lean of cadcf76e5)",
+ "files_that_differ": [
+  "Becoming.GrammarCandidates.jsonl",
+  "Becoming.GrammarCourse.jsonl",
+  "Becoming.Likeness.jsonl",
+  "INDEX.json"
+ ],
+ "rows_that_differ": {
+  "Becoming.GrammarCandidates.jsonl": {
+   "Becoming.«对称有常则不可诘»": {
+    "before": [
+     "Becoming.«有常之逐点»"
+    ],
+    "after": [
+     "Becoming.Iteration.postfixed_in_iter",
+     "Becoming.inquiry_mono",
+     "Becoming.iter_iff_inquiry",
+     "Becoming.«有常之逐点»"
+    ]
+   },
+   "Becoming.«诘之降»": {
+    "before": [],
+    "after": [
+     "Becoming.Iteration.iter_pred",
+     "Becoming.inquiry_mono",
+     "Becoming.iter_iff_inquiry"
+    ]
+   }
+  },
+  "Becoming.GrammarCourse.jsonl": {
+   "Becoming.Law.kept_along": {
+    "before": [],
+    "after": [
+     "Becoming.Law.KeepsRelation.run"
+    ]
+   }
+  },
+  "Becoming.Likeness.jsonl": {
+   "Becoming.Alike.alikeTo": {
+    "before": [
+     "Becoming.Alike.realized",
+     "Becoming.Alike.step",
+     "Becoming.Alike.symm"
+    ],
+    "after": [
+     "Becoming.Iteration.postfixed_in_iter",
+     "Becoming.alike_mono",
+     "Becoming.iter_iff_alikeTo"
+    ]
+   },
+   "Becoming.AlikeTo.of_succ": {
+    "before": [],
+    "after": [
+     "Becoming.Iteration.iter_pred",
+     "Becoming.alike_mono",
+     "Becoming.iter_iff_alikeTo"
+    ]
+   },
+   "Becoming.AlikeTo.self": {
+    "before": [],
+    "after": [
+     "Becoming.Alike.alikeTo",
+     "Becoming.Alike.refl"
+    ]
+   }
+  }
+ },
+ "index_keys_that_differ": [
+  "printed_from",
+  "core_sources_sha256",
+  "modules"
+ ],
+ "modules_whose_source_hash_differs": [
+  "Becoming.GrammarCandidates",
+  "Becoming.GrammarCourse",
+  "Becoming.Likeness"
+ ]
+}

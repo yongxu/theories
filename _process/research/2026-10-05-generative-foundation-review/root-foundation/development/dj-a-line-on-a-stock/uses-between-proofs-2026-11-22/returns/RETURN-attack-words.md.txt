@@ -1,0 +1,231 @@
+**Report: the design attacked as a reader of the map, and for what its words say**
+
+All figures are my own recount, read-only and breadth first, from `theories/becoming/results/atlas/entries/dynamics.json` (working tree) and `/Users/ren/tmp/dj/batch29/all-proof-heads.jsonl`. It reproduces 230 links, 180 by a direct use and 200 pairs. Nobody has rerun my counts.
+
+One thing about the input: `links-from-lean.json` holds depth-first chains (`links_from_lean.py`: `u, path = todo.pop()`), so its witnesses are not the shortest. It gives 8 names for a-weighting → least-loss-rest where the shortest is 7. The witnesses below are recomputed breadth first.
+
+Lean paths below are under `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`.
+
+---
+
+## Findings
+
+**1. MUST. "Proved from", said of two dynamics, says more than the thing is.**
+
+The thing is: the proof of one theorem, as written, uses another theorem, and the store lists the two under different dynamics. DESIGN.md line 20 heads the lines "Proved from … for each other dynamic Y". Three real cases where that reading is false or odd:
+
+- **A use that is not needed.** `World.exchange_needs` (Openness.lean:1208) calls `witnesses_not_dissipative.2.1` (Openness.lean:1233), one conjunct of six. `witnesses_not_dissipative` (Dissipation.lean:1369) is a conjunction of six witnesses no dynamic lists; its other conjuncts use `Pulse.pulsed`, `Steady.steady`, `Oscillation.not_more` and `Oscillation.unceasing`. By the design's rule "The rest theorem" is then proved from "More needs more renewers" (3 witnesses, all through this bundle) and from "Unceasing arising needs renewal" (1 witness, the same way). The proof takes neither conjunct.
+- **Both ways.** 30 pairs of dynamics are linked in both directions. For example least-loss-rest ↔ rest-exactly-where-falls-stop: `Amounts.rests_of_finite_reading` uses `Amounts.rests_unrefuted_of_finite_reading`, which uses `Amounts.falls_within_reading`. Between theorems that is a plain chain; between dynamics it reads as a circle.
+- **A named law not used.** All 15 links into "The least loss as a premise of rest" end in nine different theorems. Three are counting lemmas with no least loss and no rest in their statements: `Amounts.falls_by_stretch` (Amounts.lean:493), `Amounts.le_by_exchange` (:537) and `Amounts.losses_within`.
+
+*Change:* name the kind "a use between proofs" and write every line theorem first, with the dynamic only as where the used theorem is listed. Add "proved from" between dynamics to the design's own forbidden list (DESIGN.md line 29).
+
+**2. MUST. "A floor" is false as the only limit.**
+
+DESIGN.md line 21 says "a floor". That is right for direct uses the printer may miss. A chain through unlisted theorems can also overstate, as the `exchange_needs` case shows. The page must say both.
+
+**3. MUST. "The most depended on are the most basic" (DESIGN.md line 21) is not what was measured, and is a ranking.**
+
+The order comes from the chain rule. With chains, the dynamics most linked into are least-loss-rest (15), then becoming-renewal-reading and capture-through-the-rule (7 each). By direct use, least-loss-rest has 3 (from rest-exactly-where-falls-stop, where-a-run-of-a-regime-comes-to-rest and becoming-renewal-reading). The top is then own-count-misses-joint-excess and capture-through-the-rule (6 each), then loss-of-renewal-for-good, unselected-beyond-the-coupling-closure, a-counter-rule-read-from-its-own-share and becoming-renewal-reading (5 each). Nobody has shown that either set is "the most basic".
+
+The only certain thing is that a used theorem is declared before its user. Words are in 9 below. Show no "most depended on" anywhere.
+
+**4. MUST. The mark for double listing covers one of two symmetric cases; 22 is 42.**
+
+The design marks a link "whose every witness ends in a theorem this dynamic lists too" (DESIGN.md line 20; `count_the_map.py.txt`: `all(x in home[u] …)`). The mirror case is unmarked: every witness starts in a theorem the target also lists. In both cases, which dynamic the shared theorem counts under decides whether there is a link.
+
+- Ends shared: 22 links. Starts shared: 22 links. In both: 8.
+- Every witness with a shared theorem at one end or the other: 42 links in 27 pairs. 22 pairs have nothing else between them.
+- Unmarked under the design: least-loss-rest → falls-that-end-do-not-recur. All three witnesses involve `Amounts.rests_unrefuted`, which both list.
+- Unmarked under the design: seeking-boundary → unselected-beyond-the-coupling-closure. Its only witness starts in `Flow.unselected_beyond_coupling`, which both list.
+- Without these witnesses the pairs linked both ways go from 30 to 10.
+
+Separately, a theorem listed under two other dynamics makes one use into two links. `Amounts.rests_unrefuted` gives "The rest theorem" the same six witnesses toward least-loss-rest and toward falls-that-end-do-not-recur. In 82 of the 230 links every witness has a multiply listed theorem at one end.
+
+*Change (3 below):* do not show these as uses between the two dynamics; show the shared listing as itself. That leaves 188 links and 178 pairs, 138 links and 129 pairs by a direct use.
+
+**5. MUST. "Six dynamics list no declaration" understates what cannot have a line: it is 17.**
+
+Eleven more list only names the printer does not print, because `AllProofHeads.lean.txt` keeps only theorems in modules named `Becoming.*`. They are: slowing-down-before-an-own-end, market-model-share-margin-and-ends, adaptive-closure-cannot-resolve, correction-is-not-calibration, evidence-through-change, a-circular-wait-needs-a-reserve-present, recurrence-without-selector-revision, renewing-consuming-formation, succession-on-a-funded-carrier, joint-practice-forms-continuation, formed-goal-revision-continuation. Their declarations are `Generative.*`, `RelationalRenewal.*`, `CalibrationRenewal.*` and the like.
+
+Also, 522 of the 2,785 listings match no printed theorem (about 293 are definitions by a rough regex). The printer follows theorems only, so a theorem stated with another dynamic's definition and using none of its theorems has no line.
+
+On these 17 sections "None." would be read as "none exists". Words are in 7.
+
+**6. MUST. Being behind is marked only on lines that exist (DESIGN.md line 17).**
+
+A theorem added or newly listed since the print has no row, so it has no line and nothing to carry the mark. Its section looks the same as one where nothing was found. This falls on the newest work first. The mark must also sit at the section's heading whenever a listed name is missing from the printed file or sits in a changed module. Words are in 8.
+
+**7. LESSER. The form: the lines do not drown the hand-kept ones; the danger is the heading and the reverse list.**
+
+By size there is no problem. The sections are roughly 20,000 characters or more (the three I read at h.md:856, g.md:562, b.md:569), the new lines add a few hundred each, and `PAGE_LIMIT` is 1 MiB (atlas.py:81) against a largest page of 399,131 bytes.
+
+The form I would defend:
+
+- **Place.** Last in the section, after **Sources** (atlas.py:1397), so everything typed is above and the computed part is below.
+- **Order.** Other dynamics in the atlas's order, theorems in the dynamic's own declaration order. Never by number of witnesses.
+- **Grouping.** One line per other dynamic, grouped by the used theorem, with the using theorems inline; at most four used theorems, then "and n more in the data file". The most in any link is seven.
+- **Naming.** The other dynamic by its heading, linked as case rows do (atlas.py:1317). Lean names in full, as the Declarations line has them (atlas.py:1381).
+- **Overlap.** Where the same two theorems are a case row above, say "told above as a case". In never-leaving-a-guard, two of the three linked dynamics are already case rows.
+- **Chains.** Under their own sub-heading with their caveat, shown only where they start. One chain per used theorem not already shown as directly used. Up to three theorems between in full; more as first, "n more between", last. No depth cut: a cut hides without saying.
+- **Reverse direction.** Direct uses only, grouped by this dynamic's theorem, no total.
+- **No line.** "None found." where the dynamic lists a printed theorem; the sentence in 8 where it lists none.
+
+Sample A: **never-leaving-a-guard** (h.md:856). Under the design it gets three "Proved from" lines and an empty "Used in the proofs of".
+
+```
+- **Uses between proofs.** Computed from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - From [A reading kept by its update, and the reading its own history carries](d.md#a-reading-kept-by-its-update): `Becoming.Viability.kernel_iff_held`, in `Becoming.Viability.kernel_iff_iter` and `Becoming.Viability.kernel_iff_iter_pred_length`; `Becoming.held_iff_iter`, in `Becoming.Viability.kernel_iff_iter` (told above as a case).
+    - From [Renewal and consumption classify runs](#becoming-renewal-reading): `Becoming.Renewable.class_belongs_to_the_run`, in `Becoming.Renewable.kept_part_not_renewal`.
+    - From [The largest class a step preserves, reached at a list's length (步所保之最大类，至列表之长而得)](#kept-at-the-length-of-a-list): `Becoming.Iteration.iter_largest`, in `Becoming.Viability.keepable_iff_count` (told above as a case).
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.Viability.kernel_iff_iter_pred_length` → `Becoming.held_iff_iter_pred_length` → `Becoming.Iteration.iter_pred`, listed under [The largest class a step preserves, …](#kept-at-the-length-of-a-list).
+    - `Becoming.Viability.kernel_iff_iter_pred_length` → `Becoming.held_iff_iter_pred_length` → `Becoming.Iteration.iter_persists_from_all` → `Becoming.Iteration.iter_persists`, listed under the same.
+  - *Proofs elsewhere that directly use a theorem listed here.* None found.
+```
+
+The section's one exit to a dynamic (to "Not going out of a region", exact, by `Becoming.Lasting.avoids_iff_closed`) has no line here, and rightly: it is a road, not a use.
+
+Sample B: **least-loss-rest** (g.md:562). Under the design it gets three "Proved from" lines and fifteen "Used in the proofs of" lines: a-weighting-faster-than-renewal-ends-the-base, becoming-renewal-reading, continued-change-needs-openness, continuing-self-fed-from-beyond, ending-laws-as-regimes-on-a-lineage, margin-of-a-regime, more-needs-renewers, no-finite-part-bears-taking, optima-rebuild-a-depleted-base, others-drawing-first-end-the-base, re-optimizing-above-a-renewal-ends-it, rest-exactly-where-falls-stop, turning-in-time, what-keeping-widening-needs, where-a-run-of-a-regime-comes-to-rest. Twelve of the fifteen come only through unlisted theorems. It would be the longest incoming list in the atlas, on the only field of a section that shows what points at it (exits and case rows show at the source only, atlas.py:1348-1361 and 1374-1376). In the form I would defend:
+
+```
+- **Uses between proofs.** [the same sentence]
+  - *Used directly by proofs here.*
+    - From [Rest exactly where the total stops falling](#rest-exactly-where-falls-stop): `Becoming.Amounts.rests_unrefuted_of_finite_reading`, in `Becoming.Amounts.rests_of_finite_reading`.
+  - *Reached through theorems no dynamic lists.* [the same caveat]
+    - `Becoming.Branching.loss_needs_merge` → `Becoming.Branching.Lossless.loses_nothing` → `Becoming.Branching.Lossless.recurs`, listed under [Returning where the course branches](f.md#returning-where-the-course-branches).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Amounts.rests`: in `Becoming.falls_not_recurring`, listed under [Renewal and consumption classify runs](h.md#becoming-renewal-reading).
+    - `Becoming.Amounts.unmarked_within`: in `Becoming.RegimeMargin.Coupled.Indexed.rests_by`, listed under [Where a run of a regime comes to rest](#where-a-run-of-a-regime-comes-to-rest).
+    - `Becoming.Amounts.falls_within_reading`: in `Becoming.Amounts.rests_unrefuted_of_finite_reading`, listed under [Rest exactly where the total stops falling](#rest-exactly-where-falls-stop).
+  - *Listed here and under another dynamic, by hand.* `Becoming.Amounts.rests_unrefuted`, also under [The grammar's law of rest: falls that end do not recur](#falls-that-end-do-not-recur); `Becoming.LastChange.still_within`, also under [Where a run of a regime comes to rest](#where-a-run-of-a-regime-comes-to-rest). A use with such a theorem at one end is not shown as a use between the two.
+```
+
+Sample C: **a-weighting-faster-than-renewal-ends-the-base** (b.md:569), the longest chain (six calls).
+
+```
+- **Uses between proofs.** [the same sentence]
+  - *Used directly by proofs here.*
+    - From [Others drawing first end the base](#others-drawing-first-end-the-base): `Becoming.Optimum.Next.exhausting_frontier`, in `Becoming.Optimum.exhausting_frontier`; `Becoming.Optimum.Next.frontier_exhausts`, in `Becoming.Optimum.frontier_exhausts`; `Becoming.Optimum.Next.frontier_below`, in `Becoming.Optimum.frontier_below_weighted`; `Becoming.Optimum.Next.frontier_leaves`, in `Becoming.Optimum.frontier_leaves` (each told above as a case).
+  - *Reached through theorems no dynamic lists.* [the same caveat]
+    - `Becoming.Optimum.Holding.logistic_weighted` → `Becoming.Optimum.weighted_holding_frontier` → `Becoming.Optimum.weighted_frontier` → `Becoming.Optimum.frontier_of_gainsMost` → `Becoming.Optimum.Next.frontier_of_gainsMost`, listed under [Others drawing first end the base](#others-drawing-first-end-the-base).
+    - `Becoming.Optimum.Holding.logistic_weighted` → `Becoming.Optimum.frontier_gains_weighted` → (three more between) → `Becoming.Optimum.Next.drawable_le_of_gains` → `Becoming.Amounts.le_by_exchange`, listed under [The least loss as a premise of rest](g.md#least-loss-rest).
+  - *Proofs elsewhere that directly use a theorem listed here.*
+    - `Becoming.Optimum.Next.outpaced_greatest`: in `Becoming.Optimum.Next.exhausting_frontier` and `Becoming.Optimum.Next.frontier_exhausts`, listed under [Others drawing first end the base](#others-drawing-first-end-the-base).
+    - `Becoming.Optimum.exhausting_frontier`, `Becoming.Optimum.frontier_exhausts`: in `Becoming.Optimum.Holding.doubling_rebuilds`, listed under [Every optimum rebuilds a depleted base](h.md#optima-rebuild-a-depleted-base).
+```
+
+Here the section's exit runs to "Every optimum rebuilds a depleted base", while the use runs from that dynamic's theorem to this one's. The direction of use is not a direction of a course, and the limits must say so.
+
+**8. The words for the dynamic's section.**
+
+Heading sentence, each section, once:
+
+> **Uses between proofs.** Computed from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+
+Chains:
+
+> *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+
+No line, where the dynamic lists a printed theorem:
+
+> None found. A use Lean's printer did not follow would not show here.
+
+No line, for the 17:
+
+> Not read: this entry lists no theorem of the package, so no line can be computed for it.
+
+Shared listing, if the lines are shown at all (I would show the listing in their place, as in sample B):
+
+> `T` is listed under both dynamics, by hand. Lean adds only that `T` uses `U` [or: that `U` uses `T`]; that the two dynamics meet here is the listing's choice, not read off Lean.
+
+A line printed before a module changed:
+
+> (printed from `Becoming/Optimum.lean` before its last change; not set against it since)
+
+Name every such module on the chain, not "this module".
+
+At a section's heading when a listed name is missing from the printed file or sits in a changed module:
+
+> Some theorems listed here were declared or changed after the list was printed; a use of theirs is not shown, and their having no line says nothing.
+
+On the atlas's front page:
+
+> The lines on uses between proofs were computed from a list Lean printed at [commit]. [N] modules have changed since: [names]. For theorems declared in them a line may show a use that is gone, and a use made since is not shown. This is told, and not enforced.
+
+The design's header (DESIGN.md line 11) has no commit or date; this sentence needs one.
+
+**9. The paragraph of limits for the terrain page (anchor `uses-between-proofs`).**
+
+> *AI-written. Computed at each render from a list Lean printed (its header is below) and from which theorems the entries list; typed by no one, and no result.* A line of this kind says that the proof of one theorem, as written, uses another theorem, and that the entries list the two under different dynamics. It says no more. About a tenth of the package's theorems are listed under any dynamic ([n] of [N]), so these lines are of that tenth; where a chain is shown it runs through the rest. A use is not a case: the using theorem need not be the used one with its roles fixed. It is not a joining and not an exit: it says nothing of a course passing from one dynamic to the other, and its direction is the order of proof, the used theorem declared before its user, which is no direction of change. It cannot see a passage: where going from one dynamic to another is itself what a theorem states, the proof of it need use nothing listed under either, and of the [58] pairs of dynamics that an exit joins, [26] have no line of this kind. Passages proved in Lean that no exit names are not on this page under any kind; that none is shown is not that none is proved. A line is of two theorems, and a dynamic lists many: that one of them is used is not a use of what the dynamic's name says. Which dynamic a theorem is under is kept by hand, so every line rests on the listing as well as on Lean; [n] theorems are listed under more than one dynamic, and a use with such a theorem at one end is shown as a shared listing and not as a use between the two. Only theorems declared in the package's modules are printed, and definitions are not followed: [17] dynamics list no such theorem and can have no line ([6] list no declaration, [11] only declarations in other Lean trees), and a theorem stated with another dynamic's notion and using none of its theorems has none. The printer follows one call, and Lean's own auxiliary declarations under a theorem's name; a use it does not follow is not shown, so where no line is, none was found. A chain through theorems no dynamic lists says where the proofs as written lead, and not that the first needs the last: a theorem between may prove several things of which the next takes one. Such a chain also rests on what is not listed: were a theorem between entered under a dynamic, the chain would stop there. How often a dynamic's theorems are used says they were proved earlier and are called often; it says nothing of that dynamic's place among the others. The figures in this paragraph are counts of what is listed and printed, told so that a reader knows how much the lines cover. They change when a theorem is listed or a proof rewritten, and a change in them is not the map nearer or further.
+
+Checked against the coordinating session's six points:
+
+1. Chains and direct uses are kept apart on the page, and no figure mixes them.
+2. Shared listing is said as the listing's, both ends.
+3. Those that cannot have a line are named, 17.
+4. The road sentence carries its figure: 26 of the 28 hand-kept pairs with no use are exits, by my count.
+5. Coverage comes second, before any limit of detail.
+6. Direction is said as order of proof.
+
+Against the project's words: no "centre", "middle", "hub", "most" or "largest piece"; nothing ranks. I use "place among the others" where the design had "a middle". "Proved in Lean" is kept for the passages sentence only.
+
+**10. LESSER. What should not be shown at all.**
+
+- **Counts by kind, side by side** (DESIGN.md line 21). Roads, same-law pairs and uses set next to each other invite the reading "twice as joined", the count that becomes an aim. Each figure belongs inside the sentence of the limit it qualifies, as in 9.
+- **No pieces, no "linked to no other", no "largest".** Those numbers moved from 74 to 114 by the chain rule alone, and by my count 42 of the 230 links turn on double listing.
+- **"Hand-kept" against "from Lean".** Do not set the kinds apart this way: 56 of the 71 exits that name another dynamic are by a Lean law. The honest contrast is typed against computed. Otherwise a reader takes "proved from" for the only proved kind and roads for unproved.
+- **The reverse direction.** Keep it, because a link visible from one end only is not a map. Show direct uses only, grouped by this dynamic's theorem, with no total.
+- **The 22 (really 42).** Not among the uses; as a shared listing. It is the store's fact and no page shows it today: 42 pairs of dynamics share a listed declaration, and 21 of those pairs are on no hand-kept line.
+
+**11. LESSER. Whether chains mislead where direct uses would not: yes, in three ways.**
+
+- **A bundle.** This is the `exchange_needs` case of finding 1. A direct-only layer keeps that theorem's direct uses (`Cycle.closed_more`, `Throughput.throughput`) and drops the two false links.
+- **The far theorem hides the near one.** Three dynamics reach least-loss-rest only through `Optimum.Next.drawable_le_of_gains` (Optimum.lean:6515) to `Amounts.le_by_exchange`: "Weighting later draws less", "Every optimum rebuilds a depleted base" and "Others drawing first end the base". A reader concludes that what they share is the least loss. What they share nearest is `drawable_le_of_gains`, a law no dynamic lists; two of them also share `Optimum.Next.frontier_gains_of_most` (Optimum.lean:6624). A direct-only layer would say nothing here, which is truer than pointing six calls away.
+- **A law in between, not plumbing.** Several of the theorems in between are laws of their own. `Flow.change_stops_unrefuted` (Openness.lean:288) calls itself "the least-loss law … at whole-number amounts", and all six witnesses from "The rest theorem" to least-loss-rest pass through it. `Amounts.family_rests_of_archimedean` (Amounts.lean:273) is the Archimedean form of a law least-loss-rest lists. `Optimum.ends_within` (Optimum.lean:2289) calls itself "the case of rest by balance". There the chain is right and the listing has a gap. So a chain is as much a question to the listing as a link, and that is the reason to show chains with the theorems between named, and never as "through n theorems".
+- **Not monotone.** A chain depends on what is not listed. Listing a theorem in between removes the link and makes two others.
+
+**12. LESSER. Room for the roads (the other session's survey).**
+
+Nothing in the design's parts blocks a later kind, and P1 rightly carries only uses. The danger is in the name: "links drawn from the Lean" will be read as every relation Lean proves between two dynamics.
+
+From `candidate-passages.json` (at `0db3aaacc`, 50 candidate theorems, unchecked; my pairing of its fields gives 27 pairs): 8 are pairs with a use, 3 are hand-kept, 18 are on no line of either kind. A passage is read from a statement (which notions are in the premises, which in the conclusion). A list of what proofs use cannot give that, and should not be stretched to.
+
+What the layer should say is in 9: "Passages proved in Lean that no exit names are not on this page under any kind; that none is shown is not that none is proved." Where a using theorem is itself a candidate passage (`ChoiceCountCapture.counted_outlives_loss`), its use lines show the lesser fact; if the survey lands, such a line should point up to the exit, as the case rows do in 7. Do not put the survey's 50 on a page until it is checked.
+
+**13. LESSER. Smaller points.**
+
+- "Every witness" (DESIGN.md line 20) must be taken over all witnesses, not over the few shortest kept for display, or the listing mark flips.
+- The test in P6 that "every page that shows a link carries the words" should test the heading sentence of 8, in each section that has lines. Sections are looked up alone (atlas.py:1432-1433).
+- The terrain note needs its "AI-written" as the page's other notes have (atlas.py:2011).
+- Eight listed `Becoming.*` names look like theorems by a rough regex and match no printed row; 55 I could not classify. This bears on the design's risk 4 and I did not settle it.
+
+---
+
+## Verdict
+
+Build it, with the form and words changed first. Hold the layer until these are settled:
+
+- the kind's name and theorem-first lines (1);
+- "a floor" (2);
+- "most basic" (3);
+- double listing treated at both ends (4);
+- the 17 (5);
+- behind-ness at the heading (6).
+
+The limits paragraph of 9 and the placement in 7 are what I would defend as a reader. The layer is worth having for what the three samples show: where a case row already says more, where a road has no use under it, and where a law sits unlisted between two dynamics.
+
+## What I did not read
+
+- `_process/DIRECTION.md` beyond its first 15 lines.
+- `atlas.py` outside lines 1183-1466 and 1975-2166: `validate`, `build`, `render`, the premise and crosswalk pages.
+- The tests, `scratch_build.py`, `gate.py`, the JOINS tool, `map.html`, and whatever reads `results/data/atlas.json`. The design's risks 1, 2, 6 and 7 are untouched here.
+- The record of 22 November on the list law.
+- Ren's words in `sources/`.
+- The Lean proofs, beyond the docstrings and the one proof body cited.
+- The 28 hand-kept pairs with no use, one by one.
+- Any candidate passage's statement.
+- The family pages beyond the three sections.
+
+I ran no Lean, no build and no test.

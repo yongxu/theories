@@ -1,0 +1,79 @@
+Review of `/Users/ren/tmp/dj/wt-layer/tools/research/proof_uses.py` and `tools/research/tests/test_proof_uses.py`
+
+I found one defect that writes a wrong print (MUST 1) and one hole where a stale print passes as bound (MUST 2). The rest are LESSER. All 24 tests pass (`python3 -B -m unittest tools.research.tests.test_proof_uses`, 0.078 s). I ran no Lean, render or gate and changed no file.
+
+**Findings**
+
+1. **MUST: a module that silently loses its rows still gives a bound print.** proof_uses.py, lines 692–696.
+   - The Lean side filters modules by `receiptModules.contains (toString m)`. If that string test misses a module (a `toString` that differs from the receipt's name, or a future edit), its theorems drop out inside Lean.
+   - The COUNT line still agrees with the rows printed, and `parse_output` gives that module an empty list. The only guard is "no row at all".
+   - The receipt already holds a floor for each module. On batch29's rows, every `Becoming.*` module has at least as many rows as the receipt's `modules[].theorems`. The three outside modules are the only ones with theorems and no rows (35, 23 and 16), because the old printer skipped them.
+   - Fix, after `parse_output`:
+     ```python
+     short = sorted(m['module'] for m in receipt.get('modules', []) if isinstance(m, dict)
+                    and m.get('module') in by_module and len(by_module[m['module']]) < (m.get('theorems') or 0))
+     if short:
+         raise Refused(f'the printer gave fewer rows than the receipt counts theorems for {len(short)} module(s), e.g. {short[:3]}')
+     ```
+     This also turns the untested "private theorems are kept / the outside modules have rows" into something the first real run can fail.
+
+2. **MUST: `bound` ignores the toolchain.** proof_uses.py, line 479.
+   - A toolchain bump with no `.lean` change gives a new receipt with the same `source_sha256`, so `core_sources_sha256` is unchanged and the print stays bound. Yet the proof terms are those of the old Lean.
+   - The gate check is selected (lean-toolchain is under `LEAN/**`) and passes. The index records `toolchain` for exactly this case.
+   - Fix: `out['bound'] = out['sources_bound'] and out['printer_bound'] and out['toolchain_agrees']`, plus a problem sentence: `'the print was made with toolchain {index toolchain}; the core receipt is of {receipt toolchain}'`.
+   - Update `test_the_toolchain_is_told_beside_bound` to expect `bound` False.
+   - This departs from A7's letter ("sources and printer"). Its reason is the reason A4 records the toolchain.
+
+3. **LESSER: the gate passes a damaged print that `--check` and the atlas reader refuse.**
+   - `damage` does not enter `bound`, and `gate.proof_uses_check` reads only `bound`. So a deleted or cut module file passes the gate.
+   - Meanwhile `--check` exits 1, and `atlas._proof_uses` returns "the index names the module m and it has no file".
+   - Fix in gate.py `proof_uses_check`, after reading `found`: `errors += [f'the print\'s files: {d}' for d in found.get('damage') or []]`. Leave `bound` as it is.
+
+4. **LESSER: a Lean panic is not refused.** proof_uses.py, line 286.
+   - `getElem!` (`inReceipt[idx.toNat]!`, `mods[...]!`) prints `PANIC at …` and carries on with a default value, and the exit code stays 0. The line goes into `notes`, and the run writes.
+   - Fix: `errors = [n for n in notes if re.search(r'\berror:|PANIC', n)]`.
+
+5. **LESSER: the index's words say slightly more or less than the printer does.** ABOUT, lines 96–98 and 101–102; the same in the module docstring.
+   - "Definitions are not followed" contradicts the earlier clause: matchers are definitions under the theorem's name, and they are followed. Should read: "No other definition is followed, so a use that passes through a definition's body does not show."
+   - "(equation lemmas, injectivity lemmas, abstracted proofs under a definition)" is narrower than `skipLast`/`isInternal`. These also skip `_auxLemma.N`, and `thm._proof_N` / `thm._simp_N` that Lean's aux-lemma cache reuses in another theorem. Add: "and any name with a part beginning `_`, such as an abstracted proof under another theorem that Lean reuses."
+   - "what a used theorem's own proof uses is on that theorem's line" holds only for used theorems that have a line. Add: "where it has one".
+
+6. **LESSER: the tests named "a private theorem has a row" and "a module outside `Becoming.*` has rows" cannot fail on a wrong printer.** test_proof_uses.py, line 130.
+   - They test only that `parse_output` passes such rows through.
+   - Rename them to say so ("…is read through"), or pin the Lean text as well:
+     ```python
+     assertIn('(privateToUserName c).isInternal', PRINTER)
+     assertNotIn('`Becoming).isPrefixOf', PRINTER)
+     ```
+   - MUST 1 is the real guard.
+
+7. **LESSER: no test reaches `run()`.**
+   - The claim that a dirty tree, a cold cache, a failed Lean run, a short output or a moved HEAD writes nothing comes from reading the code only. (I read it and agree, see below.)
+   - A test could monkeypatch `git_state`, `checker`, `plan`, `lacking`, `build` and `run_printer` on a temporary root. Then assert that for a cut output, a non-zero exit and a HEAD that differs on the second call, `proof-uses/` is not created. It runs in milliseconds.
+
+8. **LESSER: `printer_sha256` binds the Lean text, not the Python that turns its output into files.**
+   - A later change to `module_text`, `parse_output`'s dedupe or ABOUT leaves an old print "bound".
+   - Fix: add `'format': FORMAT` (a constant) to the index and compare it in `status()`, or compare `index.get('about') == ABOUT`.
+
+9. **LESSER: `lacking()` can undercount.** Lines 535–536.
+   - It treats an entry as held without checking output digests against `entry['outputs']`, which `cb.reuse` does.
+   - A corrupt blob is then counted as held and compiled without `--build`. Cheap to add: `and [digest((cache/step.key/Path(o).name).read_bytes()) for o in step.outputs] == entry.get('outputs')`.
+
+10. **LESSER: gate.py `TESTS` has no `'test_proof_uses': ()` entry, and the tree's `.build` takes about 320 MB per worktree.** The writer flagged both, and I agree.
+
+**Checked and found right**
+- **Lean text against v4.29.1:** `privateToUserName : Name → Name` exists in `Lean/PrivateName.lean`, in namespace `Lean`. `Name.isInternal` exists in `Lean/Data/Name.lean`.
+  - The `s != pre` form of `digitsAfter` is the same as the old length test, given `startsWith`.
+  - Every other construct is from AllProofHeads.lean, which ran on this toolchain and printed plain `ROW` lines on stdout.
+  - Aux lemmas are named `<decl>._proof_N` (`mkAuxDeclName` / `mkUniqueName` under the current declaration), so they are followed under the theorem's name.
+  - Of batch29's 50 uses with no row, 36 are private theorems, which would now get rows. Batch29 shows no self-uses.
+- **usedBy:** terminates through `seen`, and follows only names that n is a prefix of.
+- **Coverage:** `closure(['Becoming'])` is exactly the receipt's 412 modules, so importing them all in the stub raises no clash.
+- **Restore path:** `plan()` makes the same `lean_plan` call as scratch_build (registries, audited, signed, prelude), so the keys match. Outputs land at `.build/<path>.olean` and `.build/ProofUsesStub.olean`, matching what `build()` checks. The printer runs with `LEAN_PATH` set to `.build` and `cwd` at `.build`, as `run_lean` does. The `.printer/` folder and the temporary files are skipped by `overlay`.
+  - It does not use boundary.py's way (restore with `cb.reuse` and no compile). That is acceptable, given `--max-steps`.
+- **Dirty-tree rule:** correct on `-z` renames. The three receipt sources outside the package are tracked and their paths have no `..`.
+- **Write order and failures:** every failure path raises before `write_print`. `replace_bytes` is atomic and skips identical bytes.
+- **Determinism:** files are sorted, written with `ensure_ascii=False`, and end in a newline. A second run on the same HEAD and core run changes nothing.
+- **Formats:** `status()` gives `bound`, `problems` and `modules_behind` as gate.py reads them. The index keys match `atlas._index_problem`. `sources_digest` equals the one in shared_laws.
+
+**Not read:** the brief given to the writer, so I checked `status()` against gate.py's use of it, not against the brief's own wording. Also not read: the rest of atlas.py, test_atlas and test_gate, `cb.wait_for` and `try_flock`, and the other returns.

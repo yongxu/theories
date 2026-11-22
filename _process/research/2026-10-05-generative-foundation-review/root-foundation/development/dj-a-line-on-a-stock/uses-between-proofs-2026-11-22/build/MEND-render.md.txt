@@ -1,0 +1,61 @@
+**Report: mending the render of uses between proofs (`atlas.py`, `test_atlas.py`) by its review**
+
+All nine findings and the four further conditions are applied, with two wordings of finding 1 softened and one gap left open (below). `python3 -B -m unittest tools.research.tests.test_atlas` passes: 123 tests, none skipped. Nothing is committed and no Lean, render, check or gate was run.
+
+## Findings of the review
+
+1. **Applied, with two wordings changed.**
+   - `_proof_uses` keeps each receipt declaration's module (returned as `declared_in`).
+   - `_add_uses` sets `u['no_row'] = {'in_modules_behind', 'other'}` for every dynamic, bound or not.
+   - `_uses_rows` no longer has the `if b and` guard, so a bound print now says a listed receipt theorem has no row.
+   - The terrain's sentence is split the same way.
+   - **Changed wording 1:** "(it may have been declared or renamed after it)" in place of "(declared or renamed after it)". The printer skips theorems by the form of their names (`proof_uses.py:187-193`, e.g. `inj`, `eq_def`), while the receipt's kinds come from the source scan. A hand-declared theorem of such a name in a changed module has no row and was not declared after the print.
+   - **Changed wording 2:** "changed or added since the print was made". `modules_behind` (`atlas.py:2042`) also returns modules only the receipt names.
+2. **Applied as worded** (the clause on what the printer follows and on a structure field that is a proposition).
+3. **Applied as worded** (`atlas.py:2181`): "`u`, in `t`; …, listed under [Y]."
+4. **Applied as worded** (`return late + rows`, `atlas.py:2205`). The no-row rows are in the same head list.
+5. **Applied** (`atlas.py:2033`): a chain keeps the dynamics for which `(y, end)` is not a direct line here, and is dropped only when none is left.
+6. **Applied.** `proof_uses` is imported at module load and `proof_uses.sources_digest(receipt)` is used; `hashlib` is gone from `atlas.py`. Importing `atlas` took 0.08 s and `check_becoming` was not in `sys.modules` afterwards.
+7. **Applied as worded:** "list no theorem the print has a row for".
+8. **Applied.**
+   - No other change: every page of the bound and behind renders is compared, with the behind rows, the no-row rows and the terrain's "made from" paragraph dropped and the front sentence cut.
+   - Golden test against HEAD: see condition (d).
+   - New tests for: the case mark only for the very pair; the order of `chains` and `used_by`; the `MODULES_NAMED` cap; the bound-case no-row row; one chain per used theorem.
+   - Word check: now over every section's lines, the terrain's section and the front sentences, in both renders, with the layer's own denials removed.
+9. **Applied.**
+   - The loader returns an error naming the module when a file's row count differs from the index's `theorems` (`atlas.py:1905`).
+   - `_index_problem` asks `format` first and refuses an absent or other value with "the print is of another format and must be made again with tools/research/proof_uses.py". The reader's constant is `PROOF_USES_FORMAT = 1`, and a test holds it equal to `proof_uses.FORMAT`.
+   - The reader still refuses an index without a commit. `proof_uses.index_object`, as it now stands in the worktree, raises without one; that is the other mender's change.
+
+## Further conditions
+
+- **(a)** No page says the print being behind is told and not enforced; none did. The behind sentence now reads: "… `M`. Lines of theorems declared in it were printed before that module last changed: such a line may show a use that is gone, and a use made since is not shown." I also replaced "it has not been set against this receipt" with what follows from the two files: "the hash it carries is not that of its own modules".
+- **(b)** The sentence on passages is kept and now pinned whole in a test.
+- **(c)** Every terrain figure is now counted at render. Theorems, modules and names without a row are counted from the rows read, not taken from the index's `counts`; a test corrupts the index's counts and the terrain is unchanged. The data file gains `proof_uses.counted`, which is an addition you did not ask for. The limits paragraph has exactly five figures, each in its sentence; no figure of pieces, of dynamics with no line as a total, or of a most-used dynamic is written.
+- **(d)** The 80 tests at HEAD are unchanged: the only removed line in the test file's diff is the import line. The golden test is added: it runs `git show HEAD:tools/research/atlas.py` inside the test, loads it as a module, and compares every page, the data file and `inputs()` on three stores. It skips itself once HEAD's file has the layer, because it would then compare the code with itself. The with-and-without test is kept.
+
+## Files changed
+
+- `/Users/ren/tmp/dj/wt-layer/tools/research/atlas.py`
+- `/Users/ren/tmp/dj/wt-layer/tools/research/tests/test_atlas.py`
+
+## Tests run
+
+```
+python3 -B -m unittest tools.research.tests.test_atlas
+----------------------------------------------------------------------
+Ran 123 tests in 7.187s
+
+OK
+```
+
+Two read-only checks in memory, nothing written:
+- **Live data file, no print:** the front page, the terrain and the eight family pages equal those of HEAD's code, as do `ABOUT` and `inputs()`.
+- **Earlier measurement list** (not a real print): the layer ran in 0.02 s and gave 180 direct uses, 124 chains and 180 reverse uses. Of the layer's own words that must not appear, none was found. "proved from" occurs twice in the live family pages (f.md and g.md), in the entries' typed text.
+
+## Not done
+
+- **One chain per used theorem is unchanged.** Where two chains from one dynamic reach the same theorem with different dynamics lists, the page shows only the shorter chain's dynamics; the data file has both. This is the same kind of gap as finding 5; the review asked only for a test of the rule, so I left it.
+- No check of the printer hash or toolchain on the pages; the gate check holds those.
+- No real print exists, so the real render, the links check on real pages, and Lean's private and «»-quoted names are unchecked.
+- `test_atlas_index`, `test_connection_map`, `test_proof_uses` and `test_gate` were not run.

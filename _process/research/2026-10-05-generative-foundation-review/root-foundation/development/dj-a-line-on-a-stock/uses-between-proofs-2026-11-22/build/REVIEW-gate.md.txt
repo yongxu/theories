@@ -1,0 +1,91 @@
+1. **MUST, `tools/research/gate.py:983-990`: a `status()` that returns `None` passes the check silently.** If `status(ROOT)` returns `None`, the `if found is not None` branch is skipped and no error is added. I ran a probe on the test's temp repo: an index was present, `status` returned `None`, and the result was `{'errors': [], 'bound': None, 'note': None}`, a pass that gives no reason. A non-dict result has a second problem: a list raises `AttributeError` at `found.get`. That line is outside the `try`, so the gate crashes and `GATE_PROOF_USES` cannot pass it. Fix: move the reading of the result into the `try` and refuse anything that is not a mapping:
+   ```python
+   try:
+       found = status(ROOT)
+       if not isinstance(found, dict) or 'bound' not in found:
+           raise TypeError(f'status() returned {type(found).__name__}, not a mapping with "bound"')
+       bound = found['bound'] is True
+       problems = [str(p) for p in found.get('problems') or []]
+       behind = sorted(str(m) for m in found.get('modules_behind') or [])
+   except Exception as exc:
+       errors.append(f'{PROOF_USES_TOOL} status() failed: {exc!r}; {RUN_PROOF_USES}')
+   else:
+       if not bound: ...
+   ```
+   Using `is True` also stops a string `'false'` from counting as bound. Add a test for a `status()` that returns `None`, and one for a list.
+
+2. **MUST, `gate.py:940-946`: an error raised while importing the tool crashes the check, so the escape cannot let it pass.** `proof_uses_status` catches only `ImportError`. My probe raised a `SyntaxError` from the import with `GATE_PROOF_USES='printer wrong'` set, and the check raised instead of passing with the reason. The writer's claim that "the escape covers every failure" is therefore false. The design's case is "a day the printer is wrong", and the printer is text inside the tool. There is a second fault: when the tool exists but one of its own imports is missing, the `ImportError` is reported as "the tool or its status() is absent", which points at the wrong cause. Fix:
+   ```python
+   def proof_uses_status():
+       try:
+           module = importlib.import_module('tools.research.proof_uses')
+       except ModuleNotFoundError as exc:
+           if exc.name in ('tools.research.proof_uses', None):
+               return None
+           raise
+       return getattr(module, 'status', None)
+   ```
+   In `proof_uses_check`, wrap the call in `try: status = proof_uses_status() except Exception as exc: errors.append(f'{PROOF_USES_TOOL} does not import: {exc!r}; ' + RUN_PROOF_USES); status = False`, and skip the comparison when `status is False`.
+
+3. **MUST, `gate.py:265`: the check is selected far more widely than A7 allows.** The rule reads `LEAN + '/**'`, which is the whole `generative-basis/lean` tree, not "a Lean file of the package". Replaying `gate.reached` by hand, these paths select it:
+   - `lean/README.md`;
+   - `lean/physics/Foo.lean`;
+   - any path under `history/`, `universal-ethics/`, `inquiry-root/*-checks` or `becoming/fallible-inquiry-checks` (about 80,000 tracked files, mostly logs).
+
+   On a day when main's print is behind (after an escape), any landing in those areas is stopped by a print it did not touch. That is the design's "Stop another session's landing". The check's result depends only on the core receipt, the print and the tool, since `status` compares the index with the receipt. Fix: `reads=(BECOMING + '/becoming-verification.json', BECOMING + '/Becoming.lean', BECOMING + '/Becoming/**', f'?{PROOF_USES}/**', f'?{PROOF_USES_TOOL}')`. Add a `derived` function returning the receipt's `source_paths` outside `Becoming/` (today `deeper/RelationalRenewal.lean`, `GenerativeCore.lean` and one in `inquiry-root`). Add negative cases to the rule test for `LEAN + '/README.md'` and `LEAN + '/physics/X.lean'`.
+
+4. **MUST, `_process/RESULT-WORKFLOW.md:166`: the paragraph says more than the code does.**
+   - **Selection.** "selected only by a change to the Lean tree, the core receipt, the print or the tool" is false. The CODE rule (`gate.py:375`) means every `tools/research/*.py` and `_process/research-config.json` selects it. I confirmed `tools/research/atlas.py`, which this very build changes. A path no area places selects it too (`newtop/x`).
+   - **The escape.** The paragraph says the escape "lets it pass for a day the printer is wrong". In code it covers every failure except the import and type crashes of findings 1 and 2.
+   - **After the merge.** "after a rebase" leaves out the case the paragraph above prescribes: "merge main into the branch".
+
+   Words, once finding 3 is fixed: "The gate's `proof-uses` check is selected by a change to the package's Lean, the core receipt, the print or any research tool (every check is). It holds that the print's index binds the core receipt's sources and the printer. It runs no Lean, and while no print exists, nor did at the base, it passes and says so. `GATE_PROOF_USES='reason'` lets any failure of it pass, with the reason, what would have failed and the modules the print is behind for in the check's log; the reason goes into the landed clause." And: "after merging or rebasing over another Lean landing it runs it again."
+
+5. **MUST, `gate.py:289-300` (STEPS): a sentence already on the page becomes false.** `RESULT-WORKFLOW.md` says "`make gate-plan` lists the steps that write". With this change, a Lean landing is told by the plan to run the core run, the shared laws and the render, but not the print. A7 makes the print a required step, so this is behaviour, not polish. Fix: add between `shared laws` and `render`:
+   ```python
+   Step('proof uses', f'python3 -B tools/research/gate.py hold -- python3 -B {PROOF_USES_TOOL}', (),
+        'after the core run, before the render: commit the files of the print it changes; the proof-uses check fails until then',
+        follows='proof-uses'),
+   ```
+   Update the two pinned lists in `tests/test_gate.py:217` and `:231` to `['core run', 'shared laws', 'proof uses', 'render']`, if those trees select `proof-uses`.
+
+6. **LESSER, `gate.py:991-992` with `gate.py:475` and `:1036`: the reason does not reach the gate's own output, and an escape outlives its unset.**
+   - **The run summary.** `run()` records only the status and the log path, so a clause written from the gate's summary sees "passed", not the reason. A7 says "the reason in the gate's output".
+   - **The pass key.** `environment()` leaves the escape out of the key, so a rerun on the same tree without `GATE_PROOF_USES` reuses the escaped pass, and its output carries no reason at all.
+
+   Fix:
+   - in `environment()`, add `if check.name == 'proof-uses': env['escape'] = os.environ.get('GATE_PROOF_USES', '').strip() or None`;
+   - in `run()`, after a passing proof-uses run, do `try: results[c.name]['accepted_reason'] = json.loads(log.read_text()).get('accepted_reason') except ValueError: pass`.
+
+   The board's `GATE_BOARD_REWRITE` has the same gap; it is the precedent, not a defence.
+
+7. **LESSER, `gate.py:992`: a reason is reported as accepted when nothing failed.** With `bound` true and `GATE_PROOF_USES='x'` set, the probe gave `accepted_reason: 'x'` and empty `would_fail`, so a clause would quote an escape that was never used. Fix: `'accepted_reason': reason if (reason and errors) else None`.
+
+8. **LESSER, `tests/test_gate.py:1253`: the "only" in the test's name is not tested.**
+   - It checks three negatives and none inside `LEAN/**`, so it cannot catch finding 3.
+   - Its positive case for `PROOF_USES_TOOL` passes through CODE even if `'?tools/research/proof_uses.py'` is dropped, so that case cannot fail.
+   - `test_the_tool_is_imported_only_when_the_check_runs…` (line 1365) tests only the `None` in `sys.modules`, not "only when the check runs".
+
+   Fix: add the negatives of finding 3, and either drop "only" or test it.
+
+9. **LESSER: the GT gate document's table of checks has no row for the new check.** The document is `_process/research/2026-10-05-repository-reconciliation/architecture/gt/GATE.md`, table at line 90 and the list at line 24. Add one row, `` | `proof-uses` | `gate.py proof-uses` | the package's Lean, the core receipt, the print, the tool | the print's index binds the core receipt's sources and the printer; passes while no print exists | ``, rather than restating the paragraph.
+
+**What I checked and found right**
+- **Selection by hand.** `gate.reached` gives these results for M, A and D alike:
+  - not selected: `ONE-PAGE.md`, the board, `entries/dynamics.json`, `Makefile`, `RESULT-WORKFLOW.md`, `tests/test_atlas.py`, a Lean file in another `experiments/` tree;
+  - selected: a package `.lean`, the core receipt, `INDEX.json`, a module `.jsonl`, the tool, `atlas.py` and `research-config.json` (both through CODE).
+- **Other checks.** Adding the check changes no other check's selection: reads are per check, STEPS and `follows` are unchanged, and `--base` is added only for `proof-uses`.
+- **`stale_rules`.** It stays clean because both new reads are optional.
+- **Empty or whitespace escape.** It is stripped and fails, both in the function and through `main` with exit 1.
+- **No index at all.**
+  - It passes only when the index is absent in the tree, absent at the merge base, and nothing lies under the folder.
+  - It fails when the index is deleted, and when module files sit there without it.
+  - `run()` refuses a dirty tree, so the working-tree reads match HEAD there.
+- **No Lean.** The gate side runs no Lean, opens no `.lean` file and spawns no process. Whether `status()` does is untested, since `tools/research/proof_uses.py` does not exist yet.
+- **Tests.** `python3 -B -m unittest tools.research.tests.test_gate.ProofUsesTests tools.research.tests.test_gate.RuleTests`: 14 tests, OK (load 15.8). I did not rerun the whole `test_gate` module and relied on the writer's run of 113 for it. The probes used the test module's temp-repo harness from `/private/tmp/claude-501/-Users-ren-theories/a5a43704-f723-406f-926c-7c46463ba40a/scratchpad/probe_pu.py`; no worktree file was changed.
+
+**What I did not read**
+- `proof_uses.py`, which is absent from the worktree, and the real shape of `status()`.
+- `atlas.py`, which another writer is changing in this worktree right now (it appeared as modified during the review; not touched by me).
+- `receipt_check` beyond its first lines, and `GATE.md` beyond the lines grep found.
+- `RETURN-attack-words.md` sections 7 to 10 in full, because they concern page words and the change here puts no words on a page.

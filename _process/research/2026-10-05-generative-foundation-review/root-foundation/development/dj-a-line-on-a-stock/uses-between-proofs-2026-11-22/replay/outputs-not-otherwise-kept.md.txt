@@ -1,0 +1,46 @@
+*Outputs of the replay that no other file here holds, copied from the terminal of the session that ran it (22 November 2026, 19:06 to 19:12 WIB). The two throwaway worktrees they were made in are removed; the old print is kept outside the repository at /Users/ren/tmp/dj/replay-kept/print-at-f7a3d51ae/ .*
+
+## The same tree printed from two directories (wt-layer and a throwaway worktree, both at 608ff1239)
+
+    $ diff -rq <wt-layer>/theories/becoming/results/atlas/proof-uses <replay-new>/theories/becoming/results/atlas/proof-uses
+    (no output: identical, every file including the index)
+
+## The tool's own check, the old print in place against the receipt of the present Lean
+
+    $ python3 -B tools/research/proof_uses.py --check
+    present: True; bound: False; kind: "not bound"
+    modules_behind: ["Becoming.GrammarCandidates", "Becoming.GrammarCourse", "Becoming.Likeness"]
+    problems: ["the print is of other sources than the core run of 20261122T094514.036246Z checked (core_sources_sha256 differs): 3 module(s) changed, 0 not printed, 0 printed and no longer in the receipt"]
+    damage: []
+
+## The gate's check alone, the same state, no escape (exit 1); with an escape of blanks only it also exits 1
+
+    errors:
+      "the print is behind the Lean: run python3 -B tools/research/proof_uses.py after the core run and before the render, and commit the files it changes with the pages"
+      "the index does not bind the core receipt; behind for 3 module(s): Becoming.GrammarCandidates, Becoming.GrammarCourse, Becoming.Likeness"
+      "the print is of other sources than the core run of 20261122T094514.036246Z checked (core_sources_sha256 differs): 3 module(s) changed, 0 not printed, 0 printed and no longer in the receipt"
+
+(This run was before the line on the escape was added to that failure; `gate-runs-on-the-old-print.json` has the failure as it now reads.)
+
+## Rendered once with the old print (the pages were not kept)
+
+The front page, in its paragraph on how far it is read: "The lines on uses between proofs were computed from what Lean printed at commit `f7a3d51aec19` (the core run of `20261121T223556.393134Z`). 3 modules differ between the print and the core receipt as it now stands (changed ..." (the line was cut at that point on the terminal).
+
+The terrain's section, its last paragraph: "**What the print was made from.** Commit `f7a3d51aec19`, the core run of `20261121T223556.393134Z`, leanprover/lean4:v4.29.1: 20,681 theorems in 412 modules. 3 modules differ between the print and the core receipt as it now stands (changed since, or in only one of the two): `Becoming.GrammarCandidates`, `Becoming.GrammarCourse` and `Becoming.Likeness`. Lines of theorems declared in them were printed before those modules last changed: such a line may show a use that is gone, and a use made since is not shown."
+
+A search of the eight family pages for "printed before" found it in none.
+
+## The new print back in place
+
+    $ python3 -B tools/research/proof_uses.py --check
+    bound: True; kind: "bound"; modules_behind: []; problems: []; damage: []
+    $ python3 -B tools/research/gate.py proof-uses --base main
+    errors: []; kind: "bound"; bound: True
+
+## The gate refusing the worktree after the tool had run in it (the defect), before the tool's tree was moved
+
+    $ python3 -B tools/research/gate.py run --base main --only proof-uses
+    errors:
+      "the tree has uncommitted or untracked files; commit them or move them aside, so a pass belongs to one tree"
+      "!! tmp/proof-uses-tree/.printer/ProofUses.lean"
+      "!! tmp/proof-uses-tree/ProofUsesStub.lean"

@@ -1,0 +1,26 @@
+start 19:03:22
+the cache lacks 2 of the 414 steps: compile ProofUsesStub, audit ProofUsesStub
+{
+ "modules": 412,
+ "theorems": 20681,
+ "uses_without_row": 20,
+ "module_files_changed": 412,
+ "module_files_removed": [],
+ "index_changed": true,
+ "not_of_the_print": [],
+ "steps_the_cache_lacked": 2,
+ "steps_run": [
+  "ProofUsesStub",
+  "ProofUsesStubAxiomAudit"
+ ],
+ "printed_from": {
+  "commit": "608ff12393644efbf00f4c38c517425dc53f1799",
+  "core_run": "20261122T094514.036246Z"
+ },
+ "lean_notes": 0,
+ "receipt_theorems_without_row": 0,
+ "the_first_of_them": [],
+ "rows_the_receipt_scan_lacks": 236
+}
+exit 0
+end 19:03:50

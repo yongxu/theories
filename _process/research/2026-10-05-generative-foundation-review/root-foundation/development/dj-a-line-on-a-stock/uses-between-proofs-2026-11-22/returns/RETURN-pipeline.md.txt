@@ -1,0 +1,135 @@
+1. Optional input file: where it is read, the snapshot, and what happens absent or unlisted
+- The only precedent is `CHECKS` (atlas.py:85). `_checks()` (1803-1816) returns `(None, [])` when the file is absent. A file that does not parse returns an error, and `render()` (2395-2397) then returns no pages at all, so the connection map and JOINS also go unwritten (research.py:406, 421). `render()` puts it on the object as `atlas['crosswalk_checks']` (2399).
+- `inputs()` (1792-1800) holds the vocabulary, the entries, `ENTRIES/*.json`, `CHECKS` only when `is_file()` (1796), and `TESTS` only when `bindings.json` exists. A `.jsonl` at `ATLAS/` is matched by neither glob, so it must be added by hand, guarded by `is_file()` the same way. The test at test_atlas.py:422-425 asserts the exact list: an unguarded add breaks it, a guarded one keeps it passing (as test_atlas.py:602 does for CHECKS).
+- At render, absent: the pages are today's, if the code takes the `None` path. At check, absent: research.py:472-477 compares the pages with that same output, so nothing fails.
+- Present but not in `inputs()`: no error at render or check. `input_snapshot()` (research.py:41-68) does not bind it, so `unchanged_inputs` (research.py:456, 487) cannot see P2 rewriting it during a render. The pages would mix two printings with no error.
+- The generated manifest (navigation.py:1034-1058) guards outputs only. An input never enters it. A new output page that does not yet exist passes (`raw is None`, navigation.py:1044).
+
+2. `_entry()`: the order of a dynamic's lines, and where new lines go (atlas.py:1336-1397)
+- The order is:
+  - anchor `<a id>`, `### name`, blank line
+  - Mechanism, Base, How far seen, Declarations
+  - Hypotheses (items)
+  - Premises, by law, only if `d['premises']` is not None; the `case_of` rows (`_case`) are inside it (1372-1376, 1384-1385)
+  - Forbids
+  - Joins, only if `links['joins']` has the dynamic (1387-1388)
+  - Exits (1389), Transitions (1390), Tests (1391)
+  - Tests bound to it (1392-1394)
+  - Open, Beyond its couplings, Sources, trailing `''`
+- The hand-kept links end at Transitions, line 1390. The new items go between 1390 and 1391, or before the trailing `''` at 1397.
+- Use `- **…**` bullets through `items()` (1344-1345), never a `#` heading. A heading would add an anchor; `page()`'s old slugs (1405-1413) are computed from titles only.
+- `_entry` is called only at 1465. Its default `links = links or {'owners': {}, 'joins': {}}` (1342) must gain any new key.
+- `family_page` builds `links = _links(atlas)` (1463). `_links` (1304-1313) indexes `d['declarations']` as written, with no prefix normalising. The new map should travel on `atlas` or as a new key of `links`.
+- Links to another dynamic's section: `_homes(atlas)` (1242-1245) maps id to `families/<letter>.md`. `_section(id, homes, here)` (1248-1251) gives `#id` on the same page, else `_href(home#id, dirname(here))`, which is relative and angle-bracketed when it holds spaces (1167-1171). The written form is `[{names[y]}]({_section(y, homes, here)})`, as at 1350 and 1368. These links are checked by `check_links` (research.py:449). `atlas_index.py:488` also calls `atlas._homes`.
+
+3. Family page sizes against PAGE_LIMIT
+- `PAGE_LIMIT` is 1,048,576 (atlas.py:81). The limit is enforced only on `.md` pages (2413-2415); `mirror.PAGE_LIMIT` is the same (mirror.py:35).
+- Sizes now, and room left:
+
+| Page | Bytes | Room |
+|---|---:|---:|
+| families/a.md | 338,325 | 710,251 |
+| families/b.md | 377,098 | 671,478 |
+| families/c.md | 177,220 | |
+| families/d.md | 178,759 | |
+| families/e.md | 92,038 | |
+| families/f.md | 141,850 | |
+| families/g.md | 222,751 | |
+| families/h.md (largest) | 399,131 | 649,445 |
+| TERRAIN.md | 249,860 | |
+| ATLAS.md | 77,200 | |
+
+- My replay of the measurement's rule on all-proof-heads.jsonl gives 230 directed links and 498 (theorem, theorem) witnesses, at most 16 for one link. By depth: 326 at depth 1, 93 at 2, 54 at 3, 16 at 4, 8 at 5, 1 at 6.
+- Each witness is written on both of its dynamics' sections. By family, as source or target: A 178, G 180, B 163, H 161, C 126, F 111, D 47, E 30. At about 300 bytes a line that is roughly 55 KB on the fullest page, so there is room by a factor of more than ten.
+- LESSER: if "all shortest chains" are kept rather than one chain per (theorem, theorem) pair, the count can multiply. Cap it at one chain per pair, ordered.
+
+4. `results/data/atlas.json` (the DATA page)
+- It is `json.dumps(atlas, ensure_ascii=False, indent=1)` of the whole `build()` object plus `crosswalk_checks` (2398-2401). It is 7,886,121 bytes now.
+- Its readers:
+  - `atlas_index` reads named fields only (atlas_index.py:150, 201-227, 294).
+  - `connection_map.payload` reads `correspondences`, groups and `len(dynamics)` (connection_map.py:192-228). map.html embeds that payload, not the atlas.
+  - `lineage` reads `correspondence_groups` (lineage.py:879).
+  - The tests check named fields (test_atlas.py:406-412, 541, 601).
+- So per-dynamic `proved_from`/`used_by` fields change only atlas.json, unless a page function is made to read them.
+- `build()` is called by tests with three arguments (test_atlas.py:285, 302, 573, 579, 867). LESSER: a new parameter must be optional, or the computation done in `render()` as for checks at 2399.
+- No frozen manifest pins any atlas output (`gate.frozen_paths()` has none under results/atlas or data/atlas.json).
+- Witness order must be sorted explicitly: render is tested as a function of its inputs (test_atlas.py:414-420) and must be a fixed point.
+
+5. How `terrain_page` builds its sections and counts (2002-2080)
+- It writes: header, the picture, the italic lead (2011-2018), the dashed-edge note (2022-2026).
+- Then, for each read family only (all its dynamics with `premises`; 2027-2029): `## F. name`, a count line, a mermaid graph, a table of exits and routes (via `_routes`, 1978-1999), and the premise-release table (2067-2078).
+- Then `_unity()` (2083-2122): "Laws given as cases of one law" and "How dynamics join" with proved/stated/reading counts at 2119-2120. Then the navigation line.
+- TERRAIN is written only when `atlas['premises']` is non-empty (2402-2405).
+- A new counts section goes after `out += _unity(...)` at 2079, as its own helper.
+- LESSER: the terrain's families are only the read ones, but the new counts are atlas-wide. Say so in the section.
+- Do not touch `terrain_counts()` (2140-2166). It feeds only `terrain_svg` (2195), which the design keeps hand-kept.
+- The front-page "behind" sentence belongs in `page()`'s "How far it is read" paragraph (1418-1430). That paragraph is emitted only when premises exist.
+
+6. How declaration names resolve to Lean names today
+- The rule, `Repository.declared` (atlas.py:256-277):
+  - The name must fullmatch `LEAN_NAME` (198), which allows `«…»` components.
+  - It is 'core' when `name` or `'Becoming.' + name` is in `registry.receipt_declaration_names(core receipt)` (registry.py:569-588), which collects names from many receipt keys.
+  - Otherwise it is the first tracked live `.lean` file whose text, read by `lean_names()` (209-246), declares that full name.
+  - A name is never matched by its last component. The validator applies this at 856-862.
+- The measurement matched the same way: `n` in the list, else `'Becoming.' + n` (count_the_map.py.txt:44-46).
+- Counts from dynamics.json: 2,785 listed names, 2,676 distinct.
+  - 2,156 are in the printed list.
+  - 336 are core but not in the list: about 300 defs, structures and abbrevs (e.g. `Becoming.«不出»` is `def`), plus the core modules the printer skips.
+  - 184 are periphery, outside the package.
+  - Today no listed name resolves only by adding `Becoming.`.
+- 138 listed names (137 distinct) do not start with `Becoming.`:
+  - 124 are periphery, among them all 18 `Generative.*` names (inquiry-root/EncounterChoice.lean and others).
+  - 13 are core: `RelationalRenewal.*`. They are listed under loss-of-renewal-for-good (9), becoming-renewal-reading (4) and becoming-return-grades (1).
+- A sample of 15: AlignmentSuccession.aggregate_safe_can_lack_a_carrier, …aggregate_shutdown_does_not_force_perpetual_operation, …corrupted_transfer_blocked, …every_generation_executes, …exact_market_projection, …migration_funding_blocks_realization, …missing_part_blocks_realization, …old_funding_certificate_does_not_pay_migration, CalibratedUpdater.acquired_local_exact, CalibratedUpdater.stale_channel_blocks_actual_repair, CalibrationRenewal.actual_repair_after_inspection, …all_signs_transfer_iff, …false_success_stalls, …late_change_still_fails, …mixed_epoch_false_success.
+- Guillemets: 97 store names use `«»`, none with an ASCII-only quoted part. Lean's `toString` prints the same form (`Becoming.«闭则不出»` and `«所闭不出»` match). `Becoming.WayOfUnits.first_uses₁` matches unquoted.
+- MUST (design's limit 4 and P5's word "floor"): the printer keeps only modules under `Becoming` (AllProofHeads.lean.txt:80, 87). The receipt holds 412 modules and the list 407; the five not printed are `Becoming`, `Becoming.Witnesses`, `GenerativeCore`, `InquirySufficiency` and `RelationalRenewal`. So the 13 core `RelationalRenewal` names are silently dropped. That includes becoming-renewal-reading, the second most depended-on dynamic.
+- MUST (design's limit 6 is false of this printer): it skips `c.isInternal` (line 75). The list holds no private theorems, yet 30 `_private.…` names occur in `uses`, and the traversal stops at them (count_the_map.py.txt `elif u in rows`). Contrary to the design, a private helper is not "followed only if no dynamic lists it"; it is never followed. README-of-the-list's "the helper has its own row" is also wrong for private helpers.
+- Other limits the design does not say: exits' `law`/`to_law`, `case_of` laws, `joint_law` and 179 transition declarations (13 not among any dynamic's declarations) are not used by the layer.
+
+7. Does anything hash the package's Lean sources at render or check?
+- `lean_catalogue.catalogue()` sha256s every `.lean` it finds (lean_catalogue.py:342-359). It runs at render and at `--strict-fresh` only (research.py:338-350, 439). It writes per-file sha256 into lean-index.json (18.7 MB) with `receipt_bytes_match`.
+- `gate.receipt_check` (gate.py:897-924) hashes every receipt module against `source_sha256` at gate time only.
+- The core receipt holds `source_sha256` and `source_paths` keyed by module name: 412 entries, utc 20261122T094514Z, toolchain v4.29.1. That is the same key as P1's `module`. The receipt is already in the snapshot through `atlas_index.inputs()` (atlas_index.py:136), and atlas.py already reads it (265).
+- Hashing the 410 package files myself took 0.26 s, so time is not the issue.
+- MUST (P4): hashing tracked Lean at atlas render makes the pages a function of Lean bytes. The module's own docstring says the design avoids exactly that, "so a chapter or Lean edit does not make the pages stale" (atlas.py:26-27). Those Lean files are not snapshot inputs, so a plain `research.py check` would newly fail ("generated view differs", research.py:477) after any Lean edit until re-render.
+- Instead, compare P1's header with the core receipt's `source_sha256`. That needs no hashing and no new input. The gate's receipt check already binds the receipt to the current bytes, so at any gated tree it says the same thing. Add `RECEIPT` explicitly to `atlas.inputs()` once the layer reads it.
+
+8. What the gate and research.py do with a new `.jsonl` or a new tool
+- A new P1 under `theories/**`:
+  - It reaches `secrets` ('**'; `git grep -I` scans it; Lean names will not match the patterns, research.py:295-335), `strict` ('**', added), every test with no TESTS entry, and `links` (added=True; gate.py:250).
+  - It does not reach `test:test_atlas`: its TESTS entry is `()` (gate.py:166), so it reads only the tools and its own file.
+  - The render Step follows strict (gate.py:289-290).
+  - `paths.role` gives it 'live'.
+  - `move_rewrite_json` covers `results/atlas/*.json` only (research-config.json:182), so path or name moves will not rewrite a `.jsonl`.
+- MUST (design's limit 1, "a megabyte or two"): P1 with `{name, module, uses}` is 3,220,041 bytes at json.dumps defaults, 3,095,891 compact. push_screen.sh:15-17 flags every new file over 2,000,000 bytes, so the eventual push screen will refuse it. It is also about 3 MB rewritten at each Lean landing.
+- A new `tools/research/proof_uses.py` matches `CODE` (tools/research/*.py), which `reads()` adds to every check (gate.py:366, 373). The landing therefore selects the whole gate, and `code_hash` (454-461) voids every kept pass.
+- `tools/research/lean/ProofUses.lean` would be:
+  - catalogued by `lean_catalogue` (rg over all `*.lean`, 102-107; `tools/research/boundary_check.lean` is the precedent and is in lean-index.json), so lean-index.json and the LEAN-DECLARATIONS pages change;
+  - scanned as a live Lean file by `Repository.declared` (270-276), so its names could validate store names;
+  - read by `links` through `RESEARCH_TOOLS` (gate.py:55).
+- Not read here: the site builder (`site.pages` takes `.md` only and `assets` are named). No directory index covers results/atlas (indexes.py:501-517).
+
+**Functions to touch, in order**
+1. atlas.py constants: `PROOF_USES = ATLAS + '/proof-uses.jsonl'`.
+2. `inputs()`, 1792: add P1 when `is_file()`, and `RECEIPT`.
+3. A new `_proof_uses()` beside `_checks()`, 1803: `(None, [])` when absent, an error when malformed.
+4. `build()`, 1117, with an optional parameter, or `render()`, 2389-2399: compute links and the behind set against the receipt.
+5. `_links()`, 1304, or a new key; and `_entry()`, 1336: the new bullets after 1390, plus the default at 1342.
+6. `family_page()`, 1463.
+7. `page()`, 1418-1430: the behind sentence.
+8. `terrain_page()`: a new helper after 2079.
+9. Tests in test_atlas.py.
+
+**Traps**
+- An unguarded `inputs()` addition breaks test_atlas.py:424.
+- Any P1 error blanks every atlas page and the downstream pages (2395-2397).
+- Hashing Lean at render (see 7).
+- Unsorted witnesses break the fixed point.
+- No new headings.
+- Do not touch `terrain_counts`.
+- P1 over 2 MB.
+- A new tool selects the whole gate.
+- The printer's `Becoming` filter and `isInternal` filter drop links silently.
+- `.jsonl` is outside `move_rewrite_json`.
+
+**Not read:** the whole `_dynamic()` validator, `premise_pages`, `terrain_svg`, `bindings_page` and `situations_page` bodies, atlas_index's rendering beyond loading, `the_map` and `map_sheet`, `scratch_build.py`, the six study JSONs that mention atlas.json (I did not check whether they pin bytes), reading_catalogue's treatment of live non-Markdown files, NOTE.md and coordinator-on-the-measure.md.txt beyond a grep, and gate.py `plan` and `run` beyond selection.

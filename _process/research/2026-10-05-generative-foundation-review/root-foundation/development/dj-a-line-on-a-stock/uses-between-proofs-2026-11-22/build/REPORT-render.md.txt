@@ -1,0 +1,91 @@
+**Report: the render of uses between proofs (A1, A2, A6, A8, A9)**
+
+Built in `/Users/ren/tmp/dj/wt-layer`, nothing committed. `python3 -B -m unittest tools.research.tests.test_atlas` passes: the 80 existing tests are untouched and 31 are new. No Lean, lake, render, check or gate was run, and no test file other than `test_atlas`.
+
+## Files changed
+
+**`/Users/ren/tmp/dj/wt-layer/tools/research/atlas.py`**
+- **Constants:** `PROOF_USES`, `PROOF_USES_INDEX`, `USES_SHOWN` (4), `CHAIN_FULL` (3), `MODULES_NAMED` (12), and `ABOUT_USES`, which is added to the data file's `about` only when the print is read.
+- **Module docstring:** one paragraph saying the pages are also a function of the print and the core receipt when the print is there (AI-written, 22 November 2026).
+- **`_proof_uses()`**, beside `_checks()`: returns `(None, [])` with no `INDEX.json`. Otherwise it returns the index, each theorem's uses and module, and the receipt's source hashes and declaration kinds. It errors on:
+  - an index or module file that does not parse;
+  - an index lacking a key the pages read (`_index_problem`);
+  - a module named in the index with no file;
+  - a theorem with two rows;
+  - an unreadable receipt.
+- **`inputs()`:** adds the index, every `*.jsonl` in the directory and the receipt, only when the index is a file.
+- **`uses_between(dynamics, uses, kinds)`:** the pure function. Per dynamic it gives `read`, `uses`, `chains`, `used_by`, `shared`, `not_read`, by exact name, with the A2 rule at both ends and along chains. `_first_listed` is the breadth-first walk.
+- **`modules_behind(index, sources, digest)`:** `None` when the index binds the receipt, else the modules whose hash differs or that only one side names. It hashes only the receipt's map of source hashes, as `shared_laws.sources_digest` does; no source file is read.
+- **`_add_uses(atlas, printed)`**, called in `render()` after `crosswalk_checks`: sets each dynamic's `uses_between_proofs` (plus `behind` when not bound), the top-level `proof_uses` (index without `modules`, plus `binds_receipt` and `modules_behind`), and `about`. Entries are not touched.
+- **`_entry()`:** `items()` gains an optional `lead`; the new bullets come last, after Sources, via `_uses_rows()`. No heading, no anchor.
+- **`family_page()`:** passes `links['terrain']`, so the terrain link is written only when that page is.
+- **`page()`:** the behind sentence goes at the end of the "How far it is read" paragraph, or as its own paragraph when there is none.
+- **`_atlas_lead(at, computed=False)`:** one added sentence at the end when the print is read; the pinned sentence is unchanged.
+- **`terrain_page()`:** calls `_uses_section(atlas)` after `_unity()`. It writes `## Uses between proofs` (slug `uses-between-proofs`), an AI-written provenance line, the limits paragraph with each figure inside its sentence, and "What the print was made from".
+
+**`/Users/ren/tmp/dj/wt-layer/tools/research/tests/test_atlas.py`**
+- Imports `shared_laws`, so the fixture index uses the real `sources_digest`.
+- `UsesBetweenProofsTests`: 19 tests of the pure function, `modules_behind`, the cap and `_chain`.
+- `UsesBetweenProofsPageTests`: 12 tests through the fixture with a print and a rewritten receipt in the temporary root. Every case the task lists is covered.
+
+`spine.py` is not changed.
+
+## Decisions the design left to me
+
+- **A theorem of the print is a name with a row, at both ends.** A listed name that a row uses but that has no row is not shown and sits under `not_read`. This cannot arise while the print covers every receipt module.
+- **`not_read` keys:** `theorems_of_the_receipt_without_row`, `receipt_declarations_not_theorems`, `not_in_the_receipt_as_written`. The receipt lookup is exact too, so a name listed without `Becoming.` falls in the third.
+- **Order:** other dynamics in atlas order, used theorems in their dynamic's declaration order, using theorems in this dynamic's. A listing's duplicates count once.
+- **Chains:** the data has one per pair of ends, with every other dynamic the far end is listed under. The page shows one per used theorem (shortest, then first by names) and is not capped.
+- **No chain to an already-shown theorem** means any theorem this dynamic's `uses` already has, whichever dynamic it is under.
+- **"Told above as a case"** is marked on the using theorem when the (law, case-of law) pair is exactly that use, not whenever a case row names the used theorem.
+- **Caps:** four used theorems per other dynamic, then "and n more in the data file"; four using theorems named, then "n more". The reverse direction has no cap on dynamics and no total.
+- **Short forms** carry no heading sentence, only the link to the terrain's section. The "None found" form adds that a chain ending here is shown where it starts, since the far end of a chain would otherwise read as nothing found.
+- **Behind sentences in a section:** besides the modules of the theorems listed here (A6), a section names behind modules whose rows its lines were read from (theorems between a chain's ends, using theorems elsewhere). This is slightly wider than A6; the words reader asked for it.
+- **Bound print with a receipt theorem lacking a row:** the terrain says so as an anomaly ("no line can be computed for it"); sections say nothing.
+- **Index digest differs but no module hash does:** a separate sentence says the print "has not been set against this receipt".
+- **Shared-listing wording:** the terrain and section sentences state the rule exactly (the two dynamics that both list the theorem). The words reader's shorter sentence said more than A2 does.
+- **Left off the pages:** "about a tenth" is replaced by the computed "n of the N theorems in the print", and the index's `about` text is in the data file only.
+- **`spine.py`:** its sentence is about the picture ("Two pictures … drawn … an arrow a count of exits"), and `terrain.svg` is unchanged, so I judged it still true and left it.
+
+## Tests run
+
+```
+python3 -B -m unittest tools.research.tests.test_atlas
+...............................................................................................................
+----------------------------------------------------------------------
+Ran 111 tests in 10.146s
+
+OK
+```
+
+Three read-only checks outside the test file, all in memory with nothing written:
+- **Against HEAD, no print:** `git show HEAD:tools/research/atlas.py` loaded as a module gives an equal `render()` on the fixture (11 pages). On the live `results/data/atlas.json`, `page()`, `terrain_page()` and all eight `family_page()` outputs are equal, and so are `ABOUT` and `inputs()`.
+- **Timing and size, on the earlier measurement list** (`/Users/ren/tmp/dj/batch29/all-proof-heads.jsonl`: `Becoming.*` only, no private rows, not a real print):
+  - computation 0.03 s;
+  - 188 directed links, 138 pairs by direct use, matching the words reader's recount;
+  - largest family page h.md 399,131 → 437,671 bytes; b.md 377,098 → 414,898 (limit 1,048,576);
+  - terrain +3.4 KB;
+  - `atlas.json` about +196 KB.
+- **Shape:** the never-leaving-a-guard, least-loss-rest and a-weighting sections match the words reader's samples A to C.
+
+## Could not build, or think is wrong
+
+- LESSER: the loader does not compare a module's row count with the index's `theorems`; `proof_uses.py --check` does. A file in the directory that the index does not name is ignored, though it is snapshotted as an input.
+- LESSER: the index check is strict. `proof_uses.index_object` defaults `commit=None`; if it ever writes that, every atlas page fails with `printed_from: missing, or without a commit and a core run`.
+- LESSER: more than twelve modules behind are named as twelve "and n more, all named in the data file".
+- LESSER: JOINS.md's title "What the map does not join" reads differently beside this kind (readers' item 6); A10 keeps it out of this build.
+- No MUST.
+
+## Not checked without a real print
+
+- The real render and `research.py check`, including `check_links` on the real pages.
+- Page sizes and the terrain's figures with private theorems followed and the three modules outside `Becoming.*` printed.
+- Whether private names as Lean prints them behave as the fixture's do.
+- The figures above (2,156 of 20,567; 58 exit pairs, 33 with no line; 102 shared; 17 unread; 10 receipt theorems with no row) are of the earlier list, not the print.
+
+## Not done
+
+- No commit, no branch change, no edit to `gate.py`, `proof_uses.py`, their tests or `spine.py`.
+- No change to `terrain.svg`, `terrain_counts`, JOINS or the map's cards.
+- `test_atlas_index`, `test_connection_map` and the other files that import `atlas` were not run.
+- No table of counts by kind, no ranking, no per-section list of unread names (those are in the data file).

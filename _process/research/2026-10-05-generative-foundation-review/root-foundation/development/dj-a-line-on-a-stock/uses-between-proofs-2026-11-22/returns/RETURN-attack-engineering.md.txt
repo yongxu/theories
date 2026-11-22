@@ -1,0 +1,122 @@
+VERDICT: build with these changes. The layer's core (P1 as a whole-package file, P3 computing links at render) holds up; P4 as written cannot do what it says, and the words on the page understate three limits the list has.
+
+All figures below are from main `0db3aaacc` and `/Users/ren/tmp/dj/batch29/all-proof-heads.jsonl` (20,567 rows, 4,686,508 bytes), computed by read-only inline scripts. I reproduce the measurement's 230 links, 180 direct, 2,156 listed theorems. Nothing was written, built or run in Lean.
+
+## Findings
+
+**1. MUST. P4's "shown, not enforced" is enforced by the existing check, and it makes every Lean landing rewrite atlas pages.**
+- `tools/research/research.py:471-477`: in a check, any generated page that differs from what a render would write and is not an index page is an error ("generated view differs"). Atlas pages are not index pages.
+- `tools/research/gate.py:246-249`: the gate's `strict` check runs `research.py check --strict-fresh` on every path, and `gate.py:290` says it "fails on any page a render would change".
+- So once the render hashes module sources and writes "behind" sentences, a Lean landing that does not re-render fails the gate. The design's sentence "The gate does not fail on it" is false in effect.
+- It also reverses a stated property of the atlas, `tools/research/atlas.py:25-27`: resolution "is checked, not rendered, so a chapter or Lean edit does not make the pages stale".
+- The front-page sentence naming the behind modules would change at every Lean landing, so any two concurrent Lean landings conflict on generated `ATLAS.md`.
+- Replacement for P4, first half: "The pages are a function of P1 and the store only. They say what P1 was printed from (the commit and the clock of its header) and never whether the Lean has changed since; a render reads no Lean source for this layer. Being behind is found by a check, not written on a page."
+
+**2. MUST (the rule for item 2). Bind P1 as the core receipt is bound: checked at the landing that changes the Lean, and at no other.**
+- For "shown":
+  - The layer is no result and should hold back no landing.
+  - The reading catalogue already shows drift without failing (`research.py:494-496`).
+  - Lean landings already carry a core run and a gate.
+- For "enforced":
+  - The board's rule for the listing of places is "owed by whoever lands", and `_process/BECOMING-WORKBOARD.md:56` says "nothing under `tools/research` checks the listing against what it reads". It went stale at the first landing by another session (22 November 12:10, same line and line 40).
+  - Since 1 November, 136 commits touched the package's Lean (109 non-merge, 213 distinct module files, 10 commits since 15 November). An unrefreshed P1 would be behind for about half the package within a month.
+  - Per-module "behind" marks are only approximate. A proof term can change when an imported module changes; `check_becoming.py:4212-4226` keys a module on its whole import closure for that reason. A match of every hash in the tree is exact.
+- The precedent that fits is `gate.py:258-259`: the `receipt` check is selected only when the Lean tree changes.
+- Replacement for P4, second half: "A gate check `proof-uses`, selected only when a landing changes a Lean file under the package or P1 or the printer, fails unless P1's header binds the bytes of every module in the stub's import closure, the printer and the toolchain. The session landing the Lean runs P2 after its core run, when the cache holds that tree, and before its gate; after a rebase over another Lean landing it runs P2 again. P1 is regenerated, never merged by hand. A landing that changes no Lean never runs P2 and is never stopped by it. This adds one step to every Lean landing; the other sessions' word on it is asked before it is switched on, and until then the check reports and does not fail."
+- Strike "Stop another session's landing" from the must-nots, or reword it: "Stop a landing that changes no Lean."
+- If the sessions refuse enforcement, keep finding 1's half and have `research.py check` report "printed before N modules changed" in its result. Do not write it on pages.
+
+**3. MUST (words). 190 listed theorems and 17 dynamics are outside what the printer can see; the design names only 6.**
+- The printer keeps only theorems in modules named `Becoming.*` that the root imports (`AllProofHeads.lean.txt:2`, `:80`).
+- Name matching, 2,676 distinct names (2,785 listings):
+
+| Outcome | Count |
+|---|---|
+| Theorem in the list by exact name | 2,156 |
+| Matched only by adding `Becoming.` | 0 |
+| Non-theorem (def, inductive, abbrev, structure, instance) | 330 (238 in the package, 92 outside) |
+| Theorem by its source, in a Lean file outside the package's root | 190 |
+| Not found anywhere | 0 |
+
+- The 190 sit under `lean/universal-ethics/**`, `lean/regime`, `lean/warning`, `lean/representation`, `lean/free-energy`, `lean/inquiry-root`, `experiments/market-generativity/**`, and one under `_process/.../rf-formations-that-read/kit/round2/tree`. 59 of them are named `Becoming.*` (for example `Becoming.MarketInstances.*`, `Becoming.MachineInstances.*`, `Becoming.SlowingDown.*`), so the name does not tell.
+- 11 dynamics list declarations but no theorem the printer saw: `slowing-down-before-an-own-end`, `market-model-share-margin-and-ends`, `adaptive-closure-cannot-resolve`, `correction-is-not-calibration`, `evidence-through-change`, `a-circular-wait-needs-a-reserve-present`, `recurrence-without-selector-revision`, `renewing-consuming-formation`, `succession-on-a-funded-carrier`, `joint-practice-forms-continuation`, `formed-goal-revision-continuation`.
+- With the 6 that list nothing, 17 dynamics can have no link by construction. 96 more are seen only in part.
+- The files left out are largely the instance files, where package laws are applied, so the layer is blind where "used by" is nearest to "a case of".
+- Replacement in P5's terrain limits: "dynamics none of whose declarations is a theorem the printer saw (17 today: 6 list none, 11 list only definitions or theorems of Lean files outside the package's root); 190 listed theorems are in such files and 330 listed declarations are not theorems, and none of these can begin or end a link".
+- Replacement in P1: "one line a theorem declared in a module the package's root imports (408 of its 409 module files; `Becoming.FallibleInquiry` is not imported)".
+
+**4. MUST (item 6 is wrong about the printer). Private theorems have no row and chains stop at them.**
+- `AllProofHeads.lean.txt:75` skips `c.isInternal`, which covers `_private.*` names. They still appear in `uses` (`:86-87`), and the search drops any name with no row (`count_the_map.py.txt:94`).
+- 50 distinct no-row names occur 82 times. 40 listed theorems have a chain that stops at one; 32 of those stop at a private theorem, all in `turning-in-time`. The source has 36 private theorems: 35 in `TurningInTime`, 1 in `GuardedStep`.
+- The other no-row names are `X._proof_1`, `X.eq_1` and `X.inj` under definitions.
+- Replacement for item 6 and P1: "A private theorem gets a row under the name Lean prints and is followed like any unlisted theorem; a name in `uses` with no row is counted in the header (`uses_without_row`), and that count is told on the terrain page."
+
+**5. LESSER. Exact-name matching only.**
+- The `Becoming.` fallback (`count_the_map.py.txt:45`) matches nothing today. All 137 unprefixed names are outside the package, so the fallback can only invent a link later.
+- Replacement in P3: "A listed name is a theorem of P1 only by its exact name."
+- Guillemet names are fine: 97 listed, 692 in the list, same spelling.
+
+**6. LESSER. P1's size is stated wrong; keep the full file but change its layout.**
+
+| Form | Lines | Bytes | Gzip |
+|---|---|---|---|
+| Full: name, module, uses | 20,567 | 3,220,041 | 329,065 |
+| (a) Listed plus on a listed-to-listed chain, uses restricted | 2,405 | 309,193 | 33,976 |
+| (a) Same rows, uses unrestricted | 2,405 | 465,481 | 57,945 |
+| Listed plus all reached through unlisted | 6,780 | 1,064,770 | 110,477 |
+| (b) Integers with a name table | 20,568 | 1,175,043 | 242,137 |
+
+- The design's "a megabyte or two" is 3.2 MB.
+- (a) costs a Lean run at every change of listing. `dynamics.json` changed in 65 commits since 1 November, and a missed run silently drops links, which gives up P3's best property. Do not take it.
+- (b) renumbers on every added or removed theorem, so each such landing rewrites most of the file and always conflicts. Do not take it.
+- The full file changes only the changed module's rows (median 5.2 KB a module, largest 88 KB). A typical landing touches one module (median 1, mean 3.6, 90th percentile 5, largest 113).
+- The real churn risk is the header: one line of about 407 hashes changes at every Lean landing.
+- Replacement in P1: "Rows sorted by module, then name; before each module's rows one line with that module's source sha256; a first line with the printer's sha256, the toolchain, the commit and the counts. About 21,000 lines, 3.2 MB."
+
+**7. LESSER (item 5). Depth: show direct uses and fold the rest.**
+- Shortest witness per link:
+
+| Depth | 1 | 2 | 3 | 4 | 5 | 6 |
+|---|---|---|---|---|---|---|
+| Links | 180 | 34 | 10 | 4 | 1 | 1 |
+
+- There are 498 witnesses in all (326 at depth 1), at most 16 for one link, median 1.
+- Depth 6, `a-weighting-faster-than-renewal-ends-the-base` to `least-loss-rest`: `Optimum.Holding.logistic_weighted`, `Optimum.frontier_gains_weighted`, `Optimum.frontier_gains_of_most`, `Optimum.Next.frontier_gains_of_most`, `Optimum.Next.weighted_lt_of_gains`, `Optimum.Next.drawable_le_of_gains`, `Amounts.le_by_exchange`.
+- Depth 5, `optima-rebuild-a-depleted-base` to `least-loss-rest`: `Optimum.frontier_rebuilt`, `Optimum.Next.frontier_rebuilt`, then the same last four.
+- Depth 4, `every-loss-passes-a-juncture` to `kept-at-the-length-of-a-list`: `Branching.reach_within_listed`, `Reaching.reach_within_of_pred_le`, `Reaching.trace_within_pred_length`, `closure_iff_reach_within`, `reach_within_pred_length`.
+- My reading, without having opened their statements: the depth-4 chain is the one the morning's readers established by hand, and a reader would call it a link. The two Optimum chains climb one module's internal ladder to an order lemma of `Amounts`; a reader would call that "uses the arithmetic of amounts", not a link between the two dynamics.
+- A depth limit would cut the good one with the weak ones, so fold instead.
+- Replacement in P5: "Direct uses are shown as lines. A link only through unlisted theorems is shown after them under 'through theorems no dynamic lists', with the whole chain written out and its length; the terrain counts tell the two apart and never sum them without saying so."
+
+**8. MUST (P2). Use the checker's slots and a clean tree; do not wait by process name.**
+- Dirty sources: `check_becoming.py:4146-4153` indexes the checkout's working files and `scratch_build.py:64` reads their bytes. In a shared checkout P1 can be printed from bytes of no commit, and hashing the files later is a race. P2 should run only where `git status --porcelain` on the Lean tree is empty, record that commit, and take hashes from the bytes it compiled.
+- Cold cache: any module whose key is absent is compiled (`check_becoming.py:4432-4460`), with 1,800 s allowed per step (`scratch_build.py:39`). "Half a minute" becomes the whole package; your notes put that at 2,393 s of step time. The tool should print how many steps would run and refuse above a small number unless told.
+- Another session building: this part is safe. Same key waits on the key's lock and then reuses; every Lean process takes a machine slot (`check_becoming.py:4385-4423`).
+- The printer run: the design starts `lean` on it outside the slots. Wrap it in `cb.lean_slot()`.
+- Waiting on a gate: "It waits while a gate, a core run or a scratch build is alive" by process name is the pattern your notes record as deadlocking. Under finding 2 the landing's own gate comes after P2, and a gate takes hours, so drop the wait and rely on slots and key locks.
+- Stub tree under `tmp/`: safe from the tools. `/tmp/` is ignored (`.gitignore:23`), outside the module index's root, and `atlas.py:270` reads only tracked files. Each tree restores a copy of every olean (`check_becoming.py:4254`), 323 MB for batch29, and each run stores a new stub entry in a cache already at 41 GB and 163,765 entries. Use one fixed directory the tool owns and overwrites.
+- Stub contents: generate it from the file listing, not `import Becoming`, so a module the root does not import is still printed or is named as left out.
+- Writing P1: write only after `scratch_build` exits 0 and the printer's last line gives a row count that matches; write to a temporary file and replace.
+- Replacement for P2's middle: "It refuses a tree whose Lean differs from a commit; builds a stub generated from the package's module files through `scratch_build.py` in one fixed directory under `tmp/` that it owns; says how many steps the cache lacks and refuses more than a few unless told; runs the printer in one of the checker's Lean slots; and writes P1 only after a clean exit and a matching row count, by replace. It waits on nothing by process name."
+
+**9. LESSER. Two more limits belong in the page's words.**
+- A dependence that passes through a definition or instance is not seen: `uses` keeps only theorems (`AllProofHeads.lean.txt:86`).
+- A theorem named under another theorem's name is folded into its parent (`:36`). 19 such theorems exist (for example `RootForms.descent_forms_no_dependence.needs_given`); none is listed today.
+- Add to P5's limits: "nor a dependence that passes through a definition".
+
+**10. LESSER (items 3 and 7).**
+- Page size is not a problem: the largest family page is 399,131 bytes against 1,048,576 (`atlas.py:81`), and the layer adds at most a few hundred KB over 8 pages.
+- `atlas.json` is read by `connection_map.py`, `atlas_index.py` and `research.py`, all by key in the lines I saw; I found no key-set equality test in `test_atlas.py` by grep.
+- P1 must be added to `atlas.inputs()` (`atlas.py:1792-1800`) so the render's input snapshot binds it.
+
+**11. LESSER (my own). The 22 "by listing" links.**
+The design marks them; the terrain count should also give "read off Lean and not made by a double listing: 208" beside 230, so the larger figure does not stand alone.
+
+## Not read
+- `atlas.py` beyond lines 1-300 and the greps; `build()` and the page writers were not read, so where the new lines would go is not checked.
+- `atlas_index.py`, `connection_map.py`, `the_map.py`, `map_sheet.py`, `lineage.py` and `test_atlas.py` beyond grep hits.
+- `check_becoming.py` beyond lines 4142-4160, 4204-4282 and 4385-4462; `step_lock`, `run_graph` and `lean_plan` were not read.
+- `gate.py` beyond lines 240-262 and 290; `RESULT-WORKFLOW.md`; `build_places.py`.
+- The Lean statements of any theorem on the chains.
+- The source file of Ren's words of 18:04, and the board beyond the passages on the listing of places.
+- The 190 outside-package theorems were classified by `atlas.py`'s own source regex, not by Lean.

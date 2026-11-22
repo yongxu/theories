@@ -1,0 +1,114 @@
+REPORT: the tool for the print of uses between proofs (A3, A4, A5)
+
+Both files are written and the 24 unit tests pass. The Lean text of the printer, the scratch build call and the printer run have NOT been run; no Lean, lake, scratch_build.py, check_becoming.py, render or gate was started. Nothing committed.
+
+**FILES CHANGED** (both new, untracked, in `/Users/ren/tmp/dj/wt-layer`)
+
+1. `/Users/ren/tmp/dj/wt-layer/tools/research/proof_uses.py` (734 lines)
+   - Pure parts: `receipt_modules`, `stub_text(receipt)`, `printer_text(receipt)`, `printer_sha256()`, `sources_digest(receipt)`, `parse_output(text, modules)`, `module_text`, `names_without_row`, `index_object(receipt, by_module, printer=None, commit=None)`, `write_print(directory, index, by_module)`, `read_print(directory)`, `damage(directory, index)`, `status(root=ROOT, printer=None)`, `unbound_sources`, `dirty_lean`, `lacking`.
+   - Run parts: `git_state`, `checker`, `plan`, `build`, `run_printer`, `run`, `main`.
+   - `PRINTER` is the Lean text, embedded; `ABOUT` is the index's words.
+   - Docstrings say AI-written, 22 November 2026.
+2. `/Users/ren/tmp/dj/wt-layer/tools/research/tests/test_proof_uses.py` (378 lines, 24 tests, temporary directories only, no live file read).
+
+I wrote nothing else in the worktree. `tmp/proof-uses-tree/` was not created; my dry files are in the session scratchpad.
+
+**WHAT `status(root)` RETURNS** (gate.py already calls `status(ROOT)` and reads `bound`, `problems`, `modules_behind`)
+
+- `bound`: true exactly when `core_sources_sha256` equals the receipt's and `printer_sha256` equals sha256 of `PRINTER`.
+- `problems`: sentences saying why it is not bound.
+- `modules_behind`: sorted names; `behind` gives the same as `changed`, `not_in_print`, `not_in_receipt`.
+- Also `present`, `sources_bound`, `printer_bound`, `toolchain_agrees`, `printed_from`, `core_run`, `damage`.
+- A missing or unreadable index or receipt is a problem, not an exception.
+
+**DECISIONS THE DESIGN LEFT TO ME**
+
+1. `printer_sha256` is of `PRINTER` as it stands in the file, placeholder `@MODULES@` included. The module list is written into the Lean text as a `List String` literal; the index binds the list separately through its `modules`.
+2. The printer's output is `ROW {"module","name","uses"}` lines, then a last line `COUNT rows=N uses=M`. Both numbers are checked.
+3. A Lean warning line is kept aside and shown on stderr; any `error:` line, a non-zero exit, a missing or misplaced count line, a malformed row, a row of a module outside the receipt, or a name printed twice stops the run.
+4. Every receipt module gets a file, empty where it has no theorem. The atlas reader in the worktree requires a file for every module the index names, so this agrees with it.
+5. Clean-tree rule: `git status --porcelain -z --untracked-files=all` on the package folder plus the receipt's three sources outside it.
+   - A tracked `.lean` in any state refuses.
+   - An untracked `.lean` refuses only if it is a receipt source.
+   - So the receipt JSON and the untracked `becoming-checks/<utc>/` copies left by a core run do not refuse.
+6. The stub is `tmp/proof-uses-tree/ProofUsesStub.lean`; the printer and its raw output go to `tmp/proof-uses-tree/.printer/`, a dot folder that `scratch_build.overlay` skips. A non-blocking flock on the tree refuses a second run at once.
+7. The run refuses a stray `.lean` in the tree and removes nothing there.
+8. The build is a subprocess call of the package's `scratch_build.py TREE ProofUsesStub`. Before it, the tool builds the same plan through `check_becoming` to count the steps the cache lacks, restoring and hashing nothing.
+9. It also refuses when:
+   - the stub's import closure is not exactly the receipt's modules;
+   - the toolchains differ;
+   - HEAD or the sources moved while Lean ran (checked again before writing).
+10. Write order: module files, then removals, then `INDEX.json` last. A file is removed only if the earlier index named its module.
+11. `--check` exits 0 only when bound and `damage` is empty. `status()['bound']` stays the two equalities of the brief.
+12. `sources_digest` is defined locally so the gate imports no measure tools; a test holds it equal to `shared_laws.sources_digest`.
+13. The run's summary also gives `receipt_theorems_without_row` and `rows_the_receipt_scan_lacks`, as told counts only; neither goes in the index.
+
+**TESTS RUN**
+
+`cd /Users/ren/tmp/dj/wt-layer && python3 -B -m unittest tools.research.tests.test_proof_uses`
+```
+........................
+----------------------------------------------------------------------
+Ran 24 tests in 0.062s
+
+OK
+```
+The eight the brief names are covered:
+- byte-for-byte round trip, sorted;
+- a second write changes no file (same inode, time and bytes);
+- a dropped module's file is removed and no other file is;
+- status bound, then not after a source hash changes (naming the module), then not after the printer changes;
+- `uses_without_row` counts a name with no row;
+- the stub imports every receipt module;
+- a private theorem has a row;
+- a module outside `Becoming.*` has rows.
+
+Beyond those there are tests for refused output (11 kinds), `damage`, `dirty_lean`, `unbound_sources` and `lacking`.
+
+Also run, none starting Lean:
+- `python3 -B tools/research/proof_uses.py --check` in the worktree: exit 1, "there is no index at theories/becoming/results/atlas/proof-uses/INDEX.json".
+- **Outside what the task named:** `python3 -B -m unittest tools.research.tests.test_gate`, to see that the gate's import works: "Ran 113 tests in 84.746s OK". I should not have spent 85 s of the shared machine on it.
+- A dry script from the scratchpad on the real checkout. It imported `check_becoming` and called `elan which lean` through `resolve_lean`; no step ran.
+  - 412 modules, no unbound source, no Lean file apart from HEAD (`f848b2b9c`).
+  - The plan has 414 steps; the cache lacks 2 (`compile ProofUsesStub`, `audit ProofUsesStub`).
+- A scale script on batch29's printed rows, reshaped to this printer's format and written to a fake root in the scratchpad.
+  - 20,567 rows parsed; 413 files, 2,580,081 bytes; index 59,256 bytes; largest module file 72,566 bytes.
+  - `uses_without_row` 50, as the engineering reader counted.
+  - Second write changed 0 files; round trip equal; status bound.
+  - Five files are empty: `Becoming`, `Becoming.Witnesses`, and the three non-`Becoming` modules, which that older printer skipped.
+
+**UNTESTED LINES, SAID PLAINLY**
+
+- `PRINTER`, the Lean text, has never been compiled. It is `AllProofHeads.lean` with these changes:
+  - modules are tested through `inReceipt : Array Bool`, built from a string list;
+  - the row test is `skipLast c || (privateToUserName c).isInternal`; I read `privateToUserName : Name → Name` in the toolchain's `Lean/PrivateName.lean`;
+  - head and recursors are dropped;
+  - `digitsAfter` uses `s != pre` in place of the deprecated length;
+  - a `total` counter and the COUNT line are added.
+- `build()`, the scratch_build subprocess and the reading of its report.
+- `run_printer()`, the Lean run in `cb.lean_slot()`.
+- `run()` from the flock onward, and `main()`'s default branch.
+- Each of these raises `Refused` before `write_print`, so a failure writes nothing under `proof-uses/`; that claim is from reading the code, not from a run.
+
+**MUST / LESSER**
+
+- **MUST (for whoever runs it first):** compare the first real print with batch29's list. Expected: the same `Becoming.*` rows and uses, plus the private theorems and the three foundation modules. If Lean rejects the printer, the output is kept at `tmp/proof-uses-tree/.printer/output.txt`.
+- **LESSER: Lean-generated theorems that have a line.** The tested `skipLast` does not know some of Lean's own theorems. In batch29's rows, 196 names are not in the receipt's scan:
+  - `brecOn` (24) and `brecOn.eq` (13) of inductive propositions;
+  - `ofNat_ctorIdx` (18) of enumerations;
+  - the rest are mostly proposition fields of structures (for example `Becoming.Viability.Certificate.closed`, `Becoming.Amounts.add_assoc`), theorems named under another theorem's name, and some the scan misses; I did not class every one.
+  
+  I kept the tested test and wrote this on the index's face. Adding `s == "brecOn" || s == "ofNat_ctorIdx"` would drop the generated ones; they would then count in `uses_without_row` (44 uses lists name a `brecOn`).
+- **LESSER: a use of a structure's proposition field.** A proof that takes such a field from a structure lists the field among its uses. What is used there is an assumption the structure carries, not a proved theorem. Such fields are not in the receipt's declarations, so I expect no dynamic can list them, but the terrain's paragraph of limits does not yet say it.
+- **LESSER: theorems named under another theorem's name.** `usedBy` is unchanged: such a theorem has its own row, is followed, and is not listed among its parent's uses. The engineering reader counted 19, none listed. Changing the follow test to skip names that have a row would make the print exact; I did not change tested Lean.
+- **LESSER: toolchain.** `bound` does not include it, as A7 names sources and printer only. `toolchain_agrees` is told beside it.
+- **LESSER: file damage.** `damage` does not enter `bound`, so the gate (which reads only `bound`) would pass a print whose module file was deleted or cut. Folding it in is one line in `status()`.
+- **LESSER: gate.py's `TESTS`** has no entry for `test_proof_uses`; it reads no live file, so `'test_proof_uses': ()` fits. Not my file.
+- **LESSER: disk.** The tree keeps about 320 MB of compiled modules per worktree that runs the tool.
+
+**NOT DONE**
+
+- No edit to atlas.py, gate.py, any other test, or any page.
+- No real print exists, so `theories/becoming/results/atlas/proof-uses/` was not created.
+- No board claim.
+- I did not read atlas.py beyond its print reader (lines 160 to 235 of its diff), nor the words attacker's and pipeline reader's returns.

@@ -1,0 +1,88 @@
+1. MUST: the design's own way of telling that P1 is behind would break the render's binding to its inputs. Better: compare against the core receipt, which is already an input. P4 says the render "hashes each module's tracked source". But `research.py` ties every render to a list of files it read (`input_snapshot`, tools/research/research.py:41-67), and the atlas adds to that list through `atlas.inputs()` (research.py:52; atlas.py:1792-1800). No `.lean` file is on the list. Hashing 412 sources at render would make the pages depend on files outside it. Adding them would make every Lean edit change the atlas inputs, and `test_atlas.py::test_inputs_are_the_curated_files` (422-425) pins the exact list.
+   - Nothing new is needed. The core receipt `becoming-verification.json` already holds `source_sha256` for all 412 modules. It is already an input (`atlas_index.inputs()`, atlas_index.py:133-136), and the validator already reads it (`Repository.declared`, atlas.py:263-267).
+   - `gate.receipt_check` (gate.py:895-922) already fails a landing whose receipt does not match the current bytes. So on any gated tree, comparing P1's header with the receipt gives the same answer as hashing the sources.
+   - There is a precedent to copy. `shared_laws.py` stores `core_sources_sha256 = sha256(json.dumps(receipt['source_sha256'], sort_keys=True))` (shared_laws.py:264-266, 387). `registry.shared_laws_status` (registry.py:901-925, line 918) shows "current" and is not enforced. P4 can do the same per module.
+
+2. MUST: P1 must enter the render through `atlas.inputs()`, and only when the file exists, the way the crosswalk checks do (atlas.py:1796-1797). Otherwise `test_inputs_are_the_curated_files` fails, because its fixture has no P1.
+   - Committing P1 without re-rendering breaks every later check. Plain `research.py check` reports "generated view differs" for any page that differs (research.py:471-477). A landing that commits P1 without rendering would stop the next session's gate. That goes against the design's own rule "Stop another session's landing".
+   - So P2 must be told: run P2, then render, in the same landing.
+
+3. MUST (outside my brief, but it bears on design point 4): the printer misses some declarations the atlas lists. `AllProofHeads.lean` keeps only modules whose name starts with `Becoming` (lines 80 and 87 of AllProofHeads.lean.txt). The receipt's package also has `RelationalRenewal`, `GenerativeCore` and `InquirySufficiency`; 74 of its theorems are not in the list.
+   - 11 declarations listed under `loss-of-renewal-for-good` and `becoming-return-grades` (for example `RelationalRenewal.Law.no_return_below_support`) are in the receipt but not in all-proof-heads.jsonl. They would silently get no link, and uses into those modules are dropped too.
+   - P1's wording "declared in a module of the package" says more than the printer does. Either print every module in the receipt's `core_closure`, or state the limit.
+   - Name matching should use the validator's rule exactly: the name as written, else `Becoming.` + name (atlas.py:267). atlas_index.py:206 does the same.
+
+4. LESSER: the size is understated. P1 as designed (name, module, uses; compact JSON, CJK unescaped) is about 3.1 MB for 20,567 lines, not "a megabyte or two". The smaller option in attack point 1 (only theorems reached from listed theorems through unlisted ones) is 6,780 lines and about 0.8 MB, measured on the 22 November list. `module` could also be dropped from each line, because the receipt's `modules[].declarations` gives every declaration's module.
+
+5. What already exists and could be reused (paths, sizes, who writes them):
+   - **The core receipt** (5,645,859 bytes, tracked), `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json`. Written by `check_becoming.py` at every core run and kept fresh by `gate.receipt_check`. It holds `source_sha256` and `source_paths` for 412 modules, and `modules[].declarations` with each declaration's elaborated name and kind (28,008 names, 20,445 of them theorems). It does not hold `uses`. Retained runs are under `becoming-checks/<utc>/` (9.3 MB a run, tracked logs).
+   - **The Lean catalogue's inventory**, `theories/becoming/results/data/lean-index.json` (18,692,481 bytes, tracked, in generated-manifest.json). Written by `lean_catalogue.py` in the render, alongside `LEAN-INDEX.md` (450,597), `LEAN-DECLARATIONS.md` (120,361), `lean-declarations/` (9.2 MB, 21 pages) and `data/source-index.json` (1,053,496). Its declarations are a text scan keyed by file sha256, not Lean's names. It is not suitable for the layer.
+   - **An earlier dump of uses.** `_process/research/.../root-foundation/THEOREM-CONNECTIVITY-DUMP.lean` with `THEOREM-CONNECTIVITY.py` already restores the core run from the checker's cache and prints, for every constant, the tracked constants its type (`t`) and value (`v`) use. The tracked `THEOREM-CONNECTIVITY.json` (1,501,290 bytes) holds only the analysis, and it is stale: core receipt of 20261106, `sources_match_commit: false`. Its dump is reused by `shared_laws.py` and by `boundary.lean_check`, which restores without recompiling (boundary.py:575-600).
+   - **The nearest model for P2.** `tools/research/shared_laws.py` writes `data/shared-laws.json` (1,924,171 bytes). It runs after a core run, outside the render, and its freshness is shown, not enforced. P2 should follow it, or reuse its restore path, rather than adding a third copy of the restore step.
+
+6. Readers of atlas.json, and whether new per-dynamic keys or a new top-level key would change them:
+   - `atlas_index.py`: `load` (141-155) and `build` (199-224) name every field they read. They read `dynamics[].{id, family, name, base, standing_without_record, premises, records, hypotheses, standing, declarations, exits, transitions, tests}`, plus `bindings` and `correspondences`. JOINS.md would not see the layer at all. It counts exits, transitions, tests, crosswalk targets, declarations, uncited records and premise pilots (the `m[...]` measures, from line 318 on). Only its title "What the map does not join" reads differently beside a third kind of link (LESSER).
+   - `connection_map.py` `payload` (192-228) reads `correspondences`, `correspondence_groups`, `vocabulary` and `crosswalk_checks`, and only the count of `dynamics`. Not affected.
+   - `lineage.py:879` reads only `correspondence_groups`. Not affected.
+   - `research.py:406-426` passes atlas.json to `connection_map`, `atlas_index` and `lineage`. Not affected.
+   - `moves.py:55-62` rewrites paths inside `results/atlas/*.json` and `data/*.json` when files move. A `.jsonl` P1 is outside those patterns. atlas.json is regenerated anyway. Not affected.
+   - No reader iterates over all the keys of a built dynamic. `atlas.validate` is strict about keys (`FIELDS`/`DYNAMIC_OPTIONAL`, atlas.py:119-135; test at test_atlas.py:183-189), but only on entries. That holds as long as `proved_from`/`used_by` are added in `build()` and never written into `entries/dynamics.json`.
+   - `build()`'s `ABOUT` (atlas.py:90-92) describes the data file. It should name the new keys (LESSER).
+
+7. Readers of the pages:
+   - `the_map.py` (48-52, inputs 118-119) and `map_sheet.py:40` read `entries/dynamics.json` and `premises.json`, not atlas.json. They link family pages only by `#<dynamic id>` anchors (the_map.py:641; the_map.html:231). Not affected, provided the new lines add no `<a id>` that collides. The `results/map/` store (cards.json, DYNAMICS.md, LAWS.md and the rest) does not read atlas.json.
+   - `spine.py:1381-1386` says the terrain "shows the dynamics … and the exits recorded between their families, drawn … from the atlas's entries alone". Once TERRAIN.md has a section read from Lean, that sentence (about the page, not the svg) says more than is (LESSER).
+   - `atlas._atlas_lead` (atlas.py:1254-1266) is printed on every atlas page and says "The atlas is a curated layer beside the records". With a Lean-read layer on those pages, the lead must say so. Keep the phrase "It adds nothing to how far anything has been seen", which test_atlas.py:337 pins.
+   - The `terrain_page` lead (2009-2016) says "*AI-written, from the entries*". The new section needs its own provenance line.
+   - The site builder (`tools/publishing/build_site.py`) publishes `atlas/families/*.md`, `TERRAIN.md` and `ATLAS.md` (research-config.json `site.pages`). New headings would enter search.json, so prefer bullets to headings. It only runs at push, which is held.
+   - Page size: the largest family page is h.md at 399,131 bytes against a 1,048,576 limit (`atlas.PAGE_LIMIT`, atlas.py:81, enforced at 2411-2413). There is room for 230 directed links shown at both ends.
+
+8. Tests in test_atlas.py (80 tests) that pin what the layer could change:
+   - `test_inputs_are_the_curated_files` (422-425): `assertEqual(atlas.inputs(), [three entries files] + [vocabulary])`. It fails if P1, the receipt or sources become unconditional inputs.
+   - `MainTests.test_check_fails_on_a_page_that_differs_and_passes_on_a_fresh_one` (621-626): the exact list of pages written. It fails if the layer writes a new page.
+   - `test_render_is_a_function_of_its_inputs` (414-420): it fails if the render reads anything outside the fixture (Lean sources, the clock).
+   - `test_the_pages_link_entries_and_records_and_every_link_resolves` (314-359): every link on ATLAS.md and the c/g family pages must resolve to an anchor. It will cover the new links once a fixture has P1.
+   - `PageSizeTests.test_every_page_the_atlas_writes_is_within_what_github_shows` (647-653) is a live size check.
+   - `ChineseCrosswalkTests` (657-671) and `Step2bTests` (1040-1063) read live files and are not affected.
+   - The other tests use `assertIn` on unchanged wording and are not affected.
+
+9. Style for the new tests:
+   - The link computation should be a pure function tested on minimal dicts, like `test_routes_keep_their_strongest_weakest_step` (781-785, `atlas._routes`) and `TerrainPictureTests` (860-884, `atlas.build` then `terrain_counts`).
+   - Page tests: `AtlasCase.write_atlas` plus a P1 written into the temp root, then `atlas.render(RECORDS)`, `assertEqual(errors, [])` and `assertIn` on page text, as `test_cases_and_joinings_are_shown_on_both_ends_and_on_the_terrain` (840-857) does. Wording guards use `assertNotIn`, as at 339-343 ("a case of", "joined", "the same law", "a passage").
+   - The "absent file, today's pages byte for byte" test: render twice in the same fixture and `assertEqual` the dicts, as at 414-418.
+   - The fixture's `atlas.RECEIPT` (test_atlas.py:32-33) has `modules[].declarations`. Add `source_sha256` to it for the behind-ness test.
+   - In gate.py:166, `'test_atlas': ()`. If a new test reads the live P1, list P1 there.
+
+**Readers to look at when the layer lands:**
+- tools/research/atlas.py: `inputs` (1792), `build` (1117), `_links` (1304), `_entry` (1336), `family_page` (1443), `terrain_page` (2002), `_unity` (2083), `_atlas_lead` (1254), `ABOUT` (90), `render` (2389)
+- tools/research/research.py: `input_snapshot` (41-67) and 389-426
+- tools/research/atlas_index.py: `load` and `build`, 141-224 (no change needed; JOINS.md's title wording)
+- tools/research/connection_map.py: `payload` (192-228)
+- tools/research/lineage.py: 865-879
+- tools/research/spine.py: 1381-1386 (its sentence about the terrain)
+- tools/research/the_map.py (48-52, 641) and the_map.html (231): anchors only
+- tools/research/map_sheet.py:40: entries only
+- tools/research/registry.py: `receipt_declaration_names` and `shared_laws_status` (901-925), as the pattern for P4
+- tools/research/gate.py: `TESTS['test_atlas']` (166) and `receipt_check` (895-922)
+- tools/research/moves.py: 55-62
+- tools/publishing/build_site.py and `_process/research-config.json` `site.pages`
+
+**Tests that will need a new expectation, or must be watched:**
+- test_atlas.py: `test_inputs_are_the_curated_files` (only if P1 or the receipt becomes an unconditional input)
+- test_atlas.py: `test_check_fails_on_a_page_that_differs_and_passes_on_a_fresh_one` (only if a new page is written)
+- test_atlas.py: `test_render_is_a_function_of_its_inputs` (must stay green; blocks reading Lean sources at render)
+- test_atlas.py: `test_the_pages_link_entries_and_records_and_every_link_resolves` (extend to a fixture with P1)
+- test_atlas.py: `test_every_page_the_atlas_writes_is_within_what_github_shows` (live sizes)
+- test_atlas.py: line 337's `assertIn('It adds nothing to how far anything has been seen', index)`, if the lead is reworded
+- With P1 absent from the fixtures and the input conditional, no existing test in test_atlas.py, test_atlas_index.py, test_connection_map.py, test_the_map.py, test_map_sheet.py, test_lineage.py or test_site.py changes.
+
+**Not read:**
+- atlas.py outside the ranges cited: validators 299-1110, the crosswalk, premise and binding pages, `terrain_svg`.
+- atlas_index.py's `page()` beyond the grep.
+- test_site.py, test_strict_fresh.py, test_boundary.py and test_connection_map.py beyond their atlas-related lines.
+- build_site.py's link checking.
+- check_becoming.py.
+- scratch_build.py, which the design names; I did not check how it differs from `boundary.lean_check`'s restore.
+- NOTE.md, coordinator-on-the-measure.md.txt and README-of-the-list.md.txt; I read only counts.txt and grepped the printer and counter.
+
+I ran no build, test or Lean, and changed nothing.

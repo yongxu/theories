@@ -1,0 +1,82 @@
+REPORT: the gate check `proof-uses` (A7), worktree /Users/ren/tmp/dj/wt-layer, branch dj-uses-between-proofs. Nothing is committed.
+
+FILES CHANGED
+
+1. /Users/ren/tmp/dj/wt-layer/tools/research/gate.py
+   - Added `import importlib`.
+   - Added two constants before TESTS:
+     - `PROOF_USES = 'theories/becoming/results/atlas/proof-uses'`
+     - `PROOF_USES_TOOL = 'tools/research/proof_uses.py'`
+   - Added `Check('proof-uses', (*PY, 'tools/research/gate.py', 'proof-uses'), (LEAN + '/**', '?<PROOF_USES>/**', '?tools/research/proof_uses.py'))` to CHECKS, after `receipt`.
+     - `LEAN + '/**'` is the glob the receipt check uses, and it already covers the core receipt.
+     - The print and the tool are optional reads (the `?` prefix). Otherwise `stale_rules` would stop the gate while neither exists.
+     - It is not heavy and not `added`.
+     - Its note: "the print of the uses between proofs binds the core receipt's sources and its printer; it runs no Lean".
+   - Added `RUN_PROOF_USES`, the instruction text: run `python3 -B tools/research/proof_uses.py` after the core run and before the render, and commit the files of the print it changes with the pages.
+   - Added `proof_uses_status()`. It does `importlib.import_module('tools.research.proof_uses')` lazily and returns its `status`, or None when the module or the function is absent. I used importlib rather than `from tools.research import proof_uses` so that a `sys.modules` entry of None reliably reads as absent.
+   - Added `proof_uses_check(base='main')`, with an AI-written docstring dated 22 November 2026. It returns `{errors, accepted_reason, would_fail, bound, modules_behind, problems, note}`.
+   - `run()` now passes `--base` to `proof-uses` as it does for board, frozen and receipt.
+   - `main()` has a new `proof-uses` subcommand with `--base`. It exits 1 when there are errors.
+
+2. /Users/ren/tmp/dj/wt-layer/tools/research/tests/test_gate.py
+   - Two new tests in RuleTests. They use the real rule table and run no check.
+     - The check is reached by a package Lean path, the core receipt, `INDEX.json`, a module `.jsonl` and the tool. It is not reached by `theories/becoming/ONE-PAGE.md`, the board or `results/atlas/entries/dynamics.json`, whether the path is modified or added.
+     - `stale_rules` finds nothing for the rule on the real tree, where neither the print nor the tool exists yet.
+   - A new class, ProofUsesTests(GateCase), with 10 tests. The status function is stubbed by patching `gate.proof_uses_status`, so they do not depend on the other writer's file. They cover:
+     - no print and none added passes with a note, and status is not called;
+     - not bound fails and names the modules (sorted), the tool command and the problems;
+     - bound passes, and status was called with ROOT;
+     - `GATE_PROOF_USES` set passes with the reason, the modules behind and `would_fail` in the output, also through `gate.main(['proof-uses'])`'s printed JSON with exit 0;
+     - `GATE_PROOF_USES` empty or whitespace fails as before (exit 1 through main);
+     - an index this landing deletes fails;
+     - module files with no index fail;
+     - an index with no tool module fails with the run message;
+     - a status that raises fails;
+     - with `sys.modules['tools.research.proof_uses'] = None`, the real lazy import returns None.
+
+3. /Users/ren/tmp/dj/wt-layer/_process/RESULT-WORKFLOW.md
+   - One paragraph, "**The print of the uses between proofs.**", marked AI-written and dated 22 November 2026. It sits right after the paragraph on the order of a landing (core run, shared laws, render, gate). It says:
+     - after the core run and before the render, run the tool through `gate.py hold --` and commit the print's changed files with the pages;
+     - run it again after a rebase over another Lean landing, and never merge the print by hand;
+     - what the check holds, what selects it, and that it passes when there is no print yet;
+     - the escape, and that its reason goes into the landed clause.
+
+DECISIONS THE DESIGN LEFT TO ME
+
+- **When the check passes with no print.** It passes, with a `note` and `bound: None`, only when all three hold:
+  - `INDEX.json` is absent from the working tree;
+  - `INDEX.json` is absent from the merge base with `base` (`files_at(base_commit(base))`);
+  - no file at all lies under the print's directory.
+
+  An index the landing deletes fails. Module files without their index also fail, because I read "no index at all" as "no print at all". An index that is present, whether it was there before or the landing adds it, always goes to `status(ROOT)`. If the module or its `status` is absent at that point, the check fails with the run message.
+- **What counts as bound.** The check fails exactly when `bound` is false. `problems` are listed as errors only when not bound; when bound they are reported but do not fail. An exception from `status()` is caught and reported as a failure of the check, not a crash.
+- **The escape covers every failure** of the check, including a missing index or tool, not only "not bound". The pass key (`environment()`) does not include the escape, which is the same as `GATE_BOARD_REWRITE`. So a pass won by the escape can be reused on the same tree, or across a diff that reaches nothing the check reads.
+- **Output key names.** The escape's reason is `accepted_reason`, the board's equivalent is `accepted_rewrite`, and `would_fail` works as the board's does. The reason reaches the check's JSON output, which goes to its gate log, the way the board's does. `run()`'s summary shows only the status, as it does for the board.
+- **The receipt is not listed separately** in the check's reads, because `LEAN/**` covers it. The tool path also selects every check through CODE, as the existing rule does.
+
+TESTS RUN
+- `cd /Users/ren/tmp/dj/wt-layer && python3 -B -m unittest tools.research.tests.test_gate` (load average 8.5):
+  ```
+  Ran 113 tests in 88.288s
+
+  OK
+  ```
+  All existing tests still pass, as do the 12 new ones.
+- Nothing else ran: no Lean, render, research check or gate.
+
+WHAT I COULD NOT BUILD OR THINK IS WRONG
+- LESSER: the check depends on the other writer's `status(root)` having the return shape the brief gave (`bound`, `problems`, `modules_behind`). It was tested only against a stub, because `tools/research/proof_uses.py` does not exist in this worktree yet.
+- LESSER: `gate.py plan` does not list the print as a step before the gate. I did not add a Step to STEPS because:
+  - it was not asked;
+  - existing tests pin the exact step lists (`['core run', 'shared laws', 'render']`).
+
+  Without it, `make gate-plan` does not tell a Lean landing to run the tool; only RESULT-WORKFLOW.md and the check's failure message do. Adding it would be one Step entry plus updates to those two tests.
+- LESSER: the workflow paragraph says to run the tool through `gate.py hold --`. That follows the paragraph above it, which runs every step that writes that way. It assumes that holding a gate slot while the tool takes one of the checker's Lean slots is safe, as it already is for the core run. That should be checked against the tool once it exists.
+- LESSER: the check binds the print to the core receipt, not to the bytes on disk. That is correct only because the `receipt` check, selected by the same paths, binds the receipt to the bytes.
+
+WHAT I DID NOT DO
+- No commit.
+- No edits to `atlas.py`, `proof_uses.py` or their tests.
+- No change to `environment()` or the pass key.
+- No usage line for `proof-uses` added to gate.py's top docstring, which lists none of board, frozen or receipt either.
+- No run of Lean, the render, the research check or the gate.

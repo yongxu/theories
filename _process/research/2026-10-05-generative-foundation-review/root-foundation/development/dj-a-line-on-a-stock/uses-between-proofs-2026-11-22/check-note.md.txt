@@ -1,0 +1,142 @@
+*An AI reader who took no part's return (run as Claude Opus, 178,049 tokens), word for word from the agent's transcript. It read the note as kept in `NOTE.before-check.md.txt` and the sentence added to the direction page as first written, on the branch before it landed.*
+
+I found 8 MUST and 14 LESSER findings across the two texts. I wrote no file and changed nothing. I ran only the two permitted unit test files: test_proof_uses gave 44 OK, and test_atlas gave 123 OK with 1 skipped.
+
+## MUST findings
+
+1. **MUST, NOTE line 3: the note promises something it does not have.** It says "What a reader who took no part changed in this note is said at its end." The note ends with "What would count against it", and no such passage exists.
+   - Replacement, until the passage is written: delete the sentence. Once it is written, keep the sentence and add the passage at the end.
+
+2. **MUST, NOTE line 24: the claim about what went stale has no source in the folder.** The claim is "after the coordinating session pointed out that three things had gone stale that day because being fresh depended on someone remembering".
+   - The source the brief names, DESIGN.md.txt line 64 (A7), says only "(The coordinating session 3 and 4; engineering attacker 2.)".
+   - The only staleness in the folder is RETURN-attack-engineering.md.txt line 21. It names one thing, the listing of places, which "went stale at the first landing by another session". It is the engineering attacker's finding, not the coordinating session's.
+   - No file in the folder says "three things" or "remembering".
+   - Replacement: "…was replaced by a narrow gate check with an escape (the coordinating session's points 3 and 4, and the engineering attacker's finding that the listing of places, which nothing checks, went stale at the first landing by another session);"
+
+3. **MUST, NOTE line 18: the list of what selects the check says less than the code.**
+   - gate.py line 411: `reads()` adds `CODE = ('tools/research/*.py', '_process/research-config.json')` to every check.
+   - gate.py line 438: a path no area places reaches every check.
+   - So a change to any research tool (atlas.py, for instance) selects proof-uses. Because the step has `follows='proof-uses'` (gate.py line 326), the plan then lists the "proof uses" step too.
+   - REVIEW-gate MUST 4 found this same omission in RESULT-WORKFLOW, which now has it right at line 166: "or any research tool (every check is)".
+   - Replacement: "selected by the core receipt, the package's Lean (its root module and `Becoming/` folder), the receipt's sources outside it, the toolchain file, the print, and any research tool or the research config (as every check is)".
+
+4. **MUST, NOTE line 18: "It fails unless the print binds the receipt" says less than the code.**
+   - `status()` sets `bound` only when four things hold: sources (`core_sources_sha256`), the toolchain, `printer_sha256` and `FORMAT`. The printer and the format are not the receipt's.
+   - The check also fails on damage (`proof_uses_check`; the gate's own note at line 291: "and its files are whole"), on a deleted or missing index, and on a tool that fails.
+   - It passes when no print exists and none existed at the base.
+   - Replacement: "It fails unless the print's index binds the core receipt's sources and toolchain, the printer and the format, and the print's files are the ones the index names; while no print exists, nor did at the base, it passes and says so."
+
+5. **MUST, NOTE line 38: the run summary does not carry what the note says it does.** The note says "with the reason, what would have failed and the modules in the check's log and the run's summary".
+   - In replay/gate-runs-on-the-old-print.json, `escape.proof-uses` (the run summary) carries only `accepted_reason`.
+   - `would_fail` and `modules_behind` are only in `the_checks_log_after_the_escaped_run`.
+   - The note's own line 18 is right on this, and RESULT-WORKFLOW line 166 says the same split.
+   - Replacement: "…the gate's run passes, with the reason, what would have failed and the modules in the check's log, and the reason in the run's summary".
+
+6. **MUST, NOTE line 38: nothing in the JSON bears "and no pass was kept".**
+   - The JSON shows only that `escape_unset_again` failed, not "reused".
+   - The escape is part of the pass key (gate.py line 512), so a kept escaped pass would not have been reused by that run anyway. A failure on the unset run cannot show it.
+   - That no pass is kept is a fact of the code: gate.py run(), `keep()` is skipped when `accepted_reason` is set.
+   - Replacement: "with the escape unset again it fails again (that a pass made by the escape is not kept is the code's, gate.py run(); the replay does not show it)".
+
+7. **MUST, NOTE line 29: the tests did not run on "the tree as landed".** Nothing is landed: 608ff1239 is not an ancestor of main (98e7097ed), and the commits are on branch dj-uses-between-proofs. The 131 gate tests are MEND-gate's run, made before 392913da6, which then edited test_gate.py; I did not run them.
+   - Replacement: "Unit tests on the branch as committed (894580b63): 44 for the tool, 123 for the atlas (the 80 that were there before, unchanged; one, the byte-for-byte comparison with the atlas tool before the layer, now skips itself since the layer is committed); 131 for the gate, run by its mender before the last tool commit."
+
+8. **MUST, NOTE line 44: "No page gives a total" is not exact.** TERRAIN.md's "Uses between proofs" section gives:
+   - "2,166 of the 20,681 theorems in the print"
+   - "103 theorems … listed under more than one dynamic"
+   - "17 dynamics", "58 pairs … 33 have no line", "20 names"
+   - and in "What the print was made from", "20,681 theorems in 412 modules".
+
+   None reads as a score. The three family sections I opened (h.md around lines 94 and 131, b.md around line 893) give no total; the only figures there are "and 1 more in the data file", 2 occurrences across all pages.
+   - Replacement: "No page sets counts side by side, gives a piece or ranks; the terrain's paragraph gives counts only of what is listed and printed, each inside the limit it qualifies, and the list of proofs elsewhere gives no total; a change in its counts is not the map nearer or further."
+
+## LESSER findings
+
+9. **LESSER, NOTE line 16: the tool runs more Lean than "runs Lean once" says, and "every import restored" needs its figure.** The tool runs a scratch build of the stub and then the printer once. In replay/print-at-608ff1239.log.txt (the first run, 19:03:22 to 19:03:50, so 28 s is right) the log says "the cache lacks 2 of the 414 steps: compile ProofUsesStub, audit ProofUsesStub". So all 412 modules were restored from the cache; only the stub was compiled.
+   - Replacement: "It runs the printer in Lean once after a scratch build of its stub (28 seconds on the first run; the cache lacked only the stub's compile and audit, 2 of 414 steps)".
+
+10. **LESSER, NOTE line 16: the tool refuses more than the note lists.** Besides the four refusals named, it also refuses:
+    - a receipt that did not pass or gives no `utc`
+    - a toolchain other than the checker's
+    - another run that holds the tree
+    - a tree that moved while Lean ran
+
+    Replacement: add "…, and a tree that moved while Lean ran (and names its cause for any other refusal)".
+
+11. **LESSER, NOTE line 16: "no gate runs it" is exact only of execution.** Nothing in the Makefile or research.py names the tool. But the gate's plan lists Step 'proof uses' (gate.py line 324) whenever the check is selected.
+    - Replacement: "No render runs it, and the gate does not run it: the gate's plan lists it as a step to run before the gate whenever the check is selected."
+
+12. **LESSER, NOTE line 17: "With no print, every page is what it was" needs to say how it is tested.**
+    - test_atlas line 1448 checks that a store rendered without the print has no layer words, and that removing the print gives the same bytes.
+    - The byte-for-byte comparison with the code before the layer (line 1786) passed in MEND-render while the layer was uncommitted. It now skips itself.
+    - Add: "(held byte for byte against the code before the layer while it was uncommitted, and now by a test that removing the print restores every page)".
+
+13. **LESSER, NOTE line 18: the step owed is narrower and also wider than "a landing that changes Lean".** Lean outside the package (physics/, a README) selects nothing. A merge or rebase over another Lean landing owes the step again (RESULT-WORKFLOW line 166).
+    - Replacement: "So a landing that changes the package's Lean owes one step after its core run and before its render, and again after merging or rebasing over another Lean landing; a landing of text, the board or the atlas's lists owes nothing."
+
+14. **LESSER, NOTE line 15: "3.3 MB" is the size on disk.** The 413 files hold 2,601,217 bytes; `du -sh` gives 3.3M.
+    - Replacement: "2.6 MB (3.3 MB on disk)".
+
+15. **LESSER, NOTE line 20: the 131 counts more than uses.** In atlas.json, 131 dynamics have at least one of uses, chains, used_by or shared. Of those, 14 have only a shared listing, which the note itself says is "not a use"; 117 have a use, a chain or a use by proofs elsewhere.
+    - The 17 is exact: `read == 0`, of which 6 list nothing and 11 list only names outside the receipt.
+    - Replacement: "the lines stand in the sections of 131 of the 186 dynamics (117 with a use or a chain, 14 with a shared listing only); 17 dynamics list no theorem the print has a row for and can have none."
+
+16. **LESSER, NOTE line 24: two items under "the attack" need sources and fuller counts.**
+    - "The coordinating session objected before they returned": the source (DESIGN line 50) says "objected to P4". Replacement: "objected to P4 (being behind shown, not enforced) before they returned".
+    - "the print covers every module… and private theorems" is A3, credited to engineering attacker 3 to 5 "and the note's checker", not only to the attack.
+    - The 42: the source (RETURN-attack-words finding 4) counts links whose every witness has, at one end or the other, a theorem both dynamics list. Replacement: "links that turn on a theorem listed under both dynamics were 42 of the 230, not the 22 first counted".
+
+17. **LESSER, NOTE line 25: "landings that touched neither" has no antecedent.** REVIEW-gate MUST 3 gives `lean/README.md` and `lean/physics/Foo.lean`.
+    - Replacement: "…stopped landings that touched neither the package's Lean nor the print (a README or physics/ under the Lean tree)".
+
+18. **LESSER, NOTE line 26: whose conditions the mends applied is not in the folder.** The MEND files say only "further conditions" (four in render, five in tool, (a) to (f) in gate) and do not say whose they were.
+    - Replacement: "with those reviews and further conditions set for them".
+
+19. **LESSER, NOTE line 36: the byte comparison between two directories is not kept.** print-at-608ff1239-second-directory.log.txt shows only that the run wrote 412 module files and the index. No file holds the comparison of the two prints.
+    - Add: "(the comparison is not kept in replay/)".
+
+20. **LESSER, NOTE lines 33 and 38: four replay claims cannot be checked from the folder.**
+    - "The coordinating session asked for one test before the gate" has no file in the folder.
+    - The tool's own `--check` on the old print is not recorded; only the gate's check is.
+    - "Rendered with the old print, the front page and the terrain's section name the three modules as behind": no file here holds that render, so it cannot be checked.
+
+    Either add the outputs to replay/, or mark these "(not kept)". The claim that no dynamic lists a theorem of the three modules is right: I checked 293 names against atlas.json and found 0.
+
+21. **LESSER, NOTE line 39: the defect bullet overstates two points.**
+    - "Every Lean landing would have met this" holds only where the tool and the gate ran in one worktree. Replacement: "every Lean landing that ran the tool and the gate in one worktree would have met this".
+    - The gate (gate.py line 366, `dirty()`) counts any ignored .lean file outside the catalogue's EXCLUDED folders, not only under `tmp/`.
+    - The fix is correct: TREE is `tmp/.build/proof-uses-tree`, `.build` is in lean_catalogue EXCLUDED, and the test at test_proof_uses line 65 pins that TREE has an excluded component.
+
+22. **LESSER, DIRECTION.md sentence: the final clause says more than the check.** "a gate check holds the print to the Lean, so that a landing which changes Lean owes one step more". The check compares the print's index with the core receipt's source hashes and toolchain (and the printer and format). It reads no Lean, only the package's Lean selects it, and it has an escape.
+    - Replacement: "and a gate check holds the print to the core receipt's sources, so that a landing which changes the package's Lean owes one step more, unless it states a reason for passing it."
+    - The other clauses match the note and the design: the name, of two theorems, "proved from" shown to say more, computed at each render, typed by no one.
+    - "built the same night" is true of the branch; it is not landed.
+
+## Checked and found right
+
+- **Print figures:**
+  - 20,681 rows, 412 module files, 413 files in all.
+  - INDEX counts are 412 / 20,681 / 20.
+  - 36 distinct `_private` names; the three modules beside the package hold 24 + 19 + 35 = 78 rows.
+  - Against /Users/ren/tmp/dj/batch29/all-proof-heads.jsonl: all 20,567 old rows are present and 114 are new (36 private, 78 of the three modules, no overlap). Exactly 180 rows differ, each only by gaining theorems of those three modules.
+- **Pages:** the largest family page, h.md, is 439,487 bytes, against `PAGE_LIMIT = 1_048_576`. 186 sections have the bullet, and it is last in the sections I looked at.
+- **The Lean landing:**
+  - diff-of-the-two-prints.json: three module files and INDEX differ, six rows change, and the files that differ are exactly the modules whose source hash differs.
+  - The six rows are the theorems of cadcf76e5, and its message matches.
+  - No .lean changed in 98e7097ed..894580b63.
+- **The tool:** it writes by replace (`os.replace` via a temp file). The render uses the print and the lists; a shared listing is shown as itself.
+- **The reviews:** all six findings named on line 25 are in the reviews as MUSTs and are said in their strength:
+  - REVIEW-tool 1 and 2
+  - REVIEW-render 1 and 2
+  - REVIEW-gate 3 and 2
+
+  "Three ways" is RETURN-attack-words finding 1. "42 and not 22" is its finding 4. The design's "two mapped, two attacked" is right. "No counts side by side, no pieces, nothing ranked" is A8 and finding 10.
+- **Links:** all three relative links resolve; seven `../` from the note folder reach the repository root. TERRAIN.md has "## Uses between proofs" (slug `uses-between-proofs`, no explicit `<a id>`).
+
+## Not read or not checkable
+
+- The token figures 754,366, 1,123,684 and 650,925 cannot be checked from these files.
+- test_gate was not run, as instructed.
+- RETURN-pipeline and RETURN-readers I read only in grep hits. The REPORT files I read only in part.
+- I did not read atlas.py's rendering code beyond the lines quoted, ATLAS.md beyond its diff, or family pages other than h.md and b.md.
+- I did not check the 58 / 33 figure on the terrain page.

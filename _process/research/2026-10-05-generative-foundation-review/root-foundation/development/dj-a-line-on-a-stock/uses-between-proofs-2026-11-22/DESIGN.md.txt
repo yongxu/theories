@@ -1,0 +1,77 @@
+# A layer of links drawn from the Lean, in the atlas: the design, written before any code
+
+*AI-written (Claude Fable, board row DJ), 22 November 2026, 18:10 WIB. On Ren's word of 18:04 ("Yes, build it", to the question "Should I build this layer of links drawn from Lean into the atlas, beside the hand-kept ones and with these limits stated on it"; `sources/15-codex-theory-conversations/2026-11-22-yes-build-it-links-drawn-from-the-lean.md`, in the worktree `/Users/ren/tmp/dj/wt`). To be attacked before anything is written. Additions after the attack go under "After", with the clock.*
+
+## What is built, in one paragraph
+
+The atlas's pages get a third kind of link between dynamics, beside the two kept by hand (a road: an exit or a transition's end naming another dynamic; the same law seen twice: a case row or a joining). The third kind is **proved from**: a theorem listed under dynamic X has in its proof term, directly or through theorems no dynamic lists, a theorem listed under dynamic Y. It is read off what Lean prints, typed by no one, and shown as a dependence, with its limits said where it is shown. No entry of the atlas is changed by it, no Lean of the package is changed, and it is no result.
+
+## Parts
+
+**P1. What Lean prints, as a tracked file.** `theories/becoming/results/atlas/proof-uses.jsonl` (name open): one line a theorem declared in a module of the package, sorted by name: `{"name", "module", "uses": [...]}`, where `uses` is the package's theorems occurring in its proof term, following Lean's auxiliary declarations under the theorem's own name (what `AllProofHeads.lean` prints today, without `head` and `recursors`, which the layer does not use). First line a header object: the printer's sha256, the toolchain, and for each module the sha256 of the source file it was printed from. About 20,600 lines, a megabyte or two.
+
+**P2. The tool that makes it.** `tools/research/proof_uses.py`, with the Lean printer beside it (`tools/research/lean/ProofUses.lean`). It builds a stub that imports the whole package in a scratch tree under `tmp/` through the package's own `scratch_build.py` (every import restored from the shared cache when the sources are the cache's), runs the checker's `lean` once on the printer (about half a minute), and writes P1. It waits while a gate, a core run or a scratch build is alive. It is a Lean run and is told as one. It is NOT part of the render and NOT part of the gate: a render never runs Lean.
+
+**P3. The render computes the links.** `tools/research/atlas.py` reads P1 as an optional input (as it reads the crosswalk's checks file today): absent, the pages are as they are now. Present, `build()` computes, from P1 and the store's current declaration lists, for each ordered pair of dynamics the proved-from link with its shortest witness chains (breadth first; a depth of 1 is a direct use). So a change of what a dynamic lists changes the links at the next render with no Lean run; only a change of the Lean makes P1 behind.
+
+**P4. Being behind is shown, not enforced.** At render the tool hashes each module's tracked source and compares with P1's header. Where they differ the pages say so: on the atlas's front page a sentence naming how many modules the file is behind for and which, and on each link whose witness chain passes through a theorem of such a module a mark "printed before this module last changed". The gate does not fail on it. A landing that changes Lean may run P2 and commit P1 with the pages, or leave the pages saying they are behind. (Open to the other sessions' word: whether the gate should enforce it.)
+
+**P5. Where it is shown.**
+- In each dynamic's section of its family page, after the hand-kept lines: "Proved from (read off the Lean's proof terms; a dependence, not a case and not a road)": for each other dynamic Y, the theorem of this dynamic and the theorem of Y, and "directly" or the names of the unlisted theorems between. And "Used in the proofs of": the dynamics whose listed theorems use this one's. A link whose every witness ends in a theorem this dynamic lists too is marked "by one theorem being listed under both".
+- On the terrain page: a section with the counts by kind (roads; the same law seen twice; proved from, by a direct use and through unlisted theorems; hand-kept pairs that are also proved-from pairs; dynamics that list no declaration), each a count told and not a measure to move, with the limits in words: a dependence; cannot see a passage; about a tenth of the package's theorems are under a dynamic; the most depended on are the most basic; a floor (one call deep in what it follows, and the recursors and wrappers it knows play no part here).
+- In the atlas's data file (`results/data/atlas.json`): per dynamic `proved_from` and `used_by`, each with witnesses, and the header of P1.
+- NOT on the terrain's drawing (`terrain.svg`), which stays the drawing of the hand-kept exits; NOT in `JOINS.md`'s counts of the five stores unless that page's tool takes it in a later step; NOT on the map's cards.
+
+**P6. Tests.** Unit tests in `tools/research/tests/test_atlas.py` (or a new file): the link computation on a small made-up store and list (direct; through an unlisted theorem; a theorem listed under two dynamics; a dynamic with no declarations; no self-link; breadth first gives depth 1 where a direct use exists beside a longer chain); behind-ness (a changed module hash marks the links through it and the front sentence); absent file gives today's pages byte for byte; every page that shows a proved-from link carries the words that it is a dependence and not a case or a road.
+
+## What it must not do
+
+- Say or suggest "a case of", "joined", "the same law", "a passage" of a proved-from link, on any page.
+- Give a count as a score, a ranking, a "largest piece" beside any word that sounds like a middle, or a progress bar.
+- Change any hand-kept entry, the validator's rules for entries, or the meaning of an existing count on any page.
+- Run Lean in a render or a gate.
+- Stop another session's landing.
+
+## What would count against the design (to be attacked)
+
+1. The file P1 is too large, or churns the repository at every Lean landing, for what it gives; a smaller file (only what the listed theorems reach) would serve, at the cost that a change of listing needs a Lean run.
+2. "Shown, not enforced" lets the layer rot: pages that say they are behind for forty modules are a map nobody trusts.
+3. The family pages grow past their size limit, or the lines drown the hand-kept ones.
+4. Matching the store's declaration names to Lean's names is wrong somewhere (names listed without the `Becoming.` prefix; `Generative.*` names; quoted names), so links are missed or invented.
+5. A proved-from link through a long chain of unlisted theorems is noise: a depth limit, or showing direct uses by default and the rest folded, would be truer.
+6. The printer follows auxiliary declarations under the theorem's own name; a private helper elsewhere is a separate theorem and is followed only if no dynamic lists it. Is "through theorems no dynamic lists" then the right rule, or should private helpers be folded into their one user?
+7. Something else in the repository reads `atlas.json` or the family pages and breaks on the new fields or lines.
+8. The words on the page say more than the layer is.
+
+## After
+
+### 18:19 WIB, 22 November: the design as it stands after the attack (this section is what gets built; where it differs from the text above, this holds)
+
+Four AI readers (754,366 tokens by the run's record; returns in `returns/`): two mapped the render and what reads its output, two attacked. The coordinating session objected to P4 before they returned. What changed, and whose finding it was:
+
+**A1. The kind is named "uses between proofs", and a line is of two theorems.** (Words attacker 1 to 3.) "Proved from", said of two dynamics, said more than the thing: a proof may take one conjunct of a bundle and never touch the part a chain runs on (`World.exchange_needs`); 30 pairs are linked both ways; and the theorems most chains end in include counting lemmas with nothing of their dynamic's name in them. So every line is written theorem first, with the dynamic only as where the used theorem is listed. Forbidden on any page, beside the first list: "proved from" between dynamics, "most depended on", "most basic", any figure of pieces or of dynamics "linked to no other". "A floor" is not said alone: a chain can also overstate.
+
+**A2. Double listing is shown as itself, at both ends.** (Words attacker 4.) A use is not shown as a use between X and Y where the using theorem is also listed under Y, or the used theorem also under X; the shared listing is shown in its place ("listed here and under another dynamic, by hand"). By that reader's count this takes 42 of the 230 links out and leaves 188, 138 of them by a direct use.
+
+**A3. What is printed: every module of the core receipt, private theorems included, exact names only.** (Engineering attacker 3 to 5; the note's checker.) The stub imports every module the receipt lists (412 today: the package's and the three beside it), so `RelationalRenewal.*` and the like have rows. A private theorem gets a row under the name Lean prints and is followed like any theorem no dynamic lists. A name in `uses` with no row is counted in the index. A listed name is a theorem of the print only by its exact name. Still outside: theorems of other Lean trees in the repository (190 listed ones by that reader's count) and every definition; the pages say so.
+
+**A4. One file a module, and an index.** (The coordinating session 2; pipeline reader on the 2 MB screen.) `theories/becoming/results/atlas/proof-uses/INDEX.json` and `proof-uses/<Module>.jsonl`. A module's file: one line a theorem, sorted by name, `{"name", "uses"}`. The index: what the print is, in words, on its face (a use between proofs as written; one call, following Lean's auxiliary declarations under a theorem's own name; definitions not followed); the printer's sha256; the toolchain; the commit and the core run it was printed from; the sha256 of the receipt's map of source hashes (as `shared_laws.py` binds its file); each module's source sha256; the counts (modules, theorems, uses with no row).
+
+**A5. The tool.** (Engineering attacker 8; readers' mapper on what exists.) `tools/research/proof_uses.py`, with the printer as text inside it (no tracked `.lean` file, which the Lean catalogue and the validator would both read). It follows `shared_laws.py`'s way of restoring a core run from the checker's cache. It refuses a tree whose Lean differs from a commit; builds a stub generated from the receipt's module list in one fixed directory under `tmp/` that it owns; says how many steps the cache lacks and refuses more than a few unless told; runs the printer in one of the checker's Lean slots; writes the files only after a clean exit and a matching row count, by replace; waits on nothing by process name. `--check` compares the index with the receipt and runs no Lean.
+
+**A6. The pages are a function of the print, the store and the receipt; a render reads no Lean source.** (Engineering attacker 1; pipeline reader 7.) The print's files and the receipt enter `atlas.inputs()` only when the index is there; absent, the pages are today's, byte for byte. Where the index does not bind the receipt's sources, the front page and the terrain's section say so and name the modules that differ, and each section whose listed theorems are in such a module says that their lines were printed before it changed; where a listed theorem of the receipt has no row at all the section says that too. That is read off two inputs and hashes nothing.
+
+**A7. Enforced, narrowly, with an escape.** (The coordinating session 3 and 4; engineering attacker 2.) A gate check `proof-uses`, selected only when a landing changes a Lean file of the package, the receipt, the print or the tool: it fails unless the index binds the receipt's sources and the tool's printer. A landing of text, the board or the atlas's lists never selects it. `GATE_PROOF_USES='reason'` lets it pass with the reason in the gate's output, for a day the printer is wrong; the pages then say what A6 says. A landing that changes Lean runs the tool after its core run and before its render. The print is regenerated, never merged by hand. The print as a step of the core run (the coordinating session 1) is not in this build.
+
+**A8. Where and how it is shown.** (Words attacker 7 to 10.)
+- In each dynamic's section, last, after Sources, as bullets and never a heading: "**Uses between proofs.**" with one sentence saying what a line is; then *used directly by proofs here* (one line a other dynamic in the atlas's order, grouped by the used theorem, the using theorems inline; at most four used theorems, then "and n more in the data file"; "told above as a case" where a case row already has the pair); *reached through theorems no dynamic lists* (one shortest chain a used theorem not already shown as directly used, every theorem between named, up to three in full and beyond that first, "n more between", last; with its caveat that the first need not need the last); *proofs elsewhere that directly use a theorem listed here* (direct only, no total); *listed here and under another dynamic, by hand*. "None found. A use Lean's printer did not follow would not show here." where there is none; "Not read: this entry lists no theorem of the print, so no line can be computed for it." for those that can have none.
+- On the terrain page, after the section on how dynamics join: one section, anchored `uses-between-proofs`, that is the paragraph of limits with each count inside the sentence of the limit it qualifies. No counts side by side by kind; no pieces; nothing ranked.
+- On the atlas's lead, one sentence that these lines are computed and typed by no one, keeping the sentence the tests pin.
+- In the data file: per dynamic the four lists and what was not read; at the top the index's header.
+- The contrast is typed against computed, not hand-kept against Lean: most exits that name a dynamic are themselves by a Lean law.
+
+**A9. Tests** as P6, and: the double-listing rule at both ends; a private theorem followed; a module of the receipt outside `Becoming.*`; the index not binding the receipt gives the three sentences of A6 and no other change; the gate check selected by a Lean path and not by a text path, failing, passing, and passing by the escape with its reason shown; the tool's pure parts (stub from a receipt, rows to files, `--check`).
+
+**A10. Not in this build.** The print inside the core run. Roads: a passage is read from a statement and this print cannot give it; the terrain's paragraph says that none shown is not none proved. The listing's joins and the mapping rows' binders read from Lean. Any change to `terrain.svg`, `JOINS.md` or the map's cards.
+
+**What would count against it after landing:** a page sentence that says more than A1; a figure standing as a score; a Lean landing stopped by the check with no way through, or let through with the pages silent; a render that reads a Lean file; a link shown that the proof terms do not have, or one they have and the rule of A2 or A3 should show, not shown.

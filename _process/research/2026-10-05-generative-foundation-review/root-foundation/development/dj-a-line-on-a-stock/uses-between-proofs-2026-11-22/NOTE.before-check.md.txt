@@ -1,0 +1,48 @@
+# A layer of uses between proofs in the atlas, built on 22 November 2026
+
+*AI-written (Claude Fable, board row DJ). A change to the tools and to the atlas's generated pages. No Lean of the package is changed and nothing here is a result. What a reader who took no part changed in this note is said at its end. He has not read it.*
+
+## Why
+
+On the evening of 22 November Ren was asked whether to build a layer of links drawn from the Lean into the atlas, beside the hand-kept ones and with their limits stated on it, and answered with the first of two answers offered him: "Yes, build it" ([his words](../../../../../../../sources/15-codex-theory-conversations/2026-11-22-yes-build-it-links-drawn-from-the-lean.md)). The counts that led to the question are in [the record of the map as represented](../the-map-as-represented-2026-11-22/NOTE.md). This note says what was built, how it was attacked and checked, and what it is not.
+
+## What a line is
+
+The proof of one theorem, as Lean holds it, uses another theorem, and the atlas's entries list the two under different dynamics. Nothing more. It is not a case, not a joining and not an exit or a passage; it is of two theorems and not of two dynamics; and it is typed by no one, though it rests on the listing of theorems under dynamics, which is kept by hand. The limits are said in one paragraph on [the terrain page](../../../../../../../theories/becoming/results/atlas/TERRAIN.md#uses-between-proofs), with each count inside the sentence of the limit it qualifies.
+
+## What was built
+
+- **A print.** `theories/becoming/results/atlas/proof-uses/`: one file a module of the core receipt, one line a theorem with the receipt's theorems that occur in its proof term, and an index that binds the print to the receipt's sources, the toolchain, the printer and the format. The first print: 20,681 theorems in 412 modules, 413 files, 3.3 MB.
+- **A tool that makes it.** `tools/research/proof_uses.py`. It runs Lean once (28 seconds on the first run, every import restored from the checker's cache), refuses a Lean tree that differs from a commit, a receipt that does not bind the bytes, a cold cache unless told, and a short or failed Lean run, and writes by replace. No render and no gate runs it.
+- **The render.** `tools/research/atlas.py` computes the lines from the print and the entries' current lists at every render, and writes them last in each dynamic's section; a change of what a dynamic lists needs no Lean run. A theorem listed under both dynamics is shown as a shared listing and not as a use. With no print, every page is what it was.
+- **A gate check.** `proof-uses`, selected by the core receipt, the package's Lean, the receipt's sources outside it, the toolchain file, the print and the tool. It fails unless the print binds the receipt. `GATE_PROOF_USES` with a stated reason lets a failure of it pass, with the reason kept in the check's log and the run's summary. So a landing that changes Lean owes one step after its core run and before its render; a landing of text, the board or the atlas's lists owes nothing. `_process/RESULT-WORKFLOW.md` tells the step.
+
+On the pages as rendered with the first print: the lines stand in the sections of 131 of the 186 dynamics; 17 dynamics list no theorem the print has a row for and can have none. The largest family page is 439,487 bytes, under the limit of 1,048,576.
+
+## How it was made
+
+1. **The design, written first and attacked** (`DESIGN.md.txt`; returns in `returns/`). Four AI readers, 754,366 tokens by the run's record: two mapped the render and what reads its output, two attacked. The coordinating session objected before they returned. What the attack changed: the kind was to be called "proved from" between dynamics, and a reader showed three ways that said more than the thing (a proof that takes one part of a bundled theorem; pairs linked both ways; chains that end in counting lemmas), so a line is of two theorems; links made by one theorem being listed under two dynamics were 42 and not the 22 first counted, and are shown as shared listings; "shown when behind, not enforced" was replaced by a narrow gate check with an escape, after the coordinating session pointed out that three things had gone stale that day because being fresh depended on someone remembering; the print covers every module of the receipt and private theorems; no counts side by side, no pieces, nothing ranked.
+2. **Built by three writers on separate files, each reviewed by a reader who took no part** (`build/`; 1,123,684 tokens). The reviews found, among others: a module could lose its rows inside Lean and the print still count as bound; a change of toolchain alone left the print bound; a page could give the wrong reason why a theorem has no row, and say nothing of it where the print was bound; the terrain's paragraph said less than the printer follows; the gate check was selected by the whole Lean tree and not by the package, so that on a day the print was behind it could have stopped landings that touched neither; the escape did not cover a tool that fails to load.
+3. **Mended by three more writers** with those reviews and the conditions of the two other sessions (650,925 tokens): the check on from the first landing; its failure saying what to run and telling a step left out from a tool that failed; an escaped pass leaving its reason on file.
+4. **Run for real, and a Lean landing of that day replayed** (`replay/`), below.
+
+Unit tests on the tree as landed: 44 for the tool, 123 for the atlas (the 80 that were there before, unchanged), 131 for the gate.
+
+## The replay, and what it found
+
+The coordinating session asked for one test before the gate: that day's real Lean landing, replayed (six older proofs made calls of existing laws, in three modules; `cadcf76e5`).
+
+- **The first print worked on its first run.** Set against the list an earlier form of the printer had made that afternoon: every one of that list's 20,567 rows is in the print; the 114 new rows are 36 private theorems and the theorems of the three modules beside the package; 180 rows differ in their uses, each by gaining a theorem of those three modules.
+- **Two directories wrote the same bytes.** The same tree printed a second time from another worktree gave every file identical, the index included.
+- **Across the Lean landing exactly three module files and the index differ** (`replay/diff-of-the-two-prints.json`): six rows changed, the six theorems of that landing, each now using the law it was made a call of. No module whose text was unchanged printed differently. That is one landing; it does not show that binding the print by source hashes is always enough, since a proof by a tactic could change its term when a module it imports changes.
+- **The old print against the new receipt:** the tool's check and the gate's check fail and name the three modules, with the command to run. With the escape and a stated reason the gate's run passes, with the reason, what would have failed and the modules in the check's log and the run's summary (`replay/gate-runs-on-the-old-print.json`); with the escape unset again it fails again, and no pass was kept. Rendered with the old print, the front page and the terrain's section name the three modules as behind. No dynamic's section carried the sentence for its own theorems, since no dynamic lists a theorem of those three modules; that sentence is held by unit tests only.
+- **One defect, found by the replay and by nothing before it.** After the tool had printed in a worktree, the gate refused that worktree as more than its commit: the tool leaves a stub and a printer, which are Lean files, and the gate counts an ignored Lean file under `tmp/` as stray. Every Lean landing would have met this. The tool's tree now lies under a folder the gate and the Lean catalogue both skip, and a test pins it.
+
+## What it is not, and what stays open
+
+- It does not place the two ways with respect to each other, and it is not a road between dynamics: a passage is read from a statement, and a print of what proofs use cannot give one. The terrain's paragraph says that none shown is not none proved.
+- It is not a measure. No page gives a total, a piece or a ranking; a change in its counts is not the map nearer or further.
+- It decides nothing about who holds the atlas or what becomes of the map's other listings; the board's line 0 (e) stands.
+- Outside the print: theorems of the repository's other Lean trees and every definition, so a theorem stated with another dynamic's notion and using none of its theorems has no line.
+- Not in this build: the print as a step of the core run itself; the listing of places' joins and the mapping rows' binders, which Lean could also print; anything on the terrain's drawing, the page of what does not join, or the map's cards.
+- What would count against it: a page sentence that says more than a use between two proofs; a figure standing as a score; a Lean landing stopped by the check with no way through, or let through with the pages silent; a render that reads a Lean file; a line the proof terms do not have.

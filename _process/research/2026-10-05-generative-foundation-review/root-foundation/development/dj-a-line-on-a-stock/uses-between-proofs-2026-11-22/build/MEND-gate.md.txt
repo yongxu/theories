@@ -1,0 +1,103 @@
+REPORT: the gate part of "uses between proofs", mended by its review. Worktree `/Users/ren/tmp/dj/wt-layer`, branch `dj-uses-between-proofs`. Nothing committed, no branch switched.
+
+All nine findings and both tool-review findings are applied, and the whole of `test_gate` passes (131 tests). Three findings were applied with a difference from the reviewer's letter (1/2 message wording, 4 and 9 facts updated, 5 note wording), and I added one behaviour beyond the letter (an escaped pass is not kept). Each is flagged below.
+
+## Review findings (REVIEW-gate.md)
+
+1. **A `status()` that returns `None` or a non-dict: applied as worded, message otherwise.**
+   - The result is read inside the `try`; anything that is not a dict with `"bound"` raises `TypeError` there; `bound` is `found['bound'] is True`.
+   - The message's first words follow condition (b): `the tool failed: tools/research/proof_uses.py status() failed: <exc!r>; <the escape sentence>`. The reviewer's `; {RUN_PROOF_USES}` tail is replaced by the escape sentence.
+   - Tests: `None`, a list, a string, a dict without `bound`; and `'bound': 'false'` is not bound.
+
+2. **An import error crashes the check: applied as worded, message otherwise.**
+   - `proof_uses_status()` catches only `ModuleNotFoundError` whose name is the tool's or `None`, and re-raises anything else.
+   - The check catches every exception of the import: `the tool failed: tools/research/proof_uses.py does not import: <exc!r>; <the escape sentence>`.
+   - An absent tool or absent `status` is also told as `the tool failed: … is absent …`.
+   - Tests: `SyntaxError`, a `ModuleNotFoundError` for another module, `RuntimeError`; each fails as the tool's failure and passes under the escape.
+
+3. **Selection too wide: applied with the selection the task gives.**
+   - Reads (gate.py:288): the core receipt, `becoming/Becoming.lean`, `becoming/Becoming/**`, `becoming/lean-toolchain`, `?…/proof-uses/**`, `?tools/research/proof_uses.py`.
+   - `derived='proof_uses_sources'` (gate.py:171) gives the receipt's `source_paths` outside the root module and `Becoming/`. On the real receipt these are `GenerativeCore.lean`, `deeper/RelationalRenewal.lean` and `inquiry-root/sufficiency/InquirySufficiency.lean`.
+   - The toolchain file is `…/lean/becoming/lean-toolchain`: tracked, and the one `check_becoming.py` resolves from its own folder.
+   - Negatives tested for M, A and D: `lean/README.md`, `lean/physics/X.lean`, an unlisted `deeper/` file, `history/`, `universal-ethics/`, an `inquiry-root/*-checks` receipt, `becoming/README.md`, `check_becoming.py`, the fallible-inquiry receipt and runs, a `becoming-checks/<stamp>/verification.json`, another experiments tree, the board, ONE-PAGE, `entries/dynamics.json`, RESULT-WORKFLOW, Makefile, `tests/test_atlas.py`.
+   - `stale_rules` is clean for the rule on the real tree.
+
+4. **The workflow paragraph said more than the code: applied in the reviewer's words, amended where the code now differs.** The amendments are:
+   - selection names the root module, the folder, the receipt's outside sources and the toolchain file;
+   - what is held adds the toolchain, the format and whole files;
+   - the reason is also in the run's summary, and such a pass is not kept;
+   - one sentence on the three first words of a failure;
+   - "after merging or rebasing over another Lean landing it runs it again", as worded.
+
+5. **The plan lacks the step: applied, note worded otherwise.**
+   - `Step('proof uses', 'python3 -B tools/research/gate.py hold -- python3 -B tools/research/proof_uses.py', (), …, follows='proof-uses')` sits between `shared laws` and `render` (gate.py:324).
+   - The reviewer's note ended "the proof-uses check fails until then". `reads()` adds CODE to every check (gate.py:411) and `plan()` lists a step whenever `s.follows in selected` (gate.py:482). So a landing that changes only `atlas.py` is shown the step while its print binds, and the sentence would be false there. The note now reads "…; where the Lean or the printer changed, the proof-uses check fails until then".
+   - Still true and not changed: a tools-only landing is listed this step.
+   - The pinned lists at test_gate.py:214, 217 and 229–231 are unchanged, because their trees hold no `proof-uses` check.
+   - A new test pins `['core run', 'shared laws', 'proof uses', 'render']` for a package Lean change and `['core run', 'shared laws', 'render']` for `lean/physics/X.lean`.
+
+6. **Reason not in the run summary; an escape outlives its unset: applied as worded, plus one addition.**
+   - `environment()` adds `env['escape']` for `proof-uses` only (gate.py:512).
+   - `run()` puts `accepted_reason` from the check's log into `results['proof-uses']` (gate.py:1108).
+   - **Addition beyond the letter:** a pass with an accepted reason is not kept (gate.py:1111). Otherwise a rerun with the same variable would report `reused` with no reason, against condition (c).
+   - If the log is not the check's JSON alone, a set escape is taken as used.
+
+7. **A reason reported when nothing failed: applied as worded.** `accepted_reason` is the reason only when there were errors; tested.
+
+8. **"only" untested: applied.**
+   - Positives are tested against the rule's own patterns, without CODE, so dropping the tool's path fails the test.
+   - The finding-3 negatives are added.
+   - A separate test says a research tool, the config and an unplaced path reach it as they reach `board`.
+   - The import test is split: a subprocess shows that loading gate.py leaves `tools.research.proof_uses` out of `sys.modules`; another shows an absent module reads as `None`.
+   - Under five mutations the matching tests fail: tool path dropped, wide rule, no derived, no escape in the key, no step.
+
+9. **GATE.md row: applied, amended.** One row after `receipt`, in the reviewer's words plus the receipt's outside sources, the toolchain file, the format, whole files, and a pointer to the RESULT-WORKFLOW paragraph.
+
+## Tool review findings (REVIEW-tool.md)
+
+- **Finding 3, a damaged print must fail: applied as worded.** Each `damage` sentence is added as `the print's files: <d>`, and `bound` is left as it is. A non-empty `damage` now fails the check even when bound.
+- **Finding 10, TESTS entry: applied.** `'test_proof_uses': ()` (gate.py:233). The test file reads no live file, by my reading of its imports.
+
+## Further conditions
+
+- **(a) On from this landing.** It fails whenever an index is there and status does not say bound, or names damage. Open point: while no index exists in the tree, none at the merge base, and no file under the folder, it passes with a note (kind `no index`). If this landing carries no print, the check stays quiet until the first print lands.
+- **(b) First words.**
+  - Not bound: `the print is behind the Lean: run python3 -B tools/research/proof_uses.py after the core run and before the render, and commit the files it changes with the pages`, then the modules and status's problems.
+  - Damaged, or an index missing or deleted: `the print files are damaged: …` with the same command.
+  - Tool failure: `the tool failed: …` with the exception and the sentence "GATE_PROOF_USES with a stated reason lets the landing through on a day the tool is wrong; the reason goes into the landed clause, and the pages will then say the print is behind".
+  - The head follows status's `kind` where it is `not bound` or `damaged`, else it is read off `bound` and `damage`. A kind outside the four, or `no index` beside an index, is the tool's failure.
+  - The escape passes every one of these; tested for each.
+- **(c) Reason readable from files.** It is in the check's log (`accepted_reason`, `would_fail`, `modules_behind`, `kind`) and in the run summary; the escape is in the pass key. Tested through `gate.run` with a check of that name whose command prints the same JSON, since the real command cannot run in a throwaway repository.
+- **(d) Receipt changed, no source changed.** Tested: the landing's only change is the receipt, the plan selects `proof-uses` by that path, and a bound stub passes with no accepted reason.
+- **(e) Plan step.** Done, see finding 5.
+- **(f) RESULT-WORKFLOW.** Done, with the sentence "A landing that changes no Lean and takes a tip by rebase or merge takes that tip's print as it is; the print is regenerated, never merged by hand."
+
+## Files changed
+
+- `/Users/ren/tmp/dj/wt-layer/tools/research/gate.py`
+- `/Users/ren/tmp/dj/wt-layer/tools/research/tests/test_gate.py` — `CACHED` gains `proof_uses_sources`; RuleTests and ProofUsesTests rewritten, 32 tests in the two classes.
+- `/Users/ren/tmp/dj/wt-layer/_process/RESULT-WORKFLOW.md` — the one paragraph.
+- `/Users/ren/tmp/dj/wt-layer/_process/research/2026-10-05-repository-reconciliation/architecture/gt/GATE.md` — one row.
+
+## Tests run
+
+- `python3 -B -m unittest tools.research.tests.test_gate.ProofUsesTests tools.research.tests.test_gate.RuleTests`, last at load about 18: `Ran 32 tests in 7.564s` / `OK`.
+- `python3 -B -m unittest tools.research.tests.test_gate`, once, at load about 17:
+  ```
+  Ran 131 tests in 69.462s
+
+  OK
+  ```
+- `python3 -B tools/research/gate.py proof-uses` on the worktree (the one check, no Lean): exit 0, kind `no index`.
+- One ProofUsesTests test calls the real `proof_uses.status()` as it stood at 18:57 on an index `{}` with no receipt. It answered kind `damaged`, and the check read it as the print's failure.
+
+## Not done
+
+- No Lean, lake, scratch build, core run, render, research check or `gate.py run`/`plan`.
+- No full unit suite and no `test_proof_uses`.
+- The real check's subprocess command was not exercised through `gate.run`.
+- The workflow paragraph, the row and the check's note say the index binds the toolchain and the format. That rests on the tool's `status()`, which I read (it does so now) but did not test.
+- GATE.md keeps "Three steps write…" (line 94) and its list of what the gate adds (line 24); the task named one row.
+- The earlier RESULT-WORKFLOW sentence listing the steps that write ("the core run…, the shared-laws generator…, then the render") is untouched.
+- Whether `gate.py hold --` around the tool is safe was read, not run: the tool takes the checker's `lean_slot()`, not a gate slot.
+- Test files with no TESTS entry other than `test_proof_uses` (for example `test_atlas_index`, `test_uses_pages`) were left as they are.

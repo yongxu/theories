@@ -1,0 +1,79 @@
+1. **MUST. Pages can give the wrong reason why a theorem has no row.** Files: `tools/research/atlas.py:2119-2123` (the section's "*No row in the print.*") and `atlas.py:2223-2228` (the terrain's "What the print was made from").
+   - **What goes wrong.** When the print does not bind the receipt, every listed receipt theorem without a row is said to be "declared or changed after the print was made". That is false for a theorem whose module is not among `modules_behind`; for those the printer simply has no row. "Changed" is also wrong: a theorem whose proof changed still has a row.
+   - **The bound case says nothing.** When the print binds, the same theorems get no word in their section at all. A section can then say "None found" while one of its listed theorems was never read. A6 asks the section to say so in both cases.
+   - **How likely.** On the earlier list I count 10 such theorems, all in `RelationalRenewal`, so on the real print (which includes that module) it may be 0. It is still wrong behaviour.
+   - **Fix, step 1.** In `_proof_uses`, keep each receipt declaration's module, in the same comprehension as `kinds`: `decl_module = {d['name']: m.get('module') ...}`.
+   - **Fix, step 2.** In `_add_uses`, store it per dynamic: `u['no_row'] = {'in_modules_behind': [...], 'other': [...]}`, splitting `not_read[NOT_READ[0]]` by whether `decl_module[n] in behind`.
+   - **Fix, step 3.** In `_uses_rows`, drop the `if b and` guard and write the two parts with different words:
+     - for theorems in a module that is behind: "`X` is declared in a module changed since the print was made (declared or renamed after it): a use it makes is not shown, and its having no line says nothing."
+     - for the rest: "`X` is a theorem of the core receipt that the print has no row for: no line can be computed for it, and its having no line says nothing."
+   - **Fix, step 4.** Split the terrain's `stray` sentence in the same way.
+
+2. **MUST. The terrain says less than the printer follows.** File: `atlas.py:2209-2211`.
+   - **What goes wrong.** The sentence reads "The printer follows one call, and Lean's own auxiliary declarations under a theorem's name". The printer (its `ABOUT` at `proof_uses.py:92-95`, and `n.isPrefixOf u` at line 151) also counts as a theorem's own uses those of every theorem a person declared under its name. So a line "`u`, in `t`" can be true only of `t.sub`'s proof. The heading sentence "the proof of one theorem, as written, uses another" is then more than the line is, and the page does not say so.
+   - **Second omission.** The print's own `ABOUT` warns that a structure field that is a proposition gets a row. A proof that uses such a field is listed as using a theorem, though what it uses is an assumption. The terrain does not carry this limit.
+   - **Fix:** replace that clause with: "The printer follows one call, and every declaration under a theorem's own name (Lean's auxiliary ones, and any theorem a person declared under that name), counting what they use as the theorem's own; a field of a structure that is a proposition has a row, so a proof that takes it from the structure it is given shows as a use, though what it uses is an assumption and not a proved theorem; a use it does not follow is not shown, so where no line is, none was found".
+
+3. **LESSER. The direct-use line puts the dynamic before the theorem.** File: `atlas.py:2139`.
+   - **What goes wrong.** `From [Y]: \`u\`, in \`t\`` reads as a use coming from dynamic Y. A1 says every line is written theorem first, with the dynamic only as where the used theorem is listed. The words attacker's sample, which A8 adopted, has "From", so A1 and A8 disagree here.
+   - **Fix:** `lines.append('; '.join(said) + f', listed under {under([y])}.')`. The result is "`u`, in `t`; `u2`, in `t`, listed under [Y]." This is the same form the chain and reverse lines already use.
+
+4. **LESSER. The "behind" rows come last in a section.** File: `atlas.py:2163`, `return rows + late`.
+   - **What goes wrong.** A reader meets the stale lines before learning they may be stale. Attack words §8 put this mark at the section's head.
+   - **Fix:** `return late + rows, (...)`.
+
+5. **LESSER. A chain can be dropped although no line on the page shows its end.** File: `atlas.py:2014`.
+   - **What goes wrong.** `shown` holds the ends of direct uses whatever dynamic they were shown under. Suppose `t1` (here) uses `u` directly and `u` is listed under y1 and y2, but `t1` is also listed under y2. The direct use then shows only for y1. A chain `t2 → … → u`, whose dynamics include y2, is still removed, so no line here shows `u` for y2. This is rare.
+   - **Fix:** `shown = set(direct)` (the pairs `(y, u)`). Then filter by end and dynamic: keep `c` with `[y for y in c['dynamics'] if (y, c['chain'][-1]) not in shown]` as its dynamics, and drop it only when that list is empty.
+
+6. **LESSER. The binding hash is written twice.** File: `atlas.py:1910`.
+   - **What goes wrong.** `hashlib.sha256(json.dumps(sources, sort_keys=True)...)` copies `shared_laws.sources_digest` and `proof_uses.sources_digest`. A6 says the render "hashes nothing". This hashes only an in-memory map, so it is defensible, but the copy can drift from the writer's.
+   - **Fix:** `from tools.research import proof_uses` (it imports nothing of `atlas`) and use `proof_uses.sources_digest(receipt)`. The alternative is to drop the digest and test whether the two maps are equal.
+
+7. **LESSER. One terrain count can say more than it knows.** File: `atlas.py:2206-2208`.
+   - **What goes wrong.** "N dynamics list no such theorem" counts `read == 0`. With the print behind, that includes dynamics whose only theorems are receipt theorems newly declared, which are theorems of the receipt's modules.
+   - **Fix:** say "list no theorem the print has a row for".
+
+8. **LESSER. Tests that are missing or weak.** All in `tools/research/tests/test_atlas.py`.
+   - **No-other-change rule.** A9 asks that a print behind the receipt gives the three sentences "and no other change". The test compares only the data file. Add a comparison of every page between the bound and behind renders, with lines holding `BEHIND_WORDS` or "The lines on uses between proofs were computed" removed.
+   - **No golden test against HEAD's output.** The byte-for-byte test compares the new code with itself, print present and then removed. The 80 old tests cover most of this, but nothing pins `page()`'s paragraph when `behind` is empty and no families are read.
+   - **Rules with no test:**
+     - "told above as a case" is not given where the case pair differs, or where the case's used theorem is a different one;
+     - the order of `chains` and `used_by` when there are several entries (only `uses` is tested shuffled);
+     - the `MODULES_NAMED` cap;
+     - the bound-case "no row" in a section (finding 1);
+     - the page's choice of one chain per end when the data has several (`best`).
+   - **Narrow word check.** `test_every_section_with_lines_says_what_a_line_is_and_no_page_says_more` checks 'a passage', 'joined' and 'central' only inside closed-capture's lines, and 'most' or 'pieces' nowhere. It can still fail, but its reach is narrower than its name.
+
+9. **LESSER, already in the writer's report.** The loader does not compare each module's row count with the index's `theorems` (`--check` does). With `commit=None`, `index_object` writes an index that the strict `_index_problem` refuses, and every atlas page then fails.
+
+**Checked and found right**
+- **Tests.** `python3 -B -m unittest tools.research.tests.test_atlas`: 111 tests pass.
+- **Computation (`uses_between`, `_first_listed`):**
+  - names match exactly, with no prefix added or dropped;
+  - the walk is breadth first, and among equally short chains it keeps the first by names, because each row's uses are sorted and the frontier keeps its order;
+  - it passes only theorems no dynamic lists and stops at the first listed one;
+  - a name with no row is neither reached nor passed;
+  - the double-listing rule holds at the using end and the used end, along chains, and for `used_by`;
+  - there is no line from a dynamic to itself;
+  - the sort keys make the output stable.
+- **Real data.** On the live `atlas.json` and `/Users/ren/tmp/dj/batch29/all-proof-heads.jsonl`, I reproduced the computation in memory: 0.03 s; 180 direct uses, 124 chains, 180 reverse uses; the longest chain has 7 names.
+- **Page size.** Section text adds about 38.5 KB to h.md (399,131 bytes now) and 37 KB to b.md. The largest single section is about 5.4 KB (turning-in-time). Against `PAGE_LIMIT` of 1,048,576 that leaves more than a factor of two even if private theorems double the lines. The reverse list has no cap, but it is bounded by the 185 dynamics.
+- **Unchanged without the print.**
+  - `items()` gives the same output with an empty `lead`;
+  - `_atlas_lead` adds nothing when `computed` is false;
+  - `_behind_words` returns '' when there is no `proof_uses`;
+  - `_uses_section` returns [];
+  - `about` stays `ABOUT`, and `ABOUT_USES` is added only in `_add_uses`;
+  - `inputs()` changes only when the index is a file;
+  - the new `'terrain'` key in `links` is read only for dynamics that have the lines.
+- **No Lean read.** The render reads only `INDEX.json`, the `*.jsonl` files and the receipt.
+- **Links and anchors.**
+  - The section link is `../TERRAIN.md#uses-between-proofs`, and it is written only when TERRAIN is written.
+  - `check_links` uses the same `reading_catalogue.anchors_from_text` as the test.
+  - The only new heading is TERRAIN's `## Uses between proofs`; the family pages get no heading and no anchor.
+- **Receipt format.** `source_sha256` in the receipt is keyed by module name (412 modules), as `modules_behind` assumes. `index_object` writes the keys `_index_problem` requires.
+- **Downstream.** `atlas_index.py` and `connection_map.py` take the data file but appear to read only keys that already existed.
+- **`spine.py`.** Unchanged, and its sentence is about `terrain.svg`, which also did not change.
+
+**Not read or not run:** `proof_uses.py` beyond its `ABOUT`, `index_object` and `sources_digest`; `gate.py` and its test; `_process/RESULT-WORKFLOW.md`; `test_atlas_index`, `test_connection_map` and the other files that import `atlas` (not run); any real print, which does not exist yet, so the real render, `check_links` on real pages, and how Lean prints private and «»-quoted names were not checked.

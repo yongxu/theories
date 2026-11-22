@@ -1,0 +1,65 @@
+{
+ "no_escape": {
+  "tree": "8a51ccd4fe69",
+  "failed": [
+   "proof-uses"
+  ],
+  "proof-uses": {
+   "status": "failed",
+   "exit": 1,
+   "seconds": 0.2,
+   "log": "/Users/ren/theories/.git/gate/logs/proof-uses-8a51ccd4fe69.log",
+   "reached_by": "8 paths (left out here)",
+   "landings": null
+  }
+ },
+ "escape": {
+  "tree": "8a51ccd4fe69",
+  "failed": [],
+  "proof-uses": {
+   "status": "passed",
+   "exit": 0,
+   "seconds": 0.2,
+   "log": "/Users/ren/theories/.git/gate/logs/proof-uses-8a51ccd4fe69.log",
+   "reached_by": "8 paths (left out here)",
+   "landings": null,
+   "accepted_reason": "replay of 22 November: the old print set against the new receipt, to see an escaped pass"
+  }
+ },
+ "escape_unset_again": {
+  "tree": "8a51ccd4fe69",
+  "failed": [
+   "proof-uses"
+  ],
+  "proof-uses": {
+   "status": "failed",
+   "exit": 1,
+   "seconds": 0.2,
+   "log": "/Users/ren/theories/.git/gate/logs/proof-uses-8a51ccd4fe69.log",
+   "reached_by": "8 paths (left out here)",
+   "landings": null
+  }
+ },
+ "the_checks_log_after_the_escaped_run": {
+  "errors": [],
+  "accepted_reason": "replay of 22 November: the old print set against the new receipt, to see an escaped pass",
+  "would_fail": [
+   "the print is behind the Lean: run python3 -B tools/research/proof_uses.py after the core run and before the render, and commit the files it changes with the pages",
+   "if the tool itself refuses or fails on that run: GATE_PROOF_USES with a stated reason lets the landing through on a day the tool is wrong; the reason goes into the landed clause, and the pages will then say the print is behind",
+   "the index does not bind the core receipt; behind for 3 module(s): Becoming.GrammarCandidates, Becoming.GrammarCourse, Becoming.Likeness",
+   "the print is of other sources than the core run of 20261122T094514.036246Z checked (core_sources_sha256 differs): 3 module(s) changed, 0 not printed, 0 printed and no longer in the receipt"
+  ],
+  "kind": "not bound",
+  "bound": false,
+  "modules_behind": [
+   "Becoming.GrammarCandidates",
+   "Becoming.GrammarCourse",
+   "Becoming.Likeness"
+  ],
+  "problems": [
+   "the print is of other sources than the core run of 20261122T094514.036246Z checked (core_sources_sha256 differs): 3 module(s) changed, 0 not printed, 0 printed and no longer in the receipt"
+  ],
+  "damage": [],
+  "note": null
+ }
+}

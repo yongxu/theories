@@ -1,0 +1,81 @@
+**REPORT: the tool's part mended by its review (`proof_uses.py`, `test_proof_uses.py`)**
+
+All eight findings and all five further conditions are applied, and the 39 unit tests pass. No Lean, lake, scratch build, core run, render or gate was started; the Lean text of `PRINTER` is still uncompiled and no real print exists. Nothing is committed; the branch is still `dj-uses-between-proofs`.
+
+**Findings of the review**
+
+- **1 (MUST, a module that silently loses its rows): applied, with one change of form.** The check is a pure function, `short_of_the_receipt(receipt, by_module)`, called in `run()` right after `parse_output` and the "no row at all" guard.
+  - It differs from the reviewer's line in one place: a module is compared only where the receipt's `theorems` is an int (`isinstance`), in place of `or 0`.
+  - The floor is loose: Lean's generated rows (`brecOn`, proposition fields) can hide a few dropped rows in a module. A whole module dropped is caught.
+  - The first real run is its first test on the three modules outside `Becoming.*`.
+- **2 (MUST, `bound` ignores the toolchain): applied as worded.** `bound` now needs `toolchain_agrees`, with the reviewer's problem sentence. The old test became `test_another_toolchain_than_the_receipts_is_not_bound` and expects `bound` False.
+- **3: not mine** (gate mender).
+- **4 (a Lean panic): applied as worded.** The regex is `r'\berror:|PANIC'`.
+- **5 (the index's words): applied as worded** in `ABOUT` and the module docstring: "No other definition is followed…", "and any name with a part beginning `_`, such as an abstracted proof under another theorem that Lean reuses", "where it has one".
+  - One thing beyond the finding's letter: the comment inside `PRINTER` had the same contradiction ("no definition is followed"), now "no other definition is followed". It is inside a Lean doc comment, so no Lean changes, but `printer_sha256` changes.
+- **6 (tests that cannot fail on a wrong printer): applied, both ways offered.** The old test is renamed `…are_read_through`, and a new test pins the two Lean lines (`(privateToUserName c).isInternal`, `receiptModules.contains (toString m)`, and no `` `Becoming).isPrefixOf ``).
+- **7 (no test reaches `run()`): applied.** Class `TheRun` runs `run()` on a temporary root with `git_state`, `checker`, `plan`, `lacking`, `build` and the process `run_printer` starts replaced by stand-ins; `run_printer`, `parse_output` and the writing are the tool's own.
+  - It holds the order git, build, Lean, git; that a second run changes nothing; and that a refused run leaves an earlier print untouched.
+  - `proof-uses/` is not created for: output cut two ways, a non-zero exit, a panic or an error line with exit 0, no row, a dropped module, fewer rows than the receipt counts, HEAD moved, a source edited while Lean ran, or a file turned dirty while Lean ran.
+- **8 (the Python is not bound): applied as fixed in the task.** `FORMAT = 1`, the index key `"format"` (second, after `about`), and `status()` compares it (an int equal to `FORMAT`; a missing key, `2`, `'1'` and `True` are all not bound).
+- **9 (`lacking()` can undercount): applied as worded.** It now compares the digests of the kept output files with the entry's `outputs`, as `cb.reuse` does. The docstring no longer says "hashing nothing"; the test adds a spoiled blob and a held step with no output.
+- **10: not mine** (gate mender).
+
+**What `status(root)` returns now**
+
+- Keys: `present`, `bound`, `kind`, `problems`, `modules_behind`, `behind`, `sources_bound`, `printer_bound`, `toolchain_agrees`, `format_agrees` (new), `printed_from`, `core_run`, `damage`.
+- `bound` is true exactly when the index binds the receipt's source-hash map, the toolchain, the printer text and the format. Damage does not enter it.
+- `kind` is the first that holds: `"no index"`, `"damaged"`, `"not bound"`, `"bound"`. The order is my decision, since the task fixed only the four values.
+  - `"damaged"` can stand beside `bound` true (files cut, index still binding).
+  - `kind == "bound"` exactly when `bound` is true and `damage` is empty; `--check` exits 0 on that.
+- An unreadable index gives `kind` `"damaged"`, with its sentence in both `problems` and `damage`. The gate mender should know this: a gate that prints both lists shows it twice.
+- An unreadable receipt gives `"not bound"`, or `"damaged"` if files are also cut.
+
+**For the atlas mender:** `atlas._index_problem` does not yet know `format`, and the data-file header (every index key but `modules`) will now carry it.
+
+**Further conditions**
+
+- **(a) A receipt changed with no source changed: applied.** No code change was needed, as the receipt's time never entered `bound`. `test_a_later_receipt_of_the_same_sources_and_toolchain_leaves_the_print_bound` holds it: `bound` true, `kind` `"bound"`, no problems, `--check` exits 0, no byte written.
+- **(b) No index without a commit and a core run: applied in three places.**
+  - `index_object` raises `ValueError` without a non-empty text commit or without the receipt's `utc`.
+  - `write_print` refuses, before the first write, an index whose `printed_from` lacks either.
+  - `run()` refuses a receipt without `utc` at the start.
+  - One test covers the first two (no commit, `None`, `''`, non-text; `utc` missing, `None`, `''`; six shapes of `printed_from`); a subtest of `TheRun` covers the run's refusal of a receipt without `utc`.
+- **(c) Help text: applied**, as a paragraph "When to run it." in the module docstring, which is the argparse description; `main()` now builds its parser in `argument_parser()` so a test can read the help.
+  - One addition for truth: before the core run, after a Lean change, the code refuses first because the receipt does not bind the bytes, not for lack of cached steps. The help names both refusals and says neither is a fault.
+- **(d) Determinism in two directories: applied.** The same rows written under two temporary roots give byte-identical module files and index. No module file holds the commit, the core run's time, either path, a path separator, the toolchain or anything shaped like a clock time or date; each line has only `name` and `uses`.
+- **(e) First words of refusals: applied**, as constants. Tests check each prefix and that other refusals (receipt not passed, no `utc`, another toolchain than the checker's) use none of them.
+  - `the Lean tree differs from a commit: `
+  - `the receipt does not bind the bytes: ` (also where the checker's own read of the sources differs, in `plan()`)
+  - `the cache lacks N steps: ` (`cache_refusal`, with the hint of (c); "1 step" for one)
+  - `Lean failed or its output was short: ` (scratch build, timeout, cannot start, non-zero exit, every `parse_output` refusal, no row, finding 1)
+  - `the tree moved while Lean ran: ` (the second look after Lean, whatever it found, and a moved HEAD)
+
+**Files changed** (both untracked, nothing else touched)
+
+- `/Users/ren/tmp/dj/wt-layer/tools/research/proof_uses.py` (859 lines)
+- `/Users/ren/tmp/dj/wt-layer/tools/research/tests/test_proof_uses.py` (750 lines, 39 tests)
+
+**Tests run**
+
+`cd /Users/ren/tmp/dj/wt-layer && python3 -B -m unittest tools.research.tests.test_proof_uses`
+```
+.......................................
+----------------------------------------------------------------------
+Ran 39 tests in 0.127s
+
+OK
+```
+
+Also run, none starting Lean:
+- `python3 -B tools/research/proof_uses.py --check`: exit 1, `"kind": "no index"`.
+- `--help`: shows the "When to run it." paragraph.
+- A mutation script from the scratchpad, in-process, writing nothing in the worktree: 17 one-line undoings of the mended behaviours, each caught by at least one test. It covers the panic, toolchain, format, short modules, cache digests, commit required in both places, moved HEAD, the second look, the private-theorem line, `kind` under damage, `format` in the index, a path in module files, two first-word prefixes, the help, and `utc` entering `bound`.
+
+**Not done**
+
+- No real run: `build()`, `run_printer()` with a real Lean, the real `git_state`/`checker`/`plan`, and the Lean text itself remain unrun.
+- `test_gate` and `test_atlas` were not run, and `gate.py`, `atlas.py` and their tests were not edited or read beyond the gate's check and the atlas's print reader.
+- `write_print` does not check the index's `format`; `index_object` always writes it.
+- The writer's other LESSER notes (`brecOn` rows, proposition fields, theorems named under another theorem, disk use) are untouched, as the review did not raise them as findings.
+- No board claim, no commit.
