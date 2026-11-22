@@ -1,0 +1,93 @@
+*An AI reader who took no part's return (run as Claude Opus, 121,607 tokens), word for word from the agent's transcript; agents could not write report files, so this return is its report. It attacked the frozen file as first frozen at 11:14, before anything ran.*
+
+The file can be passed by its letter with nothing of worth done. Under the strictest reading of G2(b), the only two rows that pass are the two that use no list, and G1's fallback rests on a validator rule that does not exist.
+
+## 1. Cheapest letter-passes, and the sentence that closes each
+
+**1. MUST, G2(b): any declaration of PredicateIteration counts.** The letter says "a call of a declaration of `PredicateIteration`", so the list-free plumbing in that file counts too.
+- `Tolerance.kept_set` (Tolerance.lean:377–382) calls only `Iteration.postfixed_in_iter` (PredicateIteration.lean:146): an induction on n with no list and no "largest".
+- `Lasting.iter_region_iff_lasts` (Lasting.lean:251) calls only `Iteration.iter_iff_stages` (PredicateIteration.lean:88): a stage identification with no list.
+- Those two meet G2's "at least two" by themselves.
+- The real uses of the list are all one or more calls removed: `held_iff_iter` (CommonResponse.lean:175) uses `iter_largest`, `Branching.reachable_iff_all` (Attraction.lean:147) uses `iter_iff_all`, and `reach_within_pred_length` (CommonResponse.lean:214) uses `iter_within_pred_length`. None of these is listed under any dynamic.
+- *Close:* "A row counts only if the declaration it calls takes the list hypothesis (`within`/`every`): `iter_persists`, `iter_iff_all`, `iter_largest`, `iter_persists_from_all`, `iter_gives_persists`, `iter_within_length`, `iter_within_pred_length`, `not_iter_of_not_succ`. A call of `postfixed_in_iter`, `iter_iff_stages`, `iter_pred` or `iter_within` alone is filed as a step that uses no list, not as a case of the law."
+
+**2. MUST, G2(b): "a call … after an identification" does not say whether a chain counts.**
+- `reach_within_listed` reaches PredicateIteration only after four calls (Reaching, Reaching, CommonResponse, CommonResponse).
+- Read strictly, sound rows fail. Read loosely, every theorem downstream of the law passes.
+- *Close:* "The row's `case_of.law` names the declaration the proof calls first. If that is not in PredicateIteration or RisingIteration, the chain to it is written in `how`, one name per call, and a reader checks each link."
+
+**3. MUST, G2: the `case_of.law` value is never fixed.** The dynamic's mechanism would be law 1 (`iter_persists`/`iter_largest`), while the rows' proofs call laws 7 or 1b. A row could name `iter_largest` while its proof calls `postfixed_in_iter`, and "how says more than the proof term" is a judgement left to readers.
+- *Close:* "`case_of.law` is exactly the declaration that appears in the proof term."
+
+**4. MUST, G2(a): the clause lets a row stand on a listed law that is not of the dynamic's own notion.** The "own notion" condition attaches only to the second disjunct. `reach_within_listed` is listed under every-loss-passes-a-juncture, but its statement is bounded reachability (Trace/Reach), not junctures. Its own docstring (Junctures.lean:314) points to `Reaching.trace_within_pred_length`.
+- *Close:* "Both disjuncts also require that the statement be of that dynamic's own notion."
+
+**5. MUST, G2(a) against "What this is not".** All 2,223 existing premises rows sit on laws in their dynamic's `declarations` (0 exceptions, counted). The validator does not check this (atlas.py:964–990 only checks that `premises[i].law` is declared in Lean). So a row on an unlisted `kernel_iff_iter` or `kernel_iff_lasts_length` would be the first premises row off the list. The page renders it under the dynamic, which in effect adds a declaration, and that is what "What this is not" forbids.
+- *Close:* "A row on a law not in that dynamic's `declarations` is not entered. Where the only calling law is unlisted, that is filed as found (the law in Lean, the dynamic does not list it)."
+
+**6. MUST, G2 "fewer than two rows".** The bar is a count, and point 1 meets it emptily.
+- *Close:* "At least two rows whose called declaration takes the list hypothesis (as in point 1). Otherwise the finding is filed with each row's called declaration named."
+
+**7. MUST, G1: the "against" is the wrong bar.** "No `forbids` that a law states" holds of 171 of 185 dynamics, never-leaving-a-guard included (`forbids: null`). The nearest precedent, `recurrence-without-premise` (family F, a general "a list holds…" law), has forbids None, 0 exits and 0 transitions. The bar either refuses what the atlas already admits, or is met by restating the law as a "forbids". The reader's "a lemma about lists" judgement is left open with no criterion.
+- *Close:* "G1 holds if the entry is of the kind `recurrence-without-premise` already is. The entry names that neighbour and says how it differs (pigeonhole on configurations vs. iterate of a monotone step). A `forbids` is written only if it is not a restatement of the mechanism."
+
+**8. MUST, G1's failure branch is false.** See 2a below. If G1 fails, rows can still be entered as "a law the atlas does not list". The atlas has a form for exactly this: TERRAIN's "Laws given as cases of one law" (atlas.py:2091–2110).
+- *Close:* replace "no case row can be entered either… does not carry this join" with "the rows are entered with the general law listed under no dynamic, as the existing rows of that kind are."
+
+**9. MUST, G3: met by copying, and blind to what matters.**
+- The record has a sentence for almost any slot, and empty slots (forbids null, exits [], transitions []) contain no sentence to check.
+- The record's statement "Keeping under every course, along some course, by choice and through a reading are cases" would pass G3 although the record also lists `Reaching.guarded_not_keepsWidening` as law 14. Opened, that law calls no PredicateIteration declaration: it is `not_keepsWidening_of_listed` via `KeepsWidening.not_listed` (ReachableRanges.lean:767–771).
+- "A sentence … that row FM's readers checked" cannot be checked, since the record does not say which sentences were read.
+- G3 does not cover the `how` texts, which sit on other entries.
+- *Close:* "Each sentence of the mechanism that says X is a case names the declaration that calls the law, opened, by the rule of point 1. The record's statement is not a source for a 'case' claim. G3 covers the `how` texts and the `open` too. Empty `exits` and `transitions` are argued in `open`."
+
+**10. LESSER, "What this is not".**
+- "The count is told before and after" is met by printing two numbers.
+- "The two ways" is not defined in this file.
+- *Close:* "The count of dynamics with no recorded link, before and expected after, is written here before running. A row whose only effect is to move that count, with no list-using call, is not entered."
+
+**11. LESSER, G1: no family is named.** "Kept regions" (H) fits the atlas's own words for law 1. But the law's cases span A, E, F, G and H, and the ending side (laws 10–11) is not a kept region. The file should name the family and say why.
+
+## 2. What the file takes for granted that is otherwise
+
+**a. MUST.** File line 15 says "the atlas's validator asks that `case_of` name a law of another dynamic." It does not. atlas.py:985–986 only refuses a `case_of.law` that equals the row's law or is in this dynamic's own `declarations`. Many existing rows name laws under no dynamic, for example:
+- `MarketInstances.safe_within_kernel`: "a general law under no dynamic of the atlas"
+- `Run.possible_of_next`, `RaisedRule.ceases`, `Flow.Balances.bounded`, and others.
+
+There are 129 case rows in all. The renderer prints these as "a law the atlas does not list" (atlas.py:1318).
+
+**b. MUST.** Line 7 names "`Viability.Kernel` and `Lasting`" as cases. None of the listed laws of never-leaving-a-guard calls the law: `kernel_largest` (Viability.lean:113), `kernel_iff_certificate` (:107) and `Lasting.kernel_iff_lasts` (Lasting.lean:240) are all proved directly. Only the unlisted `kernel_iff_iter`, `kernel_iff_iter_pred_length` and `kernel_iff_lasts_length`, and the list-free `iter_region_iff_lasts`, use it.
+
+**c. MUST.** Line 7 names "`Reaching` (where-the-possible-grows)". None of its 25 listed declarations calls the law, and its notion (KeepsWidening) is reached by `not_listed`, not by iteration. It is not a case under the file's own G2(a).
+
+**d. LESSER.** Line 7 says the record names `Branching.reach_within_listed` as a case. The record's 81 declarations do not include it.
+
+**e. LESSER.** The record's history names the calls as `Parting.continues_persists`, `continues_any`, `GuardHorizon.closed_viable` and `Tolerance.kept_set`, three of which (Parting, GuardHorizon) the file says are under no dynamic. So among the five, the record itself confirms only `kept_set`.
+
+**f. LESSER.** No family is fixed (see point 11). The record's own family "F01" is a record family, not an atlas family.
+
+## 3. The five named dynamics
+
+1. **never-leaving-a-guard: OPENED.**
+   - The listed laws `kernel_largest`, `kernel_iff_certificate` and `Lasting.kernel_iff_lasts` make no call of the law.
+   - The unlisted `kernel_iff_iter` calls `held_iff_iter` (CommonResponse), which calls `Iteration.iter_largest`, so it is not a direct call. Its statement is of the dynamic's own notion (Kernel).
+   - The unlisted `iter_region_iff_lasts` calls `Iteration.iter_iff_stages` directly, but uses no list. Its statement is of the dynamic's own notion (Lasts).
+2. **thresholds-of-waiting: OPENED.** `kept_set` (listed) calls `Iteration.postfixed_in_iter` directly, which uses no list. Its statement is of the dynamic's own notion (the tolerating law).
+3. **every-loss-passes-a-juncture: OPENED.** `reach_within_listed` (listed) calls `Reaching.reach_within_of_pred_le`, which reaches `Iteration.iter_within_pred_length` through four calls, so it is not direct. Its statement is a neighbour's notion (bounded reach), not junctures.
+4. **where-the-possible-grows: OPENED.**
+   - No listed law calls the law.
+   - The unlisted `possible_iff_within_of_pred_le` reaches `iter_within_pred_length` indirectly; its statement is of the dynamic's own notion (Possible).
+   - The unlisted `guarded_not_keepsWidening` makes no call at all.
+5. **Law.Drawn / returning (attraction-is-not-returning): OPENED.** The unlisted `Law.returns_iff_reachable_count` and `drawn_iff_not_reachable_count` call `Branching.reachable_iff_all`, which calls `Iteration.iter_iff_all`, so they are not direct. Their statements are of the dynamic's own notion (Returns, Drawn). Neither is listed under that dynamic.
+
+## 4. What I did not read
+- RisingIteration.lean.
+- The bodies of Parting, GuardHorizon and AlikeTo.
+- The rest of the record (laws beyond their first 230 characters, references, history after its first entry).
+- ATLAS.md beyond its first 30 lines.
+- The premise lister and the atlas tests.
+- The full validator outside lines 825–1010, 1304–1320 and 2080–2110.
+- FROZEN.sha256.txt (hash not checked).
+- Whether `Branching.reachable_iff_all`'s module is listed by another dynamic, such as necessarily-drawn-is-not-returning.
+
+Nothing was written or built.

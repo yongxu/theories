@@ -1,0 +1,94 @@
+{
+ "family": "H",
+ "note": "AI-written, 22 November 2026 (board row DJ). Binder names as lister.py's aaRow printed them (2026-11-22-the-list-law.lister.txt), run once against a stub that imports the modules, each restored from the shared cache at the bytes of main 0110d32a6. Each binder's premises are those the entry lists for the theorem. The hygienic binders of postfixed_in_iter (K y) and of iter_within_length (y in iterate n) are the antecedents of the conclusion's own quantifiers, not premises of the law, and are given none.",
+ "laws": {
+  "Becoming.Iteration.iter_iff_all": {
+   "binders": {
+    "mono": [
+     "iteration-monotone-step"
+    ],
+    "start": [
+     "iteration-step-takes-start-into-itself"
+    ],
+    "within": [
+     "iteration-start-members-listed"
+    ]
+   },
+   "takes_unbound": {}
+  },
+  "Becoming.Iteration.iter_largest": {
+   "binders": {
+    "mono": [
+     "iteration-monotone-step"
+    ],
+    "start": [
+     "iteration-step-takes-start-into-itself"
+    ],
+    "within": [
+     "iteration-start-members-listed"
+    ]
+   },
+   "takes_unbound": {}
+  },
+  "Becoming.Iteration.postfixed_in_iter": {
+   "binders": {
+    "mono": [
+     "iteration-monotone-step"
+    ],
+    "inside": [
+     "iteration-class-inside-start"
+    ],
+    "post": [
+     "iteration-class-preserved-by-step"
+    ],
+    "a._@._internal._hyg.0": []
+   },
+   "takes_unbound": {}
+  },
+  "Becoming.Iteration.iter_within_length": {
+   "binders": {
+    "mono": [
+     "iteration-monotone-step"
+    ],
+    "start": [
+     "iteration-start-inside-its-step"
+    ],
+    "comm": [
+     "iteration-commutes-with-implication"
+    ],
+    "within": [
+     "iteration-implying-states-listed"
+    ],
+    "a._@._internal._hyg.0": []
+   },
+   "takes_unbound": {}
+  },
+  "Becoming.Viability.kernel_iff_iter": {
+   "binders": {
+    "within": [
+     "viability-guard-listed"
+    ]
+   },
+   "takes_unbound": {}
+  },
+  "Becoming.Viability.kernel_iff_iter_pred_length": {
+   "binders": {
+    "every": [
+     "branching-every"
+    ],
+    "len": [
+     "viability-list-length-succ"
+    ]
+   },
+   "takes_unbound": {}
+  },
+  "Becoming.Viability.keepable_iff_count": {
+   "binders": {
+    "every": [
+     "branching-every"
+    ]
+   },
+   "takes_unbound": {}
+  }
+ }
+}

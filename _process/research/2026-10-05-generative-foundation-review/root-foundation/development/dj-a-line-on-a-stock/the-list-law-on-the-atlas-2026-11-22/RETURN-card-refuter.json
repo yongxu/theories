@@ -1,0 +1,38 @@
+{
+ "findings": [
+  {
+   "level": "MUST",
+   "where": "plain_zh, the clause after 而那一类是",
+   "finding": "OPENED PredicateIteration.lean:161-164. iter_largest bounds K by the start as well as by its own step: (∀ y, K y → V₀ y) → (∀ y, K y → Φ K y) → ∀ y, K y → L y. The English keeps 'inside the start' inside its gloss ('the largest class inside the start that the step preserves, that is, that lies inside its own step'). The Chinese gloss '即在自身的步之内的最大类' restates it as the largest class that lies inside its own step, with no bound by the start. That is false in general: with Φ the identity and V₀ empty, L is empty, yet the class of every state lies inside its own step. So the Chinese says more than the Lean and more than the English.",
+   "exact_words": "而那一类是起始类之内为此步所保的最大类，即起始类之内、在自身的步之内的最大类。"
+  },
+  {
+   "level": "LESSER",
+   "where": "plain_en and plain_zh, the sentence 'The step, the start and the list are given, not derived'",
+   "finding": "OPENED PredicateIteration.lean:98, 153, 212, 256. What the Lean takes as hypothesis binders are that the step is monotone, what it does to the start (Φ V₀ ⊆ V₀ on the kept side, W₀ ⊆ Ψ W₀ on the rising side), and that the list holds what it must. Saying 'the step, the start and the list are given' says only that three objects are variables. It does not say that monotonicity and the start condition are premises, which is the sentence's point and is what misfit says.",
+   "exact_words": "EN: That the step is monotone, what it does to the start, and what the list holds are premises, not derived; the number of an iterate counts applications of the step. ZH: 步为单调、步对起始类之所为、列表之所容，都是前提，不是推出的；迭代的序号数的是此步施用的次数。"
+  },
+  {
+   "level": "LESSER",
+   "where": "plain_en (shape), against cards.json",
+   "finding": "OPENED the_map.py validate: its message for plain_en is 'one sentence is needed', although it checks only that the field is non-empty. Of the 185 existing cards, 2 have a plain_en of more than one sentence, and the longest five are 197, 197, 232, 825 and 1,834 characters. This plain_en has three sentences and 661 characters, and it says nothing of the rising side, which is the subject of two of the five laws (iter_within_length, singleton_rise_needs_em) and of the cast line. It is valid as it stands, so this is optional. If it is kept as three sentences, it should at least not leave out the rising side.",
+   "exact_words": "Append to plain_en: Where the start instead lies inside its own step, the step commutes with implication to a state y's being in the iterate at the list's length, and the list holds every state at which membership in the start implies that, y in any iterate is in the iterate at the list's length; without the commuting premise, asking this of every monotone step on a one-state type would decide every proposition. Append to plain_zh: 若起始类反在它自身的步之内，此步与“蕴含状态 y 在迭代到列表长度那一次的类之中”相交换，且列表容纳每一个“在起始类之中便蕴含此事”的状态，则 y 在任何一次迭代的类之中，就在迭代到列表长度那一次的类之中；没有交换的前提，若对单一状态的类型上每一个单调的步都要求如此，每一个命题就都是已判定的。"
+  },
+  {
+   "level": "LESSER",
+   "where": "cards.json, key about (writer's finding 7)",
+   "finding": "TOLD (cards.json about). It says every card was AI-written on 11 November and refuted by a second reader, with 148 corrected and 35 kept. A card written on 22 November falls outside that sentence. AGENTS.md rule 5 asks that AI-written text say that it is AI-written, and the card has no field of its own that says so, so the about text is where it goes.",
+   "exact_words": "Add after 'as the round's record lists.': The card for kept-at-the-length-of-a-list was AI-written on 22 November 2026 and put to one AI reader who took no part, to refute against Becoming/PredicateIteration.lean and Becoming/RisingIteration.lean."
+  },
+  {
+   "level": "LESSER",
+   "where": "laws[3] (iter_within_length), then_en and then_zh",
+   "finding": "OPENED PredicateIteration.lean:255-256. then_en names G and then never uses it. G matters only in the conditions (comm and within are about I all.length y). The sentence reads more cleanly if G is said as a gloss on the conditions. The content is correct.",
+   "exact_words": "EN: A state y in any iterate is in the iterate at the list's length (G, in the conditions, is that y is in that iterate). ZH: 状态 y 在任何一次迭代的类之中，就在迭代到列表长度那一次的类之中（条件中的 G 即 y 在那一次迭代的类之中）。"
+  }
+ ],
+ "stands": true,
+ "not_read": "Read whole: PredicateIteration.lean and RisingIteration.lean. Opened: the statements and proofs of held_iff_iter (CommonResponse.lean:173-180), reach_within_pred_length (CommonResponse.lean:212-216), viable_persists (GuardHorizon.lean:164-170), keepable_iff_count (KeepableStep.lean:81-90) and coded_kept_iff_closed (Keeping.lean:380-391). Checked against the lister: the rows of these five, plus iter_iff_all, iter_largest, postfixed_in_iter, iter_within_length, singleton_rise_needs_em and iter_iff_kept; every 'uses' in misfit matches, though held_iff_iter also uses region_mono, which misfit does not name. From the_map.py, read lines 60-79 and 80-221 (constants and validate). From web.json, read the forms, the frames and the role any. From cards.json, read the recurrence-without-premise card, the about key, and counts of plain_en length and sentences over all 185 cards. Of the frozen file, read the section After. Not read: the draft entry and its eight premise ids (they are not in the store), so the claim that validate and join pass with them was not rerun and stands TOLD; Decidedness.lean; Keeping.lean keptFor_of_closed (316-323) and the KeptFor docstring; Onward.KeepsMoving.run; iter_iff_viable; the_map.py from line 222 on, so how border and order laws under role any read in the views is unchecked; map_sheet.py; regions.json; RETURN-attack.md; the record. I accept the writer's forms (border for iter_iff_all, order for the rest, shows for singleton_rise_needs_em, no lasts mark); none says more than its statement, but a checker should still rule on them as classifications. No file was written and no build, test, gate or git command was run.",
+ "rows": [],
+ "going_on_or_count": ""
+}

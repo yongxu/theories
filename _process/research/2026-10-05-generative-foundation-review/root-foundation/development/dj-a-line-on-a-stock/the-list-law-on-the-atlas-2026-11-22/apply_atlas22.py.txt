@@ -1,0 +1,339 @@
+#!/usr/bin/env python3
+"""Apply what was left by the readers of 22 November 2026 to the atlas's stores, in the worktree given.
+
+usage: python3 -B apply_atlas22.py WORKTREE
+
+AI-written (Claude Fable, board row DJ). Every text below is the writer's draft as mended in the words of the reader
+who took no part (the returns are beside this file), except two things that are this script's writer's own and are
+marked OWN: the sentence on Branching.reachable_iff_all in the new dynamic's mechanism, and the pointers "(listed under
+...)" that say where this same landing lists a theorem. Writes dynamics.json, premises.json and cards.json; the mapping
+rows are added afterwards by six/added/add_rows.py from the assignment files this script also writes.
+"""
+import json
+import sys
+from pathlib import Path
+
+W = Path(sys.argv[1])
+HERE = Path(__file__).resolve().parent
+ATLAS = W / 'theories/becoming/results/atlas/entries'
+REC = 'theories/becoming/results/records/kept-at-the-length-of-a-list.md'
+NEW = 'kept-at-the-length-of-a-list'
+
+
+def load(p):
+    raw = p.read_text(encoding='utf-8')
+    data = json.loads(raw)
+    for indent in (1, 2):
+        if json.dumps(data, ensure_ascii=False, indent=indent) + '\n' == raw:
+            return data, indent
+    raise SystemExit(f'{p}: formatting not reproduced')
+
+
+def dump(p, data, indent):
+    p.write_text(json.dumps(data, ensure_ascii=False, indent=indent) + '\n', encoding='utf-8')
+
+
+# ---------- the ledger ----------
+premises, pind = load(ATLAS / 'premises.json')
+by_p = {p['id']: p for p in premises}
+draft = (HERE / 'RETURN-dynamic-draft.md').read_text(encoding='utf-8')
+import re
+blocks = re.findall(r'```json\n(.*?)```', draft, re.S)
+entry = json.loads(blocks[0])
+new_premises = json.loads(blocks[1])
+for p in new_premises:
+    if p['id'] == 'iteration-start-members-listed':  # the refuter's wording
+        p['statement']['en'] = 'a list holds every state of the start class (it may hold other states too): ∀ x, V₀ x → x ∈ all'
+HOME = REC + '#conditions--条件'
+new_premises += [
+    {"id": "commonresponse-requirement-listed", "name": {"en": "the states where the requirement holds, listed"},
+     "statement": {"en": "a list holds every state at which the requirement Q holds (∀ x, Q x → x ∈ all)"},
+     "kind": "hypothesis of a law", "lean": ["Becoming.held_iff_iter"], "holds_in": [], "fails_in": [],
+     "home": HOME, "seeded_from": ["Lean"]},
+    {"id": "viability-guard-listed", "name": {"en": "the configurations within the guard, listed"},
+     "statement": {"en": "a list holds every configuration within the guard (∀ x, guard x → x ∈ all)"},
+     "kind": "hypothesis of a law", "lean": ["Becoming.Viability.kernel_iff_iter"], "holds_in": [], "fails_in": [],
+     "home": HOME, "seeded_from": ["Lean"]},
+    {"id": "viability-list-length-succ", "name": {"en": "a list of n + 1 members"},
+     "statement": {"en": "the list has n + 1 members (all.length = n + 1)"},
+     "kind": "hypothesis of a law", "lean": ["Becoming.Viability.kernel_iff_iter_pred_length"], "holds_in": [],
+     "fails_in": [], "home": HOME, "seeded_from": ["Lean"]},
+    {"id": "reaching-list-length-pred-le", "name": {"en": "a horizon at least the list's length less one"},
+     "statement": {"en": "k is at least the list's length less one (all.length.pred ≤ k)"},
+     "kind": "hypothesis of a law", "lean": ["Becoming.Reaching.possible_iff_within_of_pred_le"], "holds_in": [],
+     "fails_in": [], "home": HOME, "seeded_from": ["Lean"]},
+]
+for p in new_premises:
+    assert p['id'] not in by_p, p['id']
+    premises.append(p)
+    by_p[p['id']] = p
+for pid, laws in (('law-every', ['Becoming.Law.drawn_iff_not_reachable_count']),
+                  ('branching-every', ['Becoming.Viability.kernel_iff_iter_pred_length',
+                                       'Becoming.Viability.keepable_iff_count',
+                                       'Becoming.Reaching.possible_iff_within_of_pred_le'])):
+    for law in laws:
+        assert law not in by_p[pid]['lean']
+        by_p[pid]['lean'].append(law)
+dump(ATLAS / 'premises.json', premises, pind)
+
+# ---------- the dynamics ----------
+dynamics, dind = load(ATLAS / 'dynamics.json')
+by_d = {e['id']: e for e in dynamics}
+assert NEW not in by_d
+
+COMM = ('(for every class W and state z: if z is in the step of the class of states t where (W t → G) → G, and if z '
+        'in the step of W gives G, then G)')
+entry['name'] = {'en': "The largest class a step preserves, reached at a list's length",
+                 'zh': '步所保之最大类，至列表之长而得'}
+entry['mechanism'] = {'en': ' '.join([
+    'A step on classes of states and a start: the iterate at 0 is the start, and the iterate at n + 1 is the step '
+    'applied to the iterate at n. The step is monotone where a class inside another has its step inside the other\'s '
+    'step. Where a monotone step takes the start into itself, each iterate lies inside the one before and inside the '
+    'start. Where also a list holds every member of the start, a state is in the iterate at the list\'s length exactly '
+    'where it is in every iterate (iter_iff_all); and that iterate lies inside the start, lies inside its own step, '
+    'and contains every class inside the start that lies inside its own step: the largest class inside the start that '
+    'the step preserves (iter_largest). With no list, for a monotone step, a class inside the start that the step '
+    'preserves lies in every iterate (postfixed_in_iter).',
+    'The other way, where a monotone step\'s start lies inside its own step, each iterate lies inside the next '
+    '(iter_succ). Let G be that a state y is in the iterate at a list\'s length. Where the step is monotone, its start '
+    'lies inside its own step, the step commutes with implication to G ' + COMM + ', and the list holds every state at '
+    'which membership in the start implies G, y in any iterate is in the iterate at the list\'s length '
+    '(iter_within_length).',
+    'If every monotone step on a one-state type took membership in iterate 2 from the empty start to membership in '
+    'iterate 1, every proposition would be decided (singleton_rise_needs_em).',
+    'Theorems the Lean proves by calling a declaration of the law: with a list of every state at which Q holds, Q '
+    'holds throughout the closure of a relation from s exactly where s is in the iterate at the list\'s length, from '
+    'Q, of the step asking Q here and every successor in the class (held_iff_iter, by iter_largest and by «所闭之承最大», '
+    'which states that what holds throughout the closure is the largest class inside Q that the relation\'s successors '
+    'keep; listed under a-reading-kept-by-its-update); with a list of every state within a guard, a state viable for '
+    'as many steps as the list is long has an enabled move all of whose outcomes are viable for as many '
+    '(GuardHorizon.viable_persists, by iter_persists); with a list of every configuration, the guard is keepable from '
+    's (some run from s stays within the guard) exactly where s is in the iterate at the list\'s length, from the '
+    'guard, of the step asking the guard here and some move with an outcome in the class '
+    '(Viability.keepable_iff_count, by iter_largest and by Onward.KeepsMoving.run, which takes that list; listed '
+    'under never-leaving-a-guard); with a list of every code whose class lies within the guard, and where after each '
+    'usable move from such a code\'s class every class seen is exactly the class of some code, a code\'s class is kept '
+    'for as many steps as the list is long exactly where it lies in some family of classes within the guard each of '
+    'which has a usable move after which every class seen is in the family (Viability.coded_kept_iff_closed: from '
+    'kept to a closed family by iter_postfixed with iter_iff_kept; back by keptFor_of_closed, by its own induction on '
+    'the number of steps, which uses no declaration of the law); with a list of length n + 1 of every state, a state '
+    'that reaches the target within some number m of steps reaches it within n (reach_within_pred_length, by '
+    'iter_within_pred_length: for a monotone step whose start lies inside its own step, with a list of length n + 1 '
+    'of every state, where the step commutes with implication to G, G being that y is in iterate n, and the states at '
+    'which membership in the start implies G are exactly those in one implication step from everything, y in any '
+    'iterate is in iterate n);'
+    # OWN: this clause is the applying writer's, from the statement opened (Attraction.lean:147, with Reachable at
+    # Recurrence.lean:118) and the lister's uses (iter_iff_reachable, Iteration.iter_iff_all, pred_mono).
+    ' with a list of every configuration of a process, a configuration is the end of some trace of exactly as many '
+    'moves as the list is long exactly where, for every n, it is the end of some trace of exactly n moves '
+    '(Branching.reachable_iff_all, by iter_iff_all).',
+    'Beside recurrence-without-premise (family F), where a list holds every member of a sequence of states and the '
+    'sequence revisits from every step on: here the list holds the members of the start, the states at which '
+    'membership in the start implies G, or every state; the step is on classes, and no run or process is in the '
+    'statements of the law itself.',
+    'It is placed in family H, kept regions, because what the law concludes is a class the step keeps: the largest '
+    'class inside the start that the step preserves (iter_largest); no statement of it is of a cycle or an '
+    'alternation, as in family F.',
+])}
+drop = {'Becoming.regionStep', 'Becoming.held_iff_iter', 'Becoming.Viability.keepStep',
+        'Becoming.Viability.keepable_iff_count'}
+entry['declarations'] = [n for n in entry['declarations'] if n not in drop] + [
+    'Becoming.Branching.predStep', 'Becoming.Branching.reachable_iff_all']
+assert len(entry['declarations']) == 22, len(entry['declarations'])
+op = entry['open']
+assert op[1]['en'].startswith('Nothing here places')
+op[1]['en'] = 'That one way of selecting is placed against another is not shown.'
+assert op[5]['en'].startswith('iter_iff_all is of')
+op[5]['en'] = ("iter_iff_all is of a state's membership: a state in the iterate at the list's length is in every "
+               "iterate. No statement says that every iterate is that iterate; of an iterate before the list's length "
+               "the law says that it contains the later ones and lies inside the earlier ones, not that it equals the "
+               "iterate at the list's length.")
+assert op[6]['en'].startswith('The number of an iterate')
+op[6]['en'] = ('The number of an iterate counts applications of the step; no statement of the law itself reads it as '
+               'a time along a course. In three of the cases named it is a number of steps: viable for as many steps, '
+               "kept for as many steps, reaching within n; in the others it is the list's length only.")
+assert op[7]['en'].startswith('No exit and no transition')
+first = op[7]['en'].split(' Where no list holds')[0]
+op[7]['en'] = (first + " Where no list holds the start's members, the law states that each iterate lies inside the "
+               'one before and inside the start, and that a class inside the start that the step preserves lies in '
+               'every iterate; it does not state that any iterate is the largest such class.')
+dynamics.insert([e['id'] for e in dynamics].index('never-leaving-a-guard') + 1, entry)
+
+
+def add_row(dyn, law, takes, case_law, how, new=True):
+    e = by_d[dyn]
+    if new:
+        assert law not in e['declarations'], (dyn, law)
+        e['declarations'].append(law)
+        assert not any(h['law'] == law for h in e['premises'])
+        e['premises'].append({'law': law, 'takes': takes, 'case_of': [{'law': case_law, 'how': {'en': how}}]})
+    else:
+        rows = [h for h in e['premises'] if h['law'] == law]
+        assert len(rows) == 1 and 'case_of' not in rows[0] and rows[0]['takes'] == takes, (dyn, law, rows)
+        rows[0]['case_of'] = [{'law': case_law, 'how': {'en': how}}]
+    assert case_law not in e['declarations'], (dyn, case_law)
+
+
+add_row('a-reading-kept-by-its-update', 'Becoming.held_iff_iter', ['commonresponse-requirement-listed'],
+        'Becoming.Iteration.iter_largest',
+        "Fixes the general law's step to regionStep R Q (Q here and every R-successor in the class), monotone by "
+        "region_mono, its start to Q, taken into itself by the step's first component, and its list to one holding "
+        "every state where Q holds (within, passed unchanged); iter_largest gives the iterate at the list's length as "
+        "the largest class inside Q that regionStep preserves, «所闭之承最大» gives what holds throughout R's closure as "
+        "the largest class inside Q closed under R, and held_iff_iter shows each inside the other. It uses the list, "
+        "through iter_largest's iter_postfixed and iter_persists; held_iff_iter has no induction of its own. "
+        "Iteration.iter_largest is listed under kept-at-the-length-of-a-list (its record, law 1).")
+add_row('never-leaving-a-guard', 'Becoming.Viability.kernel_iff_iter', ['viability-guard-listed'],
+        'Becoming.held_iff_iter',
+        "held_iff_iter with the relation the process's steps (Steps P), the requirement the guard and a list holding "
+        "every configuration within the guard, the kernel read through kernel_iff_held (under "
+        "a-reading-kept-by-its-update) as what holds at every configuration the closure of the steps reaches; "
+        "held_iff_iter calls iter_largest with the step regionStep (Steps P) guard (the guard here and every "
+        "successor in the class; monotone, region_mono), the start the guard (taken into itself, by the step's first "
+        "part) and the list, and matches the largest class it gives with the largest region inside the guard closed "
+        "under the steps («所闭之承最大»). It uses the list, which need hold only the configurations within the guard.")
+add_row('never-leaving-a-guard', 'Becoming.Viability.kernel_iff_iter_pred_length',
+        ['branching-every', 'viability-list-length-succ'], 'Becoming.held_iff_iter_pred_length',
+        "held_iff_iter_pred_length with the relation the process's steps, the requirement the guard and a list of "
+        "n + 1 members holding every configuration, the kernel read through kernel_iff_held (under "
+        "a-reading-kept-by-its-update); held_iff_iter_pred_length takes held_iff_iter (iter_largest, region step from "
+        "the guard) at the list's length n + 1, comes down to iterate n by iter_pred, and back up by "
+        "iter_persists_from_all, the guard being the region step from everything (region_first). It uses the list; "
+        "the kernel is iterate n, one sooner than the list's length.")
+add_row('never-leaving-a-guard', 'Becoming.Viability.keepable_iff_count', ['branching-every'],
+        'Becoming.Iteration.iter_largest',
+        "iter_largest with the step keepStep P g (the guard here and some move with an outcome in the class; "
+        "monotone, keep_mono), the start the guard (taken into itself, its first part) and the list one holding every "
+        "configuration; its largest-class part puts the configurations the guard is keepable from in the iterate at "
+        "the list's length, keepability being a class inside the guard that keepStep preserves (Keepable.start, "
+        "keepable_step_iff). It uses the list. The other direction is not the law: from that iterate being preserved "
+        "(iter_largest's second part) a run staying in it is built by Onward.KeepsMoving.run, which uses the list of "
+        "every configuration again, and the run stays in the guard by iter_largest's first part.")
+add_row('attraction-is-not-returning', 'Becoming.Law.drawn_iff_not_reachable_count', ['law-every'],
+        'Becoming.Branching.reachable_iff_all',
+        "reachable_iff_all with the process the determined law's (Law.Reachable next is Branching.Reachable of "
+        "process next) and its list every; reachable_iff_all reads the endpoints of traces of length n as iterate n "
+        "of predStep from the class of everything (iter_iff_reachable, by iter_iff_stages) and calls iter_iff_all "
+        "with the step predStep (monotone, pred_mono), the start everything (taken into itself trivially) and the "
+        "list, so reachable at the list's length is reachable at every length; it uses the list. Drawn is read as not "
+        "reachable at every length through drawn_iff_lost, whose proof uses the same list again through "
+        "returns_iff_always_reachable, not through the law.")
+add_row('where-the-possible-grows', 'Becoming.Reaching.possible_iff_within_of_pred_le',
+        ['branching-every', 'reaching-list-length-pred-le'], 'Becoming.Reaching.reach_within_of_pred_le',
+        "reach_within_of_pred_le with the process's list of every configuration and k at least the list's length less "
+        "one, the list having n + 1 members because it holds y (length_pos_of_mem); it calls "
+        "trace_within_pred_length, which reads reaching s as the closure of the steps from y meeting s "
+        "(reach_iff_withinClosure), that as iterate n of the reach step from the target (closure_iff_reach_within), "
+        "and the iterates as starts of traces of at most so many moves into the target (iter_reach_iff_trace, by "
+        "iter_iff_stages); closure_iff_reach_within uses reach_within_pred_length, which calls "
+        "iter_within_pred_length with the step reachStep (monotone, reach_mono), the start the target (inside its own "
+        "step), the list of n + 1 members and the step commuting with every proposition (reach_commutes). It uses the "
+        "list, through the law's form for a start inside its own step: reaching within any number of moves is "
+        "reaching within n.")
+add_row('thresholds-of-waiting', 'Becoming.Tolerance.kept_set',
+        ['tolerance-set-gives-at-start', 'tolerance-set-waits-within-tolerance-outside', 'tolerance-member-of-set'],
+        'Becoming.Iteration.postfixed_in_iter',
+        "postfixed_in_iter with the step the tolerating law (monotone, tolerating_keeps through "
+        "monotone_iff_keepsInclusion), the start the starting class s and the class the set G, inside the start by "
+        "start and preserved by inside (each member waits on at most its tolerance outside G, which is the tolerating "
+        "step at G), the iterates read as the course's steps through iter_eq_orbit. A case of the part of the law "
+        "that asks no list: a class inside the start that the step preserves lies in every iterate; no list and no "
+        "step taking its start into itself is used.", new=False)
+row = [h for h in by_d['every-loss-passes-a-juncture']['premises'] if h['law'] == 'Becoming.Branching.reach_within_listed'][0]
+add_row('every-loss-passes-a-juncture', 'Becoming.Branching.reach_within_listed', row['takes'],
+        'Becoming.Reaching.reach_within_of_pred_le',
+        "Fixes reach_within_of_pred_le's bound k to the list's length (enough by Nat.pred_le); its statement is of "
+        "bounded reach, a neighbour's notion, not of a juncture. reach_within_of_pred_le calls "
+        "trace_within_pred_length with n the list's length less one, the length being n + 1 because y is on the list "
+        "(length_pos_of_mem). trace_within_pred_length reads iterate n of reachStep (Steps P) from the class holding "
+        "s alone as the starts of traces of at most n moves into s (iter_reach_iff_trace), and gets y into that "
+        "iterate from Reach P y s by reach_iff_withinClosure and closure_iff_reach_within. The bound of the latter is "
+        "reach_within_pred_length, a call of Iteration.iter_within_pred_length with the step reachStep, monotone by "
+        "reach_mono, the start lying inside its own step (Or.inl), the step commuting with every proposition "
+        "(reach_commutes), and a list of length n + 1 holding every configuration. It uses the list, every "
+        "configuration and its length; no link has an induction on that list of its own. reach_within_of_pred_le is "
+        "listed under no dynamic.", new=False)
+dump(ATLAS / 'dynamics.json', dynamics, dind)
+
+# ---------- the card ----------
+CARDS = W / 'theories/becoming/results/map/cards.json'
+cards, cind = load(CARDS)
+card = json.loads(re.findall(r'```json\n(.*?)```', (HERE / 'RETURN-card-draft.md').read_text(encoding='utf-8'), re.S)[0])
+old = '即在自身的步之内的最大类。'
+assert card['plain_zh'].count(old) == 1
+card['plain_zh'] = card['plain_zh'].replace('而那一类是起始类之内为此步所保的最大类，' + old,
+                                            '而那一类是起始类之内为此步所保的最大类，即起始类之内、在自身的步之内的最大类。')
+assert '即起始类之内、在自身的步之内的最大类' in card['plain_zh']
+g_en = 'The step, the start and the list are given, not derived; the number of an iterate counts applications of the step.'
+g_zh = '步、起始类与列表都是给定的，不是推出的；迭代的序号数的是此步施用的次数。'
+assert card['plain_en'].endswith(g_en) and card['plain_zh'].endswith(g_zh)
+card['plain_en'] = (card['plain_en'][:-len(g_en)]
+    + "Where the start instead lies inside its own step, the step commutes with implication to a state y's being in "
+      "the iterate at the list's length, and the list holds every state at which membership in the start implies "
+      "that, y in any iterate is in the iterate at the list's length; without the commuting premise, asking this of "
+      "every monotone step on a one-state type would decide every proposition. "
+    + 'That the step is monotone, what it does to the start, and what the list holds are premises, not derived; the '
+      'number of an iterate counts applications of the step.')
+card['plain_zh'] = (card['plain_zh'][:-len(g_zh)]
+    + '若起始类反在它自身的步之内，此步与“蕴含状态 y 在迭代到列表长度那一次的类之中”相交换，且列表容纳每一个“在起始类之中便蕴含此事”的状态，'
+      '则 y 在任何一次迭代的类之中，就在迭代到列表长度那一次的类之中；没有交换的前提，若对单一状态的类型上每一个单调的步都要求如此，'
+      '每一个命题就都是已判定的。'
+    + '步为单调、步对起始类之所为、列表之所容，都是前提，不是推出的；迭代的序号数的是此步施用的次数。')
+law = [x for x in card['laws'] if x['lean'] == 'Becoming.Iteration.iter_within_length'][0]
+law['then_en'] = ("A state y in any iterate is in the iterate at the list's length (G, in the conditions, is that y "
+                  'is in that iterate).')
+law['then_zh'] = '状态 y 在任何一次迭代的类之中，就在迭代到列表长度那一次的类之中（条件中的 G 即 y 在那一次迭代的类之中）。'
+# the card's last part named five case theorems as the entry's declarations; two are listed under other dynamics by
+# this landing and one more case is named in the entry, so that part is said as the entry now stands (OWN wording of
+# the first sentence of this replacement; the sentences on proof terms are the card writer's).
+m = card['misfit']
+a = m.index('and the five theorems the entry names as proved by calling a declaration of the law:')
+b = m.index('By their proof terms:')
+c = m.index('In three of them the number is a number of steps')
+card['misfit'] = (m[:a]
+    + 'and, of the six theorems the entry names as proved by calling a declaration of the law, the four it lists: '
+      'GuardHorizon.viable_persists, Viability.coded_kept_iff_closed, reach_within_pred_length and '
+      'Branching.reachable_iff_all (held_iff_iter is listed under a-reading-kept-by-its-update and '
+      'Viability.keepable_iff_count under never-leaving-a-guard). The six are where a relation\'s closure, a guard, a '
+      'process with its moves, a reading with its codes, a number of steps and the traces of a process appear; each '
+      'has its premises in the entry\'s mechanism, and the four listed here have no premise row. '
+    + m[b:c].rstrip()
+    + ' Branching.reachable_iff_all uses iter_iff_all with iter_iff_reachable. '
+    + 'In three of them the number is a number of steps (viable for as many steps, kept for as many steps, reaching '
+      "within n); in reachable_iff_all it is the number of moves of a trace; in held_iff_iter and keepable_iff_count "
+      "it is the list's length only.")
+assert card['dynamic'] == NEW and not any(x['dynamic'] == NEW for x in cards['cards'])
+cards['cards'].append(card)
+tail = "as the round's record lists."
+assert cards['about'].count(tail) == 1
+cards['about'] = cards['about'].replace(tail, tail + ' The card for kept-at-the-length-of-a-list was AI-written on 22 '
+    'November 2026 and put to one AI reader who took no part, to refute against Becoming/PredicateIteration.lean and '
+    'Becoming/RisingIteration.lean.')
+dump(CARDS, cards, cind)
+
+# ---------- the assignment files for add_rows.py ----------
+ADDED = W / ('_process/research/2026-10-05-generative-foundation-review/root-foundation/development/'
+             'aa-attractor-atlas/six/added')
+NOTE = ('AI-written, 22 November 2026 (board row DJ). Binder names as lister.py\'s aaRow printed them '
+        '(2026-11-22-the-list-law.lister.txt), run once against a stub that imports the modules, each restored from '
+        'the shared cache at the bytes of main 0110d32a6. Each binder\'s premises are those the entry lists for the '
+        'theorem. The hygienic binders of postfixed_in_iter (K y) and of iter_within_length (y in iterate n) are the '
+        'antecedents of the conclusion\'s own quantifiers, not premises of the law, and are given none.')
+assign = json.loads(blocks[2])
+files = {
+    'h': {'family': 'H', 'note': NOTE, 'laws': dict(assign['laws'], **{
+        'Becoming.Viability.kernel_iff_iter': {'binders': {'within': ['viability-guard-listed']}, 'takes_unbound': {}},
+        'Becoming.Viability.kernel_iff_iter_pred_length': {'binders': {'every': ['branching-every'], 'len': ['viability-list-length-succ']}, 'takes_unbound': {}},
+        'Becoming.Viability.keepable_iff_count': {'binders': {'every': ['branching-every']}, 'takes_unbound': {}},
+    })},
+    'd': {'family': 'D', 'note': NOTE, 'laws': {'Becoming.held_iff_iter': {'binders': {'within': ['commonresponse-requirement-listed']}, 'takes_unbound': {}}}},
+    'a': {'family': 'A', 'note': NOTE, 'laws': {'Becoming.Law.drawn_iff_not_reachable_count': {'binders': {'every': ['law-every']}, 'takes_unbound': {}}}},
+    'g': {'family': 'G', 'note': NOTE, 'laws': {'Becoming.Reaching.possible_iff_within_of_pred_le': {'binders': {'every': ['branching-every'], 'enough': ['reaching-list-length-pred-le']}, 'takes_unbound': {}}}},
+}
+for k, v in files.items():
+    assert by_d[[d for d in by_d if any(h['law'] == next(iter(v['laws'])) for h in by_d[d].get('premises') or [])][0]]['family'] == v['family'] if k != 'h' else True
+    (ADDED / f'2026-11-22-the-list-law-{k}.json').write_text(json.dumps(v, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+(ADDED / '2026-11-22-the-list-law.lister.txt').write_text((HERE / 'atlas22.lister.txt').read_text(encoding='utf-8'), encoding='utf-8')
+print('applied:', len(new_premises), 'ledger premises;', len(entry['declarations']), 'declarations on the new dynamic;',
+      'rows on', 'a-reading-kept-by-its-update, never-leaving-a-guard (3), attraction-is-not-returning, '
+      'where-the-possible-grows, thresholds-of-waiting, every-loss-passes-a-juncture')

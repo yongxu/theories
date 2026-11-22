@@ -8332,7 +8332,10 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.Branching.loss_passes_juncture_listed",
-   "Becoming.Branching.reach_within_listed"
+   "Becoming.Branching.reach_within_listed",
+   "Becoming.Viability.kernel_iff_iter_pred_length",
+   "Becoming.Viability.keepable_iff_count",
+   "Becoming.Reaching.possible_iff_within_of_pred_le"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -16148,7 +16151,8 @@
   "lean": [
    "Becoming.Law.basin_one_cycle",
    "Becoming.Law.enters_returning_within",
-   "Becoming.Law.lossless_iff_none_drawn"
+   "Becoming.Law.lossless_iff_none_drawn",
+   "Becoming.Law.drawn_iff_not_reachable_count"
   ],
   "holds_in": [],
   "fails_in": [
@@ -35201,6 +35205,236 @@
   ],
   "fails_in": [],
   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "iteration-monotone-step",
+  "name": {
+   "en": "a monotone step on classes"
+  },
+  "statement": {
+   "en": "the step on classes keeps inclusion: where one class lies inside another, the step of the first lies inside the step of the second (Iteration.MonotoneStep Φ: ∀ X Y, (∀ z, X z → Y z) → ∀ y, Φ X y → Φ Y y)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Iteration.MonotoneStep"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "iteration-step-takes-start-into-itself",
+  "name": {
+   "en": "the step takes the start into itself"
+  },
+  "statement": {
+   "en": "the step applied to the start lies inside the start: ∀ y, Φ V₀ y → V₀ y"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Iteration.iter_iff_all",
+   "Becoming.Iteration.iter_largest"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "iteration-start-members-listed",
+  "name": {
+   "en": "a list holding every member of the start"
+  },
+  "statement": {
+   "en": "a list holds every state of the start class (it may hold other states too): ∀ x, V₀ x → x ∈ all"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Iteration.iter_iff_all",
+   "Becoming.Iteration.iter_largest"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "iteration-class-inside-start",
+  "name": {
+   "en": "a class inside the start"
+  },
+  "statement": {
+   "en": "the class K lies inside the start: ∀ y, K y → V₀ y"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Iteration.postfixed_in_iter"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "iteration-class-preserved-by-step",
+  "name": {
+   "en": "a class the step preserves"
+  },
+  "statement": {
+   "en": "the class K lies inside the step applied to K: ∀ y, K y → Φ K y"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Iteration.postfixed_in_iter"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "iteration-start-inside-its-step",
+  "name": {
+   "en": "the start lies inside its own step"
+  },
+  "statement": {
+   "en": "the start lies inside the step applied to the start: ∀ y, W₀ y → Ψ W₀ y"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Iteration.iter_within_length"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "iteration-commutes-with-implication",
+  "name": {
+   "en": "the step commutes with implication to G"
+  },
+  "statement": {
+   "en": "for every class W and state z: if z is in the step of the class of states t where (W t → G) → G, and if z in the step of W gives G, then G (Iteration.CommutesWithImplication Ψ G); in iter_within_length G is that y is in the iterate at the list's length"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Iteration.CommutesWithImplication"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "iteration-implying-states-listed",
+  "name": {
+   "en": "a list holding every state at which membership in the start implies G"
+  },
+  "statement": {
+   "en": "a list holds every state x at which membership in the start implies G: ∀ x, (W₀ x → G) → x ∈ all; in iter_within_length G is that y is in the iterate at the list's length"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Iteration.iter_within_length"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "commonresponse-requirement-listed",
+  "name": {
+   "en": "the states where the requirement holds, listed"
+  },
+  "statement": {
+   "en": "a list holds every state at which the requirement Q holds (∀ x, Q x → x ∈ all)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.held_iff_iter"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "viability-guard-listed",
+  "name": {
+   "en": "the configurations within the guard, listed"
+  },
+  "statement": {
+   "en": "a list holds every configuration within the guard (∀ x, guard x → x ∈ all)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Viability.kernel_iff_iter"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "viability-list-length-succ",
+  "name": {
+   "en": "a list of n + 1 members"
+  },
+  "statement": {
+   "en": "the list has n + 1 members (all.length = n + 1)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Viability.kernel_iff_iter_pred_length"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "reaching-list-length-pred-le",
+  "name": {
+   "en": "a horizon at least the list's length less one"
+  },
+  "statement": {
+   "en": "k is at least the list's length less one (all.length.pred ≤ k)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Reaching.possible_iff_within_of_pred_le"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件",
   "seeded_from": [
    "Lean"
   ]

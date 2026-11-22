@@ -47505,5 +47505,255 @@
   "takes_unbound": {
    "regimemargin-step": "definition"
   }
+ },
+ "Becoming.Iteration.iter_iff_all": {
+  "family": "H",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "mono",
+    "type": "Becoming.Iteration.MonotoneStep Φ",
+    "premises": [
+     "iteration-monotone-step"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "start",
+    "type": "∀ (y : S), Φ V₀ y → V₀ y",
+    "premises": [
+     "iteration-step-takes-start-into-itself"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "within",
+    "type": "∀ (x : S), V₀ x → x ∈ all",
+    "premises": [
+     "iteration-start-members-listed"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Iteration.iter_largest": {
+  "family": "H",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "mono",
+    "type": "Becoming.Iteration.MonotoneStep Φ",
+    "premises": [
+     "iteration-monotone-step"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "start",
+    "type": "∀ (y : S), Φ V₀ y → V₀ y",
+    "premises": [
+     "iteration-step-takes-start-into-itself"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "within",
+    "type": "∀ (x : S), V₀ x → x ∈ all",
+    "premises": [
+     "iteration-start-members-listed"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Iteration.postfixed_in_iter": {
+  "family": "H",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "mono",
+    "type": "Becoming.Iteration.MonotoneStep Φ",
+    "premises": [
+     "iteration-monotone-step"
+    ]
+   },
+   {
+    "position": 6,
+    "name": "inside",
+    "type": "∀ (y : S), K y → V₀ y",
+    "premises": [
+     "iteration-class-inside-start"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "post",
+    "type": "∀ (y : S), K y → Φ K y",
+    "premises": [
+     "iteration-class-preserved-by-step"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "a._@._internal._hyg.0",
+    "type": "K y",
+    "premises": []
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Iteration.iter_within_length": {
+  "family": "H",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "mono",
+    "type": "Becoming.Iteration.MonotoneStep Ψ",
+    "premises": [
+     "iteration-monotone-step"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "start",
+    "type": "∀ (y : S), W₀ y → Ψ W₀ y",
+    "premises": [
+     "iteration-start-inside-its-step"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "comm",
+    "type": "Becoming.Iteration.CommutesWithImplication Ψ (Becoming.Iteration.iter Ψ W₀ all.length y)",
+    "premises": [
+     "iteration-commutes-with-implication"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "within",
+    "type": "∀ (x : S), (W₀ x → Becoming.Iteration.iter Ψ W₀ all.length y) → x ∈ all",
+    "premises": [
+     "iteration-implying-states-listed"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "a._@._internal._hyg.0",
+    "type": "Becoming.Iteration.iter Ψ W₀ n y",
+    "premises": []
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Viability.kernel_iff_iter": {
+  "family": "H",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "within",
+    "type": "∀ (x : S), guard x → x ∈ all",
+    "premises": [
+     "viability-guard-listed"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Viability.kernel_iff_iter_pred_length": {
+  "family": "H",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "every",
+    "type": "∀ (x : S), x ∈ all",
+    "premises": [
+     "branching-every"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "len",
+    "type": "all.length = n + 1",
+    "premises": [
+     "viability-list-length-succ"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Viability.keepable_iff_count": {
+  "family": "H",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "every",
+    "type": "∀ (x : S), x ∈ all",
+    "premises": [
+     "branching-every"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.held_iff_iter": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 5,
+    "name": "within",
+    "type": "∀ (x : S), Q x → x ∈ all",
+    "premises": [
+     "commonresponse-requirement-listed"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Law.drawn_iff_not_reachable_count": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "every",
+    "type": "∀ (x : S), x ∈ all",
+    "premises": [
+     "law-every"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Reaching.possible_iff_within_of_pred_le": {
+  "family": "G",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 5,
+    "name": "every",
+    "type": "∀ (x : S), x ∈ all",
+    "premises": [
+     "branching-every"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "enough",
+    "type": "all.length.pred ≤ k",
+    "premises": [
+     "reaching-list-length-pred-le"
+    ]
+   }
+  ],
+  "takes_unbound": {}
  }
 }

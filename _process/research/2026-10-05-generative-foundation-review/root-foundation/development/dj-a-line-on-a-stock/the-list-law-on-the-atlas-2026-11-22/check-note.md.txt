@@ -1,0 +1,97 @@
+*An AI reader who took no part's return (run as Claude Opus, 201,023 tokens), word for word from the agent's transcript; agents could not write report files, so this return is its report. It read the note as kept in `NOTE.before-check.md.txt` and the direction page's paragraph as first written.*
+
+The note and the paragraph each have sentences that say more than their sources. I found 12 MUSTs and 10 LESSERs, listed below. Most of the numbers recount correctly. The link count of 82 and 81 comes out right only if a link counts at either end; counted the way you defined it, it is 112 and 111. I wrote nothing in the worktree. I wrote two read-only counting scripts in the scratchpad: `/private/tmp/claude-501/-Users-ren-theories/a5a43704-f723-406f-926c-7c46463ba40a/scratchpad/count2.py` and `/private/tmp/claude-501/-Users-ren-theories/a5a43704-f723-406f-926c-7c46463ba40a/scratchpad/und.py`.
+
+The stores at HEAD `6c98a438a` are the same as at `0110d32a6` (no diff under `theories/becoming/results/`). So "before" below means HEAD.
+
+## MUST
+
+1. **NOTE line 3**, "What a reader who took no part changed in this note is said at its end." Nothing at the note's end says this. Write the section, or until then: "No reader who took no part has yet read this note."
+
+2. **NOTE line 71**, "the theorems refused above are in the Lean and on no dynamic's list." This is false for two of them. In the applied `dynamics.json`, `Becoming.Branching.reachable_iff_all` and `Becoming.Viability.coded_kept_iff_closed` are in the declarations of `kept-at-the-length-of-a-list`. Replace with: "the theorems refused above are in the Lean; of them, Branching.reachable_iff_all and Viability.coded_kept_iff_closed are listed under the new dynamic only, and the rest on no dynamic's list."
+
+3. **NOTE lines 69 to 70**, "Two things in the entry are the applying writer's own". There is a third, and it is the biggest. `apply_atlas22.py.txt` (the lines after the mechanism) drops `regionStep`, `held_iff_iter`, `Viability.keepStep` and `keepable_iff_count` from the draft's 24 declarations, and adds `Branching.predStep` and `Branching.reachable_iff_all`.
+   - The dynamic's refuter checked the draft's 24, which did not include those two ("every one of the 24 declarations exists…").
+   - The blind reader placed `reachable_iff_all` under no dynamic ("dynamic": "NONE").
+   - So no reader judged or refuted listing it under the new dynamic.
+   - The script's own comment also marks OWN wording in the card's misfit, starting "and, of the six theorems…". That passage includes "Branching.reachable_iff_all uses iter_iff_all with iter_iff_reachable" and "in reachable_iff_all it is the number of moves of a trace".
+   - Add: "Third, the entry's list of declarations: four were moved out of the draft's 24 (held_iff_iter and keepable_iff_count to the dynamics they are cases on, regionStep and keepStep to none), and Branching.predStep and Branching.reachable_iff_all were added; no reader judged or refuted that listing. The card's misfit has a passage of the applying writer's own as well."
+
+4. **Paragraph**, "a theorem was newly listed under a dynamic only where a reader … placed it there." This is false for the new dynamic: `reachable_iff_all` was listed there against the blind placement "NONE" (see 3). Replace with: "a theorem was newly listed under a dynamic that was there before only where a reader shown the statement and the dynamics, and not told what it would be a case of, placed it there."
+
+5. **Paragraph**, "Six rows use the list; one is said as the part of the law that asks no list, and one as a neighbour's notion." Seven rows use the list. The `how` of the row on `reach_within_listed` says "It uses the list, every configuration and its length", and the note's own table says "yes". Replace with: "Six rows count, each using the list; one more uses it but is said as a neighbour's notion and does not count; one is said as the part of the law that asks no list."
+
+6. **Paragraph**, "Five proposed rows were refused, one of them on a theorem the law's own record lists…". Only three case rows were proposed and refused: `iter_region_iff_lasts`, `returns_iff_reachable_count` and `continues_persists`.
+   - For `kernel_iff_lasts_length`, the row writer proposed a premise row with no `case_of` (RETURN-rows-2 §4 (4)).
+   - For `guarded_not_keepsWidening`, the row writer proposed nothing: "Nothing is entered in this run" (RETURN-rows-2 §9 (4)).
+   - The record's 81 declarations were not checked against its proof. The refuter says "It reaches no declaration of PredicateIteration".
+   - Replace with: "Three proposed case rows were refused, and two theorems the blind reader placed were left unlisted: one to which the validator would leave no law to name, and one that the law's own record lists among its declarations though its proof reaches no declaration of PredicateIteration."
+
+7. **NOTE line 41**, "`iter_iff_stages` … which is no part of the law." The record lists `Becoming.Iteration.iter_iff_stages` among its 81 declarations; I checked this in the record's JSON. Also, `iter_region_iff_lasts` uses `region_mono` from CommonResponse, which holds `held_iff_iter` and `regionStep`, both declarations of the record. So "its only use of the law's modules" is also false. Replace with: "`Lasting.iter_region_iff_lasts`: of the law's declarations it uses only `iter_iff_stages`, an identification of iterates with a family by their clauses, which takes no list and is neither part of the law that R1 names (the refuter: 'no part of the law of what a list holds, neither its list part nor its no-list part')."
+
+8. **Paragraph**, the answer of the entry's refuter. Its `going_on_or_count` begins "By its own words, a going-on is described, of classes and not of states", and it says "So the entry is not only a lemma about lists." The paragraph gives only the qualifications and leaves out the answer to the question that was asked. Replace with: "…answered that a going-on is described, of classes and not of states, and that the entry is not only a lemma about lists; the going-on is an operator's iteration, not a course in time, read as keeping only through its cases."
+
+9. **NOTE line 49**, "The writer of the entry had said it would not object to a reader who ruled it a lemma and entered only case rows." This drops the writer's own judgement and its condition (RETURN-dynamic-draft line 228): "it answers R6's question … only if the iterate's number is not read as time. On that reading it is a general law the cases share, and I would not object…". Replace with: "The writer of the entry judged that it answers R6's question only if the iterate's number is not read as time, and on that reading is a general law the cases share; it said it would not object to a reader who ruled it a lemma and entered only case rows."
+
+10. **Paragraph**, "every finding of the readers who took no part is applied in its words". This says more than the note's "Every MUST of the four refuters".
+    - Rules R1 to R9 rework the attacker's "Close" sentences rather than copy them.
+    - Several LESSERs were addressed to the landing, not the stores.
+    - Replace with: "every MUST of the four readers who refuted the drafts is applied (see the note for how)."
+
+11. **NOTE line 67**, "Every MUST of the four refuters is applied in its exact words". The rows-1 refuter's R5 MUST reads: "Two rows count only if … continues_persists on recurrence-without-premise … Otherwise nothing is entered". Taken literally, it forbade the entry. It was in fact read as scoped to that writer's rows. Also, the dynamic refuter's MUST on `held_iff_iter` was applied with "; listed under a-reading-kept-by-its-update" put in place of its closing parenthesis. Replace with: "Every MUST of the four refuters is applied in its words, with two exceptions: the rows-1 refuter's MUST on R5, a condition on that writer's rows alone, was read as such once the rows of the second writer stood; and one MUST has a pointer of the applying writer's added (see below)."
+
+12. **Paragraph**, "By the reader who placed the theorems, the atlas had no dynamic whose own notion is…". That reader read about 12 dynamics; for the rest it says "not read beyond grep matches of their declaration names". What it actually reports is "No dynamic lists GuardHorizon declarations" and "no atlas entry names KeptFor…". The same overreach is in NOTE line 53. Replace with: "By the reader who placed the theorems, no dynamic lists a declaration of GuardHorizon or names KeptFor, and none it read has a choice against every outcome or keeping through what the steps register as its own notion; one theorem of each now stands under the new dynamic."
+
+## LESSER
+
+13. **NOTE line 54 and the paragraph, the link count.** 82→81 holds only if a link counts at either end, that is, if being named by another dynamic's case row also links a dynamic. Counted one way only, as your definition reads, it is 112 of 185 → 111 of 186. On that count `a-reading-kept-by-its-update` and `attraction-is-not-returning` gain a link and the new dynamic has none. Add to the definition: "a link at either end".
+
+14. **NOTE line 11 and the paragraph, "could be met with nothing done".** RETURN-attack line 3 says "passed by its letter with nothing of worth done". Replace with: "could be met by their letter with nothing of worth done".
+
+15. **NOTE line 13, R1's summary.** R1's list is "`postfixed_in_iter`, `iter_iff_stages`, `iter_pred` or `iter_within` alone". Replace "in `postfixed_in_iter` alone" with "in `postfixed_in_iter`, `iter_iff_stages`, `iter_pred` or `iter_within` alone".
+
+16. **NOTE line 15, R3's summary.** It leaves out "and would belong on its list whatever it is a case of". Add those words.
+
+17. **NOTE line 43, "the readers who refuted the rows found".** Both findings, and the "half of the equivalence" finding, are the rows-1 refuter's alone. Replace with: "the reader who refuted those rows found".
+
+18. **NOTE line 45, the blind reader's "NONE" list.** It leaves out `Branching.reach_within_listed`, which the blind reader also placed under no dynamic: "it is not of that dynamic's notion". That supports the R4 row. Add: "and, of a law already listed, `Branching.reach_within_listed` (entered under R4 as a neighbour's notion)."
+
+19. **NOTE line 53, "as its cases".** These theorems are listed as the new dynamic's declarations; they carry no `case_of` row. The entry's mechanism calls them "Theorems the Lean proves by calling a declaration of the law". Replace with: "are now listed under the new dynamic, as theorems the Lean proves by calling the law".
+
+20. **NOTE line 56, "It places nothing between the two ways of going on … as the entry's open says in the record's words."** The dynamic's refuter cut "the two ways" from the entry because it has no source. The open says only "That one way of selecting is placed against another is not shown." Replace with: "As the entry's open says in the record's words, that one way of selecting is placed against another is not shown, and a quantity drawn down, a share, a lock or the time at which a reading comes is in none of its statements." In the paragraph, "the two ways" is defined on the direction page itself (its line 7), so it can stand there.
+
+21. **Paragraph, "not told of the law".** R3 says "not told what it would be a case of"; the blind reader's brief is not in the folder. Use R3's words.
+
+22. **Paragraph, "It is now one dynamic there".** The stores are changed but not committed in the worktree. Consider: "It is entered (in a worktree, not yet landed) as one dynamic…".
+
+## What I checked and found right
+- **Numbers:**
+  - 185, then 186, dynamics.
+  - None of the record's 81 declarations were named in the store before.
+  - The new entry has 22 declarations and 4 premise rows.
+  - Premises: the last 12 of `premises.json` are exactly the new ones, 8 for the four rows and 4 for the case rows.
+  - Eight rows on six dynamics.
+  - Six rows count, on four dynamics (D, H, A, G).
+  - Case rows went from 129 to 137; rows naming a law another dynamic lists went from 56 to 61.
+  - The lister file has 87 lines and is byte-identical to `tmp/dj/batch28/atlas22.lister.txt`.
+  - The attacker used 121,607 tokens. I cannot check the 1,355,025 figure or the run of 80 tests; 80 is the count from row FM's commit that morning.
+- **The table:** every "a case of" cell is exactly `case_of.law` in the store. Every "new" or "already listed" cell agrees with HEAD. Every "uses the list" cell agrees with the row's `how`, with the lister's uses and with the refuters' `counts_by_R1`.
+  - `held_iff_iter_pred_length` and `reach_within_of_pred_le` are listed under no dynamic, as the rows imply.
+  - "four calls on" agrees with the attacker's count.
+- **Refusal reasons:** the reasons for `kernel_iff_lasts_length` (F4 and the validator), for `guarded_not_keepsWidening` (lister and record law 14) and for `returns_iff_reachable_count` / `continues_persists` (blind placements and the refuter's module finding) match their sources.
+- **Told to row FM, items 1 to 3:** each matches its source. Record law 7 and law 14 match, and the record's title is unchanged.
+- **The mapping row for `reach_within_listed`:** binders `every` at position 6 and `reach` at position 8 match the lister. Commit `2089a37d4` says "The mapping row was edited by hand: the lister was not run".
+- **The tests:** the hashes in `FROZEN.sha256.txt` match both `.txt` copies, at 11:14:04 and 11:19:54 +0700. The After is headed "before any writer or row reader ran", and the attacker's return says "before anything ran". I can only report what the files say. The two false sentences and the R5 reading match their sources.
+- **(h), the clause on `Branching.reachable_iff_all`:** it says exactly what Attraction.lean:147 states under `every : ∀ x, x ∈ all`. `Reachable` at Recurrence.lean:118 is `∃ x as, as.length = n ∧ Trace P x as s`. The proof uses `iter_iff_all` (with `iter_iff_reachable`).
+  - The mechanism's pointers are right: `held_iff_iter` is listed under `a-reading-kept-by-its-update` and `keepable_iff_count` under `never-leaving-a-guard`.
+  - The card's misfit pointers are right too: the four it says the entry lists are among its declarations.
+- **Quotes:** the quotation of the entry's refuter matches its source, apart from "The" being lowercased.
+
+## Not read
+- The direction page beyond the one paragraph and a grep for "two ways".
+- The rest of the record.
+- RETURN-rows-1 and RETURN-card-draft in full.
+- Most of `apply_atlas22.py`.
+- ENTRY-as-applied (I read the store instead).
+- The Lean outside Attraction.lean around line 147, Recurrence.lean around line 118, and the line numbers I grepped.
+- Whether the validator, the map's check or the tests pass, and whether row FM was told.

@@ -1,0 +1,85 @@
+{
+ "stands": true,
+ "findings": [
+  {
+   "level": "MUST",
+   "where": "Pair 4, placement (R3; G2(a) second half)",
+   "finding": "OPENED Parting.lean:426. `Becoming.Parting.continues_persists` is a theorem of Parting.lean. when-the-runs-of-a-process-settle lists declarations only from Settling.lean and Onward.lean (OPENED dynamics.json `declarations`: Settling.*, Onward.*), so it lists nothing from Parting.lean. The theorem is not listed there either, so G2(a) fails on both halves. Only one dynamic lists a Parting declaration: recurrence-without-premise lists `Parting.free_unbounded`. The writer TOLD, and I did not check, that its record identification-where-runs-part states continues_persists as law 9. The writer chose a dynamic whose mechanism words fit ('a course as long as the list'), but that dynamic's own law of the notion (`Onward.run_iff_continues`, OPENED Onward.lean:164) does not go through continues_persists. Listing it there amounts to adding a declaration to carry a link.",
+   "exact_words": "Not entered on when-the-runs-of-a-process-settle: Becoming.Parting.continues_persists is a theorem of Parting.lean, from which that dynamic lists nothing (its declarations are from Settling.lean and Onward.lean). The same premise row, with the same takes and the same how, may be entered on recurrence-without-premise, which lists Becoming.Parting.free_unbounded and whose record identification-where-runs-part states continues_persists. It is entered only if a reader who took no part judges by R3 that it states that dynamic's notion; the binder assignment then reads {\"family\": \"F\", ...}."
+  },
+  {
+   "level": "MUST",
+   "where": "Pair 3, placement (R3; G2(a) second half)",
+   "finding": "OPENED Attraction.lean:378. `Law.returns_iff_reachable_count` is a theorem of Attraction.lean. recurrence-without-premise lists nothing from Attraction.lean: its Law.* declarations (`Returns`, `lossless_iff_returns`, `returns_iff_keeps`, `rise_not_lossless`, `withHistory_never_returns`, `present_forgets`) are in Recurrence.lean, which I OPENED by grep. Attraction's laws are listed under attraction-is-not-returning (`Law.Drawn`, `drawn_iff_not_returns`, `lossless_iff_none_drawn`, …) and basins-of-a-determined-law. So the row cannot be entered on recurrence-without-premise. Its twin `drawn_iff_not_reachable_count` is also in Attraction.lean, at line 383.",
+   "exact_words": "Not entered on recurrence-without-premise: Becoming.Law.returns_iff_reachable_count is a theorem of Attraction.lean, from which that dynamic lists nothing. If entered at all, it goes on attraction-is-not-returning, only after a reader who took no part so judges by R3. It takes [\"law-every\"] (\"a list holds every configuration of the determined law's type (∀ x, x ∈ all)\", the premise that dynamic's laws take; binder every : ∀ (x : S), x ∈ all), with binder assignment {\"family\": <that dynamic's family>, \"laws\": {\"Becoming.Law.returns_iff_reachable_count\": {\"binders\": {\"every\": [\"law-every\"]}, \"takes_unbound\": {}}}}, and it is filed as not counted."
+  },
+  {
+   "level": "MUST",
+   "where": "Pair 1, entering at all (R3)",
+   "finding": "OPENED CommonResponse.lean:175. G2(a)'s module half is met: the dynamic lists `«所闭之承最大»` from CommonResponse.lean, at line 153. But `held_iff_iter` is not listed, and R3 lets it be listed only after a reader who took no part, shown the entry and the statement and not told what it is a case of, makes a blind judgement. The writer's '(5) It counts' assumes that judgement without having it.",
+   "exact_words": "Entered only after a reader who took no part, shown a-reading-kept-by-its-update's entry and the statement of Becoming.held_iff_iter and not told what it is a case of, judges by R3 that it states that dynamic's notion; until then held_iff_iter is not added to declarations and no premise row, ledger premise or binder assignment is written."
+  },
+  {
+   "level": "MUST",
+   "where": "Pairs 1, 3 and 4, the last sentence of each how ('… is listed under no dynamic')",
+   "finding": "OPENED records/kept-at-the-length-of-a-list.md:13 and :37. Law 1 lists `Iteration.iter_largest` and `iter_persists`, and law 13 lists `Branching.reachable_iff_all`. The plan enters a dynamic with this record's id (G1). If it is entered and lists the record's declarations, these sentences become false when that one landing is made. This does not apply to pair 2: `reach_within_of_pred_le` is not among the record's declarations, since law 8 names `possible_iff_within_of_pred_le`.",
+   "exact_words": "If the dynamic kept-at-the-length-of-a-list is entered: pair 1 ends \"Iteration.iter_largest is listed under kept-at-the-length-of-a-list (its record, law 1).\"; pair 3 ends \"Branching.reachable_iff_all is listed under kept-at-the-length-of-a-list (its record, law 13).\"; pair 4 ends \"Iteration.iter_persists is listed under kept-at-the-length-of-a-list (its record, law 1).\" If it is not entered, each sentence stands as the writer gave it."
+  },
+  {
+   "level": "MUST",
+   "where": "The whole set (R5)",
+   "finding": "Once the two placement MUSTs above are applied, only pair 1 counts on the dynamics the writer chose. R5 says that with fewer than two counted rows, nothing is entered, pair 2 included. G2 holds only if pair 4 is moved to recurrence-without-premise and both R3 judgements are yes. In that case the two counted rows are pair 1 (family D) and pair 4 (family F). Without the new dynamic, `iter_persists` is listed under no dynamic and is named in a record of recurrence-without-premise (writer TOLD; I did not check). The render rule at atlas.py:2103, which I OPENED, then reads the row there as a step within that dynamic, not as a link for the R8 count.",
+   "exact_words": "Two rows count only if Becoming.held_iff_iter is entered on a-reading-kept-by-its-update and Becoming.Parting.continues_persists on recurrence-without-premise, each after a yes from the R3 reader. Otherwise nothing is entered, and the finding is filed with each of the four chains named. If kept-at-the-length-of-a-list is not entered, the row on recurrence-without-premise is read on its page as a step within it, not a link, and the count of R8 is told without it."
+  },
+  {
+   "level": "LESSER",
+   "where": "Pair 2 how, the middle sentences",
+   "finding": "OPENED ReachableRanges.lean:513-545, CommonResponse.lean:214. The how names the target as 's', but the start class is `fun t => t = s`. It omits `reach_iff_withinClosure`, a lister use of `trace_within_pred_length` and the link from Reach to the closure. It omits why the list's length is n + 1 (`length_pos_of_mem (every y)`). It also omits two premises of `iter_within_pred_length`: `reach_commutes`, and the start lying inside its own step. 'Taken into the step' can be misread as the kept side's 'taken into itself', which is the opposite direction.",
+   "exact_words": "reach_within_of_pred_le calls trace_within_pred_length with n the list's length less one, the length being n + 1 because y is on the list (length_pos_of_mem). trace_within_pred_length reads iterate n of reachStep (Steps P) from the class holding s alone as the starts of traces of at most n moves into s (iter_reach_iff_trace), and gets y into that iterate from Reach P y s by reach_iff_withinClosure and closure_iff_reach_within. The bound of the latter is reach_within_pred_length, a call of Iteration.iter_within_pred_length with the step reachStep, monotone by reach_mono, the start lying inside its own step (Or.inl), the step commuting with every proposition (reach_commutes), and a list of length n + 1 holding every configuration."
+  },
+  {
+   "level": "LESSER",
+   "where": "Pair 3 how, 'the other half'",
+   "finding": "OPENED Attraction.lean:359-361 and Recurrence.lean:622-628. In `returns_iff_always_reachable`, left to right is `returns.reachable` and uses no list. Right to left uses only `always all.length`. 'Uses the same list' is true of one direction only.",
+   "exact_words": "Returning exactly where reachable at every length is the other half, returns_iff_always_reachable. From left to right it needs no list (Returns.reachable). From right to left it uses reachability at the list's length only, by another argument on the same list (returns_of_reachable, the grammar's «定后于线有限则末返», revisits_within, an induction on the list), not by the general law."
+  },
+  {
+   "level": "LESSER",
+   "where": "Frozen G2 against R5 (which dynamics)",
+   "finding": "TOLD, from the frozen file. G2 asked for rows on 'two of the five dynamics named above'. Of the dynamics that could carry counted rows, a-reading-kept-by-its-update is not among those five, and recurrence-without-premise is only by the reading 'Law.Drawn with returning (the dynamics that list them)'. R5 restates G2 without 'of the five'. The landing should say which reading was taken.",
+   "exact_words": "The landing's clause says that R5 was read as replacing G2's 'two of the five dynamics named above', and names the two dynamics the counted rows are on."
+  }
+ ],
+ "rows": [
+  {
+   "dynamic": "a-reading-kept-by-its-update",
+   "law": "Becoming.held_iff_iter (case_of Becoming.Iteration.iter_largest)",
+   "enter": true,
+   "counts_by_R1": true,
+   "reason": "OPENED CommonResponse.lean:175-180 and PI:134,140,146,161. The proof is a match on «所闭之承最大» R Q and iter_largest (region_mono R Q) (fun _ h => h.1) within, and the lister uses [«所闭之承最大», Iteration.iter_largest, region_mono] agree. case_of.law iter_largest is among the lister uses and is not a declaration of the dynamic. The chain reaches the list-taking iter_largest → iter_postfixed → iter_persists → extend_at_places, with no list induction outside PredicateIteration. Premise: binder within : ∀ (x : S), Q x → x ∈ all, set against the new 'a list holds every state at which the requirement Q holds (∀ x, Q x → x ∈ all)'. They match, and no existing ledger premise says it: branching-every says more, and covers is indexed by step. The how matches the proof term. G2(a) module half is met (CommonResponse via «所闭之承最大»). It is entered only after the R3 blind reader's yes, with the 'listed under no dynamic' sentence mended if the new dynamic is entered."
+  },
+  {
+   "dynamic": "every-loss-passes-a-juncture",
+   "law": "Becoming.Branching.reach_within_listed (case_of Becoming.Reaching.reach_within_of_pred_le)",
+   "enter": true,
+   "counts_by_R1": false,
+   "reason": "OPENED Junctures.lean:315-317, ReachableRanges.lean:513-545, Prelude.lean:1022, CommonResponse.lean:206-228, PI:178,264. Lister uses [reach_within_of_pred_le] match. case_of.law is not a declaration of the dynamic. The chain reaches iter_within_pred_length with every and len, and no link has an induction on all of its own: closure_of_reach is on m, closure_iff_reach_within eliminates along the closure, and length_pos_of_mem is one pattern match. reach_within_of_pred_le has no lister row, so I checked that link by opening it only. The law is already listed, its statement is of bounded reach, and R4 applies, so it does not count. takes is unchanged. It may be entered with the mended how, and only if R5 is met by two other rows."
+  },
+  {
+   "dynamic": "recurrence-without-premise",
+   "law": "Becoming.Law.returns_iff_reachable_count (case_of Becoming.Branching.reachable_iff_all)",
+   "enter": false,
+   "counts_by_R1": false,
+   "reason": "OPENED Attraction.lean:120-149,359-379, Recurrence.lean:492,622, GrammarLaws.lean:1680-1698, Prelude.lean:1111. The writer's chain is right, and the lister uses [returns_iff_always_reachable, reachable_iff_all] match. R1's letter is met through iter_iff_all. But half the iff is revisits_within's own induction on all, so the proof is not a call of the law after an identification: G2(b) fails and the row does not count. I agree with the writer here. It also cannot be entered on this dynamic: Attraction.lean is not a module it lists from, so G2(a) fails. If anywhere, it goes on attraction-is-not-returning after the R3 reader's yes, with law-every, filed as not counted. Binder every : ∀ (x : S), x ∈ all against recurrence-every-configuration-listed is no mismatch."
+  },
+  {
+   "dynamic": "when-the-runs-of-a-process-settle",
+   "law": "Becoming.Parting.continues_persists (case_of Becoming.Iteration.iter_persists)",
+   "enter": false,
+   "counts_by_R1": true,
+   "reason": "OPENED Parting.lean:409-430, Lasting.lean:957-959, PI:114,134. The proof is iter_iff_continues around iter_persists (course_mono P) (fun _ _ => trivial) (fun x _ => every x). Lister uses [iter_iff_continues, Iteration.iter_persists, course_mono] match. The case_of law is not a declaration of the dynamic. The chain is list-taking with no induction of its own, and the how is accurate: Continues P (len+1) y unfolds to the stated ∃. Binders: every against recurrence-every-configuration-listed, and continues : Lasting.Continues P all.length y against the new 'a course of as many steps as the list is long starts at y (Lasting.Continues P all.length y)'. Both match. But Parting.lean is not a module this dynamic lists from, so G2(a) fails and the row is not entered here. The same row may go on recurrence-without-premise, which lists Parting.free_unbounded, after the R3 reader's yes; there it would count by R1."
+  }
+ ],
+ "going_on_or_count": "",
+ "not_read": "I did not read RETURN-attack.md or the frozen file's sections before After beyond one pass. Nor did I read the definitions of «承», «逆» and «所闭», or the sub-lemmas of «所闭之承最大»; I took 'what holds throughout R's closure' from the docstrings. I did not read Viability.lean, Lasting.lean beyond Continues, Frame.lean's reach_iff_withinClosure and withinClosure_of_trace, the body of Recurrence.lean:118 Reachable, Onward.lean beyond lines 136-175, or GrammarLaws past line 1698. In atlas.py I read only lines 955-995, 186-194 and 2095-2110. I did not read add_rows.py, bindings.json beyond one row, mapping rows, regions.json or map cards. I did not check the records identification-where-runs-part (law 9) or reaching-before-and-after-a-juncture (History); those claims are the writer's, TOLD. I compared ledger premises only by a text search for list statements and Continues. Built, ran and gated nothing."
+}

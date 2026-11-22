@@ -1,0 +1,97 @@
+{
+ "stands": true,
+ "findings": [
+  {
+   "level": "MUST",
+   "where": "mechanism, the sentences on iter_succ and iter_within_length",
+   "finding": "OPENED PredicateIteration.lean:212, 225-227, 255-256. Both theorems take `mono : MonotoneStep Ψ`, and iter_within_length also takes `start : ∀ y, W₀ y → Ψ W₀ y`. The draft says neither premise in these sentences. The earlier 'Where a monotone step takes the start into itself' covers a different start premise (Φ V₀ ⊆ V₀), so it does not carry over. As written, the two sentences state the theorems with fewer premises than the Lean, which is a sentence saying more than its statement.",
+   "exact_words": "The other way, where a monotone step's start lies inside its own step, each iterate lies inside the next (iter_succ). Let G be that a state y is in the iterate at a list's length. Where the step is monotone, its start lies inside its own step, the step commutes with implication to G (for every class W and state z: if z is in the step of the class of states t where (W t → G) → G, and if z in the step of W gives G, then G), and the list holds every state at which membership in the start implies G, y in any iterate is in the iterate at the list's length (iter_within_length)."
+  },
+  {
+   "level": "MUST",
+   "where": "open[7] (the last open item), second sentence",
+   "finding": "OPENED PredicateIteration.lean:103, 108, 146-147, 171-173, 219, 225. The sentence 'Where no list holds the start's members the law states only that a class inside the start that the step preserves lies in every iterate' is false. With no list the module also states iter_pred, iter_within, iter_succ, iter_shift, iter_iff_stages and imp_iff_iter_gives. A false 'only' is a wrong sentence about the Lean even though it errs by saying less.",
+   "exact_words": "Where no list holds the start's members, the law states that each iterate lies inside the one before and inside the start, and that a class inside the start that the step preserves lies in every iterate; it does not state that any iterate is the largest such class."
+  },
+  {
+   "level": "MUST",
+   "where": "open[1]",
+   "finding": "TOLD (record does_not_show[3], read on the record page, line 52). 'The two ways of going on' is in neither the record nor the Lean, and the entry nowhere says what it refers to. The writer says it came from the brief. The anchor it cites, #does-not-show--未表明, says only 'That one way of selecting is placed against another'. G3 cuts a sentence that has neither source.",
+   "exact_words": "That one way of selecting is placed against another is not shown."
+  },
+  {
+   "level": "MUST",
+   "where": "name (en and zh)",
+   "finding": "OPENED PredicateIteration.lean:77-79, 153-154. TOLD: the name is the record's title. 'Kept for good' and 恒存 read the iterate's number as a time and 'for good' as forever. What the Lean says is 'in every iterate', a count of applications of the step. The entry's own open[6] says no statement of the law reads that number as a time, so the name contradicts the entry. 'What a list holds … kept' can also be read as 'what is listed is kept', which is false: the list holds the whole start, and only the members of the iterate at its length are in every iterate.",
+   "exact_words": "en: \"The largest class a step preserves, reached at a list's length\"; zh: \"步所保之最大类，至列表之长而得\""
+  },
+  {
+   "level": "MUST",
+   "where": "mechanism, the held_iff_iter case",
+   "finding": "OPENED CommonResponse.lean:175-180 and :153-157, with the lister. The proof matches two largest-class theorems: iter_largest and the closure's own «所闭之承最大» (lister uses: «所闭之承最大», iter_largest, region_mono). Writing 'by iter_largest' alone credits the law with more of this case than the proof term gives it, while the keepable case names its second theorem (Onward.KeepsMoving.run). R7 says the proof term is the source.",
+   "exact_words": "(held_iff_iter, by iter_largest and by «所闭之承最大», which states that what holds throughout the closure is the largest class inside Q that the relation's successors keep)"
+  },
+  {
+   "level": "MUST",
+   "where": "mechanism, the coded_kept_iff_closed case",
+   "finding": "OPENED Keeping.lean:380-391 and :316-323, with the lister. Only the direction from kept to a closed family uses the law (iter_postfixed, with iter_iff_kept, which rests on iter_iff_stages). The direction back is keptFor_of_closed, which proves it by its own induction on the number of steps and uses no declaration of the law. 'by iter_postfixed' says the whole equivalence is a call of the law.",
+   "exact_words": "(Viability.coded_kept_iff_closed: from kept to a closed family by iter_postfixed with iter_iff_kept; back by keptFor_of_closed, by its own induction on the number of steps, which uses no declaration of the law)"
+  },
+  {
+   "level": "MUST",
+   "where": "mechanism, add as its last sentence (R6: the family named with its reason)",
+   "finding": "TOLD (frozen file R6; the atlas page's family names in vocabulary.json and ATLAS.md:175, 207, 233). R6 asks that the family be named with its reason. The draft gives the reason for H only in the writer's report (E), not in the entry, and the entry mentions a family only for its neighbour (F).",
+   "exact_words": "It is placed in family H, kept regions, because what the law concludes is a class the step keeps: the largest class inside the start that the step preserves (iter_largest); no statement of it is of a cycle or an alternation, as in family F."
+  },
+  {
+   "level": "LESSER",
+   "where": "mechanism, the coded_kept_iff_closed case, its premise and conclusion",
+   "finding": "OPENED Keeping.lean:333-337, 372-374. The clause is ungrammatical ('every class seen exactly the class of some code' lacks a verb), and 'closed family' is used without saying what it is. InClosedFamily is defined at :333.",
+   "exact_words": "with a list of every code whose class lies within the guard, and where after each usable move from such a code's class every class seen is exactly the class of some code, a code's class is kept for as many steps as the list is long exactly where it lies in some family of classes within the guard each of which has a usable move after which every class seen is in the family"
+  },
+  {
+   "level": "LESSER",
+   "where": "mechanism, the keepable_iff_count case",
+   "finding": "OPENED JointKeeping.lean:91-92. 'Keepable' is used without its meaning. Keepable P g s is ∃ r : Run P, r.state 0 = s ∧ ∀ n, g (r.state n).",
+   "exact_words": "the guard is keepable from s (some run from s stays within the guard) exactly where"
+  },
+  {
+   "level": "LESSER",
+   "where": "mechanism, 'Theorems the Lean proves by calling these'",
+   "finding": "Lister. viable_persists calls iter_persists and coded_kept_iff_closed calls iter_postfixed. The mechanism does not state either of those before the word 'these'.",
+   "exact_words": "Theorems the Lean proves by calling a declaration of the law:"
+  },
+  {
+   "level": "LESSER",
+   "where": "mechanism, the reach_within_pred_length case and iter_within_pred_length",
+   "finding": "OPENED CommonResponse.lean:214-217, PredicateIteration.lean:264-267. 'reaches the target within any number of steps' can be read as 'for every number'; the statement is ∀ m, reaches m y → reaches n y. Also, iter_within_pred_length is listed under declarations, but its statement is given only as 'the form of the bound for such a list'.",
+   "exact_words": "with a list of length n + 1 of every state, a state that reaches the target within some number m of steps reaches it within n (reach_within_pred_length, by iter_within_pred_length: for a monotone step whose start lies inside its own step, with a list of length n + 1 of every state, where the step commutes with implication to G, G being that y is in iterate n, and the states at which membership in the start implies G are exactly those in one implication step from everything, y in any iterate is in iterate n)"
+  },
+  {
+   "level": "LESSER",
+   "where": "open[5] (iter_iff_all is of a state's membership)",
+   "finding": "OPENED PredicateIteration.lean:103, 108. '…of an earlier iterate the law says only that it contains the later ones' is too strong a negative. The law also says each iterate lies inside the ones before it and inside the start.",
+   "exact_words": "iter_iff_all is of a state's membership: a state in the iterate at the list's length is in every iterate. No statement says that every iterate is that iterate; of an iterate before the list's length the law says that it contains the later ones and lies inside the earlier ones, not that it equals the iterate at the list's length."
+  },
+  {
+   "level": "LESSER",
+   "where": "open[6] (the number of an iterate)",
+   "finding": "OPENED GuardHorizon.lean:88-90, KeepableStep.lean:84-86, CommonResponse.lean:175-177. Only three of the five cases named read the number as a number of steps: viable, kept for, reach within. In keepable_iff_count and held_iff_iter the number is only the list's length.",
+   "exact_words": "The number of an iterate counts applications of the step; no statement of the law itself reads it as a time along a course. In three of the cases named it is a number of steps: viable for as many steps, kept for as many steps, reaching within n; in the others it is the list's length only."
+  },
+  {
+   "level": "LESSER",
+   "where": "mechanism, the neighbour sentence",
+   "finding": "OPENED Recurrence.lean:165-167, PredicateIteration.lean:264. The draft says the list 'holds the members of a class, or the states at which membership in the start implies G'. iter_within_pred_length and three of the cases take a list of every state, which that wording leaves out.",
+   "exact_words": "here the list holds the members of the start, the states at which membership in the start implies G, or every state; the step is on classes, and no run or process is in the statements of the law itself."
+  },
+  {
+   "level": "LESSER",
+   "where": "premise iteration-start-members-listed, statement",
+   "finding": "OPENED lister binder `within : ∀ (x : S), V₀ x → x ∈ all`. 'and need hold no other' can be misread as 'holds no other'. The meaning should be that the list may hold other states too.",
+   "exact_words": "a list holds every state of the start class (it may hold other states too): ∀ x, V₀ x → x ∈ all"
+  }
+ ],
+ "going_on_or_count": "The frozen R6 asks whether a going-on is described (a step applied again and again to a class, and what stays in it) or only a count of a list. By its own words, a going-on is described, of classes and not of states. OPENED PredicateIteration.lean:77-79: iter applies the step to the start again and again. Lines 153-154 (iter_iff_all) say what stays: membership at the list's length is membership in every iterate. Lines 161-164 (iter_largest) say what that is in terms that need no list: the largest class inside the start that the step preserves. Lines 146-147 (postfixed_in_iter) hold with no list at all. The list's count does real work only in extend_at_places (:114-130), which decides where the descent stops. It does not decide what is kept. So the entry is not only a lemma about lists. It is the same kind of thing as recurrence-without-premise (read from dynamics.json): a general law of what a list forces, with no forbids, exit or transition. The neighbour concludes of a sequence of states (revisits_from, Recurrence.lean:166). This one concludes of a descending family of classes and of its greatest preserved class. The going-on is an operator's iteration, not a course in time. It is read as keeping only through the cases: kernel, viable, keepable, kept through a reading. The entry has to keep saying that, and the open items, once mended, do. Family: H, 'Kept regions, renewal, generation' (vocabulary.json; ATLAS.md:233). It fits by the atlas page's own words, 'kept regions', because the law's conclusion is a kept region in the sense of a greatest class the step preserves. F, 'Cycles and alternation', does not fit, since no statement here is of a cycle. G, 'Closure and stagnation', could be argued only from the descent stopping, which is not what the law concludes. R6 does not require family F: it names F as the neighbour's family and asks that the family be named with its reason. The draft gives that reason only in its report, so a MUST above puts it into the entry.",
+ "not_read": "Not opened: the proofs of Onward.KeepsMoving.run and iter_iff_kept beyond their use; the definitions of «承», «逆», «所闭», «闭», Seen and Usable beyond Keeping.lean:88-90; Parting beyond courseStep (:409); the Lasting, Branching, Reaching and Law cases; the likeness chain; GrammarCandidates. tools/research/atlas.py was read only at lines 770-1060 and at grep hits near 1085-1108, so Repository.declared and Repository.unanchored were not opened; anchors were checked by grep on the record page (lines 10, 42, 47, 72 exist), not by the validator. Also not read: add_rows.py beyond lines 6-45; RETURN-attack.md; the direction page; TERRAIN.md and PREMISES.md; cards.json and regions.json; the record JSON beyond its title, status, family and hypotheses (the record page was read to line 80); the Chinese of the record and of the name against the English, beyond a loose reading; how other premises' homes are anchored, by convention. Checked by program: every one of the 24 declarations exists by full name in the lister output; no other dynamic lists any of them; the binders of the four premise rows match the lister exactly, including the binder names add_rows.py asserts; the vocabulary has base 'any type', family H, kind 'hypothesis of a law' and seed 'Lean'; valence is right; the record has one hypothesis, so index 1 is valid; six/mapping.json holds 159 hygienic binders, three of them with no premise (gone_from twice, ways_alike), as the writer said; no chapter file contains the record id. Nothing was built, run or written."
+}

@@ -1,0 +1,27 @@
+# The law of what a list holds, on the atlas: what is tried, and what would count against it
+
+*AI-written (Claude Fable, board row DJ), 22 November 2026. Written before any reader or writer ran; its hash and clock are in `FROZEN.sha256.txt` beside it. Later additions only under "After", with the clock.*
+
+## What was found first (by the writer, by search, before this file)
+
+On main `0110d32a6` the atlas's store (`theories/becoming/results/atlas/entries/dynamics.json`, 185 dynamics) names none of the 81 declarations of the record `kept-at-the-length-of-a-list` (landed 22 November under row FM), and no declaration of `KeepableStep` or of the turn law's wider form. Row FM's note says so: "These links are in the Lean and in two records; they are not on the atlas's listing." By a search of names, declarations of five of the law's cases stand in modules that dynamics of the atlas already list: `Viability.Kernel` and `Lasting` (`never-leaving-a-guard`, family H), `Tolerance.kept_set` (`thresholds-of-waiting`, E), `Branching.reach_within_listed` (`every-loss-passes-a-juncture`, A), `Reaching` (`where-the-possible-grows`, G), and `Law.Drawn` with returning (the dynamics that list them). The other cases (a choice against every outcome, keeping through a reading, keepable, a course of some length, likeness to depth, what holds throughout a closure, the stages of telling apart) were found under no dynamic.
+
+## What is tried
+
+To put the law on the atlas in the atlas's own form: one dynamic with the record's id, and a `case_of` row on each law of another dynamic that the Lean now proves by calling the law. No Lean is written or changed. No result is added; the atlas "creates no result and strengthens no proof".
+
+## Guesses, each with what would count against it
+
+- **G1. The law is a dynamic in the atlas's own sense** (its page: "attractors, locks, drains, absorptions, cycles, closures and kept regions"): the largest class inside a start that a monotone step preserves, reached at the list's length. *Against:* no `forbids` that a law states; or a reader who took no part judges that it is a lemma about lists and that no going-on is described. Then no dynamic is entered. Since the atlas's validator asks that `case_of` name a law of another dynamic, no case row can be entered either, and the finding is that the atlas's form does not carry this join. That is filed as found.
+- **G2. At least two of the five dynamics named above take a `case_of` row.** A row is entered only where (a) the law it sits on is already listed under that dynamic on `0110d32a6`, or is a theorem of a module from which that dynamic already lists declarations and whose statement is of that dynamic's own notion; and (b) its proof, opened, is a call of a declaration of `PredicateIteration` or `RisingIteration` after an identification, with no induction on a list of its own. *Against a row:* (a) or (b) fails; or the row's `how` says more than the proof term. *Against the guess:* fewer than two rows are left by the readers who took no part. Then the dynamic would stand alone, nothing is entered, and that is filed.
+- **G3. Every sentence of the new entry can be taken from a sentence of the record that row FM's readers checked, or from a statement opened in the Lean.** *Against:* a sentence in the entry with neither source. It is cut.
+
+## What this is not
+
+It is not a way to lower the count of dynamics with no recorded link (86 of 185 on 16 November, "not a measure to move"). The count is told before and after, as a count. No declaration is added to a dynamic in order to carry a link. Nothing here places the two ways with respect to each other, and the entry says so in its `open`.
+
+## How
+
+One writer drafts the dynamic from the record and the Lean. Three readers, each alone, take the five dynamics between them and open each proof. Then readers who took no part, told to refute, set the dynamic's every sentence and each proposed row against the Lean. A map card is written only if the dynamic stands. The writer of this file applies what is left, runs the atlas's validator, the lister for the premise rows, the render and the atlas's tests, and sends the entry's text to the session that holds row FM before any gate. Readers read and do not build; nothing heavy runs. Cap: nine agents in all, about 1.8 million tokens.
+
+## After

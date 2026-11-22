@@ -1,0 +1,246 @@
+**Findings first (each is where a sentence could have said more than the Lean)**
+
+1. OPENED `PredicateIteration.lean:240, 249, 256`: on the rising side the list need hold only the states at which membership in the start implies G (`within : ∀ x, (W₀ x → G) → x ∈ all`). The record's law 7 says "a list holds every state", which asks more than the Lean does. The draft says the Lean's premise.
+2. OPENED `KeepableStep.lean:84-90`: `keepable_iff_count` takes a list of every configuration, calls `iter_largest` with it, and also calls `Onward.KeepsMoving.run`, which takes the same list. It is a call of the law plus another theorem; the draft says so.
+3. OPENED `GuardHorizon.lean:184-186` with the lister: `viable_iff_every_horizon` reaches a list-taking declaration only through `viable_closed` → `viable_persists` → `iter_persists`. `closed_viable` uses `postfixed_in_iter` alone (no list). The draft names `viable_persists`, whose own proof term has `iter_persists`.
+4. OPENED `GrammarCandidates.lean:585-587`: `inquiry_iff_all` calls `iter_iff_all`. The lister prints kind null for all four inquiry names, so rule (1)'s lister check cannot be met for it; it is not named in the entry.
+5. Lister: `alike_iff_alikeTo_pairs` uses `alike_iff_at_cover`, `mem_pairsOf`, `length_pairsOf`; `AlikeTo.steady_within` uses `alike_at_pairs`. Neither shows a declaration of the law. The record's `related` says likeness to depth "is a case of the law"; I did not open the chain and do not call it a case. `Reaching.guarded_not_keepsWidening` is likewise left out.
+6. OPENED `PredicateIteration.lean:77-79`: the index of `iter` counts applications of the step. Neither module has a run, a course or a process (both read whole). "Applied again and again" would read as time, so the draft does not say it, and `open` says what the number is.
+7. The record id appears in no file under `theories/becoming/chapters/` (grep), so there is no `#r-…` anchor; every source is an anchor of the record page.
+8. TOLD (record title): "kept for good" / "恒存" reads as time. The Lean says "in every iterate". The name is the record's own title; a plainer one may be wanted.
+
+**(A) The entry**
+
+```json
+{
+ "id": "kept-at-the-length-of-a-list",
+ "name": {
+  "en": "What a list holds: kept at its length, kept for good",
+  "zh": "列表所容：至其长而存，则恒存"
+ },
+ "family": "H",
+ "mechanism": {
+  "en": "A step on classes of states and a start: the iterate at 0 is the start, and the iterate at n + 1 is the step applied to the iterate at n. The step is monotone where a class inside another has its step inside the other's step. Where a monotone step takes the start into itself, each iterate lies inside the one before and inside the start. Where also a list holds every member of the start, a state is in the iterate at the list's length exactly where it is in every iterate (iter_iff_all); and that iterate lies inside the start, lies inside its own step, and contains every class inside the start that lies inside its own step: the largest class inside the start that the step preserves (iter_largest). With no list, a class inside the start that the step preserves lies in every iterate (postfixed_in_iter). The other way, where the start lies inside its own step, each iterate lies inside the next. Let G be that a state y is in the iterate at a list's length. Where the step commutes with implication to G (for every class W and state z: if z is in the step of the class of states t where (W t → G) → G, and if z in the step of W gives G, then G) and the list holds every state at which membership in the start implies G, y in any iterate is in the iterate at the list's length (iter_within_length). If every monotone step on a one-state type took membership in iterate 2 from the empty start to membership in iterate 1, every proposition would be decided (singleton_rise_needs_em). Theorems the Lean proves by calling these: with a list of every state at which Q holds, Q holds throughout the closure of a relation from s exactly where s is in the iterate at the list's length, from Q, of the step asking Q here and every successor in the class (held_iff_iter, by iter_largest); with a list of every state within a guard, a state viable for as many steps as the list is long has an enabled move all of whose outcomes are viable for as many (GuardHorizon.viable_persists, by iter_persists); with a list of every configuration, the guard is keepable from s exactly where s is in the iterate at the list's length, from the guard, of the step asking the guard here and some move with an outcome in the class (Viability.keepable_iff_count, by iter_largest and by Onward.KeepsMoving.run, which takes that list); with a list of every code whose class lies within the guard, and after each usable move from such a class every class seen exactly the class of some code, a code's class is kept for as many steps as the list is long exactly where it lies in a closed family (Viability.coded_kept_iff_closed, by iter_postfixed); with a list of length n + 1 of every state, a state that reaches the target within any number of steps reaches it within n (reach_within_pred_length, by iter_within_pred_length, the form of the bound for such a list). Beside recurrence-without-premise (family F), where a list holds every member of a sequence of states and the sequence revisits from every step on: here the list holds the members of a class, or the states at which membership in the start implies G, the step is on classes, and no run or process is in the statements of the law itself."
+ },
+ "records": [
+  "kept-at-the-length-of-a-list"
+ ],
+ "declarations": [
+  "Becoming.Iteration.iter",
+  "Becoming.Iteration.MonotoneStep",
+  "Becoming.Iteration.iter_pred",
+  "Becoming.Iteration.iter_within",
+  "Becoming.Iteration.iter_persists",
+  "Becoming.Iteration.iter_postfixed",
+  "Becoming.Iteration.iter_iff_all",
+  "Becoming.Iteration.iter_largest",
+  "Becoming.Iteration.postfixed_in_iter",
+  "Becoming.Iteration.iter_succ",
+  "Becoming.Iteration.CommutesWithImplication",
+  "Becoming.Iteration.iter_within_length",
+  "Becoming.Iteration.iter_within_pred_length",
+  "Becoming.Iteration.singleton_rise_needs_em",
+  "Becoming.regionStep",
+  "Becoming.held_iff_iter",
+  "Becoming.GuardHorizon.choiceStep",
+  "Becoming.GuardHorizon.viable_persists",
+  "Becoming.Viability.keepStep",
+  "Becoming.Viability.keepable_iff_count",
+  "Becoming.Viability.readingStep",
+  "Becoming.Viability.coded_kept_iff_closed",
+  "Becoming.reachStep",
+  "Becoming.reach_within_pred_length"
+ ],
+ "base": "any type",
+ "hypotheses": [
+  {
+   "record": "kept-at-the-length-of-a-list",
+   "index": 1
+  }
+ ],
+ "forbids": null,
+ "exits": [],
+ "transitions": [],
+ "tests": [],
+ "open": [
+  {
+   "en": "A quantity drawn down, a share, a lock, or the time at which a reading comes: none is in these statements.",
+   "source": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#does-not-show--未表明"
+  },
+  {
+   "en": "Nothing here places the two ways of going on with respect to each other: that one way of selecting is placed against another is not shown.",
+   "source": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#does-not-show--未表明"
+  },
+  {
+   "en": "Not shown: one statement with both outcomes of a course that has a choice, a reading and a bound on the ending side.",
+   "source": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#does-not-show--未表明"
+  },
+  {
+   "en": "That the codes of a reading are the classes actually reached, or that every class seen has a code: both are supplied with each application, and no instance of the reading law is built in the package.",
+   "source": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#does-not-show--未表明"
+  },
+  {
+   "en": "Reading the law onto an actual situation asks two recognitions that the theorems do not give: that what lies within the guard is finitely many configurations that a list can hold, and that the keeping at hand is the iterate of a monotone step from the guard.",
+   "source": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#correspondence--对应"
+  },
+  {
+   "en": "iter_iff_all is of a state's membership: a state in the iterate at the list's length is in every iterate. No statement says that every iterate is that iterate; of an earlier iterate the law says only that it contains the later ones.",
+   "source": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#laws--规律"
+  },
+  {
+   "en": "The number of an iterate counts applications of the step; no statement of the law itself reads it as a time along a course. In the cases named it is a number of steps: viable for as many steps, kept for as many steps, reaching within n.",
+   "source": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#laws--规律"
+  },
+  {
+   "en": "No exit and no transition is entered: under their premises the statements conclude membership in iterates, and none gives a condition under which a state in the iterate at the list's length leaves it, or a threshold between two outcomes. Where no list holds the start's members the law states only that a class inside the start that the step preserves lies in every iterate.",
+   "source": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#laws--规律"
+  }
+ ],
+ "valence": "none asserted",
+ "beyond": null,
+ "sources": [
+  "theories/becoming/results/records/kept-at-the-length-of-a-list.md#laws--规律"
+ ],
+ "standing_without_record": null,
+ "premises": [
+  {
+   "law": "Becoming.Iteration.iter_iff_all",
+   "takes": [
+    "iteration-monotone-step",
+    "iteration-step-takes-start-into-itself",
+    "iteration-start-members-listed"
+   ]
+  },
+  {
+   "law": "Becoming.Iteration.iter_largest",
+   "takes": [
+    "iteration-monotone-step",
+    "iteration-step-takes-start-into-itself",
+    "iteration-start-members-listed"
+   ]
+  },
+  {
+   "law": "Becoming.Iteration.postfixed_in_iter",
+   "takes": [
+    "iteration-monotone-step",
+    "iteration-class-inside-start",
+    "iteration-class-preserved-by-step"
+   ]
+  },
+  {
+   "law": "Becoming.Iteration.iter_within_length",
+   "takes": [
+    "iteration-monotone-step",
+    "iteration-start-inside-its-step",
+    "iteration-commutes-with-implication",
+    "iteration-implying-states-listed"
+   ]
+  }
+ ]
+}
+```
+
+**(B) New ledger premises**
+
+No existing premise states any of these binders. `recurrence-every-configuration-listed`, `law-every` and `branching-every` say `∀ x, x ∈ all`, which none of the four laws binds. `tolerance-keepsinclusion` is `Tolerance.KeepsInclusion next`, a different declaration from `MonotoneStep`.
+
+```json
+[
+ {"id": "iteration-monotone-step", "name": {"en": "a monotone step on classes"}, "statement": {"en": "the step on classes keeps inclusion: where one class lies inside another, the step of the first lies inside the step of the second (Iteration.MonotoneStep Φ: ∀ X Y, (∀ z, X z → Y z) → ∀ y, Φ X y → Φ Y y)"}, "kind": "hypothesis of a law", "lean": ["Becoming.Iteration.MonotoneStep"], "holds_in": [], "fails_in": [], "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件", "seeded_from": ["Lean"]},
+ {"id": "iteration-step-takes-start-into-itself", "name": {"en": "the step takes the start into itself"}, "statement": {"en": "the step applied to the start lies inside the start: ∀ y, Φ V₀ y → V₀ y"}, "kind": "hypothesis of a law", "lean": ["Becoming.Iteration.iter_iff_all", "Becoming.Iteration.iter_largest"], "holds_in": [], "fails_in": [], "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件", "seeded_from": ["Lean"]},
+ {"id": "iteration-start-members-listed", "name": {"en": "a list holding every member of the start"}, "statement": {"en": "a list holds every state of the start class, and need hold no other: ∀ x, V₀ x → x ∈ all"}, "kind": "hypothesis of a law", "lean": ["Becoming.Iteration.iter_iff_all", "Becoming.Iteration.iter_largest"], "holds_in": [], "fails_in": [], "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件", "seeded_from": ["Lean"]},
+ {"id": "iteration-class-inside-start", "name": {"en": "a class inside the start"}, "statement": {"en": "the class K lies inside the start: ∀ y, K y → V₀ y"}, "kind": "hypothesis of a law", "lean": ["Becoming.Iteration.postfixed_in_iter"], "holds_in": [], "fails_in": [], "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件", "seeded_from": ["Lean"]},
+ {"id": "iteration-class-preserved-by-step", "name": {"en": "a class the step preserves"}, "statement": {"en": "the class K lies inside the step applied to K: ∀ y, K y → Φ K y"}, "kind": "hypothesis of a law", "lean": ["Becoming.Iteration.postfixed_in_iter"], "holds_in": [], "fails_in": [], "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件", "seeded_from": ["Lean"]},
+ {"id": "iteration-start-inside-its-step", "name": {"en": "the start lies inside its own step"}, "statement": {"en": "the start lies inside the step applied to the start: ∀ y, W₀ y → Ψ W₀ y"}, "kind": "hypothesis of a law", "lean": ["Becoming.Iteration.iter_within_length"], "holds_in": [], "fails_in": [], "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件", "seeded_from": ["Lean"]},
+ {"id": "iteration-commutes-with-implication", "name": {"en": "the step commutes with implication to G"}, "statement": {"en": "for every class W and state z: if z is in the step of the class of states t where (W t → G) → G, and if z in the step of W gives G, then G (Iteration.CommutesWithImplication Ψ G); in iter_within_length G is that y is in the iterate at the list's length"}, "kind": "hypothesis of a law", "lean": ["Becoming.Iteration.CommutesWithImplication"], "holds_in": [], "fails_in": [], "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件", "seeded_from": ["Lean"]},
+ {"id": "iteration-implying-states-listed", "name": {"en": "a list holding every state at which membership in the start implies G"}, "statement": {"en": "a list holds every state x at which membership in the start implies G: ∀ x, (W₀ x → G) → x ∈ all; in iter_within_length G is that y is in the iterate at the list's length"}, "kind": "hypothesis of a law", "lean": ["Becoming.Iteration.iter_within_length"], "holds_in": [], "fails_in": [], "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件", "seeded_from": ["Lean"]}
+]
+```
+
+**(C) Binder assignment, in the shape `add_rows.py` reads**
+
+```json
+{
+ "family": "H",
+ "laws": {
+  "Becoming.Iteration.iter_iff_all": {
+   "binders": {"mono": ["iteration-monotone-step"], "start": ["iteration-step-takes-start-into-itself"], "within": ["iteration-start-members-listed"]},
+   "takes_unbound": {}
+  },
+  "Becoming.Iteration.iter_largest": {
+   "binders": {"mono": ["iteration-monotone-step"], "start": ["iteration-step-takes-start-into-itself"], "within": ["iteration-start-members-listed"]},
+   "takes_unbound": {}
+  },
+  "Becoming.Iteration.postfixed_in_iter": {
+   "binders": {"mono": ["iteration-monotone-step"], "inside": ["iteration-class-inside-start"], "post": ["iteration-class-preserved-by-step"], "a._@._internal._hyg.0": []},
+   "takes_unbound": {}
+  },
+  "Becoming.Iteration.iter_within_length": {
+   "binders": {"mono": ["iteration-monotone-step"], "start": ["iteration-start-inside-its-step"], "comm": ["iteration-commutes-with-implication"], "within": ["iteration-implying-states-listed"], "a._@._internal._hyg.0": []},
+   "takes_unbound": {}
+  }
+ }
+}
+```
+
+Hygienic binders in existing rows (counted in `six/mapping.json`): 159 in all. 156 carry a premise (for example `Reach P y s` → `reach`, `P.step x b z` → `branching-step`). 3 carry none: `gone_from` and `ways_alike`, the rows of 16 November, which the six README describes as antecedents of the conclusions' own quantifiers. The two here (`K y` at position 10 of `postfixed_in_iter`; `iter Ψ W₀ n y` at position 11 of `iter_within_length`) are each the antecedent of the conclusion's own implication, so I followed the 16 November rows and gave none. The older majority reading would give each a premise, costing two more ledger ids. A checker should rule on this.
+
+**(D) Source of each sentence**
+
+Paths: PI = `…/lean/becoming/Becoming/PredicateIteration.lean`, RI = `RisingIteration.lean`, same folder.
+
+Mechanism:
+1. "A step on classes… applied to the iterate at n": OPENED PI:77-79.
+2. "The step is monotone where…": OPENED PI:83-84.
+3. "each iterate lies inside the one before and inside the start": OPENED PI:103 (`iter_pred`), PI:108 (`iter_within`).
+4. `iter_iff_all`: OPENED PI:153-154. `iter_largest`: OPENED PI:161-164.
+5. "With no list…": OPENED PI:146-147; record law 1, last sentence.
+6. "each iterate lies inside the next": OPENED PI:225 (`iter_succ`).
+7. "Let G be…", the commuting clause, the list premise and conclusion: OPENED PI:209-210, PI:255-256.
+8. One-state sentence: OPENED RI:28-30.
+9. `held_iff_iter`: statement and proof OPENED `CommonResponse.lean:175-180`, `regionStep` :167; lister uses `iter_largest`. That «承» («逆» («所闭» R)) Q s means "Q holds throughout the closure" is TOLD (docstring :173-174).
+10. `viable_persists`: OPENED `GuardHorizon.lean:166-170`; lister uses `iter_persists`. `Viable` read from the docstring (TOLD).
+11. `keepable_iff_count`: OPENED `KeepableStep.lean:84-90`, `keepStep` :76; lister uses `iter_largest` and `Onward.KeepsMoving.run`. `Keepable` and `courseStep` TOLD (docstrings).
+12. `coded_kept_iff_closed`: OPENED `Keeping.lean:380-386`; binder types from the lister; lister uses `iter_postfixed`. "Closed family" is the docstring's and record law 6's wording (TOLD).
+13. `reach_within_pred_length`: OPENED `CommonResponse.lean:214-217`; lister uses `iter_within_pred_length` (PI:264-267). `reaches` TOLD (docstring).
+14. Neighbour sentence: OPENED `Recurrence.lean:166-167` (`revisits_from`); "no run or process" from reading PI and RI whole. Family F is from the neighbour's entry.
+
+Open:
+1. Record `does_not_show[1]`, verbatim.
+2. Second half is record `does_not_show[3]`, first clause. "The two ways of going on" is TOLD by this brief, not the record's phrase.
+3. Record `does_not_show[2]`, verbatim after "Not shown:".
+4. Record `does_not_show[4]`, verbatim.
+5. Record `correspondence`, second sentence.
+6. OPENED PI:153-154 and PI:103; the warning itself is R7 of the frozen file (TOLD).
+7. OPENED PI:77-79; record laws 5, 6, 8 for the case wordings.
+8. My own argument from the statements opened (PI:134-166); second sentence is PI:146-147.
+
+`forbids` and `beyond` are null: a forbids would be `iter_iff_all` negated, the mechanism again.
+
+**(E) Family, and dynamic or lemma**
+
+Family H (kept regions, renewal, generation). The law's own conclusion is the largest class inside a start that a step preserves, and four of the five cases named are keepings: throughout a closure, by a choice, along some run, through a reading. `never-leaving-a-guard`, whose kernel is the law's case through `held_iff_iter`, is H. Against H: R6 calls this "the kind `recurrence-without-premise` already is", and that one is F; but F is cycles and alternation, and nothing here cycles. The rising half (reaching bounded at n) would sit nearer G or A; it is the smaller part.
+
+A dynamic: a step is applied to a class repeatedly and the statements say what stays in it, where it stops shrinking, and that what is left is the largest class the step preserves. That is a kept region stated once, and the atlas already carries a general law of what a list forces with no forbids, exit or transition.
+
+A lemma about lists: beyond "a preserved class inside the start lies in every iterate", the content is a count (`extend_at_places` removes one listed place per step, PI:114-130). The index is a number of applications, not a time. No run, course, process or quantity is in either module. The neighbour at least concludes something of a sequence of states; this concludes membership in a family of classes. The goings-on are in the cases, and one of them already has an entry.
+
+My judgment: it answers R6's question (a step applied to a class and what stays in it) only if the iterate's number is not read as time. On that reading it is a general law the cases share, and I would not object to a reader who rules it a lemma and enters only case rows.
+
+**(F) Rules I could not fully meet**
+
+- Rule 6: the mechanism states more laws than have premise rows (`iter_pred`, `iter_within`, `iter_succ`, `singleton_rise_needs_em`, and the five case theorems have none). I kept to four rows; a row for `singleton_rise_needs_em` would need one more new premise for its binder `shortens`.
+- Rule 4: "the two ways of going on" is not in the record; I joined it to the record's "one way of selecting is placed against another" without knowing they are the same thing. Record `does_not_show[5]` (the losing step) is left out because the entry lists no losing-step declaration.
+- Rule 5: whether another dynamic would list `keepable_iff_count` or `coded_kept_iff_closed` is the blind R3 reader's call. `never-leaving-a-guard` lists 13 `Becoming.Viability.*` names and `a-reading-kept-by-its-update` one; if either takes them, drop them here.
+- Rule 7: no chapter anchor exists; the four record-page anchors used were checked by grep (lines 10, 42, 47, 72).
+- Length caps: the validator's dynamic and premise checks (lines 811-1108) have none; I did not look for caps elsewhere.
+
+**(G) Not read**
+
+- The definitions of `Viable`, `Keepable`, `KeptFor`, `InClosedFamily`, `courseStep`, `readingStep`, `reachStep`, `reaches`, «承», «逆», «所闭»; and `Onward.KeepsMoving.run`.
+- The proofs of `iter_iff_viable`, `reach_commutes`, `lost_shortens`' helpers, the `Lasting`, `Parting` and `Attraction` cases beyond their statements, and the likeness chain.
+- The record page beyond its anchors, the direction page, `RETURN-attack.md`, the atlas family pages, `TERRAIN.md`, `PREMISES.md`, `cards.json`, `regions.json`, `six/BRIEF.md`, `lister.py`.
+- `atlas.py` outside lines 115-185 and 770-1180, so `Repository.declared` and `unanchored` were not opened.
+- The Chinese of the record was not checked against the English.
+
+Nothing was built, run or written.

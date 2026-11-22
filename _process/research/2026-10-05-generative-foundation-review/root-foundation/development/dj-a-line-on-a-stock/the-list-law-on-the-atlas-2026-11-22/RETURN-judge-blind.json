@@ -1,0 +1,131 @@
+{
+ "placements": [
+  {
+   "theorem": "Becoming.Viability.kernel_iff_iter",
+   "statement": "Viability.lean:80 theorem kernel_iff_iter {all : List S} (within : ∀ x, guard x → x ∈ all) {s : S} : Kernel P guard s ↔ iter (regionStep (Steps P) guard) guard all.length s",
+   "dynamic": "never-leaving-a-guard",
+   "belongs": true,
+   "reason": "Its subject is Viability.Kernel (no course leaves the guard), the defining notion of never-leaving-a-guard, which lists Becoming.Viability.Kernel and kernel_iff_certificate. It characterises the kernel, here by a counted iteration."
+  },
+  {
+   "theorem": "Becoming.Viability.kernel_iff_iter_pred_length",
+   "statement": "Viability.lean:86 theorem kernel_iff_iter_pred_length {all : List S} (every : ∀ x, x ∈ all) {n : Nat} (len : all.length = n + 1) {s : S} : Kernel P guard s ↔ iter (regionStep (Steps P) guard) guard n s",
+   "dynamic": "never-leaving-a-guard",
+   "belongs": true,
+   "reason": "Same notion as kernel_iff_iter: a characterisation of the invariance kernel, at one step fewer than the list length."
+  },
+  {
+   "theorem": "Becoming.Lasting.kernel_iff_lasts_length",
+   "statement": "Lasting.lean:259 theorem kernel_iff_lasts_length {all : List S} (within : ∀ x, guard x → x ∈ all) {s : S} : Kernel (disturbed f adm) guard s ↔ Lasts f adm guard all.length s",
+   "dynamic": "never-leaving-a-guard",
+   "belongs": true,
+   "reason": "It relates Kernel to Lasts. Both are notions of never-leaving-a-guard, which lists Lasting.kernel_iff_lasts (Kernel ↔ ∀ n, Lasts n) and lasts_iff_ladder. This is the counted form of a law already on that list."
+  },
+  {
+   "theorem": "Becoming.Lasting.iter_region_iff_lasts",
+   "statement": "Lasting.lean:251 theorem iter_region_iff_lasts : ∀ n s, iter (regionStep (Steps (disturbed f adm)) guard) guard n s ↔ Lasts f adm guard n s",
+   "dynamic": "never-leaving-a-guard",
+   "belongs": true,
+   "reason": "It characterises Lasts (within the guard for n more steps under every admissible disturbance). The mechanism of never-leaving-a-guard names Lasts ('a start lasts n steps exactly when some ladder holds it'), and the dynamic lists lasts_iff_ladder. iter and regionStep are general tools, not the subject here."
+  },
+  {
+   "theorem": "Becoming.Law.returns_iff_reachable_count",
+   "statement": "Attraction.lean:378 theorem returns_iff_reachable_count : Returns next s ↔ Reachable next all.length s",
+   "dynamic": "recurrence-without-premise",
+   "belongs": true,
+   "reason": "Its subject is Law.Returns (return under a determined law). recurrence-without-premise lists Becoming.Law.Returns and Law.returns_iff_keeps. Branching.Returns is the neighbour notion on returning-where-the-course-branches. Here it is the Law form, characterised by being reachable at the list count."
+  },
+  {
+   "theorem": "Becoming.Law.drawn_iff_not_reachable_count",
+   "statement": "Attraction.lean:384 theorem drawn_iff_not_reachable_count : Drawn next s ↔ ¬ Reachable next all.length s",
+   "dynamic": "attraction-is-not-returning",
+   "belongs": true,
+   "reason": "It characterises Law.Drawn, which attraction-is-not-returning defines and lists (Law.Drawn, drawn_iff_not_returns)."
+  },
+  {
+   "theorem": "Becoming.Branching.reachable_iff_all",
+   "statement": "Attraction.lean:147 theorem reachable_iff_all : Reachable P all.length s ↔ ∀ n, Reachable P n s",
+   "dynamic": "NONE",
+   "belongs": false,
+   "reason": "Its subject is Branching.Reachable (Recurrence.lean:118, 'can be had n steps on'). No dynamic has this as its own notion: no atlas entry lists Reachable itself. It is a shared neighbour notion, used in Branching.reachable_invariant (necessarily-drawn-is-not-returning), Branching.Returns.reachable (returning-where-the-course-branches) and Law.reachable_absorbing (attraction-is-not-returning). Keeping every possibility (KeepsPossibilities, recurrence-without-premise) is ∀ n s, not this pointwise statement."
+  },
+  {
+   "theorem": "Becoming.Branching.iter_iff_reachable",
+   "statement": "Attraction.lean:128 theorem iter_iff_reachable : ∀ n s, iter (predStep P) (fun _ => True) n s ↔ Reachable P n s",
+   "dynamic": "NONE",
+   "belongs": false,
+   "reason": "Like reachable_iff_all, it is about Branching.Reachable, which no dynamic owns. It only recasts Reachable as an iteration of the predecessor step."
+  },
+  {
+   "theorem": "Becoming.Reaching.possible_iff_within_of_pred_le",
+   "statement": "ReachableRanges.lean:550 theorem possible_iff_within_of_pred_le {X : Type} {adm : S → X → Prop} {y : S} {x : X} {k : Nat} (enough : all.length.pred ≤ k) : Possible P adm y x ↔ PossibleWithin P adm k y x",
+   "dynamic": "where-the-possible-grows",
+   "belongs": true,
+   "reason": "It characterises Reaching.Possible (what some reachable configuration admits), the possible that where-the-possible-grows is about. That dynamic lists statements of Reaching.Possible itself, for example Run.possible_of_stretch and possible_of_next, not only of its widening."
+  },
+  {
+   "theorem": "Becoming.Reaching.trace_within_pred_length",
+   "statement": "ReachableRanges.lean:533 theorem trace_within_pred_length {n : Nat} (len : all.length = n + 1) {s y : S} (reach : Reach P y s) : ∃ as, as.length ≤ n ∧ Trace P y as s",
+   "dynamic": "NONE",
+   "belongs": false,
+   "reason": "It is about Reach and Trace, the frame notions of Frame.lean: a reach is witnessed by a short trace. No dynamic lists Reach or Trace as its own notion. It is a neighbour that where-the-possible-grows and others read through, not a statement of the possible or its growth."
+  },
+  {
+   "theorem": "Becoming.Reaching.guarded_not_keepsWidening",
+   "statement": "ReachableRanges.lean:767 theorem Reaching.guarded_not_keepsWidening {all : List S} (within : ∀ x, guard x → x ∈ all) (k : Nat) (r : Run P) : ¬ Reaching.KeepsWidening (fun n => Reaching.PossibleWithin P (fun t x => x = t ∧ guard t) k (r.state n))",
+   "dynamic": "where-the-possible-grows",
+   "belongs": true,
+   "reason": "It says the possible along a run does not keep widening (Reaching.KeepsWidening of the possible within k), which is the notion of where-the-possible-grows. That dynamic lists Run.not_keepsWidening_of_within, of the same shape. what-keeping-widening-needs is about Web/Flow KeepsWidening of the levels, a different notion."
+  },
+  {
+   "theorem": "Becoming.closure_iff_reach_within",
+   "statement": "CommonResponse.lean:227 theorem closure_iff_reach_within (every : ∀ x, x ∈ all) {n : Nat} (len : all.length = n + 1) {y : S} : (∃ t, «所闭» R y t ∧ W₀ t) ↔ reaches n y  [reaches := iter (reachStep R W₀) W₀]",
+   "dynamic": "NONE",
+   "belongs": false,
+   "reason": "It says the closure of a relation from y meets a target, a reachability-of-target notion. a-reading-kept-by-its-update owns a region held throughout the closure («所闭之承最大»), and not-going-out-of-a-region owns not going out («所闭不出»). Meeting a target through the closure is neither of those; the closure «所闭» is only a neighbour notion they both use."
+  },
+  {
+   "theorem": "Becoming.held_iff_iter",
+   "statement": "CommonResponse.lean:175 theorem held_iff_iter {all : List S} (within : ∀ x, Q x → x ∈ all) {s : S} : «承» («逆» («所闭» R)) Q s ↔ iter (regionStep R Q) Q all.length s",
+   "dynamic": "a-reading-kept-by-its-update",
+   "belongs": true,
+   "reason": "Q holding throughout the closure of R from s is the notion a-reading-kept-by-its-update roots ('the occurrences at which a region holds throughout their closure form the largest closed region inside it'). That dynamic lists «所闭之承最大» and Viability.kernel_iff_held. This statement characterises that same held-throughout-closure notion."
+  },
+  {
+   "theorem": "Becoming.Parting.continues_persists",
+   "statement": "Parting.lean:426 theorem continues_persists {all : List S} (every : ∀ x, x ∈ all) {y : S} (continues : Lasting.Continues P all.length y) : ∃ a z, P.step y a z ∧ Lasting.Continues P all.length z",
+   "dynamic": "when-the-runs-of-a-process-settle",
+   "belongs": true,
+   "reason": "It is about Lasting.Continues at the list length (a course as long as the list), which when-the-runs-of-a-process-settle takes as its mark of a run starting: 'a run starts exactly where a course as long as the list starts', listed as Onward.run_iff_continues. It states the persistence of that mark. recurrence-without-premise lists Parting.free_unbounded, a different notion. A plausible placement rather than a certain one."
+  },
+  {
+   "theorem": "Becoming.GuardHorizon.viable_iff_closed",
+   "statement": "GuardHorizon.lean:187 theorem viable_iff_closed (within : ∀ x, guard x → x ∈ all) : Viable P guard all.length s ↔ ∃ K, Closed P guard K ∧ K s",
+   "dynamic": "NONE",
+   "belongs": false,
+   "reason": "GuardHorizon.Viable (GuardHorizon.lean:88) means the guard can be kept for n steps by some enabled move each time; its Closed asks for an enabled move. No dynamic lists GuardHorizon declarations, and Becoming.Viable.viable (reserve-defers-ending) is unrelated. The nearest neighbour is never-leaving-a-guard, whose Kernel and Certificate are about every course, not a chosen move."
+  },
+  {
+   "theorem": "Becoming.Viability.coded_kept_iff_closed",
+   "statement": "Keeping.lean:380 theorem coded_kept_iff_closed {c : C} : KeptFor P sense guard allowed all.length (decode c) ↔ InClosedFamily P sense guard allowed (decode c)",
+   "dynamic": "NONE",
+   "belongs": false,
+   "reason": "KeptFor and InClosedFamily (keeping a guard for n steps through what the steps let one sense) are listed on no dynamic: no atlas entry names KeptFor, keptFor_*, Plan.Keeps or InClosedFamily. Neighbours are never-leaving-a-guard (keeping under every course) and a-reading-kept-by-its-update (a policy keeping a task through a reading), but neither owns this notion."
+  },
+  {
+   "theorem": "Becoming.Viability.keepable_iff_count",
+   "statement": "KeepableStep.lean:81 theorem keepable_iff_count {all : List S} (every : ∀ x, x ∈ all) {s : S} : Keepable P g s ↔ iter (keepStep P g) g all.length s",
+   "dynamic": "never-leaving-a-guard",
+   "belongs": true,
+   "reason": "Viability.Keepable (JointKeeping.lean:91, some run stays within the guard) appears in never-leaving-a-guard's own section on conditions kept together ('along some run each can be kept and not both'). That dynamic lists Viability.ChoicePoint.each_not_joint, which is stated in Keepable. This theorem characterises Keepable. The placement is marginal: Keepable enters that dynamic through the ChoicePoint witness rather than as its central notion, the Kernel."
+  },
+  {
+   "theorem": "Becoming.Branching.reach_within_listed",
+   "statement": "Junctures.lean:315 theorem reach_within_listed (every : ∀ x, x ∈ all) {y : S} (reach : Reach P y s) : ∃ as, as.length ≤ all.length ∧ Trace P y as s",
+   "dynamic": "NONE",
+   "belongs": false,
+   "reason": "It is already listed under every-loss-passes-a-juncture, but its statement is about Reach and Trace (a reach has a trace no longer than the list). It says nothing of Juncture, losing steps or keeping s, which are that dynamic's own notions, so it is not of that dynamic's notion. It is the same frame-level fact as Reaching.trace_within_pred_length."
+  }
+ ],
+ "not_read": "No proofs were read, as asked. Read: each statement, and the definitions it names (Kernel, Lasts, Reachable, Possible/PossibleWithin/KeepsWidening, reachStep, Viable/Closed in GuardHorizon, KeptFor/InClosedFamily, Keepable, keepStep, Lasting.Continues). Also read the mechanisms and declaration lists of the candidate dynamics: never-leaving-a-guard, recurrence-without-premise, attraction-is-not-returning, returning-where-the-course-branches, necessarily-drawn-is-not-returning, where-the-possible-grows, every-loss-passes-a-juncture, a-reading-kept-by-its-update, reserve-defers-ending, what-keeping-widening-needs, not-going-out-of-a-region and when-the-runs-of-a-process-settle (some mechanisms only to their first 500-700 characters). The other dynamics were not read beyond grep matches of their declaration names in dynamics.json, and the family pages were not opened."
+}

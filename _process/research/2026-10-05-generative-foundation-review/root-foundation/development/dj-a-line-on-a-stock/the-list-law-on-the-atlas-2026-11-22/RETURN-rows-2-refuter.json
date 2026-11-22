@@ -1,0 +1,114 @@
+{
+ "stands": true,
+ "findings": [
+  {
+   "level": "MUST",
+   "where": "Row 5 (never-leaving-a-guard / Becoming.Lasting.iter_region_iff_lasts), and the writer's F1",
+   "finding": "OPENED Lasting.lean:251, PredicateIteration.lean:88. The writer's F1 is right that iter_iff_stages is not postfixed_in_iter. But that cuts against the row, not against R1. iter_iff_stages is an identification lemma: a family with the same start and successor clauses agrees with the iterates. It is no part of the law of what a list holds, neither its list part nor its no-list part. R1 lets a no-list chain be entered only 'as a case of the part of the law that asks no list', in R1's words. Those words would be false of this proof, and no other wording makes it a case of the law. iter_region_iff_lasts is not listed on 0110d32a6. Listing it to carry this row is what 'What this is not' forbids: 'No declaration is added to a dynamic in order to carry a link'. A row writer cannot loosen R1, which was frozen before the writers ran.",
+   "exact_words": "Not entered: Becoming.Lasting.iter_region_iff_lasts calls only Becoming.Iteration.iter_iff_stages, an identification of iterates with a family by their clauses, which is no part of the law of what a list holds; it is not listed, and listing it here would add a declaration only to carry a link. R1 stands as frozen."
+  },
+  {
+   "level": "MUST",
+   "where": "Rows 1, 2, 3, 6, 8 (every row on a theorem not listed on 0110d32a6)",
+   "finding": "TOLD (the writer's report; no R3 return found in tmp/r7/one-model/check/atlas22/). R3 lets a theorem not yet listed be listed only after a reader who took no part judges it blind: shown the dynamic's entry and the theorem's statement, and not told what it would be a case of. The report gives such a verdict only for row 6 ('The blind reader judged that it belongs', TOLD). For drawn_iff_not_reachable_count, kernel_iff_iter, kernel_iff_iter_pred_length and possible_iff_within_of_pred_le it gives none. The doubt is sharpest for row 8. possible_iff_within_of_pred_le states bounded reach: possible exactly when possible within k. The attacker read that notion under reach_within_listed as a neighbour's. OPENED in support of row 6: the dynamic's own mechanism ('along some run each can be kept') and its ChoicePoint exit speak of keepability.",
+   "exact_words": "Each of rows 1, 2, 3, 6 and 8 is entered only after the R3 reader's blind verdict that its theorem states that dynamic's own notion, filed with the landing; a theorem judged otherwise is filed as found ('the law is in the Lean and the dynamic does not list it') and its row is not entered."
+  },
+  {
+   "level": "LESSER",
+   "where": "Row 2 how (held_iff_iter), phrase 'the kernel read as what holds throughout the converse closure of the steps'",
+   "finding": "OPENED Viability.lean:68. The kernel is «承» («逆» («所闭» (Steps P))) guard s: the guard holds at every configuration the closure of the steps reaches from s. 'The converse closure of the steps' can be read as the closure of the converse relation, which is what reaches s, and that is wrong. The 'largest region closed under the steps' should also say 'inside the guard', as «所闭之承最大» states.",
+   "exact_words": "held_iff_iter with the relation the process's steps (Steps P), the requirement the guard and a list holding every configuration within the guard, the kernel read through kernel_iff_held (under a-reading-kept-by-its-update) as what holds at every configuration the closure of the steps reaches; held_iff_iter calls iter_largest with the step regionStep (Steps P) guard (the guard here and every successor in the class; monotone, region_mono), the start the guard (taken into itself, by the step's first part) and the list, and matches the largest class it gives with the largest region inside the guard closed under the steps («所闭之承最大»). It uses the list, which need hold only the configurations within the guard."
+  },
+  {
+   "level": "LESSER",
+   "where": "Row 8 how (reach_within_of_pred_le)",
+   "finding": "OPENED ReachableRanges.lean:534-548 and CommonResponse.lean:214-232. The how credits closure_iff_reach_within with reading reaching as the closure. That reading is done by reach_iff_withinClosure, which the lister shows in trace_within_pred_length's uses. closure_iff_reach_within then turns the closure meeting the target into iterate n. Also, 'because it holds the start' is ambiguous, since the iteration's start is the target. The list is nonempty because it holds y (length_pos_of_mem (every y)).",
+   "exact_words": "reach_within_of_pred_le with the process's list of every configuration and k at least the list's length less one, the list having n + 1 members because it holds y (length_pos_of_mem); it calls trace_within_pred_length, which reads reaching s as the closure of the steps from y meeting s (reach_iff_withinClosure), that as iterate n of the reach step from the target (closure_iff_reach_within), and the iterates as starts of traces of at most so many moves into the target (iter_reach_iff_trace, by iter_iff_stages); closure_iff_reach_within uses reach_within_pred_length, which calls iter_within_pred_length with the step reachStep (monotone, reach_mono), the start the target (inside its own step), the list of n + 1 members and the step commuting with every proposition (reach_commutes). It uses the list, through the law's form for a start inside its own step: reaching within any number of moves is reaching within n."
+  },
+  {
+   "level": "LESSER",
+   "where": "Rows 1 and 6, against G2 clause (b) ('a call of a declaration ... after an identification')",
+   "finding": "OPENED Attraction.lean:359-368, 384; Recurrence.lean:622; KeepableStep.lean:81; Onward.lean:157, 231. Both theorems meet R1 and R2: the chain to PredicateIteration has no list induction of its own. But neither is only a call after an identification. In row 1, drawn_iff_lost is a finite law of its own. It needs the list through returns_of_reachable and the grammar law «定后于线有限则末返». In row 6, the right-to-left direction is Onward.KeepsMoving.run, a second list argument (run_of_continues, returning_of_continues). The hows say so, which is right. The landing should say it too, so that neither row is called 'a call of the law'. R5 then rests on these facts: rows 2 and 3 are both on H, so two dynamics need row 1 (A) or row 8 (G). If row 8 falls by R3, row 1 carries R5.",
+   "exact_words": "Rows 1 and 6 count by R1; each theorem's proof also uses its list a second time outside the law (row 1 through drawn_iff_lost and returns_of_reachable, row 6 through Onward.KeepsMoving.run), so neither theorem is said to be only a call of the law."
+  },
+  {
+   "level": "LESSER",
+   "where": "Row 4 (Becoming.Lasting.kernel_iff_lasts_length) and the new premise viability-guard-listed",
+   "finding": "OPENED Lasting.lean:259; validator atlas.py:985. F4 is confirmed. With kernel_iff_iter listed under never-leaving-a-guard, its case_of can name nothing: its only uses would be kernel_iff_iter (a declaration of this dynamic) and iter_region_iff_lasts (not a case, see row 5). Listing kernel_iff_lasts_length with no row lies outside what this run tries. The proposed premise's lean list should then not name it.",
+   "exact_words": "Not entered in this run. viability-guard-listed: \"lean\": [\"Becoming.Viability.kernel_iff_iter\"]"
+  },
+  {
+   "level": "LESSER",
+   "where": "Row 8, the R8 count (writer's F5)",
+   "finding": "OPENED kept-at-the-length-of-a-list.json laws (by a string search): reach_within_of_pred_le is absent, and reach_within_pred_length, closure_iff_reach_within, trace_within_pred_length and iter_within_pred_length are present. So row 8's case_of names a law that the new dynamic, drawn from the record, would not list, and by R8's count the row adds no link to another dynamic. where-the-possible-grows already has exits, so its count does not move either way. Only attraction-is-not-returning, which has no link now, would move, through row 1, because the record lists reachable_iff_all.",
+   "exact_words": "Row 8 adds no link by R8's count: its case_of.law, Becoming.Reaching.reach_within_of_pred_le, is not among the record's declarations."
+  }
+ ],
+ "rows": [
+  {
+   "dynamic": "attraction-is-not-returning",
+   "law": "Becoming.Law.drawn_iff_not_reachable_count",
+   "enter": true,
+   "counts_by_R1": true,
+   "reason": "OPENED Attraction.lean:384, 147, 128, 123; PredicateIteration.lean:153; Recurrence.lean:492, 622. Lister uses: drawn_iff_lost and Branching.reachable_iff_all. reachable_iff_all uses iter_iff_reachable, iter_iff_all and pred_mono. The case_of.law is in those uses and is not among the dynamic's 17 declarations. The how matches the proof terms, including Law.Reachable as an abbrev of Branching.Reachable on process next, and it says the list is used again through drawn_iff_lost. Binder every, position 3, has type ∀ (x : S), x ∈ all. law-every reads 'a list holds every configuration of the determined law's type (∀ x, x ∈ all)'. They match. Entry waits on the R3 blind verdict."
+  },
+  {
+   "dynamic": "never-leaving-a-guard",
+   "law": "Becoming.Viability.kernel_iff_iter",
+   "enter": true,
+   "counts_by_R1": true,
+   "reason": "OPENED Viability.lean:68, 80; CommonResponse.lean:153, 167-181; PI:161. Lister uses: kernel_iff_held and held_iff_iter. held_iff_iter uses «所闭之承最大», iter_largest and region_mono. held_iff_iter is not a declaration of the dynamic, and kernel_iff_held is listed under a-reading-kept-by-its-update. Binder within, position 6, has type ∀ (x : S), guard x → x ∈ all. The new premise viability-guard-listed says exactly that, and its anchor #conditions--条件 exists (record .md:42). Mend the 'converse closure' wording. Entry waits on R3."
+  },
+  {
+   "dynamic": "never-leaving-a-guard",
+   "law": "Becoming.Viability.kernel_iff_iter_pred_length",
+   "enter": true,
+   "counts_by_R1": true,
+   "reason": "OPENED Viability.lean:86; CommonResponse.lean:184-195; PI:103, 178. Lister uses: kernel_iff_held and held_iff_iter_pred_length. held_iff_iter_pred_length uses held_iff_iter, iter_pred, region_mono, iter_persists_from_all and region_first. The how is right: up to n + 1 through held_iff_iter, down by iter_pred, up by iter_persists_from_all. Binder every, position 6, has type ∀ (x : S), x ∈ all, which matches branching-every ('a list holds every configuration of the process's type'). Binder len, position 8, has type all.length = n + 1, which matches the new premise. No premise for it exists in the ledger. Entry waits on R3."
+  },
+  {
+   "dynamic": "never-leaving-a-guard",
+   "law": "Becoming.Lasting.kernel_iff_lasts_length",
+   "enter": false,
+   "counts_by_R1": false,
+   "reason": "OPENED Lasting.lean:259. Lister uses: kernel_iff_iter and iter_region_iff_lasts. With row 2 entered, kernel_iff_iter is a declaration of this dynamic, so atlas.py:985 refuses it as a case_of. iter_region_iff_lasts is no case of the law (row 5). R2 allows no deeper name. The theorem carries no row, so it is not listed in this run."
+  },
+  {
+   "dynamic": "never-leaving-a-guard",
+   "law": "Becoming.Lasting.iter_region_iff_lasts",
+   "enter": false,
+   "counts_by_R1": false,
+   "reason": "OPENED Lasting.lean:251, PI:88. Its only law is iter_iff_stages, an identification by clauses that is no part of the law. R1's no-list words would be false of it. It is unlisted, and listing it to carry a link is excluded."
+  },
+  {
+   "dynamic": "never-leaving-a-guard",
+   "law": "Becoming.Viability.keepable_iff_count",
+   "enter": true,
+   "counts_by_R1": true,
+   "reason": "OPENED KeepableStep.lean:55-89; JointKeeping.lean:91-96; Parting.lean:409; Onward.lean:157, 231. Lister uses: iter_largest, keep_mono, Keepable.start, keepable_step_iff and KeepsMoving.run. The how is exact on both directions, and it says the right-to-left direction is not the law. Binder every, position 6, takes branching-every. R3: TOLD, a blind verdict of 'belongs'. OPENED in support: the dynamic's mechanism and its ChoicePoint exit speak of keepability along some run."
+  },
+  {
+   "dynamic": "thresholds-of-waiting",
+   "law": "Becoming.Tolerance.kept_set",
+   "enter": true,
+   "counts_by_R1": false,
+   "reason": "OPENED Tolerance.lean:200, 238, 377; PI:146. Already listed, its premise row taking three premises for binders start, inside and a. Lister uses: iter_eq_orbit, postfixed_in_iter, monotone_iff_keepsInclusion and tolerating_keeps. postfixed_in_iter is not a declaration of the dynamic. The how uses R1's no-list words and says no list is used. The row is on the dynamic's own notion, so R4 does not apply. The dynamic already links to restoring-giving-from-the-worst-start, so R8's number does not move."
+  },
+  {
+   "dynamic": "where-the-possible-grows",
+   "law": "Becoming.Reaching.possible_iff_within_of_pred_le",
+   "enter": true,
+   "counts_by_R1": true,
+   "reason": "OPENED ReachableRanges.lean:500-552; CommonResponse.lean:204-232; PI:264. Lister uses: reach_within_of_pred_le and PossibleWithin.possible. reach_within_of_pred_le has no lister row; I opened it, and it calls trace_within_pred_length with no list induction. The chain reaches iter_within_pred_length, in the form for a start inside its own step. Binder every, position 5, takes branching-every. Binder enough, position 11, has type all.length.pred ≤ k, which matches the new premise. Mend the how's attribution to reach_iff_withinClosure. Entry waits on R3, where the bounded-reach notion is in doubt. It adds no R8 link."
+  },
+  {
+   "dynamic": "where-the-possible-grows",
+   "law": "Becoming.Reaching.guarded_not_keepsWidening",
+   "enter": false,
+   "counts_by_R1": false,
+   "reason": "OPENED ReachableRanges.lean:742-770. Its only use is not_keepsWidening_of_listed, which goes to not_keepsWidening_of_listed_along and listed_along_of_listed. It reaches no declaration of PredicateIteration. The record's law 14 (record .md:39) lists it, but no case row can be entered."
+  }
+ ],
+ "going_on_or_count": "This is a reading of rows, not of the dynamic, so I give no R6 answer. The count by R8: of the rows that can stand, only row 1 moves the number of dynamics with no link. attraction-is-not-returning would link to the new dynamic, because the record lists Branching.reachable_iff_all. never-leaving-a-guard, thresholds-of-waiting and where-the-possible-grows already have links. Row 8 names a law the record does not list.",
+ "not_read": "Not opened: returning_of_continues, run_of_returning, «定后于线有限则末返», reach_iff_withinClosure, length_pos_of_mem, KeepsWidening.not_listed, monotone_iff_keepsInclusion, tolerating_keeps, AllBut, or whether Law.run's state is definitionally the orbit (the proof checks, so I took it as given). I did not read RETURN-attack.md, FROZEN.as-frozen-1114.md, add_rows.py, the mapping rows or the assignment format, or atlas.py outside lines 186-194 and 960-990. I did not check the family letters, or whether premise lean lists and home anchors are validated. I did not check that the working-tree Lean equals the lister's build or main 0110d32a6. The record's laws were read by a string search of its JSON and a few lines of its .md, not in full. I made no R3 blind judgment myself: I had already seen what each theorem would be a case of."
+}

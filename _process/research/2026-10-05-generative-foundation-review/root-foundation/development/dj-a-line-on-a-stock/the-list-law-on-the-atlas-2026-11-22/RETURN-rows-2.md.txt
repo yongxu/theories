@@ -1,0 +1,275 @@
+Row writer 2 report: the nine pairs (attraction-is-not-returning, never-leaving-a-guard, thresholds-of-waiting, where-the-possible-grows)
+
+All Lean was opened in the package tree on the working checkout, `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/` (written `B/` below). I did not check that this tree is byte for byte the one the lister ran against.
+
+**Findings before the rows.** Each one says more than "agree".
+
+- **F1. OPENED, against R1's set wording.** The no-list part of the law does not fit `iter_region_iff_lasts`. R1 asks a no-list row to say "a class inside the start that the step preserves lies in every iterate". That sentence is `postfixed_in_iter` (B/PredicateIteration.lean:146). `iter_region_iff_lasts` calls only `iter_iff_stages` (:88): "for a monotone step, any family with the same start and successor clauses agrees with the iterates at every level". That theorem has no class inside the start and no preserving. Using R1's words on that row would say more than the proof term. The `how` below says what `iter_iff_stages` says, so R1's wording should allow this case.
+- **F2. OPENED.** `possible_iff_within_of_pred_le` reaches the law through a different section of PredicateIteration. Its list-taking end is `iter_within_pred_length` (:264), in section Implications. There the start lies inside its own step (`start : ∀ y, W₀ y → Ψ W₀ y`), the reverse of the base law's start taken into itself. The falling law (`iter_persists_from_all`, `postfixed_in_iter`) is applied to the implication step `givesStep Ψ (I n y)`, not to `reachStep`. A `how` that calls this "the largest class inside the start" would be false.
+- **F3. OPENED.** Two of the theorems use their list a second time, outside the law.
+  - `drawn_iff_not_reachable_count` uses the list through the law via `reachable_iff_all`. It uses it again through `drawn_iff_lost` → `returns_iff_always_reachable` (B/Attraction.lean:359) → `returns_of_reachable` (B/Recurrence.lean:622).
+  - `keepable_iff_count` gets its right-to-left direction from `Onward.KeepsMoving.run` (B/Onward.lean:231) → `run_of_continues` (:157). This is a second list argument, not the law.
+  - Neither of these is a link of the chain down to PredicateIteration, so R2's "no induction on a list of its own" holds for the chain. But neither theorem is only a call of the law, and the `how` texts say so.
+- **F4. From the validator, atlas.py:985.** `kernel_iff_lasts_length` can carry no `case_of` if `kernel_iff_iter` is also listed. The lister shows its only uses as `Viability.kernel_iff_iter` and `Lasting.iter_region_iff_lasts`. Both are proposed for the same dynamic in this run. The validator refuses a `case_of.law` that is a declaration of the same dynamic, and R2 allows only a declaration from the proof term. So that row takes no `case_of`. Its link is carried by `kernel_iff_iter`'s row.
+- **F5. From the store and the record.** Most `case_of.law` names are intermediate theorems that no dynamic lists: `held_iff_iter`, `held_iff_iter_pred_length`, `Branching.reachable_iff_all`, `Reaching.reach_within_of_pred_le`. The validator accepts that. But by R8's count a row links to another dynamic only if that dynamic lists the named law. The record `kept-at-the-length-of-a-list` lists the first three (laws 3 and 13). It does not list `reach_within_of_pred_le`: its law 8 lists `trace_within_pred_length` and the others, not this one. So the where-the-possible-grows row names a law that the new dynamic, drawn from the record, would not list. R8's "at most two fewer" then depends on that choice.
+- **F6. TOLD (record), against OPENED.** The record overstates the widening theorem. Record law 14 lists `Reaching.guarded_not_keepsWidening` among the law's declarations, and its lead line calls these "cases". The proof (ReachableRanges.lean:766, inside `section Widening` starting at :762) calls only `Reaching.not_keepsWidening_of_listed` (:757) → `not_keepsWidening_of_listed_along` (:742) → `KeepsWidening.not_listed`. It reaches no declaration of PredicateIteration.
+
+---
+
+## 1. attraction-is-not-returning / Becoming.Law.drawn_iff_not_reachable_count
+
+**Links (OPENED):**
+- `drawn_iff_not_reachable_count`, B/Attraction.lean:384. `(drawn_iff_lost every).trans …(Branching.reachable_iff_all every)…`. Lister uses: drawn_iff_lost, Branching.reachable_iff_all. Matches.
+- `Branching.reachable_iff_all`, :147. Calls `iter_iff_all pred_mono (fun _ _ => trivial) (fun x _ => every x)`, read through `iter_iff_reachable`. Lister uses: iter_iff_reachable, Iteration.iter_iff_all, pred_mono. Matches.
+- `Branching.iter_iff_reachable`, :128. `iter_iff_stages pred_mono …`. Lister: iter_iff_stages, pred_mono, ListTests.length_append. Matches.
+- `pred_mono`, :123. `predStep`, :120.
+- `Iteration.iter_iff_all`, PredicateIteration.lean:153. Takes the list (`within`).
+- Off the chain: `drawn_iff_lost` :366 → `returns_iff_always_reachable` :359 → `returns_of_reachable` (Recurrence.lean:622, not opened). See F3.
+- No link has a list induction of its own.
+
+**(2) R1:** the chain reaches `Becoming.Iteration.iter_iff_all`, which takes the list.
+
+**(3) Case row:**
+```json
+{"law": "Becoming.Branching.reachable_iff_all", "how": {"en": "reachable_iff_all with the process the determined law's (Law.Reachable next is Branching.Reachable of process next) and its list every; reachable_iff_all reads the endpoints of traces of length n as iterate n of predStep from the class of everything (iter_iff_reachable, by iter_iff_stages) and calls iter_iff_all with the step predStep (monotone, pred_mono), the start everything (taken into itself trivially) and the list, so reachable at the list's length is reachable at every length; it uses the list. Drawn is read as not reachable at every length through drawn_iff_lost, whose proof uses the same list again through returns_iff_always_reachable, not through the law."}}
+```
+
+**(4) Premises row** (not yet listed: `declarations` checked, absent):
+```json
+{"law": "Becoming.Law.drawn_iff_not_reachable_count", "takes": ["law-every"], "case_of": [ <the row above> ]}
+```
+- The binder `every`, position 3, has type `∀ (x : S), x ∈ all`. The existing premise `law-every` says "a list holds every configuration of the determined law's type (∀ x, x ∈ all)". It matches, since `next : S → S`.
+- Add the theorem to `law-every.lean`.
+- Assignment, family A: `{"family":"A","laws":{"Becoming.Law.drawn_iff_not_reachable_count":{"binders":{"every":["law-every"]},"takes_unbound":{}}}}`
+
+**(5)** It counts toward G2 by R1. R4 does not apply, because the theorem is not yet listed.
+
+---
+
+## 2. never-leaving-a-guard / Becoming.Viability.kernel_iff_iter
+
+**Links (OPENED):**
+- `kernel_iff_iter`, B/Viability.lean:80. `kernel_iff_held.trans (held_iff_iter (Steps P) guard within)`. Lister: kernel_iff_held, held_iff_iter. Matches.
+- `kernel_iff_held`, :68. Identification by `reach_iff_withinClosure`. It is listed under a-reading-kept-by-its-update.
+- `held_iff_iter`, B/CommonResponse.lean:175. Matches `«所闭之承最大»` (:153) against `iter_largest (region_mono R Q) (fun _ h => h.1) within`. Lister: 所闭之承最大, iter_largest, region_mono. Matches.
+- `regionStep` :167, `region_mono` :170.
+- `iter_largest`, PredicateIteration.lean:161. Takes the list.
+- No list induction of its own.
+
+**(2)** The chain reaches `iter_largest`.
+
+**(3) Case row:**
+```json
+{"law": "Becoming.held_iff_iter", "how": {"en": "held_iff_iter with the relation the process's steps (Steps P), the requirement the guard and the list one holding every configuration within the guard, the kernel read as what holds throughout the converse closure of the steps through kernel_iff_held (under a-reading-kept-by-its-update); held_iff_iter calls iter_largest with the step regionStep (Steps P) guard (the guard here and every successor in the class; monotone, region_mono), the start the guard (taken into itself, its first part) and the list, and matches the largest class it gives with the largest region closed under the steps («所闭之承最大»). It uses the list, which need hold only the configurations within the guard."}}
+```
+
+**(4)** The binder `within`, position 6, has type `∀ (x : S), guard x → x ∈ all`. No existing premise says this. New premise:
+```json
+{"id": "viability-guard-listed", "name": {"en": "the configurations within the guard, listed"}, "statement": {"en": "a list holds every configuration within the guard (∀ x, guard x → x ∈ all)"}, "kind": "hypothesis of a law", "lean": ["Becoming.Viability.kernel_iff_iter", "Becoming.Lasting.kernel_iff_lasts_length"], "holds_in": [], "fails_in": [], "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件", "seeded_from": ["Lean"]}
+```
+The anchor exists at line 42 of the record's .md.
+
+Premises row:
+```json
+{"law": "Becoming.Viability.kernel_iff_iter", "takes": ["viability-guard-listed"], "case_of": [ <the row above> ]}
+```
+Assignment, family H: `"Becoming.Viability.kernel_iff_iter":{"binders":{"within":["viability-guard-listed"]},"takes_unbound":{}}`
+
+**(5)** It counts. R4 does not apply.
+
+---
+
+## 3. never-leaving-a-guard / Becoming.Viability.kernel_iff_iter_pred_length
+
+**Links (OPENED):**
+- `kernel_iff_iter_pred_length`, Viability.lean:86. `kernel_iff_held.trans (held_iff_iter_pred_length (Steps P) guard every len)`. Lister matches.
+- `held_iff_iter_pred_length`, CommonResponse.lean:189. `(len ▸ held_iff_iter …)` gives iterate n + 1. Then `iter_pred` (PI:103) gives n + 1 → n, and `iter_persists_from_all (region_mono R Q) every (region_first R Q) len` (PI:178) gives n → n + 1. `region_first`, :184, reads the guard as the region step from everything. Lister uses: held_iff_iter, iter_pred, region_mono, iter_persists_from_all, region_first. Matches.
+- `held_iff_iter` → `iter_largest`, as in pair 2.
+- No list induction of its own.
+
+**(2)** The chain reaches `iter_largest` (via held_iff_iter) and `iter_persists_from_all`.
+
+**(3) Case row:**
+```json
+{"law": "Becoming.held_iff_iter_pred_length", "how": {"en": "held_iff_iter_pred_length with the relation the process's steps, the requirement the guard and a list of n + 1 members holding every configuration, the kernel read through kernel_iff_held (under a-reading-kept-by-its-update); held_iff_iter_pred_length takes held_iff_iter (iter_largest, region step from the guard) at the list's length n + 1, comes down to iterate n by iter_pred, and back up by iter_persists_from_all, the guard being the region step from everything (region_first). It uses the list; the kernel is iterate n, one sooner than the list's length."}}
+```
+
+**(4)** Binders, quoted from the lister:
+- `every`, position 6, `∀ (x : S), x ∈ all`. Existing `branching-every`: "a list holds every configuration of the process's type (∀ x, x ∈ all)". Matches, since P : Process S A.
+- `len`, position 8, `all.length = n + 1`. No existing premise says this. New premise:
+```json
+{"id": "viability-list-length-succ", "name": {"en": "a list of n + 1 members"}, "statement": {"en": "the list has n + 1 members (all.length = n + 1)"}, "kind": "hypothesis of a law", "lean": ["Becoming.Viability.kernel_iff_iter_pred_length"], "holds_in": [], "fails_in": [], "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件", "seeded_from": ["Lean"]}
+```
+
+Premises row:
+```json
+{"law": "Becoming.Viability.kernel_iff_iter_pred_length", "takes": ["branching-every", "viability-list-length-succ"], "case_of": [ <the row above> ]}
+```
+Assignment, H: `{"binders":{"every":["branching-every"],"len":["viability-list-length-succ"]},"takes_unbound":{}}`
+
+**(5)** It counts. R4 does not apply.
+
+---
+
+## 4. never-leaving-a-guard / Becoming.Lasting.kernel_iff_lasts_length
+
+**Links (OPENED):**
+- B/Lasting.lean:259. `(kernel_iff_iter within).trans (iter_region_iff_lasts _ s)`. Lister uses: Viability.kernel_iff_iter, Lasting.iter_region_iff_lasts. Matches.
+- Then pair 2's chain down to `iter_largest`.
+
+**(2)** It reaches `iter_largest` through `kernel_iff_iter`.
+
+**(3)** Nothing can be entered as `case_of` if pair 2 is also entered (F4): both declarations in its proof term would then be of this dynamic. Only if `kernel_iff_iter` were left unlisted could the row be:
+```json
+{"law": "Becoming.Viability.kernel_iff_iter", "how": {"en": "kernel_iff_iter with the process the disturbed law (disturbed f adm) and its list of every configuration within the guard, the iterate at the list's length read as lasting for that many steps under every admissible disturbance through iter_region_iff_lasts (iter_iff_stages, no list); kernel_iff_iter calls iter_largest through held_iff_iter; it uses the list."}}
+```
+
+**(4)** Premises row, without `case_of` if pair 2 stands:
+```json
+{"law": "Becoming.Lasting.kernel_iff_lasts_length", "takes": ["viability-guard-listed"]}
+```
+- The binder `within`, position 7, has type `∀ (x : S), guard x → x ∈ all`. It takes the new premise `viability-guard-listed`.
+- Assignment, H: `{"binders":{"within":["viability-guard-listed"]},"takes_unbound":{}}`
+
+**(5)** It would count by R1 only if it carried the row. With pair 2 entered, it carries no row and counts nothing. R4 does not apply.
+
+---
+
+## 5. never-leaving-a-guard / Becoming.Lasting.iter_region_iff_lasts
+
+**Links (OPENED):**
+- Lasting.lean:251. `iter_iff_stages (stage := Lasts f adm guard) (region_mono _ _) (fun _ => Iff.rfl) …`. Lister: iter_iff_stages, region_mono. Matches.
+- `iter_iff_stages`, PI:88. Induction on n, not on a list.
+
+**(2)** It uses no list, and it is not `postfixed_in_iter` either (F1).
+
+**(3) Case row:**
+```json
+{"law": "Becoming.Iteration.iter_iff_stages", "how": {"en": "iter_iff_stages with the step regionStep at the disturbed law's steps from the guard (monotone, region_mono) and the stages the configurations lasting for n steps under every admissible disturbance (Lasts f adm guard n), the start clause by Iff.rfl and the successor clause proved in place: for a monotone step, a family with the same start and successor clauses as iteration agrees with the iterates at every level. It uses no list and no step taking its start into itself."}}
+```
+
+**(4)** There are no binders.
+```json
+{"law": "Becoming.Lasting.iter_region_iff_lasts", "takes": [], "case_of": [ <the row above> ]}
+```
+Assignment, H: `{"binders":{},"takes_unbound":{}}`
+
+**(5)** It does not count by R1. R4 does not apply. R1's words for no-list rows do not fit here (F1).
+
+---
+
+## 6. never-leaving-a-guard / Becoming.Viability.keepable_iff_count
+
+**Links (OPENED):**
+- B/KeepableStep.lean:81. `match iter_largest (keep_mono) (fun _ h => h.1) (fun x _ => every x)`.
+  - Left to right: `largest (Keepable P g) Keepable.start keepable_step_iff.mp`.
+  - Right to left: `Onward.KeepsMoving.run every (post …)`, then `inside`.
+  - Lister: iter_largest, keep_mono, Keepable.start, keepable_step_iff, KeepsMoving.run. Matches.
+- Other definitions it uses: `keepStep` :73, `keep_mono` :76, `keepable_step_iff` :55 (no list), `KeepsMoving.run` Onward.lean:231 → `run_of_continues` :157 (F3).
+- No list induction of its own on the chain to the law.
+
+**(2)** The chain reaches `iter_largest` directly.
+
+**(3) Case row:**
+```json
+{"law": "Becoming.Iteration.iter_largest", "how": {"en": "iter_largest with the step keepStep P g (the guard here and some move with an outcome in the class; monotone, keep_mono), the start the guard (taken into itself, its first part) and the list one holding every configuration; its largest-class part puts the configurations the guard is keepable from in the iterate at the list's length, keepability being a class inside the guard that keepStep preserves (Keepable.start, keepable_step_iff). It uses the list. The other direction is not the law: from that iterate being preserved (iter_largest's second part) a run staying in it is built by Onward.KeepsMoving.run, which uses the list of every configuration again, and the run stays in the guard by iter_largest's first part."}}
+```
+
+**(4)** The binder `every`, position 6, `∀ (x : S), x ∈ all`, takes `branching-every` (process P).
+```json
+{"law": "Becoming.Viability.keepable_iff_count", "takes": ["branching-every"], "case_of": [ <the row above> ]}
+```
+Assignment, H: `{"binders":{"every":["branching-every"]},"takes_unbound":{}}`
+
+**(5)** It counts by R1. R4 does not apply.
+
+TOLD, from the module docstring at :54: "no theorem here relates the kernel to keepability". Keepable is "some course", while the dynamic's kernel is "every course". The blind reader judged that it belongs, and I did not redo that.
+
+---
+
+## 7. thresholds-of-waiting / Becoming.Tolerance.kept_set (already listed)
+
+**Links (OPENED):**
+- B/Tolerance.lean:377. `Eq.subst … (iter_eq_orbit _ s n) (Iteration.postfixed_in_iter ((monotone_iff_keepsInclusion _).mpr (tolerating_keeps tol ups)) start inside n)`. Lister: iter_eq_orbit, postfixed_in_iter, monotone_iff_keepsInclusion, tolerating_keeps. Matches.
+- `iter_eq_orbit` :238. `tolerating` :200 is `AllBut s (tol a) (ups a)`, so `inside` is the step at G by definition.
+- `postfixed_in_iter`, PI:146. Induction on n.
+
+**(2)** It uses no list. It is only `postfixed_in_iter`.
+
+**(3) `case_of` to add:**
+```json
+{"law": "Becoming.Iteration.postfixed_in_iter", "how": {"en": "postfixed_in_iter with the step the tolerating law (monotone, tolerating_keeps through monotone_iff_keepsInclusion), the start the starting class s and the class the set G, inside the start by start and preserved by inside (each member waits on at most its tolerance outside G, which is the tolerating step at G), the iterates read as the course's steps through iter_eq_orbit. A case of the part of the law that asks no list: a class inside the start that the step preserves lies in every iterate; no list and no step taking its start into itself is used."}}
+```
+
+**(4)** The existing row, quoted: `{"law": "Becoming.Tolerance.kept_set", "takes": ["tolerance-set-gives-at-start", "tolerance-set-waits-within-tolerance-outside", "tolerance-member-of-set"]}`. Add the `case_of` above. No new premises and no mapping change: the existing mapping row covers its three binders.
+
+**(5)** It does not count by R1. R4 does not apply: the theorem is already listed, but its statement is this dynamic's own notion, not a neighbour's.
+
+---
+
+## 8. where-the-possible-grows / Becoming.Reaching.possible_iff_within_of_pred_le
+
+**Links (OPENED):**
+- B/ReachableRanges.lean:551. Calls `reach_within_of_pred_le every enough reach`, plus `PossibleWithin.possible` (about :500). Lister matches.
+- `reach_within_of_pred_le`, :543. `trace_within_pred_length every (succ_pred_eq_of_pos (length_pos_of_mem (every y))).symm reach`. Its lister row is missing because it was not among the 87 names, so this link is checked by opening only.
+- `trace_within_pred_length`, :534. Calls `iter_reach_iff_trace` (:513, by iter_iff_stages, no list) and `closure_iff_reach_within every len`. Lister matches.
+- `closure_iff_reach_within`, CommonResponse.lean:227. An induction on the closure path, not on a list, with `reach_within_pred_length`. Lister matches.
+- `reach_within_pred_length`, :214. `iter_within_pred_length reach_mono (fun _ => Or.inl) every len (reach_commutes _) …`. Lister matches.
+- `iter_within_pred_length`, PI:264. Takes the list.
+
+**(2)** It reaches `Becoming.Iteration.iter_within_pred_length`, in the implication form (F2).
+
+**(3) Case row:**
+```json
+{"law": "Becoming.Reaching.reach_within_of_pred_le", "how": {"en": "reach_within_of_pred_le with the process's list of every configuration and k at least the list's length less one, the list's length being n + 1 because it holds the start; it calls trace_within_pred_length, which reads reaching the target s as the closure of the steps meeting it (closure_iff_reach_within) and the reach step's iterates as traces of at most so many moves (iter_reach_iff_trace, by iter_iff_stages); closure_iff_reach_within uses reach_within_pred_length, which calls iter_within_pred_length with the step reachStep (monotone, reach_mono), the start the target (inside its own step), the list of n + 1 members and the step commuting with every proposition (reach_commutes). It uses the list, through the law's form for a start inside its own step: reaching within any number of moves is reaching within n."}}
+```
+
+**(4)** Binders:
+- `every`, position 5, `∀ (x : S), x ∈ all`, takes `branching-every`.
+- `enough`, position 11, `all.length.pred ≤ k`. No existing premise. New premise:
+```json
+{"id": "reaching-list-length-pred-le", "name": {"en": "a horizon at least the list's length less one"}, "statement": {"en": "k is at least the list's length less one (all.length.pred ≤ k)"}, "kind": "hypothesis of a law", "lean": ["Becoming.Reaching.possible_iff_within_of_pred_le"], "holds_in": [], "fails_in": [], "home": "theories/becoming/results/records/kept-at-the-length-of-a-list.md#conditions--条件", "seeded_from": ["Lean"]}
+```
+
+Premises row:
+```json
+{"law": "Becoming.Reaching.possible_iff_within_of_pred_le", "takes": ["branching-every", "reaching-list-length-pred-le"], "case_of": [ <the row above> ]}
+```
+Assignment, family G: `{"binders":{"every":["branching-every"],"enough":["reaching-list-length-pred-le"]},"takes_unbound":{}}`
+
+**(5)** It counts by R1. R4 does not apply. F5: `reach_within_of_pred_le` is not among the record's declarations.
+
+---
+
+## 9. where-the-possible-grows / Becoming.Reaching.guarded_not_keepsWidening
+
+**Links (OPENED):**
+- ReachableRanges.lean:766. `Reaching.not_keepsWidening_of_listed ⟨all, …within…⟩`. Lister uses: only that. Matches.
+- `not_keepsWidening_of_listed` :757 → `not_keepsWidening_of_listed_along` :742 (`keeps.not_listed listed`) and `listed_along_of_listed` :749.
+- No declaration of PredicateIteration is reached.
+
+**(2)** None, not even the no-list part.
+
+**(3)** Nothing can be entered as a case of the law.
+
+**(4)** Nothing is entered in this run. Listing it would add a declaration that carries no link to the law, which the frozen file's "What this is not" section and R3 exclude. If it is ever listed for its own sake, the row would be `{"law": "Becoming.Reaching.guarded_not_keepsWidening", "takes": ["viability-guard-listed"]}`, for the binder `within` at position 6, `∀ (x : S), guard x → x ∈ all`.
+
+**(5)** It does not count. R4 does not apply. F6: the record's law 14 overstates it as a case.
+
+---
+
+**Validator (atlas.py 960–990), OPENED.**
+- A premises row may have only `law`, `takes` and `case_of`.
+- `case_of` must be a nonempty list of `{law, how}`, where `how` is `{en[, zh]}` and `law` is declared in the core receipt or in a tracked live Lean file.
+- `case_of.law` must not be the row's own law or one of the dynamic's declarations. This is F4.
+- Each `takes` id must be in premises.json. The three new premises must be added first.
+- I found no length cap on `how` in those lines.
+- Each theorem not yet listed must also be added to that dynamic's `declarations`, with its mapping row through add_rows.py (`add_rows.py LISTER ASSIGNMENT`). The lister file's lines start with `AAROW `; 87 rows were checked.
+
+**G2 tally by R1.** Rows that count: pairs 1, 2, 3, 6 and 8, on three different dynamics, so R5 is met. Rows that do not count: pairs 5 and 7, which use no list, and pair 4, which carries no row by F4. Pair 9 takes no row.
+
+**What I did not read:**
+- `returns_of_reachable` (Recurrence.lean:622), `returning_of_continues`, `KeepsWidening.not_listed`, `reach_iff_withinClosure`, `length_pos_of_mem`, `Lasts` beyond its signature, and `Law.run`/`orbit` definitional equality.
+- `RETURN-attack.md`, the record JSONs, the existing mapping rows of the other laws, and the rest of atlas.py (for example any rule on `records` or `hypotheses` when declarations are added).
+- Whether the working-tree Lean equals the tree at main 0110d32a6 or the lister's build.
+- Whether premise `home` anchors are validated.

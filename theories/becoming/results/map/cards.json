@@ -1,7 +1,7 @@
 {
  "schema_version": 1,
  "as_of": "2026-11-11",
- "about": "One card for each dynamic of the atlas (theories/becoming/results/atlas/entries/dynamics.json), AI-written on 11 November 2026: which kinds of role and tie of web.json its theorems speak of, in its own model's words; its principal theorems, each read from its Lean statement and said in role-words (what it concludes, under which sameness, in which form, of which courses, how strongly, with the line of the statement as evidence); built cases worth showing; and what the map's kinds do not hold of it. Each card was written by one AI reader and put to a second to refute against the Lean statements (148 corrected, 35 kept); a review before landing corrected the wording of a few sentences more and re-filed three theorems, as the round's record lists. A card adds no result and changes no entry: the atlas and the Lean say what is proved.",
+ "about": "One card for each dynamic of the atlas (theories/becoming/results/atlas/entries/dynamics.json), AI-written on 11 November 2026: which kinds of role and tie of web.json its theorems speak of, in its own model's words; its principal theorems, each read from its Lean statement and said in role-words (what it concludes, under which sameness, in which form, of which courses, how strongly, with the line of the statement as evidence); built cases worth showing; and what the map's kinds do not hold of it. Each card was written by one AI reader and put to a second to refute against the Lean statements (148 corrected, 35 kept); a review before landing corrected the wording of a few sentences more and re-filed three theorems, as the round's record lists. The card for kept-at-the-length-of-a-list was AI-written on 22 November 2026 and put to one AI reader who took no part, to refute against Becoming/PredicateIteration.lean and Becoming/RisingIteration.lean. A card adds no result and changes no entry: the atlas and the Lean say what is proved.",
  "cards": [
   {
    "dynamic": "attraction-is-not-returning",
@@ -27145,6 +27145,126 @@
     }
    ],
    "misfit": "The four bounds conclude bare negations (not at arbitrarily late steps; no run; no tail free of renewal). The mark 'ends, from some step on' would say more than the Lean proves without classical logic, so they are set as cannot. Renewing and consuming are classes of a whole course, relative to that course, by definition: no theorem here states them and no mark holds a whole-course class. In Run.renewal_recurs a renewal is any marked step; the theorem does not say the stock is given to there. drawdown_not_recurring concludes of the drawer's activity, not of its drawing: the drawer is known only by its active steps lowering the level (the field draws is not used), so the theorem is set on the role, not on the draws-on tie. falls_not_recurring is of any natural-number observable: 'stock' is the nearest role. not_of_depletion's premise names a reserve that every admissible step lowers, but its conclusion names no role (the process has no run), so about_role is 'any'; its frame is every course of that process, not the legend's."
+  },
+  {
+   "dynamic": "kept-at-the-length-of-a-list",
+   "plain_en": "For a monotone step on classes of states (a class inside another has its step inside the other's step) that takes its start into itself (the step of the start lies inside the start), where a list holds every member of the start: a state is in the iterate at the list's length exactly where it is in every iterate, and that iterate is the largest class inside the start that the step preserves, that is, that lies inside its own step. With no list, for a monotone step, a class inside the start that lies inside its own step lies in every iterate. Where the start instead lies inside its own step, the step commutes with implication to a state y's being in the iterate at the list's length, and the list holds every state at which membership in the start implies that, y in any iterate is in the iterate at the list's length; without the commuting premise, asking this of every monotone step on a one-state type would decide every proposition. That the step is monotone, what it does to the start, and what the list holds are premises, not derived; the number of an iterate counts applications of the step.",
+   "plain_zh": "对一个作用于状态之类的单调的步（一类在另一类之内，则它的步在另一类的步之内），它又把起始类带入起始类自身（起始类的步在起始类之内）；若有一个列表容纳起始类的每一个成员：一个状态在迭代到列表长度那一次的类之中，恰在它在每一次迭代的类之中之时，而那一类是起始类之内为此步所保的最大类，即起始类之内、在自身的步之内的最大类。没有列表时，对单调的步，起始类之内、在自身的步之内的类，在每一次迭代的类之中。若起始类反在它自身的步之内，此步与“蕴含状态 y 在迭代到列表长度那一次的类之中”相交换，且列表容纳每一个“在起始类之中便蕴含此事”的状态，则 y 在任何一次迭代的类之中，就在迭代到列表长度那一次的类之中；没有交换的前提，若对单一状态的类型上每一个单调的步都要求如此，每一个命题就都是已判定的。步为单调、步对起始类之所为、列表之所容，都是前提，不是推出的；迭代的序号数的是此步施用的次数。",
+   "legend": true,
+   "cast": [
+    {
+     "role": "any",
+     "as": "a step on classes of states of any type, a start class, and the iterates of the step from the start (the iterate at 0 is the start; the iterate at n + 1 is the step applied to the iterate at n); a list of states; a class inside the start that lies inside its own step; on the rising side, a proposition G and a step that commutes with implication to G",
+     "lean": "Becoming.Iteration.iter Φ V₀ n; Becoming.Iteration.MonotoneStep Φ; Becoming.Iteration.CommutesWithImplication Ψ G"
+    }
+   ],
+   "ties": [],
+   "laws": [
+    {
+     "lean": "Becoming.Iteration.iter_iff_all",
+     "items": [],
+     "about": -1,
+     "about_role": "any",
+     "sameness": "in an iterate of the step, or not",
+     "form": "border",
+     "mark": "",
+     "frame": "every-course",
+     "then_en": "A state is in the iterate at the list's length exactly where it is in every iterate.",
+     "then_zh": "一个状态在迭代到列表长度那一次的类之中，恰在它在每一次迭代的类之中之时。",
+     "compare_en": "",
+     "main_ifs": [
+      "iteration-monotone-step",
+      "iteration-step-takes-start-into-itself",
+      "iteration-start-members-listed"
+     ],
+     "by_outside": false,
+     "strength": "exact",
+     "evidence": "theorem iter_iff_all {all : List S} (within : ∀ x, V₀ x → x ∈ all) {y : S} : iter Φ V₀ all.length y ↔ ∀ n, iter Φ V₀ n y, with the section's (mono : MonotoneStep Φ) (start : ∀ y, Φ V₀ y → V₀ y) — Becoming/PredicateIteration.lean:153"
+    },
+    {
+     "lean": "Becoming.Iteration.iter_largest",
+     "items": [],
+     "about": -1,
+     "about_role": "any",
+     "sameness": "a class inside the start and inside its own step, or not",
+     "form": "order",
+     "mark": "",
+     "frame": "every-course",
+     "then_en": "The iterate at the list's length lies inside the start, lies inside its own step, and contains every class inside the start that lies inside its own step.",
+     "then_zh": "迭代到列表长度那一次的类在起始类之内，在它自身的步之内，并且包含起始类之内、在自身的步之内的每一个类。",
+     "compare_en": "",
+     "main_ifs": [
+      "iteration-monotone-step",
+      "iteration-step-takes-start-into-itself",
+      "iteration-start-members-listed"
+     ],
+     "by_outside": false,
+     "strength": "sufficient",
+     "evidence": "theorem iter_largest {all : List S} (within : ∀ x, V₀ x → x ∈ all) : let L := iter Φ V₀ all.length; (∀ y, L y → V₀ y) ∧ (∀ y, L y → Φ L y) ∧ ∀ K : S → Prop, (∀ y, K y → V₀ y) → (∀ y, K y → Φ K y) → ∀ y, K y → L y, with the section's (mono : MonotoneStep Φ) (start : ∀ y, Φ V₀ y → V₀ y) — Becoming/PredicateIteration.lean:161"
+    },
+    {
+     "lean": "Becoming.Iteration.postfixed_in_iter",
+     "items": [],
+     "about": -1,
+     "about_role": "any",
+     "sameness": "a class inside the start and inside its own step, or not",
+     "form": "order",
+     "mark": "",
+     "frame": "every-course",
+     "then_en": "A class inside the start that lies inside its own step lies inside every iterate; neither a list nor that the step takes the start into itself is asked.",
+     "then_zh": "起始类之内、在自身的步之内的类，在每一次迭代的类之内；既不需要列表，也不需要此步把起始类带入自身。",
+     "compare_en": "",
+     "main_ifs": [
+      "iteration-monotone-step",
+      "iteration-class-inside-start",
+      "iteration-class-preserved-by-step"
+     ],
+     "by_outside": false,
+     "strength": "sufficient",
+     "evidence": "theorem postfixed_in_iter {K : S → Prop} (inside : ∀ y, K y → V₀ y) (post : ∀ y, K y → Φ K y) : ∀ n y, K y → iter Φ V₀ n y, with the section's (mono : MonotoneStep Φ), start omitted — Becoming/PredicateIteration.lean:146"
+    },
+    {
+     "lean": "Becoming.Iteration.iter_within_length",
+     "items": [],
+     "about": -1,
+     "about_role": "any",
+     "sameness": "in an iterate of the step, or not",
+     "form": "order",
+     "mark": "",
+     "frame": "every-course",
+     "then_en": "A state y in any iterate is in the iterate at the list's length (G, in the conditions, is that y is in that iterate).",
+     "then_zh": "状态 y 在任何一次迭代的类之中，就在迭代到列表长度那一次的类之中（条件中的 G 即 y 在那一次迭代的类之中）。",
+     "compare_en": "",
+     "main_ifs": [
+      "iteration-monotone-step",
+      "iteration-start-inside-its-step",
+      "iteration-commutes-with-implication",
+      "iteration-implying-states-listed"
+     ],
+     "by_outside": false,
+     "strength": "sufficient",
+     "evidence": "theorem iter_within_length (comm : CommutesWithImplication Ψ (I all.length y)) (within : ∀ x, (W₀ x → I all.length y) → x ∈ all) : ∀ n, I n y → I all.length y, where I is iter Ψ W₀, with the section's (mono : MonotoneStep Ψ) (start : ∀ y, W₀ y → Ψ W₀ y) — Becoming/PredicateIteration.lean:255"
+    },
+    {
+     "lean": "Becoming.Iteration.singleton_rise_needs_em",
+     "items": [],
+     "about": -1,
+     "about_role": "any",
+     "sameness": "a proposition decided (it holds or it fails), or not",
+     "form": "shows",
+     "mark": "",
+     "frame": "every-course",
+     "then_en": "If every monotone step on a one-state type took membership in iterate 2 from the empty start to membership in iterate 1, every proposition would be decided.",
+     "then_zh": "假如单一状态的类型上每一个单调的步，都把“在自空的起始类起第 2 次迭代的类之中”带到“在第 1 次迭代的类之中”，每一个命题就都是已判定的。",
+     "compare_en": "",
+     "main_ifs": [],
+     "by_outside": false,
+     "strength": "sufficient",
+     "evidence": "theorem singleton_rise_needs_em (shortens : ∀ Ψ : (Unit → Prop) → Unit → Prop, MonotoneStep Ψ → iter Ψ (fun _ => False) 2 () → iter Ψ (fun _ => False) 1 ()) (p : Prop) : Decided p — Becoming/RisingIteration.lean:28"
+    }
+   ],
+   "built_cases": [],
+   "misfit": "The law's own statements are of a step on classes of states and the iterates of that step: Becoming/PredicateIteration.lean and Becoming/RisingIteration.lean, read whole, have no run, course, process or relation in any statement. So no role kind and no tie holds anything here and the card is the legend's; the role 'anything that goes on' and the frame every-course are only the nearest, and say here only that a case need supply no course. The number of an iterate counts applications of the step (iter, PredicateIteration.lean:77); no statement of the law itself reads it as a time along a course, so no theorem is given the mark 'lasts': iter_iff_all is filed as a border (the line between the states in every iterate and the rest falls at membership in the iterate at the list's length), and iter_largest, postfixed_in_iter and iter_within_length as an order (one class inside another; iter_within_length only for the one state y that its G is about). 'Preserves' is the Lean docstring's word for a class that lies inside its own step (K y → Φ K y); it does not say that the step of the class is the class. iter_iff_all is of a state's membership: no statement says that every iterate is the iterate at the list's length; of the iterates the law says that each lies inside the one before it (iter_pred) and inside the start (iter_within), not that an earlier one equals the iterate at the list's length. On the kept side the list need hold only the members of the start and may hold other states too (within : ∀ x, V₀ x → x ∈ all); on the rising side its premise is that it holds every state at which membership in the start implies G (within : ∀ x, (W₀ x → G) → x ∈ all). The two sides take different premises on the start: the step of the start inside the start on the kept side, the start inside its own step on the rising side. Given and not derived: that the step is monotone, what it does to the start, the commuting on the rising side, and the list are premises of each statement that names them; that an actual situation has such a list, and that the keeping at hand is the iterate of a monotone step from a guard, are recognitions the theorems do not give (the record's Conditions and Correspondence). singleton_rise_needs_em is an implication from a supposed shortening and exhibits no step that fails to shorten; its one premise has no row in the entry, so its condition is in its Lean statement only. No built case: neither module builds one. Not written up, of the entry's declarations: iter_pred, iter_within, iter_persists and iter_postfixed (steps toward the two theorems of the kept side); iter_succ (for a monotone step whose start lies inside its own step, each iterate lies inside the next); iter_within_pred_length (the rising bound at iterate n for a list of length n + 1 of every state, with the commuting premise and a further premise, first, on the start); and, of the six theorems the entry names as proved by calling a declaration of the law, the four it lists: GuardHorizon.viable_persists, Viability.coded_kept_iff_closed, reach_within_pred_length and Branching.reachable_iff_all (held_iff_iter is listed under a-reading-kept-by-its-update and Viability.keepable_iff_count under never-leaving-a-guard). The six are where a relation's closure, a guard, a process with its moves, a reading with its codes, a number of steps and the traces of a process appear; each has its premises in the entry's mechanism, and the four listed here have no premise row. By their proof terms: held_iff_iter uses iter_largest and «所闭之承最大»; viable_persists uses iter_persists; keepable_iff_count uses iter_largest and Onward.KeepsMoving.run, which takes the list of every configuration; coded_kept_iff_closed uses iter_postfixed with iter_iff_kept from kept to a closed family, and back keptFor_of_closed, which has its own induction on the number of steps and uses no declaration of the law; reach_within_pred_length uses iter_within_pred_length. Branching.reachable_iff_all uses iter_iff_all with iter_iff_reachable. In three of them the number is a number of steps (viable for as many steps, kept for as many steps, reaching within n); in reachable_iff_all it is the number of moves of a trace; in held_iff_iter and keepable_iff_count it is the list's length only."
   }
  ]
 }

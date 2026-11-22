@@ -1,0 +1,210 @@
+**Findings first**
+
+1. OPENED `the_map.py:144-221` (`validate`): there is no length cap on any card field. The only limits are structural, plus the list of words that fit only a person. Existing cards run to 1,834 characters of `plain_en` and 2,709 of `misfit`; this one is 661 and 3,979.
+2. OPENED `the_map.py:202-203, 213`: the card is valid only once the entry and its eight new ledger premises are entered. Run in memory against the real `web.json`, `cards.json`, `cases.json`, `dynamics.json` and `premises.json` plus the draft entry and those eight ids, `validate` returns no error and `join` places it under the role `any`. Without the eight ids it returns 13 `main_ifs` errors.
+3. OPENED `PredicateIteration.lean:144-147`: `postfixed_in_iter` omits `start` as well as taking no list. The entry's sentence "With no list, a class inside the start that the step preserves lies in every iterate" does not say the step must be monotone. The card says it, and says that neither a list nor the start premise is asked.
+4. OPENED `PredicateIteration.lean:77-79` and both modules whole: no statement of the law has a run, course, process or relation. So I gave no theorem the mark `lasts` ("goes on holding"), which would read the iterate's number as time. `iter_iff_all` is filed as form `border`, the three inclusions as `order`. The role `any` and the frame `every-course` are only the nearest, and `misfit` says so. This is my classification, not a rule, and a checker should rule on it.
+5. OPENED `RisingIteration.lean:28-30`: `singleton_rise_needs_em` is written up with `main_ifs` empty, because the entry gives it no premise row. `join` then marks it "conditions in its Lean statement only", which the tool supports. If the applier prefers four laws, drop `laws[4]`; `misfit` already carries its sentence.
+6. OPENED `PredicateIteration.lean:145-147, 160`: "preserves" is the docstring's word for K ⊆ Φ K, not Φ K = K. `plain_en` glosses it and `misfit` says it.
+7. TOLD (`cards.json`, key `about`): it says every card was written on 11 November, with "148 corrected, 35 kept" (183 of 185). A 186th card written on 22 November makes that sentence stale; the applier should decide whether it changes.
+8. The five case theorems are not written up as laws. They have no premise row in this entry, and whether another dynamic lists them is the R3 reader's call. `misfit` names them with what each proof term uses.
+
+**(A) The card**
+
+```json
+{
+ "dynamic": "kept-at-the-length-of-a-list",
+ "plain_en": "For a monotone step on classes of states (a class inside another has its step inside the other's step) that takes its start into itself (the step of the start lies inside the start), where a list holds every member of the start: a state is in the iterate at the list's length exactly where it is in every iterate, and that iterate is the largest class inside the start that the step preserves, that is, that lies inside its own step. With no list, for a monotone step, a class inside the start that lies inside its own step lies in every iterate. The step, the start and the list are given, not derived; the number of an iterate counts applications of the step.",
+ "plain_zh": "对一个作用于状态之类的单调的步（一类在另一类之内，则它的步在另一类的步之内），它又把起始类带入起始类自身（起始类的步在起始类之内）；若有一个列表容纳起始类的每一个成员：一个状态在迭代到列表长度那一次的类之中，恰在它在每一次迭代的类之中之时，而那一类是起始类之内为此步所保的最大类，即在自身的步之内的最大类。没有列表时，对单调的步，起始类之内、在自身的步之内的类，在每一次迭代的类之中。步、起始类与列表都是给定的，不是推出的；迭代的序号数的是此步施用的次数。",
+ "legend": true,
+ "cast": [
+  {
+   "role": "any",
+   "as": "a step on classes of states of any type, a start class, and the iterates of the step from the start (the iterate at 0 is the start; the iterate at n + 1 is the step applied to the iterate at n); a list of states; a class inside the start that lies inside its own step; on the rising side, a proposition G and a step that commutes with implication to G",
+   "lean": "Becoming.Iteration.iter Φ V₀ n; Becoming.Iteration.MonotoneStep Φ; Becoming.Iteration.CommutesWithImplication Ψ G"
+  }
+ ],
+ "ties": [],
+ "laws": [
+  {
+   "lean": "Becoming.Iteration.iter_iff_all",
+   "items": [],
+   "about": -1,
+   "about_role": "any",
+   "sameness": "in an iterate of the step, or not",
+   "form": "border",
+   "mark": "",
+   "frame": "every-course",
+   "then_en": "A state is in the iterate at the list's length exactly where it is in every iterate.",
+   "then_zh": "一个状态在迭代到列表长度那一次的类之中，恰在它在每一次迭代的类之中之时。",
+   "compare_en": "",
+   "main_ifs": [
+    "iteration-monotone-step",
+    "iteration-step-takes-start-into-itself",
+    "iteration-start-members-listed"
+   ],
+   "by_outside": false,
+   "strength": "exact",
+   "evidence": "theorem iter_iff_all {all : List S} (within : ∀ x, V₀ x → x ∈ all) {y : S} : iter Φ V₀ all.length y ↔ ∀ n, iter Φ V₀ n y, with the section's (mono : MonotoneStep Φ) (start : ∀ y, Φ V₀ y → V₀ y) — Becoming/PredicateIteration.lean:153"
+  },
+  {
+   "lean": "Becoming.Iteration.iter_largest",
+   "items": [],
+   "about": -1,
+   "about_role": "any",
+   "sameness": "a class inside the start and inside its own step, or not",
+   "form": "order",
+   "mark": "",
+   "frame": "every-course",
+   "then_en": "The iterate at the list's length lies inside the start, lies inside its own step, and contains every class inside the start that lies inside its own step.",
+   "then_zh": "迭代到列表长度那一次的类在起始类之内，在它自身的步之内，并且包含起始类之内、在自身的步之内的每一个类。",
+   "compare_en": "",
+   "main_ifs": [
+    "iteration-monotone-step",
+    "iteration-step-takes-start-into-itself",
+    "iteration-start-members-listed"
+   ],
+   "by_outside": false,
+   "strength": "sufficient",
+   "evidence": "theorem iter_largest {all : List S} (within : ∀ x, V₀ x → x ∈ all) : let L := iter Φ V₀ all.length; (∀ y, L y → V₀ y) ∧ (∀ y, L y → Φ L y) ∧ ∀ K : S → Prop, (∀ y, K y → V₀ y) → (∀ y, K y → Φ K y) → ∀ y, K y → L y, with the section's (mono : MonotoneStep Φ) (start : ∀ y, Φ V₀ y → V₀ y) — Becoming/PredicateIteration.lean:161"
+  },
+  {
+   "lean": "Becoming.Iteration.postfixed_in_iter",
+   "items": [],
+   "about": -1,
+   "about_role": "any",
+   "sameness": "a class inside the start and inside its own step, or not",
+   "form": "order",
+   "mark": "",
+   "frame": "every-course",
+   "then_en": "A class inside the start that lies inside its own step lies inside every iterate; neither a list nor that the step takes the start into itself is asked.",
+   "then_zh": "起始类之内、在自身的步之内的类，在每一次迭代的类之内；既不需要列表，也不需要此步把起始类带入自身。",
+   "compare_en": "",
+   "main_ifs": [
+    "iteration-monotone-step",
+    "iteration-class-inside-start",
+    "iteration-class-preserved-by-step"
+   ],
+   "by_outside": false,
+   "strength": "sufficient",
+   "evidence": "theorem postfixed_in_iter {K : S → Prop} (inside : ∀ y, K y → V₀ y) (post : ∀ y, K y → Φ K y) : ∀ n y, K y → iter Φ V₀ n y, with the section's (mono : MonotoneStep Φ), start omitted — Becoming/PredicateIteration.lean:146"
+  },
+  {
+   "lean": "Becoming.Iteration.iter_within_length",
+   "items": [],
+   "about": -1,
+   "about_role": "any",
+   "sameness": "in an iterate of the step, or not",
+   "form": "order",
+   "mark": "",
+   "frame": "every-course",
+   "then_en": "With G the proposition that a state y is in the iterate at the list's length: y in any iterate is in the iterate at the list's length.",
+   "then_zh": "设 G 为“状态 y 在迭代到列表长度那一次的类之中”这一命题：y 在任何一次迭代的类之中，就在迭代到列表长度那一次的类之中。",
+   "compare_en": "",
+   "main_ifs": [
+    "iteration-monotone-step",
+    "iteration-start-inside-its-step",
+    "iteration-commutes-with-implication",
+    "iteration-implying-states-listed"
+   ],
+   "by_outside": false,
+   "strength": "sufficient",
+   "evidence": "theorem iter_within_length (comm : CommutesWithImplication Ψ (I all.length y)) (within : ∀ x, (W₀ x → I all.length y) → x ∈ all) : ∀ n, I n y → I all.length y, where I is iter Ψ W₀, with the section's (mono : MonotoneStep Ψ) (start : ∀ y, W₀ y → Ψ W₀ y) — Becoming/PredicateIteration.lean:255"
+  },
+  {
+   "lean": "Becoming.Iteration.singleton_rise_needs_em",
+   "items": [],
+   "about": -1,
+   "about_role": "any",
+   "sameness": "a proposition decided (it holds or it fails), or not",
+   "form": "shows",
+   "mark": "",
+   "frame": "every-course",
+   "then_en": "If every monotone step on a one-state type took membership in iterate 2 from the empty start to membership in iterate 1, every proposition would be decided.",
+   "then_zh": "假如单一状态的类型上每一个单调的步，都把“在自空的起始类起第 2 次迭代的类之中”带到“在第 1 次迭代的类之中”，每一个命题就都是已判定的。",
+   "compare_en": "",
+   "main_ifs": [],
+   "by_outside": false,
+   "strength": "sufficient",
+   "evidence": "theorem singleton_rise_needs_em (shortens : ∀ Ψ : (Unit → Prop) → Unit → Prop, MonotoneStep Ψ → iter Ψ (fun _ => False) 2 () → iter Ψ (fun _ => False) 1 ()) (p : Prop) : Decided p — Becoming/RisingIteration.lean:28"
+  }
+ ],
+ "built_cases": [],
+ "misfit": "The law's own statements are of a step on classes of states and the iterates of that step: Becoming/PredicateIteration.lean and Becoming/RisingIteration.lean, read whole, have no run, course, process or relation in any statement. So no role kind and no tie holds anything here and the card is the legend's; the role 'anything that goes on' and the frame every-course are only the nearest, and say here only that a case need supply no course. The number of an iterate counts applications of the step (iter, PredicateIteration.lean:77); no statement of the law itself reads it as a time along a course, so no theorem is given the mark 'lasts': iter_iff_all is filed as a border (the line between the states in every iterate and the rest falls at membership in the iterate at the list's length), and iter_largest, postfixed_in_iter and iter_within_length as an order (one class inside another; iter_within_length only for the one state y that its G is about). 'Preserves' is the Lean docstring's word for a class that lies inside its own step (K y → Φ K y); it does not say that the step of the class is the class. iter_iff_all is of a state's membership: no statement says that every iterate is the iterate at the list's length; of the iterates the law says that each lies inside the one before it (iter_pred) and inside the start (iter_within), not that an earlier one equals the iterate at the list's length. On the kept side the list need hold only the members of the start and may hold other states too (within : ∀ x, V₀ x → x ∈ all); on the rising side its premise is that it holds every state at which membership in the start implies G (within : ∀ x, (W₀ x → G) → x ∈ all). The two sides take different premises on the start: the step of the start inside the start on the kept side, the start inside its own step on the rising side. Given and not derived: that the step is monotone, what it does to the start, the commuting on the rising side, and the list are premises of each statement that names them; that an actual situation has such a list, and that the keeping at hand is the iterate of a monotone step from a guard, are recognitions the theorems do not give (the record's Conditions and Correspondence). singleton_rise_needs_em is an implication from a supposed shortening and exhibits no step that fails to shorten; its one premise has no row in the entry, so its condition is in its Lean statement only. No built case: neither module builds one. Not written up, of the entry's declarations: iter_pred, iter_within, iter_persists and iter_postfixed (steps toward the two theorems of the kept side); iter_succ (for a monotone step whose start lies inside its own step, each iterate lies inside the next); iter_within_pred_length (the rising bound at iterate n for a list of length n + 1 of every state, with the commuting premise and a further premise, first, on the start); and the five theorems the entry names as proved by calling a declaration of the law: held_iff_iter, GuardHorizon.viable_persists, Viability.keepable_iff_count, Viability.coded_kept_iff_closed and reach_within_pred_length. Those five are where a relation's closure, a guard, a process with its moves, a reading with its codes and a number of steps appear; each has its premises in the entry's mechanism and no premise row there. By their proof terms: held_iff_iter uses iter_largest and «所闭之承最大»; viable_persists uses iter_persists; keepable_iff_count uses iter_largest and Onward.KeepsMoving.run, which takes the list of every configuration; coded_kept_iff_closed uses iter_postfixed with iter_iff_kept from kept to a closed family, and back keptFor_of_closed, which has its own induction on the number of steps and uses no declaration of the law; reach_within_pred_length uses iter_within_pred_length. In three of them the number is a number of steps (viable for as many steps, kept for as many steps, reaching within n); in held_iff_iter and keepable_iff_count it is the list's length only."
+}
+```
+
+**(B) Source of each sentence**
+
+Paths: PI = `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PredicateIteration.lean`; RI = `RisingIteration.lean` in the same folder. Both were read whole.
+
+`plain_en`:
+1. "For a monotone step … has its step inside the other's step": OPENED PI:83-84 (`MonotoneStep`).
+2. "takes its start into itself (the step of the start lies inside the start)": OPENED PI:98 (`start : ∀ y, Φ V₀ y → V₀ y`); the lister prints the same binder.
+3. "where a list holds every member of the start": OPENED PI:153, 161 (`within : ∀ x, V₀ x → x ∈ all`); lister binder at position 7.
+4. "a state is in the iterate at the list's length exactly where it is in every iterate": OPENED PI:153-154.
+5. "that iterate is the largest class inside the start that the step preserves, that is, that lies inside its own step": OPENED PI:161-164; "preserves" is the docstring's word at PI:160.
+6. "With no list, for a monotone step, a class inside the start that lies inside its own step lies in every iterate": OPENED PI:144-147.
+7. "The step, the start and the list are given, not derived": OPENED, since `mono`, `start` and `within` are hypothesis binders (PI:98, 153). TOLD by the record's Conditions ("supplied with each application"), read on the record page.
+8. "the number of an iterate counts applications of the step": OPENED PI:77-79.
+
+`plain_zh`: a clause-by-clause rendering of the eight items above, with nothing added. It was not read by a second reader.
+
+Cast line (`as`):
+- "a step on classes of states of any type, a start class, the iterates (0 is the start; n + 1 is the step applied to n)": OPENED PI:71, 77-79.
+- "a list of states": OPENED PI:134, 153.
+- "a class inside the start that lies inside its own step": OPENED PI:146-147.
+- "a proposition G and a step that commutes with implication to G": OPENED PI:195, 209-210.
+- "the rising side" is the entry's and RI's word (RI:8-9, "the iterates rise").
+
+Law lines (`then_en`, with `main_ifs` carrying the premises):
+- `iter_iff_all`: OPENED PI:153-154. Its three `main_ifs` are the lister's binders mono, start, within.
+- `iter_largest`: OPENED PI:161-164, the three conjuncts in order. Same binders.
+- `postfixed_in_iter`: OPENED PI:144-147. "Neither a list nor … is asked" is from `omit start` and the absence of a list binder; the lister shows binders mono, inside, post only.
+- `iter_within_length`: OPENED PI:255-256, with section variables at PI:212. Lister binders mono, start, comm, within.
+- `singleton_rise_needs_em`: OPENED RI:28-30. "Decided" is OPENED at `Decidedness.lean:100-101` (`p ∨ ¬ p`).
+
+`misfit`, by sentence group:
+- No run, course, process or relation: OPENED, both modules whole.
+- Forms and marks: my classification against `web.json`'s marks and forms (read), not a Lean fact.
+- "Of the iterates … each lies inside the one before it and inside the start": OPENED PI:103, 108. The warning itself is R7 of the frozen file (TOLD).
+- The two list premises and the two start premises: OPENED PI:98, 153, 212, 256.
+- "Recognitions the theorems do not give": TOLD, record page, Correspondence (read).
+- "No built case": OPENED, both modules whole.
+- Not-written-up list: `iter_succ` OPENED PI:225; `iter_within_pred_length` OPENED PI:264-267; the dependency of `iter_iff_all` and `iter_largest` on the four step lemmas is from the lister and PI:155-166.
+- The five cases, statements and proofs: OPENED `CommonResponse.lean:175-180` and `214-217`, `GuardHorizon.lean:166-170`, `KeepableStep.lean:84-90`, `Keeping.lean:383-391`; every "uses" matches the lister.
+- `keptFor_of_closed` "has its own induction … uses no declaration of the law": OPENED `Keeping.lean:316-323`.
+- `Onward.KeepsMoving.run` "takes the list of every configuration": OPENED, header line only (`Onward.lean:231`).
+- "A number of steps" for the three cases: `Viable` OPENED at `GuardHorizon.lean:86-90`; `KeptFor` and `reaches` are TOLD by docstrings (`Keeping.lean:366-368`, `CommonResponse.lean:212-213`).
+- "Each has its premises in the entry's mechanism and no premise row there": TOLD, from the entry draft in the brief.
+
+**(C) Rules of `the_map.py` checked**
+
+Checked by running `validate` and `join` in memory (`python3 -B`, nothing written), and by reading lines 88-221 and 279-334:
+- `CARD_FIELDS` (:95) all present; `cast`, `ties`, `laws`, `built_cases` are lists (:174).
+- The dynamic must be in the atlas (:177) and have exactly one card (:167-169). This holds only after the entry lands.
+- Every cast role is a role of `web.json` (:180); `any` is.
+- `legend` true with `ties` empty (:187).
+- `built_cases` is empty, so the lean/shows_en rule (:189) has nothing to check.
+- `plain_en` and `plain_zh` are non-empty with no word that fits only a person (:90-92, :192-196). The regexes were run on every `then_*` field too; the whole card has no 人, 谁 or 大家.
+- Each law has all `LAW_FIELDS` (:96, :199).
+- Each `lean` is a declaration of the dynamic (:122-131, :202): all five are in the draft entry's `declarations`, four also in its `premises`.
+- `form` and `frame` are in `web.json` (:204): border, order, shows; every-course.
+- A non-tie form carries an empty mark (:206).
+- The first word of `strength` is in `STRENGTHS` (:208).
+- `about` is -1 with `about_role` "any" (:211), as on the recurrence card.
+- Every `main_ifs` id must be a ledger premise (:213). This holds only with the eight new ids.
+- `join` (:305-315): the four laws with premise rows come out listed with 3, 3, 3, 4 conditions and 0 more; `singleton_rise_needs_em` comes out not listed; the home role is `any`.
+- No length cap exists in `validate` or in `tools/research/tests/test_the_map.py` (the test names and the fixture cards were read).
+
+Form taken from the cards of `recurrence-without-premise` (whole), `where-the-possible-grows` (most) and `never-leaving-a-guard` (cast, ties, law heads), and from a count of forms and frames over the 23 legend cards.
+
+**(D) Not read**
+
+- `the_map.py` from line 346 on, beyond grep hits: the views were not read, so how a `border` or `order` law under role `any` reads on LAWS.md and DYNAMICS.md is unchecked.
+- `map_sheet.py` and `regions.json`: whether the sheet needs an entry for a new dynamic was not checked.
+- `atlas.py`, `add_rows.py`, `lister.py`, `RETURN-attack.md`, the direction page, the one page, chapter 08, and the record JSON (only the generated record page was read, whole to Correspondence).
+- Lean not opened: the definitions of `KeptFor`, `Keepable`, `courseStep`, `Usable`, `Seen`, «承», «逆», «所闭», «闭»; the body of `Onward.KeepsMoving.run`; `iter_iff_viable`, `choice_mono`, `keepable_step_iff`; the `Lasting`, `Parting`, `Branching`, `Law`, `Reaching` and likeness cases; `GrammarCandidates`.
+- The other 182 cards beyond counts of their fields.
+- The Chinese was written by me and checked only against my own English; `web.json` says its Chinese names wait for the director's ear.
+- No build, lake, lean, test, gate or git command was run; no file was written.

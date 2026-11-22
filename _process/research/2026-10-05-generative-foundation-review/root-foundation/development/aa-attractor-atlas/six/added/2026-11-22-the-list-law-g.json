@@ -1,0 +1,17 @@
+{
+ "family": "G",
+ "note": "AI-written, 22 November 2026 (board row DJ). Binder names as lister.py's aaRow printed them (2026-11-22-the-list-law.lister.txt), run once against a stub that imports the modules, each restored from the shared cache at the bytes of main 0110d32a6. Each binder's premises are those the entry lists for the theorem. The hygienic binders of postfixed_in_iter (K y) and of iter_within_length (y in iterate n) are the antecedents of the conclusion's own quantifiers, not premises of the law, and are given none.",
+ "laws": {
+  "Becoming.Reaching.possible_iff_within_of_pred_le": {
+   "binders": {
+    "every": [
+     "branching-every"
+    ],
+    "enough": [
+     "reaching-list-length-pred-le"
+    ]
+   },
+   "takes_unbound": {}
+  }
+ }
+}
