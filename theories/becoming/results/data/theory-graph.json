@@ -681,6 +681,18 @@
    "page": "theories/becoming/results/records/a-reading-kept-by-its-update.md"
   },
   {
+   "id": "record:a-reading-of-the-level-alone",
+   "type": "result",
+   "record": "a-reading-of-the-level-alone",
+   "title": "A reading of the level alone, over every marking that does not mark the start's level",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/a-reading-of-the-level-alone.md"
+  },
+  {
    "id": "record:a-regularity-kept-and-changed",
    "type": "result",
    "record": "a-regularity-kept-and-changed",
@@ -11611,6 +11623,17 @@
    "name": "Becoming.TurningInTime",
    "level": "L2",
    "theorems": 81,
+   "region": "map",
+   "base": "general",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.LevelAlone",
+   "type": "module",
+   "name": "Becoming.LevelAlone",
+   "level": "L2",
+   "theorems": 37,
    "region": "map",
    "base": "general",
    "on_grammar": true,
@@ -34641,6 +34664,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.LevelAlone",
+   "to": "module:Becoming.TurningInTime",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.LevelCoupling",
    "to": "module:Becoming.Observation",
    "type": "imports"
@@ -38130,6 +38158,21 @@
   {
    "from": "record:a-reading-kept-by-its-update",
    "to": "record:when-to-inquire-and-when-to-respond",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-reading-of-the-level-alone",
+   "to": "module:Becoming.LevelAlone",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-reading-of-the-level-alone",
+   "to": "record:margin-of-a-regime",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-reading-of-the-level-alone",
+   "to": "record:turning-in-time",
    "type": "formal-reuse"
   },
   {

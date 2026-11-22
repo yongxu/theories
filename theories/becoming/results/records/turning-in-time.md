@@ -225,7 +225,7 @@ Reading (AI-written, from the home section's reading and the study folder's NEAR
 - related, not a proved adapter: [a-loss-read-before-its-point-of-no-return](a-loss-read-before-its-point-of-no-return.md). A point of no return read on courses on another model; the two are not joined.
 - related, not a proved adapter: [the-route-is-the-relation-in-time](the-route-is-the-relation-in-time.md). Reading in time on ReadOffInTime's model, not joined to the pair.
 
-**Used by:** [a-line-on-a-stock](a-line-on-a-stock.md) · [a-way-of-units](a-way-of-units.md)
+**Used by:** [a-line-on-a-stock](a-line-on-a-stock.md) · [a-reading-of-the-level-alone](a-reading-of-the-level-alone.md) · [a-way-of-units](a-way-of-units.md)
 
 <a id="sources--来源"></a>
 ### Sources
