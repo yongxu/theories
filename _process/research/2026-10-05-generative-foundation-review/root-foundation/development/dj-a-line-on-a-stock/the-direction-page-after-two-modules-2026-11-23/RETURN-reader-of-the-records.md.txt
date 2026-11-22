@@ -1,0 +1,111 @@
+Reader's return on the uncommitted text of /Users/ren/tmp/dj/wt/_process/DIRECTION.md (lines 128 to 138). I changed no file and ran no Lean, build, test or gate. Paths below are under W = /Users/ren/tmp/dj/wt; FM = W/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-level-alone-2026-11-23; READ = FM/READ-four-sentences.md.txt; PRINT = W/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/the-pairs-against-what-statements-name-2026-11-23/NOTE.md; GRNOTE = W/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gr-sampled-selection-2026-11-23/NOTE.md.
+
+MUST
+
+M1. "What would count against this telling: a statement that names two of those carriers or two of those clocks; or a theorem in which what a marking sets comes out as a conclusion." (l. 138)
+- Source: the paragraph above it (l. 136) itself says one statement names two of the clocks, `PoolFromCourse.window_standing_thinned`; READ l. 77 says the same. So the first test is already met by the telling's own sentence.
+- It also tests only naming, which the text has just said does not show joining, and it does not say who would look or where.
+- The second half can fail, but only by a theorem nobody is set to look for.
+- Replacement: "What would count against this telling: a statement that names two of those carriers, or the level's clock with either of the other two, or that states two of them together without naming them; or a theorem in which what a marking sets comes out as a conclusion. For the first, the print can be asked again once it is remade after the two landings, within its limits; no session is set to look for the others."
+
+M2. "One statement names the last two together (`PoolFromCourse.window_standing_thinned`); the level's is named together with neither in any statement of a print of what statements name, which shows they are not named together and not that they are not joined. And the paragraph's first sentence is stated on three carriers, with no statement naming two of them, by the same print." (l. 136)
+- The text does not say whose print it is or where its record is, and gives one of its limits only.
+- Sources:
+  - The print is row DJ's of 23 November (PRINT l. 26), made before either module of that night landed (READ used it at 00:17 WIB; landings 02:24 and 03:02 by the board).
+  - PRINT l. 26: 36 private theorems are not in it, 35 of them in `TurningInTime.lean`.
+  - READ l. 99 and PRINT l. 87: a statement that writes a point of no return out in numbers, as both turn laws of the lock do, names neither notion and is not seen.
+  - PRINT l. 87: "The queries were short scripts run in the session; they and their outputs are not filed."
+  - READ l. 77 and l. 129: the lists of notions for each clock and carrier were row FM's choice, direct naming only.
+  - PRINT tells only the lookup on the level's clock. The lookup on the three carriers and the statement naming standing with weight are recorded only in READ (l. 73, l. 77); PRINT mentions neither.
+- Replacement: "One statement names the last two together (`PoolFromCourse.window_standing_thinned`). The level's clock is named together with neither, and no statement names two of the three carriers, by lookups in row DJ's print of 23 November of what each statement names (told in the next paragraph; [its record](research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/the-pairs-against-what-statements-name-2026-11-23/NOTE.md)). The lookups were short scripts on lists of notions that row FM chose; the scripts and their outputs are not filed, and the lookup on the carriers is told only in the read. The print sees only names standing together in one statement. It lacks 36 private theorems, 35 of them in `TurningInTime`; a statement that writes a point of no return out in numbers, as both turn laws of the lock do, is not seen; and it was made before the two modules of 23 November landed. So this shows not named together by that print, and not that they are not joined."
+
+M3. "On the older module's own worked course of a rising lock no such marking gives a line that never ends, though the level at the first step that differs is still at or above `H₂ + y₂`; on another course one does." (l. 132)
+- Source: W/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LevelAlone.lean l. 718-724, docstring of `Twelve.none_unending`: "By computation, the original level sequence agrees with that at `TurningInTime.Three.rise_count_ends`, which uses another way type."
+- The theorem is of the course `Twelve`, which uses the older module's giving. That it is the older course is a computation, not a statement, and the module names no `Locked` (grep of the file).
+- FM/NOTE.md l. 7 adds that the failure there is by the lag: "by hand, a return taking effect at the step from that level would still hold".
+- The record's "Does not show" (W/theories/becoming/results/records/a-reading-of-the-level-alone.md l. 40): on Twelve the two stated levels, ten then four, are all that is stated of it.
+- Replacement: "On a worked course with the older module's own giving, whose levels agree by computation, not by a Lean statement, with those of that module's worked course of a rising lock (`TurningInTime.Three.rise_count_ends`, on another type of way), no such marking gives a line that never ends. The level is ten at the first step that differs and four one step later, against a threshold of six, so it fails by the lag; by hand, not in Lean, a return taking effect at the step from that level would still hold. On another course one does."
+
+M4. "…and a growing kind removed in time is `LineOnAStock.line_ends` followed by `unending_iff_holds`." (l. 132)
+- Source: READ l. 104-113: argued on paper by one writer, "no Lean, no search". It holds for a fixed closed line whose own offspring of the line take more, and it also needs `TurningInTime.unending_from`. A corollary would need plumbing "that I did not find stated", put at "about a hundred lines, not counted".
+- READ l. 124, the correction row DJ asked for: "for a fixed line whose own kids take more, the removal is `line_ends` and is not new; the reader's new mathematics is for a growing kind that the rule picks out".
+- FM/NOTE.md l. 7 says "a growing line removed by the fall", not "kind".
+- Replacement: "…and, for one fixed line of units whose own offspring of the line take more, a growing line removed in time is `LineOnAStock.line_ends` followed by `unending_iff_holds`, joined by `TurningInTime.unending_from`. Both were argued on paper by the one session, with row DJ agreeing; nothing was built. For a growing kind that a rule picks out step by step, it was not shown."
+
+M5. The new paragraphs never set the outcome against the old paragraph's own test, which now reads as still pending: "What would count against row FM's order: … or a first sentence tried whole coming back, as the first step of 20 November did, as older laws in a row, a definition unfolded or an older statement in other names." (l. 128)
+- Source: READ l. 75, candidate 1 is "three known pieces in a row"; READ l. 113, candidate 2 "fails the same test as candidate 1: known pieces in a row"; READ l. 83, candidate 1 "Withdrawn as a try".
+- So the second thing that would count against the order happened, twice, on paper. The first did not (no sentence was found stated whole).
+- Replacement, to add at l. 132 after "came apart into laws already there": "By the order's own test above, this is what would count against it: both tries came back as older laws in a row, on paper. The read did not find the sentences already stated whole."
+- The forecast in the old paragraph ("given before any read and unchecked") also needs its outcome. READ l. 45: it agreed on the first, third and fourth sentences and differed in two places. READ l. 85 then reworded the second difference. Add: "The forecast above held but in two places: on the line on a stock the second sentence's not-differing is a law and not only built courses; and both laws of the fourth are of a draw that stands, no named law having a rising draw with a turn."
+
+M6. "under a strict reading from step 0, a selection through a formation's couplings read at coarser steps is blind beyond the coupling closure as read there, which lies within the coupling closure" (l. 128)
+- Source: the record's own statement, W/theories/becoming/results/records/selection-through-couplings-at-a-coarser-step.md l. 8, has "with balance at the fine steps", which the page drops.
+- Its law 4 and Conditions (l. 19, l. 28) also ask each relatum listed once at every fine step, the levels without the part given at the fine steps, and a formation within the closure read there.
+- Replacement: "under a strict reading from step 0, with balance at the fine steps and each relatum listed once at every fine step, every selection through a formation's couplings read at the coarser steps, of a formation within the coupling closure as read there, selects alike the sampled levels with and without any part beyond that closure, which lies within the coupling closure".
+
+LESSER
+
+L1. "On 23 November that session…" (l. 128). Earlier in the paragraph "that session" is row FM's, then row DJ's ("That session's forecast"), and here it is the session he pasted the survey to (source file header, l. 3). Write: "On 23 November the session he had written those words to, which is not row FM's, …".
+
+L2. "took one part of it up as board row GR." GRNOTE l. 9 says the row "asks one thing of" what that session's three searches had not found joined. Write: "took up one thing its searches of 22 November had not found joined, coarser steps with selection through couplings, as board row GR".
+
+L3. "The rest of the question stays held." The board's row GR says "Open: … the same question asked of a pool's selections is not started"; row FM's board row says nothing of the question. The sentence does not say who holds. Write: "The rest is not started: row FM holds it by its own choice, and row GR names one further piece as open, the same question asked of a pool's selections."
+
+L4. "a part whose taking a selection through the selector's couplings registers at every step and none registers at the even steps". The record's law 5 and `Missed.fine_separates` say some selection read at the fine steps separates the levels with and without the part; "registers at every step" can be read as more. Write: "a part whose taking makes a difference to some selection through the selector's couplings read at every step and to none read at the even steps, though the sampled levels differ".
+
+L5. "it had read his "alright" as a yes to the order". The source (W/sources/15-codex-theory-conversations/2026-11-22-update-our-objectives-and-directions.md l. 16) says: "'Alright' it reads as a yes to the report it follows, and so to the order the report gave." Write: "it had read his "alright" as a yes to the report it follows, and so to the order that report gave; he has read neither the paragraph above nor this".
+
+L6. "as a read by one session with nothing built". READ l. 3: statements and docstrings at their lines, starting from the reads row DJ named; "No proof was read beyond the few lines printed with a statement." Add "of statements and docstrings, no proof read".
+
+L7. "The fourth is stated exactly, twice (…), with what the reading does handed in."
+- READ l. 38-40: "exactly" means an iff, and both laws are of a draw that stands (a floor on the use, a start already below its own point of no return).
+- Beside the old test "already stated whole", "stated exactly" misleads; line 42 of the page already tells this law with that premise.
+- Write: "The fourth is stated as an exact condition, twice (…), only with what the reading does handed in, and for a draw that stands."
+
+L8. "where the older laws say, for each marking of levels given, when it is in time". The module's head note (LevelAlone.lean l. 36) says "The older module was searched for this elimination, not read whole"; FM/NOTE.md l. 7 says the same. Add "as far as `TurningInTime` was searched; it was not read whole".
+
+L9. `H₂ + y₂`, `H₂`, `hi` and `D` are used at l. 132 with no gloss. FM/NOTE.md l. 13 calls `H₂ + y₂` "the corrected kind's point of no return". The record's Conditions (l. 34) say "That such a step D exists is not a statement here"; a positive need at most `H₂ + y₂` and a start at most `hi` are also premises. Write once: "the corrected kind's point of no return, `H₂ + y₂`", and "`D`, handed in as the first step at which…".
+
+L10. Said twice on the page.
+- The three clocks stand at l. 166 under "What we do not know", which already says chapter 2 §10 has the last two in one model and that no statement was found that compares all three.
+- The response handed in stands at l. 143 ("no fall in what a going-on rests on causes a new registering without the reading of it handed in").
+- Point to both and keep only what is new: the statement naming two, and the print's lookup.
+
+L11. "Wherever there is a rule and a share, what the selection responds to is handed in." READ l. 117 ends: "This is one writer's reading of two paper arguments and one evening's reads"; READ l. 58 says the "not found" rests on one module's theorem list, a grep of three names and the records named. Write: "In the laws this read opened, wherever there is a rule and a share…".
+
+L12. "the weight of those who read a loss among those who set the rule". READ l. 41 and l. 77 have "a reading of the loss by the others among the readers … by the counts at the share" and "the weight of those who read the loss"; l. 166 has "weight in how the loop is set". "Among those who set the rule" is in neither; use l. 166's words.
+
+L13. The five paragraphs do not say who read the module, or that they have been read.
+- The record's Evidence (l. 51): three forms read by four readers who took no part, a fourth form by a reader of another kind of model, and a reader of that repair.
+- FM/NOTE.md l. 29: the landed form was "not read again", its statements and proof terms identical by the lister.
+- Add a closing line as the neighbouring paragraphs have, naming this read.
+
+L14. The old paragraph's sentence on the roads survey ("of 393 passages…") has two corrections owed that the board's row FM names and that are not yet made: the aid behind its 39 candidates had missed every notion of the three modules beside the package, and `locked_turns_in_time_share_iff` was refused as a passage a second time. A pointer to the row would do.
+
+L15. For "not that they are not joined" on the carriers, the page could point to `Becoming/ChoiceCountCapture.lean`: its opening account (l. 8) reads selection through couplings and the lock on one chooser, in separate statements. By the record of 22 November (W/sources/15-codex-theory-conversations/2026-11-22-is-the-theory-precisely-this.md, the paragraph on the print of uses), two of its theorems reach both families through proof terms.
+
+CHECKED AND FOUND AS WRITTEN
+
+- All four links in the new text resolve from W/_process/, as do the three other links I tried.
+- "let's first merge back, then finish them on latest main" is verbatim (2026-11-23-first-merge-back-then-finish-them.md l. 21). "On its own reading of a line of his" matches that file (l. 23-27, l. 35), the board's row GR and GRNOTE l. 7.
+- Beyond the quotes, the new text says nothing of what he meant, wanted or decided. "He has read neither the order nor this" agrees with the old paragraph ("has not read this paragraph").
+- "One module landed, `Becoming.SampledSelection`": board row GR, landed 02:24 WIB.
+- "which shows that this can be, not that any reading does it": the record's "Does not show" l. 33 and GRNOTE l. 23.
+- "withdrawn before it was built: a reader found from the definitions, with no theorem stating it, that its statements were the lock's own laws re-indexed": GRNOTE l. 31, its TESTS.md.txt l. 57 and the board's row GR ("withdrawn by its own test, unbuilt", `RuleCapture.locked_stays` and `turn_locked` "re-indexed along a stretch that does not read", by unfolding `Locked`). The sources add "up to one rewrite" and that the built case was a mirror of an older pair.
+- First, second and third sentences as the read's headings have them (READ l. 14, 21, 25, 27).
+- "Each is stated by a law at least in part": READ l. 117, FM/NOTE.md l. 7.
+- "the turn law for a draw that rises is `unending_iff_first_marked` with the ending had another way": READ l. 75 and l. 83, on paper by row FM and row DJ. The read names a third piece, `unending_iff_above_kept_below`.
+- The module's statement at l. 132 (the premise `below`, `D + 1`, the lag, the marking of every level but the start's, the two ways of having the premise): record laws 2 to 5 and FM/NOTE.md l. 13-15.
+- "What it does not do" at l. 134: FM/NOTE.md l. 19 and l. 39, record l. 39-44, the board's row FM. None of the faults the note lists as mended is repeated: no "last chance", no no-return form the wrong way round, the lag kept apart, "it does not say what would have to be read instead" as the coordinator's fourth point asks.
+- `PoolFromCourse.window_standing_thinned` names `windowRead` and `Thinned.lossPool` in its statement (PoolFromCourse.lean l. 366-369).
+- "roads … is not started": the board's row FM. "none is started" in the old paragraph still holds.
+- By a grep of names in the two new files, comments included: LevelAlone names only notions of the level's clock, SampledSelection only the web's selection. Neither meets the test of M1.
+
+NOT CHECKED
+
+- No Lean statement or proof was read as such, beyond the docstrings and the few statements quoted above. In particular that `H₂ + y₂` is six on Twelve is taken from a docstring.
+- The print itself, its queries and FM's lookup scripts were not run and are not filed. READ l. 129, that row DJ's run by its closed lists finds no candidate naming two carriers or two clocks, is not in PRINT and could not be checked.
+- The JSON records were opened only for their statement fields; the returns of the readers, the briefs and the build logs were not read.
+- What the report of 22 November listed as its second item, and the transcript of his words, were not checked; only the filed source files were read.
+- Chapter 2 §10 and chapter 7 §3.6, named at l. 166, were not opened.
+- The rest of the direction page outside lines 42, 128 to 140, 143 and 166 was searched by word only.

@@ -1,0 +1,105 @@
+MUST
+
+Paths: `B/` = /Users/ren/tmp/dj/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/
+
+1. Quoted: "under a strict reading from step 0, a selection through a formation's couplings read at coarser steps is blind beyond the coupling closure as read there"
+   - Source: `Flow.sample_unselected_beyond_coupling`, B/SampledSelection.lean l. 263-274. "Strict" is `Strict σ := ∀ s, σ s < σ (s + 1)` (B/Sampling.lean l. 79); "from step 0" is `zero : σ 0 = 0`.
+   - The theorem has three further premises the sentence drops:
+     - `once : L.Once`, each relatum listed once at every fine step;
+     - `without : L.WithheldLevels part W l`, the levels without the part given at the fine steps;
+     - `balanced`, balance at every fine step on each condition coupled, on the web as read, into a formation within the closure as read.
+   - The conclusion is `select (atTimes σ W.level) ↔ select (atTimes σ l)`, for a selection through the couplings of a formation within that closure and a part all of whose members lie beyond it.
+   - The module's own head note (l. 45-49) and row GR's wording in READ-four-sentences.md.txt l. 133 ("with balance at the fine steps") both keep the premises.
+   - Replacement: "under a strict reading that starts at step 0, with each relatum listed once at every fine step, the levels without the part given at the fine steps and the flow balancing at the fine steps on what couples in at the coarser, every selection through the couplings, read at the coarser steps, of a formation within the coupling closure as read there selects alike the sampled levels with and without a part that lies beyond that closure (`Flow.sample_unselected_beyond_coupling`); that closure lies within the coupling closure (`Flow.sample_withinCoupling`)".
+
+2. Quoted: "a built case has a part whose taking a selection through the selector's couplings registers at every step and none registers at the even steps"
+   - Source, B/SampledSelection.lean:
+     - `Missed.fine_separates` (l. 407-409): `∃ select, web.SelectsThrough byLevel false (twice 1) select ∧ select web.level ∧ ¬ select kept`.
+     - `Missed.coarse_blind` (l. 417-419): for every `t` and every `select` with `(web.sample twice).SelectsThrough byLevel false t select`, `select (atTimes twice web.level) ↔ select (atTimes twice kept)`.
+     - `Missed.within_fine_beyond_coarse` (l. 395-397): the part is within the selector's closure at the fine steps and not within it as read at the even steps.
+   - The first is an existence: some selection through the selector's couplings on the web read at every step, up to fine step 2, selects the levels with the part and not those without. As the sentence stands it reads as "registers it at every step" and as "a selection does" in general; neither is stated. The requirement holds at step 1 only (`requires t f c := f = false ∧ c = false ∧ t = 1`, l. 299), and constant selections are selections through the couplings too.
+   - Replacement: "and in a built case (`Missed`) a part lies within the selector's coupling closure and beyond that closure as read at the even steps; some selection through the selector's couplings, read at every step up to step 2, selects the levels with the part and not the levels without it, and no selection through them read at the even steps, up to any step read, selects the sampled levels with and without it differently; the selector's one requirement is put at step 1, which the reading skips. This shows that it can be, not that any reading does it."
+
+3. Quoted: "On the older module's own worked course of a rising lock no such marking gives a line that never ends, though the level at the first step that differs is still at or above `H₂ + y₂`"
+   - Source: `LevelAlone.Twelve.none_unending`, B/LevelAlone.lean l. 725-728: `∀ marked [DecidablePred marked], ¬ marked 12 → ¬ «不穷» (net 1 (readBy marked back rise) (fun w x => RegimeMargin.step Three.giving (draw w) x)) «一» ((3, false), 12)`.
+   - The ways are `Nat × Bool` (a draw and a flag; `draw`, `rise`, l. 633-637). There is no share, no rule and no `Locked` in the statement.
+   - Its docstring (l. 721-723) says only: "By computation, the original level sequence agrees with that at `TurningInTime.Three.rise_count_ends`, which uses another way type." No Lean statement says the two courses are one.
+   - The older course (B/TurningInTime.lean l. 3020 ff.) is on `(share, rule, count)` with `Locked` and no level marked. The correction here (`back`, a return to the draw of three, l. 703) is not part of it.
+   - The "though" clause is as written: `Twelve.level_at_five_six` (l. 737-739) states level 10 at step 5 and 4 at step 6, against 3 + 3. That step 5 is the first that differs is discharged inside the private `next_iff` (l. 707-716, `D := 5`).
+   - Replacement: "On a course with the giving, the start and the draws of the older module's worked rising lock (level twelve, draw three rising by one; here the way is a draw alone, with no share, rule or lock, and that its levels are those of `TurningInTime.Three.rise_count_ends` is by computation, not a Lean statement), with a return to the draw of three as the correction and a need of one, no marking that does not mark twelve gives a line that never ends (`Twelve.none_unending`), though the level at step 5, the first that differs, is ten, at or above 3 + 3, and four one step later (`Twelve.level_at_five_six`); on another course one does (`Seven.some_unending`)."
+
+4. Quoted: "The fourth is stated exactly, twice (`locked_turns_in_time_on_window_iff`, `locked_turns_in_time_share_iff`), with what the reading does handed in."
+   - Source: B/TurningInTime.lean l. 1692-1733 and l. 1876-1909. Both are iffs: the line from a `Locked` start never ends exactly where there is a first step `T` of the lock's own course at a level in `[N, K)`, the need met up to it, and the level at `T + 1` at or above `H₂ + y₂`.
+   - Both ask a standing overdraw: `draws` (a floor `H₁` on the use wherever share and rule are not below the start's), `short₁`, and `below : x < H₁ + y₁`. The start is already past the point of no return of the use as it was.
+   - The third sentence's law, `locked_ends_rising` (l. 1499-1513), asks none of these. It asks `keeps` at no use, `high` and `more` (a use that rises).
+   - So "exactly" is fair only as "by an iff". The fourth sentence is the "unless" of the third's course, and neither law is of that course. The read this paragraph reports says so in its own heading (READ-four-sentences.md.txt l. 36: "Stated exactly twice, and neither is the 'unless' of C's course"; l. 40; reworded l. 85: "no named law has the rising draw with a turn").
+   - Handed in besides what the reading does:
+     - on the window law: `corrects`, `every`, `uses`, `least`, `low`, `covers`, `safe`, `high`;
+     - on the share law: `sets`, `lowRule`, `lowStays`, `uses`.
+   - Replacement: "The fourth is stated as an exact condition, twice (`locked_turns_in_time_on_window_iff`, `locked_turns_in_time_share_iff`), but of a lock whose use stands at or above a floor from a start already below that floor's point of no return, not of the third sentence's rising use: no named law has a rising draw with a turn. Handed in: what a reading at the window's levels sets, that the corrected kind uses one fixed amount, and, in the first, where the window lies."
+
+LESSER
+
+5. Quoted: "Under the regime's premises at a corrected use, a use that rises strictly for `hi` steps and one fixed correction"
+   - Source: `silent_at_start_iff_next_of_stays_below`, B/LevelAlone.lean l. 398-412. Premises: `sets`, `stays`, `uses`, `nothing`, `short`, `meets`, `keeps₀`, `needs`, `within`, `rises`, `high`, `rest`, `differs`, `below`.
+   - Not carried by the summary:
+     - the corrected way is of a kind the step as it was keeps and that uses `H₂`, so the corrected use stands once set (`sets`, `stays`, `uses`);
+     - the bound is on the step under no use (`keeps₀ : RegimeMargin.Keeps giving 0 hi`), which is stronger than the older laws' `Keeps giving H₂ hi` (`kept_within`, B/TurningInTime.lean l. 642);
+     - the start is at most `hi` (`high`).
+   - Replacement: "Under the regime's premises at a corrected use `H₂` (with the step under no use, not only under `H₂`, keeping levels within `hi`, and the start at most `hi`), a use that rises strictly for `hi` steps, and one fixed correction to a kind of way that the step as it was keeps and that uses `H₂`:"
+
+6. Quoted: "with `D` the first step at which the level of the course as it was differs from the start's"
+   - Source: `D` is handed in by `rest` and `differs`. That such a step exists is no Lean statement here (head note l. 46-50); from a level of nothing none does.
+   - Replacement: add "(`D` handed in; that there is such a step is not stated)".
+
+7. Quoted: "The one premise holds where the corrected use is no more than the course's first use, and, for any corrected use, where ..."
+   - Source: `stays_below_of_le_of_rises` (l. 482-487) also asks `nothing`, `short`, `keeps₀`, `high`, `rises`. `level_never_rises_of_rises` (l. 260-265) also asks `nothing`, `high`, `rises`. The step from its non-rise to the premise is inline in `silent_at_start_iff_next` (l. 538-539), not a statement of its own.
+   - Replacement: begin "Under the same premises, the one premise holds where ...".
+
+8. Quoted: "the turn law for a draw that rises is `TurningInTime.unending_iff_first_marked` with the ending had another way"
+   - Source: the ending is that law's premise `asItWasEnds : ∃ n, (Law.orbit (asItWas alone left) s n).2 < need` (B/TurningInTime.lean l. 851). `rising_takes_all` (l. 675-679) gives level 0 at step `hi + 1`, which with a positive need gives it.
+   - The law's right side is "the line never ends from the configuration after the first marked step". The level condition needs a second law at that step, `unending_iff_above` (l. 1017) or `unending_iff_above_kept_below`. The read says "three known pieces in a row" (l. 75).
+   - This chain is no longer only on paper for readings by marked levels: it is the private `LevelAlone.reading_in_time_iff` (B/LevelAlone.lean l. 330-362).
+   - Replacement: "... is `unending_iff_first_marked`, with its ending from `rising_takes_all` and a positive need, then `unending_iff_above` at the marked step".
+
+9. Quoted: "a growing kind removed in time is `LineOnAStock.line_ends` followed by `unending_iff_holds`"
+   - Source: both exist and say what the sentence needs.
+     - `line_ends` (B/LineOnAStock.lean l. 904-908): `∃ n, ∀ k, n ≤ k → ∀ u, u ∈ (course … k).1 → ¬ S u`.
+     - `unending_iff_holds` (l. 1239-1247): the net never ends ↔ `∃ k`, `Goes` before `k` and `Holds` at `k`, under `even`, `some`, `down`, `needs`, `nothing`, `high`, `along`.
+   - The read (l. 111-113) says the join also needs `TurningInTime.unending_from`, and that `even` and `some` hold only of units outside the line, which needs a congruence of the course "that I did not find stated".
+   - Replacement: add "with a joining step the read did not find stated".
+
+10. Quoted: "One statement names the last two together (`PoolFromCourse.window_standing_thinned`)"
+    - Source: B/PoolFromCourse.lean l. 366-369: under `Stands K p`, for every `g`, `windowRead (Drawn.poolRead u v) (joinRead (Drawn.poolRead u w)) N K p g = Thinned.lossPool u v w N p g`.
+    - "Names" is right. What it states is that two readings are equal at a configuration whose readers stand; it has no step, deadline or "in time" in it.
+    - Replacement: add "which says that while the readers stand the window's reading is the thinned pool's, and states no time".
+
+11. Quoted: "The third is nearly stated by one law (`TurningInTime.locked_ends_rising`)."
+    - Fair. For the record, what "nearly" covers: `more` is given (derived only in `count_rises`, l. 1532) and need not read the share or the rule (docstring l. 1495-1497); also given are `un`, `outside`, a positive need and `nothing`.
+
+CHECKED AND FOUND AS WRITTEN
+
+- "which lies within the coupling closure": `Flow.sample_withinCoupling` (B/SampledSelection.lean l. 188-189), closure as read implies closure; it needs no strictness.
+- "which shows that this can be, not that any reading does it": head note l. 71-73.
+- "where the older laws say, for each marking of levels given, when it is in time": `unending_iff_first_marked` (B/TurningInTime.lean l. 848-858) and `turns_in_time_iff` (l. 1129-1150). Both are iffs for any decidable `marked` and any `after` that is `alone` outside the marks.
+- The core law, clause by clause against l. 398-412: "given that this level stays below `H₂ + y₂` once below it" is `below`; the left side is `∃ marked, decidable, ¬ marked x₀ ∧ «不穷» …`; the right side is `H₂ + y₂ ≤ level … (D + 1)`; it is an iff.
+- "and exactly where the marking of every level but the start's does": `silent_at_start_iff_marking_all_but_start` (l. 434-449), same premises, right side the marking `fun x => x ≠ x₀`.
+- "The `+ 1` is a lag: ...": `pair` steps the level by the incoming way (B/TurningInTime.lean l. 343-344); head note l. 26-29.
+- "the corrected use is no more than the course's first use" is `le : H₂ ≤ use w`. "the step under no use does not fall as the level rises" is `mono`, with `RegimeMargin.step g H x = (x - H) + g (x - H)` (B/RegimeMargin.lean l. 249). "the start's own step does not raise the level" is `still`.
+- "on another course one does": `Seven.some_unending` (l. 765-768), and `Rising.some_unending` (l. 806-809).
+- "what a marking sets is one fixed correction, handed in": `readBy` (l. 129-130); head note l. 23-25 and l. 101.
+- "it makes no older law a case": head note l. 36. It calls older laws, and B/TurningInTime.lean was last changed on 21 November by git log.
+- "Where the earliest such marking is too late it says that every marking silent at the start's level is": the core's forward direction with the corollary, and `silent_at_start_none_iff_no_return` (l. 573-589) under law A's premises.
+- "it does not say what would have to be read instead": head note l. 101-103.
+- "handed in on the lock" (second sentence): `un` and `outside` are premises of `locked_ends_rising` (l. 1504-1505).
+- The two paper statements are told as on paper: "Two statements tried on paper came apart into laws already there".
+
+NOT CHECKED
+
+- No Lean, build, test or gate was run. Statements and docstrings were read; proofs only where a premise's use was in question. That each module builds, and the axiom reports, are taken from the head notes.
+- "The first is stated three times, on three carriers" and "concluded on the line on a stock": `Web.selects_alike_iff`, `after_alike`, `ways_alike`, `alike_iff`, `ClosedCapture.unread_course` and `need_unmet` were not opened.
+- "'Early enough' is stated on three clocks", and every claim resting on the print of what statements name ("named together with neither", "no statement naming two of them"). `ReadInTime` and the print were not opened.
+- "it joins no two places of the map": not set against the atlas. By statements, the module names notions of `TurningInTime`, `RegimeMargin` and, through `Recoverable` and `NoReturnAt`, `ReadOffInTime`; the older module already names these together.
+- The two records, NOTE.md of the study folder, the board, the files of his words, the dates and "landed", and who read what.
+- The first changed phrase ("and held by row FM's own choice") and the sentences on the withdrawn second part of row GR. The latter was checked only against the module head note l. 79-81, which says the same.
+- The private `Twelve.next_iff` was read, not run. The agreement of the `Twelve` levels with `rise_count_ends` was compared by eye from the two statements.
