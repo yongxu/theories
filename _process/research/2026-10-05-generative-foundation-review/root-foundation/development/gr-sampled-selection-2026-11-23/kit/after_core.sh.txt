@@ -1,0 +1,16 @@
+#!/bin/bash
+set -euo pipefail
+S=20261122T175942.715137Z
+cd /Users/ren/tmp/gr/wt
+L=/Users/ren/tmp/gr/land
+LB=experiments/integrated-correction/general-framework/generative-basis/lean/becoming
+python3 -B tools/research/repoint.py --reason "GR: one new module, Becoming.SampledSelection, entered the package and no existing module changed; the consolidated receipt was read at its new status line and source list; core run $S" --drift-json $L/check-1.json --apply > $L/repoint.json
+python3 - <<'PY'
+import json
+d=json.loads(open('/Users/ren/tmp/gr/land/repoint.json').read()); r=d.get('by_record',{})
+print(len(r),'records re-pointed')
+PY
+echo "--- shared laws"; python3 -B tools/research/gate.py hold -- python3 -B tools/research/shared_laws.py > $L/shared-laws.log 2>&1; tail -2 $L/shared-laws.log
+echo "--- proof uses"; python3 -B tools/research/gate.py hold -- python3 -B tools/research/proof_uses.py > $L/proof-uses.log 2>&1; tail -3 $L/proof-uses.log
+echo "--- places"; ( cd _process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/places-2026-11-21 && python3 -B build_places.py > $L/build_places.log 2>&1 ); tail -2 $L/build_places.log
+git status --short | awk '{print $1}' | sort | uniq -c

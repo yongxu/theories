@@ -43,3 +43,15 @@ That the module is `Strobe.converse_fails` with a requirement in place of activi
 ## The count from the print of proof terms
 
 Not what the row moved. By the print made in this landing (core run `20261122T175942.715137Z`), with the families as this session chose them on 22 November: one theorem's proof term names both a theorem of the modules on parts, wholes and coarser steps and one of the modules on selection through couplings, `Flow.sample_unselected_beyond_coupling`, which uses `Flow.BalancesOn.sample`, `Flow.WithheldLevels.sample` and `Flow.unselected_beyond_coupling`; through chains, two theorems of this module (the second is `Missed.coarse_blind`). Between those modules and the modules on the lock: none, as before. The print follows no definition.
+
+## After: what else is filed here (added 23 November, about 03:55 WIB, when everything was gathered onto one head)
+
+At Ren's word to the coordinating session that night ("I want to merge everything and create a unified head"), what this row still held only in scratch or in a session's context was filed here, as text:
+
+- [readers/](readers/): the four readers' final reports, word for word.
+- [kit/](kit/): the scripts of the landing (the record's writer, the steps after the core run, the two wait scripts, the landed clause).
+- [of-22-november/](of-22-november/): the two scripts behind the searches of 22 November that this row started from (`uses.py` over the print of proof terms, `samefile.py` by name over whole files), the two scripts that built the file of his words of that evening, and the two documents by another AI system that he pasted that evening, which are not his and which his words file describes; until now they were in a session's transcript only. No claim of either document was checked.
+- [SENTENCE-FOR-AGENTS.md.txt](SENTENCE-FOR-AGENTS.md.txt): one sentence put to him for AGENTS.md, not landed there, with what stands behind it and what does not.
+
+The two sentences in the root and the checker that this row left loosely worded were mended in row FM's landing (`c0b9584f4`). The direction page tells this row in row DJ's words (`0096b0e3a`), checked by this session against the record.
+

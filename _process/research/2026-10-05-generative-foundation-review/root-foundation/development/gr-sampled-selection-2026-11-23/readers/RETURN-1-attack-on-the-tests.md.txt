@@ -1,0 +1,134 @@
+AI-written: the final report of a reader who took no part (a Claude subagent of the session that holds row GR), word for word, taken from its transcript on 23 November 2026. Paths in it are of that night.
+
+**Attack on `/Users/ren/theories/tmp/coarser-1123/TESTS.md`: findings**
+
+Read-only; no Lean, build or gate was run. Every example below was computed by hand from the definitions and every "is by rfl" is from reading them, not from Lean. Paths are relative to `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/` unless absolute.
+
+The main result: as written, both parts can land with nothing of worth done, and M2's verdict on P4 and P5 is knowable now, so it is not a test that can go either way.
+
+### MUST
+
+**1. `Locked` for the stretch's reading is plain `Locked` k steps later, by unfolding, so P4 and P5 are `locked_stays` re-indexed.**
+- `RuleCapture.lean:160`: `def Locked ... (h : S → R → R) (p : S × R) : Prop := favours p.2 ∧ M.le p.2 (h p.1 p.2)`.
+- With the stretch's reading `H_k x g = h (orbit (f · g) x k) g` (P1), `Locked M favours H_k (x, g)` unfolds to `favours g ∧ M.le g (h (orbit … x k) g)`. That is `Locked M favours h (orbit … x k, g)`: the plain lock at the configuration `k` unread steps on.
+- P4, both halves, is then `locked_stays` (`RuleCapture.lean:182`) along a schedule that does not read, carried over by `Pace.never_reads_course` (`Pace.lean:180`) or `paced_stretch` (`Pace.lean:367`).
+- P5 is `turn_locked` at `b = true` on `(orbit x k, g)`, then `locked_stays` for `k` unread steps, with `share_kept_along` for the share.
+- M2's second clause says "after its definitions are unfolded, the statement of ... at particular arguments". These are instances only up to one rewrite from `paced` to `Law.orbit`, so a writer can truthfully answer "not the statement" and pass. The clause must say beforehand whether an instance up to that rewrite counts as said again.
+- Consequence on a course: `Locked` for the stretch's reading at stretch end `n` is plain `Locked` at the reading step inside stretch `n`. By `locked_stays` the course is then plainly `Locked` at every later step. The stretch's reading differs from the plain one only before the first reading step.
+
+**2. M2's first clause is passed by using either thing, not both.**
+- The text: "if their proof terms use neither `Pace.paced_stretch` (or P1) nor a lock law as it stands". This fails only when both are absent.
+- A re-proof of the lock by direct induction with one `paced_stretch` rewrite passes; so does a proof using only `share_kept_along`. N2 says "both"; M2 does not.
+- P5 as worded is about the stretch's turn, not a course, so it needs neither `paced_stretch` nor P1.
+- P4's second half is exempt from the clause altogether, and the first half is its case `k = 0` (if `Law.orbit _ x 0 = x` by rfl, not checked).
+
+**3. M4 does not catch what P6 will be: the mirror of the existing pair `Alternating` and `Reversed`.**
+- Both existing cases already share one start, one selection and one reading, and differ only in schedule:
+  - `RuleCapture.lean:724`: `paced select (threshold hi lo) (fun _ => true) (twoToOne, lo) t`, never locked either way (`never_locked`, line 807).
+  - `RuleCapture.lean:845`: `paced select (threshold hi lo) late (twoToOne, lo) t`, locked the other way from step 1 (`locked_down`, `not_absorbed`).
+- The module account says so at `RuleCapture.lean:44-48`: "held for one step before the reading ... locks the course the other way ... at a reading step itself it gives `Alternating`".
+- A P6 exists (hand computation): start `(⟨1,2⟩, hi)`.
+  - Read at every step: step 0 gives `(⟨4,2⟩, lo)`, which satisfies `Alternating.even`'s invariant, so it is never locked. At step 0, `hi ≤ threshold ⟨1,2⟩ = lo` fails.
+  - Read at every second step: `(⟨4,2⟩, hi)`, then `(⟨16,2⟩, hi)`, locked from there.
+- This is `Alternating.course` entered one step late for the first half, and `agreeing_stays` (`ClosedCapture.lean:765`) for the second. It is the up/down mirror of `Reversed`, given `ReadsShare.reverse` (`RuleCapture.lean:154`).
+- M4 names "with the schedule renamed"; a mirrored start and a different schedule escape that wording.
+
+**4. P6's contrast is the phase of the first reading, not the grain, and no test separates the two.**
+- Same start `(⟨1,2⟩, hi)` under `Witnesses.profile [false] true` (every step but the first): `(⟨4,2⟩, hi)`, then read gives `hi`. It locks as well, at the fine grain.
+- Same start, every second step but reading at the even steps: `(⟨4,2⟩, lo)`, `(⟨4,8⟩, lo)`, read gives `lo`. It locks downward, at the same coarse grain.
+- So "read coarser it locks, read finer it never does" would be a false telling of a true P6.
+- Missing test: P6 counts only with both companion courses stated, or its docstring may say only "one unread step before the first reading".
+
+**5. S5 as drafted holds for every `select`, by equality of the sampled histories.**
+- `/Users/ren/theories/tmp/coarser-1123/tree/Becoming/SampledSelection.lean:160-163`: `low := fun _ _ => 0`, `flicker := fun s _ => bit (flick s)`.
+- `Sampling.lean:242`: `flick_even : ∀ s, flick (twice s) = false`. So `atTimes twice low` and `atTimes twice flicker` are the same function, and the coarse half says nothing about couplings.
+- The fine half is `Web.separates` (`Selection.lean:200`).
+- The shape "one reader couples two histories alike, the other does not, so a selection is missed" already exists as `SelectionPool.lean:515` `anticipation_misses` ("A coarser reader misses one of the other's selections").
+- S5's wording ("two histories") permits this. It needs: the two histories differ at some sampled step.
+
+**6. S6 can be built with its two halves unrelated.**
+- "No coarse selection separates" can be had by cancellation: the part gives at one fine step and takes back at the next, as in `Cancelling`, `Sampling.lean:952`. The sampled levels with and without it are then equal.
+- "Within the fine closure, beyond the coarse" can be arranged separately by a requirement held only at unsampled steps.
+- S6 needs two more conditions: the sampled levels with and without the part differ on some condition, and some coarse selection (another formation's, or a wider `obs`) does separate them.
+- A real S6 is possible. Sketch: level of `c` is 1; the part takes 1 at step 0; `g` requires `c` with need 1 at step 1 only; `obs` empty; `σ = twice`. Sampled levels at coarse step 1 are 0 against 1, and `(W.sample twice).DependsOn g c` is false.
+
+**7. The closure shrinks at the coarser step only through `requires` being read at the sample instants; exchange is not lost.**
+- `Feedback.lean:157`: `Web.DependsOn W g c := ∃ t, W.requires t g c`. `Sampling.lean:133`: the sampled web has `fun s => W.requires (σ s)`.
+- `Sampling.lean:408-411`: `Flow.sample` takes totals of natural numbers over `span σ s`, and these cannot cancel. With `Strict σ` and `σ 0 = 0` every fine step lies in some span, so `(L.sample σ).Exchanges h c ↔ L.Exchanges h c`. The draft proves one direction (`sample_exchanges`, lines 75-81); the converse is by the same reasoning, not built.
+- `obs` does not change with the step (`Testing.lean:211`).
+- So S6 is `Strobe.coarse_quiet` / `converse_fails` (`Sampling.lean:270-284`) with `requires` in place of `active`. N4's sentence "blind to more of what couples in" would describe how `Web.sample` reads a requirement, not a selection.
+- Part 1 has no clause like M4 naming `Strobe`, and no test that the exchange iff is stated.
+
+**8. The stated falsifier for part 1 cannot fire.**
+- It names "only active relata giving or taking, bounded transmission". `unselected_beyond_coupling` (`Selection.lean:345-352`) takes only `without`, `balanced`, `beyond`, `within`, `through`. `uncoupled_beyond_coupling` (`Testing.lean:625-630`) is the same.
+- Neither has Acting, Taking or Transmitting as a premise, so this is known from the signatures before any build.
+- The draft's S4 does need two things the fine theorem does not, `once : L.Once` and `zero : σ 0 = 0` (draft lines 138-139), and the clause passes over them.
+- Live falsifiers would be: the coarse closure always equals the fine one; or (finding 7) the difference is all in point-reading `requires`.
+
+**9. By the letter, part 1 lands as the draft stands and part 2 lands on P1, P2 and a three-line P3.**
+- N1 excludes only "S2 alone". The draft's S2 is literally `selects_alike_iff` (line 55), S1 is a pullback, S3 is `WithinClosure.mono`.
+- N2 is met by construction: draft lines 146-147 call `unselected_beyond_coupling` and `BalancesOn.sample` directly.
+- N3 is met by the empty S5 of finding 5.
+- N4 and M2 say what the result "is", not that the module does not land. Only N3 and M3 state a consequence.
+- M1 ("P1 alone, or P1 with P2") is escaped by adding P3, which also satisfies M3 alone.
+- No clause in part 2 corresponds to N4 (P6 not built while P3 is).
+
+### SHOULD
+
+**10. S4 is `unselected_beyond_coupling` at `(L.sample σ, W.sample σ, atTimes σ l)` with two premises carried over.**
+- `beyond`, `within` and `through` are unchanged, at the sampled flow.
+- The one new law is the draft's `WithheldLevels.sample` (lines 125-135): withholding commutes with sampling.
+- N2 guards against a re-proof, not against this. Part 1 has no clause like M2's second, and should say whether S4 or that lemma is the join.
+
+**11. P3 is true and not vacuous, but cheap and beside the point of the lock.**
+- `ReadsShare` quantifies over the rules met: `∀ x y g g', P.le x y → M.le (h x g) (h y g')` (`RuleCapture.lean:150`).
+- The stretch's reading reads the rule through `f`. With `x = y = twoToOne`, `g = hi`, `g' = lo`, `k = 1`: `select ⟨2,1⟩ hi = ⟨8,1⟩` reads `hi`, `select ⟨2,1⟩ lo = ⟨2,4⟩` reads `lo`, and `hi ≤ lo` is false (`hi_not_le_lo`, line 692).
+- A witness on `Bool` unrelated to any lock would also meet P3's letter. It should be required on the same law as P6.
+
+**12. P4 lists "Raises and ReadsShare" only, but `locked_stays` and `turn_locked` also take `upper`.**
+- `RuleCapture.lean:170` and `183` both carry `upper : ∀ {g g'}, M.le g g' → favours g → favours g'`.
+- P4 is true without it: iterate `raises` under the held favouring rule, then `monotone`, then `M.trans`.
+- So calling the lock law "as it stands" forces a premise the statement does not list. Of the four M2 allows, only `share_kept_along` (line 388) avoids it.
+
+**13. Answer to question 3: the nearest theorems, and one missing from M2's twelve.**
+
+| Statement | Nearest | At which arguments |
+|---|---|---|
+| P4 first half | `locked_stays` | `c := (x, g)`, `reads := fun _ => false`, `t := 0`, `k := k`, rewritten by `never_reads_course` |
+| P4 second half | `locked_stays` | same, `t := k`, `k := k' - k` |
+| P5 | `turn_locked` (`RuleCapture.lean:169`), then `locked_stays` and `locked_not_below` | on `(orbit x k, g)`, a schedule reading only at its first step, `k + 1` steps |
+
+- `turn_locked` is not among the twelve. P5 has its conclusion for the stretch's law at `b = true`, but P5 is not `turn_locked` at particular arguments: its premise `ReadsShare` of the stretch's reading fails by P3.
+- "Lock kept though the reading in force is not `ReadsShare`" is already the theme of `PoolFromCourse.locked_along` (line 201), there for a lock read off `hA`.
+- The others are not near: `locked_rises`, `order_kept`, `window_order_kept`, `locked_step`, `unread_course`, `course_past`, `Thinned.rule_read`. `unread_course` bears on P2 only; `agreeing_stays` is P6's coarse half.
+
+**14. Tests a hostile reader would want (question 5), beyond those in 4 to 8.**
+- A statement that the stretch-reading lock is the plain lock at the reading step (finding 1), so no docstring presents it as a new kind of lock.
+- For S4: a case where its premises hold and the fine theorem's `beyond` fails. That is S6 done properly.
+- A consequence stated for N1, N2, N4, M1, M2 and M4, as N3 and M3 have.
+
+### NOTE
+
+**15. Truth of the statements (question 2), by hand.**
+- S1, S3, S4: true as the draft states them. S3 needs no premise. S4 needs `Strict`, which its wording omits.
+- S2: true, and is `selects_alike_iff`.
+- S6: possible, with the limits in findings 6 and 7.
+- P1, P2: true. `Unread` (`ClosedCapture.lean:131`) carries to the stretch's law by induction on its first component.
+- P3: true (finding 11).
+- P4, both halves: true under `Raises` and `ReadsShare` alone.
+- P5: true. With `g' = h (orbit x k) g` and `x' = orbit x (k+1)`: `orbit x k ≤ x'` by `raises` under `g`, and `x' ≤ orbit_{g'} x' k` by `raises` under `g'`, which favours by `upper`. Then `monotone`.
+- P6: exists (finding 3).
+- None found false. None found vacuous except S5 as drafted.
+
+**16. Already stated elsewhere (question 4).**
+- S4, P3, P4's second half: not found in what was read.
+- S5: `SelectionPool.anticipation_misses`.
+- S6: `Strobe.converse_fails` in kind.
+- P6: `Alternating` with `Reversed`, in mirror.
+- `paced_stretch` is used only inside `Pace.lean` (grep), which agrees with the TESTS line that no lock theorem goes through it.
+
+### Not checked
+- Nothing was compiled, so the rfl claims and the P6 and S6 examples are unverified in Lean.
+- The 409 module accounts were swept by grep (`coarse`, `sample`, `Locked`, `ReadsShare`, `orbit`, `every second`), not read. The bodies of `TurningInTime`, `ReadInTime`, `DrawnShaping`, `RuleShaping`, `GrammarRegularity`, `ChoiceCountCapture`, `Tower`, `Stuttering` and `IdleRemoval` were not opened beyond grep hits.
+- Most of `Testing.lean`, `Admission.lean` and `Feedback.lean` beyond the definitions cited were not read.
+- `build1.log` was not read, and the count of 25 theorems in TESTS line 29 was not verified.

@@ -1,0 +1,7 @@
+#!/bin/bash
+cd /Users/ren/tmp/gr/wt
+while ps -axo pid=,command= | grep -E '^ *[0-9]+ [^ ]*[Pp]ython[^ ]* (-[A-Za-z]+ )*[^ ]*(scratch_build\.py|gate\.py|check_becoming\.py)( |$)' >/dev/null; do sleep 5; done
+date '+start %H:%M:%S'
+make gate
+echo "exit $?"
+date '+end %H:%M:%S'

@@ -1,0 +1,28 @@
+import json, sys, re, os
+src = sys.argv[1]; out = sys.argv[2]
+msgs = []
+for line in open(src, encoding='utf-8'):
+    try: o = json.loads(line)
+    except Exception: continue
+    if o.get('type') != 'user': continue
+    m = o.get('message', {})
+    c = m.get('content')
+    texts = []
+    if isinstance(c, str): texts = [c]
+    elif isinstance(c, list):
+        if any(isinstance(p, dict) and p.get('type') == 'tool_result' for p in c): continue
+        texts = [p.get('text', '') for p in c if isinstance(p, dict) and p.get('type') == 'text']
+    t = '\n'.join(texts)
+    if not t.strip(): continue
+    msgs.append((o.get('timestamp'), t))
+print(len(msgs), 'user messages with text')
+for i, (ts, t) in enumerate(msgs):
+    # split off pasted blocks and system reminders
+    pasted = re.findall(r'<pasted_content[^>]*>(.*?)</pasted_content[^>]*>', t, re.S)
+    own = re.sub(r'<pasted_content[^>]*>.*?</pasted_content[^>]*>', '\n[PASTED]\n', t, flags=re.S)
+    own = re.sub(r'<system-reminder>.*?</system-reminder>', '', own, flags=re.S).strip()
+    print('=== %d  %s  own text %d ch, %d pasted block(s) of %s ch' % (i, ts, len(own), len(pasted), [len(p) for p in pasted]))
+    print(own[:1500])
+    for k, p in enumerate(pasted):
+        open(os.path.join(out, 'pasted-%d-%d.txt' % (i, k)), 'w', encoding='utf-8').write(p.strip('\n') + '\n')
+    open(os.path.join(out, 'own-%d.txt' % i), 'w', encoding='utf-8').write(own + '\n')

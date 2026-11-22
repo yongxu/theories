@@ -1,0 +1,7 @@
+#!/bin/bash
+cd /Users/ren/tmp/gr/wt
+while ps aux | grep -E 'gate\.py (run|hold)|check_becoming\.py|scratch_build\.py' | grep -v grep | grep -v 'gr/wt' >/dev/null; do sleep 5; done
+date '+start %H:%M:%S'
+python3 -B tools/research/gate.py hold -- python3 -B experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py
+echo "exit $?"
+date '+end %H:%M:%S'

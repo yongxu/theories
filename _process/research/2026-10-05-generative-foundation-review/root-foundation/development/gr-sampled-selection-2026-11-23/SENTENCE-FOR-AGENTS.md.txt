@@ -1,0 +1,9 @@
+AI-written (the session that holds row GR), 23 November 2026. NOT LANDED in AGENTS.md. The direction there changes only after Ren has read the change (rule 3). This file holds a sentence put to him in that session's report of 02:25 WIB, for him to take, change or refuse.
+
+Where: in "What we are doing", the paragraph that begins "It is first a map for alignment", after the sentence that ends "…and in which shaping how they select does not become what they select for."
+
+The sentence:
+
+What makes a difference to a selection depends on the grain at which it reads: a map that is to hold when things are joined or read at a coarser step has to say what is kept there and what is not.
+
+What stands behind it and what does not. Its first half has one theorem behind it, on one carrier: `Becoming.SampledSelection` (a selection through couplings on a web read at coarser steps; record `selection-through-couplings-at-a-coarser-step`). Nothing is proved of joining wholes. For the lock a coarser reading is already in its laws, by a reader's finding from the definitions with no theorem stating it. The second half is what he wrote on 22 November of another AI system's question ("i think this should be "our goal", but we may not frame it in …"), as that session reads it; he has not said the reading is right.

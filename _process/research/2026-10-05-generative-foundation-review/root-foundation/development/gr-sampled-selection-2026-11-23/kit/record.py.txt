@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+"""Write row GR's record once the core run's receipt exists. usage: record.py STAMP"""
+import json, hashlib, sys, os, datetime
+S = sys.argv[1]
+os.chdir('/Users/ren/tmp/gr/wt')
+LB = 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
+src = LB + '/Becoming/SampledSelection.lean'
+rec = LB + f'/becoming-checks/{S}/verification.json'
+note = '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gr-sampled-selection-2026-11-23/NOTE.md'
+sha = lambda p: hashlib.sha256(open(p, 'rb').read()).hexdigest()
+D = lambda *names: ['Becoming.' + n for n in names]
+laws = [
+ ("A selection through a formation's couplings on the web read at strictly increasing times, up to a coarse step, taken back along the reading, is a selection through its couplings on the web up to the fine step read.",
+  D('Web.SelectsThrough.of_sample', 'Web.AlikeThroughUpTo.sample', 'Web.sample_alikeThrough_iff', 'Web.sample_selects_alike_iff')),
+ ("The coupling closure read at the coarser steps lies within the coupling closure; with the reading strict and from step 0, where every dependence is a dependence at some step read, the coupling closure lies within the closure read there.",
+  D('Flow.sample_withinCoupling', 'Flow.withinCoupling_sample', 'Flow.sample_exchanges', 'Flow.exchanges_sample', 'Web.sample_coupledInto', 'Web.sample_dependsOn')),
+ ("With the reading strict and from step 0 and each relatum listed once at every fine step, the levels without a part, read at the coarser steps, are the levels without it of the flow read there.",
+  D('Flow.WithheldLevels.sample', 'Flow.sample_withhold_taken', 'Flow.sample_withhold_given')),
+ ("Under those premises, with balance at the fine steps on what couples in at the coarser, every selection through the couplings read at the coarser steps, of a formation within the closure read there, selects the sampled levels with and without a part beyond that closure alike.",
+  D('Flow.sample_unselected_beyond_coupling')),
+ ("A built case: a part within the coupling closure and beyond the closure read at the even steps; a selection through the selector's couplings separates the levels with and without it; none read at the even steps separates the sampled levels, which differ and which a selection there under a wider coupling separates.",
+  D('Missed.within_fine_beyond_coarse', 'Missed.fine_separates', 'Missed.coarse_blind', 'Missed.coarse_reads', 'Missed.coarse_differs')),
+]
+alld = [d for _, ds in laws for d in ds]
+r = {
+ "schema_version": 2,
+ "id": "selection-through-couplings-at-a-coarser-step",
+ "title": {"en": "Selection through couplings at a coarser step"},
+ "kind": "theorem",
+ "status": "recorded-checked",
+ "family": "F04",
+ "reviewed_at_utc": datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat(),
+ "statement": {"en": "Under a strict reading from step 0, with balance at the fine steps, a selection through a formation's couplings read at the coarser steps selects alike the sampled levels with and without any part beyond the coupling closure as read there; that closure lies within the coupling closure."},
+ "laws": [{"en": e, "declarations": ds} for e, ds in laws],
+ "hypotheses": [
+  {"en": "No axiom. That a selection is through a formation's couplings is supplied, as is which conditions are coupled by level."},
+  {"en": "The reading is at strictly increasing times and starts at step 0; each relatum is listed once at every fine step; the levels without the part are given at the fine steps; the flow balances at the fine steps on each condition coupled, at the coarser steps, into a formation within the closure read there."},
+ ],
+ "does_not_show": [
+  {"en": "That any actual reading skips a step at which a selector requires something: the built case puts the requirement at a step the reading skips.", "kind": "correspondence", "witness": "Becoming.Missed.within_fine_beyond_coarse"},
+  {"en": "The converse: that a part every selection read at the coarser steps selects alike lies beyond the closure read there.", "kind": "converse"},
+  {"en": "Anything of a reading that does not start at step 0, of scores, or of what a group's or a pool's selections reach at a coarser step.", "kind": "scope"},
+  {"en": "That the built case meets activity needing support or only active relata taking: its selector gives across the step at which its own requirement is unmet, the rest of the exchange being fixed.", "kind": "scope", "witness": "Becoming.Missed.coarse_blind"},
+  {"en": "Anything of a rule set again from the share it favours, of the pace of a reading or of a turn in time.", "kind": "non-implication"},
+ ],
+ "counterexamples": [],
+ "standard_boundaries": ["no-ethical-premise", "no-evaluation", "discrete-steps", "formal-not-empirical", "names-provisional", "omission-not-refutation"],
+ "validation_scope": {"en": f"Machine-checked by the consolidated Lean 4.29.1 checker (receipt {S}): the declarations cited, in one new module, have empty axiom reports; the checker verifies core purity. Written by one AI session from tests fixed before the builds that count and changed after each of three readers; four readers who took no part read the tests or the module, the last reading the statements and proofs as they stand; four sentences of the module's account and the README row changed after that read, and the coordinating session set the record and the row against the statements."},
+ "next_delta": {"en": "The same question asked of what a pool's selections reach, and a case that meets activity needing support."},
+ "correspondence": {"en": "A selection read at a coarser step than the exchange: a requirement that holds only at a step the reading skips couples nothing in at the steps read, so a part's taking from what is required there is not registered through the selector's couplings."},
+ "canonical_source": src,
+ "aliases": ["Selection through couplings at a coarser step"] + alld,
+ "dependencies": [
+  {"id": "selection-through-couplings", "relation": "formal-reuse", "detail": {"en": "Its law that a selection is blind beyond the coupling closure, used at the sampled flow and web."}},
+  {"id": "laws-at-coarser-steps", "relation": "formal-reuse", "detail": {"en": "Its law that balance on a family composes across a coarse step, used of the flow with a part withheld."}},
+ ],
+ "related": [],
+ "references": [
+  {"path": src, "role": "proof", "declarations": alld, "sha256": sha(src)},
+  {"path": rec, "role": "receipt", "sha256": sha(rec)},
+  {"path": note, "role": "review", "sha256": sha(note)},
+ ],
+ "proof_bindings": [{"source": src, "receipt": rec, "sha256_pointer": "/source_sha256/Becoming.SampledSelection", "success_pointer": "/status", "success_value": "passed"}],
+ "history": [{"en": "23 November 2026: added, on board row GR, on a session's reading of Ren's line to it of that day (sources/15-codex-theory-conversations/2026-11-23-first-merge-back-then-finish-them.md). AI-written (Claude Fable). The tests, what four readers changed, and a second part withdrawn before it was built are in the study note."}],
+}
+for k in ('statement',): assert len(r[k]['en']) <= 300, len(r[k]['en'])
+for l in r['laws']: assert len(l['en']) <= 420, len(l['en'])
+for l in r['hypotheses']: assert len(l['en']) <= 420
+for l in r['does_not_show']: assert len(l['en']) <= 240, (len(l['en']), l['en'][:40])
+assert len(r['validation_scope']['en']) <= 600, len(r['validation_scope']['en'])
+out = 'theories/becoming/results/records/' + r['id'] + '.json'
+open(out, 'w', encoding='utf-8').write(json.dumps(r, ensure_ascii=False, indent=1) + '\n')
+print(out, len(r['statement']['en']))

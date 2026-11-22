@@ -1,0 +1,452 @@
+# A conceptual grammar for compositional reality
+
+I think the best direction is to build a language that can describe how things arise, relate, transform, combine, and evolve, without assuming that the world is fundamentally made of isolated objects.
+
+And crucially, this language should be constructive: the same concepts should help us understand a cell, design a software system, build a robot, model an ecosystem, or reason about the organization of a society.
+
+My proposed name for this general approach is Relational–Compositional Systems Theory. That is a proposed synthesis, not the name of an established unified mathematical theory.
+
+Its central idea is:
+
+> A system is understood through its distinctions, relations, interactions, transformations, constraints, and compositions, situated within a context and unfolding across scales.
+
+There is no need to assume that either objects or relationships have absolute ontological priority. We can treat both as useful descriptions of persistent patterns within a changing whole.
+
+This is close to several active areas of mathematics, especially applied category theory, compositional dynamical systems, type theory, and causal abstraction. Recent work on open systems, polynomial functors, and evolving interfaces provides particularly useful foundations.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://arxiv.org\&sz=32)
+
+arXiv+2
+
+
+
+## 1. The vocabulary I would choose
+
+I would organize the language around twelve fundamental concepts, rather than begin with a collection of mathematical disciplines.
+
+| Concept        | What it describes                                                           |
+| -------------- | --------------------------------------------------------------------------- |
+| Context        | The situation in which something is defined, interpreted, or operates       |
+| Distinction    | What can be differentiated, identified, or recognized                       |
+| Relation       | How distinctions are connected or mutually defined                          |
+| Structure      | The organization of relations and their patterns                            |
+| Boundary       | How a system is distinguished from, yet connected to, its surroundings      |
+| State          | The configuration of a system at a particular moment or condition           |
+| Interaction    | How connected processes affect one another                                  |
+| Transformation | How configurations, relations, or structures change                         |
+| Constraint     | What limits, permits, or shapes possible configurations and transformations |
+| Composition    | How systems or processes combine into larger systems or processes           |
+| Dynamics       | The evolution of configurations and their relationships                     |
+| Scale          | How descriptions and organizations relate across levels of resolution       |
+
+These concepts are not twelve independent atoms of reality. They are an interdependent vocabulary, chosen because they are jointly useful for description and construction.
+
+For example, a boundary is itself established through distinctions and relations. Structure is an organization of relations. Dynamics is an organization of transformations. Composition may create new boundaries, states, constraints, and possible interactions.
+
+So the deeper question is not simply which nouns should we use?
+
+It is which operations and relationships between these concepts make the entire language coherent and composable?
+
+## 2. A richer vocabulary: from topology to dynamics to meaning
+
+The twelve concepts form the core. To actually model reality, however, we need a more expressive vocabulary of mathematical structures.
+
+I would arrange these into six families.
+
+## I. Form and organization
+
+What is arranged?
+
+Elements · Relations · Sets · Types · Graphs · Hypergraphs · Networks · Topologies · Spaces · Fields · Patterns · Boundaries
+
+A graph describes connectivity. A hypergraph allows relationships involving several elements. Topology describes continuity, neighborhoods, and related spatial structure. A field assigns values throughout a space.
+
+These are different mathematical descriptions; none needs to be the single fundamental picture of reality.
+
+## II. Change and behavior
+
+What happens?
+
+Events · Processes · States · Transitions · Flows · Dynamics · Feedback · Cycles · Attractors · Bifurcations · Adaptation · Evolution
+
+A process is not necessarily a static object with properties. It can be an ongoing pattern of interaction.
+
+An attractor describes a region or set toward which trajectories evolve. A bifurcation describes qualitative changes in behavior as conditions vary. Adaptation and evolution allow the rules, parameters, or organization of a system to change.
+
+## III. Transformation and symmetry
+
+What changes, and what remains?
+
+Maps · Morphisms · Actions · Groups · Groupoids · Symmetries · Invariants · Equivalences · Conservation Laws
+
+This family is especially important because two systems may appear different while exhibiting the same mathematical structure.
+
+A group describes invertible transformations and their composition. A groupoid generalizes this to invertible transformations between potentially different objects. A category can also describe irreversible transformations.
+
+That last distinction matters: real processes often cannot be reversed.
+
+## IV. Composition and interaction
+
+How does a whole come together?
+
+Interfaces · Ports · Protocols · Couplings · Wiring · Composition · Products · Operads · Cospans · Lenses · Resource Flows
+
+This is the most directly useful family for engineering.
+
+Operads express how multiple components combine into one. Cospans formalize certain ways of connecting systems along shared boundaries. Lenses describe forms of bidirectional interaction. These ideas already have working implementations in tools such as AlgebraicDynamics.jl.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.nist.gov\&sz=32)
+
+NIST+3
+
+
+
+## V. Coherence, causation, and constraint
+
+What makes an organization valid or meaningful?
+
+Constraints · Dependencies · Causality · Interventions · Probabilities · Consistency · Contracts · Invariants · Viability · Verification
+
+Compatible components do not necessarily form a functioning system.
+
+They must also satisfy constraints concerning physical quantities, timing, resource availability, uncertainty, and allowable behavior.
+
+Formal interface-contract theories and Markov categories provide useful foundations for reasoning about such properties.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://link.springer.com\&sz=32)
+
+link.springer.com+1
+
+
+
+## VI. Perspective, scale, and abstraction
+
+How does one description relate to another?
+
+Contexts · Observations · Representations · Semantics · Abstractions · Refinements · Scales · Hierarchies · Emergence · Local–Global Consistency
+
+The same system can be described at multiple resolutions and through multiple models.
+
+Category theory's functors and natural transformations are useful for relating such descriptions. Research in 2026 has specifically developed a framework for preserving causal structure across low-level and high-level models.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://arxiv.org\&sz=32)
+
+arXiv
+
+
+
+Notice something important: topology, structure, dynamics, and groups are not competing explanations. They answer different questions about a system, and they become more powerful when connected.
+
+## 3. The true generative grammar consists of operations
+
+Rather than treating all of those nouns as independent primitives, I would define a smaller set of verbs.
+
+### Ten generative operations
+
+Distinguish
+
+Identify a difference
+
+Relate
+
+Establish a connection
+
+Compose
+
+Form a larger organization
+
+Transform
+
+Change a configuration
+
+Constrain
+
+Specify what is possible
+
+Interact
+
+Couple processes
+
+Observe
+
+Produce a description
+
+Abstract
+
+Change resolution or perspective
+
+Verify
+
+Check a specified property
+
+Adapt
+
+Alter behavior or organization
+
+There are mathematical laws governing these operations.
+
+For example, composition often needs to be associative:
+
+\\[ (f\circ g)\circ h=f\circ(g\circ h) \\]
+
+This means that regrouping a valid chain of compositions does not change its meaning.
+
+A richer compositional framework may also support parallel composition:
+
+\\[ f\otimes g \\]
+
+And a useful model of an interactive system may support feedback, under appropriate mathematical conditions.
+
+The important thing is that the operations have laws, not merely intuitive meanings.
+
+A grammar becomes constructive when we can use those laws to derive consequences, detect inconsistencies, and assemble larger valid structures.
+
+That is why I would take particular inspiration from operads. Research on operads for complex-system engineering separates the rules for assembling a system from the multiple semantic models used to evaluate that system. This is extremely close to the architecture we want.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://doi.org\&sz=32)
+
+DOI
+
+
+
+## 4. The mathematical object I would build around: an open, evolving system
+
+Now we can turn the vocabulary into an engineering foundation.
+
+Start with an open system: something with an internal configuration and a way to interact with its surroundings.
+
+A simple discrete-time model can be represented as:
+
+\\[ \mathcal S=(X,I,O,\delta,\lambda,K) \\]
+
+where:
+
+| Symbol                       | Meaning                           |
+| ---------------------------- | --------------------------------- |
+| \\(X\\)                      | Space of possible internal states |
+| \\(I\\)                      | Input interface                   |
+| \\(O\\)                      | Output interface                  |
+| \\(\delta:X\times I\to X\\)  | State-transition rule             |
+| \\(\lambda:X\times I\to O\\) | Output rule                       |
+| \\(K\\)                      | Constraints and invariants        |
+
+This is a starting model, not a universal mathematical definition of all systems. Physical processes, probabilistic processes, and concurrent software may require different semantics.
+
+Now imagine two systems:
+
+\\[ A:I\rightarrow M,\qquad B:M\rightarrow O \\]
+
+If their interfaces and semantics are compatible, they can be connected:
+
+\\[ B\circ A:I\rightarrow O \\]
+
+Sequential composition of two open systems. The internal details remain modular, while the composite exposes its own boundary.
+
+The same formal approach can describe a sensor connected to a controller, a production process connected to a logistics process, or a software service connected to another service.
+
+But reality is more complicated in three crucial respects.
+
+First, connectivity changes. Organisms grow, organizations restructure, robots reconfigure, and software agents acquire new capabilities.
+
+We therefore need to represent the evolving connection graph itself:
+
+\\[ G\_{t+1}=\Psi(G_t,X_t,E_t) \\]
+
+Second, systems are uncertain. Many transitions are stochastic rather than deterministic. We can replace deterministic transitions with a probability kernel:
+
+\\[ P(X\_{t+1},O_t\mid X_t,I_t) \\]
+
+Third, descriptions change across scales. A collection of components may admit a higher-level description that preserves some, but not all, lower-level behavior.
+
+A crucial research question is whether the abstraction approximately commutes with the dynamics:
+
+\\[ \alpha\circ F\_{\mathrm{micro}} \\;\approx\\; F\_{\mathrm{macro}}\circ\alpha \\]
+
+In other words, does evolving a detailed model and then abstracting it give approximately the same relevant result as abstracting first and evolving the higher-level model?
+
+This is one way of expressing what we would want from coherent multiscale modeling.
+
+Recent work is directly relevant: Spivak's February 2026 paper studies interactions that change the interfaces of the interacting parties themselves, while Lorenz and Tull's work develops compositional causal abstraction. Both remain research directions, but they address two major limitations of simple modular models.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://arxiv.org\&sz=32)
+
+arXiv+1
+
+
+
+## 5. What this looks like as software
+
+One reason this approach is attractive is that the mathematical grammar can have a corresponding software grammar.
+
+Consider the following minimal TypeScript implementation:
+
+```
+
+type System<S, I, O> = {
+  initial: S;
+  step: (
+    state: S,
+    input: I
+  ) => { state: S; output: O };
+};
+
+function compose<A, B, C, S, T>(
+  first: System<S, A, B>,
+  second: System<T, B, C>
+): System<readonly [S, T], A, C> {
+  return {
+    initial: [first.initial, second.initial],
+    step: ([s, t], input) => {
+      const a = first.step(s, input);
+      const b = second.step(t, a.output);
+      return {
+        state: [a.state, b.state],
+        output: b.output
+      };
+    }
+  };
+}
+
+```
+
+This is a small but meaningful example: two stateful systems become a new stateful system, with the intermediate interface hidden inside the composition.
+
+The example assumes discrete steps and immediate sequential propagation. It does not yet implement feedback-loop safety, scheduling, concurrency, uncertainty, resource conservation, or formal contracts.
+
+To build the larger framework, I would extend this with a typed intermediate representation describing:
+
+Component types, ports, protocols, connection diagrams, state transitions, resource flows, constraints, temporal rules, composition operators, observations, and refinement mappings.
+
+Importantly, I would not write a single giant universal runtime.
+
+I would create a common compositional intermediate representation, with multiple semantic backends: one for deterministic software, one for stochastic simulation, one for physical dynamics, one for resource accounting, and so forth.
+
+This is strongly aligned with the separation of composition syntax and semantic interpretation in applied category theory, and has concrete precedents in [AlgebraicJulia](https://www.algebraicjulia.org/?utm_source=chatgpt.com) and its compositional dynamics tooling.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.algebraicjulia.org\&sz=32)
+
+algebraicjulia.org+1
+
+
+
+## 6. What makes it general beyond software?
+
+The key is that the grammar remains stable while the interpretation changes.
+
+| Concept     | Software agent               | Living cell                     | Social institution                     |
+| ----------- | ---------------------------- | ------------------------------- | -------------------------------------- |
+| Boundary    | API and permissions          | Membrane and exchange           | Membership and jurisdiction            |
+| State       | Memory and task context      | Molecular concentrations        | Resources and institutional conditions |
+| Interaction | Messages and tool calls      | Chemical signaling              | Communication and transactions         |
+| Dynamics    | State updates and learning   | Metabolism and regulation       | Changing rules and behavior            |
+| Constraint  | Types and contracts          | Physical and biochemical limits | Laws, rights, norms, budgets           |
+| Composition | Services and agent teams     | Tissues and organisms           | Organizations and networks             |
+| Adaptation  | Learning and reconfiguration | Homeostasis and evolution       | Institutional learning and reform      |
+
+Notice that these are analogies between system descriptions, not assertions that a living cell, a person, and a software program obey identical equations.
+
+The social case in particular requires concepts such as agency, consent, legitimacy, rights, and welfare. These cannot be obtained merely by relabeling a software API as a social interface.
+
+The generality comes from a shared method of constructing and relating models, rather than forcing every part of reality into the same detailed model.
+
+## 7. The important missing concept: coherence across composition
+
+I would make coherence an especially prominent word.
+
+A system is not coherent merely because all its components are connected.
+
+For example, two software services might have matching input and output types while disagreeing about what the data means. Two machines might fit together physically but violate energy, timing, or safety requirements. Two institutions might cooperate procedurally while imposing unacceptable consequences on people outside their immediate boundaries.
+
+For a compositional framework, at least five distinct forms of coherence matter:
+
+- Structural coherence: Connections and compositions are valid.
+- Semantic coherence: The connected parts interpret shared information compatibly.
+- Dynamical coherence: Their coupled behavior remains well-defined and meets relevant temporal requirements.
+- Constraint coherence: The combined system respects its specified invariants, resource limits, and safety properties.
+- Cross-scale coherence: Different descriptions of the system preserve the relationships that their intended uses require.
+
+These can be partially formalized, but there is no single general mathematical test that establishes all five for arbitrary real systems.
+
+The particularly interesting property is compositional verification: if we establish properties of the parts and their interfaces, when can we derive properties of the whole?
+
+This is the central concern of assume–guarantee contracts, interface theories, and compositional systems engineering.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www2.eecs.berkeley.edu\&sz=32)
+
+EECS at UC Berkeley+1
+
+
+
+And there is an important subtlety:
+
+A whole can possess novel behavior even when its parts are fully specified.
+
+Composition can produce feedback, nonlinear effects, and emergent patterns. Mathematical compositionality does not mean that the whole must be reducible to a simple sum of its parts. The organization and interactions are themselves part of the model.
+
+## 8. The architecture I would ultimately use
+
+If I were to develop this into a general framework, I would organize it into five layers.
+
+Layer 5 — Interpretation and evaluation
+
+Observations, models, causal explanation, objectives, verification, uncertainty
+
+Layer 4 — Abstraction and scale
+
+Refinement, equivalence, hierarchy, local–global consistency, multiscale mappings
+
+Layer 3 — Dynamics and adaptation
+
+State transitions, flows, feedback, learning, reconfiguration, evolving topology
+
+Layer 2 — Relations and composition
+
+Interfaces, coupling, wiring, morphisms, composition operators, protocols
+
+Layer 1 — Distinctions and configurations
+
+Contexts, types, elements, states, properties, spaces, constraints
+
+These are modeling layers, not separate physical levels or an asserted hierarchy of what fundamentally exists. Relations work in both directions.
+
+An important design principle would be to keep the structure of composition independent of any one implementation.
+
+We could describe a system once, then interpret it using multiple mathematical or computational semantics. For example, the same architecture might support a logical model, a probabilistic model, an executable simulation, and a resource-flow analysis—provided the necessary mappings between those models are explicitly specified.
+
+That provides a potential basis for coherent scientific modeling and compositional software engineering.
+
+## 9. The shortest expression of the whole picture
+
+There are two useful levels of compression.
+
+The first is a descriptive vocabulary:
+
+Context · Distinction · Relation · Structure · Boundary · State · Interaction · Transformation · Constraint · Composition · Dynamics · Scale
+
+The second is a constructive vocabulary:
+
+Type · Interface · Morphism · Composition · State Transition · Invariant · Observation · Abstraction · Refinement · Verification
+
+The first helps us describe systems without prematurely reducing them to machines or isolated objects.
+
+The second helps us implement and reason about systems with explicit mathematical rules.
+
+I would not try to compress these into one list without distinctions, because describing what exists, modeling what happens, and proving what a construction preserves are different activities.
+
+### The deeper principle
+
+A great deal of what we call an object is identifiable through relatively stable patterns of relations and transformations.
+
+A great deal of what we call a structure is the organization of those relations.
+
+A great deal of what we call dynamics is the unfolding and transformation of that organization.
+
+And composition is how processes and structures participate in larger processes and structures, potentially generating new behavior and new levels of description.
+
+This suggests a powerful general research direction:
+
+To construct a formal language in which structure, dynamics, composition, and abstraction are mutually coherent—where we can build systems from smaller systems, change their organization, reason across scales, and determine which properties persist through those changes.
+
+The mathematics for significant parts of this already exists. What does not yet exist is a single mature, general-purpose framework that brings all of it together across software, physical systems, biology, and institutions.
+
+I think that is the interesting project: not merely finding a more universal set of nouns, but developing a minimal generative grammar of composable processes, together with the semantics and laws that make its descriptions executable, testable, and reliable.
