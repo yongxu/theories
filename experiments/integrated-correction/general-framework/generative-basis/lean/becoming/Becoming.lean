@@ -402,6 +402,7 @@ import Becoming.ReadingsPersist
 import Becoming.FromTheDynamics
 import Becoming.ReadOffInTime
 import Becoming.TurningInTime
+import Becoming.LevelAlone
 import Becoming.LineOnAStock
 import Becoming.WayOfUnits
 import Becoming.LineOnAStockCases
@@ -5214,6 +5215,21 @@ tagged instance or application.
   class ends while the net goes on, with no marked level it ends as it was. The marks, `AloneOutside`,
   the kept kind and its one use are premises, not derived. Imported by `Becoming.LineOnAStock` and
   `Becoming.WayOfUnits`; a model.
+* `Becoming.LevelAlone` (L2, through `Becoming.TurningInTime`): a reading of the level alone, over
+  every marking that does not mark the start's level. A marking is a decided set of levels; under
+  it the way after a step at a marked level is one fixed correction, handed in, and elsewhere the
+  way's step as it was (`LevelAlone.readBy`). With `D` the first step at which the level of the
+  course as it was differs from the start's, and given that the course as it was, once below the
+  corrected kind's `H₂ + y₂`, stays below, some marking silent at the start's level gives a line
+  that never ends exactly where the level at step `D + 1` is at or above `H₂ + y₂`
+  (`LevelAlone.silent_at_start_iff_next_of_stays_below`), and exactly where the marking of every
+  level but the start's does (`silent_at_start_iff_marking_all_but_start`). That one fact is had
+  where the corrected use is no more than the course's first use (`silent_at_start_iff_next_of_le`)
+  and, for any corrected use, where the step under no use does not fall as the level rises and
+  the start's own step does not raise the level (`silent_at_start_iff_next`); under the latter the
+  same is said as recoverable at step `D + 1`, as a point of no return at or before it, and in the
+  use at step `D`. Five worked courses, two of which meet every premise of the latter law but one.
+  A leaf: it makes no law of `Becoming.TurningInTime` a case.
 * `Becoming.LineOnAStock` (L2, through `Becoming.TurningInTime` and `Becoming.ReadingsPersist`; it imports `Becoming.SelectionTerm` too):
   a line on a stock, units that leave offspring on a renewed
   level (board item DJ). It states no continuation condition and no valuation. A unit has a need, a use

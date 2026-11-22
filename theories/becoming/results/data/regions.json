@@ -4897,6 +4897,11 @@
    "region": "collective",
    "base": "general",
    "note": "GR a selection through couplings on a web read at coarser steps: what it keeps, the closure read there, blindness beyond it"
+  },
+  "Becoming.LevelAlone": {
+   "region": "map",
+   "base": "general",
+   "note": "FM a reading of the level alone: over every marking that does not mark the start's level, when some such marking gives a line that never ends, under each law's stated premises"
   }
  }
 }
