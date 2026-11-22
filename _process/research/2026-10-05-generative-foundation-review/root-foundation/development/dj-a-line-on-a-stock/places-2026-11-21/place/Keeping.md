@@ -4,7 +4,7 @@
 
 - *file:* `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean`
 - *result records that name this place's file as a source* (computed; not a link): `finite-continuation-plans`, `joint-plan-composition`, `kept-at-the-length-of-a-list`, `what-holding-for-a-reading-is-worth`, `when-to-inquire-and-when-to-respond`
-- *dynamics in the atlas that name one of those records* (computed; not a link): `a-stop-passed-by-a-listing-that-fixes-the-sign`
+- *dynamics in the atlas that name one of those records* (computed; not a link): `a-stop-passed-by-a-listing-that-fixes-the-sign`, `kept-at-the-length-of-a-list`
 
 ## 21 November, a future opening or closing: reader courses-still-open
 

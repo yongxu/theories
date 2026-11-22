@@ -4,6 +4,7 @@
 
 - *file:* `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean`
 - *result records that name this place's file as a source* (computed; not a link): `candidate-theorems-of-the-corpus`, `kept-at-the-length-of-a-list`, `processes-represented-both-ways`, `testing-within-the-net`
+- *dynamics in the atlas that name one of those records* (computed; not a link): `kept-at-the-length-of-a-list`
 
 ## 22 November, every module by fifteen questions
 

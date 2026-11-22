@@ -4,7 +4,7 @@
 
 - *file:* `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Attraction.lean`
 - *result records that name this place's file as a source* (computed; not a link): `attraction-is-not-returning`, `basins-of-a-determined-law`, `hexagram-world-laws`, `hexagrams-on-the-spine`, `kept-at-the-length-of-a-list`, `necessarily-drawn-is-not-returning`, `shared-laws-on-the-grammar`
-- *dynamics in the atlas that name one of those records* (computed; not a link): `attraction-is-not-returning`, `basins-of-a-determined-law`, `falls-that-end-do-not-recur`, `necessarily-drawn-is-not-returning`, `waxing-and-waning-returns`
+- *dynamics in the atlas that name one of those records* (computed; not a link): `attraction-is-not-returning`, `basins-of-a-determined-law`, `falls-that-end-do-not-recur`, `kept-at-the-length-of-a-list`, `necessarily-drawn-is-not-returning`, `waxing-and-waning-returns`
 
 ## 22 November, every module by fifteen questions
 

@@ -4647,6 +4647,7 @@
    ],
    "dynamics": [
     "a-reading-kept-by-its-update",
+    "kept-at-the-length-of-a-list",
     "never-leaving-a-guard"
    ],
    "page": "place/Viability.md"
@@ -4754,7 +4755,8 @@
    ],
    "dynamics": [
     "a-reading-kept-by-its-update",
-    "a-revision-that-opens-a-correction"
+    "a-revision-that-opens-a-correction",
+    "kept-at-the-length-of-a-list"
    ],
    "page": "place/GuardHorizon.md"
   },
@@ -7114,7 +7116,8 @@
     "when-to-inquire-and-when-to-respond"
    ],
    "dynamics": [
-    "a-stop-passed-by-a-listing-that-fixes-the-sign"
+    "a-stop-passed-by-a-listing-that-fixes-the-sign",
+    "kept-at-the-length-of-a-list"
    ],
    "page": "place/Keeping.md"
   },
@@ -7314,6 +7317,7 @@
    "dynamics": [
     "a-course-that-only-returns",
     "falls-that-end-do-not-recur",
+    "kept-at-the-length-of-a-list",
     "rule-raised-every-other-step",
     "where-the-possible-grows"
    ],
@@ -10182,7 +10186,8 @@
     "kept-at-the-length-of-a-list"
    ],
    "dynamics": [
-    "a-reading-kept-by-its-update"
+    "a-reading-kept-by-its-update",
+    "kept-at-the-length-of-a-list"
    ],
    "page": "place/CommonResponse.md"
   },
@@ -10931,6 +10936,7 @@
     "attraction-is-not-returning",
     "basins-of-a-determined-law",
     "falls-that-end-do-not-recur",
+    "kept-at-the-length-of-a-list",
     "necessarily-drawn-is-not-returning",
     "waxing-and-waning-returns"
    ],
@@ -15464,7 +15470,9 @@
     "processes-represented-both-ways",
     "testing-within-the-net"
    ],
-   "dynamics": [],
+   "dynamics": [
+    "kept-at-the-length-of-a-list"
+   ],
    "page": "place/GrammarCandidates.md"
   },
   {
@@ -18060,6 +18068,7 @@
     "kept-at-the-length-of-a-list"
    ],
    "dynamics": [
+    "kept-at-the-length-of-a-list",
     "never-leaving-a-guard"
    ],
    "page": "place/KeepableStep.md"
@@ -18360,6 +18369,7 @@
    ],
    "dynamics": [
     "a-cascade-along-total-dependence",
+    "kept-at-the-length-of-a-list",
     "market-finite-support-obstruction",
     "never-leaving-a-guard",
     "overcompensating-giving-cycles",
@@ -20829,6 +20839,7 @@
     "where-a-run-goes-on"
    ],
    "dynamics": [
+    "kept-at-the-length-of-a-list",
     "recurrence-without-premise",
     "when-the-runs-of-a-process-settle"
    ],

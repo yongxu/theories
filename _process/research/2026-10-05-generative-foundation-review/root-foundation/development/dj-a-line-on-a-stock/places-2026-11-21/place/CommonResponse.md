@@ -4,7 +4,7 @@
 
 - *file:* `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CommonResponse.lean`
 - *result records that name this place's file as a source* (computed; not a link): `a-response-common-over-a-reading`, `kept-at-the-length-of-a-list`
-- *dynamics in the atlas that name one of those records* (computed; not a link): `a-reading-kept-by-its-update`
+- *dynamics in the atlas that name one of those records* (computed; not a link): `a-reading-kept-by-its-update`, `kept-at-the-length-of-a-list`
 
 ## 21 November, a choice made from a reading: reader response-common-over-a-reading
 

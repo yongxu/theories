@@ -4,7 +4,7 @@
 
 - *file:* `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Parting.lean`
 - *result records that name this place's file as a source* (computed; not a link): `identification-where-runs-part`, `kept-at-the-length-of-a-list`, `typicality-by-counting`, `where-a-run-goes-on`
-- *dynamics in the atlas that name one of those records* (computed; not a link): `recurrence-without-premise`, `when-the-runs-of-a-process-settle`
+- *dynamics in the atlas that name one of those records* (computed; not a link): `kept-at-the-length-of-a-list`, `recurrence-without-premise`, `when-the-runs-of-a-process-settle`
 
 ## 22 November, every module by fifteen questions
 

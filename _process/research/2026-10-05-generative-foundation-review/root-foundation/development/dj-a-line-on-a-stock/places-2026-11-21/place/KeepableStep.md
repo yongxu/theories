@@ -4,7 +4,7 @@
 
 - *file:* `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean`
 - *result records that name this place's file as a source* (computed; not a link): `conditions-kept-together`, `kept-at-the-length-of-a-list`
-- *dynamics in the atlas that name one of those records* (computed; not a link): `never-leaving-a-guard`
+- *dynamics in the atlas that name one of those records* (computed; not a link): `kept-at-the-length-of-a-list`, `never-leaving-a-guard`
 
 ## 22 November, every module by fifteen questions
 

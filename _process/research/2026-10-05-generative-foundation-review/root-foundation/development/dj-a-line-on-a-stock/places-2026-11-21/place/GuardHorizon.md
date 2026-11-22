@@ -5,7 +5,7 @@
 - *file:* `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean`
 - *table of 20 November:* GuardHorizon with Keeping, letters `NNNNYPPP`, standing core, told in chapter 3 §9 (keptFor_iff_plan, plans_iff_choice, uniform_policy_iff_fiber_feasible) and §12 (uniform_policy_iff_common, ungiven_reading_not_uniform); chapter 5 §11 (Plan.zip_keeps, compatible_of_zip_keeps); chapter 8 §7 and §8
 - *result records that name this place's file as a source* (computed; not a link): `a-reading-kept-by-its-update`, `a-response-common-over-a-reading`, `a-revision-that-opens-a-correction`, `kept-at-the-length-of-a-list`, `when-to-inquire-and-when-to-respond`
-- *dynamics in the atlas that name one of those records* (computed; not a link): `a-reading-kept-by-its-update`, `a-revision-that-opens-a-correction`
+- *dynamics in the atlas that name one of those records* (computed; not a link): `a-reading-kept-by-its-update`, `a-revision-that-opens-a-correction`, `kept-at-the-length-of-a-list`
 
 ## 21 November, a future opening or closing: reader courses-still-open
 

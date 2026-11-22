@@ -4,7 +4,7 @@
 
 - *file:* `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean`
 - *result records that name this place's file as a source* (computed; not a link): `coupled-regimes`, `coupled-webs`, `identification-where-runs-part`, `kept-at-the-length-of-a-list`, `lifting-where-branching-is-finite`, `market-finite-support-obstruction`, `market-partial-correction-boundary`, `market-supported-finite-transition`, `regime-in-any-amounts`, `threshold-in-the-state-plane`, `where-a-run-goes-on`, `where-a-run-of-a-regime-comes-to-rest`, `whether-a-loop-closes-a-difference`
-- *dynamics in the atlas that name one of those records* (computed; not a link): `a-cascade-along-total-dependence`, `market-finite-support-obstruction`, `never-leaving-a-guard`, `overcompensating-giving-cycles`, `recurrence-without-premise`, `regime-in-any-amounts`, `support-beyond-a-band-can-cycle`, `threshold-in-the-state-plane`, `when-the-runs-of-a-process-settle`, `where-a-run-of-a-regime-comes-to-rest`, `whether-a-loop-closes-a-difference`
+- *dynamics in the atlas that name one of those records* (computed; not a link): `a-cascade-along-total-dependence`, `kept-at-the-length-of-a-list`, `market-finite-support-obstruction`, `never-leaving-a-guard`, `overcompensating-giving-cycles`, `recurrence-without-premise`, `regime-in-any-amounts`, `support-beyond-a-band-can-cycle`, `threshold-in-the-state-plane`, `when-the-runs-of-a-process-settle`, `where-a-run-of-a-regime-comes-to-rest`, `whether-a-loop-closes-a-difference`
 
 ## 22 November, every module by fifteen questions
 

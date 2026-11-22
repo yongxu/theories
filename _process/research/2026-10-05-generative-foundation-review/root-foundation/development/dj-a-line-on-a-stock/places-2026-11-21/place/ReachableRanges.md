@@ -4,7 +4,7 @@
 
 - *file:* `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean`
 - *result records that name this place's file as a source* (computed; not a link): `kept-at-the-length-of-a-list`, `shared-laws-on-the-grammar`, `tasks-and-what-performs-them`, `what-a-course-keeps-reachable`, `what-can-be-born-next`, `where-the-possible-grows`
-- *dynamics in the atlas that name one of those records* (computed; not a link): `a-course-that-only-returns`, `falls-that-end-do-not-recur`, `rule-raised-every-other-step`, `where-the-possible-grows`
+- *dynamics in the atlas that name one of those records* (computed; not a link): `a-course-that-only-returns`, `falls-that-end-do-not-recur`, `kept-at-the-length-of-a-list`, `rule-raised-every-other-step`, `where-the-possible-grows`
 
 ## 21 November, a future opening or closing: reader courses-still-open
 
