@@ -76,3 +76,12 @@ About 1.5 million tokens on the Claude side (this session's own count, before th
 - `returns/RETURN-*.md.txt`: the five Claude readers; `astra/REPORT.md.txt` with its prompt: the reader of another kind.
 - `returns/CHECK-cases-opus.md.txt` (every claimed case, with a table) and `returns/CHECK-whole-fable.md.txt` (agreement, every "not found", the sentences).
 - `returns/CHECK-note-fable.md.txt`: the check of this note, with its replacements; `NOTE.before-check.md.txt`: the note as first written.
+
+## Corrections after it was filed (22 November, 12:47 WIB by the clock; appended, the text above unchanged)
+
+*AI-written (Claude Fable, board row FM). Found by the coordinating session and two readers it set on its own board text, who took no part in the read; the sums of the first were redone by me on the file's step.*
+
+1. **The top-up, in sentence 2 above, is said too widely.** "A top-up of the fee less the reserve, at any step, takes it to the first, and a smaller one does not": the first half holds at any step; the second holds at the repeated state only. What `exact_schedule_topup` (l. 516) says is that the top-up needed is the fee less the reserve less what the renewing slots still bring under the schedule. By arithmetic on the file's step (`N` 6, fee 6, cap 12, one slot a step, start `⟨2,0,12⟩`): with no top-up the course runs `⟨2,0,12⟩`, `⟨1,2,10⟩`, `⟨0,3,6⟩`, `⟨0,3,0⟩` and stays; at step 0, where the fee less the reserve is 6, a top-up of 3 comes to `⟨6,6,12⟩` and one of 2 to `⟨0,5,0⟩`; at the repeated state `⟨0,3,0⟩` three is enough and two is not. The board's sentence, "a top-up of at most the fee taking it to the first", stands.
+2. **Sentence 1 states the iff under premises it does not ask.** `exact_schedule_activation_boundary` (l. 504) has `hr`, `hf`, `hk` and no `1 ≤ N`; of the three statements that sentence names, the two one-way theorems ask it (in all, seven theorems of the file do). This note's own checker had seen it (its report, "The five sentences", 1); the sentence is true and says less than the Lean proves.
+3. **"One iff".** By the coordinating session's count the file has seven statements with an iff (ll. 231, 249, 496, 504, 516, 646, 653). The "one iff" of sentence 1 is the boundary (l. 504); the equivalence of N5 is another (l. 496).
+4. **One line cited two lines off.** `Stock.Covered` is declared at l. 110; the note cites l. 112, its second clause.
