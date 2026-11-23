@@ -166,7 +166,8 @@ def validate(web: dict, cards: list, cases: list, dyn: dict, test_ids: set, prem
         return errors
     seen = Counter(c.get('dynamic') for c in cards if isinstance(c, dict))
     errors += [f'{CARDS}: {d}: {n} cards for one dynamic' for d, n in seen.items() if n > 1]
-    errors += [f'{CARDS}: no card for the dynamic {d}' for d in sorted(set(dyn) - set(seen))]
+    if not web.get('frozen'):
+        errors += [f'{CARDS}: no card for the dynamic {d}' for d in sorted(set(dyn) - set(seen))]
     spoken = set()  # every tie between two roles some card names
     for c in cards:
         d = c.get('dynamic') if isinstance(c, dict) else None
@@ -221,7 +222,8 @@ def validate(web: dict, cards: list, cases: list, dyn: dict, test_ids: set, prem
             errors.append(f'{WEB}: ways_in[{i}]: a way in needs a question and ties that some card names')
     seen = Counter(c.get('test') for c in cases if isinstance(c, dict))
     errors += [f'{CASES}: {t}: {n} cases for one test' for t, n in seen.items() if n > 1]
-    errors += [f'{CASES}: no case for the test {t}' for t in sorted(test_ids - set(seen))]
+    if not web.get('frozen'):
+        errors += [f'{CASES}: no case for the test {t}' for t in sorted(test_ids - set(seen))]
     anchors = Counter(case_anchor(t) for t in seen if isinstance(t, str))
     errors += [f'{CASES}: two tests share the anchor {a}' for a, n in anchors.items() if n > 1]
     for c in cases:

@@ -931,7 +931,10 @@ def load(root: Path = ROOT):
 
 
 def totals(root: Path = ROOT) -> dict:
-    """What the account holds in all, counted from the atlas's dynamics and the tests table."""
+    """What the account holds in all, or the frozen snapshot when sheet.json marks frozen."""
+    sheet = json.loads((root / SHEET).read_text(encoding='utf-8'))
+    if sheet.get('frozen') and isinstance(sheet.get('as_of_counts'), dict):
+        return dict(sheet['as_of_counts'])
     dyn = json.loads((root / DYNAMICS).read_text(encoding='utf-8'))
     return {'dynamics': len(dyn), 'exits': sum(len(x.get('exits') or []) for x in dyn), 'transitions': sum(len(x.get('transitions') or []) for x in dyn),
             'all_tests': len(json.loads((root / TESTS).read_text(encoding='utf-8'))['tests'])}

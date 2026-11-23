@@ -1,6 +1,13 @@
 {
  "schema_version": 1,
+ "frozen": true,
  "as_of": "2026-11-12",
+ "as_of_counts": {
+  "dynamics": 186,
+  "exits": 330,
+  "transitions": 105,
+  "all_tests": 66
+ },
  "about": "AI-written. The map of what happens: bands of rows, each row one thing asked of anything that keeps going; each box one way the answer can stand. Arrows are in passages.json, paths to read in paths.json, tests laid on the map in laid.json. A row is a tie of the web of roles (web.json); the theorems and tests behind it are in cards.json and cases.json.",
  "lead_en": "A map of how anything forms, lasts, changes and ends, drawn so that people and AI can see the way together. Its first path: a selection (a reward, a judge, a market, a training run) can use up something while how much is left of it makes no difference to it, and whatever lives on that thing bears the loss; where each update sets its rule again from the shares selected under it, the rule can lock; and in built examples the using up removes those that would have counted the loss. One way out is proved from conditions on the loss and the judgments alone (step 9, with its conditions): where the rest count the loss, and the judgments together go against what the rule favoured at two updates running, the rule turns. No theorem drawn says what brings a loss to get back to those the rule is set from, or to be counted. Every other way out drawn is proved only with a further premise (how the rule is set, what is measured or allowed, or where the loss falls), or is shown only in a built example or as a reading.",
  "lead_zh": "这张图画的是：任何东西怎样生成、延续、变化、终结；画出来，是为了人和 AI 能一起看清路。第一条路：一个选择（奖励、评委、市场、训练）可能耗掉某样东西，而那东西还剩多少对它不造成差别，承受损耗的是靠那东西延续的；规则若每次重定都照着在它之下选出的份额来定，就可能定住；在造出来的例子里，这样耗下去，还清走了本来会把损耗算进去的。有一条出路只凭关于损耗和判断的条件就得到证明（第 9 步，连同它的条件）：其余的把损耗算进去，合起来的判断接连两次重定都不利于规则原先偏向的一方，规则就转向。损耗怎样才传得回定规则所依的各方、怎样才被算进去，图上的定理没有说。图上其余的出路，或者另需一个前提才得到证明（规则怎样定，量什么、允许什么，或者损耗落在哪里），或者只见于造出来的例子，或者只是一种解读。",

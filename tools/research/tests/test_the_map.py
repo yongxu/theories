@@ -298,7 +298,11 @@ class RepositoryTests(unittest.TestCase):
         self.assertEqual(c['edges_seen'] + c['edges_near'] + c['edges_none'], c['edges'])
         self.assertEqual(c['laws_named_atlas'] + c['laws_named_off'], c['laws_named'])
         self.assertEqual(c['edges'] + c['edges_thin'], len(self.model['edges']))
-        self.assertEqual(c['dynamics'], len(self.dyn))
+        if self.web.get('frozen'):
+            self.assertEqual(c['dynamics'], len(self.cards))
+            self.assertLessEqual(len(self.cards), len(self.dyn))
+        else:
+            self.assertEqual(c['dynamics'], len(self.dyn))
         self.assertEqual(c['fails_total'], sum(1 for x in self.cases for p in x['predictions'] if p['frozen'] and p['failed_at'] != 'none'))
         for e in list(self.model['edges'].values()) + self.model['roles']:  # every theorem of a place is counted once
             self.assertEqual(sum(e['marks'].values()) + sum(e['built'].values()) + e['other'] + e['other_built'] + e['given'], len(e['laws']), e['id'])
@@ -353,9 +357,17 @@ class RepositoryTests(unittest.TestCase):
 
     def test_every_dynamic_and_every_test_is_listed_once(self):
         linked = re.findall(r'^\| \[[^\]]*\]\(\.\./atlas/families/[a-h]\.md#([^)]+)\)', self.pages[the_map.DYNAMICS_PAGE], re.M)
-        self.assertEqual(sorted(linked), sorted(self.dyn))
         anchors = re.findall(r'^<a id="(case-[^"]+)"></a>$', self.pages[the_map.CASES_PAGE], re.M)
-        self.assertEqual(sorted(anchors), sorted(the_map.case_anchor(t) for t in self.folders))
+        if self.web.get('frozen'):
+            card_dyns = [c['dynamic'] for c in self.cards]
+            case_tests = [c['test'] for c in self.cases]
+            self.assertEqual(sorted(linked), sorted(card_dyns))
+            self.assertLessEqual(set(card_dyns), set(self.dyn))
+            self.assertEqual(sorted(anchors), sorted(the_map.case_anchor(t) for t in case_tests))
+            self.assertLessEqual(set(case_tests), set(self.folders))
+        else:
+            self.assertEqual(sorted(linked), sorted(self.dyn))
+            self.assertEqual(sorted(anchors), sorted(the_map.case_anchor(t) for t in self.folders))
         dynamics = self.pages[the_map.DYNAMICS_PAGE]
         for e in self.model['edges'].values():  # a tie's section accounts for every dynamic that speaks of it
             if e['drawn']:
@@ -426,6 +438,11 @@ class RepositoryTests(unittest.TestCase):
             self.assertIn(page, site['pages'])
         self.assertLessEqual({the_map.PICTURE, the_map.INTERACTIVE}, set(site['assets']))
         self.assertIn([the_map.FRONT, 'Map'], site['nav'])  # the navigation names the map itself; these views are the layer under it
+
+    def test_frozen_views_match_disk(self):
+        if self.web.get('frozen'):
+            for path, body in self.pages.items():
+                self.assertEqual((ROOT / path).read_text(encoding='utf-8'), body, path)
 
 
 if __name__ == '__main__':

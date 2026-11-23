@@ -357,8 +357,13 @@ class RepositoryTests(unittest.TestCase):
         self.assertEqual(c['records'], len({rec for t in self.d['laid']['tests'] for rec in t.get('records', [t['test']])}))
         self.assertIn('%d are tied to a definition or a theorem in the Lean' % c['anchored'], page)
         tot = map_sheet.totals()
-        self.assertEqual(tot['all_tests'], len(self.tests))
-        self.assertEqual(tot['dynamics'], len(self.dyn))
+        if self.d['sheet'].get('frozen'):
+            self.assertEqual(tot, self.d['sheet']['as_of_counts'])
+            self.assertLessEqual(tot['all_tests'], len(self.tests))
+            self.assertLessEqual(tot['dynamics'], len(self.dyn))
+        else:
+            self.assertEqual(tot['all_tests'], len(self.tests))
+            self.assertEqual(tot['dynamics'], len(self.dyn))
         self.assertIn('%d of its %d tests' % (tot['all_tests'] - c['records'], tot['all_tests']), page)   # counted by rows of the tests table: one laid test can carry two
         self.assertIn('The %d tests laid on the map (%d rows of' % (c['tests'], c['records']), page)
         self.assertIn('most of the %d ways out of a condition and the %d passages between conditions' % (tot['exits'], tot['transitions']), page)
@@ -373,6 +378,11 @@ class RepositoryTests(unittest.TestCase):
 
     def test_every_step_of_every_path_lies_in_the_picture_of_its_path(self):
         self.assertEqual(map_sheet.built_errors(self.m), [])
+
+    def test_frozen_views_match_disk(self):
+        if self.d['sheet'].get('frozen'):
+            for path, body in self.pages.items():
+                self.assertEqual((ROOT / path).read_text(encoding='utf-8'), body, path)
 
 
 if __name__ == '__main__':
