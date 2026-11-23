@@ -1,0 +1,343 @@
+#!/usr/bin/env python3
+"""Deterministic local CPU stress test of Milestones 1A (PacedStock) and 1B (AdaptiveLoops).
+AI-written script (23 Nov 2026), Rule 7 compliant (pure Python stdlib, zero external calls).
+"""
+import json
+import math
+import random
+from pathlib import Path
+
+
+def run_1a_deterministic_verification():
+    """Verify exact Pace-Margin Sandwich thresholds across concrete (N, L, H1, H2, y2, Y) instances."""
+    cases = []
+    # Match SandwichWitness shape: H1=4, H2=1, y2=2 (floor=3), Y=1, cap=80, H_steps=60
+    N, H1, H2, y2, Y, R_safe = 3, 4, 1, 2, 1, 1  # Y=1 giving during heavy phase, R_safe >= H2 at safe phase
+    floor = H2 + y2  # 3
+    min_L = 2 * N - 1  # 5
+    b_imp = floor + (H1 - Y) * min_L  # 3 + 3 * 5 = 18
+    for L in (3, 5, 7):
+        b_feas = floor + H1 * (L + 1)  # enough to survive L + 1 heavy steps above floor before g_safe takes hold
+        for x0 in (10, 17, 18, 26, 27, 35, 36):
+            # Simulate: policy runs H1 with giving Y for L steps (switching at L if L >= 2N-1, or aliased for L < 2N-1 -> stay H1)
+            x = x0
+            min_x = x
+            switched = False
+            for t in range(60):
+                if t >= L and L >= min_L:
+                    switched = True
+                draw = H2 if switched else H1
+                give = R_safe if switched else Y
+                if x < draw:
+                    x = 0
+                    min_x = 0
+                    break
+                x = x - draw + give
+                min_x = min(min_x, x)
+            cases.append({
+                'L': L, 'min_L': min_L, 'x0': x0,
+                'b_imp': b_imp, 'b_feas': b_feas,
+                'switched': switched, 'survived_60': x >= floor, 'min_x': min_x,
+            })
+    # Check deterministic assertions
+    for c in cases:
+        if c['L'] < c['min_L']:
+            assert not c['switched'], c
+        if c['x0'] < c['b_imp']:
+            assert not c['survived_60'], c
+        if c['L'] >= c['min_L'] and c['x0'] >= c['b_feas']:
+            assert c['survived_60'], c
+    return {'grid_size': len(cases), 'b_imp': b_imp, 'all_deterministic_assertions_passed': True}
+
+
+def run_1a_stress_sweeps(seed_base=20261123):
+    """Test how observation noise, draw spikes, and policy inertia shift 1A deterministic bounds."""
+    N, H1, H2, y2, Y, R_safe = 3, 4, 1, 2, 1, 1
+    floor = H2 + y2  # 3
+    L = 2 * N - 1    # 5
+    b_feas = floor + H1 * (L + 1)  # 3 + 4*6 = 27
+    b_imp = floor + (H1 - Y) * L   # 18
+    n_trials = 200
+    horizon = 80
+
+    # (a) Observation noise around span-end classification: agent reads H_hat = mean(H_true + N(0, sigma^2)) across L steps
+    # Switches permanently to H2 once sample mean > threshold 2.5 (midpoint of H2=1, H1=4); can be delayed over spans!
+    noise_results = []
+    for sigma in (0.0, 1.5, 3.0, 5.0, 8.0):
+        for x0 in (b_feas, b_feas + 12):  # 27 (exact deterministic feas), 39 (+50% margin)
+            survived = 0
+            switch_steps = []
+            for s in range(n_trials):
+                rng = random.Random(seed_base + int(sigma * 100) + x0 * 1000 + s)
+                x = float(x0)
+                switched = False
+                sw_t = None
+                span_obs = []
+                for t in range(horizon):
+                    draw = float(H2 if switched else H1)
+                    give = float(R_safe if switched else Y)
+                    # Add observation noise to telemetry of true draw
+                    span_obs.append(draw + (rng.gauss(0.0, sigma) if sigma > 0 else 0.0))
+                    if x < draw:
+                        x = 0.0
+                        break
+                    x = x - draw + give
+                    if (t + 1) % L == 0 and not switched:
+                        if sum(span_obs) / len(span_obs) > 2.5:
+                            switched = True
+                            sw_t = t + 1
+                        span_obs = []
+                if x >= floor:
+                    survived += 1
+                if sw_t is not None:
+                    switch_steps.append(sw_t)
+            noise_results.append({
+                'sigma': sigma, 'x0': x0, 'survival_rate': survived / n_trials,
+                'mean_switch_step': round(sum(switch_steps) / len(switch_steps), 2) if switch_steps else None,
+            })
+
+    # (b) Draw spikes: with prob p_spike each step under heavy policy, draw jumps by +4
+    spike_results = []
+    for p_spike in (0.0, 0.05, 0.15, 0.30):
+        for x0 in (b_feas, b_feas + 12):
+            survived = 0
+            for s in range(n_trials):
+                rng = random.Random(seed_base + 50000 + int(p_spike * 1000) + x0 * 100 + s)
+                x = x0
+                for t in range(horizon):
+                    switched = (t >= L)
+                    base_d = H2 if switched else H1
+                    extra = 4 if (not switched and rng.random() < p_spike) else 0
+                    draw = base_d + extra
+                    give = R_safe if switched else Y
+                    if x < draw:
+                        x = 0
+                        break
+                    x = x - draw + give
+                if x >= floor:
+                    survived += 1
+            spike_results.append({'p_spike': p_spike, 'x0': x0, 'survival_rate': survived / n_trials})
+
+    # (c) Inertia alpha in (0, 1]: after switch command at L, draw relaxes exponentially draw = alpha*H2 + (1-alpha)*draw
+    inertia_results = []
+    for alpha in (1.0, 0.5, 0.25, 0.125):
+        for x0 in (b_feas, b_feas + 12):
+            x = float(x0)
+            curr_draw = float(H1)
+            for t in range(horizon):
+                if t >= L:
+                    curr_draw = alpha * H2 + (1.0 - alpha) * curr_draw
+                give = float(R_safe) if t >= L else float(Y)
+                if x < curr_draw:
+                    x = 0.0
+                    break
+                x = x - curr_draw + give
+            inertia_results.append({'alpha': alpha, 'x0': x0, 'survived': x >= floor, 'final_x': round(x, 2)})
+
+    # (d) Reverse direction check: x0 < b_imp (say 14) with favorable random jitter / below-worst-case draw drops
+    reverse_results = []
+    for jitter_std in (0.0, 1.0, 2.0):
+        survived = 0
+        x0 = b_imp - 3  # 15 < b_imp=18
+        for s in range(n_trials):
+            rng = random.Random(seed_base + 90000 + int(jitter_std * 100) + s)
+            x = float(x0)
+            for t in range(horizon):
+                switched = (t >= L)
+                draw = max(0.0, (H2 if switched else H1) + (rng.gauss(0.0, jitter_std) if jitter_std > 0 else 0.0))
+                give = float(R_safe if switched else Y)
+                if x < draw:
+                    x = 0.0
+                    break
+                x = x - draw + give
+            if x >= floor:
+                survived += 1
+        reverse_results.append({'x0': x0, 'b_imp': b_imp, 'jitter_std': jitter_std, 'survival_rate': survived / n_trials})
+
+    return {
+        'noise_delay': noise_results,
+        'draw_spikes': spike_results,
+        'policy_inertia': inertia_results,
+        'below_imp_stochastic_escapes': reverse_results,
+    }
+
+
+def run_1b_stress_sweeps(seed_base=20261123):
+    """Test 1B UnreadAdaptiveCollapse, CoupledRace, and soft-assumption escapes on Q/bandit/linear-FA agents."""
+    # Environment: 2 agents, actions {0: rest(draw=1, local=0.6), 1: agg(draw=2, local=1.0)}
+    # Renewal: R=2 when x >= x_crit=5 (healthy), R=0 when x < x_crit (collapsed regime), cap=25.
+    x_crit, cap, horizon = 5, 25, 100
+    n_seeds = 40
+
+    # 2a & 2c(ii): Unread multi-agent eps-greedy bandits + exploration rate sweep
+    # Both R=2 (even random drains) and R=3 (solo safe, greedy agg+agg=4 > 3 crashes, high-eps mixed<=3 survives)
+    unread_bandits = []
+    for ren_healthy in (2, 3):
+        for eps in (0.05, 0.25, 0.60, 0.90):
+            collapsed = 0
+            final_x_sum = 0.0
+            proxy_ret_sum = 0.0
+            for s in range(n_seeds):
+                rng = random.Random(seed_base + 200000 + ren_healthy * 10000 + int(eps * 100) + s)
+                q = [[0.0, 0.0], [0.0, 0.0]]
+                cnt = [[0, 0], [0, 0]]
+                x = 14
+                for t in range(horizon):
+                    acts = []
+                    for i in range(2):
+                        if rng.random() < eps:
+                            a = rng.randint(0, 1)
+                        else:
+                            a = 1 if q[i][1] >= q[i][0] else 0
+                        acts.append(a)
+                    draws = [2 if a == 1 else 1 for a in acts]
+                    tot_d = sum(draws)
+                    ren = ren_healthy if x >= x_crit else 0
+                    x = max(0, min(cap, x + ren - tot_d))
+                    for i, a in enumerate(acts):
+                        r = 1.0 if a == 1 else 0.6
+                        proxy_ret_sum += r / (n_seeds * horizon * 2)
+                        cnt[i][a] += 1
+                        q[i][a] += (r - q[i][a]) / cnt[i][a]
+                if x < x_crit:
+                    collapsed += 1
+                final_x_sum += x
+            unread_bandits.append({
+                'renewal': ren_healthy, 'eps': eps, 'collapse_rate': collapsed / n_seeds,
+                'mean_final_x': round(final_x_sum / n_seeds, 2),
+                'mean_proxy_reward': round(proxy_ret_sum, 3),
+            })
+
+    # 2b: CoupledRace Q-learners with alarm warnLevel, lag, pool silence q_silence, and post-turn coordination p_coord
+    race_results = []
+    configs = [
+        # (name, warn_level, lag, q_silence, p_coord, penalty)
+        ('good_buffered_coordinated', 13, 1, 0.0, 1.0, 1.5),
+        ('too_slow_lag3_unbuffered', 9, 3, 0.0, 1.0, 1.5),
+        ('silenced_pool_q05', 13, 1, 0.5, 1.0, 1.5),
+        ('uncoordinated_post_turn', 13, 1, 0.0, 0.0, 1.5),
+    ]
+    for cname, warn_level, lag, q_silence, p_coord, penalty in configs:
+        collapsed = 0
+        min_x_avg = 0.0
+        for s in range(n_seeds):
+            rng = random.Random(seed_base + 300000 + len(cname) * 100 + s)
+            # Q[agent][alarm_active in {0,1}][act in {0,1}]
+            Q = [[[0.0, 0.0], [0.0, 0.0]] for _ in range(2)]
+            x = 18
+            min_x = x
+            alarm_queue = []  # delivery steps
+            alarm_on = False
+            # Pre-train/learn online across episodes so Q reacts to alarm penalties once triggered
+            for ep in range(80):
+                x = 18
+                alarm_queue = []
+                alarm_on = False
+                eps = max(0.05, 0.4 * (1.0 - ep / 80.0))
+                for t in range(40):
+                    # 5-watcher majority vote: each detects (x <= warn_level) unless silenced with prob q_silence
+                    if not alarm_on and x <= warn_level:
+                        votes = sum(1 for _ in range(5) if rng.random() >= q_silence)
+                        if votes >= 3:
+                            alarm_queue.append(t + lag)
+                    if any(d <= t for d in alarm_queue):
+                        alarm_on = True
+                    st = 1 if alarm_on else 0
+                    acts = []
+                    for i in range(2):
+                        a = rng.randint(0, 1) if rng.random() < eps else (1 if Q[i][st][1] >= Q[i][st][0] else 0)
+                        acts.append(a)
+                    # Uncoordinated post-turn override: even when alarm is on, with (1-p_coord) aggressive draw persists
+                    eff_draws = []
+                    for i, a in enumerate(acts):
+                        if alarm_on and a == 0 and rng.random() > p_coord:
+                            eff_draws.append(2)  # coordination slip: other drawer grabs freed unit
+                        else:
+                            eff_draws.append(2 if a == 1 else 1)
+                    ren = 2 if x >= x_crit else 0
+                    nx = max(0, min(cap, x + ren - sum(eff_draws)))
+                    nst = 1 if alarm_on else 0
+                    for i, a in enumerate(acts):
+                        base_r = 1.0 if a == 1 else 0.6
+                        pen = penalty if (alarm_on and a == 1) else 0.0
+                        r = base_r - pen
+                        td = r + 0.9 * max(Q[i][nst]) - Q[i][st][a]
+                        Q[i][st][a] += 0.2 * td
+                    x = nx
+                    if ep == 79:
+                        min_x = min(min_x, x)
+            if min_x < x_crit:
+                collapsed += 1
+            min_x_avg += min_x
+        race_results.append({
+            'scenario': cname, 'warn_level': warn_level, 'lag': lag, 'q_silence': q_silence, 'p_coord': p_coord,
+            'eval_collapse_rate': collapsed / n_seeds, 'mean_eval_min_x': round(min_x_avg / n_seeds, 2),
+        })
+
+    # 2c(i): Linear FA learners with weak hidden cross-channel feature leakage `rho` (violates strict channel blindness)
+    # Test both late warning onset (warn=10, gradient too slow to adapt before collapse) and early onset (warn=22, x0=25)
+    leakage_results = []
+    for warn_onset, x0_fa, ren_fa in ((10.0, 16, 2), (22.0, 25, 3)):
+        for rho in (0.0, 0.25, 0.50, 0.80):
+            collapsed = 0
+            final_x_sum = 0.0
+            for s in range(n_seeds):
+                rng = random.Random(seed_base + 400000 + int(warn_onset * 1000) + int(rho * 100) + s)
+                w = [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+                x = x0_fa
+                ema_lat = 0.0
+                for t in range(150):
+                    cong = max(0.0, min(1.0, (warn_onset - x) / max(1.0, warn_onset - x_crit)))
+                    ema_lat = 0.6 * ema_lat + 0.4 * cong
+                    feats = {
+                        0: [1.0, 0.0, 0.0],
+                        1: [1.0, 1.0, ema_lat],
+                    }
+                    acts = []
+                    for i in range(2):
+                        if rng.random() < 0.08:
+                            a = rng.randint(0, 1)
+                        else:
+                            v0 = sum(w[i][k] * feats[0][k] for k in range(3))
+                            v1 = sum(w[i][k] * feats[1][k] for k in range(3))
+                            a = 1 if v1 >= v0 else 0
+                        acts.append(a)
+                    draws = [2 if a == 1 else 1 for a in acts]
+                    ren = ren_fa if x >= x_crit else 0
+                    x = max(0, min(cap, x + ren - sum(draws)))
+                    for i, a in enumerate(acts):
+                        local_r = 1.0 if a == 1 else 0.6
+                        r = local_r - (rho * cong if a == 1 else 0.0)
+                        f = feats[a]
+                        pred = sum(w[i][k] * f[k] for k in range(3))
+                        err = r - pred
+                        for k in range(3):
+                            w[i][k] += 0.15 * err * f[k]
+                if x < x_crit:
+                    collapsed += 1
+                final_x_sum += x
+            leakage_results.append({
+                'warn_onset': warn_onset, 'x0': x0_fa, 'renewal': ren_fa,
+                'leakage_rho': rho, 'collapse_rate': collapsed / n_seeds,
+                'mean_final_x': round(final_x_sum / n_seeds, 2),
+            })
+
+    return {
+        'unread_bandits_exploration_sweep': unread_bandits,
+        'coupled_race_q_learning': race_results,
+        'linear_fa_cross_channel_leakage': leakage_results,
+    }
+
+
+def main():
+    out = {
+        '1a_deterministic_verification': run_1a_deterministic_verification(),
+        '1a_stress_sweeps': run_1a_stress_sweeps(),
+        '1b_stress_sweeps': run_1b_stress_sweeps(),
+    }
+    Path('/Users/ren/tmp/stress_test_results.json').write_text(json.dumps(out, indent=2) + '\n')
+    print(json.dumps(out, indent=2))
+
+
+if __name__ == '__main__':
+    main()
