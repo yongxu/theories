@@ -406,6 +406,7 @@ import Becoming.LevelAlone
 import Becoming.LineOnAStock
 import Becoming.WayOfUnits
 import Becoming.LineOnAStockCases
+import Becoming.WayUnderARule
 import Becoming.ReadingsSpread
 import Becoming.SignificanceStatements
 
@@ -5369,6 +5370,40 @@ tagged instance or application.
   (`LineOnAStock.DrainCase.drain`). Each example's ending already follows from its own Lean, which the
   equalities take as input; the laws add nothing about the examples. The organisms' identities, and the
   need (four here, one there), are not equated. A leaf.
+* `Becoming.WayUnderARule` (L2, through `Becoming.LineOnAStock` and `Becoming.RuleCapture`): a way
+  of units on a stock under a rule that is set again at every step from the way present and the
+  rule in force. Under a rule a unit leaves its kids; a rule can favour; the test at a
+  configuration is that it holds (`LineOnAStock.Holds`) and neither the rule in force nor the rule
+  set next favours (`WayUnderARule.Tested`). Given that which rules favour is decided, that under a
+  rule that favours each unit's kids together take more than it, that under any other they together
+  take what it takes, that kids need no more than their parent, that every unit the course reaches
+  needs something, that nothing is given from nothing, that the start level is at most `hi`, and,
+  at steps of the course with some need met there and at every step before, that the step under
+  what the way takes keeps every level up to `hi` within `hi` and that, where the rule in force
+  does not favour, giving is short of what the way takes `T` at levels left below `y T` and at
+  least `T` wherever the level left `z` has `y T ≤ z` and `z + T ≤ hi`: the course comes to a step
+  with the test, some need met at every step before it, or to a first step with no need met
+  (`tested_or_ends`; `first_tested_or_ends` takes the first step with the test), whatever sets the
+  next rule. Under those premises alone the "or" is inclusive: a built course has both
+  (`BothOutcomes.both`). Where, beside the premises above on the kids under a rule that does not
+  favour, on kids' needs, on the start and on the cap and giving along the course, under a rule
+  that does not favour every unit has kids, the next rule is a monotone reading of a share of the
+  way, the share of all the kids of a way under a rule that does not favour is not above the way's,
+  and a rule above a favouring rule favours, the first outcome lasts (`tested_lasts`); so under
+  both sets of premises the net never ends exactly where the course comes to a step with the test
+  and ends exactly where it comes to a step with no need met, in both with some need met at every
+  step before it (`unending_iff_tested`, `ends_iff_unmet`). Where the next rule is a monotone
+  reading of a share of the way, a rule above a favouring rule favours, the share of all the kids
+  of a way under a favouring rule is not below the way's, and the start is locked, with no premise
+  on the stock, the rule favours at every step up to and including the one after the first step
+  with a need unmet (`favours_while_met`), so a step with the test comes at least two steps after a
+  step with a need unmet (`unmet_before_tested`). Both carryings of the rule are calls of
+  `RuleCapture.turn_locked`. Two built courses differ in one unit of one need: where the counted
+  unit needs twenty-seven the net never ends, where it needs twenty-six it ends. A leaf: no
+  existing statement is changed; at one rule its course is `LineOnAStock.course`, and two private
+  theorems prove `LineOnAStock.unending_iff_holds` and `LineOnAStock.way_ends` from its laws
+  without those theorems. It derives no response beyond a unit whose need is unmet leaving nothing,
+  and no unit in it adds to what it rests on.
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.

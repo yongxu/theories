@@ -2846,6 +2846,11 @@
    "base": "general",
    "note": "LevelAlone FM: over every marking that does not mark the start's level, when some such marking gives a line that never ends"
   },
+  "a-way-of-units-under-a-rule-set-again": {
+   "region": "map",
+   "base": "general",
+   "note": "WayUnderARule DJ: units that need a level and leave offspring, a rule set again, one of two outcomes on a course, each built; the first lasts where every unit has kids under a rule that does not favour and the lock's premises hold read downward, under its stated premises on units and stock"
+  },
   "selection-through-couplings-at-a-coarser-step": {
    "region": "knowing",
    "base": "general",
@@ -4907,6 +4912,11 @@
    "region": "map",
    "base": "general",
    "note": "FM a reading of the level alone: over every marking that does not mark the start's level, when some such marking gives a line that never ends, under each law's stated premises"
+  },
+  "Becoming.WayUnderARule": {
+   "region": "map",
+   "base": "general",
+   "note": "DJ a way of units on a stock under a rule set again: a step with the test or a first step with no need met; the first lasts where the next rule is a monotone reading of a share, under each law's stated premises; two courses that differ in one unit of one need"
   }
  }
 }
