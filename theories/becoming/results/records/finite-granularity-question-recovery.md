@@ -79,7 +79,7 @@ Blocks are Trace paths of the same native process with actual shared boundaries.
 - related, not a proved adapter: [guarded-program-question-recovery](guarded-program-question-recovery.md). New continuation in the same study; formal reuse is specified separately, without a proved adapter inferred from this relation.
 - related, not a proved adapter: [residual-continuation-correspondence](residual-continuation-correspondence.md). New continuation in the same study; formal reuse is specified separately, without a proved adapter inferred from this relation.
 
-**Used by:** [prefix-observation-loss](prefix-observation-loss.md)
+**Used by:** [paced-stock-and-cadence-margin-sandwich](paced-stock-and-cadence-margin-sandwich.md) · [prefix-observation-loss](prefix-observation-loss.md)
 
 <a id="sources--来源"></a>
 ### Sources

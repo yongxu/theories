@@ -183,7 +183,7 @@ Reading (AI-written, from the study note): falls_to_unmet is this model's form o
   - Preserved conditions: None beyond the examples' own definitions. [LineOnAStockCases.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStockCases.lean)
 - related, not a proved adapter: [a-way-of-units](a-way-of-units.md). Its model is this one's case kids u = [u] on units of two numbers: WayOfUnits' after, taken, step, course, net, Holds and Regime are this model's there (WayOfUnits.course_unit, holds_unit, regime_unit and the rest), and six of its declarations, unending_iff_holds among them with its statement unchanged, are derived from this module's laws.
 
-**Used by:** [a-way-of-units](a-way-of-units.md) · [a-way-of-units-under-a-rule-set-again](a-way-of-units-under-a-rule-set-again.md)
+**Used by:** [a-way-of-units](a-way-of-units.md) · [a-way-of-units-under-a-rule-set-again](a-way-of-units-under-a-rule-set-again.md) · [paced-stock-and-cadence-margin-sandwich](paced-stock-and-cadence-margin-sandwich.md)
 
 <a id="sources--来源"></a>
 ### Sources

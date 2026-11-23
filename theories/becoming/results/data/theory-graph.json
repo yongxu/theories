@@ -4101,6 +4101,18 @@
    "page": "theories/becoming/results/records/pace-of-selection-within-what-flows-in.md"
   },
   {
+   "id": "record:paced-stock-and-cadence-margin-sandwich",
+   "type": "result",
+   "record": "paced-stock-and-cadence-margin-sandwich",
+   "title": "Fine-step stock under coarse rule cadences, intra-span block slack, and the pace–margin sandwich",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/paced-stock-and-cadence-margin-sandwich.md"
+  },
+  {
    "id": "record:pending-task-context-applicability",
    "type": "result",
    "record": "pending-task-context-applicability",
@@ -11735,6 +11747,17 @@
    "name": "Becoming.AdaptiveLoops",
    "level": "L1",
    "theorems": 60,
+   "region": "map",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.PacedStock",
+   "type": "module",
+   "name": "Becoming.PacedStock",
+   "level": "L2",
+   "theorems": 45,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -35365,6 +35388,51 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.PacedStock",
+   "to": "module:Becoming.Granularity",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PacedStock",
+   "to": "module:Becoming.JointKeeping",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PacedStock",
+   "to": "module:Becoming.LineOnAStock",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PacedStock",
+   "to": "module:Becoming.Pace",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PacedStock",
+   "to": "module:Becoming.RegimeMargin",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PacedStock",
+   "to": "module:Becoming.Sampling",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PacedStock",
+   "to": "module:Becoming.TurningInTime",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PacedStock",
+   "to": "module:Becoming.Viability",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PacedStock",
+   "to": "module:Becoming.WayUnderARule",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.PairChance",
    "to": "module:Becoming.PairSelection",
    "type": "imports"
@@ -51412,6 +51480,51 @@
   {
    "from": "record:pace-of-selection-within-what-flows-in",
    "to": "record:what-bounds-offspring-numbers",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:paced-stock-and-cadence-margin-sandwich",
+   "to": "module:Becoming.PacedStock",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:paced-stock-and-cadence-margin-sandwich",
+   "to": "record:a-line-on-a-stock",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:paced-stock-and-cadence-margin-sandwich",
+   "to": "record:a-way-of-units-under-a-rule-set-again",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:paced-stock-and-cadence-margin-sandwich",
+   "to": "record:conditions-kept-together",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:paced-stock-and-cadence-margin-sandwich",
+   "to": "record:finite-granularity-question-recovery",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:paced-stock-and-cadence-margin-sandwich",
+   "to": "record:how-fast-a-rule-may-change",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:paced-stock-and-cadence-margin-sandwich",
+   "to": "record:laws-at-coarser-steps",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:paced-stock-and-cadence-margin-sandwich",
+   "to": "record:margin-of-a-regime",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:paced-stock-and-cadence-margin-sandwich",
+   "to": "record:turning-in-time",
    "type": "formal-reuse"
   },
   {
