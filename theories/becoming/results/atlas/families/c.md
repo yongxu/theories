@@ -10,7 +10,7 @@ The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*. The lines on uses between proofs, last in an entry's section, are no part of the curated layer: they are computed at each render from what Lean printed of its proof terms and from the declarations the entries list, and typed by no one; they too create no result.
 
-21 of the atlas's 199 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
+21 of the atlas's 203 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
 
 | Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
@@ -830,6 +830,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
     - `Becoming.AdaptiveLoops.WitnessUncoordinated` → `Becoming.AdaptiveLoops.uncoordinated_drain_perfect` → `Becoming.Optimum.Coupled.AtOnce.Shores.drain_perfect`, listed under [Coupled for each step](b.md#coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it).
     - `Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_bidirectional_adaptation` → `Becoming.Viability.Certificate.kernel` → `Becoming.Viability.kernel_iff_held`, listed under [A reading kept by its update, and the reading its own history carries](d.md#a-reading-kept-by-its-update).
-  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.AdaptiveLoops.assume_guarantee_joint_viable`: in `Becoming.EndogenousTurning.pooled_service_turning_viable`, listed under [Endogenous turning, pooled clearing margins, and the epistemic silence boundary (内生转向、共享清算裕度与认知沉默边界)](h.md#endogenous-turning-and-clearing-margin); in `Becoming.UnifiedDrawdown.pooled_restraint_restores_viability`, listed under [Unified drawdown, parametric open fleet restraint, overdraw separation, and temporal aliasing (统一下行、参数化开放舰队约束、超取分离与时间混叠)](h.md#unified-drawdown-overdraw-and-aliasing).
 
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), [B](b.md), **C**, [D](d.md), [E](e.md), [F](f.md), [G](g.md), [H](h.md).

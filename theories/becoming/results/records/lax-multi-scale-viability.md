@@ -57,7 +57,7 @@ Reading (AI-written): coarse oversight need not satisfy exact state lumping so l
 - **formal-reuse**: [conditions-kept-together](conditions-kept-together.md). Reuses Viability.Certificate, Viability.Kernel, and Viability.kernel_iff_certificate for downward kernel transfer.
 - **formal-reuse**: [a-response-common-over-a-reading](a-response-common-over-a-reading.md). Cross-references ProjectedLaws.FibreConsistent and reduced_law_exists_iff refuted in WitnessTwoScale.
 
-**Used by:** [open-interface-composition-and-replacement](open-interface-composition-and-replacement.md)
+**Used by:** [continuous-stochastic-alignment-reals](continuous-stochastic-alignment-reals.md) · [open-interface-composition-and-replacement](open-interface-composition-and-replacement.md)
 
 <a id="sources--来源"></a>
 ### Sources

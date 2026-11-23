@@ -41467,5 +41467,284 @@
   ],
   "standing_without_record": null,
   "premises": []
+ },
+ {
+  "id": "endogenous-turning-and-clearing-margin",
+  "name": {
+   "en": "Endogenous turning, pooled clearing margins, and the epistemic silence boundary",
+   "zh": "内生转向、共享清算裕度与认知沉默边界"
+  },
+  "family": "H",
+  "mechanism": {
+   "en": "Derives substrate overdraw from Requirement.Frontier selection over marginal yields (proxy_optimum_overdraw_collapse), computes non-oracle ServiceTaskModel bottleneck B_task, proves Viability.Kernel turning under timely pooled Clearing and native OpenComposition reconfig/widening bridges, and locates the epistemic silence collapse boundary (TurningWitness)."
+  },
+  "records": [
+   "endogenous-turning-and-clearing-margin"
+  ],
+  "declarations": [
+   "Becoming.EndogenousTurning.proxy_optimum_overdraw_collapse",
+   "Becoming.EndogenousTurning.flow_proxy_optimum_collapse",
+   "Becoming.EndogenousTurning.ServiceTaskModel.B_task",
+   "Becoming.EndogenousTurning.ServiceTaskModel.score_crosses_iff",
+   "Becoming.EndogenousTurning.endogenous_turning_kernel",
+   "Becoming.EndogenousTurning.pooled_service_turning_viable",
+   "Becoming.EndogenousTurning.epistemic_silence_late_bottleneck",
+   "Becoming.EndogenousTurning.epistemic_silence_masked_unread",
+   "Becoming.EndogenousTurning.epistemic_silence_cascade",
+   "Becoming.EndogenousTurning.TurningWitness.timely_survives",
+   "Becoming.EndogenousTurning.OpenCompositionBridge.pooled_clearing_open_compose_viable",
+   "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_partner_reconfig_viable",
+   "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_widening_heals_blindness"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "endogenous-turning-and-clearing-margin",
+    "index": 1
+   }
+  ],
+  "forbids": {
+   "en": "Breach of substrate floor below no-return when proxy-optimum selection is unrestrained or task/clearing signals fail to trigger before remaining headroom is exhausted."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "sustained Viability.Kernel across pooled Clearing and live heterogeneous OpenComposition partner reconfiguration"
+    },
+    "law": "Becoming.EndogenousTurning.OpenCompositionBridge.pooled_clearing_open_compose_viable",
+    "edge": {
+     "en": "Non-oracle B_task crossing triggers pooled channel alarm within lag headroom above H_safe + y_safe."
+    },
+    "strength": "sufficient",
+    "records": [
+     "endogenous-turning-and-clearing-margin"
+    ],
+    "source": "theories/becoming/results/records/endogenous-turning-and-clearing-margin.md#laws--规律",
+    "drops": []
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "Empirical recognition of ServiceTaskModel margins and metaethical non-entailment via ReadsOnlyDynamics.not_entails.",
+    "source": "theories/becoming/results/records/endogenous-turning-and-clearing-margin.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "Requires 0 < H_safe + y_safe and (H_safe + y_safe) + drawCeiling * (lag + 1) ≤ B_task for timely endogenous turning."
+  },
+  "sources": [
+   "theories/becoming/results/records/endogenous-turning-and-clearing-margin.md#laws--规律"
+  ],
+  "standing_without_record": null,
+  "premises": []
+ },
+ {
+  "id": "unified-drawdown-overdraw-and-aliasing",
+  "name": {
+   "en": "Unified drawdown, parametric open fleet restraint, overdraw separation, and temporal aliasing",
+   "zh": "统一下行、参数化开放舰队约束、超取分离与时间混叠"
+  },
+  "family": "H",
+  "mechanism": {
+   "en": "Proves non-circular zero-local-error joint depletion across finite agent lists, restores viability via inductive OpenComposition RestraintAgentSpec folds and single-member ContractRefines upgrades, separates pre-overdraw Flow transfer from Nat-truncated overdraw at step t* = 1, and proves periodic/strobe/deadline temporal-aliasing obstructions."
+  },
+  "records": [
+   "unified-drawdown-overdraw-and-aliasing"
+  ],
+  "declarations": [
+   "Becoming.UnifiedDrawdown.parametric_local_accounts_depletion",
+   "Becoming.UnifiedDrawdown.pooled_restraint_restores_viability",
+   "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable",
+   "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable",
+   "Becoming.UnifiedDrawdown.unit_balancesOn_iff_le",
+   "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.witness_bundle",
+   "Becoming.UnifiedDrawdown.logistic_periodic_sampled_break_concealment",
+   "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle",
+   "Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge",
+   "Becoming.UnifiedDrawdown.witnessed_dynamics_not_entails"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "unified-drawdown-overdraw-and-aliasing",
+    "index": 1
+   }
+  ],
+  "forbids": {
+   "en": "Misreading local prediction error = 0 or coarse-sampled safety checks as substrate persistence across unpooled extraction, Nat-overdraw breaks, or strobe aliasing."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "global fleet Viability.Kernel preserved under inductive OpenComposition restraint folds and ContractRefines member upgrades"
+    },
+    "law": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable",
+    "edge": {
+     "en": "Additive boundary post-cap headroom and max-lag warning margin cover all pooled agents."
+    },
+    "strength": "sufficient",
+    "records": [
+     "unified-drawdown-overdraw-and-aliasing"
+    ],
+    "source": "theories/becoming/results/records/unified-drawdown-overdraw-and-aliasing.md#laws--规律",
+    "drops": []
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "Schedules sampling every fine recovery step and normative evaluation outside ReadsOnlyDynamics.not_entails.",
+    "source": "theories/becoming/results/records/unified-drawdown-overdraw-and-aliasing.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "Requires H_safe and warnLevel buffering summed fleet caps and max lags, and entails no ethical predicate."
+  },
+  "sources": [
+   "theories/becoming/results/records/unified-drawdown-overdraw-and-aliasing.md#laws--规律"
+  ],
+  "standing_without_record": null,
+  "premises": []
+ },
+ {
+  "id": "dynamical-scope-and-reciprocal-stability",
+  "name": {
+   "en": "Dynamical scope selection, myopic invasion collapse, and reciprocal open-interface stability",
+   "zh": "动态视域选择、近视入侵崩溃与互惠开放接口稳定"
+  },
+  "family": "H",
+  "mechanism": {
+   "en": "Separates mutual-fate viable scope persistence from narrow lineage exhaustion (MutualFateWitness), proves pre-collapse myopic-invader advantage paired with joint commons collapse (UncoordCommonsWitness), restores stability via computable Withholding exclusion gates and two-component OpenComposition gatedDefectorComponent ⊕ coopComponent with ContractRefines replacement, and enforces scopeLaw_cannot_entail_unrestricted."
+  },
+  "records": [
+   "dynamical-scope-and-reciprocal-stability"
+  ],
+  "declarations": [
+   "Becoming.ScopeDynamics.scopeLaw_cannot_entail_unrestricted",
+   "Becoming.ScopeDynamics.mutual_fate_selects_wide_scope",
+   "Becoming.ScopeDynamics.uncoordinated_myopic_invasion",
+   "Becoming.ScopeDynamics.reciprocal_coupling_stabilizes_scope",
+   "Becoming.ScopeDynamics.uncoord_vs_reciprocal_contrast",
+   "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_viable",
+   "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_defector_replace_viable",
+   "Becoming.ScopeDynamics.OpenCompositionBridge.blindDefector_vs_reciprocal_open"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "dynamical-scope-and-reciprocal-stability",
+    "index": 1
+   }
+  ],
+  "forbids": {
+   "en": "Survival of cooperative pools sharing substrates with un-gated overdrawing invaders, and illicit inference of Unrestricted moral obligations from dynamical scope laws."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "bounded safe substrate band [S_safe, hi] with TransformsViably and surplus reversal under reciprocal Withholding / OpenComposition gating"
+    },
+    "law": "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_viable",
+    "edge": {
+     "en": "Bi-directional exclusion gate locks out defection within T_gate while buffer S_safe + T_gate * H_pre ≤ S₀ absorbs pre-gate overdraw."
+    },
+    "strength": "sufficient",
+    "records": [
+     "dynamical-scope-and-reciprocal-stability"
+    ],
+    "source": "theories/becoming/results/records/dynamical-scope-and-reciprocal-stability.md#laws--规律",
+    "drops": []
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "External ethical 'ought' beyond dynamical closure (scopeLaw_cannot_entail_unrestricted).",
+    "source": "theories/becoming/results/records/dynamical-scope-and-reciprocal-stability.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "Requires pre-gate margin buffering T_gate detection lag and entails zero moral premise."
+  },
+  "sources": [
+   "theories/becoming/results/records/dynamical-scope-and-reciprocal-stability.md#laws--规律"
+  ],
+  "standing_without_record": null,
+  "premises": []
+ },
+ {
+  "id": "continuous-stochastic-alignment-reals",
+  "name": {
+   "en": "Continuous and stochastic alignment realizations over Mathlib reals",
+   "zh": "基于 Mathlib 实数的连续与随机对齐实现"
+  },
+  "family": "H",
+  "mechanism": {
+   "en": "Proves in the Lean 4.30.0-rc2 + Mathlib periphery exact headroom penalties for exponential policy inertia, finite-law Markov and binomial delay-shock survival bounds bridged to PacedStock, pseudo-metric LaxSim contraction tubes with strict-margin discretization into MultiScaleViability, and linear-FA feature-leakage hysteresis embedded in AdaptiveLoops.OpenLoop."
+  },
+  "records": [
+   "continuous-stochastic-alignment-reals"
+  ],
+  "declarations": [
+   "Becoming.AlignmentReals.inertia_lag_headroom_penalty",
+   "Becoming.AlignmentReals.inertia_witness_phase2",
+   "Becoming.AlignmentReals.stochastic_delay_survival_bound",
+   "Becoming.AlignmentReals.stochastic_delay_witness_phase2",
+   "Becoming.AlignmentReals.metric_laxSim_contraction_tube",
+   "Becoming.AlignmentReals.metric_to_discrete_kernel_of_strict_margin",
+   "Becoming.AlignmentReals.linear_fa_leakage_hysteresis",
+   "Becoming.AlignmentReals.linear_fa_witness_rho_4_5"
+  ],
+  "base": "periphery",
+  "hypotheses": [
+   {
+    "record": "continuous-stochastic-alignment-reals",
+    "index": 1
+   }
+  ],
+  "forbids": {
+   "en": "Assuming noiseless discrete safety margins hold unmodified under policy inertia α, stochastic delay tails, coarse metric rounding, or correlated FA leakage ρ."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "explicit continuous/stochastic Viability.Kernel radii and discrete Becoming core reductions when explicit penalty headroom holds"
+    },
+    "law": "Becoming.AlignmentReals.metric_to_discrete_kernel_of_strict_margin",
+    "edge": {
+     "en": "Strict contraction margin and buffered inertia/delay headroom preserve Viability.Kernel across realizations."
+    },
+    "strength": "sufficient",
+    "records": [
+     "continuous-stochastic-alignment-reals"
+    ],
+    "source": "theories/becoming/results/records/continuous-stochastic-alignment-reals.md#laws--规律",
+    "drops": []
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "Continuous-time PDEs/SDEs and empirical test validation outside modeled finite/metric regimes.",
+    "source": "theories/becoming/results/records/continuous-stochastic-alignment-reals.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "Mathlib periphery (v4.30.0-rc2); requires modeled α, Markov/binomial finite law, PseudoMetricSpace contraction, and M_delay hypotheses."
+  },
+  "sources": [
+   "theories/becoming/results/records/continuous-stochastic-alignment-reals.md#laws--规律"
+  ],
+  "standing_without_record": null,
+  "premises": []
  }
 ]

@@ -10,7 +10,7 @@ The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*. The lines on uses between proofs, last in an entry's section, are no part of the curated layer: they are computed at each render from what Lean printed of its proof terms and from the declarations the entries list, and typed by no one; they too create no result.
 
-28 of the atlas's 199 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
+28 of the atlas's 203 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
 
 | Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
@@ -372,6 +372,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
     - `Becoming.Optimum.least_iff`, in `Becoming.Optimum.least_below_iff`; `Becoming.Optimum.optimum_beyond`, in `Becoming.Optimum.nearing_as_rising`, listed under [What an optimum does beyond what couples in](#what-an-optimum-does-beyond-what-couples-in).
     - `Becoming.Flow.Balances.beyond_falls_exactly`, in `Becoming.Flow.Balances.atSetPoint_draws` (told above as a case), listed under [What a rise draws from beyond](#what-a-rise-draws-from-beyond).
   - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Flow.held_draws`: in `Becoming.UnifiedDrawdown.parametric_local_accounts_depletion`, listed under [Unified drawdown, parametric open fleet restraint, overdraw separation, and temporal aliasing (统一下行、参数化开放舰队约束、超取分离与时间混叠)](h.md#unified-drawdown-overdraw-and-aliasing).
     - `Becoming.Optimum.HeldPair.held_end`: in `Becoming.FreeEnergyGuarantees.SharedModels.held_not_one`, listed under [Risk minimization on a shared renewal](#risk-minimization-on-a-shared-renewal).
 
 <a id="others-drawing-first-end-the-base"></a>
@@ -650,7 +651,8 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
     - `Becoming.Optimum.MutualBest.full`, in `Becoming.Optimum.Renewing.restrained_course_not_best`; `Becoming.Optimum.mutual_beyond`, in `Becoming.Optimum.mutual_course_beyond` (told above as a case), listed under [Several optimizers](#several-optimizers-drain-by-their-joint-capacity).
   - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
     - `Becoming.Optimum.drawn_bounded_iff` → `Becoming.Optimum.ended_drawn_le` → `Becoming.Optimum.ends_within` → `Becoming.Amounts.falls_by_stretch`, listed under [The least loss as a premise of rest](g.md#least-loss-rest).
-  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Optimum.course_beyond`: in `Becoming.EndogenousTurning.flow_proxy_optimum_collapse`, listed under [Endogenous turning, pooled clearing margins, and the epistemic silence boundary (内生转向、共享清算裕度与认知沉默边界)](h.md#endogenous-turning-and-clearing-margin).
 
 <a id="a-weighting-faster-than-renewal-ends-the-base"></a>
 ### Weighting later draws less
@@ -756,6 +758,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
   - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
     - `Becoming.Optimum.Holding.gated_alike`: in `Becoming.Optimum.Holding.gated_in_turn`, listed under [Several drawers: drawers in turn and at once](#drawers-in-turn).
+    - `Becoming.Optimum.Holding.logistic_valued`: in `Becoming.UnifiedDrawdown.logistic_periodic_sampled_break_concealment`, listed under [Unified drawdown, parametric open fleet restraint, overdraw separation, and temporal aliasing (统一下行、参数化开放舰队约束、超取分离与时间混叠)](h.md#unified-drawdown-overdraw-and-aliasing).
     - `Becoming.Optimum.holding_most`: in `Becoming.Optimum.continued_holding_stepwise_frontier`, listed under [A coupling for each step kept](h.md#a-step-coupling-keeps-at-every-horizon).
 
 <a id="keeping-forgoes-the-renewal-at-the-need"></a>
@@ -1391,7 +1394,8 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
     - `Becoming.FourReaders.recoverable_iff_regime` → `Becoming.FourReaders.regime_point` → `Becoming.RegimeMargin.ends_iff_below`, listed under [The point of no return of a regime](a.md#margin-of-a-regime).
   - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
-    - `Becoming.NoReturnAt.recoverable_iff`: in `Becoming.TurningInTime.turns_in_time_iff_before`, listed under [A line that ends where the net ends, or while the net goes on](a.md#turning-in-time).
+    - `Becoming.NoReturnAt.recoverable_iff`: in `Becoming.TurningInTime.turns_in_time_iff_before`, listed under [A line that ends where the net ends, or while the net goes on](a.md#turning-in-time); in `Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge`, listed under [Unified drawdown, parametric open fleet restraint, overdraw separation, and temporal aliasing (统一下行、参数化开放舰队约束、超取分离与时间混叠)](h.md#unified-drawdown-overdraw-and-aliasing).
+    - `Becoming.Web.too_late_of_alike`: in `Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge`, listed under [Unified drawdown, parametric open fleet restraint, overdraw separation, and temporal aliasing (统一下行、参数化开放舰队约束、超取分离与时间混叠)](h.md#unified-drawdown-overdraw-and-aliasing).
 
 <a id="a-narrowing-above-its-widening"></a>
 ### A narrowing above its widening, and what positive weightings share
@@ -1451,6 +1455,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
     - `Becoming.StockFlowBridge.way_balancesOn_of_goes` → `Becoming.StockFlowBridge.way_taken_lt_of_goes` → `Becoming.WayUnderARule.taken_below` → `Becoming.LineOnAStock.step_zero`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
     - `Becoming.StockFlowBridge.line_coupled_indexed_correspondence` → `Becoming.StockFlowBridge.line_taken_const_of_even_met` → `Becoming.LineOnAStock.taken_allKids`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
     - `Becoming.StockFlowBridge.line_balancesOn_of_goes` → `Becoming.StockFlowBridge.line_taken_lt_of_goes` → `Becoming.LineOnAStock.taken_below`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
-  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.StockFlowBridge.unitBalancesOn_of_le`: in `Becoming.UnifiedDrawdown.unit_balancesOn_iff_le`, listed under [Unified drawdown, parametric open fleet restraint, overdraw separation, and temporal aliasing (统一下行、参数化开放舰队约束、超取分离与时间混叠)](h.md#unified-drawdown-overdraw-and-aliasing).
 
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), **B**, [C](c.md), [D](d.md), [E](e.md), [F](f.md), [G](g.md), [H](h.md).

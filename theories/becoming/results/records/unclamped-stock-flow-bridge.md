@@ -57,6 +57,8 @@ Reading (AI-written): October–November flow conservation and drawdown trapping
 - **formal-reuse**: [continuing-self-fed-from-beyond](continuing-self-fed-from-beyond.md). Adapts Continuation Flow balance and drawdown trap to finite pre-overdraw intervals.
 - **formal-reuse**: [margin-of-a-regime](margin-of-a-regime.md). Establishes exact single-substrate agreement with RegimeMargin.Coupled.Indexed.step Drawn.whole.
 
+**Used by:** [endogenous-turning-and-clearing-margin](endogenous-turning-and-clearing-margin.md) · [unified-drawdown-overdraw-and-aliasing](unified-drawdown-overdraw-and-aliasing.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

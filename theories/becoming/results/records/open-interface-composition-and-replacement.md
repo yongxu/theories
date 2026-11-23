@@ -63,6 +63,8 @@ Reading (AI-written): open systems compose constructively along shared boundary 
 - **formal-reuse**: [lax-multi-scale-viability](lax-multi-scale-viability.md). Reuses MultiScaleViability (distNat, SlackDist, LaxSim, lax_kernel_of_certificate, WitnessTwoScale) for synchronous product composition and ComposedNonLumpingWitness.
 - **formal-reuse**: [conditions-kept-together](conditions-kept-together.md). Reuses Viability.Certificate, Viability.Kernel, Viability.disturbed, and certificate_disturbed_iff across closed and reconfiguring processes.
 
+**Used by:** [dynamical-scope-and-reciprocal-stability](dynamical-scope-and-reciprocal-stability.md) · [endogenous-turning-and-clearing-margin](endogenous-turning-and-clearing-margin.md) · [unified-drawdown-overdraw-and-aliasing](unified-drawdown-overdraw-and-aliasing.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

@@ -10,7 +10,7 @@ The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*. The lines on uses between proofs, last in an entry's section, are no part of the curated layer: they are computed at each render from what Lean printed of its proof terms and from the declarations the entries list, and typed by no one; they too create no result.
 
-42 of the atlas's 199 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
+46 of the atlas's 203 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
 
 | Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
@@ -56,6 +56,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 | [Lax multi-scale viability simulation and vertical tower composition (松弛多尺度存续模拟与塔式纵向复合)](#lax-multi-scale-viability) | [lax-multi-scale-viability](../../records/lax-multi-scale-viability.md) | any type | recorded-checked (theorem) | 1 | 1 |
 | [Viability-preserving transformative continuation order (保续转化序)](#transformative-viability-order) | [transformative-viability-order](../../records/transformative-viability-order.md) | any type | recorded-checked (theorem) | 1 | 1 |
 | [Open-interface composition, boundary hiding, structural replacement, and laxity (开放接口组合、边界隐藏、异构替换与松弛仿真)](#open-interface-composition-and-replacement) | [open-interface-composition-and-replacement](../../records/open-interface-composition-and-replacement.md) | any type | recorded-checked (theorem) | 1 | 1 |
+| [Endogenous turning, pooled clearing margins, and the epistemic silence boundary (内生转向、共享清算裕度与认知沉默边界)](#endogenous-turning-and-clearing-margin) | [endogenous-turning-and-clearing-margin](../../records/endogenous-turning-and-clearing-margin.md) | any type | recorded-checked (theorem) | 1 | 1 |
+| [Unified drawdown, parametric open fleet restraint, overdraw separation, and temporal aliasing (统一下行、参数化开放舰队约束、超取分离与时间混叠)](#unified-drawdown-overdraw-and-aliasing) | [unified-drawdown-overdraw-and-aliasing](../../records/unified-drawdown-overdraw-and-aliasing.md) | any type | recorded-checked (theorem) | 1 | 1 |
+| [Dynamical scope selection, myopic invasion collapse, and reciprocal open-interface stability (动态视域选择、近视入侵崩溃与互惠开放接口稳定)](#dynamical-scope-and-reciprocal-stability) | [dynamical-scope-and-reciprocal-stability](../../records/dynamical-scope-and-reciprocal-stability.md) | any type | recorded-checked (theorem) | 1 | 1 |
+| [Continuous and stochastic alignment realizations over Mathlib reals (基于 Mathlib 实数的连续与随机对齐实现)](#continuous-stochastic-alignment-reals) | [continuous-stochastic-alignment-reals](../../records/continuous-stochastic-alignment-reals.md) | periphery | recorded-checked (theorem) | 1 | 1 |
 
 <a id="generation-and-degeneration-at-two-grains"></a>
 ### Generation, keeping and degeneration at two grains (生成、守、退化)
@@ -1786,7 +1790,8 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
     - `Becoming.PacedStock.unrecoverable_cadence_impossibility` → `_private.Becoming.PacedStock.0.Becoming.PacedStock.course_bad_stays_below_while_goes` → `_private.Becoming.PacedStock.0.Becoming.PacedStock.course_bad_stays_below_aux` → `Becoming.LineOnAStock.step_lowers`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
     - `Becoming.PacedStock.blocks_certificate_to_fine_kernel` → `Becoming.Viability.Certificate.kernel` → `Becoming.Viability.kernel_iff_held`, listed under [A reading kept by its update, and the reading its own history carries](d.md#a-reading-kept-by-its-update).
     - `Becoming.PacedStock.pace_margin_feasibility_window` → `Becoming.Pace.pace_law` → `Becoming.Identification.bounded_agree` → `Becoming.Identification.statesBelow_iff_lasso`, listed under [Recurrence under every law of change](f.md#recurrence-without-premise).
-  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.PacedStock.unrecoverable_cadence_impossibility`: in `Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge`, listed under [Unified drawdown, parametric open fleet restraint, overdraw separation, and temporal aliasing (统一下行、参数化开放舰队约束、超取分离与时间混叠)](#unified-drawdown-overdraw-and-aliasing).
 
 <a id="lax-multi-scale-viability"></a>
 ### Lax multi-scale viability simulation and vertical tower composition (松弛多尺度存续模拟与塔式纵向复合)
@@ -1836,7 +1841,8 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
   - *Used directly by proofs here.*
     - `Becoming.Flow.whole_not_keepsWidening`, in `Becoming.FiniteGainless.not_keepsWidening`, listed under [What keeping widening needs, and what carries it](g.md#what-keeping-widening-needs).
-  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.widens_implies_transformativeViable`: in `Becoming.ScopeDynamics.mutual_fate_selects_wide_scope`, listed under [Dynamical scope selection, myopic invasion collapse, and reciprocal open-interface stability (动态视域选择、近视入侵崩溃与互惠开放接口稳定)](#dynamical-scope-and-reciprocal-stability).
 
 <a id="open-interface-composition-and-replacement"></a>
 ### Open-interface composition, boundary hiding, structural replacement, and laxity (开放接口组合、边界隐藏、异构替换与松弛仿真)
@@ -1862,6 +1868,130 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
     - `Becoming.lax_kernel_of_certificate`, in `Becoming.OpenComposition.ComposedNonLumpingWitness.prod_viability_kernel`, listed under [Lax multi-scale viability simulation and vertical tower composition (松弛多尺度存续模拟与塔式纵向复合)](#lax-multi-scale-viability).
   - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
     - `Becoming.OpenComposition.close_contract_kernel` → `Becoming.Viability.Certificate.kernel` → `Becoming.Viability.kernel_iff_held`, listed under [A reading kept by its update, and the reading its own history carries](d.md#a-reading-kept-by-its-update).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.OpenComposition.close_contract_kernel`: in `Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable`, listed under [Unified drawdown, parametric open fleet restraint, overdraw separation, and temporal aliasing (统一下行、参数化开放舰队约束、超取分离与时间混叠)](#unified-drawdown-overdraw-and-aliasing).
+    - `Becoming.OpenComposition.compose_close_interchange`: in `Becoming.EndogenousTurning.OpenCompositionBridge.pooled_clearing_open_compose_viable`, listed under [Endogenous turning, pooled clearing margins, and the epistemic silence boundary (内生转向、共享清算裕度与认知沉默边界)](#endogenous-turning-and-clearing-margin); in `Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_viable`, listed under [Dynamical scope selection, myopic invasion collapse, and reciprocal open-interface stability (动态视域选择、近视入侵崩溃与互惠开放接口稳定)](#dynamical-scope-and-reciprocal-stability).
+    - `Becoming.OpenComposition.replace_left_viable`: in `Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable`, listed under [Unified drawdown, parametric open fleet restraint, overdraw separation, and temporal aliasing (统一下行、参数化开放舰队约束、超取分离与时间混叠)](#unified-drawdown-overdraw-and-aliasing); in `Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_defector_replace_viable`, listed under [Dynamical scope selection, myopic invasion collapse, and reciprocal open-interface stability (动态视域选择、近视入侵崩溃与互惠开放接口稳定)](#dynamical-scope-and-reciprocal-stability).
+    - `Becoming.OpenComposition.rewrite_step_viable`: in `Becoming.EndogenousTurning.OpenCompositionBridge.clearing_partner_reconfig_viable`, listed under [Endogenous turning, pooled clearing margins, and the epistemic silence boundary (内生转向、共享清算裕度与认知沉默边界)](#endogenous-turning-and-clearing-margin).
+
+<a id="endogenous-turning-and-clearing-margin"></a>
+### Endogenous turning, pooled clearing margins, and the epistemic silence boundary (内生转向、共享清算裕度与认知沉默边界)
+
+- **Mechanism.** Derives substrate overdraw from Requirement.Frontier selection over marginal yields (proxy_optimum_overdraw_collapse), computes non-oracle ServiceTaskModel bottleneck B_task, proves Viability.Kernel turning under timely pooled Clearing and native OpenComposition reconfig/widening bridges, and locates the epistemic silence collapse boundary (TurningWitness).
+- **Base.** any type
+- **How far seen.** [endogenous-turning-and-clearing-margin](../../records/endogenous-turning-and-clearing-margin.md) recorded-checked (theorem)
+- **Declarations.** `Becoming.EndogenousTurning.proxy_optimum_overdraw_collapse`, `Becoming.EndogenousTurning.flow_proxy_optimum_collapse`, `Becoming.EndogenousTurning.ServiceTaskModel.B_task`, `Becoming.EndogenousTurning.ServiceTaskModel.score_crosses_iff`, `Becoming.EndogenousTurning.endogenous_turning_kernel`, `Becoming.EndogenousTurning.pooled_service_turning_viable`, `Becoming.EndogenousTurning.epistemic_silence_late_bottleneck`, `Becoming.EndogenousTurning.epistemic_silence_masked_unread`, `Becoming.EndogenousTurning.epistemic_silence_cascade`, `Becoming.EndogenousTurning.TurningWitness.timely_survives`, `Becoming.EndogenousTurning.OpenCompositionBridge.pooled_clearing_open_compose_viable`, `Becoming.EndogenousTurning.OpenCompositionBridge.clearing_partner_reconfig_viable`, `Becoming.EndogenousTurning.OpenCompositionBridge.clearing_widening_heals_blindness`
+- **Hypotheses, quoted from the records.**
+  - [endogenous-turning-and-clearing-margin](../../records/endogenous-turning-and-clearing-margin.md), hypothesis 1: No axiom. Requires 0 < H_safe + y_safe, RegimeMargin.Meets/FromNothing/AtMost/Keeps on saturating substrates, ServiceTaskModel throughput/upkeep parameters, (H_safe + y_safe) + drawCeiling * (lag + 1) ≤ B_task for timely turning, and both obs_detects₁ and obs_detects₂ for live ReconfigProcess swaps.
+- **Premises, by law.** None.
+- **Forbids.** Breach of substrate floor below no-return when proxy-optimum selection is unrestrained or task/clearing signals fail to trigger before remaining headroom is exhausted.
+- **Exits.**
+  - To a state, in words: “sustained Viability.Kernel across pooled Clearing and live heterogeneous OpenComposition partner reconfiguration”: sufficient, by `Becoming.EndogenousTurning.OpenCompositionBridge.pooled_clearing_open_compose_viable`. Its edge: Non-oracle B_task crossing triggers pooled channel alarm within lag headroom above H_safe + y_safe.. Drops no premise: it leaves within them. Records: [endogenous-turning-and-clearing-margin](../../records/endogenous-turning-and-clearing-margin.md) recorded-checked (theorem). ([endogenous-turning-and-clearing-margin.md#laws--规律](../../records/endogenous-turning-and-clearing-margin.md#laws--规律))
+- **Transitions.** None.
+- **Tests.** None.
+- **Open.**
+  - Empirical recognition of ServiceTaskModel margins and metaethical non-entailment via ReadsOnlyDynamics.not_entails. ([endogenous-turning-and-clearing-margin.md#does-not-show--未表明](../../records/endogenous-turning-and-clearing-margin.md#does-not-show--未表明))
+- **Beyond its couplings.** Requires 0 < H_safe + y_safe and (H_safe + y_safe) + drawCeiling * (lag + 1) ≤ B_task for timely endogenous turning.
+- **Sources.** [endogenous-turning-and-clearing-margin.md#laws--规律](../../records/endogenous-turning-and-clearing-margin.md#laws--规律)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Optimum.course_beyond`, in `Becoming.EndogenousTurning.flow_proxy_optimum_collapse`, listed under [Re-optimizing at every step](b.md#re-optimizing-above-a-renewal-ends-it).
+    - `Becoming.Turns.acts_alike_of_cascade`, in `Becoming.EndogenousTurning.epistemic_silence_cascade`, listed under [A cascade at the histories reached, and readers reading readers](d.md#a-cascade-at-the-histories-reached).
+    - `Becoming.AdaptiveLoops.assume_guarantee_joint_viable`, in `Becoming.EndogenousTurning.pooled_service_turning_viable`, listed under [Open adaptive loops, assume-guarantee viability, and the coupled race (开放适应回路、假设保证存续与耦合竞速)](c.md#coupled-adaptive-loops-and-race).
+    - `Becoming.OpenComposition.compose_close_interchange`, in `Becoming.EndogenousTurning.OpenCompositionBridge.pooled_clearing_open_compose_viable`; `Becoming.OpenComposition.rewrite_step_viable`, in `Becoming.EndogenousTurning.OpenCompositionBridge.clearing_partner_reconfig_viable`, listed under [Open-interface composition, boundary hiding, structural replacement, and laxity (开放接口组合、边界隐藏、异构替换与松弛仿真)](#open-interface-composition-and-replacement).
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.EndogenousTurning.epistemic_silence_late_bottleneck` → `Becoming.EndogenousTurning.gated_step_stays_below` → `Becoming.Optimum.gated_stays_below`, listed under [Re-optimizing at every step](b.md#re-optimizing-above-a-renewal-ends-it).
+    - `Becoming.EndogenousTurning.pooled_service_turning_viable` → `Becoming.Viability.Certificate.kernel` → `Becoming.Viability.kernel_iff_held`, listed under [A reading kept by its update, and the reading its own history carries](d.md#a-reading-kept-by-its-update).
+    - `Becoming.EndogenousTurning.flow_proxy_optimum_collapse` → `Becoming.Web.lost_over` → `Becoming.Optimum.ends_within` → `Becoming.Amounts.falls_by_stretch`, listed under [The least loss as a premise of rest](g.md#least-loss-rest).
+    - `Becoming.EndogenousTurning.epistemic_silence_late_bottleneck` → `Becoming.EndogenousTurning.short_stays_below_ge` → `Becoming.StockFlowBridge.unitNeverReturnsBelowWithin` → `Becoming.Flow.never_returns_below_within`, listed under [Unclamped pre-overdraw stock–flow bridge and coupled indexed correspondence (未截断先于透支之存流桥及耦合索引相应)](b.md#unclamped-stock-flow-bridge).
+    - `Becoming.EndogenousTurning.epistemic_silence_late_bottleneck` → `Becoming.EndogenousTurning.short_stays_below_ge` → `Becoming.EndogenousTurning.clamped_balances_trap` → `Becoming.StockFlowBridge.unitBalancesOn_of_le`, listed under [Unclamped pre-overdraw stock–flow bridge and coupled indexed correspondence (未截断先于透支之存流桥及耦合索引相应)](b.md#unclamped-stock-flow-bridge).
   - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+
+<a id="unified-drawdown-overdraw-and-aliasing"></a>
+### Unified drawdown, parametric open fleet restraint, overdraw separation, and temporal aliasing (统一下行、参数化开放舰队约束、超取分离与时间混叠)
+
+- **Mechanism.** Proves non-circular zero-local-error joint depletion across finite agent lists, restores viability via inductive OpenComposition RestraintAgentSpec folds and single-member ContractRefines upgrades, separates pre-overdraw Flow transfer from Nat-truncated overdraw at step t* = 1, and proves periodic/strobe/deadline temporal-aliasing obstructions.
+- **Base.** any type
+- **How far seen.** [unified-drawdown-overdraw-and-aliasing](../../records/unified-drawdown-overdraw-and-aliasing.md) recorded-checked (theorem)
+- **Declarations.** `Becoming.UnifiedDrawdown.parametric_local_accounts_depletion`, `Becoming.UnifiedDrawdown.pooled_restraint_restores_viability`, `Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable`, `Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable`, `Becoming.UnifiedDrawdown.unit_balancesOn_iff_le`, `Becoming.UnifiedDrawdown.OverdrawSeparationWitness.witness_bundle`, `Becoming.UnifiedDrawdown.logistic_periodic_sampled_break_concealment`, `Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle`, `Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge`, `Becoming.UnifiedDrawdown.witnessed_dynamics_not_entails`
+- **Hypotheses, quoted from the records.**
+  - [unified-drawdown-overdraw-and-aliasing](../../records/unified-drawdown-overdraw-and-aliasing.md), hypothesis 1: No axiom. Parametric depletion requires distinct private-store agents and positive net deficit; OpenComposition fleet viability requires additive post-cap and envCap headroom below H_safe and lag-buffered warnLevel; aliasing theorems assume sampled schedules ReadsAt / sigmaOdd or coupling-depth lower bounds 2 * N - 1 ≤ L.
+- **Premises, by law.** None.
+- **Forbids.** Misreading local prediction error = 0 or coarse-sampled safety checks as substrate persistence across unpooled extraction, Nat-overdraw breaks, or strobe aliasing.
+- **Exits.**
+  - To a state, in words: “global fleet Viability.Kernel preserved under inductive OpenComposition restraint folds and ContractRefines member upgrades”: sufficient, by `Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable`. Its edge: Additive boundary post-cap headroom and max-lag warning margin cover all pooled agents.. Drops no premise: it leaves within them. Records: [unified-drawdown-overdraw-and-aliasing](../../records/unified-drawdown-overdraw-and-aliasing.md) recorded-checked (theorem). ([unified-drawdown-overdraw-and-aliasing.md#laws--规律](../../records/unified-drawdown-overdraw-and-aliasing.md#laws--规律))
+- **Transitions.** None.
+- **Tests.** None.
+- **Open.**
+  - Schedules sampling every fine recovery step and normative evaluation outside ReadsOnlyDynamics.not_entails. ([unified-drawdown-overdraw-and-aliasing.md#does-not-show--未表明](../../records/unified-drawdown-overdraw-and-aliasing.md#does-not-show--未表明))
+- **Beyond its couplings.** Requires H_safe and warnLevel buffering summed fleet caps and max lags, and entails no ethical predicate.
+- **Sources.** [unified-drawdown-overdraw-and-aliasing.md#laws--规律](../../records/unified-drawdown-overdraw-and-aliasing.md#laws--规律)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Flow.held_draws`, in `Becoming.UnifiedDrawdown.parametric_local_accounts_depletion`, listed under [An order with a set point](b.md#what-a-set-point-optimum-does-beyond).
+    - `Becoming.Optimum.Holding.logistic_valued`, in `Becoming.UnifiedDrawdown.logistic_periodic_sampled_break_concealment`, listed under [Courses over a horizon](b.md#horizon-optima-hold-the-greatest-renewal).
+    - `Becoming.NoReturnAt.recoverable_iff`, in `Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge`; `Becoming.Web.too_late_of_alike`, in `Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge`, listed under [Reading in time: a selection read off continuation reads a loss before its point of no return, or too late](b.md#reading-a-loss-in-time).
+    - `Becoming.PacedStock.unrecoverable_cadence_impossibility`, in `Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge`, listed under [Fine-step stock under coarse rule cadences and the pace–margin sandwich (粗节律下之细步存量与节奏裕度夹击)](#paced-stock-and-cadence-margin-sandwich).
+    - `Becoming.AdaptiveLoops.assume_guarantee_joint_viable`, in `Becoming.UnifiedDrawdown.pooled_restraint_restores_viability`, listed under [Open adaptive loops, assume-guarantee viability, and the coupled race (开放适应回路、假设保证存续与耦合竞速)](c.md#coupled-adaptive-loops-and-race).
+    - `Becoming.StockFlowBridge.unitBalancesOn_of_le`, in `Becoming.UnifiedDrawdown.unit_balancesOn_iff_le`, listed under [Unclamped pre-overdraw stock–flow bridge and coupled indexed correspondence (未截断先于透支之存流桥及耦合索引相应)](b.md#unclamped-stock-flow-bridge).
+    - `Becoming.OpenComposition.close_contract_kernel`, in `Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable`; `Becoming.OpenComposition.replace_left_viable`, in `Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable`, listed under [Open-interface composition, boundary hiding, structural replacement, and laxity (开放接口组合、边界隐藏、异构替换与松弛仿真)](#open-interface-composition-and-replacement).
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle` → `Becoming.UnifiedDrawdown.cadence_erases_timely_recovery` → `Becoming.UnifiedDrawdown.line_excess_terminates_goes` → `Becoming.LineOnAStock.mem_generation`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
+    - `Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle` → `Becoming.UnifiedDrawdown.cadence_erases_timely_recovery` → (two more between) → `Becoming.StockFlowBridge.line_taken_lt_of_goes` → `Becoming.LineOnAStock.taken_below`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
+    - `Becoming.UnifiedDrawdown.logistic_periodic_sampled_break_concealment` → `Becoming.Web.sample_selects_alike_iff` → `Becoming.Web.selects_alike_iff`, listed under [Selection blind beyond the coupling closure](b.md#unselected-beyond-the-coupling-closure).
+    - `Becoming.UnifiedDrawdown.pooled_restraint_restores_viability` → `Becoming.Viability.Certificate.kernel` → `Becoming.Viability.kernel_iff_held`, listed under [A reading kept by its update, and the reading its own history carries](d.md#a-reading-kept-by-its-update).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+
+<a id="dynamical-scope-and-reciprocal-stability"></a>
+### Dynamical scope selection, myopic invasion collapse, and reciprocal open-interface stability (动态视域选择、近视入侵崩溃与互惠开放接口稳定)
+
+- **Mechanism.** Separates mutual-fate viable scope persistence from narrow lineage exhaustion (MutualFateWitness), proves pre-collapse myopic-invader advantage paired with joint commons collapse (UncoordCommonsWitness), restores stability via computable Withholding exclusion gates and two-component OpenComposition gatedDefectorComponent ⊕ coopComponent with ContractRefines replacement, and enforces scopeLaw_cannot_entail_unrestricted.
+- **Base.** any type
+- **How far seen.** [dynamical-scope-and-reciprocal-stability](../../records/dynamical-scope-and-reciprocal-stability.md) recorded-checked (theorem)
+- **Declarations.** `Becoming.ScopeDynamics.scopeLaw_cannot_entail_unrestricted`, `Becoming.ScopeDynamics.mutual_fate_selects_wide_scope`, `Becoming.ScopeDynamics.uncoordinated_myopic_invasion`, `Becoming.ScopeDynamics.reciprocal_coupling_stabilizes_scope`, `Becoming.ScopeDynamics.uncoord_vs_reciprocal_contrast`, `Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_viable`, `Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_defector_replace_viable`, `Becoming.ScopeDynamics.OpenCompositionBridge.blindDefector_vs_reciprocal_open`
+- **Hypotheses, quoted from the records.**
+  - [dynamical-scope-and-reciprocal-stability](../../records/dynamical-scope-and-reciprocal-stability.md), hypothesis 1: No axiom. Requires isolated-pool g_short/g_long and lineage balance/dependence hypotheses for Theorem 1, uncoordinated overdraw vs. safe cooperator balance for Theorem 2, gateOpen_iff bi-directionally coupled to Withholding.waitsAll for Theorem 3, and gross_buffer + g_mono for the L0/AdaptiveLoops bridge.
+- **Premises, by law.** None.
+- **Forbids.** Survival of cooperative pools sharing substrates with un-gated overdrawing invaders, and illicit inference of Unrestricted moral obligations from dynamical scope laws.
+- **Exits.**
+  - To a state, in words: “bounded safe substrate band [S_safe, hi] with TransformsViably and surplus reversal under reciprocal Withholding / OpenComposition gating”: sufficient, by `Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_viable`. Its edge: Bi-directional exclusion gate locks out defection within T_gate while buffer S_safe + T_gate * H_pre ≤ S₀ absorbs pre-gate overdraw.. Drops no premise: it leaves within them. Records: [dynamical-scope-and-reciprocal-stability](../../records/dynamical-scope-and-reciprocal-stability.md) recorded-checked (theorem). ([dynamical-scope-and-reciprocal-stability.md#laws--规律](../../records/dynamical-scope-and-reciprocal-stability.md#laws--规律))
+- **Transitions.** None.
+- **Tests.** None.
+- **Open.**
+  - External ethical 'ought' beyond dynamical closure (scopeLaw_cannot_entail_unrestricted). ([dynamical-scope-and-reciprocal-stability.md#does-not-show--未表明](../../records/dynamical-scope-and-reciprocal-stability.md#does-not-show--未表明))
+- **Beyond its couplings.** Requires pre-gate margin buffering T_gate detection lag and entails zero moral premise.
+- **Sources.** [dynamical-scope-and-reciprocal-stability.md#laws--规律](../../records/dynamical-scope-and-reciprocal-stability.md#laws--规律)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.RegimeMargin.stays_ended`, in `Becoming.ScopeDynamics.uncoordinated_myopic_invasion`; `Becoming.RegimeMargin.falls_within`, in `Becoming.ScopeDynamics.uncoordinated_myopic_invasion`, listed under [The point of no return of a regime](a.md#margin-of-a-regime).
+    - `Becoming.Withholding.withholding_spreads`, in `Becoming.ScopeDynamics.reciprocal_coupling_stabilizes_scope`, listed under [Giving that waits on giving](e.md#giving-that-waits-on-giving).
+    - `Becoming.widens_implies_transformativeViable`, in `Becoming.ScopeDynamics.mutual_fate_selects_wide_scope`, listed under [Viability-preserving transformative continuation order (保续转化序)](#transformative-viability-order).
+    - `Becoming.OpenComposition.compose_close_interchange`, in `Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_viable`; `Becoming.OpenComposition.replace_left_viable`, in `Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_defector_replace_viable`, listed under [Open-interface composition, boundary hiding, structural replacement, and laxity (开放接口组合、边界隐藏、异构替换与松弛仿真)](#open-interface-composition-and-replacement).
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.ScopeDynamics.mutual_fate_selects_wide_scope` → `Becoming.ScopeDynamics.wide_substrate_holds` → `Becoming.RegimeMargin.holds`, listed under [The point of no return of a regime](a.md#margin-of-a-regime).
+    - `Becoming.ScopeDynamics.mutual_fate_selects_wide_scope` → `Becoming.ScopeDynamics.narrow_lineage_ends_together` → `Becoming.GroupEnding.Flow.coupled_end_together`, listed under [Groups with less leave nothing; groups on one family end together](a.md#selection-among-groups-by-ending).
+    - `Becoming.ScopeDynamics.mutual_fate_selects_wide_scope` → `Becoming.ScopeDynamics.narrow_lineage_ends_together` → `Becoming.GroupEnding.Flow.coupled_generation_childless`, listed under [Persisting is a filter on what was chosen: keeping above ending, on the occasions met](#persisting-filters-what-was-chosen).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+
+<a id="continuous-stochastic-alignment-reals"></a>
+### Continuous and stochastic alignment realizations over Mathlib reals (基于 Mathlib 实数的连续与随机对齐实现)
+
+- **Mechanism.** Proves in the Lean 4.30.0-rc2 + Mathlib periphery exact headroom penalties for exponential policy inertia, finite-law Markov and binomial delay-shock survival bounds bridged to PacedStock, pseudo-metric LaxSim contraction tubes with strict-margin discretization into MultiScaleViability, and linear-FA feature-leakage hysteresis embedded in AdaptiveLoops.OpenLoop.
+- **Base.** periphery
+- **How far seen.** [continuous-stochastic-alignment-reals](../../records/continuous-stochastic-alignment-reals.md) recorded-checked (theorem)
+- **Declarations.** `Becoming.AlignmentReals.inertia_lag_headroom_penalty`, `Becoming.AlignmentReals.inertia_witness_phase2`, `Becoming.AlignmentReals.stochastic_delay_survival_bound`, `Becoming.AlignmentReals.stochastic_delay_witness_phase2`, `Becoming.AlignmentReals.metric_laxSim_contraction_tube`, `Becoming.AlignmentReals.metric_to_discrete_kernel_of_strict_margin`, `Becoming.AlignmentReals.linear_fa_leakage_hysteresis`, `Becoming.AlignmentReals.linear_fa_witness_rho_4_5`
+- **Hypotheses, quoted from the records.**
+  - [continuous-stochastic-alignment-reals](../../records/continuous-stochastic-alignment-reals.md), hypothesis 1: Mathlib periphery (leanprover/lean4:v4.30.0-rc2, Mathlib ea11ccc0, standard axioms only, excluded from core). Requires 0 < α < 1 for inertia, finite laws with 0 < δ and 2 * N - 1 bounds for delay, PseudoMetricSpace (0 ≤ α < 1, 1 ≤ β) for MetricLaxSim, and explicit M_delay / leakage ρ hypotheses.
+- **Premises, by law.** None.
+- **Forbids.** Assuming noiseless discrete safety margins hold unmodified under policy inertia α, stochastic delay tails, coarse metric rounding, or correlated FA leakage ρ.
+- **Exits.**
+  - To a state, in words: “explicit continuous/stochastic Viability.Kernel radii and discrete Becoming core reductions when explicit penalty headroom holds”: sufficient, by `Becoming.AlignmentReals.metric_to_discrete_kernel_of_strict_margin`. Its edge: Strict contraction margin and buffered inertia/delay headroom preserve Viability.Kernel across realizations.. Drops no premise: it leaves within them. Records: [continuous-stochastic-alignment-reals](../../records/continuous-stochastic-alignment-reals.md) recorded-checked (theorem). ([continuous-stochastic-alignment-reals.md#laws--规律](../../records/continuous-stochastic-alignment-reals.md#laws--规律))
+- **Transitions.** None.
+- **Tests.** None.
+- **Open.**
+  - Continuous-time PDEs/SDEs and empirical test validation outside modeled finite/metric regimes. ([continuous-stochastic-alignment-reals.md#does-not-show--未表明](../../records/continuous-stochastic-alignment-reals.md#does-not-show--未表明))
+- **Beyond its couplings.** Mathlib periphery (v4.30.0-rc2); requires modeled α, Markov/binomial finite law, PseudoMetricSpace contraction, and M_delay hypotheses.
+- **Sources.** [continuous-stochastic-alignment-reals.md#laws--规律](../../records/continuous-stochastic-alignment-reals.md#laws--规律)
+- **Uses between proofs.** Not read: this entry lists no theorem of the print, so no line can be computed for it ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
 
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), [B](b.md), [C](c.md), [D](d.md), [E](e.md), [F](f.md), [G](g.md), **H**.

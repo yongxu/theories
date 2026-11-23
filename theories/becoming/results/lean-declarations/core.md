@@ -1009,6 +1009,119 @@ Contains 32 textual `#print axioms` commands; their results belong to the origin
 
 </details>
 
+<a id="module-bc208760b971"></a>
+
+<details>
+<summary>AlignmentReals.lean — 94 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean`
+
+Imports: `Mathlib.Algebra.Order.Field.GeomSum`, `Mathlib.Algebra.Order.Floor.Semiring`, `Mathlib.Analysis.SpecificLimits.Basic`, `Mathlib.Data.Real.Archimedean`, `Mathlib.Data.Matrix.Mul`, `Mathlib.Topology.MetricSpace.Pseudo.Defs`, `Mathlib.Tactic`, `Becoming.PacedStock`, `Becoming.AdaptiveLoops`, `Becoming.MultiScaleViability`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.AlignmentReals.inertia_error_closed_form](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L72) | 72 |
+| [Becoming.AlignmentReals.blendedDraw_sub_safe](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L83) | 83 |
+| [Becoming.AlignmentReals.inertia_excess_draw_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L88) | 88 |
+| [Becoming.AlignmentReals.inertia_excess_draw_shifted_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L105) | 105 |
+| [Becoming.AlignmentReals.inertia_excess_draw_lt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L123) | 123 |
+| [Becoming.AlignmentReals.inertia_excess_draw_shifted_lt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L136) | 136 |
+| [Becoming.AlignmentReals.inertia_stock_prefix](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L150) | 150 |
+| [Becoming.AlignmentReals.inertia_stock_eq_sum](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L159) | 159 |
+| [Becoming.AlignmentReals.inertia_stock_closed_form](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L173) | 173 |
+| [Becoming.AlignmentReals.inertia_lag_headroom_penalty](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L185) | 185 |
+| [Becoming.AlignmentReals.inertia_lag_contrasts_pace_window](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L246) | 246 |
+| [Becoming.AlignmentReals.p2Giving_fromNothing](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L325) | 325 |
+| [Becoming.AlignmentReals.p2Giving_atMost1](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L327) | 327 |
+| [Becoming.AlignmentReals.p2Giving_short1](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L331) | 331 |
+| [Becoming.AlignmentReals.p2Giving_meets1](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L335) | 335 |
+| [Becoming.AlignmentReals.p2Giving_keeps0](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L340) | 340 |
+| [Becoming.AlignmentReals.p2Giving_keeps1](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L344) | 344 |
+| [Becoming.AlignmentReals.p2Course_len_le_one](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L348) | 348 |
+| [Becoming.AlignmentReals.p2_upper_draw_4](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L366) | 366 |
+| [Becoming.AlignmentReals.p2_safeClose](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L377) | 377 |
+| [Becoming.AlignmentReals.p2Course_after_six](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L394) | 394 |
+| [Becoming.AlignmentReals.inertia_witness_phase2](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L422) | 422 |
+| [Becoming.AlignmentReals.FiniteLaw.prob_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L492) | 492 |
+| [Becoming.AlignmentReals.FiniteLaw.prob_le_one](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L499) | 499 |
+| [Becoming.AlignmentReals.FiniteLaw.prob_add_compl](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L510) | 510 |
+| [Becoming.AlignmentReals.markov_prob_ge](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L519) | 519 |
+| [Becoming.AlignmentReals.markov_survival_sufficient](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L532) | 532 |
+| [Becoming.AlignmentReals.reverse_markov_failure_bound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L553) | 553 |
+| [Becoming.AlignmentReals.spike_threshold_survival_upper](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L596) | 596 |
+| [Becoming.AlignmentReals.spikeCount_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L637) | 637 |
+| [Becoming.AlignmentReals.spikeCount_cons](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L643) | 643 |
+| [Becoming.AlignmentReals.productBoolWeight_cons](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L648) | 648 |
+| [Becoming.AlignmentReals.productBool_prob_spikeCount_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L662) | 662 |
+| [Becoming.AlignmentReals.stochastic_delay_survival_bound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L766) | 766 |
+| [Becoming.AlignmentReals.stochastic_spike_witness_phase2](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L858) | 858 |
+| [Becoming.AlignmentReals.stochastic_delay_witness_phase2](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L927) | 927 |
+| [Becoming.AlignmentReals.metricSlack_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L997) | 997 |
+| [Becoming.AlignmentReals.metricSlack_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1002) | 1002 |
+| [Becoming.AlignmentReals.metricSlack_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1010) | 1010 |
+| [Becoming.AlignmentReals.metricSlack_le_max](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1021) | 1021 |
+| [Becoming.AlignmentReals.MetricLaxSim.epoch_trace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1037) | 1037 |
+| [Becoming.AlignmentReals.MetricLaxSim.advance_blocks](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1049) | 1049 |
+| [Becoming.AlignmentReals.metric_laxSim_contraction_tube](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1102) | 1102 |
+| [Becoming.AlignmentReals.discrete_absorb_of_metric](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1227) | 1227 |
+| [Becoming.AlignmentReals.metric_to_discrete_kernel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1255) | 1255 |
+| [Becoming.AlignmentReals.strict_margin_discretization_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1288) | 1288 |
+| [Becoming.AlignmentReals.metric_to_discrete_kernel_of_strict_margin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1345) | 1345 |
+| [Becoming.AlignmentReals.linear_fa_margin_shift](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1373) | 1373 |
+| [Becoming.AlignmentReals.linear_fa_tabular_invariant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1384) | 1384 |
+| [Becoming.AlignmentReals.linear_fa_warn_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1390) | 1390 |
+| [Becoming.AlignmentReals.linear_fa_warn_lower](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1400) | 1400 |
+| [Becoming.AlignmentReals.linear_fa_leakage_hysteresis](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1437) | 1437 |
+| [Becoming.AlignmentReals.faG_rises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1517) | 1517 |
+| [Becoming.AlignmentReals.faSafeSeq_coords](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1532) | 1532 |
+| [Becoming.AlignmentReals.faSafeSeq_eq_update](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1542) | 1542 |
+| [Becoming.AlignmentReals.faThetaEnter_coords](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1551) | 1551 |
+| [Becoming.AlignmentReals.faOpenLoop_coupled_warn_trace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1730) | 1730 |
+| [Becoming.AlignmentReals.faWarn_coupled_score_gt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1806) | 1806 |
+| [Becoming.AlignmentReals.any_cert_coupled_maxLag_ge_18](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1837) | 1837 |
+| [Becoming.AlignmentReals.linear_fa_witness_rho_4_5](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1889) | 1889 |
+
+Definitions and types:
+
+- `def` [Becoming.AlignmentReals.inertiaWeight](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L57) (L57)
+- `def` [Becoming.AlignmentReals.blendedDraw](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L62) (L62)
+- `def` [Becoming.AlignmentReals.inertiaStock](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L66) (L66)
+- `inductive` [Becoming.AlignmentReals.P2Unit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L295) (L295)
+- `def` [Becoming.AlignmentReals.p2Need](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L301) (L301)
+- `def` [Becoming.AlignmentReals.p2Use](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L304) (L304)
+- `def` [Becoming.AlignmentReals.p2Kids](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L309) (L309)
+- `def` [Becoming.AlignmentReals.p2Giving](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L313) (L313)
+- `def` [Becoming.AlignmentReals.p2RuleH](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L317) (L317)
+- `def` [Becoming.AlignmentReals.p2Course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L321) (L321)
+- `structure` [Becoming.AlignmentReals.FiniteLaw](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L478) (L478)
+- `def` [Becoming.AlignmentReals.FiniteLaw.prob](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L484) (L484)
+- `def` [Becoming.AlignmentReals.FiniteLaw.expect](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L489) (L489)
+- `def` [Becoming.AlignmentReals.survProb](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L612) (L612)
+- `def` [Becoming.AlignmentReals.productBoolWeight](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L618) (L618)
+- `def` [Becoming.AlignmentReals.productBoolLaw](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L622) (L622)
+- `def` [Becoming.AlignmentReals.spikeCount](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L634) (L634)
+- `def` [Becoming.AlignmentReals.boolPiEquiv](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L654) (L654)
+- `def` [Becoming.AlignmentReals.delayLaw3](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L913) (L913)
+- `structure` [Becoming.AlignmentReals.MetricLaxSim](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L966) (L966)
+- `def` [Becoming.AlignmentReals.metricSlack](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L993) (L993)
+- `def` [Becoming.AlignmentReals.scaledSlackDist](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1159) (L1159)
+- `def` [Becoming.AlignmentReals.toDiscreteLaxSim](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1170) (L1170)
+- `def` [Becoming.AlignmentReals.faSafeUpdate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1362) (L1362)
+- `def` [Becoming.AlignmentReals.faWarnUpdate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1368) (L1368)
+- `def` [Becoming.AlignmentReals.warnStock](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1422) (L1422)
+- `def` [Becoming.AlignmentReals.faOpenLoop](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1497) (L1497)
+- `def` [Becoming.AlignmentReals.faObs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1508) (L1508)
+- `def` [Becoming.AlignmentReals.faChannel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1511) (L1511)
+- `def` [Becoming.AlignmentReals.faG](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1515) (L1515)
+- `def` [Becoming.AlignmentReals.faSafeSeq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1528) (L1528)
+- `def` [Becoming.AlignmentReals.faThetaEnter](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1549) (L1549)
+- `def` [Becoming.AlignmentReals.faCertZero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1556) (L1556)
+- `def` [Becoming.AlignmentReals.faCertCoupled](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean#L1597) (L1597)
+
+</details>
+
 <a id="module-5b5a065f08cd"></a>
 
 <details>

@@ -1120,7 +1120,7 @@ flowchart LR
 
 ## H. Kept regions, renewal, generation
 
-42 dynamics, 81 exits.
+46 dynamics, 85 exits.
 
 ```mermaid
 flowchart LR
@@ -1180,6 +1180,10 @@ flowchart LR
   n53["Lax multi-scale viability simulation and vertical tower…"]
   n54["Viability-preserving transformative continuation order…"]
   n55["Open-interface composition, boundary hiding, structural…"]
+  n56["Endogenous turning, pooled clearing margins, and the…"]
+  n57["Unified drawdown, parametric open fleet restraint, overdraw…"]
+  n58["Dynamical scope selection, myopic invasion collapse, and…"]
+  n59["Continuous and stochastic alignment realizations over…"]
   e1(["a witness: balanced, only active formations giving and activity…"])
   n2 -.->|witness| e1
   e2(["a witness: balanced, only active formations giving and activity…"])
@@ -1317,6 +1321,14 @@ flowchart LR
   n54 -.->|witness| e55
   e56(["closed Viability.Kernel and synchronous-product LaxSim stability…"])
   n55 -->|sufficient| e56
+  e57(["sustained Viability.Kernel across pooled Clearing and live…"])
+  n56 -->|sufficient| e57
+  e58(["global fleet Viability.Kernel preserved under inductive…"])
+  n57 -->|sufficient| e58
+  e59(["bounded safe substrate band 'S_safe, hi' with TransformsViably and…"])
+  n58 -->|sufficient| e59
+  e60(["explicit continuous/stochastic Viability.Kernel radii and discrete…"])
+  n59 -->|sufficient| e60
   classDef other stroke-dasharray: 3 3
 ```
 
@@ -1364,6 +1376,10 @@ flowchart LR
 | [Lax multi-scale viability simulation and vertical tower composition (松弛多尺度存续模拟与塔式纵向复合)](families/h.md#lax-multi-scale-viability) | 1. micro Viability.Kernel certified from macro Certificate despite micro-phase non-lumpability (lax_kernel_of_certificate) (sufficient) | — |
 | [Viability-preserving transformative continuation order (保续转化序)](families/h.md#transformative-viability-order) | 1. perpetual TransformsViably evolution with genuine micro-turnover on finite closed balanced webs even where zero-loss KeepsWidening is impossible (witness) | — |
 | [Open-interface composition, boundary hiding, structural replacement, and laxity (开放接口组合、边界隐藏、异构替换与松弛仿真)](families/h.md#open-interface-composition-and-replacement) | 1. closed Viability.Kernel and synchronous-product LaxSim stability preserved across gluing, hiding, replacement, and live reconfiguration (sufficient) | — |
+| [Endogenous turning, pooled clearing margins, and the epistemic silence boundary (内生转向、共享清算裕度与认知沉默边界)](families/h.md#endogenous-turning-and-clearing-margin) | 1. sustained Viability.Kernel across pooled Clearing and live heterogeneous OpenComposition partner reconfiguration (sufficient) | — |
+| [Unified drawdown, parametric open fleet restraint, overdraw separation, and temporal aliasing (统一下行、参数化开放舰队约束、超取分离与时间混叠)](families/h.md#unified-drawdown-overdraw-and-aliasing) | 1. global fleet Viability.Kernel preserved under inductive OpenComposition restraint folds and ContractRefines member upgrades (sufficient) | — |
+| [Dynamical scope selection, myopic invasion collapse, and reciprocal open-interface stability (动态视域选择、近视入侵崩溃与互惠开放接口稳定)](families/h.md#dynamical-scope-and-reciprocal-stability) | 1. bounded safe substrate band [S_safe, hi] with TransformsViably and surplus reversal under reciprocal Withholding / OpenComposition gating (sufficient) | — |
+| [Continuous and stochastic alignment realizations over Mathlib reals (基于 Mathlib 实数的连续与随机对齐实现)](families/h.md#continuous-stochastic-alignment-reals) | 1. explicit continuous/stochastic Viability.Kernel radii and discrete Becoming core reductions when explicit penalty headroom holds (sufficient) | — |
 
 **Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it.
 
@@ -1558,9 +1574,9 @@ flowchart LR
 
 *AI-written. Computed at each render from what Lean printed of the theorems each proof uses (the print; what it was made from is under the next paragraph) and from which theorems the entries list; typed by no one, and no result. The lines are last in each dynamic's section on its family's page, for every family, read for its premises or not.*
 
-A line of this kind says that the proof of one theorem, as written, uses another theorem, and that the entries list the two under different dynamics. It says no more. 2,370 of the 21,238 theorems in the print are listed under a dynamic, so these lines are of those; where a chain is shown it runs through the rest. A use is not a case: the using theorem need not be the used one with its roles fixed. It is not a joining and not an exit: it says nothing of a course passing from one dynamic to the other, and its direction is the order of proof, the used theorem declared before its user, which is no direction of change. It cannot see a passage: where going from one dynamic to another is itself what a theorem states, the proof of it need use nothing listed under either, and of the 59 pairs of dynamics with an exit from one to the other, 34 have no line of this kind. Passages proved in Lean that no exit names are not on this page under any kind; that none is shown is not that none is proved. A line is of two theorems, and a dynamic lists many: that one of them is used is not a use of what the dynamic's name says. Which dynamic a theorem is under is kept by hand, so every line rests on the listing as well as on Lean; 109 theorems of the print are listed under more than one dynamic, and where the using theorem is also listed under the used one's dynamic, or the used one under the using one's, the use is shown as a shared listing and not as a use between those two. Only theorems declared in the modules of the core receipt are printed, and definitions are not followed: 20 dynamics list no theorem the print has a row for and can have no line (9 of them list no declaration), and a theorem stated with another dynamic's notion and using none of its theorems has none. The printer follows one call, and every declaration under a theorem's own name (Lean's auxiliary ones, and any theorem a person declared under that name), counting what they use as the theorem's own; a field of a structure that is a proposition has a row, so a proof that takes it from the structure it is given shows as a use, though what it uses is an assumption and not a proved theorem; a use it does not follow is not shown, so where no line is, none was found; 22 names the printed proofs use have no row in the print, and nothing is followed past such a name. A chain through theorems no dynamic lists says where the proofs as written lead, and not that the first needs the last: a theorem between may prove several things of which the next takes one. Such a chain also rests on what is not listed: were a theorem between entered under a dynamic, the chain would stop there. How often a dynamic's theorems are used says they were proved earlier and are called often; it says nothing of that dynamic's place among the others. The figures in this paragraph are counts of what is listed and printed, told so that a reader knows how much the lines cover. They change when a theorem is listed or a proof rewritten, and a change in them is not the map nearer or further.
+A line of this kind says that the proof of one theorem, as written, uses another theorem, and that the entries list the two under different dynamics. It says no more. 2,400 of the 21,573 theorems in the print are listed under a dynamic, so these lines are of those; where a chain is shown it runs through the rest. A use is not a case: the using theorem need not be the used one with its roles fixed. It is not a joining and not an exit: it says nothing of a course passing from one dynamic to the other, and its direction is the order of proof, the used theorem declared before its user, which is no direction of change. It cannot see a passage: where going from one dynamic to another is itself what a theorem states, the proof of it need use nothing listed under either, and of the 59 pairs of dynamics with an exit from one to the other, 34 have no line of this kind. Passages proved in Lean that no exit names are not on this page under any kind; that none is shown is not that none is proved. A line is of two theorems, and a dynamic lists many: that one of them is used is not a use of what the dynamic's name says. Which dynamic a theorem is under is kept by hand, so every line rests on the listing as well as on Lean; 109 theorems of the print are listed under more than one dynamic, and where the using theorem is also listed under the used one's dynamic, or the used one under the using one's, the use is shown as a shared listing and not as a use between those two. Only theorems declared in the modules of the core receipt are printed, and definitions are not followed: 21 dynamics list no theorem the print has a row for and can have no line (9 of them list no declaration), and a theorem stated with another dynamic's notion and using none of its theorems has none. The printer follows one call, and every declaration under a theorem's own name (Lean's auxiliary ones, and any theorem a person declared under that name), counting what they use as the theorem's own; a field of a structure that is a proposition has a row, so a proof that takes it from the structure it is given shows as a use, though what it uses is an assumption and not a proved theorem; a use it does not follow is not shown, so where no line is, none was found; 31 names the printed proofs use have no row in the print, and nothing is followed past such a name. A chain through theorems no dynamic lists says where the proofs as written lead, and not that the first needs the last: a theorem between may prove several things of which the next takes one. Such a chain also rests on what is not listed: were a theorem between entered under a dynamic, the chain would stop there. How often a dynamic's theorems are used says they were proved earlier and are called often; it says nothing of that dynamic's place among the others. The figures in this paragraph are counts of what is listed and printed, told so that a reader knows how much the lines cover. They change when a theorem is listed or a proof rewritten, and a change in them is not the map nearer or further.
 
-**What the print was made from.** Commit `887735b795e5`, the core run of `20261123T170322.365233Z`, leanprover/lean4:v4.29.1: 21,238 theorems in 421 modules. It binds the sources the core receipt names.
+**What the print was made from.** Commit `c8757c7b6817`, the core run of `20261123T181227.411285Z`, leanprover/lean4:v4.29.1: 21,573 theorems in 424 modules. It binds the sources the core receipt names.
 
 [Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Atlas](ATLAS.md) · [Graph](../THEORY-GRAPH.md) · [Connections](CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
 

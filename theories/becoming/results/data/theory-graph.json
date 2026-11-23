@@ -1761,6 +1761,18 @@
    "page": "theories/becoming/results/records/continuing-self-fed-from-beyond.md"
   },
   {
+   "id": "record:continuous-stochastic-alignment-reals",
+   "type": "result",
+   "record": "continuous-stochastic-alignment-reals",
+   "title": "Continuous and stochastic alignment realizations over Mathlib reals",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/continuous-stochastic-alignment-reals.md"
+  },
+  {
    "id": "record:continuous-time-as-tower",
    "type": "result",
    "record": "continuous-time-as-tower",
@@ -2157,6 +2169,18 @@
    "page": "theories/becoming/results/records/drift-offspring-sampled.md"
   },
   {
+   "id": "record:dynamical-scope-and-reciprocal-stability",
+   "type": "result",
+   "record": "dynamical-scope-and-reciprocal-stability",
+   "title": "Dynamical scope selection, myopic invasion collapse, and reciprocal open-interface stability",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/dynamical-scope-and-reciprocal-stability.md"
+  },
+  {
    "id": "record:effective-capacity-and-eventual-reachability",
    "type": "result",
    "record": "effective-capacity-and-eventual-reachability",
@@ -2215,6 +2239,18 @@
    "region": "life",
    "base": "old-base",
    "page": "theories/becoming/results/records/ending-laws-as-regimes-on-a-lineage.md"
+  },
+  {
+   "id": "record:endogenous-turning-and-clearing-margin",
+   "type": "result",
+   "record": "endogenous-turning-and-clearing-margin",
+   "title": "Endogenous turning, pooled clearing margins, and the epistemic silence boundary",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/endogenous-turning-and-clearing-margin.md"
   },
   {
    "id": "record:endpoint-loss-and-return",
@@ -6271,6 +6307,18 @@
    "region": "life",
    "base": "general",
    "page": "theories/becoming/results/records/unequal-groups-not-decided-by-the-spread-among-groups.md"
+  },
+  {
+   "id": "record:unified-drawdown-overdraw-and-aliasing",
+   "type": "result",
+   "record": "unified-drawdown-overdraw-and-aliasing",
+   "title": "Unified drawdown, parametric open fleet restraint, overdraw separation, and temporal aliasing",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/unified-drawdown-overdraw-and-aliasing.md"
   },
   {
    "id": "record:unity-of-readings",
@@ -11853,6 +11901,39 @@
    "region": "map",
    "base": "general",
    "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.EndogenousTurning",
+   "type": "module",
+   "name": "Becoming.EndogenousTurning",
+   "level": "L2",
+   "theorems": 85,
+   "region": "map",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.UnifiedDrawdown",
+   "type": "module",
+   "name": "Becoming.UnifiedDrawdown",
+   "level": "L2",
+   "theorems": 107,
+   "region": "map",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.ScopeDynamics",
+   "type": "module",
+   "name": "Becoming.ScopeDynamics",
+   "level": "L2",
+   "theorems": 67,
+   "region": "map",
+   "base": "general",
+   "on_grammar": false,
    "reaches_grammar": true
   },
   {
@@ -33740,6 +33821,41 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.EndogenousTurning",
+   "to": "module:Becoming.AdaptiveLoops",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EndogenousTurning",
+   "to": "module:Becoming.Cascade",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EndogenousTurning",
+   "to": "module:Becoming.Clearing",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EndogenousTurning",
+   "to": "module:Becoming.OpenComposition",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EndogenousTurning",
+   "to": "module:Becoming.Optimum",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EndogenousTurning",
+   "to": "module:Becoming.StockFlowBridge",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EndogenousTurning",
+   "to": "module:Becoming.Unread",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Enough",
    "to": "module:Becoming.SeekingRuns",
    "type": "imports"
@@ -36625,6 +36741,51 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.ScopeDynamics",
+   "to": "module:Becoming.AdaptiveLoops",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ScopeDynamics",
+   "to": "module:Becoming.GroupEnding",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ScopeDynamics",
+   "to": "module:Becoming.OpenComposition",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ScopeDynamics",
+   "to": "module:Becoming.RegimeMargin",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ScopeDynamics",
+   "to": "module:Becoming.Significance",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ScopeDynamics",
+   "to": "module:Becoming.StockFlowBridge",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ScopeDynamics",
+   "to": "module:Becoming.TransformativeViability",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ScopeDynamics",
+   "to": "module:Becoming.Weightings",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ScopeDynamics",
+   "to": "module:Becoming.Withholding",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.ScopedReach",
    "to": "module:Becoming.SeedReach",
    "type": "imports"
@@ -37142,6 +37303,66 @@
   {
    "from": "module:Becoming.Unfolding",
    "to": "module:Becoming.Space",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnifiedDrawdown",
+   "to": "module:Becoming.AdaptiveLoops",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnifiedDrawdown",
+   "to": "module:Becoming.Continuation",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnifiedDrawdown",
+   "to": "module:Becoming.FreeEnergyGuarantees",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnifiedDrawdown",
+   "to": "module:Becoming.OpenComposition",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnifiedDrawdown",
+   "to": "module:Becoming.Optimum",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnifiedDrawdown",
+   "to": "module:Becoming.PacedStock",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnifiedDrawdown",
+   "to": "module:Becoming.ReadOffInTime",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnifiedDrawdown",
+   "to": "module:Becoming.ReadingSchedule",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnifiedDrawdown",
+   "to": "module:Becoming.SampledSelection",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnifiedDrawdown",
+   "to": "module:Becoming.SelectionPool",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnifiedDrawdown",
+   "to": "module:Becoming.SetPointOptimum",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnifiedDrawdown",
+   "to": "module:Becoming.StockFlowBridge",
    "type": "imports"
   },
   {
@@ -42979,6 +43200,21 @@
    "type": "related"
   },
   {
+   "from": "record:continuous-stochastic-alignment-reals",
+   "to": "record:coupled-adaptive-loops-and-race",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:continuous-stochastic-alignment-reals",
+   "to": "record:lax-multi-scale-viability",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:continuous-stochastic-alignment-reals",
+   "to": "record:paced-stock-and-cadence-margin-sandwich",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:continuous-time-as-tower",
    "to": "module:Becoming.Locality",
    "type": "proved-in"
@@ -44340,6 +44576,26 @@
    "type": "related"
   },
   {
+   "from": "record:dynamical-scope-and-reciprocal-stability",
+   "to": "module:Becoming.ScopeDynamics",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:dynamical-scope-and-reciprocal-stability",
+   "to": "record:open-interface-composition-and-replacement",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:dynamical-scope-and-reciprocal-stability",
+   "to": "record:transformative-viability-order",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:dynamical-scope-and-reciprocal-stability",
+   "to": "record:widening-as-what-every-positive-weighting-ranks",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:effective-capacity-and-eventual-reachability",
    "to": "module:Becoming.ActivationCapacity",
    "type": "proved-in"
@@ -44470,6 +44726,26 @@
    "from": "record:ending-laws-as-regimes-on-a-lineage",
    "to": "record:whole-drawing-beyond-renewal-ends",
    "type": "related"
+  },
+  {
+   "from": "record:endogenous-turning-and-clearing-margin",
+   "to": "module:Becoming.EndogenousTurning",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:endogenous-turning-and-clearing-margin",
+   "to": "record:coupled-adaptive-loops-and-race",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:endogenous-turning-and-clearing-margin",
+   "to": "record:open-interface-composition-and-replacement",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:endogenous-turning-and-clearing-margin",
+   "to": "record:unclamped-stock-flow-bridge",
+   "type": "formal-reuse"
   },
   {
    "from": "record:endpoint-loss-and-return",
@@ -59984,6 +60260,31 @@
    "from": "record:unequal-groups-not-decided-by-the-spread-among-groups",
    "to": "record:shaping-selected-among-groups",
    "type": "related"
+  },
+  {
+   "from": "record:unified-drawdown-overdraw-and-aliasing",
+   "to": "module:Becoming.UnifiedDrawdown",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:unified-drawdown-overdraw-and-aliasing",
+   "to": "record:free-energy-bound-in-counts",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:unified-drawdown-overdraw-and-aliasing",
+   "to": "record:open-interface-composition-and-replacement",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:unified-drawdown-overdraw-and-aliasing",
+   "to": "record:paced-stock-and-cadence-margin-sandwich",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:unified-drawdown-overdraw-and-aliasing",
+   "to": "record:unclamped-stock-flow-bridge",
+   "type": "formal-reuse"
   },
   {
    "from": "record:unity-of-readings",
