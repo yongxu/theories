@@ -1,0 +1,18 @@
+AI-written (the coordinating session), 23 November 2026. The four lists of modules that session chose, and the count it made from the print of uses between proofs at main 97609c577. A reading, not a measure: the lists are one session's choice, definitions are not followed, and the readers of the same afternoon found that much of what joins the parts lies in modules outside the lists.
+
+A the relation: Selection SelectionPool SelectionGap SelectionReach SelectionLevels SelectionRuns SelectionShift SelectionTerm BeyondCoupling PoolResponse PoolCourse Dependence MutualDependence Interdependence Feedback Flow Relevance Sensitivity SensitivityWebs Unread UnreadStandings Blanket BlanketCouplings
+B through time: Pace RuleCapture ClosedCapture RuleShaping DrawnShaping PoolFromCourse ReadInTime ReadOffInTime TurningInTime ChoiceCountCapture LineOnAStock LineOnAStockCases WayOfUnits WayUnderARule LevelAlone RegimeMargin Stock Regulation TimedResponse ReadingSchedule Irreversibility Exhaustion LineageDrawdown Capture RuleRebuilding RuleHandoff SelectionPace
+C through accounts: Reading Readings ReadingsSpread ReadingsPersist ReadingLoop ReflexivePrediction RelativePosition SharedCodes OpenedCorrection Learning LearningRuns Learnable LearnableRuns ResponseLearning Description Mechanism Unfolding Identification Observation Retrodiction Revision ContinuingRevision Training CodeAcquisition ActiveReading HeldForReading Ranking Significance BoundedSignificance Centers Identity OwnClass Contacts Inquiry
+D through scale: Composition Wholes WholeAmounts Joining JoiningCodes JoiningContexts JoiningRoles Joint JointDraw JointKeeping JointPhase JointPlans JointCorrespondence Gluing Sampling SampledSelection Tower ProjectedLaws Granularity Stuttering Lifting Refinement Segmentation Regrouping RegroupingSelection LearnedGrouping Fragments LocalUnits Locality Bundles Cuts
+
+Theorems in the print: 20,838 in 415 files. A: 23 modules, 957 theorems. B: 27, 1,756. C: 34, 1,585. D: 31, 1,098. In none of the four: 15,442.
+Theorems of X whose proof term reaches a theorem of Y, through chains / directly:
+A->B 5/4   A->C 29/18   A->D 9/2
+B->A 174/64   B->C 72/15   B->D 2/1 (both in Capture, reaching Locality)
+C->A 147/59   C->B 6/4   C->D 7/5
+D->A 97/36   D->B 0/0   D->C 13/7
+Of the 5,396 theorems in the four lists: 4,869 reach no other list, 493 reach one, 34 reach two, none all three.
+The script was run inline in the session and is in its transcript; it reads each file of theories/becoming/results/atlas/proof-uses/ and follows `uses` transitively.
+
+The readers: ten runs of gpt-6.2-sol at effort high, read-only and sandboxed, 16:48 to 17:07 WIB, five at a time. Tokens by their footers, in thousands: 7,423.2; 7,154.5; 8,402.0; 5,001.1; 7,547.6; 3,917.0; 4,512.6; 5,240.7; 17,371.1; 4,408.2; in all 70,978.0, over 855 commands. The footer counts the context sent again with each command and does not separate what was cached. The session had told him to expect a few million.
+The check of the readers' claims that one theorem is proved from another: 48 pairs set against the print; 46 as the print has them; one theorem (FallibleInquiry.coverage_le_errors_add_timed_reach) is in a module the print does not hold; one pair (Flow.joint_excess_ends from Flow.family_excess_ends) was the session's own guess and is not so.

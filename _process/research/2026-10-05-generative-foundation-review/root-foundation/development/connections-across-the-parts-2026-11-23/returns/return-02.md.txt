@@ -1,0 +1,64 @@
+## Per module
+
+A–D mark where the declarations bear on the map.
+
+| Module | Finding |
+|---|---|
+| Continuity | **A, D.** Local reading plus global conservation gives balance by transfers along the relation (`balancesOn_of_law`). `Teleport.no_transfers_apart` shows why global conservation alone is insufficient. |
+| ConveyanceBoundaries | **A, B, D.** `Flow.region_no_boundary` turns recurring withdrawal under balance, dissipation and enclosure into failure of closure under conveyance. |
+| CopyCourses | **B, C, D.** `run_drawn` gives copying’s cumulative cost, `inspection_course_keeps_template` preserves a faithful product, and `swap_course_iff` permits reordering successful releases. |
+| Copying | **B, C, D.** `reading_iff` requires faithful site readings and material and support budgets. `batch_all_iff` combines the budgets of copies sharing a pool. |
+| Correspondence | **A, B, C.** `Web.Interacts` pairs a draw with positive need. `Later.drawing_connects_earlier` and `Pinned.drawing_interacts` expose its limits as a reading of causal effect. |
+| Countdown | **B.** `completes_iff` gives the exact fuel threshold for counted work. `exits` bounds the time to a reserved exit under admitted moves. |
+| CountedCodes | **C, D.** `read_relabels` carries count symmetries to codes when unique maxima exist. `addSpeaker_tied` gives shared counts without a uniquely greatest word. |
+| Counterfactual | **A, B, C.** `ExchangeLaw.Nonanticipating.through_sensitive` derives a coupling from sensitivity on finitely many conditions. `comparison_with_act` compares a feasible generated alternative. |
+| CounterfactualRuns | **B, C.** `ExchangeLaw.closedBy_course` realizes the generated history as a run with an internal policy. `Run.beyond_shown_iff` locates what the law adds to the record. |
+| Counting | **B, D.** `World.counting_under` characterizes what each choice of World premises leaves in the census. `World.enclosure_bounds_change_counted` bounds turnover by initial stock under enclosure. |
+| CoupledDrawers | **A, B, D.** `gated_threshold` and `AtOnce.Shores.drain_perfect` distinguish successive and simultaneous withdrawal under a shared threshold reward. |
+| CouplingTraces | **A, B, D.** `upstream_iff_reach` reads coupling reach on conditions alone. `coupledIntoBy_iff_trace` retains the order in which levels can affect one another. |
+| CourseRoles | **A, D.** `balanced_iff` and `runs_agree` preserve balance and levels in two representations of the same exchange, with relata identified or distinguished by role. |
+| CourseWorlds | **A, B, C.** `TwoActs.gap_le_carried_read` bounds how much difference reaches generated worlds through a reading schedule. `break_carried_nowhere_worlds` preserves an unread stock gap. |
+| Courses | **A, B, C, D.** Puts disparate laws on traces and runs, including `Drains.leaves_run`, `course_resolves_every_iff`, `run_judges_iff` and `courses_keep_unrelated`. |
+| Coverage | **D.** `realizes_iff_global` characterizes placement by the resulting cover. `two_tile_orders` exhibits the event order that the cover forgets. |
+| CrossSituational | **C, D.** `resolves_iff` requires keeping the target and excluding each rival. `reads_every_iff` lifts wordwise resolution to correctly segmented sequences. |
+| Decidedness | **A, B, D.** `exists_undominated` identifies a local decision premise for selection. `Counts.over_stretch` balances census counts wherever they exist. |
+| Dephasing | **C, D.** `recording_dephases` gives the apparent loss under a reduced reading. `control_returns` shows what reversing the joint interaction recovers. |
+| Derivation | **C, D.** `Derives.sound` carries basis and premises to a claim. `pointwise_iff_common` passes from separate realizations of derived claims to joint realization for a finitely covered basis. |
+| Descent | **A, B, C.** `Web.LivesOn` and `Flow.descent` add direct sustenance and descent to the valuation’s relation. `Mutualism.relabel_sustenance` shows where relatum identity matters. |
+| Diagonal | **C.** `claims_incomplete` gives an internal family a missing claim. `Unfolds.never_returns` follows when revision keeps earlier readings and adds each gap. |
+| Direction | **A, C, D.** `Direction.exchange_widening_selected_by_pool` locates who can register the admission distinguishing two generated acts. `Direction.exchange_direction` adds the stipulated priority comparison. |
+| Dispatch | **B, C.** `search_then_dispatch` budgets discovery and enactment. `dispatch_succeeded_current` and `captured_epoch_passes` delimit what rechecking the ticket reaches. |
+| Dissipation | **A, B, D.** `Flow.Balances.takers_within` bounds cumulative withdrawals counted by taking formations. `Flow.taking_draws_in` rules out eventual inwardness under recurring uptake and enclosure. |
+| Distinguishing | **C, D.** `Law.sameTests_iff_within` reduces all tests to a finite observed prefix. `frameBy_within_exact` gives sharpness. |
+| DrawHistory | **B.** `histories_differ` gives permanently different levels after a temporary increase in withdrawal and a return to the original rate. |
+| DrawnBeyond | **A, B, D.** `Flow.favours_breaking_beyond_inflow` locates a break beyond the group’s couplings. `Flow.share_not_lower` follows transmission of reaching beyond over generations. |
+| DrawnReplacement | **A, B, D.** `favours_iff` identifies rule favour with replacement bias at a population count. `lost_ge` and `fixed_ge` give paths across the deterministic lock. |
+| Drift | **A, B, D.** `Generations.raised_falls_back` bounds reversal of a listed rise by sampling. `Replacement.fixationBy` bounds fixation under count-dependent replacement. |
+
+## Connections, ranked
+
+1. **A–B–D · kind (d). A stock rise can break an unread need across a coarse step.** I checked that `Becoming.Flow.sample_balances` preserves balance under strict sampling and once-only fine presence, and that `Becoming.Flow.DissipatesOn.sample` composes dissipation on the same family across the window (Sampling.lean:475, :564). Apply `Becoming.Flow.Balances.rise_lowers_beyond_dissipating` to the sampled flow. If the inside stock’s rise plus the **coarse** taker count exceeds the outside’s starting slack, `Becoming.Web.MetOn.breaks_of_falls` gives an outside need met at the first endpoint and unmet at the second (DrawnBeyond.lean:176, :112). If all fine group couplings lie inside, `Becoming.Web.sample_coupledInto` rules out a coarse group coupling to that condition (SampledSelection.lean:152). The composition is inferred. The existing fine-step join `Becoming.Flow.Balances.breaks_beyond_drawn` directly uses `Becoming.Flow.Balances.breaks_beyond` to locate a break on a condition an active participant draws from (JointDraw.lean:128, DrawnBeyond.lean:205).
+
+2. **A–C–D · kind (c). A generated alternative can widen continuation beyond the acting group’s reading.** `Becoming.Direction.exchange_widening_selected_by_pool` supplies the two balanced courses from feasibility and a common start. Given the stated coupling and agreement premises and a widening, the changed admission is selectable from its date by any pool containing that formation, and by no pool confined to the acting group’s closure (Direction.lean:196). I checked the proof and atlas chain through `Becoming.Direction.widening_selected_by_pool` to `Becoming.Flow.act_selected_by_pool`, and the use of `Becoming.ExchangeLaw.course_balances_iff` (Direction.lean:160, SelectionPool.lean:410, Counterfactual.lean:377). The result characterizes what the pooled reading can distinguish. Choice under the supplied priority is a further result (Direction.lean:240).
+
+3. **A–B–D · kind (c). A reward can register a shared need while unilateral changes cannot reach it.** `Becoming.Optimum.Coupled.gated_threshold` gives the in-turn threshold at `c = m` for at least two drawers without floors, with both profiles perfect at equality. `Becoming.Optimum.Coupled.AtOnce.Shores.drain_perfect` gives two simultaneous portions each below `m` which can meet `m` together, yet draining is perfect at every reward rate (CoupledDrawers.lean:774, :1026). I checked both statements and their shared `Becoming.Optimum.Coupled.stepCoupling` (CoupledDrawers.lean:66). The interpretation is that how the agents’ moves join determines whether the registered need can change a unilateral best response.
+
+4. **A–B–D · kinds (c), (e). Rule rebuilding on a population count becomes a replacement law.** `Becoming.DrawnReplacement.favours_iff` identifies the rebuilt rule’s favour with the comparison of up and down weights. The atlas confirms `Becoming.DrawnReplacement.fixation` specializes `Becoming.Drift.Replacement.fixationBy` (DrawnReplacement.lean:136, :196, Drift.lean:1095). Compared with `Becoming.DrawnShaping.drawn_locks`, which keeps the deterministic course above its starting share, `Becoming.DrawnReplacement.lost_ge` gives positive weight to complete loss even from a favoured mixed count with positive base weight (DrawnShaping.lean:333, DrawnReplacement.lean:211). These are two dynamics using the same rule counts.
+
+5. **A–B–D · kind (d). A backward trace gives the exact test for truncating the propagation bound.** For a complete, duplicate-free condition list, `Becoming.gap_within_order_iff_worlds` says the order-`j` bound holds for every stated pair of generated worlds and every starting gap bound iff there is no time-ordered chain of length `j+1` into `(T,c)` (CourseWorlds.lean:390). Substitute `Becoming.CouplingTraces.coupledIntoBy_iff_trace` under the negation to get the same criterion as absence of a backward trace of that length (CouplingTraces.lean:164). I checked the common parameters and directions. The condition-only graph can retain a loop even when there is no two-step retrace, as the once-only witness shows (CouplingTraces.lean:432).
+
+6. **C–D · kind (d). A projected law can exist at two steps when it fails at one.** Use `Becoming.Dephasing.controlDensity` as projection and `Becoming.Dephasing.recordBranch` as the unit move (Dephasing.lean:97, :123). Joint states with branches `(1,0),(0,±1)` have identical control matrices before the move and opposite cross terms after it. This violates `Becoming.ProjectedLaws.FibreConsistent`, which any commuting reduced law implies by comparing the two successors (ProjectedLaws.lean:58, :87). At two steps, `Becoming.Dephasing.recordBranch_involution` gives the identity reduced law (Dephasing.lean:222). I checked the definitions and involution. The projected-law comparison is inferred.
+
+## Scale
+
+- **Family boundaries.** `Flow.region_no_boundary` directly uses `Flow.region_not_a_cut`. Its conclusion concerns the family’s events under conveyance. `Continuity.Closes` instead concerns families closed under supplied adjacency, where conservation is equivalent to routable balance.
+- **What a summary keeps.** `Ring.counts` preserves census counts using finitely many reused places. `Counts.over_stretch` keeps the balance of totals across a window. `Courses.run_judges_iff` identifies exactly when merging dates loses an observable.
+- **Joining records and populations.** The atlas confirms `Courses.course_resolves_every_iff` uses both `CrossSituational.reads_every_iff` and `Segmentation.reads_every_iff`. `Drift.Flow.ended_falls_back` directly uses `GroupEnding.Flow.raises_of_inactive`, carrying a rise from ending among equal-sized uniform groups into a bound on reversal by offspring sampling.
+
+## What I did not read
+
+I read the opening accounts and public declarations of the 30 assigned modules, selected neighbouring declarations, and the proof bodies or atlas entries needed for the cited links. I left the remaining proof bodies and the rest of the package outside this pass. The three proposed forms were **not found in what I read**, including package source searches pairing sampling with slack or `breaks_beyond`, `gap_within_order` with traces, and `Dephasing` with `FibreConsistent` or `Commuting`. I did not run Lean.
+
+── cx · ok · session 01a207ce-47dd-7cf1-99e5-6ce4894976ef · gpt-6.2-sol/high · read-only · 339s · 7154.5k tokens · 65 cmds
+continue: cx -r 01a207ce-47dd-7cf1-99e5-6ce4894976ef "…"
+log: /Users/ren/.cache/cx/runs/20261123-164808-82804

@@ -1,0 +1,69 @@
+*AI-written, read-only Lean survey.*
+
+## Per module
+
+| Module | What it shows and where it bears |
+|---|---|
+| EdgeClosure | **A, B.** `withinClosure_iff_closure` identifies relational closure from one seed with finite process reach. |
+| Enough | **B.** `possibly_rests_iff` gives a reachable stay meeting the target. `assured_iff` also requires every run to settle and every reachable stay to meet the target. |
+| Entropy | **B, C, D.** `Flow.Balances.restores_levels_not_history` separates a family’s levels from its exchange history. `Flow.dissipatesOn_iff_conserved` represents dissipation by a conserved account including a record. |
+| EventualWidening | **B.** `Web.eventuallyWidens_iff` compares admissions on late tails. `Web.KeepsWidening` asks what survives or opens along a supplied continuation. |
+| EventualWideningInstances | **A, B, C.** `Web.eventually_neither` limits finite verification over unrestricted paths. `OpeningChain.carried` gives the same admissions with different chains of support. |
+| Evolution | **A, B.** `Flow.transmitted_within` bounds inherited need using the stock and intervening exchanges. `price` separates offspring-weighted parental amounts from transmission change. |
+| ExchangePremises | **A, C, D.** `ExchangeRelation.reading_glue` reads dependence from necessary response on branching runs. `World.withRest_counted` obtains a census under enclosure and distinct participation lists. |
+| Exclusion | **A, B, C, D.** `Flow.outrun_reading_alike` makes two exhausted tails score alike. `Flow.level_kept_of_plans` derives a stock bound from how parts divide the draw. |
+| Experiment | **A, C, D.** `Run.generalizes` transfers an experimental result across a projection given a determined law through it. `Confound.varied_refutes` breaks a false control. |
+| Extension | **C.** `Comparison.separates` requires a description to distinguish an extension from its base. `Web.paths_extension_iff_widens` reads extension as widening when every claim counts. |
+| FallibleInquiry | **A, B, C.** `coverage_le_errors_add_timed_reach` bounds committed answers by errors and differences that can reach the reader by its deadline. |
+| FaultEnvelopes | **C, D.** `availability_iff_separated` characterizes when reports suffice under admitted joint faults. `copied_roster_same` proves that copied witnesses add no warrant. |
+| Feeding | **A, B.** `Flow.fedBy_iff_fedAcross` identifies same-step feeding as delay zero. `Provision.through_store` exhibits a feeder reached only across steps. |
+| FinerTraces | **D.** `trace_forget` and `trace_lift` identify the coarse traces obtained by forgetting situation labels with the positive-weight traces. |
+| FlowCenters | **A, C.** `Flow.returning_unrestricted_iff_mutuallyDependent` ties significance read along affecting to mutual dependence. `Drawing.returning_feeding_apart` separates affecting from feeding. |
+| FormedLoops | **A, B.** `thresholdWorld_course` realizes a level-triggered coupling loop in a balanced world. Later thresholds share its prefix through the threshold step. |
+| Founding | **A, B, D.** `Flow.ConfinedRise.ends` connects depletion to lineage extinction. `Nested.raises_iff_carried` connects change within wholes to transmission between wholes. |
+| Frame | **A, B, D.** `reach_iff_withinClosure` identifies process reach with step closure. `withinClosureOf_iff` pools closures, and `Reach.lift` recovers reach through a summary. |
+| FreeEnergyCounting | **C.** `given_record_eq_iff_share` identifies equality in the counting bound with posterior shares when hypotheses are listed once. |
+| FreeEnergyGuarantees | **A, B, C, D.** `SharedModels.held_not_one` combines accurate local predictions, common choice rules and collective depletion. |
+| Frequency | **A, B.** `Frequency.SelfLoop.polynomial_iff` makes the schedule decisive for polynomial growth. `Saturation.wearing_stops` gives a deadline for a coupling weakened by what passes through it. |
+| FromTheDynamics | **A, B, C.** `Flow.returning_beyond_coupling` bounds significance under a supplied reading. `FromTheDynamics.Alternating.joined` puts returning centers, persistence and a supplied chooser in one witness. |
+| Frontier | **A, B, C, D.** `Requirement.required_of_bettered` derives a task from a selection frontier. `Requirement.Collective.required` and `Requirement.served_of_handover` treat joint tasks and succession. |
+| FrontierFrames | **A, C, D.** `FrontierFrames.Options` reads the menu from possible steps. `Requirement.Required.through_summary` transports a requirement over reachable configurations. |
+| FrontierWorlds | **A, B, D.** `served_of_handover` reads service as giving on demanded steps. `sole_giver_required` reads an assignment from the world’s joint moves. |
+| Gain | **A, B, D.** `Flow.newly_supported_from_rest_or_open` ties recurring first support, under fixed requirements and the first law, to gain from the accounting remainder or an open boundary. |
+| Gated | **B.** `Gated.change_located` locates an actual changing step in a trace when ungated moves preserve the quantity and equality is decidable. |
+| Grammar | **A, B, C, D.** `«粗化»` carries continuation to coarser classes. `«根»` gives the greatest symmetric constant refinement. `«两火以薪定理»` shows that fixing a future can leave distinct occurrences together. |
+| GrammarCandidates | **A, B, C, D.** `«缘先果后当且仅当无环»` separates precedence from cycles. `core_iff_inquiry` gives finite identification under a pair listing, and `«致诘不尽»` gives an infinite-branching counterexample. |
+| GrammarCases | **A, B, C, D.** `SharedCondition.affecting_reaches_other` and `SharedCondition.affecting_member_outside` show how a class can hide the route between two lines. |
+| GrammarConditionals | **A, B, D.** `«依之传»` composes dependence. `«皆有后而步皆分则全生成»` gives continuing generation at two grains. |
+| GrammarCourse | **B, C, D.** `Law.core_is_sameFuture` identifies a coarse class through future readings. `Law.learnable_iff_core` states what that class permits a predictor to learn. |
+| GrammarCrossing | **A, B, D.** `«定则内至外之线有出步»` locates a boundary crossing with decided membership. |
+| GrammarLaws | **A, B, C, D.** `«所闭当且仅当有迭»`, `«对之族»`, `«对之程»` and `«像定后当且仅当同行»` link closure, counting, temporal composition and projection. |
+
+## Connections, ranked
+
+1. **A, B, C, D · (c) Accurate local accounts coexist with joint depletion.** `Becoming.FreeEnergyGuarantees.SharedModels.held_not_one` (`FreeEnergyGuarantees.lean:810`) exhibits two holders using one point-prediction rule on their respective stores. Both predict their next store level correctly and choose at zero risk during the two exchange steps. Each draw fits renewal individually, their sum exceeds it, and the pool is outside both holders’ couplings. The atlas confirms reuse of `Becoming.Optimum.HeldPair.held_end` (`SetPointOptimum.lean:1513`), which uses `Becoming.Flow.held_excess_ends` (same file, line 759). The chooser and stores are specified in the witness. The ending follows under balance, support-gated renewal and the stated loss and stock bounds.
+
+2. **B, D · (c), with a proposed (d) · Joint plans keep stock across steps and sampling.** `Becoming.Flow.level_kept_of_plans` (`Exclusion.lean:327`) uses `Becoming.Flow.withinJoint_of_plan` (line 315), which calls `Becoming.JointPlan.supports_of_realizes` (`JointPlans.lean:110`). Contained, disjoint footprints put distinct leaf draws inside a root footprint covered by replenishment. With that division each step and balance, the level stays at least its initial value. **Proposed sampled consequence:** with distinct fine participation lists, sum the fine draw bounds over the block by `Becoming.total_le` (`Flow.lean:132`) and rewrite with `Becoming.Flow.sample_taken` and `Becoming.Flow.sample_given` (`Sampling.lean:443,447`). This gives the same draw bound at the coarse step. A direct lemma was **not found in what I read**, searching `WithinJoint` with sampling names.
+
+3. **A, B, C · (c) What an answer deadline costs.** `Becoming.FallibleInquiry.coverage_le_errors_add_timed_reach` (`FallibleInquiry.lean:461`) uses `Becoming.TimedResponse.answer_alike_before` (`TimedResponse.lean:170`). I checked the proof call directly. With common initial levels, prefix balance, matching participants, equal exchange outside the source when coupled histories agree, and answers factoring through those histories, an unreached pair receives equal answers. A commitment then incurs an error on one of the opposite-labelled alternatives. The weighted inequality counts timely reach as decided and uses supplied labels and weights.
+
+4. **A, B, D · (c), (e) A lineage can win within a whole and end with its conditions.** `Becoming.Founding.Flow.ConfinedRise.ends` (`Founding.lean:170`) uses `Becoming.Founding.Flow.confined_ends` (line 124), which uses `Becoming.GroupEnding.Flow.family_childless` (`GroupEnding.lean:207`). I checked that the call uses confinement, gated renewal, excess, the initial stock bound and the descent premises. The earlier selection and draw clauses of the rise play no role in the extinction proof. At the next grain, `Becoming.Founding.Nested.raises_iff_among` (`Founding.lean:322`) uses `Becoming.SelectionTerm.Generations.raises_exact_iff` (`SelectionTerm.lean:601`) when the next founders preserve their founder’s value.
+
+5. **B, C, D · (a) The same finite reading bound on two carriers.** The atlas gives `Becoming.Identification.bounded_agree` (`Identification.lean:345`) as a dependency of both `Becoming.TwoCourses.core_iff_bounded` (`GrammarCourse.lean:375`) and `Becoming.Pace.stretch_fixed` (`Pace.lean:505`). With at most `N` and `N'` states in the respective read courses, agreement before `N + N' − 1` identifies the future class in the first. In the second it fixes agreement throughout the compared stretches while both rules are held. The state bounds and the held stretches are premises.
+
+6. **A, C, D · (c) Pooling changes where the closure bound applies.** `Becoming.Flow.returning_beyond_coupling` (`FromTheDynamics.lean:130`) gives an individual exterior bound when significance is read as own closure along affecting. `Becoming.Flow.returning_pool_covers` (`BeyondCoupling.lean:329`) gives structural coverage for the pool of all returning formations, with formations listed and reach decided. The atlas checks the latter through `Becoming.Flow.covered_by_returning` (`FlowCenters.lean:236`) and inclusion of influence closure in coupling closure. Both statements use relations across all steps.
+
+## Scale
+
+- **Sampling can erase a route.** `Becoming.Missed.within_fine_beyond_coarse` and `Becoming.Missed.coarse_blind` (`SampledSelection.lean:395,417`) exhibit a part reachable at fine steps whose effect becomes invisible to selection through the sampled couplings. The sampled levels themselves still differ (`coarse_differs`, line 435).
+- **Sampling can erase motion.** From `Becoming.Passing.config_back` and `Becoming.Passing.history_grows` (`Entropy.lean:1846,1864`), reading every second step gives a constant configuration even though the fine exchange count grows by two per interval.
+- **Balance has two composition directions.** `Becoming.«对之族»` and `Becoming.«对之程»` (`GrammarLaws.lean:765,775`) gather supplied pairings across parts and compose them across steps. The temporal result pairs under the relation’s closure.
+- **A summary can carry a requirement.** `Becoming.Requirement.Required.through_summary` (`FrontierFrames.lean:391`) uses forward step preservation, lifting from every concrete representative and agreement on the task’s meaning. Its atlas entry confirms both reach directions.
+
+## What I did not read
+
+I read the 34 opening accounts and public declaration statements and docstrings, with selective proofs and targeted reads outside the assignment. The rest of the package, the remaining proof bodies, and the empirical and classical-source correspondences were outside this read. A `FallibleInquiry` proof-use file was **not found in what I read**, searching the atlas filenames, so I checked the timed dependency in the Lean source. I did not run Lean.
+
+── cx · ok · session 01a207ce-47dd-7a92-8b67-6fc854af1189 · gpt-6.2-sol/high · read-only · 420s · 8402.0k tokens · 98 cmds
+continue: cx -r 01a207ce-47dd-7a92-8b67-6fc854af1189 "…"
+log: /Users/ren/.cache/cx/runs/20261123-164808-82805

@@ -1,0 +1,78 @@
+*AI-written, read-only source review.*
+
+## Per module
+
+| Module | Bears on | What the declarations say |
+|---|---|---|
+| RoomRuns | B, D | `Overshooting.alternates` cycles between levels 3 and 4. `line_iff_held` identifies reach along moves that preserve warmth. |
+| RootForms | A, B, D | `descent_forms_no_dependence` isolates the relational premise of inheritance. `outside_leaves_no_offspring` applies a giving gate to a whole offspring listing. |
+| RouteFormation | B, C, D | `repair_course_rebuilds` replaces a fitted but failing wiring after a fresh record. `repair_course_account` counts the parts and stock spent. |
+| RouteTraces | A, B, D | `within_trace` extracts a trace from a positive truncated count. `selfLoopWorld_full_order` identifies a loop’s standing with the full count. |
+| Routes | A, B, D | `carriedWithin_eq_courses` sums weighted histories by response order. `finite_horizon_iff_no_loop` characterizes exact truncation under stationary strengths. |
+| RoutesToC | C, D | `pareto_increasing_iff_covers` characterizes when profiles of supplied standpoint orders rank every widening on a finite listing. |
+| RunTurns | B, D | `regime_turn_overcompensates` locates a reversal. `orbit_twice` identifies two fine steps with one iterated step. |
+| Runaway | A, B, C | `policy_uses_after_failure` bounds when a stock difference can change. `break_not_bounded` constructs indistinguishable raises. |
+| Runs | A, B | `balancedRun_world` identifies balanced worlds with exchange runs. `carriedRun_level` reads propagated differences as standings. |
+| ScopedReach | D | `glued_invariant` combines agreeing local invariants. `alternating_beyond_scopes` reaches a destination neither scope reaches alone. |
+| ScoreRepresentation | C | `bounded_score_represents` gives a bounded score preserving basic priority and ranking each extension higher in the example. |
+| SecuredContent | C, D | `same_response_without_fixed_form` secures some fresh content in each branch. `response_preserves_joint_openness` preserves represented bundles. |
+| SeedReach | None directly | `fromSeed_iff_invariant` characterizes reach by invariant properties. `not_separated_iff` gives double-negated reach. |
+| Seeking | A, B, D | `Law.rests_iff` locates enough at a target-meeting fixed point. `Flow.more_exhausted` bounds recurring rises when total standing runs down. |
+| SeekingRuns | B, C | `captured_state_returns` and `captured_rule_changes` distinguish perturbing the state from perturbing the rule. |
+| SetPointOptimum | A, B, D | `mutual_atSetPoint_draws` accounts for joint shortfall. `HeldPair.held_end` gives exhaustion under individually replenished draws. |
+| Settling | B | `keeps_changing_iff` characterizes possible recurring change in a listed state space by a reachable, undoable change. |
+| ShownOrder | A, C | `above_in_every_iff_reach` identifies the comparisons forced by observed strict choices. `both_ways_of_unreached` witnesses ambiguity. |
+| SignificanceStatements | C | `paths_extension_iff_grammar` expresses extension as widening admission. `paths_one_object_root` relates this to a supplied significance reading. |
+| SituationTraces | B, D | `finer_traces` enumerates each refined trace once. `signed_traces` counts the two signs separately. |
+| Situations | C, D | `sum_finer` recovers weights by counting refined histories. `move_underdetermines` gives one coarse move with distinct outcomes. |
+| Space | A, B, D | `arising_iff_ceasing` ties recurrence under finiteness and decidability. `rests_unrefuted_covering` uses balance and dissipation on a covering family. |
+| Standing | A, B, D | `enclosure_bounds_standing` bounds census change by initial stock. `dependence_counting` characterizes the weaker constraints on dependence counts. |
+| Standpoints | A, C, D | `significant_iff_reached` gives conditions for significance across positions. `boundary_crossed` relates continuing families to conveyance across their boundary. |
+| StrengthFlows | A, B, C, D | `gap_le_carried_into_worlds` bounds differences by strengths restricted to what is read. `exchangeGap_le_shares_flows` splits a bound by listed conditions. |
+| StrictTransport | B, C | `strict_above_along` carries a supplied comparison along a run that retains claims, given compatibility. |
+| Substitution | A, B | `persists_consuming` gives a consumer that switches dependencies while its renewer ends. `consumingIn_kept_iff` identifies what preserves the consumption verdict. |
+| Succession | A, B, D | `relay` feeds a condition at every step through a succession of one-time source formations. |
+| SummaryFutures | C, D | `futures_through` preserves feasible words. `endpoint_moved` gives an extra endpoint under one summary. |
+| Tail | A, B, D | `changedByNoCondition_iff_rule` calibrates dependence on an infinite tail. `TailRuns.changedByNoCondition_iff_runs` states the decision rule on runs. |
+| Tasks | A, B, D | `Delivers.parallel_holding` composes deliveries under mutual preservation. `Conserved.whole_of_impossible_parts` makes possibility depend on the division. |
+| Testing | A, B, C, D | `subthreshold_alike` preserves differences below detection. `unexcluded_beyond_coupling` limits testing. `Clearing.pooled` combines observations. |
+| Thresholds | A, B, C | `break_carried_nowhere` localizes a gap through the break. `standing_no_loop` excludes loops through the stock in the restricted standing law. |
+| Tolerance | A, B, D | `web_tolerating` reads support as a threshold on contributors. `thin_absorbed` and `total_stays` distinguish absorbing a small loss from restarting. |
+| Transactions | B, C, D | `certified_completes` needs faithful certificates, reserve and time. `redundancy_exhausts_reserve` witnesses failure despite faithful reports. |
+| Transmission | A, B, D | `transmitsWithin_iff` splits inheritance from a need bound. `TwoGivers.twofold` distinguishes inheritance from some giver and from every giver. |
+| TreeSearch | B, C, D | `found_without_reading_rest` certifies a local discovery. `steps_settle` bounds searches by the frontier’s size. |
+| TypicalRuns | C, D | `records_typical` transfers a weighted bound to listings of run prefixes, each counted once. |
+| Typicality | B, C, D | `typical_throughout` bounds total weight of prefixes that ever cross a deviation threshold by a finite horizon. |
+| Undecided | B, C | `least_fixed` gives finite settling from undecided. `liar_both_sides` compares that run with two-valued oscillation. |
+| UnitMatchings | A, D | `frameMatchings_iff_balances` recovers balance from unit pairings. `rise_crossing_strong` forces a crossing in every qualifying pairing. |
+| Units | A, B, D | `supported_unchanged_by_split` preserves support when need and level scale together. `Feeding.endless` shows why counting draw over time needs a unit convention. |
+
+## Connections, ranked
+
+1. **A–B–D · (c) Holding local set points can end shared renewal.** `Becoming.Flow.held_excess_ends` sums the holders’ minimum net draws and invokes `Becoming.Flow.joint_excess_ends`, as both the proof and atlas show. Given balance, activity requiring support, only active givers, and renewal gated at need `m`, `n` steps of excess from a stock below `n + m` end activity requiring that stock at need `m` or higher. `Becoming.Optimum.HeldPair.held_end` checks the premises with two holders each drawing one against renewal of one. The pool goes 2, 1, 0 while neither holder registers it. The witness supplies the course of exchanges. [SetPointOptimum.lean:759](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SetPointOptimum.lean:759) · [Continuation.lean:553](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean:553) · [SetPointOptimum.lean:1513](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SetPointOptimum.lean:1513)
+
+2. **B–D · (c) The exhaustion bound depends on the unit.** `Becoming.Flow.Balances.unfed_consumption_ends` bounds consecutive active drawing by the initial stock under ordinary balance and its support premises. `Becoming.Feeding.endless` checks the refining-unit counterexample directly: the count remains one, one is taken, zero is given, and balance reads `1 + 1 = 2 × 1 + 0`. `Becoming.Flow.withRefinement_given` counts the extra unit as an inflow, locating the failed premise in the ordinary accounting. [Interdependence.lean:189](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean:189) · [Units.lean:455](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Units.lean:455) · [Resolution.lean:500](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean:500)
+
+3. **B–D · (d) Two-step blocks can hide recurring change.** For an order-reversing natural-number step `g` preserving the band through `hi`, block two unit moves of its deterministic process. `Becoming.Frame.blocks_trace_iff` expands one block to those two moves, so its unique successor is `g (g x)`. `Becoming.RunTurns.orbit_twice` identifies block step `k` with fine step `2k`. `Becoming.RunTurns.reversing_period_two` then makes the blocks stationary from block `hi`, even if the fine run alternates. I checked the statements and the period proof’s atlas entry. The block corollary is inferred. [Granularity.lean:131](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Granularity.lean:131) · [RunTurns.lean:107](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RunTurns.lean:107) · [RunTurns.lean:127](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RunTurns.lean:127)
+
+4. **A–B–C · (d) Threshold blindness can outlast recoverability.** Under `Becoming.break_carried_nowhere`’s balance and common-law premises, a raised stock changes no other level through `T` if the lower stock meets the threshold before `T`. If the readers require only other conditions through `T`, every admission they read agrees through `T`. Supply loss of recoverability by `T`, and `Becoming.Web.too_late_of_alike` rules out timely separation by any family reading those admissions. The two statements and their premises are checked. The deadline corollary is inferred, with loss of recoverability supplied independently. [Thresholds.lean:372](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Thresholds.lean:372) · [ReadOffInTime.lean:678](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean:678)
+
+5. **A–C–D · (c) A pool can test what each member leaves open.** In the same clearing model at step 2, `Becoming.Clearing.selected_pooled` selects for both admissions using the pooled couplings. `Becoming.Clearing.pooled` excludes the claim that either admission fails. Each reader has an individually indistinguishable history supporting that claim, and neither history survives the intersection. I checked both proofs and their atlas rows. They establish the two results independently on the same witness. [Selection.lean:757](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean:757) · [Testing.lean:1502](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean:1502)
+
+6. **C–D · (d) Exact feasible words can coexist with no deterministic summary update.** `Becoming.SummaryFutures.futures_through` and `Becoming.SummaryFutures.endpoint_moved` establish the word and endpoint claims. The stronger inference uses `Becoming.ProjectedLaws.reduced_law_exists_iff`: `[]` and `[true]` have the same code, but appending `false` gives codes `true` and `false`. Thus the fibres fail consistency. The section sends `true` to `[false]` and `false` to `[]`. The atlas confirms the future result uses the general feasible-word theorem. [SummaryFutures.lean:48](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SummaryFutures.lean:48) · [SummaryFutures.lean:56](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SummaryFutures.lean:56) · [ProjectedLaws.lean:87](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ProjectedLaws.lean:87)
+
+The three composed statements marked (d) were **not found in what I read**. I searched the package for references to `reversing_period_two` with block and settling terms, for uses of `break_carried_nowhere` and `too_late_of_alike`, and for uses of the summary witness and its code.
+
+## Scale
+
+- **Changing the step changes what counts as descent.** `Becoming.Delay.transmitting_step_relative` supplies a gift before the fine step of coming to stand. Fine transmission holds vacuously. Sampling groups gift and arrival into a descent whose giver lacks the child’s dependence. [Sampling.lean:938](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean:938)
+- **Joining depends on what the parts preserve.** `Performs.parallel_interleave` uses separate substrates and moves holding the other configuration. `ResettingInterleaved.composition_fails_within` has a shared substrate and credits one task to a division whose own part is idle. `ScopedReach` gives another distinction: overlapping scopes can preserve a glued invariant while their alternating steps enlarge reach.
+- **Totals preserve particular facts.** `rise_crossing_strong` forces a unit from the listed rest in any supplied qualifying pairing. Disjointness is needed to call it outside the risen family. `Situations.sum_finer` preserves weighted course sums when situation indices are forgotten. `Tail` gives the infinite boundary: invariance under every single-condition change implies invariance under finite changes, while dependence on the whole tail remains possible under the stated decision rule.
+
+## What I did not read
+
+I used the assigned openings and public declaration extracts, with selected proof bodies and atlas rows. Outside the batch I read the passages relevant to the joins. I did not audit every proof or transitive import, or verify the package-wide connectivity count. I did not run Lean.
+
+── cx · ok · session 01a207d5-2344-7322-8cb4-7db834251723 · gpt-6.2-sol/high · read-only · 709s · 17371.1k tokens · 143 cmds
+continue: cx -r 01a207d5-2344-7322-8cb4-7db834251723 "…"
+log: /Users/ren/.cache/cx/runs/20261123-165538-94773

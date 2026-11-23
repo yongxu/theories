@@ -1,0 +1,74 @@
+## Module read
+
+A = relation and selection, B = time, C = accounts and correction, D = scale. The letters indicate where the declarations bear on the map.
+
+- **Acceptance · A, C.** Prioritizing an accept bit can leave the best move destroying access to correction. `acceptance_factorization`, `accepting_optimum_can_destroy_access`.
+- **ActivationCapacity · A, B, D.** Retaining a coupling brings joint activation within one move. Releasing it removes the possibility. `preparation_changes_capacity`, `release_loses_joint`.
+- **Actuation · A, B, C.** A route answer guides a command whose delivery needs reserve and time. `chosen_completes`, `late_no_trace`.
+- **Admission · A, B, D.** Withholding a part changes support by its cumulative net exchange against the margin. `Flow.Balances.supported_iff_within_margin`.
+- **Alternatives · A, D.** Coherent choices survive the widening filter under a comparison premise. Functional alternatives embed as process moves. `survives_of_coherent`, `survives_iff_lifted`.
+- **Amounts · B, D.** A stock bounds accumulated losses, including when amounts can be dense. `Amounts.losses_within`, `Amounts.family_rests`.
+- **Arising · A, B, D.** Repeated arising that depletes a finite family needs repeated rises. Cycle and step readings can disagree. `Web.Unceasing.rises`, `Oscillation.readings`.
+- **Assurance · B, C.** Completion requires every branch to remain executable and safe. `completes_iff_of_determined`, `Branch.runs_not_completes`.
+- **AssurancePlans · A, B, C, D.** The band needs opposite moves at its ends. Adequate route readings can lack a coarsest adequate reading. `Regulation.no_merged_move`, `Routes.no_coarsest_adequate`.
+- **Attraction · B.** Invariant regions lock out prior states. A deterministic state is drawn exactly when it cannot return. `Law.drawn_iff_not_returns`, `Run.locked_in`.
+- **AttractionRuns · B.** Finite deterministic attraction transfers to process runs, including a fixed-rule region. `drawn_iff_lost`, `captured_rule_invariant`.
+- **BalanceRegions · A, B, D.** Adjacent transfers balance exactly when units pair within the adjacency closures. `Continuity.balancesOn_iff_units_paired`.
+- **BandRest · B.** Order preservation on a bounded natural-number band bounds settling time. `BandRest.rests_on_band`.
+- **BlanketWeights · A, C, D.** Detailed balance and common positive-rate paths with external-invariant rate ratios give conditional independence. A blanketed cycle can lose it. `independentGiven_of_detailedBalance`, `Cycle.not_crossForm`.
+- **Boundaries · A, C, D.** Significance attributed to a self depends on the closure used to draw it. `subTrue_significantWithin_iff`, `Flow.Balances.presupposed_reach_comparison`.
+- **Branching · B, C, D.** Branches separate possible from necessary attraction. Registration determines which differences survive a merge. `Branching.possiblyDrawn_iff`, `DeterminedAt.stays_alike`.
+- **BranchingCorrespondence · C, D.** With listed outcomes, excluded middle and separating tests, matching tests match reachable frames and their steps. `SameBranchingTests.correspondence_of_em`, `SameBranchingTests.step_iff_of_em`.
+- **Carriers · C, D.** A static law and a toggle have the same unlabelled dynamics and different endpoints. `static_toggle_one_dynamics`, `word_feasibility_does_not_determine_endpoints`.
+- **Cascade · A, C, D.** Later readers that ignore their own inputs add no distinctions to the act history. `Turns.cascade_through`.
+- **CausalGrowth · A, B, D.** More precedence shrinks the possible pasts of the next birth. Relabelling changes what counts as a distinct possibility. `stems_included_iff`, `Kinds.wide_swapped_mixed`.
+- **CensusBinding · B, D.** Binding world premises constrain aggregate activity and arising. `World.binding_counting_under_counted`.
+- **CensusCounts · B, D.** Enclosure and finiteness constrain existing counts. Counting needs local decisions. `World.enclosed_counting_counted`, `World.comings_exist_iff_listed`.
+- **CensusTable · B, D.** Soundness and a witness for every allowed tally characterize the laws of a listing. `World.table_holds`.
+- **ChanceFloors · D.** Protecting each required case gives a mass floor. Equal aggregate success can hide a missed case. `fulfillment_gives_chance_floor`, `positive_chance_can_miss_due_protection`.
+- **Change · A, B, D.** Activity, dependence and standing instantiate one change predicate. Finite families balance rises against falls. `Web.change_readings`, `family_over_stretch`.
+- **ClassifiedBeliefProcesses · C.** Deciding whether each narrowed belief is inhabited yields the implication form of bounded inquiry. `sufficiency_iff_implication_of_decidable`.
+- **Clearing · A, B, C, D.** A supported clearer ends a dweller beyond its dependence. Significance bounded by dependence gives different verdicts. `loses_beyond`, `centers_disagree`.
+- **Closing · A, B, C.** A newly acting coupling can close a feedback loop. Identical earlier levels can precede different onset times. `onLoop_succ_iff`, `Closing.Threshold.unforeseen`.
+- **CommonResponse · A, C, D.** A response is possible when every reading closure has a shared admissible act. Unique acts give a lumping law. `«共应当且仅当所闭之承遍»`, `«遍定应共应当且仅当像定后»`.
+- **Commuting · B, D.** A symmetry can keep paired runs apart while their classes follow one law. `Law.Commutes.apart`, `Law.Commutes.pairs_goAlike`.
+- **ComparingCourses · B, C, D.** Lag and eventual widening can order the same paths oppositely. Lag along a continuation survives re-identification. `TailAndLag.disagree`, `Web.widensOrWithLagAlong_reidentify`.
+- **ConditionInTime · A, B, C, D.** Putting dates on exchange separates eventual reach, next-step reach and reach with dates forgotten. `Flow.WithinTime.withinReach`, `LatePair.apart`.
+- **ConditionalWeights · B, C, D.** A record that fixes the remaining margin and excludes prior exit determines the conditional exit share under independent steps. `record_share`.
+- **ContactCourses · A, B, C.** Blind revision must cover every address. An installed encoding stays right where the channel keeps its answers at encoded inputs. `blind_answers_steps_iff`, `run_stays_iff`.
+- **Context · C, D.** Readings glue by agreement. Locally possible values can have no common whole. `Contextual.glues_iff_agree`, `Specker.no_whole`.
+- **ContextArrivalTraces · B, C, D.** Context support follows the same trace. Erasure is exact when each erased step lifts from every context. `arrives_append`, `erasedLaw_exact_iff_lifts`.
+- **ContextualRuns · B, C, D.** Context-free run prefixes obey parity bounds that indexed readings can exceed. `chsh_run_le`, `chsh_in_context_not_free`.
+- **ContingentPlans · A, B, C.** A finite belief selects a plan only when its answer-dependent execution succeeds from every listed state. `selected_completes`, `branch_incompatible`.
+- **Continuation · A, B, D.** Joint excess can end renewal gated on a family even while one member balances. `Flow.family_excess_ends`, `Coupled.all_end`.
+- **ContinuedClasses · A, B, D.** Renewing passes into every split branch. Consumption after merging counts along both incoming lines. `Web.RenewingAlong.branches`, `Web.ConsumingAlong.merged_candles`.
+- **ContinuingRuns · A, B, C, D.** Within a seven-step revision cycle an address becomes selectable and an old one is retired. Cutting the return stops the next undertaking. `run_new_available_choice`, `run_retired_choice`, `run_cut_stops`.
+
+## Connections, ranked
+
+1. **B–D, cumulative drawdown can end a whole (c, d).** The proof-use record for `Becoming.Web.Whole.family_excess_ends` cites `Becoming.Flow.family_excess_ends`. The whole is active while some part is active, each listed part eventually ends, and new parts need the gated family. **Inferred extension:** use `Becoming.LineageDrawdown.below_iff` to put the stock below the need at the end of a stretch by its cumulative ledger. With the gate and supported givers from then on, `Becoming.Flow.family_stays_below_at` keeps it there and `Becoming.Flow.family_ends_below_at` rules out new parts. Apply `Becoming.Web.Whole.ends_without_arising`. The stretch can contain replenishing steps. [Wholes.lean:323](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean:323), `Wholes.lean:301`, `Continuation.lean:395,480,573`, `LineageDrawdown.lean:74`.
+
+2. **B–C–D, sampling can erase a read that arrives in time (d).** `Becoming.Strobe.flick_even` and `Becoming.Strobe.flick_odd` give an alternating schedule. With `true` naming the condition, the fine schedule reads it within every two steps. `Becoming.ReadingSchedule.keeps_iff_within` gives `Keeps` with zero delay, draw cap one and margin two. **Inferred:** at even samples the read is always false. Apply the same iff with a one-coarse-step window, cap two and margin two. The sampled schedule fails `Keeps`, with the draw cap scaled to the two fine steps. [Sampling.lean:242](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean:242), `Sampling.lean:247`, `ReadingSchedule.lean:879`.
+
+3. **A–B–C–D, a cascade can erase a pool’s distinction about loss (d).** `Becoming.Clearing.selected_pooled` distinguishes spared and cleared paths by joint admission at step two. Its proof uses `Becoming.Clearing.unsupported_with`. **Inferred:** if the first `k` inputs agree on these paths and later readers ignore their own inputs, `Becoming.Turns.acts_alike_of_cascade` makes every finite act list equal. Any selector of those lists therefore gives the same verdict on both paths and cannot implement the pooled criterion, even if a later reader could distinguish them individually. `Clearing.lean:257`, `Selection.lean:757`, `Cascade.lean:101`.
+
+4. **A–D, a grouping can hide a transfer’s losses and gains (c).** `Becoming.Transfer.mixed` gives the opposed admissions with and without the conveyor. `Becoming.Transfer.generated_mixed_hidden` generates both paths from the same start and proves identical realized groups after regrouping. I checked the proof and its recorded use of `mixed`. The two formations with opposed outcomes share a group. `Admission.lean:983`, `Regrouping.lean:288`.
+
+5. **A–B–C–D, dropping dates can create apparent mutual dependence (c).** `Becoming.Flow.WithinTime.withinReach` projects dated reach onto undated reach. `Becoming.LatePair.apart` witnesses the failed converse at mutual dependence: both exchanges happen after the corresponding needs. The statement also separates the two own-closure significance readings. The proof-use record confirms its use of `Becoming.Flow.unrestrictedEventually_iff_mutuallyDependentInTime`. `ConditionInTime.lean:324,430,723`.
+
+6. **B–C, getting the answer and executing the correction (c).** `Becoming.Actuation.probe` gives the same route bit for either successful probe, with delays one and three. At reserve and deadline four, `Becoming.Actuation.timely_trace` gives an execution and `Becoming.Actuation.late_no_trace` excludes one. Both proofs use `Becoming.Actuation.run_iff`. That bridge turns an answer-dependent plan into a trace of inquiry, issue, delivery and enactment. `Actuation.lean:123,299,538,545`.
+
+## Scale
+
+- **Stocks and units.** `Coupled.all_end` aggregates the patch and its neighbour, revealing joint deficit while the patch is replenished. `Continuity.balancesOn_iff_units_paired` preserves closure-local balance at the unit grain. `Continuity.PathOfThree.counts_kept_not_along_step` shows why that pairing only promises a path within the closure.
+- **Parts and identities.** `Bud.readings` counts a bud as additional by name and as a continuation along the split. `MergeClass.readings` changes the first formation’s classification from renewing by name to consuming along the merge.
+- **Time and counts.** `Oscillation.readings` gives a two-step renewal reading of repeated stepwise undermining. `FamilyCounts.tally` keeps active, ceased and new counts with identities forgotten. `run_new_available_choice` and `run_retired_choice` identify changes inside a revision cycle that warrant checking at intermediate dates.
+- **Contexts and laws.** `pooledLaw_exact_iff_joinClosed` gives the exact condition for pooling steps without adding cross-context courses. `ContextualRuns.specker_not_passes` rules out recovering the local possibilities from even a whole run of context-free readings.
+
+## What I did not read
+
+I read the assigned opening accounts, public docstrings and statements, and selected proofs and proof-use entries. I left other proof bodies, private helpers, generated declarations and the rest of the package outside the targeted cross-checks unread. The inferred joins were checked against source statements by hand. I did not run Lean.
+
+── cx · ok · session 01a207ce-47dc-7121-b59e-6f751caf74e6 · gpt-6.2-sol/high · read-only · 354s · 7423.2k tokens · 61 cmds
+continue: cx -r 01a207ce-47dc-7121-b59e-6f751caf74e6 "…"
+log: /Users/ren/.cache/cx/runs/20261123-164808-82803

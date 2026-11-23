@@ -106,3 +106,54 @@ A button's label, of the box told above.
 **How the session read the two (its own reading, held loosely).** The first as a yes to a proposal and to nothing built. The second as a yes to row DJ's build in the changed form and under row DJ's cap: the proposal had survived both attacks in that form, and the change and the cost were in the session's messages before he pressed. The button's own question was of the first form and named no cost, so this is a reading; the session told him so in its next message, so that he can stop the build if he meant otherwise. It told row DJ his words, the question each answered and this reading, and row DJ claims before it builds.
 
 **What is not said.** He wrote no sentence of his own after the question of 12:46. He did not say that the statement as changed is what he meant by the full picture, or that the course it would build shows a turning; row DJ's record of 19 November keeps that as his to recognise. He did not say to push. The proposal with the rows' answers appended is in scratch until row DJ files it as text with its landing (`/Users/ren/tmp/coord2/PROPOSAL-one-course-both-outcomes.md`).
+
+## His words of the later afternoon of 23 November, 15:47 to 16:46 WIB (AI-written frame, the same session, 17:10 WIB by the clock; his words verbatim)
+
+Seven entries, his. The times are the transcript's stamps, converted to WIB. Several read as spoken and transcribed by the app, which the transcript does not say. Each is set after one line on what it answered, which is the session's and not his.
+
+15:47:34 WIB (08:47:34 UTC), after the session's message that the whole gate had passed on the head with the new module:
+
+> So for our objective and the full picture we want, how far are we? What is still not down, and what is needed, and what blocking us, and what's the general situation?
+
+15:52:53 WIB (08:52:53 UTC), after the session's answer, which said among other things that "the two ways placed with respect to each other" was not started in any form that survived, and that there was no agreed meaning for "the second way":
+
+> what's the second way? you see - i don't even remember what it is, and for these of my words, are they really should be guiding direction at this moment, with current understanding?
+
+15:54:25 WIB (08:54:25 UTC), after the session's answer that "the second way" was the direction page's phrase and not his, that it would take the pair out of the aim, and its offer to draft a replacement with row DJ for him to read before anything changed:
+
+> All right, please do. And at this moment, we have accumulated also too much context, so it becomes a little bit difficult to like navigate around and very token consuming. So maybe we need to also think about something about that. But first, focusing on the draft.
+
+16:08:05 WIB (09:08:05 UTC), after the session showed him a second form of the draft, in row DJ's wording. He quoted a sentence of the session's own from its message before (the first paragraph below is the session's sentence, quoted by him), then wrote:
+
+> "A course that goes on while more and more can go on after it" is my way of saying what you said on 21 November. If it is not what you see, that clause can go and the rest still stands.
+>
+> what is a course and why it goes more and more? and what does more mean? does changing itself, transformed into another thing, also counted as more? more possibility to be more flourishing? i am not sure about a lot of my early framings and agreed approaches anymore
+>
+>
+> i think now, one way i frame it is I want full picture to be "the alignment theory" and provide lights to:
+>
+> **Can we develop a compositional mathematics/logic/reason of complex adaptive systems that preserves/evolves meaningful properties/future becomings across scales—from physical components and software agents to organizations, ecosystems, and societies—while allowing those systems to learn, change, and coordinate?**
+
+16:13:38 WIB (09:13:38 UTC), after the session's third form of the draft, which put his framing into the aim's paragraph. The app showed a box with the buttons "Yes, closer" and "Not yet"; this is his own sentence, as transcribed:
+
+> Yes, I think it is closer, but I think uh, a little bit earlier, we spent quite some time to figure out the direction. I think you should also reflect on that, and then uh, understand first, like then move on and see the full picture, understand the full picture, not to just read a bunch of things. Understand.
+
+16:35:30 WIB (09:35:30 UTC), after the session's reflection on how the direction had been reached since October, which named four things it held to have stayed the same, where the work had drifted, and one relation followed in three directions (time, accounts, scale):
+
+> I think it's reasonable. We can prepare and reorient the repo around our direction. Uh, But I still have some uncertainties. So it's like, what will be the roadmap look like, and how many percent of the work is there, and what needs to be done. Um, Let's take a them around and answer me those.
+
+16:46:19 WIB (09:46:19 UTC), after the session's answer with a roadmap in five steps and rough percentages, one line of which said "time and scale: 2 theorems one way, none the other":
+
+> don't read all yourself - spawn group of sol 6.2 agents to read them for you - when you see ways they get connected, record them
+>
+> but, "time and scale: 2 theorems one way, none the other;" why?
+
+**How the session read them, and what it did (its own reading, held loosely).**
+
+- *The second way, and whether his words should guide.* It read his question as asked and not as a statement, and answered for itself: that the pair is the direction page's and AI-written, and that it would take the pair out of the aim. He wrote "All right, please do". A draft of the aim's paragraph went through three forms that afternoon, the second in row DJ's wording after row DJ found that the first asserted, as understood, that the two courses are outcomes of one relation, which is not shown. The draft is in scratch (`tmp/coord-1123/DRAFT-aim-without-two-ways.md`) and the direction page is not changed: he said the third form is closer and asked the session to reflect and understand first.
+- *His framing.* That he wants the full picture to be "the alignment theory", giving light to the question as he worded it at 16:08. The session read it as an improvement and not a drift, since it finds each part of it in what he said on 13 and 14 November; he answered "I think it's reasonable" to that reflection as a whole, and did not say which parts.
+- *"More and more".* The session could not say what "more" is and took the clause out of the draft.
+- *The roadmap and the percentages.* The session's own, given at his asking; rough readings and not measures. The count behind one of them is in the study folder named below, with its limits.
+- *The readers.* On his line of 16:46 it ran ten readers of the model he named over the 297 modules its sorting had left outside four parts, and recorded what they found ([the record](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/connections-across-the-parts-2026-11-23/NOTE.md)). It had told him to expect "a few million" tokens; the readers' footers total 70,978 thousand, which counts the whole context sent again with each of their 855 commands and does not separate what was cached. The estimate was wrong by more than tenfold, and the session should have sized it from row FM's note of that morning, which records the same thing of the same tool.
+
+**What is not said.** He did not say that the aim's paragraph is to be changed as drafted; he said the third form is closer. He did not say what "more" means, and asked whether changing into another thing counts. He did not say that the roadmap or its percentages are right. He kept the word "allowing" in the question as he worded it; on 22 November he had written that he does not like the word "allow".

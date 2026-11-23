@@ -1,0 +1,66 @@
+## Per module
+
+| Module | Bearings and declarations |
+|---|---|
+| GrammarMap | **B, D.** `«传»` joins a coarse continuation to a fine beginning. `«全生成»` requires such renewal ahead of every reached point. |
+| GrammarPath | **A, B, D.** `«本类常闭则后皆续»` connects held effects to downstream reach. `«外合不失本类之常»` permits merging the outside. |
+| GrammarReadings | **B, C, D.** `«化为有缘之成坏»` reads alteration at two grains. `«因灭而续»` permits a fine ending and coarse continuation in one step. |
+| GrammarRegularity | **A, B, C, D.** `«亡前核变»` locates a departure from regularity. `ClosedCapture.constant_iff_unread` reads blindness as constancy of a projection. |
+| GrammarScope | **A, C, D.** `ownClosure_unrestricted_iff_noOutside` translates significance read through a center’s closure into reach. `«过亡而续»` follows a coarser line past an ending. |
+| GrammarTesting | **A, C.** `«可分则不在核»` lets a finite test refute shared regularity. `«恒温与平衡»` changes what the test can distinguish by widening the net. |
+| GrammarTransport | **B, D.** `«全生成之对应»` transports generation across a bijection. `«尽之拉回»` and `«延之拉回»` handle maps under different premises. |
+| GroupEnding | **A, B, D.** `Flow.ended_of_family` takes gated depletion to group childlessness. `rises_iff_ended` gives the within- and among-group balance. |
+| Growth | **A, C, D.** `Web.grow_widens_unregistered` admits a new formation while the old formation inventory shows identical possibilities. |
+| GuardHorizon | **B, C, D.** `uniform_iff` asks for an admissible move common to each observation class. `uniform_finer` preserves a policy under refinement. |
+| GuardedStep | **B, C, D.** `Law.stepWhile_guarded_iff` relates two ways of stopping an orbit. `Law.stepWhile_constant_iff` requires equal readings to agree on enabling. |
+| Handoff | **B, C.** `handed_off_progress` preserves a deadline under rule revision. `revised_rules_can_fail_forever` witnesses repeated resets. |
+| HeldPossible | **B, C, D.** `Run.generation_of_heldKeepsWidening` connects recurrent changes in what is held to generation. `RuleTower.possible_iff_held` bounds each possibility to finitely many levels of change. |
+| HexagramCommuting | **D.** `Hexagram.waxWane_apart` preserves complementary pairs as distinct trajectories. `Hexagram.wane_breaks` exhibits symmetry breaking. |
+| HexagramLaws | **C, D.** `Hexagram.innerPair_goAlike` makes two lines sufficient under the nuclear law. `Hexagram.MarkedLines.shown_not_lumped` exposes a display that drops necessary information. |
+| HexagramPlaces | **C, D.** `Hexagram.halves_glues_iff` tests compatibility between trigrams. `Hexagram.opposition_goAlike` gives a three-coordinate law. |
+| HexagramSequences | **A, C, D.** `Hexagram.runsOrder_blind_not_lumped` requires every input line for each next line somewhere. `Hexagram.halfYang_total` adds the trigram counts. |
+| HexagramSites | **C, D.** `Hexagram.between_glues_iff` characterizes agreement at the inner sites. `Hexagram.betweenPhases_not_lumped` shows their current readings fail to fix the next ones. |
+| Hexagrams | **C, D.** `Hexagram.pairs_goAlike` gives dynamics on complement pairs. `Hexagram.yang_not_lumped` shows the count of unbroken lines loses predictive information. |
+| Histories | **B, C, D.** `family_iff` characterizes reconstruction by splicing. `same_finite_histories_iff` recovers all steps from finite traces. |
+| HistoryIdeals | **C, D.** `adheres_iff_hull` reads prefix agreement as membership in an ideal hull. `Stretches.finite_basis` builds histories from finite stretches. |
+| HistoryIdealsTraces | **C, D.** `history_without_run` shows that feasible move prefixes can lose the compatibility of hidden configurations. |
+| HistoryLanguages | **B, C, D.** `realizes_feasible` reconstructs a language on its histories. `obstruction_locates_changed_profile` locates a lost continuation for a decided language. |
+| HistorySums | **A, D.** `Weights.transfer_between_traces` restricts influence to steps on relevant traces. `Weights.transfer_split` joins horizons. |
+| Horizon | **B, C.** `Renewable.finite_reading_includes_consumption` shows a fixed prefix horizon can conflate renewing and consuming runs. |
+| HorizonWebs | **A, B, C.** `HorizonWebs.prefix_does_not_decide` exhibits the same level prefix and divergent renewal outcomes with support-gated renewal. |
+| Ideals | **C, D.** `Ideals.RefutableBy.not_not` gives the force of finite evidence. `Ideals.union_principalFamily` assembles an ideal from its finite pieces. |
+| IdentificationRuns | **A, C, D.** `Web.selectsThrough_iff_prefix` identifies the account a selector uses. `Law.sameFuture_coarsest` gives the coarsest relation preserving the observation and law. |
+| IdleRemoval | **A, B, D.** `World.withoutIdle_premises` and `World.withoutIdle_totals` transport flow laws and quantities to the clock of moving steps. |
+| Imbalance | **A, D.** `Flow.withImbalance_acting_taking_on_iff` transfers local balance into constraints on an added accounting relatum. |
+| InAmounts | **A, B, D.** `World.InAmounts.change_stops_iff` ties a family’s rest, up to double negation, to the end of strict falls of its total. |
+| IntegerOrder | **None directly.** `lt_or_le` and `add_le_add` supply constructive score arithmetic. |
+| Integers | **None directly.** `pair_add` and `mul_neg` supply arithmetic used by joint-phase models. |
+| Interleavings | **A, C, D.** `LocalLaw.run_of_courses` reconstructs a common endpoint from local courses. `Pair.apart_differs` separates simultaneous comparisons from local histories. |
+
+## Ranked connections
+
+1. **Gated depletion changes selection among groups — A–B–D, (c) and (d).** `Becoming.GroupEnding.Flow.ended_of_family` (GroupEnding.lean:379) uses `Becoming.Flow.family_excess_ends` (Continuation.lean:573), confirmed in the proof-use record. With balance, supported renewal gated on the family, \(n\) consecutive steps of excess, and initial stock below \(n+m\), members requiring at least \(m\) from the family become inactive. If every lower-amount group depends on that family in this way, it leaves no offspring. For equal-size groups, feed this `Ended` conclusion into `Becoming.GroupEnding.rises_iff_ended` (GroupEnding.lean:119). Among-group discordance vanishes and the remaining within-group discordance can still outweigh concordance. If all groups depend on the depleted family, `Becoming.GroupEnding.Flow.coupled_end_together` (GroupEnding.lean:351) already proves both among-group terms vanish.
+
+2. **A coarse block can retain the fine support cutoff — B–D, (d).** `Becoming.Law.stepWhile_steps_iff` (GuardedStep.lean:91) checks the guard at every fine source state. `Becoming.Frame.blocks_trace_iff` (Granularity.lean:131) expands a coarse trace into its fine word. Use a one-move process with the guarded step as its relation. Induction identifies its trace of length \(n\) with \(n\) relational steps. Then \(k\) blocks of length \(q\) reach the \(kq\)-th orbit state exactly when the guard holds at every index below \(kq\). For a decidable guard and guarded start, adding the terminal guard gives the guarded-history criterion in `Becoming.Law.stepWhile_guarded_iff` (GuardedStep.lean:205). I checked the expansion statement and the source-versus-terminal guard distinction. The block criterion is inferred.
+
+3. **A bounded fine observation can make coarse agreement conclusive — A–C–D, (d).** `Becoming.Web.sample_selects_alike_iff` (SampledSelection.lean:140) converts agreement under every coarse selector into agreement at the sampled times. If those times include every index below \(N+N'-1\), `Becoming.Web.alike_of_bounded` (IdentificationRuns.lean:782) extends agreement to every fine time, given `ValuesThrough` and the two bounds on distinct observed futures. Every fine coupling-based selector then agrees. I checked both statements and their proof uses. The coverage condition is the proposed join. `Becoming.Missed.fine_separates` and `Becoming.Missed.coarse_blind` (SampledSelection.lean:408, 417) witness what skipping a relevant time can lose.
+
+4. **An observation class can prevent a timely response — B–C–D, (c).** `Becoming.GuardHorizon.uniform_iff` (GuardHorizon.lean:660) gives, with choice over readings, a policy exactly when each reading has one move admissible at all states giving it. `Becoming.GuardHorizon.uniform_viable` (GuardHorizon.lean:652) gives one more step of viability from guarded states. `Becoming.GuardHorizon.uniform_finer` (GuardHorizon.lean:641) preserves any such policy under a factoring refinement. I checked the statements: admissibility requires enabling and viability of every successor. Thus two states sharing a reading and having disjoint admissible moves rule out a policy for that horizon, directly by evaluating it at their common reading.
+
+5. **Closed capture is a coarse law that forgets a changing coordinate — A–B–C–D, (c) and (e).** `Becoming.ClosedCapture.constant_iff_unread` (GrammarRegularity.lean:263) makes constancy of share, rule and step count under *every* reading schedule equivalent to independence of the next share and read rule from the omitted coordinate. Its proof uses the identification and lumping bridges. `Becoming.ClosedCapture.lock_line` (GrammarRegularity.lean:324) uses `Becoming.ClosedCapture.lock_outlives_loss` (ClosedCapture.lean:307) to obtain an unending locked line with loss changing every step, given the lock premises and accrual. I checked both proof edges. The two statements distinguish the dynamics carried by a projection from persistence of the locked class along a course.
+
+6. **The footprint of an exchange determines which readings survive rescheduling — A–C–D, (c).** `Becoming.Interleavings.LocalLaw.world_renumber_reads` (Interleavings.lean:2262) preserves a predicate of the levels before and after a matched exchange when the predicate depends only on the relata it touches. `Becoming.Interleavings.Pair.apart_differs` (Interleavings.lean:2512) gives identical local courses but a strict comparison between two relata that occurs in only one interleaving. I checked both statements and the two-order witness. A shared clock can therefore supply information to a joint reading that the local courses leave open.
+
+## Scale
+
+- **Clock changes.** `World.withoutIdle_totals` and `World.withoutIdle_counts` preserve matched stretch totals and event counts given the moving-step map and genuine idleness. `Expansion.more_step_relative` (Stuttering.lean:809) changes a per-step growth property by inserting idle steps. `Hexagram.run_between_six` (HexagramSites.lean:1015) gives another clock effect: six steps flip the four inner phase bits together, so those bits determine their next six-step reading even though they fail to determine their next one-step reading.
+- **What parts leave out.** `IdentificationRuns.parity_whole_not_in_pairs` reaches exactly the even triples while every pair takes all four values. `Weights.transfer_eq_sum_exactly` regroups paths by response count under commuting addition, and `HistorySums.grouping_needs_commuting` supplies a counterexample. `World.InAmounts.census_falls` connects a change in an active relatum to a strict fall in the census total under enclosure and the flow premises.
+- **What can be assembled.** GrammarMap uses two supplied classes on one relation. HeldPossible’s rule tower gives a finite height for each reachable possibility, with potentially different heights for different possibilities. HistoryIdeals assembles compatible finite stretches. HistoryIdealsTraces shows why merely having a witness for each move prefix is weaker.
+
+## What I did not read
+
+I read all 34 opening accounts and surveyed their public declarations. The full statement-and-docstring pass was incomplete in the larger modules, especially the finite censuses and auxiliary lemmas. I inspected proofs and proof-use records selectively for the reported joins. A combined statement for either proposed result 2 or 3 was **not found in what I read** when searching for uses of `stepWhile_steps_iff`, `stepWhile_guarded_iff`, `alike_of_bounded`, and `sample_selects_alike_iff`. The rest of the package and the periphery were outside this read apart from the cross-checks cited above. No files were changed and Lean was not run.
+
+── cx · ok · session 01a207ce-47db-7903-a086-e46ed03d2600 · gpt-6.2-sol/high · read-only · 449s · 5001.1k tokens · 37 cmds
+continue: cx -r 01a207ce-47db-7903-a086-e46ed03d2600 "…"
+log: /Users/ren/.cache/cx/runs/20261123-164808-82806
