@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "utc": "20261123T170322.365233Z",
+  "utc": "20261123T181227.411285Z",
   "toolchain": "leanprover/lean4:v4.29.1",
-  "retained_run": "becoming-checks/20261123T170322.365233Z",
+  "retained_run": "becoming-checks/20261123T181227.411285Z",
   "spine_modules": [
     "Becoming.Grammar",
     "Becoming.GrammarReadings",
@@ -403,6 +403,9 @@
     "Becoming.OpenComposition",
     "Becoming.TransformativeViability",
     "Becoming.StockFlowBridge",
+    "Becoming.EndogenousTurning",
+    "Becoming.UnifiedDrawdown",
+    "Becoming.ScopeDynamics",
     "Becoming",
     "Becoming.Hexagrams",
     "Becoming.HexagramPlaces",
@@ -823,6 +826,9 @@
     "Becoming.OpenComposition",
     "Becoming.TransformativeViability",
     "Becoming.StockFlowBridge",
+    "Becoming.EndogenousTurning",
+    "Becoming.UnifiedDrawdown",
+    "Becoming.ScopeDynamics",
     "Becoming"
   ],
   "foundation_modules": [
@@ -1257,6 +1263,9 @@
     "Becoming.OpenComposition",
     "Becoming.TransformativeViability",
     "Becoming.StockFlowBridge",
+    "Becoming.EndogenousTurning",
+    "Becoming.UnifiedDrawdown",
+    "Becoming.ScopeDynamics",
     "Becoming.SeedReach",
     "Becoming.ScopedReach",
     "Becoming.Hexagrams",
@@ -1680,6 +1689,9 @@
     "Becoming.OpenComposition",
     "Becoming.TransformativeViability",
     "Becoming.StockFlowBridge",
+    "Becoming.EndogenousTurning",
+    "Becoming.UnifiedDrawdown",
+    "Becoming.ScopeDynamics",
     "Becoming.SeedReach",
     "Becoming.ScopedReach",
     "Becoming.Hexagrams",
@@ -2103,6 +2115,9 @@
     "Becoming.OpenComposition": "becoming/Becoming/OpenComposition.lean",
     "Becoming.TransformativeViability": "becoming/Becoming/TransformativeViability.lean",
     "Becoming.StockFlowBridge": "becoming/Becoming/StockFlowBridge.lean",
+    "Becoming.EndogenousTurning": "becoming/Becoming/EndogenousTurning.lean",
+    "Becoming.UnifiedDrawdown": "becoming/Becoming/UnifiedDrawdown.lean",
+    "Becoming.ScopeDynamics": "becoming/Becoming/ScopeDynamics.lean",
     "Becoming.SeedReach": "becoming/Becoming/SeedReach.lean",
     "Becoming.ScopedReach": "becoming/Becoming/ScopedReach.lean",
     "Becoming.Hexagrams": "becoming/Becoming/Hexagrams.lean",
@@ -2526,6 +2541,9 @@
     "Becoming.OpenComposition": "739a9dde3d576acae4312cf95ebd4a9c2b210368605724d084b84af4aac802cd",
     "Becoming.TransformativeViability": "3767618b36fb7144d901f035452680b636c7a23edf98b47d50ccdf8fd330a123",
     "Becoming.StockFlowBridge": "92c67b1c1a84452e5c83f31f25bc4ae5d34f89a17eb86e1aebb3a751dbb6ae21",
+    "Becoming.EndogenousTurning": "f4343f78f657d1a646c4abff11b2eded3845698f53fce6127f5191f1cf0d0bfc",
+    "Becoming.UnifiedDrawdown": "787ec07766b2425a774810b5d5f89fc908e2650e1bbb98b40589c9864dbfd0c0",
+    "Becoming.ScopeDynamics": "6acaa6e3fdcea3fa756819811b08f73a649ec9a0389fec2d985996c6d8ab9cd5",
     "Becoming.SeedReach": "6c21f636369688b6247052cb7434aebdd1669dc2dc0ff3a906a2032193deb066",
     "Becoming.ScopedReach": "0432efe6bf31ceff196a4d058a6b77710871ed130eb562dc0ad05d00a873e5ae",
     "Becoming.Hexagrams": "7bcc1ca10eb46afc25efe9c5d8c54ce9840c0be831b8427f0dc3b024117786a3",
@@ -2544,17 +2562,19 @@
     "Becoming.ReaderRebuilding": "25f0d49255972cec8024970a4249dd9228baed14308c90c83dec223bf4378713",
     "Becoming.RuleRebuilding": "fe82de1f1377255eb7fc7b3cd42cad7245bd45882f4e58a6e82d3575e2c28709",
     "Becoming.ResponseLearning": "3f570198fcae3a551c9ca5807d58353cec3d393a00d37a21d89a98c789a725d2",
-    "Becoming": "12b0a678b6bbf035f1b60265195ec9ff5663bacac5c278b5099998610afa6436"
+    "Becoming": "84648a9970ec61103cc18f1964c5113534ac5786b0c41333a1ec1d186635f553"
   },
   "checker_sha256": {
-    "check_becoming.py": "245f7323f5714991b318eec881d01fc9ed4b126cdb1de5d9afe5d87a1952fbf0",
+    "check_becoming.py": "16cd28668afe24dd69f10697b9f86793b2eaf536ff12efdea29416d9f597efce",
     "check.py": "4f9cb94de69bd0e7da6bc7ab1ae1cfd26e2d5848dabda5cbb88aebc36ac52da3"
   },
   "runner_sha256": "cdc5b2e9fe6915233f5e39ec1b4ad30b615e15dbbea393adda2effba0e7c7de2",
   "source_commit": {
-    "main": "989b55870a32ff2859ed42ce6bebf51d94fc0fe8",
+    "main": "d39575b5b140b99dc124cfee8f6e96a1bea184c8",
     "copied": [
-      "Becoming.OpenComposition.lean",
+      "Becoming.EndogenousTurning.lean",
+      "Becoming.ScopeDynamics.lean",
+      "Becoming.UnifiedDrawdown.lean",
       "Becoming.lean",
       "check_becoming.py"
     ]
@@ -2565,13 +2585,21 @@
     "fresh": false,
     "ran": [
       "version.log",
-      "BecomingOpenCompositionSignatures.log",
+      "Becoming.EndogenousTurning.log",
+      "BecomingEndogenousTurningAxiomAudit.log",
+      "BecomingEndogenousTurningSignatures.log",
+      "Becoming.UnifiedDrawdown.log",
+      "BecomingUnifiedDrawdownAxiomAudit.log",
+      "BecomingUnifiedDrawdownSignatures.log",
+      "BecomingScopeDynamicsSignatures.log",
       "Becoming.log",
       "BecomingAxiomAudit.log",
       "BecomingSignatures.log",
       "EnvironmentAudit.log",
       "Controls.log",
-      "Becoming.OpenComposition.PreludeOnly.log",
+      "Becoming.EndogenousTurning.PreludeOnly.log",
+      "Becoming.UnifiedDrawdown.PreludeOnly.log",
+      "Becoming.ScopeDynamics.PreludeOnly.log",
       "Becoming.PreludeOnly.log"
     ],
     "reused": {
@@ -7359,6 +7387,10 @@
         "utc": "20261123T170235.376788Z",
         "retained": "scratch build, not retained: /Users/ren/tmp/l0-scratch"
       },
+      "BecomingOpenCompositionSignatures.log": {
+        "utc": "20261123T170322.365233Z",
+        "retained": "/Users/ren/tmp/l0-l5-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T170322.365233Z"
+      },
       "Becoming.TransformativeViability.log": {
         "utc": "20261123T125348.547828Z",
         "retained": "scratch build, not retained: /Users/ren/tmp/p1c/tree"
@@ -7382,6 +7414,14 @@
       "BecomingStockFlowBridgeSignatures.log": {
         "utc": "20261123T131636.294555Z",
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T131636.294555Z"
+      },
+      "Becoming.ScopeDynamics.log": {
+        "utc": "20261123T175420.499398Z",
+        "retained": "scratch build, not retained: /Users/ren/tmp/scratch_l3"
+      },
+      "BecomingScopeDynamicsAxiomAudit.log": {
+        "utc": "20261123T175420.499398Z",
+        "retained": "scratch build, not retained: /Users/ren/tmp/scratch_l3"
       },
       "Becoming.SeedReach.log": {
         "utc": "20261109T150228.155067Z",
@@ -9195,6 +9235,10 @@
         "utc": "20261123T131636.294555Z",
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T131636.294555Z"
       },
+      "Becoming.OpenComposition.PreludeOnly.log": {
+        "utc": "20261123T170322.365233Z",
+        "retained": "/Users/ren/tmp/l0-l5-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T170322.365233Z"
+      },
       "Becoming.TransformativeViability.PreludeOnly.log": {
         "utc": "20261123T131636.294555Z",
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T131636.294555Z"
@@ -10480,6 +10524,15 @@
       "Becoming.StockFlowBridge.log": "0b8522b1099e6fe5aaa3d3e28849563eddc43d80aa023ec7032b36ac5e17e5f3",
       "BecomingStockFlowBridgeAxiomAudit.log": "7dcf18a424ac4f8a24ac25901d5456ee5805dc610ee53b315fd24453e8dd20fa",
       "BecomingStockFlowBridgeSignatures.log": "85dae9eaf5d97624a0faf07bd21156c7ec106d89673ed38b3f30e7820d85a7d1",
+      "Becoming.EndogenousTurning.log": "13d4670a06fe70de0e4b2a3305b7835cf4bc2099163125725b7a79dd6acbd90c",
+      "BecomingEndogenousTurningAxiomAudit.log": "aea3c1f953d5de63e9e5b8212d2f83cdcfaf728fd3797049327a28da59bb4ceb",
+      "BecomingEndogenousTurningSignatures.log": "f6ba637b265b96640b1ad86820c143d3bd8145b29de7d81588551fb31530cefb",
+      "Becoming.UnifiedDrawdown.log": "225a00b9df60f3ead6de24d6523e63d1f816f4d9b644b413567ae7e8693000e2",
+      "BecomingUnifiedDrawdownAxiomAudit.log": "d9009ff5f705a49677417fba0aea8e76d476ac810f6be66f22854ed909dfe890",
+      "BecomingUnifiedDrawdownSignatures.log": "a02fad315cb829d76fe44caeb77c1461c99e3475cade55343a9eb599a969f964",
+      "Becoming.ScopeDynamics.log": "a41b2574654e51fa3bc898797945bfacd7cf94f19479bf1e27b9b513e7aab2e8",
+      "BecomingScopeDynamicsAxiomAudit.log": "1f38598bdf07b252a905587d65c7df68f681668b0c16254eddd44b9ae26e015a",
+      "BecomingScopeDynamicsSignatures.log": "0624f368686dfa9f1fcb26f5b18bae30915b4c81cbe35cc98f5cf684b7265920",
       "Becoming.SeedReach.log": "69e9093daed2cb3a35b84a3db09258074b3c837b06184fbeb2a3ce4357438d9a",
       "BecomingSeedReachAxiomAudit.log": "325b832f6ca3591cc9f1580c04f87a51dbdce5aeb0cc327a1ef4b126a088902d",
       "BecomingSeedReachSignatures.log": "61a9a40165856bdd55c8c10d23e7f1a7023f7d14510b64e75d74d9d438f9f945",
@@ -10534,11 +10587,11 @@
       "Becoming.ResponseLearning.log": "19c5dfae2897081b2db2a6479e4b6630f3e12729c7a5b2018b2f3b56e9252710",
       "BecomingResponseLearningAxiomAudit.log": "358f4819a31b44cc8105702cdd098101a2dac4da9f87e46a44072360231c8abb",
       "BecomingResponseLearningSignatures.log": "ee5e63f24cc980784d60513ca2cf139807117cb10932dc5bc49d85bdc89e8bfa",
-      "Becoming.log": "a6745d0afdb87b5927b34ed87e541616ab938d3e177c299e01545be5062e759a",
-      "BecomingAxiomAudit.log": "cb0d9724d20f74f2caf80171cbaa625831e9cf3ed77dbd28d144b322f87ae9a4",
-      "BecomingSignatures.log": "80410670a97c80f8ddc48b8a20f0caf972b0549e9814048c03d8a82d9419b29c",
-      "EnvironmentAudit.log": "2409aefbeacf042c8421501df0de3156c6ac856edbc4ca0426cc83e2fee1acc3",
-      "Controls.log": "d4f1628da11d9f31db983033b83761f0108fb98024e69fa752e8752cc46f2ccb",
+      "Becoming.log": "de1a079f8cc1b3ca7af60ba4ecbf6d718663fc223ae39005d163d719e0f8a5d3",
+      "BecomingAxiomAudit.log": "260224987123a1be0a24d849f9225a9ba209290e53fb8dc5c9c4bcea806e997d",
+      "BecomingSignatures.log": "c639ac9ab7edcd24a8794d3eeb75ed6b6cff4def6c8c56339eb18144682e63ae",
+      "EnvironmentAudit.log": "ad479e5bc88dc7300c47e816435012595a78cf92bac798444379d1529f31a4f8",
+      "Controls.log": "ffb61a8b7c0776de5ded00fe29650ea5c67dfda9616e6306665a0e8624a7ab93",
       "Becoming.Grammar.PreludeOnly.log": "76d3cd6879ccdfaed9db9cc98947cb68fe604b6ec9c632c3569df134642978a0",
       "Becoming.GrammarReadings.PreludeOnly.log": "96d3eaac03a03246c68b669a66e92565f381f028768625af72b0ecd42c10d168",
       "Becoming.GrammarMap.PreludeOnly.log": "57b332119ea3feae52717dc0b9c6e6a8461bd8fd25ec4a4b45ba5bbf5e0d743b",
@@ -10941,6 +10994,9 @@
       "Becoming.OpenComposition.PreludeOnly.log": "93ad141b44920e185384e62c4f1c57333d6d752fb928e1211a7a6263cde7f7fe",
       "Becoming.TransformativeViability.PreludeOnly.log": "54a2fbecc0babb04de704548b128a67199b1675a5bf8f5b0d021747deb328b48",
       "Becoming.StockFlowBridge.PreludeOnly.log": "2e8094d22805608a84df2219e9039e9a1e753a5815dd68c8c834e3081e5625a6",
+      "Becoming.EndogenousTurning.PreludeOnly.log": "be40e8a276742882b40de051a5c7ac53931dc7158a420ad4572f095b26a13181",
+      "Becoming.UnifiedDrawdown.PreludeOnly.log": "faebf9782150b5bcc18ea83b636b5e511dd589480f4b70f9e15d686e8a5cd8fb",
+      "Becoming.ScopeDynamics.PreludeOnly.log": "0b549ed456ce0ec2385457d981c05497efda2f4ecd070a3bbffdd246ee8b1b24",
       "Becoming.SeedReach.PreludeOnly.log": "5e0fe6d1427e5096dc5d3fe7ce927e5f3ec9ddd47f7388b1be9da3f470f16402",
       "Becoming.ScopedReach.PreludeOnly.log": "607b3bc88a2c83cd017f2c975691178de1bc72ff0e4088657706581881e9588f",
       "Becoming.Hexagrams.PreludeOnly.log": "383eba428321c4f4bf3c42ba71f5579c797e6fc21217bcd64ea83fde36cb8034",
@@ -10959,20 +11015,28 @@
       "Becoming.ReaderRebuilding.PreludeOnly.log": "c8d322b9ede23ee2284eb9df3a722c142355439a67f3384354dcb30d9488324f",
       "Becoming.RuleRebuilding.PreludeOnly.log": "a80b8eb0e41678da8ed169c4f5b42a9cccc07497817f17b097cc1e4c31864288",
       "Becoming.ResponseLearning.PreludeOnly.log": "fbbe23d3e24bafddda6a674b0ab564f1e8b10a86aa7a0de259e17a82bd6755dd",
-      "Becoming.PreludeOnly.log": "1f2424b4c357208ae257fc3c9cf315dbb77817958de55d52e4a67328c88ece1d"
+      "Becoming.PreludeOnly.log": "00a07c53aaea9019345a4fb8769df52f11ad7f7688ecf07b04a21a09d7f3c34f"
     },
     "seconds": {
-      "version.log": 0.273,
-      "BecomingOpenCompositionSignatures.log": 1.532,
-      "Becoming.log": 1.91,
-      "BecomingAxiomAudit.log": 0.573,
-      "BecomingSignatures.log": 0.573,
-      "EnvironmentAudit.log": 32.988,
-      "Controls.log": 0.61,
-      "Becoming.OpenComposition.PreludeOnly.log": 2.296,
-      "Becoming.PreludeOnly.log": 0.311
+      "version.log": 0.292,
+      "Becoming.EndogenousTurning.log": 4.312,
+      "BecomingEndogenousTurningAxiomAudit.log": 0.711,
+      "BecomingEndogenousTurningSignatures.log": 0.633,
+      "Becoming.UnifiedDrawdown.log": 4.403,
+      "BecomingUnifiedDrawdownAxiomAudit.log": 0.743,
+      "BecomingUnifiedDrawdownSignatures.log": 0.684,
+      "BecomingScopeDynamicsSignatures.log": null,
+      "Becoming.log": 0.528,
+      "BecomingAxiomAudit.log": 0.493,
+      "BecomingSignatures.log": 0.497,
+      "EnvironmentAudit.log": 34.335,
+      "Controls.log": 0.495,
+      "Becoming.EndogenousTurning.PreludeOnly.log": 2.838,
+      "Becoming.UnifiedDrawdown.PreludeOnly.log": 3.029,
+      "Becoming.ScopeDynamics.PreludeOnly.log": null,
+      "Becoming.PreludeOnly.log": 0.327
     },
-    "wall_seconds": 36.796
+    "wall_seconds": 41.143
   },
   "superseded_modules": {
     "AcquiredCorrection": {
@@ -13232,6 +13296,9 @@
     "Becoming.OpenComposition": 255,
     "Becoming.TransformativeViability": 269,
     "Becoming.StockFlowBridge": 67,
+    "Becoming.EndogenousTurning": 342,
+    "Becoming.UnifiedDrawdown": 352,
+    "Becoming.ScopeDynamics": 514,
     "Becoming.SeedReach": 31,
     "Becoming.ScopedReach": 60,
     "Becoming.Hexagrams": 199,
@@ -14064,6 +14131,39 @@
       "propext"
     ],
     "Becoming.ThreeRegime.Form.fChurn.injEq": [
+      "propext"
+    ],
+    "Becoming.EndogenousTurning.EndogenousSystem.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.EndogenousTurning.ServiceTaskModel.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.UnifiedDrawdown.RestraintAgentSpec.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.ScopeDynamics.MutualFateSystem.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.ScopeDynamics.WideCoalition.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.ScopeDynamics.ReciprocalPoolSystem.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.ScopeDynamics.NarrowLineage.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.ScopeDynamics.PoolForm.fTool.injEq": [
+      "propext"
+    ],
+    "Becoming.ScopeDynamics.NarrowCoalition.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.ScopeDynamics.UncoordinatedCommons.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.ScopeDynamics.SubstratePool.mk.injEq": [
       "propext"
     ],
     "Becoming.Hexagram.mk.injEq": [
@@ -154026,6 +154126,2289 @@
       "kernel_checked": true
     },
     {
+      "module": "Becoming.EndogenousTurning",
+      "spine": true,
+      "layer": "core",
+      "theorems": 85,
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.natMin"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.natMin_le_left"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.natMin_le_right"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.le_natMin"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.natMin_eq_left"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.natMin_eq_right"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.sub_natMin_right"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.ite_pos'"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.ite_neg'"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.dite_pos'"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.dite_neg'"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.div_go_irrel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.mod_go_irrel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.div_add_self"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.mod_add_self"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.div_eq_zero_of_lt"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.mod_eq_self_of_lt"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.div_mul_add_rem"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.div_mod_decomp_bound"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.div_mod_decomp"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.lt_ceil_div_iff"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.falls_or_bound_ge"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.falls_within_ge"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.actualTake"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.actualTake_le"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.clamped_balances_trap"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.pre_overdraw_flow_conservation"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.step_lt_of_short_ge"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.short_stays_below_ge"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.gated_step_stays_below"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.safe_regime_step_viable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.flow_step_eq_regime"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.flow_proxy_optimum_collapse"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.flow_step_breaks_beyond"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.roomBelow_of_marginal_yield"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.optimum_forces_overdraw"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.proxy_optimum_overdraw_collapse"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.constrained_selector_viable"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.EndogenousTurning.PartAWitness.Policy"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.PartAWitness.draw"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.PartAWitness.out"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.PartAWitness.wGivingCap"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.PartAWitness.wGivingCap_fromNothing"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.PartAWitness.wGivingCap_atMost"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.PartAWitness.wGivingCap_short"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.PartAWitness.wGivingCap_meets"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.PartAWitness.wGivingCap_keeps"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.PartAWitness.unconstOrbit"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.PartAWitness.constOrbit"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.PartAWitness.extract_frontier"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.PartAWitness.marginal_yield"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.PartAWitness.unconstrained_collapses"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.PartAWitness.constrained_survives"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.EndogenousTurning.ServiceTaskModel"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.ServiceTaskModel.B_task"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.ServiceTaskModel.TaskPrefers"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.ServiceTaskModel.realizedScore"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.ServiceTaskModel.nominalSafe"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.ServiceTaskModel.demand_safe_le_B_task"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.ServiceTaskModel.B_task_pos_of_upkeep_lt"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.ServiceTaskModel.B_task_le_demand_ext"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.ServiceTaskModel.realizedScore_lt_iff"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.ServiceTaskModel.score_crosses_iff"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.ServiceTaskModel.safe_not_preferred_from_B_task"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.ServiceTaskModel.ext_preferred_above"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.ServiceTaskModel.ext_preferred_from_B_task_of_mod_ne"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.EndogenousTurning.EndogenousSystem"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.EndogenousSystem.step"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.turningInv"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.EndogenousSystem.timely_turning_certificate"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.EndogenousSystem.timely_turning_kernel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.EndogenousSystem.timely_turning_guarantee"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.endogenous_turning_kernel"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.serviceK"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.decService"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.EndogenousSystem.ofServiceTask"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.ofServiceTask_viable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.pooled_service_turning_viable"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.EndogenousTurning.PooledClearing.PooledAgent"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.PooledClearing.pooledAgents"
+        },
+        {
+          "kind": "abbrev",
+          "name": "Becoming.EndogenousTurning.PooledClearing.PooledState"
+        },
+        {
+          "kind": "abbrev",
+          "name": "Becoming.EndogenousTurning.PooledClearing.PooledObs"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.PooledClearing.proxyNext"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.PooledClearing.taskNext"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.PooledClearing.proxyLoop"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.PooledClearing.taskLoop"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.PooledClearing.pooledOpenLoop"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.PooledClearing.pooledObs"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.PooledClearing.pooledChannel"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.PooledClearing.proxyCert"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.PooledClearing.taskCert"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.PooledClearing.pooledCerts"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.PooledClearing.pooled_clearing_turning"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.PooledClearing.unpooled_clearer_blind"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.PooledClearing.clearing_pooled_contrast"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.epistemic_silence_late_bottleneck"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.service_saturated_below_noReturn_silenced"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.epistemic_silence_masked_unread"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.epistemic_silence_cascade"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.cascade_twin_free"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.EndogenousTurning.TurningWitness.TurnPolicy"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.TurningWitness.turnDraw"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.TurningWitness.turnUpkeep"
+        },
+        {
+          "kind": "abbrev",
+          "name": "Becoming.EndogenousTurning.TurningWitness.wGivingCap"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.TurningWitness.timelyModel"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.TurningWitness.lateModel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.TurningWitness.timelyModel_B_task"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.TurningWitness.lateModel_B_task"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.TurningWitness.timelySys"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.TurningWitness.timelyOrbit"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.TurningWitness.timely_survives"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.TurningWitness.lateRespond"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.TurningWitness.lateOrbit"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.TurningWitness.late_step_eq"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.TurningWitness.late_collapses"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.TurningWitness.cascadeTurns"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.TurningWitness.cascadeSel"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.TurningWitness.cascadeOrbit"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.TurningWitness.cascade_step_eq"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.TurningWitness.cascade_collapses"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.proxyComponent"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.proxyContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerComponent"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerContract"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.pooled_clearing_open_compose_viable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_partner_reconfig_viable"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.turningCap"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.turningCap_rises"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.turningCap_atMost"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.turningCap_short"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.turningCap_fromNothing"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.upgradedUpkeep"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.upgradedModel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.upgradedModel_B_task"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.leftPartner"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.leftInit"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.leftInit_in"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.leftContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.rightSystem"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.rightInit"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.rightContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.leftObs"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.rightObs"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.syncChannel"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.witnessG"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigProc"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigState"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigAct"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigState_inr"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigRun"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigLevel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfig_witness_viable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_widening_heals_blindness"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.wideningModel"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.wideningPartnerInit"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.wideningPartnerInit_in"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.wideningJointInit"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.widenedClosedComp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.widenedClosedContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.widenedClosedObs"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.widenedClosedRun"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.EndogenousTurning.OpenCompositionBridge.widening_heals_witness"
+        }
+      ],
+      "axiom_dependencies": {
+        "Becoming.EndogenousTurning.natMin": [],
+        "Becoming.EndogenousTurning.natMin_le_left": [],
+        "Becoming.EndogenousTurning.natMin_le_right": [],
+        "Becoming.EndogenousTurning.le_natMin": [],
+        "Becoming.EndogenousTurning.natMin_eq_left": [],
+        "Becoming.EndogenousTurning.natMin_eq_right": [],
+        "Becoming.EndogenousTurning.sub_natMin_right": [],
+        "Becoming.EndogenousTurning.ite_pos'": [],
+        "Becoming.EndogenousTurning.ite_neg'": [],
+        "Becoming.EndogenousTurning.dite_pos'": [],
+        "Becoming.EndogenousTurning.dite_neg'": [],
+        "Becoming.EndogenousTurning.div_go_irrel": [],
+        "Becoming.EndogenousTurning.mod_go_irrel": [],
+        "Becoming.EndogenousTurning.div_add_self": [],
+        "Becoming.EndogenousTurning.mod_add_self": [],
+        "Becoming.EndogenousTurning.div_eq_zero_of_lt": [],
+        "Becoming.EndogenousTurning.mod_eq_self_of_lt": [],
+        "Becoming.EndogenousTurning.div_mul_add_rem": [],
+        "Becoming.EndogenousTurning.div_mod_decomp_bound": [],
+        "Becoming.EndogenousTurning.div_mod_decomp": [],
+        "Becoming.EndogenousTurning.lt_ceil_div_iff": [],
+        "Becoming.EndogenousTurning.falls_or_bound_ge": [],
+        "Becoming.EndogenousTurning.falls_within_ge": [],
+        "Becoming.EndogenousTurning.actualTake": [],
+        "Becoming.EndogenousTurning.actualTake_le": [],
+        "Becoming.EndogenousTurning.clamped_balances_trap": [],
+        "Becoming.EndogenousTurning.pre_overdraw_flow_conservation": [],
+        "Becoming.EndogenousTurning.step_lt_of_short_ge": [],
+        "Becoming.EndogenousTurning.short_stays_below_ge": [],
+        "Becoming.EndogenousTurning.gated_step_stays_below": [],
+        "Becoming.EndogenousTurning.safe_regime_step_viable": [],
+        "Becoming.EndogenousTurning.flow_step_eq_regime": [],
+        "Becoming.EndogenousTurning.flow_proxy_optimum_collapse": [],
+        "Becoming.EndogenousTurning.flow_step_breaks_beyond": [],
+        "Becoming.EndogenousTurning.roomBelow_of_marginal_yield": [],
+        "Becoming.EndogenousTurning.optimum_forces_overdraw": [],
+        "Becoming.EndogenousTurning.proxy_optimum_overdraw_collapse": [],
+        "Becoming.EndogenousTurning.constrained_selector_viable": [],
+        "Becoming.EndogenousTurning.PartAWitness.Policy": [],
+        "Becoming.EndogenousTurning.PartAWitness.draw": [],
+        "Becoming.EndogenousTurning.PartAWitness.out": [],
+        "Becoming.EndogenousTurning.PartAWitness.wGivingCap": [],
+        "Becoming.EndogenousTurning.PartAWitness.wGivingCap_fromNothing": [],
+        "Becoming.EndogenousTurning.PartAWitness.wGivingCap_atMost": [],
+        "Becoming.EndogenousTurning.PartAWitness.wGivingCap_short": [],
+        "Becoming.EndogenousTurning.PartAWitness.wGivingCap_meets": [],
+        "Becoming.EndogenousTurning.PartAWitness.wGivingCap_keeps": [],
+        "Becoming.EndogenousTurning.PartAWitness.unconstOrbit": [],
+        "Becoming.EndogenousTurning.PartAWitness.constOrbit": [],
+        "Becoming.EndogenousTurning.PartAWitness.extract_frontier": [],
+        "Becoming.EndogenousTurning.PartAWitness.marginal_yield": [],
+        "Becoming.EndogenousTurning.PartAWitness.unconstrained_collapses": [],
+        "Becoming.EndogenousTurning.PartAWitness.constrained_survives": [],
+        "Becoming.EndogenousTurning.ServiceTaskModel": [],
+        "Becoming.EndogenousTurning.ServiceTaskModel.B_task": [],
+        "Becoming.EndogenousTurning.ServiceTaskModel.TaskPrefers": [],
+        "Becoming.EndogenousTurning.ServiceTaskModel.realizedScore": [],
+        "Becoming.EndogenousTurning.ServiceTaskModel.nominalSafe": [],
+        "Becoming.EndogenousTurning.ServiceTaskModel.demand_safe_le_B_task": [],
+        "Becoming.EndogenousTurning.ServiceTaskModel.B_task_pos_of_upkeep_lt": [],
+        "Becoming.EndogenousTurning.ServiceTaskModel.B_task_le_demand_ext": [],
+        "Becoming.EndogenousTurning.ServiceTaskModel.realizedScore_lt_iff": [],
+        "Becoming.EndogenousTurning.ServiceTaskModel.score_crosses_iff": [],
+        "Becoming.EndogenousTurning.ServiceTaskModel.safe_not_preferred_from_B_task": [],
+        "Becoming.EndogenousTurning.ServiceTaskModel.ext_preferred_above": [],
+        "Becoming.EndogenousTurning.ServiceTaskModel.ext_preferred_from_B_task_of_mod_ne": [],
+        "Becoming.EndogenousTurning.EndogenousSystem": [],
+        "Becoming.EndogenousTurning.EndogenousSystem.step": [],
+        "Becoming.EndogenousTurning.turningInv": [],
+        "Becoming.EndogenousTurning.EndogenousSystem.timely_turning_certificate": [],
+        "Becoming.EndogenousTurning.EndogenousSystem.timely_turning_kernel": [],
+        "Becoming.EndogenousTurning.EndogenousSystem.timely_turning_guarantee": [],
+        "Becoming.EndogenousTurning.endogenous_turning_kernel": [],
+        "Becoming.EndogenousTurning.serviceK": [],
+        "Becoming.EndogenousTurning.decService": [],
+        "Becoming.EndogenousTurning.EndogenousSystem.ofServiceTask": [],
+        "Becoming.EndogenousTurning.ofServiceTask_viable": [],
+        "Becoming.EndogenousTurning.pooled_service_turning_viable": [],
+        "Becoming.EndogenousTurning.PooledClearing.PooledAgent": [],
+        "Becoming.EndogenousTurning.PooledClearing.pooledAgents": [],
+        "Becoming.EndogenousTurning.PooledClearing.PooledState": [],
+        "Becoming.EndogenousTurning.PooledClearing.PooledObs": [],
+        "Becoming.EndogenousTurning.PooledClearing.proxyNext": [],
+        "Becoming.EndogenousTurning.PooledClearing.taskNext": [],
+        "Becoming.EndogenousTurning.PooledClearing.proxyLoop": [],
+        "Becoming.EndogenousTurning.PooledClearing.taskLoop": [],
+        "Becoming.EndogenousTurning.PooledClearing.pooledOpenLoop": [],
+        "Becoming.EndogenousTurning.PooledClearing.pooledObs": [],
+        "Becoming.EndogenousTurning.PooledClearing.pooledChannel": [],
+        "Becoming.EndogenousTurning.PooledClearing.proxyCert": [],
+        "Becoming.EndogenousTurning.PooledClearing.taskCert": [],
+        "Becoming.EndogenousTurning.PooledClearing.pooledCerts": [],
+        "Becoming.EndogenousTurning.PooledClearing.pooled_clearing_turning": [],
+        "Becoming.EndogenousTurning.PooledClearing.unpooled_clearer_blind": [],
+        "Becoming.EndogenousTurning.PooledClearing.clearing_pooled_contrast": [],
+        "Becoming.EndogenousTurning.epistemic_silence_late_bottleneck": [],
+        "Becoming.EndogenousTurning.service_saturated_below_noReturn_silenced": [],
+        "Becoming.EndogenousTurning.epistemic_silence_masked_unread": [],
+        "Becoming.EndogenousTurning.epistemic_silence_cascade": [],
+        "Becoming.EndogenousTurning.cascade_twin_free": [],
+        "Becoming.EndogenousTurning.TurningWitness.TurnPolicy": [],
+        "Becoming.EndogenousTurning.TurningWitness.turnDraw": [],
+        "Becoming.EndogenousTurning.TurningWitness.turnUpkeep": [],
+        "Becoming.EndogenousTurning.TurningWitness.wGivingCap": [],
+        "Becoming.EndogenousTurning.TurningWitness.timelyModel": [],
+        "Becoming.EndogenousTurning.TurningWitness.lateModel": [],
+        "Becoming.EndogenousTurning.TurningWitness.timelyModel_B_task": [],
+        "Becoming.EndogenousTurning.TurningWitness.lateModel_B_task": [],
+        "Becoming.EndogenousTurning.TurningWitness.timelySys": [],
+        "Becoming.EndogenousTurning.TurningWitness.timelyOrbit": [],
+        "Becoming.EndogenousTurning.TurningWitness.timely_survives": [],
+        "Becoming.EndogenousTurning.TurningWitness.lateRespond": [],
+        "Becoming.EndogenousTurning.TurningWitness.lateOrbit": [],
+        "Becoming.EndogenousTurning.TurningWitness.late_step_eq": [],
+        "Becoming.EndogenousTurning.TurningWitness.late_collapses": [],
+        "Becoming.EndogenousTurning.TurningWitness.cascadeTurns": [],
+        "Becoming.EndogenousTurning.TurningWitness.cascadeSel": [],
+        "Becoming.EndogenousTurning.TurningWitness.cascadeOrbit": [],
+        "Becoming.EndogenousTurning.TurningWitness.cascade_step_eq": [],
+        "Becoming.EndogenousTurning.TurningWitness.cascade_collapses": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.proxyComponent": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.proxyContract": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerComponent": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerContract": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.pooled_clearing_open_compose_viable": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_partner_reconfig_viable": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.turningCap": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.turningCap_rises": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.turningCap_atMost": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.turningCap_short": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.turningCap_fromNothing": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.upgradedUpkeep": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.upgradedModel": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.upgradedModel_B_task": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.leftPartner": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.leftInit": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.leftInit_in": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.leftContract": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.rightSystem": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.rightInit": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.rightContract": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.leftObs": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.rightObs": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.syncChannel": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.witnessG": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigProc": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigState": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigAct": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigState_inr": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigRun": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigLevel": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfig_witness_viable": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_widening_heals_blindness": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.wideningModel": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.wideningPartnerInit": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.wideningPartnerInit_in": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.wideningJointInit": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.widenedClosedComp": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.widenedClosedContract": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.widenedClosedObs": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.widenedClosedRun": [],
+        "Becoming.EndogenousTurning.OpenCompositionBridge.widening_heals_witness": []
+      },
+      "kernel_checked": true
+    },
+    {
+      "module": "Becoming.UnifiedDrawdown",
+      "spine": true,
+      "layer": "core",
+      "theorems": 107,
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.deficit_lowers_at"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.deficit_bounded_prefix"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.deficit_bounded_within"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.below_of_deficit_within"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.below_of_excess_within"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.family_deficit_ends_within"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.held_excess_ends_within"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.eraseOne"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.mem_eraseOne_of_ne"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.total_eraseOne"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.total_map_le"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.total_only_eq"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.lookupBy"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.lookupBy_eq_of_mem"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.sumDraws_eq_total"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.holdersOf"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.holdersOf_true_iff"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.holdersOf_mem"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.dec_all_or_exists"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.localError"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.parametric_local_accounts_depletion"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.heldPair_as_parametric_instance"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.firstApart_of_monitor"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.pooled_detects_before_collapse"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.UnifiedDrawdown.RestraintAgentSpec"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.restraintLoop"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.restraintCert"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.pooled_restraint_restores_viability"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.restraint_adapter_restores_viability"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.activeUnitWeb"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.activeUnitWeb_dependent"
+        },
+        {
+          "kind": "abbrev",
+          "name": "Becoming.UnifiedDrawdown.lineActiveWeb"
+        },
+        {
+          "kind": "abbrev",
+          "name": "Becoming.UnifiedDrawdown.wayActiveWeb"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.lineActiveWeb_dependent"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.wayActiveWeb_dependent"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.gated_one_of_fromNothing"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.unit_giversSupported_of_gated"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.line_below_of_excess_of_within"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.line_below_of_excess_of_goes"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.way_below_of_excess_of_within"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.way_below_of_excess_of_goes"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.line_family_excess_ends"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.line_family_excess_ends_one"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.line_excess_terminates_goes"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.way_family_excess_ends"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.way_family_excess_ends_one"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.way_excess_terminates_goes"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.FirstOverdraw"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.exists_firstOverdraw"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.unit_balancesOn_iff_le"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.unit_overdraw_separation"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.line_overdraw_separation"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.way_overdraw_separation"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.use"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.kids"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.startState"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving_fromNothing"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.needs"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.firstOverdraw_at_one"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.witness_bundle"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.sampled_break_concealment"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.logistic_sampled_break_concealment"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.ltBool"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.ltBool_true"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.ltBool_false"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.cyclePair"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.cycleRem"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.cyclePair_spec"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.cycle_euclid_unique"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.cycleRem_mul_add"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.cycleRem_mul"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.cycleRem_of_lt"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.cycleRem_self"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.cyclicCourse"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.cyclicCourse_openCourse"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.cyclicCourse_frontier"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.logistic_periodic_sampled_break_concealment"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.sampled_recovery_hides_fragility"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.ReadsAt"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.sigmaOdd"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.sigmaOdd_strict"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.flick_eq_true_odd"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.flick_eq_false_even"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.mod2_cases"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.strobe_readsAt"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.strobe_readAtSpanEnd"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.cadence_erases_timely_recovery"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.strobe_schedule_erases_window"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.UnitKind"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.need"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.use"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.giving"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.kids"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.fA"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.h"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.sig"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.startConfig"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.readsFine"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.readsCoarse"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_giving_fromNothing"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_needs"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.safeInv"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_inv_goes"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_inv_step"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_coarse_b_parity"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.PacedLowerDrawWhileMet"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.pacedCourse_span0_matches"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.lagDraw_one_of_lower"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.pacedCourse_step_level"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.pacedCourse_envelope_upper"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.pacedCourse_stays_below_aux"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.pacedCourse_stays_below_while_goes"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.pacedCourse_ends_step_pub"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.pacedCourse_ends_below_point_pub"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.sampled_deadline_impossibility_at"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.sampled_deadline_impossibility_lag1"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.sampled_deadline_impossibility"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.unifiedDrawdown_readsOnlyDynamics"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.unifiedDrawdown_not_entails"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.witnessed_dynamics_not_entails"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.UnifiedDrawdown.SpineHooks.JointDepletionBridge"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.UnifiedDrawdown.SpineHooks.PreOverdrawBridge"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.UnifiedDrawdown.SpineHooks.TemporalAliasingSuite"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.SpineHooks.preOverdrawSummary"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.SpineHooks.temporalAliasingSummary"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintComponent"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetState"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetObs"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetDist"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetInt"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetInit"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetObs"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.specSum"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.specMax"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_preCapExt_eq_sum"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_postCapExt_eq_sum"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxSilence_eq_sum"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxLag_eq_max"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_eta_eq_max"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_warnObs_of_lt"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract_refines"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG_rises"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA'"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.tightenA"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.twoAgentFleet_viable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.threeAgentFleet_viable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.threeAgentFleet_upgrade_viable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.witness_bundle"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.UnifiedDrawdown.SpineHooks.openFleetSummary"
+        }
+      ],
+      "axiom_dependencies": {
+        "Becoming.Flow.deficit_lowers_at": [],
+        "Becoming.Flow.deficit_bounded_prefix": [],
+        "Becoming.Flow.deficit_bounded_within": [],
+        "Becoming.Flow.below_of_deficit_within": [],
+        "Becoming.Flow.below_of_excess_within": [],
+        "Becoming.Flow.family_deficit_ends_within": [],
+        "Becoming.Flow.held_excess_ends_within": [],
+        "Becoming.UnifiedDrawdown.eraseOne": [],
+        "Becoming.UnifiedDrawdown.mem_eraseOne_of_ne": [],
+        "Becoming.UnifiedDrawdown.total_eraseOne": [],
+        "Becoming.UnifiedDrawdown.total_map_le": [],
+        "Becoming.UnifiedDrawdown.total_only_eq": [],
+        "Becoming.UnifiedDrawdown.lookupBy": [],
+        "Becoming.UnifiedDrawdown.lookupBy_eq_of_mem": [],
+        "Becoming.UnifiedDrawdown.sumDraws_eq_total": [],
+        "Becoming.UnifiedDrawdown.holdersOf": [],
+        "Becoming.UnifiedDrawdown.holdersOf_true_iff": [],
+        "Becoming.UnifiedDrawdown.holdersOf_mem": [],
+        "Becoming.UnifiedDrawdown.dec_all_or_exists": [],
+        "Becoming.UnifiedDrawdown.localError": [],
+        "Becoming.UnifiedDrawdown.parametric_local_accounts_depletion": [],
+        "Becoming.UnifiedDrawdown.heldPair_as_parametric_instance": [],
+        "Becoming.UnifiedDrawdown.firstApart_of_monitor": [],
+        "Becoming.UnifiedDrawdown.pooled_detects_before_collapse": [],
+        "Becoming.UnifiedDrawdown.RestraintAgentSpec": [],
+        "Becoming.UnifiedDrawdown.restraintLoop": [],
+        "Becoming.UnifiedDrawdown.restraintCert": [],
+        "Becoming.UnifiedDrawdown.pooled_restraint_restores_viability": [],
+        "Becoming.UnifiedDrawdown.restraint_adapter_restores_viability": [],
+        "Becoming.UnifiedDrawdown.activeUnitWeb": [],
+        "Becoming.UnifiedDrawdown.activeUnitWeb_dependent": [],
+        "Becoming.UnifiedDrawdown.lineActiveWeb": [],
+        "Becoming.UnifiedDrawdown.wayActiveWeb": [],
+        "Becoming.UnifiedDrawdown.lineActiveWeb_dependent": [],
+        "Becoming.UnifiedDrawdown.wayActiveWeb_dependent": [],
+        "Becoming.UnifiedDrawdown.gated_one_of_fromNothing": [],
+        "Becoming.UnifiedDrawdown.unit_giversSupported_of_gated": [],
+        "Becoming.UnifiedDrawdown.line_below_of_excess_of_within": [],
+        "Becoming.UnifiedDrawdown.line_below_of_excess_of_goes": [],
+        "Becoming.UnifiedDrawdown.way_below_of_excess_of_within": [],
+        "Becoming.UnifiedDrawdown.way_below_of_excess_of_goes": [],
+        "Becoming.UnifiedDrawdown.line_family_excess_ends": [],
+        "Becoming.UnifiedDrawdown.line_family_excess_ends_one": [],
+        "Becoming.UnifiedDrawdown.line_excess_terminates_goes": [],
+        "Becoming.UnifiedDrawdown.way_family_excess_ends": [],
+        "Becoming.UnifiedDrawdown.way_family_excess_ends_one": [],
+        "Becoming.UnifiedDrawdown.way_excess_terminates_goes": [],
+        "Becoming.UnifiedDrawdown.FirstOverdraw": [],
+        "Becoming.UnifiedDrawdown.exists_firstOverdraw": [],
+        "Becoming.UnifiedDrawdown.unit_balancesOn_iff_le": [],
+        "Becoming.UnifiedDrawdown.unit_overdraw_separation": [],
+        "Becoming.UnifiedDrawdown.line_overdraw_separation": [],
+        "Becoming.UnifiedDrawdown.way_overdraw_separation": [],
+        "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need": [],
+        "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.use": [],
+        "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.kids": [],
+        "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving": [],
+        "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.startState": [],
+        "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving_fromNothing": [],
+        "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.needs": [],
+        "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.firstOverdraw_at_one": [],
+        "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.witness_bundle": [],
+        "Becoming.UnifiedDrawdown.sampled_break_concealment": [],
+        "Becoming.UnifiedDrawdown.logistic_sampled_break_concealment": [],
+        "Becoming.UnifiedDrawdown.ltBool": [],
+        "Becoming.UnifiedDrawdown.ltBool_true": [],
+        "Becoming.UnifiedDrawdown.ltBool_false": [],
+        "Becoming.UnifiedDrawdown.cyclePair": [],
+        "Becoming.UnifiedDrawdown.cycleRem": [],
+        "Becoming.UnifiedDrawdown.cyclePair_spec": [],
+        "Becoming.UnifiedDrawdown.cycle_euclid_unique": [],
+        "Becoming.UnifiedDrawdown.cycleRem_mul_add": [],
+        "Becoming.UnifiedDrawdown.cycleRem_mul": [],
+        "Becoming.UnifiedDrawdown.cycleRem_of_lt": [],
+        "Becoming.UnifiedDrawdown.cycleRem_self": [],
+        "Becoming.UnifiedDrawdown.cyclicCourse": [],
+        "Becoming.UnifiedDrawdown.cyclicCourse_openCourse": [],
+        "Becoming.UnifiedDrawdown.cyclicCourse_frontier": [],
+        "Becoming.UnifiedDrawdown.logistic_periodic_sampled_break_concealment": [],
+        "Becoming.UnifiedDrawdown.sampled_recovery_hides_fragility": [],
+        "Becoming.UnifiedDrawdown.ReadsAt": [],
+        "Becoming.UnifiedDrawdown.sigmaOdd": [],
+        "Becoming.UnifiedDrawdown.sigmaOdd_strict": [],
+        "Becoming.UnifiedDrawdown.flick_eq_true_odd": [],
+        "Becoming.UnifiedDrawdown.flick_eq_false_even": [],
+        "Becoming.UnifiedDrawdown.mod2_cases": [],
+        "Becoming.UnifiedDrawdown.strobe_readsAt": [],
+        "Becoming.UnifiedDrawdown.strobe_readAtSpanEnd": [],
+        "Becoming.UnifiedDrawdown.cadence_erases_timely_recovery": [],
+        "Becoming.UnifiedDrawdown.strobe_schedule_erases_window": [],
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.UnitKind": [],
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.need": [],
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.use": [],
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.giving": [],
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.kids": [],
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.fA": [],
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.h": [],
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.sig": [],
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.startConfig": [],
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.readsFine": [],
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.readsCoarse": [],
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_giving_fromNothing": [],
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_needs": [],
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.safeInv": [],
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_inv_goes": [],
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_inv_step": [],
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_coarse_b_parity": [],
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle": [],
+        "Becoming.UnifiedDrawdown.PacedLowerDrawWhileMet": [],
+        "Becoming.UnifiedDrawdown.pacedCourse_span0_matches": [],
+        "Becoming.UnifiedDrawdown.lagDraw_one_of_lower": [],
+        "Becoming.UnifiedDrawdown.pacedCourse_step_level": [],
+        "Becoming.UnifiedDrawdown.pacedCourse_envelope_upper": [],
+        "Becoming.UnifiedDrawdown.pacedCourse_stays_below_aux": [],
+        "Becoming.UnifiedDrawdown.pacedCourse_stays_below_while_goes": [],
+        "Becoming.UnifiedDrawdown.pacedCourse_ends_step_pub": [],
+        "Becoming.UnifiedDrawdown.pacedCourse_ends_below_point_pub": [],
+        "Becoming.UnifiedDrawdown.sampled_deadline_impossibility_at": [],
+        "Becoming.UnifiedDrawdown.sampled_deadline_impossibility_lag1": [],
+        "Becoming.UnifiedDrawdown.sampled_deadline_impossibility": [],
+        "Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge": [],
+        "Becoming.UnifiedDrawdown.unifiedDrawdown_readsOnlyDynamics": [],
+        "Becoming.UnifiedDrawdown.unifiedDrawdown_not_entails": [],
+        "Becoming.UnifiedDrawdown.witnessed_dynamics_not_entails": [],
+        "Becoming.UnifiedDrawdown.SpineHooks.JointDepletionBridge": [],
+        "Becoming.UnifiedDrawdown.SpineHooks.PreOverdrawBridge": [],
+        "Becoming.UnifiedDrawdown.SpineHooks.TemporalAliasingSuite": [],
+        "Becoming.UnifiedDrawdown.SpineHooks.preOverdrawSummary": [],
+        "Becoming.UnifiedDrawdown.SpineHooks.temporalAliasingSummary": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintComponent": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetState": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetObs": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetDist": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetInt": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetInit": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetObs": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.specSum": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.specMax": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_preCapExt_eq_sum": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_postCapExt_eq_sum": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxSilence_eq_sum": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxLag_eq_max": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_eta_eq_max": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_warnObs_of_lt": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract_refines": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG_rises": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA'": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.tightenA": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.twoAgentFleet_viable": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.threeAgentFleet_viable": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.threeAgentFleet_upgrade_viable": [],
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.witness_bundle": [],
+        "Becoming.UnifiedDrawdown.SpineHooks.openFleetSummary": []
+      },
+      "kernel_checked": true
+    },
+    {
+      "module": "Becoming.ScopeDynamics",
+      "spine": true,
+      "layer": "core",
+      "theorems": 67,
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.scopeLaw_readsOnlyDynamics"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.scopeLaw_admits_rival"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.scopeLaw_not_entails"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.scopeLaw_cannot_entail_unrestricted"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.preCollapse_mixed_weighting"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.finiteHorizon_widens_weighting"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.longHorizon_widens_weighting"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.ScopeDynamics.SubstratePool"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.SubstratePool.level"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.SubstratePool.level_add"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.ScopeDynamics.NarrowCoalition"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.ScopeDynamics.NarrowLineage"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.ScopeDynamics.WideCoalition"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.ScopeDynamics.MutualFateSystem"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.narrow_substrate_exhausts"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.narrow_lineage_ends_together"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.wide_substrate_holds"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.mutual_fate_selects_wide_scope"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.gEx"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.gEx_fromNothing"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.gEx_atMost_two"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.gEx_short_five"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.gEx_meets_two"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.sub_le_of_le_add_nat"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.gEx_keeps"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.gEx_mono"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.natBeq_succ_self_false"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.ScopeDynamics.PoolForm"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.ScopeDynamics.PoolCap"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.poolCap"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.poolWeb"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.poolWeb_admits_base"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.poolWeb_admits_tool_self"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.poolWeb_not_admits_tool_next"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.poolWeb_transformsViably"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.LineageNode"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.narrowSub"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.wideSub"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.narrowSub_zero"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.narrowSub_one"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.narrowSub_two_plus"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.wideSub_const"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.narrowCoal"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.linWeb"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.linFlow"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.linGen"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.linGen_one"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.lin_balances"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.lin_acting"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.lin_dependent"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.linGen_two_plus"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.lin_descended"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.narrowLin"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.wideViable"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.wideCoal"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.system"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.MutualFateWitness.witness_holds"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.cumSum"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.ScopeDynamics.UncoordinatedCommons"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.UncoordinatedCommons.substrate"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.UncoordinatedCommons.PreCollapse"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.UncoordinatedCommons.coopYield"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.UncoordinatedCommons.invYield"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.UncoordinatedCommons.cumCoop"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.UncoordinatedCommons.cumInv"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.uncoordinated_myopic_invasion"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.isolated_coop_would_persist"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.UncoordCommonsWitness.commons"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.UncoordCommonsWitness.trajectory_step3"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.UncoordCommonsWitness.trajectory_exact"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.UncoordCommonsWitness.witness_holds"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.recSubstrate"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.recDefYield"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.recCoopYield"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.ScopeDynamics.ReciprocalPoolSystem"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.ReciprocalPoolSystem.substrate"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.ReciprocalPoolSystem.defYield"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.ReciprocalPoolSystem.coopYield"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.ReciprocalPoolSystem.cumDef"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.ReciprocalPoolSystem.cumCoop"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.ReciprocalPoolSystem.H_rec"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.sub_eq_sub_succ_add_one"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.le_add_sub_self_nat"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.ReciprocalPoolSystem.gate_closed_from"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.ReciprocalPoolSystem.gate_stays_closed"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.ReciprocalPoolSystem.pre_H_le_safe_or_step"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.ReciprocalPoolSystem.substrate_safe_bounds"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.ReciprocalPoolSystem.substrate_safe"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.ReciprocalPoolSystem.coopYield_eq"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.ReciprocalPoolSystem.defYield_closed"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.ReciprocalPoolSystem.cumDef_after"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.ReciprocalPoolSystem.cumCoop_after"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.reciprocal_coupling_stabilizes_scope"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.reciprocalOpenLoop"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.reciprocalObs"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.reciprocalChannel"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.reciprocalLoopCert"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.reciprocalGate_of_assumeGuarantee"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.ScopeDynamics.ReciprocalStabilityWitness.PoolGateNode"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.ScopeDynamics.ReciprocalStabilityWitness.GateWaits"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.ReciprocalStabilityWitness.gateInit"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witnessGateOpen"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witnessGateOpen_iff"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness_substrate_zero"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness_substrate_succ"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness_substrate_le_12"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness_holds"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness13_substrate_succ"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness13_substrate_le_13"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.ReciprocalStabilityWitness.poolAt13"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.ReciprocalStabilityWitness.assumeGuarantee_at_13"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.uncoord_vs_reciprocal_contrast"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.OpenCompositionBridge.coopComponent"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.OpenCompositionBridge.coopContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorComponent"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.OpenCompositionBridge.openReciprocalChannel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_viable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_poolAt13"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorRefines"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_defector_replace_viable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.OpenCompositionBridge.tighterGate_replace_witness"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocalOpenRun"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ScopeDynamics.OpenCompositionBridge.blindDefector_vs_reciprocal_open"
+        }
+      ],
+      "axiom_dependencies": {
+        "Becoming.ScopeDynamics.scopeLaw_readsOnlyDynamics": [],
+        "Becoming.ScopeDynamics.scopeLaw_admits_rival": [],
+        "Becoming.ScopeDynamics.scopeLaw_not_entails": [],
+        "Becoming.ScopeDynamics.scopeLaw_cannot_entail_unrestricted": [],
+        "Becoming.ScopeDynamics.preCollapse_mixed_weighting": [],
+        "Becoming.ScopeDynamics.finiteHorizon_widens_weighting": [],
+        "Becoming.ScopeDynamics.longHorizon_widens_weighting": [],
+        "Becoming.ScopeDynamics.SubstratePool": [],
+        "Becoming.ScopeDynamics.SubstratePool.level": [],
+        "Becoming.ScopeDynamics.SubstratePool.level_add": [],
+        "Becoming.ScopeDynamics.NarrowCoalition": [],
+        "Becoming.ScopeDynamics.NarrowLineage": [],
+        "Becoming.ScopeDynamics.WideCoalition": [],
+        "Becoming.ScopeDynamics.MutualFateSystem": [],
+        "Becoming.ScopeDynamics.narrow_substrate_exhausts": [],
+        "Becoming.ScopeDynamics.narrow_lineage_ends_together": [],
+        "Becoming.ScopeDynamics.wide_substrate_holds": [],
+        "Becoming.ScopeDynamics.mutual_fate_selects_wide_scope": [],
+        "Becoming.ScopeDynamics.gEx": [],
+        "Becoming.ScopeDynamics.gEx_fromNothing": [],
+        "Becoming.ScopeDynamics.gEx_atMost_two": [],
+        "Becoming.ScopeDynamics.gEx_short_five": [],
+        "Becoming.ScopeDynamics.gEx_meets_two": [],
+        "Becoming.ScopeDynamics.sub_le_of_le_add_nat": [],
+        "Becoming.ScopeDynamics.gEx_keeps": [],
+        "Becoming.ScopeDynamics.gEx_mono": [],
+        "Becoming.ScopeDynamics.natBeq_succ_self_false": [],
+        "Becoming.ScopeDynamics.PoolForm": [],
+        "Becoming.ScopeDynamics.PoolCap": [],
+        "Becoming.ScopeDynamics.poolCap": [],
+        "Becoming.ScopeDynamics.poolWeb": [],
+        "Becoming.ScopeDynamics.poolWeb_admits_base": [],
+        "Becoming.ScopeDynamics.poolWeb_admits_tool_self": [],
+        "Becoming.ScopeDynamics.poolWeb_not_admits_tool_next": [],
+        "Becoming.ScopeDynamics.poolWeb_transformsViably": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.LineageNode": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.narrowSub": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.wideSub": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.narrowSub_zero": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.narrowSub_one": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.narrowSub_two_plus": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.wideSub_const": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.narrowCoal": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.linWeb": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.linFlow": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.linGen": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.linGen_one": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.lin_balances": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.lin_acting": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.lin_dependent": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.linGen_two_plus": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.lin_descended": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.narrowLin": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.wideViable": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.wideCoal": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.system": [],
+        "Becoming.ScopeDynamics.MutualFateWitness.witness_holds": [],
+        "Becoming.ScopeDynamics.cumSum": [],
+        "Becoming.ScopeDynamics.UncoordinatedCommons": [],
+        "Becoming.ScopeDynamics.UncoordinatedCommons.substrate": [],
+        "Becoming.ScopeDynamics.UncoordinatedCommons.PreCollapse": [],
+        "Becoming.ScopeDynamics.UncoordinatedCommons.coopYield": [],
+        "Becoming.ScopeDynamics.UncoordinatedCommons.invYield": [],
+        "Becoming.ScopeDynamics.UncoordinatedCommons.cumCoop": [],
+        "Becoming.ScopeDynamics.UncoordinatedCommons.cumInv": [],
+        "Becoming.ScopeDynamics.uncoordinated_myopic_invasion": [],
+        "Becoming.ScopeDynamics.isolated_coop_would_persist": [],
+        "Becoming.ScopeDynamics.UncoordCommonsWitness.commons": [],
+        "Becoming.ScopeDynamics.UncoordCommonsWitness.trajectory_step3": [],
+        "Becoming.ScopeDynamics.UncoordCommonsWitness.trajectory_exact": [],
+        "Becoming.ScopeDynamics.UncoordCommonsWitness.witness_holds": [],
+        "Becoming.ScopeDynamics.recSubstrate": [],
+        "Becoming.ScopeDynamics.recDefYield": [],
+        "Becoming.ScopeDynamics.recCoopYield": [],
+        "Becoming.ScopeDynamics.ReciprocalPoolSystem": [],
+        "Becoming.ScopeDynamics.ReciprocalPoolSystem.substrate": [],
+        "Becoming.ScopeDynamics.ReciprocalPoolSystem.defYield": [],
+        "Becoming.ScopeDynamics.ReciprocalPoolSystem.coopYield": [],
+        "Becoming.ScopeDynamics.ReciprocalPoolSystem.cumDef": [],
+        "Becoming.ScopeDynamics.ReciprocalPoolSystem.cumCoop": [],
+        "Becoming.ScopeDynamics.ReciprocalPoolSystem.H_rec": [],
+        "Becoming.ScopeDynamics.sub_eq_sub_succ_add_one": [],
+        "Becoming.ScopeDynamics.le_add_sub_self_nat": [],
+        "Becoming.ScopeDynamics.ReciprocalPoolSystem.gate_closed_from": [],
+        "Becoming.ScopeDynamics.ReciprocalPoolSystem.gate_stays_closed": [],
+        "Becoming.ScopeDynamics.ReciprocalPoolSystem.pre_H_le_safe_or_step": [],
+        "Becoming.ScopeDynamics.ReciprocalPoolSystem.substrate_safe_bounds": [],
+        "Becoming.ScopeDynamics.ReciprocalPoolSystem.substrate_safe": [],
+        "Becoming.ScopeDynamics.ReciprocalPoolSystem.coopYield_eq": [],
+        "Becoming.ScopeDynamics.ReciprocalPoolSystem.defYield_closed": [],
+        "Becoming.ScopeDynamics.ReciprocalPoolSystem.cumDef_after": [],
+        "Becoming.ScopeDynamics.ReciprocalPoolSystem.cumCoop_after": [],
+        "Becoming.ScopeDynamics.reciprocal_coupling_stabilizes_scope": [],
+        "Becoming.ScopeDynamics.reciprocalOpenLoop": [],
+        "Becoming.ScopeDynamics.reciprocalObs": [],
+        "Becoming.ScopeDynamics.reciprocalChannel": [],
+        "Becoming.ScopeDynamics.reciprocalLoopCert": [],
+        "Becoming.ScopeDynamics.reciprocalGate_of_assumeGuarantee": [],
+        "Becoming.ScopeDynamics.ReciprocalStabilityWitness.PoolGateNode": [],
+        "Becoming.ScopeDynamics.ReciprocalStabilityWitness.GateWaits": [],
+        "Becoming.ScopeDynamics.ReciprocalStabilityWitness.gateInit": [],
+        "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witnessGateOpen": [],
+        "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witnessGateOpen_iff": [],
+        "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness_substrate_zero": [],
+        "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness_substrate_succ": [],
+        "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness_substrate_le_12": [],
+        "Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool": [],
+        "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness_holds": [],
+        "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness13_substrate_succ": [],
+        "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness13_substrate_le_13": [],
+        "Becoming.ScopeDynamics.ReciprocalStabilityWitness.poolAt13": [],
+        "Becoming.ScopeDynamics.ReciprocalStabilityWitness.assumeGuarantee_at_13": [],
+        "Becoming.ScopeDynamics.uncoord_vs_reciprocal_contrast": [],
+        "Becoming.ScopeDynamics.OpenCompositionBridge.coopComponent": [],
+        "Becoming.ScopeDynamics.OpenCompositionBridge.coopContract": [],
+        "Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorComponent": [],
+        "Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorContract": [],
+        "Becoming.ScopeDynamics.OpenCompositionBridge.openReciprocalChannel": [],
+        "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_viable": [],
+        "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_poolAt13": [],
+        "Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorRefines": [],
+        "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_defector_replace_viable": [],
+        "Becoming.ScopeDynamics.OpenCompositionBridge.tighterGate_replace_witness": [],
+        "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocalOpenRun": [],
+        "Becoming.ScopeDynamics.OpenCompositionBridge.blindDefector_vs_reciprocal_open": []
+      },
+      "kernel_checked": true
+    },
+    {
       "module": "Becoming.SeedReach",
       "spine": true,
       "layer": "application",
@@ -161969,22 +164352,35 @@
     }
   ],
   "artifact_sha256": {
-    "Becoming.OpenComposition.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.OpenComposition.lean": "739a9dde3d576acae4312cf95ebd4a9c2b210368605724d084b84af4aac802cd",
+    "Becoming.EndogenousTurning.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.EndogenousTurning.lean": "f4343f78f657d1a646c4abff11b2eded3845698f53fce6127f5191f1cf0d0bfc",
+    "Becoming.EndogenousTurning.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "Becoming.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.lean": "12b0a678b6bbf035f1b60265195ec9ff5663bacac5c278b5099998610afa6436",
+    "Becoming.ScopeDynamics.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.ScopeDynamics.lean": "6acaa6e3fdcea3fa756819811b08f73a649ec9a0389fec2d985996c6d8ab9cd5",
+    "Becoming.UnifiedDrawdown.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.UnifiedDrawdown.lean": "787ec07766b2425a774810b5d5f89fc908e2650e1bbb98b40589c9864dbfd0c0",
+    "Becoming.UnifiedDrawdown.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.lean": "84648a9970ec61103cc18f1964c5113534ac5786b0c41333a1ec1d186635f553",
     "Becoming.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "BecomingAxiomAudit.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingAxiomAudit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "BecomingOpenCompositionSignatures.lean": "b3352e2f35c6adb0b16ebbcf964affd7be2387b7b61332d5c8e0001226325c04",
-    "BecomingOpenCompositionSignatures.log": "3b767f76e1edd259dde42c066b558ee8d323d6228cd4eb848fd9702814d78e0b",
+    "BecomingEndogenousTurningAxiomAudit.lean": "d0149af33530d8e6b3d40eb29b7c5b8a463216a8b8686d13aae818f1dcc5b7ec",
+    "BecomingEndogenousTurningAxiomAudit.log": "a18ea0bf5a44704516e0a460553d1ab2daf08e3a4fc192804507117224c43d92",
+    "BecomingEndogenousTurningSignatures.lean": "7df3725969761a401fe9e27148813559d8c7bba1ef84837ebd28719effe2226f",
+    "BecomingEndogenousTurningSignatures.log": "4b8a739f5d6746c98bdedc791ef0b8d3041c85739b72cfe0477e7cf8cbb0e0f9",
+    "BecomingScopeDynamicsSignatures.log": "eca53f6420ec54283fb4227a5eeb4eb91863b2d3e93ad4049f126c59aadaace2",
     "BecomingSignatures.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingSignatures.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "BecomingUnifiedDrawdownAxiomAudit.lean": "476a708f866fb6459b0d4e61a5a9e79b6fb8b1aa10170f8e634b0b81dc3470de",
+    "BecomingUnifiedDrawdownAxiomAudit.log": "becce91a74daee21cbe7c6abfced1aa2ee7fe3b787c60dac4d3f89cef7c0ed36",
+    "BecomingUnifiedDrawdownSignatures.lean": "93c139186146aabc87cc54a82d1974e28fa81efee7987eab8a65640b759d7d34",
+    "BecomingUnifiedDrawdownSignatures.log": "59167cd43fb2ef7955a7f2aa6af572923e46faf30247ed1122547754c9b772e6",
     "Controls.lean": "b6d4d1772f4c923833bc713f3b9f170a10ef362d699f4b854401adb21fe22f57",
     "Controls.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "EnvironmentAudit.lean": "4c09c80fc3efc230377a623b627371392c4beee06c7545093d18bd09e5ee6708",
-    "EnvironmentAudit.log": "3266efa69fea968091553a5e6b45a46812f12c1fd47b141065c17d6fb2f226aa",
-    "check_becoming.py": "245f7323f5714991b318eec881d01fc9ed4b126cdb1de5d9afe5d87a1952fbf0",
+    "EnvironmentAudit.lean": "42f38174e91281d1e1fd80165b40c297eb9f14cf2bc36365bde9a93acb2ea99c",
+    "EnvironmentAudit.log": "b0cdacdb158f6b6ac5e6fe84ce80a9f87a6742b0ca6ab73d926989bfb72e5f13",
+    "check_becoming.py": "16cd28668afe24dd69f10697b9f86793b2eaf536ff12efdea29416d9f597efce",
     "version.log": "3185b32e24f5aea32feec5ebb137ef7b0b6d7b33707fb4f254924fe41b5ded8b"
   }
 }

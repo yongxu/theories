@@ -1,0 +1,492 @@
+@Becoming.ScopeDynamics.scopeLaw_readsOnlyDynamics : ∀ {Pos F D : Type} (ScopeLaw : D → Prop),
+  Becoming.ReadsOnlyDynamics fun d x => ScopeLaw d
+@Becoming.ScopeDynamics.scopeLaw_admits_rival : ∀ {Pos F D : Type} (ScopeLaw : D → Prop) {d : D},
+  ScopeLaw d →
+    ∀ (sig : Pos → Nat → F → Prop) {region : Pos → F → Prop},
+      (∃ p f, ¬region p f) →
+        ScopeLaw d ∧ Becoming.Rival (Becoming.bounded region) ∧ ¬Becoming.Unrestricted (Becoming.bounded region)
+@Becoming.ScopeDynamics.scopeLaw_not_entails : ∀ {Pos F D : Type} (ScopeLaw : D → Prop),
+  (∀ (d : D) (sig : Pos → Nat → F → Prop), ScopeLaw d → Becoming.Unrestricted sig) →
+    ∀ (p : Pos) (f : F) {d : D}, ¬ScopeLaw d
+@Becoming.ScopeDynamics.scopeLaw_cannot_entail_unrestricted : ∀ {Pos F D : Type} (ScopeLaw : D → Prop) (p : Pos) (f : F)
+  {d : D}, ScopeLaw d → ¬∀ (d' : D) (sig : Pos → Nat → F → Prop), ScopeLaw d' → Becoming.Unrestricted sig
+@Becoming.ScopeDynamics.preCollapse_mixed_weighting : ∀ {X : Type} {items : List X} {a b : X → Bool},
+  Becoming.Weighting.MixedOn items a b →
+    (∃ w,
+        Becoming.Weighting.Positive items w ∧
+          Becoming.Weighting.weighed items w b < Becoming.Weighting.weighed items w a) ∧
+      ∃ w',
+        Becoming.Weighting.Positive items w' ∧
+          Becoming.Weighting.weighed items w' a < Becoming.Weighting.weighed items w' b
+@Becoming.ScopeDynamics.finiteHorizon_widens_weighting : ∀ {X : Type} {items : List X} {a_wide a_narrow : X → Bool},
+  Becoming.Weighting.WidensOn items a_wide a_narrow ↔
+    ∀ (w : X → Nat),
+      Becoming.Weighting.Positive items w →
+        Becoming.Weighting.weighed items w a_narrow < Becoming.Weighting.weighed items w a_wide
+@Becoming.ScopeDynamics.longHorizon_widens_weighting : ∀ {F C : Type} {W : Becoming.Web F C}
+  {admitted : (Nat → C → Nat) → Nat × F → Bool},
+  W.DecidesAdmission admitted →
+    ∀ {items : List (Nat × F)} {l_wide l_narrow : Nat → C → Nat},
+      W.ListsAdmitted items l_wide →
+        W.ListsAdmitted items l_narrow →
+          (W.Widens l_wide l_narrow ↔
+            ∀ (w : Nat × F → Nat),
+              Becoming.Weighting.Positive items w →
+                Becoming.Weighting.weighed items w (admitted l_narrow) <
+                  Becoming.Weighting.weighed items w (admitted l_wide))
+Becoming.ScopeDynamics.SubstratePool.level_add : ∀ (P : Becoming.ScopeDynamics.SubstratePool) (m n : Nat),
+  P.level (m + n) = (Becoming.Law.run (Becoming.RegimeMargin.step P.g P.H) (P.level m)).state n
+@Becoming.ScopeDynamics.narrow_substrate_exhausts : ∀ {F C K : Type}
+  (nc : Becoming.ScopeDynamics.NarrowCoalition F C K),
+  ∃ T_end,
+    (∀ (t : Nat), T_end ≤ t → nc.sub.level t = 0) ∧
+      ∀ (t : Nat), T_end ≤ t → ∀ (k : K), ¬nc.W.MacroAdmits nc.cap (nc.W.level t) t k
+@Becoming.ScopeDynamics.narrow_lineage_ends_together : ∀ {X : Type} {sub : Becoming.ScopeDynamics.SubstratePool}
+  (nl : Becoming.ScopeDynamics.NarrowLineage X sub),
+  (∀ (a : X → Nat),
+      (∀ (h : List X), h ∈ nl.gs → Becoming.total h (nl.G.offspringNumber (nl.T + nl.n)) = 0) ∧
+        Becoming.SelectionLevels.concordAmong nl.gs (nl.G.offspringNumber (nl.T + nl.n)) a = 0 ∧
+          Becoming.SelectionLevels.discordAmong nl.gs (nl.G.offspringNumber (nl.T + nl.n)) a = 0) ∧
+    ∀ (k : Nat) (y : X), ¬y ∈ nl.G.family (nl.T + nl.n + k + 1)
+@Becoming.ScopeDynamics.wide_substrate_holds : ∀ {F C K : Type} (wc : Becoming.ScopeDynamics.WideCoalition F C K)
+  (t : Nat), wc.S_safe ≤ wc.sub.level t ∧ wc.sub.level t ≤ wc.hi
+@Becoming.ScopeDynamics.mutual_fate_selects_wide_scope : ∀ {F_n C_n K_n F_w C_w K_w X : Type}
+  (sys : Becoming.ScopeDynamics.MutualFateSystem F_n C_n K_n F_w C_w K_w X),
+  (∃ T_end,
+      (∀ (t : Nat), T_end ≤ t → sys.narrow.sub.level t = 0) ∧
+        ∀ (t : Nat), T_end ≤ t → ∀ (k : K_n), ¬sys.narrow.W.MacroAdmits sys.narrow.cap (sys.narrow.W.level t) t k) ∧
+    ((∀ (a : X → Nat),
+          (∀ (h : List X),
+              h ∈ sys.narrowLin.gs →
+                Becoming.total h (sys.narrowLin.G.offspringNumber (sys.narrowLin.T + sys.narrowLin.n)) = 0) ∧
+            Becoming.SelectionLevels.concordAmong sys.narrowLin.gs
+                  (sys.narrowLin.G.offspringNumber (sys.narrowLin.T + sys.narrowLin.n)) a =
+                0 ∧
+              Becoming.SelectionLevels.discordAmong sys.narrowLin.gs
+                  (sys.narrowLin.G.offspringNumber (sys.narrowLin.T + sys.narrowLin.n)) a =
+                0) ∧
+        ∀ (k : Nat) (y : X), ¬y ∈ sys.narrowLin.G.family (sys.narrowLin.T + sys.narrowLin.n + k + 1)) ∧
+      (∀ (t : Nat), sys.wide.S_safe ≤ sys.wide.sub.level t ∧ sys.wide.sub.level t ≤ sys.wide.hi) ∧
+        Becoming.TransformsViably sys.wide.W (fun t => sys.wide.S_safe ≤ sys.wide.sub.level t) sys.wide.cap
+            sys.wide.T_w ∧
+          ∀ (l' : Nat → C_w → Nat),
+            sys.wide.Viable l' →
+              sys.wide.W.Widens sys.wide.W.level l' →
+                Becoming.TransformativeViable sys.wide.W sys.wide.Viable sys.wide.cap sys.wide.W.level l'
+Becoming.ScopeDynamics.gEx_fromNothing : Becoming.RegimeMargin.FromNothing Becoming.ScopeDynamics.gEx
+Becoming.ScopeDynamics.gEx_atMost_two : Becoming.RegimeMargin.AtMost Becoming.ScopeDynamics.gEx 2
+Becoming.ScopeDynamics.gEx_short_five : ∀ (y : Nat), Becoming.RegimeMargin.Short Becoming.ScopeDynamics.gEx 5 y
+Becoming.ScopeDynamics.gEx_meets_two : Becoming.RegimeMargin.Meets Becoming.ScopeDynamics.gEx 2 6 12
+@Becoming.ScopeDynamics.sub_le_of_le_add_nat : ∀ {x a b : Nat}, x ≤ a + b → x - a ≤ b
+Becoming.ScopeDynamics.gEx_keeps : ∀ (H : Nat), 2 ≤ H → Becoming.RegimeMargin.Keeps Becoming.ScopeDynamics.gEx H 12
+Becoming.ScopeDynamics.gEx_mono : ∀ (a b : Nat), a ≤ b → Becoming.ScopeDynamics.gEx a ≤ Becoming.ScopeDynamics.gEx b
+Becoming.ScopeDynamics.natBeq_succ_self_false : ∀ (t : Nat), (t + 1).beq t = false
+@Becoming.ScopeDynamics.poolWeb_admits_base : ∀ {needSafe needCeil : Nat} {levelFn : Nat → Nat} {l : Unit → Nat},
+  needSafe ≤ l () →
+    ∀ (t : Nat),
+      (Becoming.ScopeDynamics.poolWeb needSafe needCeil levelFn).Admits l t Becoming.ScopeDynamics.PoolForm.fBase
+@Becoming.ScopeDynamics.poolWeb_admits_tool_self : ∀ {needSafe needCeil : Nat} {levelFn : Nat → Nat} {l : Unit → Nat},
+  needSafe ≤ l () →
+    ∀ (t : Nat),
+      (Becoming.ScopeDynamics.poolWeb needSafe needCeil levelFn).Admits l t (Becoming.ScopeDynamics.PoolForm.fTool t)
+@Becoming.ScopeDynamics.poolWeb_not_admits_tool_next : ∀ {needSafe needCeil : Nat} {levelFn : Nat → Nat}
+  {l : Unit → Nat},
+  l () < needCeil →
+    ∀ (t : Nat),
+      ¬(Becoming.ScopeDynamics.poolWeb needSafe needCeil levelFn).Admits l (t + 1)
+          (Becoming.ScopeDynamics.PoolForm.fTool t)
+@Becoming.ScopeDynamics.poolWeb_transformsViably : ∀ {S_safe hi : Nat} {levelFn : Nat → Nat},
+  (∀ (t : Nat), S_safe ≤ levelFn t) →
+    (∀ (t : Nat), levelFn t ≤ hi) →
+      Becoming.TransformsViably (Becoming.ScopeDynamics.poolWeb S_safe (hi + 1) levelFn) (fun t => S_safe ≤ levelFn t)
+        Becoming.ScopeDynamics.poolCap 0
+Becoming.ScopeDynamics.MutualFateWitness.narrowSub_zero : Becoming.ScopeDynamics.MutualFateWitness.narrowSub.level 0 = 9
+Becoming.ScopeDynamics.MutualFateWitness.narrowSub_one : Becoming.ScopeDynamics.MutualFateWitness.narrowSub.level 1 = 5
+Becoming.ScopeDynamics.MutualFateWitness.narrowSub_two_plus : ∀ (t : Nat),
+  Becoming.ScopeDynamics.MutualFateWitness.narrowSub.level (t + 2) = 0
+Becoming.ScopeDynamics.MutualFateWitness.wideSub_const : ∀ (t : Nat),
+  Becoming.ScopeDynamics.MutualFateWitness.wideSub.level t = 9
+Becoming.ScopeDynamics.MutualFateWitness.linGen_one : Becoming.ScopeDynamics.MutualFateWitness.linGen.family 1 =
+  [Becoming.ScopeDynamics.MutualFateWitness.LineageNode.m1]
+Becoming.ScopeDynamics.MutualFateWitness.lin_balances : Becoming.ScopeDynamics.MutualFateWitness.linFlow.Balances
+  Becoming.ScopeDynamics.MutualFateWitness.linWeb
+Becoming.ScopeDynamics.MutualFateWitness.lin_acting : Becoming.ScopeDynamics.MutualFateWitness.linFlow.Acting
+  Becoming.ScopeDynamics.MutualFateWitness.linWeb
+Becoming.ScopeDynamics.MutualFateWitness.lin_dependent : Becoming.ScopeDynamics.MutualFateWitness.linWeb.Dependent
+Becoming.ScopeDynamics.MutualFateWitness.linGen_two_plus : ∀ (n : Nat),
+  Becoming.ScopeDynamics.MutualFateWitness.linGen.family (n + 2) = []
+Becoming.ScopeDynamics.MutualFateWitness.lin_descended : Becoming.SelectionTerm.Flow.Descended
+  Becoming.ScopeDynamics.MutualFateWitness.linFlow Becoming.ScopeDynamics.MutualFateWitness.linWeb
+  Becoming.ScopeDynamics.MutualFateWitness.linGen
+Becoming.ScopeDynamics.MutualFateWitness.witness_holds : Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.gs =
+    [[Becoming.ScopeDynamics.MutualFateWitness.LineageNode.m1]] ∧
+  Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.G.family 1 =
+      [Becoming.ScopeDynamics.MutualFateWitness.LineageNode.m1] ∧
+    Becoming.ScopeDynamics.MutualFateWitness.system.narrow.sub.level 0 = 9 ∧
+      Becoming.ScopeDynamics.MutualFateWitness.system.narrow.sub.level 1 = 5 ∧
+        (∀ (t : Nat), 2 ≤ t → Becoming.ScopeDynamics.MutualFateWitness.system.narrow.sub.level t = 0) ∧
+          (∀ (t : Nat), Becoming.ScopeDynamics.MutualFateWitness.system.wide.sub.level t = 9) ∧
+            (∃ T_end,
+                (∀ (t : Nat), T_end ≤ t → Becoming.ScopeDynamics.MutualFateWitness.system.narrow.sub.level t = 0) ∧
+                  ∀ (t : Nat),
+                    T_end ≤ t →
+                      ∀ (k : Becoming.ScopeDynamics.PoolCap),
+                        ¬Becoming.ScopeDynamics.MutualFateWitness.system.narrow.W.MacroAdmits
+                            Becoming.ScopeDynamics.MutualFateWitness.system.narrow.cap
+                            (Becoming.ScopeDynamics.MutualFateWitness.system.narrow.W.level t) t k) ∧
+              ((∀ (a : Becoming.ScopeDynamics.MutualFateWitness.LineageNode → Nat),
+                    (∀ (h : List Becoming.ScopeDynamics.MutualFateWitness.LineageNode),
+                        h ∈ Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.gs →
+                          Becoming.total h
+                              (Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.G.offspringNumber
+                                (Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.T +
+                                  Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.n)) =
+                            0) ∧
+                      Becoming.SelectionLevels.concordAmong Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.gs
+                            (Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.G.offspringNumber
+                              (Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.T +
+                                Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.n))
+                            a =
+                          0 ∧
+                        Becoming.SelectionLevels.discordAmong
+                            Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.gs
+                            (Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.G.offspringNumber
+                              (Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.T +
+                                Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.n))
+                            a =
+                          0) ∧
+                  ∀ (k : Nat) (y : Becoming.ScopeDynamics.MutualFateWitness.LineageNode),
+                    ¬y ∈
+                        Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.G.family
+                          (Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.T +
+                                Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.n +
+                              k +
+                            1)) ∧
+                (∀ (t : Nat),
+                    Becoming.ScopeDynamics.MutualFateWitness.system.wide.S_safe ≤
+                        Becoming.ScopeDynamics.MutualFateWitness.system.wide.sub.level t ∧
+                      Becoming.ScopeDynamics.MutualFateWitness.system.wide.sub.level t ≤
+                        Becoming.ScopeDynamics.MutualFateWitness.system.wide.hi) ∧
+                  Becoming.TransformsViably Becoming.ScopeDynamics.MutualFateWitness.system.wide.W
+                      (fun t =>
+                        Becoming.ScopeDynamics.MutualFateWitness.system.wide.S_safe ≤
+                          Becoming.ScopeDynamics.MutualFateWitness.system.wide.sub.level t)
+                      Becoming.ScopeDynamics.MutualFateWitness.system.wide.cap
+                      Becoming.ScopeDynamics.MutualFateWitness.system.wide.T_w ∧
+                    ∀ (l' : Nat → Unit → Nat),
+                      Becoming.ScopeDynamics.MutualFateWitness.system.wide.Viable l' →
+                        Becoming.ScopeDynamics.MutualFateWitness.system.wide.W.Widens
+                            Becoming.ScopeDynamics.MutualFateWitness.system.wide.W.level l' →
+                          Becoming.TransformativeViable Becoming.ScopeDynamics.MutualFateWitness.system.wide.W
+                            Becoming.ScopeDynamics.MutualFateWitness.system.wide.Viable
+                            Becoming.ScopeDynamics.MutualFateWitness.system.wide.cap
+                            Becoming.ScopeDynamics.MutualFateWitness.system.wide.W.level l'
+@Becoming.ScopeDynamics.uncoordinated_myopic_invasion : ∀ {F C K : Type}
+  (U : Becoming.ScopeDynamics.UncoordinatedCommons F C K),
+  (∀ (t : Nat), U.PreCollapse t → U.coopYield t < U.invYield t) ∧
+    (∀ (t : Nat), (∀ (s : Nat), s ≤ t → U.PreCollapse s) → U.cumCoop (t + 1) < U.cumInv (t + 1)) ∧
+      ∃ T_end,
+        ∀ (t : Nat),
+          T_end ≤ t →
+            U.substrate t = 0 ∧
+              U.substrate t < U.m_coop ∧
+                U.coopYield t = 0 ∧ U.invYield t = 0 ∧ ∀ (k : K), ¬U.W_coop.MacroAdmits U.cap (U.W_coop.level t) t k
+@Becoming.ScopeDynamics.isolated_coop_would_persist : ∀ {F C K : Type}
+  (U : Becoming.ScopeDynamics.UncoordinatedCommons F C K) {y_c hi : Nat},
+  Becoming.RegimeMargin.Meets U.g U.d_coop y_c hi →
+    Becoming.RegimeMargin.Keeps U.g U.d_coop hi →
+      U.d_coop + y_c ≤ U.S₀ →
+        U.S₀ ≤ hi →
+          ∀ (t : Nat),
+            U.S₀ ≤ (Becoming.Law.run (Becoming.RegimeMargin.step U.g U.d_coop) U.S₀).state t ∧
+              (Becoming.Law.run (Becoming.RegimeMargin.step U.g U.d_coop) U.S₀).state t ≤ hi
+Becoming.ScopeDynamics.UncoordCommonsWitness.trajectory_step3 : ∀ (k : Nat),
+  Becoming.ScopeDynamics.UncoordCommonsWitness.commons.substrate (k + 3) = 0
+Becoming.ScopeDynamics.UncoordCommonsWitness.trajectory_exact : Becoming.ScopeDynamics.UncoordCommonsWitness.commons.substrate
+      0 =
+    12 ∧
+  Becoming.ScopeDynamics.UncoordCommonsWitness.commons.substrate 1 = 9 ∧
+    Becoming.ScopeDynamics.UncoordCommonsWitness.commons.substrate 2 = 5 ∧
+      ∀ (t : Nat), 3 ≤ t → Becoming.ScopeDynamics.UncoordCommonsWitness.commons.substrate t = 0
+Becoming.ScopeDynamics.UncoordCommonsWitness.witness_holds : Becoming.ScopeDynamics.UncoordCommonsWitness.commons.coopYield
+      0 <
+    Becoming.ScopeDynamics.UncoordCommonsWitness.commons.invYield 0 ∧
+  Becoming.ScopeDynamics.UncoordCommonsWitness.commons.coopYield 1 <
+      Becoming.ScopeDynamics.UncoordCommonsWitness.commons.invYield 1 ∧
+    Becoming.ScopeDynamics.UncoordCommonsWitness.commons.coopYield 2 <
+        Becoming.ScopeDynamics.UncoordCommonsWitness.commons.invYield 2 ∧
+      Becoming.ScopeDynamics.UncoordCommonsWitness.commons.cumCoop 3 <
+          Becoming.ScopeDynamics.UncoordCommonsWitness.commons.cumInv 3 ∧
+        (∀ (t : Nat),
+            3 ≤ t →
+              Becoming.ScopeDynamics.UncoordCommonsWitness.commons.substrate t = 0 ∧
+                ∀ (k : Becoming.ScopeDynamics.PoolCap),
+                  ¬Becoming.ScopeDynamics.UncoordCommonsWitness.commons.W_coop.MacroAdmits
+                      Becoming.ScopeDynamics.UncoordCommonsWitness.commons.cap
+                      (Becoming.ScopeDynamics.UncoordCommonsWitness.commons.W_coop.level t) t k) ∧
+          ∀ (t : Nat),
+            12 ≤ (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.ScopeDynamics.gEx 2) 12).state t ∧
+              (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.ScopeDynamics.gEx 2) 12).state t ≤ 12
+@Becoming.ScopeDynamics.sub_eq_sub_succ_add_one : ∀ {T t : Nat}, t < T → T - t = T - (t + 1) + 1
+Becoming.ScopeDynamics.le_add_sub_self_nat : ∀ (a b : Nat), a ≤ b + (a - b)
+@Becoming.ScopeDynamics.ReciprocalPoolSystem.gate_closed_from : ∀ {F C K GateNode : Type}
+  (P : Becoming.ScopeDynamics.ReciprocalPoolSystem F C K GateNode) {t : Nat}, P.T_gate ≤ t → P.gateOpen t = false
+@Becoming.ScopeDynamics.ReciprocalPoolSystem.gate_stays_closed : ∀ {F C K GateNode : Type}
+  (P : Becoming.ScopeDynamics.ReciprocalPoolSystem F C K GateNode) {t : Nat},
+  P.gateOpen t = false → P.gateOpen (t + 1) = false
+@Becoming.ScopeDynamics.ReciprocalPoolSystem.pre_H_le_safe_or_step : ∀ {F C K GateNode : Type}
+  (P : Becoming.ScopeDynamics.ReciprocalPoolSystem F C K GateNode) {x r : Nat},
+  P.S_safe + (r + 1) * (P.H_pre - P.Y_floor) ≤ x → P.H_pre ≤ x
+@Becoming.ScopeDynamics.ReciprocalPoolSystem.substrate_safe_bounds : ∀ {F C K GateNode : Type}
+  (P : Becoming.ScopeDynamics.ReciprocalPoolSystem F C K GateNode) (t : Nat),
+  P.substrate t ≤ P.hi ∧
+    (P.gateOpen t = true → P.S_safe + (P.T_gate - t) * (P.H_pre - P.Y_floor) ≤ P.substrate t) ∧
+      (P.gateOpen t = false → P.S_safe ≤ P.substrate t)
+@Becoming.ScopeDynamics.ReciprocalPoolSystem.substrate_safe : ∀ {F C K GateNode : Type}
+  (P : Becoming.ScopeDynamics.ReciprocalPoolSystem F C K GateNode) (t : Nat), P.S_safe ≤ P.substrate t
+@Becoming.ScopeDynamics.ReciprocalPoolSystem.coopYield_eq : ∀ {F C K GateNode : Type}
+  (P : Becoming.ScopeDynamics.ReciprocalPoolSystem F C K GateNode) (t : Nat), P.coopYield t = P.r_coop
+@Becoming.ScopeDynamics.ReciprocalPoolSystem.defYield_closed : ∀ {F C K GateNode : Type}
+  (P : Becoming.ScopeDynamics.ReciprocalPoolSystem F C K GateNode) {t : Nat}, P.T_gate ≤ t → P.defYield t = P.r_out
+@Becoming.ScopeDynamics.ReciprocalPoolSystem.cumDef_after : ∀ {F C K GateNode : Type}
+  (P : Becoming.ScopeDynamics.ReciprocalPoolSystem F C K GateNode) (k : Nat),
+  P.cumDef (P.T_gate + k) = P.cumDef P.T_gate + k * P.r_out
+@Becoming.ScopeDynamics.ReciprocalPoolSystem.cumCoop_after : ∀ {F C K GateNode : Type}
+  (P : Becoming.ScopeDynamics.ReciprocalPoolSystem F C K GateNode) (k : Nat),
+  P.cumCoop (P.T_gate + k) = P.cumCoop P.T_gate + k * P.r_coop
+@Becoming.ScopeDynamics.reciprocal_coupling_stabilizes_scope : ∀ {F C K GateNode : Type}
+  (P : Becoming.ScopeDynamics.ReciprocalPoolSystem F C K GateNode),
+  (∀ (t : Nat), P.T_gate ≤ t → ¬(Becoming.Law.run (Becoming.Withholding.waitsAll P.up) P.s₀).state t P.defGate) ∧
+    (∀ (t : Nat), P.S_safe ≤ P.substrate t) ∧
+      Becoming.TransformsViably P.W_coop (fun t => P.S_safe ≤ P.substrate t) P.cap P.T_cap ∧
+        (∀ (t : Nat), P.T_gate ≤ t → P.defYield t < P.coopYield t) ∧ ∀ (t : Nat), P.H_rec ≤ t → P.cumDef t < P.cumCoop t
+@Becoming.ScopeDynamics.reciprocalGate_of_assumeGuarantee : ∀ {F C K GateNode : Type}
+  (P : Becoming.ScopeDynamics.ReciprocalPoolSystem F C K GateNode),
+  (∀ (a b : Nat), a ≤ b → P.g a ≤ P.g b) →
+    ∀ (coop_le_pre : P.H_coop ≤ P.H_pre),
+      P.S_safe + P.T_gate * P.H_pre ≤ P.S₀ →
+        Becoming.AdaptiveLoops.jointInv [()]
+            (fun x => Becoming.ScopeDynamics.reciprocalLoopCert P.H_pre P.H_coop P.T_gate coop_le_pre) (fun x => 0)
+            (fun x => P.S_safe) (fun x => P.S₀, fun x => P.T_gate) ∧
+          Becoming.Viability.Kernel
+            (Becoming.AdaptiveLoops.jointProcess [()]
+              (fun x => Becoming.ScopeDynamics.reciprocalOpenLoop P.H_pre P.H_coop)
+              (fun x => Becoming.ScopeDynamics.reciprocalLoopCert P.H_pre P.H_coop P.T_gate coop_le_pre)
+              (Becoming.ScopeDynamics.reciprocalObs (P.S_safe + (P.T_gate + 1) * P.H_pre))
+              Becoming.ScopeDynamics.reciprocalChannel (fun x e => P.g (e ())) (fun x x_1 => 0) fun x => True)
+            (Becoming.AdaptiveLoops.jointGuard [()]
+              (fun x => Becoming.ScopeDynamics.reciprocalOpenLoop P.H_pre P.H_coop)
+              (fun x => Becoming.ScopeDynamics.reciprocalLoopCert P.H_pre P.H_coop P.T_gate coop_le_pre) fun x =>
+              P.S_safe)
+            (fun x => P.S₀, fun x => P.T_gate)
+Becoming.ScopeDynamics.ReciprocalStabilityWitness.witnessGateOpen_iff : ∀ (t : Nat),
+  Becoming.ScopeDynamics.ReciprocalStabilityWitness.witnessGateOpen t = true ↔
+    (Becoming.Law.run (Becoming.Withholding.waitsAll Becoming.ScopeDynamics.ReciprocalStabilityWitness.GateWaits)
+          Becoming.ScopeDynamics.ReciprocalStabilityWitness.gateInit).state
+      t Becoming.ScopeDynamics.ReciprocalStabilityWitness.PoolGateNode.defPool
+Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness_substrate_zero : Becoming.ScopeDynamics.recSubstrate
+    Becoming.ScopeDynamics.gEx 12 5 2 Becoming.ScopeDynamics.ReciprocalStabilityWitness.witnessGateOpen 0 =
+  12
+Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness_substrate_succ : ∀ (t : Nat),
+  Becoming.ScopeDynamics.recSubstrate Becoming.ScopeDynamics.gEx 12 5 2
+      Becoming.ScopeDynamics.ReciprocalStabilityWitness.witnessGateOpen (t + 1) =
+    9
+Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness_substrate_le_12 : ∀ (t : Nat),
+  Becoming.ScopeDynamics.recSubstrate Becoming.ScopeDynamics.gEx 12 5 2
+      Becoming.ScopeDynamics.ReciprocalStabilityWitness.witnessGateOpen t ≤
+    12
+Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness_holds : Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.H_rec =
+    3 ∧
+  Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.defYield 0 = 3 ∧
+    Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.coopYield 0 = 2 ∧
+      Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.defYield 1 = 1 ∧
+        Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.coopYield 1 = 2 ∧
+          Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.cumDef 3 = 5 ∧
+            Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.cumCoop 3 = 6 ∧
+              Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.S_safe +
+                    Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.T_gate *
+                      (Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.H_pre -
+                        Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.Y_floor) =
+                  12 ∧
+                Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.S_safe +
+                      Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.T_gate *
+                        Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.H_pre =
+                    13 ∧
+                  (∀ (t : Nat),
+                      8 ≤ Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.substrate t ∧
+                        Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.substrate t ≤ 12) ∧
+                    (∀ (t : Nat),
+                        1 ≤ t →
+                          Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.defYield t <
+                            Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.coopYield t) ∧
+                      ∀ (t : Nat),
+                        3 ≤ t →
+                          Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.cumDef t <
+                            Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.cumCoop t
+Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness13_substrate_succ : ∀ (k : Nat),
+  Becoming.ScopeDynamics.recSubstrate Becoming.ScopeDynamics.gEx 13 5 2
+      Becoming.ScopeDynamics.ReciprocalStabilityWitness.witnessGateOpen (k + 1) =
+    10
+Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness13_substrate_le_13 : ∀ (t : Nat),
+  Becoming.ScopeDynamics.recSubstrate Becoming.ScopeDynamics.gEx 13 5 2
+      Becoming.ScopeDynamics.ReciprocalStabilityWitness.witnessGateOpen t ≤
+    13
+Becoming.ScopeDynamics.ReciprocalStabilityWitness.assumeGuarantee_at_13 : Becoming.AdaptiveLoops.jointInv [()]
+    (fun x => Becoming.ScopeDynamics.reciprocalLoopCert 5 2 1 ⋯) (fun x => 0) (fun x => 8) (fun x => 13, fun x => 1) ∧
+  Becoming.Viability.Kernel
+    (Becoming.AdaptiveLoops.jointProcess [()] (fun x => Becoming.ScopeDynamics.reciprocalOpenLoop 5 2)
+      (fun x => Becoming.ScopeDynamics.reciprocalLoopCert 5 2 1 ⋯)
+      (Becoming.ScopeDynamics.reciprocalObs (8 + (1 + 1) * 5)) Becoming.ScopeDynamics.reciprocalChannel
+      (fun x e => Becoming.ScopeDynamics.gEx (e ())) (fun x x_1 => 0) fun x => True)
+    (Becoming.AdaptiveLoops.jointGuard [()] (fun x => Becoming.ScopeDynamics.reciprocalOpenLoop 5 2)
+      (fun x => Becoming.ScopeDynamics.reciprocalLoopCert 5 2 1 ⋯) fun x => 8)
+    (fun x => 13, fun x => 1)
+Becoming.ScopeDynamics.uncoord_vs_reciprocal_contrast : Becoming.ScopeDynamics.UncoordCommonsWitness.commons.S₀ =
+    Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.S₀ ∧
+  Becoming.ScopeDynamics.UncoordCommonsWitness.commons.substrate 0 = 12 ∧
+    Becoming.ScopeDynamics.UncoordCommonsWitness.commons.substrate 1 = 9 ∧
+      Becoming.ScopeDynamics.UncoordCommonsWitness.commons.substrate 2 = 5 ∧
+        (∀ (t : Nat),
+            3 ≤ t →
+              Becoming.ScopeDynamics.UncoordCommonsWitness.commons.substrate t = 0 ∧
+                ∀ (k : Becoming.ScopeDynamics.PoolCap),
+                  ¬Becoming.ScopeDynamics.UncoordCommonsWitness.commons.W_coop.MacroAdmits
+                      Becoming.ScopeDynamics.UncoordCommonsWitness.commons.cap
+                      (Becoming.ScopeDynamics.UncoordCommonsWitness.commons.W_coop.level t) t k) ∧
+          Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.substrate 0 = 12 ∧
+            (∀ (t : Nat), 1 ≤ t → Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.substrate t = 9) ∧
+              (∀ (t : Nat),
+                  8 ≤ Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.substrate t ∧
+                    Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.substrate t ≤ 12) ∧
+                Becoming.TransformsViably Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.W_coop
+                    (fun t => 8 ≤ Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.substrate t)
+                    Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.cap 0 ∧
+                  (∀ (t : Nat),
+                      1 ≤ t →
+                        Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.defYield t <
+                          Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.coopYield t) ∧
+                    ∀ (t : Nat),
+                      3 ≤ t →
+                        Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.cumDef t <
+                          Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.cumCoop t
+@Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_viable : ∀ {F C K GateNode : Type}
+  (P : Becoming.ScopeDynamics.ReciprocalPoolSystem F C K GateNode),
+  (∀ (a b : Nat), a ≤ b → P.g a ≤ P.g b) →
+    P.H_coop ≤ P.H_pre →
+      P.S_safe + P.T_gate * P.H_pre ≤ P.S₀ →
+        Becoming.Viability.Kernel
+          (Becoming.OpenComposition.closedProcess
+            ((Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorComponent (P.H_pre - P.H_coop) 0
+                  P.T_gate).compose
+              (Becoming.ScopeDynamics.OpenCompositionBridge.coopComponent P.H_coop))
+            (Becoming.OpenComposition.composeContract
+              (Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorContract (P.H_pre - P.H_coop) 0 P.T_gate ⋯)
+              (Becoming.ScopeDynamics.OpenCompositionBridge.coopContract P.H_coop))
+            (fun x => (Becoming.ScopeDynamics.reciprocalObs (P.S_safe + (P.T_gate + 1) * P.H_pre) () x, ()))
+            Becoming.ScopeDynamics.OpenCompositionBridge.openReciprocalChannel (fun x e => P.g (e ())) (fun x x_1 => 0)
+            fun x => True)
+          (Becoming.OpenComposition.closedGuard
+            ((Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorComponent (P.H_pre - P.H_coop) 0
+                  P.T_gate).compose
+              (Becoming.ScopeDynamics.OpenCompositionBridge.coopComponent P.H_coop))
+            (Becoming.OpenComposition.composeContract
+              (Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorContract (P.H_pre - P.H_coop) 0 P.T_gate ⋯)
+              (Becoming.ScopeDynamics.OpenCompositionBridge.coopContract P.H_coop))
+            fun x => P.S_safe)
+          (fun x => P.S₀, P.T_gate, ())
+Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_poolAt13 : Becoming.Viability.Kernel
+  (Becoming.OpenComposition.closedProcess
+    ((Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorComponent 3 0 1).compose
+      (Becoming.ScopeDynamics.OpenCompositionBridge.coopComponent 2))
+    (Becoming.OpenComposition.composeContract
+      (Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorContract 3 0 1 ⋯)
+      (Becoming.ScopeDynamics.OpenCompositionBridge.coopContract 2))
+    (fun x => (Becoming.ScopeDynamics.reciprocalObs (8 + (1 + 1) * 5) () x, ()))
+    Becoming.ScopeDynamics.OpenCompositionBridge.openReciprocalChannel (fun x e => Becoming.ScopeDynamics.gEx (e ()))
+    (fun x x_1 => 0) fun x => True)
+  (Becoming.OpenComposition.closedGuard
+    ((Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorComponent 3 0 1).compose
+      (Becoming.ScopeDynamics.OpenCompositionBridge.coopComponent 2))
+    (Becoming.OpenComposition.composeContract
+      (Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorContract 3 0 1 ⋯)
+      (Becoming.ScopeDynamics.OpenCompositionBridge.coopContract 2))
+    fun x => 8)
+  (fun x => 13, 1, ())
+@Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_defector_replace_viable : ∀
+  {F C K GateNode S₁' Obs₁' Dist₁' Int₁' : Type} (P : Becoming.ScopeDynamics.ReciprocalPoolSystem F C K GateNode),
+  (∀ (a b : Nat), a ≤ b → P.g a ≤ P.g b) →
+    P.H_coop ≤ P.H_pre →
+      P.S_safe + P.T_gate * P.H_pre ≤ P.S₀ →
+        ∀ (A' : Becoming.OpenComposition.OpenComponent S₁' Obs₁' Dist₁' Int₁' Unit) {init₁' : S₁'}
+          (cA' : Becoming.OpenComposition.InterfaceContract A' init₁') (obs₁' : (Unit → Nat) → Obs₁'),
+          (Becoming.OpenComposition.ContractRefines
+              (Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorContract (P.H_pre - P.H_coop) 0 P.T_gate ⋯) cA'
+              (Becoming.ScopeDynamics.reciprocalObs (P.S_safe + (P.T_gate + 1) * P.H_pre) ()) obs₁' fun x =>
+              P.S_safe + (P.T_gate + 1) * P.H_pre) →
+            Becoming.Viability.Kernel
+              (Becoming.OpenComposition.closedProcess
+                (A'.compose (Becoming.ScopeDynamics.OpenCompositionBridge.coopComponent P.H_coop))
+                (Becoming.OpenComposition.composeContract cA'
+                  (Becoming.ScopeDynamics.OpenCompositionBridge.coopContract P.H_coop))
+                (fun x => (obs₁' x, ())) Becoming.ScopeDynamics.OpenCompositionBridge.openReciprocalChannel
+                (fun x e => P.g (e ())) (fun x x_1 => 0) fun x => True)
+              (Becoming.OpenComposition.closedGuard
+                (A'.compose (Becoming.ScopeDynamics.OpenCompositionBridge.coopComponent P.H_coop))
+                (Becoming.OpenComposition.composeContract cA'
+                  (Becoming.ScopeDynamics.OpenCompositionBridge.coopContract P.H_coop))
+                fun x => P.S_safe)
+              (fun x => P.S₀, init₁', ())
+Becoming.ScopeDynamics.OpenCompositionBridge.tighterGate_replace_witness : Becoming.Viability.Kernel
+  (Becoming.OpenComposition.closedProcess
+    ((Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorComponent 2 0 0).compose
+      (Becoming.ScopeDynamics.OpenCompositionBridge.coopComponent 2))
+    (Becoming.OpenComposition.composeContract
+      (Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorContract 2 0 0 ⋯)
+      (Becoming.ScopeDynamics.OpenCompositionBridge.coopContract 2))
+    (fun x => (Becoming.ScopeDynamics.reciprocalObs (8 + (1 + 1) * 5) () x, ()))
+    Becoming.ScopeDynamics.OpenCompositionBridge.openReciprocalChannel (fun x e => Becoming.ScopeDynamics.gEx (e ()))
+    (fun x x_1 => 0) fun x => True)
+  (Becoming.OpenComposition.closedGuard
+    ((Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorComponent 2 0 0).compose
+      (Becoming.ScopeDynamics.OpenCompositionBridge.coopComponent 2))
+    (Becoming.OpenComposition.composeContract
+      (Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorContract 2 0 0 ⋯)
+      (Becoming.ScopeDynamics.OpenCompositionBridge.coopContract 2))
+    fun x => 8)
+  (fun x => 13, 0, ())
+@Becoming.ScopeDynamics.OpenCompositionBridge.blindDefector_vs_reciprocal_open : ∀ {Pos F : Type} (p : Pos) (f : F),
+  (Becoming.ScopeDynamics.UncoordCommonsWitness.commons.substrate 0 = 12 ∧
+      Becoming.ScopeDynamics.UncoordCommonsWitness.commons.substrate 1 = 9 ∧
+        Becoming.ScopeDynamics.UncoordCommonsWitness.commons.substrate 2 = 5 ∧
+          ∀ (t : Nat),
+            3 ≤ t →
+              Becoming.ScopeDynamics.UncoordCommonsWitness.commons.substrate t = 0 ∧
+                ∀ (k : Becoming.ScopeDynamics.PoolCap),
+                  ¬Becoming.ScopeDynamics.UncoordCommonsWitness.commons.W_coop.MacroAdmits
+                      Becoming.ScopeDynamics.UncoordCommonsWitness.commons.cap
+                      (Becoming.ScopeDynamics.UncoordCommonsWitness.commons.W_coop.level t) t k) ∧
+    Becoming.Viability.Kernel
+        (Becoming.OpenComposition.closedProcess
+          ((Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorComponent 3 0 1).compose
+            (Becoming.ScopeDynamics.OpenCompositionBridge.coopComponent 2))
+          (Becoming.OpenComposition.composeContract
+            (Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorContract 3 0 1 ⋯)
+            (Becoming.ScopeDynamics.OpenCompositionBridge.coopContract 2))
+          (fun x => (Becoming.ScopeDynamics.reciprocalObs (8 + (1 + 1) * 5) () x, ()))
+          Becoming.ScopeDynamics.OpenCompositionBridge.openReciprocalChannel
+          (fun x e => Becoming.ScopeDynamics.gEx (e ())) (fun x x_1 => 0) fun x => True)
+        (Becoming.OpenComposition.closedGuard
+          ((Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorComponent 3 0 1).compose
+            (Becoming.ScopeDynamics.OpenCompositionBridge.coopComponent 2))
+          (Becoming.OpenComposition.composeContract
+            (Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorContract 3 0 1 ⋯)
+            (Becoming.ScopeDynamics.OpenCompositionBridge.coopContract 2))
+          fun x => 8)
+        (fun x => 13, 1, ()) ∧
+      ((Becoming.ScopeDynamics.OpenCompositionBridge.reciprocalOpenRun.state 0).fst () = 13 ∧
+          (Becoming.ScopeDynamics.OpenCompositionBridge.reciprocalOpenRun.state 1).fst () = 10 ∧
+            (Becoming.ScopeDynamics.OpenCompositionBridge.reciprocalOpenRun.state 2).fst () = 10 ∧
+              ∀ (t : Nat), 8 ≤ (Becoming.ScopeDynamics.OpenCompositionBridge.reciprocalOpenRun.state t).fst ()) ∧
+        ¬∀ (d : Nat) (sig : Pos → Nat → F → Prop),
+            (∀ (t : Nat), 8 ≤ (Becoming.ScopeDynamics.OpenCompositionBridge.reciprocalOpenRun.state (t + d)).fst ()) →
+              Becoming.Unrestricted sig

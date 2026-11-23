@@ -415,6 +415,9 @@ import Becoming.MultiScaleViability
 import Becoming.OpenComposition
 import Becoming.TransformativeViability
 import Becoming.StockFlowBridge
+import Becoming.EndogenousTurning
+import Becoming.UnifiedDrawdown
+import Becoming.ScopeDynamics
 
 /-!
 # The Theory of Becoming: the formal core
@@ -5416,6 +5419,9 @@ tagged instance or application.
 * `Becoming.OpenComposition` (L1): open port-split components and contracts (`OpenComponent`, `InterfaceContract`), horizontal gluing (`compose`) and boundary hiding (`hide`) with constructive associativity (`ComponentEquiv`), composition-preserved closed substrate viability (`compose_close_interchange`) vs. hidden-coupling collapse, heterogeneous refinement and live rewrite (`ContractRefines`, `ReconfigProcess`, `widen_interface_heals_blindness`), and synchronous-product compositional laxity (`SlackDist.max`, `SlackDist.sum`, `compose_laxSim_max`, `compose_laxSim_sum`).
 * `Becoming.TransformativeViability` (L2, through `Becoming.WideningOnTheMap`): viability-preserving transformative continuation order (`MacroAdmits`, `TransformativeViable`, `TransformsViably` with non-stasis micro-turnover) strictly separating evolution from zero-loss `Widens` and destructive churn, escaping `Flow.whole_not_keepsWidening`.
 * `Becoming.StockFlowBridge` (L2, through `Becoming.WayUnderARule`): unclamped pre-overdraw `LineOnAStock`/`WayUnderARule` embedding into `Flow.BalancesOn`/`Balances`, finite-horizon `never_returns_below_within`, and exact constant-draw correspondence with `RegimeMargin.Coupled.Indexed.step`.
+* `Becoming.EndogenousTurning` (L2, through `Becoming.StockFlowBridge`): derived proxy-optimum overdraw collapse, non-oracle `ServiceTaskModel` bottleneck `B_task`, timely pooled `Clearing` / native `OpenComposition` live-reconfig and widening bridges, and the epistemic silence boundary (`TurningWitness`).
+* `Becoming.UnifiedDrawdown` (L2, through `Becoming.StockFlowBridge`): parametric local-error-zero joint depletion, inductive finite-family `OpenComposition` fleet folds and `ContractRefines` upgrades, pre-overdraw `Flow` transfer vs. `OverdrawSeparationWitness`, and non-trivial temporal aliasing (`CadenceErasureWitness`, `unrecoverable_cadence_bridge`) with `not_entails`.
+* `Becoming.ScopeDynamics` (L2, through `Becoming.TransformativeViability`): mutual-fate viable-scope selection, open-commons myopic invasion collapse, reciprocal `Withholding`/native `OpenComposition` (`gatedDefectorComponent ⊕ coopComponent`) stabilization and replacement, paired with `scopeLaw_cannot_entail_unrestricted`.
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.

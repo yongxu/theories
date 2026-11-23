@@ -2881,6 +2881,26 @@
    "base": "general",
    "note": "StockFlowBridge P1C: unclamped pre-overdraw LineOnAStock/WayUnderARule embedding into Flow.BalancesOn, finite-horizon drawdown trap, and Coupled.Indexed correspondence"
   },
+  "endogenous-turning-and-clearing-margin": {
+   "region": "map",
+   "base": "general",
+   "note": "EndogenousTurning L1: derived proxy-optimum overdraw, ServiceTaskModel bottleneck, pooled Clearing and OpenComposition reconfig/widening bridges, and epistemic silence boundary (TurningWitness)"
+  },
+  "unified-drawdown-overdraw-and-aliasing": {
+   "region": "map",
+   "base": "general",
+   "note": "UnifiedDrawdown L2: parametric local-accuracy depletion, inductive OpenComposition fleet folds and upgrades, pre-overdraw Flow transfer vs. overdraw break, and non-trivial temporal aliasing (CadenceErasureWitness)"
+  },
+  "dynamical-scope-and-reciprocal-stability": {
+   "region": "map",
+   "base": "general",
+   "note": "ScopeDynamics L3: mutual-fate viable scope selection, myopic invasion collapse, reciprocal Withholding and OpenComposition stabilization/replacement, and scopeLaw_cannot_entail_unrestricted"
+  },
+  "continuous-stochastic-alignment-reals": {
+   "region": "map",
+   "base": "periphery",
+   "note": "AlignmentReals L4 (Mathlib periphery): inertia lag headroom penalty, finite-distribution delay survival bound, metric LaxSim contraction tube and discretization, and linear FA feature-leakage hysteresis"
+  },
   "selection-through-couplings-at-a-coarser-step": {
    "region": "knowing",
    "base": "general",
@@ -4977,6 +4997,21 @@
    "region": "map",
    "base": "general",
    "note": "P1C unclamped LineOnAStock/WayUnderARule to Flow.BalancesOn, finite-horizon drawdown trap, and Coupled.Indexed correspondence"
+  },
+  "Becoming.EndogenousTurning": {
+   "region": "map",
+   "base": "general",
+   "note": "L1 derived proxy overdraw, ServiceTaskModel bottleneck, pooled Clearing and OpenComposition reconfig/widening bridges, and TurningWitness epistemic silence"
+  },
+  "Becoming.UnifiedDrawdown": {
+   "region": "map",
+   "base": "general",
+   "note": "L2 parametric local-accuracy depletion, inductive OpenComposition fleet folds/upgrades, pre-overdraw Flow separation, and non-trivial temporal aliasing"
+  },
+  "Becoming.ScopeDynamics": {
+   "region": "map",
+   "base": "general",
+   "note": "L3 mutual-fate viable scope, myopic invasion collapse, reciprocal Withholding and OpenComposition stabilization/replacement, and not_entails"
   }
  }
 }

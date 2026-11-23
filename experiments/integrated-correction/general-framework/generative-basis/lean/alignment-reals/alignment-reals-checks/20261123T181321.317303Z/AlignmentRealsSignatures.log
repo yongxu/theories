@@ -1,0 +1,441 @@
+Becoming.AlignmentReals.inertia_error_closed_form : ∀ (α : ℝ) (t : ℕ),
+  1 - Becoming.AlignmentReals.inertiaWeight α t = (1 - α) ^ t
+Becoming.AlignmentReals.blendedDraw_sub_safe : ∀ (d_high d_safe u : ℝ),
+  Becoming.AlignmentReals.blendedDraw d_high d_safe u - d_safe = (d_high - d_safe) * (1 - u)
+Becoming.AlignmentReals.inertia_excess_draw_eq : ∀ (d_high d_safe α : ℝ),
+  α ≠ 0 →
+    ∀ (k : ℕ),
+      ∑ t ∈ Finset.range k,
+          (Becoming.AlignmentReals.blendedDraw d_high d_safe (Becoming.AlignmentReals.inertiaWeight α t) - d_safe) =
+        (d_high - d_safe) * ((1 - (1 - α) ^ k) / α)
+Becoming.AlignmentReals.inertia_excess_draw_shifted_eq : ∀ (d_high d_safe α : ℝ),
+  α ≠ 0 →
+    ∀ (k : ℕ),
+      ∑ t ∈ Finset.range k,
+          (Becoming.AlignmentReals.blendedDraw d_high d_safe (Becoming.AlignmentReals.inertiaWeight α (t + 1)) -
+            d_safe) =
+        (d_high - d_safe) * ((1 - α) * (1 - (1 - α) ^ k) / α)
+Becoming.AlignmentReals.inertia_excess_draw_lt : ∀ (d_high d_safe α : ℝ),
+  d_safe < d_high →
+    0 < α →
+      α < 1 →
+        ∀ (k : ℕ),
+          ∑ t ∈ Finset.range k,
+              (Becoming.AlignmentReals.blendedDraw d_high d_safe (Becoming.AlignmentReals.inertiaWeight α t) - d_safe) <
+            (d_high - d_safe) / α
+Becoming.AlignmentReals.inertia_excess_draw_shifted_lt : ∀ (d_high d_safe α : ℝ),
+  d_safe < d_high →
+    0 < α →
+      α < 1 →
+        ∀ (k : ℕ),
+          ∑ t ∈ Finset.range k,
+              (Becoming.AlignmentReals.blendedDraw d_high d_safe (Becoming.AlignmentReals.inertiaWeight α (t + 1)) -
+                d_safe) <
+            (1 - α) / α * (d_high - d_safe)
+Becoming.AlignmentReals.inertia_stock_prefix : ∀ (H₁ H₂ Y : ℝ) (L : ℕ) (α x₀ : ℝ),
+  ∀ t ≤ L, Becoming.AlignmentReals.inertiaStock H₁ H₂ Y L α x₀ t = x₀ - ↑t * (H₁ - Y)
+Becoming.AlignmentReals.inertia_stock_eq_sum : ∀ (H₁ H₂ Y : ℝ) (L : ℕ) (α x₀ : ℝ) (k : ℕ),
+  Becoming.AlignmentReals.inertiaStock H₁ H₂ Y L α x₀ (L + k) =
+    x₀ - ↑L * (H₁ - Y) -
+      ∑ t ∈ Finset.range k,
+        (Becoming.AlignmentReals.blendedDraw H₁ H₂ (Becoming.AlignmentReals.inertiaWeight α (t + 1)) - H₂)
+Becoming.AlignmentReals.inertia_stock_closed_form : ∀ (H₁ H₂ Y : ℝ) (L : ℕ) {α : ℝ},
+  α ≠ 0 →
+    ∀ (x₀ : ℝ) (k : ℕ),
+      Becoming.AlignmentReals.inertiaStock H₁ H₂ Y L α x₀ (L + k) =
+        x₀ - ↑L * (H₁ - Y) - (H₁ - H₂) * ((1 - α) * (1 - (1 - α) ^ k) / α)
+Becoming.AlignmentReals.inertia_lag_headroom_penalty : ∀ (H₁ H₂ y₂ Y L : ℕ) (α : ℝ),
+  0 < α →
+    α < 1 →
+      Y ≤ H₁ →
+        H₂ < H₁ →
+          (∀ (floor x₀ : ℝ),
+              floor + ↑L * (↑H₁ - ↑Y) + (1 - α) / α * (↑H₁ - ↑H₂) ≤ x₀ →
+                ∀ (t : ℕ), floor ≤ Becoming.AlignmentReals.inertiaStock (↑H₁) (↑H₂) (↑Y) L α x₀ t) ∧
+            (↑H₁ + ↑L * ↑Y < (1 - α) / α * (↑H₁ - ↑H₂) →
+              ∃ t, Becoming.AlignmentReals.inertiaStock (↑H₁) (↑H₂) (↑Y) L α (↑(H₂ + y₂ + H₁ * (L + 1))) t < ↑(H₂ + y₂))
+@Becoming.AlignmentReals.inertia_lag_contrasts_pace_window : ∀ {A U R O : Type} {fA : A → R → A} {need : U → ℕ}
+  {kids : R → U → List U} {giving : ℕ → ℕ} {use : U → ℕ} {h : Becoming.PacedStock.StockState A U → R → R}
+  {reads : ℕ → Bool} {σ : ℕ → ℕ} {N L H₁ H₂ y₂ hi Y : ℕ} {x_o y_o : O},
+  x_o ≠ y_o →
+    σ 0 = 0 →
+      σ 1 = L →
+        Becoming.Strict σ →
+          Becoming.PacedStock.ReadAtSpanEnd σ reads →
+            2 * N - 1 ≤ L →
+              ∀ {a₀ : A} {w₀ : List U} {g_bad g_safe : R},
+                H₂ + y₂ + H₁ * (L + 1) ≤ hi →
+                  Becoming.RegimeMargin.Keeps giving 0 hi →
+                    Becoming.RegimeMargin.Short giving H₂ y₂ →
+                      Becoming.RegimeMargin.Meets giving H₂ y₂ hi →
+                        Becoming.RegimeMargin.Keeps giving H₂ hi →
+                          H₂ + H₂ + y₂ ≤ hi →
+                            (∀ (u : U), 0 < need u ∧ need u ≤ H₂ + y₂) →
+                              w₀ ≠ [] →
+                                (∀ (g : R) (u : U), kids g u ≠ []) →
+                                  Becoming.LineOnAStock.taken use
+                                        (Becoming.LineOnAStock.allKids (kids g_safe)
+                                          (Becoming.LineOnAStock.generation (kids g_bad) L w₀)) ≤
+                                      H₂ →
+                                    (∀ (w : List U),
+                                        Becoming.LineOnAStock.taken use w ≤ H₂ →
+                                          Becoming.LineOnAStock.taken use
+                                              (Becoming.LineOnAStock.allKids (kids g_safe) w) ≤
+                                            H₂) →
+                                      Becoming.PacedStock.UpperDraw need use kids giving H₁ g_bad w₀
+                                          (H₂ + y₂ + H₁ * (L + 1)) (L + 1) →
+                                        (Becoming.PacedStock.pacedCourse fA need kids giving use h reads
+                                                ((a₀, w₀, H₂ + y₂ + H₁ * (L + 1)), g_bad) (σ 1)).2 =
+                                            g_safe →
+                                          (∀ (s : Becoming.PacedStock.StockState A U), h s g_safe = g_safe) →
+                                            ∀ (α : ℝ),
+                                              0 < α →
+                                                α < 1 →
+                                                  Y ≤ H₁ →
+                                                    H₂ < H₁ →
+                                                      ↑H₁ + ↑L * ↑Y < (1 - α) / α * (↑H₁ - ↑H₂) →
+                                                        Becoming.Pace.StretchFixes O N L ∧
+                                                          (∀ (t : ℕ),
+                                                              L + 1 ≤ t →
+                                                                H₂ + y₂ ≤
+                                                                    (Becoming.PacedStock.pacedCourse fA need kids giving
+                                                                            use h reads
+                                                                            ((a₀, w₀, H₂ + y₂ + H₁ * (L + 1)), g_bad)
+                                                                            t).1.2.2 ∧
+                                                                  (Becoming.PacedStock.pacedCourse fA need kids giving
+                                                                              use h reads ⋯ t).1.2.2 ≤
+                                                                      hi ∧
+                                                                    Becoming.LineOnAStock.Goes need
+                                                                      (Becoming.PacedStock.pacedCourse fA need kids
+                                                                            giving use h reads
+                                                                            ((a₀, w₀, H₂ + y₂ + H₁ * (L + 1)), g_bad)
+                                                                            t).1.2) ∧
+                                                            ∃ t,
+                                                              Becoming.AlignmentReals.inertiaStock (↑H₁) (↑H₂) (↑Y) L α
+                                                                  (↑(H₂ + y₂ + H₁ * (L + 1))) t <
+                                                                ↑(H₂ + y₂)
+Becoming.AlignmentReals.p2Giving_fromNothing : Becoming.RegimeMargin.FromNothing Becoming.AlignmentReals.p2Giving
+Becoming.AlignmentReals.p2Giving_atMost1 : Becoming.RegimeMargin.AtMost Becoming.AlignmentReals.p2Giving 1
+Becoming.AlignmentReals.p2Giving_short1 : Becoming.RegimeMargin.Short Becoming.AlignmentReals.p2Giving 1 2
+Becoming.AlignmentReals.p2Giving_meets1 : Becoming.RegimeMargin.Meets Becoming.AlignmentReals.p2Giving 1 2 60
+Becoming.AlignmentReals.p2Giving_keeps0 : Becoming.RegimeMargin.Keeps Becoming.AlignmentReals.p2Giving 0 60
+Becoming.AlignmentReals.p2Giving_keeps1 : Becoming.RegimeMargin.Keeps Becoming.AlignmentReals.p2Giving 1 60
+Becoming.AlignmentReals.p2Course_len_le_one : ∀ (g : ℕ × ℕ) (x₀ t : ℕ),
+  (Becoming.LineOnAStock.course Becoming.AlignmentReals.p2Need (Becoming.AlignmentReals.p2Kids g)
+          Becoming.AlignmentReals.p2Giving Becoming.AlignmentReals.p2Use ([Becoming.AlignmentReals.P2Unit.bad], x₀)
+          t).1.length ≤
+    1
+Becoming.AlignmentReals.p2_upper_draw_4 : ∀ (g : ℕ × ℕ) (x₀ k : ℕ),
+  Becoming.PacedStock.UpperDraw Becoming.AlignmentReals.p2Need Becoming.AlignmentReals.p2Use
+    Becoming.AlignmentReals.p2Kids Becoming.AlignmentReals.p2Giving 4 g [Becoming.AlignmentReals.P2Unit.bad] x₀ k
+Becoming.AlignmentReals.p2_safeClose : ∀ (w : List Becoming.AlignmentReals.P2Unit),
+  Becoming.LineOnAStock.taken Becoming.AlignmentReals.p2Use w ≤ 1 →
+    Becoming.LineOnAStock.taken Becoming.AlignmentReals.p2Use
+        (Becoming.LineOnAStock.allKids (Becoming.AlignmentReals.p2Kids (0, 2)) w) ≤
+      1
+Becoming.AlignmentReals.p2Course_after_six : ∀ (m : ℕ),
+  (Becoming.AlignmentReals.p2Course (6 + m)).1.2 = ([Becoming.AlignmentReals.P2Unit.safe], 9) ∧
+    (Becoming.AlignmentReals.p2Course (6 + m)).2 = (0, 2)
+Becoming.AlignmentReals.inertia_witness_phase2 : Becoming.Pace.StretchFixes Bool 3 5 ∧
+  (∀ (t : ℕ),
+      6 ≤ t →
+        3 ≤ (Becoming.AlignmentReals.p2Course t).1.2.2 ∧
+          (Becoming.AlignmentReals.p2Course t).1.2.2 ≤ 60 ∧
+            Becoming.LineOnAStock.Goes Becoming.AlignmentReals.p2Need (Becoming.AlignmentReals.p2Course t).1.2) ∧
+    ((Becoming.AlignmentReals.p2Course 5).1.2.2 = 12 ∧
+        (Becoming.AlignmentReals.p2Course 6).1.2.2 = 9 ∧
+          ∀ (t : ℕ), 6 ≤ t → (Becoming.AlignmentReals.p2Course t).1.2.2 = 9) ∧
+      (∀ (t : ℕ), 12 ≤ Becoming.AlignmentReals.inertiaStock 4 1 1 5 1 27 t) ∧
+        (Becoming.AlignmentReals.inertiaStock 4 1 1 5 (1 / 8) 27 10 = 58035 / 32768 ∧
+            Becoming.AlignmentReals.inertiaStock 4 1 1 5 (1 / 8) 27 10 < 3 ∧
+              Becoming.AlignmentReals.inertiaStock 4 1 1 5 (1 / 8) 27 12 < 0 ∧
+                Becoming.AlignmentReals.inertiaStock 4 1 1 5 (1 / 8) 27 21 < 0) ∧
+          ∀ (t : ℕ), 3 ≤ Becoming.AlignmentReals.inertiaStock 4 1 1 5 (1 / 8) 39 t
+@Becoming.AlignmentReals.FiniteLaw.prob_nonneg : ∀ {Ω : Type u_1} {S : Finset Ω}
+  (L : Becoming.AlignmentReals.FiniteLaw S) (E : Ω → Prop) [inst : DecidablePred E], 0 ≤ L.prob E
+@Becoming.AlignmentReals.FiniteLaw.prob_le_one : ∀ {Ω : Type u_1} {S : Finset Ω}
+  (L : Becoming.AlignmentReals.FiniteLaw S) (E : Ω → Prop) [inst : DecidablePred E], L.prob E ≤ 1
+@Becoming.AlignmentReals.FiniteLaw.prob_add_compl : ∀ {Ω : Type u_1} {S : Finset Ω}
+  (L : Becoming.AlignmentReals.FiniteLaw S) (E : Ω → Prop) [inst : DecidablePred E]
+  [inst_1 : DecidablePred fun ω => ¬E ω], (L.prob E + L.prob fun ω => ¬E ω) = 1
+@Becoming.AlignmentReals.markov_prob_ge : ∀ {Ω : Type u_1} {S : Finset Ω} (law : Becoming.AlignmentReals.FiniteLaw S)
+  (X : Ω → ℝ), (∀ ω ∈ S, 0 ≤ X ω) → ∀ (B : ℝ), (B * law.prob fun ω => B < X ω) ≤ law.expect X
+@Becoming.AlignmentReals.markov_survival_sufficient : ∀ {Ω : Type u_1} {S : Finset Ω}
+  (law : Becoming.AlignmentReals.FiniteLaw S) (X : Ω → ℝ),
+  (∀ ω ∈ S, 0 ≤ X ω) → ∀ {B δ : ℝ}, 0 < B → 0 < δ → law.expect X / δ ≤ B → 1 - δ ≤ law.prob fun ω => X ω ≤ B
+@Becoming.AlignmentReals.reverse_markov_failure_bound : ∀ {Ω : Type u_1} {S : Finset Ω}
+  (law : Becoming.AlignmentReals.FiniteLaw S) (X : Ω → ℝ) {B X_max : ℝ},
+  (∀ ω ∈ S, 0 ≤ X ω) →
+    (∀ ω ∈ S, X ω ≤ X_max) → B < X_max → (law.prob fun ω => X ω ≤ B) ≤ 1 - (law.expect X - B) / (X_max - B)
+@Becoming.AlignmentReals.spike_threshold_survival_upper : ∀ {Ω : Type u_1} {S : Finset Ω}
+  (law : Becoming.AlignmentReals.FiniteLaw S) (X : Ω → ℝ) {B M p : ℝ},
+  B < M → (p ≤ law.prob fun ω => M ≤ X ω) → (law.prob fun ω => X ω ≤ B) ≤ 1 - p
+@Becoming.AlignmentReals.spikeCount_le : ∀ {n : ℕ} (ω : Fin n → Bool), Becoming.AlignmentReals.spikeCount ω ≤ n
+@Becoming.AlignmentReals.spikeCount_cons : ∀ {n : ℕ} (b : Bool) (ω : Fin n → Bool),
+  Becoming.AlignmentReals.spikeCount (Fin.cons b ω) = (if b = true then 1 else 0) + Becoming.AlignmentReals.spikeCount ω
+@Becoming.AlignmentReals.productBoolWeight_cons : ∀ {n : ℕ} (p : ℝ) (b : Bool) (ω : Fin n → Bool),
+  Becoming.AlignmentReals.productBoolWeight (n + 1) p (Fin.cons b ω) =
+    (if b = true then p else 1 - p) * Becoming.AlignmentReals.productBoolWeight n p ω
+Becoming.AlignmentReals.productBool_prob_spikeCount_le : ∀ (n k : ℕ) (p : ℝ) (hp0 : 0 ≤ p) (hp1 : p ≤ 1),
+  ((Becoming.AlignmentReals.productBoolLaw n p hp0 hp1).prob fun ω => Becoming.AlignmentReals.spikeCount ω ≤ k) =
+    Becoming.AlignmentReals.survProb n k p
+@Becoming.AlignmentReals.stochastic_delay_survival_bound : ∀ {Ω : Type u_1} {S : Finset Ω}
+  (law : Becoming.AlignmentReals.FiniteLaw S) (D : Ω → ℕ) {A U R O : Type} {fA : A → R → A} {need : U → ℕ}
+  {kids : R → U → List U} {giving : ℕ → ℕ} {use : U → ℕ} {N Y H₁ H₂ y₂ x₀ : ℕ} {x_o y_o : O},
+  2 ≤ N →
+    x_o ≠ y_o →
+      Becoming.RegimeMargin.FromNothing giving →
+        Becoming.RegimeMargin.AtMost giving Y →
+          Y < H₁ →
+            H₁ ≤ H₂ + y₂ →
+              Becoming.RegimeMargin.Short giving H₂ y₂ →
+                (∀ (u : U), 0 < need u ∧ need u ≤ H₂ + y₂) →
+                  ∀ {g_bad : R} {w₀ : List U},
+                    Becoming.PacedStock.LowerDrawWhileMet H₁ need kids giving use g_bad w₀ x₀ (2 * N - 1) →
+                      (∀ (w : List U), w ≠ [] → H₂ ≤ Becoming.LineOnAStock.taken use w) →
+                        H₂ + y₂ < x₀ →
+                          (∀ (δ : ℝ),
+                              0 < δ →
+                                (law.expect fun ω => ↑(D ω) * (↑H₁ - ↑Y)) / δ ≤ ↑x₀ - ↑(H₂ + y₂) →
+                                  1 - δ ≤ law.prob fun ω => ↑(D ω) * (↑H₁ - ↑Y) ≤ ↑x₀ - ↑(H₂ + y₂)) ∧
+                            (∀ (M : ℕ) (p_fail : ℝ),
+                                ↑x₀ - ↑(H₂ + y₂) < ↑M * (↑H₁ - ↑Y) →
+                                  (p_fail ≤ law.prob fun ω => ↑M * (↑H₁ - ↑Y) ≤ ↑(D ω) * (↑H₁ - ↑Y)) →
+                                    (law.prob fun ω => ↑(D ω) * (↑H₁ - ↑Y) ≤ ↑x₀ - ↑(H₂ + y₂)) ≤ 1 - p_fail) ∧
+                              (∀ (ω : Ω),
+                                  ↑x₀ - ↑(H₂ + y₂) < ↑(D ω) * (↑H₁ - ↑Y) →
+                                    ∃ k ≤ D ω,
+                                      (Becoming.Law.run (Becoming.RegimeMargin.step giving H₁) x₀).state k < H₂ + y₂) ∧
+                                (x₀ < H₂ + y₂ + (H₁ - Y) * (2 * N - 1) →
+                                    ∀ (ω : Ω) (σ : ℕ → ℕ) (reads : ℕ → Bool)
+                                      (h : Becoming.PacedStock.StockState A U → R → R) (a₀ : A),
+                                      2 * N - 1 ≤ D ω →
+                                        σ 0 = 0 →
+                                          σ 1 = D ω →
+                                            Becoming.Strict σ →
+                                              Becoming.PacedStock.ReadAtSpanEnd σ reads →
+                                                ∃ t,
+                                                  ¬Becoming.LineOnAStock.Goes need
+                                                      (Becoming.PacedStock.pacedCourse fA need kids giving use h reads
+                                                            ((a₀, w₀, x₀), g_bad) t).1.2) ∧
+                                  ∀ (n k : ℕ) (p Δ slack : ℝ) (hp0 : 0 ≤ p) (hp1 : p ≤ 1),
+                                    0 < Δ →
+                                      ↑k * Δ ≤ slack →
+                                        slack < ↑(k + 1) * Δ →
+                                          ((Becoming.AlignmentReals.productBoolLaw n p hp0 hp1).prob fun ω =>
+                                              ↑(Becoming.AlignmentReals.spikeCount ω) * Δ ≤ slack) =
+                                            Becoming.AlignmentReals.survProb n k p
+Becoming.AlignmentReals.stochastic_spike_witness_phase2 : Becoming.AlignmentReals.survProb 5 2 (3 / 10) =
+    20923 / 25000 ∧
+  ((Becoming.AlignmentReals.productBoolLaw 5 (3 / 10) ⋯ ⋯).prob fun ω =>
+        ↑(Becoming.AlignmentReals.spikeCount ω) * 4 ≤ 27 - 18) =
+      20923 / 25000 ∧
+    ((Becoming.AlignmentReals.productBoolLaw 5 (3 / 10) ⋯ ⋯).prob fun ω =>
+          ↑(Becoming.AlignmentReals.spikeCount ω) * 4 ≤ 27 - 18) <
+        1 ∧
+      ∀ (p : ℝ) (hp0 : 0 ≤ p) (hp1 : p ≤ 1),
+        ((Becoming.AlignmentReals.productBoolLaw 5 p hp0 hp1).prob fun ω =>
+            ↑(Becoming.AlignmentReals.spikeCount ω) * 4 ≤ 39 - 18) =
+          1
+Becoming.AlignmentReals.stochastic_delay_witness_phase2 : (∀ (p₀ p₅ p₁₀ : ℝ) (hp0 : 0 ≤ p₀) (hp5 : 0 ≤ p₅)
+    (hp10 : 0 ≤ p₁₀) (htot : p₀ + p₅ + p₁₀ = 1),
+    ((Becoming.AlignmentReals.delayLaw3 p₀ p₅ p₁₀ hp0 hp5 hp10 htot).prob fun i => ↑(![0, 5, 10] i) * 3 ≤ 27 - 3) =
+        1 - p₁₀ ∧
+      ((Becoming.AlignmentReals.delayLaw3 p₀ p₅ p₁₀ hp0 hp5 hp10 htot).prob fun i => ↑(![0, 5, 10] i) * 3 ≤ 39 - 3) =
+        1) ∧
+  (((Becoming.AlignmentReals.delayLaw3 (1 / 2) (1 / 4) (1 / 4) ⋯ ⋯ ⋯ ⋯).expect fun i => ↑(![0, 5, 10] i) * 3) = 45 / 4 ∧
+      ((Becoming.AlignmentReals.delayLaw3 (1 / 2) (1 / 4) (1 / 4) ⋯ ⋯ ⋯ ⋯).prob fun i =>
+          ↑(![0, 5, 10] i) * 3 ≤ 27 - 3) =
+        3 / 4) ∧
+    ∃ k ≤ 10, (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.AlignmentReals.p2Giving 4) 27).state k < 3
+@Becoming.AlignmentReals.metricSlack_nonneg : ∀ {α ε : ℝ},
+  0 ≤ α → 0 ≤ ε → ∀ (m : ℕ) (r : ℝ), 0 ≤ r → 0 ≤ Becoming.AlignmentReals.metricSlack α ε m r
+@Becoming.AlignmentReals.metricSlack_eq : ∀ {α : ℝ},
+  α ≠ 1 →
+    ∀ (ε : ℝ) (m : ℕ) (r : ℝ), Becoming.AlignmentReals.metricSlack α ε m r = α ^ m * r + ε * ((1 - α ^ m) / (1 - α))
+@Becoming.AlignmentReals.metricSlack_le : ∀ {α ε : ℝ},
+  0 ≤ α → α < 1 → 0 ≤ ε → ∀ (m : ℕ) (r : ℝ), Becoming.AlignmentReals.metricSlack α ε m r ≤ α ^ m * r + ε / (1 - α)
+@Becoming.AlignmentReals.metricSlack_le_max : ∀ {α ε : ℝ},
+  0 ≤ α → α < 1 → 0 ≤ ε → ∀ (m : ℕ) (r : ℝ), Becoming.AlignmentReals.metricSlack α ε m r ≤ max r (ε / (1 - α))
+@Becoming.AlignmentReals.MetricLaxSim.epoch_trace : ∀ {S : Type u_1} {A : Type u_2} {Q : Type u_3} {B : Type u_4}
+  {P : Generative.Process S A} {R : Generative.Process Q B} {π : S → Q} {σ : ℕ → ℕ} [inst : PseudoMetricSpace Q]
+  (sim : Becoming.AlignmentReals.MetricLaxSim P R π σ) {t₀ : ℕ} {s : S} {w : List A} {u : S},
+  sim.Epoch t₀ s → Generative.Trace P s w u → sim.Epoch (t₀ + w.length) u
+@Becoming.AlignmentReals.MetricLaxSim.advance_blocks : ∀ {S : Type u_1} {A : Type u_2} {Q : Type u_3} {B : Type u_4}
+  {P : Generative.Process S A} {R : Generative.Process Q B} {π : S → Q} {σ : ℕ → ℕ} [inst : PseudoMetricSpace Q]
+  (sim : Becoming.AlignmentReals.MetricLaxSim P R π σ) (m j₀ : ℕ) {s : S} {q : Q} {r : ℝ} {w : List A} {t : S},
+  0 ≤ r →
+    sim.Epoch (σ j₀) s →
+      sim.EpochQ j₀ q →
+        dist (π s) q ≤ r →
+          σ (j₀ + m) - σ j₀ ≤ w.length →
+            Generative.Trace P s w t →
+              ∃ u w_rem wR q_m,
+                w_rem.length + (σ (j₀ + m) - σ j₀) = w.length ∧
+                  wR.length = m ∧
+                    Generative.Trace R q wR q_m ∧
+                      Generative.Trace P u w_rem t ∧
+                        sim.Epoch (σ (j₀ + m)) u ∧
+                          sim.EpochQ (j₀ + m) q_m ∧ dist (π u) q_m ≤ Becoming.AlignmentReals.metricSlack sim.α sim.ε m r
+@Becoming.AlignmentReals.metric_laxSim_contraction_tube : ∀ {S : Type u_1} {A : Type u_2} {Q : Type u_3} {B : Type u_4}
+  {P : Generative.Process S A} {R : Generative.Process Q B} {π : S → Q} {σ : ℕ → ℕ} [inst : PseudoMetricSpace Q]
+  (sim : Becoming.AlignmentReals.MetricLaxSim P R π σ) {guardQ K : Q → Prop} {guardS : S → Prop},
+  Becoming.Viability.Certificate R guardQ K →
+    ∀ (d₀ : ℝ),
+      0 ≤ d₀ →
+        (∀ (q : Q) (u : S), guardQ q → dist (π u) q ≤ sim.β * max d₀ (sim.ε / (1 - sim.α)) + sim.η → guardS u) →
+          ∀ {s₀ : S} (q₀ : Q),
+            sim.Epoch (σ 0) s₀ →
+              sim.EpochQ 0 q₀ →
+                dist (π s₀) q₀ ≤ d₀ →
+                  K q₀ →
+                    (∀ {t : S} {w : List A},
+                        Generative.Trace P s₀ w t →
+                          ∃ k q_k wR,
+                            wR.length = k ∧
+                              σ k ≤ σ 0 + w.length ∧
+                                σ 0 + w.length < σ (k + 1) ∧
+                                  Generative.Trace R q₀ wR q_k ∧
+                                    K q_k ∧
+                                      guardQ q_k ∧
+                                        dist (π t) q_k ≤ sim.β * (sim.α ^ k * d₀ + sim.ε / (1 - sim.α)) + sim.η ∧
+                                          dist (π t) q_k ≤ sim.β * max d₀ (sim.ε / (1 - sim.α)) + sim.η) ∧
+                      Becoming.Viability.Kernel P guardS s₀
+@Becoming.AlignmentReals.discrete_absorb_of_metric : ∀ {S : Type u_1} {A : Type u_2} {Q : Type u_3} {B : Type u_4}
+  {P : Generative.Process S A} {R : Generative.Process Q B} {π : S → Q} {σ : ℕ → ℕ} [inst : PseudoMetricSpace Q]
+  (sim : Becoming.AlignmentReals.MetricLaxSim P R π σ) (δ : ℝ) (hδ : 0 < δ),
+  have ε_nat := ⌈sim.ε / δ⌉₊;
+  have Δ_nat := ⌈↑ε_nat / (1 - sim.α)⌉₊;
+  (Becoming.AlignmentReals.toDiscreteLaxSim sim δ hδ).α Δ_nat + (Becoming.AlignmentReals.toDiscreteLaxSim sim δ hδ).ε ≤
+    Δ_nat
+@Becoming.AlignmentReals.metric_to_discrete_kernel : ∀ {S : Type u_1} {A : Type u_2} {Q : Type u_3} {B : Type u_4}
+  {P : Generative.Process S A} {R : Generative.Process Q B} {π : S → Q} {σ : ℕ → ℕ} [inst : PseudoMetricSpace Q]
+  (sim : Becoming.AlignmentReals.MetricLaxSim P R π σ) (δ : ℝ),
+  0 < δ →
+    ∀ {guardQ K : Q → Prop} {guardS : S → Prop},
+      Becoming.Viability.Certificate R guardQ K →
+        (∀ (q : Q) (u : S),
+            guardQ q → dist (π u) q ≤ δ * (↑⌈sim.β * ↑⌈↑⌈sim.ε / δ⌉₊ / (1 - sim.α)⌉₊⌉₊ + ↑⌈sim.η / δ⌉₊) → guardS u) →
+          ∀ {s₀ : S}, sim.Epoch (σ 0) s₀ → K (π s₀) → Becoming.Viability.Kernel P guardS s₀
+@Becoming.AlignmentReals.strict_margin_discretization_step : ∀ {S : Type u_1} {A : Type u_2} {Q : Type u_3}
+  {B : Type u_4} {P : Generative.Process S A} {R : Generative.Process Q B} {π : S → Q} {σ : ℕ → ℕ}
+  [inst : PseudoMetricSpace Q] (sim : Becoming.AlignmentReals.MetricLaxSim P R π σ) {R_tube : ℝ},
+  sim.β * (sim.ε / (1 - sim.α)) + sim.η < R_tube →
+    ∃ δ, 0 < δ ∧ δ * (↑⌈sim.β * ↑⌈↑⌈sim.ε / δ⌉₊ / (1 - sim.α)⌉₊⌉₊ + ↑⌈sim.η / δ⌉₊) ≤ R_tube
+@Becoming.AlignmentReals.metric_to_discrete_kernel_of_strict_margin : ∀ {S : Type u_1} {A : Type u_2} {Q : Type u_3}
+  {B : Type u_4} {P : Generative.Process S A} {R : Generative.Process Q B} {π : S → Q} {σ : ℕ → ℕ}
+  [inst : PseudoMetricSpace Q] (sim : Becoming.AlignmentReals.MetricLaxSim P R π σ) {R_tube : ℝ},
+  sim.β * (sim.ε / (1 - sim.α)) + sim.η < R_tube →
+    ∀ {guardQ K : Q → Prop} {guardS : S → Prop},
+      Becoming.Viability.Certificate R guardQ K →
+        (∀ (q : Q) (u : S), guardQ q → dist (π u) q ≤ R_tube → guardS u) →
+          ∀ {s₀ : S}, sim.Epoch (σ 0) s₀ → K (π s₀) → Becoming.Viability.Kernel P guardS s₀
+@Becoming.AlignmentReals.linear_fa_margin_shift : ∀ {d : ℕ} (φ_safe φ_warn : Fin d → ℝ) (η : ℝ) (δ : ℕ → ℝ)
+  (θ₀ : Fin d → ℝ) (t : ℕ),
+  Becoming.AlignmentReals.faSafeUpdate φ_safe η δ θ₀ t ⬝ᵥ φ_warn =
+    θ₀ ⬝ᵥ φ_warn + η * φ_safe ⬝ᵥ φ_warn * ∑ k ∈ Finset.range t, δ k
+@Becoming.AlignmentReals.linear_fa_tabular_invariant : ∀ {d : ℕ} (φ_safe φ_warn : Fin d → ℝ),
+  φ_safe ⬝ᵥ φ_warn = 0 →
+    ∀ (η : ℝ) (δ : ℕ → ℝ) (θ₀ : Fin d → ℝ) (t : ℕ),
+      Becoming.AlignmentReals.faSafeUpdate φ_safe η δ θ₀ t ⬝ᵥ φ_warn = θ₀ ⬝ᵥ φ_warn
+@Becoming.AlignmentReals.linear_fa_warn_eq : ∀ {d : ℕ} (φ_warn : Fin d → ℝ) (η : ℝ) (p : ℕ → ℝ) (θ_enter : Fin d → ℝ)
+  (m : ℕ),
+  Becoming.AlignmentReals.faWarnUpdate φ_warn η p θ_enter m ⬝ᵥ φ_warn =
+    θ_enter ⬝ᵥ φ_warn - η * φ_warn ⬝ᵥ φ_warn * ∑ k ∈ Finset.range m, p k
+@Becoming.AlignmentReals.linear_fa_warn_lower : ∀ {d : ℕ} (φ_warn : Fin d → ℝ) (η p_max : ℝ),
+  0 ≤ η →
+    ∀ (p : ℕ → ℝ),
+      (∀ (k : ℕ), p k ≤ p_max) →
+        ∀ (θ_enter : Fin d → ℝ) (m : ℕ),
+          θ_enter ⬝ᵥ φ_warn - ↑m * (η * p_max * φ_warn ⬝ᵥ φ_warn) ≤
+            Becoming.AlignmentReals.faWarnUpdate φ_warn η p θ_enter m ⬝ᵥ φ_warn
+@Becoming.AlignmentReals.linear_fa_leakage_hysteresis : ∀ {d : ℕ} (φ_safe φ_warn : Fin d → ℝ)
+  (η p_max v_rest d_agg d_rest R x_warn x_crit : ℝ),
+  0 ≤ η →
+    0 ≤ p_max →
+      ∀ (δ p : ℕ → ℝ),
+        (∀ (k : ℕ), p k ≤ p_max) →
+          ∀ (θ₀ : Fin d → ℝ) (T_safe M_delay : ℕ),
+            0 < M_delay →
+              (φ_safe ⬝ᵥ φ_warn = 0 →
+                  θ₀ ⬝ᵥ φ_warn ≤ v_rest →
+                    Becoming.AlignmentReals.faSafeUpdate φ_safe η δ θ₀ T_safe ⬝ᵥ φ_warn ≤ v_rest) ∧
+                (v_rest <
+                    θ₀ ⬝ᵥ φ_warn + η * φ_safe ⬝ᵥ φ_warn * ∑ k ∈ Finset.range T_safe, δ k -
+                      ↑(M_delay - 1) * (η * p_max * φ_warn ⬝ᵥ φ_warn) →
+                  have θ_enter := Becoming.AlignmentReals.faSafeUpdate φ_safe η δ θ₀ T_safe;
+                  (∀ m < M_delay, v_rest < Becoming.AlignmentReals.faWarnUpdate φ_warn η p θ_enter m ⬝ᵥ φ_warn) ∧
+                    (∀ m ≤ M_delay,
+                        Becoming.AlignmentReals.warnStock d_agg d_rest R φ_warn v_rest η p θ_enter x_warn m =
+                          x_warn - ↑m * (d_agg - R)) ∧
+                      (x_warn - x_crit < (d_agg - R) * ↑M_delay →
+                        Becoming.AlignmentReals.warnStock d_agg d_rest R φ_warn v_rest η p θ_enter x_warn M_delay <
+                          x_crit))
+Becoming.AlignmentReals.faG_rises : ∀ (i : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (Becoming.AlignmentReals.faG i)
+Becoming.AlignmentReals.faSafeSeq_coords : ∀ (t : ℕ),
+  Becoming.AlignmentReals.faSafeSeq t 0 = 1 - (17 / 20) ^ t ∧ Becoming.AlignmentReals.faSafeSeq t 1 = 0
+Becoming.AlignmentReals.faSafeSeq_eq_update : ∀ (t : ℕ),
+  Becoming.AlignmentReals.faSafeSeq t =
+    Becoming.AlignmentReals.faSafeUpdate ![1, 0] (3 / 20) (fun k => 1 - Becoming.AlignmentReals.faSafeSeq k ⬝ᵥ ![1, 0])
+      0 t
+Becoming.AlignmentReals.faThetaEnter_coords : Becoming.AlignmentReals.faThetaEnter 0 = 1 - (17 / 20) ^ 12 ∧
+  Becoming.AlignmentReals.faThetaEnter 1 = 0
+Becoming.AlignmentReals.faOpenLoop_coupled_warn_trace : ∀ m ≤ 18,
+  let L := fun x => Becoming.AlignmentReals.faOpenLoop ![1, 0] ![4 / 5, 3 / 5] (3 / 5) (3 / 20) (1 / 40);
+  have cert := fun x => Becoming.AlignmentReals.faCertCoupled Becoming.AlignmentReals.faThetaEnter ⋯ ⋯;
+  have P :=
+    Becoming.AdaptiveLoops.jointProcess [()] L cert Becoming.AlignmentReals.faObs Becoming.AlignmentReals.faChannel
+      Becoming.AlignmentReals.faG (fun x x_1 => 0) fun x => True;
+  ∃ st,
+    Generative.Trace P (fun x => 22, fun x => Becoming.AlignmentReals.faThetaEnter) (List.replicate m ((), fun x => ()))
+        st ∧
+      st.1 () = 22 - m ∧
+        st.2 () =
+          Becoming.AlignmentReals.faWarnUpdate ![4 / 5, 3 / 5] (3 / 20) (fun x => 1 / 40)
+            Becoming.AlignmentReals.faThetaEnter m
+Becoming.AlignmentReals.faWarn_coupled_score_gt : ∀ m < 18,
+  3 / 5 <
+    Becoming.AlignmentReals.faWarnUpdate ![4 / 5, 3 / 5] (3 / 20) (fun x => 1 / 40) Becoming.AlignmentReals.faThetaEnter
+        m ⬝ᵥ
+      ![4 / 5, 3 / 5]
+Becoming.AlignmentReals.any_cert_coupled_maxLag_ge_18 : ∀
+  (c :
+    Becoming.AdaptiveLoops.LoopCertificate
+      (Becoming.AlignmentReals.faOpenLoop ![1, 0] ![4 / 5, 3 / 5] (3 / 5) (3 / 20) (1 / 40))
+      Becoming.AlignmentReals.faThetaEnter),
+  c.tol (true, true) () → 18 ≤ c.maxLag
+Becoming.AlignmentReals.linear_fa_witness_rho_4_5 : (∀ (t : ℕ), Becoming.AlignmentReals.faSafeSeq t ⬝ᵥ ![0, 1] = 0) ∧
+  Becoming.Viability.Kernel
+      (Becoming.AdaptiveLoops.jointProcess [()]
+        (fun x => Becoming.AlignmentReals.faOpenLoop ![1, 0] ![0, 1] (3 / 5) (3 / 20) (1 / 40))
+        (fun x => Becoming.AlignmentReals.faCertZero Becoming.AlignmentReals.faThetaEnter ⋯)
+        Becoming.AlignmentReals.faObs Becoming.AlignmentReals.faChannel Becoming.AlignmentReals.faG (fun x x_1 => 0)
+        fun x => True)
+      (Becoming.AdaptiveLoops.jointGuard [()]
+        (fun x => Becoming.AlignmentReals.faOpenLoop ![1, 0] ![0, 1] (3 / 5) (3 / 20) (1 / 40))
+        (fun x => Becoming.AlignmentReals.faCertZero Becoming.AlignmentReals.faThetaEnter ⋯) fun x => 5)
+      (fun x => 22, fun x => Becoming.AlignmentReals.faThetaEnter) ∧
+    (Becoming.AlignmentReals.faThetaEnter ⬝ᵥ ![4 / 5, 3 / 5] = 4 / 5 * (1 - (17 / 20) ^ 12) ∧
+        ∀ m < 18,
+          3 / 5 <
+            Becoming.AlignmentReals.faWarnUpdate ![4 / 5, 3 / 5] (3 / 20) (fun x => 1 / 40)
+                Becoming.AlignmentReals.faThetaEnter m ⬝ᵥ
+              ![4 / 5, 3 / 5]) ∧
+      ¬Becoming.Viability.Kernel
+            (Becoming.AdaptiveLoops.jointProcess [()]
+              (fun x => Becoming.AlignmentReals.faOpenLoop ![1, 0] ![4 / 5, 3 / 5] (3 / 5) (3 / 20) (1 / 40))
+              (fun x => Becoming.AlignmentReals.faCertCoupled Becoming.AlignmentReals.faThetaEnter ⋯ ⋯)
+              Becoming.AlignmentReals.faObs Becoming.AlignmentReals.faChannel Becoming.AlignmentReals.faG
+              (fun x x_1 => 0) fun x => True)
+            (Becoming.AdaptiveLoops.jointGuard [()]
+              (fun x => Becoming.AlignmentReals.faOpenLoop ![1, 0] ![4 / 5, 3 / 5] (3 / 5) (3 / 20) (1 / 40))
+              (fun x => Becoming.AlignmentReals.faCertCoupled Becoming.AlignmentReals.faThetaEnter ⋯ ⋯) fun x => 5)
+            (fun x => 22, fun x => Becoming.AlignmentReals.faThetaEnter) ∧
+        (∀
+            (c :
+              Becoming.AdaptiveLoops.LoopCertificate
+                (Becoming.AlignmentReals.faOpenLoop ![1, 0] ![4 / 5, 3 / 5] (3 / 5) (3 / 20) (1 / 40))
+                Becoming.AlignmentReals.faThetaEnter),
+            c.tol (true, true) () → 18 ≤ c.maxLag) ∧
+          ∀ (maxLag : ℕ), 18 ≤ maxLag → ¬5 + (maxLag + 1) * 4 ≤ 23
