@@ -1,0 +1,209 @@
+{
+ "schema_version": 2,
+ "id": "dynamical-scope-and-reciprocal-stability",
+ "title": {
+  "en": "Dynamical scope selection, myopic invasion collapse, and reciprocal open-interface stability"
+ },
+ "kind": "theorem",
+ "status": "recorded-checked",
+ "family": "F01",
+ "reviewed_at_utc": "2026-11-23T18:12:27+00:00",
+ "statement": {
+  "en": "Isolated overdrawing narrow scopes exhaust coupled lineages while wide viable scopes persist with TransformsViably; open commons suffer myopic-invasion collapse until reciprocal Withholding and OpenComposition gates exclude defection without entailing an ethical 'ought'."
+ },
+ "laws": [
+  {
+   "en": "Metaethical boundary and weighting widening bridges: scopeLaw_readsOnlyDynamics, scopeLaw_admits_rival, scopeLaw_not_entails, and scopeLaw_cannot_entail_unrestricted prove no dynamical scope law entails Unrestricted significance; preCollapse_mixed_weighting, finiteHorizon_widens_weighting, and longHorizon_widens_weighting join to Weightings.",
+   "declarations": [
+    "Becoming.ScopeDynamics.scopeLaw_readsOnlyDynamics",
+    "Becoming.ScopeDynamics.scopeLaw_admits_rival",
+    "Becoming.ScopeDynamics.scopeLaw_not_entails",
+    "Becoming.ScopeDynamics.scopeLaw_cannot_entail_unrestricted",
+    "Becoming.ScopeDynamics.preCollapse_mixed_weighting",
+    "Becoming.ScopeDynamics.finiteHorizon_widens_weighting",
+    "Becoming.ScopeDynamics.longHorizon_widens_weighting"
+   ]
+  },
+  {
+   "en": "Mutual-fate viable scope selection: mutual_fate_selects_wide_scope proves narrow exhaustion kills substrate-coupled lineages (GroupEnding) while wide viable scope holds [S_safe, hi] and TransformsViably; MutualFateWitness realizes non-empty micro-turnover (gs = [[.m1]]) at step 1.",
+   "declarations": [
+    "Becoming.ScopeDynamics.MutualFateSystem",
+    "Becoming.ScopeDynamics.narrow_substrate_exhausts",
+    "Becoming.ScopeDynamics.narrow_lineage_ends_together",
+    "Becoming.ScopeDynamics.wide_substrate_holds",
+    "Becoming.ScopeDynamics.mutual_fate_selects_wide_scope",
+    "Becoming.ScopeDynamics.MutualFateWitness.witness_holds"
+   ]
+  },
+  {
+   "en": "Uncoordinated invasion vs. reciprocal gating: uncoordinated_myopic_invasion proves pre-collapse step/cumulative advantage for defectors alongside finite substrate collapse (contrasted with isolated_coop_would_persist), whereas reciprocal_coupling_stabilizes_scope couples gateOpen to Withholding.waitsAll, holding [S_safe, hi], TransformsViably, and flipping surplus in ReciprocalStabilityWitness (S₀ = 12).",
+   "declarations": [
+    "Becoming.ScopeDynamics.UncoordinatedCommons",
+    "Becoming.ScopeDynamics.uncoordinated_myopic_invasion",
+    "Becoming.ScopeDynamics.isolated_coop_would_persist",
+    "Becoming.ScopeDynamics.UncoordCommonsWitness.witness_holds",
+    "Becoming.ScopeDynamics.ReciprocalPoolSystem",
+    "Becoming.ScopeDynamics.reciprocal_coupling_stabilizes_scope",
+    "Becoming.ScopeDynamics.reciprocalGate_of_assumeGuarantee",
+    "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness_holds",
+    "Becoming.ScopeDynamics.uncoord_vs_reciprocal_contrast"
+   ]
+  },
+  {
+   "en": "Native L0 OpenComposition decomposition: reciprocal_open_compose_viable composes gatedDefectorComponent ⊕ coopComponent via compose_close_interchange (at poolAt13); reciprocal_defector_replace_viable and tighterGate_replace_witness swap gates via ContractRefines and replace_left_viable; blindDefector_vs_reciprocal_open joins to non-entailment.",
+   "declarations": [
+    "Becoming.ScopeDynamics.OpenCompositionBridge.coopComponent",
+    "Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorComponent",
+    "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_viable",
+    "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_poolAt13",
+    "Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorRefines",
+    "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_defector_replace_viable",
+    "Becoming.ScopeDynamics.OpenCompositionBridge.tighterGate_replace_witness",
+    "Becoming.ScopeDynamics.OpenCompositionBridge.blindDefector_vs_reciprocal_open"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "en": "No axiom. Requires isolated-pool g_short/g_long and lineage balance/dependence hypotheses for Theorem 1, uncoordinated overdraw vs. safe cooperator balance for Theorem 2, gateOpen_iff bi-directionally coupled to Withholding.waitsAll for Theorem 3, and gross_buffer + g_mono for the L0/AdaptiveLoops bridge."
+  }
+ ],
+ "does_not_show": [
+  {
+   "en": "Any external moral 'ought', impartial duty, or Unrestricted valuation derived from scope stability (scopeLaw_cannot_entail_unrestricted).",
+   "kind": "non-implication"
+  },
+  {
+   "en": "Elimination of pre-gate drawdown headroom needed while reciprocal gating takes T_gate steps to close.",
+   "kind": "scope"
+  }
+ ],
+ "counterexamples": [
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ScopeDynamics.lean",
+   "detail": {
+    "en": "MutualFateWitness.witness_holds: narrow pool crashes 9 → 5 → 0 ending coupled lineage [.m1] at step 2, whereas wide pool holds 9 ∈ [8, 12] with TransformsViably."
+   }
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ScopeDynamics.lean",
+   "detail": {
+    "en": "uncoord_vs_reciprocal_contrast and blindDefector_vs_reciprocal_open: at baseline d_coop = 2, d_def = 3, uncoordinated commons crashes 12 → 9 → 5 → 0 while reciprocal Withholding (S₀ = 12) and OpenComposition gatedDefector ⊕ coop (S₀ = 13) hold ≥ 8 forever."
+   }
+  }
+ ],
+ "standard_boundaries": [
+  "no-ethical-premise",
+  "no-evaluation",
+  "discrete-steps",
+  "formal-not-empirical",
+  "names-provisional",
+  "omission-not-refutation"
+ ],
+ "validation_scope": {
+  "en": "Machine-checked by Lean 4.29.1 checker (receipt 20261123T181227.411285Z): all 125 audited declarations (67 theorems, 0 private) compile from prelude with core_axioms: []; read-only audits by 696b7b9b (L3 body) and Verifier A (85624316, OpenCompositionBridge) PASS."
+ },
+ "next_delta": {
+  "en": "Wire ScopeDynamics mutual-fate and reciprocal exclusion gates with non-entailment into L5 AlignmentSpine."
+ },
+ "correspondence": {
+  "en": "Reading (AI-written): formalizes selective survival of wider scopes under mutual fate and why uncoordinated commons select myopic defectors until coupled reciprocal gating closes defection."
+ },
+ "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ScopeDynamics.lean",
+ "aliases": [
+  "Becoming.ScopeDynamics.scopeLaw_cannot_entail_unrestricted",
+  "Becoming.ScopeDynamics.mutual_fate_selects_wide_scope",
+  "Becoming.ScopeDynamics.uncoordinated_myopic_invasion",
+  "Becoming.ScopeDynamics.reciprocal_coupling_stabilizes_scope",
+  "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_viable",
+  "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_defector_replace_viable",
+  "Becoming.ScopeDynamics.OpenCompositionBridge.blindDefector_vs_reciprocal_open"
+ ],
+ "dependencies": [
+  {
+   "id": "open-interface-composition-and-replacement",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Reuses OpenComponent, InterfaceContract, composeContract, compose_close_interchange, ContractRefines, and replace_left_viable to compose and upgrade gatedDefectorComponent ⊕ coopComponent."
+   }
+  },
+  {
+   "id": "transformative-viability-order",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Reuses TransformativeViable and TransformsViably to certify non-stasis wide-scope and reciprocal continuation."
+   }
+  },
+  {
+   "id": "widening-as-what-every-positive-weighting-ranks",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Reuses Weighting and Web widening characterizations for preCollapse_mixed_weighting and horizon bridges."
+   }
+  }
+ ],
+ "related": [],
+ "references": [
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ScopeDynamics.lean",
+   "role": "proof",
+   "declarations": [
+    "Becoming.ScopeDynamics.scopeLaw_readsOnlyDynamics",
+    "Becoming.ScopeDynamics.scopeLaw_admits_rival",
+    "Becoming.ScopeDynamics.scopeLaw_not_entails",
+    "Becoming.ScopeDynamics.scopeLaw_cannot_entail_unrestricted",
+    "Becoming.ScopeDynamics.preCollapse_mixed_weighting",
+    "Becoming.ScopeDynamics.finiteHorizon_widens_weighting",
+    "Becoming.ScopeDynamics.longHorizon_widens_weighting",
+    "Becoming.ScopeDynamics.MutualFateSystem",
+    "Becoming.ScopeDynamics.narrow_substrate_exhausts",
+    "Becoming.ScopeDynamics.narrow_lineage_ends_together",
+    "Becoming.ScopeDynamics.wide_substrate_holds",
+    "Becoming.ScopeDynamics.mutual_fate_selects_wide_scope",
+    "Becoming.ScopeDynamics.MutualFateWitness.witness_holds",
+    "Becoming.ScopeDynamics.UncoordinatedCommons",
+    "Becoming.ScopeDynamics.uncoordinated_myopic_invasion",
+    "Becoming.ScopeDynamics.isolated_coop_would_persist",
+    "Becoming.ScopeDynamics.UncoordCommonsWitness.witness_holds",
+    "Becoming.ScopeDynamics.ReciprocalPoolSystem",
+    "Becoming.ScopeDynamics.reciprocal_coupling_stabilizes_scope",
+    "Becoming.ScopeDynamics.reciprocalGate_of_assumeGuarantee",
+    "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness_holds",
+    "Becoming.ScopeDynamics.uncoord_vs_reciprocal_contrast",
+    "Becoming.ScopeDynamics.OpenCompositionBridge.coopComponent",
+    "Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorComponent",
+    "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_viable",
+    "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_poolAt13",
+    "Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorRefines",
+    "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_defector_replace_viable",
+    "Becoming.ScopeDynamics.OpenCompositionBridge.tighterGate_replace_witness",
+    "Becoming.ScopeDynamics.OpenCompositionBridge.blindDefector_vs_reciprocal_open"
+   ],
+   "sha256": "6acaa6e3fdcea3fa756819811b08f73a649ec9a0389fec2d985996c6d8ab9cd5"
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T181227.411285Z/verification.json",
+   "role": "receipt",
+   "sha256": "d0187f5566c777ebe9f4b10530ef7db345c6fa54641435af5e1b7a960041ff9a"
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-wave2-l1-l4-2026-11-24/NOTE.md",
+   "role": "review",
+   "sha256": "163d524d4585da6a46ffd32f2fed5b5c06abe5bee8cdf781ea1384ed8456a674"
+  }
+ ],
+ "proof_bindings": [
+  {
+   "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ScopeDynamics.lean",
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T181227.411285Z/verification.json",
+   "sha256_pointer": "/source_sha256/Becoming.ScopeDynamics",
+   "success_pointer": "/status",
+   "success_value": "passed"
+  }
+ ],
+ "history": [
+  {
+   "en": "24 November 2026: added (Becoming.ScopeDynamics, L3) covering metaethical boundary weightings, mutual-fate viable scope selection, myopic invasion collapse, reciprocal Withholding stabilization, and native OpenComposition two-component decomposition/replacement. AI-written."
+  }
+ ]
+}

@@ -4,13 +4,13 @@
  "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
  "toolchain": "leanprover/lean4:v4.29.1",
  "printed_from": {
-  "commit": "887735b795e57fd843fb5e927109d513ee40aee4",
-  "core_run": "20261123T170322.365233Z"
+  "commit": "c8757c7b6817c7fdac22e669461528d2a0be8644",
+  "core_run": "20261123T181227.411285Z"
  },
- "core_sources_sha256": "6e82ddba53e19b281b707f2df4dc3bd40287c9e7205718ffa20514aa1935830f",
+ "core_sources_sha256": "1d1e0eec6158af80fde49ff11c900815cac905ad808092613e7fa58a246ffe4b",
  "modules": {
   "Becoming": {
-   "source_sha256": "12b0a678b6bbf035f1b60265195ec9ff5663bacac5c278b5099998610afa6436",
+   "source_sha256": "84648a9970ec61103cc18f1964c5113534ac5786b0c41333a1ec1d186635f553",
    "theorems": 0
   },
   "Becoming.Acceptance": {
@@ -376,6 +376,10 @@
   "Becoming.EdgeClosure": {
    "source_sha256": "bc67b6ed7e70a6c3cec89ed790d20fb6d29a1a305ef16c3f5a845fadffb65f3b",
    "theorems": 4
+  },
+  "Becoming.EndogenousTurning": {
+   "source_sha256": "f4343f78f657d1a646c4abff11b2eded3845698f53fce6127f5191f1cf0d0bfc",
+   "theorems": 89
   },
   "Becoming.Enough": {
    "source_sha256": "a8ff1be68d2d282631c49c9890b547b02633ccda7545a4fd0e18f1871ca23547",
@@ -1369,6 +1373,10 @@
    "source_sha256": "9248416b934c9d913594cc064153a6cccfb2261c22e1424f1a483d99f89f5dfc",
    "theorems": 88
   },
+  "Becoming.ScopeDynamics": {
+   "source_sha256": "6acaa6e3fdcea3fa756819811b08f73a649ec9a0389fec2d985996c6d8ab9cd5",
+   "theorems": 121
+  },
   "Becoming.ScopedReach": {
    "source_sha256": "0432efe6bf31ceff196a4d058a6b77710871ed130eb562dc0ad05d00a873e5ae",
    "theorems": 15
@@ -1585,6 +1593,10 @@
    "source_sha256": "40e3a36f79faf60560037490d9b849c89349ba9210c42d96fadcca0252004b7c",
    "theorems": 31
   },
+  "Becoming.UnifiedDrawdown": {
+   "source_sha256": "787ec07766b2425a774810b5d5f89fc908e2650e1bbb98b40589c9864dbfd0c0",
+   "theorems": 125
+  },
   "Becoming.UnitMatchings": {
    "source_sha256": "30c588c34bb20c10bb3579451fed4c32eb203cb161fcaa8b4cbb68aeb88e0ed3",
    "theorems": 20
@@ -1695,8 +1707,8 @@
   }
  },
  "counts": {
-  "modules": 421,
-  "theorems": 21238,
-  "uses_without_row": 22
+  "modules": 424,
+  "theorems": 21573,
+  "uses_without_row": 31
  }
 }

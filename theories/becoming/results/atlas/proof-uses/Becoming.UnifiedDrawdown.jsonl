@@ -1,0 +1,125 @@
+{"name": "Becoming.Flow.below_of_deficit_within", "uses": ["Becoming.Flow.deficit_bounded_prefix", "Becoming.Naturals.lt_of_add_lt_add_left"]}
+{"name": "Becoming.Flow.below_of_excess_within", "uses": ["Becoming.Flow.below_of_deficit_within"]}
+{"name": "Becoming.Flow.deficit_bounded_prefix", "uses": ["Becoming.Flow.deficit_lowers_at"]}
+{"name": "Becoming.Flow.deficit_bounded_within", "uses": ["Becoming.Flow.deficit_bounded_prefix", "Becoming.Naturals.add_sub_cancel_left", "Becoming.le_dest"]}
+{"name": "Becoming.Flow.deficit_lowers_at", "uses": ["Becoming.Flow.BalancesOn.over", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Flow.family_deficit_ends_within", "uses": ["Becoming.Flow.below_of_deficit_within", "Becoming.Flow.family_ends_below_at", "Becoming.Flow.family_stays_below_at"]}
+{"name": "Becoming.Flow.held_excess_ends_within", "uses": ["Becoming.Flow.below_of_deficit_within", "Becoming.Flow.deficit_bounded_within", "Becoming.Flow.family_deficit_ends_within", "Becoming.Flow.gate_single", "Becoming.Flow.held_draws", "Becoming.Flow.of_single", "Becoming.SupportGated.sub_pos_of_lt", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_le", "Becoming.total_split"]}
+{"name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle", "uses": ["Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_coarse_b_parity", "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_giving_fromNothing", "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_inv_goes", "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_inv_step", "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_needs", "Becoming.UnifiedDrawdown.cadence_erases_timely_recovery", "Becoming.UnifiedDrawdown.strobe_readAtSpanEnd", "Becoming.UnifiedDrawdown.strobe_readsAt"]}
+{"name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_coarse_b_parity", "uses": ["Becoming.Pace.paced_succ"]}
+{"name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_giving_fromNothing", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_inv_goes", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_inv_step", "uses": ["Becoming.Naturals.add_sub_cancel", "Becoming.Naturals.le_sub_of_add_le", "Becoming.Naturals.sub_add_cancel", "Becoming.le_dest"]}
+{"name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_needs", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG_rises", "uses": ["Becoming.UnifiedDrawdown.ltBool_false", "Becoming.UnifiedDrawdown.ltBool_true"]}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.threeAgentFleet_upgrade_viable", "uses": ["Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG_rises", "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.tightenA", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable"]}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.threeAgentFleet_viable", "uses": ["Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG_rises", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable"]}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.tightenA", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.twoAgentFleet_viable", "uses": ["Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG_rises", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable"]}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.witness_bundle", "uses": ["Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.threeAgentFleet_upgrade_viable", "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.threeAgentFleet_viable", "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.twoAgentFleet_viable"]}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens.lag_le", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens.maxSilence_le", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens.postCap_le", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens.preCap_le", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_eta_eq_max", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxLag_eq_max", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxSilence_eq_sum", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_postCapExt_eq_sum", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_preCapExt_eq_sum", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable", "uses": ["Becoming.OpenComposition.close_contract_kernel", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_eta_eq_max", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxLag_eq_max", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxSilence_eq_sum", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_postCapExt_eq_sum", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_preCapExt_eq_sum", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_warnObs_of_lt", "Becoming.Viability.Kernel.run"]}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable", "uses": ["Becoming.OpenComposition.replace_left_viable", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_eta_eq_max", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxLag_eq_max", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxSilence_eq_sum", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_postCapExt_eq_sum", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_preCapExt_eq_sum", "Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract_refines"]}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_warnObs_of_lt", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract_refines", "uses": ["Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens.lag_le", "Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens.maxSilence_le", "Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens.postCap_le", "Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens.preCap_le"]}
+{"name": "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.firstOverdraw_at_one", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving_fromNothing", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.needs", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.witness_bundle", "uses": ["Becoming.UnifiedDrawdown.OverdrawSeparationWitness.firstOverdraw_at_one", "Becoming.UnifiedDrawdown.line_overdraw_separation"]}
+{"name": "Becoming.UnifiedDrawdown.RestraintAgentSpec.postLePre", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.SpineHooks.JointDepletionBridge.collapsed", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.SpineHooks.JointDepletionBridge.level_below", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.SpineHooks.JointDepletionBridge.local_zero", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.SpineHooks.JointDepletionBridge.monotone_drain", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.SpineHooks.JointDepletionBridge.own_not_joint", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.SpineHooks.JointDepletionBridge.uncoupled", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.SpineHooks.PreOverdrawBridge.witness_no_global_balances", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.SpineHooks.PreOverdrawBridge.witness_step0_balanced", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.SpineHooks.PreOverdrawBridge.witness_step1_unbalanced", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.SpineHooks.PreOverdrawBridge.witness_stops", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.SpineHooks.TemporalAliasingSuite.cadence_coarse_collapses", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.SpineHooks.TemporalAliasingSuite.cadence_fine_viable", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.SpineHooks.TemporalAliasingSuite.strobe_span_end", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.SpineHooks.openFleetSummary", "uses": ["Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.witness_bundle"]}
+{"name": "Becoming.UnifiedDrawdown.SpineHooks.preOverdrawSummary", "uses": ["Becoming.UnifiedDrawdown.OverdrawSeparationWitness.witness_bundle"]}
+{"name": "Becoming.UnifiedDrawdown.SpineHooks.temporalAliasingSummary", "uses": ["Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle"]}
+{"name": "Becoming.UnifiedDrawdown.activeUnitWeb_dependent", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.cadence_erases_timely_recovery", "uses": ["Becoming.Pace.paced_succ", "Becoming.Pace.stays_turned", "Becoming.UnifiedDrawdown.line_excess_terminates_goes", "Becoming.le_dest"]}
+{"name": "Becoming.UnifiedDrawdown.cyclePair_spec", "uses": ["Becoming.UnifiedDrawdown.ltBool_false", "Becoming.UnifiedDrawdown.ltBool_true"]}
+{"name": "Becoming.UnifiedDrawdown.cycleRem_mul", "uses": ["Becoming.UnifiedDrawdown.cycleRem_mul_add"]}
+{"name": "Becoming.UnifiedDrawdown.cycleRem_mul_add", "uses": ["Becoming.UnifiedDrawdown.cyclePair_spec", "Becoming.UnifiedDrawdown.cycle_euclid_unique"]}
+{"name": "Becoming.UnifiedDrawdown.cycleRem_of_lt", "uses": ["Becoming.UnifiedDrawdown.cycleRem_mul_add"]}
+{"name": "Becoming.UnifiedDrawdown.cycleRem_self", "uses": ["Becoming.UnifiedDrawdown.cycleRem_mul"]}
+{"name": "Becoming.UnifiedDrawdown.cycle_euclid_unique", "uses": ["Becoming.add_right_cancel", "Becoming.le_dest"]}
+{"name": "Becoming.UnifiedDrawdown.cyclicCourse_frontier", "uses": ["Becoming.Optimum.Holding.logistic_valued", "Becoming.UnifiedDrawdown.cycleRem_of_lt", "Becoming.UnifiedDrawdown.cycleRem_self", "Becoming.UnifiedDrawdown.cyclicCourse_openCourse"]}
+{"name": "Becoming.UnifiedDrawdown.cyclicCourse_openCourse", "uses": ["Becoming.Optimum.Holding.logistic_valued", "Becoming.UnifiedDrawdown.cyclePair_spec", "Becoming.UnifiedDrawdown.ltBool_false"]}
+{"name": "Becoming.UnifiedDrawdown.dec_all_or_exists", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.exists_firstOverdraw", "uses": ["Becoming.first_of_decided"]}
+{"name": "Becoming.UnifiedDrawdown.firstApart_of_monitor", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.flick_eq_false_even", "uses": ["Becoming.Strobe.flick_even"]}
+{"name": "Becoming.UnifiedDrawdown.flick_eq_true_odd", "uses": ["Becoming.Strobe.flick_odd"]}
+{"name": "Becoming.UnifiedDrawdown.gated_one_of_fromNothing", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.heldPair_as_parametric_instance", "uses": ["Becoming.Flow.Acting.giversSupported", "Becoming.Flow.Balances.on", "Becoming.Optimum.HeldPair.acting", "Becoming.Optimum.HeldPair.alone", "Becoming.Optimum.HeldPair.apart", "Becoming.Optimum.HeldPair.balances", "Becoming.Optimum.HeldPair.dependent", "Becoming.Optimum.HeldPair.distinct", "Becoming.Optimum.HeldPair.gated", "Becoming.Optimum.HeldPair.held", "Becoming.Optimum.HeldPair.listed", "Becoming.Optimum.stock_eq_of_atSetPoint", "Becoming.UnifiedDrawdown.holdersOf_mem", "Becoming.UnifiedDrawdown.parametric_local_accounts_depletion"]}
+{"name": "Becoming.UnifiedDrawdown.holdersOf_mem", "uses": ["Becoming.UnifiedDrawdown.holdersOf_true_iff"]}
+{"name": "Becoming.UnifiedDrawdown.holdersOf_true_iff", "uses": ["Becoming.ListTests.any_true_iff"]}
+{"name": "Becoming.UnifiedDrawdown.lagDraw_one_of_lower", "uses": ["Becoming.UnifiedDrawdown.pacedCourse_span0_matches"]}
+{"name": "Becoming.UnifiedDrawdown.lineActiveWeb_dependent", "uses": ["Becoming.UnifiedDrawdown.activeUnitWeb_dependent"]}
+{"name": "Becoming.UnifiedDrawdown.line_below_of_excess_of_goes", "uses": ["Becoming.StockFlowBridge.line_taken_lt_of_goes", "Becoming.UnifiedDrawdown.line_below_of_excess_of_within"]}
+{"name": "Becoming.UnifiedDrawdown.line_below_of_excess_of_within", "uses": ["Becoming.Flow.below_of_excess_within", "Becoming.StockFlowBridge.line_balancesOn_of_within"]}
+{"name": "Becoming.UnifiedDrawdown.line_excess_terminates_goes", "uses": ["Becoming.LineOnAStock.mem_generation", "Becoming.Naturals.le_of_add_le_add_left", "Becoming.UnifiedDrawdown.line_below_of_excess_of_goes", "Becoming.le_dest"]}
+{"name": "Becoming.UnifiedDrawdown.line_family_excess_ends", "uses": ["Becoming.Flow.family_excess_ends_at", "Becoming.StockFlowBridge.line_balancesOn_of_within", "Becoming.UnifiedDrawdown.unit_giversSupported_of_gated"]}
+{"name": "Becoming.UnifiedDrawdown.line_family_excess_ends_one", "uses": ["Becoming.LineOnAStock.mem_generation", "Becoming.UnifiedDrawdown.gated_one_of_fromNothing", "Becoming.UnifiedDrawdown.line_family_excess_ends"]}
+{"name": "Becoming.UnifiedDrawdown.line_overdraw_separation", "uses": ["Becoming.UnifiedDrawdown.unit_overdraw_separation"]}
+{"name": "Becoming.UnifiedDrawdown.logistic_periodic_sampled_break_concealment", "uses": ["Becoming.Optimum.Holding.logistic_valued", "Becoming.UnifiedDrawdown.cycleRem_mul", "Becoming.UnifiedDrawdown.cycleRem_mul_add", "Becoming.UnifiedDrawdown.cyclicCourse_frontier", "Becoming.Web.sample_selects_alike_iff"]}
+{"name": "Becoming.UnifiedDrawdown.logistic_sampled_break_concealment", "uses": ["Becoming.Optimum.Holding.logistic_valued", "Becoming.Web.sample_selects_alike_iff"]}
+{"name": "Becoming.UnifiedDrawdown.lookupBy_eq_of_mem", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.ltBool_false", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.ltBool_true", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.mem_eraseOne_of_ne", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.mod2_cases", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.pacedCourse_ends_below_point_pub", "uses": ["Becoming.UnifiedDrawdown.pacedCourse_ends_step_pub"]}
+{"name": "Becoming.UnifiedDrawdown.pacedCourse_ends_step_pub", "uses": ["Becoming.LineOnAStock.step_lowers", "Becoming.UnifiedDrawdown.pacedCourse_step_level"]}
+{"name": "Becoming.UnifiedDrawdown.pacedCourse_envelope_upper", "uses": ["Becoming.Naturals.sub_antitone", "Becoming.UnifiedDrawdown.pacedCourse_step_level"]}
+{"name": "Becoming.UnifiedDrawdown.pacedCourse_span0_matches", "uses": ["Becoming.PacedStock.fineStep_orbit_snd", "Becoming.PacedStock.paced_block_transition", "Becoming.PacedStock.paced_held_on_span", "Becoming.span_mem"]}
+{"name": "Becoming.UnifiedDrawdown.pacedCourse_stays_below_aux", "uses": ["Becoming.LineOnAStock.step_lowers", "Becoming.UnifiedDrawdown.pacedCourse_step_level"]}
+{"name": "Becoming.UnifiedDrawdown.pacedCourse_stays_below_while_goes", "uses": ["Becoming.UnifiedDrawdown.pacedCourse_stays_below_aux", "Becoming.le_dest"]}
+{"name": "Becoming.UnifiedDrawdown.pacedCourse_step_level", "uses": ["Becoming.Pace.paced_succ"]}
+{"name": "Becoming.UnifiedDrawdown.parametric_local_accounts_depletion", "uses": ["Becoming.Flow.BalancesOn.over", "Becoming.Flow.held_draws", "Becoming.Flow.held_excess_ends_within", "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.chosen_minimizes", "Becoming.ListTests.find_none_iff", "Becoming.ListTests.find_some", "Becoming.ListTests.mem_of_find_some", "Becoming.Naturals.add_left_cancel", "Becoming.Naturals.add_sub_cancel", "Becoming.UnifiedDrawdown.holdersOf_mem", "Becoming.UnifiedDrawdown.holdersOf_true_iff", "Becoming.UnifiedDrawdown.lookupBy_eq_of_mem", "Becoming.UnifiedDrawdown.sumDraws_eq_total", "Becoming.UnifiedDrawdown.total_map_le", "Becoming.UnifiedDrawdown.total_only_eq", "Becoming.add_right_cancel", "Becoming.gap_self", "Becoming.total_add", "Becoming.total_congr", "Becoming.total_congr_on", "Becoming.total_le", "Becoming.total_split"]}
+{"name": "Becoming.UnifiedDrawdown.pooled_detects_before_collapse", "uses": ["Becoming.NoReturnAt.recoverable_iff", "Becoming.Web.member_separates_all", "Becoming.Web.readableInTime_iff", "Becoming.Web.too_late_of_alike"]}
+{"name": "Becoming.UnifiedDrawdown.pooled_restraint_restores_viability", "uses": ["Becoming.AdaptiveLoops.assume_guarantee_joint_viable", "Becoming.Viability.Certificate.kernel", "Becoming.Viability.Kernel.run"]}
+{"name": "Becoming.UnifiedDrawdown.restraint_adapter_restores_viability", "uses": ["Becoming.UnifiedDrawdown.pooled_restraint_restores_viability"]}
+{"name": "Becoming.UnifiedDrawdown.sampled_break_concealment", "uses": ["Becoming.Web.sample_selects_alike_iff"]}
+{"name": "Becoming.UnifiedDrawdown.sampled_deadline_impossibility", "uses": ["Becoming.NoReturnAt.recoverable_iff", "Becoming.UnifiedDrawdown.sampled_deadline_impossibility_at", "Becoming.Web.too_late_of_alike"]}
+{"name": "Becoming.UnifiedDrawdown.sampled_deadline_impossibility_at", "uses": ["Becoming.LineOnAStock.met_or_unmet", "Becoming.Naturals.lt_of_add_lt_add_left", "Becoming.RegimeMargin.falls_within", "Becoming.UnifiedDrawdown.dec_all_or_exists", "Becoming.UnifiedDrawdown.pacedCourse_ends_below_point_pub", "Becoming.UnifiedDrawdown.pacedCourse_envelope_upper", "Becoming.UnifiedDrawdown.pacedCourse_stays_below_while_goes", "Becoming.le_dest"]}
+{"name": "Becoming.UnifiedDrawdown.sampled_deadline_impossibility_lag1", "uses": ["Becoming.UnifiedDrawdown.lagDraw_one_of_lower", "Becoming.UnifiedDrawdown.sampled_deadline_impossibility_at"]}
+{"name": "Becoming.UnifiedDrawdown.sampled_recovery_hides_fragility", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.Naturals.lt_of_add_lt_add_left", "Becoming.Web.sample_selects_alike_iff", "Becoming.le_dest"]}
+{"name": "Becoming.UnifiedDrawdown.sigmaOdd_strict", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.strobe_readAtSpanEnd", "uses": ["Becoming.Naturals.ne_of_lt", "Becoming.Strobe.flick_even", "Becoming.Strobe.flick_odd"]}
+{"name": "Becoming.UnifiedDrawdown.strobe_readsAt", "uses": ["Becoming.Strobe.flick_even", "Becoming.Strobe.flick_odd", "Becoming.UnifiedDrawdown.mod2_cases"]}
+{"name": "Becoming.UnifiedDrawdown.strobe_schedule_erases_window", "uses": ["Becoming.ReadingSchedule.keeps_iff_within", "Becoming.ReadingSchedule.keeps_of_within", "Becoming.Strobe.flick_even", "Becoming.Strobe.flick_odd", "Becoming.UnifiedDrawdown.strobe_readsAt"]}
+{"name": "Becoming.UnifiedDrawdown.sumDraws_eq_total", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.total_eraseOne", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.total_map_le", "uses": ["Becoming.UnifiedDrawdown.mem_eraseOne_of_ne", "Becoming.UnifiedDrawdown.total_eraseOne"]}
+{"name": "Becoming.UnifiedDrawdown.total_only_eq", "uses": ["Becoming.Optimum.total_le_of_only", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.UnifiedDrawdown.unifiedDrawdown_not_entails", "uses": ["Becoming.ReadsOnlyDynamics.not_entails", "Becoming.UnifiedDrawdown.unifiedDrawdown_readsOnlyDynamics"]}
+{"name": "Becoming.UnifiedDrawdown.unifiedDrawdown_readsOnlyDynamics", "uses": ["Becoming.readsOnlyDynamics_of"]}
+{"name": "Becoming.UnifiedDrawdown.unit_balancesOn_iff_le", "uses": ["Becoming.StockFlowBridge.unitBalancesOn_of_le", "Becoming.StockFlowBridge.unitFlow_given", "Becoming.StockFlowBridge.unitFlow_taken", "Becoming.add_right_cancel"]}
+{"name": "Becoming.UnifiedDrawdown.unit_giversSupported_of_gated", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.unit_overdraw_separation", "uses": ["Becoming.Flow.Balances.on", "Becoming.StockFlowBridge.unitFlow_given", "Becoming.StockFlowBridge.unitFlow_taken", "Becoming.SupportGated.sub_pos_of_lt", "Becoming.UnifiedDrawdown.unit_balancesOn_iff_le", "Becoming.add_sub_of_le", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge", "uses": ["Becoming.NoReturnAt.recoverable_iff", "Becoming.PacedStock.unrecoverable_cadence_impossibility", "Becoming.Web.too_late_of_alike"]}
+{"name": "Becoming.UnifiedDrawdown.wayActiveWeb_dependent", "uses": ["Becoming.UnifiedDrawdown.activeUnitWeb_dependent"]}
+{"name": "Becoming.UnifiedDrawdown.way_below_of_excess_of_goes", "uses": ["Becoming.StockFlowBridge.way_taken_lt_of_goes", "Becoming.UnifiedDrawdown.way_below_of_excess_of_within"]}
+{"name": "Becoming.UnifiedDrawdown.way_below_of_excess_of_within", "uses": ["Becoming.Flow.below_of_excess_within", "Becoming.StockFlowBridge.way_balancesOn_of_within"]}
+{"name": "Becoming.UnifiedDrawdown.way_excess_terminates_goes", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.UnifiedDrawdown.way_below_of_excess_of_goes", "Becoming.WayUnderARule.reachUnit_course", "Becoming.le_dest"]}
+{"name": "Becoming.UnifiedDrawdown.way_family_excess_ends", "uses": ["Becoming.Flow.family_excess_ends_at", "Becoming.StockFlowBridge.way_balancesOn_of_within", "Becoming.UnifiedDrawdown.unit_giversSupported_of_gated"]}
+{"name": "Becoming.UnifiedDrawdown.way_family_excess_ends_one", "uses": ["Becoming.UnifiedDrawdown.gated_one_of_fromNothing", "Becoming.UnifiedDrawdown.way_family_excess_ends", "Becoming.WayUnderARule.reachUnit_course"]}
+{"name": "Becoming.UnifiedDrawdown.way_overdraw_separation", "uses": ["Becoming.UnifiedDrawdown.unit_overdraw_separation"]}
+{"name": "Becoming.UnifiedDrawdown.witnessed_dynamics_not_entails", "uses": ["Becoming.Optimum.HeldPair.within", "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle", "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.witness_bundle", "Becoming.UnifiedDrawdown.unifiedDrawdown_not_entails"]}

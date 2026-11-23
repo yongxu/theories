@@ -1,0 +1,205 @@
+{
+ "schema_version": 2,
+ "id": "continuous-stochastic-alignment-reals",
+ "title": {
+  "en": "Continuous and stochastic alignment realizations over Mathlib reals"
+ },
+ "kind": "theorem",
+ "status": "recorded-checked",
+ "family": "F01",
+ "reviewed_at_utc": "2026-11-23T18:13:21+00:00",
+ "statement": {
+  "en": "In the Mathlib periphery over ℝ, exponential policy inertia, finite-distribution stochastic delay shocks, pseudo-metric LaxSim contraction tubes, and linear-FA feature leakage quantifiably tighten safety margins and couple into core PacedStock, MultiScaleViability, and AdaptiveLoops theorems."
+ },
+ "laws": [
+  {
+   "en": "Policy inertia lag headroom penalty: inertia_stock_closed_form and inertia_lag_headroom_penalty add the exact penalty ((1 - α)/α) * (H₁ - H₂) to viable initial stock bounds and prove finite-step breach under strict inequality, contrasting Pace's noiseless feasibility window in inertia_lag_contrasts_pace_window and inertia_witness_phase2 (α = 1/8, x₀ = 27 vs. 39).",
+   "declarations": [
+    "Becoming.AlignmentReals.inertia_error_closed_form",
+    "Becoming.AlignmentReals.inertia_stock_closed_form",
+    "Becoming.AlignmentReals.inertia_excess_draw_lt",
+    "Becoming.AlignmentReals.inertia_lag_headroom_penalty",
+    "Becoming.AlignmentReals.inertia_lag_contrasts_pace_window",
+    "Becoming.AlignmentReals.inertia_witness_phase2"
+   ]
+  },
+  {
+   "en": "Stochastic delay and demand-shock survival bounds: Markov survival sufficiency and reverse-Markov upper bounds pair with product-Bernoulli survival recurrence survProb and core PacedStock / RegimeMargin collapses on realizations past 2 * N - 1 or headroom, realized at N=3, B=24 in stochastic_spike_witness_phase2 and stochastic_delay_witness_phase2.",
+   "declarations": [
+    "Becoming.AlignmentReals.survProb",
+    "Becoming.AlignmentReals.stochastic_delay_survival_bound",
+    "Becoming.AlignmentReals.stochastic_spike_witness_phase2",
+    "Becoming.AlignmentReals.stochastic_delay_witness_phase2"
+   ]
+  },
+  {
+   "en": "Metric LaxSim contraction tube and strict-margin discretization: MetricLaxSim certifies uniform invariant Viability.Kernel at radius β * max d₀ (ε / (1 - α)) + η and discretizes strictly widening margins R_tube > β * (ε / (1 - α)) + η via δ > 0 directly into Becoming.lax_kernel_of_certificate.",
+   "declarations": [
+    "Becoming.AlignmentReals.MetricLaxSim",
+    "Becoming.AlignmentReals.metric_laxSim_contraction_tube",
+    "Becoming.AlignmentReals.metric_to_discrete_kernel",
+    "Becoming.AlignmentReals.metric_to_discrete_kernel_of_strict_margin"
+   ]
+  },
+  {
+   "en": "Linear FA feature-leakage hysteresis and OpenLoop coupling: linear_fa_leakage_hysteresis forces M_delay aggressive steps below x_crit; faOpenLoop joins into AdaptiveLoops.jointProcess, contrasting ρ = 0 kernel viability against ρ = 4/5 failure at step 18 and forcing 18 ≤ maxLag for any tol-(true,true) LoopCertificate in linear_fa_witness_rho_4_5.",
+   "declarations": [
+    "Becoming.AlignmentReals.linear_fa_margin_shift",
+    "Becoming.AlignmentReals.linear_fa_tabular_invariant",
+    "Becoming.AlignmentReals.linear_fa_warn_lower",
+    "Becoming.AlignmentReals.linear_fa_leakage_hysteresis",
+    "Becoming.AlignmentReals.faOpenLoop",
+    "Becoming.AlignmentReals.faOpenLoop_coupled_warn_trace",
+    "Becoming.AlignmentReals.any_cert_coupled_maxLag_ge_18",
+    "Becoming.AlignmentReals.linear_fa_witness_rho_4_5"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "en": "Mathlib periphery (leanprover/lean4:v4.30.0-rc2, Mathlib ea11ccc0, standard axioms only, excluded from core). Requires 0 < α < 1 for inertia, finite laws with 0 < δ and 2 * N - 1 bounds for delay, PseudoMetricSpace (0 ≤ α < 1, 1 ≤ β) for MetricLaxSim, and explicit M_delay / leakage ρ hypotheses."
+  }
+ ],
+ "does_not_show": [
+  {
+   "en": "Universal real-valued alignment beyond the modeled inertia, finite-law Markov/Bernoulli, pseudo-metric contraction, and linear feature-leakage regimes.",
+   "kind": "scope"
+  },
+  {
+   "en": "Continuous-time PDEs/SDEs or infinite-dimensional function spaces outside discrete-step ℝ realizations.",
+   "kind": "scope"
+  }
+ ],
+ "counterexamples": [
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean",
+   "detail": {
+    "en": "inertia_witness_phase2: while discrete Pace p2Course holds at 9 ≥ 3 from x₀ = 27, α = 1/8 policy inertia dips to 58035/32768 < 3 at t = 10 and < 0 by t = 12, requiring x₀ = 39 to preserve ≥ 3."
+   }
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean",
+   "detail": {
+    "en": "stochastic_spike_witness_phase2 & stochastic_delay_witness_phase2: at x₀ = 27 and p = 3/10, binomial 2-spike survival drops to 20923/25000 < 1, and under E[3*D] = 45/4 ≤ 24 survival is 3/4 < 1 with < 3 failure."
+   }
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean",
+   "detail": {
+    "en": "linear_fa_witness_rho_4_5: ρ = 0 yields AdaptiveLoops Viability.Kernel from x = 22, whereas ρ = 4/5 drives st.1 () = 4 < 5 by step 18 and forces 18 ≤ maxLag for every tol-(true,true) LoopCertificate."
+   }
+  }
+ ],
+ "standard_boundaries": [
+  "no-ethical-premise",
+  "no-evaluation",
+  "discrete-steps",
+  "formal-not-empirical",
+  "names-provisional",
+  "omission-not-refutation"
+ ],
+ "validation_scope": {
+  "en": "Machine-checked by check_alignment_reals.py under leanprover/lean4:v4.30.0-rc2 and pinned Mathlib (receipt 20261123T181321.317303Z): all 94 audited declarations (60 theorems, 0 private) depend only on standard axioms [Classical.choice, Quot.sound, propext], excluded from core closure; read-only audit by Verifier B (ce1275c4) PASS."
+ },
+ "next_delta": {
+  "en": "Bind Phase 2 CPU empirical stress tests directly against L4 periphery theorems in the alignment map."
+ },
+ "correspondence": {
+  "en": "Reading (AI-written): formalizes in Mathlib ℝ the exact quantitative penalties (inertia headroom, heavy-tail/binomial delay variance, metric contraction radius, and feature-leakage aliasing lag) observed in continuous/stochastic neural testbeds."
+ },
+ "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean",
+ "aliases": [
+  "Becoming.AlignmentReals.inertia_lag_headroom_penalty",
+  "Becoming.AlignmentReals.inertia_witness_phase2",
+  "Becoming.AlignmentReals.stochastic_delay_survival_bound",
+  "Becoming.AlignmentReals.metric_laxSim_contraction_tube",
+  "Becoming.AlignmentReals.metric_to_discrete_kernel_of_strict_margin",
+  "Becoming.AlignmentReals.linear_fa_leakage_hysteresis",
+  "Becoming.AlignmentReals.linear_fa_witness_rho_4_5"
+ ],
+ "dependencies": [
+  {
+   "id": "paced-stock-and-cadence-margin-sandwich",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Bridges continuous inertia lag and stochastic delay realizations directly to PacedStock pace_margin_feasibility_window and unrecoverable_cadence_impossibility."
+   }
+  },
+  {
+   "id": "lax-multi-scale-viability",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Discretizes MetricLaxSim directly into MultiScaleViability lax_kernel_of_certificate."
+   }
+  },
+  {
+   "id": "coupled-adaptive-loops-and-race",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Embeds linear FA hysteresis directly as an AdaptiveLoops.OpenLoop and invoke assume_guarantee_joint_kernel."
+   }
+  }
+ ],
+ "related": [],
+ "references": [
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean",
+   "role": "proof",
+   "declarations": [
+    "Becoming.AlignmentReals.inertia_error_closed_form",
+    "Becoming.AlignmentReals.inertia_stock_closed_form",
+    "Becoming.AlignmentReals.inertia_excess_draw_lt",
+    "Becoming.AlignmentReals.inertia_lag_headroom_penalty",
+    "Becoming.AlignmentReals.inertia_lag_contrasts_pace_window",
+    "Becoming.AlignmentReals.inertia_witness_phase2",
+    "Becoming.AlignmentReals.survProb",
+    "Becoming.AlignmentReals.stochastic_delay_survival_bound",
+    "Becoming.AlignmentReals.stochastic_spike_witness_phase2",
+    "Becoming.AlignmentReals.stochastic_delay_witness_phase2",
+    "Becoming.AlignmentReals.MetricLaxSim",
+    "Becoming.AlignmentReals.metric_laxSim_contraction_tube",
+    "Becoming.AlignmentReals.metric_to_discrete_kernel",
+    "Becoming.AlignmentReals.metric_to_discrete_kernel_of_strict_margin",
+    "Becoming.AlignmentReals.linear_fa_margin_shift",
+    "Becoming.AlignmentReals.linear_fa_tabular_invariant",
+    "Becoming.AlignmentReals.linear_fa_warn_lower",
+    "Becoming.AlignmentReals.linear_fa_leakage_hysteresis",
+    "Becoming.AlignmentReals.faOpenLoop",
+    "Becoming.AlignmentReals.faOpenLoop_coupled_warn_trace",
+    "Becoming.AlignmentReals.any_cert_coupled_maxLag_ge_18",
+    "Becoming.AlignmentReals.linear_fa_witness_rho_4_5"
+   ],
+   "sha256": "aa70422f75417a56c2e23fb30009dd304395ce4f012fb2aa53a7096b53c08275"
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/check_alignment_reals.py",
+   "role": "integration",
+   "sha256": "de80b15f68e04820ac80a2bf742c61db3f7a41baca16ce3d8669f50e24883ae2"
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/alignment-reals-checks/20261123T181321.317303Z/verification.json",
+   "role": "receipt",
+   "sha256": "776ecab0a8bd51630326979f8798da1ecd0c5a5b46bb1fadcde569e44123b64c",
+   "declarations": []
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-wave2-l1-l4-2026-11-24/NOTE.md",
+   "role": "review",
+   "sha256": "163d524d4585da6a46ffd32f2fed5b5c06abe5bee8cdf781ea1384ed8456a674"
+  }
+ ],
+ "proof_bindings": [
+  {
+   "source": "experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean",
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/alignment-reals-checks/20261123T181321.317303Z/verification.json",
+   "sha256_pointer": "/source_sha256/AlignmentReals",
+   "success_pointer": "/status",
+   "success_value": "passed"
+  }
+ ],
+ "history": [
+  {
+   "en": "24 November 2026: added (AlignmentReals, L4 Mathlib periphery) proving inertia lag headroom penalties, finite-distribution delay survival bounds, metric LaxSim contraction tubes and discretization, and linear FA feature-leakage hysteresis over ℝ. AI-written."
+  }
+ ]
+}

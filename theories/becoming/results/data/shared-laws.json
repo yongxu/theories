@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261123T170322.365233Z",
- "core_sources_sha256": "6e82ddba53e19b281b707f2df4dc3bd40287c9e7205718ffa20514aa1935830f",
+ "core_receipt": "20261123T181227.411285Z",
+ "core_sources_sha256": "1d1e0eec6158af80fde49ff11c900815cac905ad808092613e7fa58a246ffe4b",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,19 +58,19 @@
   ]
  },
  "counts": {
-  "laws": 4456,
+  "laws": 4473,
   "no_declarations": 9,
-  "outside": 391,
-  "grammar": 1091,
-  "balance, represented": 639,
-  "anchor, not reached": 135,
+  "outside": 395,
+  "grammar": 1100,
+  "balance, represented": 642,
+  "anchor, not reached": 136,
   "no shared law": 2191,
   "vocabulary_only": 106,
-  "closure": 599,
-  "balance": 910,
-  "return": 255,
-  "lumping": 94,
-  "order": 107
+  "closure": 608,
+  "balance": 920,
+  "return": 256,
+  "lumping": 95,
+  "order": 109
  },
  "counts_at_model": {
   "laws": 23,
@@ -13765,6 +13765,80 @@
     "dependence": "balance, represented"
    }
   ],
+  "continuous-stochastic-alignment-reals": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.AlignmentReals.inertia_error_closed_form",
+     "Becoming.AlignmentReals.inertia_stock_closed_form",
+     "Becoming.AlignmentReals.inertia_excess_draw_lt",
+     "Becoming.AlignmentReals.inertia_lag_headroom_penalty",
+     "Becoming.AlignmentReals.inertia_lag_contrasts_pace_window",
+     "Becoming.AlignmentReals.inertia_witness_phase2"
+    ],
+    "outside": [
+     "Becoming.AlignmentReals.inertia_error_closed_form",
+     "Becoming.AlignmentReals.inertia_stock_closed_form",
+     "Becoming.AlignmentReals.inertia_excess_draw_lt",
+     "Becoming.AlignmentReals.inertia_lag_headroom_penalty",
+     "Becoming.AlignmentReals.inertia_lag_contrasts_pace_window",
+     "Becoming.AlignmentReals.inertia_witness_phase2"
+    ]
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.AlignmentReals.survProb",
+     "Becoming.AlignmentReals.stochastic_delay_survival_bound",
+     "Becoming.AlignmentReals.stochastic_spike_witness_phase2",
+     "Becoming.AlignmentReals.stochastic_delay_witness_phase2"
+    ],
+    "outside": [
+     "Becoming.AlignmentReals.survProb",
+     "Becoming.AlignmentReals.stochastic_delay_survival_bound",
+     "Becoming.AlignmentReals.stochastic_spike_witness_phase2",
+     "Becoming.AlignmentReals.stochastic_delay_witness_phase2"
+    ]
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.AlignmentReals.MetricLaxSim",
+     "Becoming.AlignmentReals.metric_laxSim_contraction_tube",
+     "Becoming.AlignmentReals.metric_to_discrete_kernel",
+     "Becoming.AlignmentReals.metric_to_discrete_kernel_of_strict_margin"
+    ],
+    "outside": [
+     "Becoming.AlignmentReals.MetricLaxSim",
+     "Becoming.AlignmentReals.metric_laxSim_contraction_tube",
+     "Becoming.AlignmentReals.metric_to_discrete_kernel",
+     "Becoming.AlignmentReals.metric_to_discrete_kernel_of_strict_margin"
+    ]
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.AlignmentReals.linear_fa_margin_shift",
+     "Becoming.AlignmentReals.linear_fa_tabular_invariant",
+     "Becoming.AlignmentReals.linear_fa_warn_lower",
+     "Becoming.AlignmentReals.linear_fa_leakage_hysteresis",
+     "Becoming.AlignmentReals.faOpenLoop",
+     "Becoming.AlignmentReals.faOpenLoop_coupled_warn_trace",
+     "Becoming.AlignmentReals.any_cert_coupled_maxLag_ge_18",
+     "Becoming.AlignmentReals.linear_fa_witness_rho_4_5"
+    ],
+    "outside": [
+     "Becoming.AlignmentReals.linear_fa_margin_shift",
+     "Becoming.AlignmentReals.linear_fa_tabular_invariant",
+     "Becoming.AlignmentReals.linear_fa_warn_lower",
+     "Becoming.AlignmentReals.linear_fa_leakage_hysteresis",
+     "Becoming.AlignmentReals.faOpenLoop",
+     "Becoming.AlignmentReals.faOpenLoop_coupled_warn_trace",
+     "Becoming.AlignmentReals.any_cert_coupled_maxLag_ge_18",
+     "Becoming.AlignmentReals.linear_fa_witness_rho_4_5"
+    ]
+   }
+  ],
   "continuous-time-as-tower": [
    {
     "law": 1,
@@ -17048,6 +17122,80 @@
     "dependence": "no shared law"
    }
   ],
+  "dynamical-scope-and-reciprocal-stability": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.ScopeDynamics.scopeLaw_readsOnlyDynamics",
+     "Becoming.ScopeDynamics.scopeLaw_admits_rival",
+     "Becoming.ScopeDynamics.scopeLaw_not_entails",
+     "Becoming.ScopeDynamics.scopeLaw_cannot_entail_unrestricted",
+     "Becoming.ScopeDynamics.preCollapse_mixed_weighting",
+     "Becoming.ScopeDynamics.finiteHorizon_widens_weighting",
+     "Becoming.ScopeDynamics.longHorizon_widens_weighting"
+    ],
+    "shared_laws": [
+     "order"
+    ],
+    "grammar": false,
+    "dependence": "anchor, not reached"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.ScopeDynamics.MutualFateSystem",
+     "Becoming.ScopeDynamics.narrow_substrate_exhausts",
+     "Becoming.ScopeDynamics.narrow_lineage_ends_together",
+     "Becoming.ScopeDynamics.wide_substrate_holds",
+     "Becoming.ScopeDynamics.mutual_fate_selects_wide_scope",
+     "Becoming.ScopeDynamics.MutualFateWitness.witness_holds"
+    ],
+    "shared_laws": [
+     "balance",
+     "order"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.ScopeDynamics.UncoordinatedCommons",
+     "Becoming.ScopeDynamics.uncoordinated_myopic_invasion",
+     "Becoming.ScopeDynamics.isolated_coop_would_persist",
+     "Becoming.ScopeDynamics.UncoordCommonsWitness.witness_holds",
+     "Becoming.ScopeDynamics.ReciprocalPoolSystem",
+     "Becoming.ScopeDynamics.reciprocal_coupling_stabilizes_scope",
+     "Becoming.ScopeDynamics.reciprocalGate_of_assumeGuarantee",
+     "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness_holds",
+     "Becoming.ScopeDynamics.uncoord_vs_reciprocal_contrast"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.ScopeDynamics.OpenCompositionBridge.coopComponent",
+     "Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorComponent",
+     "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_viable",
+     "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_poolAt13",
+     "Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorRefines",
+     "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_defector_replace_viable",
+     "Becoming.ScopeDynamics.OpenCompositionBridge.tighterGate_replace_witness",
+     "Becoming.ScopeDynamics.OpenCompositionBridge.blindDefector_vs_reciprocal_open"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "effective-capacity-and-eventual-reachability": [
    {
     "law": 1,
@@ -17639,6 +17787,84 @@
      "Becoming.LineageDrawdown.Drain.renewer_goes_on_outside"
     ],
     "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
+  "endogenous-turning-and-clearing-margin": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.EndogenousTurning.pre_overdraw_flow_conservation",
+     "Becoming.EndogenousTurning.safe_regime_step_viable",
+     "Becoming.EndogenousTurning.flow_proxy_optimum_collapse",
+     "Becoming.EndogenousTurning.optimum_forces_overdraw",
+     "Becoming.EndogenousTurning.proxy_optimum_overdraw_collapse",
+     "Becoming.EndogenousTurning.constrained_selector_viable",
+     "Becoming.EndogenousTurning.PartAWitness.unconstrained_collapses",
+     "Becoming.EndogenousTurning.PartAWitness.constrained_survives"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.EndogenousTurning.ServiceTaskModel",
+     "Becoming.EndogenousTurning.ServiceTaskModel.B_task",
+     "Becoming.EndogenousTurning.ServiceTaskModel.score_crosses_iff",
+     "Becoming.EndogenousTurning.ServiceTaskModel.ext_preferred_above",
+     "Becoming.EndogenousTurning.ServiceTaskModel.safe_not_preferred_from_B_task",
+     "Becoming.EndogenousTurning.endogenous_turning_kernel",
+     "Becoming.EndogenousTurning.ofServiceTask_viable",
+     "Becoming.EndogenousTurning.pooled_service_turning_viable",
+     "Becoming.EndogenousTurning.PooledClearing.pooled_clearing_turning",
+     "Becoming.EndogenousTurning.PooledClearing.unpooled_clearer_blind"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.EndogenousTurning.epistemic_silence_late_bottleneck",
+     "Becoming.EndogenousTurning.service_saturated_below_noReturn_silenced",
+     "Becoming.EndogenousTurning.epistemic_silence_masked_unread",
+     "Becoming.EndogenousTurning.epistemic_silence_cascade",
+     "Becoming.EndogenousTurning.TurningWitness.timely_survives",
+     "Becoming.EndogenousTurning.TurningWitness.late_collapses",
+     "Becoming.EndogenousTurning.TurningWitness.cascade_collapses"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance",
+     "lumping"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.EndogenousTurning.OpenCompositionBridge.proxyComponent",
+     "Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerComponent",
+     "Becoming.EndogenousTurning.OpenCompositionBridge.pooled_clearing_open_compose_viable",
+     "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_partner_reconfig_viable",
+     "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfig_witness_viable",
+     "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_widening_heals_blindness",
+     "Becoming.EndogenousTurning.OpenCompositionBridge.widening_heals_witness"
+    ],
+    "shared_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -57515,6 +57741,102 @@
     "dependence": "no shared law"
    }
   ],
+  "unified-drawdown-overdraw-and-aliasing": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.UnifiedDrawdown.parametric_local_accounts_depletion",
+     "Becoming.UnifiedDrawdown.heldPair_as_parametric_instance",
+     "Becoming.UnifiedDrawdown.pooled_detects_before_collapse",
+     "Becoming.UnifiedDrawdown.RestraintAgentSpec",
+     "Becoming.UnifiedDrawdown.restraintLoop",
+     "Becoming.UnifiedDrawdown.restraintCert",
+     "Becoming.UnifiedDrawdown.pooled_restraint_restores_viability",
+     "Becoming.UnifiedDrawdown.restraint_adapter_restores_viability"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintComponent",
+     "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent",
+     "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract",
+     "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_preCapExt_eq_sum",
+     "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_postCapExt_eq_sum",
+     "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxLag_eq_max",
+     "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable",
+     "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable",
+     "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.witness_bundle",
+     "Becoming.UnifiedDrawdown.SpineHooks.openFleetSummary"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.UnifiedDrawdown.line_below_of_excess_of_within",
+     "Becoming.UnifiedDrawdown.line_below_of_excess_of_goes",
+     "Becoming.UnifiedDrawdown.way_below_of_excess_of_within",
+     "Becoming.UnifiedDrawdown.way_below_of_excess_of_goes",
+     "Becoming.UnifiedDrawdown.line_excess_terminates_goes",
+     "Becoming.UnifiedDrawdown.way_excess_terminates_goes",
+     "Becoming.UnifiedDrawdown.unit_balancesOn_iff_le",
+     "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.firstOverdraw_at_one",
+     "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.witness_bundle",
+     "Becoming.UnifiedDrawdown.SpineHooks.preOverdrawSummary"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.UnifiedDrawdown.sampled_break_concealment",
+     "Becoming.UnifiedDrawdown.logistic_sampled_break_concealment",
+     "Becoming.UnifiedDrawdown.logistic_periodic_sampled_break_concealment",
+     "Becoming.UnifiedDrawdown.sampled_recovery_hides_fragility",
+     "Becoming.UnifiedDrawdown.cadence_erases_timely_recovery",
+     "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle",
+     "Becoming.UnifiedDrawdown.sampled_deadline_impossibility",
+     "Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge",
+     "Becoming.UnifiedDrawdown.SpineHooks.temporalAliasingSummary"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance",
+     "return"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.UnifiedDrawdown.unifiedDrawdown_readsOnlyDynamics",
+     "Becoming.UnifiedDrawdown.unifiedDrawdown_not_entails",
+     "Becoming.UnifiedDrawdown.witnessed_dynamics_not_entails"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "unity-of-readings": [
    {
     "law": 1,
@@ -68574,7 +68896,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "871f3508811eeb52ad051cfa985d550359e7047ae0dea0ed5eafc760d6c75190",
+   "modules_sha256": "d767fb274e28dce6e3de819ad2c9bd3fb8d06ab06ea27940f60d31eebd86b16d",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },
