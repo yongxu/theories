@@ -825,6 +825,18 @@
    "page": "theories/becoming/results/records/a-way-of-units.md"
   },
   {
+   "id": "record:a-way-of-units-under-a-rule-set-again",
+   "type": "result",
+   "record": "a-way-of-units-under-a-rule-set-again",
+   "title": "A way of units on a stock under a rule set again: a step with the test, or a step with no need met",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/a-way-of-units-under-a-rule-set-again.md"
+  },
+  {
    "id": "record:a-weighting-faster-than-renewal-ends-the-base",
    "type": "result",
    "record": "a-weighting-faster-than-renewal-ends-the-base",
@@ -11667,6 +11679,17 @@
    "name": "Becoming.LineOnAStockCases",
    "level": "L2",
    "theorems": 9,
+   "region": "map",
+   "base": "general",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.WayUnderARule",
+   "type": "module",
+   "name": "Becoming.WayUnderARule",
+   "level": "L2",
+   "theorems": 59,
    "region": "map",
    "base": "general",
    "on_grammar": true,
@@ -36939,6 +36962,16 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.WayUnderARule",
+   "to": "module:Becoming.LineOnAStock",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.WayUnderARule",
+   "to": "module:Becoming.RuleCapture",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Weighted",
    "to": "module:Becoming.Witnesses",
    "type": "imports"
@@ -38565,6 +38598,31 @@
    "to": "record:wen-in-the-grammar",
    "type": "formal-reuse",
    "interface": true
+  },
+  {
+   "from": "record:a-way-of-units-under-a-rule-set-again",
+   "to": "module:Becoming.WayUnderARule",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-way-of-units-under-a-rule-set-again",
+   "to": "record:a-line-on-a-stock",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-way-of-units-under-a-rule-set-again",
+   "to": "record:capture-through-the-rule",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-way-of-units-under-a-rule-set-again",
+   "to": "record:margin-of-a-regime",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-way-of-units-under-a-rule-set-again",
+   "to": "record:turning-in-time",
+   "type": "formal-reuse"
   },
   {
    "from": "record:a-weighting-faster-than-renewal-ends-the-base",

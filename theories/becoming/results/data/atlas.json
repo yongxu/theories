@@ -193506,18 +193506,18 @@
   "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
   "toolchain": "leanprover/lean4:v4.29.1",
   "printed_from": {
-   "commit": "4428afab3892305138d9002d80ca6f19f9cdf787",
-   "core_run": "20261122T230327.664744Z"
+   "commit": "152fecdefdac490011213f6ecc393d2f6742c329",
+   "core_run": "20261123T075124.334546Z"
   },
-  "core_sources_sha256": "66ff8c0a99f4977ba0a9139b653ad1f6babd3e71cf1eab3d895c48d838b365df",
+  "core_sources_sha256": "f3468762d5980b5de9836557bd4ca0108181f42e966e9ae1d82001e1c4980531",
   "counts": {
-   "modules": 414,
-   "theorems": 20775,
+   "modules": 415,
+   "theorems": 20838,
    "uses_without_row": 20
   },
   "counted": {
-   "modules": 414,
-   "theorems": 20775,
+   "modules": 415,
+   "theorems": 20838,
    "uses_without_row": 20
   },
   "binds_receipt": true,
