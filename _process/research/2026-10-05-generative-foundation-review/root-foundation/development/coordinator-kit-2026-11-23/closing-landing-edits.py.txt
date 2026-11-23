@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+"""AI-written (the coordinating session, Claude Fable, 23 November 2026). The closing record of the morning's
+finishing: a dated section appended to the file of his words of 04:25 and 04:39, one sentence on line 0 where the
+board tells the whole gate, the whole gate's log and this landing's scripts added to the coordinator's kit with a
+line in its note. Run in a checkout root, before the Queue trim. Each exact string once."""
+W = '/Users/ren/tmp/coord2/'
+B = '_process/BECOMING-WORKBOARD.md'
+S = 'sources/15-codex-theory-conversations/2026-11-23-be-the-new-coordinator.md'
+KD = '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/coordinator-kit-2026-11-23/'
+sec = open(W + 'closing_section.md', encoding='utf-8').read()
+assert all(k not in sec for k in ('@NOW@', '@TREE@', '@G0@', '@G1@', '@GATE@', '@DJ@'))
+s = open(S, encoding='utf-8').read()
+assert 'What came of the finishing, and corrections' not in s and s.endswith('\n')
+open(S, 'w', encoding='utf-8').write(s + sec)
+t = open(B, encoding='utf-8').read()
+OLD = "48 checks, all passed, none reused. Nothing is pushed."
+assert t.count(OLD) == 1
+NEW = open(W + 'line0_sentence.txt', encoding='utf-8').read().strip()
+assert '\n' not in NEW
+t = t.replace(OLD, "48 checks, all passed, none reused. " + NEW + " Nothing is pushed.")
+open(B, 'w', encoding='utf-8').write(t)
+import shutil, os
+for src, dst in (('full_1123b.log', 'whole-gate-2026-11-23-on-the-head.log.txt'),
+                 ('board_1123j.py', 'closing-landing-edits.py.txt'),
+                 ('board_1123j_chainA.sh', 'closing-landing-chainA.sh.txt'),
+                 ('board_1123j_landB.sh', 'closing-landing-landB.sh.txt')):
+    assert not os.path.exists(KD + dst), dst
+    shutil.copyfile(W + src, KD + dst)
+n = open(KD + 'NOTE.md', encoding='utf-8').read()
+ADD = ("- `whole-gate-2026-11-23-on-the-head.log.txt`: the whole gate on main at `f77c4bd31`, after the rows' "
+       "finishing landings of that morning; `closing-landing-chainA.sh.txt`, `closing-landing-landB.sh.txt` and "
+       "`closing-landing-edits.py.txt`: the scripts of the landing that filed it.\n")
+assert n.endswith('\n') and 'whole-gate-2026-11-23-on-the-head' not in n
+open(KD + 'NOTE.md', 'w', encoding='utf-8').write(n + ADD)
+print('edited', S, B, 'and the kit')
