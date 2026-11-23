@@ -1,0 +1,45 @@
+# Draft: the aim on the direction page, said without "two ways"
+
+*AI-written, 23 November 2026. First form by the coordinating session at 15:55 WIB; this form at 15:57 WIB after row DJ, which keeps the page, read it and gave its own wording. A draft for Ren to read. Nothing on the direction page is changed.*
+
+## What stands on the page now
+
+The first paragraph under "Where we are heading" has five sentences. The first, fourth and fifth stay. The second and third are the ones in question:
+
+> On it we want two ways of going on placed with respect to each other and to going on at all: a way of selecting that uses up what it or others rest on and can no longer be turned, and a way that keeps remaking what it rests on. Placed means: where, and at which grain, a course is doing the one or the other, where it passes between them, and by what ways.
+
+## What would stand in their place (row DJ's wording)
+
+> On it we want, for any going-on, a selection among them, and at any grain: what its going on does to what it and others rest on, whether it keeps that up, uses it up, adds to it or changes it; where that makes a difference to it, and where it does not; and whether what it rests on still reaches it early enough to turn it. We do not ask the map to sort goings-on into two ways and set them against each other. What it should show is what decides whether a course uses up what it rests on until it can no longer be turned, or goes on with more able to go on after it; at which grain; and how early.
+
+The whole paragraph would then read:
+
+> One map of how things come to be, go on, change and end, whole enough that a person, a society or an AI can find its own course on it: what that course rests on, what cannot reach it, and whether it can still turn. On it we want, for any going-on, a selection among them, and at any grain: what its going on does to what it and others rest on, whether it keeps that up, uses it up, adds to it or changes it; where that makes a difference to it, and where it does not; and whether what it rests on still reaches it early enough to turn it. We do not ask the map to sort goings-on into two ways and set them against each other. What it should show is what decides whether a course uses up what it rests on until it can no longer be turned, or goes on with more able to go on after it; at which grain; and how early. We want it to be of use to each, and a base for alignment. We want it joined and simple: its parts made to meet, and each thing said once.
+
+## What row DJ changed in the coordinating session's first form, and why
+
+- **A sentence that said more than is seen is gone.** The first form said that a course that uses up what it rests on and a course that goes on with more able to go on after it "are outcomes of one relation". That is not shown. Today's module has ending and holding from one rule and one kind of step; its going on is a configuration that holds, and no unit in it adds to what it rests on. No model found has a course after which more can go on. And "one relation" is a centre by another name, which he asked about on 22 November and did not affirm. The aim now says what the map should show, and asserts nothing about how it will come out.
+- **"Adds to it" is named,** since that is the part no model has.
+- **"On it we want, for" in place of "We want this said of",** where "this" had nothing clear to point at.
+
+## The dated note to stand beside it
+
+> *Of "two ways" (23 November 2026).* Until this day the paragraph above asked for "two ways of going on placed with respect to each other". The phrase is this page's own and AI-written; the Lean, the one page and the glossary do not speak of two ways ("Which two" below). His own words nearest it are "generative" and "degenerative" of October. Its second half was read in three senses; the row that keeps the page said which it held, as a reading, and left the choice to him. On 23 November, after a report that said the two ways were still not placed, he asked the coordinating session: "what's the second way? you see - i don't even remember what it is, and for these of my words, are they really should be guiding direction at this moment, with current understanding?" That session answered that the phrase was not his and that it would take the pair out of the aim; he wrote "All right, please do" ([his words](../sources/15-codex-theory-conversations/2026-11-23-be-the-new-coordinator.md)). What the new sentences rest on, as the sessions' understanding and not as his words: he said on 13 November that "there's absolutely no need for any dualism or hard separation with boundaries" ([his words](../sources/15-codex-theory-conversations/2026-11-08-representation-to-eight.md), the section of 13 November), and on 21 November that "remaking" is not the word, since forms change while the continuation may continue and create more and more future; and in the module landed that afternoon (`Becoming.WayUnderARule`) one rule and one kind of step give a course that goes on and a course that ends, with one unit of one need deciding which. The going on there is a configuration that holds, so this is seen of ending against holding only. That the two are outcomes of one relation is what the sessions think and not what is shown. No model yet has a course after which more can go on. He read the new sentences before they landed; he has not said that they are the aim in his words, and they are held as loosely as the ones they replace. From this day no result on this page is weighed by whether it "places the two ways". A result is weighed as AGENTS.md's rule 6 has it: a join in the map, a claim put to a test that could fail, or a telling a person can follow; and by whether it shows, for some going-on at some grain, what decides and how early. The paragraphs below that say "does not place the two ways" of earlier results stand as written, as records of their days, and "Which two" stands as the account of what the pair was.
+
+## What this does not change
+
+- AGENTS.md: its paragraphs on what we are doing do not speak of two ways.
+- The Lean, the records and the atlas.
+- The later sections of the direction page, which stay as records of their days.
+
+## A third form, after his questions of 16:08 WIB (the coordinating session's; row DJ has not read it)
+
+He asked of the clause "goes on with more able to go on after it": what a course is, why it goes more and more, what "more" means, whether changing into another thing counts as more; and wrote that he is no longer sure of many early framings and agreed approaches. He then gave his own framing: that he wants the full picture to be "the alignment theory", giving light to a question he worded so:
+
+> Can we develop a compositional mathematics/logic/reason of complex adaptive systems that preserves/evolves meaningful properties/future becomings across scales—from physical components and software agents to organizations, ecosystems, and societies—while allowing those systems to learn, change, and coordinate?
+
+The clause on "more" is taken out: no session can say what "more" is. In the Lean the nearest exact notion is that what can form later includes what could form before, with nothing lost, and by that notion a thing changing into another does not count; that is unlikely to be what he means.
+
+The paragraph in this form:
+
+> One map of how things come to be, go on, change and end, whole enough that a person, a society or an AI can find its own course on it: what that course rests on, what cannot reach it, and whether it can still turn. We want the full picture to be an alignment theory, and to give light on a question he put in these words on 23 November, rewording a question another AI system had written: "Can we develop a compositional mathematics/logic/reason of complex adaptive systems that preserves/evolves meaningful properties/future becomings across scales—from physical components and software agents to organizations, ecosystems, and societies—while allowing those systems to learn, change, and coordinate?" On the map that asks, for any going-on, a selection among them, and at any grain: what its going on does to what it and others rest on; where that makes a difference to it, and where it does not; whether what it rests on still reaches it early enough to turn it; and what of this is kept, what is lost and what is newly there when goings-on are joined into a whole or read at a coarser grain. We do not ask the map to sort goings-on into two ways and set them against each other. We want it to be of use to each. We want it joined and simple: its parts made to meet, and each thing said once.

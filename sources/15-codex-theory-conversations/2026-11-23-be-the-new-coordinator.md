@@ -157,3 +157,13 @@ Seven entries, his. The times are the transcript's stamps, converted to WIB. Sev
 - *The readers.* On his line of 16:46 it ran ten readers of the model he named over the 297 modules its sorting had left outside four parts, and recorded what they found ([the record](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/connections-across-the-parts-2026-11-23/NOTE.md)). It had told him to expect "a few million" tokens; the readers' footers total 70,978 thousand, which counts the whole context sent again with each of their 855 commands and does not separate what was cached. The estimate was wrong by more than tenfold, and the session should have sized it from row FM's note of that morning, which records the same thing of the same tool.
 
 **What is not said.** He did not say that the aim's paragraph is to be changed as drafted; he said the third form is closer. He did not say what "more" means, and asked whether changing into another thing counts. He did not say that the roadmap or its percentages are right. He kept the word "allowing" in the question as he worded it; on 22 November he had written that he does not like the word "allow".
+
+## His word on handing over (AI-written frame, the same session, 17:35 WIB by the clock; his words verbatim)
+
+17:33:13 WIB, 23 November (10:33:13 UTC, transcript stamp), after the session's message that his words of the afternoon and the record of connections were on main:
+
+> All right, make sure everything's merged and we have a man as head, and then I will give it to another agent to review and continue. So please try this handoff and prepare the main branch to be the one for me to hand over.
+
+**How the session read it (its own reading).** "A man as head" it read as "main as head": the line reads as spoken and transcribed. It checked from the files that every worktree stood at a commit of main with nothing uncommitted and that nothing was running, wrote [a hand-over page](../../_process/HANDOVER.md), and filed with it the draft of the aim and its own running notes, so that what the next agent needs is in the repository. It ran no further whole gate: the last passed at `501407c66`, and every commit since is text with its own gate. It did not ask the three rows again.
+
+**What is not said.** He did not say which agent, or that this session or the rows are to stop, or that anything is to be pushed.
