@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "utc": "20261123T125647.945308Z",
+  "utc": "20261123T131636.294555Z",
   "toolchain": "leanprover/lean4:v4.29.1",
-  "retained_run": "becoming-checks/20261123T125647.945308Z",
+  "retained_run": "becoming-checks/20261123T131636.294555Z",
   "spine_modules": [
     "Becoming.Grammar",
     "Becoming.GrammarReadings",
@@ -399,6 +399,9 @@
     "Becoming.SignificanceStatements",
     "Becoming.AdaptiveLoops",
     "Becoming.PacedStock",
+    "Becoming.MultiScaleViability",
+    "Becoming.TransformativeViability",
+    "Becoming.StockFlowBridge",
     "Becoming",
     "Becoming.Hexagrams",
     "Becoming.HexagramPlaces",
@@ -815,6 +818,9 @@
     "Becoming.SignificanceStatements",
     "Becoming.AdaptiveLoops",
     "Becoming.PacedStock",
+    "Becoming.MultiScaleViability",
+    "Becoming.TransformativeViability",
+    "Becoming.StockFlowBridge",
     "Becoming"
   ],
   "foundation_modules": [
@@ -1245,6 +1251,9 @@
     "Becoming.SignificanceStatements",
     "Becoming.AdaptiveLoops",
     "Becoming.PacedStock",
+    "Becoming.MultiScaleViability",
+    "Becoming.TransformativeViability",
+    "Becoming.StockFlowBridge",
     "Becoming.SeedReach",
     "Becoming.ScopedReach",
     "Becoming.Hexagrams",
@@ -1664,6 +1673,9 @@
     "Becoming.SignificanceStatements",
     "Becoming.AdaptiveLoops",
     "Becoming.PacedStock",
+    "Becoming.MultiScaleViability",
+    "Becoming.TransformativeViability",
+    "Becoming.StockFlowBridge",
     "Becoming.SeedReach",
     "Becoming.ScopedReach",
     "Becoming.Hexagrams",
@@ -2083,6 +2095,9 @@
     "Becoming.SignificanceStatements": "becoming/Becoming/SignificanceStatements.lean",
     "Becoming.AdaptiveLoops": "becoming/Becoming/AdaptiveLoops.lean",
     "Becoming.PacedStock": "becoming/Becoming/PacedStock.lean",
+    "Becoming.MultiScaleViability": "becoming/Becoming/MultiScaleViability.lean",
+    "Becoming.TransformativeViability": "becoming/Becoming/TransformativeViability.lean",
+    "Becoming.StockFlowBridge": "becoming/Becoming/StockFlowBridge.lean",
     "Becoming.SeedReach": "becoming/Becoming/SeedReach.lean",
     "Becoming.ScopedReach": "becoming/Becoming/ScopedReach.lean",
     "Becoming.Hexagrams": "becoming/Becoming/Hexagrams.lean",
@@ -2502,6 +2517,9 @@
     "Becoming.SignificanceStatements": "fc113c0379fc4e0f4458021514b96b1ef2383f5abe0a12b4330615288991907d",
     "Becoming.AdaptiveLoops": "8af6af19850cbceb8cbaeca07d66ebd6640f4ca852a5dfc68ac1ea9196f02cf6",
     "Becoming.PacedStock": "d84967da1eccd1657c638d786dbc0f1bbb9073baa6eb4990439ad684f68adc05",
+    "Becoming.MultiScaleViability": "11d473b27f9084c96ac968e288c257efff4e38ad314a1d75eb42b5b343a642dd",
+    "Becoming.TransformativeViability": "3767618b36fb7144d901f035452680b636c7a23edf98b47d50ccdf8fd330a123",
+    "Becoming.StockFlowBridge": "92c67b1c1a84452e5c83f31f25bc4ae5d34f89a17eb86e1aebb3a751dbb6ae21",
     "Becoming.SeedReach": "6c21f636369688b6247052cb7434aebdd1669dc2dc0ff3a906a2032193deb066",
     "Becoming.ScopedReach": "0432efe6bf31ceff196a4d058a6b77710871ed130eb562dc0ad05d00a873e5ae",
     "Becoming.Hexagrams": "7bcc1ca10eb46afc25efe9c5d8c54ce9840c0be831b8427f0dc3b024117786a3",
@@ -2520,17 +2538,19 @@
     "Becoming.ReaderRebuilding": "25f0d49255972cec8024970a4249dd9228baed14308c90c83dec223bf4378713",
     "Becoming.RuleRebuilding": "fe82de1f1377255eb7fc7b3cd42cad7245bd45882f4e58a6e82d3575e2c28709",
     "Becoming.ResponseLearning": "3f570198fcae3a551c9ca5807d58353cec3d393a00d37a21d89a98c789a725d2",
-    "Becoming": "cfda8e1b80a7014c901c0cd156558a1c4d87926d92bdd626149c374ef7123aed"
+    "Becoming": "e358ba20874b855e0f7242f5f0f99fb045d1b8153b4b5eaa374848dbf927edf2"
   },
   "checker_sha256": {
-    "check_becoming.py": "c566b62d2166bb7ff04f49bcbc609ac2c08919116c08bb947c8e09ef0f59b28f",
+    "check_becoming.py": "b21bebf32c7973ff30400e67f073040392009d4f2ff5ab9b247c0c933953d4c6",
     "check.py": "4f9cb94de69bd0e7da6bc7ab1ae1cfd26e2d5848dabda5cbb88aebc36ac52da3"
   },
   "runner_sha256": "cdc5b2e9fe6915233f5e39ec1b4ad30b615e15dbbea393adda2effba0e7c7de2",
   "source_commit": {
-    "main": "15045e255be03bf7a390fe8b5739cb5f48844c6d",
+    "main": "7add3b4f525c8f7ec0826bbbf13bd144c62230c6",
     "copied": [
-      "Becoming.PacedStock.lean",
+      "Becoming.MultiScaleViability.lean",
+      "Becoming.StockFlowBridge.lean",
+      "Becoming.TransformativeViability.lean",
       "Becoming.lean",
       "check_becoming.py"
     ]
@@ -2541,13 +2561,17 @@
     "fresh": false,
     "ran": [
       "version.log",
-      "BecomingPacedStockSignatures.log",
+      "BecomingMultiScaleViabilitySignatures.log",
+      "BecomingTransformativeViabilitySignatures.log",
+      "BecomingStockFlowBridgeSignatures.log",
       "Becoming.log",
       "BecomingAxiomAudit.log",
       "BecomingSignatures.log",
       "EnvironmentAudit.log",
       "Controls.log",
-      "Becoming.PacedStock.PreludeOnly.log",
+      "Becoming.MultiScaleViability.PreludeOnly.log",
+      "Becoming.TransformativeViability.PreludeOnly.log",
+      "Becoming.StockFlowBridge.PreludeOnly.log",
       "Becoming.PreludeOnly.log"
     ],
     "reused": {
@@ -7311,6 +7335,34 @@
         "utc": "20261123T123533.642714Z",
         "retained": "scratch build, not retained: /Users/ren/tmp/p1a/tree"
       },
+      "BecomingPacedStockSignatures.log": {
+        "utc": "20261123T125647.945308Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T125647.945308Z"
+      },
+      "Becoming.MultiScaleViability.log": {
+        "utc": "20261123T124534.884275Z",
+        "retained": "scratch build, not retained: /Users/ren/tmp/p1c/tree"
+      },
+      "BecomingMultiScaleViabilityAxiomAudit.log": {
+        "utc": "20261123T124534.884275Z",
+        "retained": "scratch build, not retained: /Users/ren/tmp/p1c/tree"
+      },
+      "Becoming.TransformativeViability.log": {
+        "utc": "20261123T125348.547828Z",
+        "retained": "scratch build, not retained: /Users/ren/tmp/p1c/tree"
+      },
+      "BecomingTransformativeViabilityAxiomAudit.log": {
+        "utc": "20261123T125348.547828Z",
+        "retained": "scratch build, not retained: /Users/ren/tmp/p1c/tree"
+      },
+      "Becoming.StockFlowBridge.log": {
+        "utc": "20261123T125638.130918Z",
+        "retained": "scratch build, not retained: /Users/ren/tmp/p1c/tree"
+      },
+      "BecomingStockFlowBridgeAxiomAudit.log": {
+        "utc": "20261123T125638.130918Z",
+        "retained": "scratch build, not retained: /Users/ren/tmp/p1c/tree"
+      },
       "Becoming.SeedReach.log": {
         "utc": "20261109T150228.155067Z",
         "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories--claude-worktrees-admiring-shamir-666169/dce58fb5-291c-4c2d-9b0e-1a17b2f2e9b9/scratchpad/tree"
@@ -9115,6 +9167,10 @@
         "utc": "20261123T123041.825153Z",
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T123041.825153Z"
       },
+      "Becoming.PacedStock.PreludeOnly.log": {
+        "utc": "20261123T125647.945308Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T125647.945308Z"
+      },
       "Becoming.SeedReach.PreludeOnly.log": {
         "utc": "20261109T150228.155067Z",
         "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories--claude-worktrees-admiring-shamir-666169/dce58fb5-291c-4c2d-9b0e-1a17b2f2e9b9/scratchpad/tree"
@@ -10380,6 +10436,15 @@
       "Becoming.PacedStock.log": "5ac8f4eb64c672e7a4e12ffca759618fe28a9c3785b3737aec24f7503b84114f",
       "BecomingPacedStockAxiomAudit.log": "1be7168d2dfe2058ae9f904e28559767d31c6d9f57c1c756078e74b4df33ae7b",
       "BecomingPacedStockSignatures.log": "aa12527304a2c95fdb12cb33fa50e1e50aa81183b603399b1fe8bc5ae41b7c99",
+      "Becoming.MultiScaleViability.log": "9fe661c4f1ca5d2d755b20bddc7bd67f6deacaae953a63b59242ece73b0e04a1",
+      "BecomingMultiScaleViabilityAxiomAudit.log": "5fe736cd0c9029c44898f0a2e981b0966290cccf8fb499fefe22be3cfca2f3f5",
+      "BecomingMultiScaleViabilitySignatures.log": "b13c854fbfcde51af1a33c21d5b8c3cc944305c6603b2cfa63bb1b4ea2a5ba92",
+      "Becoming.TransformativeViability.log": "c4ed2b1c0e7a9efdd9a48632a935d61968f6c249c053d69015ebbf1965002a35",
+      "BecomingTransformativeViabilityAxiomAudit.log": "b25e647eda25c66aa0d548f212ff1e22efc0a548d2f05aa25d9b1a522a742b65",
+      "BecomingTransformativeViabilitySignatures.log": "62ef6e6feab1d12944832793237fe12d1abe06edc3a795de7b4da6387d6ab34f",
+      "Becoming.StockFlowBridge.log": "0b8522b1099e6fe5aaa3d3e28849563eddc43d80aa023ec7032b36ac5e17e5f3",
+      "BecomingStockFlowBridgeAxiomAudit.log": "7dcf18a424ac4f8a24ac25901d5456ee5805dc610ee53b315fd24453e8dd20fa",
+      "BecomingStockFlowBridgeSignatures.log": "85dae9eaf5d97624a0faf07bd21156c7ec106d89673ed38b3f30e7820d85a7d1",
       "Becoming.SeedReach.log": "69e9093daed2cb3a35b84a3db09258074b3c837b06184fbeb2a3ce4357438d9a",
       "BecomingSeedReachAxiomAudit.log": "325b832f6ca3591cc9f1580c04f87a51dbdce5aeb0cc327a1ef4b126a088902d",
       "BecomingSeedReachSignatures.log": "61a9a40165856bdd55c8c10d23e7f1a7023f7d14510b64e75d74d9d438f9f945",
@@ -10434,11 +10499,11 @@
       "Becoming.ResponseLearning.log": "19c5dfae2897081b2db2a6479e4b6630f3e12729c7a5b2018b2f3b56e9252710",
       "BecomingResponseLearningAxiomAudit.log": "358f4819a31b44cc8105702cdd098101a2dac4da9f87e46a44072360231c8abb",
       "BecomingResponseLearningSignatures.log": "ee5e63f24cc980784d60513ca2cf139807117cb10932dc5bc49d85bdc89e8bfa",
-      "Becoming.log": "0304b3efcb9cb0382fdd4549f1f5e56e8e06985464dc59b3b8d16f9eed666570",
-      "BecomingAxiomAudit.log": "d9f414d4776d144c186d19a0e6ea45e7a1c02fc88d22babd0c6bd39745a303a7",
-      "BecomingSignatures.log": "fe4b25e72c8b70a48bc3d0d8e16e52c9b02e8c0d09741c0497e288db000db663",
-      "EnvironmentAudit.log": "2701cf9e58449eba9bf1dd77f2e68ad1f522bad698cc1b459719d3a3a10b292c",
-      "Controls.log": "1025418cfe92f0df3a440ccce3fea122c2e3c672a15fd94120780737a614ae2c",
+      "Becoming.log": "3d0f6759bd66139c9769f390712743e8d0c90988caa0b86018bad162b13ef9f4",
+      "BecomingAxiomAudit.log": "a81d269a03e8998c000e52f655378ed23b79fb8a4662e6fba37c82dfbd81006a",
+      "BecomingSignatures.log": "1c25b4c150e75d47dea061e227d52ad1720757e3b63414032e50bbe48b45e394",
+      "EnvironmentAudit.log": "a43749b4d9ca7b0c4b6384c92b9fd4c141988611af3daf9a29d31448e6ee9876",
+      "Controls.log": "bef79df694b5c9cfd7e035d2af20b6a33556afe28381cca2351206a551c48b36",
       "Becoming.Grammar.PreludeOnly.log": "76d3cd6879ccdfaed9db9cc98947cb68fe604b6ec9c632c3569df134642978a0",
       "Becoming.GrammarReadings.PreludeOnly.log": "96d3eaac03a03246c68b669a66e92565f381f028768625af72b0ecd42c10d168",
       "Becoming.GrammarMap.PreludeOnly.log": "57b332119ea3feae52717dc0b9c6e6a8461bd8fd25ec4a4b45ba5bbf5e0d743b",
@@ -10837,6 +10902,9 @@
       "Becoming.SignificanceStatements.PreludeOnly.log": "f95a81b36fad88bb7622ff3e5bf7e565a136332d3d0b87a78364d24d5f21801b",
       "Becoming.AdaptiveLoops.PreludeOnly.log": "ff4d6bb01ae5436c1c5d89e514fefd57423b1016b5920b440fe412ee430787b3",
       "Becoming.PacedStock.PreludeOnly.log": "85d475ad33f42ba51d47feee2ba763f89f4b674af908b782c549e6ad11bfd38c",
+      "Becoming.MultiScaleViability.PreludeOnly.log": "2e10684b7479ff591794f7d90ac8f553aadf4273645e6c1f49859e202fc01feb",
+      "Becoming.TransformativeViability.PreludeOnly.log": "54a2fbecc0babb04de704548b128a67199b1675a5bf8f5b0d021747deb328b48",
+      "Becoming.StockFlowBridge.PreludeOnly.log": "2e8094d22805608a84df2219e9039e9a1e753a5815dd68c8c834e3081e5625a6",
       "Becoming.SeedReach.PreludeOnly.log": "5e0fe6d1427e5096dc5d3fe7ce927e5f3ec9ddd47f7388b1be9da3f470f16402",
       "Becoming.ScopedReach.PreludeOnly.log": "607b3bc88a2c83cd017f2c975691178de1bc72ff0e4088657706581881e9588f",
       "Becoming.Hexagrams.PreludeOnly.log": "383eba428321c4f4bf3c42ba71f5579c797e6fc21217bcd64ea83fde36cb8034",
@@ -10855,20 +10923,24 @@
       "Becoming.ReaderRebuilding.PreludeOnly.log": "c8d322b9ede23ee2284eb9df3a722c142355439a67f3384354dcb30d9488324f",
       "Becoming.RuleRebuilding.PreludeOnly.log": "a80b8eb0e41678da8ed169c4f5b42a9cccc07497817f17b097cc1e4c31864288",
       "Becoming.ResponseLearning.PreludeOnly.log": "fbbe23d3e24bafddda6a674b0ab564f1e8b10a86aa7a0de259e17a82bd6755dd",
-      "Becoming.PreludeOnly.log": "87363a2aadc4ed25e2ef82fdf050c1916b4495ac0b65c14542bf701837265e4d"
+      "Becoming.PreludeOnly.log": "dc61948efdb5b5c7681fefc7e61ff73552b805f7aa719f20d0f29d6fb4a9f28b"
     },
     "seconds": {
-      "version.log": 0.39,
-      "BecomingPacedStockSignatures.log": 1.742,
-      "Becoming.log": 2.078,
-      "BecomingAxiomAudit.log": 0.552,
-      "BecomingSignatures.log": 0.552,
-      "EnvironmentAudit.log": 32.481,
-      "Controls.log": 0.586,
-      "Becoming.PacedStock.PreludeOnly.log": 2.422,
-      "Becoming.PreludeOnly.log": 0.313
+      "version.log": 0.34,
+      "BecomingMultiScaleViabilitySignatures.log": 2.094,
+      "BecomingTransformativeViabilitySignatures.log": 2.078,
+      "BecomingStockFlowBridgeSignatures.log": 0.517,
+      "Becoming.log": 2.649,
+      "BecomingAxiomAudit.log": 0.571,
+      "BecomingSignatures.log": 0.562,
+      "EnvironmentAudit.log": 33.102,
+      "Controls.log": 0.574,
+      "Becoming.MultiScaleViability.PreludeOnly.log": 3.157,
+      "Becoming.TransformativeViability.PreludeOnly.log": 2.314,
+      "Becoming.StockFlowBridge.PreludeOnly.log": 2.293,
+      "Becoming.PreludeOnly.log": 0.32
     },
-    "wall_seconds": 36.607
+    "wall_seconds": 37.744
   },
   "superseded_modules": {
     "AcquiredCorrection": {
@@ -12607,6 +12679,90 @@
       "unnamed_instance_lines": [],
       "covered_by": "core environment audit"
     },
+    "Becoming.MultiScaleViability": {
+      "private": [
+        "Becoming.block_below",
+        "Becoming.LaxSim.run_window_length",
+        "Becoming.LaxSim.compOf",
+        "Becoming.LaxSim.macro_excursion_split",
+        "Becoming.LaxSim.comp_epoch",
+        "Becoming.WitnessTwoScale.div_go_irrel",
+        "Becoming.WitnessTwoScale.mod_go_irrel",
+        "Becoming.WitnessTwoScale.div_add_self",
+        "Becoming.WitnessTwoScale.ite_pos'",
+        "Becoming.WitnessTwoScale.ite_neg'",
+        "Becoming.WitnessTwoScale.dite_pos'",
+        "Becoming.WitnessTwoScale.dite_neg'",
+        "Becoming.WitnessTwoScale.mod_add_self",
+        "Becoming.WitnessTwoScale.div2_add2",
+        "Becoming.WitnessTwoScale.mod2_add2",
+        "Becoming.WitnessTwoScale.mod4_add4",
+        "Becoming.WitnessTwoScale.div2_rem",
+        "Becoming.WitnessTwoScale.div4_rem",
+        "Becoming.WitnessTwoScale.div2_of_two_mul_add",
+        "Becoming.WitnessTwoScale.mod2_of_two_mul_add",
+        "Becoming.WitnessTwoScale.mod4_of_four_mul_add",
+        "Becoming.WitnessTwoScale.div2_of_four_mul_add",
+        "Becoming.WitnessTwoScale.div2_mono",
+        "Becoming.WitnessTwoScale.div2_add_le",
+        "Becoming.WitnessTwoScale.add_div2_le",
+        "Becoming.WitnessTwoScale.sub_div2_le_half",
+        "Becoming.WitnessTwoScale.succ_div2_le_self",
+        "Becoming.WitnessTwoScale.div2_le_self",
+        "Becoming.WitnessTwoScale.sub_sub_mid",
+        "Becoming.WitnessTwoScale.add_sub_mid",
+        "Becoming.WitnessTwoScale.le_of_ble_true",
+        "Becoming.WitnessTwoScale.mod4_succ",
+        "Becoming.WitnessTwoScale.succ_mod2_beq",
+        "Becoming.WitnessTwoScale.damp_le_of_le",
+        "Becoming.WitnessTwoScale.damp_ge_of_ge",
+        "Becoming.WitnessTwoScale.damp_lip_ordered",
+        "Becoming.WitnessTwoScale.damp40_half_dist",
+        "Becoming.WitnessTwoScale.list_len2_cases",
+        "Becoming.WitnessTwoScale.list_lt2_cases",
+        "Becoming.WitnessTwoScale.epoch_proj₁_aux",
+        "Becoming.WitnessTwoScale.epoch0_2j_cases",
+        "Becoming.WitnessTwoScale.damp40_add1_dist",
+        "Becoming.WitnessTwoScale.margin_two_scale"
+      ],
+      "unnamed_instance_lines": [],
+      "covered_by": "core environment audit"
+    },
+    "Becoming.TransformativeViability": {
+      "private": [
+        "Becoming.linked_capSame_steps",
+        "Becoming.linked_capSame_of_le",
+        "Becoming.ThreeRegime.natEq",
+        "Becoming.ThreeRegime.natEq_self",
+        "Becoming.ThreeRegime.natEq_succ_false",
+        "Becoming.ThreeRegime.legacy_admits_sub",
+        "Becoming.ThreeRegime.legacy_admits_old",
+        "Becoming.ThreeRegime.evolve_admits_sub",
+        "Becoming.ThreeRegime.evolve_admits_new",
+        "Becoming.ThreeRegime.evolve_admits_plus",
+        "Becoming.ThreeRegime.churn_admits_at",
+        "Becoming.ThreeRegime.churn_not_admits_next",
+        "Becoming.ThreeRegime.legacy_not_admits_new",
+        "Becoming.ThreeRegime.legacy_not_admits_plus",
+        "Becoming.ThreeRegime.legacy_not_admits_churn",
+        "Becoming.ThreeRegime.evolve_not_admits_old",
+        "Becoming.ThreeRegime.churn_not_admits_sub",
+        "Becoming.ThreeRegime.churn_not_admits_old",
+        "Becoming.ThreeRegime.churn_not_admits_new",
+        "Becoming.ThreeRegime.churn_not_admits_plus",
+        "Becoming.FiniteGainless.cond_eq_or_ne",
+        "Becoming.FiniteGainless.cond_mem_or_not",
+        "Becoming.FiniteGainless.cond_mem_of_ne_zero",
+        "Becoming.FiniteGainless.total_eq_at_of_distinct",
+        "Becoming.FiniteGainless.admits_sub",
+        "Becoming.FiniteGainless.admits_A_of_true",
+        "Becoming.FiniteGainless.not_admits_A_of_false",
+        "Becoming.FiniteGainless.admits_B_of_false",
+        "Becoming.FiniteGainless.not_admits_B_of_true"
+      ],
+      "unnamed_instance_lines": [],
+      "covered_by": "core environment audit"
+    },
     "Becoming.Dispatch": {
       "private": [],
       "unnamed_instance_lines": [
@@ -13040,6 +13196,9 @@
     "Becoming.SignificanceStatements": 5,
     "Becoming.AdaptiveLoops": 321,
     "Becoming.PacedStock": 259,
+    "Becoming.MultiScaleViability": 298,
+    "Becoming.TransformativeViability": 269,
+    "Becoming.StockFlowBridge": 67,
     "Becoming.SeedReach": 31,
     "Becoming.ScopedReach": 60,
     "Becoming.Hexagrams": 199,
@@ -13842,6 +14001,18 @@
       "propext"
     ],
     "Becoming.AdaptiveLoops.OpenLoop.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.LaxSim.TowerSimPack.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.SlackDist.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.LaxSim.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.ThreeRegime.Form.fChurn.injEq": [
       "propext"
     ],
     "Becoming.Hexagram.mk.injEq": [
@@ -152540,6 +152711,959 @@
       "kernel_checked": true
     },
     {
+      "module": "Becoming.MultiScaleViability",
+      "spine": true,
+      "layer": "core",
+      "theorems": 36,
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "Becoming.distNat"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.sub_self_nat"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.distNat_self"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.distNat_symm"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.le_sub_add_nat"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.sub_le_add_sub_nat"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.distNat_tri"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.distNat_add_one"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.distNat_sub_one"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.SlackDist"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.SlackDist.nat"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.SlackDist.pullback"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.strict_mono_le"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.strict_lt_of_lt"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.strict_unbounded"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.block_of_strict"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.trace_split"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.LaxSim"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.LaxSim.slack"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.LaxSim.slack_le_of_absorb"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.LaxSim.slack_id"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.LaxSim.epoch_trace"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.LaxSim.advance_blocks"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.lax_kernel_of_certificate"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.lax_kernel_of_kernel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.lax_keptFor_linear"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.lax_keptFor_linear_of_kernel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.LaxSim.keptFor_linear_run"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.LaxSim.comp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.LaxSim.compAdditive"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.LaxSim.TowerSimPack"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.LaxSim.towerSim"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.WitnessTwoScale.distNat_div2"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.damp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.damp40"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.damp20"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.WitnessTwoScale.damp_lip"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.next"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.P"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.guardS"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.s₀"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.π₁"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.σ₁"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.M₁"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.next₁"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.R₁"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.π₂"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.σ₂"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.M₂"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.R₂"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.guardQ₂"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.K"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.Epoch₀"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.Epoch₁"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.Epoch₂"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.sectionMap₁"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.sectionMap₂"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.sectionMap₁₂"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.WitnessTwoScale.back₁"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.WitnessTwoScale.back₂"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.WitnessTwoScale.back₁₂"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.WitnessTwoScale.not_fibreConsistent₁"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.WitnessTwoScale.no_reduced_law₁"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.WitnessTwoScale.not_fibreConsistent₂"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.WitnessTwoScale.no_reduced_law₂"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.WitnessTwoScale.not_fibreConsistent₁₂"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.WitnessTwoScale.no_reduced_law₁₂"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.sim₁"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.sim₂"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WitnessTwoScale.sim₁₂"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.WitnessTwoScale.sim₁₂_params"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.WitnessTwoScale.kernel_cert"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.WitnessTwoScale.viability_kernel"
+        }
+      ],
+      "axiom_dependencies": {
+        "Becoming.distNat": [],
+        "Becoming.sub_self_nat": [],
+        "Becoming.distNat_self": [],
+        "Becoming.distNat_symm": [],
+        "Becoming.le_sub_add_nat": [],
+        "Becoming.sub_le_add_sub_nat": [],
+        "Becoming.distNat_tri": [],
+        "Becoming.distNat_add_one": [],
+        "Becoming.distNat_sub_one": [],
+        "Becoming.SlackDist": [],
+        "Becoming.SlackDist.nat": [],
+        "Becoming.SlackDist.pullback": [],
+        "Becoming.strict_mono_le": [],
+        "Becoming.strict_lt_of_lt": [],
+        "Becoming.strict_unbounded": [],
+        "Becoming.block_of_strict": [],
+        "Becoming.trace_split": [],
+        "Becoming.LaxSim": [],
+        "Becoming.LaxSim.slack": [],
+        "Becoming.LaxSim.slack_le_of_absorb": [],
+        "Becoming.LaxSim.slack_id": [],
+        "Becoming.LaxSim.epoch_trace": [],
+        "Becoming.LaxSim.advance_blocks": [],
+        "Becoming.lax_kernel_of_certificate": [],
+        "Becoming.lax_kernel_of_kernel": [],
+        "Becoming.lax_keptFor_linear": [],
+        "Becoming.lax_keptFor_linear_of_kernel": [],
+        "Becoming.LaxSim.keptFor_linear_run": [],
+        "Becoming.LaxSim.comp": [],
+        "Becoming.LaxSim.compAdditive": [],
+        "Becoming.LaxSim.TowerSimPack": [],
+        "Becoming.LaxSim.towerSim": [],
+        "Becoming.WitnessTwoScale.distNat_div2": [],
+        "Becoming.WitnessTwoScale.damp": [],
+        "Becoming.WitnessTwoScale.damp40": [],
+        "Becoming.WitnessTwoScale.damp20": [],
+        "Becoming.WitnessTwoScale.damp_lip": [],
+        "Becoming.WitnessTwoScale.next": [],
+        "Becoming.WitnessTwoScale.P": [],
+        "Becoming.WitnessTwoScale.guardS": [],
+        "Becoming.WitnessTwoScale.s₀": [],
+        "Becoming.WitnessTwoScale.π₁": [],
+        "Becoming.WitnessTwoScale.σ₁": [],
+        "Becoming.WitnessTwoScale.M₁": [],
+        "Becoming.WitnessTwoScale.next₁": [],
+        "Becoming.WitnessTwoScale.R₁": [],
+        "Becoming.WitnessTwoScale.π₂": [],
+        "Becoming.WitnessTwoScale.σ₂": [],
+        "Becoming.WitnessTwoScale.M₂": [],
+        "Becoming.WitnessTwoScale.R₂": [],
+        "Becoming.WitnessTwoScale.guardQ₂": [],
+        "Becoming.WitnessTwoScale.K": [],
+        "Becoming.WitnessTwoScale.Epoch₀": [],
+        "Becoming.WitnessTwoScale.Epoch₁": [],
+        "Becoming.WitnessTwoScale.Epoch₂": [],
+        "Becoming.WitnessTwoScale.sectionMap₁": [],
+        "Becoming.WitnessTwoScale.sectionMap₂": [],
+        "Becoming.WitnessTwoScale.sectionMap₁₂": [],
+        "Becoming.WitnessTwoScale.back₁": [],
+        "Becoming.WitnessTwoScale.back₂": [],
+        "Becoming.WitnessTwoScale.back₁₂": [],
+        "Becoming.WitnessTwoScale.not_fibreConsistent₁": [],
+        "Becoming.WitnessTwoScale.no_reduced_law₁": [],
+        "Becoming.WitnessTwoScale.not_fibreConsistent₂": [],
+        "Becoming.WitnessTwoScale.no_reduced_law₂": [],
+        "Becoming.WitnessTwoScale.not_fibreConsistent₁₂": [],
+        "Becoming.WitnessTwoScale.no_reduced_law₁₂": [],
+        "Becoming.WitnessTwoScale.sim₁": [],
+        "Becoming.WitnessTwoScale.sim₂": [],
+        "Becoming.WitnessTwoScale.sim₁₂": [],
+        "Becoming.WitnessTwoScale.sim₁₂_params": [],
+        "Becoming.WitnessTwoScale.kernel_cert": [],
+        "Becoming.WitnessTwoScale.viability_kernel": []
+      },
+      "kernel_checked": true
+    },
+    {
+      "module": "Becoming.TransformativeViability",
+      "spine": true,
+      "layer": "core",
+      "theorems": 29,
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "Becoming.Web.MacroAdmits"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.Web.MacroIncludes"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.Web.MacroExceeds"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Web.Includes.macroIncludes"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Web.MacroIncludes.refl"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Web.MacroIncludes.trans"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ReserveSafe"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ReserveGuarded"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.TransformativeViable"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.StrictTransformativeViable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.widens_implies_transformativeViable"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.TransformsViably"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.TransformsViablyAlong"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.TransformsViablyAlong.mono"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.TransformsViablyAlong.to_transformsViably"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.transformsViably_iff_along_capSame"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.not_along_itself_of_transformsViably"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.ThreeRegime.Cond"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.ThreeRegime.Form"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.ThreeRegime.Cap"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ThreeRegime.cap"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ThreeRegime.reqCond"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ThreeRegime.reqNeed"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ThreeRegime.l_legacy"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ThreeRegime.l_evolve"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ThreeRegime.l_churn"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ThreeRegime.web"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ThreeRegime.Viable"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ThreeRegime.QChurn"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ThreeRegime.evolve_mixed_legacy"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ThreeRegime.evolve_not_widens_legacy"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ThreeRegime.evolve_strict_transformativeViable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ThreeRegime.churn_mixed_legacy"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ThreeRegime.churn_generation"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ThreeRegime.churn_not_transformativeViable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ThreeRegime.churn_also_fails_macroIncludes"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ThreeRegime.three_regime_separation"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.FiniteGainless.Cond"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.FiniteGainless.Form"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.FiniteGainless.Cap"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.FiniteGainless.all"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.FiniteGainless.every"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.FiniteGainless.distinct"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.FiniteGainless.cap"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.FiniteGainless.flip"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.FiniteGainless.level"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.FiniteGainless.requires"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.FiniteGainless.need"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.FiniteGainless.web"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.FiniteGainless.takeFn"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.FiniteGainless.giveFn"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.FiniteGainless.flow"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.FiniteGainless.conserving"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.FiniteGainless.gainless"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.FiniteGainless.closed"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.FiniteGainless.balances"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.FiniteGainless.requiresWithin"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.FiniteGainless.not_keepsWidening"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.FiniteGainless.micro_turnover"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.FiniteGainless.transformsViably"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.FiniteGainless.along_capSame"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.FiniteGainless.not_along_itself"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.FiniteGainless.finite_gainless_transformsViably"
+        }
+      ],
+      "axiom_dependencies": {
+        "Becoming.Web.MacroAdmits": [],
+        "Becoming.Web.MacroIncludes": [],
+        "Becoming.Web.MacroExceeds": [],
+        "Becoming.Web.Includes.macroIncludes": [],
+        "Becoming.Web.MacroIncludes.refl": [],
+        "Becoming.Web.MacroIncludes.trans": [],
+        "Becoming.ReserveSafe": [],
+        "Becoming.ReserveGuarded": [],
+        "Becoming.TransformativeViable": [],
+        "Becoming.StrictTransformativeViable": [],
+        "Becoming.widens_implies_transformativeViable": [],
+        "Becoming.TransformsViably": [],
+        "Becoming.TransformsViablyAlong": [],
+        "Becoming.TransformsViablyAlong.mono": [],
+        "Becoming.TransformsViablyAlong.to_transformsViably": [],
+        "Becoming.transformsViably_iff_along_capSame": [],
+        "Becoming.not_along_itself_of_transformsViably": [],
+        "Becoming.ThreeRegime.Cond": [],
+        "Becoming.ThreeRegime.Form": [],
+        "Becoming.ThreeRegime.Cap": [],
+        "Becoming.ThreeRegime.cap": [],
+        "Becoming.ThreeRegime.reqCond": [],
+        "Becoming.ThreeRegime.reqNeed": [],
+        "Becoming.ThreeRegime.l_legacy": [],
+        "Becoming.ThreeRegime.l_evolve": [],
+        "Becoming.ThreeRegime.l_churn": [],
+        "Becoming.ThreeRegime.web": [],
+        "Becoming.ThreeRegime.Viable": [],
+        "Becoming.ThreeRegime.QChurn": [],
+        "Becoming.ThreeRegime.evolve_mixed_legacy": [],
+        "Becoming.ThreeRegime.evolve_not_widens_legacy": [],
+        "Becoming.ThreeRegime.evolve_strict_transformativeViable": [],
+        "Becoming.ThreeRegime.churn_mixed_legacy": [],
+        "Becoming.ThreeRegime.churn_generation": [],
+        "Becoming.ThreeRegime.churn_not_transformativeViable": [],
+        "Becoming.ThreeRegime.churn_also_fails_macroIncludes": [],
+        "Becoming.ThreeRegime.three_regime_separation": [],
+        "Becoming.FiniteGainless.Cond": [],
+        "Becoming.FiniteGainless.Form": [],
+        "Becoming.FiniteGainless.Cap": [],
+        "Becoming.FiniteGainless.all": [],
+        "Becoming.FiniteGainless.every": [],
+        "Becoming.FiniteGainless.distinct": [],
+        "Becoming.FiniteGainless.cap": [],
+        "Becoming.FiniteGainless.flip": [],
+        "Becoming.FiniteGainless.level": [],
+        "Becoming.FiniteGainless.requires": [],
+        "Becoming.FiniteGainless.need": [],
+        "Becoming.FiniteGainless.web": [],
+        "Becoming.FiniteGainless.takeFn": [],
+        "Becoming.FiniteGainless.giveFn": [],
+        "Becoming.FiniteGainless.flow": [],
+        "Becoming.FiniteGainless.conserving": [],
+        "Becoming.FiniteGainless.gainless": [],
+        "Becoming.FiniteGainless.closed": [],
+        "Becoming.FiniteGainless.balances": [],
+        "Becoming.FiniteGainless.requiresWithin": [],
+        "Becoming.FiniteGainless.not_keepsWidening": [],
+        "Becoming.FiniteGainless.micro_turnover": [],
+        "Becoming.FiniteGainless.transformsViably": [],
+        "Becoming.FiniteGainless.along_capSame": [],
+        "Becoming.FiniteGainless.not_along_itself": [],
+        "Becoming.FiniteGainless.finite_gainless_transformsViably": []
+      },
+      "kernel_checked": true
+    },
+    {
+      "module": "Becoming.StockFlowBridge",
+      "spine": true,
+      "layer": "core",
+      "theorems": 40,
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.held_below_within"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.never_returns_below_within"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.WayUnderARule.ReachUnit"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.WayUnderARule.Needing"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.WayUnderARule.reachUnit_course"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.WayUnderARule.taken_below"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.WayUnderARule.unending_taken_below"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.StockFlowBridge.unitWeb"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.StockFlowBridge.unitFlow"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.unitFlow_taken"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.unitFlow_given"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.unitFlow_uptake"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.unitFlow_replenishment"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.unitWeb_stock"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.unitBalancesOn_of_le"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.unitAccumulates_of_balances"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.unitAccumulates_of_global_balances"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.unitNeverReturnsBelowWithin"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.StockFlowBridge.lineWeb"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.StockFlowBridge.lineFlow"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.line_taken_lt_of_goes"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.line_balancesOn_of_within"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.line_balancesOn_of_goes"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.line_balances_of_unending"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.line_accumulates_of_within"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.line_accumulates_of_goes"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.line_account_of_goes"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.line_account_unending_via_flow"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.line_never_returns_below_within_of_within"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.line_never_returns_below_within"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.StockFlowBridge.wayWeb"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.StockFlowBridge.wayFlow"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.way_taken_lt_of_goes"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.way_balancesOn_of_within"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.way_balancesOn_of_goes"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.way_balances_of_unending"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.way_accumulates_of_within"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.way_accumulates_of_goes"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.way_account_of_goes"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.way_account_unending"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.way_never_returns_below_within_of_within"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.way_never_returns_below_within"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.coupled_indexed_step_whole_eq"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.line_taken_const_of_even_met"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.line_coupled_indexed_correspondence"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.way_taken_const_of_met"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.way_coupled_indexed_correspondence"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.StockFlowBridge.way_coupled_indexed_of_unfavoured"
+        }
+      ],
+      "axiom_dependencies": {
+        "Becoming.Flow.held_below_within": [],
+        "Becoming.Flow.never_returns_below_within": [],
+        "Becoming.WayUnderARule.ReachUnit": [],
+        "Becoming.WayUnderARule.Needing": [],
+        "Becoming.WayUnderARule.reachUnit_course": [],
+        "Becoming.WayUnderARule.taken_below": [],
+        "Becoming.WayUnderARule.unending_taken_below": [],
+        "Becoming.StockFlowBridge.unitWeb": [],
+        "Becoming.StockFlowBridge.unitFlow": [],
+        "Becoming.StockFlowBridge.unitFlow_taken": [],
+        "Becoming.StockFlowBridge.unitFlow_given": [],
+        "Becoming.StockFlowBridge.unitFlow_uptake": [],
+        "Becoming.StockFlowBridge.unitFlow_replenishment": [],
+        "Becoming.StockFlowBridge.unitWeb_stock": [],
+        "Becoming.StockFlowBridge.unitBalancesOn_of_le": [],
+        "Becoming.StockFlowBridge.unitAccumulates_of_balances": [],
+        "Becoming.StockFlowBridge.unitAccumulates_of_global_balances": [],
+        "Becoming.StockFlowBridge.unitNeverReturnsBelowWithin": [],
+        "Becoming.StockFlowBridge.lineWeb": [],
+        "Becoming.StockFlowBridge.lineFlow": [],
+        "Becoming.StockFlowBridge.line_taken_lt_of_goes": [],
+        "Becoming.StockFlowBridge.line_balancesOn_of_within": [],
+        "Becoming.StockFlowBridge.line_balancesOn_of_goes": [],
+        "Becoming.StockFlowBridge.line_balances_of_unending": [],
+        "Becoming.StockFlowBridge.line_accumulates_of_within": [],
+        "Becoming.StockFlowBridge.line_accumulates_of_goes": [],
+        "Becoming.StockFlowBridge.line_account_of_goes": [],
+        "Becoming.StockFlowBridge.line_account_unending_via_flow": [],
+        "Becoming.StockFlowBridge.line_never_returns_below_within_of_within": [],
+        "Becoming.StockFlowBridge.line_never_returns_below_within": [],
+        "Becoming.StockFlowBridge.wayWeb": [],
+        "Becoming.StockFlowBridge.wayFlow": [],
+        "Becoming.StockFlowBridge.way_taken_lt_of_goes": [],
+        "Becoming.StockFlowBridge.way_balancesOn_of_within": [],
+        "Becoming.StockFlowBridge.way_balancesOn_of_goes": [],
+        "Becoming.StockFlowBridge.way_balances_of_unending": [],
+        "Becoming.StockFlowBridge.way_accumulates_of_within": [],
+        "Becoming.StockFlowBridge.way_accumulates_of_goes": [],
+        "Becoming.StockFlowBridge.way_account_of_goes": [],
+        "Becoming.StockFlowBridge.way_account_unending": [],
+        "Becoming.StockFlowBridge.way_never_returns_below_within_of_within": [],
+        "Becoming.StockFlowBridge.way_never_returns_below_within": [],
+        "Becoming.StockFlowBridge.coupled_indexed_step_whole_eq": [],
+        "Becoming.StockFlowBridge.line_taken_const_of_even_met": [],
+        "Becoming.StockFlowBridge.line_coupled_indexed_correspondence": [],
+        "Becoming.StockFlowBridge.way_taken_const_of_met": [],
+        "Becoming.StockFlowBridge.way_coupled_indexed_correspondence": [],
+        "Becoming.StockFlowBridge.way_coupled_indexed_of_unfavoured": []
+      },
+      "kernel_checked": true
+    },
+    {
       "module": "Becoming.SeedReach",
       "spine": true,
       "layer": "application",
@@ -160483,22 +161607,30 @@
     }
   ],
   "artifact_sha256": {
-    "Becoming.PacedStock.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.PacedStock.lean": "d84967da1eccd1657c638d786dbc0f1bbb9073baa6eb4990439ad684f68adc05",
+    "Becoming.MultiScaleViability.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.MultiScaleViability.lean": "11d473b27f9084c96ac968e288c257efff4e38ad314a1d75eb42b5b343a642dd",
     "Becoming.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.lean": "cfda8e1b80a7014c901c0cd156558a1c4d87926d92bdd626149c374ef7123aed",
+    "Becoming.StockFlowBridge.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.StockFlowBridge.lean": "92c67b1c1a84452e5c83f31f25bc4ae5d34f89a17eb86e1aebb3a751dbb6ae21",
+    "Becoming.TransformativeViability.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.TransformativeViability.lean": "3767618b36fb7144d901f035452680b636c7a23edf98b47d50ccdf8fd330a123",
+    "Becoming.lean": "e358ba20874b855e0f7242f5f0f99fb045d1b8153b4b5eaa374848dbf927edf2",
     "Becoming.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "BecomingAxiomAudit.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingAxiomAudit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "BecomingPacedStockSignatures.lean": "f45e8dd02b9a3a403eda7a733646509a032adb6bdd93cb9ea2b68d477eaa0557",
-    "BecomingPacedStockSignatures.log": "7a6e693e42057d2a0ede271daa41af3d84f3bb8b439db5d4161c6a39a760af00",
+    "BecomingMultiScaleViabilitySignatures.lean": "8e282389aef11c2a99f014f6a84e404965156baf771160b277dfc36fd856d08e",
+    "BecomingMultiScaleViabilitySignatures.log": "059b57d95317da5cac851066012ae5ec33ad42fa1c7a76fbfb711122d4a1d1a5",
     "BecomingSignatures.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingSignatures.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "BecomingStockFlowBridgeSignatures.lean": "907c0c45cb411be50312b41e6addf0c32b51291f33e332a65bf4232354971fe9",
+    "BecomingStockFlowBridgeSignatures.log": "65d3b5b2bcd889ff6f80980056cf339833765d94fb6668fb3e70ff9ba46bfec3",
+    "BecomingTransformativeViabilitySignatures.lean": "1ac64c180b6ced61011356736219fb3746d650eed66217126d7d157d6229266f",
+    "BecomingTransformativeViabilitySignatures.log": "55dc75948d4fba69828fe765e675af10122f8a15829a2be75d5b7ee9a55b825a",
     "Controls.lean": "b6d4d1772f4c923833bc713f3b9f170a10ef362d699f4b854401adb21fe22f57",
     "Controls.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "EnvironmentAudit.lean": "88ff3747128f99875a2ba6c998d2bb84ab50fad38eeddf1e2ca772b9c5394eee",
-    "EnvironmentAudit.log": "e47cb3dd784e3a7e4b331f7408b352dd004730fdc637b28a46c196d812739428",
-    "check_becoming.py": "c566b62d2166bb7ff04f49bcbc609ac2c08919116c08bb947c8e09ef0f59b28f",
+    "EnvironmentAudit.lean": "9d6d219a607f2a1e858dc852f8d04d743e48d026aca4bcfa52471dca849736cd",
+    "EnvironmentAudit.log": "f3315bf2526de70a155ed580a2296b062c591fe08592614b896bea7ddadefdd2",
+    "check_becoming.py": "b21bebf32c7973ff30400e67f073040392009d4f2ff5ab9b247c0c933953d4c6",
     "version.log": "3185b32e24f5aea32feec5ebb137ef7b0b6d7b33707fb4f254924fe41b5ded8b"
   }
 }

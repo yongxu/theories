@@ -411,6 +411,9 @@ import Becoming.ReadingsSpread
 import Becoming.SignificanceStatements
 import Becoming.AdaptiveLoops
 import Becoming.PacedStock
+import Becoming.MultiScaleViability
+import Becoming.TransformativeViability
+import Becoming.StockFlowBridge
 
 /-!
 # The Theory of Becoming: the formal core
@@ -5408,6 +5411,9 @@ tagged instance or application.
   and no unit in it adds to what it rests on.
 * `Becoming.AdaptiveLoops` (L1): open adaptive loops, observation-driven assume-guarantee composition over coupled substrates, coupled race with pool silencing and two-drawer post-turn bottleneck, unread adaptive collapse and endogenous bidirectional adaptation.
 * `Becoming.PacedStock` (L2, through `Becoming.WayUnderARule`): fine-step stock and unit dynamics under coarse rule-update cadences, intra-span block guards and slack certificates, and the Pace–Margin Sandwich joining `Pace`'s `2N - 1` identification lower bound with `RegimeMargin` drawdown.
+* `Becoming.MultiScaleViability` (L1): lax `(π, σ)` viability simulation (`SlackDist`, `LaxSim`), infinite/linear kernel transfer, vertical tower composition (`LaxSim.comp`, `LaxSim.compAdditive`), and non-lumping 2-scale witness (`WitnessTwoScale`).
+* `Becoming.TransformativeViability` (L2, through `Becoming.WideningOnTheMap`): viability-preserving transformative continuation order (`MacroAdmits`, `TransformativeViable`, `TransformsViably` with non-stasis micro-turnover) strictly separating evolution from zero-loss `Widens` and destructive churn, escaping `Flow.whole_not_keepsWidening`.
+* `Becoming.StockFlowBridge` (L2, through `Becoming.WayUnderARule`): unclamped pre-overdraw `LineOnAStock`/`WayUnderARule` embedding into `Flow.BalancesOn`/`Balances`, finite-horizon `never_returns_below_within`, and exact constant-draw correspondence with `RegimeMargin.Coupled.Indexed.step`.
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.

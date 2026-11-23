@@ -2861,6 +2861,21 @@
    "base": "general",
    "note": "PacedStock P1A: fine-step stock dynamics under coarse rule cadences, intra-span block slack transport, and Pace–Margin Sandwich joining Pace identification lower bound with RegimeMargin drawdown"
   },
+  "lax-multi-scale-viability": {
+   "region": "map",
+   "base": "general",
+   "note": "MultiScaleViability P1C: lax (π, σ) viability simulation, kernel transfer, vertical tower composition with epoch_compat + Lipschitz modulus, and non-lumping 2-scale witness"
+  },
+  "transformative-viability-order": {
+   "region": "map",
+   "base": "general",
+   "note": "TransformativeViability P1C: viability-preserving transformative continuation order with micro-turnover strictly separating evolution from zero-loss Widens and churn"
+  },
+  "unclamped-stock-flow-bridge": {
+   "region": "map",
+   "base": "general",
+   "note": "StockFlowBridge P1C: unclamped pre-overdraw LineOnAStock/WayUnderARule embedding into Flow.BalancesOn, finite-horizon drawdown trap, and Coupled.Indexed correspondence"
+  },
   "selection-through-couplings-at-a-coarser-step": {
    "region": "knowing",
    "base": "general",
@@ -4937,6 +4952,21 @@
    "region": "map",
    "base": "general",
    "note": "P1A fine-step stock dynamics under coarse rule cadences, intra-span block slack transport, and Pace–Margin Sandwich joining Pace lower bound with RegimeMargin drawdown"
+  },
+  "Becoming.MultiScaleViability": {
+   "region": "map",
+   "base": "general",
+   "note": "P1C lax (π, σ) viability simulation, kernel transfer, vertical tower composition, and non-lumping 2-scale witness"
+  },
+  "Becoming.TransformativeViability": {
+   "region": "map",
+   "base": "general",
+   "note": "P1C transformative continuation order with micro-turnover separating evolution from Widens and churn"
+  },
+  "Becoming.StockFlowBridge": {
+   "region": "map",
+   "base": "general",
+   "note": "P1C unclamped LineOnAStock/WayUnderARule to Flow.BalancesOn, finite-horizon drawdown trap, and Coupled.Indexed correspondence"
   }
  }
 }
