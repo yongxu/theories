@@ -1,0 +1,143 @@
+*AI-written: the return of a reader agent who took no part (Claude Fable, run wf_c5d22173-7c3), 23 November 2026, as it came, with HTML entities for < and > put back. Filed by board row DJ.*
+
+**Verdict:** not ready to land as told. 10 MUST (premises dropped in five tellings, one false and one stale sentence on the direction page, an argued impossibility told as fact, one sentence on Ren's answers out of order, one unproved sentence unmarked in two docstrings) and 22 LESSER. I found nothing false in the record's eight laws against the statements, in the note's table of the two courses, in the build figures, or in tests 1 to 5 against the rows.
+
+Paths: W = `/Users/ren/tmp/dj/wt`; L = `W/experiments/integrated-correction/general-framework/generative-basis/lean/becoming`; S = `W/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/a-way-of-units-under-a-rule-set-again-2026-11-23`; MOD = `L/Becoming/WayUnderARule.lean`; REC = `W/theories/becoming/results/records/a-way-of-units-under-a-rule-set-again.json`; DIR = `W/_process/DIRECTION.md`; N19 = `S/../reads-2026-11-19/NOTE.md`; SRC = `W/sources/15-codex-theory-conversations/2026-11-23-be-the-new-coordinator.md`.
+
+## What I read
+
+- **Whole:**
+  - MOD, all 1,466 lines (statements, docstrings and proofs); it is byte-identical to the scratch tree's file that build 3 compiled, and its sha256 is the record's.
+  - `S/NOTE.md`, `S/BRIEF.md.txt` (it begins with the frozen text byte for byte, and the frozen file's hash matches `FROZEN.sha256.txt`), both returns, the proposal, `ANSWER-row-DJ.md.txt`, the three build logs, `build.sh.txt`, `courses23.py.txt`.
+  - REC; N19; SRC's last section (lines 84 to 108).
+  - The diffs of `L/Becoming.lean`, `L/README.md`, `L/check_becoming.py`, `regions.json` and DIR.
+- **By script:** `rows-after-pass-2.txt` (84 rows: name, kind, proof head, uses); the binder-by-binder signatures were not read.
+- **In part:**
+  - DIR beyond line 44: swept by pattern, with lines 15, 42, 93, 99, 130, 132, 136, 144 and 160 to 172 opened; not read whole.
+  - The record of 20 November: head and line 36.
+  - `break-S3-statement.md.txt`: by grep.
+  - Neighbours: `LineOnAStock` 125–205, `way_ends`, `need_unmet`, `unending_iff_holds`; `RuleCapture` 100–222; `RegimeMargin` 243–272 and `holds`; `TurningInTime` `pair`, `kept_within` and the two orders; `Pace.turn`.
+  - The four dependency records: title, source and declaration lists.
+- **Not at all:** SRC's earlier sections, the plan, the board, any chapter.
+- Nothing was built, run or edited.
+
+## Findings
+
+1. **MUST. The root bullet drops two premises of `tested_or_ends`.** `L/Becoming.lean:5377–5385`, "Given that under a rule that favours … `z + T ≤ hi`: the course comes to a step with the test". Source: MOD 499–516 also asks `high : s.2 ≤ hi` and `[DecidablePred favours]`. Replacement: add "that the start level is at most `hi`, and that which rules favour is decided".
+
+2. **MUST. The README row and the checker text drop `upper` from the lasting.**
+   - `L/README.md:405`: "for the lasting, a monotone reading of a share not raised under a rule that does not favour".
+   - `L/check_becoming.py:579–581`: "Where the next rule is a monotone reading of a share not raised under a rule that does not favour, the first outcome lasts".
+   - Source: `tested_lasts` (MOD 770–772) asks `upper` too, and `lasts_from` uses it (MOD 721). The checker text also omits that favouring is decided, and both give the start within the cap only as "the cap".
+   - Replacement: "…a monotone reading of a share not raised under a rule that does not favour, with a rule above a favouring rule favouring"; in the checker add "the start at most the cap, and which rules favour decided".
+
+3. **MUST. The locked start is told with one of its four premises.** "From a locked start whose share is not lowered under a favouring rule, the rule favours …" appears in:
+   - `L/Becoming.lean:5389–5392`, `L/README.md:405`, `L/check_becoming.py:581–582`, `S/NOTE.md:38`, DIR:44, N19:72.
+   - Source: `favours_while_met` (MOD 937–941) asks `raises`, `monotone`, `upper` and `locked`, with the next rule read from a share. Only the record's law 5 has all of them.
+   - Replacement: "Where the next rule is a monotone reading of a share, a rule above a favouring rule favours, the share of all the kids of a way is not below the way's under a favouring rule, and the start is locked: the rule favours at every step up to and including the one after the first step with a need unmet."
+
+4. **MUST. An impossibility that was argued is told as fact.**
+   - REC `does_not_show[5]` (line 121): "the statement with no rule in it …, which cannot be proved with an empty axiom report".
+   - DIR:44: "The statement with no rule in it … cannot be proved under the package's rule of an empty axiom report".
+   - Source: `S/ANSWER-row-DJ.md.txt:7`, "I state this last from what is known of Lean's logic; it was not checked here"; `S/NOTE.md:11` and N19:71 keep that sentence.
+   - Replacement: "…which, by this row's argument on paper, cannot be proved with an empty axiom report: it would decide, for any decidable property of the numbers, whether it holds somewhere. That an empty axiom report cannot give such a decision is taken from what is known of Lean's logic and was not checked."
+
+5. **MUST. A false "only" on the direction page.** DIR:44: "that the rule is set again from a share by a monotone reading works only in making the first outcome last". Source: `locked_while_met` (MOD 911–930) takes the reading from the share and `monotone` and hands them to `turn_locked`; the same paragraph tells that law two sentences earlier. Replacement: "that the rule is set again from a share by a monotone reading does no work in the 'or'; it works in making the first outcome last, and in keeping a locked start favouring while every need is met."
+
+6. **MUST. The list of what is given is short.** DIR:44: "Given, not derived: the needs, uses and offspring under each rule; which rules favour; that offspring together take more under a favouring rule and the same under any other; the stock's premises along the course; the share and its reading." Missing from MOD 499–516: offspring need no more than their parent (`down`), under a rule that does not favour every unit has offspring (`some`), every unit the course reaches needs something (`needs`), nothing given from nothing, the start within the cap, favouring decided. Replacement: add those six, or open with "Among what is given".
+
+7. **MUST. Two sentences in the same paragraph are made stale by the landing.** DIR:44.
+   - "A course was found by program, in a model that is not in the Lean". It now is (`NeedTwentySeven`). Replacement: "in a model that was not then in the Lean".
+   - "…one half read classically, and is not proved". Replacement: "and was not proved then".
+
+8. **MUST. The record's history puts Ren's second answer before the change it answered.** REC `history[0]` (line 280): "the coordinating session proposed building it, on Ren's two answers of that afternoon as it relayed them, and the form was changed after three attacks on paper". Source, SRC 92–106: the proposal followed his first answer; the attacks changed it; he was told so in four messages; then came "Yes, if it survives", a button's label, which that session read as a yes to the build in the changed form. Replacement: "on Ren's 'Yes, propose it' the coordinating session proposed building it; rows FM and DJ attacked it on paper and its form changed; after he was told of the change he pressed 'Yes, if it survives', which that session read as a yes to the build in the changed form."
+
+9. **MUST. "From every start" in the dated section of 19 November.** N19:72: "from every start a step with the test or a first step with no need met, whatever sets the next rule". Source: `tested_or_ends` holds under nine premises, the start at most `hi` among them. Replacement: "under its premises on the units and the stock, from a start within the cap, a step with the test or …".
+
+10. **MUST, by rule 1's letter. Two docstrings state a comparison no theorem states.** MOD 60–62 and 1221–1222: "the change of the rule keeps something going only as against going on favouring". Source: `goes_on` states only that the net never ends. The comparison is the 20 November record's, by program (its line 36), and `S/NOTE.md:47` itself says it "is not in the Lean". Replacement: "What goes on is twelve `O`, and the `F` the rule counted is gone. Found by program on 20 November and not stated here: with the rule held favouring the same start ends, and with the rule that does not favour held from the start something goes on too."
+
+11. **LESSER. "Until" reads as "and then stops".** `L/README.md:405`, `L/check_becoming.py:582`, DIR:44: "the rule favours until one step after a need is first unmet". The theorem gives favouring through that step and says nothing after it. Replacement: "at every step up to and including the one after…", as the root, the note and the record have it.
+
+12. **LESSER. "Three attacks" has no source.** `S/NOTE.md:7`, REC `history[0]`, DIR:44. SRC:106 says "both attacks"; the proposal has two sections named attack (FM 12:57, DJ 13:05) and two later sections. Replacement: "two attacks on paper, by rows FM and DJ, and two further exchanges appended".
+
+13. **LESSER. The private declarations' axiom reports rest on a run that has not happened.** `S/NOTE.md:53`: "the private ones by the core run's environment audit". Source: `S/RETURN-second-pass.md.txt:18` and 342; the scratch audit covers 75 public declarations, and the five private ones printed no axiom only in a probe copy that is not filed. Replacement until the receipt exists: "the five private ones by the implementer's probe, which is not filed; the core run's environment audit is to confirm". The same applies to MOD:74 and the README's "no axiom".
+
+14. **LESSER. Fast checks are not told.** `S/NOTE.md:53` ("in one scratch build") and :75 ("Three scratch builds"). Source: the first return, section 5, has four fast checks on the module, the first failing, and one on a probe; the second return, section 6, has about six and five. Replacement: add "and about sixteen single-file checks by the implementer, the first of which failed on a form of the recursion".
+
+15. **LESSER. Three stamps are ahead of the clock.** `S/BRIEF.md.txt:192` and `S/ANSWER-row-DJ.md.txt:55` say "about 14:20 WIB", but the files were last written at 14:09 and 14:11. REC `reviewed_at_utc` is 07:30:00Z, and the clock at my reading was 07:14:51Z. Take each from the clock.
+
+16. **LESSER. "No step has the test" says more than `ends_untested`.** REC law 6 (line 63) and MOD 59–60. Source, MOD 1289–1292: no step with some need met at every step before it has the test. Replacement: add that clause.
+
+17. **LESSER. The short notes drop "read downward" and the stock.**
+   - `regions.json:2852` and REC `statement` (line 12): "the first lasts under the lock's premises". They are the lock's premises at the orders reversed, with the stock's premises; REC `hypotheses[1]` says "read downward". Replacement: "the first lasts where the lock's premises hold read downward, under the stock's premises".
+   - `regions.json:4918`: "the first lasts where the next rule is a monotone reading of a share". Replacement: add "under each law's stated premises".
+   - `regions.json:2852`: "both outcomes of one course". One course has one of them. Replacement: "one of two outcomes on a course, each built".
+
+18. **LESSER. "Set from the way present" leaves out the rule in force.** `L/Becoming.lean:5374`, `L/README.md:405`, `L/check_becoming.py:573`, REC law 0, `S/NOTE.md:34`. Source, MOD 87–89: `next p.1 p.2`. Replacement: "from the way present and the rule in force".
+
+19. **LESSER. A "So" that hides the premises.** `S/NOTE.md:36`: "So the net never ends exactly where …" follows a sentence on what `tested_lasts` does not ask. Replacement: "Under both lists together the net never ends exactly where…".
+
+20. **LESSER. The two courses are told without three parameters.** `S/NOTE.md:40` omits the margin `y T = T`, the cap 32 and the reading (favours where the share is at least 1). REC law 6 omits the margin.
+
+21. **LESSER. What the proposal built first.** `S/NOTE.md:11`: "The proposal built first a statement with no rule in it". Source: proposal line 26 has it "over any sequence of rules"; the form by a kind is row FM's reshaping (line 57). Replacement: "The proposal built first the statement underneath, over any sequence of rules, and after row FM's attack by a kind with no rule".
+
+22. **LESSER. Both answers were button labels.** `S/NOTE.md:7` says so of the second only; SRC:96 says the first was too.
+
+23. **LESSER. "Two inductions would retire" is unchecked, and one would not.** `S/NOTE.md:67` and REC `next_delta`. `ends_all` is called by `line_ends` (`L/Becoming/LineOnAStock.lean:899`) as well as by `way_ends` (:924). Replacement: "which would retire `reaches_from` and `reaches_holds`; `ends_all` stays for `line_ends`", or drop the count.
+
+24. **LESSER. The answer's correction mends two things.** `S/NOTE.md:79`: "with a correction of one of its own points". `S/ANSWER-row-DJ.md.txt:55` also withdraws "he said to advance by what is drawn". Say both.
+
+25. **LESSER. "Each read it whole" is only said of row FM.** `S/NOTE.md:15`. `S/BRIEF.md.txt:170` says whole of FM; :182 says the coordinating session read "against the definitions at their statements" and did not open `courses23.py`, `RuleCapture`, `kept_within` or any proof.
+
+26. **LESSER. A non-implication with no witness.** REC `does_not_show[4]` has kind "non-implication" while saying none is built. Make it "scope", or keep the kind and say "argued, not built".
+
+27. **LESSER. "The 'or' is inclusive" reads as "both can happen".** `S/NOTE.md:34`. Replacement: "Under these premises alone the two are not shown to shut each other out; no course with both is built."
+
+28. **LESSER. The lasting's stock premises.** REC law 3: "on the stock along the course" leaves out the start within the cap (`high`, MOD 751).
+
+29. **LESSER. Two wordings in the new direction passage.** DIR:44.
+   - "the first sentence of 'We are far from it'": the sentence meant is the second of line 15 ("No model that was found has the taking and the closing …").
+   - After the insertion at the head, the parenthesis "(outside the package, by the table's cells …)" hangs on the clause about what was built, not on "no statement … had all three".
+
+30. **LESSER. Sweep of DIR: dated sentences the landing overtakes.**
+   - Line 42: the list of what the Lean has of a lock on a needed level stops at three laws; the module's locked start, with units that have needs and offspring and no overdraw asked, is a fourth.
+   - Line 130: "The second is stated in part twice: concluded on the line on a stock, where there is no rule and no share, and handed in on the lock". `locked_while_met` is a third place, with a rule and a share.
+   - Line 132: "for a growing kind that a rule picks out step by step it was not shown".
+   - Line 136: "no statement names two of the three carriers of the first sentence". `favours_while_met` names needs met at a level and a rule read from a share. This is my reading; the row's lookup should be rerun.
+   - Line 99, "the taking and the closing as outcomes of one course in general": I could not settle whether the landing touches it.
+
+31. **LESSER. AI-written marks.** `S/RETURN-first-pass.md.txt` and `S/RETURN-second-pass.md.txt` carry none. The root bullet, README row, checker text and regions notes carry none either, like their neighbours in those files.
+
+32. **LESSER. The module head's own list for `tested_or_ends`** (MOD 29–36) leaves `nothing`, `high` and decidability to "as the docstring names".
+
+## The same law told differently
+
+- **Start at most `hi`:** stated in the record and the note; "the cap" in the README and the checker; absent from the root and from DIR's list.
+- **Favouring decided:** in the README, the record and the note; absent from the root, the checker and DIR.
+- **`upper` for the lasting:** in the root, the record, the note and DIR; absent from the README and the checker.
+- **Locked start:** four premises in the record; one elsewhere (finding 3).
+- **"Up to one after"** (root, note, record) against **"until one step after"** (README, checker, DIR).
+- **The lock-free statement:** "cannot be proved" flat in the record and DIR; qualified in the note and N19.
+- **Attacks:** "three" in the note, the record and DIR; "both" in SRC.
+- **The lasting:** "the lock's premises" in the record's statement, regions and N19; "read downward" in the record's hypotheses and DIR.
+
+## What checked out
+
+- **The table of the two courses** (`S/NOTE.md:42–45`) agrees with both `course_values` and with my own run of the steps by hand.
+- **Figures:** 1,466 lines; three builds at 13:45, 14:02 and 14:03, each exit 0 with no axioms; 52 public theorems and 75 audited declarations; 84 rows.
+- **Tests 3, 4 and 5 by the rows:**
+  - `turn_locked` is used in `lasts_from` and `locked_while_met`.
+  - `goes_on` uses `tested_lasts`; `ends_untested` uses `ends_iff_unmet` and `unending_iff_tested`; both `favours_through_…` use `favours_while_met`.
+  - Neither twin's term names the old theorem.
+- **Order of events:** the claim commit (13:36:15) precedes build 1; the brief was frozen at 13:30:57.
+- **Record:** all 34 declarations exist and are public; the four dependency records are what is said.
+- **Ren's words:** the quotations in the note, the brief and N19 match SRC and the 21 November source.
+
+## Could not check
+
+- The token figures (`S/NOTE.md:75`).
+- "Row FM read that course premise by premise and found no hole" (`S/NOTE.md:11`): no filed text says it.
+- The receipt and the core run; the five private declarations' axiom reports.
+- That each `rfl` twin typechecks, beyond build 3's exit 0 on the identical file.
+- The level L2, the region "map", the family F01, the atlas, and length caps.
+- Tests 6 and 7 are not judged here. For test 7: reading the proof terms, I saw every named premise of `tested_or_ends`, `tested_lasts`, the two equivalences and the four locked-start laws handed to a use, and none that follows from the others, beyond what the note already tells of `regimeAlong`.

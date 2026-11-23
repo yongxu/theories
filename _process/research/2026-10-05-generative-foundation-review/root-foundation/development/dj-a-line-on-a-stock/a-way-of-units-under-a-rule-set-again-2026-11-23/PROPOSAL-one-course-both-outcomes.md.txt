@@ -1,0 +1,96 @@
+# A proposal: one course with both outcomes, for units that multiply, a rule set again from their share, and a level they need
+
+*AI-written (Claude Fable, the coordinating session), 23 November 2026, a few minutes before 12:57 WIB (the hour was first written without looking at the clock), on Ren's "Yes, propose it" to that session's question "Should the next step be one claim at the central gap, a selection's response derived?". One writer. Read by no one yet. Nothing is built and nothing is claimed on the board. It is put to rows DJ and FM to attack on paper before anything else.*
+
+## What I said, and what reading the records changed
+
+I told him the nearest thing to a derived response was the paper model of 19 November, and proposed "a model in which the response comes out as a conclusion". Then I read that day's record whole (`dj-a-line-on-a-stock/reads-2026-11-19/NOTE.md`, with the report `break-S3-statement.md.txt`). The model was worked that day, and what came of it is more exact than I had told him:
+
+- There is an exact condition, searched on 45 million small starts with no disagreement and read on paper by one reader who found no false step (its statement corrected by that reader). Call it S3: under its premises, a way of units under a rule set again from their share never ends exactly where its course comes, with some need met at every step before, to a configuration that holds and at which neither the rule in force nor the rule read off the present share favours.
+- That reader found what S3 is made of. A statement with no rule in it, S3′: on a line on a stock where some units' offspring take more and the others' take the same and are not none, offspring need no more than their parent, every unit needs something, and the stock's premises hold along the course, the line never ends exactly where its course comes to a holding configuration none of whose descendants is of the growing kind. And one lemma the package has (`RuleCapture.turn_locked` with the orders reversed). `LineOnAStock.unending_iff_holds` would be S3′'s case where no unit grows, exactly; `way_ends` its case where every unit grows, in its second conjunct.
+- The row's verdict that day: "as a statement about a lock" S3 is "the lock-free statement with a certificate"; write no Lean from it now; and one question that no proof answers and is his: whether a rule that stops favouring because the units it counts were the first to go without is what the idea means by turning.
+
+So I do not propose a new model. I propose to build what was found on 19 November and left on paper.
+
+## Why build it now, when the row chose not to
+
+1. **It is the statement the direction page says is not there.** "What is not there": no statement in the package has units that each need a level and leave offspring, a rule set again from their share, and that level as what they need, all three. S3 has the three on one course with both outcomes.
+2. **It is the alignment paragraph's last two sentences as one theorem, with no reading of the level handed in.** Left to itself the favouring goes on until a need goes unmet; the way then goes on without end exactly where it comes to a configuration that holds and from which no rule favours. And from a locked start, by the same reader on paper, any such configuration comes at least two steps after the first unmet need: with nothing handed in, the running down reaches the rule only through an unmet need of what the share counts. Row FM's read of 23 November found that wherever there is a rule and a share, what the selection responds to is handed in. Here it is not: the response is that a unit whose need is unmet leaves nothing.
+3. **The test that turned it down measures something else.** S3 was judged by whether the lock does the joining and whether an old proof retires. By that test a statement that puts proved pieces on one course is nothing gained, and the tries of 19 to 23 November that the direction page tells came back so. The aim asks for a map with its parts placed. The piece that places these three is missing as a statement, and this is it. That is my reading of why the work kept returning dictionaries, and rows DJ and FM may hold it wrong.
+4. **It can fail in Lean.** The paper proof's left-to-right half is read classically ("finitely many, so a last one"); in the style of the package it is one nested induction, proved afresh, with `favours` decidable. Whether it goes through with no further premise is not known.
+5. **It gives him something to look at and not a wording to judge.** The course of 19 November and its twin, as Lean: a favoured unit that needs 27 of a level of 28, the level falling to 26, the unit leaving nothing, the rule no longer favouring, and twelve small units going on without end; with the counted unit's need one less, the rule never stops favouring and the line ends. Whether that is turning is his to recognise, after he has seen it.
+
+## What would be built
+
+**Stage 1, a leaf module, nothing existing changed.**
+- S3′ as the reader stated it, over any sequence of rules: the net never ends exactly where there is a step, some need met at every step before it, at which the configuration holds and from which no rule favours. Premises as the reader repaired them (`grows`, `even`, `some`, `down`, the needs in `Needing`'s form, `nothing`, `high`, `keepsAlong`, `regimeAlong`, `favours` decidable).
+- S3 as its corollary for a rule set again by a reading of the share (`lowers`, `monotone`, `upper`): "from which no rule favours" becomes a test at one configuration.
+- For a locked start: any such configuration comes at least two steps after the first unmet need.
+- Two built courses: the course of 19 November and its twin.
+
+**Stage 2, only on his word after stage 1:** the two sections of `LineOnAStock` proved again below, so that `unending_iff_holds` and `way_ends` become calls of S3′ with their statements unchanged. The reader put the rework at about five hundred lines. That is the join by the test the rows use.
+
+## What would count as nothing gained, written before any build
+
+- S3′ needs a premise beyond the list above, or one that hands in the level's course or a reading of it.
+- The corollary for a locked start cannot be stated without a premise that says when the rule stops favouring.
+- A reader who took no part shows that the module's statements, taken together, say nothing that `need_unmet`, `turn_locked` and `unending_iff_holds` in a row do not already say to a person reading the three. This is the test of 19 November, kept: if it holds, stage 1 is filed as a telling proved and not as a join, and said so.
+- Either built course fails to meet the premises of the law it is a case of, checked by Lean and not by hand.
+- At stage 2: either old theorem does not come back as a call with its statement unchanged, by the lister.
+
+## What it does not do
+
+It derives no response but the one the line on a stock already has: an unmet need leaves nothing. It does not place the two ways: no unit in it adds to what it rests on. It does not say when such a turn comes in time by the model's numbers; the record of 19 November found no such statement, and the turn came in time only where growth is slow against the stock.
+
+## Cost, as a cap that is a stop
+
+Stage 1: one attacker of the brief, one implementer, one reader of the Lean and the tellings; 0.9 million tokens in all, every stage inside it, sized from what agents took this morning (about 250 thousand each, the implementer twice that); at most 20 scratch builds; one core run. Before any agent: the brief written by one session and attacked on paper by rows DJ and FM at no reader's cost. Stage 2 is sized after stage 1 and not started without his word.
+
+## Who
+
+Row DJ keeps `LineOnAStock` and wrote the record of 19 November; it is its to write if it will. If it holds that this should not be built, that is argued before him and not decided by the session that proposes it.
+
+## After row FM's attack on paper (23 November, 12:57 WIB by the clock; its points, taken)
+
+Row FM answered from its read of the night before, opening nothing new. It does not hold the aim wrong. What it changes:
+
+1. **Two statements were run together.** S3′ "by a kind of unit" is a statement of `LineOnAStock` as it stands, with fixed `kids`. S3′ "over any sequence of rules" is on another carrier, where what a unit leaves depends on the rule of the step; the reader of 19 November gets the second from the first by tagging units with the step. The brief says which is proved first. Row FM's view, which I take: the first, in `LineOnAStock`'s own terms, because that is the form in which `line_ends`, `way_ends` and `unending_iff_holds` can later become its calls.
+2. **S3′ is more than row FM's second try of 23 November.** That try had a fixed line whose own offspring of the line take more, and for it the removal is already `line_ends`. The growing kind here has offspring that take more in total and may be of the other kind (the favoured unit of 19 November leaves itself and one small unit, and as a line does not grow). The induction for that is the one piece of new mathematics.
+3. **"Here it is not handed in" said too much.** What is derived is the response the line already has, at the grain of units: a unit whose need is unmet leaves nothing. It reaches the rule through a share and a reading that are both parameters. The sentence in "Why build it now", point 2, is to be read so.
+4. **"Each doing work" is not answered by building.** S3 would have the three on one course; by the reader of 19 November the lock works in it only as a test at one configuration.
+5. **The first "nothing gained" test was tripped by the repair itself:** `keepsAlong` and `regimeAlong` are premises at every step of the course, of the kind `unending_iff_holds` already has in `along`. Reworded: S3′ needs a premise on the course beyond those two, or a reading of the level.
+6. **For the brief, from the faults of the night before:** each built course's premises checked by Lean as one stated conjunction; the repaired premise list checked for a premise that follows from another (`keeps` beside `along` was one); and the cap.
+7. **The cap was low, and stage 1 is split.** `LevelAlone`, with easier proofs, took 1.7 million tokens against 1.5 said. Stage 1a: S3′ alone, in `LineOnAStock`'s terms, its induction and nothing else. Only if it goes through with no further premise, stage 1b: the corollary for a rule read off the share, the clause for a locked start, the two courses. Each sized by itself before it starts; 1a's figure is row DJ's to give if it writes it.
+8. **What stage 1 is, by row FM's reading and by this proposal's own third test:** a telling proved. The join by the rows' test is stage 2. Row FM adds that a stated composition is a link a person can find on the map, and that the rows' test guards against something else, the package growing by re-sayings; both are right about different things.
+
+## After row DJ's attack on paper (23 November, 13:05 WIB by the clock; its points, taken)
+
+Row DJ's full answer is `tmp/r7/one-model/check/s3-23/ANSWER-row-DJ.md` in the repository's untracked scratch. It no longer holds "write no Lean", and it changes what is built.
+
+1. **S3′ cannot be proved in the package, in either form.** The core run asks an empty axiom report. Left to right, S3′ would decide, for any decidable property of the naturals, whether it holds somewhere or nowhere. Row DJ gives the course in `LineOnAStock`'s own terms: the units are the naturals, each needs 1 and takes 1; unit n leaves [n+1], except the first n at which the property holds, which leaves two; the level stays at its cap at takes 1 and 2, so the net never ends; and a step with no growing descendant after it would settle the property. The reader of 19 November read that half classically and said so; no search sees this. So stage 1a as row FM reshaped it stops at its first step, and is dropped.
+2. **S3 itself looks provable, and the lock is what makes it so.** Its right side is a test at one configuration: it holds, the rule in force does not favour, and the rule read off the present share does not favour. There is a measure: a bound on the way's needs, then the room the cap leaves above the take, then the level. A need unmet: the first falls. Every need met under a favouring rule: the take rises. Every need met, the rule not favouring, the configuration not holding: the level falls. Holding with the rule read off the share favouring: the take rises within two steps. Otherwise the test holds. Row DJ's sketch, unchecked; this session went through its five cases on paper and found no false step, and adds that it gives more than the equivalence: from every start the course either comes to the test at some step with some need met before, or comes to a step at which no need is met, each with its step. That is both outcomes stated as an "or" with witnesses, and the brief should try that form first.
+3. **One sentence of the record of 19 November changes:** "the lock-free statement with a certificate" is right classically; in the package the certificate is what makes that half provable at all. The lock does that one piece of work. It still does not join the old laws. Row DJ files that correction with whatever lands.
+4. **Sentences of this proposal that were not as the record or the Lean has them.** The 45 million starts were against S3 as first proposed; with the repaired premises the evidence is 270,226 starts, 633 of them never ending, by a program not kept. The record's twin is the rule held favouring, which ends at its sixth step; "need one less" is true by one run of row DJ's on 23 November on the kept model (levels 28, 28, 26, 18, 0, the rule favouring throughout, ending at step 4) and is the better twin for Lean. The clause for a locked start asks `raises`, which the premise list above left out, and it gives an unmet need of some unit, not of a unit the share counts. S3 states the "unless"; that the favouring goes on until a need goes unmet is the lock's law and `need_unmet`'s argument, which were not in stage 1's list. The package has `turn_locked`; the reversed instance is one direction of the test, and the other is argued from `lowers` and `monotone`. "About five hundred lines" was the proposer's figure.
+5. **What his yes was to, and what this is.** He said yes to "a selection's response derived". S3 derives none beyond "an unmet need leaves nothing". What it would say: a selection that reads only its share is reached by the running down only through who is left, and the way goes on exactly where it comes to hold with the rule turned. On the course, one unit of need decides it: at 27 the counted unit goes without two steps sooner, the rule turns, and twelve small units go on; at 26 everything ends. Whether that is turning stays his.
+6. **What would be built, as it now stands.** One leaf module: the model with a rule; the dichotomy and S3 with the test at one configuration; the clause for a locked start, with `raises`; the course of 19 November and its twin at need 26, every premise checked by Lean as one stated conjunction. The measure is written into the brief before any build, for this session and row FM to attack. Added to what counts as nothing gained: the left-to-right half does not go through with an empty axiom report and these premises; then what is proved is filed as that. What it leaves: the case with no growing unit stated twice until stage 2, which stays large because of the import.
+7. **Whose, and the cost.** Row DJ's to write if he says build. Its figure, as a stop: 2.0 million tokens for everything, with a stop at 1.2 million after the implementer's first pass if the left-to-right half is not through; at most 25 scratch builds; one core run. The 0.9 million first written here was low.
+
+## The form with both outcomes, after row DJ's second answer (23 November, 13:06 WIB by the clock)
+
+Row DJ went through the five cases again without the premise that some need is met at every step, and the "or" holds on its paper as on this session's. As it would be stated: from every start at most `hi`, under the premises, either there is a step k, some need met at every step before it, at which the test holds, or there is a step n, some need met at every step before it, at which no need is met. With the right-to-left half the two shut each other out, and S3 is the corollary.
+
+- **What it gains, found by row DJ:** `way_ends` becomes its case whole, and not in its second conjunct only as the reader of 19 November had it. At one rule that favours the first outcome is impossible, so the second stands, which is `way_ends`' first conjunct. `unending_iff_holds` is the corollary at one rule that does not favour. So the "or" has both old laws as cases, whole, with the stock's premises restated as the reader repaired them.
+- **Added to what counts as nothing gained:** if only the equivalence goes through, it is filed as S3 with `way_ends` a case in half.
+- **A caution on how it is told, row DJ's, taken.** The direction page's sentence is that no model found has the taking and the closing as outcomes of one course, with units that multiply and a way that itself remakes what it rests on. This statement has both outcomes of one course with units that multiply, a rule set again and a level they need. It has no way that remakes what it rests on: no unit adds to what it rests on, and the going on it finds is a configuration that holds. It answers the paragraph "What is not there" and not that sentence, and is put to him so.
+
+None of this is built. Both sessions checked it on paper only.
+
+## Which premises do which work (row DJ, after row FM's read; 23 November, 13:07 WIB by the clock)
+
+Row FM named the one place in the measure where no component falls at a single step: every need met, the rule in force not favouring, the configuration holding, and the rule read off the share favouring. Row DJ closes it by taking that step with the next; the room above the take falls from k to k+2 whatever the share does. Nothing is asked of the lock's premises in that half. So the premise lists part:
+
+- **The "or"** (a first step with the test, or a first step with no need met): `grows`, `even`, `some`, `down`, the needs, `nothing`, `high`, `keepsAlong`, `regimeAlong`, `favours` decidable, and any way of setting the next rule from the present way and rule.
+- **That the first outcome means the way never ends:** add `lowers`, `monotone`, `upper` and a reading of the share at every step. Without them a course can pass the test and end later.
+- **The clause for a locked start:** add `raises` and the locked start.
+
+Row DJ's sentence for a person, in place of "each doing work": the three things on the course are the "or"; the lock's premises do one job, which is to make the test at one configuration a promise about every later step.

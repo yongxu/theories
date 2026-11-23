@@ -1,0 +1,194 @@
+# Brief: a way of units under a rule set again, on a stock — a first step with the test, or a first step with no need met
+
+*AI-written (Claude Fable, the session that holds board row DJ), 23 November 2026. Written before any build, to be frozen (hash and clock beside it) and then attacked on paper by row FM and the coordinating session. One writer. Everything in it that is not a quotation of the Lean is argued on paper and checked by no reader. Unit, way, rule, share, level, need, test are working names.*
+
+## Where it comes from
+
+The coordinating session's proposal of 23 November (`/Users/ren/tmp/coord2/PROPOSAL-one-course-both-outcomes.md`, with rows FM's and DJ's attacks appended), on Ren's "Yes, propose it" (12:50) and "Yes, if it survives" (13:26), as that session relayed them; its file of his words is the source, and the claim points at it. The record it builds from is [the read of 19 November](../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/reads-2026-11-19/NOTE.md).
+
+## What it advances (rule 6)
+
+- **A claim put to a test that could fail:** that the statement below can be proved with an empty axiom report under the premises listed, no more.
+- **A telling a person can follow:** two built courses that differ in one unit of one need, one going on and one ending.
+- **A join, if item E goes through:** two laws of the line on a stock (`unending_iff_holds`, `way_ends`) shown to be its cases at one rule.
+
+It derives no response of a selection beyond the one the line on a stock already has: a unit whose need is unmet leaves nothing. It does not place the two ways: no unit in it adds to what it rests on, and the going on it finds is a configuration that holds.
+
+## The account, before any build (row FM's words, taken)
+
+The level and the units' needs decide that one of two things comes: a step at which the configuration holds and neither the rule in force nor the next rule favours, or a step at which no need is met. The lock's premises decide that the first of them lasts. The statement of the "or" names a rule that is set again; that it is set from a share by a monotone reading does no work there.
+
+## The module
+
+One leaf module, working name `Becoming.WayUnderARule`, importing `LineOnAStock` and `RuleCapture`. Nothing existing is changed but the root's import and bullet, the package README's row and the checker's list.
+
+**The model.** `U R : Type`; `need use : U → Nat`; `kids : R → U → List U`; `giving y : Nat → Nat`; `hi : Nat`; `favours : R → Prop`; `next : List U → R → R`. A configuration is `((w, g), x)`: a way, the rule in force, a level.
+
+- the way and rule after a step: `(LineOnAStock.after need (kids g) w x, next w g)`. The next rule is set from the way present before the step, as `Pace.turn` reads.
+- the level after: `LineOnAStock.left giving use w x`.
+- the step is `TurningInTime.pair` of the two; `course` is its `Law.orbit`; `Goes` is `LineOnAStock.Goes need (w, x)`; `net` is `Law.stepWhile Goes step`.
+- **the test** at a configuration: `LineOnAStock.Holds need use y (w, x) ∧ ¬ favours g ∧ ¬ favours (next w g)`.
+
+Write `w_k`, `g_k`, `x_k` for the course from `s`, `T_k := taken use w_k`.
+
+## The three premise lists
+
+**List 1, for the "or".**
+- `grows : ∀ g, favours g → ∀ u, use u < taken use (kids g u)`
+- `even : ∀ g, ¬ favours g → ∀ u, taken use (kids g u) = use u`
+- `some : ∀ g, ¬ favours g → ∀ u, kids g u ≠ []`
+- `down : ∀ g u v, v ∈ kids g u → need v ≤ need u`
+- `needs : ∀ k u, u ∈ w_k → 0 < need u` (every unit the course reaches needs something; it follows from `∀ u, 0 < need u`, and at one rule from `LineOnAStock.Needing` by `mem_generation`)
+- `nothing : RegimeMargin.FromNothing giving`; `high : x_0 ≤ hi`
+- `keepsAlong : ∀ k, (∀ j, j ≤ k → Goes_j) → RegimeMargin.Keeps giving T_k hi`
+- `regimeAlong : ∀ k, (∀ j, j ≤ k → Goes_j) → ¬ favours g_k → RegimeMargin.Short giving T_k (y T_k) ∧ RegimeMargin.Meets giving T_k (y T_k) hi`
+- `[DecidablePred favours]`
+- `next` is any function.
+
+**List 2, added for "the first outcome lasts".** `A : Type`, `P : Ideals.Preorder A`, `M : Ideals.Preorder R`, `share : List U → A`, `h : A → R → R`, with `next := fun w g => h (share w) g`, and
+- `lowers : ∀ w g, ¬ favours g → P.le (share (LineOnAStock.allKids (kids g) w)) (share w)`
+- `monotone : RuleCapture.ReadsShare P M h`
+- `upper : ∀ {g g'}, M.le g g' → favours g → favours g'`
+
+The share stays a parameter (with it fixed as the number of units, `lowers` at one rule shuts out the kept case `TwoForOne`).
+
+**List 3, added for the clause on a locked start.**
+- `raises : ∀ w g, favours g → P.le (share w) (share (LineOnAStock.allKids (kids g) w))`
+- `locked : RuleCapture.Locked M favours (fun w g => h (share w) g) (w_0, g_0)`, with `monotone` and `upper`.
+
+## The statements
+
+**A. The "or" (list 1).**
+`(∃ k, (∀ j, j < k → Goes_j) ∧ Test_k) ∨ (∃ n, (∀ j, j < n → Goes_j) ∧ ¬ Goes_n)`.
+
+**B. The first outcome lasts (even, some, down, high, keepsAlong, regimeAlong, list 2).**
+`(∃ k, (∀ j, j < k → Goes_j) ∧ Test_k) → «不穷» net «一» s`.
+Not asked: `grows`, `needs`, `nothing`, decidability.
+
+**C. The equivalences (lists 1 and 2), corollaries of A and B.**
+`«不穷» net «一» s ↔ ∃ k, (∀ j, j < k → Goes_j) ∧ Test_k`, and `¬ «不穷» net «一» s ↔ ∃ n, (∀ j, j < n → Goes_j) ∧ ¬ Goes_n`.
+
+**D. From a locked start (list 3; no stock premise).**
+`∀ n, (∀ j, j < n → ∀ u, u ∈ w_j → need u ≤ x_j) → ∀ j, j ≤ n + 1 → favours g_j`; and its corollary: `Test_k → ∃ j, j + 2 ≤ k ∧ ∃ u, u ∈ w_j ∧ x_j < need u` (a need went unmet at least two steps before; the step found by a bounded search, `first_of_decided`).
+
+**E. The two old laws as cases (last; dropped first if the cap is near, and then told as argued on paper).**
+A lemma that at one rule (`R := PUnit`) this course is `LineOnAStock.course` with the rule carried. Then, in this module, two theorems whose statements are `LineOnAStock.unending_iff_holds`'s and `LineOnAStock.way_ends`'s, binder for binder, proved from C (with `favours := fun _ => False`) and from A (with `favours := fun _ => True`: the first outcome asks a rule that does not favour, so the second stands, and that is `way_ends`' first conjunct). They do not call the old theorems. The old theorems are not touched; making them calls is stage 2 and waits on his word.
+
+## The measure for A
+
+Three numbers, in this order: a bound `m` on the needs of the way; the room `c` the cap leaves above what the way takes (`hi + 1 ≤ T_k + c`); a bound `f` on the level. The claim at `m`: for all `c`, `f` and every step `k` with some need met at every step before it, the way at `k` needing at most `m`, the room `c` and the level at most `f`, one of the two outcomes holds. First a lemma: with some need met at every step before `k`, `x_k ≤ hi` (`keepsAlong`, as `within_along`).
+
+At a step `k`, in this order:
+1. No need met (decided, as `anyMet_iff`): the second outcome at `k`.
+2. `x_k < m`: every unit of the next way is a kid of a unit the level met, so it needs at most `x_k` (`below_after` at `kids g_k`, with `down`). The claim at `x_k < m`, with `c` and `f` set again from `hi`.
+3. Else every need is met and the way is not empty. If `x_k < T_k`: nothing is left (`step_zero`), and by `needs` no need is met at `k + 1`: the second outcome there.
+4. Else `T_k ≤ x_k ≤ hi`, so `c` is not nothing. If `g_k` favours: the next way is all the kids (`after_of_met`), and it takes at least one more (`allKids_rises` at `kids g_k`). The claim at `k + 1` with `c - 1`, `f` set again, `m` kept (`below_keeps`).
+5. `g_k` does not favour, and `x_k < T_k + y T_k`: the step leaves nothing or less (`step_lowers`, with `Short` from `regimeAlong`). Nothing: the second outcome at `k + 1`. Less: the claim at `k + 1` with the same `c` (`taken_allKids` at `kids g_k`) and `f - 1`.
+6. `g_k` does not favour and the configuration holds. If `next w_k g_k` does not favour: the first outcome at `k`.
+7. Else the rule at `k + 1` favours. The way at `k + 1` is not empty (`some`), takes `T_k`, the level has not fallen (`Meets`), every need is met there (`down`), so the way at `k + 2` takes at least `T_k + 1`. The claim at `k + 2` with `c - 1`, `f` set again, `m` kept.
+
+In the package's style this is three nested lemmas, each by structural recursion with the outer claim handed in as a premise (as `reaches_from` takes `ih`): on `f`, on `c`, and `strong_below` on `m`. No recursion by a well-founded order.
+
+Nothing in A uses the share, the reading or an order on rules.
+
+## The route for B and D
+
+**B.** From the test at `k`, by induction on `i`, at step `k + i`: the rule in force and the next rule do not favour; the way is not empty; every need is at most `x_k`; the way takes `T_k`; the level is at least `x_k` and at most `hi`. The level: one step under a draw `T` from a level `z` with `T + y T ≤ z ≤ hi` leaves at least `z` (`Meets`) and at most `hi` (`Keeps`). The rule: the reversed lock, `RuleCapture.Locked (RuleCapture.reverse M) (fun g => ¬ favours g) (fun w g => h (share w) g)`, holds at `k + 1` (from the test at `k`, `lowers` and `monotone`) and is kept by **`RuleCapture.turn_locked`** at the reversed orders (its premises: `lowers`; `ReadsShare.reverse monotone` pulled back along `share`; `upper` read backward). The carrying of the rule must be a call of `turn_locked`.
+
+**D.** `RuleCapture.turn_locked` on ways of units, with `f w g := LineOnAStock.allKids (kids g) w` and the order on ways pulled back along `share`; at a step where every need is met the model's step is that turn (`after_of_met`). It must be a call of `turn_locked`.
+
+## The two courses
+
+Units `F` and `O`; rules `true` (favours) and `false`. `use F = 14`, `use O = 1`; `need O = 1`; under `true`, `F` leaves `[F, O]` and `O` leaves `[O, O]`; under `false` each leaves itself. `giving z = min z (32 - z)`, `hi = 32`, `y T = T`. The share is the number of `F` in the way, ordered by `≤`; the rule read is `true` exactly where the share is at least 1; rules ordered `false ≤ true`. Start: one `F`, rule `true`, level 28.
+
+Run today by a program on explicit lists in the Lean's order (`courses23.py`, beside this brief), every premise of the three lists checked (the stock's at every take up to 200; `lowers` and `raises` on a grid of ways):
+
+| | step 0 | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|---|
+| `need F = 27`: F, O, rule, level | 1, 0, true, 28 | 1, 1, true, 28 | 1, 3, true, 26 | 0, 6, true, 18 | 0, 12, false, 24 | the same |
+| `need F = 26` | 1, 0, true, 28 | 1, 1, true, 28 | 1, 3, true, 26 | 1, 7, true, 18 | 0, 14, true, 0 | none left |
+
+At 27 the first unmet need is at step 2, the rule favours through step 3, and the test first holds at step 4. At 26 the need is met at step 2 and unmet at step 3, and at step 4 no need is met.
+
+In Lean, for each course:
+- **one theorem that states every premise of lists 1, 2 and 3 as one conjunction** at the course's parameters;
+- for 27: the test at step 4 with some need met before; that the net never ends, **by B**; the first unmet need at step 2 and the rule favouring through step 3, the second **by D**;
+- for 26: no need met at step 4 with some need met before; that no step has the test, **by C**; the rule favouring through step 4 **by D**.
+
+## What would count as nothing gained, written before any build
+
+1. A cannot be proved with an empty axiom report under list 1. If a premise must be added, it is named in the record; if it hands in the level's course, the rules' later course or a reading of the level, A is not gained.
+2. Only C's first equivalence goes through, with "some need met at every step" assumed, and not A. Then it is filed as the exact condition of 19 November with `way_ends` a case in half.
+3. B's carrying of the rule, or D, is proved afresh and not as a call of `RuleCapture.turn_locked` (by the lister's print of what each proof uses). Then it is a re-saying and is told so.
+4. Either course's conjunction of premises is not proved by Lean, or an outcome is shown by computing the course where the brief says "by B", "by C" or "by D".
+5. E: either twin's statement differs from the old theorem's in a binder (by the lister), or its proof uses the old theorem.
+6. A reader who took no part shows that the module's statements, taken together, say nothing that `need_unmet`, `turn_locked` and `unending_iff_holds` in a row do not already say to a person reading the three (the proposal's third test, kept). Then the landing is filed as a telling proved and not as a join.
+7. A reader who took no part finds a premise of a list that follows from the others of that list, or a premise that no proof uses.
+
+Whatever fails is kept and told.
+
+## What is not asked of this landing
+
+- That a need goes unmet within a bound from a locked start (L-b of 19 November): not stated here.
+- When such a turn comes in time by the model's numbers. The record of 19 November found no such statement.
+- Whether a rule that stops favouring because the units it counts were the first to go without is turning in the idea's sense. That is Ren's to recognise, after the courses are there.
+- Stage 2 (the old theorems as calls).
+
+## Rules for whoever writes the Lean
+
+- No axiom: every declaration with an empty axiom report, in the style of `LineOnAStock` (terms, or `show`, `rw`, `exact`); no `Classical`, no `simp`, no `omega`, no recursion by a well-founded order.
+- Laws of one step are taken from `LineOnAStock` at `kids := kids g`; they are not proved again.
+- Docstrings say exactly what is proved, premises named; they say "together" where a premise is of a unit's kids together.
+- Scratch builds only (`tools/research/scratch_build.py` on a tree under `/Users/ren/tmp/dj/`); check `uptime` and `ps` first; one heavy run at a time; no core run, no gate, no commit. The focused check is the scratch build of this module with its axiom audit; no other test is run.
+- At most 25 scratch builds in all.
+
+## Tellings and the landing (by the row, after the Lean)
+
+A record of schema 2; the root, the README, the checker; `regions.json` for the module and for the record; the atlas (a listing under the dynamics it states, by the rules of 22 November, by a reader); the direction page's paragraph "What is not there", in the words of the account above; a dated correction in the record of 19 November (its sentence "the lock-free statement with a certificate" is right read classically; in the package the test at one configuration is what makes the left-to-right half provable); the proposal with its appended sections, this brief, its attack and every return as `.txt` in the study folder. Then the usual sequence: core run, receipt, `research.py check`, `repoint.py`, `shared_laws.py`, `proof_uses.py`, `build_places.py`, render, gate, board.
+
+## Cap, as a stop
+
+2.0 million tokens for everything after this brief's attack on paper, every stage inside it:
+
+| Stage | Sized at | Stop |
+|---|---|---|
+| The implementer's first pass: the model, the lemma on the cap, A | 0.6 | the count told at 0.7 |
+| If A is not through: one more pass at A | to 1.2 in all | **at 1.2 without A: stop; B, D and the courses are written within what is left and filed as that** |
+| The implementer's second pass: B, C, D, the two courses, then E | 0.6 | |
+| One reader of the Lean and the tellings, who took no part, with the lister | 0.3 | |
+| Mends in that reader's words | 0.2 | |
+| Not assigned | 0.3 | |
+
+At most 25 scratch builds; one core run. The count goes to the coordinating session at every stop, before the next stage.
+
+---
+
+# After the attack on paper
+
+*The text above is as frozen at 13:30:57 WIB (kept unchanged as `BRIEF.frozen.md`; its hash is in `FROZEN.sha256.txt` under the name `BRIEF.md`). What follows changes it. Where the two differ, this section holds.*
+
+## From row FM (one reader, on paper, nothing run; it read the brief whole and worked the measure and both courses by hand; "it survives my attack")
+
+1. **The form of the three claims.** Each claim has the step quantified inside it, in the order `m` (strong), then `c`, then `f`: the claim at a given `c` is "for every `f` and every step `k` …", so the call at `k + 2` in case 7 is an ordinary use of the claim at `c - 1`, with its premises discharged there (some need met before `k + 2`; the needs at most `m` by `below_keeps` twice; the room; the level within `hi`). What would not carry is a call at the same `c` at `k + 1` with `f` set again; no case makes one.
+2. **Case 5 is simpler.** After case 1 some need is met, so by `needs` the level is not nothing, and "nothing or less" is always "less". The branch "nothing: the second outcome at `k + 1`" goes; `f = 0` cannot occur there, which is the base of the recursion on `f`.
+3. **`needs` along the course stays.** By row FM it does not trip the test (it hands in neither the level's course, nor the rules' later course, nor a reading of the level). Its docstring gives the plain sufficient form `∀ u, 0 < need u` beside it.
+4. **E is not landed.** Row FM: a twin proved from A or C, with the lister showing the new law and not the old theorem among its uses, is fair evidence that the old law is a case; landed, the package would hold two public theorems with one statement until stage 2, and for good if stage 2 never comes. Taken. E is built in scratch on the module as it will land, marked not to be landed, filed as text with its build log and the lister's rows for the two twins, and told as "built in scratch on the landed laws, not in the package". Test 5 of "nothing gained" is read of that scratch file. Stage 2 would make the old theorems the calls.
+5. **Test 7, applied on paper by row FM:** no premise of a list found that follows from the others or that the routes do not use (`some` only in case 7; `nothing` in case 3; `high` through the lemma on the cap). To watch in the build: whether B uses `some`, or gets a way that is not empty from `even` and a positive take; if the second, `some` is dropped from B.
+6. **"A step", not "a first step".** Statement A gives a step with some need met at every step before it at which the test holds; the search can pass an earlier step with the test (case 2 goes on from a step whose level is below the bound `m` without asking whether it holds). The title and the account are to be read with "a step" for the first outcome. The second outcome, as stated, is the first step with no need met. No least step for the test is asked of this landing.
+7. **A's docstring** says that under list 1 the "or" is inclusive (a course can pass the test and end later) and that B makes the two outcomes shut each other out.
+8. **The telling of the course of need 27** keeps what the record of 19 November found: the change of the rule keeps something going only as against going on favouring. With the rule held favouring the same start ends at its sixth step; and a rule that never favours, held from the start, leaves the one counted unit as it is, at a level of 28 that gives back the 14 it takes. The last is by hand and is told as by hand.
+9. Row FM recomputed both tables by hand and found them right, and read D as right.
+
+## From the coordinating session (one reader, on paper, against the definitions at their statements; it did not open `courses23.py`, `RuleCapture`, `kept_within` or any proof)
+
+No false step found in the seven cases, in the lemma on the cap, or in the routes for B and D; every premise of list 1 found used; both courses run by hand from the definitions give the table; at 27 the bound of D's corollary is tight (unmet at step 2, the test at step 4); with `giving z = min z (32 - z)` and `y T = T`, `Short`, `Meets` and `Keeps` hold at every take, so the courses' conjunction needs no induction on the course for them.
+
+1. **The first step with the test, by a corollary.** The coordinating session would put the test's check at the head of each step, so that the step found is the first with the test. Taken in its aim, not in that place: A stays "a step with the test, some need met at every step before it", and the induction carries nothing more. A corollary, public, takes the least such step by `first_of_decided` (the test is decided at a configuration once `favours` is; a lemma "the test or not the test" is needed, as `met_or_unmet`). Then both outcomes name a first step of their kind. This replaces point 6 of row FM's list above where the two differ: the telling may say "a first step" once the corollary is there, and says "a step" if it is not.
+2. **E is in the module, private, with Lean checking the sameness.** The coordinating session: keep the twins, private, each followed by a check that the twin and the old theorem are equal by `rfl`, which typechecks only if the two statements are the same. Row FM allowed private twins. Taken, and it replaces point 4 of row FM's list: the two twins are `private theorem`s whose proofs use A and C and not the old theorems; each is followed by a `private theorem` stating `@twin = @LineOnAStock.…` proved by `rfl` (the package has no `example`, so none is introduced); their docstrings say they stand until stage 2 makes the old theorems calls. The package's public statements are still said once. Test 5 then reads: the `rfl` does not typecheck, or a twin's proof uses the old theorem (by the lister). E is still last, and is the first thing to go to a scratch file if the cap is near.
+3. **`needs` in the record:** told as a premise along the course of another kind than the two on the stock: it follows from a premise on the units alone and hands in nothing of the level or the rules.
+4. **Test 1, with the allowed premises named.** Along the course, list 1 has exactly three premises: `keepsAlong`, `regimeAlong`, `needs`. A is not gained if it needs a fourth premise along the course, or any premise that hands in the level's course, the rules' later course or a reading of the level.
+5. The count goes to the coordinating session at 0.7 million or at the end of the first pass, whichever comes first.
+
+## A correction by the row, after both passes (written 14:09 WIB by the file's time)
+
+The course of need 26 was found on 20 November, by program, and is told in that day's record and on the direction page; the brief's "Run today" is a re-run of it and of the course of 19 November, not a finding. Point 8 of row FM's list is right in naming the record of 20 November: that record has "with the rule that does not favour held from the first move something goes on for ever too", and "with the other rule in force at the same start [the favoured unit] is kept". The tellings cite that record and tell nothing of this as by hand.

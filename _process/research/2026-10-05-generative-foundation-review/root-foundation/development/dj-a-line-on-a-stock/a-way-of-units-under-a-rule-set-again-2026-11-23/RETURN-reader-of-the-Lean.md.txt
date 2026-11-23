@@ -1,0 +1,178 @@
+*AI-written: the return of a reader agent who took no part (Claude Fable, run wf_c5d22173-7c3), 23 November 2026, as it came, with HTML entities for < and > put back. Filed by board row DJ.*
+
+**Verdict:** no false statement found in the Lean, and tests 3, 5 and 6 are not tripped, but three tellings say more than their theorems (MUST 1–3) and one premise of list 1, `some`, is not needed by A (test 7 in substance, not by its letter).
+
+All line numbers are in `/Users/ren/tmp/dj/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayUnderARule.lean`.
+
+## What I read
+
+- **Whole:** `WayUnderARule.lean` (all 1,466 lines, statements and proofs); `BRIEF.md.txt` with its "After"; both returns; `build-3.log.txt`.
+- **Rows file:** `uses`, `head` and `recursors` of all 84 rows, and the `sig` of the two twins and the two `_same` rows. I did not read the other `sig` fields.
+- **In part:**
+  - `LineOnAStock.lean` 120–410, 676–730, 770–806, 895–1030, 1105–1290
+  - `RuleCapture.lean` 95–225
+  - `RegimeMargin.lean` 243–272, 715–760, 930–950
+  - `TurningInTime.lean`: `pair`, `kept_within`, `Three.shareOrder`, `Three.ruleOrder`
+  - `ReadOffInTime.first_of_decided`, `Pace.turn`, `Law.stepWhile` and the statement of `stepWhile_unending_iff`, `Prelude.total`
+- **Not at all:** `NOTE.md`, the record json, the root, README and checker texts, `courses23.py.txt`, `PROPOSAL…`, `ANSWER-row-DJ…`, `RowsRule.lean.txt`, build logs 1 and 2, the definitions of `Law.orbit`, `Law.orbit_add`, `Law.run`.
+- **Run:** nothing but two Python reads (line lengths in characters; parsing the rows file) and `diff -q`. The worktree module is byte-identical to the scratch-built `/Users/ren/tmp/dj/rule23/tree/Becoming/WayUnderARule.lean`.
+
+## Findings
+
+**1. MUST. The head's bullet for `tested_lasts` leaves out six premises.**
+- Sentence (lines 40–45): "with the rule set next read from a share of the way …, and `lowers` …, `monotone` … and `upper` …, from a step with the test the net never ends. Not asked: `grows`, `needs`, `nothing`, decidability."
+- Source (748–778): the theorem also takes `even`, `some`, `down`, `high`, `keepsAlong`, `regimeAlong`. Its hypothesis is a step with the test, some need met at every step before it.
+- Replacement: "with `even`, `some`, `down`, `high`, `keepsAlong` and `regimeAlong` of the first list (of `regimeAlong` only its `Meets` half, at the step with the test), the rule set next read from a share of the way, and `lowers`, `monotone`, `upper`: if the course comes to a step with the test, some need met at every step before it, the net never ends. Not asked: `grows`, `needs`, `nothing`, that `favours` is decided."
+
+**2. MUST. A comparison with a course the module does not hold, told unmarked beside a theorem.**
+- Sentence (head 60–62, and the `goes_on` docstring 1221–1222): "the change of the rule keeps something going only as against going on favouring".
+- Source: `goes_on` states only that the net from the start never ends. No course with the rule held `true`, or held `false`, is in the module.
+- By my hand it is true. With `true` held from step 3: 12 `O` at 24, 24 `O` at 24, 48 `O` at 0, so no need is met at step 6. With `false` held from the start: `[F]` at 28 for good.
+- Replacement: "What goes on is twelve `O` (`course_values`); the one `F` the rule counted is gone. Not proved in this module, by hand and by the record of 20 November: with the rule held favouring the same start comes to a step with no need met, and with a rule that never favours held from the start the one `F` stays at twenty-eight."
+
+**3. MUST (met by its letter). `NeedTwentySix.ends_untested`: "the net ends … by the law".**
+- Sentence (1285–1288): "**The net ends and no step has the test, by the law.** … `ends_iff_unmet` with the step 4 of `ends` gives that the net does not go on without end". Head 59–60: "(`NeedTwentySix.ends_untested`, by `ends_iff_unmet` and `unending_iff_tested`)".
+- Source: the half used is `ends_iff_unmet.mpr`, whose proof term (898) is `fun ⟨n, _, stop⟩ never => stop (Law.stepWhile_unending_iff.mp never n)`. It uses none of the twelve premises handed in.
+- So the net's ending at need 26 is by the computed step 4 and the definition of the net.
+- "No step has the test" is by `unending_iff_tested.mpr`, which is `tested_lasts`. `grows`, `needs` and `nothing` are passed and used by neither half.
+- Test 4 of the brief ("no step has the test, by C") is met. The telling of the first conjunct is not.
+- Replacement: "The net ends because step 4 has no need met (the half of `ends_iff_unmet` that asks no premise). No step with some need met before it has the test, by the law: such a step would make the net never end (`unending_iff_tested`, right to left, which is `tested_lasts`)."
+- LESSER, same place, for the docstring of `ends_iff_unmet` (852–857): say that right to left asks no premise. Read classically the whole equivalence holds of every course with no premise (a net that is not unending has a least step with no need met). The lists serve only to find that step without `Classical`.
+
+**4. LESSER, but test 7 in substance. `some` is not needed by A.**
+- Where: `tested_or_ends` (502), `first_tested_or_ends` (582), `or_from_level`, `or_from_room`, `or_all`.
+- Source: `some` is used once, in case 7 (line 390, `mem_after`), to get a unit `v` of the way at `k + 1`.
+- The same unit comes without `some` by the split already made at the head of every step. `Goes` at `k + 1` is decided. If no need is met there, that is the second outcome at `k + 1` (`before'` is in hand). If some need is met, its witness is `v`. Both uses of `v` (lines 394 and 401) go through.
+- Argued on paper, not built.
+- It is neither "follows from the others" nor "used by no proof", so the letter of test 7 is not tripped. But list 1 holds a premise A does not need.
+- `some` is needed by B. A course without it: one unit with `use = 0`, `need = 1`, `kids false u = []`, level 5, `y 0 = 0`. The test holds at step 0 and the next way is empty.
+- Replacement for the tellings until the Lean is changed: "`some` is asked by A's proof only to keep the way after a holding step from being empty; an empty way there is the second outcome, so A holds without it (argued, not built). B needs it."
+
+**5. LESSER. "Some need met at every step before it" follows from the test.**
+- Argued, three lines: where no need is met every unit leaves nothing, an empty way stays empty, and `Holds` asks a way that is not empty.
+- So that conjunct is redundant in the hypothesis of `tested_lasts`, in the right side of `unending_iff_tested`, and in `ends_untested`'s second conjunct. The same holds in `LineOnAStock.unending_iff_holds`, which the twin must match.
+- The head (59–60) says "no step has the test" where the theorem (1291–1292) states it only of steps with some need met at every step before.
+- Replacement for the head: "no step with some need met at every step before it has the test (the qualifier is redundant by an argument not in the module)".
+
+**6. LESSER. Head, "The 'or' is inclusive" (34–35) is stated flat.** The theorem's docstring (493–494) adds "(no such course is built here)". Replacement: "argued, and one course found by hand by a reader (not built in Lean)". The course is under "The inclusive 'or'" below.
+
+**7. LESSER. Head bullet for `tested_or_ends` (29–33).**
+- "the stock is bounded along the course as the docstring names" does not name that `favours` is decided, `nothing` or `high`. "Bounded" does not describe `Short` and `Meets`.
+- Replacement: "with `favours` decided, nothing given from nothing, the start at most `hi`, and along the course (at steps with some need met there and before) the step keeping levels within `hi` and, under a rule that does not favour, giving short of what the way takes below `y` of it and meeting it from there up to `hi`".
+
+**8. LESSER. Head, line 18: "nothing is asked of `next`".** True of `within_along`, `tested_or_ends`, `first_tested` and `first_tested_or_ends` only. From `tested_lasts` on, `next` is `fun w g => h (share w) g` with `monotone`. Replacement: "the 'or' asks nothing of `next`".
+
+**9. LESSER. Head, line 48: "Corollaries of the two items above".** The two items above are the least step and `tested_lasts`. The proofs use `tested_or_ends` and `tested_lasts` (rows). Replacement: "Corollaries of `tested_or_ends` and `tested_lasts`."
+
+**10. LESSER. `favours_through_four` docstring (1309–1310): "the first need unmet is at step 3".** No declaration in `NeedTwentySix` states an unmet need at step 3; only that needs are met at steps 0, 1, 2 (inline). True by hand (level 18 below `F`'s 26). Replacement: "every need is met at steps 0, 1 and 2 (by computation); that a need is unmet at step 3 is by hand and not stated".
+
+**11. LESSER. The two `_same` docstrings (1428–1430, 1461–1462): "which checks only where the two statements are the same".**
+- `rfl` between two proofs typechecks where the two statements are definitionally equal. It would also pass with a binder renamed, an implicit made explicit, or `Regime` or `Holds` unfolded.
+- "Binder for binder" is by reading. I confirm it by reading and by the lister's print: same names, order and binder kinds for both twins.
+- Replacement: "which typechecks only where the two statements are definitionally the same; that they match binder for binder is by reading".
+
+**12. LESSER. The name `Turned` (123).**
+- The brief leaves whether this is turning in the idea's sense to Ren. The prose says "the test"; the name says turned.
+- In the same module "turn" also means one step of `Pace.turn` (`step_turn`, "is a turn"), and `Pace.stays_turned` exists. Two senses in one file.
+- A name such as `Tested` would say only what the prose says.
+
+**13. LESSER. Built courses: premises true for a reason that gives them little work.**
+- `lowers` and `raises` both hold as equalities: all the kids of a way have exactly its share under either rule. The `premises` docstring says so (1148–1149); the head does not. The courses therefore exercise the direction of neither.
+- The rule called favouring never raises the number of `F`. `F`'s part of the way falls: 1 of 1, 1 of 2, 1 of 4.
+- At need 26 the antecedent of the `regimeAlong` clause is never met along the course (the rule is `true` at steps 0–3 and no need is met at step 4). No rule that does not favour is in force at a step with a need met.
+- `upper` is `fun le fav => le fav`: `ruleOrder.le` is by definition "`true` carries upward".
+- No clause is void: each is proved from its content, the stock's at every take.
+- Replacement for the head: add "in both courses the share changes only at a step where a need is unmet".
+
+**14. LESSER, nits.**
+- `or_from_level` docstring (311–312), "what the way takes is at most the level, which is at most `hi`": the proof discards that conjunct (`_`, line 344) and uses the cap only in case 7.
+- Head line 35–36, "Laws of one step are `LineOnAStock`'s": `level_held` is `RegimeMargin.holds`.
+- `TwoKinds.le_min` is a general fact on numbers placed in `TwoKinds`.
+- `oneOrder` is universe-polymorphic (rows: level `u_1`) and used at `Type` only.
+
+## The built courses, recomputed by hand
+
+`step g H x = (x − H) + g (x − H)`; `giving z = min z (32 − z)`.
+
+| step | need 27 | need 26 |
+|---|---|---|
+| 0 | `[F]`, true, 28 | the same |
+| 1 | `[F,O]`, true, 28 (14 left, 14 given) | the same |
+| 2 | `[F,O,O,O]`, true, 26 (13 + 13) | the same |
+| 3 | six `O`, true, 18 (27 > 26, `F` leaves nothing; 9 + 9) | `[F]` and seven `O`, true, 18 |
+| 4 | twelve `O`, false, 24 (share 0; 12 + 12) | fourteen `O`, true, 0 (take 21 > 18) |
+| 5 | as step 4 (12 + 12) | not stated in Lean |
+
+- Both `course_values` and their docstrings agree with this.
+- At need 27, step 4: 12 + 12 ≤ 24, the rule is `false`, and the rule read is `false`, so the test holds, tightly.
+- At need 26, step 4: no need is met (1 > 0).
+- `TwoKinds.Premises n` is every premise of the three lists at the courses' parameters, clause for clause as `tested_or_ends`, `tested_lasts` and `favours_while_met` state them, with `y := id` written `id (…)`. Only the instance `[DecidablePred favours]` cannot be in it.
+- `goes_on` uses `tested_lasts`; `favours_through_three` uses `favours_while_met` at 2 with `first_unmet.1`; `favours_through_four` uses `favours_while_met` at 3. Rows agree. `ends_untested` is finding 3.
+
+## Premises against proof terms (test 7)
+
+- **`tested_lasts`:** confirmed. `regimeAlong` is used once, as `(regimeAlong k upto turned.2.1).2` at the step with the test (793). Its `Short` half is used nowhere in B. The docstring says so (735–736); the head does not (finding 1).
+- **`tested_or_ends`:** every premise is used by the proof; `some` is dispensable (finding 4).
+- **`unending_iff_tested`:** left to right uses list 1 only; right to left uses B's nine.
+- **`ends_iff_unmet`:** right to left uses nothing (finding 3).
+- **`favours_while_met`, `locked_while_met`, `unmet_before_unfavoured`:** all four premises used.
+- **`first_tested`:** decidability only.
+- **`within_along`, `held_step`, `lasts_from`:** every premise used.
+- I found no premise that follows from the others of its list.
+
+## What is new against `need_unmet`, `turn_locked`, `unending_iff_holds` in a row (test 6)
+
+Not tripped.
+
+- **New, `tested_or_ends`:** for a course whose rule is set again by any `next`, there is no third outcome. `need_unmet` and `way_ends` speak of one kids function that grows, `unending_iff_holds` of one that is even, `turn_locked` of no stock. None shuts out a course that goes on for ever changing rule without ever holding under two rules in a row that do not favour. Case 7 of the measure is what does.
+- **New, by A:** `unending_iff_tested` left to right; `first_tested_or_ends`.
+- **New as built witnesses:** the two courses, showing the three lists jointly met with each outcome.
+- **A join more than a new saying, `tested_lasts`:** `unending_iff_holds` right to left, plus `turn_locked` at reversed orders. The reversed lock is already in `ChoiceCountCapture`, `ClosedCapture` and `DrawnShaping`. What it adds is the junction: the test at one configuration gives the reversed lock one step later, and holding is kept under any rule that does not favour, whose kids may differ.
+- **A re-saying, `locked_while_met` and `favours_while_met`:** `turn_locked` with `after_of_met`, in the model's terms. Small additions: the one step more, and `unmet_before_tested` (at least two steps).
+- **Near nothing:** `ends_iff_unmet` (finding 3).
+- **Not said by the module:** anything of `need_unmet`'s content (the bound `hi + 1`; that a need does go unmet). D is not joined to it. The head says so.
+
+## The inclusive "or": a course, by hand
+
+- **Units and rules:** one unit `u` with `need = 1`, `use = 1`. Rules `a`, `b`, `c`; only `c` favours.
+- **Kids:** `kids a u = kids b u = [u]`; `kids c u = [u, u]`.
+- **Next:** `next _ a = b`, `next _ b = c`, `next _ c = c`.
+- **Stock:** `giving z = min z (32 − z)`, `y T = T`, `hi = 32`. Start `(([u], a), 2)`.
+- **List 1:**
+  - `grows`: 1 < 2. `even`: 1 = 1. `some` and `down` hold; `needs`: 1 > 0.
+  - `nothing`: `min 0 32 = 0`. `high`: 2 ≤ 32.
+  - `keepsAlong` and `regimeAlong` hold at every take, as `TwoKinds.keeps`, `short`, `meets`.
+  - `favours` is decided.
+- **Course:**
+
+| step | way | rule | level |
+|---|---|---|---|
+| 0 | `[u]` | `a` | 2 |
+| 1 | `[u]` | `b` | 2 |
+| 2 | `[u]` | `c` | 2 |
+| 3 | `[u,u]` | `c` | 2 |
+| 4 | four `u` | `c` | 0 |
+
+- **Both outcomes:** the test holds at step 0 (1 ≤ 2, 1 + 1 ≤ 2, `a` and `b` do not favour). No need is met at step 4, with a need met at steps 0–3.
+- List 2 fails on it, as B requires: `ReadsShare` would put `c` at or below `b`, and `upper` would then make `b` favour.
+
+## The private twins
+
+- Both statements match the old theorems binder for binder, by reading and by the lister's print.
+- Rows: `unending_iff_holds_case` uses `unending_iff_tested`, `way_one_rule`, `goes_one_rule`, `turned_one_rule`, `LineOnAStock.mem_generation` and `Law.stepWhile_unending_iff`. `way_ends_case` uses `tested_or_ends`, `TurningInTime.kept_within`, `goes_one_rule` and `Law.stepWhile_unending_iff`. Neither uses the old theorem.
+- The docstrings say no more than that, but for finding 11.
+- `way_ends` is recovered; `need_unmet` is not.
+
+## Other checks
+
+- No line is over 100 characters; no trailing whitespace.
+- No unused definition.
+- "Together" is said wherever a premise is of a unit's kids together.
+
+## Could not check
+
+- That the file builds and that the `rfl` checks typecheck: on the word of `build-3.log.txt` (exit 0, 52 theorems, 75 declarations, `with_axioms {}`) for the identical file.
+- "Every declaration has an empty axiom report" for the five private declarations: the audit covers public ones only. The probe's output is not among the filed logs.
+- Findings 4 and 5 and the course above are on paper only.
+- That `(RegimeMargin.holds … 1).1` and the `congrArg` in `course_one_rule` reduce as the proofs need: I did not open `Law.run` or `Law.orbit`.
+- The tellings outside the module (`NOTE.md`, record, root, README, checker): not my part, not read.

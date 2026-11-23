@@ -1,0 +1,307 @@
+{
+ "schema_version": 2,
+ "id": "a-way-of-units-under-a-rule-set-again",
+ "title": {
+  "en": "A way of units on a stock under a rule set again: a step with the test, or a step with no need met"
+ },
+ "kind": "theorem",
+ "status": "recorded-checked",
+ "family": "F01",
+ "reviewed_at_utc": "2026-11-23T07:54:56+00:00",
+ "statement": {
+  "en": "Units that need a level and leave offspring, under a rule set again each step: under premises on units and stock the course comes to a step that holds with neither the rule in force nor the next favouring, or to a first step with no need met. The first lasts under more premises on kids and a share."
+ },
+ "laws": [
+  {
+   "en": "A way of units under a rule: under a rule a unit leaves its kids; after a step each unit whose need the level meets leaves its kids under the rule in force and the others leave nothing, the level steps as on the line on a stock under what all the units present take, and the next rule is set from the way present before the step and the rule in force. The net has a next while some need is met. The test at a configuration: the way is not empty, every need is met, the level is at or above what the way takes and a margin y of it, and neither the rule in force nor the rule set next favours.",
+   "declarations": [
+    "Becoming.WayUnderARule.step",
+    "Becoming.WayUnderARule.course",
+    "Becoming.WayUnderARule.Goes",
+    "Becoming.WayUnderARule.net",
+    "Becoming.WayUnderARule.Tested"
+   ]
+  },
+  {
+   "en": "With the start at most hi and, at every step with some need met there and before, the step under what the way takes keeping every level up to hi within hi: every level the course reaches with some need met at every step before it is at most hi.",
+   "declarations": [
+    "Becoming.WayUnderARule.within_along"
+   ]
+  },
+  {
+   "en": "One of two outcomes. Given: under a rule that favours each unit's kids together take more than it; under any other they together take what it takes; kids need no more than their parent; every unit the course reaches needs something; nothing is given from nothing; the start at most hi; the cap along the course as above; at steps whose rule does not favour, giving short of what the way takes T at levels left below y T and at least T wherever the level left z has y T <= z and z + T <= hi; and which rules favour decided. Then the course comes to a step with the test, some need met at every step before it, or to a first step with no need met. Nothing is asked of how the next rule is set, nor that a unit has kids under a rule that does not favour. The first can be taken as the first step with the test.",
+   "declarations": [
+    "Becoming.WayUnderARule.tested_or_ends",
+    "Becoming.WayUnderARule.first_tested",
+    "Becoming.WayUnderARule.first_tested_or_ends"
+   ]
+  },
+  {
+   "en": "The first outcome lasts. Where the rule set next is a reading h of a share of the way, with the share of all the kids of a way under a rule that does not favour not above the way's share, the reading monotone in the share, and a rule above a favouring rule favouring; under a rule that does not favour every unit having kids; and with the premises above on what kids take under a rule that does not favour, on needs going down, on the start within the cap and on the stock along the course: from a step with the test, some need met at every step before it, the net never ends. That no later rule favours is carried by the lock's own law at the orders reversed.",
+   "declarations": [
+    "Becoming.WayUnderARule.tested_lasts",
+    "Becoming.WayUnderARule.lasts_from"
+   ]
+  },
+  {
+   "en": "Under both lists of premises the net never ends exactly where the course comes to a step with the test, some need met at every step before it; and it ends exactly where the course comes to a step with no need met, some need met at every step before it.",
+   "declarations": [
+    "Becoming.WayUnderARule.unending_iff_tested",
+    "Becoming.WayUnderARule.ends_iff_unmet"
+   ]
+  },
+  {
+   "en": "From a locked start (the rule in force favours and is not above the rule read off the start's share), with the share of all the kids of a way under a favouring rule not below the way's share, the reading monotone and favouring kept upward, and no premise on the stock: while every need is met at every step before n the lock is kept to step n, so the rule favours at every step up to n + 1; hence a step whose rule does not favour, and so a step with the test, comes at least two steps after a step at which some need was unmet.",
+   "declarations": [
+    "Becoming.WayUnderARule.locked_while_met",
+    "Becoming.WayUnderARule.favours_while_met",
+    "Becoming.WayUnderARule.unmet_before_unfavoured",
+    "Becoming.WayUnderARule.unmet_before_tested"
+   ]
+  },
+  {
+   "en": "Two built courses that differ in one unit of one need. Two kinds F and O; F takes 14 and O takes 1, O needs 1; under the favouring rule F leaves F and O, and O leaves two O; under the other each leaves itself; giving min z (32 - z), cap 32, margin y T = T; the share is the number of F and the rule read favours where it is at least 1; from one F under the favouring rule at level 28. Every premise of the three lists holds for any positive need of F. Where F needs 27: the levels go 28, 28, 26, 18, 24; F's need is unmet at step 2, the rule favours through step 3, the test holds at step 4 with twelve O, and the net never ends. Where F needs 26: the levels go 28, 28, 26, 18, 0; no need is met at step 4, the net ends, the rule favours through step 4, and no step with some need met at every step before it has the test.",
+   "declarations": [
+    "Becoming.WayUnderARule.TwoKinds.premises",
+    "Becoming.WayUnderARule.NeedTwentySeven.course_values",
+    "Becoming.WayUnderARule.NeedTwentySeven.premises",
+    "Becoming.WayUnderARule.NeedTwentySeven.tested",
+    "Becoming.WayUnderARule.NeedTwentySeven.goes_on",
+    "Becoming.WayUnderARule.NeedTwentySeven.first_unmet",
+    "Becoming.WayUnderARule.NeedTwentySeven.favours_through_three",
+    "Becoming.WayUnderARule.NeedTwentySix.course_values",
+    "Becoming.WayUnderARule.NeedTwentySix.premises",
+    "Becoming.WayUnderARule.NeedTwentySix.ends",
+    "Becoming.WayUnderARule.NeedTwentySix.ends_untested",
+    "Becoming.WayUnderARule.NeedTwentySix.favours_through_four"
+   ]
+  },
+  {
+   "en": "At one rule the course is the line on a stock's course with the rule carried, and the test at a rule that does not favour is that the configuration holds. Two private theorems of the module state the line on a stock's exact middle case (unending_iff_holds) and its law that a way whose units grow ends (way_ends), binder for binder, and prove them from the laws above without those theorems; each pair is checked equal by rfl, which typechecks only where the two statements are definitionally the same.",
+   "declarations": [
+    "Becoming.WayUnderARule.course_one_rule",
+    "Becoming.WayUnderARule.way_one_rule",
+    "Becoming.WayUnderARule.goes_one_rule",
+    "Becoming.WayUnderARule.tested_one_rule"
+   ]
+  },
+  {
+   "en": "A course with both outcomes. One unit needing 1 and taking 1; rules a, b, c of which only c favours; under a and b the unit leaves itself, under c two; after a comes b, after b and after c comes c; the same giving, margin and cap; from one unit under a at level 2. Every premise of the law of two outcomes holds; the test holds at step 0; some need is met at steps 0 to 3 and none at step 4. So under those premises alone the two outcomes are not shut out of each other. No reading of this way of setting the next rule from a share of the way has all three of: a share not raised under a rule that does not favour, a monotone reading, favouring kept upward; which of the three fails is not stated.",
+   "declarations": [
+    "Becoming.WayUnderARule.BothOutcomes.premises",
+    "Becoming.WayUnderARule.BothOutcomes.course_values",
+    "Becoming.WayUnderARule.BothOutcomes.tested_at_start",
+    "Becoming.WayUnderARule.BothOutcomes.ends",
+    "Becoming.WayUnderARule.BothOutcomes.both",
+    "Becoming.WayUnderARule.BothOutcomes.by_law",
+    "Becoming.WayUnderARule.BothOutcomes.not_read_from_a_share"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "en": "No axiom. Given, not derived: the needs, uses and kids under each rule; which rules favour, and that this is decided; that kids together take more under a favouring rule, and the same under any other; that kids need no more than their parent; that every unit the course reaches needs something (it follows from every unit needing something)."
+  },
+  {
+   "en": "The stock: nothing given from nothing, the start within the cap, and along the course the cap kept and, at steps whose rule does not favour, giving short of what the way takes T below a margin, and at least T at every level left z from the margin with z + T within the cap. For the lasting: that every unit has kids under a rule that does not favour, and a share of the way, a reading of it and two orders, with the lock's three premises read downward. For the locked start: the lock's three premises and the lock at the start."
+  }
+ ],
+ "does_not_show": [
+  {
+   "en": "That any actual selection, reward, judge, market or training run meets these premises, or that what it reads is a share of this kind.",
+   "kind": "correspondence"
+  },
+  {
+   "en": "A response of a selection derived: the only response in it is that a unit whose need is unmet leaves nothing. That reaches the rule through a share and a reading that are both given.",
+   "kind": "scope"
+  },
+  {
+   "en": "The two ways placed with respect to each other: no unit here adds to what it rests on, and the going on it finds is a configuration that holds.",
+   "kind": "scope"
+  },
+  {
+   "en": "A bound on either step, or a condition on the model's numbers that says which outcome comes. In the two courses one unit of one need decides it.",
+   "kind": "scope",
+   "witness": "Becoming.WayUnderARule.NeedTwentySix.ends_untested"
+  },
+  {
+   "en": "That under the premises of the law of two outcomes alone the outcomes shut each other out: a built course meets them, has the test at its start and no need met at its step 4.",
+   "kind": "non-implication",
+   "witness": "Becoming.WayUnderARule.BothOutcomes.both"
+  },
+  {
+   "en": "That a need goes unmet from a locked start, or within what bound; and the statement with no rule in it (a step none of whose descendants is of a growing kind): by this row's argument on paper it cannot be proved with an empty axiom report, since it would decide, for any decidable property of the numbers, whether it holds somewhere; that an empty axiom report cannot give that is taken from what is known of Lean's logic and was not checked.",
+   "kind": "scope"
+  },
+  {
+   "en": "Whether a rule that stops favouring because the units it counts were the first to go without is turning in the idea's sense. In the first course what goes on is twelve small units, and the unit the rule counted is gone.",
+   "kind": "correspondence"
+  }
+ ],
+ "counterexamples": [],
+ "standard_boundaries": [
+  "no-ethical-premise",
+  "no-evaluation",
+  "discrete-steps",
+  "formal-not-empirical",
+  "names-provisional",
+  "omission-not-refutation"
+ ],
+ "validation_scope": {
+  "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261123T075124.334546Z): the declarations cited, in one module, have empty axiom reports; the checker verifies core purity. AI-written from a brief frozen before any build and attacked on paper by two other sessions; one implementer in three passes; two AI readers who took no part read a first form of the Lean and the tellings; a checker who took no part read both as mended, before the core run; the last mends were read by the writer only. No person has read it."
+ },
+ "next_delta": {
+  "en": "A condition on the model's numbers for which outcome comes; and the two laws of the line on a stock made calls of these: that would retire the induction under its exact middle case (reaches_from, reaches_holds); the one under way_ends stays for line_ends."
+ },
+ "correspondence": {
+  "en": "Reading (AI-written): a selection that reads only its own share is reached by the running down of what its units need only through who is left. From a locked start the rule favours through the step after the first step with a need unmet; whether something then goes on turns on whether what is left holds at a step whose rule and next rule do not favour. The record of 19 November, where the model was worked on paper, keeps as Ren's the question whether that is turning."
+ },
+ "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayUnderARule.lean",
+ "aliases": [
+  "A way of units on a stock under a rule set again: a step with the test, or a step with no need met",
+  "Becoming.WayUnderARule.step",
+  "Becoming.WayUnderARule.course",
+  "Becoming.WayUnderARule.Goes",
+  "Becoming.WayUnderARule.net",
+  "Becoming.WayUnderARule.Tested",
+  "Becoming.WayUnderARule.within_along",
+  "Becoming.WayUnderARule.tested_or_ends",
+  "Becoming.WayUnderARule.first_tested",
+  "Becoming.WayUnderARule.first_tested_or_ends",
+  "Becoming.WayUnderARule.tested_lasts",
+  "Becoming.WayUnderARule.lasts_from",
+  "Becoming.WayUnderARule.unending_iff_tested",
+  "Becoming.WayUnderARule.ends_iff_unmet",
+  "Becoming.WayUnderARule.locked_while_met",
+  "Becoming.WayUnderARule.favours_while_met",
+  "Becoming.WayUnderARule.unmet_before_unfavoured",
+  "Becoming.WayUnderARule.unmet_before_tested",
+  "Becoming.WayUnderARule.TwoKinds.premises",
+  "Becoming.WayUnderARule.NeedTwentySeven.course_values",
+  "Becoming.WayUnderARule.NeedTwentySeven.premises",
+  "Becoming.WayUnderARule.NeedTwentySeven.tested",
+  "Becoming.WayUnderARule.NeedTwentySeven.goes_on",
+  "Becoming.WayUnderARule.NeedTwentySeven.first_unmet",
+  "Becoming.WayUnderARule.NeedTwentySeven.favours_through_three",
+  "Becoming.WayUnderARule.NeedTwentySix.course_values",
+  "Becoming.WayUnderARule.NeedTwentySix.premises",
+  "Becoming.WayUnderARule.NeedTwentySix.ends",
+  "Becoming.WayUnderARule.NeedTwentySix.ends_untested",
+  "Becoming.WayUnderARule.NeedTwentySix.favours_through_four",
+  "Becoming.WayUnderARule.course_one_rule",
+  "Becoming.WayUnderARule.way_one_rule",
+  "Becoming.WayUnderARule.goes_one_rule",
+  "Becoming.WayUnderARule.tested_one_rule",
+  "Becoming.WayUnderARule.BothOutcomes.premises",
+  "Becoming.WayUnderARule.BothOutcomes.course_values",
+  "Becoming.WayUnderARule.BothOutcomes.tested_at_start",
+  "Becoming.WayUnderARule.BothOutcomes.ends",
+  "Becoming.WayUnderARule.BothOutcomes.both",
+  "Becoming.WayUnderARule.BothOutcomes.by_law",
+  "Becoming.WayUnderARule.BothOutcomes.not_read_from_a_share"
+ ],
+ "dependencies": [
+  {
+   "id": "a-line-on-a-stock",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Its model at the kids of the rule in force: the way after a step, what a way takes, the level's step, holding, and its laws of one step (all the kids where every need is met, a take that rises or stays, needs that go down, a level that falls below the margin)."
+   }
+  },
+  {
+   "id": "capture-through-the-rule",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Its lock and the law that one turn keeps it (turn_locked), called twice: on ways of units for the locked start, and at the orders reversed for the lasting of the first outcome."
+   }
+  },
+  {
+   "id": "margin-of-a-regime",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Its step of a level under a use and a giving, its premises on giving, and its law that a level at or above the margin holds."
+   }
+  },
+  {
+   "id": "turning-in-time",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Its pair step of a way and a level, its cap under a draw, and the two orders of its worked case, reused for the built courses."
+   }
+  }
+ ],
+ "related": [],
+ "references": [
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayUnderARule.lean",
+   "role": "proof",
+   "declarations": [
+    "Becoming.WayUnderARule.step",
+    "Becoming.WayUnderARule.course",
+    "Becoming.WayUnderARule.Goes",
+    "Becoming.WayUnderARule.net",
+    "Becoming.WayUnderARule.Tested",
+    "Becoming.WayUnderARule.within_along",
+    "Becoming.WayUnderARule.tested_or_ends",
+    "Becoming.WayUnderARule.first_tested",
+    "Becoming.WayUnderARule.first_tested_or_ends",
+    "Becoming.WayUnderARule.tested_lasts",
+    "Becoming.WayUnderARule.lasts_from",
+    "Becoming.WayUnderARule.unending_iff_tested",
+    "Becoming.WayUnderARule.ends_iff_unmet",
+    "Becoming.WayUnderARule.locked_while_met",
+    "Becoming.WayUnderARule.favours_while_met",
+    "Becoming.WayUnderARule.unmet_before_unfavoured",
+    "Becoming.WayUnderARule.unmet_before_tested",
+    "Becoming.WayUnderARule.TwoKinds.premises",
+    "Becoming.WayUnderARule.NeedTwentySeven.course_values",
+    "Becoming.WayUnderARule.NeedTwentySeven.premises",
+    "Becoming.WayUnderARule.NeedTwentySeven.tested",
+    "Becoming.WayUnderARule.NeedTwentySeven.goes_on",
+    "Becoming.WayUnderARule.NeedTwentySeven.first_unmet",
+    "Becoming.WayUnderARule.NeedTwentySeven.favours_through_three",
+    "Becoming.WayUnderARule.NeedTwentySix.course_values",
+    "Becoming.WayUnderARule.NeedTwentySix.premises",
+    "Becoming.WayUnderARule.NeedTwentySix.ends",
+    "Becoming.WayUnderARule.NeedTwentySix.ends_untested",
+    "Becoming.WayUnderARule.NeedTwentySix.favours_through_four",
+    "Becoming.WayUnderARule.course_one_rule",
+    "Becoming.WayUnderARule.way_one_rule",
+    "Becoming.WayUnderARule.goes_one_rule",
+    "Becoming.WayUnderARule.tested_one_rule",
+    "Becoming.WayUnderARule.BothOutcomes.premises",
+    "Becoming.WayUnderARule.BothOutcomes.course_values",
+    "Becoming.WayUnderARule.BothOutcomes.tested_at_start",
+    "Becoming.WayUnderARule.BothOutcomes.ends",
+    "Becoming.WayUnderARule.BothOutcomes.both",
+    "Becoming.WayUnderARule.BothOutcomes.by_law",
+    "Becoming.WayUnderARule.BothOutcomes.not_read_from_a_share"
+   ],
+   "sha256": "cf1292569ccb316cd1526ffec3dd1fcd39a59edf2cdad3b1b28a9267a8b1cfce"
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T075124.334546Z/verification.json",
+   "role": "receipt",
+   "sha256": "74c01e3be19d19751caa189a30d99db68eec708103b4edd88506eca98d0863f7"
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/a-way-of-units-under-a-rule-set-again-2026-11-23/NOTE.md",
+   "role": "review",
+   "sha256": "ece48be8a2036532be48adc4c170b7a15b3ef7c6f753064140fd997d9845c577"
+  }
+ ],
+ "proof_bindings": [
+  {
+   "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayUnderARule.lean",
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T075124.334546Z/verification.json",
+   "sha256_pointer": "/source_sha256/Becoming.WayUnderARule",
+   "success_pointer": "/status",
+   "success_value": "passed"
+  }
+ ],
+ "history": [
+  {
+   "en": "23 November 2026: added, on board row DJ. The model was worked on paper on 19 November and left unbuilt. On 23 November, on Ren's \"Yes, propose it\" (a button's label), the coordinating session proposed building it; rows FM and DJ attacked the proposal on paper and its form changed; after he was told of the change he pressed \"Yes, if it survives\", which that session read as a yes to the build in the changed form. One premise of the frozen list was found by a reader after the build not to be needed by the law of two outcomes, and was taken out. AI-written (Claude Fable)."
+  }
+ ]
+}

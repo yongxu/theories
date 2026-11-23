@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+"""Row DJ, 23 November 2026 (AI-written scratch). The two courses of the brief, on explicit lists of units,
+in the Lean's order: the way after a step from the rule in force; the next rule read off the PRESENT way.
+Checks each premise of the brief's three lists on the course (and the pointwise ones on every unit, rule
+and level up to hi). Run: python3 -B courses23.py"""
+HI = 32
+F, O = 'F', 'O'
+def giving(z): return min(z, HI - z)
+def stepg(H, x): z = max(0, x - H); return z + giving(z)
+def kids(g, u): return ([F, O] if u == F else [O, O]) if g else [u]
+def favours(g): return g
+def share(w): return w.count(F)
+def read(a, g): return a >= 1                       # h : the rule read off a share, whatever the rule in force
+def y(T): return T
+def run(need, use, w, g, x, n):
+    out = []
+    for _ in range(n):
+        out.append((list(w), g, x))
+        w2 = [v for u in w if need[u] <= x for v in kids(g, u)]
+        g2 = read(share(w), g)
+        x2 = stepg(sum(use[u] for u in w), x)
+        w, g, x = w2, g2, x2
+    return out
+def goes(need, w, x): return any(need[u] <= x for u in w)
+def allmet(need, w, x): return all(need[u] <= x for u in w)
+def holds(need, use, w, x):
+    T = sum(use[u] for u in w); return bool(w) and allmet(need, w, x) and T + y(T) <= x
+def allkids(g, w): return [v for u in w for v in kids(g, u)]
+use = {F: 14, O: 1}
+for nF in (27, 26):
+    need = {F: nF, O: 1}
+    c = run(need, use, [F], True, 28, 12)
+    print('need of F', nF)
+    for k, (w, g, x) in enumerate(c[:7]):
+        T = sum(use[u] for u in w)
+        print('  step', k, 'F', w.count(F), 'O', w.count(O), 'rule', int(g), 'level', x, 'take', T,
+              'goes' if goes(need, w, x) else 'no need met', 'all met' if allmet(need, w, x) else 'some unmet',
+              'holds' if holds(need, use, w, x) else '', 'next rule', int(read(share(w), g)))
+    ok = {}
+    ok['grows'] = all(use[u] < sum(use[v] for v in kids(True, u)) for u in (F, O))
+    ok['even'] = all(sum(use[v] for v in kids(False, u)) == use[u] for u in (F, O))
+    ok['some'] = all(kids(False, u) != [] for u in (F, O))
+    ok['down'] = all(need[v] <= need[u] for g in (True, False) for u in (F, O) for v in kids(g, u))
+    ok['needs'] = all(need[u] > 0 for u in (F, O))
+    ok['nothing'] = giving(0) == 0
+    ok['high'] = c[0][2] <= HI
+    # the stock's premises at EVERY take up to 200, not only along the course
+    ok['keeps at every take'] = all(stepg(T, x) <= HI for T in range(200) for x in range(HI + 1))
+    ok['short at every take'] = all(giving(z) < T for T in range(200) for z in range(y(T)))
+    ok['meets at every take'] = all(T <= giving(z) for T in range(200) for z in range(y(T), HI + 1) if z + T <= HI)
+    grid = [[F] * a + [O] * b for a in range(4) for b in range(6)]
+    ok['lowers (grid)'] = all(share(allkids(False, w)) <= share(w) for w in grid)
+    ok['raises (grid)'] = all(share(w) <= share(allkids(True, w)) for w in grid)
+    ok['monotone'] = all((not read(a, g)) or read(b, g2) for a in range(6) for b in range(a, 6) for g in (True, False) for g2 in (True, False))
+    ok['upper'] = True                                # on two rules ordered false <= true, with favours = true
+    ok['locked start'] = favours(c[0][1]) and ((not c[0][1]) or read(share(c[0][0]), c[0][1]))
+    print('  premises:', 'all hold' if all(ok.values()) else [k for k, v in ok.items() if not v])
+    first_unmet = next(k for k, (w, g, x) in enumerate(c) if not allmet(need, w, x))
+    turned = [k for k, (w, g, x) in enumerate(c) if all(goes(need, *c[j][0::2]) for j in range(k))
+              and holds(need, use, w, x) and not favours(g) and not favours(read(share(w), g))]
+    ended = [k for k, (w, g, x) in enumerate(c) if not goes(need, w, x)]
+    print('  first step with a need unmet:', first_unmet, '| rule favours through step', first_unmet + 1, ':',
+          all(favours(c[j][1]) for j in range(first_unmet + 2)))
+    print('  first step with the test:', turned[:1], '| first step with no need met:', ended[:1])

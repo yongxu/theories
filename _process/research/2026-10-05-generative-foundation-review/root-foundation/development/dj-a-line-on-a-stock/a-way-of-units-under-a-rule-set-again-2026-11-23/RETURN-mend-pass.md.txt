@@ -1,0 +1,167 @@
+*AI-written: the return of the implementer agent of the mend pass (Claude Fable, run wf_4b21f498-206), 23 November 2026, as it came, with HTML entities for < and > put back. Filed by board row DJ.*
+
+**MEND PASS on `/Users/ren/tmp/dj/rule23/tree/Becoming/WayUnderARule.lean`: return of the implementer (AI-written, 23 November 2026)**
+
+All five items are done. The final scratch build (build 4) exits 0 with nothing unclean and an empty `with_axioms`.
+
+## 1. Outcome per item
+
+1. **`some` dropped from the main chain: done.** It is gone from `or_from_level`, `or_from_room`, `or_all`, `tested_or_ends` and `first_tested_or_ends`.
+   - In the two-step case of `or_from_level` the split is `Decidable.em (Goes need (course … (k + 1)))`. No need met there is `Or.inr ⟨k + 1, before', stop⟩`; some need met gives the unit for `taken_rises`.
+   - `mem_after`, `held_step`, `lasts_from` and `tested_lasts` keep `some`. `unending_iff_tested` and `ends_iff_unmet` keep it for B and no longer pass it to `tested_or_ends`.
+   - `way_ends_case` no longer passes the vacuous `some`; its statement is unchanged and `way_ends_same` still typechecks.
+   - `TwoKinds.Premises` keeps its `some` clause. The two built courses needed no change in their proof terms.
+2. **Rename: done.** `Turned` → `Tested`, `turned_or_not` → `tested_or_not`, `turned_one_rule` → `tested_one_rule`, and the hypothesis and binder name `turned` → `tested` throughout. `step_turn`, `Pace.turn` and `turn_locked` are untouched.
+3. **Docstrings and head: done** (per finding in section 3 below).
+4. **Kept case with both outcomes: done**, as section 11, namespace `BothOutcomes`, 17 declarations. I added one theorem beyond the brief, `not_read_from_a_share`, so that "which this course does not meet" in the docstring of `both` is proved, not only said. It does not say which of the three premises fails. The head and the docstring of `tested_or_ends` now point to `BothOutcomes.both`.
+5. **Axiom probe: filed.**
+   - Probe copy: `/Users/ren/tmp/dj/rule23/probe/WayUnderARule.lean` (the final file plus 97 `#print axioms` lines, checked identical otherwise).
+   - Output: `/Users/ren/tmp/dj/rule23/probe/axioms-output.txt`.
+   - The earlier probe file was kept as `/Users/ren/tmp/dj/rule23/probe/WayUnderARule.probe-before-mend.lean`.
+   - The module has no `#print` line.
+
+## 2. Statements changed or new
+
+**Changed only by removal of the binder `(some : ∀ g, ¬ favours g → ∀ u, kids g u ≠ [])`** (and `Turned` → `Tested` in conclusions): `or_from_level`, `or_from_room`, `or_all`, `tested_or_ends`, `first_tested_or_ends`. `tested_or_ends` is now:
+
+```lean
+theorem tested_or_ends [DecidablePred favours]
+    (grows : ∀ g, favours g → ∀ u, use u < LineOnAStock.taken use (kids g u))
+    (even : ∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u)
+    (down : ∀ g u v, v ∈ kids g u → need v ≤ need u)
+    (needs : ∀ k u, u ∈ (course need kids next giving use s k).1.1 → 0 < need u)
+    (nothing : RegimeMargin.FromNothing giving) (high : s.2 ≤ hi)
+    (keepsAlong : ∀ k, (∀ j, j ≤ k → Goes need (course need kids next giving use s j)) →
+      RegimeMargin.Keeps giving
+        (LineOnAStock.taken use (course need kids next giving use s k).1.1) hi)
+    (regimeAlong : ∀ k, (∀ j, j ≤ k → Goes need (course need kids next giving use s j)) →
+      ¬ favours (course need kids next giving use s k).1.2 →
+      RegimeMargin.Short giving
+          (LineOnAStock.taken use (course need kids next giving use s k).1.1)
+          (y (LineOnAStock.taken use (course need kids next giving use s k).1.1)) ∧
+        RegimeMargin.Meets giving
+          (LineOnAStock.taken use (course need kids next giving use s k).1.1)
+          (y (LineOnAStock.taken use (course need kids next giving use s k).1.1)) hi) :
+    (∃ k, (∀ j, j < k → Goes need (course need kids next giving use s j)) ∧
+        Tested need use y favours next (course need kids next giving use s k)) ∨
+      (∃ n, (∀ j, j < n → Goes need (course need kids next giving use s j)) ∧
+        ¬ Goes need (course need kids next giving use s n))
+```
+
+`first_tested_or_ends` has the same binders; its first disjunct also carries `∧ ∀ j, j < k → ¬ Tested … (course … j)`.
+
+**Changed only by the rename** (the name, or `Turned` or `turned` inside the statement):
+- `Tested` (was `Turned`), `tested_or_not` (was `turned_or_not`), `tested_one_rule` (was `turned_one_rule`);
+- `Outcomes`, `first_tested`, `tested_lasts`, `unending_iff_tested`, `NeedTwentySeven.tested`, `NeedTwentySix.ends_untested`;
+- `lasts_from` and `unmet_before_tested`, whose hypothesis is now named `tested`.
+
+**New, in `namespace Becoming.WayUnderARule.BothOutcomes`** (after `open Rule`):
+
+```lean
+inductive Rule | a | b | c
+def need (_ : Unit) : Nat := 1
+def use (_ : Unit) : Nat := 1
+def kids : Rule → Unit → List Unit        -- a, u => [u]; b, u => [u]; c, u => [u, u]
+def next (_ : List Unit) : Rule → Rule    -- a => b; b => c; c => c
+abbrev favours (g : Rule) : Prop := g = c
+instance favoursDecidable : DecidablePred favours
+def start : (List Unit × Rule) × Nat := (([()], a), 2)
+abbrev run : Nat → (List Unit × Rule) × Nat := course need kids next TwoKinds.giving use start
+
+def Premises : Prop :=
+  (∀ g, favours g → ∀ u, use u < LineOnAStock.taken use (kids g u)) ∧
+  (∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u) ∧
+  (∀ g u v, v ∈ kids g u → need v ≤ need u) ∧
+  (∀ k u, u ∈ (run k).1.1 → 0 < need u) ∧
+  RegimeMargin.FromNothing TwoKinds.giving ∧
+  start.2 ≤ 32 ∧
+  (∀ k, (∀ j, j ≤ k → Goes need (run j)) →
+    RegimeMargin.Keeps TwoKinds.giving (LineOnAStock.taken use (run k).1.1) 32) ∧
+  (∀ k, (∀ j, j ≤ k → Goes need (run j)) → ¬ favours (run k).1.2 →
+    RegimeMargin.Short TwoKinds.giving (LineOnAStock.taken use (run k).1.1)
+        (id (LineOnAStock.taken use (run k).1.1)) ∧
+      RegimeMargin.Meets TwoKinds.giving (LineOnAStock.taken use (run k).1.1)
+        (id (LineOnAStock.taken use (run k).1.1)) 32)
+
+theorem premises : Premises
+theorem course_values :
+    run 1 = (([()], b), 2) ∧ run 2 = (([()], c), 2) ∧ run 3 = (([(), ()], c), 2) ∧
+      run 4 = (([(), (), (), ()], c), 0)
+theorem tested_at_start : Tested need use id favours next (run 0)
+theorem ends : (∀ j, j < 4 → Goes need (run j)) ∧ ¬ Goes need (run 4)
+theorem both :
+    Premises ∧
+      (∃ k, (∀ j, j < k → Goes need (run j)) ∧ Tested need use id favours next (run k)) ∧
+      ∃ n, (∀ j, j < n → Goes need (run j)) ∧ ¬ Goes need (run n)
+theorem by_law : Outcomes need use id favours next run
+theorem not_read_from_a_share {A : Type} {P : Ideals.Preorder A} {M : Ideals.Preorder Rule}
+    {share : List Unit → A} {h : A → Rule → Rule} (reads : (fun w g => h (share w) g) = next)
+    (lowers : ∀ w g, ¬ favours g → P.le (share (LineOnAStock.allKids (kids g) w)) (share w))
+    (monotone : RuleCapture.ReadsShare P M h)
+    (upper : ∀ {g g'}, M.le g g' → favours g → favours g') : False
+```
+
+- `by_law` is `tested_or_ends (y := id) (hi := 32)` applied to the eight conjuncts of `premises`. It is there so the type checker, not a reading, confirms that `Premises` is the law's list clause for clause.
+- `not_read_from_a_share` is by `tested_lasts` at the test at step 0, against `ends.2`. `some` is proved inline for all three rules.
+
+No other statement changed.
+
+## 3. Findings
+
+**Reader of the Lean**
+
+| # | Result |
+|---|---|
+| 1 | Applied with a change. The reader's words are used, minus "of the first list" (`some` is no longer in it). One sentence added: `some` is asked here and not by the "or". |
+| 2 | Applied in the brief's wording, not the reader's, in the head and in `goes_on`. The reader's "the one `F` stays at twenty-eight" is replaced by "something goes on too". |
+| 3 | Applied as worded in `ends_untested` (title changed too, adding "(`ends`; …)" and "at the premises"). The head says the same. The LESSER is applied: `ends_iff_unmet` says "Right to left asks no premise". The classical remark is not added, since it is not proved here. |
+| 4 | Applied in the Lean (item 1), so the reader's interim wording is superseded. `tested_lasts`'s docstring and the head say B asks `some` and A does not. That B cannot drop it stays marked "argued, not proved here". |
+| 5 | Applied as worded in the head, with the parenthesis "the qualifier is redundant by an argument not in the module". No statement changed. |
+| 6 | Applied with a change: the course is now built, so the head and `tested_or_ends` point to `BothOutcomes.both` instead of "argued / found by hand". |
+| 7 | Applied with a change. The `Meets` half is told as "at least `T` at every level left `z` with `y T ≤ z` and `z + T ≤ hi`", not the reader's "meeting it from there up to `hi`". The bullet names every premise, without `some`. |
+| 8 | Applied: "the "or" (`tested_or_ends`) asks nothing of `next`". |
+| 9 | Applied as worded. |
+| 10 | Applied in the brief's wording: "…(by computation); that a need is unmet at step 3 is not stated". The reader's "by hand and" is left out. |
+| 11 | Applied as worded in both `_same` docstrings, and added to the head's "At one rule" bullet. |
+| 12 | Applied (item 2). |
+| 13 | Applied with a change: the head says that in both courses `lowers` and `raises` hold as equalities, so the share changes only at a step where a need is unmet. The other observations (the `regimeAlong` antecedent at need 26, `upper` by definition, `F`'s falling part) are not added; no replacement was given. |
+| 14 | First two nits applied: `or_from_level` no longer claims the discarded conjunct and says where the cap is used; the head excepts `level_held`. Not applied: moving `TwoKinds.le_min` and fixing `oneOrder`'s universe. Both change a declaration, which this pass may not do. |
+
+**Reader of the tellings**
+
+| # | Result |
+|---|---|
+| 10 | Applied, in the brief's wording (same place as Lean 2). |
+| 16 | Applied in the module (head and `ends_untested`). The record's law 6 is outside this pass. |
+| 32 | Applied (same bullet as Lean 7). |
+
+**A change of mine that follows from item 1, for the row to check against the other tellings.** "List 1" in the module is now the eight premises of `tested_or_ends`. "List 2" is what `tested_lasts` adds: `some`, `lowers`, `monotone`, `upper`. This is said in `TwoKinds.Premises` (which notes `some` still stands third in the conjunction), `lasts_from` and `unending_iff_tested`. NOTE, the record and the other tellings outside the module may still count `some` in list 1.
+
+## 4. Builds and probe
+
+- **Scratch builds this pass:** one. Build 4: exit 0, `unclean []`, `with_axioms {}`, 152 modules reused. Log: `/Users/ren/tmp/dj/rule23/tree/build-4.log`. Load at start was 3.7.
+- **Fast checks:** five on the module and one on the probe. Three ran before the new case existed, so only two errors were ever seen:
+  - the first check gave a warning (unused variable `v`), mended;
+  - the first check with the new case failed: `nomatch e, …` inside an anonymous constructor reads the comma as a further discriminant. Mended with parentheses.
+  - Three runs of my edit script stopped on an assertion before writing anything.
+- **Probe:** 97 declarations printed, the 5 private ones and the 17 of `BothOutcomes` included. All 97 "does not depend on any axioms"; exit 0.
+- Nothing else was run. The full suite and gate are deliberately deferred; this is selected evidence, not a full pass.
+
+## 5. Anything false in a reader's finding
+
+Nothing found false.
+
+- Finding 4's paper argument builds as the reader gave it.
+- The reader's course builds: `course_values` agrees with the table, the test holds at step 0, needs are met at steps 0 to 3 and none at step 4.
+- The reader's claim about which premise of list 2 fails on that course (`ReadsShare` putting `c` at or below `b`, then `upper`) is not checked and not claimed. What is proved is only that `lowers`, `monotone` and `upper` cannot all hold for any reading of this `next` from a share.
+
+## 6. Counts
+
+- File: 1,659 lines (was 1,466); longest line 100 characters; no trailing whitespace.
+- Build 4 log: 59 public theorems, 92 declarations (build 3: 52 and 75).
+
+**Scratch files left** (none in the repository or in `/Users/ren/tmp/dj/wt`; nothing committed):
+- `/Users/ren/tmp/dj/rule23/pass2-before/WayUnderARule.before-mend.lean` (the file as it stood before this pass)
+- `/private/tmp/claude-501/-Users-ren-theories/a5a43704-f723-406f-926c-7c46463ba40a/scratchpad/mend_docs.py`
+- `/private/tmp/claude-501/-Users-ren-theories/a5a43704-f723-406f-926c-7c46463ba40a/scratchpad/both_outcomes.lean.txt`
+- `/private/tmp/claude-501/-Users-ren-theories/a5a43704-f723-406f-926c-7c46463ba40a/scratchpad/after-items-1-2.lean`

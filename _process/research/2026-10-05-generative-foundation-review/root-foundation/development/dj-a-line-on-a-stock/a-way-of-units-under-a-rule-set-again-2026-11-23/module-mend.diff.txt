@@ -1,0 +1,674 @@
+18c18,19
+< `Law.stepWhile`). A rule can favour (`favours : R → Prop`); nothing is asked of `next`.
+---
+> `Law.stepWhile`). A rule can favour (`favours : R → Prop`); the "or" (`tested_or_ends`) asks
+> nothing of `next`.
+20c21
+< The test at a configuration (`Turned`): it holds (`LineOnAStock.Holds`: the way is not empty, every
+---
+> The test at a configuration (`Tested`): it holds (`LineOnAStock.Holds`: the way is not empty, every
+29,36c30,42
+< * **One of two outcomes** (`tested_or_ends`): under a rule that favours each unit's kids together
+<   take more than it, under a rule that does not they together take what it takes and every unit has
+<   kids, kids need no more than their parent under every rule, every unit the course reaches needs
+<   something, and the stock is bounded along the course as the docstring names; then the course
+<   comes to a step with the test, some need met at every step before it, or to a step with no need
+<   met, some need met at every step before it. The "or" is inclusive: these premises do not shut
+<   out a course that passes the test and later comes to a step with no need met. Laws of one step
+<   are `LineOnAStock`'s at `kids := kids g`.
+---
+> * **One of two outcomes** (`tested_or_ends`): with `favours` decided; under a rule that favours each
+>   unit's kids together take more than it; under a rule that does not they together take what it
+>   takes; kids need no more than their parent under every rule; every unit the course reaches needs
+>   something; nothing given from nothing, the start at most `hi`; and along the course (at steps with
+>   some need met there and at every step before) the step under what the way takes keeping levels
+>   within `hi` and, under a rule that does not favour, with `T` what the way takes, giving short of
+>   `T` at every level below `y T` and at least `T` at every level left `z` with `y T ≤ z` and
+>   `z + T ≤ hi`. Then the course comes to a step with the test, some need met at every step before
+>   it, or to a step with no need met, some need met at every step before it. That under a rule that
+>   does not favour every unit has kids (`some`) is not asked. The "or" is inclusive:
+>   `BothOutcomes.both` is a course that meets every premise, has the test at its start and no need
+>   met at its step 4. Laws of one step are `LineOnAStock`'s at `kids := kids g`, but `level_held`,
+>   which is `RegimeMargin.holds`.
+40,48c46,60
+< * **The first outcome lasts** (`tested_lasts`): with the rule set next read from a share of the way
+<   (`next := fun w g => h (share w) g`), and `lowers` (under a rule that does not favour, the share
+<   of all the kids of a way is not above the way's), `monotone` (`RuleCapture.ReadsShare`) and
+<   `upper` (a rule above a favouring rule favours), from a step with the test the net never ends.
+<   Not asked: `grows`, `needs`, `nothing`, decidability. That no later rule favours is carried by
+<   `RuleCapture.turn_locked` at the orders reversed (`lasts_from`).
+< * **The two outcomes shut each other out** (`unending_iff_tested`, `ends_iff_unmet`): under both
+<   lists of premises the net never ends exactly where the course comes to a step with the test, and
+<   ends exactly where it comes to a step with no need met. Corollaries of the two items above.
+---
+> * **The first outcome lasts** (`tested_lasts`): with `even`, `some`, `down`, `high`, `keepsAlong`
+>   and `regimeAlong` (of `regimeAlong` only its `Meets` half, at the step with the test), the rule
+>   set next read from a share of the way (`next := fun w g => h (share w) g`), and `lowers` (under a
+>   rule that does not favour, the share of all the kids of a way is not above the way's), `monotone`
+>   (`RuleCapture.ReadsShare`) and `upper` (a rule above a favouring rule favours): if the course
+>   comes to a step with the test, some need met at every step before it, the net never ends. Not
+>   asked: `grows`, `needs`, `nothing`, that `favours` is decided. `some` (under a rule that does not
+>   favour every unit has kids) is asked here and not by the "or": it keeps the way after a holding
+>   step from being empty. That no later rule favours is carried by `RuleCapture.turn_locked` at the
+>   orders reversed (`lasts_from`).
+> * **The two outcomes shut each other out** (`unending_iff_tested`, `ends_iff_unmet`): under the
+>   premises of `tested_or_ends` and of `tested_lasts` together, the net never ends exactly where the
+>   course comes to a step with the test, and ends exactly where it comes to a step with no need met
+>   (in both, some need met at every step before it; right to left of the second asks no premise).
+>   Corollaries of `tested_or_ends` and `tested_lasts`.
+57,62c69,88
+<   lists holds where `F` needs something (`TwoKinds.premises`). Where `F` needs twenty-seven the
+<   test holds at step 4 and the net never ends (`NeedTwentySeven.goes_on`, by `tested_lasts`);
+<   where it needs twenty-six no need is met at step 4, the net ends and no step has the test
+<   (`NeedTwentySix.ends_untested`, by `ends_iff_unmet` and `unending_iff_tested`). In the first the
+<   change of the rule keeps something going only as against going on favouring: what goes on is
+<   twelve `O`, and the `F` the rule counted is gone.
+---
+>   lists holds where `F` needs something (`TwoKinds.premises`). Where `F` needs twenty-seven the test
+>   holds at step 4 and the net never ends (`NeedTwentySeven.goes_on`, by `tested_lasts`). Where it
+>   needs twenty-six no need is met at step 4, so the net ends (the half of `ends_iff_unmet` that asks
+>   no premise), and no step with some need met at every step before it has the test
+>   (`NeedTwentySix.ends_untested`, by `unending_iff_tested`, right to left, which is `tested_lasts`;
+>   the qualifier is redundant by an argument not in the module). In the first, what goes on is twelve
+>   `O` (`course_values`) and the one `F` the rule counted is gone. Not proved in this module (found
+>   by program on 20 November 2026): with the rule held favouring the same start comes to a step with
+>   no need met, and with the rule that does not favour held from the first move something goes on
+>   too. In both courses `lowers` and `raises` hold as equalities (all the kids of a way have its
+>   share under either rule), so the share changes only at a step where a need is unmet.
+> * **A course with both outcomes** (`BothOutcomes`): one unit needing one and taking one; rules `a`,
+>   `b`, `c`, of which only `c` favours; under `a` and `b` the unit leaves itself, under `c` two;
+>   after `a` comes `b`, after `b` and after `c` comes `c`; the same giving, `y T = T`, `hi = 32`,
+>   from one unit under `a` at two. Every premise of `tested_or_ends` holds, the test holds at step 0,
+>   some need is met at steps 0 to 3 and none at step 4 (`BothOutcomes.both`): under those premises
+>   alone the "or" is inclusive. What shuts the outcomes out of each other is `tested_lasts`, whose
+>   premises this course does not meet: no reading of this `next` from a share of the way has
+>   `lowers`, `monotone` and `upper` (`BothOutcomes.not_read_from_a_share`, by `tested_lasts`; which
+>   of the three fails is not stated).
+67,68c93,95
+<   theorems; each is followed by a private theorem that the two are equal by `rfl`. They stand
+<   until a later stage makes the old theorems calls.
+---
+>   theorems; each is followed by a private theorem that the two are equal by `rfl`, which
+>   typechecks only where the two statements are definitionally the same (that they match binder for
+>   binder is by reading). They stand until a later stage makes the old theorems calls.
+123c150
+< def Turned (need use : U → Nat) (y : Nat → Nat) (favours : R → Prop) (next : List U → R → R)
+---
+> def Tested (need use : U → Nat) (y : Nat → Nat) (favours : R → Prop) (next : List U → R → R)
+241c268
+< /-- The two outcomes along a course `c`: a step with the test (`Turned`), some need met at every
+---
+> /-- The two outcomes along a course `c`: a step with the test (`Tested`), some need met at every
+245c272
+<   (∃ k, (∀ j, j < k → Goes need (c j)) ∧ Turned need use y favours next (c k)) ∨
+---
+>   (∃ k, (∀ j, j < k → Goes need (c j)) ∧ Tested need use y favours next (c k)) ∨
+311,318c338,346
+< (`outcome_or_met`), every need is met and what the way takes is at most the level, which is at most
+< `hi`. Where the rule in force favours, the next way takes at least one more (`taken_rises`): `ihC`
+< at `k + 1`. Where it does not favour and the level is below what the way takes and `y` of it, the
+< step leaves less (`level_lowers`, the level being above nothing since a need is met), the next way
+< takes the same (`taken_kept`): the recursion at `f` less one and `k + 1`. Where it does not favour
+< and the configuration holds: the test at `k` if the rule set next does not favour; if it favours,
+< the way at `k + 1` has a unit (`mem_after`), takes the same, the level has not fallen
+< (`level_held`) and meets every need there (`below_level`), so the way at `k + 2` takes at least one
+---
+> (`outcome_or_met`), some need is met and every need is met. Where the rule in force favours, the
+> next way takes at least one more (`taken_rises`): `ihC` at `k + 1`. Where it does not favour and the
+> level is below what the way takes and `y` of it, the step leaves less (`level_lowers`, the level
+> being above nothing since a need is met), the next way takes the same (`taken_kept`): the recursion
+> at `f` less one and `k + 1`. Where it does not favour and the configuration holds: the test at `k`
+> if the rule set next does not favour. If it favours and no need is met at `k + 1`, that is the
+> second outcome at `k + 1`. If it favours and some need is met at `k + 1`: the way there has a unit
+> and takes the same, the level has not fallen (`level_held`, the level at `k` being at most `hi` by
+> `within_along`) and meets every need there (`below_level`), so the way at `k + 2` takes at least one
+323d350
+<     (some : ∀ g, ¬ favours g → ∀ u, kids g u ≠ [])
+373c400
+<                   or_from_level grows even some down needs nothing high keepsAlong regimeAlong
+---
+>                   or_from_level grows even down needs nothing high keepsAlong regimeAlong
+390,402c417,431
+<                     match mem_after (next := next) (giving := giving) some notfav goes with
+<                     | ⟨v, mv⟩ =>
+<                       have before'' : ∀ j, j < k + 1 + 1 →
+<                           Goes need (course need kids next giving use s j) :=
+<                         fun j lt => goes_upto before' ⟨v, mv, met' v mv⟩ j (Nat.le_of_lt_succ lt)
+<                       ihC (course need kids next giving use s (k + 1 + 1)).2 (k + 1 + 1) before''
+<                         (below_kept down below')
+<                         (Nat.le_trans fuel
+<                           (Nat.le_trans (Nat.le_of_eq (Nat.add_right_comm _ room 1))
+<                             (Nat.add_le_add_right
+<                               (Nat.le_trans (Nat.le_of_eq (congrArg (· + 1) kept.symm))
+<                                 (taken_rises grows fav' mv met')) room)))
+<                         (Nat.le_refl _))
+---
+>                     (Decidable.em (Goes need (course need kids next giving use s (k + 1)))).elim
+>                       (fun goes' => match goes' with
+>                         | ⟨_, mv, _⟩ =>
+>                           have before'' : ∀ j, j < k + 1 + 1 →
+>                               Goes need (course need kids next giving use s j) :=
+>                             fun j lt => goes_upto before' goes' j (Nat.le_of_lt_succ lt)
+>                           ihC (course need kids next giving use s (k + 1 + 1)).2 (k + 1 + 1)
+>                             before'' (below_kept down below')
+>                             (Nat.le_trans fuel
+>                               (Nat.le_trans (Nat.le_of_eq (Nat.add_right_comm _ room 1))
+>                                 (Nat.add_le_add_right
+>                                   (Nat.le_trans (Nat.le_of_eq (congrArg (· + 1) kept.symm))
+>                                     (taken_rises grows fav' mv met')) room)))
+>                             (Nat.le_refl _))
+>                       (fun stop => Or.inr ⟨k + 1, before', stop⟩))
+417d445
+<     (some : ∀ g, ¬ favours g → ∀ u, kids g u ≠ [])
+441,442c469,470
+<     or_from_level grows even some down needs nothing high keepsAlong regimeAlong ihM
+<       (or_from_room grows even some down needs nothing high keepsAlong regimeAlong ihM room)
+---
+>     or_from_level grows even down needs nothing high keepsAlong regimeAlong ihM
+>       (or_from_room grows even down needs nothing high keepsAlong regimeAlong ihM room)
+449d476
+<     (some : ∀ g, ¬ favours g → ∀ u, kids g u ≠ [])
+470c497
+<       or_from_room grows even some down needs nothing high keepsAlong regimeAlong ih)
+---
+>       or_from_room grows even down needs nothing high keepsAlong regimeAlong ih)
+478d504
+< * `some`: under a rule that does not favour, every unit has kids;
+489c515
+< Then the course from `s` comes to a step at which the test holds (`Turned`: the way and level hold,
+---
+> Then the course from `s` comes to a step at which the test holds (`Tested`: the way and level hold,
+493,498c519,526
+< Under these premises the "or" is inclusive: they do not shut out a course that passes the test and
+< later comes to a step with no need met (no such course is built here). Where the rule set next is
+< read from a share of the way and `lowers`, `monotone` and `upper` hold as well, `tested_lasts`
+< makes the two outcomes shut each other out (`unending_iff_tested`, `ends_iff_unmet`); and
+< `first_tested_or_ends` takes the least step with the test. No bound on either step is stated. By
+< `or_all` at the total of the needs of the start's way, the room `hi + 1` and the start level. -/
+---
+> Under these premises the "or" is inclusive: `BothOutcomes.both` is a course that meets them, has the
+> test at its start and comes to a step with no need met. That under a rule that does not favour every
+> unit has kids (`some`) is not asked: a way left empty after a holding step has no need met, which is
+> the second outcome. Where the rule set next is read from a share of the way and `some`, `lowers`,
+> `monotone` and `upper` hold as well, `tested_lasts` makes the two outcomes shut each other out
+> (`unending_iff_tested`, `ends_iff_unmet`); and `first_tested_or_ends` takes the least step with the
+> test. No bound on either step is stated. By `or_all` at the total of the needs of the start's way,
+> the room `hi + 1` and the start level. -/
+502d529
+<     (some : ∀ g, ¬ favours g → ∀ u, kids g u ≠ [])
+518c545
+<         Turned need use y favours next (course need kids next giving use s k)) ∨
+---
+>         Tested need use y favours next (course need kids next giving use s k)) ∨
+521c548
+<   or_all grows even some down needs nothing high keepsAlong regimeAlong (total s.1.1 need)
+---
+>   or_all grows even down needs nothing high keepsAlong regimeAlong (total s.1.1 need)
+542,544c569,571
+< (`Turned`) holds or it does not: `holds_or_not`, then the rule in force and the rule set next. -/
+< theorem turned_or_not [DecidablePred favours] (t : (List U × R) × Nat) :
+<     Turned need use y favours next t ∨ ¬ Turned need use y favours next t :=
+---
+> (`Tested`) holds or it does not: `holds_or_not`, then the rule in force and the rule set next. -/
+> theorem tested_or_not [DecidablePred favours] (t : (List U × R) × Nat) :
+>     Tested need use y favours next t ∨ ¬ Tested need use y favours next t :=
+547c574
+<       (fun fav => .inr fun turned => turned.2.1 fav)
+---
+>       (fun fav => .inr fun tested => tested.2.1 fav)
+549c576
+<         (fun fav' => .inr fun turned => turned.2.2 fav')
+---
+>         (fun fav' => .inr fun tested => tested.2.2 fav')
+551c578
+<     (fun not => .inr fun turned => not turned.1)
+---
+>     (fun not => .inr fun tested => not tested.1)
+554c581
+< if the course from `s` has a step with the test (`Turned`), some need met at every step before it,
+---
+> if the course from `s` has a step with the test (`Tested`), some need met at every step before it,
+556c583
+< (`first_of_decided`, with `turned_or_not`). -/
+---
+> (`first_of_decided`, with `tested_or_not`). -/
+559c586
+<         Turned need use y favours next (course need kids next giving use s k)) →
+---
+>         Tested need use y favours next (course need kids next giving use s k)) →
+561,563c588,590
+<         Turned need use y favours next (course need kids next giving use s k) ∧
+<         ∀ j, j < k → ¬ Turned need use y favours next (course need kids next giving use s j) :=
+<   fun ⟨k, before, turned⟩ =>
+---
+>         Tested need use y favours next (course need kids next giving use s k) ∧
+>         ∀ j, j < k → ¬ Tested need use y favours next (course need kids next giving use s j) :=
+>   fun ⟨k, before, tested⟩ =>
+565,567c592,594
+<         (P := fun t => ¬ Turned need use y favours next (course need kids next giving use s t))
+<         (Q := fun t => Turned need use y favours next (course need kids next giving use s t))
+<         (fun t => (turned_or_not (course need kids next giving use s t)).elim
+---
+>         (P := fun t => ¬ Tested need use y favours next (course need kids next giving use s t))
+>         (Q := fun t => Tested need use y favours next (course need kids next giving use s t))
+>         (fun t => (tested_or_not (course need kids next giving use s t)).elim
+569c596
+<     | .inl never => absurd turned (never k (Nat.le_refl k))
+---
+>     | .inl never => absurd tested (never k (Nat.le_refl k))
+574,578c601,605
+< `tested_or_ends` (`grows`, `even`, `some`, `down`, `needs`, `nothing`, `high`, `keepsAlong`,
+< `regimeAlong`, with `favours` decided at every rule and any `next`): the course from `s` comes to a
+< step with the test, some need met at every step before it and the test at no step before it; or to
+< a step with no need met, some need met at every step before it. `tested_or_ends`, with
+< `first_tested` on its first outcome. The "or" is inclusive, as there. -/
+---
+> `tested_or_ends` (`grows`, `even`, `down`, `needs`, `nothing`, `high`, `keepsAlong`, `regimeAlong`,
+> with `favours` decided at every rule and any `next`): the course from `s` comes to a step with the
+> test, some need met at every step before it and the test at no step before it; or to a step with no
+> need met, some need met at every step before it. `tested_or_ends`, with `first_tested` on its first
+> outcome. The "or" is inclusive, as there. -/
+582d608
+<     (some : ∀ g, ¬ favours g → ∀ u, kids g u ≠ [])
+598c624
+<         Turned need use y favours next (course need kids next giving use s k) ∧
+---
+>         Tested need use y favours next (course need kids next giving use s k) ∧
+600c626
+<           ¬ Turned need use y favours next (course need kids next giving use s j)) ∨
+---
+>           ¬ Tested need use y favours next (course need kids next giving use s j)) ∨
+603c629
+<   (tested_or_ends grows even some down needs nothing high keepsAlong regimeAlong).elim
+---
+>   (tested_or_ends grows even down needs nothing high keepsAlong regimeAlong).elim
+670,677c696,704
+< favour.** With `even`, `some`, `down`, the premises of list 2 (`lowers`: under a rule that does
+< not favour, the share of all the kids of a way is not above the way's; `monotone`: the rule read is
+< a monotone function of the share alone; `upper`: a rule above a favouring rule favours), and at the
+< configuration `t` itself: giving at least what its way takes, `T`, at every level `z` left with
+< `y T ≤ z` and `z + T ≤ hi` (`meets`), the step under `T` keeping levels within `hi` (`keeps`), the
+< level at most `hi` (`high`) and the test (`turned`). Then at every step `i + 1` after `t` the
+< configuration is `HeldAt` the level and the take of `t`, and it is locked at the reversed order:
+< its rule does not favour and the rule read there is not above it.
+---
+> favour.** With `even`, `down`, the premises of list 2 (`some`: under a rule that does not favour
+> every unit has kids; `lowers`: under a rule that does not favour, the share of all the kids of a way
+> is not above the way's; `monotone`: the rule read is a monotone function of the share alone;
+> `upper`: a rule above a favouring rule favours), and at the configuration `t` itself: giving at
+> least what its way takes, `T`, at every level `z` left with `y T ≤ z` and `z + T ≤ hi` (`meets`),
+> the step under `T` keeping levels within `hi` (`keeps`), the level at most `hi` (`high`) and the
+> test (`tested`). Then at every step `i + 1` after `t` the configuration is `HeldAt` the level and
+> the take of `t`, and it is locked at the reversed order: its rule does not favour and the rule read
+> there is not above it.
+695c722
+<     (turned : Turned need use y favours (fun w g => h (share w) g) t) :
+---
+>     (tested : Tested need use y favours (fun w g => h (share w) g) t) :
+702,703c729,730
+<     ⟨held_step even some down meets keeps turned.1.2.2 turned.2.1
+<         ⟨LineOnAStock.mem_of_ne_nil turned.1.1, fun u mu _ => turned.1.2.1 u mu, rfl,
+---
+>     ⟨held_step even some down meets keeps tested.1.2.2 tested.2.1
+>         ⟨LineOnAStock.mem_of_ne_nil tested.1.1, fun u mu _ => tested.1.2.1 u mu, rfl,
+705c732
+<       turned.2.2,
+---
+>       tested.2.2,
+707,708c734,735
+<         (LineOnAStock.after_of_met (kids := kids t.1.2) turned.1.2.1).symm
+<         (lowers t.1.1 t.1.2 turned.2.1))⟩
+---
+>         (LineOnAStock.after_of_met (kids := kids t.1.2) tested.1.2.1).symm
+>         (lowers t.1.1 t.1.2 tested.2.1))⟩
+710c737
+<     match lasts_from even some down lowers monotone upper meets keeps high turned i with
+---
+>     match lasts_from even some down lowers monotone upper meets keeps high tested i with
+712c739
+<       ⟨held_step even some down meets keeps turned.1.2.2 locked.1 held,
+---
+>       ⟨held_step even some down meets keeps tested.1.2.2 locked.1 held,
+742,747c769,775
+< Then: if the course from `s` comes to a step with the test (`Turned`), some need met at every step
+< before it, the net from `s` never ends. Not asked: `grows`, `needs`, `nothing`, or that `favours`
+< is decided. `some` is used, through `held_step` (argued, not proved here: without it a way whose
+< units take nothing could leave no unit under a rule that does not favour). By `lasts_from` at the
+< step with the test (the level there at most `hi` by `within_along`): every later way has a unit
+< whose need the level meets. -/
+---
+> Then: if the course from `s` comes to a step with the test (`Tested`), some need met at every step
+> before it, the net from `s` never ends. Not asked: `grows`, `needs`, `nothing`, or that `favours` is
+> decided. `some` is asked here and not by `tested_or_ends`: through `held_step` it gives a way that
+> is not empty after a holding step (that it cannot be dropped is argued, not proved here: without it
+> a way whose units take nothing could leave no unit under a rule that does not favour). By
+> `lasts_from` at the step with the test (the level there at most `hi` by `within_along`): every later
+> way has a unit whose need the level meets. -/
+776c804
+<         Turned need use y favours (fun w g => h (share w) g)
+---
+>         Tested need use y favours (fun w g => h (share w) g)
+779c807
+<   fun ⟨k, before, turned⟩ => Law.stepWhile_unending_iff.mpr fun n =>
+---
+>   fun ⟨k, before, tested⟩ => Law.stepWhile_unending_iff.mpr fun n =>
+781,782c809,810
+<       match LineOnAStock.mem_of_ne_nil turned.1.1 with
+<       | ⟨v, mv⟩ => ⟨v, mv, turned.1.2.1 v mv⟩
+---
+>       match LineOnAStock.mem_of_ne_nil tested.1.1 with
+>       | ⟨v, mv⟩ => ⟨v, mv, tested.1.2.1 v mv⟩
+793,794c821,822
+<             (regimeAlong k upto turned.2.1).2 (keepsAlong k upto)
+<             (within_along keepsAlong high k before) turned i).1 with
+---
+>             (regimeAlong k upto tested.2.1).2 (keepsAlong k upto)
+>             (within_along keepsAlong high k before) tested i).1 with
+807,811c835,839
+< `tested_or_ends` (`grows`, `even`, `some`, `down`, `needs`, `nothing`, `high`, `keepsAlong`,
+< `regimeAlong`) and those `tested_lasts` adds (`lowers`, `monotone`, `upper`): the net from `s`
+< never ends exactly where the course from `s` has a step with the test (`Turned`), some need met at
+< every step before it. Left to right by `tested_or_ends` (a net that never ends has no step with no
+< need met); right to left is `tested_lasts`. -/
+---
+> `tested_or_ends` (`grows`, `even`, `down`, `needs`, `nothing`, `high`, `keepsAlong`, `regimeAlong`)
+> and those `tested_lasts` adds (`some`, `lowers`, `monotone`, `upper`): the net from `s` never ends
+> exactly where the course from `s` has a step with the test (`Tested`), some need met at every step
+> before it. Left to right by `tested_or_ends` (a net that never ends has no step with no need met);
+> right to left is `tested_lasts`. -/
+845c873
+<         Turned need use y favours (fun w g => h (share w) g)
+---
+>         Tested need use y favours (fun w g => h (share w) g)
+848c876
+<       (tested_or_ends grows even some down needs nothing high keepsAlong regimeAlong).elim id
+---
+>       (tested_or_ends grows even down needs nothing high keepsAlong regimeAlong).elim id
+855,857c883,885
+< `tested_or_ends`, its first outcome shut out by `tested_lasts`; right to left, a net that never
+< ends has some need met at every step. With `unending_iff_tested`: under these premises exactly one
+< of the two outcomes of `tested_or_ends` comes. -/
+---
+> `tested_or_ends`, its first outcome shut out by `tested_lasts`. Right to left asks no premise: a net
+> that never ends has some need met at every step. With `unending_iff_tested`: under these premises
+> exactly one of the two outcomes of `tested_or_ends` comes. -/
+893c921
+<       (tested_or_ends grows even some down needs nothing high keepsAlong regimeAlong).elim
+---
+>       (tested_or_ends grows even down needs nothing high keepsAlong regimeAlong).elim
+996c1024
+< (`Turned`) holds at step `k`, some step `j` with `j + 2 ≤ k` has a unit whose need is above the
+---
+> (`Tested`) holds at step `k`, some step `j` with `j + 2 ≤ k` has a unit whose need is above the
+1003c1031
+<     (turned : Turned need use y favours (fun w g => h (share w) g)
+---
+>     (tested : Tested need use y favours (fun w g => h (share w) g)
+1008c1036
+<   unmet_before_unfavoured raises monotone upper locked turned.2.1
+---
+>   unmet_before_unfavoured raises monotone upper locked tested.2.1
+1112c1140
+< the order of the lists, with `y T = T`, `hi = 32`, shares ordered by `≤`
+---
+> the order of the lists but for `some`, with `y T = T`, `hi = 32`, shares ordered by `≤`
+1116,1118c1144,1147
+< * list 1: `grows`, `even`, `some`, `down`, `needs` (along the course), `nothing`, `high`,
+<   `keepsAlong`, `regimeAlong`;
+< * list 2: `lowers`, `monotone`, `upper`;
+---
+> * list 1, the premises of `tested_or_ends`: `grows`, `even`, `down`, `needs` (along the course),
+>   `nothing`, `high`, `keepsAlong`, `regimeAlong`;
+> * list 2, what `tested_lasts` adds: `some` (it stands third in the conjunction, after `even`),
+>   `lowers`, `monotone`, `upper`;
+1207c1236
+<       Turned (need 27) use id favours (fun w g => read (share w) g) (run 27 4) :=
+---
+>       Tested (need 27) use id favours (fun w g => read (share w) g) (run 27 4) :=
+1221,1222c1250,1253
+< step 4 (`tested`). The change of the rule keeps something going only as against going on
+< favouring: what goes on is twelve `O`, and the one `F` the rule counted is gone. -/
+---
+> step 4 (`tested`). What goes on is twelve `O` (`course_values`) and the one `F` the rule counted is
+> gone. Not proved in this module (found by program on 20 November 2026): with the rule held favouring
+> the same start comes to a step with no need met, and with the rule that does not favour held from
+> the first move something goes on too. -/
+1285,1288c1316,1320
+< /-- **The net ends and no step has the test, by the law.** At the premises (`premises`):
+< `ends_iff_unmet` with the step 4 of `ends` gives that the net does not go on without end, and
+< `unending_iff_tested` then that no step has the test with some need met at every step before
+< it. -/
+---
+> /-- **The net ends, and no step with some need met at every step before it has the test.** The net
+> ends because step 4 has no need met (`ends`; the half of `ends_iff_unmet` that asks no premise). No
+> step with some need met at every step before it has the test, by the law at the premises
+> (`premises`): such a step would make the net never end (`unending_iff_tested`, right to left, which
+> is `tested_lasts`). -/
+1292c1324
+<         Turned (need 26) use id favours (fun w g => read (share w) g) (run 26 k) :=
+---
+>         Tested (need 26) use id favours (fun w g => read (share w) g) (run 26 k) :=
+1309,1310c1341,1342
+< is locked, and every need is met at steps 0, 1 and 2 (by computation; the first need unmet is at
+< step 3). -/
+---
+> is locked, and every need is met at steps 0, 1 and 2 (by computation); that a need is unmet at step
+> 3 is not stated. -/
+1361c1393
+< theorem turned_one_rule {y : Nat → Nat} (next : List U → PUnit → PUnit) (w : List U)
+---
+> theorem tested_one_rule {y : Nat → Nat} (next : List U → PUnit → PUnit) (w : List U)
+1363c1395
+<     Turned need use y (fun _ => False) next
+---
+>     Tested need use y (fun _ => False) next
+1368c1400
+<       Turned need use y (fun _ => False) next t ↔
+---
+>       Tested need use y (fun _ => False) next t ↔
+1371c1403
+<     ⟨fun turned => turned.1, fun holds => ⟨holds, id, id⟩⟩
+---
+>     ⟨fun tested => tested.1, fun holds => ⟨holds, id, id⟩⟩
+1421c1453
+<       ⟨fun ⟨k, before, turned⟩ =>
+---
+>       ⟨fun ⟨k, before, tested⟩ =>
+1423c1455
+<             (turned_one_rule (fun _ g => g) w x k).mp turned⟩,
+---
+>             (tested_one_rule (fun _ g => g) w x k).mp tested⟩,
+1426c1458
+<             (turned_one_rule (fun _ g => g) w x k).mpr holds⟩⟩)
+---
+>             (tested_one_rule (fun _ g => g) w x k).mpr holds⟩⟩)
+1429,1430c1461,1462
+< `LineOnAStock.unending_iff_holds`: the two are equal by `rfl`, which checks only where the two
+< statements are the same. -/
+---
+> `LineOnAStock.unending_iff_holds`: the two are equal by `rfl`, which typechecks only where the two
+> statements are definitionally the same; that they match binder for binder is by reading. -/
+1436,1439c1468,1471
+< outcome asks a rule that does not favour, so the second stands, a step with no need met; `even`,
+< `some` and `regimeAlong` hold of no rule, and the step under every take keeps levels within `hi`
+< since the step under none does (`TurningInTime.kept_within`). With `course_one_rule`; it does not
+< use the old theorem. Private: it stands, with the check `way_ends_same` after it, until a later
+---
+> outcome asks a rule that does not favour, so the second stands, a step with no need met; `even`
+> and `regimeAlong` hold of no rule, and the step under every take keeps levels within `hi` since the
+> step under none does (`TurningInTime.kept_within`). With `course_one_rule`; it does not use the old
+> theorem. Private: it stands, with the check `way_ends_same` after it, until a later
+1450c1482
+<       (fun _ _ => grows) (fun _ no => absurd trivial no) (fun _ no => absurd trivial no)
+---
+>       (fun _ _ => grows) (fun _ no => absurd trivial no)
+1454c1486
+<     (fun ⟨_, _, turned⟩ => absurd trivial turned.2.1)
+---
+>     (fun ⟨_, _, tested⟩ => absurd trivial tested.2.1)
+1462c1494,1495
+< by `rfl`, which checks only where the two statements are the same. -/
+---
+> by `rfl`, which typechecks only where the two statements are definitionally the same; that they
+> match binder for binder is by reading. -/
+1463a1497,1656
+> 
+> /-! ## 11. A course with both outcomes -/
+> 
+> namespace BothOutcomes
+> 
+> /-- Three rules. -/
+> inductive Rule
+>   | a
+>   | b
+>   | c
+> 
+> open Rule
+> 
+> /-- The one unit needs one. -/
+> def need (_ : Unit) : Nat := 1
+> 
+> /-- The one unit takes one. -/
+> def use (_ : Unit) : Nat := 1
+> 
+> /-- Under the rules `a` and `b` the unit leaves itself; under `c` it leaves two. -/
+> def kids : Rule → Unit → List Unit
+>   | a, u => [u]
+>   | b, u => [u]
+>   | c, u => [u, u]
+> 
+> /-- The rule set next, whatever the way: after `a` comes `b`, after `b` and after `c` comes `c`. -/
+> def next (_ : List Unit) : Rule → Rule
+>   | a => b
+>   | b => c
+>   | c => c
+> 
+> /-- Only the rule `c` favours. -/
+> abbrev favours (g : Rule) : Prop := g = c
+> 
+> /-- Whether a rule favours is decided. -/
+> instance favoursDecidable : DecidablePred favours := fun g =>
+>   match g with
+>   | a => isFalse fun e => nomatch e
+>   | b => isFalse fun e => nomatch e
+>   | c => isTrue rfl
+> 
+> /-- The start: one unit, the rule `a`, the level two. -/
+> def start : (List Unit × Rule) × Nat := (([()], a), 2)
+> 
+> /-- The course from the start, with the giving of `TwoKinds`, `min z (32 - z)`. -/
+> abbrev run : Nat → (List Unit × Rule) × Nat :=
+>   course need kids next TwoKinds.giving use start
+> 
+> /-- **Every premise of `tested_or_ends`, at this course's parameters**, in its order, with
+> `y T = T` and `hi = 32`: `grows`, `even`, `down`, `needs` (along the course), `nothing`, `high`,
+> `keepsAlong`, `regimeAlong`. That `favours` is decided is the instance `favoursDecidable`. -/
+> def Premises : Prop :=
+>   (∀ g, favours g → ∀ u, use u < LineOnAStock.taken use (kids g u)) ∧
+>   (∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u) ∧
+>   (∀ g u v, v ∈ kids g u → need v ≤ need u) ∧
+>   (∀ k u, u ∈ (run k).1.1 → 0 < need u) ∧
+>   RegimeMargin.FromNothing TwoKinds.giving ∧
+>   start.2 ≤ 32 ∧
+>   (∀ k, (∀ j, j ≤ k → Goes need (run j)) →
+>     RegimeMargin.Keeps TwoKinds.giving (LineOnAStock.taken use (run k).1.1) 32) ∧
+>   (∀ k, (∀ j, j ≤ k → Goes need (run j)) → ¬ favours (run k).1.2 →
+>     RegimeMargin.Short TwoKinds.giving (LineOnAStock.taken use (run k).1.1)
+>         (id (LineOnAStock.taken use (run k).1.1)) ∧
+>       RegimeMargin.Meets TwoKinds.giving (LineOnAStock.taken use (run k).1.1)
+>         (id (LineOnAStock.taken use (run k).1.1)) 32)
+> 
+> /-- **The premises hold** (`Premises`). Under `c` the unit's two kids together take two, more than
+> one; under `a` and `b` it leaves itself; every unit needs one; nothing is given from nothing and
+> the start two is at most thirty-two; the stock's premises hold at every take (`TwoKinds.keeps`,
+> `TwoKinds.short`, `TwoKinds.meets`), so along the course. -/
+> theorem premises : Premises :=
+>   ⟨fun g fav _ => match g, fav with
+>       | c, _ => (by decide : (1 : Nat) < 2)
+>       | a, fav => nomatch fav
+>       | b, fav => (nomatch fav),
+>     fun g notfav _ => match g, notfav with
+>       | a, _ => rfl
+>       | b, _ => rfl
+>       | c, notfav => absurd rfl notfav,
+>     fun _ _ _ _ => Nat.le_refl 1,
+>     fun _ _ _ => Nat.succ_pos 0,
+>     rfl, by decide, fun _ _ => TwoKinds.keeps _,
+>     fun _ _ _ => ⟨TwoKinds.short _, TwoKinds.meets _⟩⟩
+> 
+> /-- **The course**, by computation. Step 1: the unit under `b` at two. Step 2: the unit under `c`
+> at two. Step 3: two units under `c` at two. Step 4: four units under `c` at nothing, the two units
+> of step 3 having taken the two there were. -/
+> theorem course_values :
+>     run 1 = (([()], b), 2) ∧ run 2 = (([()], c), 2) ∧ run 3 = (([(), ()], c), 2) ∧
+>       run 4 = (([(), (), (), ()], c), 0) :=
+>   ⟨rfl, rfl, rfl, rfl⟩
+> 
+> /-- **The test at step 0.** The way has its one unit, whose need of one the level two meets; two is
+> what the way takes and that again; the rule in force `a` does not favour, and the rule set next,
+> `b`, does not. -/
+> theorem tested_at_start : Tested need use id favours next (run 0) :=
+>   ⟨⟨List.cons_ne_nil _ _, fun _ _ => (by decide : (1 : Nat) ≤ 2), (by decide : (1 : Nat) + 1 ≤ 2)⟩,
+>     fun e => (nomatch e), fun e => (nomatch e)⟩
+> 
+> /-- **Some need met at steps 0 to 3, and no need met at step 4.** By computation. -/
+> theorem ends : (∀ j, j < 4 → Goes need (run j)) ∧ ¬ Goes need (run 4) :=
+>   ⟨fun j lt => match j, lt with
+>       | 0, _ => by decide
+>       | 1, _ => by decide
+>       | 2, _ => by decide
+>       | 3, _ => by decide
+>       | _ + 4, lt => absurd lt (Nat.not_lt_of_le (Nat.le_add_left 4 _)),
+>     by decide⟩
+> 
+> /-- **Both outcomes of `tested_or_ends` hold of one course.** Every premise of `tested_or_ends`
+> holds of the course from `start` (`premises`); it has a step with the test, some need met at every
+> step before it (step 0, `tested_at_start`); and it has a step with no need met, some need met at
+> every step before it (step 4, `ends`). So under the first list alone the "or" of `tested_or_ends`
+> is inclusive. What shuts the two outcomes out of each other is what `tested_lasts` adds, which
+> this course does not meet (`not_read_from_a_share`). -/
+> theorem both :
+>     Premises ∧
+>       (∃ k, (∀ j, j < k → Goes need (run j)) ∧ Tested need use id favours next (run k)) ∧
+>       ∃ n, (∀ j, j < n → Goes need (run j)) ∧ ¬ Goes need (run n) :=
+>   ⟨premises, ⟨0, fun _ lt => absurd lt (Nat.not_lt_zero _), tested_at_start⟩, 4, ends⟩
+> 
+> /-- **The law at this course.** `tested_or_ends` at `premises`, with `y := id` and `hi := 32`: the
+> conjunction `Premises` is its list of premises, clause for clause. The law gives one outcome or the
+> other; `both` gives each. -/
+> theorem by_law : Outcomes need use id favours next run :=
+>   match premises with
+>   | ⟨grows, even, down, needs, nothing, high, keepsAlong, regimeAlong⟩ =>
+>     tested_or_ends (y := id) (hi := 32) grows even down needs nothing high keepsAlong regimeAlong
+> 
+> /-- **No reading of this `next` from a share of the way meets what `tested_lasts` adds.** For any
+> share of the way, orders `P` on shares and `M` on rules, and reading `h` with
+> `fun w g => h (share w) g` the `next` of this case (`reads`): `lowers`, `monotone` and `upper` do
+> not all hold. The other premises of `tested_lasts` hold here (`premises`; every unit has kids under
+> every rule), so with the three it would make the net never end from the test at step 0
+> (`tested_at_start`), and a net that never ends has some need met at step 4, which `ends` denies.
+> Which of the three fails is not stated. -/
+> theorem not_read_from_a_share {A : Type} {P : Ideals.Preorder A} {M : Ideals.Preorder Rule}
+>     {share : List Unit → A} {h : A → Rule → Rule} (reads : (fun w g => h (share w) g) = next)
+>     (lowers : ∀ w g, ¬ favours g → P.le (share (LineOnAStock.allKids (kids g) w)) (share w))
+>     (monotone : RuleCapture.ReadsShare P M h)
+>     (upper : ∀ {g g'}, M.le g g' → favours g → favours g') : False :=
+>   match premises with
+>   | ⟨_, even, down, _, _, high, _, _⟩ =>
+>     have never :
+>         «不穷» (net need kids (fun w g => h (share w) g) TwoKinds.giving use) «一» start :=
+>       tested_lasts (y := id) (hi := 32) even
+>         (fun g _ u => match g with
+>           | a => List.cons_ne_nil u []
+>           | b => List.cons_ne_nil u []
+>           | c => List.cons_ne_nil u [u])
+>         down high (fun _ _ => TwoKinds.keeps _)
+>         (fun _ _ _ => ⟨TwoKinds.short _, TwoKinds.meets _⟩) lowers monotone upper
+>         ⟨0, fun _ lt => absurd lt (Nat.not_lt_zero _),
+>           Eq.subst (motive := fun nx => Tested need use id favours nx start) reads.symm
+>             tested_at_start⟩
+>     ends.2 (Eq.subst
+>       (motive := fun nx => Goes need (course need kids nx TwoKinds.giving use start 4)) reads
+>       (Law.stepWhile_unending_iff.mp never 4))
+> 
+> end BothOutcomes

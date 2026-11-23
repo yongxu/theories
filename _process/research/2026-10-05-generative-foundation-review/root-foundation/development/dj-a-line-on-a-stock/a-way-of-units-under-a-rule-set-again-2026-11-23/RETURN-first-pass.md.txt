@@ -1,0 +1,225 @@
+*AI-written: the return of the implementer agent of the first pass (Claude Fable, run wf_46bfdae7-9c9), 23 November 2026, as it came, with HTML entities for < and > put back. Filed by board row DJ.*
+
+1. OUTCOME
+
+A proved with an empty axiom report by scratch build 1 (exit 0; `"unclean": []`; audit of `Becoming.WayUnderARule`: 14 theorems, 24 declarations, `"with_axioms": {}`). Premises are list 1 exactly; no further premise was needed.
+
+File: `/Users/ren/tmp/dj/rule23/tree/Becoming/WayUnderARule.lean` (module `Becoming.WayUnderARule`, imports only `Becoming.LineOnAStock`). Nothing in the repository was touched; nothing committed.
+
+2. DECLARATIONS (copied from the file; `variable {U R : Type}`)
+
+Abbreviations used below, written out in full in the file:
+- `C k` := `course need kids next giving use s k`
+- `T k` := `LineOnAStock.taken use (C k).1.1`
+- `Cs` := `course need kids next giving use s`
+
+Model (section 1):
+```lean
+def after (need : U → Nat) (kids : R → U → List U) (next : List U → R → R) (p : List U × R)
+    (x : Nat) : List U × R :=
+  (LineOnAStock.after need (kids p.2) p.1 x, next p.1 p.2)
+
+def left (giving : Nat → Nat) (use : U → Nat) (p : List U × R) (x : Nat) : Nat :=
+  LineOnAStock.left giving use p.1 x
+
+abbrev step (need : U → Nat) (kids : R → U → List U) (next : List U → R → R)
+    (giving : Nat → Nat) (use : U → Nat) : (List U × R) × Nat → (List U × R) × Nat :=
+  TurningInTime.pair (after need kids next) (left giving use)
+
+abbrev course (need : U → Nat) (kids : R → U → List U) (next : List U → R → R)
+    (giving : Nat → Nat) (use : U → Nat) (s : (List U × R) × Nat) : Nat → (List U × R) × Nat :=
+  Law.orbit (step need kids next giving use) s
+
+def Goes (need : U → Nat) (s : (List U × R) × Nat) : Prop :=
+  LineOnAStock.Goes need (s.1.1, s.2)
+
+instance goesDecidable (need : U → Nat) (s : (List U × R) × Nat) : Decidable (Goes need s) :=
+  LineOnAStock.goesDecidable need (s.1.1, s.2)
+
+def net (need : U → Nat) (kids : R → U → List U) (next : List U → R → R) (giving : Nat → Nat)
+    (use : U → Nat) : «际» ((List U × R) × Nat) :=
+  Law.stepWhile (Goes need) (step need kids next giving use)
+
+def Turned (need use : U → Nat) (y : Nat → Nat) (favours : R → Prop) (next : List U → R → R)
+    (s : (List U × R) × Nat) : Prop :=
+  LineOnAStock.Holds need use y (s.1.1, s.2) ∧ ¬ favours s.1.2 ∧ ¬ favours (next s.1.1 s.1.2)
+```
+
+One step (section 2; implicit `{need use : U → Nat} {kids : R → U → List U} {next : List U → R → R} {giving : Nat → Nat} {favours : R → Prop}`):
+```lean
+theorem taken_rises (grows : ∀ g, favours g → ∀ u, use u < LineOnAStock.taken use (kids g u))
+    {t : (List U × R) × Nat} (fav : favours t.1.2) {v : U} (mv : v ∈ t.1.1)
+    (met : ∀ u, u ∈ t.1.1 → need u ≤ t.2) :
+    LineOnAStock.taken use t.1.1 + 1 ≤
+      LineOnAStock.taken use (step need kids next giving use t).1.1
+
+theorem taken_kept (even : ∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u)
+    {t : (List U × R) × Nat} (notfav : ¬ favours t.1.2) (met : ∀ u, u ∈ t.1.1 → need u ≤ t.2) :
+    LineOnAStock.taken use (step need kids next giving use t).1.1 =
+      LineOnAStock.taken use t.1.1
+
+theorem below_kept (down : ∀ g u v, v ∈ kids g u → need v ≤ need u) {m : Nat}
+    {t : (List U × R) × Nat} (below : LineOnAStock.Below need (fun _ => True) m t.1.1) :
+    LineOnAStock.Below need (fun _ => True) m (step need kids next giving use t).1.1
+
+theorem below_level (down : ∀ g u v, v ∈ kids g u → need v ≤ need u) (t : (List U × R) × Nat) :
+    LineOnAStock.Below need (fun _ => True) t.2 (step need kids next giving use t).1.1
+
+theorem mem_after (some : ∀ g, ¬ favours g → ∀ u, kids g u ≠ []) {t : (List U × R) × Nat}
+    (notfav : ¬ favours t.1.2) (goes : Goes need t) :
+    ∃ v, v ∈ (step need kids next giving use t).1.1
+
+theorem level_lowers (nothing : RegimeMargin.FromNothing giving) {y : Nat → Nat}
+    {t : (List U × R) × Nat}
+    (short : RegimeMargin.Short giving (LineOnAStock.taken use t.1.1)
+      (y (LineOnAStock.taken use t.1.1)))
+    (pos : 0 < t.2)
+    (under : t.2 < LineOnAStock.taken use t.1.1 + y (LineOnAStock.taken use t.1.1)) :
+    (step need kids next giving use t).2 < t.2
+
+theorem level_held {y : Nat → Nat} {hi : Nat} {t : (List U × R) × Nat}
+    (meets : RegimeMargin.Meets giving (LineOnAStock.taken use t.1.1)
+      (y (LineOnAStock.taken use t.1.1)) hi)
+    (keeps : RegimeMargin.Keeps giving (LineOnAStock.taken use t.1.1) hi)
+    (enough : LineOnAStock.taken use t.1.1 + y (LineOnAStock.taken use t.1.1) ≤ t.2)
+    (high : t.2 ≤ hi) : t.2 ≤ (step need kids next giving use t).2
+```
+
+Sections 3 and 4 (implicit `{need use : U → Nat} {kids : R → U → List U} {next : List U → R → R} {giving y : Nat → Nat} {hi : Nat} {favours : R → Prop} {s : (List U × R) × Nat}`):
+```lean
+-- (b) the lemma on the cap
+theorem within_along
+    (keepsAlong : ∀ k, (∀ j, j ≤ k → Goes need (course need kids next giving use s j)) →
+      RegimeMargin.Keeps giving
+        (LineOnAStock.taken use (course need kids next giving use s k).1.1) hi)
+    (high : s.2 ≤ hi) :
+    ∀ k, (∀ j, j < k → Goes need (course need kids next giving use s j)) →
+      (course need kids next giving use s k).2 ≤ hi
+
+def Outcomes (need use : U → Nat) (y : Nat → Nat) (favours : R → Prop) (next : List U → R → R)
+    (c : Nat → (List U × R) × Nat) : Prop :=
+  (∃ k, (∀ j, j < k → Goes need (c j)) ∧ Turned need use y favours next (c k)) ∨
+    ∃ n, (∀ j, j < n → Goes need (c j)) ∧ ¬ Goes need (c n)
+
+def OrFrom (need use : U → Nat) (y : Nat → Nat) (favours : R → Prop) (next : List U → R → R)
+    (hi : Nat) (c : Nat → (List U × R) × Nat) (m room f : Nat) : Prop :=
+  ∀ k, (∀ j, j < k → Goes need (c j)) → LineOnAStock.Below need (fun _ => True) m (c k).1.1 →
+    hi + 1 ≤ LineOnAStock.taken use (c k).1.1 + room → (c k).2 ≤ f →
+    Outcomes need use y favours next c
+
+theorem goes_upto {k : Nat}
+    (before : ∀ j, j < k → Goes need (course need kids next giving use s j))
+    (goes : Goes need (course need kids next giving use s k)) :
+    ∀ j, j ≤ k → Goes need (course need kids next giving use s j)
+
+theorem outcome_or_met (down : ∀ g u v, v ∈ kids g u → need v ≤ need u)
+    (needs : ∀ k u, u ∈ (course need kids next giving use s k).1.1 → 0 < need u)
+    (nothing : RegimeMargin.FromNothing giving) {m : Nat}
+    (ihM : ∀ m', m' < m → ∀ room f,
+      OrFrom need use y favours next hi (course need kids next giving use s) m' room f)
+    {k : Nat} (before : ∀ j, j < k → Goes need (course need kids next giving use s j))
+    (below : LineOnAStock.Below need (fun _ => True) m
+      (course need kids next giving use s k).1.1) :
+    Outcomes need use y favours next (course need kids next giving use s) ∨
+      (Goes need (course need kids next giving use s k) ∧
+        (∀ u, u ∈ (course need kids next giving use s k).1.1 →
+          need u ≤ (course need kids next giving use s k).2) ∧
+        LineOnAStock.taken use (course need kids next giving use s k).1.1 ≤
+          (course need kids next giving use s k).2)
+```
+
+The three nested claims and A share one premise block, written out identically in each (this is list 1):
+```lean
+    [DecidablePred favours]
+    (grows : ∀ g, favours g → ∀ u, use u < LineOnAStock.taken use (kids g u))
+    (even : ∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u)
+    (some : ∀ g, ¬ favours g → ∀ u, kids g u ≠ [])
+    (down : ∀ g u v, v ∈ kids g u → need v ≤ need u)
+    (needs : ∀ k u, u ∈ (course need kids next giving use s k).1.1 → 0 < need u)
+    (nothing : RegimeMargin.FromNothing giving) (high : s.2 ≤ hi)
+    (keepsAlong : ∀ k, (∀ j, j ≤ k → Goes need (course need kids next giving use s j)) →
+      RegimeMargin.Keeps giving
+        (LineOnAStock.taken use (course need kids next giving use s k).1.1) hi)
+    (regimeAlong : ∀ k, (∀ j, j ≤ k → Goes need (course need kids next giving use s j)) →
+      ¬ favours (course need kids next giving use s k).1.2 →
+      RegimeMargin.Short giving
+          (LineOnAStock.taken use (course need kids next giving use s k).1.1)
+          (y (LineOnAStock.taken use (course need kids next giving use s k).1.1)) ∧
+        RegimeMargin.Meets giving
+          (LineOnAStock.taken use (course need kids next giving use s k).1.1)
+          (y (LineOnAStock.taken use (course need kids next giving use s k).1.1)) hi)
+```
+With `<list 1>` standing for that block:
+```lean
+theorem or_from_level <list 1> {m room : Nat}
+    (ihM : ∀ m', m' < m → ∀ room f,
+      OrFrom need use y favours next hi (course need kids next giving use s) m' room f)
+    (ihC : ∀ f, OrFrom need use y favours next hi (course need kids next giving use s) m room f) :
+    ∀ f, OrFrom need use y favours next hi (course need kids next giving use s) m (room + 1) f
+
+theorem or_from_room <list 1> {m : Nat}
+    (ihM : ∀ m', m' < m → ∀ room f,
+      OrFrom need use y favours next hi (course need kids next giving use s) m' room f) :
+    ∀ room f, OrFrom need use y favours next hi (course need kids next giving use s) m room f
+
+theorem or_all <list 1> (m : Nat) :
+    ∀ room f, OrFrom need use y favours next hi (course need kids next giving use s) m room f
+
+-- (c) statement A
+theorem tested_or_ends <list 1> :
+    (∃ k, (∀ j, j < k → Goes need (course need kids next giving use s j)) ∧
+        Turned need use y favours next (course need kids next giving use s k)) ∨
+      (∃ n, (∀ j, j < n → Goes need (course need kids next giving use s j)) ∧
+        ¬ Goes need (course need kids next giving use s n))
+```
+`tested_or_ends` is `or_all … (total s.1.1 need) (hi + 1) s.2 0 …`: the bound on needs is the total of the start's needs, the room is `hi + 1`, the level bound is the start level, the step is 0.
+
+3. A'S PREMISES AND WHERE EACH IS USED
+
+Every premise of list 1 is used; none turned out unused. Lean does not flag unused theorem hypotheses, so this is by reading the proof terms.
+
+| Premise | Where used |
+|---|---|
+| `grows` | case 4 and case 7, through `taken_rises` (`LineOnAStock.allKids_rises` at `kids g`) |
+| `even` | case 5 (room kept) and case 7 (the way at `k + 1` takes `T k`), through `taken_kept` |
+| `some` | case 7 only, through `mem_after` (the way at `k + 1` has a unit) |
+| `down` | case 2 (`below_level`), cases 4, 5, 7 (`below_kept`), case 7 (every need met at `k + 1`) |
+| `needs` | case 3 at step `k + 1` (nothing left meets no need); case 5 at step `k` (the level is above nothing) |
+| `nothing` | case 3 (`LineOnAStock.step_zero`); case 5 (`LineOnAStock.step_lowers`) |
+| `high` | only through `within_along` |
+| `keepsAlong` | `within_along` (room 0 and case 7); directly in case 7 as the `Keeps` that `RegimeMargin.holds` asks |
+| `regimeAlong` | `.1` (`Short`) in case 5; `.2` (`Meets`) in case 7 |
+| `[DecidablePred favours]` | the split on the rule in force (cases 4 against 5–7) and on the rule set next (6 against 7) |
+| `next` | any function; no premise on it |
+
+Along the course only `keepsAlong`, `regimeAlong` and `needs` are asked.
+
+4. DEPARTURES FROM THE BRIEF AND ITS "AFTER"
+
+- **The head is its own lemma.** Cases 1–3 are `outcome_or_met`, which returns "one of the outcomes, or some need met at `k`, every need met, and `T k ≤ x k`". The split "the way takes more than the level" is made once per step, there. Both the room-0 base and the recursion on `f` call it.
+- **The room recursion hands the claim at `room` to the claim at `room + 1`.** `or_from_level` proves room `room + 1` from `ihC` at `room`; room 0 is closed in `or_from_room` by the head plus the cap (`hi + 1 ≤ T k ≤ x k ≤ hi`). This avoids a premise of the form `c = c' + 1`. The order is still `m` by `strong_below`, then room, then `f`, each structural, the step quantified inside `OrFrom`.
+- **`T k ≤ x k` is used only at room 0.** In cases 4–7 at room `room + 1` the proof discards it. The brief's "so `c` is not nothing" is exactly that base.
+- **Case 5** has no "nothing" branch in the recursion: `level_lowers` turns `step_lowers`' "nothing or less" into "less" from a level above nothing. `f = 0` is the absurd base.
+- **Case 7's level** is `RegimeMargin.holds` at its first step (`level_held`), not new arithmetic. This is why `keepsAlong k` is used there directly as well as through the cap.
+- **Two defs added** for the statements of the nested claims: `Outcomes` (the disjunction along a course) and `OrFrom` (the claim at `m`, room, `f`). A's own statement is written out in full and is definitionally `Outcomes … (course … s)`.
+- **Names I chose:** the brief names none of A, the nested claims or the step lemmas. A is `tested_or_ends`. The model's `after` and `left` mirror `LineOnAStock`'s names inside this namespace.
+- **A's docstring** does not cite B (not yet written). Its inclusive-or sentence reads "they do not shut out a course that passes the test and later comes to a step with no need met (no such course is built here)", because no such course is proved. The second pass should add the sentence on B.
+- **`RuleCapture` is not imported** (not needed in this pass). The second pass adds the import and can append before `end Or` or open a new section before `end WayUnderARule`.
+
+5. BUILDS
+
+- Scratch builds: 1 of 6. `build.sh 1 WayUnderARule`, 13:45:03–13:45:09, exit 0. Log `/Users/ren/tmp/dj/rule23/tree/build-1.log`: modules 153, reused 152, ran `Becoming.WayUnderARule` and `BecomingWayUnderARuleAxiomAudit`, `"unclean": []`, `"theorems": 14, "declarations": 24, "with_axioms": {}`.
+- Fast checks: 4 on the module (the first failed, see 6) and 1 on a probe copy at `/Users/ren/tmp/dj/rule23/probe/WayUnderARule.lean` with `#print axioms` for all 24 declarations; each printed "does not depend on any axioms". The probe copy predates the last docstring edits; the module file has no `#print` lines.
+- Load before the build was about 5; no other heavy run was alive. Nothing else was run.
+
+6. FOUND FALSE OR UNCLEAR IN THE BRIEF
+
+- Nothing false. The measure went through as written with the "After" changes.
+- The only Lean failure was one of form: writing the recursion as `| f => fun k … bound =>` left `bound`'s type on the unnamed argument, so `match f, bound with` did not refine it. The form `| f, k, before, below, fuel, bound =>` (as `reaches_from`) works, and Lean sees through the def `OrFrom` for it.
+- Unclear, not false: the brief's case 4 reads as if `T k ≤ x k` were needed at every room; it is needed only to exclude room 0.
+- The "After" point 7 sentence "a course can pass the test and end later" is argued, not proved; I worded the docstring accordingly.
+- `some` is used in exactly one place (case 7), as row FM's test 7 predicted.
+
+7. LINE COUNT
+
+488 lines; no line over 100 characters.

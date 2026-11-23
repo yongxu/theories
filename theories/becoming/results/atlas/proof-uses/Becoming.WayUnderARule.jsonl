@@ -1,0 +1,63 @@
+{"name": "Becoming.WayUnderARule.BothOutcomes.both", "uses": ["Becoming.WayUnderARule.BothOutcomes.ends", "Becoming.WayUnderARule.BothOutcomes.premises", "Becoming.WayUnderARule.BothOutcomes.tested_at_start"]}
+{"name": "Becoming.WayUnderARule.BothOutcomes.by_law", "uses": ["Becoming.WayUnderARule.BothOutcomes.premises", "Becoming.WayUnderARule.tested_or_ends"]}
+{"name": "Becoming.WayUnderARule.BothOutcomes.course_values", "uses": []}
+{"name": "Becoming.WayUnderARule.BothOutcomes.ends", "uses": []}
+{"name": "Becoming.WayUnderARule.BothOutcomes.not_read_from_a_share", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.WayUnderARule.BothOutcomes.ends", "Becoming.WayUnderARule.BothOutcomes.premises", "Becoming.WayUnderARule.BothOutcomes.tested_at_start", "Becoming.WayUnderARule.TwoKinds.keeps", "Becoming.WayUnderARule.TwoKinds.meets", "Becoming.WayUnderARule.TwoKinds.short", "Becoming.WayUnderARule.tested_lasts"]}
+{"name": "Becoming.WayUnderARule.BothOutcomes.premises", "uses": ["Becoming.WayUnderARule.TwoKinds.keeps", "Becoming.WayUnderARule.TwoKinds.meets", "Becoming.WayUnderARule.TwoKinds.short"]}
+{"name": "Becoming.WayUnderARule.BothOutcomes.tested_at_start", "uses": []}
+{"name": "Becoming.WayUnderARule.NeedTwentySeven.course_values", "uses": []}
+{"name": "Becoming.WayUnderARule.NeedTwentySeven.favours_through_three", "uses": ["Becoming.WayUnderARule.NeedTwentySeven.first_unmet", "Becoming.WayUnderARule.NeedTwentySeven.premises", "Becoming.WayUnderARule.favours_while_met"]}
+{"name": "Becoming.WayUnderARule.NeedTwentySeven.first_unmet", "uses": []}
+{"name": "Becoming.WayUnderARule.NeedTwentySeven.goes_on", "uses": ["Becoming.WayUnderARule.NeedTwentySeven.premises", "Becoming.WayUnderARule.NeedTwentySeven.tested", "Becoming.WayUnderARule.tested_lasts"]}
+{"name": "Becoming.WayUnderARule.NeedTwentySeven.premises", "uses": ["Becoming.WayUnderARule.TwoKinds.premises"]}
+{"name": "Becoming.WayUnderARule.NeedTwentySeven.tested", "uses": ["Becoming.WayUnderARule.TwoKinds.only_O"]}
+{"name": "Becoming.WayUnderARule.NeedTwentySix.course_values", "uses": []}
+{"name": "Becoming.WayUnderARule.NeedTwentySix.ends", "uses": []}
+{"name": "Becoming.WayUnderARule.NeedTwentySix.ends_untested", "uses": ["Becoming.WayUnderARule.NeedTwentySix.ends", "Becoming.WayUnderARule.NeedTwentySix.premises", "Becoming.WayUnderARule.ends_iff_unmet", "Becoming.WayUnderARule.unending_iff_tested"]}
+{"name": "Becoming.WayUnderARule.NeedTwentySix.favours_through_four", "uses": ["Becoming.WayUnderARule.NeedTwentySix.premises", "Becoming.WayUnderARule.favours_while_met"]}
+{"name": "Becoming.WayUnderARule.NeedTwentySix.premises", "uses": ["Becoming.WayUnderARule.TwoKinds.premises"]}
+{"name": "Becoming.WayUnderARule.TwoKinds.allKids_false", "uses": []}
+{"name": "Becoming.WayUnderARule.TwoKinds.down", "uses": []}
+{"name": "Becoming.WayUnderARule.TwoKinds.keeps", "uses": ["Becoming.RegimeMargin.keeps_of_below", "Becoming.TurningInTime.kept_within"]}
+{"name": "Becoming.WayUnderARule.TwoKinds.le_min", "uses": []}
+{"name": "Becoming.WayUnderARule.TwoKinds.meets", "uses": ["Becoming.Naturals.le_sub_of_add_le", "Becoming.WayUnderARule.TwoKinds.le_min"]}
+{"name": "Becoming.WayUnderARule.TwoKinds.only_O", "uses": ["Becoming.Naturals.succ_ne_zero", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.WayUnderARule.TwoKinds.premises", "uses": ["Becoming.WayUnderARule.TwoKinds.allKids_false", "Becoming.WayUnderARule.TwoKinds.down", "Becoming.WayUnderARule.TwoKinds.keeps", "Becoming.WayUnderARule.TwoKinds.meets", "Becoming.WayUnderARule.TwoKinds.share_allKids_true", "Becoming.WayUnderARule.TwoKinds.short"]}
+{"name": "Becoming.WayUnderARule.TwoKinds.share_allKids_true", "uses": []}
+{"name": "Becoming.WayUnderARule.TwoKinds.short", "uses": ["Becoming.RegimeMargin.Peaked.min_le_left'"]}
+{"name": "Becoming.WayUnderARule.below_kept", "uses": ["Becoming.LineOnAStock.below_keeps"]}
+{"name": "Becoming.WayUnderARule.below_level", "uses": ["Becoming.LineOnAStock.below_after"]}
+{"name": "Becoming.WayUnderARule.course_one_rule", "uses": []}
+{"name": "Becoming.WayUnderARule.ends_iff_unmet", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.WayUnderARule.tested_lasts", "Becoming.WayUnderARule.tested_or_ends"]}
+{"name": "Becoming.WayUnderARule.favours_while_met", "uses": ["Becoming.WayUnderARule.locked_while_met"]}
+{"name": "Becoming.WayUnderARule.first_tested", "uses": ["Becoming.WayUnderARule.tested_or_not", "Becoming.first_of_decided"]}
+{"name": "Becoming.WayUnderARule.first_tested_or_ends", "uses": ["Becoming.WayUnderARule.first_tested", "Becoming.WayUnderARule.tested_or_ends"]}
+{"name": "Becoming.WayUnderARule.goes_one_rule", "uses": ["Becoming.WayUnderARule.course_one_rule"]}
+{"name": "Becoming.WayUnderARule.goes_upto", "uses": []}
+{"name": "Becoming.WayUnderARule.held_step", "uses": ["Becoming.WayUnderARule.below_kept", "Becoming.WayUnderARule.level_held", "Becoming.WayUnderARule.mem_after", "Becoming.WayUnderARule.taken_kept"]}
+{"name": "Becoming.WayUnderARule.holds_or_not", "uses": ["Becoming.LineOnAStock.met_or_unmet"]}
+{"name": "Becoming.WayUnderARule.lasts_from", "uses": ["Becoming.LineOnAStock.after_of_met", "Becoming.LineOnAStock.mem_of_ne_nil", "Becoming.RuleCapture.ReadsShare.reverse", "Becoming.RuleCapture.turn_locked", "Becoming.WayUnderARule.held_step", "Becoming.WayUnderARule.step_turn"]}
+{"name": "Becoming.WayUnderARule.level_held", "uses": ["Becoming.RegimeMargin.holds"]}
+{"name": "Becoming.WayUnderARule.level_lowers", "uses": ["Becoming.LineOnAStock.step_lowers"]}
+{"name": "Becoming.WayUnderARule.locked_while_met", "uses": ["Becoming.RuleCapture.turn_locked", "Becoming.WayUnderARule.step_turn"]}
+{"name": "Becoming.WayUnderARule.mem_after", "uses": ["Becoming.LineOnAStock.mem_after_iff", "Becoming.LineOnAStock.mem_of_ne_nil"]}
+{"name": "Becoming.WayUnderARule.or_all", "uses": ["Becoming.LineOnAStock.strong_below", "Becoming.WayUnderARule.or_from_room"]}
+{"name": "Becoming.WayUnderARule.or_from_level", "uses": ["Becoming.WayUnderARule.below_kept", "Becoming.WayUnderARule.below_level", "Becoming.WayUnderARule.goes_upto", "Becoming.WayUnderARule.level_held", "Becoming.WayUnderARule.level_lowers", "Becoming.WayUnderARule.outcome_or_met", "Becoming.WayUnderARule.taken_kept", "Becoming.WayUnderARule.taken_rises", "Becoming.WayUnderARule.within_along"]}
+{"name": "Becoming.WayUnderARule.or_from_room", "uses": ["Becoming.WayUnderARule.or_from_level", "Becoming.WayUnderARule.outcome_or_met", "Becoming.WayUnderARule.within_along"]}
+{"name": "Becoming.WayUnderARule.outcome_or_met", "uses": ["Becoming.LineOnAStock.step_zero", "Becoming.WayUnderARule.below_level", "Becoming.WayUnderARule.goes_upto"]}
+{"name": "Becoming.WayUnderARule.step_turn", "uses": ["Becoming.LineOnAStock.after_of_met"]}
+{"name": "Becoming.WayUnderARule.taken_kept", "uses": ["Becoming.LineOnAStock.after_of_met", "Becoming.LineOnAStock.taken_allKids"]}
+{"name": "Becoming.WayUnderARule.taken_rises", "uses": ["Becoming.LineOnAStock.after_of_met", "Becoming.LineOnAStock.allKids_rises", "Becoming.length_pos_of_mem"]}
+{"name": "Becoming.WayUnderARule.tested_lasts", "uses": ["Becoming.Law.orbit_add", "Becoming.Law.stepWhile_unending_iff", "Becoming.LineOnAStock.mem_of_ne_nil", "Becoming.WayUnderARule.goes_upto", "Becoming.WayUnderARule.lasts_from", "Becoming.WayUnderARule.within_along", "Becoming.le_dest"]}
+{"name": "Becoming.WayUnderARule.tested_one_rule", "uses": ["Becoming.WayUnderARule.course_one_rule"]}
+{"name": "Becoming.WayUnderARule.tested_or_ends", "uses": ["Becoming.WayUnderARule.or_all", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.WayUnderARule.tested_or_not", "uses": ["Becoming.WayUnderARule.holds_or_not"]}
+{"name": "Becoming.WayUnderARule.unending_iff_tested", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.WayUnderARule.tested_lasts", "Becoming.WayUnderARule.tested_or_ends"]}
+{"name": "Becoming.WayUnderARule.unmet_before_tested", "uses": ["Becoming.WayUnderARule.unmet_before_unfavoured"]}
+{"name": "Becoming.WayUnderARule.unmet_before_unfavoured", "uses": ["Becoming.LineOnAStock.met_or_unmet", "Becoming.WayUnderARule.favours_while_met", "Becoming.first_of_decided"]}
+{"name": "Becoming.WayUnderARule.way_one_rule", "uses": ["Becoming.WayUnderARule.course_one_rule"]}
+{"name": "Becoming.WayUnderARule.within_along", "uses": []}
+{"name": "_private.Becoming.WayUnderARule.0.Becoming.WayUnderARule.unending_iff_holds_case", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.LineOnAStock.mem_generation", "Becoming.WayUnderARule.goes_one_rule", "Becoming.WayUnderARule.tested_one_rule", "Becoming.WayUnderARule.unending_iff_tested", "Becoming.WayUnderARule.way_one_rule"]}
+{"name": "_private.Becoming.WayUnderARule.0.Becoming.WayUnderARule.unending_iff_holds_same", "uses": ["_private.Becoming.WayUnderARule.0.Becoming.WayUnderARule.unending_iff_holds_case"]}
+{"name": "_private.Becoming.WayUnderARule.0.Becoming.WayUnderARule.way_ends_case", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.TurningInTime.kept_within", "Becoming.WayUnderARule.goes_one_rule", "Becoming.WayUnderARule.tested_or_ends"]}
+{"name": "_private.Becoming.WayUnderARule.0.Becoming.WayUnderARule.way_ends_same", "uses": ["_private.Becoming.WayUnderARule.0.Becoming.WayUnderARule.way_ends_case"]}

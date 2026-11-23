@@ -1,0 +1,211 @@
+*AI-written: the return of a checker agent who took no part (Claude Fable, run wf_f5d3539a-fa8), 23 November 2026, as it came, with HTML entities for < and > put back. Filed by board row DJ.*
+
+**Verdict:** ready for the core run as to what it seals (the module, the root's bullet and import, the checker's list and text): I found nothing false and no MUST there. The landing as told is not ready: two MUST stand outside the sealed texts, neither needing a build. One is the lasting told without `some` in three short tellings; the other is one of row FM's added sentences, which says more than `tested_or_ends`. If LESSER 3 is wanted in the root and checker text, mend it before the core run.
+
+## What I read
+
+- **Whole:**
+  - `WayUnderARule.lean` as mended, all 1,659 lines, statements, docstrings and proofs.
+  - `module-mend.diff.txt`. I also diffed the scratch before-mend file against the final file myself: same content as the filed diff, one hunk placed a line apart.
+  - Both readers' returns and the mend pass's return.
+  - The record JSON, the study `NOTE.md`, the root's bullet, the README row, the checker's added text and its list entry, both region notes.
+  - The direction page's diff sentence by sentence, and lines 15, 44, 130, 136, 138 whole.
+  - The dated section of the 19 November record (lines 67–73).
+  - The last section of the 23 November source and the 21 November source.
+  - Build logs 1–4 and `axioms-of-every-declaration.txt`.
+- **By script:** `rows-final.txt` (107 rows; name, kind, head, uses of about 30 theorems; signatures not read).
+- **In part:**
+  - The 19 November record: line 39 and the quoted phrases, by grep.
+  - The 20 November record: lines 30–40.
+  - `BRIEF.frozen.md.txt`: headings and its numbered lists.
+  - `LineOnAStock`, `RegimeMargin`, `RuleCapture`, `TurningInTime`: the definitions the module names and `turn_locked`.
+  - The direction page's lines 132 and 99: around the changed sentences only.
+- **Not at all:** the proposal, the first- and second-pass returns beyond their first lines, `courses23.py.txt`, `RowsRule.lean.txt`, the board, any chapter, `Law.orbit`.
+- **Run:** nothing built. Only `grep`, `diff`, `shasum`, `stat`, `git diff/log`, and short Python reads of JSON and text.
+
+## Step 1, the module as mended: what holds
+
+- **`some`:** gone from `or_from_level`, `or_from_room`, `or_all`, `tested_or_ends`, `first_tested_or_ends`. In the two-step case the decided split on `Goes` at `k + 1` gives `Or.inr ⟨k + 1, before', stop⟩` or the unit for `taken_rises`. By the rows, `or_from_level` no longer uses `mem_after`. No docstring says the main statement asks `some`.
+- **`Turned`:** no occurrence left in the module or in any telling of it; the one mention is the note's account of the rename.
+- **`Meets`:** told everywhere in the module as "at least `T` at every level left `z` with `y T ≤ z` and `z + T ≤ hi`", which is `RegimeMargin.Meets`. The only "up to `hi`" left are of `Keeps`, rightly.
+- **`BothOutcomes.Premises`:** binder for binder the eight premises of `tested_or_ends` at `y := id`, `hi := 32`, in its order; decidability is the instance. `by_law` applies the law to them.
+- **The course by hand** (`step g H x = (x − H) + g (x − H)`, `g z = min z (32 − z)`):
+
+| step | way | rule | level |
+|---|---|---|---|
+| 0 | one unit | `a` | 2 |
+| 1 | one unit | `b` | 2 (1 left, 1 given) |
+| 2 | one unit | `c` | 2 |
+| 3 | two units | `c` | 2 |
+| 4 | four units | `c` | 0 (two taken from two, nothing given from nothing) |
+
+  The test holds at step 0 (1 ≤ 2, 1 + 1 ≤ 2, `a` and `b` do not favour). Needs are met at steps 0–3 and none at step 4. This agrees with `course_values`, `tested_at_start`, `ends`, `both`.
+- **`not_read_from_a_share`:** its docstring is its statement (`reads → lowers → monotone → upper → False`, for any `A : Type`, `P`, `M`, `share`, `h`). `some` is proved inline for all three rules.
+- **The two older courses by hand:** agree with both `course_values` (27: levels 28, 28, 26, 18, 24, 24; 26: 28, 28, 26, 18, 0).
+- **Every docstring the diff changed:** says what its statement states.
+- **Counts:** 63 theorems (59 public, 4 private) and 97 audited declarations (92 public, 5 private). The axiom print has 97 lines, none with an axiom. The probe copy is the final file plus 97 `#print axioms` lines.
+- **Identity:** the worktree module is byte-identical to the scratch file build 4 compiled, and its sha256 is the record's. Longest line 100 characters, no trailing whitespace.
+
+## Findings
+
+**1. MUST. The lasting is told without `some` (and without `even`, `down`) in three places.** This is the row's own test: every telling of the lasting has it.
+- 19 November record, line 72: "the first lasting under the lock's premises read downward, with the stock's premises".
+- `regions.json:2852`: "the first lasts where the lock's premises hold read downward, under the stock's premises".
+- Record `statement`, line 12: "the first lasts under the lock's premises read downward."
+- Source: `tested_lasts` (module 776–800) asks `even`, `some`, `down`, `high`, `keepsAlong`, `regimeAlong`, `lowers`, `monotone`, `upper`. Since the mend `some` is in no list of the "or", so "its premises on the units" earlier in those sentences no longer carries it.
+- Replacements:
+  - Line 72: "the first lasting where also every unit has kids under a rule that does not favour and the lock's three premises hold read downward, with the premises on what kids take under such a rule, on kids' needs, on the start and on the stock".
+  - Region note: "…the first lasts where every unit has kids under a rule that does not favour and the lock's premises hold read downward, under its stated premises on units and stock".
+  - Record statement: "…; the first lasts where also every unit has kids under a rule that does not favour and the lock's premises hold read downward."
+- The first-form reader classed the two short notes LESSER (its 17), when `some` stood in list 1.
+
+**2. MUST (row FM's sentence; FM's to change). Direction page line 130:** "that a step with a need unmet comes, or the test first, is `tested_or_ends`."
+- Source: the second outcome of `tested_or_ends` is a step with no need met (`¬ Goes`). With an empty way that is not a step with a need unmet.
+- A course by hand, not built, that meets all eight premises as mended and has neither:
+  - Units `u` (use 0, need 1) and `v` (use 1, need 1). Rules `a` (does not favour) and `c` (favours).
+  - `kids a u = []`, `kids a v = [v]`, `kids c u = [v]`, `kids c v = [v, v]`; `next` always `c`.
+  - The same giving, `y T = T`, `hi = 32`; start `(([u], a), 2)`.
+  - Step 0 holds but the rule set next favours, so no test. Step 1 is the empty way under `c` at level 4: no need met. The way stays empty, so no test ever and no need ever unmet.
+  - Premises: `grows` 0 < 1 and 1 < 2; `even` 0 = 0 and 1 = 1; `down`, `needs`, `nothing`, `high` plainly; `keepsAlong` and `regimeAlong` at step 0 at take 0 (`Short` vacuous, `Meets` 0 ≤ giving).
+- With `unmet_before_tested` the sentence would give "from a locked start a need goes unmet". The module head (97–98) and the record's `does_not_show[5]` say that is not stated.
+- Before the mend the only gap was an empty start; taking `some` out widened it.
+- Replacement: "that a step with no need met comes, or a step with the test, is `tested_or_ends`; that a need goes unmet from a locked start is not stated."
+
+**3. LESSER. "Some need met at every step before it" is dropped from the equivalence.**
+- `Becoming.lean:5393–5394`: "the net never ends exactly where the course comes to a step with the test".
+- `check_becoming.py:582–583`, `NOTE.md:39`, direction page line 44 ("and then the two shut each other out").
+- It is also dropped from the first outcome in the direction page's lines 44 and 132.
+- Source: `unending_iff_tested`'s right side carries the clause. That it is redundant is argued, not in the module (module head 72), so without it the right-to-left half reads stronger than the theorem.
+- Replacement: add "some need met at every step before it" once in each. Root and checker text are sealed by the core run.
+
+**4. LESSER. "All are mended in the readers' words" overstates.**
+- `NOTE.md:66`; direction page line 44, "what they found is mended in their words"; 19 November record line 69, "mended in its words".
+- Source, mend-pass return §3: two nits of the Lean reader's 14 not applied; its 2, 6, 7, 10, 13 applied in other words; the tellings reader's 13, 26, 27 met by building or filing; its 30's last item open.
+- Replacement: "All are mended, most in the readers' words and some otherwise (the course with both outcomes is built, the axiom print is filed), but two nits (where `TwoKinds.le_min` stands, `oneOrder`'s universe) and one sentence of the direction page (line 99) that the reader could not settle."
+
+**5. LESSER. `NOTE.md:66`: "three places in its passage on the direction page".** The diff has four insertions by row FM, at lines 130, 132, 136, 138. Replacement: "four places".
+
+**6. LESSER. The readers read a first form; two tellings do not say so.**
+- Record `validation_scope` (line 153) and `NOTE.md:3`: "two AI readers who took no part read the Lean and the tellings before the core run".
+- Source: they read the 1,466-line file with `some` in the main statement and no `BothOutcomes`. The direction page and the 19 November record say "a first form".
+- Replacement: "read a first form of the Lean and of the tellings; both were then mended, and CHECKER".
+
+**7. LESSER. "The three premises" are not named.**
+- `NOTE.md:37`: "has the three premises of the next paragraph" (that paragraph lists five things under "More").
+- Record law 8 (line 90): "the three premises that make the first outcome last" (law 3 lists more).
+- Source: `not_read_from_a_share` is of `lowers`, `monotone`, `upper`.
+- Replacement: "has all three of: a share not raised under a rule that does not favour, a monotone reading, favouring kept upward".
+- Same sentence of the note: "The test holds at the start, since the rule in force and the rule set next do not favour" leaves out that the configuration holds (1 ≤ 2, 1 + 1 ≤ 2).
+
+**8. LESSER. One telling of `Meets` is still loose.** Record `hypotheses[1]` (line 108): "meeting what the way takes from it within the cap". Source: giving at least `T` at every level left `z` with `y T ≤ z` and `z + T ≤ hi`. Replacement: "and at least what the way takes T at every level left z from the margin with z + T within the cap".
+
+**9. LESSER. `NOTE.md:62`: "Also by that reader: … the sharp form is `lasts_from`."** The reader's return does not say it. It is true of the Lean (`lasts_from` takes `meets` and `keeps` at the one configuration) and is the row's. Replacement: "(the form that takes only what is used is `lasts_from`; this row's remark)".
+
+**10. LESSER. `NOTE.md:90` does not list `module-mend.diff.txt`,** which is in the folder. Add it where CHECKER-FILED stands.
+
+**11. LESSER. Direction page line 44: "each under premises that are given and are listed below".** `some`, the lock's premises and the locked start are told in the sentences before the list and are not in it. Replacement: "told here and listed below".
+
+**12. LESSER. Record `correspondence` (line 159): "the rule keeps favouring until after a need has gone unmet".** This is the "until" of the first reader's 11. Replacement: "favours through the step after the first step with a need unmet".
+
+**13. LESSER (module; at its next change, since it needs a build).** "The three lists", "list 2", "the first list" are used in the head (68–69), in `lasts_from` (696) and in `BothOutcomes.both` (1609), and defined only in `TwoKinds.Premises`'s docstring (1144–1148). Replacement in the head: "Every premise of `tested_or_ends`, of `tested_lasts` and of the locked start holds where `F` needs something".
+
+## Tick-off
+
+**Reader of the Lean**
+
+| # | Result |
+|---|---|
+| 1 | MENDED (head 46–55) |
+| 2 | MENDED WITH A CHANGE (head 72–76, `goes_on` 1250–1253). "Held from the first move something goes on too" in place of the reader's "the one `F` stays at twenty-eight". True to the 20 November record's passage under "What is kept"; the held-favouring half is already in the 19 November record's line 39. |
+| 3 | MENDED (`ends_untested` 1316–1320, head 68–72). Its LESSER too (`ends_iff_unmet` 883). The classical remark is not added. |
+| 4 | MENDED in the Lean; the proof is as the reader argued |
+| 5 | MENDED (head 70–72) |
+| 6 | MENDED WITH A CHANGE: built as `BothOutcomes.both`; true |
+| 7 | MENDED WITH A CHANGE: `Meets` told exactly, where the reader's own words were looser; true |
+| 8 | MENDED (head 18–19) |
+| 9 | MENDED (head 60) |
+| 10 | MENDED (1341–1342), without "by hand" |
+| 11 | MENDED (1461–1462, 1494–1495, head 93–95) |
+| 12 | MENDED (`Tested`, `tested_or_not`, `tested_one_rule`) |
+| 13 | MENDED in part, as given (head 76–79). The other observations are not added; no replacement was asked. |
+| 14 | First two nits MENDED (`or_from_level` 338–347; head 41–42). `le_min` and `oneOrder` NOT MENDED, by decision. |
+| Courses by hand | agree with mine |
+| Premises against proof terms | still so on the final rows; `some` now only in `mem_after`, `held_step`, `lasts_from`, `tested_lasts` and the two equivalences |
+| Inclusive "or" course | built; the reader's remark on which premise fails is not claimed |
+| Twins | neither names the old theorem (rows); `way_ends_case` no longer passes `some` |
+| Could not check: private axiom reports | now filed (97 lines, 5 private) |
+
+**Reader of the tellings**
+
+| # | Result |
+|---|---|
+| 1 | MENDED (root 5377, 5380) |
+| 2 | MENDED (README 405; checker 575, 578, 581–582) |
+| 3 | MENDED in all six: root 5395–5398, README, checker 583–585, note 41, direction page 42 and 44, 19 November record 72 |
+| 4 | MENDED (record 135; direction page 44) |
+| 5 | MENDED |
+| 6 | MENDED WITH A CHANGE: five added to the list, `some` told in the sentence on the lasting; true (LESSER 11) |
+| 7 | MENDED, both |
+| 8 | MENDED (record 310); agrees with the source |
+| 9 | MENDED (19 November record 72) |
+| 10 | MENDED (as Lean 2) |
+| 11 | MENDED in README, checker, direction page; one "until" left in the record's reading (LESSER 12) |
+| 12 | MENDED in note, record, direction page |
+| 13 | MENDED WITH A CHANGE: the print is filed in place of a rewording; true |
+| 14 | MENDED (note 86) |
+| 15 | MENDED: brief 192 and answer 55 "by the file's time"; `reviewed_at_utc` 07:35:54Z is the record's file time |
+| 16 | MENDED (record law 6; module) |
+| 17 | PARTLY: "read downward" in all; "each built" and "under each law's stated premises" in regions; the record's statement has no stock clause, and see MUST 1 |
+| 18 | MENDED in all five |
+| 19 | MENDED (note 39) |
+| 20 | MENDED (note 43; record law 6) |
+| 21 | MENDED (note 11) |
+| 22 | MENDED (note 7) |
+| 23 | MENDED (note 76; record `next_delta`). `line_ends` does call `ends_all` (`LineOnAStock.lean:899`). |
+| 24 | MENDED (note 82) |
+| 25 | MENDED (note 15) |
+| 26 | MENDED WITH A CHANGE: witness `BothOutcomes.both`; true |
+| 27 | MENDED WITH A CHANGE: built (note 37) |
+| 28 | MENDED (record law 3) |
+| 29 | MENDED, both |
+| 30 | Lines 42, 130, 132, 136 (and 138) MENDED; line 99 NOT MENDED, by decision |
+| 31 | First- and second-pass returns now carry the mark; root, README, checker and regions as their neighbours |
+| 32 | MENDED (as Lean 7) |
+| The same law told differently | all eight items now agree, but for what is listed next |
+
+## The same law told differently: what remains
+
+- **`some` for the lasting:** present in the module, root, README, checker, record law 3 and hypotheses, the note, and direction page 44. Absent in the record's statement, region note 2852 and the 19 November record's line 72 (MUST 1), and in row FM's line 132.
+- **`even`, `down` and the stock for the lasting:** named in the root, record law 3 and the module. "Where also" in the checker; by the list in the direction page; absent in the three places of MUST 1.
+- **"Some need met at every step before it" on the equivalence:** in the module, record laws 4 and 6, README ("such a step"). Absent in the root, checker, note 39, direction page 44 (LESSER 3).
+- **The along-course premises:** "at steps with some need met there and at every step before" in the module, root, note, record law 1. "Along the course" in README, checker, direction page, record hypotheses. That is a stronger premise, so true.
+- **`Meets`:** exact in the module, root, note, record law 2. "The regime's premises" in README, checker, direction page. Loose in record hypotheses (LESSER 8).
+- **The second outcome:** "no need met" everywhere but row FM's line 130, "a need unmet" (MUST 2).
+- **No telling counts `some` among the main statement's premises.**
+
+## Row FM's four additions, against the module
+
+- **Line 130:**
+  - First two sentences true of `locked_while_met` and `favours_while_met` (`raises`, `monotone`, `upper`, locked start; locked at every step before which every need was met; favouring one step past).
+  - "The not-differing concluded" is its reading; not judged.
+  - Last sentence: MUST 2.
+- **Line 132:**
+  - True of `tested_or_ends`.
+  - "`tested_lasts`, which asks three premises on a share and its reading and nothing else of the rule" is true of how the next rule is set, but reads as the whole list and has no `some`, `even`, `down` or stock. LESSER. A replacement, if FM wants one: "which asks, of how the next rule is set, only three premises on a share and its reading, beside premises on the kids and the stock (among them that every unit has kids under a rule that does not favour)".
+  - The sentences on FM's own try and on what FM read are not of the module.
+- **Line 136:** true. Both statements have needs met at a level in a hypothesis and a rule read from a share.
+- **Line 138:** consistent with 136.
+
+## What I could not check
+
+- That the file builds and both `rfl` checks typecheck: on build 4's log (exit 0, 59 and 92, `with_axioms {}`) for the byte-identical file. The receipt and core run are pending.
+- That the axiom print was made from exactly the final text: the probe copy is identical plus 97 print lines, and the output file is the filed one. I did not run it.
+- The token figures; "about twenty-two single-file checks" beyond the returns' own counts.
+- "Row FM, by its message to this row, read that course premise by premise and found no hole": no filed text.
+- That the coordinating session passed the two-step case on paper: only FM's pass is in the brief's "After".
+- That an empty axiom report cannot decide such a property: not checked by anyone.
+- The counter-course in MUST 2 and the redundancy of the qualifier: on paper only.
+- Whether records should list reuses of `first_of_decided`, `Pace.turn` and `Law.stepWhile` as dependencies; the record lists four and omits these.
+- The record's sha256 for `NOTE.md` (`a4c17e07…`) is not the file's now (`bc0dc4d3…`); it has to be stamped again after the CHECKER placeholders are filled.
+- Level L2, region "map", family F01, length caps, the generated pages, the board's line.
+- The direction page beyond the changed sentences and lines 15, 44, 130, 136, 138.

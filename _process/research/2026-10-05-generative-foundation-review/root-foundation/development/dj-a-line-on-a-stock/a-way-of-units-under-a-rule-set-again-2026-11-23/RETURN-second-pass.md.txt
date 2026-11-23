@@ -1,0 +1,349 @@
+*AI-written: the return of the implementer agent of the second pass (Claude Fable, run wf_6b2371e9-fc7), 23 November 2026, as it came, with HTML entities for < and > put back. Filed by board row DJ.*
+
+1. OUTCOME PER ITEM
+
+All items are proved by scratch build 3 (the final file; exit 0, `"unclean": []`, `"with_axioms": {}`), with one limit on E noted below.
+
+| Item | Outcome |
+|---|---|
+| B, the first outcome lasts (`tested_lasts`) | proved by scratch build 3 |
+| C, both equivalences (`unending_iff_tested`, `ends_iff_unmet`) | proved by scratch build 3 |
+| Least-step corollary (`first_tested`) and A's second public form (`first_tested_or_ends`) | proved by scratch build 3 |
+| D (`favours_while_met`, through `locked_while_met`) | proved by scratch build 3 |
+| D's corollary (`unmet_before_tested`, through `unmet_before_unfavoured`) | proved by scratch build 3 |
+| Shared premises (`TwoKinds.Premises`, `TwoKinds.premises`) | proved by scratch build 3 |
+| Need 27: `premises`, `course_values`, `tested`, `goes_on` (by B), `first_unmet`, `favours_through_three` (by D) | proved by scratch build 3 |
+| Need 26: `premises`, `course_values`, `ends`, `ends_untested` (by C), `favours_through_four` (by D) | proved by scratch build 3 |
+| E: `course_one_rule` and three helpers (public) | proved by scratch build 3 |
+| E: the two private twins, their two `rfl` checks, `oneOrder` | compiled in scratch build 3; axiom reports by fast check only |
+
+The scratch build's audit by name does not cover private declarations (it reports 75 declarations and 52 theorems, all public). The five private ones each print "does not depend on any axioms" in a probe copy under the fast check.
+
+File: `/Users/ren/tmp/dj/rule23/tree/Becoming/WayUnderARule.lean`. A copy is at `/Users/ren/tmp/dj/rule23/pass1/WayUnderARule.after-pass-2.lean`. Nothing in the repository was touched and nothing was committed.
+
+2. DECLARATIONS ADDED (copied from the file)
+
+The file now begins `import Becoming.LineOnAStock` / `import Becoming.RuleCapture`.
+
+Abbreviations used below; the file writes each out in full.
+- `C k` := `course need kids next giving use s k` (section Or)
+- `Cs k` := `course need kids (fun w g => h (share w) g) giving use s k` (section Share)
+- `nx` := `(fun w g => h (share w) g)`
+- `<list 1>` := the first pass's premise block of `tested_or_ends` (`grows even some down needs nothing high keepsAlong regimeAlong`)
+- `<list 1 at nx>` := the same block with `next := nx`
+- `<B stock>` := `even some down high keepsAlong regimeAlong` at `nx`
+- `<list 2>` :=
+```lean
+    (lowers : ∀ w g, ¬ favours g → P.le (share (LineOnAStock.allKids (kids g) w)) (share w))
+    (monotone : RuleCapture.ReadsShare P M h)
+    (upper : ∀ {g g'}, M.le g g' → favours g → favours g')
+```
+- `<list 3>` :=
+```lean
+    (raises : ∀ w g, favours g → P.le (share w) (share (LineOnAStock.allKids (kids g) w)))
+    (monotone : RuleCapture.ReadsShare P M h)
+    (upper : ∀ {g g'}, M.le g g' → favours g → favours g')
+    (locked : RuleCapture.Locked M favours (fun w g => h (share w) g) s.1)
+```
+
+Section Or (variables as in the first pass), new "## 5. The least step with the test":
+```lean
+theorem holds_or_not (need use : U → Nat) (y : Nat → Nat) : ∀ (w : List U) (x : Nat),
+    LineOnAStock.Holds need use y (w, x) ∨ ¬ LineOnAStock.Holds need use y (w, x)
+
+theorem turned_or_not [DecidablePred favours] (t : (List U × R) × Nat) :
+    Turned need use y favours next t ∨ ¬ Turned need use y favours next t
+
+theorem first_tested [DecidablePred favours] :
+    (∃ k, (∀ j, j < k → Goes need (C j)) ∧ Turned need use y favours next (C k)) →
+      ∃ k, (∀ j, j < k → Goes need (C j)) ∧ Turned need use y favours next (C k) ∧
+        ∀ j, j < k → ¬ Turned need use y favours next (C j)
+
+theorem first_tested_or_ends [DecidablePred favours] <list 1> :
+    (∃ k, (∀ j, j < k → Goes need (C j)) ∧ Turned need use y favours next (C k) ∧
+        ∀ j, j < k → ¬ Turned need use y favours next (C j)) ∨
+      (∃ n, (∀ j, j < n → Goes need (C j)) ∧ ¬ Goes need (C n))
+```
+
+Section Share ("## 6", "## 7", "## 8"), with
+`variable {A : Type} {need use : U → Nat} {kids : R → U → List U} {giving y : Nat → Nat} {hi : Nat} {favours : R → Prop} {P : Ideals.Preorder A} {M : Ideals.Preorder R} {share : List U → A} {h : A → R → R} {s : (List U × R) × Nat}`:
+```lean
+def byShare (share : List U → A) (P : Ideals.Preorder A) : Ideals.Preorder (List U) where
+  le w w' := P.le (share w) (share w')
+  refl w := P.refl (share w)
+  trans ab bc := P.trans ab bc
+
+theorem step_turn {t : (List U × R) × Nat} (met : ∀ u, u ∈ t.1.1 → need u ≤ t.2) :
+    (step need kids (fun w g => h (share w) g) giving use t).1 =
+      Pace.turn (fun w g => LineOnAStock.allKids (kids g) w) (fun w g => h (share w) g) true t.1
+
+def HeldAt (need use : U → Nat) (hi x₀ T₀ : Nat) (t : (List U × R) × Nat) : Prop :=
+  (∃ v, v ∈ t.1.1) ∧ LineOnAStock.Below need (fun _ => True) x₀ t.1.1 ∧
+    LineOnAStock.taken use t.1.1 = T₀ ∧ x₀ ≤ t.2 ∧ t.2 ≤ hi
+
+theorem held_step {next : List U → R → R} {x₀ T₀ : Nat}
+    (even : ∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u)
+    (some : ∀ g, ¬ favours g → ∀ u, kids g u ≠ [])
+    (down : ∀ g u v, v ∈ kids g u → need v ≤ need u)
+    (meets : RegimeMargin.Meets giving T₀ (y T₀) hi) (keeps : RegimeMargin.Keeps giving T₀ hi)
+    (enough : T₀ + y T₀ ≤ x₀) {t : (List U × R) × Nat} (notfav : ¬ favours t.1.2)
+    (held : HeldAt need use hi x₀ T₀ t) :
+    HeldAt need use hi x₀ T₀ (step need kids next giving use t)
+
+theorem lasts_from
+    (even : ∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u)
+    (some : ∀ g, ¬ favours g → ∀ u, kids g u ≠ [])
+    (down : ∀ g u v, v ∈ kids g u → need v ≤ need u)
+    (lowers : ∀ w g, ¬ favours g → P.le (share (LineOnAStock.allKids (kids g) w)) (share w))
+    (monotone : RuleCapture.ReadsShare P M h)
+    (upper : ∀ {g g'}, M.le g g' → favours g → favours g') {t : (List U × R) × Nat}
+    (meets : RegimeMargin.Meets giving (LineOnAStock.taken use t.1.1)
+      (y (LineOnAStock.taken use t.1.1)) hi)
+    (keeps : RegimeMargin.Keeps giving (LineOnAStock.taken use t.1.1) hi) (high : t.2 ≤ hi)
+    (turned : Turned need use y favours (fun w g => h (share w) g) t) :
+    ∀ i, HeldAt need use hi t.2 (LineOnAStock.taken use t.1.1)
+          (Law.orbit (step need kids (fun w g => h (share w) g) giving use) t (i + 1)) ∧
+        RuleCapture.Locked (RuleCapture.reverse M) (fun g => ¬ favours g)
+          (fun w g => h (share w) g)
+          (Law.orbit (step need kids (fun w g => h (share w) g) giving use) t (i + 1)).1
+
+-- B
+theorem tested_lasts
+    (even : ∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u)
+    (some : ∀ g, ¬ favours g → ∀ u, kids g u ≠ [])
+    (down : ∀ g u v, v ∈ kids g u → need v ≤ need u) (high : s.2 ≤ hi)
+    (keepsAlong : ∀ k, (∀ j, j ≤ k → Goes need (Cs j)) →
+      RegimeMargin.Keeps giving (LineOnAStock.taken use (Cs k).1.1) hi)
+    (regimeAlong : ∀ k, (∀ j, j ≤ k → Goes need (Cs j)) → ¬ favours (Cs k).1.2 →
+      RegimeMargin.Short giving (LineOnAStock.taken use (Cs k).1.1)
+          (y (LineOnAStock.taken use (Cs k).1.1)) ∧
+        RegimeMargin.Meets giving (LineOnAStock.taken use (Cs k).1.1)
+          (y (LineOnAStock.taken use (Cs k).1.1)) hi)
+    <list 2> :
+    (∃ k, (∀ j, j < k → Goes need (Cs j)) ∧ Turned need use y favours nx (Cs k)) →
+      «不穷» (net need kids (fun w g => h (share w) g) giving use) «一» s
+
+-- C
+theorem unending_iff_tested [DecidablePred favours] <list 1 at nx> <list 2> :
+    «不穷» (net need kids (fun w g => h (share w) g) giving use) «一» s ↔
+      ∃ k, (∀ j, j < k → Goes need (Cs j)) ∧ Turned need use y favours nx (Cs k)
+
+theorem ends_iff_unmet [DecidablePred favours] <list 1 at nx> <list 2> :
+    ¬ «不穷» (net need kids (fun w g => h (share w) g) giving use) «一» s ↔
+      ∃ n, (∀ j, j < n → Goes need (Cs j)) ∧ ¬ Goes need (Cs n)
+
+-- D
+theorem locked_while_met <list 3> :
+    ∀ n, (∀ j, j < n → ∀ u, u ∈ (Cs j).1.1 → need u ≤ (Cs j).2) →
+      RuleCapture.Locked M favours (fun w g => h (share w) g) (Cs n).1
+
+theorem favours_while_met <list 3> :
+    ∀ n, (∀ j, j < n → ∀ u, u ∈ (Cs j).1.1 → need u ≤ (Cs j).2) →
+      ∀ j, j ≤ n + 1 → favours (Cs j).1.2
+
+theorem unmet_before_unfavoured <list 3> {k : Nat} (notfav : ¬ favours (Cs k).1.2) :
+    ∃ j, j + 2 ≤ k ∧ ∃ u, u ∈ (Cs j).1.1 ∧ (Cs j).2 < need u
+
+theorem unmet_before_tested <list 3> {k : Nat}
+    (turned : Turned need use y favours (fun w g => h (share w) g) (Cs k)) :
+    ∃ j, j + 2 ≤ k ∧ ∃ u, u ∈ (Cs j).1.1 ∧ (Cs j).2 < need u
+```
+
+"## 9. Two courses that differ in one unit of one need":
+```lean
+namespace TwoKinds
+inductive Kind
+  | F
+  | O
+open Kind
+def need (n : Nat) : Kind → Nat        -- F => n, O => 1
+def use : Kind → Nat                   -- F => 14, O => 1
+def kids : Bool → Kind → List Kind     -- true, F => [F, O]; true, O => [O, O]; false, u => [u]
+def giving (z : Nat) : Nat := min z (32 - z)
+def share : List Kind → Nat            -- [] => 0; F :: w => share w + 1; O :: w => share w
+def read (a : Nat) (_ : Bool) : Bool := decide (1 ≤ a)
+abbrev favours (g : Bool) : Prop := g = true
+def start : (List Kind × Bool) × Nat := (([F], true), 28)
+abbrev run (n : Nat) : Nat → (List Kind × Bool) × Nat :=
+  course (need n) kids (fun w g => read (share w) g) giving use start
+theorem le_min {a b c : Nat} (ab : a ≤ b) (ac : a ≤ c) : a ≤ min b c
+theorem keeps (T : Nat) : RegimeMargin.Keeps giving T 32
+theorem short (T : Nat) : RegimeMargin.Short giving T T
+theorem meets (T : Nat) : RegimeMargin.Meets giving T T 32
+theorem allKids_false : ∀ w : List Kind, LineOnAStock.allKids (kids false) w = w
+theorem share_allKids_true :
+    ∀ w : List Kind, share (LineOnAStock.allKids (kids true) w) = share w
+theorem only_O : ∀ {w : List Kind}, share w = 0 → ∀ u, u ∈ w → u = O
+theorem down {n : Nat} (pos : 0 < n) : ∀ g u v, v ∈ kids g u → need n v ≤ need n u
+
+def Premises (n : Nat) : Prop :=
+  (∀ g, favours g → ∀ u, use u < LineOnAStock.taken use (kids g u)) ∧
+  (∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u) ∧
+  (∀ g, ¬ favours g → ∀ u, kids g u ≠ []) ∧
+  (∀ g u v, v ∈ kids g u → need n v ≤ need n u) ∧
+  (∀ k u, u ∈ (run n k).1.1 → 0 < need n u) ∧
+  RegimeMargin.FromNothing giving ∧
+  start.2 ≤ 32 ∧
+  (∀ k, (∀ j, j ≤ k → Goes (need n) (run n j)) →
+    RegimeMargin.Keeps giving (LineOnAStock.taken use (run n k).1.1) 32) ∧
+  (∀ k, (∀ j, j ≤ k → Goes (need n) (run n j)) → ¬ favours (run n k).1.2 →
+    RegimeMargin.Short giving (LineOnAStock.taken use (run n k).1.1)
+        (id (LineOnAStock.taken use (run n k).1.1)) ∧
+      RegimeMargin.Meets giving (LineOnAStock.taken use (run n k).1.1)
+        (id (LineOnAStock.taken use (run n k).1.1)) 32) ∧
+  (∀ w g, ¬ favours g →
+    TurningInTime.Three.shareOrder.le (share (LineOnAStock.allKids (kids g) w)) (share w)) ∧
+  RuleCapture.ReadsShare TurningInTime.Three.shareOrder TurningInTime.Three.ruleOrder read ∧
+  (∀ {g g'}, TurningInTime.Three.ruleOrder.le g g' → favours g → favours g') ∧
+  (∀ w g, favours g →
+    TurningInTime.Three.shareOrder.le (share w) (share (LineOnAStock.allKids (kids g) w))) ∧
+  RuleCapture.Locked TurningInTime.Three.ruleOrder favours (fun w g => read (share w) g) start.1
+
+theorem premises {n : Nat} (pos : 0 < n) : Premises n
+end TwoKinds
+
+namespace NeedTwentySeven
+open TwoKinds TwoKinds.Kind
+theorem course_values :
+    run 27 1 = (([F, O], true), 28) ∧ run 27 2 = (([F, O, O, O], true), 26) ∧
+      run 27 3 = (([O, O, O, O, O, O], true), 18) ∧
+      run 27 4 = (([O, O, O, O, O, O, O, O, O, O, O, O], false), 24) ∧
+      run 27 5 = run 27 4
+theorem premises : Premises 27
+theorem tested :
+    (∀ j, j < 4 → Goes (need 27) (run 27 j)) ∧
+      Turned (need 27) use id favours (fun w g => read (share w) g) (run 27 4)
+theorem goes_on :
+    «不穷» (net (need 27) kids (fun w g => read (share w) g) giving use) «一» start
+theorem first_unmet :
+    (∀ j, j < 2 → ∀ u, u ∈ (run 27 j).1.1 → need 27 u ≤ (run 27 j).2) ∧
+      ∃ u, u ∈ (run 27 2).1.1 ∧ (run 27 2).2 < need 27 u
+theorem favours_through_three : ∀ j, j ≤ 3 → favours (run 27 j).1.2
+end NeedTwentySeven
+
+namespace NeedTwentySix
+open TwoKinds TwoKinds.Kind
+theorem course_values :
+    run 26 1 = (([F, O], true), 28) ∧ run 26 2 = (([F, O, O, O], true), 26) ∧
+      run 26 3 = (([F, O, O, O, O, O, O, O], true), 18) ∧
+      run 26 4 = (([O, O, O, O, O, O, O, O, O, O, O, O, O, O], true), 0)
+theorem premises : Premises 26
+theorem ends :
+    (∀ j, j < 4 → Goes (need 26) (run 26 j)) ∧ ¬ Goes (need 26) (run 26 4)
+theorem ends_untested :
+    ¬ «不穷» (net (need 26) kids (fun w g => read (share w) g) giving use) «一» start ∧
+      ¬ ∃ k, (∀ j, j < k → Goes (need 26) (run 26 j)) ∧
+        Turned (need 26) use id favours (fun w g => read (share w) g) (run 26 k)
+theorem favours_through_four : ∀ j, j ≤ 4 → favours (run 26 j).1.2
+end NeedTwentySix
+```
+
+"## 10. At one rule" (section OneRule, `variable {need use : U → Nat} {kids : U → List U} {giving : Nat → Nat}`):
+```lean
+theorem course_one_rule (next : List U → PUnit → PUnit) (w : List U) (x : Nat) :
+    ∀ k, course need (fun _ => kids) next giving use ((w, PUnit.unit), x) k =
+      (((LineOnAStock.course need kids giving use (w, x) k).1, PUnit.unit),
+        (LineOnAStock.course need kids giving use (w, x) k).2)
+
+theorem way_one_rule (next : List U → PUnit → PUnit) (w : List U) (x k : Nat) :
+    (course need (fun _ => kids) next giving use ((w, PUnit.unit), x) k).1.1 =
+      (LineOnAStock.course need kids giving use (w, x) k).1
+
+theorem goes_one_rule (next : List U → PUnit → PUnit) (w : List U) (x k : Nat) :
+    Goes need (course need (fun _ => kids) next giving use ((w, PUnit.unit), x) k) ↔
+      LineOnAStock.Goes need (LineOnAStock.course need kids giving use (w, x) k)
+
+theorem turned_one_rule {y : Nat → Nat} (next : List U → PUnit → PUnit) (w : List U)
+    (x k : Nat) :
+    Turned need use y (fun _ => False) next
+        (course need (fun _ => kids) next giving use ((w, PUnit.unit), x) k) ↔
+      LineOnAStock.Holds need use y (LineOnAStock.course need kids giving use (w, x) k)
+
+private def oneOrder : Ideals.Preorder PUnit where   -- le _ _ := True
+
+private theorem unending_iff_holds_case {U : Type} {need : U → Nat} {kids : U → List U}
+    {use : U → Nat} {giving : Nat → Nat} {y : Nat → Nat} {hi : Nat} {w : List U} {x : Nat}
+    (even : ∀ u, LineOnAStock.taken use (kids u) = use u) (some : ∀ u, kids u ≠ [])
+    (down : ∀ u v, v ∈ kids u → need v ≤ need u) (needs : LineOnAStock.Needing need kids w)
+    (nothing : RegimeMargin.FromNothing giving) (high : x ≤ hi)
+    (along : ∀ k,
+      (∀ j, j ≤ k →
+        LineOnAStock.Goes need (LineOnAStock.course need kids giving use (w, x) j)) →
+      LineOnAStock.Regime giving use y hi (LineOnAStock.course need kids giving use (w, x) k).1) :
+    «不穷» (LineOnAStock.net need kids giving use) «一» (w, x) ↔
+      ∃ k, (∀ j, j < k →
+          LineOnAStock.Goes need (LineOnAStock.course need kids giving use (w, x) j)) ∧
+        LineOnAStock.Holds need use y (LineOnAStock.course need kids giving use (w, x) k)
+
+private theorem unending_iff_holds_same :
+    @unending_iff_holds_case = @LineOnAStock.unending_iff_holds := rfl
+
+private theorem way_ends_case {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+    {giving : Nat → Nat} {hi : Nat} (nothing : RegimeMargin.FromNothing giving)
+    (keeps : RegimeMargin.Keeps giving 0 hi)
+    (grows : ∀ u, use u < LineOnAStock.taken use (kids u)) (needs : ∀ u, 0 < need u)
+    (down : ∀ u v, v ∈ kids u → need v ≤ need u) {w : List U} {x : Nat} (high : x ≤ hi) :
+    (∃ n, ¬ LineOnAStock.Goes need (LineOnAStock.course need kids giving use (w, x) n)) ∧
+      ¬ «不穷» (LineOnAStock.net need kids giving use) «一» (w, x)
+
+private theorem way_ends_same : @way_ends_case = @LineOnAStock.way_ends := rfl
+```
+Both `rfl` checks typecheck, so each twin's statement is the old theorem's. Neither twin's proof names the old theorem.
+
+3. PREMISES OF B, C, D, AND WHAT EACH USES
+
+Lean does not flag unused hypotheses; the "used" notes are by reading the proof terms.
+
+- **B (`tested_lasts`)**: `even`, `some`, `down`, `high`, `keepsAlong`, `regimeAlong`, `lowers`, `monotone`, `upper`. No `grows`, `needs`, `nothing` or decidability. No premise was added.
+  - **B uses `some`**, through `held_step` → `mem_after`. It cannot be dropped: `even` and a take above nothing would give a way that is not empty, but nothing makes the take positive. The docstring says this is argued, not proved.
+  - `regimeAlong` is used only in its `Meets` half and only at the step with the test. Its `Short` half is unused in B.
+  - `keepsAlong` is used at the step with the test, and at earlier steps through `within_along` together with `high`.
+- **C**: list 1 with `[DecidablePred favours]` and list 2, all at `next := fun w g => h (share w) g`. The proofs call only `tested_or_ends`, `tested_lasts` and `Law.stepWhile_unending_iff`. No list premise is unused.
+- **Least step (`first_tested`)**: only `[DecidablePred favours]`; any `next`; no list premise.
+- **D (`favours_while_met`)**: `raises`, `monotone`, `upper`, `locked`, all used; no stock premise.
+- **D's corollary**: the same four. `unmet_before_tested` uses of the test only that the rule in force does not favour, so I also stated that stronger form as `unmet_before_unfavoured`.
+
+4. WHERE `RuleCapture.turn_locked` IS CALLED
+
+- **`lasts_from`** (B's carrying of the rule), at `P := RuleCapture.reverse (byShare share P)`, `M := RuleCapture.reverse M`, `favours := fun g => ¬ favours g`, `f := fun w g => LineOnAStock.allKids (kids g) w`. Its three premises are `lowers`, `RuleCapture.ReadsShare.reverse monotone` along `share`, and `upper` read backward. The reversed lock is established one step after the test from the test, `lowers` and `monotone`.
+- **`locked_while_met`** (D's lock), at `P := byShare share P` and the same `f`.
+
+In both, the model's step is rewritten as `Pace.turn … true` by `step_turn` (`LineOnAStock.after_of_met`). The chain a lister will show is `tested_lasts` → `lasts_from` → `turn_locked` and `favours_while_met` → `locked_while_met` → `turn_locked`. `tested_lasts` and `favours_while_met` do not name `turn_locked` themselves.
+
+5. DEPARTURES FROM THE BRIEF AND ITS "AFTER"
+
+- **The courses' premises are a `def`.** `TwoKinds.Premises n` holds the one conjunction; `TwoKinds.premises : 0 < n → Premises n` proves it once for any need of `F` above nothing; each course's theorem is `premises : Premises 27` / `Premises 26`. I did this to avoid writing the same 14-part conjunction three times. A lister shows `Premises 27`, and the conjunction is read in the def.
+- **Stock premises proved at every take**, not along the course (`TwoKinds.keeps`, `short`, `meets`), as the task allowed.
+- **Orders reused**: `TurningInTime.Three.shareOrder` and `TurningInTime.Three.ruleOrder`, not new ones. `y := id`.
+- **`byShare` is new**: I found no preorder on ways pulled back along a share in the package.
+- **D's corollary has a stronger sibling**, `unmet_before_unfavoured`.
+- **`NeedTwentySix.ends_untested`** also states that the net ends, beside "no step has the test".
+- **Helpers not named in the brief**: `HeldAt`, `held_step`, `lasts_from`, `step_turn`, `locked_while_met`, `holds_or_not`, `turned_or_not`, `way_one_rule`, `goes_one_rule`, `turned_one_rule`, `oneOrder`, and the `TwoKinds` lemmas.
+- **"After" point 8 not put in a docstring**: the two by-hand facts (rule held favouring ends at its sixth step; a rule that never favours leaves the one `F` at 28) are not proved, so the docstrings carry only the sentence asked for.
+- **First-pass text changed in docstrings only**:
+  - the module head ("What is stated", "so far" dropped, a "What is not stated" paragraph added, "share" added to the working names);
+  - A's docstring (the sentence on B and on the least step);
+  - the `Meets` wording in `level_held` and `tested_or_ends`.
+  
+  No first-pass statement was changed. The new least-step theorems sit inside section `Or` before its `end`.
+
+6. BUILDS AND CHECKS
+
+- **Scratch build 2**: 14:02:22–14:02:29, exit 0, `"unclean": []`, 52 theorems, 75 declarations, `"with_axioms": {}`.
+- **Scratch build 3** (final file, after three docstring edits): 14:03:15–14:03:22, exit 0, same figures. Log: `/Users/ren/tmp/dj/rule23/tree/build-3.log`.
+- 2 of the 8 allowed builds were used. Load before each was about 4 to 5; no other heavy run was alive.
+- **Fast checks**: about 6 on the module and 5 on the probe copy `/Users/ren/tmp/dj/rule23/probe/WayUnderARule.lean`, which has `#print axioms` for all 80 declarations. The last probe printed 80 of 80 "does not depend on any axioms". The module file has no `#print` lines.
+- Two axiom hits were found and removed on the way: `Nat.succ_ne_zero` carries `propext`, so `only_O` now uses `Naturals.succ_ne_zero`, and its match on membership was replaced by `mem_cons_cases`.
+- Nothing else was run.
+
+7. FOUND FALSE OR UNCLEAR
+
+- Nothing false in the brief, its "After", or the first pass. The route for B and D went through as written, and both tables compute as given (`course_values` by `rfl`).
+- Row FM's watch item on `some` in B is settled: it is used.
+- The brief's list for B includes `regimeAlong` whole, but B needs only `Meets` at the step with the test. A reader applying test 7 may raise this.
+- The by-name axiom audit does not see the private twins; "empty axiom report" for E rests on the probe. The checker's header says private declarations are covered by its environment audit only in the core closure.
+- Hypotheses named `some` or `none` cannot be bound in patterns (they parse as `Option`'s constructors); I used `leaves`, `never`, `earlier` there.
+
+8. LINE COUNT
+
+1,466 lines, none over 100 characters. 56 theorems (52 public, 4 private) and 24 other declarations (23 public defs, abbrevs, the instance and the inductive; 1 private def).

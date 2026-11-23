@@ -1,0 +1,24 @@
+start 14:33:21
+{
+  "tree": "/Users/ren/tmp/dj/rule23/tree",
+  "modules": 153,
+  "ran": [
+    "Becoming.WayUnderARule",
+    "BecomingWayUnderARuleAxiomAudit"
+  ],
+  "reused": 152,
+  "unclean": [],
+  "audits": {
+    "Becoming.WayUnderARule": {
+      "theorems": 59,
+      "declarations": 92,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.WayUnderARule": 1.521,
+    "BecomingWayUnderARuleAxiomAudit": 0.683
+  }
+}
+exit 0 build 4
+end 14:33:29

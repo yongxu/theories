@@ -1,0 +1,17 @@
+#!/bin/bash
+# usage: build.sh <n> <Module> [<Module> ...]   (module names without "Becoming.")
+# Builds the named modules from that scratch tree once; log in <tree>/build-<n>.log. Waits while a gate, a core run or
+# another scratch build is alive (one Lean build at a time on this machine). Prints the errors and the tail.
+n="$1"; shift; tree=/Users/ren/tmp/dj/rule23/tree; log=$tree/build-$n.log
+test -d "$tree/Becoming" || { echo "no tree $tree"; exit 8; }
+mods=""; for m in "$@"; do mods="$mods Becoming.$m"; done
+busy() { ps -axo pid=,args= | grep -E '^ *[0-9]+ [^ ]*[Pp]ython[^ ]* (-[A-Za-z]+ )*[^ ]*(scratch_build\.py|gate\.py|check_becoming\.py)( |$)' > /dev/null; }
+while busy; do sleep 10; done
+cd /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming || exit 9
+date '+start %H:%M:%S' > "$log"
+python3 -B scratch_build.py "$tree" $mods >> "$log" 2>&1
+code=$?
+echo "exit $code build $n" >> "$log"; date '+end %H:%M:%S' >> "$log"
+grep -nE 'error|warning|sorry|axiom' "$log" | head -60
+tail -c 2500 "$log"
+exit $code
