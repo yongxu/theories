@@ -138,6 +138,7 @@ Rideout and Sorkin's classical sequential growth (2000) read as a process: inter
 | integration | [REVIEW-UE13.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/REVIEW-UE13.md) | — |
 | integration | [RECHECK-UE13.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/RECHECK-UE13.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T212116.218407Z/verification.json) | — |
 
 Aliases: `What can be born next against what continues`, `次可生者与相续`, `sequential growth as a process`, `what can be born next`, `Becoming.CausalGrowth.stems_included_iff`, `Becoming.CausalGrowth.no_order_contains_both`, `Becoming.CausalGrowth.not_widens_and_continues`
 

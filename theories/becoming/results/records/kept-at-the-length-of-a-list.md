@@ -104,6 +104,7 @@ A law of the formal model. Reading it onto an actual situation asks two recognit
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T223556.393134Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T094514.036246Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T212116.218407Z/verification.json) | — |
 
 Aliases: `kept at the length of a list`, `what a list holds`, `列表所容`, `Becoming.Iteration.iter_persists`, `Becoming.Iteration.iter_largest`, `Becoming.Iteration.iter_gives_persists`
 

@@ -90,6 +90,7 @@ Model admissibility is not automatically ethical permission; effect coverage and
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261031T132923.838546Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T112708.430596Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T212116.218407Z/verification.json) | — |
 
 Aliases: `ContinuationAdequacy.viable_iff_plan`, `Becoming.Viability.keptFor_iff_plan_of_choice`, `Becoming.Viability.keptFor_iff_plan`, `Becoming.Viability.plans_iff_choice`
 

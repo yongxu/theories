@@ -22,6 +22,8 @@
    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 6. A dependent's need enters neither statistic: every reading of the margin to it from the multiplier is wrong for some need, and with the need measured the margin is read exactly (by construction). (`Becoming.SlowingDown.need_not_read`, `Becoming.SlowingDown.need_margin_read`)
    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+7. Bridge to Becoming.RegimeMargin: safe discrete regime headroom pairs with non-ending discrete runs (RegimeMargin.holds) and sub-unit transcritical multipliers, while below-threshold collapse pairs with need_not_read. (`Becoming.SlowingDown.drawn_safe_with_regime_holds`, `Becoming.SlowingDown.regime_below_threshold_vs_need_not_read`)
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -40,7 +42,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked: the periphery module SlowingDown's 22 theorems (30 declaration audits) by its own checker with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261022T104044.892409Z), each on Lean's standard axioms only; it imports no core module. Built and reviewed in one session, with no separate reviewer; author review in study section 349; not independently reviewed by a person.
+Machine-checked: SlowingDown's 24 theorems (32 declaration audits) under Lean 4.30.0-rc2 and pinned Mathlib (receipt 20261123T213101.896904Z, 68 inherited Becoming deps via RegimeMargin), standard axioms only. Author review in study §349; Wave U1 bridge AI-added.
 
 Canonical source: [SlowingDown.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean)
 
@@ -59,7 +61,7 @@ Critical slowing down: the recovery rate falls to zero at a bifurcation (Wissel 
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- none
+- **formal-reuse**: [margin-of-a-regime](margin-of-a-regime.md). Reuses RegimeMargin.Meets, Keeps, Short, FromNothing, holds, and ends_iff_below to join continuous slowing-down statistics with discrete regime persistence and collapse.
 - related, not a proved adapter: [runaway-distance-uncoupled](runaway-distance-uncoupled.md). T6's unseen half: where the stock couples in by threshold only, nothing coupled in bounds the distance to the break (Web.break_not_bounded); this record states the seen half, where the condition is itself observed.
 
 <a id="sources--来源"></a>
@@ -67,8 +69,8 @@ Critical slowing down: the recovery rate falls to zero at a bifurcation (Wissel 
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [SlowingDown.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean) | `Becoming.SlowingDown.step`, `Becoming.SlowingDown.memLp_step`, `Becoming.SlowingDown.variance_step`, `Becoming.SlowingDown.covariance_step`, `Becoming.SlowingDown.stationaryVariance`, `Becoming.SlowingDown.stationary_variance`, `Becoming.SlowingDown.lag1`, `Becoming.SlowingDown.stationary_lag1`, `Becoming.SlowingDown.stationaryVariance_strictMonoOn`, `Becoming.SlowingDown.stationaryVariance_tendsto`, `Becoming.SlowingDown.foldStep`, `Becoming.SlowingDown.foldStep_rest`, `Becoming.SlowingDown.foldMultiplier`, `Becoming.SlowingDown.foldStep_hasDerivAt`, `Becoming.SlowingDown.foldMultiplier_tendsto`, `Becoming.SlowingDown.fold_variance_strictAntiOn`, `Becoming.SlowingDown.fold_variance_tendsto`, `Becoming.SlowingDown.fold_margin_read`, `Becoming.SlowingDown.drawnStep`, `Becoming.SlowingDown.drawnRest`, `Becoming.SlowingDown.drawnStep_rest`, `Becoming.SlowingDown.drawnMultiplier`, `Becoming.SlowingDown.drawnStep_hasDerivAt`, `Becoming.SlowingDown.drawn_multiplier_level`, `Becoming.SlowingDown.drawn_level_read`, `Becoming.SlowingDown.drawnMultiplier_tendsto`, `Becoming.SlowingDown.drawn_variance_strictMonoOn`, `Becoming.SlowingDown.drawn_variance_tendsto`, `Becoming.SlowingDown.need_not_read`, `Becoming.SlowingDown.need_margin_read` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/slowing-down-checks/20261022T104044.892409Z/verification.json) | — |
+| proof | [SlowingDown.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean) | `Becoming.SlowingDown.step`, `Becoming.SlowingDown.memLp_step`, `Becoming.SlowingDown.variance_step`, `Becoming.SlowingDown.covariance_step`, `Becoming.SlowingDown.stationaryVariance`, `Becoming.SlowingDown.stationary_variance`, `Becoming.SlowingDown.lag1`, `Becoming.SlowingDown.stationary_lag1`, `Becoming.SlowingDown.stationaryVariance_strictMonoOn`, `Becoming.SlowingDown.stationaryVariance_tendsto`, `Becoming.SlowingDown.foldStep`, `Becoming.SlowingDown.foldStep_rest`, `Becoming.SlowingDown.foldMultiplier`, `Becoming.SlowingDown.foldStep_hasDerivAt`, `Becoming.SlowingDown.foldMultiplier_tendsto`, `Becoming.SlowingDown.fold_variance_strictAntiOn`, `Becoming.SlowingDown.fold_variance_tendsto`, `Becoming.SlowingDown.fold_margin_read`, `Becoming.SlowingDown.drawnStep`, `Becoming.SlowingDown.drawnRest`, `Becoming.SlowingDown.drawnStep_rest`, `Becoming.SlowingDown.drawnMultiplier`, `Becoming.SlowingDown.drawnStep_hasDerivAt`, `Becoming.SlowingDown.drawn_multiplier_level`, `Becoming.SlowingDown.drawn_level_read`, `Becoming.SlowingDown.drawnMultiplier_tendsto`, `Becoming.SlowingDown.drawn_variance_strictMonoOn`, `Becoming.SlowingDown.drawn_variance_tendsto`, `Becoming.SlowingDown.need_not_read`, `Becoming.SlowingDown.need_margin_read`, `Becoming.SlowingDown.drawn_safe_with_regime_holds`, `Becoming.SlowingDown.regime_below_threshold_vs_need_not_read` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/slowing-down-checks/20261123T213101.896904Z/verification.json) | — |
 | integration | [check_slowing_down.py](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/check_slowing_down.py) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror); its history names section [349](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/349.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
@@ -79,7 +81,8 @@ Aliases: `slowing down before an own end`, `T6's seen half`, `critical slowing d
 ### History
 
 - 22 October 2026: added (CS1), T6's seen half proved in its model in the periphery: stationary variance and lag-1 autocorrelation of a linear step with independent noise, their rise at a fold and at a transcritical end, the margin read back, and the need not read; study section 349.
+- 24 November 2026: bridged SlowingDown onto Becoming.RegimeMargin (drawn_safe_with_regime_holds, regime_below_threshold_vs_need_not_read) in Lean Unification Wave U1 (receipt 20261123T213101.896904Z). AI-written.
 
 </details>
 
-Documentary review UTC: `2026-10-22T11:00:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-23T21:31:01+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

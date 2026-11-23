@@ -11,15 +11,15 @@ On each part, theorems and lemmas are individually listed and definitions and ty
 
 ## Becoming pure core
 
-This group's 407 modules are listed on 7 parts of about equal size, the largest 766,354 bytes, under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
+This group's 407 modules are listed on 7 parts of about equal size, the largest 766,537 bytes, under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
 
 | Page | Modules, in the catalogue's order | theorem/lemma occurrences |
 |---|---|---:|
 | [Part 1 of 7](../lean-declarations/becoming-core-part-1.md) | 68, from GenerativeCore.lean to CounterfactualRuns.lean | 2,583 |
 | [Part 2 of 7](../lean-declarations/becoming-core-part-2.md) | 61, from Counting.lean to GrammarCrossing.lean | 2,997 |
-| [Part 3 of 7](../lean-declarations/becoming-core-part-3.md) | 65, from GrammarLaws.lean to LevelAlone.lean | 3,077 |
+| [Part 3 of 7](../lean-declarations/becoming-core-part-3.md) | 65, from GrammarLaws.lean to LevelAlone.lean | 3,080 |
 | [Part 4 of 7](../lean-declarations/becoming-core-part-4.md) | 43, from LevelCoupling.lean to OverExchange.lean | 3,020 |
-| [Part 5 of 7](../lean-declarations/becoming-core-part-5.md) | 52, from OwnClass.lean to RegimeMargin.lean | 2,901 |
+| [Part 5 of 7](../lean-declarations/becoming-core-part-5.md) | 52, from OwnClass.lean to RegimeMargin.lean | 2,902 |
 | [Part 6 of 7](../lean-declarations/becoming-core-part-6.md) | 58, from Regions.lean to SharedCodes.lean | 2,833 |
 | [Part 7 of 7](../lean-declarations/becoming-core-part-7.md) | 60, from ShownOrder.lean to InquirySufficiency.lean | 2,838 |
 
@@ -201,7 +201,7 @@ This group's 407 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-2a662f22e34b"></a>[JointPlans.lean](../lean-declarations/becoming-core-part-3.md#module-2a662f22e34b) | part 3 | 4 |
 | <a id="module-cbfedf3df46d"></a>[Junctures.lean](../lean-declarations/becoming-core-part-3.md#module-cbfedf3df46d) | part 3 | 50 |
 | <a id="module-5903ce8e2fd7"></a>[KeepableStep.lean](../lean-declarations/becoming-core-part-3.md#module-5903ce8e2fd7) | part 3 | 10 |
-| <a id="module-67adbe44fe92"></a>[Keeping.lean](../lean-declarations/becoming-core-part-3.md#module-67adbe44fe92) | part 3 | 33 |
+| <a id="module-67adbe44fe92"></a>[Keeping.lean](../lean-declarations/becoming-core-part-3.md#module-67adbe44fe92) | part 3 | 35 |
 | <a id="module-64282aee44b2"></a>[KeepingWidening.lean](../lean-declarations/becoming-core-part-3.md#module-64282aee44b2) | part 3 | 250 |
 | <a id="module-fecf49326c58"></a>[Labelled.lean](../lean-declarations/becoming-core-part-3.md#module-fecf49326c58) | part 3 | 69 |
 | <a id="module-81d06ccfba4a"></a>[LabelledRoles.lean](../lean-declarations/becoming-core-part-3.md#module-81d06ccfba4a) | part 3 | 11 |
@@ -218,7 +218,7 @@ This group's 407 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-d65f42130cd4"></a>[Learning.lean](../lean-declarations/becoming-core-part-3.md#module-d65f42130cd4) | part 3 | 80 |
 | <a id="module-9f33b42f8566"></a>[LearningRuns.lean](../lean-declarations/becoming-core-part-3.md#module-9f33b42f8566) | part 3 | 30 |
 | <a id="module-359473829457"></a>[LeastLoss.lean](../lean-declarations/becoming-core-part-3.md#module-359473829457) | part 3 | 55 |
-| <a id="module-0d65ccd32f8b"></a>[LevelAlone.lean](../lean-declarations/becoming-core-part-3.md#module-0d65ccd32f8b) | part 3 | 56 |
+| <a id="module-0d65ccd32f8b"></a>[LevelAlone.lean](../lean-declarations/becoming-core-part-3.md#module-0d65ccd32f8b) | part 3 | 57 |
 | <a id="module-41d793a8ed35"></a>[LevelCoupling.lean](../lean-declarations/becoming-core-part-4.md#module-41d793a8ed35) | part 4 | 56 |
 | <a id="module-322d77d0a344"></a>[Lexical.lean](../lean-declarations/becoming-core-part-4.md#module-322d77d0a344) | part 4 | 45 |
 | <a id="module-d94bf165cf48"></a>[Lifting.lean](../lean-declarations/becoming-core-part-4.md#module-d94bf165cf48) | part 4 | 6 |
@@ -281,7 +281,7 @@ This group's 407 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-df2e497ed5db"></a>[PooledEnvelopes.lean](../lean-declarations/becoming-core-part-5.md#module-df2e497ed5db) | part 5 | 44 |
 | <a id="module-161ef92f702e"></a>[Population.lean](../lean-declarations/becoming-core-part-5.md#module-161ef92f702e) | part 5 | 116 |
 | <a id="module-7dcca1590134"></a>[Postponement.lean](../lean-declarations/becoming-core-part-5.md#module-7dcca1590134) | part 5 | 16 |
-| <a id="module-742e7db5f595"></a>[PredicateIteration.lean](../lean-declarations/becoming-core-part-5.md#module-742e7db5f595) | part 5 | 22 |
+| <a id="module-742e7db5f595"></a>[PredicateIteration.lean](../lean-declarations/becoming-core-part-5.md#module-742e7db5f595) | part 5 | 23 |
 | <a id="module-444ff02e3f73"></a>[Prelude.lean](../lean-declarations/becoming-core-part-5.md#module-444ff02e3f73) | part 5 | 176 |
 | <a id="module-2bc8ef4675bf"></a>[PremiseWitnesses.lean](../lean-declarations/becoming-core-part-5.md#module-2bc8ef4675bf) | part 5 | 37 |
 | <a id="module-5515a55f2204"></a>[Premises.lean](../lean-declarations/becoming-core-part-5.md#module-5515a55f2204) | part 5 | 61 |

@@ -84,6 +84,7 @@ Causal set theory (Bombelli, Lee, Meyer and Sorkin 1987; Surya 2019): its links 
 | integration | [REVIEW-UE13.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/REVIEW-UE13.md) | — |
 | integration | [RECHECK-UE13.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/RECHECK-UE13.md) | — |
 | statement | [01-ROOT.md](../../chapters/01-ROOT.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T212116.218407Z/verification.json) | — |
 
 Aliases: `Precedence and its links`, `先后与其覆盖`, `links of a causal set`, `covering relation as conditions`, `Becoming.CausalGrowth.reach_links`, `Becoming.CausalGrowth.links_least`, `Becoming.CausalGrowth.reach_links_all_iff_em`
 

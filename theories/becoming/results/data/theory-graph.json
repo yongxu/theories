@@ -8224,7 +8224,7 @@
    "type": "module",
    "name": "Becoming.PredicateIteration",
    "level": "L1",
-   "theorems": 22,
+   "theorems": 23,
    "region": "method",
    "base": "general",
    "on_grammar": false,
@@ -9632,7 +9632,7 @@
    "type": "module",
    "name": "Becoming.Keeping",
    "level": "L1",
-   "theorems": 33,
+   "theorems": 35,
    "region": "map",
    "base": "frame",
    "on_grammar": false,
@@ -11743,7 +11743,7 @@
    "id": "module:Becoming.FromTheDynamics",
    "type": "module",
    "name": "Becoming.FromTheDynamics",
-   "level": "",
+   "level": "L2",
    "theorems": 33,
    "region": "significance",
    "base": "old-base",
@@ -11777,7 +11777,7 @@
    "type": "module",
    "name": "Becoming.LevelAlone",
    "level": "L2",
-   "theorems": 39,
+   "theorems": 40,
    "region": "map",
    "base": "general",
    "on_grammar": true,
@@ -57537,6 +57537,11 @@
   {
    "from": "record:significance-through-a-common-condition",
    "to": "record:metaethical-core-characterization",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:slowing-down-before-an-own-end",
+   "to": "record:margin-of-a-regime",
    "type": "formal-reuse"
   },
   {

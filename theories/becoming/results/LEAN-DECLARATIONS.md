@@ -12,8 +12,9 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 407 | 20,249 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 407 | 20,253 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,072 |
+| [Becoming active periphery](lean-declarations/becoming-periphery.md) | 10 | 458 |
 | [The ethics and the generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
 | [Attainable inquiry, contact and process laws](lean-declarations/inquiry.md) | 71 | 1,864 |
@@ -22,7 +23,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 | [Abstraction, applicability and constitution](lean-declarations/abstraction.md) | 45 | 981 |
 | [Concern and shared activity](lean-declarations/concern.md) | 15 | 246 |
 | [Organizational formation through revisable evaluation](lean-declarations/shared.md) | 66 | 1,480 |
-| [Generative core and relational structure](lean-declarations/core.md) | 145 | 2,308 |
+| [Generative core and relational structure](lean-declarations/core.md) | 135 | 1,852 |
 | [Other formal studies](lean-declarations/other.md) | 30 | 873 |
 
 <a id="按名称查找--find-by-name"></a>
@@ -70,7 +71,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [AlignmentContinuityCases.lean](lean-declarations/ethics-part-1.md#module-8d8f2a3044e4) | The ethics and the generative direction |
 | [AlignmentDirection.lean](lean-declarations/ethics-part-1.md#module-98f04fce15eb) | The ethics and the generative direction |
 | [AlignmentInquiry.lean](lean-declarations/ethics-part-1.md#module-503febdf34f7) | The ethics and the generative direction |
-| [AlignmentReals.lean](lean-declarations/core.md#module-bc208760b971) | Generative core and relational structure |
+| [AlignmentReals.lean](lean-declarations/becoming-periphery.md#module-bc208760b971) | Becoming active periphery |
 | [AlignmentSpine.lean](lean-declarations/becoming-core-part-1.md#module-32c180ea029d) | Becoming pure core |
 | [AlignmentSuccession.lean](lean-declarations/other.md#module-69a93b1cf280) | Other formal studies |
 | [Alternatives.lean](lean-declarations/becoming-core-part-1.md#module-bb4c3946c175) | Becoming pure core |
@@ -118,7 +119,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Cascade.lean](lean-declarations/becoming-core-part-1.md#module-8a990367ee47) | Becoming pure core |
 | [Cases.lean](lean-declarations/concern.md#module-5fd22deccdc6) | Concern and shared activity |
 | [CausalGrowth.lean](lean-declarations/becoming-core-part-1.md#module-29529544b0e3) | Becoming pure core |
-| [CellsUnderNoise.lean](lean-declarations/core.md#module-f20bca7415be) | Generative core and relational structure |
+| [CellsUnderNoise.lean](lean-declarations/becoming-periphery.md#module-f20bca7415be) | Becoming active periphery |
 | [CensusBinding.lean](lean-declarations/becoming-core-part-1.md#module-970a8214feea) | Becoming pure core |
 | [CensusCounts.lean](lean-declarations/becoming-core-part-1.md#module-85b456df5b23) | Becoming pure core |
 | [CensusTable.lean](lean-declarations/becoming-core-part-1.md#module-2990dae75c25) | Becoming pure core |
@@ -281,7 +282,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [EndogenousTurning.lean](lean-declarations/becoming-core-part-2.md#module-d8c467574e73) | Becoming pure core |
 | [Enough.lean](lean-declarations/becoming-core-part-2.md#module-76ad8e8c0e8d) | Becoming pure core |
 | [Entropy.lean](lean-declarations/becoming-core-part-2.md#module-53f5f554b2a8) | Becoming pure core |
-| [EntropyProduction.lean](lean-declarations/core.md#module-38befb7a7fdb) | Generative core and relational structure |
+| [EntropyProduction.lean](lean-declarations/becoming-periphery.md#module-38befb7a7fdb) | Becoming active periphery |
 | [Enumeration.lean](lean-declarations/shared.md#module-2aa3f81f3ba3) | Organizational formation through revisable evaluation |
 | [EqualityGenerativity.lean](lean-declarations/abstraction.md#module-475eb20715c8) | Abstraction, applicability and constitution |
 | [EthicalOrientation.lean](lean-declarations/core.md#module-b65d39fd3ece) | Generative core and relational structure |
@@ -302,7 +303,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Exclusion.lean](lean-declarations/becoming-core-part-2.md#module-31e87f74b962) | Becoming pure core |
 | [Exhaustion.lean](lean-declarations/becoming-core-part-2.md#module-7704443258f7) | Becoming pure core |
 | [ExpandingInquiry.lean](lean-declarations/other.md#module-1f53d52a1db7) | Other formal studies |
-| [ExpectedFreeEnergyReals.lean](lean-declarations/core.md#module-08914cd7e653) | Generative core and relational structure |
+| [ExpectedFreeEnergyReals.lean](lean-declarations/becoming-periphery.md#module-08914cd7e653) | Becoming active periphery |
 | [Experiment.lean](lean-declarations/becoming-core-part-2.md#module-1934213e38a7) | Becoming pure core |
 | [ExplanationDischarge.lean](lean-declarations/core.md#module-dfc447302a8a) | Generative core and relational structure |
 | [ExplanatoryBranching.lean](lean-declarations/core.md#module-e5671e89c1e5) | Generative core and relational structure |
@@ -352,7 +353,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Exposure.lean](lean-declarations/learning.md#module-4d87e1bfa317) | Learning, prediction and dynamics |
 | [ExposureExamples.lean](lean-declarations/learning.md#module-0882888ab9e6) | Learning, prediction and dynamics |
 | [Extension.lean](lean-declarations/becoming-core-part-2.md#module-f2cdef9e498c) | Becoming pure core |
-| [FallibleInquiry.lean](lean-declarations/core.md#module-5b5a065f08cd) | Generative core and relational structure |
+| [FallibleInquiry.lean](lean-declarations/becoming-periphery.md#module-5b5a065f08cd) | Becoming active periphery |
 | [FallibleInspection.lean](lean-declarations/ethics-part-2.md#module-5bd737f24e3d) | The ethics and the generative direction |
 | [FallibleInspectionCases.lean](lean-declarations/ethics-part-2.md#module-87e5bdd67433) | The ethics and the generative direction |
 | [FamilyAdmission.lean](lean-declarations/abstraction.md#module-f0533e96feaa) | Abstraction, applicability and constitution |
@@ -397,7 +398,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Frame.lean](lean-declarations/becoming-core-part-2.md#module-4aeb3fe7fb22) | Becoming pure core |
 | [FreeEnergyCounting.lean](lean-declarations/becoming-core-part-2.md#module-c51c7dba8102) | Becoming pure core |
 | [FreeEnergyGuarantees.lean](lean-declarations/becoming-core-part-2.md#module-e34947eb31a2) | Becoming pure core |
-| [FreeEnergyReals.lean](lean-declarations/core.md#module-00dcabf3b882) | Generative core and relational structure |
+| [FreeEnergyReals.lean](lean-declarations/becoming-periphery.md#module-00dcabf3b882) | Becoming active periphery |
 | [Frequency.lean](lean-declarations/becoming-core-part-2.md#module-c700e68ef3a2) | Becoming pure core |
 | [FreshRevision.lean](lean-declarations/shared.md#module-b592dcce60e2) | Organizational formation through revisable evaluation |
 | [FromTheDynamics.lean](lean-declarations/becoming-core-part-2.md#module-930b83ab3d80) | Becoming pure core |
@@ -566,7 +567,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [LineageInProcess.lean](lean-declarations/valuation.md#module-45b450e65721) | Valuation development and liangzhi |
 | [LineageRegimes.lean](lean-declarations/becoming-core-part-4.md#module-aee8fdbd9169) | Becoming pure core |
 | [LineageRegions.lean](lean-declarations/becoming-core-part-4.md#module-312a8e4b92b4) | Becoming pure core |
-| [LinearBlankets.lean](lean-declarations/core.md#module-4cd0718b9ba1) | Generative core and relational structure |
+| [LinearBlankets.lean](lean-declarations/becoming-periphery.md#module-4cd0718b9ba1) | Becoming active periphery |
 | [ListFootprints.lean](lean-declarations/becoming-core-part-4.md#module-a533b5c5cf26) | Becoming pure core |
 | [ListedWebs.lean](lean-declarations/becoming-core-part-4.md#module-aea2194ee2b8) | Becoming pure core |
 | [Listing.lean](lean-declarations/becoming-core-part-4.md#module-2e6ce31fc904) | Becoming pure core |
@@ -805,7 +806,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [RegimeAttraction.lean](lean-declarations/other.md#module-c03ef19c4e99) | Other formal studies |
 | [RegimeBoundary.lean](lean-declarations/other.md#module-e0e2fb3f4028) | Other formal studies |
 | [RegimeMargin.lean](lean-declarations/becoming-core-part-5.md#module-77e7b36ae401) | Becoming pure core |
-| [RegimeReals.lean](lean-declarations/core.md#module-89709f49ef41) | Generative core and relational structure |
+| [RegimeReals.lean](lean-declarations/becoming-periphery.md#module-89709f49ef41) | Becoming active periphery |
 | [RegimeTransition.lean](lean-declarations/other.md#module-f1a05f3cb9c1) | Other formal studies |
 | [Regions.lean](lean-declarations/becoming-core-part-6.md#module-e8b556b938af) | Becoming pure core |
 | [Regrouping.lean](lean-declarations/becoming-core-part-6.md#module-f74de29583d3) | Becoming pure core |
@@ -848,7 +849,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [RenewingFormation.lean](lean-declarations/ethics-part-2.md#module-0acdeff0007e) | The ethics and the generative direction |
 | [Reordering.lean](lean-declarations/becoming-core-part-6.md#module-11edeaea70ba) | Becoming pure core |
 | [ReorderingGrowth.lean](lean-declarations/becoming-core-part-6.md#module-05513c6d469e) | Becoming pure core |
-| [Representation.lean](lean-declarations/core.md#module-cac9de43b3e1) | Generative core and relational structure |
+| [Representation.lean](lean-declarations/becoming-periphery.md#module-cac9de43b3e1) | Becoming active periphery |
 | [Reproduction.lean](lean-declarations/becoming-core-part-6.md#module-ee0dac694148) | Becoming pure core |
 | [ReproductionNetwork.lean](lean-declarations/other.md#module-6a029e611328) | Other formal studies |
 | [Reserve.lean](lean-declarations/becoming-core-part-6.md#module-4f6ff4eb4abf) | Becoming pure core |
@@ -950,7 +951,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [SituatedTracking.lean](lean-declarations/learning.md#module-0484b39d8ec3) | Learning, prediction and dynamics |
 | [SituationTraces.lean](lean-declarations/becoming-core-part-7.md#module-c5c02f33d020) | Becoming pure core |
 | [Situations.lean](lean-declarations/becoming-core-part-7.md#module-dadafeb9c9af) | Becoming pure core |
-| [SlowingDown.lean](lean-declarations/core.md#module-c24e6fba1313) | Generative core and relational structure |
+| [SlowingDown.lean](lean-declarations/becoming-periphery.md#module-c24e6fba1313) | Becoming active periphery |
 | [SourceReliance.lean](lean-declarations/inquiry.md#module-c6d60dbda60c) | Attainable inquiry, contact and process laws |
 | [SourceRelianceCases.lean](lean-declarations/inquiry.md#module-ca0448c58a45) | Attainable inquiry, contact and process laws |
 | [Space.lean](lean-declarations/becoming-core-part-7.md#module-716b4d991654) | Becoming pure core |
