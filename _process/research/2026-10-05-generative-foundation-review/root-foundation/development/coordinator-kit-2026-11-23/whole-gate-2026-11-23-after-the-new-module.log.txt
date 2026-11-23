@@ -1,0 +1,495 @@
+python3 -B tools/research/gate.py run --base main --full, in /Users/ren/tmp/rw/wm2/wt at 501407c66, tree 739f72d25805
+Mon Nov 23 15:13:50 +07 2026
+{
+  "tree": "739f72d25805",
+  "base": "main",
+  "full": true,
+  "results": {
+    "secrets": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 11.7,
+      "log": "/Users/ren/theories/.git/gate/logs/secrets-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "strict": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 96.9,
+      "log": "/Users/ren/theories/.git/gate/logs/strict-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "links": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 11.0,
+      "log": "/Users/ren/theories/.git/gate/logs/links-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_architecture": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 36.7,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_architecture-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_atlas": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 7.5,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_atlas-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_atlas_index": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 4.6,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_atlas_index-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_boundary": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 11.7,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_boundary-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_checker_steps": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 7.6,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_checker_steps-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_chinese_fronts": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 0.6,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_chinese_fronts-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_classical_verifiers": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 5.3,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_classical_verifiers-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_completion": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 2.8,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_completion-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_connection_map": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 0.4,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_connection_map-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_credentials": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 0.3,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_credentials-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_evidence_store": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 3.8,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_evidence_store-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_featured_results": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 1.6,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_featured_results-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_gate": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 61.7,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_gate-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_history_notes": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 0.1,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_history_notes-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_indexes": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 5.8,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_indexes-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_law_families": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 0.7,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_law_families-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_lean_catalogue_links": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 0.1,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_lean_catalogue_links-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_lineage": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 5.8,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_lineage-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_links": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 0.3,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_links-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_map_sheet": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 15.9,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_map_sheet-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_mirror": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 3.3,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_mirror-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_moves": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 3.9,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_moves-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_navigation_pages": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 5.5,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_navigation_pages-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_proof_uses": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 0.2,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_proof_uses-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_registry": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 158.0,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_registry-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_rename_ids": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 2.3,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_rename_ids-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_repoint": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 0.1,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_repoint-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_review_packet": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 19.0,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_review_packet-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_schema2": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 25.5,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_schema2-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_scoped_drift": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 1.7,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_scoped_drift-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_shared_laws": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 1.8,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_shared_laws-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_site": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 8.8,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_site-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_spine": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 35.8,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_spine-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_split_languages": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 0.1,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_split_languages-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_strict_fresh": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 104.5,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_strict_fresh-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_style": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 1.1,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_style-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_tests_page": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 0.4,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_tests_page-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_the_map": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 1.0,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_the_map-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_theory_graph": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 30.2,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_theory_graph-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "test:test_uses_pages": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 0.2,
+      "log": "/Users/ren/theories/.git/gate/logs/test:test_uses_pages-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "board": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 0.1,
+      "log": "/Users/ren/theories/.git/gate/logs/board-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "frozen": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 18.7,
+      "log": "/Users/ren/theories/.git/gate/logs/frozen-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "receipt": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 0.4,
+      "log": "/Users/ren/theories/.git/gate/logs/receipt-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    },
+    "proof-uses": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 0.2,
+      "log": "/Users/ren/theories/.git/gate/logs/proof-uses-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null,
+      "accepted_reason": null
+    },
+    "dossiers": {
+      "status": "passed",
+      "exit": 0,
+      "seconds": 5.8,
+      "log": "/Users/ren/theories/.git/gate/logs/dossiers-739f72d25805.log",
+      "reached_by": [
+        "(full)"
+      ],
+      "landings": null
+    }
+  },
+  "failed": [],
+  "before_the_gate": [],
+  "note": null
+}
+gate rc=0
+Mon Nov 23 15:26:41 +07 2026
