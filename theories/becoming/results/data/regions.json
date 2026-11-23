@@ -2851,6 +2851,11 @@
    "base": "general",
    "note": "WayUnderARule DJ: units that need a level and leave offspring, a rule set again, one of two outcomes on a course, each built; the first lasts where every unit has kids under a rule that does not favour and the lock's premises hold read downward, under its stated premises on units and stock"
   },
+  "coupled-adaptive-loops-and-race": {
+   "region": "map",
+   "base": "general",
+   "note": "AdaptiveLoops P1B: open adaptive loops, observation-driven assume-guarantee composition over coupled substrates, coupled race with pool silencing and two-drawer bottleneck, unread adaptive collapse, and endogenous bidirectional adaptation"
+  },
   "selection-through-couplings-at-a-coarser-step": {
    "region": "knowing",
    "base": "general",
@@ -4917,6 +4922,11 @@
    "region": "map",
    "base": "general",
    "note": "DJ a way of units on a stock under a rule set again: a step with the test or a first step with no need met; the first lasts where the next rule is a monotone reading of a share, under each law's stated premises; two courses that differ in one unit of one need"
+  },
+  "Becoming.AdaptiveLoops": {
+   "region": "map",
+   "base": "general",
+   "note": "P1B open adaptive loops, assume-guarantee composition over coupled substrates, coupled race with pool silencing and two-drawer bottleneck, unread adaptive collapse, and endogenous bidirectional adaptation"
   }
  }
 }

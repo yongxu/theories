@@ -409,6 +409,7 @@ import Becoming.LineOnAStockCases
 import Becoming.WayUnderARule
 import Becoming.ReadingsSpread
 import Becoming.SignificanceStatements
+import Becoming.AdaptiveLoops
 
 /-!
 # The Theory of Becoming: the formal core
@@ -5404,6 +5405,7 @@ tagged instance or application.
   theorems prove `LineOnAStock.unending_iff_holds` and `LineOnAStock.way_ends` from its laws
   without those theorems. It derives no response beyond a unit whose need is unmet leaving nothing,
   and no unit in it adds to what it rests on.
+* `Becoming.AdaptiveLoops` (L1): open adaptive loops, observation-driven assume-guarantee composition over coupled substrates, coupled race with pool silencing and two-drawer post-turn bottleneck, unread adaptive collapse and endogenous bidirectional adaptation.
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.

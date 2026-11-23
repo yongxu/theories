@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "utc": "20261123T075124.334546Z",
+  "utc": "20261123T123041.825153Z",
   "toolchain": "leanprover/lean4:v4.29.1",
-  "retained_run": "becoming-checks/20261123T075124.334546Z",
+  "retained_run": "becoming-checks/20261123T123041.825153Z",
   "spine_modules": [
     "Becoming.Grammar",
     "Becoming.GrammarReadings",
@@ -397,6 +397,7 @@
     "Becoming.GrammarPath",
     "Becoming.GuardedStep",
     "Becoming.SignificanceStatements",
+    "Becoming.AdaptiveLoops",
     "Becoming",
     "Becoming.Hexagrams",
     "Becoming.HexagramPlaces",
@@ -811,6 +812,7 @@
     "Becoming.GrammarPath",
     "Becoming.GuardedStep",
     "Becoming.SignificanceStatements",
+    "Becoming.AdaptiveLoops",
     "Becoming"
   ],
   "foundation_modules": [
@@ -1239,6 +1241,7 @@
     "Becoming.WayUnderARule",
     "Becoming.PremisesTogether",
     "Becoming.SignificanceStatements",
+    "Becoming.AdaptiveLoops",
     "Becoming.SeedReach",
     "Becoming.ScopedReach",
     "Becoming.Hexagrams",
@@ -1656,6 +1659,7 @@
     "Becoming.WayUnderARule",
     "Becoming.PremisesTogether",
     "Becoming.SignificanceStatements",
+    "Becoming.AdaptiveLoops",
     "Becoming.SeedReach",
     "Becoming.ScopedReach",
     "Becoming.Hexagrams",
@@ -2073,6 +2077,7 @@
     "Becoming.WayUnderARule": "becoming/Becoming/WayUnderARule.lean",
     "Becoming.PremisesTogether": "becoming/Becoming/PremisesTogether.lean",
     "Becoming.SignificanceStatements": "becoming/Becoming/SignificanceStatements.lean",
+    "Becoming.AdaptiveLoops": "becoming/Becoming/AdaptiveLoops.lean",
     "Becoming.SeedReach": "becoming/Becoming/SeedReach.lean",
     "Becoming.ScopedReach": "becoming/Becoming/ScopedReach.lean",
     "Becoming.Hexagrams": "becoming/Becoming/Hexagrams.lean",
@@ -2490,6 +2495,7 @@
     "Becoming.WayUnderARule": "cf1292569ccb316cd1526ffec3dd1fcd39a59edf2cdad3b1b28a9267a8b1cfce",
     "Becoming.PremisesTogether": "407e0dcb0649a74464ab1a0316841514d631424ba80d1fd400908232ab4fa17f",
     "Becoming.SignificanceStatements": "fc113c0379fc4e0f4458021514b96b1ef2383f5abe0a12b4330615288991907d",
+    "Becoming.AdaptiveLoops": "8af6af19850cbceb8cbaeca07d66ebd6640f4ca852a5dfc68ac1ea9196f02cf6",
     "Becoming.SeedReach": "6c21f636369688b6247052cb7434aebdd1669dc2dc0ff3a906a2032193deb066",
     "Becoming.ScopedReach": "0432efe6bf31ceff196a4d058a6b77710871ed130eb562dc0ad05d00a873e5ae",
     "Becoming.Hexagrams": "7bcc1ca10eb46afc25efe9c5d8c54ce9840c0be831b8427f0dc3b024117786a3",
@@ -2508,17 +2514,17 @@
     "Becoming.ReaderRebuilding": "25f0d49255972cec8024970a4249dd9228baed14308c90c83dec223bf4378713",
     "Becoming.RuleRebuilding": "fe82de1f1377255eb7fc7b3cd42cad7245bd45882f4e58a6e82d3575e2c28709",
     "Becoming.ResponseLearning": "3f570198fcae3a551c9ca5807d58353cec3d393a00d37a21d89a98c789a725d2",
-    "Becoming": "07582231e0bce228a28dfb9f50e70cf3c73044f1a65d0577a6dd1c8227de0219"
+    "Becoming": "082503e937f66ce04b9823a34a905970670df84f8c0d02f51a237de2d6799092"
   },
   "checker_sha256": {
-    "check_becoming.py": "7aea5280045d874316a2a004d5feaa90cbd52b8dca31827dee235977b8bbaa92",
+    "check_becoming.py": "8c919af761d003114b7b3adfad80838c8bb17eead554a7d68eaac269306b0df5",
     "check.py": "4f9cb94de69bd0e7da6bc7ab1ae1cfd26e2d5848dabda5cbb88aebc36ac52da3"
   },
   "runner_sha256": "cdc5b2e9fe6915233f5e39ec1b4ad30b615e15dbbea393adda2effba0e7c7de2",
   "source_commit": {
-    "main": "1ae115f4027d2304f0a8cdbdb9dfac0cb443be2b",
+    "main": "e6f70f2d22cd5f31387724c3f3e4b247f020210c",
     "copied": [
-      "Becoming.WayUnderARule.lean",
+      "Becoming.AdaptiveLoops.lean",
       "Becoming.lean",
       "check_becoming.py"
     ]
@@ -2529,13 +2535,13 @@
     "fresh": false,
     "ran": [
       "version.log",
-      "BecomingWayUnderARuleSignatures.log",
+      "BecomingAdaptiveLoopsSignatures.log",
       "Becoming.log",
       "BecomingAxiomAudit.log",
       "BecomingSignatures.log",
       "EnvironmentAudit.log",
       "Controls.log",
-      "Becoming.WayUnderARule.PreludeOnly.log",
+      "Becoming.AdaptiveLoops.PreludeOnly.log",
       "Becoming.PreludeOnly.log"
     ],
     "reused": {
@@ -7251,6 +7257,10 @@
         "utc": "20261123T075023.215708Z",
         "retained": "scratch build, not retained: /Users/ren/tmp/dj/rule23/tree"
       },
+      "BecomingWayUnderARuleSignatures.log": {
+        "utc": "20261123T075124.334546Z",
+        "retained": "/Users/ren/tmp/dj/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T075124.334546Z"
+      },
       "Becoming.PremisesTogether.log": {
         "utc": "20261122T094514.036246Z",
         "retained": "/Users/ren/tmp/fm/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T094514.036246Z"
@@ -7274,6 +7284,14 @@
       "BecomingSignificanceStatementsSignatures.log": {
         "utc": "20261122T094514.036246Z",
         "retained": "/Users/ren/tmp/fm/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T094514.036246Z"
+      },
+      "Becoming.AdaptiveLoops.log": {
+        "utc": "20261123T122122.430361Z",
+        "retained": "scratch build, not retained: /Users/ren/tmp/p1b/tree"
+      },
+      "BecomingAdaptiveLoopsAxiomAudit.log": {
+        "utc": "20261123T122122.430361Z",
+        "retained": "scratch build, not retained: /Users/ren/tmp/p1b/tree"
       },
       "Becoming.SeedReach.log": {
         "utc": "20261109T150228.155067Z",
@@ -9063,6 +9081,10 @@
         "utc": "20261122T223051.838511Z",
         "retained": "scratch build, not retained: /Users/ren/tmp/dj/below23/all"
       },
+      "Becoming.WayUnderARule.PreludeOnly.log": {
+        "utc": "20261123T075124.334546Z",
+        "retained": "/Users/ren/tmp/dj/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T075124.334546Z"
+      },
       "Becoming.PremisesTogether.PreludeOnly.log": {
         "utc": "20261122T094514.036246Z",
         "retained": "/Users/ren/tmp/fm/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T094514.036246Z"
@@ -10330,6 +10352,9 @@
       "Becoming.SignificanceStatements.log": "8c3e676f0ecd3d00aece5be256768b2bfc7a19f39888a0b4eea2dbf1d12e664d",
       "BecomingSignificanceStatementsAxiomAudit.log": "abf2ae844d02d8767bbd3a3ac76bfa6a56bb26a3dfe2665491bfc7c2234048f8",
       "BecomingSignificanceStatementsSignatures.log": "048ee478b626dd33cebf83b036340e6d302da5825f63c561f53f86f234d996c9",
+      "Becoming.AdaptiveLoops.log": "f20ca2a14e3a5ad597f0bc503e195805cb015bbe13e19db62ab169fc61968acb",
+      "BecomingAdaptiveLoopsAxiomAudit.log": "0e499e5b12ff768237e8017d6f055ec76ab83bd379d466b1008c8c47770d683c",
+      "BecomingAdaptiveLoopsSignatures.log": "624701b2309b4016c095d272eea856e9b65d3eb63c23537ae5972d588894e2d4",
       "Becoming.SeedReach.log": "69e9093daed2cb3a35b84a3db09258074b3c837b06184fbeb2a3ce4357438d9a",
       "BecomingSeedReachAxiomAudit.log": "325b832f6ca3591cc9f1580c04f87a51dbdce5aeb0cc327a1ef4b126a088902d",
       "BecomingSeedReachSignatures.log": "61a9a40165856bdd55c8c10d23e7f1a7023f7d14510b64e75d74d9d438f9f945",
@@ -10384,11 +10409,11 @@
       "Becoming.ResponseLearning.log": "19c5dfae2897081b2db2a6479e4b6630f3e12729c7a5b2018b2f3b56e9252710",
       "BecomingResponseLearningAxiomAudit.log": "358f4819a31b44cc8105702cdd098101a2dac4da9f87e46a44072360231c8abb",
       "BecomingResponseLearningSignatures.log": "ee5e63f24cc980784d60513ca2cf139807117cb10932dc5bc49d85bdc89e8bfa",
-      "Becoming.log": "8d40bcb753862194f02876c678402621cc59743fd26d43de35fa1e5d44db394a",
-      "BecomingAxiomAudit.log": "58c06425458332aa6dbd7d36146d8c93f43919c70aed3f0cbbe361585584d33f",
-      "BecomingSignatures.log": "459a917076641b3043e21287e0f8d12e834c19ec93219200d645e0e8f88a655b",
-      "EnvironmentAudit.log": "3125109686622a1243bbd353fd2dc1b9bb174b12360e1ed9209377637003a67c",
-      "Controls.log": "6c19e30365dcc5fb72e5a8f51d33f518e045cc9ecb98fba7e6ca454abae9047c",
+      "Becoming.log": "6a238e90c0ba454475e9a6fa3b20e6c083a0396d74125298c49ac4bf57b446e8",
+      "BecomingAxiomAudit.log": "46157011ca75203c6f61af0960578a83d7d142aaed731f4354e15ab54f7efdd3",
+      "BecomingSignatures.log": "753d0521b6e860577d2b1a985eba47cabfe2f26f9776762cd49e89b00732122b",
+      "EnvironmentAudit.log": "e9bde44c61d2e985e6b0bf9cf4693530e01cccd4fa3210de23b47a0773120a5a",
+      "Controls.log": "aa22ce14728c37e1045bc3fe98bde7bfb8cb96a2096e2df4f35f347df56fab46",
       "Becoming.Grammar.PreludeOnly.log": "76d3cd6879ccdfaed9db9cc98947cb68fe604b6ec9c632c3569df134642978a0",
       "Becoming.GrammarReadings.PreludeOnly.log": "96d3eaac03a03246c68b669a66e92565f381f028768625af72b0ecd42c10d168",
       "Becoming.GrammarMap.PreludeOnly.log": "57b332119ea3feae52717dc0b9c6e6a8461bd8fd25ec4a4b45ba5bbf5e0d743b",
@@ -10785,6 +10810,7 @@
       "Becoming.WayUnderARule.PreludeOnly.log": "c25732e144d6f71dab471d62239c4c94840c039400fd0120d2db155b15fee731",
       "Becoming.PremisesTogether.PreludeOnly.log": "a4ffe3018f19ce4377fd0d21d344ce3370b4d48a31b25dd4f0876d7c18d9fd15",
       "Becoming.SignificanceStatements.PreludeOnly.log": "f95a81b36fad88bb7622ff3e5bf7e565a136332d3d0b87a78364d24d5f21801b",
+      "Becoming.AdaptiveLoops.PreludeOnly.log": "ff4d6bb01ae5436c1c5d89e514fefd57423b1016b5920b440fe412ee430787b3",
       "Becoming.SeedReach.PreludeOnly.log": "5e0fe6d1427e5096dc5d3fe7ce927e5f3ec9ddd47f7388b1be9da3f470f16402",
       "Becoming.ScopedReach.PreludeOnly.log": "607b3bc88a2c83cd017f2c975691178de1bc72ff0e4088657706581881e9588f",
       "Becoming.Hexagrams.PreludeOnly.log": "383eba428321c4f4bf3c42ba71f5579c797e6fc21217bcd64ea83fde36cb8034",
@@ -10803,20 +10829,20 @@
       "Becoming.ReaderRebuilding.PreludeOnly.log": "c8d322b9ede23ee2284eb9df3a722c142355439a67f3384354dcb30d9488324f",
       "Becoming.RuleRebuilding.PreludeOnly.log": "a80b8eb0e41678da8ed169c4f5b42a9cccc07497817f17b097cc1e4c31864288",
       "Becoming.ResponseLearning.PreludeOnly.log": "fbbe23d3e24bafddda6a674b0ab564f1e8b10a86aa7a0de259e17a82bd6755dd",
-      "Becoming.PreludeOnly.log": "9fc0fc3cdb2e28f47c605c84e13d262960ad91f03d12aa0f0a4488d225220eb2"
+      "Becoming.PreludeOnly.log": "605dddb090bd850b00c76fb34d90a69a8a0e5546576b0ebe0fd10885196e7cb2"
     },
     "seconds": {
-      "version.log": 0.335,
-      "BecomingWayUnderARuleSignatures.log": 1.937,
-      "Becoming.log": 2.298,
-      "BecomingAxiomAudit.log": 0.649,
-      "BecomingSignatures.log": 0.644,
-      "EnvironmentAudit.log": 42.353,
-      "Controls.log": 0.68,
-      "Becoming.WayUnderARule.PreludeOnly.log": 2.728,
-      "Becoming.PreludeOnly.log": 0.381
+      "version.log": 0.303,
+      "BecomingAdaptiveLoopsSignatures.log": 1.766,
+      "Becoming.log": 2.194,
+      "BecomingAxiomAudit.log": 0.644,
+      "BecomingSignatures.log": 0.661,
+      "EnvironmentAudit.log": 43.901,
+      "Controls.log": 0.697,
+      "Becoming.AdaptiveLoops.PreludeOnly.log": 3.609,
+      "Becoming.PreludeOnly.log": 0.383
     },
-    "wall_seconds": 46.862
+    "wall_seconds": 48.347
   },
   "superseded_modules": {
     "AcquiredCorrection": {
@@ -12922,6 +12948,7 @@
     "Becoming.WayUnderARule": 206,
     "Becoming.PremisesTogether": 107,
     "Becoming.SignificanceStatements": 5,
+    "Becoming.AdaptiveLoops": 321,
     "Becoming.SeedReach": 31,
     "Becoming.ScopedReach": 60,
     "Becoming.Hexagrams": 199,
@@ -13712,6 +13739,18 @@
       "propext"
     ],
     "Becoming.SharedCondition.Occ.b.injEq": [
+      "propext"
+    ],
+    "Becoming.AdaptiveLoops.LoopCertificate.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.AdaptiveLoops.RaceParams.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.AdaptiveLoops.RaceState.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.AdaptiveLoops.OpenLoop.mk.injEq": [
       "propext"
     ],
     "Becoming.Hexagram.mk.injEq": [
@@ -151388,6 +151427,632 @@
       "kernel_checked": true
     },
     {
+      "module": "Becoming.AdaptiveLoops",
+      "spine": true,
+      "layer": "core",
+      "theorems": 60,
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.natMax"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.le_natMax_left"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.le_natMax_right"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.natMax_le"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.natBlt_true_iff"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.natBlt_false_iff"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.natBeq_true_iff"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.AdaptiveLoops.OpenLoop"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.OpenLoop.process"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.AdaptiveLoops.LoopCertificate"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.indexedStep_mono"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.indexedStep_antitone_H"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.indexedStep_ge_sub"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.sumDraws"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.sumDraws_le"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.foldNatMax"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.le_foldNatMax_of_mem"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.foldNatMax_le_of_all"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.foldNatMax_eq_zero"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.foldNatMax_succ_le"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.globalMaxLag"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.maxEta"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.preTotal"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.jointStep"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.jointAdmAll"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.jointProcess"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.jointGuard"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.jointInv"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.assume_guarantee_joint_viable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.assume_guarantee_joint_kernel"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.AdaptiveLoops.RaceMember"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.raceMembers"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.raceMemberRead"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.signalLevel"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.majorityBool"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.majorityBool_true_iff"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.race_pool_majority_of_lt"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.race_pool_silenced_via_majority_outvoted"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.AdaptiveLoops.CoordMode"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.drawerRules"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.shorePortion"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.postDraw"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.postDraw_coordinated"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.postDraw_uncoordinated"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.coordinated_pool_leaves_one"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.uncoordinated_drain_perfect"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.any_uncoupled_perfect_on_shore_drains"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.raceGiving"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.raceGiving_atMost"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.raceGiving_fromNothing"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.raceGiving_short_two"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.raceGiving_short_three"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.AdaptiveLoops.RaceParams"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.AdaptiveLoops.RaceState"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.isProbeStep"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.isLowVal"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.isBenignWorld"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.valueEq"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.valueEq_true_iff"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.raceStep"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.raceInit"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.raceOrbit"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.race_alarm_gate_iff"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.goodParams"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.noDiscParams"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.noDiscBenignParams"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.silencedParams"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.uncoordParams"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.tooSlowParams"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.good_after_four"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.WitnessGood"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.noDisc_stays"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.WitnessNoDiscovery"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.raceStep_silenced_step"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.silenced_never_alarms"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.WitnessSilenced"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.WitnessUncoordinated"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.WitnessTooSlow"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.coupled_race_theorem"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.paced_fast_succ_local"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.unread_orbit_le"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.unread_adaptive_joint_collapse"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_mono"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_atMost"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_short_four"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_fromNothing"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.ruleDraw"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.soloStep"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_holds_true"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_const_three"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_const_two"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointDraw"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.LocalOK"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.joint_unread"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointDraw_ge_four"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.localOK_holds"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.witness"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.EndogAgent"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAgents"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.giving"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogG"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogG_rises"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogLoop"
+        },
+        {
+          "kind": "abbrev",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.EndogState"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogF"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogRuleG"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt_determined"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt_rule_matters"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogNext"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogNext_is_adaptive"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogOpenLoop"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogObs"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogChannel"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogCert"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.initFavours"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.initRestrained"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_joint_viable"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogRun"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_bidirectional_adaptation"
+        }
+      ],
+      "axiom_dependencies": {
+        "Becoming.AdaptiveLoops.natMax": [],
+        "Becoming.AdaptiveLoops.le_natMax_left": [],
+        "Becoming.AdaptiveLoops.le_natMax_right": [],
+        "Becoming.AdaptiveLoops.natMax_le": [],
+        "Becoming.AdaptiveLoops.natBlt_true_iff": [],
+        "Becoming.AdaptiveLoops.natBlt_false_iff": [],
+        "Becoming.AdaptiveLoops.natBeq_true_iff": [],
+        "Becoming.AdaptiveLoops.OpenLoop": [],
+        "Becoming.AdaptiveLoops.OpenLoop.process": [],
+        "Becoming.AdaptiveLoops.LoopCertificate": [],
+        "Becoming.AdaptiveLoops.indexedStep_mono": [],
+        "Becoming.AdaptiveLoops.indexedStep_antitone_H": [],
+        "Becoming.AdaptiveLoops.indexedStep_ge_sub": [],
+        "Becoming.AdaptiveLoops.sumDraws": [],
+        "Becoming.AdaptiveLoops.sumDraws_le": [],
+        "Becoming.AdaptiveLoops.foldNatMax": [],
+        "Becoming.AdaptiveLoops.le_foldNatMax_of_mem": [],
+        "Becoming.AdaptiveLoops.foldNatMax_le_of_all": [],
+        "Becoming.AdaptiveLoops.foldNatMax_eq_zero": [],
+        "Becoming.AdaptiveLoops.foldNatMax_succ_le": [],
+        "Becoming.AdaptiveLoops.globalMaxLag": [],
+        "Becoming.AdaptiveLoops.maxEta": [],
+        "Becoming.AdaptiveLoops.preTotal": [],
+        "Becoming.AdaptiveLoops.jointStep": [],
+        "Becoming.AdaptiveLoops.jointAdmAll": [],
+        "Becoming.AdaptiveLoops.jointProcess": [],
+        "Becoming.AdaptiveLoops.jointGuard": [],
+        "Becoming.AdaptiveLoops.jointInv": [],
+        "Becoming.AdaptiveLoops.assume_guarantee_joint_viable": [],
+        "Becoming.AdaptiveLoops.assume_guarantee_joint_kernel": [],
+        "Becoming.AdaptiveLoops.RaceMember": [],
+        "Becoming.AdaptiveLoops.raceMembers": [],
+        "Becoming.AdaptiveLoops.raceMemberRead": [],
+        "Becoming.AdaptiveLoops.signalLevel": [],
+        "Becoming.AdaptiveLoops.majorityBool": [],
+        "Becoming.AdaptiveLoops.majorityBool_true_iff": [],
+        "Becoming.AdaptiveLoops.race_pool_majority_of_lt": [],
+        "Becoming.AdaptiveLoops.race_pool_silenced_via_majority_outvoted": [],
+        "Becoming.AdaptiveLoops.CoordMode": [],
+        "Becoming.AdaptiveLoops.drawerRules": [],
+        "Becoming.AdaptiveLoops.shorePortion": [],
+        "Becoming.AdaptiveLoops.postDraw": [],
+        "Becoming.AdaptiveLoops.postDraw_coordinated": [],
+        "Becoming.AdaptiveLoops.postDraw_uncoordinated": [],
+        "Becoming.AdaptiveLoops.coordinated_pool_leaves_one": [],
+        "Becoming.AdaptiveLoops.uncoordinated_drain_perfect": [],
+        "Becoming.AdaptiveLoops.any_uncoupled_perfect_on_shore_drains": [],
+        "Becoming.AdaptiveLoops.raceGiving": [],
+        "Becoming.AdaptiveLoops.raceGiving_atMost": [],
+        "Becoming.AdaptiveLoops.raceGiving_fromNothing": [],
+        "Becoming.AdaptiveLoops.raceGiving_short_two": [],
+        "Becoming.AdaptiveLoops.raceGiving_short_three": [],
+        "Becoming.AdaptiveLoops.RaceParams": [],
+        "Becoming.AdaptiveLoops.RaceState": [],
+        "Becoming.AdaptiveLoops.isProbeStep": [],
+        "Becoming.AdaptiveLoops.isLowVal": [],
+        "Becoming.AdaptiveLoops.isBenignWorld": [],
+        "Becoming.AdaptiveLoops.valueEq": [],
+        "Becoming.AdaptiveLoops.valueEq_true_iff": [],
+        "Becoming.AdaptiveLoops.raceStep": [],
+        "Becoming.AdaptiveLoops.raceInit": [],
+        "Becoming.AdaptiveLoops.raceOrbit": [],
+        "Becoming.AdaptiveLoops.race_alarm_gate_iff": [],
+        "Becoming.AdaptiveLoops.goodParams": [],
+        "Becoming.AdaptiveLoops.noDiscParams": [],
+        "Becoming.AdaptiveLoops.noDiscBenignParams": [],
+        "Becoming.AdaptiveLoops.silencedParams": [],
+        "Becoming.AdaptiveLoops.uncoordParams": [],
+        "Becoming.AdaptiveLoops.tooSlowParams": [],
+        "Becoming.AdaptiveLoops.good_after_four": [],
+        "Becoming.AdaptiveLoops.WitnessGood": [],
+        "Becoming.AdaptiveLoops.noDisc_stays": [],
+        "Becoming.AdaptiveLoops.WitnessNoDiscovery": [],
+        "Becoming.AdaptiveLoops.raceStep_silenced_step": [],
+        "Becoming.AdaptiveLoops.silenced_never_alarms": [],
+        "Becoming.AdaptiveLoops.WitnessSilenced": [],
+        "Becoming.AdaptiveLoops.WitnessUncoordinated": [],
+        "Becoming.AdaptiveLoops.WitnessTooSlow": [],
+        "Becoming.AdaptiveLoops.coupled_race_theorem": [],
+        "Becoming.AdaptiveLoops.paced_fast_succ_local": [],
+        "Becoming.AdaptiveLoops.unread_orbit_le": [],
+        "Becoming.AdaptiveLoops.unread_adaptive_joint_collapse": [],
+        "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub": [],
+        "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_mono": [],
+        "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_atMost": [],
+        "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_short_four": [],
+        "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_fromNothing": [],
+        "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.ruleDraw": [],
+        "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.soloStep": [],
+        "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_holds_true": [],
+        "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_const_three": [],
+        "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_const_two": [],
+        "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF": [],
+        "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH": [],
+        "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointDraw": [],
+        "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.LocalOK": [],
+        "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.joint_unread": [],
+        "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointDraw_ge_four": [],
+        "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.localOK_holds": [],
+        "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.witness": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.EndogAgent": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAgents": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.giving": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogG": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogG_rises": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogLoop": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.EndogState": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogF": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogRuleG": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt_determined": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt_rule_matters": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogNext": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogNext_is_adaptive": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogOpenLoop": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogObs": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogChannel": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogCert": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.initFavours": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.initRestrained": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_joint_viable": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogRun": [],
+        "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_bidirectional_adaptation": []
+      },
+      "kernel_checked": true
+    },
+    {
       "module": "Becoming.SeedReach",
       "spine": true,
       "layer": "application",
@@ -159331,22 +159996,22 @@
     }
   ],
   "artifact_sha256": {
+    "Becoming.AdaptiveLoops.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.AdaptiveLoops.lean": "8af6af19850cbceb8cbaeca07d66ebd6640f4ca852a5dfc68ac1ea9196f02cf6",
     "Becoming.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.WayUnderARule.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.WayUnderARule.lean": "cf1292569ccb316cd1526ffec3dd1fcd39a59edf2cdad3b1b28a9267a8b1cfce",
-    "Becoming.lean": "07582231e0bce228a28dfb9f50e70cf3c73044f1a65d0577a6dd1c8227de0219",
+    "Becoming.lean": "082503e937f66ce04b9823a34a905970670df84f8c0d02f51a237de2d6799092",
     "Becoming.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "BecomingAdaptiveLoopsSignatures.lean": "25e1b544f77cb3d57095e7c1066e38d907dccd33f50263d51e39a8351cb8afb3",
+    "BecomingAdaptiveLoopsSignatures.log": "260255b8a18d7eb47b68451855db4840b4f3e7ddd1cd2ffdaedcbf999887f9e5",
     "BecomingAxiomAudit.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingAxiomAudit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "BecomingSignatures.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingSignatures.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "BecomingWayUnderARuleSignatures.lean": "16185cfe4a7fb48d6bbb9bd2fd47d6257e50ec8eae0a6c286f81b5df7cb8cac5",
-    "BecomingWayUnderARuleSignatures.log": "ec985dc1cace7504003061df5e84316d1192957ecd08b16c0d0b0caf9f99e15d",
     "Controls.lean": "b6d4d1772f4c923833bc713f3b9f170a10ef362d699f4b854401adb21fe22f57",
     "Controls.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "EnvironmentAudit.lean": "51f04e6e228f8b1b4b84c20852574634e4ab73025a6690cd61eeb671a07e800b",
-    "EnvironmentAudit.log": "a35f889f70890d556854c411423811d5dbf9738dfb18c9996116e2e32d5090ec",
-    "check_becoming.py": "7aea5280045d874316a2a004d5feaa90cbd52b8dca31827dee235977b8bbaa92",
+    "EnvironmentAudit.lean": "f72eb8554ecb23026ded6a3f3ff73794380dd83d49b6736a8a2f8cc7d9b5f799",
+    "EnvironmentAudit.log": "a247bfdc74a176b90d04dadb03fea682551368251073b59730fc5a13fcac8eb1",
+    "check_becoming.py": "8c919af761d003114b7b3adfad80838c8bb17eead554a7d68eaac269306b0df5",
     "version.log": "3185b32e24f5aea32feec5ebb137ef7b0b6d7b33707fb4f254924fe41b5ded8b"
   }
 }
