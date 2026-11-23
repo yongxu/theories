@@ -1,0 +1,413 @@
+@Becoming.Flow.held_below_within : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {m T N : Nat} {c : C},
+  (∀ (t : Nat), T ≤ t → t < T + N → L.BalancesOn W [c] t) →
+    (∀ (t : Nat), T ≤ t → t < T + N → W.level t c < m → L.given t c ≤ L.taken t c) →
+      W.level T c < m → ∀ (n : Nat), n ≤ N → W.level (T + n) c ≤ W.level T c
+@Becoming.Flow.never_returns_below_within : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {m T N : Nat}
+  {c : C},
+  (∀ (t : Nat), T ≤ t → t < T + N → L.BalancesOn W [c] t) →
+    (∀ (t : Nat), T ≤ t → t < T + N → W.level t c < m → L.given t c ≤ L.taken t c) →
+      W.level T c < m → ∀ (n : Nat), n ≤ N → W.level (T + n) c < m
+@Becoming.WayUnderARule.reachUnit_course : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat} (n : Nat) {u : U},
+  u ∈ (Becoming.WayUnderARule.course need kids next giving use s n).fst.fst →
+    Becoming.WayUnderARule.ReachUnit kids s.fst.fst n u
+@Becoming.WayUnderARule.taken_below : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U} {next : List U → R → R}
+  {giving : Nat → Nat} {use : U → Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    ∀ {s : (List U × R) × Nat},
+      Becoming.WayUnderARule.Needing need kids s.fst.fst →
+        ∀ {n : Nat},
+          Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s (n + 1)) →
+            Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.course need kids next giving use s n).fst.fst <
+              (Becoming.WayUnderARule.course need kids next giving use s n).snd
+@Becoming.WayUnderARule.unending_taken_below : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    ∀ {s : (List U × R) × Nat},
+      Becoming.WayUnderARule.Needing need kids s.fst.fst →
+        Becoming.«不穷» (Becoming.WayUnderARule.net need kids next giving use) Becoming.«一» s →
+          ∀ (n : Nat),
+            Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.course need kids next giving use s n).fst.fst <
+              (Becoming.WayUnderARule.course need kids next giving use s n).snd
+Becoming.StockFlowBridge.unitFlow_taken : ∀ (takeFn giveFn : Nat → Nat) (t : Nat),
+  (Becoming.StockFlowBridge.unitFlow takeFn giveFn).taken t () = takeFn t
+Becoming.StockFlowBridge.unitFlow_given : ∀ (takeFn giveFn : Nat → Nat) (t : Nat),
+  (Becoming.StockFlowBridge.unitFlow takeFn giveFn).given t () = giveFn t
+Becoming.StockFlowBridge.unitFlow_uptake : ∀ (takeFn giveFn : Nat → Nat) (t : Nat),
+  (Becoming.StockFlowBridge.unitFlow takeFn giveFn).uptake [()] t = takeFn t
+Becoming.StockFlowBridge.unitFlow_replenishment : ∀ (takeFn giveFn : Nat → Nat) (t : Nat),
+  (Becoming.StockFlowBridge.unitFlow takeFn giveFn).replenishment [()] t = giveFn t
+Becoming.StockFlowBridge.unitWeb_stock : ∀ (levelFn : Nat → Nat) (k : Nat),
+  (Becoming.StockFlowBridge.unitWeb levelFn).stock [()] k = levelFn k
+@Becoming.StockFlowBridge.unitBalancesOn_of_le : ∀ {levelFn takeFn giving : Nat → Nat} {t : Nat},
+  levelFn (t + 1) = Becoming.RegimeMargin.step giving (takeFn t) (levelFn t) →
+    takeFn t ≤ levelFn t →
+      (Becoming.StockFlowBridge.unitFlow takeFn fun k => giving (levelFn k - takeFn k)).BalancesOn
+        (Becoming.StockFlowBridge.unitWeb levelFn) [()] t
+@Becoming.StockFlowBridge.unitAccumulates_of_balances : ∀ {levelFn takeFn giveFn : Nat → Nat} {T N : Nat},
+  (∀ (t : Nat),
+      T ≤ t →
+        t < T + N →
+          (Becoming.StockFlowBridge.unitFlow takeFn giveFn).BalancesOn (Becoming.StockFlowBridge.unitWeb levelFn) [()]
+            t) →
+    levelFn (T + N) + Becoming.total (Becoming.steps T N) takeFn =
+      levelFn T + Becoming.total (Becoming.steps T N) giveFn
+@Becoming.StockFlowBridge.unitAccumulates_of_global_balances : ∀ {levelFn takeFn giveFn : Nat → Nat} {N : Nat},
+  (Becoming.StockFlowBridge.unitFlow takeFn giveFn).Balances (Becoming.StockFlowBridge.unitWeb levelFn) →
+    levelFn N + Becoming.total (Becoming.steps 0 N) takeFn = levelFn 0 + Becoming.total (Becoming.steps 0 N) giveFn
+@Becoming.StockFlowBridge.unitNeverReturnsBelowWithin : ∀ {levelFn takeFn giveFn : Nat → Nat} {m T N : Nat},
+  (∀ (t : Nat),
+      T ≤ t →
+        t < T + N →
+          (Becoming.StockFlowBridge.unitFlow takeFn giveFn).BalancesOn (Becoming.StockFlowBridge.unitWeb levelFn) [()]
+            t) →
+    (∀ (t : Nat), T ≤ t → t < T + N → levelFn t < m → giveFn t ≤ takeFn t) →
+      (Becoming.StockFlowBridge.unitWeb levelFn).level T () < m →
+        ∀ (n : Nat), n ≤ N → (Becoming.StockFlowBridge.unitWeb levelFn).level (T + n) () < m
+@Becoming.StockFlowBridge.line_taken_lt_of_goes : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {giving : Nat → Nat}
+  {use : U → Nat} {s : List U × Nat} {T N : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.LineOnAStock.Needing need kids s.fst →
+      (∀ (t : Nat),
+          T ≤ t → t ≤ T + N → Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use s t)) →
+        ∀ {t : Nat},
+          T ≤ t →
+            t < T + N →
+              Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst <
+                (Becoming.LineOnAStock.course need kids giving use s t).snd
+@Becoming.StockFlowBridge.line_balancesOn_of_within : ∀ {U : Type} {need : U → Nat} {kids : U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {s : List U × Nat} {T N : Nat},
+  (∀ (t : Nat),
+      T ≤ t →
+        t < T + N →
+          Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst ≤
+            (Becoming.LineOnAStock.course need kids giving use s t).snd) →
+    ∀ (t : Nat),
+      T ≤ t →
+        t < T + N →
+          (Becoming.StockFlowBridge.lineFlow need kids giving use s).BalancesOn
+            (Becoming.StockFlowBridge.lineWeb need kids giving use s) [()] t
+@Becoming.StockFlowBridge.line_balancesOn_of_goes : ∀ {U : Type} {need : U → Nat} {kids : U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {s : List U × Nat} {T N : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.LineOnAStock.Needing need kids s.fst →
+      (∀ (t : Nat),
+          T ≤ t → t ≤ T + N → Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use s t)) →
+        ∀ (t : Nat),
+          T ≤ t →
+            t < T + N →
+              (Becoming.StockFlowBridge.lineFlow need kids giving use s).BalancesOn
+                (Becoming.StockFlowBridge.lineWeb need kids giving use s) [()] t
+@Becoming.StockFlowBridge.line_balances_of_unending : ∀ {U : Type} {need : U → Nat} {kids : U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {s : List U × Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.LineOnAStock.Needing need kids s.fst →
+      Becoming.«不穷» (Becoming.LineOnAStock.net need kids giving use) Becoming.«一» s →
+        (Becoming.StockFlowBridge.lineFlow need kids giving use s).Balances
+          (Becoming.StockFlowBridge.lineWeb need kids giving use s)
+@Becoming.StockFlowBridge.line_accumulates_of_within : ∀ {U : Type} {need : U → Nat} {kids : U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {s : List U × Nat} {T N : Nat},
+  (∀ (t : Nat),
+      T ≤ t →
+        t < T + N →
+          Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst ≤
+            (Becoming.LineOnAStock.course need kids giving use s t).snd) →
+    ((Becoming.LineOnAStock.course need kids giving use s (T + N)).snd +
+        Becoming.total (Becoming.steps T N) fun t =>
+          Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst) =
+      (Becoming.LineOnAStock.course need kids giving use s T).snd +
+        Becoming.total (Becoming.steps T N) fun t =>
+          giving
+            ((Becoming.LineOnAStock.course need kids giving use s t).snd -
+              Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst)
+@Becoming.StockFlowBridge.line_accumulates_of_goes : ∀ {U : Type} {need : U → Nat} {kids : U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {s : List U × Nat} {T N : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.LineOnAStock.Needing need kids s.fst →
+      (∀ (t : Nat),
+          T ≤ t → t ≤ T + N → Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use s t)) →
+        ((Becoming.LineOnAStock.course need kids giving use s (T + N)).snd +
+            Becoming.total (Becoming.steps T N) fun t =>
+              Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst) =
+          (Becoming.LineOnAStock.course need kids giving use s T).snd +
+            Becoming.total (Becoming.steps T N) fun t =>
+              giving
+                ((Becoming.LineOnAStock.course need kids giving use s t).snd -
+                  Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst)
+@Becoming.StockFlowBridge.line_account_of_goes : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {giving : Nat → Nat}
+  {use : U → Nat} {s : List U × Nat} (N : Nat),
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.LineOnAStock.Needing need kids s.fst →
+      (∀ (t : Nat),
+          0 ≤ t → t ≤ N → Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use s t)) →
+        ((Becoming.LineOnAStock.course need kids giving use s N).snd +
+            Becoming.total (Becoming.steps 0 N) fun t =>
+              Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst) =
+          s.snd +
+            Becoming.total (Becoming.steps 0 N) fun t =>
+              giving
+                ((Becoming.LineOnAStock.course need kids giving use s t).snd -
+                  Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst)
+@Becoming.StockFlowBridge.line_account_unending_via_flow : ∀ {U : Type} {need : U → Nat} {kids : U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {s : List U × Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.LineOnAStock.Needing need kids s.fst →
+      Becoming.«不穷» (Becoming.LineOnAStock.net need kids giving use) Becoming.«一» s →
+        ∀ (N : Nat),
+          ((Becoming.LineOnAStock.course need kids giving use s N).snd +
+              Becoming.total (Becoming.steps 0 N) fun t =>
+                Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst) =
+            s.snd +
+              Becoming.total (Becoming.steps 0 N) fun t =>
+                giving
+                  ((Becoming.LineOnAStock.course need kids giving use s t).snd -
+                    Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst)
+@Becoming.StockFlowBridge.line_never_returns_below_within_of_within : ∀ {U : Type} {need : U → Nat} {kids : U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {s : List U × Nat} {m T N : Nat},
+  (∀ (t : Nat),
+      T ≤ t →
+        t < T + N →
+          Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst ≤
+            (Becoming.LineOnAStock.course need kids giving use s t).snd) →
+    (∀ (t : Nat),
+        T ≤ t →
+          t < T + N →
+            (Becoming.StockFlowBridge.lineWeb need kids giving use s).level t () < m →
+              (Becoming.StockFlowBridge.lineFlow need kids giving use s).given t () ≤
+                (Becoming.StockFlowBridge.lineFlow need kids giving use s).taken t ()) →
+      (Becoming.StockFlowBridge.lineWeb need kids giving use s).level T () < m →
+        ∀ (n : Nat), n ≤ N → (Becoming.StockFlowBridge.lineWeb need kids giving use s).level (T + n) () < m
+@Becoming.StockFlowBridge.line_never_returns_below_within : ∀ {U : Type} {need : U → Nat} {kids : U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {s : List U × Nat} {m T N : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.LineOnAStock.Needing need kids s.fst →
+      (∀ (t : Nat),
+          T ≤ t → t ≤ T + N → Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use s t)) →
+        (∀ (t : Nat),
+            T ≤ t →
+              t < T + N →
+                (Becoming.StockFlowBridge.lineWeb need kids giving use s).level t () < m →
+                  (Becoming.StockFlowBridge.lineFlow need kids giving use s).given t () ≤
+                    (Becoming.StockFlowBridge.lineFlow need kids giving use s).taken t ()) →
+          (Becoming.StockFlowBridge.lineWeb need kids giving use s).level T () < m →
+            ∀ (n : Nat), n ≤ N → (Becoming.StockFlowBridge.lineWeb need kids giving use s).level (T + n) () < m
+@Becoming.StockFlowBridge.way_taken_lt_of_goes : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat} {T N : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.WayUnderARule.Needing need kids s.fst.fst →
+      (∀ (t : Nat),
+          T ≤ t →
+            t ≤ T + N →
+              Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s t)) →
+        ∀ {t : Nat},
+          T ≤ t →
+            t < T + N →
+              Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.course need kids next giving use s t).fst.fst <
+                (Becoming.WayUnderARule.course need kids next giving use s t).snd
+@Becoming.StockFlowBridge.way_balancesOn_of_within : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat} {T N : Nat},
+  (∀ (t : Nat),
+      T ≤ t →
+        t < T + N →
+          Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.course need kids next giving use s t).fst.fst ≤
+            (Becoming.WayUnderARule.course need kids next giving use s t).snd) →
+    ∀ (t : Nat),
+      T ≤ t →
+        t < T + N →
+          (Becoming.StockFlowBridge.wayFlow need kids next giving use s).BalancesOn
+            (Becoming.StockFlowBridge.wayWeb need kids next giving use s) [()] t
+@Becoming.StockFlowBridge.way_balancesOn_of_goes : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat} {T N : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.WayUnderARule.Needing need kids s.fst.fst →
+      (∀ (t : Nat),
+          T ≤ t →
+            t ≤ T + N →
+              Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s t)) →
+        ∀ (t : Nat),
+          T ≤ t →
+            t < T + N →
+              (Becoming.StockFlowBridge.wayFlow need kids next giving use s).BalancesOn
+                (Becoming.StockFlowBridge.wayWeb need kids next giving use s) [()] t
+@Becoming.StockFlowBridge.way_balances_of_unending : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.WayUnderARule.Needing need kids s.fst.fst →
+      Becoming.«不穷» (Becoming.WayUnderARule.net need kids next giving use) Becoming.«一» s →
+        (Becoming.StockFlowBridge.wayFlow need kids next giving use s).Balances
+          (Becoming.StockFlowBridge.wayWeb need kids next giving use s)
+@Becoming.StockFlowBridge.way_accumulates_of_within : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat} {T N : Nat},
+  (∀ (t : Nat),
+      T ≤ t →
+        t < T + N →
+          Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.course need kids next giving use s t).fst.fst ≤
+            (Becoming.WayUnderARule.course need kids next giving use s t).snd) →
+    ((Becoming.WayUnderARule.course need kids next giving use s (T + N)).snd +
+        Becoming.total (Becoming.steps T N) fun t =>
+          Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.course need kids next giving use s t).fst.fst) =
+      (Becoming.WayUnderARule.course need kids next giving use s T).snd +
+        Becoming.total (Becoming.steps T N) fun t =>
+          giving
+            ((Becoming.WayUnderARule.course need kids next giving use s t).snd -
+              Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.course need kids next giving use s t).fst.fst)
+@Becoming.StockFlowBridge.way_accumulates_of_goes : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat} {T N : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.WayUnderARule.Needing need kids s.fst.fst →
+      (∀ (t : Nat),
+          T ≤ t →
+            t ≤ T + N →
+              Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s t)) →
+        ((Becoming.WayUnderARule.course need kids next giving use s (T + N)).snd +
+            Becoming.total (Becoming.steps T N) fun t =>
+              Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.course need kids next giving use s t).fst.fst) =
+          (Becoming.WayUnderARule.course need kids next giving use s T).snd +
+            Becoming.total (Becoming.steps T N) fun t =>
+              giving
+                ((Becoming.WayUnderARule.course need kids next giving use s t).snd -
+                  Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.course need kids next giving use s t).fst.fst)
+@Becoming.StockFlowBridge.way_account_of_goes : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat} (N : Nat),
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.WayUnderARule.Needing need kids s.fst.fst →
+      (∀ (t : Nat),
+          0 ≤ t →
+            t ≤ N → Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s t)) →
+        ((Becoming.WayUnderARule.course need kids next giving use s N).snd +
+            Becoming.total (Becoming.steps 0 N) fun t =>
+              Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.course need kids next giving use s t).fst.fst) =
+          s.snd +
+            Becoming.total (Becoming.steps 0 N) fun t =>
+              giving
+                ((Becoming.WayUnderARule.course need kids next giving use s t).snd -
+                  Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.course need kids next giving use s t).fst.fst)
+@Becoming.StockFlowBridge.way_account_unending : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.WayUnderARule.Needing need kids s.fst.fst →
+      Becoming.«不穷» (Becoming.WayUnderARule.net need kids next giving use) Becoming.«一» s →
+        ∀ (N : Nat),
+          ((Becoming.WayUnderARule.course need kids next giving use s N).snd +
+              Becoming.total (Becoming.steps 0 N) fun t =>
+                Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.course need kids next giving use s t).fst.fst) =
+            s.snd +
+              Becoming.total (Becoming.steps 0 N) fun t =>
+                giving
+                  ((Becoming.WayUnderARule.course need kids next giving use s t).snd -
+                    Becoming.LineOnAStock.taken use
+                      (Becoming.WayUnderARule.course need kids next giving use s t).fst.fst)
+@Becoming.StockFlowBridge.way_never_returns_below_within_of_within : ∀ {U R : Type} {need : U → Nat}
+  {kids : R → U → List U} {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat}
+  {m T N : Nat},
+  (∀ (t : Nat),
+      T ≤ t →
+        t < T + N →
+          Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.course need kids next giving use s t).fst.fst ≤
+            (Becoming.WayUnderARule.course need kids next giving use s t).snd) →
+    (∀ (t : Nat),
+        T ≤ t →
+          t < T + N →
+            (Becoming.StockFlowBridge.wayWeb need kids next giving use s).level t () < m →
+              (Becoming.StockFlowBridge.wayFlow need kids next giving use s).given t () ≤
+                (Becoming.StockFlowBridge.wayFlow need kids next giving use s).taken t ()) →
+      (Becoming.StockFlowBridge.wayWeb need kids next giving use s).level T () < m →
+        ∀ (n : Nat), n ≤ N → (Becoming.StockFlowBridge.wayWeb need kids next giving use s).level (T + n) () < m
+@Becoming.StockFlowBridge.way_never_returns_below_within : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat} {m T N : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.WayUnderARule.Needing need kids s.fst.fst →
+      (∀ (t : Nat),
+          T ≤ t →
+            t ≤ T + N →
+              Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s t)) →
+        (∀ (t : Nat),
+            T ≤ t →
+              t < T + N →
+                (Becoming.StockFlowBridge.wayWeb need kids next giving use s).level t () < m →
+                  (Becoming.StockFlowBridge.wayFlow need kids next giving use s).given t () ≤
+                    (Becoming.StockFlowBridge.wayFlow need kids next giving use s).taken t ()) →
+          (Becoming.StockFlowBridge.wayWeb need kids next giving use s).level T () < m →
+            ∀ (n : Nat), n ≤ N → (Becoming.StockFlowBridge.wayWeb need kids next giving use s).level (T + n) () < m
+Becoming.StockFlowBridge.coupled_indexed_step_whole_eq : ∀ (giving : Nat → Nat) (h z : Nat),
+  Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole (fun x e => giving (e ())) (fun x => h)
+      (fun x => z) () =
+    Becoming.RegimeMargin.step giving h z
+@Becoming.StockFlowBridge.line_taken_const_of_even_met : ∀ {U : Type} {need : U → Nat} {kids : U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {w₀ : List U} {z₀ : Nat},
+  (∀ (u : U), Becoming.LineOnAStock.taken use (kids u) = use u) →
+    ∀ (k : Nat),
+      (∀ (j : Nat),
+          j < k →
+            ∀ (u : U),
+              u ∈ (Becoming.LineOnAStock.course need kids giving use (w₀, z₀) j).fst →
+                need u ≤ (Becoming.LineOnAStock.course need kids giving use (w₀, z₀) j).snd) →
+        Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use (w₀, z₀) k).fst =
+          Becoming.LineOnAStock.taken use w₀
+@Becoming.StockFlowBridge.line_coupled_indexed_correspondence : ∀ {U : Type} {need : U → Nat} {kids : U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {w₀ : List U} {z₀ : Nat},
+  (∀ (u : U), Becoming.LineOnAStock.taken use (kids u) = use u) →
+    ∀ (k : Nat),
+      (∀ (j : Nat),
+          j < k →
+            ∀ (u : U),
+              u ∈ (Becoming.LineOnAStock.course need kids giving use (w₀, z₀) j).fst →
+                need u ≤ (Becoming.LineOnAStock.course need kids giving use (w₀, z₀) j).snd) →
+        (Becoming.LineOnAStock.course need kids giving use (w₀, z₀) k).snd =
+          (Becoming.Law.run
+                (Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole (fun x e => giving (e ()))
+                  fun x => Becoming.LineOnAStock.taken use w₀)
+                fun x => z₀).state
+            k ()
+@Becoming.StockFlowBridge.way_taken_const_of_met : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {w₀ : List U} {g₀ : R} {z₀ : Nat} (k : Nat),
+  (∀ (j : Nat),
+      j < k →
+        ∀ (u : U),
+          u ∈ (Becoming.WayUnderARule.course need kids next giving use ((w₀, g₀), z₀) j).fst.fst →
+            need u ≤ (Becoming.WayUnderARule.course need kids next giving use ((w₀, g₀), z₀) j).snd) →
+    (∀ (j : Nat),
+        j < k →
+          ∀ (u : U),
+            Becoming.LineOnAStock.taken use
+                (kids (Becoming.WayUnderARule.course need kids next giving use ((w₀, g₀), z₀) j).fst.snd u) =
+              use u) →
+      Becoming.LineOnAStock.taken use
+          (Becoming.WayUnderARule.course need kids next giving use ((w₀, g₀), z₀) k).fst.fst =
+        Becoming.LineOnAStock.taken use w₀
+@Becoming.StockFlowBridge.way_coupled_indexed_correspondence : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {w₀ : List U} {g₀ : R} {z₀ : Nat} (k : Nat),
+  (∀ (j : Nat),
+      j < k →
+        ∀ (u : U),
+          u ∈ (Becoming.WayUnderARule.course need kids next giving use ((w₀, g₀), z₀) j).fst.fst →
+            need u ≤ (Becoming.WayUnderARule.course need kids next giving use ((w₀, g₀), z₀) j).snd) →
+    (∀ (j : Nat),
+        j < k →
+          ∀ (u : U),
+            Becoming.LineOnAStock.taken use
+                (kids (Becoming.WayUnderARule.course need kids next giving use ((w₀, g₀), z₀) j).fst.snd u) =
+              use u) →
+      (Becoming.WayUnderARule.course need kids next giving use ((w₀, g₀), z₀) k).snd =
+        (Becoming.Law.run
+              (Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole (fun x e => giving (e ()))
+                fun x => Becoming.LineOnAStock.taken use w₀)
+              fun x => z₀).state
+          k ()
+@Becoming.StockFlowBridge.way_coupled_indexed_of_unfavoured : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {favours : R → Prop} {w₀ : List U} {g₀ : R} {z₀ : Nat},
+  (∀ (g : R), ¬favours g → ∀ (u : U), Becoming.LineOnAStock.taken use (kids g u) = use u) →
+    ∀ (k : Nat),
+      (∀ (j : Nat),
+          j < k → ¬favours (Becoming.WayUnderARule.course need kids next giving use ((w₀, g₀), z₀) j).fst.snd) →
+        (∀ (j : Nat),
+            j < k →
+              ∀ (u : U),
+                u ∈ (Becoming.WayUnderARule.course need kids next giving use ((w₀, g₀), z₀) j).fst.fst →
+                  need u ≤ (Becoming.WayUnderARule.course need kids next giving use ((w₀, g₀), z₀) j).snd) →
+          (Becoming.WayUnderARule.course need kids next giving use ((w₀, g₀), z₀) k).snd =
+            (Becoming.Law.run
+                  (Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole
+                    (fun x e => giving (e ())) fun x => Becoming.LineOnAStock.taken use w₀)
+                  fun x => z₀).state
+              k ()

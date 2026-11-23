@@ -96,6 +96,28 @@ class LeanGroupTests(unittest.TestCase):
         for label in lean_catalogue.ROLE_LABELS.values():
             self.assertNotRegex(label, r'[一-鿿]')
 
+    def test_periphery_manifest_routes_becoming_periphery_and_tmp_is_excluded(self):
+        self.assertIn('tmp', lean_catalogue.EXCLUDED)
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            lean_dir = root / 'experiments/integrated-correction/general-framework/generative-basis/lean'
+            lean_dir.mkdir(parents=True)
+            (lean_dir / 'periphery-manifest.json').write_text(json.dumps({
+                'version': 1,
+                'modules': [{'module': 'SlowingDown', 'source': 'warning/SlowingDown.lean', 'receipt': 'warning/slowing-down-verification.json'}],
+            }))
+            lean_catalogue.periphery_paths.cache_clear()
+            lean_catalogue.receipt_layers.cache_clear()
+            try:
+                with patch.object(lean_catalogue, 'ROOT', root):
+                    self.assertEqual(
+                        lean_catalogue.group('experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean'),
+                        'becoming-periphery',
+                    )
+            finally:
+                lean_catalogue.periphery_paths.cache_clear()
+                lean_catalogue.receipt_layers.cache_clear()
+
 
 def _lean(modules: int, theorems: int) -> dict:
     """A manifest of one group's modules, each with `theorems` theorems."""

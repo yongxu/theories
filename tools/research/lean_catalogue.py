@@ -31,7 +31,7 @@ PART_LIMIT = 800_000
 SCRIPT = Path(__file__).resolve().relative_to(ROOT).as_posix()
 # .claude/worktrees holds other sessions' checkouts of this repository, not sources of it.
 # .build holds the copies a scratch build compiles (scratch_build.py), not sources.
-EXCLUDED = (".git", ".lake", ".build", "node_modules", ".venv", "venv", "__pycache__", ".claude/worktrees")
+EXCLUDED = (".git", ".lake", ".build", "node_modules", ".venv", "venv", "__pycache__", ".claude/worktrees", "tmp")
 KINDS = "theorem|lemma|def|abbrev|structure|inductive|opaque|axiom|constant"
 DECL = re.compile(r"^\s*(?:@\[[^\n]*?\]\s*)*(?:(?:private|protected|noncomputable|unsafe|partial|nonrec)\s+)*(?P<kind>" + KINDS + r")\s+(?P<name>«[^»]+»|[^\s\[\]{}():=]+)")
 LINK = re.compile(r"\[[^\]\n]*\]\((<[^>\n]+>|[^\s)]+)(?:\s+\"[^\"]*\")?\)")
@@ -53,6 +53,7 @@ SIGNIFICANCE = "theories/becoming/chapters/07-SIGNIFICANCE.md"
 GROUPS = {
     "becoming-core": ("Becoming pure core", METHOD + "#pure-core-and-periphery", "The pure core's modules and the three foundation modules it imports (checked with the spine, not counted in it), as the core receipt's `layer` field lists them (`core`, `foundation`; the foundation is in no layer of the package): apart from `GenerativeCore`'s `import Std`, they import only the foundation and one another, the root `Becoming` also importing the instance and application ring; every source declaration has an empty axiom report; and, with that `import Std` removed, they compile from Lean's prelude."),
     "becoming-ring": ("Becoming instances and applications", METHOD + "#pure-core-and-periphery", "The spine modules whose `layer` in the core receipt is `instance` or `application`, in no layer of the package: held to the core's conditions (with the foundation's `import Std` removed, prelude only; empty axiom reports), imported by no core module but the root; instances read general laws on one carrier (the Changes, place/transition nets, rooms tested by a window, readers by where they are rebuilt from, rules of entry by where they are taught from), and applications are imported by no instance."),
+    "becoming-periphery": ("Becoming active periphery", METHOD + "#pure-core-and-periphery", "Checked Mathlib and domain periphery extensions beside the Becoming core (listed in `periphery-manifest.json` with their own verification receipts and dependency hashes)."),
     "ethics": ("The ethics and the generative direction", SIGNIFICANCE, "Tests explicit inference, coverage and generative conditions; an ethical premise enters as a hypothesis where a theorem uses it."),
     "valuation": ("Valuation development and liangzhi", "theories/becoming/chapters/LIANGZHI-EVOLUTION.md", "Connects formation, retention, revision and action, preserving error, failure and transmission conditions."),
     "inquiry": ("Attainable inquiry, contact and process laws", "theories/becoming/chapters/GENERATIVE-CORE-LEAN.md", "Connects reachable paths, evidence acquisition and continuation while exposing apparatus and law premises."),
@@ -249,9 +250,24 @@ def receipt_layers() -> dict:
     return out
 
 
+@lru_cache(maxsize=1)
+def periphery_paths() -> set[str]:
+    """Repository source paths for active periphery modules listed in periphery-manifest.json."""
+    manifest = ROOT / "experiments/integrated-correction/general-framework/generative-basis/lean/periphery-manifest.json"
+    try:
+        data = json.loads(manifest.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return set()
+    lean_root = manifest.parent.relative_to(ROOT)
+    return {(lean_root / entry["source"]).as_posix()
+            for entry in data.get("modules", []) if isinstance(entry.get("source"), str)}
+
+
 def group(path: str) -> str:
     if path in receipt_layers():
         return RECEIPT_GROUPS[receipt_layers()[path][0]]
+    if path in periphery_paths():
+        return "becoming-periphery"
     if "/universal-ethics/" in path:
         return "ethics"
     if path.startswith("experiments/valuation-development/"):

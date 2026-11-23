@@ -57,7 +57,18 @@ The Lean package `Becoming` is in [`experiments/integrated-correction/general-fr
 
 3. `"status": "passed"` on the last line means that, on your machine, every module compiled, the core's purity held and every audited declaration's axiom report was as recorded.
 
-A fresh run compiles more than a thousand Lean steps and takes a while; `BECOMING_JOBS` sets how many run at once. Without `BECOMING_OUT` the checker writes its receipt into the repository. [Verify it yourself](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md#自行验证--verify-it-yourself) gives the details, and what a passing run does not show (whether the premises hold, whether the readings fit, whether the representation fits the world).
+A fresh run compiles more than a thousand Lean steps and takes a while; `BECOMING_JOBS` sets how many run at once. Without `BECOMING_OUT` the checker writes its receipt into the repository.
+
+To check core + active periphery (`periphery-manifest.json`, requiring Lean `4.29.1`, `4.30.0-rc2`, and the Mathlib project pinned under `experiments/integrated-correction/general-framework/generative-basis/lean/periphery-mathlib-pin/`):
+
+```bash
+make lean-check            # pure core + ring (check_becoming.py)
+make lean-check-periphery  # all 10 active periphery modules (check_periphery.py --all)
+make lean-check-all        # both core and active periphery
+make lean-check-stale      # read-only staleness audit of periphery receipts
+```
+
+[Verify it yourself](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md#自行验证--verify-it-yourself) gives the details, and what a passing run does not show (whether the premises hold, whether the readings fit, whether the representation fits the world).
 
 ## Top-level layout
 

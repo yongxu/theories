@@ -1,0 +1,472 @@
+@Becoming.LevelAlone.readBy_outside : ∀ {W : Type u_1} (marked : Nat → Prop) [inst : DecidablePred marked]
+  (t alone : W → W), Becoming.TurningInTime.AloneOutside marked alone (Becoming.LevelAlone.readBy marked t alone)
+@Becoming.LevelAlone.readBy_turns : ∀ {W : Type u_1} {marked : Nat → Prop} [inst : DecidablePred marked] {t : W → W}
+  {Kept : W → Prop},
+  (∀ (v : W), Kept (t v)) →
+    ∀ (alone : W → W) (v : W) {x : Nat}, marked x → Kept (Becoming.LevelAlone.readBy marked t alone v x)
+@Becoming.LevelAlone.readBy_kept : ∀ {W : Type u_1} {marked : Nat → Prop} [inst : DecidablePred marked]
+  {t alone : W → W} {Kept : W → Prop},
+  (∀ (v : W), Kept (t v)) →
+    (∀ (v : W), Kept v → Kept (alone v)) →
+      ∀ (v : W) (x : Nat), Kept v → Kept (Becoming.LevelAlone.readBy marked t alone v x)
+@Becoming.LevelAlone.level_never_rises : ∀ {W : Type u_1} {alone : W → W} {giving : Nat → Nat} {use : W → Nat} {w : W}
+  {x₀ : Nat},
+  (∀ (z z' : Nat), z ≤ z' → z + giving z ≤ z' + giving z') →
+    (∀ (j : Nat), use (Becoming.Law.orbit alone w j) ≤ use (Becoming.Law.orbit alone w (j + 1))) →
+      Becoming.RegimeMargin.step giving (use w) x₀ ≤ x₀ →
+        ∀ (j : Nat),
+          Becoming.LevelAlone.level alone giving use w x₀ (j + 1) ≤ Becoming.LevelAlone.level alone giving use w x₀ j
+@Becoming.LevelAlone.level_never_rises_of_rises : ∀ {W : Type u_1} {alone : W → W} {giving : Nat → Nat} {use : W → Nat}
+  {hi : Nat} {w : W} {x₀ : Nat},
+  (∀ (z z' : Nat), z ≤ z' → z + giving z ≤ z' + giving z') →
+    Becoming.RegimeMargin.step giving (use w) x₀ ≤ x₀ →
+      Becoming.RegimeMargin.FromNothing giving →
+        x₀ ≤ hi →
+          (∀ (j : Nat), j < hi → use (Becoming.Law.orbit alone w j) < use (Becoming.Law.orbit alone w (j + 1))) →
+            ∀ (j : Nat),
+              Becoming.LevelAlone.level alone giving use w x₀ (j + 1) ≤
+                Becoming.LevelAlone.level alone giving use w x₀ j
+@Becoming.LevelAlone.next_above_iff_draw : ∀ {giving : Nat → Nat} {H₂ y₂ hi : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.RegimeMargin.Short giving H₂ y₂ →
+      Becoming.RegimeMargin.Meets giving H₂ y₂ hi →
+        (∀ (z z' : Nat), z ≤ z' → z + giving z ≤ z' + giving z') →
+          H₂ + y₂ ≤ hi → 0 < H₂ + y₂ → ∀ (u x : Nat), H₂ + y₂ ≤ Becoming.RegimeMargin.step giving u x ↔ u + y₂ ≤ x
+@Becoming.LevelAlone.silent_at_start_iff_next_of_stays_below : ∀ {W : Type u_1} {t alone : W → W} {Kept : W → Prop}
+  {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat},
+  (∀ (v : W), Kept (t v)) →
+    (∀ (v : W), Kept v → Kept (alone v)) →
+      (∀ (v : W), Kept v → use v = H₂) →
+        Becoming.RegimeMargin.FromNothing giving →
+          Becoming.RegimeMargin.Short giving H₂ y₂ →
+            Becoming.RegimeMargin.Meets giving H₂ y₂ hi →
+              Becoming.RegimeMargin.Keeps giving 0 hi →
+                0 < need →
+                  need ≤ H₂ + y₂ →
+                    (∀ (j : Nat),
+                        j < hi → use (Becoming.Law.orbit alone w j) < use (Becoming.Law.orbit alone w (j + 1))) →
+                      x₀ ≤ hi →
+                        (∀ (j : Nat), j < D → Becoming.LevelAlone.level alone giving use w x₀ j = x₀) →
+                          Becoming.LevelAlone.level alone giving use w x₀ D ≠ x₀ →
+                            (∀ (j : Nat),
+                                Becoming.LevelAlone.level alone giving use w x₀ j < H₂ + y₂ →
+                                  Becoming.LevelAlone.level alone giving use w x₀ (j + 1) < H₂ + y₂) →
+                              ((∃ marked x,
+                                  ¬marked x₀ ∧
+                                    Becoming.«不穷»
+                                      (Becoming.TurningInTime.net need (Becoming.LevelAlone.readBy marked t alone)
+                                        fun w x => Becoming.RegimeMargin.step giving (use w) x)
+                                      Becoming.«一» (w, x₀)) ↔
+                                H₂ + y₂ ≤ Becoming.LevelAlone.level alone giving use w x₀ (D + 1))
+@Becoming.LevelAlone.silent_at_start_iff_marking_all_but_start : ∀ {W : Type u_1} {t alone : W → W} {Kept : W → Prop}
+  {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat},
+  (∀ (v : W), Kept (t v)) →
+    (∀ (v : W), Kept v → Kept (alone v)) →
+      (∀ (v : W), Kept v → use v = H₂) →
+        Becoming.RegimeMargin.FromNothing giving →
+          Becoming.RegimeMargin.Short giving H₂ y₂ →
+            Becoming.RegimeMargin.Meets giving H₂ y₂ hi →
+              Becoming.RegimeMargin.Keeps giving 0 hi →
+                0 < need →
+                  need ≤ H₂ + y₂ →
+                    (∀ (j : Nat),
+                        j < hi → use (Becoming.Law.orbit alone w j) < use (Becoming.Law.orbit alone w (j + 1))) →
+                      x₀ ≤ hi →
+                        (∀ (j : Nat), j < D → Becoming.LevelAlone.level alone giving use w x₀ j = x₀) →
+                          Becoming.LevelAlone.level alone giving use w x₀ D ≠ x₀ →
+                            (∀ (j : Nat),
+                                Becoming.LevelAlone.level alone giving use w x₀ j < H₂ + y₂ →
+                                  Becoming.LevelAlone.level alone giving use w x₀ (j + 1) < H₂ + y₂) →
+                              ((∃ marked x,
+                                  ¬marked x₀ ∧
+                                    Becoming.«不穷»
+                                      (Becoming.TurningInTime.net need (Becoming.LevelAlone.readBy marked t alone)
+                                        fun w x => Becoming.RegimeMargin.step giving (use w) x)
+                                      Becoming.«一» (w, x₀)) ↔
+                                Becoming.«不穷»
+                                  (Becoming.TurningInTime.net need
+                                    (Becoming.LevelAlone.readBy (fun x => x ≠ x₀) t alone) fun w x =>
+                                    Becoming.RegimeMargin.step giving (use w) x)
+                                  Becoming.«一» (w, x₀))
+@Becoming.LevelAlone.stays_below_of_le : ∀ {W : Type u_1} {alone : W → W} {giving : Nat → Nat} {use : W → Nat}
+  {H₂ y₂ : Nat} {w : W} {x₀ : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.RegimeMargin.Short giving H₂ y₂ →
+      H₂ ≤ use w →
+        (∀ (j : Nat), use (Becoming.Law.orbit alone w j) ≤ use (Becoming.Law.orbit alone w (j + 1))) →
+          ∀ (j : Nat),
+            Becoming.LevelAlone.level alone giving use w x₀ j < H₂ + y₂ →
+              Becoming.LevelAlone.level alone giving use w x₀ (j + 1) < H₂ + y₂
+@Becoming.LevelAlone.stays_below_of_le_of_rises : ∀ {W : Type u_1} {alone : W → W} {giving : Nat → Nat} {use : W → Nat}
+  {H₂ y₂ hi : Nat} {w : W} {x₀ : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.RegimeMargin.Short giving H₂ y₂ →
+      H₂ ≤ use w →
+        Becoming.RegimeMargin.Keeps giving 0 hi →
+          x₀ ≤ hi →
+            (∀ (j : Nat), j < hi → use (Becoming.Law.orbit alone w j) < use (Becoming.Law.orbit alone w (j + 1))) →
+              ∀ (j : Nat),
+                Becoming.LevelAlone.level alone giving use w x₀ j < H₂ + y₂ →
+                  Becoming.LevelAlone.level alone giving use w x₀ (j + 1) < H₂ + y₂
+@Becoming.LevelAlone.silent_at_start_iff_next_of_le : ∀ {W : Type u_1} {t alone : W → W} {Kept : W → Prop}
+  {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat},
+  (∀ (v : W), Kept (t v)) →
+    (∀ (v : W), Kept v → Kept (alone v)) →
+      (∀ (v : W), Kept v → use v = H₂) →
+        Becoming.RegimeMargin.FromNothing giving →
+          Becoming.RegimeMargin.Short giving H₂ y₂ →
+            Becoming.RegimeMargin.Meets giving H₂ y₂ hi →
+              Becoming.RegimeMargin.Keeps giving 0 hi →
+                0 < need →
+                  need ≤ H₂ + y₂ →
+                    (∀ (j : Nat),
+                        j < hi → use (Becoming.Law.orbit alone w j) < use (Becoming.Law.orbit alone w (j + 1))) →
+                      x₀ ≤ hi →
+                        (∀ (j : Nat), j < D → Becoming.LevelAlone.level alone giving use w x₀ j = x₀) →
+                          Becoming.LevelAlone.level alone giving use w x₀ D ≠ x₀ →
+                            H₂ ≤ use w →
+                              ((∃ marked x,
+                                  ¬marked x₀ ∧
+                                    Becoming.«不穷»
+                                      (Becoming.TurningInTime.net need (Becoming.LevelAlone.readBy marked t alone)
+                                        fun w x => Becoming.RegimeMargin.step giving (use w) x)
+                                      Becoming.«一» (w, x₀)) ↔
+                                H₂ + y₂ ≤ Becoming.LevelAlone.level alone giving use w x₀ (D + 1))
+@Becoming.LevelAlone.silent_at_start_iff_next : ∀ {W : Type u_1} {t alone : W → W} {Kept : W → Prop}
+  {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat},
+  (∀ (v : W), Kept (t v)) →
+    (∀ (v : W), Kept v → Kept (alone v)) →
+      (∀ (v : W), Kept v → use v = H₂) →
+        Becoming.RegimeMargin.FromNothing giving →
+          Becoming.RegimeMargin.Short giving H₂ y₂ →
+            Becoming.RegimeMargin.Meets giving H₂ y₂ hi →
+              Becoming.RegimeMargin.Keeps giving 0 hi →
+                0 < need →
+                  need ≤ H₂ + y₂ →
+                    (∀ (j : Nat),
+                        j < hi → use (Becoming.Law.orbit alone w j) < use (Becoming.Law.orbit alone w (j + 1))) →
+                      x₀ ≤ hi →
+                        (∀ (j : Nat), j < D → Becoming.LevelAlone.level alone giving use w x₀ j = x₀) →
+                          Becoming.LevelAlone.level alone giving use w x₀ D ≠ x₀ →
+                            (∀ (z z' : Nat), z ≤ z' → z + giving z ≤ z' + giving z') →
+                              Becoming.RegimeMargin.step giving (use w) x₀ ≤ x₀ →
+                                ((∃ marked x,
+                                    ¬marked x₀ ∧
+                                      Becoming.«不穷»
+                                        (Becoming.TurningInTime.net need (Becoming.LevelAlone.readBy marked t alone)
+                                          fun w x => Becoming.RegimeMargin.step giving (use w) x)
+                                        Becoming.«一» (w, x₀)) ↔
+                                  H₂ + y₂ ≤ Becoming.LevelAlone.level alone giving use w x₀ (D + 1))
+@Becoming.LevelAlone.silent_at_start_iff_recoverable_next_of_stays_below : ∀ {W : Type u_1} {t alone : W → W}
+  {Kept : W → Prop} {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat},
+  (∀ (v : W), Kept (t v)) →
+    (∀ (v : W), Kept v → Kept (alone v)) →
+      (∀ (v : W), Kept v → use v = H₂) →
+        Becoming.RegimeMargin.FromNothing giving →
+          Becoming.RegimeMargin.Short giving H₂ y₂ →
+            Becoming.RegimeMargin.Meets giving H₂ y₂ hi →
+              Becoming.RegimeMargin.Keeps giving 0 hi →
+                0 < need →
+                  need ≤ H₂ + y₂ →
+                    (∀ (j : Nat),
+                        j < hi → use (Becoming.Law.orbit alone w j) < use (Becoming.Law.orbit alone w (j + 1))) →
+                      x₀ ≤ hi →
+                        (∀ (j : Nat), j < D → Becoming.LevelAlone.level alone giving use w x₀ j = x₀) →
+                          Becoming.LevelAlone.level alone giving use w x₀ D ≠ x₀ →
+                            (∀ (j : Nat),
+                                Becoming.LevelAlone.level alone giving use w x₀ j < H₂ + y₂ →
+                                  Becoming.LevelAlone.level alone giving use w x₀ (j + 1) < H₂ + y₂) →
+                              ((∃ marked x,
+                                  ¬marked x₀ ∧
+                                    Becoming.«不穷»
+                                      (Becoming.TurningInTime.net need (Becoming.LevelAlone.readBy marked t alone)
+                                        fun w x => Becoming.RegimeMargin.step giving (use w) x)
+                                      Becoming.«一» (w, x₀)) ↔
+                                Becoming.Recoverable
+                                  (Becoming.TurningInTime.Turned
+                                    (fun j => Becoming.LevelAlone.level alone giving use w x₀ j) giving H₂)
+                                  (Becoming.TurningInTime.MeetsNeed need)
+                                  (fun t x => Becoming.LevelAlone.level alone giving use w x₀ t) (D + 1))
+@Becoming.LevelAlone.silent_at_start_none_iff_no_return_of_stays_below : ∀ {W : Type u_1} {t alone : W → W}
+  {Kept : W → Prop} {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat},
+  (∀ (v : W), Kept (t v)) →
+    (∀ (v : W), Kept v → Kept (alone v)) →
+      (∀ (v : W), Kept v → use v = H₂) →
+        Becoming.RegimeMargin.FromNothing giving →
+          Becoming.RegimeMargin.Short giving H₂ y₂ →
+            Becoming.RegimeMargin.Meets giving H₂ y₂ hi →
+              Becoming.RegimeMargin.Keeps giving 0 hi →
+                0 < need →
+                  need ≤ H₂ + y₂ →
+                    (∀ (j : Nat),
+                        j < hi → use (Becoming.Law.orbit alone w j) < use (Becoming.Law.orbit alone w (j + 1))) →
+                      x₀ ≤ hi →
+                        (∀ (j : Nat), j < D → Becoming.LevelAlone.level alone giving use w x₀ j = x₀) →
+                          Becoming.LevelAlone.level alone giving use w x₀ D ≠ x₀ →
+                            (∀ (j : Nat),
+                                Becoming.LevelAlone.level alone giving use w x₀ j < H₂ + y₂ →
+                                  Becoming.LevelAlone.level alone giving use w x₀ (j + 1) < H₂ + y₂) →
+                              ((∀ (marked : Nat → Prop) [inst : DecidablePred marked],
+                                  ¬marked x₀ →
+                                    ¬Becoming.«不穷»
+                                        (Becoming.TurningInTime.net need (Becoming.LevelAlone.readBy marked t alone)
+                                          fun w x => Becoming.RegimeMargin.step giving (use w) x)
+                                        Becoming.«一» (w, x₀)) ↔
+                                ∃ N,
+                                  N ≤ D + 1 ∧
+                                    Becoming.NoReturnAt
+                                      (Becoming.TurningInTime.Turned
+                                        (fun j => Becoming.LevelAlone.level alone giving use w x₀ j) giving H₂)
+                                      (Becoming.TurningInTime.MeetsNeed need)
+                                      (fun t x => Becoming.LevelAlone.level alone giving use w x₀ t) N)
+@Becoming.LevelAlone.silent_at_start_iff_recoverable_next : ∀ {W : Type u_1} {t alone : W → W} {Kept : W → Prop}
+  {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat},
+  (∀ (v : W), Kept (t v)) →
+    (∀ (v : W), Kept v → Kept (alone v)) →
+      (∀ (v : W), Kept v → use v = H₂) →
+        Becoming.RegimeMargin.FromNothing giving →
+          Becoming.RegimeMargin.Short giving H₂ y₂ →
+            Becoming.RegimeMargin.Meets giving H₂ y₂ hi →
+              Becoming.RegimeMargin.Keeps giving 0 hi →
+                0 < need →
+                  need ≤ H₂ + y₂ →
+                    (∀ (j : Nat),
+                        j < hi → use (Becoming.Law.orbit alone w j) < use (Becoming.Law.orbit alone w (j + 1))) →
+                      x₀ ≤ hi →
+                        (∀ (j : Nat), j < D → Becoming.LevelAlone.level alone giving use w x₀ j = x₀) →
+                          Becoming.LevelAlone.level alone giving use w x₀ D ≠ x₀ →
+                            (∀ (z z' : Nat), z ≤ z' → z + giving z ≤ z' + giving z') →
+                              Becoming.RegimeMargin.step giving (use w) x₀ ≤ x₀ →
+                                ((∃ marked x,
+                                    ¬marked x₀ ∧
+                                      Becoming.«不穷»
+                                        (Becoming.TurningInTime.net need (Becoming.LevelAlone.readBy marked t alone)
+                                          fun w x => Becoming.RegimeMargin.step giving (use w) x)
+                                        Becoming.«一» (w, x₀)) ↔
+                                  Becoming.Recoverable
+                                    (Becoming.TurningInTime.Turned
+                                      (fun j => Becoming.LevelAlone.level alone giving use w x₀ j) giving H₂)
+                                    (Becoming.TurningInTime.MeetsNeed need)
+                                    (fun t x => Becoming.LevelAlone.level alone giving use w x₀ t) (D + 1))
+@Becoming.LevelAlone.silent_at_start_none_iff_no_return : ∀ {W : Type u_1} {t alone : W → W} {Kept : W → Prop}
+  {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat},
+  (∀ (v : W), Kept (t v)) →
+    (∀ (v : W), Kept v → Kept (alone v)) →
+      (∀ (v : W), Kept v → use v = H₂) →
+        Becoming.RegimeMargin.FromNothing giving →
+          Becoming.RegimeMargin.Short giving H₂ y₂ →
+            Becoming.RegimeMargin.Meets giving H₂ y₂ hi →
+              Becoming.RegimeMargin.Keeps giving 0 hi →
+                0 < need →
+                  need ≤ H₂ + y₂ →
+                    (∀ (j : Nat),
+                        j < hi → use (Becoming.Law.orbit alone w j) < use (Becoming.Law.orbit alone w (j + 1))) →
+                      x₀ ≤ hi →
+                        (∀ (j : Nat), j < D → Becoming.LevelAlone.level alone giving use w x₀ j = x₀) →
+                          Becoming.LevelAlone.level alone giving use w x₀ D ≠ x₀ →
+                            (∀ (z z' : Nat), z ≤ z' → z + giving z ≤ z' + giving z') →
+                              Becoming.RegimeMargin.step giving (use w) x₀ ≤ x₀ →
+                                ((∀ (marked : Nat → Prop) [inst : DecidablePred marked],
+                                    ¬marked x₀ →
+                                      ¬Becoming.«不穷»
+                                          (Becoming.TurningInTime.net need (Becoming.LevelAlone.readBy marked t alone)
+                                            fun w x => Becoming.RegimeMargin.step giving (use w) x)
+                                          Becoming.«一» (w, x₀)) ↔
+                                  ∃ N,
+                                    N ≤ D + 1 ∧
+                                      Becoming.NoReturnAt
+                                        (Becoming.TurningInTime.Turned
+                                          (fun j => Becoming.LevelAlone.level alone giving use w x₀ j) giving H₂)
+                                        (Becoming.TurningInTime.MeetsNeed need)
+                                        (fun t x => Becoming.LevelAlone.level alone giving use w x₀ t) N)
+@Becoming.LevelAlone.silent_at_start_iff_use_of_stays_below : ∀ {W : Type u_1} {t alone : W → W} {Kept : W → Prop}
+  {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat},
+  (∀ (v : W), Kept (t v)) →
+    (∀ (v : W), Kept v → Kept (alone v)) →
+      (∀ (v : W), Kept v → use v = H₂) →
+        Becoming.RegimeMargin.FromNothing giving →
+          Becoming.RegimeMargin.Short giving H₂ y₂ →
+            Becoming.RegimeMargin.Meets giving H₂ y₂ hi →
+              Becoming.RegimeMargin.Keeps giving 0 hi →
+                0 < need →
+                  need ≤ H₂ + y₂ →
+                    (∀ (j : Nat),
+                        j < hi → use (Becoming.Law.orbit alone w j) < use (Becoming.Law.orbit alone w (j + 1))) →
+                      x₀ ≤ hi →
+                        (∀ (j : Nat), j < D → Becoming.LevelAlone.level alone giving use w x₀ j = x₀) →
+                          Becoming.LevelAlone.level alone giving use w x₀ D ≠ x₀ →
+                            (∀ (j : Nat),
+                                Becoming.LevelAlone.level alone giving use w x₀ j < H₂ + y₂ →
+                                  Becoming.LevelAlone.level alone giving use w x₀ (j + 1) < H₂ + y₂) →
+                              (∀ (z z' : Nat), z ≤ z' → z + giving z ≤ z' + giving z') →
+                                H₂ + y₂ ≤ hi →
+                                  ((∃ marked x,
+                                      ¬marked x₀ ∧
+                                        Becoming.«不穷»
+                                          (Becoming.TurningInTime.net need (Becoming.LevelAlone.readBy marked t alone)
+                                            fun w x => Becoming.RegimeMargin.step giving (use w) x)
+                                          Becoming.«一» (w, x₀)) ↔
+                                    use (Becoming.Law.orbit alone w D) + y₂ ≤
+                                      Becoming.LevelAlone.level alone giving use w x₀ D)
+@Becoming.LevelAlone.silent_at_start_iff_use : ∀ {W : Type u_1} {t alone : W → W} {Kept : W → Prop} {giving : Nat → Nat}
+  {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat},
+  (∀ (v : W), Kept (t v)) →
+    (∀ (v : W), Kept v → Kept (alone v)) →
+      (∀ (v : W), Kept v → use v = H₂) →
+        Becoming.RegimeMargin.FromNothing giving →
+          Becoming.RegimeMargin.Short giving H₂ y₂ →
+            Becoming.RegimeMargin.Meets giving H₂ y₂ hi →
+              Becoming.RegimeMargin.Keeps giving 0 hi →
+                0 < need →
+                  need ≤ H₂ + y₂ →
+                    (∀ (j : Nat),
+                        j < hi → use (Becoming.Law.orbit alone w j) < use (Becoming.Law.orbit alone w (j + 1))) →
+                      x₀ ≤ hi →
+                        (∀ (j : Nat), j < D → Becoming.LevelAlone.level alone giving use w x₀ j = x₀) →
+                          Becoming.LevelAlone.level alone giving use w x₀ D ≠ x₀ →
+                            (∀ (z z' : Nat), z ≤ z' → z + giving z ≤ z' + giving z') →
+                              Becoming.RegimeMargin.step giving (use w) x₀ ≤ x₀ →
+                                H₂ + y₂ ≤ hi →
+                                  ((∃ marked x,
+                                      ¬marked x₀ ∧
+                                        Becoming.«不穷»
+                                          (Becoming.TurningInTime.net need (Becoming.LevelAlone.readBy marked t alone)
+                                            fun w x => Becoming.RegimeMargin.step giving (use w) x)
+                                          Becoming.«一» (w, x₀)) ↔
+                                    use (Becoming.Law.orbit alone w D) + y₂ ≤
+                                      Becoming.LevelAlone.level alone giving use w x₀ D)
+Becoming.LevelAlone.cap_mono : ∀ (n z z' : Nat), z ≤ z' → z + min z (n - z) ≤ z' + min z' (n - z')
+Becoming.LevelAlone.Twelve.none_unending : ∀ (marked : Nat → Prop) [inst : DecidablePred marked],
+  ¬marked 12 →
+    ¬Becoming.«不穷»
+        (Becoming.TurningInTime.net 1
+          (Becoming.LevelAlone.readBy marked Becoming.LevelAlone.Twelve.back Becoming.LevelAlone.rise) fun w x =>
+          Becoming.RegimeMargin.step Becoming.TurningInTime.Three.giving (Becoming.LevelAlone.draw w) x)
+        Becoming.«一» ((3, false), 12)
+Becoming.LevelAlone.Twelve.level_at_five_six : Becoming.LevelAlone.level Becoming.LevelAlone.rise
+      Becoming.TurningInTime.Three.giving Becoming.LevelAlone.draw (3, false) 12 5 =
+    10 ∧
+  Becoming.LevelAlone.level Becoming.LevelAlone.rise Becoming.TurningInTime.Three.giving Becoming.LevelAlone.draw
+      (3, false) 12 6 =
+    4
+Becoming.LevelAlone.Twelve.mono_and_still : (∀ (z z' : Nat),
+    z ≤ z' → z + Becoming.TurningInTime.Three.giving z ≤ z' + Becoming.TurningInTime.Three.giving z') ∧
+  Becoming.RegimeMargin.step Becoming.TurningInTime.Three.giving (Becoming.LevelAlone.draw (3, false)) 12 ≤ 12
+Becoming.LevelAlone.Seven.some_unending : ∃ marked x,
+  ¬marked 7 ∧
+    Becoming.«不穷»
+      (Becoming.TurningInTime.net 1
+        (Becoming.LevelAlone.readBy marked Becoming.LevelAlone.Seven.back Becoming.LevelAlone.rise) fun w x =>
+        Becoming.RegimeMargin.step Becoming.LevelAlone.Seven.giving (Becoming.LevelAlone.draw w) x)
+      Becoming.«一» ((1, false), 7)
+Becoming.LevelAlone.Seven.mono_and_still : (∀ (z z' : Nat),
+    z ≤ z' → z + Becoming.LevelAlone.Seven.giving z ≤ z' + Becoming.LevelAlone.Seven.giving z') ∧
+  Becoming.RegimeMargin.step Becoming.LevelAlone.Seven.giving (Becoming.LevelAlone.draw (1, false)) 7 ≤ 7
+Becoming.LevelAlone.Rising.some_unending : ∃ marked x,
+  ¬marked 3 ∧
+    Becoming.«不穷»
+      (Becoming.TurningInTime.net 1
+        (Becoming.LevelAlone.readBy marked Becoming.LevelAlone.Rising.back Becoming.LevelAlone.rise) fun w x =>
+        Becoming.RegimeMargin.step Becoming.LevelAlone.Rising.giving (Becoming.LevelAlone.draw w) x)
+      Becoming.«一» ((1, false), 3)
+Becoming.LevelAlone.Rising.level_rises : Becoming.LevelAlone.level Becoming.LevelAlone.rise
+    Becoming.LevelAlone.Rising.giving Becoming.LevelAlone.draw (1, false) 3 1 <
+  Becoming.LevelAlone.level Becoming.LevelAlone.rise Becoming.LevelAlone.Rising.giving Becoming.LevelAlone.draw
+    (1, false) 3 2
+Becoming.LevelAlone.Rising.not_mono_at_one_two : ¬1 + Becoming.LevelAlone.Rising.giving 1 ≤
+    2 + Becoming.LevelAlone.Rising.giving 2
+Becoming.LevelAlone.WithoutMono.other_premises : (∀ (v : Nat × Bool),
+    Becoming.LevelAlone.WithoutMono.back v = (5, true)) ∧
+  (∀ (v : Nat × Bool), v = (5, true) → Becoming.LevelAlone.rise v = (5, true)) ∧
+    (∀ (v : Nat × Bool), v = (5, true) → Becoming.LevelAlone.draw v = 5) ∧
+      Becoming.RegimeMargin.FromNothing Becoming.LevelAlone.WithoutMono.giving ∧
+        Becoming.RegimeMargin.Short Becoming.LevelAlone.WithoutMono.giving 5 1 ∧
+          Becoming.RegimeMargin.Meets Becoming.LevelAlone.WithoutMono.giving 5 1 6 ∧
+            Becoming.RegimeMargin.Keeps Becoming.LevelAlone.WithoutMono.giving 0 6 ∧
+              0 < 1 ∧
+                1 ≤ 5 + 1 ∧
+                  (∀ (j : Nat),
+                      j < 6 →
+                        Becoming.LevelAlone.draw (Becoming.Law.orbit Becoming.LevelAlone.rise (1, false) j) <
+                          Becoming.LevelAlone.draw (Becoming.Law.orbit Becoming.LevelAlone.rise (1, false) (j + 1))) ∧
+                    3 ≤ 6 ∧
+                      (∀ (j : Nat),
+                          j < 2 →
+                            Becoming.LevelAlone.level Becoming.LevelAlone.rise Becoming.LevelAlone.WithoutMono.giving
+                                Becoming.LevelAlone.draw (1, false) 3 j =
+                              3) ∧
+                        Becoming.LevelAlone.level Becoming.LevelAlone.rise Becoming.LevelAlone.WithoutMono.giving
+                              Becoming.LevelAlone.draw (1, false) 3 2 ≠
+                            3 ∧
+                          Becoming.RegimeMargin.step Becoming.LevelAlone.WithoutMono.giving
+                              (Becoming.LevelAlone.draw (1, false)) 3 ≤
+                            3
+Becoming.LevelAlone.WithoutMono.marked_at_five_unending : Becoming.«不穷»
+  (Becoming.TurningInTime.net 1
+    (Becoming.LevelAlone.readBy (fun x => x = 5) Becoming.LevelAlone.WithoutMono.back Becoming.LevelAlone.rise)
+    fun w x => Becoming.RegimeMargin.step Becoming.LevelAlone.WithoutMono.giving (Becoming.LevelAlone.draw w) x)
+  Becoming.«一» ((1, false), 3)
+Becoming.LevelAlone.WithoutMono.some_unending : ∃ marked x,
+  ¬marked 3 ∧
+    Becoming.«不穷»
+      (Becoming.TurningInTime.net 1
+        (Becoming.LevelAlone.readBy marked Becoming.LevelAlone.WithoutMono.back Becoming.LevelAlone.rise) fun w x =>
+        Becoming.RegimeMargin.step Becoming.LevelAlone.WithoutMono.giving (Becoming.LevelAlone.draw w) x)
+      Becoming.«一» ((1, false), 3)
+Becoming.LevelAlone.WithoutMono.next_below : ¬5 + 1 ≤
+    Becoming.LevelAlone.level Becoming.LevelAlone.rise Becoming.LevelAlone.WithoutMono.giving Becoming.LevelAlone.draw
+      (1, false) 3 (2 + 1)
+Becoming.LevelAlone.WithoutMono.not_mono_at_one_two : ¬1 + Becoming.LevelAlone.WithoutMono.giving 1 ≤
+    2 + Becoming.LevelAlone.WithoutMono.giving 2
+Becoming.LevelAlone.WithoutMono.not_mono : ¬∀ (z z' : Nat),
+    z ≤ z' → z + Becoming.LevelAlone.WithoutMono.giving z ≤ z' + Becoming.LevelAlone.WithoutMono.giving z'
+Becoming.LevelAlone.WithoutStill.giving_mono : ∀ (z z' : Nat),
+  z ≤ z' → z + Becoming.LevelAlone.WithoutStill.giving z ≤ z' + Becoming.LevelAlone.WithoutStill.giving z'
+Becoming.LevelAlone.WithoutStill.other_premises : (∀ (v : Nat × Bool),
+    Becoming.LevelAlone.WithoutStill.back v = (5, true)) ∧
+  (∀ (v : Nat × Bool), v = (5, true) → Becoming.LevelAlone.rise v = (5, true)) ∧
+    (∀ (v : Nat × Bool), v = (5, true) → Becoming.LevelAlone.draw v = 5) ∧
+      Becoming.RegimeMargin.FromNothing Becoming.LevelAlone.WithoutStill.giving ∧
+        Becoming.RegimeMargin.Short Becoming.LevelAlone.WithoutStill.giving 5 3 ∧
+          Becoming.RegimeMargin.Meets Becoming.LevelAlone.WithoutStill.giving 5 3 8 ∧
+            Becoming.RegimeMargin.Keeps Becoming.LevelAlone.WithoutStill.giving 0 8 ∧
+              0 < 1 ∧
+                1 ≤ 5 + 3 ∧
+                  (∀ (j : Nat),
+                      j < 8 →
+                        Becoming.LevelAlone.draw (Becoming.Law.orbit Becoming.LevelAlone.rise (1, false) j) <
+                          Becoming.LevelAlone.draw (Becoming.Law.orbit Becoming.LevelAlone.rise (1, false) (j + 1))) ∧
+                    2 ≤ 8 ∧
+                      (∀ (j : Nat),
+                          j < 1 →
+                            Becoming.LevelAlone.level Becoming.LevelAlone.rise Becoming.LevelAlone.WithoutStill.giving
+                                Becoming.LevelAlone.draw (1, false) 2 j =
+                              2) ∧
+                        Becoming.LevelAlone.level Becoming.LevelAlone.rise Becoming.LevelAlone.WithoutStill.giving
+                              Becoming.LevelAlone.draw (1, false) 2 1 ≠
+                            2 ∧
+                          ∀ (z z' : Nat),
+                            z ≤ z' →
+                              z + Becoming.LevelAlone.WithoutStill.giving z ≤
+                                z' + Becoming.LevelAlone.WithoutStill.giving z'
+Becoming.LevelAlone.WithoutStill.marked_at_six_unending : Becoming.«不穷»
+  (Becoming.TurningInTime.net 1
+    (Becoming.LevelAlone.readBy (fun x => x = 6) Becoming.LevelAlone.WithoutStill.back Becoming.LevelAlone.rise)
+    fun w x => Becoming.RegimeMargin.step Becoming.LevelAlone.WithoutStill.giving (Becoming.LevelAlone.draw w) x)
+  Becoming.«一» ((1, false), 2)
+Becoming.LevelAlone.WithoutStill.some_unending : ∃ marked x,
+  ¬marked 2 ∧
+    Becoming.«不穷»
+      (Becoming.TurningInTime.net 1
+        (Becoming.LevelAlone.readBy marked Becoming.LevelAlone.WithoutStill.back Becoming.LevelAlone.rise) fun w x =>
+        Becoming.RegimeMargin.step Becoming.LevelAlone.WithoutStill.giving (Becoming.LevelAlone.draw w) x)
+      Becoming.«一» ((1, false), 2)
+Becoming.LevelAlone.WithoutStill.next_below : ¬5 + 3 ≤
+    Becoming.LevelAlone.level Becoming.LevelAlone.rise Becoming.LevelAlone.WithoutStill.giving Becoming.LevelAlone.draw
+      (1, false) 2 (1 + 1)
+Becoming.LevelAlone.WithoutStill.start_step : Becoming.RegimeMargin.step Becoming.LevelAlone.WithoutStill.giving
+    (Becoming.LevelAlone.draw (1, false)) 2 =
+  4
+Becoming.LevelAlone.WithoutStill.not_still : ¬Becoming.RegimeMargin.step Becoming.LevelAlone.WithoutStill.giving
+      (Becoming.LevelAlone.draw (1, false)) 2 ≤
+    2

@@ -53,7 +53,10 @@ SCOPE = (
     "draw rises to the renewal rate the variance rises strictly and tends to infinity. A dependent's need enters "
     "neither statistic, so no reading of the margin to it from the multiplier is right for every need, and with the "
     "need measured the margin is read exactly (by construction). That a measured condition's fluctuations are such "
-    "a linearized step with independent noise, and stationary, are correspondences, not checked."
+    "a linearized step with independent noise, and stationary, are correspondences, not checked. "
+    "Bridge to Becoming.RegimeMargin: safe discrete regime headroom (Meets/Keeps, H + y <= x_0 <= hi) joins "
+    "non-ending discrete runs (RegimeMargin.holds) with sub-unit transcritical multipliers (drawnMultiplier in [0, 1)), "
+    "while below-threshold discrete collapse (RegimeMargin.ends_iff_below) pairs with need_not_read."
 )
 
 

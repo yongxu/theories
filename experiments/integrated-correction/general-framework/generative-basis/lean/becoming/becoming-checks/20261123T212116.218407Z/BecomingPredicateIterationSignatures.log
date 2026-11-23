@@ -1,0 +1,124 @@
+@Becoming.remove_mem : ∀ {X : Type u_1} {l : List X} {x : X},
+  x ∈ l → ∃ l', l'.length + 1 = l.length ∧ ∀ (y : X), y ∈ l → y = x ∨ y ∈ l'
+@Becoming.gather_listed : ∀ {A : Type u_1} {D : A → Prop} {G : Prop} (members : List A),
+  (∀ (a : A), a ∈ members → (D a → G) → G) → ((∀ (a : A), a ∈ members → D a) → G) → G
+@Becoming.Iteration.iter_iff_stages : ∀ {T : Type u_1} {Φ : (T → Prop) → T → Prop} {start : T → Prop}
+  {stage : Nat → T → Prop},
+  Becoming.Iteration.MonotoneStep Φ →
+    (∀ (z : T), start z ↔ stage 0 z) →
+      (∀ (n : Nat) (z : T), Φ (stage n) z ↔ stage (n + 1) z) →
+        ∀ (n : Nat) (z : T), Becoming.Iteration.iter Φ start n z ↔ stage n z
+@Becoming.Iteration.iter_pred : ∀ {S : Type u_1} {Φ : (S → Prop) → S → Prop} {V₀ : S → Prop},
+  Becoming.Iteration.MonotoneStep Φ →
+    (∀ (y : S), Φ V₀ y → V₀ y) →
+      ∀ (n : Nat) (y : S), Becoming.Iteration.iter Φ V₀ (n + 1) y → Becoming.Iteration.iter Φ V₀ n y
+@Becoming.Iteration.prefixed_above_iter : ∀ {S : Type u_1} {Φ : (S → Prop) → S → Prop} {V₀ : S → Prop},
+  Becoming.Iteration.MonotoneStep Φ →
+    ∀ {K : S → Prop},
+      (∀ (y : S), V₀ y → K y) → (∀ (y : S), Φ K y → K y) → ∀ (n : Nat) (y : S), Becoming.Iteration.iter Φ V₀ n y → K y
+@Becoming.Iteration.iter_within : ∀ {S : Type u_1} {Φ : (S → Prop) → S → Prop} {V₀ : S → Prop},
+  Becoming.Iteration.MonotoneStep Φ →
+    (∀ (y : S), Φ V₀ y → V₀ y) → ∀ (n : Nat) (y : S), Becoming.Iteration.iter Φ V₀ n y → V₀ y
+@Becoming.Iteration.extend_at_places : ∀ {S : Type u_1} {Φ : (S → Prop) → S → Prop} {V₀ : S → Prop},
+  Becoming.Iteration.MonotoneStep Φ →
+    (∀ (y : S), Φ V₀ y → V₀ y) →
+      ∀ (n : Nat) (left : List S),
+        left.length = n →
+          (∀ (z : S), V₀ z → z ∈ left ∨ Becoming.Iteration.iter Φ V₀ (n + 1) z) →
+            ∀ (y : S), Becoming.Iteration.iter Φ V₀ n y → Becoming.Iteration.iter Φ V₀ (n + 1) y
+@Becoming.Iteration.iter_persists : ∀ {S : Type u_1} {Φ : (S → Prop) → S → Prop} {V₀ : S → Prop},
+  Becoming.Iteration.MonotoneStep Φ →
+    (∀ (y : S), Φ V₀ y → V₀ y) →
+      ∀ {all : List S},
+        (∀ (x : S), V₀ x → x ∈ all) →
+          ∀ {y : S}, Becoming.Iteration.iter Φ V₀ all.length y → Becoming.Iteration.iter Φ V₀ (all.length + 1) y
+@Becoming.Iteration.iter_postfixed : ∀ {S : Type u_1} {Φ : (S → Prop) → S → Prop} {V₀ : S → Prop},
+  Becoming.Iteration.MonotoneStep Φ →
+    (∀ (y : S), Φ V₀ y → V₀ y) →
+      ∀ {all : List S},
+        (∀ (x : S), V₀ x → x ∈ all) →
+          ∀ (y : S), Becoming.Iteration.iter Φ V₀ all.length y → Φ (Becoming.Iteration.iter Φ V₀ all.length) y
+@Becoming.Iteration.postfixed_in_iter : ∀ {S : Type u_1} {Φ : (S → Prop) → S → Prop} {V₀ : S → Prop},
+  Becoming.Iteration.MonotoneStep Φ →
+    ∀ {K : S → Prop},
+      (∀ (y : S), K y → V₀ y) → (∀ (y : S), K y → Φ K y) → ∀ (n : Nat) (y : S), K y → Becoming.Iteration.iter Φ V₀ n y
+@Becoming.Iteration.iter_iff_all : ∀ {S : Type u_1} {Φ : (S → Prop) → S → Prop} {V₀ : S → Prop},
+  Becoming.Iteration.MonotoneStep Φ →
+    (∀ (y : S), Φ V₀ y → V₀ y) →
+      ∀ {all : List S},
+        (∀ (x : S), V₀ x → x ∈ all) →
+          ∀ {y : S}, Becoming.Iteration.iter Φ V₀ all.length y ↔ ∀ (n : Nat), Becoming.Iteration.iter Φ V₀ n y
+@Becoming.Iteration.iter_largest : ∀ {S : Type u_1} {Φ : (S → Prop) → S → Prop} {V₀ : S → Prop},
+  Becoming.Iteration.MonotoneStep Φ →
+    (∀ (y : S), Φ V₀ y → V₀ y) →
+      ∀ {all : List S},
+        (∀ (x : S), V₀ x → x ∈ all) →
+          have L := Becoming.Iteration.iter Φ V₀ all.length;
+          (∀ (y : S), L y → V₀ y) ∧
+            (∀ (y : S), L y → Φ L y) ∧
+              ∀ (K : S → Prop), (∀ (y : S), K y → V₀ y) → (∀ (y : S), K y → Φ K y) → ∀ (y : S), K y → L y
+@Becoming.Iteration.iter_shift : ∀ {S : Type u_1} {Φ : (S → Prop) → S → Prop} {V₀ : S → Prop},
+  Becoming.Iteration.MonotoneStep Φ →
+    ∀ {U : S → Prop},
+      (∀ (y : S), V₀ y ↔ Φ U y) →
+        ∀ (n : Nat) (y : S), Becoming.Iteration.iter Φ V₀ n y ↔ Becoming.Iteration.iter Φ U (n + 1) y
+@Becoming.Iteration.iter_persists_from_all : ∀ {S : Type u_1} {Φ : (S → Prop) → S → Prop} {V₀ : S → Prop},
+  Becoming.Iteration.MonotoneStep Φ →
+    ∀ {all : List S},
+      (∀ (x : S), x ∈ all) →
+        (∀ (y : S), V₀ y ↔ Φ (fun x => True) y) →
+          ∀ {n : Nat},
+            all.length = n + 1 → ∀ {y : S}, Becoming.Iteration.iter Φ V₀ n y → Becoming.Iteration.iter Φ V₀ (n + 1) y
+@Becoming.Iteration.not_iter_of_not_succ : ∀ {S : Type u_1} {Φ : (S → Prop) → S → Prop} {V₀ : S → Prop},
+  Becoming.Iteration.MonotoneStep Φ →
+    (∀ (y : S), Φ V₀ y → V₀ y) →
+      ∀ {all : List S},
+        (∀ (x : S), V₀ x → x ∈ all) →
+          ∀ {y : S}, ¬Becoming.Iteration.iter Φ V₀ (all.length + 1) y → ¬Becoming.Iteration.iter Φ V₀ all.length y
+@Becoming.Iteration.gives_mono : ∀ {S : Type u_1} {Ψ : (S → Prop) → S → Prop} {G : Prop},
+  Becoming.Iteration.MonotoneStep Ψ → Becoming.Iteration.MonotoneStep (Becoming.Iteration.givesStep Ψ G)
+@Becoming.Iteration.imp_iff_iter_gives : ∀ {S : Type u_1} {Ψ : (S → Prop) → S → Prop} {W₀ : S → Prop} {G : Prop},
+  Becoming.Iteration.MonotoneStep Ψ →
+    Becoming.Iteration.CommutesWithImplication Ψ G →
+      ∀ (n : Nat) (z : S),
+        Becoming.Iteration.iter Ψ W₀ n z → G ↔
+          Becoming.Iteration.iter (Becoming.Iteration.givesStep Ψ G) (fun x => W₀ x → G) n z
+@Becoming.Iteration.iter_succ : ∀ {S : Type u_1} {Ψ : (S → Prop) → S → Prop} {W₀ : S → Prop},
+  Becoming.Iteration.MonotoneStep Ψ →
+    (∀ (y : S), W₀ y → Ψ W₀ y) →
+      ∀ (n : Nat) (z : S), Becoming.Iteration.iter Ψ W₀ n z → Becoming.Iteration.iter Ψ W₀ (n + 1) z
+@Becoming.Iteration.gives_start : ∀ {S : Type u_1} {Ψ : (S → Prop) → S → Prop} {W₀ : S → Prop} {G : Prop},
+  Becoming.Iteration.MonotoneStep Ψ →
+    (∀ (y : S), W₀ y → Ψ W₀ y) → ∀ (z : S), Becoming.Iteration.givesStep Ψ G (fun t => W₀ t → G) z → W₀ z → G
+@Becoming.Iteration.iter_gives_persists : ∀ {S : Type u_1} {Ψ : (S → Prop) → S → Prop} {W₀ : S → Prop} {G : Prop},
+  Becoming.Iteration.MonotoneStep Ψ →
+    (∀ (y : S), W₀ y → Ψ W₀ y) →
+      Becoming.Iteration.CommutesWithImplication Ψ G →
+        ∀ {all : List S} {y : S},
+          (∀ (x : S), (W₀ x → G) → x ∈ all) →
+            (Becoming.Iteration.iter Ψ W₀ all.length y → G) → Becoming.Iteration.iter Ψ W₀ (all.length + 1) y → G
+@Becoming.Iteration.iter_shortens : ∀ {S : Type u_1} {Ψ : (S → Prop) → S → Prop} {W₀ : S → Prop},
+  Becoming.Iteration.MonotoneStep Ψ →
+    (∀ (y : S), W₀ y → Ψ W₀ y) →
+      ∀ {all : List S} {y : S},
+        Becoming.Iteration.CommutesWithImplication Ψ (Becoming.Iteration.iter Ψ W₀ all.length y) →
+          (∀ (x : S), (W₀ x → Becoming.Iteration.iter Ψ W₀ all.length y) → x ∈ all) →
+            Becoming.Iteration.iter Ψ W₀ (all.length + 1) y → Becoming.Iteration.iter Ψ W₀ all.length y
+@Becoming.Iteration.iter_within_length : ∀ {S : Type u_1} {Ψ : (S → Prop) → S → Prop} {W₀ : S → Prop},
+  Becoming.Iteration.MonotoneStep Ψ →
+    (∀ (y : S), W₀ y → Ψ W₀ y) →
+      ∀ {all : List S} {y : S},
+        Becoming.Iteration.CommutesWithImplication Ψ (Becoming.Iteration.iter Ψ W₀ all.length y) →
+          (∀ (x : S), (W₀ x → Becoming.Iteration.iter Ψ W₀ all.length y) → x ∈ all) →
+            ∀ (n : Nat), Becoming.Iteration.iter Ψ W₀ n y → Becoming.Iteration.iter Ψ W₀ all.length y
+@Becoming.Iteration.iter_within_pred_length : ∀ {S : Type u_1} {Ψ : (S → Prop) → S → Prop} {W₀ : S → Prop},
+  Becoming.Iteration.MonotoneStep Ψ →
+    (∀ (y : S), W₀ y → Ψ W₀ y) →
+      ∀ {all : List S} {y : S} {n : Nat},
+        (∀ (x : S), x ∈ all) →
+          all.length = n + 1 →
+            Becoming.Iteration.CommutesWithImplication Ψ (Becoming.Iteration.iter Ψ W₀ n y) →
+              (∀ (z : S),
+                  W₀ z → Becoming.Iteration.iter Ψ W₀ n y ↔
+                    Becoming.Iteration.givesStep Ψ (Becoming.Iteration.iter Ψ W₀ n y) (fun x => True) z) →
+                ∀ (m : Nat), Becoming.Iteration.iter Ψ W₀ m y → Becoming.Iteration.iter Ψ W₀ n y

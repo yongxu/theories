@@ -1,0 +1,102 @@
+@Becoming.Learning.extendBy_of : ∀ {O : Type u_1} {pred : List O → Option O} {l : List O} {v : O},
+  pred l = some v → Becoming.Learning.extendBy pred l = v :: l
+@Becoming.Learning.unroll_prefix : ∀ {O : Type u_1} {pred : List O → Option O} {o : Nat → O} {N : Nat},
+  (∀ (u : Nat), N ≤ u → pred (Becoming.Learning.prefixOf o u) = some (o u)) →
+    ∀ {t : Nat},
+      N ≤ t →
+        ∀ (k : Nat),
+          Becoming.Learning.unroll pred (Becoming.Learning.prefixOf o t) k = Becoming.Learning.prefixOf o (t + k)
+@Becoming.Learning.ahead_accords : ∀ {O : Type u_1} {pred : List O → Option O} {o : Nat → O} {N : Nat},
+  (∀ (u : Nat), N ≤ u → pred (Becoming.Learning.prefixOf o u) = some (o u)) →
+    ∀ {t : Nat}, N ≤ t → ∀ (k : Nat), Becoming.Learning.ahead pred (Becoming.Learning.prefixOf o t) k = some (o (t + k))
+@Becoming.Learnable.ahead_fixes : ∀ {S : Type u_1} {R : Type u_2} [inst : DecidableEq R] {next : S → S} {s : S}
+  {l : List S},
+  (∀ (n : Nat), Becoming.Law.orbit next s n ∈ l) →
+    ∀ (reg : S → R) (t : Nat),
+      l.length + (l.length + l.length - 1) * Becoming.Learning.tri l.length ≤ t →
+        ∀ (k : Nat),
+          Becoming.Learning.ahead (Becoming.Learning.byElimination Becoming.Learning.lassos)
+              (Becoming.Learning.prefixOf (Becoming.Learnable.course next reg s) t) k =
+            some (reg (Becoming.Law.orbit next s (t + k)))
+@Becoming.Learnable.reading_predicts : ∀ {S : Type u_1} {R : Type u_2} {V : Type u_3} [inst : DecidableEq R]
+  {next : S → S} {s : S} {l : List S},
+  (∀ (n : Nat), Becoming.Law.orbit next s n ∈ l) →
+    ∀ {reg : S → R} {val : S → V} {G : (Nat → Option R) → V},
+      (∀ (f f' : Nat → Option R), (∀ (k : Nat), f k = f' k) → G f = G f') →
+        Becoming.Learnable.ReadOff next reg val G →
+          Becoming.Learnable.PredictsFrom next reg val (Becoming.Learnable.reading G) s
+            (l.length + (l.length + l.length - 1) * Becoming.Learning.tri l.length)
+Becoming.Learnable.given_nothing_not_every : (∀ (b : Bool),
+    Becoming.Learnable.Predicts (fun x => ()) (fun x => ()) (fun x => b) (Becoming.Learnable.reading fun x => b) ()) ∧
+  ¬∃ pred, ∀ (b : Bool), Becoming.Learnable.Predicts (fun x => ()) (fun x => ()) (fun x => b) pred ()
+@Becoming.Learnable.eq_of_returns : ∀ {S : Type u_1} {V : Type u_2} {next : S → S} {val : S → V} {x y : S},
+  Becoming.Law.Returns next x →
+    Becoming.Law.Returns next y →
+      ∀ {T : Nat},
+        (∀ (t : Nat), T ≤ t → val (Becoming.Law.orbit next x t) = val (Becoming.Law.orbit next y t)) → val x = val y
+@Becoming.Learnable.fromWorld_respects : ∀ {S : Type} {R : Type u_1} {V : Type u_2} [inst : DecidableEq R]
+  (next : S → S) (reg : S → R) (val : S → V) (l : List S) (v₀ : V) (f f' : Nat → Option R),
+  (∀ (k : Nat), f k = f' k) →
+    Becoming.Learnable.fromWorld next reg val l v₀ f = Becoming.Learnable.fromWorld next reg val l v₀ f'
+@Becoming.Learnable.reads_of_agree : ∀ {S : Type} {R : Type u_1} {V : Type u_2} [inst : DecidableEq R] {next : S → S}
+  {reg : S → R} {val : S → V} {l : List S},
+  (∀ (s : S), s ∈ l) →
+    ∀ (v₀ : V),
+      (∀ (s s' : S),
+          Becoming.Law.SameFuture next reg s s' →
+            ∃ T, ∀ (t : Nat), T ≤ t → val (Becoming.Law.orbit next s t) = val (Becoming.Law.orbit next s' t)) →
+        ∀ (y : S),
+          val (Becoming.Law.orbit next y l.length) =
+            Becoming.Learnable.fromWorld next reg val l v₀ fun k =>
+              some (reg (Becoming.Law.orbit next (Becoming.Law.orbit next y l.length) k))
+@Becoming.Learnable.reading_predicts_from : ∀ {S : Type} {R : Type u_1} {V : Type u_2} [inst : DecidableEq R]
+  {next : S → S} {s : S} {l : List S},
+  (∀ (n : Nat), Becoming.Law.orbit next s n ∈ l) →
+    ∀ {reg : S → R} {val : S → V} {G : (Nat → Option R) → V},
+      (∀ (f f' : Nat → Option R), (∀ (k : Nat), f k = f' k) → G f = G f') →
+        ∀ {T : Nat},
+          (∀ (t : Nat),
+              T ≤ t →
+                val (Becoming.Law.orbit next s t) =
+                  G fun k => some (reg (Becoming.Law.orbit next (Becoming.Law.orbit next s t) k))) →
+            Becoming.Learnable.PredictsFrom next reg val (Becoming.Learnable.reading G) s
+              (T + (l.length + (l.length + l.length - 1) * Becoming.Learning.tri l.length))
+@Becoming.Learnable.learnable_iff_reading : ∀ {S : Type} {R : Type u_1} {V : Type u_2} [DecidableEq R] {next : S → S}
+  {reg : S → R} {val : S → V} {l : List S},
+  (∀ (s : S), s ∈ l) →
+    ∀ (v₀ : V),
+      (∃ pred, ∀ (s : S), Becoming.Learnable.Predicts next reg val pred s) ↔
+        ∃ G,
+          (∀ (f f' : Nat → Option R), (∀ (k : Nat), f k = f' k) → G f = G f') ∧
+            ∀ (s : S),
+              ∃ T,
+                ∀ (t : Nat),
+                  T ≤ t →
+                    val (Becoming.Law.orbit next s t) =
+                      G fun k => some (reg (Becoming.Law.orbit next (Becoming.Law.orbit next s t) k))
+@Becoming.LearnableRuns.ahead_fixes : ∀ {S : Type u_1} {R : Type u_2} [inst : DecidableEq R] {next : S → S}
+  (r : Becoming.Run (Becoming.Law.process next)) {l : List S},
+  (∀ (n : Nat), r.state n ∈ l) →
+    ∀ (reg : S → R) (t : Nat),
+      l.length + (l.length + l.length - 1) * Becoming.Learning.tri l.length ≤ t →
+        ∀ (k : Nat),
+          Becoming.Learning.ahead (Becoming.Learning.byElimination Becoming.Learning.lassos)
+              (Becoming.Learning.prefixOf (Becoming.LearnableRuns.course reg r) t) k =
+            some (reg (r.state (t + k)))
+Becoming.LearnableRuns.given_nothing_not_every : (∀ (b : Bool) (r : Becoming.Run (Becoming.Law.process fun x => ())),
+    Becoming.LearnableRuns.Predicts (fun x => ()) (fun x => b) (Becoming.Learnable.reading fun x => b) r) ∧
+  ¬∃ pred,
+      ∀ (b : Bool) (r : Becoming.Run (Becoming.Law.process fun x => ())),
+        Becoming.LearnableRuns.Predicts (fun x => ()) (fun x => b) pred r
+@Becoming.LearnableRuns.future_eq : ∀ {S : Type} {R : Type u_1} {next : S → S} (reg : S → R)
+  (r : Becoming.Run (Becoming.Law.process next)) (t k : Nat),
+  some (reg (r.state (t + k))) = some (reg (Becoming.Law.orbit next (Becoming.Law.orbit next (r.state 0) t) k))
+@Becoming.LearnableRuns.learnable_iff_reading : ∀ {S : Type} {R : Type u_1} {V : Type u_2} [DecidableEq R]
+  {next : S → S} {reg : S → R} {val : S → V} {l : List S},
+  (∀ (s : S), s ∈ l) →
+    ∀ (v₀ : V),
+      (∃ pred, ∀ (r : Becoming.Run (Becoming.Law.process next)), Becoming.LearnableRuns.Predicts reg val pred r) ↔
+        ∃ G,
+          (∀ (f f' : Nat → Option R), (∀ (k : Nat), f k = f' k) → G f = G f') ∧
+            ∀ (r : Becoming.Run (Becoming.Law.process next)),
+              ∃ T, ∀ (t : Nat), T ≤ t → val (r.state t) = G fun k => some (reg (r.state (t + k)))

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "modules": [
+    {
+      "module": "AlignmentReals",
+      "region": "map",
+      "toolchain": "leanprover/lean4:v4.30.0-rc2",
+      "mathlib": true,
+      "source": "alignment-reals/AlignmentReals.lean",
+      "receipt": "alignment-reals/alignment-reals-verification.json",
+      "checker": "alignment-reals/check_alignment_reals.py",
+      "record": "continuous-stochastic-alignment-reals"
+    },
+    {
+      "module": "FreeEnergyReals",
+      "region": "knowing",
+      "toolchain": "leanprover/lean4:v4.30.0-rc2",
+      "mathlib": true,
+      "source": "free-energy/FreeEnergyReals.lean",
+      "receipt": "free-energy/free-energy-reals-verification.json",
+      "checker": "free-energy/check_free_energy_reals.py",
+      "record": "free-energy-over-reals"
+    },
+    {
+      "module": "ExpectedFreeEnergyReals",
+      "region": "knowing",
+      "toolchain": "leanprover/lean4:v4.30.0-rc2",
+      "mathlib": true,
+      "source": "free-energy/ExpectedFreeEnergyReals.lean",
+      "receipt": "free-energy/expected-free-energy-reals-verification.json",
+      "checker": "free-energy/check_expected_free_energy_reals.py",
+      "record": "expected-free-energy-over-reals"
+    },
+    {
+      "module": "CellsUnderNoise",
+      "region": "knowing",
+      "toolchain": "leanprover/lean4:v4.30.0-rc2",
+      "mathlib": true,
+      "source": "free-energy/CellsUnderNoise.lean",
+      "receipt": "free-energy/cells-under-noise-verification.json",
+      "checker": "free-energy/check_cells_under_noise.py",
+      "record": "noisy-cell-identification"
+    },
+    {
+      "module": "LinearBlankets",
+      "region": "knowing",
+      "toolchain": "leanprover/lean4:v4.30.0-rc2",
+      "mathlib": true,
+      "source": "free-energy/LinearBlankets.lean",
+      "receipt": "free-energy/linear-blankets-verification.json",
+      "checker": "free-energy/check_linear_blankets.py",
+      "record": "the-blanket-in-a-linear-steady-state"
+    },
+    {
+      "module": "EntropyProduction",
+      "region": "root",
+      "toolchain": "leanprover/lean4:v4.30.0-rc2",
+      "mathlib": true,
+      "source": "physics/EntropyProduction.lean",
+      "receipt": "physics/entropy-production-verification.json",
+      "checker": "physics/check_entropy_production.py",
+      "record": "entropy-production-over-reals"
+    },
+    {
+      "module": "RegimeReals",
+      "region": "map",
+      "toolchain": "leanprover/lean4:v4.30.0-rc2",
+      "mathlib": true,
+      "source": "regime/RegimeReals.lean",
+      "receipt": "regime/regime-reals-verification.json",
+      "checker": "regime/check_regime_reals.py",
+      "record": "continuous-regime-rests"
+    },
+    {
+      "module": "Representation",
+      "region": "knowing",
+      "toolchain": "leanprover/lean4:v4.30.0-rc2",
+      "mathlib": true,
+      "source": "representation/Representation.lean",
+      "receipt": "representation/representation-verification.json",
+      "checker": "representation/check_representation.py",
+      "record": "frequency-representation-bounds"
+    },
+    {
+      "module": "SlowingDown",
+      "region": "map",
+      "toolchain": "leanprover/lean4:v4.30.0-rc2",
+      "mathlib": true,
+      "source": "warning/SlowingDown.lean",
+      "receipt": "warning/slowing-down-verification.json",
+      "checker": "warning/check_slowing_down.py",
+      "record": "slowing-down-before-an-own-end"
+    },
+    {
+      "module": "Becoming.FallibleInquiry",
+      "region": "knowing",
+      "toolchain": "leanprover/lean4:v4.29.1",
+      "mathlib": false,
+      "source": "becoming/Becoming/FallibleInquiry.lean",
+      "receipt": "becoming/fallible-inquiry-verification.json",
+      "checker": "becoming/check_fallible_inquiry.py",
+      "record": "finite-fallible-inquiry-necessity"
+    }
+  ]
+}

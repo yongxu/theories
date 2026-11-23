@@ -1,0 +1,181 @@
+Becoming.TwoLines.other_center_outside : ¬Becoming.«续无外» Becoming.TwoLines.step Becoming.«一» fun x => (true, 0, false)
+Becoming.ThirdThing.first_member_outside : ¬Becoming.«族无外» Becoming.ThirdThing.step Becoming.«一» fun x =>
+    Becoming.ThirdThing.Occ.a 0
+Becoming.«续无外随网» : (Becoming.«续无外» Becoming.LineOfDescent.Endless.step Becoming.«一» fun x => (0, false)) ∧
+  ¬Becoming.«续无外» Becoming.TwoLines.step Becoming.«一» fun x => (true, 0, false)
+Becoming.«族无外随网» : (Becoming.«族无外» Becoming.LineOfDescent.Endless.step Becoming.«一» fun x => (0, false)) ∧
+  ¬Becoming.«族无外» Becoming.ThirdThing.step Becoming.«一» fun x => Becoming.ThirdThing.Occ.a 0
+@Becoming.ReadsNoOrder.not_entails : ∀ {S A C D : Type} {law : D → (S → S → Prop) → Prop},
+  Becoming.ReadsNoOrder law →
+    ∀ {frame : Becoming.Frame S A C} {living : C → Prop} {d : D},
+      (∀ (better : S → S → Prop), law d better → Becoming.Comparison frame living better) →
+        ∀ {s t : S}, Becoming.Extension frame living s t → ∀ {better : S → S → Prop}, ¬law d better
+Becoming.LiftModel.met_and_failed : Becoming.LiftBetter Becoming.LiftModel.frame Becoming.LiftModel.larger 0
+    Becoming.LiftModel.Act.high Becoming.LiftModel.Act.low ∧
+  ¬Becoming.LiftBetter Becoming.LiftModel.frame Becoming.LiftModel.larger 0 Becoming.LiftModel.Act.low
+      Becoming.LiftModel.Act.high
+@Becoming.Weighting.reach_of_beyond : ∀ {X : Type} [DecidableEq X] {items : List X} {a : X → Bool} (L : List X),
+  (∀ (z : X), z ∈ L → z ∈ items) →
+    ∀ (b : X → Bool),
+      Becoming.Weighting.IncludesOn items a b →
+        (∀ (y : X), y ∈ items → a y = true → b y = false → y ∈ L) →
+          Becoming.Weighting.IncludesOn items b a ∨ Becoming.«及» (Becoming.Weighting.WidensByOne items) a b
+@Becoming.Weighting.widensOn_iff_reach : ∀ {X : Type} [DecidableEq X] {items : List X} {a b : X → Bool},
+  Becoming.Weighting.WidensOn items a b ↔ Becoming.«及» (Becoming.Weighting.WidensByOne items) a b
+@Becoming.Weighting.increasing_iff_by_one : ∀ {X : Type} [DecidableEq X] {items : List X}
+  {O : (X → Bool) → (X → Bool) → Prop},
+  (∀ {a b c : X → Bool}, O a b → O b c → O a c) →
+    (Becoming.Weighting.Increasing items O ↔
+      ∀ (x : X) (a b : X → Bool), Becoming.Weighting.WidensBy items x a b → O b a)
+@Becoming.Weighting.exists_increasingInOwn_not_increasing : ∀ {X : Type} {items : List X} {own : X → Bool} {x : X},
+  x ∈ items →
+    own x = false → ∃ O, Becoming.Weighting.IncreasingInOwn items own O ∧ ¬Becoming.Weighting.Increasing items O
+@Becoming.Weighting.increasingInOwn_iff_increasing_iff_marks : ∀ {X : Type} {items : List X} {own : X → Bool},
+  (∀ (O : (X → Bool) → (X → Bool) → Prop),
+      Becoming.Weighting.IncreasingInOwn items own O ↔ Becoming.Weighting.Increasing items O) ↔
+    ∀ (x : X), x ∈ items → own x = true
+@Becoming.Weighting.increasingInOwn_iff_increasing_iff_all : ∀ {α Pos : Type} {Q : Pos → α → Prop}
+  {own : Pos → α → Bool},
+  (∀ (p : Pos) (x : α), own p x = true ↔ Q p x) →
+    ((∀ (p : Pos) (items : List α) (O : (α → Bool) → (α → Bool) → Prop),
+        Becoming.Weighting.IncreasingInOwn items (own p) O ↔ Becoming.Weighting.Increasing items O) ↔
+      ∀ (p : Pos) (x : α), Q p x)
+@Becoming.Weighting.increasingInOwn_iff_increasing_of_noOutside : ∀ {α Pos : Type} {R E : Becoming.«际» α}
+  {center : Pos → α},
+  Becoming.«续无外» R E center →
+    ∀ {p : Pos} {own : α → Bool},
+      (∀ (x : α), Becoming.«所及» R E (center p) x → own x = true) →
+        ∀ (items : List α) (O : (α → Bool) → (α → Bool) → Prop),
+          Becoming.Weighting.IncreasingInOwn items own O ↔ Becoming.Weighting.Increasing items O
+@Becoming.Weighting.exists_increasingInOwn_not_increasing_of_outside : ∀ {α Pos : Type} {R E : Becoming.«际» α}
+  {center : Pos → α} {p : Pos} {own : α → Bool},
+  (∀ (x : α), own x = true → Becoming.«所及» R E (center p) x) →
+    ∀ {items : List α} {x : α},
+      x ∈ items →
+        ¬Becoming.«所及» R E (center p) x →
+          ∃ O, Becoming.Weighting.IncreasingInOwn items own O ∧ ¬Becoming.Weighting.Increasing items O
+@Becoming.Weighting.increasingInOwn_iff_increasing_iff_noOutside : ∀ {α Pos : Type} {R E : Becoming.«际» α}
+  {center : Pos → α} {own : Pos → α → Bool},
+  (∀ (p : Pos) (x : α), own p x = true ↔ Becoming.«所及» R E (center p) x) →
+    ((∀ (p : Pos) (items : List α) (O : (α → Bool) → (α → Bool) → Prop),
+        Becoming.Weighting.IncreasingInOwn items (own p) O ↔ Becoming.Weighting.Increasing items O) ↔
+      Becoming.«续无外» R E center)
+@Becoming.Weighting.increasingInOwn_iff_increasing_iff_unrestricted : ∀ {F Pos : Type} {rel : F → F → Prop}
+  {center : Pos → F} {own : Pos → F → Bool},
+  (∀ (p : Pos) (x : F), own p x = true ↔ Becoming.WithinClosure rel (center p) x) →
+    ((∀ (p : Pos) (items : List F) (O : (F → Bool) → (F → Bool) → Prop),
+        Becoming.Weighting.IncreasingInOwn items (own p) O ↔ Becoming.Weighting.Increasing items O) ↔
+      Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) center))
+@Becoming.Weighting.increasingInOwn_iff_increasing_of_unrestricted : ∀ {F Pos : Type} {rel : F → F → Prop}
+  {center : Pos → F},
+  Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) center) →
+    ∀ {p : Pos} {own : F → Bool},
+      (∀ (x : F), Becoming.WithinClosure rel (center p) x → own x = true) →
+        ∀ (items : List F) (O : (F → Bool) → (F → Bool) → Prop),
+          Becoming.Weighting.IncreasingInOwn items own O ↔ Becoming.Weighting.Increasing items O
+@Becoming.Web.admits_need : ∀ {F C : Type} (W : Becoming.Web F C) (t : Nat) (f : F),
+  W.Admits (fun c => W.need t f c) t f
+@Becoming.Web.admits_nothing_from_of_listed : ∀ {F C : Type} {W : Becoming.Web F C} {items : List (Nat × F)}
+  {l : Nat → C → Nat},
+  W.ListsAdmitted items l → ∀ {t : Nat}, Becoming.Web.stepBound items ≤ t → ∀ (f : F), ¬W.Admits (l t) t f
+@Becoming.Web.not_listsAdmitted_every : ∀ {F C : Type} (W : Becoming.Web F C) (f : F) {items : List (Nat × F)},
+  ¬∀ (l : Nat → C → Nat), W.ListsAdmitted items l
+@Becoming.Web.no_extension_of_listsAdmitted_every : ∀ {F C : Type} {W : Becoming.Web F C} {items : List (Nat × F)},
+  (∀ (l : Nat → C → Nat), W.ListsAdmitted items l) →
+    ∀ {living : F × Nat → Prop} {l l' : Nat → C → Nat}, ¬Becoming.Extension W.paths living l' l
+@Becoming.Web.extension_ranked_of_increasing : ∀ {F C : Type} {W : Becoming.Web F C}
+  {admitted : (Nat → C → Nat) → Nat × F → Bool},
+  W.DecidesAdmission admitted →
+    ∀ {items : List (Nat × F)} {O : (Nat × F → Bool) → (Nat × F → Bool) → Prop},
+      Becoming.Weighting.Increasing items O →
+        ∀ {l l' : Nat → C → Nat},
+          W.ListsAdmitted items l →
+            W.ListsAdmitted items l' → Becoming.Extension W.paths (fun x => True) l' l → O (admitted l') (admitted l)
+@Becoming.Web.extension_ownWidens : ∀ {F C : Type} {W : Becoming.Web F C} {Pos : Type} {rel : F → F → Prop}
+  {center : Pos → F},
+  Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) center) →
+    ∀ {p : Pos} {own : F → Bool},
+      (∀ (f : F), Becoming.WithinClosure rel (center p) f → own f = true) →
+        ∀ {admitted : (Nat → C → Nat) → Nat × F → Bool},
+          W.DecidesAdmission admitted →
+            ∀ {items : List (Nat × F)} {l l' : Nat → C → Nat},
+              W.ListsAdmitted items l →
+                W.ListsAdmitted items l' →
+                  Becoming.Extension W.paths (fun x => True) l' l →
+                    Becoming.Weighting.WidensOn items (admitted l) (admitted l') ∧
+                      Becoming.Weighting.AddsOwn items (fun i => own i.snd) (admitted l) (admitted l')
+@Becoming.Web.extension_ranked_of_increasingInOwnOn : ∀ {F C : Type} {W : Becoming.Web F C} {Pos : Type}
+  {rel : F → F → Prop} {center : Pos → F},
+  Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) center) →
+    ∀ {p : Pos} {own : F → Bool},
+      (∀ (f : F), Becoming.WithinClosure rel (center p) f → own f = true) →
+        ∀ {admitted : (Nat → C → Nat) → Nat × F → Bool},
+          W.DecidesAdmission admitted →
+            ∀ {items : List (Nat × F)} {O met : (Nat × F → Bool) → (Nat × F → Bool) → Prop},
+              Becoming.Weighting.IncreasingInOwnOn met items (fun i => own i.snd) O →
+                ∀ {l l' : Nat → C → Nat},
+                  W.ListsAdmitted items l →
+                    W.ListsAdmitted items l' →
+                      Becoming.Extension W.paths (fun x => True) l' l →
+                        met (admitted l) (admitted l') → O (admitted l') (admitted l)
+@Becoming.Web.extension_ranked_of_increasingInOwn : ∀ {F C : Type} {W : Becoming.Web F C} {Pos : Type}
+  {rel : F → F → Prop} {center : Pos → F},
+  Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) center) →
+    ∀ {p : Pos} {own : F → Bool},
+      (∀ (f : F), Becoming.WithinClosure rel (center p) f → own f = true) →
+        ∀ {admitted : (Nat → C → Nat) → Nat × F → Bool},
+          W.DecidesAdmission admitted →
+            ∀ {items : List (Nat × F)} {O : (Nat × F → Bool) → (Nat × F → Bool) → Prop},
+              Becoming.Weighting.IncreasingInOwn items (fun i => own i.snd) O →
+                ∀ {l l' : Nat → C → Nat},
+                  W.ListsAdmitted items l →
+                    W.ListsAdmitted items l' →
+                      Becoming.Extension W.paths (fun x => True) l' l → O (admitted l') (admitted l)
+Becoming.TwoLines.first_line_reaches_both : ∀ (n : Nat),
+  Becoming.«所及» Becoming.TwoLines.step Becoming.«一» (true, 0, false) (true, n, false) ∧
+    Becoming.«所及» Becoming.TwoLines.step Becoming.«一» (true, 0, false) (true, n, true)
+Becoming.TwoLines.first_line_reach_iff : ∀ (x : Becoming.TwoLines.Occ),
+  Becoming.«所及» Becoming.TwoLines.step Becoming.«一» (true, 0, false) x ↔ x.fst = true
+Becoming.LineOfDescent.Last.converse_no_outside : Becoming.«续无外» (Becoming.«逆» Becoming.LineOfDescent.Last.step)
+  Becoming.«一» fun x => (true, true)
+@Becoming.LineOfDescent.Endless.step_member_le : ∀ {x y : Becoming.LineOfDescent.Endless.Occ},
+  Becoming.LineOfDescent.Endless.step x y → x.fst ≤ y.fst
+@Becoming.LineOfDescent.Endless.converse_line_le : ∀ {E : Becoming.«际» Becoming.LineOfDescent.Endless.Occ}
+  {c x : Becoming.LineOfDescent.Endless.Occ},
+  Becoming.«相续» (Becoming.«逆» Becoming.LineOfDescent.Endless.step) E c x → x.fst ≤ c.fst
+Becoming.LineOfDescent.Endless.converse_later_outside : ∀ (c : Becoming.LineOfDescent.Endless.Occ),
+  ¬Becoming.«所及» (Becoming.«逆» Becoming.LineOfDescent.Endless.step) Becoming.«一» c (c.fst + 1, false)
+@Becoming.LineOfDescent.Endless.line_member_le : ∀ {E : Becoming.«际» Becoming.LineOfDescent.Endless.Occ}
+  {c x : Becoming.LineOfDescent.Endless.Occ}, Becoming.«相续» Becoming.LineOfDescent.Endless.step E c x → c.fst ≤ x.fst
+Becoming.LineOfDescent.Endless.later_outside : ∀ (c : Becoming.LineOfDescent.Endless.Occ),
+  0 < c.fst → ¬Becoming.«续无外» Becoming.LineOfDescent.Endless.step Becoming.«一» fun x => c
+Becoming.LineOfDescent.Endless.converse_outside : ∀ (c : Becoming.LineOfDescent.Endless.Occ),
+  ¬Becoming.«续无外» (Becoming.«逆» Becoming.LineOfDescent.Endless.step) Becoming.«一» fun x => c
+Becoming.«逆缘续无外随网» : (Becoming.«续无外» (Becoming.«逆» Becoming.LineOfDescent.Last.step) Becoming.«一» fun x =>
+    (true, true)) ∧
+  ∀ (c : Becoming.LineOfDescent.Endless.Occ),
+    ¬Becoming.«续无外» (Becoming.«逆» Becoming.LineOfDescent.Endless.step) Becoming.«一» fun x => c
+Becoming.increasingInOwn_with_net : (∀ (own : Becoming.LineOfDescent.Endless.Occ → Bool),
+    (∀ (x : Becoming.LineOfDescent.Endless.Occ),
+        Becoming.«所及» Becoming.LineOfDescent.Endless.step Becoming.«一» (0, false) x → own x = true) →
+      ∀ (items : List Becoming.LineOfDescent.Endless.Occ)
+        (O : (Becoming.LineOfDescent.Endless.Occ → Bool) → (Becoming.LineOfDescent.Endless.Occ → Bool) → Prop),
+        Becoming.Weighting.IncreasingInOwn items own O ↔ Becoming.Weighting.Increasing items O) ∧
+  ∀ (own : Becoming.TwoLines.Occ → Bool),
+    (∀ (x : Becoming.TwoLines.Occ),
+        own x = true → Becoming.«所及» Becoming.TwoLines.step Becoming.«一» (true, 0, false) x) →
+      ∀ (items : List Becoming.TwoLines.Occ),
+        (false, 0, false) ∈ items →
+          ∃ O, Becoming.Weighting.IncreasingInOwn items own O ∧ ¬Becoming.Weighting.Increasing items O
+Becoming.increasingInOwn_with_net_converse : (∀ (own : Becoming.LineOfDescent.Last.Occ → Bool),
+    (∀ (x : Becoming.LineOfDescent.Last.Occ),
+        Becoming.«所及» (Becoming.«逆» Becoming.LineOfDescent.Last.step) Becoming.«一» (true, true) x → own x = true) →
+      ∀ (items : List Becoming.LineOfDescent.Last.Occ)
+        (O : (Becoming.LineOfDescent.Last.Occ → Bool) → (Becoming.LineOfDescent.Last.Occ → Bool) → Prop),
+        Becoming.Weighting.IncreasingInOwn items own O ↔ Becoming.Weighting.Increasing items O) ∧
+  ∀ (c : Becoming.LineOfDescent.Endless.Occ) (own : Becoming.LineOfDescent.Endless.Occ → Bool),
+    (∀ (x : Becoming.LineOfDescent.Endless.Occ),
+        own x = true → Becoming.«所及» (Becoming.«逆» Becoming.LineOfDescent.Endless.step) Becoming.«一» c x) →
+      ∀ (items : List Becoming.LineOfDescent.Endless.Occ),
+        (c.fst + 1, false) ∈ items →
+          ∃ O, Becoming.Weighting.IncreasingInOwn items own O ∧ ¬Becoming.Weighting.Increasing items O

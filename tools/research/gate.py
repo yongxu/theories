@@ -943,29 +943,44 @@ def frozen_check(base='main', everything=False) -> dict:
 
 def receipt_check(base='main') -> dict:
     """The package's receipts. The core's (becoming-verification.json) passed and binds the current bytes of every
-    module it lists, so the core run ran on this Lean; a module under Becoming/ no receipt lists fails too. Another
-    checker's receipt beside it (fallible-inquiry-verification.json) fails where this landing changes a source of its
-    own that the core's does not list; where only the core modules it imports moved on, it is listed as an area check
-    to run again."""
+    module it lists, so the core run ran on this Lean; a module under Becoming/ no receipt lists fails too. Other
+    checkers' receipts (fallible-inquiry-verification.json and active periphery-manifest.json receipts) fail where a
+    landing leaves their own source mismatched (or changes it unchecked); where only core imports moved on, they are
+    listed under area_checks_to_rerun."""
     errors, rerun, listed, seen = [], [], set(), {}
     touched = {p for _, p in changes(base_commit(base), 'HEAD')}
     core = BECOMING + '/becoming-verification.json'
     receipts = sorted(str(r.relative_to(ROOT)) for r in (ROOT / BECOMING).glob('*-verification.json'))
+    manifest_own = {}
+    manifest_file = ROOT / LEAN / 'periphery-manifest.json'
+    if manifest_file.is_file():
+        for entry in (json.loads(manifest_file.read_text()).get('modules') or []):
+            r_rel = f'{LEAN}/{entry["receipt"]}'
+            manifest_own[r_rel] = f'{LEAN}/{entry["source"]}'
+            if r_rel not in receipts:
+                receipts.append(r_rel)
     core_sources = set((json.loads((ROOT / core).read_text()).get('source_paths') or {}).values()) if (ROOT / core).is_file() else set()
     for r in receipts:
-        v = json.loads((ROOT / r).read_text())
+        rf = ROOT / r
+        if not rf.is_file():
+            errors.append(f'{r}: missing active receipt')
+            continue
+        v = json.loads(rf.read_text())
         seen[r.rsplit('/', 1)[-1]] = v.get('utc')
         (errors if r == core else rerun).extend([f'{r}: its status is {v.get("status")!r}'] if v.get('status') != 'passed' else [])
+        own = manifest_own.get(r)
         for name, rel in (v.get('source_paths') or {}).items():
             path, f = f'{LEAN}/{rel}', ROOT / LEAN / rel
             listed.add(path)
             if f.is_file() and hashlib.sha256(f.read_bytes()).hexdigest() == (v.get('source_sha256') or {}).get(name):
                 continue
             problem = f'{r}: {path} is {"missing" if not f.is_file() else "not the bytes its checker ran on"}'
-            if r == core or (path in touched and rel not in core_sources):
+            if r == core or ((path in touched or (own and path == own)) and rel not in core_sources):
                 errors.append(problem + ('; run the core run and commit its receipt' if r == core else '; run its checker'))
             else:
                 rerun.append(problem)
+        if own and own not in (f'{LEAN}/{rel}' for rel in (v.get('source_paths') or {}).values()):
+            errors.append(f'{r}: own source {own} is missing from source_paths')
     errors += [f'{p}: a module under Becoming/ that no receipt lists' for p in tracked(BECOMING + '/Becoming/*.lean') if p not in listed]
     return {'errors': errors, 'area_checks_to_rerun': sorted({x.split(':', 1)[0] for x in rerun}),
             'stale': len(rerun), 'receipts': seen}

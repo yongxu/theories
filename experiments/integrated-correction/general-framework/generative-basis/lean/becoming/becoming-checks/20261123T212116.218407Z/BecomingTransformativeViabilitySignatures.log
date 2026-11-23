@@ -1,0 +1,84 @@
+@Becoming.Web.Includes.macroIncludes : ∀ {F C K : Type} {W : Becoming.Web F C} {cap : F → K} {l l' : Nat → C → Nat},
+  W.Includes l l' → W.MacroIncludes cap l l'
+@Becoming.Web.MacroIncludes.refl : ∀ {F C K : Type} {W : Becoming.Web F C} {cap : F → K} (l : Nat → C → Nat),
+  W.MacroIncludes cap l l
+@Becoming.Web.MacroIncludes.trans : ∀ {F C K : Type} {W : Becoming.Web F C} {cap : F → K} {l₁ l₂ l₃ : Nat → C → Nat},
+  W.MacroIncludes cap l₁ l₂ → W.MacroIncludes cap l₂ l₃ → W.MacroIncludes cap l₁ l₃
+@Becoming.widens_implies_transformativeViable : ∀ {F C K : Type} {W : Becoming.Web F C}
+  {Viable : (Nat → C → Nat) → Prop} {cap : F → K} {l l' : Nat → C → Nat},
+  Becoming.ReserveGuarded W Viable → Viable l' → W.Widens l l' → Becoming.TransformativeViable W Viable cap l l'
+@Becoming.TransformsViablyAlong.mono : ∀ {F C K : Type} {W : Becoming.Web F C} {Safe : Nat → Prop} {cap : F → K}
+  {R S : Nat → F → F → Prop} {T : Nat},
+  (∀ (t : Nat) (g f : F), R t g f → S t g f) →
+    Becoming.TransformsViablyAlong W Safe cap R T → Becoming.TransformsViablyAlong W Safe cap S T
+@Becoming.TransformsViablyAlong.to_transformsViably : ∀ {F C K : Type} {W : Becoming.Web F C} {Safe : Nat → Prop}
+  {cap : F → K} {R : Nat → F → F → Prop} {T : Nat},
+  Becoming.TransformsViablyAlong W Safe cap R T → Becoming.TransformsViably W Safe cap T
+@Becoming.transformsViably_iff_along_capSame : ∀ {F C K : Type} {W : Becoming.Web F C} {Safe : Nat → Prop} {cap : F → K}
+  {T : Nat},
+  Becoming.TransformsViably W Safe cap T ↔ Becoming.TransformsViablyAlong W Safe cap (fun x a b => cap a = cap b) T
+@Becoming.not_along_itself_of_transformsViably : ∀ {F C K : Type} {W : Becoming.Web F C} {Safe : Nat → Prop}
+  {cap : F → K} {T : Nat}, ¬Becoming.TransformsViablyAlong W Safe cap Becoming.Web.itself T
+Becoming.ThreeRegime.evolve_mixed_legacy : Becoming.ThreeRegime.web.Mixed Becoming.ThreeRegime.l_evolve
+  Becoming.ThreeRegime.l_legacy
+Becoming.ThreeRegime.evolve_not_widens_legacy : ¬Becoming.ThreeRegime.web.Widens Becoming.ThreeRegime.l_evolve
+    Becoming.ThreeRegime.l_legacy
+Becoming.ThreeRegime.evolve_strict_transformativeViable : Becoming.StrictTransformativeViable Becoming.ThreeRegime.web
+  Becoming.ThreeRegime.Viable Becoming.ThreeRegime.cap Becoming.ThreeRegime.l_evolve Becoming.ThreeRegime.l_legacy
+Becoming.ThreeRegime.churn_mixed_legacy : Becoming.ThreeRegime.web.Mixed Becoming.ThreeRegime.l_churn
+  Becoming.ThreeRegime.l_legacy
+Becoming.ThreeRegime.churn_generation : Becoming.«全生成» Becoming.Steps.next Becoming.«一»
+  (Becoming.Steps.same Becoming.ThreeRegime.QChurn) 1
+Becoming.ThreeRegime.churn_not_transformativeViable : ¬Becoming.TransformativeViable Becoming.ThreeRegime.web
+    Becoming.ThreeRegime.Viable Becoming.ThreeRegime.cap Becoming.ThreeRegime.l_churn Becoming.ThreeRegime.l_legacy
+Becoming.ThreeRegime.churn_also_fails_macroIncludes : ¬Becoming.ThreeRegime.web.MacroIncludes Becoming.ThreeRegime.cap
+    Becoming.ThreeRegime.l_churn Becoming.ThreeRegime.l_legacy
+Becoming.ThreeRegime.three_regime_separation : Becoming.ThreeRegime.web.Mixed Becoming.ThreeRegime.l_evolve
+    Becoming.ThreeRegime.l_legacy ∧
+  ¬Becoming.ThreeRegime.web.Widens Becoming.ThreeRegime.l_evolve Becoming.ThreeRegime.l_legacy ∧
+    Becoming.StrictTransformativeViable Becoming.ThreeRegime.web Becoming.ThreeRegime.Viable Becoming.ThreeRegime.cap
+        Becoming.ThreeRegime.l_evolve Becoming.ThreeRegime.l_legacy ∧
+      Becoming.ThreeRegime.web.Mixed Becoming.ThreeRegime.l_churn Becoming.ThreeRegime.l_legacy ∧
+        Becoming.«全生成» Becoming.Steps.next Becoming.«一» (Becoming.Steps.same Becoming.ThreeRegime.QChurn) 1 ∧
+          ¬Becoming.TransformativeViable Becoming.ThreeRegime.web Becoming.ThreeRegime.Viable Becoming.ThreeRegime.cap
+              Becoming.ThreeRegime.l_churn Becoming.ThreeRegime.l_legacy
+Becoming.FiniteGainless.every : ∀ (c : Becoming.FiniteGainless.Cond), c ∈ Becoming.FiniteGainless.all
+Becoming.FiniteGainless.distinct : Becoming.Distinct Becoming.FiniteGainless.all
+Becoming.FiniteGainless.conserving : Becoming.FiniteGainless.flow.Conserving
+Becoming.FiniteGainless.gainless : Becoming.FiniteGainless.flow.Gainless
+Becoming.FiniteGainless.closed : ∀ (t : Nat), Becoming.FiniteGainless.flow.ClosedAt Becoming.FiniteGainless.all t
+Becoming.FiniteGainless.balances : ∀ (t : Nat),
+  Becoming.FiniteGainless.flow.BalancesOn Becoming.FiniteGainless.web Becoming.FiniteGainless.all t
+Becoming.FiniteGainless.requiresWithin : ∀ (t : Nat) (f : Becoming.FiniteGainless.Form),
+  0 ≤ t →
+    Becoming.FiniteGainless.web.Supported t f → Becoming.FiniteGainless.web.RequiresWithin Becoming.FiniteGainless.all f
+Becoming.FiniteGainless.not_keepsWidening : ¬Becoming.FiniteGainless.web.KeepsWidening Becoming.Web.itself
+    Becoming.FiniteGainless.web.level 0
+Becoming.FiniteGainless.micro_turnover : ∀ (t : Nat),
+  ∃ f,
+    Becoming.FiniteGainless.web.Admits (Becoming.FiniteGainless.web.level t) t f ∧
+      ¬Becoming.FiniteGainless.web.Admits (Becoming.FiniteGainless.web.level (t + 1)) (t + 1) f
+Becoming.FiniteGainless.transformsViably : Becoming.TransformsViably Becoming.FiniteGainless.web
+  (fun t => 1 ≤ Becoming.FiniteGainless.web.level t Becoming.FiniteGainless.Cond.cSub) Becoming.FiniteGainless.cap 0
+Becoming.FiniteGainless.along_capSame : Becoming.TransformsViablyAlong Becoming.FiniteGainless.web
+  (fun t => 1 ≤ Becoming.FiniteGainless.web.level t Becoming.FiniteGainless.Cond.cSub) Becoming.FiniteGainless.cap
+  (fun x a b => Becoming.FiniteGainless.cap a = Becoming.FiniteGainless.cap b) 0
+Becoming.FiniteGainless.not_along_itself : ¬Becoming.TransformsViablyAlong Becoming.FiniteGainless.web
+    (fun t => 1 ≤ Becoming.FiniteGainless.web.level t Becoming.FiniteGainless.Cond.cSub) Becoming.FiniteGainless.cap
+    Becoming.Web.itself 0
+Becoming.FiniteGainless.finite_gainless_transformsViably : Becoming.FiniteGainless.flow.Conserving ∧
+  Becoming.FiniteGainless.flow.Gainless ∧
+    (∀ (t : Nat), Becoming.FiniteGainless.flow.ClosedAt Becoming.FiniteGainless.all t) ∧
+      (∀ (t : Nat), Becoming.FiniteGainless.flow.BalancesOn Becoming.FiniteGainless.web Becoming.FiniteGainless.all t) ∧
+        (∀ (t : Nat) (f : Becoming.FiniteGainless.Form),
+            0 ≤ t →
+              Becoming.FiniteGainless.web.Supported t f →
+                Becoming.FiniteGainless.web.RequiresWithin Becoming.FiniteGainless.all f) ∧
+          ¬Becoming.FiniteGainless.web.KeepsWidening Becoming.Web.itself Becoming.FiniteGainless.web.level 0 ∧
+            Becoming.TransformsViably Becoming.FiniteGainless.web
+                (fun t => 1 ≤ Becoming.FiniteGainless.web.level t Becoming.FiniteGainless.Cond.cSub)
+                Becoming.FiniteGainless.cap 0 ∧
+              ∀ (t : Nat),
+                ∃ f,
+                  Becoming.FiniteGainless.web.Admits (Becoming.FiniteGainless.web.level t) t f ∧
+                    ¬Becoming.FiniteGainless.web.Admits (Becoming.FiniteGainless.web.level (t + 1)) (t + 1) f

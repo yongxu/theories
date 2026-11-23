@@ -1,0 +1,14 @@
+'Becoming.Law.stepWhile' does not depend on any axioms
+'Becoming.Law.stepWhile_step' does not depend on any axioms
+'Becoming.Law.stepWhile_always' does not depend on any axioms
+'Becoming.Law.stepWhile_fixed' does not depend on any axioms
+'Becoming.Law.stepWhile_continues_iff' does not depend on any axioms
+'Becoming.Law.stepWhile_steps_iff' does not depend on any axioms
+'Becoming.Law.stepWhile_none_iff' does not depend on any axioms
+'Becoming.Law.stepWhile_hasSucc_iff' does not depend on any axioms
+'Becoming.Law.stepWhile_unending_iff' does not depend on any axioms
+'Becoming.Law.stepWhile_goesAlike_iff' does not depend on any axioms
+'Becoming.Law.stepWhile_toEnd_iff' does not depend on any axioms
+'Becoming.Law.stepWhile_constant_iff' does not depend on any axioms
+'Becoming.Law.stepWhile_toEnd_decides' does not depend on any axioms
+'Becoming.Law.stepWhile_guarded_iff' does not depend on any axioms

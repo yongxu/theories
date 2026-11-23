@@ -98,6 +98,25 @@ def KeptFor (P : Process S A) (sense : S → A → S → O) (guard : S → Prop)
   | n + 1, B => (∀ s, B s → guard s) ∧
       ∃ a, Usable P allowed B a ∧ ∀ o, KeptFor P sense guard allowed n (Seen P sense B a o)
 
+/-- For any reading of steps, a class is kept for one step exactly when the guard holds
+throughout the class and some move usable from it leads only to guarded configurations. -/
+theorem keptFor_one_iff {P : Process S A} {sense : S → A → S → O} {guard : S → Prop}
+    {allowed : S → A → Prop} {B : S → Prop} :
+    KeptFor P sense guard allowed 1 B ↔
+      (∀ s, B s → guard s) ∧ ∃ a, Usable P allowed B a ∧ ∀ s t, B s → P.step s a t → guard t :=
+  ⟨fun ⟨within, a, usable, afterMove⟩ =>
+     ⟨within, a, usable, fun s t held step =>
+       afterMove (sense s a t) t ⟨s, held, step, rfl⟩⟩,
+   fun ⟨within, a, usable, guarded⟩ =>
+     ⟨within, a, usable, fun _ t ⟨s, held, step, _⟩ => guarded s t held step⟩⟩
+
+/-- At one step, `KeptFor` does not depend on what the step keeps. -/
+theorem keptFor_one_iff_change_reading {P : Process S A} {sense : S → A → S → O}
+    {O' : Type z} {sense' : S → A → S → O'} {guard : S → Prop} {allowed : S → A → Prop}
+    {B : S → Prop} :
+    KeptFor P sense guard allowed 1 B ↔ KeptFor P sense' guard allowed 1 B :=
+  (keptFor_one_iff (sense := sense)).trans (keptFor_one_iff (sense := sense')).symm
+
 /-! ## Plans -/
 
 /-- A plan of `n` moves: a first move and, for each value its step keeps, a plan of the

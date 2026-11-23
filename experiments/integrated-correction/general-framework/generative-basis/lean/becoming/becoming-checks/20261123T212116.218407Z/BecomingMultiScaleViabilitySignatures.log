@@ -1,0 +1,115 @@
+Becoming.sub_self_nat : ∀ (x : Nat), x - x = 0
+Becoming.distNat_self : ∀ (x : Nat), Becoming.distNat x x = 0
+Becoming.distNat_symm : ∀ (x y : Nat), Becoming.distNat x y = Becoming.distNat y x
+Becoming.le_sub_add_nat : ∀ (a b : Nat), a ≤ a - b + b
+Becoming.sub_le_add_sub_nat : ∀ (a b c : Nat), a - c ≤ a - b + (b - c)
+Becoming.distNat_tri : ∀ (x y z : Nat), Becoming.distNat x z ≤ Becoming.distNat x y + Becoming.distNat y z
+Becoming.distNat_add_one : ∀ (x y : Nat), Becoming.distNat (x + 1) y ≤ Becoming.distNat x y + 1
+Becoming.distNat_sub_one : ∀ (x y : Nat), Becoming.distNat (x - 1) y ≤ Becoming.distNat x y + 1
+@Becoming.strict_mono_le : ∀ {σ : Nat → Nat}, Becoming.Strict σ → ∀ {a b : Nat}, a ≤ b → σ a ≤ σ b
+@Becoming.strict_lt_of_lt : ∀ {σ : Nat → Nat}, Becoming.Strict σ → ∀ {a b : Nat}, σ a < σ b → a < b
+@Becoming.strict_unbounded : ∀ {σ : Nat → Nat}, Becoming.Strict σ → ∀ (t : Nat), ∃ k, t < σ k
+@Becoming.block_of_strict : ∀ {σ : Nat → Nat}, Becoming.Strict σ → ∀ {t : Nat}, σ 0 ≤ t → ∃ k, σ k ≤ t ∧ t < σ (k + 1)
+@Becoming.trace_split : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (m : Nat) {s t : S} {w : List A},
+  m ≤ w.length →
+    Generative.Trace P s w t →
+      ∃ w₁ w₂ u,
+        w₁.length = m ∧ w₁.length + w₂.length = w.length ∧ Generative.Trace P s w₁ u ∧ Generative.Trace P u w₂ t
+@Becoming.LaxSim.slack_le_of_absorb : ∀ {α : Nat → Nat},
+  (∀ {r₁ r₂ : Nat}, r₁ ≤ r₂ → α r₁ ≤ α r₂) →
+    ∀ {ε Δ : Nat}, α Δ + ε ≤ Δ → ∀ (m r : Nat), r ≤ Δ → Becoming.LaxSim.slack α ε m r ≤ Δ
+Becoming.LaxSim.slack_id : ∀ (ε m r : Nat), Becoming.LaxSim.slack id ε m r = r + m * ε
+@Becoming.LaxSim.epoch_trace : ∀ {S : Type u_1} {A : Type u_2} {Q : Type u_3} {B : Type u_4}
+  {P : Generative.Process S A} {R : Generative.Process Q B} {π : S → Q} {σ : Nat → Nat} {M : Becoming.SlackDist Q}
+  (sim : Becoming.LaxSim P R π σ M) {t₀ : Nat} {s : S} {w : List A} {u : S},
+  sim.Epoch t₀ s → Generative.Trace P s w u → sim.Epoch (t₀ + w.length) u
+@Becoming.LaxSim.advance_blocks : ∀ {S : Type u_1} {A : Type u_2} {Q : Type u_3} {B : Type u_4}
+  {P : Generative.Process S A} {R : Generative.Process Q B} {π : S → Q} {σ : Nat → Nat} {M : Becoming.SlackDist Q}
+  (sim : Becoming.LaxSim P R π σ M) (m j₀ : Nat) {s : S} {q : Q} {r : Nat} {w : List A} {t : S},
+  sim.Epoch (σ j₀) s →
+    sim.EpochQ j₀ q →
+      M.d (π s) q ≤ r →
+        σ (j₀ + m) - σ j₀ ≤ w.length →
+          Generative.Trace P s w t →
+            ∃ u w_rem wR q_m,
+              w_rem.length + (σ (j₀ + m) - σ j₀) = w.length ∧
+                wR.length = m ∧
+                  Generative.Trace R q wR q_m ∧
+                    Generative.Trace P u w_rem t ∧
+                      sim.Epoch (σ (j₀ + m)) u ∧
+                        sim.EpochQ (j₀ + m) q_m ∧ M.d (π u) q_m ≤ Becoming.LaxSim.slack sim.α sim.ε m r
+@Becoming.lax_kernel_of_certificate : ∀ {S : Type u_1} {A : Type u_2} {Q : Type u_3} {B : Type u_4}
+  {P : Generative.Process S A} {R : Generative.Process Q B} {π : S → Q} {σ : Nat → Nat} {M : Becoming.SlackDist Q}
+  (sim : Becoming.LaxSim P R π σ M) {guardQ K : Q → Prop} {guardS : S → Prop},
+  Becoming.Viability.Certificate R guardQ K →
+    ∀ (Δ : Nat),
+      sim.α Δ + sim.ε ≤ Δ →
+        (∀ (q : Q) (u : S), guardQ q → M.d (π u) q ≤ sim.β Δ + sim.η → guardS u) →
+          ∀ {s₀ : S}, sim.Epoch (σ 0) s₀ → K (π s₀) → Becoming.Viability.Kernel P guardS s₀
+@Becoming.lax_kernel_of_kernel : ∀ {S : Type u_1} {A : Type u_2} {Q : Type u_3} {B : Type u_4}
+  {P : Generative.Process S A} {R : Generative.Process Q B} {π : S → Q} {σ : Nat → Nat} {M : Becoming.SlackDist Q}
+  (sim : Becoming.LaxSim P R π σ M) {guardQ : Q → Prop} {guardS : S → Prop} (Δ : Nat),
+  sim.α Δ + sim.ε ≤ Δ →
+    (∀ (q : Q) (u : S), guardQ q → M.d (π u) q ≤ sim.β Δ + sim.η → guardS u) →
+      ∀ {s₀ : S}, sim.Epoch (σ 0) s₀ → Becoming.Viability.Kernel R guardQ (π s₀) → Becoming.Viability.Kernel P guardS s₀
+@Becoming.lax_keptFor_linear : ∀ {S : Type u_1} {A : Type u_2} {Q : Type u_3} {B : Type u_4}
+  {P : Generative.Process S A} {R : Generative.Process Q B} {π : S → Q} {σ : Nat → Nat} {M : Becoming.SlackDist Q}
+  (sim : Becoming.LaxSim P R π σ M),
+  sim.α = id →
+    ∀ {guardQ K : Q → Prop} {guardS : S → Prop},
+      Becoming.Viability.Certificate R guardQ K →
+        ∀ (N : Nat),
+          0 < N →
+            (∀ (q : Q) (u : S), guardQ q → M.d (π u) q ≤ sim.β ((N - 1) * sim.ε) + sim.η → guardS u) →
+              ∀ {s₀ : S},
+                sim.Epoch (σ 0) s₀ →
+                  K (π s₀) → ∀ (w : List A) (t : S), w.length < σ N - σ 0 → Generative.Trace P s₀ w t → guardS t
+@Becoming.lax_keptFor_linear_of_kernel : ∀ {S : Type u_1} {A : Type u_2} {Q : Type u_3} {B : Type u_4}
+  {P : Generative.Process S A} {R : Generative.Process Q B} {π : S → Q} {σ : Nat → Nat} {M : Becoming.SlackDist Q}
+  (sim : Becoming.LaxSim P R π σ M),
+  sim.α = id →
+    ∀ {guardQ : Q → Prop} {guardS : S → Prop} (N : Nat),
+      0 < N →
+        (∀ (q : Q) (u : S), guardQ q → M.d (π u) q ≤ sim.β ((N - 1) * sim.ε) + sim.η → guardS u) →
+          ∀ {s₀ : S},
+            sim.Epoch (σ 0) s₀ →
+              Becoming.Viability.Kernel R guardQ (π s₀) →
+                ∀ (w : List A) (t : S), w.length < σ N - σ 0 → Generative.Trace P s₀ w t → guardS t
+@Becoming.LaxSim.keptFor_linear_run : ∀ {S : Type u_1} {A : Type u_2} {Q : Type u_3} {B : Type u_4}
+  {P : Generative.Process S A} {R : Generative.Process Q B} {π : S → Q} {σ : Nat → Nat} {M : Becoming.SlackDist Q}
+  (sim : Becoming.LaxSim P R π σ M),
+  sim.α = id →
+    ∀ {guardQ K : Q → Prop} {guardS : S → Prop},
+      Becoming.Viability.Certificate R guardQ K →
+        ∀ (N : Nat),
+          0 < N →
+            (∀ (q : Q) (u : S), guardQ q → M.d (π u) q ≤ sim.β ((N - 1) * sim.ε) + sim.η → guardS u) →
+              ∀ (r : Becoming.Run P),
+                sim.Epoch (σ 0) (r.state 0) → K (π (r.state 0)) → ∀ (n : Nat), n < σ N - σ 0 → guardS (r.state n)
+Becoming.WitnessTwoScale.distNat_div2 : ∀ (a b : Nat), Becoming.distNat (a / 2) (b / 2) ≤ Becoming.distNat a b
+Becoming.WitnessTwoScale.damp_lip : ∀ (mid a b : Nat),
+  Becoming.distNat (Becoming.WitnessTwoScale.damp mid a) (Becoming.WitnessTwoScale.damp mid b) ≤
+    (Becoming.distNat a b + 1) / 2
+Becoming.WitnessTwoScale.back₁ : ∀ (q : Nat × Bool),
+  Becoming.WitnessTwoScale.π₁ (Becoming.WitnessTwoScale.sectionMap₁ q) = q
+Becoming.WitnessTwoScale.back₂ : ∀ (c : Nat), Becoming.WitnessTwoScale.π₂ (Becoming.WitnessTwoScale.sectionMap₂ c) = c
+Becoming.WitnessTwoScale.back₁₂ : ∀ (c : Nat),
+  Becoming.WitnessTwoScale.π₂ (Becoming.WitnessTwoScale.π₁ (Becoming.WitnessTwoScale.sectionMap₁₂ c)) = c
+Becoming.WitnessTwoScale.not_fibreConsistent₁ : ¬Becoming.ProjectedLaws.FibreConsistent Becoming.WitnessTwoScale.next
+    Becoming.WitnessTwoScale.π₁
+Becoming.WitnessTwoScale.no_reduced_law₁ : ¬∃ reduced,
+    Becoming.ProjectedLaws.Commuting Becoming.WitnessTwoScale.next reduced Becoming.WitnessTwoScale.π₁
+Becoming.WitnessTwoScale.not_fibreConsistent₂ : ¬Becoming.ProjectedLaws.FibreConsistent Becoming.WitnessTwoScale.next₁
+    Becoming.WitnessTwoScale.π₂
+Becoming.WitnessTwoScale.no_reduced_law₂ : ¬∃ reduced,
+    Becoming.ProjectedLaws.Commuting Becoming.WitnessTwoScale.next₁ reduced Becoming.WitnessTwoScale.π₂
+Becoming.WitnessTwoScale.not_fibreConsistent₁₂ : ¬Becoming.ProjectedLaws.FibreConsistent Becoming.WitnessTwoScale.next
+    fun s => Becoming.WitnessTwoScale.π₂ (Becoming.WitnessTwoScale.π₁ s)
+Becoming.WitnessTwoScale.no_reduced_law₁₂ : ¬∃ reduced,
+    Becoming.ProjectedLaws.Commuting Becoming.WitnessTwoScale.next reduced fun s =>
+      Becoming.WitnessTwoScale.π₂ (Becoming.WitnessTwoScale.π₁ s)
+Becoming.WitnessTwoScale.sim₁₂_params : Becoming.WitnessTwoScale.sim₁₂.ε = 3 ∧ Becoming.WitnessTwoScale.sim₁₂.η = 2
+Becoming.WitnessTwoScale.kernel_cert : Becoming.Viability.Certificate Becoming.WitnessTwoScale.R₂
+  Becoming.WitnessTwoScale.guardQ₂ Becoming.WitnessTwoScale.K
+Becoming.WitnessTwoScale.viability_kernel : Becoming.Viability.Kernel Becoming.WitnessTwoScale.P
+  Becoming.WitnessTwoScale.guardS Becoming.WitnessTwoScale.s₀

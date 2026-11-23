@@ -104,10 +104,17 @@ theorem iter_pred : ∀ n y, iter Φ V₀ (n + 1) y → iter Φ V₀ n y
   | 0 => start
   | n + 1 => mono (iter_pred n)
 
+omit start in
+/-- For a monotone step, any class containing the start and closed under the step contains every
+iterate. Order-dual of `postfixed_in_iter`. -/
+theorem prefixed_above_iter {K : S → Prop} (above : ∀ y, V₀ y → K y)
+    (pre : ∀ y, Φ K y → K y) : ∀ n y, iter Φ V₀ n y → K y
+  | 0 => above
+  | n + 1 => fun y h => pre y (mono (prefixed_above_iter above pre n) y h)
+
 /-- If a monotone step takes the start into itself, every iterate lies in the start. -/
-theorem iter_within : ∀ n y, iter Φ V₀ n y → V₀ y
-  | 0, _, h => h
-  | n + 1, y, h => iter_within n y (iter_pred mono start n y h)
+theorem iter_within : ∀ n y, iter Φ V₀ n y → V₀ y :=
+  prefixed_above_iter mono (fun _ h => h) start
 
 /-- Suppose a monotone step takes the start into itself and a list has length n. If every state in
 the start is on the list or in iterate n + 1, every state in iterate n is in iterate n + 1. -/

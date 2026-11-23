@@ -1,0 +1,253 @@
+Becoming.LearnedGrouping.spelled : Becoming.Segmentation.Spelled Becoming.LearnedGrouping.word
+  Becoming.LearnedGrouping.wordFirst Becoming.LearnedGrouping.wordRest
+Becoming.LearnedGrouping.two_word_iff : ∀ (r : Becoming.LearnedGrouping.Sound → Becoming.LearnedGrouping.Sound → Bool),
+  (∀ (ws : List Bool),
+      Becoming.Segmentation.chunks r (Becoming.Segmentation.encode Becoming.LearnedGrouping.word ws) =
+        List.map Becoming.LearnedGrouping.word ws) ↔
+    r Becoming.LearnedGrouping.Sound.a Becoming.LearnedGrouping.Sound.b = true ∧
+      r Becoming.LearnedGrouping.Sound.c Becoming.LearnedGrouping.Sound.d = true ∧
+        r Becoming.LearnedGrouping.Sound.b Becoming.LearnedGrouping.Sound.a = false ∧
+          r Becoming.LearnedGrouping.Sound.b Becoming.LearnedGrouping.Sound.c = false ∧
+            r Becoming.LearnedGrouping.Sound.d Becoming.LearnedGrouping.Sound.a = false ∧
+              r Becoming.LearnedGrouping.Sound.d Becoming.LearnedGrouping.Sound.c = false
+Becoming.LearnedGrouping.ideal_two_word : ∀ (ws : List Bool),
+  Becoming.Segmentation.chunks Becoming.LearnedGrouping.idealBond
+      (Becoming.Segmentation.encode Becoming.LearnedGrouping.word ws) =
+    List.map Becoming.LearnedGrouping.word ws
+Becoming.LearnedGrouping.decodes_words : ∀ (ws : List Bool),
+  Becoming.Segmentation.readAll Becoming.LearnedGrouping.decodeChunk (List.map Becoming.LearnedGrouping.word ws) =
+    some (List.map Becoming.CodeAcquisition.Expr.atom ws)
+Becoming.LearnedGrouping.receive_stock : ∀ (event : Option Becoming.LearnedGrouping.Sound)
+  (s : Becoming.LearnedGrouping.State),
+  (Becoming.LearnedGrouping.receive event s).machine.stock + (Becoming.LearnedGrouping.receive event s).machine.drawn =
+    s.machine.stock + s.machine.drawn
+Becoming.LearnedGrouping.expose_stock : ∀ (events : List (Option Becoming.LearnedGrouping.Sound))
+  (s : Becoming.LearnedGrouping.State),
+  (Becoming.LearnedGrouping.expose events s).machine.stock + (Becoming.LearnedGrouping.expose events s).machine.drawn =
+    s.machine.stock + s.machine.drawn
+Becoming.LearnedGrouping.receive_short : ∀ (event : Option Becoming.LearnedGrouping.Sound)
+  (s : Becoming.LearnedGrouping.State), s.machine.stock = 0 → Becoming.LearnedGrouping.receive event s = s
+Becoming.LearnedGrouping.broaden_stock : ∀ (raw : List Becoming.LearnedGrouping.Sound)
+  (more : List (Option Becoming.LearnedGrouping.Sound)) (s : Becoming.LearnedGrouping.State),
+  (Becoming.LearnedGrouping.broadenAfterFailure raw more s).machine.stock +
+      (Becoming.LearnedGrouping.broadenAfterFailure raw more s).machine.drawn =
+    s.machine.stock + s.machine.drawn
+Becoming.LearnedGrouping.context_forms_bond : ∀ (x y : Becoming.LearnedGrouping.Sound),
+  Becoming.Segmentation.bond (Becoming.LearnedGrouping.experienced 28).log x y = Becoming.LearnedGrouping.idealBond x y
+Becoming.LearnedGrouping.context_groups_words : ∀ (ws : List Bool),
+  Becoming.Segmentation.chunks (Becoming.Segmentation.bond (Becoming.LearnedGrouping.experienced 28).log)
+      (Becoming.Segmentation.encode Becoming.LearnedGrouping.word ws) =
+    List.map Becoming.LearnedGrouping.word ws
+Becoming.LearnedGrouping.context_assembles : ∀ (ws : List Bool),
+  Becoming.LearnedGrouping.parse (Becoming.LearnedGrouping.experienced 28)
+      (Becoming.Segmentation.encode Becoming.LearnedGrouping.word ws) =
+    Becoming.LearnedGrouping.assembleMessage (List.map Becoming.CodeAcquisition.Expr.atom ws)
+Becoming.LearnedGrouping.unexposed_unparsed : Becoming.LearnedGrouping.parse (Becoming.LearnedGrouping.ready 28)
+      Becoming.LearnedGrouping.utterance =
+    none ∧
+  Becoming.LearnedGrouping.act Becoming.LearnedGrouping.utterance (Becoming.LearnedGrouping.ready 28) = none
+Becoming.LearnedGrouping.grouping_reaches_program : Becoming.LearnedGrouping.parse
+      (Becoming.LearnedGrouping.experienced 28) Becoming.LearnedGrouping.utterance =
+    some Becoming.LearnedGrouping.intended ∧
+  Option.map (fun r => (r.fst, r.snd.machine.stock, r.snd.machine.drawn))
+      (Becoming.LearnedGrouping.act Becoming.LearnedGrouping.utterance (Becoming.LearnedGrouping.experienced 28)) =
+    some ([true, false, true], 0, 21)
+Becoming.LearnedGrouping.response_keeps_log : Option.map (fun r => (r.snd.log, r.snd.machine.samples))
+    (Becoming.LearnedGrouping.act Becoming.LearnedGrouping.utterance (Becoming.LearnedGrouping.experienced 28)) =
+  some
+    (List.map some Becoming.LearnedGrouping.context,
+      Becoming.CodeAcquisition.trialRecords Becoming.CodeAcquisition.usual)
+Becoming.LearnedGrouping.history_account : (Becoming.LearnedGrouping.ready 28).machine.stock = 14 ∧
+  (Becoming.LearnedGrouping.experienced 28).machine.stock = 4 ∧ 7 + 7 + 10 + 4 = 28
+Becoming.LearnedGrouping.parsed_short : Becoming.LearnedGrouping.parse (Becoming.LearnedGrouping.experienced 27)
+      Becoming.LearnedGrouping.utterance =
+    some Becoming.LearnedGrouping.intended ∧
+  Becoming.LearnedGrouping.act Becoming.LearnedGrouping.utterance (Becoming.LearnedGrouping.experienced 27) = none
+Becoming.LearnedGrouping.gap_breaks_edge : Becoming.Segmentation.edges
+      [some Becoming.LearnedGrouping.Sound.a, none, some Becoming.LearnedGrouping.Sound.b] =
+    [] ∧
+  Becoming.Segmentation.bond [some Becoming.LearnedGrouping.Sound.a, none, some Becoming.LearnedGrouping.Sound.b]
+        Becoming.LearnedGrouping.Sound.a Becoming.LearnedGrouping.Sound.b =
+      false ∧
+    Becoming.Segmentation.bond [some Becoming.LearnedGrouping.Sound.a, some Becoming.LearnedGrouping.Sound.b]
+        Becoming.LearnedGrouping.Sound.a Becoming.LearnedGrouping.Sound.b =
+      true
+Becoming.LearnedGrouping.counts_agree : ∀ (x : Becoming.LearnedGrouping.Sound),
+  Becoming.Segmentation.countIf (fun y => decide (y = x)) Becoming.LearnedGrouping.context =
+    Becoming.Segmentation.countIf (fun y => decide (y = x)) Becoming.LearnedGrouping.reordered
+Becoming.LearnedGrouping.order_changes_grouping : Becoming.Segmentation.bond
+      (List.map some Becoming.LearnedGrouping.context) Becoming.LearnedGrouping.Sound.a
+      Becoming.LearnedGrouping.Sound.b =
+    true ∧
+  Becoming.Segmentation.bond (List.map some Becoming.LearnedGrouping.reordered) Becoming.LearnedGrouping.Sound.a
+        Becoming.LearnedGrouping.Sound.b =
+      false ∧
+    Becoming.LearnedGrouping.parse
+        (Becoming.LearnedGrouping.expose (List.map some Becoming.LearnedGrouping.reordered)
+          (Becoming.LearnedGrouping.ready 28))
+        Becoming.LearnedGrouping.utterance =
+      none
+Becoming.LearnedGrouping.broaden_reaches_context : Becoming.LearnedGrouping.parse (Becoming.LearnedGrouping.narrow 28)
+      Becoming.LearnedGrouping.utterance =
+    none ∧
+  (Becoming.LearnedGrouping.broadened 28).log = List.map some Becoming.LearnedGrouping.context ∧
+    Becoming.LearnedGrouping.parse (Becoming.LearnedGrouping.broadened 28) Becoming.LearnedGrouping.utterance =
+        some Becoming.LearnedGrouping.intended ∧
+      Option.map Prod.fst
+          (Becoming.LearnedGrouping.act Becoming.LearnedGrouping.utterance (Becoming.LearnedGrouping.broadened 28)) =
+        some [true, false, true]
+Becoming.LearnedGrouping.parsed_keeps : Becoming.LearnedGrouping.broadenAfterFailure
+    [Becoming.LearnedGrouping.Sound.a, Becoming.LearnedGrouping.Sound.b]
+    (List.map some Becoming.LearnedGrouping.additional) (Becoming.LearnedGrouping.narrow 28) =
+  Becoming.LearnedGrouping.narrow 28
+Becoming.LearnedGrouping.broaden_prefix : (Becoming.LearnedGrouping.broadened 19).log =
+    List.map some
+      [Becoming.LearnedGrouping.Sound.a, Becoming.LearnedGrouping.Sound.b, Becoming.LearnedGrouping.Sound.a,
+        Becoming.LearnedGrouping.Sound.b, Becoming.LearnedGrouping.Sound.c] ∧
+  Becoming.LearnedGrouping.parse (Becoming.LearnedGrouping.broadened 19) Becoming.LearnedGrouping.utterance = none
+Becoming.LearnedGrouping.broaden_one_form : (Becoming.LearnedGrouping.broadened 21).log =
+    List.map some
+      [Becoming.LearnedGrouping.Sound.a, Becoming.LearnedGrouping.Sound.b, Becoming.LearnedGrouping.Sound.a,
+        Becoming.LearnedGrouping.Sound.b, Becoming.LearnedGrouping.Sound.c, Becoming.LearnedGrouping.Sound.d,
+        Becoming.LearnedGrouping.Sound.c] ∧
+  Becoming.LearnedGrouping.parse (Becoming.LearnedGrouping.broadened 21) Becoming.LearnedGrouping.utterance =
+      some Becoming.LearnedGrouping.intended ∧
+    Becoming.LearnedGrouping.act Becoming.LearnedGrouping.utterance (Becoming.LearnedGrouping.broadened 21) = none ∧
+      Becoming.LearnedGrouping.parse (Becoming.LearnedGrouping.broadened 21)
+          [Becoming.LearnedGrouping.Sound.c, Becoming.LearnedGrouping.Sound.d, Becoming.LearnedGrouping.Sound.c,
+            Becoming.LearnedGrouping.Sound.d] =
+        none
+Becoming.LearnedGrouping.repetition_joins_words : Becoming.Segmentation.chunks
+      (Becoming.Segmentation.bond (List.map some Becoming.LearnedGrouping.learnerFavored))
+      Becoming.LearnedGrouping.learnerFavored =
+    [Becoming.LearnedGrouping.learnerFavored] ∧
+  Becoming.LearnedGrouping.decodeChunk Becoming.LearnedGrouping.learnerFavored = none
+@Becoming.LearnedGrouping.step_iff : ∀ {s t : Becoming.LearnedGrouping.State}
+  {e : Option Becoming.LearnedGrouping.Sound},
+  Becoming.LearnedGrouping.reception.step s e t ↔ t = Becoming.LearnedGrouping.receive e s
+@Becoming.LearnedGrouping.trace_end : ∀ {s t : Becoming.LearnedGrouping.State}
+  {es : List (Option Becoming.LearnedGrouping.Sound)},
+  Generative.Trace Becoming.LearnedGrouping.reception s es t → t = Becoming.LearnedGrouping.expose es s
+Becoming.LearnedGrouping.expose_trace : ∀ (es : List (Option Becoming.LearnedGrouping.Sound))
+  (s : Becoming.LearnedGrouping.State),
+  Generative.Trace Becoming.LearnedGrouping.reception s es (Becoming.LearnedGrouping.expose es s)
+@Becoming.LearnedGrouping.along : ∀ {s : Becoming.LearnedGrouping.State}
+  {es : List (Option Becoming.LearnedGrouping.Sound)} {Q : Becoming.LearnedGrouping.State → Prop},
+  Q (Becoming.LearnedGrouping.expose es s) →
+    ∀ (t : Becoming.LearnedGrouping.State), Generative.Trace Becoming.LearnedGrouping.reception s es t → Q t
+@Becoming.LearnedGrouping.total_kept : ∀ {s t : Becoming.LearnedGrouping.State}
+  {es : List (Option Becoming.LearnedGrouping.Sound)},
+  Generative.Trace Becoming.LearnedGrouping.reception s es t →
+    t.machine.stock + t.machine.drawn = s.machine.stock + s.machine.drawn
+@Becoming.LearnedGrouping.still_without_support : ∀ {s t : Becoming.LearnedGrouping.State}
+  {es : List (Option Becoming.LearnedGrouping.Sound)},
+  Generative.Trace Becoming.LearnedGrouping.reception s es t → s.machine.stock = 0 → t = s
+Becoming.LearnedGrouping.broadening_trace : ∀ (raw : List Becoming.LearnedGrouping.Sound)
+  (more : List (Option Becoming.LearnedGrouping.Sound)) (s : Becoming.LearnedGrouping.State),
+  ∃ es,
+    Generative.Trace Becoming.LearnedGrouping.reception s es (Becoming.LearnedGrouping.broadenAfterFailure raw more s) ∧
+      (Becoming.LearnedGrouping.broadenAfterFailure raw more s).machine.stock +
+          (Becoming.LearnedGrouping.broadenAfterFailure raw more s).machine.drawn =
+        s.machine.stock + s.machine.drawn
+Becoming.LearnedGrouping.grouping_assembles : ∀ (t : Becoming.LearnedGrouping.State),
+  Generative.Trace Becoming.LearnedGrouping.reception (Becoming.LearnedGrouping.ready 28)
+      (List.map some Becoming.LearnedGrouping.context) t →
+    ∀ (ws : List Bool),
+      Becoming.LearnedGrouping.parse t (Becoming.Segmentation.encode Becoming.LearnedGrouping.word ws) =
+        Becoming.LearnedGrouping.assembleMessage (List.map Becoming.CodeAcquisition.Expr.atom ws)
+Becoming.LearnedGrouping.reception_changes_parse : ∀ (t : Becoming.LearnedGrouping.State),
+  Generative.Trace Becoming.LearnedGrouping.reception (Becoming.LearnedGrouping.ready 28)
+      (List.map some Becoming.LearnedGrouping.context) t →
+    (Becoming.LearnedGrouping.parse (Becoming.LearnedGrouping.ready 28) Becoming.LearnedGrouping.utterance = none ∧
+        Becoming.LearnedGrouping.act Becoming.LearnedGrouping.utterance (Becoming.LearnedGrouping.ready 28) = none) ∧
+      Becoming.LearnedGrouping.parse t Becoming.LearnedGrouping.utterance = some Becoming.LearnedGrouping.intended ∧
+        Option.map (fun r => (r.fst, r.snd.machine.stock, r.snd.machine.drawn))
+            (Becoming.LearnedGrouping.act Becoming.LearnedGrouping.utterance t) =
+          some ([true, false, true], 0, 21)
+Becoming.LearnedGrouping.response_keeps_history : ∀ (t : Becoming.LearnedGrouping.State),
+  Generative.Trace Becoming.LearnedGrouping.reception (Becoming.LearnedGrouping.ready 28)
+      (List.map some Becoming.LearnedGrouping.context) t →
+    Option.map (fun r => (r.snd.log, r.snd.machine.samples))
+        (Becoming.LearnedGrouping.act Becoming.LearnedGrouping.utterance t) =
+      some
+        (List.map some Becoming.LearnedGrouping.context,
+          Becoming.CodeAcquisition.trialRecords Becoming.CodeAcquisition.usual)
+Becoming.LearnedGrouping.support_used : ∀ (t : Becoming.LearnedGrouping.State),
+  Generative.Trace Becoming.LearnedGrouping.reception (Becoming.LearnedGrouping.ready 28)
+      (List.map some Becoming.LearnedGrouping.context) t →
+    (Becoming.LearnedGrouping.ready 28).machine.stock = 14 ∧ t.machine.stock = 4 ∧ 7 + 7 + 10 + 4 = 28
+Becoming.LearnedGrouping.parse_without_support : ∀ (t : Becoming.LearnedGrouping.State),
+  Generative.Trace Becoming.LearnedGrouping.reception (Becoming.LearnedGrouping.ready 27)
+      (List.map some Becoming.LearnedGrouping.context) t →
+    Becoming.LearnedGrouping.parse t Becoming.LearnedGrouping.utterance = some Becoming.LearnedGrouping.intended ∧
+      Becoming.LearnedGrouping.act Becoming.LearnedGrouping.utterance t = none
+Becoming.LearnedGrouping.order_not_frequency : (∀ (x : Becoming.LearnedGrouping.Sound),
+    Becoming.Segmentation.countIf (fun y => decide (y = x)) Becoming.LearnedGrouping.context =
+      Becoming.Segmentation.countIf (fun y => decide (y = x)) Becoming.LearnedGrouping.reordered) ∧
+  ∀ (t t' : Becoming.LearnedGrouping.State),
+    Generative.Trace Becoming.LearnedGrouping.reception (Becoming.LearnedGrouping.ready 28)
+        (List.map some Becoming.LearnedGrouping.context) t →
+      Generative.Trace Becoming.LearnedGrouping.reception (Becoming.LearnedGrouping.ready 28)
+          (List.map some Becoming.LearnedGrouping.reordered) t' →
+        Becoming.LearnedGrouping.parse t Becoming.LearnedGrouping.utterance = some Becoming.LearnedGrouping.intended ∧
+          Becoming.LearnedGrouping.parse t' Becoming.LearnedGrouping.utterance = none
+Becoming.LearnedGrouping.broadening_after_failure : ∀ (t : Becoming.LearnedGrouping.State),
+  Generative.Trace Becoming.LearnedGrouping.reception (Becoming.LearnedGrouping.ready 28)
+      Becoming.LearnedGrouping.narrowCourse t →
+    Becoming.LearnedGrouping.parse t Becoming.LearnedGrouping.utterance = none ∧
+      (Becoming.LearnedGrouping.broadenAfterFailure Becoming.LearnedGrouping.utterance
+              (List.map some Becoming.LearnedGrouping.additional) t).log =
+          List.map some Becoming.LearnedGrouping.context ∧
+        Becoming.LearnedGrouping.parse
+              (Becoming.LearnedGrouping.broadenAfterFailure Becoming.LearnedGrouping.utterance
+                (List.map some Becoming.LearnedGrouping.additional) t)
+              Becoming.LearnedGrouping.utterance =
+            some Becoming.LearnedGrouping.intended ∧
+          Option.map Prod.fst
+              (Becoming.LearnedGrouping.act Becoming.LearnedGrouping.utterance
+                (Becoming.LearnedGrouping.broadenAfterFailure Becoming.LearnedGrouping.utterance
+                  (List.map some Becoming.LearnedGrouping.additional) t)) =
+            some [true, false, true]
+Becoming.LearnedGrouping.parsed_not_broadened : ∀ (t : Becoming.LearnedGrouping.State),
+  Generative.Trace Becoming.LearnedGrouping.reception (Becoming.LearnedGrouping.ready 28)
+      Becoming.LearnedGrouping.narrowCourse t →
+    Becoming.LearnedGrouping.broadenAfterFailure [Becoming.LearnedGrouping.Sound.a, Becoming.LearnedGrouping.Sound.b]
+        (List.map some Becoming.LearnedGrouping.additional) t =
+      t
+Becoming.LearnedGrouping.broadening_keeps_prefix : ∀ (t : Becoming.LearnedGrouping.State),
+  Generative.Trace Becoming.LearnedGrouping.reception (Becoming.LearnedGrouping.ready 19)
+      Becoming.LearnedGrouping.narrowCourse t →
+    (Becoming.LearnedGrouping.broadenAfterFailure Becoming.LearnedGrouping.utterance
+            (List.map some Becoming.LearnedGrouping.additional) t).log =
+        List.map some
+          [Becoming.LearnedGrouping.Sound.a, Becoming.LearnedGrouping.Sound.b, Becoming.LearnedGrouping.Sound.a,
+            Becoming.LearnedGrouping.Sound.b, Becoming.LearnedGrouping.Sound.c] ∧
+      Becoming.LearnedGrouping.parse
+          (Becoming.LearnedGrouping.broadenAfterFailure Becoming.LearnedGrouping.utterance
+            (List.map some Becoming.LearnedGrouping.additional) t)
+          Becoming.LearnedGrouping.utterance =
+        none
+Becoming.LearnedGrouping.broadening_parses_one_form : ∀ (t : Becoming.LearnedGrouping.State),
+  Generative.Trace Becoming.LearnedGrouping.reception (Becoming.LearnedGrouping.ready 21)
+      Becoming.LearnedGrouping.narrowCourse t →
+    (Becoming.LearnedGrouping.broadenAfterFailure Becoming.LearnedGrouping.utterance
+            (List.map some Becoming.LearnedGrouping.additional) t).log =
+        List.map some
+          [Becoming.LearnedGrouping.Sound.a, Becoming.LearnedGrouping.Sound.b, Becoming.LearnedGrouping.Sound.a,
+            Becoming.LearnedGrouping.Sound.b, Becoming.LearnedGrouping.Sound.c, Becoming.LearnedGrouping.Sound.d,
+            Becoming.LearnedGrouping.Sound.c] ∧
+      Becoming.LearnedGrouping.parse
+            (Becoming.LearnedGrouping.broadenAfterFailure Becoming.LearnedGrouping.utterance
+              (List.map some Becoming.LearnedGrouping.additional) t)
+            Becoming.LearnedGrouping.utterance =
+          some Becoming.LearnedGrouping.intended ∧
+        Becoming.LearnedGrouping.act Becoming.LearnedGrouping.utterance
+              (Becoming.LearnedGrouping.broadenAfterFailure Becoming.LearnedGrouping.utterance
+                (List.map some Becoming.LearnedGrouping.additional) t) =
+            none ∧
+          Becoming.LearnedGrouping.parse
+              (Becoming.LearnedGrouping.broadenAfterFailure Becoming.LearnedGrouping.utterance
+                (List.map some Becoming.LearnedGrouping.additional) t)
+              [Becoming.LearnedGrouping.Sound.c, Becoming.LearnedGrouping.Sound.d, Becoming.LearnedGrouping.Sound.c,
+                Becoming.LearnedGrouping.Sound.d] =
+            none

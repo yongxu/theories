@@ -237,16 +237,10 @@ theorem path_not_reach_of_links : «及» (links path) 0 2 ∧ ¬ path 0 2 :=
 
 /-- A bounded search with each case decided, in `Prop`. -/
 theorem searchBelow_or (p : Nat → Prop) (decided : ∀ z, p z ∨ ¬ p z) :
-    ∀ n, (∃ z, z < n ∧ p z) ∨ ¬ ∃ z, z < n ∧ p z
-  | 0 => .inr fun ⟨_, below, _⟩ => Nat.not_lt_zero _ below
-  | n + 1 => match searchBelow_or p decided n with
-    | .inl ⟨z, below, holds⟩ => .inl ⟨z, Nat.lt_succ_of_lt below, holds⟩
-    | .inr absent => match decided n with
-      | .inl last => .inl ⟨n, Nat.lt_succ_self n, last⟩
-      | .inr last => .inr fun ⟨z, below, holds⟩ =>
-        match Nat.lt_or_eq_of_le (Nat.le_of_lt_succ below) with
-        | .inl lower => absent ⟨z, lower, holds⟩
-        | .inr same => last (same ▸ holds)
+    ∀ n, (∃ z, z < n ∧ p z) ∨ ¬ ∃ z, z < n ∧ p z :=
+  fun n => match Decided.exists_below (P := p) (M := 0) (U := n) fun z _ _ => decided z with
+    | .inl ⟨z, _, below, holds⟩ => .inl ⟨z, below, holds⟩
+    | .inr absent => .inr fun ⟨z, below, holds⟩ => absent ⟨z, Nat.zero_le z, below, holds⟩
 
 /-- `reach_links_within` with only what lies between decided. -/
 theorem reach_links_within_of_decided {O : «际» Nat}

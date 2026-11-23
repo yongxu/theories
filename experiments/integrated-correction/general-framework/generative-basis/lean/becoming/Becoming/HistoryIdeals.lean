@@ -459,18 +459,9 @@ def cut (s : Nat → Bool) : Ideals.Ideal (prefixOrder Unit) where
 
 /-- A Boolean sequence is `false` below `n`, or has a least `true`. -/
 theorem least_true_or_below (s : Nat → Bool) : ∀ n,
-    (∀ m, m < n → s m = false) ∨ ∃ k, (∀ m, m < k → s m = false) ∧ s k = true
-  | 0 => .inl fun m h => absurd h (Nat.not_lt_zero m)
-  | n + 1 =>
-    match least_true_or_below s n with
-    | .inr found => .inr found
-    | .inl below =>
-      match e : s n with
-      | true => .inr ⟨n, below, e⟩
-      | false => .inl fun m h =>
-        match Nat.lt_or_eq_of_le (Nat.le_of_lt_succ h) with
-        | .inl lt => below m lt
-        | .inr eq => eq ▸ e
+    (∀ m, m < n → s m = false) ∨ ∃ k, (∀ m, m < k → s m = false) ∧ s k = true :=
+  fun n => (Clear.or_first s n).imp (fun c _ lt => Clear.false_before s c lt)
+    fun ⟨k, _, c, yes⟩ => ⟨k, fun _ lt => Clear.false_before s c lt, yes⟩
 
 /-- **Settling or going on, asked of the cut histories, is exactly the limited principle of
 omniscience.** The cut history settles where `s` has a `true` and goes on where `s` is `false`

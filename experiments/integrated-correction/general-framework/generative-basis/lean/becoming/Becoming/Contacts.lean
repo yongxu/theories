@@ -51,17 +51,8 @@ abbrev AgreeOn {V : Type} (plan : List I) : (I → V) → (I → V) → Prop :=
   Learning.Training.AgreeOn (fun i => i ∈ plan)
 
 /-- Membership in a list, decided with no premise. -/
-theorem mem_or_not (i : I) : ∀ l : List I, i ∈ l ∨ i ∉ l
-  | [] => .inr fun h => nomatch h
-  | j :: l =>
-    match decEq i j with
-    | isTrue e => .inl (by subst e; exact List.Mem.head l)
-    | isFalse ne =>
-      match mem_or_not i l with
-      | .inl m => .inl (List.Mem.tail j m)
-      | .inr n => .inr fun m => match m with
-        | .head _ => ne rfl
-        | .tail _ m' => n m'
+theorem mem_or_not (i : I) : ∀ l : List I, i ∈ l ∨ i ∉ l :=
+  fun l => @Decidable.em (i ∈ l) (decideMem i l)
 
 /-- The signal that is `true` at `i` alone. -/
 def spot (i : I) : I → Bool := fun j => if j = i then true else false

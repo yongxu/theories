@@ -1643,6 +1643,23 @@ class ReceiptTests(GateCase):
         self.repo.commit({self.CORE: self.receipt({'A': (self.A, 'a\n'), 'B': (self.B, 'b\n')}, status='failed')})
         self.assertTrue(any('status' in e for e in gate.receipt_check('main')['errors']))
 
+    def test_manifest_periphery_receipt_checks_own_source_and_core_deps(self):
+        periph_src = gate.LEAN + '/warning/SlowingDown.lean'
+        periph_rcpt = gate.LEAN + '/warning/slowing-down-verification.json'
+        manifest = gate.LEAN + '/periphery-manifest.json'
+        self.on_main({
+            periph_src: 'slow\n',
+            manifest: json.dumps({'version': 1, 'modules': [{'module': 'SlowingDown', 'source': 'warning/SlowingDown.lean', 'receipt': 'warning/slowing-down-verification.json'}]}),
+            periph_rcpt: self.receipt({'A': (self.A, 'a\n'), 'SlowingDown': (periph_src, 'slow\n')}),
+        })
+        self.repo.commit({self.A: 'a, changed\n', self.CORE: self.receipt({'A': (self.A, 'a, changed\n'), 'B': (self.B, 'b\n')})})
+        dep_stale = gate.receipt_check('main')
+        self.assertEqual(dep_stale['errors'], [])
+        self.assertIn(periph_rcpt, dep_stale['area_checks_to_rerun'])
+        self.repo.commit({periph_src: 'slow, changed\n'})
+        own_stale = gate.receipt_check('main')
+        self.assertTrue(any(periph_rcpt in e and 'SlowingDown.lean' in e for e in own_stale['errors']), own_stale)
+
 
 class StepTests(GateCase):
     """The shared-laws step follows a change to a record's laws, not to its other fields."""

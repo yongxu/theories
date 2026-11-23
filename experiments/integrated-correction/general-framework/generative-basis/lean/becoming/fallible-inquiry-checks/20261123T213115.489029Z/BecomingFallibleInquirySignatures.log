@@ -1,0 +1,382 @@
+@Becoming.FallibleInquiry.answer_alike_beyond_response : ∀ {F C : Type} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {g : F} {t : Nat},
+  L.Balances W →
+    L'.Balances W' →
+      (∀ (s : Nat), L.present s = L'.present s) →
+        (∀ (h : F), ¬L.WithinResponse L' W obs part h → ∀ (c : C), W.CoupledInto obs h c → W.level 0 c = W'.level 0 c) →
+          L.RespondsThroughCoupling L' W W' obs part →
+            ∀ (read : (Nat → C → Nat) → Option Bool),
+              (∀ (l l' : Nat → C → Nat), W.AlikeThroughUpTo obs g l l' t → read l = read l') →
+                ¬L.WithinResponse L' W obs part g → read W.level = read W'.level
+@Becoming.FallibleInquiry.different_answers_not_beyond : ∀ {F C : Type} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {g : F} {t : Nat},
+  L.Balances W →
+    L'.Balances W' →
+      (∀ (s : Nat), L.present s = L'.present s) →
+        (∀ (h : F), ¬L.WithinResponse L' W obs part h → ∀ (c : C), W.CoupledInto obs h c → W.level 0 c = W'.level 0 c) →
+          L.RespondsThroughCoupling L' W W' obs part →
+            ∀ (read : (Nat → C → Nat) → Option Bool),
+              (∀ (l l' : Nat → C → Nat), W.AlikeThroughUpTo obs g l l' t → read l = read l') →
+                read W.level ≠ read W'.level → ¬¬L.WithinResponse L' W obs part g
+@Becoming.FallibleInquiry.answer_alike_beyond_law : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {g : F} {t : Nat} {law : Becoming.ExchangeLaw F C},
+  L.Balances W →
+    L'.Balances W' →
+      (∀ (s : Nat), L.present s = L'.present s) →
+        (∀ (h : F), ¬L.WithinResponse L' W obs part h → ∀ (c : C), W.CoupledInto obs h c → W.level 0 c = W'.level 0 c) →
+          law.Through W obs part →
+            L.Follows law part W.level →
+              L'.Follows law part W'.level →
+                ∀ (read : (Nat → C → Nat) → Option Bool),
+                  (∀ (l l' : Nat → C → Nat), W.AlikeThroughUpTo obs g l l' t → read l = read l') →
+                    ¬L.WithinResponse L' W obs part g → read W.level = read W'.level
+@Becoming.FallibleInquiry.residual_couples_nothing : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} (c : C),
+  ¬W.withRefinement.CoupledInto (Becoming.FallibleInquiry.observeWithResidual obs) none c
+@Becoming.FallibleInquiry.closed_with_imbalance : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {region : F → Prop} (V : Becoming.Web F C),
+  Becoming.ClosedUnder (L.CoupledFrom W obs) region →
+    Becoming.ClosedUnder
+      ((L.withImbalance V).CoupledFrom W.withRefinement (Becoming.FallibleInquiry.observeWithResidual obs))
+      (Becoming.FallibleInquiry.regionWithResidual region)
+@Becoming.FallibleInquiry.common_imbalance_of_balanced : ∀ {F C : Type} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C},
+  L.Balances W →
+    L'.Balances W' →
+      ∀ (s : Nat) (c : C),
+        (L.withImbalance W).take s none c = (L'.withImbalance W').take s none c ∧
+          (L.withImbalance W).give s none c = (L'.withImbalance W').give s none c
+@Becoming.FallibleInquiry.alike_with_common_imbalance : ∀ {F C : Type} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool},
+  (∀ (s : Nat), L.present s = L'.present s) →
+    (∀ (h : F), ¬L.WithinResponse L' W obs part h → ∀ (c : C), W.CoupledInto obs h c → W.level 0 c = W'.level 0 c) →
+      L.RespondsThroughCoupling L' W W' obs part →
+        (∀ (s : Nat) (c : C),
+            (L.withImbalance W).take s none c = (L'.withImbalance W').take s none c ∧
+              (L.withImbalance W).give s none c = (L'.withImbalance W').give s none c) →
+          ∀ (s : Nat) (h : F), ¬L.WithinResponse L' W obs part h → W.AlikeThrough obs h W.level W'.level s
+@Becoming.FallibleInquiry.answer_alike_with_common_imbalance : ∀ {F C : Type} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {g : F} {t : Nat},
+  (∀ (s : Nat), L.present s = L'.present s) →
+    (∀ (h : F), ¬L.WithinResponse L' W obs part h → ∀ (c : C), W.CoupledInto obs h c → W.level 0 c = W'.level 0 c) →
+      L.RespondsThroughCoupling L' W W' obs part →
+        (∀ (s : Nat) (c : C),
+            (L.withImbalance W).take s none c = (L'.withImbalance W').take s none c ∧
+              (L.withImbalance W).give s none c = (L'.withImbalance W').give s none c) →
+          ∀ (read : (Nat → C → Nat) → Option Bool),
+            (∀ (l l' : Nat → C → Nat), W.AlikeThroughUpTo obs g l l' t → read l = read l') →
+              ¬L.WithinResponse L' W obs part g → read W.level = read W'.level
+@Becoming.FallibleInquiry.coverage_le_errors_add_reach : ∀ {F C X : Type} (xs : List X) (weight : X → Nat)
+  (left right : X → Becoming.Flow F C) (web web' : X → Becoming.Web F C) (observe : X → F → C → Prop)
+  (vary : X → F → Bool) (reader : X → F) (time : X → Nat) (law : X → Becoming.ExchangeLaw F C)
+  (read : X → (Nat → C → Nat) → Option Bool)
+  [reachDecision : (x : X) → Decidable ((left x).WithinResponse (right x) (web x) (observe x) (vary x) (reader x))],
+  (∀ (x : X), x ∈ xs → (left x).Balances (web x)) →
+    (∀ (x : X), x ∈ xs → (right x).Balances (web' x)) →
+      (∀ (x : X), x ∈ xs → ∀ (s : Nat), (left x).present s = (right x).present s) →
+        (∀ (x : X),
+            x ∈ xs →
+              ∀ (h : F),
+                ¬(left x).WithinResponse (right x) (web x) (observe x) (vary x) h →
+                  ∀ (c : C), (web x).CoupledInto (observe x) h c → (web x).level 0 c = (web' x).level 0 c) →
+          (∀ (x : X), x ∈ xs → (law x).Through (web x) (observe x) (vary x)) →
+            (∀ (x : X), x ∈ xs → (left x).Follows (law x) (vary x) (web x).level) →
+              (∀ (x : X), x ∈ xs → (right x).Follows (law x) (vary x) (web' x).level) →
+                (∀ (x : X),
+                    x ∈ xs →
+                      ∀ (l l' : Nat → C → Nat),
+                        (web x).AlikeThroughUpTo (observe x) (reader x) l l' (time x) → read x l = read x l') →
+                  Generative.ScientificInquiryNecessity.tally weight
+                      (fun x => Generative.ScientificInquiryNecessity.committed (read x (web x).level)) xs ≤
+                    Generative.ScientificInquiryNecessity.tally weight
+                          (fun x => Generative.ScientificInquiryNecessity.wrong false (read x (web x).level)) xs +
+                        Generative.ScientificInquiryNecessity.tally weight
+                          (fun x => Generative.ScientificInquiryNecessity.wrong true (read x (web' x).level)) xs +
+                      Generative.ScientificInquiryNecessity.tally weight
+                        (fun x =>
+                          if (left x).WithinResponse (right x) (web x) (observe x) (vary x) (reader x) then 1 else 0)
+                        xs
+@Becoming.FallibleInquiry.error_bounds_require_reach : ∀ {F C X : Type} (xs : List X) (weight : X → Nat)
+  (left right : X → Becoming.Flow F C) (web web' : X → Becoming.Web F C) (observe : X → F → C → Prop)
+  (vary : X → F → Bool) (reader : X → F) (time : X → Nat) (law : X → Becoming.ExchangeLaw F C)
+  (read : X → (Nat → C → Nat) → Option Bool)
+  [reachDecision : (x : X) → Decidable ((left x).WithinResponse (right x) (web x) (observe x) (vary x) (reader x))],
+  (∀ (x : X), x ∈ xs → (left x).Balances (web x)) →
+    (∀ (x : X), x ∈ xs → (right x).Balances (web' x)) →
+      (∀ (x : X), x ∈ xs → ∀ (s : Nat), (left x).present s = (right x).present s) →
+        (∀ (x : X),
+            x ∈ xs →
+              ∀ (h : F),
+                ¬(left x).WithinResponse (right x) (web x) (observe x) (vary x) h →
+                  ∀ (c : C), (web x).CoupledInto (observe x) h c → (web x).level 0 c = (web' x).level 0 c) →
+          (∀ (x : X), x ∈ xs → (law x).Through (web x) (observe x) (vary x)) →
+            (∀ (x : X), x ∈ xs → (left x).Follows (law x) (vary x) (web x).level) →
+              (∀ (x : X), x ∈ xs → (right x).Follows (law x) (vary x) (web' x).level) →
+                (∀ (x : X),
+                    x ∈ xs →
+                      ∀ (l l' : Nat → C → Nat),
+                        (web x).AlikeThroughUpTo (observe x) (reader x) l l' (time x) → read x l = read x l') →
+                  ∀ (coverage b0 b1 : Nat),
+                    coverage ≤
+                        Generative.ScientificInquiryNecessity.tally weight
+                          (fun x => Generative.ScientificInquiryNecessity.committed (read x (web x).level)) xs →
+                      Generative.ScientificInquiryNecessity.tally weight
+                            (fun x => Generative.ScientificInquiryNecessity.wrong false (read x (web x).level)) xs ≤
+                          b0 →
+                        Generative.ScientificInquiryNecessity.tally weight
+                              (fun x => Generative.ScientificInquiryNecessity.wrong true (read x (web' x).level)) xs ≤
+                            b1 →
+                          coverage ≤
+                            b0 + b1 +
+                              Generative.ScientificInquiryNecessity.tally weight
+                                (fun x =>
+                                  if (left x).WithinResponse (right x) (web x) (observe x) (vary x) (reader x) then 1
+                                  else 0)
+                                xs
+@Becoming.FallibleInquiry.beyond_reach_coverage_eq_errors : ∀ {F C X : Type} (xs : List X) (weight : X → Nat)
+  (left right : X → Becoming.Flow F C) (web web' : X → Becoming.Web F C) (observe : X → F → C → Prop)
+  (vary : X → F → Bool) (reader : X → F) (time : X → Nat) (law : X → Becoming.ExchangeLaw F C)
+  (read : X → (Nat → C → Nat) → Option Bool),
+  (∀ (x : X), x ∈ xs → (left x).Balances (web x)) →
+    (∀ (x : X), x ∈ xs → (right x).Balances (web' x)) →
+      (∀ (x : X), x ∈ xs → ∀ (s : Nat), (left x).present s = (right x).present s) →
+        (∀ (x : X),
+            x ∈ xs →
+              ∀ (h : F),
+                ¬(left x).WithinResponse (right x) (web x) (observe x) (vary x) h →
+                  ∀ (c : C), (web x).CoupledInto (observe x) h c → (web x).level 0 c = (web' x).level 0 c) →
+          (∀ (x : X), x ∈ xs → (law x).Through (web x) (observe x) (vary x)) →
+            (∀ (x : X), x ∈ xs → (left x).Follows (law x) (vary x) (web x).level) →
+              (∀ (x : X), x ∈ xs → (right x).Follows (law x) (vary x) (web' x).level) →
+                (∀ (x : X),
+                    x ∈ xs →
+                      ∀ (l l' : Nat → C → Nat),
+                        (web x).AlikeThroughUpTo (observe x) (reader x) l l' (time x) → read x l = read x l') →
+                  (∀ (x : X), x ∈ xs → ¬(left x).WithinResponse (right x) (web x) (observe x) (vary x) (reader x)) →
+                    Generative.ScientificInquiryNecessity.tally weight
+                        (fun x => Generative.ScientificInquiryNecessity.committed (read x (web x).level)) xs =
+                      Generative.ScientificInquiryNecessity.tally weight
+                          (fun x => Generative.ScientificInquiryNecessity.wrong false (read x (web x).level)) xs +
+                        Generative.ScientificInquiryNecessity.tally weight
+                          (fun x => Generative.ScientificInquiryNecessity.wrong true (read x (web' x).level)) xs
+Becoming.FallibleInquiry.Witness.balanced : ∀ (b : Bool),
+  (Becoming.FallibleInquiry.Witness.flow b).Balances (Becoming.FallibleInquiry.Witness.web b)
+Becoming.FallibleInquiry.Witness.law_through : Becoming.FallibleInquiry.Witness.law.Through
+  (Becoming.FallibleInquiry.Witness.web false) (fun x x_1 => True) fun h => h
+Becoming.FallibleInquiry.Witness.follows : ∀ (b : Bool),
+  (Becoming.FallibleInquiry.Witness.flow b).Follows Becoming.FallibleInquiry.Witness.law (fun h => h)
+    (Becoming.FallibleInquiry.Witness.web b).level
+Becoming.FallibleInquiry.Witness.read_through : ∀ (l l' : Nat → Unit → Nat),
+  (Becoming.FallibleInquiry.Witness.web false).AlikeThroughUpTo (fun x x_1 => True) false l l' 1 →
+    Becoming.FallibleInquiry.Witness.read l = Becoming.FallibleInquiry.Witness.read l'
+Becoming.FallibleInquiry.Witness.connected : (∀ (c : Unit),
+    (Becoming.FallibleInquiry.Witness.web false).level 0 c = (Becoming.FallibleInquiry.Witness.web true).level 0 c) ∧
+  (Becoming.FallibleInquiry.Witness.flow false).WithinResponse (Becoming.FallibleInquiry.Witness.flow true)
+    (Becoming.FallibleInquiry.Witness.web false) (fun x x_1 => True) (fun h => h) false
+Becoming.FallibleInquiry.Witness.correct_answers : Becoming.FallibleInquiry.Witness.read
+      (Becoming.FallibleInquiry.Witness.web false).level =
+    some false ∧
+  Becoming.FallibleInquiry.Witness.read (Becoming.FallibleInquiry.Witness.web true).level = some true
+Becoming.FallibleInquiry.Witness.ignored_signal : (∀ (l l' : Nat → Unit → Nat),
+    (Becoming.FallibleInquiry.Witness.web false).AlikeThroughUpTo (fun x x_1 => True) false l l' 1 →
+      (fun x => some false) l = (fun x => some false) l') ∧
+  Generative.ScientificInquiryNecessity.wrong true
+      ((fun x => some false) (Becoming.FallibleInquiry.Witness.web true).level) =
+    1
+Becoming.FallibleInquiry.Witness.omitted_exchange_none : ∀ (h : Bool) (c : Unit),
+  ¬(Becoming.FallibleInquiry.Witness.flow false).Exchanges h c
+Becoming.FallibleInquiry.Witness.omitted_exchange_no_reach : ¬(Becoming.FallibleInquiry.Witness.flow
+        false).WithinResponse
+    (Becoming.FallibleInquiry.Witness.flow false) (Becoming.FallibleInquiry.Witness.web false) (fun x x_1 => True)
+    (fun h => h) false
+Becoming.FallibleInquiry.Witness.omitted_exchange_unbalanced : ¬(Becoming.FallibleInquiry.Witness.flow false).Balances
+    (Becoming.FallibleInquiry.Witness.web true)
+Becoming.FallibleInquiry.Witness.omitted_exchange_follows : (Becoming.FallibleInquiry.Witness.flow false).Follows
+  Becoming.FallibleInquiry.Witness.law (fun h => h) (Becoming.FallibleInquiry.Witness.web true).level
+Becoming.FallibleInquiry.Witness.omitted_exchange_keeps_task : Becoming.FallibleInquiry.Witness.read
+      (Becoming.FallibleInquiry.Witness.web false).level =
+    some false ∧
+  Becoming.FallibleInquiry.Witness.read (Becoming.FallibleInquiry.Witness.web true).level = some true ∧
+    ¬Generative.ScientificInquiryNecessity.committed
+          (Becoming.FallibleInquiry.Witness.read (Becoming.FallibleInquiry.Witness.web false).level) ≤
+        Generative.ScientificInquiryNecessity.wrong false
+              (Becoming.FallibleInquiry.Witness.read (Becoming.FallibleInquiry.Witness.web false).level) +
+            Generative.ScientificInquiryNecessity.wrong true
+              (Becoming.FallibleInquiry.Witness.read (Becoming.FallibleInquiry.Witness.web true).level) +
+          0
+Becoming.FallibleInquiry.Witness.counted_residual_balances : ∀ (b : Bool),
+  ((Becoming.FallibleInquiry.Witness.flow false).withImbalance (Becoming.FallibleInquiry.Witness.web b)).Balances
+    (Becoming.FallibleInquiry.Witness.web b).withRefinement
+Becoming.FallibleInquiry.Witness.counted_residual_differs : ((Becoming.FallibleInquiry.Witness.flow false).withImbalance
+          (Becoming.FallibleInquiry.Witness.web false)).give
+      0 none () =
+    0 ∧
+  ((Becoming.FallibleInquiry.Witness.flow false).withImbalance (Becoming.FallibleInquiry.Witness.web true)).give 0 none
+      () =
+    1
+Becoming.FallibleInquiry.Witness.counted_residual_not_response : ¬((Becoming.FallibleInquiry.Witness.flow
+            false).withImbalance
+        (Becoming.FallibleInquiry.Witness.web false)).RespondsThroughCoupling
+    ((Becoming.FallibleInquiry.Witness.flow false).withImbalance (Becoming.FallibleInquiry.Witness.web true))
+    (Becoming.FallibleInquiry.Witness.web false).withRefinement
+    (Becoming.FallibleInquiry.Witness.web true).withRefinement (fun x x_1 => True) fun h =>
+    match h with
+    | none => false
+    | some k => k
+Becoming.FallibleInquiry.Witness.counted_residual_reaches : ((Becoming.FallibleInquiry.Witness.flow false).withImbalance
+      (Becoming.FallibleInquiry.Witness.web false)).WithinResponse
+  ((Becoming.FallibleInquiry.Witness.flow false).withImbalance (Becoming.FallibleInquiry.Witness.web true))
+  (Becoming.FallibleInquiry.Witness.web false).withRefinement (fun x x_1 => True)
+  (fun h =>
+    match h with
+    | none => true
+    | some k => k)
+  (some false)
+Becoming.FallibleInquiry.Witness.common_nonzero_imbalance : (∀ (s : Nat) (c : Unit),
+    ((Becoming.FallibleInquiry.Witness.flow false).withImbalance (Becoming.FallibleInquiry.Witness.web true)).take s
+          none c =
+        ((Becoming.FallibleInquiry.Witness.flow false).withImbalance (Becoming.FallibleInquiry.Witness.web true)).take s
+          none c ∧
+      ((Becoming.FallibleInquiry.Witness.flow false).withImbalance (Becoming.FallibleInquiry.Witness.web true)).give s
+          none c =
+        ((Becoming.FallibleInquiry.Witness.flow false).withImbalance (Becoming.FallibleInquiry.Witness.web true)).give s
+          none c) ∧
+  ¬(Becoming.FallibleInquiry.Witness.flow false).Balances (Becoming.FallibleInquiry.Witness.web true) ∧
+    ((Becoming.FallibleInquiry.Witness.flow false).withImbalance (Becoming.FallibleInquiry.Witness.web true)).give 0
+        none () =
+      1
+@Becoming.FallibleInquiry.coverage_le_errors_add_timed_reach : ∀ {F C X : Type} (xs : List X) (weight : X → Nat)
+  (left right : X → Becoming.Flow F C) (web web' : X → Becoming.Web F C) (observe : X → F → C → Prop)
+  (source : X → Nat → F → Prop) (reader : X → F) (time : X → Nat) (read : X → (Nat → C → Nat) → Option Bool)
+  [reachDecision :
+    (x : X) →
+      Decidable
+        (Becoming.TimedResponse.ReachedBy (left x) (right x) (web x) (observe x) (source x) (reader x) (time x))],
+  (∀ (x : X),
+      x ∈ xs →
+        ∀ (t : Nat),
+          t < time x →
+            ∀ (c : C), (web x).level (t + 1) c + (left x).taken t c = (web x).level t c + (left x).given t c) →
+    (∀ (x : X),
+        x ∈ xs →
+          ∀ (t : Nat),
+            t < time x →
+              ∀ (c : C), (web' x).level (t + 1) c + (right x).taken t c = (web' x).level t c + (right x).given t c) →
+      (∀ (x : X), x ∈ xs → ∀ (t : Nat), t < time x → (left x).present t = (right x).present t) →
+        (∀ (x : X), x ∈ xs → ∀ (c : C), (web x).level 0 c = (web' x).level 0 c) →
+          (∀ (x : X),
+              x ∈ xs →
+                ∀ (t : Nat),
+                  t < time x →
+                    ∀ (h : F),
+                      ¬source x t h →
+                        (web x).AlikeThroughUpTo (observe x) h (web x).level (web' x).level t →
+                          ∀ (c : C),
+                            (left x).take t h c = (right x).take t h c ∧ (left x).give t h c = (right x).give t h c) →
+            (∀ (x : X),
+                x ∈ xs →
+                  ∀ (l l' : Nat → C → Nat),
+                    (web x).AlikeThroughUpTo (observe x) (reader x) l l' (time x) → read x l = read x l') →
+              Generative.ScientificInquiryNecessity.tally weight
+                  (fun x => Generative.ScientificInquiryNecessity.committed (read x (web x).level)) xs ≤
+                Generative.ScientificInquiryNecessity.tally weight
+                      (fun x => Generative.ScientificInquiryNecessity.wrong false (read x (web x).level)) xs +
+                    Generative.ScientificInquiryNecessity.tally weight
+                      (fun x => Generative.ScientificInquiryNecessity.wrong true (read x (web' x).level)) xs +
+                  Generative.ScientificInquiryNecessity.tally weight
+                    (fun x =>
+                      if
+                          Becoming.TimedResponse.ReachedBy (left x) (right x) (web x) (observe x) (source x) (reader x)
+                            (time x) then
+                        1
+                      else 0)
+                    xs
+@Becoming.FallibleInquiry.error_bounds_require_timed_reach : ∀ {F C X : Type} (xs : List X) (weight : X → Nat)
+  (left right : X → Becoming.Flow F C) (web web' : X → Becoming.Web F C) (observe : X → F → C → Prop)
+  (source : X → Nat → F → Prop) (reader : X → F) (time : X → Nat) (read : X → (Nat → C → Nat) → Option Bool)
+  [reachDecision :
+    (x : X) →
+      Decidable
+        (Becoming.TimedResponse.ReachedBy (left x) (right x) (web x) (observe x) (source x) (reader x) (time x))],
+  (∀ (x : X),
+      x ∈ xs →
+        ∀ (t : Nat),
+          t < time x →
+            ∀ (c : C), (web x).level (t + 1) c + (left x).taken t c = (web x).level t c + (left x).given t c) →
+    (∀ (x : X),
+        x ∈ xs →
+          ∀ (t : Nat),
+            t < time x →
+              ∀ (c : C), (web' x).level (t + 1) c + (right x).taken t c = (web' x).level t c + (right x).given t c) →
+      (∀ (x : X), x ∈ xs → ∀ (t : Nat), t < time x → (left x).present t = (right x).present t) →
+        (∀ (x : X), x ∈ xs → ∀ (c : C), (web x).level 0 c = (web' x).level 0 c) →
+          (∀ (x : X),
+              x ∈ xs →
+                ∀ (t : Nat),
+                  t < time x →
+                    ∀ (h : F),
+                      ¬source x t h →
+                        (web x).AlikeThroughUpTo (observe x) h (web x).level (web' x).level t →
+                          ∀ (c : C),
+                            (left x).take t h c = (right x).take t h c ∧ (left x).give t h c = (right x).give t h c) →
+            (∀ (x : X),
+                x ∈ xs →
+                  ∀ (l l' : Nat → C → Nat),
+                    (web x).AlikeThroughUpTo (observe x) (reader x) l l' (time x) → read x l = read x l') →
+              ∀ (coverage b0 b1 : Nat),
+                coverage ≤
+                    Generative.ScientificInquiryNecessity.tally weight
+                      (fun x => Generative.ScientificInquiryNecessity.committed (read x (web x).level)) xs →
+                  Generative.ScientificInquiryNecessity.tally weight
+                        (fun x => Generative.ScientificInquiryNecessity.wrong false (read x (web x).level)) xs ≤
+                      b0 →
+                    Generative.ScientificInquiryNecessity.tally weight
+                          (fun x => Generative.ScientificInquiryNecessity.wrong true (read x (web' x).level)) xs ≤
+                        b1 →
+                      coverage ≤
+                        b0 + b1 +
+                          Generative.ScientificInquiryNecessity.tally weight
+                            (fun x =>
+                              if
+                                  Becoming.TimedResponse.ReachedBy (left x) (right x) (web x) (observe x) (source x)
+                                    (reader x) (time x) then
+                                1
+                              else 0)
+                            xs
+@Becoming.FallibleInquiry.unreached_in_time_coverage_eq_errors : ∀ {F C X : Type} (xs : List X) (weight : X → Nat)
+  (left right : X → Becoming.Flow F C) (web web' : X → Becoming.Web F C) (observe : X → F → C → Prop)
+  (source : X → Nat → F → Prop) (reader : X → F) (time : X → Nat) (read : X → (Nat → C → Nat) → Option Bool),
+  (∀ (x : X),
+      x ∈ xs →
+        ∀ (t : Nat),
+          t < time x →
+            ∀ (c : C), (web x).level (t + 1) c + (left x).taken t c = (web x).level t c + (left x).given t c) →
+    (∀ (x : X),
+        x ∈ xs →
+          ∀ (t : Nat),
+            t < time x →
+              ∀ (c : C), (web' x).level (t + 1) c + (right x).taken t c = (web' x).level t c + (right x).given t c) →
+      (∀ (x : X), x ∈ xs → ∀ (t : Nat), t < time x → (left x).present t = (right x).present t) →
+        (∀ (x : X), x ∈ xs → ∀ (c : C), (web x).level 0 c = (web' x).level 0 c) →
+          (∀ (x : X),
+              x ∈ xs →
+                ∀ (t : Nat),
+                  t < time x →
+                    ∀ (h : F),
+                      ¬source x t h →
+                        (web x).AlikeThroughUpTo (observe x) h (web x).level (web' x).level t →
+                          ∀ (c : C),
+                            (left x).take t h c = (right x).take t h c ∧ (left x).give t h c = (right x).give t h c) →
+            (∀ (x : X),
+                x ∈ xs →
+                  ∀ (l l' : Nat → C → Nat),
+                    (web x).AlikeThroughUpTo (observe x) (reader x) l l' (time x) → read x l = read x l') →
+              (∀ (x : X),
+                  x ∈ xs →
+                    ¬Becoming.TimedResponse.ReachedBy (left x) (right x) (web x) (observe x) (source x) (reader x)
+                        (time x)) →
+                Generative.ScientificInquiryNecessity.tally weight
+                    (fun x => Generative.ScientificInquiryNecessity.committed (read x (web x).level)) xs =
+                  Generative.ScientificInquiryNecessity.tally weight
+                      (fun x => Generative.ScientificInquiryNecessity.wrong false (read x (web x).level)) xs +
+                    Generative.ScientificInquiryNecessity.tally weight
+                      (fun x => Generative.ScientificInquiryNecessity.wrong true (read x (web' x).level)) xs

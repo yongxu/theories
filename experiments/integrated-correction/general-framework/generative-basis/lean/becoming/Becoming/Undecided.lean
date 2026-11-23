@@ -379,14 +379,9 @@ theorem marked_rises {c c' : X → Bool} : ∀ {l : List X},
 /-- Each member passes one of two tests, so every member passes the first or some member the
 second. -/
 theorem each_or_some {A B : X → Prop} : ∀ {l : List X}, (∀ x, x ∈ l → A x ∨ B x) →
-    (∀ x, x ∈ l → A x) ∨ ∃ x, x ∈ l ∧ B x
-  | [], _ => .inl fun _ m => absurd m (fun h => nomatch h)
-  | x :: l, each => match each x (.head l), each_or_some (fun y m => each y (.tail x m)) with
-    | .inr b, _ => .inr ⟨x, .head l, b⟩
-    | _, .inr ⟨y, m, b⟩ => .inr ⟨y, .tail x m, b⟩
-    | .inl a, .inl rest => .inl fun y m => match mem_cons_cases m with
-      | .inl at_x => at_x ▸ a
-      | .inr m' => rest y m'
+    (∀ x, x ∈ l → A x) ∨ ∃ x, x ∈ l ∧ B x :=
+  fun {l} each => gather_listed (D := A) l
+    (fun x mem k => (each x mem).elim k fun b => .inr ⟨x, mem, b⟩) Or.inl
 
 /-- A property kept by every step from `j` on holds at every later step. -/
 theorem kept_from {Q : Nat → Prop} (next : ∀ k, Q k → Q (k + 1)) {j : Nat} (start : Q j)

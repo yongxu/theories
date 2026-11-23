@@ -1,0 +1,241 @@
+@Becoming.ReadsNoOrder.implies_comparison : ∀ {S A C D : Type} {help : D → (S → S → Prop) → Prop},
+  Becoming.ReadsNoOrder help →
+    ∀ {frame : Becoming.Frame S A C} {living : C → Prop} {premise : (S → S → Prop) → Prop} {d : D},
+      (∀ (better : S → S → Prop), premise better → help d better → Becoming.Comparison frame living better) →
+        ∀ {order : S → S → Prop},
+          help d order → ∀ {better : S → S → Prop}, premise better → Becoming.Comparison frame living better
+@Becoming.ReadsNoOrder.not_strictly_weaker : ∀ {S A C D : Type} {help : D → (S → S → Prop) → Prop},
+  Becoming.ReadsNoOrder help →
+    ∀ {frame : Becoming.Frame S A C} {living : C → Prop} {premise : (S → S → Prop) → Prop} {d : D},
+      (∀ (better : S → S → Prop), premise better → help d better → Becoming.Comparison frame living better) →
+        ∀ {order : S → S → Prop}, help d order → ¬∃ better, premise better ∧ ¬Becoming.Comparison frame living better
+@Becoming.ReadsNoOrder.iff_of_weaker : ∀ {S A C D : Type} {help : D → (S → S → Prop) → Prop},
+  Becoming.ReadsNoOrder help →
+    ∀ {frame : Becoming.Frame S A C} {living : C → Prop} {premise : (S → S → Prop) → Prop} {d : D},
+      (∀ (better : S → S → Prop), premise better → help d better → Becoming.Comparison frame living better) →
+        ∀ {order : S → S → Prop},
+          help d order →
+            (∀ (better : S → S → Prop), Becoming.Comparison frame living better → premise better) →
+              ∀ (better : S → S → Prop), premise better ↔ Becoming.Comparison frame living better
+@Becoming.Weighting.extension_listingFrame_iff : ∀ {X A : Type} {P : Generative.Process (X → Bool) A} {items : List X}
+  {s t : X → Bool},
+  Becoming.Extension (Becoming.Weighting.listingFrame P items) (fun x => True) s t ↔
+    Becoming.Weighting.WidensOn items t s
+@Becoming.Weighting.comparison_listingFrame_iff : ∀ {X A : Type} {P : Generative.Process (X → Bool) A} {items : List X}
+  {O : (X → Bool) → (X → Bool) → Prop},
+  Becoming.Comparison (Becoming.Weighting.listingFrame P items) (fun x => True) O ↔
+    Becoming.Weighting.Increasing items O
+@Becoming.Weighting.increasingInOwn_iff_comparison : ∀ {X A : Type} (P : Generative.Process (X → Bool) A)
+  {items : List X} {own : X → Bool},
+  (∀ (x : X), x ∈ items → own x = true) →
+    ∀ (O : (X → Bool) → (X → Bool) → Prop),
+      Becoming.Weighting.IncreasingInOwn items own O ↔
+        Becoming.Comparison (Becoming.Weighting.listingFrame P items) (fun x => True) O
+Becoming.Weighting.le_higher_left : ∀ (m n : Nat), m ≤ Becoming.Weighting.higher m n
+Becoming.Weighting.le_higher_right : ∀ (m n : Nat), n ≤ Becoming.Weighting.higher m n
+Becoming.Weighting.higher_cases : ∀ (m n : Nat), Becoming.Weighting.higher m n = m ∨ Becoming.Weighting.higher m n = n
+@Becoming.Weighting.refusal_le_reach : ∀ {X : Type} (items : List X) (u : X → Nat) (refusal : Nat) (a : X → Bool),
+  refusal ≤ Becoming.Weighting.reach items u refusal a
+@Becoming.Weighting.le_reach : ∀ {X : Type} {items : List X} {u : X → Nat} {refusal : Nat} {a : X → Bool} {x : X},
+  x ∈ items → a x = true → u x ≤ Becoming.Weighting.reach items u refusal a
+@Becoming.Weighting.reach_attained : ∀ {X : Type} (items : List X) (u : X → Nat) (refusal : Nat) (a : X → Bool),
+  Becoming.Weighting.reach items u refusal a = refusal ∨
+    ∃ x, x ∈ items ∧ a x = true ∧ Becoming.Weighting.reach items u refusal a = u x
+@Becoming.Weighting.reach_le : ∀ {X : Type} {items : List X} {u : X → Nat} {refusal : Nat} {a : X → Bool} {k : Nat},
+  refusal ≤ k → (∀ (x : X), x ∈ items → a x = true → u x ≤ k) → Becoming.Weighting.reach items u refusal a ≤ k
+@Becoming.Weighting.reach_le_of_includes : ∀ {X : Type} {items : List X} {a b : X → Bool},
+  Becoming.Weighting.IncludesOn items a b →
+    ∀ (u : X → Nat) (refusal : Nat),
+      Becoming.Weighting.reach items u refusal b ≤ Becoming.Weighting.reach items u refusal a
+@Becoming.Weighting.reach_eq_of_refused : ∀ {X : Type} {items : List X} {a b : X → Bool} {u : X → Nat} {refusal : Nat},
+  Becoming.Weighting.IncludesOn items a b →
+    (∀ (x : X), x ∈ items → a x = true → b x = false → u x ≤ Becoming.Weighting.reach items u refusal b) →
+      Becoming.Weighting.reach items u refusal a = Becoming.Weighting.reach items u refusal b
+@Becoming.Weighting.reach_outside : ∀ {X : Type} (items : List X) (c : X → Bool),
+  Becoming.Weighting.reach items (Becoming.Weighting.outside c) 0 c = 0
+@Becoming.Weighting.outside_of_not : ∀ {X : Type} {c : X → Bool} {x : X},
+  c x = false → Becoming.Weighting.outside c x = 1
+@Becoming.Weighting.lt_reach_of_exceeds : ∀ {X : Type} {items : List X} {a b : X → Bool},
+  Becoming.Weighting.ExceedsOn items a b →
+    Becoming.Weighting.reach items (Becoming.Weighting.outside b) 0 b <
+      Becoming.Weighting.reach items (Becoming.Weighting.outside b) 0 a
+@Becoming.Weighting.widens_iff_noneWorseSomeBetter : ∀ {X : Type} {items : List X} {a b : X → Bool},
+  Becoming.Weighting.WidensOn items a b ↔ Becoming.Weighting.NoneWorseSomeBetter items a b
+@Becoming.Weighting.increasing_iff_ranks_noneWorseSomeBetter : ∀ {X : Type} {items : List X}
+  {O : (X → Bool) → (X → Bool) → Prop},
+  Becoming.Weighting.Increasing items O ↔ ∀ (a b : X → Bool), Becoming.Weighting.NoneWorseSomeBetter items a b → O b a
+@Becoming.Weighting.gains_every_widening_iff : ∀ {X : Type} [DecidableEq X] {items : List X}
+  (range : (X → Nat) → Nat → Prop),
+  (∀ (a b : X → Bool),
+      Becoming.Weighting.WidensOn items a b →
+        ∃ u refusal,
+          range u refusal ∧ Becoming.Weighting.reach items u refusal b < Becoming.Weighting.reach items u refusal a) ↔
+    ∀ (x : X), x ∈ items → ∃ u refusal, range u refusal ∧ refusal < u x ∧ ∀ (y : X), y ∈ items → y ≠ x → u y < u x
+@Becoming.Weighting.choosers_mixed : ∀ {X : Type} {items : List X} {a b : X → Bool},
+  Becoming.Weighting.MixedOn items a b →
+    (∃ u refusal, Becoming.Weighting.reach items u refusal b < Becoming.Weighting.reach items u refusal a) ∧
+      ∃ u refusal, Becoming.Weighting.reach items u refusal a < Becoming.Weighting.reach items u refusal b
+Becoming.Weighting.Refusing.widens : Becoming.Weighting.WidensOn Becoming.Weighting.Refusing.items
+  Becoming.Weighting.Refusing.admitted Becoming.Weighting.Refusing.nothing
+Becoming.Weighting.Refusing.imposed_below : Becoming.Weighting.ranksNet Becoming.Weighting.Refusing.items (fun x => 0)
+  (fun x => 1) Becoming.Weighting.Refusing.admitted Becoming.Weighting.Refusing.nothing
+Becoming.Weighting.Refusing.refused_unchanged : Becoming.Weighting.reach Becoming.Weighting.Refusing.items (fun x => 0)
+    1 Becoming.Weighting.Refusing.admitted =
+  Becoming.Weighting.reach Becoming.Weighting.Refusing.items (fun x => 0) 1 Becoming.Weighting.Refusing.nothing
+@Becoming.Weighting.Refusing.comparison_ranks_wide : ∀ {A : Type} (P : Generative.Process (Unit → Bool) A)
+  {O : (Unit → Bool) → (Unit → Bool) → Prop},
+  Becoming.Comparison (Becoming.Weighting.listingFrame P Becoming.Weighting.Refusing.items) (fun x => True) O →
+    O Becoming.Weighting.Refusing.nothing Becoming.Weighting.Refusing.admitted
+Becoming.Weighting.AnotherReads.widens : Becoming.Weighting.WidensOn Becoming.Weighting.AnotherReads.items
+  Becoming.Weighting.AnotherReads.wide Becoming.Weighting.AnotherReads.narrow
+Becoming.Weighting.AnotherReads.takes_narrow : Becoming.Weighting.AnotherReads.Takes
+  Becoming.Weighting.AnotherReads.later Becoming.Weighting.AnotherReads.narrow false
+Becoming.Weighting.AnotherReads.takes_wide : Becoming.Weighting.AnotherReads.Takes Becoming.Weighting.AnotherReads.later
+  Becoming.Weighting.AnotherReads.wide true
+Becoming.Weighting.AnotherReads.chooser_gains : Becoming.Weighting.AnotherReads.later false <
+  Becoming.Weighting.AnotherReads.later true
+Becoming.Weighting.AnotherReads.reading_falls : Becoming.Weighting.AnotherReads.present true <
+  Becoming.Weighting.AnotherReads.present false
+@Becoming.Weighting.AnotherReads.comparison_ranks_wide : ∀ {A : Type} (P : Generative.Process (Bool → Bool) A)
+  {O : (Bool → Bool) → (Bool → Bool) → Prop},
+  Becoming.Comparison (Becoming.Weighting.listingFrame P Becoming.Weighting.AnotherReads.items) (fun x => True) O →
+    O Becoming.Weighting.AnotherReads.narrow Becoming.Weighting.AnotherReads.wide
+@Becoming.Weighting.not_lowered_of_no_bearing : ∀ {Act : Type} {pays : Act → Act → Nat},
+  (∀ (x y y' : Act), pays x y = pays x y') →
+    ∀ {narrow wide : Act → Bool},
+      (∀ (x : Act), narrow x = true → wide x = true) →
+        ∀ {x y x' y' : Act},
+          Becoming.Weighting.MutualBest pays narrow x y →
+            Becoming.Weighting.MutualBest pays wide x' y' → pays x y ≤ pays x' y'
+Becoming.Weighting.Restraint.widens : Becoming.Weighting.WidensOn Becoming.Weighting.Restraint.items
+  Becoming.Weighting.Restraint.wide Becoming.Weighting.Restraint.narrow
+Becoming.Weighting.Restraint.narrow_best : Becoming.Weighting.MutualBest Becoming.Weighting.Restraint.pays
+  Becoming.Weighting.Restraint.narrow false false
+Becoming.Weighting.Restraint.wide_best_iff : ∀ (x y : Bool),
+  Becoming.Weighting.MutualBest Becoming.Weighting.Restraint.pays Becoming.Weighting.Restraint.wide x y ↔
+    x = true ∧ y = true
+Becoming.Weighting.Restraint.each_falls : Becoming.Weighting.Restraint.pays true true <
+  Becoming.Weighting.Restraint.pays false false
+@Becoming.Weighting.Restraint.comparison_ranks_wide : ∀ {A : Type} (P : Generative.Process (Bool → Bool) A)
+  {O : (Bool → Bool) → (Bool → Bool) → Prop},
+  Becoming.Comparison (Becoming.Weighting.listingFrame P Becoming.Weighting.Restraint.items) (fun x => True) O →
+    O Becoming.Weighting.Restraint.narrow Becoming.Weighting.Restraint.wide
+@Becoming.Weighting.every_pareto_iff : ∀ {X P : Type} {items : List X} {own : P → X → Bool} {a b : X → Bool},
+  (∀ (R : P → (X → Bool) → (X → Bool) → Prop),
+      (∀ (p : P), Becoming.Weighting.IncreasingInOwn items (own p) (R p)) →
+        (∀ (p : P), Becoming.Weighting.NotBelow items (R p)) → Becoming.Weighting.ParetoAmong R b a) ↔
+    Becoming.Weighting.WidensOn items a b ∧ ∃ p, Becoming.Weighting.AddsOwn items (own p) a b
+@Becoming.Weighting.pareto_increasing_iff_covers : ∀ {X P : Type} [DecidableEq X] {items : List X} {own : P → X → Bool},
+  (∀ (R : P → (X → Bool) → (X → Bool) → Prop),
+      (∀ (p : P), Becoming.Weighting.IncreasingInOwn items (own p) (R p)) →
+        (∀ (p : P), Becoming.Weighting.NotBelow items (R p)) →
+          Becoming.Weighting.Increasing items (Becoming.Weighting.ParetoAmong R)) ↔
+    ∀ (x : X), x ∈ items → ∃ p, own p x = true
+@Becoming.Weighting.widens_unmarked : ∀ {X : Type} {items : List X} {own : X → Bool} {x : X},
+  x ∈ items → own x = false → Becoming.Weighting.WidensOn items (fun y => !own y) fun x => false
+@Becoming.Weighting.not_adds_unmarked : ∀ {X : Type} {items : List X} {own : X → Bool},
+  ¬Becoming.Weighting.AddsOwn items own (fun y => !own y) fun x => false
+@Becoming.Weighting.exists_selfConcerned_notBelow_not_increasing : ∀ {X : Type} {items : List X} {own : X → Bool}
+  {x : X},
+  x ∈ items →
+    own x = false →
+      ∃ O,
+        Becoming.Weighting.IncreasingInOwn items own O ∧
+          Becoming.Weighting.NotBelow items O ∧ ¬Becoming.Weighting.Increasing items O
+@Becoming.Weighting.ranksNotOwnBelow_selfConcerned : ∀ {X : Type} {items : List X} {own : X → Bool},
+  Becoming.Weighting.IncreasingInOwn items own (Becoming.Weighting.RanksNotOwnBelow items own)
+@Becoming.Weighting.notOwnBelow_stops : ∀ {X P : Type} {items : List X} {own : P → X → Bool} {q : P} {x : X},
+  x ∈ items →
+    own q x = false →
+      ∃ a b,
+        Becoming.Weighting.WidensOn items a b ∧
+          ¬Becoming.Weighting.AddsOwn items (own q) a b ∧
+            ∀ (R : P → (X → Bool) → (X → Bool) → Prop),
+              R q = Becoming.Weighting.RanksNotOwnBelow items (own q) → ¬Becoming.Weighting.ParetoAmong R b a
+Becoming.Weighting.EachItsOwn.covers : ∀ (x : Bool),
+  x ∈ [false, true] → ∃ p, Becoming.Weighting.EachItsOwn.own p x = true
+Becoming.Weighting.EachItsOwn.not_total : ¬∀ (p x : Bool), Becoming.Weighting.EachItsOwn.own p x = true
+Becoming.Weighting.EachItsOwn.not_increasing : ∀ (p : Bool),
+  ∃ O,
+    Becoming.Weighting.IncreasingInOwn [false, true] (Becoming.Weighting.EachItsOwn.own p) O ∧
+      Becoming.Weighting.NotBelow [false, true] O ∧ ¬Becoming.Weighting.Increasing [false, true] O
+Becoming.Weighting.widening_is_no_weighting : ∀ (w : Nat → Nat),
+  Becoming.Weighting.Positive [0, 1, 2] w →
+    ¬∀ (a b : Nat → Bool), Becoming.Weighting.ranks [0, 1, 2] w b a ↔ Becoming.Weighting.WidensOn [0, 1, 2] a b
+@Becoming.Weighting.Increasing.stepAlike : ∀ {X : Type} {items : List X} {O : (X → Bool) → (X → Bool) → Prop},
+  Becoming.Weighting.Increasing items O → Becoming.Weighting.StepAlike items O
+@Becoming.Weighting.increasing_iff_one_step : ∀ {X : Type} [DecidableEq X] {items : List X}
+  {O : (X → Bool) → (X → Bool) → Prop},
+  (∀ {a b c : X → Bool}, O a b → O b c → O a c) →
+    ∀ {x : X} {a b : X → Bool},
+      Becoming.Weighting.WidensBy items x a b →
+        (Becoming.Weighting.Increasing items O ↔ Becoming.Weighting.StepAlike items O ∧ O b a)
+@Becoming.Weighting.ranksLighter_transitive : ∀ {X : Type} {items : List X} {w : X → Nat} {a b c : X → Bool},
+  Becoming.Weighting.ranksLighter items w a b →
+    Becoming.Weighting.ranksLighter items w b c → Becoming.Weighting.ranksLighter items w a c
+@Becoming.Weighting.ranksLighter_alike : ∀ {X : Type} {items : List X} {w : X → Nat},
+  Becoming.Weighting.Positive items w → Becoming.Weighting.StepAlike items (Becoming.Weighting.ranksLighter items w)
+@Becoming.Weighting.ranksLighter_reverses : ∀ {X : Type} {items : List X} {w : X → Nat},
+  Becoming.Weighting.Positive items w →
+    ∀ {a b : X → Bool},
+      Becoming.Weighting.WidensOn items a b →
+        Becoming.Weighting.ranksLighter items w a b ∧ ¬Becoming.Weighting.ranksLighter items w b a
+@Becoming.Weighting.ranksOnlyMany_alike : ∀ {X : Type} {items : List X},
+  Becoming.Weighting.StepAlike items (Becoming.Weighting.ranksOnlyMany items)
+@Becoming.Weighting.ranksOnlyMany_transitive : ∀ {X : Type} {items : List X} {a b c : X → Bool},
+  Becoming.Weighting.ranksOnlyMany items a b →
+    Becoming.Weighting.ranksOnlyMany items b c → Becoming.Weighting.ranksOnlyMany items a c
+Becoming.Weighting.OnlyMany.ranked : Becoming.Weighting.ranksOnlyMany Becoming.Weighting.OnlyMany.items
+  Becoming.Weighting.OnlyMany.nothing Becoming.Weighting.OnlyMany.wide
+Becoming.Weighting.OnlyMany.not_increasing : ¬Becoming.Weighting.Increasing Becoming.Weighting.OnlyMany.items
+    (Becoming.Weighting.ranksOnlyMany Becoming.Weighting.OnlyMany.items)
+Becoming.Weighting.ZeroWeight.counted_step : Becoming.Weighting.WidensBy Becoming.Weighting.ZeroWeight.items true
+  (fun x => x) Becoming.Weighting.ZeroWeight.nothing
+Becoming.Weighting.ZeroWeight.uncounted_step : Becoming.Weighting.WidensBy Becoming.Weighting.ZeroWeight.items false
+  (fun x => !x) Becoming.Weighting.ZeroWeight.nothing
+Becoming.Weighting.ZeroWeight.ranks_counted : Becoming.Weighting.ranks Becoming.Weighting.ZeroWeight.items
+  Becoming.Weighting.ZeroWeight.w Becoming.Weighting.ZeroWeight.nothing fun x => x
+Becoming.Weighting.ZeroWeight.not_ranks_uncounted : ¬Becoming.Weighting.ranks Becoming.Weighting.ZeroWeight.items
+    Becoming.Weighting.ZeroWeight.w Becoming.Weighting.ZeroWeight.nothing fun x => !x
+Becoming.Weighting.ZeroWeight.not_alike : ¬Becoming.Weighting.StepAlike Becoming.Weighting.ZeroWeight.items
+    (Becoming.Weighting.ranks Becoming.Weighting.ZeroWeight.items Becoming.Weighting.ZeroWeight.w)
+Becoming.Weighting.ZeroWeight.not_increasing : ¬Becoming.Weighting.Increasing Becoming.Weighting.ZeroWeight.items
+    (Becoming.Weighting.ranks Becoming.Weighting.ZeroWeight.items Becoming.Weighting.ZeroWeight.w)
+@Becoming.Weighting.AboveNothing.transitive : ∀ {a b c : Bool → Bool},
+  Becoming.Weighting.AboveNothing.order a b →
+    Becoming.Weighting.AboveNothing.order b c → Becoming.Weighting.AboveNothing.order a c
+Becoming.Weighting.AboveNothing.first_step : Becoming.Weighting.WidensBy Becoming.Weighting.AboveNothing.items true
+  (fun x => x) Becoming.Weighting.AboveNothing.nothing
+Becoming.Weighting.AboveNothing.further_step : Becoming.Weighting.WidensBy Becoming.Weighting.AboveNothing.items false
+  Becoming.Weighting.AboveNothing.wide fun x => x
+Becoming.Weighting.AboveNothing.ranks_first : Becoming.Weighting.AboveNothing.order
+  Becoming.Weighting.AboveNothing.nothing fun x => x
+Becoming.Weighting.AboveNothing.not_ranks_further : ¬Becoming.Weighting.AboveNothing.order (fun x => x)
+    Becoming.Weighting.AboveNothing.wide
+Becoming.Weighting.AboveNothing.not_alike : ¬Becoming.Weighting.StepAlike Becoming.Weighting.AboveNothing.items
+    Becoming.Weighting.AboveNothing.order
+Becoming.Weighting.AboveNothing.not_increasing : ¬Becoming.Weighting.Increasing Becoming.Weighting.AboveNothing.items
+    Becoming.Weighting.AboveNothing.order
+Becoming.Weighting.byOne_not_increasing : ¬Becoming.Weighting.Increasing [false, true] fun b a =>
+    Becoming.Weighting.WidensByOne [false, true] a b
+@Becoming.Weighting.increasing_on_downstream : ∀ {α : Type} {R E : Becoming.«际» α},
+  Becoming.«类» E →
+    ∀ {m : α},
+      (∀ (t : α), Becoming.«及» R m t → E m t) →
+        ∀ {own : α → Bool},
+          (∀ (t : α), Becoming.«所及» R E m t → own t = true) →
+            ∀ {items : List α},
+              (∀ (t : α), t ∈ items → Becoming.«及» R m t) →
+                ∀ {O : (α → Bool) → (α → Bool) → Prop},
+                  Becoming.Weighting.IncreasingInOwn items own O → Becoming.Weighting.Increasing items O
+@Becoming.Weighting.increasing_on_downstream_of_regularity : ∀ {α : Type} {R E : Becoming.«际» α},
+  Becoming.«类» E →
+    ∀ {m : α},
+      Becoming.«本类至终有常» R E m →
+        Becoming.«所缘同于» R E m →
+          ∀ {own : α → Bool},
+            (∀ (t : α), Becoming.«所及» R E m t → own t = true) →
+              ∀ {items : List α},
+                (∀ (t : α), t ∈ items → Becoming.«及» R m t) →
+                  ∀ {O : (α → Bool) → (α → Bool) → Prop},
+                    Becoming.Weighting.IncreasingInOwn items own O → Becoming.Weighting.Increasing items O

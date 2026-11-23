@@ -1,0 +1,334 @@
+@Becoming.BlanketCouplings.parts_eq : ∀ {I S A E : Type} {x y : Becoming.Blanket.Parts I S A E},
+  x.internal = y.internal → x.sensory = y.sensory → x.active = y.active → x.external = y.external → x = y
+@Becoming.BlanketCouplings.pair_eq : ∀ {α β : Type} {a a' : α} {b b' : β}, a = a' → b = b' → (a, b) = (a', b')
+Becoming.BlanketCouplings.unit_eq : ∀ (a b : Unit), a = b
+@Becoming.BlanketCouplings.partDependsOnlyOn_id_iff : ∀ {S : Type u_1} {M : Type u_2} {P : Generative.Process S M},
+  Becoming.BlanketCouplings.PartDependsOnlyOn P id id ↔ Becoming.Determined P
+@Becoming.BlanketCouplings.shownBy_partDependsOnlyOn_iff : ∀ {S : Type u_1} {M : Type u_2} {K : Type u_3}
+  {K' : Type u_4} {H : (Nat → S) → (Nat → M) → Prop} {π : S → K} {ρ : S → K'},
+  Becoming.BlanketCouplings.PartDependsOnlyOn (Becoming.ShownBy H) π ρ ↔
+    Becoming.BlanketCouplings.PartConsistentFamily H π ρ
+@Becoming.BlanketCouplings.PartDependsOnlyOn.of_le : ∀ {S : Type u_1} {M : Type u_2} {K : Type u_3} {K' : Type u_4}
+  {P Q : Generative.Process S M} {π : S → K} {ρ : S → K'},
+  (∀ (s : S) (a : M) (t : S), Q.step s a t → P.step s a t) →
+    Becoming.BlanketCouplings.PartDependsOnlyOn P π ρ → Becoming.BlanketCouplings.PartDependsOnlyOn Q π ρ
+@Becoming.BlanketCouplings.PartConsistentFamily.mono : ∀ {S : Type u_1} {M : Type u_2} {K : Type u_3} {K' : Type u_4}
+  {H H' : (Nat → S) → (Nat → M) → Prop} {π : S → K} {ρ : S → K'},
+  (∀ (g : Nat → S) (m : Nat → M), H g m → H' g m) →
+    Becoming.BlanketCouplings.PartConsistentFamily H' π ρ → Becoming.BlanketCouplings.PartConsistentFamily H π ρ
+@Becoming.BlanketCouplings.shownBy_blanketDetermined_iff : ∀ {I S A E M : Type}
+  {H : (Nat → Becoming.Blanket.Parts I S A E) → (Nat → M) → Prop},
+  Becoming.BlanketCouplings.BlanketDetermined (Becoming.ShownBy H) ↔ Becoming.BlanketCouplings.BlanketConsistentFamily H
+@Becoming.BlanketCouplings.BlanketDetermined.of_le : ∀ {I S A E M : Type}
+  {P Q : Generative.Process (Becoming.Blanket.Parts I S A E) M},
+  (∀ (s : Becoming.Blanket.Parts I S A E) (a : M) (t : Becoming.Blanket.Parts I S A E), Q.step s a t → P.step s a t) →
+    Becoming.BlanketCouplings.BlanketDetermined P → Becoming.BlanketCouplings.BlanketDetermined Q
+@Becoming.BlanketCouplings.BlanketConsistentFamily.mono : ∀ {I S A E M : Type}
+  {H H' : (Nat → Becoming.Blanket.Parts I S A E) → (Nat → M) → Prop},
+  (∀ (g : Nat → Becoming.Blanket.Parts I S A E) (m : Nat → M), H g m → H' g m) →
+    Becoming.BlanketCouplings.BlanketConsistentFamily H' → Becoming.BlanketCouplings.BlanketConsistentFamily H
+@Becoming.BlanketCouplings.admitted_iff : ∀ {I S A E M : Type}
+  {H : (Nat → Becoming.Blanket.Parts I S A E) → (Nat → M) → Prop},
+  (∃ Q,
+      Becoming.BlanketCouplings.BlanketDetermined Q ∧
+        ∀ (g : Nat → Becoming.Blanket.Parts I S A E) (m : Nat → M), H g m → Becoming.Admits Q g m) ↔
+    Becoming.BlanketCouplings.BlanketConsistentFamily H
+@Becoming.BlanketCouplings.BlanketDetermined.determined : ∀ {I S A E M : Type}
+  {P : Generative.Process (Becoming.Blanket.Parts I S A E) M},
+  Becoming.BlanketCouplings.BlanketDetermined P → Becoming.Determined P
+@Becoming.BlanketCouplings.blanketed_determined : ∀ {I S A E : Type} (b : Becoming.Blanket.Blanketed I S A E),
+  Becoming.BlanketCouplings.BlanketDetermined (Becoming.Assurance.ofMap fun x x_1 => b.step x)
+@Becoming.BlanketCouplings.blanketed_step_alike : ∀ {I S A E : Type} (b : Becoming.Blanket.Blanketed I S A E)
+  {x y : Becoming.Blanket.Parts I S A E} {n n' : Nat},
+  (Becoming.BlanketCouplings.agentReads (b.course x n) = Becoming.BlanketCouplings.agentReads (b.course y n') →
+      Becoming.BlanketCouplings.agentParts (b.course x (n + 1)) =
+        Becoming.BlanketCouplings.agentParts (b.course y (n' + 1))) ∧
+    (Becoming.BlanketCouplings.worldReads (b.course x n) = Becoming.BlanketCouplings.worldReads (b.course y n') →
+      Becoming.BlanketCouplings.worldParts (b.course x (n + 1)) =
+        Becoming.BlanketCouplings.worldParts (b.course y (n' + 1)))
+@Becoming.BlanketCouplings.blanketed_courses_consistent : ∀ {I S A E : Type} (b : Becoming.Blanket.Blanketed I S A E),
+  Becoming.BlanketCouplings.BlanketConsistentFamily fun h x => ∃ x, ∀ (n : Nat), h n = b.course x n
+@Becoming.BlanketCouplings.clock : ∀ {C O M A X : Type} (update : M → O → A → M) (policy : M → O → A → A)
+  (value : Nat → (C → Nat) → O) (lev : Nat → X → C → Nat) (env : O → A → Nat → X → X) (m : M) (o : O) (a : A) (x : X)
+  (n : Nat),
+  ((Becoming.BlanketCouplings.couplingLaw update policy value lev env).course
+          (Becoming.BlanketCouplings.startAt m o a x) n).external.fst =
+    n
+@Becoming.BlanketCouplings.sensory_course : ∀ {C O M A X : Type} (update : M → O → A → M) (policy : M → O → A → A)
+  (value : Nat → (C → Nat) → O) (lev : Nat → X → C → Nat) (env : O → A → Nat → X → X) (m : M) (o : O) (a : A) (x : X)
+  (n : Nat),
+  ((Becoming.BlanketCouplings.couplingLaw update policy value lev env).course
+        (Becoming.BlanketCouplings.startAt m o a x) (n + 1)).sensory =
+    Becoming.Web.courseThrough value (Becoming.BlanketCouplings.ownLevels update policy value lev env m o a x) n
+@Becoming.BlanketCouplings.blanket_iff_through : ∀ {F C O M A X : Type} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {g : F} (update : M → O → A → M) (policy : M → O → A → A) (value : Nat → (C → Nat) → O) (lev : Nat → X → C → Nat)
+  (env : O → A → Nat → X → X),
+  W.ValuesThrough obs g value →
+    ∀ (m : M) (o : O) (a : A) (x x' : X) (n : Nat),
+      (Becoming.BlanketCouplings.couplingLaw update policy value lev env).BlanketAlike
+          (Becoming.BlanketCouplings.startAt m o a x) (Becoming.BlanketCouplings.startAt m o a x') (n + 2) ↔
+        W.AlikeThroughUpTo obs g (Becoming.BlanketCouplings.ownLevels update policy value lev env m o a x)
+          (Becoming.BlanketCouplings.ownLevels update policy value lev env m o a x') n
+@Becoming.BlanketCouplings.internal_through_couplings : ∀ {F C O M A X : Type} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {g : F} (update : M → O → A → M) (policy : M → O → A → A) (value : Nat → (C → Nat) → O)
+  (lev : Nat → X → C → Nat) (env : O → A → Nat → X → X),
+  W.ValuesThrough obs g value →
+    ∀ (m : M) (o : O) (a : A) (x x' : X) (n : Nat),
+      W.AlikeThroughUpTo obs g (Becoming.BlanketCouplings.ownLevels update policy value lev env m o a x)
+          (Becoming.BlanketCouplings.ownLevels update policy value lev env m o a x') n →
+        ∀ (k : Nat),
+          k ≤ n + 2 →
+            ((Becoming.BlanketCouplings.couplingLaw update policy value lev env).course
+                  (Becoming.BlanketCouplings.startAt m o a x) k).internal =
+              ((Becoming.BlanketCouplings.couplingLaw update policy value lev env).course
+                  (Becoming.BlanketCouplings.startAt m o a x') k).internal
+@Becoming.BlanketCouplings.open_external : ∀ {C O M A : Type} (update : M → O → A → M) (policy : M → O → A → A)
+  (value : Nat → (C → Nat) → O) (m : M) (o : O) (a : A) (l : Nat → C → Nat) (n : Nat),
+  ((Becoming.BlanketCouplings.openLoop update policy value).course (Becoming.BlanketCouplings.startAt m o a l)
+        n).external =
+    (n, l)
+@Becoming.BlanketCouplings.open_levels : ∀ {C O M A : Type} (update : M → O → A → M) (policy : M → O → A → A)
+  (value : Nat → (C → Nat) → O) (m : M) (o : O) (a : A) (l : Nat → C → Nat) (n : Nat),
+  Becoming.BlanketCouplings.ownLevels update policy value Becoming.BlanketCouplings.levelsAt
+      Becoming.BlanketCouplings.levelsStay m o a l n =
+    l n
+@Becoming.BlanketCouplings.internal_selectsThrough : ∀ {F C O M A : Type} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {g : F} (update : M → O → A → M) (policy : M → O → A → A) (value : Nat → (C → Nat) → O),
+  W.ValuesThrough obs g value →
+    ∀ (m : M) (o : O) (a : A) (n : Nat) (select : (Nat → M) → Prop),
+      (∀ (f f' : Nat → M), (∀ (k : Nat), k ≤ n + 2 → f k = f' k) → (select f ↔ select f')) →
+        W.SelectsThrough obs g n fun l =>
+          select fun k =>
+            ((Becoming.BlanketCouplings.openLoop update policy value).course (Becoming.BlanketCouplings.startAt m o a l)
+                k).internal
+Becoming.BlanketCouplings.ThresholdCase.admits_iff : ∀ (x : Unit → Nat) (t : Nat),
+  Becoming.Blanket.ThresholdDrain.web.Admits x t () ↔ Nat.blt 0 (x ()) = true
+Becoming.BlanketCouplings.ThresholdCase.values : Becoming.Blanket.ThresholdDrain.web.ValuesThrough (fun x x_1 => False)
+  () Becoming.BlanketCouplings.ThresholdCase.value
+Becoming.BlanketCouplings.ThresholdCase.corr : ∀ (e n : Nat),
+  ((Becoming.BlanketCouplings.couplingLaw Becoming.BlanketCouplings.ThresholdCase.update
+              Becoming.BlanketCouplings.ThresholdCase.policy Becoming.BlanketCouplings.ThresholdCase.value
+              Becoming.BlanketCouplings.ThresholdCase.lev Becoming.BlanketCouplings.ThresholdCase.env).course
+          (Becoming.BlanketCouplings.startAt true true () e) n).internal =
+      (Becoming.Blanket.ThresholdDrain.law.course { internal := true, sensory := true, active := (), external := e }
+          n).internal ∧
+    ((Becoming.BlanketCouplings.couplingLaw Becoming.BlanketCouplings.ThresholdCase.update
+                Becoming.BlanketCouplings.ThresholdCase.policy Becoming.BlanketCouplings.ThresholdCase.value
+                Becoming.BlanketCouplings.ThresholdCase.lev Becoming.BlanketCouplings.ThresholdCase.env).course
+            (Becoming.BlanketCouplings.startAt true true () e) n).sensory =
+        (Becoming.Blanket.ThresholdDrain.law.course { internal := true, sensory := true, active := (), external := e }
+            n).sensory ∧
+      ((Becoming.BlanketCouplings.couplingLaw Becoming.BlanketCouplings.ThresholdCase.update
+                  Becoming.BlanketCouplings.ThresholdCase.policy Becoming.BlanketCouplings.ThresholdCase.value
+                  Becoming.BlanketCouplings.ThresholdCase.lev Becoming.BlanketCouplings.ThresholdCase.env).course
+              (Becoming.BlanketCouplings.startAt true true () e) n).active =
+          (Becoming.Blanket.ThresholdDrain.law.course { internal := true, sensory := true, active := (), external := e }
+              n).active ∧
+        ((Becoming.BlanketCouplings.couplingLaw Becoming.BlanketCouplings.ThresholdCase.update
+                  Becoming.BlanketCouplings.ThresholdCase.policy Becoming.BlanketCouplings.ThresholdCase.value
+                  Becoming.BlanketCouplings.ThresholdCase.lev Becoming.BlanketCouplings.ThresholdCase.env).course
+              (Becoming.BlanketCouplings.startAt true true () e) n).external =
+          (n,
+            (Becoming.Blanket.ThresholdDrain.law.course
+                { internal := true, sensory := true, active := (), external := e } n).external)
+Becoming.BlanketCouplings.ThresholdCase.own_eq : ∀ (e s : Nat),
+  Becoming.BlanketCouplings.ownLevels Becoming.BlanketCouplings.ThresholdCase.update
+      Becoming.BlanketCouplings.ThresholdCase.policy Becoming.BlanketCouplings.ThresholdCase.value
+      Becoming.BlanketCouplings.ThresholdCase.lev Becoming.BlanketCouplings.ThresholdCase.env true true () e s =
+    fun x => e - s
+Becoming.BlanketCouplings.ThresholdCase.threshold_case : ∀ (e e' n : Nat),
+  Becoming.Blanket.ThresholdDrain.law.BlanketAlike { internal := true, sensory := true, active := (), external := e }
+      { internal := true, sensory := true, active := (), external := e' } (n + 2) ↔
+    Becoming.Blanket.ThresholdDrain.web.AlikeThroughUpTo (fun x x_1 => False) () (fun t x => e - t) (fun t x => e' - t)
+      n
+@Becoming.BlanketCouplings.clocked_course : ∀ {α ρ : Type} (x : ρ → Nat → α) (r : ρ) (n : Nat),
+  (Becoming.BlanketCouplings.clocked x).course { internal := x r 0, sensory := x r 1, active := (), external := (r, 0) }
+      n =
+    { internal := x r n, sensory := x r (n + 1), active := (), external := (r, n) }
+@Becoming.BlanketCouplings.clocked_consistent : ∀ {α ρ : Type} (x : ρ → Nat → α),
+  Becoming.BlanketCouplings.BlanketConsistentFamily fun h x_1 =>
+    ∃ r, ∀ (n : Nat), h n = { internal := x r n, sensory := x r (n + 1), active := (), external := (r, n) }
+Becoming.BlanketCouplings.clocked_witness : (¬Becoming.ConsistentFamily fun h x =>
+      ∃ r, ∀ (n : Nat), h n = Becoming.BlanketCouplings.parting r n) ∧
+  Becoming.BlanketCouplings.BlanketConsistentFamily fun h x =>
+    ∃ r,
+      ∀ (n : Nat),
+        h n =
+          { internal := Becoming.BlanketCouplings.parting r n, sensory := Becoming.BlanketCouplings.parting r (n + 1),
+            active := (), external := (r, n) }
+Becoming.BlanketCouplings.clock_only_fails : ¬Becoming.BlanketCouplings.BlanketConsistentFamily fun h x =>
+    ∃ r,
+      ∀ (n : Nat),
+        h n =
+          { internal := Becoming.BlanketCouplings.partingLate r n,
+            sensory := Becoming.BlanketCouplings.partingLate r (n + 1), active := (), external := n }
+@Becoming.BlanketCouplings.suffix_apply : ∀ {α : Type} (f : Nat → α) (n k : Nat),
+  Becoming.BlanketCouplings.suffix n f k = f (k + n)
+@Becoming.BlanketCouplings.suffix_zero : ∀ {α : Type} (f : Nat → α) (n : Nat),
+  Becoming.BlanketCouplings.suffix n f 0 = f n
+@Becoming.BlanketCouplings.future_course : ∀ {α : Type} (x : Nat → α) (n : Nat),
+  (Becoming.BlanketCouplings.future.course
+          { internal := x 0, sensory := Becoming.BlanketCouplings.suffix 1 x, active := (), external := () }
+          n).internal =
+      x n ∧
+    (Becoming.BlanketCouplings.future.course
+          { internal := x 0, sensory := Becoming.BlanketCouplings.suffix 1 x, active := (), external := () }
+          n).sensory =
+      Becoming.BlanketCouplings.suffix (n + 1) x
+@Becoming.BlanketCouplings.const_consistent : ∀ {X M : Type} (H : (Nat → X) → (Nat → M) → Prop),
+  Becoming.BlanketCouplings.BlanketConsistentFamily
+    (Becoming.BlanketCouplings.readFamily (fun x => { internal := (), sensory := (), active := (), external := () }) H)
+@Becoming.BlanketCouplings.injective_consistent : ∀ {X M I S A E : Type} {π : X → Becoming.Blanket.Parts I S A E},
+  (∀ (x x' : X), π x = π x' → x = x') →
+    ∀ {H : (Nat → X) → (Nat → M) → Prop},
+      Becoming.BlanketCouplings.BlanketConsistentFamily (Becoming.BlanketCouplings.readFamily π H) →
+        Becoming.ConsistentFamily H
+@Becoming.BlanketCouplings.whole_iff : ∀ {X M : Type} {H : (Nat → X) → (Nat → M) → Prop},
+  Becoming.BlanketCouplings.BlanketConsistentFamily
+      (Becoming.BlanketCouplings.readFamily Becoming.BlanketCouplings.whole H) ↔
+    Becoming.ConsistentFamily H
+Becoming.BlanketCouplings.ReadsExternal.internal_course : (Becoming.BlanketCouplings.ReadsExternal.run 0).internal =
+    false ∧
+  (Becoming.BlanketCouplings.ReadsExternal.run 1).internal = true ∧
+    (Becoming.BlanketCouplings.ReadsExternal.run 2).internal = false ∧
+      (Becoming.BlanketCouplings.ReadsExternal.run 3).internal = false ∧
+        (Becoming.BlanketCouplings.ReadsExternal.run 4).internal = true
+Becoming.BlanketCouplings.ReadsExternal.not_consistent : ¬Becoming.BlanketCouplings.BlanketConsistentFamily fun h x =>
+    h = Becoming.BlanketCouplings.ReadsExternal.run
+Becoming.BlanketCouplings.ReadsExternal.not_blanketed : ¬∃ b x,
+    ∀ (n : Nat), b.course x n = Becoming.BlanketCouplings.ReadsExternal.run n
+Becoming.BlanketCouplings.ReadsExternal.whole_consistent : Becoming.BlanketCouplings.BlanketConsistentFamily
+  (Becoming.BlanketCouplings.readFamily Becoming.BlanketCouplings.whole fun h x =>
+    h = Becoming.BlanketCouplings.ReadsExternal.run)
+Becoming.BlanketCouplings.injective_converse_fails : (Becoming.ConsistentFamily fun h x =>
+    h = Becoming.BlanketCouplings.ReadsExternal.run) ∧
+  ¬Becoming.BlanketCouplings.BlanketConsistentFamily fun h x => h = Becoming.BlanketCouplings.ReadsExternal.run
+@Becoming.BlanketCouplings.stepExternal_consistent_iff : ∀ {I S A : Type} {i : Nat → I} {s : Nat → S} {a : Nat → A},
+  (Becoming.BlanketCouplings.BlanketConsistentFamily fun r x => r = Becoming.BlanketCouplings.stepExternal i s a) ↔
+    Becoming.BlanketCouplings.AgentConsistent i s a
+@Becoming.BlanketCouplings.stepExternal_admitted_iff : ∀ {I S A : Type} {i : Nat → I} {s : Nat → S} {a : Nat → A},
+  (∃ Q,
+      Becoming.BlanketCouplings.BlanketDetermined Q ∧
+        ∀ (r : Nat → Becoming.Blanket.Parts I S A Nat) (m : Nat → Unit),
+          r = Becoming.BlanketCouplings.stepExternal i s a → Becoming.Admits Q r m) ↔
+    Becoming.BlanketCouplings.AgentConsistent i s a
+@Becoming.BlanketCouplings.stepLaw_course : ∀ {I S A : Type} {i : Nat → I} {s : Nat → S} {a : Nat → A}
+  {own : I → S → A → I} {policy : I → S → A → A},
+  (∀ (t : Nat), i (t + 1) = own (i t) (s t) (a t)) →
+    (∀ (t : Nat), a (t + 1) = policy (i t) (s t) (a t)) →
+      ∀ (n : Nat),
+        (Becoming.BlanketCouplings.stepLaw own policy s).course (Becoming.BlanketCouplings.stepExternal i s a 0) n =
+          Becoming.BlanketCouplings.stepExternal i s a n
+@Becoming.BlanketCouplings.next_level_alike_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {l : Nat → C → Nat},
+  L.BalancedHistory l →
+    ∀ {g : C} {j k : Nat},
+      l j g = l k g → (l (j + 1) g = l (k + 1) g ↔ L.given j g + L.taken k g = L.given k g + L.taken j g)
+@Becoming.BlanketCouplings.agentConsistent_iff_exchange : ∀ {R O A : Type} {L : Becoming.Flow R R}
+  {W : Becoming.Web R R},
+  L.BalancedHistory W.level →
+    ∀ {g : R} {value : Nat → (R → Nat) → O} {act : Nat → A},
+      Becoming.BlanketCouplings.AgentConsistent (fun t => W.level t g) (fun t => value t (W.level t)) act ↔
+        ∀ (j k : Nat),
+          W.level j g = W.level k g →
+            value j (W.level j) = value k (W.level k) →
+              act j = act k → L.given j g + L.taken k g = L.given k g + L.taken j g ∧ act (j + 1) = act (k + 1)
+@Becoming.BlanketCouplings.ValuesAcross.through : ∀ {C R O : Type} {W : Becoming.Web R C} {obs : R → C → Prop} {g : R}
+  {value : Nat → (C → Nat) → O}, Becoming.BlanketCouplings.ValuesAcross W obs g value → W.ValuesThrough obs g value
+@Becoming.BlanketCouplings.listed_valuesAcross : ∀ {C R : Type} {W : Becoming.Web R C} {obs : R → C → Prop} {g : R}
+  {admits : Nat → (C → Nat) → Bool},
+  (∀ (t : Nat) (x : C → Nat), admits t x = true ↔ W.Admits x t g) →
+    ∀ {cs : List C},
+      (∀ (c : C), obs g c ↔ c ∈ cs) →
+        Becoming.BlanketCouplings.ValuesAcross W obs g fun t x => (admits t x, List.map x cs)
+@Becoming.BlanketCouplings.levelParts_admitted_iff : ∀ {R O : Type} {L : Becoming.Flow R R} {W : Becoming.Web R R},
+  L.BalancedHistory W.level →
+    ∀ {g : R} {obs : R → R → Prop} {value : Nat → (R → Nat) → O},
+      Becoming.BlanketCouplings.ValuesAcross W obs g value →
+        ∀ (presence : Nat → Bool) (cs : List R),
+          (∃ Q,
+              Becoming.BlanketCouplings.BlanketDetermined Q ∧
+                ∀ (r : Nat → Becoming.Blanket.Parts Nat O (List Nat × List Nat) Nat) (m : Nat → Unit),
+                  r =
+                      Becoming.BlanketCouplings.levelParts W g value
+                        (Becoming.BlanketCouplings.presentRow presence cs L g) →
+                    Becoming.Admits Q r m) ↔
+            ∀ (j k : Nat),
+              W.level j g = W.level k g →
+                (W.Admits (W.level j) j g ↔ W.Admits (W.level k) k g) →
+                  (∀ (c : R), obs g c → W.level j c = W.level k c) →
+                    Becoming.BlanketCouplings.presentRow presence cs L g j =
+                        Becoming.BlanketCouplings.presentRow presence cs L g k →
+                      L.given j g + L.taken k g = L.given k g + L.taken j g ∧
+                        Becoming.BlanketCouplings.presentRow presence cs L g (j + 1) =
+                          Becoming.BlanketCouplings.presentRow presence cs L g (k + 1)
+Becoming.BlanketCouplings.TwoRelata.g_not_mem_h : ¬Becoming.BlanketCouplings.TwoRelata.g ∈
+    [Becoming.BlanketCouplings.TwoRelata.h]
+Becoming.BlanketCouplings.PhasedDrain.balance_g : ∀ (p : Becoming.BlanketCouplings.ReadsExternal.Three),
+  Becoming.BlanketCouplings.PhasedDrain.gLevel (Becoming.BlanketCouplings.ReadsExternal.next p) +
+      (Becoming.BlanketCouplings.PhasedDrain.hTakesG p + 0) =
+    Becoming.BlanketCouplings.PhasedDrain.gLevel p + (Becoming.BlanketCouplings.PhasedDrain.hGivesG p + 0)
+Becoming.BlanketCouplings.PhasedDrain.balance_h : ∀ (p : Becoming.BlanketCouplings.ReadsExternal.Three),
+  Becoming.BlanketCouplings.PhasedDrain.hLevel (Becoming.BlanketCouplings.ReadsExternal.next p) +
+      (Becoming.BlanketCouplings.PhasedDrain.hTakesH p + 0) =
+    Becoming.BlanketCouplings.PhasedDrain.hLevel p + (Becoming.BlanketCouplings.PhasedDrain.hGivesH p + 0)
+Becoming.BlanketCouplings.PhasedDrain.balances : Becoming.BlanketCouplings.PhasedDrain.flow.BalancedHistory
+  Becoming.BlanketCouplings.PhasedDrain.web.level
+Becoming.BlanketCouplings.PhasedDrain.uncoupled : ¬Becoming.BlanketCouplings.PhasedDrain.web.CoupledInto
+    (fun x x_1 => False) Becoming.BlanketCouplings.TwoRelata.g Becoming.BlanketCouplings.TwoRelata.h
+@Becoming.BlanketCouplings.PhasedDrain.one_value : ∀ {O : Type}
+  {value : Nat → (Becoming.BlanketCouplings.TwoRelata → Nat) → O},
+  Becoming.BlanketCouplings.ValuesAcross Becoming.BlanketCouplings.PhasedDrain.web (fun x x_1 => False)
+      Becoming.BlanketCouplings.TwoRelata.g value →
+    ∀ (j k : Nat),
+      value j (Becoming.BlanketCouplings.PhasedDrain.web.level j) =
+        value k (Becoming.BlanketCouplings.PhasedDrain.web.level k)
+Becoming.BlanketCouplings.PhasedDrain.values : Becoming.BlanketCouplings.ValuesAcross
+  Becoming.BlanketCouplings.PhasedDrain.web (fun x x_1 => False) Becoming.BlanketCouplings.TwoRelata.g fun x x_1 => ()
+Becoming.BlanketCouplings.PhasedDrain.presence_decides : Becoming.BlanketCouplings.DecidesPresence
+  Becoming.BlanketCouplings.PhasedDrain.presence Becoming.BlanketCouplings.PhasedDrain.flow
+  Becoming.BlanketCouplings.TwoRelata.g
+@Becoming.BlanketCouplings.PhasedDrain.not_admitted : ∀ {O : Type}
+  {value : Nat → (Becoming.BlanketCouplings.TwoRelata → Nat) → O},
+  Becoming.BlanketCouplings.ValuesAcross Becoming.BlanketCouplings.PhasedDrain.web (fun x x_1 => False)
+      Becoming.BlanketCouplings.TwoRelata.g value →
+    ¬∃ Q,
+        Becoming.BlanketCouplings.BlanketDetermined Q ∧
+          ∀ (r : Nat → Becoming.Blanket.Parts Nat O (List Nat × List Nat) Nat) (m : Nat → Unit),
+            r =
+                Becoming.BlanketCouplings.levelParts Becoming.BlanketCouplings.PhasedDrain.web
+                  Becoming.BlanketCouplings.TwoRelata.g value Becoming.BlanketCouplings.PhasedDrain.act →
+              Becoming.Admits Q r m
+Becoming.BlanketCouplings.Alternating.balance_g : ∀ (p : Bool),
+  (Becoming.BlanketCouplings.Alternating.gLevel !p) + (Becoming.BlanketCouplings.Alternating.hTakesG p + 0) =
+    Becoming.BlanketCouplings.Alternating.gLevel p + (Becoming.BlanketCouplings.Alternating.hGivesG p + 0)
+Becoming.BlanketCouplings.Alternating.balance_h : ∀ (p : Bool),
+  (Becoming.BlanketCouplings.Alternating.hLevel !p) + (Becoming.BlanketCouplings.Alternating.hTakesH p + 0) =
+    Becoming.BlanketCouplings.Alternating.hLevel p + (Becoming.BlanketCouplings.Alternating.hGivesH p + 0)
+Becoming.BlanketCouplings.Alternating.balances : Becoming.BlanketCouplings.Alternating.flow.BalancedHistory
+  Becoming.BlanketCouplings.Alternating.web.level
+Becoming.BlanketCouplings.Alternating.uncoupled : ¬Becoming.BlanketCouplings.Alternating.web.CoupledInto
+    (fun x x_1 => False) Becoming.BlanketCouplings.TwoRelata.g Becoming.BlanketCouplings.TwoRelata.h
+Becoming.BlanketCouplings.Alternating.values : Becoming.BlanketCouplings.ValuesAcross
+  Becoming.BlanketCouplings.Alternating.web (fun x x_1 => False) Becoming.BlanketCouplings.TwoRelata.g fun x x_1 => ()
+Becoming.BlanketCouplings.Alternating.presence_decides : Becoming.BlanketCouplings.DecidesPresence
+  Becoming.BlanketCouplings.Alternating.presence Becoming.BlanketCouplings.Alternating.flow
+  Becoming.BlanketCouplings.TwoRelata.g
+Becoming.BlanketCouplings.Alternating.gLevel_inj : ∀ (p q : Bool),
+  Becoming.BlanketCouplings.Alternating.gLevel p = Becoming.BlanketCouplings.Alternating.gLevel q → p = q
+Becoming.BlanketCouplings.Alternating.recurs : Becoming.BlanketCouplings.Alternating.web.level 0
+    Becoming.BlanketCouplings.TwoRelata.g =
+  Becoming.BlanketCouplings.Alternating.web.level 2 Becoming.BlanketCouplings.TwoRelata.g
+@Becoming.BlanketCouplings.Alternating.agentConsistent : ∀ {O : Type}
+  (value : Nat → (Becoming.BlanketCouplings.TwoRelata → Nat) → O),
+  Becoming.BlanketCouplings.AgentConsistent
+    (fun t => Becoming.BlanketCouplings.Alternating.web.level t Becoming.BlanketCouplings.TwoRelata.g)
+    (fun t => value t (Becoming.BlanketCouplings.Alternating.web.level t)) Becoming.BlanketCouplings.Alternating.act
+@Becoming.BlanketCouplings.Alternating.admitted : ∀ {O : Type}
+  (value : Nat → (Becoming.BlanketCouplings.TwoRelata → Nat) → O),
+  ∃ Q,
+    Becoming.BlanketCouplings.BlanketDetermined Q ∧
+      ∀ (r : Nat → Becoming.Blanket.Parts Nat O (List Nat × List Nat) Nat) (m : Nat → Unit),
+        r =
+            Becoming.BlanketCouplings.levelParts Becoming.BlanketCouplings.Alternating.web
+              Becoming.BlanketCouplings.TwoRelata.g value Becoming.BlanketCouplings.Alternating.act →
+          Becoming.Admits Q r m

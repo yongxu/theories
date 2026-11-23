@@ -1,0 +1,899 @@
+@Becoming.PairSelection.course_of : ∀ {f g : Becoming.PairSelection.PairLaw} {e : Becoming.PairSelection.Errors}
+  {P Q : Nat → Bool},
+  (f (true, true) (true, true) && !e 0 Becoming.WindowedWaiting.Pair.first) = P 0 →
+    (g (true, true) (true, true) && !e 0 Becoming.WindowedWaiting.Pair.second) = Q 0 →
+      (∀ (n : Nat),
+          (f (P n, Becoming.PairSelection.before P n) (Q n, Becoming.PairSelection.before Q n) &&
+              !e (n + 1) Becoming.WindowedWaiting.Pair.first) =
+            P (n + 1)) →
+        (∀ (n : Nat),
+            (g (Q n, Becoming.PairSelection.before Q n) (P n, Becoming.PairSelection.before P n) &&
+                !e (n + 1) Becoming.WindowedWaiting.Pair.second) =
+              Q (n + 1)) →
+          ∀ (n : Nat),
+            (Becoming.PairSelection.course f g e).state n =
+              (n, (P n, Becoming.PairSelection.before P n), Q n, Becoming.PairSelection.before Q n)
+@Becoming.PairSelection.gives_of : ∀ {f g : Becoming.PairSelection.PairLaw} {e : Becoming.PairSelection.Errors}
+  {P Q : Nat → Bool},
+  (f (true, true) (true, true) && !e 0 Becoming.WindowedWaiting.Pair.first) = P 0 →
+    (g (true, true) (true, true) && !e 0 Becoming.WindowedWaiting.Pair.second) = Q 0 →
+      (∀ (n : Nat),
+          (f (P n, Becoming.PairSelection.before P n) (Q n, Becoming.PairSelection.before Q n) &&
+              !e (n + 1) Becoming.WindowedWaiting.Pair.first) =
+            P (n + 1)) →
+        (∀ (n : Nat),
+            (g (Q n, Becoming.PairSelection.before Q n) (P n, Becoming.PairSelection.before P n) &&
+                !e (n + 1) Becoming.WindowedWaiting.Pair.second) =
+              Q (n + 1)) →
+          ∀ (n : Nat),
+            Becoming.PairSelection.gives f g e Becoming.WindowedWaiting.Pair.first n = P n ∧
+              Becoming.PairSelection.gives f g e Becoming.WindowedWaiting.Pair.second n = Q n
+@Becoming.PairSelection.tally_congr : ∀ {p q : Nat → Bool},
+  (∀ (t : Nat), p t = q t) → ∀ (n : Nat), Becoming.PairSelection.tally p n = Becoming.PairSelection.tally q n
+@Becoming.PairSelection.tally_true : ∀ {p : Nat → Bool},
+  (∀ (t : Nat), p t = true) → ∀ (n : Nat), Becoming.PairSelection.tally p n = n
+@Becoming.PairSelection.tally_false : ∀ {p : Nat → Bool},
+  (∀ (t : Nat), p t = false) → ∀ (n : Nat), Becoming.PairSelection.tally p n = 0
+Becoming.PairSelection.tally_head : ∀ (p : Nat → Bool) (n : Nat),
+  Becoming.PairSelection.tally p (n + 1) = (bif p 0 then 1 else 0) + Becoming.PairSelection.tally (fun t => p (t + 1)) n
+Becoming.PairSelection.tally_not : ∀ (p : Nat → Bool) (n : Nat),
+  Becoming.PairSelection.tally p n + Becoming.PairSelection.tally (fun t => !p t) n = n
+Becoming.PairSelection.tally_odd : ∀ (n : Nat),
+  Becoming.PairSelection.tally (fun t => !Becoming.WindowedWaiting.even t) n = Becoming.PairSelection.half n
+Becoming.PairSelection.tally_even : ∀ (n : Nat),
+  Becoming.PairSelection.tally Becoming.WindowedWaiting.even n = Becoming.PairSelection.half (n + 1)
+Becoming.PairSelection.keep : ∀ (b : Bool), (b && !false) = b
+Becoming.PairSelection.table_twenty : Becoming.PairSelection.countsTable 20 =
+  [[(20, 0), (20, 0), (20, 0), (20, 0), (20, 0), (0, 0), (10, 0)],
+    [(20, 0), (20, 0), (20, 0), (20, 0), (20, 0), (0, 19), (10, 10)],
+    [(20, 0), (20, 0), (20, 0), (20, 0), (20, 0), (0, 18), (10, 0)],
+    [(20, 0), (20, 0), (20, 0), (20, 0), (20, 0), (0, 10), (10, 10)],
+    [(20, 0), (20, 0), (20, 0), (20, 0), (20, 0), (0, 19), (10, 19)],
+    [(20, 20), (1, 20), (2, 20), (10, 20), (1, 20), (0, 20), (10, 20)],
+    [(20, 10), (10, 10), (20, 10), (10, 10), (1, 10), (0, 10), (10, 10)]]
+Becoming.PairSelection.error_table_twenty : Becoming.PairSelection.errorTable 20 5 =
+  [((20, 1), 19, 0), ((13, 8), 12, 7), ((20, 1), 19, 0), ((19, 2), 18, 1), ((6, 15), 5, 14), ((0, 20), 0, 20),
+    ((10, 11), 9, 10)]
+Becoming.PairSelection.tally_below : ∀ (k d : Nat),
+  Becoming.PairSelection.tally (Becoming.PairSelection.below k) (k + d) = k
+@Becoming.PairSelection.tally_not_of : ∀ {p : Nat → Bool} {n c d : Nat},
+  Becoming.PairSelection.tally p n = c → n = c + d → Becoming.PairSelection.tally (fun t => !p t) n = d
+Becoming.PairSelection.tally_not_below : ∀ (k d : Nat),
+  Becoming.PairSelection.tally (fun t => !Becoming.PairSelection.below k t) (k + d) = d
+Becoming.PairSelection.not_not_tally : ∀ (p : Nat → Bool) (n : Nat),
+  Becoming.PairSelection.tally (fun t => !!p t) n = Becoming.PairSelection.tally p n
+Becoming.PairSelection.before_true : ∀ (n : Nat), Becoming.PairSelection.before (fun x => true) n = true
+@Becoming.PairSelection.counts_giving : ∀ {f g : Becoming.PairSelection.PairLaw},
+  f (true, true) (true, true) = true →
+    g (true, true) (true, true) = true →
+      ∀ (a : Becoming.WindowedWaiting.Pair) (n : Nat),
+        Becoming.PairSelection.received f g Becoming.PairSelection.noErrors a n = n ∧
+          Becoming.PairSelection.withheld f g Becoming.PairSelection.noErrors a n = 0
+@Becoming.PairSelection.counts_of : ∀ {f g : Becoming.PairSelection.PairLaw} {e : Becoming.PairSelection.Errors}
+  {P Q : Nat → Bool},
+  (∀ (n : Nat),
+      Becoming.PairSelection.gives f g e Becoming.WindowedWaiting.Pair.first n = P n ∧
+        Becoming.PairSelection.gives f g e Becoming.WindowedWaiting.Pair.second n = Q n) →
+    ∀ (n : Nat),
+      Becoming.PairSelection.received f g e Becoming.WindowedWaiting.Pair.first n = Becoming.PairSelection.tally Q n ∧
+        Becoming.PairSelection.withheld f g e Becoming.WindowedWaiting.Pair.first n =
+            Becoming.PairSelection.tally (fun t => !P t) n ∧
+          Becoming.PairSelection.received f g e Becoming.WindowedWaiting.Pair.second n =
+              Becoming.PairSelection.tally P n ∧
+            Becoming.PairSelection.withheld f g e Becoming.WindowedWaiting.Pair.second n =
+              Becoming.PairSelection.tally (fun t => !Q t) n
+Becoming.PairSelection.beq_false_eq : ∀ (b : Bool), (b == false) = !b
+Becoming.PairSelection.window_alternates : ∀ (b : Bool), (Becoming.WindowedWaiting.windowTwo (!!b) !b) = true
+Becoming.PairSelection.tally_zero : ∀ (n : Nat), Becoming.PairSelection.tally (fun x => false) n = 0
+Becoming.PairSelection.tally_all : ∀ (n : Nat), Becoming.PairSelection.tally (fun x => true) n = n
+Becoming.PairSelection.tally_none : ∀ (n : Nat), Becoming.PairSelection.tally (fun x => !true) n = 0
+Becoming.PairSelection.tally_every : ∀ (n : Nat), Becoming.PairSelection.tally (fun x => !false) n = n
+Becoming.PairSelection.counts_sparing_withholding : ∀ (n : Nat),
+  Becoming.PairSelection.received Becoming.PairSelection.sparing Becoming.PairSelection.withholding
+        Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n =
+      0 ∧
+    Becoming.PairSelection.withheld Becoming.PairSelection.sparing Becoming.PairSelection.withholding
+          Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n =
+        0 ∧
+      Becoming.PairSelection.received Becoming.PairSelection.sparing Becoming.PairSelection.withholding
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n =
+          n ∧
+        Becoming.PairSelection.withheld Becoming.PairSelection.sparing Becoming.PairSelection.withholding
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n =
+          n
+Becoming.PairSelection.counts_answering_withholding : ∀ (d : Nat),
+  Becoming.PairSelection.received Becoming.PairSelection.answering Becoming.PairSelection.withholding
+        Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first (1 + d) =
+      0 ∧
+    Becoming.PairSelection.withheld Becoming.PairSelection.answering Becoming.PairSelection.withholding
+          Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first (1 + d) =
+        d ∧
+      Becoming.PairSelection.received Becoming.PairSelection.answering Becoming.PairSelection.withholding
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second (1 + d) =
+          1 ∧
+        Becoming.PairSelection.withheld Becoming.PairSelection.answering Becoming.PairSelection.withholding
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second (1 + d) =
+          1 + d
+Becoming.PairSelection.counts_windowed_withholding : ∀ (d : Nat),
+  Becoming.PairSelection.received Becoming.PairSelection.windowed Becoming.PairSelection.withholding
+        Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first (2 + d) =
+      0 ∧
+    Becoming.PairSelection.withheld Becoming.PairSelection.windowed Becoming.PairSelection.withholding
+          Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first (2 + d) =
+        d ∧
+      Becoming.PairSelection.received Becoming.PairSelection.windowed Becoming.PairSelection.withholding
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second (2 + d) =
+          2 ∧
+        Becoming.PairSelection.withheld Becoming.PairSelection.windowed Becoming.PairSelection.withholding
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second (2 + d) =
+          2 + d
+Becoming.PairSelection.counts_agreeing_withholding : ∀ (n : Nat),
+  Becoming.PairSelection.received Becoming.PairSelection.agreeing Becoming.PairSelection.withholding
+        Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n =
+      0 ∧
+    Becoming.PairSelection.withheld Becoming.PairSelection.agreeing Becoming.PairSelection.withholding
+          Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n =
+        Becoming.PairSelection.half n ∧
+      Becoming.PairSelection.received Becoming.PairSelection.agreeing Becoming.PairSelection.withholding
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n =
+          Becoming.PairSelection.half (n + 1) ∧
+        Becoming.PairSelection.withheld Becoming.PairSelection.agreeing Becoming.PairSelection.withholding
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n =
+          n
+Becoming.PairSelection.counts_waitingBoth_withholding : ∀ (d : Nat),
+  Becoming.PairSelection.received Becoming.PairSelection.waitingBoth Becoming.PairSelection.withholding
+        Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first (1 + d) =
+      0 ∧
+    Becoming.PairSelection.withheld Becoming.PairSelection.waitingBoth Becoming.PairSelection.withholding
+          Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first (1 + d) =
+        d ∧
+      Becoming.PairSelection.received Becoming.PairSelection.waitingBoth Becoming.PairSelection.withholding
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second (1 + d) =
+          1 ∧
+        Becoming.PairSelection.withheld Becoming.PairSelection.waitingBoth Becoming.PairSelection.withholding
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second (1 + d) =
+          1 + d
+Becoming.PairSelection.counts_withholding_withholding : ∀ (n : Nat),
+  Becoming.PairSelection.received Becoming.PairSelection.withholding Becoming.PairSelection.withholding
+        Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n =
+      0 ∧
+    Becoming.PairSelection.withheld Becoming.PairSelection.withholding Becoming.PairSelection.withholding
+          Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n =
+        n ∧
+      Becoming.PairSelection.received Becoming.PairSelection.withholding Becoming.PairSelection.withholding
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n =
+          0 ∧
+        Becoming.PairSelection.withheld Becoming.PairSelection.withholding Becoming.PairSelection.withholding
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n =
+          n
+Becoming.PairSelection.counts_alternating_withholding : ∀ (n : Nat),
+  Becoming.PairSelection.received Becoming.PairSelection.alternating Becoming.PairSelection.withholding
+        Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n =
+      0 ∧
+    Becoming.PairSelection.withheld Becoming.PairSelection.alternating Becoming.PairSelection.withholding
+          Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n =
+        Becoming.PairSelection.half (n + 1) ∧
+      Becoming.PairSelection.received Becoming.PairSelection.alternating Becoming.PairSelection.withholding
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n =
+          Becoming.PairSelection.half n ∧
+        Becoming.PairSelection.withheld Becoming.PairSelection.alternating Becoming.PairSelection.withholding
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n =
+          n
+Becoming.PairSelection.counts_sparing_alternating : ∀ (n : Nat),
+  Becoming.PairSelection.received Becoming.PairSelection.sparing Becoming.PairSelection.alternating
+        Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n =
+      Becoming.PairSelection.half n ∧
+    Becoming.PairSelection.withheld Becoming.PairSelection.sparing Becoming.PairSelection.alternating
+          Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n =
+        0 ∧
+      Becoming.PairSelection.received Becoming.PairSelection.sparing Becoming.PairSelection.alternating
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n =
+          n ∧
+        Becoming.PairSelection.withheld Becoming.PairSelection.sparing Becoming.PairSelection.alternating
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n =
+          Becoming.PairSelection.half (n + 1)
+Becoming.PairSelection.counts_answering_alternating : ∀ (n : Nat),
+  Becoming.PairSelection.received Becoming.PairSelection.answering Becoming.PairSelection.alternating
+        Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n =
+      Becoming.PairSelection.half n ∧
+    Becoming.PairSelection.withheld Becoming.PairSelection.answering Becoming.PairSelection.alternating
+          Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n =
+        Becoming.PairSelection.half n ∧
+      Becoming.PairSelection.received Becoming.PairSelection.answering Becoming.PairSelection.alternating
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n =
+          Becoming.PairSelection.half (n + 1) ∧
+        Becoming.PairSelection.withheld Becoming.PairSelection.answering Becoming.PairSelection.alternating
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n =
+          Becoming.PairSelection.half (n + 1)
+Becoming.PairSelection.counts_windowed_alternating : ∀ (n : Nat),
+  Becoming.PairSelection.received Becoming.PairSelection.windowed Becoming.PairSelection.alternating
+        Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n =
+      Becoming.PairSelection.half n ∧
+    Becoming.PairSelection.withheld Becoming.PairSelection.windowed Becoming.PairSelection.alternating
+          Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n =
+        0 ∧
+      Becoming.PairSelection.received Becoming.PairSelection.windowed Becoming.PairSelection.alternating
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n =
+          n ∧
+        Becoming.PairSelection.withheld Becoming.PairSelection.windowed Becoming.PairSelection.alternating
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n =
+          Becoming.PairSelection.half (n + 1)
+Becoming.PairSelection.counts_waitingBoth_alternating : ∀ (d : Nat),
+  Becoming.PairSelection.received Becoming.PairSelection.waitingBoth Becoming.PairSelection.alternating
+        Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first (1 + d) =
+      Becoming.PairSelection.half (1 + d) ∧
+    Becoming.PairSelection.withheld Becoming.PairSelection.waitingBoth Becoming.PairSelection.alternating
+          Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first (1 + d) =
+        d ∧
+      Becoming.PairSelection.received Becoming.PairSelection.waitingBoth Becoming.PairSelection.alternating
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second (1 + d) =
+          1 ∧
+        Becoming.PairSelection.withheld Becoming.PairSelection.waitingBoth Becoming.PairSelection.alternating
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second (1 + d) =
+          Becoming.PairSelection.half (1 + d + 1)
+Becoming.PairSelection.counts_alternating_alternating : ∀ (n : Nat),
+  Becoming.PairSelection.received Becoming.PairSelection.alternating Becoming.PairSelection.alternating
+        Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n =
+      Becoming.PairSelection.half n ∧
+    Becoming.PairSelection.withheld Becoming.PairSelection.alternating Becoming.PairSelection.alternating
+          Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n =
+        Becoming.PairSelection.half (n + 1) ∧
+      Becoming.PairSelection.received Becoming.PairSelection.alternating Becoming.PairSelection.alternating
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n =
+          Becoming.PairSelection.half n ∧
+        Becoming.PairSelection.withheld Becoming.PairSelection.alternating Becoming.PairSelection.alternating
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n =
+          Becoming.PairSelection.half (n + 1)
+Becoming.PairSelection.counts_withholding_alternating : ∀ (n : Nat),
+  Becoming.PairSelection.received Becoming.PairSelection.withholding Becoming.PairSelection.alternating
+        Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n =
+      Becoming.PairSelection.half n ∧
+    Becoming.PairSelection.withheld Becoming.PairSelection.withholding Becoming.PairSelection.alternating
+          Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n =
+        n ∧
+      Becoming.PairSelection.received Becoming.PairSelection.withholding Becoming.PairSelection.alternating
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n =
+          0 ∧
+        Becoming.PairSelection.withheld Becoming.PairSelection.withholding Becoming.PairSelection.alternating
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n =
+          Becoming.PairSelection.half (n + 1)
+Becoming.PairSelection.before_after : ∀ (t : Nat) (h : Nat → Bool) (m : Nat),
+  Becoming.PairSelection.before (Becoming.PairSelection.after (t + 1) h) (m + 1) =
+    Becoming.PairSelection.before (Becoming.PairSelection.after t h) m
+@Becoming.PairSelection.meets_after : ∀ {f g : Becoming.PairSelection.PairLaw},
+  f (true, true) (true, true) = true →
+    g (true, true) (true, true) = true →
+      ∀ {h k : Nat → Bool},
+        Becoming.PairSelection.Meets f g (Becoming.PairSelection.errAt 0) h k →
+          ∀ (t : Nat),
+            Becoming.PairSelection.Meets f g (Becoming.PairSelection.errAt t) (Becoming.PairSelection.after t h)
+              (Becoming.PairSelection.after t k)
+Becoming.PairSelection.tally_after : ∀ (t : Nat) (h : Nat → Bool) (m : Nat),
+  Becoming.PairSelection.tally (Becoming.PairSelection.after t h) (t + m) = t + Becoming.PairSelection.tally h m
+Becoming.PairSelection.tally_not_after : ∀ (t : Nat) (h : Nat → Bool) (m : Nat),
+  Becoming.PairSelection.tally (fun n => !Becoming.PairSelection.after t h n) (t + m) =
+    Becoming.PairSelection.tally (fun n => !h n) m
+@Becoming.PairSelection.counts_after : ∀ {f g : Becoming.PairSelection.PairLaw},
+  f (true, true) (true, true) = true →
+    g (true, true) (true, true) = true →
+      ∀ {h k : Nat → Bool},
+        Becoming.PairSelection.Meets f g (Becoming.PairSelection.errAt 0) h k →
+          ∀ (t m : Nat),
+            Becoming.PairSelection.received f g (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.first
+                  (t + m) =
+                t + Becoming.PairSelection.tally k m ∧
+              Becoming.PairSelection.withheld f g (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.first
+                    (t + m) =
+                  Becoming.PairSelection.tally (fun n => !h n) m ∧
+                Becoming.PairSelection.received f g (Becoming.PairSelection.errAt t)
+                      Becoming.WindowedWaiting.Pair.second (t + m) =
+                    t + Becoming.PairSelection.tally h m ∧
+                  Becoming.PairSelection.withheld f g (Becoming.PairSelection.errAt t)
+                      Becoming.WindowedWaiting.Pair.second (t + m) =
+                    Becoming.PairSelection.tally (fun n => !k n) m
+Becoming.PairSelection.tally_fromOne : ∀ (m : Nat),
+  Becoming.PairSelection.tally Becoming.PairSelection.fromOne (m + 1) = m
+Becoming.PairSelection.tally_not_fromOne : ∀ (m : Nat),
+  Becoming.PairSelection.tally (fun n => !Becoming.PairSelection.fromOne n) (m + 1) = 1
+Becoming.PairSelection.counts_windowed_error : ∀ (t m : Nat),
+  Becoming.PairSelection.received Becoming.PairSelection.windowed Becoming.PairSelection.windowed
+        (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.first (t + (m + 1)) =
+      t + (m + 1) ∧
+    Becoming.PairSelection.withheld Becoming.PairSelection.windowed Becoming.PairSelection.windowed
+          (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.first (t + (m + 1)) =
+        1 ∧
+      Becoming.PairSelection.received Becoming.PairSelection.windowed Becoming.PairSelection.windowed
+            (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.second (t + (m + 1)) =
+          t + m ∧
+        Becoming.PairSelection.withheld Becoming.PairSelection.windowed Becoming.PairSelection.windowed
+            (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.second (t + (m + 1)) =
+          0
+Becoming.PairSelection.counts_answering_error : ∀ (t m : Nat),
+  Becoming.PairSelection.received Becoming.PairSelection.answering Becoming.PairSelection.answering
+        (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.first (t + m) =
+      t + Becoming.PairSelection.half (m + 1) ∧
+    Becoming.PairSelection.withheld Becoming.PairSelection.answering Becoming.PairSelection.answering
+          (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.first (t + m) =
+        Becoming.PairSelection.half (m + 1) ∧
+      Becoming.PairSelection.received Becoming.PairSelection.answering Becoming.PairSelection.answering
+            (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.second (t + m) =
+          t + Becoming.PairSelection.half m ∧
+        Becoming.PairSelection.withheld Becoming.PairSelection.answering Becoming.PairSelection.answering
+            (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.second (t + m) =
+          Becoming.PairSelection.half m
+Becoming.PairSelection.counts_waitingBoth_error : ∀ (t m : Nat),
+  Becoming.PairSelection.received Becoming.PairSelection.waitingBoth Becoming.PairSelection.waitingBoth
+        (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.first (t + (1 + m)) =
+      t + 1 ∧
+    Becoming.PairSelection.withheld Becoming.PairSelection.waitingBoth Becoming.PairSelection.waitingBoth
+          (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.first (t + (1 + m)) =
+        1 + m ∧
+      Becoming.PairSelection.received Becoming.PairSelection.waitingBoth Becoming.PairSelection.waitingBoth
+            (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.second (t + (1 + m)) =
+          t ∧
+        Becoming.PairSelection.withheld Becoming.PairSelection.waitingBoth Becoming.PairSelection.waitingBoth
+            (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.second (t + (1 + m)) =
+          m
+Becoming.PairSelection.tally_two_head : ∀ (p : Nat → Bool) (m : Nat),
+  Becoming.PairSelection.tally p (2 + m) =
+    (bif p 0 then 1 else 0) + ((bif p 1 then 1 else 0) + Becoming.PairSelection.tally (fun n => p (n + 2)) m)
+Becoming.PairSelection.counts_agreeing_error : ∀ (t m : Nat),
+  Becoming.PairSelection.received Becoming.PairSelection.agreeing Becoming.PairSelection.agreeing
+        (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.first (t + (2 + m)) =
+      t + (1 + m) ∧
+    Becoming.PairSelection.withheld Becoming.PairSelection.agreeing Becoming.PairSelection.agreeing
+          (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.first (t + (2 + m)) =
+        2 ∧
+      Becoming.PairSelection.received Becoming.PairSelection.agreeing Becoming.PairSelection.agreeing
+            (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.second (t + (2 + m)) =
+          t + m ∧
+        Becoming.PairSelection.withheld Becoming.PairSelection.agreeing Becoming.PairSelection.agreeing
+            (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.second (t + (2 + m)) =
+          1
+Becoming.PairSelection.window_gives_iff : ∀ (b0 b1 c : Bool),
+  (Becoming.WindowedWaiting.windowTwo b0 b1 && !c) = true ↔ ¬c = true ∧ (b0 = true ∨ b1 = true)
+Becoming.PairSelection.start_gives_iff : ∀ (c : Bool),
+  (Becoming.WindowedWaiting.windowTwo true true && !c) = true ↔ ¬c = true
+Becoming.PairSelection.windowed_course : ∀ (e : Becoming.PairSelection.Errors) (n : Nat),
+  Becoming.PairSelection.ClockMatches
+    ((Becoming.PairSelection.course Becoming.PairSelection.windowed Becoming.PairSelection.windowed e).state n)
+    ((Becoming.Law.run
+          (Becoming.WindowedWaiting.clocked (Becoming.PairSelection.asProp e) 2 Becoming.WindowedWaiting.Pair.Waits)
+          (0, Becoming.WindowedWaiting.erringStart (Becoming.PairSelection.asProp e))).state
+      n)
+Becoming.PairSelection.gives_window : ∀ (e : Becoming.PairSelection.Errors) (a : Becoming.WindowedWaiting.Pair)
+  (n : Nat),
+  Becoming.PairSelection.gives Becoming.PairSelection.windowed Becoming.PairSelection.windowed e a n = true ↔
+    ((Becoming.Law.run
+              (Becoming.WindowedWaiting.clocked (Becoming.PairSelection.asProp e) 2 Becoming.WindowedWaiting.Pair.Waits)
+              (0, Becoming.WindowedWaiting.erringStart (Becoming.PairSelection.asProp e))).state
+          n).snd
+      (a, 0)
+@Becoming.PairSelection.windowed_gives_spaced : ∀ {e : Becoming.PairSelection.Errors},
+  Becoming.WindowedWaiting.Spaced (Becoming.PairSelection.asProp e) 2 →
+    ∀ (a : Becoming.WindowedWaiting.Pair) (n : Nat),
+      Becoming.PairSelection.gives Becoming.PairSelection.windowed Becoming.PairSelection.windowed e a n = !e n a
+@Becoming.PairSelection.counts_windowed_spaced : ∀ {e : Becoming.PairSelection.Errors},
+  Becoming.WindowedWaiting.Spaced (Becoming.PairSelection.asProp e) 2 →
+    ∀ (a : Becoming.WindowedWaiting.Pair) (n : Nat),
+      Becoming.PairSelection.withheld Becoming.PairSelection.windowed Becoming.PairSelection.windowed e a n =
+          Becoming.PairSelection.tally (fun t => e t a) n ∧
+        Becoming.PairSelection.received Becoming.PairSelection.windowed Becoming.PairSelection.windowed e a n +
+            Becoming.PairSelection.tally (fun t => e t a.partner) n =
+          n
+Becoming.PairSelection.partner_partner : ∀ (p : Becoming.WindowedWaiting.Pair), p.partner.partner = p
+Becoming.PairSelection.received_add_withheld : ∀ (s : Becoming.PairSelection.Place) (n : Nat),
+  s.received n + s.other.withheld n = n
+Becoming.PairSelection.other_received_add_withheld : ∀ (s : Becoming.PairSelection.Place) (n : Nat),
+  s.other.received n + s.withheld n = n
+Becoming.PairSelection.rearrange : ∀ (a x y u v : Nat), a + x + y + (a + u + v) = a + (x + v) + (a + (u + y))
+@Becoming.PairSelection.pair_le : ∀ {β γ : Nat},
+  β ≤ γ →
+    ∀ (a n : Nat) (s : Becoming.PairSelection.Place),
+      Becoming.PairSelection.Place.offspring a β γ n s + Becoming.PairSelection.Place.offspring a β γ n s.other ≤
+        a + γ * n + (a + γ * n)
+@Becoming.PairSelection.lt_iff_split : ∀ {W1 W0 A Z : Nat}, (W1 + W0) * A < (A + Z) * W1 ↔ A * W0 < Z * W1
+@Becoming.PairSelection.kind_rises_iff : ∀ {α : Type} (ps : List α) (w : α → Nat) (kind : α → Bool),
+  Becoming.SelectionTerm.discord ps w (Becoming.PairSelection.amountOf kind) <
+      Becoming.SelectionTerm.concord ps w (Becoming.PairSelection.amountOf kind) ↔
+    (Becoming.total ps (Becoming.PairSelection.amountOf kind) *
+        Becoming.total ps fun p => w p * Becoming.PairSelection.otherOf kind p) <
+      Becoming.total ps (Becoming.PairSelection.otherOf kind) *
+        Becoming.total ps fun p => w p * Becoming.PairSelection.amountOf kind p
+@Becoming.PairSelection.kind_not_rises_of_below : ∀ {α : Type} {ps : List α} {w : α → Nat} {kind : α → Bool},
+  (∀ (p q : α), p ∈ ps → q ∈ ps → kind p = true → kind q = false → w p ≤ w q) →
+    ¬Becoming.SelectionTerm.discord ps w (Becoming.PairSelection.amountOf kind) <
+        Becoming.SelectionTerm.concord ps w (Becoming.PairSelection.amountOf kind)
+@Becoming.PairSelection.kind_not_rises_of_bound : ∀ {α : Type} {ps : List α} {w : α → Nat} {kind : α → Bool} {M : Nat},
+  (Becoming.total ps fun p => w p * Becoming.PairSelection.amountOf kind p) ≤
+      M * Becoming.total ps (Becoming.PairSelection.amountOf kind) →
+    (∀ (p : α), p ∈ ps → kind p = false → M ≤ w p) →
+      ¬Becoming.SelectionTerm.discord ps w (Becoming.PairSelection.amountOf kind) <
+          Becoming.SelectionTerm.concord ps w (Becoming.PairSelection.amountOf kind)
+Becoming.PairSelection.time : ∀ (f g : Becoming.PairSelection.PairLaw) (e : Becoming.PairSelection.Errors) (n : Nat),
+  ((Becoming.PairSelection.course f g e).state n).fst = n
+Becoming.PairSelection.gives_answering_first : ∀ (g : Becoming.PairSelection.PairLaw)
+  (e : Becoming.PairSelection.Errors) (t : Nat),
+  Becoming.PairSelection.gives Becoming.PairSelection.answering g e Becoming.WindowedWaiting.Pair.first (t + 1) =
+    (Becoming.PairSelection.gives Becoming.PairSelection.answering g e Becoming.WindowedWaiting.Pair.second t &&
+      !e (t + 1) Becoming.WindowedWaiting.Pair.first)
+Becoming.PairSelection.gives_answering_second : ∀ (f : Becoming.PairSelection.PairLaw)
+  (e : Becoming.PairSelection.Errors) (t : Nat),
+  Becoming.PairSelection.gives f Becoming.PairSelection.answering e Becoming.WindowedWaiting.Pair.second (t + 1) =
+    (Becoming.PairSelection.gives f Becoming.PairSelection.answering e Becoming.WindowedWaiting.Pair.first t &&
+      !e (t + 1) Becoming.WindowedWaiting.Pair.second)
+Becoming.PairSelection.gives_withholding_first : ∀ (g : Becoming.PairSelection.PairLaw)
+  (e : Becoming.PairSelection.Errors) (n : Nat),
+  Becoming.PairSelection.gives Becoming.PairSelection.withholding g e Becoming.WindowedWaiting.Pair.first n = false
+Becoming.PairSelection.gives_withholding_second : ∀ (f : Becoming.PairSelection.PairLaw)
+  (e : Becoming.PairSelection.Errors) (n : Nat),
+  Becoming.PairSelection.gives f Becoming.PairSelection.withholding e Becoming.WindowedWaiting.Pair.second n = false
+Becoming.PairSelection.Place.withheld_of_withholding : ∀ (s : Becoming.PairSelection.Place),
+  s.law s.side = Becoming.PairSelection.withholding → ∀ (n : Nat), s.withheld n = n
+Becoming.PairSelection.tally_le_succ : ∀ (p : Nat → Bool) (n : Nat),
+  Becoming.PairSelection.tally p (n + 1) ≤ Becoming.PairSelection.tally p n + 1
+@Becoming.PairSelection.answering_sum_le : ∀ {P Q : Nat → Bool},
+  P 0 = true →
+    (∀ (t : Nat), P (t + 1) = Q t) →
+      ∀ (n : Nat), Becoming.PairSelection.tally Q n + Becoming.PairSelection.tally (fun t => !P t) n ≤ n
+Becoming.PairSelection.Place.answering_le : ∀ (s : Becoming.PairSelection.Place),
+  s.law s.side = Becoming.PairSelection.answering →
+    (∀ (t : Nat), s.errs t s.side = false) → ∀ (n : Nat), s.received n + s.withheld n ≤ n
+@Becoming.PairSelection.Place.withholder_ge : ∀ {β γ : Nat} (a n : Nat) (s : Becoming.PairSelection.Place),
+  s.law s.side = Becoming.PairSelection.withholding → a + γ * n ≤ Becoming.PairSelection.Place.offspring a β γ n s
+@Becoming.PairSelection.Place.answerer_le : ∀ {β γ : Nat},
+  β ≤ γ →
+    ∀ (a n : Nat) (s : Becoming.PairSelection.Place),
+      s.law s.side = Becoming.PairSelection.answering →
+        (∀ (t : Nat), s.errs t s.side = false) → Becoming.PairSelection.Place.offspring a β γ n s ≤ a + γ * n
+@Becoming.PairSelection.answering_never_rises : ∀ {β γ : Nat},
+  β ≤ γ →
+    ∀ (a n : Nat) {ps : List Becoming.PairSelection.Place},
+      (∀ (s : Becoming.PairSelection.Place),
+          s ∈ ps →
+            s.kind = true → s.law s.side = Becoming.PairSelection.answering ∧ ∀ (t : Nat), s.errs t s.side = false) →
+        (∀ (s : Becoming.PairSelection.Place),
+            s ∈ ps → s.kind = false → s.law s.side = Becoming.PairSelection.withholding) →
+          ¬Becoming.SelectionTerm.discord ps (Becoming.PairSelection.Place.offspring a β γ n)
+                (Becoming.PairSelection.amountOf Becoming.PairSelection.Place.kind) <
+              Becoming.SelectionTerm.concord ps (Becoming.PairSelection.Place.offspring a β γ n)
+                (Becoming.PairSelection.amountOf Becoming.PairSelection.Place.kind)
+Becoming.PairSelection.cases_tt : ∀ (x y : Nat), x * 1 + (y * 1 + 0) = x + y
+Becoming.PairSelection.cases_tf : ∀ (x y : Nat), x * 1 + (y * 0 + 0) = x
+Becoming.PairSelection.cases_ft : ∀ (x y : Nat), x * 0 + (y * 1 + 0) = y
+Becoming.PairSelection.cases_ff : ∀ (x y : Nat), x * 0 + (y * 0 + 0) = 0
+@Becoming.PairSelection.mem_whole : ∀ {gs : List (List Becoming.PairSelection.Place)}
+  {g : List Becoming.PairSelection.Place} {s : Becoming.PairSelection.Place},
+  g ∈ gs → s ∈ g → s ∈ Becoming.SelectionLevels.whole gs
+@Becoming.PairSelection.never_rises_in_pairs : ∀ {β γ : Nat},
+  β ≤ γ →
+    ∀ (a n : Nat) {gs : List (List Becoming.PairSelection.Place)},
+      (∀ (g : List Becoming.PairSelection.Place), g ∈ gs → ∃ s, g = [s, s.other]) →
+        (∀ (s : Becoming.PairSelection.Place),
+            s ∈ Becoming.SelectionLevels.whole gs →
+              s.kind = false → s.law s.side = Becoming.PairSelection.withholding) →
+          ¬Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs)
+                (Becoming.PairSelection.Place.offspring a β γ n)
+                (Becoming.PairSelection.amountOf Becoming.PairSelection.Place.kind) <
+              Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs)
+                (Becoming.PairSelection.Place.offspring a β γ n)
+                (Becoming.PairSelection.amountOf Becoming.PairSelection.Place.kind)
+@Becoming.PairSelection.mem_replicate_eq : ∀ {β : Type} {c g : β} {k : Nat}, g ∈ List.replicate k c → g = c
+Becoming.PairSelection.cohort_paired : ∀ (x y z : Nat) (g : List Becoming.PairSelection.Place),
+  g ∈ Becoming.PairSelection.cohort x y z → ∃ s, g = [s, s.other]
+Becoming.PairSelection.total_cohort : ∀ (x y z : Nat) (q : Becoming.PairSelection.Place → Nat),
+  Becoming.total (Becoming.SelectionLevels.whole (Becoming.PairSelection.cohort x y z)) q =
+    x * (q Becoming.PairSelection.answerPair + (q Becoming.PairSelection.answerPair.other + 0)) +
+        y * (q Becoming.PairSelection.mixedPair + (q Becoming.PairSelection.mixedPair.other + 0)) +
+      z * (q Becoming.PairSelection.withholdPair + (q Becoming.PairSelection.withholdPair.other + 0))
+Becoming.PairSelection.offspring_answerPair : ∀ (a β γ d : Nat),
+  Becoming.PairSelection.Place.offspring a β γ (1 + d) Becoming.PairSelection.answerPair = a + β * (1 + d) + γ * 0
+Becoming.PairSelection.offspring_answerPair_other : ∀ (a β γ d : Nat),
+  Becoming.PairSelection.Place.offspring a β γ (1 + d) Becoming.PairSelection.answerPair.other = a + β * (1 + d) + γ * 0
+Becoming.PairSelection.offspring_mixedPair : ∀ (a β γ d : Nat),
+  Becoming.PairSelection.Place.offspring a β γ (1 + d) Becoming.PairSelection.mixedPair = a + β * 0 + γ * d
+Becoming.PairSelection.offspring_mixedPair_other : ∀ (a β γ d : Nat),
+  Becoming.PairSelection.Place.offspring a β γ (1 + d) Becoming.PairSelection.mixedPair.other = a + β * 1 + γ * (1 + d)
+Becoming.PairSelection.offspring_withholdPair : ∀ (a β γ d : Nat),
+  Becoming.PairSelection.Place.offspring a β γ (1 + d) Becoming.PairSelection.withholdPair = a + β * 0 + γ * (1 + d)
+Becoming.PairSelection.offspring_withholdPair_other : ∀ (a β γ d : Nat),
+  Becoming.PairSelection.Place.offspring a β γ (1 + d) Becoming.PairSelection.withholdPair.other =
+    a + β * 0 + γ * (1 + d)
+Becoming.PairSelection.answering_rises_iff : ∀ (a β γ x y z d : Nat),
+  Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole (Becoming.PairSelection.cohort x y z))
+        (Becoming.PairSelection.Place.offspring a β γ (1 + d))
+        (Becoming.PairSelection.amountOf Becoming.PairSelection.Place.kind) <
+      Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole (Becoming.PairSelection.cohort x y z))
+        (Becoming.PairSelection.Place.offspring a β γ (1 + d))
+        (Becoming.PairSelection.amountOf Becoming.PairSelection.Place.kind) ↔
+    (x * 2 + y) * (y * (a + β + γ * (1 + d)) + z * (a + γ * (1 + d) + (a + γ * (1 + d)))) <
+      (y + z * 2) * (x * (a + β * (1 + d) + (a + β * (1 + d))) + y * (a + γ * d))
+@Becoming.PairSelection.pairs_rises_iff : ∀ {α : Type} (gs : List (List α)),
+  (∀ (g : List α), g ∈ gs → g.length = 2) →
+    ∀ (w a : α → Nat),
+      Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a <
+          Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a ↔
+        2 * (Becoming.SelectionLevels.whole gs).length * Becoming.SelectionLevels.discordWithinBy gs (fun x => 1) w a +
+            Becoming.SelectionLevels.discordMeans gs (fun x => 1) w a <
+          2 * (Becoming.SelectionLevels.whole gs).length *
+              Becoming.SelectionLevels.concordWithinBy gs (fun x => 1) w a +
+            Becoming.SelectionLevels.concordMeans gs (fun x => 1) w a
+Becoming.PairSelection.among_discord_witness : 0 <
+    Becoming.SelectionLevels.discordMeans (Becoming.PairSelection.cohort 1 1 0) (fun x => 1)
+      (Becoming.PairSelection.Place.offspring 1 1 3 2)
+      (Becoming.PairSelection.amountOf Becoming.PairSelection.Place.kind) ∧
+  Becoming.PairSelection.Place.offspring 1 1 3 2 Becoming.PairSelection.mixedPair = 4 ∧
+    Becoming.PairSelection.Place.offspring 1 1 3 2 Becoming.PairSelection.mixedPair.other = 8 ∧
+      Becoming.PairSelection.Place.offspring 1 1 3 2 Becoming.PairSelection.answerPair = 3
+Becoming.PairSelection.pair_sum : ∀ (a β γ R₁ K₁ R₂ K₂ : Nat),
+  a + β * R₁ + γ * K₁ + (a + β * R₂ + γ * K₂) = a + a + β * (R₁ + R₂) + γ * (K₁ + K₂)
+Becoming.PairSelection.mixed_exceeds_iff : ∀ (a β γ d : Nat),
+  Becoming.PairSelection.Place.offspring a β γ (1 + d) Becoming.PairSelection.answerPair +
+        Becoming.PairSelection.Place.offspring a β γ (1 + d) Becoming.PairSelection.answerPair.other <
+      Becoming.PairSelection.Place.offspring a β γ (1 + d) Becoming.PairSelection.mixedPair +
+        Becoming.PairSelection.Place.offspring a β γ (1 + d) Becoming.PairSelection.mixedPair.other ↔
+    β < γ
+Becoming.PairSelection.assorted_counts : ∀ (a β γ d : Nat) (pos : 0 < a),
+  Becoming.PairSelection.Place.offspring a β γ (1 + d) Becoming.PairSelection.answerPair =
+      (Becoming.RuleShaping.shaped a (β * (1 + d)) 0 (γ * (1 + d)) pos).carrier ∧
+    Becoming.PairSelection.Place.offspring a β γ (1 + d) Becoming.PairSelection.withholdPair =
+      (Becoming.RuleShaping.shaped a (β * (1 + d)) 0 (γ * (1 + d)) pos).other
+@Becoming.PairSelection.assorted_favours_iff : ∀ {a β γ n : Nat} (pos : 0 < a),
+  0 < n → ((Becoming.RuleShaping.shaped a (β * n) 0 (γ * n) pos).favours ↔ γ ≤ β)
+@Becoming.PairSelection.assorted_raises_iff : ∀ {a β γ n : Nat} (pos : 0 < a),
+  0 < n →
+    ∀ {x : Becoming.RuleCapture.CarrierCounts},
+      0 < x.carrier →
+        (x.carrier * (x.select (Becoming.RuleShaping.shaped a (β * n) 0 (γ * n) pos)).other <
+            (x.select (Becoming.RuleShaping.shaped a (β * n) 0 (γ * n) pos)).carrier * x.other ↔
+          γ < β)
+@Becoming.PairSelection.assorted_disfavours_iff : ∀ {a β γ n : Nat} (pos : 0 < a),
+  0 < n → ((Becoming.RuleShaping.shaped a (β * n) 0 (γ * n) pos).disfavours ↔ β ≤ γ)
+@Becoming.PairSelection.assorted_lowers_iff : ∀ {a β γ n : Nat} (pos : 0 < a),
+  0 < n →
+    ∀ {x : Becoming.RuleCapture.CarrierCounts},
+      0 < x.carrier →
+        ((x.select (Becoming.RuleShaping.shaped a (β * n) 0 (γ * n) pos)).carrier * x.other <
+            x.carrier * (x.select (Becoming.RuleShaping.shaped a (β * n) 0 (γ * n) pos)).other ↔
+          β < γ)
+@Becoming.PairSelection.assorted_neutral : ∀ {a β n : Nat} (pos : 0 < a) (x : Becoming.RuleCapture.CarrierCounts),
+  Becoming.RuleCapture.CarrierCounts.order.le x (x.select (Becoming.RuleShaping.shaped a (β * n) 0 (β * n) pos)) ∧
+    Becoming.RuleCapture.CarrierCounts.order.le (x.select (Becoming.RuleShaping.shaped a (β * n) 0 (β * n) pos)) x
+Becoming.PairSelection.neutral : ∀ (a β γ n : Nat) {ps : List Becoming.PairSelection.Place},
+  (∀ (s : Becoming.PairSelection.Place),
+      s ∈ ps →
+        s.law Becoming.WindowedWaiting.Pair.first (true, true) (true, true) = true ∧
+          s.law Becoming.WindowedWaiting.Pair.second (true, true) (true, true) = true ∧
+            s.errs = Becoming.PairSelection.noErrors) →
+    ∀ (amount : Becoming.PairSelection.Place → Nat),
+      Becoming.SelectionTerm.concord ps (Becoming.PairSelection.Place.offspring a β γ n) amount = 0 ∧
+        Becoming.SelectionTerm.discord ps (Becoming.PairSelection.Place.offspring a β γ n) amount = 0
+Becoming.PairSelection.half_add : ∀ (n : Nat), Becoming.PairSelection.half n + Becoming.PairSelection.half (n + 1) = n
+Becoming.PairSelection.alternator_beside_window : ∀ (a β γ n : Nat),
+  a +
+        β *
+          Becoming.PairSelection.received Becoming.PairSelection.windowed Becoming.PairSelection.alternating
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n +
+      γ *
+        Becoming.PairSelection.withheld Becoming.PairSelection.windowed Becoming.PairSelection.alternating
+          Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second n =
+    a +
+          β *
+            Becoming.PairSelection.received Becoming.PairSelection.windowed Becoming.PairSelection.windowed
+              Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n +
+        γ *
+          Becoming.PairSelection.withheld Becoming.PairSelection.windowed Becoming.PairSelection.windowed
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n +
+      γ * Becoming.PairSelection.half (n + 1)
+Becoming.PairSelection.window_beside_alternator : ∀ (a β γ n : Nat),
+  a +
+          β *
+            Becoming.PairSelection.received Becoming.PairSelection.windowed Becoming.PairSelection.alternating
+              Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n +
+        γ *
+          Becoming.PairSelection.withheld Becoming.PairSelection.windowed Becoming.PairSelection.alternating
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n +
+      β * Becoming.PairSelection.half (n + 1) =
+    a +
+        β *
+          Becoming.PairSelection.received Becoming.PairSelection.windowed Becoming.PairSelection.windowed
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n +
+      γ *
+        Becoming.PairSelection.withheld Becoming.PairSelection.windowed Becoming.PairSelection.windowed
+          Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.first n
+Becoming.PairSelection.withholder_beside_window : ∀ (a β γ d : Nat),
+  a +
+        β *
+          Becoming.PairSelection.received Becoming.PairSelection.windowed Becoming.PairSelection.withholding
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second (2 + d) +
+      γ *
+        Becoming.PairSelection.withheld Becoming.PairSelection.windowed Becoming.PairSelection.withholding
+          Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second (2 + d) =
+    a +
+          β *
+            Becoming.PairSelection.received Becoming.PairSelection.answering Becoming.PairSelection.withholding
+              Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second (2 + d) +
+        γ *
+          Becoming.PairSelection.withheld Becoming.PairSelection.answering Becoming.PairSelection.withholding
+            Becoming.PairSelection.noErrors Becoming.WindowedWaiting.Pair.second (2 + d) +
+      β
+Becoming.PairSelection.echo_and_window_sums : ∀ (t m : Nat),
+  Becoming.PairSelection.received Becoming.PairSelection.answering Becoming.PairSelection.answering
+          (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.first (t + (m + 1)) +
+        Becoming.PairSelection.received Becoming.PairSelection.answering Becoming.PairSelection.answering
+          (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.second (t + (m + 1)) =
+      t + t + (m + 1) ∧
+    Becoming.PairSelection.withheld Becoming.PairSelection.answering Becoming.PairSelection.answering
+            (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.first (t + (m + 1)) +
+          Becoming.PairSelection.withheld Becoming.PairSelection.answering Becoming.PairSelection.answering
+            (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.second (t + (m + 1)) =
+        m + 1 ∧
+      Becoming.PairSelection.received Becoming.PairSelection.windowed Becoming.PairSelection.windowed
+              (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.first (t + (m + 1)) +
+            Becoming.PairSelection.received Becoming.PairSelection.windowed Becoming.PairSelection.windowed
+              (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.second (t + (m + 1)) =
+          t + t + (m + m + 1) ∧
+        Becoming.PairSelection.withheld Becoming.PairSelection.windowed Becoming.PairSelection.windowed
+              (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.first (t + (m + 1)) +
+            Becoming.PairSelection.withheld Becoming.PairSelection.windowed Becoming.PairSelection.windowed
+              (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.second (t + (m + 1)) =
+          1
+@Becoming.PairSelection.cohort_places : ∀ {x y z : Nat} {s : Becoming.PairSelection.Place},
+  s ∈ Becoming.SelectionLevels.whole (Becoming.PairSelection.cohort x y z) →
+    s = Becoming.PairSelection.answerPair ∨
+      s = Becoming.PairSelection.answerPair.other ∨
+        s = Becoming.PairSelection.mixedPair ∨
+          s = Becoming.PairSelection.mixedPair.other ∨
+            s = Becoming.PairSelection.withholdPair ∨ s = Becoming.PairSelection.withholdPair.other
+@Becoming.PairSelection.cohort_never_rises : ∀ {β γ : Nat},
+  β ≤ γ →
+    ∀ (a n x y z : Nat),
+      ¬Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole (Becoming.PairSelection.cohort x y z))
+            (Becoming.PairSelection.Place.offspring a β γ n)
+            (Becoming.PairSelection.amountOf Becoming.PairSelection.Place.kind) <
+          Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole (Becoming.PairSelection.cohort x y z))
+            (Becoming.PairSelection.Place.offspring a β γ n)
+            (Becoming.PairSelection.amountOf Becoming.PairSelection.Place.kind)
+Becoming.PairSelection.and_not_true : ∀ (b : Bool), (b && !true) = false
+Becoming.PairSelection.erring_answerer_exceeds : ∀ (a β γ d : Nat),
+  Becoming.PairSelection.Place.offspring a β γ (1 + d) Becoming.PairSelection.erringPair =
+    Becoming.PairSelection.Place.offspring a β γ (1 + d) Becoming.PairSelection.withholdPair + β
+@Becoming.PairSelection.erring_cohort_never_rises : ∀ {β γ : Nat},
+  β ≤ γ →
+    ∀ (a n : Nat),
+      ¬Becoming.SelectionTerm.discord
+            (Becoming.SelectionLevels.whole
+              [[Becoming.PairSelection.erringPair, Becoming.PairSelection.erringPair.other],
+                [Becoming.PairSelection.withholdPair, Becoming.PairSelection.withholdPair.other]])
+            (Becoming.PairSelection.Place.offspring a β γ n)
+            (Becoming.PairSelection.amountOf Becoming.PairSelection.Place.kind) <
+          Becoming.SelectionTerm.concord
+            (Becoming.SelectionLevels.whole
+              [[Becoming.PairSelection.erringPair, Becoming.PairSelection.erringPair.other],
+                [Becoming.PairSelection.withholdPair, Becoming.PairSelection.withholdPair.other]])
+            (Becoming.PairSelection.Place.offspring a β γ n)
+            (Becoming.PairSelection.amountOf Becoming.PairSelection.Place.kind)
+Becoming.PairSelection.window_arith : ∀ (a β γ t m : Nat),
+  a + a + β * (t + t + (m + m + 1)) + γ * 1 = a + a + β * (t + t + (m + 1)) + γ * 1 + β * m + 0
+Becoming.PairSelection.window_echo_shaped : ∀ (a β γ t m : Nat) (pos : 0 < a),
+  a +
+            β *
+              Becoming.PairSelection.received Becoming.PairSelection.windowed Becoming.PairSelection.windowed
+                (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.first (t + (m + 1)) +
+          γ *
+            Becoming.PairSelection.withheld Becoming.PairSelection.windowed Becoming.PairSelection.windowed
+              (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.first (t + (m + 1)) +
+        (a +
+            β *
+              Becoming.PairSelection.received Becoming.PairSelection.windowed Becoming.PairSelection.windowed
+                (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.second (t + (m + 1)) +
+          γ *
+            Becoming.PairSelection.withheld Becoming.PairSelection.windowed Becoming.PairSelection.windowed
+              (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.second (t + (m + 1))) =
+      (Becoming.RuleShaping.shaped (a + a + β * (t + t + (m + 1)) + γ * 1) (β * m) 0 (γ * m) ⋯).carrier ∧
+    a +
+            β *
+              Becoming.PairSelection.received Becoming.PairSelection.answering Becoming.PairSelection.answering
+                (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.first (t + (m + 1)) +
+          γ *
+            Becoming.PairSelection.withheld Becoming.PairSelection.answering Becoming.PairSelection.answering
+              (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.first (t + (m + 1)) +
+        (a +
+            β *
+              Becoming.PairSelection.received Becoming.PairSelection.answering Becoming.PairSelection.answering
+                (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.second (t + (m + 1)) +
+          γ *
+            Becoming.PairSelection.withheld Becoming.PairSelection.answering Becoming.PairSelection.answering
+              (Becoming.PairSelection.errAt t) Becoming.WindowedWaiting.Pair.second (t + (m + 1))) =
+      (Becoming.RuleShaping.shaped (a + a + β * (t + t + (m + 1)) + γ * 1) (β * m) 0 (γ * m) ⋯).other
+@Becoming.PairSelection.window_echo_favours_iff : ∀ {A β γ m : Nat} (pos : 0 < A),
+  0 < m → ((Becoming.RuleShaping.shaped A (β * m) 0 (γ * m) pos).favours ↔ γ ≤ β)
+@Becoming.PairSelection.window_echo_select_iff : ∀ {A β γ m : Nat} (pos : 0 < A),
+  0 < m →
+    ∀ {x : Becoming.RuleCapture.CarrierCounts},
+      0 < x.carrier →
+        (x.carrier * (x.select (Becoming.RuleShaping.shaped A (β * m) 0 (γ * m) pos)).other <
+              (x.select (Becoming.RuleShaping.shaped A (β * m) 0 (γ * m) pos)).carrier * x.other ↔
+            γ < β) ∧
+          ((x.select (Becoming.RuleShaping.shaped A (β * m) 0 (γ * m) pos)).carrier * x.other <
+              x.carrier * (x.select (Becoming.RuleShaping.shaped A (β * m) 0 (γ * m) pos)).other ↔
+            β < γ)
+Becoming.PairSelection.echo_pair_sums : ∀ (a β γ t m : Nat),
+  Becoming.PairSelection.Place.offspring a β γ (t + (m + 1)) (Becoming.PairSelection.windowErrAt t) +
+        Becoming.PairSelection.Place.offspring a β γ (t + (m + 1)) (Becoming.PairSelection.windowErrAt t).other =
+      a + a + β * (t + t + (m + 1)) + γ * 1 + β * m ∧
+    Becoming.PairSelection.Place.offspring a β γ (t + (m + 1)) (Becoming.PairSelection.answerErrAt t) +
+        Becoming.PairSelection.Place.offspring a β γ (t + (m + 1)) (Becoming.PairSelection.answerErrAt t).other =
+      a + a + β * (t + t + (m + 1)) + γ * 1 + γ * m
+Becoming.PairSelection.window_echo_lt_iff : ∀ (a β γ t m : Nat),
+  0 < m →
+    (Becoming.PairSelection.Place.offspring a β γ (t + (m + 1)) (Becoming.PairSelection.answerErrAt t) +
+            Becoming.PairSelection.Place.offspring a β γ (t + (m + 1)) (Becoming.PairSelection.answerErrAt t).other <
+          Becoming.PairSelection.Place.offspring a β γ (t + (m + 1)) (Becoming.PairSelection.windowErrAt t) +
+            Becoming.PairSelection.Place.offspring a β γ (t + (m + 1)) (Becoming.PairSelection.windowErrAt t).other ↔
+        γ < β) ∧
+      (Becoming.PairSelection.Place.offspring a β γ (t + (m + 1)) (Becoming.PairSelection.windowErrAt t) +
+            Becoming.PairSelection.Place.offspring a β γ (t + (m + 1)) (Becoming.PairSelection.windowErrAt t).other <
+          Becoming.PairSelection.Place.offspring a β γ (t + (m + 1)) (Becoming.PairSelection.answerErrAt t) +
+            Becoming.PairSelection.Place.offspring a β γ (t + (m + 1)) (Becoming.PairSelection.answerErrAt t).other ↔
+        β < γ)
+Becoming.PairSelection.window_below_alternator : ∀ (a β γ n : Nat),
+  Becoming.PairSelection.Place.offspring a β γ n Becoming.PairSelection.windowAlternator +
+      (β + γ) * Becoming.PairSelection.half (n + 1) =
+    Becoming.PairSelection.Place.offspring a β γ n Becoming.PairSelection.windowAlternator.other
+Becoming.PairSelection.window_never_rises_beside_alternators : ∀ (a β γ n y : Nat),
+  ¬Becoming.SelectionTerm.discord
+        (Becoming.SelectionLevels.whole
+          (List.replicate y [Becoming.PairSelection.windowAlternator, Becoming.PairSelection.windowAlternator.other]))
+        (Becoming.PairSelection.Place.offspring a β γ n)
+        (Becoming.PairSelection.amountOf Becoming.PairSelection.Place.kind) <
+      Becoming.SelectionTerm.concord
+        (Becoming.SelectionLevels.whole
+          (List.replicate y [Becoming.PairSelection.windowAlternator, Becoming.PairSelection.windowAlternator.other]))
+        (Becoming.PairSelection.Place.offspring a β γ n)
+        (Becoming.PairSelection.amountOf Becoming.PairSelection.Place.kind)
+Becoming.PairSelection.window_alternator_shaped : ∀ (a β γ n : Nat) (pos : 0 < a),
+  Becoming.PairSelection.Place.offspring a β γ n Becoming.PairSelection.windowPair =
+      (Becoming.RuleShaping.shaped (a + β * Becoming.PairSelection.half n) (β * Becoming.PairSelection.half (n + 1)) 0
+          (γ * Becoming.PairSelection.half (n + 1)) ⋯).carrier ∧
+    Becoming.PairSelection.Place.offspring a β γ n Becoming.PairSelection.alternatorPair =
+      (Becoming.RuleShaping.shaped (a + β * Becoming.PairSelection.half n) (β * Becoming.PairSelection.half (n + 1)) 0
+          (γ * Becoming.PairSelection.half (n + 1)) ⋯).other
+Becoming.PairSelection.half_succ_pos : ∀ (k : Nat), 0 < Becoming.PairSelection.half (k + 1 + 1)
+@Becoming.PairSelection.window_alternator_favours_iff : ∀ {a β γ : Nat} (pos : 0 < a) (k : Nat),
+  (Becoming.RuleShaping.shaped (a + β * Becoming.PairSelection.half (k + 1))
+        (β * Becoming.PairSelection.half (k + 1 + 1)) 0 (γ * Becoming.PairSelection.half (k + 1 + 1)) ⋯).favours ↔
+    γ ≤ β
+Becoming.PairSelection.Needs.balances : ∀ (k : Nat),
+  (Becoming.PairSelection.Needs.flow k).Balances (Becoming.PairSelection.Needs.web k)
+@Becoming.PairSelection.Needs.acting : ∀ {k : Nat},
+  k ≤ 2 → (Becoming.PairSelection.Needs.flow k).Acting (Becoming.PairSelection.Needs.web k)
+Becoming.PairSelection.Needs.dependent : ∀ (k : Nat), (Becoming.PairSelection.Needs.web k).Dependent
+Becoming.PairSelection.Needs.closed : ∀ (k t : Nat),
+  (Becoming.PairSelection.Needs.flow k).inflow
+      [Becoming.PairSelection.Needs.Member.giver, Becoming.PairSelection.Needs.Member.receiver] t =
+    0
+Becoming.PairSelection.Needs.receiver_unsupported : ∀ (k : Nat),
+  ¬(Becoming.PairSelection.Needs.web k).Supported 0 Becoming.PairSelection.Needs.Member.receiver
+Becoming.PairSelection.Needs.receiver_supported : ∀ (k t : Nat),
+  (Becoming.PairSelection.Needs.web k).Supported (t + 1) Becoming.PairSelection.Needs.Member.receiver
+Becoming.PairSelection.Needs.asymmetry_gains : (Becoming.PairSelection.Needs.web 1).Supported 0
+    Becoming.PairSelection.Needs.Member.giver ∧
+  ¬(Becoming.PairSelection.Needs.web 1).Supported 0 Becoming.PairSelection.Needs.Member.receiver ∧
+    ∀ (t : Nat),
+      (Becoming.PairSelection.Needs.web 1).Supported (t + 1) Becoming.PairSelection.Needs.Member.giver ∧
+        (Becoming.PairSelection.Needs.web 1).Supported (t + 1) Becoming.PairSelection.Needs.Member.receiver
+Becoming.PairSelection.Needs.symmetry_moves : (Becoming.PairSelection.Needs.web 2).Supported 0
+    Becoming.PairSelection.Needs.Member.giver ∧
+  ¬(Becoming.PairSelection.Needs.web 2).Supported 0 Becoming.PairSelection.Needs.Member.receiver ∧
+    ∀ (t : Nat),
+      ¬(Becoming.PairSelection.Needs.web 2).Supported (t + 1) Becoming.PairSelection.Needs.Member.giver ∧
+        (Becoming.PairSelection.Needs.web 2).Supported (t + 1) Becoming.PairSelection.Needs.Member.receiver
+Becoming.PairSelection.Needs.childless : (∀ (t k : Nat),
+    Becoming.PairSelection.Needs.Member.giver ∈ (Becoming.PairSelection.Needs.flow k).present (t + 1)) ∧
+  (∀ (t : Nat) (x : Becoming.PairSelection.Needs.Member),
+      ¬(Becoming.PairSelection.Needs.flow 2).DescendsAt (Becoming.PairSelection.Needs.web 2) (t + 1) x
+          Becoming.PairSelection.Needs.Member.giver) ∧
+    (Becoming.PairSelection.Needs.flow 1).DescendsAt (Becoming.PairSelection.Needs.web 1) 1
+      Becoming.PairSelection.Needs.Member.child Becoming.PairSelection.Needs.Member.giver
+Becoming.PairSelection.Needs.symmetric_breaks : ∃ c,
+  c ∈ [Becoming.PairSelection.Needs.Member.giver] ∧
+    (Becoming.PairSelection.Needs.web 2).Broken 0 Becoming.PairSelection.Needs.Member.giver c
+Becoming.PairSelection.Needs.asymmetric_within_slack : (Becoming.PairSelection.Needs.web 1).stock
+      [Becoming.PairSelection.Needs.Member.receiver] 1 =
+    (Becoming.PairSelection.Needs.web 1).stock [Becoming.PairSelection.Needs.Member.receiver] 0 +
+      (Becoming.PairSelection.Needs.web 1).slack (fun x => Becoming.PairSelection.Needs.Member.giver)
+        [Becoming.PairSelection.Needs.Member.giver] 0 ∧
+  (Becoming.PairSelection.Needs.flow 1).inflow
+        [Becoming.PairSelection.Needs.Member.receiver, Becoming.PairSelection.Needs.Member.giver] 0 =
+      0 ∧
+    (Becoming.PairSelection.Needs.web 1).Kept 0 Becoming.PairSelection.Needs.Member.giver
+      Becoming.PairSelection.Needs.Member.giver
+Becoming.PairSelection.Renewed.balances : Becoming.PairSelection.Renewed.flow.Balances
+  Becoming.PairSelection.Renewed.web
+Becoming.PairSelection.Renewed.acting : Becoming.PairSelection.Renewed.flow.Acting Becoming.PairSelection.Renewed.web
+Becoming.PairSelection.Renewed.dependent : Becoming.PairSelection.Renewed.web.Dependent
+Becoming.PairSelection.Renewed.renewer_free : ∀ (t : Nat) (c : Becoming.PairSelection.Renewed.Member),
+  ¬Becoming.PairSelection.Renewed.web.requires t Becoming.PairSelection.Renewed.Member.renewer c
+Becoming.PairSelection.Renewed.inflow_one : ∀ (t : Nat),
+  Becoming.PairSelection.Renewed.flow.inflow
+      [Becoming.PairSelection.Renewed.Member.giver, Becoming.PairSelection.Renewed.Member.receiver] t =
+    1
+Becoming.PairSelection.Renewed.total_steps_one : ∀ (T N : Nat), (Becoming.total (Becoming.steps T N) fun x => 1) = N
+Becoming.PairSelection.Renewed.renewal_carried : (∀ (t : Nat),
+    Becoming.PairSelection.Renewed.flow.give t Becoming.PairSelection.Renewed.Member.giver
+          Becoming.PairSelection.Renewed.Member.receiver =
+        1 ∧
+      Becoming.PairSelection.Renewed.web.Supported t Becoming.PairSelection.Renewed.Member.giver ∧
+        Becoming.PairSelection.Renewed.web.Supported t Becoming.PairSelection.Renewed.Member.receiver ∧
+          Becoming.PairSelection.Renewed.web.level (t + 1) Becoming.PairSelection.Renewed.Member.giver =
+            Becoming.PairSelection.Renewed.web.level t Becoming.PairSelection.Renewed.Member.giver) ∧
+  ∀ (T N : Nat),
+    (Becoming.total (Becoming.steps T N) fun t =>
+          Becoming.PairSelection.Renewed.flow.give t Becoming.PairSelection.Renewed.Member.giver
+            Becoming.PairSelection.Renewed.Member.receiver) =
+        N ∧
+      Becoming.total (Becoming.steps T N)
+          (Becoming.PairSelection.Renewed.flow.inflow
+            [Becoming.PairSelection.Renewed.Member.giver, Becoming.PairSelection.Renewed.Member.receiver]) =
+        N
+@Becoming.PairSelection.mul_tally_le : ∀ {p : Nat → Bool} {h : Nat → Nat} {β : Nat} (n : Nat),
+  (∀ (t : Nat), t < n → p t = true → β ≤ h t) →
+    β * Becoming.PairSelection.tally p n ≤ Becoming.PairSelection.tallyBy p h n
+@Becoming.PairSelection.rise_le_slack_inflow : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {dep : C → F} {ds rest : List C} {t β : Nat},
+      W.MetOn dep rest t →
+        (∀ (c : C), c ∈ rest → ¬W.Broken t (dep c) c) →
+          W.stock ds (t + 1) = W.stock ds t + β →
+            β + L.lost (ds ++ rest) t ≤ W.slack dep rest t + L.inflow (ds ++ rest) t
+@Becoming.PairSelection.Place.received_factor_le : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {dep : C → F} {ds rest : List C} {β : Nat} (s : Becoming.PairSelection.Place) (n : Nat),
+      (∀ (t : Nat),
+          t < n →
+            Becoming.PairSelection.gives (s.law Becoming.WindowedWaiting.Pair.first)
+                  (s.law Becoming.WindowedWaiting.Pair.second) s.errs s.side.partner t =
+                true →
+              W.MetOn dep rest t ∧
+                (∀ (c : C), c ∈ rest → ¬W.Broken t (dep c) c) ∧ W.stock ds (t + 1) = W.stock ds t + β) →
+        β * s.received n ≤
+          Becoming.PairSelection.tallyBy
+            (Becoming.PairSelection.gives (s.law Becoming.WindowedWaiting.Pair.first)
+              (s.law Becoming.WindowedWaiting.Pair.second) s.errs s.side.partner)
+            (fun t => W.slack dep rest t + L.inflow (ds ++ rest) t) n
+@Becoming.PairSelection.Place.withheld_factor_le : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {dep : C → F} {ds rest : List C} {γ : Nat} (s : Becoming.PairSelection.Place) (n : Nat),
+      (∀ (t : Nat),
+          t < n →
+            (!Becoming.PairSelection.gives (s.law Becoming.WindowedWaiting.Pair.first)
+                    (s.law Becoming.WindowedWaiting.Pair.second) s.errs s.side t) =
+                true →
+              W.MetOn dep rest t ∧
+                (∀ (c : C), c ∈ rest → ¬W.Broken t (dep c) c) ∧ W.stock ds (t + 1) = W.stock ds t + γ) →
+        γ * s.withheld n ≤
+          Becoming.PairSelection.tallyBy
+            (fun t =>
+              !Becoming.PairSelection.gives (s.law Becoming.WindowedWaiting.Pair.first)
+                  (s.law Becoming.WindowedWaiting.Pair.second) s.errs s.side t)
+            (fun t => W.slack dep rest t + L.inflow (ds ++ rest) t) n
+@Becoming.PairSelection.tallyBy_zero : ∀ {p : Nat → Bool} {h : Nat → Nat} (n : Nat),
+  (∀ (t : Nat), t < n → p t = true → h t = 0) → Becoming.PairSelection.tallyBy p h n = 0
+@Becoming.PairSelection.Place.received_factor_zero : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {dep : C → F} {ds rest : List C} {β : Nat} (s : Becoming.PairSelection.Place) (n : Nat),
+      (∀ (t : Nat),
+          t < n →
+            Becoming.PairSelection.gives (s.law Becoming.WindowedWaiting.Pair.first)
+                  (s.law Becoming.WindowedWaiting.Pair.second) s.errs s.side.partner t =
+                true →
+              W.MetOn dep rest t ∧
+                (∀ (c : C), c ∈ rest → ¬W.Broken t (dep c) c) ∧ W.stock ds (t + 1) = W.stock ds t + β) →
+        (∀ (t : Nat),
+            t < n →
+              Becoming.PairSelection.gives (s.law Becoming.WindowedWaiting.Pair.first)
+                    (s.law Becoming.WindowedWaiting.Pair.second) s.errs s.side.partner t =
+                  true →
+                W.slack dep rest t + L.inflow (ds ++ rest) t = 0) →
+          0 < s.received n → β = 0

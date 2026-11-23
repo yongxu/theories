@@ -1,0 +1,489 @@
+@Becoming.LineageRegimes.excess_within_level : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W → ∀ {c : C} {T n : Nat}, (∀ (k : Nat), k < n → L.given (T + k) c < L.taken (T + k) c) → n ≤ W.level T c
+@Becoming.LineageRegimes.family_excess_within_stock : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {ds : List C} {T n : Nat},
+      (∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) → n ≤ W.stock ds T
+@Becoming.LineageRegimes.family_excess_not_past_stock : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {ds : List C} {T : Nat}, ¬∀ (k : Nat), k < W.stock ds T + 1 → L.replenishment ds (T + k) < L.uptake ds (T + k)
+@Becoming.LineageRegimes.degeneration_of_family_excess : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop},
+  L.Balances W →
+    W.Dependent →
+      ∀ {ds : List X} {m T n : Nat},
+        (∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) →
+          W.stock ds T < n + m →
+            ∀ {x : Nat × X},
+              W.active x.fst x.snd →
+                x.fst ≤ T + n →
+                  (∀ (y : Nat × X),
+                      Becoming.«所及» (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) x y →
+                        y.fst = T + n → ∃ e, e ∈ ds ∧ W.requires y.fst y.snd e ∧ m ≤ W.need y.fst y.snd e) →
+                    Becoming.«退化» (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) x
+@Becoming.LineageRegimes.degeneration_of_family_excess_listed : ∀ {X : Type} {L : Becoming.Flow X X}
+  {W : Becoming.Web X X} {Q : X → X → Prop},
+  L.Balances W →
+    W.Dependent →
+      ∀ {ds : List X} {m T n : Nat},
+        (∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) →
+          W.stock ds T < n + m →
+            ∀ {G : Becoming.SelectionTerm.Generations X},
+              Becoming.LineageRegions.ContinuationsListed (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) G →
+                (∀ (q : X), q ∈ G.family (T + n) → ∃ e, e ∈ ds ∧ W.requires (T + n) q e ∧ m ≤ W.need (T + n) q e) →
+                  ∀ {t : Nat} {p : X},
+                    p ∈ G.family t →
+                      W.active t p →
+                        t ≤ T + n → Becoming.«退化» (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) (t, p)
+@Becoming.LineageRegimes.degeneration_at_stock_horizon : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop},
+  L.Balances W →
+    W.Dependent →
+      ∀ {ds : List X} {T : Nat},
+        (∀ (k : Nat), k < W.stock ds T → L.replenishment ds (T + k) < L.uptake ds (T + k)) →
+          ∀ {x : Nat × X},
+            W.active x.fst x.snd →
+              x.fst ≤ T + W.stock ds T →
+                (∀ (y : Nat × X),
+                    Becoming.«所及» (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) x y →
+                      y.fst = T + W.stock ds T → ∃ e, e ∈ ds ∧ W.requires y.fst y.snd e ∧ 1 ≤ W.need y.fst y.snd e) →
+                  Becoming.«退化» (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) x
+@Becoming.LineageRegimes.dissipation_degenerates_every_member : ∀ {X : Type} {L : Becoming.Flow X X}
+  {W : Becoming.Web X X} {Q : X → X → Prop} {G : Becoming.SelectionTerm.Generations X} {ds : List X},
+  Becoming.SelectionTerm.Flow.Descended L W G →
+    (∀ (t : Nat) (p k : X), p ∈ G.family t → k ∈ G.kids t p → k ∈ ds) →
+      (∀ (t : Nat), t < W.stock ds 0 + 1 → L.BalancesOn W ds t) →
+        (∀ (t : Nat), t < W.stock ds 0 + 1 → L.DissipatesOn ds t) →
+          ∀ {Lc : Becoming.«际» (Nat × X)},
+            Becoming.LineageRegions.ContinuationsListed (Becoming.LineageRegions.lineStep L W Q) Lc G →
+              ∀ {t : Nat} {p : X}, p ∈ G.family t → Becoming.«退化» (Becoming.LineageRegions.lineStep L W Q) Lc (t, p)
+@Becoming.LineageRegimes.pow_le_drawnBefore_of_ge : ∀ {draw : Nat → Nat} {n : Nat},
+  (∀ (j : Nat), j < n → 2 ^ j ≤ draw j) → ∀ (j : Nat), j ≤ n → 2 ^ j ≤ Becoming.drawnBefore draw j + 1
+@Becoming.LineageRegimes.exceeds_doubles : ∀ {draw : Nat → Nat} {n : Nat},
+  (∀ (j : Nat), j < n → Becoming.drawnBefore draw j < draw j) → ∀ (j : Nat), j < n → 2 ^ j ≤ draw j
+@Becoming.LineageRegimes.draw_doubling_needs : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {c : C} {T n : Nat},
+      (∀ (i : Nat), i < n → L.given (T + i) c = 0) →
+        (∀ (j : Nat), j < n → 2 ^ j ≤ L.taken (T + j) c) → 2 ^ n ≤ W.level T c + 1
+@Becoming.LineageRegimes.doubling_needs_of_draw : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {c : C} {T n : Nat},
+      (∀ (i : Nat), i < n → L.given (T + i) c = 0) →
+        (∀ (j : Nat), j < n → Becoming.drawnBefore (fun i => L.taken (T + i) c) j < L.taken (T + j) c) →
+          2 ^ n ≤ W.level T c + 1
+@Becoming.LineageRegimes.sizes_double : ∀ {F : Type} {G : Becoming.SelectionTerm.Generations F} {T n : Nat},
+  1 ≤ G.size T →
+    (∀ (j : Nat), j + 1 < n → 2 * G.size (T + j) ≤ G.size (T + j + 1)) → ∀ (j : Nat), j < n → 2 ^ j ≤ G.size (T + j)
+@Becoming.LineageRegimes.size_le_taken : ∀ {F C : Type} {L : Becoming.Flow F C}
+  {G : Becoming.SelectionTerm.Generations F} {t : Nat} {c : C},
+  Becoming.Distinct (G.family t) →
+    (∀ (p : F), p ∈ G.family t → p ∈ L.present t ∧ 0 < L.take t p c) → G.size t ≤ L.taken t c
+@Becoming.LineageRegimes.multiplying_takers_need : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {G : Becoming.SelectionTerm.Generations F},
+  L.Balances W →
+    ∀ {c : C} {T n : Nat},
+      (∀ (i : Nat), i < n → L.given (T + i) c = 0) →
+        1 ≤ G.size T →
+          (∀ (j : Nat), j + 1 < n → 2 * G.size (T + j) ≤ G.size (T + j + 1)) →
+            (∀ (j : Nat), j < n → G.size (T + j) ≤ L.taken (T + j) c) → 2 ^ n ≤ W.level T c + 1
+@Becoming.LineageRegimes.multiplying_takers_stop : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {G : Becoming.SelectionTerm.Generations F},
+  L.Balances W →
+    ∀ {c : C} {T n : Nat},
+      (∀ (i : Nat), i < n → L.given (T + i) c = 0) →
+        1 ≤ G.size T →
+          (∀ (j : Nat), j + 1 < n → 2 * G.size (T + j) ≤ G.size (T + j + 1)) →
+            (∀ (j : Nat), j < n → Becoming.Distinct (G.family (T + j))) →
+              (∀ (j : Nat) (p : F),
+                  j < n → p ∈ G.family (T + j) → W.active (T + j) p → p ∈ L.present (T + j) ∧ 0 < L.take (T + j) p c) →
+                W.level T c + 1 < 2 ^ n → ¬∀ (j : Nat) (p : F), j < n → p ∈ G.family (T + j) → W.active (T + j) p
+@Becoming.LineageRegimes.multiplying_takers_stop_of_need : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {G : Becoming.SelectionTerm.Generations F},
+  L.Balances W →
+    ∀ {c : C} {T n : Nat},
+      (∀ (i : Nat), i < n → L.given (T + i) c = 0) →
+        1 ≤ G.size T →
+          (∀ (j : Nat), j + 1 < n → 2 * G.size (T + j) ≤ G.size (T + j + 1)) →
+            (∀ (j : Nat), j < n → Becoming.Distinct (G.family (T + j))) →
+              (∀ (j : Nat) (p : F),
+                  j < n →
+                    p ∈ G.family (T + j) →
+                      W.active (T + j) p →
+                        p ∈ L.present (T + j) ∧
+                          W.requires (T + j) p c ∧ 1 ≤ W.need (T + j) p c ∧ W.need (T + j) p c ≤ L.take (T + j) p c) →
+                W.level T c + 1 < 2 ^ n → ¬∀ (j : Nat) (p : F), j < n → p ∈ G.family (T + j) → W.active (T + j) p
+Becoming.LineageRegimes.MultiplyingTakers.balances : Becoming.LineageRegimes.MultiplyingTakers.flow.Balances
+  Becoming.LineageRegimes.MultiplyingTakers.web
+Becoming.LineageRegimes.MultiplyingTakers.unfed : ∀ (i : Nat),
+  Becoming.LineageRegimes.MultiplyingTakers.flow.given i 0 = 0
+Becoming.LineageRegimes.MultiplyingTakers.acting : Becoming.LineageRegimes.MultiplyingTakers.flow.Acting
+  Becoming.LineageRegimes.MultiplyingTakers.web
+@Becoming.LineageRegimes.MultiplyingTakers.pool_of_needs : ∀ {x c : Nat},
+  Becoming.LineageRegimes.MultiplyingTakers.needsPool x c → c = 0
+Becoming.LineageRegimes.MultiplyingTakers.dependent : Becoming.LineageRegimes.MultiplyingTakers.web.Dependent
+Becoming.LineageRegimes.MultiplyingTakers.descended : Becoming.SelectionTerm.Flow.Descended
+  Becoming.LineageRegimes.MultiplyingTakers.flow Becoming.LineageRegimes.MultiplyingTakers.web
+  Becoming.LineageRegimes.MultiplyingTakers.generations
+Becoming.LineageRegimes.MultiplyingTakers.family_two : Becoming.LineageRegimes.MultiplyingTakers.generations.family 2 =
+  [4, 5, 6, 7]
+Becoming.LineageRegimes.MultiplyingTakers.family_three : Becoming.LineageRegimes.MultiplyingTakers.generations.family
+    3 =
+  []
+Becoming.LineageRegimes.MultiplyingTakers.distinct_first : Becoming.Distinct [1]
+Becoming.LineageRegimes.MultiplyingTakers.distinct_second : Becoming.Distinct [2, 3]
+Becoming.LineageRegimes.MultiplyingTakers.distinct_third : Becoming.Distinct [4, 5, 6, 7]
+Becoming.LineageRegimes.MultiplyingTakers.distinct : ∀ (j : Nat),
+  j < 3 → Becoming.Distinct (Becoming.LineageRegimes.MultiplyingTakers.generations.family (0 + j))
+Becoming.LineageRegimes.MultiplyingTakers.multiplies : ∀ (j : Nat),
+  j + 1 < 3 →
+    2 * Becoming.LineageRegimes.MultiplyingTakers.generations.size (0 + j) ≤
+      Becoming.LineageRegimes.MultiplyingTakers.generations.size (0 + j + 1)
+Becoming.LineageRegimes.MultiplyingTakers.draws : ∀ (j : Nat),
+  j < 2 →
+    Becoming.LineageRegimes.MultiplyingTakers.generations.size (0 + j) ≤
+      Becoming.LineageRegimes.MultiplyingTakers.flow.taken (0 + j) 0
+Becoming.LineageRegimes.MultiplyingTakers.needs : ∀ (j p : Nat),
+  j < 3 →
+    p ∈ Becoming.LineageRegimes.MultiplyingTakers.generations.family (0 + j) →
+      Becoming.LineageRegimes.MultiplyingTakers.web.active (0 + j) p →
+        p ∈ Becoming.LineageRegimes.MultiplyingTakers.flow.present (0 + j) ∧
+          0 < Becoming.LineageRegimes.MultiplyingTakers.flow.take (0 + j) p 0
+@Becoming.LineageRegimes.MultiplyingTakers.pool_required : ∀ {t p : Nat},
+  p ∈ Becoming.LineageRegimes.MultiplyingTakers.present t → Becoming.LineageRegimes.MultiplyingTakers.needsPool p 0
+Becoming.LineageRegimes.MultiplyingTakers.takesNeed : ∀ (j p : Nat),
+  j < 3 →
+    p ∈ Becoming.LineageRegimes.MultiplyingTakers.generations.family (0 + j) →
+      Becoming.LineageRegimes.MultiplyingTakers.web.active (0 + j) p →
+        p ∈ Becoming.LineageRegimes.MultiplyingTakers.flow.present (0 + j) ∧
+          Becoming.LineageRegimes.MultiplyingTakers.web.requires (0 + j) p 0 ∧
+            1 ≤ Becoming.LineageRegimes.MultiplyingTakers.web.need (0 + j) p 0 ∧
+              Becoming.LineageRegimes.MultiplyingTakers.web.need (0 + j) p 0 ≤
+                Becoming.LineageRegimes.MultiplyingTakers.flow.take (0 + j) p 0
+Becoming.LineageRegimes.MultiplyingTakers.unsupported : ∀ (k : Nat),
+  k ∈ Becoming.LineageRegimes.MultiplyingTakers.generations.family 2 →
+    ¬Becoming.LineageRegimes.MultiplyingTakers.web.Supported 2 k
+Becoming.LineageRegimes.MultiplyingTakers.inactive : ∀ (x : Nat),
+  ¬Becoming.LineageRegimes.MultiplyingTakers.web.active 2 x
+Becoming.LineageRegimes.MultiplyingTakers.degenerates : ∀ (Q : Nat → Nat → Prop),
+  Becoming.«退化»
+    (Becoming.LineageRegions.lineStep Becoming.LineageRegimes.MultiplyingTakers.flow
+      Becoming.LineageRegimes.MultiplyingTakers.web Q)
+    (Becoming.LineageRegimes.MultiplyingTakers.web.kindClass Q) (0, 1)
+Becoming.LineageRegimes.MultiplyingTakers.multiplying : Becoming.LineageRegimes.MultiplyingTakers.flow.Balances
+    Becoming.LineageRegimes.MultiplyingTakers.web ∧
+  Becoming.LineageRegimes.MultiplyingTakers.flow.Acting Becoming.LineageRegimes.MultiplyingTakers.web ∧
+    Becoming.LineageRegimes.MultiplyingTakers.web.Dependent ∧
+      Becoming.SelectionTerm.Flow.Descended Becoming.LineageRegimes.MultiplyingTakers.flow
+          Becoming.LineageRegimes.MultiplyingTakers.web Becoming.LineageRegimes.MultiplyingTakers.generations ∧
+        (∀ (i : Nat), Becoming.LineageRegimes.MultiplyingTakers.flow.given i 0 = 0) ∧
+          (∀ (t f : Nat), Becoming.LineageRegimes.MultiplyingTakers.flow.take t f 0 = 1) ∧
+            Becoming.LineageRegimes.MultiplyingTakers.web.level 0 0 = 3 ∧
+              Becoming.LineageRegimes.MultiplyingTakers.web.level 1 0 = 2 ∧
+                (∀ (t : Nat), Becoming.LineageRegimes.MultiplyingTakers.web.level (t + 2) 0 = 0) ∧
+                  Becoming.LineageRegimes.MultiplyingTakers.generations.size 0 = 1 ∧
+                    Becoming.LineageRegimes.MultiplyingTakers.generations.size 1 = 2 ∧
+                      Becoming.LineageRegimes.MultiplyingTakers.generations.size 2 = 4 ∧
+                        2 ^ 2 ≤ Becoming.LineageRegimes.MultiplyingTakers.web.level 0 0 + 1 ∧
+                          2 ^ 2 = Becoming.LineageRegimes.MultiplyingTakers.web.level 0 0 + 1 ∧
+                            (∀ (t p : Nat),
+                                Becoming.LineageRegimes.MultiplyingTakers.web.active t p →
+                                  Becoming.LineageRegimes.MultiplyingTakers.web.requires t p 0 ∧
+                                    Becoming.LineageRegimes.MultiplyingTakers.web.need t p 0 = 1) ∧
+                              (¬∀ (j p : Nat),
+                                    j < 3 →
+                                      p ∈ Becoming.LineageRegimes.MultiplyingTakers.generations.family (0 + j) →
+                                        Becoming.LineageRegimes.MultiplyingTakers.web.active (0 + j) p) ∧
+                                (∀ (k : Nat),
+                                    k ∈ Becoming.LineageRegimes.MultiplyingTakers.generations.family 2 →
+                                      ¬Becoming.LineageRegimes.MultiplyingTakers.web.Supported 2 k) ∧
+                                  (∀ (x : Nat), ¬Becoming.LineageRegimes.MultiplyingTakers.web.active 2 x) ∧
+                                    Becoming.LineageRegimes.MultiplyingTakers.generations.size 3 = 0 ∧
+                                      Becoming.«退化»
+                                        (Becoming.LineageRegions.lineStep Becoming.LineageRegimes.MultiplyingTakers.flow
+                                          Becoming.LineageRegimes.MultiplyingTakers.web
+                                          (Becoming.LineageRegions.oneKind Nat))
+                                        (Becoming.LineageRegimes.MultiplyingTakers.web.kindClass
+                                          (Becoming.LineageRegions.oneKind Nat))
+                                        (0, 1)
+Becoming.LineageRegimes.MultiplyingTakers.stops_of_need : ¬∀ (j p : Nat),
+    j < 3 →
+      p ∈ Becoming.LineageRegimes.MultiplyingTakers.generations.family (0 + j) →
+        Becoming.LineageRegimes.MultiplyingTakers.web.active (0 + j) p
+Becoming.LineageRegimes.Handover.pick_self : ∀ (e : Bool) (k : Nat), Becoming.LineageRegimes.Handover.pick e e k = k
+Becoming.LineageRegimes.Handover.pick_other : ∀ (e : Bool) (k : Nat), Becoming.LineageRegimes.Handover.pick e (!e) k = 0
+Becoming.LineageRegimes.Handover.pick_zero : ∀ (e f : Bool), Becoming.LineageRegimes.Handover.pick e f 0 = 0
+Becoming.LineageRegimes.Handover.pick_le : ∀ (e f : Bool) (k : Nat), Becoming.LineageRegimes.Handover.pick e f k ≤ k
+Becoming.LineageRegimes.Handover.pick_back : ∀ (e : Bool) (k : Nat), Becoming.LineageRegimes.Handover.pick (!e) e k = 0
+Becoming.LineageRegimes.Handover.pick_pos : ∀ (e f : Bool) {k : Nat},
+  0 < Becoming.LineageRegimes.Handover.pick e f k → f = e ∧ 0 < k
+Becoming.LineageRegimes.Handover.pick_pos_mono : ∀ (e f : Bool) {k j : Nat},
+  (0 < k → 0 < j) → 0 < Becoming.LineageRegimes.Handover.pick e f k → 0 < Becoming.LineageRegimes.Handover.pick e f j
+Becoming.LineageRegimes.Handover.exchange : ∀ (e c : Bool) (a b : Nat),
+  Becoming.LineageRegimes.Handover.pick (!e) c b +
+      (Becoming.LineageRegimes.Handover.pick e e (Becoming.LineageRegimes.Handover.pick e c a) + 0) =
+    Becoming.LineageRegimes.Handover.pick e c a +
+      (Becoming.LineageRegimes.Handover.pick e e (Becoming.LineageRegimes.Handover.pick (!e) c b) + 0)
+Becoming.LineageRegimes.Handover.balances : ∀ (amount : Nat → Nat),
+  (Becoming.LineageRegimes.Handover.flow amount).Balances (Becoming.LineageRegimes.Handover.web amount)
+Becoming.LineageRegimes.Handover.total_pick : ∀ (e : Bool) (a : Nat),
+  Becoming.LineageRegimes.Handover.pick e true a + (Becoming.LineageRegimes.Handover.pick e false a + 0) = a
+Becoming.LineageRegimes.Handover.stock_eq : ∀ (amount : Nat → Nat) (t : Nat),
+  (Becoming.LineageRegimes.Handover.web amount).stock Becoming.LineageRegimes.Handover.family t = amount t
+Becoming.LineageRegimes.Handover.uptake_pick : ∀ (e : Bool) (a : Nat),
+  Becoming.LineageRegimes.Handover.pick e e (Becoming.LineageRegimes.Handover.pick e true a) + 0 +
+      (Becoming.LineageRegimes.Handover.pick e e (Becoming.LineageRegimes.Handover.pick e false a) + 0 + 0) =
+    a
+Becoming.LineageRegimes.Handover.replenish_pick : ∀ (e : Bool) (b : Nat),
+  Becoming.LineageRegimes.Handover.pick e e (Becoming.LineageRegimes.Handover.pick (!e) true b) + 0 +
+      (Becoming.LineageRegimes.Handover.pick e e (Becoming.LineageRegimes.Handover.pick (!e) false b) + 0 + 0) =
+    b
+Becoming.LineageRegimes.Handover.uptake_eq : ∀ (amount : Nat → Nat) (t : Nat),
+  (Becoming.LineageRegimes.Handover.flow amount).uptake Becoming.LineageRegimes.Handover.family t = amount t
+Becoming.LineageRegimes.Handover.replenishment_eq : ∀ (amount : Nat → Nat) (t : Nat),
+  (Becoming.LineageRegimes.Handover.flow amount).replenishment Becoming.LineageRegimes.Handover.family t =
+    amount (t + 1)
+Becoming.LineageRegimes.Handover.take_total : ∀ (e : Bool) (a : Nat),
+  Becoming.LineageRegimes.Handover.pick e e (Becoming.LineageRegimes.Handover.pick e true a) +
+      (Becoming.LineageRegimes.Handover.pick e e (Becoming.LineageRegimes.Handover.pick e false a) + 0) =
+    a
+Becoming.LineageRegimes.Handover.give_total : ∀ (e : Bool) (b : Nat),
+  Becoming.LineageRegimes.Handover.pick e e (Becoming.LineageRegimes.Handover.pick (!e) true b) +
+      (Becoming.LineageRegimes.Handover.pick e e (Becoming.LineageRegimes.Handover.pick (!e) false b) + 0) =
+    b
+Becoming.LineageRegimes.Handover.mem_family : ∀ (b : Bool), b ∈ Becoming.LineageRegimes.Handover.family
+Becoming.LineageRegimes.Handover.acting : ∀ (amount : Nat → Nat),
+  (∀ (t : Nat), 0 < amount (t + 1) → 0 < amount t) →
+    (Becoming.LineageRegimes.Handover.flow amount).Acting (Becoming.LineageRegimes.Handover.web amount)
+Becoming.LineageRegimes.Handover.dependent : ∀ (amount : Nat → Nat),
+  (Becoming.LineageRegimes.Handover.web amount).Dependent
+Becoming.LineageRegimes.Handover.embodied : ∀ (amount : Nat → Nat) (x : Bool),
+  (Becoming.LineageRegimes.Handover.web amount).Embodied x
+Becoming.LineageRegimes.Handover.gated : ∀ (amount : Nat → Nat) (t : Nat) (f : Bool),
+  f ∈ (Becoming.LineageRegimes.Handover.flow amount).present t →
+    ∀ (d : Bool),
+      d ∈ Becoming.LineageRegimes.Handover.family →
+        0 < (Becoming.LineageRegimes.Handover.flow amount).give t f d →
+          ∃ e,
+            e ∈ Becoming.LineageRegimes.Handover.family ∧
+              (Becoming.LineageRegimes.Handover.web amount).requires t f e ∧
+                1 ≤ (Becoming.LineageRegimes.Handover.web amount).need t f e
+Becoming.LineageRegimes.Handover.descends : ∀ (amount : Nat → Nat) (t : Nat),
+  0 < amount (t + 1) →
+    (Becoming.LineageRegimes.Handover.flow amount).DescendsAt (Becoming.LineageRegimes.Handover.web amount) t
+      (!Becoming.LineageRegimes.Handover.holder t) (Becoming.LineageRegimes.Handover.holder t)
+Becoming.LineageRegimes.Handover.taken_eq : ∀ (amount : Nat → Nat) (t : Nat) (c : Bool),
+  (Becoming.LineageRegimes.Handover.flow amount).taken t c =
+    Becoming.LineageRegimes.Handover.pick (Becoming.LineageRegimes.Handover.holder t) c (amount t)
+Becoming.LineageRegimes.Handover.draw_not_doubling : ∀ (amount : Nat → Nat) (T : Nat) (c : Bool),
+  ¬(1 ≤ (Becoming.LineageRegimes.Handover.flow amount).taken T c ∧
+      2 ≤ (Becoming.LineageRegimes.Handover.flow amount).taken (T + 1) c)
+Becoming.LineageRegimes.Handover.not_draw_regime : ∀ (amount : Nat → Nat) (T : Nat) (c : Bool),
+  ¬∀ (j : Nat), j < 2 → 2 ^ j ≤ (Becoming.LineageRegimes.Handover.flow amount).taken (T + j) c
+Becoming.LineageRegimes.Handover.none_active : ∀ (amount : Nat → Nat) {N : Nat},
+  amount N = 0 → ∀ (x : Bool), ¬(Becoming.LineageRegimes.Handover.web amount).active N x
+Becoming.LineageRegimes.Handover.relay_one_flow : ∀ (t : Nat) (f c : Bool),
+  (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.relay 1)).take t f c =
+      Becoming.Reproduction.Relay.flow.take t f c ∧
+    (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.relay 1)).give t f c =
+        Becoming.Reproduction.Relay.flow.give t f c ∧
+      (Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.relay 1)).level t c =
+        Becoming.Reproduction.Relay.web.level t c
+@Becoming.LineageRegimes.Handover.relay_descended : ∀ {s : Nat},
+  0 < s →
+    Becoming.SelectionTerm.Flow.Descended
+      (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.relay s))
+      (Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.relay s))
+      Becoming.Reproduction.Relay.generations
+Becoming.LineageRegimes.Handover.relay_no_excess : ∀ (s t : Nat),
+  ¬(Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.relay s)).replenishment
+        Becoming.LineageRegimes.Handover.family t <
+      (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.relay s)).uptake
+        Becoming.LineageRegimes.Handover.family t
+@Becoming.LineageRegimes.Handover.one_le_sign : ∀ {s : Nat}, 0 < s → 1 ≤ Becoming.sign s
+@Becoming.LineageRegimes.Handover.relay_not_dissipates : ∀ {s : Nat},
+  0 < s →
+    ∀ (t : Nat),
+      ¬(Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.relay s)).DissipatesOn
+          Becoming.LineageRegimes.Handover.family t
+@Becoming.LineageRegimes.Handover.relay_generates : ∀ {s : Nat},
+  0 < s →
+    Becoming.«生成»
+      (Becoming.LineageRegions.lineStep
+        (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.relay s))
+        (Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.relay s))
+        (Becoming.LineageRegions.oneKind Bool))
+      ((Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.relay s)).kindClass
+        (Becoming.LineageRegions.oneKind Bool))
+      (Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.relay s)).carrierClass (0, true)
+@Becoming.LineageRegimes.Handover.run_kid : ∀ {s t : Nat} {p k : Bool},
+  k ∈ Becoming.LineageRegimes.Handover.runKids s t p → t + 1 < s ∧ k = !p
+@Becoming.LineageRegimes.Handover.run_turn : ∀ {s : Nat} (t : Nat) (p : Bool),
+  p ∈ (Becoming.LineageRegimes.Handover.runGenerations s).family t → p = Becoming.LineageRegimes.Handover.holder t
+Becoming.LineageRegimes.Handover.runDown_falls : ∀ (s t : Nat), 0 < s - (t + 1) → 0 < s - t
+Becoming.LineageRegimes.Handover.runDown_descended : ∀ (s : Nat),
+  Becoming.SelectionTerm.Flow.Descended
+    (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.runDown s))
+    (Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.runDown s))
+    (Becoming.LineageRegimes.Handover.runGenerations s)
+Becoming.LineageRegimes.Handover.runDown_excess : ∀ (s k : Nat),
+  k < s →
+    (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.runDown s)).replenishment
+        Becoming.LineageRegimes.Handover.family (0 + k) <
+      (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.runDown s)).uptake
+        Becoming.LineageRegimes.Handover.family (0 + k)
+Becoming.LineageRegimes.Handover.pred_sign : ∀ (a : Nat), a.pred + Becoming.sign a ≤ a
+Becoming.LineageRegimes.Handover.runDown_dissipates : ∀ (s t : Nat),
+  (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.runDown s)).DissipatesOn
+    Becoming.LineageRegimes.Handover.family t
+@Becoming.LineageRegimes.Handover.run_member_before : ∀ {s : Nat} (t : Nat) (p : Bool),
+  p ∈ (Becoming.LineageRegimes.Handover.runGenerations s).family (t + 1) → t + 1 < s
+@Becoming.LineageRegimes.Handover.run_empty : ∀ {s : Nat},
+  0 < s → ∀ (q : Bool), ¬q ∈ (Becoming.LineageRegimes.Handover.runGenerations s).family s
+Becoming.LineageRegimes.Handover.runDown_listed : ∀ (s : Nat) (Q : Bool → Bool → Prop),
+  Becoming.LineageRegions.ContinuationsListed
+    (Becoming.LineageRegions.lineStep
+      (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.runDown s))
+      (Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.runDown s)) Q)
+    ((Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.runDown s)).kindClass Q)
+    (Becoming.LineageRegimes.Handover.runGenerations s)
+@Becoming.LineageRegimes.Handover.runDown_degenerates : ∀ {s : Nat},
+  0 < s →
+    Becoming.«退化»
+      (Becoming.LineageRegions.lineStep
+        (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.runDown s))
+        (Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.runDown s))
+        (Becoming.LineageRegions.oneKind Bool))
+      ((Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.runDown s)).kindClass
+        (Becoming.LineageRegions.oneKind Bool))
+      (0, true)
+@Becoming.LineageRegimes.Handover.runDown_every_regime : ∀ {s : Nat},
+  0 < s →
+    Becoming.«退化»
+        (Becoming.LineageRegions.lineStep
+          (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.runDown s))
+          (Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.runDown s))
+          (Becoming.LineageRegions.oneKind Bool))
+        ((Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.runDown s)).kindClass
+          (Becoming.LineageRegions.oneKind Bool))
+        (0, true) ∧
+      (∀ (t : Nat) (p : Bool),
+          p ∈ (Becoming.LineageRegimes.Handover.runGenerations s).family t →
+            Becoming.«退化»
+              (Becoming.LineageRegions.lineStep
+                (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.runDown s))
+                (Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.runDown s))
+                (Becoming.LineageRegions.oneKind Bool))
+              ((Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.runDown s)).kindClass
+                (Becoming.LineageRegions.oneKind Bool))
+              (t, p)) ∧
+        (Becoming.LineageRegimes.Handover.runGenerations s).size s = 0 ∧
+          (Becoming.LineageRegimes.Handover.runGenerations s).size (s + 1) = 0 ∧
+            ∀ (T : Nat) (c : Bool),
+              ¬∀ (j : Nat),
+                  j < 2 →
+                    2 ^ j ≤
+                      (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.runDown s)).taken (T + j)
+                        c
+@Becoming.LineageRegimes.Handover.both_fates : ∀ {s : Nat},
+  0 < s →
+    (Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.relay s)).stock
+          Becoming.LineageRegimes.Handover.family 0 =
+        s ∧
+      (Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.runDown s)).stock
+            Becoming.LineageRegimes.Handover.family 0 =
+          s ∧
+        (∀ (t : Nat),
+            (Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.relay s)).stock
+                Becoming.LineageRegimes.Handover.family t =
+              s) ∧
+          (∀ (t : Nat), Becoming.Reproduction.Relay.generations.size t = 1) ∧
+            (∀ (t : Nat),
+                ¬(Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.relay s)).replenishment
+                      Becoming.LineageRegimes.Handover.family t <
+                    (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.relay s)).uptake
+                      Becoming.LineageRegimes.Handover.family t) ∧
+              (∀ (t : Nat),
+                  ¬(Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.relay s)).DissipatesOn
+                      Becoming.LineageRegimes.Handover.family t) ∧
+                (∀ (k : Nat),
+                    k < s →
+                      (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.runDown s)).replenishment
+                          Becoming.LineageRegimes.Handover.family (0 + k) <
+                        (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.runDown s)).uptake
+                          Becoming.LineageRegimes.Handover.family (0 + k)) ∧
+                  (∀ (t : Nat),
+                      (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.runDown s)).DissipatesOn
+                        Becoming.LineageRegimes.Handover.family t) ∧
+                    Becoming.SelectionTerm.Flow.Descended
+                        (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.relay s))
+                        (Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.relay s))
+                        Becoming.Reproduction.Relay.generations ∧
+                      Becoming.SelectionTerm.Flow.Descended
+                          (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.runDown s))
+                          (Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.runDown s))
+                          (Becoming.LineageRegimes.Handover.runGenerations s) ∧
+                        Becoming.«生成»
+                            (Becoming.LineageRegions.lineStep
+                              (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.relay s))
+                              (Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.relay s))
+                              (Becoming.LineageRegions.oneKind Bool))
+                            ((Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.relay s)).kindClass
+                              (Becoming.LineageRegions.oneKind Bool))
+                            (Becoming.LineageRegimes.Handover.web
+                                (Becoming.LineageRegimes.Handover.relay s)).carrierClass
+                            (0, true) ∧
+                          Becoming.«退化»
+                            (Becoming.LineageRegions.lineStep
+                              (Becoming.LineageRegimes.Handover.flow (Becoming.LineageRegimes.Handover.runDown s))
+                              (Becoming.LineageRegimes.Handover.web (Becoming.LineageRegimes.Handover.runDown s))
+                              (Becoming.LineageRegions.oneKind Bool))
+                            ((Becoming.LineageRegimes.Handover.web
+                                  (Becoming.LineageRegimes.Handover.runDown s)).kindClass
+                              (Becoming.LineageRegions.oneKind Bool))
+                            (0, true)
+@Becoming.LineageRegimes.stock_forces_neither : ∀ {s : Nat},
+  0 < s →
+    (¬∀ (L : Becoming.Flow Bool Bool) (W : Becoming.Web Bool Bool) (G : Becoming.SelectionTerm.Generations Bool),
+          Becoming.LineageRegimes.GatedPairCourse s L W G →
+            Becoming.«退化» (Becoming.LineageRegions.lineStep L W (Becoming.LineageRegions.oneKind Bool))
+              (W.kindClass (Becoming.LineageRegions.oneKind Bool)) (0, true)) ∧
+      ¬∀ (L : Becoming.Flow Bool Bool) (W : Becoming.Web Bool Bool) (G : Becoming.SelectionTerm.Generations Bool),
+          Becoming.LineageRegimes.GatedPairCourse s L W G →
+            Becoming.«生成» (Becoming.LineageRegions.lineStep L W (Becoming.LineageRegions.oneKind Bool))
+              (W.kindClass (Becoming.LineageRegions.oneKind Bool)) W.carrierClass (0, true)
+Becoming.LineageRegimes.FromOutside.balances : Becoming.LineageRegimes.FromOutside.flow.Balances
+  Becoming.LineageRegimes.FromOutside.web
+Becoming.LineageRegimes.FromOutside.acting : Becoming.LineageRegimes.FromOutside.flow.Acting
+  Becoming.LineageRegimes.FromOutside.web
+Becoming.LineageRegimes.FromOutside.supported : ∀ (t : Nat) (f : Becoming.Witnesses.Member),
+  Becoming.LineageRegimes.FromOutside.web.Supported t f
+Becoming.LineageRegimes.FromOutside.dependent : Becoming.LineageRegimes.FromOutside.web.Dependent
+Becoming.LineageRegimes.FromOutside.not_gated : ∀ (m : Nat),
+  ¬∀ (t : Nat) (f : Becoming.Witnesses.Member),
+      f ∈ Becoming.LineageRegimes.FromOutside.flow.present t →
+        0 < Becoming.LineageRegimes.FromOutside.flow.give t f () →
+          Becoming.LineageRegimes.FromOutside.web.requires t f () ∧
+            m ≤ Becoming.LineageRegimes.FromOutside.web.need t f ()
+Becoming.LineageRegimes.FromOutside.from_outside : Becoming.LineageRegimes.FromOutside.flow.Balances
+    Becoming.LineageRegimes.FromOutside.web ∧
+  Becoming.LineageRegimes.FromOutside.flow.Acting Becoming.LineageRegimes.FromOutside.web ∧
+    Becoming.LineageRegimes.FromOutside.web.Dependent ∧
+      (∀ (t : Nat),
+          Becoming.LineageRegimes.FromOutside.flow.give t Becoming.Witnesses.Member.renewer () = 2 ∧
+            ¬Becoming.LineageRegimes.FromOutside.web.requires t Becoming.Witnesses.Member.renewer ()) ∧
+        (∀ (t : Nat),
+            Becoming.LineageRegimes.FromOutside.flow.take t Becoming.Witnesses.Member.first () = 1 ∧
+              Becoming.LineageRegimes.FromOutside.flow.take t Becoming.Witnesses.Member.second () = 1) ∧
+          (∀ (t : Nat),
+              Becoming.LineageRegimes.FromOutside.flow.WithinOwn t () ∧
+                Becoming.LineageRegimes.FromOutside.flow.WithinJoint t ()) ∧
+            (∀ (t : Nat),
+                ¬Becoming.LineageRegimes.FromOutside.flow.given t () <
+                    Becoming.LineageRegimes.FromOutside.flow.taken t ()) ∧
+              (∀ (t : Nat), 0 < Becoming.LineageRegimes.FromOutside.flow.given t ()) ∧
+                (∀ (t : Nat), ¬Becoming.LineageRegimes.FromOutside.flow.DissipatesOn [()] t) ∧
+                  (∀ (t : Nat), Becoming.LineageRegimes.FromOutside.web.level t () = 2) ∧
+                    ∀ (t : Nat) (f : Becoming.Witnesses.Member),
+                      Becoming.LineageRegimes.FromOutside.web.active t f ∧
+                        Becoming.LineageRegimes.FromOutside.web.Supported t f

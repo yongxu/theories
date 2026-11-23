@@ -1,0 +1,89 @@
+Becoming.RegimeMargin.Drawn.reals_step : ∀ (A : NNReal → NNReal → NNReal) (H : NNReal),
+  Becoming.RegimeMargin.Drawn.reals.step A H = fun p => (p.1 - H + A (p.1 - H) p.2, A (p.1 - H) p.2)
+@Becoming.RegimeMargin.Drawn.tendsto_of_rising : ∀ {u : ℕ → NNReal} {m : ℕ} {hi : NNReal},
+  (∀ (k : ℕ), m ≤ k → u k ≤ u (k + 1)) → (∀ (n : ℕ), u n ≤ hi) → ∃ l, Filter.Tendsto u Filter.atTop (nhds l)
+@Becoming.RegimeMargin.Drawn.tendsto_of_falling : ∀ {u : ℕ → NNReal} {m : ℕ},
+  (∀ (k : ℕ), m ≤ k → u (k + 1) ≤ u k) → ∃ l, Filter.Tendsto u Filter.atTop (nhds l)
+@Becoming.RegimeMargin.Drawn.converges : ∀ {A : NNReal → NNReal → NNReal} {H hi : NNReal},
+  Becoming.RegimeMargin.Drawn.reals.Rises A →
+    Becoming.RegimeMargin.Drawn.reals.Band A H hi →
+      ∀ {s : NNReal × NNReal},
+        s.1 ≤ hi →
+          s.2 ≤ hi →
+            ∃ L,
+              Filter.Tendsto (fun n => (Becoming.Law.run (Becoming.RegimeMargin.Drawn.reals.step A H) s).state n)
+                Filter.atTop (nhds L)
+@Becoming.RegimeMargin.Drawn.limit_rest : ∀ {A : NNReal → NNReal → NNReal} {H : NNReal},
+  (Continuous fun q => A q.1 q.2) →
+    ∀ {s L : NNReal × NNReal},
+      Filter.Tendsto (fun n => (Becoming.Law.run (Becoming.RegimeMargin.Drawn.reals.step A H) s).state n) Filter.atTop
+          (nhds L) →
+        Becoming.RegimeMargin.Drawn.reals.step A H L = L
+@Becoming.RegimeMargin.Drawn.limit_fates : ∀ {A : NNReal → NNReal → NNReal} {H hi : NNReal},
+  Becoming.RegimeMargin.Drawn.reals.Rises A →
+    Becoming.RegimeMargin.Drawn.reals.Band A H hi →
+      (Continuous fun q => A q.1 q.2) →
+        ∀ {s : NNReal × NNReal},
+          s.1 ≤ hi →
+            s.2 ≤ hi →
+              ∃ L,
+                Filter.Tendsto (fun n => (Becoming.Law.run (Becoming.RegimeMargin.Drawn.reals.step A H) s).state n)
+                    Filter.atTop (nhds L) ∧
+                  (L.2 = H ∧ H ≤ L.1 ∧ A (L.1 - H) H = H ∨ L.1 ≤ H ∧ L.1 = L.2 ∧ A 0 L.2 = L.2)
+@Becoming.RegimeMargin.Drawn.limits_below : ∀ {A : NNReal → NNReal → NNReal} {H : NNReal},
+  Becoming.RegimeMargin.Drawn.reals.Rises A →
+    ∀ {p q Lp Lq : NNReal × NNReal},
+      Becoming.RegimeMargin.Drawn.reals.Below p q →
+        Filter.Tendsto (fun n => (Becoming.Law.run (Becoming.RegimeMargin.Drawn.reals.step A H) p).state n) Filter.atTop
+            (nhds Lp) →
+          Filter.Tendsto (fun n => (Becoming.Law.run (Becoming.RegimeMargin.Drawn.reals.step A H) q).state n)
+              Filter.atTop (nhds Lq) →
+            Lp.1 ≤ Lq.1 ∧ Lp.2 ≤ Lq.2
+@Becoming.RegimeMargin.Drawn.falls_of_below : ∀ {A : NNReal → NNReal → NNReal} {H hi : NNReal},
+  Becoming.RegimeMargin.Drawn.reals.Rises A →
+    Becoming.RegimeMargin.Drawn.reals.Band A H hi →
+      ∀ {p q : NNReal × NNReal},
+        Becoming.RegimeMargin.Drawn.reals.Below p q →
+          q.1 ≤ hi → q.2 ≤ hi → Becoming.RegimeMargin.Drawn.Falls A H q → Becoming.RegimeMargin.Drawn.Falls A H p
+@Becoming.RegimeMargin.Drawn.falls_given : ∀ {A : NNReal → NNReal → NNReal} {H hi : NNReal},
+  Becoming.RegimeMargin.Drawn.reals.Rises A →
+    Becoming.RegimeMargin.Drawn.reals.Band A H hi →
+      ∀ {x r r' : NNReal},
+        r ≤ r' →
+          x ≤ hi →
+            r' ≤ hi → Becoming.RegimeMargin.Drawn.Falls A H (x, r') → Becoming.RegimeMargin.Drawn.Falls A H (x, r)
+Becoming.RegimeMargin.Drawn.Relaxation.rises : Becoming.RegimeMargin.Drawn.reals.Rises
+  Becoming.RegimeMargin.Drawn.Relaxation.giving
+@Becoming.RegimeMargin.Drawn.Relaxation.step_low : ∀ {x r : NNReal},
+  x ≤ 1 →
+    Becoming.RegimeMargin.Drawn.reals.step Becoming.RegimeMargin.Drawn.Relaxation.giving 1 (x, r) =
+      ((r + 1) / 2, (r + 1) / 2)
+Becoming.RegimeMargin.Drawn.Relaxation.band : Becoming.RegimeMargin.Drawn.reals.Band
+  Becoming.RegimeMargin.Drawn.Relaxation.giving 1 1
+Becoming.RegimeMargin.Drawn.Relaxation.course : ∀ (n : ℕ),
+  ((Becoming.Law.run (Becoming.RegimeMargin.Drawn.reals.step Becoming.RegimeMargin.Drawn.Relaxation.giving 1)
+              (0, 0)).state
+          n).1 =
+      ((Becoming.Law.run (Becoming.RegimeMargin.Drawn.reals.step Becoming.RegimeMargin.Drawn.Relaxation.giving 1)
+              (0, 0)).state
+          n).2 ∧
+    ((Becoming.Law.run (Becoming.RegimeMargin.Drawn.reals.step Becoming.RegimeMargin.Drawn.Relaxation.giving 1)
+                (0, 0)).state
+            n).2 +
+        (1 / 2) ^ n =
+      1
+Becoming.RegimeMargin.Drawn.Relaxation.never_rests : Becoming.RegimeMargin.Drawn.reals.Rises
+    Becoming.RegimeMargin.Drawn.Relaxation.giving ∧
+  Becoming.RegimeMargin.Drawn.reals.Band Becoming.RegimeMargin.Drawn.Relaxation.giving 1 1 ∧
+    (∃ L,
+        Filter.Tendsto
+          (fun n =>
+            (Becoming.Law.run (Becoming.RegimeMargin.Drawn.reals.step Becoming.RegimeMargin.Drawn.Relaxation.giving 1)
+                  (0, 0)).state
+              n)
+          Filter.atTop (nhds L)) ∧
+      ∀ (T : ℕ),
+        ¬Becoming.LastChange.StillFrom
+            (Becoming.Law.run (Becoming.RegimeMargin.Drawn.reals.step Becoming.RegimeMargin.Drawn.Relaxation.giving 1)
+              (0, 0))
+            T

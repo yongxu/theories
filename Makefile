@@ -1,5 +1,16 @@
-.PHONY: research-check research-check-strict research-render research-find research-test research-imports research-links research-secrets gate gate-plan gate-push
+.PHONY: research-check research-check-strict research-render research-find research-test research-imports research-links research-secrets lean-check lean-check-periphery lean-check-all lean-check-stale gate gate-plan gate-push
 export QUERY
+
+lean-check:
+	python3 -B tools/research/gate.py hold -- python3 -B experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py
+
+lean-check-periphery:
+	python3 -B tools/research/gate.py hold -- python3 -B experiments/integrated-correction/general-framework/generative-basis/lean/check_periphery.py --all
+
+lean-check-all: lean-check lean-check-periphery
+
+lean-check-stale:
+	python3 -B experiments/integrated-correction/general-framework/generative-basis/lean/check_periphery.py --check-stale
 
 research-check:
 	python3 -B tools/research/research.py secrets

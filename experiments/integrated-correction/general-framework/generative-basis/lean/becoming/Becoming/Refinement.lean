@@ -75,12 +75,8 @@ theorem DistinctUnder.length_le {R : X → X → Prop} (refl : ∀ x, R x x) :
 
 /-- **The decisions of finitely many propositions are together refuted by nothing.** -/
 theorem not_not_within {P : X → Prop} (each : ∀ x, ¬ ¬ P x) :
-    ∀ l : List X, ¬ ¬ ∀ x, x ∈ l → P x
-  | [] => fun refuted => refuted fun _ mem => nomatch mem
-  | a :: l => fun refuted => each a fun holds => not_not_within each l fun rest =>
-    refuted fun x mem => match mem_cons_cases mem with
-      | .inl same => Eq.subst (motive := P) same.symm holds
-      | .inr later => rest x later
+    ∀ l : List X, ¬ ¬ ∀ x, x ∈ l → P x :=
+  fun l => not_not_all (E := l) fun x _ => each x
 
 /-- A chain of equivalences, each finer than the one before. -/
 structure Refining (R : Nat → X → X → Prop) : Prop where

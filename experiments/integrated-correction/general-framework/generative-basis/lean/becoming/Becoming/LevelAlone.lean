@@ -100,8 +100,8 @@ The marking-free criteria cover readings silent at `x₀`; the `readBy` facts an
 lemma also allow a marked start. Nothing here derives the correction or changes when it takes
 effect. Not shown here: anything of a reading that reads more than the level (the way, the step, or
 the levels before); anything of a correction with its own argument for the marked level; the use
-form under `below` or `le` alone (not argued and not built; the recoverable and no-return forms
-under `below` are statements); any
+form under `below` without `mono` or under `le` alone (not argued and not built; the use,
+recoverable and no-return forms under `below` are built); any
 condition on the regime's numbers for success (for failure only `hi < H₂ + y₂`, by hand, above). A
 course on which a law fails without a premise is given for `mono` and `still` (Lean), for `below`
 (`WithoutMono`: Lean for the core, by hand for the corollary) and for `rest`, `differs` and the
@@ -647,10 +647,37 @@ theorem silent_at_start_none_iff_no_return {t alone : W → W} {Kept : W → Pro
     (fun j lt => Nat.lt_of_le_of_lt
       (level_never_rises_of_rises mono still nothing high rises j) lt)
 
+/-- Under the common premises in the head note, `below`, `mono`, and `H₂ + y₂ ≤ hi` (`fits`), some
+marking silent at `x₀` gives a line that never ends exactly when `use (Law.orbit alone w D) + y₂ ≤ X D`.
+`next_above_iff_draw` reads the threshold test one step back; neither `still` nor `level_never_rises`
+is needed. -/
+theorem silent_at_start_iff_use_of_stays_below {t alone : W → W} {Kept : W → Prop}
+    {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat}
+    (sets : ∀ v, Kept (t v)) (stays : ∀ v, Kept v → Kept (alone v)) (uses : ∀ v, Kept v → use v = H₂)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps₀ : RegimeMargin.Keeps giving 0 hi)
+    (needs : 0 < need) (within : need ≤ H₂ + y₂)
+    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1)))
+    (high : x₀ ≤ hi) (rest : ∀ j, j < D → level alone giving use w x₀ j = x₀)
+    (differs : level alone giving use w x₀ D ≠ x₀)
+    (below : ∀ j, level alone giving use w x₀ j < H₂ + y₂ →
+      level alone giving use w x₀ (j + 1) < H₂ + y₂)
+    (mono : ∀ z z', z ≤ z' → z + giving z ≤ z' + giving z')
+    (fits : H₂ + y₂ ≤ hi) :
+    (∃ (marked : Nat → Prop) (_ : DecidablePred marked), ¬ marked x₀ ∧
+        «不穷» (net need (readBy marked t alone) (fun w x => RegimeMargin.step giving (use w) x)) «一»
+          (w, x₀))
+      ↔ use (Law.orbit alone w D) + y₂ ≤ level alone giving use w x₀ D :=
+  (silent_at_start_iff_next_of_stays_below sets stays uses nothing short meets keeps₀ needs within
+      rises high rest differs below).trans
+    (Eq.subst (motive := fun z => H₂ + y₂ ≤ z ↔
+        use (Law.orbit alone w D) + y₂ ≤ level alone giving use w x₀ D)
+      (level_succ alone giving use w x₀ D).symm
+      (next_above_iff_draw nothing short meets mono fits (Nat.lt_of_lt_of_le needs within) _ _))
+
 /-- Under law A's premises and `H₂ + y₂ ≤ hi` (`fits`), some marking silent at `x₀` gives a
 line that never ends exactly when the original use at `D` plus `y₂` is at most `X D`.
-`next_above_iff_draw` reads A's threshold test one step back. The lag is why the step from `D`
-uses `use (Law.orbit alone w D)`. -/
+A call of `silent_at_start_iff_use_of_stays_below` with `below` from `level_never_rises_of_rises`. -/
 theorem silent_at_start_iff_use {t alone : W → W} {Kept : W → Prop} {giving : Nat → Nat}
     {use : W → Nat} {H₂ y₂ hi need D : Nat} {w : W} {x₀ : Nat}
     (sets : ∀ v, Kept (t v)) (stays : ∀ v, Kept v → Kept (alone v)) (uses : ∀ v, Kept v → use v = H₂)
@@ -666,12 +693,11 @@ theorem silent_at_start_iff_use {t alone : W → W} {Kept : W → Prop} {giving 
         «不穷» (net need (readBy marked t alone) (fun w x => RegimeMargin.step giving (use w) x)) «一»
           (w, x₀))
       ↔ use (Law.orbit alone w D) + y₂ ≤ level alone giving use w x₀ D :=
-  (silent_at_start_iff_next sets stays uses nothing short meets keeps₀ needs within rises high
-      rest differs mono still).trans
-    (Eq.subst (motive := fun z => H₂ + y₂ ≤ z ↔
-        use (Law.orbit alone w D) + y₂ ≤ level alone giving use w x₀ D)
-      (level_succ alone giving use w x₀ D).symm
-      (next_above_iff_draw nothing short meets mono fits (Nat.lt_of_lt_of_le needs within) _ _))
+  silent_at_start_iff_use_of_stays_below sets stays uses nothing short meets keeps₀ needs within
+    rises high rest differs
+    (fun j lt => Nat.lt_of_le_of_lt
+      (level_never_rises_of_rises mono still nothing high rises j) lt)
+    mono fits
 
 /-! ## 4. Five worked courses -/
 

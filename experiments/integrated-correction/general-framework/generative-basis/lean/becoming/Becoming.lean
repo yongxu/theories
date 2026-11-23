@@ -1400,17 +1400,13 @@ tagged instance or application.
   Conveying runs a family down by a step for each stage; regulation from one side holds a level from
   that side only, gated renewal its case.
 * `Becoming.RenewalFlow` (L1): every law of the support-gated renewal family is a balanced flow
-  on its static web, so the family's restoration, its loss for good and the ending of joint
-  drawing beyond renewal are instances of the laws of every balanced flow; on the webs, formation
-  and the focal formation's own trajectory do not decide the class, formations each within
-  renewal consume jointly, escalation consumes, and the seasonal web is neither renewing nor
-  consuming.
-* `Becoming.RenewalFlow` (L1): recovery in the support-gated family (no premise): with both
+  on its static web, so restoration, loss for good, and joint drawing beyond renewal instantiate
+  balanced-flow laws (with no premise: with both
   formations unsupported the level stays (`absorbs`); a window of supported net repair raises the
   level by at least its length (`window_progress`); two pulses with the same later inputs recover
   or end for good, and the recovered history is neither renewing nor consuming in the whole-time
   classification (`same_later_inputs`, `supported_pulse_recovers`, `unsupported_pulse_ends`,
-  `recovered_neither`).
+  `recovered_neither`), while seasonal webs are neither renewing nor consuming.
 * `Becoming.Admission` (L1): what can form next, and what a part opens or closes. Levels
   admit a formation when they meet every requirement it has; support is admission by the
   levels that stand, gained only at a rise and lost only at a fall where requirements hold,
@@ -2923,7 +2919,7 @@ tagged instance or application.
   gives at step `2 k` weigh at most `((p + q) ^ 4 - p ^ 4) ^ k` of `((p + q) ^ 4) ^ k`
   (`PairChance.absorbed_share`, through `PairChance.block_total`). A leaf; forgiveness with a
   probability is not represented.
-* `Becoming.Revision` (L1): Selection when the lumping itself changes.
+* `Becoming.Revision` (L1): Selection when the lumping itself changes: what the history of a run's registrations selects, and the reconstruction steps.
 * `Becoming.Undecided` (L1): the third value and revision, with no premise. With values true,
   undecided and false, undecided below the decided ones in information, a term with no constant
   is undecided where every sentence is, so a system with no constant stays wholly undecided, and
@@ -3246,7 +3242,8 @@ tagged instance or application.
   options are listed and the comparison weakly decided, a required task is performed by any
   chosen option, nothing is required where no move is possible, and a basic claim kept by an
   option keeping every basic claim of the options is never refuted at a chosen option and is
-  required where decided. Fresh contents under every classification on a frame of two kinds.
+  required where decided, alongside scores over options of a step (best by accepted score vs. base,
+  loss on restriction, and error-bounded estimates). Fresh contents under every classification on a frame of two kinds.
 * `Becoming.FrontierWorlds` (L1): what a formation requires of a condition in a world, served
   across a handover from one giver to another (`Served`): withdrawn giving needs the successor,
   a handover with no gap serves, and a gap refutes service. Joint plans and undertakings on the
@@ -3257,10 +3254,6 @@ tagged instance or application.
   admissions and a narrowed move is not
   chosen where it is decided whether the widening adds a basic admission; the admission that
   tells two moves apart is selected only through a pool coupled into it. Instance: `Clearing`.
-* `Becoming.FrontierFrames` (L1): scores over the options of a step. Every option best by the
-  score with acceptance keeps access exactly where every option best by the base score does;
-  restricting to the options loses score, least among them; an option best by an estimate
-  within `err` is within `2 * err` of every option.
 * `Becoming.ScoreRepresentation` (L1): C does not yield protection first: every comparison by
   a natural-number score satisfying C outranks protection by enough gains, while a bounded
   rational score represents the lexical order. Ported from `ProtectionPriorityRival` (F3J).
@@ -3955,7 +3948,9 @@ tagged instance or application.
   named). A recipe chooses at the configuration reached; whether it leads to where a test holds is
   one of finitely many tests, so configurations passing the same tests answer it alike, while
   reading every recipe as one test is exactly excluded middle. What remains of a recipe resumes
-  where the course stands. Completed blocks and every nonempty prefix can hide a loss midway.
+  where the course stands, single-move block renaming returns the test (`BranchingTest.finer_rename`),
+  histories of recipes are finer courses, configurations with no step and the same claims are alike
+  (`Alike.of_stuck`), and completed blocks and every nonempty prefix can hide a loss midway.
 * `Becoming.HistoryLanguages` (L1): languages of histories (no premise): a prefix-closed language
   of words is realized exactly by the law of its histories (`realizes_feasible`); continuation
   profiles, letterwise stability and the obstruction that locates a changed profile; the bounded
@@ -3995,11 +3990,10 @@ tagged instance or application.
   order, with no event order; where allowed tiles join opposite colours the balance is kept, so
   the board with two opposite corners removed has no cover (`mutilated_no_cover`), and balance
   does not determine coverability (`balance_does_not_determine_coverability`).
-* `Becoming.Presentations` (L1): exact and reduced presentations (no premise; extensionality of
-  predicates named where used): presentations exact for the same answers share one kernel and one
-  alignment; a relation descends to codes exactly where it is saturated; the canonical
-  presentation by all predicates; a frame's branching tests as questions.
-* `Becoming.Presentations` (L1): presentations of a frame. Exact reduced presentations of a
+* `Becoming.Presentations` (L1): exact and reduced presentations of a frame (no premise;
+  extensionality of predicates named where used): presentations exact for the same answers share
+  one kernel and one alignment; a relation descends to codes exactly where it is saturated; the
+  canonical presentation reads every test; and exact reduced presentations of a frame's Exact reduced presentations of a
   frame's branching tests correspond one to one; the canonical presentation reads every test,
   gives one code exactly to configurations passing the same tests where predicates are
   extensional, and every exact presentation factors through it; the joint relation of a joint
@@ -4038,10 +4032,6 @@ tagged instance or application.
   and function extensionality named where used): units give every role; the traced fragments of
   the process that moves once collapse through roles and stay apart through retained references
   (`Fragment.once_codes_apart`).
-* `Becoming.Granularity` (L1): what remained of reading at two grains (no premise; the decision of two
-  tests named where used): renaming into single-move blocks and reading finer returns the test
-  (`BranchingTest.finer_rename`); either of two decided tests; histories of recipes are finer
-  courses; configurations with no step and the same claims are alike (`Alike.of_stuck`).
 * `Becoming.Postponement` (L1): what linear tests see, with no premise. Postponing every branching
   until it shows (a configuration becoming the family a course may have reached), two
   configurations pass the same linear tests exactly where they are alike, and a frame is alike to
@@ -4703,11 +4693,6 @@ tagged instance or application.
   a schedule, the sparse one recurring without running away.
 * `Becoming.AttractionRuns` (L1): attraction on the process of a determined law: what every run is
   drawn into.
-* `Becoming.Boundaries` (L2): the self's boundaries drawn along what a flow relates.
-* `Becoming.Boundaries` (L2): the presupposition along what affects what in a world.
-* `Becoming.Courses` (L1): cross-situational resolution step by step along a run.
-* `Becoming.Capture` (L1): a target's share among descendants.
-* `Becoming.Listing` (L1): counts of arising and ceasing where they exist, and listing once.
 * `Becoming.ContactCourses` (L1): revision rules as processes, and encodings along a run of
   channels.
 * `Becoming.ContextualRuns` (L1): the parity bounds and the parts of no whole along the runs of any
@@ -4715,15 +4700,10 @@ tagged instance or application.
 * `Becoming.ContinuingRuns` (L1): the witness of continuing revision at yield nine, read along its
   run.
 * `Becoming.CopyCourses` (L1): the laws of copying on the courses and runs of its processes.
-* `Becoming.Countdown` (L1): countdown on the courses of a partial law's process.
 * `Becoming.CounterfactualRuns` (L1): the course of an act on runs of the standard model and on the
   course world.
 * `Becoming.CouplingTraces` (L1): couplings read as the steps of a process.
 * `Becoming.CourseRoles` (L1): one course, one kind or two roles.
-* `Becoming.Units` (L1): support in a fixed unit, and coextinction with no reserve.
-* `Becoming.Diagonal` (L1): completing a registration within what it registers, as a process.
-* `Becoming.Sampling` (L1): uniform descent, and what a sampled flow keeps of an absent
-  relatum.
 * `Becoming.HorizonWebs` (L1): the horizon in the support-gated law, on its webs.
 * `Becoming.IdentificationRuns` (L1): the states of a run and what a bounded record fixes.
   The same course through the map is the coarsest relation keeping a map's values that a determined
@@ -4924,6 +4904,7 @@ tagged instance or application.
   affects lies within that closure, the reach that everything within its reach does, exactly where its
   acts return with coupling by threshold only (`Flow.couplingClass_reach_iff_returns`), and the line is
   its loop (`Flow.couplingClass_line_iff_loop`); near-definitional. A leaf.
+* `Becoming.FromTheDynamics` (L2, through `Becoming.BeyondCoupling` and `Becoming.OwnClass`): route (b) joined, reading own closure de se at returning standpoints of a flow (`FlowCenters`, `PersistingChoices`, `OwnClass`, `BeyondCoupling`) to show what the dynamics give without supplied evaluative premises and where non-entailment (`ReadsOnlyDynamics.not_entails`) stops.
 * `Becoming.ConditionInTime` (L2, through `Becoming.GrammarScope` and `Becoming.FlowCenters`): the
   continuation condition in time (board item J3, route (b)'s join). On a relation with no cycle the
   returning elements are the sinks (`returnsAlong_iff_sink`). Where every condition comes at an earlier
@@ -5424,26 +5405,11 @@ tagged instance or application.
 * `Becoming.UnifiedDrawdown` (L2, through `Becoming.StockFlowBridge`): parametric local-error-zero joint depletion, inductive finite-family `OpenComposition` fleet folds and `ContractRefines` upgrades, pre-overdraw `Flow` transfer vs. `OverdrawSeparationWitness`, and non-trivial temporal aliasing (`CadenceErasureWitness`, `unrecoverable_cadence_bridge`) with `not_entails`.
 * `Becoming.ScopeDynamics` (L2, through `Becoming.TransformativeViability`): mutual-fate viable-scope selection, open-commons myopic invasion collapse, reciprocal `Withholding`/native `OpenComposition` (`gatedDefectorComponent ⊕ coopComponent`) stabilization and replacement, paired with `scopeLaw_cannot_entail_unrestricted`.
 * `Becoming.AlignmentSpine` (L2, through `Becoming.EndogenousTurning`): 0-axiom 3-pillar composed alignment spine (`((turningSub ⊕ fleetSub) ⊕ scopeSub)` with inhabited-`Int` hidden closure, modular replacement, and `MasterSpineWitness`), structural failure/metaethical dichotomy (`ReadsOnlyDynamics.not_entails`, Rule 2), and complete `CE01`–`CE15` + `文理生生 v0.2` hypothesis-dropping sharpness suite (`alignment_spine_end_to_end`).
-* `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
-  a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.
 * `Becoming.LearningRuns` (L1): what a run's registered record fixes and what a learner reaching it
   does.
-* `Becoming.Entropy` (L1): laws of a condition's level and a family's configuration on a web.
-* `Becoming.Likeness` (L1): what fixes likeness where each move has listed outcomes.
 * `Becoming.ListedWebs` (L1): the laws of listing what is active, read of a web's activity.
-* `Becoming.MoveFormation` (L1): where the moves of a run are formed.
-* `Becoming.OrderNormal` (L1): the arrangements of a world's exchanges, and its readings in time.
-* `Becoming.OneStep` (L1): what the stated laws of one step and the following of passages
-  give of worlds.
-* `Becoming.Branching` (L1): recurrence on the process of a determined law: merging, returning
-  and the kept history.
-* `Becoming.Courses` (L1): what a reduction keeps of the courses and runs of a law.
 * `Becoming.ReferencePlanTraces` (L1): revision of a reference plan as a process of the spine.
-* `Becoming.Courses` (L1): reading an earlier configuration of a run from later dated
-  records.
-* `Becoming.Revision` (L1): what the history of a run's registrations selects, and the
-  reconstruction steps.
 * `Becoming.RouteTraces` (L1): the orders of a sum over a process's histories.
 * `Becoming.SeekingRuns` (L1): the boundary of enough on the unfolding.
 * `Becoming.SelectionRuns` (L1): a selection through a run's registered course.
@@ -5451,10 +5417,7 @@ tagged instance or application.
   off the courses.
 * `Becoming.SituationTraces` (L1): the counts of situations are counts of the traces of one
   determined process.
-* `Becoming.Stock` (L1): when a course is executable on a stock, in closed form.
 * `Becoming.StrengthFlows` (L1): coupling strengths read off the flows a law gives.
-* `Becoming.Tail` (L1): the omniscience a law of the whole takes, stated of every run.
-* `Becoming.Counting` (L1): the counts a world's census can have.
 * `Becoming.TypicalRuns` (L1): what counting says of the records of runs of free branching.
 * `Becoming.WeightedTraces` (L1): integrating out and memory, on the traces of processes.
 

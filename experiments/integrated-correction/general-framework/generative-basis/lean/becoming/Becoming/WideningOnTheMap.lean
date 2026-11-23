@@ -235,20 +235,12 @@ theorem keepsWidening_iff_generation_losing_nothing (wdec : ∀ n x, ¬ Q n x �
 /-- Where what is held is decided, a list holding what a moment holds has a point the previous
 moment does not hold, or none. -/
 theorem new_in_list_or_none (dec : ∀ n x, Q n x ∨ ¬ Q n x) (n : Nat) :
-    ∀ l : List X, (∃ x, x ∈ l ∧ Q (n + 1) x ∧ ¬ Q n x) ∨ ∀ x, x ∈ l → Q (n + 1) x → Q n x
-  | [] => .inr fun _ m => nomatch m
-  | a :: l => match dec (n + 1) a, dec n a with
-    | .inl held, .inr before => .inl ⟨a, List.Mem.head l, held, before⟩
-    | .inl _, .inl earlier => match new_in_list_or_none dec n l with
-      | .inl ⟨x, m, held', before'⟩ => .inl ⟨x, List.Mem.tail a m, held', before'⟩
-      | .inr rest => .inr fun x m => match m with
-        | List.Mem.head _ => fun _ => earlier
-        | List.Mem.tail _ m' => rest x m'
-    | .inr absent, _ => match new_in_list_or_none dec n l with
-      | .inl ⟨x, m, held', before'⟩ => .inl ⟨x, List.Mem.tail a m, held', before'⟩
-      | .inr rest => .inr fun x m => match m with
-        | List.Mem.head _ => fun held' => absurd held' absent
-        | List.Mem.tail _ m' => rest x m'
+    ∀ l : List X, (∃ x, x ∈ l ∧ Q (n + 1) x ∧ ¬ Q n x) ∨ ∀ x, x ∈ l → Q (n + 1) x → Q n x :=
+  fun l => gather_listed (D := fun x => Q (n + 1) x → Q n x) l
+    (fun x mem k => match dec (n + 1) x, dec n x with
+      | _, .inl earlier => k fun _ => earlier
+      | .inr absent, _ => k fun held => absurd held absent
+      | .inl held, .inr before => .inl ⟨x, mem, held, before⟩) Or.inr
 
 /-- **Where what is held is decided and each moment's holding is listed, something new is found
 after each step after which not everything held was held before.** -/

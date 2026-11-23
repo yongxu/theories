@@ -5022,6 +5022,51 @@
    "region": "map",
    "base": "general",
    "note": "L5 0-axiom 3-pillar OpenComposition master alignment spine, failure/non-entailment dichotomy, and CE01-CE15 hypothesis-dropping sharpness suite"
+  },
+  "AlignmentReals": {
+   "region": "map",
+   "base": "periphery",
+   "note": "L4 Mathlib ℝ periphery: policy inertia lag headroom, finite-dist Markov/binomial delay bounds, metric LaxSim contraction tube, and linear FA leakage hysteresis"
+  },
+  "FreeEnergyReals": {
+   "region": "knowing",
+   "base": "periphery",
+   "note": "Mathlib ℝ periphery: KL divergence and variational free-energy minimizer joined to ConditionalWeights and FreeEnergyCounting"
+  },
+  "ExpectedFreeEnergyReals": {
+   "region": "knowing",
+   "base": "periphery",
+   "note": "Mathlib ℝ periphery: expected free-energy decomposition joined to LumpedSeeking"
+  },
+  "CellsUnderNoise": {
+   "region": "knowing",
+   "base": "periphery",
+   "note": "Mathlib ℝ periphery: noisy cell distinguishability and convergence joined to FreeEnergyGuarantees"
+  },
+  "LinearBlankets": {
+   "region": "knowing",
+   "base": "periphery",
+   "note": "Mathlib ℝ periphery: linear steady-state Markov blankets joined to Blanket"
+  },
+  "EntropyProduction": {
+   "region": "root",
+   "base": "periphery",
+   "note": "Mathlib ℝ periphery: continuous entropy production and Borel-Cantelli bounds joined to Entropy"
+  },
+  "RegimeReals": {
+   "region": "map",
+   "base": "periphery",
+   "note": "Mathlib NNReal periphery: continuous adjusted regime convergence joined to RegimeMargin"
+  },
+  "Representation": {
+   "region": "knowing",
+   "base": "periphery",
+   "note": "Mathlib ℝ periphery: representation calculus and frequency bounds joined to Frequency"
+  },
+  "SlowingDown": {
+   "region": "map",
+   "base": "periphery",
+   "note": "Mathlib ℝ periphery: stationary variance and lag-1 autocorrelation before fold/transcritical ends joined to RegimeMargin"
   }
  }
 }

@@ -1,0 +1,105 @@
+Becoming.PairChance.keeps_answering : Becoming.PairChance.KeepsWithheld Becoming.PairSelection.answering
+Becoming.PairChance.keeps_windowed : Becoming.PairChance.KeepsWithheld Becoming.PairSelection.windowed
+Becoming.PairChance.keeps_withholding : Becoming.PairChance.KeepsWithheld Becoming.PairSelection.withholding
+Becoming.PairChance.keeps_waitingBoth : Becoming.PairChance.KeepsWithheld Becoming.PairSelection.waitingBoth
+Becoming.PairChance.not_keeps_agreeing : ¬Becoming.PairChance.KeepsWithheld Becoming.PairSelection.agreeing
+Becoming.PairChance.not_keeps_sparing : ¬Becoming.PairChance.KeepsWithheld Becoming.PairSelection.sparing
+Becoming.PairChance.not_keeps_alternating : ¬Becoming.PairChance.KeepsWithheld Becoming.PairSelection.alternating
+@Becoming.PairChance.err_withholds : ∀ {f g : Becoming.PairSelection.PairLaw} {e : Becoming.PairSelection.Errors}
+  {t : Nat} (a : Becoming.WindowedWaiting.Pair),
+  e (t + 1) a = true → Becoming.PairSelection.gives f g e a (t + 1) = false
+@Becoming.PairChance.dead_stays : ∀ {f g : Becoming.PairSelection.PairLaw},
+  Becoming.PairChance.KeepsWithheld f →
+    Becoming.PairChance.KeepsWithheld g →
+      ∀ (e : Becoming.PairSelection.Errors) (x : Becoming.PairSelection.State),
+        x.snd.fst = (false, false) →
+          x.snd.snd = (false, false) →
+            (Becoming.PairSelection.step f g e x).snd.fst = (false, false) ∧
+              (Becoming.PairSelection.step f g e x).snd.snd = (false, false)
+@Becoming.PairChance.burst_absorbs : ∀ {f g : Becoming.PairSelection.PairLaw},
+  Becoming.PairChance.KeepsWithheld f →
+    Becoming.PairChance.KeepsWithheld g →
+      ∀ {e : Becoming.PairSelection.Errors} {t : Nat},
+        e (t + 1) Becoming.WindowedWaiting.Pair.first = true →
+          e (t + 1) Becoming.WindowedWaiting.Pair.second = true →
+            e (t + 2) Becoming.WindowedWaiting.Pair.first = true →
+              e (t + 2) Becoming.WindowedWaiting.Pair.second = true →
+                ∀ (k : Nat),
+                  Becoming.PairSelection.gives f g e Becoming.WindowedWaiting.Pair.first (t + 1 + k) = false ∧
+                    Becoming.PairSelection.gives f g e Becoming.WindowedWaiting.Pair.second (t + 1 + k) = false
+@Becoming.PairChance.burst_absorbs_from : ∀ {f g : Becoming.PairSelection.PairLaw},
+  Becoming.PairChance.KeepsWithheld f →
+    Becoming.PairChance.KeepsWithheld g →
+      ∀ {e : Becoming.PairSelection.Errors} {t : Nat},
+        e (t + 1) Becoming.WindowedWaiting.Pair.first = true →
+          e (t + 1) Becoming.WindowedWaiting.Pair.second = true →
+            e (t + 2) Becoming.WindowedWaiting.Pair.first = true →
+              e (t + 2) Becoming.WindowedWaiting.Pair.second = true →
+                ∀ {m : Nat},
+                  t + 1 ≤ m → ∀ (a : Becoming.WindowedWaiting.Pair), Becoming.PairSelection.gives f g e a m = false
+Becoming.PairChance.burst_of_not_free : ∀ (w : List Bool),
+  Becoming.PairChance.burstFree w = false →
+    ∃ j,
+      4 * j + 4 ≤ w.length ∧
+        ∀ (a : Becoming.WindowedWaiting.Pair),
+          Becoming.PairChance.errorsOf w (2 * j + 1) a = true ∧ Becoming.PairChance.errorsOf w (2 * j + 2) a = true
+@Becoming.PairChance.still_gives_free : ∀ {f g : Becoming.PairSelection.PairLaw},
+  Becoming.PairChance.KeepsWithheld f →
+    Becoming.PairChance.KeepsWithheld g →
+      ∀ {k : Nat} {w : List Bool},
+        w.length = 4 * k →
+          ∀ {a : Becoming.WindowedWaiting.Pair},
+            Becoming.PairSelection.gives f g (Becoming.PairChance.errorsOf w) a (2 * k) = true →
+              Becoming.PairChance.burstFree w = true
+Becoming.PairChance.weight_append : ∀ (p q : Nat) (u w : List Bool),
+  Becoming.Typicality.weight p q (u ++ w) = Becoming.Typicality.weight p q u * Becoming.Typicality.weight p q w
+Becoming.PairChance.total_courses_split : ∀ (n m : Nat) (F : List Bool → Nat),
+  Becoming.total (Becoming.Typicality.courses (n + m)) F =
+    Becoming.total (Becoming.Typicality.courses n) fun w =>
+      Becoming.total (Becoming.Typicality.courses m) fun u => F (u ++ w)
+Becoming.PairChance.cond_and_mul : ∀ (X Y : Bool) (x y : Nat),
+  (bif X && Y then x * y else 0) = (bif X && true then x else 0) * bif Y then y else 0
+Becoming.PairChance.survive_four : ∀ (p q : Nat) (w : List Bool) (b0 b1 c0 c1 : Bool),
+  Becoming.PairChance.survive p q ([b0, b1, c0, c1] ++ w) =
+    Becoming.PairChance.survive p q [b0, b1, c0, c1] * Becoming.PairChance.survive p q w
+@Becoming.PairChance.nil_of_mem_zero : ∀ {u : List Bool}, u ∈ Becoming.Typicality.courses 0 → u = []
+@Becoming.PairChance.shape_of_mem_four : ∀ {u : List Bool},
+  u ∈ Becoming.Typicality.courses 4 → ∃ b0 b1 c0 c1, u = [b0, b1, c0, c1]
+@Becoming.PairChance.total_blocks : ∀ {F G : List Bool → Nat},
+  F [] = 1 →
+    (∀ (u w : List Bool), u ∈ Becoming.Typicality.courses 4 → F (u ++ w) = G u * F w) →
+      ∀ (k : Nat),
+        Becoming.total (Becoming.Typicality.courses (4 * k)) F = Becoming.total (Becoming.Typicality.courses 4) G ^ k
+Becoming.PairChance.block_lt : ∀ (p q : Nat),
+  0 < p →
+    Becoming.total (Becoming.Typicality.courses 4) (Becoming.PairChance.survive p q) <
+      Becoming.total (Becoming.Typicality.courses 4) (Becoming.Typicality.weight p q)
+Becoming.PairChance.weight_burst : ∀ (p q : Nat), Becoming.Typicality.weight p q [true, true, true, true] = p ^ 4
+Becoming.PairChance.free_but_burst : ∀ (w : List Bool),
+  w ∈ (Becoming.Typicality.courses 4).tail → Becoming.PairChance.burstFree w = true
+Becoming.PairChance.block_total : ∀ (p q : Nat),
+  Becoming.total (Becoming.Typicality.courses 4) (Becoming.PairChance.survive p q) + p ^ 4 = (p + q) ^ 4
+Becoming.PairChance.block_free_weight : ∀ (p q : Nat),
+  Becoming.total (Becoming.Typicality.courses 4) (Becoming.PairChance.survive p q) = (p + q) ^ 4 - p ^ 4
+@Becoming.PairChance.still_giving_le : ∀ {f g : Becoming.PairSelection.PairLaw},
+  Becoming.PairChance.KeepsWithheld f →
+    Becoming.PairChance.KeepsWithheld g →
+      ∀ (p q k : Nat),
+        (Becoming.total (Becoming.Typicality.courses (4 * k)) fun w =>
+            bif Becoming.PairChance.stillGives f g k w then Becoming.Typicality.weight p q w else 0) ≤
+          Becoming.total (Becoming.Typicality.courses 4) (Becoming.PairChance.survive p q) ^ k
+@Becoming.PairChance.absorbed_share : ∀ {f g : Becoming.PairSelection.PairLaw},
+  Becoming.PairChance.KeepsWithheld f →
+    Becoming.PairChance.KeepsWithheld g →
+      ∀ (p q k : Nat),
+        (Becoming.total (Becoming.Typicality.courses (4 * k)) fun w =>
+              bif Becoming.PairChance.stillGives f g k w then Becoming.Typicality.weight p q w else 0) ≤
+            ((p + q) ^ 4 - p ^ 4) ^ k ∧
+          Becoming.total (Becoming.Typicality.courses (4 * k)) (Becoming.Typicality.weight p q) = ((p + q) ^ 4) ^ k ∧
+            (0 < p → (p + q) ^ 4 - p ^ 4 < (p + q) ^ 4)
+Becoming.PairChance.window_witness : (Becoming.total (Becoming.Typicality.courses 4) fun w =>
+      bif Becoming.PairChance.stillGives Becoming.PairSelection.windowed Becoming.PairSelection.windowed 1 w then
+        Becoming.Typicality.weight 1 1 w
+      else 0) =
+    12 ∧
+  Becoming.total (Becoming.Typicality.courses 4) (Becoming.PairChance.survive 1 1) = 15

@@ -1,3 +1,4 @@
+import Becoming.RegimeMargin
 import Mathlib.Probability.Moments.Variance
 import Mathlib.Probability.Independence.Basic
 import Mathlib.Analysis.SpecialFunctions.Sqrt
@@ -302,5 +303,44 @@ theorem need_not_read (x a : ℝ) (R : ℝ → ℝ) : ∃ n : ℝ, R a ≠ x - n
 theorem need_margin_read {h r K : ℝ} (q n : ℝ) (hh : h ≠ 0) (hr : r ≠ 0) (hK : K ≠ 0) :
     drawnRest r K q - n = K * (1 - drawnMultiplier h r q) / (h * r) - n := by
   rw [drawn_level_read q hh hr hK]
+
+/-! ## Bridge to `Becoming.RegimeMargin` -/
+
+/-- **Safe discrete regime headroom pairs with a sub-unit transcritical multiplier.** When discrete
+headroom `H + y ≤ x₀ ≤ hi` satisfies `RegimeMargin.Meets` and `Keeps`, the discrete stock run stays
+at or above `x₀` and nonzero forever (`RegimeMargin.holds`), while any matching sub-threshold draw
+`q < r` with step `0 < h ≤ (r - q)⁻¹` yields `drawnMultiplier h r q ∈ [0, 1)` and exact
+autocorrelation level recovery `drawnRest r K q = K * (1 - drawnMultiplier h r q) / (h * r)`. -/
+theorem drawn_safe_with_regime_holds {g : Nat → Nat} {H y hi x₀ : Nat}
+    (meets : Becoming.RegimeMargin.Meets g H y hi)
+    (keeps : Becoming.RegimeMargin.Keeps g H hi)
+    (low : H + y ≤ x₀) (high : x₀ ≤ hi) (pos : 0 < H + y)
+    {h r K q : ℝ} (hh : 0 < h) (hr : 0 < r) (hK : K ≠ 0) (hq : q < r)
+    (hstep : h * (r - q) ≤ 1) :
+    (∀ n, x₀ ≤ (Becoming.Law.run (Becoming.RegimeMargin.step g H) x₀).state n ∧
+        (Becoming.Law.run (Becoming.RegimeMargin.step g H) x₀).state n ≠ 0) ∧
+      drawnMultiplier h r q ∈ Ico (0 : ℝ) 1 ∧
+      drawnRest r K q = K * (1 - drawnMultiplier h r q) / (h * r) := by
+  refine ⟨fun n => ?_, ?_, drawn_level_read q hh.ne' hr.ne' hK⟩
+  · have hrun := Becoming.RegimeMargin.holds meets keeps low high n
+    exact ⟨hrun.1, Nat.ne_of_gt (Nat.lt_of_lt_of_le (Nat.lt_of_lt_of_le pos low) hrun.1)⟩
+  · have hpos : 0 < h * (r - q) := mul_pos hh (sub_pos.mpr hq)
+    simp only [drawnMultiplier, mem_Ico]
+    constructor <;> linarith
+
+/-- **Below-threshold discrete collapse beside the dependent-need silence boundary.** Starting
+below `H + y` inside `RegimeMargin`'s band reaches zero in finite steps
+(`RegimeMargin.ends_iff_below`), while `need_not_read` shows no reading `R a` from the stock's
+stationary autocorrelation captures an unmeasured dependent's need `x - d` across all needs. -/
+theorem regime_below_threshold_vs_need_not_read {g : Nat → Nat} {H y hi x₀ : Nat}
+    (pos : 0 < H + y) (short : Becoming.RegimeMargin.Short g H y)
+    (nothing : Becoming.RegimeMargin.FromNothing g)
+    (meets : Becoming.RegimeMargin.Meets g H y hi)
+    (keeps : Becoming.RegimeMargin.Keeps g H hi)
+    (high : x₀ ≤ hi) (below : x₀ < H + y) (x a : ℝ) (R : ℝ → ℝ) :
+    (∃ n, (Becoming.Law.run (Becoming.RegimeMargin.step g H) x₀).state n = 0) ∧
+      ∃ d : ℝ, R a ≠ x - d :=
+  ⟨(Becoming.RegimeMargin.ends_iff_below pos short nothing meets keeps high).mpr below,
+    need_not_read x a R⟩
 
 end Becoming.SlowingDown

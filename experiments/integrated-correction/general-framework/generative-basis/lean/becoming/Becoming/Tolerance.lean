@@ -301,10 +301,11 @@ theorem restored_stays (keeps : KeepsInclusion next) {n : Nat} {a : α}
 inclusion, where no formation gives at the step after total withholding, no formation gives at any
 step of the course from it. -/
 theorem withheld_kept (keeps : KeepsInclusion next) (empty : ∀ a, ¬ next allWithheld a) :
-    ∀ n a, ¬ (Law.run next allWithheld).state n a
-  | 0 => fun _ out => out
-  | n + 1 => fun a gives =>
-    empty a (keeps _ _ (fun b g => (withheld_kept keeps empty n b g).elim) a gives)
+    ∀ n a, ¬ (Law.run next allWithheld).state n a :=
+  fun n a gives =>
+    Iteration.prefixed_above_iter ((monotone_iff_keepsInclusion next).mpr keeps)
+      (fun _ out => out) empty n a
+      (Eq.subst (motive := fun S => S a) (iter_eq_orbit next allWithheld n).symm gives)
 
 end Keeps
 
