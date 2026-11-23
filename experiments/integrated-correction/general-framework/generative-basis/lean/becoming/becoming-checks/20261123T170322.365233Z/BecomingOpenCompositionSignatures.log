@@ -1,0 +1,297 @@
+Becoming.OpenComposition.bool_or_true_right : ∀ (a : Bool), (a || true) = true
+Becoming.OpenComposition.bool_or_assoc : ∀ (a b c : Bool), (a || b || c) = (a || (b || c))
+Becoming.OpenComposition.natMax_add_le : ∀ (a b c d : Nat),
+  Becoming.AdaptiveLoops.natMax a b + Becoming.AdaptiveLoops.natMax c d ≥ Becoming.AdaptiveLoops.natMax (a + c) (b + d)
+Becoming.OpenComposition.natMax_add_max_le : ∀ (a b c d : Nat),
+  Becoming.AdaptiveLoops.natMax (a + c) (b + d) ≤ Becoming.AdaptiveLoops.natMax a b + Becoming.AdaptiveLoops.natMax c d
+Becoming.OpenComposition.natMax_zero_zero : Becoming.AdaptiveLoops.natMax 0 0 = 0
+Becoming.OpenComposition.add_four_swap : ∀ (a b c d : Nat), a + b + (c + d) = a + c + (b + d)
+@Becoming.OpenComposition.substrate_margin_step : ∀ {ι : Type} {G : ι → (ι → Nat) → Nat},
+  (∀ (j : ι), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G j)) →
+    ∀ {H preTotal H_safe x_crit warnLevel x : ι → Nat} {curLag nextEta maxLag : Nat},
+      (∀ (j : ι), H j ≤ preTotal j) →
+        nextEta ≤ maxLag →
+          (∀ (j : ι),
+              x_crit j ≤
+                Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit j) →
+            (∀ (j : ι), x_crit j + (maxLag + 1) * preTotal j ≤ warnLevel j) →
+              (∀ (j : ι), x_crit j + curLag * preTotal j ≤ x j) →
+                ∀ (j : ι),
+                  (x j < warnLevel j →
+                      (curLag = 0 → nextEta = 0 ∧ ∀ (k : ι), H k ≤ H_safe k) ∧ (0 < curLag → nextEta + 1 ≤ curLag)) →
+                    x_crit j + nextEta * preTotal j ≤
+                      Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H x j
+@Becoming.OpenComposition.hideContract_keeps_hidden : ∀ {S Obs ObsOuter Dist Int ExtKeep ExtHide : Type}
+  {C : Becoming.OpenComposition.OpenComponent S Obs Dist Int (ExtKeep ⊕ ExtHide)} {init : S}
+  {c : Becoming.OpenComposition.InterfaceContract C init} {G_hide : ExtHide → (ExtHide → Nat) → Nat}
+  {wireObs : ObsOuter → (ExtHide → Nat) → Obs} {tolOuter : ObsOuter × Bool → Dist → Prop} {warnOuter : ObsOuter → Prop}
+  {x_crit_hide warnHide H_safe_hide x₀_hide : ExtHide → Nat}
+  {tol_lifts :
+    ∀ (o : ObsOuter) (xh : ExtHide → Nat) (al b : Bool) (d : Dist), tolOuter (o, al) d → c.tol (wireObs o xh, b) d}
+  {G_hide_rises :
+    ∀ (k : ExtHide), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G_hide k)}
+  {wire_outer_warn : ∀ (o : ObsOuter) (xh : ExtHide → Nat), warnOuter o → c.warnObs (wireObs o xh)}
+  {wire_hide_warn : ∀ (o : ObsOuter) (xh : ExtHide → Nat), (∃ k, xh k < warnHide k) → c.warnObs (wireObs o xh)}
+  {hide_post_viable :
+    ∀ (k : ExtHide),
+      x_crit_hide k ≤
+        Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G_hide H_safe_hide x_crit_hide k}
+  {hide_post_budget : ∀ (k : ExtHide), c.postBudgetExt (Sum.inr k) ≤ H_safe_hide k}
+  {hide_warn_margin : ∀ (k : ExtHide), x_crit_hide k + (c.maxLag + 1) * c.preCapExt (Sum.inr k) ≤ warnHide k}
+  {hide_init_margin : ∀ (k : ExtHide), x_crit_hide k + c.eta init * c.preCapExt (Sum.inr k) ≤ x₀_hide k}
+  {p : S × (ExtHide → Nat)},
+  (Becoming.OpenComposition.hideContract c G_hide wireObs tolOuter warnOuter x_crit_hide warnHide H_safe_hide x₀_hide
+          tol_lifts G_hide_rises wire_outer_warn wire_hide_warn hide_post_viable hide_post_budget hide_warn_margin
+          hide_init_margin).K
+      p →
+    ∀ (k : ExtHide), x_crit_hide k ≤ p.snd k
+@Becoming.OpenComposition.close_contract_viable : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) {init : S}
+  (c : Becoming.OpenComposition.InterfaceContract C init) (obs : (Ext → Nat) → Obs) (channel : Bool → Nat → Env → Bool)
+  (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat) (envCap : Ext → Nat) (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (k : Ext), envDraw env k ≤ envCap k) →
+    ∀ (x_crit warnLevel H_safe x₀ : Ext → Nat),
+      (∀ (x : Ext → Nat) (k : Ext), x k < warnLevel k → c.warnObs (obs x)) →
+        (∀ (load : Nat) (env : Env), jointAdm env → load ≤ c.maxSilence → channel true load env = true) →
+          (∀ (k : Ext), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G k)) →
+            (∀ (k : Ext),
+                x_crit k ≤
+                  Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit k) →
+              (∀ (k : Ext), c.postBudgetExt k + envCap k ≤ H_safe k) →
+                (∀ (k : Ext), x_crit k + (c.maxLag + 1) * (c.preCapExt k + envCap k) ≤ warnLevel k) →
+                  (∀ (k : Ext), x_crit k + c.eta init * (c.preCapExt k + envCap k) ≤ x₀ k) →
+                    Becoming.OpenComposition.closedInv c envCap x_crit (x₀, init) ∧
+                      Becoming.Viability.Certificate
+                        (Becoming.OpenComposition.closedProcess C c obs channel G envDraw jointAdm)
+                        (Becoming.OpenComposition.closedGuard C c x_crit)
+                        (Becoming.OpenComposition.closedInv c envCap x_crit)
+@Becoming.OpenComposition.close_contract_kernel : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) {init : S}
+  (c : Becoming.OpenComposition.InterfaceContract C init) (obs : (Ext → Nat) → Obs) (channel : Bool → Nat → Env → Bool)
+  (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat) (envCap : Ext → Nat) (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (k : Ext), envDraw env k ≤ envCap k) →
+    ∀ (x_crit warnLevel H_safe x₀ : Ext → Nat),
+      (∀ (x : Ext → Nat) (k : Ext), x k < warnLevel k → c.warnObs (obs x)) →
+        (∀ (load : Nat) (env : Env), jointAdm env → load ≤ c.maxSilence → channel true load env = true) →
+          (∀ (k : Ext), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G k)) →
+            (∀ (k : Ext),
+                x_crit k ≤
+                  Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit k) →
+              (∀ (k : Ext), c.postBudgetExt k + envCap k ≤ H_safe k) →
+                (∀ (k : Ext), x_crit k + (c.maxLag + 1) * (c.preCapExt k + envCap k) ≤ warnLevel k) →
+                  (∀ (k : Ext), x_crit k + c.eta init * (c.preCapExt k + envCap k) ≤ x₀ k) →
+                    Becoming.Viability.Kernel
+                      (Becoming.OpenComposition.closedProcess C c obs channel G envDraw jointAdm)
+                      (Becoming.OpenComposition.closedGuard C c x_crit) (x₀, init)
+@Becoming.OpenComposition.compose_close_interchange : ∀ {S₁ S₂ Obs₁ Obs₂ Dist₁ Dist₂ Int₁ Int₂ Ext Env : Type}
+  (A : Becoming.OpenComposition.OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext)
+  (B : Becoming.OpenComposition.OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext) {init₁ : S₁} {init₂ : S₂}
+  (cA : Becoming.OpenComposition.InterfaceContract A init₁) (cB : Becoming.OpenComposition.InterfaceContract B init₂)
+  (obs₁ : (Ext → Nat) → Obs₁) (obs₂ : (Ext → Nat) → Obs₂) (channel : Bool → Nat → Env → Bool)
+  (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat) (envCap : Ext → Nat) (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (k : Ext), envDraw env k ≤ envCap k) →
+    ∀ (x_crit warnLevel H_safe x₀ : Ext → Nat),
+      (∀ (x : Ext → Nat) (k : Ext), x k < warnLevel k → cA.warnObs (obs₁ x) ∨ cB.warnObs (obs₂ x)) →
+        (∀ (load : Nat) (env : Env),
+            jointAdm env → load ≤ cA.maxSilence + cB.maxSilence → channel true load env = true) →
+          (∀ (k : Ext), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G k)) →
+            (∀ (k : Ext),
+                x_crit k ≤
+                  Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit k) →
+              (∀ (k : Ext), cA.postBudgetExt k + cB.postBudgetExt k + envCap k ≤ H_safe k) →
+                (∀ (k : Ext),
+                    x_crit k +
+                        (Becoming.AdaptiveLoops.natMax cA.maxLag cB.maxLag + 1) *
+                          (cA.preCapExt k + cB.preCapExt k + envCap k) ≤
+                      warnLevel k) →
+                  (∀ (k : Ext),
+                      x_crit k +
+                          Becoming.AdaptiveLoops.natMax (cA.eta init₁) (cB.eta init₂) *
+                            (cA.preCapExt k + cB.preCapExt k + envCap k) ≤
+                        x₀ k) →
+                    Becoming.Viability.Kernel
+                      (Becoming.OpenComposition.closedProcess (A.compose B)
+                        (Becoming.OpenComposition.composeContract cA cB) (fun x => (obs₁ x, obs₂ x)) channel G envDraw
+                        jointAdm)
+                      (Becoming.OpenComposition.closedGuard (A.compose B)
+                        (Becoming.OpenComposition.composeContract cA cB) x_crit)
+                      (x₀, init₁, init₂)
+Becoming.OpenComposition.HiddenCouplingFailure.sharedG_rises : ∀ (k : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.OpenComposition.HiddenCouplingFailure.sharedG k)
+Becoming.OpenComposition.HiddenCouplingFailure.witness : (∀ (t : Nat),
+    3 ≤
+      (Becoming.Law.orbit (fun st => Becoming.OpenComposition.HiddenCouplingFailure.blindStep st ((), ()))
+            (fun x => 4, ()) t).fst
+        ()) ∧
+  Becoming.Viability.Kernel
+      (Becoming.OpenComposition.closedProcess Becoming.OpenComposition.HiddenCouplingFailure.blindDrawer
+        Becoming.OpenComposition.HiddenCouplingFailure.blindContract (fun x => ()) (fun x x_1 x_2 => false)
+        Becoming.OpenComposition.HiddenCouplingFailure.sharedG (fun x x_1 => 0) fun x => True)
+      (Becoming.OpenComposition.closedGuard Becoming.OpenComposition.HiddenCouplingFailure.blindDrawer
+        Becoming.OpenComposition.HiddenCouplingFailure.blindContract fun x => 3)
+      (fun x => 4, ()) ∧
+    (Becoming.Law.orbit (fun st => Becoming.OpenComposition.HiddenCouplingFailure.composedStep st ((), (), ()))
+            (fun x => 4, (), ()) 4).fst
+        () =
+      0
+Becoming.OpenComposition.hidden_coupling_interchange_failure : (∀ (t : Nat),
+    3 ≤
+      (Becoming.Law.orbit (fun st => Becoming.OpenComposition.HiddenCouplingFailure.blindStep st ((), ()))
+            (fun x => 4, ()) t).fst
+        ()) ∧
+  Becoming.Viability.Kernel
+      (Becoming.OpenComposition.closedProcess Becoming.OpenComposition.HiddenCouplingFailure.blindDrawer
+        Becoming.OpenComposition.HiddenCouplingFailure.blindContract (fun x => ()) (fun x x_1 x_2 => false)
+        Becoming.OpenComposition.HiddenCouplingFailure.sharedG (fun x x_1 => 0) fun x => True)
+      (Becoming.OpenComposition.closedGuard Becoming.OpenComposition.HiddenCouplingFailure.blindDrawer
+        Becoming.OpenComposition.HiddenCouplingFailure.blindContract fun x => 3)
+      (fun x => 4, ()) ∧
+    (Becoming.Law.orbit (fun st => Becoming.OpenComposition.HiddenCouplingFailure.composedStep st ((), (), ()))
+            (fun x => 4, (), ()) 4).fst
+        () =
+      0
+@Becoming.OpenComposition.replace_left_viable : ∀
+  {S₁ S₁' S₂ Obs₁ Obs₁' Obs₂ Dist₁ Dist₁' Dist₂ Int₁ Int₁' Int₂ Ext Env : Type}
+  (A : Becoming.OpenComposition.OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext)
+  (A' : Becoming.OpenComposition.OpenComponent S₁' Obs₁' Dist₁' Int₁' Ext)
+  (B : Becoming.OpenComposition.OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext) {init₁ : S₁} {init₁' : S₁'} {init₂ : S₂}
+  (cA : Becoming.OpenComposition.InterfaceContract A init₁) (cA' : Becoming.OpenComposition.InterfaceContract A' init₁')
+  (cB : Becoming.OpenComposition.InterfaceContract B init₂) (obs₁ : (Ext → Nat) → Obs₁) (obs₁' : (Ext → Nat) → Obs₁')
+  (obs₂ : (Ext → Nat) → Obs₂) (channel : Bool → Nat → Env → Bool) (G : Ext → (Ext → Nat) → Nat)
+  (envDraw : Env → Ext → Nat) (envCap : Ext → Nat) (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (k : Ext), envDraw env k ≤ envCap k) →
+    ∀ (x_crit warnLevel H_safe x₀ : Ext → Nat),
+      Becoming.OpenComposition.ContractRefines cA cA' obs₁ obs₁' warnLevel →
+        (∀ (x : Ext → Nat) (k : Ext), x k < warnLevel k → cA.warnObs (obs₁ x) ∨ cB.warnObs (obs₂ x)) →
+          (∀ (load : Nat) (env : Env),
+              jointAdm env → load ≤ cA.maxSilence + cB.maxSilence → channel true load env = true) →
+            (∀ (k : Ext), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G k)) →
+              (∀ (k : Ext),
+                  x_crit k ≤
+                    Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit k) →
+                (∀ (k : Ext), cA.postBudgetExt k + cB.postBudgetExt k + envCap k ≤ H_safe k) →
+                  (∀ (k : Ext),
+                      x_crit k +
+                          (Becoming.AdaptiveLoops.natMax cA.maxLag cB.maxLag + 1) *
+                            (cA.preCapExt k + cB.preCapExt k + envCap k) ≤
+                        warnLevel k) →
+                    (∀ (k : Ext),
+                        x_crit k +
+                            Becoming.AdaptiveLoops.natMax (cA.eta init₁) (cB.eta init₂) *
+                              (cA.preCapExt k + cB.preCapExt k + envCap k) ≤
+                          x₀ k) →
+                      Becoming.Viability.Kernel
+                        (Becoming.OpenComposition.closedProcess (A'.compose B)
+                          (Becoming.OpenComposition.composeContract cA' cB) (fun x => (obs₁' x, obs₂ x)) channel G
+                          envDraw jointAdm)
+                        (Becoming.OpenComposition.closedGuard (A'.compose B)
+                          (Becoming.OpenComposition.composeContract cA' cB) x_crit)
+                        (x₀, init₁', init₂)
+@Becoming.OpenComposition.rewrite_step_viable : ∀ {S₁ S₁' Obs₁ Obs₁' Dist₁ Dist₁' Int₁ Int₁' Ext Env : Type}
+  (A : Becoming.OpenComposition.OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext)
+  (A' : Becoming.OpenComposition.OpenComponent S₁' Obs₁' Dist₁' Int₁' Ext) {init₁ : S₁} {init₁' : S₁'}
+  (cA : Becoming.OpenComposition.InterfaceContract A init₁) (cA' : Becoming.OpenComposition.InterfaceContract A' init₁')
+  (obs₁ : (Ext → Nat) → Obs₁) (obs₁' : (Ext → Nat) → Obs₁') (channel : Bool → Nat → Env → Bool)
+  (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat) (envCap : Ext → Nat) (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (k : Ext), envDraw env k ≤ envCap k) →
+    ∀ (x_crit warnLevel H_safe x₀ : Ext → Nat),
+      (∀ (k : Ext), cA'.preCapExt k ≤ cA.preCapExt k) →
+        (∀ (k : Ext), cA'.postBudgetExt k ≤ cA.postBudgetExt k) →
+          cA'.maxSilence ≤ cA.maxSilence →
+            cA'.maxLag ≤ cA.maxLag →
+              (∀ (x : Ext → Nat) (k : Ext), x k < warnLevel k → cA.warnObs (obs₁ x)) →
+                (∀ (x : Ext → Nat) (k : Ext), x k < warnLevel k → cA'.warnObs (obs₁' x)) →
+                  (∀ (load : Nat) (env : Env), jointAdm env → load ≤ cA.maxSilence → channel true load env = true) →
+                    (∀ (k : Ext), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G k)) →
+                      (∀ (k : Ext),
+                          x_crit k ≤
+                            Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit
+                              k) →
+                        (∀ (k : Ext), cA.postBudgetExt k + envCap k ≤ H_safe k) →
+                          (∀ (k : Ext), x_crit k + (cA.maxLag + 1) * (cA.preCapExt k + envCap k) ≤ warnLevel k) →
+                            (∀ (k : Ext), x_crit k + cA.eta init₁ * (cA.preCapExt k + envCap k) ≤ x₀ k) →
+                              Becoming.Viability.Kernel
+                                (Becoming.OpenComposition.ReconfigProcess A A' cA cA' obs₁ obs₁' channel G envDraw
+                                  jointAdm)
+                                (fun st =>
+                                  match st with
+                                  | Sum.inl st₁ => Becoming.OpenComposition.closedGuard A cA x_crit st₁
+                                  | Sum.inr st₂ => Becoming.OpenComposition.closedGuard A' cA' x_crit st₂)
+                                (Sum.inl (x₀, init₁))
+Becoming.OpenComposition.WideningWitness.gShared_rises : ∀ (k : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.OpenComposition.WideningWitness.gShared k)
+Becoming.OpenComposition.WideningWitness.narrow_blind_crashes : ∀ (drawRuleA drawRuleB : Nat → Nat),
+  (∀ (r : Nat), 1 ≤ drawRuleA r) →
+    (∀ (r : Nat), 1 ≤ drawRuleB r) →
+      ∀ (nextRuleA nextRuleB : Nat → Unit → Nat) (r₀A r₀B : Nat),
+        have stepFn := fun st =>
+          (Becoming.RegimeMargin.step (fun z => Becoming.OpenComposition.WideningWitness.gShared () fun x => z)
+              (drawRuleA st.snd.fst + drawRuleB st.snd.snd) st.fst,
+            nextRuleA st.snd.fst (), nextRuleB st.snd.snd ());
+        (Becoming.Law.orbit stepFn (6, r₀A, r₀B) 6).fst = 0
+Becoming.OpenComposition.WideningWitness.widened_heals_kernel : Becoming.Viability.Kernel
+  (Becoming.OpenComposition.closedProcess
+    (Becoming.OpenComposition.WideningWitness.widenedAgent.compose
+      Becoming.OpenComposition.WideningWitness.widenedAgent)
+    (Becoming.OpenComposition.composeContract (Becoming.OpenComposition.WideningWitness.widenedContract true)
+      (Becoming.OpenComposition.WideningWitness.widenedContract true))
+    (fun x => ((x ()).blt 8, (x ()).blt 8)) (fun em x x_1 => em) Becoming.OpenComposition.WideningWitness.gShared
+    (fun x x_1 => 0) fun x => True)
+  (Becoming.OpenComposition.closedGuard
+    (Becoming.OpenComposition.WideningWitness.widenedAgent.compose
+      Becoming.OpenComposition.WideningWitness.widenedAgent)
+    (Becoming.OpenComposition.composeContract (Becoming.OpenComposition.WideningWitness.widenedContract true)
+      (Becoming.OpenComposition.WideningWitness.widenedContract true))
+    fun x => 3)
+  (fun x => 6, true, true)
+Becoming.OpenComposition.widen_interface_heals_blindness : (∀ (drawA drawB : Nat → Nat) (nextA nextB : Nat → Unit → Nat)
+    (rA rB : Nat),
+    (∀ (r : Nat), 1 ≤ drawA r) →
+      (∀ (r : Nat), 1 ≤ drawB r) →
+        (Becoming.Law.orbit
+              (fun st =>
+                (Becoming.RegimeMargin.step (fun z => Becoming.OpenComposition.WideningWitness.gShared () fun x => z)
+                    (drawA st.snd.fst + drawB st.snd.snd) st.fst,
+                  nextA st.snd.fst (), nextB st.snd.snd ()))
+              (6, rA, rB) 6).fst =
+          0) ∧
+  Becoming.Viability.Kernel
+    (Becoming.OpenComposition.closedProcess
+      (Becoming.OpenComposition.WideningWitness.widenedAgent.compose
+        Becoming.OpenComposition.WideningWitness.widenedAgent)
+      (Becoming.OpenComposition.composeContract (Becoming.OpenComposition.WideningWitness.widenedContract true)
+        (Becoming.OpenComposition.WideningWitness.widenedContract true))
+      (fun x => ((x ()).blt 8, (x ()).blt 8)) (fun em x x_1 => em) Becoming.OpenComposition.WideningWitness.gShared
+      (fun x x_1 => 0) fun x => True)
+    (Becoming.OpenComposition.closedGuard
+      (Becoming.OpenComposition.WideningWitness.widenedAgent.compose
+        Becoming.OpenComposition.WideningWitness.widenedAgent)
+      (Becoming.OpenComposition.composeContract (Becoming.OpenComposition.WideningWitness.widenedContract true)
+        (Becoming.OpenComposition.WideningWitness.widenedContract true))
+      fun x => 3)
+    (fun x => 6, true, true)
+@Becoming.OpenComposition.prodProcess_trace_left : ∀ {S₁ A₁ S₂ A₂ : Type} {P₁ : Generative.Process S₁ A₁}
+  {P₂ : Generative.Process S₂ A₂} {s : S₁ × S₂} {w : List (A₁ × A₂)} {t : S₁ × S₂},
+  Generative.Trace (Becoming.OpenComposition.prodProcess P₁ P₂) s w t →
+    Generative.Trace P₁ s.fst (List.map Prod.fst w) t.fst
+@Becoming.OpenComposition.prodProcess_trace_right : ∀ {S₁ A₁ S₂ A₂ : Type} {P₁ : Generative.Process S₁ A₁}
+  {P₂ : Generative.Process S₂ A₂} {s : S₁ × S₂} {w : List (A₁ × A₂)} {t : S₁ × S₂},
+  Generative.Trace (Becoming.OpenComposition.prodProcess P₁ P₂) s w t →
+    Generative.Trace P₂ s.snd (List.map Prod.snd w) t.snd
+Becoming.OpenComposition.ComposedNonLumpingWitness.no_reduced_law_prod : ¬∃ reduced,
+    Becoming.ProjectedLaws.Commuting
+      (fun s x => (Becoming.WitnessTwoScale.next s.fst (), Becoming.WitnessTwoScale.next s.snd ())) reduced fun s =>
+      (Becoming.WitnessTwoScale.π₂ (Becoming.WitnessTwoScale.π₁ s.fst),
+        Becoming.WitnessTwoScale.π₂ (Becoming.WitnessTwoScale.π₁ s.snd))
+Becoming.OpenComposition.ComposedNonLumpingWitness.div2_lt_12_of_lt_22 : ∀ (n : Nat), n < 22 → n / 2 < 12
+Becoming.OpenComposition.ComposedNonLumpingWitness.local_margin_two_scale : ∀ (q : Nat) (u : Nat × Nat),
+  Becoming.WitnessTwoScale.guardQ₂ q →
+    Becoming.distNat (Becoming.WitnessTwoScale.π₂ (Becoming.WitnessTwoScale.π₁ u)) q ≤
+        Becoming.WitnessTwoScale.sim₁₂.β 6 + Becoming.WitnessTwoScale.sim₁₂.η →
+      Becoming.WitnessTwoScale.guardS u
+Becoming.OpenComposition.ComposedNonLumpingWitness.prod_viability_kernel : Becoming.Viability.Kernel
+  (Becoming.OpenComposition.prodProcess Becoming.WitnessTwoScale.P Becoming.WitnessTwoScale.P)
+  (fun u => Becoming.WitnessTwoScale.guardS u.fst ∧ Becoming.WitnessTwoScale.guardS u.snd)
+  (Becoming.WitnessTwoScale.s₀, Becoming.WitnessTwoScale.s₀)

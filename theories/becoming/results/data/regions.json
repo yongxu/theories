@@ -2866,6 +2866,11 @@
    "base": "general",
    "note": "MultiScaleViability P1C: lax (π, σ) viability simulation, kernel transfer, vertical tower composition with epoch_compat + Lipschitz modulus, and non-lumping 2-scale witness"
   },
+  "open-interface-composition-and-replacement": {
+   "region": "map",
+   "base": "general",
+   "note": "OpenComposition L0: open port-split components and contracts, gluing compose/hide with ComponentEquiv associativity, preserved closed viability vs. hidden-coupling collapse, heterogeneous refinement and live rewrite, widening healing, and synchronous-product LaxSim composition"
+  },
   "transformative-viability-order": {
    "region": "map",
    "base": "general",
@@ -4957,6 +4962,11 @@
    "region": "map",
    "base": "general",
    "note": "P1C lax (π, σ) viability simulation, kernel transfer, vertical tower composition, and non-lumping 2-scale witness"
+  },
+  "Becoming.OpenComposition": {
+   "region": "map",
+   "base": "general",
+   "note": "L0 open port-split components and contracts, compose/hide with ComponentEquiv associativity, preserved closed viability vs. hidden-coupling collapse, heterogeneous refinement/live rewrite, widening healing, and synchronous-product LaxSim composition"
   },
   "Becoming.TransformativeViability": {
    "region": "map",

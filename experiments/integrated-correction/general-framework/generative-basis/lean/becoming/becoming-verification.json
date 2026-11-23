@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "utc": "20261123T131636.294555Z",
+  "utc": "20261123T170322.365233Z",
   "toolchain": "leanprover/lean4:v4.29.1",
-  "retained_run": "becoming-checks/20261123T131636.294555Z",
+  "retained_run": "becoming-checks/20261123T170322.365233Z",
   "spine_modules": [
     "Becoming.Grammar",
     "Becoming.GrammarReadings",
@@ -400,6 +400,7 @@
     "Becoming.AdaptiveLoops",
     "Becoming.PacedStock",
     "Becoming.MultiScaleViability",
+    "Becoming.OpenComposition",
     "Becoming.TransformativeViability",
     "Becoming.StockFlowBridge",
     "Becoming",
@@ -819,6 +820,7 @@
     "Becoming.AdaptiveLoops",
     "Becoming.PacedStock",
     "Becoming.MultiScaleViability",
+    "Becoming.OpenComposition",
     "Becoming.TransformativeViability",
     "Becoming.StockFlowBridge",
     "Becoming"
@@ -1252,6 +1254,7 @@
     "Becoming.AdaptiveLoops",
     "Becoming.PacedStock",
     "Becoming.MultiScaleViability",
+    "Becoming.OpenComposition",
     "Becoming.TransformativeViability",
     "Becoming.StockFlowBridge",
     "Becoming.SeedReach",
@@ -1674,6 +1677,7 @@
     "Becoming.AdaptiveLoops",
     "Becoming.PacedStock",
     "Becoming.MultiScaleViability",
+    "Becoming.OpenComposition",
     "Becoming.TransformativeViability",
     "Becoming.StockFlowBridge",
     "Becoming.SeedReach",
@@ -2096,6 +2100,7 @@
     "Becoming.AdaptiveLoops": "becoming/Becoming/AdaptiveLoops.lean",
     "Becoming.PacedStock": "becoming/Becoming/PacedStock.lean",
     "Becoming.MultiScaleViability": "becoming/Becoming/MultiScaleViability.lean",
+    "Becoming.OpenComposition": "becoming/Becoming/OpenComposition.lean",
     "Becoming.TransformativeViability": "becoming/Becoming/TransformativeViability.lean",
     "Becoming.StockFlowBridge": "becoming/Becoming/StockFlowBridge.lean",
     "Becoming.SeedReach": "becoming/Becoming/SeedReach.lean",
@@ -2518,6 +2523,7 @@
     "Becoming.AdaptiveLoops": "8af6af19850cbceb8cbaeca07d66ebd6640f4ca852a5dfc68ac1ea9196f02cf6",
     "Becoming.PacedStock": "d84967da1eccd1657c638d786dbc0f1bbb9073baa6eb4990439ad684f68adc05",
     "Becoming.MultiScaleViability": "11d473b27f9084c96ac968e288c257efff4e38ad314a1d75eb42b5b343a642dd",
+    "Becoming.OpenComposition": "739a9dde3d576acae4312cf95ebd4a9c2b210368605724d084b84af4aac802cd",
     "Becoming.TransformativeViability": "3767618b36fb7144d901f035452680b636c7a23edf98b47d50ccdf8fd330a123",
     "Becoming.StockFlowBridge": "92c67b1c1a84452e5c83f31f25bc4ae5d34f89a17eb86e1aebb3a751dbb6ae21",
     "Becoming.SeedReach": "6c21f636369688b6247052cb7434aebdd1669dc2dc0ff3a906a2032193deb066",
@@ -2538,19 +2544,17 @@
     "Becoming.ReaderRebuilding": "25f0d49255972cec8024970a4249dd9228baed14308c90c83dec223bf4378713",
     "Becoming.RuleRebuilding": "fe82de1f1377255eb7fc7b3cd42cad7245bd45882f4e58a6e82d3575e2c28709",
     "Becoming.ResponseLearning": "3f570198fcae3a551c9ca5807d58353cec3d393a00d37a21d89a98c789a725d2",
-    "Becoming": "e358ba20874b855e0f7242f5f0f99fb045d1b8153b4b5eaa374848dbf927edf2"
+    "Becoming": "12b0a678b6bbf035f1b60265195ec9ff5663bacac5c278b5099998610afa6436"
   },
   "checker_sha256": {
-    "check_becoming.py": "b21bebf32c7973ff30400e67f073040392009d4f2ff5ab9b247c0c933953d4c6",
+    "check_becoming.py": "245f7323f5714991b318eec881d01fc9ed4b126cdb1de5d9afe5d87a1952fbf0",
     "check.py": "4f9cb94de69bd0e7da6bc7ab1ae1cfd26e2d5848dabda5cbb88aebc36ac52da3"
   },
   "runner_sha256": "cdc5b2e9fe6915233f5e39ec1b4ad30b615e15dbbea393adda2effba0e7c7de2",
   "source_commit": {
-    "main": "7add3b4f525c8f7ec0826bbbf13bd144c62230c6",
+    "main": "989b55870a32ff2859ed42ce6bebf51d94fc0fe8",
     "copied": [
-      "Becoming.MultiScaleViability.lean",
-      "Becoming.StockFlowBridge.lean",
-      "Becoming.TransformativeViability.lean",
+      "Becoming.OpenComposition.lean",
       "Becoming.lean",
       "check_becoming.py"
     ]
@@ -2561,17 +2565,13 @@
     "fresh": false,
     "ran": [
       "version.log",
-      "BecomingMultiScaleViabilitySignatures.log",
-      "BecomingTransformativeViabilitySignatures.log",
-      "BecomingStockFlowBridgeSignatures.log",
+      "BecomingOpenCompositionSignatures.log",
       "Becoming.log",
       "BecomingAxiomAudit.log",
       "BecomingSignatures.log",
       "EnvironmentAudit.log",
       "Controls.log",
-      "Becoming.MultiScaleViability.PreludeOnly.log",
-      "Becoming.TransformativeViability.PreludeOnly.log",
-      "Becoming.StockFlowBridge.PreludeOnly.log",
+      "Becoming.OpenComposition.PreludeOnly.log",
       "Becoming.PreludeOnly.log"
     ],
     "reused": {
@@ -7347,6 +7347,18 @@
         "utc": "20261123T124534.884275Z",
         "retained": "scratch build, not retained: /Users/ren/tmp/p1c/tree"
       },
+      "BecomingMultiScaleViabilitySignatures.log": {
+        "utc": "20261123T131636.294555Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T131636.294555Z"
+      },
+      "Becoming.OpenComposition.log": {
+        "utc": "20261123T170235.376788Z",
+        "retained": "scratch build, not retained: /Users/ren/tmp/l0-scratch"
+      },
+      "BecomingOpenCompositionAxiomAudit.log": {
+        "utc": "20261123T170235.376788Z",
+        "retained": "scratch build, not retained: /Users/ren/tmp/l0-scratch"
+      },
       "Becoming.TransformativeViability.log": {
         "utc": "20261123T125348.547828Z",
         "retained": "scratch build, not retained: /Users/ren/tmp/p1c/tree"
@@ -7355,6 +7367,10 @@
         "utc": "20261123T125348.547828Z",
         "retained": "scratch build, not retained: /Users/ren/tmp/p1c/tree"
       },
+      "BecomingTransformativeViabilitySignatures.log": {
+        "utc": "20261123T131636.294555Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T131636.294555Z"
+      },
       "Becoming.StockFlowBridge.log": {
         "utc": "20261123T125638.130918Z",
         "retained": "scratch build, not retained: /Users/ren/tmp/p1c/tree"
@@ -7362,6 +7378,10 @@
       "BecomingStockFlowBridgeAxiomAudit.log": {
         "utc": "20261123T125638.130918Z",
         "retained": "scratch build, not retained: /Users/ren/tmp/p1c/tree"
+      },
+      "BecomingStockFlowBridgeSignatures.log": {
+        "utc": "20261123T131636.294555Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T131636.294555Z"
       },
       "Becoming.SeedReach.log": {
         "utc": "20261109T150228.155067Z",
@@ -9171,6 +9191,18 @@
         "utc": "20261123T125647.945308Z",
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T125647.945308Z"
       },
+      "Becoming.MultiScaleViability.PreludeOnly.log": {
+        "utc": "20261123T131636.294555Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T131636.294555Z"
+      },
+      "Becoming.TransformativeViability.PreludeOnly.log": {
+        "utc": "20261123T131636.294555Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T131636.294555Z"
+      },
+      "Becoming.StockFlowBridge.PreludeOnly.log": {
+        "utc": "20261123T131636.294555Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T131636.294555Z"
+      },
       "Becoming.SeedReach.PreludeOnly.log": {
         "utc": "20261109T150228.155067Z",
         "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories--claude-worktrees-admiring-shamir-666169/dce58fb5-291c-4c2d-9b0e-1a17b2f2e9b9/scratchpad/tree"
@@ -10439,6 +10471,9 @@
       "Becoming.MultiScaleViability.log": "9fe661c4f1ca5d2d755b20bddc7bd67f6deacaae953a63b59242ece73b0e04a1",
       "BecomingMultiScaleViabilityAxiomAudit.log": "5fe736cd0c9029c44898f0a2e981b0966290cccf8fb499fefe22be3cfca2f3f5",
       "BecomingMultiScaleViabilitySignatures.log": "b13c854fbfcde51af1a33c21d5b8c3cc944305c6603b2cfa63bb1b4ea2a5ba92",
+      "Becoming.OpenComposition.log": "e65fb0f7d1d4c62351e57b3974caa5f295292af275cbff7ef6e4670afad817eb",
+      "BecomingOpenCompositionAxiomAudit.log": "dfe380578441b466970c889cb00bc51c5014698ecaa4a0b18a6486b94f86b431",
+      "BecomingOpenCompositionSignatures.log": "d68c81a6d119ec1549c3e35dd221e09184ee579522890c4d47d614b1e15e1a99",
       "Becoming.TransformativeViability.log": "c4ed2b1c0e7a9efdd9a48632a935d61968f6c249c053d69015ebbf1965002a35",
       "BecomingTransformativeViabilityAxiomAudit.log": "b25e647eda25c66aa0d548f212ff1e22efc0a548d2f05aa25d9b1a522a742b65",
       "BecomingTransformativeViabilitySignatures.log": "62ef6e6feab1d12944832793237fe12d1abe06edc3a795de7b4da6387d6ab34f",
@@ -10499,11 +10534,11 @@
       "Becoming.ResponseLearning.log": "19c5dfae2897081b2db2a6479e4b6630f3e12729c7a5b2018b2f3b56e9252710",
       "BecomingResponseLearningAxiomAudit.log": "358f4819a31b44cc8105702cdd098101a2dac4da9f87e46a44072360231c8abb",
       "BecomingResponseLearningSignatures.log": "ee5e63f24cc980784d60513ca2cf139807117cb10932dc5bc49d85bdc89e8bfa",
-      "Becoming.log": "3d0f6759bd66139c9769f390712743e8d0c90988caa0b86018bad162b13ef9f4",
-      "BecomingAxiomAudit.log": "a81d269a03e8998c000e52f655378ed23b79fb8a4662e6fba37c82dfbd81006a",
-      "BecomingSignatures.log": "1c25b4c150e75d47dea061e227d52ad1720757e3b63414032e50bbe48b45e394",
-      "EnvironmentAudit.log": "a43749b4d9ca7b0c4b6384c92b9fd4c141988611af3daf9a29d31448e6ee9876",
-      "Controls.log": "bef79df694b5c9cfd7e035d2af20b6a33556afe28381cca2351206a551c48b36",
+      "Becoming.log": "a6745d0afdb87b5927b34ed87e541616ab938d3e177c299e01545be5062e759a",
+      "BecomingAxiomAudit.log": "cb0d9724d20f74f2caf80171cbaa625831e9cf3ed77dbd28d144b322f87ae9a4",
+      "BecomingSignatures.log": "80410670a97c80f8ddc48b8a20f0caf972b0549e9814048c03d8a82d9419b29c",
+      "EnvironmentAudit.log": "2409aefbeacf042c8421501df0de3156c6ac856edbc4ca0426cc83e2fee1acc3",
+      "Controls.log": "d4f1628da11d9f31db983033b83761f0108fb98024e69fa752e8752cc46f2ccb",
       "Becoming.Grammar.PreludeOnly.log": "76d3cd6879ccdfaed9db9cc98947cb68fe604b6ec9c632c3569df134642978a0",
       "Becoming.GrammarReadings.PreludeOnly.log": "96d3eaac03a03246c68b669a66e92565f381f028768625af72b0ecd42c10d168",
       "Becoming.GrammarMap.PreludeOnly.log": "57b332119ea3feae52717dc0b9c6e6a8461bd8fd25ec4a4b45ba5bbf5e0d743b",
@@ -10903,6 +10938,7 @@
       "Becoming.AdaptiveLoops.PreludeOnly.log": "ff4d6bb01ae5436c1c5d89e514fefd57423b1016b5920b440fe412ee430787b3",
       "Becoming.PacedStock.PreludeOnly.log": "85d475ad33f42ba51d47feee2ba763f89f4b674af908b782c549e6ad11bfd38c",
       "Becoming.MultiScaleViability.PreludeOnly.log": "2e10684b7479ff591794f7d90ac8f553aadf4273645e6c1f49859e202fc01feb",
+      "Becoming.OpenComposition.PreludeOnly.log": "93ad141b44920e185384e62c4f1c57333d6d752fb928e1211a7a6263cde7f7fe",
       "Becoming.TransformativeViability.PreludeOnly.log": "54a2fbecc0babb04de704548b128a67199b1675a5bf8f5b0d021747deb328b48",
       "Becoming.StockFlowBridge.PreludeOnly.log": "2e8094d22805608a84df2219e9039e9a1e753a5815dd68c8c834e3081e5625a6",
       "Becoming.SeedReach.PreludeOnly.log": "5e0fe6d1427e5096dc5d3fe7ce927e5f3ec9ddd47f7388b1be9da3f470f16402",
@@ -10923,24 +10959,20 @@
       "Becoming.ReaderRebuilding.PreludeOnly.log": "c8d322b9ede23ee2284eb9df3a722c142355439a67f3384354dcb30d9488324f",
       "Becoming.RuleRebuilding.PreludeOnly.log": "a80b8eb0e41678da8ed169c4f5b42a9cccc07497817f17b097cc1e4c31864288",
       "Becoming.ResponseLearning.PreludeOnly.log": "fbbe23d3e24bafddda6a674b0ab564f1e8b10a86aa7a0de259e17a82bd6755dd",
-      "Becoming.PreludeOnly.log": "dc61948efdb5b5c7681fefc7e61ff73552b805f7aa719f20d0f29d6fb4a9f28b"
+      "Becoming.PreludeOnly.log": "1f2424b4c357208ae257fc3c9cf315dbb77817958de55d52e4a67328c88ece1d"
     },
     "seconds": {
-      "version.log": 0.34,
-      "BecomingMultiScaleViabilitySignatures.log": 2.094,
-      "BecomingTransformativeViabilitySignatures.log": 2.078,
-      "BecomingStockFlowBridgeSignatures.log": 0.517,
-      "Becoming.log": 2.649,
-      "BecomingAxiomAudit.log": 0.571,
-      "BecomingSignatures.log": 0.562,
-      "EnvironmentAudit.log": 33.102,
-      "Controls.log": 0.574,
-      "Becoming.MultiScaleViability.PreludeOnly.log": 3.157,
-      "Becoming.TransformativeViability.PreludeOnly.log": 2.314,
-      "Becoming.StockFlowBridge.PreludeOnly.log": 2.293,
-      "Becoming.PreludeOnly.log": 0.32
+      "version.log": 0.273,
+      "BecomingOpenCompositionSignatures.log": 1.532,
+      "Becoming.log": 1.91,
+      "BecomingAxiomAudit.log": 0.573,
+      "BecomingSignatures.log": 0.573,
+      "EnvironmentAudit.log": 32.988,
+      "Controls.log": 0.61,
+      "Becoming.OpenComposition.PreludeOnly.log": 2.296,
+      "Becoming.PreludeOnly.log": 0.311
     },
-    "wall_seconds": 37.744
+    "wall_seconds": 36.796
   },
   "superseded_modules": {
     "AcquiredCorrection": {
@@ -13197,6 +13229,7 @@
     "Becoming.AdaptiveLoops": 321,
     "Becoming.PacedStock": 259,
     "Becoming.MultiScaleViability": 298,
+    "Becoming.OpenComposition": 255,
     "Becoming.TransformativeViability": 269,
     "Becoming.StockFlowBridge": 67,
     "Becoming.SeedReach": 31,
@@ -14010,6 +14043,24 @@
       "propext"
     ],
     "Becoming.LaxSim.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.OpenComposition.ReconfigAct.stepRight.injEq": [
+      "propext"
+    ],
+    "Becoming.OpenComposition.InterfaceContract.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.OpenComposition.ReconfigAct.reconfig.injEq": [
+      "propext"
+    ],
+    "Becoming.OpenComposition.OpenComponent.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.OpenComposition.ReconfigAct.stepLeft.injEq": [
+      "propext"
+    ],
+    "Becoming.OpenComposition.ComponentEquiv.mk.injEq": [
       "propext"
     ],
     "Becoming.ThreeRegime.Form.fChurn.injEq": [
@@ -153087,6 +153138,317 @@
       "kernel_checked": true
     },
     {
+      "module": "Becoming.OpenComposition",
+      "spine": true,
+      "layer": "core",
+      "theorems": 26,
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.bool_or_true_right"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.bool_or_assoc"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.natMax_add_le"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.natMax_add_max_le"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.natMax_zero_zero"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.add_four_swap"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.substrate_margin_step"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.OpenComposition.OpenComponent"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.OpenComponent.process"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.OpenComponent.ofOpenLoop"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.OpenComponent.toOpenLoop"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.OpenComposition.InterfaceContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.InterfaceContract.ofLoopCertificate"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.OpenComponent.compose"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.composeContract"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.OpenComposition.ComponentEquiv"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.composeAssocEquiv"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.OpenComponent.hide"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.hideContract"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.hideContract_keeps_hidden"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.closedStep"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.closedAdm"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.closedProcess"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.closedGuard"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.closedInv"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.close_contract_viable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.close_contract_kernel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.compose_close_interchange"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.HiddenCouplingFailure.sharedG"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.HiddenCouplingFailure.sharedG_rises"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.HiddenCouplingFailure.blindDrawer"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.HiddenCouplingFailure.blindContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.HiddenCouplingFailure.blindStep"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.HiddenCouplingFailure.composedStep"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.HiddenCouplingFailure.witness"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.hidden_coupling_interchange_failure"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.OpenComposition.ContractRefines"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.replace_left_viable"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.OpenComposition.ReconfigAct"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.ReconfigProcess"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.rewrite_step_viable"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.WideningWitness.gShared"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.WideningWitness.gShared_rises"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.WideningWitness.narrow_blind_crashes"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.WideningWitness.widenedAgent"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.WideningWitness.widenedContract"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.WideningWitness.widened_heals_kernel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.widen_interface_heals_blindness"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.SlackDist.sum"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.SlackDist.max"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.prodProcess"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.prodProcess_trace_left"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.prodProcess_trace_right"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.compose_laxSim_max"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.compose_laxSim_sum"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OpenComposition.ComposedNonLumpingWitness.prodSim"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.ComposedNonLumpingWitness.no_reduced_law_prod"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.ComposedNonLumpingWitness.div2_lt_12_of_lt_22"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.ComposedNonLumpingWitness.local_margin_two_scale"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OpenComposition.ComposedNonLumpingWitness.prod_viability_kernel"
+        }
+      ],
+      "axiom_dependencies": {
+        "Becoming.OpenComposition.bool_or_true_right": [],
+        "Becoming.OpenComposition.bool_or_assoc": [],
+        "Becoming.OpenComposition.natMax_add_le": [],
+        "Becoming.OpenComposition.natMax_add_max_le": [],
+        "Becoming.OpenComposition.natMax_zero_zero": [],
+        "Becoming.OpenComposition.add_four_swap": [],
+        "Becoming.OpenComposition.substrate_margin_step": [],
+        "Becoming.OpenComposition.OpenComponent": [],
+        "Becoming.OpenComposition.OpenComponent.process": [],
+        "Becoming.OpenComposition.OpenComponent.ofOpenLoop": [],
+        "Becoming.OpenComposition.OpenComponent.toOpenLoop": [],
+        "Becoming.OpenComposition.InterfaceContract": [],
+        "Becoming.OpenComposition.InterfaceContract.ofLoopCertificate": [],
+        "Becoming.OpenComposition.OpenComponent.compose": [],
+        "Becoming.OpenComposition.composeContract": [],
+        "Becoming.OpenComposition.ComponentEquiv": [],
+        "Becoming.OpenComposition.composeAssocEquiv": [],
+        "Becoming.OpenComposition.OpenComponent.hide": [],
+        "Becoming.OpenComposition.hideContract": [],
+        "Becoming.OpenComposition.hideContract_keeps_hidden": [],
+        "Becoming.OpenComposition.closedStep": [],
+        "Becoming.OpenComposition.closedAdm": [],
+        "Becoming.OpenComposition.closedProcess": [],
+        "Becoming.OpenComposition.closedGuard": [],
+        "Becoming.OpenComposition.closedInv": [],
+        "Becoming.OpenComposition.close_contract_viable": [],
+        "Becoming.OpenComposition.close_contract_kernel": [],
+        "Becoming.OpenComposition.compose_close_interchange": [],
+        "Becoming.OpenComposition.HiddenCouplingFailure.sharedG": [],
+        "Becoming.OpenComposition.HiddenCouplingFailure.sharedG_rises": [],
+        "Becoming.OpenComposition.HiddenCouplingFailure.blindDrawer": [],
+        "Becoming.OpenComposition.HiddenCouplingFailure.blindContract": [],
+        "Becoming.OpenComposition.HiddenCouplingFailure.blindStep": [],
+        "Becoming.OpenComposition.HiddenCouplingFailure.composedStep": [],
+        "Becoming.OpenComposition.HiddenCouplingFailure.witness": [],
+        "Becoming.OpenComposition.hidden_coupling_interchange_failure": [],
+        "Becoming.OpenComposition.ContractRefines": [],
+        "Becoming.OpenComposition.replace_left_viable": [],
+        "Becoming.OpenComposition.ReconfigAct": [],
+        "Becoming.OpenComposition.ReconfigProcess": [],
+        "Becoming.OpenComposition.rewrite_step_viable": [],
+        "Becoming.OpenComposition.WideningWitness.gShared": [],
+        "Becoming.OpenComposition.WideningWitness.gShared_rises": [],
+        "Becoming.OpenComposition.WideningWitness.narrow_blind_crashes": [],
+        "Becoming.OpenComposition.WideningWitness.widenedAgent": [],
+        "Becoming.OpenComposition.WideningWitness.widenedContract": [],
+        "Becoming.OpenComposition.WideningWitness.widened_heals_kernel": [],
+        "Becoming.OpenComposition.widen_interface_heals_blindness": [],
+        "Becoming.OpenComposition.SlackDist.sum": [],
+        "Becoming.OpenComposition.SlackDist.max": [],
+        "Becoming.OpenComposition.prodProcess": [],
+        "Becoming.OpenComposition.prodProcess_trace_left": [],
+        "Becoming.OpenComposition.prodProcess_trace_right": [],
+        "Becoming.OpenComposition.compose_laxSim_max": [],
+        "Becoming.OpenComposition.compose_laxSim_sum": [],
+        "Becoming.OpenComposition.ComposedNonLumpingWitness.prodSim": [],
+        "Becoming.OpenComposition.ComposedNonLumpingWitness.no_reduced_law_prod": [],
+        "Becoming.OpenComposition.ComposedNonLumpingWitness.div2_lt_12_of_lt_22": [],
+        "Becoming.OpenComposition.ComposedNonLumpingWitness.local_margin_two_scale": [],
+        "Becoming.OpenComposition.ComposedNonLumpingWitness.prod_viability_kernel": []
+      },
+      "kernel_checked": true
+    },
+    {
       "module": "Becoming.TransformativeViability",
       "spine": true,
       "layer": "core",
@@ -161607,30 +161969,22 @@
     }
   ],
   "artifact_sha256": {
-    "Becoming.MultiScaleViability.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.MultiScaleViability.lean": "11d473b27f9084c96ac968e288c257efff4e38ad314a1d75eb42b5b343a642dd",
+    "Becoming.OpenComposition.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.OpenComposition.lean": "739a9dde3d576acae4312cf95ebd4a9c2b210368605724d084b84af4aac802cd",
     "Becoming.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.StockFlowBridge.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.StockFlowBridge.lean": "92c67b1c1a84452e5c83f31f25bc4ae5d34f89a17eb86e1aebb3a751dbb6ae21",
-    "Becoming.TransformativeViability.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.TransformativeViability.lean": "3767618b36fb7144d901f035452680b636c7a23edf98b47d50ccdf8fd330a123",
-    "Becoming.lean": "e358ba20874b855e0f7242f5f0f99fb045d1b8153b4b5eaa374848dbf927edf2",
+    "Becoming.lean": "12b0a678b6bbf035f1b60265195ec9ff5663bacac5c278b5099998610afa6436",
     "Becoming.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "BecomingAxiomAudit.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingAxiomAudit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "BecomingMultiScaleViabilitySignatures.lean": "8e282389aef11c2a99f014f6a84e404965156baf771160b277dfc36fd856d08e",
-    "BecomingMultiScaleViabilitySignatures.log": "059b57d95317da5cac851066012ae5ec33ad42fa1c7a76fbfb711122d4a1d1a5",
+    "BecomingOpenCompositionSignatures.lean": "b3352e2f35c6adb0b16ebbcf964affd7be2387b7b61332d5c8e0001226325c04",
+    "BecomingOpenCompositionSignatures.log": "3b767f76e1edd259dde42c066b558ee8d323d6228cd4eb848fd9702814d78e0b",
     "BecomingSignatures.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingSignatures.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "BecomingStockFlowBridgeSignatures.lean": "907c0c45cb411be50312b41e6addf0c32b51291f33e332a65bf4232354971fe9",
-    "BecomingStockFlowBridgeSignatures.log": "65d3b5b2bcd889ff6f80980056cf339833765d94fb6668fb3e70ff9ba46bfec3",
-    "BecomingTransformativeViabilitySignatures.lean": "1ac64c180b6ced61011356736219fb3746d650eed66217126d7d157d6229266f",
-    "BecomingTransformativeViabilitySignatures.log": "55dc75948d4fba69828fe765e675af10122f8a15829a2be75d5b7ee9a55b825a",
     "Controls.lean": "b6d4d1772f4c923833bc713f3b9f170a10ef362d699f4b854401adb21fe22f57",
     "Controls.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "EnvironmentAudit.lean": "9d6d219a607f2a1e858dc852f8d04d743e48d026aca4bcfa52471dca849736cd",
-    "EnvironmentAudit.log": "f3315bf2526de70a155ed580a2296b062c591fe08592614b896bea7ddadefdd2",
-    "check_becoming.py": "b21bebf32c7973ff30400e67f073040392009d4f2ff5ab9b247c0c933953d4c6",
+    "EnvironmentAudit.lean": "4c09c80fc3efc230377a623b627371392c4beee06c7545093d18bd09e5ee6708",
+    "EnvironmentAudit.log": "3266efa69fea968091553a5e6b45a46812f12c1fd47b141065c17d6fb2f226aa",
+    "check_becoming.py": "245f7323f5714991b318eec881d01fc9ed4b126cdb1de5d9afe5d87a1952fbf0",
     "version.log": "3185b32e24f5aea32feec5ebb137ef7b0b6d7b33707fb4f254924fe41b5ded8b"
   }
 }
