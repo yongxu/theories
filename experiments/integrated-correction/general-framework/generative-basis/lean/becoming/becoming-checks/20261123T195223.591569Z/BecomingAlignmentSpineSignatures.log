@@ -1,0 +1,1594 @@
+Becoming.AlignmentSpine.ComposedSpine.bool_or_false_left : ∀ (b : Bool), (false || b) = b
+Becoming.AlignmentSpine.ComposedSpine.natMax_comm : ∀ (a b : Nat),
+  Becoming.AdaptiveLoops.natMax a b = Becoming.AdaptiveLoops.natMax b a
+Becoming.AlignmentSpine.ComposedSpine.natMax_assoc : ∀ (a b c : Nat),
+  Becoming.AdaptiveLoops.natMax (Becoming.AdaptiveLoops.natMax a b) c =
+    Becoming.AdaptiveLoops.natMax a (Becoming.AdaptiveLoops.natMax b c)
+@Becoming.AlignmentSpine.ComposedSpine.composeAssocContractEquiv : ∀
+  {S₁ S₂ S₃ Obs₁ Obs₂ Obs₃ Dist₁ Dist₂ Dist₃ Int₁ Int₂ Int₃ Ext : Type}
+  {A : Becoming.OpenComposition.OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext}
+  {B : Becoming.OpenComposition.OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext}
+  {C : Becoming.OpenComposition.OpenComponent S₃ Obs₃ Dist₃ Int₃ Ext} {init₁ : S₁} {init₂ : S₂} {init₃ : S₃}
+  (cA : Becoming.OpenComposition.InterfaceContract A init₁) (cB : Becoming.OpenComposition.InterfaceContract B init₂)
+  (cC : Becoming.OpenComposition.InterfaceContract C init₃),
+  Becoming.AlignmentSpine.ComposedSpine.ContractEquiv (Becoming.OpenComposition.composeAssocEquiv A B C)
+    (Becoming.OpenComposition.composeContract (Becoming.OpenComposition.composeContract cA cB) cC)
+    (Becoming.OpenComposition.composeContract cA (Becoming.OpenComposition.composeContract cB cC))
+@Becoming.AlignmentSpine.ComposedSpine.composeCommContractEquiv : ∀ {S₁ S₂ Obs₁ Obs₂ Dist₁ Dist₂ Int₁ Int₂ Ext : Type}
+  {A : Becoming.OpenComposition.OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext}
+  {B : Becoming.OpenComposition.OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext} {init₁ : S₁} {init₂ : S₂}
+  (cA : Becoming.OpenComposition.InterfaceContract A init₁) (cB : Becoming.OpenComposition.InterfaceContract B init₂),
+  Becoming.AlignmentSpine.ComposedSpine.ContractEquiv (Becoming.AlignmentSpine.ComposedSpine.composeCommEquiv A B)
+    (Becoming.OpenComposition.composeContract cA cB) (Becoming.OpenComposition.composeContract cB cA)
+@Becoming.AlignmentSpine.ComposedSpine.replace_right_viable : ∀
+  {S₁ S₂ S₂' Obs₁ Obs₂ Obs₂' Dist₁ Dist₂ Dist₂' Int₁ Int₂ Int₂' Ext Env : Type}
+  (A : Becoming.OpenComposition.OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext)
+  (B : Becoming.OpenComposition.OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext)
+  (B' : Becoming.OpenComposition.OpenComponent S₂' Obs₂' Dist₂' Int₂' Ext) {init₁ : S₁} {init₂ : S₂} {init₂' : S₂'}
+  (cA : Becoming.OpenComposition.InterfaceContract A init₁) (cB : Becoming.OpenComposition.InterfaceContract B init₂)
+  (cB' : Becoming.OpenComposition.InterfaceContract B' init₂') (obs₁ : (Ext → Nat) → Obs₁) (obs₂ : (Ext → Nat) → Obs₂)
+  (obs₂' : (Ext → Nat) → Obs₂') (channel : Bool → Nat → Env → Bool) (G : Ext → (Ext → Nat) → Nat)
+  (envDraw : Env → Ext → Nat) (envCap : Ext → Nat) (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (k : Ext), envDraw env k ≤ envCap k) →
+    ∀ (x_crit warnLevel H_safe x₀ : Ext → Nat),
+      Becoming.OpenComposition.ContractRefines cB cB' obs₂ obs₂' warnLevel →
+        (∀ (x : Ext → Nat) (k : Ext), x k < warnLevel k → cA.warnObs (obs₁ x) ∨ cB.warnObs (obs₂ x)) →
+          (∀ (load : Nat) (env : Env),
+              jointAdm env → load ≤ cA.maxSilence + cB.maxSilence → channel true load env = true) →
+            (∀ (k : Ext), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G k)) →
+              (∀ (k : Ext),
+                  x_crit k ≤
+                    Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit k) →
+                (∀ (k : Ext), cA.postBudgetExt k + cB.postBudgetExt k + envCap k ≤ H_safe k) →
+                  (∀ (k : Ext),
+                      x_crit k +
+                          (Becoming.AdaptiveLoops.natMax cA.maxLag cB.maxLag + 1) *
+                            (cA.preCapExt k + cB.preCapExt k + envCap k) ≤
+                        warnLevel k) →
+                    (∀ (k : Ext),
+                        x_crit k +
+                            Becoming.AdaptiveLoops.natMax (cA.eta init₁) (cB.eta init₂) *
+                              (cA.preCapExt k + cB.preCapExt k + envCap k) ≤
+                          x₀ k) →
+                      Becoming.Viability.Kernel
+                        (Becoming.OpenComposition.closedProcess (A.compose B')
+                          (Becoming.OpenComposition.composeContract cA cB') (fun x => (obs₁ x, obs₂' x)) channel G
+                          envDraw jointAdm)
+                        (Becoming.OpenComposition.closedGuard (A.compose B')
+                          (Becoming.OpenComposition.composeContract cA cB') x_crit)
+                        (x₀, init₁, init₂')
+@Becoming.AlignmentSpine.ComposedSpine.contractRefines_compose_left : ∀
+  {S₁ S₁' S₂ Obs₁ Obs₁' Obs₂ Dist₁ Dist₁' Dist₂ Int₁ Int₁' Int₂ Ext : Type}
+  {A : Becoming.OpenComposition.OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext}
+  {A' : Becoming.OpenComposition.OpenComponent S₁' Obs₁' Dist₁' Int₁' Ext}
+  {B : Becoming.OpenComposition.OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext} {init₁ : S₁} {init₁' : S₁'} {init₂ : S₂}
+  {cA : Becoming.OpenComposition.InterfaceContract A init₁} {cA' : Becoming.OpenComposition.InterfaceContract A' init₁'}
+  (cB : Becoming.OpenComposition.InterfaceContract B init₂) {obs₁ : (Ext → Nat) → Obs₁} {obs₁' : (Ext → Nat) → Obs₁'}
+  (obs₂ : (Ext → Nat) → Obs₂) {warnLevel : Ext → Nat},
+  Becoming.OpenComposition.ContractRefines cA cA' obs₁ obs₁' warnLevel →
+    Becoming.OpenComposition.ContractRefines (Becoming.OpenComposition.composeContract cA cB)
+      (Becoming.OpenComposition.composeContract cA' cB) (fun x => (obs₁ x, obs₂ x)) (fun x => (obs₁' x, obs₂ x))
+      warnLevel
+@Becoming.AlignmentSpine.ComposedSpine.contractRefines_compose_right : ∀
+  {S₁ S₂ S₂' Obs₁ Obs₂ Obs₂' Dist₁ Dist₂ Dist₂' Int₁ Int₂ Int₂' Ext : Type}
+  {A : Becoming.OpenComposition.OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext}
+  {B : Becoming.OpenComposition.OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext}
+  {B' : Becoming.OpenComposition.OpenComponent S₂' Obs₂' Dist₂' Int₂' Ext} {init₁ : S₁} {init₂ : S₂} {init₂' : S₂'}
+  (cA : Becoming.OpenComposition.InterfaceContract A init₁) {cB : Becoming.OpenComposition.InterfaceContract B init₂}
+  {cB' : Becoming.OpenComposition.InterfaceContract B' init₂'} (obs₁ : (Ext → Nat) → Obs₁) {obs₂ : (Ext → Nat) → Obs₂}
+  {obs₂' : (Ext → Nat) → Obs₂'} {warnLevel : Ext → Nat},
+  Becoming.OpenComposition.ContractRefines cB cB' obs₂ obs₂' warnLevel →
+    Becoming.OpenComposition.ContractRefines (Becoming.OpenComposition.composeContract cA cB)
+      (Becoming.OpenComposition.composeContract cA cB') (fun x => (obs₁ x, obs₂ x)) (fun x => (obs₁ x, obs₂' x))
+      warnLevel
+Becoming.AlignmentSpine.ComposedSpine.fleetContract_tol : ∀ (head : Becoming.UnifiedDrawdown.RestraintAgentSpec)
+  (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec) (warnFleet : Nat)
+  (oa : Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetObs tail × Bool)
+  (d : Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetDist tail),
+  (Becoming.AlignmentSpine.ComposedSpine.fleetSubContract head tail warnFleet).tol oa d
+@Becoming.AlignmentSpine.ComposedSpine.fleetHeadRefines : ∀ {head head' : Becoming.UnifiedDrawdown.RestraintAgentSpec},
+  Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens head head' →
+    ∀ (warnFleet : Nat) (warnLevel : Unit → Nat) (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec),
+      Becoming.OpenComposition.ContractRefines
+        (Becoming.AlignmentSpine.ComposedSpine.fleetSubContract head tail warnFleet)
+        (Becoming.AlignmentSpine.ComposedSpine.fleetSubContract head' tail warnFleet)
+        (Becoming.AlignmentSpine.ComposedSpine.fleetSubObs tail)
+        (Becoming.AlignmentSpine.ComposedSpine.fleetSubObs tail) warnLevel
+@Becoming.AlignmentSpine.ComposedSpine.spine_preCap_eq : ∀ {P : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) (base hProxyPre hProxySafe lagProxy lagPartner : Nat)
+  (safe_le : hProxySafe ≤ hProxyPre) (initProxy : Nat) (hInitProxy : initProxy ≤ lagProxy) (initPartner : Bool × Nat)
+  (hInitPartner : Becoming.EndogenousTurning.serviceK lagPartner initPartner)
+  (head : Becoming.UnifiedDrawdown.RestraintAgentSpec) (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec)
+  (warnFleet H_def_pre H_def_post T_gate H_coop : Nat) (post_le_pre : H_def_post ≤ H_def_pre),
+  (Becoming.AlignmentSpine.ComposedSpine.spineContract M base hProxyPre hProxySafe lagProxy lagPartner safe_le initProxy
+          hInitProxy initPartner hInitPartner head tail warnFleet H_def_pre H_def_post T_gate H_coop
+          post_le_pre).preCapExt
+      () =
+    hProxyPre + Becoming.AdaptiveLoops.natMax (M.draw M.ext) (M.draw M.safe) +
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.specSum (fun s => s.preCap) head tail +
+      (H_def_pre + H_coop)
+@Becoming.AlignmentSpine.ComposedSpine.spine_postCap_eq : ∀ {P : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) (base hProxyPre hProxySafe lagProxy lagPartner : Nat)
+  (safe_le : hProxySafe ≤ hProxyPre) (initProxy : Nat) (hInitProxy : initProxy ≤ lagProxy) (initPartner : Bool × Nat)
+  (hInitPartner : Becoming.EndogenousTurning.serviceK lagPartner initPartner)
+  (head : Becoming.UnifiedDrawdown.RestraintAgentSpec) (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec)
+  (warnFleet H_def_pre H_def_post T_gate H_coop : Nat) (post_le_pre : H_def_post ≤ H_def_pre),
+  (Becoming.AlignmentSpine.ComposedSpine.spineContract M base hProxyPre hProxySafe lagProxy lagPartner safe_le initProxy
+          hInitProxy initPartner hInitPartner head tail warnFleet H_def_pre H_def_post T_gate H_coop
+          post_le_pre).postBudgetExt
+      () =
+    hProxySafe + M.draw M.safe + Becoming.UnifiedDrawdown.OpenCompositionBridge.specSum (fun s => s.postCap) head tail +
+      (H_def_post + H_coop)
+@Becoming.AlignmentSpine.ComposedSpine.spine_silence_eq : ∀ {P : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) (base hProxyPre hProxySafe lagProxy lagPartner : Nat)
+  (safe_le : hProxySafe ≤ hProxyPre) (initProxy : Nat) (hInitProxy : initProxy ≤ lagProxy) (initPartner : Bool × Nat)
+  (hInitPartner : Becoming.EndogenousTurning.serviceK lagPartner initPartner)
+  (head : Becoming.UnifiedDrawdown.RestraintAgentSpec) (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec)
+  (warnFleet H_def_pre H_def_post T_gate H_coop : Nat) (post_le_pre : H_def_post ≤ H_def_pre),
+  (Becoming.AlignmentSpine.ComposedSpine.spineContract M base hProxyPre hProxySafe lagProxy lagPartner safe_le initProxy
+        hInitProxy initPartner hInitPartner head tail warnFleet H_def_pre H_def_post T_gate H_coop
+        post_le_pre).maxSilence =
+    Becoming.AlignmentSpine.ComposedSpine.spineSilence head tail
+@Becoming.AlignmentSpine.ComposedSpine.spine_maxLag_eq : ∀ {P : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) (base hProxyPre hProxySafe lagProxy lagPartner : Nat)
+  (safe_le : hProxySafe ≤ hProxyPre) (initProxy : Nat) (hInitProxy : initProxy ≤ lagProxy) (initPartner : Bool × Nat)
+  (hInitPartner : Becoming.EndogenousTurning.serviceK lagPartner initPartner)
+  (head : Becoming.UnifiedDrawdown.RestraintAgentSpec) (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec)
+  (warnFleet H_def_pre H_def_post T_gate H_coop : Nat) (post_le_pre : H_def_post ≤ H_def_pre),
+  (Becoming.AlignmentSpine.ComposedSpine.spineContract M base hProxyPre hProxySafe lagProxy lagPartner safe_le initProxy
+        hInitProxy initPartner hInitPartner head tail warnFleet H_def_pre H_def_post T_gate H_coop post_le_pre).maxLag =
+    Becoming.AlignmentSpine.ComposedSpine.spineMaxLag lagProxy lagPartner head tail T_gate
+@Becoming.AlignmentSpine.ComposedSpine.spine_eta_eq : ∀ {P : Type} (M : Becoming.EndogenousTurning.ServiceTaskModel P)
+  (base hProxyPre hProxySafe lagProxy lagPartner : Nat) (safe_le : hProxySafe ≤ hProxyPre) (initProxy : Nat)
+  (hInitProxy : initProxy ≤ lagProxy) (initPartner : Bool × Nat)
+  (hInitPartner : Becoming.EndogenousTurning.serviceK lagPartner initPartner)
+  (head : Becoming.UnifiedDrawdown.RestraintAgentSpec) (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec)
+  (warnFleet H_def_pre H_def_post T_gate H_coop : Nat) (post_le_pre : H_def_post ≤ H_def_pre),
+  (Becoming.AlignmentSpine.ComposedSpine.spineContract M base hProxyPre hProxySafe lagProxy lagPartner safe_le initProxy
+          hInitProxy initPartner hInitPartner head tail warnFleet H_def_pre H_def_post T_gate H_coop post_le_pre).eta
+      (Becoming.AlignmentSpine.ComposedSpine.spineInit initProxy initPartner head tail T_gate) =
+    Becoming.AlignmentSpine.ComposedSpine.spineInitEta initProxy initPartner head tail T_gate
+@Becoming.AlignmentSpine.ComposedSpine.spine_obs_detects : ∀ {P : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) (base : Nat),
+  M.upkeep M.ext ≤ base →
+    ∀ (hProxyPre hProxySafe lagProxy lagPartner : Nat) (safe_le : hProxySafe ≤ hProxyPre) (initProxy : Nat)
+      (hInitProxy : initProxy ≤ lagProxy) (initPartner : Bool × Nat)
+      (hInitPartner : Becoming.EndogenousTurning.serviceK lagPartner initPartner)
+      (head : Becoming.UnifiedDrawdown.RestraintAgentSpec) (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec)
+      (warnFleet H_def_pre H_def_post T_gate H_coop : Nat) (post_le_pre : H_def_post ≤ H_def_pre)
+      (warnScope warnLevel : Nat),
+      warnLevel ≤ M.B_task ∨ warnLevel ≤ warnFleet ∨ warnLevel ≤ warnScope →
+        ∀ (x : Unit → Nat) (k : Unit),
+          x k < warnLevel →
+            (Becoming.AlignmentSpine.ComposedSpine.spineContract M base hProxyPre hProxySafe lagProxy lagPartner safe_le
+                  initProxy hInitProxy initPartner hInitPartner head tail warnFleet H_def_pre H_def_post T_gate H_coop
+                  post_le_pre).warnObs
+              (Becoming.AlignmentSpine.ComposedSpine.spineObs M base tail warnScope x)
+@Becoming.AlignmentSpine.ComposedSpine.master_alignment_spine_viable : ∀ {P Env : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) (base : Nat),
+  M.upkeep M.ext ≤ base →
+    ∀ (hProxyPre hProxySafe lagProxy lagPartner : Nat) (safe_le : hProxySafe ≤ hProxyPre) (initProxy : Nat)
+      (hInitProxy : initProxy ≤ lagProxy) (initPartner : Bool × Nat)
+      (hInitPartner : Becoming.EndogenousTurning.serviceK lagPartner initPartner)
+      (head : Becoming.UnifiedDrawdown.RestraintAgentSpec) (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec)
+      (warnFleet H_def_pre H_def_post T_gate H_coop : Nat) (post_le_pre : H_def_post ≤ H_def_pre) (warnScope : Nat)
+      (channel : Bool → Nat → Env → Bool) (G : Unit → (Unit → Nat) → Nat) (envDraw : Env → Unit → Nat)
+      (envCap : Unit → Nat) (jointAdm : Env → Prop),
+      (∀ (env : Env), jointAdm env → ∀ (k : Unit), envDraw env k ≤ envCap k) →
+        ∀ (x_crit H_safe x₀ : Unit → Nat) (warnLevel : Nat),
+          warnLevel ≤ M.B_task ∨ warnLevel ≤ warnFleet ∨ warnLevel ≤ warnScope →
+            (∀ (load : Nat) (env : Env),
+                jointAdm env →
+                  load ≤ Becoming.AlignmentSpine.ComposedSpine.spineSilence head tail → channel true load env = true) →
+              (∀ (k : Unit), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G k)) →
+                (∀ (k : Unit),
+                    x_crit k ≤
+                      Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit k) →
+                  Becoming.AlignmentSpine.ComposedSpine.spinePostTotal M hProxySafe head tail H_def_post H_coop envCap ≤
+                      H_safe () →
+                    x_crit () +
+                          (Becoming.AlignmentSpine.ComposedSpine.spineMaxLag lagProxy lagPartner head tail T_gate + 1) *
+                            Becoming.AlignmentSpine.ComposedSpine.spinePreTotal M hProxyPre head tail H_def_pre H_coop
+                              envCap ≤
+                        warnLevel →
+                      x_crit () +
+                            Becoming.AlignmentSpine.ComposedSpine.spineInitEta initProxy initPartner head tail T_gate *
+                              Becoming.AlignmentSpine.ComposedSpine.spinePreTotal M hProxyPre head tail H_def_pre H_coop
+                                envCap ≤
+                          x₀ () →
+                        Becoming.Viability.Kernel
+                          (Becoming.OpenComposition.closedProcess
+                            (Becoming.AlignmentSpine.ComposedSpine.spineComponent M base hProxyPre hProxySafe head tail
+                              warnFleet H_def_pre H_def_post T_gate H_coop)
+                            (Becoming.AlignmentSpine.ComposedSpine.spineContract M base hProxyPre hProxySafe lagProxy
+                              lagPartner safe_le initProxy hInitProxy initPartner hInitPartner head tail warnFleet
+                              H_def_pre H_def_post T_gate H_coop post_le_pre)
+                            (Becoming.AlignmentSpine.ComposedSpine.spineObs M base tail warnScope) channel G envDraw
+                            jointAdm)
+                          (Becoming.OpenComposition.closedGuard
+                            (Becoming.AlignmentSpine.ComposedSpine.spineComponent M base hProxyPre hProxySafe head tail
+                              warnFleet H_def_pre H_def_post T_gate H_coop)
+                            (Becoming.AlignmentSpine.ComposedSpine.spineContract M base hProxyPre hProxySafe lagProxy
+                              lagPartner safe_le initProxy hInitProxy initPartner hInitPartner head tail warnFleet
+                              H_def_pre H_def_post T_gate H_coop post_le_pre)
+                            x_crit)
+                          (x₀, Becoming.AlignmentSpine.ComposedSpine.spineInit initProxy initPartner head tail T_gate)
+@Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_turning_viable : ∀ {P S_T' Obs_T' Dist_T' Int_T' Env : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) (base : Nat),
+  M.upkeep M.ext ≤ base →
+    ∀ (hProxyPre hProxySafe lagProxy lagPartner : Nat) (safe_le : hProxySafe ≤ hProxyPre) (initProxy : Nat)
+      (hInitProxy : initProxy ≤ lagProxy) (initPartner : Bool × Nat)
+      (hInitPartner : Becoming.EndogenousTurning.serviceK lagPartner initPartner)
+      (head : Becoming.UnifiedDrawdown.RestraintAgentSpec) (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec)
+      (warnFleet H_def_pre H_def_post T_gate H_coop : Nat) (post_le_pre : H_def_post ≤ H_def_pre) (warnScope : Nat)
+      (T' : Becoming.OpenComposition.OpenComponent S_T' Obs_T' Dist_T' Int_T' Unit) {initT' : S_T'}
+      (cT' : Becoming.OpenComposition.InterfaceContract T' initT') (obsT' : (Unit → Nat) → Obs_T')
+      (channel : Bool → Nat → Env → Bool) (G : Unit → (Unit → Nat) → Nat) (envDraw : Env → Unit → Nat)
+      (envCap : Unit → Nat) (jointAdm : Env → Prop),
+      (∀ (env : Env), jointAdm env → ∀ (k : Unit), envDraw env k ≤ envCap k) →
+        ∀ (x_crit H_safe x₀ : Unit → Nat) (warnLevel : Nat),
+          (Becoming.OpenComposition.ContractRefines
+              (Becoming.AlignmentSpine.ComposedSpine.turningContract M base hProxyPre hProxySafe lagProxy lagPartner
+                safe_le initProxy hInitProxy initPartner hInitPartner)
+              cT' (Becoming.AlignmentSpine.ComposedSpine.turningObs M base) obsT' fun x => warnLevel) →
+            warnLevel ≤ M.B_task ∨ warnLevel ≤ warnFleet ∨ warnLevel ≤ warnScope →
+              (∀ (load : Nat) (env : Env),
+                  jointAdm env →
+                    load ≤ Becoming.AlignmentSpine.ComposedSpine.spineSilence head tail →
+                      channel true load env = true) →
+                (∀ (k : Unit), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G k)) →
+                  (∀ (k : Unit),
+                      x_crit k ≤
+                        Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit
+                          k) →
+                    Becoming.AlignmentSpine.ComposedSpine.spinePostTotal M hProxySafe head tail H_def_post H_coop
+                          envCap ≤
+                        H_safe () →
+                      x_crit () +
+                            (Becoming.AlignmentSpine.ComposedSpine.spineMaxLag lagProxy lagPartner head tail T_gate +
+                                1) *
+                              Becoming.AlignmentSpine.ComposedSpine.spinePreTotal M hProxyPre head tail H_def_pre H_coop
+                                envCap ≤
+                          warnLevel →
+                        x_crit () +
+                              Becoming.AlignmentSpine.ComposedSpine.spineInitEta initProxy initPartner head tail
+                                  T_gate *
+                                Becoming.AlignmentSpine.ComposedSpine.spinePreTotal M hProxyPre head tail H_def_pre
+                                  H_coop envCap ≤
+                            x₀ () →
+                          Becoming.Viability.Kernel
+                            (Becoming.OpenComposition.closedProcess
+                              ((T'.compose (Becoming.AlignmentSpine.ComposedSpine.fleetSub head tail warnFleet)).compose
+                                (Becoming.AlignmentSpine.ComposedSpine.scopeSub H_def_pre H_def_post T_gate H_coop))
+                              (Becoming.OpenComposition.composeContract
+                                (Becoming.OpenComposition.composeContract cT'
+                                  (Becoming.AlignmentSpine.ComposedSpine.fleetSubContract head tail warnFleet))
+                                (Becoming.AlignmentSpine.ComposedSpine.scopeSubContract H_def_pre H_def_post T_gate
+                                  H_coop post_le_pre))
+                              (fun x =>
+                                ((obsT' x, Becoming.AlignmentSpine.ComposedSpine.fleetSubObs tail x),
+                                  Becoming.AlignmentSpine.ComposedSpine.scopeSubObs warnScope x))
+                              channel G envDraw jointAdm)
+                            (Becoming.OpenComposition.closedGuard
+                              ((T'.compose (Becoming.AlignmentSpine.ComposedSpine.fleetSub head tail warnFleet)).compose
+                                (Becoming.AlignmentSpine.ComposedSpine.scopeSub H_def_pre H_def_post T_gate H_coop))
+                              (Becoming.OpenComposition.composeContract
+                                (Becoming.OpenComposition.composeContract cT'
+                                  (Becoming.AlignmentSpine.ComposedSpine.fleetSubContract head tail warnFleet))
+                                (Becoming.AlignmentSpine.ComposedSpine.scopeSubContract H_def_pre H_def_post T_gate
+                                  H_coop post_le_pre))
+                              x_crit)
+                            (x₀, (initT', Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetInit head tail), T_gate,
+                              ())
+@Becoming.AlignmentSpine.ComposedSpine.master_spine_live_reconfig_viable : ∀ {P S_T' Obs_T' Dist_T' Int_T' Env : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) (base : Nat),
+  M.upkeep M.ext ≤ base →
+    ∀ (hProxyPre hProxySafe lagProxy lagPartner : Nat) (safe_le : hProxySafe ≤ hProxyPre) (initProxy : Nat)
+      (hInitProxy : initProxy ≤ lagProxy) (initPartner : Bool × Nat)
+      (hInitPartner : Becoming.EndogenousTurning.serviceK lagPartner initPartner)
+      (head : Becoming.UnifiedDrawdown.RestraintAgentSpec) (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec)
+      (warnFleet H_def_pre H_def_post T_gate H_coop : Nat) (post_le_pre : H_def_post ≤ H_def_pre) (warnScope : Nat)
+      (T' : Becoming.OpenComposition.OpenComponent S_T' Obs_T' Dist_T' Int_T' Unit) {initT' : S_T'}
+      (cT' : Becoming.OpenComposition.InterfaceContract T' initT') (obsT' : (Unit → Nat) → Obs_T')
+      (channel : Bool → Nat → Env → Bool) (G : Unit → (Unit → Nat) → Nat) (envDraw : Env → Unit → Nat)
+      (envCap : Unit → Nat) (jointAdm : Env → Prop),
+      (∀ (env : Env), jointAdm env → ∀ (k : Unit), envDraw env k ≤ envCap k) →
+        ∀ (x_crit H_safe x₀ : Unit → Nat) (warnLevel : Nat),
+          cT'.preCapExt () ≤ hProxyPre + Becoming.AdaptiveLoops.natMax (M.draw M.ext) (M.draw M.safe) →
+            cT'.postBudgetExt () ≤ hProxySafe + M.draw M.safe →
+              cT'.maxSilence ≤ 0 →
+                cT'.maxLag ≤ Becoming.AdaptiveLoops.natMax lagProxy lagPartner →
+                  (∀ (x : Unit → Nat), x () < warnLevel → cT'.warnObs (obsT' x)) →
+                    warnLevel ≤ M.B_task ∨ warnLevel ≤ warnFleet ∨ warnLevel ≤ warnScope →
+                      (∀ (load : Nat) (env : Env),
+                          jointAdm env →
+                            load ≤ Becoming.AlignmentSpine.ComposedSpine.spineSilence head tail →
+                              channel true load env = true) →
+                        (∀ (k : Unit),
+                            Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G k)) →
+                          (∀ (k : Unit),
+                              x_crit k ≤
+                                Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe
+                                  x_crit k) →
+                            Becoming.AlignmentSpine.ComposedSpine.spinePostTotal M hProxySafe head tail H_def_post
+                                  H_coop envCap ≤
+                                H_safe () →
+                              x_crit () +
+                                    (Becoming.AlignmentSpine.ComposedSpine.spineMaxLag lagProxy lagPartner head tail
+                                          T_gate +
+                                        1) *
+                                      Becoming.AlignmentSpine.ComposedSpine.spinePreTotal M hProxyPre head tail
+                                        H_def_pre H_coop envCap ≤
+                                  warnLevel →
+                                x_crit () +
+                                      Becoming.AlignmentSpine.ComposedSpine.spineInitEta initProxy initPartner head tail
+                                          T_gate *
+                                        Becoming.AlignmentSpine.ComposedSpine.spinePreTotal M hProxyPre head tail
+                                          H_def_pre H_coop envCap ≤
+                                    x₀ () →
+                                  Becoming.Viability.Kernel
+                                    (Becoming.OpenComposition.ReconfigProcess
+                                      (Becoming.AlignmentSpine.ComposedSpine.spineComponent M base hProxyPre hProxySafe
+                                        head tail warnFleet H_def_pre H_def_post T_gate H_coop)
+                                      ((T'.compose
+                                            (Becoming.AlignmentSpine.ComposedSpine.fleetSub head tail
+                                              warnFleet)).compose
+                                        (Becoming.AlignmentSpine.ComposedSpine.scopeSub H_def_pre H_def_post T_gate
+                                          H_coop))
+                                      (Becoming.AlignmentSpine.ComposedSpine.spineContract M base hProxyPre hProxySafe
+                                        lagProxy lagPartner safe_le initProxy hInitProxy initPartner hInitPartner head
+                                        tail warnFleet H_def_pre H_def_post T_gate H_coop post_le_pre)
+                                      (Becoming.OpenComposition.composeContract
+                                        (Becoming.OpenComposition.composeContract cT'
+                                          (Becoming.AlignmentSpine.ComposedSpine.fleetSubContract head tail warnFleet))
+                                        (Becoming.AlignmentSpine.ComposedSpine.scopeSubContract H_def_pre H_def_post
+                                          T_gate H_coop post_le_pre))
+                                      (Becoming.AlignmentSpine.ComposedSpine.spineObs M base tail warnScope)
+                                      (fun x =>
+                                        ((obsT' x, Becoming.AlignmentSpine.ComposedSpine.fleetSubObs tail x),
+                                          Becoming.AlignmentSpine.ComposedSpine.scopeSubObs warnScope x))
+                                      channel G envDraw jointAdm)
+                                    (fun st =>
+                                      match st with
+                                      | Sum.inl st₁ =>
+                                        Becoming.OpenComposition.closedGuard
+                                          (Becoming.AlignmentSpine.ComposedSpine.spineComponent M base hProxyPre
+                                            hProxySafe head tail warnFleet H_def_pre H_def_post T_gate H_coop)
+                                          (Becoming.AlignmentSpine.ComposedSpine.spineContract M base hProxyPre
+                                            hProxySafe lagProxy lagPartner safe_le initProxy hInitProxy initPartner
+                                            hInitPartner head tail warnFleet H_def_pre H_def_post T_gate H_coop
+                                            post_le_pre)
+                                          x_crit st₁
+                                      | Sum.inr st₂ =>
+                                        Becoming.OpenComposition.closedGuard
+                                          ((T'.compose
+                                                (Becoming.AlignmentSpine.ComposedSpine.fleetSub head tail
+                                                  warnFleet)).compose
+                                            (Becoming.AlignmentSpine.ComposedSpine.scopeSub H_def_pre H_def_post T_gate
+                                              H_coop))
+                                          (Becoming.OpenComposition.composeContract
+                                            (Becoming.OpenComposition.composeContract cT'
+                                              (Becoming.AlignmentSpine.ComposedSpine.fleetSubContract head tail
+                                                warnFleet))
+                                            (Becoming.AlignmentSpine.ComposedSpine.scopeSubContract H_def_pre H_def_post
+                                              T_gate H_coop post_le_pre))
+                                          x_crit st₂)
+                                    (Sum.inl
+                                      (x₀,
+                                        Becoming.AlignmentSpine.ComposedSpine.spineInit initProxy initPartner head tail
+                                          T_gate))
+@Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_fleet_viable : ∀ {P Env : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) (base : Nat),
+  M.upkeep M.ext ≤ base →
+    ∀ (hProxyPre hProxySafe lagProxy lagPartner : Nat) (safe_le : hProxySafe ≤ hProxyPre) (initProxy : Nat)
+      (hInitProxy : initProxy ≤ lagProxy) (initPartner : Bool × Nat)
+      (hInitPartner : Becoming.EndogenousTurning.serviceK lagPartner initPartner)
+      (head head' : Becoming.UnifiedDrawdown.RestraintAgentSpec)
+      (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec),
+      Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens head head' →
+        ∀ (warnFleet H_def_pre H_def_post T_gate H_coop : Nat) (post_le_pre : H_def_post ≤ H_def_pre) (warnScope : Nat)
+          (channel : Bool → Nat → Env → Bool) (G : Unit → (Unit → Nat) → Nat) (envDraw : Env → Unit → Nat)
+          (envCap : Unit → Nat) (jointAdm : Env → Prop),
+          (∀ (env : Env), jointAdm env → ∀ (k : Unit), envDraw env k ≤ envCap k) →
+            ∀ (x_crit H_safe x₀ : Unit → Nat) (warnLevel : Nat),
+              warnLevel ≤ M.B_task ∨ warnLevel ≤ warnFleet ∨ warnLevel ≤ warnScope →
+                (∀ (load : Nat) (env : Env),
+                    jointAdm env →
+                      load ≤ Becoming.AlignmentSpine.ComposedSpine.spineSilence head tail →
+                        channel true load env = true) →
+                  (∀ (k : Unit), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G k)) →
+                    (∀ (k : Unit),
+                        x_crit k ≤
+                          Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit
+                            k) →
+                      Becoming.AlignmentSpine.ComposedSpine.spinePostTotal M hProxySafe head tail H_def_post H_coop
+                            envCap ≤
+                          H_safe () →
+                        x_crit () +
+                              (Becoming.AlignmentSpine.ComposedSpine.spineMaxLag lagProxy lagPartner head tail T_gate +
+                                  1) *
+                                Becoming.AlignmentSpine.ComposedSpine.spinePreTotal M hProxyPre head tail H_def_pre
+                                  H_coop envCap ≤
+                            warnLevel →
+                          x_crit () +
+                                Becoming.AlignmentSpine.ComposedSpine.spineInitEta initProxy initPartner head tail
+                                    T_gate *
+                                  Becoming.AlignmentSpine.ComposedSpine.spinePreTotal M hProxyPre head tail H_def_pre
+                                    H_coop envCap ≤
+                              x₀ () →
+                            Becoming.Viability.Kernel
+                              (Becoming.OpenComposition.closedProcess
+                                (Becoming.AlignmentSpine.ComposedSpine.spineComponent M base hProxyPre hProxySafe head'
+                                  tail warnFleet H_def_pre H_def_post T_gate H_coop)
+                                (Becoming.AlignmentSpine.ComposedSpine.spineContract M base hProxyPre hProxySafe
+                                  lagProxy lagPartner safe_le initProxy hInitProxy initPartner hInitPartner head' tail
+                                  warnFleet H_def_pre H_def_post T_gate H_coop post_le_pre)
+                                (Becoming.AlignmentSpine.ComposedSpine.spineObs M base tail warnScope) channel G envDraw
+                                jointAdm)
+                              (Becoming.OpenComposition.closedGuard
+                                (Becoming.AlignmentSpine.ComposedSpine.spineComponent M base hProxyPre hProxySafe head'
+                                  tail warnFleet H_def_pre H_def_post T_gate H_coop)
+                                (Becoming.AlignmentSpine.ComposedSpine.spineContract M base hProxyPre hProxySafe
+                                  lagProxy lagPartner safe_le initProxy hInitProxy initPartner hInitPartner head' tail
+                                  warnFleet H_def_pre H_def_post T_gate H_coop post_le_pre)
+                                x_crit)
+                              (x₀,
+                                Becoming.AlignmentSpine.ComposedSpine.spineInit initProxy initPartner head' tail T_gate)
+@Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_scope_viable : ∀ {P S_D' Obs_D' Dist_D' Int_D' Env : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) (base : Nat),
+  M.upkeep M.ext ≤ base →
+    ∀ (hProxyPre hProxySafe lagProxy lagPartner : Nat) (safe_le : hProxySafe ≤ hProxyPre) (initProxy : Nat)
+      (hInitProxy : initProxy ≤ lagProxy) (initPartner : Bool × Nat)
+      (hInitPartner : Becoming.EndogenousTurning.serviceK lagPartner initPartner)
+      (head : Becoming.UnifiedDrawdown.RestraintAgentSpec) (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec)
+      (warnFleet H_def_pre H_def_post T_gate H_coop : Nat) (post_le_pre : H_def_post ≤ H_def_pre) (warnScope : Nat)
+      (D' : Becoming.OpenComposition.OpenComponent S_D' Obs_D' Dist_D' Int_D' Unit) {initD' : S_D'}
+      (cD' : Becoming.OpenComposition.InterfaceContract D' initD') (obsD' : (Unit → Nat) → Obs_D')
+      (channel : Bool → Nat → Env → Bool) (G : Unit → (Unit → Nat) → Nat) (envDraw : Env → Unit → Nat)
+      (envCap : Unit → Nat) (jointAdm : Env → Prop),
+      (∀ (env : Env), jointAdm env → ∀ (k : Unit), envDraw env k ≤ envCap k) →
+        ∀ (x_crit H_safe x₀ : Unit → Nat) (warnLevel : Nat),
+          (Becoming.OpenComposition.ContractRefines
+              (Becoming.ScopeDynamics.OpenCompositionBridge.gatedDefectorContract H_def_pre H_def_post T_gate
+                post_le_pre)
+              cD' (Becoming.ScopeDynamics.reciprocalObs warnScope ()) obsD' fun x => warnLevel) →
+            warnLevel ≤ M.B_task ∨ warnLevel ≤ warnFleet ∨ warnLevel ≤ warnScope →
+              (∀ (load : Nat) (env : Env),
+                  jointAdm env →
+                    load ≤ Becoming.AlignmentSpine.ComposedSpine.spineSilence head tail →
+                      channel true load env = true) →
+                (∀ (k : Unit), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G k)) →
+                  (∀ (k : Unit),
+                      x_crit k ≤
+                        Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit
+                          k) →
+                    Becoming.AlignmentSpine.ComposedSpine.spinePostTotal M hProxySafe head tail H_def_post H_coop
+                          envCap ≤
+                        H_safe () →
+                      x_crit () +
+                            (Becoming.AlignmentSpine.ComposedSpine.spineMaxLag lagProxy lagPartner head tail T_gate +
+                                1) *
+                              Becoming.AlignmentSpine.ComposedSpine.spinePreTotal M hProxyPre head tail H_def_pre H_coop
+                                envCap ≤
+                          warnLevel →
+                        x_crit () +
+                              Becoming.AlignmentSpine.ComposedSpine.spineInitEta initProxy initPartner head tail
+                                  T_gate *
+                                Becoming.AlignmentSpine.ComposedSpine.spinePreTotal M hProxyPre head tail H_def_pre
+                                  H_coop envCap ≤
+                            x₀ () →
+                          Becoming.Viability.Kernel
+                            (Becoming.OpenComposition.closedProcess
+                              (((Becoming.AlignmentSpine.ComposedSpine.turningSub M base hProxyPre hProxySafe).compose
+                                    (Becoming.AlignmentSpine.ComposedSpine.fleetSub head tail warnFleet)).compose
+                                (D'.compose (Becoming.ScopeDynamics.OpenCompositionBridge.coopComponent H_coop)))
+                              (Becoming.OpenComposition.composeContract
+                                (Becoming.OpenComposition.composeContract
+                                  (Becoming.AlignmentSpine.ComposedSpine.turningContract M base hProxyPre hProxySafe
+                                    lagProxy lagPartner safe_le initProxy hInitProxy initPartner hInitPartner)
+                                  (Becoming.AlignmentSpine.ComposedSpine.fleetSubContract head tail warnFleet))
+                                (Becoming.OpenComposition.composeContract cD'
+                                  (Becoming.ScopeDynamics.OpenCompositionBridge.coopContract H_coop)))
+                              (fun x =>
+                                ((Becoming.AlignmentSpine.ComposedSpine.turningObs M base x,
+                                    Becoming.AlignmentSpine.ComposedSpine.fleetSubObs tail x),
+                                  obsD' x, ()))
+                              channel G envDraw jointAdm)
+                            (Becoming.OpenComposition.closedGuard
+                              (((Becoming.AlignmentSpine.ComposedSpine.turningSub M base hProxyPre hProxySafe).compose
+                                    (Becoming.AlignmentSpine.ComposedSpine.fleetSub head tail warnFleet)).compose
+                                (D'.compose (Becoming.ScopeDynamics.OpenCompositionBridge.coopComponent H_coop)))
+                              (Becoming.OpenComposition.composeContract
+                                (Becoming.OpenComposition.composeContract
+                                  (Becoming.AlignmentSpine.ComposedSpine.turningContract M base hProxyPre hProxySafe
+                                    lagProxy lagPartner safe_le initProxy hInitProxy initPartner hInitPartner)
+                                  (Becoming.AlignmentSpine.ComposedSpine.fleetSubContract head tail warnFleet))
+                                (Becoming.OpenComposition.composeContract cD'
+                                  (Becoming.ScopeDynamics.OpenCompositionBridge.coopContract H_coop)))
+                              x_crit)
+                            (x₀,
+                              ((initProxy, initPartner),
+                                Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetInit head tail),
+                              initD', ())
+@Becoming.AlignmentSpine.ComposedSpine.spineContract_tol_lifts : ∀ {P : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) (base hProxyPre hProxySafe lagProxy lagPartner : Nat)
+  (safe_le : hProxySafe ≤ hProxyPre) (initProxy : Nat) (hInitProxy : initProxy ≤ lagProxy) (initPartner : Bool × Nat)
+  (hInitPartner : Becoming.EndogenousTurning.serviceK lagPartner initPartner)
+  (head : Becoming.UnifiedDrawdown.RestraintAgentSpec) (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec)
+  (warnFleet H_def_pre H_def_post T_gate H_coop : Nat) (post_le_pre : H_def_post ≤ H_def_pre) (warnHide : Unit → Nat)
+  (o : ((Unit × Nat) × Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetObs tail) × Bool × Unit) (xh : Unit → Nat)
+  (_al b : Bool) (d : ((Unit × Unit) × Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetDist tail) × Unit × Unit),
+  True →
+    (Becoming.AlignmentSpine.ComposedSpine.spineContract M base hProxyPre hProxySafe lagProxy lagPartner safe_le
+          initProxy hInitProxy initPartner hInitPartner head tail warnFleet H_def_pre H_def_post T_gate H_coop
+          post_le_pre).tol
+      (Becoming.AlignmentSpine.ComposedSpine.spineHideWireObs warnHide o xh, b) d
+@Becoming.AlignmentSpine.ComposedSpine.master_spine_hide_viable : ∀ {P Env : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) (base : Nat),
+  M.upkeep M.ext ≤ base →
+    ∀ (hProxyPre hProxySafe lagProxy lagPartner : Nat) (safe_le : hProxySafe ≤ hProxyPre) (initProxy : Nat)
+      (hInitProxy : initProxy ≤ lagProxy) (initPartner : Bool × Nat)
+      (hInitPartner : Becoming.EndogenousTurning.serviceK lagPartner initPartner)
+      (head : Becoming.UnifiedDrawdown.RestraintAgentSpec) (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec)
+      (warnFleet H_def_pre H_def_post T_gate H_coop : Nat) (post_le_pre : H_def_post ≤ H_def_pre)
+      (warnScope preHide postHide : Nat) (hPost : postHide ≤ preHide) (G_hide G_ext : Unit → (Unit → Nat) → Nat)
+      (x_crit_hide warnHide H_safe_hide x₀_hide : Unit → Nat)
+      (G_hide_rises :
+        ∀ (k : Unit), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G_hide k))
+      (hide_post_viable :
+        ∀ (k : Unit),
+          x_crit_hide k ≤
+            Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G_hide H_safe_hide x_crit_hide
+              k)
+      (hide_post_cap : postHide ≤ H_safe_hide ())
+      (hide_warn_margin :
+        x_crit_hide () +
+            (Becoming.AlignmentSpine.ComposedSpine.spineMaxLag lagProxy lagPartner head tail T_gate + 1) * preHide ≤
+          warnHide ())
+      (hide_init_margin :
+        x_crit_hide () +
+            Becoming.AlignmentSpine.ComposedSpine.spineInitEta initProxy initPartner head tail T_gate * preHide ≤
+          x₀_hide ())
+      (channel : Bool → Nat → Env → Bool) (envDraw : Env → Unit → Nat) (envCap : Unit → Nat) (jointAdm : Env → Prop),
+      (∀ (env : Env), jointAdm env → ∀ (k : Unit), envDraw env k ≤ envCap k) →
+        ∀ (x_crit_ext H_safe_ext x₀_ext : Unit → Nat) (warnLevel : Nat),
+          warnLevel ≤ M.B_task ∨ warnLevel ≤ warnFleet ∨ warnLevel ≤ warnScope →
+            (∀ (load : Nat) (env : Env),
+                jointAdm env →
+                  load ≤ Becoming.AlignmentSpine.ComposedSpine.spineSilence head tail → channel true load env = true) →
+              (∀ (k : Unit), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G_ext k)) →
+                (∀ (k : Unit),
+                    x_crit_ext k ≤
+                      Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G_ext H_safe_ext
+                        x_crit_ext k) →
+                  Becoming.AlignmentSpine.ComposedSpine.spinePostTotal M hProxySafe head tail H_def_post H_coop envCap ≤
+                      H_safe_ext () →
+                    x_crit_ext () +
+                          (Becoming.AlignmentSpine.ComposedSpine.spineMaxLag lagProxy lagPartner head tail T_gate + 1) *
+                            Becoming.AlignmentSpine.ComposedSpine.spinePreTotal M hProxyPre head tail H_def_pre H_coop
+                              envCap ≤
+                        warnLevel →
+                      x_crit_ext () +
+                            Becoming.AlignmentSpine.ComposedSpine.spineInitEta initProxy initPartner head tail T_gate *
+                              Becoming.AlignmentSpine.ComposedSpine.spinePreTotal M hProxyPre head tail H_def_pre H_coop
+                                envCap ≤
+                          x₀_ext () →
+                        let baseComp :=
+                          Becoming.AlignmentSpine.ComposedSpine.spineComponent M base hProxyPre hProxySafe head tail
+                            warnFleet H_def_pre H_def_post T_gate H_coop;
+                        let baseContr :=
+                          Becoming.AlignmentSpine.ComposedSpine.spineContract M base hProxyPre hProxySafe lagProxy
+                            lagPartner safe_le initProxy hInitProxy initPartner hInitPartner head tail warnFleet
+                            H_def_pre H_def_post T_gate H_coop post_le_pre;
+                        let siteComp :=
+                          Becoming.AlignmentSpine.ComposedSpine.withHiddenSite baseComp baseContr preHide postHide;
+                        let siteContr :=
+                          Becoming.AlignmentSpine.ComposedSpine.withHiddenSiteContract baseContr preHide postHide hPost;
+                        let hiddenComp :=
+                          siteComp.hide G_hide (Becoming.AlignmentSpine.ComposedSpine.spineHideWireObs warnHide);
+                        have hiddenContr :=
+                          Becoming.OpenComposition.hideContract siteContr G_hide
+                            (Becoming.AlignmentSpine.ComposedSpine.spineHideWireObs warnHide) (fun x x_1 => True)
+                            baseContr.warnObs x_crit_hide warnHide H_safe_hide x₀_hide ⋯ G_hide_rises ⋯ ⋯
+                            hide_post_viable ⋯ ⋯ ⋯;
+                        have proc :=
+                          Becoming.OpenComposition.closedProcess hiddenComp hiddenContr
+                            (Becoming.AlignmentSpine.ComposedSpine.spineObs M base tail warnScope) channel G_ext envDraw
+                            jointAdm;
+                        Becoming.Viability.Kernel proc
+                            (Becoming.OpenComposition.closedGuard hiddenComp hiddenContr x_crit_ext)
+                            (x₀_ext,
+                              Becoming.AlignmentSpine.ComposedSpine.spineInit initProxy initPartner head tail T_gate,
+                              x₀_hide) ∧
+                          ∀
+                            (st :
+                              (Unit → Nat) ×
+                                (((Nat × Bool × Nat) × Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetState tail) ×
+                                    Nat × Unit) ×
+                                  (Unit → Nat)),
+                            Becoming.Reach proc
+                                (x₀_ext,
+                                  Becoming.AlignmentSpine.ComposedSpine.spineInit initProxy initPartner head tail
+                                    T_gate,
+                                  x₀_hide)
+                                st →
+                              x_crit_hide () ≤ st.snd.snd ()
+@Becoming.AlignmentSpine.ComposedSpine.master_spine_multiscale_transfer : ∀ {S₁ A₁ Q₁ B₁ S₂ A₂ Q₂ B₂ F C K_cap : Type}
+  {P₁ : Generative.Process S₁ A₁} {R₁ : Generative.Process Q₁ B₁} {π₁ : S₁ → Q₁} {M₁ : Becoming.SlackDist Q₁}
+  {P₂ : Generative.Process S₂ A₂} {R₂ : Generative.Process Q₂ B₂} {π₂ : S₂ → Q₂} {M₂ : Becoming.SlackDist Q₂}
+  {σ : Nat → Nat} (sim₁ : Becoming.LaxSim P₁ R₁ π₁ σ M₁) (sim₂ : Becoming.LaxSim P₂ R₂ π₂ σ M₂)
+  {guardQ K : Q₁ × Q₂ → Prop} {guardProd : S₁ × S₂ → Prop},
+  Becoming.Viability.Certificate (Becoming.OpenComposition.prodProcess R₁ R₂) guardQ K →
+    ∀ (Δ : Nat),
+      Becoming.AdaptiveLoops.natMax (sim₁.α Δ) (sim₂.α Δ) + Becoming.AdaptiveLoops.natMax sim₁.ε sim₂.ε ≤ Δ →
+        (∀ (q : Q₁ × Q₂) (u : S₁ × S₂),
+            guardQ q →
+              Becoming.AdaptiveLoops.natMax (M₁.d (π₁ u.fst) q.fst) (M₂.d (π₂ u.snd) q.snd) ≤
+                  Becoming.AdaptiveLoops.natMax (sim₁.β Δ) (sim₂.β Δ) + Becoming.AdaptiveLoops.natMax sim₁.η sim₂.η →
+                guardProd u) →
+          ∀ {s₁₀ : S₁} {s₂₀ : S₂},
+            sim₁.Epoch (σ 0) s₁₀ →
+              sim₂.Epoch (σ 0) s₂₀ →
+                K (π₁ s₁₀, π₂ s₂₀) →
+                  ∀ (r : Becoming.Run (Becoming.OpenComposition.prodProcess P₁ P₂)),
+                    r.state 0 = (s₁₀, s₂₀) →
+                      ∀ (W : Becoming.Web F C) (cap : F → K_cap) (T : Nat),
+                        (Becoming.ReserveSafe (fun t => guardProd (r.state t)) T →
+                            ∀ (s t : Nat),
+                              T ≤ s →
+                                s ≤ t →
+                                  ∀ (k : K_cap),
+                                    W.MacroAdmits cap (W.level s) s k → W.MacroAdmits cap (W.level t) t k) →
+                          (∀ (t : Nat), T ≤ t → ∃ f, W.Admits (W.level t) t f ∧ ¬W.Admits (W.level (t + 1)) (t + 1) f) →
+                            Becoming.Viability.Kernel (Becoming.OpenComposition.prodProcess P₁ P₂) guardProd
+                                (s₁₀, s₂₀) ∧
+                              Becoming.ReserveSafe (fun t => guardProd (r.state t)) T ∧
+                                Becoming.TransformsViably W (fun t => guardProd (r.state t)) cap T
+Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.spineTaskModel_B_task : Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.spineTaskModel.B_task =
+  42
+Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.gExt_rises : ∀ (k : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.gExt k)
+Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.gHide_rises : ∀ (k : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.gHide k)
+Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.initPartner_in : Becoming.EndogenousTurning.serviceK 2
+  Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.initPartner
+Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessTolLifts : ∀
+  (o :
+    ((Unit × Nat) ×
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetObs
+          [Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.agentF2]) ×
+      Bool × Unit)
+  (xh : Unit → Nat) (_al b : Bool)
+  (d :
+    ((Unit × Unit) ×
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetDist
+          [Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.agentF2]) ×
+      Unit × Unit),
+  True →
+    Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineContr.tol
+      (Becoming.AlignmentSpine.ComposedSpine.spineHideWireObs (fun x => 12) o xh, b) d
+Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessWireOuterWarn : ∀
+  (o :
+    ((Unit × Nat) ×
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetObs
+          [Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.agentF2]) ×
+      Bool × Unit)
+  (xh : Unit → Nat),
+  Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineContr.warnObs o →
+    Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineContr.warnObs
+      (Becoming.AlignmentSpine.ComposedSpine.spineHideWireObs (fun x => 12) o xh)
+Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessWireHideWarn : ∀
+  (o :
+    ((Unit × Nat) ×
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetObs
+          [Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.agentF2]) ×
+      Bool × Unit)
+  (xh : Unit → Nat),
+  (∃ k, xh k < 12) →
+    Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineContr.warnObs
+      (Becoming.AlignmentSpine.ComposedSpine.spineHideWireObs (fun x => 12) o xh)
+Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witness_viable : Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.spineTaskModel.B_task =
+    42 ∧
+  Becoming.Viability.Kernel
+      (Becoming.OpenComposition.closedProcess Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineComp
+        Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineContr
+        Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineObs
+        Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessChannel
+        Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.gExt (fun x x_1 => 0) fun x => True)
+      (Becoming.OpenComposition.closedGuard Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineComp
+        Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineContr fun x => 10)
+      (fun x => 46, Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineInit) ∧
+    ((Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.spineRun.state 0).fst () = 46 ∧
+        (Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.spineRun.state 1).fst () = 40 ∧
+          (Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.spineRun.state 2).fst () = 34 ∧
+            (Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.spineRun.state 3).fst () = 28 ∧
+              (Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.spineRun.state 4).fst () = 28 ∧
+                ∀ (t : Nat), 10 ≤ (Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.spineRun.state t).fst ()) ∧
+      Becoming.Viability.Kernel
+          (Becoming.OpenComposition.closedProcess
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessHiddenComp
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessHiddenContr
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineObs
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessChannel
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.gExt (fun x x_1 => 0) fun x => True)
+          (Becoming.OpenComposition.closedGuard
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessHiddenComp
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessHiddenContr fun x => 10)
+          (fun x => 46, Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineInit, fun x => 11) ∧
+        ((Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.hiddenRun.state 0).fst (),
+              (Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.hiddenRun.state 0).snd.snd ()) =
+            (46, 11) ∧
+          ((Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.hiddenRun.state 1).fst (),
+                (Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.hiddenRun.state 1).snd.snd ()) =
+              (40, 10) ∧
+            ((Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.hiddenRun.state 2).fst (),
+                  (Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.hiddenRun.state 2).snd.snd ()) =
+                (34, 9) ∧
+              ((Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.hiddenRun.state 3).fst (),
+                    (Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.hiddenRun.state 3).snd.snd ()) =
+                  (34, 9) ∧
+                Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessHiddenComp.drawInt
+                      (Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.hiddenRun.state 0).snd (Sum.inr ()) =
+                    2 ∧
+                  Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessHiddenComp.drawInt
+                        (Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.hiddenRun.state 1).snd (Sum.inr ()) =
+                      2 ∧
+                    Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessHiddenComp.drawInt
+                          (Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.hiddenRun.state 2).snd
+                          (Sum.inr ()) =
+                        1 ∧
+                      ∀ (t : Nat),
+                        10 ≤ (Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.hiddenRun.state t).fst () ∧
+                          5 ≤ (Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.hiddenRun.state t).snd.snd ()
+@Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_readsOnlyDynamics : ∀ {Pos F D : Type} (SpineLaw : D → Prop),
+  Becoming.ReadsOnlyDynamics fun d x => SpineLaw d
+@Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_admits_rival : ∀ {Pos F D : Type} (SpineLaw : D → Prop)
+  {d : D},
+  SpineLaw d →
+    ∀ (sig : Pos → Nat → F → Prop) {region : Pos → F → Prop},
+      (∃ p f, ¬region p f) →
+        SpineLaw d ∧ Becoming.Rival (Becoming.bounded region) ∧ ¬Becoming.Unrestricted (Becoming.bounded region)
+@Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_not_entails : ∀ {Pos F D : Type} (SpineLaw : D → Prop),
+  (∀ (d : D) (sig : Pos → Nat → F → Prop), SpineLaw d → Becoming.Unrestricted sig) →
+    ∀ (p : Pos) (f : F) {d : D}, ¬SpineLaw d
+@Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_cannot_entail_unrestricted : ∀ {Pos F D : Type}
+  (SpineLaw : D → Prop) (p : Pos) (f : F) {d : D},
+  SpineLaw d → ¬∀ (d' : D) (sig : Pos → Nat → F → Prop), SpineLaw d' → Becoming.Unrestricted sig
+@Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary : ∀ {Pos F : Type} (p : Pos) (f : F),
+  (Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.spineTaskModel.B_task = 42 ∧
+      Becoming.Viability.Kernel
+        (Becoming.OpenComposition.closedProcess
+          Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineComp
+          Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineContr
+          Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineObs
+          Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessChannel
+          Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.gExt (fun x x_1 => 0) fun x => True)
+        (Becoming.OpenComposition.closedGuard Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineComp
+          Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineContr fun x => 10)
+        (fun x => 46, Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineInit)) ∧
+    Becoming.Viability.Kernel
+        (Becoming.OpenComposition.prodProcess Becoming.WitnessTwoScale.P Becoming.WitnessTwoScale.P)
+        (fun u => Becoming.WitnessTwoScale.guardS u.fst ∧ Becoming.WitnessTwoScale.guardS u.snd)
+        (Becoming.WitnessTwoScale.s₀, Becoming.WitnessTwoScale.s₀) ∧
+      (∀ (drawA drawB : Nat → Nat) (nextA nextB : Nat → Unit → Nat) (rA rB : Nat),
+          (∀ (r : Nat), 1 ≤ drawA r) →
+            (∀ (r : Nat), 1 ≤ drawB r) →
+              (Becoming.Law.orbit
+                    (fun st =>
+                      (Becoming.RegimeMargin.step
+                          (fun z => Becoming.OpenComposition.WideningWitness.gShared () fun x => z)
+                          (drawA st.snd.fst + drawB st.snd.snd) st.fst,
+                        nextA st.snd.fst (), nextB st.snd.snd ()))
+                    (6, rA, rB) 6).fst =
+                0) ∧
+        (∀ (t : Nat),
+            9 ≤ (Becoming.EndogenousTurning.TurningWitness.timelyOrbit t).fst ∧
+              (Becoming.EndogenousTurning.TurningWitness.timelyOrbit t).fst ≤ 50) ∧
+          (∀ (t : Nat),
+              9 ≤ Becoming.EndogenousTurning.PartAWitness.constOrbit t ∧
+                Becoming.EndogenousTurning.PartAWitness.constOrbit t ≤ 50) ∧
+            (∀ (t : Nat), 9 ≤ Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigLevel t) ∧
+              (∀ (t : Nat), 9 ≤ (Becoming.EndogenousTurning.OpenCompositionBridge.widenedClosedRun.state t).fst ()) ∧
+                Becoming.Viability.Kernel
+                    (Becoming.OpenComposition.closedProcess
+                      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent
+                        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA
+                        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB,
+                          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC]
+                        19)
+                      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract
+                        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA
+                        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB,
+                          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC]
+                        19)
+                      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetObs
+                        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB,
+                          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC])
+                      (fun em x x_1 => em) Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG
+                      (fun x x_1 => 0) fun x => True)
+                    (Becoming.OpenComposition.closedGuard
+                      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent
+                        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA
+                        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB,
+                          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC]
+                        19)
+                      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract
+                        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA
+                        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB,
+                          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC]
+                        19)
+                      fun x => 4)
+                    (fun x => 14,
+                      Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetInit
+                        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA
+                        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB,
+                          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC]) ∧
+                  (∀ (t : Nat), Becoming.ScopeDynamics.MutualFateWitness.system.wide.sub.level t = 9) ∧
+                    (∀ (t : Nat),
+                        8 ≤ Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.substrate t ∧
+                          Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.substrate t ≤ 12) ∧
+                      Becoming.TransformsViably Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.W_coop
+                          (fun t => 8 ≤ Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.substrate t)
+                          Becoming.ScopeDynamics.ReciprocalStabilityWitness.pool.cap 0 ∧
+                        (∀ (t : Nat),
+                            8 ≤ (Becoming.ScopeDynamics.OpenCompositionBridge.reciprocalOpenRun.state t).fst ()) ∧
+                          (¬∀ (d : Nat) (sig : Pos → Nat → F → Prop),
+                                (∀ (t : Nat),
+                                    8 ≤
+                                      (Becoming.ScopeDynamics.OpenCompositionBridge.reciprocalOpenRun.state (t + d)).fst
+                                        ()) →
+                                  Becoming.Unrestricted sig) ∧
+                            (∀ (t : Nat),
+                                5 ≤ (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.goodParams t).stock) ∧
+                              (∀ (t : Nat),
+                                  6 ≤ (Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogRun.state t).fst ()) ∧
+                                Becoming.StrictTransformativeViable Becoming.ThreeRegime.web Becoming.ThreeRegime.Viable
+                                    Becoming.ThreeRegime.cap Becoming.ThreeRegime.l_evolve
+                                    Becoming.ThreeRegime.l_legacy ∧
+                                  Becoming.TransformsViably Becoming.FiniteGainless.web
+                                    (fun t => 1 ≤ Becoming.FiniteGainless.web.level t Becoming.FiniteGainless.Cond.cSub)
+                                    Becoming.FiniteGainless.cap 0
+Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas : (Becoming.Law.orbit
+          (fun st => Becoming.OpenComposition.HiddenCouplingFailure.composedStep st ((), (), ())) (fun x => 4, (), ())
+          4).fst
+      () =
+    0 ∧
+  (¬∃ reduced,
+        Becoming.ProjectedLaws.Commuting
+          (fun s x => (Becoming.WitnessTwoScale.next s.fst (), Becoming.WitnessTwoScale.next s.snd ())) reduced fun s =>
+          (Becoming.WitnessTwoScale.π₂ (Becoming.WitnessTwoScale.π₁ s.fst),
+            Becoming.WitnessTwoScale.π₂ (Becoming.WitnessTwoScale.π₁ s.snd))) ∧
+    ¬Becoming.ProjectedLaws.FibreConsistent Becoming.WitnessTwoScale.next Becoming.WitnessTwoScale.π₁ ∧
+      (¬∃ reduced, Becoming.ProjectedLaws.Commuting Becoming.WitnessTwoScale.next reduced Becoming.WitnessTwoScale.π₁) ∧
+        (∀ (x y : Becoming.Flame),
+            ¬Becoming.«续» Becoming.Flame.step (Becoming.«核» Becoming.Flame.step Becoming.Flame.alike) x y) ∧
+          Becoming.EndogenousTurning.PartAWitness.unconstOrbit 6 = 0 ∧
+            Becoming.EndogenousTurning.TurningWitness.lateOrbit 11 = 0 ∧
+              Becoming.EndogenousTurning.TurningWitness.cascadeOrbit 11 = 0 ∧
+                (Becoming.Clearing.web.SelectsThroughAll Becoming.thresholdOnly Becoming.Clearing.clearerAndDweller 2
+                      Becoming.Clearing.BothAdmitted ∧
+                    ¬Becoming.Clearing.web.SelectsThrough Becoming.thresholdOnly Becoming.Clearing.Formation.clearer 2
+                          Becoming.Clearing.BothAdmitted ∧
+                      ¬Becoming.Clearing.web.SelectsThrough Becoming.thresholdOnly Becoming.Clearing.Formation.dweller 2
+                          Becoming.Clearing.BothAdmitted) ∧
+                  ((Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.silencedParams 6).stock = 0 ∧
+                      (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.uncoordParams 7).stock = 0 ∧
+                        (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.tooSlowParams 7).stock = 0) ∧
+                    (∀ (r₀ : Bool × Bool),
+                        ∃ T,
+                          T < 1 + 7 ∧
+                            (Becoming.Pace.paced Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF
+                                    Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH (fun x => true)
+                                    (((6, 6), 6), r₀) T).fst.snd =
+                              0) ∧
+                      (∀ (t : Nat),
+                          t ≤ (Becoming.ClosedCapture.Beyond.closed t).fst.snd ∧
+                            Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order
+                              Becoming.RuleCapture.CarrierCounts.favours Becoming.ClosedCapture.Beyond.closedRead
+                              ((Becoming.ClosedCapture.Beyond.closed t).fst.fst,
+                                (Becoming.ClosedCapture.Beyond.closed t).snd)) ∧
+                        (∀ {r : Nat}, 1 ≤ r → ¬(Becoming.ClosedCapture.Beyond.opened (r + 1)).snd.favours) ∧
+                          (∀ (_k : Nat),
+                              ¬Becoming.RuleCapture.CarrierCounts.order.le
+                                  (Becoming.ClosedCapture.Thinned.inTime 2).fst.fst
+                                  (Becoming.ClosedCapture.Thinned.inTime 3).fst.fst) ∧
+                            (∀ (k : Nat),
+                                Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order
+                                  Becoming.RuleCapture.CarrierCounts.favours
+                                  (Becoming.ClosedCapture.Drawn.poolRead Becoming.RuleCapture.CarrierCounts.hi
+                                    Becoming.RuleCapture.CarrierCounts.lo)
+                                  ((Becoming.ClosedCapture.Thinned.late (3 + (1 + k))).fst.fst,
+                                    (Becoming.ClosedCapture.Thinned.late (3 + (1 + k))).snd)) ∧
+                              ∀ (t : Nat),
+                                3 ≤ t →
+                                  Becoming.ScopeDynamics.UncoordCommonsWitness.commons.substrate t = 0 ∧
+                                    ∀ (k : Becoming.ScopeDynamics.PoolCap),
+                                      ¬Becoming.ScopeDynamics.UncoordCommonsWitness.commons.W_coop.MacroAdmits
+                                          Becoming.ScopeDynamics.UncoordCommonsWitness.commons.cap
+                                          (Becoming.ScopeDynamics.UncoordCommonsWitness.commons.W_coop.level t) t k
+Becoming.AlignmentSpine.AlignmentDichotomy.pre_overdraw_and_aliasing_boundaries : (∀ {F C : Type}
+    {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+    L.Balances W →
+      (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.uptake cs t) → ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → L.replenishment cs t = 0) ∧
+  (∀ {g d x : Nat → Nat},
+      (∀ (t : Nat), x (t + 1) = Becoming.RegimeMargin.step g (d t) (x t)) →
+        ∀ (t : Nat),
+          (Becoming.StockFlowBridge.unitFlow (Becoming.EndogenousTurning.actualTake d x) fun k =>
+                g (x k - Becoming.EndogenousTurning.actualTake d x k)).BalancesOn
+            (Becoming.StockFlowBridge.unitWeb x) [()] t) ∧
+    ¬(Becoming.StockFlowBridge.lineFlow Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need
+              Becoming.UnifiedDrawdown.OverdrawSeparationWitness.kids
+              Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving
+              Becoming.UnifiedDrawdown.OverdrawSeparationWitness.use
+              Becoming.UnifiedDrawdown.OverdrawSeparationWitness.startState).Balances
+          (Becoming.StockFlowBridge.lineWeb Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need
+            Becoming.UnifiedDrawdown.OverdrawSeparationWitness.kids
+            Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving
+            Becoming.UnifiedDrawdown.OverdrawSeparationWitness.use
+            Becoming.UnifiedDrawdown.OverdrawSeparationWitness.startState) ∧
+      Becoming.Viability.Kernel
+          (Becoming.PacedStock.SlackShortWitness.frame.blocks Becoming.PacedStock.SlackShortWitness.expand).P
+          (fun s => Becoming.PacedStock.SlackShortWitness.thr ≤ s.snd) ([true], 5) ∧
+        ¬Becoming.Viability.Kernel Becoming.PacedStock.SlackShortWitness.frame.P
+              (fun s => Becoming.PacedStock.SlackShortWitness.thr ≤ s.snd) ([true], 5) ∧
+          Becoming.Viability.Kernel Becoming.PacedStock.SlackShortWitness.frame.P
+              (fun s => Becoming.PacedStock.SlackShortWitness.thr ≤ s.snd) ([true], 6) ∧
+            (∀ (L : Nat) (σ : Nat → Nat) (reads_s reads_b : Nat → Bool)
+                (_h_s _h_b :
+                  Becoming.PacedStock.StockState Nat Becoming.PacedStock.SandwichWitness.UnitKind →
+                    Nat × Nat → Nat × Nat),
+                L < 5 →
+                  σ 0 = 0 →
+                    σ 1 = L →
+                      Becoming.Strict σ →
+                        Becoming.PacedStock.ReadAtSpanEnd σ reads_s →
+                          Becoming.PacedStock.ReadAtSpanEnd σ reads_b → ¬Becoming.Pace.StretchFixes Bool 3 L) ∧
+              (Becoming.Pace.StretchFixes Bool 2 3 ∧
+                  ∀ (t : Nat), 4 ≤ t → 12 ≤ (Becoming.PacedStock.SandwichWitness.feasRun t).fst.snd.snd) ∧
+                (∀ (t : Nat),
+                    Becoming.LineOnAStock.Goes Becoming.UnifiedDrawdown.CadenceErasureWitness.need
+                      (Becoming.PacedStock.pacedCourse Becoming.UnifiedDrawdown.CadenceErasureWitness.fA
+                            Becoming.UnifiedDrawdown.CadenceErasureWitness.need
+                            Becoming.UnifiedDrawdown.CadenceErasureWitness.kids
+                            Becoming.UnifiedDrawdown.CadenceErasureWitness.giving
+                            Becoming.UnifiedDrawdown.CadenceErasureWitness.use
+                            Becoming.UnifiedDrawdown.CadenceErasureWitness.h
+                            Becoming.UnifiedDrawdown.CadenceErasureWitness.readsFine
+                            Becoming.UnifiedDrawdown.CadenceErasureWitness.startConfig t).fst.snd) ∧
+                  ¬Becoming.LineOnAStock.Goes Becoming.UnifiedDrawdown.CadenceErasureWitness.need
+                      (Becoming.PacedStock.pacedCourse Becoming.UnifiedDrawdown.CadenceErasureWitness.fA
+                            Becoming.UnifiedDrawdown.CadenceErasureWitness.need
+                            Becoming.UnifiedDrawdown.CadenceErasureWitness.kids
+                            Becoming.UnifiedDrawdown.CadenceErasureWitness.giving
+                            Becoming.UnifiedDrawdown.CadenceErasureWitness.use
+                            Becoming.UnifiedDrawdown.CadenceErasureWitness.h
+                            Becoming.UnifiedDrawdown.CadenceErasureWitness.readsCoarse
+                            Becoming.UnifiedDrawdown.CadenceErasureWitness.startConfig 6).fst.snd
+@Becoming.AlignmentSpine.AlignmentDichotomy.epistemic_scope_metaethical_boundary : ∀ {Pos F : Type} (p : Pos) (f : F),
+  (∀ {F₀ C₀ : Type} {L : Becoming.Flow F₀ C₀} {W : Becoming.Web F₀ C₀} {obs : F₀ → C₀ → Prop} {part : F₀ → Bool}
+      {select : (Nat → C₀ → Nat) → Prop} {l : Nat → C₀ → Nat} {f₀ g₀ : F₀} {t : Nat},
+      L.WithheldLevels part W l →
+        (∀ (t : Nat) (g : F₀) (c : C₀), L.WithinCoupling W obs f₀ g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+          (∀ (h : F₀), part h = true → ¬L.WithinCoupling W obs f₀ h) →
+            L.WithinCoupling W obs f₀ g₀ → W.SelectsThrough obs g₀ t select → (select W.level ↔ select l)) ∧
+    (∀ {F₀ Pos₀ : Type},
+        (∀ (rel : F₀ → F₀ → Prop) (center : Pos₀ → F₀),
+            Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) center) ↔
+              ∀ (p : Pos₀) (g : F₀), Becoming.WithinClosure rel (center p) g) ∧
+          ∀ (rel : F₀ → F₀ → Prop) (center : Pos₀ → F₀),
+            Becoming.«无环» rel →
+              ∀ (p q : Pos₀),
+                center p ≠ center q → ¬Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) center)) ∧
+      (∀ {D : Type} (law : D → Prop),
+          (∀ (d : D) (sig : Pos → Nat → F → Prop), law d → Becoming.Unrestricted sig) → ∀ (d : D), ¬law d) ∧
+        (¬∀ (_u : Unit) (sig : Pos → Nat → Becoming.Optimum.HeldPair.Member → Prop),
+              (∀ (t : Nat),
+                  t < 2 →
+                    Becoming.Optimum.HeldPair.flow.WithinOwn t Becoming.Optimum.HeldPair.Spot.pool ∧
+                      ¬Becoming.Optimum.HeldPair.flow.WithinJoint t Becoming.Optimum.HeldPair.Spot.pool) →
+                Becoming.Unrestricted sig) ∧
+          (∀ {D : Type} (ScopeLaw : D → Prop) {d : D},
+              ScopeLaw d → ¬∀ (d' : D) (sig : Pos → Nat → F → Prop), ScopeLaw d' → Becoming.Unrestricted sig) ∧
+            (∀ {S A C D : Type} {law : D → (S → S → Prop) → Prop},
+                Becoming.ReadsNoOrder law →
+                  ∀ {frame : Becoming.Frame S A C} {living : C → Prop} {d : D},
+                    (∀ (better : S → S → Prop), law d better → Becoming.Comparison frame living better) →
+                      ∀ {s t : S}, Becoming.Extension frame living s t → ∀ {better : S → S → Prop}, ¬law d better) ∧
+              ∀ {D : Type} (SpineLaw : D → Prop) {d : D},
+                SpineLaw d → ¬∀ (d' : D) (sig : Pos → Nat → F → Prop), SpineLaw d' → Becoming.Unrestricted sig
+@Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy : ∀ {Pos F : Type} (p : Pos) (f : F),
+  (Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.spineTaskModel.B_task = 42 ∧
+      Becoming.Viability.Kernel
+        (Becoming.OpenComposition.closedProcess
+          Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineComp
+          Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineContr
+          Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineObs
+          Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessChannel
+          Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.gExt (fun x x_1 => 0) fun x => True)
+        (Becoming.OpenComposition.closedGuard Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineComp
+          Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineContr fun x => 10)
+        (fun x => 46, Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineInit)) ∧
+    (∀ (drawA drawB : Nat → Nat) (nextA nextB : Nat → Unit → Nat) (rA rB : Nat),
+        (∀ (r : Nat), 1 ≤ drawA r) →
+          (∀ (r : Nat), 1 ≤ drawB r) →
+            (Becoming.Law.orbit
+                  (fun st =>
+                    (Becoming.RegimeMargin.step
+                        (fun z => Becoming.OpenComposition.WideningWitness.gShared () fun x => z)
+                        (drawA st.snd.fst + drawB st.snd.snd) st.fst,
+                      nextA st.snd.fst (), nextB st.snd.snd ()))
+                  (6, rA, rB) 6).fst =
+              0) ∧
+      (Becoming.Law.orbit (fun st => Becoming.OpenComposition.HiddenCouplingFailure.composedStep st ((), (), ()))
+                (fun x => 4, (), ()) 4).fst
+            () =
+          0 ∧
+        (∀ (t : Nat),
+            3 ≤ t →
+              Becoming.ScopeDynamics.UncoordCommonsWitness.commons.substrate t = 0 ∧
+                ∀ (k : Becoming.ScopeDynamics.PoolCap),
+                  ¬Becoming.ScopeDynamics.UncoordCommonsWitness.commons.W_coop.MacroAdmits
+                      Becoming.ScopeDynamics.UncoordCommonsWitness.commons.cap
+                      (Becoming.ScopeDynamics.UncoordCommonsWitness.commons.W_coop.level t) t k) ∧
+          Becoming.Viability.Kernel Becoming.PacedStock.SlackShortWitness.frame.P
+              (fun s => Becoming.PacedStock.SlackShortWitness.thr ≤ s.snd) ([true], 6) ∧
+            ¬Becoming.Viability.Kernel Becoming.PacedStock.SlackShortWitness.frame.P
+                  (fun s => Becoming.PacedStock.SlackShortWitness.thr ≤ s.snd) ([true], 5) ∧
+              ∀ {D : Type} (SpineLaw : D → Prop) {d : D},
+                SpineLaw d → ¬∀ (d' : D) (sig : Pos → Nat → F → Prop), SpineLaw d' → Becoming.Unrestricted sig
+Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.gSub_rises : ∀ (k : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.gSub k)
+Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.witness : Becoming.Viability.Kernel
+    (Becoming.OpenComposition.ReconfigProcess Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.compA
+      Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.compA'
+      (Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.contractA false)
+      Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.contractA' (fun x => x ()) (fun x => x ())
+      Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.channel
+      Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.gSub (fun x x_1 => 0) fun x => True)
+    (fun st =>
+      match st with
+      | Sum.inl st₁ =>
+        Becoming.OpenComposition.closedGuard Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.compA
+          (Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.contractA false) (fun x => 3) st₁
+      | Sum.inr st₂ =>
+        Becoming.OpenComposition.closedGuard Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.compA'
+          Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.contractA' (fun x => 3) st₂)
+    (Sum.inl (fun x => 3, false)) ∧
+  Becoming.Viability.Kernel
+      (Becoming.OpenComposition.closedProcess Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.compA'
+        Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.contractA' (fun x => x ())
+        Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.channel
+        Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.gSub (fun x x_1 => 0) fun x => True)
+      (Becoming.OpenComposition.closedGuard Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.compA'
+        Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.contractA' fun x => 3)
+      (fun x => 5, 1) ∧
+    Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.compA'.drawInt 1 () = 1 ∧
+      ¬(Becoming.OpenComposition.ReconfigProcess Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.compA
+                Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.compA'
+                (Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.contractA false)
+                Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.contractA' (fun x => x ())
+                (fun x => x ()) Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.channel
+                Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.gSub (fun x x_1 => 0) fun x =>
+                True).step
+            (Sum.inl (fun x => 3, false)) (Becoming.OpenComposition.ReconfigAct.reconfig 1) (Sum.inr (fun x => 3, 1)) ∧
+        Generative.Trace Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.uncheckedReconfigProcess
+            (Sum.inl (fun x => 3, false))
+            [Becoming.OpenComposition.ReconfigAct.reconfig 1, Becoming.OpenComposition.ReconfigAct.stepRight () (),
+              Becoming.OpenComposition.ReconfigAct.stepRight () ()]
+            (Sum.inr Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.st2) ∧
+          Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.st1.fst () = 1 ∧
+            Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.st1.fst () < 3 ∧
+              Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.st2.fst () = 0
+Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.gUnit_rises : ∀ (k : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.gUnit k)
+Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.blind_keep_const : ∀ (t : Nat),
+  (Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.blindOrbit t).fst () = 6
+Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.witness : Becoming.Viability.Kernel
+    (Becoming.OpenComposition.closedProcess Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenSafeComp
+      Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenSafeContr (fun x => (x ()).blt 6)
+      (fun em x x_1 => em) Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.gUnit (fun x x_1 => 0) fun x =>
+      True)
+    (Becoming.OpenComposition.closedGuard Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenSafeComp
+      Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenSafeContr fun x => 3)
+    (fun x => 6, true, fun x => 5) ∧
+  ((Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.safeOrbit 0).fst () = 6 ∧
+      (Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.safeOrbit 1).fst () = 6 ∧
+        (Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.safeOrbit 0).snd.snd () = 5 ∧
+          (Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.safeOrbit 1).snd.snd () = 4 ∧
+            (Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.safeOrbit 2).snd.snd () = 4) ∧
+    Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenSafeComp.drawInt (true, fun x => 5) (Sum.inr ()) =
+        2 ∧
+      Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenSafeComp.drawInt (false, fun x => 4) (Sum.inr ()) =
+          1 ∧
+        (¬∀ (o : Bool) (xh : Unit → Nat),
+              (∃ k, xh k < 7) → Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.wireBlind o xh = true) ∧
+          (∀ (t : Nat), (Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.blindOrbit t).fst () = 6) ∧
+            (Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.blindOrbit 0).snd.snd () = 5 ∧
+              (Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.blindOrbit 1).snd.snd () = 4 ∧
+                (Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.blindOrbit 2).snd.snd () = 3 ∧
+                  (Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.blindOrbit 3).snd.snd () = 1 ∧
+                    (Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.blindOrbit 4).snd.snd () = 0
+Becoming.AlignmentSpine.SharpnessSuite.hide_side_channel_leakage : Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenSafeComp.emitAlarm
+      (true, fun x => 5) false =
+    true ∧
+  Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenSafeComp.emitAlarm (true, fun x => 8) false = false ∧
+    Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenSafeComp.emitAlarm (true, fun x => 5) false ≠
+      Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenSafeComp.emitAlarm (true, fun x => 8) false
+Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.gSub_rises : ∀ (k : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.gSub k)
+Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.witness : Becoming.Viability.Kernel
+    (Becoming.OpenComposition.closedProcess
+      ((Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkComp 7).compose
+        Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.dummyB)
+      (Becoming.OpenComposition.composeContract
+        (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkContract 7)
+        Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.dummyContract)
+      (fun x => (x (), ())) (fun em x x_1 => em) Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.gSub
+      (fun x x_1 => 0) fun x => True)
+    (Becoming.OpenComposition.closedGuard
+      ((Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkComp 7).compose
+        Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.dummyB)
+      (Becoming.OpenComposition.composeContract
+        (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkContract 7)
+        Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.dummyContract)
+      fun x => 3)
+    (fun x => 5, true, ()) ∧
+  ((∀ (k : Unit),
+        (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkContract 3).preCapExt k ≤
+          (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkContract 7).preCapExt k) ∧
+      (∀ (k : Unit),
+          (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkContract 3).postBudgetExt k ≤
+            (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkContract 7).postBudgetExt k) ∧
+        (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkContract 3).maxSilence ≤
+            (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkContract 7).maxSilence ∧
+          (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkContract 3).maxLag ≤
+              (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkContract 7).maxLag ∧
+            (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkContract 3).eta true ≤
+              (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkContract 7).eta true) ∧
+    (¬Becoming.OpenComposition.ContractRefines
+          (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkContract 7)
+          (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkContract 3) (fun x => x ())
+          (fun x => x ()) fun x => 7) ∧
+      (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.badOrbit 0).fst () = 5 ∧
+        (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.badOrbit 1).fst () = 4 ∧
+          (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.badOrbit 2).fst () = 3 ∧
+            (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.badOrbit 3).fst () = 1 ∧
+              (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.badOrbit 4).fst () = 0
+Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.gSub_rises : ∀ (k : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.gSub k)
+Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.witness : Becoming.Viability.Kernel
+    (Becoming.OpenComposition.closedProcess Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.compA
+      Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.contractA (fun x => (x ()).blt 8)
+      Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.channel
+      Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.gSub (fun x x_1 => 0) fun x => True)
+    (Becoming.OpenComposition.closedGuard Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.compA
+      Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.contractA fun x => 3)
+    (fun x => 6, true) ∧
+  (Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.contractA.postBudgetExt () +
+            Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.contractA.postBudgetExt () +
+          0 ≤
+        0 ∧
+      3 +
+            (Becoming.AdaptiveLoops.natMax
+                  Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.contractA.maxLag
+                  Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.contractA.maxLag +
+                1) *
+              (Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.contractA.preCapExt () +
+                  Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.contractA.preCapExt () +
+                0) ≤
+          8 ∧
+        3 +
+            Becoming.AdaptiveLoops.natMax
+                (Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.contractA.eta true)
+                (Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.contractA.eta true) *
+              (Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.contractA.preCapExt () +
+                  Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.contractA.preCapExt () +
+                0) ≤
+          6) ∧
+    Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.channel true
+          (Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.contractA.maxSilence +
+            Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.contractA.maxSilence)
+          () =
+        false ∧
+      (Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.compOrbit 0).fst () = 6 ∧
+        (Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.compOrbit 1).fst () = 5 ∧
+          (Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.compOrbit 2).fst () = 4 ∧
+            (Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.compOrbit 3).fst () = 3 ∧
+              (Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.compOrbit 4).fst () = 1 ∧
+                (Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.compOrbit 5).fst () = 0
+Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.gMono_rises : ∀ (k : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.gMono k)
+Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.witness : Becoming.Viability.Kernel
+    (Becoming.OpenComposition.closedProcess Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.compC
+      Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.contractC (fun x => (x ()).blt 6)
+      (fun em x x_1 => em) Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.gMono (fun x x_1 => 0)
+      fun x => True)
+    (Becoming.OpenComposition.closedGuard Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.compC
+      Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.contractC fun x => 4)
+    (fun x => 5, ()) ∧
+  4 ≤
+      Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole
+        Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.gOvercrowd (fun x => 2) (fun x => 4) () ∧
+    (¬∀ (k : Unit),
+          Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+            (Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.gOvercrowd k)) ∧
+      (Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.badOrbit 0).fst () = 5 ∧
+        (Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.badOrbit 1).fst () = 3 ∧
+          (Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.badOrbit 2).fst () = 1 ∧
+            (Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.badOrbit 3).fst () = 0
+Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.gSub_rises : ∀ (k : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.gSub k)
+Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.witness : Becoming.Viability.Kernel
+    (Becoming.OpenComposition.closedProcess
+      ((Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStatic 1).compose
+        (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStatic 0))
+      (Becoming.OpenComposition.composeContract
+        (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStaticContract 1)
+        (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStaticContract 0))
+      (fun x => ((x ()).blt 5, (x ()).blt 5)) (fun em x x_1 => em)
+      Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.gSub (fun x x_1 => 0) fun x => True)
+    (Becoming.OpenComposition.closedGuard
+      ((Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStatic 1).compose
+        (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStatic 0))
+      (Becoming.OpenComposition.composeContract
+        (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStaticContract 1)
+        (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStaticContract 0))
+      fun x => 3)
+    (fun x => 4, (), ()) ∧
+  Becoming.Viability.Kernel
+      (Becoming.OpenComposition.closedProcess
+        ((Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStatic 0).compose
+          (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStatic 1))
+        (Becoming.OpenComposition.composeContract
+          (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStaticContract 0)
+          (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStaticContract 1))
+        (fun x => ((x ()).blt 5, (x ()).blt 5)) (fun em x x_1 => em)
+        Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.gSub (fun x x_1 => 0) fun x => True)
+      (Becoming.OpenComposition.closedGuard
+        ((Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStatic 0).compose
+          (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStatic 1))
+        (Becoming.OpenComposition.composeContract
+          (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStaticContract 0)
+          (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStaticContract 1))
+        fun x => 3)
+      (fun x => 4, (), ()) ∧
+    ¬(Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStaticContract 1).postBudgetExt () +
+            (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStaticContract 1).postBudgetExt () ≤
+          1 ∧
+      (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.concurrentOrbit 0).fst () = 4 ∧
+        (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.concurrentOrbit 1).fst () = 3 ∧
+          (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.concurrentOrbit 2).fst () = 1 ∧
+            (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.concurrentOrbit 3).fst () = 0
+Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.witness : Becoming.Viability.Kernel
+    Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.macroProc (fun q => q = 12) 12 ∧
+  (∀ (Δ : Nat),
+      ¬Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.sim.α Δ +
+            Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.sim.ε ≤
+          Δ) ∧
+    Generative.Trace Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.microProc 12 [(), (), ()] 9 ∧
+      ¬Becoming.Viability.Kernel Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.microProc
+          (fun s => 10 ≤ s) 12
+@Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.eight_le_of_distNat_le_two : ∀ {u : Nat},
+  Becoming.distNat u 10 ≤ 2 → 8 ≤ u
+Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.solo_orbit_ten : ∀ (t : Nat),
+  Becoming.Law.orbit
+      (Becoming.RegimeMargin.step Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.gShared 1) 10
+      t =
+    10
+Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.witness : Becoming.Viability.Kernel
+    (Becoming.OpenComposition.prodProcess Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.statProc
+      Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.statProc)
+    (fun u => 8 ≤ u.fst ∧ 8 ≤ u.snd) (10, 10) ∧
+  (∀ (t : Nat),
+      8 ≤
+        Becoming.Law.orbit
+          (Becoming.RegimeMargin.step Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.gShared 1)
+          10 t) ∧
+    Becoming.Law.orbit
+          (Becoming.RegimeMargin.step Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.gShared
+            (1 + 1))
+          10 0 =
+        10 ∧
+      Becoming.Law.orbit
+            (Becoming.RegimeMargin.step Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.gShared
+              (1 + 1))
+            10 1 =
+          9 ∧
+        Becoming.Law.orbit
+              (Becoming.RegimeMargin.step Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.gShared
+                (1 + 1))
+              10 2 =
+            8 ∧
+          Becoming.Law.orbit
+                (Becoming.RegimeMargin.step
+                  Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.gShared (1 + 1))
+                10 3 =
+              7 ∧
+            Becoming.Law.orbit
+                (Becoming.RegimeMargin.step
+                  Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.gShared (1 + 1))
+                10 3 <
+              8
+Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.witness : Becoming.Viability.Kernel
+    (Becoming.OpenComposition.closedProcess Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.compA
+      (Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.contractA true) (fun x => x ())
+      Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.channel
+      Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.gSub (fun x x_1 => 0) fun x => True)
+    (Becoming.OpenComposition.closedGuard Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.compA
+      (Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.contractA true) fun x => 3)
+    (fun x => 5, true) ∧
+  Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.capturedProc.step (Sum.inl (fun x => 5, true))
+      (Becoming.OpenComposition.ReconfigAct.reconfig ()) (Sum.inr (fun x => 5, ())) ∧
+    ¬Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.contractCaptured.postBudgetExt () ≤
+          (Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.contractA true).postBudgetExt () ∧
+      ¬(5 < 7 → Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.contractCaptured.warnObs 5) ∧
+        (Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.capLevel 1 = 5 ∧
+            Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.capLevel 2 = 4 ∧
+              Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.capLevel 3 = 3 ∧
+                Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.capLevel 4 = 1 ∧
+                  Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.capLevel 5 = 0) ∧
+          ∀ (k : Nat),
+            k < 4 →
+              Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.capturedProc.step
+                (Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.capRun (k + 1))
+                (Becoming.OpenComposition.ReconfigAct.stepRight () ())
+                (Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.capRun (k + 2))
+Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.gOwn_rises : ∀ (k : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.gOwn k)
+Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.two_self_const : ∀ (t : Nat),
+  (Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.twoOrbit t).fst false = 5
+@Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.witness : ∀ {Pos F : Type} (p : Pos) (f : F),
+  Becoming.Viability.Kernel
+      (Becoming.OpenComposition.closedProcess
+        Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.compOwn
+        Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.contractOwn (fun x => (x ()).blt 6)
+        (fun em x x_1 => em) Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.gOwn (fun x x_1 => 0)
+        fun x => True)
+      (Becoming.OpenComposition.closedGuard Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.compOwn
+        Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.contractOwn fun x => 4)
+      (fun x => 5, ()) ∧
+    (∀ (t : Nat), (Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.twoOrbit t).fst false = 5) ∧
+      ((Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.twoOrbit 0).fst true = 5 ∧
+          (Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.twoOrbit 1).fst true = 4 ∧
+            (Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.twoOrbit 2).fst true = 3 ∧
+              (Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.twoOrbit 3).fst true = 1 ∧
+                (Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.twoOrbit 4).fst true = 0) ∧
+        ¬∀ (_d : Unit) (sig : Pos → Nat → F → Prop),
+            Becoming.Viability.Kernel
+                (Becoming.OpenComposition.closedProcess
+                  Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.compOwn
+                  Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.contractOwn
+                  (fun x => (x ()).blt 6) (fun em x x_1 => em)
+                  Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.gOwn (fun x x_1 => 0) fun x =>
+                  True)
+                (Becoming.OpenComposition.closedGuard
+                  Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.compOwn
+                  Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.contractOwn fun x => 4)
+                (fun x => 5, ()) →
+              Becoming.Unrestricted sig
+Becoming.AlignmentSpine.SharpnessSuite.slackDist_nat_not_transitive : Becoming.SlackDist.nat.d 0 1 ≤ 1 ∧
+  Becoming.SlackDist.nat.d 1 2 ≤ 1 ∧ ¬Becoming.SlackDist.nat.d 0 2 ≤ 1
+Becoming.AlignmentSpine.SharpnessSuite.exact_equivalence_is_class : Becoming.«类» Becoming.Flame.alike ∧
+  Becoming.«续» Becoming.Flame.step Becoming.Flame.alike Becoming.Flame.f₀ Becoming.Flame.f₁ ∧
+    Becoming.«续» Becoming.Flame.step Becoming.Flame.alike Becoming.Flame.f₁ Becoming.Flame.f₂ ∧
+      ∀ (x y : Becoming.Flame),
+        ¬Becoming.«续» Becoming.Flame.step (Becoming.«核» Becoming.Flame.step Becoming.Flame.alike) x y
+Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_cycle_inv : ∀ (t : Nat),
+  have st :=
+    Becoming.Law.orbit Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6 (4, true) t;
+  (st = (4, true) ∨ st = (5, true) ∨ st = (6, false) ∨ st = (5, false)) ∧ 4 ≤ st.fst ∧ st.fst ≤ 6 ∧ st.fst ≤ 10
+Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_6_inv : ∀ (t : Nat),
+  (Becoming.Law.orbit Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_6 (4, true) t).fst ≤ 10
+Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_5_inv : ∀ (t : Nat),
+  (Becoming.Law.orbit Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_5 (4, true) t).fst ≤ 10
+Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.witness : (Becoming.Law.orbit
+        Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6 (4, true) 0 =
+      (4, true) ∧
+    Becoming.Law.orbit Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6 (4, true) 1 =
+        (5, true) ∧
+      Becoming.Law.orbit Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6 (4, true) 2 =
+          (6, false) ∧
+        Becoming.Law.orbit Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6 (4, true) 3 =
+            (5, false) ∧
+          Becoming.Law.orbit Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6 (4, true)
+                4 =
+              (4, true) ∧
+            ∀ (t : Nat),
+              4 ≤
+                  (Becoming.Law.orbit Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6
+                      (4, true) t).fst ∧
+                (Becoming.Law.orbit Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6
+                        (4, true) t).fst ≤
+                    6 ∧
+                  (Becoming.Law.orbit Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6
+                        (4, true) t).fst ≤
+                    10) ∧
+  (Becoming.Law.orbit Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_6 (4, true) 3 =
+        (7, false) ∧
+      Becoming.Law.orbit Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_6 (4, true) 7 =
+          (3, true) ∧
+        Becoming.Law.orbit Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_6 (4, true) 8 =
+            (4, true) ∧
+          ∀ (t : Nat),
+            (Becoming.Law.orbit Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_6 (4, true)
+                  t).fst ≤
+              10) ∧
+    (Becoming.Law.orbit Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_5 (4, true) 5 =
+          (3, true) ∧
+        Becoming.Law.orbit Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_5 (4, true) 6 =
+            (4, true) ∧
+          ∀ (t : Nat),
+            (Becoming.Law.orbit Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_5 (4, true)
+                  t).fst ≤
+              10) ∧
+      ((Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6 (4, false)).fst = 3 ∧
+          (Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6 (6, true)).fst = 7) ∧
+        ((9 + (10 - 9) = 10 ∧ 5 + (10 - 5) = 10) ∧
+            (Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_6 (9, true)).snd = false ∧
+              (Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_6 (5, true)).snd = true ∧
+                (Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_6 (9, true)).snd ≠
+                  (Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_6 (5, true)).snd) ∧
+          (9 + (10 - 9) = 10 ∧ 4 + (10 - 4) = 10) ∧
+            (Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6 (9, true)).snd = false ∧
+              (Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6 (4, true)).snd = true ∧
+                (Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6 (9, true)).snd ≠
+                  (Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6 (4, true)).snd
+@Becoming.AlignmentSpine.SharpnessSuite.master_sharpness_suite_complete : ∀ {Pos F : Type} (p : Pos) (f : F),
+  (Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.st1.fst () = 1 ∧
+      Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.st2.fst () = 0) ∧
+    ((Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.blindOrbit 4).snd.snd () = 0 ∧
+        ∀ (t : Nat), (Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.blindOrbit t).fst () = 6) ∧
+      Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenSafeComp.emitAlarm (true, fun x => 5) false ≠
+          Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenSafeComp.emitAlarm (true, fun x => 8) false ∧
+        ((¬Becoming.OpenComposition.ContractRefines
+                (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkContract 7)
+                (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkContract 3) (fun x => x ())
+                (fun x => x ()) fun x => 7) ∧
+            (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.badOrbit 4).fst () = 0) ∧
+          (Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.channel true
+                  (Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.contractA.maxSilence +
+                    Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.contractA.maxSilence)
+                  () =
+                false ∧
+              (Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.compOrbit 5).fst () = 0) ∧
+            ((¬∀ (k : Unit),
+                    Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+                      (Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.gOvercrowd k)) ∧
+                (Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.badOrbit 3).fst () = 0) ∧
+              (¬(Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStaticContract 1).postBudgetExt
+                          () +
+                        (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStaticContract
+                              1).postBudgetExt
+                          () ≤
+                      1 ∧
+                  (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.concurrentOrbit 3).fst () = 0) ∧
+                ((∀ (Δ : Nat),
+                      ¬Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.sim.α Δ +
+                            Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.sim.ε ≤
+                          Δ) ∧
+                    ¬Becoming.Viability.Kernel Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.microProc
+                        (fun s => 10 ≤ s) 12) ∧
+                  (Becoming.Viability.Kernel
+                        (Becoming.OpenComposition.prodProcess
+                          Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.statProc
+                          Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.statProc)
+                        (fun u => 8 ≤ u.fst ∧ 8 ≤ u.snd) (10, 10) ∧
+                      Becoming.Law.orbit
+                          (Becoming.RegimeMargin.step
+                            Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.gShared (1 + 1))
+                          10 3 =
+                        7) ∧
+                    (Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.capturedProc.step
+                          (Sum.inl (fun x => 5, true)) (Becoming.OpenComposition.ReconfigAct.reconfig ())
+                          (Sum.inr (fun x => 5, ())) ∧
+                        Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.capLevel 5 = 0) ∧
+                      ((∀ (t : Nat),
+                            (Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.twoOrbit t).fst false =
+                              5) ∧
+                          (Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.twoOrbit 4).fst true =
+                            0) ∧
+                        (Becoming.SlackDist.nat.d 0 1 ≤ 1 ∧
+                            Becoming.SlackDist.nat.d 1 2 ≤ 1 ∧ ¬Becoming.SlackDist.nat.d 0 2 ≤ 1) ∧
+                          Becoming.«类» Becoming.Flame.alike ∧
+                            ((Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_6
+                                      (9, true)).snd ≠
+                                  (Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_6
+                                      (5, true)).snd ∧
+                                (Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6
+                                      (9, true)).snd ≠
+                                  (Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6
+                                      (4, true)).snd) ∧
+                              (¬(Becoming.StockFlowBridge.lineFlow
+                                          Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need
+                                          Becoming.UnifiedDrawdown.OverdrawSeparationWitness.kids
+                                          Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving
+                                          Becoming.UnifiedDrawdown.OverdrawSeparationWitness.use
+                                          Becoming.UnifiedDrawdown.OverdrawSeparationWitness.startState).Balances
+                                      (Becoming.StockFlowBridge.lineWeb
+                                        Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need
+                                        Becoming.UnifiedDrawdown.OverdrawSeparationWitness.kids
+                                        Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving
+                                        Becoming.UnifiedDrawdown.OverdrawSeparationWitness.use
+                                        Becoming.UnifiedDrawdown.OverdrawSeparationWitness.startState) ∧
+                                  ¬Becoming.Viability.Kernel Becoming.PacedStock.SlackShortWitness.frame.P
+                                        (fun s => Becoming.PacedStock.SlackShortWitness.thr ≤ s.snd) ([true], 5) ∧
+                                    ¬Becoming.ProjectedLaws.FibreConsistent Becoming.WitnessTwoScale.next
+                                        Becoming.WitnessTwoScale.π₁) ∧
+                                ∀ {D : Type} (SpineLaw : D → Prop) {d : D},
+                                  SpineLaw d →
+                                    ¬∀ (d' : D) (sig : Pos → Nat → F → Prop), SpineLaw d' → Becoming.Unrestricted sig
+@Becoming.AlignmentSpine.alignment_spine_end_to_end : ∀ {Pos F : Type} (p : Pos) (f : F),
+  (Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.spineTaskModel.B_task = 42 ∧
+      Becoming.Viability.Kernel
+          (Becoming.OpenComposition.closedProcess
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineComp
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineContr
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineObs
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessChannel
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.gExt (fun x x_1 => 0) fun x => True)
+          (Becoming.OpenComposition.closedGuard
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineComp
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineContr fun x => 10)
+          (fun x => 46, Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineInit) ∧
+        Becoming.Viability.Kernel
+          (Becoming.OpenComposition.closedProcess
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessHiddenComp
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessHiddenContr
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineObs
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessChannel
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.gExt (fun x x_1 => 0) fun x => True)
+          (Becoming.OpenComposition.closedGuard
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessHiddenComp
+            Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessHiddenContr fun x => 10)
+          (fun x => 46, Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineInit, fun x => 11)) ∧
+    ((Becoming.Law.orbit (fun st => Becoming.OpenComposition.HiddenCouplingFailure.composedStep st ((), (), ()))
+                (fun x => 4, (), ()) 4).fst
+            () =
+          0 ∧
+        (∀ (t : Nat),
+            3 ≤ t →
+              Becoming.ScopeDynamics.UncoordCommonsWitness.commons.substrate t = 0 ∧
+                ∀ (k : Becoming.ScopeDynamics.PoolCap),
+                  ¬Becoming.ScopeDynamics.UncoordCommonsWitness.commons.W_coop.MacroAdmits
+                      Becoming.ScopeDynamics.UncoordCommonsWitness.commons.cap
+                      (Becoming.ScopeDynamics.UncoordCommonsWitness.commons.W_coop.level t) t k) ∧
+          Becoming.Viability.Kernel Becoming.PacedStock.SlackShortWitness.frame.P
+              (fun s => Becoming.PacedStock.SlackShortWitness.thr ≤ s.snd) ([true], 6) ∧
+            ¬Becoming.Viability.Kernel Becoming.PacedStock.SlackShortWitness.frame.P
+                  (fun s => Becoming.PacedStock.SlackShortWitness.thr ≤ s.snd) ([true], 5) ∧
+              ∀ {D : Type} (SpineLaw : D → Prop) {d : D},
+                SpineLaw d → ¬∀ (d' : D) (sig : Pos → Nat → F → Prop), SpineLaw d' → Becoming.Unrestricted sig) ∧
+      (Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.st2.fst () = 0 ∧
+          (Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.blindOrbit 4).snd.snd () = 0 ∧
+            Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenSafeComp.emitAlarm (true, fun x => 5) false ≠
+                Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenSafeComp.emitAlarm (true, fun x => 8)
+                  false ∧
+              (Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.badOrbit 4).fst () = 0 ∧
+                (Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.compOrbit 5).fst () = 0 ∧
+                  (Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.badOrbit 3).fst () = 0 ∧
+                    (Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.concurrentOrbit 3).fst () = 0 ∧
+                      ¬Becoming.Viability.Kernel Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.microProc
+                            (fun s => 10 ≤ s) 12 ∧
+                        Becoming.Law.orbit
+                              (Becoming.RegimeMargin.step
+                                Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.gShared (1 + 1))
+                              10 3 =
+                            7 ∧
+                          Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.capLevel 5 = 0 ∧
+                            (Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.twoOrbit 4).fst true =
+                              0) ∧
+        (Becoming.SlackDist.nat.d 0 1 ≤ 1 ∧ Becoming.SlackDist.nat.d 1 2 ≤ 1 ∧ ¬Becoming.SlackDist.nat.d 0 2 ≤ 1) ∧
+          Becoming.«类» Becoming.Flame.alike ∧
+            (Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_6 (9, true)).snd ≠
+                (Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_6 (5, true)).snd ∧
+              (Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6 (9, true)).snd ≠
+                (Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6 (4, true)).snd

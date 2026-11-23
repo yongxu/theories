@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "utc": "20261123T181227.411285Z",
+  "utc": "20261123T195223.591569Z",
   "toolchain": "leanprover/lean4:v4.29.1",
-  "retained_run": "becoming-checks/20261123T181227.411285Z",
+  "retained_run": "becoming-checks/20261123T195223.591569Z",
   "spine_modules": [
     "Becoming.Grammar",
     "Becoming.GrammarReadings",
@@ -406,6 +406,7 @@
     "Becoming.EndogenousTurning",
     "Becoming.UnifiedDrawdown",
     "Becoming.ScopeDynamics",
+    "Becoming.AlignmentSpine",
     "Becoming",
     "Becoming.Hexagrams",
     "Becoming.HexagramPlaces",
@@ -829,6 +830,7 @@
     "Becoming.EndogenousTurning",
     "Becoming.UnifiedDrawdown",
     "Becoming.ScopeDynamics",
+    "Becoming.AlignmentSpine",
     "Becoming"
   ],
   "foundation_modules": [
@@ -1266,6 +1268,7 @@
     "Becoming.EndogenousTurning",
     "Becoming.UnifiedDrawdown",
     "Becoming.ScopeDynamics",
+    "Becoming.AlignmentSpine",
     "Becoming.SeedReach",
     "Becoming.ScopedReach",
     "Becoming.Hexagrams",
@@ -1692,6 +1695,7 @@
     "Becoming.EndogenousTurning",
     "Becoming.UnifiedDrawdown",
     "Becoming.ScopeDynamics",
+    "Becoming.AlignmentSpine",
     "Becoming.SeedReach",
     "Becoming.ScopedReach",
     "Becoming.Hexagrams",
@@ -2118,6 +2122,7 @@
     "Becoming.EndogenousTurning": "becoming/Becoming/EndogenousTurning.lean",
     "Becoming.UnifiedDrawdown": "becoming/Becoming/UnifiedDrawdown.lean",
     "Becoming.ScopeDynamics": "becoming/Becoming/ScopeDynamics.lean",
+    "Becoming.AlignmentSpine": "becoming/Becoming/AlignmentSpine.lean",
     "Becoming.SeedReach": "becoming/Becoming/SeedReach.lean",
     "Becoming.ScopedReach": "becoming/Becoming/ScopedReach.lean",
     "Becoming.Hexagrams": "becoming/Becoming/Hexagrams.lean",
@@ -2544,6 +2549,7 @@
     "Becoming.EndogenousTurning": "f4343f78f657d1a646c4abff11b2eded3845698f53fce6127f5191f1cf0d0bfc",
     "Becoming.UnifiedDrawdown": "787ec07766b2425a774810b5d5f89fc908e2650e1bbb98b40589c9864dbfd0c0",
     "Becoming.ScopeDynamics": "6acaa6e3fdcea3fa756819811b08f73a649ec9a0389fec2d985996c6d8ab9cd5",
+    "Becoming.AlignmentSpine": "ffe254d789590c7ee41fbe97f2b9f191b68a26fce32e28a75dabf1a0bbcdac3e",
     "Becoming.SeedReach": "6c21f636369688b6247052cb7434aebdd1669dc2dc0ff3a906a2032193deb066",
     "Becoming.ScopedReach": "0432efe6bf31ceff196a4d058a6b77710871ed130eb562dc0ad05d00a873e5ae",
     "Becoming.Hexagrams": "7bcc1ca10eb46afc25efe9c5d8c54ce9840c0be831b8427f0dc3b024117786a3",
@@ -2562,19 +2568,17 @@
     "Becoming.ReaderRebuilding": "25f0d49255972cec8024970a4249dd9228baed14308c90c83dec223bf4378713",
     "Becoming.RuleRebuilding": "fe82de1f1377255eb7fc7b3cd42cad7245bd45882f4e58a6e82d3575e2c28709",
     "Becoming.ResponseLearning": "3f570198fcae3a551c9ca5807d58353cec3d393a00d37a21d89a98c789a725d2",
-    "Becoming": "84648a9970ec61103cc18f1964c5113534ac5786b0c41333a1ec1d186635f553"
+    "Becoming": "e272ba805812815686ac4ef0661416f4f4e666f0de691905d162e79ff57cce16"
   },
   "checker_sha256": {
-    "check_becoming.py": "16cd28668afe24dd69f10697b9f86793b2eaf536ff12efdea29416d9f597efce",
+    "check_becoming.py": "4e1e641e09e07f17bf8c1f858879b9684bb60868104850fa3652cd351ceefc80",
     "check.py": "4f9cb94de69bd0e7da6bc7ab1ae1cfd26e2d5848dabda5cbb88aebc36ac52da3"
   },
   "runner_sha256": "cdc5b2e9fe6915233f5e39ec1b4ad30b615e15dbbea393adda2effba0e7c7de2",
   "source_commit": {
-    "main": "d39575b5b140b99dc124cfee8f6e96a1bea184c8",
+    "main": "4f890d097841a76d2a70519b1cfa3b040a0850ef",
     "copied": [
-      "Becoming.EndogenousTurning.lean",
-      "Becoming.ScopeDynamics.lean",
-      "Becoming.UnifiedDrawdown.lean",
+      "Becoming.AlignmentSpine.lean",
       "Becoming.lean",
       "check_becoming.py"
     ]
@@ -2585,21 +2589,17 @@
     "fresh": false,
     "ran": [
       "version.log",
-      "Becoming.EndogenousTurning.log",
-      "BecomingEndogenousTurningAxiomAudit.log",
-      "BecomingEndogenousTurningSignatures.log",
-      "Becoming.UnifiedDrawdown.log",
-      "BecomingUnifiedDrawdownAxiomAudit.log",
-      "BecomingUnifiedDrawdownSignatures.log",
       "BecomingScopeDynamicsSignatures.log",
+      "Becoming.AlignmentSpine.log",
+      "BecomingAlignmentSpineAxiomAudit.log",
+      "BecomingAlignmentSpineSignatures.log",
       "Becoming.log",
       "BecomingAxiomAudit.log",
       "BecomingSignatures.log",
       "EnvironmentAudit.log",
       "Controls.log",
-      "Becoming.EndogenousTurning.PreludeOnly.log",
-      "Becoming.UnifiedDrawdown.PreludeOnly.log",
       "Becoming.ScopeDynamics.PreludeOnly.log",
+      "Becoming.AlignmentSpine.PreludeOnly.log",
       "Becoming.PreludeOnly.log"
     ],
     "reused": {
@@ -7415,6 +7415,30 @@
         "utc": "20261123T131636.294555Z",
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T131636.294555Z"
       },
+      "Becoming.EndogenousTurning.log": {
+        "utc": "20261123T181227.411285Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T181227.411285Z"
+      },
+      "BecomingEndogenousTurningAxiomAudit.log": {
+        "utc": "20261123T181227.411285Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T181227.411285Z"
+      },
+      "BecomingEndogenousTurningSignatures.log": {
+        "utc": "20261123T181227.411285Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T181227.411285Z"
+      },
+      "Becoming.UnifiedDrawdown.log": {
+        "utc": "20261123T181227.411285Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T181227.411285Z"
+      },
+      "BecomingUnifiedDrawdownAxiomAudit.log": {
+        "utc": "20261123T181227.411285Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T181227.411285Z"
+      },
+      "BecomingUnifiedDrawdownSignatures.log": {
+        "utc": "20261123T181227.411285Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T181227.411285Z"
+      },
       "Becoming.ScopeDynamics.log": {
         "utc": "20261123T175420.499398Z",
         "retained": "scratch build, not retained: /Users/ren/tmp/scratch_l3"
@@ -9247,6 +9271,14 @@
         "utc": "20261123T131636.294555Z",
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T131636.294555Z"
       },
+      "Becoming.EndogenousTurning.PreludeOnly.log": {
+        "utc": "20261123T181227.411285Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T181227.411285Z"
+      },
+      "Becoming.UnifiedDrawdown.PreludeOnly.log": {
+        "utc": "20261123T181227.411285Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T181227.411285Z"
+      },
       "Becoming.SeedReach.PreludeOnly.log": {
         "utc": "20261109T150228.155067Z",
         "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories--claude-worktrees-admiring-shamir-666169/dce58fb5-291c-4c2d-9b0e-1a17b2f2e9b9/scratchpad/tree"
@@ -10533,6 +10565,9 @@
       "Becoming.ScopeDynamics.log": "a41b2574654e51fa3bc898797945bfacd7cf94f19479bf1e27b9b513e7aab2e8",
       "BecomingScopeDynamicsAxiomAudit.log": "1f38598bdf07b252a905587d65c7df68f681668b0c16254eddd44b9ae26e015a",
       "BecomingScopeDynamicsSignatures.log": "0624f368686dfa9f1fcb26f5b18bae30915b4c81cbe35cc98f5cf684b7265920",
+      "Becoming.AlignmentSpine.log": "00c30bb836150825933df3f9c6aba59e997f11ece21b7c555de58ac683e14483",
+      "BecomingAlignmentSpineAxiomAudit.log": "8c0b8e430ed86f95a4b4501df87060cd8e6237e9595d8c72571e94901b237846",
+      "BecomingAlignmentSpineSignatures.log": "b7f8fe0eacd7bc0098c96df1cef158d68314eeddc8552ecde861eb8b60081261",
       "Becoming.SeedReach.log": "69e9093daed2cb3a35b84a3db09258074b3c837b06184fbeb2a3ce4357438d9a",
       "BecomingSeedReachAxiomAudit.log": "325b832f6ca3591cc9f1580c04f87a51dbdce5aeb0cc327a1ef4b126a088902d",
       "BecomingSeedReachSignatures.log": "61a9a40165856bdd55c8c10d23e7f1a7023f7d14510b64e75d74d9d438f9f945",
@@ -10587,11 +10622,11 @@
       "Becoming.ResponseLearning.log": "19c5dfae2897081b2db2a6479e4b6630f3e12729c7a5b2018b2f3b56e9252710",
       "BecomingResponseLearningAxiomAudit.log": "358f4819a31b44cc8105702cdd098101a2dac4da9f87e46a44072360231c8abb",
       "BecomingResponseLearningSignatures.log": "ee5e63f24cc980784d60513ca2cf139807117cb10932dc5bc49d85bdc89e8bfa",
-      "Becoming.log": "de1a079f8cc1b3ca7af60ba4ecbf6d718663fc223ae39005d163d719e0f8a5d3",
-      "BecomingAxiomAudit.log": "260224987123a1be0a24d849f9225a9ba209290e53fb8dc5c9c4bcea806e997d",
-      "BecomingSignatures.log": "c639ac9ab7edcd24a8794d3eeb75ed6b6cff4def6c8c56339eb18144682e63ae",
-      "EnvironmentAudit.log": "ad479e5bc88dc7300c47e816435012595a78cf92bac798444379d1529f31a4f8",
-      "Controls.log": "ffb61a8b7c0776de5ded00fe29650ea5c67dfda9616e6306665a0e8624a7ab93",
+      "Becoming.log": "bd80a1f3b5a4c1e037caf2c1eaddc55ee87bba78f2878d0bd52ba191b3cd5b4d",
+      "BecomingAxiomAudit.log": "07cef2d889c8c4709c21a9f55162f57d688599671481c9eca21acb986049ea36",
+      "BecomingSignatures.log": "d0552f227323e6d356ebd28057cd34e76df6ba4da270a2a39543d89388522653",
+      "EnvironmentAudit.log": "62fc1a918c5701ac9c298ed83c482c5dd925fcf297ab916cc87468cc8e3fdde1",
+      "Controls.log": "9e84ad2512e033a71f19c9bb875a7370e0efa571273041bab8aba1dc5e4b34f4",
       "Becoming.Grammar.PreludeOnly.log": "76d3cd6879ccdfaed9db9cc98947cb68fe604b6ec9c632c3569df134642978a0",
       "Becoming.GrammarReadings.PreludeOnly.log": "96d3eaac03a03246c68b669a66e92565f381f028768625af72b0ecd42c10d168",
       "Becoming.GrammarMap.PreludeOnly.log": "57b332119ea3feae52717dc0b9c6e6a8461bd8fd25ec4a4b45ba5bbf5e0d743b",
@@ -10997,6 +11032,7 @@
       "Becoming.EndogenousTurning.PreludeOnly.log": "be40e8a276742882b40de051a5c7ac53931dc7158a420ad4572f095b26a13181",
       "Becoming.UnifiedDrawdown.PreludeOnly.log": "faebf9782150b5bcc18ea83b636b5e511dd589480f4b70f9e15d686e8a5cd8fb",
       "Becoming.ScopeDynamics.PreludeOnly.log": "0b549ed456ce0ec2385457d981c05497efda2f4ecd070a3bbffdd246ee8b1b24",
+      "Becoming.AlignmentSpine.PreludeOnly.log": "e4b27986dc582139530428c8ae5488923c2f4015241813d0e463bbc7feb5e697",
       "Becoming.SeedReach.PreludeOnly.log": "5e0fe6d1427e5096dc5d3fe7ce927e5f3ec9ddd47f7388b1be9da3f470f16402",
       "Becoming.ScopedReach.PreludeOnly.log": "607b3bc88a2c83cd017f2c975691178de1bc72ff0e4088657706581881e9588f",
       "Becoming.Hexagrams.PreludeOnly.log": "383eba428321c4f4bf3c42ba71f5579c797e6fc21217bcd64ea83fde36cb8034",
@@ -11015,28 +11051,24 @@
       "Becoming.ReaderRebuilding.PreludeOnly.log": "c8d322b9ede23ee2284eb9df3a722c142355439a67f3384354dcb30d9488324f",
       "Becoming.RuleRebuilding.PreludeOnly.log": "a80b8eb0e41678da8ed169c4f5b42a9cccc07497817f17b097cc1e4c31864288",
       "Becoming.ResponseLearning.PreludeOnly.log": "fbbe23d3e24bafddda6a674b0ab564f1e8b10a86aa7a0de259e17a82bd6755dd",
-      "Becoming.PreludeOnly.log": "00a07c53aaea9019345a4fb8769df52f11ad7f7688ecf07b04a21a09d7f3c34f"
+      "Becoming.PreludeOnly.log": "5f85ddf3267474ea1edcfa1fae3e42603dc57b815fdb5b6aff6c810e2bd3502c"
     },
     "seconds": {
-      "version.log": 0.292,
-      "Becoming.EndogenousTurning.log": 4.312,
-      "BecomingEndogenousTurningAxiomAudit.log": 0.711,
-      "BecomingEndogenousTurningSignatures.log": 0.633,
-      "Becoming.UnifiedDrawdown.log": 4.403,
-      "BecomingUnifiedDrawdownAxiomAudit.log": 0.743,
-      "BecomingUnifiedDrawdownSignatures.log": 0.684,
+      "version.log": 0.295,
       "BecomingScopeDynamicsSignatures.log": null,
-      "Becoming.log": 0.528,
-      "BecomingAxiomAudit.log": 0.493,
-      "BecomingSignatures.log": 0.497,
-      "EnvironmentAudit.log": 34.335,
-      "Controls.log": 0.495,
-      "Becoming.EndogenousTurning.PreludeOnly.log": 2.838,
-      "Becoming.UnifiedDrawdown.PreludeOnly.log": 3.029,
+      "Becoming.AlignmentSpine.log": 3.634,
+      "BecomingAlignmentSpineAxiomAudit.log": 1.175,
+      "BecomingAlignmentSpineSignatures.log": 0.764,
+      "Becoming.log": 0.59,
+      "BecomingAxiomAudit.log": 0.607,
+      "BecomingSignatures.log": 0.615,
+      "EnvironmentAudit.log": 34.641,
+      "Controls.log": 0.639,
       "Becoming.ScopeDynamics.PreludeOnly.log": null,
-      "Becoming.PreludeOnly.log": 0.327
+      "Becoming.AlignmentSpine.PreludeOnly.log": 3.031,
+      "Becoming.PreludeOnly.log": 0.299
     },
-    "wall_seconds": 41.143
+    "wall_seconds": 40.776
   },
   "superseded_modules": {
     "AcquiredCorrection": {
@@ -11602,6 +11634,8 @@
   },
   "inherited_receipts": {
     "RelationalRenewal": [
+      "alignment-reals/alignment-reals-checks/20261123T181321.317303Z/verification.json",
+      "alignment-reals/alignment-reals-verification.json",
       "becoming/fallible-inquiry-checks/20261013T110231.056199Z/verification.json",
       "becoming/fallible-inquiry-checks/20261013T113924.930862Z/verification.json",
       "becoming/fallible-inquiry-checks/20261013T125020.784849Z/verification.json",
@@ -11813,6 +11847,8 @@
     ],
     "GenerativeCore": [
       "acquired-perspective/verification.json",
+      "alignment-reals/alignment-reals-checks/20261123T181321.317303Z/verification.json",
+      "alignment-reals/alignment-reals-verification.json",
       "becoming/fallible-inquiry-checks/20261013T110231.056199Z/verification.json",
       "becoming/fallible-inquiry-checks/20261013T113924.930862Z/verification.json",
       "becoming/fallible-inquiry-checks/20261013T125020.784849Z/verification.json",
@@ -12283,6 +12319,8 @@
       "verification.json"
     ],
     "InquirySufficiency": [
+      "alignment-reals/alignment-reals-checks/20261123T181321.317303Z/verification.json",
+      "alignment-reals/alignment-reals-verification.json",
       "becoming/fallible-inquiry-checks/20261013T110231.056199Z/verification.json",
       "becoming/fallible-inquiry-checks/20261013T113924.930862Z/verification.json",
       "becoming/fallible-inquiry-checks/20261013T125020.784849Z/verification.json",
@@ -13299,6 +13337,7 @@
     "Becoming.EndogenousTurning": 342,
     "Becoming.UnifiedDrawdown": 352,
     "Becoming.ScopeDynamics": 514,
+    "Becoming.AlignmentSpine": 340,
     "Becoming.SeedReach": 31,
     "Becoming.ScopedReach": 60,
     "Becoming.Hexagrams": 199,
@@ -156409,6 +156448,892 @@
       "kernel_checked": true
     },
     {
+      "module": "Becoming.AlignmentSpine",
+      "spine": true,
+      "layer": "core",
+      "theorems": 71,
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.bool_or_false_left"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.natMax_comm"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.natMax_assoc"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.composeCommEquiv"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.ContractEquiv"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.composeAssocContractEquiv"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.composeCommContractEquiv"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.replace_right_viable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.contractRefines_compose_left"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.contractRefines_compose_right"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.turningSub"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.turningContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.turningObs"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.fleetSub"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.fleetSubContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.fleetSubObs"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.fleetContract_tol"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.fleetHeadRefines"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.scopeSub"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.scopeSubContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.scopeSubObs"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.spineComponent"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.spineInit"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.spineContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.spineObs"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.spinePreTotal"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.spinePostTotal"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.spineMaxLag"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.spineInitEta"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.spineSilence"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.spine_preCap_eq"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.spine_postCap_eq"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.spine_silence_eq"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.spine_maxLag_eq"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.spine_eta_eq"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.spine_obs_detects"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.master_alignment_spine_viable"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.master_spine_assoc_equiv"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_turning_viable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.master_spine_live_reconfig_viable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_fleet_viable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_scope_viable"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.withHiddenSite"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.withHiddenSiteContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.spineHideWireObs"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.spineContract_tol_lifts"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.master_spine_hide_viable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.master_spine_multiscale_transfer"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.SpinePolicy"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.spineTaskModel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.spineTaskModel_B_task"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.agentF1"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.agentF2"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.gExt"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.gHide"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.gExt_rises"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.gHide_rises"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.initPartner"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.initPartner_in"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessChannel"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineComp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineContr"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineInit"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineObs"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.spineRun"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSiteComp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSiteContr"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessHiddenComp"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessTolLifts"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessWireOuterWarn"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessWireHideWarn"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessHiddenContr"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.hiddenRun"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witness_viable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_readsOnlyDynamics"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_admits_rival"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_not_entails"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_cannot_entail_unrestricted"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.AlignmentDichotomy.pre_overdraw_and_aliasing_boundaries"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.AlignmentDichotomy.epistemic_scope_metaethical_boundary"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.gSub"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.gSub_rises"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.channel"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.compA"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.contractA"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.compA'"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.contractA'"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.uncheckedReconfigProcess"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.st1"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.st2"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.witness"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.gUnit"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.gUnit_rises"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.compC"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.contractC"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.wireSafe"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.wireBlind"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenSafeComp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenBlindComp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenSafeContr"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.safeOrbit"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.blindOrbit"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.blind_keep_const"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.witness"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.hide_side_channel_leakage"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.gSub"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.gSub_rises"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkComp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.dummyB"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.dummyContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.badOrbit"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.witness"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.gSub"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.gSub_rises"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.channel"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.compA"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.contractA"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.compOrbit"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.witness"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.compC"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.contractC"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.gMono"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.gMono_rises"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.gOvercrowd"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.badOrbit"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.witness"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.gSub"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.gSub_rises"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStatic"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStaticContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.concurrentOrbit"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.witness"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.microProc"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.macroProc"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.sim"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.certQ"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.witness"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.statProc"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.statSim"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.certProd"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.eight_le_of_distNat_le_two"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.gShared"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.solo_orbit_ten"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.witness"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.compCaptured"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.contractCaptured"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.capturedProc"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.capRun"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.capLevel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.witness"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.compOwn"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.contractOwn"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.gOwn"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.gOwn_rises"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.compTwo"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.gTwo"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.twoOrbit"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.two_self_const"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.witness"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.slackDist_nat_not_transitive"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.exact_equivalence_is_class"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.tankPhysics"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_6"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_5"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_cycle_inv"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_6_inv"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_5_inv"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.witness"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.SharpnessSuite.master_sharpness_suite_complete"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.AlignmentSpine.alignment_spine_end_to_end"
+        }
+      ],
+      "axiom_dependencies": {
+        "Becoming.AlignmentSpine.ComposedSpine.bool_or_false_left": [],
+        "Becoming.AlignmentSpine.ComposedSpine.natMax_comm": [],
+        "Becoming.AlignmentSpine.ComposedSpine.natMax_assoc": [],
+        "Becoming.AlignmentSpine.ComposedSpine.composeCommEquiv": [],
+        "Becoming.AlignmentSpine.ComposedSpine.ContractEquiv": [],
+        "Becoming.AlignmentSpine.ComposedSpine.composeAssocContractEquiv": [],
+        "Becoming.AlignmentSpine.ComposedSpine.composeCommContractEquiv": [],
+        "Becoming.AlignmentSpine.ComposedSpine.replace_right_viable": [],
+        "Becoming.AlignmentSpine.ComposedSpine.contractRefines_compose_left": [],
+        "Becoming.AlignmentSpine.ComposedSpine.contractRefines_compose_right": [],
+        "Becoming.AlignmentSpine.ComposedSpine.turningSub": [],
+        "Becoming.AlignmentSpine.ComposedSpine.turningContract": [],
+        "Becoming.AlignmentSpine.ComposedSpine.turningObs": [],
+        "Becoming.AlignmentSpine.ComposedSpine.fleetSub": [],
+        "Becoming.AlignmentSpine.ComposedSpine.fleetSubContract": [],
+        "Becoming.AlignmentSpine.ComposedSpine.fleetSubObs": [],
+        "Becoming.AlignmentSpine.ComposedSpine.fleetContract_tol": [],
+        "Becoming.AlignmentSpine.ComposedSpine.fleetHeadRefines": [],
+        "Becoming.AlignmentSpine.ComposedSpine.scopeSub": [],
+        "Becoming.AlignmentSpine.ComposedSpine.scopeSubContract": [],
+        "Becoming.AlignmentSpine.ComposedSpine.scopeSubObs": [],
+        "Becoming.AlignmentSpine.ComposedSpine.spineComponent": [],
+        "Becoming.AlignmentSpine.ComposedSpine.spineInit": [],
+        "Becoming.AlignmentSpine.ComposedSpine.spineContract": [],
+        "Becoming.AlignmentSpine.ComposedSpine.spineObs": [],
+        "Becoming.AlignmentSpine.ComposedSpine.spinePreTotal": [],
+        "Becoming.AlignmentSpine.ComposedSpine.spinePostTotal": [],
+        "Becoming.AlignmentSpine.ComposedSpine.spineMaxLag": [],
+        "Becoming.AlignmentSpine.ComposedSpine.spineInitEta": [],
+        "Becoming.AlignmentSpine.ComposedSpine.spineSilence": [],
+        "Becoming.AlignmentSpine.ComposedSpine.spine_preCap_eq": [],
+        "Becoming.AlignmentSpine.ComposedSpine.spine_postCap_eq": [],
+        "Becoming.AlignmentSpine.ComposedSpine.spine_silence_eq": [],
+        "Becoming.AlignmentSpine.ComposedSpine.spine_maxLag_eq": [],
+        "Becoming.AlignmentSpine.ComposedSpine.spine_eta_eq": [],
+        "Becoming.AlignmentSpine.ComposedSpine.spine_obs_detects": [],
+        "Becoming.AlignmentSpine.ComposedSpine.master_alignment_spine_viable": [],
+        "Becoming.AlignmentSpine.ComposedSpine.master_spine_assoc_equiv": [],
+        "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_turning_viable": [],
+        "Becoming.AlignmentSpine.ComposedSpine.master_spine_live_reconfig_viable": [],
+        "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_fleet_viable": [],
+        "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_scope_viable": [],
+        "Becoming.AlignmentSpine.ComposedSpine.withHiddenSite": [],
+        "Becoming.AlignmentSpine.ComposedSpine.withHiddenSiteContract": [],
+        "Becoming.AlignmentSpine.ComposedSpine.spineHideWireObs": [],
+        "Becoming.AlignmentSpine.ComposedSpine.spineContract_tol_lifts": [],
+        "Becoming.AlignmentSpine.ComposedSpine.master_spine_hide_viable": [],
+        "Becoming.AlignmentSpine.ComposedSpine.master_spine_multiscale_transfer": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.SpinePolicy": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.spineTaskModel": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.spineTaskModel_B_task": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.agentF1": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.agentF2": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.gExt": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.gHide": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.gExt_rises": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.gHide_rises": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.initPartner": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.initPartner_in": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessChannel": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineComp": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineContr": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineInit": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSpineObs": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.spineRun": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSiteComp": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessSiteContr": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessHiddenComp": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessTolLifts": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessWireOuterWarn": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessWireHideWarn": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witnessHiddenContr": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.hiddenRun": [],
+        "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witness_viable": [],
+        "Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_readsOnlyDynamics": [],
+        "Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_admits_rival": [],
+        "Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_not_entails": [],
+        "Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_cannot_entail_unrestricted": [],
+        "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary": [],
+        "Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas": [],
+        "Becoming.AlignmentSpine.AlignmentDichotomy.pre_overdraw_and_aliasing_boundaries": [],
+        "Becoming.AlignmentSpine.AlignmentDichotomy.epistemic_scope_metaethical_boundary": [],
+        "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.gSub": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.gSub_rises": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.channel": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.compA": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.contractA": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.compA'": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.contractA'": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.uncheckedReconfigProcess": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.st1": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.st2": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.witness": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.gUnit": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.gUnit_rises": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.compC": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.contractC": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.wireSafe": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.wireBlind": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenSafeComp": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenBlindComp": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.hiddenSafeContr": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.safeOrbit": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.blindOrbit": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.blind_keep_const": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.witness": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.hide_side_channel_leakage": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.gSub": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.gSub_rises": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkComp": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.mkContract": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.dummyB": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.dummyContract": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.badOrbit": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.witness": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.gSub": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.gSub_rises": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.channel": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.compA": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.contractA": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.compOrbit": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.witness": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.compC": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.contractC": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.gMono": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.gMono_rises": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.gOvercrowd": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.badOrbit": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.witness": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.gSub": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.gSub_rises": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStatic": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.mkStaticContract": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.concurrentOrbit": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.witness": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.microProc": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.macroProc": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.sim": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.certQ": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.witness": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.statProc": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.statSim": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.certProd": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.eight_le_of_distNat_le_two": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.gShared": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.solo_orbit_ten": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.witness": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.compCaptured": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.contractCaptured": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.capturedProc": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.capRun": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.capLevel": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.witness": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.compOwn": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.contractOwn": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.gOwn": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.gOwn_rises": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.compTwo": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.gTwo": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.twoOrbit": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.two_self_const": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.witness": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.slackDist_nat_not_transitive": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.exact_equivalence_is_class": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.tankPhysics": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_6": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_5": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_4_6": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.predictive_cycle_inv": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_6_inv": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.delayed_4_5_inv": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.witness": [],
+        "Becoming.AlignmentSpine.SharpnessSuite.master_sharpness_suite_complete": [],
+        "Becoming.AlignmentSpine.alignment_spine_end_to_end": []
+      },
+      "kernel_checked": true
+    },
+    {
       "module": "Becoming.SeedReach",
       "spine": true,
       "layer": "application",
@@ -164352,35 +165277,27 @@
     }
   ],
   "artifact_sha256": {
-    "Becoming.EndogenousTurning.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.EndogenousTurning.lean": "f4343f78f657d1a646c4abff11b2eded3845698f53fce6127f5191f1cf0d0bfc",
-    "Becoming.EndogenousTurning.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.AlignmentSpine.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.AlignmentSpine.lean": "ffe254d789590c7ee41fbe97f2b9f191b68a26fce32e28a75dabf1a0bbcdac3e",
+    "Becoming.AlignmentSpine.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "Becoming.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "Becoming.ScopeDynamics.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.ScopeDynamics.lean": "6acaa6e3fdcea3fa756819811b08f73a649ec9a0389fec2d985996c6d8ab9cd5",
-    "Becoming.UnifiedDrawdown.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.UnifiedDrawdown.lean": "787ec07766b2425a774810b5d5f89fc908e2650e1bbb98b40589c9864dbfd0c0",
-    "Becoming.UnifiedDrawdown.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.lean": "84648a9970ec61103cc18f1964c5113534ac5786b0c41333a1ec1d186635f553",
+    "Becoming.lean": "e272ba805812815686ac4ef0661416f4f4e666f0de691905d162e79ff57cce16",
     "Becoming.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "BecomingAlignmentSpineAxiomAudit.lean": "b481d204aefee1d6c08f72c93020d39e70a7fa8fd5754cd2546966c19fda3740",
+    "BecomingAlignmentSpineAxiomAudit.log": "f973f8b55f2c33adb4e1273d8a3d23b537fe95aa5dc467ba4b00a3fc2143db2b",
+    "BecomingAlignmentSpineSignatures.lean": "58624323cd7515aaa437eced69b6b96ba30277efdc2865937efb27c061c73f48",
+    "BecomingAlignmentSpineSignatures.log": "0623e5b4c32097e424b51f0ee2c7a086531e60e283d0385d2a07bab5ced2fff8",
     "BecomingAxiomAudit.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingAxiomAudit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "BecomingEndogenousTurningAxiomAudit.lean": "d0149af33530d8e6b3d40eb29b7c5b8a463216a8b8686d13aae818f1dcc5b7ec",
-    "BecomingEndogenousTurningAxiomAudit.log": "a18ea0bf5a44704516e0a460553d1ab2daf08e3a4fc192804507117224c43d92",
-    "BecomingEndogenousTurningSignatures.lean": "7df3725969761a401fe9e27148813559d8c7bba1ef84837ebd28719effe2226f",
-    "BecomingEndogenousTurningSignatures.log": "4b8a739f5d6746c98bdedc791ef0b8d3041c85739b72cfe0477e7cf8cbb0e0f9",
     "BecomingScopeDynamicsSignatures.log": "eca53f6420ec54283fb4227a5eeb4eb91863b2d3e93ad4049f126c59aadaace2",
     "BecomingSignatures.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingSignatures.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "BecomingUnifiedDrawdownAxiomAudit.lean": "476a708f866fb6459b0d4e61a5a9e79b6fb8b1aa10170f8e634b0b81dc3470de",
-    "BecomingUnifiedDrawdownAxiomAudit.log": "becce91a74daee21cbe7c6abfced1aa2ee7fe3b787c60dac4d3f89cef7c0ed36",
-    "BecomingUnifiedDrawdownSignatures.lean": "93c139186146aabc87cc54a82d1974e28fa81efee7987eab8a65640b759d7d34",
-    "BecomingUnifiedDrawdownSignatures.log": "59167cd43fb2ef7955a7f2aa6af572923e46faf30247ed1122547754c9b772e6",
     "Controls.lean": "b6d4d1772f4c923833bc713f3b9f170a10ef362d699f4b854401adb21fe22f57",
     "Controls.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "EnvironmentAudit.lean": "42f38174e91281d1e1fd80165b40c297eb9f14cf2bc36365bde9a93acb2ea99c",
-    "EnvironmentAudit.log": "b0cdacdb158f6b6ac5e6fe84ce80a9f87a6742b0ca6ab73d926989bfb72e5f13",
-    "check_becoming.py": "16cd28668afe24dd69f10697b9f86793b2eaf536ff12efdea29416d9f597efce",
+    "EnvironmentAudit.lean": "f64e4c211353696d6d3346ead43c81bc395049e22d0ae96080d12fc31dd26f9d",
+    "EnvironmentAudit.log": "4a16c7384522f2ae60f25b48704c588961ff2317fcb40f0b2d711e61f46cb84d",
+    "check_becoming.py": "4e1e641e09e07f17bf8c1f858879b9684bb60868104850fa3652cd351ceefc80",
     "version.log": "3185b32e24f5aea32feec5ebb137ef7b0b6d7b33707fb4f254924fe41b5ded8b"
   }
 }

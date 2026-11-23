@@ -2901,6 +2901,11 @@
    "base": "periphery",
    "note": "AlignmentReals L4 (Mathlib periphery): inertia lag headroom penalty, finite-distribution delay survival bound, metric LaxSim contraction tube and discretization, and linear FA feature-leakage hysteresis"
   },
+  "master-alignment-spine-and-sharpness": {
+   "region": "map",
+   "base": "general",
+   "note": "AlignmentSpine L5: 0-axiom 3-pillar OpenComposition master alignment spine, inhabited-Int hide and live replacement witnesses, failure/metaethical dichotomy, and CE01-CE15 sharpness counter-models"
+  },
   "selection-through-couplings-at-a-coarser-step": {
    "region": "knowing",
    "base": "general",
@@ -5012,6 +5017,11 @@
    "region": "map",
    "base": "general",
    "note": "L3 mutual-fate viable scope, myopic invasion collapse, reciprocal Withholding and OpenComposition stabilization/replacement, and not_entails"
+  },
+  "Becoming.AlignmentSpine": {
+   "region": "map",
+   "base": "general",
+   "note": "L5 0-axiom 3-pillar OpenComposition master alignment spine, failure/non-entailment dichotomy, and CE01-CE15 hypothesis-dropping sharpness suite"
   }
  }
 }

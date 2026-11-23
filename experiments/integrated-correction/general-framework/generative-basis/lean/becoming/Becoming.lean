@@ -418,6 +418,7 @@ import Becoming.StockFlowBridge
 import Becoming.EndogenousTurning
 import Becoming.UnifiedDrawdown
 import Becoming.ScopeDynamics
+import Becoming.AlignmentSpine
 
 /-!
 # The Theory of Becoming: the formal core
@@ -5422,6 +5423,7 @@ tagged instance or application.
 * `Becoming.EndogenousTurning` (L2, through `Becoming.StockFlowBridge`): derived proxy-optimum overdraw collapse, non-oracle `ServiceTaskModel` bottleneck `B_task`, timely pooled `Clearing` / native `OpenComposition` live-reconfig and widening bridges, and the epistemic silence boundary (`TurningWitness`).
 * `Becoming.UnifiedDrawdown` (L2, through `Becoming.StockFlowBridge`): parametric local-error-zero joint depletion, inductive finite-family `OpenComposition` fleet folds and `ContractRefines` upgrades, pre-overdraw `Flow` transfer vs. `OverdrawSeparationWitness`, and non-trivial temporal aliasing (`CadenceErasureWitness`, `unrecoverable_cadence_bridge`) with `not_entails`.
 * `Becoming.ScopeDynamics` (L2, through `Becoming.TransformativeViability`): mutual-fate viable-scope selection, open-commons myopic invasion collapse, reciprocal `Withholding`/native `OpenComposition` (`gatedDefectorComponent ⊕ coopComponent`) stabilization and replacement, paired with `scopeLaw_cannot_entail_unrestricted`.
+* `Becoming.AlignmentSpine` (L2, through `Becoming.EndogenousTurning`): 0-axiom 3-pillar composed alignment spine (`((turningSub ⊕ fleetSub) ⊕ scopeSub)` with inhabited-`Int` hidden closure, modular replacement, and `MasterSpineWitness`), structural failure/metaethical dichotomy (`ReadsOnlyDynamics.not_entails`, Rule 2), and complete `CE01`–`CE15` + `文理生生 v0.2` hypothesis-dropping sharpness suite (`alignment_spine_end_to_end`).
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.
