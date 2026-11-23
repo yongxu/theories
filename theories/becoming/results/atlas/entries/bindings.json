@@ -3340,7 +3340,7 @@
    "alternative": {
     "en": "Joint-account model error in `gpt-4.1-mini` (`Stationary.model_error`, reading its own take as joint margin); note non-binding talk leaves slack for single-step over-takes even in `gpt-5.4-mini` (0.006 per decision still caused 2/10 season losses)."
    },
-   "source": "experiments/direction-installation/README.md#round-2-frozen-at-40c9e61a7-runs-from-it-nothing-changed-after"
+   "source": "experiments/direction-installation/README.md#installing-the-direction-in-llm-agents-a-dependent-with-no-seat-in1"
   }
  },
  {

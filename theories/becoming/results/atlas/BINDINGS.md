@@ -771,7 +771,7 @@ The atlas's views: [the atlas](ATLAS.md) · [the premise ledger](PREMISES.md) ·
 - **Result.** By the frozen rule (passing only if both models pass), R2 (`DIR_UNSEEN_TALK`: 0.00 kept for both) and I (0 violations) passed, while R1, R3, R4 failed overall: `gpt-5.4-mini` passed R1–R4 (`DIR_SEEN_TALK` 0.80 vs `COMM_SEEN_TALK` 0.30, difference 0.50 ≥ 0.30; over-takes fell from 0.066 to 0.006 ≤ 0.022), whereas `gpt-4.1-mini` failed R1 (0.10 < 0.50), R3 (0.10 − 0.00 < 0.30), and R4 (over-take share 0.349 > 0.071).
 - **Where it marks.** the binding: `Flow.unselected_beyond_pool` (R2) and identities (I) held for both models. The failures belong to the per-model bridge for `gpt-4.1-mini`, whose joint-catch model error persisted even after one round of public talk (fishers publicly announced and took 15–30 tons each).
 - **Another explanation.** Joint-account model error in `gpt-4.1-mini` (`Stationary.model_error`, reading its own take as joint margin); note non-binding talk leaves slack for single-step over-takes even in `gpt-5.4-mini` (0.006 per decision still caused 2/10 season losses).
-- **Read from.** [README.md#round-2-frozen-at-40c9e61a7-runs-from-it-nothing-changed-after](../../../../experiments/direction-installation/README.md#round-2-frozen-at-40c9e61a7-runs-from-it-nothing-changed-after)
+- **Read from.** [README.md#installing-the-direction-in-llm-agents-a-dependent-with-no-seat-in1](../../../../experiments/direction-installation/README.md#installing-the-direction-in-llm-agents-a-dependent-with-no-seat-in1)
 
 <a id="test-se1"></a>
 ## SE1: Blind draw against margin versus established impact measures
