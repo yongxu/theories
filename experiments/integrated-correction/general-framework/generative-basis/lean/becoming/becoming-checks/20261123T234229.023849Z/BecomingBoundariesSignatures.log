@@ -1,0 +1,382 @@
+@Becoming.Boundary.closure : ∀ {F : Type} {rel : F → F → Prop} (f : F),
+  Becoming.Boundary rel f (Becoming.WithinClosure rel f)
+@Becoming.Boundary.whole : ∀ {F : Type} {rel : F → F → Prop} (f : F), Becoming.Boundary rel f fun x => True
+@Becoming.Boundary.holds : ∀ {F : Type} {rel : F → F → Prop} {f : F} {region : F → Prop},
+  Becoming.Boundary rel f region → ∀ {g : F}, Becoming.WithinClosure rel f g → region g
+@Becoming.Boundary.of_larger : ∀ {F : Type} {rel rel' : F → F → Prop},
+  (∀ (g h : F), rel g h → rel' g h) →
+    ∀ {f : F} {region : F → Prop}, Becoming.Boundary rel' f region → Becoming.Boundary rel f region
+@Becoming.Boundary.only_whole : ∀ {F : Type} {rel : F → F → Prop} {f : F},
+  (∀ (g : F), Becoming.WithinClosure rel f g) →
+    ∀ {region : F → Prop}, Becoming.Boundary rel f region → ∀ (g : F), region g
+@Becoming.Web.selfValuation_own_least : ∀ {F C : Type} {W : Becoming.Web F C} {rel : F → F → Prop}
+  {sig : F → Nat → F → Prop} (f : F),
+  (∀ (t : Nat), (W.selfValuation rel sig).own f (f, t)) ∧
+    (Becoming.Boundary rel f fun g => ∀ (t : Nat), (W.selfValuation rel sig).own f (g, t)) ∧
+      ∀ (region : F → Prop),
+        Becoming.Boundary rel f region → ∀ (e : F × Nat), (W.selfValuation rel sig).own f e → region e.fst
+@Becoming.Web.selfValuation_held : ∀ {F C : Type} {W : Becoming.Web F C} {rel : F → F → Prop}
+  {sig : F → Nat → F → Prop}, (W.selfValuation rel sig).Held
+@Becoming.Web.selfValuation_significant_iff : ∀ {F C : Type} {W : Becoming.Web F C} {rel : F → F → Prop}
+  {sig : F → Nat → F → Prop},
+  (W.selfValuation rel sig).Significant ↔
+    (∀ (f : F), (W.selfValuation rel sig).SelfSignificance f) ∧ Becoming.Neutral (W.selfValuation rel sig).shares
+@Becoming.Web.selfValuation_empty_own : ∀ {F C : Type} {W : Becoming.Web F C} {sig : F → Nat → F → Prop} {f : F}
+  {e : F × Nat}, (W.selfValuation (fun x x_1 => False) sig).own f e ↔ e.fst = f
+@Becoming.Web.selfValuation_feeding_own : ∀ {F C : Type} {W : Becoming.Web F C} {sig : F → Nat → F → Prop}
+  (L : Becoming.Flow F C) {f : F} {e : F × Nat}, (W.selfValuation (L.FedFrom W) sig).own f e ↔ L.WithinFeeding W f e.fst
+@Becoming.Web.selfValuation_of_unrestricted : ∀ {F C : Type} {W : Becoming.Web F C} {rel : F → F → Prop}
+  {sig : F → Nat → F → Prop},
+  Becoming.Unrestricted sig →
+    (W.selfValuation rel sig).Significant ∧
+      (∀ (f : F), (W.selfValuation rel sig).SelfSignificance f) ∧
+        Becoming.Neutral (W.selfValuation rel sig).transmits ∧
+          Becoming.Neutral (W.selfValuation rel sig).shares ∧
+            ∀ (e : F × Nat), (W.selfValuation rel sig).living e → ∀ (a : F), (W.selfValuation rel sig).Seed
+@Becoming.superTrue_iff : ∀ {F : Type} {admissible claim : (F → Prop) → Prop},
+  (∃ region, admissible region) →
+    (Becoming.SuperTrue admissible claim ↔
+      Becoming.SubTrue admissible claim ∧ Becoming.BoundaryInvariant admissible claim)
+@Becoming.boundaryInvariant_iff_determinate : ∀ {F : Type} {admissible claim : (F → Prop) → Prop},
+  Becoming.BoundaryInvariant admissible claim ↔ Becoming.SubTrue admissible claim → Becoming.SuperTrue admissible claim
+@Becoming.superTrue_member_iff : ∀ {F : Type} {rel : F → F → Prop} {f g : F},
+  (Becoming.SuperTrue (Becoming.Boundary rel f) fun region => region g) ↔ Becoming.WithinClosure rel f g
+@Becoming.subTrue_member : ∀ {F : Type} {rel : F → F → Prop} (f g : F),
+  Becoming.SubTrue (Becoming.Boundary rel f) fun region => region g
+@Becoming.superTrue_all_iff : ∀ {F : Type} {admissible : (F → Prop) → Prop},
+  (admissible fun x => True) →
+    ∀ {s : F → Prop}, (Becoming.SuperTrue admissible fun region => ∀ (g : F), region g → s g) ↔ ∀ (g : F), s g
+@Becoming.subTrue_all_iff : ∀ {F : Type} {rel : F → F → Prop} {f : F} {s : F → Prop},
+  (Becoming.SubTrue (Becoming.Boundary rel f) fun region => ∀ (g : F), region g → s g) ↔
+    ∀ (g : F), Becoming.WithinClosure rel f g → s g
+@Becoming.superTrue_significantWithin_iff_union : ∀ {F Pos : Type} {admissible : (F → Prop) → Prop}
+  {sig : Pos → Nat → F → Prop} {p : Pos},
+  Becoming.SuperTrue admissible (Becoming.SignificantWithin sig p) ↔
+    ∀ (t : Nat) (g : F), (∃ region, admissible region ∧ region g) → sig p t g
+@Becoming.superTrue_significantWithin_iff : ∀ {F Pos : Type} {admissible : (F → Prop) → Prop},
+  (admissible fun x => True) →
+    ∀ {sig : Pos → Nat → F → Prop} {p : Pos},
+      Becoming.SuperTrue admissible (Becoming.SignificantWithin sig p) ↔ ∀ (t : Nat) (g : F), sig p t g
+@Becoming.subTrue_significantWithin_iff : ∀ {F Pos : Type} {rel : F → F → Prop} {f : F} {sig : Pos → Nat → F → Prop}
+  {p : Pos},
+  Becoming.SubTrue (Becoming.Boundary rel f) (Becoming.SignificantWithin sig p) ↔
+    ∀ (t : Nat) (g : F), Becoming.WithinClosure rel f g → sig p t g
+@Becoming.subTrue_of_larger : ∀ {F : Type} {rel rel' : F → F → Prop},
+  (∀ (g h : F), rel g h → rel' g h) →
+    ∀ {f : F} {claim : (F → Prop) → Prop},
+      Becoming.SubTrue (Becoming.Boundary rel' f) claim → Becoming.SubTrue (Becoming.Boundary rel f) claim
+@Becoming.subTrue_total_iff : ∀ {F Pos : Type} {f : F} {sig : Pos → Nat → F → Prop} {p : Pos},
+  Becoming.SubTrue (Becoming.Boundary (fun x x_1 => True) f) (Becoming.SignificantWithin sig p) ↔
+    ∀ (t : Nat) (g : F), sig p t g
+@Becoming.subTrue_empty_iff : ∀ {F Pos : Type} {f : F} {sig : Pos → Nat → F → Prop} {p : Pos},
+  Becoming.SubTrue (Becoming.Boundary (fun x x_1 => False) f) (Becoming.SignificantWithin sig p) ↔
+    ∀ (t : Nat), sig p t f
+@Becoming.unrestricted_iff_superTrue : ∀ {F Pos : Type} (rel : F → F → Prop) (center : Pos → F)
+  {sig : Pos → Nat → F → Prop},
+  Becoming.Unrestricted sig ↔
+    ∀ (p : Pos), Becoming.SuperTrue (Becoming.Boundary rel (center p)) (Becoming.SignificantWithin sig p)
+@Becoming.superTrue_level_free : ∀ {F Pos : Type} (rel rel' : F → F → Prop) (f : F) (sig : Pos → Nat → F → Prop)
+  (p : Pos),
+  Becoming.SuperTrue (Becoming.Boundary rel f) (Becoming.SignificantWithin sig p) ↔
+    Becoming.SuperTrue (Becoming.Boundary rel' f) (Becoming.SignificantWithin sig p)
+@Becoming.bounded_closure_iff : ∀ {F Pos : Type} (rel : F → F → Prop) (center : Pos → F) (p : Pos) (t : Nat) (g : F),
+  Becoming.bounded (fun q => Becoming.WithinClosure rel (center q)) p t g ↔
+    Becoming.SuperTrue (Becoming.Boundary rel (center p)) fun region => region g
+@Becoming.bounded_closure_least : ∀ {F Pos : Type} (rel : F → F → Prop) (center : Pos → F),
+  (∀ (p : Pos),
+      Becoming.SubTrue (Becoming.Boundary rel (center p))
+        (Becoming.SignificantWithin (Becoming.bounded fun q => Becoming.WithinClosure rel (center q)) p)) ∧
+    ∀ (sig : Pos → Nat → F → Prop),
+      (∀ (p : Pos), Becoming.SubTrue (Becoming.Boundary rel (center p)) (Becoming.SignificantWithin sig p)) →
+        ∀ (p : Pos) (t : Nat) (g : F),
+          Becoming.bounded (fun q => Becoming.WithinClosure rel (center q)) p t g → sig p t g
+@Becoming.presupposition_scopes : ∀ {F Pos : Type} (rel : F → F → Prop) (f : F) (sig : Pos → Nat → F → Prop) (p : Pos),
+  ((∀ (t : Nat) (g : F), (Becoming.SuperTrue (Becoming.Boundary rel f) fun region => region g) → sig p t g) ↔
+      Becoming.SubTrue (Becoming.Boundary rel f) (Becoming.SignificantWithin sig p)) ∧
+    (Becoming.SuperTrue (Becoming.Boundary rel f) (Becoming.SignificantWithin sig p) ↔ ∀ (t : Nat) (g : F), sig p t g)
+@Becoming.boundaryInvariant_iff_extends : ∀ {F Pos : Type} {admissible : (F → Prop) → Prop},
+  (admissible fun x => True) →
+    ∀ {sig : Pos → Nat → F → Prop} {p : Pos},
+      Becoming.BoundaryInvariant admissible (Becoming.SignificantWithin sig p) ↔
+        ∀ (region : F → Prop),
+          admissible region → Becoming.SignificantWithin sig p region → Becoming.SignificantWithin sig p fun x => True
+@Becoming.boundaryInvariant_iff_all : ∀ {F Pos : Type} {admissible : (F → Prop) → Prop},
+  (admissible fun x => True) →
+    ∀ {sig : Pos → Nat → F → Prop} {p : Pos},
+      Becoming.SubTrue admissible (Becoming.SignificantWithin sig p) →
+        (Becoming.BoundaryInvariant admissible (Becoming.SignificantWithin sig p) ↔ ∀ (t : Nat) (g : F), sig p t g)
+@Becoming.boundaryInvariant_iff_conditional : ∀ {F Pos : Type} {admissible : (F → Prop) → Prop},
+  (admissible fun x => True) →
+    ∀ {sig : Pos → Nat → F → Prop} {p : Pos},
+      Becoming.BoundaryInvariant admissible (Becoming.SignificantWithin sig p) ↔
+        Becoming.SubTrue admissible (Becoming.SignificantWithin sig p) → ∀ (t : Nat) (g : F), sig p t g
+@Becoming.not_subTrue_of_invariant : ∀ {F Pos : Type} {admissible : (F → Prop) → Prop},
+  (admissible fun x => True) →
+    ∀ {sig : Pos → Nat → F → Prop} {p : Pos},
+      Becoming.BoundaryInvariant admissible (Becoming.SignificantWithin sig p) →
+        ∀ {t : Nat} {g : F}, ¬sig p t g → ¬Becoming.SubTrue admissible (Becoming.SignificantWithin sig p)
+@Becoming.unrestricted_of_presupposed : ∀ {F Pos : Type} {admissible : Pos → (F → Prop) → Prop},
+  (∀ (p : Pos) (g : F), ∃ region, admissible p region ∧ region g) →
+    ∀ {sig : Pos → Nat → F → Prop},
+      (∀ (p : Pos), Becoming.SubTrue (admissible p) (Becoming.SignificantWithin sig p)) →
+        (∀ (p : Pos), Becoming.BoundaryInvariant (admissible p) (Becoming.SignificantWithin sig p)) →
+          Becoming.Unrestricted sig
+@Becoming.unrestricted_iff_presupposed : ∀ {F Pos : Type} {admissible : Pos → (F → Prop) → Prop},
+  (∀ (p : Pos), admissible p fun x => True) →
+    ∀ {sig : Pos → Nat → F → Prop},
+      Becoming.Unrestricted sig ↔
+        ∀ (p : Pos),
+          Becoming.SubTrue (admissible p) (Becoming.SignificantWithin sig p) ∧
+            Becoming.BoundaryInvariant (admissible p) (Becoming.SignificantWithin sig p)
+@Becoming.unrestricted_iff_presupposed_along : ∀ {F Pos : Type} (rel : F → F → Prop) (center : Pos → F)
+  {sig : Pos → Nat → F → Prop},
+  Becoming.Unrestricted sig ↔
+    ∀ (p : Pos),
+      Becoming.SubTrue (Becoming.Boundary rel (center p)) (Becoming.SignificantWithin sig p) ∧
+        Becoming.BoundaryInvariant (Becoming.Boundary rel (center p)) (Becoming.SignificantWithin sig p)
+@Becoming.unrestricted_iff_presupposed_of_whole : ∀ {F Pos : Type} {rel : F → F → Prop} {center : Pos → F},
+  (∀ (p : Pos) (g : F), Becoming.WithinClosure rel (center p) g) →
+    ∀ {sig : Pos → Nat → F → Prop},
+      Becoming.Unrestricted sig ↔
+        ∀ (p : Pos), Becoming.SubTrue (Becoming.Boundary rel (center p)) (Becoming.SignificantWithin sig p)
+@Becoming.retains_agree_of_presupposed : ∀ {F C Pos : Type} {admissible : Pos → (F → Prop) → Prop},
+  (∀ (p : Pos), admissible p fun x => True) →
+    ∀ {sig : Pos → Nat → F → Prop},
+      (∀ (p : Pos),
+          Becoming.SubTrue (admissible p) (Becoming.SignificantWithin sig p) ∧
+            Becoming.BoundaryInvariant (admissible p) (Becoming.SignificantWithin sig p)) →
+        ∀ (W : Becoming.Web F C) (p q : Pos) {l l' : Nat → C → Nat}, W.Retains sig p l l' ↔ W.Retains sig q l l'
+@Becoming.Valuation.significant_of_presupposed : ∀ {F Pos Q : Type} {V : Becoming.Valuation Pos Q}
+  {admissible : Pos → (F → Prop) → Prop},
+  (∀ (p : Pos), admissible p fun x => True) →
+    ∀ {sig : Pos → Nat → F → Prop},
+      (∀ (p : Pos),
+          Becoming.SubTrue (admissible p) (Becoming.SignificantWithin sig p) ∧
+            Becoming.BoundaryInvariant (admissible p) (Becoming.SignificantWithin sig p)) →
+        ∀ (formation : Q → F) (step : Q → Nat),
+          (∀ (p : Pos) (c : Q), sig p (step c) (formation c) → V.sig p c) → V.Significant
+@Becoming.unrestricted_of_standpointInvariant : ∀ {F Pos : Type} {rel : F → F → Prop} {center : Pos → F},
+  (∀ (g : F), ∃ q, Becoming.WithinClosure rel (center q) g) →
+    ∀ {sig : Pos → Nat → F → Prop},
+      (∀ (p : Pos), Becoming.SubTrue (Becoming.Boundary rel (center p)) (Becoming.SignificantWithin sig p)) →
+        Becoming.StandpointInvariant sig → Becoming.Unrestricted sig
+@Becoming.boundaryInvariant_iff_standpointInvariant : ∀ {F Pos : Type} {rel : F → F → Prop} {center : Pos → F},
+  (∀ (g : F), ∃ q, Becoming.WithinClosure rel (center q) g) →
+    ∀ {sig : Pos → Nat → F → Prop},
+      (∀ (p : Pos), Becoming.SubTrue (Becoming.Boundary rel (center p)) (Becoming.SignificantWithin sig p)) →
+        ((∀ (p : Pos),
+            Becoming.BoundaryInvariant (Becoming.Boundary rel (center p)) (Becoming.SignificantWithin sig p)) ↔
+          Becoming.StandpointInvariant sig)
+@Becoming.Flow.presupposition_order : ∀ {F C Pos : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f : F}
+  {sig : Pos → Nat → F → Prop} {p : Pos},
+  (Becoming.SubTrue (Becoming.Boundary (fun x x_1 => True) f) (Becoming.SignificantWithin sig p) →
+      Becoming.SubTrue (Becoming.Boundary (L.Shares W) f) (Becoming.SignificantWithin sig p)) ∧
+    (Becoming.SubTrue (Becoming.Boundary (L.Shares W) f) (Becoming.SignificantWithin sig p) →
+        Becoming.SubTrue (Becoming.Boundary (L.Affects W) f) (Becoming.SignificantWithin sig p)) ∧
+      (Becoming.SubTrue (Becoming.Boundary (L.Shares W) f) (Becoming.SignificantWithin sig p) →
+          Becoming.SubTrue (Becoming.Boundary (L.AffectedBy W) f) (Becoming.SignificantWithin sig p)) ∧
+        (Becoming.SubTrue (Becoming.Boundary (L.AffectedBy W) f) (Becoming.SignificantWithin sig p) →
+            Becoming.SubTrue (Becoming.Boundary (L.FedFrom W) f) (Becoming.SignificantWithin sig p)) ∧
+          ∀ (rel : F → F → Prop),
+            Becoming.SubTrue (Becoming.Boundary rel f) (Becoming.SignificantWithin sig p) →
+              Becoming.SubTrue (Becoming.Boundary (fun x x_1 => False) f) (Becoming.SignificantWithin sig p)
+@Becoming.Flow.Balances.presupposed_comparison : ∀ {F C Pos : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {rel : F → F → Prop},
+          (∀ (g h : F), L.Affects W g h → rel g h) →
+            ∀ {sig : Pos → Nat → F → Prop} {center : Pos → F} {p : Pos},
+              Becoming.SubTrue (Becoming.Boundary rel (center p)) (Becoming.SignificantWithin sig p) →
+                (∀ (h : F), part h = true → Becoming.WithinClosure rel (center p) h) →
+                  (W.Retains sig p W.level l ↔ W.Includes W.level l) ∧
+                    (W.Retains sig p l W.level ↔ W.Includes l W.level) ∧
+                      (¬W.Adds sig p W.level l ↔ ¬W.Exceeds W.level l) ∧
+                        (¬W.Adds sig p l W.level ↔ ¬W.Exceeds l W.level)
+@Becoming.Flow.Balances.presupposed_reach_comparison : ∀ {F C Pos : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {sig : Pos → Nat → F → Prop} {center : Pos → F} {p : Pos},
+          Becoming.SubTrue (Becoming.Boundary (L.Affects W) (center p)) (Becoming.SignificantWithin sig p) →
+            (∀ (h : F), part h = true → L.WithinReach W (center p) h) →
+              (W.Retains sig p W.level l ↔ W.Includes W.level l) ∧
+                (W.Retains sig p l W.level ↔ W.Includes l W.level) ∧
+                  (¬W.Adds sig p W.level l ↔ ¬W.Exceeds W.level l) ∧ (¬W.Adds sig p l W.level ↔ ¬W.Exceeds l W.level)
+@Becoming.Flow.unrestricted_iff_system_presupposed : ∀ {F C Pos : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {center : Pos → F},
+  (∀ (p : Pos) (g : F), L.WithinSystem W (center p) g) →
+    ∀ {sig : Pos → Nat → F → Prop},
+      Becoming.Unrestricted sig ↔
+        ∀ (p : Pos), Becoming.SubTrue (Becoming.Boundary (L.Shares W) (center p)) (Becoming.SignificantWithin sig p)
+@Becoming.Flow.unrestricted_iff_presupposed_of_common : ∀ {F C Pos : Type} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {c : C},
+  (∀ (g : F), L.TakesPart W g c) →
+    ∀ {center : Pos → F} {sig : Pos → Nat → F → Prop},
+      Becoming.Unrestricted sig ↔
+        ∀ (p : Pos), Becoming.SubTrue (Becoming.Boundary (L.Shares W) (center p)) (Becoming.SignificantWithin sig p)
+Becoming.Clearing.without_presupposition : (∀ (p : Becoming.Clearing.Formation),
+    Becoming.BoundaryInvariant (Becoming.Boundary (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web) p)
+      (Becoming.SignificantWithin (fun x x_1 x_2 => False) p)) ∧
+  (∀ (p : Becoming.Clearing.Formation),
+      Becoming.Boundary (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web) p fun x => True) ∧
+    ¬Becoming.Unrestricted fun x x_1 x_2 => False
+Becoming.Clearing.without_invariance : (∀ (p : Becoming.Clearing.Formation),
+    Becoming.SubTrue (Becoming.Boundary (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web) p)
+      (Becoming.SignificantWithin
+        (Becoming.bounded (Becoming.WithinClosure (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web))) p)) ∧
+  (∀ (p : Becoming.Clearing.Formation),
+      Becoming.Boundary (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web) p fun x => True) ∧
+    ¬Becoming.BoundaryInvariant
+          (Becoming.Boundary (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web) Becoming.Clearing.Formation.clearer)
+          (Becoming.SignificantWithin
+            (Becoming.bounded (Becoming.WithinClosure (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web)))
+            Becoming.Clearing.Formation.clearer) ∧
+      ¬Becoming.Unrestricted
+          (Becoming.bounded (Becoming.WithinClosure (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web)))
+Becoming.Clearing.without_standpoint_invariance : (∀ (p : Becoming.Clearing.Formation),
+    Becoming.SubTrue (Becoming.Boundary (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web) p)
+      (Becoming.SignificantWithin
+        (Becoming.bounded (Becoming.WithinClosure (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web))) p)) ∧
+  (∀ (g : Becoming.Clearing.Formation),
+      ∃ q, Becoming.WithinClosure (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web) q g) ∧
+    ¬Becoming.StandpointInvariant
+        (Becoming.bounded (Becoming.WithinClosure (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web)))
+Becoming.Clearing.with_fixed_boundary : (∀ (p : Becoming.Clearing.Formation),
+    Becoming.SubTrue
+      (fun region =>
+        ∀ (g : Becoming.Clearing.Formation),
+          region g ↔ Becoming.WithinClosure (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web) p g)
+      (Becoming.SignificantWithin
+        (Becoming.bounded (Becoming.WithinClosure (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web))) p)) ∧
+  (∀ (p : Becoming.Clearing.Formation),
+      Becoming.BoundaryInvariant
+        (fun region =>
+          ∀ (g : Becoming.Clearing.Formation),
+            region g ↔ Becoming.WithinClosure (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web) p g)
+        (Becoming.SignificantWithin
+          (Becoming.bounded (Becoming.WithinClosure (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web))) p)) ∧
+    (¬∃ region,
+          (∀ (g : Becoming.Clearing.Formation),
+              region g ↔
+                Becoming.WithinClosure (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web)
+                  Becoming.Clearing.Formation.clearer g) ∧
+            region Becoming.Clearing.Formation.dweller) ∧
+      ¬Becoming.Unrestricted
+          (Becoming.bounded (Becoming.WithinClosure (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web)))
+Becoming.Clearing.levels_differ : Becoming.SubTrue
+    (Becoming.Boundary (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web) Becoming.Clearing.Formation.clearer)
+    (Becoming.SignificantWithin
+      (Becoming.bounded (Becoming.WithinClosure (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web)))
+      Becoming.Clearing.Formation.clearer) ∧
+  ¬Becoming.SubTrue
+      (Becoming.Boundary (Becoming.Clearing.flow.Shares Becoming.Clearing.web) Becoming.Clearing.Formation.clearer)
+      (Becoming.SignificantWithin
+        (Becoming.bounded (Becoming.WithinClosure (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web)))
+        Becoming.Clearing.Formation.clearer)
+@Becoming.Clearing.own_presupposition : ∀ {l : Nat → Becoming.Clearing.Place → Nat},
+  Becoming.Clearing.flow.WithheldLevels Becoming.Clearing.clearerPart Becoming.Clearing.web l →
+    ∀ {sig : Becoming.Clearing.Formation → Nat → Becoming.Clearing.Formation → Prop},
+      (Becoming.SubTrue
+            (Becoming.Boundary (Becoming.Clearing.flow.Shares Becoming.Clearing.web)
+              Becoming.Clearing.Formation.clearer)
+            (Becoming.SignificantWithin sig Becoming.Clearing.Formation.clearer) →
+          Becoming.Clearing.web.Adds sig Becoming.Clearing.Formation.clearer l Becoming.Clearing.web.level ∧
+            ¬Becoming.Clearing.web.Retains sig Becoming.Clearing.Formation.clearer Becoming.Clearing.web.level l) ∧
+        (Becoming.SuperTrue
+              (Becoming.Boundary (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web)
+                Becoming.Clearing.Formation.clearer)
+              (Becoming.SignificantWithin sig Becoming.Clearing.Formation.clearer) →
+            Becoming.Clearing.web.Adds sig Becoming.Clearing.Formation.clearer l Becoming.Clearing.web.level ∧
+              ¬Becoming.Clearing.web.Retains sig Becoming.Clearing.Formation.clearer Becoming.Clearing.web.level l) ∧
+          Becoming.Clearing.web.Retains
+            (Becoming.bounded (Becoming.WithinClosure (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web)))
+            Becoming.Clearing.Formation.clearer Becoming.Clearing.web.level l
+Becoming.Clearing.system_presupposition : ∀
+  (sig : Becoming.Clearing.Formation → Nat → Becoming.Clearing.Formation → Prop),
+  Becoming.Unrestricted sig ↔
+    ∀ (p : Becoming.Clearing.Formation),
+      Becoming.SubTrue (Becoming.Boundary (Becoming.Clearing.flow.Shares Becoming.Clearing.web) p)
+        (Becoming.SignificantWithin sig p)
+Becoming.OneCounts.forms_apart : Becoming.StandpointInvariant Becoming.OneCounts.sig ∧
+  ¬Becoming.BoundaryInvariant (Becoming.Boundary (fun x x_1 => False) true)
+        (Becoming.SignificantWithin Becoming.OneCounts.sig true) ∧
+    ¬Becoming.SubTrue (Becoming.Boundary (fun x x_1 => False) false)
+        (Becoming.SignificantWithin Becoming.OneCounts.sig false)
+@Becoming.BoundaryFlows.superTrue_all_iff : ∀ {F C : Type} (L : Becoming.Flow F C) (W : Becoming.Web F C) (f : F)
+  {s : F → Prop},
+  (Becoming.SuperTrue (Becoming.Boundary (L.Affects W) f) fun region => ∀ (g : F), region g → s g) ↔ ∀ (g : F), s g
+@Becoming.BoundaryFlows.bounded_reach_iff : ∀ {F C Pos : Type} (L : Becoming.Flow F C) (W : Becoming.Web F C)
+  (center : Pos → F) (p : Pos) (t : Nat) (g : F),
+  Becoming.bounded (fun q => L.WithinReach W (center q)) p t g ↔
+    Becoming.SuperTrue (Becoming.Boundary (L.Affects W) (center p)) fun region => region g
+@Becoming.BoundaryFlows.reach_scopes : ∀ {F C Pos : Type} (L : Becoming.Flow F C) (W : Becoming.Web F C) (f : F)
+  (sig : Pos → Nat → F → Prop) (p : Pos),
+  ((∀ (t : Nat) (g : F), (Becoming.SuperTrue (Becoming.Boundary (L.Affects W) f) fun region => region g) → sig p t g) ↔
+      Becoming.SubTrue (Becoming.Boundary (L.Affects W) f) (Becoming.SignificantWithin sig p)) ∧
+    (Becoming.SuperTrue (Becoming.Boundary (L.Affects W) f) (Becoming.SignificantWithin sig p) ↔
+      ∀ (t : Nat) (g : F), sig p t g)
+@Becoming.BoundaryFlows.unrestricted_iff_superTrue : ∀ {F C Pos : Type} (L : Becoming.Flow F C) (W : Becoming.Web F C)
+  (center : Pos → F) {sig : Pos → Nat → F → Prop},
+  Becoming.Unrestricted sig ↔
+    ∀ (p : Pos), Becoming.SuperTrue (Becoming.Boundary (L.Affects W) (center p)) (Becoming.SignificantWithin sig p)
+@Becoming.BoundaryFlows.superTrue_level_free : ∀ {F C Pos : Type} (L : Becoming.Flow F C) (W : Becoming.Web F C) (f : F)
+  (sig : Pos → Nat → F → Prop) (p : Pos),
+  Becoming.SuperTrue (Becoming.Boundary (L.FedFrom W) f) (Becoming.SignificantWithin sig p) ↔
+    Becoming.SuperTrue (Becoming.Boundary (L.Shares W) f) (Becoming.SignificantWithin sig p)
+@Becoming.BoundaryFlows.boundaryInvariant_iff_extends : ∀ {F C Pos : Type} (L : Becoming.Flow F C)
+  (W : Becoming.Web F C) {f : F} {sig : Pos → Nat → F → Prop} {p : Pos},
+  Becoming.BoundaryInvariant (Becoming.Boundary (L.Affects W) f) (Becoming.SignificantWithin sig p) ↔
+    ∀ (region : F → Prop),
+      Becoming.Boundary (L.Affects W) f region →
+        Becoming.SignificantWithin sig p region → Becoming.SignificantWithin sig p fun x => True
+@Becoming.BoundaryFlows.own_continuation : ∀ {F C Pos : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f : F}
+  {sig : Pos → Nat → F → Prop} {p : Pos},
+  Becoming.SubTrue (Becoming.Boundary (L.Affects W) f) (Becoming.SignificantWithin sig p) → ∀ (t : Nat), sig p t f
+@Becoming.BoundaryFlows.only_whole_of_common : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C},
+  (∀ (g : F), L.TakesPart W g c) →
+    ∀ {f : F} {region : F → Prop}, Becoming.Boundary (L.Shares W) f region → ∀ (g : F), region g
+@Becoming.BoundaryFlows.shares_iff_total_of_common : ∀ {F C Pos : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {c : C},
+  (∀ (g : F), L.TakesPart W g c) →
+    ∀ {f : F} {sig : Pos → Nat → F → Prop} {p : Pos},
+      Becoming.SubTrue (Becoming.Boundary (L.Shares W) f) (Becoming.SignificantWithin sig p) ↔
+        Becoming.SubTrue (Becoming.Boundary (fun x x_1 => True) f) (Becoming.SignificantWithin sig p)
+@Becoming.BoundaryFlows.not_subTrue_of_invariant : ∀ {F C Pos : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {f : F} {sig : Pos → Nat → F → Prop} {p : Pos},
+  Becoming.BoundaryInvariant (Becoming.Boundary (L.Affects W) f) (Becoming.SignificantWithin sig p) →
+    ∀ {t : Nat} {g : F},
+      ¬sig p t g → ¬Becoming.SubTrue (Becoming.Boundary (L.Affects W) f) (Becoming.SignificantWithin sig p)
+@Becoming.BoundaryFlows.unrestricted_of_presupposed : ∀ {F C Pos : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {center : Pos → F} {sig : Pos → Nat → F → Prop},
+  (∀ (p : Pos), Becoming.SubTrue (Becoming.Boundary (L.Affects W) (center p)) (Becoming.SignificantWithin sig p)) →
+    (∀ (p : Pos),
+        Becoming.BoundaryInvariant (Becoming.Boundary (L.Affects W) (center p)) (Becoming.SignificantWithin sig p)) →
+      Becoming.Unrestricted sig
+@Becoming.BoundaryFlows.significant_of_presupposed : ∀ {F C Pos : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {Q : Type} {V : Becoming.Valuation Pos Q} {center : Pos → F} {sig : Pos → Nat → F → Prop},
+  (∀ (p : Pos),
+      Becoming.SubTrue (Becoming.Boundary (L.Affects W) (center p)) (Becoming.SignificantWithin sig p) ∧
+        Becoming.BoundaryInvariant (Becoming.Boundary (L.Affects W) (center p)) (Becoming.SignificantWithin sig p)) →
+    ∀ (formation : Q → F) (step : Q → Nat),
+      (∀ (p : Pos) (c : Q), sig p (step c) (formation c) → V.sig p c) → V.Significant
+@Becoming.BoundaryFlows.retains_whole_iff_includes : ∀ {F C Pos : Type} (W : Becoming.Web F C) (p : Pos)
+  {l l' : Nat → C → Nat}, W.Retains (Becoming.bounded fun x x_1 => True) p l l' ↔ W.Includes l l'
+@Becoming.presupposition_iff_all_of_invariant : ∀ {F Pos : Type} {admissible : (F → Prop) → Prop},
+  (admissible fun x => True) →
+    ∀ {sig : Pos → Nat → F → Prop} {p : Pos},
+      Becoming.BoundaryInvariant admissible (Becoming.SignificantWithin sig p) →
+        (Becoming.SubTrue admissible (Becoming.SignificantWithin sig p) ↔ ∀ (t : Nat) (g : F), sig p t g)
+@Becoming.bounded_invariant_iff : ∀ {F Pos : Type} {rel : F → F → Prop} {center : Pos → F} {region : Pos → F → Prop}
+  {p : Pos},
+  (∀ (g : F), Becoming.WithinClosure rel (center p) g → region p g) →
+    (Becoming.BoundaryInvariant (Becoming.Boundary rel (center p))
+        (Becoming.SignificantWithin (Becoming.bounded region) p) ↔
+      ∀ (g : F), region p g)
+@Becoming.BoundaryWorlds.presupposition_iff_all : ∀ {Pos : Type} (w : Becoming.World) {center : Pos → w.Relatum}
+  {sig : Pos → Nat → w.Relatum → Prop} {p : Pos},
+  Becoming.BoundaryInvariant (Becoming.Boundary (w.flow.Affects w.web) (center p)) (Becoming.SignificantWithin sig p) →
+    (Becoming.SubTrue (Becoming.Boundary (w.flow.Affects w.web) (center p)) (Becoming.SignificantWithin sig p) ↔
+      ∀ (t : Nat) (g : w.Relatum), sig p t g)

@@ -1,0 +1,83 @@
+@Becoming.ProfileReach.selfSignificance_reaches_at_least_as_connected : ∀ {Gen Prof : Type}
+  (s : Becoming.ProfileReach.Standpoint Gen Prof) (atLeast : Prof → Prof → Prop),
+  Becoming.ProfileReach.SelfSignificance s →
+    Becoming.ProfileReach.Monotone s atLeast →
+      ∀ {g g' : Gen}, s.own g → s.living g → s.living g' → atLeast (s.prof g) (s.prof g') → s.sig g'
+@Becoming.ProfileReach.strict_indexed_rival_inconsistent : ∀ {Gen Prof : Type}
+  (s : Becoming.ProfileReach.Standpoint Gen Prof) (atLeast : Prof → Prof → Prop),
+  Becoming.ProfileReach.SelfSignificance s →
+    Becoming.ProfileReach.Monotone s atLeast →
+      (∀ (g : Gen), s.sig g → s.own g) →
+        (∃ g g', s.own g ∧ s.living g ∧ s.living g' ∧ ¬s.own g' ∧ atLeast (s.prof g) (s.prof g')) → False
+@Becoming.ProfileReach.chain_preserves : ∀ {Prof : Type} (val : Prof → Prop) (step : Prof → Prof → Prop),
+  Becoming.ProfileReach.Tolerant val step →
+    ∀ {p q : Prof}, Becoming.Reach (Becoming.edgeProcess step) p q → val p → val q
+@Becoming.ProfileReach.tolerant_iff_neutral : ∀ {Gen Prof : Type} {s : Becoming.ProfileReach.Standpoint Gen Prof}
+  {val : Prof → Prop} {step : Prof → Prof → Prop},
+  Becoming.ProfileReach.Tolerant val step ↔ Becoming.Neutral (Becoming.ProfileReach.valuation s val step).transmits
+@Becoming.ProfileReach.reach_relations_iff : ∀ {Gen Prof : Type} {s : Becoming.ProfileReach.Standpoint Gen Prof}
+  {val : Prof → Prop} {step : Prof → Prof → Prop} {p q : Prof},
+  Becoming.Reach (Becoming.ProfileReach.valuation s val step).relations p q ↔
+    Becoming.Reach (Becoming.edgeProcess step) p q
+@Becoming.ProfileReach.selfSignificance_valuation : ∀ {Gen Prof : Type} {s : Becoming.ProfileReach.Standpoint Gen Prof}
+  {val : Prof → Prop} {step : Prof → Prof → Prop},
+  Becoming.ProfileReach.Supervenes s val →
+    Becoming.ProfileReach.SelfSignificance s → (Becoming.ProfileReach.valuation s val step).SelfSignificance ()
+@Becoming.ProfileReach.tolerant_chain_reaches : ∀ {Gen Prof : Type} (s : Becoming.ProfileReach.Standpoint Gen Prof)
+  (val : Prof → Prop) (step : Prof → Prof → Prop),
+  Becoming.ProfileReach.Supervenes s val →
+    Becoming.ProfileReach.SelfSignificance s →
+      Becoming.ProfileReach.Tolerant val step →
+        (∀ (g' : Gen),
+            s.reach g' →
+              s.living g' →
+                ∃ g, s.own g ∧ s.living g ∧ Becoming.Reach (Becoming.edgeProcess step) (s.prof g) (s.prof g')) →
+          ∀ (g' : Gen), s.reach g' → s.living g' → s.sig g'
+@Becoming.ProfileReach.reach_is_livingSignificance : ∀ {Gen Prof : Type}
+  (s : Becoming.ProfileReach.Standpoint Gen Prof),
+  (∀ (g' : Gen), s.reach g' → s.living g' → s.sig g') ↔
+    Becoming.LivingSignificance (Becoming.ProfileReach.reachableFrame s) s.living fun x g => s.sig g
+@Becoming.ProfileReach.selfSignificance_derives_reachable_livingSignificance : ∀ {Gen Prof : Type}
+  (s : Becoming.ProfileReach.Standpoint Gen Prof) (val : Prof → Prop) (step : Prof → Prof → Prop),
+  Becoming.ProfileReach.Supervenes s val →
+    Becoming.ProfileReach.SelfSignificance s →
+      Becoming.ProfileReach.Tolerant val step →
+        (∀ (g' : Gen),
+            s.reach g' →
+              s.living g' →
+                ∃ g, s.own g ∧ s.living g ∧ Becoming.Reach (Becoming.edgeProcess step) (s.prof g) (s.prof g')) →
+          Becoming.LivingSignificance (Becoming.ProfileReach.reachableFrame s) s.living fun x g => s.sig g
+Becoming.ProfileReach.formed_other_has_significance : ∀ (val : Nat → Prop),
+  Becoming.ProfileReach.SelfSignificance (Becoming.ProfileReach.standpoint val) →
+    (Becoming.ProfileReach.Monotone (Becoming.ProfileReach.standpoint val) fun x1 x2 => x1 ≤ x2) →
+      (Becoming.ProfileReach.standpoint val).sig Becoming.ProfileReach.Occ.formedOther
+Becoming.ProfileReach.threshold_selfSignificance : Becoming.ProfileReach.SelfSignificance
+  (Becoming.ProfileReach.standpoint fun x => 4 ≤ x)
+Becoming.ProfileReach.threshold_rival_is_consistent_without_tolerance : Becoming.ProfileReach.SelfSignificance
+    (Becoming.ProfileReach.standpoint fun x => 4 ≤ x) ∧
+  (Becoming.ProfileReach.Monotone (Becoming.ProfileReach.standpoint fun x => 4 ≤ x) fun x1 x2 => x1 ≤ x2) ∧
+    (Becoming.ProfileReach.Supervenes (Becoming.ProfileReach.standpoint fun x => 4 ≤ x) fun x => 4 ≤ x) ∧
+      (Becoming.ProfileReach.standpoint fun x => 4 ≤ x).sig Becoming.ProfileReach.Occ.formedOther ∧
+        ¬(Becoming.ProfileReach.standpoint fun x => 4 ≤ x).sig Becoming.ProfileReach.Occ.stranger ∧
+          ¬Becoming.ProfileReach.Tolerant (fun x => 4 ≤ x) Becoming.ProfileReach.adjacent
+Becoming.ProfileReach.tolerant_standpoint_reaches_stranger : ∀ (val : Nat → Prop),
+  Becoming.ProfileReach.SelfSignificance (Becoming.ProfileReach.standpoint val) →
+    Becoming.ProfileReach.Tolerant val Becoming.ProfileReach.adjacent →
+      (Becoming.ProfileReach.standpoint val).sig Becoming.ProfileReach.Occ.stranger ∧
+        (Becoming.ProfileReach.standpoint val).sig Becoming.ProfileReach.Occ.formedOther
+Becoming.ProfileReach.present_aim_evaluator_escapes : ¬Becoming.ProfileReach.SelfSignificance
+      (Becoming.ProfileReach.standpoint fun x => False) ∧
+  (Becoming.ProfileReach.Monotone (Becoming.ProfileReach.standpoint fun x => False) fun x1 x2 => x1 ≤ x2) ∧
+    (Becoming.ProfileReach.Supervenes (Becoming.ProfileReach.standpoint fun x => False) fun x => False) ∧
+      Becoming.ProfileReach.Tolerant (fun x => False) Becoming.ProfileReach.adjacent ∧
+        ¬(Becoming.ProfileReach.standpoint fun x => False).sig Becoming.ProfileReach.Occ.formedOther
+Becoming.ProfileReach.closed_self_blocks_reach : Becoming.ProfileReach.SelfSignificance
+    (Becoming.ProfileReach.standpoint fun x => 4 ≤ x) ∧
+  Becoming.ProfileReach.Tolerant (fun x => 4 ≤ x) Becoming.ProfileReach.closedStep ∧
+    ¬(Becoming.ProfileReach.standpoint fun x => 4 ≤ x).sig Becoming.ProfileReach.Occ.stranger
+Becoming.ProfileReach.persistence_rival_escapes_self_transcendence : Becoming.ProfileReach.SelfSignificance
+    Becoming.ProfileReach.persistence ∧
+  Becoming.ProfileReach.Monotone Becoming.ProfileReach.persistence Becoming.ProfileReach.productLe ∧
+    ¬Becoming.ProfileReach.productLe (Becoming.ProfileReach.profile2 Becoming.ProfileReach.Occ.changedSelf)
+          (Becoming.ProfileReach.profile2 Becoming.ProfileReach.Occ.formedOther) ∧
+      ¬Becoming.ProfileReach.persistence.sig Becoming.ProfileReach.Occ.formedOther

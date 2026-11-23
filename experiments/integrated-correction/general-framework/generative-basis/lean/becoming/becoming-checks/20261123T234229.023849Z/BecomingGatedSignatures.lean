@@ -1,0 +1,14 @@
+import Becoming.Gated
+#check @Becoming.Gated.kept_along
+#check @Becoming.Gated.kept_along_iff
+#check @Becoming.Gated.change_passes_gate
+#check @Becoming.Gated.change_located
+#check @Becoming.Gated.keptBy_iff_preserved
+#check @Becoming.Gated.keptBy_iff_reflected
+#check @Becoming.Gated.preserved_along
+#check @Becoming.Gated.preserved_along_iff
+#check @Becoming.Gated.reflected_along
+#check @Becoming.Gated.leaving_passes_gate
+#check @Becoming.Gated.origin
+#check @Becoming.Gated.origin_of_decides
+#check @Becoming.Gated.origin_of_propositions_iff

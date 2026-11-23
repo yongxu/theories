@@ -197,18 +197,6 @@ def cap : Form → Cap
   | .fPlus => .kExtra
   | .fChurn _ => .kExtra
 
-private def natEq : Nat → Nat → Bool
-  | 0 => fun | 0 => true | _ + 1 => false
-  | n + 1 => fun | 0 => false | m + 1 => natEq n m
-
-private theorem natEq_self : ∀ n : Nat, natEq n n = true
-  | 0 => rfl
-  | n + 1 => natEq_self n
-
-private theorem natEq_succ_false : ∀ n : Nat, natEq (n + 1) n = false
-  | 0 => rfl
-  | n + 1 => natEq_succ_false n
-
 def reqCond (_ : Nat) : Form → Cond → Prop
   | .fSub => fun | .cSub => True | .cOld => False | .cNew => False | .cPlus => False
   | .fOld => fun | .cSub => True | .cOld => True | .cNew => False | .cPlus => False
@@ -221,7 +209,7 @@ def reqNeed (t : Nat) : Form → Cond → Nat
   | .fOld => fun | .cSub => 1 | .cOld => 1 | .cNew => 0 | .cPlus => 0
   | .fNew => fun | .cSub => 1 | .cOld => 0 | .cNew => 1 | .cPlus => 0
   | .fPlus => fun | .cSub => 1 | .cOld => 0 | .cNew => 0 | .cPlus => 1
-  | .fChurn k => fun | .cSub => 0 | .cOld => 0 | .cNew => 0 | .cPlus => if natEq t k then 1 else 2
+  | .fChurn k => fun | .cSub => 0 | .cOld => 0 | .cNew => 0 | .cPlus => if Nat.beq t k then 1 else 2
 
 def l_legacy (_ : Nat) : Cond → Nat
   | .cSub => 1
@@ -288,15 +276,15 @@ private theorem churn_admits_at (t : Nat) : web.Admits (l_churn t) t (.fChurn t)
   intro c hreq
   cases c with
   | cPlus =>
-    show (if natEq t t then 1 else 2) ≤ 1
-    rw [natEq_self t]
+    show (if Nat.beq t t then 1 else 2) ≤ 1
+    rw [beq_self t]
     exact Nat.le_refl 1
   | cSub | cOld | cNew => exact False.elim hreq
 
 private theorem churn_not_admits_next (t : Nat) : ¬ web.Admits (l_churn (t + 1)) (t + 1) (.fChurn t) := by
   intro hadm
-  have hle : (if natEq (t + 1) t then 1 else 2) ≤ 1 := hadm .cPlus trivial
-  rw [natEq_succ_false t] at hle
+  have hle : (if Nat.beq (t + 1) t then 1 else 2) ≤ 1 := hadm .cPlus trivial
+  rw [ListTests.beq_false_of_ne (Naturals.succ_ne_self t)] at hle
   exact Nat.not_le_of_gt (by decide : 1 < 2) hle
 
 private theorem legacy_not_admits_new (t : Nat) : ¬ web.Admits (l_legacy t) t .fNew := by
@@ -310,13 +298,13 @@ private theorem legacy_not_admits_plus (t : Nat) : ¬ web.Admits (l_legacy t) t 
 private theorem legacy_not_admits_churn (t k : Nat) : ¬ web.Admits (l_legacy t) t (.fChurn k) := by
   intro hadm
   have hle : reqNeed t (.fChurn k) .cPlus ≤ 0 := hadm .cPlus trivial
-  cases h : natEq t k with
+  cases h : Nat.beq t k with
   | true =>
-    have h1 : (if natEq t k then 1 else 2) ≤ 0 := hle
+    have h1 : (if Nat.beq t k then 1 else 2) ≤ 0 := hle
     rw [h] at h1
     exact Nat.not_le_of_gt (Nat.succ_pos 0) h1
   | false =>
-    have h2 : (if natEq t k then 1 else 2) ≤ 0 := hle
+    have h2 : (if Nat.beq t k then 1 else 2) ≤ 0 := hle
     rw [h] at h2
     exact Nat.not_le_of_gt (by decide : 0 < 2) h2
 

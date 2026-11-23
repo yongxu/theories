@@ -1,0 +1,139 @@
+@Becoming.LumpedSeeking.tied_mass : ∀ {α β : Type} {lik : α → β → Nat} {h₁ h₂ : α},
+  Becoming.LumpedSeeking.Tied lik h₁ h₂ →
+    ∀ (os : List β) (rec : β → Bool), Becoming.mass os (lik h₁) rec = Becoming.mass os (lik h₂) rec
+@Becoming.LumpedSeeking.single_le_evidence : ∀ {α β : Type} [DecidableEq α] (prior : α → Nat) (lik : α → β → Nat)
+  {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ {h : α},
+      h ∈ hs →
+        prior h * Becoming.mass os (lik h) rec ≤
+          Becoming.mass (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik) fun c => rec c.snd
+@Becoming.LumpedSeeking.posterior_le_iff_prior : ∀ {α β : Type} [inst : DecidableEq α] (prior : α → Nat)
+  (lik : α → β → Nat) {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ {h₁ h₂ : α},
+      h₁ ∈ hs →
+        h₂ ∈ hs →
+          Becoming.LumpedSeeking.Tied lik h₁ h₂ →
+            0 < Becoming.mass os (lik h₁) rec →
+              ((Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                      (Becoming.ConditionalWeights.restrict (fun c => rec c.snd)
+                        (Becoming.ConditionalWeights.pairWeight prior lik))
+                      fun c => decide (c.fst = h₁)).le
+                  (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                    (Becoming.ConditionalWeights.restrict (fun c => rec c.snd)
+                      (Becoming.ConditionalWeights.pairWeight prior lik))
+                    fun c => decide (c.fst = h₂)) ↔
+                prior h₁ ≤ prior h₂)
+@Becoming.LumpedSeeking.posterior_ratio_kept : ∀ {α β : Type} [inst : DecidableEq α] (prior : α → Nat)
+  (lik : α → β → Nat) {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ {h₁ h₂ : α},
+      h₁ ∈ hs →
+        h₂ ∈ hs →
+          Becoming.LumpedSeeking.Tied lik h₁ h₂ →
+            (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                    (Becoming.ConditionalWeights.restrict (fun c => rec c.snd)
+                      (Becoming.ConditionalWeights.pairWeight prior lik))
+                    fun c => decide (c.fst = h₁)).part *
+                prior h₂ =
+              (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                    (Becoming.ConditionalWeights.restrict (fun c => rec c.snd)
+                      (Becoming.ConditionalWeights.pairWeight prior lik))
+                    fun c => decide (c.fst = h₂)).part *
+                prior h₁
+@Becoming.LumpedSeeking.order_kept : ∀ {α β : Type} [inst : DecidableEq α] (prior : α → Nat) (lik : α → β → Nat)
+  {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ {h₁ h₂ : α},
+      h₁ ∈ hs →
+        h₂ ∈ hs →
+          Becoming.LumpedSeeking.Tied lik h₁ h₂ →
+            0 < Becoming.mass os (lik h₁) rec →
+              prior h₁ < prior h₂ →
+                ¬(Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                        (Becoming.ConditionalWeights.restrict (fun c => rec c.snd)
+                          (Becoming.ConditionalWeights.pairWeight prior lik))
+                        fun c => decide (c.fst = h₂)).le
+                    (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                      (Becoming.ConditionalWeights.restrict (fun c => rec c.snd)
+                        (Becoming.ConditionalWeights.pairWeight prior lik))
+                      fun c => decide (c.fst = h₁))
+@Becoming.LumpedSeeking.seek_tied : ∀ {α E O : Type} (choose : List (E × O) → E → Nat) {lik : E → α → O → Nat}
+  {h₁ h₂ : α},
+  (∀ (e : E), Becoming.LumpedSeeking.Tied (lik e) h₁ h₂) →
+    ∀ (course : List (E × O)),
+      Becoming.LumpedSeeking.seekWeight choose lik h₁ course = Becoming.LumpedSeeking.seekWeight choose lik h₂ course
+@Becoming.LumpedSeeking.seeking_keeps_order : ∀ {α E O : Type} [inst : DecidableEq α] (prior : α → Nat)
+  (choose : List (E × O) → E → Nat) (lik : E → α → O → Nat) {hs : List α} (courses : List (List (E × O)))
+  (rec : List (E × O) → Bool),
+  Becoming.Distinct hs →
+    ∀ {h₁ h₂ : α},
+      h₁ ∈ hs →
+        h₂ ∈ hs →
+          (∀ (e : E), Becoming.LumpedSeeking.Tied (lik e) h₁ h₂) →
+            0 < Becoming.mass courses (Becoming.LumpedSeeking.seekWeight choose lik h₁) rec →
+              prior h₁ < prior h₂ →
+                ¬(Becoming.ConditionalWeights.share (Becoming.openSteps hs courses)
+                        (Becoming.ConditionalWeights.restrict (fun c => rec c.snd)
+                          (Becoming.ConditionalWeights.pairWeight prior (Becoming.LumpedSeeking.seekWeight choose lik)))
+                        fun c => decide (c.fst = h₂)).le
+                    (Becoming.ConditionalWeights.share (Becoming.openSteps hs courses)
+                      (Becoming.ConditionalWeights.restrict (fun c => rec c.snd)
+                        (Becoming.ConditionalWeights.pairWeight prior (Becoming.LumpedSeeking.seekWeight choose lik)))
+                      fun c => decide (c.fst = h₁))
+Becoming.LumpedSeeking.Agree.distinct : Becoming.Distinct Becoming.LumpedSeeking.Agree.hypotheses
+Becoming.LumpedSeeking.Agree.ties : Becoming.LumpedSeeking.Tied Becoming.LumpedSeeking.Agree.agreeing
+  Becoming.LumpedSeeking.Agree.Bias.heads Becoming.LumpedSeeking.Agree.Bias.tails
+Becoming.LumpedSeeking.Agree.totals : ∀ (h : Becoming.LumpedSeeking.Agree.Bias),
+  (Becoming.mass Becoming.LumpedSeeking.Agree.outcomes (Becoming.LumpedSeeking.Agree.agreeing h) fun x => true) = 16
+Becoming.LumpedSeeking.Agree.turns_fair : ¬(Becoming.ConditionalWeights.share
+        (Becoming.openSteps Becoming.LumpedSeeking.Agree.hypotheses Becoming.LumpedSeeking.Agree.outcomes)
+        (Becoming.ConditionalWeights.restrict (fun c => Becoming.LumpedSeeking.Agree.twoHeads c.snd)
+          (Becoming.ConditionalWeights.pairWeight Becoming.LumpedSeeking.Agree.prior
+            Becoming.LumpedSeeking.Agree.agreeing))
+        fun c => decide (c.fst = Becoming.LumpedSeeking.Agree.Bias.heads)).le
+    (Becoming.ConditionalWeights.share
+      (Becoming.openSteps Becoming.LumpedSeeking.Agree.hypotheses Becoming.LumpedSeeking.Agree.outcomes)
+      (Becoming.ConditionalWeights.restrict (fun c => Becoming.LumpedSeeking.Agree.twoHeads c.snd)
+        (Becoming.ConditionalWeights.pairWeight Becoming.LumpedSeeking.Agree.prior
+          Becoming.LumpedSeeking.Agree.agreeing))
+      fun c => decide (c.fst = Becoming.LumpedSeeking.Agree.Bias.fair))
+Becoming.LumpedSeeking.Agree.keeps_tails : ¬(Becoming.ConditionalWeights.share
+        (Becoming.openSteps Becoming.LumpedSeeking.Agree.hypotheses Becoming.LumpedSeeking.Agree.outcomes)
+        (Becoming.ConditionalWeights.restrict (fun c => Becoming.LumpedSeeking.Agree.twoHeads c.snd)
+          (Becoming.ConditionalWeights.pairWeight Becoming.LumpedSeeking.Agree.prior
+            Becoming.LumpedSeeking.Agree.agreeing))
+        fun c => decide (c.fst = Becoming.LumpedSeeking.Agree.Bias.tails)).le
+    (Becoming.ConditionalWeights.share
+      (Becoming.openSteps Becoming.LumpedSeeking.Agree.hypotheses Becoming.LumpedSeeking.Agree.outcomes)
+      (Becoming.ConditionalWeights.restrict (fun c => Becoming.LumpedSeeking.Agree.twoHeads c.snd)
+        (Becoming.ConditionalWeights.pairWeight Becoming.LumpedSeeking.Agree.prior
+          Becoming.LumpedSeeking.Agree.agreeing))
+      fun c => decide (c.fst = Becoming.LumpedSeeking.Agree.Bias.heads))
+Becoming.LumpedSeeking.Agree.seeking_keeps_tails : ¬(Becoming.ConditionalWeights.share
+        (Becoming.openSteps Becoming.LumpedSeeking.Agree.hypotheses Becoming.LumpedSeeking.Agree.agreeCourse)
+        (Becoming.ConditionalWeights.restrict (fun c => (fun x => true) c.snd)
+          (Becoming.ConditionalWeights.pairWeight Becoming.LumpedSeeking.Agree.prior
+            (Becoming.LumpedSeeking.seekWeight (fun x x_1 => 1) fun x => Becoming.LumpedSeeking.Agree.agreeing)))
+        fun c => decide (c.fst = Becoming.LumpedSeeking.Agree.Bias.tails)).le
+    (Becoming.ConditionalWeights.share
+      (Becoming.openSteps Becoming.LumpedSeeking.Agree.hypotheses Becoming.LumpedSeeking.Agree.agreeCourse)
+      (Becoming.ConditionalWeights.restrict (fun c => (fun x => true) c.snd)
+        (Becoming.ConditionalWeights.pairWeight Becoming.LumpedSeeking.Agree.prior
+          (Becoming.LumpedSeeking.seekWeight (fun x x_1 => 1) fun x => Becoming.LumpedSeeking.Agree.agreeing)))
+      fun c => decide (c.fst = Becoming.LumpedSeeking.Agree.Bias.heads))
+Becoming.LumpedSeeking.Agree.seeking_turns_tails : ¬(Becoming.ConditionalWeights.share
+        (Becoming.openSteps Becoming.LumpedSeeking.Agree.hypotheses Becoming.LumpedSeeking.Agree.readCourse)
+        (Becoming.ConditionalWeights.restrict (fun c => (fun x => true) c.snd)
+          (Becoming.ConditionalWeights.pairWeight Becoming.LumpedSeeking.Agree.prior
+            (Becoming.LumpedSeeking.seekWeight Becoming.LumpedSeeking.Agree.pickReading
+              Becoming.LumpedSeeking.Agree.experiment)))
+        fun c => decide (c.fst = Becoming.LumpedSeeking.Agree.Bias.heads)).le
+    (Becoming.ConditionalWeights.share
+      (Becoming.openSteps Becoming.LumpedSeeking.Agree.hypotheses Becoming.LumpedSeeking.Agree.readCourse)
+      (Becoming.ConditionalWeights.restrict (fun c => (fun x => true) c.snd)
+        (Becoming.ConditionalWeights.pairWeight Becoming.LumpedSeeking.Agree.prior
+          (Becoming.LumpedSeeking.seekWeight Becoming.LumpedSeeking.Agree.pickReading
+            Becoming.LumpedSeeking.Agree.experiment)))
+      fun c => decide (c.fst = Becoming.LumpedSeeking.Agree.Bias.tails))

@@ -1,0 +1,275 @@
+@Becoming.RuleHandoff.some_of_ite : ∀ {β : Type} {c : Prop} {d : Decidable c} {x t : β},
+  (if c then some x else none) = some t → x = t
+@Becoming.RuleHandoff.cond_of_ite : ∀ {β : Type} {c : Prop} {d : Decidable c} {x t : β},
+  (if c then some x else none) = some t → c
+@Becoming.RuleHandoff.mem_of_contains : ∀ {l : List Nat} {i : Nat}, l.contains i = true → i ∈ l
+@Becoming.RuleHandoff.trace_iff_run : ∀ {s t : Becoming.RuleHandoff.State} {es : List Becoming.RuleHandoff.Event},
+  Generative.Trace Becoming.RuleHandoff.process s es t ↔ Becoming.RuleHandoff.run s es = some t
+@Becoming.RuleHandoff.admitted_requires_review : ∀ {s t : Becoming.RuleHandoff.State} {c : Nat}
+  {b : Becoming.RuleHandoff.Ballot},
+  Becoming.RuleHandoff.step s (Becoming.RuleHandoff.Event.enroll c b) = some t →
+    (s.reviews.any fun e => e.snd == c) = true ∧ Becoming.RuleHandoff.governance s b = true
+@Becoming.RuleHandoff.adoption_uses_recorded_proposal : ∀ {s t : Becoming.RuleHandoff.State}
+  {b : Becoming.RuleHandoff.Ballot},
+  Becoming.RuleHandoff.step s (Becoming.RuleHandoff.Event.adopt b) = some t →
+    ∃ p, s.proposal = some p ∧ Becoming.RuleHandoff.governance s b = true ∧ t.rule = p ∧ t.adoptions = p :: s.adoptions
+Becoming.RuleHandoff.rule_kept : Becoming.Gated.KeptBy Becoming.RuleHandoff.process Becoming.RuleHandoff.adopts
+  Becoming.RuleHandoff.State.rule
+@Becoming.RuleHandoff.adopts_of_nonAdopting : ∀ {e : Becoming.RuleHandoff.Event},
+  Becoming.RuleHandoff.nonAdopting e = true → Becoming.RuleHandoff.adopts e = false
+@Becoming.RuleHandoff.nonadopting_step_preserves : ∀ {s t : Becoming.RuleHandoff.State}
+  {e : Becoming.RuleHandoff.Event},
+  Becoming.RuleHandoff.step s e = some t → Becoming.RuleHandoff.nonAdopting e = true → t.rule = s.rule
+@Becoming.RuleHandoff.changed_rule_requires_adoption : ∀ {s t : Becoming.RuleHandoff.State}
+  {e : Becoming.RuleHandoff.Event},
+  Becoming.RuleHandoff.step s e = some t →
+    t.rule ≠ s.rule →
+      ∃ b p,
+        e = Becoming.RuleHandoff.Event.adopt b ∧
+          s.proposal = some p ∧ Becoming.RuleHandoff.governance s b = true ∧ t.rule = p
+@Becoming.RuleHandoff.nonadopting_trace_keeps_rule : ∀ {s t : Becoming.RuleHandoff.State}
+  {es : List Becoming.RuleHandoff.Event},
+  Generative.Trace Becoming.RuleHandoff.process s es t →
+    (∀ (e : Becoming.RuleHandoff.Event), e ∈ es → Becoming.RuleHandoff.nonAdopting e = true) → t.rule = s.rule
+@Becoming.RuleHandoff.nonadopting_history_inherits : ∀ {s t : Becoming.RuleHandoff.State}
+  {es : List Becoming.RuleHandoff.Event},
+  Becoming.RuleHandoff.run s es = some t →
+    (∀ (e : Becoming.RuleHandoff.Event), e ∈ es → Becoming.RuleHandoff.nonAdopting e = true) → t.rule = s.rule
+@Becoming.RuleHandoff.rule_inherited : ∀ {s t : Becoming.RuleHandoff.State} {es : List Becoming.RuleHandoff.Event},
+  Generative.Trace Becoming.RuleHandoff.process s es t →
+    (∀ (e : Becoming.RuleHandoff.Event), e ∈ es → Becoming.RuleHandoff.adopts e = false) → t.rule = s.rule
+@Becoming.RuleHandoff.rule_change_located : ∀ {s t : Becoming.RuleHandoff.State} {es : List Becoming.RuleHandoff.Event},
+  Generative.Trace Becoming.RuleHandoff.process s es t →
+    t.rule ≠ s.rule →
+      ∃ pre e post m m',
+        es = pre ++ e :: post ∧
+          Generative.Trace Becoming.RuleHandoff.process s pre m ∧
+            m.rule = s.rule ∧
+              Becoming.RuleHandoff.step m e = some m' ∧
+                Becoming.RuleHandoff.adopts e = true ∧
+                  m'.rule ≠ m.rule ∧ Generative.Trace Becoming.RuleHandoff.process m' post t
+Becoming.RuleHandoff.handoff_preserves_record : ∀ (s : Becoming.RuleHandoff.State) (cs : List Nat),
+  (Becoming.RuleHandoff.handoff s cs).rule = s.rule ∧
+    (Becoming.RuleHandoff.handoff s cs).roster = s.roster ∧ (Becoming.RuleHandoff.handoff s cs).adoptions = s.adoptions
+Becoming.RuleHandoff.handoff_does_not_invent_participation : ∀ (s : Becoming.RuleHandoff.State) (cs : List Nat)
+  (i : Nat), i ∈ (Becoming.RuleHandoff.handoff s cs).present → i ∈ s.present ∧ i ∈ cs
+Becoming.RuleHandoff.fork_retains_source : ∀ (s : Becoming.RuleHandoff.State) (cs : List Nat),
+  (Becoming.RuleHandoff.fork s cs).fst = s ∧ (Becoming.RuleHandoff.fork s cs).snd = Becoming.RuleHandoff.handoff s cs
+Becoming.RuleHandoff.repeated_handoff_inherits : ∀ (s : Becoming.RuleHandoff.State) (css : List (List Nat)),
+  (Becoming.RuleHandoff.handoffs s css).rule = s.rule ∧
+    (Becoming.RuleHandoff.handoffs s css).roster = s.roster ∧
+      (Becoming.RuleHandoff.handoffs s css).adoptions = s.adoptions
+Becoming.RuleHandoff.same_enacted_relations_same_decision : ∀ (s t : Becoming.RuleHandoff.State)
+  (b : Becoming.RuleHandoff.Ballot),
+  s.roster = t.roster →
+    s.present = t.present → s.rule = t.rule → Becoming.RuleHandoff.technical s b = Becoming.RuleHandoff.technical t b
+Becoming.RuleHandoff.filter_absent : ∀ (ids l : List Nat), List.filter (fun i => [].contains i && ids.contains i) l = []
+@Becoming.RuleHandoff.voters_absent : ∀ {s : Becoming.RuleHandoff.State},
+  s.present = [] → ∀ (ids : List Nat), Becoming.RuleHandoff.voters s ids = []
+Becoming.RuleHandoff.no_participation_no_integration : ∀ (s : Becoming.RuleHandoff.State)
+  (b : Becoming.RuleHandoff.Ballot), s.present = [] → Becoming.RuleHandoff.technical s b = false
+Becoming.RuleHandoff.extend_case : ∀ (c d x r : Bool), (c && (d || false && r)) = true → (c && (d || x && r)) = true
+Becoming.RuleHandoff.majority_acceptance_survives_extension : ∀ (s : Becoming.RuleHandoff.State)
+  (b : Becoming.RuleHandoff.Ballot),
+  s.rule = Becoming.RuleHandoff.Rule.majority →
+    Becoming.RuleHandoff.technical s b = true →
+      Becoming.RuleHandoff.technical
+          { roster := s.roster, present := s.present, reviews := s.reviews, rule := Becoming.RuleHandoff.Rule.timedTwo,
+            proposal := s.proposal, adoptions := s.adoptions, accepted := s.accepted }
+          b =
+        true
+Becoming.RuleHandoff.relations_form_through_work : Becoming.RuleHandoff.run Becoming.RuleHandoff.initial
+    Becoming.RuleHandoff.formation =
+  some Becoming.RuleHandoff.formed
+Becoming.RuleHandoff.review_alone_does_not_confer_office : Option.map Becoming.RuleHandoff.State.roster
+    (Becoming.RuleHandoff.step Becoming.RuleHandoff.initial (Becoming.RuleHandoff.Event.review 0 1)) =
+  some [0]
+Becoming.RuleHandoff.office_without_review_fails : Becoming.RuleHandoff.step Becoming.RuleHandoff.initial
+    (Becoming.RuleHandoff.Event.enroll 1 Becoming.RuleHandoff.allVote) =
+  none
+Becoming.RuleHandoff.proposal_alone_does_not_change_rule : Option.map Becoming.RuleHandoff.State.rule
+    (Becoming.RuleHandoff.step Becoming.RuleHandoff.formed
+      (Becoming.RuleHandoff.Event.propose 5 Becoming.RuleHandoff.Rule.timedTwo)) =
+  some Becoming.RuleHandoff.Rule.majority
+Becoming.RuleHandoff.authorized_revision_is_actual : Becoming.RuleHandoff.run Becoming.RuleHandoff.formed
+    Becoming.RuleHandoff.revision =
+  some Becoming.RuleHandoff.revised
+Becoming.RuleHandoff.low_support_cannot_revise : Becoming.RuleHandoff.run Becoming.RuleHandoff.formed
+    [Becoming.RuleHandoff.Event.propose 5 Becoming.RuleHandoff.Rule.timedTwo,
+      Becoming.RuleHandoff.Event.adopt Becoming.RuleHandoff.twoVote] =
+  none
+Becoming.RuleHandoff.duplicate_votes_do_not_create_mandates : Becoming.RuleHandoff.technical
+    Becoming.RuleHandoff.revised { yes := [0, 0, 0, 0], no := [], days := 14 } =
+  false
+Becoming.RuleHandoff.inherited_rules_change_access : Becoming.RuleHandoff.technical
+      (Becoming.RuleHandoff.handoff Becoming.RuleHandoff.formed [0, 1]) Becoming.RuleHandoff.twoVote =
+    false ∧
+  Becoming.RuleHandoff.technical (Becoming.RuleHandoff.handoff Becoming.RuleHandoff.revised [0, 1])
+      Becoming.RuleHandoff.twoVote =
+    true
+Becoming.RuleHandoff.wait_and_objection_matter : Becoming.RuleHandoff.technical Becoming.RuleHandoff.revised
+      { yes := [0, 1], no := [], days := 13 } =
+    false ∧
+  Becoming.RuleHandoff.technical Becoming.RuleHandoff.revised { yes := [0, 1], no := [2], days := 14 } = false ∧
+    Becoming.RuleHandoff.technical Becoming.RuleHandoff.revised Becoming.RuleHandoff.twoVote = true
+Becoming.RuleHandoff.inherited_revision_continues : Becoming.RuleHandoff.run Becoming.RuleHandoff.initial
+    (Becoming.RuleHandoff.formation ++ Becoming.RuleHandoff.revision ++
+      [Becoming.RuleHandoff.Event.handoff [0, 1], Becoming.RuleHandoff.Event.integrate Becoming.RuleHandoff.twoVote,
+        Becoming.RuleHandoff.Event.handoff [0, 1], Becoming.RuleHandoff.Event.integrate Becoming.RuleHandoff.twoVote]) =
+  some
+    (have __src := Becoming.RuleHandoff.revised;
+    { roster := __src.roster, present := [0, 1], reviews := __src.reviews, rule := __src.rule,
+      proposal := __src.proposal, adoptions := __src.adoptions, accepted := 2 })
+Becoming.RuleHandoff.copied_rule_without_participation_fails : (Becoming.RuleHandoff.handoff
+        Becoming.RuleHandoff.revised []).rule =
+    Becoming.RuleHandoff.Rule.timedTwo ∧
+  Becoming.RuleHandoff.step (Becoming.RuleHandoff.handoff Becoming.RuleHandoff.revised [])
+      (Becoming.RuleHandoff.Event.integrate Becoming.RuleHandoff.twoVote) =
+    none
+Becoming.RuleHandoff.enabling_one_operation_need_not_enable_revision : Becoming.RuleHandoff.step
+      (Becoming.RuleHandoff.handoff Becoming.RuleHandoff.revised [0, 1])
+      (Becoming.RuleHandoff.Event.integrate Becoming.RuleHandoff.twoVote) ≠
+    none ∧
+  Becoming.RuleHandoff.run (Becoming.RuleHandoff.handoff Becoming.RuleHandoff.revised [0, 1])
+      [Becoming.RuleHandoff.Event.propose 0 Becoming.RuleHandoff.Rule.majority,
+        Becoming.RuleHandoff.Event.adopt Becoming.RuleHandoff.twoVote] =
+    none
+Becoming.RuleHandoff.successor_can_revise_inherited_rule : Becoming.RuleHandoff.run Becoming.RuleHandoff.revised
+    [Becoming.RuleHandoff.Event.handoff [0, 1, 2, 3],
+      Becoming.RuleHandoff.Event.propose 3 Becoming.RuleHandoff.Rule.majority,
+      Becoming.RuleHandoff.Event.adopt Becoming.RuleHandoff.fourVote] =
+  some
+    (have __src := Becoming.RuleHandoff.formed;
+    { roster := __src.roster, present := [0, 1, 2, 3], reviews := __src.reviews, rule := __src.rule,
+      proposal := __src.proposal, adoptions := [Becoming.RuleHandoff.Rule.majority, Becoming.RuleHandoff.Rule.timedTwo],
+      accepted := __src.accepted })
+Becoming.RuleHandoff.boundary_is_not_exclusive_membership : 0 ∈
+    (Becoming.RuleHandoff.fork Becoming.RuleHandoff.revised [0, 1]).fst.present ∧
+  0 ∈ (Becoming.RuleHandoff.fork Becoming.RuleHandoff.revised [0, 1]).snd.present
+Becoming.RuleHandoff.no_count_only_decision : ¬∃ f,
+    f (Becoming.RuleHandoff.summary Becoming.RuleHandoff.formed) =
+        Becoming.RuleHandoff.technical Becoming.RuleHandoff.formed Becoming.RuleHandoff.twoVote ∧
+      f (Becoming.RuleHandoff.summary Becoming.RuleHandoff.revised) =
+        Becoming.RuleHandoff.technical Becoming.RuleHandoff.revised Becoming.RuleHandoff.twoVote
+Becoming.RuleHandoff.common_history_can_branch_with_different_rules : (Becoming.RuleHandoff.fork
+          Becoming.RuleHandoff.formed [0, 1, 2, 3, 4, 5]).fst.rule =
+    Becoming.RuleHandoff.Rule.majority ∧
+  Becoming.RuleHandoff.run (Becoming.RuleHandoff.fork Becoming.RuleHandoff.formed [0, 1, 2, 3, 4, 5]).snd
+      Becoming.RuleHandoff.revision =
+    some Becoming.RuleHandoff.revised
+Becoming.RuleHandoff.formation_trace : Generative.Trace Becoming.RuleHandoff.process Becoming.RuleHandoff.initial
+  Becoming.RuleHandoff.formation Becoming.RuleHandoff.formed
+Becoming.RuleHandoff.revision_trace : Generative.Trace Becoming.RuleHandoff.process Becoming.RuleHandoff.formed
+  Becoming.RuleHandoff.revision Becoming.RuleHandoff.revised
+Becoming.RuleHandoff.inherited_course_trace : Generative.Trace Becoming.RuleHandoff.process Becoming.RuleHandoff.initial
+  (Becoming.RuleHandoff.formation ++ Becoming.RuleHandoff.revision ++
+    [Becoming.RuleHandoff.Event.handoff [0, 1], Becoming.RuleHandoff.Event.integrate Becoming.RuleHandoff.twoVote,
+      Becoming.RuleHandoff.Event.handoff [0, 1], Becoming.RuleHandoff.Event.integrate Becoming.RuleHandoff.twoVote])
+  (have __src := Becoming.RuleHandoff.revised;
+  { roster := __src.roster, present := [0, 1], reviews := __src.reviews, rule := __src.rule, proposal := __src.proposal,
+    adoptions := __src.adoptions, accepted := 2 })
+Becoming.RuleHandoff.successor_revision_trace : Generative.Trace Becoming.RuleHandoff.process
+  Becoming.RuleHandoff.revised
+  [Becoming.RuleHandoff.Event.handoff [0, 1, 2, 3],
+    Becoming.RuleHandoff.Event.propose 3 Becoming.RuleHandoff.Rule.majority,
+    Becoming.RuleHandoff.Event.adopt Becoming.RuleHandoff.fourVote]
+  (have __src := Becoming.RuleHandoff.formed;
+  { roster := __src.roster, present := [0, 1, 2, 3], reviews := __src.reviews, rule := __src.rule,
+    proposal := __src.proposal, adoptions := [Becoming.RuleHandoff.Rule.majority, Becoming.RuleHandoff.Rule.timedTwo],
+    accepted := __src.accepted })
+Becoming.RuleHandoff.low_support_infeasible : ¬Generative.Feasible Becoming.RuleHandoff.process
+    Becoming.RuleHandoff.formed
+    [Becoming.RuleHandoff.Event.propose 5 Becoming.RuleHandoff.Rule.timedTwo,
+      Becoming.RuleHandoff.Event.adopt Becoming.RuleHandoff.twoVote]
+@Becoming.RuleHandoff.review_step_keeps_roster : ∀ {t : Becoming.RuleHandoff.State},
+  Becoming.RuleHandoff.process.step Becoming.RuleHandoff.initial (Becoming.RuleHandoff.Event.review 0 1) t →
+    t.roster = [0]
+Becoming.RuleHandoff.entry_without_review_disabled : ¬Generative.Enabled Becoming.RuleHandoff.process
+    Becoming.RuleHandoff.initial (Becoming.RuleHandoff.Event.enroll 1 Becoming.RuleHandoff.allVote)
+@Becoming.RuleHandoff.proposal_step_keeps_rule : ∀ {t : Becoming.RuleHandoff.State},
+  Becoming.RuleHandoff.process.step Becoming.RuleHandoff.formed
+      (Becoming.RuleHandoff.Event.propose 5 Becoming.RuleHandoff.Rule.timedTwo) t →
+    t.rule = Becoming.RuleHandoff.Rule.majority
+@Becoming.RuleHandoff.handoff_step_eq : ∀ {s t : Becoming.RuleHandoff.State} {cs : List Nat},
+  Becoming.RuleHandoff.process.step s (Becoming.RuleHandoff.Event.handoff cs) t → t = Becoming.RuleHandoff.handoff s cs
+@Becoming.RuleHandoff.handoff_step_keeps : ∀ {s t : Becoming.RuleHandoff.State} {cs : List Nat},
+  Becoming.RuleHandoff.process.step s (Becoming.RuleHandoff.Event.handoff cs) t →
+    t.rule = s.rule ∧ t.roster = s.roster ∧ t.adoptions = s.adoptions
+@Becoming.RuleHandoff.handoffs_trace_eq : ∀ {s t : Becoming.RuleHandoff.State} {css : List (List Nat)},
+  Generative.Trace Becoming.RuleHandoff.process s (List.map Becoming.RuleHandoff.Event.handoff css) t →
+    t = Becoming.RuleHandoff.handoffs s css
+@Becoming.RuleHandoff.handoffs_trace_keeps : ∀ {s t : Becoming.RuleHandoff.State} {css : List (List Nat)},
+  Generative.Trace Becoming.RuleHandoff.process s (List.map Becoming.RuleHandoff.Event.handoff css) t →
+    t.rule = s.rule ∧ t.roster = s.roster ∧ t.adoptions = s.adoptions
+Becoming.RuleHandoff.fork_step : ∀ (s : Becoming.RuleHandoff.State) (cs : List Nat),
+  (Becoming.RuleHandoff.fork s cs).fst = s ∧
+    Becoming.RuleHandoff.process.step s (Becoming.RuleHandoff.Event.handoff cs) (Becoming.RuleHandoff.fork s cs).snd
+@Becoming.RuleHandoff.branch_revises : ∀ {t : Becoming.RuleHandoff.State},
+  Becoming.RuleHandoff.process.step Becoming.RuleHandoff.formed (Becoming.RuleHandoff.Event.handoff [0, 1, 2, 3, 4, 5])
+      t →
+    Becoming.RuleHandoff.formed.rule = Becoming.RuleHandoff.Rule.majority ∧
+      Generative.Trace Becoming.RuleHandoff.process t Becoming.RuleHandoff.revision Becoming.RuleHandoff.revised
+@Becoming.RuleHandoff.integrate_enabled_iff : ∀ {s : Becoming.RuleHandoff.State} {b : Becoming.RuleHandoff.Ballot},
+  Generative.Enabled Becoming.RuleHandoff.process s (Becoming.RuleHandoff.Event.integrate b) ↔
+    Becoming.RuleHandoff.technical s b = true
+Becoming.RuleHandoff.repeated_votes_disabled : ¬Generative.Enabled Becoming.RuleHandoff.process
+    Becoming.RuleHandoff.revised (Becoming.RuleHandoff.Event.integrate { yes := [0, 0, 0, 0], no := [], days := 14 })
+Becoming.RuleHandoff.wait_and_objection : ¬Generative.Enabled Becoming.RuleHandoff.process Becoming.RuleHandoff.revised
+      (Becoming.RuleHandoff.Event.integrate { yes := [0, 1], no := [], days := 13 }) ∧
+  ¬Generative.Enabled Becoming.RuleHandoff.process Becoming.RuleHandoff.revised
+        (Becoming.RuleHandoff.Event.integrate { yes := [0, 1], no := [2], days := 14 }) ∧
+    Generative.Enabled Becoming.RuleHandoff.process Becoming.RuleHandoff.revised
+      (Becoming.RuleHandoff.Event.integrate Becoming.RuleHandoff.twoVote)
+@Becoming.RuleHandoff.handoff_access : ∀ {t t' : Becoming.RuleHandoff.State},
+  Becoming.RuleHandoff.process.step Becoming.RuleHandoff.formed (Becoming.RuleHandoff.Event.handoff [0, 1]) t →
+    Becoming.RuleHandoff.process.step Becoming.RuleHandoff.revised (Becoming.RuleHandoff.Event.handoff [0, 1]) t' →
+      ¬Generative.Enabled Becoming.RuleHandoff.process t
+            (Becoming.RuleHandoff.Event.integrate Becoming.RuleHandoff.twoVote) ∧
+        Generative.Enabled Becoming.RuleHandoff.process t'
+          (Becoming.RuleHandoff.Event.integrate Becoming.RuleHandoff.twoVote)
+@Becoming.RuleHandoff.handoff_without_participation : ∀ {t : Becoming.RuleHandoff.State},
+  Becoming.RuleHandoff.process.step Becoming.RuleHandoff.revised (Becoming.RuleHandoff.Event.handoff []) t →
+    t.rule = Becoming.RuleHandoff.Rule.timedTwo ∧
+      ¬Generative.Enabled Becoming.RuleHandoff.process t
+          (Becoming.RuleHandoff.Event.integrate Becoming.RuleHandoff.twoVote)
+@Becoming.RuleHandoff.integration_without_revision : ∀ {t : Becoming.RuleHandoff.State},
+  Becoming.RuleHandoff.process.step Becoming.RuleHandoff.revised (Becoming.RuleHandoff.Event.handoff [0, 1]) t →
+    Generative.Enabled Becoming.RuleHandoff.process t
+        (Becoming.RuleHandoff.Event.integrate Becoming.RuleHandoff.twoVote) ∧
+      ¬Generative.Feasible Becoming.RuleHandoff.process t
+          [Becoming.RuleHandoff.Event.propose 0 Becoming.RuleHandoff.Rule.majority,
+            Becoming.RuleHandoff.Event.adopt Becoming.RuleHandoff.twoVote]
+@Becoming.RuleHandoff.entry_step_requires : ∀ {s t : Becoming.RuleHandoff.State} {c : Nat}
+  {b : Becoming.RuleHandoff.Ballot},
+  Becoming.RuleHandoff.process.step s (Becoming.RuleHandoff.Event.enroll c b) t →
+    (s.reviews.any fun e => e.snd == c) = true ∧ Becoming.RuleHandoff.governance s b = true
+@Becoming.RuleHandoff.handoff_step_present : ∀ {s t : Becoming.RuleHandoff.State} {cs : List Nat},
+  Becoming.RuleHandoff.process.step s (Becoming.RuleHandoff.Event.handoff cs) t →
+    ∀ {i : Nat}, i ∈ t.present → i ∈ s.present ∧ i ∈ cs
+@Becoming.RuleHandoff.fork_shares_position : ∀ {t : Becoming.RuleHandoff.State},
+  Becoming.RuleHandoff.process.step Becoming.RuleHandoff.revised (Becoming.RuleHandoff.Event.handoff [0, 1]) t →
+    0 ∈ Becoming.RuleHandoff.revised.present ∧ 0 ∈ t.present
+@Becoming.RuleHandoff.same_relations_same_integration : ∀ {s t : Becoming.RuleHandoff.State}
+  (b : Becoming.RuleHandoff.Ballot),
+  s.roster = t.roster →
+    s.present = t.present →
+      s.rule = t.rule →
+        (Generative.Enabled Becoming.RuleHandoff.process s (Becoming.RuleHandoff.Event.integrate b) ↔
+          Generative.Enabled Becoming.RuleHandoff.process t (Becoming.RuleHandoff.Event.integrate b))
+@Becoming.RuleHandoff.no_presence_no_integration : ∀ {s : Becoming.RuleHandoff.State} (b : Becoming.RuleHandoff.Ballot),
+  s.present = [] → ¬Generative.Enabled Becoming.RuleHandoff.process s (Becoming.RuleHandoff.Event.integrate b)
+@Becoming.RuleHandoff.majority_integration_extends : ∀ {s : Becoming.RuleHandoff.State}
+  {b : Becoming.RuleHandoff.Ballot},
+  s.rule = Becoming.RuleHandoff.Rule.majority →
+    Generative.Enabled Becoming.RuleHandoff.process s (Becoming.RuleHandoff.Event.integrate b) →
+      Generative.Enabled Becoming.RuleHandoff.process
+        { roster := s.roster, present := s.present, reviews := s.reviews, rule := Becoming.RuleHandoff.Rule.timedTwo,
+          proposal := s.proposal, adoptions := s.adoptions, accepted := s.accepted }
+        (Becoming.RuleHandoff.Event.integrate b)
+Becoming.RuleHandoff.counts_no_integration_reading : ¬∃ f,
+    (f (Becoming.RuleHandoff.summary Becoming.RuleHandoff.formed) = true ↔
+        Generative.Enabled Becoming.RuleHandoff.process Becoming.RuleHandoff.formed
+          (Becoming.RuleHandoff.Event.integrate Becoming.RuleHandoff.twoVote)) ∧
+      (f (Becoming.RuleHandoff.summary Becoming.RuleHandoff.revised) = true ↔
+        Generative.Enabled Becoming.RuleHandoff.process Becoming.RuleHandoff.revised
+          (Becoming.RuleHandoff.Event.integrate Becoming.RuleHandoff.twoVote))

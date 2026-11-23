@@ -1,0 +1,468 @@
+Becoming.Optimum.setPoint_between : ∀ (m x : Nat), Becoming.Regulation.Between m x m
+@Becoming.Optimum.Nearer.gaps : ∀ {C : Type} {ds : List C} {s o o' : C → Nat},
+  Becoming.Optimum.Nearer ds s o' o →
+    Becoming.Optimum.Exceeds ds (Becoming.Optimum.gapTo s o) (Becoming.Optimum.gapTo s o')
+@Becoming.Optimum.nearing_of_gaps : ∀ {C : Type} {ds : List C} {s : C → Nat} {better : (C → Nat) → (C → Nat) → Prop},
+  (∀ (o o' : C → Nat),
+      Becoming.Optimum.Exceeds ds (Becoming.Optimum.gapTo s o) (Becoming.Optimum.gapTo s o') → better o' o) →
+    Becoming.Optimum.Nearing ds s better
+@Becoming.Optimum.byGap_nearing : ∀ {C : Type} (ds : List C) (s : C → Nat),
+  Becoming.Optimum.Nearing ds s (Becoming.Optimum.byGap ds s)
+@Becoming.Optimum.Nearing.mono : ∀ {C : Type} {ds : List C} {s : C → Nat} {better : (C → Nat) → (C → Nat) → Prop},
+  Becoming.Optimum.Nearing ds s better →
+    ∀ {better' : (C → Nat) → (C → Nat) → Prop},
+      (∀ (o' o : C → Nat), better o' o → better' o' o) → Becoming.Optimum.Nearing ds s better'
+@Becoming.Optimum.gapTo_eq_zero : ∀ {C : Type} {ds : List C} {s o : C → Nat},
+  Becoming.Optimum.AtSetPoint ds s o → ∀ {c : C}, c ∈ ds → Becoming.Optimum.gapTo s o c = 0
+@Becoming.Optimum.total_gapTo_eq_zero : ∀ {C : Type} {ds : List C} {s o : C → Nat},
+  Becoming.Optimum.AtSetPoint ds s o → Becoming.total ds (Becoming.Optimum.gapTo s o) = 0
+@Becoming.Optimum.atSetPoint_single : ∀ {C : Type} {s : C → Nat} {c : C} {o : C → Nat},
+  o c = s c → Becoming.Optimum.AtSetPoint [c] s o
+@Becoming.Optimum.byGap_unbeaten_at : ∀ {C : Type} {ds : List C} {s o₀ : C → Nat},
+  Becoming.Optimum.AtSetPoint ds s o₀ → ∀ (o : C → Nat), ¬Becoming.Optimum.byGap ds s o o₀
+@Becoming.Optimum.atSetPoint_frontier : ∀ {C : Type} {ds : List C} {s : C → Nat} {eligible : (C → Nat) → Prop}
+  {o₀ : C → Nat},
+  eligible o₀ →
+    Becoming.Optimum.AtSetPoint ds s o₀ → Becoming.Requirement.Frontier eligible (Becoming.Optimum.byGap ds s) o₀
+@Becoming.Optimum.not_rising_of_unbeaten : ∀ {C : Type} {ds : List C} {better : (C → Nat) → (C → Nat) → Prop}
+  {o₀ : C → Nat}, (∀ (o : C → Nat), ¬better o o₀) → ∀ {d : C}, d ∈ ds → ¬Becoming.Optimum.Rising ds better
+@Becoming.Optimum.byGap_not_rising : ∀ {C : Type} {ds : List C} {s : C → Nat} {d : C},
+  d ∈ ds → ¬Becoming.Optimum.Rising ds (Becoming.Optimum.byGap ds s)
+@Becoming.Optimum.nearer_of_atSetPoint : ∀ {C : Type} {ds : List C} {s o₀ o : C → Nat},
+  Becoming.Optimum.AtSetPoint ds s o₀ → ∀ {c : C}, c ∈ ds → ¬o c = s c → Becoming.Optimum.Nearer ds s o₀ o
+@Becoming.Optimum.Nearing.not_rising : ∀ {C : Type} {ds : List C} {s : C → Nat} {better : (C → Nat) → (C → Nat) → Prop},
+  Becoming.Optimum.Nearing ds s better →
+    (∀ (o o' : C → Nat), better o' o → ¬better o o') → ∀ {d : C}, d ∈ ds → ¬Becoming.Optimum.Rising ds better
+@Becoming.Optimum.atSetPoint_iff : ∀ {C : Type} {ds : List C} {s : C → Nat} {eligible : (C → Nat) → Prop},
+  (∀ (better : (C → Nat) → (C → Nat) → Prop),
+      Becoming.Optimum.Nearing ds s better →
+        ∀ (o : C → Nat), Becoming.Requirement.Frontier eligible better o → Becoming.Optimum.AtSetPoint ds s o) ↔
+    ∀ (o : C → Nat),
+      eligible o → ∀ (c : C), c ∈ ds → ¬o c = s c → ¬¬∃ o'', eligible o'' ∧ Becoming.Optimum.Nearer ds s o'' o
+@Becoming.Optimum.atSetPoint_of_reach : ∀ {C : Type} {ds : List C} {s : C → Nat} {eligible : (C → Nat) → Prop}
+  {better : (C → Nat) → (C → Nat) → Prop},
+  Becoming.Optimum.Nearing ds s better →
+    ∀ {o₀ : C → Nat},
+      eligible o₀ →
+        Becoming.Optimum.AtSetPoint ds s o₀ →
+          ∀ {o : C → Nat}, Becoming.Requirement.Frontier eligible better o → Becoming.Optimum.AtSetPoint ds s o
+@Becoming.Optimum.mutual_atSetPoint : ∀ {C : Type} {ds : List C} {s : C → Nat} {I : Type} {opt : List I}
+  {fam : I → List C} {elig : I → (C → Nat) → Prop} {orders : I → (C → Nat) → (C → Nat) → Prop} {o : C → Nat},
+  (∀ (c : C), c ∈ ds → ∃ i, i ∈ opt ∧ c ∈ fam i) →
+    (∀ (i : I), i ∈ opt → Becoming.Optimum.Nearing (fam i) s (orders i)) →
+      (∀ (i : I), i ∈ opt → ∃ o₀, elig i o₀ ∧ Becoming.Optimum.AtSetPoint (fam i) s o₀) →
+        (∀ (i : I), i ∈ opt → Becoming.Requirement.Frontier (elig i) (orders i) o) → Becoming.Optimum.AtSetPoint ds s o
+@Becoming.Optimum.optima_iff : ∀ {C : Type} {ds : List C} {s : C → Nat} {eligible : (C → Nat) → Prop} {o₀ : C → Nat},
+  eligible o₀ →
+    Becoming.Optimum.AtSetPoint ds s o₀ →
+      ∀ {o : C → Nat},
+        (∃ better, Becoming.Optimum.Nearing ds s better ∧ Becoming.Requirement.Frontier eligible better o) ↔
+          eligible o ∧ Becoming.Optimum.AtSetPoint ds s o
+@Becoming.Optimum.least_at_iff : ∀ {C : Type} {ds rest : List C} {s : C → Nat} {eligible : (C → Nat) → Prop}
+  {o₀ : C → Nat},
+  eligible o₀ →
+    Becoming.Optimum.AtSetPoint ds s o₀ →
+      ((∀ (better : (C → Nat) → (C → Nat) → Prop),
+          Becoming.Optimum.Nearing ds s better →
+            ∀ (o : C → Nat),
+              Becoming.Requirement.Frontier eligible better o →
+                Becoming.Optimum.Least rest (fun o => eligible o ∧ Becoming.Optimum.AtSetPoint ds s o) o) ↔
+        ∀ (o o' : C → Nat),
+          eligible o →
+            Becoming.Optimum.AtSetPoint ds s o →
+              eligible o' → Becoming.Optimum.AtSetPoint ds s o' → ∀ (c : C), c ∈ rest → o c = o' c)
+@Becoming.Optimum.byGapThen_nearing : ∀ {C : Type} {ds rest : List C} {s : C → Nat},
+  Becoming.Optimum.Nearing ds s (Becoming.Optimum.byGapThen ds s rest)
+@Becoming.Optimum.byGapThen_asymm : ∀ {C : Type} {ds rest : List C} {s : C → Nat} (o o' : C → Nat),
+  Becoming.Optimum.byGapThen ds s rest o' o → ¬Becoming.Optimum.byGapThen ds s rest o o'
+@Becoming.Optimum.byGapThen_not_rising : ∀ {C : Type} {ds rest : List C} {s : C → Nat} {d : C},
+  d ∈ ds → ¬Becoming.Optimum.Rising ds (Becoming.Optimum.byGapThen ds s rest)
+@Becoming.Optimum.counted_after_most : ∀ {C : Type} {ds rest : List C} {s : C → Nat} {eligible : (C → Nat) → Prop}
+  {o₀ : C → Nat},
+  eligible o₀ →
+    Becoming.Optimum.AtSetPoint ds s o₀ →
+      ∀ {o : C → Nat},
+        Becoming.Requirement.Frontier eligible (Becoming.Optimum.byGapThen ds s rest) o →
+          Becoming.Optimum.AtSetPoint ds s o ∧
+            ∀ (o' : C → Nat),
+              eligible o' → Becoming.Optimum.AtSetPoint ds s o' → Becoming.total rest o' ≤ Becoming.total rest o
+@Becoming.Optimum.counted_after_keeps_iff : ∀ {C : Type} {ds : List C} {s : C → Nat} {eligible : (C → Nat) → Prop}
+  {c : C} {need : Nat} {o₀ : C → Nat},
+  eligible o₀ →
+    Becoming.Optimum.AtSetPoint ds s o₀ →
+      ∀ {o : C → Nat},
+        Becoming.Requirement.Frontier eligible (Becoming.Optimum.byGapThen ds s [c]) o →
+          (need ≤ o c ↔ ∃ o', eligible o' ∧ Becoming.Optimum.AtSetPoint ds s o' ∧ need ≤ o' c)
+@Becoming.Optimum.byGapLess_nearing : ∀ {C : Type} {ds rest : List C} {s : C → Nat},
+  Becoming.Optimum.Nearing ds s (Becoming.Optimum.byGapLess ds s rest)
+@Becoming.Optimum.sub_le_sub_iff : ∀ {a b n : Nat}, a ≤ n → b ≤ n → (n - b ≤ n - a ↔ a ≤ b)
+@Becoming.Optimum.sub_lt_sub_iff : ∀ {a b n : Nat}, b ≤ n → (n - b < n - a ↔ a < b)
+@Becoming.Optimum.gapTo_of_upTo : ∀ {C : Type} {ds : List C} {s o : C → Nat},
+  Becoming.Optimum.UpToSetPoint ds s o → ∀ {c : C}, c ∈ ds → Becoming.Optimum.gapTo s o c = s c - o c
+@Becoming.Optimum.nearer_iff_exceeds : ∀ {C : Type} {ds : List C} {s o o' : C → Nat},
+  Becoming.Optimum.UpToSetPoint ds s o →
+    Becoming.Optimum.UpToSetPoint ds s o' → (Becoming.Optimum.Nearer ds s o' o ↔ Becoming.Optimum.Exceeds ds o' o)
+@Becoming.Optimum.Nearing.rises_below : ∀ {C : Type} {ds : List C} {s : C → Nat}
+  {better : (C → Nat) → (C → Nat) → Prop},
+  Becoming.Optimum.Nearing ds s better →
+    ∀ {o o' : C → Nat},
+      Becoming.Optimum.UpToSetPoint ds s o →
+        Becoming.Optimum.UpToSetPoint ds s o' → Becoming.Optimum.Exceeds ds o' o → better o' o
+@Becoming.Optimum.least_below_iff : ∀ {C : Type} {ds rest : List C} {s : C → Nat} {eligible : (C → Nat) → Prop},
+  (∀ (better : (C → Nat) → (C → Nat) → Prop),
+      Becoming.Optimum.Nearing ds s better →
+        ∀ (o : C → Nat),
+          Becoming.Requirement.Frontier (fun o => eligible o ∧ Becoming.Optimum.UpToSetPoint ds s o) better o →
+            Becoming.Optimum.Least rest (fun o => eligible o ∧ Becoming.Optimum.UpToSetPoint ds s o) o) ↔
+    ∀ (o o' : C → Nat),
+      eligible o ∧ Becoming.Optimum.UpToSetPoint ds s o →
+        eligible o' ∧ Becoming.Optimum.UpToSetPoint ds s o' →
+          ∀ (c : C),
+            c ∈ rest →
+              o' c < o c →
+                ¬¬∃ o'', (eligible o'' ∧ Becoming.Optimum.UpToSetPoint ds s o'') ∧ Becoming.Optimum.Exceeds ds o'' o
+@Becoming.Optimum.least_below : ∀ {C : Type} {ds rest : List C} {s : C → Nat} {eligible : (C → Nat) → Prop}
+  {better : (C → Nat) → (C → Nat) → Prop},
+  Becoming.Optimum.Nearing ds s better →
+    (Becoming.Optimum.Room ds rest fun o => eligible o ∧ Becoming.Optimum.UpToSetPoint ds s o) →
+      ∀ {o : C → Nat},
+        Becoming.Requirement.Frontier (fun o => eligible o ∧ Becoming.Optimum.UpToSetPoint ds s o) better o →
+          Becoming.Optimum.Least rest (fun o => eligible o ∧ Becoming.Optimum.UpToSetPoint ds s o) o
+@Becoming.Flow.Balances.atSetPoint_draws : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds rest : List C} {s : C → Nat} {t : Nat},
+  L.Balances W →
+    L.GainlessOn (ds ++ rest) t →
+      Becoming.Optimum.AtSetPoint ds s (W.level (t + 1)) →
+        W.stock rest (t + 1) + L.lost (ds ++ rest) t + Becoming.total ds s = W.stock ds t + W.stock rest t
+@Becoming.Flow.Balances.held_draws_lost : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds rest : List C} {s : C → Nat} {t : Nat},
+  L.Balances W →
+    L.GainlessOn (ds ++ rest) t →
+      Becoming.Optimum.AtSetPoint ds s (W.level t) →
+        Becoming.Optimum.AtSetPoint ds s (W.level (t + 1)) →
+          W.stock rest (t + 1) + L.lost (ds ++ rest) t = W.stock rest t
+@Becoming.Flow.Balances.atSetPoint_breaks : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds rest : List C} {s : C → Nat} {t : Nat} {dep : C → F},
+  L.Balances W →
+    L.GainlessOn (ds ++ rest) t →
+      W.MetOn dep rest t →
+        Becoming.Optimum.AtSetPoint ds s (W.level (t + 1)) →
+          W.stock ds t + W.slack dep rest t < Becoming.total ds s + L.lost (ds ++ rest) t →
+            ∃ c, c ∈ rest ∧ W.Broken t (dep c) c
+@Becoming.Flow.Balances.atSetPoint_broken_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds : List C} {s : C → Nat} {t : Nat} {dep : C → F} {c : C},
+  L.Balances W →
+    L.GainlessOn (ds ++ [c]) t →
+      W.MetOn dep [c] t →
+        Becoming.Optimum.AtSetPoint ds s (W.level (t + 1)) →
+          (W.Broken t (dep c) c ↔
+            W.stock ds t + (W.level t c - W.need t (dep c) c) < Becoming.total ds s + L.lost (ds ++ [c]) t)
+@Becoming.Flow.nearing_optimum_draws : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds rest : List C}
+  {s : C → Nat} {t : Nat} {eligible : (C → Nat) → Prop} {better : (C → Nat) → (C → Nat) → Prop},
+  L.Balances W →
+    L.GainlessOn (ds ++ rest) t →
+      Becoming.Optimum.Nearing ds s better →
+        ∀ {o₀ : C → Nat},
+          eligible o₀ →
+            Becoming.Optimum.AtSetPoint ds s o₀ →
+              Becoming.Requirement.Frontier eligible better (W.level (t + 1)) →
+                W.stock rest (t + 1) + L.lost (ds ++ rest) t + Becoming.total ds s = W.stock ds t + W.stock rest t
+@Becoming.Flow.Balances.mutual_atSetPoint_draws : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds rest : List C} {s : C → Nat} {t : Nat} {I : Type} {opt : List I} {fam : I → List C} {elig : I → (C → Nat) → Prop}
+  {orders : I → (C → Nat) → (C → Nat) → Prop},
+  L.Balances W →
+    L.GainlessOn (ds ++ rest) t →
+      (∀ (c : C), c ∈ ds → ∃ i, i ∈ opt ∧ c ∈ fam i) →
+        (∀ (i : I), i ∈ opt → Becoming.Optimum.Nearing (fam i) s (orders i)) →
+          (∀ (i : I), i ∈ opt → ∃ o₀, elig i o₀ ∧ Becoming.Optimum.AtSetPoint (fam i) s o₀) →
+            (∀ (i : I), i ∈ opt → Becoming.Requirement.Frontier (elig i) (orders i) (W.level (t + 1))) →
+              W.stock rest (t + 1) + L.lost (ds ++ rest) t + Becoming.total ds s = W.stock ds t + W.stock rest t
+@Becoming.Flow.Balances.mutual_atSetPoint_breaks : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds rest : List C} {s : C → Nat} {t : Nat} {I : Type} {opt : List I} {fam : I → List C} {elig : I → (C → Nat) → Prop}
+  {orders : I → (C → Nat) → (C → Nat) → Prop} {dep : C → F},
+  L.Balances W →
+    L.GainlessOn (ds ++ rest) t →
+      W.MetOn dep rest t →
+        (∀ (c : C), c ∈ ds → ∃ i, i ∈ opt ∧ c ∈ fam i) →
+          (∀ (i : I), i ∈ opt → Becoming.Optimum.Nearing (fam i) s (orders i)) →
+            (∀ (i : I), i ∈ opt → ∃ o₀, elig i o₀ ∧ Becoming.Optimum.AtSetPoint (fam i) s o₀) →
+              (∀ (i : I), i ∈ opt → Becoming.Requirement.Frontier (elig i) (orders i) (W.level (t + 1))) →
+                W.stock ds t + W.slack dep rest t < Becoming.total ds s + L.lost (ds ++ rest) t →
+                  ∃ c, c ∈ rest ∧ W.Broken t (dep c) c
+@Becoming.Optimum.transfer_nearer : ∀ {C : Type} {ds : List C} {s : C → Nat} [inst : DecidableEq C] {c d : C},
+  ¬c ∈ ds → d ∈ ds → ∀ {o : C → Nat}, o d < s d → Becoming.Optimum.Nearer ds s (Becoming.Optimum.transfer c d o) o
+@Becoming.Optimum.nearing_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat}
+  {t : Nat} {l : C → Nat} {ds rest : List C} {s : C → Nat} {better : (C → Nat) → (C → Nat) → Prop} [DecidableEq F]
+  [DecidableEq C],
+  Becoming.Distinct (L.present t) →
+    Becoming.Distinct (ds ++ rest) →
+      (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+        ∀ {d : C},
+          d ∈ ds →
+            Becoming.Optimum.Nearing ds s better →
+              ∀ {o : C → Nat},
+                Becoming.Requirement.Frontier (L.Outcome part l cap (ds ++ rest) t) better o →
+                  o d < s d →
+                    ∀ {c : C},
+                      c ∈ rest → o c = l c + L.restGiven part t c - L.restTaken part t c - L.capacity part cap t c
+@Becoming.Optimum.nearing_as_rising : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat}
+  {t : Nat} {l : C → Nat} {ds rest : List C} {s : C → Nat} {better : (C → Nat) → (C → Nat) → Prop} [DecidableEq F]
+  [DecidableEq C],
+  Becoming.Distinct (L.present t) →
+    Becoming.Distinct (ds ++ rest) →
+      (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+        ∀ {d : C},
+          d ∈ ds →
+            Becoming.Optimum.Nearing ds s better →
+              ∀ {o : C → Nat},
+                Becoming.Requirement.Frontier (L.Outcome part l cap (ds ++ rest) t) better o →
+                  o d < s d →
+                    ∀ {better' : (C → Nat) → (C → Nat) → Prop},
+                      Becoming.Optimum.Rising ds better' →
+                        ∀ {o' : C → Nat},
+                          Becoming.Requirement.Frontier (L.Outcome part l cap (ds ++ rest) t) better' o' →
+                            ∀ {c : C}, c ∈ rest → o c = o' c
+@Becoming.Optimum.total_le_of_only : ∀ {α : Type} [DecidableEq α] {q : α → Nat} {a : α} {l : List α},
+  Becoming.Distinct l → (∀ (b : α), b ∈ l → ¬b = a → q b = 0) → Becoming.total l q ≤ q a
+@Becoming.Optimum.stock_eq_of_atSetPoint : ∀ {F C : Type} {W : Becoming.Web F C} {fam : List C} {s : C → Nat}
+  {t u : Nat},
+  Becoming.Optimum.AtSetPoint fam s (W.level t) →
+    Becoming.Optimum.AtSetPoint fam s (W.level u) → W.stock fam u = W.stock fam t
+@Becoming.Flow.held_draws : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} [DecidableEq F] {fam : List C}
+  {t : Nat} {h : F} {c : C} {l : Nat},
+  L.BalancesOn W fam t →
+    Becoming.Distinct (L.present t) →
+      h ∈ L.present t →
+        (∀ (g : F), g ∈ L.present t → ¬g = h → ∀ (x : C), x ∈ fam → L.take t g x = 0 ∧ L.give t g x = 0) →
+          W.stock fam (t + 1) = W.stock fam t →
+            l + Becoming.total fam (L.give t h) + L.give t h c ≤ Becoming.total fam (L.take t h) + L.take t h c →
+              l + L.give t h c ≤ L.take t h c
+@Becoming.Flow.held_excess_ends : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} [DecidableEq F],
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : C} {m : Nat},
+          (∀ (t : Nat) (f : F), f ∈ L.present t → 0 < L.give t f c → W.requires t f c ∧ m ≤ W.need t f c) →
+            ∀ {holders : F → Bool} {fam : F → List C} {lose : Nat → F → Nat} {T n : Nat},
+              (∀ (k : Nat), k < n → Becoming.Distinct (L.present (T + k))) →
+                (∀ (k : Nat),
+                    k < n →
+                      ∀ (h : F),
+                        h ∈ L.present (T + k) →
+                          holders h = true →
+                            ∀ (g : F),
+                              g ∈ L.present (T + k) →
+                                ¬g = h → ∀ (x : C), x ∈ fam h → L.take (T + k) g x = 0 ∧ L.give (T + k) g x = 0) →
+                  (∀ (k : Nat),
+                      k < n →
+                        ∀ (h : F),
+                          h ∈ L.present (T + k) →
+                            holders h = true → W.stock (fam h) (T + k + 1) = W.stock (fam h) (T + k)) →
+                    (∀ (k : Nat),
+                        k < n →
+                          ∀ (h : F),
+                            h ∈ L.present (T + k) →
+                              holders h = true →
+                                lose (T + k) h + Becoming.total (fam h) (L.give (T + k) h) + L.give (T + k) h c ≤
+                                  Becoming.total (fam h) (L.take (T + k) h) + L.take (T + k) h c) →
+                      (∀ (k : Nat),
+                          k < n →
+                            L.restGiven holders (T + k) c <
+                              Becoming.total (L.present (T + k)) fun h => bif holders h then lose (T + k) h else 0) →
+                        W.level T c < n + m →
+                          ∀ {obs : F → C → Prop},
+                            (∀ (h : F) (x : C), holders h = true → W.CoupledInto obs h x → x ∈ fam h) →
+                              (∀ (h : F), holders h = true → ¬c ∈ fam h) →
+                                (∀ (k : Nat) (g : F),
+                                    W.requires (T + n + k) g c → m ≤ W.need (T + n + k) g c → ¬W.active (T + n + k) g) ∧
+                                  ∀ (h : F), holders h = true → ¬W.CoupledInto obs h c
+@Becoming.Optimum.Drain.storedAt_split : ∀ {k : Nat},
+  k ≤ 3 → Becoming.Optimum.Drain.Split (Becoming.Optimum.Drain.storedAt k)
+@Becoming.Optimum.Drain.atSetPoint_source : ∀ {k : Nat},
+  k ≤ 3 →
+    ∀ {better : (Becoming.Diversion.Place → Nat) → (Becoming.Diversion.Place → Nat) → Prop},
+      Becoming.Optimum.Nearing [Becoming.Diversion.Place.store] (fun x => k) better →
+        ∀ {o : Becoming.Diversion.Place → Nat},
+          Becoming.Requirement.Frontier Becoming.Optimum.Drain.Split better o →
+            o Becoming.Diversion.Place.source = 3 - k
+@Becoming.Optimum.Drain.kept_iff : ∀ {k : Nat},
+  k ≤ 3 →
+    ∀ {better : (Becoming.Diversion.Place → Nat) → (Becoming.Diversion.Place → Nat) → Prop},
+      Becoming.Optimum.Nearing [Becoming.Diversion.Place.store] (fun x => k) better →
+        ∀ {o : Becoming.Diversion.Place → Nat},
+          Becoming.Requirement.Frontier Becoming.Optimum.Drain.Split better o →
+            ((Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level).need 0 Becoming.Diversion.Formation.dweller
+                  Becoming.Diversion.Place.source ≤
+                o Becoming.Diversion.Place.source ↔
+              k ≤ 1)
+Becoming.Optimum.Drain.nearing_keeps : Becoming.Optimum.Room [Becoming.Diversion.Place.store]
+    [Becoming.Diversion.Place.source] Becoming.Optimum.Drain.Split ∧
+  (∀ (better : (Becoming.Diversion.Place → Nat) → (Becoming.Diversion.Place → Nat) → Prop),
+      Becoming.Optimum.Nearing [Becoming.Diversion.Place.store] (fun x => 1) better →
+        ∀ (o : Becoming.Diversion.Place → Nat),
+          Becoming.Requirement.Frontier Becoming.Optimum.Drain.Split better o → o Becoming.Diversion.Place.source = 2) ∧
+    Becoming.Requirement.Frontier Becoming.Optimum.Drain.Split
+        (Becoming.Optimum.byGap [Becoming.Diversion.Place.store] fun x => 1) (Becoming.Optimum.Drain.storedAt 1) ∧
+      (∀ (better : (Becoming.Diversion.Place → Nat) → (Becoming.Diversion.Place → Nat) → Prop),
+          Becoming.Optimum.Rising [Becoming.Diversion.Place.store] better →
+            ∀ (o : Becoming.Diversion.Place → Nat),
+              Becoming.Requirement.Frontier Becoming.Optimum.Drain.Split better o →
+                o Becoming.Diversion.Place.source = 0) ∧
+        (Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level).need 0 Becoming.Diversion.Formation.dweller
+            Becoming.Diversion.Place.source =
+          2
+@Becoming.Optimum.Drain.nearing_breaks : ∀
+  {better : (Becoming.Diversion.Place → Nat) → (Becoming.Diversion.Place → Nat) → Prop},
+  Becoming.Optimum.Nearing [Becoming.Diversion.Place.store] (fun x => 2) better →
+    ∀ {o : Becoming.Diversion.Place → Nat},
+      Becoming.Requirement.Frontier Becoming.Optimum.Drain.Split better o →
+        o Becoming.Diversion.Place.source = 1 ∧
+          o Becoming.Diversion.Place.source <
+            (Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level).need 0 Becoming.Diversion.Formation.dweller
+              Becoming.Diversion.Place.source
+@Becoming.Optimum.Drain.satisficingThen_keeps : ∀ {o : Becoming.Diversion.Place → Nat},
+  Becoming.Requirement.Frontier Becoming.Optimum.Drain.Split Becoming.Optimum.Drain.satisficingThen o →
+    o Becoming.Diversion.Place.source = 2
+Becoming.Optimum.Topped.idle_open : Becoming.Optimum.Topped.Open Becoming.Optimum.Topped.start
+Becoming.Optimum.Topped.discarding_open : Becoming.Optimum.Topped.Open Becoming.Optimum.Topped.drawnOne
+Becoming.Optimum.Topped.nearing_either : (∀
+    (better : (Becoming.Diversion.Place → Nat) → (Becoming.Diversion.Place → Nat) → Prop),
+    Becoming.Optimum.Nearing [Becoming.Diversion.Place.store] Becoming.Optimum.Topped.one better →
+      ∀ (o : Becoming.Diversion.Place → Nat),
+        Becoming.Requirement.Frontier Becoming.Optimum.Topped.Open better o → o Becoming.Diversion.Place.store = 1) ∧
+  Becoming.Requirement.Frontier Becoming.Optimum.Topped.Open
+      (Becoming.Optimum.byGap [Becoming.Diversion.Place.store] Becoming.Optimum.Topped.one)
+      Becoming.Optimum.Topped.start ∧
+    Becoming.Requirement.Frontier Becoming.Optimum.Topped.Open
+        (Becoming.Optimum.byGap [Becoming.Diversion.Place.store] Becoming.Optimum.Topped.one)
+        Becoming.Optimum.Topped.drawnOne ∧
+      (Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level).need 0 Becoming.Diversion.Formation.dweller
+            Becoming.Diversion.Place.source ≤
+          Becoming.Optimum.Topped.start Becoming.Diversion.Place.source ∧
+        Becoming.Optimum.Topped.drawnOne Becoming.Diversion.Place.source <
+          (Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level).need 0 Becoming.Diversion.Formation.dweller
+            Becoming.Diversion.Place.source
+@Becoming.Optimum.Topped.rising_drains : ∀
+  {better : (Becoming.Diversion.Place → Nat) → (Becoming.Diversion.Place → Nat) → Prop},
+  Becoming.Optimum.Rising [Becoming.Diversion.Place.store] better →
+    ∀ {o : Becoming.Diversion.Place → Nat},
+      Becoming.Requirement.Frontier Becoming.Optimum.Topped.Open better o → o Becoming.Diversion.Place.source = 1
+@Becoming.Optimum.Topped.counted_after_keeps : ∀ {o : Becoming.Diversion.Place → Nat},
+  Becoming.Requirement.Frontier Becoming.Optimum.Topped.Open
+      (Becoming.Optimum.byGapThen [Becoming.Diversion.Place.store] Becoming.Optimum.Topped.one
+        [Becoming.Diversion.Place.source])
+      o →
+    (Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level).need 0 Becoming.Diversion.Formation.dweller
+        Becoming.Diversion.Place.source ≤
+      o Becoming.Diversion.Place.source
+@Becoming.Optimum.Topped.counted_less_drains : ∀ {o : Becoming.Diversion.Place → Nat},
+  Becoming.Requirement.Frontier Becoming.Optimum.Topped.Open
+      (Becoming.Optimum.byGapLess [Becoming.Diversion.Place.store] Becoming.Optimum.Topped.one
+        [Becoming.Diversion.Place.source])
+      o →
+    o Becoming.Diversion.Place.source ≤ 1 ∧
+      1 <
+        (Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level).need 0 Becoming.Diversion.Formation.dweller
+          Becoming.Diversion.Place.source
+@Becoming.Optimum.Topped.weighted_keeps : ∀ {w : Nat},
+  0 < w →
+    ∀ {o : Becoming.Diversion.Place → Nat},
+      Becoming.Requirement.Frontier Becoming.Optimum.Topped.Open (Becoming.Optimum.Topped.weighted w) o →
+        (Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level).need 0 Becoming.Diversion.Formation.dweller
+            Becoming.Diversion.Place.source ≤
+          o Becoming.Diversion.Place.source
+@Becoming.Optimum.Topped.store_le_two : ∀ {o : Becoming.Diversion.Place → Nat},
+  Becoming.Optimum.Topped.Open o → o Becoming.Diversion.Place.store ≤ 2
+@Becoming.Optimum.Topped.out_of_reach : ∀
+  {better : (Becoming.Diversion.Place → Nat) → (Becoming.Diversion.Place → Nat) → Prop},
+  Becoming.Optimum.Nearing [Becoming.Diversion.Place.store] (fun x => 3) better →
+    ∀ {o : Becoming.Diversion.Place → Nat},
+      Becoming.Requirement.Frontier Becoming.Optimum.Topped.Open better o → o Becoming.Diversion.Place.source = 1
+Becoming.Optimum.Spread.counted_after_empties : (∀ (o : Becoming.Optimum.Spread.Spot → Nat),
+    Becoming.Requirement.Frontier Becoming.Optimum.Spread.Eligible
+        (Becoming.Optimum.byGapThen [Becoming.Optimum.Spread.Spot.family] Becoming.Optimum.Spread.one
+          [Becoming.Optimum.Spread.Spot.first, Becoming.Optimum.Spread.Spot.second])
+        o →
+      o Becoming.Optimum.Spread.Spot.first = 0) ∧
+  Becoming.Optimum.Spread.Eligible Becoming.Optimum.Spread.even ∧
+    Becoming.Optimum.AtSetPoint [Becoming.Optimum.Spread.Spot.family] Becoming.Optimum.Spread.one
+        Becoming.Optimum.Spread.even ∧
+      1 ≤ Becoming.Optimum.Spread.even Becoming.Optimum.Spread.Spot.first ∧
+        1 ≤ Becoming.Optimum.Spread.even Becoming.Optimum.Spread.Spot.second
+Becoming.Optimum.Skew.nearing : Becoming.Optimum.Nearing [()] Becoming.Optimum.Skew.two Becoming.Optimum.Skew.order
+Becoming.Optimum.Skew.not_by_gaps : ¬∀ (o o' : Unit → Nat),
+    Becoming.Optimum.Exceeds [()] (Becoming.Optimum.gapTo Becoming.Optimum.Skew.two o)
+        (Becoming.Optimum.gapTo Becoming.Optimum.Skew.two o') →
+      Becoming.Optimum.Skew.order o' o
+Becoming.Optimum.TwoStores.balances : Becoming.Optimum.TwoStores.flow.Balances Becoming.Optimum.TwoStores.web
+Becoming.Optimum.TwoStores.gainless : Becoming.Optimum.TwoStores.flow.GainlessOn
+  ([Becoming.Optimum.TwoStores.Place.store true, Becoming.Optimum.TwoStores.Place.store false] ++
+    [Becoming.Optimum.TwoStores.Place.source])
+  0
+Becoming.Optimum.TwoStores.best : ∀ (w : Bool),
+  Becoming.Requirement.Frontier (Becoming.Optimum.TwoStores.Eligible w)
+    (Becoming.Optimum.byGap (Becoming.Optimum.TwoStores.family w) Becoming.Optimum.TwoStores.one)
+    (Becoming.Optimum.TwoStores.web.level 1)
+Becoming.Optimum.TwoStores.jointly_broken : (∀ (w : Bool),
+    Becoming.total (Becoming.Optimum.TwoStores.family w) Becoming.Optimum.TwoStores.one ≤
+      Becoming.Optimum.TwoStores.web.stock (Becoming.Optimum.TwoStores.family w) 0 +
+        Becoming.Optimum.TwoStores.web.slack (fun x => Becoming.Optimum.TwoTakers.Member.dweller)
+          [Becoming.Optimum.TwoStores.Place.source] 0) ∧
+  ∃ c,
+    c ∈ [Becoming.Optimum.TwoStores.Place.source] ∧
+      Becoming.Optimum.TwoStores.web.Broken 0 Becoming.Optimum.TwoTakers.Member.dweller c
+Becoming.Optimum.HeldPair.balances : Becoming.Optimum.HeldPair.flow.Balances Becoming.Optimum.HeldPair.web
+Becoming.Optimum.HeldPair.acting : Becoming.Optimum.HeldPair.flow.Acting Becoming.Optimum.HeldPair.web
+Becoming.Optimum.HeldPair.dependent : Becoming.Optimum.HeldPair.web.Dependent
+Becoming.Optimum.HeldPair.gated : ∀ (t : Nat) (f : Becoming.Optimum.HeldPair.Member),
+  f ∈ Becoming.Optimum.HeldPair.flow.present t →
+    0 < Becoming.Optimum.HeldPair.flow.give t f Becoming.Optimum.HeldPair.Spot.pool →
+      Becoming.Optimum.HeldPair.web.requires t f Becoming.Optimum.HeldPair.Spot.pool ∧
+        1 ≤ Becoming.Optimum.HeldPair.web.need t f Becoming.Optimum.HeldPair.Spot.pool
+Becoming.Optimum.HeldPair.members_distinct : Becoming.Distinct
+  [Becoming.Witnesses.Member.renewer, Becoming.Witnesses.Member.first, Becoming.Witnesses.Member.second]
+Becoming.Optimum.HeldPair.distinct : ∀ (t : Nat), Becoming.Distinct (Becoming.Optimum.HeldPair.flow.present t)
+Becoming.Optimum.HeldPair.alone : ∀ (t : Nat) (h : Becoming.Optimum.HeldPair.Member),
+  Becoming.Optimum.HeldPair.holders h = true →
+    ∀ (g : Becoming.Optimum.HeldPair.Member),
+      ¬g = h →
+        ∀ (x : Becoming.Optimum.HeldPair.Spot),
+          x ∈ Becoming.Optimum.HeldPair.store h →
+            Becoming.Optimum.HeldPair.flow.take t g x = 0 ∧ Becoming.Optimum.HeldPair.flow.give t g x = 0
+Becoming.Optimum.HeldPair.held : ∀ (t : Nat) (h : Becoming.Optimum.HeldPair.Member),
+  Becoming.Optimum.AtSetPoint (Becoming.Optimum.HeldPair.store h) Becoming.Optimum.HeldPair.one
+    (Becoming.Optimum.HeldPair.web.level t)
+Becoming.Optimum.HeldPair.loses : ∀ (t : Nat) (h : Becoming.Optimum.HeldPair.Member),
+  Becoming.Optimum.HeldPair.holders h = true →
+    1 + Becoming.total (Becoming.Optimum.HeldPair.store h) (Becoming.Optimum.HeldPair.flow.give t h) +
+        Becoming.Optimum.HeldPair.flow.give t h Becoming.Optimum.HeldPair.Spot.pool ≤
+      Becoming.total (Becoming.Optimum.HeldPair.store h) (Becoming.Optimum.HeldPair.flow.take t h) +
+        Becoming.Optimum.HeldPair.flow.take t h Becoming.Optimum.HeldPair.Spot.pool
+Becoming.Optimum.HeldPair.exceeds : ∀ (k : Nat),
+  k < 2 →
+    Becoming.Optimum.HeldPair.flow.restGiven Becoming.Optimum.HeldPair.holders (0 + k)
+        Becoming.Optimum.HeldPair.Spot.pool <
+      Becoming.total (Becoming.Optimum.HeldPair.flow.present (0 + k)) fun h =>
+        bif Becoming.Optimum.HeldPair.holders h then 1 else 0
+Becoming.Optimum.HeldPair.listed : ∀ (h : Becoming.Optimum.HeldPair.Member) (x : Becoming.Optimum.HeldPair.Spot),
+  Becoming.Optimum.HeldPair.holders h = true →
+    Becoming.Optimum.HeldPair.web.CoupledInto Becoming.Optimum.HeldPair.observes h x →
+      x ∈ Becoming.Optimum.HeldPair.store h
+Becoming.Optimum.HeldPair.apart : ∀ (h : Becoming.Optimum.HeldPair.Member),
+  Becoming.Optimum.HeldPair.holders h = true → ¬Becoming.Optimum.HeldPair.Spot.pool ∈ Becoming.Optimum.HeldPair.store h
+Becoming.Optimum.HeldPair.within : ∀ (t : Nat),
+  t < 2 →
+    Becoming.Optimum.HeldPair.flow.WithinOwn t Becoming.Optimum.HeldPair.Spot.pool ∧
+      ¬Becoming.Optimum.HeldPair.flow.WithinJoint t Becoming.Optimum.HeldPair.Spot.pool
+Becoming.Optimum.HeldPair.held_end : (∀ (t : Nat),
+    t < 2 →
+      Becoming.Optimum.HeldPair.flow.WithinOwn t Becoming.Optimum.HeldPair.Spot.pool ∧
+        ¬Becoming.Optimum.HeldPair.flow.WithinJoint t Becoming.Optimum.HeldPair.Spot.pool) ∧
+  (∀ (k : Nat) (g : Becoming.Optimum.HeldPair.Member),
+      Becoming.Optimum.HeldPair.web.requires (0 + 2 + k) g Becoming.Optimum.HeldPair.Spot.pool →
+        1 ≤ Becoming.Optimum.HeldPair.web.need (0 + 2 + k) g Becoming.Optimum.HeldPair.Spot.pool →
+          ¬Becoming.Optimum.HeldPair.web.active (0 + 2 + k) g) ∧
+    ∀ (h : Becoming.Optimum.HeldPair.Member),
+      Becoming.Optimum.HeldPair.holders h = true →
+        ¬Becoming.Optimum.HeldPair.web.CoupledInto Becoming.Optimum.HeldPair.observes h
+            Becoming.Optimum.HeldPair.Spot.pool

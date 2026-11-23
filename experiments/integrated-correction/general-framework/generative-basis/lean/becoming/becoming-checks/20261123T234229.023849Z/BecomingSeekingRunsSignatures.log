@@ -1,0 +1,22 @@
+@Becoming.Law.perturbation_reabsorbed : ∀ {S : Type u_1} {R : Type u_2} {next : S × R → S × R},
+  (∀ (x x' : S) (g : R), next (x, g) = next (x', g)) →
+    ∀ (x x' : S) (g : R) (n : Nat), Becoming.Law.orbit next (x, g) (n + 1) = Becoming.Law.orbit next (x', g) (n + 1)
+@Becoming.SeekingRuns.rests_iff : ∀ {S : Type u_1} {next : S → S} (r : Becoming.Run (Becoming.Law.process next))
+  {target : S → Prop},
+  (∃ T, ∀ (n : Nat), T ≤ n → r.state (n + 1) = r.state n ∧ target (r.state n)) ↔
+    ∃ T, next (r.state T) = r.state T ∧ target (r.state T)
+@Becoming.SeekingRuns.more_never_rests : ∀ {S : Type u_1} {next : S → S} (r : Becoming.Run (Becoming.Law.process next))
+  {q : S → Nat} (n : Nat), ¬(r.state (n + 1) = r.state n ∧ Becoming.MoreThanNow q r.state n)
+@Becoming.SeekingRuns.aboveAll_never_rests : ∀ {S : Type u_1} {next : S → S} {I : Type} {q : I → S → Nat} {i j : I},
+  i ≠ j →
+    ∀ (r : Becoming.Run (Becoming.Law.process next)) (n : Nat),
+      ¬(next (r.state n) = r.state n ∧ ∀ (k : I), Becoming.AboveAll q k (r.state n))
+@Becoming.SeekingRuns.aboveAll_not_two : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {I : Type}
+  {q : I → S → Nat} {i j : I},
+  i ≠ j → ∀ (r : Becoming.Run P) (n : Nat), ¬(Becoming.AboveAll q i (r.state n) ∧ Becoming.AboveAll q j (r.state n))
+Becoming.SeekingRuns.captured_state_returns : ∀ (g : Bool) (n : Nat),
+  (Becoming.Law.run Becoming.Captured.next (!g, g)).state (n + 1) =
+    (Becoming.Law.run Becoming.Captured.next (g, g)).state (n + 1)
+Becoming.SeekingRuns.captured_rule_changes : ∀ (g : Bool) (n : Nat),
+  (Becoming.Law.run Becoming.Captured.next (g, !g)).state (n + 1) ≠
+    (Becoming.Law.run Becoming.Captured.next (g, g)).state (n + 1)

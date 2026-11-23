@@ -6,7 +6,8 @@ import Becoming.JointKeeping
 import Becoming.RegimeMargin
 import Becoming.TurningInTime
 import Becoming.LineOnAStock
-import Becoming.WayUnderARule
+import Becoming.MultiScaleViability
+import Becoming.CoreHelpers
 
 /-!
 # PacedStock: fine-step stock/unit dynamics under coarse rule cadences
@@ -61,35 +62,6 @@ open Generative
 universe u v v' w
 
 /-! ## Arithmetic helpers (prelude-only, empty axiom report) -/
-
-section Arith
-
-private theorem sub_le_sub_right_nat : ∀ {a b : Nat} (c : Nat), a ≤ b → a - c ≤ b - c
-  | _, _, 0, h => h
-  | _, _, c + 1, h => Nat.pred_le_pred (sub_le_sub_right_nat c h)
-
-private theorem sub_le_sub_left_nat : ∀ (a b c : Nat), a ≤ b → c - b ≤ c - a
-  | 0, b, c, _ => Nat.sub_le c b
-  | _ + 1, 0, _, h => absurd h (Nat.not_succ_le_zero _)
-  | a + 1, b + 1, 0, _ =>
-    Nat.le_trans (Nat.le_of_eq (Nat.zero_sub (b + 1))) (Nat.zero_le (0 - (a + 1)))
-  | a + 1, b + 1, c + 1, h =>
-    Nat.le_trans (Nat.le_of_eq (Nat.succ_sub_succ c b))
-      (Nat.le_trans (sub_le_sub_left_nat a b c (Nat.le_of_succ_le_succ h))
-        (Nat.le_of_eq (Nat.succ_sub_succ c a).symm))
-
-private theorem le_pred_of_succ_le {a b : Nat} (h : a + 1 ≤ b) : a ≤ b - 1 :=
-  match b, h with
-  | _ + 1, h => Nat.le_of_succ_le_succ h
-
-private theorem lt_of_add_lt_add_left_nat {a b c : Nat} (h : a + b < a + c) : b < c :=
-  Naturals.le_of_add_le_add_left (k := a)
-    (Nat.le_trans (Nat.le_of_eq (Nat.add_succ a b).symm) h)
-
-private theorem two_mul_pred_eq (N : Nat) : 2 * N - 1 = N + N - 1 :=
-  congrArg (· - 1) (Naturals.two_mul N)
-
-end Arith
 
 /-! ## Pillar 1: Fine-step stock/unit evolution under coarse rule cadence -/
 
@@ -167,7 +139,7 @@ theorem paced_held_on_span_state
   match Becoming.mem_span strict mem, span_end_decomp strict j with
   | ⟨hle, hlt⟩, ⟨m, atEnd⟩ =>
     have below : t - σ j ≤ m :=
-      Nat.le_of_lt_succ (lt_of_add_lt_add_left_nat (a := σ j)
+      Nat.le_of_lt_succ (Naturals.lt_of_add_lt_add_left (k := σ j)
         (Eq.subst (motive := fun x => x < σ j + (m + 1)) (add_sub_of_le hle).symm
           (Eq.subst (motive := fun x => t < x) (atEnd.trans (Nat.add_assoc (σ j) m 1)) hlt)))
     have stretched := Pace.paced_stretch (f := fineStep fA need kids giving use) (h := h)
@@ -689,7 +661,7 @@ theorem slack_certifies_fine_kernel (F : Frame S A C) (expand : B → List A)
         (Nat.le_trans (Nat.add_le_add_left (Nat.succ_le_succ (Nat.zero_le rest.length)) pre.length)
           (Nat.le_of_eq lenEq.symm))
         (lenBound blk)
-    have preLe : pre.length ≤ L - 1 := le_pred_of_succ_le preSucc
+    have preLe : pre.length ≤ L - 1 := CoreHelpers.le_pred_of_succ_le preSucc
     have mulLe : stepDrop * pre.length ≤ stepDrop * (L - 1) := Nat.mul_le_mul_left stepDrop preLe
     have hV : thr + stepDrop * (L - 1) ≤ stock v := blockKernel v reachB
     have hDrop := trace_drop drop (blocks_reach_to_fine F expand reachB) tracePre
@@ -731,6 +703,159 @@ theorem slack_iff_of_drop_realized (F : Frame S A C) (expand : B → List A)
        Nat.le_trans (Nat.add_le_add_right (fineKernel m reachFm) (stepDrop * (L - 1))) dropM⟩
 
 end Pillar2
+
+section LaxSimBridge
+
+private theorem list_split_at {α : Type v} : ∀ (n : Nat) (l : List α),
+    n ≤ l.length → ∃ u w, l = u ++ w ∧ u.length = n
+  | 0, l, _ => ⟨[], l, rfl, rfl⟩
+  | _ + 1, [], h => absurd h (Nat.not_succ_le_zero _)
+  | n + 1, a :: l, h =>
+    match list_split_at n l (Nat.le_of_succ_le_succ h) with
+    | ⟨u, w, heq, hu⟩ => ⟨a :: u, w, congrArg (a :: ·) heq, congrArg (· + 1) hu⟩
+
+/-- Coarse stock-level projection of `(F.blocks expand).P` from `s₀` on `Q := Nat`. -/
+def blockStockProcess {S : Type u} {A : Type v} {B : Type v'} {C : Type w}
+    (F : Frame S A C) (expand : B → List A) (stock : S → Nat) (s₀ : S) :
+    Process Nat Unit :=
+  ⟨fun _ _ q' => ∃ v, Reach (F.blocks expand).P s₀ v ∧ stock v = q'⟩
+
+private theorem blockStockProcess_trace_end {S : Type u} {A : Type v} {B : Type v'} {C : Type w}
+    {F : Frame S A C} {expand : B → List A} {stock : S → Nat} {s₀ : S} :
+    ∀ {q : Nat} {word : List Unit} {q' : Nat},
+      (∃ v, Reach (F.blocks expand).P s₀ v ∧ stock v = q) →
+      Trace (blockStockProcess F expand stock s₀) q word q' →
+      ∃ v, Reach (F.blocks expand).P s₀ v ∧ stock v = q'
+  | _, [], _, hq, .nil _ => hq
+  | _, _ :: _, _, _, .cons step tail =>
+    blockStockProcess_trace_end step tail
+
+theorem blockStockProcess_kernel_iff {S : Type u} {A : Type v} {B : Type v'} {C : Type w}
+    (F : Frame S A C) (expand : B → List A)
+    (stock : S → Nat) (thrB : Nat) (s₀ : S) :
+    Viability.Kernel (blockStockProcess F expand stock s₀) (fun q => thrB ≤ q) (stock s₀) ↔
+      Viability.Kernel (F.blocks expand).P (fun v => thrB ≤ stock v) s₀ :=
+  ⟨fun kQ v reachV => kQ (stock v) (Reach.of_step (a := ()) ⟨v, reachV, rfl⟩),
+   fun kB _ ⟨_, tr⟩ =>
+     match blockStockProcess_trace_end ⟨s₀, Reach.refl _ s₀, rfl⟩ tr with
+     | ⟨v, rv, hv⟩ => hv ▸ kB v rv⟩
+
+/-- Fine traces from `s₀` align to `expand` along strict cadence `σ`: every fine trace spanning
+    `[σ k, σ (k + 1))` from a state reached in `σ k` steps is some block `expand blk`. -/
+def SpanAlignedBlocks {S : Type u} {A : Type v} {B : Type v'} {C : Type w}
+    (F : Frame S A C) (expand : B → List A) (σ : Nat → Nat) (s₀ : S) : Prop :=
+  σ 0 = 0 ∧
+  ∀ k s w s', (∃ u, u.length = σ k ∧ Trace F.P s₀ u s) →
+    w.length = σ (k + 1) - σ k → Trace F.P s w s' → ∃ blk, expand blk = w
+
+/-- Uniform-length special case (`σ k = L * k`, `0 < L`): every fine trace of length `L`
+    from a reachable state is some `expand blk`. -/
+theorem spanAligned_of_uniform {S : Type u} {A : Type v} {B : Type v'} {C : Type w}
+    (F : Frame S A C) (expand : B → List A) {L : Nat} (_hL : 0 < L)
+    {s₀ : S} (unif : ∀ s w s', Reach F.P s₀ s → w.length = L → Trace F.P s w s' → ∃ blk, expand blk = w) :
+    SpanAlignedBlocks F expand (fun k => L * k) s₀ :=
+  ⟨Nat.mul_zero L, fun k s w s' ⟨u, _, tru⟩ wlen trw =>
+    unif s w s' ⟨u, tru⟩ (wlen.trans
+      (Eq.subst (motive := fun x => x - L * k = L) (Nat.mul_succ L k).symm
+        (Nat.add_comm (L * k) L ▸ Naturals.add_sub_cancel L (L * k)))) trw⟩
+
+private theorem blocks_reach_of_spanAligned {S : Type u} {A : Type v} {B : Type v'} {C : Type w}
+    {F : Frame S A C} {expand : B → List A} {σ : Nat → Nat} {s₀ : S}
+    (strict : Becoming.Strict σ) (aligned : SpanAlignedBlocks F expand σ s₀) :
+    ∀ k u s, u.length = σ k → Trace F.P s₀ u s → Reach (F.blocks expand).P s₀ s
+  | 0, [], _, _, .nil _ => Reach.refl _ s₀
+  | 0, _ :: _, _, hlen, _ =>
+    False.elim (Nat.noConfusion (hlen.trans aligned.1))
+  | k + 1, u, s, hlen, tr =>
+    have hsk : σ k ≤ u.length :=
+      Nat.le_trans (Nat.le_of_lt (strict k)) (Nat.le_of_eq hlen.symm)
+    match list_split_at (σ k) u hsk with
+    | ⟨u₁, u₂, hu, hu1⟩ =>
+      match trace_append_iff.mp (hu ▸ tr) with
+      | ⟨m, tr1, tr2⟩ =>
+        have rMid := blocks_reach_of_spanAligned strict aligned k u₁ m hu1 tr1
+        have hlenAdd : σ k + u₂.length = σ (k + 1) :=
+          (congrArg (· + u₂.length) hu1.symm).trans
+            ((ListTests.length_append u₁ u₂).symm.trans ((congrArg List.length hu.symm).trans hlen))
+        have hu2 : u₂.length = σ (k + 1) - σ k :=
+          (Nat.add_comm (σ k) u₂.length ▸ Naturals.add_sub_cancel u₂.length (σ k)).symm.trans
+            (congrArg (· - σ k) hlenAdd)
+        match aligned.2 k m u₂ s ⟨u₁, hu1, tr1⟩ hu2 tr2 with
+        | ⟨_, hblk⟩ => rMid.trans (Reach.of_step (hblk.symm ▸ tr2))
+
+/-- **Pillar 2 → `MultiScaleViability.LaxSim`**: builds an exact `(stock, σ)` lax simulation
+    with `M := SlackDist.drop`, `α := fun _ => 0`, `ε := 0`, `β := id`, `η := stepDrop * (L - 1)`. -/
+def blocksLaxSim {S : Type u} {A : Type v} {B : Type v'} {C : Type w}
+    (F : Frame S A C) (expand : B → List A)
+    (stock : S → Nat) (stepDrop L : Nat) (σ : Nat → Nat) (strict : Becoming.Strict σ) {s₀ : S}
+    (aligned : SpanAlignedBlocks F expand σ s₀)
+    (spanBound : ∀ k, σ (k + 1) - σ k ≤ L)
+    (drop : ∀ {u a w}, Reach F.P s₀ u → F.P.step u a w → stock u ≤ stock w + stepDrop) :
+    LaxSim F.P (blockStockProcess F expand stock s₀) stock σ SlackDist.drop where
+  strict := strict
+  Epoch t s := ∃ u, u.length = t ∧ Trace F.P s₀ u s
+  EpochQ _ _ := True
+  epoch_step _ s a s' ep step :=
+    match ep with
+    | ⟨u, hu, tru⟩ =>
+      ⟨u ++ [a], (ListTests.length_append u [a]).trans (congrArg (· + 1) hu),
+       trace_append_iff.mpr ⟨s, tru, .cons step (.nil s')⟩⟩
+  epoch_proj _ _ _ := trivial
+  α _ := 0
+  β := id
+  α_mono _ := Nat.le_refl 0
+  β_mono h := h
+  β_ge_id _ := Nat.le_refl _
+  ε := 0
+  η := stepDrop * (L - 1)
+  sim_block k s _ _ w s' ep _ _ wlen trw :=
+    match ep with
+    | ⟨u, hu, tru⟩ =>
+      have reachS := blocks_reach_of_spanAligned strict aligned k u s hu tru
+      match aligned.2 k s w s' ⟨u, hu, tru⟩ wlen trw with
+      | ⟨_, hblk⟩ =>
+        ⟨(), stock s', ⟨s', reachS.trans (Reach.of_step (hblk.symm ▸ trw)), rfl⟩,
+          trivial, Nat.le_of_eq (sub_eq_zero_of_le (Nat.le_refl _))⟩
+  excursion k s q r w₁ u ep _ hd hlt trw₁ :=
+    match ep with
+    | ⟨pre, _, trPre⟩ =>
+      have hdrop : stock s ≤ stock u + stepDrop * w₁.length :=
+        trace_drop drop ⟨pre, trPre⟩ trw₁
+      have wLe : w₁.length ≤ L - 1 :=
+        CoreHelpers.le_pred_of_succ_le (Nat.le_trans hlt (spanBound k))
+      have hdiff : SlackDist.drop.d (stock u) (stock s) ≤ stepDrop * (L - 1) :=
+        Naturals.sub_le_of_le_add
+          (Nat.le_trans hdrop (Nat.add_le_add_left (Nat.mul_le_mul_left stepDrop wLe) (stock u)))
+      Nat.le_trans (SlackDist.drop.tri (stock u) (stock s) q)
+        (Nat.le_trans (Nat.add_le_add hdiff hd) (Nat.add_comm _ r ▸ Nat.le_refl _))
+
+/-- Intra-span slack kernel certification directly via `MultiScaleViability.lax_kernel_of_kernel` (`Δ := 0`). -/
+theorem slack_certifies_fine_kernel_via_laxSim {S : Type u} {A : Type v} {B : Type v'} {C : Type w}
+    (F : Frame S A C) (expand : B → List A)
+    (stock : S → Nat) (thr stepDrop L : Nat) (σ : Nat → Nat) (strict : Becoming.Strict σ) {s₀ : S}
+    (aligned : SpanAlignedBlocks F expand σ s₀)
+    (spanBound : ∀ k, σ (k + 1) - σ k ≤ L)
+    (drop : ∀ {u a w}, Reach F.P s₀ u → F.P.step u a w → stock u ≤ stock w + stepDrop)
+    (blockKernel : Viability.Kernel (F.blocks expand).P
+      (fun v => thr + stepDrop * (L - 1) ≤ stock v) s₀) :
+    Viability.Kernel F.P (fun v => thr ≤ stock v) s₀ :=
+  lax_kernel_of_kernel
+    (blocksLaxSim F expand stock stepDrop L σ strict aligned spanBound drop)
+    (guardQ := fun q => thr + stepDrop * (L - 1) ≤ q)
+    (guardS := fun u => thr ≤ stock u)
+    0 (Nat.le_refl 0)
+    (fun q u gq hd =>
+      have hd' : q - stock u ≤ stepDrop * (L - 1) :=
+        Nat.le_trans hd (Nat.le_of_eq (Nat.zero_add _))
+      le_of_add_le_add_right (stepDrop * (L - 1))
+        (Nat.le_trans gq
+          (Nat.le_trans (CoreHelpers.le_sub_add_nat q (stock u))
+            (Nat.le_trans (Nat.add_le_add_right hd' (stock u))
+              (Nat.le_of_eq (Nat.add_comm _ (stock u)))))))
+    ⟨[], aligned.1.symm, .nil s₀⟩
+    ((blockStockProcess_kernel_iff F expand stock (thr + stepDrop * (L - 1)) s₀).mpr blockKernel)
+
+end LaxSimBridge
 
 /-! ## Witness: `SlackShortWitness` -/
 
@@ -864,6 +989,35 @@ theorem atSix_fine_kernel_by_slack :
     (fun _ => Nat.le_refl 2)
     (fun _ ⟨_, path⟩ => (atSix_block_trace path).symm ▸ Nat.le_refl 6)
 
+/-- Companion `LaxSim` proof of `atSix_fine_kernel_by_slack` via `slack_certifies_fine_kernel_via_laxSim`. -/
+theorem atSix_fine_kernel_via_laxSim :
+    Viability.Kernel frame.P (fun s => thr ≤ s.2) ([true], 6) :=
+  slack_certifies_fine_kernel_via_laxSim frame expand Prod.snd thr 1 2 (fun k => 2 * k)
+    (fun k => Nat.lt_of_lt_of_le (Nat.lt_add_of_pos_right (Nat.succ_pos 1))
+      (Nat.le_of_eq (Nat.mul_succ 2 k).symm))
+    (spanAligned_of_uniform frame expand (by decide : 0 < 2) fun _ w _ _ =>
+      match w with
+      | [(), ()] => fun _ _ => ⟨(), rfl⟩
+      | [] => fun h _ => False.elim (Nat.noConfusion h)
+      | [_] => fun h _ => False.elim (Nat.noConfusion (Nat.succ.inj h))
+      | _ :: _ :: _ :: _ => fun h _ => False.elim (Nat.noConfusion (Nat.succ.inj (Nat.succ.inj h))))
+    (fun k => Nat.le_of_eq
+      (Eq.subst (motive := fun x => x - 2 * k = 2) (Nat.mul_succ 2 k).symm
+        (Nat.add_comm (2 * k) 2 ▸ Naturals.add_sub_cancel 2 (2 * k))))
+    (fun {u _ w} reachU step =>
+      match reachU with
+      | ⟨_, tr⟩ =>
+        match atSix_fine_reach_cases tr with
+        | .inl hu => by
+          subst hu
+          have hw : w = ([false], 5) := step.trans step_six_true
+          rw [hw]; exact Nat.le_refl 6
+        | .inr hu => by
+          subst hu
+          have hw : w = ([true], 6) := step.trans step_five_false
+          rw [hw]; exact Nat.le_succ_of_le (Nat.le_succ 5))
+    (fun _ ⟨_, path⟩ => (atSix_block_trace path).symm ▸ Nat.le_refl 6)
+
 /-- Combined `SlackShortWitness` summary: at `([true], 5)` both `Kernel` and `Keepable` hold on
 `(frame.blocks expand).P` while both fail on `frame.P`; at `([true], 6)` `Kernel` holds on
 `frame.P` via `slack_certifies_fine_kernel`. -/
@@ -916,8 +1070,8 @@ theorem line_envelope_lower {U R : Type}
     have hSub : Law.orbit (RegimeMargin.step (fun _ => 0) H) x j - H ≤
         (LineOnAStock.course need (kids g) giving use (w, x) j).2 -
           LineOnAStock.taken use (LineOnAStock.course need (kids g) giving use (w, x) j).1 :=
-      Nat.le_trans (sub_le_sub_right_nat H ih)
-        (sub_le_sub_left_nat _ H _ hDraw)
+      Nat.le_trans (Nat.sub_le_sub_right ih H)
+        (Naturals.sub_antitone _ hDraw)
     Nat.le_trans hSub (Nat.le_add_right _ _)
 
 /-- Upper envelope of `line_envelope`: under `FromNothing giving`, `AtMost giving Y`,
@@ -944,7 +1098,7 @@ theorem line_envelope_upper {U R : Type}
         (LineOnAStock.course need (kids g) giving use (w, x) j).2 -
           LineOnAStock.taken use (LineOnAStock.course need (kids g) giving use (w, x) j).1 ≤
           Law.orbit (RegimeMargin.step (fun _ => Y) H₁) x j - H₁ :=
-      Nat.le_trans (sub_le_sub_left_nat H₁ _ _ hDraw) (sub_le_sub_right_nat H₁ ih)
+      Nat.le_trans (Naturals.sub_antitone _ hDraw) (Nat.sub_le_sub_right ih H₁)
     Nat.add_le_add hSub
       (most ((LineOnAStock.course need (kids g) giving use (w, x) j).2 -
         LineOnAStock.taken use (LineOnAStock.course need (kids g) giving use (w, x) j).1))
@@ -1038,7 +1192,7 @@ private theorem safe_step_maintains_bounds {giving : Nat → Nat} {H₂ y₂ hi 
       Nat.le_trans
         (Naturals.le_of_add_le_add_left (k := H₂)
           (Nat.le_trans low (Nat.le_of_eq (Naturals.add_sub_of_le hH2).symm)))
-        (sub_le_sub_left_nat D H₂ x dLe)
+        (Naturals.sub_antitone x dLe)
     have hGive : H₂ ≤ giving (x - D) := meets2 (x - D) yLe within
     have hDLeX : D ≤ x := Nat.le_trans dLe hH2
     calc H₂ + y₂ ≤ x := low
@@ -1112,7 +1266,7 @@ theorem pace_margin_feasibility_window {A U R O : Type}
           (pacedCourse fA need kids giving use h reads ((a₀, (w₀, x₀)), g_bad) t).1.2 := by
   let c : StockState A U × R := ((a₀, (w₀, x₀)), g_bad)
   have stretchFixes : Pace.StretchFixes O N L :=
-    (Pace.pace_law two N L).mpr ((two_mul_pred_eq N).symm ▸ paceOK)
+    (Pace.pace_law two N L).mpr ((congrArg (· - 1) (Naturals.two_mul N)).symm ▸ paceOK)
   have trans0 := paced_block_transition (fA := fA) (need := need) (kids := kids)
     (giving := giving) (use := use) (h := h) strict cadence c 0
   have at0 : (pacedCourse fA need kids giving use h reads c (σ 0)).2 = g_bad := by
@@ -1284,7 +1438,7 @@ theorem pace_margin_feasibility_window_exact {A U R O : Type}
           (pacedCourse fA need kids giving use h reads ((a₀, (w₀, x₀)), g_bad) t).1.2 := by
   let c : StockState A U × R := ((a₀, (w₀, x₀)), g_bad)
   have stretchFixes : Pace.StretchFixes O N L :=
-    (Pace.pace_law two N L).mpr ((two_mul_pred_eq N).symm ▸ paceOK)
+    (Pace.pace_law two N L).mpr ((congrArg (· - 1) (Naturals.two_mul N)).symm ▸ paceOK)
   have trans0 := paced_block_transition (fA := fA) (need := need) (kids := kids)
     (giving := giving) (use := use) (h := h) strict cadence c 0
   have at0 : (pacedCourse fA need kids giving use h reads c (σ 0)).2 = g_bad := by
@@ -1602,7 +1756,7 @@ theorem unrecoverable_cadence_impossibility {A U R O : Type}
   refine ⟨fun L hL => ?_, fun L σ reads h a₀ hL σ0 σ1 strict cadence => ?_⟩
   · have notFixes : ¬ Pace.StretchFixes O N L := fun fixes =>
       Nat.not_le_of_gt hL
-        (Eq.subst (motive := (· ≤ L)) (two_mul_pred_eq N).symm ((Pace.pace_law two N L).mp fixes))
+        (Eq.subst (motive := (· ≤ L)) (congrArg (· - 1) (Naturals.two_mul N)).symm ((Pace.pace_law two N L).mp fixes))
     have eqN : (N - 2) + 2 = N := Naturals.sub_add_cancel nGe2
     have eq2N2 : (N - 2) + (N - 2) + 2 = 2 * N - 2 := by
       have h2N : 2 * N = (N - 2) + (N - 2) + 4 := by
@@ -1851,56 +2005,32 @@ def use : UnitKind → Nat
 def kids (M : Nat) (g : Nat × Nat) (_ : UnitKind) : List UnitKind :=
   cond (decide (g.1 = 0) && decide (g.2 = M + 1)) [.safe] [.bad]
 
-private def min2 (a b : Nat) : Nat := cond (decide (a ≤ b)) a b
-
-private theorem min2_le_left (a b : Nat) : min2 a b ≤ a :=
-  match Nat.lt_or_ge b a with
-  | .inl lt =>
-    Eq.subst (motive := fun c => cond c a b ≤ a) (decide_eq_false (Nat.not_le_of_gt lt)).symm
-      (Nat.le_of_lt lt)
-  | .inr le =>
-    Eq.subst (motive := fun c => cond c a b ≤ a) (decide_eq_true le).symm (Nat.le_refl a)
-
-private theorem min2_le_right (a b : Nat) : min2 a b ≤ b :=
-  match Nat.lt_or_ge b a with
-  | .inl lt =>
-    Eq.subst (motive := fun c => cond c a b ≤ b) (decide_eq_false (Nat.not_le_of_gt lt)).symm
-      (Nat.le_refl b)
-  | .inr le =>
-    Eq.subst (motive := fun c => cond c a b ≤ b) (decide_eq_true le).symm le
-
-private theorem le_min2 {c a b : Nat} (ha : c ≤ a) (hb : c ≤ b) : c ≤ min2 a b :=
-  match Nat.lt_or_ge b a with
-  | .inl lt =>
-    Eq.subst (motive := fun d => c ≤ cond d a b) (decide_eq_false (Nat.not_le_of_gt lt)).symm hb
-  | .inr le =>
-    Eq.subst (motive := fun d => c ≤ cond d a b) (decide_eq_true le).symm ha
-
-def giving (z : Nat) : Nat := min2 z (min2 8 (60 - z))
+def giving (z : Nat) : Nat := CoreHelpers.natMin z (CoreHelpers.natMin 8 (60 - z))
 
 def obs (M : Nat) (s : StockState Nat UnitKind) : Bool := decide (s.1 = M + 1)
 
 theorem giving_fromNothing : RegimeMargin.FromNothing giving := rfl
 
 theorem giving_atMost8 : RegimeMargin.AtMost giving 8 := fun z =>
-  Nat.le_trans (min2_le_right z (min2 8 (60 - z))) (min2_le_left 8 (60 - z))
+  Nat.le_trans (CoreHelpers.natMin_le_right z (CoreHelpers.natMin 8 (60 - z)))
+    (CoreHelpers.natMin_le_left 8 (60 - z))
 
 theorem giving_short6 : RegimeMargin.Short giving 6 6 := fun z lt =>
-  Nat.lt_of_le_of_lt (min2_le_left z _) lt
+  Nat.lt_of_le_of_lt (CoreHelpers.natMin_le_left z _) lt
 
 theorem giving_meets6 : RegimeMargin.Meets giving 6 6 60 := fun z h6 htop => by
-  have h1 : 6 ≤ min2 8 (60 - z) := by
+  have h1 : 6 ≤ CoreHelpers.natMin 8 (60 - z) := by
     have h60 : 6 ≤ 60 - z :=
       Naturals.le_of_add_le_add_left (k := z)
         (Nat.le_trans htop (Nat.le_of_eq (Naturals.add_sub_of_le
           (Nat.le_trans (Nat.le_add_right z 6) htop)).symm))
-    exact le_min2 (by decide) h60
-  exact le_min2 h6 h1
+    exact CoreHelpers.le_natMin (by decide) h60
+  exact CoreHelpers.le_natMin h6 h1
 
 theorem giving_keeps0 : RegimeMargin.Keeps giving 0 60 := fun x hx => by
   show (x - 0) + giving (x - 0) ≤ 60
   have hgiv : giving x ≤ 60 - x :=
-    Nat.le_trans (min2_le_right x _) (min2_le_right 8 (60 - x))
+    Nat.le_trans (CoreHelpers.natMin_le_right x _) (CoreHelpers.natMin_le_right 8 (60 - x))
   exact Nat.le_trans (Nat.add_le_add_left hgiv x) (Nat.le_of_eq (Naturals.add_sub_of_le hx))
 
 theorem giving_keeps6 : RegimeMargin.Keeps giving 6 60 := fun _ =>
@@ -2029,7 +2159,7 @@ theorem periodReads_cadence (p : Nat) : ReadAtSpanEnd (periodSigma p) (periodRea
     have hlt' : (p + 1) * j + r < (p + 1) * j + (p + 1) :=
       Eq.subst (motive := (· < (p + 1) * j + (p + 1))) eqT.symm
         (Eq.subst (motive := (t < ·)) (Nat.mul_succ (p + 1) j) hlt)
-    have hrLe : r ≤ p := Nat.le_of_lt_succ (lt_of_add_lt_add_left_nat hlt')
+    have hrLe : r ≤ p := Nat.le_of_lt_succ (Naturals.lt_of_add_lt_add_left hlt')
     have hmod : cycleMod p t = r := eqT ▸ (cycleMod_mul_add p j).2 r hrLe
     show decide (cycleMod p t = p) = true ↔ t + 1 = (p + 1) * (j + 1)
     rw [hmod]

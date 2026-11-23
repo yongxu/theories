@@ -1,0 +1,10 @@
+import Becoming.JointCorrespondence
+#check @Becoming.JointBisimulation.reach
+#check @Becoming.SameJointTests.inverse_functional
+#check @Becoming.SameJointTests.joint_iff
+#check @Becoming.SameJointTests.step_iff
+#check @Becoming.SameJointTests.correspondence
+#check @Becoming.liftsFromEach_of_exact
+#check @Becoming.matchesParts_of_exact
+#check @Becoming.JointPlan.realizes_code_iff
+#check @Becoming.JointPlan.supports_of_code

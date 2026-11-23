@@ -1,0 +1,9 @@
+import Becoming.ReachedCascade
+#check @Becoming.Turns.readsOnlyActsAlong_of_from
+#check @Becoming.Turns.lawAlikeAlong_of_along
+#check @Becoming.Turns.law_alike_along
+#check @Becoming.Turns.acts_alike_along
+#check @Becoming.Turns.act_alike_along
+#check @Becoming.Turns.cascade_through_along
+#check @Becoming.Turns.Unreached.along
+#check @Becoming.Turns.Unreached.not_from

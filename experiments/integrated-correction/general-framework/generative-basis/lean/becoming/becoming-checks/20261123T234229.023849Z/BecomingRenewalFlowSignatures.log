@@ -1,0 +1,123 @@
+Becoming.SupportGated.add_sub_le : ∀ (a c d : Nat), a + c - d ≤ a + (c - d)
+Becoming.SupportGated.add_sub_assoc_of_le : ∀ (a : Nat) {c d : Nat}, d ≤ c → a + c - d = a + (c - d)
+Becoming.SupportGated.level_succ_le : ∀ (L : RelationalRenewal.Law) (t : Nat),
+  L.level (t + 1) ≤ L.level t + (Becoming.SupportGated.renewal L t + Becoming.SupportGated.netGive L t)
+Becoming.SupportGated.balances : ∀ (L : RelationalRenewal.Law),
+  (Becoming.SupportGated.flow L).Balances (Becoming.SupportGated.web L)
+Becoming.SupportGated.renewal_supported : ∀ (L : RelationalRenewal.Law) {t : Nat},
+  0 < Becoming.SupportGated.renewal L t → L.needG ≤ L.level t
+Becoming.SupportGated.netGive_active : ∀ (L : RelationalRenewal.Law) {t : Nat},
+  0 < Becoming.SupportGated.netGive L t → L.needF ≤ L.level t ∧ L.draw t < L.contrib t
+Becoming.SupportGated.givers_supported : ∀ (L : RelationalRenewal.Law) (t : Nat),
+  (Becoming.SupportGated.flow L).GiversSupported (Becoming.SupportGated.web L) t ()
+Becoming.SupportGated.netGive_step : ∀ (L : RelationalRenewal.Law) {t : Nat},
+  L.needF ≤ L.level t →
+    L.draw t < L.contrib t → (Becoming.SupportGated.flow L).taken t () < (Becoming.SupportGated.flow L).given t ()
+Becoming.SupportGated.repair_restores : ∀ (L : RelationalRenewal.Law) (T : Nat),
+  L.needF ≤ L.level T →
+    (∀ (d : Nat), d < L.needG - L.level T → L.draw (T + d) < L.contrib (T + d)) →
+      L.needG ≤ L.level (T + (L.needG - L.level T))
+Becoming.SupportGated.below_for_good : ∀ (L : RelationalRenewal.Law) {T : Nat},
+  (∀ (t : Nat), T ≤ t → L.contrib t ≤ L.draw t) →
+    ∀ {bound : Nat}, L.level T < bound → bound ≤ L.needG → ∀ (n : Nat), L.level (T + n) < bound
+Becoming.SupportGated.ends_for_good : ∀ (L : RelationalRenewal.Law) {T : Nat},
+  (∀ (t : Nat), T ≤ t → L.contrib t ≤ L.draw t) →
+    ∀ {bound : Nat},
+      L.level T < bound →
+        bound ≤ L.needG →
+          ∀ (p : RelationalRenewal.Law.Part),
+            L.requiresPart p → bound ≤ L.need p → ∀ (n : Nat), ¬L.unfolding.active (T + n) p
+Becoming.SupportGated.overdraw_ends : ∀ (L : RelationalRenewal.Law),
+  0 < L.needG →
+    L.needF ≤ L.needG →
+      ∀ {T0 : Nat},
+        (∀ (t : Nat), T0 ≤ t → L.renew + L.contrib t < L.draw t) →
+          ∃ T, T0 ≤ T ∧ ∀ (n : Nat), ¬L.unfolding.active (T + n) RelationalRenewal.Law.Part.sustaining
+Becoming.SupportGated.jointly_ends : ∀ (start renew need : Nat) (d1 d2 : Nat → Nat),
+  (∀ (t : Nat), renew < d1 t + d2 t) →
+    0 < need →
+      ∃ T,
+        ∀ (n : Nat),
+          ¬(RelationalRenewal.Law.together start renew need d1 d2).unfolding.active (T + n)
+                RelationalRenewal.Law.Part.sustaining ∧
+            ¬(RelationalRenewal.Law.together start renew need d1 d2).unfolding.active (T + n)
+                RelationalRenewal.Law.Part.focal
+Becoming.SupportGatedWebs.formation_does_not_decide : (∀ (L : RelationalRenewal.Law) (t : Nat),
+    (Becoming.SupportGated.web L).active t RelationalRenewal.Law.Part.focal → L.formed (t + 1) = L.formed t + 1) ∧
+  ((Becoming.SupportGated.web RelationalRenewal.Law.cultivation).RenewingIn RelationalRenewal.Law.Part.focal ∧
+      ∀ (t : Nat), RelationalRenewal.Law.cultivation.formed t = t) ∧
+    RelationalRenewal.Law.malignant.formed 1 = 1 ∧
+      (Becoming.SupportGated.web RelationalRenewal.Law.malignant).ConsumingIn RelationalRenewal.Law.Part.focal ∧
+        ∃ T,
+          (∀ (t : Nat),
+              T ≤ t →
+                ¬(Becoming.SupportGated.web RelationalRenewal.Law.malignant).active t
+                    RelationalRenewal.Law.Part.focal) ∧
+            ∀ (t : Nat), RelationalRenewal.Law.malignant.formed t ≤ T
+Becoming.SupportGatedWebs.own_trajectory_does_not_decide : (∀ (t : Nat),
+    (Becoming.SupportGated.web RelationalRenewal.Law.sharing).active t RelationalRenewal.Law.Part.focal ↔
+      (Becoming.SupportGated.web RelationalRenewal.Law.winning).active t RelationalRenewal.Law.Part.focal) ∧
+  (∀ (t : Nat), RelationalRenewal.Law.sharing.formed t = RelationalRenewal.Law.winning.formed t) ∧
+    (Becoming.SupportGated.web RelationalRenewal.Law.sharing).RenewingIn RelationalRenewal.Law.Part.focal ∧
+      (Becoming.SupportGated.web RelationalRenewal.Law.winning).ConsumingIn RelationalRenewal.Law.Part.focal
+Becoming.SupportGatedWebs.jointly_consuming : ∀ (start renew need : Nat) (d1 d2 : Nat → Nat),
+  (∀ (t : Nat), d1 t ≤ renew) →
+    (∀ (t : Nat), d2 t ≤ renew) →
+      (∀ (t : Nat), renew < d1 t + d2 t) →
+        0 < need →
+          need ≤ start →
+            (Becoming.SupportGated.web (RelationalRenewal.Law.alone start renew need d1)).RenewingIn
+                RelationalRenewal.Law.Part.focal ∧
+              (Becoming.SupportGated.web (RelationalRenewal.Law.alone start renew need d2)).RenewingIn
+                  RelationalRenewal.Law.Part.focal ∧
+                (Becoming.SupportGated.web (RelationalRenewal.Law.together start renew need d1 d2)).ConsumingIn
+                    RelationalRenewal.Law.Part.focal ∧
+                  ∃ T,
+                    ∀ (t : Nat),
+                      T ≤ t →
+                        ¬(Becoming.SupportGated.web (RelationalRenewal.Law.together start renew need d1 d2)).active t
+                              RelationalRenewal.Law.Part.focal ∧
+                          ¬(Becoming.SupportGated.web (RelationalRenewal.Law.together start renew need d1 d2)).active t
+                              RelationalRenewal.Law.Part.sustaining
+Becoming.SupportGatedWebs.escalation_consumes : (∀ (t : Nat),
+    t ≤ 2 →
+      RelationalRenewal.Law.escalation.draw t ≤
+        RelationalRenewal.Law.escalation.renew + RelationalRenewal.Law.escalation.contrib t) ∧
+  (Becoming.SupportGated.web RelationalRenewal.Law.escalation).level 3 () = 6 ∧
+    RelationalRenewal.Law.escalation.formed 3 = 3 ∧
+      (Becoming.SupportGated.web RelationalRenewal.Law.escalation).ConsumingIn RelationalRenewal.Law.Part.focal ∧
+        ∃ T,
+          (∀ (t : Nat),
+              T ≤ t →
+                ¬(Becoming.SupportGated.web RelationalRenewal.Law.escalation).active t
+                    RelationalRenewal.Law.Part.focal) ∧
+            ∀ (t : Nat), RelationalRenewal.Law.escalation.formed t ≤ T
+Becoming.SupportGatedWebs.fluctuating_dependent : (Becoming.Web.static RelationalRenewal.fluctuating).Dependent
+Becoming.SupportGatedWebs.fluctuating_neither : ¬(Becoming.Web.static RelationalRenewal.fluctuating).RenewingIn () ∧
+  ¬(Becoming.Web.static RelationalRenewal.fluctuating).ConsumingIn ()
+Becoming.SupportRecovery.absorbs : ∀ (L : RelationalRenewal.Law) (T : Nat),
+  L.level T < L.needF → L.level T < L.needG → ∀ (n : Nat), L.level (T + n) = L.level T
+Becoming.SupportRecovery.repair_step : ∀ (L : RelationalRenewal.Law) (t : Nat),
+  L.needF ≤ L.level t → L.draw t < L.contrib t → L.level t + 1 ≤ L.level (t + 1)
+Becoming.SupportRecovery.window_progress : ∀ (L : RelationalRenewal.Law) (T N : Nat),
+  L.needF ≤ L.level T →
+    (∀ (d : Nat), d < N → L.draw (T + d) < L.contrib (T + d)) → ∀ (d : Nat), d ≤ N → L.level T + d ≤ L.level (T + d)
+Becoming.SupportRecovery.same_later_inputs : ∀ (n : Nat),
+  (Becoming.SupportRecovery.pulse 2).draw (n + 1) = (Becoming.SupportRecovery.pulse 3).draw (n + 1) ∧
+    (Becoming.SupportRecovery.pulse 2).contrib (n + 1) = (Becoming.SupportRecovery.pulse 3).contrib (n + 1)
+Becoming.SupportRecovery.pulse_levels : (Becoming.SupportGated.web (Becoming.SupportRecovery.pulse 2)).level 0 () = 2 ∧
+  (Becoming.SupportGated.web (Becoming.SupportRecovery.pulse 3)).level 0 () = 2 ∧
+    (Becoming.SupportGated.web (Becoming.SupportRecovery.pulse 2)).level 1 () = 1 ∧
+      (Becoming.SupportGated.web (Becoming.SupportRecovery.pulse 3)).level 1 () = 0 ∧
+        (Becoming.SupportGated.web (Becoming.SupportRecovery.pulse 2)).level 2 () = 2
+Becoming.SupportRecovery.supported_pulse_recovers : ∀ (n : Nat), 2 ≤ (Becoming.SupportRecovery.pulse 2).level (2 + n)
+Becoming.SupportRecovery.unsupported_pulse_ends : ∀ (n : Nat),
+  (Becoming.SupportGated.web (Becoming.SupportRecovery.pulse 3)).level (1 + n) () = 0 ∧
+    ∀ (p : RelationalRenewal.Law.Part), ¬(Becoming.SupportGated.web (Becoming.SupportRecovery.pulse 3)).active (1 + n) p
+Becoming.SupportRecovery.recovered_neither : ¬RelationalRenewal.RenewingIn (Becoming.SupportRecovery.pulse 2).unfolding
+      RelationalRenewal.Law.Part.focal ∧
+  ¬RelationalRenewal.ConsumingIn (Becoming.SupportRecovery.pulse 2).unfolding RelationalRenewal.Law.Part.focal
+Becoming.SupportRecovery.recovered_web_neither : ¬(Becoming.SupportGated.web
+          (Becoming.SupportRecovery.pulse 2)).RenewingIn
+      RelationalRenewal.Law.Part.focal ∧
+  ¬(Becoming.SupportGated.web (Becoming.SupportRecovery.pulse 2)).ConsumingIn RelationalRenewal.Law.Part.focal

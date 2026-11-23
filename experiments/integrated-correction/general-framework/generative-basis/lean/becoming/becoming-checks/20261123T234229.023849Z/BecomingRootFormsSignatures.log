@@ -1,0 +1,79 @@
+@Becoming.RootForms.descent_forms_no_dependence : ∀ {X : Type} {comes before after : X → Prop}
+  {descends : Becoming.«际» X},
+  Becoming.RootForms.GivenTo comes descends →
+    Becoming.RootForms.Inherits descends before after →
+      Becoming.RootForms.UndependedFrom descends before → ¬∃ x, comes x ∧ after x
+Becoming.RootForms.given_everywhere : Becoming.RootForms.GivenTo Becoming.RootForms.everywhere
+  Becoming.RootForms.allRelated
+Becoming.RootForms.inherits_vacuous : Becoming.RootForms.Inherits Becoming.RootForms.noneRelated
+  Becoming.RootForms.nowhere Becoming.RootForms.everywhere
+Becoming.RootForms.inherits_everywhere : Becoming.RootForms.Inherits Becoming.RootForms.allRelated
+  Becoming.RootForms.everywhere Becoming.RootForms.everywhere
+Becoming.RootForms.undepended_vacuous : Becoming.RootForms.UndependedFrom Becoming.RootForms.noneRelated
+  Becoming.RootForms.nowhere
+Becoming.RootForms.undepended_nowhere : Becoming.RootForms.UndependedFrom Becoming.RootForms.allRelated
+  Becoming.RootForms.nowhere
+Becoming.RootForms.some_depends : ∃ x, Becoming.RootForms.everywhere x ∧ Becoming.RootForms.everywhere x
+Becoming.RootForms.descent_forms_no_dependence.needs_given : ¬∀ {X : Type} {comes before after : X → Prop}
+    {descends : Becoming.«际» X},
+    Becoming.RootForms.Inherits descends before after →
+      Becoming.RootForms.UndependedFrom descends before → ¬∃ x, comes x ∧ after x
+Becoming.RootForms.descent_forms_no_dependence.given_needed : ¬Becoming.RootForms.GivenTo Becoming.RootForms.everywhere
+    Becoming.RootForms.noneRelated
+Becoming.RootForms.descent_forms_no_dependence.needs_inherits : ¬∀ {X : Type} {comes before after : X → Prop}
+    {descends : Becoming.«际» X},
+    Becoming.RootForms.GivenTo comes descends →
+      Becoming.RootForms.UndependedFrom descends before → ¬∃ x, comes x ∧ after x
+Becoming.RootForms.descent_forms_no_dependence.inherits_needed : ¬Becoming.RootForms.Inherits
+    Becoming.RootForms.allRelated Becoming.RootForms.nowhere Becoming.RootForms.everywhere
+Becoming.RootForms.descent_forms_no_dependence.needs_undepended : ¬∀ {X : Type} {comes before after : X → Prop}
+    {descends : Becoming.«际» X},
+    Becoming.RootForms.GivenTo comes descends →
+      Becoming.RootForms.Inherits descends before after → ¬∃ x, comes x ∧ after x
+Becoming.RootForms.descent_forms_no_dependence.undepended_needed : ¬Becoming.RootForms.UndependedFrom
+    Becoming.RootForms.allRelated Becoming.RootForms.everywhere
+@Becoming.RootForms.no_new_dependence_at_model : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {t : Nat}
+  {x c : X},
+  W.level (t + 1) x + L.taken t x = W.level t x + L.given t x →
+    (∀ (g : X), L.DescendsAt W t x g → W.InheritsAt t x g c) →
+      (∀ (g : X), g ∈ L.present t → ¬W.requires t g c) → W.ComesToStand t x → ¬W.requires (t + 1) x c
+Becoming.RootForms.no_new_dependence_certified : @Becoming.Flow.no_new_dependence =
+  @Becoming.RootForms.no_new_dependence_at_model
+@Becoming.RootForms.length_zero_of_none : ∀ {X : Type} {ks : List X}, (∀ (k : X), ¬k ∈ ks) → ks.length = 0
+@Becoming.RootForms.outside_leaves_no_offspring : ∀ {X : Type} {region : X → Prop} {gives : Becoming.«际» X}
+  {ps : List X} {kids : X → List X},
+  Becoming.RootForms.GivesFrom region gives →
+    Becoming.RootForms.ListedWithin ps kids gives →
+      Becoming.RootForms.Outside region ps → (List.flatMap kids ps).length = 0
+Becoming.RootForms.gives_from_everywhere : Becoming.RootForms.GivesFrom Becoming.RootForms.everywhere
+  Becoming.RootForms.allRelated
+Becoming.RootForms.gives_from_vacuous : Becoming.RootForms.GivesFrom Becoming.RootForms.nowhere
+  Becoming.RootForms.noneRelated
+Becoming.RootForms.listed_within_all : Becoming.RootForms.ListedWithin Becoming.RootForms.oneListed
+  Becoming.RootForms.oneOffspring Becoming.RootForms.allRelated
+Becoming.RootForms.outside_nowhere : Becoming.RootForms.Outside Becoming.RootForms.nowhere Becoming.RootForms.oneListed
+Becoming.RootForms.one_offspring : ¬(List.flatMap Becoming.RootForms.oneOffspring Becoming.RootForms.oneListed).length =
+    0
+Becoming.RootForms.outside_leaves_no_offspring.needs_gate : ¬∀ {X : Type} {region : X → Prop} {gives : Becoming.«际» X}
+    {ps : List X} {kids : X → List X},
+    Becoming.RootForms.ListedWithin ps kids gives →
+      Becoming.RootForms.Outside region ps → (List.flatMap kids ps).length = 0
+Becoming.RootForms.outside_leaves_no_offspring.gate_needed : ¬Becoming.RootForms.GivesFrom Becoming.RootForms.nowhere
+    Becoming.RootForms.allRelated
+Becoming.RootForms.outside_leaves_no_offspring.needs_descent : ¬∀ {X : Type} {region : X → Prop}
+    {gives : Becoming.«际» X} {ps : List X} {kids : X → List X},
+    Becoming.RootForms.GivesFrom region gives → Becoming.RootForms.Outside region ps → (List.flatMap kids ps).length = 0
+Becoming.RootForms.outside_leaves_no_offspring.descent_needed : ¬Becoming.RootForms.ListedWithin
+    Becoming.RootForms.oneListed Becoming.RootForms.oneOffspring Becoming.RootForms.noneRelated
+Becoming.RootForms.outside_leaves_no_offspring.needs_outside : ¬∀ {X : Type} {region : X → Prop}
+    {gives : Becoming.«际» X} {ps : List X} {kids : X → List X},
+    Becoming.RootForms.GivesFrom region gives →
+      Becoming.RootForms.ListedWithin ps kids gives → (List.flatMap kids ps).length = 0
+Becoming.RootForms.outside_leaves_no_offspring.outside_needed : ¬Becoming.RootForms.Outside
+    Becoming.RootForms.everywhere Becoming.RootForms.oneListed
+@Becoming.RootForms.all_end_at_model : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    ∀ {G : Becoming.SelectionTerm.Generations X},
+      Becoming.SelectionTerm.Flow.Descended L W G →
+        ∀ {t : Nat}, (∀ (p : X), p ∈ G.family t → ¬W.active t p) → G.size (t + 1) = 0
+Becoming.RootForms.all_end_certified : @Becoming.GroupEnding.Flow.all_end = @Becoming.RootForms.all_end_at_model

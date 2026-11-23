@@ -1,0 +1,42 @@
+@Becoming.Flow.withinReach_iff_influence : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f g : F},
+  L.WithinReach W f g ↔ L.WithinInfluence W g f
+@Becoming.Flow.InOneLoop.refl : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} (f : F), L.InOneLoop W f f
+@Becoming.Flow.InOneLoop.symm : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f g : F},
+  L.InOneLoop W f g → L.InOneLoop W g f
+@Becoming.Flow.InOneLoop.trans : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f g h : F},
+  L.InOneLoop W f g → L.InOneLoop W g h → L.InOneLoop W f h
+@Becoming.Flow.reachReturns_iff_loop : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f : F},
+  L.ReachReturns W f ↔ ∀ (g : F), L.WithinReach W f g → L.InOneLoop W f g
+@Becoming.Flow.reachReturns_iff_closed : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f : F},
+  L.ReachReturns W f ↔ Becoming.ClosedUnder (L.Affects W) (L.InOneLoop W f)
+@Becoming.Flow.ReachReturns.of_loop : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f g : F},
+  L.ReachReturns W f → L.InOneLoop W f g → L.ReachReturns W g
+@Becoming.Flow.ReachReturns.represented : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {f g : F}, L.ReachReturns W f → L.WithinReach W f g → L.WithinCoupling W obs f g
+@Becoming.Flow.reachReturns_iff_represented : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f : F},
+  L.ReachReturns W f ↔ ∀ (g : F), L.WithinReach W f g → L.WithinCoupling W Becoming.thresholdOnly f g
+@Becoming.Flow.InOneLoop.mono : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C} {f g : F},
+  (∀ (h : F) (c : C), L.Exchanges h c → L'.Exchanges h c) → L.InOneLoop W f g → L'.InOneLoop W f g
+@Becoming.Flow.holdsCount_pos : ∀ {F : Type} {p : F → Bool} {xs : List F} {x : F},
+  x ∈ xs → p x = true → 0 < Becoming.Web.holdsCount p xs
+@Becoming.Flow.holdsCount_lt : ∀ {F : Type} {p q : F → Bool} {xs : List F},
+  (∀ (x : F), x ∈ xs → p x = true → q x = true) →
+    (∃ y, y ∈ xs ∧ q y = true ∧ p y = false) → Becoming.Web.holdsCount p xs < Becoming.Web.holdsCount q xs
+@Becoming.Flow.search : ∀ {F : Type} {p : F → Prop} (decided : (x : F) → Decidable (p x)) (xs : List F),
+  (∃ x, x ∈ xs ∧ p x) ∨ ∀ (x : F), x ∈ xs → ¬p x
+@Becoming.Flow.exists_reachReturns : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} (members : List F),
+  (∀ (g : F), g ∈ members) →
+    ∀ (decided : (a b : F) → Decidable (L.WithinReach W a b)) (f : F), ∃ c, L.WithinReach W f c ∧ L.ReachReturns W c
+Becoming.Line.a_affects_b : ∀ (back : Bool),
+  (Becoming.Line.flow back).Affects Becoming.Line.web Becoming.Line.Node.a Becoming.Line.Node.b
+Becoming.Line.open_b_inert : ∀ (g : Becoming.Line.Node),
+  ¬(Becoming.Line.flow false).Affects Becoming.Line.web Becoming.Line.Node.b g
+@Becoming.Line.open_b_alone : ∀ {g : Becoming.Line.Node},
+  (Becoming.Line.flow false).WithinReach Becoming.Line.web Becoming.Line.Node.b g → g = Becoming.Line.Node.b
+Becoming.Line.open_not_returns : ¬(Becoming.Line.flow false).ReachReturns Becoming.Line.web Becoming.Line.Node.a
+Becoming.Line.open_b_returns : (Becoming.Line.flow false).ReachReturns Becoming.Line.web Becoming.Line.Node.b
+Becoming.Line.closed_b_affects_a : (Becoming.Line.flow true).Affects Becoming.Line.web Becoming.Line.Node.b
+  Becoming.Line.Node.a
+Becoming.Line.closed_one_loop : (Becoming.Line.flow true).InOneLoop Becoming.Line.web Becoming.Line.Node.a
+  Becoming.Line.Node.b
+Becoming.Line.closed_returns : (Becoming.Line.flow true).ReachReturns Becoming.Line.web Becoming.Line.Node.a

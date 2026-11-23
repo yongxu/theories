@@ -1,4 +1,5 @@
 import Becoming.Transactions
+import Becoming.OpenComposition
 
 /-!
 # Reconfiguration: fault envelopes induced by causes, and the step that installs a new roster
@@ -558,7 +559,7 @@ theorem repaired_completes :
 
 /-- **The previous epoch's approvals fail after the reconfiguration.** -/
 theorem old_approvals_fail :
-    gate repaired4.roster (envelope repaired4) (envelope repaired4) renewed.installation request
+    Transactions.gate repaired4.roster (envelope repaired4) (envelope repaired4) renewed.installation request
       (faithfulReads initial request) (faithfulApprovals initial request) = false := by decide
 
 /-- The original installation with reserve 12. -/
@@ -617,7 +618,7 @@ theorem combined_draw_steps : Enabled process combinedReserve toRepaired :=
 
 /-- **After the repaired step, the earlier epoch's approvals fail the gate.** -/
 theorem repaired_step_rejects_old {next : Managed} (step : process.step original toRepaired next) :
-    gate repaired4.roster (envelope repaired4) (envelope repaired4) next.installation request
+    Transactions.gate repaired4.roster (envelope repaired4) (envelope repaired4) next.installation request
       (faithfulReads initial request) (faithfulApprovals initial request) = false :=
   renewed_of_step step ▸ old_approvals_fail
 
@@ -637,6 +638,452 @@ theorem repaired_step_completes {next : Managed} (step : process.step original t
     (guardedExecute repaired4.roster (envelope repaired4) (envelope repaired4)
         next.installation renewedRequest survivingReads survivingApprovals).installation.serial = 2 :=
   renewed_of_step step ▸ repaired_completes
+
+/-! ## Bridge to `Becoming.OpenComposition`: Fault-Envelope Channels, Live Swaps & Narrowing -/
+
+section OpenCompositionBridge
+
+/-- An alarm channel gated by a reconfiguration arrangement's fault-envelope certificate. -/
+def envelopeChannel {Env : Type} (a : Arrangement)
+    (report : Bool → Nat → Env → Domain → Bool)
+    (em : Bool) (load : Nat) (env : Env) : Bool :=
+  certificate a.roster (envelope a) (report em load env)
+
+/-- **B1 (Viability & Alarm Soundness):** Whenever arrangement `a` is ready and covers actual
+root causes `actual env`, responsive surviving witnesses certify closed-loop `Viability.Kernel`
+via `induced_certificate_available` and simultaneously enforce envelope alarm soundness via
+`induced_certificate_sound`. -/
+theorem faultEnvelope_channel_viable {S Obs Dist Int Ext Env : Type}
+    (C : OpenComposition.OpenComponent S Obs Dist Int Ext) {init : S}
+    (c : OpenComposition.InterfaceContract C init)
+    (a : Arrangement) (actual : Env → List Nat)
+    (report : Bool → Nat → Env → Domain → Bool)
+    (obs : (Ext → Nat) → Obs)
+    (G : Ext → (Ext → Nat) → Nat)
+    (envDraw : Env → Ext → Nat) (envCap : Ext → Nat) (jointAdm : Env → Prop)
+    (env_within : ∀ env, jointAdm env → ∀ k, envDraw env k ≤ envCap k)
+    (x_crit warnLevel H_safe x₀ : Ext → Nat)
+    (isReady : ready a = true)
+    (covered : ∀ env, jointAdm env → Covered a (actual env))
+    (report_faithful : ∀ load env d, jointAdm env → load ≤ c.maxSilence → d ∈ a.roster →
+      fails (a.vulnerability d) (actual env) = false → report true load env d = true)
+    (obs_detects : ∀ x k, x k < warnLevel k → c.warnObs (obs x))
+    (G_rises : ∀ k, RegimeMargin.Coupled.Indexed.Rises RegimeMargin.Drawn.whole (G k))
+    (post_viable : ∀ k, x_crit k ≤
+      RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H_safe x_crit k)
+    (post_budget : ∀ k, c.postBudgetExt k + envCap k ≤ H_safe k)
+    (warn_margin : ∀ k, x_crit k + (c.maxLag + 1) * (c.preCapExt k + envCap k) ≤ warnLevel k)
+    (init_margin : ∀ k, x_crit k + c.eta init * (c.preCapExt k + envCap k) ≤ x₀ k) :
+    Viability.Kernel
+      (OpenComposition.closedProcess C c obs (envelopeChannel a report) G envDraw jointAdm)
+      (OpenComposition.closedGuard C c x_crit) (x₀, init) ∧
+    (∀ em load env (P : Prop), jointAdm env →
+      (∀ d, d ∈ a.roster → fails (a.vulnerability d) (actual env) = false →
+        report em load env d = true → P) →
+      envelopeChannel a report em load env = true → P) :=
+  ⟨OpenComposition.close_contract_kernel C c obs (envelopeChannel a report) G envDraw envCap
+      jointAdm env_within x_crit warnLevel H_safe x₀ obs_detects
+      (fun load env adm hLoad =>
+        induced_certificate_available a (actual env) (covered env adm) isReady
+          (report true load env) (fun d mem ok => report_faithful load env d adm hLoad mem ok))
+      G_rises post_viable post_budget warn_margin init_margin,
+   fun em load env P adm faithful acc =>
+     induced_certificate_sound a (actual env) (covered env adm) (report em load env) P faithful acc⟩
+
+private theorem mem_append_or {α : Type} {x : α} :
+    ∀ {xs ys : List α}, x ∈ xs ++ ys → x ∈ xs ∨ x ∈ ys
+  | [], _, h => Or.inr h
+  | _ :: _, _, .head _ => Or.inl (.head _)
+  | _ :: _, _, .tail _ h => match mem_append_or h with
+    | Or.inl h1 => Or.inl (.tail _ h1)
+    | Or.inr h2 => Or.inr h2
+
+private theorem merged3_copied_certificate_false {extra : List Domain}
+    {vuln : Domain → FaultFormula} {s : Domain → Bool}
+    (vuln_roster : ∀ d, d ∈ merged3.roster → vuln d = merged3.vulnerability d)
+    (copied_vuln : ∀ e, e ∈ extra → ∃ d, d ∈ merged3.roster ∧ s e = s d ∧
+      vuln e = merged3.vulnerability d)
+    (h0 : s 0 = false) (h1 : s 1 = false) :
+    certificate (extra ++ merged3.roster)
+      (envelope ⟨extra ++ merged3.roster, vuln, merged3.rootFaults⟩) s = false := by
+  let a' : Arrangement := ⟨extra ++ merged3.roster, vuln, merged3.rootFaults⟩
+  cases hc : certificate (extra ++ merged3.roster) (envelope a') s with
+  | false => rfl
+  | true =>
+    have hmem : induced a' [2] ∈ envelope a' :=
+      induced_mem_envelope (.tail _ (.tail _ (.head _)) : [2] ∈ merged3.rootFaults)
+    obtain ⟨w, hw, hs, hout⟩ :=
+      certificate_witness (extra ++ merged3.roster) (envelope a') s hc (induced a' [2]) hmem
+    have hfail_false : fails (vuln w) [2] = false := by
+      cases hf : fails (vuln w) [2] with
+      | false => rfl
+      | true => exact absurd ((mem_induced_iff a' [2] w).mpr ⟨hw, hf⟩) hout
+    have hcheck : ∀ d, d ∈ merged3.roster → s d = true → fails (vuln d) [2] = false → False := by
+      intro d hd hsd hfd
+      cases hd with
+      | head => rw [h0] at hsd; exact Bool.noConfusion hsd
+      | tail _ h => cases h with
+        | head => rw [h1] at hsd; exact Bool.noConfusion hsd
+        | tail _ h => cases h with
+          | head =>
+            rw [vuln_roster 2 (.tail _ (.tail _ (.head _)) : (2 : Domain) ∈ merged3.roster)] at hfd
+            exact Bool.noConfusion hfd
+          | tail _ h => exact nomatch h
+    cases mem_append_or hw with
+    | inl hwe =>
+      obtain ⟨d, hd, hse, hve⟩ := copied_vuln w hwe
+      have hfd : fails (vuln d) [2] = false := by
+        rw [vuln_roster d hd, ← hve]; exact hfail_false
+      exact False.elim (hcheck d hd (hse ▸ hs) hfd)
+    | inr hwr => exact False.elim (hcheck w hwr hs hfail_false)
+
+private theorem widened_orbit_trace (channel : Bool → Nat → Unit → Bool) :
+    ∀ n st, Trace
+      (OpenComposition.closedProcess
+        (OpenComposition.OpenComponent.compose
+          OpenComposition.WideningWitness.widenedAgent OpenComposition.WideningWitness.widenedAgent)
+        (OpenComposition.composeContract
+          (OpenComposition.WideningWitness.widenedContract true)
+          (OpenComposition.WideningWitness.widenedContract true))
+        (fun x => (Nat.blt (x ()) 8, Nat.blt (x ()) 8)) channel
+        OpenComposition.WideningWitness.gShared (fun (_ : Unit) (_ : Unit) => 0) (fun _ => True))
+      st (List.replicate n ((), ((), ())))
+      (Law.orbit (fun s => OpenComposition.closedStep
+        (OpenComposition.OpenComponent.compose
+          OpenComposition.WideningWitness.widenedAgent OpenComposition.WideningWitness.widenedAgent)
+        (fun x => (Nat.blt (x ()) 8, Nat.blt (x ()) 8)) channel
+        OpenComposition.WideningWitness.gShared (fun (_ : Unit) (_ : Unit) => 0) s ((), ((), ()))) st n)
+  | 0, st => .nil st
+  | n + 1, st =>
+    .cons ⟨⟨trivial, fun _ => ⟨trivial, trivial⟩⟩, rfl⟩
+      ((Law.orbit_shift _ st n).symm ▸ widened_orbit_trace channel n _)
+
+/-- **B1 Sharpness (`correlated_faults_break_envelope_channel`):** On `widenedAgent ⊕ widenedAgent`
+over `gShared` from `x₀ = 6`, `repaired4` sustains a certified `Viability.Kernel` even under root
+cause `[0]`, whereas replacing it with `merged3` — or ANY copied extension `extra ++ merged3.roster` —
+silences the channel whenever failed domains `{0, 1}` do not fire, driving `closedProcess` to `0` at
+step `6` and refuting `Viability.Kernel`. -/
+theorem correlated_faults_break_envelope_channel (extra : List Domain)
+    (vuln : Domain → FaultFormula)
+    (report : Bool → Nat → Unit → Domain → Bool)
+    (vuln_roster : ∀ d, d ∈ merged3.roster → vuln d = merged3.vulnerability d)
+    (copies : ∀ e, e ∈ extra → ∃ d, d ∈ merged3.roster ∧
+      (∀ em, report em 0 () e = report em 0 () d) ∧
+      vuln e = merged3.vulnerability d)
+    (silent_failed : ∀ em d, d ∈ merged3.roster →
+      fails (merged3.vulnerability d) [0] = true → report em 0 () d = false) :
+    let comp := OpenComposition.OpenComponent.compose
+      OpenComposition.WideningWitness.widenedAgent OpenComposition.WideningWitness.widenedAgent
+    let cont := OpenComposition.composeContract
+      (OpenComposition.WideningWitness.widenedContract true)
+      (OpenComposition.WideningWitness.widenedContract true)
+    let obs := fun (x : Unit → Nat) => (Nat.blt (x ()) 8, Nat.blt (x ()) 8)
+    let mergedCopied : Arrangement := ⟨extra ++ merged3.roster, vuln, merged3.rootFaults⟩
+    let stepBad := fun st => OpenComposition.closedStep comp obs
+      (envelopeChannel mergedCopied report) OpenComposition.WideningWitness.gShared
+      (fun (_ : Unit) (_ : Unit) => 0) st ((), ((), ()))
+    Viability.Kernel
+      (OpenComposition.closedProcess comp cont obs
+        (envelopeChannel repaired4 (fun em _ _ d => em && decide (2 ≤ d)))
+        OpenComposition.WideningWitness.gShared (fun (_ : Unit) (_ : Unit) => 0) (fun _ => True))
+      (OpenComposition.closedGuard comp cont (fun _ => 3))
+      (fun _ => 6, (true, true)) ∧
+    (Law.orbit stepBad (fun _ => 6, (true, true)) 6).1 () = 0 ∧
+    ¬ Viability.Kernel
+      (OpenComposition.closedProcess comp cont obs
+        (envelopeChannel mergedCopied report) OpenComposition.WideningWitness.gShared
+        (fun (_ : Unit) (_ : Unit) => 0) (fun _ => True))
+      (OpenComposition.closedGuard comp cont (fun _ => 3))
+      (fun _ => 6, (true, true)) := by
+  dsimp only
+  have hViable := faultEnvelope_channel_viable
+    (OpenComposition.OpenComponent.compose
+      OpenComposition.WideningWitness.widenedAgent OpenComposition.WideningWitness.widenedAgent)
+    (OpenComposition.composeContract
+      (OpenComposition.WideningWitness.widenedContract true)
+      (OpenComposition.WideningWitness.widenedContract true))
+    repaired4 (fun _ => [0]) (fun em _ _ d => em && decide (2 ≤ d))
+    (fun x => (Nat.blt (x ()) 8, Nat.blt (x ()) 8))
+    OpenComposition.WideningWitness.gShared (fun (_ : Unit) (_ : Unit) => 0)
+    (fun _ => 0) (fun _ => True) (fun _ _ _ => Nat.zero_le 0)
+    (fun _ => 3) (fun _ => 8) (fun _ => 0) (fun _ => 6)
+    (by decide) (fun _ _ => ⟨[0], .head _, fun _ h => h⟩)
+    (fun _ _ d _ _ mem ok => by
+      cases mem with
+      | head => exact Bool.noConfusion ok
+      | tail _ h => cases h with
+        | head => exact Bool.noConfusion ok
+        | tail _ h => cases h with
+          | head => rfl
+          | tail _ h => cases h with
+            | head => rfl
+            | tail _ h => exact nomatch h)
+    (fun x k lt => by cases k; exact Or.inl (CoreHelpers.natBlt_true_iff.mpr lt))
+    OpenComposition.WideningWitness.gShared_rises
+    (fun k => by cases k; show 3 ≤ 3 - 0 + OpenComposition.WideningWitness.gShared () (fun _ => 3 - 0); exact by decide)
+    (fun k => by cases k; exact Nat.le_refl 0)
+    (fun k => by cases k; show 3 + (CoreHelpers.natMax 1 1 + 1) * (1 + 1 + 0) ≤ 8; exact by decide)
+    (fun k => by cases k; show 3 + CoreHelpers.natMax 1 1 * (1 + 1 + 0) ≤ 6; exact by decide)
+  have h0f : ∀ em, report em 0 () 0 = false := fun em =>
+    silent_failed em 0 (.head _) (by decide)
+  have h1f : ∀ em, report em 0 () 1 = false := fun em =>
+    silent_failed em 1 (.tail _ (.head _)) (by decide)
+  have chFalse : ∀ em, envelopeChannel
+      ⟨extra ++ merged3.roster, vuln, merged3.rootFaults⟩ report em 0 () = false := fun em =>
+    merged3_copied_certificate_false vuln_roster
+      (fun e he => match copies e he with | ⟨d, hd, hrep, hv⟩ => ⟨d, hd, hrep em, hv⟩)
+      (h0f em) (h1f em)
+  let stepBad := fun st => OpenComposition.closedStep
+    (OpenComposition.OpenComponent.compose
+      OpenComposition.WideningWitness.widenedAgent OpenComposition.WideningWitness.widenedAgent)
+    (fun x => (Nat.blt (x ()) 8, Nat.blt (x ()) 8))
+    (envelopeChannel ⟨extra ++ merged3.roster, vuln, merged3.rootFaults⟩ report)
+    OpenComposition.WideningWitness.gShared (fun (_ : Unit) (_ : Unit) => 0) st ((), ((), ()))
+  have hStay : ∀ t, (Law.orbit stepBad (fun _ => 6, (true, true)) t).2 = (true, true) := by
+    intro t
+    induction t with
+    | zero => rfl
+    | succ t ih =>
+      show (stepBad (Law.orbit stepBad (fun _ => 6, (true, true)) t)).2 = (true, true)
+      have h1 : (Law.orbit stepBad (fun _ => 6, (true, true)) t).2.1 = true := congrArg Prod.fst ih
+      have h2 : (Law.orbit stepBad (fun _ => 6, (true, true)) t).2.2 = true := congrArg Prod.snd ih
+      dsimp only [stepBad, OpenComposition.closedStep, OpenComposition.closedStepWith,
+        OpenComposition.OpenComponent.compose, OpenComposition.WideningWitness.widenedAgent] at h1 h2 ⊢
+      rw [h1, h2]
+      rw [show (0 : Nat) + 0 = 0 from rfl, chFalse]
+      rfl
+  have hEq : ∀ t, (Law.orbit stepBad (fun _ => 6, (true, true)) t).1 () =
+      (Law.run (RegimeMargin.step (fun z => OpenComposition.WideningWitness.gShared () (fun _ => z)) 2) 6).state t := by
+    intro t
+    induction t with
+    | zero => rfl
+    | succ t ih =>
+      show (stepBad (Law.orbit stepBad (fun _ => 6, (true, true)) t)).1 () = _
+      have ht := hStay t
+      have hdraw : OpenComposition.WideningWitness.widenedAgent.drawExt
+            (Law.orbit stepBad (fun _ => 6, (true, true)) t).2.1 () +
+          OpenComposition.WideningWitness.widenedAgent.drawExt
+            (Law.orbit stepBad (fun _ => 6, (true, true)) t).2.2 () = 2 := by
+        rw [ht]; rfl
+      show RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole
+          OpenComposition.WideningWitness.gShared
+          (fun _ =>
+            OpenComposition.WideningWitness.widenedAgent.drawExt
+              (Law.orbit stepBad (fun _ => 6, (true, true)) t).2.1 () +
+            OpenComposition.WideningWitness.widenedAgent.drawExt
+              (Law.orbit stepBad (fun _ => 6, (true, true)) t).2.2 () + 0)
+          (Law.orbit stepBad (fun _ => 6, (true, true)) t).1 () =
+        RegimeMargin.step (fun z => OpenComposition.WideningWitness.gShared () (fun _ => z)) 2
+          ((Law.run (RegimeMargin.step (fun z => OpenComposition.WideningWitness.gShared () (fun _ => z)) 2) 6).state t)
+      dsimp only [RegimeMargin.Coupled.Indexed.step, RegimeMargin.Coupled.Indexed.left,
+        RegimeMargin.step, RegimeMargin.Drawn.whole, Amounts.whole,
+        OpenComposition.WideningWitness.gShared]
+      rw [hdraw, Nat.add_zero]
+      exact congrArg (fun z => (z - 2) + if 3 ≤ z - 2 then 1 else 0) ih
+  have hCrash : (Law.orbit stepBad (fun _ => 6, (true, true)) 6).1 () = 0 :=
+    (hEq 6).trans (by decide)
+  refine ⟨hViable.1, hCrash, fun kern => ?_⟩
+  have h6 := kern _ ⟨_, widened_orbit_trace (envelopeChannel ⟨extra ++ merged3.roster, vuln, merged3.rootFaults⟩ report) 6 (fun _ => 6, (true, true))⟩
+  have hle : 3 ≤ (Law.orbit stepBad (fun _ => 6, (true, true)) 6).1 () := h6.1 ()
+  rw [hCrash] at hle
+  exact Nat.not_succ_le_zero 2 hle
+
+/-- Guard an `OpenComponent` by requiring envelope certificate validation alongside `C.emitAlarm`. -/
+def guardedByEnvelope {S Obs Dist Int Ext : Type}
+    (C : OpenComposition.OpenComponent S Obs Dist Int Ext)
+    (roster : List Domain) (env : Envelope) :
+    OpenComposition.OpenComponent S (Obs × (Domain → Bool)) Dist Int Ext where
+  next s oa d := C.next s (oa.1.1, oa.2) d
+  drawInt := C.drawInt
+  drawExt := C.drawExt
+  emitAlarm s o := C.emitAlarm s o.1 && certificate roster env o.2
+  silenceLoad := C.silenceLoad
+  favours := C.favours
+
+/-- Guard an `OpenComponent` by a reconfiguration arrangement's roster and induced envelope. -/
+def guardedByArrangement {S Obs Dist Int Ext : Type}
+    (C : OpenComposition.OpenComponent S Obs Dist Int Ext) (a : Arrangement) :
+    OpenComposition.OpenComponent S (Obs × (Domain → Bool)) Dist Int Ext :=
+  guardedByEnvelope C a.roster (envelope a)
+
+/-- Lift any `InterfaceContract` onto `guardedByEnvelope` (`warnObs` requires envelope acceptance). -/
+def guardedEnvelopeContract {S Obs Dist Int Ext : Type}
+    {C : OpenComposition.OpenComponent S Obs Dist Int Ext} {init : S}
+    (c : OpenComposition.InterfaceContract C init)
+    (roster : List Domain) (env : Envelope) :
+    OpenComposition.InterfaceContract (guardedByEnvelope C roster env) init where
+  tol oa d := c.tol (oa.1.1, oa.2) d
+  warnObs o := c.warnObs o.1 ∧ certificate roster env o.2 = true
+  preCapInt := c.preCapInt
+  preCapExt := c.preCapExt
+  postBudgetInt := c.postBudgetInt
+  postBudgetExt := c.postBudgetExt
+  maxSilence := c.maxSilence
+  maxLag := c.maxLag
+  K := c.K
+  eta := c.eta
+  init_in := c.init_in
+  cert := Viability.certificate_disturbed_iff.mpr
+    ⟨c.cert.within, fun s m adm hs => c.cert.closed s ((m.1.1.1, m.1.2), m.2) _ ⟨adm, rfl⟩ hs⟩
+  eta_bound := c.eta_bound
+  emits_on_warn s o hK hw := by
+    show (C.emitAlarm s o.1 && certificate roster env o.2) = true
+    rw [c.emits_on_warn s o.1 hK hw.1, hw.2]
+    rfl
+  eta_alarm_step s o d htol := c.eta_alarm_step s o.1 d htol
+  eta_alarm_zero s o d htol := c.eta_alarm_zero s o.1 d htol
+
+/-- **B2 (Live `Reconfiguration.process` transitions drive `OpenComposition.ReconfigProcess`):**
+Any transition `step : process.step old m new` guarantees readiness and separated induced
+envelope on `new.arrangement`, lifts both components via `induced_certificate_available`, and
+certifies permanent `Viability.Kernel` of `ReconfigProcess` across arbitrary swap timing alongside
+epoch staling and scope preservation. -/
+theorem reconfig_step_induces_live_swap
+    {S₁ S₁' Obs₁ Obs₁' Dist₁ Dist₁' Int₁ Int₁' Ext Env : Type}
+    {old new : Managed} {m : Rearrangement}
+    (step : process.step old m new) (oldReady : ready old.arrangement = true)
+    (A : OpenComposition.OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext)
+    (A' : OpenComposition.OpenComponent S₁' Obs₁' Dist₁' Int₁' Ext)
+    {init₁ : S₁} {init₁' : S₁'}
+    (cA : OpenComposition.InterfaceContract A init₁)
+    (cA' : OpenComposition.InterfaceContract A' init₁')
+    (obs₁ : (Ext → Nat) → Obs₁) (obs₁' : (Ext → Nat) → Obs₁')
+    (actual : List Nat) (cov₁ : Covered old.arrangement actual) (cov₂ : Covered new.arrangement actual)
+    (rep₁ rep₂ : (Ext → Nat) → Domain → Bool)
+    (resp₁ : ∀ x d, d ∈ old.arrangement.roster →
+      fails (old.arrangement.vulnerability d) actual = false → rep₁ x d = true)
+    (resp₂ : ∀ x d, d ∈ new.arrangement.roster →
+      fails (new.arrangement.vulnerability d) actual = false → rep₂ x d = true)
+    (channel : Bool → Nat → Env → Bool)
+    (G : Ext → (Ext → Nat) → Nat)
+    (envDraw : Env → Ext → Nat) (envCap : Ext → Nat) (jointAdm : Env → Prop)
+    (env_within : ∀ env, jointAdm env → ∀ k, envDraw env k ≤ envCap k)
+    (x_crit warnLevel H_safe x₀ : Ext → Nat)
+    (cap_le : ∀ k, cA'.preCapExt k ≤ cA.preCapExt k)
+    (post_le : ∀ k, cA'.postBudgetExt k ≤ cA.postBudgetExt k)
+    (sil_le : cA'.maxSilence ≤ cA.maxSilence)
+    (lag_le : cA'.maxLag ≤ cA.maxLag)
+    (obs_detects₁ : ∀ x k, x k < warnLevel k → cA.warnObs (obs₁ x))
+    (obs_detects₂ : ∀ x k, x k < warnLevel k → cA'.warnObs (obs₁' x))
+    (channel_fires : ∀ load env, jointAdm env → load ≤ cA.maxSilence →
+      channel true load env = true)
+    (G_rises : ∀ k, RegimeMargin.Coupled.Indexed.Rises RegimeMargin.Drawn.whole (G k))
+    (post_viable : ∀ k, x_crit k ≤
+      RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H_safe x_crit k)
+    (post_budget : ∀ k, cA.postBudgetExt k + envCap k ≤ H_safe k)
+    (warn_margin : ∀ k, x_crit k + (cA.maxLag + 1) * (cA.preCapExt k + envCap k) ≤ warnLevel k)
+    (init_margin : ∀ k, x_crit k + cA.eta init₁ * (cA.preCapExt k + envCap k) ≤ x₀ k) :
+    ready new.arrangement = true ∧
+    separated new.arrangement.roster (envelope new.arrangement) ∧
+    (∀ p, p.epoch = old.installation.state.epoch → fresh new.installation p = false) ∧
+    Viability.Kernel
+      (OpenComposition.ReconfigProcess
+        (guardedByArrangement A old.arrangement) (guardedByArrangement A' new.arrangement)
+        (guardedEnvelopeContract cA old.arrangement.roster (envelope old.arrangement))
+        (guardedEnvelopeContract cA' new.arrangement.roster (envelope new.arrangement))
+        (fun x => (obs₁ x, rep₁ x)) (fun x => (obs₁' x, rep₂ x))
+        channel G envDraw jointAdm)
+      (fun st => match st with
+        | .inl st₁ => OpenComposition.closedGuard (guardedByArrangement A old.arrangement)
+            (guardedEnvelopeContract cA old.arrangement.roster (envelope old.arrangement)) x_crit st₁
+        | .inr st₂ => OpenComposition.closedGuard (guardedByArrangement A' new.arrangement)
+            (guardedEnvelopeContract cA' new.arrangement.roster (envelope new.arrangement)) x_crit st₂)
+      (.inl (x₀, init₁)) := by
+  have hren := step_renews step
+  have newReady : ready new.arrangement = true := hren.2.2.1 ▸ hren.2.1
+  have hkern := OpenComposition.rewrite_step_viable
+    (guardedByArrangement A old.arrangement) (guardedByArrangement A' new.arrangement)
+    (guardedEnvelopeContract cA old.arrangement.roster (envelope old.arrangement))
+    (guardedEnvelopeContract cA' new.arrangement.roster (envelope new.arrangement))
+    (fun x => (obs₁ x, rep₁ x)) (fun x => (obs₁' x, rep₂ x))
+    channel G envDraw envCap jointAdm env_within
+    x_crit warnLevel H_safe x₀
+    cap_le post_le sil_le lag_le
+    (fun x k lt => ⟨obs_detects₁ x k lt,
+      induced_certificate_available old.arrangement actual cov₁ oldReady (rep₁ x) (resp₁ x)⟩)
+    (fun x k lt => ⟨obs_detects₂ x k lt,
+      induced_certificate_available new.arrangement actual cov₂ newReady (rep₂ x) (resp₂ x)⟩)
+    channel_fires G_rises post_viable post_budget warn_margin init_margin
+  exact ⟨newReady, (step_separated step).2, fun p hp => step_stales_old_epoch step p hp, hkern⟩
+
+/-- **B3 (`stronger_envelope_contract_refines`):** Whenever `env₁` covers every fault set of
+nonempty `env₂` (`∀ b ∈ env₂, ∃ f ∈ env₁, ∀ d ∈ b, d ∈ f`), `stronger_envelope_no_new_acceptance`
+makes `guardedEnvelopeContract c roster env₂` refine `guardedEnvelopeContract c roster env₁`. -/
+theorem stronger_envelope_contract_refines
+    {S Obs Dist Int Ext : Type}
+    {C : OpenComposition.OpenComponent S Obs Dist Int Ext} {init : S}
+    (c : OpenComposition.InterfaceContract C init)
+    (roster : List Domain) (env₁ env₂ : Envelope)
+    (nonempty : env₂ ≠ [])
+    (covers : ∀ b, b ∈ env₂ → ∃ f, f ∈ env₁ ∧ ∀ d, d ∈ b → d ∈ f)
+    (obs : (Ext → Nat) → Obs)
+    (rep : (Ext → Nat) → Domain → Bool)
+    (warnLevel : Ext → Nat) :
+    OpenComposition.ContractRefines
+      (guardedEnvelopeContract c roster env₁)
+      (guardedEnvelopeContract c roster env₂)
+      (fun x => (obs x, rep x))
+      (fun x => (obs x, rep x))
+      warnLevel where
+  preCapExt_le _ := Nat.le_refl _
+  postBudgetExt_le _ := Nat.le_refl _
+  maxSilence_le := Nat.le_refl _
+  maxLag_le := Nat.le_refl _
+  init_eta_le := Nat.le_refl _
+  warn_preserved x hw _ :=
+    ⟨hw.1, stronger_envelope_no_new_acceptance roster env₂ env₁ (rep x) nonempty covers hw.2⟩
+
+/-- **B3 Corollary:** Narrowing an envelope (`env₁ ↝ env₂`) upgrades `A ⊕_K B` via
+`OpenComposition.replace_left_viable` without re-checking `B`. -/
+theorem stronger_envelope_replace_left_viable
+    {S₁ S₂ Obs₁ Obs₂ Dist₁ Dist₂ Int₁ Int₂ Ext Env : Type}
+    (A : OpenComposition.OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext)
+    (B : OpenComposition.OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext)
+    {init₁ : S₁} {init₂ : S₂}
+    (cA : OpenComposition.InterfaceContract A init₁)
+    (cB : OpenComposition.InterfaceContract B init₂)
+    (roster : List Domain) (env₁ env₂ : Envelope)
+    (nonempty : env₂ ≠ [])
+    (covers : ∀ b, b ∈ env₂ → ∃ f, f ∈ env₁ ∧ ∀ d, d ∈ b → d ∈ f)
+    (obs₁ : (Ext → Nat) → Obs₁) (rep : (Ext → Nat) → Domain → Bool)
+    (obs₂ : (Ext → Nat) → Obs₂)
+    (channel : Bool → Nat → Env → Bool)
+    (G : Ext → (Ext → Nat) → Nat)
+    (envDraw : Env → Ext → Nat) (envCap : Ext → Nat) (jointAdm : Env → Prop)
+    (env_within : ∀ env, jointAdm env → ∀ k, envDraw env k ≤ envCap k)
+    (x_crit warnLevel H_safe x₀ : Ext → Nat)
+    (obs_detects_orig : ∀ x k, x k < warnLevel k →
+      (cA.warnObs (obs₁ x) ∧ certificate roster env₁ (rep x) = true) ∨ cB.warnObs (obs₂ x))
+    (channel_fires : ∀ load env, jointAdm env → load ≤ cA.maxSilence + cB.maxSilence →
+      channel true load env = true)
+    (G_rises : ∀ k, RegimeMargin.Coupled.Indexed.Rises RegimeMargin.Drawn.whole (G k))
+    (post_viable : ∀ k, x_crit k ≤
+      RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H_safe x_crit k)
+    (post_budget : ∀ k, (cA.postBudgetExt k + cB.postBudgetExt k) + envCap k ≤ H_safe k)
+    (warn_margin : ∀ k, x_crit k +
+      (CoreHelpers.natMax cA.maxLag cB.maxLag + 1) *
+        ((cA.preCapExt k + cB.preCapExt k) + envCap k) ≤ warnLevel k)
+    (init_margin : ∀ k, x_crit k +
+      CoreHelpers.natMax (cA.eta init₁) (cB.eta init₂) *
+        ((cA.preCapExt k + cB.preCapExt k) + envCap k) ≤ x₀ k) :
+    Viability.Kernel
+      (OpenComposition.closedProcess
+        (OpenComposition.OpenComponent.compose (guardedByEnvelope A roster env₂) B)
+        (OpenComposition.composeContract (guardedEnvelopeContract cA roster env₂) cB)
+        (fun x => ((obs₁ x, rep x), obs₂ x)) channel G envDraw jointAdm)
+      (OpenComposition.closedGuard
+        (OpenComposition.OpenComponent.compose (guardedByEnvelope A roster env₂) B)
+        (OpenComposition.composeContract (guardedEnvelopeContract cA roster env₂) cB) x_crit)
+      (x₀, (init₁, init₂)) :=
+  OpenComposition.replace_left_viable
+    (guardedByEnvelope A roster env₁) (guardedByEnvelope A roster env₂) B
+    (guardedEnvelopeContract cA roster env₁) (guardedEnvelopeContract cA roster env₂) cB
+    (fun x => (obs₁ x, rep x)) (fun x => (obs₁ x, rep x)) obs₂
+    channel G envDraw envCap jointAdm env_within x_crit warnLevel H_safe x₀
+    (stronger_envelope_contract_refines cA roster env₁ env₂ nonempty covers obs₁ rep warnLevel)
+    obs_detects_orig channel_fires G_rises post_viable post_budget warn_margin init_margin
+
+end OpenCompositionBridge
 
 end Reconfiguration
 

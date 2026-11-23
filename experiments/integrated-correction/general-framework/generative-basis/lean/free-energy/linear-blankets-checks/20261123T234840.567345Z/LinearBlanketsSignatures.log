@@ -1,0 +1,299 @@
+@Becoming.LinearBlankets.helmholtz_of_lyapunov : ∀ {n : Type u_1} [inst : Fintype n] [inst_1 : DecidableEq n]
+  (B S D : Matrix n n ℝ),
+  S.transpose = S →
+    IsUnit S.det →
+      B * S + S * B.transpose = 2 • D →
+        ((1 / 2) • (S * B.transpose - B * S)).transpose = -((1 / 2) • (S * B.transpose - B * S)) ∧
+          B = (D - (1 / 2) • (S * B.transpose - B * S)) * S⁻¹
+@Becoming.LinearBlankets.lyapunov_of_helmholtz : ∀ {n : Type u_1} [inst : Fintype n] [inst_1 : DecidableEq n]
+  (B D Q P : Matrix n n ℝ),
+  IsUnit P.det →
+    P.transpose = P → D.transpose = D → Q.transpose = -Q → B = (D - Q) * P → B * P⁻¹ + P⁻¹ * B.transpose = 2 • D
+@Becoming.LinearBlankets.helmholtz_unique : ∀ {n : Type u_1} [inst : Fintype n] [inst_1 : DecidableEq n]
+  (B S D' Q' : Matrix n n ℝ),
+  S.transpose = S →
+    IsUnit S.det →
+      D'.transpose = D' →
+        Q'.transpose = -Q' →
+          B = (D' - Q') * S⁻¹ → D' = (1 / 2) • (B * S + S * B.transpose) ∧ Q' = (1 / 2) • (S * B.transpose - B * S)
+@Becoming.LinearBlankets.entry_symm : ∀ {n : Type u_1} {P : Matrix n n ℝ}, P.transpose = P → ∀ (i k : n), P i k = P k i
+@Becoming.LinearBlankets.entry_anti : ∀ {n : Type u_1} {Q : Matrix n n ℝ},
+  Q.transpose = -Q → ∀ (i k : n), Q i k = -Q k i
+@Becoming.LinearBlankets.row_zero_iff : ∀ {n : Type u_1} [inst : Fintype n] [inst_1 : DecidableEq n]
+  (Q P S : Matrix n n ℝ), P * S = 1 → ∀ (i : n), (∀ (j : n), (Q * P) i j = 0) ↔ ∀ (j : n), Q i j = 0
+@Becoming.LinearBlankets.drift_zero_iff : ∀ {n : Type u_1} [inst : Fintype n] (B D Q P : Matrix n n ℝ),
+  B = (D - Q) * P →
+    (∀ (i k : n), i ≠ k → D i k = 0) →
+      (∀ (i : n), 0 < D i i) → ∀ (i : n), (∀ (k : n), Q i k = 0) → ∀ (j : n), B i j = 0 ↔ P i j = 0
+@Becoming.LinearBlankets.zero_iff_solenoidal : ∀ {n : Type u_1} [inst : Fintype n] (B D Q P : Matrix n n ℝ),
+  B = (D - Q) * P →
+    (∀ (i k : n), i ≠ k → D i k = 0) → (∀ (i : n), 0 < D i i) → ∀ {i j : n}, B i j = 0 → (P i j = 0 ↔ (Q * P) i j = 0)
+@Becoming.LinearBlankets.quad_antisymm : ∀ {n : Type u_1} [inst : Fintype n] (Q : Matrix n n ℝ),
+  Q.transpose = -Q → ∀ (v : n → ℝ), v ⬝ᵥ Q.mulVec v = 0
+@Becoming.LinearBlankets.precision_zero_of_autonomous : ∀ {n : Type u_1} [inst : Fintype n] [inst_1 : DecidableEq n]
+  (B Q P : Matrix n n ℝ) (d : n → ℝ),
+  (∀ (i : n), 0 < d i) →
+    Q.transpose = -Q →
+      B = (Matrix.diagonal d - Q) * P →
+        ∀ (auto : n → Prop) [DecidablePred auto],
+          (∀ (i k : n), auto i → ¬auto k → Q i k = 0) →
+            ∀ (j : n), (∀ (i : n), auto i → B i j = 0) → ∀ (i : n), auto i → P i j = 0
+@Becoming.LinearBlankets.unread_zero : ∀ {n : Type u_1} {Q Γ H : Matrix n n ℝ},
+  (∀ (i : n), 0 < Γ i i) →
+    (∀ (i : n), 0 < H i i) → ∀ {u v : n}, Becoming.LinearBlankets.TermwiseUnread Q Γ H u v → H u v = 0 ∧ Q u v = 0
+@Becoming.LinearBlankets.reverse_through_third : ∀ {n : Type u_1} [inst : Fintype n] [inst_1 : DecidableEq n]
+  {Q Γ H : Matrix n n ℝ},
+  Q.transpose = -Q →
+    (∀ (i k : n), i ≠ k → Γ i k = 0) →
+      H.transpose = H →
+        (∀ (i : n), 0 < Γ i i) →
+          (∀ (i : n), 0 < H i i) →
+            ∀ {u v : n},
+              u ≠ v →
+                Becoming.LinearBlankets.TermwiseUnread Q Γ H u v →
+                  ((Q - Γ) * H) v u = ∑ i with i ≠ u ∧ i ≠ v, Q v i * H i u
+@Becoming.LinearBlankets.reads_nothing_of_unread : ∀ {n : Type u_1} [inst : Fintype n] [DecidableEq n]
+  {Q Γ H : Matrix n n ℝ},
+  Q.transpose = -Q →
+    (∀ (i k : n), i ≠ k → Γ i k = 0) →
+      H.transpose = H →
+        (∀ (i : n), 0 < Γ i i) →
+          (∀ (i : n), 0 < H i i) →
+            ∀ {u : n},
+              (∀ (v : n), v ≠ u → Becoming.LinearBlankets.TermwiseUnread Q Γ H v u) →
+                ∀ {v : n}, v ≠ u → ((Q - Γ) * H) u v = 0
+Becoming.LinearBlankets.LagRelay.transpose_B : Becoming.LinearBlankets.LagRelay.B.transpose =
+  Becoming.LinearBlankets.LagRelay.BT
+Becoming.LinearBlankets.LagRelay.lyapunov : Becoming.LinearBlankets.LagRelay.B * Becoming.LinearBlankets.LagRelay.S +
+    Becoming.LinearBlankets.LagRelay.S * Becoming.LinearBlankets.LagRelay.B.transpose =
+  2 • 1
+Becoming.LinearBlankets.LagRelay.inverse : Becoming.LinearBlankets.LagRelay.S * Becoming.LinearBlankets.LagRelay.P = 1
+Becoming.LinearBlankets.LagRelay.helmholtz : Becoming.LinearBlankets.LagRelay.B =
+  (1 - Becoming.LinearBlankets.LagRelay.Q) * Becoming.LinearBlankets.LagRelay.P
+Becoming.LinearBlankets.LagRelay.sparse : Becoming.LinearBlankets.LagRelay.B 0 2 = 0 ∧
+  Becoming.LinearBlankets.LagRelay.B 2 0 = 0
+Becoming.LinearBlankets.LagRelay.precision_nonzero : Becoming.LinearBlankets.LagRelay.P 0 2 ≠ 0
+Becoming.LinearBlankets.LagRelay.circulates : Becoming.LinearBlankets.LagRelay.Q 0 1 ≠ 0
+Becoming.LinearBlankets.LagRelay.not_termwise : ¬Becoming.LinearBlankets.TermwiseUnread
+    Becoming.LinearBlankets.LagRelay.Q 1 Becoming.LinearBlankets.LagRelay.P 0 2
+Becoming.LinearBlankets.Circulating.helmholtz : Becoming.LinearBlankets.Circulating.B =
+  (1 - Becoming.LinearBlankets.Circulating.Q) * Becoming.LinearBlankets.Circulating.P
+Becoming.LinearBlankets.Circulating.antisymmetric : Becoming.LinearBlankets.Circulating.Q.transpose =
+  -Becoming.LinearBlankets.Circulating.Q
+Becoming.LinearBlankets.Circulating.circulates_and_precision_zero : Becoming.LinearBlankets.Circulating.B 0 2 = 0 ∧
+  Becoming.LinearBlankets.Circulating.B 2 0 = 0 ∧
+    Becoming.LinearBlankets.Circulating.Q 0 1 ≠ 0 ∧
+      Becoming.LinearBlankets.Circulating.Q 0 2 ≠ 0 ∧ Becoming.LinearBlankets.Circulating.P 0 2 = 0
+Becoming.LinearBlankets.Circulating.not_termwise : ¬Becoming.LinearBlankets.TermwiseUnread
+    Becoming.LinearBlankets.Circulating.Q 1 Becoming.LinearBlankets.Circulating.P 0 2
+Becoming.LinearBlankets.Unsparse.helmholtz : Becoming.LinearBlankets.Unsparse.B =
+  (1 - Becoming.LinearBlankets.Unsparse.Q) * Becoming.LinearBlankets.Unsparse.P
+Becoming.LinearBlankets.Unsparse.antisymmetric : Becoming.LinearBlankets.Unsparse.Q.transpose =
+  -Becoming.LinearBlankets.Unsparse.Q
+Becoming.LinearBlankets.Unsparse.precision_zero_and_read : Becoming.LinearBlankets.Unsparse.P 0 2 = 0 ∧
+  Becoming.LinearBlankets.Unsparse.B 0 2 ≠ 0
+@Becoming.LinearBlankets.mode_stationary : ∀ {m : Type u_1} {k : Type u_2} {l : Type u_3} [inst : Fintype m]
+  [inst_1 : Fintype k] [inst_2 : Fintype l] [inst_3 : DecidableEq m] (Pmm : Matrix m m ℝ) (Pmk : Matrix m k ℝ)
+  (Pml : Matrix m l ℝ),
+  IsUnit Pmm.det →
+    ∀ (b : k → ℝ) (η : l → ℝ),
+      Pmm.mulVec (Becoming.LinearBlankets.mode Pmm Pmk Pml b η) + Pmk.mulVec b + Pml.mulVec η = 0
+@Becoming.LinearBlankets.mode_unread_iff : ∀ {m : Type u_1} {k : Type u_2} {l : Type u_3} [inst : Fintype m]
+  [inst_1 : Fintype k] [inst_2 : Fintype l] [inst_3 : DecidableEq m] [DecidableEq l] (Pmm : Matrix m m ℝ)
+  (Pmk : Matrix m k ℝ) (Pml : Matrix m l ℝ),
+  IsUnit Pmm.det →
+    ((∀ (b : k → ℝ) (η η' : l → ℝ),
+        Becoming.LinearBlankets.mode Pmm Pmk Pml b η = Becoming.LinearBlankets.mode Pmm Pmk Pml b η') ↔
+      Pml = 0)
+@Becoming.LinearBlankets.euler_congr : ∀ {n : Type} [inst : Fintype n] (B : Matrix n n ℝ) (h : ℝ) {x y : n → ℝ} {i : n},
+  x i = y i →
+    (∀ (j : n), B i j ≠ 0 → x j = y j) → Becoming.LinearBlankets.euler B h x i = Becoming.LinearBlankets.euler B h y i
+@Becoming.LinearBlankets.glue_split_of_ne_external : ∀ {n : Type} {part : n → Becoming.LinearBlankets.Part} (x : n → ℝ)
+  {j : n},
+  part j ≠ Becoming.LinearBlankets.Part.external →
+    Becoming.LinearBlankets.glue (Becoming.LinearBlankets.split x).internal (Becoming.LinearBlankets.split x).sensory
+        (Becoming.LinearBlankets.split x).active 0 j =
+      x j
+@Becoming.LinearBlankets.glue_split_of_ne_internal : ∀ {n : Type} {part : n → Becoming.LinearBlankets.Part} (x : n → ℝ)
+  {j : n},
+  part j ≠ Becoming.LinearBlankets.Part.internal →
+    Becoming.LinearBlankets.glue 0 (Becoming.LinearBlankets.split x).sensory (Becoming.LinearBlankets.split x).active
+        (Becoming.LinearBlankets.split x).external j =
+      x j
+@Becoming.LinearBlankets.split_euler : ∀ {n : Type} [inst : Fintype n] {part : n → Becoming.LinearBlankets.Part}
+  {B : Matrix n n ℝ},
+  Becoming.LinearBlankets.SparseCoupling part B →
+    ∀ (h : ℝ) (x : n → ℝ),
+      Becoming.LinearBlankets.split (Becoming.LinearBlankets.euler B h x) =
+        (Becoming.LinearBlankets.eulerLaw part B h).step (Becoming.LinearBlankets.split x)
+@Becoming.LinearBlankets.split_euler_iterate : ∀ {n : Type} [inst : Fintype n] {part : n → Becoming.LinearBlankets.Part}
+  {B : Matrix n n ℝ},
+  Becoming.LinearBlankets.SparseCoupling part B →
+    ∀ (h : ℝ) (x : n → ℝ) (t : ℕ),
+      Becoming.LinearBlankets.split ((Becoming.LinearBlankets.euler B h)^[t] x) =
+        (Becoming.LinearBlankets.eulerLaw part B h).course (Becoming.LinearBlankets.split x) t
+@Becoming.LinearBlankets.euler_agent_through_sensory : ∀ {n : Type} [inst : Fintype n]
+  {part : n → Becoming.LinearBlankets.Part} {B : Matrix n n ℝ},
+  Becoming.LinearBlankets.SparseCoupling part B →
+    ∀ (h : ℝ) {x y : n → ℝ},
+      (∀ (j : n), part j = Becoming.LinearBlankets.Part.internal → x j = y j) →
+        (∀ (j : n), part j = Becoming.LinearBlankets.Part.active → x j = y j) →
+          ∀ (t : ℕ),
+            (∀ s < t,
+                ∀ (j : n),
+                  part j = Becoming.LinearBlankets.Part.sensory →
+                    (Becoming.LinearBlankets.euler B h)^[s] x j = (Becoming.LinearBlankets.euler B h)^[s] y j) →
+              ∀ (j : n),
+                part j = Becoming.LinearBlankets.Part.internal ∨ part j = Becoming.LinearBlankets.Part.active →
+                  (Becoming.LinearBlankets.euler B h)^[t] x j = (Becoming.LinearBlankets.euler B h)^[t] y j
+@Becoming.LinearBlankets.em_agent_through_sensory : ∀ {n : Type} [inst : Fintype n]
+  {part : n → Becoming.LinearBlankets.Part} {B : Matrix n n ℝ},
+  Becoming.LinearBlankets.SparseCoupling part B →
+    ∀ (h : ℝ) {ξ ξ' : ℕ → n → ℝ} {x y : n → ℝ},
+      (∀ (j : n),
+          part j = Becoming.LinearBlankets.Part.internal ∨ part j = Becoming.LinearBlankets.Part.active → x j = y j) →
+        ∀ (t : ℕ),
+          (∀ s < t,
+              ∀ (j : n),
+                part j = Becoming.LinearBlankets.Part.internal ∨ part j = Becoming.LinearBlankets.Part.active →
+                  ξ s j = ξ' s j) →
+            (∀ s < t,
+                ∀ (j : n),
+                  part j = Becoming.LinearBlankets.Part.sensory →
+                    Becoming.LinearBlankets.emRun B h ξ x s j = Becoming.LinearBlankets.emRun B h ξ' y s j) →
+              ∀ (j : n),
+                part j = Becoming.LinearBlankets.Part.internal ∨ part j = Becoming.LinearBlankets.Part.active →
+                  Becoming.LinearBlankets.emRun B h ξ x t j = Becoming.LinearBlankets.emRun B h ξ' y t j
+@Becoming.LinearBlankets.precision_zero_of_footnote13 : ∀ {n : Type} [inst : Fintype n]
+  {part : n → Becoming.LinearBlankets.Part} [inst_1 : DecidableEq n] {B Q P : Matrix n n ℝ} (d : n → ℝ),
+  (∀ (i : n), 0 < d i) →
+    Q.transpose = -Q →
+      B = (Matrix.diagonal d - Q) * P →
+        Becoming.LinearBlankets.SparseCoupling part B →
+          (∀ (i k : n),
+              part i = Becoming.LinearBlankets.Part.internal ∨ part i = Becoming.LinearBlankets.Part.active →
+                ¬(part k = Becoming.LinearBlankets.Part.internal ∨ part k = Becoming.LinearBlankets.Part.active) →
+                  Q i k = 0) →
+            ∀ {i j : n},
+              part i = Becoming.LinearBlankets.Part.internal ∨ part i = Becoming.LinearBlankets.Part.active →
+                part j = Becoming.LinearBlankets.Part.external → P i j = 0
+@Becoming.LinearBlankets.em_steady : ∀ {n : Type} [inst : Fintype n] [inst_1 : DecidableEq n] (P D S : Matrix n n ℝ)
+  (h : ℝ),
+  P.transpose = P →
+    D.transpose = D →
+      (P - (h / 2) • (P * D * P)) * S = 1 →
+        S * (P - (h / 2) • (P * D * P)) = 1 → S = (1 - h • (D * P)) * S * (1 - h • (D * P)).transpose + (2 * h) • D
+@Becoming.LinearBlankets.precision_zero_of_drift : ∀ {n : Type} [inst : Fintype n] [inst_1 : DecidableEq n]
+  {P : Matrix n n ℝ} {d : n → ℝ}, (∀ (i : n), 0 < d i) → ∀ {a b : n}, (Matrix.diagonal d * P) a b = 0 → P a b = 0
+@Becoming.LinearBlankets.em_keeps_four_part : ∀ {n : Type} [inst : Fintype n] {part : n → Becoming.LinearBlankets.Part}
+  [inst_1 : DecidableEq n] {P : Matrix n n ℝ} {d : n → ℝ},
+  (∀ (i : n), 0 < d i) →
+    P.transpose = P →
+      Becoming.LinearBlankets.SparseCoupling part (Matrix.diagonal d * P) →
+        ∀ (h : ℝ) {i j : n},
+          part i = Becoming.LinearBlankets.Part.internal →
+            part j = Becoming.LinearBlankets.Part.external → (P - (h / 2) • (P * Matrix.diagonal d * P)) i j = 0
+@Becoming.LinearBlankets.em_active_external : ∀ {n : Type} [inst : Fintype n] {part : n → Becoming.LinearBlankets.Part}
+  [inst_1 : DecidableEq n] {P : Matrix n n ℝ} {d : n → ℝ},
+  (∀ (i : n), 0 < d i) →
+    Becoming.LinearBlankets.SparseCoupling part (Matrix.diagonal d * P) →
+      ∀ (h : ℝ) {a j : n},
+        part a = Becoming.LinearBlankets.Part.active →
+          part j = Becoming.LinearBlankets.Part.external →
+            (P - (h / 2) • (P * Matrix.diagonal d * P)) a j =
+              -(h / 2) * ∑ k with part k = Becoming.LinearBlankets.Part.sensory, P a k * d k * P k j
+Becoming.LinearBlankets.Autonomous.helmholtz : Becoming.LinearBlankets.Autonomous.B =
+  ((Matrix.diagonal fun x => 1) - Becoming.LinearBlankets.Autonomous.Q) * Becoming.LinearBlankets.Autonomous.P
+Becoming.LinearBlankets.Autonomous.antisymmetric : Becoming.LinearBlankets.Autonomous.Q.transpose =
+  -Becoming.LinearBlankets.Autonomous.Q
+Becoming.LinearBlankets.Autonomous.sparse : Becoming.LinearBlankets.SparseCoupling
+  Becoming.LinearBlankets.Autonomous.part Becoming.LinearBlankets.Autonomous.B
+Becoming.LinearBlankets.Autonomous.autonomous : ∀ (i k : Fin 4),
+  Becoming.LinearBlankets.Autonomous.part i = Becoming.LinearBlankets.Part.internal ∨
+      Becoming.LinearBlankets.Autonomous.part i = Becoming.LinearBlankets.Part.active →
+    ¬(Becoming.LinearBlankets.Autonomous.part k = Becoming.LinearBlankets.Part.internal ∨
+          Becoming.LinearBlankets.Autonomous.part k = Becoming.LinearBlankets.Part.active) →
+      Becoming.LinearBlankets.Autonomous.Q i k = 0
+Becoming.LinearBlankets.Autonomous.precision_zero : Becoming.LinearBlankets.Autonomous.P 3 0 = 0 ∧
+  Becoming.LinearBlankets.Autonomous.P 2 0 = 0
+Becoming.LinearBlankets.Autonomous.circulates : Becoming.LinearBlankets.Autonomous.Q 3 2 ≠ 0 ∧
+  Becoming.LinearBlankets.Autonomous.B 3 1 ≠ 0 ∧ Becoming.LinearBlankets.Autonomous.P 3 1 = 0
+Becoming.LinearBlankets.Autonomous.termwise : Becoming.LinearBlankets.TermwiseUnread
+    Becoming.LinearBlankets.Autonomous.Q 1 Becoming.LinearBlankets.Autonomous.P 3 0 ∧
+  Becoming.LinearBlankets.TermwiseUnread Becoming.LinearBlankets.Autonomous.Q 1 Becoming.LinearBlankets.Autonomous.P 2
+      0 ∧
+    Becoming.LinearBlankets.TermwiseUnread Becoming.LinearBlankets.Autonomous.Q 1 Becoming.LinearBlankets.Autonomous.P 1
+        3 ∧
+      Becoming.LinearBlankets.TermwiseUnread Becoming.LinearBlankets.Autonomous.Q 1 Becoming.LinearBlankets.Autonomous.P
+        0 3
+Becoming.LinearBlankets.Autonomous.em_coupling_form : ∀ (h : ℝ) {ξ ξ' : ℕ → Fin 4 → ℝ} {x y : Fin 4 → ℝ},
+  (∀ (j : Fin 4),
+      Becoming.LinearBlankets.Autonomous.part j = Becoming.LinearBlankets.Part.internal ∨
+          Becoming.LinearBlankets.Autonomous.part j = Becoming.LinearBlankets.Part.active →
+        x j = y j) →
+    ∀ (t : ℕ),
+      (∀ s < t,
+          ∀ (j : Fin 4),
+            Becoming.LinearBlankets.Autonomous.part j = Becoming.LinearBlankets.Part.internal ∨
+                Becoming.LinearBlankets.Autonomous.part j = Becoming.LinearBlankets.Part.active →
+              ξ s j = ξ' s j) →
+        (∀ s < t,
+            ∀ (j : Fin 4),
+              Becoming.LinearBlankets.Autonomous.part j = Becoming.LinearBlankets.Part.sensory →
+                Becoming.LinearBlankets.emRun Becoming.LinearBlankets.Autonomous.B h ξ x s j =
+                  Becoming.LinearBlankets.emRun Becoming.LinearBlankets.Autonomous.B h ξ' y s j) →
+          ∀ (j : Fin 4),
+            Becoming.LinearBlankets.Autonomous.part j = Becoming.LinearBlankets.Part.internal ∨
+                Becoming.LinearBlankets.Autonomous.part j = Becoming.LinearBlankets.Part.active →
+              Becoming.LinearBlankets.emRun Becoming.LinearBlankets.Autonomous.B h ξ x t j =
+                Becoming.LinearBlankets.emRun Becoming.LinearBlankets.Autonomous.B h ξ' y t j
+Becoming.LinearBlankets.Autonomous.emS_steady : Becoming.LinearBlankets.Autonomous.emS =
+  Becoming.LinearBlankets.Autonomous.emA * Becoming.LinearBlankets.Autonomous.emS *
+      Becoming.LinearBlankets.Autonomous.emA.transpose +
+    (2 * (1 / 10)) • 1
+Becoming.LinearBlankets.Autonomous.emS_inverse : Becoming.LinearBlankets.Autonomous.emS *
+    Becoming.LinearBlankets.Autonomous.emM =
+  1
+Becoming.LinearBlankets.Autonomous.em_loses_internal_external : Becoming.LinearBlankets.Autonomous.emM 3 0 =
+    -27800 / 984581 ∧
+  Becoming.LinearBlankets.Autonomous.P 3 0 = 0
+Becoming.LinearBlankets.Autonomous.still_sparse : Becoming.LinearBlankets.SparseCoupling
+  Becoming.LinearBlankets.Autonomous.part ((Matrix.diagonal fun x => 1) * Becoming.LinearBlankets.Autonomous.P)
+Becoming.LinearBlankets.Autonomous.em_keeps : ∀ (h : ℝ),
+  (Becoming.LinearBlankets.Autonomous.P -
+        (h / 2) •
+          ((Becoming.LinearBlankets.Autonomous.P * Matrix.diagonal fun x => 1) * Becoming.LinearBlankets.Autonomous.P))
+      3 0 =
+    0
+Becoming.LinearBlankets.Autonomous.em_loses_active_external : ∀ (h : ℝ),
+  (Becoming.LinearBlankets.Autonomous.P -
+          (h / 2) •
+            ((Becoming.LinearBlankets.Autonomous.P * Matrix.diagonal fun x => 1) *
+              Becoming.LinearBlankets.Autonomous.P))
+        2 0 =
+      -(h / 2) ∧
+    Becoming.LinearBlankets.Autonomous.P 2 0 = 0
+Becoming.LinearBlankets.ThreePart.symm : Becoming.LinearBlankets.ThreePart.P.transpose =
+  Becoming.LinearBlankets.ThreePart.P
+Becoming.LinearBlankets.ThreePart.inverse : (Becoming.LinearBlankets.ThreePart.P -
+      (1 / 10 / 2) • (Becoming.LinearBlankets.ThreePart.P * Becoming.LinearBlankets.ThreePart.P)) *
+    Becoming.LinearBlankets.ThreePart.S =
+  1
+Becoming.LinearBlankets.ThreePart.inverse' : Becoming.LinearBlankets.ThreePart.S *
+    (Becoming.LinearBlankets.ThreePart.P -
+      (1 / 10 / 2) • (Becoming.LinearBlankets.ThreePart.P * Becoming.LinearBlankets.ThreePart.P)) =
+  1
+Becoming.LinearBlankets.ThreePart.steady : Becoming.LinearBlankets.ThreePart.S =
+  (1 - (1 / 10) • Becoming.LinearBlankets.ThreePart.P) * Becoming.LinearBlankets.ThreePart.S *
+      (1 - (1 / 10) • Becoming.LinearBlankets.ThreePart.P).transpose +
+    (2 * (1 / 10)) • 1
+Becoming.LinearBlankets.ThreePart.no_four_part : ∀ (part : Fin 3 → Becoming.LinearBlankets.Part),
+  part 0 = Becoming.LinearBlankets.Part.internal →
+    part 2 = Becoming.LinearBlankets.Part.external →
+      ¬Becoming.LinearBlankets.SparseCoupling part Becoming.LinearBlankets.ThreePart.P
+Becoming.LinearBlankets.ThreePart.em_loses_zero : ∀ (h : ℝ),
+  (Becoming.LinearBlankets.ThreePart.P -
+          (h / 2) • (Becoming.LinearBlankets.ThreePart.P * Becoming.LinearBlankets.ThreePart.P))
+        0 2 =
+      -(h / 2) ∧
+    Becoming.LinearBlankets.ThreePart.P 0 2 = 0

@@ -1,0 +1,54 @@
+@Becoming.Web.Includes.after : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.Includes l l' → ∀ (S : Nat), (W.after S).Includes (Becoming.Web.tailFrom S l) (Becoming.Web.tailFrom S l')
+@Becoming.Web.EventuallyWidens.irrefl : ∀ {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat},
+  ¬W.EventuallyWidens l l
+@Becoming.Web.EventuallyWidens.trans : ∀ {F C : Type} {W : Becoming.Web F C} {l l' l'' : Nat → C → Nat},
+  W.EventuallyWidens l l' → W.EventuallyWidens l' l'' → W.EventuallyWidens l l''
+@Becoming.Web.EventuallyWidens.not_reverse : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.EventuallyWidens l l' → ¬W.EventuallyWidens l' l
+@Becoming.Web.eventuallyWidens_iff : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.EventuallyWidens l l' ↔ (∃ T, W.IncludesFrom T l l') ∧ W.ExceedsLate l l'
+@Becoming.Web.ExceedsLate.exceeds : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.ExceedsLate l l' → W.Exceeds l l'
+@Becoming.Web.Includes.not_exceedsLate : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.Includes l' l → ¬W.ExceedsLate l l'
+@Becoming.Web.EventuallyWidens.not_included : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.EventuallyWidens l l' → ¬W.Includes l' l
+@Becoming.Web.Widens.not_eventually_reversed : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.Widens l l' → ¬W.EventuallyWidens l' l
+@Becoming.Web.Includes.trans_eventually : ∀ {F C : Type} {W : Becoming.Web F C} {l l' l'' : Nat → C → Nat},
+  W.Includes l l' → W.EventuallyWidens l' l'' → W.EventuallyWidens l l''
+@Becoming.Web.EventuallyWidens.trans_includes : ∀ {F C : Type} {W : Becoming.Web F C} {l l' l'' : Nat → C → Nat},
+  W.EventuallyWidens l l' → W.Includes l' l'' → W.EventuallyWidens l l''
+@Becoming.Web.WidensOrEventually.irrefl : ∀ {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat},
+  ¬W.WidensOrEventually l l
+@Becoming.Web.WidensOrEventually.trans : ∀ {F C : Type} {W : Becoming.Web F C} {l l' l'' : Nat → C → Nat},
+  W.WidensOrEventually l l' → W.WidensOrEventually l' l'' → W.WidensOrEventually l l''
+@Becoming.Web.WidensWithoutEnd.widens : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.WidensWithoutEnd l l' → W.Widens l l'
+@Becoming.Web.WidensWithoutEnd.eventually : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.WidensWithoutEnd l l' → W.EventuallyWidens l l'
+@Becoming.Web.EventuallyWidens.of_agree_left : ∀ {F C : Type} {W : Becoming.Web F C} {l' l₁ l₂ : Nat → C → Nat}
+  {T : Nat}, (∀ (t : Nat), T ≤ t → l₁ t = l₂ t) → W.EventuallyWidens l₁ l' → W.EventuallyWidens l₂ l'
+@Becoming.Web.EventuallyWidens.of_agree_right : ∀ {F C : Type} {W : Becoming.Web F C} {l l₁ l₂ : Nat → C → Nat}
+  {T : Nat}, (∀ (t : Nat), T ≤ t → l₁ t = l₂ t) → W.EventuallyWidens l l₁ → W.EventuallyWidens l l₂
+@Becoming.Web.eventually_of_vanishing : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat} {T : Nat},
+  (∀ (t : Nat) (f : F), T ≤ t → ¬W.Admits (l' t) t f) →
+    (∀ (S : Nat), ∃ t f, S ≤ t ∧ W.Admits (l t) t f) → W.EventuallyWidens l l'
+@Becoming.Web.KeepsWidening.later : ∀ {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat} {R : Nat → F → F → Prop}
+  {T T' : Nat}, T ≤ T' → W.KeepsWidening R l T → W.KeepsWidening R l T'
+@Becoming.Web.keepsWidening_reidentify : ∀ {F F' C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat}
+  {R : Nat → F → F → Prop} (σ : Becoming.Reidentify F F') {T : Nat},
+  (W.reidentify σ).KeepsWidening (σ.carry R) l T ↔ W.KeepsWidening R l T
+@Becoming.Web.KeepsWidening.gathers : ∀ {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat} {T : Nat},
+  W.KeepsWidening Becoming.Web.itself l T →
+    ∀ (n : Nat), ∃ xs S, T ≤ S ∧ xs.length = n ∧ Becoming.Distinct xs ∧ ∀ (f : F), f ∈ xs → W.Admits (l S) S f
+@Becoming.Web.KeepsWidening.not_listed : ∀ {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat} {fs : List F},
+  (∀ (f : F), f ∈ fs) → ∀ {T : Nat}, ¬W.KeepsWidening Becoming.Web.itself l T
+@Becoming.Web.KeepsOpening.eventually_widens : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}
+  {T T₁ T₂ : Nat},
+  W.KeepsOpening Becoming.Web.itself l T → W.IncludesFrom T₁ l l' → W.AdmitsAlikeFrom l' T₂ → W.EventuallyWidens l l'
+@Becoming.Web.KeepsWidening.eventually_widens_of_within : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}
+  {T T₂ S : Nat},
+  W.KeepsWidening Becoming.Web.itself l T →
+    W.AdmitsAlikeFrom l' T₂ → T ≤ S → (∀ (f : F), W.Admits (l' T₂) T₂ f → W.Admits (l S) S f) → W.EventuallyWidens l l'

@@ -1,0 +1,258 @@
+@Becoming.Requirement.Frontier.excluded : ∀ {H : Type} {eligible : H → Prop} {better : H → H → Prop} {a b : H},
+  eligible b → better b a → ¬Becoming.Requirement.Frontier eligible better a
+@Becoming.Requirement.frontier_iff_undominated : ∀ {H : Type} {eligible : H → Prop} {better : H → H → Prop}
+  {menu : List H},
+  (∀ (a : H), eligible a ↔ a ∈ menu) →
+    ∀ {a : H}, Becoming.Requirement.Frontier eligible better a ↔ Becoming.Undominated menu better a
+@Becoming.Requirement.frontier_exists : ∀ {H : Type} {eligible : H → Prop} {better : H → H → Prop} (x : H)
+  (rest : List H),
+  (∀ (a : H), eligible a ↔ a ∈ x :: rest) →
+    (∀ (a b : H), eligible a → eligible b → Becoming.WeaklyDecided (better a b)) →
+      (∀ (a : H), ¬better a a) →
+        (∀ {a b c : H}, better a b → better b c → better a c) → ∃ a, Becoming.Requirement.Frontier eligible better a
+@Becoming.Requirement.Required.performed : ∀ {H : Type} {admissible task : H → Prop},
+  Becoming.Requirement.Required admissible task → ∀ {a : H}, admissible a → task a
+@Becoming.Requirement.Required.defeated : ∀ {H : Type} {admissible task : H → Prop} {a : H},
+  admissible a → ¬task a → ¬Becoming.Requirement.Required admissible task
+@Becoming.Requirement.Required.impossible : ∀ {H : Type} {admissible task : H → Prop},
+  (∀ (a : H), ¬admissible a) → ¬Becoming.Requirement.Required admissible task
+@Becoming.Requirement.Required.means : ∀ {H : Type} {admissible task means : H → Prop},
+  Becoming.Requirement.Required admissible task →
+    (∀ (a : H), admissible a → task a → means a) → Becoming.Requirement.Required admissible means
+@Becoming.Requirement.Required.redescribed : ∀ {H : Type} {admissible task : H → Prop} {K : Type}
+  {admissible' task' : K → Prop} (f : H → K),
+  (∀ (a : H), admissible a → admissible' (f a)) →
+    (∀ (b : K), admissible' b → ∃ a, admissible a ∧ f a = b) →
+      (∀ (a : H), task a ↔ task' (f a)) →
+        Becoming.Requirement.Required admissible task → Becoming.Requirement.Required admissible' task'
+@Becoming.Requirement.required_of_bettered : ∀ {H : Type} {eligible : H → Prop} {better : H → H → Prop}
+  {task : H → Prop} (x : H) (rest : List H),
+  (∀ (a : H), eligible a ↔ a ∈ x :: rest) →
+    (∀ (a b : H), eligible a → eligible b → Becoming.WeaklyDecided (better a b)) →
+      (∀ (a : H), ¬better a a) →
+        (∀ {a b c : H}, better a b → better b c → better a c) →
+          (∀ (a : H), eligible a → Becoming.Decided (task a)) →
+            (∀ (a : H), eligible a → ¬task a → ∃ b, eligible b ∧ better b a) →
+              Becoming.Requirement.Required (Becoming.Requirement.Frontier eligible better) task
+@Becoming.Lexical.BasicPriority.frontier_iff : ∀ {H : Type} {eligible : H → Prop} {better : H → H → Prop} {C G : Type}
+  {basic : H → C → Prop} {gain : H → G → Prop},
+  Becoming.Lexical.BasicPriority basic gain better →
+    ∀ {a : H},
+      Becoming.Requirement.Frontier eligible better a ↔
+        Becoming.Requirement.Frontier eligible (Becoming.Lexical.Above basic gain) a
+@Becoming.Lexical.BasicPriority.required_iff : ∀ {H : Type} {eligible : H → Prop} {better : H → H → Prop}
+  {task : H → Prop} {C G : Type} {basic : H → C → Prop} {gain : H → G → Prop},
+  Becoming.Lexical.BasicPriority basic gain better →
+    (Becoming.Requirement.Required (Becoming.Requirement.Frontier eligible better) task ↔
+      Becoming.Requirement.Required (Becoming.Requirement.Frontier eligible (Becoming.Lexical.Above basic gain)) task)
+@Becoming.Requirement.Assigned.unique_required : ∀ {P A T : Type} {admissible : P → Prop}
+  {allocation : P → T → A → Prop} {a : A} {t : T},
+  (∃ p, admissible p) →
+    (∀ (p : P), admissible p → ∃ b, allocation p t b) →
+      (∀ (p : P) (b : A), admissible p → allocation p t b → b = a) →
+        Becoming.Requirement.Required admissible fun p => Becoming.Requirement.Assigned allocation p a t
+@Becoming.Requirement.Assigned.capable : ∀ {P A T : Type} {admissible : P → Prop} {allocation : P → T → A → Prop}
+  {capable : P → A → T → Prop},
+  (∀ (p : P) (a : A) (t : T), admissible p → allocation p t a → capable p a t) →
+    ∀ {p : P} {a : A} {t : T}, admissible p → Becoming.Requirement.Assigned allocation p a t → capable p a t
+@Becoming.Requirement.Served.successor : ∀ {demand old next : Nat → Prop},
+  Becoming.Requirement.Served demand old next → ∀ {t : Nat}, demand t → ¬old t → next t
+@Becoming.Requirement.served_of_handover : ∀ {demand old next : Nat → Prop} (handover : Nat),
+  (∀ (t : Nat), t < handover → demand t → old t) →
+    (∀ (t : Nat), handover ≤ t → demand t → next t) → Becoming.Requirement.Served demand old next
+@Becoming.Requirement.Served.not_of_gap : ∀ {demand old next : Nat → Prop} {t : Nat},
+  demand t → ¬old t → ¬next t → ¬Becoming.Requirement.Served demand old next
+@Becoming.Requirement.Settled.no_residual : ∀ {T : Type} {due done released : T → Prop},
+  Becoming.Requirement.Settled due done released → ∀ (t : T), ¬Becoming.Requirement.Residual due done released t
+@Becoming.Requirement.residual_of_unfulfilled : ∀ {T : Type} {due done released : T → Prop} {t : T},
+  due t → ¬done t → ¬released t → Becoming.Requirement.Residual due done released t
+Becoming.Requirement.separate_not_joint : (1 ≤ 1 ∧ 1 ≤ 1) ∧ ¬1 + 1 ≤ 1
+Becoming.Requirement.decided_of_decidable : ∀ (p : Prop) [inst : Decidable p], Becoming.Decided p
+@Becoming.Requirement.decided_included_bool : ∀ {a b : Bool → Prop},
+  (∀ (i : Bool), Becoming.Decided (a i)) →
+    (∀ (i : Bool), Becoming.Decided (b i)) → Becoming.Decided (Becoming.Lexical.Included a b)
+@Becoming.Requirement.decided_included_unit : ∀ {a b : Unit → Prop},
+  Becoming.Decided (a ()) → Becoming.Decided (b ()) → Becoming.Decided (Becoming.Lexical.Included a b)
+@Becoming.Requirement.decided_included_sum_of : ∀ {I J : Type} {a b : I ⊕ J → Prop},
+  Becoming.Decided (Becoming.Lexical.Included (fun i => a (Sum.inl i)) fun i => b (Sum.inl i)) →
+    Becoming.Decided (Becoming.Lexical.Included (fun j => a (Sum.inr j)) fun j => b (Sum.inr j)) →
+      Becoming.Decided (Becoming.Lexical.Included a b)
+@Becoming.Requirement.decided_included_sum : ∀ {a b : Unit ⊕ Bool → Prop},
+  (∀ (i : Unit ⊕ Bool), Becoming.Decided (a i)) →
+    (∀ (i : Unit ⊕ Bool), Becoming.Decided (b i)) → Becoming.Decided (Becoming.Lexical.Included a b)
+Becoming.Requirement.Formation.decided_linked : ∀ (f : Becoming.Requirement.Formation.Form),
+  Becoming.Decided (Becoming.Requirement.Formation.linked f)
+Becoming.Requirement.Formation.decided_basis : ∀ (f : Becoming.Requirement.Formation.Form),
+  Becoming.Decided (Becoming.Requirement.Formation.basis f)
+Becoming.Requirement.Formation.decided_protect : ∀ (f : Becoming.Requirement.Formation.Form) (c : Bool),
+  Becoming.Decided (Becoming.Requirement.Formation.protect f c)
+Becoming.Requirement.Formation.decided_free : ∀ (f : Becoming.Requirement.Formation.Form),
+  Becoming.Decided (Becoming.Requirement.Formation.freeOccasion f ())
+Becoming.Requirement.Formation.decided_above : ∀ (a b : Becoming.Requirement.Formation.Form),
+  Becoming.Decided
+    (Becoming.Lexical.Above Becoming.Requirement.Formation.protect Becoming.Requirement.Formation.freeOccasion a b)
+Becoming.Requirement.Formation.basis_left : Becoming.Requirement.Formation.basis
+  Becoming.Requirement.Formation.Form.left
+Becoming.Requirement.Formation.basis_right : Becoming.Requirement.Formation.basis
+  Becoming.Requirement.Formation.Form.right
+Becoming.Requirement.Formation.not_basis_overbuild : ¬Becoming.Requirement.Formation.basis
+    Becoming.Requirement.Formation.Form.overbuild
+Becoming.Requirement.Formation.left_retains_basis : Becoming.Requirement.Formation.remaining
+      Becoming.Requirement.Formation.Form.left =
+    4 ∧
+  Becoming.Requirement.Formation.basis Becoming.Requirement.Formation.Form.left ∧
+    Becoming.Requirement.Formation.renewed Becoming.Requirement.Formation.Form.left
+Becoming.Requirement.Formation.formation_loses_occasion : Becoming.Requirement.Formation.freeOccasion
+    Becoming.Requirement.Formation.Form.idle () ∧
+  ¬Becoming.Requirement.Formation.freeOccasion Becoming.Requirement.Formation.Form.left ()
+Becoming.Requirement.Formation.left_above_idle : Becoming.Lexical.Above Becoming.Requirement.Formation.protect
+  Becoming.Requirement.Formation.freeOccasion Becoming.Requirement.Formation.Form.left
+  Becoming.Requirement.Formation.Form.idle
+Becoming.Requirement.Formation.left_above_overbuild : Becoming.Lexical.Above Becoming.Requirement.Formation.protect
+  Becoming.Requirement.Formation.freeOccasion Becoming.Requirement.Formation.Form.left
+  Becoming.Requirement.Formation.Form.overbuild
+Becoming.Requirement.Formation.eligible_all : ∀ (f : Becoming.Requirement.Formation.Form),
+  Becoming.Requirement.Formation.eligible f
+Becoming.Requirement.Formation.exact_menu : ∀ (a : Becoming.Requirement.Formation.Form),
+  Becoming.Requirement.Formation.eligible a ↔ a ∈ Becoming.Requirement.Formation.menu
+Becoming.Requirement.Formation.bettered_unformed : ∀ (a : Becoming.Requirement.Formation.Form),
+  Becoming.Requirement.Formation.eligible a →
+    ¬Becoming.Requirement.Formation.formed a →
+      ∃ b,
+        Becoming.Requirement.Formation.eligible b ∧
+          Becoming.Lexical.Above Becoming.Requirement.Formation.protect Becoming.Requirement.Formation.freeOccasion b a
+Becoming.Requirement.Formation.decided_formed : ∀ (f : Becoming.Requirement.Formation.Form),
+  Becoming.Decided (Becoming.Requirement.Formation.formed f)
+Becoming.Requirement.Formation.required : Becoming.Requirement.Required
+  (Becoming.Requirement.Frontier Becoming.Requirement.Formation.eligible
+    (Becoming.Lexical.Above Becoming.Requirement.Formation.protect Becoming.Requirement.Formation.freeOccasion))
+  Becoming.Requirement.Formation.formed
+@Becoming.Requirement.Formation.unbeaten_of : ∀ {a : Becoming.Requirement.Formation.Form},
+  (∀ (c : Bool), Becoming.Requirement.Formation.protect a c) →
+    ∀ (b : Becoming.Requirement.Formation.Form),
+      ¬Becoming.Lexical.Above Becoming.Requirement.Formation.protect Becoming.Requirement.Formation.freeOccasion b a
+Becoming.Requirement.Formation.working_unbeaten : ∀ (a : Becoming.Requirement.Formation.Form),
+  a = Becoming.Requirement.Formation.Form.left ∨ a = Becoming.Requirement.Formation.Form.right →
+    ∀ (b : Becoming.Requirement.Formation.Form),
+      ¬Becoming.Lexical.Above Becoming.Requirement.Formation.protect Becoming.Requirement.Formation.freeOccasion b a
+Becoming.Requirement.Formation.frontier_iff : ∀ (a : Becoming.Requirement.Formation.Form),
+  Becoming.Requirement.Frontier Becoming.Requirement.Formation.eligible
+      (Becoming.Lexical.Above Becoming.Requirement.Formation.protect Becoming.Requirement.Formation.freeOccasion) a ↔
+    a = Becoming.Requirement.Formation.Form.left ∨ a = Becoming.Requirement.Formation.Form.right
+Becoming.Requirement.Formation.no_route_required : ¬Becoming.Requirement.Required
+      (Becoming.Requirement.Frontier Becoming.Requirement.Formation.eligible
+        (Becoming.Lexical.Above Becoming.Requirement.Formation.protect Becoming.Requirement.Formation.freeOccasion))
+      Becoming.Requirement.Formation.usesLeft ∧
+  ¬Becoming.Requirement.Required
+      (Becoming.Requirement.Frontier Becoming.Requirement.Formation.eligible
+        (Becoming.Lexical.Above Becoming.Requirement.Formation.protect Becoming.Requirement.Formation.freeOccasion))
+      Becoming.Requirement.Formation.usesRight
+Becoming.Requirement.Formation.overbuilding : Becoming.Requirement.Formation.drawn
+      Becoming.Requirement.Formation.Form.left <
+    Becoming.Requirement.Formation.drawn Becoming.Requirement.Formation.Form.overbuild ∧
+  Becoming.Requirement.Formation.linked Becoming.Requirement.Formation.Form.overbuild ∧
+    ¬Becoming.Requirement.Formation.basis Becoming.Requirement.Formation.Form.overbuild ∧
+      ¬Becoming.Requirement.Frontier Becoming.Requirement.Formation.eligible
+          (Becoming.Lexical.Above Becoming.Requirement.Formation.protect Becoming.Requirement.Formation.freeOccasion)
+          Becoming.Requirement.Formation.Form.overbuild
+Becoming.Requirement.Formation.same_report_different_basis : Becoming.Requirement.Formation.report
+      Becoming.Requirement.Formation.Form.left =
+    Becoming.Requirement.Formation.report Becoming.Requirement.Formation.Form.overbuild ∧
+  Becoming.Requirement.Formation.basis Becoming.Requirement.Formation.Form.left ∧
+    ¬Becoming.Requirement.Formation.basis Becoming.Requirement.Formation.Form.overbuild
+Becoming.Requirement.Formation.no_report_judge : ¬∃ judge,
+    ∀ (f : Becoming.Requirement.Formation.Form),
+      judge (Becoming.Requirement.Formation.report f) ↔ Becoming.Requirement.Formation.basis f
+Becoming.Requirement.Formation.amount_recovers_basis : ∀ (f : Becoming.Requirement.Formation.Form),
+  Becoming.Requirement.Formation.amountJudge (Becoming.Requirement.Formation.remaining f) ↔
+    Becoming.Requirement.Formation.basis f
+@Becoming.Requirement.Formation.eq_zero_of_sub_eq : ∀ {a x : Nat}, x ≤ a → a - x = a → x = 0
+@Becoming.Requirement.Formation.sub_lt_sub_of_lt : ∀ {a x y : Nat}, x < y → y ≤ a → a - y < a - x
+Becoming.Requirement.Handover.keep_above_expansion : Becoming.Lexical.Above Becoming.Requirement.Handover.protection
+  Becoming.Requirement.Handover.realization 1 0
+Becoming.Requirement.Handover.expansion_has_real_gain : Becoming.Requirement.Handover.realization 0 false ∧
+  ¬Becoming.Requirement.Handover.realization 1 false
+Becoming.Requirement.Handover.transfer_above_keep : Becoming.Lexical.Above Becoming.Requirement.Handover.protection
+  Becoming.Requirement.Handover.realization 2 1
+Becoming.Requirement.Handover.transfer_above_expansion : Becoming.Lexical.Above Becoming.Requirement.Handover.protection
+  Becoming.Requirement.Handover.realization 2 0
+Becoming.Requirement.Handover.expansion_excluded : ¬Becoming.Requirement.Frontier Becoming.Requirement.Handover.eligible
+    (Becoming.Lexical.Above Becoming.Requirement.Handover.protection Becoming.Requirement.Handover.realization) 0
+Becoming.Requirement.Handover.served : Becoming.Requirement.Served Becoming.Requirement.Handover.demand
+    Becoming.Requirement.Handover.oldService Becoming.Requirement.Handover.successorService ∧
+  ¬Becoming.Requirement.Handover.oldService 2
+Becoming.Requirement.Handover.undelivered_fails : ¬Becoming.Requirement.Served Becoming.Requirement.Handover.demand
+    Becoming.Requirement.Handover.oldService fun x => False
+Becoming.Requirement.Collective.required : (Becoming.Requirement.Required (fun x => True) fun p =>
+    p = true ∨ p = false) ∧
+  (¬Becoming.Requirement.Required (fun x => True) fun p => p = true) ∧
+    ¬Becoming.Requirement.Required (fun x => True) fun p => p = false
+Becoming.Requirement.Collective.no_common_plan : (∀ (w : Bool), ∃ a, a = w) ∧ ¬∃ a, ∀ (w : Bool), a = w
+@Becoming.Requirement.required_under_every_classification : ∀ {H C G N : Type} {p : H → C → Prop} {g : H → G → Prop}
+  {f : H → N → Prop} {eligible formed : H → Prop} (x : H) (rest : List H),
+  (∀ (a : H), eligible a ↔ a ∈ x :: rest) →
+    (∀ (q : N → Prop) (a b : H),
+        eligible a → eligible b → Becoming.WeaklyDecided (Becoming.Lexical.classified p g f q a b)) →
+      (∀ (a : H), eligible a → Becoming.Decided (formed a)) →
+        (∀ (a : H) (n : N), eligible a → Becoming.Decided (f a n)) →
+          (∀ (q : N → Prop) (a b : H), eligible a → eligible b → Becoming.Decided (∀ (n : N), f a n → q n → f b n)) →
+            (∀ (a : H),
+                eligible a →
+                  ¬formed a →
+                    ∃ b,
+                      eligible b ∧
+                        Becoming.Lexical.Included (f a) (f b) ∧
+                          Becoming.Lexical.Above p (Becoming.Lexical.adjoin g f) b a) →
+              ∀ (q : N → Prop),
+                Becoming.Requirement.Required
+                  (Becoming.Requirement.Frontier eligible (Becoming.Lexical.classified p g f q)) formed
+Becoming.Requirement.Routes.left_above_absent : ∀ (q : Bool → Prop),
+  (∀ (n : Bool), Becoming.Decided (q n)) →
+    Becoming.Lexical.classified Becoming.Requirement.Routes.basic Becoming.Requirement.Routes.gain
+      Becoming.Requirement.Routes.fresh q Becoming.Requirement.Routes.Route.left
+      Becoming.Requirement.Routes.Route.absent
+Becoming.Requirement.Routes.formed_of_frontier : ∀ (q : Bool → Prop),
+  (∀ (n : Bool), Becoming.Decided (q n)) →
+    ∀ (r : Becoming.Requirement.Routes.Route),
+      Becoming.Requirement.Frontier (fun x => True)
+          (Becoming.Lexical.classified Becoming.Requirement.Routes.basic Becoming.Requirement.Routes.gain
+            Becoming.Requirement.Routes.fresh q)
+          r →
+        Becoming.Requirement.Routes.formed r
+Becoming.Requirement.Routes.decided_fresh : ∀ (r : Becoming.Requirement.Routes.Route) (n : Bool),
+  Becoming.Decided (Becoming.Requirement.Routes.fresh r n)
+Becoming.Requirement.Routes.decided_basic : ∀ (q : Bool → Prop),
+  (∀ (n : Bool), Becoming.Decided (q n)) →
+    ∀ (r : Becoming.Requirement.Routes.Route) (i : Unit ⊕ Bool),
+      Becoming.Decided
+        (Becoming.Lexical.classifiedBasic Becoming.Requirement.Routes.basic Becoming.Requirement.Routes.fresh q r i)
+Becoming.Requirement.Routes.decided_gain : ∀ (q : Bool → Prop),
+  (∀ (n : Bool), Becoming.Decided (q n)) →
+    ∀ (r : Becoming.Requirement.Routes.Route) (i : Unit ⊕ Bool),
+      Becoming.Decided
+        (Becoming.Lexical.classifiedGain Becoming.Requirement.Routes.gain Becoming.Requirement.Routes.fresh q r i)
+Becoming.Requirement.Routes.decided_classified : ∀ (q : Bool → Prop),
+  (∀ (n : Bool), Becoming.Decided (q n)) →
+    ∀ (a b : Becoming.Requirement.Routes.Route),
+      Becoming.Decided
+        (Becoming.Lexical.classified Becoming.Requirement.Routes.basic Becoming.Requirement.Routes.gain
+          Becoming.Requirement.Routes.fresh q a b)
+Becoming.Requirement.Routes.required : ∀ (q : Bool → Prop),
+  (∀ (n : Bool), Becoming.Decided (q n)) →
+    Becoming.Requirement.Required
+      (Becoming.Requirement.Frontier (fun x => True)
+        (Becoming.Lexical.classified Becoming.Requirement.Routes.basic Becoming.Requirement.Routes.gain
+          Becoming.Requirement.Routes.fresh q))
+      Becoming.Requirement.Routes.formed
+Becoming.Requirement.Routes.opposite_routes : Becoming.Lexical.classified Becoming.Requirement.Routes.basic
+    Becoming.Requirement.Routes.gain Becoming.Requirement.Routes.fresh (fun n => n = false)
+    Becoming.Requirement.Routes.Route.left Becoming.Requirement.Routes.Route.right ∧
+  Becoming.Lexical.classified Becoming.Requirement.Routes.basic Becoming.Requirement.Routes.gain
+    Becoming.Requirement.Routes.fresh (fun n => n = true) Becoming.Requirement.Routes.Route.right
+    Becoming.Requirement.Routes.Route.left
+Becoming.Requirement.Routes.none_robust : ¬∃ r,
+    ∀ (q : Bool → Prop),
+      Becoming.Requirement.Frontier (fun x => True)
+        (Becoming.Lexical.classified Becoming.Requirement.Routes.basic Becoming.Requirement.Routes.gain
+          Becoming.Requirement.Routes.fresh q)
+        r

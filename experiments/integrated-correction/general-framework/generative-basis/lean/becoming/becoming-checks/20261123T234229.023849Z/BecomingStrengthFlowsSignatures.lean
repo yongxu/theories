@@ -1,0 +1,13 @@
+import Becoming.StrengthFlows
+#check @Becoming.StrengthFlows.course_eq_flowUnder
+#check @Becoming.StrengthFlows.flowUnder_follows
+#check @Becoming.StrengthFlows.exchangeGap_follows
+#check @Becoming.StrengthFlows.exchange_alike_later
+#check @Becoming.StrengthFlows.exchangeGap_le_shares_flows
+#check @Becoming.StrengthFlows.alike_of_readsAt_all
+#check @Becoming.StrengthFlows.respondsWithin_zero_iff_flows
+#check @Becoming.StrengthFlows.sensitive_iff_flows
+#check @Becoming.StrengthFlows.measure_alike_read
+#check @Becoming.StrengthFlows.gap_le_carried_mono_worlds
+#check @Becoming.StrengthFlows.gap_le_carried_into_worlds
+#check @Becoming.StrengthFlows.carriedWorld_start

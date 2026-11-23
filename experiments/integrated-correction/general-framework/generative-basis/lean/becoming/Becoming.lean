@@ -134,6 +134,7 @@ import Becoming.Standpoints
 import Becoming.Significance
 import Becoming.ValuationFrames
 import Becoming.RelativePosition
+import Becoming.PositionTerms
 import Becoming.Interdependence
 import Becoming.Feeding
 import Becoming.Feedback
@@ -210,6 +211,7 @@ import Becoming.Viability
 import Becoming.Keeping
 import Becoming.ReflexivePrediction
 import Becoming.Prelude
+import Becoming.CoreHelpers
 import Becoming.Ideals
 import Becoming.ContingentPlans
 import Becoming.Actuation
@@ -951,7 +953,7 @@ tagged instance or application.
   the assortment the share of the spread among groups). Witnesses: two groups of two with one
   member holding back, the whole going either way; the same returns either way by how the groups
   are founded; assortment below one losing where assortment one would win.
-* `Becoming.SelectionShift` (L1): what the selection term proper does and does not decide, the
+* `Becoming.SelectionShift` (L2, through `Becoming.PositionTerms`): what the selection term proper does and does not decide, the
   counting layer of EL1 (no ethical predicate). A common shift of offspring numbers leaves
   concordance and discordance unchanged and enlarges the next generation by the shift for each
   member (`SelectionShift.Generations.shift_step`), so the term does not fix the next generation's
@@ -2051,6 +2053,10 @@ tagged instance or application.
   A least part is not above the average, and with no more in all more parts leave it no more; equal
   shares meet every need exactly where they meet the greatest, which gives more than the total need
   where needs differ.
+* `Becoming.PositionTerms` (L2, through `Becoming.RelativePosition`): what the selection term proper
+  reads of offspring numbers is their relative positions (`PositionTerms.keeps_iff_terms`,
+  `PositionTerms.kept_step`; no ethical predicate). Derived from `ScratchPositionTerms` and
+  placed below `Becoming.SelectionShift`.
 * `Becoming.ValuationFrames` (L2): the valuations of `Becoming.Metaethics` and the continuation
   condition of `Becoming.Significance` read on frames and runs of a labelled process (the relations
   a valuation reads off a frame, living significance and `universal_reason`, comparison and
@@ -3564,6 +3570,10 @@ tagged instance or application.
   `preimage_of_mem_map`), proved by recursion where the prelude uses `propext`; and the one balance
   over a stretch, a count balanced at each step being balanced over it (`balance_over_stretch_on`),
   from which the stretch balances of flows, amounts, courses and censuses are derived.
+* `Becoming.CoreHelpers` (L1): shared zero-axiom `Init` arithmetic, `Bool`, `List`, and
+  ceiling-division helpers (`natMax*`, `natMin*`, `natBlt*`, `natBeq*`, `bool_or_*`,
+  `div*`, `mod*`, `lt_ceil_div_iff`, `le_pred_of_succ_le`, `le_sub_add_nat`,
+  `le_add_sub_self_nat`, `sub_eq_sub_succ_add_one`), importing `Becoming.Prelude` alone.
 * `Becoming.GrammarLaws` (L0): the five shared laws of 08 §7 on the grammar, for every carrier and
   relation, with no premise. Closure: lying within a closure (`«所闭»`) is being the occurrence
   itself or reached (`«所闭当且仅当同一或及»`), and a region of the steps of time that every step
@@ -5395,12 +5405,12 @@ tagged instance or application.
   theorems prove `LineOnAStock.unending_iff_holds` and `LineOnAStock.way_ends` from its laws
   without those theorems. It derives no response beyond a unit whose need is unmet leaving nothing,
   and no unit in it adds to what it rests on.
-* `Becoming.AdaptiveLoops` (L1): open adaptive loops, observation-driven assume-guarantee composition over coupled substrates, coupled race with pool silencing and two-drawer post-turn bottleneck, unread adaptive collapse and endogenous bidirectional adaptation.
-* `Becoming.PacedStock` (L2, through `Becoming.WayUnderARule`): fine-step stock and unit dynamics under coarse rule-update cadences, intra-span block guards and slack certificates, and the Pace–Margin Sandwich joining `Pace`'s `2N - 1` identification lower bound with `RegimeMargin` drawdown.
-* `Becoming.MultiScaleViability` (L1): lax `(π, σ)` viability simulation (`SlackDist`, `LaxSim`), infinite/linear kernel transfer, vertical tower composition (`LaxSim.comp`, `LaxSim.compAdditive`), and non-lumping 2-scale witness (`WitnessTwoScale`).
-* `Becoming.OpenComposition` (L1): open port-split components and contracts (`OpenComponent`, `InterfaceContract`), horizontal gluing (`compose`) and boundary hiding (`hide`) with constructive associativity (`ComponentEquiv`), composition-preserved closed substrate viability (`compose_close_interchange`) vs. hidden-coupling collapse, heterogeneous refinement and live rewrite (`ContractRefines`, `ReconfigProcess`, `widen_interface_heals_blindness`), and synchronous-product compositional laxity (`SlackDist.max`, `SlackDist.sum`, `compose_laxSim_max`, `compose_laxSim_sum`).
+* `Becoming.AdaptiveLoops` (L1): open adaptive loops (aliasing `OpenLoop`/`LoopCertificate` from `Becoming.OpenComposition`), observation-driven assume-guarantee composition over coupled substrates, coupled race with pool silencing and two-drawer post-turn bottleneck, unread adaptive collapse and endogenous bidirectional adaptation.
+* `Becoming.PacedStock` (L2, through `Becoming.LineOnAStock`): fine-step stock and unit dynamics under coarse rule-update cadences, intra-span block guards and slack certificates joined to `MultiScaleViability.LaxSim` (`LaxSimBridge`), and the Pace–Margin Sandwich joining `Pace`'s `2N - 1` identification lower bound with `RegimeMargin` drawdown.
+* `Becoming.MultiScaleViability` (L1): lax `(π, σ)` viability simulation (`SlackDist`, `LaxSim`), infinite/linear kernel transfer, vertical tower composition (`LaxSim.comp`, `LaxSim.compAdditive`, `Tower` bridges), and non-lumping 2-scale witness (`WitnessTwoScale`).
+* `Becoming.OpenComposition` (L1): standalone `OpenLoop`/`LoopCertificate` foundations, open port-split components and contracts (`OpenComponent`, `InterfaceContract`), horizontal gluing (`compose`, `composeList*`, `constDrawer*`, `countdown*`) and boundary hiding (`hide`) with constructive associativity (`ComponentEquiv`), composition-preserved closed substrate viability (`compose_close_interchange`) vs. hidden-coupling collapse, heterogeneous refinement and live rewrite (`ContractRefines`, `ReconfigProcess`, `widen_interface_heals_blindness`), and synchronous-product compositional laxity (`SlackDist.max`, `SlackDist.sum`, `compose_laxSim_max`, `compose_laxSim_sum`).
 * `Becoming.TransformativeViability` (L2, through `Becoming.WideningOnTheMap`): viability-preserving transformative continuation order (`MacroAdmits`, `TransformativeViable`, `TransformsViably` with non-stasis micro-turnover) strictly separating evolution from zero-loss `Widens` and destructive churn, escaping `Flow.whole_not_keepsWidening`.
-* `Becoming.StockFlowBridge` (L2, through `Becoming.WayUnderARule`): unclamped pre-overdraw `LineOnAStock`/`WayUnderARule` embedding into `Flow.BalancesOn`/`Balances`, finite-horizon `never_returns_below_within`, and exact constant-draw correspondence with `RegimeMargin.Coupled.Indexed.step`.
+* `Becoming.StockFlowBridge` (L2, through `Becoming.WayUnderARule`): unclamped pre-overdraw `LineOnAStock`/`WayUnderARule` embedding into `Flow.BalancesOn`/`Balances`, finite-horizon `never_returns_below_within`, exact constant-draw correspondence with `RegimeMargin.Coupled.Indexed.step`, and `StockUnification`/`StockUnificationRuns` joined onto `Becoming.Stock`.
 * `Becoming.EndogenousTurning` (L2, through `Becoming.StockFlowBridge`): derived proxy-optimum overdraw collapse, non-oracle `ServiceTaskModel` bottleneck `B_task`, timely pooled `Clearing` / native `OpenComposition` live-reconfig and widening bridges, and the epistemic silence boundary (`TurningWitness`).
 * `Becoming.UnifiedDrawdown` (L2, through `Becoming.StockFlowBridge`): parametric local-error-zero joint depletion, inductive finite-family `OpenComposition` fleet folds and `ContractRefines` upgrades, pre-overdraw `Flow` transfer vs. `OverdrawSeparationWitness`, and non-trivial temporal aliasing (`CadenceErasureWitness`, `unrecoverable_cadence_bridge`) with `not_entails`.
 * `Becoming.ScopeDynamics` (L2, through `Becoming.TransformativeViability`): mutual-fate viable-scope selection, open-commons myopic invasion collapse, reciprocal `Withholding`/native `OpenComposition` (`gatedDefectorComponent ⊕ coopComponent`) stabilization and replacement, paired with `scopeLaw_cannot_entail_unrestricted`.

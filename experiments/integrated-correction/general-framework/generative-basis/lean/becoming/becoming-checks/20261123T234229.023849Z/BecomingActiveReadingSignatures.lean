@@ -1,0 +1,13 @@
+import Becoming.ActiveReading
+#check @Becoming.ActiveReading.wholeRun_withholds_consuming
+#check @Becoming.ActiveReading.livingSignificance_wholeRun_iff
+#check @Becoming.ActiveReading.absent_dependent
+#check @Becoming.ActiveReading.absent_not_consuming
+#check @Becoming.ActiveReading.absent_included
+#check @Becoming.ActiveReading.overdraw_unranked
+#check @Becoming.ActiveReading.overdraw_admits_occurrence
+#check @Becoming.ActiveReading.malignant_readings
+#check @Becoming.ActiveReading.contest_extends_active
+#check @Becoming.ActiveReading.winning_active
+#check @Becoming.ActiveReading.winning_withheld
+#check @Becoming.ActiveReading.contest_readings

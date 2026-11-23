@@ -1,0 +1,17 @@
+import Becoming.Assurance
+#check @Becoming.Assurance.runs_of_completes
+#check @Becoming.Assurance.safeTrace_head
+#check @Becoming.Assurance.completes_of_runs
+#check @Becoming.Assurance.completes_iff_of_determined
+#check @Becoming.Assurance.safeTrace_free
+#check @Becoming.Assurance.completes_iff_runs
+#check @Becoming.Assurance.Branch.two_ne_zero
+#check @Becoming.Assurance.Branch.two_ne_one
+#check @Becoming.Assurance.Branch.one_ne_zero
+#check @Becoming.Assurance.Branch.stuck
+#check @Becoming.Assurance.Branch.ends_three
+#check @Becoming.Assurance.Branch.runs_not_completes
+#check @Becoming.Assurance.Branch.not_determined
+#check @Becoming.Assurance.completes_ofMap_iff
+#check @Becoming.Assurance.completes_ofMap_single
+#check @Becoming.Assurance.completes_ofPartial_iff

@@ -1,0 +1,60 @@
+Becoming.CoreHelpers.le_natMax_left : ∀ (a b : Nat), a ≤ Becoming.CoreHelpers.natMax a b
+Becoming.CoreHelpers.le_natMax_right : ∀ (a b : Nat), b ≤ Becoming.CoreHelpers.natMax a b
+@Becoming.CoreHelpers.natMax_le : ∀ {a b c : Nat}, a ≤ c → b ≤ c → Becoming.CoreHelpers.natMax a b ≤ c
+Becoming.CoreHelpers.natMax_comm : ∀ (a b : Nat), Becoming.CoreHelpers.natMax a b = Becoming.CoreHelpers.natMax b a
+Becoming.CoreHelpers.natMax_assoc : ∀ (a b c : Nat),
+  Becoming.CoreHelpers.natMax (Becoming.CoreHelpers.natMax a b) c =
+    Becoming.CoreHelpers.natMax a (Becoming.CoreHelpers.natMax b c)
+Becoming.CoreHelpers.natMax_zero_zero : Becoming.CoreHelpers.natMax 0 0 = 0
+Becoming.CoreHelpers.natMax_add_le : ∀ (a b c d : Nat),
+  Becoming.CoreHelpers.natMax (a + c) (b + d) ≤ Becoming.CoreHelpers.natMax a b + Becoming.CoreHelpers.natMax c d
+Becoming.CoreHelpers.natMax_add_max_le : ∀ (a b c d : Nat),
+  Becoming.CoreHelpers.natMax (a + c) (b + d) ≤ Becoming.CoreHelpers.natMax a b + Becoming.CoreHelpers.natMax c d
+@Becoming.CoreHelpers.le_foldNatMax_of_mem : ∀ {α : Type} {f : α → Nat} {agents : List α} {i : α},
+  i ∈ agents → f i ≤ Becoming.CoreHelpers.foldNatMax agents f
+@Becoming.CoreHelpers.foldNatMax_le_of_all : ∀ {α : Type} {f : α → Nat} {M : Nat} {agents : List α},
+  (∀ (i : α), i ∈ agents → f i ≤ M) → Becoming.CoreHelpers.foldNatMax agents f ≤ M
+@Becoming.CoreHelpers.foldNatMax_eq_zero : ∀ {α : Type} {f : α → Nat} {agents : List α},
+  (∀ (i : α), i ∈ agents → f i = 0) → Becoming.CoreHelpers.foldNatMax agents f = 0
+@Becoming.CoreHelpers.foldNatMax_succ_le : ∀ {α : Type} {f : α → Nat} {M : Nat},
+  0 < M → ∀ {agents : List α}, (∀ (i : α), i ∈ agents → f i + 1 ≤ M) → Becoming.CoreHelpers.foldNatMax agents f + 1 ≤ M
+Becoming.CoreHelpers.natMin_le_left : ∀ (a b : Nat), Becoming.CoreHelpers.natMin a b ≤ a
+Becoming.CoreHelpers.natMin_le_right : ∀ (a b : Nat), Becoming.CoreHelpers.natMin a b ≤ b
+@Becoming.CoreHelpers.le_natMin : ∀ {a b c : Nat}, c ≤ a → c ≤ b → c ≤ Becoming.CoreHelpers.natMin a b
+@Becoming.CoreHelpers.natMin_eq_left : ∀ {a b : Nat}, a ≤ b → Becoming.CoreHelpers.natMin a b = a
+@Becoming.CoreHelpers.natMin_eq_right : ∀ {a b : Nat}, b ≤ a → Becoming.CoreHelpers.natMin a b = b
+Becoming.CoreHelpers.sub_natMin_right : ∀ (x d : Nat), x - Becoming.CoreHelpers.natMin d x = x - d
+@Becoming.CoreHelpers.natBlt_true_iff : ∀ {a b : Nat}, a.blt b = true ↔ a < b
+@Becoming.CoreHelpers.natBlt_false_iff : ∀ {a b : Nat}, a.blt b = false ↔ b ≤ a
+@Becoming.CoreHelpers.natBeq_true_iff : ∀ {a b : Nat}, a.beq b = true ↔ a = b
+Becoming.CoreHelpers.bool_or_false_left : ∀ (b : Bool), (false || b) = b
+Becoming.CoreHelpers.bool_or_true_right : ∀ (a : Bool), (a || true) = true
+Becoming.CoreHelpers.bool_or_assoc : ∀ (a b c : Bool), (a || b || c) = (a || (b || c))
+@Becoming.CoreHelpers.ite_pos' : ∀ {c : Prop} [h : Decidable c],
+  c → ∀ {α : Sort u_1} {t e : α}, (if c then t else e) = t
+@Becoming.CoreHelpers.ite_neg' : ∀ {c : Prop} [h : Decidable c],
+  ¬c → ∀ {α : Sort u_1} {t e : α}, (if c then t else e) = e
+@Becoming.CoreHelpers.dite_pos' : ∀ {c : Prop} [h : Decidable c] (hc : c) {α : Sort u_1} {t : c → α} {e : ¬c → α},
+  (if hc' : c then t hc' else e hc') = t hc
+@Becoming.CoreHelpers.dite_neg' : ∀ {c : Prop} [h : Decidable c] (hc : ¬c) {α : Sort u_1} {t : c → α} {e : ¬c → α},
+  (if hc' : c then t hc' else e hc') = e hc
+Becoming.CoreHelpers.div_go_irrel : ∀ (y : Nat) (hy : 0 < y) (f₁ : Nat) {f₂ x : Nat} (h₁ : x < f₁) (h₂ : x < f₂),
+  Nat.div.go y hy f₁ x h₁ = Nat.div.go y hy f₂ x h₂
+Becoming.CoreHelpers.mod_go_irrel : ∀ (y : Nat) (hy : 0 < y) (f₁ : Nat) {f₂ x : Nat} (h₁ : x < f₁) (h₂ : x < f₂),
+  Nat.modCore.go y hy f₁ x h₁ = Nat.modCore.go y hy f₂ x h₂
+Becoming.CoreHelpers.div_add_self : ∀ (y : Nat), 0 < y → ∀ (x : Nat), (x + y) / y = x / y + 1
+Becoming.CoreHelpers.mod_add_self : ∀ (y : Nat), 0 < y → ∀ (x : Nat), (x + y) % y = x % y
+@Becoming.CoreHelpers.div_eq_zero_of_lt : ∀ {r y : Nat}, 0 < y → r < y → r / y = 0
+@Becoming.CoreHelpers.mod_eq_self_of_lt : ∀ {r y : Nat}, 0 < y → r < y → r % y = r
+@Becoming.CoreHelpers.div_mul_add_rem : ∀ {y : Nat}, 0 < y → ∀ {r : Nat}, r < y → ∀ (q : Nat), (q * y + r) / y = q
+Becoming.CoreHelpers.div_mod_decomp_bound : ∀ (y : Nat),
+  0 < y → ∀ (n a : Nat), a < n → a = a / y * y + a % y ∧ a % y < y
+@Becoming.CoreHelpers.div_mod_decomp : ∀ {y : Nat}, 0 < y → ∀ (a : Nat), a = a / y * y + a % y ∧ a % y < y
+@Becoming.CoreHelpers.lt_ceil_div_iff : ∀ {b : Nat}, 0 < b → ∀ (k a : Nat), k * b < a ↔ k < (a + b - 1) / b
+@Becoming.CoreHelpers.le_pred_of_succ_le : ∀ {a b : Nat}, a + 1 ≤ b → a ≤ b - 1
+Becoming.CoreHelpers.le_sub_add_nat : ∀ (a b : Nat), a ≤ a - b + b
+Becoming.CoreHelpers.le_add_sub_self_nat : ∀ (a b : Nat), a ≤ b + (a - b)
+Becoming.CoreHelpers.sub_le_add_sub_nat : ∀ (a b c : Nat), a - c ≤ a - b + (b - c)
+@Becoming.CoreHelpers.sub_eq_sub_succ_add_one : ∀ {T t : Nat}, t < T → T - t = T - (t + 1) + 1
+@Becoming.CoreHelpers.sub_sub_mid : ∀ {m u v : Nat}, v ≤ m → u ≤ v → m - u - (m - v) = v - u
+@Becoming.CoreHelpers.add_sub_mid : ∀ {m x y : Nat}, x ≤ m → m + y - (m - x) = x + y

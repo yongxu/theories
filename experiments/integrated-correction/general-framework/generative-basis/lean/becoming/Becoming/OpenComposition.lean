@@ -1,13 +1,16 @@
-import Becoming.AdaptiveLoops
+import Becoming.RegimeMargin
 import Becoming.MultiScaleViability
+import Becoming.CoreHelpers
 
 /-!
 # Open composition: boundary ports, interface gluing, structural replacement, and compositional laxity
 
-This module (`AI-written` for Wave 2 Pillar `L0`) extends `Becoming.AdaptiveLoops` and
-`Becoming.MultiScaleViability` with explicit internal vs. exposed boundary ports (`OpenComponent`,
-`InterfaceContract`), horizontal gluing (`compose`) and boundary hiding (`hide`) with constructive
-associativity (`ComponentEquiv`), composition-preserved closed substrate viability vs.
+This module (`AI-written` for Wave 2 Pillar `L0`) extends `Becoming.RegimeMargin`,
+`Becoming.CoreHelpers`, and `Becoming.MultiScaleViability` with open-loop boundaries (`OpenLoop`,
+`LoopCertificate`), explicit internal vs. exposed boundary ports (`OpenComponent`,
+`InterfaceContract`), horizontal gluing (`compose`, `composeListComponent`, `familyComponent`) and
+boundary hiding (`hide`, `withHiddenSite`) with constructive associativity/commutativity
+(`ComponentEquiv`, `ContractEquiv`), composition-preserved closed substrate viability vs.
 hidden-coupling collapse, heterogeneous sub-component replacement (`ContractRefines`,
 `ReconfigProcess`, `widen_interface_heals_blindness`), and synchronous-product compositional lax
 multi-scale simulation (`SlackDist.max`, `SlackDist.sum`, `compose_laxSim_max`, `compose_laxSim_sum`).
@@ -21,33 +24,33 @@ open Generative
 
 namespace OpenComposition
 
-/-! ## Shared helpers (prelude-only, zero axioms) -/
+/-! ## Coupled indexed helpers and shared countdown margin step (prelude-only, zero axioms) -/
 
-theorem bool_or_true_right (a : Bool) : (a || true) = true := by
-  cases a <;> rfl
+/-- **Monotonicity of coupled indexed substrate step in the state `x`.** -/
+theorem indexedStep_mono {ι : Type}
+    {G : ι → (ι → Nat) → Nat} (rises : ∀ i, RegimeMargin.Coupled.Indexed.Rises RegimeMargin.Drawn.whole (G i))
+    (H : ι → Nat) {x y : ι → Nat} (below : ∀ i, x i ≤ y i) (j : ι) :
+    RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H x j ≤
+      RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H y j :=
+  RegimeMargin.Coupled.Indexed.step_mono rises H below j
 
-theorem bool_or_assoc (a b c : Bool) : ((a || b) || c) = (a || (b || c)) := by
-  cases a <;> cases b <;> cases c <;> rfl
+/-- **Antitonicity of coupled indexed substrate step in the draw `H`.** -/
+theorem indexedStep_antitone_H {ι : Type}
+    {G : ι → (ι → Nat) → Nat} (rises : ∀ i, RegimeMargin.Coupled.Indexed.Rises RegimeMargin.Drawn.whole (G i))
+    {H H' : ι → Nat} (hle : ∀ j, H j ≤ H' j) (x : ι → Nat) (j : ι) :
+    RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H' x j ≤
+      RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H x j := by
+  have leftBelow : RegimeMargin.Coupled.Indexed.Below RegimeMargin.Drawn.whole
+      (RegimeMargin.Coupled.Indexed.left RegimeMargin.Drawn.whole H' x)
+      (RegimeMargin.Coupled.Indexed.left RegimeMargin.Drawn.whole H x) :=
+    fun k => Naturals.sub_antitone (x k) (hle k)
+  exact Nat.add_le_add (leftBelow j) (rises j _ _ leftBelow)
 
-theorem natMax_add_le (a b c d : Nat) :
-    AdaptiveLoops.natMax a b + AdaptiveLoops.natMax c d ≥ AdaptiveLoops.natMax (a + c) (b + d) :=
-  AdaptiveLoops.natMax_le
-    (Nat.add_le_add (AdaptiveLoops.le_natMax_left a b) (AdaptiveLoops.le_natMax_left c d))
-    (Nat.add_le_add (AdaptiveLoops.le_natMax_right a b) (AdaptiveLoops.le_natMax_right c d))
-
-theorem natMax_add_max_le (a b c d : Nat) :
-    AdaptiveLoops.natMax (a + c) (b + d) ≤ AdaptiveLoops.natMax a b + AdaptiveLoops.natMax c d :=
-  natMax_add_le a b c d
-
-theorem natMax_zero_zero : AdaptiveLoops.natMax 0 0 = 0 := rfl
-
-theorem add_four_swap (a b c d : Nat) : (a + b) + (c + d) = (a + c) + (b + d) := by
-  calc
-    (a + b) + (c + d) = a + (b + (c + d)) := Nat.add_assoc a b (c + d)
-    _ = a + ((b + c) + d) := by rw [Nat.add_assoc b c d]
-    _ = a + ((c + b) + d) := by rw [Nat.add_comm b c]
-    _ = a + (c + (b + d)) := by rw [Nat.add_assoc c b d]
-    _ = (a + c) + (b + d) := (Nat.add_assoc a c (b + d)).symm
+/-- Each coupled indexed substrate step is at least what remains after the draw `H`. -/
+theorem indexedStep_ge_sub {ι : Type}
+    (G : ι → (ι → Nat) → Nat) (H x : ι → Nat) (j : ι) :
+    x j - H j ≤ RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H x j :=
+  Nat.le_add_right _ _
 
 theorem substrate_margin_step {ι : Type}
     {G : ι → (ι → Nat) → Nat}
@@ -81,7 +84,7 @@ theorem substrate_margin_step {ι : Type}
       Naturals.le_sub_of_add_le (Nat.add_comm _ _ ▸ enough)
     exact Nat.le_trans subPre
       (Nat.le_trans (Naturals.sub_antitone (x j) (H_le_pre j))
-        (AdaptiveLoops.indexedStep_ge_sub G H x j))
+        (indexedStep_ge_sub G H x j))
   | inl belowWarn =>
     have hWarn := onWarn belowWarn
     cases hCur : curLag with
@@ -92,8 +95,8 @@ theorem substrate_margin_step {ι : Type}
       have stepSafe : x_crit j ≤
           RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H x j :=
         Nat.le_trans (post_viable j)
-          (Nat.le_trans (AdaptiveLoops.indexedStep_antitone_H G_rises H_le_safe x_crit j)
-            (AdaptiveLoops.indexedStep_mono G_rises H xCritLe j))
+          (Nat.le_trans (indexedStep_antitone_H G_rises H_le_safe x_crit j)
+            (indexedStep_mono G_rises H xCritLe j))
       rw [hNext0, Nat.zero_mul, Nat.add_zero]
       exact stepSafe
     | succ pred =>
@@ -111,7 +114,7 @@ theorem substrate_margin_step {ι : Type}
         Naturals.le_sub_of_add_le (Nat.add_comm _ _ ▸ enough)
       exact Nat.le_trans subPre
         (Nat.le_trans (Naturals.sub_antitone (x j) (H_le_pre j))
-          (AdaptiveLoops.indexedStep_ge_sub G H x j))
+          (indexedStep_ge_sub G H x j))
 
 /-! ## Part 1: Open Components, Port Split (`Int` / `Ext`), & Interface Contracts -/
 
@@ -131,9 +134,47 @@ def OpenComponent.process {S Obs Dist Int Ext : Type}
     Process S ((Obs × Bool) × Dist) :=
   Viability.disturbed (fun s m => C.next s m.1 m.2) (fun m => tol m.1 m.2)
 
-/-- Lift an `AdaptiveLoops.OpenLoop` into an `OpenComponent` with no private sites (`Empty`). -/
+/-- An open adaptive loop interacting with a substrate via observations `Obs`, an external alarm
+`Bool`, and disturbances `Dist` (canonical home below `AdaptiveLoops`). -/
+structure OpenLoop (S Obs Dist ι : Type) where
+  next : S → Obs × Bool → Dist → S
+  draw : S → ι → Nat
+  emitAlarm : S → Obs → Bool
+  silenceLoad : S → Nat
+  favours : S → Prop
+
+/-- The disturbed process of an open loop, with state-independent disturbance admissibility `tol`. -/
+def OpenLoop.process {S Obs Dist ι : Type} (L : OpenLoop S Obs Dist ι)
+    (tol : Obs × Bool → Dist → Prop) : Process S ((Obs × Bool) × Dist) :=
+  Viability.disturbed (fun s m => L.next s m.1 m.2) (fun m => tol m.1 m.2)
+
+/-- An assume-guarantee certificate for an `OpenLoop` from `init`, certifying pre-adaptation draw
+bounds, silence bounds, observation-driven alarm emission, and bounded countdown `eta`. -/
+structure LoopCertificate {S Obs Dist ι : Type}
+    (L : OpenLoop S Obs Dist ι) (init : S) where
+  tol : Obs × Bool → Dist → Prop
+  warnObs : Obs → Prop
+  preCap : ι → Nat
+  postBudget : ι → Nat
+  maxSilence : Nat
+  maxLag : Nat
+  K : S → Prop
+  eta : S → Nat
+  init_in : K init
+  cert : Viability.Certificate (L.process tol)
+    (fun s => (∀ j, L.draw s j ≤ preCap j) ∧
+              L.silenceLoad s ≤ maxSilence ∧
+              (eta s = 0 → ¬ L.favours s ∧ ∀ j, L.draw s j ≤ postBudget j)) K
+  eta_bound : ∀ s, K s → eta s ≤ maxLag
+  emits_on_warn : ∀ s obs, K s → warnObs obs → L.emitAlarm s obs = true
+  eta_alarm_step : ∀ s obs dist, tol (obs, true) dist → K s → 0 < eta s →
+    eta (L.next s (obs, true) dist) < eta s
+  eta_alarm_zero : ∀ s obs dist, tol (obs, true) dist → K s → eta s = 0 →
+    eta (L.next s (obs, true) dist) = 0
+
+/-- Lift an `OpenLoop` into an `OpenComponent` with no private sites (`Empty`). -/
 def OpenComponent.ofOpenLoop {S Obs Dist ι : Type}
-    (L : AdaptiveLoops.OpenLoop S Obs Dist ι) :
+    (L : OpenLoop S Obs Dist ι) :
     OpenComponent S Obs Dist Empty ι where
   next := L.next
   drawInt _ e := Empty.elim e
@@ -142,11 +183,11 @@ def OpenComponent.ofOpenLoop {S Obs Dist ι : Type}
   silenceLoad := L.silenceLoad
   favours := L.favours
 
-/-- Forget the internal/external split of an `OpenComponent` back to an `AdaptiveLoops.OpenLoop`
+/-- Forget the internal/external split of an `OpenComponent` back to an `OpenLoop`
 over `Sum Int Ext`. -/
 def OpenComponent.toOpenLoop {S Obs Dist Int Ext : Type}
     (C : OpenComponent S Obs Dist Int Ext) :
-    AdaptiveLoops.OpenLoop S Obs Dist (Sum Int Ext) where
+    OpenLoop S Obs Dist (Sum Int Ext) where
   next := C.next
   draw s
     | .inl j => C.drawInt s j
@@ -183,10 +224,10 @@ structure InterfaceContract {S Obs Dist Int Ext : Type}
   eta_alarm_zero : ∀ s obs dist, tol (obs, true) dist → K s → eta s = 0 →
     eta (C.next s (obs, true) dist) = 0
 
-/-- Lift an `AdaptiveLoops.LoopCertificate` onto `OpenComponent.ofOpenLoop`. -/
+/-- Lift a `LoopCertificate` onto `OpenComponent.ofOpenLoop`. -/
 def InterfaceContract.ofLoopCertificate {S Obs Dist ι : Type}
-    {L : AdaptiveLoops.OpenLoop S Obs Dist ι} {init : S}
-    (cert : AdaptiveLoops.LoopCertificate L init) :
+    {L : OpenLoop S Obs Dist ι} {init : S}
+    (cert : LoopCertificate L init) :
     InterfaceContract (OpenComponent.ofOpenLoop L) init where
   tol := cert.tol
   warnObs := cert.warnObs
@@ -248,9 +289,9 @@ def composeContract {S₁ S₂ Obs₁ Obs₂ Dist₁ Dist₂ Int₁ Int₂ Ext :
     | .inr j₂ => cB.postBudgetInt j₂
   postBudgetExt k := cA.postBudgetExt k + cB.postBudgetExt k
   maxSilence := cA.maxSilence + cB.maxSilence
-  maxLag := AdaptiveLoops.natMax cA.maxLag cB.maxLag
+  maxLag := CoreHelpers.natMax cA.maxLag cB.maxLag
   K s := cA.K s.1 ∧ cB.K s.2
-  eta s := AdaptiveLoops.natMax (cA.eta s.1) (cB.eta s.2)
+  eta s := CoreHelpers.natMax (cA.eta s.1) (cB.eta s.2)
   init_in := ⟨cA.init_in, cB.init_in⟩
   cert := Viability.certificate_disturbed_iff.mpr
     ⟨fun s ⟨hA, hB⟩ =>
@@ -264,10 +305,10 @@ def composeContract {S₁ S₂ Obs₁ Obs₂ Dist₁ Dist₂ Int₁ Int₂ Ext :
        fun hEta =>
          have hEtaA : cA.eta s.1 = 0 :=
            Nat.eq_zero_of_le_zero
-             (Nat.le_trans (AdaptiveLoops.le_natMax_left _ _) (Nat.le_of_eq hEta))
+             (Nat.le_trans (CoreHelpers.le_natMax_left _ _) (Nat.le_of_eq hEta))
          have hEtaB : cB.eta s.2 = 0 :=
            Nat.eq_zero_of_le_zero
-             (Nat.le_trans (AdaptiveLoops.le_natMax_right _ _) (Nat.le_of_eq hEta))
+             (Nat.le_trans (CoreHelpers.le_natMax_right _ _) (Nat.le_of_eq hEta))
          let pA := wA.2.2.2 hEtaA
          let pB := wB.2.2.2 hEtaB
          ⟨fun fav => match fav with
@@ -281,9 +322,9 @@ def composeContract {S₁ S₂ Obs₁ Obs₂ Dist₁ Dist₂ Int₁ Int₂ Ext :
        ⟨cA.cert.closed s.1 ((m.1.1.1, m.1.2), m.2.1) _ ⟨adm.1, rfl⟩ hA,
         cB.cert.closed s.2 ((m.1.1.2, m.1.2), m.2.2) _ ⟨adm.2, rfl⟩ hB⟩⟩
   eta_bound := fun s ⟨hA, hB⟩ =>
-    AdaptiveLoops.natMax_le
-      (Nat.le_trans (cA.eta_bound s.1 hA) (AdaptiveLoops.le_natMax_left _ _))
-      (Nat.le_trans (cB.eta_bound s.2 hB) (AdaptiveLoops.le_natMax_right _ _))
+    CoreHelpers.natMax_le
+      (Nat.le_trans (cA.eta_bound s.1 hA) (CoreHelpers.le_natMax_left _ _))
+      (Nat.le_trans (cB.eta_bound s.2 hB) (CoreHelpers.le_natMax_right _ _))
   emits_on_warn := fun s oa ⟨hA, hB⟩ warn => by
     change (A.emitAlarm s.1 oa.1 || B.emitAlarm s.2 oa.2) = true
     cases warn with
@@ -292,10 +333,10 @@ def composeContract {S₁ S₂ Obs₁ Obs₂ Dist₁ Dist₂ Int₁ Int₂ Ext :
       rfl
     | inr wB =>
       rw [cB.emits_on_warn s.2 oa.2 hB wB]
-      exact bool_or_true_right _
+      exact CoreHelpers.bool_or_true_right _
   eta_alarm_step := fun s oa d tol ⟨hA, hB⟩ pos => by
     have stepA : cA.eta (A.next s.1 (oa.1, true) d.1) <
-        AdaptiveLoops.natMax (cA.eta s.1) (cB.eta s.2) := by
+        CoreHelpers.natMax (cA.eta s.1) (cB.eta s.2) := by
       cases Nat.eq_zero_or_pos (cA.eta s.1) with
       | inl hEA =>
         rw [cA.eta_alarm_zero s.1 oa.1 d.1 tol.1 hA hEA]
@@ -303,9 +344,9 @@ def composeContract {S₁ S₂ Obs₁ Obs₂ Dist₁ Dist₂ Int₁ Int₂ Ext :
       | inr hposA =>
         exact Nat.lt_of_lt_of_le
           (cA.eta_alarm_step s.1 oa.1 d.1 tol.1 hA hposA)
-          (AdaptiveLoops.le_natMax_left _ _)
+          (CoreHelpers.le_natMax_left _ _)
     have stepB : cB.eta (B.next s.2 (oa.2, true) d.2) <
-        AdaptiveLoops.natMax (cA.eta s.1) (cB.eta s.2) := by
+        CoreHelpers.natMax (cA.eta s.1) (cB.eta s.2) := by
       cases Nat.eq_zero_or_pos (cB.eta s.2) with
       | inl hEB =>
         rw [cB.eta_alarm_zero s.2 oa.2 d.2 tol.2 hB hEB]
@@ -313,31 +354,31 @@ def composeContract {S₁ S₂ Obs₁ Obs₂ Dist₁ Dist₂ Int₁ Int₂ Ext :
       | inr hposB =>
         exact Nat.lt_of_lt_of_le
           (cB.eta_alarm_step s.2 oa.2 d.2 tol.2 hB hposB)
-          (AdaptiveLoops.le_natMax_right _ _)
-    change AdaptiveLoops.natMax (cA.eta (A.next s.1 (oa.1, true) d.1))
+          (CoreHelpers.le_natMax_right _ _)
+    change CoreHelpers.natMax (cA.eta (A.next s.1 (oa.1, true) d.1))
         (cB.eta (B.next s.2 (oa.2, true) d.2)) <
-      AdaptiveLoops.natMax (cA.eta s.1) (cB.eta s.2)
+      CoreHelpers.natMax (cA.eta s.1) (cB.eta s.2)
     cases Nat.decLe (cA.eta (A.next s.1 (oa.1, true) d.1)) (cB.eta (B.next s.2 (oa.2, true) d.2)) with
     | isTrue le =>
-      rw [show AdaptiveLoops.natMax (cA.eta (A.next s.1 (oa.1, true) d.1))
+      rw [show CoreHelpers.natMax (cA.eta (A.next s.1 (oa.1, true) d.1))
           (cB.eta (B.next s.2 (oa.2, true) d.2)) =
           cB.eta (B.next s.2 (oa.2, true) d.2) from if_pos le]
       exact stepB
     | isFalse notLe =>
-      rw [show AdaptiveLoops.natMax (cA.eta (A.next s.1 (oa.1, true) d.1))
+      rw [show CoreHelpers.natMax (cA.eta (A.next s.1 (oa.1, true) d.1))
           (cB.eta (B.next s.2 (oa.2, true) d.2)) =
           cA.eta (A.next s.1 (oa.1, true) d.1) from if_neg notLe]
       exact stepA
   eta_alarm_zero := fun s oa d tol ⟨hA, hB⟩ hEta => by
     have hEtaA : cA.eta s.1 = 0 :=
       Nat.eq_zero_of_le_zero
-        (Nat.le_trans (AdaptiveLoops.le_natMax_left _ _) (Nat.le_of_eq hEta))
+        (Nat.le_trans (CoreHelpers.le_natMax_left _ _) (Nat.le_of_eq hEta))
     have hEtaB : cB.eta s.2 = 0 :=
       Nat.eq_zero_of_le_zero
-        (Nat.le_trans (AdaptiveLoops.le_natMax_right _ _) (Nat.le_of_eq hEta))
+        (Nat.le_trans (CoreHelpers.le_natMax_right _ _) (Nat.le_of_eq hEta))
     have zA := cA.eta_alarm_zero s.1 oa.1 d.1 tol.1 hA hEtaA
     have zB := cB.eta_alarm_zero s.2 oa.2 d.2 tol.2 hB hEtaB
-    show AdaptiveLoops.natMax (cA.eta (A.next s.1 (oa.1, true) d.1))
+    show CoreHelpers.natMax (cA.eta (A.next s.1 (oa.1, true) d.1))
         (cB.eta (B.next s.2 (oa.2, true) d.2)) = 0
     rw [zA, zB]
     rfl
@@ -413,7 +454,7 @@ def composeAssocEquiv
     | .inl (.inr _) => rfl
     | .inr _ => rfl
   comm_drawExt s k := Nat.add_assoc (A.drawExt s.1.1 k) (B.drawExt s.1.2 k) (C.drawExt s.2 k)
-  comm_emitAlarm s oa := bool_or_assoc (A.emitAlarm s.1.1 oa.1.1) (B.emitAlarm s.1.2 oa.1.2) (C.emitAlarm s.2 oa.2)
+  comm_emitAlarm s oa := CoreHelpers.bool_or_assoc (A.emitAlarm s.1.1 oa.1.1) (B.emitAlarm s.1.2 oa.1.2) (C.emitAlarm s.2 oa.2)
   comm_silenceLoad s := Nat.add_assoc (A.silenceLoad s.1.1) (B.silenceLoad s.1.2) (C.silenceLoad s.2)
   comm_favours _ :=
     ⟨fun h => match h with
@@ -520,7 +561,7 @@ def hideContract {S Obs ObsOuter Dist Int ExtKeep ExtHide : Type}
        have alTrue : alEff = true := by
          dsimp only [alEff]
          rw [emitTrue]
-         exact bool_or_true_right al
+         exact CoreHelpers.bool_or_true_right al
        have tolTrue : c.tol (obsC, true) d := alTrue ▸ tolC
        refine ⟨fun h0 => ?_, fun pos => ?_⟩
        · have hEta0' : c.eta s' = 0 := by
@@ -562,7 +603,219 @@ theorem hideContract_keeps_hidden {S Obs ObsOuter Dist Int ExtKeep ExtHide : Typ
     (k : ExtHide) : x_crit_hide k ≤ p.2 k :=
   Nat.le_trans (Nat.le_add_right _ _) (hp.2 k)
 
+/-! ## Part 2b: Multi-agent family composition & reusable open-loop factories -/
+
+/-- Total draw across a list of agents at site `j`. -/
+def sumDraws {α ι : Type} (agents : List α) (f : α → ι → Nat) (j : ι) : Nat :=
+  match agents with
+  | [] => 0
+  | i :: rest => f i j + sumDraws rest f j
+
+theorem sumDraws_le {α ι : Type} {f g : α → ι → Nat} (j : ι) :
+    ∀ {agents : List α}, (∀ i, i ∈ agents → f i j ≤ g i j) →
+      sumDraws agents f j ≤ sumDraws agents g j
+  | [], _ => Nat.le_refl 0
+  | _ :: _, bound => Nat.add_le_add (bound _ (.head _))
+      (sumDraws_le j fun i mem => bound i (.tail _ mem))
+
+private theorem foldr_or_true_of_mem {α : Type} {p : α → Bool} :
+    ∀ {agents : List α} {i : α}, i ∈ agents → p i = true →
+      agents.foldr (fun k acc => p k || acc) false = true
+  | _ :: _, _, .head _, htrue => by
+    show (p _ || _) = true
+    rw [htrue]
+    rfl
+  | _ :: _, _, .tail _ mem, htrue => by
+    show (p _ || List.foldr _ false _) = true
+    rw [foldr_or_true_of_mem mem htrue]
+    exact CoreHelpers.bool_or_true_right _
+
+/-- Package a list of dependent `OpenLoop`s into a single `OpenComponent` (`Int = Empty`). -/
+def familyComponent {α ι : Type} {S Obs Dist : α → Type}
+    (agents : List α)
+    (L : (i : α) → OpenLoop (S i) (Obs i) (Dist i) ι) :
+    OpenComponent ((i : α) → S i) ((i : α) → Obs i) ((i : α) → Dist i) Empty ι where
+  next s oa d i := (L i).next (s i) (oa.1 i, oa.2) (d i)
+  drawInt _ e := Empty.elim e
+  drawExt s j := sumDraws agents (fun i => (L i).draw (s i)) j
+  emitAlarm s obs := agents.foldr (fun i acc => (L i).emitAlarm (s i) (obs i) || acc) false
+  silenceLoad s := sumDraws agents (fun i _ => (L i).silenceLoad (s i)) ()
+  favours s := ∃ i, i ∈ agents ∧ (L i).favours (s i)
+
+/-- Package per-agent `LoopCertificate`s into a joint `InterfaceContract` over `familyComponent`. -/
+def familyContract {α ι : Type} {S Obs Dist : α → Type}
+    (agents : List α)
+    (L : (i : α) → OpenLoop (S i) (Obs i) (Dist i) ι)
+    (init : (i : α) → S i)
+    (certs : (i : α) → LoopCertificate (L i) (init i)) :
+    InterfaceContract (familyComponent agents L) init where
+  tol oa d := ∀ i, i ∈ agents → (certs i).tol (oa.1 i, oa.2) (d i)
+  warnObs o := ∃ i, i ∈ agents ∧ (certs i).warnObs (o i)
+  preCapInt e := Empty.elim e
+  preCapExt j := sumDraws agents (fun i => (certs i).preCap) j
+  postBudgetInt e := Empty.elim e
+  postBudgetExt j := sumDraws agents (fun i => (certs i).postBudget) j
+  maxSilence := sumDraws agents (fun i _ => (certs i).maxSilence) ()
+  maxLag := CoreHelpers.foldNatMax agents (fun i => (certs i).maxLag)
+  K s := ∀ i, i ∈ agents → (certs i).K (s i)
+  eta s := CoreHelpers.foldNatMax agents (fun i => (certs i).eta (s i))
+  init_in i _ := (certs i).init_in
+  cert := Viability.certificate_disturbed_iff.mpr
+    ⟨fun s hK =>
+      ⟨fun e => Empty.elim e,
+       fun j => sumDraws_le j fun i mem => ((certs i).cert.within _ (hK i mem)).1 j,
+       sumDraws_le () fun i mem => ((certs i).cert.within _ (hK i mem)).2.1,
+       fun hEta0 =>
+         have eachZero : ∀ i, i ∈ agents → (certs i).eta (s i) = 0 := fun i mem =>
+           Nat.eq_zero_of_le_zero
+             (Nat.le_trans (CoreHelpers.le_foldNatMax_of_mem (f := fun k => (certs k).eta (s k)) mem)
+               (Nat.le_of_eq hEta0))
+         ⟨fun ⟨i, mem, fav⟩ => (((certs i).cert.within _ (hK i mem)).2.2 (eachZero i mem)).1 fav,
+          fun e => Empty.elim e,
+          fun j => sumDraws_le j fun i mem =>
+            (((certs i).cert.within _ (hK i mem)).2.2 (eachZero i mem)).2 j⟩⟩,
+     fun s m tolOk hK i mem =>
+       (certs i).cert.closed (s i) ((m.1.1 i, m.1.2), m.2 i) _ ⟨tolOk i mem, rfl⟩ (hK i mem)⟩
+  eta_bound s hK :=
+    CoreHelpers.foldNatMax_le_of_all fun i mem =>
+      Nat.le_trans ((certs i).eta_bound (s i) (hK i mem))
+        (CoreHelpers.le_foldNatMax_of_mem (f := fun k => (certs k).maxLag) mem)
+  emits_on_warn s o hK := fun ⟨i, mem, warn⟩ =>
+    foldr_or_true_of_mem mem ((certs i).emits_on_warn (s i) (o i) (hK i mem) warn)
+  eta_alarm_step s o d tolOk hK pos :=
+    CoreHelpers.foldNatMax_succ_le pos fun i mem => by
+      show (certs i).eta ((L i).next (s i) (o i, true) (d i)) + 1 ≤
+        CoreHelpers.foldNatMax agents fun m => (certs m).eta (s m)
+      cases hI : (certs i).eta (s i) with
+      | zero =>
+        rw [(certs i).eta_alarm_zero (s i) (o i) (d i) (tolOk i mem) (hK i mem) hI]
+        exact pos
+      | succ k =>
+        exact Nat.le_trans
+          ((certs i).eta_alarm_step (s i) (o i) (d i) (tolOk i mem) (hK i mem) (hI ▸ Nat.succ_pos k))
+          (CoreHelpers.le_foldNatMax_of_mem (f := fun m => (certs m).eta (s m)) mem)
+  eta_alarm_zero s o d tolOk hK h0 :=
+    CoreHelpers.foldNatMax_eq_zero fun i mem =>
+      have hi0 : (certs i).eta (s i) = 0 :=
+        Nat.eq_zero_of_le_zero
+          (Nat.le_trans (CoreHelpers.le_foldNatMax_of_mem (f := fun m => (certs m).eta (s m)) mem)
+            (Nat.le_of_eq h0))
+      (certs i).eta_alarm_zero (s i) (o i) (d i) (tolOk i mem) (hK i mem) hi0
+
+/-- Canonical synchronous zero-silence-budget alarm channel. -/
+def zeroSilenceChannel (em : Bool) (load : Nat) (_ : Unit) : Bool :=
+  em && Nat.ble load 0
+
+/-- Stateless open component drawing constant `H` on a scalar `Unit` boundary. -/
+def constDrawerComponent (H : Nat) : OpenComponent Unit Unit Unit Empty Unit where
+  next _ _ _ := ()
+  drawInt _ e := Empty.elim e
+  drawExt _ _ := H
+  emitAlarm _ _ := false
+  silenceLoad _ := 0
+  favours _ := False
+
+/-- Assume-guarantee `InterfaceContract` for `constDrawerComponent H`. -/
+def constDrawerContract (H : Nat) : InterfaceContract (constDrawerComponent H) () where
+  tol _ _ := True
+  warnObs _ := False
+  preCapInt e := Empty.elim e
+  preCapExt _ := H
+  postBudgetInt e := Empty.elim e
+  postBudgetExt _ := H
+  maxSilence := 0
+  maxLag := 0
+  K _ := True
+  eta _ := 0
+  init_in := trivial
+  cert := Viability.certificate_disturbed_iff.mpr
+    ⟨fun _ _ => ⟨fun e => Empty.elim e, fun _ => Nat.le_refl H, Nat.le_refl 0,
+      fun _ => ⟨fun f => f, fun e => Empty.elim e, fun _ => Nat.le_refl H⟩⟩,
+     fun _ _ _ _ => trivial⟩
+  eta_bound _ _ := Nat.le_refl 0
+  emits_on_warn _ _ _ f := False.elim f
+  eta_alarm_step _ _ _ _ _ pos := absurd pos (Nat.lt_irrefl 0)
+  eta_alarm_zero _ _ _ _ _ _ := rfl
+
+/-- Generic countdown `OpenLoop` dropping draw from `preCap` to `postCap` within `maxLag` alarms. -/
+def countdownLoop (preCap postCap : Nat) {Obs : Type} (emitAlarm : Nat → Obs → Bool) :
+    OpenLoop Nat Obs Unit Unit where
+  next s obsAlarm _ := if obsAlarm.2 then s - 1 else s
+  draw s _ := if s = 0 then postCap else preCap
+  emitAlarm := emitAlarm
+  silenceLoad _ := 0
+  favours s := 0 < s
+
+/-- Generic assume-guarantee `LoopCertificate` for `countdownLoop`. -/
+def countdownCert (preCap postCap maxSilence maxLag init : Nat) {Obs : Type}
+    (emitAlarm : Nat → Obs → Bool) (warnObs : Obs → Prop)
+    (post_le : postCap ≤ preCap) (init_le : init ≤ maxLag)
+    (emits : ∀ s obs, s ≤ maxLag → warnObs obs → emitAlarm s obs = true) :
+    LoopCertificate (countdownLoop preCap postCap emitAlarm) init where
+  tol _ _ := True
+  warnObs := warnObs
+  preCap _ := preCap
+  postBudget _ := postCap
+  maxSilence := maxSilence
+  maxLag := maxLag
+  K s := s ≤ maxLag
+  eta s := s
+  init_in := init_le
+  cert := Viability.certificate_disturbed_iff.mpr
+    ⟨fun s _ =>
+      ⟨fun _ => by
+        show (if s = 0 then postCap else preCap) ≤ preCap
+        cases Nat.decEq s 0 with
+        | isTrue h0 => rw [if_pos h0]; exact post_le
+        | isFalse hn => rw [if_neg hn]; exact Nat.le_refl _,
+       Nat.zero_le maxSilence,
+       fun h0 => ⟨by rw [h0]; exact Nat.lt_irrefl 0, fun _ => by
+         show (if s = 0 then postCap else preCap) ≤ postCap
+         rw [if_pos h0]; exact Nat.le_refl _⟩⟩,
+     fun s m _ hs => by
+       show (if m.1.2 then s - 1 else s) ≤ maxLag
+       cases m.1.2
+       · exact hs
+       · exact Nat.le_trans (Nat.sub_le s 1) hs⟩
+  eta_bound _ hs := hs
+  emits_on_warn := emits
+  eta_alarm_step s _ _ _ _ pos := match s, pos with
+    | s' + 1, _ => Nat.lt_succ_self s'
+  eta_alarm_zero s _ _ _ _ h0 := by
+    show s - 1 = 0
+    rw [h0]
+
+/-- Lifted `OpenComponent` of `countdownLoop`. -/
+def countdownComponent (preCap postCap : Nat) {Obs : Type} (emitAlarm : Nat → Obs → Bool) :
+    OpenComponent Nat Obs Unit Empty Unit :=
+  OpenComponent.ofOpenLoop (countdownLoop preCap postCap emitAlarm)
+
+/-- Lifted `InterfaceContract` of `countdownCert`. -/
+def countdownContract (preCap postCap maxSilence maxLag init : Nat) {Obs : Type}
+    (emitAlarm : Nat → Obs → Bool) (warnObs : Obs → Prop)
+    (post_le : postCap ≤ preCap) (init_le : init ≤ maxLag)
+    (emits : ∀ s obs, s ≤ maxLag → warnObs obs → emitAlarm s obs = true) :
+    InterfaceContract (countdownComponent preCap postCap emitAlarm) init :=
+  InterfaceContract.ofLoopCertificate
+    (countdownCert preCap postCap maxSilence maxLag init emitAlarm warnObs post_le init_le emits)
+
 /-! ## Part 3: Closing onto Coupled Substrates & Conditional Double-Category Interchange -/
+
+/-- Closed step parameterized by an arbitrary alarm rule `alarmOf : S → Obs → Env → Bool`. -/
+def closedStepWith {S Obs Dist Int Ext Env : Type}
+    (C : OpenComponent S Obs Dist Int Ext)
+    (obs : (Ext → Nat) → Obs)
+    (alarmOf : S → Obs → Env → Bool)
+    (G : Ext → (Ext → Nat) → Nat)
+    (envDraw : Env → Ext → Nat)
+    (st : (Ext → Nat) × S)
+    (m : Env × Dist) :
+    (Ext → Nat) × S :=
+  let o := obs st.1
+  let al := alarmOf st.2 o m.1
+  let H := fun k => C.drawExt st.2 k + envDraw m.1 k
+  (RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H st.1,
+   C.next st.2 (o, al) m.2)
 
 /-- Closed step of an `OpenComponent` interacting with an exposed boundary substrate `G`, an
 observation channel `channel` blind to raw substrate `x`, and environment draw `envDraw`. -/
@@ -575,11 +828,7 @@ def closedStep {S Obs Dist Int Ext Env : Type}
     (st : (Ext → Nat) × S)
     (m : Env × Dist) :
     (Ext → Nat) × S :=
-  let o := obs st.1
-  let al := channel (C.emitAlarm st.2 o) (C.silenceLoad st.2) m.1
-  let H := fun k => C.drawExt st.2 k + envDraw m.1 k
-  (RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H st.1,
-   C.next st.2 (o, al) m.2)
+  closedStepWith C obs (fun s o env => channel (C.emitAlarm s o) (C.silenceLoad s) env) G envDraw st m
 
 def closedAdm {S Obs Dist Int Ext Env : Type}
     {C : OpenComponent S Obs Dist Int Ext} {init : S}
@@ -620,6 +869,58 @@ def closedInv {S Obs Dist Int Ext : Type}
   c.K st.2 ∧ ∀ k, x_crit k + c.eta st.2 * (c.preCapExt k + envCap k) ≤ st.1 k
 
 /-- Closing any `OpenComponent` carrying an `InterfaceContract` onto a coupled boundary substrate
+with an arbitrary alarm-firing rule `alarmOf` certifies permanent `Viability.Certificate`. -/
+theorem close_contract_with_viable {S Obs Dist Int Ext Env : Type}
+    (C : OpenComponent S Obs Dist Int Ext) {init : S}
+    (c : InterfaceContract C init)
+    (obs : (Ext → Nat) → Obs)
+    (alarmOf : S → Obs → Env → Bool)
+    (G : Ext → (Ext → Nat) → Nat)
+    (envDraw : Env → Ext → Nat) (envCap : Ext → Nat) (jointAdm : Env → Prop)
+    (env_within : ∀ env, jointAdm env → ∀ k, envDraw env k ≤ envCap k)
+    (x_crit warnLevel H_safe x₀ : Ext → Nat)
+    (obs_detects : ∀ x k, x k < warnLevel k → c.warnObs (obs x))
+    (alarm_fires : ∀ s o env, jointAdm env → c.K s → c.warnObs o → alarmOf s o env = true)
+    (G_rises : ∀ k, RegimeMargin.Coupled.Indexed.Rises RegimeMargin.Drawn.whole (G k))
+    (post_viable : ∀ k, x_crit k ≤
+      RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H_safe x_crit k)
+    (post_budget : ∀ k, c.postBudgetExt k + envCap k ≤ H_safe k)
+    (warn_margin : ∀ k, x_crit k + (c.maxLag + 1) * (c.preCapExt k + envCap k) ≤ warnLevel k)
+    (init_margin : ∀ k, x_crit k + c.eta init * (c.preCapExt k + envCap k) ≤ x₀ k) :
+    closedInv c envCap x_crit (x₀, init) ∧
+    Viability.Certificate (Viability.disturbed (closedStepWith C obs alarmOf G envDraw) (closedAdm c jointAdm))
+      (closedGuard C c x_crit) (closedInv c envCap x_crit) := by
+  refine ⟨⟨c.init_in, init_margin⟩, Viability.certificate_disturbed_iff.mpr ⟨?_, ?_⟩⟩
+  · intro st ⟨hK, margin⟩
+    exact ⟨fun k => Nat.le_trans (Nat.le_add_right _ _) (margin k), c.cert.within st.2 hK⟩
+  · intro st m adm ⟨hK, margin⟩
+    obtain ⟨x, s⟩ := st
+    obtain ⟨env, dist⟩ := m
+    obtain ⟨envOk, tolOk⟩ := adm
+    let o := obs x
+    let al := alarmOf s o env
+    let H := fun k => C.drawExt s k + envDraw env k
+    let s' := C.next s (o, al) dist
+    have wS := c.cert.within s hK
+    have hK' : c.K s' := c.cert.closed s ((o, al), dist) s' ⟨tolOk (o, al), rfl⟩ hK
+    have H_le_pre : ∀ k, H k ≤ c.preCapExt k + envCap k := fun k =>
+      Nat.add_le_add (wS.2.1 k) (env_within env envOk k)
+    refine ⟨hK', fun k => ?_⟩
+    refine substrate_margin_step G_rises H_le_pre (c.eta_bound s' hK') post_viable warn_margin margin k ?_
+    intro below
+    have alTrue : al = true := alarm_fires s o env envOk hK (obs_detects x k below)
+    refine ⟨fun h0 => ?_, fun pos => ?_⟩
+    · have hEta0' : c.eta s' = 0 := by
+        show c.eta (C.next s (o, al) dist) = 0
+        rw [alTrue]
+        exact c.eta_alarm_zero s o dist (tolOk (o, true)) hK h0
+      exact ⟨hEta0', fun k' =>
+        Nat.le_trans (Nat.add_le_add ((wS.2.2.2 h0).2.2 k') (env_within env envOk k')) (post_budget k')⟩
+    · show c.eta (C.next s (o, al) dist) + 1 ≤ c.eta s
+      rw [alTrue]
+      exact c.eta_alarm_step s o dist (tolOk (o, true)) hK pos
+
+/-- Closing any `OpenComponent` carrying an `InterfaceContract` onto a coupled boundary substrate
 certifies permanent `Viability.Certificate` and `Viability.Kernel` above `x_crit`. -/
 theorem close_contract_viable {S Obs Dist Int Ext Env : Type}
     (C : OpenComponent S Obs Dist Int Ext) {init : S}
@@ -641,40 +942,15 @@ theorem close_contract_viable {S Obs Dist Int Ext Env : Type}
     (init_margin : ∀ k, x_crit k + c.eta init * (c.preCapExt k + envCap k) ≤ x₀ k) :
     closedInv c envCap x_crit (x₀, init) ∧
     Viability.Certificate (closedProcess C c obs channel G envDraw jointAdm)
-      (closedGuard C c x_crit) (closedInv c envCap x_crit) := by
-  refine ⟨⟨c.init_in, init_margin⟩, Viability.certificate_disturbed_iff.mpr ⟨?_, ?_⟩⟩
-  · intro st ⟨hK, margin⟩
-    exact ⟨fun k => Nat.le_trans (Nat.le_add_right _ _) (margin k), c.cert.within st.2 hK⟩
-  · intro st m adm ⟨hK, margin⟩
-    obtain ⟨x, s⟩ := st
-    obtain ⟨env, dist⟩ := m
-    obtain ⟨envOk, tolOk⟩ := adm
-    let o := obs x
-    let al := channel (C.emitAlarm s o) (C.silenceLoad s) env
-    let H := fun k => C.drawExt s k + envDraw env k
-    let s' := C.next s (o, al) dist
-    have wS := c.cert.within s hK
-    have hK' : c.K s' := c.cert.closed s ((o, al), dist) s' ⟨tolOk (o, al), rfl⟩ hK
-    have H_le_pre : ∀ k, H k ≤ c.preCapExt k + envCap k := fun k =>
-      Nat.add_le_add (wS.2.1 k) (env_within env envOk k)
-    refine ⟨hK', fun k => ?_⟩
-    refine substrate_margin_step G_rises H_le_pre (c.eta_bound s' hK') post_viable warn_margin margin k ?_
-    intro below
-    have emitTrue : C.emitAlarm s o = true := c.emits_on_warn s o hK (obs_detects x k below)
-    have alTrue : al = true := by
+      (closedGuard C c x_crit) (closedInv c envCap x_crit) :=
+  close_contract_with_viable C c obs
+    (fun s o env => channel (C.emitAlarm s o) (C.silenceLoad s) env) G envDraw envCap jointAdm
+    env_within x_crit warnLevel H_safe x₀ obs_detects
+    (fun s o env envOk hK hWarn => by
       show channel (C.emitAlarm s o) (C.silenceLoad s) env = true
-      rw [emitTrue]
-      exact channel_fires (C.silenceLoad s) env envOk wS.2.2.1
-    refine ⟨fun h0 => ?_, fun pos => ?_⟩
-    · have hEta0' : c.eta s' = 0 := by
-        show c.eta (C.next s (o, al) dist) = 0
-        rw [alTrue]
-        exact c.eta_alarm_zero s o dist (tolOk (o, true)) hK h0
-      exact ⟨hEta0', fun k' =>
-        Nat.le_trans (Nat.add_le_add ((wS.2.2.2 h0).2.2 k') (env_within env envOk k')) (post_budget k')⟩
-    · show c.eta (C.next s (o, al) dist) + 1 ≤ c.eta s
-      rw [alTrue]
-      exact c.eta_alarm_step s o dist (tolOk (o, true)) hK pos
+      rw [c.emits_on_warn s o hK hWarn]
+      exact channel_fires (C.silenceLoad s) env envOk (c.cert.within s hK).2.2.1)
+    G_rises post_viable post_budget warn_margin init_margin
 
 theorem close_contract_kernel {S Obs Dist Int Ext Env : Type}
     (C : OpenComponent S Obs Dist Int Ext) {init : S}
@@ -728,10 +1004,10 @@ theorem compose_close_interchange
       RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H_safe x_crit k)
     (post_budget : ∀ k, (cA.postBudgetExt k + cB.postBudgetExt k) + envCap k ≤ H_safe k)
     (warn_margin : ∀ k, x_crit k +
-      (AdaptiveLoops.natMax cA.maxLag cB.maxLag + 1) *
+      (CoreHelpers.natMax cA.maxLag cB.maxLag + 1) *
         ((cA.preCapExt k + cB.preCapExt k) + envCap k) ≤ warnLevel k)
     (init_margin : ∀ k, x_crit k +
-      AdaptiveLoops.natMax (cA.eta init₁) (cB.eta init₂) *
+      CoreHelpers.natMax (cA.eta init₁) (cB.eta init₂) *
         ((cA.preCapExt k + cB.preCapExt k) + envCap k) ≤ x₀ k) :
     Viability.Kernel
       (closedProcess (OpenComponent.compose A B) (composeContract cA cB)
@@ -759,34 +1035,9 @@ theorem sharedG_rises :
 
 /-- A simple open component that ignores external alarms when blind to the shared site and always
 draws `1` unit (`postBudgetExt = 1` solo-viable against renewal `1`). -/
-def blindDrawer : OpenComponent Unit Unit Unit Empty Unit where
-  next _ _ _ := ()
-  drawInt _ e := Empty.elim e
-  drawExt _ _ := 1
-  emitAlarm _ _ := false
-  silenceLoad _ := 0
-  favours _ := False
+def blindDrawer : OpenComponent Unit Unit Unit Empty Unit := constDrawerComponent 1
 
-def blindContract : InterfaceContract blindDrawer () where
-  tol _ _ := True
-  warnObs _ := False
-  preCapInt e := Empty.elim e
-  preCapExt _ := 1
-  postBudgetInt e := Empty.elim e
-  postBudgetExt _ := 1
-  maxSilence := 0
-  maxLag := 0
-  K _ := True
-  eta _ := 0
-  init_in := trivial
-  cert := Viability.certificate_disturbed_iff.mpr
-    ⟨fun _ _ => ⟨fun e => Empty.elim e, fun _ => Nat.le_refl 1, Nat.le_refl 0,
-      fun _ => ⟨fun f => f, fun e => Empty.elim e, fun _ => Nat.le_refl 1⟩⟩,
-     fun _ _ _ _ => trivial⟩
-  eta_bound _ _ := Nat.le_refl 0
-  emits_on_warn _ _ _ f := False.elim f
-  eta_alarm_step _ _ _ _ _ pos := absurd pos (Nat.lt_irrefl 0)
-  eta_alarm_zero _ _ _ _ _ _ := rfl
+def blindContract : InterfaceContract blindDrawer () := constDrawerContract 1
 
 def blindStep :=
   closedStep blindDrawer (fun _ => ()) (fun (_ : Bool) (_ : Nat) (_ : Unit) => false) sharedG
@@ -910,10 +1161,10 @@ theorem replace_left_viable
       RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H_safe x_crit k)
     (post_budget : ∀ k, (cA.postBudgetExt k + cB.postBudgetExt k) + envCap k ≤ H_safe k)
     (warn_margin : ∀ k, x_crit k +
-      (AdaptiveLoops.natMax cA.maxLag cB.maxLag + 1) *
+      (CoreHelpers.natMax cA.maxLag cB.maxLag + 1) *
         ((cA.preCapExt k + cB.preCapExt k) + envCap k) ≤ warnLevel k)
     (init_margin : ∀ k, x_crit k +
-      AdaptiveLoops.natMax (cA.eta init₁) (cB.eta init₂) *
+      CoreHelpers.natMax (cA.eta init₁) (cB.eta init₂) *
         ((cA.preCapExt k + cB.preCapExt k) + envCap k) ≤ x₀ k) :
     Viability.Kernel
       (closedProcess (OpenComponent.compose A' B) (composeContract cA' cB)
@@ -933,26 +1184,624 @@ theorem replace_left_viable
       (Nat.add_le_add_right (Nat.add_le_add_right (refines.postBudgetExt_le k) _) _)
       (post_budget k)
   · intro k
-    have lagLe : AdaptiveLoops.natMax cA'.maxLag cB.maxLag + 1 ≤
-        AdaptiveLoops.natMax cA.maxLag cB.maxLag + 1 :=
+    have lagLe : CoreHelpers.natMax cA'.maxLag cB.maxLag + 1 ≤
+        CoreHelpers.natMax cA.maxLag cB.maxLag + 1 :=
       Nat.succ_le_succ
-        (AdaptiveLoops.natMax_le
-          (Nat.le_trans refines.maxLag_le (AdaptiveLoops.le_natMax_left _ _))
-          (AdaptiveLoops.le_natMax_right _ _))
+        (CoreHelpers.natMax_le
+          (Nat.le_trans refines.maxLag_le (CoreHelpers.le_natMax_left _ _))
+          (CoreHelpers.le_natMax_right _ _))
     have capLe : (cA'.preCapExt k + cB.preCapExt k) + envCap k ≤
         (cA.preCapExt k + cB.preCapExt k) + envCap k :=
       Nat.add_le_add_right (Nat.add_le_add_right (refines.preCapExt_le k) _) _
     exact Nat.le_trans (Nat.add_le_add_left (Nat.mul_le_mul lagLe capLe) _) (warn_margin k)
   · intro k
-    have etaLe : AdaptiveLoops.natMax (cA'.eta init₁') (cB.eta init₂) ≤
-        AdaptiveLoops.natMax (cA.eta init₁) (cB.eta init₂) :=
-      AdaptiveLoops.natMax_le
-        (Nat.le_trans refines.init_eta_le (AdaptiveLoops.le_natMax_left _ _))
-        (AdaptiveLoops.le_natMax_right _ _)
+    have etaLe : CoreHelpers.natMax (cA'.eta init₁') (cB.eta init₂) ≤
+        CoreHelpers.natMax (cA.eta init₁) (cB.eta init₂) :=
+      CoreHelpers.natMax_le
+        (Nat.le_trans refines.init_eta_le (CoreHelpers.le_natMax_left _ _))
+        (CoreHelpers.le_natMax_right _ _)
     have capLe : (cA'.preCapExt k + cB.preCapExt k) + envCap k ≤
         (cA.preCapExt k + cB.preCapExt k) + envCap k :=
       Nat.add_le_add_right (Nat.add_le_add_right (refines.preCapExt_le k) _) _
     exact Nat.le_trans (Nat.add_le_add_left (Nat.mul_le_mul etaLe capLe) _) (init_margin k)
+
+/-! ### Algebraic Transport, Right Replacement, Boundary Hiding & Right-Associated List Composition -/
+
+/-- Constructive commutativity equivalence `A ⊕ B ≃ B ⊕ A` (`0` axioms). -/
+def composeCommEquiv
+    {S₁ S₂ Obs₁ Obs₂ Dist₁ Dist₂ Int₁ Int₂ Ext : Type}
+    (A : OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext)
+    (B : OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext) :
+    ComponentEquiv (OpenComponent.compose A B) (OpenComponent.compose B A) where
+  toS p := (p.2, p.1)
+  invS p := (p.2, p.1)
+  leftS _ := rfl
+  rightS _ := rfl
+  toObs o := (o.2, o.1)
+  invObs o := (o.2, o.1)
+  leftObs _ := rfl
+  rightObs _ := rfl
+  toDist d := (d.2, d.1)
+  invDist d := (d.2, d.1)
+  leftDist _ := rfl
+  rightDist _ := rfl
+  toInt
+    | .inl j₁ => .inr j₁
+    | .inr j₂ => .inl j₂
+  invInt
+    | .inl j₂ => .inr j₂
+    | .inr j₁ => .inl j₁
+  leftInt
+    | .inl _ => rfl
+    | .inr _ => rfl
+  rightInt
+    | .inl _ => rfl
+    | .inr _ => rfl
+  comm_next _ _ _ _ := rfl
+  comm_drawInt _
+    | .inl _ => rfl
+    | .inr _ => rfl
+  comm_drawExt s k := Nat.add_comm (A.drawExt s.1 k) (B.drawExt s.2 k)
+  comm_emitAlarm s oa := by
+    show (A.emitAlarm s.1 oa.1 || B.emitAlarm s.2 oa.2) =
+      (B.emitAlarm s.2 oa.2 || A.emitAlarm s.1 oa.1)
+    cases A.emitAlarm s.1 oa.1 <;> cases B.emitAlarm s.2 oa.2 <;> rfl
+  comm_silenceLoad s := Nat.add_comm (A.silenceLoad s.1) (B.silenceLoad s.2)
+  comm_favours _ :=
+    ⟨fun h => match h with
+       | .inl a => .inr a
+       | .inr b => .inl b,
+     fun h => match h with
+       | .inl b => .inr b
+       | .inr a => .inl a⟩
+
+/-- Constructive contract compatibility across a `ComponentEquiv` (`0` `propext`). -/
+structure ContractEquiv
+    {S₁ S₂ Obs₁ Obs₂ Dist₁ Dist₂ Int₁ Int₂ Ext : Type}
+    {A : OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext}
+    {B : OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext}
+    {init₁ : S₁} {init₂ : S₂}
+    (E : ComponentEquiv A B)
+    (cA : InterfaceContract A init₁)
+    (cB : InterfaceContract B init₂) : Prop where
+  init_eq : E.toS init₁ = init₂
+  tol_to : ∀ o al d, cA.tol (o, al) d → cB.tol (E.toObs o, al) (E.toDist d)
+  tol_inv : ∀ o al d, cB.tol (o, al) d → cA.tol (E.invObs o, al) (E.invDist d)
+  warn_to : ∀ o, cA.warnObs o → cB.warnObs (E.toObs o)
+  warn_inv : ∀ o, cB.warnObs o → cA.warnObs (E.invObs o)
+  preCapInt_eq : ∀ j, cA.preCapInt j = cB.preCapInt (E.toInt j)
+  preCapExt_eq : ∀ k, cA.preCapExt k = cB.preCapExt k
+  postCapInt_eq : ∀ j, cA.postBudgetInt j = cB.postBudgetInt (E.toInt j)
+  postCapExt_eq : ∀ k, cA.postBudgetExt k = cB.postBudgetExt k
+  maxSilence_eq : cA.maxSilence = cB.maxSilence
+  maxLag_eq : cA.maxLag = cB.maxLag
+  K_to : ∀ s, cA.K s → cB.K (E.toS s)
+  K_inv : ∀ s, cB.K s → cA.K (E.invS s)
+  eta_eq : ∀ s, cA.eta s = cB.eta (E.toS s)
+
+/-- Associativity of `composeContract` along `composeAssocEquiv`. -/
+theorem composeAssocContractEquiv
+    {S₁ S₂ S₃ Obs₁ Obs₂ Obs₃ Dist₁ Dist₂ Dist₃ Int₁ Int₂ Int₃ Ext : Type}
+    {A : OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext}
+    {B : OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext}
+    {C : OpenComponent S₃ Obs₃ Dist₃ Int₃ Ext}
+    {init₁ : S₁} {init₂ : S₂} {init₃ : S₃}
+    (cA : InterfaceContract A init₁)
+    (cB : InterfaceContract B init₂)
+    (cC : InterfaceContract C init₃) :
+    ContractEquiv
+      (composeAssocEquiv A B C)
+      (composeContract (composeContract cA cB) cC)
+      (composeContract cA (composeContract cB cC)) where
+  init_eq := rfl
+  tol_to _ _ _ h := ⟨h.1.1, ⟨h.1.2, h.2⟩⟩
+  tol_inv _ _ _ h := ⟨⟨h.1, h.2.1⟩, h.2.2⟩
+  warn_to _
+    | .inl (.inl w₁) => .inl w₁
+    | .inl (.inr w₂) => .inr (.inl w₂)
+    | .inr w₃ => .inr (.inr w₃)
+  warn_inv _
+    | .inl w₁ => .inl (.inl w₁)
+    | .inr (.inl w₂) => .inl (.inr w₂)
+    | .inr (.inr w₃) => .inr w₃
+  preCapInt_eq
+    | .inl (.inl _) => rfl
+    | .inl (.inr _) => rfl
+    | .inr _ => rfl
+  preCapExt_eq k := Nat.add_assoc (cA.preCapExt k) (cB.preCapExt k) (cC.preCapExt k)
+  postCapInt_eq
+    | .inl (.inl _) => rfl
+    | .inl (.inr _) => rfl
+    | .inr _ => rfl
+  postCapExt_eq k := Nat.add_assoc (cA.postBudgetExt k) (cB.postBudgetExt k) (cC.postBudgetExt k)
+  maxSilence_eq := Nat.add_assoc cA.maxSilence cB.maxSilence cC.maxSilence
+  maxLag_eq := CoreHelpers.natMax_assoc cA.maxLag cB.maxLag cC.maxLag
+  K_to _ h := ⟨h.1.1, ⟨h.1.2, h.2⟩⟩
+  K_inv _ h := ⟨⟨h.1, h.2.1⟩, h.2.2⟩
+  eta_eq s := CoreHelpers.natMax_assoc (cA.eta s.1.1) (cB.eta s.1.2) (cC.eta s.2)
+
+/-- Commutativity of `composeContract` along `composeCommEquiv`. -/
+theorem composeCommContractEquiv
+    {S₁ S₂ Obs₁ Obs₂ Dist₁ Dist₂ Int₁ Int₂ Ext : Type}
+    {A : OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext}
+    {B : OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext}
+    {init₁ : S₁} {init₂ : S₂}
+    (cA : InterfaceContract A init₁)
+    (cB : InterfaceContract B init₂) :
+    ContractEquiv
+      (composeCommEquiv A B)
+      (composeContract cA cB)
+      (composeContract cB cA) where
+  init_eq := rfl
+  tol_to _ _ _ h := ⟨h.2, h.1⟩
+  tol_inv _ _ _ h := ⟨h.2, h.1⟩
+  warn_to _
+    | .inl w₁ => .inr w₁
+    | .inr w₂ => .inl w₂
+  warn_inv _
+    | .inl w₂ => .inr w₂
+    | .inr w₁ => .inl w₁
+  preCapInt_eq
+    | .inl _ => rfl
+    | .inr _ => rfl
+  preCapExt_eq k := Nat.add_comm (cA.preCapExt k) (cB.preCapExt k)
+  postCapInt_eq
+    | .inl _ => rfl
+    | .inr _ => rfl
+  postCapExt_eq k := Nat.add_comm (cA.postBudgetExt k) (cB.postBudgetExt k)
+  maxSilence_eq := Nat.add_comm cA.maxSilence cB.maxSilence
+  maxLag_eq := CoreHelpers.natMax_comm cA.maxLag cB.maxLag
+  K_to _ h := ⟨h.2, h.1⟩
+  K_inv _ h := ⟨h.2, h.1⟩
+  eta_eq s := CoreHelpers.natMax_comm (cA.eta s.1) (cB.eta s.2)
+
+/-- Right-component heterogeneous replacement (`A ⊕_K B ↝ A ⊕_K B'`). -/
+theorem replace_right_viable
+    {S₁ S₂ S₂' Obs₁ Obs₂ Obs₂' Dist₁ Dist₂ Dist₂' Int₁ Int₂ Int₂' Ext Env : Type}
+    (A : OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext)
+    (B : OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext)
+    (B' : OpenComponent S₂' Obs₂' Dist₂' Int₂' Ext)
+    {init₁ : S₁} {init₂ : S₂} {init₂' : S₂'}
+    (cA : InterfaceContract A init₁)
+    (cB : InterfaceContract B init₂)
+    (cB' : InterfaceContract B' init₂')
+    (obs₁ : (Ext → Nat) → Obs₁)
+    (obs₂ : (Ext → Nat) → Obs₂)
+    (obs₂' : (Ext → Nat) → Obs₂')
+    (channel : Bool → Nat → Env → Bool)
+    (G : Ext → (Ext → Nat) → Nat)
+    (envDraw : Env → Ext → Nat) (envCap : Ext → Nat) (jointAdm : Env → Prop)
+    (env_within : ∀ env, jointAdm env → ∀ k, envDraw env k ≤ envCap k)
+    (x_crit warnLevel H_safe x₀ : Ext → Nat)
+    (refines : ContractRefines cB cB' obs₂ obs₂' warnLevel)
+    (obs_detects_orig : ∀ x k, x k < warnLevel k → cA.warnObs (obs₁ x) ∨ cB.warnObs (obs₂ x))
+    (channel_fires : ∀ load env, jointAdm env → load ≤ cA.maxSilence + cB.maxSilence →
+      channel true load env = true)
+    (G_rises : ∀ k, RegimeMargin.Coupled.Indexed.Rises RegimeMargin.Drawn.whole (G k))
+    (post_viable : ∀ k, x_crit k ≤
+      RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H_safe x_crit k)
+    (post_cap : ∀ k, (cA.postBudgetExt k + cB.postBudgetExt k) + envCap k ≤ H_safe k)
+    (warn_margin : ∀ k, x_crit k +
+      (CoreHelpers.natMax cA.maxLag cB.maxLag + 1) *
+        ((cA.preCapExt k + cB.preCapExt k) + envCap k) ≤ warnLevel k)
+    (init_margin : ∀ k, x_crit k +
+      CoreHelpers.natMax (cA.eta init₁) (cB.eta init₂) *
+        ((cA.preCapExt k + cB.preCapExt k) + envCap k) ≤ x₀ k) :
+    Viability.Kernel
+      (closedProcess (OpenComponent.compose A B') (composeContract cA cB')
+        (fun x => (obs₁ x, obs₂' x)) channel G envDraw jointAdm)
+      (closedGuard (OpenComponent.compose A B') (composeContract cA cB') x_crit)
+      (x₀, (init₁, init₂')) := by
+  refine compose_close_interchange A B' cA cB' obs₁ obs₂' channel G envDraw
+    envCap jointAdm env_within x_crit warnLevel H_safe x₀ ?_ ?_ G_rises post_viable ?_ ?_ ?_
+  · intro x k lt
+    cases obs_detects_orig x k lt with
+    | inl w₁ => exact Or.inl w₁
+    | inr w₂ => exact Or.inr (refines.warn_preserved x w₂ ⟨k, lt⟩)
+  · intro load env adm le
+    exact channel_fires load env adm (Nat.le_trans le (Nat.add_le_add_left refines.maxSilence_le _))
+  · intro k
+    exact Nat.le_trans
+      (Nat.add_le_add_right (Nat.add_le_add_left (refines.postBudgetExt_le k) _) _)
+      (post_cap k)
+  · intro k
+    have lagLe : CoreHelpers.natMax cA.maxLag cB'.maxLag + 1 ≤
+        CoreHelpers.natMax cA.maxLag cB.maxLag + 1 :=
+      Nat.succ_le_succ
+        (CoreHelpers.natMax_le
+          (CoreHelpers.le_natMax_left _ _)
+          (Nat.le_trans refines.maxLag_le (CoreHelpers.le_natMax_right _ _)))
+    have capLe : (cA.preCapExt k + cB'.preCapExt k) + envCap k ≤
+        (cA.preCapExt k + cB.preCapExt k) + envCap k :=
+      Nat.add_le_add_right (Nat.add_le_add_left (refines.preCapExt_le k) _) _
+    exact Nat.le_trans (Nat.add_le_add_left (Nat.mul_le_mul lagLe capLe) _) (warn_margin k)
+  · intro k
+    have etaLe : CoreHelpers.natMax (cA.eta init₁) (cB'.eta init₂') ≤
+        CoreHelpers.natMax (cA.eta init₁) (cB.eta init₂) :=
+      CoreHelpers.natMax_le
+        (CoreHelpers.le_natMax_left _ _)
+        (Nat.le_trans refines.init_eta_le (CoreHelpers.le_natMax_right _ _))
+    have capLe : (cA.preCapExt k + cB'.preCapExt k) + envCap k ≤
+        (cA.preCapExt k + cB.preCapExt k) + envCap k :=
+      Nat.add_le_add_right (Nat.add_le_add_left (refines.preCapExt_le k) _) _
+    exact Nat.le_trans (Nat.add_le_add_left (Nat.mul_le_mul etaLe capLe) _) (init_margin k)
+
+/-- Lift `ContractRefines` across the left slot of `composeContract`. -/
+theorem contractRefines_compose_left
+    {S₁ S₁' S₂ Obs₁ Obs₁' Obs₂ Dist₁ Dist₁' Dist₂ Int₁ Int₁' Int₂ Ext : Type}
+    {A : OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext}
+    {A' : OpenComponent S₁' Obs₁' Dist₁' Int₁' Ext}
+    {B : OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext}
+    {init₁ : S₁} {init₁' : S₁'} {init₂ : S₂}
+    {cA : InterfaceContract A init₁}
+    {cA' : InterfaceContract A' init₁'}
+    (cB : InterfaceContract B init₂)
+    {obs₁ : (Ext → Nat) → Obs₁} {obs₁' : (Ext → Nat) → Obs₁'}
+    (obs₂ : (Ext → Nat) → Obs₂) {warnLevel : Ext → Nat}
+    (ref : ContractRefines cA cA' obs₁ obs₁' warnLevel) :
+    ContractRefines
+      (composeContract cA cB)
+      (composeContract cA' cB)
+      (fun x => (obs₁ x, obs₂ x)) (fun x => (obs₁' x, obs₂ x)) warnLevel where
+  preCapExt_le k := Nat.add_le_add_right (ref.preCapExt_le k) (cB.preCapExt k)
+  postBudgetExt_le k := Nat.add_le_add_right (ref.postBudgetExt_le k) (cB.postBudgetExt k)
+  maxSilence_le := Nat.add_le_add_right ref.maxSilence_le cB.maxSilence
+  maxLag_le := CoreHelpers.natMax_le
+    (Nat.le_trans ref.maxLag_le (CoreHelpers.le_natMax_left _ _))
+    (CoreHelpers.le_natMax_right _ _)
+  init_eta_le := CoreHelpers.natMax_le
+    (Nat.le_trans ref.init_eta_le (CoreHelpers.le_natMax_left _ _))
+    (CoreHelpers.le_natMax_right _ _)
+  warn_preserved x hw hlt := match hw with
+    | .inl w₁ => Or.inl (ref.warn_preserved x w₁ hlt)
+    | .inr w₂ => Or.inr w₂
+
+/-- Lift `ContractRefines` across the right slot of `composeContract`. -/
+theorem contractRefines_compose_right
+    {S₁ S₂ S₂' Obs₁ Obs₂ Obs₂' Dist₁ Dist₂ Dist₂' Int₁ Int₂ Int₂' Ext : Type}
+    {A : OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext}
+    {B : OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext}
+    {B' : OpenComponent S₂' Obs₂' Dist₂' Int₂' Ext}
+    {init₁ : S₁} {init₂ : S₂} {init₂' : S₂'}
+    (cA : InterfaceContract A init₁)
+    {cB : InterfaceContract B init₂}
+    {cB' : InterfaceContract B' init₂'}
+    (obs₁ : (Ext → Nat) → Obs₁)
+    {obs₂ : (Ext → Nat) → Obs₂} {obs₂' : (Ext → Nat) → Obs₂'} {warnLevel : Ext → Nat}
+    (ref : ContractRefines cB cB' obs₂ obs₂' warnLevel) :
+    ContractRefines
+      (composeContract cA cB)
+      (composeContract cA cB')
+      (fun x => (obs₁ x, obs₂ x)) (fun x => (obs₁ x, obs₂' x)) warnLevel where
+  preCapExt_le k := Nat.add_le_add_left (ref.preCapExt_le k) (cA.preCapExt k)
+  postBudgetExt_le k := Nat.add_le_add_left (ref.postBudgetExt_le k) (cA.postBudgetExt k)
+  maxSilence_le := Nat.add_le_add_left ref.maxSilence_le cA.maxSilence
+  maxLag_le := CoreHelpers.natMax_le
+    (CoreHelpers.le_natMax_left _ _)
+    (Nat.le_trans ref.maxLag_le (CoreHelpers.le_natMax_right _ _))
+  init_eta_le := CoreHelpers.natMax_le
+    (CoreHelpers.le_natMax_left _ _)
+    (Nat.le_trans ref.init_eta_le (CoreHelpers.le_natMax_right _ _))
+  warn_preserved x hw hlt := match hw with
+    | .inl w₁ => Or.inl w₁
+    | .inr w₂ => Or.inr (ref.warn_preserved x w₂ hlt)
+
+/-- Augment any `(C, c)` on `Ext := Unit` with an exposed coupled site `.inr ()` whose draw switches
+from `preHide` (`0 < c.eta s`) to `postHide` (`c.eta s = 0`) cleanly inside `c`'s contract. -/
+def withHiddenSite {S Obs Dist Int : Type}
+    (C : OpenComponent S Obs Dist Int Unit)
+    {init : S} (c : InterfaceContract C init)
+    (preHide postHide : Nat) :
+    OpenComponent S Obs Dist Int (Sum Unit Unit) where
+  next := C.next
+  drawInt := C.drawInt
+  drawExt s
+    | .inl () => C.drawExt s ()
+    | .inr () => match c.eta s with
+      | 0 => postHide
+      | _ + 1 => preHide
+  emitAlarm := C.emitAlarm
+  silenceLoad := C.silenceLoad
+  favours := C.favours
+
+/-- Assume-guarantee `InterfaceContract` for `withHiddenSite` (`0` axioms). -/
+def withHiddenSiteContract {S Obs Dist Int : Type}
+    {C : OpenComponent S Obs Dist Int Unit}
+    {init : S} (c : InterfaceContract C init)
+    (preHide postHide : Nat) (hPost : postHide ≤ preHide) :
+    InterfaceContract (withHiddenSite C c preHide postHide) init where
+  tol := c.tol
+  warnObs := c.warnObs
+  preCapInt := c.preCapInt
+  preCapExt
+    | .inl () => c.preCapExt ()
+    | .inr () => preHide
+  postBudgetInt := c.postBudgetInt
+  postBudgetExt
+    | .inl () => c.postBudgetExt ()
+    | .inr () => postHide
+  maxSilence := c.maxSilence
+  maxLag := c.maxLag
+  K := c.K
+  eta := c.eta
+  init_in := c.init_in
+  cert := Viability.certificate_disturbed_iff.mpr
+    ⟨fun s hs =>
+      let w := c.cert.within s hs
+      ⟨w.1,
+       fun k => match k with
+         | .inl () => w.2.1 ()
+         | .inr () => by
+           show (match c.eta s with | 0 => postHide | _ + 1 => preHide) ≤ preHide
+           cases c.eta s with
+           | zero => exact hPost
+           | succ _ => exact Nat.le_refl preHide,
+       w.2.2.1,
+       fun h0 =>
+         let p := w.2.2.2 h0
+         ⟨p.1, p.2.1,
+          fun k => match k with
+            | .inl () => p.2.2 ()
+            | .inr () => by
+              show (match c.eta s with | 0 => postHide | _ + 1 => preHide) ≤ postHide
+              rw [h0]
+              exact Nat.le_refl postHide⟩⟩,
+     fun s m adm hs => c.cert.closed s m _ ⟨adm, rfl⟩ hs⟩
+  eta_bound := c.eta_bound
+  emits_on_warn := c.emits_on_warn
+  eta_alarm_step := c.eta_alarm_step
+  eta_alarm_zero := c.eta_alarm_zero
+
+/-- Indexed carrier for right-associated list composition over uniform agent types. -/
+def ListCarrier {α : Type} (T : Type) : List α → Type
+  | [] => T
+  | _ :: rest => T × ListCarrier T rest
+
+/-- Indexed private-port carrier for right-associated list composition over uniform `Int`. -/
+def ListIntCarrier {α : Type} (I : Type) : List α → Type
+  | [] => I
+  | _ :: rest => Sum I (ListIntCarrier I rest)
+
+/-- Right-associated initial state tuple over a non-empty agent list `head :: tail`. -/
+def composeListInit {α S : Type} (init : α → S) (head : α) :
+    (tail : List α) → ListCarrier S tail
+  | [] => init head
+  | next :: rest => (init head, composeListInit init next rest)
+
+/-- Right-associated broadcast observation map over `tail`. -/
+def composeListObs {α Obs Ext : Type} (obsFn : (Ext → Nat) → Obs) :
+    (tail : List α) → (Ext → Nat) → ListCarrier Obs tail
+  | [], x => obsFn x
+  | _ :: rest, x => (obsFn x, composeListObs obsFn rest x)
+
+/-- Right-associated `OpenComponent` fold over a non-empty agent list `head :: tail`. -/
+def composeListComponent {α S Obs Dist Int Ext : Type}
+    (comp : α → OpenComponent S Obs Dist Int Ext) (head : α) :
+    (tail : List α) →
+    OpenComponent (ListCarrier S tail) (ListCarrier Obs tail) (ListCarrier Dist tail)
+      (ListIntCarrier Int tail) Ext
+  | [] => comp head
+  | next :: rest => OpenComponent.compose (comp head) (composeListComponent comp next rest)
+
+/-- Right-associated `InterfaceContract` fold over a non-empty agent list `head :: tail`. -/
+def composeListContract {α S Obs Dist Int Ext : Type}
+    {comp : α → OpenComponent S Obs Dist Int Ext} {init : α → S}
+    (contract : (i : α) → InterfaceContract (comp i) (init i)) (head : α) :
+    (tail : List α) →
+    InterfaceContract (composeListComponent comp head tail) (composeListInit init head tail)
+  | [] => contract head
+  | next :: rest => composeContract (contract head) (composeListContract contract next rest)
+
+/-- Recursive sum of a scalar projection over a non-empty list `head :: tail`. -/
+def listSum {α : Type} (proj : α → Nat) (head : α) : List α → Nat
+  | [] => proj head
+  | next :: rest => proj head + listSum proj next rest
+
+/-- Recursive maximum of a scalar projection over a non-empty list `head :: tail`. -/
+def listMax {α : Type} (proj : α → Nat) (head : α) : List α → Nat
+  | [] => proj head
+  | next :: rest => CoreHelpers.natMax (proj head) (listMax proj next rest)
+
+theorem composeList_preCapExt_eq_sum {α S Obs Dist Int Ext : Type}
+    {comp : α → OpenComponent S Obs Dist Int Ext} {init : α → S}
+    (contract : (i : α) → InterfaceContract (comp i) (init i))
+    (k : Ext) :
+    ∀ (tail : List α) (head : α),
+      (composeListContract contract head tail).preCapExt k =
+        listSum (fun i => (contract i).preCapExt k) head tail
+  | [], _ => rfl
+  | next :: rest, head => by
+    show (contract head).preCapExt k + (composeListContract contract next rest).preCapExt k =
+      (contract head).preCapExt k + listSum (fun i => (contract i).preCapExt k) next rest
+    rw [composeList_preCapExt_eq_sum contract k rest next]
+
+theorem composeList_postBudgetExt_eq_sum {α S Obs Dist Int Ext : Type}
+    {comp : α → OpenComponent S Obs Dist Int Ext} {init : α → S}
+    (contract : (i : α) → InterfaceContract (comp i) (init i))
+    (k : Ext) :
+    ∀ (tail : List α) (head : α),
+      (composeListContract contract head tail).postBudgetExt k =
+        listSum (fun i => (contract i).postBudgetExt k) head tail
+  | [], _ => rfl
+  | next :: rest, head => by
+    show (contract head).postBudgetExt k + (composeListContract contract next rest).postBudgetExt k =
+      (contract head).postBudgetExt k + listSum (fun i => (contract i).postBudgetExt k) next rest
+    rw [composeList_postBudgetExt_eq_sum contract k rest next]
+
+theorem composeList_maxSilence_eq_sum {α S Obs Dist Int Ext : Type}
+    {comp : α → OpenComponent S Obs Dist Int Ext} {init : α → S}
+    (contract : (i : α) → InterfaceContract (comp i) (init i)) :
+    ∀ (tail : List α) (head : α),
+      (composeListContract contract head tail).maxSilence =
+        listSum (fun i => (contract i).maxSilence) head tail
+  | [], _ => rfl
+  | next :: rest, head => by
+    show (contract head).maxSilence + (composeListContract contract next rest).maxSilence =
+      (contract head).maxSilence + listSum (fun i => (contract i).maxSilence) next rest
+    rw [composeList_maxSilence_eq_sum contract rest next]
+
+theorem composeList_maxLag_eq_max {α S Obs Dist Int Ext : Type}
+    {comp : α → OpenComponent S Obs Dist Int Ext} {init : α → S}
+    (contract : (i : α) → InterfaceContract (comp i) (init i)) :
+    ∀ (tail : List α) (head : α),
+      (composeListContract contract head tail).maxLag =
+        listMax (fun i => (contract i).maxLag) head tail
+  | [], _ => rfl
+  | next :: rest, head => by
+    show CoreHelpers.natMax (contract head).maxLag (composeListContract contract next rest).maxLag =
+      CoreHelpers.natMax (contract head).maxLag (listMax (fun i => (contract i).maxLag) next rest)
+    rw [composeList_maxLag_eq_max contract rest next]
+
+theorem composeList_eta_eq_max {α S Obs Dist Int Ext : Type}
+    {comp : α → OpenComponent S Obs Dist Int Ext} {init : α → S}
+    (contract : (i : α) → InterfaceContract (comp i) (init i)) :
+    ∀ (tail : List α) (head : α),
+      (composeListContract contract head tail).eta (composeListInit init head tail) =
+        listMax (fun i => (contract i).eta (init i)) head tail
+  | [], _ => rfl
+  | next :: rest, head => by
+    show CoreHelpers.natMax ((contract head).eta (init head))
+        ((composeListContract contract next rest).eta (composeListInit init next rest)) =
+      CoreHelpers.natMax ((contract head).eta (init head))
+        (listMax (fun i => (contract i).eta (init i)) next rest)
+    rw [composeList_eta_eq_max contract rest next]
+
+theorem composeList_warnObs_of_head {α S Obs Dist Int Ext : Type}
+    {comp : α → OpenComponent S Obs Dist Int Ext} {init : α → S}
+    (contract : (i : α) → InterfaceContract (comp i) (init i))
+    {obsFn : (Ext → Nat) → Obs} {x : Ext → Nat} {head : α} :
+    ∀ (tail : List α), (contract head).warnObs (obsFn x) →
+      (composeListContract contract head tail).warnObs (composeListObs obsFn tail x)
+  | [], hw => hw
+  | _ :: _, hw => Or.inl hw
+
+/-- Generic closed-loop viability for right-associated list composition over `head :: tail`. -/
+theorem composeList_viable {α S Obs Dist Int Ext Env : Type}
+    (comp : α → OpenComponent S Obs Dist Int Ext) (init : α → S)
+    (contract : (i : α) → InterfaceContract (comp i) (init i))
+    (head : α) (tail : List α)
+    (obsFn : (Ext → Nat) → Obs)
+    (channel : Bool → Nat → Env → Bool)
+    (G : Ext → (Ext → Nat) → Nat)
+    (envDraw : Env → Ext → Nat) (envCap : Ext → Nat) (jointAdm : Env → Prop)
+    (env_within : ∀ env, jointAdm env → ∀ k, envDraw env k ≤ envCap k)
+    (x_crit warnLevel H_safe x₀ : Ext → Nat)
+    (obs_detects : ∀ x k, x k < warnLevel k → (contract head).warnObs (obsFn x))
+    (channel_fires : ∀ load env, jointAdm env →
+      load ≤ listSum (fun i => (contract i).maxSilence) head tail →
+      channel true load env = true)
+    (G_rises : ∀ k, RegimeMargin.Coupled.Indexed.Rises RegimeMargin.Drawn.whole (G k))
+    (post_viable : ∀ k, x_crit k ≤
+      RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H_safe x_crit k)
+    (post_cap : ∀ k,
+      listSum (fun i => (contract i).postBudgetExt k) head tail + envCap k ≤ H_safe k)
+    (warn_margin : ∀ k, x_crit k +
+      (listMax (fun i => (contract i).maxLag) head tail + 1) *
+        (listSum (fun i => (contract i).preCapExt k) head tail + envCap k) ≤ warnLevel k)
+    (init_margin : ∀ k, x_crit k +
+      listMax (fun i => (contract i).eta (init i)) head tail *
+        (listSum (fun i => (contract i).preCapExt k) head tail + envCap k) ≤ x₀ k) :
+    Viability.Kernel
+      (closedProcess (composeListComponent comp head tail) (composeListContract contract head tail)
+        (composeListObs obsFn tail) channel G envDraw jointAdm)
+      (closedGuard (composeListComponent comp head tail) (composeListContract contract head tail) x_crit)
+      (x₀, composeListInit init head tail) :=
+  close_contract_kernel
+    (composeListComponent comp head tail) (composeListContract contract head tail)
+    (composeListObs obsFn tail) channel G envDraw envCap jointAdm env_within
+    x_crit warnLevel H_safe x₀
+    (fun x k lt => composeList_warnObs_of_head contract tail (obs_detects x k lt))
+    (fun load env adm hLoad =>
+      channel_fires load env adm (composeList_maxSilence_eq_sum contract tail head ▸ hLoad))
+    G_rises post_viable
+    (fun k => composeList_postBudgetExt_eq_sum contract k tail head ▸ post_cap k)
+    (fun k =>
+      (composeList_maxLag_eq_max contract tail head).symm ▸
+        ((composeList_preCapExt_eq_sum contract k tail head).symm ▸ warn_margin k))
+    (fun k =>
+      (composeList_eta_eq_max contract tail head).symm ▸
+        ((composeList_preCapExt_eq_sum contract k tail head).symm ▸ init_margin k))
+
+/-- Heterogeneous head-agent upgrade across `composeListComponent` via `ContractRefines`. -/
+theorem composeList_replace_head_viable {α S Obs Dist Int Ext Env : Type}
+    (comp : α → OpenComponent S Obs Dist Int Ext) (init : α → S)
+    (contract : (i : α) → InterfaceContract (comp i) (init i))
+    (head head' : α) (tail : List α)
+    (obsFn : (Ext → Nat) → Obs)
+    (channel : Bool → Nat → Env → Bool)
+    (G : Ext → (Ext → Nat) → Nat)
+    (envDraw : Env → Ext → Nat) (envCap : Ext → Nat) (jointAdm : Env → Prop)
+    (env_within : ∀ env, jointAdm env → ∀ k, envDraw env k ≤ envCap k)
+    (x_crit warnLevel H_safe x₀ : Ext → Nat)
+    (refines : ContractRefines (contract head) (contract head') obsFn obsFn warnLevel)
+    (obs_detects : ∀ x k, x k < warnLevel k → (contract head).warnObs (obsFn x))
+    (channel_fires : ∀ load env, jointAdm env →
+      load ≤ listSum (fun i => (contract i).maxSilence) head tail →
+      channel true load env = true)
+    (G_rises : ∀ k, RegimeMargin.Coupled.Indexed.Rises RegimeMargin.Drawn.whole (G k))
+    (post_viable : ∀ k, x_crit k ≤
+      RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H_safe x_crit k)
+    (post_cap : ∀ k,
+      listSum (fun i => (contract i).postBudgetExt k) head tail + envCap k ≤ H_safe k)
+    (warn_margin : ∀ k, x_crit k +
+      (listMax (fun i => (contract i).maxLag) head tail + 1) *
+        (listSum (fun i => (contract i).preCapExt k) head tail + envCap k) ≤ warnLevel k)
+    (init_margin : ∀ k, x_crit k +
+      listMax (fun i => (contract i).eta (init i)) head tail *
+        (listSum (fun i => (contract i).preCapExt k) head tail + envCap k) ≤ x₀ k) :
+    Viability.Kernel
+      (closedProcess (composeListComponent comp head' tail) (composeListContract contract head' tail)
+        (composeListObs obsFn tail) channel G envDraw jointAdm)
+      (closedGuard (composeListComponent comp head' tail) (composeListContract contract head' tail) x_crit)
+      (x₀, composeListInit init head' tail) := by
+  cases tail with
+  | nil =>
+    exact close_contract_kernel (comp head') (contract head') obsFn channel G envDraw envCap
+      jointAdm env_within x_crit warnLevel H_safe x₀
+      (fun x k lt => refines.warn_preserved x (obs_detects x k lt) ⟨k, lt⟩)
+      (fun load env adm hLoad => channel_fires load env adm (Nat.le_trans hLoad refines.maxSilence_le))
+      G_rises post_viable
+      (fun k => Nat.le_trans (Nat.add_le_add_right (refines.postBudgetExt_le k) _) (post_cap k))
+      (fun k => Nat.le_trans
+        (Nat.add_le_add_left (Nat.mul_le_mul (Nat.succ_le_succ refines.maxLag_le)
+          (Nat.add_le_add_right (refines.preCapExt_le k) _)) _)
+        (warn_margin k))
+      (fun k => Nat.le_trans
+        (Nat.add_le_add_left (Nat.mul_le_mul refines.init_eta_le
+          (Nat.add_le_add_right (refines.preCapExt_le k) _)) _)
+        (init_margin k))
+  | cons next rest =>
+    exact replace_left_viable
+      (comp head) (comp head') (composeListComponent comp next rest)
+      (contract head) (contract head') (composeListContract contract next rest)
+      obsFn obsFn (composeListObs obsFn rest) channel G envDraw envCap jointAdm env_within
+      x_crit warnLevel H_safe x₀ refines
+      (fun x k lt => Or.inl (obs_detects x k lt))
+      (fun load env adm hLoad => by
+        show channel true load env = true
+        exact channel_fires load env adm (by
+          change load ≤ (composeListContract contract head (next :: rest)).maxSilence at hLoad
+          rwa [← composeList_maxSilence_eq_sum contract (next :: rest) head]))
+      G_rises post_viable
+      (fun k => by
+        change (composeListContract contract head (next :: rest)).postBudgetExt k + envCap k ≤ H_safe k
+        rw [composeList_postBudgetExt_eq_sum contract k (next :: rest) head]
+        exact post_cap k)
+      (fun k => by
+        change x_crit k +
+          ((composeListContract contract head (next :: rest)).maxLag + 1) *
+            ((composeListContract contract head (next :: rest)).preCapExt k + envCap k) ≤ warnLevel k
+        rw [composeList_maxLag_eq_max contract (next :: rest) head,
+            composeList_preCapExt_eq_sum contract k (next :: rest) head]
+        exact warn_margin k)
+      (fun k => by
+        change x_crit k +
+          (composeListContract contract head (next :: rest)).eta
+              (composeListInit init head (next :: rest)) *
+            ((composeListContract contract head (next :: rest)).preCapExt k + envCap k) ≤ x₀ k
+        rw [composeList_eta_eq_max contract (next :: rest) head,
+            composeList_preCapExt_eq_sum contract k (next :: rest) head]
+        exact init_margin k)
 
 /-- **Dynamic mid-run structural rewrite process (`ReconfigProcess`)**: runs `A` on the left until
 an arbitrary live reconfiguration event `reconfig s₁'` swaps `A` out for heterogeneous `A'` while
@@ -1204,13 +2053,13 @@ theorem widened_heals_kernel :
     (fun (_ : Unit) (_ : Unit) => 0) (fun _ => 0) (fun (_ : Unit) => True)
     (fun _ _ _ => Nat.zero_le 0)
     (fun _ => 3) (fun _ => 8) (fun _ => 0) (fun _ => 6)
-    (fun x k lt => by cases k; exact Or.inl (AdaptiveLoops.natBlt_true_iff.mpr lt))
+    (fun x k lt => by cases k; exact Or.inl (CoreHelpers.natBlt_true_iff.mpr lt))
     (fun _ _ _ _ => rfl)
     gShared_rises
     (fun k => by cases k; show 3 ≤ 3 - 0 + gShared () (fun _ => 3 - 0); exact by decide)
     (fun k => by cases k; exact Nat.le_refl 0)
-    (fun k => by cases k; show 3 + (AdaptiveLoops.natMax 1 1 + 1) * (1 + 1 + 0) ≤ 8; exact by decide)
-    (fun k => by cases k; show 3 + AdaptiveLoops.natMax 1 1 * (1 + 1 + 0) ≤ 6; exact by decide)
+    (fun k => by cases k; show 3 + (CoreHelpers.natMax 1 1 + 1) * (1 + 1 + 0) ≤ 8; exact by decide)
+    (fun k => by cases k; show 3 + CoreHelpers.natMax 1 1 * (1 + 1 + 0) ≤ 6; exact by decide)
 
 end WideningWitness
 
@@ -1243,19 +2092,19 @@ def SlackDist.sum {Q₁ Q₂ : Type} (M₁ : SlackDist Q₁) (M₂ : SlackDist Q
   refl q := by show M₁.d q.1 q.1 + M₂.d q.2 q.2 = 0; rw [M₁.refl, M₂.refl]
   tri a b c :=
     Nat.le_trans (Nat.add_le_add (M₁.tri a.1 b.1 c.1) (M₂.tri a.2 b.2 c.2))
-      (Nat.le_of_eq (add_four_swap (M₁.d a.1 b.1) (M₁.d b.1 c.1) (M₂.d a.2 b.2) (M₂.d b.2 c.2)))
+      (Nat.le_of_eq (Nat.add_add_add_comm (M₁.d a.1 b.1) (M₁.d b.1 c.1) (M₂.d a.2 b.2) (M₂.d b.2 c.2)))
 
 /-- Non-inflating ($\ell_\infty$) product slack distance via `natMax`. -/
 def SlackDist.max {Q₁ Q₂ : Type} (M₁ : SlackDist Q₁) (M₂ : SlackDist Q₂) :
     SlackDist (Q₁ × Q₂) where
-  d a b := AdaptiveLoops.natMax (M₁.d a.1 b.1) (M₂.d a.2 b.2)
-  refl q := by show AdaptiveLoops.natMax (M₁.d q.1 q.1) (M₂.d q.2 q.2) = 0; rw [M₁.refl, M₂.refl]; rfl
+  d a b := CoreHelpers.natMax (M₁.d a.1 b.1) (M₂.d a.2 b.2)
+  refl q := by show CoreHelpers.natMax (M₁.d q.1 q.1) (M₂.d q.2 q.2) = 0; rw [M₁.refl, M₂.refl]; rfl
   tri a b c :=
-    AdaptiveLoops.natMax_le
+    CoreHelpers.natMax_le
       (Nat.le_trans (M₁.tri a.1 b.1 c.1)
-        (Nat.add_le_add (AdaptiveLoops.le_natMax_left _ _) (AdaptiveLoops.le_natMax_left _ _)))
+        (Nat.add_le_add (CoreHelpers.le_natMax_left _ _) (CoreHelpers.le_natMax_left _ _)))
       (Nat.le_trans (M₂.tri a.2 b.2 c.2)
-        (Nat.add_le_add (AdaptiveLoops.le_natMax_right _ _) (AdaptiveLoops.le_natMax_right _ _)))
+        (Nat.add_le_add (CoreHelpers.le_natMax_right _ _) (CoreHelpers.le_natMax_right _ _)))
 
 /-- Synchronous product process `P₁ ⊗ P₂`. -/
 def prodProcess {S₁ A₁ S₂ A₂ : Type}
@@ -1297,22 +2146,22 @@ def compose_laxSim_max
   epoch_step t s a s' ep st := ⟨sim₁.epoch_step t s.1 a.1 s'.1 ep.1 st.1,
     sim₂.epoch_step t s.2 a.2 s'.2 ep.2 st.2⟩
   epoch_proj k s ep := ⟨sim₁.epoch_proj k s.1 ep.1, sim₂.epoch_proj k s.2 ep.2⟩
-  α r := AdaptiveLoops.natMax (sim₁.α r) (sim₂.α r)
-  β r := AdaptiveLoops.natMax (sim₁.β r) (sim₂.β r)
-  α_mono le := AdaptiveLoops.natMax_le
-    (Nat.le_trans (sim₁.α_mono le) (AdaptiveLoops.le_natMax_left _ _))
-    (Nat.le_trans (sim₂.α_mono le) (AdaptiveLoops.le_natMax_right _ _))
-  β_mono le := AdaptiveLoops.natMax_le
-    (Nat.le_trans (sim₁.β_mono le) (AdaptiveLoops.le_natMax_left _ _))
-    (Nat.le_trans (sim₂.β_mono le) (AdaptiveLoops.le_natMax_right _ _))
-  β_ge_id r := Nat.le_trans (sim₁.β_ge_id r) (AdaptiveLoops.le_natMax_left _ _)
-  ε := AdaptiveLoops.natMax sim₁.ε sim₂.ε
-  η := AdaptiveLoops.natMax sim₁.η sim₂.η
+  α r := CoreHelpers.natMax (sim₁.α r) (sim₂.α r)
+  β r := CoreHelpers.natMax (sim₁.β r) (sim₂.β r)
+  α_mono le := CoreHelpers.natMax_le
+    (Nat.le_trans (sim₁.α_mono le) (CoreHelpers.le_natMax_left _ _))
+    (Nat.le_trans (sim₂.α_mono le) (CoreHelpers.le_natMax_right _ _))
+  β_mono le := CoreHelpers.natMax_le
+    (Nat.le_trans (sim₁.β_mono le) (CoreHelpers.le_natMax_left _ _))
+    (Nat.le_trans (sim₂.β_mono le) (CoreHelpers.le_natMax_right _ _))
+  β_ge_id r := Nat.le_trans (sim₁.β_ge_id r) (CoreHelpers.le_natMax_left _ _)
+  ε := CoreHelpers.natMax sim₁.ε sim₂.ε
+  η := CoreHelpers.natMax sim₁.η sim₂.η
   sim_block k s q r w s' epS epQ d_le w_len tr :=
     let r1_le : M₁.d (π₁ s.1) q.1 ≤ r :=
-      Nat.le_trans (AdaptiveLoops.le_natMax_left _ _) d_le
+      Nat.le_trans (CoreHelpers.le_natMax_left _ _) d_le
     let r2_le : M₂.d (π₂ s.2) q.2 ≤ r :=
-      Nat.le_trans (AdaptiveLoops.le_natMax_right _ _) d_le
+      Nat.le_trans (CoreHelpers.le_natMax_right _ _) d_le
     let len1 : (w.map Prod.fst).length = σ (k + 1) - σ k := (length_map Prod.fst w).trans w_len
     let len2 : (w.map Prod.snd).length = σ (k + 1) - σ k := (length_map Prod.snd w).trans w_len
     match sim₁.sim_block k s.1 q.1 r (w.map Prod.fst) s'.1 epS.1 epQ.1 r1_le len1
@@ -1321,16 +2170,16 @@ def compose_laxSim_max
         (prodProcess_trace_right tr) with
     | ⟨b₁, q₁', step₁, epQ₁', d₁'⟩, ⟨b₂, q₂', step₂, epQ₂', d₂'⟩ =>
       ⟨(b₁, b₂), (q₁', q₂'), ⟨step₁, step₂⟩, ⟨epQ₁', epQ₂'⟩,
-       AdaptiveLoops.natMax_le
-         (Nat.le_trans d₁' (Nat.add_le_add (AdaptiveLoops.le_natMax_left _ _)
-           (AdaptiveLoops.le_natMax_left _ _)))
-         (Nat.le_trans d₂' (Nat.add_le_add (AdaptiveLoops.le_natMax_right _ _)
-           (AdaptiveLoops.le_natMax_right _ _)))⟩
+       CoreHelpers.natMax_le
+         (Nat.le_trans d₁' (Nat.add_le_add (CoreHelpers.le_natMax_left _ _)
+           (CoreHelpers.le_natMax_left _ _)))
+         (Nat.le_trans d₂' (Nat.add_le_add (CoreHelpers.le_natMax_right _ _)
+           (CoreHelpers.le_natMax_right _ _)))⟩
   excursion k s q r w₁ u epS epQ d_le w₁_lt tr :=
     let r1_le : M₁.d (π₁ s.1) q.1 ≤ r :=
-      Nat.le_trans (AdaptiveLoops.le_natMax_left _ _) d_le
+      Nat.le_trans (CoreHelpers.le_natMax_left _ _) d_le
     let r2_le : M₂.d (π₂ s.2) q.2 ≤ r :=
-      Nat.le_trans (AdaptiveLoops.le_natMax_right _ _) d_le
+      Nat.le_trans (CoreHelpers.le_natMax_right _ _) d_le
     let lt1 : (w₁.map Prod.fst).length < σ (k + 1) - σ k :=
       Nat.lt_of_le_of_lt (Nat.le_of_eq (length_map Prod.fst w₁)) w₁_lt
     let lt2 : (w₁.map Prod.snd).length < σ (k + 1) - σ k :=
@@ -1339,11 +2188,11 @@ def compose_laxSim_max
       (prodProcess_trace_left tr)
     let d₂ := sim₂.excursion k s.2 q.2 r (w₁.map Prod.snd) u.2 epS.2 epQ.2 r2_le lt2
       (prodProcess_trace_right tr)
-    AdaptiveLoops.natMax_le
-      (Nat.le_trans d₁ (Nat.add_le_add (AdaptiveLoops.le_natMax_left _ _)
-        (AdaptiveLoops.le_natMax_left _ _)))
-      (Nat.le_trans d₂ (Nat.add_le_add (AdaptiveLoops.le_natMax_right _ _)
-        (AdaptiveLoops.le_natMax_right _ _)))
+    CoreHelpers.natMax_le
+      (Nat.le_trans d₁ (Nat.add_le_add (CoreHelpers.le_natMax_left _ _)
+        (CoreHelpers.le_natMax_left _ _)))
+      (Nat.le_trans d₂ (Nat.add_le_add (CoreHelpers.le_natMax_right _ _)
+        (CoreHelpers.le_natMax_right _ _)))
 
 /-- **Additive ($\ell_1$) compositional `LaxSim` on independent synchronous products** (`prodProcess`),
 parameterized by joint bounds `α_comb`, `β_comb`. Note: bridging to a coupled `closedProcess`
@@ -1388,7 +2237,7 @@ def compose_laxSim_sum
     | ⟨b₁, q₁', step₁, epQ₁', d₁'⟩, ⟨b₂, q₂', step₂, epQ₂', d₂'⟩ =>
       ⟨(b₁, b₂), (q₁', q₂'), ⟨step₁, step₂⟩, ⟨epQ₁', epQ₂'⟩,
        Nat.le_trans (Nat.add_le_add d₁' d₂')
-         (Nat.le_trans (Nat.le_of_eq (add_four_swap (sim₁.α r₁) sim₁.ε (sim₂.α r₂) sim₂.ε))
+         (Nat.le_trans (Nat.le_of_eq (Nat.add_add_add_comm (sim₁.α r₁) sim₁.ε (sim₂.α r₂) sim₂.ε))
            (Nat.add_le_add_right (Nat.le_trans (α_bound r₁ r₂) (α_mono d_le)) (sim₁.ε + sim₂.ε)))⟩
   excursion k s q _ w₁ u epS epQ d_le w₁_lt tr :=
     let r₁ := M₁.d (π₁ s.1) q.1
@@ -1402,7 +2251,7 @@ def compose_laxSim_sum
     let d₂ := sim₂.excursion k s.2 q.2 r₂ (w₁.map Prod.snd) u.2 epS.2 epQ.2 (Nat.le_refl r₂) lt2
       (prodProcess_trace_right tr)
     Nat.le_trans (Nat.add_le_add d₁ d₂)
-      (Nat.le_trans (Nat.le_of_eq (add_four_swap (sim₁.β r₁) sim₁.η (sim₂.β r₂) sim₂.η))
+      (Nat.le_trans (Nat.le_of_eq (Nat.add_add_add_comm (sim₁.β r₁) sim₁.η (sim₂.β r₂) sim₂.η))
         (Nat.add_le_add_right (Nat.le_trans (β_bound r₁ r₂) (β_mono d_le)) (sim₁.η + sim₂.η)))
 
 /-! **Worked composed non-lumping witness (`ComposedNonLumpingWitness`)**: horizontally composes
@@ -1471,7 +2320,7 @@ theorem local_margin_two_scale (q : Nat) (u : Nat × Nat)
   have h12 : 12 ≤ u.1 / 2 :=
     le_of_add_le_add_right 8
       (Nat.le_trans (Nat.le_of_eq (by decide : 12 + 8 = 20))
-        (Nat.le_trans (le_sub_add_nat 20 (u.1 / 2))
+        (Nat.le_trans (CoreHelpers.le_sub_add_nat 20 (u.1 / 2))
           (Nat.le_trans (Nat.add_le_add_right hsub (u.1 / 2))
             (Nat.le_of_eq (Nat.add_comm 8 (u.1 / 2))))))
   cases Nat.lt_or_ge u.1 22 with
@@ -1490,15 +2339,15 @@ theorem prod_viability_kernel :
        ⟨WitnessTwoScale.kernel_cert.closed q.1 a.1 q'.1 st.1 hq.1,
         WitnessTwoScale.kernel_cert.closed q.2 a.2 q'.2 st.2 hq.2⟩⟩
   refine lax_kernel_of_certificate prodSim certQ 6 ?_ ?_ ⟨rfl, rfl⟩ ⟨rfl, rfl⟩
-  · show AdaptiveLoops.natMax ((6 + 1) / 2) ((6 + 1) / 2) + AdaptiveLoops.natMax 3 3 ≤ 6
+  · show CoreHelpers.natMax ((6 + 1) / 2) ((6 + 1) / 2) + CoreHelpers.natMax 3 3 ≤ 6
     exact by decide
   · intro q u ⟨gq₁, gq₂⟩ d_le
     have d₁ : distNat (WitnessTwoScale.π₂ (WitnessTwoScale.π₁ u.1)) q.1 ≤
         WitnessTwoScale.sim₁₂.β 6 + WitnessTwoScale.sim₁₂.η :=
-      Nat.le_trans (AdaptiveLoops.le_natMax_left _ _) d_le
+      Nat.le_trans (CoreHelpers.le_natMax_left _ _) d_le
     have d₂ : distNat (WitnessTwoScale.π₂ (WitnessTwoScale.π₁ u.2)) q.2 ≤
         WitnessTwoScale.sim₁₂.β 6 + WitnessTwoScale.sim₁₂.η :=
-      Nat.le_trans (AdaptiveLoops.le_natMax_right _ _) d_le
+      Nat.le_trans (CoreHelpers.le_natMax_right _ _) d_le
     exact ⟨local_margin_two_scale q.1 u.1 gq₁ d₁,
       local_margin_two_scale q.2 u.2 gq₂ d₂⟩
 

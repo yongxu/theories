@@ -1,0 +1,44 @@
+@Becoming.Web.includesAlong_id_iff : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.IncludesAlong W id l l' ↔ W.Includes l' l
+@Becoming.Web.exceedsAlong_id_iff : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.ExceedsAlong W id l l' ↔ W.Exceeds l' l
+@Becoming.Web.widensAlong_id_iff : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.WidensAlong W id l l' ↔ W.Widens l' l
+@Becoming.Web.IncludesAlong.comp : ∀ {F C F' C' F'' C'' : Type} {W : Becoming.Web F C} {W' : Becoming.Web F' C'}
+  {W'' : Becoming.Web F'' C''} {e : F → F'} {e' : F' → F''} {l : Nat → C → Nat} {l' : Nat → C' → Nat}
+  {l'' : Nat → C'' → Nat},
+  W.IncludesAlong W' e l l' → W'.IncludesAlong W'' e' l' l'' → W.IncludesAlong W'' (e' ∘ e) l l''
+@Becoming.Web.IncludesAlong.widensAlong_comp : ∀ {F C F' C' F'' C'' : Type} {W : Becoming.Web F C}
+  {W' : Becoming.Web F' C'} {W'' : Becoming.Web F'' C''} {e : F → F'} {e' : F' → F''} {l : Nat → C → Nat}
+  {l' : Nat → C' → Nat} {l'' : Nat → C'' → Nat},
+  W.IncludesAlong W' e l l' → W'.WidensAlong W'' e' l' l'' → W.WidensAlong W'' (e' ∘ e) l l''
+@Becoming.Web.WidensAlong.comp : ∀ {F C F' C' F'' C'' : Type} {W : Becoming.Web F C} {W' : Becoming.Web F' C'}
+  {W'' : Becoming.Web F'' C''} {e : F → F'} {e' : F' → F''} {l : Nat → C → Nat} {l' : Nat → C' → Nat}
+  {l'' : Nat → C'' → Nat},
+  W.WidensAlong W' e l l' →
+    W'.IncludesAlong W'' e' l' l'' → (∀ (g g' : F'), e' g = e' g' → g = g') → W.WidensAlong W'' (e' ∘ e) l l''
+@Becoming.Web.grow_admits_old : ∀ {F C N D : Type} {W : Becoming.Web F C} {X : Becoming.Web.Growth F N D C}
+  {l' : Nat → C ⊕ D → Nat} {t : Nat} {f : F},
+  (W.grow X).Admits (l' t) t (Sum.inl f) ↔ W.Admits (Becoming.Web.oldLevels l' t) t f
+@Becoming.Web.grow_includesAlong_iff : ∀ {F C N D : Type} {W : Becoming.Web F C} {X : Becoming.Web.Growth F N D C}
+  {l : Nat → C → Nat} {l' : Nat → C ⊕ D → Nat},
+  W.IncludesAlong (W.grow X) Sum.inl l l' ↔ W.Includes (Becoming.Web.oldLevels l') l
+@Becoming.Web.grow_widensAlong_iff : ∀ {F C N D : Type} {W : Becoming.Web F C} {X : Becoming.Web.Growth F N D C}
+  {l : Nat → C → Nat} {l' : Nat → C ⊕ D → Nat},
+  W.WidensAlong (W.grow X) Sum.inl l l' ↔
+    W.Includes (Becoming.Web.oldLevels l') l ∧
+      (W.Exceeds (Becoming.Web.oldLevels l') l ∨ ∃ t n, (W.grow X).Admits (l' t) t (Sum.inr n))
+@Becoming.Web.grow_widensAlong_iff_new : ∀ {F C N D : Type} {W : Becoming.Web F C} {X : Becoming.Web.Growth F N D C}
+  {l : Nat → C → Nat} {l' : Nat → C ⊕ D → Nat},
+  (∀ (t : Nat) (c : C), l' t (Sum.inl c) = l t c) →
+    (W.WidensAlong (W.grow X) Sum.inl l l' ↔ ∃ t n, (W.grow X).Admits (l' t) t (Sum.inr n))
+@Becoming.Web.grow_widens_unregistered : ∀ {F C N D : Type} {W : Becoming.Web F C} {X : Becoming.Web.Growth F N D C}
+  {l : Nat → C → Nat} {l' : Nat → C ⊕ D → Nat},
+  (∀ (t : Nat) (c : C), l' t (Sum.inl c) = l t c) →
+    (∃ t n, (W.grow X).Admits (l' t) t (Sum.inr n)) →
+      W.WidensAlong (W.grow X) Sum.inl l l' ∧
+        ¬W.Widens (Becoming.Web.oldLevels l') l ∧ ¬W.Widens l (Becoming.Web.oldLevels l')
+@Becoming.Web.attach_widensAlong_iff : ∀ {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat} {p : F} {k : Nat}
+  {level : Nat → Nat} {m : Nat → C ⊕ Unit → Nat},
+  (∀ (t : Nat) (c : C), m t (Sum.inl c) = l t c) →
+    (W.WidensAlong (W.grow (Becoming.Web.attach p k level)) Sum.inl l m ↔ ∃ t, k ≤ m t (Sum.inr ()))

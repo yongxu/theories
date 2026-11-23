@@ -1,0 +1,11 @@
+import Becoming.KeepableStep
+#check @Becoming.Viability.keepable_step_iff
+#check @Becoming.Viability.keep_mono
+#check @Becoming.Viability.keepable_iff_count
+#check @Becoming.Viability.not_keepable_invariant_iff
+#check @Becoming.Viability.not_keepable_step
+#check @Becoming.Viability.not_keepable_run
+#check @Becoming.Viability.ChoicePoint.keepable_gained
+#check @Becoming.Viability.ChoicePoint.keepable_gained_along_run
+#check @Becoming.Viability.Successor.nowhere_keepable
+#check @Becoming.Viability.Successor.not_keepable_kept_complement_not

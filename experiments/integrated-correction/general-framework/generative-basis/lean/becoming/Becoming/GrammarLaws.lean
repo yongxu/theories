@@ -1737,6 +1737,35 @@ theorem «有限遍后定后则定前当且仅当皆返» {R : «际» α} {all 
     (total : ∀ x, ∃ y, R x y) (fixed : «定后» R) : «定前» R ↔ ∀ x, «及» R x x :=
   ⟨fun merges => «有限遍后定前则皆返» every total merges, «皆返定后则定前» fixed⟩
 
+/-- Any reach decomposes at its last step (及之末步). -/
+theorem «及之末步» {R : «际» α} : ∀ {x z : α}, «及» R x z → R x z ∨ ∃ y, «及» R x y ∧ R y z
+  | _, _, .one r => .inl r
+  | _, _, .more r rest => match «及之末步» rest with
+    | .inl r' => .inr ⟨_, .one r, r'⟩
+    | .inr ⟨y, hxy, ryz⟩ => .inr ⟨y, .more r hxy, ryz⟩
+
+/-- Any self-reaching occurrence has a predecessor that steps to it and also reaches itself (返则有返前). -/
+theorem «返则有返前» {R : «际» α} {x : α} (loop : «及» R x x) :
+    ∃ y, R y x ∧ «及» R y y :=
+  match «及之末步» loop with
+  | .inl r => ⟨x, r, .one r⟩
+  | .inr ⟨y, hxy, ryx⟩ => ⟨y, ryx, .more ryx hxy⟩
+
+open GrammarLaws in
+/-- Along a finite line held in a list `l`, some position reaches itself within its closure from the start (线有限则入返). -/
+theorem «线有限则入返» {R : «际» α} {l : List α} {g : Nat → α}
+    (steps : ∀ i, i < l.length → R (g i) (g (i + 1)))
+    (held : ∀ n, n ≤ l.length → g n ∈ l) :
+    ∃ i, i < l.length ∧ «所闭» R (g 0) (g i) ∧ «及» R (g i) (g i) :=
+  match revisits_within l g held with
+  | ⟨i, _, lt, le, same⟩ => match gap_of_lt lt with
+    | ⟨d, gap⟩ =>
+      have le' : i + (d + 1) ≤ l.length := Eq.subst (motive := fun k => k ≤ l.length) gap le
+      have lt_len : i < l.length := Nat.lt_of_lt_of_le lt le
+      ⟨i, lt_len, «线则所闭» steps i (Nat.le_of_lt lt_len),
+        Eq.subst (motive := fun w => «及» R (g i) w) ((congrArg g gap).symm.trans same.symm)
+          («线则及» steps d i le')⟩
+
 /-! ### Rest (止): falls that end
 
 A line `g` whose steps from `T` on are steps of `Q` (no rise, say) is at rest where its steps of `F`
@@ -2708,6 +2737,41 @@ theorem «像定后当且仅当同行» {π : α → κ} {R : «际» α} :
       fixed (π u) (π u') ⟨π s, ⟨s, u, rfl, r, rfl⟩, ⟨s', u', e.symm, r', rfl⟩⟩,
    fun alike _ _ ⟨_, ⟨s, u, at_k, r, to⟩, ⟨s', u', at_k', r', to'⟩⟩ =>
     to.symm.trans ((«同行之逐点».mp alike s s' (at_k.trans at_k'.symm) u u' r r').trans to')⟩
+
+/-- Going alike under identity (`«静»`) is having a fixed successor (同行静当且仅当定后). -/
+theorem «同行静当且仅当定后» {R : «际» α} : «同行» R «静» ↔ «定后» R :=
+  ⟨fun alike t t' ⟨s, r, r'⟩ => «同行之逐点».mp alike s s rfl t t' r r',
+   fun fixed => «同行之逐点».mpr fun _ _ e t t' r r' =>
+     fixed t t' ⟨_, Eq.subst (motive := fun x => R x t) e r, r'⟩⟩
+
+/-- Going alike pulls back cleanly along the image map `«像»` (像之同行). -/
+theorem «像之同行» {π : α → κ} {R : «际» α} {E : «际» κ} :
+    «同行» («像» π R) E ↔ «同行» R (fun s s' => E (π s) (π s')) :=
+  ⟨fun alike => «同行之逐点».mpr fun s s' e u u' r r' =>
+     «同行之逐点».mp alike (π s) (π s') e (π u) (π u') ⟨s, u, rfl, r, rfl⟩ ⟨s', u', rfl, r', rfl⟩,
+   fun alike => «同行之逐点».mpr fun _ _ e _ _ ⟨s, u, hs, r, hu⟩ ⟨s', u', hs', r', hu'⟩ =>
+     Eq.subst (motive := fun x => E x _) hu
+       (Eq.subst (motive := fun y => E (π u) y) hu'
+         («同行之逐点».mp alike s s'
+           (Eq.subst (motive := fun x => E x (π s')) hs.symm
+             (Eq.subst (motive := fun y => E _ y) hs'.symm e))
+           u u' r r'))⟩
+
+/-- Going alike narrows along any subrelation (同行之单调). -/
+theorem «同行之单调» {S R E : «际» α} (sub : «则» S R) (alike : «同行» R E) : «同行» S E :=
+  «同行之逐点».mpr fun x x' e y y' s s' =>
+    «同行之逐点».mp alike x x' e y y' (sub x y s) (sub x' y' s')
+
+/-- Closing a relation under a class `E` that goes alike under it preserves `«同行»` (类则同行之展). -/
+theorem «类则同行之展» {S E : «际» α} (hE : «类» E) (alike : «同行» S E) :
+    «同行» («而» («而» E S) E) E ∧ «则» S («而» («而» E S) E) :=
+  ⟨«同行之逐点».mpr fun _ _ exy _ _ ⟨_, ⟨s, exs, sw⟩, wy⟩ ⟨_, ⟨s', exs', sw'⟩, w'y'⟩ =>
+     hE.trans (hE.symm wy)
+       (hE.trans
+         («同行之逐点».mp alike s s'
+           (hE.trans (hE.symm exs) (hE.trans exy exs')) _ _ sw sw')
+         w'y'),
+   fun s u r => ⟨u, ⟨s, hE.refl s, r⟩, hE.refl u⟩⟩
 
 end Lumping
 

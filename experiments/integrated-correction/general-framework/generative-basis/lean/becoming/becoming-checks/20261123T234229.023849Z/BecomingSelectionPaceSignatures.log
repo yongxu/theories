@@ -1,0 +1,782 @@
+@Becoming.SelectionPace.lineage_mono : ∀ {X : Type} {cs ps : List X} {kids : X → List X},
+  (∀ (p : X), p ∈ cs → p ∈ ps) →
+    ∀ (c : X), c ∈ Becoming.SelectionPace.lineage cs kids → c ∈ Becoming.SelectionPace.lineage ps kids
+@Becoming.SelectionPace.lineage_sub : ∀ {X : Type} {p : X} {ps : List X} {kids : X → List X},
+  p ∈ ps → ∀ (c : X), c ∈ Becoming.SelectionPace.lineage [p] kids → c ∈ Becoming.SelectionPace.lineage ps kids
+@Becoming.SelectionPace.fresh_total : ∀ {X : Type} {W : Becoming.Web X X} {t : Nat} {ps : List X} {kids : X → List X},
+  (∀ (p k : X), p ∈ ps → k ∈ kids p → W.ComesToStand t k) → Becoming.total (List.flatMap kids ps) (W.level t) = 0
+@Becoming.SelectionPace.standing_total : ∀ {X : Type} {W : Becoming.Web X X} {t m : Nat} {ps : List X}
+  {kids : X → List X},
+  (∀ (p k : X), p ∈ ps → k ∈ kids p → m ≤ W.level (t + 1) k) →
+    m * Becoming.SelectionTerm.born ps kids ≤ Becoming.total (List.flatMap kids ps) (W.level (t + 1))
+@Becoming.SelectionPace.born_within_inflow : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {t m : Nat}
+  {es ps : List X} {kids : X → List X},
+  L.BalancesOn W (es ++ List.flatMap kids ps) t →
+    (∀ (p k : X), p ∈ ps → k ∈ kids p → W.ComesToStand t k) →
+      (∀ (p k : X), p ∈ ps → k ∈ kids p → m ≤ W.level (t + 1) k) →
+        m * Becoming.SelectionTerm.born ps kids + Becoming.total es (W.level (t + 1)) ≤
+          Becoming.total es (W.level t) + L.inflow (es ++ List.flatMap kids ps) t
+@Becoming.SelectionPace.parent_within_inflow : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {t m : Nat}
+  {p : X} {kids : X → List X},
+  L.BalancesOn W (Becoming.SelectionPace.lineage [p] kids) t →
+    (∀ (k : X), k ∈ kids p → W.ComesToStand t k) →
+      (∀ (k : X), k ∈ kids p → m ≤ W.level (t + 1) k) →
+        m * (kids p).length ≤ W.level t p + L.inflow (Becoming.SelectionPace.lineage [p] kids) t
+@Becoming.SelectionPace.generation_within_inflow : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {t m : Nat},
+  L.BalancesOn W (Becoming.SelectionPace.lineage (G.family t) (G.kids t)) t →
+    (∀ (p k : X), p ∈ G.family t → k ∈ G.kids t p → W.ComesToStand t k) →
+      (∀ (p k : X), p ∈ G.family t → k ∈ G.kids t p → m ≤ W.level (t + 1) k) →
+        m * G.size (t + 1) ≤
+          Becoming.total (G.family t) (W.level t) + L.inflow (Becoming.SelectionPace.lineage (G.family t) (G.kids t)) t
+@Becoming.SelectionPace.standing_pinned : ∀ {X : Type} {W : Becoming.Web X X} {G : Becoming.SelectionTerm.Generations X}
+  {t m : Nat},
+  (∀ (p k : X), p ∈ G.family t → k ∈ G.kids t p → m ≤ W.level (t + 1) k) →
+    (∀ (p : X), p ∈ G.family (t + 1) → W.level (t + 1) p ≤ m) → ∀ (k : X), k ∈ G.family (t + 1) → W.level (t + 1) k = m
+@Becoming.SelectionPace.stands_of_need : ∀ {X : Type} {W : Becoming.Web X X} {s m : Nat} {k : X},
+  W.Dependent → W.active s k → W.requires s k k → m ≤ W.need s k k → m ≤ W.level s k
+@Becoming.SelectionPace.sum_exact : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X} {t : Nat},
+  Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+    G.sum (t + 1) = Becoming.selected (G.family t) (G.kids t) (G.amount t)
+@Becoming.SelectionPace.mean_step_exact : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X} {t : Nat},
+  Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+    G.size t * G.sum (t + 1) + G.discordAt t = G.size (t + 1) * G.sum t + G.concordAt t
+@Becoming.SelectionPace.offspring_within_carried : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {t m : Nat},
+  L.BalancesOn W (Becoming.SelectionPace.lineage (G.family t) (G.kids t)) t →
+    (∀ (p k : X), p ∈ G.family t → k ∈ G.kids t p → W.ComesToStand t k) →
+      (∀ (p k : X), p ∈ G.family t → k ∈ G.kids t p → m ≤ W.level (t + 1) k) →
+        Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+          m * G.sum (t + 1) ≤
+            (Becoming.total (G.family t) fun p => G.amount t p * W.level t p) +
+              Becoming.SelectionPace.carriedInflow L G t
+@Becoming.SelectionPace.total_within_carried : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {t m : Nat},
+  L.BalancesOn W (Becoming.SelectionPace.lineage (G.family t) (G.kids t)) t →
+    (∀ (p k : X), p ∈ G.family t → k ∈ G.kids t p → W.ComesToStand t k) →
+      (∀ (p k : X), p ∈ G.family t → k ∈ G.kids t p → m ≤ W.level (t + 1) k) →
+        Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+          (∀ (p : X), p ∈ G.family t → W.level t p ≤ m) →
+            m * G.sum (t + 1) ≤ m * G.sum t + Becoming.SelectionPace.carriedInflow L G t
+@Becoming.SelectionPace.response_within_carried : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {t m : Nat},
+  L.BalancesOn W (Becoming.SelectionPace.lineage (G.family t) (G.kids t)) t →
+    (∀ (p k : X), p ∈ G.family t → k ∈ G.kids t p → W.ComesToStand t k) →
+      (∀ (p k : X), p ∈ G.family t → k ∈ G.kids t p → m ≤ W.level (t + 1) k) →
+        Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+          (∀ (p : X), p ∈ G.family t → W.level t p ≤ m) →
+            G.size t ≤ G.size (t + 1) →
+              m * (G.size t * G.sum (t + 1)) ≤
+                m * (G.size (t + 1) * G.sum t) + G.size t * Becoming.SelectionPace.carriedInflow L G t
+@Becoming.SelectionPace.selection_within_carried : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {t m : Nat},
+  L.BalancesOn W (Becoming.SelectionPace.lineage (G.family t) (G.kids t)) t →
+    (∀ (p k : X), p ∈ G.family t → k ∈ G.kids t p → W.ComesToStand t k) →
+      (∀ (p k : X), p ∈ G.family t → k ∈ G.kids t p → m ≤ W.level (t + 1) k) →
+        Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+          (∀ (p : X), p ∈ G.family t → W.level t p ≤ m) →
+            G.size t ≤ G.size (t + 1) →
+              m * G.concordAt t ≤ m * G.discordAt t + G.size t * Becoming.SelectionPace.carriedInflow L G t
+@Becoming.SelectionPace.unfed_rise_shrinks : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {t m : Nat},
+  L.BalancesOn W (Becoming.SelectionPace.lineage (G.family t) (G.kids t)) t →
+    (∀ (p k : X), p ∈ G.family t → k ∈ G.kids t p → W.ComesToStand t k) →
+      (∀ (p k : X), p ∈ G.family t → k ∈ G.kids t p → m ≤ W.level (t + 1) k) →
+        Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+          (∀ (p : X), p ∈ G.family t → W.level t p ≤ m) →
+            0 < m →
+              Becoming.SelectionPace.carriedInflow L G t = 0 →
+                G.size (t + 1) * G.sum t < G.size t * G.sum (t + 1) → G.size (t + 1) < G.size t
+@Becoming.SelectionPace.mem_carriers : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X} {t : Nat} {p : X},
+  p ∈ Becoming.SelectionPace.carriers G t → p ∈ G.family t
+@Becoming.SelectionPace.total_lineage_one : ∀ {X : Type} (q : X → Nat) (kids : X → List X) (p : X),
+  Becoming.total (Becoming.SelectionPace.lineage [p] kids) q = q p + Becoming.total (kids p) q
+@Becoming.SelectionPace.total_lineage : ∀ {X : Type} (q : X → Nat) (kids : X → List X) (ps : List X),
+  Becoming.total (Becoming.SelectionPace.lineage ps kids) q =
+    Becoming.total ps fun p => Becoming.total (Becoming.SelectionPace.lineage [p] kids) q
+Becoming.SelectionPace.excess_add_le : ∀ (a b c d : Nat),
+  Becoming.excess (a + b) (c + d) ≤ Becoming.excess a c + Becoming.excess b d
+@Becoming.SelectionPace.excess_total_le : ∀ {X : Type} (g h : X → Nat) (ps : List X),
+  Becoming.excess (Becoming.total ps g) (Becoming.total ps h) ≤ Becoming.total ps fun p => Becoming.excess (g p) (h p)
+@Becoming.SelectionPace.inflow_lineage_le : ∀ {X : Type} {L : Becoming.Flow X X} (kids : X → List X) (ps : List X)
+  (t : Nat),
+  L.inflow (Becoming.SelectionPace.lineage ps kids) t ≤
+    Becoming.total ps fun p => L.inflow (Becoming.SelectionPace.lineage [p] kids) t
+@Becoming.SelectionPace.total_carriers_le : ∀ {X : Type} (a x : X → Nat) (ps : List X),
+  Becoming.total (List.filter (fun p => Becoming.nonzero (a p)) ps) x ≤ Becoming.total ps fun p => a p * x p
+@Becoming.SelectionPace.total_carriers_unit : ∀ {X : Type} (a x : X → Nat) (ps : List X),
+  (∀ (p : X), p ∈ ps → a p ≤ 1) →
+    (Becoming.total ps fun p => a p * x p) = Becoming.total (List.filter (fun p => Becoming.nonzero (a p)) ps) x
+@Becoming.SelectionPace.joint_within_carried : ∀ {X : Type} {L : Becoming.Flow X X}
+  (G : Becoming.SelectionTerm.Generations X) (t : Nat),
+  L.inflow (Becoming.SelectionPace.lineage (Becoming.SelectionPace.carriers G t) (G.kids t)) t ≤
+    Becoming.SelectionPace.carriedInflow L G t
+@Becoming.SelectionPace.share_within_rest : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {t m : Nat} {rs : List X},
+  L.BalancesOn W
+      (Becoming.SelectionPace.carriers G t ++ rs ++ List.flatMap (G.kids t) (Becoming.SelectionPace.carriers G t)) t →
+    (∀ (p k : X), p ∈ Becoming.SelectionPace.carriers G t → k ∈ G.kids t p → W.ComesToStand t k) →
+      (∀ (p k : X), p ∈ Becoming.SelectionPace.carriers G t → k ∈ G.kids t p → m ≤ W.level (t + 1) k) →
+        Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+          (∀ (p : X), p ∈ Becoming.SelectionPace.carriers G t → W.level t p ≤ m) →
+            (∀ (p : X), p ∈ G.family t → G.amount t p ≤ 1) →
+              m * G.sum (t + 1) + Becoming.total rs (W.level (t + 1)) ≤
+                m * G.sum t + Becoming.total rs (W.level t) +
+                  L.inflow
+                    (Becoming.SelectionPace.carriers G t ++ rs ++
+                      List.flatMap (G.kids t) (Becoming.SelectionPace.carriers G t))
+                    t
+@Becoming.SelectionPace.share_within_joint : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {t m : Nat},
+  L.BalancesOn W (Becoming.SelectionPace.lineage (Becoming.SelectionPace.carriers G t) (G.kids t)) t →
+    (∀ (p k : X), p ∈ Becoming.SelectionPace.carriers G t → k ∈ G.kids t p → W.ComesToStand t k) →
+      (∀ (p k : X), p ∈ Becoming.SelectionPace.carriers G t → k ∈ G.kids t p → m ≤ W.level (t + 1) k) →
+        Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+          (∀ (p : X), p ∈ Becoming.SelectionPace.carriers G t → W.level t p ≤ m) →
+            (∀ (p : X), p ∈ G.family t → G.amount t p ≤ 1) →
+              m * G.sum (t + 1) ≤
+                m * G.sum t +
+                  L.inflow (Becoming.SelectionPace.lineage (Becoming.SelectionPace.carriers G t) (G.kids t)) t
+@Becoming.SelectionPace.stretch_within_carried : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {m : Nat} (T : Nat),
+  (∀ (t : Nat), t < T → L.BalancesOn W (Becoming.SelectionPace.lineage (G.family t) (G.kids t)) t) →
+    (∀ (t : Nat) (p k : X), t < T → p ∈ G.family t → k ∈ G.kids t p → W.ComesToStand t k) →
+      (∀ (t : Nat) (p k : X), t < T → p ∈ G.family t → k ∈ G.kids t p → m ≤ W.level (t + 1) k) →
+        (∀ (t : Nat), t < T → Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+          (∀ (t : Nat) (p : X), t < T → p ∈ G.family t → W.level t p ≤ m) →
+            m * G.sum T ≤ m * G.sum 0 + Becoming.total (Becoming.steps 0 T) (Becoming.SelectionPace.carriedInflow L G)
+@Becoming.SelectionPace.moved_within_carried : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {m T : Nat},
+  (∀ (t : Nat), t < T → L.BalancesOn W (Becoming.SelectionPace.lineage (G.family t) (G.kids t)) t) →
+    (∀ (t : Nat) (p k : X), t < T → p ∈ G.family t → k ∈ G.kids t p → W.ComesToStand t k) →
+      (∀ (t : Nat) (p k : X), t < T → p ∈ G.family t → k ∈ G.kids t p → m ≤ W.level (t + 1) k) →
+        (∀ (t : Nat), t < T → Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+          (∀ (t : Nat) (p : X), t < T → p ∈ G.family t → W.level t p ≤ m) →
+            G.size 0 ≤ G.size T →
+              m * (G.size 0 * G.sum T) ≤
+                m * (G.size T * G.sum 0) +
+                  G.size 0 * Becoming.total (Becoming.steps 0 T) (Becoming.SelectionPace.carriedInflow L G)
+@Becoming.SelectionPace.steps_to_move : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {m T I : Nat},
+  (∀ (t : Nat), t < T → L.BalancesOn W (Becoming.SelectionPace.lineage (G.family t) (G.kids t)) t) →
+    (∀ (t : Nat) (p k : X), t < T → p ∈ G.family t → k ∈ G.kids t p → W.ComesToStand t k) →
+      (∀ (t : Nat) (p k : X), t < T → p ∈ G.family t → k ∈ G.kids t p → m ≤ W.level (t + 1) k) →
+        (∀ (t : Nat), t < T → Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+          (∀ (t : Nat) (p : X), t < T → p ∈ G.family t → W.level t p ≤ m) →
+            G.size 0 ≤ G.size T →
+              (∀ (t : Nat), t < T → Becoming.SelectionPace.carriedInflow L G t ≤ I) →
+                m * (G.size 0 * G.sum T) ≤ m * (G.size T * G.sum 0) + G.size 0 * (T * I)
+@Becoming.SelectionPace.parent_within_factor : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {t m k : Nat}
+  {p : X} {kids : X → List X},
+  L.BalancesOn W (Becoming.SelectionPace.lineage [p] kids) t →
+    (∀ (c : X), c ∈ kids p → W.ComesToStand t c) →
+      (∀ (c : X), c ∈ kids p → m ≤ W.level (t + 1) c) →
+        W.level t p ≤ m → 0 < m → L.inflow (Becoming.SelectionPace.lineage [p] kids) t + m ≤ k * m → (kids p).length ≤ k
+@Becoming.SelectionPace.total_within_factor : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {t m k : Nat},
+  L.BalancesOn W (Becoming.SelectionPace.lineage (G.family t) (G.kids t)) t →
+    (∀ (p c : X), p ∈ G.family t → c ∈ G.kids t p → W.ComesToStand t c) →
+      (∀ (p c : X), p ∈ G.family t → c ∈ G.kids t p → m ≤ W.level (t + 1) c) →
+        Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+          (∀ (p : X), p ∈ G.family t → W.level t p ≤ m) →
+            0 < m →
+              (∀ (p : X), p ∈ G.family t → L.inflow (Becoming.SelectionPace.lineage [p] (G.kids t)) t + m ≤ k * m) →
+                G.sum (t + 1) ≤ k * G.sum t
+@Becoming.SelectionPace.total_within_power : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {m k : Nat},
+  0 < m →
+    ∀ (T : Nat),
+      (∀ (t : Nat), t < T → L.BalancesOn W (Becoming.SelectionPace.lineage (G.family t) (G.kids t)) t) →
+        (∀ (t : Nat) (p c : X), t < T → p ∈ G.family t → c ∈ G.kids t p → W.ComesToStand t c) →
+          (∀ (t : Nat) (p c : X), t < T → p ∈ G.family t → c ∈ G.kids t p → m ≤ W.level (t + 1) c) →
+            (∀ (t : Nat),
+                t < T → Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+              (∀ (t : Nat) (p : X), t < T → p ∈ G.family t → W.level t p ≤ m) →
+                (∀ (t : Nat) (p : X),
+                    t < T → p ∈ G.family t → L.inflow (Becoming.SelectionPace.lineage [p] (G.kids t)) t + m ≤ k * m) →
+                  G.sum T ≤ k ^ T * G.sum 0
+@Becoming.SelectionPace.share_within_power : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {m k T : Nat},
+  0 < m →
+    (∀ (t : Nat), t < T → L.BalancesOn W (Becoming.SelectionPace.lineage (G.family t) (G.kids t)) t) →
+      (∀ (t : Nat) (p c : X), t < T → p ∈ G.family t → c ∈ G.kids t p → W.ComesToStand t c) →
+        (∀ (t : Nat) (p c : X), t < T → p ∈ G.family t → c ∈ G.kids t p → m ≤ W.level (t + 1) c) →
+          (∀ (t : Nat), t < T → Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+            (∀ (t : Nat) (p : X), t < T → p ∈ G.family t → W.level t p ≤ m) →
+              (∀ (t : Nat) (p : X),
+                  t < T → p ∈ G.family t → L.inflow (Becoming.SelectionPace.lineage [p] (G.kids t)) t + m ≤ k * m) →
+                G.size 0 ≤ G.size T → G.size 0 * G.sum T ≤ k ^ T * (G.size T * G.sum 0)
+@Becoming.SelectionPace.whole_within_power : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {m k T : Nat},
+  0 < m →
+    (∀ (t : Nat), t < T → L.BalancesOn W (Becoming.SelectionPace.lineage (G.family t) (G.kids t)) t) →
+      (∀ (t : Nat) (p c : X), t < T → p ∈ G.family t → c ∈ G.kids t p → W.ComesToStand t c) →
+        (∀ (t : Nat) (p c : X), t < T → p ∈ G.family t → c ∈ G.kids t p → m ≤ W.level (t + 1) c) →
+          (∀ (t : Nat), t < T → Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+            (∀ (t : Nat) (p : X), t < T → p ∈ G.family t → W.level t p ≤ m) →
+              (∀ (t : Nat) (p : X),
+                  t < T → p ∈ G.family t → L.inflow (Becoming.SelectionPace.lineage [p] (G.kids t)) t + m ≤ k * m) →
+                G.size 0 ≤ G.size T → G.size T ≤ G.sum T → G.size 0 ≤ k ^ T * G.sum 0
+@Becoming.SelectionPace.number_step_within_inflow : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {t m : Nat},
+  Becoming.Reproduction.Generations.ByNumber G →
+    Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+      L.BalancesOn W (Becoming.SelectionPace.lineage (G.family (t + 1)) (G.kids (t + 1))) (t + 1) →
+        (∀ (p k : X), p ∈ G.family (t + 1) → k ∈ G.kids (t + 1) p → W.ComesToStand (t + 1) k) →
+          (∀ (p k : X), p ∈ G.family (t + 1) → k ∈ G.kids (t + 1) p → m ≤ W.level (t + 1 + 1) k) →
+            m * (G.size (t + 1) * G.size (t + 1) + G.concordAt t) ≤
+              G.size t *
+                (Becoming.total (G.family (t + 1)) (W.level (t + 1)) +
+                  L.inflow (Becoming.SelectionPace.lineage (G.family (t + 1)) (G.kids (t + 1))) (t + 1))
+@Becoming.SelectionPace.number_spread_within_inflow : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {t m : Nat},
+  Becoming.Reproduction.Generations.ByNumber G →
+    Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+      L.BalancesOn W (Becoming.SelectionPace.lineage (G.family (t + 1)) (G.kids (t + 1))) (t + 1) →
+        (∀ (p k : X), p ∈ G.family (t + 1) → k ∈ G.kids (t + 1) p → W.ComesToStand (t + 1) k) →
+          (∀ (p k : X), p ∈ G.family (t + 1) → k ∈ G.kids (t + 1) p → m ≤ W.level (t + 1 + 1) k) →
+            (∀ (p : X), p ∈ G.family (t + 1) → W.level (t + 1) p ≤ m) →
+              G.size t ≤ G.size (t + 1) →
+                m * G.concordAt t ≤
+                  G.size t * L.inflow (Becoming.SelectionPace.lineage (G.family (t + 1)) (G.kids (t + 1))) (t + 1)
+@Becoming.SelectionPace.number_unfed_uniform : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {t m : Nat},
+  Becoming.Reproduction.Generations.ByNumber G →
+    Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+      L.BalancesOn W (Becoming.SelectionPace.lineage (G.family (t + 1)) (G.kids (t + 1))) (t + 1) →
+        (∀ (p k : X), p ∈ G.family (t + 1) → k ∈ G.kids (t + 1) p → W.ComesToStand (t + 1) k) →
+          (∀ (p k : X), p ∈ G.family (t + 1) → k ∈ G.kids (t + 1) p → m ≤ W.level (t + 1 + 1) k) →
+            (∀ (p : X), p ∈ G.family (t + 1) → W.level (t + 1) p ≤ m) →
+              G.size t ≤ G.size (t + 1) →
+                0 < m →
+                  L.inflow (Becoming.SelectionPace.lineage (G.family (t + 1)) (G.kids (t + 1))) (t + 1) = 0 →
+                    ∀ (p q : X), p ∈ G.family t → q ∈ G.family t → G.offspringNumber t p = G.offspringNumber t q
+@Becoming.SelectionPace.numbered_family : ∀ {X : Type} (G : Becoming.SelectionTerm.Generations X) (t : Nat),
+  (Becoming.SelectionPace.numbered G).family t = G.family t
+@Becoming.SelectionPace.numbered_number : ∀ {X : Type} (G : Becoming.SelectionTerm.Generations X),
+  Becoming.Reproduction.Generations.ByNumber (Becoming.SelectionPace.numbered G)
+@Becoming.SelectionPace.response_sq_within_inflow : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {t m : Nat},
+  Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+    (∀ (p : X), p ∈ G.family t → ∀ (k : X), k ∈ G.kids t p → G.offspringNumber (t + 1) k = G.offspringNumber t p) →
+      L.BalancesOn W (Becoming.SelectionPace.lineage (G.family (t + 1)) (G.kids (t + 1))) (t + 1) →
+        (∀ (p k : X), p ∈ G.family (t + 1) → k ∈ G.kids (t + 1) p → W.ComesToStand (t + 1) k) →
+          (∀ (p k : X), p ∈ G.family (t + 1) → k ∈ G.kids (t + 1) p → m ≤ W.level (t + 1 + 1) k) →
+            (∀ (p : X), p ∈ G.family (t + 1) → W.level (t + 1) p ≤ m) →
+              G.size t ≤ G.size (t + 1) →
+                m *
+                      ((G.size t * G.sum (t + 1) - G.size (t + 1) * G.sum t) *
+                        (G.size t * G.sum (t + 1) - G.size (t + 1) * G.sum t)) ≤
+                    G.size t * L.inflow (Becoming.SelectionPace.lineage (G.family (t + 1)) (G.kids (t + 1))) (t + 1) *
+                      Becoming.SelectionTerm.concord (G.family t) (G.amount t) (G.amount t) ∧
+                  m *
+                      ((G.size (t + 1) * G.sum t - G.size t * G.sum (t + 1)) *
+                        (G.size (t + 1) * G.sum t - G.size t * G.sum (t + 1))) ≤
+                    G.size t * L.inflow (Becoming.SelectionPace.lineage (G.family (t + 1)) (G.kids (t + 1))) (t + 1) *
+                      Becoming.SelectionTerm.concord (G.family t) (G.amount t) (G.amount t)
+Becoming.SelectionPace.Displacement.every : ∀ (c : Becoming.SelectionPace.Displacement.Relatum),
+  c ∈ Becoming.SelectionPace.Displacement.family
+Becoming.SelectionPace.Displacement.balances : Becoming.SelectionPace.Displacement.flow.Balances
+  Becoming.SelectionPace.Displacement.web
+Becoming.SelectionPace.Displacement.closed : Becoming.SelectionPace.Displacement.flow.ClosedAt
+  Becoming.SelectionPace.Displacement.family 0
+Becoming.SelectionPace.Displacement.dissipates : Becoming.SelectionPace.Displacement.flow.DissipatesOn
+  Becoming.SelectionPace.Displacement.family 0
+Becoming.SelectionPace.Displacement.arise : ∀ (p k : Becoming.SelectionPace.Displacement.Relatum),
+  p ∈ Becoming.SelectionPace.Displacement.generations.family 0 →
+    k ∈ Becoming.SelectionPace.Displacement.generations.kids 0 p →
+      Becoming.SelectionPace.Displacement.web.ComesToStand 0 k
+Becoming.SelectionPace.Displacement.stands : ∀ (p k : Becoming.SelectionPace.Displacement.Relatum),
+  p ∈ Becoming.SelectionPace.Displacement.generations.family 0 →
+    k ∈ Becoming.SelectionPace.Displacement.generations.kids 0 p →
+      1 ≤ Becoming.SelectionPace.Displacement.web.level (0 + 1) k
+Becoming.SelectionPace.Displacement.exact : Becoming.SelectionTerm.Exact
+  (Becoming.SelectionPace.Displacement.generations.family 0) (Becoming.SelectionPace.Displacement.generations.kids 0)
+  (Becoming.SelectionPace.Displacement.generations.amount 0)
+  (Becoming.SelectionPace.Displacement.generations.amount (0 + 1))
+Becoming.SelectionPace.Displacement.capped : ∀ (p : Becoming.SelectionPace.Displacement.Relatum),
+  p ∈ Becoming.SelectionPace.Displacement.generations.family 0 → Becoming.SelectionPace.Displacement.web.level 0 p ≤ 1
+Becoming.SelectionPace.Displacement.unit : ∀ (p : Becoming.SelectionPace.Displacement.Relatum),
+  p ∈ Becoming.SelectionPace.Displacement.generations.family 0 →
+    Becoming.SelectionPace.Displacement.generations.amount 0 p ≤ 1
+Becoming.SelectionPace.Displacement.displacement : Becoming.SelectionPace.Displacement.flow.ClosedAt
+    Becoming.SelectionPace.Displacement.family 0 ∧
+  Becoming.SelectionPace.Displacement.flow.DissipatesOn Becoming.SelectionPace.Displacement.family 0 ∧
+    Becoming.SelectionPace.Displacement.flow.inflow Becoming.SelectionPace.Displacement.family 0 = 0 ∧
+      Becoming.SelectionPace.Displacement.generations.size 0 = 2 ∧
+        Becoming.SelectionPace.Displacement.generations.size 1 = 2 ∧
+          Becoming.SelectionPace.Displacement.generations.sum 0 = 1 ∧
+            Becoming.SelectionPace.Displacement.generations.sum 1 = 2 ∧
+              Becoming.SelectionPace.Displacement.generations.concordAt 0 = 2 ∧
+                Becoming.SelectionPace.Displacement.generations.discordAt 0 = 0 ∧
+                  Becoming.SelectionPace.carriedInflow Becoming.SelectionPace.Displacement.flow
+                        Becoming.SelectionPace.Displacement.generations 0 =
+                      1 ∧
+                    1 *
+                          (Becoming.SelectionPace.Displacement.generations.size 0 *
+                            Becoming.SelectionPace.Displacement.generations.sum 1) =
+                        1 *
+                            (Becoming.SelectionPace.Displacement.generations.size 1 *
+                              Becoming.SelectionPace.Displacement.generations.sum 0) +
+                          Becoming.SelectionPace.Displacement.generations.size 0 *
+                            Becoming.SelectionPace.carriedInflow Becoming.SelectionPace.Displacement.flow
+                              Becoming.SelectionPace.Displacement.generations 0 ∧
+                      1 * Becoming.SelectionPace.Displacement.generations.concordAt 0 =
+                        1 * Becoming.SelectionPace.Displacement.generations.discordAt 0 +
+                          Becoming.SelectionPace.Displacement.generations.size 0 *
+                            Becoming.SelectionPace.carriedInflow Becoming.SelectionPace.Displacement.flow
+                              Becoming.SelectionPace.Displacement.generations 0
+Becoming.SelectionPace.Displacement.natural_fails : Becoming.SelectionPace.Displacement.flow.inflow
+      (Becoming.SelectionPace.lineage (Becoming.SelectionPace.Displacement.generations.family 0)
+        (Becoming.SelectionPace.Displacement.generations.kids 0))
+      0 =
+    0 ∧
+  ¬1 *
+          (Becoming.SelectionPace.Displacement.generations.size 0 *
+            Becoming.SelectionPace.Displacement.generations.sum 1) ≤
+        1 *
+            (Becoming.SelectionPace.Displacement.generations.size 1 *
+              Becoming.SelectionPace.Displacement.generations.sum 0) +
+          Becoming.SelectionPace.Displacement.generations.size 0 *
+            Becoming.SelectionPace.Displacement.flow.inflow Becoming.SelectionPace.Displacement.family 0 ∧
+    ¬1 *
+          (Becoming.SelectionPace.Displacement.generations.size 0 *
+            Becoming.SelectionPace.Displacement.generations.sum 1) ≤
+        1 *
+            (Becoming.SelectionPace.Displacement.generations.size 1 *
+              Becoming.SelectionPace.Displacement.generations.sum 0) +
+          Becoming.SelectionPace.Displacement.generations.size 0 *
+            Becoming.SelectionPace.Displacement.flow.inflow
+              (Becoming.SelectionPace.lineage (Becoming.SelectionPace.Displacement.generations.family 0)
+                (Becoming.SelectionPace.Displacement.generations.kids 0))
+              0
+Becoming.SelectionPace.Displacement.premises : Becoming.SelectionPace.Displacement.flow.BalancesOn
+    Becoming.SelectionPace.Displacement.web
+    (Becoming.SelectionPace.lineage (Becoming.SelectionPace.Displacement.generations.family 0)
+      (Becoming.SelectionPace.Displacement.generations.kids 0))
+    0 ∧
+  (∀ (p k : Becoming.SelectionPace.Displacement.Relatum),
+      p ∈ Becoming.SelectionPace.Displacement.generations.family 0 →
+        k ∈ Becoming.SelectionPace.Displacement.generations.kids 0 p →
+          Becoming.SelectionPace.Displacement.web.ComesToStand 0 k) ∧
+    (∀ (p k : Becoming.SelectionPace.Displacement.Relatum),
+        p ∈ Becoming.SelectionPace.Displacement.generations.family 0 →
+          k ∈ Becoming.SelectionPace.Displacement.generations.kids 0 p →
+            1 ≤ Becoming.SelectionPace.Displacement.web.level (0 + 1) k) ∧
+      Becoming.SelectionTerm.Exact (Becoming.SelectionPace.Displacement.generations.family 0)
+          (Becoming.SelectionPace.Displacement.generations.kids 0)
+          (Becoming.SelectionPace.Displacement.generations.amount 0)
+          (Becoming.SelectionPace.Displacement.generations.amount (0 + 1)) ∧
+        (∀ (p : Becoming.SelectionPace.Displacement.Relatum),
+            p ∈ Becoming.SelectionPace.Displacement.generations.family 0 →
+              Becoming.SelectionPace.Displacement.web.level 0 p ≤ 1) ∧
+          Becoming.SelectionPace.Displacement.generations.size 0 ≤
+            Becoming.SelectionPace.Displacement.generations.size (0 + 1)
+Becoming.SelectionPace.Displacement.rest_falls : Becoming.SelectionPace.carriers
+      Becoming.SelectionPace.Displacement.generations 0 =
+    [Becoming.SelectionPace.Displacement.Relatum.carrier] ∧
+  Becoming.total [Becoming.SelectionPace.Displacement.Relatum.pool, Becoming.SelectionPace.Displacement.Relatum.other]
+        (Becoming.SelectionPace.Displacement.web.level 0) =
+      2 ∧
+    Becoming.total [Becoming.SelectionPace.Displacement.Relatum.pool, Becoming.SelectionPace.Displacement.Relatum.other]
+          (Becoming.SelectionPace.Displacement.web.level 1) =
+        0 ∧
+      Becoming.SelectionPace.Displacement.flow.inflow
+            ([Becoming.SelectionPace.Displacement.Relatum.carrier] ++
+                [Becoming.SelectionPace.Displacement.Relatum.pool, Becoming.SelectionPace.Displacement.Relatum.other] ++
+              List.flatMap (Becoming.SelectionPace.Displacement.generations.kids 0)
+                [Becoming.SelectionPace.Displacement.Relatum.carrier])
+            0 =
+          0 ∧
+        1 * Becoming.SelectionPace.Displacement.generations.sum (0 + 1) +
+            Becoming.total
+              [Becoming.SelectionPace.Displacement.Relatum.pool, Becoming.SelectionPace.Displacement.Relatum.other]
+              (Becoming.SelectionPace.Displacement.web.level (0 + 1)) ≤
+          1 * Becoming.SelectionPace.Displacement.generations.sum 0 +
+              Becoming.total
+                [Becoming.SelectionPace.Displacement.Relatum.pool, Becoming.SelectionPace.Displacement.Relatum.other]
+                (Becoming.SelectionPace.Displacement.web.level 0) +
+            Becoming.SelectionPace.Displacement.flow.inflow
+              (Becoming.SelectionPace.carriers Becoming.SelectionPace.Displacement.generations 0 ++
+                  [Becoming.SelectionPace.Displacement.Relatum.pool,
+                    Becoming.SelectionPace.Displacement.Relatum.other] ++
+                List.flatMap (Becoming.SelectionPace.Displacement.generations.kids 0)
+                  (Becoming.SelectionPace.carriers Becoming.SelectionPace.Displacement.generations 0))
+              0
+Becoming.SelectionPace.Displacement.fedEach : ∀ (p : Becoming.SelectionPace.Displacement.Relatum),
+  p ∈ Becoming.SelectionPace.Displacement.generations.family 0 →
+    Becoming.SelectionPace.Displacement.flow.inflow
+          (Becoming.SelectionPace.lineage [p] (Becoming.SelectionPace.Displacement.generations.kids 0)) 0 +
+        1 ≤
+      2 * 1
+Becoming.SelectionPace.Displacement.factor : Becoming.SelectionPace.Displacement.generations.sum (0 + 1) ≤
+    2 * Becoming.SelectionPace.Displacement.generations.sum 0 ∧
+  Becoming.SelectionPace.Displacement.generations.sum 1 = 2 * Becoming.SelectionPace.Displacement.generations.sum 0 ∧
+    Becoming.SelectionPace.Displacement.generations.size 0 * Becoming.SelectionPace.Displacement.generations.sum 1 =
+      2 ^ 1 *
+        (Becoming.SelectionPace.Displacement.generations.size 1 * Becoming.SelectionPace.Displacement.generations.sum 0)
+@Becoming.SelectionPace.Displacement.least : ∀ {Y : Type} {L' : Becoming.Flow Y Y} {W' : Becoming.Web Y Y}
+  {G : Becoming.SelectionTerm.Generations Y},
+  L'.BalancesOn W' (Becoming.SelectionPace.lineage (G.family 0) (G.kids 0)) 0 →
+    (∀ (p k : Y), p ∈ G.family 0 → k ∈ G.kids 0 p → W'.ComesToStand 0 k) →
+      (∀ (p k : Y), p ∈ G.family 0 → k ∈ G.kids 0 p → 1 ≤ W'.level 1 k) →
+        Becoming.SelectionTerm.Exact (G.family 0) (G.kids 0) (G.amount 0) (G.amount 1) →
+          (∀ (p : Y), p ∈ G.family 0 → W'.level 0 p ≤ 1) →
+            G.size 0 = 2 ∧ G.size 1 = 2 → G.sum 0 = 1 ∧ G.sum 1 = 2 → 1 ≤ Becoming.SelectionPace.carriedInflow L' G 0
+Becoming.SelectionPace.Displacement.capped_later : ∀ (p : Becoming.SelectionPace.Displacement.Relatum),
+  p ∈ Becoming.SelectionPace.Displacement.generations.family 1 → Becoming.SelectionPace.Displacement.web.level 1 p ≤ 1
+Becoming.SelectionPace.Displacement.spread_needs_inheritance : Becoming.SelectionTerm.concord
+      (Becoming.SelectionPace.Displacement.generations.family 0)
+      (Becoming.SelectionPace.Displacement.generations.offspringNumber 0)
+      (Becoming.SelectionPace.Displacement.generations.offspringNumber 0) =
+    4 ∧
+  Becoming.SelectionPace.Displacement.flow.inflow
+        (Becoming.SelectionPace.lineage (Becoming.SelectionPace.Displacement.generations.family 1)
+          (Becoming.SelectionPace.Displacement.generations.kids 1))
+        1 =
+      0 ∧
+    Becoming.SelectionPace.Displacement.flow.BalancesOn Becoming.SelectionPace.Displacement.web
+        (Becoming.SelectionPace.lineage (Becoming.SelectionPace.Displacement.generations.family 1)
+          (Becoming.SelectionPace.Displacement.generations.kids 1))
+        1 ∧
+      (∀ (p k : Becoming.SelectionPace.Displacement.Relatum),
+          p ∈ Becoming.SelectionPace.Displacement.generations.family 1 →
+            k ∈ Becoming.SelectionPace.Displacement.generations.kids 1 p →
+              Becoming.SelectionPace.Displacement.web.ComesToStand 1 k) ∧
+        (∀ (p k : Becoming.SelectionPace.Displacement.Relatum),
+            p ∈ Becoming.SelectionPace.Displacement.generations.family 1 →
+              k ∈ Becoming.SelectionPace.Displacement.generations.kids 1 p →
+                1 ≤ Becoming.SelectionPace.Displacement.web.level (1 + 1) k) ∧
+          (∀ (p : Becoming.SelectionPace.Displacement.Relatum),
+              p ∈ Becoming.SelectionPace.Displacement.generations.family 1 →
+                Becoming.SelectionPace.Displacement.web.level 1 p ≤ 1) ∧
+            Becoming.SelectionPace.Displacement.generations.size 0 ≤
+                Becoming.SelectionPace.Displacement.generations.size 1 ∧
+              (¬∀ (p : Becoming.SelectionPace.Displacement.Relatum),
+                    p ∈ Becoming.SelectionPace.Displacement.generations.family 0 →
+                      ∀ (k : Becoming.SelectionPace.Displacement.Relatum),
+                        k ∈ Becoming.SelectionPace.Displacement.generations.kids 0 p →
+                          Becoming.SelectionPace.Displacement.generations.offspringNumber 1 k =
+                            Becoming.SelectionPace.Displacement.generations.offspringNumber 0 p) ∧
+                ¬1 *
+                        Becoming.SelectionTerm.concord (Becoming.SelectionPace.Displacement.generations.family 0)
+                          (Becoming.SelectionPace.Displacement.generations.offspringNumber 0)
+                          (Becoming.SelectionPace.Displacement.generations.offspringNumber 0) ≤
+                      Becoming.SelectionPace.Displacement.generations.size 0 *
+                        Becoming.SelectionPace.Displacement.flow.inflow
+                          (Becoming.SelectionPace.lineage (Becoming.SelectionPace.Displacement.generations.family 1)
+                            (Becoming.SelectionPace.Displacement.generations.kids 1))
+                          1 ∧
+                  ¬1 *
+                        ((Becoming.SelectionPace.Displacement.generations.size 0 *
+                              Becoming.SelectionPace.Displacement.generations.sum 1 -
+                            Becoming.SelectionPace.Displacement.generations.size 1 *
+                              Becoming.SelectionPace.Displacement.generations.sum 0) *
+                          (Becoming.SelectionPace.Displacement.generations.size 0 *
+                              Becoming.SelectionPace.Displacement.generations.sum 1 -
+                            Becoming.SelectionPace.Displacement.generations.size 1 *
+                              Becoming.SelectionPace.Displacement.generations.sum 0)) ≤
+                      Becoming.SelectionPace.Displacement.generations.size 0 *
+                          Becoming.SelectionPace.Displacement.flow.inflow
+                            (Becoming.SelectionPace.lineage (Becoming.SelectionPace.Displacement.generations.family 1)
+                              (Becoming.SelectionPace.Displacement.generations.kids 1))
+                            1 *
+                        Becoming.SelectionTerm.concord (Becoming.SelectionPace.Displacement.generations.family 0)
+                          (Becoming.SelectionPace.Displacement.generations.amount 0)
+                          (Becoming.SelectionPace.Displacement.generations.amount 0)
+Becoming.SelectionPace.Fed.balances : Becoming.SelectionPace.Fed.flow.Balances Becoming.SelectionPace.Fed.web
+Becoming.SelectionPace.Fed.number : Becoming.Reproduction.Generations.ByNumber Becoming.SelectionPace.Fed.generations
+Becoming.SelectionPace.Fed.exact : Becoming.SelectionTerm.Exact (Becoming.SelectionPace.Fed.generations.family 0)
+  (Becoming.SelectionPace.Fed.generations.kids 0) (Becoming.SelectionPace.Fed.generations.amount 0)
+  (Becoming.SelectionPace.Fed.generations.amount (0 + 1))
+Becoming.SelectionPace.Fed.arise : ∀ (p k : Becoming.SelectionPace.Fed.Relatum),
+  p ∈ Becoming.SelectionPace.Fed.generations.family (0 + 1) →
+    k ∈ Becoming.SelectionPace.Fed.generations.kids (0 + 1) p → Becoming.SelectionPace.Fed.web.ComesToStand (0 + 1) k
+Becoming.SelectionPace.Fed.stands : ∀ (p k : Becoming.SelectionPace.Fed.Relatum),
+  p ∈ Becoming.SelectionPace.Fed.generations.family (0 + 1) →
+    k ∈ Becoming.SelectionPace.Fed.generations.kids (0 + 1) p → 1 ≤ Becoming.SelectionPace.Fed.web.level (0 + 1 + 1) k
+Becoming.SelectionPace.Fed.capped : ∀ (p : Becoming.SelectionPace.Fed.Relatum),
+  p ∈ Becoming.SelectionPace.Fed.generations.family (0 + 1) → Becoming.SelectionPace.Fed.web.level (0 + 1) p ≤ 1
+Becoming.SelectionPace.Fed.fed : Becoming.SelectionPace.Fed.generations.size 0 = 2 ∧
+  Becoming.SelectionPace.Fed.generations.size 1 = 2 ∧
+    Becoming.SelectionPace.Fed.generations.size 2 = 4 ∧
+      Becoming.SelectionPace.Fed.generations.concordAt 0 = 4 ∧
+        Becoming.total (Becoming.SelectionPace.Fed.generations.family 1) (Becoming.SelectionPace.Fed.web.level 1) = 2 ∧
+          Becoming.SelectionPace.Fed.flow.inflow
+                (Becoming.SelectionPace.lineage (Becoming.SelectionPace.Fed.generations.family 1)
+                  (Becoming.SelectionPace.Fed.generations.kids 1))
+                1 =
+              2 ∧
+            1 *
+                  (Becoming.SelectionPace.Fed.generations.size 1 * Becoming.SelectionPace.Fed.generations.size 1 +
+                    Becoming.SelectionPace.Fed.generations.concordAt 0) =
+                Becoming.SelectionPace.Fed.generations.size 0 *
+                  (Becoming.total (Becoming.SelectionPace.Fed.generations.family 1)
+                      (Becoming.SelectionPace.Fed.web.level 1) +
+                    Becoming.SelectionPace.Fed.flow.inflow
+                      (Becoming.SelectionPace.lineage (Becoming.SelectionPace.Fed.generations.family 1)
+                        (Becoming.SelectionPace.Fed.generations.kids 1))
+                      1) ∧
+              1 * Becoming.SelectionPace.Fed.generations.concordAt 0 =
+                Becoming.SelectionPace.Fed.generations.size 0 *
+                  Becoming.SelectionPace.Fed.flow.inflow
+                    (Becoming.SelectionPace.lineage (Becoming.SelectionPace.Fed.generations.family 1)
+                      (Becoming.SelectionPace.Fed.generations.kids 1))
+                    1
+Becoming.SelectionPace.Fed.premises : Becoming.Reproduction.Generations.ByNumber
+    Becoming.SelectionPace.Fed.generations ∧
+  Becoming.SelectionTerm.Exact (Becoming.SelectionPace.Fed.generations.family 0)
+      (Becoming.SelectionPace.Fed.generations.kids 0) (Becoming.SelectionPace.Fed.generations.amount 0)
+      (Becoming.SelectionPace.Fed.generations.amount (0 + 1)) ∧
+    Becoming.SelectionPace.Fed.flow.BalancesOn Becoming.SelectionPace.Fed.web
+        (Becoming.SelectionPace.lineage (Becoming.SelectionPace.Fed.generations.family (0 + 1))
+          (Becoming.SelectionPace.Fed.generations.kids (0 + 1)))
+        (0 + 1) ∧
+      (∀ (p k : Becoming.SelectionPace.Fed.Relatum),
+          p ∈ Becoming.SelectionPace.Fed.generations.family (0 + 1) →
+            k ∈ Becoming.SelectionPace.Fed.generations.kids (0 + 1) p →
+              Becoming.SelectionPace.Fed.web.ComesToStand (0 + 1) k) ∧
+        (∀ (p k : Becoming.SelectionPace.Fed.Relatum),
+            p ∈ Becoming.SelectionPace.Fed.generations.family (0 + 1) →
+              k ∈ Becoming.SelectionPace.Fed.generations.kids (0 + 1) p →
+                1 ≤ Becoming.SelectionPace.Fed.web.level (0 + 1 + 1) k) ∧
+          (∀ (p : Becoming.SelectionPace.Fed.Relatum),
+              p ∈ Becoming.SelectionPace.Fed.generations.family (0 + 1) →
+                Becoming.SelectionPace.Fed.web.level (0 + 1) p ≤ 1) ∧
+            Becoming.SelectionPace.Fed.generations.size 0 ≤ Becoming.SelectionPace.Fed.generations.size (0 + 1)
+@Becoming.SelectionPace.Fed.least : ∀ {Y : Type} {L' : Becoming.Flow Y Y} {W' : Becoming.Web Y Y}
+  {G : Becoming.SelectionTerm.Generations Y},
+  Becoming.Reproduction.Generations.ByNumber G →
+    Becoming.SelectionTerm.Exact (G.family 0) (G.kids 0) (G.amount 0) (G.amount 1) →
+      L'.BalancesOn W' (Becoming.SelectionPace.lineage (G.family 1) (G.kids 1)) 1 →
+        (∀ (p k : Y), p ∈ G.family 1 → k ∈ G.kids 1 p → W'.ComesToStand 1 k) →
+          (∀ (p k : Y), p ∈ G.family 1 → k ∈ G.kids 1 p → 1 ≤ W'.level 2 k) →
+            (∀ (p : Y), p ∈ G.family 1 → W'.level 1 p ≤ 1) →
+              G.size 0 = 2 ∧ G.size 1 = 2 →
+                G.concordAt 0 = 4 → 2 ≤ L'.inflow (Becoming.SelectionPace.lineage (G.family 1) (G.kids 1)) 1
+Becoming.SelectionPace.Inherited.every : ∀ (c : Becoming.SelectionPace.Inherited.Relatum),
+  c ∈ Becoming.SelectionPace.Inherited.family
+Becoming.SelectionPace.Inherited.balances : Becoming.SelectionPace.Inherited.flow.Balances
+  Becoming.SelectionPace.Inherited.web
+Becoming.SelectionPace.Inherited.closedFirst : Becoming.SelectionPace.Inherited.flow.ClosedAt
+  Becoming.SelectionPace.Inherited.family 0
+Becoming.SelectionPace.Inherited.closedSecond : Becoming.SelectionPace.Inherited.flow.ClosedAt
+  Becoming.SelectionPace.Inherited.family 1
+Becoming.SelectionPace.Inherited.dissipatesFirst : Becoming.SelectionPace.Inherited.flow.DissipatesOn
+  Becoming.SelectionPace.Inherited.family 0
+Becoming.SelectionPace.Inherited.dissipatesSecond : Becoming.SelectionPace.Inherited.flow.DissipatesOn
+  Becoming.SelectionPace.Inherited.family 1
+Becoming.SelectionPace.Inherited.ariseFirst : ∀ (p k : Becoming.SelectionPace.Inherited.Relatum),
+  p ∈ Becoming.SelectionPace.Inherited.generations.family 0 →
+    k ∈ Becoming.SelectionPace.Inherited.generations.kids 0 p → Becoming.SelectionPace.Inherited.web.ComesToStand 0 k
+Becoming.SelectionPace.Inherited.standsFirst : ∀ (p k : Becoming.SelectionPace.Inherited.Relatum),
+  p ∈ Becoming.SelectionPace.Inherited.generations.family 0 →
+    k ∈ Becoming.SelectionPace.Inherited.generations.kids 0 p → 1 ≤ Becoming.SelectionPace.Inherited.web.level (0 + 1) k
+Becoming.SelectionPace.Inherited.exactFirst : Becoming.SelectionTerm.Exact
+  (Becoming.SelectionPace.Inherited.generations.family 0) (Becoming.SelectionPace.Inherited.generations.kids 0)
+  (Becoming.SelectionPace.Inherited.generations.amount 0) (Becoming.SelectionPace.Inherited.generations.amount (0 + 1))
+Becoming.SelectionPace.Inherited.cappedFirst : ∀ (p : Becoming.SelectionPace.Inherited.Relatum),
+  p ∈ Becoming.SelectionPace.Inherited.generations.family 0 → Becoming.SelectionPace.Inherited.web.level 0 p ≤ 1
+Becoming.SelectionPace.Inherited.inherited : ∀ (p : Becoming.SelectionPace.Inherited.Relatum),
+  p ∈ Becoming.SelectionPace.Inherited.generations.family 0 →
+    ∀ (k : Becoming.SelectionPace.Inherited.Relatum),
+      k ∈ Becoming.SelectionPace.Inherited.generations.kids 0 p →
+        Becoming.SelectionPace.Inherited.generations.offspringNumber (0 + 1) k =
+          Becoming.SelectionPace.Inherited.generations.offspringNumber 0 p
+Becoming.SelectionPace.Inherited.ariseSecond : ∀ (p k : Becoming.SelectionPace.Inherited.Relatum),
+  p ∈ Becoming.SelectionPace.Inherited.generations.family (0 + 1) →
+    k ∈ Becoming.SelectionPace.Inherited.generations.kids (0 + 1) p →
+      Becoming.SelectionPace.Inherited.web.ComesToStand (0 + 1) k
+Becoming.SelectionPace.Inherited.standsSecond : ∀ (p k : Becoming.SelectionPace.Inherited.Relatum),
+  p ∈ Becoming.SelectionPace.Inherited.generations.family (0 + 1) →
+    k ∈ Becoming.SelectionPace.Inherited.generations.kids (0 + 1) p →
+      1 ≤ Becoming.SelectionPace.Inherited.web.level (0 + 1 + 1) k
+Becoming.SelectionPace.Inherited.exactSecond : Becoming.SelectionTerm.Exact
+  (Becoming.SelectionPace.Inherited.generations.family (0 + 1))
+  (Becoming.SelectionPace.Inherited.generations.kids (0 + 1))
+  (Becoming.SelectionPace.Inherited.generations.amount (0 + 1))
+  (Becoming.SelectionPace.Inherited.generations.amount (0 + 1 + 1))
+Becoming.SelectionPace.Inherited.cappedSecond : ∀ (p : Becoming.SelectionPace.Inherited.Relatum),
+  p ∈ Becoming.SelectionPace.Inherited.generations.family (0 + 1) →
+    Becoming.SelectionPace.Inherited.web.level (0 + 1) p ≤ 1
+Becoming.SelectionPace.Inherited.same_step_fails : Becoming.SelectionPace.Inherited.flow.ClosedAt
+    Becoming.SelectionPace.Inherited.family 0 ∧
+  Becoming.SelectionPace.Inherited.flow.ClosedAt Becoming.SelectionPace.Inherited.family 1 ∧
+    Becoming.SelectionPace.Inherited.flow.DissipatesOn Becoming.SelectionPace.Inherited.family 0 ∧
+      Becoming.SelectionPace.Inherited.flow.DissipatesOn Becoming.SelectionPace.Inherited.family 1 ∧
+        Becoming.SelectionPace.Inherited.flow.inflow Becoming.SelectionPace.Inherited.family 0 = 0 ∧
+          Becoming.SelectionPace.Inherited.flow.inflow Becoming.SelectionPace.Inherited.family 1 = 0 ∧
+            Becoming.SelectionPace.Inherited.flow.inflow
+                  (Becoming.SelectionPace.lineage (Becoming.SelectionPace.Inherited.generations.family 0)
+                    (Becoming.SelectionPace.Inherited.generations.kids 0))
+                  0 =
+                0 ∧
+              (∀ (p : Becoming.SelectionPace.Inherited.Relatum),
+                  p ∈ Becoming.SelectionPace.Inherited.generations.family 0 →
+                    ∀ (k : Becoming.SelectionPace.Inherited.Relatum),
+                      k ∈ Becoming.SelectionPace.Inherited.generations.kids 0 p →
+                        Becoming.SelectionPace.Inherited.generations.offspringNumber (0 + 1) k =
+                          Becoming.SelectionPace.Inherited.generations.offspringNumber 0 p) ∧
+                ¬1 *
+                      ((Becoming.SelectionPace.Inherited.generations.size 0 *
+                            Becoming.SelectionPace.Inherited.generations.sum 1 -
+                          Becoming.SelectionPace.Inherited.generations.size 1 *
+                            Becoming.SelectionPace.Inherited.generations.sum 0) *
+                        (Becoming.SelectionPace.Inherited.generations.size 0 *
+                            Becoming.SelectionPace.Inherited.generations.sum 1 -
+                          Becoming.SelectionPace.Inherited.generations.size 1 *
+                            Becoming.SelectionPace.Inherited.generations.sum 0)) ≤
+                    Becoming.SelectionPace.Inherited.generations.size 0 *
+                        Becoming.SelectionPace.Inherited.flow.inflow
+                          (Becoming.SelectionPace.lineage (Becoming.SelectionPace.Inherited.generations.family 0)
+                            (Becoming.SelectionPace.Inherited.generations.kids 0))
+                          0 *
+                      Becoming.SelectionTerm.concord (Becoming.SelectionPace.Inherited.generations.family 0)
+                        (Becoming.SelectionPace.Inherited.generations.amount 0)
+                        (Becoming.SelectionPace.Inherited.generations.amount 0)
+Becoming.SelectionPace.Inherited.next_step_attained : Becoming.SelectionPace.Inherited.flow.inflow
+      (Becoming.SelectionPace.lineage (Becoming.SelectionPace.Inherited.generations.family 1)
+        (Becoming.SelectionPace.Inherited.generations.kids 1))
+      1 =
+    2 ∧
+  1 *
+        ((Becoming.SelectionPace.Inherited.generations.size 0 *
+              Becoming.SelectionPace.Inherited.generations.sum (0 + 1) -
+            Becoming.SelectionPace.Inherited.generations.size (0 + 1) *
+              Becoming.SelectionPace.Inherited.generations.sum 0) *
+          (Becoming.SelectionPace.Inherited.generations.size 0 *
+              Becoming.SelectionPace.Inherited.generations.sum (0 + 1) -
+            Becoming.SelectionPace.Inherited.generations.size (0 + 1) *
+              Becoming.SelectionPace.Inherited.generations.sum 0)) ≤
+      Becoming.SelectionPace.Inherited.generations.size 0 *
+          Becoming.SelectionPace.Inherited.flow.inflow
+            (Becoming.SelectionPace.lineage (Becoming.SelectionPace.Inherited.generations.family (0 + 1))
+              (Becoming.SelectionPace.Inherited.generations.kids (0 + 1)))
+            (0 + 1) *
+        Becoming.SelectionTerm.concord (Becoming.SelectionPace.Inherited.generations.family 0)
+          (Becoming.SelectionPace.Inherited.generations.amount 0)
+          (Becoming.SelectionPace.Inherited.generations.amount 0) ∧
+    1 *
+        ((Becoming.SelectionPace.Inherited.generations.size 0 * Becoming.SelectionPace.Inherited.generations.sum 1 -
+            Becoming.SelectionPace.Inherited.generations.size 1 * Becoming.SelectionPace.Inherited.generations.sum 0) *
+          (Becoming.SelectionPace.Inherited.generations.size 0 * Becoming.SelectionPace.Inherited.generations.sum 1 -
+            Becoming.SelectionPace.Inherited.generations.size 1 * Becoming.SelectionPace.Inherited.generations.sum 0)) =
+      Becoming.SelectionPace.Inherited.generations.size 0 *
+          Becoming.SelectionPace.Inherited.flow.inflow
+            (Becoming.SelectionPace.lineage (Becoming.SelectionPace.Inherited.generations.family 1)
+              (Becoming.SelectionPace.Inherited.generations.kids 1))
+            1 *
+        Becoming.SelectionTerm.concord (Becoming.SelectionPace.Inherited.generations.family 0)
+          (Becoming.SelectionPace.Inherited.generations.amount 0)
+          (Becoming.SelectionPace.Inherited.generations.amount 0)
+Becoming.SelectionPace.Inherited.ariseBoth : ∀ (t : Nat) (p k : Becoming.SelectionPace.Inherited.Relatum),
+  t < 2 →
+    p ∈ Becoming.SelectionPace.Inherited.generations.family t →
+      k ∈ Becoming.SelectionPace.Inherited.generations.kids t p → Becoming.SelectionPace.Inherited.web.ComesToStand t k
+Becoming.SelectionPace.Inherited.standsBoth : ∀ (t : Nat) (p k : Becoming.SelectionPace.Inherited.Relatum),
+  t < 2 →
+    p ∈ Becoming.SelectionPace.Inherited.generations.family t →
+      k ∈ Becoming.SelectionPace.Inherited.generations.kids t p →
+        1 ≤ Becoming.SelectionPace.Inherited.web.level (t + 1) k
+Becoming.SelectionPace.Inherited.exactBoth : ∀ (t : Nat),
+  t < 2 →
+    Becoming.SelectionTerm.Exact (Becoming.SelectionPace.Inherited.generations.family t)
+      (Becoming.SelectionPace.Inherited.generations.kids t) (Becoming.SelectionPace.Inherited.generations.amount t)
+      (Becoming.SelectionPace.Inherited.generations.amount (t + 1))
+Becoming.SelectionPace.Inherited.cappedBoth : ∀ (t : Nat) (p : Becoming.SelectionPace.Inherited.Relatum),
+  t < 2 → p ∈ Becoming.SelectionPace.Inherited.generations.family t → Becoming.SelectionPace.Inherited.web.level t p ≤ 1
+Becoming.SelectionPace.Inherited.stretch_attained : Becoming.SelectionPace.carriedInflow
+      Becoming.SelectionPace.Inherited.flow Becoming.SelectionPace.Inherited.generations 0 =
+    1 ∧
+  Becoming.SelectionPace.carriedInflow Becoming.SelectionPace.Inherited.flow
+        Becoming.SelectionPace.Inherited.generations 1 =
+      2 ∧
+    Becoming.SelectionPace.Inherited.generations.sum 2 = 4 ∧
+      1 * Becoming.SelectionPace.Inherited.generations.sum 2 ≤
+          1 * Becoming.SelectionPace.Inherited.generations.sum 0 +
+            Becoming.total (Becoming.steps 0 2)
+              (Becoming.SelectionPace.carriedInflow Becoming.SelectionPace.Inherited.flow
+                Becoming.SelectionPace.Inherited.generations) ∧
+        1 * Becoming.SelectionPace.Inherited.generations.sum 2 =
+          1 * Becoming.SelectionPace.Inherited.generations.sum 0 +
+            Becoming.total (Becoming.steps 0 2)
+              (Becoming.SelectionPace.carriedInflow Becoming.SelectionPace.Inherited.flow
+                Becoming.SelectionPace.Inherited.generations)
+Becoming.SelectionPace.Swap.balances : Becoming.SelectionPace.Swap.flow.Balances Becoming.SelectionPace.Swap.web
+Becoming.SelectionPace.Swap.swap : Becoming.SelectionPace.carriedInflow Becoming.SelectionPace.Swap.flow
+      Becoming.SelectionPace.Swap.generations 0 =
+    2 ∧
+  Becoming.SelectionPace.carriers Becoming.SelectionPace.Swap.generations 0 =
+      [Becoming.SelectionPace.Swap.Relatum.left, Becoming.SelectionPace.Swap.Relatum.right] ∧
+    Becoming.SelectionPace.Swap.flow.inflow
+          (Becoming.SelectionPace.lineage (Becoming.SelectionPace.carriers Becoming.SelectionPace.Swap.generations 0)
+            (Becoming.SelectionPace.Swap.generations.kids 0))
+          0 =
+        0 ∧
+      Becoming.SelectionPace.Swap.generations.size 0 = 2 ∧
+        Becoming.SelectionPace.Swap.generations.size 1 = 2 ∧
+          Becoming.SelectionPace.Swap.generations.sum 0 = 2 ∧ Becoming.SelectionPace.Swap.generations.sum 1 = 2
+Becoming.SelectionPace.Uncapped.balances : Becoming.SelectionPace.Uncapped.flow.Balances
+  Becoming.SelectionPace.Uncapped.web
+Becoming.SelectionPace.Uncapped.arise : ∀ (p k : Becoming.SelectionPace.Uncapped.Relatum),
+  p ∈ Becoming.SelectionPace.Uncapped.generations.family 0 →
+    k ∈ Becoming.SelectionPace.Uncapped.generations.kids 0 p → Becoming.SelectionPace.Uncapped.web.ComesToStand 0 k
+Becoming.SelectionPace.Uncapped.stands : ∀ (p k : Becoming.SelectionPace.Uncapped.Relatum),
+  p ∈ Becoming.SelectionPace.Uncapped.generations.family 0 →
+    k ∈ Becoming.SelectionPace.Uncapped.generations.kids 0 p → 1 ≤ Becoming.SelectionPace.Uncapped.web.level (0 + 1) k
+Becoming.SelectionPace.Uncapped.exact : Becoming.SelectionTerm.Exact
+  (Becoming.SelectionPace.Uncapped.generations.family 0) (Becoming.SelectionPace.Uncapped.generations.kids 0)
+  (Becoming.SelectionPace.Uncapped.generations.amount 0) (Becoming.SelectionPace.Uncapped.generations.amount (0 + 1))
+Becoming.SelectionPace.Uncapped.uncapped : Becoming.SelectionPace.carriedInflow Becoming.SelectionPace.Uncapped.flow
+      Becoming.SelectionPace.Uncapped.generations 0 =
+    0 ∧
+  Becoming.SelectionPace.Uncapped.flow.BalancesOn Becoming.SelectionPace.Uncapped.web
+      (Becoming.SelectionPace.lineage (Becoming.SelectionPace.Uncapped.generations.family 0)
+        (Becoming.SelectionPace.Uncapped.generations.kids 0))
+      0 ∧
+    (∀ (p k : Becoming.SelectionPace.Uncapped.Relatum),
+        p ∈ Becoming.SelectionPace.Uncapped.generations.family 0 →
+          k ∈ Becoming.SelectionPace.Uncapped.generations.kids 0 p →
+            Becoming.SelectionPace.Uncapped.web.ComesToStand 0 k) ∧
+      (∀ (p k : Becoming.SelectionPace.Uncapped.Relatum),
+          p ∈ Becoming.SelectionPace.Uncapped.generations.family 0 →
+            k ∈ Becoming.SelectionPace.Uncapped.generations.kids 0 p →
+              1 ≤ Becoming.SelectionPace.Uncapped.web.level (0 + 1) k) ∧
+        Becoming.SelectionTerm.Exact (Becoming.SelectionPace.Uncapped.generations.family 0)
+            (Becoming.SelectionPace.Uncapped.generations.kids 0) (Becoming.SelectionPace.Uncapped.generations.amount 0)
+            (Becoming.SelectionPace.Uncapped.generations.amount (0 + 1)) ∧
+          Becoming.SelectionPace.Uncapped.generations.size 0 ≤
+              Becoming.SelectionPace.Uncapped.generations.size (0 + 1) ∧
+            (¬∀ (p : Becoming.SelectionPace.Uncapped.Relatum),
+                  p ∈ Becoming.SelectionPace.Uncapped.generations.family 0 →
+                    Becoming.SelectionPace.Uncapped.web.level 0 p ≤ 1) ∧
+              ¬1 *
+                    (Becoming.SelectionPace.Uncapped.generations.size 0 *
+                      Becoming.SelectionPace.Uncapped.generations.sum 1) ≤
+                  1 *
+                      (Becoming.SelectionPace.Uncapped.generations.size 1 *
+                        Becoming.SelectionPace.Uncapped.generations.sum 0) +
+                    Becoming.SelectionPace.Uncapped.generations.size 0 *
+                      Becoming.SelectionPace.carriedInflow Becoming.SelectionPace.Uncapped.flow
+                        Becoming.SelectionPace.Uncapped.generations 0
+Becoming.SelectionPace.Shrink.balances : Becoming.SelectionPace.Shrink.flow.Balances Becoming.SelectionPace.Shrink.web
+Becoming.SelectionPace.Shrink.arise : ∀ (p k : Becoming.SelectionPace.Shrink.Relatum),
+  p ∈ Becoming.SelectionPace.Shrink.generations.family 0 →
+    k ∈ Becoming.SelectionPace.Shrink.generations.kids 0 p → Becoming.SelectionPace.Shrink.web.ComesToStand 0 k
+Becoming.SelectionPace.Shrink.stands : ∀ (p k : Becoming.SelectionPace.Shrink.Relatum),
+  p ∈ Becoming.SelectionPace.Shrink.generations.family 0 →
+    k ∈ Becoming.SelectionPace.Shrink.generations.kids 0 p → 1 ≤ Becoming.SelectionPace.Shrink.web.level (0 + 1) k
+Becoming.SelectionPace.Shrink.exact : Becoming.SelectionTerm.Exact (Becoming.SelectionPace.Shrink.generations.family 0)
+  (Becoming.SelectionPace.Shrink.generations.kids 0) (Becoming.SelectionPace.Shrink.generations.amount 0)
+  (Becoming.SelectionPace.Shrink.generations.amount (0 + 1))
+Becoming.SelectionPace.Shrink.capped : ∀ (p : Becoming.SelectionPace.Shrink.Relatum),
+  p ∈ Becoming.SelectionPace.Shrink.generations.family 0 → Becoming.SelectionPace.Shrink.web.level 0 p ≤ 1
+Becoming.SelectionPace.Shrink.shrink : Becoming.SelectionPace.carriedInflow Becoming.SelectionPace.Shrink.flow
+      Becoming.SelectionPace.Shrink.generations 0 =
+    0 ∧
+  Becoming.SelectionPace.Shrink.generations.size (0 + 1) < Becoming.SelectionPace.Shrink.generations.size 0 ∧
+    ¬1 * (Becoming.SelectionPace.Shrink.generations.size 0 * Becoming.SelectionPace.Shrink.generations.sum 1) ≤
+        1 * (Becoming.SelectionPace.Shrink.generations.size 1 * Becoming.SelectionPace.Shrink.generations.sum 0) +
+          Becoming.SelectionPace.Shrink.generations.size 0 *
+            Becoming.SelectionPace.carriedInflow Becoming.SelectionPace.Shrink.flow
+              Becoming.SelectionPace.Shrink.generations 0

@@ -1,0 +1,17 @@
+import Becoming.ScoreRepresentation
+#check @Becoming.ScoreRepresentation.extension_shape
+#check @Becoming.ScoreRepresentation.successor_extends
+#check @Becoming.ScoreRepresentation.livingSignificance_recognizes_gains
+#check @Becoming.ScoreRepresentation.above_iff
+#check @Becoming.ScoreRepresentation.above_satisfies_comparison
+#check @Becoming.ScoreRepresentation.never_outranked
+#check @Becoming.ScoreRepresentation.weighted_satisfies_comparison
+#check @Becoming.ScoreRepresentation.weighted_outranks
+#check @Becoming.ScoreRepresentation.comparison_does_not_yield_priority
+#check @Becoming.ScoreRepresentation.every_nat_score_outranks
+#check @Becoming.ScoreRepresentation.no_nat_score_represents
+#check @Becoming.ScoreRepresentation.livingSignificance_leaves_ordering_open
+#check @Becoming.ScoreRepresentation.ratio_bounded
+#check @Becoming.ScoreRepresentation.cross_iff
+#check @Becoming.ScoreRepresentation.ratio_agrees
+#check @Becoming.ScoreRepresentation.bounded_score_represents

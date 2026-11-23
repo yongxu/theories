@@ -1,0 +1,27 @@
+@Becoming.Feedback.step_two : ∀ {h t m : Nat} {d : Nat → Nat},
+  (Becoming.Feedback.law h d).level t = m + 2 → d t = 2 → (Becoming.Feedback.law h d).level (t + 1) = m + 1
+@Becoming.Feedback.step_one : ∀ {h t : Nat} {d : Nat → Nat},
+  (Becoming.Feedback.law h d).level t = 1 → d t = 1 → (Becoming.Feedback.law h d).level (t + 1) = 1
+Becoming.Feedback.descending : ∀ (h : Nat) (d : Nat → Nat),
+  (∀ (t : Nat), t < h → d t = 2) → ∀ (k : Nat), k ≤ h → (Becoming.Feedback.law h d).level k + k = h + 1
+Becoming.Feedback.at_horizon : ∀ (h : Nat), (Becoming.Feedback.law h (Becoming.Feedback.stopping h)).level h = 1
+Becoming.Feedback.after_horizon : ∀ (h j : Nat),
+  (Becoming.Feedback.law h (Becoming.Feedback.stopping h)).level (h + j) = 1
+Becoming.Feedback.supported : ∀ (h t : Nat), 1 ≤ (Becoming.Feedback.law h (Becoming.Feedback.stopping h)).level t
+Becoming.Feedback.prefix_does_not_decide : ∀ (h : Nat),
+  (Becoming.Feedback.law h (Becoming.Feedback.stopping h)).start =
+      (Becoming.Feedback.law h Becoming.Feedback.continuing).start ∧
+    (∀ (t : Nat), t < h → Becoming.Feedback.stopping h t = Becoming.Feedback.continuing t) ∧
+      RelationalRenewal.RenewingIn (Becoming.Feedback.law h (Becoming.Feedback.stopping h)).unfolding
+          RelationalRenewal.Law.Part.focal ∧
+        RelationalRenewal.ConsumingIn (Becoming.Feedback.law h Becoming.Feedback.continuing).unfolding
+          RelationalRenewal.Law.Part.focal
+Becoming.HorizonWebs.prefix_does_not_decide : ∀ (h : Nat),
+  (∀ (t : Nat),
+      t ≤ h →
+        (Becoming.Web.static (Becoming.Feedback.law h (Becoming.Feedback.stopping h)).unfolding).level t () =
+          (Becoming.Web.static (Becoming.Feedback.law h Becoming.Feedback.continuing).unfolding).level t ()) ∧
+    (Becoming.Web.static (Becoming.Feedback.law h (Becoming.Feedback.stopping h)).unfolding).RenewingIn
+        RelationalRenewal.Law.Part.focal ∧
+      (Becoming.Web.static (Becoming.Feedback.law h Becoming.Feedback.continuing).unfolding).ConsumingIn
+        RelationalRenewal.Law.Part.focal

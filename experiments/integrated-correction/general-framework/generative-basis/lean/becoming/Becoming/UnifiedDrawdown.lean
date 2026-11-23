@@ -10,6 +10,7 @@ import Becoming.PacedStock
 import Becoming.SampledSelection
 import Becoming.ReadOffInTime
 import Becoming.ReadingSchedule
+import Becoming.CoreHelpers
 
 /-!
 # Unified Drawdown: Local Accounts, Pre-Overdraw Bridges, and Temporal Aliasing
@@ -920,49 +921,16 @@ structure RestraintAgentSpec where
 /-- Explicit `AdaptiveLoops.OpenLoop` constructor for a finite-lag restraint agent observing a
 scalar substrate level (`Nat`). -/
 def restraintLoop (spec : RestraintAgentSpec) (warnLevel : Nat) :
-    AdaptiveLoops.OpenLoop Nat Nat Unit Unit where
-  next s obsAlarm _ := if obsAlarm.2 then s - 1 else s
-  draw s _ := if s = 0 then spec.postCap else spec.preCap
-  emitAlarm _ obs := decide (obs < warnLevel)
-  silenceLoad _ := 0
-  favours s := 0 < s
+    AdaptiveLoops.OpenLoop Nat Nat Unit Unit :=
+  OpenComposition.countdownLoop spec.preCap spec.postCap (fun _ obs => decide (obs < warnLevel))
 
 /-- Explicit `AdaptiveLoops.LoopCertificate` for `restraintLoop spec warnLevel`, certifying
 post-alarm draw drop to `spec.postCap` within `spec.lag` steps. -/
 def restraintCert (spec : RestraintAgentSpec) (warnLevel : Nat) :
-    AdaptiveLoops.LoopCertificate (restraintLoop spec warnLevel) spec.lag where
-  tol _ _ := True
-  warnObs obs := obs < warnLevel
-  preCap _ := spec.preCap
-  postBudget _ := spec.postCap
-  maxSilence := spec.maxSilence
-  maxLag := spec.lag
-  K s := s ≤ spec.lag
-  eta s := s
-  init_in := Nat.le_refl spec.lag
-  cert := Viability.certificate_disturbed_iff.mpr
-    ⟨fun s _ => ⟨fun _ => by
-        show (if s = 0 then spec.postCap else spec.preCap) ≤ spec.preCap
-        cases s
-        · exact spec.postLePre
-        · exact Nat.le_refl _,
-      Nat.zero_le spec.maxSilence,
-      fun eqZero => ⟨by rw [eqZero]; exact Nat.lt_irrefl 0, fun _ => by
-        show (if s = 0 then spec.postCap else spec.preCap) ≤ spec.postCap
-        rw [if_pos eqZero]
-        exact Nat.le_refl _⟩⟩,
-     fun s m _ hs => by
-       show (if m.1.2 then s - 1 else s) ≤ spec.lag
-       cases m.1.2
-       · exact hs
-       · exact Nat.le_trans (Nat.sub_le s 1) hs⟩
-  eta_bound _ hs := hs
-  emits_on_warn _ obs _ hWarn := decide_eq_true hWarn
-  eta_alarm_step s _ _ _ _ pos := match s, pos with
-    | s' + 1, _ => Nat.lt_succ_self s'
-  eta_alarm_zero s _ _ _ _ eq0 := by
-    show s - 1 = 0
-    rw [eq0]
+    AdaptiveLoops.LoopCertificate (restraintLoop spec warnLevel) spec.lag :=
+  OpenComposition.countdownCert spec.preCap spec.postCap spec.maxSilence spec.lag spec.lag
+    (fun _ obs => decide (obs < warnLevel)) (fun obs => obs < warnLevel)
+    spec.postLePre (Nat.le_refl spec.lag) (fun _ _ _ hWarn => decide_eq_true hWarn)
 
 /-- **Part A3(iii) (`pooled_restraint_restores_viability`).**
 General closed-loop restoration theorem via `AdaptiveLoops.assume_guarantee_joint_viable` and
@@ -1666,28 +1634,12 @@ theorem logistic_sampled_break_concealment (n v : Nat) (more : 1 < v)
       fun adm c req => by rw [hPointEq s hs c]; exact adm c req⟩,
      fun c _ => hPointEq s hs c⟩) select hSel
 
-/-- Axiom-free boolean strict order helper on `Nat` (avoids `Init` `propext`). -/
-def ltBool : Nat → Nat → Bool
-  | 0, _ + 1 => true
-  | _, 0 => false
-  | a + 1, b + 1 => ltBool a b
-
-theorem ltBool_true {a b : Nat} (h : ltBool a b = true) : a < b := by
-  match a, b with
-  | 0, _ + 1 => exact Nat.zero_lt_succ _
-  | a + 1, b + 1 => exact Nat.succ_lt_succ (ltBool_true h)
-
-theorem ltBool_false {a b : Nat} (h : ltBool a b = false) : b ≤ a := by
-  match a, b with
-  | _, 0 => exact Nat.zero_le _
-  | a + 1, b + 1 => exact Nat.succ_le_succ (ltBool_false h)
-
 /-- Axiom-free Euclidean `(quotient, remainder)` state for periodic cycle length `m`. -/
 def cyclePair (m : Nat) : Nat → Nat × Nat
   | 0 => (0, 0)
   | t + 1 =>
     let qr := cyclePair m t
-    match ltBool (qr.2 + 1) m with
+    match Nat.blt (qr.2 + 1) m with
     | true => (qr.1, qr.2 + 1)
     | false => (qr.1 + 1, 0)
 
@@ -1700,14 +1652,14 @@ theorem cyclePair_spec (m : Nat) (hm : 0 < m) :
   | t + 1 => by
     have ih := cyclePair_spec m hm t
     dsimp only [cyclePair]
-    cases hb : ltBool ((cyclePair m t).2 + 1) m with
+    cases hb : Nat.blt ((cyclePair m t).2 + 1) m with
     | true =>
       dsimp only
-      refine ⟨?_, ltBool_true hb⟩
+      refine ⟨?_, CoreHelpers.natBlt_true_iff.mp hb⟩
       rw [← Nat.add_assoc, ih.1]
     | false =>
       dsimp only
-      have hEq : (cyclePair m t).2 + 1 = m := Nat.le_antisymm ih.2 (ltBool_false hb)
+      have hEq : (cyclePair m t).2 + 1 = m := Nat.le_antisymm ih.2 (CoreHelpers.natBlt_false_iff.mp hb)
       refine ⟨?_, hm⟩
       have hAdd : m * ((cyclePair m t).1 + 1) + 0 =
           m * (cyclePair m t).1 + ((cyclePair m t).2 + 1) := by
@@ -1792,7 +1744,7 @@ theorem cyclicCourse_openCourse (n v : Nat) (more : 1 < v)
   let r := cycleRem (n + 2) t
   have hrLt : r < n + 2 := (cyclePair_spec (n + 2) hPos t).2
   have hStepX := front.1.2 r
-  cases hb : ltBool ((cyclePair (n + 2) t).2 + 1) (n + 2) with
+  cases hb : Nat.blt ((cyclePair (n + 2) t).2 + 1) (n + 2) with
   | true =>
     have hMod : cycleRem (n + 2) (t + 1) = r + 1 := by
       dsimp only [cycleRem, cyclePair]
@@ -1802,7 +1754,7 @@ theorem cyclicCourse_openCourse (n v : Nat) (more : 1 < v)
     rw [hMod]
     exact hStepX
   | false =>
-    have hEq : r + 1 = n + 2 := Nat.le_antisymm hrLt (ltBool_false hb)
+    have hEq : r + 1 = n + 2 := Nat.le_antisymm hrLt (CoreHelpers.natBlt_false_iff.mp hb)
     have hMod : cycleRem (n + 2) (t + 1) = 0 := by
       dsimp only [cycleRem, cyclePair]
       rw [hb]
@@ -2917,8 +2869,7 @@ theorem unifiedDrawdown_readsOnlyDynamics {D : Type} {Pos F : Type} (law : D →
 theorem unifiedDrawdown_not_entails {D Pos F : Type} (law : D → Prop)
     (entails : ∀ d (sig : Pos → Nat → F → Prop), law d → Unrestricted sig)
     (p : Pos) (f : F) (d : D) : ¬ law d :=
-  ReadsOnlyDynamics.not_entails (sig := fun _ _ _ => False) (unifiedDrawdown_readsOnlyDynamics law)
-    entails p f
+  dynamicsLaw_not_entails (fun d h sig => entails d sig h) p f
 
 /-- Applied to our three verified witness classes (`HeldPair`, `OverdrawSeparationWitness`,
 `CadenceErasureWitness`), `ReadsOnlyDynamics.not_entails` proves no proof of `Unrestricted sig`
@@ -3060,130 +3011,83 @@ def restraintContract (spec : RestraintAgentSpec) (warnLevel : Nat) :
 
 /-- Indexed component-state carrier for the right-associated fleet fold over a non-empty list
 `(head :: tail : List RestraintAgentSpec)`. -/
-def FleetState : List RestraintAgentSpec → Type
-  | [] => Nat
-  | _ :: rest => Nat × FleetState rest
+abbrev FleetState : List RestraintAgentSpec → Type := OpenComposition.ListCarrier Nat
 
 /-- Indexed observation carrier for the right-associated fleet fold. -/
-def FleetObs : List RestraintAgentSpec → Type
-  | [] => Nat
-  | _ :: rest => Nat × FleetObs rest
+abbrev FleetObs : List RestraintAgentSpec → Type := OpenComposition.ListCarrier Nat
 
 /-- Indexed disturbance carrier for the right-associated fleet fold. -/
-def FleetDist : List RestraintAgentSpec → Type
-  | [] => Unit
-  | _ :: rest => Unit × FleetDist rest
+abbrev FleetDist : List RestraintAgentSpec → Type := OpenComposition.ListCarrier Unit
 
 /-- Indexed private-port carrier for the right-associated fleet fold. -/
-def FleetInt : List RestraintAgentSpec → Type
-  | [] => Empty
-  | _ :: rest => Sum Empty (FleetInt rest)
+abbrev FleetInt : List RestraintAgentSpec → Type := OpenComposition.ListIntCarrier Empty
 
 /-- Initial internal lag-counter tuple `(head.lag, ...)` across the non-empty fleet. -/
-def fleetInit (head : RestraintAgentSpec) : (tail : List RestraintAgentSpec) → FleetState tail
-  | [] => head.lag
-  | next :: rest => (head.lag, fleetInit next rest)
+abbrev fleetInit (head : RestraintAgentSpec) (tail : List RestraintAgentSpec) : FleetState tail :=
+  OpenComposition.composeListInit (fun s => s.lag) head tail
 
 /-- Broadcast scalar observation channel `(x (), ...)` across the non-empty fleet. -/
-def fleetObs : (tail : List RestraintAgentSpec) → (Unit → Nat) → FleetObs tail
-  | [], x => x ()
-  | _ :: rest, x => (x (), fleetObs rest x)
+abbrev fleetObs (tail : List RestraintAgentSpec) (x : Unit → Nat) : FleetObs tail :=
+  OpenComposition.composeListObs (fun x => x ()) tail x
 
 /-- Inductive right-associated `OpenComponent` fold over a non-empty agent list via
 `OpenComposition.OpenComponent.compose`. -/
-def fleetComponent (head : RestraintAgentSpec) :
-    (tail : List RestraintAgentSpec) → Nat →
-    OpenComposition.OpenComponent (FleetState tail) (FleetObs tail) (FleetDist tail) (FleetInt tail) Unit
-  | [], warnLevel => restraintComponent head warnLevel
-  | next :: rest, warnLevel =>
-    OpenComposition.OpenComponent.compose
-      (restraintComponent head warnLevel)
-      (fleetComponent next rest warnLevel)
+abbrev fleetComponent (head : RestraintAgentSpec) (tail : List RestraintAgentSpec) (warnLevel : Nat) :
+    OpenComposition.OpenComponent (FleetState tail) (FleetObs tail) (FleetDist tail) (FleetInt tail) Unit :=
+  OpenComposition.composeListComponent (fun s => restraintComponent s warnLevel) head tail
 
 /-- Inductive right-associated `InterfaceContract` fold over a non-empty agent list via
 `OpenComposition.composeContract`. -/
-def fleetContract (head : RestraintAgentSpec) :
-    (tail : List RestraintAgentSpec) → (warnLevel : Nat) →
-    OpenComposition.InterfaceContract (fleetComponent head tail warnLevel) (fleetInit head tail)
-  | [], warnLevel => restraintContract head warnLevel
-  | next :: rest, warnLevel =>
-    OpenComposition.composeContract
-      (restraintContract head warnLevel)
-      (fleetContract next rest warnLevel)
+abbrev fleetContract (head : RestraintAgentSpec) (tail : List RestraintAgentSpec) (warnLevel : Nat) :
+    OpenComposition.InterfaceContract (fleetComponent head tail warnLevel) (fleetInit head tail) :=
+  OpenComposition.composeListContract (fun s => restraintContract s warnLevel) head tail
 
 /-- Recursive sum of a scalar projection over a non-empty list `(head :: tail)`. -/
-def specSum (proj : RestraintAgentSpec → Nat) (head : RestraintAgentSpec) :
-    List RestraintAgentSpec → Nat
-  | [] => proj head
-  | next :: rest => proj head + specSum proj next rest
+abbrev specSum (proj : RestraintAgentSpec → Nat) (head : RestraintAgentSpec) :
+    List RestraintAgentSpec → Nat :=
+  OpenComposition.listSum proj head
 
 /-- Recursive maximum of a scalar projection over a non-empty list `(head :: tail)`. -/
-def specMax (proj : RestraintAgentSpec → Nat) (head : RestraintAgentSpec) :
-    List RestraintAgentSpec → Nat
-  | [] => proj head
-  | next :: rest => AdaptiveLoops.natMax (proj head) (specMax proj next rest)
+abbrev specMax (proj : RestraintAgentSpec → Nat) (head : RestraintAgentSpec) :
+    List RestraintAgentSpec → Nat :=
+  OpenComposition.listMax proj head
 
 theorem fleet_preCapExt_eq_sum :
     ∀ (tail : List RestraintAgentSpec) (head : RestraintAgentSpec) (warnLevel : Nat),
       (fleetContract head tail warnLevel).preCapExt () = specSum (fun s => s.preCap) head tail
-  | [], _, _ => rfl
-  | next :: rest, head, warnLevel => by
-    show (restraintContract head warnLevel).preCapExt () +
-        (fleetContract next rest warnLevel).preCapExt () =
-      head.preCap + specSum (fun s => s.preCap) next rest
-    rw [fleet_preCapExt_eq_sum rest next warnLevel]
-    rfl
+  | tail, head, warnLevel =>
+    OpenComposition.composeList_preCapExt_eq_sum (fun s => restraintContract s warnLevel) () tail head
 
 theorem fleet_postCapExt_eq_sum :
     ∀ (tail : List RestraintAgentSpec) (head : RestraintAgentSpec) (warnLevel : Nat),
       (fleetContract head tail warnLevel).postBudgetExt () = specSum (fun s => s.postCap) head tail
-  | [], _, _ => rfl
-  | next :: rest, head, warnLevel => by
-    show (restraintContract head warnLevel).postBudgetExt () +
-        (fleetContract next rest warnLevel).postBudgetExt () =
-      head.postCap + specSum (fun s => s.postCap) next rest
-    rw [fleet_postCapExt_eq_sum rest next warnLevel]
-    rfl
+  | tail, head, warnLevel =>
+    OpenComposition.composeList_postBudgetExt_eq_sum (fun s => restraintContract s warnLevel) () tail head
 
 theorem fleet_maxSilence_eq_sum :
     ∀ (tail : List RestraintAgentSpec) (head : RestraintAgentSpec) (warnLevel : Nat),
       (fleetContract head tail warnLevel).maxSilence = specSum (fun s => s.maxSilence) head tail
-  | [], _, _ => rfl
-  | next :: rest, head, warnLevel => by
-    show (restraintContract head warnLevel).maxSilence +
-        (fleetContract next rest warnLevel).maxSilence =
-      head.maxSilence + specSum (fun s => s.maxSilence) next rest
-    rw [fleet_maxSilence_eq_sum rest next warnLevel]
-    rfl
+  | tail, head, warnLevel =>
+    OpenComposition.composeList_maxSilence_eq_sum (fun s => restraintContract s warnLevel) tail head
 
 theorem fleet_maxLag_eq_max :
     ∀ (tail : List RestraintAgentSpec) (head : RestraintAgentSpec) (warnLevel : Nat),
       (fleetContract head tail warnLevel).maxLag = specMax (fun s => s.lag) head tail
-  | [], _, _ => rfl
-  | next :: rest, head, warnLevel => by
-    show AdaptiveLoops.natMax (restraintContract head warnLevel).maxLag
-        (fleetContract next rest warnLevel).maxLag =
-      AdaptiveLoops.natMax head.lag (specMax (fun s => s.lag) next rest)
-    rw [fleet_maxLag_eq_max rest next warnLevel]
-    rfl
+  | tail, head, warnLevel =>
+    OpenComposition.composeList_maxLag_eq_max (fun s => restraintContract s warnLevel) tail head
 
 theorem fleet_eta_eq_max :
     ∀ (tail : List RestraintAgentSpec) (head : RestraintAgentSpec) (warnLevel : Nat),
       (fleetContract head tail warnLevel).eta (fleetInit head tail) = specMax (fun s => s.lag) head tail
-  | [], _, _ => rfl
-  | next :: rest, head, warnLevel => by
-    show AdaptiveLoops.natMax ((restraintContract head warnLevel).eta head.lag)
-        ((fleetContract next rest warnLevel).eta (fleetInit next rest)) =
-      AdaptiveLoops.natMax head.lag (specMax (fun s => s.lag) next rest)
-    rw [fleet_eta_eq_max rest next warnLevel]
-    rfl
+  | tail, head, warnLevel =>
+    OpenComposition.composeList_eta_eq_max (fun s => restraintContract s warnLevel) tail head
 
 theorem fleet_warnObs_of_lt {head : RestraintAgentSpec} :
     ∀ (tail : List RestraintAgentSpec) {warnLevel : Nat} {x : Unit → Nat},
       x () < warnLevel →
       (fleetContract head tail warnLevel).warnObs (fleetObs tail x)
-  | [], _, _, lt => lt
-  | _ :: _, _, _, lt => Or.inl lt
+  | tail, _, _, lt =>
+    OpenComposition.composeList_warnObs_of_head (fun s => restraintContract s _) tail lt
 
 /-- **Global closed-loop viability for any non-empty `RestraintAgentSpec` fleet via
 `OpenComposition.close_contract_kernel`.** Certifies `Viability.Kernel` on the inductively glued
@@ -3225,19 +3129,14 @@ theorem fleet_restraint_open_viable {Env : Type}
         (fleetContract head tail warnLevel) (fleetObs tail) channel G envDraw jointAdm)
       (OpenComposition.closedGuard (fleetComponent head tail warnLevel)
         (fleetContract head tail warnLevel) (fun _ => x_crit))
-      ((fun _ => x₀), fleetInit head tail) := by
-    refine OpenComposition.close_contract_kernel
-      (fleetComponent head tail warnLevel) (fleetContract head tail warnLevel)
-      (fleetObs tail) channel G envDraw envCap jointAdm env_within
+      ((fun _ => x₀), fleetInit head tail) :=
+    OpenComposition.composeList_viable
+      (fun s => restraintComponent s warnLevel) (fun s => s.lag) (fun s => restraintContract s warnLevel)
+      head tail (fun x => x ()) channel G envDraw envCap jointAdm env_within
       (fun _ => x_crit) (fun _ => warnLevel) (fun _ => H_safe) (fun _ => x₀)
-      (fun x k lt => by cases k; exact fleet_warnObs_of_lt tail lt)
-      (fun load env adm hLoad =>
-        channel_fires load env adm (fleet_maxSilence_eq_sum tail head warnLevel ▸ hLoad))
-      (fun k => by cases k; exact G_rises)
-      (fun k => by cases k; exact post_viable)
-      (fun k => by cases k; rw [fleet_postCapExt_eq_sum]; exact post_cap)
-      (fun k => by cases k; rw [fleet_maxLag_eq_max, fleet_preCapExt_eq_sum]; exact warn_margin)
-      (fun k => by cases k; rw [fleet_eta_eq_max, fleet_preCapExt_eq_sum]; exact init_margin)
+      (fun _ _ lt => lt) channel_fires
+      (fun k => by cases k; exact G_rises) (fun k => by cases k; exact post_viable)
+      (fun _ => post_cap) (fun _ => warn_margin) (fun _ => init_margin)
   exact ⟨hKern, fun r hStart t => (Viability.Kernel.run r (hStart ▸ hKern) t).1 ()⟩
 
 /-- Componentwise contract tightening order on `RestraintAgentSpec`. -/
@@ -3299,68 +3198,20 @@ theorem fleet_upgrade_head_viable {Env : Type}
         (OpenComposition.composeContract
           (restraintContract head' warnLevel) (fleetContract head2 tail warnLevel))
         (fun _ => x_crit))
-      ((fun _ => x₀), (head'.lag, fleetInit head2 tail)) := by
-  refine OpenComposition.replace_left_viable
-    (restraintComponent head warnLevel)
-    (restraintComponent head' warnLevel)
-    (fleetComponent head2 tail warnLevel)
-    (restraintContract head warnLevel)
-    (restraintContract head' warnLevel)
-    (fleetContract head2 tail warnLevel)
-    (fun x => x ()) (fun x => x ()) (fleetObs tail)
-    channel G envDraw envCap jointAdm env_within
+      ((fun _ => x₀), (head'.lag, fleetInit head2 tail)) :=
+  OpenComposition.composeList_replace_head_viable
+    (fun s => restraintComponent s warnLevel) (fun s => s.lag) (fun s => restraintContract s warnLevel)
+    head head' (head2 :: tail) (fun x => x ()) channel G envDraw envCap jointAdm env_within
     (fun _ => x_crit) (fun _ => warnLevel) (fun _ => H_safe) (fun _ => x₀)
-    (restraintContract_refines tight)
-    (fun _ k lt => by cases k; exact Or.inl lt)
-    (fun load env adm hLoad => by
-      refine channel_fires load env adm ?_
-      change load ≤ specSum (fun s => s.maxSilence) head (head2 :: tail)
-        at *
-      have hEq : (restraintContract head warnLevel).maxSilence +
-          (fleetContract head2 tail warnLevel).maxSilence =
-          specSum (fun s => s.maxSilence) head (head2 :: tail) :=
-        fleet_maxSilence_eq_sum (head2 :: tail) head warnLevel
-      exact hEq ▸ hLoad)
-    (fun k => by cases k; exact G_rises)
-    (fun k => by cases k; exact post_viable)
-    (fun k => by
-      cases k
-      have hEq : (restraintContract head warnLevel).postBudgetExt () +
-          (fleetContract head2 tail warnLevel).postBudgetExt () =
-          specSum (fun s => s.postCap) head (head2 :: tail) :=
-        fleet_postCapExt_eq_sum (head2 :: tail) head warnLevel
-      rw [hEq]
-      exact post_cap)
-    (fun k => by
-      cases k
-      have hLag : AdaptiveLoops.natMax (restraintContract head warnLevel).maxLag
-          (fleetContract head2 tail warnLevel).maxLag =
-          specMax (fun s => s.lag) head (head2 :: tail) :=
-        fleet_maxLag_eq_max (head2 :: tail) head warnLevel
-      have hCap : (restraintContract head warnLevel).preCapExt () +
-          (fleetContract head2 tail warnLevel).preCapExt () =
-          specSum (fun s => s.preCap) head (head2 :: tail) :=
-        fleet_preCapExt_eq_sum (head2 :: tail) head warnLevel
-      rw [hLag, hCap]
-      exact warn_margin)
-    (fun k => by
-      cases k
-      have hEta : AdaptiveLoops.natMax ((restraintContract head warnLevel).eta head.lag)
-          ((fleetContract head2 tail warnLevel).eta (fleetInit head2 tail)) =
-          specMax (fun s => s.lag) head (head2 :: tail) :=
-        fleet_eta_eq_max (head2 :: tail) head warnLevel
-      have hCap : (restraintContract head warnLevel).preCapExt () +
-          (fleetContract head2 tail warnLevel).preCapExt () =
-          specSum (fun s => s.preCap) head (head2 :: tail) :=
-        fleet_preCapExt_eq_sum (head2 :: tail) head warnLevel
-      rw [hEta, hCap]
-      exact init_margin)
+    (restraintContract_refines tight) (fun _ _ lt => lt) channel_fires
+    (fun k => by cases k; exact G_rises) (fun k => by cases k; exact post_viable)
+    (fun _ => post_cap) (fun _ => warn_margin) (fun _ => init_margin)
 
 /- Concrete verified 2-agent / 3-agent / head-upgraded fleet witness on `fleetG`. -/
 namespace FleetWitness
 
 def fleetG (_ : Unit) (e : Unit → Nat) : Nat :=
-  match ltBool 0 (e ()) with
+  match Nat.blt 0 (e ()) with
   | true => 3
   | false => 0
 
@@ -3368,14 +3219,14 @@ theorem fleetG_rises :
     RegimeMargin.Coupled.Indexed.Rises RegimeMargin.Drawn.whole (fleetG ()) := by
   intro e e' below
   dsimp only [fleetG]
-  cases h1 : ltBool 0 (e ()) with
+  cases h1 : Nat.blt 0 (e ()) with
   | false => exact Nat.zero_le _
   | true =>
-    have hPos : 0 < e () := ltBool_true h1
+    have hPos : 0 < e () := CoreHelpers.natBlt_true_iff.mp h1
     have hPos' : 0 < e' () := Nat.lt_of_lt_of_le hPos (below ())
-    cases h2 : ltBool 0 (e' ()) with
+    cases h2 : Nat.blt 0 (e' ()) with
     | true => exact Nat.le_refl 3
-    | false => exact absurd hPos' (Nat.not_lt_of_le (ltBool_false h2))
+    | false => exact absurd hPos' (Nat.not_lt_of_le (CoreHelpers.natBlt_false_iff.mp h2))
 
 def agentA : RestraintAgentSpec := ⟨2, 1, 2, 0, Nat.le_succ 1⟩
 def agentA' : RestraintAgentSpec := ⟨1, 0, 1, 0, Nat.zero_le 1⟩

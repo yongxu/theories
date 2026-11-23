@@ -118,15 +118,12 @@ theorem run_of_returning {s t : S} (reach : Reach P s t) (returns : Branching.Re
 /-- Along a course by position, each position leads to every later one. -/
 theorem reach_along {g : Nat → S} {L : Nat}
     (steps : ∀ k, k < L → ∃ a, P.step (g k) a (g (k + 1))) :
-    ∀ d i, i + d ≤ L → Reach P (g i) (g (i + d))
-  | 0, i, _ => Reach.refl P (g i)
-  | d + 1, i, le =>
-    match steps i (Nat.lt_of_lt_of_le (Nat.lt_succ_of_le (Nat.le_add_right i d)) le) with
-    | ⟨_, step⟩ =>
-      (Reach.of_step step).trans
-        (Eq.subst (motive := fun m => Reach P (g (i + 1)) (g m)) (Nat.succ_add i d)
-          (reach_along steps d (i + 1)
-            (Eq.subst (motive := fun m => m ≤ L) (Nat.succ_add i d).symm le)))
+    ∀ d i, i + d ≤ L → Reach P (g i) (g (i + d)) :=
+  fun d i le => reach_iff_withinClosure.mpr
+    («线则所闭» (R := Steps P) (g := fun k => g (i + k)) (N := d)
+      (fun k lt => Eq.subst (motive := fun m => Steps P (g (i + k)) (g m)) (Nat.add_assoc i k 1)
+        (steps (i + k) (Nat.lt_of_lt_of_le (Nat.add_lt_add_left lt i) le)))
+      d (Nat.le_refl d))
 
 /-- **Within finitely many configurations, a course as long as the list leads to a return.** The
 course repeats a configuration, and the repeated configuration returns. No decidability. -/
@@ -135,22 +132,10 @@ theorem returning_of_continues {all : List S} (every : ∀ x, x ∈ all) {s : S}
     ∃ t, Reach P s t ∧ Branching.Returns P t :=
   match Parting.path_of_continues all.length s continues with
   | ⟨g, start, steps⟩ =>
-    match revisits_within all g (fun n _ => every (g n)) with
-    | ⟨i, _, lt, within, same⟩ =>
-      match gap_of_lt lt, steps i (Nat.lt_of_lt_of_le lt within) with
-      | ⟨d, gap⟩, ⟨a, step⟩ =>
-        have back : _ := (Nat.succ_add i d).trans gap.symm
-        ⟨g i,
-         Eq.subst (motive := fun x => Reach P x (g i)) start
-           (Eq.subst (motive := fun m => Reach P (g 0) (g m)) (Nat.zero_add i)
-             (reach_along steps i 0
-               (Eq.subst (motive := fun m => m ≤ all.length) (Nat.zero_add i).symm
-                 (Nat.le_trans (Nat.le_of_lt lt) within)))),
-         a, g (i + 1), step,
-         Eq.subst (motive := fun x => Reach P (g (i + 1)) x) same.symm
-           (Eq.subst (motive := fun m => Reach P (g (i + 1)) (g m)) back
-             (reach_along steps d (i + 1)
-               (Eq.subst (motive := fun m => m ≤ all.length) back.symm within)))⟩
+    match «线有限则入返» (R := Steps P) (l := all) (g := g) steps (fun n _ => every (g n)) with
+    | ⟨i, _, within, loop⟩ =>
+      ⟨g i, Eq.subst (motive := fun x => Reach P x (g i)) start (reach_iff_withinClosure.mpr within),
+        Branching.returns_iff_reaches.mpr loop⟩
 
 /-- **Within finitely many configurations, a course as long as the list gives a run.** No
 decidability and no selection. -/

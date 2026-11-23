@@ -1,0 +1,67 @@
+@Becoming.NarrowingRuns.safeFor_iff : ∀ {Q : Type} {hs : List (Becoming.Narrowing.Rule Q)}
+  {e : List (Becoming.Narrowing.Observation Q)} {a : Q → Option Bool},
+  Becoming.NarrowingRuns.SafeFor (Becoming.Narrowing.narrowed (fun x => x ∈ hs) e) a ↔
+    Becoming.Narrowing.Safe (Becoming.Narrowing.learn hs e) a
+@Becoming.NarrowingRuns.inhabited_iff : ∀ {Q : Type} {hs : List (Becoming.Narrowing.Rule Q)}
+  {e : List (Becoming.Narrowing.Observation Q)},
+  Generative.InquirySufficiency.InhabitedBelief (Becoming.Narrowing.narrowed (fun x => x ∈ hs) e) ↔
+    Becoming.Narrowing.learn hs e ≠ []
+@Becoming.NarrowingRuns.settles_iff_answer : ∀ {Q : Type} (hs : List (Becoming.Narrowing.Rule Q))
+  (e : List (Becoming.Narrowing.Observation Q)) (q : Q) (b : Bool),
+  Becoming.Narrowing.Settles (Becoming.Narrowing.narrowed (fun x => x ∈ hs) e) q b ↔
+    Becoming.Narrowing.answer (Becoming.Narrowing.learn hs e) q = some b
+@Becoming.NarrowingRuns.narrowed_answer_greatest : ∀ {Q : Type} (hs : List (Becoming.Narrowing.Rule Q))
+  (e : List (Becoming.Narrowing.Observation Q)),
+  Becoming.NarrowingRuns.SafeFor (Becoming.Narrowing.narrowed (fun x => x ∈ hs) e)
+      (Becoming.Narrowing.answer (Becoming.Narrowing.learn hs e)) ∧
+    (Generative.InquirySufficiency.InhabitedBelief (Becoming.Narrowing.narrowed (fun x => x ∈ hs) e) →
+      Becoming.NarrowingRuns.GreatestFor (Becoming.Narrowing.narrowed (fun x => x ∈ hs) e)
+        (Becoming.Narrowing.answer (Becoming.Narrowing.learn hs e)))
+@Becoming.NarrowingRuns.narrowed_answer_unique : ∀ {Q : Type} (hs : List (Becoming.Narrowing.Rule Q))
+  (e : List (Becoming.Narrowing.Observation Q)),
+  Generative.InquirySufficiency.InhabitedBelief (Becoming.Narrowing.narrowed (fun x => x ∈ hs) e) →
+    ∀ (a : Q → Option Bool),
+      Becoming.NarrowingRuns.SafeFor (Becoming.Narrowing.narrowed (fun x => x ∈ hs) e) a →
+        Becoming.NarrowingRuns.GreatestFor (Becoming.Narrowing.narrowed (fun x => x ∈ hs) e) a →
+          ∀ (q : Q), a q = Becoming.Narrowing.answer (Becoming.Narrowing.learn hs e) q
+@Becoming.NarrowingRuns.narrowed_answer_unique_of_ext : ∀ {Q : Type},
+  (∀ (f g : Q → Option Bool), (∀ (q : Q), f q = g q) → f = g) →
+    ∀ (hs : List (Becoming.Narrowing.Rule Q)) (e : List (Becoming.Narrowing.Observation Q)),
+      Generative.InquirySufficiency.InhabitedBelief (Becoming.Narrowing.narrowed (fun x => x ∈ hs) e) →
+        ∀ (a : Q → Option Bool),
+          Becoming.NarrowingRuns.SafeFor (Becoming.Narrowing.narrowed (fun x => x ∈ hs) e) a →
+            Becoming.NarrowingRuns.GreatestFor (Becoming.Narrowing.narrowed (fun x => x ∈ hs) e) a →
+              a = Becoming.Narrowing.answer (Becoming.Narrowing.learn hs e)
+@Becoming.NarrowingRuns.run_constant : ∀ {Q : Type} (r : Becoming.Run Becoming.Narrowing.observe) (n : Nat),
+  r.state n = r.state 0
+@Becoming.NarrowingRuns.run_kept : ∀ {Q : Type} (r : Becoming.Run Becoming.Narrowing.observe)
+  (hs : List (Becoming.Narrowing.Rule Q)),
+  r.state 0 ∈ hs →
+    ∀ (k : Nat), Becoming.Narrowing.narrowed (fun x => x ∈ hs) (Becoming.NarrowingRuns.record r k) (r.state 0)
+@Becoming.NarrowingRuns.run_answer_correct : ∀ {Q : Type} (r : Becoming.Run Becoming.Narrowing.observe)
+  (hs : List (Becoming.Narrowing.Rule Q)),
+  r.state 0 ∈ hs →
+    ∀ (k : Nat) (q : Q) (b : Bool),
+      Becoming.Narrowing.answer (Becoming.Narrowing.learn hs (Becoming.NarrowingRuns.record r k)) q = some b →
+        ∀ (n : Nat), b = r.state n q
+@Becoming.NarrowingRuns.run_answer_greatest : ∀ {Q : Type} (r : Becoming.Run Becoming.Narrowing.observe)
+  (hs : List (Becoming.Narrowing.Rule Q)),
+  r.state 0 ∈ hs →
+    ∀ (k : Nat),
+      Becoming.NarrowingRuns.SafeFor (Becoming.Narrowing.narrowed (fun x => x ∈ hs) (Becoming.NarrowingRuns.record r k))
+          (Becoming.Narrowing.answer (Becoming.Narrowing.learn hs (Becoming.NarrowingRuns.record r k))) ∧
+        Becoming.NarrowingRuns.GreatestFor
+            (Becoming.Narrowing.narrowed (fun x => x ∈ hs) (Becoming.NarrowingRuns.record r k))
+            (Becoming.Narrowing.answer (Becoming.Narrowing.learn hs (Becoming.NarrowingRuns.record r k))) ∧
+          ∀ (q : Q) (b : Bool),
+            Becoming.Narrowing.answer (Becoming.Narrowing.learn hs (Becoming.NarrowingRuns.record r k)) q = some b →
+              b = r.state 0 q
+@Becoming.NarrowingRuns.transport_settles_iff : ∀ {Q R : Type} (hs : List (Becoming.Narrowing.Rule Q))
+  (e : List (Becoming.Narrowing.Observation Q)) (encode' : Q → R) (decode : R → Q),
+  (∀ (q : Q), decode (encode' q) = q) →
+    ∀ (r : R) (b : Bool),
+      Becoming.Narrowing.Settles
+          (Becoming.Narrowing.narrowed (fun x => x ∈ List.map (Becoming.Narrowing.transport decode) hs)
+            (List.map (fun o => (encode' o.fst, o.snd)) e))
+          r b ↔
+        Becoming.Narrowing.Settles (Becoming.Narrowing.narrowed (fun x => x ∈ hs) e) (decode r) b

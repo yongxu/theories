@@ -1,4 +1,4 @@
-import Becoming.Reproduction
+import Becoming.PositionTerms
 
 /-!
 # A common shift of offspring numbers: what the selection term proper does and does not decide
@@ -165,21 +165,15 @@ unchanged. -/
 theorem concord_shifted {ps : List α} {w w' a a' : α → Nat} {k : Nat}
     (shift : ∀ p, p ∈ ps → w' p = w p + k) (same : ∀ p, p ∈ ps → a' p = a p) :
     concord ps w' a' = concord ps w a :=
-  total_congr_on fun p mp => total_congr_on fun q mq =>
-    (congr (congrArg (fun x y => excess x y * excess (a' p) (a' q)) (shift p mp))
-        (shift q mq)).trans
-      ((congrArg (· * excess (a' p) (a' q)) (excess_add_right (w p) (w q) k)).trans
-        (mul_excess_congr (same p mp) (same q mq)))
+  (PositionTerms.concord_amount_on same).trans
+    (PositionTerms.keeps_iff_terms.mp (PositionTerms.keeps_of_shifted shift) a).1.symm
 
 /-- And discordance. -/
 theorem discord_shifted {ps : List α} {w w' a a' : α → Nat} {k : Nat}
     (shift : ∀ p, p ∈ ps → w' p = w p + k) (same : ∀ p, p ∈ ps → a' p = a p) :
     discord ps w' a' = discord ps w a :=
-  total_congr_on fun p mp => total_congr_on fun q mq =>
-    (congr (congrArg (fun x y => excess x y * excess (a' q) (a' p)) (shift p mp))
-        (shift q mq)).trans
-      ((congrArg (· * excess (a' q) (a' p)) (excess_add_right (w p) (w q) k)).trans
-        (mul_excess_congr (same q mq) (same p mp)))
+  (PositionTerms.discord_amount_on same).trans
+    (PositionTerms.keeps_iff_terms.mp (PositionTerms.keeps_of_shifted shift) a).2.symm
 
 /-- **Shift invariance.** Adding a common number to every weight leaves concordance with any
 amount unchanged. -/
@@ -265,10 +259,8 @@ theorem shift_step {t k : Nat} (family : G'.family t = G.family t)
     (shift : ∀ p, p ∈ G.family t → G'.offspringNumber t p = G.offspringNumber t p + k) :
     G'.concordAt t = G.concordAt t ∧ G'.discordAt t = G.discordAt t ∧
       G'.size (t + 1) = G.size (t + 1) + G.size t * k :=
-  ⟨(congrArg (fun l => concord l (G'.offspringNumber t) (G'.amount t)) family).trans
-      (concord_shifted shift amount),
-    (congrArg (fun l => discord l (G'.offspringNumber t) (G'.amount t)) family).trans
-      (discord_shifted shift amount),
+  have ⟨hc, hd⟩ := PositionTerms.kept_step family amount (PositionTerms.keeps_of_shifted shift)
+  ⟨hc, hd,
     (G'.born_eq t).symm.trans
       ((congrArg (fun l => total l (G'.offspringNumber t)) family).trans
         ((total_shifted shift).trans (congrArg (· + G.size t * k) (G.born_eq t))))⟩

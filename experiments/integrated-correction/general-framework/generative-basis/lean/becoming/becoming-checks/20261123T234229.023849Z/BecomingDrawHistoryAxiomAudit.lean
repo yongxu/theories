@@ -1,0 +1,22 @@
+import Becoming.DrawHistory
+#print axioms Becoming.DrawHistory.underDraws
+#print axioms Becoming.DrawHistory.to_inflow
+#print axioms Becoming.DrawHistory.inflow_rests
+#print axioms Becoming.DrawHistory.inflow_stays
+#print axioms Becoming.DrawHistory.inflow_kept
+#print axioms Becoming.DrawHistory.leaving_needs_a_lower_draw
+#print axioms Becoming.DrawHistory.inflow_from
+#print axioms Becoming.DrawHistory.collapses
+#print axioms Becoming.DrawHistory.two_levels
+#print axioms Becoming.DrawHistory.underDraws_constant
+#print axioms Becoming.DrawHistory.history_decides
+#print axioms Becoming.DrawHistory.histories_differ
+#print axioms Becoming.DrawHistory.Loop.giving
+#print axioms Becoming.DrawHistory.Loop.below_four
+#print axioms Becoming.DrawHistory.Loop.meets_two
+#print axioms Becoming.DrawHistory.Loop.meets_three
+#print axioms Becoming.DrawHistory.Loop.keeps_two
+#print axioms Becoming.DrawHistory.Loop.keeps_three
+#print axioms Becoming.DrawHistory.Loop.draws
+#print axioms Becoming.DrawHistory.Loop.two_paths
+#print axioms Becoming.DrawHistory.Loop.bounds

@@ -8,6 +8,8 @@ import Becoming.JointKeeping
 import Becoming.Mechanism
 import Becoming.Composition
 import Becoming.Pace
+import Becoming.CoreHelpers
+import Becoming.OpenComposition
 
 /-!
 # Adaptive loops: open interfaces, coupled races, and endogenous adaptation
@@ -64,76 +66,39 @@ open Generative
 
 namespace AdaptiveLoops
 
-/-! ## Prelude-only natural-number and list helpers -/
+/-! ## Prelude-only natural-number and list helpers (delegated to `CoreHelpers` & `OpenComposition`) -/
 
 /-- Decidable `Nat` maximum without core `Max` axioms. -/
-def natMax (a b : Nat) : Nat := if a ≤ b then b else a
+abbrev natMax (a b : Nat) : Nat := CoreHelpers.natMax a b
 
-theorem le_natMax_left (a b : Nat) : a ≤ natMax a b :=
-  match Nat.decLe a b with
-  | isTrue le => Nat.le_trans le (Nat.le_of_eq (if_pos le).symm)
-  | isFalse notLe => Nat.le_of_eq (if_neg notLe).symm
+theorem le_natMax_left (a b : Nat) : a ≤ natMax a b := CoreHelpers.le_natMax_left a b
 
-theorem le_natMax_right (a b : Nat) : b ≤ natMax a b :=
-  match Nat.decLe a b with
-  | isTrue le => Nat.le_of_eq (if_pos le).symm
-  | isFalse notLe => Nat.le_trans (Nat.le_of_lt (Nat.gt_of_not_le notLe))
-      (Nat.le_of_eq (if_neg notLe).symm)
+theorem le_natMax_right (a b : Nat) : b ≤ natMax a b := CoreHelpers.le_natMax_right a b
 
 theorem natMax_le {a b c : Nat} (ha : a ≤ c) (hb : b ≤ c) : natMax a b ≤ c :=
-  match Nat.decLe a b with
-  | isTrue le => Nat.le_trans (Nat.le_of_eq (if_pos le)) hb
-  | isFalse notLe => Nat.le_trans (Nat.le_of_eq (if_neg notLe)) ha
+  CoreHelpers.natMax_le ha hb
 
-theorem natBlt_true_iff {a b : Nat} : Nat.blt a b = true ↔ a < b :=
-  ⟨fun h => Nat.le_of_ble_eq_true h, fun lt => Nat.ble_eq_true_of_le lt⟩
+theorem natBlt_true_iff {a b : Nat} : Nat.blt a b = true ↔ a < b := CoreHelpers.natBlt_true_iff
 
-theorem natBlt_false_iff {a b : Nat} : Nat.blt a b = false ↔ b ≤ a :=
-  ⟨fun h => Nat.lt_or_ge a b |>.elim (fun lt => Bool.noConfusion ((natBlt_true_iff.mpr lt).symm.trans h)) id,
-   fun le => Naturals.ble_false_of_lt (Nat.lt_succ_of_le le)⟩
+theorem natBlt_false_iff {a b : Nat} : Nat.blt a b = false ↔ b ≤ a := CoreHelpers.natBlt_false_iff
 
-theorem natBeq_true_iff {a b : Nat} : Nat.beq a b = true ↔ a = b :=
-  ⟨Nat.eq_of_beq_eq_true, fun same => same ▸ beq_self a⟩
+theorem natBeq_true_iff {a b : Nat} : Nat.beq a b = true ↔ a = b := CoreHelpers.natBeq_true_iff
 
 /-! ## Part 1: Open Adaptive Loop Interface & Assume-Guarantee Composition -/
 
 /-- An open adaptive loop interacting with a substrate via observations `Obs`, an external alarm
-`Bool`, and disturbances `Dist`. -/
-structure OpenLoop (S Obs Dist ι : Type) where
-  next : S → Obs × Bool → Dist → S
-  draw : S → ι → Nat
-  emitAlarm : S → Obs → Bool
-  silenceLoad : S → Nat
-  favours : S → Prop
+`Bool`, and disturbances `Dist` (`OpenComposition.OpenLoop`). -/
+abbrev OpenLoop (S Obs Dist ι : Type) : Type := OpenComposition.OpenLoop S Obs Dist ι
 
 /-- The disturbed process of an open loop, with state-independent disturbance admissibility `tol`. -/
-def OpenLoop.process {S Obs Dist ι : Type} (L : OpenLoop S Obs Dist ι)
+abbrev OpenLoop.process {S Obs Dist ι : Type} (L : OpenLoop S Obs Dist ι)
     (tol : Obs × Bool → Dist → Prop) : Process S ((Obs × Bool) × Dist) :=
-  Viability.disturbed (fun s m => L.next s m.1 m.2) (fun m => tol m.1 m.2)
+  OpenComposition.OpenLoop.process L tol
 
-/-- An assume-guarantee certificate for an `OpenLoop` from `init`, certifying pre-adaptation draw
-bounds, silence bounds, observation-driven alarm emission, and bounded countdown `eta`. -/
-structure LoopCertificate {S Obs Dist ι : Type}
-    (L : OpenLoop S Obs Dist ι) (init : S) where
-  tol : Obs × Bool → Dist → Prop
-  warnObs : Obs → Prop
-  preCap : ι → Nat
-  postBudget : ι → Nat
-  maxSilence : Nat
-  maxLag : Nat
-  K : S → Prop
-  eta : S → Nat
-  init_in : K init
-  cert : Viability.Certificate (L.process tol)
-    (fun s => (∀ j, L.draw s j ≤ preCap j) ∧
-              L.silenceLoad s ≤ maxSilence ∧
-              (eta s = 0 → ¬ L.favours s ∧ ∀ j, L.draw s j ≤ postBudget j)) K
-  eta_bound : ∀ s, K s → eta s ≤ maxLag
-  emits_on_warn : ∀ s obs, K s → warnObs obs → L.emitAlarm s obs = true
-  eta_alarm_step : ∀ s obs dist, tol (obs, true) dist → K s → 0 < eta s →
-    eta (L.next s (obs, true) dist) < eta s
-  eta_alarm_zero : ∀ s obs dist, tol (obs, true) dist → K s → eta s = 0 →
-    eta (L.next s (obs, true) dist) = 0
+/-- An assume-guarantee certificate for an `OpenLoop` from `init` (`OpenComposition.LoopCertificate`). -/
+abbrev LoopCertificate {S Obs Dist ι : Type}
+    (L : OpenLoop S Obs Dist ι) (init : S) : Type :=
+  OpenComposition.LoopCertificate L init
 
 /-- **Monotonicity of coupled indexed substrate step in the state `x`.** -/
 theorem indexedStep_mono {ι : Type}
@@ -141,78 +106,50 @@ theorem indexedStep_mono {ι : Type}
     (H : ι → Nat) {x y : ι → Nat} (below : ∀ i, x i ≤ y i) (j : ι) :
     RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H x j ≤
       RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H y j :=
-  RegimeMargin.Coupled.Indexed.step_mono rises H below j
+  OpenComposition.indexedStep_mono rises H below j
 
 /-- **Antitonicity of coupled indexed substrate step in the draw `H`.** -/
 theorem indexedStep_antitone_H {ι : Type}
     {G : ι → (ι → Nat) → Nat} (rises : ∀ i, RegimeMargin.Coupled.Indexed.Rises RegimeMargin.Drawn.whole (G i))
     {H H' : ι → Nat} (hle : ∀ j, H j ≤ H' j) (x : ι → Nat) (j : ι) :
     RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H' x j ≤
-      RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H x j := by
-  have leftBelow : RegimeMargin.Coupled.Indexed.Below RegimeMargin.Drawn.whole
-      (RegimeMargin.Coupled.Indexed.left RegimeMargin.Drawn.whole H' x)
-      (RegimeMargin.Coupled.Indexed.left RegimeMargin.Drawn.whole H x) :=
-    fun k => Naturals.sub_antitone (x k) (hle k)
-  exact Nat.add_le_add (leftBelow j) (rises j _ _ leftBelow)
+      RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H x j :=
+  OpenComposition.indexedStep_antitone_H rises hle x j
 
 /-- Each coupled indexed substrate step is at least what remains after the draw `H`. -/
 theorem indexedStep_ge_sub {ι : Type}
     (G : ι → (ι → Nat) → Nat) (H x : ι → Nat) (j : ι) :
     x j - H j ≤ RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H x j :=
-  Nat.le_add_right _ _
+  OpenComposition.indexedStep_ge_sub G H x j
 
-/-- Total draw across a list of agents at site `j`. -/
-def sumDraws {α ι : Type} (agents : List α) (f : α → ι → Nat) (j : ι) : Nat :=
-  match agents with
-  | [] => 0
-  | i :: rest => f i j + sumDraws rest f j
+/-- Total draw across a list of agents at site `j` (`OpenComposition.sumDraws`). -/
+abbrev sumDraws {α ι : Type} (agents : List α) (f : α → ι → Nat) (j : ι) : Nat :=
+  OpenComposition.sumDraws agents f j
 
 theorem sumDraws_le {α ι : Type} {f g : α → ι → Nat} (j : ι) :
     ∀ {agents : List α}, (∀ i, i ∈ agents → f i j ≤ g i j) →
-      sumDraws agents f j ≤ sumDraws agents g j
-  | [], _ => Nat.le_refl 0
-  | _ :: _, bound => Nat.add_le_add (bound _ (.head _))
-      (sumDraws_le j fun i mem => bound i (.tail _ mem))
+      sumDraws agents f j ≤ sumDraws agents g j :=
+  OpenComposition.sumDraws_le j
 
-/-- Folded maximum of a `Nat`-valued function over `agents`. -/
-def foldNatMax {α : Type} (agents : List α) (f : α → Nat) : Nat :=
-  agents.foldr (fun i acc => natMax (f i) acc) 0
+/-- Folded maximum of a `Nat`-valued function over `agents` (`CoreHelpers.foldNatMax`). -/
+abbrev foldNatMax {α : Type} (agents : List α) (f : α → Nat) : Nat :=
+  CoreHelpers.foldNatMax agents f
 
 theorem le_foldNatMax_of_mem {α : Type} {f : α → Nat} :
-    ∀ {agents : List α} {i : α}, i ∈ agents → f i ≤ foldNatMax agents f
-  | [], _, mem => absurd mem ListTests.not_mem_nil
-  | _ :: _, _, .head _ => le_natMax_left _ _
-  | _ :: _, _, .tail _ mem => Nat.le_trans (le_foldNatMax_of_mem mem) (le_natMax_right _ _)
+    ∀ {agents : List α} {i : α}, i ∈ agents → f i ≤ foldNatMax agents f :=
+  CoreHelpers.le_foldNatMax_of_mem
 
 theorem foldNatMax_le_of_all {α : Type} {f : α → Nat} {M : Nat} :
-    ∀ {agents : List α}, (∀ i, i ∈ agents → f i ≤ M) → foldNatMax agents f ≤ M
-  | [], _ => Nat.zero_le M
-  | _ :: _, all => natMax_le (all _ (.head _))
-      (foldNatMax_le_of_all fun i mem => all i (.tail _ mem))
+    ∀ {agents : List α}, (∀ i, i ∈ agents → f i ≤ M) → foldNatMax agents f ≤ M :=
+  CoreHelpers.foldNatMax_le_of_all
 
 theorem foldNatMax_eq_zero {α : Type} {f : α → Nat} :
-    ∀ {agents : List α}, (∀ i, i ∈ agents → f i = 0) → foldNatMax agents f = 0
-  | [], _ => rfl
-  | _ :: _, zero =>
-    Nat.le_antisymm
-      (natMax_le (Nat.le_of_eq (zero _ (.head _)))
-        (Nat.le_of_eq (foldNatMax_eq_zero fun i mem => zero i (.tail _ mem))))
-      (Nat.zero_le _)
+    ∀ {agents : List α}, (∀ i, i ∈ agents → f i = 0) → foldNatMax agents f = 0 :=
+  CoreHelpers.foldNatMax_eq_zero
 
 theorem foldNatMax_succ_le {α : Type} {f : α → Nat} {M : Nat} (pos : 0 < M) :
-    ∀ {agents : List α}, (∀ i, i ∈ agents → f i + 1 ≤ M) → foldNatMax agents f + 1 ≤ M
-  | [], _ => pos
-  | a :: rest, all => by
-    have ih := foldNatMax_succ_le pos fun i mem => all i (.tail _ mem)
-    have ha := all a (.head _)
-    show natMax (f a) (foldNatMax rest f) + 1 ≤ M
-    match Nat.decLe (f a) (foldNatMax rest f) with
-    | isTrue le =>
-      rw [show natMax (f a) (foldNatMax rest f) = foldNatMax rest f from if_pos le]
-      exact ih
-    | isFalse notLe =>
-      rw [show natMax (f a) (foldNatMax rest f) = f a from if_neg notLe]
-      exact ha
+    ∀ {agents : List α}, (∀ i, i ∈ agents → f i + 1 ≤ M) → foldNatMax agents f + 1 ≤ M :=
+  CoreHelpers.foldNatMax_succ_le pos
 
 /-- Maximum lag across all certified agents. -/
 def globalMaxLag {α ι : Type} {S Obs Dist : α → Type}
@@ -337,126 +274,25 @@ theorem assume_guarantee_joint_viable {α ι Env : Type} {S Obs Dist : α → Ty
     jointInv agents certs envCap x_crit (x₀, init) ∧
     Viability.Certificate (jointProcess agents L certs obs channel G envDraw jointAdm)
       (jointGuard agents L certs x_crit) (jointInv agents certs envCap x_crit) := by
-  refine ⟨⟨fun i _ => (certs i).init_in, init_margin⟩, Viability.certificate_disturbed_iff.mpr ⟨?_, ?_⟩⟩
-  · intro st ⟨inK, margin⟩
-    refine ⟨fun j => Nat.le_trans (Nat.le_add_right _ _) (margin j), fun i mem => ?_⟩
-    exact (certs i).cert.within _ (inK i mem)
-  · intro st m adm ⟨inK, margin⟩
-    obtain ⟨x, s⟩ := st
-    obtain ⟨env, dist⟩ := m
-    obtain ⟨envOk, tolOk⟩ := adm
-    let obsAt : (i : α) → Obs i := fun i => obs i x
-    let emit : α → Bool := fun i => (L i).emitAlarm (s i) (obsAt i)
-    let load : α → Nat := fun i => (L i).silenceLoad (s i)
-    let alarm : Bool := channel emit load env
-    let H : ι → Nat := fun j => sumDraws agents (fun i => (L i).draw (s i)) j + envDraw env j
-    let x' := RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H x
-    let s' : (i : α) → S i := fun i => (L i).next (s i) (obsAt i, alarm) (dist i)
-    have silenceAll : ∀ i, i ∈ agents → load i ≤ (certs i).maxSilence := fun i mem =>
-      ((certs i).cert.within _ (inK i mem)).2.1
-    have drawPre : ∀ i, i ∈ agents → ∀ j, (L i).draw (s i) j ≤ (certs i).preCap j := fun i mem =>
-      ((certs i).cert.within _ (inK i mem)).1
-    have H_le_pre : ∀ j, H j ≤ preTotal agents certs envCap j := fun j =>
-      Nat.add_le_add (sumDraws_le j fun i mem => drawPre i mem j) (env_within env envOk j)
-    have inK' : ∀ i, i ∈ agents → (certs i).K (s' i) := fun i mem =>
-      (certs i).cert.closed (s i) ((obsAt i, alarm), dist i) (s' i)
-        ⟨tolOk i mem (obsAt i, alarm), rfl⟩ (inK i mem)
-    have maxEta_le_global : maxEta agents certs s' ≤ globalMaxLag agents certs :=
-      foldNatMax_le_of_all fun i mem =>
-        Nat.le_trans ((certs i).eta_bound (s' i) (inK' i mem))
-          (le_foldNatMax_of_mem (f := fun i => (certs i).maxLag) mem)
-    refine ⟨inK', fun j => ?_⟩
-    cases Nat.lt_or_ge (x j) (warnLevel j) with
-    | inr aboveWarn =>
-      have lagMul : maxEta agents certs s' * preTotal agents certs envCap j +
-          preTotal agents certs envCap j ≤
-          (globalMaxLag agents certs + 1) * preTotal agents certs envCap j := by
-        rw [add_mul_split (globalMaxLag agents certs) 1 (preTotal agents certs envCap j),
-          Nat.one_mul]
-        exact Nat.add_le_add_right (Nat.mul_le_mul_right _ maxEta_le_global) _
-      have enough : x_crit j + maxEta agents certs s' * preTotal agents certs envCap j +
-          preTotal agents certs envCap j ≤ x j :=
-        Nat.le_trans
-          (Nat.le_trans
-            (Nat.add_assoc (x_crit j) _ _ ▸ Nat.add_le_add_left lagMul (x_crit j))
-            (warn_margin j))
-          aboveWarn
-      have subPre : x_crit j + maxEta agents certs s' * preTotal agents certs envCap j ≤
-          x j - preTotal agents certs envCap j :=
-        Naturals.le_sub_of_add_le (Nat.add_comm _ _ ▸ enough)
-      exact Nat.le_trans subPre
-        (Nat.le_trans (Naturals.sub_antitone (x j) (H_le_pre j)) (indexedStep_ge_sub G H x j))
-    | inl belowWarn =>
-      have alarmTrue : alarm = true := by
-        obtain ⟨i₀, mem₀, mon₀⟩ := pooled_coverage j (site_in j)
-        have warn₀ := obs_detects i₀ mem₀ x j mon₀ belowWarn
-        have emit₀ := (certs i₀).emits_on_warn (s i₀) (obsAt i₀) (inK i₀ mem₀) warn₀
-        exact channel_fires emit load env envOk ⟨i₀, mem₀, emit₀, silenceAll i₀ mem₀⟩ silenceAll
-      cases hEta : maxEta agents certs s with
-      | zero =>
-        have eachZero : ∀ i, i ∈ agents → (certs i).eta (s i) = 0 := fun i mem =>
-          Nat.eq_zero_of_le_zero
-            (Nat.le_trans (le_foldNatMax_of_mem (f := fun i => (certs i).eta (s i)) mem)
-              (Nat.le_of_eq hEta))
-        have eachZero' : ∀ i, i ∈ agents → (certs i).eta (s' i) = 0 := fun i mem => by
-          show (certs i).eta ((L i).next (s i) (obsAt i, alarm) (dist i)) = 0
-          rw [alarmTrue]
-          exact (certs i).eta_alarm_zero (s i) (obsAt i) (dist i)
-            (tolOk i mem (obsAt i, true)) (inK i mem) (eachZero i mem)
-        have maxEtaZero' : maxEta agents certs s' = 0 := foldNatMax_eq_zero eachZero'
-        have H_le_safe : ∀ k, H k ≤ H_safe k := fun k =>
-          Nat.le_trans
-            (Nat.add_le_add
-              (sumDraws_le k fun i mem =>
-                (((certs i).cert.within _ (inK i mem)).2.2 (eachZero i mem)).2 k)
-              (env_within env envOk k))
-            (post_budget k)
-        have xCritLe : ∀ k, x_crit k ≤ x k := fun k =>
-          Nat.le_trans (Nat.le_add_right _ _) (margin k)
-        have stepSafe : x_crit j ≤ x' j :=
-          Nat.le_trans (post_viable j)
-            (Nat.le_trans (indexedStep_antitone_H G_rises H_le_safe x_crit j)
-              (indexedStep_mono G_rises H xCritLe j))
-        show x_crit j + maxEta agents certs s' * preTotal agents certs envCap j ≤ x' j
-        rw [maxEtaZero', Nat.zero_mul, Nat.add_zero]
-        exact stepSafe
-      | succ ePred =>
-        have posEta : 0 < maxEta agents certs s := hEta ▸ Nat.succ_pos ePred
-        have stepDown : ∀ i, i ∈ agents → (certs i).eta (s' i) + 1 ≤ maxEta agents certs s :=
-          fun i mem => by
-            have curLe : (certs i).eta (s i) ≤ maxEta agents certs s :=
-              le_foldNatMax_of_mem (f := fun i => (certs i).eta (s i)) mem
-            show (certs i).eta ((L i).next (s i) (obsAt i, alarm) (dist i)) + 1 ≤ _
-            rw [alarmTrue]
-            cases hI : (certs i).eta (s i) with
-            | zero =>
-              rw [(certs i).eta_alarm_zero (s i) (obsAt i) (dist i)
-                (tolOk i mem (obsAt i, true)) (inK i mem) hI]
-              exact posEta
-            | succ k =>
-              have lt := (certs i).eta_alarm_step (s i) (obsAt i) (dist i)
-                (tolOk i mem (obsAt i, true)) (inK i mem) (hI ▸ Nat.succ_pos k)
-              exact Nat.le_trans lt curLe
-        have maxEtaDown : maxEta agents certs s' + 1 ≤ maxEta agents certs s :=
-          foldNatMax_succ_le posEta stepDown
-        have mulDown : maxEta agents certs s' * preTotal agents certs envCap j +
-            preTotal agents certs envCap j ≤
-            maxEta agents certs s * preTotal agents certs envCap j := by
-          have expand : maxEta agents certs s' * preTotal agents certs envCap j +
-              preTotal agents certs envCap j =
-              (maxEta agents certs s' + 1) * preTotal agents certs envCap j := by
-            rw [add_mul_split, Nat.one_mul]
-          rw [expand]
-          exact Nat.mul_le_mul_right _ maxEtaDown
-        have enough : x_crit j + maxEta agents certs s' * preTotal agents certs envCap j +
-            preTotal agents certs envCap j ≤ x j :=
-          Nat.le_trans (Nat.add_assoc (x_crit j) _ _ ▸ Nat.add_le_add_left mulDown (x_crit j))
-            (margin j)
-        have subPre : x_crit j + maxEta agents certs s' * preTotal agents certs envCap j ≤
-            x j - preTotal agents certs envCap j :=
-          Naturals.le_sub_of_add_le (Nat.add_comm _ _ ▸ enough)
-        exact Nat.le_trans subPre
-          (Nat.le_trans (Naturals.sub_antitone (x j) (H_le_pre j)) (indexedStep_ge_sub G H x j))
+  let comp := OpenComposition.familyComponent agents L
+  let contract := OpenComposition.familyContract agents L init certs
+  have res := OpenComposition.close_contract_with_viable comp contract (fun x i => obs i x)
+    (fun s o env => channel (fun i => (L i).emitAlarm (s i) (o i))
+      (fun i => (L i).silenceLoad (s i)) env)
+    G envDraw envCap jointAdm env_within x_crit warnLevel H_safe x₀
+    (fun x j lt => match pooled_coverage j (site_in j) with
+      | ⟨i₀, mem₀, mon₀⟩ => ⟨i₀, mem₀, obs_detects i₀ mem₀ x j mon₀ lt⟩)
+    (fun s o env envOk hK ⟨i₀, mem₀, warn₀⟩ =>
+      channel_fires _ _ env envOk
+        ⟨i₀, mem₀, (certs i₀).emits_on_warn (s i₀) (o i₀) (hK i₀ mem₀) warn₀,
+          ((certs i₀).cert.within _ (hK i₀ mem₀)).2.1⟩
+        fun i mem => ((certs i).cert.within _ (hK i mem)).2.1)
+    G_rises post_viable post_budget warn_margin init_margin
+  refine ⟨res.1, Viability.certificate_disturbed_iff.mpr ⟨?_, ?_⟩⟩
+  · intro st hInv
+    exact ⟨(res.2.within st hInv).1, fun i mem => (certs i).cert.within _ (hInv.1 i mem)⟩
+  · intro st m adm hInv
+    exact res.2.closed st m _ ⟨⟨adm.1, fun _ i mem => adm.2 i mem _⟩, rfl⟩ hInv
 
 /-- Corollary: from `assume_guarantee_joint_viable`, the initial state lies in `Viability.Kernel`. -/
 theorem assume_guarantee_joint_kernel {α ι Env : Type} {S Obs Dist : α → Type}

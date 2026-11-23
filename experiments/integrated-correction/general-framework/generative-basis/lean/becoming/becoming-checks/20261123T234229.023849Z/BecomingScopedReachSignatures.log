@@ -1,0 +1,58 @@
+@Becoming.ScopedReach.only_reach : ∀ {S : Type u_1} {L : Type u_2} {P : Generative.Process S L} {i : L}
+  {seed : S → Prop} {x : S},
+  Becoming.SeedReachProcesses.FromSeed (Becoming.ScopedReach.only P i) seed x →
+    Becoming.SeedReachProcesses.FromSeed P seed x
+@Becoming.ScopedReach.invariant_iff_only : ∀ {S : Type u_1} {L : Type u_2} {P : Generative.Process S L} {R : S → Prop},
+  Becoming.Invariant P R ↔ ∀ (i : L), Becoming.Invariant (Becoming.ScopedReach.only P i) R
+@Becoming.ScopedReach.glued_iff_local : ∀ {S : Type u_1} {L : Type u_2} {domain ground : L → S → Prop},
+  Becoming.ScopedReach.Agree domain ground →
+    ∀ {i : L} {p : S}, domain i p → (Becoming.ScopedReach.Glued domain ground p ↔ ground i p)
+@Becoming.ScopedReach.glued_invariant : ∀ {S : Type u_1} {L : Type u_2} {P : Generative.Process S L}
+  {domain ground : L → S → Prop},
+  Becoming.ScopedReach.Agree domain ground →
+    (∀ (i : L) (x y : S), P.step x i y → domain i x ∧ domain i y) →
+      (∀ (i : L) (x y : S), P.step x i y → ground i x → ground i y) →
+        Becoming.Invariant P (Becoming.ScopedReach.Glued domain ground)
+@Becoming.ScopedReach.glued_on_reach : ∀ {S : Type u_1} {L : Type u_2} {P : Generative.Process S L}
+  {domain ground : L → S → Prop} {seed : S → Prop},
+  Becoming.ScopedReach.Agree domain ground →
+    (∀ (i : L) (x y : S), P.step x i y → domain i x ∧ domain i y) →
+      (∀ (i : L) (x y : S), P.step x i y → ground i x → ground i y) →
+        (∀ (p : S), seed p → Becoming.ScopedReach.Glued domain ground p) →
+          ∀ {p : S}, Becoming.SeedReachProcesses.FromSeed P seed p → Becoming.ScopedReach.Glued domain ground p
+@Becoming.ScopedReach.within_keeps : ∀ {H : Type u_1} {X : H → Type u_2} {L : Type u_3}
+  {Q : (h : H) → Generative.Process (X h) L} {x y : Sigma X},
+  Becoming.Reach (Becoming.ScopedReach.within Q) x y → x.fst = y.fst
+@Becoming.ScopedReach.fromSeed_within_iff : ∀ {H : Type u_1} {X : H → Type u_2} {L : Type u_3}
+  (Q : (h : H) → Generative.Process (X h) L) (seed : Sigma X → Prop) (h : H) (p : X h),
+  Becoming.SeedReachProcesses.FromSeed (Becoming.ScopedReach.within Q) seed ⟨h, p⟩ ↔
+    Becoming.SeedReachProcesses.FromSeed (Q h) (fun q => seed ⟨h, q⟩) p
+@Becoming.ScopedReach.invariant_on_within_reach : ∀ {H : Type u_1} {X : H → Type u_2} {L : Type u_3}
+  {Q : (h : H) → Generative.Process (X h) L} {seed : Sigma X → Prop} {R : (h : H) → X h → Prop},
+  (∀ (h : H) (p : X h), seed ⟨h, p⟩ → R h p) →
+    (∀ (h : H), Becoming.Invariant (Q h) (R h)) →
+      ∀ {h : H} {p : X h}, Becoming.SeedReachProcesses.FromSeed (Becoming.ScopedReach.within Q) seed ⟨h, p⟩ → R h p
+Becoming.ScopedReach.domain_covers : ∀ (p : Becoming.ScopedReach.Place), ∃ i, Becoming.ScopedReach.domain i p
+Becoming.ScopedReach.alternating_inside : ∀ (i : Bool) (x y : Becoming.ScopedReach.Place),
+  Becoming.ScopedReach.alternating.step x i y → Becoming.ScopedReach.domain i x ∧ Becoming.ScopedReach.domain i y
+Becoming.ScopedReach.alternating_steps : Becoming.ScopedReach.alternating.step Becoming.ScopedReach.Place.start false
+    Becoming.ScopedReach.Place.middle ∧
+  Becoming.ScopedReach.alternating.step Becoming.ScopedReach.Place.middle true Becoming.ScopedReach.Place.finish
+@Becoming.ScopedReach.first_scope_stays_inside : ∀ {p : Becoming.ScopedReach.Place},
+  Becoming.SeedReachProcesses.FromSeed (Becoming.ScopedReach.only Becoming.ScopedReach.alternating false)
+      (fun x => x = Becoming.ScopedReach.Place.start) p →
+    Becoming.ScopedReach.domain false p
+@Becoming.ScopedReach.second_scope_stays_at_seed : ∀ {p : Becoming.ScopedReach.Place},
+  Becoming.SeedReachProcesses.FromSeed (Becoming.ScopedReach.only Becoming.ScopedReach.alternating true)
+      (fun x => x = Becoming.ScopedReach.Place.start) p →
+    p = Becoming.ScopedReach.Place.start
+Becoming.ScopedReach.alternating_beyond_scopes : Becoming.SeedReachProcesses.FromSeed Becoming.ScopedReach.alternating
+    (fun x => x = Becoming.ScopedReach.Place.start) Becoming.ScopedReach.Place.finish ∧
+  ¬Becoming.SeedReachProcesses.FromSeed (Becoming.ScopedReach.only Becoming.ScopedReach.alternating false)
+        (fun x => x = Becoming.ScopedReach.Place.start) Becoming.ScopedReach.Place.finish ∧
+    ¬Becoming.SeedReachProcesses.FromSeed (Becoming.ScopedReach.only Becoming.ScopedReach.alternating true)
+        (fun x => x = Becoming.ScopedReach.Place.start) Becoming.ScopedReach.Place.finish
+Becoming.ScopedReach.halted_coverage_insufficient : (∀ (p : Becoming.ScopedReach.Place), ∃ i, (fun x x_1 => True) i p) ∧
+  (∃ p, (fun x => x = Becoming.ScopedReach.Place.start) p) ∧
+    ¬Becoming.SeedReachProcesses.FromSeed Becoming.ScopedReach.halted (fun x => x = Becoming.ScopedReach.Place.start)
+        Becoming.ScopedReach.Place.finish

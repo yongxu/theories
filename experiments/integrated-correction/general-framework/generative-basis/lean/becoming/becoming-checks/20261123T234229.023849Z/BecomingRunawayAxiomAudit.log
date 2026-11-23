@@ -1,0 +1,17 @@
+'Becoming.Flow.PolicyThrough' does not depend on any axioms
+'Becoming.Flow.OthersFixed' does not depend on any axioms
+'Becoming.Flow.exchangeFollows_of_policy' does not depend on any axioms
+'Becoming.Flow.policy_keeps_difference' does not depend on any axioms
+'Becoming.Flow.policy_uses_after_failure' does not depend on any axioms
+'Becoming.Web.raise' does not depend on any axioms
+'Becoming.Web.le_raise' does not depend on any axioms
+'Becoming.Web.Supported.raise' does not depend on any axioms
+'Becoming.Web.raise_other' does not depend on any axioms
+'Becoming.Web.alikeThrough_raise' does not depend on any axioms
+'Becoming.Web.observed_raise_couples' does not depend on any axioms
+'Becoming.Web.needUpTo' does not depend on any axioms
+'Becoming.Web.need_le_needUpTo' does not depend on any axioms
+'Becoming.Web.Dependent.raise' does not depend on any axioms
+'Becoming.Web.break_not_bounded' does not depend on any axioms
+'Becoming.Flow.BalancesOn.raise' does not depend on any axioms
+'Becoming.SupportDrawn.break_uncoupled' does not depend on any axioms

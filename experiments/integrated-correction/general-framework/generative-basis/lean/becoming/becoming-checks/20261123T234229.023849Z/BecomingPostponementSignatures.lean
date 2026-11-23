@@ -1,0 +1,17 @@
+import Becoming.Postponement
+#check @Becoming.Frame.postponed_members
+#check @Becoming.Frame.postponed_determinedAt
+#check @Becoming.Frame.postponed_trace_members
+#check @Becoming.Frame.postponed_trace_inhabited
+#check @Becoming.Frame.postponed_trace_of
+#check @Becoming.Frame.postponed_trace_iff
+#check @Becoming.Frame.postponed_tests_iff
+#check @Becoming.Frame.postponed_trace_one
+#check @Becoming.Frame.postponed_tests_one
+#check @Becoming.sameTests_postponed
+#check @Becoming.sameTests_postponed_iff
+#check @Becoming.sameTests_iff_postponed_alike
+#check @Becoming.DeterminedAt.of_alike_postponed
+#check @Becoming.alike_postponed_iff_determined
+#check @Becoming.Choosing.postponed_alike
+#check @Becoming.Choosing.early_not_alike_postponed

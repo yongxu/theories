@@ -1,0 +1,129 @@
+@Becoming.Web.interaction_sustenance : ∀ {X Pos : Type} {W : Becoming.Web X X} {own sig : Pos → X × Nat → Prop},
+  (W.interaction own sig).Connected → (W.sustenance own sig).Connected
+@Becoming.Web.LivesOn.stands : ∀ {X : Type} {W : Becoming.Web X X},
+  W.Dependent → ∀ {e e' : X × Nat}, W.LivesOn e e' → W.active e.snd e.fst → 0 < W.level e.snd e'.fst
+@Becoming.Web.LivesOn.active : ∀ {X : Type} {W : Becoming.Web X X},
+  W.Dependent → ∀ {e e' : X × Nat}, W.LivesOn e e' → W.Embodied e'.fst → W.active e.snd e.fst → W.active e.snd e'.fst
+@Becoming.Web.living_on_reaches : ∀ {X Pos : Type} {W : Becoming.Web X X} {own sig : Pos → X × Nat → Prop},
+  Becoming.Neutral (W.sustenance own sig).transmits →
+    ∀ {p : Pos} {e d : X × Nat},
+      W.LivesOn e d → (W.sustenance own sig).sig p e → (W.sustenance own sig).living d → (W.sustenance own sig).sig p d
+@Becoming.Web.lived_on_reaches : ∀ {X Pos : Type} {W : Becoming.Web X X} {own sig : Pos → X × Nat → Prop},
+  Becoming.Neutral (W.sustenance own sig).transmits →
+    ∀ {p : Pos} {e d : X × Nat},
+      W.LivesOn e d → (W.sustenance own sig).sig p d → (W.sustenance own sig).living e → (W.sustenance own sig).sig p e
+@Becoming.Flow.interaction_descent : ∀ {X Pos : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {own sig : Pos → X × Nat → Prop}, (W.interaction own sig).Connected → (L.descent W own sig).Connected
+@Becoming.Flow.descent_reaches : ∀ {X Pos : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {own sig : Pos → X × Nat → Prop},
+  Becoming.Neutral (L.descent W own sig).transmits →
+    ∀ {p : Pos} {x g : X},
+      L.Descends W x g →
+        ∀ {t s : Nat},
+          (L.descent W own sig).sig p (g, t) → (L.descent W own sig).living (x, s) → (L.descent W own sig).sig p (x, s)
+@Becoming.Flow.ancestry_reaches : ∀ {X Pos : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {own sig : Pos → X × Nat → Prop},
+  Becoming.Neutral (L.descent W own sig).transmits →
+    ∀ {p : Pos} {x g : X},
+      L.Descends W x g →
+        ∀ {t s : Nat},
+          (L.descent W own sig).sig p (x, s) → (L.descent W own sig).living (g, t) → (L.descent W own sig).sig p (g, t)
+@Becoming.Web.Embodied.descends : ∀ {X : Type} {W : Becoming.Web X X} {L : Becoming.Flow X X},
+  L.Balances W →
+    L.Acting W → ∀ {x : X}, W.Embodied x → ∀ {t : Nat}, W.Arises t x → ∃ g, W.active t g ∧ g ≠ x ∧ L.Descends W x g
+@Becoming.Web.arisen_reached : ∀ {X Pos : Type} {W : Becoming.Web X X} {L : Becoming.Flow X X}
+  {own sig : Pos → X × Nat → Prop},
+  L.Balances W →
+    L.Acting W →
+      Becoming.Neutral (L.descent W own sig).transmits →
+        ∀ {x : X},
+          W.Embodied x →
+            ∀ {t : Nat},
+              W.Arises t x →
+                ∃ g,
+                  W.active t g ∧
+                    g ≠ x ∧
+                      ∀ (p : Pos) (s s' : Nat),
+                        (L.descent W own sig).sig p (g, s) →
+                          (L.descent W own sig).living (x, s') → (L.descent W own sig).sig p (x, s')
+Becoming.Brood.birth_next : ∀ (t : Nat), Becoming.Brood.birth (t + 1) t = 1
+Becoming.Brood.descends : ∀ (t : Nat), Becoming.Brood.flow.Descends Becoming.Brood.web (t + 1) t
+Becoming.Brood.not_descends : ¬Becoming.Brood.flow.Descends Becoming.Brood.web 1 7
+@Becoming.Brood.alive_of_stands : ∀ {Pos : Type} (own sig : Pos → Nat × Nat → Prop) {e : Nat × Nat},
+  0 < Becoming.Brood.standing e.fst e.snd → (Becoming.Brood.flow.descent Becoming.Brood.web own sig).living e
+@Becoming.Brood.self_alive : ∀ {Pos : Type} (own sig : Pos → Nat × Nat → Prop) (t : Nat),
+  (Becoming.Brood.flow.descent Becoming.Brood.web own sig).living (t, t)
+@Becoming.Brood.down : ∀ {Pos : Type} (own sig : Pos → Nat × Nat → Prop) (x s : Nat),
+  (Becoming.Brood.flow.descent Becoming.Brood.web own sig).living (x, s) →
+    Becoming.Reach (Becoming.Brood.flow.descent Becoming.Brood.web own sig).relations (x, s) (0, 0)
+@Becoming.Brood.up : ∀ {Pos : Type} (own sig : Pos → Nat × Nat → Prop) (y s : Nat),
+  (Becoming.Brood.flow.descent Becoming.Brood.web own sig).living (y, s) →
+    Becoming.Reach (Becoming.Brood.flow.descent Becoming.Brood.web own sig).relations (0, 0) (y, s)
+@Becoming.Brood.descent_connected : ∀ {Pos : Type} (own sig : Pos → Nat × Nat → Prop),
+  (Becoming.Brood.flow.descent Becoming.Brood.web own sig).Connected
+@Becoming.Brood.participates : ∀ {t x c : Nat}, Becoming.Brood.web.Participates t x c → c = x
+@Becoming.Brood.not_coparticipating : ∀ {Pos : Type} (own sig : Pos → Nat × Nat → Prop),
+  ¬(Becoming.Brood.web.valuation own sig).Connected
+@Becoming.Brood.not_interacting : ∀ {Pos : Type} (own sig : Pos → Nat × Nat → Prop),
+  ¬(Becoming.Brood.web.interaction own sig).Connected
+@Becoming.Brood.descended : ∀ {Pos : Type} (own sig : Pos → Nat × Nat → Prop) (p₀ : Pos),
+  (Becoming.Brood.flow.descent Becoming.Brood.web own sig).Connected ∧
+    ¬(Becoming.Brood.web.valuation own sig).Connected ∧
+      ¬(Becoming.Brood.web.interaction own sig).Connected ∧
+        ((Becoming.Brood.flow.descent Becoming.Brood.web own sig).Significant ↔
+          (Becoming.Brood.flow.descent Becoming.Brood.web own sig).Grounds)
+@Becoming.Mutualism.apart_sustenance_connected : ∀ {Pos : Type}
+  (own sig : Pos → Becoming.Mutualism.Relatum × Nat → Prop), (Becoming.Mutualism.apart.sustenance own sig).Connected
+@Becoming.Mutualism.relabel_sustenance : ∀ {Pos : Type} (own sig : Pos → Becoming.Mutualism.Relatum × Nat → Prop),
+  (((Becoming.Mutualism.apart.relabel Becoming.Mutualism.other).valuation own sig).Connected ↔
+      (Becoming.Mutualism.apart.valuation own sig).Connected) ∧
+    (((Becoming.Mutualism.apart.relabel Becoming.Mutualism.other).interaction own sig).Connected ↔
+        (Becoming.Mutualism.apart.interaction own sig).Connected) ∧
+      (Becoming.Mutualism.apart.sustenance own sig).Connected ∧
+        ¬((Becoming.Mutualism.apart.relabel Becoming.Mutualism.other).sustenance own sig).Connected
+Becoming.Provisioned.descends : Becoming.Provisioned.flow.Descends Becoming.Provisioned.web
+    Becoming.Provisioned.Relatum.seed Becoming.Provisioned.Relatum.parent ∧
+  Becoming.Provisioned.web.Arises 1 Becoming.Provisioned.Relatum.seed ∧
+    Becoming.Provisioned.flow.given 1 Becoming.Provisioned.Relatum.seed = 0
+Becoming.Sleeper.no_descent : Becoming.Sleeper.web.Unceasing ∧
+  ∀ (x g : Unit), ¬Becoming.Sleeper.flow.Descends Becoming.Sleeper.web x g
+Becoming.Drowsy.dependent : Becoming.Drowsy.web.Dependent
+Becoming.Drowsy.not_undermining : ∀ (t : Nat) (f : Becoming.Drowsy.Relatum), ¬Becoming.Web.UnderminingAt t f
+Becoming.Drowsy.lives : ∀ (t s : Nat),
+  Becoming.Drowsy.web.LivesOn (Becoming.Drowsy.Relatum.eater, t) (Becoming.Drowsy.Relatum.sleeper, s)
+@Becoming.Drowsy.eater_alive : ∀ {Pos : Type} (own sig : Pos → Becoming.Drowsy.Relatum × Nat → Prop) (t : Nat),
+  (Becoming.Drowsy.web.sustenance own sig).living (Becoming.Drowsy.Relatum.eater, t)
+@Becoming.Drowsy.sleeper_alive : ∀ {Pos : Type} (own sig : Pos → Becoming.Drowsy.Relatum × Nat → Prop),
+  (Becoming.Drowsy.web.sustenance own sig).living (Becoming.Drowsy.Relatum.sleeper, 1)
+@Becoming.Drowsy.down : ∀ {Pos : Type} (own sig : Pos → Becoming.Drowsy.Relatum × Nat → Prop)
+  (e : Becoming.Drowsy.Relatum × Nat),
+  (Becoming.Drowsy.web.sustenance own sig).living e →
+    Becoming.Reach (Becoming.Drowsy.web.sustenance own sig).relations e (Becoming.Drowsy.Relatum.eater, 0)
+@Becoming.Drowsy.up : ∀ {Pos : Type} (own sig : Pos → Becoming.Drowsy.Relatum × Nat → Prop)
+  (e : Becoming.Drowsy.Relatum × Nat),
+  (Becoming.Drowsy.web.sustenance own sig).living e →
+    Becoming.Reach (Becoming.Drowsy.web.sustenance own sig).relations (Becoming.Drowsy.Relatum.eater, 0) e
+@Becoming.Drowsy.sustenance_connected : ∀ {Pos : Type} (own sig : Pos → Becoming.Drowsy.Relatum × Nat → Prop),
+  (Becoming.Drowsy.web.sustenance own sig).Connected
+@Becoming.Drowsy.not_interacting : ∀ {Pos : Type} (own sig : Pos → Becoming.Drowsy.Relatum × Nat → Prop),
+  ¬(Becoming.Drowsy.web.interaction own sig).Connected
+@Becoming.Drowsy.drowsy : ∀ {Pos : Type} (own sig : Pos → Becoming.Drowsy.Relatum × Nat → Prop),
+  Becoming.Drowsy.web.Dependent ∧
+    ¬Becoming.Drowsy.web.Embodied Becoming.Drowsy.Relatum.sleeper ∧
+      Becoming.Drowsy.web.active 0 Becoming.Drowsy.Relatum.eater ∧
+        Becoming.Drowsy.web.LivesOn (Becoming.Drowsy.Relatum.eater, 0) (Becoming.Drowsy.Relatum.sleeper, 0) ∧
+          ¬Becoming.Drowsy.web.active 0 Becoming.Drowsy.Relatum.sleeper ∧
+            0 < Becoming.Drowsy.web.level 0 Becoming.Drowsy.Relatum.sleeper ∧
+              (Becoming.Drowsy.web.sustenance own sig).Connected ∧ ¬(Becoming.Drowsy.web.interaction own sig).Connected
+Becoming.Unrelated.balances : Becoming.Unrelated.flow.Balances Becoming.Unrelated.web
+Becoming.Unrelated.acting : Becoming.Unrelated.flow.Acting Becoming.Unrelated.web
+Becoming.Unrelated.absent : ∀ (t : Nat), ¬Becoming.Unrelated.Relatum.unrelated ∈ Becoming.Unrelated.flow.present t
+Becoming.Unrelated.unrelated : Becoming.Unrelated.flow.Balances Becoming.Unrelated.web ∧
+  Becoming.Unrelated.flow.Acting Becoming.Unrelated.web ∧
+    (∀ (t : Nat), ¬Becoming.Unrelated.Relatum.unrelated ∈ Becoming.Unrelated.flow.present t) ∧
+      0 < Becoming.Unrelated.flow.give 0 Becoming.Unrelated.Relatum.unrelated Becoming.Unrelated.Relatum.seed ∧
+        Becoming.Unrelated.web.ComesToStand 0 Becoming.Unrelated.Relatum.seed ∧
+          Becoming.Unrelated.flow.Descends Becoming.Unrelated.web Becoming.Unrelated.Relatum.seed
+              Becoming.Unrelated.Relatum.parent ∧
+            ¬Becoming.Unrelated.flow.Descends Becoming.Unrelated.web Becoming.Unrelated.Relatum.seed
+                Becoming.Unrelated.Relatum.unrelated

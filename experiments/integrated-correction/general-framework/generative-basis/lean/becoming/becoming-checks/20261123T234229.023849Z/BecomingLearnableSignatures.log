@@ -1,0 +1,90 @@
+@Becoming.Learnable.prefixes_same : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {reg : S → R} {s s' : S},
+  Becoming.Law.SameFuture next reg s s' →
+    ∀ (t : Nat),
+      Becoming.Learning.prefixOf (Becoming.Learnable.course next reg s) t =
+        Becoming.Learning.prefixOf (Becoming.Learnable.course next reg s') t
+@Becoming.Learnable.claim_not_right_on_both : ∀ {S : Type u_1} {R : Type u_2} {V : Type u_3} {next : S → S}
+  {reg : S → R} {val : S → V} (pred : List R → Option V) {s s' : S},
+  Becoming.Law.SameFuture next reg s s' →
+    ∀ {t : Nat},
+      val (Becoming.Law.orbit next s t) ≠ val (Becoming.Law.orbit next s' t) →
+        ¬(pred (Becoming.Learning.prefixOf (Becoming.Learnable.course next reg s) t) =
+              some (val (Becoming.Law.orbit next s t)) ∧
+            pred (Becoming.Learning.prefixOf (Becoming.Learnable.course next reg s') t) =
+              some (val (Becoming.Law.orbit next s' t)))
+@Becoming.Learnable.missed_on_one : ∀ {S : Type u_1} {R : Type u_2} {V : Type u_3} {next : S → S} {reg : S → R}
+  {val : S → V} [DecidableEq V] (pred : List R → Option V) {s s' : S},
+  Becoming.Law.SameFuture next reg s s' →
+    ∀ {t : Nat},
+      val (Becoming.Law.orbit next s t) ≠ val (Becoming.Law.orbit next s' t) →
+        ∀ {w : V},
+          pred (Becoming.Learning.prefixOf (Becoming.Learnable.course next reg s) t) = some w →
+            (Becoming.Learning.Misses (pred (Becoming.Learning.prefixOf (Becoming.Learnable.course next reg s) t))
+                  (val (Becoming.Law.orbit next s t)) ∨
+                Becoming.Learning.Misses (pred (Becoming.Learning.prefixOf (Becoming.Learnable.course next reg s') t))
+                  (val (Becoming.Law.orbit next s' t))) ∧
+              ∀ (n : Nat),
+                Becoming.Learning.prefixOf (Becoming.Learnable.course next reg s) n =
+                  Becoming.Learning.prefixOf (Becoming.Learnable.course next reg s') n
+@Becoming.Learnable.agree_of_predicts_both : ∀ {S : Type u_1} {R : Type u_2} {V : Type u_3} {next : S → S} {reg : S → R}
+  {val : S → V} {pred : List R → Option V} {s s' : S},
+  Becoming.Law.SameFuture next reg s s' →
+    ∀ {T T' : Nat},
+      Becoming.Learnable.PredictsFrom next reg val pred s T →
+        Becoming.Learnable.PredictsFrom next reg val pred s' T' →
+          ∀ (t : Nat), T + T' ≤ t → val (Becoming.Law.orbit next s t) = val (Becoming.Law.orbit next s' t)
+@Becoming.Learnable.not_predicts_on_both : ∀ {S : Type u_1} {R : Type u_2} {V : Type u_3} {next : S → S} {reg : S → R}
+  {val : S → V} (pred : List R → Option V) {s s' : S},
+  Becoming.Law.SameFuture next reg s s' →
+    (∀ (T : Nat), ∃ t, T ≤ t ∧ val (Becoming.Law.orbit next s t) ≠ val (Becoming.Law.orbit next s' t)) →
+      ¬(Becoming.Learnable.Predicts next reg val pred s ∧ Becoming.Learnable.Predicts next reg val pred s')
+@Becoming.Learnable.orbit_of_still : ∀ {S : Type u_1} {next : S → S} {s : S},
+  next s = s → ∀ (n : Nat), Becoming.Law.orbit next s n = s
+@Becoming.Learnable.still_not_predicts_on_both : ∀ {S : Type u_1} {R : Type u_2} {V : Type u_3} {next : S → S}
+  {reg : S → R} {val : S → V} (pred : List R → Option V) {s s' : S},
+  next s = s →
+    next s' = s' →
+      reg s = reg s' →
+        val s ≠ val s' →
+          ¬(Becoming.Learnable.Predicts next reg val pred s ∧ Becoming.Learnable.Predicts next reg val pred s')
+@Becoming.Learnable.still_lumped_of_predicts : ∀ {S : Type u_1} {R : Type u_2} {V : Type u_3} {next : S → S}
+  {reg : S → R} {val : S → V},
+  (∀ (s : S), next s = s) →
+    ∀ {pred : List R → Option V},
+      (∀ (s : S), Becoming.Learnable.Predicts next reg val pred s) → Becoming.Learning.Lumped reg val
+@Becoming.Learnable.predicts_through : ∀ {S : Type u_1} {R : Type u_2} {V : Type u_3} [inst : DecidableEq R]
+  {next : S → S} {s : S} {l : List S},
+  (∀ (n : Nat), Becoming.Law.orbit next s n ∈ l) →
+    ∀ {reg : S → R} {val : S → V} {g : R → V},
+      (∀ (s : S), val s = g (reg s)) →
+        Becoming.Learnable.PredictsFrom next reg val
+          (fun r => Option.map g (Becoming.Learning.byElimination Becoming.Learning.lassos r)) s
+          (l.length + (l.length + l.length - 1) * Becoming.Learning.tri l.length)
+@Becoming.Learnable.firstFit_congr : ∀ {α : Type} {p q : α → Prop} {dp : (a : α) → Decidable (p a)}
+  {dq : (a : α) → Decidable (q a)} {l : List α},
+  (∀ (a : α), a ∈ l → (p a ↔ q a)) → Becoming.Identification.firstFit p dp l = Becoming.Identification.firstFit q dq l
+@Becoming.Learnable.learnable_iff : ∀ {S : Type} {R : Type u_1} {V : Type u_2} [DecidableEq R] {next : S → S}
+  {reg : S → R} {val : S → V} {l : List S},
+  (∀ (s : S), s ∈ l) →
+    ((∃ pred, ∀ (s : S), Becoming.Learnable.Predicts next reg val pred s) ↔
+      ∀ (s s' : S),
+        Becoming.Law.SameFuture next reg s s' →
+          ∃ T, ∀ (t : Nat), T ≤ t → val (Becoming.Law.orbit next s t) = val (Becoming.Law.orbit next s' t))
+@Becoming.Learnable.learnable_of_lumped : ∀ {S : Type} {R : Type u_1} {V : Type u_2} [DecidableEq R] {next : S → S}
+  {reg : S → R} {val : S → V} {l : List S},
+  (∀ (s : S), s ∈ l) →
+    Becoming.Learning.Lumped reg val → ∃ pred, ∀ (s : S), Becoming.Learnable.Predicts next reg val pred s
+@Becoming.Learnable.still_learnable_iff_lumped : ∀ {S : Type} {R : Type u_1} {V : Type u_2} [DecidableEq R]
+  {next : S → S},
+  (∀ (s : S), next s = s) →
+    ∀ {reg : S → R} {val : S → V} {l : List S},
+      (∀ (s : S), s ∈ l) →
+        ((∃ pred, ∀ (s : S), Becoming.Learnable.Predicts next reg val pred s) ↔ Becoming.Learning.Lumped reg val)
+Becoming.Learnable.Pair.stays : ∀ (s : Bool × Bool) (n : Nat), Becoming.Law.orbit Becoming.Learnable.Pair.still s n = s
+Becoming.Learnable.Pair.first_not_predicts : ∀ (pred : List Bool → Option Bool),
+  ¬(Becoming.Learnable.Predicts Becoming.Learnable.Pair.still Prod.fst Prod.snd pred (true, false) ∧
+      Becoming.Learnable.Predicts Becoming.Learnable.Pair.still Prod.fst Prod.snd pred (true, true))
+Becoming.Learnable.Pair.not_lumped : ¬Becoming.Learning.Lumped Prod.fst Prod.snd
+Becoming.Learnable.Pair.whole_predicts : ∀ (s : Bool × Bool),
+  Becoming.Learnable.PredictsFrom Becoming.Learnable.Pair.still id Prod.snd
+    (fun r => Option.map Prod.snd (Becoming.Learning.byElimination Becoming.Learning.lassos r)) s 2

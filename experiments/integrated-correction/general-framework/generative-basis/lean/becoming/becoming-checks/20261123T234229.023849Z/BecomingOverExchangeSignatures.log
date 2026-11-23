@@ -1,0 +1,471 @@
+@Becoming.World.withRest_acting : ∀ {w : Becoming.World}, w.withRest.Acting
+@Becoming.World.withRest_taking : ∀ {w : Becoming.World}, w.withRest.Taking
+@Becoming.World.withRest_rest_idle : ∀ {w : Becoming.World},
+  w.Balanced →
+    ∀ (t : Nat) (c : w.withRest.Relatum), w.withRest.flow.take t none c = 0 ∧ w.withRest.flow.give t none c = 0
+@Becoming.World.withRest_some : ∀ {w : Becoming.World} (t : Nat) (f c : w.Relatum),
+  w.withRest.flow.take t (some f) (some c) = w.flow.take t f c ∧
+    w.withRest.flow.give t (some f) (some c) = w.flow.give t f c ∧ w.withRest.web.level t (some c) = w.web.level t c
+@Becoming.World.withRest_comes_to_rest_unrefuted : ∀ {w : Becoming.World},
+  (∀ (t : Nat), Becoming.Distinct (w.flow.present t)) →
+    ∀ (family : Nat → List w.withRest.Relatum),
+      (∀ (t : Nat), w.withRest.flow.ClosedAt (family t) t) →
+        ∀ {stand : Nat → List w.withRest.Relatum},
+          w.withRest.web.StandingCensus stand →
+            w.withRest.ArisingEmbodied →
+              w.withRest.Dissipative →
+                ∀ {T : Nat},
+                  (∀ (t : Nat), T ≤ t → w.withRest.flow.AroundStanding stand t) → ¬¬∃ N, w.withRest.RestsFrom N
+@Becoming.World.withRest_uptake_needs_replenishment : ∀ {w : Becoming.World} {cs : List w.withRest.Relatum},
+  (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < w.withRest.flow.uptake cs t) →
+    ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → w.withRest.flow.replenishment cs t = 0
+@Becoming.World.withRest_replenishes : ∀ {w : Becoming.World} {x : w.withRest.Relatum},
+  w.withRest.web.Embodied x →
+    ∀ {cs : List w.withRest.Relatum},
+      x ∈ cs → ∀ {t : Nat}, w.withRest.web.Arises t x → 0 < w.withRest.flow.replenishment cs t
+@Becoming.World.withRest_restores : ∀ {w : Becoming.World} {c : w.withRest.Relatum} {m T : Nat},
+  (∀ (k : Nat),
+      k < m - w.withRest.web.level T c →
+        w.withRest.web.level T c ≤ w.withRest.web.level (T + k) c →
+          w.withRest.flow.taken (T + k) c < w.withRest.flow.given (T + k) c) →
+    m ≤ w.withRest.web.level (T + (m - w.withRest.web.level T c)) c
+@Becoming.World.withRest_renewedBy : ∀ {w : Becoming.World},
+  w.withRest.web.RenewedBy fun t f c => f ∈ w.withRest.flow.present t ∧ 0 < w.withRest.flow.give t f c
+@Becoming.World.withRest_replenishment_unbounded : ∀ {w : Becoming.World} {cs : List w.withRest.Relatum},
+  w.withRest.flow.More cs → ∀ (R T₀ : Nat), ¬∀ (t : Nat), T₀ ≤ t → w.withRest.flow.replenishment cs t ≤ R
+@Becoming.World.withRest_opens : ∀ {w : Becoming.World},
+  w.withRest.Dissipative →
+    ∀ {cs ds : List w.withRest.Relatum},
+      Becoming.Distinct ds →
+        (∀ (c : w.withRest.Relatum), c ∈ cs → c ∈ ds) →
+          (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < w.withRest.flow.takers cs t) →
+            ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → w.withRest.flow.ClosedAt ds t
+@Becoming.World.withRest_unexcluded_beyond_coupling : ∀ {w : Becoming.World}
+  {obs : w.withRest.Relatum → w.withRest.Relatum → Prop} {part : w.withRest.Relatum → Bool}
+  {l : Nat → w.withRest.Relatum → Nat},
+  w.withRest.flow.WithheldLevels part w.withRest.web l →
+    ∀ {f : w.withRest.Relatum},
+      (∀ (h : w.withRest.Relatum), part h = true → ¬w.withRest.flow.WithinCoupling w.withRest.web obs f h) →
+        ∀ {claim : (Nat → w.withRest.Relatum → Nat) → Prop},
+          claim l →
+            ∀ (t : Nat) (g : w.withRest.Relatum),
+              w.withRest.flow.WithinCoupling w.withRest.web obs f g →
+                ¬w.withRest.web.Excludes obs claim g w.withRest.web.level t
+@Becoming.World.withRest_unselected_beyond_coupling : ∀ {w : Becoming.World}
+  {obs : w.withRest.Relatum → w.withRest.Relatum → Prop} {part : w.withRest.Relatum → Bool}
+  {l : Nat → w.withRest.Relatum → Nat} {select : (Nat → w.withRest.Relatum → Nat) → Prop},
+  w.withRest.flow.WithheldLevels part w.withRest.web l →
+    ∀ {f : w.withRest.Relatum},
+      (∀ (h : w.withRest.Relatum), part h = true → ¬w.withRest.flow.WithinCoupling w.withRest.web obs f h) →
+        ∀ {g : w.withRest.Relatum},
+          w.withRest.flow.WithinCoupling w.withRest.web obs f g →
+            ∀ {t : Nat}, w.withRest.web.SelectsThrough obs g t select → (select w.withRest.web.level ↔ select l)
+@Becoming.World.withRest_unselected_beyond_pool : ∀ {w : Becoming.World}
+  {obs : w.withRest.Relatum → w.withRest.Relatum → Prop} {part : w.withRest.Relatum → Bool}
+  {group : w.withRest.Relatum → Prop} {l : Nat → w.withRest.Relatum → Nat}
+  {select : (Nat → w.withRest.Relatum → Nat) → Prop},
+  w.withRest.flow.WithheldLevels part w.withRest.web l →
+    (∀ (h : w.withRest.Relatum), part h = true → ¬w.withRest.flow.WithinPoolCoupling w.withRest.web obs group h) →
+      ∀ {pool : w.withRest.Relatum → Prop},
+        (∀ (g : w.withRest.Relatum), pool g → w.withRest.flow.WithinPoolCoupling w.withRest.web obs group g) →
+          ∀ {t : Nat}, w.withRest.web.SelectsThroughAll obs pool t select → (select w.withRest.web.level ↔ select l)
+@Becoming.World.withRest_retains_iff_within_margin : ∀ {w : Becoming.World} {Pos : Type}
+  {part : w.withRest.Relatum → Bool} {l : Nat → w.withRest.Relatum → Nat},
+  w.withRest.flow.WithheldLevels part w.withRest.web l →
+    ∀ {sig : Pos → Nat → w.withRest.Relatum → Prop} {p : Pos},
+      w.withRest.web.Retains sig p w.withRest.web.level l ↔
+        ∀ (t : Nat) (f : w.withRest.Relatum),
+          sig p t f →
+            w.withRest.web.Admits (l t) t f →
+              ∀ (c : w.withRest.Relatum),
+                w.withRest.web.requires t f c →
+                  (w.withRest.web.need t f c +
+                      Becoming.total (Becoming.steps 0 t) fun s => w.withRest.flow.partTaken part s c) ≤
+                    l t c + Becoming.total (Becoming.steps 0 t) fun s => w.withRest.flow.partGiven part s c
+@Becoming.World.withRest_widens_iff_others_within : ∀ {w : Becoming.World} {part : w.withRest.Relatum → Bool}
+  {l : Nat → w.withRest.Relatum → Nat},
+  w.withRest.flow.WithheldLevels part w.withRest.web l →
+    ∀ {own : w.withRest.Relatum → Bool},
+      w.withRest.web.WidensWithin own w.withRest.web.level l →
+        (w.withRest.web.Widens w.withRest.web.level l ↔
+          ∀ (t : Nat) (f : w.withRest.Relatum),
+            own f = false →
+              w.withRest.web.Admits (l t) t f →
+                ∀ (c : w.withRest.Relatum),
+                  w.withRest.web.requires t f c →
+                    (w.withRest.web.need t f c +
+                        Becoming.total (Becoming.steps 0 t) fun s => w.withRest.flow.partTaken part s c) ≤
+                      l t c + Becoming.total (Becoming.steps 0 t) fun s => w.withRest.flow.partGiven part s c)
+@Becoming.World.withRest_lineage_ends : ∀ {w : Becoming.World}
+  {G : Becoming.SelectionTerm.Generations w.withRest.Relatum} {ds : List w.withRest.Relatum},
+  Becoming.SelectionTerm.Flow.Descended w.withRest.flow w.withRest.web G →
+    (∀ (t : Nat) (p k : w.withRest.Relatum), p ∈ G.family t → k ∈ G.kids t p → k ∈ ds) →
+      (∀ (t : Nat), t < w.withRest.web.stock ds 0 + 1 → w.withRest.flow.DissipatesOn ds t) →
+        G.size (w.withRest.web.stock ds 0 + 1) = 0
+@Becoming.World.withRest_closed_lineage_lowered : ∀ {w : Becoming.World}
+  {G : Becoming.SelectionTerm.Generations w.withRest.Relatum} {ds : List w.withRest.Relatum},
+  Becoming.SelectionTerm.Flow.Descended w.withRest.flow w.withRest.web G →
+    (∀ (t : Nat) (p k : w.withRest.Relatum), p ∈ G.family t → k ∈ G.kids t p → k ∈ ds) →
+      (∀ (t : Nat), t < w.withRest.web.stock ds 0 + 1 → w.withRest.flow.DissipatesOn ds t) →
+        Becoming.Reproduction.Generations.ByNumber G →
+          0 < G.size 1 →
+            ∃ t, t < w.withRest.web.stock ds 0 ∧ G.concordAt t + G.size t * G.raisedAt t < G.size t * G.loweredAt t
+@Becoming.World.withRest_rises_iff_inactive : ∀ {w : Becoming.World}
+  {G : Becoming.SelectionTerm.Generations w.withRest.Relatum},
+  Becoming.SelectionTerm.Flow.Descended w.withRest.flow w.withRest.web G →
+    ∀ {t m : Nat} (gs : List (List w.withRest.Relatum)),
+      Becoming.SelectionLevels.whole gs = G.family t →
+        (∀ (g : List w.withRest.Relatum), g ∈ gs → g.length = m) →
+          Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+            (∀ (g h : List w.withRest.Relatum),
+                g ∈ gs →
+                  h ∈ gs →
+                    Becoming.total h (G.amount t) < Becoming.total g (G.amount t) →
+                      ∀ (p : w.withRest.Relatum), p ∈ h → ¬w.withRest.web.active t p) →
+              (G.Raises t ↔
+                gs.length * Becoming.SelectionLevels.discordWithin gs (G.offspringNumber t) (G.amount t) <
+                  gs.length * Becoming.SelectionLevels.concordWithin gs (G.offspringNumber t) (G.amount t) +
+                    Becoming.SelectionLevels.concordAmong gs (G.offspringNumber t) (G.amount t))
+@Becoming.World.withRest_all_end : ∀ {w : Becoming.World} {G : Becoming.SelectionTerm.Generations w.withRest.Relatum},
+  Becoming.SelectionTerm.Flow.Descended w.withRest.flow w.withRest.web G →
+    ∀ {t : Nat}, (∀ (p : w.withRest.Relatum), p ∈ G.family t → ¬w.withRest.web.active t p) → G.size (t + 1) = 0
+@Becoming.World.withRest_present : ∀ {R : Type} {L L' : Becoming.Flow R R} {W W' : Becoming.Web R R},
+  (∀ (t : Nat), L.present t = L'.present t) →
+    ∀ (t : Nat), (Becoming.World.of R L W).withRest.flow.present t = (Becoming.World.of R L' W').withRest.flow.present t
+@Becoming.World.withRest_start : ∀ {R : Type} {L L' : Becoming.Flow R R} {W W' : Becoming.Web R R},
+  (∀ (c : R), W.level 0 c = W'.level 0 c) →
+    ∀ (c : (Becoming.World.of R L W).withRest.Relatum),
+      (Becoming.World.of R L W).withRest.web.level 0 c = (Becoming.World.of R L' W').withRest.web.level 0 c
+@Becoming.World.withRest_comparison_within_response : ∀ {R : Type} {L L' : Becoming.Flow R R} {W W' : Becoming.Web R R}
+  {Pos : Type} {obs : Option R → Option R → Prop} {part : Option R → Bool},
+  (∀ (t : Nat), L.present t = L'.present t) →
+    (∀ (c : R), W.level 0 c = W'.level 0 c) →
+      (Becoming.World.of R L W).withRest.flow.RespondsThroughCoupling (Becoming.World.of R L' W').withRest.flow
+          (Becoming.World.of R L W).withRest.web (Becoming.World.of R L' W').withRest.web obs part →
+        ∀ {sig : Pos → Nat → Option R → Prop} {p : Pos},
+          (∀ (t : Nat) (g : (Becoming.World.of R L W).withRest.Relatum),
+              ¬¬(Becoming.World.of R L W).withRest.flow.WithinResponse (Becoming.World.of R L' W').withRest.flow
+                      (Becoming.World.of R L W).withRest.web obs part g →
+                sig p t g) →
+            ((Becoming.World.of R L W).withRest.web.Retains sig p (Becoming.World.of R L W).withRest.web.level
+                  (Becoming.World.of R L' W').withRest.web.level ↔
+                (Becoming.World.of R L W).withRest.web.Includes (Becoming.World.of R L W).withRest.web.level
+                  (Becoming.World.of R L' W').withRest.web.level) ∧
+              ((Becoming.World.of R L W).withRest.web.Retains sig p (Becoming.World.of R L' W').withRest.web.level
+                    (Becoming.World.of R L W).withRest.web.level ↔
+                  (Becoming.World.of R L W).withRest.web.Includes (Becoming.World.of R L' W').withRest.web.level
+                    (Becoming.World.of R L W).withRest.web.level) ∧
+                (¬(Becoming.World.of R L W).withRest.web.Adds sig p (Becoming.World.of R L W).withRest.web.level
+                        (Becoming.World.of R L' W').withRest.web.level ↔
+                    ¬(Becoming.World.of R L W).withRest.web.Exceeds (Becoming.World.of R L W).withRest.web.level
+                        (Becoming.World.of R L' W').withRest.web.level) ∧
+                  (¬(Becoming.World.of R L W).withRest.web.Adds sig p (Becoming.World.of R L' W').withRest.web.level
+                        (Becoming.World.of R L W).withRest.web.level ↔
+                    ¬(Becoming.World.of R L W).withRest.web.Exceeds (Becoming.World.of R L' W').withRest.web.level
+                        (Becoming.World.of R L W).withRest.web.level)
+@Becoming.World.withRest_counterfactual_is_course : ∀ {w : Becoming.World}
+  {law act : Becoming.ExchangeLaw w.withRest.Relatum w.withRest.Relatum} {part : w.withRest.Relatum → Bool},
+  law.Nonanticipating →
+    act.Nonanticipating →
+      ∀ {present : Nat → List w.withRest.Relatum} {start : w.withRest.Relatum → Nat},
+        (∀ (t : Nat), w.withRest.flow.present t = present t) →
+          w.withRest.flow.ActsAlike ((law.withAct part act).course present start) part →
+            w.withRest.flow.Follows law part w.withRest.web.level →
+              (∀ (c : w.withRest.Relatum), w.withRest.web.level 0 c = start c) →
+                (law.withAct part act).Feasible present start →
+                  (∀ (t : Nat) (c : w.withRest.Relatum),
+                      w.withRest.web.level t c = (law.withAct part act).levels present start t c) ∧
+                    ∀ (t : Nat) (h c : w.withRest.Relatum),
+                      w.withRest.flow.take t h c = ((law.withAct part act).course present start).take t h c ∧
+                        w.withRest.flow.give t h c = ((law.withAct part act).course present start).give t h c
+@Becoming.World.withRest_act_unselected : ∀ {R : Type} {L L' : Becoming.Flow R R} {W W' : Becoming.Web R R}
+  {law : Becoming.ExchangeLaw (Option R) (Option R)} {obs : Option R → Option R → Prop} {part : Option R → Bool}
+  {f : Option R} {select : (Nat → Option R → Nat) → Prop},
+  law.Through (Becoming.World.of R L W).withRest.web obs part →
+    (Becoming.World.of R L W).withRest.flow.Follows law part (Becoming.World.of R L W).withRest.web.level →
+      (Becoming.World.of R L' W').withRest.flow.Follows law part (Becoming.World.of R L' W').withRest.web.level →
+        (∀ (t : Nat), L.present t = L'.present t) →
+          (∀ (c : R), W.level 0 c = W'.level 0 c) →
+            (Becoming.World.of R L W).withRest.flow.ActsAlikeWithin (Becoming.World.of R L' W').withRest.flow
+                (Becoming.World.of R L W).withRest.web (Becoming.World.of R L' W').withRest.web obs part f →
+              ∀ {g : Option R},
+                Becoming.WithinClosure
+                    ((Becoming.World.of R L W).withRest.flow.CoupledFromEither (Becoming.World.of R L W).withRest.web
+                      (Becoming.World.of R L' W').withRest.flow obs)
+                    f g →
+                  ∀ {t : Nat},
+                    (Becoming.World.of R L W).withRest.web.SelectsThrough obs g t select →
+                      (select (Becoming.World.of R L W).withRest.web.level ↔
+                        select (Becoming.World.of R L' W').withRest.web.level)
+@Becoming.World.withRest_act_selected_by_pool : ∀ {R : Type} {L L' : Becoming.Flow R R} {W W' : Becoming.Web R R}
+  {law : Becoming.ExchangeLaw (Option R) (Option R)} {obs : Option R → Option R → Prop} {part : Option R → Bool}
+  {group : Option R → Prop},
+  law.Through (Becoming.World.of R L W).withRest.web obs part →
+    (Becoming.World.of R L W).withRest.flow.Follows law part (Becoming.World.of R L W).withRest.web.level →
+      (Becoming.World.of R L' W').withRest.flow.Follows law part (Becoming.World.of R L' W').withRest.web.level →
+        (∀ (t : Nat), L.present t = L'.present t) →
+          (∀ (c : R), W.level 0 c = W'.level 0 c) →
+            (∀ (f : Option R),
+                group f →
+                  (Becoming.World.of R L W).withRest.flow.ActsAlikeWithin (Becoming.World.of R L' W').withRest.flow
+                    (Becoming.World.of R L W).withRest.web (Becoming.World.of R L' W').withRest.web obs part f) →
+              ∀ {x : Option R} {s : Nat},
+                ¬((Becoming.World.of R L W).withRest.web.Admits ((Becoming.World.of R L W).withRest.web.level s) s x ↔
+                      (Becoming.World.of R L W).withRest.web.Admits ((Becoming.World.of R L' W').withRest.web.level s) s
+                        x) →
+                  ¬Becoming.WithinClosureOf
+                        ((Becoming.World.of R L W).withRest.flow.CoupledFromEither
+                          (Becoming.World.of R L W).withRest.web (Becoming.World.of R L' W').withRest.flow obs)
+                        group x ∧
+                    (∀ (pool : Option R → Prop),
+                        pool x →
+                          ∀ (t : Nat),
+                            s ≤ t →
+                              (Becoming.World.of R L W).withRest.web.SelectsThroughAll obs pool t fun l =>
+                                (Becoming.World.of R L W).withRest.web.Admits (l s) s x) ∧
+                      ∀ (pool : Option R → Prop),
+                        (∀ (g : Option R),
+                            pool g →
+                              Becoming.WithinClosureOf
+                                ((Becoming.World.of R L W).withRest.flow.CoupledFromEither
+                                  (Becoming.World.of R L W).withRest.web (Becoming.World.of R L' W').withRest.flow obs)
+                                group g) →
+                          ∀ (t : Nat),
+                            ¬(Becoming.World.of R L W).withRest.web.SelectsThroughAll obs pool t fun l =>
+                                (Becoming.World.of R L W).withRest.web.Admits (l s) s x
+@Becoming.World.withRest_widening_selected_by_pool : ∀ {R : Type} {L L' : Becoming.Flow R R} {W W' : Becoming.Web R R}
+  {law : Becoming.ExchangeLaw (Option R) (Option R)} {obs : Option R → Option R → Prop} {part : Option R → Bool}
+  {group : Option R → Prop},
+  law.Through (Becoming.World.of R L W).withRest.web obs part →
+    (Becoming.World.of R L W).withRest.flow.Follows law part (Becoming.World.of R L W).withRest.web.level →
+      (Becoming.World.of R L' W').withRest.flow.Follows law part (Becoming.World.of R L' W').withRest.web.level →
+        (∀ (t : Nat), L.present t = L'.present t) →
+          (∀ (c : R), W.level 0 c = W'.level 0 c) →
+            (∀ (f : Option R),
+                group f →
+                  (Becoming.World.of R L W).withRest.flow.ActsAlikeWithin (Becoming.World.of R L' W').withRest.flow
+                    (Becoming.World.of R L W).withRest.web (Becoming.World.of R L' W').withRest.web obs part f) →
+              (Becoming.World.of R L W).withRest.web.Widens (Becoming.World.of R L' W').withRest.web.level
+                  (Becoming.World.of R L W).withRest.web.level →
+                ∃ s x,
+                  (Becoming.World.of R L W).withRest.web.Admits ((Becoming.World.of R L' W').withRest.web.level s) s x ∧
+                    ¬(Becoming.World.of R L W).withRest.web.Admits ((Becoming.World.of R L W).withRest.web.level s) s
+                          x ∧
+                      ¬Becoming.WithinClosureOf
+                            ((Becoming.World.of R L W).withRest.flow.CoupledFromEither
+                              (Becoming.World.of R L W).withRest.web (Becoming.World.of R L' W').withRest.flow obs)
+                            group x ∧
+                        (∀ (pool : Option R → Prop),
+                            pool x →
+                              ∀ (t : Nat),
+                                s ≤ t →
+                                  (Becoming.World.of R L W).withRest.web.SelectsThroughAll obs pool t fun l =>
+                                    (Becoming.World.of R L W).withRest.web.Admits (l s) s x) ∧
+                          ∀ (pool : Option R → Prop),
+                            (∀ (g : Option R),
+                                pool g →
+                                  Becoming.WithinClosureOf
+                                    ((Becoming.World.of R L W).withRest.flow.CoupledFromEither
+                                      (Becoming.World.of R L W).withRest.web (Becoming.World.of R L' W').withRest.flow
+                                      obs)
+                                    group g) →
+                              ∀ (t : Nat),
+                                ¬(Becoming.World.of R L W).withRest.web.SelectsThroughAll obs pool t fun l =>
+                                    (Becoming.World.of R L W).withRest.web.Admits (l s) s x
+@Becoming.World.withRest_apart_only_downstream : ∀ {R : Type} {L L' : Becoming.Flow R R} {W W' : Becoming.Web R R}
+  {law : Becoming.ExchangeLaw (Option R) (Option R)} {part : Option R → Bool} {cs : List (Option R)}
+  {reads : Nat → Option R → Option R → Nat → Option R → Bool},
+  law.ReadsInto part reads →
+    (∀ (t : Nat) (h e : Option R) (s : Nat) (d : Option R), reads t h e s d = true → d ∈ cs) →
+      (∀ (t : Nat), L.present t = L'.present t) →
+        (Becoming.World.of R L W).withRest.flow.ActsAlike (Becoming.World.of R L' W').withRest.flow part →
+          (Becoming.World.of R L W).withRest.flow.Follows law part (Becoming.World.of R L W).withRest.web.level →
+            (Becoming.World.of R L' W').withRest.flow.Follows law part (Becoming.World.of R L' W').withRest.web.level →
+              ∀ {c : Option R},
+                (∀ (e : Option R),
+                    e ≠ c →
+                      (Becoming.World.of R L W).withRest.web.level 0 e =
+                        (Becoming.World.of R L' W').withRest.web.level 0 e) →
+                  ∀ (t : Nat) (e : Option R),
+                    ¬Becoming.Upstream cs part (Becoming.strengthsBefore t (Becoming.readCouplings reads))
+                          (Becoming.World.of R L W).withRest.flow.present c e →
+                      (Becoming.World.of R L W).withRest.web.level t e =
+                        (Becoming.World.of R L' W').withRest.web.level t e
+@Becoming.World.ReadOffExchange.dependent : ∀ {w : Becoming.World}, w.ReadOffExchange → w.withRest.Dependent
+@Becoming.ExchangeRelation.Runs.readOffExchange : ∀ {R : Type} {rel : Becoming.ExchangeRelation R R}
+  {present : Nat → List R} {L : Becoming.Flow R R} {l : Nat → R → Nat},
+  rel.Runs present l L → ∀ (need : Nat → R → R → Nat), (rel.world present L l need).ReadOffExchange
+@Becoming.ExchangeLaw.readWorld_readOffExchange : ∀ {R : Type} {law : Becoming.ExchangeLaw R R} {present : Nat → List R}
+  {start : R → Nat} (need : Nat → R → R → Nat), (law.readWorld present start need).ReadOffExchange
+Becoming.World.takingUnsupported_not_readOff : ¬Becoming.World.takingUnsupported.ReadOffExchange
+@Becoming.World.ReadOffExchange.consumption_ends_with_feeders : ∀ {w : Becoming.World},
+  w.ReadOffExchange →
+    ∀ {c g : w.withRest.Relatum} {T : Nat},
+      (∀ (t : Nat), T ≤ t → w.withRest.web.active t g → w.withRest.web.requires t g c) →
+        (∀ (t : Nat) (f : w.withRest.Relatum),
+            T ≤ t → w.withRest.flow.FedBy w.withRest.web (g, t) (f, t) → ¬w.withRest.web.Supported t f) →
+          (∀ (t : Nat),
+              T ≤ t → w.withRest.web.active t g → g ∈ w.withRest.flow.present t ∧ 0 < w.withRest.flow.take t g c) →
+            ∀ (n : Nat), (∀ (k : Nat), k < n → w.withRest.web.active (T + k) g) → n ≤ w.withRest.web.level T c
+@Becoming.World.ReadOffExchange.continuing_excludes : ∀ {w : Becoming.World},
+  w.ReadOffExchange →
+    ∀ {c : w.withRest.Relatum} {m : Nat},
+      (∀ (t : Nat) (e : w.withRest.Relatum),
+          e ∈ w.withRest.flow.present t →
+            0 < w.withRest.flow.give t e c → w.withRest.web.requires t e c ∧ m ≤ w.withRest.web.need t e c) →
+        ∀ {f g : w.withRest.Relatum},
+          f ≠ g →
+            (∀ (t : Nat), w.withRest.flow.TakesAll t f c) →
+              (∀ (t : Nat), w.withRest.web.requires t f c ∧ m ≤ w.withRest.web.need t f c) →
+                (∀ (t : Nat), w.withRest.web.active t f) →
+                  ∀ (T : Nat),
+                    ¬∀ (j : Nat),
+                        j < w.withRest.web.level T c + 1 →
+                          g ∈ w.withRest.flow.present (T + j) ∧ 0 < w.withRest.flow.take (T + j) g c
+@Becoming.World.ReadOffExchange.outrun_below : ∀ {w : Becoming.World},
+  w.ReadOffExchange →
+    ∀ {c : w.withRest.Relatum} {m : Nat},
+      (∀ (t : Nat) (e : w.withRest.Relatum),
+          e ∈ w.withRest.flow.present t →
+            0 < w.withRest.flow.give t e c → w.withRest.web.requires t e c ∧ m ≤ w.withRest.web.need t e c) →
+        ∀ {T n : Nat} {rest : List w.withRest.Relatum},
+          Becoming.Distinct rest →
+            (∀ (j : Nat) (f : w.withRest.Relatum),
+                j < n → f ∈ rest → 0 < w.withRest.flow.take (T + j) f c → f ∈ w.withRest.flow.present (T + j)) →
+              (∀ (j : Nat),
+                  j < n →
+                    w.withRest.flow.given (T + j) c < Becoming.total rest fun f => w.withRest.flow.take (T + j) f c) →
+                w.withRest.web.level T c < n + m → ∀ (k : Nat), w.withRest.web.level (T + n + k) c < m
+@Becoming.World.ReadOffExchange.roles_dependent : ∀ {w : Becoming.World},
+  w.ReadOffExchange → w.withRest.web.roles.Dependent
+@Becoming.World.ReadOffExchange.selection_within : ∀ {w : Becoming.World},
+  w.ReadOffExchange →
+    ∀ {t : Nat} {c : w.withRest.Relatum} {ps : List w.withRest.Relatum}
+      {kids : w.withRest.Relatum → List w.withRest.Relatum},
+      (∀ (p k : w.withRest.Relatum), p ∈ ps → k ∈ kids p → w.withRest.flow.DescendsAt w.withRest.web t k p) →
+        (∀ (p : w.withRest.Relatum), p ∈ ps → w.withRest.web.requires t p c) →
+          ∀ (b : w.withRest.Relatum → Nat),
+            Becoming.offspring ps kids b + Becoming.lowered ps kids (fun p => w.withRest.web.need t p c) b ≤
+              (Becoming.selected ps kids fun x => w.withRest.web.level t c) +
+                Becoming.raised ps kids (fun p => w.withRest.web.need t p c) b
+@Becoming.World.ReadOffExchange.selected_le : ∀ {w : Becoming.World},
+  w.ReadOffExchange →
+    ∀ {t : Nat} {c : w.withRest.Relatum} {ps : List w.withRest.Relatum}
+      {kids : w.withRest.Relatum → List w.withRest.Relatum},
+      (∀ (p k : w.withRest.Relatum), p ∈ ps → k ∈ kids p → w.withRest.flow.DescendsAt w.withRest.web t k p) →
+        (∀ (p : w.withRest.Relatum), p ∈ ps → w.withRest.web.requires t p c) →
+          (Becoming.selected ps kids fun p => w.withRest.web.need t p c) ≤
+            Becoming.selected ps kids fun x => w.withRest.web.level t c
+@Becoming.World.ReadOffExchange.transmitted_supported : ∀ {w : Becoming.World},
+  w.ReadOffExchange →
+    ∀ {c : w.withRest.Relatum} {δ : Nat},
+      w.withRest.flow.TransmitsWithin w.withRest.web c δ →
+        ∀ {t : Nat} {x g : w.withRest.Relatum},
+          w.withRest.flow.DescendsAt w.withRest.web t x g →
+            w.withRest.web.requires (t + 1) x c → w.withRest.web.need (t + 1) x c ≤ w.withRest.web.level t c + δ
+@Becoming.World.ReadOffExchange.support_not_lower : ∀ {w : Becoming.World},
+  w.ReadOffExchange →
+    ∀ {G : Becoming.SelectionTerm.Generations w.withRest.Relatum},
+      Becoming.SelectionTerm.Flow.Descended w.withRest.flow w.withRest.web G →
+        (∀ (t : Nat) (p : w.withRest.Relatum),
+            p ∈ G.family t →
+              w.withRest.web.Supported t p → ∀ (q : w.withRest.Relatum), q ∈ G.family t → G.amount t q ≤ G.amount t p) →
+          ∀ {T : Nat}, (∀ (t : Nat), t < T → G.loweredAt t = 0) → G.size T * G.sum 0 ≤ G.size 0 * G.sum T
+@Becoming.World.ReadOffExchange.support_moved_rises : ∀ {w : Becoming.World},
+  w.ReadOffExchange →
+    ∀ {G : Becoming.SelectionTerm.Generations w.withRest.Relatum},
+      Becoming.SelectionTerm.Flow.Descended w.withRest.flow w.withRest.web G →
+        (∀ (t : Nat) (p : w.withRest.Relatum),
+            p ∈ G.family t →
+              w.withRest.web.Supported t p → ∀ (q : w.withRest.Relatum), q ∈ G.family t → G.amount t q ≤ G.amount t p) →
+          ∀ {T : Nat},
+            (∀ (t : Nat),
+                t < T → Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+              G.size 0 * G.sum T ≠ G.size T * G.sum 0 →
+                G.size T * G.sum 0 < G.size 0 * G.sum T ∧ ∃ t, t < T ∧ G.discordAt t < G.concordAt t
+@Becoming.World.ReadOffExchange.family_childless : ∀ {w : Becoming.World},
+  w.ReadOffExchange →
+    ∀ {ds : List w.withRest.Relatum} {m : Nat},
+      (∀ (t : Nat) (f : w.withRest.Relatum),
+          f ∈ w.withRest.flow.present t →
+            ∀ (d : w.withRest.Relatum),
+              d ∈ ds →
+                0 < w.withRest.flow.give t f d →
+                  ∃ e, e ∈ ds ∧ w.withRest.web.requires t f e ∧ m ≤ w.withRest.web.need t f e) →
+        ∀ {T n : Nat},
+          (∀ (k : Nat), k < n → w.withRest.flow.replenishment ds (T + k) < w.withRest.flow.uptake ds (T + k)) →
+            w.withRest.web.stock ds T < n + m →
+              ∀ (k : Nat) {g e : w.withRest.Relatum},
+                e ∈ ds →
+                  w.withRest.web.requires (T + n + k) g e →
+                    m ≤ w.withRest.web.need (T + n + k) g e →
+                      ∀ (x : w.withRest.Relatum), ¬w.withRest.flow.DescendsAt w.withRest.web (T + n + k) x g
+@Becoming.World.ReadOffExchange.coupled_end_together : ∀ {w : Becoming.World},
+  w.ReadOffExchange →
+    ∀ {ds : List w.withRest.Relatum} {m : Nat},
+      (∀ (t : Nat) (f : w.withRest.Relatum),
+          f ∈ w.withRest.flow.present t →
+            ∀ (d : w.withRest.Relatum),
+              d ∈ ds →
+                0 < w.withRest.flow.give t f d →
+                  ∃ e, e ∈ ds ∧ w.withRest.web.requires t f e ∧ m ≤ w.withRest.web.need t f e) →
+        ∀ {T n : Nat},
+          (∀ (k : Nat), k < n → w.withRest.flow.replenishment ds (T + k) < w.withRest.flow.uptake ds (T + k)) →
+            w.withRest.web.stock ds T < n + m →
+              ∀ (k : Nat) {G : Becoming.SelectionTerm.Generations w.withRest.Relatum},
+                Becoming.SelectionTerm.Flow.Descended w.withRest.flow w.withRest.web G →
+                  ∀ {gs : List (List w.withRest.Relatum)},
+                    (∀ (h : List w.withRest.Relatum) (p : w.withRest.Relatum),
+                        h ∈ gs → p ∈ h → p ∈ G.family (T + n + k)) →
+                      (∀ (h : List w.withRest.Relatum) (p : w.withRest.Relatum),
+                          h ∈ gs →
+                            p ∈ h →
+                              ∃ e,
+                                e ∈ ds ∧
+                                  w.withRest.web.requires (T + n + k) p e ∧ m ≤ w.withRest.web.need (T + n + k) p e) →
+                        ∀ (a : w.withRest.Relatum → Nat),
+                          (∀ (h : List w.withRest.Relatum),
+                              h ∈ gs → Becoming.total h (G.offspringNumber (T + n + k)) = 0) ∧
+                            Becoming.SelectionLevels.concordAmong gs (G.offspringNumber (T + n + k)) a = 0 ∧
+                              Becoming.SelectionLevels.discordAmong gs (G.offspringNumber (T + n + k)) a = 0
+@Becoming.World.ReadOffExchange.family_excess_ends : ∀ {w : Becoming.World},
+  w.ReadOffExchange →
+    ∀ {parts : w.withRest.Relatum → Prop} {x : w.withRest.Relatum} {alive : Nat → List w.withRest.Relatum},
+      w.withRest.web.Whole parts x →
+        w.withRest.web.Listed parts alive →
+          (∀ (p : w.withRest.Relatum), parts p → w.withRest.web.Ends p) →
+            ∀ {ds : List w.withRest.Relatum} {m : Nat},
+              (∀ (t : Nat) (f : w.withRest.Relatum),
+                  f ∈ w.withRest.flow.present t →
+                    ∀ (d : w.withRest.Relatum),
+                      d ∈ ds →
+                        0 < w.withRest.flow.give t f d →
+                          ∃ e, e ∈ ds ∧ w.withRest.web.requires t f e ∧ m ≤ w.withRest.web.need t f e) →
+                (∀ (t : Nat) (p : w.withRest.Relatum),
+                    parts p →
+                      w.withRest.web.Arises t p →
+                        ∃ e, e ∈ ds ∧ w.withRest.web.requires (t + 1) p e ∧ m ≤ w.withRest.web.need (t + 1) p e) →
+                  ∀ {T n : Nat},
+                    (∀ (k : Nat),
+                        k < n → w.withRest.flow.replenishment ds (T + k) < w.withRest.flow.uptake ds (T + k)) →
+                      w.withRest.web.stock ds T < n + m →
+                        (∀ (t : Nat), T + n ≤ t → ∀ (p : w.withRest.Relatum), parts p → ¬w.withRest.web.Arises t p) ∧
+                          w.withRest.web.Ends x
+@Becoming.ExchangeRelation.respondsBelow_supports : ∀ {F C : Type} {rel : Becoming.ExchangeRelation F C}
+  {present : Nat → List F}, rel.Supports present (rel.RespondsBelow present)
+@Becoming.ExchangeRelation.respondsBelow_local : ∀ {F C : Type} {rel : Becoming.ExchangeRelation F C}
+  {present : Nat → List F}, Becoming.ExchangeRelation.Local (rel.RespondsBelow present)
+@Becoming.ExchangeRelation.respondsBelow_weakest : ∀ {F C : Type} {rel : Becoming.ExchangeRelation F C}
+  {present : Nat → List F} {R : (Nat → C → Nat) → Nat → F → C → Nat → Prop},
+  rel.Supports present R →
+    Becoming.ExchangeRelation.Local R →
+      ∀ {l : Nat → C → Nat} {t : Nat} {f : F} {c : C} {n : Nat}, R l t f c n → rel.RespondsBelow present l t f c n
+Becoming.ExchangeRelation.mayRespond_not_supports : ¬Becoming.ExchangeRelation.free.Supports Becoming.ExchangeLaw.single
+    (Becoming.ExchangeRelation.free.MayRespondBelow Becoming.ExchangeLaw.single)
+@Becoming.NoisyLaw.course_runs : ∀ {Ω F C : Type} (law : Becoming.NoisyLaw Ω F C) (ξ : Nat → Ω) (present : Nat → List F)
+  (start : C → Nat),
+  law.relation.Runs present ((law.realize ξ).levels present start) ((law.realize ξ).course present start)
+@Becoming.NoisyLaw.readOffExchange : ∀ {Ω R : Type} (law : Becoming.NoisyLaw Ω R R) (ξ : Nat → Ω)
+  (present : Nat → List R) (start : R → Nat) (need : Nat → R → R → Nat),
+  (law.relation.world present ((law.realize ξ).course present start) ((law.realize ξ).levels present start)
+      need).ReadOffExchange

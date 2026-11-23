@@ -1,0 +1,38 @@
+@Becoming.Law.stepWhile_step : ∀ {S : Type u_1} {can : S → Prop} {next : S → S},
+  Becoming.«则» (Becoming.Law.stepWhile can next) (Becoming.Law.step next)
+@Becoming.Law.stepWhile_always : ∀ {S : Type u_1} (next : S → S),
+  Becoming.«谓» (Becoming.Law.stepWhile (fun x => True) next) (Becoming.Law.step next)
+@Becoming.Law.stepWhile_fixed : ∀ {S : Type u_1} (can : S → Prop) (next : S → S),
+  Becoming.«定后» (Becoming.Law.stepWhile can next)
+@Becoming.Law.stepWhile_continues_iff : ∀ {S : Type u_1} {can : S → Prop} {next : S → S} {E : Becoming.«际» S} {s t : S},
+  Becoming.«续» (Becoming.Law.stepWhile can next) E s t ↔
+    Becoming.«续» (Becoming.Law.step next) (fun x y => can x ∧ E x y) s t
+@Becoming.Law.stepWhile_steps_iff : ∀ {S : Type u_1} {can : S → Prop} {next : S → S} (n : Nat) {s t : S},
+  Becoming.«迭» (Becoming.Law.stepWhile can next) n s t ↔
+    (∀ (j : Nat), j < n → can (Becoming.Law.orbit next s j)) ∧ t = Becoming.Law.orbit next s n
+@Becoming.Law.stepWhile_none_iff : ∀ {S : Type u_1} {can : S → Prop} {next : S → S} {t : S},
+  (∀ (v : S), ¬Becoming.Law.stepWhile can next t v) ↔ ¬can t
+@Becoming.Law.stepWhile_hasSucc_iff : ∀ {S : Type u_1} {can : S → Prop} {next : S → S} {E : Becoming.«际» S} {s : S},
+  Becoming.«有后» (Becoming.Law.stepWhile can next) E s ↔ can s ∧ E s (next s)
+@Becoming.Law.stepWhile_unending_iff : ∀ {S : Type u_1} {can : S → Prop} {next : S → S} {s : S},
+  Becoming.«不穷» (Becoming.Law.stepWhile can next) Becoming.«一» s ↔ ∀ (n : Nat), can (Becoming.Law.orbit next s n)
+@Becoming.Law.stepWhile_goesAlike_iff : ∀ {S : Type u_1} {K : Type u_2} {can : S → Prop} {next : S → S} {π : S → K},
+  Becoming.«同行» (Becoming.Law.stepWhile can next) (Becoming.sameValue π) ↔
+    ∀ (s s' : S), π s = π s' → can s → can s' → π (next s) = π (next s')
+@Becoming.Law.stepWhile_toEnd_iff : ∀ {S : Type u_1} {can : S → Prop} {next : S → S} {E : Becoming.«际» S},
+  (∀ (s : S), can s ∨ ¬can s) →
+    (Becoming.«至终有常» (Becoming.Law.stepWhile can next) E ↔ Becoming.«同行» (Becoming.Law.stepWhile can next) E)
+@Becoming.Law.stepWhile_constant_iff : ∀ {S : Type u_1} {K : Type u_2} {can : S → Prop} {next : S → S} {π : S → K},
+  Becoming.«有常» (Becoming.Law.stepWhile can next) (Becoming.sameValue π) ↔
+    ∀ (s s' : S), π s = π s' → can s → can s' ∧ π (next s) = π (next s')
+Becoming.Law.stepWhile_toEnd_decides : ∀ (P : Prop),
+  Becoming.«同行» (Becoming.Law.stepWhile (fun b => b = true ∨ P) id) Becoming.«一» ∧
+    (Becoming.«至终有常» (Becoming.Law.stepWhile (fun b => b = true ∨ P) id) Becoming.«一» → P ∨ ¬P)
+@Becoming.Law.stepWhile_guarded_iff : ∀ {S : Type u_1} {can : S → Prop} [inst : DecidablePred can] {next : S → S}
+  {s : S},
+  can s →
+    ∀ {n : Nat},
+      Becoming.Viability.guardedHistory (Becoming.Lasting.determined next) can s (fun x => ()) n =
+          some (Becoming.Law.orbit next s n) ↔
+        Becoming.«迭» (Becoming.Law.stepWhile can next) n s (Becoming.Law.orbit next s n) ∧
+          can (Becoming.Law.orbit next s n)

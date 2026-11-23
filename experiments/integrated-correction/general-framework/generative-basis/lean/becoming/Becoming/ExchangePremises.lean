@@ -114,24 +114,11 @@ theorem listed_of_em {α : Type} (q : α → Prop) :
 /-- Of a list without repetition, that the members meeting a property cannot be listed is refuted,
 whatever the property. -/
 theorem not_not_listed {α : Type} (q : α → Prop) :
-    ∀ {ps : List α}, Distinct ps → ¬¬ ∃ l, Distinct l ∧ ∀ a, (a ∈ ps ∧ q a) ↔ a ∈ l
-  | [], _ => fun no => no ⟨[], trivial, fun _ => ⟨fun ⟨mem, _⟩ => (nomatch mem), fun mem => (nomatch mem)⟩⟩
-  | p :: ps, ⟨fresh, distinct⟩ => fun no => not_not_listed q distinct fun ⟨l, dl, iff⟩ =>
-      (fun em : ¬¬ (q p ∨ ¬ q p) => em fun decided => match decided with
-        | .inl yes => no ⟨p :: l, ⟨fun mem => fresh ((iff p).mpr mem).1, dl⟩, fun a =>
-            ⟨fun ⟨mem, holds⟩ => match mem_cons_cases mem with
-               | .inl same => Eq.subst (motive := fun x => x ∈ p :: l) same.symm (.head l)
-               | .inr mem => .tail p ((iff a).mp ⟨mem, holds⟩),
-             fun mem => match mem_cons_cases mem with
-               | .inl same =>
-                 Eq.subst (motive := fun x => x ∈ p :: ps ∧ q x) same.symm ⟨.head ps, yes⟩
-               | .inr mem => ⟨.tail p ((iff a).mpr mem).1, ((iff a).mpr mem).2⟩⟩⟩
-        | .inr not => no ⟨l, dl, fun a =>
-            ⟨fun ⟨mem, holds⟩ => match mem_cons_cases mem with
-               | .inl same => absurd (Eq.subst (motive := q) same holds) not
-               | .inr mem => (iff a).mp ⟨mem, holds⟩,
-             fun mem => ⟨.tail p ((iff a).mpr mem).1, ((iff a).mpr mem).2⟩⟩⟩)
-        (fun refuted => refuted (.inr fun yes => refuted (.inl yes)))
+    ∀ {ps : List α}, Distinct ps → ¬¬ ∃ l, Distinct l ∧ ∀ a, (a ∈ ps ∧ q a) ↔ a ∈ l :=
+  fun distinct no =>
+    not_not_all (E := _) (P := fun a => q a ∨ ¬ q a)
+      (fun _ _ refuted => refuted (.inr fun yes => refuted (.inl yes)))
+      fun decided => no (listed_of_em q distinct decided)
 
 /-! ## The census read off the exchange -/
 

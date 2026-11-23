@@ -55,8 +55,8 @@ def ReadsOnlyActsAlong (k : Nat) (w : W) : Prop :=
 
 /-- From member `k` on, every member gives one act for the couplings of worlds `w` and `w'` at the
 list of acts `w` gives it: the premise at `w`'s history and at the two couplings compared alone. -/
-def LawAlikeAlong (k : Nat) (w w' : W) : Prop :=
-  ∀ n, k ≤ n → T.law n (T.coupling n w) (T.acts w n) = T.law n (T.coupling n w') (T.acts w n)
+abbrev LawAlikeAlong (k : Nat) (w w' : W) : Prop :=
+  T.LawAlikeStep k w w'
 
 variable {T}
 
@@ -76,23 +76,14 @@ theorem lawAlikeAlong_of_along {k : Nat} {w : W} (along : T.ReadsOnlyActsAlong k
 theorem law_alike_along {k : Nat} {w w' : W} (along : T.LawAlikeAlong k w w')
     (alike : T.AlikeBefore k w w') {n : Nat} (before : T.acts w n = T.acts w' n) :
     T.law n (T.coupling n w) (T.acts w n) = T.law n (T.coupling n w') (T.acts w' n) :=
-  match Nat.decLt n k with
-  | isTrue early => congr (congrArg (T.law n) (alike n early)) before
-  | isFalse late =>
-    (along n (Nat.le_of_not_lt late)).trans (congrArg (T.law n (T.coupling n w')) before)
+  law_alike_step along alike before
 
 /-- **Reach stops along the run.** Where, from member `k` on, every member gives one act for the
 couplings of `w` and `w'` at the histories `w` reaches, and the two are alike through the couplings
 of the members before `k`, they give the same acts to every number of members. -/
 theorem acts_alike_along {k : Nat} {w w' : W} (along : T.LawAlikeAlong k w w')
-    (alike : T.AlikeBefore k w w') : ∀ n, T.acts w n = T.acts w' n
-  | 0 => rfl
-  | n + 1 =>
-    have before := acts_alike_along along alike n
-    show T.acts w n ++ [T.law n (T.coupling n w) (T.acts w n)] =
-        T.acts w' n ++ [T.law n (T.coupling n w') (T.acts w' n)] from
-      congr (congrArg HAppend.hAppend before)
-        (congrArg (fun a => [a]) (law_alike_along along alike before))
+    (alike : T.AlikeBefore k w w') : ∀ n, T.acts w n = T.acts w' n :=
+  acts_alike_step along alike
 
 /-- Every member's act, under the premise at the histories `w` reaches for the pair, is alike across
 `w` and `w'` where they are alike before `k`. -/

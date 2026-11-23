@@ -1,0 +1,11 @@
+import Becoming.Extension
+#check @Becoming.Comparison.separates
+#check @Becoming.Extension.irrefl
+#check @Becoming.Extension.trans
+#check @Becoming.Comparison.climbs
+#check @Becoming.Comparison.outgrows
+#check @Becoming.LiftBetter.trans
+#check @Becoming.LiftBetter.irrefl
+#check @Becoming.LiftBetter.some
+#check @Becoming.Web.paths_extension_iff_widens
+#check @Becoming.Web.paths_comparison_widens

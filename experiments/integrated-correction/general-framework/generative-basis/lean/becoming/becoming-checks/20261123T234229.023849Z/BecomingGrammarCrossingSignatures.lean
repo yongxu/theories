@@ -1,0 +1,10 @@
+import Becoming.GrammarCrossing
+#check @Becoming.«不出当且仅当不外者闭»
+#check @Becoming.«不外者内则不出当且仅当闭»
+#check @Becoming.«不出皆闭当且仅当排中»
+#check @Becoming.«逆之不出当且仅当外者不出»
+#check @Becoming.«对称则不出当且仅当逆不出»
+#check @Becoming.«闭而有入之例»
+#check @Becoming.«内至外之线则非不出»
+#check @Becoming.«内至外之线有出步»
+#check @Becoming.«定则内至外之线有出步»

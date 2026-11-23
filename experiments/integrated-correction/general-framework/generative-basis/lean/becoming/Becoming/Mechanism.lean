@@ -140,10 +140,8 @@ theorem carries_law_iff {P : Process S A} {π : S → K} :
 
 /-- **Through the identity, going alike is determinacy.** -/
 theorem goAlike_id_iff {P : Process S A} : GoAlike P id ↔ Determined P :=
-  ⟨fun alike s a u u' step step' => alike s s a u u' rfl step step',
-   fun determined s s' a u u' same step step' =>
-    determined s a u u' step
-      (Eq.subst (motive := fun x => P.step x a u') (show s = s' from same).symm step')⟩
+  ⟨fun alike => determined_iff_fixed.mpr fun a => «同行静当且仅当定后».mp (goAlikeUnder_iff_alike.mp alike a),
+   fun det => goAlikeUnder_iff_alike.mpr fun a => «同行静当且仅当定后».mpr (determined_iff_fixed.mp det a)⟩
 
 /-- The description that distinguishes nothing carries a law for every process. -/
 theorem goAlike_const (P : Process S A) (k : K) : GoAlike P (fun _ => k) :=
@@ -153,25 +151,37 @@ theorem goAlike_const (P : Process S A) (k : K) : GoAlike P (fun _ => k) :=
 exactly where the composite description `ρ ∘ π` of `P` does. -/
 theorem goAlike_image_iff {P : Process S A} {π : S → K} {L : Type u'} {ρ : K → L} :
     GoAlike (Image P π) ρ ↔ GoAlike P (ρ ∘ π) :=
-  ⟨fun alike s s' a u u' same step step' =>
-    alike (π s) (π s') a (π u) (π u') same ⟨s, u, rfl, step, rfl⟩ ⟨s', u', rfl, step', rfl⟩,
-   fun alike _ _ a _ _ same ⟨s, u, at_k, step, to⟩ ⟨s', u', at_k', step', to'⟩ =>
-    (congrArg ρ to).symm.trans
-      ((alike s s' a u u'
-          ((congrArg ρ at_k).trans (same.trans (congrArg ρ at_k').symm)) step step').trans
-        (congrArg ρ to'))⟩
+  ⟨fun alike => goAlikeUnder_iff_alike.mpr fun a =>
+     («像之同行» (π := π) (R := fun s t => P.step s a t) (E := fun x y => ρ x = ρ y)).mp
+       (goAlikeUnder_iff_alike.mp alike a),
+   fun alike => goAlikeUnder_iff_alike.mpr fun a =>
+     («像之同行» (π := π) (R := fun s t => P.step s a t) (E := fun x y => ρ x = ρ y)).mpr
+       (goAlikeUnder_iff_alike.mp alike a)⟩
+
+theorem Trace.passes {P : Process S A} :
+    ∀ {s t : S} {as : List A}, Trace P s as t → «历» (fun a x y => P.step x a y) as s t
+  | _, _, _, .nil _ => rfl
+  | _, _, _, .cons step rest => ⟨_, step, Trace.passes rest⟩
+
+theorem Run.window_eq {P : Process S A} {r r' : Run P}
+    (moves : ∀ n, r.act n = r'.act n) : ∀ k n, r.window n k = r'.window n k
+  | 0, _ => rfl
+  | k + 1, n =>
+    (congrArg (· :: r.window (n + 1) k) (moves n)).trans
+      (congrArg (r'.act n :: ·) (Run.window_eq moves k (n + 1)))
 
 /-- **Runs alike stay alike.** Where configurations alike under `π` go alike, two runs taking
 the same moves from configurations alike under `π` are alike under `π` at every step. -/
 theorem GoAlike.runs_agree {P : Process S A} {π : S → K} (alike : GoAlike P π) (r r' : Run P)
     (moves : ∀ n, r.act n = r'.act n) (start : π (r.state 0) = π (r'.state 0)) :
-    ∀ n, π (r.state n) = π (r'.state n)
-  | 0 => start
-  | n + 1 =>
-    alike (r.state n) (r'.state n) (r.act n) (r.state (n + 1)) (r'.state (n + 1))
-      (GoAlike.runs_agree alike r r' moves start n) (r.step n)
-      (Eq.subst (motive := fun a => P.step (r'.state n) a (r'.state (n + 1))) (moves n).symm
-        (r'.step n))
+    ∀ n, π (r.state n) = π (r'.state n) :=
+  fun n => «同行之历» (fun a => goAlikeUnder_iff_alike.mp alike a) (r.window 0 n) start
+    (Trace.passes (Eq.subst (motive := fun m => Trace P (r.state 0) (r.window 0 n) (r.state m))
+      (Nat.zero_add n) (r.window_trace n 0)))
+    (Trace.passes (Eq.subst (motive := fun l => Trace P (r'.state 0) l (r'.state n))
+      (Run.window_eq moves n 0).symm
+      (Eq.subst (motive := fun m => Trace P (r'.state 0) (r'.window 0 n) (r'.state m))
+        (Nat.zero_add n) (r'.window_trace n 0))))
 
 /-! ## What the step does not depend on -/
 

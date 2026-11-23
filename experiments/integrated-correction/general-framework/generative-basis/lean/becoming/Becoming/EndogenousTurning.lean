@@ -5,6 +5,7 @@ import Becoming.StockFlowBridge
 import Becoming.Cascade
 import Becoming.Unread
 import Becoming.OpenComposition
+import Becoming.CoreHelpers
 
 /-!
 # Endogenous turning and the epistemic silence boundary (`Becoming.EndogenousTurning`)
@@ -64,255 +65,7 @@ open Generative
 
 namespace EndogenousTurning
 
-/-! ## 1. Prelude-only natural arithmetic, division, and variable-draw `RegimeMargin` / `StockFlowBridge` bridges -/
-
-/-- Decidable `Nat` minimum without core `Min` axioms. -/
-def natMin (a b : Nat) : Nat := if a ≤ b then a else b
-
-theorem natMin_le_left (a b : Nat) : natMin a b ≤ a :=
-  match Nat.decLe a b with
-  | isTrue le => Nat.le_of_eq (if_pos le)
-  | isFalse notLe => Nat.le_trans (Nat.le_of_eq (if_neg notLe))
-      (Nat.le_of_lt (Nat.gt_of_not_le notLe))
-
-theorem natMin_le_right (a b : Nat) : natMin a b ≤ b :=
-  match Nat.decLe a b with
-  | isTrue le => Nat.le_trans (Nat.le_of_eq (if_pos le)) le
-  | isFalse notLe => Nat.le_of_eq (if_neg notLe)
-
-theorem le_natMin {a b c : Nat} (ha : c ≤ a) (hb : c ≤ b) : c ≤ natMin a b :=
-  match Nat.decLe a b with
-  | isTrue le => Nat.le_trans ha (Nat.le_of_eq (if_pos le).symm)
-  | isFalse notLe => Nat.le_trans hb (Nat.le_of_eq (if_neg notLe).symm)
-
-theorem natMin_eq_left {a b : Nat} (le : a ≤ b) : natMin a b = a :=
-  if_pos le
-
-theorem natMin_eq_right {a b : Nat} (le : b ≤ a) : natMin a b = b :=
-  match Nat.decLe a b with
-  | isTrue ab => (if_pos ab).trans (Nat.le_antisymm ab le)
-  | isFalse notLe => if_neg notLe
-
-theorem sub_natMin_right (x d : Nat) : x - natMin d x = x - d :=
-  match Nat.decLe d x with
-  | isTrue dx => congrArg (x - ·) (natMin_eq_left dx)
-  | isFalse notDx =>
-    have xd : x ≤ d := Nat.le_of_lt (Nat.gt_of_not_le notDx)
-    (congrArg (x - ·) (natMin_eq_right xd)).trans
-      ((sub_eq_zero_of_le (Nat.le_refl x)).trans (sub_eq_zero_of_le xd).symm)
-
-theorem ite_pos' {c : Prop} [h : Decidable c] (hc : c) {α : Sort u} {t e : α} :
-    (if c then t else e) = t :=
-  match h with
-  | isTrue _ => rfl
-  | isFalse hn => absurd hc hn
-
-theorem ite_neg' {c : Prop} [h : Decidable c] (hc : ¬ c) {α : Sort u} {t e : α} :
-    (if c then t else e) = e :=
-  match h with
-  | isTrue ht => absurd ht hc
-  | isFalse _ => rfl
-
-theorem dite_pos' {c : Prop} [h : Decidable c] (hc : c) {α : Sort u} {t : c → α} {e : ¬ c → α} :
-    (if hc' : c then t hc' else e hc') = t hc :=
-  match h with
-  | isTrue _ => rfl
-  | isFalse hn => absurd hc hn
-
-theorem dite_neg' {c : Prop} [h : Decidable c] (hc : ¬ c) {α : Sort u} {t : c → α} {e : ¬ c → α} :
-    (if hc' : c then t hc' else e hc') = e hc :=
-  match h with
-  | isTrue ht => absurd ht hc
-  | isFalse _ => rfl
-
-theorem div_go_irrel (y : Nat) (hy : 0 < y) :
-    ∀ (f₁ : Nat) {f₂ x : Nat} (h₁ : x < f₁) (h₂ : x < f₂),
-      Nat.div.go y hy f₁ x h₁ = Nat.div.go y hy f₂ x h₂
-  | 0, _, _, h₁, _ => absurd h₁ (Nat.not_lt_zero _)
-  | f₁ + 1, 0, _, _, h₂ => absurd h₂ (Nat.not_lt_zero _)
-  | f₁ + 1, f₂ + 1, x, h₁, h₂ => by
-    rw [Nat.div.go.eq_1, Nat.div.go.eq_1]
-    split
-    · exact congrArg (· + 1) (div_go_irrel y hy f₁ _ _)
-    · rfl
-
-theorem mod_go_irrel (y : Nat) (hy : 0 < y) :
-    ∀ (f₁ : Nat) {f₂ x : Nat} (h₁ : x < f₁) (h₂ : x < f₂),
-      Nat.modCore.go y hy f₁ x h₁ = Nat.modCore.go y hy f₂ x h₂
-  | 0, _, _, h₁, _ => absurd h₁ (Nat.not_lt_zero _)
-  | f₁ + 1, 0, _, _, h₂ => absurd h₂ (Nat.not_lt_zero _)
-  | f₁ + 1, f₂ + 1, x, h₁, h₂ => by
-    rw [Nat.modCore.go.eq_1, Nat.modCore.go.eq_1]
-    split
-    · exact mod_go_irrel y hy f₁ _ _
-    · rfl
-
-theorem div_add_self (y : Nat) (hy : 0 < y) (x : Nat) : (x + y) / y = x / y + 1 := by
-  change (x + y).div y = x.div y + 1
-  rw [Nat.div.eq_1 (x + y) y, Nat.div.eq_1 x y]
-  split
-  · rw [Nat.div.go.eq_1]
-    have hle : y ≤ x + y := Nat.le_add_left y x
-    split
-    · have aux : ∀ {z} (eq : z = x) (hz : z < x + y),
-          Nat.div.go y hy (x + y) z hz = Nat.div.go y hy x.succ x (Nat.lt_succ_self x) := by
-        intro z eq hz
-        cases eq
-        exact div_go_irrel y hy (x + y) hz (Nat.lt_succ_self x)
-      exact congrArg (· + 1) (aux (Naturals.add_sub_cancel x y) _)
-    · exact absurd hle ‹_›
-  · exact absurd hy ‹_›
-
-theorem mod_add_self (y : Nat) (hy : 0 < y) (x : Nat) : (x + y) % y = x % y := by
-  change (x + y).mod y = x.mod y
-  cases y with
-  | zero => exact absurd hy (Nat.lt_irrefl 0)
-  | succ y' =>
-    have hxy : x + y'.succ = (x + y').succ := rfl
-    rw [hxy, Nat.mod.eq_2]
-    have hle : y'.succ ≤ (x + y').succ := Nat.le_add_left y'.succ x
-    rw [ite_pos' hle, Nat.modCore.eq_1, dite_pos' hy, Nat.modCore.go.eq_1, dite_pos' hle]
-    have aux : ∀ {z} (eq : z = x) (hz : z < (x + y').succ),
-        Nat.modCore.go y'.succ hy (x + y').succ z hz =
-          Nat.modCore.go y'.succ hy x.succ x (Nat.lt_succ_self x) := by
-      intro z eq hz
-      cases eq
-      exact mod_go_irrel y'.succ hy (x + y').succ hz (Nat.lt_succ_self x)
-    have hsub : (x + y').succ - y'.succ = x := Naturals.add_sub_cancel x y'.succ
-    rw [aux hsub _]
-    cases x with
-    | zero =>
-      rw [Nat.mod.eq_1, Nat.modCore.go.eq_1]
-      exact dite_neg' (Nat.not_le_of_gt hy)
-    | succ x' =>
-      rw [Nat.mod.eq_2]
-      split
-      · rw [Nat.modCore.eq_1, dite_pos' hy]
-      · rw [Nat.modCore.go.eq_1]
-        exact dite_neg' ‹_›
-
-theorem div_eq_zero_of_lt {r y : Nat} (hy : 0 < y) (hlt : r < y) : r / y = 0 := by
-  change r.div y = 0
-  rw [Nat.div.eq_1 r y, dite_pos' hy, Nat.div.go.eq_1]
-  exact dite_neg' (Nat.not_le_of_gt hlt)
-
-theorem mod_eq_self_of_lt {r y : Nat} (hy : 0 < y) (hlt : r < y) : r % y = r := by
-  change r.mod y = r
-  cases r with
-  | zero => rfl
-  | succ r' =>
-    cases y with
-    | zero => exact absurd hy (Nat.lt_irrefl 0)
-    | succ y' =>
-      rw [Nat.mod.eq_2, ite_neg' (Nat.not_le_of_gt hlt)]
-
-theorem div_mul_add_rem {y : Nat} (hy : 0 < y) {r : Nat} (hlt : r < y) :
-    ∀ q : Nat, (q * y + r) / y = q
-  | 0 =>
-    (congrArg (fun k => (k + r) / y) (Nat.zero_mul y)).trans
-      ((congrArg (· / y) (Nat.zero_add r)).trans (div_eq_zero_of_lt hy hlt))
-  | q + 1 => by
-    have eq1 : (q + 1) * y + r = (q * y + r) + y :=
-      (congrArg (· + r) (Nat.succ_mul q y)).trans (Nat.add_right_comm (q * y) y r)
-    rw [eq1, div_add_self y hy (q * y + r), div_mul_add_rem hy hlt q]
-
-theorem div_mod_decomp_bound (y : Nat) (hy : 0 < y) :
-    ∀ n a : Nat, a < n → a = (a / y) * y + a % y ∧ a % y < y
-  | 0, _, lt => absurd lt (Nat.not_lt_zero _)
-  | n + 1, a, lt =>
-    match Nat.lt_or_ge a y with
-    | .inl ay => by
-      refine ⟨?_, ?_⟩
-      · rw [div_eq_zero_of_lt hy ay, mod_eq_self_of_lt hy ay, Nat.zero_mul, Nat.zero_add]
-      · rw [mod_eq_self_of_lt hy ay]; exact ay
-    | .inr ya => by
-      have sub_lt : a - y < n := by
-        have hpos : a - y + 1 ≤ a := by
-          have h1 : 1 ≤ y := hy
-          calc a - y + 1 ≤ a - y + y := Nat.add_le_add_left h1 _
-            _ = a := Naturals.sub_add_cancel ya
-        exact Nat.le_trans hpos (Nat.le_of_succ_le_succ lt)
-      obtain ⟨eq, rem⟩ := div_mod_decomp_bound y hy n (a - y) sub_lt
-      have ha : a = (a - y) + y := (Naturals.sub_add_cancel ya).symm
-      have hdiv : a / y = (a - y) / y + 1 :=
-        (congrArg (· / y) ha).trans (div_add_self y hy (a - y))
-      have hmod : a % y = (a - y) % y :=
-        (congrArg (· % y) ha).trans (mod_add_self y hy (a - y))
-      refine ⟨?_, ?_⟩
-      · calc a = (a - y) + y := ha
-          _ = ((a - y) / y * y + (a - y) % y) + y := congrArg (· + y) eq
-          _ = ((a - y) / y * y + y) + (a - y) % y := Nat.add_right_comm _ _ _
-          _ = ((a - y) / y + 1) * y + (a - y) % y :=
-              congrArg (· + (a - y) % y) (Nat.succ_mul ((a - y) / y) y).symm
-          _ = (a / y) * y + a % y := by rw [← hdiv, ← hmod]
-      · rw [hmod]
-        exact rem
-
-theorem div_mod_decomp {y : Nat} (hy : 0 < y) (a : Nat) :
-    a = (a / y) * y + a % y ∧ a % y < y :=
-  div_mod_decomp_bound y hy (a + 1) a (Nat.lt_succ_self a)
-
-theorem lt_ceil_div_iff {b : Nat} (hb : 0 < b) :
-    ∀ k a : Nat, k * b < a ↔ k < (a + b - 1) / b
-  | 0, 0 => by
-    have hsub : b - 1 < b := by
-      cases b with
-      | zero => exact absurd hb (Nat.lt_irrefl 0)
-      | succ b' => exact Nat.lt_succ_self b'
-    rw [Nat.zero_mul, Nat.zero_add, div_eq_zero_of_lt hb hsub]
-  | 0, a' + 1 => by
-    have eq1 : a' + 1 + b - 1 = a' + b := by
-      calc a' + 1 + b - 1 = (a' + b + 1) - 1 := congrArg (· - 1) (Nat.add_right_comm a' 1 b)
-        _ = a' + b := Naturals.add_sub_cancel (a' + b) 1
-    rw [Nat.zero_mul, eq1, div_add_self b hb a']
-    exact ⟨fun _ => Nat.succ_pos _, fun _ => Nat.succ_pos _⟩
-  | k + 1, a =>
-    match Nat.lt_or_ge a b with
-    | .inl ab => by
-      have notLhs : ¬ (k + 1) * b < a :=
-        Nat.not_lt_of_le (Nat.le_trans (Nat.le_of_lt ab)
-          (Nat.le_trans (Nat.le_add_left b (k * b)) (Nat.le_of_eq (Nat.succ_mul k b).symm)))
-      have notRhs : ¬ k + 1 < (a + b - 1) / b := by
-        cases a with
-        | zero =>
-          have hsub : b - 1 < b := by
-            cases b with
-            | zero => exact absurd hb (Nat.lt_irrefl 0)
-            | succ b' => exact Nat.lt_succ_self b'
-          rw [Nat.zero_add, div_eq_zero_of_lt hb hsub]
-          exact Nat.not_lt_zero _
-        | succ a' =>
-          have eq1 : a' + 1 + b - 1 = a' + b := by
-            calc a' + 1 + b - 1 = (a' + b + 1) - 1 := congrArg (· - 1) (Nat.add_right_comm a' 1 b)
-              _ = a' + b := Naturals.add_sub_cancel (a' + b) 1
-          have ha' : a' < b := Nat.lt_trans (Nat.lt_succ_self a') ab
-          rw [eq1, div_add_self b hb a', div_eq_zero_of_lt hb ha', Nat.zero_add]
-          exact Nat.not_lt_of_le (Nat.succ_le_succ (Nat.zero_le k))
-      exact ⟨fun lt => absurd lt notLhs, fun lt => absurd lt notRhs⟩
-    | .inr ba => by
-      let a' := a - b
-      have ha : a = a' + b := (Naturals.sub_add_cancel ba).symm
-      have eq1 : a + b - 1 = (a' + b - 1) + b := by
-        rw [ha]
-        cases b with
-        | zero => exact absurd hb (Nat.lt_irrefl 0)
-        | succ b' =>
-          have lhs : a' + (b' + 1) + (b' + 1) - 1 = a' + (b' + 1) + b' := rfl
-          have rhs : a' + (b' + 1) - 1 + (b' + 1) = (a' + b') + (b' + 1) := rfl
-          rw [lhs, rhs]
-          calc a' + (b' + 1) + b' = a' + ((b' + 1) + b') := Nat.add_assoc _ _ _
-            _ = a' + (b' + (b' + 1)) := congrArg (a' + ·) (Nat.add_comm (b' + 1) b')
-            _ = (a' + b') + (b' + 1) := (Nat.add_assoc _ _ _).symm
-      have hdiv : (a + b - 1) / b = (a' + b - 1) / b + 1 :=
-        eq1 ▸ div_add_self b hb (a' + b - 1)
-      have ih := lt_ceil_div_iff hb k a'
-      have lhsIff : (k + 1) * b < a ↔ k * b < a' := by
-        rw [ha, Nat.succ_mul, Nat.add_comm (k * b) b, Nat.add_comm a' b]
-        exact Naturals.add_lt_add_left_iff
-      have rhsIff : k + 1 < (a + b - 1) / b ↔ k < (a' + b - 1) / b := by
-        rw [hdiv]
-        exact ⟨fun lt => Nat.lt_of_succ_lt_succ lt, fun lt => Nat.succ_lt_succ lt⟩
-      exact lhsIff.trans (ih.trans rhsIff.symm)
+/-! ## 1. Variable-draw `RegimeMargin` / `StockFlowBridge` bridges -/
 
 /-! ### Variable-draw `RegimeMargin` localization and exact `StockFlowBridge` trap -/
 
@@ -366,11 +119,11 @@ theorem falls_within_ge {g d x : Nat → Nat} {Y H_min b : Nat}
     absurd (Nat.lt_of_le_of_lt (Nat.le_trans (Nat.add_le_add_right above _) bound) within)
       (Nat.lt_irrefl _)
 
-/-- Actual flow take from the substrate at step `t` (`natMin (d t) (x t)`). -/
-def actualTake (d x : Nat → Nat) (t : Nat) : Nat := natMin (d t) (x t)
+/-- Actual flow take from the substrate at step `t` (`CoreHelpers.natMin (d t) (x t)`). -/
+def actualTake (d x : Nat → Nat) (t : Nat) : Nat := CoreHelpers.natMin (d t) (x t)
 
 theorem actualTake_le (d x : Nat → Nat) (t : Nat) : actualTake d x t ≤ x t :=
-  natMin_le_right (d t) (x t)
+  CoreHelpers.natMin_le_right (d t) (x t)
 
 /-- Exact all-horizon `StockFlowBridge` conservation for `actualTake`. -/
 theorem clamped_balances_trap {g d x : Nat → Nat}
@@ -378,7 +131,7 @@ theorem clamped_balances_trap {g d x : Nat → Nat}
     (StockFlowBridge.unitFlow (actualTake d x)
       (fun k => g (x k - actualTake d x k))).BalancesOn (StockFlowBridge.unitWeb x) [()] t :=
   StockFlowBridge.unitBalancesOn_of_le
-    ((step_eq t).trans (congrArg (fun z => z + g z) (sub_natMin_right (x t) (d t)).symm))
+    ((step_eq t).trans (congrArg (fun z => z + g z) (CoreHelpers.sub_natMin_right (x t) (d t)).symm))
     (actualTake_le d x t)
 
 /-- Pre-overdraw unclamped `StockFlowBridge` conservation on `[0, T)`. -/
@@ -404,10 +157,10 @@ theorem step_lt_of_short_ge {g d x : Nat → Nat} {H_safe y_safe t : Nat}
   refine ⟨?_, ?_, ?_⟩
   · cases Nat.lt_or_ge (x t) (d t) with
     | inl lt =>
-      rw [actualTake, natMin_eq_right (Nat.le_of_lt lt), sub_eq_zero_of_le (Nat.le_refl _), nothing]
+      rw [actualTake, CoreHelpers.natMin_eq_right (Nat.le_of_lt lt), sub_eq_zero_of_le (Nat.le_refl _), nothing]
       exact Nat.zero_le _
     | inr ge =>
-      rw [actualTake, natMin_eq_left ge]
+      rw [actualTake, CoreHelpers.natMin_eq_left ge]
       have hSafeLe : H_safe ≤ x t := Nat.le_trans d_ge ge
       have subLt : x t - H_safe < y_safe :=
         Naturals.lt_of_add_lt_add_left (k := H_safe)
@@ -845,12 +598,12 @@ def B_task {P : Type} (M : ServiceTaskModel P) : Nat :=
 
 /-- Un-truncated task preference: `p'` strictly beats `p` at stock `x`. -/
 def TaskPrefers {P : Type} (M : ServiceTaskModel P) (x : Nat) (p' p : P) : Prop :=
-  M.gain * natMin (M.demand p) x + M.upkeep p' < M.gain * natMin (M.demand p') x + M.upkeep p
+  M.gain * CoreHelpers.natMin (M.demand p) x + M.upkeep p' < M.gain * CoreHelpers.natMin (M.demand p') x + M.upkeep p
 
 /-- Scalar realized output with baseline `base` avoiding `Nat` subtraction underflow when
 `M.upkeep M.ext ≤ base`. -/
 def realizedScore {P : Type} (M : ServiceTaskModel P) (p : P) (x base : Nat) : Nat :=
-  M.gain * natMin (M.demand p) x + base - M.upkeep p
+  M.gain * CoreHelpers.natMin (M.demand p) x + base - M.upkeep p
 
 /-- Nominal baseline score achieved by `safe` at its full demand. -/
 def nominalSafe {P : Type} (M : ServiceTaskModel P) (base : Nat) : Nat :=
@@ -865,7 +618,7 @@ theorem B_task_pos_of_upkeep_lt {P : Type} (M : ServiceTaskModel P) :
   have deltaPos : 0 < M.upkeep M.ext - M.upkeep M.safe :=
     Naturals.le_sub_of_add_le M.upkeep_lt
   have qPos : 0 < ((M.upkeep M.ext - M.upkeep M.safe) + M.gain - 1) / M.gain :=
-    (lt_ceil_div_iff M.gain_pos 0 (M.upkeep M.ext - M.upkeep M.safe)).mp
+    (CoreHelpers.lt_ceil_div_iff M.gain_pos 0 (M.upkeep M.ext - M.upkeep M.safe)).mp
       (by rw [Nat.zero_mul]; exact deltaPos)
   exact Nat.lt_of_lt_of_le (Nat.lt_add_of_pos_right qPos) (Nat.le_refl _)
 
@@ -874,7 +627,7 @@ theorem B_task_le_demand_ext {P : Type} (M : ServiceTaskModel P) :
   let diff := M.demand M.ext - M.demand M.safe
   let delta := M.upkeep M.ext - M.upkeep M.safe
   have notLt : ¬ diff < (delta + M.gain - 1) / M.gain := fun lt => by
-    have mulLt : diff * M.gain < delta := (lt_ceil_div_iff M.gain_pos diff delta).mpr lt
+    have mulLt : diff * M.gain < delta := (CoreHelpers.lt_ceil_div_iff M.gain_pos diff delta).mpr lt
     rw [Nat.mul_comm] at mulLt
     exact Nat.not_lt_of_gt M.ext_viable_at_full mulLt
   have qLe : (delta + M.gain - 1) / M.gain ≤ diff := Nat.ge_of_not_lt notLt
@@ -885,40 +638,40 @@ theorem B_task_le_demand_ext {P : Type} (M : ServiceTaskModel P) :
 theorem realizedScore_lt_iff {P : Type} (M : ServiceTaskModel P) (p₁ p₂ : P) (x₁ x₂ base : Nat)
     (h1 : M.upkeep p₁ ≤ base) (h2 : M.upkeep p₂ ≤ base) :
     M.realizedScore p₁ x₁ base < M.realizedScore p₂ x₂ base ↔
-      M.gain * natMin (M.demand p₁) x₁ + M.upkeep p₂ <
-        M.gain * natMin (M.demand p₂) x₂ + M.upkeep p₁ := by
+      M.gain * CoreHelpers.natMin (M.demand p₁) x₁ + M.upkeep p₂ <
+        M.gain * CoreHelpers.natMin (M.demand p₂) x₂ + M.upkeep p₁ := by
   have sub1 : M.realizedScore p₁ x₁ base + (M.upkeep p₁ + M.upkeep p₂) =
-      (M.gain * natMin (M.demand p₁) x₁ + M.upkeep p₂) + base := by
-    have le1 : M.upkeep p₁ ≤ M.gain * natMin (M.demand p₁) x₁ + base :=
+      (M.gain * CoreHelpers.natMin (M.demand p₁) x₁ + M.upkeep p₂) + base := by
+    have le1 : M.upkeep p₁ ≤ M.gain * CoreHelpers.natMin (M.demand p₁) x₁ + base :=
       Nat.le_trans h1 (Nat.le_add_left _ _)
-    calc (M.gain * natMin (M.demand p₁) x₁ + base - M.upkeep p₁) + (M.upkeep p₁ + M.upkeep p₂)
-        = ((M.gain * natMin (M.demand p₁) x₁ + base - M.upkeep p₁) + M.upkeep p₁) + M.upkeep p₂ :=
+    calc (M.gain * CoreHelpers.natMin (M.demand p₁) x₁ + base - M.upkeep p₁) + (M.upkeep p₁ + M.upkeep p₂)
+        = ((M.gain * CoreHelpers.natMin (M.demand p₁) x₁ + base - M.upkeep p₁) + M.upkeep p₁) + M.upkeep p₂ :=
           (Nat.add_assoc _ _ _).symm
-      _ = (M.gain * natMin (M.demand p₁) x₁ + base) + M.upkeep p₂ :=
+      _ = (M.gain * CoreHelpers.natMin (M.demand p₁) x₁ + base) + M.upkeep p₂ :=
           congrArg (· + M.upkeep p₂) (Naturals.sub_add_cancel le1)
-      _ = M.gain * natMin (M.demand p₁) x₁ + (base + M.upkeep p₂) := Nat.add_assoc _ _ _
-      _ = M.gain * natMin (M.demand p₁) x₁ + (M.upkeep p₂ + base) :=
+      _ = M.gain * CoreHelpers.natMin (M.demand p₁) x₁ + (base + M.upkeep p₂) := Nat.add_assoc _ _ _
+      _ = M.gain * CoreHelpers.natMin (M.demand p₁) x₁ + (M.upkeep p₂ + base) :=
           congrArg _ (Nat.add_comm _ _)
-      _ = (M.gain * natMin (M.demand p₁) x₁ + M.upkeep p₂) + base := (Nat.add_assoc _ _ _).symm
+      _ = (M.gain * CoreHelpers.natMin (M.demand p₁) x₁ + M.upkeep p₂) + base := (Nat.add_assoc _ _ _).symm
   have sub2 : M.realizedScore p₂ x₂ base + (M.upkeep p₁ + M.upkeep p₂) =
-      (M.gain * natMin (M.demand p₂) x₂ + M.upkeep p₁) + base := by
-    have le2 : M.upkeep p₂ ≤ M.gain * natMin (M.demand p₂) x₂ + base :=
+      (M.gain * CoreHelpers.natMin (M.demand p₂) x₂ + M.upkeep p₁) + base := by
+    have le2 : M.upkeep p₂ ≤ M.gain * CoreHelpers.natMin (M.demand p₂) x₂ + base :=
       Nat.le_trans h2 (Nat.le_add_left _ _)
-    calc (M.gain * natMin (M.demand p₂) x₂ + base - M.upkeep p₂) + (M.upkeep p₁ + M.upkeep p₂)
-        = (M.gain * natMin (M.demand p₂) x₂ + base - M.upkeep p₂) + (M.upkeep p₂ + M.upkeep p₁) :=
+    calc (M.gain * CoreHelpers.natMin (M.demand p₂) x₂ + base - M.upkeep p₂) + (M.upkeep p₁ + M.upkeep p₂)
+        = (M.gain * CoreHelpers.natMin (M.demand p₂) x₂ + base - M.upkeep p₂) + (M.upkeep p₂ + M.upkeep p₁) :=
           congrArg _ (Nat.add_comm _ _)
-      _ = ((M.gain * natMin (M.demand p₂) x₂ + base - M.upkeep p₂) + M.upkeep p₂) + M.upkeep p₁ :=
+      _ = ((M.gain * CoreHelpers.natMin (M.demand p₂) x₂ + base - M.upkeep p₂) + M.upkeep p₂) + M.upkeep p₁ :=
           (Nat.add_assoc _ _ _).symm
-      _ = (M.gain * natMin (M.demand p₂) x₂ + base) + M.upkeep p₁ :=
+      _ = (M.gain * CoreHelpers.natMin (M.demand p₂) x₂ + base) + M.upkeep p₁ :=
           congrArg (· + M.upkeep p₁) (Naturals.sub_add_cancel le2)
-      _ = M.gain * natMin (M.demand p₂) x₂ + (base + M.upkeep p₁) := Nat.add_assoc _ _ _
-      _ = M.gain * natMin (M.demand p₂) x₂ + (M.upkeep p₁ + base) :=
+      _ = M.gain * CoreHelpers.natMin (M.demand p₂) x₂ + (base + M.upkeep p₁) := Nat.add_assoc _ _ _
+      _ = M.gain * CoreHelpers.natMin (M.demand p₂) x₂ + (M.upkeep p₁ + base) :=
           congrArg _ (Nat.add_comm _ _)
-      _ = (M.gain * natMin (M.demand p₂) x₂ + M.upkeep p₁) + base := (Nat.add_assoc _ _ _).symm
+      _ = (M.gain * CoreHelpers.natMin (M.demand p₂) x₂ + M.upkeep p₁) + base := (Nat.add_assoc _ _ _).symm
   constructor
   · intro lt
-    have lt' : base + (M.gain * natMin (M.demand p₁) x₁ + M.upkeep p₂) <
-        base + (M.gain * natMin (M.demand p₂) x₂ + M.upkeep p₁) := by
+    have lt' : base + (M.gain * CoreHelpers.natMin (M.demand p₁) x₁ + M.upkeep p₂) <
+        base + (M.gain * CoreHelpers.natMin (M.demand p₂) x₂ + M.upkeep p₁) := by
       rw [Nat.add_comm base _, Nat.add_comm base _, ← sub1, ← sub2]
       exact Nat.add_lt_add_right lt (M.upkeep p₁ + M.upkeep p₂)
     exact Naturals.lt_of_add_lt_add_left lt'
@@ -946,13 +699,13 @@ theorem score_crosses_iff {P : Type} (M : ServiceTaskModel P) (x base : Nat) :
     | inl leSafe =>
       have leExt : x ≤ dExt := Nat.le_trans leSafe (Nat.le_of_lt M.demand_lt)
       have pref : M.TaskPrefers x M.safe M.ext := by
-        show M.gain * natMin dExt x + uSafe < M.gain * natMin dSafe x + uExt
-        rw [natMin_eq_right leExt, natMin_eq_right leSafe]
+        show M.gain * CoreHelpers.natMin dExt x + uSafe < M.gain * CoreHelpers.natMin dSafe x + uExt
+        rw [CoreHelpers.natMin_eq_right leExt, CoreHelpers.natMin_eq_right leSafe]
         exact Nat.add_lt_add_left M.upkeep_lt _
       have ltB : x < M.B_task := Nat.lt_of_le_of_lt leSafe M.B_task_pos_of_upkeep_lt
       exact ⟨fun _ => ltB, fun _ => pref⟩
     | inr geSafe =>
-      have mSafe : natMin dSafe x = dSafe := natMin_eq_left geSafe
+      have mSafe : CoreHelpers.natMin dSafe x = dSafe := CoreHelpers.natMin_eq_left geSafe
       have ltB_iff : x < M.B_task ↔ x - dSafe < q := by
         have eqX : x = dSafe + (x - dSafe) := (add_sub_of_le geSafe).symm
         constructor
@@ -962,28 +715,29 @@ theorem score_crosses_iff {P : Type} (M : ServiceTaskModel P) (x base : Nat) :
         · intro lt
           have lt' : dSafe + (x - dSafe) < dSafe + q := Nat.add_lt_add_left lt dSafe
           exact eqX.symm ▸ lt'
-      have pref_iff : M.TaskPrefers x M.safe M.ext ↔ natMin dExt x - dSafe < q := by
-        have dSafeLeMin : dSafe ≤ natMin dExt x := le_natMin (Nat.le_of_lt M.demand_lt) geSafe
-        let k := natMin dExt x - dSafe
-        have minEq : natMin dExt x = dSafe + k := (add_sub_of_le dSafeLeMin).symm
-        have mulEq : M.gain * natMin dExt x = M.gain * dSafe + M.gain * k := by
+      have pref_iff : M.TaskPrefers x M.safe M.ext ↔ CoreHelpers.natMin dExt x - dSafe < q := by
+        have dSafeLeMin : dSafe ≤ CoreHelpers.natMin dExt x :=
+          CoreHelpers.le_natMin (Nat.le_of_lt M.demand_lt) geSafe
+        let k := CoreHelpers.natMin dExt x - dSafe
+        have minEq : CoreHelpers.natMin dExt x = dSafe + k := (add_sub_of_le dSafeLeMin).symm
+        have mulEq : M.gain * CoreHelpers.natMin dExt x = M.gain * dSafe + M.gain * k := by
           rw [minEq, Nat.mul_add]
-        have lhsIff : M.gain * natMin dExt x + uSafe < M.gain * dSafe + uExt ↔
+        have lhsIff : M.gain * CoreHelpers.natMin dExt x + uSafe < M.gain * dSafe + uExt ↔
             M.gain * k < delta := by
           rw [mulEq, uExtEq, Nat.add_assoc]
           exact Naturals.add_lt_add_left_iff.trans (by
             rw [Nat.add_comm (M.gain * k) uSafe]
             exact Naturals.add_lt_add_left_iff)
-        show M.gain * natMin dExt x + uSafe < M.gain * natMin dSafe x + uExt ↔ k < q
+        show M.gain * CoreHelpers.natMin dExt x + uSafe < M.gain * CoreHelpers.natMin dSafe x + uExt ↔ k < q
         rw [mSafe]
         exact lhsIff.trans (by
           rw [Nat.mul_comm M.gain k]
-          exact lt_ceil_div_iff M.gain_pos k delta)
-      have minSubIff : natMin dExt x - dSafe < q ↔ x - dSafe < q := by
+          exact CoreHelpers.lt_ceil_div_iff M.gain_pos k delta)
+      have minSubIff : CoreHelpers.natMin dExt x - dSafe < q ↔ x - dSafe < q := by
         cases Nat.le_total x dExt with
-        | inl leExt => rw [natMin_eq_right leExt]
+        | inl leExt => rw [CoreHelpers.natMin_eq_right leExt]
         | inr geExt =>
-          rw [natMin_eq_left geExt]
+          rw [CoreHelpers.natMin_eq_left geExt]
           have qLeDiff : q ≤ dExt - dSafe :=
             Naturals.le_of_add_le_add_left (k := dSafe)
               (Nat.le_trans M.B_task_le_demand_ext (Nat.le_of_eq (add_sub_of_le (Nat.le_of_lt M.demand_lt)).symm))
@@ -996,15 +750,15 @@ theorem score_crosses_iff {P : Type} (M : ServiceTaskModel P) (x base : Nat) :
   refine ⟨prefIff, fun hBase => ?_⟩
   have hSafeBase : uSafe ≤ base := Nat.le_trans (Nat.le_of_lt M.upkeep_lt) hBase
   have scoreIff : M.realizedScore M.ext x base < M.realizedScore M.safe dSafe base ↔
-      M.gain * natMin dExt x + uSafe < M.gain * natMin dSafe dSafe + uExt :=
+      M.gain * CoreHelpers.natMin dExt x + uSafe < M.gain * CoreHelpers.natMin dSafe dSafe + uExt :=
     M.realizedScore_lt_iff M.ext M.safe x dSafe base hBase hSafeBase
-  rw [natMin_eq_left (Nat.le_refl dSafe)] at scoreIff
+  rw [CoreHelpers.natMin_eq_left (Nat.le_refl dSafe)] at scoreIff
   cases Nat.le_total dSafe x with
   | inl geSafe =>
-    have mSafe : natMin dSafe x = dSafe := natMin_eq_left geSafe
+    have mSafe : CoreHelpers.natMin dSafe x = dSafe := CoreHelpers.natMin_eq_left geSafe
     have scoreEq : M.realizedScore M.ext x base < M.nominalSafe base ↔ M.TaskPrefers x M.safe M.ext := by
       change M.realizedScore M.ext x base < M.realizedScore M.safe dSafe base ↔
-        M.gain * natMin dExt x + uSafe < M.gain * natMin dSafe x + uExt
+        M.gain * CoreHelpers.natMin dExt x + uSafe < M.gain * CoreHelpers.natMin dSafe x + uExt
       rw [mSafe]
       exact scoreIff
     exact scoreEq.trans prefIff
@@ -1014,7 +768,7 @@ theorem score_crosses_iff {P : Type} (M : ServiceTaskModel P) (x base : Nat) :
     have ltScore : M.realizedScore M.ext x base < M.nominalSafe base := by
       change M.realizedScore M.ext x base < M.realizedScore M.safe dSafe base
       refine scoreIff.mpr ?_
-      rw [natMin_eq_right leExt]
+      rw [CoreHelpers.natMin_eq_right leExt]
       exact Nat.add_lt_add_of_le_of_lt (Nat.mul_le_mul_left M.gain leSafe) M.upkeep_lt
     exact ⟨fun _ => ltB, fun _ => ltScore⟩
 
@@ -1032,10 +786,10 @@ theorem ext_preferred_above {P : Type} (M : ServiceTaskModel P) {x : Nat}
   let q := (delta + M.gain - 1) / M.gain
   have dSafeLt : dSafe < x := Nat.lt_of_le_of_lt M.demand_safe_le_B_task above
   have dSafeLe : dSafe ≤ x := Nat.le_of_lt dSafeLt
-  have deltaLt : delta < M.gain * (natMin dExt x - dSafe) := by
+  have deltaLt : delta < M.gain * (CoreHelpers.natMin dExt x - dSafe) := by
     cases Nat.le_total x dExt with
     | inl leExt =>
-      rw [natMin_eq_right leExt]
+      rw [CoreHelpers.natMin_eq_right leExt]
       let k := x - dSafe
       have hqLt : q < k := Naturals.lt_of_add_lt_add_left (k := dSafe)
         (Nat.lt_of_lt_of_le above (Nat.le_of_eq (add_sub_of_le dSafeLe).symm))
@@ -1043,7 +797,7 @@ theorem ext_preferred_above {P : Type} (M : ServiceTaskModel P) {x : Nat}
       have notLt : ¬ (k - 1) < q := Nat.not_lt_of_ge (Naturals.le_sub_of_add_le
         (Nat.add_comm 1 q ▸ hqLt))
       have deltaLe : delta ≤ (k - 1) * M.gain :=
-        Nat.ge_of_not_lt fun lt => notLt ((lt_ceil_div_iff M.gain_pos (k - 1) delta).mp lt)
+        Nat.ge_of_not_lt fun lt => notLt ((CoreHelpers.lt_ceil_div_iff M.gain_pos (k - 1) delta).mp lt)
       have stepLt : (k - 1) * M.gain < k * M.gain := by
         have hk : k = (k - 1) + 1 := (Naturals.sub_add_cancel kPos).symm
         calc (k - 1) * M.gain < (k - 1) * M.gain + M.gain := Nat.lt_add_of_pos_right M.gain_pos
@@ -1052,18 +806,20 @@ theorem ext_preferred_above {P : Type} (M : ServiceTaskModel P) {x : Nat}
       rw [Nat.mul_comm]
       exact Nat.lt_of_le_of_lt deltaLe stepLt
     | inr geExt =>
-      rw [natMin_eq_left geExt]
+      rw [CoreHelpers.natMin_eq_left geExt]
       exact M.ext_viable_at_full
-  have dSafeLeMin : dSafe ≤ natMin dExt x := le_natMin (Nat.le_of_lt M.demand_lt) dSafeLe
-  show M.gain * natMin dSafe x + uExt < M.gain * natMin dExt x + uSafe
-  rw [natMin_eq_left dSafeLe, show natMin dExt x = dSafe + (natMin dExt x - dSafe) from
-    (add_sub_of_le dSafeLeMin).symm, Nat.mul_add,
+  have dSafeLeMin : dSafe ≤ CoreHelpers.natMin dExt x :=
+    CoreHelpers.le_natMin (Nat.le_of_lt M.demand_lt) dSafeLe
+  show M.gain * CoreHelpers.natMin dSafe x + uExt < M.gain * CoreHelpers.natMin dExt x + uSafe
+  rw [CoreHelpers.natMin_eq_left dSafeLe,
+    show CoreHelpers.natMin dExt x = dSafe + (CoreHelpers.natMin dExt x - dSafe) from
+      (add_sub_of_le dSafeLeMin).symm, Nat.mul_add,
     show uExt = uSafe + delta from (add_sub_of_le (Nat.le_of_lt M.upkeep_lt)).symm]
-  have lt1 : uSafe + delta < M.gain * (natMin dExt x - dSafe) + uSafe :=
+  have lt1 : uSafe + delta < M.gain * (CoreHelpers.natMin dExt x - dSafe) + uSafe :=
     Nat.add_comm uSafe _ ▸ Nat.add_lt_add_left deltaLt uSafe
-  calc M.gain * dSafe + (uSafe + delta) < M.gain * dSafe + (M.gain * (natMin dExt x - dSafe) + uSafe) :=
+  calc M.gain * dSafe + (uSafe + delta) < M.gain * dSafe + (M.gain * (CoreHelpers.natMin dExt x - dSafe) + uSafe) :=
         Nat.add_lt_add_left lt1 _
-    _ = (M.gain * dSafe + M.gain * (natMin dExt x - dSafe)) + uSafe := (Nat.add_assoc _ _ _).symm
+    _ = (M.gain * dSafe + M.gain * (CoreHelpers.natMin dExt x - dSafe)) + uSafe := (Nat.add_assoc _ _ _).symm
 
 theorem ext_preferred_from_B_task_of_mod_ne {P : Type} (M : ServiceTaskModel P) {x : Nat}
     (rem : (M.upkeep M.ext - M.upkeep M.safe) % M.gain ≠ 0) (ge : M.B_task ≤ x) :
@@ -1079,7 +835,7 @@ theorem ext_preferred_from_B_task_of_mod_ne {P : Type} (M : ServiceTaskModel P) 
     let uExt := M.upkeep M.ext
     let delta := uExt - uSafe
     let q := (delta + M.gain - 1) / M.gain
-    have hDecomp := div_mod_decomp M.gain_pos delta
+    have hDecomp := CoreHelpers.div_mod_decomp M.gain_pos delta
     have remPos : 0 < delta % M.gain := match hr : delta % M.gain with
       | 0 => absurd hr rem
       | _ + 1 => Nat.succ_pos _
@@ -1110,7 +866,7 @@ theorem ext_preferred_from_B_task_of_mod_ne {P : Type} (M : ServiceTaskModel P) 
               congrArg (· + r) (Nat.succ_mul (delta / M.gain) M.gain).symm
       show (delta + M.gain - 1) / M.gain = delta / M.gain + 1
       rw [eqNum]
-      exact div_mul_add_rem M.gain_pos rLt (delta / M.gain + 1)
+      exact CoreHelpers.div_mul_add_rem M.gain_pos rLt (delta / M.gain + 1)
     have deltaLt : delta < M.gain * q := by
       calc delta = (delta / M.gain) * M.gain + delta % M.gain := hDecomp.1
         _ < (delta / M.gain) * M.gain + M.gain := Nat.add_lt_add_left hDecomp.2 _
@@ -1119,8 +875,8 @@ theorem ext_preferred_from_B_task_of_mod_ne {P : Type} (M : ServiceTaskModel P) 
         _ = M.gain * q := Nat.mul_comm _ _
     have hSafeLe : dSafe ≤ M.B_task := M.demand_safe_le_B_task
     have hExtGe : M.B_task ≤ dExt := M.B_task_le_demand_ext
-    show M.gain * natMin dSafe M.B_task + uExt < M.gain * natMin dExt M.B_task + uSafe
-    rw [natMin_eq_left hSafeLe, natMin_eq_right hExtGe,
+    show M.gain * CoreHelpers.natMin dSafe M.B_task + uExt < M.gain * CoreHelpers.natMin dExt M.B_task + uSafe
+    rw [CoreHelpers.natMin_eq_left hSafeLe, CoreHelpers.natMin_eq_right hExtGe,
       show M.B_task = dSafe + q from rfl, Nat.mul_add,
       show uExt = uSafe + delta from (add_sub_of_le (Nat.le_of_lt M.upkeep_lt)).symm]
     have lt1 : uSafe + delta < M.gain * q + uSafe :=
@@ -1562,12 +1318,8 @@ def proxyNext (s : Nat) (oa : Unit × Bool) (_ : Unit) : Nat :=
 def taskNext (s : Bool × Nat) (oa : Nat × Bool) (_ : Unit) : Bool × Nat :=
   if oa.2 then decService s.2 else s
 
-def proxyLoop (hProxyPre hProxySafe : Nat) : AdaptiveLoops.OpenLoop Nat Unit Unit Unit where
-  next := proxyNext
-  draw s _ := if s = 0 then hProxySafe else hProxyPre
-  emitAlarm _ _ := false
-  silenceLoad _ := 0
-  favours s := 0 < s
+def proxyLoop (hProxyPre hProxySafe : Nat) : AdaptiveLoops.OpenLoop Nat Unit Unit Unit :=
+  OpenComposition.countdownLoop hProxyPre hProxySafe (fun _ _ => false)
 
 def taskLoop {P : Type} (M : ServiceTaskModel P) (base : Nat) :
     AdaptiveLoops.OpenLoop (Bool × Nat) Nat Unit Unit where
@@ -1594,47 +1346,9 @@ def pooledChannel (emit : PooledAgent → Bool) (load : PooledAgent → Nat) (_ 
 
 def proxyCert (hProxyPre hProxySafe lagProxy : Nat) (safe_le : hProxySafe ≤ hProxyPre)
     (init : Nat) (initProxy : init ≤ lagProxy) :
-    AdaptiveLoops.LoopCertificate (proxyLoop hProxyPre hProxySafe) init where
-  tol _ _ := True
-  warnObs _ := False
-  preCap _ := hProxyPre
-  postBudget _ := hProxySafe
-  maxSilence := 0
-  maxLag := lagProxy
-  K s := s ≤ lagProxy
-  eta s := s
-  init_in := initProxy
-  cert := Viability.certificate_disturbed_iff.mpr
-    ⟨fun s _ =>
-      ⟨fun _ => by
-        show (if s = 0 then hProxySafe else hProxyPre) ≤ hProxyPre
-        cases Nat.decEq s 0 with
-        | isTrue h0 => rw [if_pos h0]; exact safe_le
-        | isFalse hn => rw [if_neg hn]; exact Nat.le_refl _,
-       Nat.le_refl 0,
-       fun h0 => ⟨fun hPos => by
-         have hLt : 0 < s := hPos
-         rw [h0] at hLt
-         exact Nat.lt_irrefl 0 hLt, fun _ => by
-         show (if s = 0 then hProxySafe else hProxyPre) ≤ hProxySafe
-         rw [if_pos h0]
-         exact Nat.le_refl _⟩⟩,
-     fun s oa _ hK => by
-       show proxyNext s oa.1 oa.2 ≤ lagProxy
-       rw [proxyNext]
-       cases oa.1.2 with
-       | false => exact hK
-       | true => exact Nat.le_trans (Nat.sub_le s 1) hK⟩
-  eta_bound _ hK := hK
-  emits_on_warn _ _ _ w := False.elim w
-  eta_alarm_step s _ _ _ _ pos := by
-    show s - 1 < s
-    cases s with
-    | zero => exact absurd pos (Nat.lt_irrefl 0)
-    | succ k => exact Nat.lt_succ_self k
-  eta_alarm_zero s _ _ _ _ h0 := by
-    show s - 1 = 0
-    rw [h0]
+    AdaptiveLoops.LoopCertificate (proxyLoop hProxyPre hProxySafe) init :=
+  OpenComposition.countdownCert hProxyPre hProxySafe 0 lagProxy init
+    (fun _ _ => false) (fun _ => False) safe_le initProxy (fun _ _ _ w => False.elim w)
 
 def taskCert {P : Type} (M : ServiceTaskModel P) (base lagPartner : Nat)
     (init : Bool × Nat) (initPartner : serviceK lagPartner init) :

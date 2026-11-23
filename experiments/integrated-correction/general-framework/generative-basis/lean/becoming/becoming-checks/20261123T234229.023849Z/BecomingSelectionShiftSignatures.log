@@ -1,0 +1,358 @@
+@Becoming.SelectionShift.mem_flatMap_of : ∀ {α : Type} {f : α → List α} {p k : α} {ps : List α},
+  p ∈ ps → k ∈ f p → k ∈ List.flatMap f ps
+@Becoming.SelectionShift.flatMap_singleton : ∀ {α : Type} (l : List α), List.flatMap (fun p => [p]) l = l
+@Becoming.SelectionShift.flatMap_empty : ∀ {α : Type} (l : List α), List.flatMap (fun x => []) l = []
+@Becoming.SelectionShift.mul_excess_congr : ∀ {c x x' y y' : Nat},
+  x' = x → y' = y → c * Becoming.excess x' y' = c * Becoming.excess x y
+@Becoming.SelectionShift.concord_shifted : ∀ {α : Type} {ps : List α} {w w' a a' : α → Nat} {k : Nat},
+  (∀ (p : α), p ∈ ps → w' p = w p + k) →
+    (∀ (p : α), p ∈ ps → a' p = a p) → Becoming.SelectionTerm.concord ps w' a' = Becoming.SelectionTerm.concord ps w a
+@Becoming.SelectionShift.discord_shifted : ∀ {α : Type} {ps : List α} {w w' a a' : α → Nat} {k : Nat},
+  (∀ (p : α), p ∈ ps → w' p = w p + k) →
+    (∀ (p : α), p ∈ ps → a' p = a p) → Becoming.SelectionTerm.discord ps w' a' = Becoming.SelectionTerm.discord ps w a
+@Becoming.SelectionShift.concord_shift : ∀ {α : Type} (ps : List α) (w a : α → Nat) (k : Nat),
+  Becoming.SelectionTerm.concord ps (fun p => w p + k) a = Becoming.SelectionTerm.concord ps w a
+@Becoming.SelectionShift.discord_shift : ∀ {α : Type} (ps : List α) (w a : α → Nat) (k : Nat),
+  Becoming.SelectionTerm.discord ps (fun p => w p + k) a = Becoming.SelectionTerm.discord ps w a
+@Becoming.SelectionShift.concord_shift_amount : ∀ {α : Type} (ps : List α) (w a : α → Nat) (k : Nat),
+  (Becoming.SelectionTerm.concord ps w fun p => a p + k) = Becoming.SelectionTerm.concord ps w a
+@Becoming.SelectionShift.discord_shift_amount : ∀ {α : Type} (ps : List α) (w a : α → Nat) (k : Nat),
+  (Becoming.SelectionTerm.discord ps w fun p => a p + k) = Becoming.SelectionTerm.discord ps w a
+@Becoming.SelectionShift.total_shifted : ∀ {α : Type} {ps : List α} {w w' : α → Nat} {k : Nat},
+  (∀ (p : α), p ∈ ps → w' p = w p + k) → Becoming.total ps w' = Becoming.total ps w + ps.length * k
+@Becoming.SelectionShift.weighted_shift : ∀ {α : Type} (ps : List α) (w a : α → Nat) (k : Nat),
+  Becoming.SelectionTerm.weighted ps (fun p => w p + k) a =
+    Becoming.SelectionTerm.weighted ps w a + k * Becoming.total ps a
+@Becoming.SelectionShift.weight_varies_of_concord : ∀ {α : Type} {ps : List α} {w a : α → Nat},
+  0 < Becoming.SelectionTerm.concord ps w a → ∃ p q, p ∈ ps ∧ q ∈ ps ∧ w q < w p
+@Becoming.SelectionShift.weight_varies_of_discord : ∀ {α : Type} {ps : List α} {w a : α → Nat},
+  0 < Becoming.SelectionTerm.discord ps w a → ∃ p q, p ∈ ps ∧ q ∈ ps ∧ w q < w p
+@Becoming.SelectionShift.pos_weight_of_varies : ∀ {α : Type} {ps : List α} {w : α → Nat},
+  (∃ p q, p ∈ ps ∧ q ∈ ps ∧ w q < w p) → ∃ p, p ∈ ps ∧ 0 < w p
+@Becoming.SelectionShift.pos_weight_of_concord : ∀ {α : Type} {ps : List α} {w a : α → Nat},
+  0 < Becoming.SelectionTerm.concord ps w a → ∃ p, p ∈ ps ∧ 0 < w p
+@Becoming.SelectionShift.pos_weight_of_discord : ∀ {α : Type} {ps : List α} {w a : α → Nat},
+  0 < Becoming.SelectionTerm.discord ps w a → ∃ p, p ∈ ps ∧ 0 < w p
+@Becoming.SelectionShift.Generations.shift_step : ∀ {α : Type} {G G' : Becoming.SelectionTerm.Generations α}
+  {t k : Nat},
+  G'.family t = G.family t →
+    (∀ (p : α), p ∈ G.family t → G'.amount t p = G.amount t p) →
+      (∀ (p : α), p ∈ G.family t → G'.offspringNumber t p = G.offspringNumber t p + k) →
+        G'.concordAt t = G.concordAt t ∧
+          G'.discordAt t = G.discordAt t ∧ G'.size (t + 1) = G.size (t + 1) + G.size t * k
+@Becoming.SelectionShift.Generations.varies_of_selection : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {t : Nat},
+  0 < G.concordAt t ∨ 0 < G.discordAt t →
+    ∃ p q, p ∈ G.family t ∧ q ∈ G.family t ∧ G.offspringNumber t q < G.offspringNumber t p
+@Becoming.SelectionShift.Generations.reproducing_of_selection : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {t : Nat}, 0 < G.concordAt t ∨ 0 < G.discordAt t → ∃ p, p ∈ G.family t ∧ 0 < G.offspringNumber t p
+@Becoming.SelectionShift.Generations.next_of_reproducing : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {t : Nat} {p : α}, p ∈ G.family t → 0 < G.offspringNumber t p → 0 < G.size (t + 1)
+@Becoming.SelectionShift.Generations.next_of_selection : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {t : Nat}, 0 < G.concordAt t ∨ 0 < G.discordAt t → 0 < G.size (t + 1)
+@Becoming.SelectionShift.Generations.last_term_zero : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} {t : Nat},
+  G.size (t + 1) = 0 → G.concordAt t = 0 ∧ G.discordAt t = 0
+@Becoming.SelectionShift.Generations.never_empties : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α},
+  (∀ (t : Nat), 0 < G.concordAt t ∨ 0 < G.discordAt t) → ∀ (t : Nat), 0 < G.size (t + 1)
+@Becoming.SelectionShift.Generations.never_empties_while : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α},
+  0 < G.size 0 → (∀ (t : Nat), 0 < G.size t → 0 < G.concordAt t ∨ 0 < G.discordAt t) → ∀ (t : Nat), 0 < G.size t
+@Becoming.SelectionShift.Generations.nonempty_before : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {t s : Nat}, t ≤ s → 0 < G.size s → 0 < G.size t
+@Becoming.SelectionShift.Generations.never_empties_of_unbounded : ∀ {α : Type}
+  {G : Becoming.SelectionTerm.Generations α},
+  (∀ (t : Nat), ∃ s, t ≤ s ∧ (0 < G.concordAt s ∨ 0 < G.discordAt s)) → ∀ (t : Nat), 0 < G.size t
+@Becoming.SelectionShift.Generations.line_kept : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α},
+  Becoming.Reproduction.Generations.ByNumber G →
+    ∀ {t : Nat},
+      (∀ (s : Nat), t ≤ s → Becoming.SelectionTerm.Exact (G.family s) (G.kids s) (G.amount s) (G.amount (s + 1))) →
+        ∀ {p : α},
+          p ∈ G.family t →
+            0 < G.offspringNumber t p →
+              ∀ (n : Nat), ∃ q, q ∈ G.family (t + n) ∧ G.offspringNumber (t + n) q = G.offspringNumber t p
+@Becoming.SelectionShift.Generations.goes_on_iff : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α},
+  Becoming.Reproduction.Generations.ByNumber G →
+    ∀ {t : Nat},
+      (∀ (s : Nat), t ≤ s → Becoming.SelectionTerm.Exact (G.family s) (G.kids s) (G.amount s) (G.amount (s + 1))) →
+        ((∀ (n : Nat), 0 < G.size (t + n + 1)) ↔ 0 < G.size (t + 1))
+@Becoming.SelectionShift.Generations.goes_on : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α},
+  Becoming.Reproduction.Generations.ByNumber G →
+    ∀ {t : Nat},
+      (∀ (s : Nat), t ≤ s → Becoming.SelectionTerm.Exact (G.family s) (G.kids s) (G.amount s) (G.amount (s + 1))) →
+        0 < G.concordAt t →
+          (∀ (n : Nat), ∃ q, q ∈ G.family (t + n) ∧ 0 < G.offspringNumber (t + n) q) ∧
+            ∀ (n : Nat), 0 < G.size (t + n + 1)
+Becoming.SelectionShift.OneLine.goes_on_premises : Becoming.Reproduction.Generations.ByNumber
+    Becoming.SelectionShift.OneLine.course ∧
+  (∀ (s : Nat),
+      0 ≤ s →
+        Becoming.SelectionTerm.Exact (Becoming.SelectionShift.OneLine.course.family s)
+          (Becoming.SelectionShift.OneLine.course.kids s) (Becoming.SelectionShift.OneLine.course.amount s)
+          (Becoming.SelectionShift.OneLine.course.amount (s + 1))) ∧
+    0 < Becoming.SelectionShift.OneLine.course.concordAt 0 ∧
+      (∀ (n : Nat),
+          ∃ q,
+            q ∈ Becoming.SelectionShift.OneLine.course.family (0 + n) ∧
+              0 < Becoming.SelectionShift.OneLine.course.offspringNumber (0 + n) q) ∧
+        ∀ (n : Nat), 0 < Becoming.SelectionShift.OneLine.course.size (0 + n + 1)
+Becoming.SelectionShift.OneLine.shift_step_premises : Becoming.SelectionShift.OneLine.shifted.family 0 =
+    Becoming.SelectionShift.OneLine.course.family 0 ∧
+  (∀ (p : Bool),
+      p ∈ Becoming.SelectionShift.OneLine.course.family 0 →
+        Becoming.SelectionShift.OneLine.shifted.amount 0 p = Becoming.SelectionShift.OneLine.course.amount 0 p) ∧
+    (∀ (p : Bool),
+        p ∈ Becoming.SelectionShift.OneLine.course.family 0 →
+          Becoming.SelectionShift.OneLine.shifted.offspringNumber 0 p =
+            Becoming.SelectionShift.OneLine.course.offspringNumber 0 p + 2) ∧
+      Becoming.SelectionShift.OneLine.shifted.concordAt 0 = Becoming.SelectionShift.OneLine.course.concordAt 0 ∧
+        Becoming.SelectionShift.OneLine.shifted.discordAt 0 = Becoming.SelectionShift.OneLine.course.discordAt 0 ∧
+          Becoming.SelectionShift.OneLine.shifted.size 1 =
+            Becoming.SelectionShift.OneLine.course.size 1 + Becoming.SelectionShift.OneLine.course.size 0 * 2
+Becoming.SelectionShift.ExactOnce.exact_first : Becoming.SelectionTerm.Exact
+  (Becoming.SelectionShift.ExactOnce.course.family 0) (Becoming.SelectionShift.ExactOnce.course.kids 0)
+  (Becoming.SelectionShift.ExactOnce.course.amount 0) (Becoming.SelectionShift.ExactOnce.course.amount 1)
+Becoming.SelectionShift.ExactOnce.not_exact_second : ¬Becoming.SelectionTerm.Exact
+    (Becoming.SelectionShift.ExactOnce.course.family 1) (Becoming.SelectionShift.ExactOnce.course.kids 1)
+    (Becoming.SelectionShift.ExactOnce.course.amount 1) (Becoming.SelectionShift.ExactOnce.course.amount 2)
+Becoming.SelectionShift.ExactOnce.concord_first : 0 < Becoming.SelectionShift.ExactOnce.course.concordAt 0
+Becoming.SelectionShift.ExactOnce.size_three : Becoming.SelectionShift.ExactOnce.course.size 3 = 0
+Becoming.SelectionShift.ExactOnce.exact_once_ends : Becoming.Reproduction.Generations.ByNumber
+    Becoming.SelectionShift.ExactOnce.course ∧
+  Becoming.SelectionTerm.Exact (Becoming.SelectionShift.ExactOnce.course.family 0)
+      (Becoming.SelectionShift.ExactOnce.course.kids 0) (Becoming.SelectionShift.ExactOnce.course.amount 0)
+      (Becoming.SelectionShift.ExactOnce.course.amount 1) ∧
+    ¬Becoming.SelectionTerm.Exact (Becoming.SelectionShift.ExactOnce.course.family 1)
+          (Becoming.SelectionShift.ExactOnce.course.kids 1) (Becoming.SelectionShift.ExactOnce.course.amount 1)
+          (Becoming.SelectionShift.ExactOnce.course.amount 2) ∧
+      0 < Becoming.SelectionShift.ExactOnce.course.concordAt 0 ∧
+        (Becoming.SelectionShift.ExactOnce.course.size 1 = 1 ∧ Becoming.SelectionShift.ExactOnce.course.size 2 = 1) ∧
+          (∀ (n : Nat), Becoming.SelectionShift.ExactOnce.course.size (3 + n) = 0) ∧
+            ¬∀ (n : Nat), 0 < Becoming.SelectionShift.ExactOnce.course.size (0 + n + 1)
+Becoming.SelectionShift.ZeroTerm.oneEach_family : ∀ (t : Nat), Becoming.SelectionShift.ZeroTerm.oneEach.family t = [()]
+Becoming.SelectionShift.ZeroTerm.decides_nothing : Becoming.Reproduction.Generations.ByNumber
+    Becoming.SelectionShift.ZeroTerm.oneEach ∧
+  Becoming.Reproduction.Generations.ByNumber Becoming.SelectionShift.ZeroTerm.noneEach ∧
+    (∀ (t : Nat),
+        Becoming.SelectionTerm.Exact (Becoming.SelectionShift.ZeroTerm.oneEach.family t)
+          (Becoming.SelectionShift.ZeroTerm.oneEach.kids t) (Becoming.SelectionShift.ZeroTerm.oneEach.amount t)
+          (Becoming.SelectionShift.ZeroTerm.oneEach.amount (t + 1))) ∧
+      (∀ (t : Nat),
+          Becoming.SelectionTerm.Exact (Becoming.SelectionShift.ZeroTerm.noneEach.family t)
+            (Becoming.SelectionShift.ZeroTerm.noneEach.kids t) (Becoming.SelectionShift.ZeroTerm.noneEach.amount t)
+            (Becoming.SelectionShift.ZeroTerm.noneEach.amount (t + 1))) ∧
+        (∀ (t : Nat),
+            Becoming.SelectionShift.ZeroTerm.oneEach.concordAt t = 0 ∧
+              Becoming.SelectionShift.ZeroTerm.oneEach.discordAt t = 0) ∧
+          (∀ (t : Nat),
+              Becoming.SelectionShift.ZeroTerm.noneEach.concordAt t = 0 ∧
+                Becoming.SelectionShift.ZeroTerm.noneEach.discordAt t = 0) ∧
+            (∀ (t : Nat), Becoming.SelectionShift.ZeroTerm.oneEach.size t = 1) ∧
+              ∀ (n : Nat), Becoming.SelectionShift.ZeroTerm.noneEach.size (n + 1) = 0
+@Becoming.SelectionShift.Horizon.keep_kids : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} {H : Nat}
+  {after : α → List α} {t : Nat}, t ≤ H → (Becoming.SelectionShift.Horizon.keep G H after).kids t = G.kids t
+@Becoming.SelectionShift.Horizon.keep_kids_after : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} {H : Nat}
+  {after : α → List α} {t : Nat}, ¬t ≤ H → (Becoming.SelectionShift.Horizon.keep G H after).kids t = after
+@Becoming.SelectionShift.Horizon.keep_family : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} {H : Nat}
+  {after : α → List α} (t : Nat), t ≤ H + 1 → (Becoming.SelectionShift.Horizon.keep G H after).family t = G.family t
+@Becoming.SelectionShift.Horizon.keep_terms : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} {H : Nat}
+  {after : α → List α} {t : Nat},
+  t ≤ H →
+    (Becoming.SelectionShift.Horizon.keep G H after).concordAt t = G.concordAt t ∧
+      (Becoming.SelectionShift.Horizon.keep G H after).discordAt t = G.discordAt t
+@Becoming.SelectionShift.Horizon.keep_terms_after : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} {H : Nat}
+  {after : α → List α} {t k : Nat},
+  ¬t ≤ H →
+    (∀ (p : α), (after p).length = k) →
+      (Becoming.SelectionShift.Horizon.keep G H after).concordAt t = 0 ∧
+        (Becoming.SelectionShift.Horizon.keep G H after).discordAt t = 0
+@Becoming.SelectionShift.Horizon.not_le_after : ∀ {H : Nat} (n : Nat), ¬H + 1 + n ≤ H
+@Becoming.SelectionShift.Horizon.going_family : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} {H : Nat}
+  (n : Nat), (Becoming.SelectionShift.Horizon.going G H).family (H + 1 + n) = G.family (H + 1)
+@Becoming.SelectionShift.Horizon.ending_empty : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} {H : Nat}
+  (n : Nat), (Becoming.SelectionShift.Horizon.ending G H).size (H + 2 + n) = 0
+@Becoming.SelectionShift.Horizon.same_terms_two_fates : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α)
+  (H : Nat),
+  (∀ (t : Nat),
+      t ≤ H + 1 →
+        (Becoming.SelectionShift.Horizon.going G H).family t = G.family t ∧
+          (Becoming.SelectionShift.Horizon.ending G H).family t = G.family t) ∧
+    (∀ (t : Nat),
+        t ≤ H →
+          (Becoming.SelectionShift.Horizon.going G H).kids t = G.kids t ∧
+            (Becoming.SelectionShift.Horizon.ending G H).kids t = G.kids t) ∧
+      (∀ (t : Nat),
+          (Becoming.SelectionShift.Horizon.going G H).amount t = G.amount t ∧
+            (Becoming.SelectionShift.Horizon.ending G H).amount t = G.amount t) ∧
+        (∀ (t : Nat),
+            t ≤ H →
+              (Becoming.SelectionShift.Horizon.going G H).concordAt t = G.concordAt t ∧
+                (Becoming.SelectionShift.Horizon.going G H).discordAt t = G.discordAt t) ∧
+          (∀ (t : Nat),
+              (Becoming.SelectionShift.Horizon.ending G H).concordAt t =
+                  (Becoming.SelectionShift.Horizon.going G H).concordAt t ∧
+                (Becoming.SelectionShift.Horizon.ending G H).discordAt t =
+                  (Becoming.SelectionShift.Horizon.going G H).discordAt t) ∧
+            (∀ (n : Nat), (Becoming.SelectionShift.Horizon.going G H).size (H + 1 + n) = G.size (H + 1)) ∧
+              ∀ (n : Nat), (Becoming.SelectionShift.Horizon.ending G H).size (H + 2 + n) = 0
+@Becoming.SelectionShift.Horizon.going_goes_on : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} {H : Nat},
+  0 < G.size (H + 1) → ∀ (n : Nat), 0 < (Becoming.SelectionShift.Horizon.going G H).size (H + 1 + n)
+@Becoming.SelectionShift.Horizon.going_goes_on_of_selection : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {H : Nat},
+  0 < G.concordAt H ∨ 0 < G.discordAt H → ∀ (n : Nat), 0 < (Becoming.SelectionShift.Horizon.going G H).size (H + 1 + n)
+Becoming.SelectionShift.Horizon.steady_family : ∀ (t : Nat),
+  Becoming.SelectionShift.Horizon.steady.family t = [true, false]
+Becoming.SelectionShift.Horizon.steady_terms : ∀ (t : Nat),
+  Becoming.SelectionShift.Horizon.steady.concordAt t = 2 ∧ Becoming.SelectionShift.Horizon.steady.discordAt t = 0
+Becoming.SelectionShift.Horizon.steady_two_fates : ∀ (H : Nat),
+  (∀ (t : Nat),
+      Becoming.SelectionShift.Horizon.steady.concordAt t = 2 ∧ Becoming.SelectionShift.Horizon.steady.discordAt t = 0) ∧
+    (∀ (t : Nat), 0 < Becoming.SelectionShift.Horizon.steady.size (t + 1)) ∧
+      (∀ (t : Nat),
+          t ≤ H →
+            (Becoming.SelectionShift.Horizon.ending Becoming.SelectionShift.Horizon.steady H).concordAt t = 2 ∧
+              (Becoming.SelectionShift.Horizon.ending Becoming.SelectionShift.Horizon.steady H).discordAt t = 0) ∧
+        (∀ (t : Nat),
+            (Becoming.SelectionShift.Horizon.ending Becoming.SelectionShift.Horizon.steady H).concordAt t =
+                (Becoming.SelectionShift.Horizon.going Becoming.SelectionShift.Horizon.steady H).concordAt t ∧
+              (Becoming.SelectionShift.Horizon.ending Becoming.SelectionShift.Horizon.steady H).discordAt t =
+                (Becoming.SelectionShift.Horizon.going Becoming.SelectionShift.Horizon.steady H).discordAt t) ∧
+          (∀ (n : Nat),
+              (Becoming.SelectionShift.Horizon.going Becoming.SelectionShift.Horizon.steady H).size (H + 1 + n) = 2) ∧
+            ∀ (n : Nat),
+              (Becoming.SelectionShift.Horizon.ending Becoming.SelectionShift.Horizon.steady H).size (H + 2 + n) = 0
+@Becoming.SelectionShift.Horizon.shiftAt_family : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} {H : Nat}
+  (t : Nat), t ≤ H → (Becoming.SelectionShift.Horizon.shiftAt G H).family t = G.family t
+@Becoming.SelectionShift.Horizon.shiftAt_step : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} {H : Nat},
+  (Becoming.SelectionShift.Horizon.shiftAt G H).concordAt H = G.concordAt H ∧
+    (Becoming.SelectionShift.Horizon.shiftAt G H).discordAt H = G.discordAt H ∧
+      (Becoming.SelectionShift.Horizon.shiftAt G H).size (H + 1) = G.size (H + 1) + G.size H * 1
+@Becoming.SelectionShift.Horizon.shiftAt_terms : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} {H t : Nat},
+  t ≤ H →
+    (Becoming.SelectionShift.Horizon.shiftAt G H).concordAt t = G.concordAt t ∧
+      (Becoming.SelectionShift.Horizon.shiftAt G H).discordAt t = G.discordAt t
+@Becoming.SelectionShift.Horizon.two_fates_of_nonempty : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {H : Nat},
+  0 < G.size H →
+    (∀ (t : Nat),
+        t ≤ H →
+          (Becoming.SelectionShift.Horizon.goingShifted G H).family t = G.family t ∧
+            (Becoming.SelectionShift.Horizon.ending G H).family t = G.family t) ∧
+      (∀ (t : Nat),
+          t ≤ H →
+            (Becoming.SelectionShift.Horizon.goingShifted G H).concordAt t = G.concordAt t ∧
+              (Becoming.SelectionShift.Horizon.goingShifted G H).discordAt t = G.discordAt t) ∧
+        (∀ (t : Nat),
+            (Becoming.SelectionShift.Horizon.ending G H).concordAt t =
+                (Becoming.SelectionShift.Horizon.goingShifted G H).concordAt t ∧
+              (Becoming.SelectionShift.Horizon.ending G H).discordAt t =
+                (Becoming.SelectionShift.Horizon.goingShifted G H).discordAt t) ∧
+          (∀ (t : Nat), 0 < (Becoming.SelectionShift.Horizon.goingShifted G H).size t) ∧
+            ∀ (n : Nat), (Becoming.SelectionShift.Horizon.ending G H).size (H + 2 + n) = 0
+@Becoming.SelectionShift.Horizon.same_terms_everywhere_of_zero_after : ∀ {α : Type}
+  {G : Becoming.SelectionTerm.Generations α} {H : Nat},
+  (∀ (t : Nat), ¬t ≤ H → G.concordAt t = 0 ∧ G.discordAt t = 0) →
+    Becoming.SelectionShift.SameTerms G (Becoming.SelectionShift.Horizon.going G H) ∧
+      Becoming.SelectionShift.SameTerms G (Becoming.SelectionShift.Horizon.ending G H)
+@Becoming.SelectionShift.Horizon.zero_after_two_fates : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {H : Nat},
+  (∀ (t : Nat), ¬t ≤ H → G.concordAt t = 0 ∧ G.discordAt t = 0) →
+    0 < G.size (H + 1) →
+      Becoming.SelectionShift.SameTerms G (Becoming.SelectionShift.Horizon.going G H) ∧
+        Becoming.SelectionShift.SameTerms G (Becoming.SelectionShift.Horizon.ending G H) ∧
+          (∀ (n : Nat), 0 < (Becoming.SelectionShift.Horizon.going G H).size (H + 1 + n)) ∧
+            ∀ (n : Nat), (Becoming.SelectionShift.Horizon.ending G H).size (H + 2 + n) = 0
+@Becoming.SelectionShift.Horizon.zero_after_two_fates_shifted : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {H : Nat},
+  (∀ (t : Nat), ¬t ≤ H → G.concordAt t = 0 ∧ G.discordAt t = 0) →
+    0 < G.size H →
+      Becoming.SelectionShift.SameTerms G (Becoming.SelectionShift.Horizon.goingShifted G H) ∧
+        Becoming.SelectionShift.SameTerms G (Becoming.SelectionShift.Horizon.ending G H) ∧
+          (∀ (t : Nat), 0 < (Becoming.SelectionShift.Horizon.goingShifted G H).size t) ∧
+            ∀ (n : Nat), (Becoming.SelectionShift.Horizon.ending G H).size (H + 2 + n) = 0
+Becoming.SelectionShift.Horizon.zero_after_premises : ∀ (H : Nat),
+  (∀ (t : Nat),
+      t ≤ H → (Becoming.SelectionShift.Horizon.going Becoming.SelectionShift.Horizon.steady H).concordAt t = 2) ∧
+    (∀ (t : Nat),
+        ¬t ≤ H →
+          (Becoming.SelectionShift.Horizon.going Becoming.SelectionShift.Horizon.steady H).concordAt t = 0 ∧
+            (Becoming.SelectionShift.Horizon.going Becoming.SelectionShift.Horizon.steady H).discordAt t = 0) ∧
+      (Becoming.SelectionShift.Horizon.going Becoming.SelectionShift.Horizon.steady H).size (H + 1) = 2
+@Becoming.SelectionShift.Horizon.eventually_zero_two_fates : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α},
+  0 < G.size 0 →
+    ∀ (H : Nat),
+      (∀ (t : Nat), ¬t ≤ H → G.concordAt t = 0 ∧ G.discordAt t = 0) →
+        ∃ G₁ G₂,
+          Becoming.SelectionShift.SameTerms G G₁ ∧
+            Becoming.SelectionShift.SameTerms G G₂ ∧
+              (∀ (t : Nat), 0 < G₁.size t) ∧ ∃ m, ∀ (n : Nat), G₂.size (m + n) = 0
+@Becoming.SelectionShift.Horizon.terms_boundary : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α},
+  0 < G.size 0 →
+    ((∀ (t : Nat), ∃ s, t ≤ s ∧ (0 < G.concordAt s ∨ 0 < G.discordAt s)) →
+        ∀ (G' : Becoming.SelectionTerm.Generations α),
+          Becoming.SelectionShift.SameTerms G G' → ∀ (t : Nat), 0 < G'.size t) ∧
+      ∀ (H : Nat),
+        (∀ (t : Nat), ¬t ≤ H → G.concordAt t = 0 ∧ G.discordAt t = 0) →
+          ∃ G₁ G₂,
+            Becoming.SelectionShift.SameTerms G G₁ ∧
+              Becoming.SelectionShift.SameTerms G G₂ ∧
+                (∀ (t : Nat), 0 < G₁.size t) ∧ ∃ m, ∀ (n : Nat), G₂.size (m + n) = 0
+Becoming.SelectionShift.Alternating.step_family : ∀ (b : Bool),
+  List.flatMap (bif b then Becoming.SelectionShift.Horizon.markedPair else fun p => [p]) [true, false] = [true, false]
+Becoming.SelectionShift.Alternating.course_family : ∀ (t : Nat),
+  Becoming.SelectionShift.Alternating.course.family t = [true, false]
+Becoming.SelectionShift.Alternating.step_terms : ∀ (b : Bool),
+  (Becoming.SelectionTerm.concord [true, false]
+        (fun p => ((bif b then Becoming.SelectionShift.Horizon.markedPair else fun p => [p]) p).length)
+        Becoming.SelectionShift.Horizon.carried =
+      bif b then 2 else 0) ∧
+    Becoming.SelectionTerm.discord [true, false]
+        (fun p => ((bif b then Becoming.SelectionShift.Horizon.markedPair else fun p => [p]) p).length)
+        Becoming.SelectionShift.Horizon.carried =
+      0
+Becoming.SelectionShift.Alternating.course_terms : ∀ (t : Nat),
+  (Becoming.SelectionShift.Alternating.course.concordAt t =
+      bif Becoming.SelectionShift.Alternating.even t then 2 else 0) ∧
+    Becoming.SelectionShift.Alternating.course.discordAt t = 0
+Becoming.SelectionShift.Alternating.even_double : ∀ (t : Nat), Becoming.SelectionShift.Alternating.even (2 * t) = true
+Becoming.SelectionShift.Alternating.odd_double : ∀ (t : Nat),
+  Becoming.SelectionShift.Alternating.even (2 * t + 1) = false
+Becoming.SelectionShift.Alternating.le_double : ∀ (t : Nat), t ≤ 2 * t
+Becoming.SelectionShift.Alternating.unbounded_not_every : (∀ (t : Nat),
+    Becoming.SelectionShift.Alternating.course.concordAt (2 * t) = 2 ∧
+      Becoming.SelectionShift.Alternating.course.discordAt (2 * t) = 0) ∧
+  (∀ (t : Nat),
+      Becoming.SelectionShift.Alternating.course.concordAt (2 * t + 1) = 0 ∧
+        Becoming.SelectionShift.Alternating.course.discordAt (2 * t + 1) = 0) ∧
+    (∀ (t : Nat),
+        ∃ s,
+          t ≤ s ∧
+            (0 < Becoming.SelectionShift.Alternating.course.concordAt s ∨
+              0 < Becoming.SelectionShift.Alternating.course.discordAt s)) ∧
+      (¬∀ (t : Nat),
+            0 < Becoming.SelectionShift.Alternating.course.concordAt t ∨
+              0 < Becoming.SelectionShift.Alternating.course.discordAt t) ∧
+        ∀ (t : Nat), 0 < Becoming.SelectionShift.Alternating.course.size t
+Becoming.SelectionShift.Shrinking.unmarked_flatMap : ∀ (k : Nat),
+  List.flatMap Becoming.SelectionShift.Shrinking.kids (List.replicate k none) = []
+Becoming.SelectionShift.Shrinking.unmarked_mark : ∀ (k : Nat),
+  Becoming.total (List.replicate k none) Becoming.SelectionShift.Shrinking.mark = 0
+Becoming.SelectionShift.Shrinking.replicate_length : ∀ (a : Option Nat) (k : Nat), (List.replicate k a).length = k
+Becoming.SelectionShift.Shrinking.line_step : ∀ (m : Nat),
+  List.flatMap Becoming.SelectionShift.Shrinking.kids (Becoming.SelectionShift.Shrinking.line (m + 1)) =
+    Becoming.SelectionShift.Shrinking.line m
+Becoming.SelectionShift.Shrinking.course_family : ∀ (t m : Nat),
+  (Becoming.SelectionShift.Shrinking.course (m + t)).family t = Becoming.SelectionShift.Shrinking.line (m + 1)
+Becoming.SelectionShift.Shrinking.course_size : ∀ (t m : Nat),
+  (Becoming.SelectionShift.Shrinking.course (m + t)).size t = m + 1
+Becoming.SelectionShift.Shrinking.course_sum : ∀ (t m : Nat),
+  (Becoming.SelectionShift.Shrinking.course (m + t)).sum t = 1
+Becoming.SelectionShift.Shrinking.course_concord : ∀ (t m : Nat),
+  0 < (Becoming.SelectionShift.Shrinking.course (m + 1 + t)).concordAt t
+Becoming.SelectionShift.Shrinking.positive_then_empty : ∀ (N : Nat),
+  (∀ (t : Nat), t < N → 0 < (Becoming.SelectionShift.Shrinking.course N).concordAt t) ∧
+    (∀ (t : Nat),
+        t ≤ N →
+          0 < (Becoming.SelectionShift.Shrinking.course N).size t ∧
+            (Becoming.SelectionShift.Shrinking.course N).sum t = 1) ∧
+      ((Becoming.SelectionShift.Shrinking.course N).concordAt N = 0 ∧
+          (Becoming.SelectionShift.Shrinking.course N).discordAt N = 0) ∧
+        ∀ (n : Nat), (Becoming.SelectionShift.Shrinking.course N).size (N + 1 + n) = 0

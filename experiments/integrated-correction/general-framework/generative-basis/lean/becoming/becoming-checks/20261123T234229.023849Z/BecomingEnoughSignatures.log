@@ -1,0 +1,28 @@
+@Becoming.Enough.trace_then_stay : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {u : S} {a : A},
+  P.step u a u →
+    ∀ {s : S} {as : List A}, Generative.Trace P s as u → ∃ r, r.state 0 = s ∧ ∀ (n : Nat), as.length ≤ n → r.state n = u
+@Becoming.Enough.possibly_rests_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S}
+  {target : S → Prop},
+  (∃ r, r.state 0 = s ∧ Becoming.Enough.Rests target r) ↔
+    ∃ u, Becoming.Reach P s u ∧ Becoming.Enough.Stays P u ∧ target u
+@Becoming.Enough.assured_stays_meet : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S}
+  {target : S → Prop},
+  (∀ (r : Becoming.Run P), r.state 0 = s → Becoming.Enough.Rests target r) →
+    ∀ (u : S), Becoming.Reach P s u → Becoming.Enough.Stays P u → target u
+@Becoming.Enough.settled_at : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {r : Becoming.Run P}
+  {T : Nat}, (∀ (n : Nat), T ≤ n → r.state (n + 1) = r.state n) → ∀ (k : Nat), r.state (T + k) = r.state T
+@Becoming.Enough.assured_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S} {target : S → Prop},
+  (∀ (r : Becoming.Run P), r.state 0 = s → Becoming.Enough.Rests target r) ↔
+    (∀ (u : S), Becoming.Reach P s u → Becoming.Enough.Stays P u → target u) ∧
+      ∀ (r : Becoming.Run P), r.state 0 = s → Becoming.Enough.Settles r
+Becoming.Enough.Free.stays_meet_not_assured : (∀ (u : Bool),
+    Becoming.Enough.Stays Becoming.Enough.Free.process u ∧ True) ∧
+  (∃ r, r.state 0 = false ∧ Becoming.Enough.Rests (fun x => True) r) ∧
+    ¬Becoming.Enough.Settles Becoming.Enough.Free.alternating ∧
+      ¬∀ (r : Becoming.Run Becoming.Enough.Free.process), r.state 0 = false → Becoming.Enough.Rests (fun x => True) r
+@Becoming.Enough.law_possibly_iff : ∀ {S : Type u_1} {next : S → S} {s : S} {target : S → Prop},
+  (∃ r, r.state 0 = s ∧ Becoming.Enough.Rests target r) ↔
+    ∃ T, next (Becoming.Law.orbit next s T) = Becoming.Law.orbit next s T ∧ target (Becoming.Law.orbit next s T)
+@Becoming.Enough.law_possibly_iff_assured : ∀ {S : Type u_1} {next : S → S} {s : S} {target : S → Prop},
+  (∃ r, r.state 0 = s ∧ Becoming.Enough.Rests target r) ↔
+    ∀ (r : Becoming.Run (Becoming.Law.process next)), r.state 0 = s → Becoming.Enough.Rests target r

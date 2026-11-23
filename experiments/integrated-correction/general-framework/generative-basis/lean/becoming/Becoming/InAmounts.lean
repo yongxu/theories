@@ -111,7 +111,7 @@ back within its value before) stays unrefuted. Both rest laws conclude this, the
 (`Amounts.rests_unrefuted`) and the finite-reading law (`Amounts.rests_unrefuted_of_finite_reading`),
 and it is the one premise of rest over any amounts (`World.InAmounts.change_stops_iff`). -/
 def FallsStop (s : Nat → A) (T : Nat) : Prop :=
-  ¬ ∀ N, T ≤ N → ¬¬ ∃ t, N ≤ t ∧ ¬ M.le (s t) (s (t + 1))
+  ¬ «或屡» (fun a b => ¬ M.le a b) s T
 
 /-- No amount falls without end: every amount that, as far as can be refuted, does not rise from a
 step on has its strict falls stop from there. -/
@@ -291,7 +291,7 @@ theorem rests_of_finite_reading {g : Nat → S} {q : S → A} {l : List S} {T : 
     (held : ∀ t, T ≤ t → g t ∈ l) (still : ∀ t, T ≤ t → M.le (q (g (t + 1))) (q (g t))) :
     ¬ ∀ N, ∃ t, N ≤ t ∧ ¬ M.le (q (g t)) (q (g (t + 1))) := fun recurs =>
   rests_unrefuted_of_finite_reading held (fun t later no => no (still t later))
-    fun N _ no => no (recurs N)
+    («屡则或屡» (F := fun a b => ¬ M.le a b) (g := fun t => q (g t)) recurs T)
 
 end Amounts
 

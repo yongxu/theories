@@ -1067,10 +1067,13 @@ theorem unending_of_fixed {giving : Nat → Nat} {s : List (Nat × Nat) × Nat} 
     (before : ∀ j, j < t → Goes (course giving s j))
     (fixed : TurningInTime.pair after (left giving) (course giving s t) = course giving s t)
     (goes : Goes (course giving s t)) : «不穷» (net giving) «一» s :=
-  Law.stepWhile_unending_iff.mpr fun k => (Nat.lt_or_ge k t).elim (before k) fun ge =>
-    match le_dest ge with
-    | ⟨i, e⟩ => Eq.subst (motive := fun j => Goes (course giving s j)) e.symm
-        (Eq.subst (motive := Goes) ((Law.orbit_add _ s t i).trans (course_fixed fixed i)).symm goes)
+  (unending_unit giving s).mp
+    (LineOnAStock.unending_of_fixed (need := need) (kids := fun u => [u]) (use := use)
+      (fun j lt => Eq.subst (motive := Goes) (course_unit giving s j).symm (before j lt))
+      ((step_unit giving _).trans
+        ((congrArg (TurningInTime.pair after (left giving)) (course_unit giving s t)).trans
+          (fixed.trans (course_unit giving s t).symm)))
+      (Eq.subst (motive := Goes) (course_unit giving s t).symm goes))
 
 namespace GivenFromNothing
 

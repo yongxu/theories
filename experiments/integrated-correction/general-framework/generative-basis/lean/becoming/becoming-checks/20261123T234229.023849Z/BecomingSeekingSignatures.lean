@@ -1,0 +1,14 @@
+import Becoming.Seeking
+#check @Becoming.more_not_at_rest
+#check @Becoming.more_rises
+#check @Becoming.more_new
+#check @Becoming.more_needs_open
+#check @Becoming.succ_more
+#check @Becoming.aboveAll_unique
+#check @Becoming.aboveAll_not_two
+#check @Becoming.Law.fixed_rests
+#check @Becoming.Law.rests_iff
+#check @Becoming.Law.more_never_rests
+#check @Becoming.Law.aboveAll_never_rests
+#check @Becoming.Flow.more_needs_unrun
+#check @Becoming.Flow.more_exhausted

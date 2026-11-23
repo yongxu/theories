@@ -1,0 +1,9 @@
+@Becoming.Closure.base : ∀ {X : Type u_1} {seed : X → Prop} {edge : X → X → Prop} {x : X},
+  seed x → Becoming.Closure seed edge x
+@Becoming.Closure.step : ∀ {X : Type u_1} {seed : X → Prop} {edge : X → X → Prop} {x y : X},
+  Becoming.Closure seed edge x → edge x y → Becoming.Closure seed edge y
+@Becoming.Closure.induction : ∀ {X : Type u_1} {seed : X → Prop} {edge : X → X → Prop} {motive : X → Prop},
+  (∀ (x : X), seed x → motive x) →
+    (∀ (x y : X), motive x → edge x y → motive y) → ∀ {x : X}, Becoming.Closure seed edge x → motive x
+@Becoming.withinClosure_iff_closure : ∀ {X : Type} {rel : X → X → Prop} {f g : X},
+  Becoming.WithinClosure rel f g ↔ Becoming.Closure (fun x => x = f) rel g

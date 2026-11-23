@@ -1,0 +1,514 @@
+@Becoming.FreeEnergy.freeEnergy_eq_divergence : ∀ {ι : Type u_1} (s : Finset ι) (q p : ι → ℝ),
+  Becoming.FreeEnergy.freeEnergy s q p = Becoming.FreeEnergy.divergence s q p
+@Becoming.FreeEnergy.term_le : ∀ {qi pi P : ℝ},
+  0 ≤ qi → 0 ≤ pi → (pi = 0 → qi = 0) → 0 < P → qi * (Real.log pi - Real.log qi - Real.log P) ≤ pi / P - qi
+@Becoming.FreeEnergy.term_eq_iff_of_pos : ∀ {qi pi P : ℝ},
+  0 ≤ qi → 0 < pi → 0 < P → (qi * (Real.log pi - Real.log qi - Real.log P) = pi / P - qi ↔ qi = pi / P)
+@Becoming.FreeEnergy.term_eq_iff : ∀ {qi pi P : ℝ},
+  0 ≤ qi →
+    0 ≤ pi → (pi = 0 → qi = 0) → 0 < P → (qi * (Real.log pi - Real.log qi - Real.log P) = pi / P - qi ↔ qi = pi / P)
+@Becoming.FreeEnergy.freeEnergy_congr : ∀ {ι : Type u_1} (s : Finset ι) {q q' : ι → ℝ} (p : ι → ℝ),
+  (∀ i ∈ s, q i = q' i) → Becoming.FreeEnergy.freeEnergy s q p = Becoming.FreeEnergy.freeEnergy s q' p
+@Becoming.FreeEnergy.freeEnergy_congr_weights : ∀ {ι : Type u_1} (s : Finset ι) (q : ι → ℝ) {p p' : ι → ℝ},
+  (∀ i ∈ s, p i = p' i) → Becoming.FreeEnergy.freeEnergy s q p = Becoming.FreeEnergy.freeEnergy s q p'
+@Becoming.FreeEnergy.sum_terms : ∀ {ι : Type u_1} (s : Finset ι) (q p : ι → ℝ),
+  ∑ i ∈ s, q i = 1 →
+    ∀ (P : ℝ),
+      ∑ i ∈ s, q i * (Real.log (p i) - Real.log (q i) - Real.log P) = -Becoming.FreeEnergy.freeEnergy s q p - Real.log P
+@Becoming.FreeEnergy.sum_normalized_sub : ∀ {ι : Type u_1} (s : Finset ι) (q p : ι → ℝ),
+  ∑ i ∈ s, q i = 1 → ∑ i ∈ s, p i ≠ 0 → ∑ i ∈ s, (p i / ∑ j ∈ s, p j - q i) = 0
+@Becoming.FreeEnergy.total_pos : ∀ {ι : Type u_1} (s : Finset ι) (q p : ι → ℝ),
+  ∑ i ∈ s, q i = 1 → (∀ i ∈ s, 0 ≤ p i) → (∀ i ∈ s, p i = 0 → q i = 0) → 0 < ∑ i ∈ s, p i
+@Becoming.FreeEnergy.surprisal_le_freeEnergy : ∀ {ι : Type u_1} (s : Finset ι) (q p : ι → ℝ),
+  (∀ i ∈ s, 0 ≤ q i) →
+    ∑ i ∈ s, q i = 1 →
+      (∀ i ∈ s, 0 ≤ p i) →
+        (∀ i ∈ s, p i = 0 → q i = 0) →
+          Becoming.FreeEnergy.surprisal (∑ i ∈ s, p i) ≤ Becoming.FreeEnergy.freeEnergy s q p
+@Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff : ∀ {ι : Type u_1} (s : Finset ι) (q p : ι → ℝ),
+  (∀ i ∈ s, 0 ≤ q i) →
+    ∑ i ∈ s, q i = 1 →
+      (∀ i ∈ s, 0 ≤ p i) →
+        (∀ i ∈ s, p i = 0 → q i = 0) →
+          (Becoming.FreeEnergy.freeEnergy s q p = Becoming.FreeEnergy.surprisal (∑ i ∈ s, p i) ↔
+            ∀ i ∈ s, q i = Becoming.FreeEnergy.posterior s p i)
+@Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_pos : ∀ {ι : Type u_1} (s : Finset ι) (q p : ι → ℝ),
+  (∀ i ∈ s, 0 ≤ q i) →
+    ∑ i ∈ s, q i = 1 →
+      (∀ i ∈ s, 0 < p i) →
+        (Becoming.FreeEnergy.freeEnergy s q p = Becoming.FreeEnergy.surprisal (∑ i ∈ s, p i) ↔
+          ∀ i ∈ s, q i = p i / ∑ j ∈ s, p j)
+@Becoming.FreeEnergy.posterior_nonneg : ∀ {ι : Type u_1} (s : Finset ι) (p : ι → ℝ),
+  (∀ i ∈ s, 0 ≤ p i) → ∀ {i : ι}, i ∈ s → 0 ≤ Becoming.FreeEnergy.posterior s p i
+@Becoming.FreeEnergy.posterior_eq_zero : ∀ {ι : Type u_1} (s : Finset ι) (p : ι → ℝ) {i : ι},
+  p i = 0 → Becoming.FreeEnergy.posterior s p i = 0
+@Becoming.FreeEnergy.sum_posterior : ∀ {ι : Type u_1} (s : Finset ι) (p : ι → ℝ),
+  ∑ i ∈ s, p i ≠ 0 → ∑ i ∈ s, Becoming.FreeEnergy.posterior s p i = 1
+@Becoming.FreeEnergy.freeEnergy_posterior : ∀ {ι : Type u_1} (s : Finset ι) (p : ι → ℝ),
+  (∀ i ∈ s, 0 ≤ p i) →
+    0 < ∑ i ∈ s, p i →
+      Becoming.FreeEnergy.freeEnergy s (Becoming.FreeEnergy.posterior s p) p =
+        Becoming.FreeEnergy.surprisal (∑ i ∈ s, p i)
+@Becoming.FreeEnergy.minimizes_iff_posterior : ∀ {ι : Type u_1} (s : Finset ι) (q p : ι → ℝ),
+  (∀ i ∈ s, 0 ≤ q i) →
+    ∑ i ∈ s, q i = 1 →
+      (∀ i ∈ s, 0 ≤ p i) →
+        (∀ i ∈ s, p i = 0 → q i = 0) →
+          ((∀ (q' : ι → ℝ),
+              (∀ i ∈ s, 0 ≤ q' i) →
+                ∑ i ∈ s, q' i = 1 →
+                  (∀ i ∈ s, p i = 0 → q' i = 0) →
+                    Becoming.FreeEnergy.freeEnergy s q p ≤ Becoming.FreeEnergy.freeEnergy s q' p) ↔
+            ∀ i ∈ s, q i = Becoming.FreeEnergy.posterior s p i)
+@Becoming.FreeEnergy.freeEnergy_eq_divergence_add_surprisal : ∀ {ι : Type u_1} (s : Finset ι) (q p : ι → ℝ),
+  ∑ i ∈ s, q i = 1 →
+    (∀ i ∈ s, p i = 0 → q i = 0) →
+      ∑ i ∈ s, p i ≠ 0 →
+        Becoming.FreeEnergy.freeEnergy s q p =
+          Becoming.FreeEnergy.divergence s q (Becoming.FreeEnergy.posterior s p) +
+            Becoming.FreeEnergy.surprisal (∑ i ∈ s, p i)
+@Becoming.FreeEnergy.divergence_nonneg : ∀ {ι : Type u_1} (s : Finset ι) (q r : ι → ℝ),
+  (∀ i ∈ s, 0 ≤ q i) →
+    ∑ i ∈ s, q i = 1 →
+      (∀ i ∈ s, 0 ≤ r i) → ∑ i ∈ s, r i = 1 → (∀ i ∈ s, r i = 0 → q i = 0) → 0 ≤ Becoming.FreeEnergy.divergence s q r
+@Becoming.FreeEnergy.divergence_eq_zero_iff : ∀ {ι : Type u_1} (s : Finset ι) (q r : ι → ℝ),
+  (∀ i ∈ s, 0 ≤ q i) →
+    ∑ i ∈ s, q i = 1 →
+      (∀ i ∈ s, 0 ≤ r i) →
+        ∑ i ∈ s, r i = 1 →
+          (∀ i ∈ s, r i = 0 → q i = 0) → (Becoming.FreeEnergy.divergence s q r = 0 ↔ ∀ i ∈ s, q i = r i)
+@Becoming.FreeEnergy.divergence_posterior_nonneg : ∀ {ι : Type u_1} (s : Finset ι) (q p : ι → ℝ),
+  (∀ i ∈ s, 0 ≤ q i) →
+    ∑ i ∈ s, q i = 1 →
+      (∀ i ∈ s, 0 ≤ p i) →
+        (∀ i ∈ s, p i = 0 → q i = 0) → 0 ≤ Becoming.FreeEnergy.divergence s q (Becoming.FreeEnergy.posterior s p)
+@Becoming.FreeEnergy.divergence_posterior_eq_zero_iff : ∀ {ι : Type u_1} (s : Finset ι) (q p : ι → ℝ),
+  (∀ i ∈ s, 0 ≤ q i) →
+    ∑ i ∈ s, q i = 1 →
+      (∀ i ∈ s, 0 ≤ p i) →
+        (∀ i ∈ s, p i = 0 → q i = 0) →
+          (Becoming.FreeEnergy.divergence s q (Becoming.FreeEnergy.posterior s p) = 0 ↔
+            ∀ i ∈ s, q i = Becoming.FreeEnergy.posterior s p i)
+@Becoming.FreeEnergy.freeEnergy_eq_complexity_sub_accuracy : ∀ {ι : Type u_1} (s : Finset ι) (q prior lik : ι → ℝ),
+  (∀ i ∈ s, prior i * lik i = 0 → q i = 0) →
+    (Becoming.FreeEnergy.freeEnergy s q fun i => prior i * lik i) =
+      Becoming.FreeEnergy.divergence s q prior - ∑ i ∈ s, q i * Real.log (lik i)
+@Becoming.FreeEnergy.freeEnergy_eq_energy_sub_entropy : ∀ {ι : Type u_1} (s : Finset ι) (q p : ι → ℝ),
+  Becoming.FreeEnergy.freeEnergy s q p = ∑ i ∈ s, q i * -Real.log (p i) - ∑ i ∈ s, q i * -Real.log (q i)
+@Becoming.FreeEnergy.gap_div : ∀ {ι : Type u_1} (s : Finset ι) (q p : ι → ℝ),
+  ∑ i ∈ s, q i = 1 →
+    (∀ i ∈ s, p i = 0 → q i = 0) →
+      ∑ i ∈ s, p i ≠ 0 →
+        ∀ {c : ℝ},
+          c ≠ 0 →
+            (Becoming.FreeEnergy.freeEnergy s q fun i => p i / c) - Becoming.FreeEnergy.surprisal (∑ i ∈ s, p i / c) =
+              Becoming.FreeEnergy.freeEnergy s q p - Becoming.FreeEnergy.surprisal (∑ i ∈ s, p i)
+Becoming.FreeEnergy.Witness.bound_fails_off_support : (Becoming.FreeEnergy.freeEnergy Finset.univ (fun x => 1 / 2)
+    fun i => if i = 0 then 1 else 0) <
+  Becoming.FreeEnergy.surprisal (∑ i, if i = 0 then 1 else 0)
+Becoming.ConditionalWeights.Share.toReal_nonneg : ∀ (a : Becoming.ConditionalWeights.Share), 0 ≤ a.toReal
+@Becoming.FreeEnergy.share_toReal_pos : ∀ {Ω : Type u_1} (l : List Ω) (w : Ω → ℕ) (e : Ω → Bool),
+  0 < Becoming.mass l w e → 0 < (Becoming.ConditionalWeights.share l w e).toReal
+Becoming.ConditionalWeights.Share.toReal_mul : ∀ (a b : Becoming.ConditionalWeights.Share),
+  (a.mul b).toReal = a.toReal * b.toReal
+Becoming.FreeEnergy.surprisal_eq_log_reciprocal : ∀ (a : Becoming.ConditionalWeights.Share),
+  Becoming.FreeEnergy.surprisal a.toReal = Real.log a.reciprocal.toReal
+@Becoming.FreeEnergy.cast_mass_eq_sum : ∀ {α : Type u_1} [inst : DecidableEq α] (f : α → ℕ) {hs : List α},
+  Becoming.Distinct hs → ↑(Becoming.mass hs f fun x => true) = ∑ h ∈ hs.toFinset, ↑(f h)
+@Becoming.FreeEnergy.jointShare_part : ∀ {α : Type u_1} {β : Type u_2} [inst : DecidableEq α] (prior : α → ℕ)
+  (lik : α → β → ℕ) {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ {h₀ : α},
+      h₀ ∈ hs →
+        (Becoming.ConditionalWeights.share (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik)
+              fun c => decide (c.1 = h₀) && rec c.2).part =
+          prior h₀ * Becoming.mass os (lik h₀) rec
+@Becoming.FreeEnergy.jointShare_toReal : ∀ {α : Type u_1} {β : Type u_2} [inst : DecidableEq α] (prior : α → ℕ)
+  (lik : α → β → ℕ) {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ {h₀ : α},
+      h₀ ∈ hs →
+        (Becoming.ConditionalWeights.share (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik)
+              fun c => decide (c.1 = h₀) && rec c.2).toReal =
+          ↑(prior h₀ * Becoming.mass os (lik h₀) rec) /
+            ↑(Becoming.mass (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik) fun x => true)
+@Becoming.FreeEnergy.recordShare_toReal : ∀ {α : Type u_1} {β : Type u_2} (prior : α → ℕ) (lik : α → β → ℕ)
+  (hs : List α) (os : List β) (rec : β → Bool),
+  (Becoming.ConditionalWeights.share (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik)
+        fun c => rec c.2).toReal =
+    ↑(Becoming.mass hs (fun h => prior h * Becoming.mass os (lik h) rec) fun x => true) /
+      ↑(Becoming.mass (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik) fun x => true)
+@Becoming.FreeEnergy.sum_jointShare : ∀ {α : Type u_1} {β : Type u_2} [inst : DecidableEq α] (prior : α → ℕ)
+  (lik : α → β → ℕ) {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∑ h ∈ hs.toFinset,
+        (Becoming.ConditionalWeights.share (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik)
+            fun c => decide (c.1 = h) && rec c.2).toReal =
+      (Becoming.ConditionalWeights.share (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik)
+          fun c => rec c.2).toReal
+@Becoming.FreeEnergy.givenShare_toReal : ∀ {α : Type u_1} {β : Type u_2} [inst : DecidableEq α] (prior : α → ℕ)
+  (lik : α → β → ℕ) {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ {h₀ : α},
+      h₀ ∈ hs →
+        (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+              (Becoming.ConditionalWeights.restrict (fun c => rec c.2)
+                (Becoming.ConditionalWeights.pairWeight prior lik))
+              fun c => decide (c.1 = h₀)).toReal =
+          ↑(prior h₀ * Becoming.mass os (lik h₀) rec) /
+            ↑(Becoming.mass hs (fun h => prior h * Becoming.mass os (lik h) rec) fun x => true)
+@Becoming.FreeEnergy.givenShare_eq_posterior : ∀ {α : Type u_1} {β : Type u_2} [inst : DecidableEq α] (prior : α → ℕ)
+  (lik : α → β → ℕ) {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ {h₀ : α},
+      h₀ ∈ hs →
+        (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+              (Becoming.ConditionalWeights.restrict (fun c => rec c.2)
+                (Becoming.ConditionalWeights.pairWeight prior lik))
+              fun c => decide (c.1 = h₀)).toReal =
+          Becoming.FreeEnergy.posterior hs.toFinset
+            (fun h =>
+              (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                  (Becoming.ConditionalWeights.pairWeight prior lik) fun c => decide (c.1 = h) && rec c.2).toReal)
+            h₀
+@Becoming.FreeEnergy.weight_zero_of_jointShare_zero : ∀ {α : Type u_1} {β : Type u_2} [inst : DecidableEq α]
+  (prior : α → ℕ) (lik : α → β → ℕ) {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ {h₀ : α},
+      h₀ ∈ hs →
+        (Becoming.ConditionalWeights.share (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik)
+                fun c => decide (c.1 = h₀) && rec c.2).toReal =
+            0 →
+          prior h₀ * Becoming.mass os (lik h₀) rec = 0
+@Becoming.FreeEnergy.record_pos_of_belief : ∀ {α : Type u_1} {β : Type u_2} [inst : DecidableEq α] (prior : α → ℕ)
+  (lik : α → β → ℕ) {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ (q : α → ℝ),
+      ∑ h ∈ hs.toFinset, q h = 1 →
+        (∀ h ∈ hs, prior h * Becoming.mass os (lik h) rec = 0 → q h = 0) →
+          0 <
+            Becoming.mass (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik) fun c => rec c.2
+@Becoming.FreeEnergy.record_surprisal_le_freeEnergy : ∀ {α : Type u_1} {β : Type u_2} [inst : DecidableEq α]
+  (prior : α → ℕ) (lik : α → β → ℕ) {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ (q : α → ℝ),
+      (∀ h ∈ hs, 0 ≤ q h) →
+        ∑ h ∈ hs.toFinset, q h = 1 →
+          (∀ h ∈ hs, prior h * Becoming.mass os (lik h) rec = 0 → q h = 0) →
+            Becoming.FreeEnergy.surprisal
+                (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                    (Becoming.ConditionalWeights.pairWeight prior lik) fun c => rec c.2).toReal ≤
+              Becoming.FreeEnergy.freeEnergy hs.toFinset q fun h =>
+                (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                    (Becoming.ConditionalWeights.pairWeight prior lik) fun c => decide (c.1 = h) && rec c.2).toReal
+@Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff : ∀ {α : Type u_1} {β : Type u_2} [inst : DecidableEq α]
+  (prior : α → ℕ) (lik : α → β → ℕ) {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ (q : α → ℝ),
+      (∀ h ∈ hs, 0 ≤ q h) →
+        ∑ h ∈ hs.toFinset, q h = 1 →
+          (∀ h ∈ hs, prior h * Becoming.mass os (lik h) rec = 0 → q h = 0) →
+            ((Becoming.FreeEnergy.freeEnergy hs.toFinset q fun h =>
+                  (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                      (Becoming.ConditionalWeights.pairWeight prior lik) fun c => decide (c.1 = h) && rec c.2).toReal) =
+                Becoming.FreeEnergy.surprisal
+                  (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                      (Becoming.ConditionalWeights.pairWeight prior lik) fun c => rec c.2).toReal ↔
+              ∀ h ∈ hs,
+                q h =
+                  (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                      (Becoming.ConditionalWeights.restrict (fun c => rec c.2)
+                        (Becoming.ConditionalWeights.pairWeight prior lik))
+                      fun c => decide (c.1 = h)).toReal)
+@Becoming.FreeEnergy.freeEnergy_givenShare : ∀ {α : Type u_1} {β : Type u_2} [inst : DecidableEq α] (prior : α → ℕ)
+  (lik : α → β → ℕ) {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    (0 < Becoming.mass (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik) fun c => rec c.2) →
+      (Becoming.FreeEnergy.freeEnergy hs.toFinset
+          (fun h =>
+            (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                (Becoming.ConditionalWeights.restrict (fun c => rec c.2)
+                  (Becoming.ConditionalWeights.pairWeight prior lik))
+                fun c => decide (c.1 = h)).toReal)
+          fun h =>
+          (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+              (Becoming.ConditionalWeights.pairWeight prior lik) fun c => decide (c.1 = h) && rec c.2).toReal) =
+        Becoming.FreeEnergy.surprisal
+          (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+              (Becoming.ConditionalWeights.pairWeight prior lik) fun c => rec c.2).toReal
+@Becoming.FreeEnergy.minimizes_iff_givenShare : ∀ {α : Type u_1} {β : Type u_2} [inst : DecidableEq α] (prior : α → ℕ)
+  (lik : α → β → ℕ) {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ (q : α → ℝ),
+      (∀ h ∈ hs, 0 ≤ q h) →
+        ∑ h ∈ hs.toFinset, q h = 1 →
+          (∀ h ∈ hs, prior h * Becoming.mass os (lik h) rec = 0 → q h = 0) →
+            ((∀ (q' : α → ℝ),
+                (∀ h ∈ hs, 0 ≤ q' h) →
+                  ∑ h ∈ hs.toFinset, q' h = 1 →
+                    (∀ h ∈ hs, prior h * Becoming.mass os (lik h) rec = 0 → q' h = 0) →
+                      (Becoming.FreeEnergy.freeEnergy hs.toFinset q fun h =>
+                          (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                              (Becoming.ConditionalWeights.pairWeight prior lik) fun c =>
+                              decide (c.1 = h) && rec c.2).toReal) ≤
+                        Becoming.FreeEnergy.freeEnergy hs.toFinset q' fun h =>
+                          (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                              (Becoming.ConditionalWeights.pairWeight prior lik) fun c =>
+                              decide (c.1 = h) && rec c.2).toReal) ↔
+              ∀ h ∈ hs,
+                q h =
+                  (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                      (Becoming.ConditionalWeights.restrict (fun c => rec c.2)
+                        (Becoming.ConditionalWeights.pairWeight prior lik))
+                      fun c => decide (c.1 = h)).toReal)
+@Becoming.FreeEnergy.surprisal_product : ∀ {α : Type u_1} {β : Type u_2} (w₁ : α → ℕ) (w₂ : β → ℕ) (e₁ : α → Bool)
+  (e₂ : β → Bool) (xs : List α) (ys : List β),
+  0 < Becoming.mass xs w₁ e₁ →
+    0 < Becoming.mass ys w₂ e₂ →
+      Becoming.FreeEnergy.surprisal
+          (Becoming.ConditionalWeights.share (Becoming.openSteps xs ys) (fun c => w₁ c.1 * w₂ c.2) fun c =>
+              e₁ c.1 && e₂ c.2).toReal =
+        Becoming.FreeEnergy.surprisal (Becoming.ConditionalWeights.share xs w₁ e₁).toReal +
+          Becoming.FreeEnergy.surprisal (Becoming.ConditionalWeights.share ys w₂ e₂).toReal
+@Becoming.FreeEnergy.cast_total : ∀ {α : Type} [inst : DecidableEq α] (f : α → ℕ) {hs : List α},
+  Becoming.Distinct hs → ↑(Becoming.total hs f) = ∑ h ∈ hs.toFinset, ↑(f h)
+@Becoming.FreeEnergy.cast_powerProduct : ∀ {α : Type} [inst : DecidableEq α] (a n : α → ℕ) {hs : List α},
+  Becoming.Distinct hs → ↑(Becoming.FreeEnergyCounting.powerProduct a n hs) = ∏ h ∈ hs.toFinset, ↑(a h) ^ n h
+@Becoming.FreeEnergy.total_pos_of_counts : ∀ {α : Type} (n a : α → ℕ) {hs : List α},
+  0 < Becoming.total hs n → (∀ h ∈ hs, a h = 0 → n h = 0) → 0 < Becoming.total hs a
+@Becoming.FreeEnergy.powerProduct_pos : ∀ {α : Type} (a n : α → ℕ) {hs : List α},
+  (∀ h ∈ hs, a h = 0 → n h = 0) → 0 < Becoming.FreeEnergyCounting.powerProduct a n hs
+@Becoming.FreeEnergy.countBelief_nonneg : ∀ {α : Type} (hs : List α) (n : α → ℕ) (h : α),
+  0 ≤ Becoming.FreeEnergy.countBelief hs n h
+@Becoming.FreeEnergy.sum_countBelief : ∀ {α : Type} [inst : DecidableEq α] (n : α → ℕ) {hs : List α},
+  Becoming.Distinct hs → 0 < Becoming.total hs n → ∑ h ∈ hs.toFinset, Becoming.FreeEnergy.countBelief hs n h = 1
+@Becoming.FreeEnergy.countBelief_support : ∀ {α : Type} [inst : DecidableEq α] (n a : α → ℕ) {hs : List α},
+  (∀ h ∈ hs, a h = 0 → n h = 0) → ∀ h ∈ hs.toFinset, ↑(a h) = 0 → Becoming.FreeEnergy.countBelief hs n h = 0
+Becoming.FreeEnergy.self_pow_ne_zero : ∀ (k : ℕ), ↑k ^ k ≠ 0
+@Becoming.FreeEnergy.gap_counts : ∀ {α : Type} [inst : DecidableEq α] (n a : α → ℕ) {hs : List α},
+  Becoming.Distinct hs →
+    0 < Becoming.total hs n →
+      (∀ h ∈ hs, a h = 0 → n h = 0) →
+        ↑(Becoming.total hs n) *
+            ((Becoming.FreeEnergy.freeEnergy hs.toFinset (Becoming.FreeEnergy.countBelief hs n) fun h => ↑(a h)) -
+              Becoming.FreeEnergy.surprisal (∑ h ∈ hs.toFinset, ↑(a h))) =
+          Real.log ↑(Becoming.total hs a ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct n n hs) -
+            Real.log ↑(Becoming.total hs n ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct a n hs)
+@Becoming.FreeEnergy.counting_lhs_pos : ∀ {α : Type} (n a : α → ℕ) {hs : List α},
+  (∀ h ∈ hs, a h = 0 → n h = 0) →
+    0 < Becoming.total hs n ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct a n hs
+@Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts : ∀ {α : Type} [inst : DecidableEq α] (n a : α → ℕ)
+  {hs : List α},
+  Becoming.Distinct hs →
+    0 < Becoming.total hs n →
+      (∀ h ∈ hs, a h = 0 → n h = 0) →
+        Becoming.FreeEnergy.surprisal (∑ h ∈ hs.toFinset, ↑(a h)) ≤
+          Becoming.FreeEnergy.freeEnergy hs.toFinset (Becoming.FreeEnergy.countBelief hs n) fun h => ↑(a h)
+@Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts : ∀ {α : Type} [inst : DecidableEq α] (n a : α → ℕ)
+  {hs : List α},
+  Becoming.Distinct hs →
+    0 < Becoming.total hs n →
+      (∀ h ∈ hs, a h = 0 → n h = 0) →
+        ((Becoming.FreeEnergy.freeEnergy hs.toFinset (Becoming.FreeEnergy.countBelief hs n) fun h => ↑(a h)) =
+            Becoming.FreeEnergy.surprisal (∑ h ∈ hs.toFinset, ↑(a h)) ↔
+          ∀ h ∈ hs, n h * Becoming.total hs a = a h * Becoming.total hs n)
+@Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts : ∀ {α : Type} [inst : DecidableEq α] (n a : α → ℕ)
+  {hs : List α},
+  Becoming.Distinct hs →
+    0 < Becoming.total hs n →
+      (∀ h ∈ hs, a h = 0 → n h = 0) →
+        (¬∀ h ∈ hs, n h * Becoming.total hs a = a h * Becoming.total hs n) →
+          Becoming.FreeEnergy.surprisal (∑ h ∈ hs.toFinset, ↑(a h)) <
+            Becoming.FreeEnergy.freeEnergy hs.toFinset (Becoming.FreeEnergy.countBelief hs n) fun h => ↑(a h)
+@Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound : ∀ {α : Type} [inst : DecidableEq α] (n a : α → ℕ)
+  {hs : List α},
+  Becoming.Distinct hs →
+    0 < Becoming.total hs n →
+      (∀ h ∈ hs, a h = 0 → n h = 0) →
+        ((Becoming.FreeEnergy.surprisal (∑ h ∈ hs.toFinset, ↑(a h)) ≤
+            Becoming.FreeEnergy.freeEnergy hs.toFinset (Becoming.FreeEnergy.countBelief hs n) fun h => ↑(a h)) ↔
+          Becoming.total hs n ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct a n hs ≤
+            Becoming.total hs a ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct n n hs)
+@Becoming.FreeEnergy.proportional_iff_posterior : ∀ {α : Type} [inst : DecidableEq α] (n a : α → ℕ) {hs : List α},
+  Becoming.Distinct hs →
+    0 < Becoming.total hs n →
+      (∀ h ∈ hs, a h = 0 → n h = 0) →
+        ((∀ h ∈ hs, n h * Becoming.total hs a = a h * Becoming.total hs n) ↔
+          ∀ h ∈ hs.toFinset,
+            Becoming.FreeEnergy.countBelief hs n h = Becoming.FreeEnergy.posterior hs.toFinset (fun h => ↑(a h)) h)
+@Becoming.FreeEnergy.divergence_counts : ∀ {α : Type} [inst : DecidableEq α] (n a : α → ℕ) {hs : List α},
+  Becoming.Distinct hs →
+    0 < Becoming.total hs n →
+      (∀ h ∈ hs, a h = 0 → n h = 0) →
+        ↑(Becoming.total hs n) *
+            Becoming.FreeEnergy.divergence hs.toFinset (Becoming.FreeEnergy.countBelief hs n)
+              (Becoming.FreeEnergy.posterior hs.toFinset fun h => ↑(a h)) =
+          Real.log ↑(Becoming.total hs a ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct n n hs) -
+            Real.log ↑(Becoming.total hs n ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct a n hs)
+@Becoming.FreeEnergy.counts_eq_mul_exp : ∀ {α : Type} [inst : DecidableEq α] (n a : α → ℕ) {hs : List α},
+  Becoming.Distinct hs →
+    0 < Becoming.total hs n →
+      (∀ h ∈ hs, a h = 0 → n h = 0) →
+        ↑(Becoming.total hs n ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct a n hs) =
+          ↑(Becoming.total hs a ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct n n hs) *
+            Real.exp
+              (-(↑(Becoming.total hs n) *
+                  Becoming.FreeEnergy.divergence hs.toFinset (Becoming.FreeEnergy.countBelief hs n)
+                    (Becoming.FreeEnergy.posterior hs.toFinset fun h => ↑(a h))))
+@Becoming.FreeEnergy.gap_counts_given_record : ∀ {α β : Type} [inst : DecidableEq α] (prior : α → ℕ) (lik : α → β → ℕ)
+  {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ (n : α → ℕ),
+      0 < Becoming.total hs n →
+        (∀ h ∈ hs, prior h * Becoming.mass os (lik h) rec = 0 → n h = 0) →
+          ↑(Becoming.total hs n) *
+              ((Becoming.FreeEnergy.freeEnergy hs.toFinset (Becoming.FreeEnergy.countBelief hs n) fun h =>
+                  (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                      (Becoming.ConditionalWeights.pairWeight prior lik) fun c => decide (c.1 = h) && rec c.2).toReal) -
+                Becoming.FreeEnergy.surprisal
+                  (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                      (Becoming.ConditionalWeights.pairWeight prior lik) fun c => rec c.2).toReal) =
+            Real.log
+                ↑((Becoming.mass (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik) fun c =>
+                        rec c.2) ^
+                      Becoming.total hs n *
+                    Becoming.FreeEnergyCounting.powerProduct n n hs) -
+              Real.log
+                ↑(Becoming.total hs n ^ Becoming.total hs n *
+                    Becoming.FreeEnergyCounting.powerProduct (Becoming.FreeEnergyCounting.joint prior lik os rec) n hs)
+Becoming.ConditionalWeights.Share.same_iff_toReal_eq : ∀ (a b : Becoming.ConditionalWeights.Share),
+  0 < a.whole → 0 < b.whole → (a.Same b ↔ a.toReal = b.toReal)
+@Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts : ∀ {α β : Type} [inst : DecidableEq α]
+  (prior : α → ℕ) (lik : α → β → ℕ) {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ (n : α → ℕ),
+      0 < Becoming.total hs n →
+        (∀ h ∈ hs, prior h * Becoming.mass os (lik h) rec = 0 → n h = 0) →
+          ((Becoming.FreeEnergy.freeEnergy hs.toFinset (Becoming.FreeEnergy.countBelief hs n) fun h =>
+                (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                    (Becoming.ConditionalWeights.pairWeight prior lik) fun c => decide (c.1 = h) && rec c.2).toReal) =
+              Becoming.FreeEnergy.surprisal
+                (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                    (Becoming.ConditionalWeights.pairWeight prior lik) fun c => rec c.2).toReal ↔
+            ∀ h ∈ hs,
+              { part := n h, whole := Becoming.total hs n }.Same
+                (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                  (Becoming.ConditionalWeights.restrict (fun c => rec c.2)
+                    (Becoming.ConditionalWeights.pairWeight prior lik))
+                  fun c => decide (c.1 = h)))
+@Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts : ∀ {α β : Type} [inst : DecidableEq α]
+  (prior : α → ℕ) (lik : α → β → ℕ) {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ (n : α → ℕ),
+      0 < Becoming.total hs n →
+        (∀ h ∈ hs, prior h * Becoming.mass os (lik h) rec = 0 → n h = 0) →
+          ((Becoming.FreeEnergy.freeEnergy hs.toFinset (Becoming.FreeEnergy.countBelief hs n) fun h =>
+                (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                    (Becoming.ConditionalWeights.pairWeight prior lik) fun c => decide (c.1 = h) && rec c.2).toReal) =
+              Becoming.FreeEnergy.surprisal
+                (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                    (Becoming.ConditionalWeights.pairWeight prior lik) fun c => rec c.2).toReal ↔
+            ∀ h ∈ hs,
+              Becoming.FreeEnergy.countBelief hs n h =
+                (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                    (Becoming.ConditionalWeights.restrict (fun c => rec c.2)
+                      (Becoming.ConditionalWeights.pairWeight prior lik))
+                    fun c => decide (c.1 = h)).toReal)
+@Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts : ∀ {α β : Type} [inst : DecidableEq α] (prior : α → ℕ)
+  (lik : α → β → ℕ) {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ (n : α → ℕ),
+      0 < Becoming.total hs n →
+        (∀ h ∈ hs, prior h * Becoming.mass os (lik h) rec = 0 → n h = 0) →
+          Becoming.FreeEnergy.surprisal
+              (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                  (Becoming.ConditionalWeights.pairWeight prior lik) fun c => rec c.2).toReal ≤
+            Becoming.FreeEnergy.freeEnergy hs.toFinset (Becoming.FreeEnergy.countBelief hs n) fun h =>
+              (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                  (Becoming.ConditionalWeights.pairWeight prior lik) fun c => decide (c.1 = h) && rec c.2).toReal
+@Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts : ∀ {α β : Type} [inst : DecidableEq α] (prior : α → ℕ)
+  (lik : α → β → ℕ) {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ (n : α → ℕ),
+      0 < Becoming.total hs n →
+        (∀ h ∈ hs, prior h * Becoming.mass os (lik h) rec = 0 → n h = 0) →
+          (¬∀ h ∈ hs,
+                { part := n h, whole := Becoming.total hs n }.Same
+                  (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                    (Becoming.ConditionalWeights.restrict (fun c => rec c.2)
+                      (Becoming.ConditionalWeights.pairWeight prior lik))
+                    fun c => decide (c.1 = h))) →
+            Becoming.FreeEnergy.surprisal
+                (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                    (Becoming.ConditionalWeights.pairWeight prior lik) fun c => rec c.2).toReal <
+              Becoming.FreeEnergy.freeEnergy hs.toFinset (Becoming.FreeEnergy.countBelief hs n) fun h =>
+                (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                    (Becoming.ConditionalWeights.pairWeight prior lik) fun c => decide (c.1 = h) && rec c.2).toReal
+Becoming.FreeEnergy.Witness.gap_counts_off_support : ↑(Becoming.total [true, false]
+          Becoming.FreeEnergyCounting.Witness.even) *
+      ((Becoming.FreeEnergy.freeEnergy [true, false].toFinset
+          (Becoming.FreeEnergy.countBelief [true, false] Becoming.FreeEnergyCounting.Witness.even) fun h =>
+          ↑(Becoming.FreeEnergyCounting.Witness.secondOnly h)) -
+        Becoming.FreeEnergy.surprisal
+          (∑ h ∈ [true, false].toFinset, ↑(Becoming.FreeEnergyCounting.Witness.secondOnly h))) =
+    -2 * Real.log 2 ∧
+  Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.even ^
+          Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.even *
+        Becoming.FreeEnergyCounting.powerProduct Becoming.FreeEnergyCounting.Witness.secondOnly
+          Becoming.FreeEnergyCounting.Witness.even [true, false] =
+      0 ∧
+    Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.secondOnly ^
+            Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.even *
+          Becoming.FreeEnergyCounting.powerProduct Becoming.FreeEnergyCounting.Witness.even
+            Becoming.FreeEnergyCounting.Witness.even [true, false] =
+        1 ∧
+      Real.log
+            ↑(Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.secondOnly ^
+                  Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.even *
+                Becoming.FreeEnergyCounting.powerProduct Becoming.FreeEnergyCounting.Witness.even
+                  Becoming.FreeEnergyCounting.Witness.even [true, false]) -
+          Real.log
+            ↑(Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.even ^
+                  Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.even *
+                Becoming.FreeEnergyCounting.powerProduct Becoming.FreeEnergyCounting.Witness.secondOnly
+                  Becoming.FreeEnergyCounting.Witness.even [true, false]) =
+        0
+Becoming.FreeEnergy.Witness.one_count_off_support : ↑(Becoming.total [true, false]
+          Becoming.FreeEnergyCounting.Witness.first) *
+      ((Becoming.FreeEnergy.freeEnergy [true, false].toFinset
+          (Becoming.FreeEnergy.countBelief [true, false] Becoming.FreeEnergyCounting.Witness.first) fun h =>
+          ↑(Becoming.FreeEnergyCounting.Witness.secondOnly h)) -
+        Becoming.FreeEnergy.surprisal
+          (∑ h ∈ [true, false].toFinset, ↑(Becoming.FreeEnergyCounting.Witness.secondOnly h))) =
+    Real.log
+        ↑(Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.secondOnly ^
+              Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.first *
+            Becoming.FreeEnergyCounting.powerProduct Becoming.FreeEnergyCounting.Witness.first
+              Becoming.FreeEnergyCounting.Witness.first [true, false]) -
+      Real.log
+        ↑(Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.first ^
+              Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.first *
+            Becoming.FreeEnergyCounting.powerProduct Becoming.FreeEnergyCounting.Witness.secondOnly
+              Becoming.FreeEnergyCounting.Witness.first [true, false]) ∧
+  (Becoming.FreeEnergy.freeEnergy [true, false].toFinset
+        (Becoming.FreeEnergy.countBelief [true, false] Becoming.FreeEnergyCounting.Witness.first) fun h =>
+        ↑(Becoming.FreeEnergyCounting.Witness.secondOnly h)) =
+      Becoming.FreeEnergy.surprisal
+        (∑ h ∈ [true, false].toFinset, ↑(Becoming.FreeEnergyCounting.Witness.secondOnly h)) ∧
+    ¬∀ h ∈ [true, false],
+        Becoming.FreeEnergyCounting.Witness.first h *
+            Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.secondOnly =
+          Becoming.FreeEnergyCounting.Witness.secondOnly h *
+            Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.first
+Becoming.FreeEnergy.Witness.gap_counts_duplicate : ↑(Becoming.total [true, true] fun x => 1) *
+      ((Becoming.FreeEnergy.freeEnergy [true, true].toFinset (Becoming.FreeEnergy.countBelief [true, true] fun x => 1)
+          fun h => (fun x => 1) h) -
+        Becoming.FreeEnergy.surprisal (∑ h ∈ [true, true].toFinset, (fun x => 1) h)) =
+    -Real.log 2 ∧
+  Real.log
+        ↑(((Becoming.total [true, true] fun x => 1) ^ Becoming.total [true, true] fun x => 1) *
+            Becoming.FreeEnergyCounting.powerProduct (fun x => 1) (fun x => 1) [true, true]) -
+      Real.log
+        ↑(((Becoming.total [true, true] fun x => 1) ^ Becoming.total [true, true] fun x => 1) *
+            Becoming.FreeEnergyCounting.powerProduct (fun x => 1) (fun x => 1) [true, true]) =
+    0

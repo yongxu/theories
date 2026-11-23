@@ -1,0 +1,2 @@
+Becoming.falls_not_recurring : ∀ (rank : Nat → Nat) (T : Nat),
+  (∀ (n : Nat), T ≤ n → rank (n + 1) ≤ rank n) → ¬∀ (N : Nat), ∃ n, N ≤ n ∧ rank (n + 1) < rank n

@@ -1,0 +1,97 @@
+@Becoming.Weights.sum_append : ∀ {R : Type u_2} {W : Becoming.Weights R} {α : Type u_1} (f : α → R) (l l' : List α),
+  W.sum (l ++ l') f = W.add (W.sum l f) (W.sum l' f)
+@Becoming.Weights.sum_congr : ∀ {R : Type u_2} {W : Becoming.Weights R} {α : Type u_1} {f g : α → R} (l : List α),
+  (∀ (a : α), a ∈ l → f a = g a) → W.sum l f = W.sum l g
+@Becoming.Weights.mul_sum : ∀ {R : Type u_2} {W : Becoming.Weights R} {α : Type u_1} (c : R) (f : α → R) (l : List α),
+  W.mul c (W.sum l f) = W.sum l fun a => W.mul c (f a)
+@Becoming.Weights.sum_map : ∀ {R : Type u_3} {W : Becoming.Weights R} {α : Type u_1} {β : Type u_2} (g : α → β)
+  (f : β → R) (l : List α), W.sum (List.map g l) f = W.sum l fun a => f (g a)
+@Becoming.Weights.sum_joinMap : ∀ {R : Type u_3} {W : Becoming.Weights R} {α : Type u_1} {β : Type u_2} (g : α → List β)
+  (f : β → R) (l : List α), W.sum (Becoming.joinMap g l) f = W.sum l fun a => W.sum (g a) f
+@Becoming.Weights.sum_courses : ∀ {R : Type u_3} {W : Becoming.Weights R} {S : Type u_1} {A : Type u_2}
+  (weight : S → A → S → R) (moves : List A) (all : List S) (f : S → R) (n : Nat) (s : S),
+  W.sum (Becoming.courses moves all n) (W.along weight f s) = W.transfer weight moves all f n s
+@Becoming.Weights.lumped_iff : ∀ {R : Type u_3} {W : Becoming.Weights R} {S : Type u_1} {A : Type u_2} {K : Type u_4}
+  (weight : S → A → S → R) (moves : List A) (all : List S) (π : S → K) (rep : K → S),
+  (∀ (k : K), π (rep k) = k) →
+    ((∀ (n : Nat) (g : K → R) (s s' : S),
+        π s = π s' →
+          W.transfer weight moves all (fun m => g (π m)) n s = W.transfer weight moves all (fun m => g (π m)) n s') ↔
+      ∀ (g : K → R) (s s' : S),
+        π s = π s' →
+          W.transfer weight moves all (fun m => g (π m)) 1 s = W.transfer weight moves all (fun m => g (π m)) 1 s')
+@Becoming.Weights.Hom.sum : ∀ {R : Type u_2} {T : Type u_3} {W : Becoming.Weights R} {V : Becoming.Weights T}
+  (h : W.Hom V) {α : Type u_1} (f : α → R) (l : List α), h.map (W.sum l f) = V.sum l fun a => h.map (f a)
+@Becoming.Weights.Hom.transfer : ∀ {R : Type u_3} {T : Type u_4} {W : Becoming.Weights R} {V : Becoming.Weights T}
+  (h : W.Hom V) {S : Type u_1} {A : Type u_2} (weight : S → A → S → R) (moves : List A) (all : List S) (f : S → R)
+  (n : Nat) (s : S),
+  h.map (W.transfer weight moves all f n s) =
+    V.transfer (fun s a t => h.map (weight s a t)) moves all (fun s => h.map (f s)) n s
+@Becoming.possibility_sum_true : ∀ {α : Type u_1} {g : α → Bool} {l : List α},
+  Becoming.possibility.sum l g = true → ∃ x, x ∈ l ∧ g x = true
+@Becoming.possibility_sum_of_mem : ∀ {α : Type u_1} {g : α → Bool} {x : α},
+  g x = true → ∀ {l : List α}, x ∈ l → Becoming.possibility.sum l g = true
+@Becoming.mem_appended_right : ∀ {α : Type u_1} {a : α} {l' : List α}, a ∈ l' → ∀ (l : List α), a ∈ l ++ l'
+@Becoming.mem_joinMap : ∀ {α : Type u_1} {β : Type u_2} (g : α → List β) {a : α} {b : β},
+  b ∈ g a → ∀ {l : List α}, a ∈ l → b ∈ Becoming.joinMap g l
+@Becoming.mem_openSteps : ∀ {S : Type u_1} {A : Type u_2} {moves : List A} {all : List S} {a : A} {m : S},
+  a ∈ moves → m ∈ all → (a, m) ∈ Becoming.openSteps moves all
+Becoming.Lumping.loses : ¬∀ (g : Unit → Nat) (s s' : Bool),
+    (fun x => ()) s = (fun x => ()) s' →
+      Becoming.counting.transfer Becoming.Lumping.weight [()] [true, false] (fun m => g ((fun x => ()) m)) 1 s =
+        Becoming.counting.transfer Becoming.Lumping.weight [()] [true, false] (fun m => g ((fun x => ()) m)) 1 s'
+@Becoming.counting_truncation_le : ∀ {α : Type u_1} (kept dropped : List α) (f : α → Nat),
+  Becoming.counting.sum kept f ≤ Becoming.counting.sum (kept ++ dropped) f
+@Becoming.pair_eq : ∀ {a b c d : Nat}, a = c → b = d → (a, b) = (c, d)
+Becoming.swap_middle : ∀ (w x y z : Nat), w + x + (y + z) = w + y + (z + x)
+Becoming.pair_assoc : ∀ (a₁ a₂ c₁ c₂ e₁ e₂ : Nat),
+  (a₁ * c₁ + a₂ * c₂) * e₁ + (a₁ * c₂ + a₂ * c₁) * e₂ = a₁ * (c₁ * e₁ + c₂ * e₂) + a₂ * (c₁ * e₂ + c₂ * e₁)
+Becoming.pair_spread : ∀ (a₁ a₂ b₁ b₂ c₁ c₂ : Nat),
+  a₁ * (b₁ + c₁) + a₂ * (b₂ + c₂) = a₁ * b₁ + a₂ * b₂ + (a₁ * c₁ + a₂ * c₂)
+Becoming.pair_spread_right : ∀ (a₁ a₂ b₁ b₂ c₁ c₂ : Nat),
+  (a₁ + b₁) * c₁ + (a₂ + b₂) * c₂ = a₁ * c₁ + a₂ * c₂ + (b₁ * c₁ + b₂ * c₂)
+Becoming.Interference.cancels : Becoming.possibility.transfer (fun x x_1 x_2 => true) [true, false] [()] (fun x => true)
+      1 () =
+    true ∧
+  Becoming.signed.transfer Becoming.Interference.weight [true, false] [()] (fun x => Becoming.signed.one) 1 () = (1, 1)
+Becoming.Interference.truncation_misses_cancellation : (Becoming.signed.sum [(true, ())] fun p =>
+    Becoming.signed.mul (Becoming.Interference.weight () p.fst p.snd) Becoming.signed.one) =
+  (1, 0)
+Becoming.Interference.unseen : ∀ (φ : Nat × Nat → Bool),
+  (∀ (x y : Nat × Nat), φ (Becoming.signed.add x y) = (φ x || φ y)) →
+    ∀ {x : Nat × Nat}, φ x = true → ∀ (y : Nat × Nat), φ (Becoming.signed.add x y) = true
+Becoming.Interference.unseen_balanced : ∀ (φ : Nat × Nat → Bool),
+  (∀ (x y : Nat × Nat), φ (Becoming.signed.add x y) = (φ x || φ y)) → φ (1, 0) = true → φ (1, 1) = true
+Becoming.Memory.not_of_steps : ∀ (w : Unit → Bool → Unit → Bool) (f : Unit → Bool),
+  ¬∀ (a b : Bool), Becoming.possibility.along w f () [(a, ()), (b, ())] = Becoming.Memory.differ a b
+Becoming.Memory.of_kept : ∀ (a b : Bool),
+  Becoming.possibility.along Becoming.Memory.kept (fun x => true) none [(a, some a), (b, some b)] =
+    Becoming.Memory.differ a b
+Becoming.Weighted.Loop.courses_double : ∀ (n : Nat), Becoming.Weighted.Loop.courses n = 2 ^ n
+@Becoming.IncludedOn.tail : ∀ {Ω : Type u_1} {h : Ω} {tail : List Ω} {before after : Ω → Bool},
+  Becoming.IncludedOn (h :: tail) before after → Becoming.IncludedOn tail before after
+@Becoming.entry_le : ∀ {Ω : Type u_1} {before after : Ω → Bool} (weight : Ω → Nat) {h : Ω},
+  (before h = true → after h = true) →
+    (if before h = true then weight h else 0) ≤ if after h = true then weight h else 0
+@Becoming.mass_mono : ∀ {Ω : Type u_1} {before after : Ω → Bool} (weight : Ω → Nat) {domain : List Ω},
+  Becoming.IncludedOn domain before after → Becoming.mass domain weight before ≤ Becoming.mass domain weight after
+@Becoming.mass_lt_of_added : ∀ {Ω : Type u_1} {before after : Ω → Bool} (weight : Ω → Nat) {x : Ω},
+  0 < weight x →
+    before x = false →
+      after x = true →
+        ∀ {domain : List Ω},
+          Becoming.IncludedOn domain before after →
+            x ∈ domain → Becoming.mass domain weight before < Becoming.mass domain weight after
+@Becoming.mem_of_mass_dirac_pos : ∀ {Ω : Type u_1} [inst : DecidableEq Ω] {x : Ω} {event : Ω → Bool} {domain : List Ω},
+  0 < Becoming.mass domain (Becoming.dirac x) event → x ∈ domain ∧ event x = true
+@Becoming.mass_dirac_pos : ∀ {Ω : Type u_1} [inst : DecidableEq Ω] {x : Ω} {event : Ω → Bool},
+  event x = true → ∀ {domain : List Ω}, x ∈ domain → 0 < Becoming.mass domain (Becoming.dirac x) event
+@Becoming.every_weighting_iff : ∀ {Ω : Type u_1} [DecidableEq Ω] {domain : List Ω} {before after : Ω → Bool},
+  (∀ (weight : Ω → Nat), Becoming.mass domain weight before ≤ Becoming.mass domain weight after) ↔
+    Becoming.IncludedOn domain before after
+@Becoming.every_event_within_iff : ∀ {Ω : Type u_1} {domain : List Ω} {weight : Ω → Nat} {bound : Nat},
+  (∀ (event : Ω → Bool), Becoming.mass domain weight event ≤ bound) ↔
+    (Becoming.mass domain weight fun x => true) ≤ bound
+Becoming.entries_within_not_together : (∀ (x : Bool), x ∈ [false, true] → (fun x => 2) x ≤ 2) ∧
+  ¬(Becoming.mass [false, true] (fun x => 2) fun x => true) ≤ 2
+@Becoming.Situations.sum_one : ∀ {α : Type u_1} (l : List α), (Becoming.counting.sum l fun x => 1) = l.length

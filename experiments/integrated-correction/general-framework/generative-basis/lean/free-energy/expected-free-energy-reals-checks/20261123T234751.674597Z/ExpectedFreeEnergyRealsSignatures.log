@@ -1,0 +1,372 @@
+@Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic : ∀ {σ : Type u_1} {ω : Type u_2}
+  (S : Finset σ) (O : Finset ω) (Qs : σ → ℝ) (A : σ → ω → ℝ) (P : ω → ℝ),
+  Becoming.ExpectedFreeEnergy.expectedFreeEnergy S O Qs A P =
+    -Becoming.ExpectedFreeEnergy.epistemic S O Qs A - Becoming.ExpectedFreeEnergy.pragmatic S O Qs A P
+@Becoming.ExpectedFreeEnergy.epistemic_eq_divergence : ∀ {σ : Type u_1} {ω : Type u_2} (S : Finset σ) (O : Finset ω)
+  (Qs : σ → ℝ) (A : σ → ω → ℝ),
+  (∀ s ∈ S, 0 ≤ Qs s) →
+    (∀ s ∈ S, ∀ o ∈ O, 0 ≤ A s o) →
+      Becoming.ExpectedFreeEnergy.epistemic S O Qs A =
+        Becoming.FreeEnergy.divergence (S ×ˢ O) (Becoming.ExpectedFreeEnergy.joint Qs A)
+          (Becoming.ExpectedFreeEnergy.product S Qs A)
+@Becoming.ExpectedFreeEnergy.epistemic_nonneg : ∀ {σ : Type u_1} {ω : Type u_2} (S : Finset σ) (O : Finset ω)
+  (Qs : σ → ℝ) (A : σ → ω → ℝ),
+  (∀ s ∈ S, 0 ≤ Qs s) →
+    ∑ s ∈ S, Qs s = 1 →
+      (∀ s ∈ S, ∀ o ∈ O, 0 ≤ A s o) → (∀ s ∈ S, ∑ o ∈ O, A s o = 1) → 0 ≤ Becoming.ExpectedFreeEnergy.epistemic S O Qs A
+@Becoming.ExpectedFreeEnergy.epistemic_eq_zero_of_lumped : ∀ {σ : Type u_1} {ω : Type u_2} (S : Finset σ) (O : Finset ω)
+  (Qs : σ → ℝ) (A : σ → ω → ℝ) (B : ω → ℝ),
+  ∑ s ∈ S, Qs s = 1 → (∀ s ∈ S, Qs s ≠ 0 → ∀ o ∈ O, A s o = B o) → Becoming.ExpectedFreeEnergy.epistemic S O Qs A = 0
+@Becoming.ExpectedFreeEnergy.posterior_ratio_of_lumped : ∀ {σ : Type u_1} {ω : Type u_2} (S : Finset σ) (Qs : σ → ℝ)
+  (A : σ → ω → ℝ) {s₁ s₂ : σ},
+  (∀ (o : ω), A s₁ o = A s₂ o) →
+    ∀ (o : ω),
+      Becoming.FreeEnergy.posterior S (fun s => Qs s * A s o) s₁ * Qs s₂ =
+        Becoming.FreeEnergy.posterior S (fun s => Qs s * A s o) s₂ * Qs s₁
+@Becoming.ExpectedFreeEnergy.sum_through : ∀ {σ : Type u_1} {κ : Type u_2} [inst : DecidableEq κ] (S : Finset σ)
+  (Qs : σ → ℝ) (π : σ → κ) (f : κ → ℝ),
+  ∑ s ∈ S, Qs s * f (π s) = ∑ k ∈ Finset.image π S, Becoming.ExpectedFreeEnergy.coarse S Qs π k * f k
+@Becoming.ExpectedFreeEnergy.predicted_through : ∀ {σ : Type u_1} {ω : Type u_2} {κ : Type u_3} [inst : DecidableEq κ]
+  (S : Finset σ) (Qs : σ → ℝ) (π : σ → κ) (B : κ → ω → ℝ) (o : ω),
+  Becoming.ExpectedFreeEnergy.predicted S Qs (fun s => B (π s)) o =
+    Becoming.ExpectedFreeEnergy.predicted (Finset.image π S) (Becoming.ExpectedFreeEnergy.coarse S Qs π) B o
+@Becoming.ExpectedFreeEnergy.epistemic_through : ∀ {σ : Type u_1} {ω : Type u_2} {κ : Type u_3} [inst : DecidableEq κ]
+  (S : Finset σ) (O : Finset ω) (Qs : σ → ℝ) (π : σ → κ) (B : κ → ω → ℝ),
+  (Becoming.ExpectedFreeEnergy.epistemic S O Qs fun s => B (π s)) =
+    Becoming.ExpectedFreeEnergy.epistemic (Finset.image π S) O (Becoming.ExpectedFreeEnergy.coarse S Qs π) B
+@Becoming.ExpectedFreeEnergy.expectedFreeEnergy_through : ∀ {σ : Type u_1} {ω : Type u_2} {κ : Type u_3}
+  [inst : DecidableEq κ] (S : Finset σ) (O : Finset ω) (Qs : σ → ℝ) (π : σ → κ) (B : κ → ω → ℝ) (P : ω → ℝ),
+  Becoming.ExpectedFreeEnergy.expectedFreeEnergy S O Qs (fun s => B (π s)) P =
+    Becoming.ExpectedFreeEnergy.expectedFreeEnergy (Finset.image π S) O (Becoming.ExpectedFreeEnergy.coarse S Qs π) B P
+@Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse : ∀ {σ : Type u_1} {ω : Type u_2} {κ : Type u_3}
+  [inst : DecidableEq κ] (S : Finset σ) (O : Finset ω) {Qs Qs' : σ → ℝ} (π : σ → κ) (B : κ → ω → ℝ) (P : ω → ℝ),
+  (∀ (k : κ), Becoming.ExpectedFreeEnergy.coarse S Qs π k = Becoming.ExpectedFreeEnergy.coarse S Qs' π k) →
+    Becoming.ExpectedFreeEnergy.expectedFreeEnergy S O Qs (fun s => B (π s)) P =
+      Becoming.ExpectedFreeEnergy.expectedFreeEnergy S O Qs' (fun s => B (π s)) P
+Becoming.ExpectedFreeEnergy.gain_term : ∀ (q a P : ℝ),
+  0 ≤ q → 0 ≤ a → q * a ≤ P → q * a * (Real.log a - Real.log P) = P * (q * a / P * (Real.log (q * a / P) - Real.log q))
+@Becoming.ExpectedFreeEnergy.epistemic_eq_expected_gain : ∀ {σ : Type u_1} {ω : Type u_2} (S : Finset σ) (O : Finset ω)
+  (Qs : σ → ℝ) (A : σ → ω → ℝ),
+  (∀ s ∈ S, 0 ≤ Qs s) →
+    (∀ s ∈ S, ∀ o ∈ O, 0 ≤ A s o) →
+      Becoming.ExpectedFreeEnergy.epistemic S O Qs A =
+        ∑ o ∈ O,
+          Becoming.ExpectedFreeEnergy.predicted S Qs A o *
+            Becoming.FreeEnergy.divergence S (Becoming.FreeEnergy.posterior S fun s => Qs s * A s o) Qs
+@Becoming.ExpectedFreeEnergy.courseLik_nonneg : ∀ {σ : Type u_1} {ω : Type u_2} {ε : Type u_3} {L : ε → σ → ω → ℝ},
+  (∀ (e : ε) (s : σ) (o : ω), 0 ≤ L e s o) →
+    ∀ (s : σ) (c : List (ε × ω)), 0 ≤ Becoming.ExpectedFreeEnergy.courseLik L s c
+@Becoming.ExpectedFreeEnergy.courseLik_pos : ∀ {σ : Type u_1} {ω : Type u_2} {ε : Type u_3} {L : ε → σ → ω → ℝ},
+  (∀ (e : ε) (s : σ) (o : ω), 0 < L e s o) →
+    ∀ (s : σ) (c : List (ε × ω)), 0 < Becoming.ExpectedFreeEnergy.courseLik L s c
+@Becoming.ExpectedFreeEnergy.coursePosterior_minimizes : ∀ {σ : Type u_1} {ω : Type u_2} {ε : Type u_3} (S : Finset σ)
+  (Q : σ → ℝ) (L : ε → σ → ω → ℝ) (c : List (ε × ω)),
+  (∀ s ∈ S, 0 ≤ Q s) →
+    (∀ (e : ε) (s : σ) (o : ω), 0 ≤ L e s o) →
+      ∀ (q : σ → ℝ),
+        (∀ s ∈ S, 0 ≤ q s) →
+          ∑ s ∈ S, q s = 1 →
+            (∀ s ∈ S, Q s * Becoming.ExpectedFreeEnergy.courseLik L s c = 0 → q s = 0) →
+              ((∀ (q' : σ → ℝ),
+                  (∀ s ∈ S, 0 ≤ q' s) →
+                    ∑ s ∈ S, q' s = 1 →
+                      (∀ s ∈ S, Q s * Becoming.ExpectedFreeEnergy.courseLik L s c = 0 → q' s = 0) →
+                        (Becoming.FreeEnergy.freeEnergy S q fun s =>
+                            Q s * Becoming.ExpectedFreeEnergy.courseLik L s c) ≤
+                          Becoming.FreeEnergy.freeEnergy S q' fun s =>
+                            Q s * Becoming.ExpectedFreeEnergy.courseLik L s c) ↔
+                ∀ s ∈ S, q s = Becoming.ExpectedFreeEnergy.coursePosterior S Q L c s)
+@Becoming.ExpectedFreeEnergy.posterior_choice_eq_coursePosterior : ∀ {σ : Type u_1} {ω : Type u_2} {ε : Type u_3}
+  (S : Finset σ) (Q : σ → ℝ) (L : ε → σ → ω → ℝ) (pick : List (ε × ω) → ε → ℝ) (c : List (ε × ω)),
+  Becoming.ExpectedFreeEnergy.choiceWeight pick c ≠ 0 →
+    (Becoming.FreeEnergy.posterior S fun s =>
+        Q s * (Becoming.ExpectedFreeEnergy.choiceWeight pick c * Becoming.ExpectedFreeEnergy.courseLik L s c)) =
+      Becoming.ExpectedFreeEnergy.coursePosterior S Q L c
+@Becoming.ExpectedFreeEnergy.choiceWeight_ne_zero : ∀ {ω : Type u_1} {ε : Type u_2} (pick : List (ε × ω) → ε → ℝ),
+  (∀ (c : List (ε × ω)) (e : ε), pick c e ≠ 0) →
+    ∀ (c : List (ε × ω)), Becoming.ExpectedFreeEnergy.choiceWeight pick c ≠ 0
+@Becoming.ExpectedFreeEnergy.courseLik_rescale : ∀ {σ : Type u_1} {ω : Type u_2} {ε : Type u_3} (k : ε → ℝ)
+  (L : ε → σ → ω → ℝ) (s : σ) (c : List (ε × ω)),
+  Becoming.ExpectedFreeEnergy.courseLik (fun e s o => k e * L e s o) s c =
+    Becoming.ExpectedFreeEnergy.choiceWeight (fun x e => k e) c * Becoming.ExpectedFreeEnergy.courseLik L s c
+@Becoming.ExpectedFreeEnergy.coursePosterior_rescale : ∀ {σ : Type u_1} {ω : Type u_2} {ε : Type u_3} (S : Finset σ)
+  (Q : σ → ℝ) (L : ε → σ → ω → ℝ) (k : ε → ℝ),
+  (∀ (e : ε), k e ≠ 0) →
+    ∀ (c : List (ε × ω)),
+      Becoming.ExpectedFreeEnergy.coursePosterior S Q (fun e s o => k e * L e s o) c =
+        Becoming.ExpectedFreeEnergy.coursePosterior S Q L c
+@Becoming.ExpectedFreeEnergy.softmax_pos : ∀ {ε : Type u_1} [inst : Fintype ε] [Nonempty ε] (γ : ℝ) (G : ε → ℝ) (e : ε),
+  0 < Becoming.ExpectedFreeEnergy.softmax γ G e
+@Becoming.ExpectedFreeEnergy.sum_softmax : ∀ {ε : Type u_1} [inst : Fintype ε] [Nonempty ε] (γ : ℝ) (G : ε → ℝ),
+  ∑ e, Becoming.ExpectedFreeEnergy.softmax γ G e = 1
+@Becoming.ExpectedFreeEnergy.softmax_choiceWeight_pos : ∀ {ω : Type u_1} {ε : Type u_2} [inst : Fintype ε] [Nonempty ε]
+  (γ : ℝ) (G : List (ε × ω) → ε → ℝ) (c : List (ε × ω)),
+  0 < Becoming.ExpectedFreeEnergy.choiceWeight (fun c => Becoming.ExpectedFreeEnergy.softmax γ (G c)) c
+@Becoming.ExpectedFreeEnergy.cast_seekWeight : ∀ {α E O : Type} (choose : List (E × O) → E → ℕ) (lik : E → α → O → ℕ)
+  (h : α) (c : List (E × O)),
+  ↑(Becoming.LumpedSeeking.seekWeight choose lik h c) =
+    Becoming.ExpectedFreeEnergy.choiceWeight (fun c e => ↑(choose c e)) c *
+      Becoming.ExpectedFreeEnergy.courseLik (fun e h o => ↑(lik e h o)) h c
+@Becoming.ExpectedFreeEnergy.mass_count : ∀ {Ω : Type} [inst : DecidableEq Ω] (f : Ω → ℕ) (c : Ω) (l : List Ω),
+  (Becoming.mass l f fun x => decide (x = c)) = List.count c l * f c
+@Becoming.ExpectedFreeEnergy.givenCourse_eq_coursePosterior : ∀ {α E O : Type} [inst : DecidableEq α]
+  [inst_1 : DecidableEq E] [inst_2 : DecidableEq O] (prior : α → ℕ) (choose : List (E × O) → E → ℕ)
+  (lik : E → α → O → ℕ) {hs : List α} {courses : List (List (E × O))},
+  Becoming.Distinct hs →
+    ∀ {c : List (E × O)},
+      c ∈ courses →
+        Becoming.ExpectedFreeEnergy.choiceWeight (fun c e => ↑(choose c e)) c ≠ 0 →
+          ∀ {h₀ : α},
+            h₀ ∈ hs →
+              (Becoming.ConditionalWeights.share (Becoming.openSteps hs courses)
+                    (Becoming.ConditionalWeights.restrict (fun x => decide (x.2 = c))
+                      (Becoming.ConditionalWeights.pairWeight prior (Becoming.LumpedSeeking.seekWeight choose lik)))
+                    fun x => decide (x.1 = h₀)).toReal =
+                Becoming.ExpectedFreeEnergy.coursePosterior hs.toFinset (fun h => ↑(prior h))
+                  (fun e h o => ↑(lik e h o)) c h₀
+@Becoming.ExpectedFreeEnergy.unchosen_share_zero : ∀ {α E O : Type} [inst : DecidableEq α] [inst_1 : DecidableEq E]
+  [inst_2 : DecidableEq O] (prior : α → ℕ) (choose : List (E × O) → E → ℕ) (lik : E → α → O → ℕ) {hs : List α}
+  (courses : List (List (E × O))),
+  Becoming.Distinct hs →
+    ∀ {c : List (E × O)},
+      Becoming.ExpectedFreeEnergy.choiceWeight (fun c e => ↑(choose c e)) c = 0 →
+        ∀ {h₀ : α},
+          h₀ ∈ hs →
+            (Becoming.ConditionalWeights.share (Becoming.openSteps hs courses)
+                  (Becoming.ConditionalWeights.restrict (fun x => decide (x.2 = c))
+                    (Becoming.ConditionalWeights.pairWeight prior (Becoming.LumpedSeeking.seekWeight choose lik)))
+                  fun x => decide (x.1 = h₀)).toReal =
+              0
+@Becoming.ExpectedFreeEnergy.share_le_iff_toReal_le : ∀ {Ω : Type u_1} (l : List Ω) (w : Ω → ℕ) (e₁ e₂ : Ω → Bool),
+  (Becoming.ConditionalWeights.share l w e₁).le (Becoming.ConditionalWeights.share l w e₂) ↔
+    (Becoming.ConditionalWeights.share l w e₁).toReal ≤ (Becoming.ConditionalWeights.share l w e₂).toReal
+@Becoming.ExpectedFreeEnergy.givenCourse_le_iff : ∀ {α E O : Type} [inst : DecidableEq α] [inst_1 : DecidableEq E]
+  [inst_2 : DecidableEq O] (prior : α → ℕ) (choose : List (E × O) → E → ℕ) (lik : E → α → O → ℕ) {hs : List α}
+  {courses : List (List (E × O))},
+  Becoming.Distinct hs →
+    ∀ {c : List (E × O)},
+      c ∈ courses →
+        Becoming.ExpectedFreeEnergy.choiceWeight (fun c e => ↑(choose c e)) c ≠ 0 →
+          ∀ {h₁ h₂ : α},
+            h₁ ∈ hs →
+              h₂ ∈ hs →
+                ((Becoming.ConditionalWeights.share (Becoming.openSteps hs courses)
+                        (Becoming.ConditionalWeights.restrict (fun x => decide (x.2 = c))
+                          (Becoming.ConditionalWeights.pairWeight prior (Becoming.LumpedSeeking.seekWeight choose lik)))
+                        fun x => decide (x.1 = h₁)).le
+                    (Becoming.ConditionalWeights.share (Becoming.openSteps hs courses)
+                      (Becoming.ConditionalWeights.restrict (fun x => decide (x.2 = c))
+                        (Becoming.ConditionalWeights.pairWeight prior (Becoming.LumpedSeeking.seekWeight choose lik)))
+                      fun x => decide (x.1 = h₂)) ↔
+                  Becoming.ExpectedFreeEnergy.coursePosterior hs.toFinset (fun h => ↑(prior h))
+                      (fun e h o => ↑(lik e h o)) c h₁ ≤
+                    Becoming.ExpectedFreeEnergy.coursePosterior hs.toFinset (fun h => ↑(prior h))
+                      (fun e h o => ↑(lik e h o)) c h₂)
+@Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order : ∀ {α E O : Type} [inst : DecidableEq α] (prior : α → ℕ)
+  (lik : E → α → O → ℕ) (rule : (E → ℝ) → E → ℕ) (S : Finset α) (Os : Finset O) (Qr : α → ℝ) (A : E → α → O → ℝ)
+  (P : O → ℝ) {hs : List α} (courses : List (List (E × O))) (rec : List (E × O) → Bool),
+  Becoming.Distinct hs →
+    ∀ {h₁ h₂ : α},
+      h₁ ∈ hs →
+        h₂ ∈ hs →
+          (∀ (e : E), Becoming.LumpedSeeking.Tied (lik e) h₁ h₂) →
+            0 <
+                Becoming.mass courses
+                  (Becoming.LumpedSeeking.seekWeight (Becoming.ExpectedFreeEnergy.efeChoice rule S Os Qr A P) lik h₁)
+                  rec →
+              prior h₁ < prior h₂ →
+                ¬(Becoming.ConditionalWeights.share (Becoming.openSteps hs courses)
+                        (Becoming.ConditionalWeights.restrict (fun c => rec c.2)
+                          (Becoming.ConditionalWeights.pairWeight prior
+                            (Becoming.LumpedSeeking.seekWeight (Becoming.ExpectedFreeEnergy.efeChoice rule S Os Qr A P)
+                              lik)))
+                        fun c => decide (c.1 = h₂)).le
+                    (Becoming.ConditionalWeights.share (Becoming.openSteps hs courses)
+                      (Becoming.ConditionalWeights.restrict (fun c => rec c.2)
+                        (Becoming.ConditionalWeights.pairWeight prior
+                          (Becoming.LumpedSeeking.seekWeight (Becoming.ExpectedFreeEnergy.efeChoice rule S Os Qr A P)
+                            lik)))
+                      fun c => decide (c.1 = h₁))
+@Becoming.ExpectedFreeEnergy.courseLik_tied : ∀ {σ : Type u_1} {ω : Type u_2} {ε : Type u_3} {L : ε → σ → ω → ℝ}
+  {s₁ s₂ : σ},
+  (∀ (e : ε) (o : ω), L e s₁ o = L e s₂ o) →
+    ∀ (c : List (ε × ω)), Becoming.ExpectedFreeEnergy.courseLik L s₁ c = Becoming.ExpectedFreeEnergy.courseLik L s₂ c
+@Becoming.ExpectedFreeEnergy.coursePosterior_ratio_kept : ∀ {σ : Type u_1} {ω : Type u_2} {ε : Type u_3} (S : Finset σ)
+  (Q : σ → ℝ) {L : ε → σ → ω → ℝ} {s₁ s₂ : σ},
+  (∀ (e : ε) (o : ω), L e s₁ o = L e s₂ o) →
+    ∀ (c : List (ε × ω)),
+      Becoming.ExpectedFreeEnergy.coursePosterior S Q L c s₁ * Q s₂ =
+        Becoming.ExpectedFreeEnergy.coursePosterior S Q L c s₂ * Q s₁
+@Becoming.ExpectedFreeEnergy.coursePosterior_order_kept : ∀ {σ : Type u_1} {ω : Type u_2} {ε : Type u_3} (S : Finset σ)
+  (Q : σ → ℝ) {L : ε → σ → ω → ℝ} {s₁ s₂ : σ},
+  (∀ (e : ε) (o : ω), L e s₁ o = L e s₂ o) →
+    ∀ (c : List (ε × ω)),
+      0 < Becoming.ExpectedFreeEnergy.courseLik L s₁ c →
+        0 < ∑ s ∈ S, Q s * Becoming.ExpectedFreeEnergy.courseLik L s c →
+          Q s₁ < Q s₂ →
+            Becoming.ExpectedFreeEnergy.coursePosterior S Q L c s₁ <
+              Becoming.ExpectedFreeEnergy.coursePosterior S Q L c s₂
+@Becoming.ExpectedFreeEnergy.softmax_order_kept : ∀ {σ : Type u_1} {ω : Type u_2} {ε : Type u_3} [inst : Fintype ε]
+  [Nonempty ε] (S : Finset σ) (O : Finset ω) (Q : σ → ℝ) (L : ε → σ → ω → ℝ) (P : ω → ℝ) (γ : ℝ) {s₁ s₂ : σ},
+  (∀ (e : ε) (o : ω), L e s₁ o = L e s₂ o) →
+    ∀ (c : List (ε × ω)),
+      0 < Becoming.ExpectedFreeEnergy.courseLik L s₁ c →
+        0 < ∑ s ∈ S, Q s * Becoming.ExpectedFreeEnergy.courseLik L s c →
+          Q s₁ < Q s₂ →
+            Becoming.FreeEnergy.posterior S
+                (fun s =>
+                  Q s *
+                    (Becoming.ExpectedFreeEnergy.choiceWeight
+                        (Becoming.ExpectedFreeEnergy.efeChoice (Becoming.ExpectedFreeEnergy.softmax γ) S O Q L P) c *
+                      Becoming.ExpectedFreeEnergy.courseLik L s c))
+                s₁ <
+              Becoming.FreeEnergy.posterior S
+                (fun s =>
+                  Q s *
+                    (Becoming.ExpectedFreeEnergy.choiceWeight
+                        (Becoming.ExpectedFreeEnergy.efeChoice (Becoming.ExpectedFreeEnergy.softmax γ) S O Q L P) c *
+                      Becoming.ExpectedFreeEnergy.courseLik L s c))
+                s₂
+@Becoming.ExpectedFreeEnergy.courseLik_through : ∀ {σ : Type u_1} {ω : Type u_2} {ε : Type u_3} {κ : Type u_4}
+  (B : ε → κ → ω → ℝ) (π : σ → κ) (s : σ) (c : List (ε × ω)),
+  Becoming.ExpectedFreeEnergy.courseLik (fun e s => B e (π s)) s c = Becoming.ExpectedFreeEnergy.courseLik B (π s) c
+@Becoming.ExpectedFreeEnergy.coarse_div : ∀ {σ : Type u_1} {κ : Type u_2} [inst : DecidableEq κ] (S : Finset σ)
+  (f : σ → ℝ) (Z : ℝ) (π : σ → κ) (k : κ),
+  Becoming.ExpectedFreeEnergy.coarse S (fun s => f s / Z) π k = Becoming.ExpectedFreeEnergy.coarse S f π k / Z
+@Becoming.ExpectedFreeEnergy.coarse_coursePosterior : ∀ {σ : Type u_1} {ω : Type u_2} {ε : Type u_3} {κ : Type u_4}
+  [inst : DecidableEq κ] (S : Finset σ) (Q : σ → ℝ) (π : σ → κ) (B : ε → κ → ω → ℝ) (c : List (ε × ω)) (k : κ),
+  Becoming.ExpectedFreeEnergy.coarse S (Becoming.ExpectedFreeEnergy.coursePosterior S Q (fun e s => B e (π s)) c) π k =
+    Becoming.ExpectedFreeEnergy.coursePosterior (Finset.image π S) (Becoming.ExpectedFreeEnergy.coarse S Q π) B c k
+@Becoming.ExpectedFreeEnergy.efe_through_course : ∀ {σ : Type u_1} {ω : Type u_2} {ε : Type u_3} {κ : Type u_4}
+  [inst : DecidableEq κ] (S : Finset σ) (O : Finset ω) (Q : σ → ℝ) (π : σ → κ) (B : ε → κ → ω → ℝ) (P : ω → ℝ)
+  (c : List (ε × ω)) (e : ε),
+  Becoming.ExpectedFreeEnergy.expectedFreeEnergy S O
+      (Becoming.ExpectedFreeEnergy.coursePosterior S Q (fun e s => B e (π s)) c) (fun s => B e (π s)) P =
+    Becoming.ExpectedFreeEnergy.expectedFreeEnergy (Finset.image π S) O
+      (Becoming.ExpectedFreeEnergy.coursePosterior (Finset.image π S) (Becoming.ExpectedFreeEnergy.coarse S Q π) B c)
+      (B e) P
+@Becoming.ExpectedFreeEnergy.epistemic_through_course : ∀ {σ : Type u_1} {ω : Type u_2} {ε : Type u_3} {κ : Type u_4}
+  [inst : DecidableEq κ] (S : Finset σ) (O : Finset ω) (Q : σ → ℝ) (π : σ → κ) (B : ε → κ → ω → ℝ) (c : List (ε × ω))
+  (e : ε),
+  (Becoming.ExpectedFreeEnergy.epistemic S O (Becoming.ExpectedFreeEnergy.coursePosterior S Q (fun e s => B e (π s)) c)
+      fun s => B e (π s)) =
+    Becoming.ExpectedFreeEnergy.epistemic (Finset.image π S) O
+      (Becoming.ExpectedFreeEnergy.coursePosterior (Finset.image π S) (Becoming.ExpectedFreeEnergy.coarse S Q π) B c)
+      (B e)
+@Becoming.ExpectedFreeEnergy.courseWeight_through : ∀ {σ : Type u_1} {ω : Type u_2} {ε : Type u_3} {κ : Type u_4}
+  [inst : DecidableEq κ] (S : Finset σ) (Q : σ → ℝ) (π : σ → κ) (B : ε → κ → ω → ℝ) (pick : List (ε × ω) → ε → ℝ)
+  (c : List (ε × ω)),
+  Becoming.ExpectedFreeEnergy.courseWeight S Q (fun e s => B e (π s)) pick c =
+    Becoming.ExpectedFreeEnergy.courseWeight (Finset.image π S) (Becoming.ExpectedFreeEnergy.coarse S Q π) B pick c
+@Becoming.ExpectedFreeEnergy.efeChoice_same_of_coarse : ∀ {σ : Type u_1} {ω : Type u_2} {ε : Type u_3} {κ : Type u_4}
+  [inst : DecidableEq κ] {τ : Type u_5} (S : Finset σ) (O : Finset ω) {Q Q' : σ → ℝ} (π : σ → κ) (B : ε → κ → ω → ℝ)
+  (P : ω → ℝ),
+  (∀ (k : κ), Becoming.ExpectedFreeEnergy.coarse S Q π k = Becoming.ExpectedFreeEnergy.coarse S Q' π k) →
+    ∀ (rule : (ε → ℝ) → ε → τ),
+      Becoming.ExpectedFreeEnergy.efeChoice rule S O Q (fun e s => B e (π s)) P =
+        Becoming.ExpectedFreeEnergy.efeChoice rule S O Q' (fun e s => B e (π s)) P
+@Becoming.ExpectedFreeEnergy.seeking_blind_to_split : ∀ {σ : Type u_1} {ω : Type u_2} {ε : Type u_3} {κ : Type u_4}
+  [inst : DecidableEq κ] (S : Finset σ) (O : Finset ω) {Q Q' : σ → ℝ} (π : σ → κ) (B : ε → κ → ω → ℝ) (P : ω → ℝ),
+  (∀ (k : κ), Becoming.ExpectedFreeEnergy.coarse S Q π k = Becoming.ExpectedFreeEnergy.coarse S Q' π k) →
+    ∀ (rule : (ε → ℝ) → ε → ℝ),
+      (∀ (c : List (ε × ω)),
+          Becoming.ExpectedFreeEnergy.efeChoice rule S O Q (fun e s => B e (π s)) P c =
+            Becoming.ExpectedFreeEnergy.efeChoice rule S O Q' (fun e s => B e (π s)) P c) ∧
+        (∀ (c : List (ε × ω)),
+            Becoming.ExpectedFreeEnergy.courseWeight S Q (fun e s => B e (π s))
+                (Becoming.ExpectedFreeEnergy.efeChoice rule S O Q (fun e s => B e (π s)) P) c =
+              Becoming.ExpectedFreeEnergy.courseWeight S Q' (fun e s => B e (π s))
+                (Becoming.ExpectedFreeEnergy.efeChoice rule S O Q' (fun e s => B e (π s)) P) c) ∧
+          ∀ (s : σ) (c : List (ε × ω)),
+            Becoming.ExpectedFreeEnergy.choiceWeight
+                  (Becoming.ExpectedFreeEnergy.efeChoice rule S O Q (fun e s => B e (π s)) P) c *
+                Becoming.ExpectedFreeEnergy.courseLik (fun e s => B e (π s)) s c =
+              Becoming.ExpectedFreeEnergy.choiceWeight
+                  (Becoming.ExpectedFreeEnergy.efeChoice rule S O Q' (fun e s => B e (π s)) P) c *
+                Becoming.ExpectedFreeEnergy.courseLik (fun e s => B e (π s)) s c
+@Becoming.ExpectedFreeEnergy.softmax_blind_to_split : ∀ {σ : Type u_1} {ω : Type u_2} {ε : Type u_3} {κ : Type u_4}
+  [inst : DecidableEq κ] [inst_1 : Fintype ε] (S : Finset σ) (O : Finset ω) {Q Q' : σ → ℝ} (π : σ → κ)
+  (B : ε → κ → ω → ℝ) (P : ω → ℝ),
+  (∀ (k : κ), Becoming.ExpectedFreeEnergy.coarse S Q π k = Becoming.ExpectedFreeEnergy.coarse S Q' π k) →
+    ∀ (γ : ℝ) (c : List (ε × ω)),
+      Becoming.ExpectedFreeEnergy.courseWeight S Q (fun e s => B e (π s))
+          (Becoming.ExpectedFreeEnergy.efeChoice (Becoming.ExpectedFreeEnergy.softmax γ) S O Q (fun e s => B e (π s)) P)
+          c =
+        Becoming.ExpectedFreeEnergy.courseWeight S Q' (fun e s => B e (π s))
+          (Becoming.ExpectedFreeEnergy.efeChoice (Becoming.ExpectedFreeEnergy.softmax γ) S O Q' (fun e s => B e (π s))
+            P)
+          c
+@Becoming.ExpectedFreeEnergy.seeking_reads_profiles : ∀ {σ : Type u_1} {ω : Type u_2} {ε : Type u_3} (S : Finset σ)
+  (O : Finset ω) {Q Q' : σ → ℝ} (L : ε → σ → ω → ℝ) (P : ω → ℝ),
+  (∀ (k : ε → ω → ℝ),
+      Becoming.ExpectedFreeEnergy.coarse S Q (fun s e => L e s) k =
+        Becoming.ExpectedFreeEnergy.coarse S Q' (fun s e => L e s) k) →
+    ∀ (rule : (ε → ℝ) → ε → ℝ),
+      (∀ (c : List (ε × ω)),
+          Becoming.ExpectedFreeEnergy.efeChoice rule S O Q L P c =
+            Becoming.ExpectedFreeEnergy.efeChoice rule S O Q' L P c) ∧
+        ∀ (c : List (ε × ω)),
+          Becoming.ExpectedFreeEnergy.courseWeight S Q L (Becoming.ExpectedFreeEnergy.efeChoice rule S O Q L P) c =
+            Becoming.ExpectedFreeEnergy.courseWeight S Q' L (Becoming.ExpectedFreeEnergy.efeChoice rule S O Q' L P) c
+Becoming.ExpectedFreeEnergy.Witness.agreeing_pos : ∀ (x : Unit) (h : Becoming.LumpedSeeking.Agree.Bias)
+  (o : Bool × Bool), 0 < ↑(Becoming.LumpedSeeking.Agree.agreeing h o)
+Becoming.ExpectedFreeEnergy.Witness.separating_turns : Becoming.ExpectedFreeEnergy.coursePosterior
+      Becoming.LumpedSeeking.Agree.hypotheses.toFinset (fun h => ↑(Becoming.LumpedSeeking.Agree.prior h))
+      (fun e h o => ↑(Becoming.LumpedSeeking.Agree.experiment e h o)) [(true, true, true)]
+      Becoming.LumpedSeeking.Agree.Bias.tails <
+    Becoming.ExpectedFreeEnergy.coursePosterior Becoming.LumpedSeeking.Agree.hypotheses.toFinset
+      (fun h => ↑(Becoming.LumpedSeeking.Agree.prior h)) (fun e h o => ↑(Becoming.LumpedSeeking.Agree.experiment e h o))
+      [(true, true, true)] Becoming.LumpedSeeking.Agree.Bias.heads ∧
+  ∀ (c : List (Unit × Bool × Bool)),
+    Becoming.ExpectedFreeEnergy.coursePosterior Becoming.LumpedSeeking.Agree.hypotheses.toFinset
+        (fun h => ↑(Becoming.LumpedSeeking.Agree.prior h)) (fun x h o => ↑(Becoming.LumpedSeeking.Agree.agreeing h o)) c
+        Becoming.LumpedSeeking.Agree.Bias.heads <
+      Becoming.ExpectedFreeEnergy.coursePosterior Becoming.LumpedSeeking.Agree.hypotheses.toFinset
+        (fun h => ↑(Becoming.LumpedSeeking.Agree.prior h)) (fun x h o => ↑(Becoming.LumpedSeeking.Agree.agreeing h o)) c
+        Becoming.LumpedSeeking.Agree.Bias.tails
+Becoming.ExpectedFreeEnergy.Witness.unchosen_course : (Becoming.ConditionalWeights.share
+        (Becoming.openSteps Becoming.LumpedSeeking.Agree.hypotheses [[(false, true, true)]])
+        (Becoming.ConditionalWeights.restrict (fun x => decide (x.2 = [(false, true, true)]))
+          (Becoming.ConditionalWeights.pairWeight Becoming.LumpedSeeking.Agree.prior
+            (Becoming.LumpedSeeking.seekWeight Becoming.LumpedSeeking.Agree.pickReading
+              Becoming.LumpedSeeking.Agree.experiment)))
+        fun x => decide (x.1 = Becoming.LumpedSeeking.Agree.Bias.heads)).toReal =
+    0 ∧
+  Becoming.ExpectedFreeEnergy.coursePosterior Becoming.LumpedSeeking.Agree.hypotheses.toFinset
+      (fun h => ↑(Becoming.LumpedSeeking.Agree.prior h)) (fun e h o => ↑(Becoming.LumpedSeeking.Agree.experiment e h o))
+      [(false, true, true)] Becoming.LumpedSeeking.Agree.Bias.heads ≠
+    0
+Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing_through : (fun e s =>
+    Becoming.ExpectedFreeEnergy.Witness.agreeOrNothingByClass e (Becoming.ExpectedFreeEnergy.Witness.biasClass s)) =
+  Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing
+Becoming.ExpectedFreeEnergy.Witness.priors_alike : ∀ (k : Bool),
+  Becoming.ExpectedFreeEnergy.coarse Becoming.LumpedSeeking.Agree.hypotheses.toFinset
+      (fun h => ↑(Becoming.LumpedSeeking.Agree.prior h)) Becoming.ExpectedFreeEnergy.Witness.biasClass k =
+    Becoming.ExpectedFreeEnergy.coarse Becoming.LumpedSeeking.Agree.hypotheses.toFinset
+      (fun h => ↑(Becoming.ExpectedFreeEnergy.Witness.swappedPrior h)) Becoming.ExpectedFreeEnergy.Witness.biasClass k
+Becoming.ExpectedFreeEnergy.Witness.split_unseen : Becoming.ExpectedFreeEnergy.coursePosterior
+      Becoming.LumpedSeeking.Agree.hypotheses.toFinset (fun h => ↑(Becoming.LumpedSeeking.Agree.prior h))
+      Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing [(true, true, true)] Becoming.LumpedSeeking.Agree.Bias.heads ≠
+    Becoming.ExpectedFreeEnergy.coursePosterior Becoming.LumpedSeeking.Agree.hypotheses.toFinset
+      (fun h => ↑(Becoming.ExpectedFreeEnergy.Witness.swappedPrior h))
+      Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing [(true, true, true)] Becoming.LumpedSeeking.Agree.Bias.heads ∧
+  ∀ (O : Finset (Bool × Bool)) (P : Bool × Bool → ℝ) (rule : (Bool → ℝ) → Bool → ℝ),
+    (∀ (c : List (Bool × Bool × Bool)),
+        Becoming.ExpectedFreeEnergy.efeChoice rule Becoming.LumpedSeeking.Agree.hypotheses.toFinset O
+            (fun h => ↑(Becoming.LumpedSeeking.Agree.prior h)) Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing P c =
+          Becoming.ExpectedFreeEnergy.efeChoice rule Becoming.LumpedSeeking.Agree.hypotheses.toFinset O
+            (fun h => ↑(Becoming.ExpectedFreeEnergy.Witness.swappedPrior h))
+            Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing P c) ∧
+      ∀ (c : List (Bool × Bool × Bool)),
+        Becoming.ExpectedFreeEnergy.courseWeight Becoming.LumpedSeeking.Agree.hypotheses.toFinset
+            (fun h => ↑(Becoming.LumpedSeeking.Agree.prior h)) Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing
+            (Becoming.ExpectedFreeEnergy.efeChoice rule Becoming.LumpedSeeking.Agree.hypotheses.toFinset O
+              (fun h => ↑(Becoming.LumpedSeeking.Agree.prior h)) Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing P)
+            c =
+          Becoming.ExpectedFreeEnergy.courseWeight Becoming.LumpedSeeking.Agree.hypotheses.toFinset
+            (fun h => ↑(Becoming.ExpectedFreeEnergy.Witness.swappedPrior h))
+            Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing
+            (Becoming.ExpectedFreeEnergy.efeChoice rule Becoming.LumpedSeeking.Agree.hypotheses.toFinset O
+              (fun h => ↑(Becoming.ExpectedFreeEnergy.Witness.swappedPrior h))
+              Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing P)
+            c

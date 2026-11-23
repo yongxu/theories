@@ -1,0 +1,87 @@
+@Becoming.PositionTerms.excess_of_common : ∀ {x y x' y' : Nat},
+  x + y' = y + x' → Becoming.excess x y = Becoming.excess x' y'
+@Becoming.PositionTerms.common_of_excess : ∀ {x y x' y' : Nat},
+  Becoming.excess x y = Becoming.excess x' y' → Becoming.excess y x = Becoming.excess y' x' → x + y' = y + x'
+@Becoming.PositionTerms.trade_of_balances : ∀ {x x' t t' c d c' d' : Nat},
+  x + d = t + c → x' + d' = t' + c' → c = c' → d = d' → x' + t = x + t'
+@Becoming.PositionTerms.same_terms_of_keeps : ∀ {α : Type} {ps : List α} {w w' : α → Nat},
+  Becoming.RelativePosition.Keeps ps w w' →
+    ∀ (a : α → Nat),
+      Becoming.SelectionTerm.concord ps w a = Becoming.SelectionTerm.concord ps w' a ∧
+        Becoming.SelectionTerm.discord ps w a = Becoming.SelectionTerm.discord ps w' a
+@Becoming.PositionTerms.mul_oneAt : ∀ {α : Type} [inst : DecidableEq α] (w : α → Nat) (p q : α),
+  w q * Becoming.PositionTerms.oneAt p q = w p * Becoming.PositionTerms.oneAt p q
+@Becoming.PositionTerms.listed_pos : ∀ {α : Type} [inst : DecidableEq α] {p : α} {ps : List α},
+  p ∈ ps → 0 < Becoming.total ps (Becoming.PositionTerms.oneAt p)
+@Becoming.PositionTerms.weighted_oneAt : ∀ {α : Type} [inst : DecidableEq α] (ps : List α) (w : α → Nat) (p : α),
+  Becoming.SelectionTerm.weighted ps w (Becoming.PositionTerms.oneAt p) =
+    w p * Becoming.total ps (Becoming.PositionTerms.oneAt p)
+@Becoming.PositionTerms.covariation_oneAt : ∀ {α : Type} [inst : DecidableEq α] (ps : List α) (w : α → Nat) (p : α),
+  ps.length * w p * Becoming.total ps (Becoming.PositionTerms.oneAt p) +
+      Becoming.SelectionTerm.discord ps w (Becoming.PositionTerms.oneAt p) =
+    Becoming.total ps w * Becoming.total ps (Becoming.PositionTerms.oneAt p) +
+      Becoming.SelectionTerm.concord ps w (Becoming.PositionTerms.oneAt p)
+@Becoming.PositionTerms.keeps_at_of_terms : ∀ {α : Type} [inst : DecidableEq α] {ps : List α} {w w' : α → Nat} {p : α},
+  p ∈ ps →
+    Becoming.SelectionTerm.concord ps w (Becoming.PositionTerms.oneAt p) =
+        Becoming.SelectionTerm.concord ps w' (Becoming.PositionTerms.oneAt p) →
+      Becoming.SelectionTerm.discord ps w (Becoming.PositionTerms.oneAt p) =
+          Becoming.SelectionTerm.discord ps w' (Becoming.PositionTerms.oneAt p) →
+        Becoming.RelativePosition.riseCount ps w w' p = Becoming.RelativePosition.fallCount ps w w' p
+@Becoming.PositionTerms.keeps_iff_same_terms : ∀ {α : Type} [DecidableEq α] {ps : List α} {w w' : α → Nat},
+  Becoming.RelativePosition.Keeps ps w w' ↔
+    ∀ (a : α → Nat),
+      Becoming.SelectionTerm.concord ps w a = Becoming.SelectionTerm.concord ps w' a ∧
+        Becoming.SelectionTerm.discord ps w a = Becoming.SelectionTerm.discord ps w' a
+Becoming.PositionTerms.square_balance : ∀ (x y : Nat), x * x + y * y = x * y + y * x + Becoming.PositionTerms.apart x y
+@Becoming.PositionTerms.zero_of_square_le : ∀ {e : Nat}, e * e ≤ 0 → e = 0
+@Becoming.PositionTerms.eq_of_apart_zero : ∀ {x y : Nat}, Becoming.PositionTerms.apart x y = 0 → x = y
+@Becoming.PositionTerms.pairs_agree : ∀ {α : Type} (ps : List α) (F G : α → α → Nat),
+  ((Becoming.total ps fun p => Becoming.total ps fun q => F p q * F p q) =
+      Becoming.total ps fun p => Becoming.total ps fun q => G p q * F p q) →
+    ((Becoming.total ps fun p => Becoming.total ps fun q => F p q * G p q) =
+        Becoming.total ps fun p => Becoming.total ps fun q => G p q * G p q) →
+      ∀ (p q : α), p ∈ ps → q ∈ ps → F p q = G p q
+@Becoming.PositionTerms.keeps_of_own_concord : ∀ {α : Type} {ps : List α} {w w' : α → Nat},
+  Becoming.SelectionTerm.concord ps w w = Becoming.SelectionTerm.concord ps w' w →
+    Becoming.SelectionTerm.concord ps w w' = Becoming.SelectionTerm.concord ps w' w' →
+      Becoming.RelativePosition.Keeps ps w w'
+@Becoming.PositionTerms.keeps_iff_own_concord : ∀ {α : Type} {ps : List α} {w w' : α → Nat},
+  Becoming.RelativePosition.Keeps ps w w' ↔
+    Becoming.SelectionTerm.concord ps w w = Becoming.SelectionTerm.concord ps w' w ∧
+      Becoming.SelectionTerm.concord ps w w' = Becoming.SelectionTerm.concord ps w' w'
+@Becoming.PositionTerms.keeps_iff_terms : ∀ {α : Type} {ps : List α} {w w' : α → Nat},
+  Becoming.RelativePosition.Keeps ps w w' ↔
+    ∀ (a : α → Nat),
+      Becoming.SelectionTerm.concord ps w a = Becoming.SelectionTerm.concord ps w' a ∧
+        Becoming.SelectionTerm.discord ps w a = Becoming.SelectionTerm.discord ps w' a
+@Becoming.PositionTerms.keeps_of_shifted : ∀ {α : Type} {ps : List α} {w w' : α → Nat} {k : Nat},
+  (∀ (p : α), p ∈ ps → w' p = w p + k) → Becoming.RelativePosition.Keeps ps w w'
+@Becoming.PositionTerms.concord_amount_on : ∀ {α : Type} {ps : List α} {w a a' : α → Nat},
+  (∀ (p : α), p ∈ ps → a' p = a p) → Becoming.SelectionTerm.concord ps w a' = Becoming.SelectionTerm.concord ps w a
+@Becoming.PositionTerms.discord_amount_on : ∀ {α : Type} {ps : List α} {w a a' : α → Nat},
+  (∀ (p : α), p ∈ ps → a' p = a p) → Becoming.SelectionTerm.discord ps w a' = Becoming.SelectionTerm.discord ps w a
+@Becoming.PositionTerms.kept_step : ∀ {α : Type} {G G' : Becoming.SelectionTerm.Generations α} {t : Nat},
+  G'.family t = G.family t →
+    (∀ (p : α), p ∈ G.family t → G'.amount t p = G.amount t p) →
+      Becoming.RelativePosition.Keeps (G.family t) (G.offspringNumber t) (G'.offspringNumber t) →
+        G'.concordAt t = G.concordAt t ∧ G'.discordAt t = G.discordAt t
+@Becoming.PositionTerms.keeps_order : ∀ {α : Type} {ps : List α} {w w' : α → Nat},
+  Becoming.RelativePosition.Keeps ps w w' → ∀ {p q : α}, p ∈ ps → q ∈ ps → (w q < w p ↔ w' q < w' p)
+@Becoming.PositionTerms.uniform_amount_same_terms : ∀ {α : Type} (ps : List α) (w w' : α → Nat) (k : Nat),
+  ((Becoming.SelectionTerm.concord ps w fun x => k) = Becoming.SelectionTerm.concord ps w' fun x => k) ∧
+    (Becoming.SelectionTerm.discord ps w fun x => k) = Becoming.SelectionTerm.discord ps w' fun x => k
+Becoming.PositionTerms.TwoProfiles.not_keeps : ¬Becoming.RelativePosition.Keeps [false, true]
+    Becoming.PositionTerms.TwoProfiles.near Becoming.PositionTerms.TwoProfiles.far
+Becoming.PositionTerms.TwoProfiles.same_order_apart : (∀ (p q : Bool),
+    Becoming.PositionTerms.TwoProfiles.near q < Becoming.PositionTerms.TwoProfiles.near p ↔
+      Becoming.PositionTerms.TwoProfiles.far q < Becoming.PositionTerms.TwoProfiles.far p) ∧
+  ¬Becoming.RelativePosition.Keeps [false, true] Becoming.PositionTerms.TwoProfiles.near
+      Becoming.PositionTerms.TwoProfiles.far
+Becoming.PositionTerms.TwoProfiles.one_amount_not_enough : (((Becoming.SelectionTerm.concord [false, true]
+        Becoming.PositionTerms.TwoProfiles.near fun x => 0) =
+      Becoming.SelectionTerm.concord [false, true] Becoming.PositionTerms.TwoProfiles.far fun x => 0) ∧
+    (Becoming.SelectionTerm.discord [false, true] Becoming.PositionTerms.TwoProfiles.near fun x => 0) =
+      Becoming.SelectionTerm.discord [false, true] Becoming.PositionTerms.TwoProfiles.far fun x => 0) ∧
+  ¬Becoming.RelativePosition.Keeps [false, true] Becoming.PositionTerms.TwoProfiles.near
+      Becoming.PositionTerms.TwoProfiles.far

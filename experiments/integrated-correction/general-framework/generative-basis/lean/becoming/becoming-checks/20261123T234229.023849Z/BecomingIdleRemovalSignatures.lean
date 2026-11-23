@@ -1,0 +1,14 @@
+import Becoming.IdleRemoval
+#check @Becoming.Stutter.moving_unique
+#check @Becoming.Stutter.le_moving
+#check @Becoming.Stutter.idle_before_moving
+#check @Becoming.Stutter.moving_eq
+#check @Becoming.Stutter.every_step
+#check @Becoming.Web.sameAt_of_unmoved
+#check @Becoming.World.withoutIdle_sameAt
+#check @Becoming.World.withoutIdle_after
+#check @Becoming.World.withoutIdle_premises
+#check @Becoming.World.withoutIdle_transmits
+#check @Becoming.World.withoutIdle_counted
+#check @Becoming.World.withoutIdle_totals
+#check @Becoming.World.withoutIdle_counts

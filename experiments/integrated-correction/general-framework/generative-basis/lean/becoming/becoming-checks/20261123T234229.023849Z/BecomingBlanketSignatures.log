@@ -1,0 +1,142 @@
+@Becoming.Blanket.congr3 : ∀ {α : Sort u_1} {β : Sort u_2} {γ : Sort u_3} {δ : Sort u_4} (f : α → β → γ → δ) {a a' : α}
+  {b b' : β} {c c' : γ}, a = a' → b = b' → c = c' → f a b c = f a' b' c'
+@Becoming.Blanket.Blanketed.agent_through_sensory : ∀ {I S A E : Type u_1} (b : Becoming.Blanket.Blanketed I S A E)
+  {x y : Becoming.Blanket.Parts I S A E},
+  x.internal = y.internal →
+    x.active = y.active →
+      ∀ (n : Nat),
+        (∀ (k : Nat), k < n → (b.course x k).sensory = (b.course y k).sensory) →
+          (b.course x n).internal = (b.course y n).internal ∧ (b.course x n).active = (b.course y n).active
+@Becoming.Blanket.Blanketed.world_through_active : ∀ {I S A E : Type u_1} (b : Becoming.Blanket.Blanketed I S A E)
+  {x y : Becoming.Blanket.Parts I S A E},
+  x.sensory = y.sensory →
+    x.external = y.external →
+      ∀ (n : Nat),
+        (∀ (k : Nat), k < n → (b.course x k).active = (b.course y k).active) →
+          (b.course x n).sensory = (b.course y n).sensory ∧ (b.course x n).external = (b.course y n).external
+@Becoming.Blanket.Blanketed.internal_through_blanket : ∀ {I S A E : Type u_1} (b : Becoming.Blanket.Blanketed I S A E)
+  {x y : Becoming.Blanket.Parts I S A E},
+  x.internal = y.internal → ∀ (n : Nat), b.BlanketAlike x y n → (b.course x n).internal = (b.course y n).internal
+@Becoming.Blanket.Blanketed.external_through_blanket : ∀ {I S A E : Type u_1} (b : Becoming.Blanket.Blanketed I S A E)
+  {x y : Becoming.Blanket.Parts I S A E},
+  x.external = y.external → ∀ (n : Nat), b.BlanketAlike x y n → (b.course x n).external = (b.course y n).external
+@Becoming.Blanket.Blanketed.reads_through_blanket : ∀ {I S A E : Type u_1} (b : Becoming.Blanket.Blanketed I S A E)
+  {V : Type} (read : (Nat → I) → V) {n : Nat},
+  (∀ (f g : Nat → I), (∀ (k : Nat), k ≤ n → f k = g k) → read f = read g) →
+    ∀ {x y : Becoming.Blanket.Parts I S A E},
+      x.internal = y.internal →
+        b.BlanketAlike x y n → (read fun k => (b.course x k).internal) = read fun k => (b.course y k).internal
+@Becoming.Blanket.Blanketed.through_reading : ∀ {I S A E : Type u_1} (b : Becoming.Blanket.Blanketed I S A E) {P : Type}
+  (π : E → P),
+  (∀ (s : S) (a : A), Becoming.Learning.Lumped π (b.nextSensory s a)) →
+    ∀ {x y : Becoming.Blanket.Parts I S A E},
+      x.internal = y.internal →
+        x.sensory = y.sensory →
+          x.active = y.active →
+            ∀ (n : Nat),
+              (∀ (k : Nat), k < n → π (b.course x k).external = π (b.course y k).external) →
+                (b.course x n).internal = (b.course y n).internal ∧
+                  (b.course x n).sensory = (b.course y n).sensory ∧ (b.course x n).active = (b.course y n).active
+Becoming.Blanket.Deaf.lumps : ¬Becoming.Blanket.Deaf.law.BlanketAlike
+      { internal := (), sensory := true, active := (), external := true }
+      { internal := (), sensory := false, active := (), external := false } 1 ∧
+  ∀ (n : Nat),
+    (Becoming.Blanket.Deaf.law.course { internal := (), sensory := true, active := (), external := true } n).internal =
+      (Becoming.Blanket.Deaf.law.course { internal := (), sensory := false, active := (), external := false }
+          n).internal
+Becoming.Blanket.ThresholdDrain.reads_threshold : ∀ (s : Bool) (a : Unit),
+  Becoming.Learning.Lumped (Nat.blt 0) (Becoming.Blanket.ThresholdDrain.law.nextSensory s a)
+Becoming.Blanket.ThresholdDrain.sensed_at_break : (Becoming.Blanket.ThresholdDrain.law.course
+        Becoming.Blanket.ThresholdDrain.short 4).sensory =
+    false ∧
+  (Becoming.Blanket.ThresholdDrain.law.course Becoming.Blanket.ThresholdDrain.long 4).sensory = true ∧
+    (Becoming.Blanket.ThresholdDrain.law.course Becoming.Blanket.ThresholdDrain.short 4).internal =
+        (Becoming.Blanket.ThresholdDrain.law.course Becoming.Blanket.ThresholdDrain.long 4).internal ∧
+      (Becoming.Blanket.ThresholdDrain.law.course Becoming.Blanket.ThresholdDrain.short 5).internal = false ∧
+        (Becoming.Blanket.ThresholdDrain.law.course Becoming.Blanket.ThresholdDrain.long 5).internal = true
+Becoming.Blanket.ThresholdDrain.alike_before_four : Becoming.Blanket.ThresholdDrain.law.BlanketAlike
+  Becoming.Blanket.ThresholdDrain.short Becoming.Blanket.ThresholdDrain.long 4
+Becoming.Blanket.ThresholdDrain.ended_rests : Becoming.Blanket.ThresholdDrain.law.step
+    Becoming.Blanket.ThresholdDrain.ended =
+  Becoming.Blanket.ThresholdDrain.ended
+Becoming.Blanket.ThresholdDrain.short_rests : ∀ (n : Nat),
+  Becoming.Blanket.ThresholdDrain.law.course Becoming.Blanket.ThresholdDrain.short (n + 5) =
+    Becoming.Blanket.ThresholdDrain.ended
+Becoming.Blanket.ThresholdDrain.sensory_is_admission : ∀ (s : Bool) (a : Unit) (e t : Nat),
+  Becoming.Blanket.ThresholdDrain.web.Admits (fun x => e) t () ↔
+    Becoming.Blanket.ThresholdDrain.law.nextSensory s a e = true
+Becoming.Blanket.ThresholdDrain.external_course : ∀ (x : Becoming.Blanket.Parts Bool Bool Unit Nat) (s : Nat),
+  (Becoming.Blanket.ThresholdDrain.law.course x s).external = x.external - s
+Becoming.Blanket.ThresholdDrain.sensory_succ : ∀ (x : Becoming.Blanket.Parts Bool Bool Unit Nat) (s : Nat),
+  (Becoming.Blanket.ThresholdDrain.law.course x (s + 1)).sensory = Nat.blt 0 (x.external - s)
+Becoming.Blanket.ThresholdDrain.blanket_iff_through : ∀ (e e' n : Nat),
+  Becoming.Blanket.ThresholdDrain.law.BlanketAlike { internal := true, sensory := true, active := (), external := e }
+      { internal := true, sensory := true, active := (), external := e' } (n + 2) ↔
+    Becoming.Blanket.ThresholdDrain.web.AlikeThroughUpTo (fun x x_1 => False) () (fun t x => e - t) (fun t x => e' - t)
+      n
+@Becoming.Blanket.ThresholdDrain.sensed_alike : ∀ {M A : Type} (update : M → Bool → A → M)
+  (policy : Bool × M → Bool → A → A) (m : M) (a : A) (d k : Nat),
+  k < 4 →
+    ((Becoming.Blanket.ThresholdDrain.modelLaw update policy).course (Becoming.Blanket.ThresholdDrain.start m a 3)
+          k).sensory =
+      ((Becoming.Blanket.ThresholdDrain.modelLaw update policy).course
+          (Becoming.Blanket.ThresholdDrain.start m a (d + 4)) k).sensory
+@Becoming.Blanket.ThresholdDrain.blanket_alike : ∀ {M A : Type} (update : M → Bool → A → M)
+  (policy : Bool × M → Bool → A → A) (m : M) (a : A) (d : Nat),
+  (Becoming.Blanket.ThresholdDrain.modelLaw update policy).BlanketAlike (Becoming.Blanket.ThresholdDrain.start m a 3)
+    (Becoming.Blanket.ThresholdDrain.start m a (d + 4)) 4
+@Becoming.Blanket.ThresholdDrain.any_model : ∀ {M A : Type} (update : M → Bool → A → M)
+  (policy : Bool × M → Bool → A → A) (m : M) (a : A) (d : Nat) {V : Type} (read : (Nat → Bool × M) → V),
+  (∀ (f g : Nat → Bool × M), (∀ (k : Nat), k ≤ 4 → f k = g k) → read f = read g) →
+    ((read fun k =>
+          ((Becoming.Blanket.ThresholdDrain.modelLaw update policy).course (Becoming.Blanket.ThresholdDrain.start m a 3)
+              k).internal) =
+        read fun k =>
+          ((Becoming.Blanket.ThresholdDrain.modelLaw update policy).course
+              (Becoming.Blanket.ThresholdDrain.start m a (d + 4)) k).internal) ∧
+      ((Becoming.Blanket.ThresholdDrain.modelLaw update policy).course (Becoming.Blanket.ThresholdDrain.start m a 3)
+                5).internal.fst =
+          false ∧
+        ((Becoming.Blanket.ThresholdDrain.modelLaw update policy).course
+                (Becoming.Blanket.ThresholdDrain.start m a (d + 4)) 5).internal.fst =
+          true
+@Becoming.Blanket.ThresholdDrain.sensory_apart_at_four : ∀ {M A : Type} (update : M → Bool → A → M)
+  (policy : Bool × M → Bool → A → A) (m : M) (a : A) (d : Nat),
+  ((Becoming.Blanket.ThresholdDrain.modelLaw update policy).course (Becoming.Blanket.ThresholdDrain.start m a 3)
+          4).sensory =
+      false ∧
+    ((Becoming.Blanket.ThresholdDrain.modelLaw update policy).course (Becoming.Blanket.ThresholdDrain.start m a (d + 4))
+          4).sensory =
+      true
+@Becoming.Blanket.le_mass_of_mem : ∀ {Ω : Type u_1} {w : Ω → Nat} {e : Ω → Bool} {x : Ω},
+  e x = true → ∀ {l : List Ω}, x ∈ l → w x ≤ Becoming.mass l w e
+@Becoming.Blanket.point_is_restrict : ∀ {Ω : Type u_1} [inst : DecidableEq Ω] (x y : Ω),
+  Becoming.Blanket.point x y = Becoming.ConditionalWeights.restrict (Becoming.Blanket.isAt x) (fun x => 1) y
+@Becoming.Blanket.point_whole : ∀ {Ω : Type u_1} [inst : DecidableEq Ω] (x : Ω) (l : List Ω),
+  Becoming.mass l (Becoming.Blanket.point x) (Becoming.Blanket.isAt x) =
+    Becoming.mass l (Becoming.Blanket.point x) fun x => true
+@Becoming.Blanket.least_surprisal : ∀ {Ω : Type u_1} [inst : DecidableEq Ω] {x : Ω} {l : List Ω},
+  x ∈ l →
+    0 < (Becoming.ConditionalWeights.share l (Becoming.Blanket.point x) (Becoming.Blanket.isAt x)).part ∧
+      (Becoming.ConditionalWeights.share l (Becoming.Blanket.point x) (Becoming.Blanket.isAt x)).Same
+          Becoming.ConditionalWeights.Share.one ∧
+        ∀ (e : Ω → Bool),
+          (Becoming.ConditionalWeights.share l (Becoming.Blanket.point x) e).le
+            (Becoming.ConditionalWeights.share l (Becoming.Blanket.point x) (Becoming.Blanket.isAt x))
+@Becoming.Blanket.point_forbids_rest : ∀ {Ω : Type u_1} [inst : DecidableEq Ω] (x : Ω) {e : Ω → Bool},
+  e x = false → ∀ (l : List Ω), (Becoming.ConditionalWeights.share l (Becoming.Blanket.point x) e).part = 0
+@Becoming.Blanket.visits_le_succ : ∀ {Ω : Type u_1} [inst : DecidableEq Ω] (r : Nat → Ω) (n : Nat) (y : Ω),
+  Becoming.Blanket.visits r n y ≤ Becoming.Blanket.visits r (n + 1) y
+@Becoming.Blanket.visits_pos : ∀ {Ω : Type u_1} [inst : DecidableEq Ω] (r : Nat → Ω) (n k : Nat),
+  k < n → 0 < Becoming.Blanket.visits r n (r k)
+@Becoming.Blanket.visits_zero : ∀ {Ω : Type u_1} [inst : DecidableEq Ω] (r : Nat → Ω) (y : Ω) (n : Nat),
+  (∀ (k : Nat), k < n → r k ≠ y) → Becoming.Blanket.visits r n y = 0
+@Becoming.Blanket.read_off_admits : ∀ {Ω : Type u_1} [inst : DecidableEq Ω] (r : Nat → Ω) {n k : Nat},
+  k < n →
+    ∀ {l : List Ω},
+      r k ∈ l →
+        0 < (Becoming.ConditionalWeights.share l (Becoming.Blanket.visits r n) (Becoming.Blanket.isAt (r k))).part
+@Becoming.Blanket.unweighted_share : ∀ {Ω : Type u_1} [inst : DecidableEq Ω] (w : Ω → Nat) (x : Ω),
+  w x = 0 → ∀ (l : List Ω), (Becoming.ConditionalWeights.share l w (Becoming.Blanket.isAt x)).part = 0
+@Becoming.Blanket.forbids_iff : ∀ {Ω : Type u_1} [inst : DecidableEq Ω] {w : Ω → Nat} {x : Ω} {l : List Ω},
+  x ∈ l → ((Becoming.ConditionalWeights.share l w (Becoming.Blanket.isAt x)).part = 0 ↔ w x = 0)

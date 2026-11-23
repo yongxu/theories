@@ -1,5 +1,6 @@
 import Becoming.Continuation
 import Becoming.WayUnderARule
+import Becoming.Stock
 
 /-!
 # Unclamped Stock–Flow Bridge (`Becoming.StockFlowBridge`)
@@ -168,6 +169,109 @@ theorem unitWeb_stock (levelFn : Nat → Nat) (k : Nat) :
     (unitWeb levelFn).stock [()] k = levelFn k :=
   Nat.add_zero (levelFn k)
 
+section StockUnification
+
+universe u_s
+
+/-- `Run.stockFlow` is definitionally `unitFlow` applied to the run's action-indexed draw/replenish. -/
+theorem stockFlow_eq_unitFlow {S : Type u_s} {A : Type} {P : Generative.Process S A}
+    (r : Run P) (draw replenish : A → Nat) :
+    Run.stockFlow r draw replenish =
+      unitFlow (fun t => draw (r.act t)) (fun t => replenish (r.act t)) :=
+  rfl
+
+/-- `Run.stockWeb` and `unitWeb` share identical levels at every step. -/
+theorem stockWeb_level_eq_unitWeb {S : Type u_s} {A : Type} {P : Generative.Process S A}
+    (r : Run P) (σ : S → Nat) (t : Nat) (c : Unit) :
+    (Run.stockWeb r σ).level t c = (unitWeb (fun k => σ (r.state k))).level t c :=
+  rfl
+
+/-- Global flow balance of `Run.stockFlow` on `Run.stockWeb` is definitionally that of `unitFlow` on `unitWeb`. -/
+theorem stockFlow_balances_iff_unitFlow_balances {S : Type u_s} {A : Type}
+    {P : Generative.Process S A} (r : Run P) (σ : S → Nat) (draw replenish : A → Nat) :
+    (Run.stockFlow r draw replenish).Balances (Run.stockWeb r σ) ↔
+      (unitFlow (fun t => draw (r.act t)) (fun t => replenish (r.act t))).Balances
+        (unitWeb (fun t => σ (r.state t))) :=
+  Iff.rfl
+
+/-- Pre-overdraw step embedding into `Becoming.Stock.process` (with `A := Nat`, `draw := takeFn`,
+    `replenish t := giving (levelFn t - takeFn t)`). -/
+theorem stockProcess_step_of_le {levelFn takeFn giving : Nat → Nat} {t : Nat}
+    (step_eq : levelFn (t + 1) = RegimeMargin.step giving (takeFn t) (levelFn t))
+    (within : takeFn t ≤ levelFn t) :
+    (Stock.process takeFn (fun k => giving (levelFn k - takeFn k))).step
+      (levelFn t) t (levelFn (t + 1)) :=
+  step_eq.symm ▸ Stock.process_step (draw := takeFn)
+    (replenish := fun k => giving (levelFn k - takeFn k)) within
+
+/-- Exact unclamped boundary: at any overdraw step (`levelFn t < takeFn t`), `Stock.process` refuses every step. -/
+theorem not_stockProcess_step_of_overdraw {levelFn takeFn giving : Nat → Nat} {t m : Nat}
+    (over : levelFn t < takeFn t) :
+    ¬ (Stock.process takeFn (fun k => giving (levelFn k - takeFn k))).step (levelFn t) t m :=
+  fun h => Nat.not_le_of_gt over h.1
+
+/-- Any finite pre-overdraw stretch `[T, T + N)` is a `Generative.Trace` of `Stock.process` along `steps T N`. -/
+theorem stockProcess_trace_of_within {levelFn takeFn giving : Nat → Nat} :
+    ∀ (N T : Nat),
+      (∀ t, T ≤ t → t < T + N →
+        levelFn (t + 1) = RegimeMargin.step giving (takeFn t) (levelFn t)) →
+      (∀ t, T ≤ t → t < T + N → takeFn t ≤ levelFn t) →
+      Generative.Trace
+        (Stock.process takeFn (fun k => giving (levelFn k - takeFn k)))
+        (levelFn T) (steps T N) (levelFn (T + N))
+  | 0, T, _, _ => .nil (levelFn T)
+  | N + 1, T, step_eq, within =>
+    .cons
+      (stockProcess_step_of_le
+        (step_eq T (Nat.le_refl T) (Nat.lt_add_of_pos_right (Nat.succ_pos N)))
+        (within T (Nat.le_refl T) (Nat.lt_add_of_pos_right (Nat.succ_pos N))))
+      (Eq.subst
+        (motive := fun m => Generative.Trace _ (levelFn (T + 1)) (steps (T + 1) N) (levelFn m))
+        (Nat.add_right_comm T 1 N)
+        (stockProcess_trace_of_within N (T + 1)
+          (fun t hge hlt => step_eq t (Nat.le_trans (Nat.le_succ T) hge)
+            (Nat.lt_of_lt_of_le hlt (Nat.le_of_eq (Nat.add_right_comm T 1 N))))
+          (fun t hge hlt => within t (Nat.le_trans (Nat.le_succ T) hge)
+            (Nat.lt_of_lt_of_le hlt (Nat.le_of_eq (Nat.add_right_comm T 1 N))))))
+
+/-- Finite pre-overdraw coverage (`Stock.Covered`) via `Stock.feasible_iff_covered`. -/
+theorem stockCovered_of_within {levelFn takeFn giving : Nat → Nat} {T N : Nat}
+    (step_eq : ∀ t, T ≤ t → t < T + N →
+      levelFn (t + 1) = RegimeMargin.step giving (takeFn t) (levelFn t))
+    (within : ∀ t, T ≤ t → t < T + N → takeFn t ≤ levelFn t) :
+    Stock.Covered takeFn (fun k => giving (levelFn k - takeFn k)) (levelFn T) (steps T N) :=
+  (Stock.feasible_iff_covered (steps T N) (levelFn T)).mp
+    ⟨levelFn (T + N), stockProcess_trace_of_within N T step_eq within⟩
+
+/-- Closed-form prefix coverage on `[T, T + N)` via `Stock.covered_iff_prefix`. -/
+theorem stockPrefix_covered_of_within {levelFn takeFn giving : Nat → Nat} {T N : Nat}
+    (step_eq : ∀ t, T ≤ t → t < T + N →
+      levelFn (t + 1) = RegimeMargin.step giving (takeFn t) (levelFn t))
+    (within : ∀ t, T ≤ t → t < T + N → takeFn t ≤ levelFn t) :
+    ∀ u a v, steps T N = u ++ a :: v →
+      total u takeFn + takeFn a ≤
+        levelFn T + total u (fun k => giving (levelFn k - takeFn k)) :=
+  (Stock.covered_iff_prefix (steps T N) (levelFn T)).mp (stockCovered_of_within step_eq within)
+
+/-- Global pre-overdraw trajectory packaged as a `Run (Stock.process ...)`. -/
+def stockRun_of_within {levelFn takeFn giving : Nat → Nat}
+    (step_eq : ∀ t, levelFn (t + 1) = RegimeMargin.step giving (takeFn t) (levelFn t))
+    (within : ∀ t, takeFn t ≤ levelFn t) :
+    Run (Stock.process takeFn (fun k => giving (levelFn k - takeFn k))) where
+  state := levelFn
+  act := id
+  step t := stockProcess_step_of_le (step_eq t) (within t)
+
+/-- Global `unitFlow` balance directly from `Run.stockFlow_balances (Stock.process_balanced _ _)`. -/
+theorem unitBalances_of_stockRun {levelFn takeFn giving : Nat → Nat}
+    (step_eq : ∀ t, levelFn (t + 1) = RegimeMargin.step giving (takeFn t) (levelFn t))
+    (within : ∀ t, takeFn t ≤ levelFn t) :
+    (unitFlow takeFn (fun k => giving (levelFn k - takeFn k))).Balances (unitWeb levelFn) :=
+  (stockFlow_balances_iff_unitFlow_balances (stockRun_of_within step_eq within) id _ _).mp
+    (Run.stockFlow_balances (Stock.process_balanced _ _) (stockRun_of_within step_eq within))
+
+end StockUnification
+
 /-- Unclamped single-step conservation lemma shared by both `LineOnAStock` and `WayUnderARule`. -/
 theorem unitBalancesOn_of_le {levelFn takeFn giving : Nat → Nat} {t : Nat}
     (step_eq : levelFn (t + 1) = RegimeMargin.step giving (takeFn t) (levelFn t))
@@ -175,13 +279,8 @@ theorem unitBalancesOn_of_le {levelFn takeFn giving : Nat → Nat} {t : Nat}
     (unitFlow takeFn (fun k => giving (levelFn k - takeFn k))).BalancesOn (unitWeb levelFn) [()] t := by
   intro c _
   cases c
-  show levelFn (t + 1) + (unitFlow takeFn (fun k => giving (levelFn k - takeFn k))).taken t () =
-       levelFn t + (unitFlow takeFn (fun k => giving (levelFn k - takeFn k))).given t ()
-  rw [unitFlow_taken, unitFlow_given, step_eq]
-  show (levelFn t - takeFn t) + giving (levelFn t - takeFn t) + takeFn t =
-       levelFn t + giving (levelFn t - takeFn t)
-  exact (Nat.add_right_comm (levelFn t - takeFn t) (giving (levelFn t - takeFn t)) (takeFn t)).trans
-    (congrArg (· + giving (levelFn t - takeFn t)) (Naturals.sub_add_cancel within))
+  exact Stock.process_balanced takeFn (fun k => giving (levelFn k - takeFn k))
+    _ _ _ (stockProcess_step_of_le step_eq within)
 
 /-- Unclamped finite-stretch accumulation from `Flow.accumulates_on` collapsed to scalar form. -/
 theorem unitAccumulates_of_balances {levelFn takeFn giveFn : Nat → Nat} {T N : Nat}
@@ -269,12 +368,9 @@ theorem line_balancesOn_of_goes {T N : Nat} (nothing : RegimeMargin.FromNothing 
 theorem line_balances_of_unending (nothing : RegimeMargin.FromNothing giving)
     (needs : LineOnAStock.Needing need kids s.1)
     (never : «不穷» (LineOnAStock.net need kids giving use) «一» s) :
-    (lineFlow need kids giving use s).Balances (lineWeb need kids giving use s) := fun t c => by
-  cases c
-  have hwithin : LineOnAStock.taken use (LineOnAStock.course need kids giving use s t).1 ≤
-      (LineOnAStock.course need kids giving use s t).2 :=
+    (lineFlow need kids giving use s).Balances (lineWeb need kids giving use s) :=
+  unitBalances_of_stockRun (fun _ => rfl) fun t =>
     Nat.le_of_lt (LineOnAStock.unending_taken_below nothing needs never t)
-  exact unitBalancesOn_of_le (t := t) rfl hwithin () (.head [])
 
 theorem line_accumulates_of_within {T N : Nat}
     (within : ∀ t, T ≤ t → t < T + N →
@@ -399,12 +495,9 @@ theorem way_balancesOn_of_goes {T N : Nat} (nothing : RegimeMargin.FromNothing g
 theorem way_balances_of_unending (nothing : RegimeMargin.FromNothing giving)
     (needs : WayUnderARule.Needing need kids s.1.1)
     (never : «不穷» (WayUnderARule.net need kids next giving use) «一» s) :
-    (wayFlow need kids next giving use s).Balances (wayWeb need kids next giving use s) := fun t c => by
-  cases c
-  have hwithin : LineOnAStock.taken use (WayUnderARule.course need kids next giving use s t).1.1 ≤
-      (WayUnderARule.course need kids next giving use s t).2 :=
+    (wayFlow need kids next giving use s).Balances (wayWeb need kids next giving use s) :=
+  unitBalances_of_stockRun (fun _ => rfl) fun t =>
     Nat.le_of_lt (WayUnderARule.unending_taken_below nothing needs never t)
-  exact unitBalancesOn_of_le (t := t) rfl hwithin () (.head [])
 
 theorem way_accumulates_of_within {T N : Nat}
     (within : ∀ t, T ≤ t → t < T + N →
@@ -480,6 +573,88 @@ theorem way_never_returns_below_within {m T N : Nat}
   Flow.never_returns_below_within (way_balancesOn_of_goes nothing needs goes) noRaise below
 
 end WayBridge
+
+section StockUnificationRuns
+
+/-- Unending `LineOnAStock.net` as a `Run (Stock.process ...)`. -/
+def lineStockRun_of_unending {U : Type} {need : U → Nat} {kids : U → List U}
+    {giving : Nat → Nat} {use : U → Nat} {s : List U × Nat}
+    (nothing : RegimeMargin.FromNothing giving) (needs : LineOnAStock.Needing need kids s.1)
+    (never : «不穷» (LineOnAStock.net need kids giving use) «一» s) :
+    Run (Stock.process
+      (fun t => LineOnAStock.taken use (LineOnAStock.course need kids giving use s t).1)
+      (fun t => giving ((LineOnAStock.course need kids giving use s t).2 -
+        LineOnAStock.taken use (LineOnAStock.course need kids giving use s t).1))) :=
+  stockRun_of_within (fun _ => rfl) fun t =>
+    Nat.le_of_lt (LineOnAStock.unending_taken_below nothing needs never t)
+
+/-- Unending `WayUnderARule.net` as a `Run (Stock.process ...)`. -/
+def wayStockRun_of_unending {U R : Type} {need : U → Nat} {kids : R → U → List U}
+    {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat}
+    (nothing : RegimeMargin.FromNothing giving) (needs : WayUnderARule.Needing need kids s.1.1)
+    (never : «不穷» (WayUnderARule.net need kids next giving use) «一» s) :
+    Run (Stock.process
+      (fun t => LineOnAStock.taken use (WayUnderARule.course need kids next giving use s t).1.1)
+      (fun t => giving ((WayUnderARule.course need kids next giving use s t).2 -
+        LineOnAStock.taken use (WayUnderARule.course need kids next giving use s t).1.1))) :=
+  stockRun_of_within (fun _ => rfl) fun t =>
+    Nat.le_of_lt (WayUnderARule.unending_taken_below nothing needs never t)
+
+/-- Recurrence of replenishment from recurring drawing on unending `LineOnAStock` (`Run.replenishes_of_draws`). -/
+theorem line_replenishes_of_draws {U : Type} {need : U → Nat} {kids : U → List U}
+    {giving : Nat → Nat} {use : U → Nat} {s : List U × Nat}
+    (nothing : RegimeMargin.FromNothing giving) (needs : LineOnAStock.Needing need kids s.1)
+    (never : «不穷» (LineOnAStock.net need kids giving use) «一» s)
+    (draws : ∀ N, ∃ n, N ≤ n ∧ 0 < LineOnAStock.taken use (LineOnAStock.course need kids giving use s n).1) :
+    ∀ N, ∃ n, N ≤ n ∧ 0 < giving ((LineOnAStock.course need kids giving use s n).2 -
+      LineOnAStock.taken use (LineOnAStock.course need kids giving use s n).1) :=
+  Run.replenishes_of_draws (Stock.process_balanced _ _) (lineStockRun_of_unending nothing needs never) draws
+
+/-- Bounded-stock equivalence of recurring draw & replenishment on unending `LineOnAStock` (`Run.draws_iff_replenishes`). -/
+theorem line_draws_iff_replenishes {U : Type} {need : U → Nat} {kids : U → List U}
+    {giving : Nat → Nat} {use : U → Nat} {s : List U × Nat}
+    (nothing : RegimeMargin.FromNothing giving) (needs : LineOnAStock.Needing need kids s.1)
+    (never : «不穷» (LineOnAStock.net need kids giving use) «一» s) {B : Nat}
+    (bound : ∀ n, (LineOnAStock.course need kids giving use s n).2 ≤ B) :
+    (∀ N, ∃ n, N ≤ n ∧ 0 < LineOnAStock.taken use (LineOnAStock.course need kids giving use s n).1) ↔
+      (∀ N, ∃ n, N ≤ n ∧ 0 < giving ((LineOnAStock.course need kids giving use s n).2 -
+        LineOnAStock.taken use (LineOnAStock.course need kids giving use s n).1)) :=
+  Run.draws_iff_replenishes (Stock.process_balanced _ _) (lineStockRun_of_unending nothing needs never) bound
+
+/-- Recurrence of replenishment from recurring drawing on unending `WayUnderARule` (`Run.replenishes_of_draws`). -/
+theorem way_replenishes_of_draws {U R : Type} {need : U → Nat} {kids : R → U → List U}
+    {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat}
+    (nothing : RegimeMargin.FromNothing giving) (needs : WayUnderARule.Needing need kids s.1.1)
+    (never : «不穷» (WayUnderARule.net need kids next giving use) «一» s)
+    (draws : ∀ N, ∃ n, N ≤ n ∧ 0 < LineOnAStock.taken use (WayUnderARule.course need kids next giving use s n).1.1) :
+    ∀ N, ∃ n, N ≤ n ∧ 0 < giving ((WayUnderARule.course need kids next giving use s n).2 -
+      LineOnAStock.taken use (WayUnderARule.course need kids next giving use s n).1.1) :=
+  Run.replenishes_of_draws (Stock.process_balanced _ _) (wayStockRun_of_unending nothing needs never) draws
+
+/-- Bounded-stock equivalence of recurring draw & replenishment on unending `WayUnderARule` (`Run.draws_iff_replenishes`). -/
+theorem way_draws_iff_replenishes {U R : Type} {need : U → Nat} {kids : R → U → List U}
+    {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat}
+    (nothing : RegimeMargin.FromNothing giving) (needs : WayUnderARule.Needing need kids s.1.1)
+    (never : «不穷» (WayUnderARule.net need kids next giving use) «一» s) {B : Nat}
+    (bound : ∀ n, (WayUnderARule.course need kids next giving use s n).2 ≤ B) :
+    (∀ N, ∃ n, N ≤ n ∧ 0 < LineOnAStock.taken use (WayUnderARule.course need kids next giving use s n).1.1) ↔
+      (∀ N, ∃ n, N ≤ n ∧ 0 < giving ((WayUnderARule.course need kids next giving use s n).2 -
+        LineOnAStock.taken use (WayUnderARule.course need kids next giving use s n).1.1)) :=
+  Run.draws_iff_replenishes (Stock.process_balanced _ _) (wayStockRun_of_unending nothing needs never) bound
+
+/-- Reverse bridge: every `Stock.Balanced` `Run P` inherits the finite-horizon drawdown trap. -/
+theorem stockRun_never_returns_below_within {S : Type _} {A : Type} {P : Generative.Process S A}
+    {σ : S → Nat} {draw replenish : A → Nat}
+    (bal : Stock.Balanced P σ draw replenish) (r : Run P) {m T N : Nat}
+    (noRaise : ∀ t, T ≤ t → t < T + N → σ (r.state t) < m → replenish (r.act t) ≤ draw (r.act t))
+    (below : σ (r.state T) < m) :
+    ∀ n, n ≤ N → σ (r.state (T + n)) < m :=
+  unitNeverReturnsBelowWithin
+    (fun t _ _ => ((stockFlow_balances_iff_unitFlow_balances r σ draw replenish).mp
+      (Run.stockFlow_balances bal r)).on [()] t)
+    noRaise below
+
+end StockUnificationRuns
 
 /-! ## 4. Constant-draw correspondence with `Becoming.RegimeMargin.Coupled.Indexed.step` -/
 

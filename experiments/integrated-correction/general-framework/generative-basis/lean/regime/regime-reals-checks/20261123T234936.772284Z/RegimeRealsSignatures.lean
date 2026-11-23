@@ -1,0 +1,15 @@
+import RegimeReals
+#check @Becoming.RegimeMargin.Drawn.reals_step
+#check @Becoming.RegimeMargin.Drawn.tendsto_of_rising
+#check @Becoming.RegimeMargin.Drawn.tendsto_of_falling
+#check @Becoming.RegimeMargin.Drawn.converges
+#check @Becoming.RegimeMargin.Drawn.limit_rest
+#check @Becoming.RegimeMargin.Drawn.limit_fates
+#check @Becoming.RegimeMargin.Drawn.limits_below
+#check @Becoming.RegimeMargin.Drawn.falls_of_below
+#check @Becoming.RegimeMargin.Drawn.falls_given
+#check @Becoming.RegimeMargin.Drawn.Relaxation.rises
+#check @Becoming.RegimeMargin.Drawn.Relaxation.step_low
+#check @Becoming.RegimeMargin.Drawn.Relaxation.band
+#check @Becoming.RegimeMargin.Drawn.Relaxation.course
+#check @Becoming.RegimeMargin.Drawn.Relaxation.never_rests

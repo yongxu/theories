@@ -1,0 +1,20 @@
+import Becoming.SeedReach
+#print axioms Becoming.SeedReachProcesses.Moves
+#print axioms Becoming.SeedReachProcesses.FromSeed
+#print axioms Becoming.SeedReachProcesses.FromSeed.step
+#print axioms Becoming.SeedReachProcesses.fromSeed_invariant
+#print axioms Becoming.SeedReachProcesses.fromSeed_iff_closure
+#print axioms Becoming.SeedReachProcesses.fromSeed_iff_invariant
+#print axioms Becoming.SeedReachProcesses.covers_iff_invariant
+#print axioms Becoming.SeedReachProcesses.unreached_has_invariant
+#print axioms Becoming.SeedReachProcesses.substitute_seeds
+#print axioms Becoming.SeedReachProcesses.fromSeed_iff_seed_of_no_moves
+#print axioms Becoming.SeedReachProcesses.Separated
+#print axioms Becoming.SeedReachProcesses.separated_iff_not_fromSeed
+#print axioms Becoming.SeedReachProcesses.not_not_fromSeed_of_not_separated
+#print axioms Becoming.SeedReachProcesses.not_separated_iff
+#print axioms Becoming.SeedReachProcesses.fromSeed_iff_not_separated_of_decidable
+#print axioms Becoming.SeedReach.conditional
+#print axioms Becoming.SeedReach.conditional_not_separated
+#print axioms Becoming.SeedReach.conditional_reach
+#print axioms Becoming.SeedReachProcesses.fromSeed_of_not_separated_iff_dne

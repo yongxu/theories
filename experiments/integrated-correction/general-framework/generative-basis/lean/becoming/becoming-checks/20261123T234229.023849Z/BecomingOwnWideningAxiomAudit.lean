@@ -1,0 +1,26 @@
+import Becoming.OwnWidening
+#print axioms Becoming.Web.WidensWithin
+#print axioms Becoming.Web.WidensWithin.exceeds
+#print axioms Becoming.Web.WidensWithin.not_keeps
+#print axioms Becoming.Web.WidensWithin.not_narrowed
+#print axioms Becoming.Web.reachWeb
+#print axioms Becoming.Web.admits_reachWeb_iff
+#print axioms Becoming.Flow.Balances.includes_iff_beyond_within
+#print axioms Becoming.Flow.Balances.widens_iff_others_within
+#print axioms Becoming.Flow.Balances.mixed_iff_other_beyond
+#print axioms Becoming.Flow.Balances.mixed_of_tight
+#print axioms Becoming.Flow.Balances.widens_of_untaken_beyond
+#print axioms Becoming.Flow.Balances.widens_yet_own_changed
+#print axioms Becoming.OwnDrawing.Formation
+#print axioms Becoming.OwnDrawing.Place
+#print axioms Becoming.OwnDrawing.firstStep
+#print axioms Becoming.OwnDrawing.flow
+#print axioms Becoming.OwnDrawing.drawerPart
+#print axioms Becoming.OwnDrawing.own
+#print axioms Becoming.OwnDrawing.web
+#print axioms Becoming.OwnDrawing.withheldLevel
+#print axioms Becoming.OwnDrawing.balances
+#print axioms Becoming.OwnDrawing.withheld
+#print axioms Becoming.OwnDrawing.own_widens
+#print axioms Becoming.OwnDrawing.ample_widens
+#print axioms Becoming.OwnDrawing.tight_mixed

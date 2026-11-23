@@ -1,0 +1,15 @@
+'Becoming.offspringCount' does not depend on any axioms
+'Becoming.le_offspringCount' does not depend on any axioms
+'Becoming.offspringCount_le' does not depend on any axioms
+'Becoming.share_not_lower' does not depend on any axioms
+'Becoming.share_rises' does not depend on any axioms
+'Becoming.Flow.descent_needs_unrun' does not depend on any axioms
+'Becoming.Flow.descent_exhausted' does not depend on any axioms
+'Becoming.Captured.next' does not depend on any axioms
+'Becoming.Captured.byRule' does not depend on any axioms
+'Becoming.Captured.state_perturbation_returns' does not depend on any axioms
+'Becoming.Captured.rule_perturbation_changes' does not depend on any axioms
+'Becoming.CaptureWorlds.length_le_zero' does not depend on any axioms
+'Becoming.CaptureWorlds.unsupported_leave_none' does not depend on any axioms
+'Becoming.CaptureWorlds.share_rises_of_unsupported' does not depend on any axioms
+'Becoming.CaptureWorlds.share_not_lower_of_unsupported' does not depend on any axioms

@@ -1,0 +1,15 @@
+import Becoming.Direction
+#check @Becoming.Direction.options_iff
+#check @Becoming.Direction.extension_iff_widens
+#check @Becoming.Direction.chosen_keeps_basic
+#check @Becoming.Direction.kept_required
+#check @Becoming.Direction.narrowed_not_chosen
+#check @Becoming.Direction.widening_not_not_better
+#check @Becoming.Direction.widening_selected_by_pool
+#check @Becoming.Direction.exchange_widening_selected_by_pool
+#check @Becoming.Direction.exchange_direction
+#check @Becoming.Requirement.Handover.direction
+#check @Becoming.Web.unrestricted_iff_grounds_beyond
+#check @Becoming.Direction.grounded_widening_selected
+#check @Becoming.Clearing.spared_widens
+#check @Becoming.Clearing.direction

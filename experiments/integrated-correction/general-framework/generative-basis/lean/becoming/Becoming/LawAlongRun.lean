@@ -127,13 +127,20 @@ under `E`. -/
 theorem recordUnder_goAlike (r : Run P) {E : S → S → Prop} (equivalence : Equivalence E)
     {t : Nat} (consistent : r.ConsistentUnder E t) :
     GoAlikeUnder (r.recordUnder E t) id E :=
-  fun _ _ _ _ _ same ⟨n, before, at_x, by_a, to_y⟩ ⟨m, before', at_x', by_a', to_y'⟩ =>
-    equivalence.trans to_y
-      (equivalence.trans
-        (consistent n m before before'
-          (equivalence.trans (equivalence.symm at_x) (equivalence.trans same at_x'))
-          (by_a.trans by_a'.symm))
-        (equivalence.symm to_y'))
+  goAlikeUnder_iff_alike.mpr fun a =>
+    let S_a : «际» S := fun u v => ∃ n, n < t ∧ r.state n = u ∧ r.act n = a ∧ r.state (n + 1) = v
+    have hE : «类» E := ⟨equivalence.refl, equivalence.symm, equivalence.trans⟩
+    have alikeS : «同行» S_a E := «同行之逐点».mpr fun _ _ same _ _ ⟨n, before, hx, ha, hy⟩ ⟨m, before', hx', ha', hy'⟩ =>
+      Eq.subst (motive := fun y => E _ y) hy'
+        (Eq.subst (motive := fun x => E x _) hy
+          (consistent n m before before'
+            (Eq.subst (motive := fun y => E _ y) hx'.symm
+              (Eq.subst (motive := fun x => E x _) hx.symm same))
+            (ha.trans ha'.symm)))
+    «同行之单调»
+      (fun _ _ ⟨n, before, hx, ha, hy⟩ =>
+        ⟨r.state (n + 1), ⟨r.state n, hx, ⟨n, before, rfl, ha, rfl⟩⟩, equivalence.symm hy⟩)
+      («类则同行之展» hE alikeS).1
 
 /-- **A law up to a relation along one run.** Where `E` is an equivalence, some process going
 alike under `E` admits the run's steps before `t` exactly where those steps are consistent under
@@ -143,9 +150,8 @@ theorem law_under_iff (r : Run P) {E : S → S → Prop} (equivalence : Equivale
         ∀ n, n < t → Q.step (r.state n) (r.act n) (r.state (n + 1))) ↔
       r.ConsistentUnder E t :=
   ⟨fun ⟨Q, alike, steps⟩ n m before before' same same' =>
-     alike _ _ _ _ _ same (steps n before)
-       (Eq.subst (motive := fun b => Q.step (r.state m) b (r.state (m + 1))) same'.symm
-         (steps m before')),
+     «同行之逐点».mp (goAlikeUnder_iff_alike.mp alike (r.act n)) _ _ same _ _ (steps n before)
+       (Eq.subst (motive := fun b => Q.step (r.state m) b (r.state (m + 1))) same'.symm (steps m before')),
    fun consistent => ⟨r.recordUnder E t, r.recordUnder_goAlike equivalence consistent,
      r.recordUnder_steps equivalence.refl t⟩⟩
 
@@ -169,8 +175,9 @@ theorem no_law_under_later (r : Run P) {E : S → S → Prop} (equivalence : Equ
 /-- Where the process goes alike under `E`, every run is consistent under `E` at every step. -/
 theorem consistentUnder_of_goAlikeUnder (r : Run P) {E : S → S → Prop}
     (alike : GoAlikeUnder P id E) (t : Nat) : r.ConsistentUnder E t :=
-  fun n m _ _ same same' => alike _ _ _ _ _ same (r.step n)
-    (Eq.subst (motive := fun b => P.step (r.state m) b (r.state (m + 1))) same'.symm (r.step m))
+  fun n m _ _ same same' =>
+    «同行之逐点».mp (goAlikeUnder_iff_alike.mp alike (r.act n)) _ _ same _ _ (r.step n)
+      (Eq.subst (motive := fun b => P.step (r.state m) b (r.state (m + 1))) same'.symm (r.step m))
 
 /-- **Consistency reads a relation only on the run's configurations up to `t`.** -/
 theorem consistentUnder_congr (r : Run P) {E E' : S → S → Prop} {t : Nat}

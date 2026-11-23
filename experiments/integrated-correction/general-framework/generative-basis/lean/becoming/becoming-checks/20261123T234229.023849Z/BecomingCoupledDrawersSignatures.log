@@ -1,0 +1,315 @@
+@Becoming.Optimum.Coupled.stepCoupling_of_le : ∀ {c m b : Nat}, m ≤ b → Becoming.Optimum.Coupled.stepCoupling c m b = c
+@Becoming.Optimum.Coupled.stepCoupling_of_lt : ∀ {c m b : Nat}, b < m → Becoming.Optimum.Coupled.stepCoupling c m b = 0
+Becoming.Optimum.Coupled.stepCoupling_zero : ∀ (m b : Nat), Becoming.Optimum.Coupled.stepCoupling 0 m b = 0
+@Becoming.Optimum.Coupled.keep_of_le : ∀ {m a : Nat}, m ≤ a → Becoming.Optimum.Coupled.keep m a = m
+@Becoming.Optimum.Coupled.keep_of_lt : ∀ {m a : Nat}, a < m → Becoming.Optimum.Coupled.keep m a = 0
+Becoming.Optimum.Coupled.keep_le : ∀ (m a : Nat), Becoming.Optimum.Coupled.keep m a ≤ a
+Becoming.Optimum.Coupled.keep_keep : ∀ (m a : Nat),
+  Becoming.Optimum.Coupled.keep m (Becoming.Optimum.Coupled.keep m a) = Becoming.Optimum.Coupled.keep m a
+@Becoming.Optimum.Coupled.drawn_uncoupled : ∀ {G : Nat → Nat → Nat} {rules : Nat → Nat → Nat → Nat} {k : Nat}
+  (d m j t z : Nat),
+  Becoming.Optimum.Coupled.drawn G rules k d 0 m j t z = Becoming.Optimum.InTurn.drawn G rules k d j t z
+@Becoming.Optimum.Coupled.perfect_uncoupled : ∀ {G : Nat → Nat → Nat} {rules : Nat → Nat → Nat → Nat} {k m N : Nat}
+  {low : Nat → Nat → Nat → Nat},
+  Becoming.Optimum.Coupled.Perfect G low rules k 0 m N ↔ Becoming.Optimum.InTurn.Perfect G low rules k N
+@Becoming.Optimum.Coupled.pass_all : ∀ {rules : Nat → Nat → Nat → Nat} {f : Nat → Nat},
+  (∀ (a : Nat), f (f a) = f a) →
+    ∀ {t : Nat} (n e : Nat),
+      0 < n →
+        (∀ (i : Nat), e ≤ i → i < e + n → ∀ (a : Nat), rules i t a = f a) →
+          ∀ (b : Nat), Becoming.Optimum.InTurn.pass rules t e n b = f b
+@Becoming.Optimum.Coupled.given_all : ∀ {rules : Nat → Nat → Nat → Nat} {k : Nat} {f : Nat → Nat},
+  (∀ (a : Nat), f (f a) = f a) →
+    ∀ {t d : Nat},
+      0 < d →
+        d < k →
+          Becoming.Optimum.Coupled.AllFollow rules k f t → ∀ (z : Nat), Becoming.Optimum.InTurn.pass rules t 0 d z = f z
+@Becoming.Optimum.Coupled.left_all : ∀ {rules : Nat → Nat → Nat → Nat} {k : Nat} {f : Nat → Nat},
+  (∀ (a : Nat), f (f a) = f a) →
+    ∀ {t : Nat},
+      0 < k →
+        Becoming.Optimum.Coupled.AllFollow rules k f t → ∀ (z : Nat), Becoming.Optimum.InTurn.pass rules t 0 k z = f z
+@Becoming.Optimum.Coupled.pass_after_last : ∀ {rules : Nat → Nat → Nat → Nat} {k t d : Nat},
+  d + 1 = k → ∀ (b : Nat), Becoming.Optimum.InTurn.pass rules t (d + 1) (k - (d + 1)) b = b
+@Becoming.Optimum.Coupled.zero_of_le_sub : ∀ {a r : Nat}, r ≤ a → a ≤ a - r → r = 0
+@Becoming.Optimum.Coupled.le_of_sub_le_sub : ∀ {a m r : Nat}, m ≤ a → r ≤ a → a - m ≤ a - r → r ≤ m
+@Becoming.Optimum.Coupled.leaves_nothing : ∀ {c m : Nat} {L : Nat → Nat} {a r W : Nat},
+  c < m →
+    0 < m →
+      (∀ (b : Nat), L b = W + Becoming.Optimum.Coupled.stepCoupling c m b) → r ≤ a → a - 0 + L 0 ≤ a - r + L r → r = 0
+@Becoming.Optimum.Coupled.leaves_need : ∀ {m : Nat} {L : Nat → Nat} {a r V W : Nat},
+  0 < m →
+    (∀ (b : Nat), m ≤ b → L b = V) →
+      (∀ (b : Nat), b < m → L b = W) →
+        W + m < V → r ≤ a → (∀ (b : Nat), b ≤ a → a - b + L b ≤ a - r + L r) → r = Becoming.Optimum.Coupled.keep m a
+@Becoming.Optimum.Coupled.need_best : ∀ {m : Nat} {L : Nat → Nat} {a V W : Nat},
+  0 < m →
+    (∀ (b : Nat), m ≤ b → L b = V) →
+      (∀ (b : Nat), b < m → L b = W) →
+        W + m ≤ V →
+          ∀ (b : Nat),
+            b ≤ a → a - b + L b ≤ a - Becoming.Optimum.Coupled.keep m a + L (Becoming.Optimum.Coupled.keep m a)
+@Becoming.Optimum.Coupled.down : ∀ {P : Nat → Prop} {k : Nat},
+  (∀ (d : Nat), d < k → (∀ (e : Nat), d < e → e < k → P e) → P d) → ∀ (n d : Nat), k ≤ d + n → d < k → P d
+@Becoming.Optimum.Coupled.last_drawer : ∀ {k : Nat}, 1 < k → k - 1 + 1 = k
+@Becoming.Optimum.Coupled.pass_after : ∀ {rules : Nat → Nat → Nat → Nat} {k : Nat} {f : Nat → Nat},
+  (∀ (a : Nat), f (f a) = f a) →
+    ∀ {t d : Nat},
+      d < k →
+        (∀ (e : Nat), d < e → e < k → ∀ (a : Nat), rules e t a = f a) →
+          ∀ (b : Nat),
+            Becoming.Optimum.InTurn.pass rules t (d + 1) (k - (d + 1)) b = b ∨
+              Becoming.Optimum.InTurn.pass rules t (d + 1) (k - (d + 1)) b = f b
+@Becoming.Optimum.Coupled.drawn_drained : ∀ {G : Nat → Nat → Nat} {rules : Nat → Nat → Nat → Nat} {k c m : Nat},
+  0 < m →
+    ∀ {d : Nat},
+      0 < d →
+        d < k →
+          ∀ (j t : Nat),
+            (∀ (s : Nat), t ≤ s → s < t + j → Becoming.Optimum.Coupled.AllFollow rules k (fun x => 0) s) →
+              ∀ (z : Nat), Becoming.Optimum.Coupled.drawn G rules k d c m j t z = 0
+@Becoming.Optimum.Coupled.drains_at : ∀ {G : Nat → Nat → Nat} {rules : Nat → Nat → Nat → Nat} {k c m N : Nat},
+  1 < k →
+    0 < m →
+      c < m →
+        Becoming.Optimum.Coupled.Perfect G (fun x x_1 x_2 => 0) rules k c m N →
+          ∀ {t j : Nat},
+            t + j + 1 = N →
+              (∀ (s : Nat), t + 1 ≤ s → s < N → Becoming.Optimum.Coupled.AllFollow rules k (fun x => 0) s) →
+                Becoming.Optimum.Coupled.AllFollow rules k (fun x => 0) t
+@Becoming.Optimum.Coupled.drains_below : ∀ {G : Nat → Nat → Nat} {rules : Nat → Nat → Nat → Nat} {k c m N : Nat},
+  1 < k →
+    0 < m →
+      c < m →
+        Becoming.Optimum.Coupled.Perfect G (fun x x_1 x_2 => 0) rules k c m N →
+          ∀ (t : Nat), t < N → Becoming.Optimum.Coupled.AllFollow rules k (fun x => 0) t
+@Becoming.Optimum.Coupled.drain_perfect : ∀ {G : Nat → Nat → Nat} {k c m N : Nat},
+  1 < k → 0 < m → c ≤ m → Becoming.Optimum.Coupled.Perfect G (fun x x_1 x_2 => 0) (fun x x_1 x_2 => 0) k c m N
+@Becoming.Optimum.Coupled.drawn_kept_late : ∀ {G : Nat → Nat → Nat} {rules : Nat → Nat → Nat → Nat} {k c m : Nat},
+  (∀ (t x : Nat), x < m → G t x < m) →
+    (∀ (t x : Nat), m ≤ x → m ≤ G t x) →
+      0 < m →
+        ∀ {d : Nat},
+          0 < d →
+            d < k →
+              ∀ (j t : Nat),
+                (∀ (s : Nat),
+                    t ≤ s →
+                      s < t + j → Becoming.Optimum.Coupled.AllFollow rules k (Becoming.Optimum.Coupled.keep m) s) →
+                  ∀ (z : Nat),
+                    Becoming.Optimum.Coupled.drawn G rules k d c m j t z =
+                      Becoming.Optimum.Coupled.stepCoupling (c * j) m z
+@Becoming.Optimum.Coupled.drawn_kept_first : ∀ {G : Nat → Nat → Nat} {rules : Nat → Nat → Nat → Nat} {k c m : Nat},
+  (∀ (t x : Nat), x < m → G t x < m) →
+    (∀ (t x : Nat), m ≤ x → m ≤ G t x) →
+      (∀ (t : Nat), G t 0 + m ≤ G t m) →
+        0 < m →
+          0 < k →
+            ∀ (j t : Nat),
+              (∀ (s : Nat),
+                  t ≤ s → s < t + j → Becoming.Optimum.Coupled.AllFollow rules k (Becoming.Optimum.Coupled.keep m) s) →
+                ∀ (z z' : Nat),
+                  m ≤ z →
+                    z' < m →
+                      z' + m ≤ z →
+                        Becoming.Optimum.Coupled.drawn G rules k 0 c m j t z' ≤
+                          Becoming.Optimum.Coupled.drawn G rules k 0 c m j t z
+@Becoming.Optimum.Coupled.later_kept_late : ∀ {G : Nat → Nat → Nat} {rules : Nat → Nat → Nat → Nat} {k c m : Nat},
+  (∀ (t x : Nat), x < m → G t x < m) →
+    (∀ (t x : Nat), m ≤ x → m ≤ G t x) →
+      0 < m →
+        ∀ {t j d : Nat},
+          0 < d →
+            d < k →
+              (∀ (e : Nat), d < e → e < k → ∀ (a : Nat), rules e t a = Becoming.Optimum.Coupled.keep m a) →
+                (∀ (s : Nat),
+                    t + 1 ≤ s →
+                      s < t + 1 + j → Becoming.Optimum.Coupled.AllFollow rules k (Becoming.Optimum.Coupled.keep m) s) →
+                  ∀ (b : Nat),
+                    Becoming.Optimum.Coupled.later G rules k d c m j t b =
+                      Becoming.Optimum.Coupled.stepCoupling (c + c * j) m b
+@Becoming.Optimum.Coupled.later_kept_first : ∀ {G : Nat → Nat → Nat} {rules : Nat → Nat → Nat → Nat} {k c m : Nat},
+  1 < k →
+    ∀ {t j : Nat},
+      (∀ (e : Nat), 0 < e → e < k → ∀ (a : Nat), rules e t a = Becoming.Optimum.Coupled.keep m a) →
+        ∀ (b : Nat),
+          Becoming.Optimum.Coupled.later G rules k 0 c m j t b =
+            if m ≤ b then c + Becoming.Optimum.Coupled.drawn G rules k 0 c m j (t + 1) (G t m)
+            else Becoming.Optimum.Coupled.drawn G rules k 0 c m j (t + 1) (G t 0)
+@Becoming.Optimum.Coupled.kept_at : ∀ {G : Nat → Nat → Nat} {rules : Nat → Nat → Nat → Nat} {k c m N : Nat},
+  (∀ (t x : Nat), x < m → G t x < m) →
+    (∀ (t x : Nat), m ≤ x → m ≤ G t x) →
+      (∀ (t : Nat), G t 0 + m ≤ G t m) →
+        1 < k →
+          0 < m →
+            m < c →
+              Becoming.Optimum.Coupled.Perfect G (fun x x_1 x_2 => 0) rules k c m N →
+                ∀ {t j : Nat},
+                  t + j + 1 = N →
+                    (∀ (s : Nat),
+                        t + 1 ≤ s →
+                          s < N → Becoming.Optimum.Coupled.AllFollow rules k (Becoming.Optimum.Coupled.keep m) s) →
+                      Becoming.Optimum.Coupled.AllFollow rules k (Becoming.Optimum.Coupled.keep m) t
+@Becoming.Optimum.Coupled.kept_above : ∀ {G : Nat → Nat → Nat} {rules : Nat → Nat → Nat → Nat} {k c m N : Nat},
+  (∀ (t x : Nat), x < m → G t x < m) →
+    (∀ (t x : Nat), m ≤ x → m ≤ G t x) →
+      (∀ (t : Nat), G t 0 + m ≤ G t m) →
+        1 < k →
+          0 < m →
+            m < c →
+              Becoming.Optimum.Coupled.Perfect G (fun x x_1 x_2 => 0) rules k c m N →
+                ∀ (t : Nat), t < N → Becoming.Optimum.Coupled.AllFollow rules k (Becoming.Optimum.Coupled.keep m) t
+@Becoming.Optimum.Coupled.keeping_perfect : ∀ {G : Nat → Nat → Nat} {k c m N : Nat},
+  (∀ (t x : Nat), x < m → G t x < m) →
+    (∀ (t x : Nat), m ≤ x → m ≤ G t x) →
+      (∀ (t : Nat), G t 0 + m ≤ G t m) →
+        1 < k →
+          0 < m →
+            m ≤ c →
+              Becoming.Optimum.Coupled.Perfect G (fun x x_1 x_2 => 0) (fun x x_1 a => Becoming.Optimum.Coupled.keep m a)
+                k c m N
+@Becoming.Optimum.Coupled.kept_levels : ∀ {G : Nat → Nat → Nat} {rules : Nat → Nat → Nat → Nat} {k m N : Nat},
+  (∀ (t x : Nat), m ≤ x → m ≤ G t x) →
+    0 < k →
+      ∀ {s : Nat},
+        m ≤ s →
+          (∀ (t : Nat), t < N → Becoming.Optimum.Coupled.AllFollow rules k (Becoming.Optimum.Coupled.keep m) t) →
+            ∀ (t : Nat),
+              t ≤ N →
+                m ≤ Becoming.Optimum.InTurn.levels G rules k s t ∧
+                  (t < N → Becoming.Optimum.InTurn.pass rules t 0 k (Becoming.Optimum.InTurn.levels G rules k s t) = m)
+@Becoming.Optimum.Coupled.one_keeps_first : ∀ {rules : Nat → Nat → Nat → Nat} {c m q : Nat},
+  0 < m →
+    c < m →
+      0 < c + q →
+        Becoming.Optimum.Coupled.Perfect (Becoming.Optimum.Coupled.gatedRenewal m q) (fun x x_1 x_2 => 0) rules 1 c m
+            2 →
+          (∀ (a : Nat), rules 0 1 a = 0) ∧ ∀ (a : Nat), m ≤ a → m ≤ rules 0 0 a
+@Becoming.Optimum.Coupled.one_keeps_several_drain : ∀ {c m q : Nat},
+  0 < m →
+    c < m →
+      0 < c + q →
+        (∀ (rules : Nat → Nat → Nat → Nat),
+            Becoming.Optimum.Coupled.Perfect (Becoming.Optimum.Coupled.gatedRenewal m q) (fun x x_1 x_2 => 0) rules 1 c
+                m 2 →
+              ∀ (a : Nat), m ≤ a → m ≤ rules 0 0 a) ∧
+          ∀ (k' : Nat) (rules : Nat → Nat → Nat → Nat),
+            1 < k' →
+              Becoming.Optimum.Coupled.Perfect (Becoming.Optimum.Coupled.gatedRenewal m q) (fun x x_1 x_2 => 0) rules k'
+                  c m 2 →
+                ∀ (t : Nat), t < 2 → ∀ (d : Nat), d < k' → ∀ (a : Nat), rules d t a = 0
+@Becoming.Optimum.Coupled.one_first_worth : ∀ {c m q a b : Nat},
+  b ≤ a →
+    a - b + (Becoming.Optimum.Coupled.stepCoupling c m b + Becoming.Optimum.Coupled.gatedRenewal m q 0 b) =
+      a + Becoming.Optimum.Coupled.stepCoupling (c + q) m b
+@Becoming.Optimum.Coupled.one_perfect : ∀ {c m q : Nat},
+  0 < m →
+    c ≤ m →
+      Becoming.Optimum.Coupled.Perfect (Becoming.Optimum.Coupled.gatedRenewal m q) (fun x x_1 x_2 => 0)
+        (fun x t a => if t = 0 then Becoming.Optimum.Coupled.keep m a else 0) 1 c m 2
+@Becoming.Optimum.Coupled.gatedRenewal_gate : ∀ {m q : Nat} (t x : Nat),
+  x < m → Becoming.Optimum.Coupled.gatedRenewal m q t x < m
+@Becoming.Optimum.Coupled.gatedRenewal_holds : ∀ {m q : Nat} (t x : Nat),
+  m ≤ x → m ≤ Becoming.Optimum.Coupled.gatedRenewal m q t x
+@Becoming.Optimum.Coupled.gatedRenewal_regrows : ∀ {m q : Nat},
+  0 < m → ∀ (t : Nat), Becoming.Optimum.Coupled.gatedRenewal m q t 0 + m ≤ Becoming.Optimum.Coupled.gatedRenewal m q t m
+@Becoming.Optimum.Coupled.gated_threshold : ∀ {k c m N q : Nat},
+  1 < k →
+    0 < m →
+      (c < m →
+          ∀ (rules : Nat → Nat → Nat → Nat),
+            Becoming.Optimum.Coupled.Perfect (Becoming.Optimum.Coupled.gatedRenewal m q) (fun x x_1 x_2 => 0) rules k c
+                m N →
+              ∀ (t : Nat), t < N → Becoming.Optimum.Coupled.AllFollow rules k (fun x => 0) t) ∧
+        (c ≤ m →
+            Becoming.Optimum.Coupled.Perfect (Becoming.Optimum.Coupled.gatedRenewal m q) (fun x x_1 x_2 => 0)
+              (fun x x_1 x_2 => 0) k c m N) ∧
+          (m ≤ c →
+              Becoming.Optimum.Coupled.Perfect (Becoming.Optimum.Coupled.gatedRenewal m q) (fun x x_1 x_2 => 0)
+                (fun x x_1 a => Becoming.Optimum.Coupled.keep m a) k c m N) ∧
+            (m < c →
+              ∀ (rules : Nat → Nat → Nat → Nat),
+                Becoming.Optimum.Coupled.Perfect (Becoming.Optimum.Coupled.gatedRenewal m q) (fun x x_1 x_2 => 0) rules
+                    k c m N →
+                  (∀ (t : Nat),
+                      t < N → Becoming.Optimum.Coupled.AllFollow rules k (Becoming.Optimum.Coupled.keep m) t) ∧
+                    ∀ (s : Nat),
+                      m ≤ s →
+                        ∀ (t : Nat),
+                          t < N →
+                            Becoming.Optimum.InTurn.pass rules t 0 k
+                                (Becoming.Optimum.InTurn.levels (Becoming.Optimum.Coupled.gatedRenewal m q) rules k s
+                                  t) =
+                              m)
+@Becoming.Optimum.Coupled.AtOnce.leftWith_drained : ∀ {portion : Nat → Nat → Nat → Nat} {k d t z b : Nat},
+  d < k → Becoming.Optimum.Coupled.AtOnce.leftWith portion (fun x x_1 x_2 => 0) k d t z b = b
+@Becoming.Optimum.Coupled.AtOnce.pool_drained : ∀ {portion : Nat → Nat → Nat → Nat} {k : Nat} (t z : Nat),
+  Becoming.Optimum.AtOnce.pool portion (fun x x_1 x_2 => 0) k t z = 0
+@Becoming.Optimum.Coupled.AtOnce.drawn_drained_step : ∀ {G : Nat → Nat → Nat} {portion : Nat → Nat → Nat → Nat}
+  {k c m : Nat},
+  0 < m →
+    ∀ {d : Nat} (j t z : Nat),
+      Becoming.Optimum.Coupled.AtOnce.drawn G portion (fun x x_1 x_2 => 0) k d c m (j + 1) t z =
+        portion d t z + Becoming.Optimum.Coupled.AtOnce.drawn G portion (fun x x_1 x_2 => 0) k d c m j (t + 1) (G t 0)
+@Becoming.Optimum.Coupled.AtOnce.unpivotal_drain_perfect : ∀ {G : Nat → Nat → Nat} {portion : Nat → Nat → Nat → Nat}
+  {k c m N : Nat},
+  0 < m →
+    (∀ (d : Nat), d < k → ∀ (t z : Nat), portion d t z < m) →
+      (∀ (d : Nat),
+          d < k →
+            ∀ (t : Nat),
+              t + 1 < N →
+                ∀ (z b : Nat), b ≤ portion d t z → portion d (t + 1) (G t b) ≤ portion d (t + 1) (G t 0) + b) →
+        Becoming.Optimum.Coupled.AtOnce.Perfect G portion (fun x x_1 x_2 => 0) (fun x x_1 x_2 => 0) k c m N
+@Becoming.Optimum.Coupled.AtOnce.cancel_left_sub : ∀ {P b x y : Nat}, b ≤ P → P - b + x ≤ P + y → x ≤ y + b
+@Becoming.Optimum.Coupled.AtOnce.uncancel : ∀ {P b x y : Nat}, b ≤ P → x ≤ y + b → P - b + x ≤ P + y
+@Becoming.Optimum.Coupled.AtOnce.drain_perfect_iff : ∀ {G : Nat → Nat → Nat} {portion : Nat → Nat → Nat → Nat}
+  {k c m N : Nat},
+  0 < m →
+    (Becoming.Optimum.Coupled.AtOnce.Perfect G portion (fun x x_1 x_2 => 0) (fun x x_1 x_2 => 0) k c m N ↔
+      (∀ (d : Nat),
+          d < k →
+            ∀ (t : Nat),
+              t + 1 = N → ∀ (z b : Nat), b ≤ portion d t z → Becoming.Optimum.Coupled.stepCoupling c m b ≤ b) ∧
+        ∀ (d : Nat),
+          d < k →
+            ∀ (t : Nat),
+              t + 1 < N →
+                ∀ (z b : Nat),
+                  b ≤ portion d t z →
+                    Becoming.Optimum.Coupled.stepCoupling c m b + portion d (t + 1) (G t b) ≤
+                      portion d (t + 1) (G t 0) + b)
+@Becoming.Optimum.Coupled.AtOnce.drain_perfect_iff_reach : ∀ {G : Nat → Nat → Nat} {portion : Nat → Nat → Nat → Nat}
+  {k c m N : Nat},
+  0 < m →
+    (∀ (d : Nat), d < k → ∀ (t : Nat), t + 1 < N → ∀ (b : Nat), portion d (t + 1) (G t b) = portion d (t + 1) (G t 0)) →
+      (Becoming.Optimum.Coupled.AtOnce.Perfect G portion (fun x x_1 x_2 => 0) (fun x x_1 x_2 => 0) k c m N ↔
+        ∀ (d : Nat), d < k → ∀ (t : Nat), t < N → ∀ (z : Nat), m ≤ portion d t z → c ≤ m)
+@Becoming.Optimum.Coupled.AtOnce.drained_unmet : ∀ {portion : Nat → Nat → Nat → Nat} {k c m : Nat},
+  0 < m →
+    ∀ (t z : Nat),
+      Becoming.Optimum.Coupled.stepCoupling c m (Becoming.Optimum.AtOnce.pool portion (fun x x_1 x_2 => 0) k t z) = 0
+Becoming.Optimum.Coupled.AtOnce.Shores.upTo_le : ∀ (p z : Nat), Becoming.Optimum.Coupled.AtOnce.Shores.upTo p z ≤ p
+Becoming.Optimum.Coupled.AtOnce.Shores.upTo_le_self : ∀ (p z : Nat), Becoming.Optimum.Coupled.AtOnce.Shores.upTo p z ≤ z
+Becoming.Optimum.Coupled.AtOnce.Shores.upTo_zero : ∀ (p : Nat), Becoming.Optimum.Coupled.AtOnce.Shores.upTo p 0 = 0
+Becoming.Optimum.Coupled.AtOnce.Shores.shore_le : ∀ (p d t z : Nat),
+  Becoming.Optimum.Coupled.AtOnce.Shores.shore p d t z ≤ p
+Becoming.Optimum.Coupled.AtOnce.Shores.shore_le_self : ∀ (p d t z : Nat),
+  Becoming.Optimum.Coupled.AtOnce.Shores.shore p d t z ≤ z
+Becoming.Optimum.Coupled.AtOnce.Shores.shore_zero : ∀ (p d t : Nat),
+  Becoming.Optimum.Coupled.AtOnce.Shores.shore p d t 0 = 0
+@Becoming.Optimum.Coupled.AtOnce.Shores.drain_perfect : ∀ {p m : Nat},
+  0 < m →
+    p < m →
+      ∀ (c N : Nat),
+        Becoming.Optimum.Coupled.AtOnce.Perfect (fun x x_1 => x_1) (Becoming.Optimum.Coupled.AtOnce.Shores.shore p)
+            (fun x x_1 x_2 => 0) (fun x x_1 x_2 => 0) 2 c m N ∧
+          (∀ (t z : Nat),
+              Becoming.Optimum.Coupled.stepCoupling c m
+                  (Becoming.Optimum.AtOnce.pool (Becoming.Optimum.Coupled.AtOnce.Shores.shore p) (fun x x_1 x_2 => 0) 2
+                    t z) =
+                0) ∧
+            ∀ (t : Nat),
+              Becoming.Optimum.AtOnce.pool (Becoming.Optimum.Coupled.AtOnce.Shores.shore p) (fun x x_1 a => a) 2 t
+                  (p + p) =
+                p + p

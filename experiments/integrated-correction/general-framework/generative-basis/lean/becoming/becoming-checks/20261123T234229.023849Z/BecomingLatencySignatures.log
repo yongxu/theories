@@ -1,0 +1,72 @@
+@Becoming.TimedResponse.Linked.one_le : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {n : Nat} {c : C},
+  Becoming.TimedResponse.Linked L L' W obs source n c → 1 ≤ n
+@Becoming.TimedResponse.Spread.linked : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {S : Nat},
+  (∀ (t : Nat) (h : F), source t h → S ≤ t) →
+    ∀ {t : Nat} {c : C},
+      Becoming.TimedResponse.Spread L L' W obs source t c →
+        ∃ n, Becoming.TimedResponse.Linked L L' W obs source n c ∧ S + n ≤ t
+@Becoming.TimedResponse.reachedBy_linked : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {S : Nat},
+  (∀ (t : Nat) (h : F), source t h → S ≤ t) →
+    ∀ {g : F} {T : Nat},
+      Becoming.TimedResponse.ReachedBy L L' W obs source g T →
+        ∃ n s c,
+          Becoming.TimedResponse.CoupledIntoAt W obs g s c ∧
+            Becoming.TimedResponse.Linked L L' W obs source n c ∧ S + n ≤ T
+@Becoming.TimedResponse.not_reached_of_far : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {S : Nat},
+  (∀ (t : Nat) (h : F), source t h → S ≤ t) →
+    ∀ {g : F} {T : Nat},
+      (∀ (n s : Nat) (c : C),
+          s ≤ T →
+            Becoming.TimedResponse.CoupledIntoAt W obs g s c →
+              Becoming.TimedResponse.Linked L L' W obs source n c → T < S + n) →
+        ¬Becoming.TimedResponse.ReachedBy L L' W obs source g T
+@Becoming.TimedResponse.answer_alike_far : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {S D : Nat},
+  (∀ (t : Nat), t < D → ∀ (c : C), W.level (t + 1) c + L.taken t c = W.level t c + L.given t c) →
+    (∀ (t : Nat), t < D → ∀ (c : C), W'.level (t + 1) c + L'.taken t c = W'.level t c + L'.given t c) →
+      (∀ (t : Nat), t < D → L.present t = L'.present t) →
+        (∀ (c : C), W.level 0 c = W'.level 0 c) →
+          (∀ (t : Nat),
+              t < D →
+                ∀ (h : F),
+                  ¬source t h →
+                    W.AlikeThroughUpTo obs h W.level W'.level t →
+                      ∀ (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+            (∀ (t : Nat) (h : F), source t h → S ≤ t) →
+              ∀ {A : Type} {g : F} (read : (Nat → C → Nat) → A),
+                (∀ (l l' : Nat → C → Nat), W.AlikeThroughUpTo obs g l l' D → read l = read l') →
+                  (∀ (n s : Nat) (c : C),
+                      s ≤ D →
+                        Becoming.TimedResponse.CoupledIntoAt W obs g s c →
+                          Becoming.TimedResponse.Linked L L' W obs source n c → D < S + n) →
+                    read W.level = read W'.level
+Becoming.TimedResponse.Relay.late : ∀ (t : Nat) (h : Becoming.TimedResponse.Relay.Node),
+  Becoming.TimedResponse.Relay.sourceAt t h → 1 ≤ t
+@Becoming.TimedResponse.Relay.source_not_second : ∀ {t : Nat},
+  ¬Becoming.TimedResponse.TouchesAt (Becoming.TimedResponse.Relay.flow false) (Becoming.TimedResponse.Relay.flow true) t
+      Becoming.TimedResponse.Relay.Node.source Becoming.TimedResponse.Relay.Spot.second
+Becoming.TimedResponse.Relay.reader_far : ∀ (n s : Nat) (c : Becoming.TimedResponse.Relay.Spot),
+  s ≤ 2 →
+    Becoming.TimedResponse.CoupledIntoAt (Becoming.TimedResponse.Relay.web false) Becoming.TimedResponse.Relay.reads
+        Becoming.TimedResponse.Relay.Node.reader s c →
+      Becoming.TimedResponse.Linked (Becoming.TimedResponse.Relay.flow false) (Becoming.TimedResponse.Relay.flow true)
+          (Becoming.TimedResponse.Relay.web false) Becoming.TimedResponse.Relay.reads
+          Becoming.TimedResponse.Relay.sourceAt n c →
+        2 < 1 + n
+Becoming.TimedResponse.Relay.not_reached_at_two : ¬Becoming.TimedResponse.ReachedBy
+    (Becoming.TimedResponse.Relay.flow false) (Becoming.TimedResponse.Relay.flow true)
+    (Becoming.TimedResponse.Relay.web false) Becoming.TimedResponse.Relay.reads Becoming.TimedResponse.Relay.sourceAt
+    Becoming.TimedResponse.Relay.Node.reader 2
+Becoming.TimedResponse.Relay.reached_at_three : Becoming.TimedResponse.ReachedBy
+  (Becoming.TimedResponse.Relay.flow false) (Becoming.TimedResponse.Relay.flow true)
+  (Becoming.TimedResponse.Relay.web false) Becoming.TimedResponse.Relay.reads Becoming.TimedResponse.Relay.sourceAt
+  Becoming.TimedResponse.Relay.Node.reader 3
+Becoming.TimedResponse.Relay.answers_two_and_three : Becoming.TimedResponse.Relay.readAt 2
+      (Becoming.TimedResponse.Relay.web false).level =
+    Becoming.TimedResponse.Relay.readAt 2 (Becoming.TimedResponse.Relay.web true).level ∧
+  Becoming.TimedResponse.Relay.readAt 3 (Becoming.TimedResponse.Relay.web false).level ≠
+    Becoming.TimedResponse.Relay.readAt 3 (Becoming.TimedResponse.Relay.web true).level

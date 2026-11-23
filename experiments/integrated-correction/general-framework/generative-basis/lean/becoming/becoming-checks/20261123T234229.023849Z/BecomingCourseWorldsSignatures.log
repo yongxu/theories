@@ -1,0 +1,340 @@
+@Becoming.CourseWorlds.cond_left : ∀ {b : Bool},
+  b = true → ∀ {x y y' : Nat}, (bif b then x else y) = bif b then x else y'
+@Becoming.CourseWorlds.cond_right : ∀ {b : Bool},
+  b = false → ∀ {x x' y : Nat}, (bif b then x else y) = bif b then x' else y
+@Becoming.CourseWorlds.cond_of_true : ∀ {b : Bool}, b = true → ∀ (x y : Nat), (bif b then x else y) = x
+@Becoming.ExchangeLaw.ofMoves_nonanticipating : ∀ {F C : Type} (u : Nat → F → C → Nat × Nat),
+  (Becoming.ExchangeLaw.ofMoves u).Nonanticipating
+@Becoming.ExchangeLaw.actWorld_balanced : ∀ {F C : Type} {part : F → Bool} {present : Nat → List F}
+  {law act : Becoming.ExchangeLaw F C} {start : C → Nat},
+  law.Nonanticipating →
+    act.Nonanticipating →
+      (law.withAct part act).Feasible present start →
+        ∀ (W : Becoming.Web F C), (law.actWorld act part present start W).Balanced
+@Becoming.TwoActs.balanced : ∀ {F C : Type} {part : F → Bool} {σ : Nat → F → C → Nat} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {δ : C → Nat} {law act act' : Becoming.ExchangeLaw F C} {start start' : C → Nat},
+  Becoming.TwoActs part σ k present δ law act act' start start' →
+    ∀ (W W' : Becoming.Web F C),
+      (law.actWorld act part present start W).Balanced ∧ (law.actWorld act' part present start' W').Balanced
+@Becoming.TwoActs.gap_le_carried : ∀ {F C : Type} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {law act act' : Becoming.ExchangeLaw F C}
+  {start start' : C → Nat} [DecidableEq C] {cs : List C},
+  (∀ (c : C), c ∈ cs) →
+    Becoming.TwoActs part σ k present δ law act act' start start' →
+      ∀ (W W' : Becoming.Web F C) (t : Nat) (c : C),
+        Becoming.gap ((law.actWorld act part present start W).web.level t (Sum.inr c))
+            ((law.actWorld act' part present start' W').web.level t (Sum.inr c)) ≤
+          Becoming.carried cs part σ k present δ t c
+@Becoming.TwoActs.gap_le_carried_read : ∀ {F C : Type} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {law act act' : Becoming.ExchangeLaw F C}
+  {start start' : C → Nat} [DecidableEq C] {cs : List C},
+  (∀ (c : C), c ∈ cs) →
+    ∀ {reads : Nat → F → C → Bool},
+      law.ReadsAt part reads →
+        Becoming.TwoActs part σ k present δ law act act' start start' →
+          ∀ (W W' : Becoming.Web F C) (t : Nat) (c : C),
+            Becoming.gap ((law.actWorld act part present start W).web.level t (Sum.inr c))
+                ((law.actWorld act' part present start' W').web.level t (Sum.inr c)) ≤
+              Becoming.carried cs part σ (Becoming.restrictReads reads k) present δ t c
+@Becoming.carrying_moves_taken : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} (u : Nat → F → C → Nat) (l : Nat → C → Nat) (t : Nat)
+  (c : C),
+  (Becoming.total (present t) fun f =>
+      ((Becoming.ExchangeLaw.carrying cs part σ k).withAct part
+            (Becoming.ExchangeLaw.ofMoves (Becoming.CourseWorlds.giving u))).take
+        t f l c) =
+    0
+@Becoming.carrying_moves_feasible : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} (u : Nat → F → C → Nat) (start : C → Nat),
+  ((Becoming.ExchangeLaw.carrying cs part σ k).withAct part
+        (Becoming.ExchangeLaw.ofMoves (Becoming.CourseWorlds.giving u))).Feasible
+    present start
+@Becoming.carrying_moves_nonanticipating : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} (u : Nat → F → C → Nat),
+  ((Becoming.ExchangeLaw.carrying cs part σ k).withAct part
+      (Becoming.ExchangeLaw.ofMoves (Becoming.CourseWorlds.giving u))).Nonanticipating
+@Becoming.carrying_act_levels : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (t : Nat) (c : C),
+  ((Becoming.ExchangeLaw.carrying cs part σ k).withAct part
+          (Becoming.ExchangeLaw.ofMoves (Becoming.CourseWorlds.giving σ))).levels
+      present δ t c =
+    Becoming.carried cs part σ k present δ t c
+@Becoming.quiet_act_levels : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} (t : Nat) (c : C),
+  ((Becoming.ExchangeLaw.carrying cs part σ k).withAct part
+          (Becoming.ExchangeLaw.ofMoves (Becoming.CourseWorlds.giving fun x x_1 x_2 => 0))).levels
+      present (fun x => 0) t c =
+    Becoming.carried cs part (fun x x_1 x_2 => 0) k present (fun x => 0) t c
+@Becoming.carrying_twoActs : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} [DecidableEq C],
+  Becoming.Distinct cs →
+    Becoming.TwoActs part σ k present δ (Becoming.ExchangeLaw.carrying cs part σ k)
+      (Becoming.ExchangeLaw.ofMoves (Becoming.CourseWorlds.giving σ))
+      (Becoming.ExchangeLaw.ofMoves (Becoming.CourseWorlds.giving fun x x_1 x_2 => 0)) δ fun x => 0
+@Becoming.most_difference_worlds : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} [DecidableEq C],
+  (∀ (c : C), c ∈ cs) →
+    Becoming.Distinct cs →
+      ∀ (T : Nat) (c : C) (a : Nat),
+        (∀ (law act act' : Becoming.ExchangeLaw F C) (start start' : C → Nat) (W W' : Becoming.Web F C),
+            Becoming.TwoActs part σ k present δ law act act' start start' →
+              Becoming.gap ((law.actWorld act part present start W).web.level T (Sum.inr c))
+                  ((law.actWorld act' part present start' W').web.level T (Sum.inr c)) ≤
+                a) ↔
+          Becoming.carried cs part σ k present δ T c ≤ a
+@Becoming.worlds_iff_flows : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} [DecidableEq C],
+  (∀ (c : C), c ∈ cs) →
+    Becoming.Distinct cs →
+      ∀ (T : Nat) (c : C) (a : Nat),
+        (∀ (law act act' : Becoming.ExchangeLaw F C) (start start' : C → Nat) (W W' : Becoming.Web F C),
+            Becoming.TwoActs part σ k present δ law act act' start start' →
+              Becoming.gap ((law.actWorld act part present start W).web.level T (Sum.inr c))
+                  ((law.actWorld act' part present start' W').web.level T (Sum.inr c)) ≤
+                a) ↔
+          ∀ (law : Becoming.ExchangeLaw F C) (L L' : Becoming.Flow F C) (W W' : Becoming.Web F C),
+            law.Nonanticipating →
+              L.Balances W →
+                L'.Balances W' →
+                  (∀ (t : Nat), L.present t = present t) →
+                    (∀ (t : Nat), L'.present t = present t) →
+                      L.Follows law part W.level →
+                        L'.Follows law part W'.level →
+                          (∀ (t : Nat) (h : F) (c : C) (s : Nat) (d : C),
+                              part h = false → s ≤ t → law.RespondsWithin t h c s d (k t h c s d)) →
+                            (∀ (t : Nat) (h : F) (c : C), part h = true → L.exchangeGap L' t h c ≤ σ t h c) →
+                              (∀ (c : C), Becoming.gap (W.level 0 c) (W'.level 0 c) ≤ δ c) →
+                                Becoming.gap (W.level T c) (W'.level T c) ≤ a
+@Becoming.most_difference_within_worlds : ∀ {F C : Type} [DecidableEq C] {cs : List C} {part : F → Bool}
+  {σ : Nat → F → C → Nat} {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat},
+  (∀ (c : C), c ∈ cs) →
+    Becoming.Distinct cs →
+      ∀ {c : C},
+        (∀ (e : C), Becoming.Upstream cs part k present e c → ¬Becoming.OnLoop cs part k present e) →
+          ∀ {n : Nat},
+            cs.length ≤ n + 1 →
+              ∀ (T a : Nat),
+                (∀ (law act act' : Becoming.ExchangeLaw F C) (start start' : C → Nat) (W W' : Becoming.Web F C),
+                    Becoming.TwoActs part σ k present δ law act act' start start' →
+                      Becoming.gap ((law.actWorld act part present start W).web.level T (Sum.inr c))
+                          ((law.actWorld act' part present start' W').web.level T (Sum.inr c)) ≤
+                        a) ↔
+                  Becoming.carriedWithin cs part σ k present δ n T c ≤ a
+@Becoming.TwoActs.gap_le_polynomial : ∀ {F C : Type} [DecidableEq C] {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {law act act' : Becoming.ExchangeLaw F C}
+  {start start' : C → Nat},
+  (∀ (c : C), c ∈ cs) →
+    ∀ {c : C},
+      (∀ (e : C), Becoming.Upstream cs part k present e c → ¬Becoming.OnLoop cs part k present e) →
+        ∀ {n : Nat},
+          cs.length ≤ n + 1 →
+            ∀ {M D : Nat},
+              (∀ (c : C), δ c ≤ D) →
+                (∀ (t : Nat) (c : C), Becoming.inflow cs part k present t c ≤ M) →
+                  Becoming.TwoActs part (fun x x_1 x_2 => 0) k present δ law act act' start start' →
+                    ∀ (W W' : Becoming.Web F C) (t : Nat),
+                      Becoming.gap ((law.actWorld act part present start W).web.level t (Sum.inr c))
+                          ((law.actWorld act' part present start' W').web.level t (Sum.inr c)) ≤
+                        D * Becoming.Loops.orderSum M n t
+@Becoming.gap_polynomial_iff_no_loop_worlds : ∀ {F C : Type} [DecidableEq C] {cs : List C} {part : F → Bool},
+  (∀ (c : C), c ∈ cs) →
+    Becoming.Distinct cs →
+      ∀ (K : F → C → C → Nat) (hs : List F) (c : C),
+        (∀ (δ : C → Nat),
+            ∃ A n,
+              ∀ (t : Nat) (law act act' : Becoming.ExchangeLaw F C) (start start' : C → Nat) (W W' : Becoming.Web F C),
+                Becoming.TwoActs part (fun x x_1 x_2 => 0) (Becoming.stationary K) (fun x => hs) δ law act act' start
+                    start' →
+                  Becoming.gap ((law.actWorld act part (fun x => hs) start W).web.level t (Sum.inr c))
+                      ((law.actWorld act' part (fun x => hs) start' W').web.level t (Sum.inr c)) ≤
+                    A * (t + 1) ^ n) ↔
+          ∀ (e : C),
+            Becoming.Upstream cs part (Becoming.stationary K) (fun x => hs) e c →
+              ¬Becoming.OnLoop cs part (Becoming.stationary K) (fun x => hs) e
+@Becoming.gap_within_order_iff_worlds : ∀ {F C : Type} [DecidableEq C] {cs : List C} {part : F → Bool}
+  {σ : Nat → F → C → Nat} {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F},
+  (∀ (c : C), c ∈ cs) →
+    Becoming.Distinct cs →
+      ∀ (j T : Nat) (c : C),
+        (∀ (δ : C → Nat) (law act act' : Becoming.ExchangeLaw F C) (start start' : C → Nat) (W W' : Becoming.Web F C),
+            Becoming.TwoActs part σ k present δ law act act' start start' →
+              Becoming.gap ((law.actWorld act part present start W).web.level T (Sum.inr c))
+                  ((law.actWorld act' part present start' W').web.level T (Sum.inr c)) ≤
+                Becoming.carriedWithin cs part σ k present δ j T c) ↔
+          ¬Becoming.CoupledIntoBy cs part k present (j + 1) T c
+@Becoming.TwoActs.gap_le_polynomial_from : ∀ {F C : Type} [DecidableEq C] {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {law act act' : Becoming.ExchangeLaw F C}
+  {start start' : C → Nat},
+  (∀ (c : C), c ∈ cs) →
+    ∀ {N : Nat} {c : C},
+      (∀ (e : C),
+          Becoming.Upstream cs part (Becoming.strengthsFrom N k) present e c →
+            ¬Becoming.OnLoop cs part (Becoming.strengthsFrom N k) present e) →
+        ∀ {M D : Nat},
+          (∀ (c : C), δ c ≤ D) →
+            (∀ (t : Nat) (c : C), Becoming.inflow cs part k present t c ≤ M) →
+              Becoming.TwoActs part (fun x x_1 x_2 => 0) k present δ law act act' start start' →
+                ∀ (W W' : Becoming.Web F C) (t : Nat),
+                  Becoming.gap ((law.actWorld act part present start W).web.level t (Sum.inr c))
+                      ((law.actWorld act' part present start' W').web.level t (Sum.inr c)) ≤
+                    D * Becoming.Loops.orderSum M (N + cs.length) t
+@Becoming.most_difference_courses_worlds : ∀ {F C : Type} [DecidableEq C] {cs : List C} {part : F → Bool}
+  {σ : Nat → F → C → Nat} {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat},
+  (∀ (c : C), c ∈ cs) →
+    Becoming.Distinct cs →
+      ∀ (t : Nat) (c : C) (a : Nat),
+        (∀ (law act act' : Becoming.ExchangeLaw F C) (start start' : C → Nat) (W W' : Becoming.Web F C),
+            Becoming.TwoActs part σ k present δ law act act' start start' →
+              Becoming.gap ((law.actWorld act part present start W).web.level t (Sum.inr c))
+                  ((law.actWorld act' part present start' W').web.level t (Sum.inr c)) ≤
+                a) ↔
+          Becoming.counting.sum (Becoming.courses [()] (Becoming.routePoints cs t) (t + 1))
+              (Becoming.counting.along (Becoming.routeWeight cs part σ k present δ) Becoming.routeRead
+                (Becoming.RoutePoint.level t c)) ≤
+            a
+@Becoming.TwoActs.gap_le_polynomial_before : ∀ {F C : Type} [DecidableEq C] {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {law act act' : Becoming.ExchangeLaw F C}
+  {start start' : C → Nat},
+  (∀ (c : C), c ∈ cs) →
+    ∀ {T : Nat} {c : C},
+      (∀ (e : C),
+          Becoming.Upstream cs part (Becoming.strengthsBefore T k) present e c →
+            ¬Becoming.OnLoop cs part (Becoming.strengthsBefore T k) present e) →
+        ∀ {n : Nat},
+          cs.length ≤ n + 1 →
+            ∀ {M D : Nat},
+              (∀ (c : C), δ c ≤ D) →
+                (∀ (t : Nat) (c : C), Becoming.inflow cs part k present t c ≤ M) →
+                  Becoming.TwoActs part (fun x x_1 x_2 => 0) k present δ law act act' start start' →
+                    ∀ (W W' : Becoming.Web F C) {t : Nat},
+                      t ≤ T →
+                        Becoming.gap ((law.actWorld act part present start W).web.level t (Sum.inr c))
+                            ((law.actWorld act' part present start' W').web.level t (Sum.inr c)) ≤
+                          D * Becoming.Loops.orderSum M n t
+@Becoming.TwoActs.gap_le_count : ∀ {F C : Type} [DecidableEq C] {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {law act act' : Becoming.ExchangeLaw F C}
+  {start start' : C → Nat},
+  (∀ (c : C), c ∈ cs) →
+    ∀ {M D : Nat} {on : Nat → Bool},
+      (∀ (c : C), δ c ≤ D) →
+        (∀ (t : Nat) (c : C), Becoming.inflow cs part k present t c ≤ M) →
+          (∀ (t : Nat) (c : C), on t = false → Becoming.inflow cs part k present t c = 0) →
+            Becoming.TwoActs part (fun x x_1 x_2 => 0) k present δ law act act' start start' →
+              ∀ (W W' : Becoming.Web F C) (t : Nat) (c : C),
+                Becoming.gap ((law.actWorld act part present start W).web.level t (Sum.inr c))
+                    ((law.actWorld act' part present start' W').web.level t (Sum.inr c)) ≤
+                  D * (1 + M) ^ Becoming.Frequency.count on t
+@Becoming.runaway_worlds : ∀ {F C : Type} [DecidableEq C] {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat},
+  (∀ (c : C), c ∈ cs) →
+    Becoming.Distinct cs →
+      ∀ {e : C} {T : Nat → Nat},
+        (∀ (i : Nat), Becoming.RoundTrip cs part k present e (T i) (T (i + 1))) →
+          0 < (Becoming.carriedWorld cs part σ k present δ).web.level (T 0) (Sum.inr e) →
+            (∀ (A n : Nat), ∃ i, A * (T i + 1) ^ n < 2 ^ i) →
+              ¬∃ A n,
+                  ∀ (t : Nat) (law act act' : Becoming.ExchangeLaw F C) (start start' : C → Nat)
+                    (W W' : Becoming.Web F C),
+                    Becoming.TwoActs part σ k present δ law act act' start start' →
+                      Becoming.gap ((law.actWorld act part present start W).web.level t (Sum.inr e))
+                          ((law.actWorld act' part present start' W').web.level t (Sum.inr e)) ≤
+                        A * (t + 1) ^ n
+@Becoming.formedWorld_balanced : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {present : Nat → List F} {δ : C → Nat} {κ : (Nat → C → Nat) → Nat → F → C → Nat → C → Nat},
+  Becoming.ReadsBefore κ → (Becoming.formedWorld cs part σ κ present δ).Balanced
+@Becoming.formedWorld_le_polynomial_before : ∀ {F C : Type} {cs : List C} {part : F → Bool} {present : Nat → List F}
+  {δ : C → Nat} {κ : (Nat → C → Nat) → Nat → F → C → Nat → C → Nat},
+  Becoming.ReadsBefore κ →
+    (∀ (c : C), c ∈ cs) →
+      ∀ {T : Nat} {c : C},
+        (∀ (e : C),
+            Becoming.Upstream cs part
+                (Becoming.strengthsBefore T
+                  (κ fun s d =>
+                    (Becoming.formedWorld cs part (fun x x_1 x_2 => 0) κ present δ).web.level s (Sum.inr d)))
+                present e c →
+              ¬Becoming.OnLoop cs part
+                  (Becoming.strengthsBefore T
+                    (κ fun s d =>
+                      (Becoming.formedWorld cs part (fun x x_1 x_2 => 0) κ present δ).web.level s (Sum.inr d)))
+                  present e) →
+          ∀ {n : Nat},
+            cs.length ≤ n + 1 →
+              ∀ {M D : Nat},
+                (∀ (c : C), δ c ≤ D) →
+                  (∀ (t : Nat) (c : C),
+                      Becoming.inflow cs part
+                          (κ fun s d =>
+                            (Becoming.formedWorld cs part (fun x x_1 x_2 => 0) κ present δ).web.level s (Sum.inr d))
+                          present t c ≤
+                        M) →
+                    ∀ {t : Nat},
+                      t ≤ T →
+                        (Becoming.formedWorld cs part (fun x x_1 x_2 => 0) κ present δ).web.level t (Sum.inr c) ≤
+                          D * Becoming.Loops.orderSum M n t
+@Becoming.ExchangeLaw.moves_actsAlike : ∀ {F C : Type} {part : F → Bool} {present : Nat → List F}
+  {law : Becoming.ExchangeLaw F C} {u : Nat → F → C → Nat × Nat} (start start' : C → Nat),
+  ((law.withAct part (Becoming.ExchangeLaw.ofMoves u)).course present start).ActsAlike
+    ((law.withAct part (Becoming.ExchangeLaw.ofMoves u)).course present start') part
+@Becoming.ExchangeLaw.ReadsAt.withMoves_nonanticipating : ∀ {F C : Type} {part : F → Bool}
+  {law : Becoming.ExchangeLaw F C} {reads : Nat → F → C → Bool},
+  law.ReadsAt part reads →
+    ∀ (u : Nat → F → C → Nat × Nat), (law.withAct part (Becoming.ExchangeLaw.ofMoves u)).Nonanticipating
+@Becoming.ExchangeLaw.ReadsInto.withMoves_nonanticipating : ∀ {F C : Type} {part : F → Bool}
+  {law : Becoming.ExchangeLaw F C} {reads : Nat → F → C → Nat → C → Bool},
+  law.ReadsInto part reads →
+    ∀ (u : Nat → F → C → Nat × Nat), (law.withAct part (Becoming.ExchangeLaw.ofMoves u)).Nonanticipating
+@Becoming.unread_carried_nowhere_worlds : ∀ {F C : Type} {part : F → Bool} {present : Nat → List F}
+  {law : Becoming.ExchangeLaw F C} {u : Nat → F → C → Nat × Nat} {start start' : C → Nat} {reads : Nat → F → C → Bool},
+  law.ReadsAt part reads →
+    (law.withAct part (Becoming.ExchangeLaw.ofMoves u)).Feasible present start →
+      (law.withAct part (Becoming.ExchangeLaw.ofMoves u)).Feasible present start' →
+        ∀ {c : C} {d T : Nat},
+          (∀ (t : Nat), t < T → ∀ (h : F), part h = false → reads t h c = false) →
+            (∀ (e : C), e ≠ c → start e = start' e) →
+              start' c = start c + d →
+                ∀ (W W' : Becoming.Web F C) (t : Nat),
+                  t ≤ T →
+                    (∀ (e : C),
+                        e ≠ c →
+                          (law.actWorld (Becoming.ExchangeLaw.ofMoves u) part present start W).web.level t (Sum.inr e) =
+                            (law.actWorld (Becoming.ExchangeLaw.ofMoves u) part present start' W').web.level t
+                              (Sum.inr e)) ∧
+                      (law.actWorld (Becoming.ExchangeLaw.ofMoves u) part present start' W').web.level t (Sum.inr c) =
+                        (law.actWorld (Becoming.ExchangeLaw.ofMoves u) part present start W).web.level t (Sum.inr c) + d
+@Becoming.break_carried_nowhere_worlds : ∀ {F C : Type} {part : F → Bool} {present : Nat → List F}
+  {law : Becoming.ExchangeLaw F C} {u : Nat → F → C → Nat × Nat} {start start' : C → Nat} {c : C} {θ : Nat → Nat},
+  law.ReadsBelow part c θ →
+    law.Nonanticipating →
+      (law.withAct part (Becoming.ExchangeLaw.ofMoves u)).Feasible present start →
+        (law.withAct part (Becoming.ExchangeLaw.ofMoves u)).Feasible present start' →
+          ∀ {d T : Nat} (W W' : Becoming.Web F C),
+            (∀ (s : Nat),
+                s < T →
+                  θ s ≤ (law.actWorld (Becoming.ExchangeLaw.ofMoves u) part present start W).web.level s (Sum.inr c)) →
+              (∀ (e : C), e ≠ c → start e = start' e) →
+                start' c = start c + d →
+                  ∀ (t : Nat),
+                    t ≤ T →
+                      (∀ (e : C),
+                          e ≠ c →
+                            (law.actWorld (Becoming.ExchangeLaw.ofMoves u) part present start W).web.level t
+                                (Sum.inr e) =
+                              (law.actWorld (Becoming.ExchangeLaw.ofMoves u) part present start' W').web.level t
+                                (Sum.inr e)) ∧
+                        (law.actWorld (Becoming.ExchangeLaw.ofMoves u) part present start' W').web.level t (Sum.inr c) =
+                          (law.actWorld (Becoming.ExchangeLaw.ofMoves u) part present start W).web.level t (Sum.inr c) +
+                            d
+@Becoming.apart_only_downstream_worlds : ∀ {F C : Type} {part : F → Bool} {present : Nat → List F}
+  {law : Becoming.ExchangeLaw F C} {u : Nat → F → C → Nat × Nat} {start start' : C → Nat} {cs : List C}
+  {reads : Nat → F → C → Nat → C → Bool},
+  law.ReadsInto part reads →
+    (∀ (t : Nat) (h : F) (e : C) (s : Nat) (d : C), reads t h e s d = true → d ∈ cs) →
+      (law.withAct part (Becoming.ExchangeLaw.ofMoves u)).Feasible present start →
+        (law.withAct part (Becoming.ExchangeLaw.ofMoves u)).Feasible present start' →
+          ∀ {c : C},
+            (∀ (e : C), e ≠ c → start e = start' e) →
+              ∀ (W W' : Becoming.Web F C) (t : Nat) (e : C),
+                ¬Becoming.Upstream cs part (Becoming.strengthsBefore t (Becoming.readCouplings reads)) present c e →
+                  (law.actWorld (Becoming.ExchangeLaw.ofMoves u) part present start W).web.level t (Sum.inr e) =
+                    (law.actWorld (Becoming.ExchangeLaw.ofMoves u) part present start' W').web.level t (Sum.inr e)

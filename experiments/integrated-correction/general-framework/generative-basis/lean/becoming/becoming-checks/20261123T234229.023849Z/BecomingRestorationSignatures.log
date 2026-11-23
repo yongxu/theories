@@ -1,0 +1,50 @@
+@Becoming.Web.renewed_within_one : ∀ {F C : Type} {W : Becoming.Web F C} {c : C}, W.Renewed c → W.RenewedWithin 1 c
+@Becoming.Web.renewedWithin_zero : ∀ {F C : Type} {W : Becoming.Web F C} {c : C},
+  W.RenewedWithin 0 c ↔ ∀ (t : Nat) (g : F), ¬W.requires t g c
+@Becoming.Web.RenewedWithin.mono : ∀ {F C : Type} {W : Becoming.Web F C} {p q : Nat} {c : C},
+  p ≤ q → W.RenewedWithin p c → W.RenewedWithin q c
+@Becoming.Web.RenewedWithin.restored : ∀ {F C : Type} {W : Becoming.Web F C} {p : Nat} {c : C},
+  W.RenewedWithin p c → W.Restored c
+@Becoming.Web.Restored.not_consumed : ∀ {F C : Type} {W : Becoming.Web F C} {c : C}, W.Restored c → ¬W.Consumed c
+@Becoming.Web.consumed_iff : ∀ {F C : Type} {W : Becoming.Web F C} {c : C},
+  W.Consumed c ↔ ∃ g T, W.requires T g c ∧ ¬∃ k, 0 < k ∧ W.need T g c ≤ W.level (T + k) c
+@Becoming.Web.RenewingIn.within_one : ∀ {F C : Type} {W : Becoming.Web F C} {f : F},
+  W.RenewingIn f → W.RenewingInWithin 1 f
+@Becoming.Web.undermining_for_one : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {f : F},
+  W.UnderminingFor 1 t f ↔ Becoming.Web.UnderminingAt t f
+@Becoming.Web.undermining_for_zero : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {f : F},
+  W.UnderminingFor 0 t f ↔ ∃ c, W.draws t f c ∧ ∃ g, W.requires t g c
+@Becoming.Web.RenewingInWithin.mono : ∀ {F C : Type} {W : Becoming.Web F C} {p q : Nat} {f : F},
+  p ≤ q → W.RenewingInWithin p f → W.RenewingInWithin q f
+@Becoming.Web.UnderminingFor.anti : ∀ {F C : Type} {W : Becoming.Web F C} {p q t : Nat} {f : F},
+  p ≤ q → W.UnderminingFor q t f → W.UnderminingFor p t f
+@Becoming.Web.RenewingInWithin.not_undermining_for : ∀ {F C : Type} {W : Becoming.Web F C} {p t : Nat} {f : F},
+  W.RenewingInWithin p f → ¬W.UnderminingFor p t f
+@Becoming.Web.RenewingInWithin.not_consuming : ∀ {F C : Type} {W : Becoming.Web F C} {p : Nat} {f : F},
+  W.RenewingInWithin p f → ¬W.ConsumingIn f
+Becoming.LateMet.within_one_not_renewing : Becoming.LateMet.web.Dependent ∧
+  Becoming.LateMet.web.RenewingInWithin 1 () ∧ ¬Becoming.LateMet.web.RenewingIn ()
+Becoming.alternating_turns : ∀ (n : Nat),
+  RelationalRenewal.alternating n = 1 ∧ RelationalRenewal.alternating (n + 1) = 0 ∨
+    RelationalRenewal.alternating n = 0 ∧ RelationalRenewal.alternating (n + 1) = 1
+Becoming.seasonal_renewed_within_two : (Becoming.Web.static RelationalRenewal.fluctuating).RenewedWithin 2 () ∧
+  ¬(Becoming.Web.static RelationalRenewal.fluctuating).RenewedWithin 1 () ∧
+    ¬(Becoming.Web.static RelationalRenewal.fluctuating).Renewed ()
+@Becoming.Slowing.phase_after_return : ∀ {t g : Nat},
+  Becoming.Slowing.phase t = (0, g) → Becoming.Slowing.phase (t + 1) = (g, g + 1)
+@Becoming.Slowing.phase_counts_down : ∀ {t c g : Nat},
+  Becoming.Slowing.phase t = (c + 1, g) → Becoming.Slowing.phase (t + 1) = (c, g)
+Becoming.Slowing.phase_count : ∀ (k : Nat) {t c g : Nat},
+  Becoming.Slowing.phase t = (c + k, g) → Becoming.Slowing.phase (t + k) = (c, g)
+@Becoming.Slowing.phase_next_return : ∀ {t g : Nat},
+  Becoming.Slowing.phase t = (0, g) → Becoming.Slowing.phase (t + 1 + g) = (0, g + 1)
+Becoming.Slowing.phase_reaches : ∀ (n : Nat), ∃ t, Becoming.Slowing.phase t = (0, n + 1)
+@Becoming.Slowing.met_at_return : ∀ {t g : Nat}, Becoming.Slowing.phase t = (0, g) → Becoming.Slowing.level t = 1
+@Becoming.Slowing.unmet_before_return : ∀ {t c g : Nat},
+  Becoming.Slowing.phase t = (c + 1, g) → Becoming.Slowing.level t = 0
+Becoming.Slowing.restored : Becoming.Slowing.web.Restored ()
+Becoming.Slowing.unbounded : ∀ (p : Nat), ¬Becoming.Slowing.web.RenewedWithin p ()
+Becoming.Slowing.slowing_recovery : Becoming.Slowing.web.Restored () ∧
+  ¬Becoming.Slowing.web.Consumed () ∧ ∀ (p : Nat), ¬Becoming.Slowing.web.RenewedWithin p ()
+Becoming.Dip.renewing_within_two : Becoming.Dip.web.RenewingInWithin 2 Becoming.Dip.Formation.dependent ∧
+  ¬Becoming.Dip.web.RenewingIn Becoming.Dip.Formation.dependent

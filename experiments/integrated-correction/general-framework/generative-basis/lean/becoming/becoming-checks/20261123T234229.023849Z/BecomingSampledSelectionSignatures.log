@@ -1,0 +1,99 @@
+@Becoming.Strict.le : ∀ {σ : Nat → Nat}, Becoming.Strict σ → ∀ {a b : Nat}, a ≤ b → σ a ≤ σ b
+@Becoming.Strict.covers : ∀ {σ : Nat → Nat}, Becoming.Strict σ → σ 0 = 0 → ∀ (j : Nat), ∃ s, σ s ≤ j ∧ j < σ (s + 1)
+@Becoming.Web.sample_alikeThrough_iff : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l l' : Nat → C → Nat} (σ : Nat → Nat) (s : Nat),
+  (W.sample σ).AlikeThrough obs g (Becoming.atTimes σ l) (Becoming.atTimes σ l') s ↔ W.AlikeThrough obs g l l' (σ s)
+@Becoming.Web.AlikeThroughUpTo.sample : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l l' : Nat → C → Nat} {σ : Nat → Nat},
+  Becoming.Strict σ →
+    ∀ {t : Nat},
+      W.AlikeThroughUpTo obs g l l' (σ t) →
+        (W.sample σ).AlikeThroughUpTo obs g (Becoming.atTimes σ l) (Becoming.atTimes σ l') t
+@Becoming.Web.SelectsThrough.of_sample : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {select : (Nat → C → Nat) → Prop} {σ : Nat → Nat},
+  Becoming.Strict σ →
+    ∀ {t : Nat},
+      (W.sample σ).SelectsThrough obs g t select → W.SelectsThrough obs g (σ t) fun l => select (Becoming.atTimes σ l)
+@Becoming.Web.sample_selects_alike_iff : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l l' : Nat → C → Nat} {σ : Nat → Nat} {t : Nat},
+  (∀ (select : (Nat → C → Nat) → Prop),
+      (W.sample σ).SelectsThrough obs g t select → (select (Becoming.atTimes σ l) ↔ select (Becoming.atTimes σ l'))) ↔
+    ∀ (s : Nat), s ≤ t → W.AlikeThrough obs g l l' (σ s)
+@Becoming.Web.sample_dependsOn : ∀ {F C : Type} {W : Becoming.Web F C} {g : F} {σ : Nat → Nat} {c : C},
+  (W.sample σ).DependsOn g c → W.DependsOn g c
+@Becoming.Web.sample_coupledInto : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F} {σ : Nat → Nat}
+  {c : C}, (W.sample σ).CoupledInto obs g c → W.CoupledInto obs g c
+@Becoming.Flow.sample_exchanges : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {σ : Nat → Nat} {h : F}
+  {c : C}, (L.sample σ).Exchanges h c → L.Exchanges h c
+@Becoming.Flow.exchanges_sample : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {σ : Nat → Nat},
+  Becoming.Strict σ → σ 0 = 0 → ∀ {h : F} {c : C}, L.Exchanges h c → (L.sample σ).Exchanges h c
+@Becoming.Flow.sample_withinCoupling : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {σ : Nat → Nat} {f g : F},
+  (L.sample σ).WithinCoupling (W.sample σ) obs f g → L.WithinCoupling W obs f g
+@Becoming.Flow.withinCoupling_sample : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {σ : Nat → Nat},
+  Becoming.Strict σ →
+    σ 0 = 0 →
+      (∀ (g : F) (c : C), W.DependsOn g c → (W.sample σ).DependsOn g c) →
+        ∀ {f g : F}, L.WithinCoupling W obs f g → (L.sample σ).WithinCoupling (W.sample σ) obs f g
+@Becoming.Flow.unionPresent_withhold : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} (part : F → Bool)
+  (js : List Nat), (L.withhold part).unionPresent js = L.unionPresent js
+@Becoming.Flow.withheld_gated : ∀ {F : Type} [inst : DecidableEq F] (f : F) (P : Nat → List F) (q : Nat → Nat)
+  (I : List Nat) (b : Bool),
+  (if b = true then 0 else Becoming.total I fun j => Becoming.gate f (P j) (q j)) =
+    Becoming.total I fun j => Becoming.gate f (P j) (if b = true then 0 else q j)
+@Becoming.Flow.sample_withhold_taken : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} (part : F → Bool)
+  (σ : Nat → Nat) (s : Nat) (c : C), ((L.sample σ).withhold part).taken s c = ((L.withhold part).sample σ).taken s c
+@Becoming.Flow.sample_withhold_given : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} (part : F → Bool)
+  (σ : Nat → Nat) (s : Nat) (c : C), ((L.sample σ).withhold part).given s c = ((L.withhold part).sample σ).given s c
+@Becoming.Flow.WithheldLevels.sample : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {part : F → Bool} {σ : Nat → Nat} {l : Nat → C → Nat},
+  Becoming.Strict σ →
+    σ 0 = 0 → L.Once → L.WithheldLevels part W l → (L.sample σ).WithheldLevels part (W.sample σ) (Becoming.atTimes σ l)
+@Becoming.Flow.sample_unselected_beyond_coupling : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {select : (Nat → C → Nat) → Prop} {σ : Nat → Nat}
+  {l : Nat → C → Nat},
+  Becoming.Strict σ →
+    σ 0 = 0 →
+      L.Once →
+        L.WithheldLevels part W l →
+          ∀ {f : F},
+            (∀ (t : Nat) (g : F) (c : C),
+                (L.sample σ).WithinCoupling (W.sample σ) obs f g →
+                  (W.sample σ).CoupledInto obs g c → L.BalancesOn W [c] t) →
+              (∀ (h : F), part h = true → ¬(L.sample σ).WithinCoupling (W.sample σ) obs f h) →
+                ∀ {g : F},
+                  (L.sample σ).WithinCoupling (W.sample σ) obs f g →
+                    ∀ {t : Nat},
+                      (W.sample σ).SelectsThrough obs g t select →
+                        (select (Becoming.atTimes σ W.level) ↔ select (Becoming.atTimes σ l))
+Becoming.Missed.once : Becoming.Missed.flow.Once
+Becoming.Missed.without : Becoming.Missed.flow.WithheldLevels Becoming.Missed.part Becoming.Missed.web
+  Becoming.Missed.kept
+Becoming.Missed.balances : ∀ (t : Nat) (c : Bool),
+  Becoming.Missed.web.level (t + 1) c + Becoming.Missed.flow.taken t c =
+    Becoming.Missed.web.level t c + Becoming.Missed.flow.given t c
+Becoming.Missed.twice_ne_one : ∀ (s : Nat), Becoming.Strobe.twice s ≠ 1
+@Becoming.Missed.second_exchanged : ∀ {h : Bool}, Becoming.Missed.flow.Exchanges h true → h = false
+@Becoming.Missed.coarse_coupled : ∀ {c : Bool},
+  (Becoming.Missed.web.sample Becoming.Strobe.twice).CoupledInto Becoming.Missed.byLevel false c → c = true
+Becoming.Missed.within_fine_beyond_coarse : Becoming.Missed.flow.WithinCoupling Becoming.Missed.web
+    Becoming.Missed.byLevel false true ∧
+  ¬(Becoming.Missed.flow.sample Becoming.Strobe.twice).WithinCoupling (Becoming.Missed.web.sample Becoming.Strobe.twice)
+      Becoming.Missed.byLevel false true
+Becoming.Missed.fine_separates : ∃ select,
+  Becoming.Missed.web.SelectsThrough Becoming.Missed.byLevel false (Becoming.Strobe.twice 1) select ∧
+    select Becoming.Missed.web.level ∧ ¬select Becoming.Missed.kept
+Becoming.Missed.coarse_blind : ∀ (t : Nat) (select : (Nat → Bool → Nat) → Prop),
+  (Becoming.Missed.web.sample Becoming.Strobe.twice).SelectsThrough Becoming.Missed.byLevel false t select →
+    (select (Becoming.atTimes Becoming.Strobe.twice Becoming.Missed.web.level) ↔
+      select (Becoming.atTimes Becoming.Strobe.twice Becoming.Missed.kept))
+Becoming.Missed.coarse_reads : ∃ select,
+  (Becoming.Missed.web.sample Becoming.Strobe.twice).SelectsThrough Becoming.Missed.byLevel false 0 select ∧
+    (select fun x x_1 => 0) ∧ ¬select fun x x_1 => 1
+Becoming.Missed.coarse_differs : Becoming.atTimes Becoming.Strobe.twice Becoming.Missed.web.level 1 false ≠
+    Becoming.atTimes Becoming.Strobe.twice Becoming.Missed.kept 1 false ∧
+  ∃ select,
+    (Becoming.Missed.web.sample Becoming.Strobe.twice).SelectsThrough Becoming.Missed.all false 1 select ∧
+      select (Becoming.atTimes Becoming.Strobe.twice Becoming.Missed.web.level) ∧
+        ¬select (Becoming.atTimes Becoming.Strobe.twice Becoming.Missed.kept)

@@ -1,0 +1,131 @@
+@Becoming.Flow.mutuallyDependent_iff_reach : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.MutuallyDependent W ↔ ∀ (f g : F), L.WithinReach W f g
+@Becoming.Flow.MutuallyFed.mutuallyDependent : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.MutuallyFed W → L.MutuallyDependent W
+@Becoming.Flow.MutuallyDependent.sharesThroughout : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.MutuallyDependent W → L.SharesThroughout W
+@Becoming.Flow.mutuallyDependent_of_common : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C},
+  (∀ (g : F), W.DependsOn g c ∧ L.Exchanges g c) → L.MutuallyDependent W
+@Becoming.Flow.SharesThroughout.unrestricted : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {Pos : Type},
+  L.SharesThroughout W →
+    ∀ (center : Pos → F), Becoming.Unrestricted (Becoming.bounded fun q => L.WithinSystem W (center q))
+@Becoming.Flow.MutuallyDependent.unrestricted : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {Pos : Type},
+  L.MutuallyDependent W →
+    ∀ (center : Pos → F), Becoming.Unrestricted (Becoming.bounded fun q => L.WithinInfluence W (center q))
+@Becoming.Flow.MutuallyFed.unrestricted : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {Pos : Type},
+  L.MutuallyFed W → ∀ (center : Pos → F), Becoming.Unrestricted (Becoming.bounded fun q => L.WithinFeeding W (center q))
+Becoming.Clearing.shares_not_mutual : Becoming.Clearing.flow.SharesThroughout Becoming.Clearing.web ∧
+  ¬Becoming.Clearing.flow.MutuallyDependent Becoming.Clearing.web
+Becoming.Drawing.balances : Becoming.Drawing.flow.Balances Becoming.Drawing.web
+Becoming.Drawing.affected : Becoming.Drawing.flow.AffectedBy Becoming.Drawing.web true false ∧
+  Becoming.Drawing.flow.AffectedBy Becoming.Drawing.web false true
+Becoming.Drawing.mutuallyDependent : Becoming.Drawing.flow.MutuallyDependent Becoming.Drawing.web
+Becoming.Drawing.mutual_not_fed : Becoming.Drawing.flow.Balances Becoming.Drawing.web ∧
+  Becoming.Drawing.flow.MutuallyDependent Becoming.Drawing.web ∧
+    ¬Becoming.Drawing.flow.WithinFeeding Becoming.Drawing.web true false ∧
+      ¬Becoming.Drawing.flow.WithinFeeding Becoming.Drawing.web false true
+@Becoming.CoupledAlways.chainInTime : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {v : Nat → C} {j : Nat},
+  Becoming.CoupledAlways cs part k present v j →
+    ∀ (T p : Nat), p ≤ j → Becoming.ChainInTime cs part k present v T p (T + p)
+@Becoming.roundTrip_of_coupledAlways : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {e : C} {v : Nat → C} {m : Nat},
+  v 0 = e →
+    v (m + 1) = e →
+      Becoming.CoupledAlways cs part k present v (m + 1) →
+        ∀ (T : Nat), Becoming.RoundTrip cs part k present e T (T + (m + 1))
+@Becoming.carried_pow_around : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {e : C} {v : Nat → C} {m : Nat},
+  v 0 = e →
+    v (m + 1) = e →
+      Becoming.CoupledAlways cs part k present v (m + 1) →
+        ∀ (T R : Nat),
+          2 ^ R * Becoming.carried cs part σ k present δ T e ≤
+            Becoming.carried cs part σ k present δ (T + (m + 1) * R) e
+@Becoming.carried_pow_downstream : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {e c : C} {v u : Nat → C} {m q : Nat},
+  v 0 = e →
+    v (m + 1) = e →
+      Becoming.CoupledAlways cs part k present v (m + 1) →
+        u 0 = e →
+          u q = c →
+            Becoming.CoupledAlways cs part k present u q →
+              ∀ (T R : Nat),
+                2 ^ R * Becoming.carried cs part σ k present δ T e ≤
+                  Becoming.carried cs part σ k present δ (T + (m + 1) * R + q) c
+@Becoming.carried_le_pow_always : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {δ : C → Nat} {M D : Nat},
+  (∀ (c : C), δ c ≤ D) →
+    (∀ (t : Nat) (c : C), Becoming.inflow cs part k present t c ≤ M) →
+      ∀ (t : Nat) (c : C), Becoming.carried cs part (fun x x_1 x_2 => 0) k present δ t c ≤ D * (1 + M) ^ t
+@Becoming.exponential_around : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {δ : C → Nat} {M D : Nat},
+  (∀ (c : C), δ c ≤ D) →
+    (∀ (t : Nat) (c : C), Becoming.inflow cs part k present t c ≤ M) →
+      ∀ {e : C} {v : Nat → C} {m : Nat},
+        v 0 = e →
+          v (m + 1) = e →
+            Becoming.CoupledAlways cs part k present v (m + 1) →
+              ∀ (T R : Nat),
+                2 ^ R * Becoming.carried cs part (fun x x_1 x_2 => 0) k present δ T e ≤
+                    Becoming.carried cs part (fun x x_1 x_2 => 0) k present δ (T + (m + 1) * R) e ∧
+                  Becoming.carried cs part (fun x x_1 x_2 => 0) k present δ (T + (m + 1) * R) e ≤
+                    D * (1 + M) ^ (T + (m + 1) * R)
+@Becoming.CoupledThroughout.exponential : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat},
+  Becoming.CoupledThroughout cs part k present →
+    ∀ {e c : C},
+      e ∈ cs →
+        c ∈ cs →
+          ∃ m q,
+            ∀ (T R : Nat),
+              2 ^ R * Becoming.carried cs part σ k present δ T e ≤
+                Becoming.carried cs part σ k present δ (T + (m + 1) * R + q) c
+@Becoming.carriers_grow : ∀ {α : Type} {kids : α → List α} {ms : Nat → List α} {a : Nat},
+  (∀ (n : Nat) (p : α), p ∈ ms n → a ≤ (kids p).length) →
+    (∀ (n : Nat), Becoming.offspringCount (ms n) kids ≤ (ms (n + 1)).length) →
+      ∀ (n : Nat), (ms 0).length * a ^ n ≤ (ms n).length
+@Becoming.others_bounded : ∀ {α : Type} {kids : α → List α} {es : Nat → List α} {b : Nat},
+  (∀ (n : Nat) (p : α), p ∈ es n → (kids p).length ≤ b) →
+    (∀ (n : Nat), (es (n + 1)).length ≤ Becoming.offspringCount (es n) kids) →
+      ∀ (n : Nat), (es n).length ≤ (es 0).length * b ^ n
+@Becoming.share_ratio_pow : ∀ {α : Type} {kids : α → List α} {ms es : Nat → List α} {a b : Nat},
+  (∀ (n : Nat) (p : α), p ∈ ms n → a ≤ (kids p).length) →
+    (∀ (n : Nat), Becoming.offspringCount (ms n) kids ≤ (ms (n + 1)).length) →
+      (∀ (n : Nat) (p : α), p ∈ es n → (kids p).length ≤ b) →
+        (∀ (n : Nat), (es (n + 1)).length ≤ Becoming.offspringCount (es n) kids) →
+          ∀ (n : Nat), (ms 0).length * a ^ n * (es n).length ≤ (ms n).length * ((es 0).length * b ^ n)
+@Becoming.pow_le_drawnBefore : ∀ {draw : Nat → Nat} {n : Nat},
+  (∀ (j : Nat), j < n → Becoming.drawnBefore draw j < draw j) →
+    ∀ (j : Nat), j ≤ n → 2 ^ j ≤ Becoming.drawnBefore draw j + 1
+@Becoming.Flow.Balances.level_add_drawn : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {c : C} {T n : Nat},
+      (∀ (i : Nat), i < n → L.given (T + i) c = 0) →
+        ∀ (j : Nat), j ≤ n → W.level (T + j) c + Becoming.drawnBefore (fun i => L.taken (T + i) c) j = W.level T c
+@Becoming.Flow.Balances.drawn_within : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {c : C} {T n : Nat},
+      (∀ (i : Nat), i < n → L.given (T + i) c = 0) → Becoming.drawnBefore (fun i => L.taken (T + i) c) n ≤ W.level T c
+@Becoming.Flow.Balances.half_stands : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {c : C} {T n : Nat},
+      (∀ (i : Nat), i < n → L.given (T + i) c = 0) →
+        (∀ (j : Nat), j < n → Becoming.drawnBefore (fun i => L.taken (T + i) c) j < L.taken (T + j) c) →
+          ∀ (j : Nat), j < n → W.level T c < W.level (T + j) c + W.level (T + j) c
+@Becoming.Flow.Balances.doubling_needs : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {c : C} {T n : Nat},
+      (∀ (i : Nat), i < n → L.given (T + i) c = 0) →
+        (∀ (j : Nat), j < n → Becoming.drawnBefore (fun i => L.taken (T + i) c) j < L.taken (T + j) c) →
+          2 ^ n ≤ W.level T c + 1
+Becoming.DoublingDraw.balances : Becoming.DoublingDraw.flow.Balances Becoming.DoublingDraw.web
+Becoming.DoublingDraw.exceeds : ∀ (j : Nat),
+  j < 3 →
+    Becoming.drawnBefore (fun i => Becoming.DoublingDraw.flow.taken (0 + i) ()) j <
+      Becoming.DoublingDraw.flow.taken (0 + j) ()
+Becoming.DoublingDraw.half_then_none : Becoming.DoublingDraw.flow.Balances Becoming.DoublingDraw.web ∧
+  Becoming.DoublingDraw.web.level 0 () < Becoming.DoublingDraw.web.level 2 () + Becoming.DoublingDraw.web.level 2 () ∧
+    Becoming.DoublingDraw.web.level 3 () = 0 ∧ 2 ^ 3 = Becoming.DoublingDraw.web.level 0 () + 1

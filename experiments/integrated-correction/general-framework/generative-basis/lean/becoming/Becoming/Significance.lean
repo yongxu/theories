@@ -299,6 +299,25 @@ theorem ReadsOnlyDynamics.not_entails {D : Type} {law : D → (Pos → Nat → F
     (p : Pos) (f : F) {d : D} {sig : Pos → Nat → F → Prop} : ¬ law d sig :=
   fun holds => entails d _ (reads d sig (fun _ _ _ => False) holds) (p, 0, f)
 
+/-- Canonical wrapper: any dynamics-only law admits any rival bounded significance whenever it holds. -/
+theorem dynamicsLaw_admits_rival {D : Type} {law : D → Prop}
+    {d : D} (holds : law d) {region : Pos → F → Prop} (outside : ∃ p f, ¬ region p f) :
+    law d ∧ Rival (bounded region) ∧ ¬ Unrestricted (bounded region) :=
+  (readsOnlyDynamics_of (F := F) law).admits_rival (sig := fun _ _ _ => True) holds outside
+
+/-- Canonical wrapper: no dynamics-only law entails the continuation condition. -/
+theorem dynamicsLaw_not_entails {D : Type} {law : D → Prop}
+    (entails : ∀ d, law d → ∀ sig : Pos → Nat → F → Prop, Unrestricted sig)
+    (p : Pos) (f : F) {d : D} : ¬ law d :=
+  (readsOnlyDynamics_of (F := F) law).not_entails (sig := fun _ _ _ => True)
+    (fun d sig h => entails d h sig) p f
+
+/-- Canonical wrapper: no holding dynamics-only law entails `Unrestricted`. -/
+theorem dynamicsLaw_cannot_entail_unrestricted {D : Type} {law : D → Prop}
+    {d : D} (holds : law d) (p : Pos) (f : F) :
+    ¬ (∀ d', law d' → ∀ sig : Pos → Nat → F → Prop, Unrestricted sig) :=
+  fun entails => dynamicsLaw_not_entails entails p f holds
+
 /-! ## Retaining under the continuation condition -/
 
 namespace Web

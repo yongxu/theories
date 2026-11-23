@@ -82,31 +82,53 @@ def ReadsOnlyActsFrom (k : Nat) : Prop :=
 /-- Two worlds alike through the couplings of the members before `k`. -/
 def AlikeBefore (k : Nat) (w w' : W) : Prop := ∀ j, j < k → T.coupling j w = T.coupling j w'
 
+/-- From member `k` on, every member gives one act for the couplings of worlds `w` and `w'` at the
+list of acts `w` gives it. -/
+def LawAlikeStep (k : Nat) (w w' : W) : Prop :=
+  ∀ n, k ≤ n → T.law n (T.coupling n w) (T.acts w n) = T.law n (T.coupling n w') (T.acts w n)
+
 variable {T}
+
+/-- Every cascade gives `LawAlikeStep` for all pairs of worlds. -/
+theorem lawAlikeStep_of_from {k : Nat} (cascade : T.ReadsOnlyActsFrom k) (w w' : W) :
+    T.LawAlikeStep k w w' :=
+  fun n late => cascade n late (T.coupling n w) (T.coupling n w') (T.acts w n)
+
+/-- Where the pair agrees from `k` on at member `n`'s history in `w`, and two worlds alike before
+`k` give the same acts before member `n`, they give member `n` the same act. -/
+theorem law_alike_step {k : Nat} {w w' : W} (along : T.LawAlikeStep k w w')
+    (alike : T.AlikeBefore k w w') {n : Nat} (before : T.acts w n = T.acts w' n) :
+    T.law n (T.coupling n w) (T.acts w n) = T.law n (T.coupling n w') (T.acts w' n) :=
+  match Nat.decLt n k with
+  | isTrue early => congr (congrArg (T.law n) (alike n early)) before
+  | isFalse late =>
+    (along n (Nat.le_of_not_lt late)).trans (congrArg (T.law n (T.coupling n w')) before)
+
+/-- Where every member from `k` on agrees at the histories `w` reaches and the two worlds agree
+before `k`, they give the same acts to every number of members. -/
+theorem acts_alike_step {k : Nat} {w w' : W} (along : T.LawAlikeStep k w w')
+    (alike : T.AlikeBefore k w w') : ∀ n, T.acts w n = T.acts w' n
+  | 0 => rfl
+  | n + 1 =>
+    have before := acts_alike_step along alike n
+    show T.acts w n ++ [T.law n (T.coupling n w) (T.acts w n)] =
+        T.acts w' n ++ [T.law n (T.coupling n w') (T.acts w' n)] from
+      congr (congrArg HAppend.hAppend before)
+        (congrArg (fun a => [a]) (law_alike_step along alike before))
 
 /-- In a cascade from `k`, where two worlds alike before `k` give the same acts before member
 `n`, they give member `n` the same act. -/
 theorem law_alike_of_cascade {k : Nat} (cascade : T.ReadsOnlyActsFrom k) {w w' : W}
     (alike : T.AlikeBefore k w w') {n : Nat} (before : T.acts w n = T.acts w' n) :
     T.law n (T.coupling n w) (T.acts w n) = T.law n (T.coupling n w') (T.acts w' n) :=
-  match Nat.decLt n k with
-  | isTrue early => congr (congrArg (T.law n) (alike n early)) before
-  | isFalse late =>
-    (cascade n (Nat.le_of_not_lt late) (T.coupling n w) (T.coupling n w') (T.acts w n)).trans
-      (congrArg (T.law n (T.coupling n w')) before)
+  law_alike_step (lawAlikeStep_of_from cascade w w') alike before
 
 /-- **Reach stops where acts read only acts.** Where every member from `k` on reads only the acts
 before it, two worlds alike through the couplings of the members before `k` give the same acts to
 every number of members. -/
 theorem acts_alike_of_cascade {k : Nat} (cascade : T.ReadsOnlyActsFrom k) {w w' : W}
-    (alike : T.AlikeBefore k w w') : ∀ n, T.acts w n = T.acts w' n
-  | 0 => rfl
-  | n + 1 =>
-    have before := acts_alike_of_cascade cascade alike n
-    show T.acts w n ++ [T.law n (T.coupling n w) (T.acts w n)] =
-        T.acts w' n ++ [T.law n (T.coupling n w') (T.acts w' n)] from
-      congr (congrArg HAppend.hAppend before)
-        (congrArg (fun a => [a]) (law_alike_of_cascade cascade alike before))
+    (alike : T.AlikeBefore k w w') : ∀ n, T.acts w n = T.acts w' n :=
+  acts_alike_step (lawAlikeStep_of_from cascade w w') alike
 
 /-- Every member's act, in a cascade from `k`, is alike across worlds alike before `k`. -/
 theorem act_alike_of_cascade {k : Nat} (cascade : T.ReadsOnlyActsFrom k) {w w' : W}

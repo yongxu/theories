@@ -1,0 +1,45 @@
+@Becoming.Neutral.within : ∀ {I : Type} {rule : I → Prop},
+  Becoming.Neutral rule → ∀ (bound : I → Prop), Becoming.Within bound rule
+@Becoming.Valuation.seed_of_selfSignificance : ∀ {Pos C : Type} {V : Becoming.Valuation Pos C} {p : Pos} {c : C},
+  V.SelfSignificance p → V.own p c → V.living c → V.Seed
+@Becoming.positioned_articulation_of_articulates : ∀ {C Pos H R : Type} {V : Becoming.Valuation Pos C}
+  {access : Pos → R → Prop} {admitted : R → H → Prop} {before : H → C → Prop} {Reason : Pos → R → Prop},
+  Becoming.Neutral (Becoming.articulates V access admitted before Reason) →
+    Becoming.PositionedArticulation access admitted before (fun x c => ∀ (p : Pos), V.sig p c) Reason
+Becoming.Separate.stays : ∀ (e e' : Bool × Nat),
+  (∃ c, (Becoming.Separate.same e.fst c ∨ False) ∧ (Becoming.Separate.same e'.fst c ∨ False)) →
+    e.fst = false → e'.fst = false
+@Becoming.Web.breaking_relates : ∀ {Pos F Cond : Type} (W : Becoming.Web F Cond) (own sig : Pos → F × Nat → Prop)
+  {f g : F} {t : Nat} {c : Cond},
+  W.draws t f c →
+    W.Broken t g c →
+      ¬(W.valuation own sig).living (f, t) ∧
+        ∀ (t' : Nat), W.Participates t' g c → (W.valuation own sig).related (f, t) (g, t')
+@Becoming.Web.valuing_breaking_reaches : ∀ {Pos F Cond : Type} (W : Becoming.Web F Cond)
+  (own sig : Pos → F × Nat → Prop),
+  Becoming.Neutral (W.valuation own sig).transmits →
+    ∀ {f g : F} {t : Nat} {c : Cond},
+      W.draws t f c →
+        W.Broken t g c →
+          ∀ {p : Pos},
+            (W.valuation own sig).sig p (f, t) →
+              ∀ {t' : Nat},
+                W.Participates t' g c → (W.valuation own sig).living (g, t') → (W.valuation own sig).sig p (g, t')
+@Becoming.Web.living_iff_relations : ∀ {Pos F Cond : Type} (W : Becoming.Web F Cond) (own sig : Pos → F × Nat → Prop)
+  (own' sig' : Pos → F × Cond × Nat → Prop) (f : F) (t : Nat),
+  (W.valuation own sig).living (f, t) ↔
+    W.active t f ∧ ∀ (c : Cond), W.Participates t f c → (W.relations own' sig').living (f, c, t)
+Becoming.Mixed.dependent : Becoming.Mixed.web.Dependent
+@Becoming.Mixed.one_event_two_relations : ∀ {Pos : Type} (own sig : Pos → Becoming.Mixed.Formation × Nat → Prop)
+  (own' sig' : Pos → Becoming.Mixed.Formation × Becoming.Mixed.Source × Nat → Prop),
+  ¬(Becoming.Mixed.web.valuation own sig).living (Becoming.Mixed.Formation.drawer, 0) ∧
+    (Becoming.Mixed.web.relations own' sig').living (Becoming.Mixed.Formation.drawer, Becoming.Mixed.Source.kept, 0) ∧
+      ¬(Becoming.Mixed.web.relations own' sig').living (Becoming.Mixed.Formation.drawer, Becoming.Mixed.Source.lost, 0)
+Becoming.Model.no_relation_into_beyond : ∀ (c : Becoming.Model.Life),
+  ¬Becoming.Model.related c Becoming.Model.Life.beyond
+Becoming.Model.articulation_neutrality_is_needed : have V :=
+  Becoming.Model.valuation Becoming.Model.linked fun x x_1 => True;
+have Art :=
+  Becoming.articulates V (fun x x_1 => True) (fun x x_1 => True) (fun x x_1 => False) fun p x =>
+    Becoming.Model.endorses p;
+V.Significant ∧ Becoming.Within (fun i => Becoming.Model.endorses i.fst) Art ∧ ¬Becoming.Neutral Art

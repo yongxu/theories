@@ -1,0 +1,183 @@
+@Becoming.«一一对应».to_eq_iff : ∀ {α : Type u_1} {β : Type u_2} (e : Becoming.«一一对应» α β) {x y : α},
+  e.to x = e.to y ↔ x = y
+@Becoming.«尽之拉回» : ∀ {α : Type u_1} {κ : Type u_2} {R L : Becoming.«际» α} {R' L' : Becoming.«际» κ} (φ : α → κ)
+  (P : α → Prop),
+  Becoming.«闭» (Becoming.«续» R L) P →
+    (∀ (x y : α), P x → Becoming.«续» R L x y → Becoming.«续» R' L' (φ x) (φ y)) →
+      ∀ (x : α), P x → Becoming.«尽» R' L' (φ x) → Becoming.«尽» R L x
+@Becoming.«延之拉回» : ∀ {α : Type u_1} {κ : Type u_2} {R L : Becoming.«际» α} {R' L' : Becoming.«际» κ} (φ : α → κ),
+  (∀ (x : α) (r : κ), Becoming.«续» R' L' (φ x) r → ∃ y, Becoming.«续» R L x y ∧ φ y = r) →
+    ∀ (x : α), Becoming.«延» R' L' (φ x) → Becoming.«延» R L x
+@Becoming.«谓之自反» : ∀ {α : Type u_1} (R : Becoming.«际» α), Becoming.«谓» R R
+@Becoming.GrammarTransport.map_replicate : ∀ {A : Type u_1} {B : Type u_2} (f : A → B) (c : A) (n : Nat),
+  List.map f (List.replicate n c) = List.replicate n (f c)
+@Becoming.«对应之像» : ∀ {α : Type u_1} {β : Type u_2} (e : Becoming.«一一对应» α β) (R : Becoming.«际» α) (R' : Becoming.«际» β),
+  Becoming.«谓» (Becoming.«像» e.to R) R' ↔ ∀ (x y : α), R x y ↔ R' (e.to x) (e.to y)
+@Becoming.«对应之逐点» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R : Becoming.«际» α}
+  {R' : Becoming.«际» β}, Becoming.«谓» (Becoming.«像» e.to R) R' → ∀ (x y : α), R x y ↔ R' (e.to x) (e.to y)
+@Becoming.«对应之回» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R : Becoming.«际» α} {R' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' → ∀ (u v : β), R' u v ↔ R (e.back u) (e.back v)
+@Becoming.«回之像» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} (S' : Becoming.«际» β),
+  Becoming.«谓» (Becoming.«像» e.to fun a b => S' (e.to a) (e.to b)) S'
+@Becoming.«静之像» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β},
+  Becoming.«谓» (Becoming.«像» e.to Becoming.«静») Becoming.«静»
+@Becoming.«一之像» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β},
+  Becoming.«谓» (Becoming.«像» e.to Becoming.«一») Becoming.«一»
+@Becoming.«部分恒等之像» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {P : α → Prop} {P' : β → Prop},
+  (∀ (x : α), P x ↔ P' (e.to x)) →
+    Becoming.«谓» (Becoming.«像» e.to (Becoming.«合» Becoming.«静» fun x x_1 => P x))
+      (Becoming.«合» Becoming.«静» fun x x_1 => P' x)
+@Becoming.«反对应之像» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R : Becoming.«际» α}
+  {R' : Becoming.«际» β}, Becoming.«谓» (Becoming.«像» e.to R) R' → Becoming.«谓» (Becoming.«像» e.symm.to R') R
+@Becoming.«合成之像» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {γ : Type u_3} {e' : Becoming.«一一对应» β γ}
+  {R : Becoming.«际» α} {R' : Becoming.«际» β} {R'' : Becoming.«际» γ},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e'.to R') R'' → Becoming.«谓» (Becoming.«像» (e.trans e').to R) R''
+@Becoming.«合之像» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R E : Becoming.«际» α}
+  {R' E' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to E) E' → Becoming.«谓» (Becoming.«像» e.to (Becoming.«合» R E)) (Becoming.«合» R' E')
+@Becoming.«逆之像» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R : Becoming.«际» α} {R' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' → Becoming.«谓» (Becoming.«像» e.to (Becoming.«逆» R)) (Becoming.«逆» R')
+@Becoming.«而之像» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R S : Becoming.«际» α}
+  {R' S' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to S) S' → Becoming.«谓» (Becoming.«像» e.to (Becoming.«而» R S)) (Becoming.«而» R' S')
+@Becoming.«及之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R : Becoming.«际» α} {R' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' → ∀ (x y : α), Becoming.«及» R x y ↔ Becoming.«及» R' (e.to x) (e.to y)
+@Becoming.«及之像» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R : Becoming.«际» α} {R' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' → Becoming.«谓» (Becoming.«像» e.to (Becoming.«及» R)) (Becoming.«及» R')
+@Becoming.«则之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {A B : Becoming.«际» α}
+  {A' B' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to A) A' →
+    Becoming.«谓» (Becoming.«像» e.to B) B' → (Becoming.«则» A B ↔ Becoming.«则» A' B')
+@Becoming.«续之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R E : Becoming.«际» α}
+  {R' E' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to E) E' → ∀ (x y : α), Becoming.«续» R E x y ↔ Becoming.«续» R' E' (e.to x) (e.to y)
+@Becoming.«相续之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R E : Becoming.«际» α}
+  {R' E' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to E) E' → ∀ (x y : α), Becoming.«相续» R E x y ↔ Becoming.«相续» R' E' (e.to x) (e.to y)
+@Becoming.«所及之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R L : Becoming.«际» α}
+  {R' L' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to L) L' → ∀ (x y : α), Becoming.«所及» R L x y ↔ Becoming.«所及» R' L' (e.to x) (e.to y)
+@Becoming.«所闭之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R : Becoming.«际» α}
+  {R' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' → ∀ (x y : α), Becoming.«所闭» R x y ↔ Becoming.«所闭» R' (e.to x) (e.to y)
+@Becoming.«同族之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R E : Becoming.«际» α}
+  {R' E' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to E) E' → ∀ (x y : α), Becoming.«同族» R E x y ↔ Becoming.«同族» R' E' (e.to x) (e.to y)
+@Becoming.«有前之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R E : Becoming.«际» α}
+  {R' E' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to E) E' → ∀ (y : α), Becoming.«有前» R E y ↔ Becoming.«有前» R' E' (e.to y)
+@Becoming.«有后之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R E : Becoming.«际» α}
+  {R' E' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to E) E' → ∀ (x : α), Becoming.«有后» R E x ↔ Becoming.«有后» R' E' (e.to x)
+@Becoming.«生之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R E : Becoming.«际» α}
+  {R' E' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to E) E' → ∀ (y : α), Becoming.«生» R E y ↔ Becoming.«生» R' E' (e.to y)
+@Becoming.«亡之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R E : Becoming.«际» α}
+  {R' E' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to E) E' → ∀ (x : α), Becoming.«亡» R E x ↔ Becoming.«亡» R' E' (e.to x)
+@Becoming.«住之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R E : Becoming.«际» α}
+  {R' E' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to E) E' → ∀ (x : α), Becoming.«住» R E x ↔ Becoming.«住» R' E' (e.to x)
+@Becoming.«异之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R E F : Becoming.«际» α}
+  {R' E' F' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to E) E' →
+      Becoming.«谓» (Becoming.«像» e.to F) F' →
+        ∀ (x y : α), Becoming.«异» R E F x y ↔ Becoming.«异» R' E' F' (e.to x) (e.to y)
+@Becoming.«复生之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R E : Becoming.«际» α}
+  {R' E' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to E) E' → ∀ (x : α), Becoming.«复生» R E x ↔ Becoming.«复生» R' E' (e.to x)
+@Becoming.«不穷之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R E : Becoming.«际» α}
+  {R' E' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to E) E' → ∀ (x : α), Becoming.«不穷» R E x ↔ Becoming.«不穷» R' E' (e.to x)
+@Becoming.«尽之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R L : Becoming.«际» α}
+  {R' L' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to L) L' → ∀ (x : α), Becoming.«尽» R L x ↔ Becoming.«尽» R' L' (e.to x)
+@Becoming.«类之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {E : Becoming.«际» α} {E' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to E) E' → (Becoming.«类» E ↔ Becoming.«类» E')
+@Becoming.«无环之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R : Becoming.«际» α}
+  {R' : Becoming.«际» β}, Becoming.«谓» (Becoming.«像» e.to R) R' → (Becoming.«无环» R ↔ Becoming.«无环» R')
+@Becoming.«有常之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R E : Becoming.«际» α}
+  {R' E' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to E) E' → (Becoming.«有常» R E ↔ Becoming.«有常» R' E')
+@Becoming.«核之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R E : Becoming.«际» α}
+  {R' E' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to E) E' → ∀ (x y : α), Becoming.«核» R E x y ↔ Becoming.«核» R' E' (e.to x) (e.to y)
+@Becoming.«传之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R E L : Becoming.«际» α}
+  {R' E' L' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to L) L' →
+      Becoming.«谓» (Becoming.«像» e.to E) E' →
+        ∀ (x y : α), Becoming.«传» R L E x y ↔ Becoming.«传» R' L' E' (e.to x) (e.to y)
+@Becoming.«所及有传之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R E L : Becoming.«际» α}
+  {R' E' L' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to L) L' →
+      Becoming.«谓» (Becoming.«像» e.to E) E' →
+        ∀ (y : α),
+          (∃ z w, Becoming.«所及» R L y z ∧ Becoming.«传» R L E z w) ↔
+            ∃ z' w', Becoming.«所及» R' L' (e.to y) z' ∧ Becoming.«传» R' L' E' z' w'
+@Becoming.«全生成之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R E L : Becoming.«际» α}
+  {R' E' L' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to L) L' →
+      Becoming.«谓» (Becoming.«像» e.to E) E' → ∀ (x : α), Becoming.«全生成» R L E x ↔ Becoming.«全生成» R' L' E' (e.to x)
+@Becoming.«全守之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R E L : Becoming.«际» α}
+  {R' E' L' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to L) L' →
+      Becoming.«谓» (Becoming.«像» e.to E) E' → ∀ (x : α), Becoming.«全守» R L E x ↔ Becoming.«全守» R' L' E' (e.to x)
+@Becoming.«有终之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R L : Becoming.«际» α}
+  {R' L' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to L) L' → ∀ (x : α), Becoming.«有终» R L x ↔ Becoming.«有终» R' L' (e.to x)
+@Becoming.«历之像» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {A : Type u_3} {B : Type u_4}
+  {G : A → Becoming.«际» α} {G' : B → Becoming.«际» β} (f : A → B),
+  (∀ (a : A), Becoming.«谓» (Becoming.«像» e.to (G a)) (G' (f a))) →
+    ∀ (as : List A), Becoming.«谓» (Becoming.«像» e.to (Becoming.«历» G as)) (Becoming.«历» G' (List.map f as))
+@Becoming.«历之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {A : Type u_3} {B : Type u_4}
+  {G : A → Becoming.«际» α} {G' : B → Becoming.«际» β} (f : A → B),
+  (∀ (a : A), Becoming.«谓» (Becoming.«像» e.to (G a)) (G' (f a))) →
+    ∀ (as : List A) (x y : α), Becoming.«历» G as x y ↔ Becoming.«历» G' (List.map f as) (e.to x) (e.to y)
+@Becoming.«迭之像» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R : Becoming.«际» α} {R' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    ∀ (n : Nat), Becoming.«谓» (Becoming.«像» e.to (Becoming.«迭» R n)) (Becoming.«迭» R' n)
+@Becoming.«迭之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R : Becoming.«际» α} {R' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    ∀ (n : Nat) (x y : α), Becoming.«迭» R n x y ↔ Becoming.«迭» R' n (e.to x) (e.to y)
+@Becoming.«迭内之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R : Becoming.«际» α}
+  {R' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    ∀ (n : Nat) (x y : α), Becoming.«迭内» R n x y ↔ Becoming.«迭内» R' n (e.to x) (e.to y)
+@Becoming.«闭之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R : Becoming.«际» α} {R' : Becoming.«际» β}
+  {P : α → Prop} {P' : β → Prop},
+  Becoming.«谓» (Becoming.«像» e.to R) R' → (∀ (x : α), P x ↔ P' (e.to x)) → (Becoming.«闭» R P ↔ Becoming.«闭» R' P')
+@Becoming.«定后之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R : Becoming.«际» α}
+  {R' : Becoming.«际» β}, Becoming.«谓» (Becoming.«像» e.to R) R' → (Becoming.«定后» R ↔ Becoming.«定后» R')
+@Becoming.«定前之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R : Becoming.«际» α}
+  {R' : Becoming.«际» β}, Becoming.«谓» (Becoming.«像» e.to R) R' → (Becoming.«定前» R ↔ Becoming.«定前» R')
+@Becoming.«同行之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R E : Becoming.«际» α}
+  {R' E' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to E) E' → (Becoming.«同行» R E ↔ Becoming.«同行» R' E')
+@Becoming.«延之对应» : ∀ {α : Type u_1} {β : Type u_2} {e : Becoming.«一一对应» α β} {R L : Becoming.«际» α}
+  {R' L' : Becoming.«际» β},
+  Becoming.«谓» (Becoming.«像» e.to R) R' →
+    Becoming.«谓» (Becoming.«像» e.to L) L' → ∀ (x : α), Becoming.«延» R L x ↔ Becoming.«延» R' L' (e.to x)

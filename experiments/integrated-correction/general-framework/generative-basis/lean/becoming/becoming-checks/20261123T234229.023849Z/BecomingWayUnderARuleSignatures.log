@@ -1,0 +1,812 @@
+@Becoming.WayUnderARule.taken_rises : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {favours : R → Prop},
+  (∀ (g : R), favours g → ∀ (u : U), use u < Becoming.LineOnAStock.taken use (kids g u)) →
+    ∀ {t : (List U × R) × Nat},
+      favours t.fst.snd →
+        ∀ {v : U},
+          v ∈ t.fst.fst →
+            (∀ (u : U), u ∈ t.fst.fst → need u ≤ t.snd) →
+              Becoming.LineOnAStock.taken use t.fst.fst + 1 ≤
+                Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.step need kids next giving use t).fst.fst
+@Becoming.WayUnderARule.taken_kept : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U} {next : List U → R → R}
+  {giving : Nat → Nat} {favours : R → Prop},
+  (∀ (g : R), ¬favours g → ∀ (u : U), Becoming.LineOnAStock.taken use (kids g u) = use u) →
+    ∀ {t : (List U × R) × Nat},
+      ¬favours t.fst.snd →
+        (∀ (u : U), u ∈ t.fst.fst → need u ≤ t.snd) →
+          Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.step need kids next giving use t).fst.fst =
+            Becoming.LineOnAStock.taken use t.fst.fst
+@Becoming.WayUnderARule.below_kept : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U} {next : List U → R → R}
+  {giving : Nat → Nat},
+  (∀ (g : R) (u v : U), v ∈ kids g u → need v ≤ need u) →
+    ∀ {m : Nat} {t : (List U × R) × Nat},
+      Becoming.LineOnAStock.Below need (fun x => True) m t.fst.fst →
+        Becoming.LineOnAStock.Below need (fun x => True) m
+          (Becoming.WayUnderARule.step need kids next giving use t).fst.fst
+@Becoming.WayUnderARule.below_level : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat},
+  (∀ (g : R) (u v : U), v ∈ kids g u → need v ≤ need u) →
+    ∀ (t : (List U × R) × Nat),
+      Becoming.LineOnAStock.Below need (fun x => True) t.snd
+        (Becoming.WayUnderARule.step need kids next giving use t).fst.fst
+@Becoming.WayUnderARule.mem_after : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U} {next : List U → R → R}
+  {giving : Nat → Nat} {favours : R → Prop},
+  (∀ (g : R), ¬favours g → ∀ (u : U), kids g u ≠ []) →
+    ∀ {t : (List U × R) × Nat},
+      ¬favours t.fst.snd →
+        Becoming.WayUnderARule.Goes need t → ∃ v, v ∈ (Becoming.WayUnderARule.step need kids next giving use t).fst.fst
+@Becoming.WayUnderARule.level_lowers : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    ∀ {y : Nat → Nat} {t : (List U × R) × Nat},
+      Becoming.RegimeMargin.Short giving (Becoming.LineOnAStock.taken use t.fst.fst)
+          (y (Becoming.LineOnAStock.taken use t.fst.fst)) →
+        0 < t.snd →
+          t.snd < Becoming.LineOnAStock.taken use t.fst.fst + y (Becoming.LineOnAStock.taken use t.fst.fst) →
+            (Becoming.WayUnderARule.step need kids next giving use t).snd < t.snd
+@Becoming.WayUnderARule.level_held : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U} {next : List U → R → R}
+  {giving y : Nat → Nat} {hi : Nat} {t : (List U × R) × Nat},
+  Becoming.RegimeMargin.Meets giving (Becoming.LineOnAStock.taken use t.fst.fst)
+      (y (Becoming.LineOnAStock.taken use t.fst.fst)) hi →
+    Becoming.RegimeMargin.Keeps giving (Becoming.LineOnAStock.taken use t.fst.fst) hi →
+      Becoming.LineOnAStock.taken use t.fst.fst + y (Becoming.LineOnAStock.taken use t.fst.fst) ≤ t.snd →
+        t.snd ≤ hi → t.snd ≤ (Becoming.WayUnderARule.step need kids next giving use t).snd
+@Becoming.WayUnderARule.within_along : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {hi : Nat} {s : (List U × R) × Nat},
+  (∀ (k : Nat),
+      (∀ (j : Nat),
+          j ≤ k → Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s j)) →
+        Becoming.RegimeMargin.Keeps giving
+          (Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst) hi) →
+    s.snd ≤ hi →
+      ∀ (k : Nat),
+        (∀ (j : Nat),
+            j < k → Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s j)) →
+          (Becoming.WayUnderARule.course need kids next giving use s k).snd ≤ hi
+@Becoming.WayUnderARule.goes_upto : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U} {next : List U → R → R}
+  {giving : Nat → Nat} {s : (List U × R) × Nat} {k : Nat},
+  (∀ (j : Nat),
+      j < k → Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s j)) →
+    Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s k) →
+      ∀ (j : Nat),
+        j ≤ k → Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s j)
+@Becoming.WayUnderARule.outcome_or_met : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving y : Nat → Nat} {hi : Nat} {favours : R → Prop} {s : (List U × R) × Nat},
+  (∀ (g : R) (u v : U), v ∈ kids g u → need v ≤ need u) →
+    (∀ (k : Nat) (u : U), u ∈ (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst → 0 < need u) →
+      Becoming.RegimeMargin.FromNothing giving →
+        ∀ {m : Nat},
+          (∀ (m' : Nat),
+              m' < m →
+                ∀ (room f : Nat),
+                  Becoming.WayUnderARule.OrFrom need use y favours next hi
+                    (Becoming.WayUnderARule.course need kids next giving use s) m' room f) →
+            ∀ {k : Nat},
+              (∀ (j : Nat),
+                  j < k →
+                    Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s j)) →
+                Becoming.LineOnAStock.Below need (fun x => True) m
+                    (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst →
+                  Becoming.WayUnderARule.Outcomes need use y favours next
+                      (Becoming.WayUnderARule.course need kids next giving use s) ∨
+                    Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s k) ∧
+                      (∀ (u : U),
+                          u ∈ (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst →
+                            need u ≤ (Becoming.WayUnderARule.course need kids next giving use s k).snd) ∧
+                        Becoming.LineOnAStock.taken use
+                            (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst ≤
+                          (Becoming.WayUnderARule.course need kids next giving use s k).snd
+@Becoming.WayUnderARule.or_from_level : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving y : Nat → Nat} {hi : Nat} {favours : R → Prop} {s : (List U × R) × Nat}
+  [DecidablePred favours],
+  (∀ (g : R), favours g → ∀ (u : U), use u < Becoming.LineOnAStock.taken use (kids g u)) →
+    (∀ (g : R), ¬favours g → ∀ (u : U), Becoming.LineOnAStock.taken use (kids g u) = use u) →
+      (∀ (g : R) (u v : U), v ∈ kids g u → need v ≤ need u) →
+        (∀ (k : Nat) (u : U), u ∈ (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst → 0 < need u) →
+          Becoming.RegimeMargin.FromNothing giving →
+            s.snd ≤ hi →
+              (∀ (k : Nat),
+                  (∀ (j : Nat),
+                      j ≤ k →
+                        Becoming.WayUnderARule.Goes need
+                          (Becoming.WayUnderARule.course need kids next giving use s j)) →
+                    Becoming.RegimeMargin.Keeps giving
+                      (Becoming.LineOnAStock.taken use
+                        (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)
+                      hi) →
+                (∀ (k : Nat),
+                    (∀ (j : Nat),
+                        j ≤ k →
+                          Becoming.WayUnderARule.Goes need
+                            (Becoming.WayUnderARule.course need kids next giving use s j)) →
+                      ¬favours (Becoming.WayUnderARule.course need kids next giving use s k).fst.snd →
+                        Becoming.RegimeMargin.Short giving
+                            (Becoming.LineOnAStock.taken use
+                              (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)
+                            (y
+                              (Becoming.LineOnAStock.taken use
+                                (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)) ∧
+                          Becoming.RegimeMargin.Meets giving
+                            (Becoming.LineOnAStock.taken use
+                              (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)
+                            (y
+                              (Becoming.LineOnAStock.taken use
+                                (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst))
+                            hi) →
+                  ∀ {m room : Nat},
+                    (∀ (m' : Nat),
+                        m' < m →
+                          ∀ (room f : Nat),
+                            Becoming.WayUnderARule.OrFrom need use y favours next hi
+                              (Becoming.WayUnderARule.course need kids next giving use s) m' room f) →
+                      (∀ (f : Nat),
+                          Becoming.WayUnderARule.OrFrom need use y favours next hi
+                            (Becoming.WayUnderARule.course need kids next giving use s) m room f) →
+                        ∀ (f : Nat),
+                          Becoming.WayUnderARule.OrFrom need use y favours next hi
+                            (Becoming.WayUnderARule.course need kids next giving use s) m (room + 1) f
+@Becoming.WayUnderARule.or_from_room : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving y : Nat → Nat} {hi : Nat} {favours : R → Prop} {s : (List U × R) × Nat}
+  [DecidablePred favours],
+  (∀ (g : R), favours g → ∀ (u : U), use u < Becoming.LineOnAStock.taken use (kids g u)) →
+    (∀ (g : R), ¬favours g → ∀ (u : U), Becoming.LineOnAStock.taken use (kids g u) = use u) →
+      (∀ (g : R) (u v : U), v ∈ kids g u → need v ≤ need u) →
+        (∀ (k : Nat) (u : U), u ∈ (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst → 0 < need u) →
+          Becoming.RegimeMargin.FromNothing giving →
+            s.snd ≤ hi →
+              (∀ (k : Nat),
+                  (∀ (j : Nat),
+                      j ≤ k →
+                        Becoming.WayUnderARule.Goes need
+                          (Becoming.WayUnderARule.course need kids next giving use s j)) →
+                    Becoming.RegimeMargin.Keeps giving
+                      (Becoming.LineOnAStock.taken use
+                        (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)
+                      hi) →
+                (∀ (k : Nat),
+                    (∀ (j : Nat),
+                        j ≤ k →
+                          Becoming.WayUnderARule.Goes need
+                            (Becoming.WayUnderARule.course need kids next giving use s j)) →
+                      ¬favours (Becoming.WayUnderARule.course need kids next giving use s k).fst.snd →
+                        Becoming.RegimeMargin.Short giving
+                            (Becoming.LineOnAStock.taken use
+                              (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)
+                            (y
+                              (Becoming.LineOnAStock.taken use
+                                (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)) ∧
+                          Becoming.RegimeMargin.Meets giving
+                            (Becoming.LineOnAStock.taken use
+                              (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)
+                            (y
+                              (Becoming.LineOnAStock.taken use
+                                (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst))
+                            hi) →
+                  ∀ {m : Nat},
+                    (∀ (m' : Nat),
+                        m' < m →
+                          ∀ (room f : Nat),
+                            Becoming.WayUnderARule.OrFrom need use y favours next hi
+                              (Becoming.WayUnderARule.course need kids next giving use s) m' room f) →
+                      ∀ (room f : Nat),
+                        Becoming.WayUnderARule.OrFrom need use y favours next hi
+                          (Becoming.WayUnderARule.course need kids next giving use s) m room f
+@Becoming.WayUnderARule.or_all : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U} {next : List U → R → R}
+  {giving y : Nat → Nat} {hi : Nat} {favours : R → Prop} {s : (List U × R) × Nat} [DecidablePred favours],
+  (∀ (g : R), favours g → ∀ (u : U), use u < Becoming.LineOnAStock.taken use (kids g u)) →
+    (∀ (g : R), ¬favours g → ∀ (u : U), Becoming.LineOnAStock.taken use (kids g u) = use u) →
+      (∀ (g : R) (u v : U), v ∈ kids g u → need v ≤ need u) →
+        (∀ (k : Nat) (u : U), u ∈ (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst → 0 < need u) →
+          Becoming.RegimeMargin.FromNothing giving →
+            s.snd ≤ hi →
+              (∀ (k : Nat),
+                  (∀ (j : Nat),
+                      j ≤ k →
+                        Becoming.WayUnderARule.Goes need
+                          (Becoming.WayUnderARule.course need kids next giving use s j)) →
+                    Becoming.RegimeMargin.Keeps giving
+                      (Becoming.LineOnAStock.taken use
+                        (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)
+                      hi) →
+                (∀ (k : Nat),
+                    (∀ (j : Nat),
+                        j ≤ k →
+                          Becoming.WayUnderARule.Goes need
+                            (Becoming.WayUnderARule.course need kids next giving use s j)) →
+                      ¬favours (Becoming.WayUnderARule.course need kids next giving use s k).fst.snd →
+                        Becoming.RegimeMargin.Short giving
+                            (Becoming.LineOnAStock.taken use
+                              (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)
+                            (y
+                              (Becoming.LineOnAStock.taken use
+                                (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)) ∧
+                          Becoming.RegimeMargin.Meets giving
+                            (Becoming.LineOnAStock.taken use
+                              (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)
+                            (y
+                              (Becoming.LineOnAStock.taken use
+                                (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst))
+                            hi) →
+                  ∀ (m room f : Nat),
+                    Becoming.WayUnderARule.OrFrom need use y favours next hi
+                      (Becoming.WayUnderARule.course need kids next giving use s) m room f
+@Becoming.WayUnderARule.tested_or_ends : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving y : Nat → Nat} {hi : Nat} {favours : R → Prop} {s : (List U × R) × Nat}
+  [DecidablePred favours],
+  (∀ (g : R), favours g → ∀ (u : U), use u < Becoming.LineOnAStock.taken use (kids g u)) →
+    (∀ (g : R), ¬favours g → ∀ (u : U), Becoming.LineOnAStock.taken use (kids g u) = use u) →
+      (∀ (g : R) (u v : U), v ∈ kids g u → need v ≤ need u) →
+        (∀ (k : Nat) (u : U), u ∈ (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst → 0 < need u) →
+          Becoming.RegimeMargin.FromNothing giving →
+            s.snd ≤ hi →
+              (∀ (k : Nat),
+                  (∀ (j : Nat),
+                      j ≤ k →
+                        Becoming.WayUnderARule.Goes need
+                          (Becoming.WayUnderARule.course need kids next giving use s j)) →
+                    Becoming.RegimeMargin.Keeps giving
+                      (Becoming.LineOnAStock.taken use
+                        (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)
+                      hi) →
+                (∀ (k : Nat),
+                    (∀ (j : Nat),
+                        j ≤ k →
+                          Becoming.WayUnderARule.Goes need
+                            (Becoming.WayUnderARule.course need kids next giving use s j)) →
+                      ¬favours (Becoming.WayUnderARule.course need kids next giving use s k).fst.snd →
+                        Becoming.RegimeMargin.Short giving
+                            (Becoming.LineOnAStock.taken use
+                              (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)
+                            (y
+                              (Becoming.LineOnAStock.taken use
+                                (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)) ∧
+                          Becoming.RegimeMargin.Meets giving
+                            (Becoming.LineOnAStock.taken use
+                              (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)
+                            (y
+                              (Becoming.LineOnAStock.taken use
+                                (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst))
+                            hi) →
+                  (∃ k,
+                      (∀ (j : Nat),
+                          j < k →
+                            Becoming.WayUnderARule.Goes need
+                              (Becoming.WayUnderARule.course need kids next giving use s j)) ∧
+                        Becoming.WayUnderARule.Tested need use y favours next
+                          (Becoming.WayUnderARule.course need kids next giving use s k)) ∨
+                    ∃ n,
+                      (∀ (j : Nat),
+                          j < n →
+                            Becoming.WayUnderARule.Goes need
+                              (Becoming.WayUnderARule.course need kids next giving use s j)) ∧
+                        ¬Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s n)
+@Becoming.WayUnderARule.holds_or_not : ∀ {U : Type} (need use : U → Nat) (y : Nat → Nat) (w : List U) (x : Nat),
+  Becoming.LineOnAStock.Holds need use y (w, x) ∨ ¬Becoming.LineOnAStock.Holds need use y (w, x)
+@Becoming.WayUnderARule.tested_or_not : ∀ {U R : Type} {need use : U → Nat} {next : List U → R → R} {y : Nat → Nat}
+  {favours : R → Prop} [DecidablePred favours] (t : (List U × R) × Nat),
+  Becoming.WayUnderARule.Tested need use y favours next t ∨ ¬Becoming.WayUnderARule.Tested need use y favours next t
+@Becoming.WayUnderARule.first_tested : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving y : Nat → Nat} {favours : R → Prop} {s : (List U × R) × Nat} [DecidablePred favours],
+  (∃ k,
+      (∀ (j : Nat),
+          j < k → Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s j)) ∧
+        Becoming.WayUnderARule.Tested need use y favours next
+          (Becoming.WayUnderARule.course need kids next giving use s k)) →
+    ∃ k,
+      (∀ (j : Nat),
+          j < k → Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s j)) ∧
+        Becoming.WayUnderARule.Tested need use y favours next
+            (Becoming.WayUnderARule.course need kids next giving use s k) ∧
+          ∀ (j : Nat),
+            j < k →
+              ¬Becoming.WayUnderARule.Tested need use y favours next
+                  (Becoming.WayUnderARule.course need kids next giving use s j)
+@Becoming.WayUnderARule.first_tested_or_ends : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving y : Nat → Nat} {hi : Nat} {favours : R → Prop} {s : (List U × R) × Nat}
+  [DecidablePred favours],
+  (∀ (g : R), favours g → ∀ (u : U), use u < Becoming.LineOnAStock.taken use (kids g u)) →
+    (∀ (g : R), ¬favours g → ∀ (u : U), Becoming.LineOnAStock.taken use (kids g u) = use u) →
+      (∀ (g : R) (u v : U), v ∈ kids g u → need v ≤ need u) →
+        (∀ (k : Nat) (u : U), u ∈ (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst → 0 < need u) →
+          Becoming.RegimeMargin.FromNothing giving →
+            s.snd ≤ hi →
+              (∀ (k : Nat),
+                  (∀ (j : Nat),
+                      j ≤ k →
+                        Becoming.WayUnderARule.Goes need
+                          (Becoming.WayUnderARule.course need kids next giving use s j)) →
+                    Becoming.RegimeMargin.Keeps giving
+                      (Becoming.LineOnAStock.taken use
+                        (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)
+                      hi) →
+                (∀ (k : Nat),
+                    (∀ (j : Nat),
+                        j ≤ k →
+                          Becoming.WayUnderARule.Goes need
+                            (Becoming.WayUnderARule.course need kids next giving use s j)) →
+                      ¬favours (Becoming.WayUnderARule.course need kids next giving use s k).fst.snd →
+                        Becoming.RegimeMargin.Short giving
+                            (Becoming.LineOnAStock.taken use
+                              (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)
+                            (y
+                              (Becoming.LineOnAStock.taken use
+                                (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)) ∧
+                          Becoming.RegimeMargin.Meets giving
+                            (Becoming.LineOnAStock.taken use
+                              (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst)
+                            (y
+                              (Becoming.LineOnAStock.taken use
+                                (Becoming.WayUnderARule.course need kids next giving use s k).fst.fst))
+                            hi) →
+                  (∃ k,
+                      (∀ (j : Nat),
+                          j < k →
+                            Becoming.WayUnderARule.Goes need
+                              (Becoming.WayUnderARule.course need kids next giving use s j)) ∧
+                        Becoming.WayUnderARule.Tested need use y favours next
+                            (Becoming.WayUnderARule.course need kids next giving use s k) ∧
+                          ∀ (j : Nat),
+                            j < k →
+                              ¬Becoming.WayUnderARule.Tested need use y favours next
+                                  (Becoming.WayUnderARule.course need kids next giving use s j)) ∨
+                    ∃ n,
+                      (∀ (j : Nat),
+                          j < n →
+                            Becoming.WayUnderARule.Goes need
+                              (Becoming.WayUnderARule.course need kids next giving use s j)) ∧
+                        ¬Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s n)
+@Becoming.WayUnderARule.step_turn : ∀ {U R A : Type} {need use : U → Nat} {kids : R → U → List U} {giving : Nat → Nat}
+  {share : List U → A} {h : A → R → R} {t : (List U × R) × Nat},
+  (∀ (u : U), u ∈ t.fst.fst → need u ≤ t.snd) →
+    (Becoming.WayUnderARule.step need kids (fun w g => h (share w) g) giving use t).fst =
+      Becoming.Pace.turn (fun w g => Becoming.LineOnAStock.allKids (kids g) w) (fun w g => h (share w) g) true t.fst
+@Becoming.WayUnderARule.held_step : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U} {giving y : Nat → Nat}
+  {hi : Nat} {favours : R → Prop} {next : List U → R → R} {x₀ T₀ : Nat},
+  (∀ (g : R), ¬favours g → ∀ (u : U), Becoming.LineOnAStock.taken use (kids g u) = use u) →
+    (∀ (g : R), ¬favours g → ∀ (u : U), kids g u ≠ []) →
+      (∀ (g : R) (u v : U), v ∈ kids g u → need v ≤ need u) →
+        Becoming.RegimeMargin.Meets giving T₀ (y T₀) hi →
+          Becoming.RegimeMargin.Keeps giving T₀ hi →
+            T₀ + y T₀ ≤ x₀ →
+              ∀ {t : (List U × R) × Nat},
+                ¬favours t.fst.snd →
+                  Becoming.WayUnderARule.HeldAt need use hi x₀ T₀ t →
+                    Becoming.WayUnderARule.HeldAt need use hi x₀ T₀
+                      (Becoming.WayUnderARule.step need kids next giving use t)
+@Becoming.WayUnderARule.lasts_from : ∀ {U R A : Type} {need use : U → Nat} {kids : R → U → List U}
+  {giving y : Nat → Nat} {hi : Nat} {favours : R → Prop} {P : Becoming.Ideals.Preorder A}
+  {M : Becoming.Ideals.Preorder R} {share : List U → A} {h : A → R → R},
+  (∀ (g : R), ¬favours g → ∀ (u : U), Becoming.LineOnAStock.taken use (kids g u) = use u) →
+    (∀ (g : R), ¬favours g → ∀ (u : U), kids g u ≠ []) →
+      (∀ (g : R) (u v : U), v ∈ kids g u → need v ≤ need u) →
+        (∀ (w : List U) (g : R), ¬favours g → P.le (share (Becoming.LineOnAStock.allKids (kids g) w)) (share w)) →
+          Becoming.RuleCapture.ReadsShare P M h →
+            (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+              ∀ {t : (List U × R) × Nat},
+                Becoming.RegimeMargin.Meets giving (Becoming.LineOnAStock.taken use t.fst.fst)
+                    (y (Becoming.LineOnAStock.taken use t.fst.fst)) hi →
+                  Becoming.RegimeMargin.Keeps giving (Becoming.LineOnAStock.taken use t.fst.fst) hi →
+                    t.snd ≤ hi →
+                      Becoming.WayUnderARule.Tested need use y favours (fun w g => h (share w) g) t →
+                        ∀ (i : Nat),
+                          Becoming.WayUnderARule.HeldAt need use hi t.snd (Becoming.LineOnAStock.taken use t.fst.fst)
+                              (Becoming.Law.orbit
+                                (Becoming.WayUnderARule.step need kids (fun w g => h (share w) g) giving use) t
+                                (i + 1)) ∧
+                            Becoming.RuleCapture.Locked (Becoming.RuleCapture.reverse M) (fun g => ¬favours g)
+                              (fun w g => h (share w) g)
+                              (Becoming.Law.orbit
+                                  (Becoming.WayUnderARule.step need kids (fun w g => h (share w) g) giving use) t
+                                  (i + 1)).fst
+@Becoming.WayUnderARule.tested_lasts : ∀ {U R A : Type} {need use : U → Nat} {kids : R → U → List U}
+  {giving y : Nat → Nat} {hi : Nat} {favours : R → Prop} {P : Becoming.Ideals.Preorder A}
+  {M : Becoming.Ideals.Preorder R} {share : List U → A} {h : A → R → R} {s : (List U × R) × Nat},
+  (∀ (g : R), ¬favours g → ∀ (u : U), Becoming.LineOnAStock.taken use (kids g u) = use u) →
+    (∀ (g : R), ¬favours g → ∀ (u : U), kids g u ≠ []) →
+      (∀ (g : R) (u v : U), v ∈ kids g u → need v ≤ need u) →
+        s.snd ≤ hi →
+          (∀ (k : Nat),
+              (∀ (j : Nat),
+                  j ≤ k →
+                    Becoming.WayUnderARule.Goes need
+                      (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s j)) →
+                Becoming.RegimeMargin.Keeps giving
+                  (Becoming.LineOnAStock.taken use
+                    (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s k).fst.fst)
+                  hi) →
+            (∀ (k : Nat),
+                (∀ (j : Nat),
+                    j ≤ k →
+                      Becoming.WayUnderARule.Goes need
+                        (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s j)) →
+                  ¬favours (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s k).fst.snd →
+                    Becoming.RegimeMargin.Short giving
+                        (Becoming.LineOnAStock.taken use
+                          (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s k).fst.fst)
+                        (y
+                          (Becoming.LineOnAStock.taken use
+                            (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s
+                                  k).fst.fst)) ∧
+                      Becoming.RegimeMargin.Meets giving
+                        (Becoming.LineOnAStock.taken use
+                          (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s k).fst.fst)
+                        (y
+                          (Becoming.LineOnAStock.taken use
+                            (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s
+                                  k).fst.fst))
+                        hi) →
+              (∀ (w : List U) (g : R), ¬favours g → P.le (share (Becoming.LineOnAStock.allKids (kids g) w)) (share w)) →
+                Becoming.RuleCapture.ReadsShare P M h →
+                  (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+                    (∃ k,
+                        (∀ (j : Nat),
+                            j < k →
+                              Becoming.WayUnderARule.Goes need
+                                (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s j)) ∧
+                          Becoming.WayUnderARule.Tested need use y favours (fun w g => h (share w) g)
+                            (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s k)) →
+                      Becoming.«不穷» (Becoming.WayUnderARule.net need kids (fun w g => h (share w) g) giving use)
+                        Becoming.«一» s
+@Becoming.WayUnderARule.unending_iff_tested : ∀ {U R A : Type} {need use : U → Nat} {kids : R → U → List U}
+  {giving y : Nat → Nat} {hi : Nat} {favours : R → Prop} {P : Becoming.Ideals.Preorder A}
+  {M : Becoming.Ideals.Preorder R} {share : List U → A} {h : A → R → R} {s : (List U × R) × Nat}
+  [DecidablePred favours],
+  (∀ (g : R), favours g → ∀ (u : U), use u < Becoming.LineOnAStock.taken use (kids g u)) →
+    (∀ (g : R), ¬favours g → ∀ (u : U), Becoming.LineOnAStock.taken use (kids g u) = use u) →
+      (∀ (g : R), ¬favours g → ∀ (u : U), kids g u ≠ []) →
+        (∀ (g : R) (u v : U), v ∈ kids g u → need v ≤ need u) →
+          (∀ (k : Nat) (u : U),
+              u ∈ (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s k).fst.fst →
+                0 < need u) →
+            Becoming.RegimeMargin.FromNothing giving →
+              s.snd ≤ hi →
+                (∀ (k : Nat),
+                    (∀ (j : Nat),
+                        j ≤ k →
+                          Becoming.WayUnderARule.Goes need
+                            (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s j)) →
+                      Becoming.RegimeMargin.Keeps giving
+                        (Becoming.LineOnAStock.taken use
+                          (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s k).fst.fst)
+                        hi) →
+                  (∀ (k : Nat),
+                      (∀ (j : Nat),
+                          j ≤ k →
+                            Becoming.WayUnderARule.Goes need
+                              (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s j)) →
+                        ¬favours
+                              (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s
+                                    k).fst.snd →
+                          Becoming.RegimeMargin.Short giving
+                              (Becoming.LineOnAStock.taken use
+                                (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s
+                                      k).fst.fst)
+                              (y
+                                (Becoming.LineOnAStock.taken use
+                                  (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s
+                                        k).fst.fst)) ∧
+                            Becoming.RegimeMargin.Meets giving
+                              (Becoming.LineOnAStock.taken use
+                                (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s
+                                      k).fst.fst)
+                              (y
+                                (Becoming.LineOnAStock.taken use
+                                  (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s
+                                        k).fst.fst))
+                              hi) →
+                    (∀ (w : List U) (g : R),
+                        ¬favours g → P.le (share (Becoming.LineOnAStock.allKids (kids g) w)) (share w)) →
+                      Becoming.RuleCapture.ReadsShare P M h →
+                        (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+                          (Becoming.«不穷» (Becoming.WayUnderARule.net need kids (fun w g => h (share w) g) giving use)
+                              Becoming.«一» s ↔
+                            ∃ k,
+                              (∀ (j : Nat),
+                                  j < k →
+                                    Becoming.WayUnderARule.Goes need
+                                      (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s
+                                        j)) ∧
+                                Becoming.WayUnderARule.Tested need use y favours (fun w g => h (share w) g)
+                                  (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s k))
+@Becoming.WayUnderARule.ends_iff_unmet : ∀ {U R A : Type} {need use : U → Nat} {kids : R → U → List U}
+  {giving y : Nat → Nat} {hi : Nat} {favours : R → Prop} {P : Becoming.Ideals.Preorder A}
+  {M : Becoming.Ideals.Preorder R} {share : List U → A} {h : A → R → R} {s : (List U × R) × Nat}
+  [DecidablePred favours],
+  (∀ (g : R), favours g → ∀ (u : U), use u < Becoming.LineOnAStock.taken use (kids g u)) →
+    (∀ (g : R), ¬favours g → ∀ (u : U), Becoming.LineOnAStock.taken use (kids g u) = use u) →
+      (∀ (g : R), ¬favours g → ∀ (u : U), kids g u ≠ []) →
+        (∀ (g : R) (u v : U), v ∈ kids g u → need v ≤ need u) →
+          (∀ (k : Nat) (u : U),
+              u ∈ (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s k).fst.fst →
+                0 < need u) →
+            Becoming.RegimeMargin.FromNothing giving →
+              s.snd ≤ hi →
+                (∀ (k : Nat),
+                    (∀ (j : Nat),
+                        j ≤ k →
+                          Becoming.WayUnderARule.Goes need
+                            (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s j)) →
+                      Becoming.RegimeMargin.Keeps giving
+                        (Becoming.LineOnAStock.taken use
+                          (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s k).fst.fst)
+                        hi) →
+                  (∀ (k : Nat),
+                      (∀ (j : Nat),
+                          j ≤ k →
+                            Becoming.WayUnderARule.Goes need
+                              (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s j)) →
+                        ¬favours
+                              (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s
+                                    k).fst.snd →
+                          Becoming.RegimeMargin.Short giving
+                              (Becoming.LineOnAStock.taken use
+                                (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s
+                                      k).fst.fst)
+                              (y
+                                (Becoming.LineOnAStock.taken use
+                                  (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s
+                                        k).fst.fst)) ∧
+                            Becoming.RegimeMargin.Meets giving
+                              (Becoming.LineOnAStock.taken use
+                                (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s
+                                      k).fst.fst)
+                              (y
+                                (Becoming.LineOnAStock.taken use
+                                  (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s
+                                        k).fst.fst))
+                              hi) →
+                    (∀ (w : List U) (g : R),
+                        ¬favours g → P.le (share (Becoming.LineOnAStock.allKids (kids g) w)) (share w)) →
+                      Becoming.RuleCapture.ReadsShare P M h →
+                        (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+                          (¬Becoming.«不穷» (Becoming.WayUnderARule.net need kids (fun w g => h (share w) g) giving use)
+                                Becoming.«一» s ↔
+                            ∃ n,
+                              (∀ (j : Nat),
+                                  j < n →
+                                    Becoming.WayUnderARule.Goes need
+                                      (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s
+                                        j)) ∧
+                                ¬Becoming.WayUnderARule.Goes need
+                                    (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s n))
+@Becoming.WayUnderARule.locked_while_met : ∀ {U R A : Type} {need use : U → Nat} {kids : R → U → List U}
+  {giving : Nat → Nat} {favours : R → Prop} {P : Becoming.Ideals.Preorder A} {M : Becoming.Ideals.Preorder R}
+  {share : List U → A} {h : A → R → R} {s : (List U × R) × Nat},
+  (∀ (w : List U) (g : R), favours g → P.le (share w) (share (Becoming.LineOnAStock.allKids (kids g) w))) →
+    Becoming.RuleCapture.ReadsShare P M h →
+      (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+        Becoming.RuleCapture.Locked M favours (fun w g => h (share w) g) s.fst →
+          ∀ (n : Nat),
+            (∀ (j : Nat),
+                j < n →
+                  ∀ (u : U),
+                    u ∈ (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s j).fst.fst →
+                      need u ≤
+                        (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s j).snd) →
+              Becoming.RuleCapture.Locked M favours (fun w g => h (share w) g)
+                (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s n).fst
+@Becoming.WayUnderARule.favours_while_met : ∀ {U R A : Type} {need use : U → Nat} {kids : R → U → List U}
+  {giving : Nat → Nat} {favours : R → Prop} {P : Becoming.Ideals.Preorder A} {M : Becoming.Ideals.Preorder R}
+  {share : List U → A} {h : A → R → R} {s : (List U × R) × Nat},
+  (∀ (w : List U) (g : R), favours g → P.le (share w) (share (Becoming.LineOnAStock.allKids (kids g) w))) →
+    Becoming.RuleCapture.ReadsShare P M h →
+      (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+        Becoming.RuleCapture.Locked M favours (fun w g => h (share w) g) s.fst →
+          ∀ (n : Nat),
+            (∀ (j : Nat),
+                j < n →
+                  ∀ (u : U),
+                    u ∈ (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s j).fst.fst →
+                      need u ≤
+                        (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s j).snd) →
+              ∀ (j : Nat),
+                j ≤ n + 1 →
+                  favours (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s j).fst.snd
+@Becoming.WayUnderARule.unmet_before_unfavoured : ∀ {U R A : Type} {need use : U → Nat} {kids : R → U → List U}
+  {giving : Nat → Nat} {favours : R → Prop} {P : Becoming.Ideals.Preorder A} {M : Becoming.Ideals.Preorder R}
+  {share : List U → A} {h : A → R → R} {s : (List U × R) × Nat},
+  (∀ (w : List U) (g : R), favours g → P.le (share w) (share (Becoming.LineOnAStock.allKids (kids g) w))) →
+    Becoming.RuleCapture.ReadsShare P M h →
+      (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+        Becoming.RuleCapture.Locked M favours (fun w g => h (share w) g) s.fst →
+          ∀ {k : Nat},
+            ¬favours (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s k).fst.snd →
+              ∃ j,
+                j + 2 ≤ k ∧
+                  ∃ u,
+                    u ∈ (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s j).fst.fst ∧
+                      (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s j).snd < need u
+@Becoming.WayUnderARule.unmet_before_tested : ∀ {U R A : Type} {need use : U → Nat} {kids : R → U → List U}
+  {giving y : Nat → Nat} {favours : R → Prop} {P : Becoming.Ideals.Preorder A} {M : Becoming.Ideals.Preorder R}
+  {share : List U → A} {h : A → R → R} {s : (List U × R) × Nat},
+  (∀ (w : List U) (g : R), favours g → P.le (share w) (share (Becoming.LineOnAStock.allKids (kids g) w))) →
+    Becoming.RuleCapture.ReadsShare P M h →
+      (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+        Becoming.RuleCapture.Locked M favours (fun w g => h (share w) g) s.fst →
+          ∀ {k : Nat},
+            Becoming.WayUnderARule.Tested need use y favours (fun w g => h (share w) g)
+                (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s k) →
+              ∃ j,
+                j + 2 ≤ k ∧
+                  ∃ u,
+                    u ∈ (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s j).fst.fst ∧
+                      (Becoming.WayUnderARule.course need kids (fun w g => h (share w) g) giving use s j).snd < need u
+@Becoming.WayUnderARule.TwoKinds.le_min : ∀ {a b c : Nat}, a ≤ b → a ≤ c → a ≤ min b c
+Becoming.WayUnderARule.TwoKinds.keeps : ∀ (T : Nat),
+  Becoming.RegimeMargin.Keeps Becoming.WayUnderARule.TwoKinds.giving T 32
+Becoming.WayUnderARule.TwoKinds.short : ∀ (T : Nat),
+  Becoming.RegimeMargin.Short Becoming.WayUnderARule.TwoKinds.giving T T
+Becoming.WayUnderARule.TwoKinds.meets : ∀ (T : Nat),
+  Becoming.RegimeMargin.Meets Becoming.WayUnderARule.TwoKinds.giving T T 32
+Becoming.WayUnderARule.TwoKinds.allKids_false : ∀ (w : List Becoming.WayUnderARule.TwoKinds.Kind),
+  Becoming.LineOnAStock.allKids (Becoming.WayUnderARule.TwoKinds.kids false) w = w
+Becoming.WayUnderARule.TwoKinds.share_allKids_true : ∀ (w : List Becoming.WayUnderARule.TwoKinds.Kind),
+  Becoming.WayUnderARule.TwoKinds.share (Becoming.LineOnAStock.allKids (Becoming.WayUnderARule.TwoKinds.kids true) w) =
+    Becoming.WayUnderARule.TwoKinds.share w
+@Becoming.WayUnderARule.TwoKinds.only_O : ∀ {w : List Becoming.WayUnderARule.TwoKinds.Kind},
+  Becoming.WayUnderARule.TwoKinds.share w = 0 →
+    ∀ (u : Becoming.WayUnderARule.TwoKinds.Kind), u ∈ w → u = Becoming.WayUnderARule.TwoKinds.Kind.O
+@Becoming.WayUnderARule.TwoKinds.down : ∀ {n : Nat},
+  0 < n →
+    ∀ (g : Bool) (u v : Becoming.WayUnderARule.TwoKinds.Kind),
+      v ∈ Becoming.WayUnderARule.TwoKinds.kids g u →
+        Becoming.WayUnderARule.TwoKinds.need n v ≤ Becoming.WayUnderARule.TwoKinds.need n u
+@Becoming.WayUnderARule.TwoKinds.premises : ∀ {n : Nat}, 0 < n → Becoming.WayUnderARule.TwoKinds.Premises n
+Becoming.WayUnderARule.NeedTwentySeven.course_values : Becoming.WayUnderARule.TwoKinds.run 27 1 =
+    (([Becoming.WayUnderARule.TwoKinds.Kind.F, Becoming.WayUnderARule.TwoKinds.Kind.O], true), 28) ∧
+  Becoming.WayUnderARule.TwoKinds.run 27 2 =
+      (([Becoming.WayUnderARule.TwoKinds.Kind.F, Becoming.WayUnderARule.TwoKinds.Kind.O,
+            Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O],
+          true),
+        26) ∧
+    Becoming.WayUnderARule.TwoKinds.run 27 3 =
+        (([Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O,
+              Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O,
+              Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O],
+            true),
+          18) ∧
+      Becoming.WayUnderARule.TwoKinds.run 27 4 =
+          (([Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O,
+                Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O,
+                Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O,
+                Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O,
+                Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O,
+                Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O],
+              false),
+            24) ∧
+        Becoming.WayUnderARule.TwoKinds.run 27 5 = Becoming.WayUnderARule.TwoKinds.run 27 4
+Becoming.WayUnderARule.NeedTwentySeven.premises : Becoming.WayUnderARule.TwoKinds.Premises 27
+Becoming.WayUnderARule.NeedTwentySeven.tested : (∀ (j : Nat),
+    j < 4 →
+      Becoming.WayUnderARule.Goes (Becoming.WayUnderARule.TwoKinds.need 27)
+        (Becoming.WayUnderARule.TwoKinds.run 27 j)) ∧
+  Becoming.WayUnderARule.Tested (Becoming.WayUnderARule.TwoKinds.need 27) Becoming.WayUnderARule.TwoKinds.use id
+    Becoming.WayUnderARule.TwoKinds.favours
+    (fun w g => Becoming.WayUnderARule.TwoKinds.read (Becoming.WayUnderARule.TwoKinds.share w) g)
+    (Becoming.WayUnderARule.TwoKinds.run 27 4)
+Becoming.WayUnderARule.NeedTwentySeven.goes_on : Becoming.«不穷»
+  (Becoming.WayUnderARule.net (Becoming.WayUnderARule.TwoKinds.need 27) Becoming.WayUnderARule.TwoKinds.kids
+    (fun w g => Becoming.WayUnderARule.TwoKinds.read (Becoming.WayUnderARule.TwoKinds.share w) g)
+    Becoming.WayUnderARule.TwoKinds.giving Becoming.WayUnderARule.TwoKinds.use)
+  Becoming.«一» Becoming.WayUnderARule.TwoKinds.start
+Becoming.WayUnderARule.NeedTwentySeven.first_unmet : (∀ (j : Nat),
+    j < 2 →
+      ∀ (u : Becoming.WayUnderARule.TwoKinds.Kind),
+        u ∈ (Becoming.WayUnderARule.TwoKinds.run 27 j).fst.fst →
+          Becoming.WayUnderARule.TwoKinds.need 27 u ≤ (Becoming.WayUnderARule.TwoKinds.run 27 j).snd) ∧
+  ∃ u,
+    u ∈ (Becoming.WayUnderARule.TwoKinds.run 27 2).fst.fst ∧
+      (Becoming.WayUnderARule.TwoKinds.run 27 2).snd < Becoming.WayUnderARule.TwoKinds.need 27 u
+Becoming.WayUnderARule.NeedTwentySeven.favours_through_three : ∀ (j : Nat),
+  j ≤ 3 → Becoming.WayUnderARule.TwoKinds.favours (Becoming.WayUnderARule.TwoKinds.run 27 j).fst.snd
+Becoming.WayUnderARule.NeedTwentySix.course_values : Becoming.WayUnderARule.TwoKinds.run 26 1 =
+    (([Becoming.WayUnderARule.TwoKinds.Kind.F, Becoming.WayUnderARule.TwoKinds.Kind.O], true), 28) ∧
+  Becoming.WayUnderARule.TwoKinds.run 26 2 =
+      (([Becoming.WayUnderARule.TwoKinds.Kind.F, Becoming.WayUnderARule.TwoKinds.Kind.O,
+            Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O],
+          true),
+        26) ∧
+    Becoming.WayUnderARule.TwoKinds.run 26 3 =
+        (([Becoming.WayUnderARule.TwoKinds.Kind.F, Becoming.WayUnderARule.TwoKinds.Kind.O,
+              Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O,
+              Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O,
+              Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O],
+            true),
+          18) ∧
+      Becoming.WayUnderARule.TwoKinds.run 26 4 =
+        (([Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O,
+              Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O,
+              Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O,
+              Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O,
+              Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O,
+              Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O,
+              Becoming.WayUnderARule.TwoKinds.Kind.O, Becoming.WayUnderARule.TwoKinds.Kind.O],
+            true),
+          0)
+Becoming.WayUnderARule.NeedTwentySix.premises : Becoming.WayUnderARule.TwoKinds.Premises 26
+Becoming.WayUnderARule.NeedTwentySix.ends : (∀ (j : Nat),
+    j < 4 →
+      Becoming.WayUnderARule.Goes (Becoming.WayUnderARule.TwoKinds.need 26)
+        (Becoming.WayUnderARule.TwoKinds.run 26 j)) ∧
+  ¬Becoming.WayUnderARule.Goes (Becoming.WayUnderARule.TwoKinds.need 26) (Becoming.WayUnderARule.TwoKinds.run 26 4)
+Becoming.WayUnderARule.NeedTwentySix.ends_untested : ¬Becoming.«不穷»
+      (Becoming.WayUnderARule.net (Becoming.WayUnderARule.TwoKinds.need 26) Becoming.WayUnderARule.TwoKinds.kids
+        (fun w g => Becoming.WayUnderARule.TwoKinds.read (Becoming.WayUnderARule.TwoKinds.share w) g)
+        Becoming.WayUnderARule.TwoKinds.giving Becoming.WayUnderARule.TwoKinds.use)
+      Becoming.«一» Becoming.WayUnderARule.TwoKinds.start ∧
+  ¬∃ k,
+      (∀ (j : Nat),
+          j < k →
+            Becoming.WayUnderARule.Goes (Becoming.WayUnderARule.TwoKinds.need 26)
+              (Becoming.WayUnderARule.TwoKinds.run 26 j)) ∧
+        Becoming.WayUnderARule.Tested (Becoming.WayUnderARule.TwoKinds.need 26) Becoming.WayUnderARule.TwoKinds.use id
+          Becoming.WayUnderARule.TwoKinds.favours
+          (fun w g => Becoming.WayUnderARule.TwoKinds.read (Becoming.WayUnderARule.TwoKinds.share w) g)
+          (Becoming.WayUnderARule.TwoKinds.run 26 k)
+Becoming.WayUnderARule.NeedTwentySix.favours_through_four : ∀ (j : Nat),
+  j ≤ 4 → Becoming.WayUnderARule.TwoKinds.favours (Becoming.WayUnderARule.TwoKinds.run 26 j).fst.snd
+@Becoming.WayUnderARule.course_one_rule : ∀ {U : Type} {need use : U → Nat} {kids : U → List U} {giving : Nat → Nat}
+  (next : List U → PUnit → PUnit) (w : List U) (x k : Nat),
+  Becoming.WayUnderARule.course need (fun x => kids) next giving use ((w, PUnit.unit), x) k =
+    (((Becoming.LineOnAStock.course need kids giving use (w, x) k).fst, PUnit.unit),
+      (Becoming.LineOnAStock.course need kids giving use (w, x) k).snd)
+@Becoming.WayUnderARule.way_one_rule : ∀ {U : Type} {need use : U → Nat} {kids : U → List U} {giving : Nat → Nat}
+  (next : List U → PUnit → PUnit) (w : List U) (x k : Nat),
+  (Becoming.WayUnderARule.course need (fun x => kids) next giving use ((w, PUnit.unit), x) k).fst.fst =
+    (Becoming.LineOnAStock.course need kids giving use (w, x) k).fst
+@Becoming.WayUnderARule.goes_one_rule : ∀ {U : Type} {need use : U → Nat} {kids : U → List U} {giving : Nat → Nat}
+  (next : List U → PUnit → PUnit) (w : List U) (x k : Nat),
+  Becoming.WayUnderARule.Goes need
+      (Becoming.WayUnderARule.course need (fun x => kids) next giving use ((w, PUnit.unit), x) k) ↔
+    Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use (w, x) k)
+@Becoming.WayUnderARule.tested_one_rule : ∀ {U : Type} {need use : U → Nat} {kids : U → List U} {giving y : Nat → Nat}
+  (next : List U → PUnit → PUnit) (w : List U) (x k : Nat),
+  Becoming.WayUnderARule.Tested need use y (fun x => False) next
+      (Becoming.WayUnderARule.course need (fun x => kids) next giving use ((w, PUnit.unit), x) k) ↔
+    Becoming.LineOnAStock.Holds need use y (Becoming.LineOnAStock.course need kids giving use (w, x) k)
+Becoming.WayUnderARule.BothOutcomes.premises : Becoming.WayUnderARule.BothOutcomes.Premises
+Becoming.WayUnderARule.BothOutcomes.course_values : Becoming.WayUnderARule.BothOutcomes.run 1 =
+    (([()], Becoming.WayUnderARule.BothOutcomes.Rule.b), 2) ∧
+  Becoming.WayUnderARule.BothOutcomes.run 2 = (([()], Becoming.WayUnderARule.BothOutcomes.Rule.c), 2) ∧
+    Becoming.WayUnderARule.BothOutcomes.run 3 = (([(), ()], Becoming.WayUnderARule.BothOutcomes.Rule.c), 2) ∧
+      Becoming.WayUnderARule.BothOutcomes.run 4 = (([(), (), (), ()], Becoming.WayUnderARule.BothOutcomes.Rule.c), 0)
+Becoming.WayUnderARule.BothOutcomes.tested_at_start : Becoming.WayUnderARule.Tested
+  Becoming.WayUnderARule.BothOutcomes.need Becoming.WayUnderARule.BothOutcomes.use id
+  Becoming.WayUnderARule.BothOutcomes.favours Becoming.WayUnderARule.BothOutcomes.next
+  (Becoming.WayUnderARule.BothOutcomes.run 0)
+Becoming.WayUnderARule.BothOutcomes.ends : (∀ (j : Nat),
+    j < 4 →
+      Becoming.WayUnderARule.Goes Becoming.WayUnderARule.BothOutcomes.need
+        (Becoming.WayUnderARule.BothOutcomes.run j)) ∧
+  ¬Becoming.WayUnderARule.Goes Becoming.WayUnderARule.BothOutcomes.need (Becoming.WayUnderARule.BothOutcomes.run 4)
+Becoming.WayUnderARule.BothOutcomes.both : Becoming.WayUnderARule.BothOutcomes.Premises ∧
+  (∃ k,
+      (∀ (j : Nat),
+          j < k →
+            Becoming.WayUnderARule.Goes Becoming.WayUnderARule.BothOutcomes.need
+              (Becoming.WayUnderARule.BothOutcomes.run j)) ∧
+        Becoming.WayUnderARule.Tested Becoming.WayUnderARule.BothOutcomes.need Becoming.WayUnderARule.BothOutcomes.use
+          id Becoming.WayUnderARule.BothOutcomes.favours Becoming.WayUnderARule.BothOutcomes.next
+          (Becoming.WayUnderARule.BothOutcomes.run k)) ∧
+    ∃ n,
+      (∀ (j : Nat),
+          j < n →
+            Becoming.WayUnderARule.Goes Becoming.WayUnderARule.BothOutcomes.need
+              (Becoming.WayUnderARule.BothOutcomes.run j)) ∧
+        ¬Becoming.WayUnderARule.Goes Becoming.WayUnderARule.BothOutcomes.need
+            (Becoming.WayUnderARule.BothOutcomes.run n)
+Becoming.WayUnderARule.BothOutcomes.by_law : Becoming.WayUnderARule.Outcomes Becoming.WayUnderARule.BothOutcomes.need
+  Becoming.WayUnderARule.BothOutcomes.use id Becoming.WayUnderARule.BothOutcomes.favours
+  Becoming.WayUnderARule.BothOutcomes.next Becoming.WayUnderARule.BothOutcomes.run
+@Becoming.WayUnderARule.BothOutcomes.not_read_from_a_share : ∀ {A : Type} {P : Becoming.Ideals.Preorder A}
+  {M : Becoming.Ideals.Preorder Becoming.WayUnderARule.BothOutcomes.Rule} {share : List Unit → A}
+  {h : A → Becoming.WayUnderARule.BothOutcomes.Rule → Becoming.WayUnderARule.BothOutcomes.Rule},
+  (fun w g => h (share w) g) = Becoming.WayUnderARule.BothOutcomes.next →
+    (∀ (w : List Unit) (g : Becoming.WayUnderARule.BothOutcomes.Rule),
+        ¬Becoming.WayUnderARule.BothOutcomes.favours g →
+          P.le (share (Becoming.LineOnAStock.allKids (Becoming.WayUnderARule.BothOutcomes.kids g) w)) (share w)) →
+      Becoming.RuleCapture.ReadsShare P M h →
+        (∀ {g g' : Becoming.WayUnderARule.BothOutcomes.Rule},
+            M.le g g' →
+              Becoming.WayUnderARule.BothOutcomes.favours g → Becoming.WayUnderARule.BothOutcomes.favours g') →
+          False

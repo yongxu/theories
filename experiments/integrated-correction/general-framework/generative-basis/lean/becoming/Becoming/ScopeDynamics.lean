@@ -7,6 +7,7 @@ import Becoming.TransformativeViability
 import Becoming.AdaptiveLoops
 import Becoming.OpenComposition
 import Becoming.StockFlowBridge
+import Becoming.CoreHelpers
 
 /-!
 # Scope Dynamics: Mutual-Fate Selection, Open-Commons Invasion, and Reciprocal Coupling
@@ -86,17 +87,17 @@ theorem scopeLaw_readsOnlyDynamics {Pos F D : Type} (ScopeLaw : D → Prop) :
     significance `bounded region` (`Rival` and `¬ Unrestricted`) when some `(p, f)` lies outside
     `region`. -/
 theorem scopeLaw_admits_rival {Pos F D : Type} (ScopeLaw : D → Prop)
-    {d : D} (holds : ScopeLaw d) (sig : Pos → Nat → F → Prop)
+    {d : D} (holds : ScopeLaw d) (_sig : Pos → Nat → F → Prop)
     {region : Pos → F → Prop} (outside : ∃ p f, ¬ region p f) :
     ScopeLaw d ∧ Rival (bounded region) ∧ ¬ Unrestricted (bounded region) :=
-  ReadsOnlyDynamics.admits_rival (readsOnlyDynamics_of ScopeLaw) (sig := sig) holds outside
+  dynamicsLaw_admits_rival holds outside
 
 /-- Direct `ReadsOnlyDynamics.not_entails` bridge: no pure scope-dynamics law can entail
     `Unrestricted sig` whenever `d` exists (else `¬ ScopeLaw d`). -/
 theorem scopeLaw_not_entails {Pos F D : Type} (ScopeLaw : D → Prop)
     (entails : ∀ d (sig : Pos → Nat → F → Prop), ScopeLaw d → Unrestricted sig)
     (p : Pos) (f : F) {d : D} : ¬ ScopeLaw d :=
-  ReadsOnlyDynamics.not_entails (readsOnlyDynamics_of ScopeLaw) entails p f (sig := fun _ _ _ => True)
+  dynamicsLaw_not_entails (fun d h sig => entails d sig h) p f
 
 /-- Unconditional non-entailment from inhabited dynamical witnesses: any inference from
     `ScopeLaw` to `Unrestricted sig` is refutable once any `d` satisfies `ScopeLaw d`. -/
@@ -343,15 +344,8 @@ theorem gEx_meets_two : RegimeMargin.Meets gEx 2 6 12 := fun z hz _ => by
   rw [if_neg hnot3, if_neg hnot6]
   exact Nat.le_refl 2
 
-theorem sub_le_of_le_add_nat : ∀ {x a b : Nat}, x ≤ a + b → x - a ≤ b
-  | x, 0, _, h => by rw [Nat.sub_zero]; rw [Nat.zero_add] at h; exact h
-  | 0, a + 1, _, _ => by rw [Nat.zero_sub]; exact Nat.zero_le _
-  | x + 1, a + 1, b, h => by
-    rw [Nat.succ_sub_succ]
-    exact sub_le_of_le_add_nat (Nat.le_of_succ_le_succ ((Nat.succ_add a b).symm ▸ h))
-
 theorem gEx_keeps (H : Nat) (hH : 2 ≤ H) : RegimeMargin.Keeps gEx H 12 := fun x hx => by
-  have hsub : x - H ≤ 10 := sub_le_of_le_add_nat (Nat.le_trans hx (Nat.add_le_add_right hH 10))
+  have hsub : x - H ≤ 10 := Naturals.sub_le_of_le_add (Nat.le_trans hx (Nat.add_le_add_right hH 10))
   exact Nat.le_trans (Nat.add_le_add hsub (gEx_atMost_two (x - H))) (Nat.le_refl 12)
 
 theorem gEx_mono : ∀ a b, a ≤ b → gEx a ≤ gEx b := fun a b hab => by
@@ -376,10 +370,6 @@ theorem gEx_mono : ∀ a b, a ≤ b → gEx a ≤ gEx b := fun a b hab => by
       have hb6 : ¬ b < 6 := fun hb => ha6 (Nat.lt_of_le_of_lt hab hb)
       rw [if_neg hb6]
       exact Nat.le_refl 2
-
-theorem natBeq_succ_self_false : ∀ t : Nat, Nat.beq (t + 1) t = false
-  | 0 => rfl
-  | t + 1 => natBeq_succ_self_false t
 
 /-- Concrete formation space exhibiting genuine micro-turnover via `.fTool t`. -/
 inductive PoolForm where
@@ -425,7 +415,7 @@ theorem poolWeb_not_admits_tool_next {needSafe needCeil : Nat} {levelFn : Nat �
     {l : Unit → Nat} (hlt : l () < needCeil) (t : Nat) :
     ¬ (poolWeb needSafe needCeil levelFn).Admits l (t + 1) (.fTool t) := fun hadm => by
   have hle : (if Nat.beq (t + 1) t then needSafe else needCeil) ≤ l () := hadm () trivial
-  rw [natBeq_succ_self_false t] at hle
+  rw [ListTests.beq_false_of_ne (Naturals.succ_ne_self t)] at hle
   exact Nat.not_le_of_gt hlt hle
 
 theorem poolWeb_transformsViably {S_safe hi : Nat} {levelFn : Nat → Nat}
@@ -1043,19 +1033,6 @@ def ReciprocalPoolSystem.H_rec {F C K GateNode : Type}
     (P : ReciprocalPoolSystem F C K GateNode) : Nat :=
   P.T_gate + (P.cumDef P.T_gate - P.cumCoop P.T_gate) + 1
 
-theorem sub_eq_sub_succ_add_one : ∀ {T t : Nat}, t < T → T - t = (T - (t + 1)) + 1
-  | 0, _, lt => absurd lt (Nat.not_lt_zero _)
-  | _ + 1, 0, _ => rfl
-  | T + 1, t + 1, lt =>
-    (Nat.succ_sub_succ T t).trans
-      ((sub_eq_sub_succ_add_one (Nat.lt_of_succ_lt_succ lt)).trans
-        (congrArg (· + 1) (Nat.succ_sub_succ T (t + 1)).symm))
-
-theorem le_add_sub_self_nat (a b : Nat) : a ≤ b + (a - b) :=
-  (Nat.le_total a b).elim
-    (fun h => Nat.le_trans h (Nat.le_add_right b (a - b)))
-    (fun h => Nat.le_of_eq (Naturals.add_sub_of_le h).symm)
-
 /-- Withholding closes the computable gate permanently from `T_gate` onward. -/
 theorem ReciprocalPoolSystem.gate_closed_from {F C K GateNode : Type}
     (P : ReciprocalPoolSystem F C K GateNode) {t : Nat} (ht : P.T_gate ≤ t) :
@@ -1114,7 +1091,7 @@ theorem ReciprocalPoolSystem.substrate_safe_bounds {F C K GateNode : Type}
       have hltT : t < P.T_gate := (Nat.lt_or_ge t P.T_gate).elim id fun hge => by
         have hfl := P.gate_closed_from hge
         exact absurd (hfl.symm.trans hg) (fun e => Bool.noConfusion e)
-      have hT : P.T_gate - t = (P.T_gate - (t + 1)) + 1 := sub_eq_sub_succ_add_one hltT
+      have hT : P.T_gate - t = (P.T_gate - (t + 1)) + 1 := CoreHelpers.sub_eq_sub_succ_add_one hltT
       have hbuf : P.S_safe + ((P.T_gate - (t + 1)) + 1) * (P.H_pre - P.Y_floor) ≤ P.substrate t := by
         rw [← hT]
         exact hTrue hg
@@ -1227,7 +1204,7 @@ theorem reciprocal_coupling_stabilizes_scope {F C K GateNode : Type}
       exact h1
     rw [ht_eq, P.cumDef_after K, P.cumCoop_after K]
     have hD : P.cumDef P.T_gate ≤ P.cumCoop P.T_gate + D :=
-      le_add_sub_self_nat (P.cumDef P.T_gate) (P.cumCoop P.T_gate)
+      CoreHelpers.le_add_sub_self_nat (P.cumDef P.T_gate) (P.cumCoop P.T_gate)
     have hDK : D < K := by
       show D < D + 1 + d
       exact Nat.lt_of_lt_of_le (Nat.lt_succ_self D) (Nat.le_add_right (D + 1) d)
@@ -1567,7 +1544,7 @@ def poolAt13 : ReciprocalPoolSystem PoolForm Unit PoolCap PoolGateNode where
   renewal_floor x hx := pool.renewal_floor x hx
   buffer_safe := by decide
   keeps_pre x hx := by
-    have hsub : x - 5 ≤ 8 := sub_le_of_le_add_nat (Nat.le_trans hx (by decide : 13 ≤ 5 + 8))
+    have hsub : x - 5 ≤ 8 := Naturals.sub_le_of_le_add (Nat.le_trans hx (by decide : 13 ≤ 5 + 8))
     exact Nat.le_trans (Nat.add_le_add hsub (gEx_atMost_two (x - 5))) (by decide : 8 + 2 ≤ 13)
   safe_le_hi := by decide
   S₀_le_hi := by decide
@@ -1578,7 +1555,7 @@ def poolAt13 : ReciprocalPoolSystem PoolForm Unit PoolCap PoolGateNode where
     rw [if_neg hnot3, if_neg hnot6]
     exact Nat.le_refl 2
   keeps_coop x hx := by
-    have hsub : x - 2 ≤ 11 := sub_le_of_le_add_nat (Nat.le_trans hx (by decide : 13 ≤ 2 + 11))
+    have hsub : x - 2 ≤ 11 := Naturals.sub_le_of_le_add (Nat.le_trans hx (by decide : 13 ≤ 2 + 11))
     exact Nat.le_trans (Nat.add_le_add hsub (gEx_atMost_two (x - 2))) (by decide : 11 + 2 ≤ 13)
   safe_floor := by decide
   pre_temptation := by decide
@@ -1642,45 +1619,36 @@ theorem uncoord_vs_reciprocal_contrast :
   rw [hd, Nat.add_comm 1 d]
   exact ReciprocalStabilityWitness.witness_substrate_succ d
 
+/-- Shared post-alarm viability step on the pooled cooperator draw `P.H_coop`. -/
+theorem ReciprocalPoolSystem.post_viable_unit {F C K GateNode : Type}
+    (P : ReciprocalPoolSystem F C K GateNode) :
+    ∀ k : Unit,
+      P.S_safe ≤ RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole
+        (fun _ (e : Unit → Nat) => P.g (e ())) (fun _ => P.H_coop) (fun _ => P.S_safe) k
+  | () => by
+    show P.S_safe ≤ (P.S_safe - P.H_coop) + P.g (P.S_safe - P.H_coop)
+    have hH_le : P.H_coop ≤ P.S_safe := Nat.le_trans (Nat.le_add_right P.H_coop P.y_coop) P.safe_floor
+    have hy_le : P.y_coop ≤ P.S_safe - P.H_coop := Naturals.le_sub_of_add_le P.safe_floor
+    have hceil : (P.S_safe - P.H_coop) + P.H_coop ≤ P.hi := by
+      rw [Naturals.sub_add_cancel hH_le]
+      exact P.safe_le_hi
+    have hg_ge : P.H_coop ≤ P.g (P.S_safe - P.H_coop) := P.meets_coop _ hy_le hceil
+    calc P.S_safe = (P.S_safe - P.H_coop) + P.H_coop := (Naturals.sub_add_cancel hH_le).symm
+      _ ≤ (P.S_safe - P.H_coop) + P.g (P.S_safe - P.H_coop) := Nat.add_le_add_left hg_ge _
+
 /-! ## 5. Native `L0` Open-Interface Composition Bridge (`OpenCompositionBridge`) -/
 
 namespace OpenCompositionBridge
 
 /-- Cooperative pool member modeled as a stateless `OpenComponent` drawing constant `H_coop`
     on the single shared boundary port `Unit` with zero lag and no alarm emission. -/
-def coopComponent (H_coop : Nat) : OpenComposition.OpenComponent Unit Unit Unit Empty Unit where
-  next _ _ _ := ()
-  drawInt _ e := Empty.elim e
-  drawExt _ _ := H_coop
-  emitAlarm _ _ := false
-  silenceLoad _ := 0
-  favours _ := False
+def coopComponent (H_coop : Nat) : OpenComposition.OpenComponent Unit Unit Unit Empty Unit :=
+  OpenComposition.constDrawerComponent H_coop
 
 /-- Assume-guarantee `InterfaceContract` for `coopComponent H_coop`. -/
 def coopContract (H_coop : Nat) :
-    OpenComposition.InterfaceContract (coopComponent H_coop) () where
-  tol _ _ := True
-  warnObs _ := False
-  preCapInt e := Empty.elim e
-  preCapExt _ := H_coop
-  postBudgetInt e := Empty.elim e
-  postBudgetExt _ := H_coop
-  maxSilence := 0
-  maxLag := 0
-  K _ := True
-  eta _ := 0
-  init_in := trivial
-  cert := Viability.certificate_disturbed_iff.mpr
-    ⟨fun _ _ =>
-      ⟨fun e => Empty.elim e,
-       fun _ => Nat.le_refl H_coop,
-       Nat.le_refl 0,
-       fun _ => ⟨fun f => f, fun e => Empty.elim e, fun _ => Nat.le_refl H_coop⟩⟩,
-     fun _ _ _ _ => trivial⟩
-  eta_bound _ _ := Nat.le_refl 0
-  emits_on_warn _ _ _ f := False.elim f
-  eta_alarm_step _ _ _ _ _ pos := absurd pos (Nat.lt_irrefl 0)
-  eta_alarm_zero _ _ _ _ _ _ := rfl
+    OpenComposition.InterfaceContract (coopComponent H_coop) () :=
+  OpenComposition.constDrawerContract H_coop
 
 /-- Gated defector modeled as an `OpenComponent` whose countdown state `s : Nat` closes from
     `H_def_pre` down to `H_def_post` upon external alarm within lag `T_gate`. -/
@@ -1747,8 +1715,8 @@ def gatedDefectorContract (H_def_pre H_def_post T_gate : Nat)
     rw [if_pos hs]
 
 /-- Blind binary channel for `OpenComposition.closedProcess` reading only `(em, load)`. -/
-def openReciprocalChannel (em : Bool) (load : Nat) (_ : Unit) : Bool :=
-  em && Nat.ble load 0
+def openReciprocalChannel (em : Bool) (load : Nat) (env : Unit) : Bool :=
+  OpenComposition.zeroSilenceChannel em load env
 
 /-- **Composed reciprocal viability (`reciprocal_open_compose_viable`)**: decomposes a
     `ReciprocalPoolSystem` horizontally as `gatedDefectorComponent ⊕ coopComponent` (with
@@ -1777,20 +1745,6 @@ theorem reciprocal_open_compose_viable {F C K GateNode : Type}
   have hG_rises : ∀ k : Unit,
       RegimeMargin.Coupled.Indexed.Rises RegimeMargin.Drawn.whole (fun (e : Unit → Nat) => P.g (e ())) :=
     fun _ _ _ hbelow => g_mono _ _ (hbelow ())
-  have hpost_viable : ∀ k : Unit,
-      P.S_safe ≤ RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole
-        (fun _ (e : Unit → Nat) => P.g (e ())) (fun _ => P.H_coop) (fun _ => P.S_safe) k := by
-    intro k
-    cases k
-    show P.S_safe ≤ (P.S_safe - P.H_coop) + P.g (P.S_safe - P.H_coop)
-    have hH_le : P.H_coop ≤ P.S_safe := Nat.le_trans (Nat.le_add_right P.H_coop P.y_coop) P.safe_floor
-    have hy_le : P.y_coop ≤ P.S_safe - P.H_coop := Naturals.le_sub_of_add_le P.safe_floor
-    have hceil : (P.S_safe - P.H_coop) + P.H_coop ≤ P.hi := by
-      rw [Naturals.sub_add_cancel hH_le]
-      exact P.safe_le_hi
-    have hg_ge : P.H_coop ≤ P.g (P.S_safe - P.H_coop) := P.meets_coop _ hy_le hceil
-    calc P.S_safe = (P.S_safe - P.H_coop) + P.H_coop := (Naturals.sub_add_cancel hH_le).symm
-      _ ≤ (P.S_safe - P.H_coop) + P.g (P.S_safe - P.H_coop) := Nat.add_le_add_left hg_ge _
   have hmax_le : AdaptiveLoops.natMax P.T_gate 0 ≤ P.T_gate :=
     AdaptiveLoops.natMax_le (Nat.le_refl P.T_gate) (Nat.zero_le P.T_gate)
   have hcap_eq : (P.H_pre - P.H_coop + P.H_coop) + 0 = P.H_pre :=
@@ -1813,7 +1767,7 @@ theorem reciprocal_open_compose_viable {F C K GateNode : Type}
       show (true && Nat.ble load 0) = true
       rw [Nat.ble_eq_true_of_le hle0]
       rfl)
-    hG_rises hpost_viable
+    hG_rises P.post_viable_unit
     (fun _ => Nat.le_of_eq ((Nat.add_zero _).trans (Nat.zero_add P.H_coop)))
     (fun _ => by
       change P.S_safe + (AdaptiveLoops.natMax P.T_gate 0 + 1) * ((P.H_pre - P.H_coop + P.H_coop) + 0) ≤
@@ -1899,20 +1853,6 @@ theorem reciprocal_defector_replace_viable
   have hG_rises : ∀ k : Unit,
       RegimeMargin.Coupled.Indexed.Rises RegimeMargin.Drawn.whole (fun (e : Unit → Nat) => P.g (e ())) :=
     fun _ _ _ hbelow => g_mono _ _ (hbelow ())
-  have hpost_viable : ∀ k : Unit,
-      P.S_safe ≤ RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole
-        (fun _ (e : Unit → Nat) => P.g (e ())) (fun _ => P.H_coop) (fun _ => P.S_safe) k := by
-    intro k
-    cases k
-    show P.S_safe ≤ (P.S_safe - P.H_coop) + P.g (P.S_safe - P.H_coop)
-    have hH_le : P.H_coop ≤ P.S_safe := Nat.le_trans (Nat.le_add_right P.H_coop P.y_coop) P.safe_floor
-    have hy_le : P.y_coop ≤ P.S_safe - P.H_coop := Naturals.le_sub_of_add_le P.safe_floor
-    have hceil : (P.S_safe - P.H_coop) + P.H_coop ≤ P.hi := by
-      rw [Naturals.sub_add_cancel hH_le]
-      exact P.safe_le_hi
-    have hg_ge : P.H_coop ≤ P.g (P.S_safe - P.H_coop) := P.meets_coop _ hy_le hceil
-    calc P.S_safe = (P.S_safe - P.H_coop) + P.H_coop := (Naturals.sub_add_cancel hH_le).symm
-      _ ≤ (P.S_safe - P.H_coop) + P.g (P.S_safe - P.H_coop) := Nat.add_le_add_left hg_ge _
   have hmax_le : AdaptiveLoops.natMax P.T_gate 0 ≤ P.T_gate :=
     AdaptiveLoops.natMax_le (Nat.le_refl P.T_gate) (Nat.zero_le P.T_gate)
   have hcap_eq : (P.H_pre - P.H_coop + P.H_coop) + 0 = P.H_pre :=
@@ -1935,7 +1875,7 @@ theorem reciprocal_defector_replace_viable
       show (true && Nat.ble load 0) = true
       rw [Nat.ble_eq_true_of_le hle0]
       rfl)
-    hG_rises hpost_viable
+    hG_rises P.post_viable_unit
     (fun _ => Nat.le_of_eq ((Nat.add_zero _).trans (Nat.zero_add P.H_coop)))
     (fun _ => by
       change P.S_safe + (AdaptiveLoops.natMax P.T_gate 0 + 1) * ((P.H_pre - P.H_coop + P.H_coop) + 0) ≤

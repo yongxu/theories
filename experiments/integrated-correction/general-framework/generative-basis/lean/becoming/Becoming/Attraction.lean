@@ -179,9 +179,10 @@ theorem absorbing_ahead (next : S → S) (s : S) : Absorbing next (Ahead next s)
 /-- **Once in, always in.** Where `R` is absorbing and the course of `s` is in `R` at step `n`,
 it is in `R` at every later step. -/
 theorem Absorbing.orbit {next : S → S} {R : S → Prop} (absorbing : Absorbing next R) {s : S}
-    {n : Nat} (enters : R (Law.orbit next s n)) : ∀ k, R (Law.orbit next s (n + k))
-  | 0 => enters
-  | k + 1 => absorbing _ (Absorbing.orbit absorbing enters k)
+    {n : Nat} (enters : R (Law.orbit next s n)) : ∀ k, R (Law.orbit next s (n + k)) :=
+  fun k => Eq.subst (motive := R) (Law.orbit_add next s n k).symm
+    (kept_onward (I := fun m => R (Law.orbit next (Law.orbit next s n) m))
+      (fun _ h => absorbing _ h) (a := 0) (b := k) enters (Nat.zero_le k))
 
 /-- **A configuration returns exactly where it lies ahead of itself.** -/
 theorem returns_iff_ahead {next : S → S} {s : S} : Returns next s ↔ Ahead next s s :=
@@ -266,8 +267,10 @@ theorem drawn_of_lost {next : S → S} {n : Nat} {s : S} (lost : ¬ Reachable ne
 
 /-- **What returns is absorbing.** -/
 theorem returning_absorbing (next : S → S) : Absorbing next (Returns next) :=
-  fun s returns => let ⟨p, pos, back⟩ := returns_iff.mp returns
-    returns_iff.mpr ⟨p, pos, (orbit_shift next s p).symm.trans (congrArg next back)⟩
+  fun _ returns => Law.returns_iff_reaches.mpr
+    («及之传递»
+      («定后环则所及皆返» (Law.next_fixed next) (Law.returns_iff_reaches.mp returns) (.one rfl))
+      (.one rfl))
 
 /-! ## A merge draws one of the two -/
 
@@ -392,10 +395,9 @@ steps as there are configurations.** With `m` configurations listed, the course 
 configuration at some step below `m`. -/
 theorem enters_returning_within {next : S → S} {all : List S} (every : ∀ x, x ∈ all) (s : S) :
     ∃ n, n < all.length ∧ Returns next (orbit next s n) :=
-  let ⟨i, _, lt, le, same⟩ := revisits_within all (orbit next s) (fun _ _ => every _)
-  let ⟨d, gap⟩ := gap_of_lt lt
-  ⟨i, Nat.lt_of_lt_of_le lt le, returns_iff.mpr ⟨d + 1, Nat.succ_pos d,
-    (orbit_add next s i (d + 1)).symm.trans ((congrArg (orbit next s) gap.symm).trans same.symm)⟩⟩
+  match «线有限则入返» (R := fun x y => next x = y) (l := all) (g := orbit next s)
+      (fun _ _ => rfl) (fun _ _ => every _) with
+  | ⟨n, lt, _, loop⟩ => ⟨n, lt, Law.returns_iff_reaches.mpr loop⟩
 
 /-- **Within finitely many configurations, every course enters what returns.** -/
 theorem enters_returning {next : S → S} {all : List S} (every : ∀ x, x ∈ all) (s : S) :

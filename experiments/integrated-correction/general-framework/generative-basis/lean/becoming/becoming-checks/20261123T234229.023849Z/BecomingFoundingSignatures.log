@@ -1,0 +1,206 @@
+@Becoming.Founding.of_mem_single : ∀ {α : Type} {p f : α}, p ∈ [f] → p = f
+@Becoming.Founding.nil_of_none : ∀ {α : Type} {l : List α}, (∀ (x : α), x ∈ l → False) → l = []
+@Becoming.Founding.Flow.survivors_independent : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {G : Becoming.SelectionTerm.Generations X},
+          Becoming.SelectionTerm.Flow.Descended L W G →
+            ∀ {ds : List X} {m : Nat},
+              (∀ (t : Nat) (f : X),
+                  f ∈ L.present t →
+                    ∀ (d : X), d ∈ ds → 0 < L.give t f d → ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e) →
+                ∀ {T n : Nat},
+                  (∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) →
+                    W.stock ds T < n + m →
+                      ∀ (k : Nat) {x : X},
+                        x ∈ G.family (T + n + k + 1) →
+                          ∃ p,
+                            p ∈ G.family (T + n + k) ∧
+                              x ∈ G.kids (T + n + k) p ∧
+                                ∀ (e : X), e ∈ ds → W.requires (T + n + k) p e → ¬m ≤ W.need (T + n + k) p e
+@Becoming.Founding.Flow.confined_ends : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {G : Becoming.SelectionTerm.Generations X},
+          Becoming.SelectionTerm.Flow.Descended L W G →
+            ∀ {ds : List X} {m : Nat},
+              (∀ (t : Nat) (f : X),
+                  f ∈ L.present t →
+                    ∀ (d : X), d ∈ ds → 0 < L.give t f d → ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e) →
+                ∀ {T n : Nat},
+                  (∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) →
+                    W.stock ds T < n + m →
+                      ∀ {h : List X},
+                        (∀ (p : X), p ∈ h → p ∈ G.family 0) →
+                          (∀ (k : Nat) (p : X),
+                              p ∈ Becoming.SelectionLevels.lineage G h (T + n + k) →
+                                ∃ e, e ∈ ds ∧ W.requires (T + n + k) p e ∧ m ≤ W.need (T + n + k) p e) →
+                            ∀ (k : Nat), Becoming.SelectionLevels.lineage G h (T + n + k + 1) = []
+@Becoming.Founding.Flow.ConfinedRise.ends : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {G : Becoming.SelectionTerm.Generations X},
+          Becoming.SelectionTerm.Flow.Descended L W G →
+            ∀ {h ds : List X} {m T n : Nat},
+              Becoming.Founding.Flow.ConfinedRise L W G h ds m T n →
+                ∀ (k : Nat), Becoming.SelectionLevels.lineage G h (T + n + k + 1) = []
+@Becoming.Founding.uniform_until : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) {v : Nat},
+  (∀ (p : α), p ∈ G.family 0 → G.amount 0 p = v) →
+    ∀ {t : Nat},
+      (∀ (s : Nat), s < t → Becoming.SelectionTerm.Exact (G.family s) (G.kids s) (G.amount s) (G.amount (s + 1))) →
+        ∀ (p : α), p ∈ G.family t → G.amount t p = v
+@Becoming.Founding.none_within_until : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) {v : Nat},
+  (∀ (p : α), p ∈ G.family 0 → G.amount 0 p = v) →
+    ∀ {t : Nat},
+      (∀ (s : Nat), s < t → Becoming.SelectionTerm.Exact (G.family s) (G.kids s) (G.amount s) (G.amount (s + 1))) →
+        ∀ (w : α → Nat),
+          Becoming.SelectionTerm.concord (G.family t) w (G.amount t) = 0 ∧
+            Becoming.SelectionTerm.discord (G.family t) w (G.amount t) = 0
+@Becoming.Founding.exact_of_none : ∀ {α : Type} {ps : List α} {kids : α → List α} {a b : α → Nat},
+  Becoming.raised ps kids a b = 0 → Becoming.lowered ps kids a b = 0 → Becoming.SelectionTerm.Exact ps kids a b
+@Becoming.Founding.changed_or_none : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) (t : Nat),
+  (∀ (s : Nat), s < t → G.raisedAt s = 0 ∧ G.loweredAt s = 0) ∨ ∃ s, s < t ∧ (0 < G.raisedAt s ∨ 0 < G.loweredAt s)
+@Becoming.Founding.varied_before : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) {v : Nat},
+  (∀ (p : α), p ∈ G.family 0 → G.amount 0 p = v) →
+    ∀ {t : Nat}, G.concordAt t ≠ 0 ∨ G.discordAt t ≠ 0 → ∃ s, s < t ∧ (0 < G.raisedAt s ∨ 0 < G.loweredAt s)
+@Becoming.Founding.Nested.raised_carried : ∀ {α : Type} {C : Becoming.Founding.Nested α},
+  C.Founded →
+    ∀ (t : Nat),
+      C.wholes.raisedAt t =
+        Becoming.total (C.wholes.family t) fun f =>
+          Becoming.total (C.wholes.kids t f) fun k =>
+            Becoming.excess ((C.soma t f).amount (C.span t f) k) ((C.soma t f).amount 0 f)
+@Becoming.Founding.Nested.lowered_carried : ∀ {α : Type} {C : Becoming.Founding.Nested α},
+  C.Founded →
+    ∀ (t : Nat),
+      C.wholes.loweredAt t =
+        Becoming.total (C.wholes.family t) fun f =>
+          Becoming.total (C.wholes.kids t f) fun k =>
+            Becoming.excess ((C.soma t f).amount 0 f) ((C.soma t f).amount (C.span t f) k)
+@Becoming.Founding.Nested.raises_iff_carried : ∀ {α : Type} {C : Becoming.Founding.Nested α},
+  C.Founded →
+    ∀ (t : Nat),
+      C.wholes.Raises t ↔
+        (C.wholes.size t *
+              Becoming.total (C.wholes.family t) fun f =>
+                Becoming.total (C.wholes.kids t f) fun k =>
+                  Becoming.excess ((C.soma t f).amount 0 f) ((C.soma t f).amount (C.span t f) k)) +
+            C.wholes.discordAt t <
+          C.wholes.concordAt t +
+            C.wholes.size t *
+              Becoming.total (C.wholes.family t) fun f =>
+                Becoming.total (C.wholes.kids t f) fun k =>
+                  Becoming.excess ((C.soma t f).amount (C.span t f) k) ((C.soma t f).amount 0 f)
+@Becoming.Founding.Nested.exact_of_sequestered : ∀ {α : Type} {C : Becoming.Founding.Nested α},
+  C.Founded →
+    C.Sequestered →
+      ∀ (t : Nat),
+        Becoming.SelectionTerm.Exact (C.wholes.family t) (C.wholes.kids t) (C.wholes.amount t) (C.wholes.amount (t + 1))
+@Becoming.Founding.Nested.raises_iff_among : ∀ {α : Type} {C : Becoming.Founding.Nested α},
+  C.Founded → C.Sequestered → ∀ (t : Nat), C.wholes.Raises t ↔ C.wholes.discordAt t < C.wholes.concordAt t
+@Becoming.Founding.Nested.varied_within : ∀ {α : Type} {C : Becoming.Founding.Nested α},
+  C.Founded →
+    ∀ {t : Nat} {f : α},
+      f ∈ C.wholes.family t →
+        ∀ {s : Nat},
+          (C.soma t f).concordAt s ≠ 0 ∨ (C.soma t f).discordAt s ≠ 0 →
+            ∃ r, r < s ∧ (0 < (C.soma t f).raisedAt r ∨ 0 < (C.soma t f).loweredAt r)
+Becoming.Founding.Body.balances : Becoming.Founding.Body.flow.Balances Becoming.Founding.Body.web
+Becoming.Founding.Body.acting : Becoming.Founding.Body.flow.Acting Becoming.Founding.Body.web
+Becoming.Founding.Body.dependent : Becoming.Founding.Body.web.Dependent
+Becoming.Founding.Body.family_late : ∀ (mark : Becoming.Founding.Body.Relatum → Nat) (n : Nat),
+  (Becoming.Founding.Body.generationsBy mark).family (n + 3) = []
+Becoming.Founding.Body.descended : ∀ (mark : Becoming.Founding.Body.Relatum → Nat),
+  Becoming.SelectionTerm.Flow.Descended Becoming.Founding.Body.flow Becoming.Founding.Body.web
+    (Becoming.Founding.Body.generationsBy mark)
+Becoming.Founding.Body.give_body : ∀ (t : Nat) (f : Becoming.Founding.Body.Relatum),
+  Becoming.Founding.Body.flow.give t f Becoming.Founding.Body.Relatum.body = 0
+Becoming.Founding.Body.confined_late : ∀ (mark : Becoming.Founding.Body.Relatum → Nat) (n : Nat),
+  Becoming.SelectionLevels.lineage (Becoming.Founding.Body.generationsBy mark) [Becoming.Founding.Body.Relatum.confined]
+      (n + 2) =
+    []
+Becoming.Founding.Body.gated : ∀ (t : Nat) (f : Becoming.Founding.Body.Relatum),
+  f ∈ Becoming.Founding.Body.flow.present t →
+    ∀ (d : Becoming.Founding.Body.Relatum),
+      d ∈ [Becoming.Founding.Body.Relatum.body] →
+        0 < Becoming.Founding.Body.flow.give t f d →
+          ∃ e,
+            e ∈ [Becoming.Founding.Body.Relatum.body] ∧
+              Becoming.Founding.Body.web.requires t f e ∧ 2 ≤ Becoming.Founding.Body.web.need t f e
+Becoming.Founding.Body.excess : ∀ (k : Nat),
+  k < 1 →
+    Becoming.Founding.Body.flow.replenishment [Becoming.Founding.Body.Relatum.body] (0 + k) <
+      Becoming.Founding.Body.flow.uptake [Becoming.Founding.Body.Relatum.body] (0 + k)
+Becoming.Founding.Body.start : Becoming.Founding.Body.web.stock [Becoming.Founding.Body.Relatum.body] 0 < 1 + 2
+Becoming.Founding.Body.confined_marks : ∀ (p : Becoming.Founding.Body.Relatum),
+  p ∈ (Becoming.Founding.Body.generationsBy Becoming.Founding.Body.ofConfined).family 0 →
+    (0 < (Becoming.Founding.Body.generationsBy Becoming.Founding.Body.ofConfined).amount 0 p ↔
+      p ∈
+        Becoming.SelectionLevels.lineage (Becoming.Founding.Body.generationsBy Becoming.Founding.Body.ofConfined)
+          [Becoming.Founding.Body.Relatum.confined] 0)
+Becoming.Founding.Body.spread_marks : ∀ (p : Becoming.Founding.Body.Relatum),
+  p ∈ (Becoming.Founding.Body.generationsBy Becoming.Founding.Body.ofSpread).family 0 →
+    (0 < (Becoming.Founding.Body.generationsBy Becoming.Founding.Body.ofSpread).amount 0 p ↔
+      p ∈
+        Becoming.SelectionLevels.lineage (Becoming.Founding.Body.generationsBy Becoming.Founding.Body.ofSpread)
+          [Becoming.Founding.Body.Relatum.spread] 0)
+Becoming.Founding.Body.confined_rise : Becoming.Founding.Flow.ConfinedRise Becoming.Founding.Body.flow
+  Becoming.Founding.Body.web (Becoming.Founding.Body.generationsBy Becoming.Founding.Body.ofConfined)
+  [Becoming.Founding.Body.Relatum.confined] [Becoming.Founding.Body.Relatum.body] 2 0 1
+Becoming.Founding.Body.confined_ended : ∀ (k : Nat),
+  Becoming.SelectionLevels.lineage (Becoming.Founding.Body.generationsBy Becoming.Founding.Body.ofConfined)
+      [Becoming.Founding.Body.Relatum.confined] (0 + 1 + k + 1) =
+    []
+Becoming.Founding.Body.spread_rise : Becoming.Founding.Flow.Rise Becoming.Founding.Body.flow Becoming.Founding.Body.web
+  (Becoming.Founding.Body.generationsBy Becoming.Founding.Body.ofSpread) [Becoming.Founding.Body.Relatum.spread]
+  [Becoming.Founding.Body.Relatum.body] 2 0 1
+Becoming.Founding.Body.spread_unconfined : ¬∀ (k : Nat) (p : Becoming.Founding.Body.Relatum),
+    p ∈
+        Becoming.SelectionLevels.lineage (Becoming.Founding.Body.generationsBy Becoming.Founding.Body.ofSpread)
+          [Becoming.Founding.Body.Relatum.spread] (0 + 1 + k) →
+      ∃ e,
+        e ∈ [Becoming.Founding.Body.Relatum.body] ∧
+          Becoming.Founding.Body.web.requires (0 + 1 + k) p e ∧ 2 ≤ Becoming.Founding.Body.web.need (0 + 1 + k) p e
+Becoming.Founding.Body.body_ended : ∀ (k : Nat) (g : Becoming.Founding.Body.Relatum),
+  Becoming.Founding.Body.web.requires (0 + 1 + k) g Becoming.Founding.Body.Relatum.body →
+    2 ≤ Becoming.Founding.Body.web.need (0 + 1 + k) g Becoming.Founding.Body.Relatum.body →
+      ¬Becoming.Founding.Body.web.active (0 + 1 + k) g
+Becoming.Founding.Body.spread_outlasts : Becoming.SelectionLevels.lineage
+    (Becoming.Founding.Body.generationsBy Becoming.Founding.Body.ofSpread) [Becoming.Founding.Body.Relatum.spread] 2 =
+  [Becoming.Founding.Body.Relatum.spread₂]
+Becoming.Founding.Germline.family_two : (Becoming.Founding.Germline.soma 0
+        Becoming.Founding.Germline.Part.founder).family
+    2 =
+  [Becoming.Founding.Germline.Part.germ₂, Becoming.Founding.Germline.Part.variant₂,
+    Becoming.Founding.Germline.Part.variant₃]
+Becoming.Founding.Germline.founded : ∀ (next : List Becoming.Founding.Germline.Part),
+  (∀ (k : Becoming.Founding.Germline.Part),
+      k ∈ next →
+        k ∈
+          [Becoming.Founding.Germline.Part.germ₂, Becoming.Founding.Germline.Part.variant₂,
+            Becoming.Founding.Germline.Part.variant₃]) →
+    (Becoming.Founding.Germline.nested next).Founded
+Becoming.Founding.Germline.sequestered_founded : Becoming.Founding.Germline.sequestered.Founded
+Becoming.Founding.Germline.unsequestered_founded : Becoming.Founding.Germline.unsequestered.Founded
+Becoming.Founding.Germline.sequestered_sequestered : Becoming.Founding.Germline.sequestered.Sequestered
+Becoming.Founding.Germline.within_against : 0 <
+    (Becoming.Founding.Germline.soma 0 Becoming.Founding.Germline.Part.founder).loweredAt 0 ∧
+  (Becoming.Founding.Germline.soma 0 Becoming.Founding.Germline.Part.founder).concordAt 1 <
+    (Becoming.Founding.Germline.soma 0 Becoming.Founding.Germline.Part.founder).discordAt 1
+Becoming.Founding.Germline.sequestered_rises : Becoming.Founding.Germline.sequestered.wholes.discordAt 0 <
+    Becoming.Founding.Germline.sequestered.wholes.concordAt 0 ∧
+  Becoming.Founding.Germline.sequestered.wholes.Raises 0 ∧
+    Becoming.Founding.Germline.sequestered.wholes.size 0 = 2 ∧
+      Becoming.Founding.Germline.sequestered.wholes.sum 0 = 1 ∧
+        Becoming.Founding.Germline.sequestered.wholes.size 1 = 1 ∧
+          Becoming.Founding.Germline.sequestered.wholes.sum 1 = 1
+Becoming.Founding.Germline.unsequestered_falls : Becoming.Founding.Germline.unsequestered.wholes.discordAt 0 <
+    Becoming.Founding.Germline.unsequestered.wholes.concordAt 0 ∧
+  ¬Becoming.Founding.Germline.unsequestered.wholes.Raises 0 ∧
+    Becoming.Founding.Germline.unsequestered.wholes.sum 0 = 1 ∧
+      Becoming.Founding.Germline.unsequestered.wholes.size 1 = 2 ∧
+        Becoming.Founding.Germline.unsequestered.wholes.sum 1 = 0 ∧
+          ¬Becoming.Founding.Germline.unsequestered.Sequestered

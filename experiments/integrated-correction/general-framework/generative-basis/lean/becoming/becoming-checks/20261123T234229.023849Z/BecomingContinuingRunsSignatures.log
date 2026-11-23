@@ -1,0 +1,56 @@
+@Becoming.ContinuingRuns.none_ne_some : ∀ {α : Type} {a : α}, none = some a → False
+Becoming.ContinuingRuns.run_at : ∀ (n k : Nat),
+  Becoming.ContinuingRevision.continuing.state (7 * n + k) =
+    Becoming.ContinuingRevision.expose
+      (Becoming.Law.orbit Becoming.ContinuingRevision.clockNext (n, Becoming.ContinuingRevision.Phase.ready) k)
+Becoming.ContinuingRuns.run_cycle_amounts : ∀ (n : Nat),
+  (Becoming.ContinuingRevision.continuing.state (7 * n)).work.fuel = 9 ∧
+    (Becoming.ContinuingRevision.continuing.state (7 * n)).work.used = 9 * n + 6 ∧
+      (Becoming.ContinuingRevision.continuing.state (7 * n)).received = 9 * n ∧
+        (Becoming.ContinuingRevision.continuing.state (7 * n)).carrier = n
+Becoming.ContinuingRuns.run_method_changed : ∀ (n : Nat),
+  (Becoming.ContinuingRevision.continuing.state (7 * n + 2)).work.method = [n + 1, n] ∧
+    (Becoming.ContinuingRevision.continuing.state (7 * n)).work.method = [n]
+Becoming.ContinuingRuns.run_new_available_choice : ∀ (n : Nat),
+  (Becoming.Learning.Training.Through
+      (Becoming.ReferencePlan.alikeOnInstalled (Becoming.ContinuingRevision.continuing.state (7 * n + 5)).work) fun x =>
+      x (n + 1) = true) ∧
+    ¬Becoming.Learning.Training.Through
+        (Becoming.ReferencePlan.alikeOnInstalled (Becoming.ContinuingRevision.continuing.state (7 * n)).work) fun x =>
+        x (n + 1) = true
+Becoming.ContinuingRuns.run_retired_choice : ∀ (n : Nat),
+  (Becoming.Learning.Training.Through
+      (Becoming.ReferencePlan.alikeOnInstalled (Becoming.ContinuingRevision.continuing.state (7 * n + 5)).work) fun x =>
+      x n = true) ∧
+    ¬Becoming.Learning.Training.Through
+        (Becoming.ReferencePlan.alikeOnInstalled (Becoming.ContinuingRevision.continuing.state (7 * (n + 1))).work)
+        fun x => x n = true
+Becoming.ContinuingRuns.run_no_renewal_at_cycle : ∀ (n : Nat),
+  ¬∃ t,
+      (Becoming.ContinuingRevision.P 9).step (Becoming.ContinuingRevision.continuing.state (7 * n))
+        Becoming.ContinuingRevision.Act.renew t
+Becoming.ContinuingRuns.run_cut_renewal : ∀ (n : Nat),
+  ∃ t,
+    (Becoming.ContinuingRevision.P 0).step (Becoming.ContinuingRevision.continuing.state (7 * n + 6))
+        Becoming.ContinuingRevision.Act.renew t ∧
+      t.work.fuel = 0 ∧ t.enabled = false
+Becoming.ContinuingRuns.run_cut_stops : ∀ (n : Nat) (t : Becoming.ContinuingRevision.State),
+  (Becoming.ContinuingRevision.P 0).step (Becoming.ContinuingRevision.continuing.state (7 * n + 6))
+      Becoming.ContinuingRevision.Act.renew t →
+    ¬∃ u,
+        (Becoming.ContinuingRevision.P 0).step t
+          (Becoming.ContinuingRevision.Act.native (Becoming.ReferencePlan.Act.perform (t.carrier + 1) true)) u
+@Becoming.ContinuingRuns.run_of_trace : ∀ {yield : Nat} {s t : Becoming.ContinuingRevision.State}
+  {as : List Becoming.ContinuingRevision.Act},
+  Generative.Trace (Becoming.ContinuingRevision.P yield) s as t → Becoming.ContinuingRevision.run yield s as = some t
+Becoming.ContinuingRuns.run_reserve_consumed : ¬∃ t,
+    Generative.Trace (Becoming.ContinuingRevision.P 9) (Becoming.ContinuingRevision.continuing.state 0)
+      (Becoming.ContinuingRevision.Act.native Becoming.ReferencePlan.Act.erase :: Becoming.ContinuingRevision.word 0) t
+Becoming.ContinuingRuns.run_frozen_no_return : ¬∃ t,
+    Generative.Trace (Becoming.ContinuingRevision.P 9) (Becoming.ContinuingRevision.continuing.state 1)
+      [Becoming.ContinuingRevision.Act.native Becoming.ReferencePlan.Act.frozen,
+        Becoming.ContinuingRevision.Act.native Becoming.ReferencePlan.Act.probe,
+        Becoming.ContinuingRevision.Act.native Becoming.ReferencePlan.Act.install,
+        Becoming.ContinuingRevision.Act.native (Becoming.ReferencePlan.Act.perform 1 true),
+        Becoming.ContinuingRevision.Act.renew]
+      t

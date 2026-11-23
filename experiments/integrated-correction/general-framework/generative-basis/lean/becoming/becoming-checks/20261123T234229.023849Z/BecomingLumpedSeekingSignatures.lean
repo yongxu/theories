@@ -1,0 +1,15 @@
+import Becoming.LumpedSeeking
+#check @Becoming.LumpedSeeking.tied_mass
+#check @Becoming.LumpedSeeking.single_le_evidence
+#check @Becoming.LumpedSeeking.posterior_le_iff_prior
+#check @Becoming.LumpedSeeking.posterior_ratio_kept
+#check @Becoming.LumpedSeeking.order_kept
+#check @Becoming.LumpedSeeking.seek_tied
+#check @Becoming.LumpedSeeking.seeking_keeps_order
+#check @Becoming.LumpedSeeking.Agree.distinct
+#check @Becoming.LumpedSeeking.Agree.ties
+#check @Becoming.LumpedSeeking.Agree.totals
+#check @Becoming.LumpedSeeking.Agree.turns_fair
+#check @Becoming.LumpedSeeking.Agree.keeps_tails
+#check @Becoming.LumpedSeeking.Agree.seeking_keeps_tails
+#check @Becoming.LumpedSeeking.Agree.seeking_turns_tails

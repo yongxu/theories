@@ -3193,6 +3193,11 @@
    "base": "general",
    "note": "token-by-token copying from shared pool"
   },
+  "Becoming.CoreHelpers": {
+   "region": "method",
+   "base": "general",
+   "note": "shared zero-axiom Nat/Bool/List arithmetic and ceiling-division helpers over Prelude"
+  },
   "Becoming.Correspondence": {
    "region": "significance",
    "base": "old-base",
@@ -4117,6 +4122,11 @@
    "region": "life",
    "base": "old-base",
    "note": "census of active formations; generation unceasing"
+  },
+  "Becoming.PositionTerms": {
+   "region": "life",
+   "base": "old-base",
+   "note": "what the selection term proper reads of offspring numbers is their relative positions (PositionTerms.keeps_iff_terms, kept_step); placed below SelectionShift"
   },
   "Becoming.Postponement": {
    "region": "knowing",

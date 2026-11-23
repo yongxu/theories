@@ -12,6 +12,7 @@ import Becoming.PremiseWitnesses
 import Becoming.Significance
 import Becoming.Selection
 import Becoming.BeyondCoupling
+import Becoming.CoreHelpers
 
 /-!
 # Alignment Spine (`L5`): Composed `L0–L3` Persistence, Failure Dichotomy, and Sharpness Suite
@@ -69,105 +70,27 @@ namespace ComposedSpine
 
 /-! ### 1.1 Algebraic Transport & Right-Replacement Infrastructure -/
 
-/-- Constructive zero-axiom helper for `false || b = b`. -/
-theorem bool_or_false_left (b : Bool) : (false || b) = b := rfl
-
-/-- Constructive commutativity of `AdaptiveLoops.natMax` (`0` axioms). -/
-theorem natMax_comm (a b : Nat) : AdaptiveLoops.natMax a b = AdaptiveLoops.natMax b a :=
-  Nat.le_antisymm
-    (AdaptiveLoops.natMax_le (AdaptiveLoops.le_natMax_right b a) (AdaptiveLoops.le_natMax_left b a))
-    (AdaptiveLoops.natMax_le (AdaptiveLoops.le_natMax_right a b) (AdaptiveLoops.le_natMax_left a b))
-
-/-- Constructive associativity of `AdaptiveLoops.natMax` (`0` axioms). -/
-theorem natMax_assoc (a b c : Nat) :
-    AdaptiveLoops.natMax (AdaptiveLoops.natMax a b) c =
-      AdaptiveLoops.natMax a (AdaptiveLoops.natMax b c) :=
-  Nat.le_antisymm
-    (AdaptiveLoops.natMax_le
-      (AdaptiveLoops.natMax_le
-        (AdaptiveLoops.le_natMax_left _ _)
-        (Nat.le_trans (AdaptiveLoops.le_natMax_left b c) (AdaptiveLoops.le_natMax_right _ _)))
-      (Nat.le_trans (AdaptiveLoops.le_natMax_right b c) (AdaptiveLoops.le_natMax_right _ _)))
-    (AdaptiveLoops.natMax_le
-      (Nat.le_trans (AdaptiveLoops.le_natMax_left a b) (AdaptiveLoops.le_natMax_left _ _))
-      (AdaptiveLoops.natMax_le
-        (Nat.le_trans (AdaptiveLoops.le_natMax_right a b) (AdaptiveLoops.le_natMax_left _ _))
-        (AdaptiveLoops.le_natMax_right _ _)))
-
 /-- Constructive commutativity equivalence `A ⊕ B ≃ B ⊕ A` (`0` axioms). -/
-def composeCommEquiv
+abbrev composeCommEquiv
     {S₁ S₂ Obs₁ Obs₂ Dist₁ Dist₂ Int₁ Int₂ Ext : Type}
     (A : OpenComposition.OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext)
     (B : OpenComposition.OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext) :
     OpenComposition.ComponentEquiv
       (OpenComposition.OpenComponent.compose A B)
-      (OpenComposition.OpenComponent.compose B A) where
-  toS p := (p.2, p.1)
-  invS p := (p.2, p.1)
-  leftS _ := rfl
-  rightS _ := rfl
-  toObs o := (o.2, o.1)
-  invObs o := (o.2, o.1)
-  leftObs _ := rfl
-  rightObs _ := rfl
-  toDist d := (d.2, d.1)
-  invDist d := (d.2, d.1)
-  leftDist _ := rfl
-  rightDist _ := rfl
-  toInt
-    | .inl j₁ => .inr j₁
-    | .inr j₂ => .inl j₂
-  invInt
-    | .inl j₂ => .inr j₂
-    | .inr j₁ => .inl j₁
-  leftInt
-    | .inl _ => rfl
-    | .inr _ => rfl
-  rightInt
-    | .inl _ => rfl
-    | .inr _ => rfl
-  comm_next _ _ _ _ := rfl
-  comm_drawInt _
-    | .inl _ => rfl
-    | .inr _ => rfl
-  comm_drawExt s k := Nat.add_comm (A.drawExt s.1 k) (B.drawExt s.2 k)
-  comm_emitAlarm s oa := by
-    show (A.emitAlarm s.1 oa.1 || B.emitAlarm s.2 oa.2) =
-      (B.emitAlarm s.2 oa.2 || A.emitAlarm s.1 oa.1)
-    cases A.emitAlarm s.1 oa.1 <;> cases B.emitAlarm s.2 oa.2 <;> rfl
-  comm_silenceLoad s := Nat.add_comm (A.silenceLoad s.1) (B.silenceLoad s.2)
-  comm_favours _ :=
-    ⟨fun h => match h with
-       | .inl a => .inr a
-       | .inr b => .inl b,
-     fun h => match h with
-       | .inl b => .inr b
-       | .inr a => .inl a⟩
+      (OpenComposition.OpenComponent.compose B A) :=
+  OpenComposition.composeCommEquiv A B
 
 /-- Constructive contract compatibility across a `ComponentEquiv`, using explicit forward/backward
 maps instead of `Prop` equality so zero `propext` enters. -/
-structure ContractEquiv
+abbrev ContractEquiv
     {S₁ S₂ Obs₁ Obs₂ Dist₁ Dist₂ Int₁ Int₂ Ext : Type}
     {A : OpenComposition.OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext}
     {B : OpenComposition.OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext}
     {init₁ : S₁} {init₂ : S₂}
     (E : OpenComposition.ComponentEquiv A B)
     (cA : OpenComposition.InterfaceContract A init₁)
-    (cB : OpenComposition.InterfaceContract B init₂) : Prop where
-  init_eq : E.toS init₁ = init₂
-  tol_to : ∀ o al d, cA.tol (o, al) d → cB.tol (E.toObs o, al) (E.toDist d)
-  tol_inv : ∀ o al d, cB.tol (o, al) d → cA.tol (E.invObs o, al) (E.invDist d)
-  warn_to : ∀ o, cA.warnObs o → cB.warnObs (E.toObs o)
-  warn_inv : ∀ o, cB.warnObs o → cA.warnObs (E.invObs o)
-  preCapInt_eq : ∀ j, cA.preCapInt j = cB.preCapInt (E.toInt j)
-  preCapExt_eq : ∀ k, cA.preCapExt k = cB.preCapExt k
-  postCapInt_eq : ∀ j, cA.postBudgetInt j = cB.postBudgetInt (E.toInt j)
-  postCapExt_eq : ∀ k, cA.postBudgetExt k = cB.postBudgetExt k
-  maxSilence_eq : cA.maxSilence = cB.maxSilence
-  maxLag_eq : cA.maxLag = cB.maxLag
-  K_to : ∀ s, cA.K s → cB.K (E.toS s)
-  K_inv : ∀ s, cB.K s → cA.K (E.invS s)
-  eta_eq : ∀ s, cA.eta s = cB.eta (E.toS s)
+    (cB : OpenComposition.InterfaceContract B init₂) : Prop :=
+  OpenComposition.ContractEquiv E cA cB
 
 /-- Associativity of `composeContract` along `OpenComposition.composeAssocEquiv`. -/
 theorem composeAssocContractEquiv
@@ -182,33 +105,8 @@ theorem composeAssocContractEquiv
     ContractEquiv
       (OpenComposition.composeAssocEquiv A B C)
       (OpenComposition.composeContract (OpenComposition.composeContract cA cB) cC)
-      (OpenComposition.composeContract cA (OpenComposition.composeContract cB cC)) where
-  init_eq := rfl
-  tol_to _ _ _ h := ⟨h.1.1, ⟨h.1.2, h.2⟩⟩
-  tol_inv _ _ _ h := ⟨⟨h.1, h.2.1⟩, h.2.2⟩
-  warn_to _
-    | .inl (.inl w₁) => .inl w₁
-    | .inl (.inr w₂) => .inr (.inl w₂)
-    | .inr w₃ => .inr (.inr w₃)
-  warn_inv _
-    | .inl w₁ => .inl (.inl w₁)
-    | .inr (.inl w₂) => .inl (.inr w₂)
-    | .inr (.inr w₃) => .inr w₃
-  preCapInt_eq
-    | .inl (.inl _) => rfl
-    | .inl (.inr _) => rfl
-    | .inr _ => rfl
-  preCapExt_eq k := Nat.add_assoc (cA.preCapExt k) (cB.preCapExt k) (cC.preCapExt k)
-  postCapInt_eq
-    | .inl (.inl _) => rfl
-    | .inl (.inr _) => rfl
-    | .inr _ => rfl
-  postCapExt_eq k := Nat.add_assoc (cA.postBudgetExt k) (cB.postBudgetExt k) (cC.postBudgetExt k)
-  maxSilence_eq := Nat.add_assoc cA.maxSilence cB.maxSilence cC.maxSilence
-  maxLag_eq := natMax_assoc cA.maxLag cB.maxLag cC.maxLag
-  K_to _ h := ⟨h.1.1, ⟨h.1.2, h.2⟩⟩
-  K_inv _ h := ⟨⟨h.1, h.2.1⟩, h.2.2⟩
-  eta_eq s := natMax_assoc (cA.eta s.1.1) (cB.eta s.1.2) (cC.eta s.2)
+      (OpenComposition.composeContract cA (OpenComposition.composeContract cB cC)) :=
+  OpenComposition.composeAssocContractEquiv cA cB cC
 
 /-- Commutativity of `composeContract` along `composeCommEquiv`. -/
 theorem composeCommContractEquiv
@@ -221,29 +119,8 @@ theorem composeCommContractEquiv
     ContractEquiv
       (composeCommEquiv A B)
       (OpenComposition.composeContract cA cB)
-      (OpenComposition.composeContract cB cA) where
-  init_eq := rfl
-  tol_to _ _ _ h := ⟨h.2, h.1⟩
-  tol_inv _ _ _ h := ⟨h.2, h.1⟩
-  warn_to _
-    | .inl w₁ => .inr w₁
-    | .inr w₂ => .inl w₂
-  warn_inv _
-    | .inl w₂ => .inr w₂
-    | .inr w₁ => .inl w₁
-  preCapInt_eq
-    | .inl _ => rfl
-    | .inr _ => rfl
-  preCapExt_eq k := Nat.add_comm (cA.preCapExt k) (cB.preCapExt k)
-  postCapInt_eq
-    | .inl _ => rfl
-    | .inr _ => rfl
-  postCapExt_eq k := Nat.add_comm (cA.postBudgetExt k) (cB.postBudgetExt k)
-  maxSilence_eq := Nat.add_comm cA.maxSilence cB.maxSilence
-  maxLag_eq := natMax_comm cA.maxLag cB.maxLag
-  K_to _ h := ⟨h.2, h.1⟩
-  K_inv _ h := ⟨h.2, h.1⟩
-  eta_eq s := natMax_comm (cA.eta s.1) (cB.eta s.2)
+      (OpenComposition.composeContract cB cA) :=
+  OpenComposition.composeCommContractEquiv cA cB
 
 /-- Right-component heterogeneous replacement (`A ⊕_K B ↝ A ⊕_K B'`): symmetric twin of
 `OpenComposition.replace_left_viable`, calling `OpenComposition.compose_close_interchange` directly. -/
@@ -284,40 +161,10 @@ theorem replace_right_viable
         (fun x => (obs₁ x, obs₂' x)) channel G envDraw jointAdm)
       (OpenComposition.closedGuard (OpenComposition.OpenComponent.compose A B')
         (OpenComposition.composeContract cA cB') x_crit)
-      (x₀, (init₁, init₂')) := by
-  refine OpenComposition.compose_close_interchange A B' cA cB' obs₁ obs₂' channel G envDraw
-    envCap jointAdm env_within x_crit warnLevel H_safe x₀ ?_ ?_ G_rises post_viable ?_ ?_ ?_
-  · intro x k lt
-    cases obs_detects_orig x k lt with
-    | inl w₁ => exact Or.inl w₁
-    | inr w₂ => exact Or.inr (refines.warn_preserved x w₂ ⟨k, lt⟩)
-  · intro load env adm le
-    exact channel_fires load env adm (Nat.le_trans le (Nat.add_le_add_left refines.maxSilence_le _))
-  · intro k
-    exact Nat.le_trans
-      (Nat.add_le_add_right (Nat.add_le_add_left (refines.postBudgetExt_le k) _) _)
-      (post_cap k)
-  · intro k
-    have lagLe : AdaptiveLoops.natMax cA.maxLag cB'.maxLag + 1 ≤
-        AdaptiveLoops.natMax cA.maxLag cB.maxLag + 1 :=
-      Nat.succ_le_succ
-        (AdaptiveLoops.natMax_le
-          (AdaptiveLoops.le_natMax_left _ _)
-          (Nat.le_trans refines.maxLag_le (AdaptiveLoops.le_natMax_right _ _)))
-    have capLe : (cA.preCapExt k + cB'.preCapExt k) + envCap k ≤
-        (cA.preCapExt k + cB.preCapExt k) + envCap k :=
-      Nat.add_le_add_right (Nat.add_le_add_left (refines.preCapExt_le k) _) _
-    exact Nat.le_trans (Nat.add_le_add_left (Nat.mul_le_mul lagLe capLe) _) (warn_margin k)
-  · intro k
-    have etaLe : AdaptiveLoops.natMax (cA.eta init₁) (cB'.eta init₂') ≤
-        AdaptiveLoops.natMax (cA.eta init₁) (cB.eta init₂) :=
-      AdaptiveLoops.natMax_le
-        (AdaptiveLoops.le_natMax_left _ _)
-        (Nat.le_trans refines.init_eta_le (AdaptiveLoops.le_natMax_right _ _))
-    have capLe : (cA.preCapExt k + cB'.preCapExt k) + envCap k ≤
-        (cA.preCapExt k + cB.preCapExt k) + envCap k :=
-      Nat.add_le_add_right (Nat.add_le_add_left (refines.preCapExt_le k) _) _
-    exact Nat.le_trans (Nat.add_le_add_left (Nat.mul_le_mul etaLe capLe) _) (init_margin k)
+      (x₀, (init₁, init₂')) :=
+  OpenComposition.replace_right_viable A B B' cA cB cB' obs₁ obs₂ obs₂' channel G envDraw
+    envCap jointAdm env_within x_crit warnLevel H_safe x₀ refines obs_detects_orig
+    channel_fires G_rises post_viable post_cap warn_margin init_margin
 
 /-- Lift `ContractRefines` across the left slot of `composeContract`. -/
 theorem contractRefines_compose_left
@@ -335,19 +182,8 @@ theorem contractRefines_compose_left
     OpenComposition.ContractRefines
       (OpenComposition.composeContract cA cB)
       (OpenComposition.composeContract cA' cB)
-      (fun x => (obs₁ x, obs₂ x)) (fun x => (obs₁' x, obs₂ x)) warnLevel where
-  preCapExt_le k := Nat.add_le_add_right (ref.preCapExt_le k) (cB.preCapExt k)
-  postBudgetExt_le k := Nat.add_le_add_right (ref.postBudgetExt_le k) (cB.postBudgetExt k)
-  maxSilence_le := Nat.add_le_add_right ref.maxSilence_le cB.maxSilence
-  maxLag_le := AdaptiveLoops.natMax_le
-    (Nat.le_trans ref.maxLag_le (AdaptiveLoops.le_natMax_left _ _))
-    (AdaptiveLoops.le_natMax_right _ _)
-  init_eta_le := AdaptiveLoops.natMax_le
-    (Nat.le_trans ref.init_eta_le (AdaptiveLoops.le_natMax_left _ _))
-    (AdaptiveLoops.le_natMax_right _ _)
-  warn_preserved x hw hlt := match hw with
-    | .inl w₁ => Or.inl (ref.warn_preserved x w₁ hlt)
-    | .inr w₂ => Or.inr w₂
+      (fun x => (obs₁ x, obs₂ x)) (fun x => (obs₁' x, obs₂ x)) warnLevel :=
+  OpenComposition.contractRefines_compose_left cB obs₂ ref
 
 /-- Lift `ContractRefines` across the right slot of `composeContract`. -/
 theorem contractRefines_compose_right
@@ -365,19 +201,8 @@ theorem contractRefines_compose_right
     OpenComposition.ContractRefines
       (OpenComposition.composeContract cA cB)
       (OpenComposition.composeContract cA cB')
-      (fun x => (obs₁ x, obs₂ x)) (fun x => (obs₁ x, obs₂' x)) warnLevel where
-  preCapExt_le k := Nat.add_le_add_left (ref.preCapExt_le k) (cA.preCapExt k)
-  postBudgetExt_le k := Nat.add_le_add_left (ref.postBudgetExt_le k) (cA.postBudgetExt k)
-  maxSilence_le := Nat.add_le_add_left ref.maxSilence_le cA.maxSilence
-  maxLag_le := AdaptiveLoops.natMax_le
-    (AdaptiveLoops.le_natMax_left _ _)
-    (Nat.le_trans ref.maxLag_le (AdaptiveLoops.le_natMax_right _ _))
-  init_eta_le := AdaptiveLoops.natMax_le
-    (AdaptiveLoops.le_natMax_left _ _)
-    (Nat.le_trans ref.init_eta_le (AdaptiveLoops.le_natMax_right _ _))
-  warn_preserved x hw hlt := match hw with
-    | .inl w₁ => Or.inl w₁
-    | .inr w₂ => Or.inr (ref.warn_preserved x w₂ hlt)
+      (fun x => (obs₁ x, obs₂ x)) (fun x => (obs₁ x, obs₂' x)) warnLevel :=
+  OpenComposition.contractRefines_compose_right cA obs₁ ref
 
 /-! ### 1.2 Three-Pillar Composed Spine (`turningSub`, `fleetSub`, `scopeSub`, `spineComponent`) -/
 
@@ -1235,65 +1060,16 @@ def withHiddenSite {S Obs Dist Int : Type}
     (C : OpenComposition.OpenComponent S Obs Dist Int Unit)
     {init : S} (c : OpenComposition.InterfaceContract C init)
     (preHide postHide : Nat) :
-    OpenComposition.OpenComponent S Obs Dist Int (Sum Unit Unit) where
-  next := C.next
-  drawInt := C.drawInt
-  drawExt s
-    | .inl () => C.drawExt s ()
-    | .inr () => match c.eta s with
-      | 0 => postHide
-      | _ + 1 => preHide
-  emitAlarm := C.emitAlarm
-  silenceLoad := C.silenceLoad
-  favours := C.favours
+    OpenComposition.OpenComponent S Obs Dist Int (Sum Unit Unit) :=
+  OpenComposition.withHiddenSite C c preHide postHide
 
 /-- Assume-guarantee `InterfaceContract` for `withHiddenSite` (`0` axioms). -/
 def withHiddenSiteContract {S Obs Dist Int : Type}
     {C : OpenComposition.OpenComponent S Obs Dist Int Unit}
     {init : S} (c : OpenComposition.InterfaceContract C init)
     (preHide postHide : Nat) (hPost : postHide ≤ preHide) :
-    OpenComposition.InterfaceContract (withHiddenSite C c preHide postHide) init where
-  tol := c.tol
-  warnObs := c.warnObs
-  preCapInt := c.preCapInt
-  preCapExt
-    | .inl () => c.preCapExt ()
-    | .inr () => preHide
-  postBudgetInt := c.postBudgetInt
-  postBudgetExt
-    | .inl () => c.postBudgetExt ()
-    | .inr () => postHide
-  maxSilence := c.maxSilence
-  maxLag := c.maxLag
-  K := c.K
-  eta := c.eta
-  init_in := c.init_in
-  cert := Viability.certificate_disturbed_iff.mpr
-    ⟨fun s hs =>
-      let w := c.cert.within s hs
-      ⟨w.1,
-       fun k => match k with
-         | .inl () => w.2.1 ()
-         | .inr () => by
-           show (match c.eta s with | 0 => postHide | _ + 1 => preHide) ≤ preHide
-           cases c.eta s with
-           | zero => exact hPost
-           | succ _ => exact Nat.le_refl preHide,
-       w.2.2.1,
-       fun h0 =>
-         let p := w.2.2.2 h0
-         ⟨p.1, p.2.1,
-          fun k => match k with
-            | .inl () => p.2.2 ()
-            | .inr () => by
-              show (match c.eta s with | 0 => postHide | _ + 1 => preHide) ≤ postHide
-              rw [h0]
-              exact Nat.le_refl postHide⟩⟩,
-     fun s m adm hs => c.cert.closed s m _ ⟨adm, rfl⟩ hs⟩
-  eta_bound := c.eta_bound
-  emits_on_warn := c.emits_on_warn
-  eta_alarm_step := c.eta_alarm_step
-  eta_alarm_zero := c.eta_alarm_zero
+    OpenComposition.InterfaceContract (withHiddenSite C c preHide postHide) init :=
+  OpenComposition.withHiddenSiteContract c preHide postHide hPost
 
 /-- Wire hidden threshold `xh () < warnHide ()` directly into `scopeSub`'s `Bool` defector slot. -/
 def spineHideWireObs {tail : List UnifiedDrawdown.RestraintAgentSpec} (warnHide : Unit → Nat)
@@ -1380,7 +1156,7 @@ theorem master_spine_hide_viable {P Env : Type}
       (fun _ xh ⟨k, hk⟩ => by
         cases k
         exact Or.inr (Or.inl ((congrArg (_ || ·) (AdaptiveLoops.natBlt_true_iff.mpr hk)).trans
-          (OpenComposition.bool_or_true_right _))))
+          (CoreHelpers.bool_or_true_right _))))
       hide_post_viable
       (fun k => by cases k; exact hide_post_cap)
       (fun k => by
@@ -1580,7 +1356,7 @@ theorem witnessWireHideWarn :
   fun _ _ ⟨k, hk⟩ => by
     cases k
     exact Or.inr (Or.inl ((congrArg (_ || ·) (AdaptiveLoops.natBlt_true_iff.mpr hk)).trans
-      (OpenComposition.bool_or_true_right _)))
+      (CoreHelpers.bool_or_true_right _)))
 
 def witnessHiddenContr :=
   OpenComposition.hideContract witnessSiteContr gHide (spineHideWireObs (fun _ => 12))
@@ -1704,16 +1480,16 @@ theorem alignmentSpine_readsOnlyDynamics {Pos F D : Type} (SpineLaw : D → Prop
 /-- Every verified spine persistence or collapse law equally admits a rival restricted significance
 outside any excluded `(p, f)`. -/
 theorem alignmentSpine_admits_rival {Pos F D : Type} (SpineLaw : D → Prop)
-    {d : D} (holds : SpineLaw d) (sig : Pos → Nat → F → Prop)
+    {d : D} (holds : SpineLaw d) (_sig : Pos → Nat → F → Prop)
     {region : Pos → F → Prop} (outside : ∃ p f, ¬ region p f) :
     SpineLaw d ∧ Rival (bounded region) ∧ ¬ Unrestricted (bounded region) :=
-  ReadsOnlyDynamics.admits_rival (readsOnlyDynamics_of SpineLaw) (sig := sig) holds outside
+  dynamicsLaw_admits_rival holds outside
 
 /-- Direct `ReadsOnlyDynamics.not_entails` bridge at the composed alignment spine level. -/
 theorem alignmentSpine_not_entails {Pos F D : Type} (SpineLaw : D → Prop)
     (entails : ∀ d (sig : Pos → Nat → F → Prop), SpineLaw d → Unrestricted sig)
     (p : Pos) (f : F) {d : D} : ¬ SpineLaw d :=
-  ReadsOnlyDynamics.not_entails (readsOnlyDynamics_of SpineLaw) entails p f (sig := fun _ _ _ => True)
+  dynamicsLaw_not_entails (fun d h sig => entails d sig h) p f
 
 /-- Even the viable `MasterSpineWitness` cannot entail `Unrestricted sig`. -/
 theorem alignmentSpine_cannot_entail_unrestricted {Pos F D : Type} (SpineLaw : D → Prop)
@@ -2298,7 +2074,7 @@ def hiddenSafeContr :=
     (fun _ _ ⟨k, hk⟩ => by
       cases k
       exact (congrArg (_ || ·) (AdaptiveLoops.natBlt_true_iff.mpr hk)).trans
-        (OpenComposition.bool_or_true_right _))
+        (CoreHelpers.bool_or_true_right _))
     (fun k => by cases k; show 3 ≤ 3 - 1 + gUnit () (fun _ => 3 - 1); exact by decide)
     (fun k => by cases k; exact Nat.le_refl 1)
     (fun k => by cases k; exact by decide)
@@ -2872,7 +2648,7 @@ theorem eight_le_of_distNat_le_two {u : Nat} (hd : distNat u 10 ≤ 2) : 8 ≤ u
   have hsub : 10 - u ≤ 2 := Nat.le_trans (Nat.le_add_left _ _) hd
   have hSum : 8 + 2 ≤ u + 2 :=
     Nat.le_trans (Nat.le_of_eq (by decide : 8 + 2 = 10))
-      (Nat.le_trans (le_sub_add_nat 10 u)
+      (Nat.le_trans (CoreHelpers.le_sub_add_nat 10 u)
         (Nat.le_trans (Nat.add_le_add_right hsub u) (Nat.le_of_eq (Nat.add_comm 2 u))))
   exact le_of_add_le_add_right 2 hSum
 

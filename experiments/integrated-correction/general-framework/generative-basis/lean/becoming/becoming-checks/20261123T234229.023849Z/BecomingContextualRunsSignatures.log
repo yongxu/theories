@@ -1,0 +1,76 @@
+@Becoming.ContextualRuns.along_le : ∀ {σ A : Type} {P : Generative.Process σ A} {C : Type} {f : (C → Bool) → Nat}
+  {c : Nat} (val : σ → C → Bool) (r : Becoming.Run P) (n : Nat),
+  (Becoming.total (Becoming.ContextualRuns.readings val r n) f + (Becoming.ContextualRuns.readings val r n).length ≤
+      Becoming.total (Becoming.ContextualRuns.readings val r n) fun x => c) →
+    Becoming.total (Becoming.ContextualRuns.readings val r n) f + n ≤ n * c
+@Becoming.ContextualRuns.chsh_run_le : ∀ {σ A : Type} {P : Generative.Process σ A}
+  (val : σ → Becoming.CHSH.Outcome → Bool) (r : Becoming.Run P) (n : Nat),
+  (Becoming.total (Becoming.ContextualRuns.readings val r n) fun v =>
+        Becoming.total Becoming.CHSH.pairs fun k => bif Becoming.CHSH.paritySystem.met k v then 1 else 0) +
+      n ≤
+    n * 4
+@Becoming.ContextualRuns.specker_run_le : ∀ {σ A : Type} {P : Generative.Process σ A}
+  (val : σ → Becoming.Specker.Box → Bool) (r : Becoming.Run P) (n : Nat),
+  (Becoming.total (Becoming.ContextualRuns.readings val r n) fun v =>
+        Becoming.total Becoming.Specker.openings fun k => bif Becoming.Specker.paritySystem.met k v then 1 else 0) +
+      n ≤
+    n * 3
+@Becoming.ContextualRuns.square_run_le : ∀ {σ A : Type} {P : Generative.Process σ A}
+  (val : σ → Becoming.Square.Cell → Bool) (r : Becoming.Run P) (n : Nat),
+  (Becoming.total (Becoming.ContextualRuns.readings val r n) fun v =>
+        Becoming.total Becoming.Square.lines fun l => bif Becoming.Square.paritySystem.met l v then 1 else 0) +
+      n ≤
+    n * 6
+@Becoming.ContextualRuns.cycle_run_le : ∀ {σ A : Type} {P : Generative.Process σ A} {n : Nat} {pol : Nat → Bool}
+  {close : Bool},
+  Becoming.Gluing.Cycle.polarity n pol close = true →
+    ∀ (val : σ → Nat → Bool) (r : Becoming.Run P) (m : Nat),
+      (Becoming.total (Becoming.ContextualRuns.readings val r m) fun v =>
+            Becoming.total (Becoming.Gluing.Cycle.edges n) fun k =>
+              bif (Becoming.Gluing.Cycle.system n pol close).met k v then 1 else 0) +
+          m ≤
+        m * (n + 1)
+@Becoming.ContextualRuns.cycle_run_iff : ∀ {σ A : Type} {P : Generative.Process σ A} (n : Nat) (pol : Nat → Bool)
+  (close : Bool) (r : Becoming.Run P),
+  (∃ val,
+      ∀ (t : Nat) (k : Option Nat),
+        k ∈ Becoming.Gluing.Cycle.edges n → (Becoming.Gluing.Cycle.system n pol close).support k (val (r.state t))) ↔
+    Becoming.Gluing.Cycle.polarity n pol close = false
+@Becoming.ContextualRuns.chsh_in_context_not_free : ∀ {σ A : Type} {P : Generative.Process σ A} (r : Becoming.Run P)
+  (t : Nat), ¬Becoming.ContextualRuns.chshInContext.FreeAt P r t
+@Becoming.ContextualRuns.square_in_context_not_free : ∀ {σ A : Type} {P : Generative.Process σ A} (r : Becoming.Run P)
+  (t : Nat), ¬Becoming.ContextualRuns.squareInContext.FreeAt P r t
+@Becoming.ContextualRuns.specker_not_free : ∀ {σ A : Type} {P : Generative.Process σ A} (r : Becoming.Run P) (t : Nat),
+  ¬Becoming.ContextualRuns.speckerAt.FreeAt P r t
+@Becoming.ContextualRuns.specker_respecting_not_free : ∀ {σ A : Type} {P : Generative.Process σ A}
+  (X : Becoming.Contextual σ Becoming.Specker.Opening Becoming.Specker.Box Bool),
+  X.within = Becoming.Specker.within →
+    ∀ {r : Becoming.Run P} {t : Nat}, X.Respects Becoming.Specker.support (r.state t) → ¬X.FreeAt P r t
+@Becoming.ContextualRuns.square_respecting_not_free : ∀ {σ A : Type} {P : Generative.Process σ A}
+  (X : Becoming.Contextual σ Becoming.Square.Line Becoming.Square.Cell Bool),
+  X.within = Becoming.Square.within →
+    ∀ {r : Becoming.Run P} {t : Nat}, X.Respects Becoming.Square.support (r.state t) → ¬X.FreeAt P r t
+@Becoming.ContextualRuns.noGlobal_run_iff : ∀ {σ A : Type} {P : Generative.Process σ A} {K C : Type} [DecidableEq C]
+  (S : Becoming.ParitySystem K C),
+  Becoming.Distinct S.claims →
+    ∀ {all : List K},
+      (∀ (k : K), k ∈ all) →
+        ∀ (r : Becoming.Run P) (t : Nat),
+          (∀ (X : Becoming.Contextual σ K C Bool),
+              X.within = S.within → X.Respects S.support (r.state t) → ¬X.FreeAt P r t) ↔
+            ∃ ks, S.Contradicts ks
+@Becoming.ContextualRuns.passes_glued : ∀ {σ A : Type} {P : Generative.Process σ A} {K C V : Type}
+  (within : K → C → Prop) (val : σ → C → V) (r : Becoming.Run P) (t : Nat),
+  Becoming.Glued (Becoming.restrict within (Becoming.ContextualRuns.passes val r)) (val (r.state t))
+@Becoming.ContextualRuns.passes_local : ∀ {σ A : Type} {P : Generative.Process σ A} {K C V : Type}
+  (within : K → C → Prop) (val : σ → C → V) (r : Becoming.Run P),
+  Becoming.Local within (Becoming.restrict within (Becoming.ContextualRuns.passes val r))
+@Becoming.ContextualRuns.specker_not_passes : ∀ {σ A : Type} {P : Generative.Process σ A}
+  (val : σ → Becoming.Specker.Box → Bool) (r : Becoming.Run P),
+  ¬∀ (k : Becoming.Specker.Opening) (u : Becoming.Specker.Box → Bool),
+      Becoming.Specker.support k u ↔
+        Becoming.restrict Becoming.Specker.within (Becoming.ContextualRuns.passes val r) k u
+@Becoming.ContextualRuns.square_not_passes : ∀ {σ A : Type} {P : Generative.Process σ A}
+  (val : σ → Becoming.Square.Cell → Bool) (r : Becoming.Run P),
+  ¬∀ (l : Becoming.Square.Line) (u : Becoming.Square.Cell → Bool),
+      Becoming.Square.support l u ↔ Becoming.restrict Becoming.Square.within (Becoming.ContextualRuns.passes val r) l u

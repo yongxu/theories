@@ -202,10 +202,16 @@ under it is determined up to likeness everywhere. -/
 theorem imageUnder_determinedAt (P : Process S A) (π : S → K) {claims : K → D → Prop}
     {E : K → K → Prop} (eqv : Equivalence E) (registers : RespectsClaims claims E)
     (go : GoAlikeUnder P π E) : ∀ k, DeterminedAt (⟨imageUnder P π E, claims⟩ : Frame K A D) k :=
-  fun _ a _ _ ⟨s, u, at_k, step, to⟩ ⟨s', u', at_k', step', to'⟩ =>
+  have hE : «类» E := ⟨eqv.refl, eqv.symm, eqv.trans⟩
+  fun k a κ κ' hκ hκ' =>
+    have alikeImg : «同行» («像» π (fun s t => P.step s a t)) E :=
+      «像之同行».mpr (goAlikeUnder_iff_alike.mp go a)
+    have alikeClosed : «同行» («而» («而» E («像» π (fun s t => P.step s a t))) E) E :=
+      («类则同行之展» hE alikeImg).1
     ⟨E, imageUnder_bisimulation P π eqv registers,
-      eqv.trans (eqv.symm to)
-        (eqv.trans (go s s' a u u' (eqv.trans (eqv.symm at_k) at_k') step step') to')⟩
+      «同行之逐点».mp alikeClosed k k (eqv.refl k) κ κ'
+        (match hκ with | ⟨s, u, hks, step, huκ⟩ => ⟨π u, ⟨π s, hks, ⟨s, u, rfl, step, rfl⟩⟩, huκ⟩)
+        (match hκ' with | ⟨s', u', hks', step', huκ'⟩ => ⟨π u', ⟨π s', hks', ⟨s', u', rfl, step', rfl⟩⟩, huκ'⟩)⟩
 
 /-- Likeness in a frame is an equivalence. -/
 theorem alike_equivalence (F : Frame K A D) : Equivalence (Alike F F) :=

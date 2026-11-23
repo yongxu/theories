@@ -1,0 +1,220 @@
+@Becoming.ExchangeLaw.RespondsByLevel.respondsTo : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {t s : Nat} {h : F}
+  {c d : C} {W : Becoming.Web F C}, law.RespondsByLevel W t h c s d → law.RespondsTo t h c s d
+@Becoming.ExchangeLaw.respondsWithin_zero_iff : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {t s : Nat} {h : F}
+  {c d : C}, law.RespondsWithin t h c s d 0 ↔ ¬law.RespondsTo t h c s d
+@Becoming.ExchangeLaw.RespondsTo.strength_pos : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {t s : Nat} {h : F}
+  {c d : C}, law.RespondsTo t h c s d → ∀ {k : Nat}, law.RespondsWithin t h c s d k → 0 < k
+@Becoming.ExchangeLaw.RespondsTo.couples : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {t s : Nat} {h : F} {c d : C}
+  {cs : List C} {part : F → Bool} {present : Nat → List F} {k : Nat → F → C → Nat → C → Nat},
+  (∀ (t : Nat) (h : F) (c : C) (s : Nat) (d : C), part h = false → s ≤ t → law.RespondsWithin t h c s d (k t h c s d)) →
+    law.RespondsTo t h c s d → h ∈ present t → part h = false → s ≤ t → d ∈ cs → Becoming.Couples cs part k present d c
+@Becoming.ExchangeLaw.RespondsTo.upstream : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {t s : Nat} {h : F}
+  {c d : C} {cs : List C} {part : F → Bool} {present : Nat → List F} {k : Nat → F → C → Nat → C → Nat},
+  (∀ (t : Nat) (h : F) (c : C) (s : Nat) (d : C), part h = false → s ≤ t → law.RespondsWithin t h c s d (k t h c s d)) →
+    law.RespondsTo t h c s d → h ∈ present t → part h = false → s ≤ t → d ∈ cs → Becoming.Upstream cs part k present d c
+@Becoming.ExchangeLaw.Through.respondsWithin_uncoupled : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {t s : Nat} {h : F} {c d : C},
+  law.Through W obs part → part h = false → ¬W.CoupledInto obs h d → law.RespondsWithin t h c s d 0
+@Becoming.ExchangeLaw.Through.couples_of_respondsTo : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {t s : Nat} {h : F} {c d : C},
+  law.Through W obs part → part h = false → law.RespondsTo t h c s d → ¬¬W.CoupledInto obs h d
+@Becoming.ExchangeLaw.Through.reads_of_respondsTo : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {t s : Nat} {h : F} {c d : C}
+  {reads : Nat → F → C → Bool},
+  law.Through W obs part →
+    (∀ (t : Nat) (h : F) (d : C), part h = false → W.CoupledInto obs h d → reads t h d = true) →
+      part h = false → law.RespondsTo t h c s d → reads t h d = true
+@Becoming.ExchangeLaw.Through.couples_readCouplings : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {t s : Nat} {h : F} {c d : C}
+  {reads : Nat → F → C → Bool} {cs : List C} {present : Nat → List F},
+  law.Through W obs part →
+    (∀ (t : Nat) (h : F) (d : C), part h = false → W.CoupledInto obs h d → reads t h d = true) →
+      law.RespondsTo t h c s d →
+        h ∈ present t →
+          part h = false →
+            s ≤ t →
+              d ∈ cs → Becoming.Couples cs part (Becoming.readCouplings fun t h x x_1 d => reads t h d) present d c
+@Becoming.ExchangeLaw.Through.upstream_restrictInto : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {t s : Nat} {h : F} {c d : C}
+  {reads : Nat → F → C → Bool} {cs : List C} {present : Nat → List F} {k : Nat → F → C → Nat → C → Nat},
+  law.Through W obs part →
+    (∀ (t : Nat) (h : F) (d : C), part h = false → W.CoupledInto obs h d → reads t h d = true) →
+      (∀ (t : Nat) (h : F) (c : C) (s : Nat) (d : C),
+          part h = false → s ≤ t → law.RespondsWithin t h c s d (k t h c s d)) →
+        law.RespondsTo t h c s d →
+          h ∈ present t →
+            part h = false →
+              s ≤ t →
+                d ∈ cs →
+                  Becoming.Upstream cs part (Becoming.restrictInto (fun t h x x_1 d => reads t h d) k) present d c
+@Becoming.Web.alikeThrough_of_levels : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l l' : Nat → C → Nat} {s' : Nat}, (∀ (e : C), l s' e = l' s' e) → W.AlikeThrough obs g l l' s'
+@Becoming.ExchangeLaw.Through.not_respondsByLevel : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {t s : Nat} {h : F} {c d : C} [DecidableEq C],
+  law.Through W obs part → part h = false → ¬obs h d → ¬law.RespondsByLevel W t h c s d
+@Becoming.levelLaw_through : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {d : C}
+  {mark : F → Bool}, (∀ (h : F), mark h = true → obs h d) → (Becoming.levelLaw mark d).Through W obs part
+@Becoming.levelLaw_respondsByLevel : ∀ {F C : Type} {W : Becoming.Web F C} {d : C} [DecidableEq C] {mark : F → Bool}
+  {h : F}, mark h = true → ∀ (t : Nat) (c : C), (Becoming.levelLaw mark d).RespondsByLevel W t h c t d
+@Becoming.not_not_obs_iff_respondsByLevel : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool}
+  {d : C} [DecidableEq C] [DecidableEq F] {h : F},
+  part h = false → (¬¬obs h d ↔ ¬¬∃ law, law.Through W obs part ∧ ∃ t c s, law.RespondsByLevel W t h c s d)
+@Becoming.ExchangeLaw.RespondsByCrossing.respondsTo : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {W : Becoming.Web F C} {t s : Nat} {h : F} {c d : C}, law.RespondsByCrossing W t h c s d → law.RespondsTo t h c s d
+@Becoming.ExchangeLaw.Through.crosses_of_unobserved : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {t s : Nat} {h : F} {c d : C} [DecidableEq C],
+  law.Through W obs part →
+    part h = false →
+      ¬obs h d →
+        ∀ {l l' : Nat → C → Nat},
+          (∀ (s' : Nat) (e : C), ¬(s' = s ∧ e = d) → l s' e = l' s' e) →
+            0 < law.exchangeGap t h c l l' → ¬¬W.requires s h d ∧ ¬(W.need s h d ≤ l s d ↔ W.need s h d ≤ l' s d)
+@Becoming.ble_eq_of_iff : ∀ {a b b' : Nat}, (a ≤ b ↔ a ≤ b') → a.ble b = a.ble b'
+@Becoming.Web.admits_iff_of_sole : ∀ {F C : Type} {W : Becoming.Web F C} {h : F} {d : C} {l : C → Nat} {t : Nat},
+  (∀ (e : C), W.requires t h e ↔ e = d) → (W.Admits l t h ↔ W.need t h d ≤ l d)
+@Becoming.thresholdLaw_through : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {d : C}
+  {mark : F → Bool} {T : Nat},
+  (∀ (h : F), mark h = true → ∀ (e : C), W.requires T h e ↔ e = d) →
+    (Becoming.thresholdLaw W mark d T).Through W obs part
+@Becoming.thresholdLaw_respondsByCrossing : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {h : F} {d : C}
+  [DecidableEq C] {mark : F → Bool},
+  mark h = true →
+    W.requires t h d → 0 < W.need t h d → ∀ (c : C), (Becoming.thresholdLaw W mark d t).RespondsByCrossing W t h c t d
+@Becoming.crossing_passes : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {t : Nat}
+  {h : F} {d : C} [DecidableEq C] [DecidableEq F],
+  (∀ (e : C), W.requires t h e ↔ e = d) →
+    0 < W.need t h d → ∃ law, law.Through W obs part ∧ ∀ (c : C), law.RespondsByCrossing W t h c t d
+@Becoming.ExchangeLaw.Through.admission_changes_of_unobserved : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {t s : Nat} {h : F} {c d : C},
+  law.Through W obs part →
+    part h = false →
+      ¬obs h d →
+        ∀ {l l' : Nat → C → Nat},
+          (∀ (s' : Nat) (e : C), ¬(s' = s ∧ e = d) → l s' e = l' s' e) →
+            0 < law.exchangeGap t h c l l' → s ≤ t ∧ ¬(W.Admits (l s) s h ↔ W.Admits (l' s) s h)
+@Becoming.ExchangeLaw.Through.others_met_of_unobserved : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {t s : Nat} {h : F} {c d : C},
+  law.Through W obs part →
+    part h = false →
+      ¬obs h d →
+        ∀ {l l' : Nat → C → Nat},
+          (∀ (s' : Nat) (e : C), ¬(s' = s ∧ e = d) → l s' e = l' s' e) →
+            0 < law.exchangeGap t h c l l' → ¬¬∀ (e : C), W.requires s h e → ¬e = d → W.need s h e ≤ l s e
+@Becoming.ExchangeLaw.RespondsByCrossing.requires_pos : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {W : Becoming.Web F C} {t s : Nat} {h : F} {c d : C},
+  law.RespondsByCrossing W t h c s d → W.requires s h d ∧ 0 < W.need s h d
+@Becoming.decide_eq_of_iff : ∀ {p q : Prop} (dp : Decidable p) (dq : Decidable q), (p ↔ q) → decide p = decide q
+@Becoming.admissionLaw_through : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool}
+  [inst : DecidableEq F] {g : F} {T : Nat} (dec : (l : C → Nat) → Decidable (W.Admits l T g)),
+  (Becoming.admissionLaw W g T dec).Through W obs part
+@Becoming.admissionLaw_respondsByCrossing : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {d : C} [DecidableEq C]
+  [inst : DecidableEq F] {g : F} {T : Nat} (dec : (l : C → Nat) → Decidable (W.Admits l T g)),
+  W.requires T g d →
+    0 < W.need T g d → T ≤ t → ∀ (c : C), (Becoming.admissionLaw W g T dec).RespondsByCrossing W t g c T d
+@Becoming.crossing_passes_iff : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {d : C}
+  [DecidableEq C] [DecidableEq F] {g : F} {T : Nat} (dec : (l : C → Nat) → Decidable (W.Admits l T g)),
+  W.requires T g d ∧ 0 < W.need T g d ↔
+    ∃ law, law.Through W obs part ∧ ∀ (t : Nat), T ≤ t → ∀ (c : C), law.RespondsByCrossing W t g c T d
+@Becoming.crossing_passes_of_support : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool}
+  {d : C} [DecidableEq C] [DecidableEq F] {g : F} {T : Nat} (es : List C),
+  (∀ (e : C), W.requires T g e ↔ List.Mem e es) →
+    (W.requires T g d ∧ 0 < W.need T g d ↔
+      ∃ law, law.Through W obs part ∧ ∀ (t : Nat), T ≤ t → ∀ (c : C), law.RespondsByCrossing W t g c T d)
+@Becoming.ExchangeLaw.Through.rises_at_step : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {part : F → Bool} {t : Nat} {h : F},
+  law.Through W Becoming.thresholdOnly part →
+    part h = false →
+      law.NeedsSupportAt W t h →
+        ∀ {l l' : Nat → C → Nat},
+          Becoming.NoLowerAt t l l' →
+            ∀ (c : C), law.take t h l c ≤ law.take t h l' c ∧ law.give t h l c ≤ law.give t h l' c
+@Becoming.ExchangeLaw.Through.carried_rises : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {part : F → Bool} {t : Nat},
+  law.Through W Becoming.thresholdOnly part →
+    ∀ {us : List F},
+      (∀ (u : F), u ∈ us → part u = false) →
+        (∀ (u : F), u ∈ us → law.NeedsSupportAt W t u) →
+          ∀ {c : C} {within : (Nat → C → Nat) → Prop} {response : (Nat → C → Nat) → Nat},
+            law.CarriesGiving us t c within response →
+              ∀ {l l' : Nat → C → Nat}, within l → within l' → Becoming.NoLowerAt t l l' → response l ≤ response l'
+@Becoming.ExchangeLaw.Through.carried_fall_needs_fall : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {W : Becoming.Web F C} {part : F → Bool} {t : Nat},
+  law.Through W Becoming.thresholdOnly part →
+    ∀ {us : List F},
+      (∀ (u : F), u ∈ us → part u = false) →
+        (∀ (u : F), u ∈ us → law.NeedsSupportAt W t u) →
+          ∀ {c : C} {within : (Nat → C → Nat) → Prop} {response : (Nat → C → Nat) → Nat},
+            law.CarriesGiving us t c within response →
+              ∀ {l l' : Nat → C → Nat},
+                within l →
+                  within l' →
+                    (∀ (s : Nat), s < t → ∀ (e : C), l s e = l' s e) →
+                      response l' < response l → ¬∀ (e : C), l t e ≤ l' t e
+@Becoming.total_steps_nothing : ∀ {q : Nat → Nat} (n : Nat),
+  (∀ (j : Nat), j < n → q j = 0) → Becoming.total (Becoming.steps 0 n) q = 0
+@Becoming.total_steps_only : ∀ {q : Nat → Nat} {x : Nat} (n : Nat),
+  (∀ (j : Nat), j < n → j ≠ x → q j = 0) → x < n → Becoming.total (Becoming.steps 0 n) q = q x
+@Becoming.Layers.admits_iff : ∀ {C : Type} {d : C} {l : C → Nat} {t j : Nat},
+  (Becoming.Layers.web d).Admits l t (j + 1) ↔ j + 1 ≤ l d
+@Becoming.Layers.law_through : ∀ {C : Type} {d : C} (r : Nat → C → Nat) (part : Nat → Bool),
+  (Becoming.Layers.law d r).Through (Becoming.Layers.web d) Becoming.thresholdOnly part
+@Becoming.Layers.law_needsSupport : ∀ {C : Type} {d : C} (r : Nat → C → Nat) (t j : Nat),
+  (Becoming.Layers.law d r).NeedsSupportAt (Becoming.Layers.web d) t j
+@Becoming.Layers.dependsOn : ∀ {C : Type} {d : C} (j : Nat), (Becoming.Layers.web d).DependsOn (j + 1) d
+@Becoming.Layers.rises_add : ∀ {q : Nat → Nat} {x : Nat} (n : Nat),
+  n ≤ x →
+    (∀ (i : Nat), i < n → q i ≤ q (i + 1)) →
+      (q 0 + Becoming.total (Becoming.steps 0 n) fun i => bif (i + 1).ble x then q (i + 1) - q i else 0) = q n
+@Becoming.Layers.rises_stop : ∀ {q : Nat → Nat} {x : Nat} (k : Nat),
+  (Becoming.total (Becoming.steps 0 (x + k)) fun i => bif (i + 1).ble x then q (i + 1) - q i else 0) =
+    Becoming.total (Becoming.steps 0 x) fun i => bif (i + 1).ble x then q (i + 1) - q i else 0
+@Becoming.Layers.carry : ∀ {C : Type} {d : C} {r : Nat → C → Nat} {c : C} {N : Nat},
+  (∀ (x : Nat), x < N → r x c ≤ r (x + 1) c) →
+    ∀ (t : Nat),
+      (Becoming.Layers.law d r).CarriesGiving (Becoming.steps 0 (N + 1)) t c (fun l => l t d ≤ N) fun l => r (l t d) c
+@Becoming.onlyAt_self : ∀ {C : Type} [inst : DecidableEq C] (t : Nat) (d : C) (x : Nat), Becoming.onlyAt t d x t d = x
+@Becoming.onlyAt_noLower : ∀ {C : Type} [inst : DecidableEq C] (t : Nat) (d : C) (x : Nat),
+  Becoming.NoLowerAt t (Becoming.onlyAt t d x) (Becoming.onlyAt t d (x + 1))
+@Becoming.carried_iff_rising : ∀ {C : Type} [DecidableEq C] (d c : C) (r : Nat → Nat) (t N : Nat),
+  (∃ law W us,
+      (law.Through W Becoming.thresholdOnly fun x => false) ∧
+        (∀ (u : Nat), u ∈ us → law.NeedsSupportAt W t u) ∧
+          law.CarriesGiving us t c (fun l => l t d ≤ N) fun l => r (l t d)) ↔
+    ∀ (x : Nat), x < N → r x ≤ r (x + 1)
+@Becoming.eq_of_true_iff : ∀ {p q : Bool}, (p = true ↔ q = true) → p = q
+@Becoming.ble_and_iff : ∀ {a b m n : Nat}, (a.ble b && m.ble n) = true ↔ a ≤ b ∧ m ≤ n
+@Becoming.Complement.admits_iff : ∀ {C : Type} [inst : DecidableEq C] {d e : C} {N : Nat},
+  e ≠ d → ∀ {l : C → Nat} {t j : Nat}, (Becoming.Complement.web d e N).Admits l t j ↔ j ≤ l d ∧ N - j ≤ l e
+@Becoming.Complement.law_through : ∀ {C : Type} [inst : DecidableEq C] {d e : C} {N : Nat},
+  e ≠ d →
+    ∀ (r : Nat → C → Nat) (part : Nat → Bool),
+      (Becoming.Complement.law d e N r).Through (Becoming.Complement.web d e N) Becoming.thresholdOnly part
+@Becoming.Complement.law_needsSupport : ∀ {C : Type} [inst : DecidableEq C] {d e : C} {N : Nat},
+  e ≠ d →
+    ∀ (r : Nat → C → Nat) (t j : Nat),
+      (Becoming.Complement.law d e N r).NeedsSupportAt (Becoming.Complement.web d e N) t j
+@Becoming.Complement.dependsOn : ∀ {C : Type} [inst : DecidableEq C] {d e : C} {N : Nat} (j : Nat),
+  (Becoming.Complement.web d e N).DependsOn j d ∧ (Becoming.Complement.web d e N).DependsOn j e
+@Becoming.Complement.admitted_iff : ∀ {N x y j : Nat}, x + y = N → j ≤ N → (j ≤ x ∧ N - j ≤ y ↔ j = x)
+@Becoming.Complement.carry : ∀ {C : Type} {d e : C} {N : Nat} (r : Nat → C → Nat) (t : Nat) (c : C),
+  (Becoming.Complement.law d e N r).CarriesGiving (Becoming.steps 0 (N + 1)) t c (fun l => l t d + l t e = N) fun l =>
+    r (l t d) c
+@Becoming.supplyLaw_through : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {part mark : F → Bool} {d : C}
+  {k : Nat}, (∀ (h : F), mark h = true → obs h d) → (Becoming.supplyLaw mark d k).Through W obs part
+@Becoming.supply_not_carried : ∀ {C : Type} [DecidableEq C] (d c : C) {k N : Nat},
+  0 < k →
+    0 < N →
+      ∀ (t : Nat),
+        ¬∃ law W us,
+            (law.Through W Becoming.thresholdOnly fun x => false) ∧
+              (∀ (u : Nat), u ∈ us → law.NeedsSupportAt W t u) ∧
+                law.CarriesGiving us t c (fun l => l t d ≤ N) fun l => k - l t d
+@Becoming.supply_carried_by_complement : ∀ {C : Type} [inst : DecidableEq C] {d e : C},
+  e ≠ d →
+    ∀ (N k t : Nat) (c : C),
+      ((Becoming.Complement.law d e N fun x x_1 => k - x).Through (Becoming.Complement.web d e N) Becoming.thresholdOnly
+          fun x => false) ∧
+        (∀ (j : Nat),
+            (Becoming.Complement.law d e N fun x x_1 => k - x).NeedsSupportAt (Becoming.Complement.web d e N) t j) ∧
+          (Becoming.Complement.law d e N fun x x_1 => k - x).CarriesGiving (Becoming.steps 0 (N + 1)) t c
+            (fun l => l t d + l t e = N) fun l => k - l t d

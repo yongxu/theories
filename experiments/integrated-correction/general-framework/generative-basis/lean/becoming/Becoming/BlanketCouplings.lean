@@ -1,6 +1,7 @@
 import Becoming.Blanket
 import Becoming.Histories
 import Becoming.IdentificationRuns
+import Becoming.OpenComposition
 
 /-!
 # A formation's couplings as its blanket, and when a blanket constrains
@@ -1238,6 +1239,309 @@ theorem admitted {O : Type} (value : Nat → (TwoRelata → Nat) → O) :
   stepExternal_admitted_iff.mpr (agentConsistent value)
 
 end Alternating
+
+/-! ## Bridge to `Becoming.OpenComposition`: Blanketed Closed Trajectories, Internalization & Blindness -/
+
+section OpenCompositionBridge
+
+/-- Embed an `OpenComposition` closed-loop pair `(x, s)` into `Blanket.Parts` with internal
+state `s`, sensory state `obs x`, exposed active draw `C.drawExt s`, and external substrate `x`. -/
+def closedParts {S Obs Dist Int Ext : Type}
+    (C : OpenComposition.OpenComponent S Obs Dist Int Ext)
+    (obs : (Ext → Nat) → Obs)
+    (x : Ext → Nat) (s : S) :
+    Parts S Obs (Ext → Nat) (Ext → Nat) :=
+  ⟨s, obs x, C.drawExt s, x⟩
+
+/-- **B4 (Exact Markov Blanket of `closedStep`):** Packages one closed transition of
+`OpenComponent` (for fixed `env`, `dist`) as a `Blanket.Blanketed` law whose orbit matches
+`Law.orbit (OpenComposition.closedStep ...)` step-for-step with zero lag shift. -/
+def closedBlanketLaw {S Obs Dist Int Ext Env : Type}
+    (C : OpenComposition.OpenComponent S Obs Dist Int Ext)
+    (obs : (Ext → Nat) → Obs)
+    (channel : Bool → Nat → Env → Bool)
+    (G : Ext → (Ext → Nat) → Nat)
+    (envDraw : Env → Ext → Nat) (env : Env) (dist : Dist) :
+    Blanketed S Obs (Ext → Nat) (Ext → Nat) where
+  nextInternal i s_b _ :=
+    C.next i (s_b, channel (C.emitAlarm i s_b) (C.silenceLoad i) env) dist
+  nextSensory _ a e :=
+    obs (RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G
+      (fun k => a k + envDraw env k) e)
+  nextActive i s_b _ :=
+    C.drawExt (C.next i (s_b, channel (C.emitAlarm i s_b) (C.silenceLoad i) env) dist)
+  nextExternal _ a e :=
+    RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G
+      (fun k => a k + envDraw env k) e
+
+/-- **B4 (`closedComponent_blanketed_course` + `drawInt` Shielding):** The `Blanketed.course`
+of `closedBlanketLaw` equals `closedParts` of the `closedStep` orbit by `rfl` per step; hence by
+`Blanket.Blanketed.world_through_active`, private `Int` states and `drawInt` draws cannot affect the
+external substrate trajectory so long as exposed `drawExt` matches. -/
+theorem closedComponent_blanketed_course {S Obs Dist Int Ext Env : Type}
+    (C : OpenComposition.OpenComponent S Obs Dist Int Ext)
+    (obs : (Ext → Nat) → Obs)
+    (channel : Bool → Nat → Env → Bool)
+    (G : Ext → (Ext → Nat) → Nat)
+    (envDraw : Env → Ext → Nat) (env : Env) (dist : Dist) :
+    (∀ x₀ s₀ n,
+      (closedBlanketLaw C obs channel G envDraw env dist).course (closedParts C obs x₀ s₀) n =
+        closedParts C obs
+          (Law.orbit (fun st => OpenComposition.closedStep C obs channel G envDraw st (env, dist))
+            (x₀, s₀) n).1
+          (Law.orbit (fun st => OpenComposition.closedStep C obs channel G envDraw st (env, dist))
+            (x₀, s₀) n).2) ∧
+    (∀ {x₀ : Ext → Nat} {s₁ s₂ : S} (n : Nat),
+      (∀ k, k < n →
+        C.drawExt (Law.orbit (fun st => OpenComposition.closedStep C obs channel G envDraw st (env, dist))
+            (x₀, s₁) k).2 =
+          C.drawExt (Law.orbit (fun st => OpenComposition.closedStep C obs channel G envDraw st (env, dist))
+            (x₀, s₂) k).2) →
+      (Law.orbit (fun st => OpenComposition.closedStep C obs channel G envDraw st (env, dist))
+          (x₀, s₁) n).1 =
+        (Law.orbit (fun st => OpenComposition.closedStep C obs channel G envDraw st (env, dist))
+          (x₀, s₂) n).1) := by
+  have hCourse : ∀ x₀ s₀ n,
+      (closedBlanketLaw C obs channel G envDraw env dist).course (closedParts C obs x₀ s₀) n =
+        closedParts C obs
+          (Law.orbit (fun st => OpenComposition.closedStep C obs channel G envDraw st (env, dist))
+            (x₀, s₀) n).1
+          (Law.orbit (fun st => OpenComposition.closedStep C obs channel G envDraw st (env, dist))
+            (x₀, s₀) n).2 := by
+    intro x₀ s₀ n
+    induction n with
+    | zero => rfl
+    | succ n ih =>
+      show (closedBlanketLaw C obs channel G envDraw env dist).step
+          ((closedBlanketLaw C obs channel G envDraw env dist).course (closedParts C obs x₀ s₀) n) = _
+      rw [ih]
+      rfl
+  refine ⟨hCourse, fun {x₀ s₁ s₂} n agree => ?_⟩
+  have worldEq := (closedBlanketLaw C obs channel G envDraw env dist).world_through_active
+    (x := closedParts C obs x₀ s₁) (y := closedParts C obs x₀ s₂) rfl rfl n
+    (fun k lt => by
+      rw [hCourse x₀ s₁ k, hCourse x₀ s₂ k]
+      exact agree k lt)
+  have hExt : ((closedBlanketLaw C obs channel G envDraw env dist).course
+      (closedParts C obs x₀ s₁) n).external =
+      ((closedBlanketLaw C obs channel G envDraw env dist).course
+      (closedParts C obs x₀ s₂) n).external := worldEq.2
+  rw [hCourse x₀ s₁ n, hCourse x₀ s₂ n] at hExt
+  exact hExt
+
+/-- **B4 Internalization (`hide_internalizes_blanket`):** Applying `OpenComponent.hide` moves
+`ExtHide` inside the blanket's `I := S × (ExtHide → Nat)`, shielding outer substrate `ExtKeep` from
+internal `ExtHide` dynamics and shielding `(S, ExtHide)` from unmonitored `ExtKeep` differences. -/
+theorem hide_internalizes_blanket {S Obs ObsOuter Dist Int ExtKeep ExtHide Env : Type}
+    (C : OpenComposition.OpenComponent S Obs Dist Int (Sum ExtKeep ExtHide))
+    (G_hide : ExtHide → (ExtHide → Nat) → Nat)
+    (wireObs : ObsOuter → (ExtHide → Nat) → Obs)
+    (obsOuter : (ExtKeep → Nat) → ObsOuter)
+    (channel : Bool → Nat → Env → Bool)
+    (G_keep : ExtKeep → (ExtKeep → Nat) → Nat)
+    (envDraw : Env → ExtKeep → Nat) (env : Env) (dist : Dist) :
+    let H := C.hide G_hide wireObs
+    let b := closedBlanketLaw H obsOuter channel G_keep envDraw env dist
+    (∀ {x₀ : ExtKeep → Nat} {p₁ p₂ : S × (ExtHide → Nat)} (n : Nat),
+      (∀ k, k < n →
+        H.drawExt (Law.orbit (fun st => OpenComposition.closedStep H obsOuter channel G_keep envDraw st (env, dist))
+            (x₀, p₁) k).2 =
+          H.drawExt (Law.orbit (fun st => OpenComposition.closedStep H obsOuter channel G_keep envDraw st (env, dist))
+            (x₀, p₂) k).2) →
+      (Law.orbit (fun st => OpenComposition.closedStep H obsOuter channel G_keep envDraw st (env, dist))
+          (x₀, p₁) n).1 =
+        (Law.orbit (fun st => OpenComposition.closedStep H obsOuter channel G_keep envDraw st (env, dist))
+          (x₀, p₂) n).1) ∧
+    (∀ {x₁ x₂ : ExtKeep → Nat} {p₀ : S × (ExtHide → Nat)} (n : Nat),
+      (∀ k, k < n →
+        (b.course (closedParts H obsOuter x₁ p₀) k).sensory =
+          (b.course (closedParts H obsOuter x₂ p₀) k).sensory) →
+      (Law.orbit (fun st => OpenComposition.closedStep H obsOuter channel G_keep envDraw st (env, dist))
+          (x₁, p₀) n).2 =
+        (Law.orbit (fun st => OpenComposition.closedStep H obsOuter channel G_keep envDraw st (env, dist))
+          (x₂, p₀) n).2) := by
+  refine ⟨(closedComponent_blanketed_course (C.hide G_hide wireObs) obsOuter channel G_keep envDraw env dist).2,
+    fun {x₁ x₂ p₀} n sensory => ?_⟩
+  let H := C.hide G_hide wireObs
+  let b := closedBlanketLaw H obsOuter channel G_keep envDraw env dist
+  have agEq := b.agent_through_sensory
+    (x := closedParts H obsOuter x₁ p₀) (y := closedParts H obsOuter x₂ p₀) rfl rfl n sensory
+  have hCourse := (closedComponent_blanketed_course H obsOuter channel G_keep envDraw env dist).1
+  have hInt := agEq.1
+  rw [hCourse x₁ p₀ n, hCourse x₂ p₀ n] at hInt
+  exact hInt
+
+/-- Nondeterministic `Parts`-lifted process of `OpenComposition.closedProcess` for arbitrary
+admissible disturbances `m : Env × Dist`. -/
+def liftedClosedProcess {S Obs Dist Int Ext Env : Type}
+    (C : OpenComposition.OpenComponent S Obs Dist Int Ext) {init : S}
+    (c : OpenComposition.InterfaceContract C init)
+    (obs : (Ext → Nat) → Obs)
+    (channel : Bool → Nat → Env → Bool)
+    (G : Ext → (Ext → Nat) → Nat)
+    (envDraw : Env → Ext → Nat)
+    (jointAdm : Env → Prop) :
+    Process (Parts S Obs (Ext → Nat) (Ext → Nat)) (Env × Dist) where
+  step p m q :=
+    OpenComposition.closedAdm c jointAdm m ∧
+    p.active = C.drawExt p.internal ∧
+    q = ⟨C.next p.internal (p.sensory, channel (C.emitAlarm p.internal p.sensory) (C.silenceLoad p.internal) m.1) m.2,
+         obs (RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G
+           (fun k => C.drawExt p.internal k + envDraw m.1 k) p.external),
+         C.drawExt (C.next p.internal
+           (p.sensory, channel (C.emitAlarm p.internal p.sensory) (C.silenceLoad p.internal) m.1) m.2),
+         RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G
+           (fun k => C.drawExt p.internal k + envDraw m.1 k) p.external⟩
+
+/-- **B4 (`closedProcess_blanketDetermined`):** Lifting `OpenComposition.closedProcess` onto
+`Parts` (with arbitrary disturbances `m : Env × Dist`) yields a `BlanketDetermined` process, so
+any admitted trajectory family is `BlanketConsistentFamily` via `shownBy_blanketDetermined_iff`. -/
+theorem closedProcess_blanketDetermined {S Obs Dist Int Ext Env : Type}
+    (C : OpenComposition.OpenComponent S Obs Dist Int Ext) {init : S}
+    (c : OpenComposition.InterfaceContract C init)
+    (obs : (Ext → Nat) → Obs)
+    (channel : Bool → Nat → Env → Bool)
+    (G : Ext → (Ext → Nat) → Nat)
+    (envDraw : Env → Ext → Nat)
+    (jointAdm : Env → Prop) :
+    BlanketDetermined (liftedClosedProcess C c obs channel G envDraw jointAdm) ∧
+    (∀ H : (Nat → Parts S Obs (Ext → Nat) (Ext → Nat)) → (Nat → Env × Dist) → Prop,
+      (∀ g m, H g m → Admits (liftedClosedProcess C c obs channel G envDraw jointAdm) g m) →
+      BlanketConsistentFamily H) := by
+  have det : BlanketDetermined (liftedClosedProcess C c obs channel G envDraw jointAdm) := by
+    refine ⟨?_, ?_⟩
+    · intro p₁ p₂ m q₁ q₂ same ⟨_, _, hq₁⟩ ⟨_, _, hq₂⟩
+      have hi : p₁.internal = p₂.internal := congrArg Prod.fst same
+      have hs : p₁.sensory = p₂.sensory := congrArg (fun v => v.2.1) same
+      show (q₁.internal, q₁.active) = (q₂.internal, q₂.active)
+      rw [hq₁, hq₂]
+      dsimp only
+      rw [hi, hs]
+    · intro p₁ p₂ m q₁ q₂ same ⟨_, hact₁, hq₁⟩ ⟨_, hact₂, hq₂⟩
+      have ha : p₁.active = p₂.active := congrArg (fun v => v.2.1) same
+      have he : p₁.external = p₂.external := congrArg (fun v => v.2.2) same
+      have hdraw : C.drawExt p₁.internal = C.drawExt p₂.internal :=
+        hact₁.symm.trans (ha.trans hact₂)
+      show (q₁.sensory, q₁.external) = (q₂.sensory, q₂.external)
+      rw [hq₁, hq₂]
+      dsimp only
+      rw [hdraw, he]
+  exact ⟨det, fun H admits => admitted_iff.mp ⟨_, det, admits⟩⟩
+
+/-- **B5 (Lumped Sensory Blanket Blindness):** Whenever the blanket sensory transition is
+`Learning.Lumped` by `π : (Ext → Nat) → P`, any two closed orbits from common internal/sensory/active
+start whose external substrates agree through `π` before `n` stay `BlanketAlike` and have identical
+internal states and boundary draws at `n` via `Blanket.Blanketed.through_reading`. -/
+theorem closedComponent_lumped_blindness {S Obs Dist Int Ext Env P : Type}
+    (C : OpenComposition.OpenComponent S Obs Dist Int Ext)
+    (obs : (Ext → Nat) → Obs)
+    (channel : Bool → Nat → Env → Bool)
+    (G : Ext → (Ext → Nat) → Nat)
+    (envDraw : Env → Ext → Nat) (env : Env) (dist : Dist)
+    (π : (Ext → Nat) → P)
+    (lumped : ∀ (a : Ext → Nat), Learning.Lumped π (fun e =>
+      obs (RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G
+        (fun k => a k + envDraw env k) e)))
+    {x₁ x₂ : Ext → Nat} (obsEq : obs x₁ = obs x₂) (s₀ : S) (n : Nat)
+    (agree : ∀ k, k < n →
+      π (Law.orbit (fun st => OpenComposition.closedStep C obs channel G envDraw st (env, dist))
+          (x₁, s₀) k).1 =
+        π (Law.orbit (fun st => OpenComposition.closedStep C obs channel G envDraw st (env, dist))
+          (x₂, s₀) k).1) :
+    let b := closedBlanketLaw C obs channel G envDraw env dist
+    b.BlanketAlike (closedParts C obs x₁ s₀) (closedParts C obs x₂ s₀) n ∧
+    (Law.orbit (fun st => OpenComposition.closedStep C obs channel G envDraw st (env, dist))
+        (x₁, s₀) n).2 =
+      (Law.orbit (fun st => OpenComposition.closedStep C obs channel G envDraw st (env, dist))
+        (x₂, s₀) n).2 ∧
+    C.drawExt (Law.orbit (fun st => OpenComposition.closedStep C obs channel G envDraw st (env, dist))
+        (x₁, s₀) n).2 =
+      C.drawExt (Law.orbit (fun st => OpenComposition.closedStep C obs channel G envDraw st (env, dist))
+        (x₂, s₀) n).2 := by
+  let b := closedBlanketLaw C obs channel G envDraw env dist
+  have hCourse := (closedComponent_blanketed_course C obs channel G envDraw env dist).1
+  have thru : ∀ m, m ≤ n →
+      (b.course (closedParts C obs x₁ s₀) m).internal =
+        (b.course (closedParts C obs x₂ s₀) m).internal ∧
+      (b.course (closedParts C obs x₁ s₀) m).sensory =
+        (b.course (closedParts C obs x₂ s₀) m).sensory ∧
+      (b.course (closedParts C obs x₁ s₀) m).active =
+        (b.course (closedParts C obs x₂ s₀) m).active := by
+    intro m hm
+    refine b.through_reading π (fun _ a => lumped a)
+      (x := closedParts C obs x₁ s₀) (y := closedParts C obs x₂ s₀) rfl obsEq rfl m fun k hk => ?_
+    have hlt := Nat.lt_of_lt_of_le hk hm
+    have hk1 := hCourse x₁ s₀ k
+    have hk2 := hCourse x₂ s₀ k
+    show π (b.course (closedParts C obs x₁ s₀) k).external =
+      π (b.course (closedParts C obs x₂ s₀) k).external
+    rw [hk1, hk2]
+    exact agree k hlt
+  have hAlike : b.BlanketAlike (closedParts C obs x₁ s₀) (closedParts C obs x₂ s₀) n :=
+    fun k hk => ⟨(thru k (Nat.le_of_lt hk)).2.1, (thru k (Nat.le_of_lt hk)).2.2⟩
+  have hAt := thru n (Nat.le_refl n)
+  have h1 := hCourse x₁ s₀ n
+  have h2 := hCourse x₂ s₀ n
+  refine ⟨hAlike, ?_, ?_⟩
+  · have := hAt.1; rwa [h1, h2] at this
+  · have := hAt.2.2; rwa [h1, h2] at this
+
+/-- **B5 Sharp Witness Contrast (`hiddenCoupling_blanket_vs_widened`):**
+On `HiddenCouplingFailure` (`blindDrawer ⊕ blindDrawer`), crashing (`x₀ = 4`, hitting `0` at `t = 4`)
+and abundant (`x₀ = 100`, staying `96`) trajectories remain `BlanketAlike` for ALL `n : Nat`.
+On `WideningWitness` (`widenedAgent ⊕ widenedAgent`), widening `Obs` from `Unit` to `Bool`
+breaks `BlanketAlike` at step `n = 1` between `x₀ = 6` and `x₀ = 100`, enabling `Viability.Kernel`. -/
+theorem hiddenCoupling_blanket_vs_widened :
+    let compBlind := OpenComposition.OpenComponent.compose
+      OpenComposition.HiddenCouplingFailure.blindDrawer
+      OpenComposition.HiddenCouplingFailure.blindDrawer
+    let compWidened := OpenComposition.OpenComponent.compose
+      OpenComposition.WideningWitness.widenedAgent
+      OpenComposition.WideningWitness.widenedAgent
+    (∀ n, (closedBlanketLaw compBlind (fun _ => ((), ())) (fun _ _ _ => false)
+        OpenComposition.HiddenCouplingFailure.sharedG (fun _ _ => 0) () ((), ())).BlanketAlike
+        (closedParts compBlind (fun _ => ((), ())) (fun _ => 4) ((), ()))
+        (closedParts compBlind (fun _ => ((), ())) (fun _ => 100) ((), ())) n) ∧
+    (Law.orbit (fun st => OpenComposition.HiddenCouplingFailure.composedStep st ((), ((), ())))
+      (fun _ => 4, ((), ())) 4).1 () = 0 ∧
+    (Law.orbit (fun st => OpenComposition.HiddenCouplingFailure.composedStep st ((), ((), ())))
+      (fun _ => 100, ((), ())) 4).1 () = 96 ∧
+    ¬ (closedBlanketLaw compWidened
+        (fun x => (Nat.blt (x ()) 8, Nat.blt (x ()) 8))
+        (fun em _ _ => em) OpenComposition.WideningWitness.gShared
+        (fun _ _ => 0) () ((), ())).BlanketAlike
+        (closedParts compWidened (fun x => (Nat.blt (x ()) 8, Nat.blt (x ()) 8)) (fun _ => 6) (true, true))
+        (closedParts compWidened (fun x => (Nat.blt (x ()) 8, Nat.blt (x ()) 8)) (fun _ => 100) (true, true)) 1 := by
+  let compBlind := OpenComposition.OpenComponent.compose
+    OpenComposition.HiddenCouplingFailure.blindDrawer
+    OpenComposition.HiddenCouplingFailure.blindDrawer
+  let compWidened := OpenComposition.OpenComponent.compose
+    OpenComposition.WideningWitness.widenedAgent
+    OpenComposition.WideningWitness.widenedAgent
+  let bBlind := closedBlanketLaw compBlind (fun _ => ((), ())) (fun _ _ _ => false)
+    OpenComposition.HiddenCouplingFailure.sharedG (fun _ _ => 0) () ((), ())
+  have hBlind : ∀ n, bBlind.BlanketAlike
+      (closedParts compBlind (fun _ => ((), ())) (fun _ => 4) ((), ()))
+      (closedParts compBlind (fun _ => ((), ())) (fun _ => 100) ((), ())) n := fun n =>
+    (closedComponent_lumped_blindness compBlind (fun _ => ((), ())) (fun _ _ _ => false)
+      OpenComposition.HiddenCouplingFailure.sharedG (fun _ _ => 0) () ((), ())
+      (fun _ => ()) (fun _ _ _ _ => rfl) rfl ((), ()) n fun _ _ => rfl).1
+  have hCrash : (Law.orbit (fun st => OpenComposition.HiddenCouplingFailure.composedStep st ((), ((), ())))
+      (fun _ => 4, ((), ())) 4).1 () = 0 := by decide
+  have hAbund : (Law.orbit (fun st => OpenComposition.HiddenCouplingFailure.composedStep st ((), ((), ())))
+      (fun _ => 100, ((), ())) 4).1 () = 96 := by decide
+  have hNot : ¬ (closedBlanketLaw compWidened
+      (fun x => (Nat.blt (x ()) 8, Nat.blt (x ()) 8))
+      (fun em _ _ => em) OpenComposition.WideningWitness.gShared
+      (fun _ _ => 0) () ((), ())).BlanketAlike
+      (closedParts compWidened (fun x => (Nat.blt (x ()) 8, Nat.blt (x ()) 8)) (fun _ => 6) (true, true))
+      (closedParts compWidened (fun x => (Nat.blt (x ()) 8, Nat.blt (x ()) 8)) (fun _ => 100) (true, true)) 1 := by
+    intro hAl
+    have hSens := (hAl 0 (Nat.zero_lt_one)).1
+    exact Bool.noConfusion (congrArg Prod.fst hSens)
+  exact ⟨hBlind, hCrash, hAbund, hNot⟩
+
+end OpenCompositionBridge
 
 end BlanketCouplings
 

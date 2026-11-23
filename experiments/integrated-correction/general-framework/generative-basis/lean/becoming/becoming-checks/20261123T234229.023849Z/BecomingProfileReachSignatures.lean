@@ -1,0 +1,17 @@
+import Becoming.ProfileReach
+#check @Becoming.ProfileReach.selfSignificance_reaches_at_least_as_connected
+#check @Becoming.ProfileReach.strict_indexed_rival_inconsistent
+#check @Becoming.ProfileReach.chain_preserves
+#check @Becoming.ProfileReach.tolerant_iff_neutral
+#check @Becoming.ProfileReach.reach_relations_iff
+#check @Becoming.ProfileReach.selfSignificance_valuation
+#check @Becoming.ProfileReach.tolerant_chain_reaches
+#check @Becoming.ProfileReach.reach_is_livingSignificance
+#check @Becoming.ProfileReach.selfSignificance_derives_reachable_livingSignificance
+#check @Becoming.ProfileReach.formed_other_has_significance
+#check @Becoming.ProfileReach.threshold_selfSignificance
+#check @Becoming.ProfileReach.threshold_rival_is_consistent_without_tolerance
+#check @Becoming.ProfileReach.tolerant_standpoint_reaches_stranger
+#check @Becoming.ProfileReach.present_aim_evaluator_escapes
+#check @Becoming.ProfileReach.closed_self_blocks_reach
+#check @Becoming.ProfileReach.persistence_rival_escapes_self_transcendence

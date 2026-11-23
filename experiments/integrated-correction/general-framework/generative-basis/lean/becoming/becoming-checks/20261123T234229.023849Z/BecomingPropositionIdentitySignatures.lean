@@ -1,0 +1,13 @@
+import Becoming.PropositionIdentity
+#check @Becoming.PropositionIdentity.lumped_iff
+#check @Becoming.PropositionIdentity.extensional_iff_lumped
+#check @Becoming.PropositionIdentity.lumped_of_extensional
+#check @Becoming.PropositionIdentity.Formula.eval_congr
+#check @Becoming.PropositionIdentity.Formula.read_congr
+#check @Becoming.PropositionIdentity.byName_lumped_iff
+#check @Becoming.PropositionIdentity.lumped_of_byName
+#check @Becoming.PropositionIdentity.iff_witness_unique
+#check @Becoming.PropositionIdentity.derivation_unique
+#check @Becoming.PropositionIdentity.two_equivalences
+#check @Becoming.PropositionIdentity.transport_const
+#check @Becoming.PropositionIdentity.transport_refl

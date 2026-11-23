@@ -1,0 +1,88 @@
+@Becoming.StrictTransport.strict_above_trans : ∀ {H : Type u_1} {Le : H → H → Prop},
+  Becoming.StrictTransport.Transitive Le →
+    ∀ {baseline original improved : H},
+      Becoming.StrictTransport.Strict Le baseline original →
+        Le original improved → Becoming.StrictTransport.Strict Le baseline improved
+@Becoming.StrictTransport.strict_below_trans : ∀ {H : Type u_1} {Le : H → H → Prop},
+  Becoming.StrictTransport.Transitive Le →
+    ∀ {baseline original worsened : H},
+      Becoming.StrictTransport.Strict Le original baseline →
+        Le worsened original → Becoming.StrictTransport.Strict Le worsened baseline
+@Becoming.StrictTransport.strict_above_of_compatible : ∀ {H : Type u_1} {Le NoWorse : H → H → Prop},
+  Becoming.StrictTransport.Transitive Le →
+    Becoming.StrictTransport.Compatible NoWorse Le →
+      ∀ {baseline original reduced : H},
+        Becoming.StrictTransport.Strict Le baseline original →
+          NoWorse original reduced → Becoming.StrictTransport.Strict Le baseline reduced
+@Becoming.StrictTransport.strict_below_of_compatible : ∀ {H : Type u_1} {Le NoWorse : H → H → Prop},
+  Becoming.StrictTransport.Transitive Le →
+    Becoming.StrictTransport.Compatible NoWorse Le →
+      ∀ {baseline original increased : H},
+        Becoming.StrictTransport.Strict Le original baseline →
+          NoWorse increased original → Becoming.StrictTransport.Strict Le increased baseline
+@Becoming.StrictTransport.reason_of_strict_above : ∀ {H : Type u_1} {O : Type u_2} {Le : H → H → Prop}
+  {feasible : O → Prop} {realize : O → H} {Reason : O → O → Prop},
+  Becoming.StrictTransport.Transitive Le →
+    Becoming.StrictTransport.SuppliesReason Le feasible realize Reason →
+      ∀ {baseline original improved : O},
+        feasible baseline →
+          feasible improved →
+            Becoming.StrictTransport.Strict Le (realize baseline) (realize original) →
+              Le (realize original) (realize improved) → Reason baseline improved
+@Becoming.StrictTransport.strict_iff_of_faithful : ∀ {H : Type u_1} {J : Type u_2} {Le : H → H → Prop}
+  {Le' : J → J → Prop} (f : H → J),
+  (∀ (a b : H), Le' (f a) (f b) ↔ Le a b) →
+    ∀ (a b : H), Becoming.StrictTransport.Strict Le' (f a) (f b) ↔ Becoming.StrictTransport.Strict Le a b
+@Becoming.StrictTransport.strict_above_along : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {Le : S → S → Prop},
+  Becoming.StrictTransport.Transitive Le →
+    Becoming.StrictTransport.Compatible (fun s t => ∀ (c : C), F.realized s c → F.realized t c) Le →
+      ∀ (r : Becoming.Run F.P) {baseline : S},
+        Becoming.StrictTransport.Strict Le baseline (r.state 0) →
+          (∀ (n : Nat) (c : C), F.realized (r.state n) c → F.realized (r.state (n + 1)) c) →
+            ∀ (n : Nat), Becoming.StrictTransport.Strict Le baseline (r.state n)
+@Becoming.StrictTransport.strict_below_along : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {Le : S → S → Prop},
+  Becoming.StrictTransport.Transitive Le →
+    Becoming.StrictTransport.Compatible (fun s t => ∀ (c : C), F.realized s c → F.realized t c) Le →
+      ∀ (r : Becoming.Run F.P) {baseline : S},
+        Becoming.StrictTransport.Strict Le (r.state 0) baseline →
+          (∀ (n : Nat) (c : C), F.realized (r.state (n + 1)) c → F.realized (r.state n) c) →
+            ∀ (n : Nat), Becoming.StrictTransport.Strict Le (r.state n) baseline
+Becoming.StrictTransport.cutoff_transitive : ∀ (k : Nat),
+  Becoming.StrictTransport.Transitive (Becoming.StrictTransport.Cutoff k)
+Becoming.StrictTransport.shorter_interruption_no_worse : ∀ (k n m : Nat),
+  m ≤ n →
+    Becoming.StrictTransport.Cutoff k (Becoming.StrictTransport.Route.repair n)
+      (Becoming.StrictTransport.Route.repair m)
+Becoming.StrictTransport.cutoff_priority_iff : ∀ (k n : Nat),
+  Becoming.StrictTransport.Strict (Becoming.StrictTransport.Cutoff k) Becoming.StrictTransport.Route.finish
+      (Becoming.StrictTransport.Route.repair n) ↔
+    n < k
+Becoming.StrictTransport.cutoff_rejection_iff : ∀ (k n : Nat),
+  Becoming.StrictTransport.Strict (Becoming.StrictTransport.Cutoff k) (Becoming.StrictTransport.Route.repair n)
+      Becoming.StrictTransport.Route.finish ↔
+    k < n
+Becoming.StrictTransport.cutoffs_disagree : Becoming.StrictTransport.Strict (Becoming.StrictTransport.Cutoff 2)
+    (Becoming.StrictTransport.Route.repair 4) Becoming.StrictTransport.Route.finish ∧
+  Becoming.StrictTransport.Strict (Becoming.StrictTransport.Cutoff 6) Becoming.StrictTransport.Route.finish
+    (Becoming.StrictTransport.Route.repair 4)
+Becoming.StrictTransport.anchor_licenses_no_longer_repair : Becoming.StrictTransport.Strict
+    (Becoming.StrictTransport.Cutoff 2) Becoming.StrictTransport.Route.finish
+    (Becoming.StrictTransport.Route.repair 1) ∧
+  Becoming.StrictTransport.Strict (Becoming.StrictTransport.Cutoff 2) (Becoming.StrictTransport.Route.repair 4)
+    Becoming.StrictTransport.Route.finish
+Becoming.StrictTransport.continuation_first_transitive : Becoming.StrictTransport.Transitive
+  Becoming.StrictTransport.ContinuationFirst
+Becoming.StrictTransport.continuation_first_prefers_shorter : ∀ (n m : Nat),
+  m < n →
+    Becoming.StrictTransport.Strict Becoming.StrictTransport.ContinuationFirst (Becoming.StrictTransport.Route.repair n)
+      (Becoming.StrictTransport.Route.repair m)
+Becoming.StrictTransport.continuation_first_above_every : ∀ (n : Nat),
+  Becoming.StrictTransport.Strict Becoming.StrictTransport.ContinuationFirst Becoming.StrictTransport.Route.finish
+    (Becoming.StrictTransport.Route.repair n)
+Becoming.StrictTransport.continuation_first_no_cutoff : ¬∃ k,
+    ∀ (n : Nat),
+      k < n →
+        Becoming.StrictTransport.Strict Becoming.StrictTransport.ContinuationFirst
+          (Becoming.StrictTransport.Route.repair n) Becoming.StrictTransport.Route.finish

@@ -1,0 +1,66 @@
+@Becoming.Flow.exchangeFollows_of_policy : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {obs : F → C → Prop} {g : F} [DecidableEq F],
+  (∀ (t : Nat), L.present t = L'.present t) →
+    L.PolicyThrough W L' W' obs g → L.OthersFixed W L' obs g → L.ExchangeFollows W L' W' obs g
+@Becoming.Flow.policy_keeps_difference : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {obs : F → C → Prop} {g : F} [DecidableEq F] [DecidableEq C] {c : C} {d : Nat},
+  (∀ (t : Nat) (e : C), W.CoupledInto obs g e → L.BalancesOn W [e] t) →
+    (∀ (t : Nat) (e : C), W.CoupledInto obs g e → L'.BalancesOn W' [e] t) →
+      (∀ (t : Nat), L.present t = L'.present t) →
+        L.PolicyThrough W L' W' obs g →
+          L.OthersFixed W L' obs g →
+            W.DependsOn g c →
+              ¬obs g c →
+                W'.level 0 c = W.level 0 c + d →
+                  (∀ (e : C), W.CoupledInto obs g e → e ≠ c → W.level 0 e = W'.level 0 e) →
+                    (∀ (t : Nat), W.Supported t g) →
+                      ∀ (t : Nat), W'.level t c = W.level t c + d ∧ W.AlikeThrough obs g W.level W'.level t
+@Becoming.Flow.policy_uses_after_failure : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {obs : F → C → Prop} {g : F} [DecidableEq F],
+  (∀ (t : Nat) (e : C), W.CoupledInto obs g e → L.BalancesOn W [e] t) →
+    (∀ (t : Nat) (e : C), W.CoupledInto obs g e → L'.BalancesOn W' [e] t) →
+      (∀ (t : Nat), L.present t = L'.present t) →
+        L.PolicyThrough W L' W' obs g →
+          L.OthersFixed W L' obs g →
+            (∀ (e : C), W.CoupledInto obs g e → W.level 0 e ≤ W'.level 0 e) →
+              (∀ (e : C), obs g e → W.level 0 e = W'.level 0 e) →
+                ∀ {t : Nat} {e : C},
+                  W.CoupledInto obs g e →
+                    W'.level t e + W.level 0 e ≠ W.level t e + W'.level 0 e → ¬∀ (s : Nat), s < t → W.Supported s g
+@Becoming.Web.le_raise : ∀ {F C : Type} {W : Becoming.Web F C} [inst : DecidableEq C] (c : C) (d t : Nat) (e : C),
+  W.level t e ≤ (W.raise c d).level t e
+@Becoming.Web.Supported.raise : ∀ {F C : Type} {W : Becoming.Web F C} {g : F} [inst : DecidableEq C] {t : Nat},
+  W.Supported t g → ∀ (c : C) (d : Nat), (W.raise c d).Supported t g
+@Becoming.Web.raise_other : ∀ {F C : Type} {W : Becoming.Web F C} [inst : DecidableEq C] {c e : C},
+  e ≠ c → ∀ (d t : Nat), (W.raise c d).level t e = W.level t e
+@Becoming.Web.alikeThrough_raise : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  [inst : DecidableEq C] {c : C},
+  ¬obs g c → ∀ (d : Nat) {t : Nat}, W.Supported t g → W.AlikeThrough obs g W.level (W.raise c d).level t
+@Becoming.Web.observed_raise_couples : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  [inst : DecidableEq C] {c : C},
+  obs g c → ∀ {d : Nat}, 0 < d → ∀ (t : Nat), ¬W.AlikeThrough obs g W.level (W.raise c d).level t
+@Becoming.Web.need_le_needUpTo : ∀ {F C : Type} {W : Becoming.Web F C} (g : F) (c : C) {s u : Nat},
+  s ≤ u → W.need s g c ≤ Becoming.Web.needUpTo g c u
+@Becoming.Web.Dependent.raise : ∀ {F C : Type} {W : Becoming.Web F C} [inst : DecidableEq C],
+  W.Dependent → ∀ (c : C) (d : Nat), (W.raise c d).Dependent
+@Becoming.Web.break_not_bounded : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  [inst : DecidableEq C] {c : C},
+  ¬obs g c →
+    ∀ (u : Nat),
+      (∀ (s : Nat), s ≤ u → ∀ (e : C), e ≠ c → W.requires s g e → W.need s g e ≤ W.level s e) →
+        ∃ d,
+          (∀ (s : Nat), s ≤ u → (W.raise c d).Supported s g) ∧
+            ∀ (t : Nat), W.Supported t g → W.AlikeThrough obs g W.level (W.raise c d).level t
+@Becoming.Flow.BalancesOn.raise : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} [inst : DecidableEq C]
+  {cs : List C} {t : Nat}, L.BalancesOn W cs t → ∀ (c : C) (d : Nat), L.BalancesOn (W.raise c d) cs t
+Becoming.SupportDrawn.break_uncoupled : ¬(Becoming.SupportDrawn.web Becoming.SupportDrawn.lowerLevel).Supported 2 () ∧
+  ∃ d,
+    ((Becoming.SupportDrawn.web Becoming.SupportDrawn.lowerLevel).raise () d).Supported 2 () ∧
+      (∀ (t : Nat),
+          (Becoming.SupportDrawn.web Becoming.SupportDrawn.lowerLevel).Supported t () →
+            (Becoming.SupportDrawn.web Becoming.SupportDrawn.lowerLevel).AlikeThrough Becoming.thresholdOnly ()
+              (Becoming.SupportDrawn.web Becoming.SupportDrawn.lowerLevel).level
+              ((Becoming.SupportDrawn.web Becoming.SupportDrawn.lowerLevel).raise () d).level t) ∧
+        ∀ (t : Nat),
+          (Becoming.SupportDrawn.flow Becoming.SupportDrawn.lowerDraw).BalancesOn
+            ((Becoming.SupportDrawn.web Becoming.SupportDrawn.lowerLevel).raise () d) [()] t

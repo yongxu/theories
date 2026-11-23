@@ -1,6 +1,7 @@
 import Becoming.ProjectedLaws
 import Becoming.Viability
 import Becoming.Tower
+import Becoming.CoreHelpers
 
 /-!
 # Multi-scale viability: lax `(π, σ)` simulations and tower composition
@@ -36,32 +37,16 @@ universe u v w z
 /-- Absolute difference on `Nat`. -/
 def distNat (x y : Nat) : Nat := (x - y) + (y - x)
 
-theorem sub_self_nat : ∀ x : Nat, x - x = 0
-  | 0 => rfl
-  | x + 1 => (Nat.succ_sub_succ x x).trans (sub_self_nat x)
-
 theorem distNat_self (x : Nat) : distNat x x = 0 := by
   unfold distNat
-  rw [sub_self_nat]
+  rw [sub_eq_zero_of_le (Nat.le_refl x)]
 
 theorem distNat_symm (x y : Nat) : distNat x y = distNat y x :=
   Nat.add_comm (x - y) (y - x)
 
-theorem le_sub_add_nat (a b : Nat) : a ≤ (a - b) + b :=
-  match Nat.le_total a b with
-  | .inl le => Nat.le_trans le (Nat.le_add_left b (a - b))
-  | .inr ge => Nat.le_of_eq (Naturals.sub_add_cancel ge).symm
-
-theorem sub_le_add_sub_nat (a b c : Nat) : a - c ≤ (a - b) + (b - c) :=
-  Naturals.sub_le_of_le_add
-    (Nat.le_trans (le_sub_add_nat a b)
-      (Nat.le_trans (Nat.add_le_add_left (le_sub_add_nat b c) (a - b))
-        (Nat.le_of_eq ((Nat.add_assoc (a - b) (b - c) c).symm.trans
-          (Nat.add_comm ((a - b) + (b - c)) c)))))
-
 theorem distNat_tri (x y z : Nat) : distNat x z ≤ distNat x y + distNat y z :=
   Nat.le_trans
-    (Nat.add_le_add (sub_le_add_sub_nat x y z) (sub_le_add_sub_nat z y x))
+    (Nat.add_le_add (CoreHelpers.sub_le_add_sub_nat x y z) (CoreHelpers.sub_le_add_sub_nat z y x))
     (Nat.le_of_eq (Naturals.add_regroup (x - y) (y - z) (z - y) (y - x)))
 
 theorem distNat_add_one (x y : Nat) : distNat (x + 1) y ≤ distNat x y + 1 :=
@@ -99,6 +84,15 @@ def SlackDist.pullback {Q : Type u} {R : Type v} (f : Q → R) (M : SlackDist R)
   d x y := M.d (f x) (f y)
   refl x := M.refl (f x)
   tri x y z := M.tri (f x) (f y) (f z)
+
+/-- Canonical one-sided drawdown slack distance on `Nat`: `d x y = y - x`
+    (how far `x` has dropped below `y`). Needs no symmetry; `tri` is `CoreHelpers.sub_le_add_sub_nat`. -/
+def SlackDist.drop : SlackDist Nat where
+  d x y := y - x
+  refl x := sub_eq_zero_of_le (Nat.le_refl x)
+  tri x y z :=
+    Nat.le_trans (CoreHelpers.sub_le_add_sub_nat z y x)
+      (Nat.add_comm (z - y) (y - x) ▸ Nat.le_refl _)
 
 /-! ## Strict-sampling and trace-splitting helpers -/
 
@@ -221,7 +215,7 @@ theorem advance_blocks {S : Type u} {A : Type v} {Q : Type w} {B : Type z}
         sim.EpochQ (j₀ + m) q_m ∧
         M.d (π u) q_m ≤ slack sim.α sim.ε m r
   | 0, j₀, s, q, _, w, t, epS, epQ, d_le, _, tr =>
-    ⟨s, w, [], q, (congrArg (w.length + ·) (sub_self_nat (σ j₀))).trans (Nat.add_zero w.length),
+    ⟨s, w, [], q, (congrArg (w.length + ·) (sub_eq_zero_of_le (Nat.le_refl (σ j₀)))).trans (Nat.add_zero w.length),
       rfl, .nil q, tr, epS, epQ, d_le⟩
   | m + 1, j₀, s, q, r, w, t, epS, epQ, d_le, len_ge, tr =>
     have h_j0_le_j1 : σ j₀ ≤ σ (j₀ + 1) := Nat.le_of_lt (sim.strict j₀)
@@ -700,102 +694,305 @@ def towerSim {F C : Type} [DecidableEq F] (T : Tower F C)
 
 end LaxSim
 
+/-! ## Tower flow-stock instantiation of `LaxSim` and `TowerSimPack` -/
+
+/-- Constructive largest `k ≤ t` with `σ k ≤ t` (returns `0` if `t < σ 0`). -/
+def coarsenAux (σ : Nat → Nat) (t : Nat) : Nat → Nat
+  | 0 => 0
+  | k + 1 => if σ (k + 1) ≤ t then k + 1 else coarsenAux σ t k
+
+def coarsenIndex (σ : Nat → Nat) (t : Nat) : Nat := coarsenAux σ t t
+
+private theorem coarsenAux_eq {σ : Nat → Nat} (strict : Strict σ) {k t : Nat}
+    (hle : σ k ≤ t) (hlt : t < σ (k + 1)) : ∀ n, k ≤ n → coarsenAux σ t n = k
+  | 0, hk => (Nat.le_zero.mp hk).symm ▸ rfl
+  | n + 1, hk =>
+    match Nat.eq_or_lt_of_le hk with
+    | .inl eq => by
+      subst eq
+      change (if σ (n + 1) ≤ t then n + 1 else coarsenAux σ t n) = n + 1
+      exact CoreHelpers.ite_pos' hle
+    | .inr lt => by
+      have hk_le : k + 1 ≤ n + 1 := lt
+      have hgt : t < σ (n + 1) := Nat.lt_of_lt_of_le hlt (strict_mono_le strict hk_le)
+      change (if σ (n + 1) ≤ t then n + 1 else coarsenAux σ t n) = k
+      rw [CoreHelpers.ite_neg' (Nat.not_le_of_gt hgt)]
+      exact coarsenAux_eq strict hle hlt n (Nat.le_of_lt_succ lt)
+
+theorem coarsenIndex_eq {σ : Nat → Nat} (strict : Strict σ) {k t : Nat}
+    (hle : σ k ≤ t) (hlt : t < σ (k + 1)) : coarsenIndex σ t = k :=
+  coarsenAux_eq strict hle hlt t (Nat.le_trans (strict.le_self k) hle)
+
+theorem coarsenIndex_sample {σ : Nat → Nat} (strict : Strict σ) (k : Nat) :
+    coarsenIndex σ (σ k) = k :=
+  coarsenIndex_eq strict (Nat.le_refl _) (strict k)
+
+/-- Every level of a `Tower` automatically lists each relatum once (`Flow.sample_once`). -/
+theorem Tower.flow_once {F C : Type} [DecidableEq F] (T : Tower F C) (n : Nat) :
+    (T.flow n).Once :=
+  T.flow_sample n ▸ Flow.sample_once (T.refine n)
+
+/-- Coarse uptake on `cs` at level `n` equals summed fine uptake across `span (T.refine n) k`. -/
+theorem Tower.uptake_sample {F C : Type} [DecidableEq F] (T : Tower F C) (cs : List C)
+    (n k : Nat) :
+    (T.flow n).uptake cs k = total (span (T.refine n) k) ((T.flow (n + 1)).uptake cs) := by
+  change total cs ((T.flow n).taken k) =
+    total (span (T.refine n) k) (fun j => total cs ((T.flow (n + 1)).taken j))
+  rw [T.flow_sample n]
+  have hswap : total cs (fun c => total (span (T.refine n) k) (fun j => (T.flow (n + 1)).taken j c)) =
+      total (span (T.refine n) k) (fun j => total cs ((T.flow (n + 1)).taken j)) :=
+    total_swap (fun c j => (T.flow (n + 1)).taken j c) (span (T.refine n) k) cs
+  refine (total_congr_on (as := cs) fun c _ => ?_).trans hswap
+  exact Flow.sample_taken (T.refine n) (T.flow_once (n + 1)) k c
+
+private theorem sub_add_sub_cancel {a b c : Nat} (hab : a ≤ b) (hbc : b ≤ c) :
+    (b - a) + (c - b) = c - a := by
+  apply add_right_cancel a
+  calc ((b - a) + (c - b)) + a
+      = (b - a) + ((c - b) + a) := Nat.add_assoc _ _ _
+    _ = ((c - b) + a) + (b - a) := Nat.add_comm _ _
+    _ = (c - b) + (a + (b - a)) := Nat.add_assoc _ _ _
+    _ = (c - b) + b := congrArg ((c - b) + ·) (add_sub_of_le hab)
+    _ = b + (c - b) := Nat.add_comm _ _
+    _ = c := add_sub_of_le hbc
+    _ = a + (c - a) := (add_sub_of_le (Nat.le_trans hab hbc)).symm
+    _ = (c - a) + a := Nat.add_comm _ _
+
+private theorem total_span_steps (q : Nat → Nat) {σ : Nat → Nat} (strict : Strict σ) :
+    ∀ n T, total (steps T n) (fun j => total (span σ j) q) =
+      total (steps (σ T) (σ (T + n) - σ T)) q
+  | 0, T => (congrArg (fun k => total (steps (σ T) k) q)
+      (sub_eq_zero_of_le (Nat.le_refl (σ T)))).symm
+  | n + 1, T => by
+    have hT : σ T ≤ σ (T + 1) := Nat.le_of_lt (strict T)
+    have hTn : σ (T + 1) ≤ σ (T + (n + 1)) :=
+      strict_mono_le strict (Nat.succ_le_succ (Nat.le_add_right T n))
+    have split := sub_add_sub_cancel hT hTn
+    have ih := total_span_steps q strict n (T + 1)
+    have shift : T + 1 + n = T + (n + 1) := Nat.add_right_comm T 1 n
+    rw [shift] at ih
+    calc total (steps T (n + 1)) (fun j => total (span σ j) q)
+        = total (span σ T) q + total (steps (T + 1) n) (fun j => total (span σ j) q) := rfl
+      _ = total (steps (σ T) (σ (T + 1) - σ T)) q +
+            total (steps (σ (T + 1)) (σ (T + (n + 1)) - σ (T + 1))) q :=
+          congrArg (total (span σ T) q + ·) ih
+      _ = total (steps (σ T) (σ (T + 1) - σ T)) q +
+            total (steps (σ T + (σ (T + 1) - σ T)) (σ (T + (n + 1)) - σ (T + 1))) q := by
+          rw [add_sub_of_le hT]
+      _ = total (steps (σ T) ((σ (T + 1) - σ T) + (σ (T + (n + 1)) - σ (T + 1)))) q :=
+          (total_steps_add q (σ T) _ _).symm
+      _ = total (steps (σ T) (σ (T + (n + 1)) - σ T)) q :=
+          congrArg (fun m => total (steps (σ T) m) q) split
+
+private theorem total_span_comp (q : Nat → Nat) {σ τ : Nat → Nat}
+    (strictσ : Strict σ) (strictτ : Strict τ) (k : Nat) :
+    total (span (fun s => σ (τ s)) k) q = total (span τ k) (fun j => total (span σ j) q) := by
+  unfold span
+  have h := (total_span_steps q strictσ (τ (k + 1) - τ k) (τ k)).symm
+  rwa [add_sub_of_le (Nat.le_of_lt (strictτ k))] at h
+
+/-- Coarsest level-0 uptake on `cs` equals summed fine uptake across `span (T.reads (n + 1)) k`. -/
+theorem Tower.uptake_reads {F C : Type} [DecidableEq F] (T : Tower F C) (cs : List C)
+    (n k : Nat) :
+    (T.flow 0).uptake cs k = total (span (T.reads (n + 1)) k) ((T.flow (n + 1)).uptake cs) := by
+  induction n with
+  | zero => exact T.uptake_sample cs 0 k
+  | succ n ih =>
+    calc (T.flow 0).uptake cs k
+        = total (span (T.reads (n + 1)) k) ((T.flow (n + 1)).uptake cs) := ih
+      _ = total (span (T.reads (n + 1)) k)
+            (fun j => total (span (T.refine (n + 1)) j) ((T.flow (n + 2)).uptake cs)) :=
+          total_congr_on fun j _ => T.uptake_sample cs (n + 1) j
+      _ = total (span (T.reads (n + 2)) k) ((T.flow (n + 2)).uptake cs) :=
+          (total_span_comp ((T.flow (n + 2)).uptake cs)
+            (T.strict (n + 1)) (T.reads_strict (n + 1)) k).symm
+
+/-- Time-and-stock process at level `n` of a `Tower` for condition family `cs`. -/
+def towerProcess {F C : Type} [DecidableEq F] (T : Tower F C) (cs : List C) (n : Nat) :
+    Process (Nat × Nat) Unit :=
+  ⟨fun s _ s' => s'.1 = s.1 + 1 ∧ s'.2 = (T.web n).stock cs (s.1 + 1)⟩
+
+private theorem towerProcess_trace {F C : Type} [DecidableEq F] (T : Tower F C) (cs : List C)
+    (n : Nat) :
+    ∀ {w : List Unit} {t₀ : Nat} {s s' : Nat × Nat},
+      s = (t₀, (T.web n).stock cs t₀) →
+      Trace (towerProcess T cs n) s w s' →
+      s' = (t₀ + w.length, (T.web n).stock cs (t₀ + w.length))
+  | [], _, _, _, ep, .nil _ => ep
+  | _ :: rest, t₀, _, _, ep, .cons step tr => by
+    obtain ⟨h1, h2⟩ := step
+    subst ep
+    have ep' : _ = (t₀ + 1, (T.web n).stock cs (t₀ + 1)) := Prod.ext h1 h2
+    have htr := towerProcess_trace T cs n ep' tr
+    rwa [Nat.add_right_comm t₀ 1 rest.length] at htr
+
+private theorem total_steps_mono (q : Nat → Nat) {T m N : Nat} (hle : m ≤ N) :
+    total (steps T m) q ≤ total (steps T N) q := by
+  have heq : m + (N - m) = N := add_sub_of_le hle
+  rw [← heq, total_steps_add q T m (N - m)]
+  exact Nat.le_add_right _ _
+
+/-- Adjacent-level projection coarsening time via `T.refine n` while preserving stock verbatim. -/
+def towerProj {F C : Type} [DecidableEq F] (T : Tower F C) (n : Nat) (s : Nat × Nat) : Nat × Nat :=
+  (coarsenIndex (T.refine n) s.1, s.2)
+
+/-- Canonical stock-drop slack metric on `Nat × Nat`. -/
+def towerDropDist : SlackDist (Nat × Nat) :=
+  SlackDist.pullback Prod.snd SlackDist.drop
+
+private def towerSimToLevel {F C : Type} [DecidableEq F] (T : Tower F C) (cs : List C)
+    (n m : Nat) (σ : Nat → Nat) (strict : Strict σ)
+    (web_eq : T.web m = (T.web (n + 1)).sample σ)
+    (uptake_eq : ∀ k, (T.flow m).uptake cs k = total (span σ k) ((T.flow (n + 1)).uptake cs))
+    (bal : (T.flow (n + 1)).Balances (T.web (n + 1)))
+    (η : Nat) (uptakeBound : ∀ k, (T.flow m).uptake cs k ≤ η) :
+    LaxSim (towerProcess T cs (n + 1)) (towerProcess T cs m)
+      (fun s => (coarsenIndex σ s.1, s.2)) σ towerDropDist where
+  strict := strict
+  Epoch t s := s = (t, (T.web (n + 1)).stock cs t)
+  EpochQ k q := q = (k, (T.web m).stock cs k)
+  epoch_step t s a s' ep step := by
+    obtain ⟨h1, h2⟩ := step
+    subst ep
+    exact Prod.ext h1 h2
+  epoch_proj k s ep := by
+    subst ep
+    have hstock : (T.web (n + 1)).stock cs (σ k) = (T.web m).stock cs k := by
+      rw [web_eq]; rfl
+    exact Prod.ext (coarsenIndex_sample strict k) hstock
+  α _ := 0
+  β := id
+  α_mono _ := Nat.le_refl 0
+  β_mono le := le
+  β_ge_id _ := Nat.le_refl _
+  ε := 0
+  η := η
+  sim_block k s q r w s' ep epQ _ w_len tr := by
+    have hlen : σ k + w.length = σ (k + 1) :=
+      w_len.symm ▸ add_sub_of_le (Nat.le_of_lt (strict k))
+    have hs' := hlen ▸ towerProcess_trace T cs (n + 1) ep tr
+    refine ⟨(), (k + 1, (T.web m).stock cs (k + 1)), ?_, rfl, ?_⟩
+    · subst epQ; exact ⟨rfl, rfl⟩
+    have hstock : (T.web (n + 1)).stock cs (σ (k + 1)) = (T.web m).stock cs (k + 1) := by
+      rw [web_eq]; rfl
+    change (T.web m).stock cs (k + 1) - s'.2 ≤ 0
+    rw [hs', hstock, sub_eq_zero_of_le (Nat.le_refl _)]
+    exact Nat.le_refl 0
+  excursion k s q r w₁ u ep epQ _ w₁_lt tr := by
+    have hu := towerProcess_trace T cs (n + 1) ep tr
+    have hstock : (T.web m).stock cs k = (T.web (n + 1)).stock cs (σ k) := by
+      rw [web_eq]; rfl
+    have hacc := bal.accumulates cs (σ k) w₁.length
+    have hle : (T.web (n + 1)).stock cs (σ k) ≤
+        (T.web (n + 1)).stock cs (σ k + w₁.length) + total (steps (σ k) w₁.length) ((T.flow (n + 1)).uptake cs) :=
+      Nat.le_trans (Nat.le_add_right _ _) (Nat.le_of_eq hacc.symm)
+    have hdrop : (T.web (n + 1)).stock cs (σ k) - (T.web (n + 1)).stock cs (σ k + w₁.length) ≤
+        total (steps (σ k) w₁.length) ((T.flow (n + 1)).uptake cs) :=
+      Naturals.sub_le_of_le_add hle
+    have hmono : total (steps (σ k) w₁.length) ((T.flow (n + 1)).uptake cs) ≤ (T.flow m).uptake cs k := by
+      rw [uptake_eq k]
+      exact total_steps_mono ((T.flow (n + 1)).uptake cs) (Nat.le_of_lt w₁_lt)
+    change q.2 - u.2 ≤ id r + η
+    rw [epQ, hu, hstock]
+    exact Nat.le_trans hdrop (Nat.le_trans hmono (Nat.le_trans (uptakeBound k) (Nat.le_add_left η r)))
+
+/-- **Adjacent-level `LaxSim` on any balanced `Tower`**: transfers level `n + 1` to level `n`
+    along `T.refine n` with `α := fun _ => 0`, `ε := 0`, `β := id`, `η := η` from coarse uptake
+    bound `(T.flow n).uptake cs k ≤ η` (no `Once` or stride-bound premise required). -/
+def towerLevelSim {F C : Type} [DecidableEq F] (T : Tower F C) (cs : List C) (n : Nat)
+    (bal : (T.flow (n + 1)).Balances (T.web (n + 1)))
+    (η : Nat) (uptakeBound : ∀ k, (T.flow n).uptake cs k ≤ η) :
+    LaxSim (towerProcess T cs (n + 1)) (towerProcess T cs n)
+      (towerProj T n) (T.refine n) towerDropDist :=
+  towerSimToLevel T cs n n (T.refine n) (T.strict n) (T.web_sample n) (T.uptake_sample cs n)
+    bal η uptakeBound
+
+/-- **Concrete `TowerSimPack` via `LaxSim.towerSim`** from level `n + 1` to level `0` along `T.reads (n + 1)`. -/
+def towerFlowSimPack {F C : Type} [DecidableEq F] (T : Tower F C) (cs : List C)
+    (bal : ∀ n, (T.flow (n + 1)).Balances (T.web (n + 1)))
+    (η_at : Nat → Nat) (uptakeBound : ∀ n k, (T.flow n).uptake cs k ≤ η_at n)
+    (n : Nat) :
+    LaxSim.TowerSimPack T (fun _ => Nat × Nat) (fun _ => Unit)
+      (towerProcess T cs) (fun _ => towerDropDist)
+      (fun k t s => s = (t, (T.web (k + 1)).stock cs t)) n :=
+  LaxSim.towerSim T (fun _ => Nat × Nat) (fun _ => Unit)
+    (towerProcess T cs) (towerProj T) (fun _ => towerDropDist)
+    (fun k => towerLevelSim T cs k (bal k) (η_at k) (uptakeBound k))
+    (fun _ _ _ h => h) (fun _ => id) (fun _ _ _ le => le) (fun _ _ _ => Nat.le_refl _)
+    (fun _ => 0) (fun _ => Nat.le_refl 0) n
+
+/-- **Scale-invariant direct `LaxSim`** from level `n + 1` to level `0` along `T.reads (n + 1)`
+    with level-independent excursion slack `η := U₀` (mirroring `Tower.changes_within`). -/
+def towerDirectLaxSim {F C : Type} [DecidableEq F] (T : Tower F C) (cs : List C) (n : Nat)
+    (bal : (T.flow (n + 1)).Balances (T.web (n + 1)))
+    (U₀ : Nat) (coarseBound : ∀ k, (T.flow 0).uptake cs k ≤ U₀) :
+    LaxSim (towerProcess T cs (n + 1)) (towerProcess T cs 0)
+      (fun s => (coarsenIndex (T.reads (n + 1)) s.1, s.2)) (T.reads (n + 1)) towerDropDist :=
+  towerSimToLevel T cs n 0 (T.reads (n + 1)) (T.reads_strict (n + 1))
+    (T.web_zero (n + 1)) (T.uptake_reads cs n) bal U₀ coarseBound
+
+private theorem towerProcess_trace_replicate {F C : Type} [DecidableEq F]
+    (T : Tower F C) (cs : List C) (n : Nat) :
+    ∀ (d t₀ : Nat),
+      Trace (towerProcess T cs n) (t₀, (T.web n).stock cs t₀) (List.replicate d ())
+        (t₀ + d, (T.web n).stock cs (t₀ + d))
+  | 0, _ => .nil _
+  | d + 1, t₀ =>
+    .cons ⟨rfl, rfl⟩
+      (Eq.subst (motive := fun x => Trace (towerProcess T cs n)
+          (t₀ + 1, (T.web n).stock cs (t₀ + 1)) (List.replicate d ()) (x, (T.web n).stock cs x))
+        (Nat.add_right_comm t₀ 1 d) (towerProcess_trace_replicate T cs n d (t₀ + 1)))
+
+/-- **Scale-invariant downward viability transfer across a `Tower`** via `lax_kernel_of_kernel`:
+    if level `0` stays at or above `thr + U₀`, then level `n + 1` stays at or above `thr` at every
+    fine step `t ≥ T.reads (n + 1) 0` (independent of refinement depth `n`). -/
+theorem tower_kernel_transfer {F C : Type} [DecidableEq F] (T : Tower F C) (cs : List C) (n : Nat)
+    (bal : (T.flow (n + 1)).Balances (T.web (n + 1)))
+    (thr U₀ : Nat) (coarseBound : ∀ k, (T.flow 0).uptake cs k ≤ U₀)
+    (coarseSafe : ∀ s, thr + U₀ ≤ (T.web 0).stock cs s) :
+    ∀ t, T.reads (n + 1) 0 ≤ t → thr ≤ (T.web (n + 1)).stock cs t := by
+  have kernelQ : Viability.Kernel (towerProcess T cs 0) (fun q => thr + U₀ ≤ q.2)
+      (0, (T.web 0).stock cs 0) := by
+    intro q ⟨w, tr⟩
+    have hq := towerProcess_trace T cs 0 rfl tr
+    rw [hq, Nat.zero_add]
+    exact coarseSafe w.length
+  have hstart : (coarsenIndex (T.reads (n + 1)) (T.reads (n + 1) 0),
+      (T.web (n + 1)).stock cs (T.reads (n + 1) 0)) = (0, (T.web 0).stock cs 0) :=
+    Prod.ext (coarsenIndex_sample (T.reads_strict (n + 1)) 0)
+      (congrArg (fun W : Web F C => W.stock cs 0) (T.web_zero (n + 1)).symm)
+  have kernelS : Viability.Kernel (towerProcess T cs (n + 1)) (fun u => thr ≤ u.2)
+      (T.reads (n + 1) 0, (T.web (n + 1)).stock cs (T.reads (n + 1) 0)) :=
+    lax_kernel_of_kernel (towerDirectLaxSim T cs n bal U₀ coarseBound) 0 (Nat.le_refl 0)
+      (fun q u gq hd => by
+        have h1 : thr + U₀ ≤ q.2 := gq
+        have h2 : q.2 - u.2 ≤ U₀ := Nat.le_trans hd (Nat.le_of_eq (Nat.zero_add U₀))
+        exact le_of_add_le_add_right U₀
+          (Nat.le_trans h1 (Nat.le_trans (CoreHelpers.le_sub_add_nat q.2 u.2)
+            (Nat.le_trans (Nat.add_le_add_right h2 u.2) (Nat.le_of_eq (Nat.add_comm U₀ u.2))))))
+      rfl (hstart ▸ kernelQ)
+  intro t ht
+  have heq : T.reads (n + 1) 0 + (t - T.reads (n + 1) 0) = t := add_sub_of_le ht
+  have tr : Trace (towerProcess T cs (n + 1))
+      (T.reads (n + 1) 0, (T.web (n + 1)).stock cs (T.reads (n + 1) 0))
+      (List.replicate (t - T.reads (n + 1) 0) ()) (t, (T.web (n + 1)).stock cs t) :=
+    Eq.subst (motive := fun x => Trace (towerProcess T cs (n + 1))
+        (T.reads (n + 1) 0, (T.web (n + 1)).stock cs (T.reads (n + 1) 0))
+        (List.replicate (t - T.reads (n + 1) 0) ()) (x, (T.web (n + 1)).stock cs x))
+      heq (towerProcess_trace_replicate T cs (n + 1) (t - T.reads (n + 1) 0) (T.reads (n + 1) 0))
+  exact kernelS (t, (T.web (n + 1)).stock cs t) ⟨_, tr⟩
+
 /-! ## Concrete two-scale witness (`WitnessTwoScale`) -/
 
 namespace WitnessTwoScale
 
 /-! ### Arithmetic helpers for `div 2`, `mod 2`, `mod 4`, and `damp` -/
 
-private theorem div_go_irrel (y : Nat) (hy : 0 < y) :
-    ∀ (f₁ : Nat) {f₂ x : Nat} (h₁ : x < f₁) (h₂ : x < f₂),
-      Nat.div.go y hy f₁ x h₁ = Nat.div.go y hy f₂ x h₂
-  | 0, _, _, h₁, _ => absurd h₁ (Nat.not_lt_zero _)
-  | f₁ + 1, 0, _, _, h₂ => absurd h₂ (Nat.not_lt_zero _)
-  | f₁ + 1, f₂ + 1, x, h₁, h₂ => by
-    rw [Nat.div.go.eq_1, Nat.div.go.eq_1]
-    split
-    · exact congrArg (· + 1) (div_go_irrel y hy f₁ _ _)
-    · rfl
+private theorem div2_add2 (n : Nat) : (n + 2) / 2 = n / 2 + 1 := CoreHelpers.div_add_self 2 (Nat.succ_pos 1) n
 
-private theorem mod_go_irrel (y : Nat) (hy : 0 < y) :
-    ∀ (f₁ : Nat) {f₂ x : Nat} (h₁ : x < f₁) (h₂ : x < f₂),
-      Nat.modCore.go y hy f₁ x h₁ = Nat.modCore.go y hy f₂ x h₂
-  | 0, _, _, h₁, _ => absurd h₁ (Nat.not_lt_zero _)
-  | f₁ + 1, 0, _, _, h₂ => absurd h₂ (Nat.not_lt_zero _)
-  | f₁ + 1, f₂ + 1, x, h₁, h₂ => by
-    rw [Nat.modCore.go.eq_1, Nat.modCore.go.eq_1]
-    split
-    · exact mod_go_irrel y hy f₁ _ _
-    · rfl
+private theorem mod2_add2 (n : Nat) : (n + 2) % 2 = n % 2 := CoreHelpers.mod_add_self 2 (Nat.succ_pos 1) n
 
-private theorem div_add_self (y : Nat) (hy : 0 < y) (x : Nat) : (x + y) / y = x / y + 1 := by
-  change (x + y).div y = x.div y + 1
-  rw [Nat.div.eq_1 (x + y) y, Nat.div.eq_1 x y]
-  split
-  · rw [Nat.div.go.eq_1]
-    have hle : y ≤ x + y := Nat.le_add_left y x
-    split
-    · have aux : ∀ {z} (eq : z = x) (hz : z < x + y),
-          Nat.div.go y hy (x + y) z hz = Nat.div.go y hy x.succ x (Nat.lt_succ_self x) := by
-        intro z eq hz; cases eq; exact div_go_irrel y hy (x + y) hz (Nat.lt_succ_self x)
-      exact congrArg (· + 1) (aux (Naturals.add_sub_cancel x y) _)
-    · exact absurd hle ‹_›
-  · exact absurd hy ‹_›
-
-private theorem ite_pos' {c : Prop} [h : Decidable c] (hc : c) {α : Sort u} {t e : α} :
-    (if c then t else e) = t :=
-  match h with
-  | isTrue _ => rfl
-  | isFalse hn => absurd hc hn
-
-private theorem ite_neg' {c : Prop} [h : Decidable c] (hc : ¬ c) {α : Sort u} {t e : α} :
-    (if c then t else e) = e :=
-  match h with
-  | isTrue ht => absurd ht hc
-  | isFalse _ => rfl
-
-private theorem dite_pos' {c : Prop} [h : Decidable c] (hc : c) {α : Sort u} {t : c → α} {e : ¬ c → α} :
-    (if hc' : c then t hc' else e hc') = t hc :=
-  match h with
-  | isTrue _ => rfl
-  | isFalse hn => absurd hc hn
-
-private theorem dite_neg' {c : Prop} [h : Decidable c] (hc : ¬ c) {α : Sort u} {t : c → α} {e : ¬ c → α} :
-    (if hc' : c then t hc' else e hc') = e hc :=
-  match h with
-  | isTrue ht => absurd ht hc
-  | isFalse _ => rfl
-
-private theorem mod_add_self (y : Nat) (hy : 0 < y) (x : Nat) : (x + y) % y = x % y := by
-  change (x + y).mod y = x.mod y
-  cases y with
-  | zero => exact absurd hy (Nat.lt_irrefl 0)
-  | succ y' =>
-    have hxy : x + y'.succ = (x + y').succ := rfl
-    rw [hxy, Nat.mod.eq_2]
-    have hle : y'.succ ≤ (x + y').succ := Nat.le_add_left y'.succ x
-    rw [ite_pos' hle, Nat.modCore.eq_1, dite_pos' hy, Nat.modCore.go.eq_1, dite_pos' hle]
-    have aux : ∀ {z} (eq : z = x) (hz : z < (x + y').succ),
-        Nat.modCore.go y'.succ hy (x + y').succ z hz =
-          Nat.modCore.go y'.succ hy x.succ x (Nat.lt_succ_self x) := by
-      intro z eq hz; cases eq; exact mod_go_irrel y'.succ hy (x + y').succ hz (Nat.lt_succ_self x)
-    have hsub : (x + y').succ - y'.succ = x := Naturals.add_sub_cancel x y'.succ
-    rw [aux hsub _]
-    cases x with
-    | zero =>
-      rw [Nat.mod.eq_1, Nat.modCore.go.eq_1]
-      exact dite_neg' (Nat.not_le_of_gt hy)
-    | succ x' =>
-      rw [Nat.mod.eq_2]
-      split
-      · rw [Nat.modCore.eq_1, dite_pos' hy]
-      · rw [Nat.modCore.go.eq_1]; exact dite_neg' ‹_›
-
-private theorem div2_add2 (n : Nat) : (n + 2) / 2 = n / 2 + 1 := div_add_self 2 (Nat.succ_pos 1) n
-
-private theorem mod2_add2 (n : Nat) : (n + 2) % 2 = n % 2 := mod_add_self 2 (Nat.succ_pos 1) n
-
-private theorem mod4_add4 (n : Nat) : (n + 4) % 4 = n % 4 := mod_add_self 4 (Nat.succ_pos 3) n
+private theorem mod4_add4 (n : Nat) : (n + 4) % 4 = n % 4 := CoreHelpers.mod_add_self 4 (Nat.succ_pos 3) n
 
 private theorem div2_rem : ∀ n : Nat, ∃ q r, n = 2 * q + r ∧ r < 2
   | 0 => ⟨0, 0, rfl, Nat.succ_pos 1⟩
@@ -957,31 +1154,10 @@ theorem distNat_div2 (a b : Nat) : distNat (a / 2) (b / 2) ≤ distNat a b := by
       Nat.le_trans (Nat.le_of_eq (sub_eq_zero_of_le (div2_mono le))) (Nat.zero_le _)
     | .inr ge =>
       match Nat.eq_or_lt_of_le ge with
-      | .inl same => Nat.le_trans (Nat.le_of_eq (same ▸ sub_self_nat (x / 2))) (Nat.zero_le _)
+      | .inl same => Nat.le_trans (Nat.le_of_eq (same ▸ sub_eq_zero_of_le (Nat.le_refl (y / 2)))) (Nat.zero_le _)
       | .inr lt =>
         Nat.le_trans (sub_div2_le_half ge) (succ_div2_le_self (x - y) (SupportGated.sub_pos_of_lt lt))
   exact Nat.add_le_add (sub_le a b) (sub_le b a)
-
-private theorem sub_sub_mid {m u v : Nat} (hv : v ≤ m) (le : u ≤ v) : (m - u) - (m - v) = v - u := by
-  apply add_right_cancel (m - v)
-  rw [Naturals.sub_add_cancel (Naturals.sub_antitone m le)]
-  apply add_right_cancel u
-  calc m - u + u
-      = m := Naturals.sub_add_cancel (Nat.le_trans le hv)
-    _ = m - v + v := (Naturals.sub_add_cancel hv).symm
-    _ = m - v + (v - u + u) := congrArg (m - v + ·) (Naturals.sub_add_cancel le).symm
-    _ = m - v + (v - u) + u := (Nat.add_assoc _ _ _).symm
-    _ = (v - u + (m - v)) + u := congrArg (· + u) (Nat.add_comm _ _)
-
-private theorem add_sub_mid {m x y : Nat} (hx : x ≤ m) : (m + y) - (m - x) = x + y := by
-  rw [show m + y = (m - x) + (x + y) by
-    rw [← Nat.add_assoc, Naturals.sub_add_cancel hx]]
-  exact Naturals.add_sub_cancel_left (m - x) (x + y)
-
-private theorem le_of_ble_true : ∀ {a b : Nat}, Nat.ble a b = true → a ≤ b
-  | 0, _, _ => Nat.zero_le _
-  | _ + 1, 0, h => Bool.noConfusion h
-  | _ + 1, _ + 1, h => Nat.succ_le_succ (le_of_ble_true h)
 
 private theorem mod4_succ {a b : Nat} (same : a % 4 = b % 4) : (a + 1) % 4 = (b + 1) % 4 := by
   obtain ⟨qa, ra, ha, hra⟩ := div4_rem a
@@ -1031,14 +1207,14 @@ private theorem damp_le_of_le (mid : Nat) {z : Nat} (le : z ≤ mid) :
   match Nat.eq_or_lt_of_le le with
   | .inl same =>
     subst same
-    rw [ite_neg' (Nat.lt_irrefl _), sub_self_nat]
+    rw [CoreHelpers.ite_neg' (Nat.lt_irrefl _), sub_eq_zero_of_le (Nat.le_refl _)]
     rfl
-  | .inr lt => rw [ite_pos' lt]
+  | .inr lt => rw [CoreHelpers.ite_pos' lt]
 
 private theorem damp_ge_of_ge (mid : Nat) {z : Nat} (ge : mid ≤ z) :
     damp mid z = mid + (z - mid) / 2 := by
   unfold damp
-  rw [ite_neg' (Nat.not_lt_of_ge ge)]
+  rw [CoreHelpers.ite_neg' (Nat.not_lt_of_ge ge)]
 
 private theorem damp_lip_ordered (mid : Nat) {a b : Nat} (le : a ≤ b) :
     distNat (damp mid a) (damp mid b) ≤ (b - a + 1) / 2 := by
@@ -1051,9 +1227,9 @@ private theorem damp_lip_ordered (mid : Nat) {a b : Nat} (le : a ≤ b) :
     have hdivm : (mid - a) / 2 ≤ mid := Nat.le_trans (div2_le_self _) (Nat.sub_le mid a)
     have hda_le_db : mid - (mid - a) / 2 ≤ mid - (mid - b) / 2 := Naturals.sub_antitone mid hdiv
     unfold distNat
-    rw [sub_eq_zero_of_le hda_le_db, Nat.zero_add, sub_sub_mid hdivm hdiv]
+    rw [sub_eq_zero_of_le hda_le_db, Nat.zero_add, CoreHelpers.sub_sub_mid hdivm hdiv]
     exact Nat.le_trans (sub_div2_le_half hsub)
-      (Nat.le_of_eq (congrArg (fun k => (k + 1) / 2) (sub_sub_mid hbm le)))
+      (Nat.le_of_eq (congrArg (fun k => (k + 1) / 2) (CoreHelpers.sub_sub_mid hbm le)))
   | .inr hmb, .inr hma =>
     rw [damp_ge_of_ge mid hma, damp_ge_of_ge mid hmb]
     have hsub : a - mid ≤ b - mid := by
@@ -1088,7 +1264,7 @@ private theorem damp_lip_ordered (mid : Nat) {a b : Nat} (le : a ≤ b) :
     have hda_le_db : mid - (mid - a) / 2 ≤ mid + (b - mid) / 2 :=
       Nat.le_trans (Nat.sub_le mid _) (Nat.le_add_right mid _)
     unfold distNat
-    rw [sub_eq_zero_of_le hda_le_db, Nat.zero_add, add_sub_mid hdm]
+    rw [sub_eq_zero_of_le hda_le_db, Nat.zero_add, CoreHelpers.add_sub_mid hdm]
     have diff_eq : (mid - a) + (b - mid) = b - a := by
       apply add_right_cancel a
       rw [Nat.add_comm (mid - a) (b - mid), Nat.add_assoc (b - mid) (mid - a) a,
@@ -1112,7 +1288,7 @@ private theorem damp40_half_dist : ∀ q : Nat, distNat (damp40 q / 2) (damp20 (
   | .inl lt =>
     have hle : q ≤ 39 := Nat.le_of_lt_succ lt
     have all_ok : (downFrom 39).all (fun k => Nat.ble (distNat (damp40 k / 2) (damp20 (k / 2))) 1) = true := rfl
-    exact le_of_ble_true (ListTests.all_mem all_ok (mem_downFrom hle))
+    exact Nat.le_of_ble_eq_true (ListTests.all_mem all_ok (mem_downFrom hle))
   | .inr ge =>
     obtain ⟨d, hd⟩ := le_dest ge
     subst hd
@@ -1456,7 +1632,7 @@ private theorem margin_two_scale (q : Nat) (u : Nat × Nat) (gq : guardQ₂ q)
   have h12 : 12 ≤ u.1 / 2 :=
     le_of_add_le_add_right 8
       (Nat.le_trans (Nat.le_of_eq (by decide : 12 + 8 = 20))
-        (Nat.le_trans (le_sub_add_nat 20 (u.1 / 2))
+        (Nat.le_trans (CoreHelpers.le_sub_add_nat 20 (u.1 / 2))
           (Nat.le_trans (Nat.add_le_add_right hsub (u.1 / 2))
             (Nat.le_of_eq (Nat.add_comm 8 (u.1 / 2))))))
   obtain ⟨qu, ru, hu, hru⟩ := div2_rem u.1

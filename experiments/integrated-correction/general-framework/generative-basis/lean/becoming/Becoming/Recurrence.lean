@@ -365,12 +365,17 @@ theorem trace_last {x s : S} {as : List A} (path : Trace P x as s) :
       exact .inr ⟨_, _, Reach.refl P _, Eq.subst (motive := fun z => P.step _ _ z) same step⟩
     | .inr ⟨y, a, reach, last⟩ => exact .inr ⟨y, a, (Reach.of_step step).trans reach, last⟩
 
+/-- **Returning is reaching itself along the steps**, under every process: a first step, then
+lying within the closure of the steps (`«及当且仅当一步而所闭»`, `reach_iff_withinClosure`). -/
+theorem returns_iff_reaches {s : S} : Returns P s ↔ «及» (Steps P) s s :=
+  ⟨fun ⟨a, t, step, reach⟩ => «及当且仅当一步而所闭».mpr ⟨t, ⟨a, step⟩, reach_iff_withinClosure.mp reach⟩,
+   fun reach => match «及当且仅当一步而所闭».mp reach with
+    | ⟨t, ⟨a, step⟩, within⟩ => ⟨a, t, step, reach_iff_withinClosure.mpr within⟩⟩
+
 /-- A configuration that returns is had at the next step from a configuration that returns. -/
-theorem Returns.pred {s : S} : Returns P s → ∃ x a, P.step x a s ∧ Returns P x
-  | ⟨a, t, step, _, path⟩ => match trace_last path with
-    | .inl same =>
-      ⟨s, a, Eq.subst (motive := fun z => P.step s a z) same step, a, t, step, _, path⟩
-    | .inr ⟨y, b, reach, last⟩ => ⟨y, b, last, b, s, last, (Reach.of_step step).trans reach⟩
+theorem Returns.pred {s : S} (returns : Returns P s) : ∃ x a, P.step x a s ∧ Returns P x :=
+  match «返则有返前» (returns_iff_reaches.mp returns) with
+  | ⟨x, ⟨a, step⟩, loop⟩ => ⟨x, a, step, returns_iff_reaches.mpr loop⟩
 
 /-- Courses of every length end at a configuration that returns, from configurations that
 return. -/
@@ -385,13 +390,6 @@ theorem Returns.reachable_from {s : S} (returns : Returns P s) :
 theorem Returns.reachable {s : S} (returns : Returns P s) (n : Nat) : Reachable P n s :=
   match returns.reachable_from n with
   | ⟨x, as, len, path, _⟩ => ⟨x, as, len, path⟩
-
-/-- **Returning is reaching itself along the steps**, under every process: a first step, then
-lying within the closure of the steps (`«及当且仅当一步而所闭»`, `reach_iff_withinClosure`). -/
-theorem returns_iff_reaches {s : S} : Returns P s ↔ «及» (Steps P) s s :=
-  ⟨fun ⟨a, t, step, reach⟩ => «及当且仅当一步而所闭».mpr ⟨t, ⟨a, step⟩, reach_iff_withinClosure.mp reach⟩,
-   fun reach => match «及当且仅当一步而所闭».mp reach with
-    | ⟨t, ⟨a, step⟩, within⟩ => ⟨a, t, step, reach_iff_withinClosure.mpr within⟩⟩
 
 /-- **Merging nothing is a fixed predecessor of the steps**, under every process. -/
 theorem lossless_iff_fixedBefore : Lossless P ↔ «定前» (Steps P) :=

@@ -1,0 +1,682 @@
+Becoming.Transactions.accepted_reading_matches : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (faults : Becoming.FaultEnvelopes.Envelope) (w : Becoming.Transactions.Installation)
+  (p : Becoming.Transactions.Request) (reads : Becoming.Transactions.Readings)
+  (bad : List Becoming.FaultEnvelopes.Domain),
+  bad ∈ faults →
+    (∀ (d : Becoming.FaultEnvelopes.Domain),
+        d ∈ roster →
+          ¬d ∈ bad →
+            ∀ (o : Becoming.Transactions.Observation),
+              reads d = some o → o = Becoming.Transactions.observed w p.address) →
+      Becoming.FaultEnvelopes.certificate roster faults (Becoming.Transactions.readSupport p reads) = true →
+        Becoming.Transactions.expected p = Becoming.Transactions.observed w p.address
+Becoming.Transactions.gate_route : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (rf af : Becoming.FaultEnvelopes.Envelope) (w : Becoming.Transactions.Installation)
+  (p : Becoming.Transactions.Request) (reads : Becoming.Transactions.Readings)
+  (approvals : Becoming.Transactions.Approvals) (bad : List Becoming.FaultEnvelopes.Domain),
+  bad ∈ rf →
+    (∀ (d : Becoming.FaultEnvelopes.Domain),
+        d ∈ roster →
+          ¬d ∈ bad →
+            ∀ (o : Becoming.Transactions.Observation),
+              reads d = some o → o = Becoming.Transactions.observed w p.address) →
+      Becoming.Transactions.gate roster rf af w p reads approvals = true →
+        Becoming.TreeSearch.locate w.root p.address = some p.key
+Becoming.Transactions.gate_within_scope : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (rf af : Becoming.FaultEnvelopes.Envelope) (w : Becoming.Transactions.Installation)
+  (p : Becoming.Transactions.Request) (reads : Becoming.Transactions.Readings)
+  (approvals : Becoming.Transactions.Approvals) (bad : List Becoming.FaultEnvelopes.Domain),
+  bad ∈ af →
+    (∀ (d : Becoming.FaultEnvelopes.Domain),
+        d ∈ roster → ¬d ∈ bad → approvals d = some p → Becoming.Transactions.withinScope w p = true) →
+      Becoming.Transactions.gate roster rf af w p reads approvals = true → Becoming.Transactions.withinScope w p = true
+@Becoming.Transactions.fresh_iff : ∀ {w : Becoming.Transactions.Installation} {p : Becoming.Transactions.Request},
+  Becoming.Transactions.fresh w p = true ↔ p.epoch = w.state.epoch ∧ p.serial = w.serial
+Becoming.Transactions.stale_rejected : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (rf af : Becoming.FaultEnvelopes.Envelope) (w : Becoming.Transactions.Installation)
+  (p : Becoming.Transactions.Request) (reads : Becoming.Transactions.Readings)
+  (approvals : Becoming.Transactions.Approvals),
+  p.serial ≠ w.serial ∨ p.epoch ≠ w.state.epoch → Becoming.Transactions.gate roster rf af w p reads approvals = false
+Becoming.Transactions.gate_available : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (rf af : Becoming.FaultEnvelopes.Envelope) (w : Becoming.Transactions.Installation)
+  (p : Becoming.Transactions.Request) (reads : Becoming.Transactions.Readings)
+  (approvals : Becoming.Transactions.Approvals) (readBad issueBad : List Becoming.FaultEnvelopes.Domain),
+  readBad ∈ rf →
+    issueBad ∈ af →
+      Becoming.FaultEnvelopes.separated roster rf →
+        Becoming.FaultEnvelopes.separated roster af →
+          Becoming.Transactions.fresh w p = true →
+            (∀ (d : Becoming.FaultEnvelopes.Domain),
+                d ∈ roster → ¬d ∈ readBad → reads d = some (Becoming.Transactions.expected p)) →
+              (∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ roster → ¬d ∈ issueBad → approvals d = some p) →
+                Becoming.Transactions.gate roster rf af w p reads approvals = true
+@Becoming.Transactions.execute_of_draw : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w : Becoming.Transactions.Installation}
+  {p : Becoming.Transactions.Request} {reads : Becoming.Transactions.Readings}
+  {approvals : Becoming.Transactions.Approvals} {loaded : Becoming.Actuation.State},
+  Becoming.Actuation.draw (Becoming.Transactions.load roster p) (Becoming.Transactions.load roster p) w.state =
+      some loaded →
+    Becoming.Transactions.execute roster rf af w p reads approvals =
+      Becoming.Transactions.passGate roster rf af w p reads approvals loaded
+@Becoming.Transactions.execute_of_short : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w : Becoming.Transactions.Installation}
+  {p : Becoming.Transactions.Request} {reads : Becoming.Transactions.Readings}
+  {approvals : Becoming.Transactions.Approvals},
+  Becoming.Actuation.draw (Becoming.Transactions.load roster p) (Becoming.Transactions.load roster p) w.state = none →
+    Becoming.Transactions.execute roster rf af w p reads approvals = { installation := w, succeeded := false }
+@Becoming.Transactions.passGate_of_open : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w : Becoming.Transactions.Installation}
+  {p : Becoming.Transactions.Request} {reads : Becoming.Transactions.Readings}
+  {approvals : Becoming.Transactions.Approvals} {loaded : Becoming.Actuation.State},
+  Becoming.Transactions.gate roster rf af w p reads approvals = true →
+    Becoming.Transactions.passGate roster rf af w p reads approvals loaded = Becoming.Transactions.attempt w p loaded
+@Becoming.Transactions.passGate_of_closed : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w : Becoming.Transactions.Installation}
+  {p : Becoming.Transactions.Request} {reads : Becoming.Transactions.Readings}
+  {approvals : Becoming.Transactions.Approvals} {loaded : Becoming.Actuation.State},
+  Becoming.Transactions.gate roster rf af w p reads approvals = false →
+    Becoming.Transactions.passGate roster rf af w p reads approvals loaded =
+      { installation := { root := w.root, state := loaded, serial := w.serial, scope := w.scope }, succeeded := false }
+@Becoming.Transactions.attempt_succeeded : ∀ {w : Becoming.Transactions.Installation}
+  {p : Becoming.Transactions.Request} {loaded : Becoming.Actuation.State},
+  (Becoming.Transactions.attempt w p loaded).succeeded = true →
+    ∃ done,
+      Becoming.Transactions.attempt w p loaded =
+        { installation := { root := w.root, state := done, serial := w.serial + 1, scope := w.scope },
+          succeeded := true }
+@Becoming.Transactions.succeeded_cases : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w : Becoming.Transactions.Installation}
+  {p : Becoming.Transactions.Request} {reads : Becoming.Transactions.Readings}
+  {approvals : Becoming.Transactions.Approvals},
+  (Becoming.Transactions.execute roster rf af w p reads approvals).succeeded = true →
+    Becoming.Transactions.gate roster rf af w p reads approvals = true ∧
+      ∃ done,
+        Becoming.Transactions.execute roster rf af w p reads approvals =
+          { installation := { root := w.root, state := done, serial := w.serial + 1, scope := w.scope },
+            succeeded := true }
+@Becoming.Transactions.succeeded_gate : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w : Becoming.Transactions.Installation}
+  {p : Becoming.Transactions.Request} {reads : Becoming.Transactions.Readings}
+  {approvals : Becoming.Transactions.Approvals},
+  (Becoming.Transactions.execute roster rf af w p reads approvals).succeeded = true →
+    Becoming.Transactions.gate roster rf af w p reads approvals = true
+Becoming.Transactions.execute_exact : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (rf af : Becoming.FaultEnvelopes.Envelope) (w : Becoming.Transactions.Installation)
+  (p : Becoming.Transactions.Request) (reads : Becoming.Transactions.Readings)
+  (approvals : Becoming.Transactions.Approvals),
+  Becoming.Transactions.gate roster rf af w p reads approvals = true →
+    Becoming.TreeSearch.locate w.root p.address = some p.key →
+      Becoming.Transactions.load roster p + 3 ≤ w.state.reserve →
+        w.state.time + Becoming.Transactions.load roster p + 3 ≤ w.state.deadline →
+          (Becoming.Transactions.execute roster rf af w p reads approvals).succeeded = true ∧
+            (Becoming.Transactions.execute roster rf af w p reads approvals).installation.state.completed = true ∧
+              (Becoming.Transactions.execute roster rf af w p reads approvals).installation.serial = w.serial + 1 ∧
+                (Becoming.Transactions.execute roster rf af w p reads approvals).installation.state.drawn =
+                  w.state.drawn + (Becoming.Transactions.load roster p + 3)
+Becoming.Transactions.execute_within_scope : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (rf af : Becoming.FaultEnvelopes.Envelope) (w : Becoming.Transactions.Installation)
+  (p : Becoming.Transactions.Request) (reads : Becoming.Transactions.Readings)
+  (approvals : Becoming.Transactions.Approvals) (bad : List Becoming.FaultEnvelopes.Domain),
+  bad ∈ af →
+    (∀ (d : Becoming.FaultEnvelopes.Domain),
+        d ∈ roster → ¬d ∈ bad → approvals d = some p → Becoming.Transactions.withinScope w p = true) →
+      (Becoming.Transactions.execute roster rf af w p reads approvals).succeeded = true →
+        Becoming.Transactions.withinScope w p = true
+Becoming.Transactions.forbidden_fails : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (rf af : Becoming.FaultEnvelopes.Envelope) (w : Becoming.Transactions.Installation)
+  (p : Becoming.Transactions.Request) (reads : Becoming.Transactions.Readings)
+  (approvals : Becoming.Transactions.Approvals) (bad : List Becoming.FaultEnvelopes.Domain),
+  bad ∈ af →
+    (∀ (d : Becoming.FaultEnvelopes.Domain),
+        d ∈ roster → ¬d ∈ bad → approvals d = some p → Becoming.Transactions.withinScope w p = true) →
+      Becoming.Transactions.permits w.scope p.command = false →
+        (Becoming.Transactions.execute roster rf af w p reads approvals).succeeded = false
+Becoming.Transactions.success_advances_serial : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (rf af : Becoming.FaultEnvelopes.Envelope) (w : Becoming.Transactions.Installation)
+  (p : Becoming.Transactions.Request) (reads : Becoming.Transactions.Readings)
+  (approvals : Becoming.Transactions.Approvals),
+  (Becoming.Transactions.execute roster rf af w p reads approvals).succeeded = true →
+    (Becoming.Transactions.execute roster rf af w p reads approvals).installation.serial = w.serial + 1
+Becoming.Transactions.success_blocks_replay : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (rf af : Becoming.FaultEnvelopes.Envelope) (w : Becoming.Transactions.Installation)
+  (p : Becoming.Transactions.Request) (reads : Becoming.Transactions.Readings)
+  (approvals : Becoming.Transactions.Approvals),
+  (Becoming.Transactions.execute roster rf af w p reads approvals).succeeded = true →
+    p.serial = w.serial →
+      ∀ (laterReads : Becoming.Transactions.Readings) (laterApprovals : Becoming.Transactions.Approvals),
+        Becoming.Transactions.gate roster rf af
+            (Becoming.Transactions.execute roster rf af w p reads approvals).installation p laterReads laterApprovals =
+          false
+Becoming.Transactions.certified_completes : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (rf af : Becoming.FaultEnvelopes.Envelope) (w : Becoming.Transactions.Installation)
+  (p : Becoming.Transactions.Request) (reads : Becoming.Transactions.Readings)
+  (approvals : Becoming.Transactions.Approvals) (readBad issueBad : List Becoming.FaultEnvelopes.Domain),
+  readBad ∈ rf →
+    issueBad ∈ af →
+      Becoming.FaultEnvelopes.separated roster rf →
+        Becoming.FaultEnvelopes.separated roster af →
+          Becoming.Transactions.fresh w p = true →
+            (∀ (d : Becoming.FaultEnvelopes.Domain),
+                d ∈ roster → ¬d ∈ readBad → reads d = some (Becoming.Transactions.expected p)) →
+              (∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ roster → ¬d ∈ issueBad → approvals d = some p) →
+                (∀ (d : Becoming.FaultEnvelopes.Domain),
+                    d ∈ roster →
+                      ¬d ∈ readBad →
+                        ∀ (o : Becoming.Transactions.Observation),
+                          reads d = some o → o = Becoming.Transactions.observed w p.address) →
+                  (∀ (d : Becoming.FaultEnvelopes.Domain),
+                      d ∈ roster →
+                        ¬d ∈ issueBad → approvals d = some p → Becoming.Transactions.withinScope w p = true) →
+                    Becoming.Transactions.load roster p + 3 ≤ w.state.reserve →
+                      w.state.time + Becoming.Transactions.load roster p + 3 ≤ w.state.deadline →
+                        (Becoming.Transactions.execute roster rf af w p reads approvals).succeeded = true ∧
+                          (Becoming.Transactions.execute roster rf af w p reads
+                                      approvals).installation.state.completed =
+                              true ∧
+                            Becoming.Transactions.withinScope w p = true
+Becoming.Transactions.guard_blocks_forbidden : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (rf af : Becoming.FaultEnvelopes.Envelope) (w : Becoming.Transactions.Installation)
+  (p : Becoming.Transactions.Request) (reads : Becoming.Transactions.Readings)
+  (approvals : Becoming.Transactions.Approvals),
+  Becoming.Transactions.permits w.scope p.command = false →
+    (Becoming.Transactions.guardedExecute roster rf af w p reads approvals).succeeded = false
+Becoming.Transactions.guard_permitted_same : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (rf af : Becoming.FaultEnvelopes.Envelope) (w : Becoming.Transactions.Installation)
+  (p : Becoming.Transactions.Request) (reads : Becoming.Transactions.Readings)
+  (approvals : Becoming.Transactions.Approvals),
+  Becoming.Transactions.permits w.scope p.command = true →
+    Becoming.Transactions.guardedExecute roster rf af w p reads approvals =
+      Becoming.Transactions.execute roster rf af w p reads approvals
+Becoming.Transactions.guard_keeps_success : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (rf af : Becoming.FaultEnvelopes.Envelope) (w : Becoming.Transactions.Installation)
+  (p : Becoming.Transactions.Request) (reads : Becoming.Transactions.Readings)
+  (approvals : Becoming.Transactions.Approvals),
+  Becoming.Transactions.withinScope w p = true →
+    (Becoming.Transactions.execute roster rf af w p reads approvals).succeeded = true ∧
+        (Becoming.Transactions.execute roster rf af w p reads approvals).installation.state.completed = true →
+      (Becoming.Transactions.guardedExecute roster rf af w p reads approvals).succeeded = true ∧
+        (Becoming.Transactions.guardedExecute roster rf af w p reads approvals).installation.state.completed = true
+Becoming.Transactions.single_issuer_rejected : (Becoming.Transactions.gate Becoming.FaultEnvelopes.roster3
+    Becoming.FaultEnvelopes.singleFault Becoming.FaultEnvelopes.singleFault Becoming.Transactions.initial
+    (have __src := Becoming.Transactions.request;
+    { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+      command := Becoming.Actuation.Command.update })
+    (Becoming.Transactions.faithfulReads Becoming.Transactions.initial
+      (have __src := Becoming.Transactions.request;
+      { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+        command := Becoming.Actuation.Command.update }))
+    fun d =>
+    if d = 0 then
+      some
+        (have __src := Becoming.Transactions.request;
+        { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+          command := Becoming.Actuation.Command.update })
+    else none) =
+  false
+Becoming.Transactions.two_domains_complete : ((Becoming.Transactions.execute Becoming.FaultEnvelopes.roster3
+        Becoming.FaultEnvelopes.singleFault Becoming.FaultEnvelopes.singleFault Becoming.Transactions.initial
+        Becoming.Transactions.request
+        (fun d => if d = 0 then none else some (Becoming.Transactions.observed Becoming.Transactions.initial []))
+        fun d => if d = 0 then none else some Becoming.Transactions.request).succeeded,
+    (Becoming.Transactions.execute Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault
+            Becoming.FaultEnvelopes.singleFault Becoming.Transactions.initial Becoming.Transactions.request
+            (fun d => if d = 0 then none else some (Becoming.Transactions.observed Becoming.Transactions.initial []))
+            fun d => if d = 0 then none else some Becoming.Transactions.request).installation.state.running,
+    (Becoming.Transactions.execute Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault
+            Becoming.FaultEnvelopes.singleFault Becoming.Transactions.initial Becoming.Transactions.request
+            (fun d => if d = 0 then none else some (Becoming.Transactions.observed Becoming.Transactions.initial []))
+            fun d => if d = 0 then none else some Becoming.Transactions.request).installation.state.drawn,
+    (Becoming.Transactions.execute Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault
+          Becoming.FaultEnvelopes.singleFault Becoming.Transactions.initial Becoming.Transactions.request
+          (fun d => if d = 0 then none else some (Becoming.Transactions.observed Becoming.Transactions.initial []))
+          fun d => if d = 0 then none else some Becoming.Transactions.request).installation.serial) =
+  (true, false, 9, 1)
+Becoming.Transactions.consumed_rejected : Becoming.Transactions.gate Becoming.FaultEnvelopes.roster3
+    Becoming.FaultEnvelopes.singleFault Becoming.FaultEnvelopes.singleFault
+    (Becoming.Transactions.execute Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault
+        Becoming.FaultEnvelopes.singleFault Becoming.Transactions.initial Becoming.Transactions.request
+        (Becoming.Transactions.faithfulReads Becoming.Transactions.initial Becoming.Transactions.request)
+        (Becoming.Transactions.faithfulApprovals Becoming.Transactions.initial
+          Becoming.Transactions.request)).installation
+    Becoming.Transactions.request
+    (Becoming.Transactions.faithfulReads Becoming.Transactions.initial Becoming.Transactions.request)
+    (Becoming.Transactions.faithfulApprovals Becoming.Transactions.initial Becoming.Transactions.request) =
+  false
+Becoming.Transactions.changed_command_rejected : Becoming.Transactions.gate Becoming.FaultEnvelopes.roster3
+    Becoming.FaultEnvelopes.singleFault Becoming.FaultEnvelopes.singleFault Becoming.Transactions.initial
+    (have __src := Becoming.Transactions.request;
+    { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+      command := Becoming.Actuation.Command.update })
+    (Becoming.Transactions.faithfulReads Becoming.Transactions.initial Becoming.Transactions.request)
+    (Becoming.Transactions.faithfulApprovals Becoming.Transactions.initial Becoming.Transactions.request) =
+  false
+Becoming.Transactions.single_fault_model_admits_forbidden : (Becoming.Transactions.execute
+        Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault Becoming.FaultEnvelopes.singleFault
+        Becoming.Transactions.initial
+        (have __src := Becoming.Transactions.request;
+        { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+          command := Becoming.Actuation.Command.update })
+        (Becoming.Transactions.faithfulReads Becoming.Transactions.initial
+          (have __src := Becoming.Transactions.request;
+          { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+            command := Becoming.Actuation.Command.update }))
+        fun d =>
+        if d = 2 then none
+        else
+          some
+            (have __src := Becoming.Transactions.request;
+            { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+              command := Becoming.Actuation.Command.update })).succeeded =
+    true ∧
+  Becoming.Transactions.permits Becoming.Transactions.initial.scope Becoming.Actuation.Command.update = false ∧
+    (Becoming.Transactions.gate Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.correlated3
+        Becoming.FaultEnvelopes.correlated3 Becoming.Transactions.initial
+        (have __src := Becoming.Transactions.request;
+        { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+          command := Becoming.Actuation.Command.update })
+        (Becoming.Transactions.faithfulReads Becoming.Transactions.initial
+          (have __src := Becoming.Transactions.request;
+          { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+            command := Becoming.Actuation.Command.update }))
+        fun d =>
+        if d = 2 then none
+        else
+          some
+            (have __src := Becoming.Transactions.request;
+            { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+              command := Becoming.Actuation.Command.update })) =
+      false
+Becoming.Transactions.distinct_support_completes : ((Becoming.Transactions.execute Becoming.FaultEnvelopes.roster4
+        Becoming.FaultEnvelopes.correlated4 Becoming.FaultEnvelopes.correlated4 Becoming.Transactions.initial
+        Becoming.Transactions.request
+        (fun d => if d < 2 then none else some (Becoming.Transactions.observed Becoming.Transactions.initial []))
+        fun d => if d < 2 then none else some Becoming.Transactions.request).succeeded,
+    (Becoming.Transactions.execute Becoming.FaultEnvelopes.roster4 Becoming.FaultEnvelopes.correlated4
+            Becoming.FaultEnvelopes.correlated4 Becoming.Transactions.initial Becoming.Transactions.request
+            (fun d => if d < 2 then none else some (Becoming.Transactions.observed Becoming.Transactions.initial []))
+            fun d => if d < 2 then none else some Becoming.Transactions.request).installation.state.running,
+    (Becoming.Transactions.execute Becoming.FaultEnvelopes.roster4 Becoming.FaultEnvelopes.correlated4
+            Becoming.FaultEnvelopes.correlated4 Becoming.Transactions.initial Becoming.Transactions.request
+            (fun d => if d < 2 then none else some (Becoming.Transactions.observed Becoming.Transactions.initial []))
+            fun d => if d < 2 then none else some Becoming.Transactions.request).installation.state.drawn) =
+  (true, false, 11)
+Becoming.Transactions.redundancy_exhausts_reserve : ((Becoming.Transactions.execute Becoming.FaultEnvelopes.roster3
+        Becoming.FaultEnvelopes.singleFault Becoming.FaultEnvelopes.singleFault Becoming.Transactions.lowReserve
+        Becoming.Transactions.request
+        (Becoming.Transactions.faithfulReads Becoming.Transactions.lowReserve Becoming.Transactions.request)
+        (Becoming.Transactions.faithfulApprovals Becoming.Transactions.lowReserve
+          Becoming.Transactions.request)).succeeded,
+    (Becoming.Transactions.execute Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault
+            Becoming.FaultEnvelopes.singleFault Becoming.Transactions.lowReserve Becoming.Transactions.request
+            (Becoming.Transactions.faithfulReads Becoming.Transactions.lowReserve Becoming.Transactions.request)
+            (Becoming.Transactions.faithfulApprovals Becoming.Transactions.lowReserve
+              Becoming.Transactions.request)).installation.state.drawn,
+    (Becoming.Transactions.execute Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault
+            Becoming.FaultEnvelopes.singleFault Becoming.Transactions.lowReserve Becoming.Transactions.request
+            (Becoming.Transactions.faithfulReads Becoming.Transactions.lowReserve Becoming.Transactions.request)
+            (Becoming.Transactions.faithfulApprovals Becoming.Transactions.lowReserve
+              Becoming.Transactions.request)).installation.state.reserve) =
+  (false, 6, 2)
+Becoming.Transactions.guard_blocks_correlated : (Becoming.Transactions.guardedExecute Becoming.FaultEnvelopes.roster3
+      Becoming.FaultEnvelopes.singleFault Becoming.FaultEnvelopes.singleFault Becoming.Transactions.initial
+      (have __src := Becoming.Transactions.request;
+      { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+        command := Becoming.Actuation.Command.update })
+      (Becoming.Transactions.faithfulReads Becoming.Transactions.initial
+        (have __src := Becoming.Transactions.request;
+        { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+          command := Becoming.Actuation.Command.update }))
+      fun d =>
+      if d = 2 then none
+      else
+        some
+          (have __src := Becoming.Transactions.request;
+          { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+            command := Becoming.Actuation.Command.update })).succeeded =
+  false
+Becoming.Transactions.old_readings_pass_gate : Becoming.Transactions.gate Becoming.FaultEnvelopes.roster3
+      Becoming.FaultEnvelopes.singleFault Becoming.FaultEnvelopes.singleFault Becoming.Transactions.changedRoot
+      Becoming.Transactions.request
+      (Becoming.Transactions.faithfulReads Becoming.Transactions.initial Becoming.Transactions.request)
+      (Becoming.Transactions.faithfulApprovals Becoming.Transactions.initial Becoming.Transactions.request) =
+    true ∧
+  (Becoming.Transactions.guardedExecute Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault
+        Becoming.FaultEnvelopes.singleFault Becoming.Transactions.changedRoot Becoming.Transactions.request
+        (Becoming.Transactions.faithfulReads Becoming.Transactions.initial Becoming.Transactions.request)
+        (Becoming.Transactions.faithfulApprovals Becoming.Transactions.initial
+          Becoming.Transactions.request)).succeeded =
+    false
+Becoming.Transactions.narrowed_scope_guarded : (Becoming.Transactions.execute Becoming.FaultEnvelopes.roster3
+        Becoming.FaultEnvelopes.singleFault Becoming.FaultEnvelopes.singleFault Becoming.Transactions.narrowedScope
+        Becoming.Transactions.request
+        (Becoming.Transactions.faithfulReads Becoming.Transactions.initial Becoming.Transactions.request)
+        (Becoming.Transactions.faithfulApprovals Becoming.Transactions.initial
+          Becoming.Transactions.request)).succeeded =
+    true ∧
+  (Becoming.Transactions.guardedExecute Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault
+        Becoming.FaultEnvelopes.singleFault Becoming.Transactions.narrowedScope Becoming.Transactions.request
+        (Becoming.Transactions.faithfulReads Becoming.Transactions.initial Becoming.Transactions.request)
+        (Becoming.Transactions.faithfulApprovals Becoming.Transactions.initial
+          Becoming.Transactions.request)).succeeded =
+    false
+Becoming.Transactions.outcome_step : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (rf af : Becoming.FaultEnvelopes.Envelope) (w : Becoming.Transactions.Installation)
+  (x : Becoming.Transactions.Transaction),
+  (Becoming.Transactions.monitor roster rf af).step w
+    (x, (Becoming.Transactions.execute roster rf af w x.request x.reads x.approvals).succeeded)
+    (Becoming.Transactions.execute roster rf af w x.request x.reads x.approvals).installation
+@Becoming.Transactions.step_iff : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w w' : Becoming.Transactions.Installation}
+  {x : Becoming.Transactions.Transaction} {b : Bool},
+  (Becoming.Transactions.monitor roster rf af).step w (x, b) w' ↔
+    (Becoming.Transactions.execute roster rf af w x.request x.reads x.approvals).installation = w' ∧
+      (Becoming.Transactions.execute roster rf af w x.request x.reads x.approvals).succeeded = b
+@Becoming.Transactions.completed_of : ∀ {o : Becoming.Transactions.Outcome},
+  o.succeeded = true → o = { installation := o.installation, succeeded := true }
+@Becoming.Transactions.failed_of : ∀ {o : Becoming.Transactions.Outcome},
+  o.succeeded = false → o = { installation := o.installation, succeeded := false }
+@Becoming.Transactions.completed_succeeded : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w w' : Becoming.Transactions.Installation}
+  {x : Becoming.Transactions.Transaction},
+  (Becoming.Transactions.monitor roster rf af).step w (x, true) w' →
+    (Becoming.Transactions.execute roster rf af w x.request x.reads x.approvals).succeeded = true
+@Becoming.Transactions.no_completion_of : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w : Becoming.Transactions.Installation}
+  {x : Becoming.Transactions.Transaction},
+  (Becoming.Transactions.execute roster rf af w x.request x.reads x.approvals).succeeded = false →
+    ∀ (w' : Becoming.Transactions.Installation), ¬(Becoming.Transactions.monitor roster rf af).step w (x, true) w'
+@Becoming.Transactions.gate_closed_no_completion : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w : Becoming.Transactions.Installation}
+  {x : Becoming.Transactions.Transaction},
+  Becoming.Transactions.gate roster rf af w x.request x.reads x.approvals = false →
+    ∀ (w' : Becoming.Transactions.Installation), ¬(Becoming.Transactions.monitor roster rf af).step w (x, true) w'
+@Becoming.Transactions.stale_no_completion : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w : Becoming.Transactions.Installation}
+  {x : Becoming.Transactions.Transaction},
+  x.request.serial ≠ w.serial ∨ x.request.epoch ≠ w.state.epoch →
+    ∀ (w' : Becoming.Transactions.Installation), ¬(Becoming.Transactions.monitor roster rf af).step w (x, true) w'
+@Becoming.Transactions.completion_within_scope : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w w' : Becoming.Transactions.Installation}
+  {x : Becoming.Transactions.Transaction} {bad : List Becoming.FaultEnvelopes.Domain},
+  bad ∈ af →
+    (∀ (d : Becoming.FaultEnvelopes.Domain),
+        d ∈ roster → ¬d ∈ bad → x.approvals d = some x.request → Becoming.Transactions.withinScope w x.request = true) →
+      (Becoming.Transactions.monitor roster rf af).step w (x, true) w' →
+        Becoming.Transactions.withinScope w x.request = true
+@Becoming.Transactions.forbidden_no_completion : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w : Becoming.Transactions.Installation}
+  {x : Becoming.Transactions.Transaction} {bad : List Becoming.FaultEnvelopes.Domain},
+  bad ∈ af →
+    (∀ (d : Becoming.FaultEnvelopes.Domain),
+        d ∈ roster → ¬d ∈ bad → x.approvals d = some x.request → Becoming.Transactions.withinScope w x.request = true) →
+      Becoming.Transactions.permits w.scope x.request.command = false →
+        ∀ (w' : Becoming.Transactions.Installation), ¬(Becoming.Transactions.monitor roster rf af).step w (x, true) w'
+@Becoming.Transactions.completion_advances_serial : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w w' : Becoming.Transactions.Installation}
+  {x : Becoming.Transactions.Transaction},
+  (Becoming.Transactions.monitor roster rf af).step w (x, true) w' → w'.serial = w.serial + 1
+@Becoming.Transactions.replay_no_trace : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w w'' : Becoming.Transactions.Installation}
+  {x : Becoming.Transactions.Transaction},
+  x.request.serial = w.serial →
+    ∀ (laterReads : Becoming.Transactions.Readings) (laterApprovals : Becoming.Transactions.Approvals),
+      ¬Generative.Trace (Becoming.Transactions.monitor roster rf af) w
+          [(x, true), ({ request := x.request, reads := laterReads, approvals := laterApprovals }, true)] w''
+@Becoming.Transactions.completion_exact : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w : Becoming.Transactions.Installation}
+  {x : Becoming.Transactions.Transaction},
+  Becoming.Transactions.gate roster rf af w x.request x.reads x.approvals = true →
+    Becoming.TreeSearch.locate w.root x.request.address = some x.request.key →
+      Becoming.Transactions.load roster x.request + 3 ≤ w.state.reserve →
+        w.state.time + Becoming.Transactions.load roster x.request + 3 ≤ w.state.deadline →
+          ∃ w',
+            (Becoming.Transactions.monitor roster rf af).step w (x, true) w' ∧
+              w'.state.completed = true ∧
+                w'.serial = w.serial + 1 ∧
+                  w'.state.drawn = w.state.drawn + (Becoming.Transactions.load roster x.request + 3)
+@Becoming.Transactions.quorum_completes : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w : Becoming.Transactions.Installation}
+  {x : Becoming.Transactions.Transaction} (readBad issueBad : List Becoming.FaultEnvelopes.Domain),
+  readBad ∈ rf →
+    issueBad ∈ af →
+      Becoming.FaultEnvelopes.separated roster rf →
+        Becoming.FaultEnvelopes.separated roster af →
+          Becoming.Transactions.fresh w x.request = true →
+            (∀ (d : Becoming.FaultEnvelopes.Domain),
+                d ∈ roster → ¬d ∈ readBad → x.reads d = some (Becoming.Transactions.expected x.request)) →
+              (∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ roster → ¬d ∈ issueBad → x.approvals d = some x.request) →
+                (∀ (d : Becoming.FaultEnvelopes.Domain),
+                    d ∈ roster →
+                      ¬d ∈ readBad →
+                        ∀ (o : Becoming.Transactions.Observation),
+                          x.reads d = some o → o = Becoming.Transactions.observed w x.request.address) →
+                  (∀ (d : Becoming.FaultEnvelopes.Domain),
+                      d ∈ roster →
+                        ¬d ∈ issueBad →
+                          x.approvals d = some x.request → Becoming.Transactions.withinScope w x.request = true) →
+                    Becoming.Transactions.load roster x.request + 3 ≤ w.state.reserve →
+                      w.state.time + Becoming.Transactions.load roster x.request + 3 ≤ w.state.deadline →
+                        ∃ w',
+                          (Becoming.Transactions.monitor roster rf af).step w (x, true) w' ∧
+                            w'.state.completed = true ∧ Becoming.Transactions.withinScope w x.request = true
+@Becoming.Transactions.guarded_forbidden_no_completion : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w : Becoming.Transactions.Installation}
+  {x : Becoming.Transactions.Transaction},
+  Becoming.Transactions.permits w.scope x.request.command = false →
+    ∀ (w' : Becoming.Transactions.Installation),
+      ¬(Becoming.Transactions.guardedMonitor roster rf af).step w (x, true) w'
+@Becoming.Transactions.guarded_step_iff : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w w' : Becoming.Transactions.Installation}
+  {x : Becoming.Transactions.Transaction} {b : Bool},
+  Becoming.Transactions.permits w.scope x.request.command = true →
+    ((Becoming.Transactions.guardedMonitor roster rf af).step w (x, b) w' ↔
+      (Becoming.Transactions.monitor roster rf af).step w (x, b) w')
+@Becoming.Transactions.guarded_keeps_completion : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {rf af : Becoming.FaultEnvelopes.Envelope} {w w' : Becoming.Transactions.Installation}
+  {x : Becoming.Transactions.Transaction},
+  Becoming.Transactions.withinScope w x.request = true →
+    (Becoming.Transactions.monitor roster rf af).step w (x, true) w' →
+      w'.state.completed = true →
+        ∃ w'', (Becoming.Transactions.guardedMonitor roster rf af).step w (x, true) w'' ∧ w''.state.completed = true
+Becoming.Transactions.single_issuer_no_completion : ∀ (w' : Becoming.Transactions.Installation),
+  ¬(Becoming.Transactions.monitor Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault
+          Becoming.FaultEnvelopes.singleFault).step
+      Becoming.Transactions.initial
+      ({
+          request :=
+            have __src := Becoming.Transactions.request;
+            { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+              command := Becoming.Actuation.Command.update },
+          reads :=
+            Becoming.Transactions.faithfulReads Becoming.Transactions.initial
+              (have __src := Becoming.Transactions.request;
+              { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+                command := Becoming.Actuation.Command.update }),
+          approvals := fun d =>
+            if d = 0 then
+              some
+                (have __src := Becoming.Transactions.request;
+                { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+                  command := Becoming.Actuation.Command.update })
+            else none },
+        true)
+      w'
+Becoming.Transactions.two_faithful_completion : ∃ w',
+  (Becoming.Transactions.monitor Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault
+          Becoming.FaultEnvelopes.singleFault).step
+      Becoming.Transactions.initial
+      ({ request := Becoming.Transactions.request,
+          reads := fun d =>
+            if d = 0 then none else some (Becoming.Transactions.observed Becoming.Transactions.initial []),
+          approvals := fun d => if d = 0 then none else some Becoming.Transactions.request },
+        true)
+      w' ∧
+    w'.state.running = false ∧ w'.state.drawn = 9 ∧ w'.serial = 1
+@Becoming.Transactions.consumed_no_trace : ∀ {w'' : Becoming.Transactions.Installation},
+  ¬Generative.Trace
+      (Becoming.Transactions.monitor Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault
+        Becoming.FaultEnvelopes.singleFault)
+      Becoming.Transactions.initial
+      [({ request := Becoming.Transactions.request,
+            reads := Becoming.Transactions.faithfulReads Becoming.Transactions.initial Becoming.Transactions.request,
+            approvals :=
+              Becoming.Transactions.faithfulApprovals Becoming.Transactions.initial Becoming.Transactions.request },
+          true),
+        ({ request := Becoming.Transactions.request,
+            reads := Becoming.Transactions.faithfulReads Becoming.Transactions.initial Becoming.Transactions.request,
+            approvals :=
+              Becoming.Transactions.faithfulApprovals Becoming.Transactions.initial Becoming.Transactions.request },
+          true)]
+      w''
+Becoming.Transactions.changed_command_no_completion : ∀ (w' : Becoming.Transactions.Installation),
+  ¬(Becoming.Transactions.monitor Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault
+          Becoming.FaultEnvelopes.singleFault).step
+      Becoming.Transactions.initial
+      ({
+          request :=
+            have __src := Becoming.Transactions.request;
+            { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+              command := Becoming.Actuation.Command.update },
+          reads := Becoming.Transactions.faithfulReads Becoming.Transactions.initial Becoming.Transactions.request,
+          approvals :=
+            Becoming.Transactions.faithfulApprovals Becoming.Transactions.initial Becoming.Transactions.request },
+        true)
+      w'
+Becoming.Transactions.correlated_model_blocks : (∃ w',
+    (Becoming.Transactions.monitor Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault
+          Becoming.FaultEnvelopes.singleFault).step
+      Becoming.Transactions.initial
+      ({
+          request :=
+            have __src := Becoming.Transactions.request;
+            { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+              command := Becoming.Actuation.Command.update },
+          reads :=
+            Becoming.Transactions.faithfulReads Becoming.Transactions.initial
+              (have __src := Becoming.Transactions.request;
+              { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+                command := Becoming.Actuation.Command.update }),
+          approvals := fun d =>
+            if d = 2 then none
+            else
+              some
+                (have __src := Becoming.Transactions.request;
+                { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+                  command := Becoming.Actuation.Command.update }) },
+        true)
+      w') ∧
+  Becoming.Transactions.permits Becoming.Transactions.initial.scope Becoming.Actuation.Command.update = false ∧
+    ∀ (w' : Becoming.Transactions.Installation),
+      ¬(Becoming.Transactions.monitor Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.correlated3
+              Becoming.FaultEnvelopes.correlated3).step
+          Becoming.Transactions.initial
+          ({
+              request :=
+                have __src := Becoming.Transactions.request;
+                { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+                  command := Becoming.Actuation.Command.update },
+              reads :=
+                Becoming.Transactions.faithfulReads Becoming.Transactions.initial
+                  (have __src := Becoming.Transactions.request;
+                  { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+                    command := Becoming.Actuation.Command.update }),
+              approvals := fun d =>
+                if d = 2 then none
+                else
+                  some
+                    (have __src := Becoming.Transactions.request;
+                    { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+                      command := Becoming.Actuation.Command.update }) },
+            true)
+          w'
+Becoming.Transactions.distinct_support_completion : ∃ w',
+  (Becoming.Transactions.monitor Becoming.FaultEnvelopes.roster4 Becoming.FaultEnvelopes.correlated4
+          Becoming.FaultEnvelopes.correlated4).step
+      Becoming.Transactions.initial
+      ({ request := Becoming.Transactions.request,
+          reads := fun d =>
+            if d < 2 then none else some (Becoming.Transactions.observed Becoming.Transactions.initial []),
+          approvals := fun d => if d < 2 then none else some Becoming.Transactions.request },
+        true)
+      w' ∧
+    w'.state.running = false ∧ w'.state.drawn = 11
+Becoming.Transactions.redundancy_exhausts : (∃ w',
+    (Becoming.Transactions.monitor Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault
+            Becoming.FaultEnvelopes.singleFault).step
+        Becoming.Transactions.lowReserve
+        ({ request := Becoming.Transactions.request,
+            reads := Becoming.Transactions.faithfulReads Becoming.Transactions.lowReserve Becoming.Transactions.request,
+            approvals :=
+              Becoming.Transactions.faithfulApprovals Becoming.Transactions.lowReserve Becoming.Transactions.request },
+          false)
+        w' ∧
+      w'.state.drawn = 6 ∧ w'.state.reserve = 2) ∧
+  ∀ (w' : Becoming.Transactions.Installation),
+    ¬(Becoming.Transactions.monitor Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault
+            Becoming.FaultEnvelopes.singleFault).step
+        Becoming.Transactions.lowReserve
+        ({ request := Becoming.Transactions.request,
+            reads := Becoming.Transactions.faithfulReads Becoming.Transactions.lowReserve Becoming.Transactions.request,
+            approvals :=
+              Becoming.Transactions.faithfulApprovals Becoming.Transactions.lowReserve Becoming.Transactions.request },
+          true)
+        w'
+Becoming.Transactions.direct_guard_no_completion : ∀ (w' : Becoming.Transactions.Installation),
+  ¬(Becoming.Transactions.guardedMonitor Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault
+          Becoming.FaultEnvelopes.singleFault).step
+      Becoming.Transactions.initial
+      ({
+          request :=
+            have __src := Becoming.Transactions.request;
+            { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+              command := Becoming.Actuation.Command.update },
+          reads :=
+            Becoming.Transactions.faithfulReads Becoming.Transactions.initial
+              (have __src := Becoming.Transactions.request;
+              { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+                command := Becoming.Actuation.Command.update }),
+          approvals := fun d =>
+            if d = 2 then none
+            else
+              some
+                (have __src := Becoming.Transactions.request;
+                { epoch := __src.epoch, serial := __src.serial, address := __src.address, key := __src.key,
+                  command := Becoming.Actuation.Command.update }) },
+        true)
+      w'
+Becoming.Transactions.old_readings_no_completion : Becoming.Transactions.gate Becoming.FaultEnvelopes.roster3
+      Becoming.FaultEnvelopes.singleFault Becoming.FaultEnvelopes.singleFault Becoming.Transactions.changedRoot
+      Becoming.Transactions.request
+      (Becoming.Transactions.faithfulReads Becoming.Transactions.initial Becoming.Transactions.request)
+      (Becoming.Transactions.faithfulApprovals Becoming.Transactions.initial Becoming.Transactions.request) =
+    true ∧
+  ∀ (w' : Becoming.Transactions.Installation),
+    ¬(Becoming.Transactions.guardedMonitor Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault
+            Becoming.FaultEnvelopes.singleFault).step
+        Becoming.Transactions.changedRoot
+        ({ request := Becoming.Transactions.request,
+            reads := Becoming.Transactions.faithfulReads Becoming.Transactions.initial Becoming.Transactions.request,
+            approvals :=
+              Becoming.Transactions.faithfulApprovals Becoming.Transactions.initial Becoming.Transactions.request },
+          true)
+        w'
+Becoming.Transactions.narrowed_scope_monitor : (∃ w',
+    (Becoming.Transactions.monitor Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault
+          Becoming.FaultEnvelopes.singleFault).step
+      Becoming.Transactions.narrowedScope
+      ({ request := Becoming.Transactions.request,
+          reads := Becoming.Transactions.faithfulReads Becoming.Transactions.initial Becoming.Transactions.request,
+          approvals :=
+            Becoming.Transactions.faithfulApprovals Becoming.Transactions.initial Becoming.Transactions.request },
+        true)
+      w') ∧
+  ∀ (w' : Becoming.Transactions.Installation),
+    ¬(Becoming.Transactions.guardedMonitor Becoming.FaultEnvelopes.roster3 Becoming.FaultEnvelopes.singleFault
+            Becoming.FaultEnvelopes.singleFault).step
+        Becoming.Transactions.narrowedScope
+        ({ request := Becoming.Transactions.request,
+            reads := Becoming.Transactions.faithfulReads Becoming.Transactions.initial Becoming.Transactions.request,
+            approvals :=
+              Becoming.Transactions.faithfulApprovals Becoming.Transactions.initial Becoming.Transactions.request },
+          true)
+        w'

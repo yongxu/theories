@@ -1,0 +1,17 @@
+'Becoming.Frame.postponed' does not depend on any axioms
+'Becoming.Frame.postponed_members' does not depend on any axioms
+'Becoming.Frame.postponed_determinedAt' does not depend on any axioms
+'Becoming.Frame.postponed_trace_members' does not depend on any axioms
+'Becoming.Frame.postponed_trace_inhabited' does not depend on any axioms
+'Becoming.Frame.postponed_trace_of' does not depend on any axioms
+'Becoming.Frame.postponed_trace_iff' does not depend on any axioms
+'Becoming.Frame.postponed_tests_iff' does not depend on any axioms
+'Becoming.Frame.postponed_trace_one' does not depend on any axioms
+'Becoming.Frame.postponed_tests_one' does not depend on any axioms
+'Becoming.sameTests_postponed' does not depend on any axioms
+'Becoming.sameTests_postponed_iff' does not depend on any axioms
+'Becoming.sameTests_iff_postponed_alike' does not depend on any axioms
+'Becoming.DeterminedAt.of_alike_postponed' does not depend on any axioms
+'Becoming.alike_postponed_iff_determined' does not depend on any axioms
+'Becoming.Choosing.postponed_alike' does not depend on any axioms
+'Becoming.Choosing.early_not_alike_postponed' does not depend on any axioms
