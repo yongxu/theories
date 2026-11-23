@@ -1,0 +1,528 @@
+@Becoming.PacedStock.fineStep_orbit_fst : ∀ {A U R : Type} {fA : A → R → A} {need : U → Nat} {kids : R → U → List U}
+  {giving : Nat → Nat} {use : U → Nat} (s : Becoming.PacedStock.StockState A U) (g : R) (k : Nat),
+  (Becoming.Law.orbit (fun y => Becoming.PacedStock.fineStep fA need kids giving use y g) s k).fst =
+    Becoming.Law.orbit (fun a => fA a g) s.fst k
+@Becoming.PacedStock.fineStep_orbit_snd : ∀ {A U R : Type} {fA : A → R → A} {need : U → Nat} {kids : R → U → List U}
+  {giving : Nat → Nat} {use : U → Nat} (s : Becoming.PacedStock.StockState A U) (g : R) (k : Nat),
+  (Becoming.Law.orbit (fun y => Becoming.PacedStock.fineStep fA need kids giving use y g) s k).snd =
+    Becoming.Law.orbit (Becoming.LineOnAStock.step need (kids g) giving use) s.snd k
+@Becoming.PacedStock.paced_held_on_span_state : ∀ {A U R : Type} {fA : A → R → A} {need : U → Nat}
+  {kids : R → U → List U} {giving : Nat → Nat} {use : U → Nat} {h : Becoming.PacedStock.StockState A U → R → R}
+  {reads : Nat → Bool} {σ : Nat → Nat},
+  Becoming.Strict σ →
+    Becoming.PacedStock.ReadAtSpanEnd σ reads →
+      ∀ (c : Becoming.PacedStock.StockState A U × R) {j t : Nat},
+        t ∈ Becoming.span σ j →
+          Becoming.PacedStock.pacedCourse fA need kids giving use h reads c t =
+            (Becoming.Law.orbit
+                (fun y =>
+                  Becoming.PacedStock.fineStep fA need kids giving use y
+                    (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c (σ j)).snd)
+                (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c (σ j)).fst (t - σ j),
+              (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c (σ j)).snd)
+@Becoming.PacedStock.paced_held_on_span : ∀ {A U R : Type} {fA : A → R → A} {need : U → Nat} {kids : R → U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {h : Becoming.PacedStock.StockState A U → R → R} {reads : Nat → Bool}
+  {σ : Nat → Nat},
+  Becoming.Strict σ →
+    Becoming.PacedStock.ReadAtSpanEnd σ reads →
+      ∀ (c : Becoming.PacedStock.StockState A U × R) {j t : Nat},
+        t ∈ Becoming.span σ j →
+          (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c t).snd =
+              (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c (σ j)).snd ∧
+            (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c t).fst.snd =
+              Becoming.Law.orbit
+                (Becoming.LineOnAStock.step need
+                  (kids (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c (σ j)).snd) giving use)
+                (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c (σ j)).fst.snd (t - σ j)
+@Becoming.PacedStock.paced_block_transition : ∀ {A U R : Type} {fA : A → R → A} {need : U → Nat} {kids : R → U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {h : Becoming.PacedStock.StockState A U → R → R} {reads : Nat → Bool}
+  {σ : Nat → Nat},
+  Becoming.Strict σ →
+    Becoming.PacedStock.ReadAtSpanEnd σ reads →
+      ∀ (c : Becoming.PacedStock.StockState A U × R) (j : Nat),
+        (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c (σ (j + 1))).fst =
+            Becoming.Law.orbit
+              (fun y =>
+                Becoming.PacedStock.fineStep fA need kids giving use y
+                  (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c (σ j)).snd)
+              (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c (σ j)).fst (σ (j + 1) - σ j) ∧
+          (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c (σ (j + 1))).snd =
+            h (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c (σ (j + 1) - 1)).fst
+              (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c (σ j)).snd
+@Becoming.PacedStock.blocks_reach_to_fine : ∀ {S : Type u_1} {A : Type u_2} {B : Type u_3} {C : Type u_4}
+  (F : Becoming.Frame S A C) (expand : B → List A) {s v : S},
+  Becoming.Reach (F.blocks expand).P s v → Becoming.Reach F.P s v
+@Becoming.PacedStock.blocks_kernel_iff_fine_kernel : ∀ {S : Type u_1} {A : Type u_2} {B : Type u_3} {C : Type u_4}
+  (F : Becoming.Frame S A C) (expand : B → List A) (guard : S → Prop) {s : S},
+  Becoming.PacedStock.CoveredByBlocks F expand s →
+    (Becoming.Viability.Kernel F.P guard s ↔
+      Becoming.Viability.Kernel (F.blocks expand).P (Becoming.PacedStock.SpanGuard F expand guard) s)
+@Becoming.PacedStock.blocks_certificate_to_fine_kernel : ∀ {S : Type u_1} {A : Type u_2} {B : Type u_3} {C : Type u_4}
+  (F : Becoming.Frame S A C) (expand : B → List A) (guard : S → Prop) {s : S},
+  Becoming.PacedStock.CoveredByBlocks F expand s →
+    ∀ {K : S → Prop},
+      Becoming.Viability.Certificate (F.blocks expand).P (Becoming.PacedStock.SpanGuard F expand guard) K →
+        K s → Becoming.Viability.Kernel F.P guard s
+@Becoming.PacedStock.blocks_keepable_to_fine_of_map : ∀ {S : Type u_1} {A : Type u_2} {B : Type u_3} {C : Type u_4}
+  (F : Becoming.Frame S A C) (expand : B → List A) (guard : S → Prop) {s : S} (next : S → A → S),
+  (∀ (x : S) (a : A) (y : S), F.P.step x a y → y = next x a) →
+    (∀ (b : B), expand b ≠ []) →
+      Becoming.Viability.Keepable (F.blocks expand).P (Becoming.PacedStock.SpanGuard F expand guard) s →
+        Becoming.Viability.Keepable F.P guard s
+@Becoming.PacedStock.blocks_keepable_to_fine_of_singleton : ∀ {S : Type u_1} {A : Type u_2} {B : Type u_3}
+  {C : Type u_4} (F : Becoming.Frame S A C) (expand : B → List A) (guard : S → Prop) {s : S},
+  (∀ (b : B), ∃ a, expand b = [a]) →
+    Becoming.Viability.Keepable (F.blocks expand).P (Becoming.PacedStock.SpanGuard F expand guard) s →
+      Becoming.Viability.Keepable F.P guard s
+@Becoming.PacedStock.blocks_keepable_to_fine_of_choice : ∀ {S : Type u_1} {A : Type u_2} {B : Type u_3} {C : Type u_4}
+  (F : Becoming.Frame S A C) (expand : B → List A) (guard : S → Prop) {s : S},
+  (∀ (R : Nat → List S → Prop), (∀ (n : Nat), ∃ xs, R n xs) → ∃ f, ∀ (n : Nat), R n (f n)) →
+    (∀ (b : B), expand b ≠ []) →
+      Becoming.Viability.Keepable (F.blocks expand).P (Becoming.PacedStock.SpanGuard F expand guard) s →
+        Becoming.Viability.Keepable F.P guard s
+@Becoming.PacedStock.blocks_keepable_to_fine_of_dc : ∀ {S : Type u_1} {A : Type u_2} {B : Type u_3} {C : Type u_4}
+  (F : Becoming.Frame S A C) (expand : B → List A) (guard : S → Prop) {s : S},
+  (∀ (α : Type u_1) (R : α → α → Prop),
+      (∀ (x : α), ∃ y, R x y) → ∀ (x : α), ∃ f, f 0 = x ∧ ∀ (n : Nat), R (f n) (f (n + 1))) →
+    (∀ (b : B), expand b ≠ []) →
+      Becoming.Viability.Keepable (F.blocks expand).P (Becoming.PacedStock.SpanGuard F expand guard) s →
+        Becoming.Viability.Keepable F.P guard s
+@Becoming.PacedStock.slack_certifies_fine_kernel : ∀ {S : Type u_1} {A : Type u_2} {B : Type u_3} {C : Type u_4}
+  (F : Becoming.Frame S A C) (expand : B → List A) (stock : S → Nat) (thr stepDrop L : Nat) {s : S},
+  Becoming.PacedStock.CoveredByBlocks F expand s →
+    (∀ {u : S} {a : A} {w : S}, Becoming.Reach F.P s u → F.P.step u a w → stock u ≤ stock w + stepDrop) →
+      (∀ (blk : B), (expand blk).length ≤ L) →
+        Becoming.Viability.Kernel (F.blocks expand).P (fun v => thr + stepDrop * (L - 1) ≤ stock v) s →
+          Becoming.Viability.Kernel F.P (fun v => thr ≤ stock v) s
+@Becoming.PacedStock.slack_certifies_fine_kernel_global : ∀ {S : Type u_1} {A : Type u_2} {B : Type u_3} {C : Type u_4}
+  (F : Becoming.Frame S A C) (expand : B → List A) (stock : S → Nat) (thr stepDrop L : Nat) {s : S},
+  Becoming.PacedStock.CoveredByBlocks F expand s →
+    (∀ {u : S} {a : A} {w : S}, F.P.step u a w → stock u ≤ stock w + stepDrop) →
+      (∀ (blk : B), (expand blk).length ≤ L) →
+        Becoming.Viability.Kernel (F.blocks expand).P (fun v => thr + stepDrop * (L - 1) ≤ stock v) s →
+          Becoming.Viability.Kernel F.P (fun v => thr ≤ stock v) s
+@Becoming.PacedStock.slack_iff_of_drop_realized : ∀ {S : Type u_1} {A : Type u_2} {B : Type u_3} {C : Type u_4}
+  (F : Becoming.Frame S A C) (expand : B → List A) (stock : S → Nat) (thr stepDrop L : Nat) {s : S},
+  Becoming.PacedStock.CoveredByBlocks F expand s →
+    (∀ {u : S} {a : A} {w : S}, Becoming.Reach F.P s u → F.P.step u a w → stock u ≤ stock w + stepDrop) →
+      (∀ (blk : B), (expand blk).length ≤ L) →
+        (∀ (v : S),
+            thr ≤ stock v →
+              Becoming.Reach (F.blocks expand).P s v →
+                ∃ blk pre post,
+                  expand blk = pre ++ post ∧
+                    ∃ m, Generative.Trace F.P v pre m ∧ stock m + stepDrop * (L - 1) ≤ stock v) →
+          (Becoming.Viability.Kernel (F.blocks expand).P (fun v => thr + stepDrop * (L - 1) ≤ stock v) s ↔
+            Becoming.Viability.Kernel F.P (fun v => thr ≤ stock v) s)
+Becoming.PacedStock.SlackShortWitness.step_five_true : Becoming.PacedStock.SlackShortWitness.fineStep ([true], 5) =
+  ([false], 4)
+Becoming.PacedStock.SlackShortWitness.step_four_false : Becoming.PacedStock.SlackShortWitness.fineStep ([false], 4) =
+  ([true], 5)
+Becoming.PacedStock.SlackShortWitness.step_six_true : Becoming.PacedStock.SlackShortWitness.fineStep ([true], 6) =
+  ([false], 5)
+Becoming.PacedStock.SlackShortWitness.step_five_false : Becoming.PacedStock.SlackShortWitness.fineStep ([false], 5) =
+  ([true], 6)
+Becoming.PacedStock.SlackShortWitness.atFive_block_kernel : Becoming.Viability.Kernel
+  (Becoming.PacedStock.SlackShortWitness.frame.blocks Becoming.PacedStock.SlackShortWitness.expand).P
+  (fun s => Becoming.PacedStock.SlackShortWitness.thr ≤ s.snd) ([true], 5)
+Becoming.PacedStock.SlackShortWitness.atFive_block_keepable : Becoming.Viability.Keepable
+  (Becoming.PacedStock.SlackShortWitness.frame.blocks Becoming.PacedStock.SlackShortWitness.expand).P
+  (fun s => Becoming.PacedStock.SlackShortWitness.thr ≤ s.snd) ([true], 5)
+Becoming.PacedStock.SlackShortWitness.atFive_not_fine_kernel : ¬Becoming.Viability.Kernel
+    Becoming.PacedStock.SlackShortWitness.frame.P (fun s => Becoming.PacedStock.SlackShortWitness.thr ≤ s.snd)
+    ([true], 5)
+Becoming.PacedStock.SlackShortWitness.atFive_not_fine_keepable : ¬Becoming.Viability.Keepable
+    Becoming.PacedStock.SlackShortWitness.frame.P (fun s => Becoming.PacedStock.SlackShortWitness.thr ≤ s.snd)
+    ([true], 5)
+Becoming.PacedStock.SlackShortWitness.atSix_fine_kernel_by_slack : Becoming.Viability.Kernel
+  Becoming.PacedStock.SlackShortWitness.frame.P (fun s => Becoming.PacedStock.SlackShortWitness.thr ≤ s.snd) ([true], 6)
+Becoming.PacedStock.SlackShortWitness.witness_summary : Becoming.Viability.Kernel
+    (Becoming.PacedStock.SlackShortWitness.frame.blocks Becoming.PacedStock.SlackShortWitness.expand).P
+    (fun s => Becoming.PacedStock.SlackShortWitness.thr ≤ s.snd) ([true], 5) ∧
+  Becoming.Viability.Keepable
+      (Becoming.PacedStock.SlackShortWitness.frame.blocks Becoming.PacedStock.SlackShortWitness.expand).P
+      (fun s => Becoming.PacedStock.SlackShortWitness.thr ≤ s.snd) ([true], 5) ∧
+    ¬Becoming.Viability.Kernel Becoming.PacedStock.SlackShortWitness.frame.P
+          (fun s => Becoming.PacedStock.SlackShortWitness.thr ≤ s.snd) ([true], 5) ∧
+      ¬Becoming.Viability.Keepable Becoming.PacedStock.SlackShortWitness.frame.P
+            (fun s => Becoming.PacedStock.SlackShortWitness.thr ≤ s.snd) ([true], 5) ∧
+        Becoming.Viability.Kernel Becoming.PacedStock.SlackShortWitness.frame.P
+          (fun s => Becoming.PacedStock.SlackShortWitness.thr ≤ s.snd) ([true], 6)
+@Becoming.PacedStock.line_envelope_lower : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U}
+  {giving : Nat → Nat} {H : Nat} {g : R} {w : List U} {x k : Nat},
+  Becoming.PacedStock.UpperDraw need use kids giving H g w x k →
+    ∀ (j : Nat),
+      j ≤ k →
+        Becoming.Law.orbit (Becoming.RegimeMargin.step (fun x => 0) H) x j ≤
+          (Becoming.LineOnAStock.course need (kids g) giving use (w, x) j).snd
+@Becoming.PacedStock.line_envelope_upper : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U}
+  {giving : Nat → Nat} {Y H₁ : Nat} {g : R} {w : List U} {x k : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.RegimeMargin.AtMost giving Y →
+      Becoming.PacedStock.LowerDrawWhileMet H₁ need kids giving use g w x k →
+        (∀ (t : Nat),
+            t < k →
+              ∀ (u : U),
+                u ∈ (Becoming.LineOnAStock.course need (kids g) giving use (w, x) t).fst →
+                  need u ≤ (Becoming.LineOnAStock.course need (kids g) giving use (w, x) t).snd) →
+          ∀ (j : Nat),
+            j ≤ k →
+              (Becoming.LineOnAStock.course need (kids g) giving use (w, x) j).snd ≤
+                Becoming.Law.orbit (Becoming.RegimeMargin.step (fun x => Y) H₁) x j
+@Becoming.PacedStock.line_envelope : ∀ {U R : Type} {need use : U → Nat} {kids : R → U → List U} {giving : Nat → Nat}
+  {H Y H₁ : Nat} {g : R} {w : List U} {x k : Nat},
+  (Becoming.PacedStock.UpperDraw need use kids giving H g w x k →
+      Becoming.Law.orbit (Becoming.RegimeMargin.step (fun x => 0) H) x k ≤
+          (Becoming.LineOnAStock.course need (kids g) giving use (w, x) k).snd ∧
+        ∀ (b : Nat), b + H * k ≤ x → b ≤ (Becoming.LineOnAStock.course need (kids g) giving use (w, x) k).snd) ∧
+    (Becoming.RegimeMargin.FromNothing giving →
+      Becoming.RegimeMargin.AtMost giving Y →
+        Becoming.PacedStock.LowerDrawWhileMet H₁ need kids giving use g w x k →
+          (∀ (t : Nat),
+              t < k →
+                ∀ (u : U),
+                  u ∈ (Becoming.LineOnAStock.course need (kids g) giving use (w, x) t).fst →
+                    need u ≤ (Becoming.LineOnAStock.course need (kids g) giving use (w, x) t).snd) →
+            (Becoming.LineOnAStock.course need (kids g) giving use (w, x) k).snd ≤
+              Becoming.Law.orbit (Becoming.RegimeMargin.step (fun x => Y) H₁) x k)
+@Becoming.PacedStock.pace_margin_feasibility_window : ∀ {A U R O : Type} {fA : A → R → A} {need : U → Nat}
+  {kids : R → U → List U} {giving : Nat → Nat} {use : U → Nat} {h : Becoming.PacedStock.StockState A U → R → R}
+  {reads : Nat → Bool} {σ : Nat → Nat} {N L H₁ H₂ y₂ hi : Nat} {x_o y_o : O},
+  x_o ≠ y_o →
+    σ 0 = 0 →
+      σ 1 = L →
+        Becoming.Strict σ →
+          Becoming.PacedStock.ReadAtSpanEnd σ reads →
+            2 * N - 1 ≤ L →
+              ∀ {a₀ : A} {w₀ : List U} {x₀ : Nat} {g_bad g_safe : R},
+                x₀ ≤ hi →
+                  Becoming.RegimeMargin.Keeps giving 0 hi →
+                    Becoming.RegimeMargin.Short giving H₂ y₂ →
+                      Becoming.RegimeMargin.Meets giving H₂ y₂ hi →
+                        Becoming.RegimeMargin.Keeps giving H₂ hi →
+                          H₂ + H₂ + y₂ ≤ hi →
+                            (∀ (u : U), 0 < need u ∧ need u ≤ H₂ + y₂) →
+                              w₀ ≠ [] →
+                                (∀ (g : R) (u : U), kids g u ≠ []) →
+                                  Becoming.LineOnAStock.taken use
+                                        (Becoming.LineOnAStock.allKids (kids g_safe)
+                                          (Becoming.LineOnAStock.generation (kids g_bad) L w₀)) ≤
+                                      H₂ →
+                                    (∀ (w : List U),
+                                        Becoming.LineOnAStock.taken use w ≤ H₂ →
+                                          Becoming.LineOnAStock.taken use
+                                              (Becoming.LineOnAStock.allKids (kids g_safe) w) ≤
+                                            H₂) →
+                                      Becoming.PacedStock.UpperDraw need use kids giving H₁ g_bad w₀ x₀ (L + 1) →
+                                        H₂ + y₂ + H₁ * (L + 1) ≤ x₀ →
+                                          (Becoming.PacedStock.pacedCourse fA need kids giving use h reads
+                                                  ((a₀, w₀, x₀), g_bad) (σ 1)).snd =
+                                              g_safe →
+                                            (∀ (s : Becoming.PacedStock.StockState A U), h s g_safe = g_safe) →
+                                              Becoming.Pace.StretchFixes O N L ∧
+                                                ∀ (t : Nat),
+                                                  L + 1 ≤ t →
+                                                    H₂ + y₂ ≤
+                                                        (Becoming.PacedStock.pacedCourse fA need kids giving use h reads
+                                                                ((a₀, w₀, x₀), g_bad) t).fst.snd.snd ∧
+                                                      (Becoming.PacedStock.pacedCourse fA need kids giving use h reads
+                                                                  ((a₀, w₀, x₀), g_bad) t).fst.snd.snd ≤
+                                                          hi ∧
+                                                        Becoming.LineOnAStock.Goes need
+                                                          (Becoming.PacedStock.pacedCourse fA need kids giving use h
+                                                                reads ((a₀, w₀, x₀), g_bad) t).fst.snd
+@Becoming.PacedStock.pace_margin_feasibility_window_exact : ∀ {A U R O : Type} {fA : A → R → A} {need : U → Nat}
+  {kids : R → U → List U} {giving : Nat → Nat} {use : U → Nat} {h : Becoming.PacedStock.StockState A U → R → R}
+  {reads : Nat → Bool} {σ : Nat → Nat} {N L H₁ H₂ y₂ hi : Nat} {x_o y_o : O},
+  x_o ≠ y_o →
+    σ 0 = 0 →
+      σ 1 = L →
+        Becoming.Strict σ →
+          Becoming.PacedStock.ReadAtSpanEnd σ reads →
+            2 * N - 1 ≤ L →
+              ∀ {a₀ : A} {w₀ : List U} {x₀ : Nat} {g_bad g_safe : R},
+                x₀ ≤ hi →
+                  Becoming.RegimeMargin.Keeps giving 0 hi →
+                    Becoming.RegimeMargin.Short giving H₂ y₂ →
+                      Becoming.RegimeMargin.Meets giving H₂ y₂ hi →
+                        Becoming.RegimeMargin.Keeps giving H₂ hi →
+                          (∀ (u : U), 0 < need u ∧ need u ≤ H₂ + y₂) →
+                            w₀ ≠ [] →
+                              (∀ (g : R) (u : U), kids g u ≠ []) →
+                                Becoming.LineOnAStock.taken use
+                                      (Becoming.LineOnAStock.allKids (kids g_safe)
+                                        (Becoming.LineOnAStock.generation (kids g_bad) L w₀)) =
+                                    H₂ →
+                                  (∀ (w : List U),
+                                      Becoming.LineOnAStock.taken use w = H₂ →
+                                        Becoming.LineOnAStock.taken use
+                                            (Becoming.LineOnAStock.allKids (kids g_safe) w) =
+                                          H₂) →
+                                    Becoming.PacedStock.UpperDraw need use kids giving H₁ g_bad w₀ x₀ (L + 1) →
+                                      H₂ + y₂ + H₁ * (L + 1) ≤ x₀ →
+                                        (Becoming.PacedStock.pacedCourse fA need kids giving use h reads
+                                                ((a₀, w₀, x₀), g_bad) (σ 1)).snd =
+                                            g_safe →
+                                          (∀ (s : Becoming.PacedStock.StockState A U), h s g_safe = g_safe) →
+                                            Becoming.Pace.StretchFixes O N L ∧
+                                              ∀ (t : Nat),
+                                                L + 1 ≤ t →
+                                                  H₂ + y₂ ≤
+                                                      (Becoming.PacedStock.pacedCourse fA need kids giving use h reads
+                                                              ((a₀, w₀, x₀), g_bad) t).fst.snd.snd ∧
+                                                    (Becoming.PacedStock.pacedCourse fA need kids giving use h reads
+                                                                ((a₀, w₀, x₀), g_bad) t).fst.snd.snd ≤
+                                                        hi ∧
+                                                      Becoming.LineOnAStock.Goes need
+                                                        (Becoming.PacedStock.pacedCourse fA need kids giving use h reads
+                                                              ((a₀, w₀, x₀), g_bad) t).fst.snd
+@Becoming.PacedStock.unrecoverable_cadence_impossibility : ∀ {A U R O : Type} {fA : A → R → A} {need : U → Nat}
+  {kids : R → U → List U} {giving : Nat → Nat} {use : U → Nat} {N Y H₁ H₂ y₂ : Nat} {x_o y_o : O},
+  2 ≤ N →
+    x_o ≠ y_o →
+      Becoming.RegimeMargin.FromNothing giving →
+        Becoming.RegimeMargin.AtMost giving Y →
+          Y < H₁ →
+            H₁ ≤ H₂ + y₂ →
+              Becoming.RegimeMargin.Short giving H₂ y₂ →
+                (∀ (u : U), 0 < need u ∧ need u ≤ H₂ + y₂) →
+                  ∀ {g_bad : R} {w₀ : List U} {x₀ : Nat},
+                    Becoming.PacedStock.LowerDrawWhileMet H₁ need kids giving use g_bad w₀ x₀ (2 * N - 1) →
+                      (∀ (w : List U), w ≠ [] → H₂ ≤ Becoming.LineOnAStock.taken use w) →
+                        x₀ < H₂ + y₂ + (H₁ - Y) * (2 * N - 1) →
+                          (∀ (L : Nat),
+                              L < 2 * N - 1 →
+                                ¬Becoming.Pace.StretchFixes O N L ∧
+                                  Becoming.StatesBelow
+                                      (Becoming.Pace.heldCourse Becoming.Pace.lassoStep (0, N - 2 + 1)
+                                        (fun p => if p = N - 2 + 1 then y_o else x_o) 0)
+                                      N ∧
+                                    Becoming.StatesBelow
+                                        (Becoming.Pace.heldCourse Becoming.Pace.lassoStep (1, N - 2)
+                                          (fun p => if p = N - 2 + 1 then y_o else x_o) 0)
+                                        N ∧
+                                      (∀ (t : Nat),
+                                          t < L →
+                                            Becoming.Pace.heldCourse Becoming.Pace.lassoStep (0, N - 2 + 1)
+                                                (fun p => if p = N - 2 + 1 then y_o else x_o) 0 t =
+                                              Becoming.Pace.heldCourse Becoming.Pace.lassoStep (1, N - 2)
+                                                (fun p => if p = N - 2 + 1 then y_o else x_o) 0 t) ∧
+                                        Becoming.Pace.heldCourse Becoming.Pace.lassoStep (0, N - 2 + 1)
+                                            (fun p => if p = N - 2 + 1 then y_o else x_o) 0 (2 * N - 2) ≠
+                                          Becoming.Pace.heldCourse Becoming.Pace.lassoStep (1, N - 2)
+                                            (fun p => if p = N - 2 + 1 then y_o else x_o) 0 (2 * N - 2)) ∧
+                            ∀ (L : Nat) (σ : Nat → Nat) (reads : Nat → Bool)
+                              (h : Becoming.PacedStock.StockState A U → R → R) (a₀ : A),
+                              2 * N - 1 ≤ L →
+                                σ 0 = 0 →
+                                  σ 1 = L →
+                                    Becoming.Strict σ →
+                                      Becoming.PacedStock.ReadAtSpanEnd σ reads →
+                                        have c := ((a₀, w₀, x₀), g_bad);
+                                        ((∀ (t : Nat),
+                                              t < L →
+                                                Becoming.LineOnAStock.Goes need
+                                                  (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c
+                                                        t).fst.snd) →
+                                            (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c
+                                                      L).fst.snd.snd <
+                                              H₂ + y₂) ∧
+                                          ∃ t,
+                                            ¬Becoming.LineOnAStock.Goes need
+                                                (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c
+                                                      t).fst.snd
+@Becoming.PacedStock.coupled_two_rule_impossibility : ∀ {U : Type} {need : U → Nat} {kids : Nat × Nat → U → List U}
+  {giving : Nat → Nat} {use : U → Nat} (M : Nat) {Y H₁ H₂ y₂ : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.RegimeMargin.AtMost giving Y →
+      Y < H₁ →
+        H₁ ≤ H₂ + y₂ →
+          Becoming.RegimeMargin.Short giving H₂ y₂ →
+            (∀ (u : U), 0 < need u ∧ need u ≤ H₂ + y₂) →
+              ∀ {w₀ : List U} {x₀ : Nat},
+                Becoming.PacedStock.LowerDrawWhileMet H₁ need kids giving use (1, M) w₀ x₀ (2 * (M + 2) - 1) →
+                  (∀ (w : List U), w ≠ [] → H₂ ≤ Becoming.LineOnAStock.taken use w) →
+                    x₀ < H₂ + y₂ + (H₁ - Y) * (2 * (M + 2) - 1) →
+                      have g_safe := (0, M + 1);
+                      have g_bad := (1, M);
+                      have o_M := fun s => decide (s.fst = M + 1);
+                      have c_safe := ((0, w₀, x₀), g_safe);
+                      have c_bad := ((0, w₀, x₀), g_bad);
+                      (∀ (L : Nat) (σ : Nat → Nat) (reads_s reads_b : Nat → Bool)
+                          (h_s h_b : Becoming.PacedStock.StockState Nat U → Nat × Nat → Nat × Nat),
+                          L < 2 * (M + 2) - 1 →
+                            σ 0 = 0 →
+                              σ 1 = L →
+                                Becoming.Strict σ →
+                                  Becoming.PacedStock.ReadAtSpanEnd σ reads_s →
+                                    Becoming.PacedStock.ReadAtSpanEnd σ reads_b →
+                                      ¬Becoming.Pace.StretchFixes Bool (M + 2) L ∧
+                                        (∀ (t : Nat),
+                                            t ∈ Becoming.span σ 0 →
+                                              o_M
+                                                  (Becoming.PacedStock.pacedCourse Becoming.Pace.lassoStep need kids
+                                                      giving use h_s reads_s c_safe t).fst =
+                                                o_M
+                                                  (Becoming.PacedStock.pacedCourse Becoming.Pace.lassoStep need kids
+                                                      giving use h_b reads_b c_bad t).fst) ∧
+                                          Becoming.StatesBelow
+                                              (Becoming.Pace.heldCourse Becoming.Pace.lassoStep g_safe
+                                                (fun p => decide (p = M + 1)) 0)
+                                              (M + 2) ∧
+                                            Becoming.StatesBelow
+                                                (Becoming.Pace.heldCourse Becoming.Pace.lassoStep g_bad
+                                                  (fun p => decide (p = M + 1)) 0)
+                                                (M + 2) ∧
+                                              Becoming.Pace.heldCourse Becoming.Pace.lassoStep g_safe
+                                                  (fun p => decide (p = M + 1)) 0 (2 * (M + 2) - 2) ≠
+                                                Becoming.Pace.heldCourse Becoming.Pace.lassoStep g_bad
+                                                  (fun p => decide (p = M + 1)) 0 (2 * (M + 2) - 2)) ∧
+                        ∀ (L : Nat) (σ : Nat → Nat) (reads : Nat → Bool)
+                          (h : Becoming.PacedStock.StockState Nat U → Nat × Nat → Nat × Nat),
+                          2 * (M + 2) - 1 ≤ L →
+                            σ 0 = 0 →
+                              σ 1 = L →
+                                Becoming.Strict σ →
+                                  Becoming.PacedStock.ReadAtSpanEnd σ reads →
+                                    ((∀ (t : Nat),
+                                          t < L →
+                                            Becoming.LineOnAStock.Goes need
+                                              (Becoming.PacedStock.pacedCourse Becoming.Pace.lassoStep need kids giving
+                                                    use h reads c_bad t).fst.snd) →
+                                        (Becoming.PacedStock.pacedCourse Becoming.Pace.lassoStep need kids giving use h
+                                                  reads c_bad L).fst.snd.snd <
+                                          H₂ + y₂) ∧
+                                      ∃ t,
+                                        ¬Becoming.LineOnAStock.Goes need
+                                            (Becoming.PacedStock.pacedCourse Becoming.Pace.lassoStep need kids giving
+                                                  use h reads c_bad t).fst.snd
+Becoming.PacedStock.SandwichWitness.giving_fromNothing : Becoming.RegimeMargin.FromNothing
+  Becoming.PacedStock.SandwichWitness.giving
+Becoming.PacedStock.SandwichWitness.giving_atMost8 : Becoming.RegimeMargin.AtMost
+  Becoming.PacedStock.SandwichWitness.giving 8
+Becoming.PacedStock.SandwichWitness.giving_short6 : Becoming.RegimeMargin.Short
+  Becoming.PacedStock.SandwichWitness.giving 6 6
+Becoming.PacedStock.SandwichWitness.giving_meets6 : Becoming.RegimeMargin.Meets
+  Becoming.PacedStock.SandwichWitness.giving 6 6 60
+Becoming.PacedStock.SandwichWitness.giving_keeps0 : Becoming.RegimeMargin.Keeps
+  Becoming.PacedStock.SandwichWitness.giving 0 60
+Becoming.PacedStock.SandwichWitness.giving_keeps6 : Becoming.RegimeMargin.Keeps
+  Becoming.PacedStock.SandwichWitness.giving 6 60
+Becoming.PacedStock.SandwichWitness.periodSigma_strict : ∀ (p : Nat),
+  Becoming.Strict (Becoming.PacedStock.SandwichWitness.periodSigma p)
+Becoming.PacedStock.SandwichWitness.periodReads_cadence : ∀ (p : Nat),
+  Becoming.PacedStock.ReadAtSpanEnd (Becoming.PacedStock.SandwichWitness.periodSigma p)
+    (Becoming.PacedStock.SandwichWitness.periodReads p)
+Becoming.PacedStock.SandwichWitness.imp_trace_levels : (Becoming.LineOnAStock.course
+        Becoming.PacedStock.SandwichWitness.need (Becoming.PacedStock.SandwichWitness.kids 1 (1, 1))
+        Becoming.PacedStock.SandwichWitness.giving Becoming.PacedStock.SandwichWitness.use
+        ([Becoming.PacedStock.SandwichWitness.UnitKind.init], 20) 0).snd =
+    20 ∧
+  (Becoming.LineOnAStock.course Becoming.PacedStock.SandwichWitness.need
+          (Becoming.PacedStock.SandwichWitness.kids 1 (1, 1)) Becoming.PacedStock.SandwichWitness.giving
+          Becoming.PacedStock.SandwichWitness.use ([Becoming.PacedStock.SandwichWitness.UnitKind.init], 20) 1).snd =
+      18 ∧
+    (Becoming.LineOnAStock.course Becoming.PacedStock.SandwichWitness.need
+            (Becoming.PacedStock.SandwichWitness.kids 1 (1, 1)) Becoming.PacedStock.SandwichWitness.giving
+            Becoming.PacedStock.SandwichWitness.use ([Becoming.PacedStock.SandwichWitness.UnitKind.init], 20) 2).snd =
+        16 ∧
+      (Becoming.LineOnAStock.course Becoming.PacedStock.SandwichWitness.need
+              (Becoming.PacedStock.SandwichWitness.kids 1 (1, 1)) Becoming.PacedStock.SandwichWitness.giving
+              Becoming.PacedStock.SandwichWitness.use ([Becoming.PacedStock.SandwichWitness.UnitKind.init], 20) 3).snd =
+          12 ∧
+        (Becoming.LineOnAStock.course Becoming.PacedStock.SandwichWitness.need
+                (Becoming.PacedStock.SandwichWitness.kids 1 (1, 1)) Becoming.PacedStock.SandwichWitness.giving
+                Becoming.PacedStock.SandwichWitness.use ([Becoming.PacedStock.SandwichWitness.UnitKind.init], 20)
+                4).snd =
+            4 ∧
+          (Becoming.LineOnAStock.course Becoming.PacedStock.SandwichWitness.need
+                  (Becoming.PacedStock.SandwichWitness.kids 1 (1, 1)) Becoming.PacedStock.SandwichWitness.giving
+                  Becoming.PacedStock.SandwichWitness.use ([Becoming.PacedStock.SandwichWitness.UnitKind.init], 20)
+                  5).snd =
+              0 ∧
+            ¬Becoming.LineOnAStock.Goes Becoming.PacedStock.SandwichWitness.need
+                (Becoming.LineOnAStock.course Becoming.PacedStock.SandwichWitness.need
+                  (Becoming.PacedStock.SandwichWitness.kids 1 (1, 1)) Becoming.PacedStock.SandwichWitness.giving
+                  Becoming.PacedStock.SandwichWitness.use ([Becoming.PacedStock.SandwichWitness.UnitKind.init], 20) 5)
+Becoming.PacedStock.SandwichWitness.imp_coupled_witness : (∀ (L : Nat) (σ : Nat → Nat) (reads_s reads_b : Nat → Bool)
+    (h_s h_b : Becoming.PacedStock.StockState Nat Becoming.PacedStock.SandwichWitness.UnitKind → Nat × Nat → Nat × Nat),
+    L < 5 →
+      σ 0 = 0 →
+        σ 1 = L →
+          Becoming.Strict σ →
+            Becoming.PacedStock.ReadAtSpanEnd σ reads_s →
+              Becoming.PacedStock.ReadAtSpanEnd σ reads_b →
+                ¬Becoming.Pace.StretchFixes Bool 3 L ∧
+                  (∀ (t : Nat),
+                      t ∈ Becoming.span σ 0 →
+                        Becoming.PacedStock.SandwichWitness.obs 1
+                            (Becoming.PacedStock.pacedCourse Becoming.Pace.lassoStep
+                                Becoming.PacedStock.SandwichWitness.need (Becoming.PacedStock.SandwichWitness.kids 1)
+                                Becoming.PacedStock.SandwichWitness.giving Becoming.PacedStock.SandwichWitness.use h_s
+                                reads_s ((0, [Becoming.PacedStock.SandwichWitness.UnitKind.init], 20), 0, 2) t).fst =
+                          Becoming.PacedStock.SandwichWitness.obs 1
+                            (Becoming.PacedStock.pacedCourse Becoming.Pace.lassoStep
+                                Becoming.PacedStock.SandwichWitness.need (Becoming.PacedStock.SandwichWitness.kids 1)
+                                Becoming.PacedStock.SandwichWitness.giving Becoming.PacedStock.SandwichWitness.use h_b
+                                reads_b Becoming.PacedStock.SandwichWitness.impBadStart t).fst) ∧
+                    Becoming.Pace.heldCourse Becoming.Pace.lassoStep (0, 2) (fun p => decide (p = 2)) 0 4 ≠
+                      Becoming.Pace.heldCourse Becoming.Pace.lassoStep (1, 1) (fun p => decide (p = 2)) 0 4) ∧
+  ∀ (L : Nat) (σ : Nat → Nat) (reads : Nat → Bool)
+    (h : Becoming.PacedStock.StockState Nat Becoming.PacedStock.SandwichWitness.UnitKind → Nat × Nat → Nat × Nat),
+    5 ≤ L →
+      σ 0 = 0 →
+        σ 1 = L →
+          Becoming.Strict σ →
+            Becoming.PacedStock.ReadAtSpanEnd σ reads →
+              ((∀ (t : Nat),
+                    t < L →
+                      Becoming.LineOnAStock.Goes Becoming.PacedStock.SandwichWitness.need
+                        (Becoming.PacedStock.pacedCourse Becoming.Pace.lassoStep
+                              Becoming.PacedStock.SandwichWitness.need (Becoming.PacedStock.SandwichWitness.kids 1)
+                              Becoming.PacedStock.SandwichWitness.giving Becoming.PacedStock.SandwichWitness.use h reads
+                              Becoming.PacedStock.SandwichWitness.impBadStart t).fst.snd) →
+                  (Becoming.PacedStock.pacedCourse Becoming.Pace.lassoStep Becoming.PacedStock.SandwichWitness.need
+                            (Becoming.PacedStock.SandwichWitness.kids 1) Becoming.PacedStock.SandwichWitness.giving
+                            Becoming.PacedStock.SandwichWitness.use h reads
+                            Becoming.PacedStock.SandwichWitness.impBadStart L).fst.snd.snd <
+                    12) ∧
+                ∃ t,
+                  ¬Becoming.LineOnAStock.Goes Becoming.PacedStock.SandwichWitness.need
+                      (Becoming.PacedStock.pacedCourse Becoming.Pace.lassoStep Becoming.PacedStock.SandwichWitness.need
+                            (Becoming.PacedStock.SandwichWitness.kids 1) Becoming.PacedStock.SandwichWitness.giving
+                            Becoming.PacedStock.SandwichWitness.use h reads
+                            Becoming.PacedStock.SandwichWitness.impBadStart t).fst.snd
+Becoming.PacedStock.SandwichWitness.imp_safe_counterpart_lasts : ∀ (t : Nat),
+  20 ≤
+      (Becoming.PacedStock.pacedCourse Becoming.Pace.lassoStep Becoming.PacedStock.SandwichWitness.need
+              (Becoming.PacedStock.SandwichWitness.kids 1) Becoming.PacedStock.SandwichWitness.giving
+              Becoming.PacedStock.SandwichWitness.use (Becoming.PacedStock.SandwichWitness.switchTo (0, 2))
+              (fun x => false) Becoming.PacedStock.SandwichWitness.impSafeStart t).fst.snd.snd ∧
+    (Becoming.PacedStock.pacedCourse Becoming.Pace.lassoStep Becoming.PacedStock.SandwichWitness.need
+                (Becoming.PacedStock.SandwichWitness.kids 1) Becoming.PacedStock.SandwichWitness.giving
+                Becoming.PacedStock.SandwichWitness.use (Becoming.PacedStock.SandwichWitness.switchTo (0, 2))
+                (fun x => false) Becoming.PacedStock.SandwichWitness.impSafeStart t).fst.snd.snd ≤
+        60 ∧
+      Becoming.LineOnAStock.Goes Becoming.PacedStock.SandwichWitness.need
+        (Becoming.PacedStock.pacedCourse Becoming.Pace.lassoStep Becoming.PacedStock.SandwichWitness.need
+              (Becoming.PacedStock.SandwichWitness.kids 1) Becoming.PacedStock.SandwichWitness.giving
+              Becoming.PacedStock.SandwichWitness.use (Becoming.PacedStock.SandwichWitness.switchTo (0, 2))
+              (fun x => false) Becoming.PacedStock.SandwichWitness.impSafeStart t).fst.snd
+Becoming.PacedStock.SandwichWitness.feas_trace_values : (Becoming.PacedStock.SandwichWitness.feasRun 0).fst.snd.snd =
+    52 ∧
+  (Becoming.PacedStock.SandwichWitness.feasRun 1).fst.snd.snd = 50 ∧
+    (Becoming.PacedStock.SandwichWitness.feasRun 2).fst.snd.snd = 48 ∧
+      (Becoming.PacedStock.SandwichWitness.feasRun 3).fst.snd =
+          ([Becoming.PacedStock.SandwichWitness.UnitKind.bad], 46) ∧
+        (Becoming.PacedStock.SandwichWitness.feasRun 3).snd = (0, 1) ∧
+          (Becoming.PacedStock.SandwichWitness.feasRun 4).fst.snd =
+              ([Becoming.PacedStock.SandwichWitness.UnitKind.safe], 44) ∧
+            (Becoming.PacedStock.SandwichWitness.feasRun 5).fst.snd.snd = 46 ∧
+              (Becoming.PacedStock.SandwichWitness.feasRun 6).fst.snd.snd = 48
+Becoming.PacedStock.SandwichWitness.feas_witness : Becoming.Pace.StretchFixes Bool 2 3 ∧
+  ∀ (t : Nat),
+    4 ≤ t →
+      12 ≤ (Becoming.PacedStock.SandwichWitness.feasRun t).fst.snd.snd ∧
+        (Becoming.PacedStock.SandwichWitness.feasRun t).fst.snd.snd ≤ 60 ∧
+          Becoming.LineOnAStock.Goes Becoming.PacedStock.SandwichWitness.need
+            (Becoming.PacedStock.SandwichWitness.feasRun t).fst.snd

@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "utc": "20261123T123041.825153Z",
+  "utc": "20261123T125647.945308Z",
   "toolchain": "leanprover/lean4:v4.29.1",
-  "retained_run": "becoming-checks/20261123T123041.825153Z",
+  "retained_run": "becoming-checks/20261123T125647.945308Z",
   "spine_modules": [
     "Becoming.Grammar",
     "Becoming.GrammarReadings",
@@ -398,6 +398,7 @@
     "Becoming.GuardedStep",
     "Becoming.SignificanceStatements",
     "Becoming.AdaptiveLoops",
+    "Becoming.PacedStock",
     "Becoming",
     "Becoming.Hexagrams",
     "Becoming.HexagramPlaces",
@@ -813,6 +814,7 @@
     "Becoming.GuardedStep",
     "Becoming.SignificanceStatements",
     "Becoming.AdaptiveLoops",
+    "Becoming.PacedStock",
     "Becoming"
   ],
   "foundation_modules": [
@@ -1242,6 +1244,7 @@
     "Becoming.PremisesTogether",
     "Becoming.SignificanceStatements",
     "Becoming.AdaptiveLoops",
+    "Becoming.PacedStock",
     "Becoming.SeedReach",
     "Becoming.ScopedReach",
     "Becoming.Hexagrams",
@@ -1660,6 +1663,7 @@
     "Becoming.PremisesTogether",
     "Becoming.SignificanceStatements",
     "Becoming.AdaptiveLoops",
+    "Becoming.PacedStock",
     "Becoming.SeedReach",
     "Becoming.ScopedReach",
     "Becoming.Hexagrams",
@@ -2078,6 +2082,7 @@
     "Becoming.PremisesTogether": "becoming/Becoming/PremisesTogether.lean",
     "Becoming.SignificanceStatements": "becoming/Becoming/SignificanceStatements.lean",
     "Becoming.AdaptiveLoops": "becoming/Becoming/AdaptiveLoops.lean",
+    "Becoming.PacedStock": "becoming/Becoming/PacedStock.lean",
     "Becoming.SeedReach": "becoming/Becoming/SeedReach.lean",
     "Becoming.ScopedReach": "becoming/Becoming/ScopedReach.lean",
     "Becoming.Hexagrams": "becoming/Becoming/Hexagrams.lean",
@@ -2496,6 +2501,7 @@
     "Becoming.PremisesTogether": "407e0dcb0649a74464ab1a0316841514d631424ba80d1fd400908232ab4fa17f",
     "Becoming.SignificanceStatements": "fc113c0379fc4e0f4458021514b96b1ef2383f5abe0a12b4330615288991907d",
     "Becoming.AdaptiveLoops": "8af6af19850cbceb8cbaeca07d66ebd6640f4ca852a5dfc68ac1ea9196f02cf6",
+    "Becoming.PacedStock": "d84967da1eccd1657c638d786dbc0f1bbb9073baa6eb4990439ad684f68adc05",
     "Becoming.SeedReach": "6c21f636369688b6247052cb7434aebdd1669dc2dc0ff3a906a2032193deb066",
     "Becoming.ScopedReach": "0432efe6bf31ceff196a4d058a6b77710871ed130eb562dc0ad05d00a873e5ae",
     "Becoming.Hexagrams": "7bcc1ca10eb46afc25efe9c5d8c54ce9840c0be831b8427f0dc3b024117786a3",
@@ -2514,17 +2520,17 @@
     "Becoming.ReaderRebuilding": "25f0d49255972cec8024970a4249dd9228baed14308c90c83dec223bf4378713",
     "Becoming.RuleRebuilding": "fe82de1f1377255eb7fc7b3cd42cad7245bd45882f4e58a6e82d3575e2c28709",
     "Becoming.ResponseLearning": "3f570198fcae3a551c9ca5807d58353cec3d393a00d37a21d89a98c789a725d2",
-    "Becoming": "082503e937f66ce04b9823a34a905970670df84f8c0d02f51a237de2d6799092"
+    "Becoming": "cfda8e1b80a7014c901c0cd156558a1c4d87926d92bdd626149c374ef7123aed"
   },
   "checker_sha256": {
-    "check_becoming.py": "8c919af761d003114b7b3adfad80838c8bb17eead554a7d68eaac269306b0df5",
+    "check_becoming.py": "c566b62d2166bb7ff04f49bcbc609ac2c08919116c08bb947c8e09ef0f59b28f",
     "check.py": "4f9cb94de69bd0e7da6bc7ab1ae1cfd26e2d5848dabda5cbb88aebc36ac52da3"
   },
   "runner_sha256": "cdc5b2e9fe6915233f5e39ec1b4ad30b615e15dbbea393adda2effba0e7c7de2",
   "source_commit": {
-    "main": "e6f70f2d22cd5f31387724c3f3e4b247f020210c",
+    "main": "15045e255be03bf7a390fe8b5739cb5f48844c6d",
     "copied": [
-      "Becoming.AdaptiveLoops.lean",
+      "Becoming.PacedStock.lean",
       "Becoming.lean",
       "check_becoming.py"
     ]
@@ -2535,13 +2541,13 @@
     "fresh": false,
     "ran": [
       "version.log",
-      "BecomingAdaptiveLoopsSignatures.log",
+      "BecomingPacedStockSignatures.log",
       "Becoming.log",
       "BecomingAxiomAudit.log",
       "BecomingSignatures.log",
       "EnvironmentAudit.log",
       "Controls.log",
-      "Becoming.AdaptiveLoops.PreludeOnly.log",
+      "Becoming.PacedStock.PreludeOnly.log",
       "Becoming.PreludeOnly.log"
     ],
     "reused": {
@@ -7293,6 +7299,18 @@
         "utc": "20261123T122122.430361Z",
         "retained": "scratch build, not retained: /Users/ren/tmp/p1b/tree"
       },
+      "BecomingAdaptiveLoopsSignatures.log": {
+        "utc": "20261123T123041.825153Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T123041.825153Z"
+      },
+      "Becoming.PacedStock.log": {
+        "utc": "20261123T123533.642714Z",
+        "retained": "scratch build, not retained: /Users/ren/tmp/p1a/tree"
+      },
+      "BecomingPacedStockAxiomAudit.log": {
+        "utc": "20261123T123533.642714Z",
+        "retained": "scratch build, not retained: /Users/ren/tmp/p1a/tree"
+      },
       "Becoming.SeedReach.log": {
         "utc": "20261109T150228.155067Z",
         "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories--claude-worktrees-admiring-shamir-666169/dce58fb5-291c-4c2d-9b0e-1a17b2f2e9b9/scratchpad/tree"
@@ -9093,6 +9111,10 @@
         "utc": "20261122T094514.036246Z",
         "retained": "/Users/ren/tmp/fm/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T094514.036246Z"
       },
+      "Becoming.AdaptiveLoops.PreludeOnly.log": {
+        "utc": "20261123T123041.825153Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T123041.825153Z"
+      },
       "Becoming.SeedReach.PreludeOnly.log": {
         "utc": "20261109T150228.155067Z",
         "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories--claude-worktrees-admiring-shamir-666169/dce58fb5-291c-4c2d-9b0e-1a17b2f2e9b9/scratchpad/tree"
@@ -10355,6 +10377,9 @@
       "Becoming.AdaptiveLoops.log": "f20ca2a14e3a5ad597f0bc503e195805cb015bbe13e19db62ab169fc61968acb",
       "BecomingAdaptiveLoopsAxiomAudit.log": "0e499e5b12ff768237e8017d6f055ec76ab83bd379d466b1008c8c47770d683c",
       "BecomingAdaptiveLoopsSignatures.log": "624701b2309b4016c095d272eea856e9b65d3eb63c23537ae5972d588894e2d4",
+      "Becoming.PacedStock.log": "5ac8f4eb64c672e7a4e12ffca759618fe28a9c3785b3737aec24f7503b84114f",
+      "BecomingPacedStockAxiomAudit.log": "1be7168d2dfe2058ae9f904e28559767d31c6d9f57c1c756078e74b4df33ae7b",
+      "BecomingPacedStockSignatures.log": "aa12527304a2c95fdb12cb33fa50e1e50aa81183b603399b1fe8bc5ae41b7c99",
       "Becoming.SeedReach.log": "69e9093daed2cb3a35b84a3db09258074b3c837b06184fbeb2a3ce4357438d9a",
       "BecomingSeedReachAxiomAudit.log": "325b832f6ca3591cc9f1580c04f87a51dbdce5aeb0cc327a1ef4b126a088902d",
       "BecomingSeedReachSignatures.log": "61a9a40165856bdd55c8c10d23e7f1a7023f7d14510b64e75d74d9d438f9f945",
@@ -10409,11 +10434,11 @@
       "Becoming.ResponseLearning.log": "19c5dfae2897081b2db2a6479e4b6630f3e12729c7a5b2018b2f3b56e9252710",
       "BecomingResponseLearningAxiomAudit.log": "358f4819a31b44cc8105702cdd098101a2dac4da9f87e46a44072360231c8abb",
       "BecomingResponseLearningSignatures.log": "ee5e63f24cc980784d60513ca2cf139807117cb10932dc5bc49d85bdc89e8bfa",
-      "Becoming.log": "6a238e90c0ba454475e9a6fa3b20e6c083a0396d74125298c49ac4bf57b446e8",
-      "BecomingAxiomAudit.log": "46157011ca75203c6f61af0960578a83d7d142aaed731f4354e15ab54f7efdd3",
-      "BecomingSignatures.log": "753d0521b6e860577d2b1a985eba47cabfe2f26f9776762cd49e89b00732122b",
-      "EnvironmentAudit.log": "e9bde44c61d2e985e6b0bf9cf4693530e01cccd4fa3210de23b47a0773120a5a",
-      "Controls.log": "aa22ce14728c37e1045bc3fe98bde7bfb8cb96a2096e2df4f35f347df56fab46",
+      "Becoming.log": "0304b3efcb9cb0382fdd4549f1f5e56e8e06985464dc59b3b8d16f9eed666570",
+      "BecomingAxiomAudit.log": "d9f414d4776d144c186d19a0e6ea45e7a1c02fc88d22babd0c6bd39745a303a7",
+      "BecomingSignatures.log": "fe4b25e72c8b70a48bc3d0d8e16e52c9b02e8c0d09741c0497e288db000db663",
+      "EnvironmentAudit.log": "2701cf9e58449eba9bf1dd77f2e68ad1f522bad698cc1b459719d3a3a10b292c",
+      "Controls.log": "1025418cfe92f0df3a440ccce3fea122c2e3c672a15fd94120780737a614ae2c",
       "Becoming.Grammar.PreludeOnly.log": "76d3cd6879ccdfaed9db9cc98947cb68fe604b6ec9c632c3569df134642978a0",
       "Becoming.GrammarReadings.PreludeOnly.log": "96d3eaac03a03246c68b669a66e92565f381f028768625af72b0ecd42c10d168",
       "Becoming.GrammarMap.PreludeOnly.log": "57b332119ea3feae52717dc0b9c6e6a8461bd8fd25ec4a4b45ba5bbf5e0d743b",
@@ -10811,6 +10836,7 @@
       "Becoming.PremisesTogether.PreludeOnly.log": "a4ffe3018f19ce4377fd0d21d344ce3370b4d48a31b25dd4f0876d7c18d9fd15",
       "Becoming.SignificanceStatements.PreludeOnly.log": "f95a81b36fad88bb7622ff3e5bf7e565a136332d3d0b87a78364d24d5f21801b",
       "Becoming.AdaptiveLoops.PreludeOnly.log": "ff4d6bb01ae5436c1c5d89e514fefd57423b1016b5920b440fe412ee430787b3",
+      "Becoming.PacedStock.PreludeOnly.log": "85d475ad33f42ba51d47feee2ba763f89f4b674af908b782c549e6ad11bfd38c",
       "Becoming.SeedReach.PreludeOnly.log": "5e0fe6d1427e5096dc5d3fe7ce927e5f3ec9ddd47f7388b1be9da3f470f16402",
       "Becoming.ScopedReach.PreludeOnly.log": "607b3bc88a2c83cd017f2c975691178de1bc72ff0e4088657706581881e9588f",
       "Becoming.Hexagrams.PreludeOnly.log": "383eba428321c4f4bf3c42ba71f5579c797e6fc21217bcd64ea83fde36cb8034",
@@ -10829,20 +10855,20 @@
       "Becoming.ReaderRebuilding.PreludeOnly.log": "c8d322b9ede23ee2284eb9df3a722c142355439a67f3384354dcb30d9488324f",
       "Becoming.RuleRebuilding.PreludeOnly.log": "a80b8eb0e41678da8ed169c4f5b42a9cccc07497817f17b097cc1e4c31864288",
       "Becoming.ResponseLearning.PreludeOnly.log": "fbbe23d3e24bafddda6a674b0ab564f1e8b10a86aa7a0de259e17a82bd6755dd",
-      "Becoming.PreludeOnly.log": "605dddb090bd850b00c76fb34d90a69a8a0e5546576b0ebe0fd10885196e7cb2"
+      "Becoming.PreludeOnly.log": "87363a2aadc4ed25e2ef82fdf050c1916b4495ac0b65c14542bf701837265e4d"
     },
     "seconds": {
-      "version.log": 0.303,
-      "BecomingAdaptiveLoopsSignatures.log": 1.766,
-      "Becoming.log": 2.194,
-      "BecomingAxiomAudit.log": 0.644,
-      "BecomingSignatures.log": 0.661,
-      "EnvironmentAudit.log": 43.901,
-      "Controls.log": 0.697,
-      "Becoming.AdaptiveLoops.PreludeOnly.log": 3.609,
-      "Becoming.PreludeOnly.log": 0.383
+      "version.log": 0.39,
+      "BecomingPacedStockSignatures.log": 1.742,
+      "Becoming.log": 2.078,
+      "BecomingAxiomAudit.log": 0.552,
+      "BecomingSignatures.log": 0.552,
+      "EnvironmentAudit.log": 32.481,
+      "Controls.log": 0.586,
+      "Becoming.PacedStock.PreludeOnly.log": 2.422,
+      "Becoming.PreludeOnly.log": 0.313
     },
-    "wall_seconds": 48.347
+    "wall_seconds": 36.607
   },
   "superseded_modules": {
     "AcquiredCorrection": {
@@ -12517,6 +12543,70 @@
       "unnamed_instance_lines": [],
       "covered_by": "core environment audit"
     },
+    "Becoming.PacedStock": {
+      "private": [
+        "Becoming.PacedStock.sub_le_sub_right_nat",
+        "Becoming.PacedStock.sub_le_sub_left_nat",
+        "Becoming.PacedStock.le_pred_of_succ_le",
+        "Becoming.PacedStock.lt_of_add_lt_add_left_nat",
+        "Becoming.PacedStock.two_mul_pred_eq",
+        "Becoming.PacedStock.span_end_decomp",
+        "Becoming.PacedStock.reads_false_on_span_prefix",
+        "Becoming.PacedStock.consumeWord",
+        "Becoming.PacedStock.flattenStep",
+        "Becoming.PacedStock.flattenAct",
+        "Becoming.PacedStock.FlattenInv",
+        "Becoming.PacedStock.flatten_step_inv",
+        "Becoming.PacedStock.flatten_orbit_inv",
+        "Becoming.PacedStock.headOfNeNil",
+        "Becoming.PacedStock.headOfNeNil_singleton",
+        "Becoming.PacedStock.PathStates",
+        "Becoming.PacedStock.pathStates_nil",
+        "Becoming.PacedStock.pathStates_cons",
+        "Becoming.PacedStock.trace_exists_pathStates",
+        "Becoming.PacedStock.consumeChoiceWord",
+        "Becoming.PacedStock.flattenChoiceStep",
+        "Becoming.PacedStock.flattenChoiceAct",
+        "Becoming.PacedStock.FlattenChoiceInv",
+        "Becoming.PacedStock.flattenChoice_step_inv",
+        "Becoming.PacedStock.flattenChoice_orbit_inv",
+        "Becoming.PacedStock.trace_drop",
+        "Becoming.PacedStock.SlackShortWitness.blocks_step_iff",
+        "Becoming.PacedStock.SlackShortWitness.atFive_block_trace",
+        "Becoming.PacedStock.SlackShortWitness.atSix_block_trace",
+        "Becoming.PacedStock.SlackShortWitness.covered_pair_blocks",
+        "Becoming.PacedStock.SlackShortWitness.atSix_fine_reach_cases",
+        "Becoming.PacedStock.pacedCourse_cap_inv",
+        "Becoming.PacedStock.pacedCourse_rule_persists",
+        "Becoming.PacedStock.safe_step_maintains_bounds",
+        "Becoming.PacedStock.safe_step_maintains_bounds_exact",
+        "Becoming.PacedStock.course_prefix_all_met",
+        "Becoming.PacedStock.not_goes_of_zero",
+        "Becoming.PacedStock.pacedCourse_ends_step",
+        "Becoming.PacedStock.pacedCourse_ends_below_point",
+        "Becoming.PacedStock.course_bad_stays_below_aux",
+        "Becoming.PacedStock.course_bad_stays_below_while_goes",
+        "Becoming.PacedStock.dec_all_met_or_first_unmet",
+        "Becoming.PacedStock.SandwichWitness.min2",
+        "Becoming.PacedStock.SandwichWitness.min2_le_left",
+        "Becoming.PacedStock.SandwichWitness.min2_le_right",
+        "Becoming.PacedStock.SandwichWitness.le_min2",
+        "Becoming.PacedStock.SandwichWitness.floor6",
+        "Becoming.PacedStock.SandwichWitness.bad_gen_form",
+        "Becoming.PacedStock.SandwichWitness.bad_lower_draw_imp",
+        "Becoming.PacedStock.SandwichWitness.len_le_one_taken_le_10",
+        "Becoming.PacedStock.SandwichWitness.kids_len_one",
+        "Becoming.PacedStock.SandwichWitness.after_len_le_one",
+        "Becoming.PacedStock.SandwichWitness.course_len_le_one",
+        "Becoming.PacedStock.SandwichWitness.upper_draw_10",
+        "Becoming.PacedStock.SandwichWitness.cycleMod_mul_add",
+        "Becoming.PacedStock.SandwichWitness.feas_safeEntry",
+        "Becoming.PacedStock.SandwichWitness.feas_safeClose_eq",
+        "Becoming.PacedStock.SandwichWitness.feas_safeClose_le"
+      ],
+      "unnamed_instance_lines": [],
+      "covered_by": "core environment audit"
+    },
     "Becoming.Dispatch": {
       "private": [],
       "unnamed_instance_lines": [
@@ -12949,6 +13039,7 @@
     "Becoming.PremisesTogether": 107,
     "Becoming.SignificanceStatements": 5,
     "Becoming.AdaptiveLoops": 321,
+    "Becoming.PacedStock": 259,
     "Becoming.SeedReach": 31,
     "Becoming.ScopedReach": 60,
     "Becoming.Hexagrams": 199,
@@ -152053,6 +152144,402 @@
       "kernel_checked": true
     },
     {
+      "module": "Becoming.PacedStock",
+      "spine": true,
+      "layer": "core",
+      "theorems": 45,
+      "declarations": [
+        {
+          "kind": "abbrev",
+          "name": "Becoming.PacedStock.StockState"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.fineStep"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.ReadAtSpanEnd"
+        },
+        {
+          "kind": "abbrev",
+          "name": "Becoming.PacedStock.pacedCourse"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.fineStep_orbit_fst"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.fineStep_orbit_snd"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.paced_held_on_span_state"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.paced_held_on_span"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.paced_block_transition"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.CoveredByBlocks"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SpanGuard"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.blocks_reach_to_fine"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.blocks_kernel_iff_fine_kernel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.blocks_certificate_to_fine_kernel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.blocks_keepable_to_fine_of_map"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.blocks_keepable_to_fine_of_singleton"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.blocks_keepable_to_fine_of_choice"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.blocks_keepable_to_fine_of_dc"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.slack_certifies_fine_kernel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.slack_certifies_fine_kernel_global"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.slack_iff_of_drop_realized"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SlackShortWitness.need"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SlackShortWitness.use"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SlackShortWitness.kids"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SlackShortWitness.giving"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SlackShortWitness.fineStep"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SlackShortWitness.frame"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SlackShortWitness.expand"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SlackShortWitness.thr"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SlackShortWitness.step_five_true"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SlackShortWitness.step_four_false"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SlackShortWitness.step_six_true"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SlackShortWitness.step_five_false"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SlackShortWitness.atFive_block_kernel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SlackShortWitness.atFive_block_keepable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SlackShortWitness.atFive_not_fine_kernel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SlackShortWitness.atFive_not_fine_keepable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SlackShortWitness.atSix_fine_kernel_by_slack"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SlackShortWitness.witness_summary"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.UpperDraw"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.LowerDrawWhileMet"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.line_envelope_lower"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.line_envelope_upper"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.line_envelope"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.pace_margin_feasibility_window"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.pace_margin_feasibility_window_exact"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.unrecoverable_cadence_impossibility"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.coupled_two_rule_impossibility"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.PacedStock.SandwichWitness.UnitKind"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SandwichWitness.need"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SandwichWitness.use"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SandwichWitness.kids"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SandwichWitness.giving"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SandwichWitness.obs"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SandwichWitness.giving_fromNothing"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SandwichWitness.giving_atMost8"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SandwichWitness.giving_short6"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SandwichWitness.giving_meets6"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SandwichWitness.giving_keeps0"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SandwichWitness.giving_keeps6"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SandwichWitness.cycleStep"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SandwichWitness.cycleMod"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SandwichWitness.periodSigma"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SandwichWitness.periodReads"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SandwichWitness.periodSigma_strict"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SandwichWitness.periodReads_cadence"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SandwichWitness.impBadStart"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SandwichWitness.impSafeStart"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SandwichWitness.switchTo"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SandwichWitness.imp_trace_levels"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SandwichWitness.imp_coupled_witness"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SandwichWitness.imp_safe_counterpart_lasts"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SandwichWitness.feasH"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SandwichWitness.feasStart"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.PacedStock.SandwichWitness.feasRun"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SandwichWitness.feas_trace_values"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.PacedStock.SandwichWitness.feas_witness"
+        }
+      ],
+      "axiom_dependencies": {
+        "Becoming.PacedStock.StockState": [],
+        "Becoming.PacedStock.fineStep": [],
+        "Becoming.PacedStock.ReadAtSpanEnd": [],
+        "Becoming.PacedStock.pacedCourse": [],
+        "Becoming.PacedStock.fineStep_orbit_fst": [],
+        "Becoming.PacedStock.fineStep_orbit_snd": [],
+        "Becoming.PacedStock.paced_held_on_span_state": [],
+        "Becoming.PacedStock.paced_held_on_span": [],
+        "Becoming.PacedStock.paced_block_transition": [],
+        "Becoming.PacedStock.CoveredByBlocks": [],
+        "Becoming.PacedStock.SpanGuard": [],
+        "Becoming.PacedStock.blocks_reach_to_fine": [],
+        "Becoming.PacedStock.blocks_kernel_iff_fine_kernel": [],
+        "Becoming.PacedStock.blocks_certificate_to_fine_kernel": [],
+        "Becoming.PacedStock.blocks_keepable_to_fine_of_map": [],
+        "Becoming.PacedStock.blocks_keepable_to_fine_of_singleton": [],
+        "Becoming.PacedStock.blocks_keepable_to_fine_of_choice": [],
+        "Becoming.PacedStock.blocks_keepable_to_fine_of_dc": [],
+        "Becoming.PacedStock.slack_certifies_fine_kernel": [],
+        "Becoming.PacedStock.slack_certifies_fine_kernel_global": [],
+        "Becoming.PacedStock.slack_iff_of_drop_realized": [],
+        "Becoming.PacedStock.SlackShortWitness.need": [],
+        "Becoming.PacedStock.SlackShortWitness.use": [],
+        "Becoming.PacedStock.SlackShortWitness.kids": [],
+        "Becoming.PacedStock.SlackShortWitness.giving": [],
+        "Becoming.PacedStock.SlackShortWitness.fineStep": [],
+        "Becoming.PacedStock.SlackShortWitness.frame": [],
+        "Becoming.PacedStock.SlackShortWitness.expand": [],
+        "Becoming.PacedStock.SlackShortWitness.thr": [],
+        "Becoming.PacedStock.SlackShortWitness.step_five_true": [],
+        "Becoming.PacedStock.SlackShortWitness.step_four_false": [],
+        "Becoming.PacedStock.SlackShortWitness.step_six_true": [],
+        "Becoming.PacedStock.SlackShortWitness.step_five_false": [],
+        "Becoming.PacedStock.SlackShortWitness.atFive_block_kernel": [],
+        "Becoming.PacedStock.SlackShortWitness.atFive_block_keepable": [],
+        "Becoming.PacedStock.SlackShortWitness.atFive_not_fine_kernel": [],
+        "Becoming.PacedStock.SlackShortWitness.atFive_not_fine_keepable": [],
+        "Becoming.PacedStock.SlackShortWitness.atSix_fine_kernel_by_slack": [],
+        "Becoming.PacedStock.SlackShortWitness.witness_summary": [],
+        "Becoming.PacedStock.UpperDraw": [],
+        "Becoming.PacedStock.LowerDrawWhileMet": [],
+        "Becoming.PacedStock.line_envelope_lower": [],
+        "Becoming.PacedStock.line_envelope_upper": [],
+        "Becoming.PacedStock.line_envelope": [],
+        "Becoming.PacedStock.pace_margin_feasibility_window": [],
+        "Becoming.PacedStock.pace_margin_feasibility_window_exact": [],
+        "Becoming.PacedStock.unrecoverable_cadence_impossibility": [],
+        "Becoming.PacedStock.coupled_two_rule_impossibility": [],
+        "Becoming.PacedStock.SandwichWitness.UnitKind": [],
+        "Becoming.PacedStock.SandwichWitness.need": [],
+        "Becoming.PacedStock.SandwichWitness.use": [],
+        "Becoming.PacedStock.SandwichWitness.kids": [],
+        "Becoming.PacedStock.SandwichWitness.giving": [],
+        "Becoming.PacedStock.SandwichWitness.obs": [],
+        "Becoming.PacedStock.SandwichWitness.giving_fromNothing": [],
+        "Becoming.PacedStock.SandwichWitness.giving_atMost8": [],
+        "Becoming.PacedStock.SandwichWitness.giving_short6": [],
+        "Becoming.PacedStock.SandwichWitness.giving_meets6": [],
+        "Becoming.PacedStock.SandwichWitness.giving_keeps0": [],
+        "Becoming.PacedStock.SandwichWitness.giving_keeps6": [],
+        "Becoming.PacedStock.SandwichWitness.cycleStep": [],
+        "Becoming.PacedStock.SandwichWitness.cycleMod": [],
+        "Becoming.PacedStock.SandwichWitness.periodSigma": [],
+        "Becoming.PacedStock.SandwichWitness.periodReads": [],
+        "Becoming.PacedStock.SandwichWitness.periodSigma_strict": [],
+        "Becoming.PacedStock.SandwichWitness.periodReads_cadence": [],
+        "Becoming.PacedStock.SandwichWitness.impBadStart": [],
+        "Becoming.PacedStock.SandwichWitness.impSafeStart": [],
+        "Becoming.PacedStock.SandwichWitness.switchTo": [],
+        "Becoming.PacedStock.SandwichWitness.imp_trace_levels": [],
+        "Becoming.PacedStock.SandwichWitness.imp_coupled_witness": [],
+        "Becoming.PacedStock.SandwichWitness.imp_safe_counterpart_lasts": [],
+        "Becoming.PacedStock.SandwichWitness.feasH": [],
+        "Becoming.PacedStock.SandwichWitness.feasStart": [],
+        "Becoming.PacedStock.SandwichWitness.feasRun": [],
+        "Becoming.PacedStock.SandwichWitness.feas_trace_values": [],
+        "Becoming.PacedStock.SandwichWitness.feas_witness": []
+      },
+      "kernel_checked": true
+    },
+    {
       "module": "Becoming.SeedReach",
       "spine": true,
       "layer": "application",
@@ -159996,22 +160483,22 @@
     }
   ],
   "artifact_sha256": {
-    "Becoming.AdaptiveLoops.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.AdaptiveLoops.lean": "8af6af19850cbceb8cbaeca07d66ebd6640f4ca852a5dfc68ac1ea9196f02cf6",
+    "Becoming.PacedStock.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.PacedStock.lean": "d84967da1eccd1657c638d786dbc0f1bbb9073baa6eb4990439ad684f68adc05",
     "Becoming.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.lean": "082503e937f66ce04b9823a34a905970670df84f8c0d02f51a237de2d6799092",
+    "Becoming.lean": "cfda8e1b80a7014c901c0cd156558a1c4d87926d92bdd626149c374ef7123aed",
     "Becoming.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "BecomingAdaptiveLoopsSignatures.lean": "25e1b544f77cb3d57095e7c1066e38d907dccd33f50263d51e39a8351cb8afb3",
-    "BecomingAdaptiveLoopsSignatures.log": "260255b8a18d7eb47b68451855db4840b4f3e7ddd1cd2ffdaedcbf999887f9e5",
     "BecomingAxiomAudit.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingAxiomAudit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "BecomingPacedStockSignatures.lean": "f45e8dd02b9a3a403eda7a733646509a032adb6bdd93cb9ea2b68d477eaa0557",
+    "BecomingPacedStockSignatures.log": "7a6e693e42057d2a0ede271daa41af3d84f3bb8b439db5d4161c6a39a760af00",
     "BecomingSignatures.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingSignatures.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "Controls.lean": "b6d4d1772f4c923833bc713f3b9f170a10ef362d699f4b854401adb21fe22f57",
     "Controls.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "EnvironmentAudit.lean": "f72eb8554ecb23026ded6a3f3ff73794380dd83d49b6736a8a2f8cc7d9b5f799",
-    "EnvironmentAudit.log": "a247bfdc74a176b90d04dadb03fea682551368251073b59730fc5a13fcac8eb1",
-    "check_becoming.py": "8c919af761d003114b7b3adfad80838c8bb17eead554a7d68eaac269306b0df5",
+    "EnvironmentAudit.lean": "88ff3747128f99875a2ba6c998d2bb84ab50fad38eeddf1e2ca772b9c5394eee",
+    "EnvironmentAudit.log": "e47cb3dd784e3a7e4b331f7408b352dd004730fdc637b28a46c196d812739428",
+    "check_becoming.py": "c566b62d2166bb7ff04f49bcbc609ac2c08919116c08bb947c8e09ef0f59b28f",
     "version.log": "3185b32e24f5aea32feec5ebb137ef7b0b6d7b33707fb4f254924fe41b5ded8b"
   }
 }

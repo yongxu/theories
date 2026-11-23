@@ -2856,6 +2856,11 @@
    "base": "general",
    "note": "AdaptiveLoops P1B: open adaptive loops, observation-driven assume-guarantee composition over coupled substrates, coupled race with pool silencing and two-drawer bottleneck, unread adaptive collapse, and endogenous bidirectional adaptation"
   },
+  "paced-stock-and-cadence-margin-sandwich": {
+   "region": "map",
+   "base": "general",
+   "note": "PacedStock P1A: fine-step stock dynamics under coarse rule cadences, intra-span block slack transport, and Pace–Margin Sandwich joining Pace identification lower bound with RegimeMargin drawdown"
+  },
   "selection-through-couplings-at-a-coarser-step": {
    "region": "knowing",
    "base": "general",
@@ -4927,6 +4932,11 @@
    "region": "map",
    "base": "general",
    "note": "P1B open adaptive loops, assume-guarantee composition over coupled substrates, coupled race with pool silencing and two-drawer bottleneck, unread adaptive collapse, and endogenous bidirectional adaptation"
+  },
+  "Becoming.PacedStock": {
+   "region": "map",
+   "base": "general",
+   "note": "P1A fine-step stock dynamics under coarse rule cadences, intra-span block slack transport, and Pace–Margin Sandwich joining Pace lower bound with RegimeMargin drawdown"
   }
  }
 }
