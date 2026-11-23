@@ -1,0 +1,279 @@
+{
+ "schema_version": 2,
+ "id": "master-alignment-spine-and-sharpness",
+ "title": {
+  "en": "Composed zero-axiom master alignment spine and hypothesis-dropping sharpness suite"
+ },
+ "kind": "theorem",
+ "status": "recorded-checked",
+ "family": "F01",
+ "reviewed_at_utc": "2026-11-23T19:52:23+00:00",
+ "statement": {
+  "en": "Horizontal OpenComposition of EndogenousTurning, UnifiedDrawdown, and ScopeDynamics preserves exposed and hidden viability, modular replacement, and synchronous multiscale transfer, alongside ReadsOnlyDynamics non-entailment and eleven CE01-CE15 sharpness witnesses plus WaterTank."
+ },
+ "laws": [
+  {
+   "en": "Compositional open spine, hiding, upgrades, and multiscale transfer: master_alignment_spine_viable, master_spine_assoc_equiv, modular upgrade/reconfig theorems, master_spine_hide_viable, master_spine_multiscale_transfer, and MasterSpineWitness.witness_viable over Ext := Unit plus hidden Int.",
+   "declarations": [
+    "Becoming.AlignmentSpine.ComposedSpine.composeCommEquiv",
+    "Becoming.AlignmentSpine.ComposedSpine.ContractEquiv",
+    "Becoming.AlignmentSpine.ComposedSpine.composeAssocContractEquiv",
+    "Becoming.AlignmentSpine.ComposedSpine.composeCommContractEquiv",
+    "Becoming.AlignmentSpine.ComposedSpine.replace_right_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.contractRefines_compose_left",
+    "Becoming.AlignmentSpine.ComposedSpine.contractRefines_compose_right",
+    "Becoming.AlignmentSpine.ComposedSpine.spineComponent",
+    "Becoming.AlignmentSpine.ComposedSpine.spineContract",
+    "Becoming.AlignmentSpine.ComposedSpine.master_alignment_spine_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_assoc_equiv",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_turning_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_live_reconfig_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_fleet_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_scope_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.withHiddenSite",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_hide_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_multiscale_transfer",
+    "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witness_viable"
+   ]
+  },
+  {
+   "en": "Failure atlas and metaethical boundary: AlignmentDichotomy re-exports L0-L3 structural boundaries (l0_l3_persistence_boundary through master_alignment_dichotomy) and proves alignmentSpine_cannot_entail_unrestricted via ReadsOnlyDynamics.not_entails and ReadsNoOrder.not_entails.",
+   "declarations": [
+    "Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_readsOnlyDynamics",
+    "Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_admits_rival",
+    "Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_not_entails",
+    "Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_cannot_entail_unrestricted",
+    "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary",
+    "Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas",
+    "Becoming.AlignmentSpine.AlignmentDichotomy.pre_overdraw_and_aliasing_boundaries",
+    "Becoming.AlignmentSpine.AlignmentDichotomy.epistemic_scope_metaethical_boundary",
+    "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy"
+   ]
+  },
+  {
+   "en": "Sharpness suite (CE01-CE10, CE14): eleven zero-axiom constructive finite counter-models isolate each dropped safeguard — countdown jump, blind hide, hide side-channel leakage, type mismatch, sum silencing, non-monotone wiring, concurrent reconfig, lax overflow/non-decoupling, validator capture, and victim externalization.",
+   "declarations": [
+    "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.hide_side_channel_leakage",
+    "Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.witness"
+   ]
+  },
+  {
+   "en": "Laxity asymmetry, WaterTank pair, and end-to-end spine: slackDist_nat_not_transitive vs. exact_equivalence_is_class, delayed-4-5 vs. predictive/delayed-4-6 WaterTankCouplingWitness, master_sharpness_suite_complete, and alignment_spine_end_to_end.",
+   "declarations": [
+    "Becoming.AlignmentSpine.SharpnessSuite.slackDist_nat_not_transitive",
+    "Becoming.AlignmentSpine.SharpnessSuite.exact_equivalence_is_class",
+    "Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.master_sharpness_suite_complete",
+    "Becoming.AlignmentSpine.alignment_spine_end_to_end"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "en": "No axiom. Spine theorems assume finite nonempty partner/agent slices, turning budget >= B_task, reciprocal gate iff Withholding.waitsAll, valid compose/hide tolerance bindings, and synchronous LaxSim; dichotomy and sharpness theorems need only the cited witness structures."
+  }
+ ],
+ "does_not_show": [
+  {
+   "en": "Empirical applicability to any real system without an explicit Rule 2 recognition check, or any external moral 'ought' (alignmentSpine_cannot_entail_unrestricted).",
+   "kind": "non-implication"
+  },
+  {
+   "en": "Quantitative continuous/stochastic real bounds (inertia lag, delay-shock probability, metric contraction, linear FA hysteresis), which live in Mathlib periphery AlignmentReals.",
+   "kind": "scope"
+  }
+ ],
+ "counterexamples": [
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AlignmentSpine.lean",
+   "detail": {
+    "en": "MasterSpineWitness.witness_viable holds exposed substrate 46 >= 10 and hidden (46, 11) -> (34, 9) forever with active Int draw 2, 2, 1; CE01-CE10 and CE14 exhibit explicit finite failures whenever one contract or coupling safeguard is dropped."
+   }
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AlignmentSpine.lean",
+   "detail": {
+    "en": "WaterTankCouplingWitness.witness contrasts 22-state tank physics where delayed (4, 6) and predictive (4, 6) hold forever while delayed (4, 5) empties at step 5."
+   }
+  }
+ ],
+ "standard_boundaries": [
+  "no-ethical-premise",
+  "no-evaluation",
+  "discrete-steps",
+  "formal-not-empirical",
+  "names-provisional",
+  "omission-not-refutation"
+ ],
+ "validation_scope": {
+  "en": "Machine-checked by Lean 4.29.1 checker (receipt 20261123T195223.591569Z): all 175 audited declarations (71 theorems, 0 private) compile from prelude with core_axioms: []; read-only audits by 777d5efb, 696b7b9b, and 2457e370 PASS."
+ },
+ "next_delta": {
+  "en": "Connect future empirical evaluations and continuous stress tests to explicit Rule 2 recognition checks against the L0-L5 core suite."
+ },
+ "correspondence": {
+  "en": "Reading (AI-written): unites L0-L3 into one checkable core spine showing when coupled adaptive systems persist across compositions and where each dropped safeguard breaks."
+ },
+ "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AlignmentSpine.lean",
+ "aliases": [
+  "Becoming.AlignmentSpine.ComposedSpine.master_alignment_spine_viable",
+  "Becoming.AlignmentSpine.ComposedSpine.master_spine_hide_viable",
+  "Becoming.AlignmentSpine.ComposedSpine.master_spine_multiscale_transfer",
+  "Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_cannot_entail_unrestricted",
+  "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+  "Becoming.AlignmentSpine.SharpnessSuite.master_sharpness_suite_complete",
+  "Becoming.AlignmentSpine.alignment_spine_end_to_end"
+ ],
+ "dependencies": [
+  {
+   "id": "open-interface-composition-and-replacement",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Reuses OpenComponent, InterfaceContract, compose, hide, compose_close_interchange, ContractRefines, ReconfigProcess, and compose_laxSim_max for the 3-pillar horizontal spine."
+   }
+  },
+  {
+   "id": "endogenous-turning-and-clearing-margin",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Composes EndogenousTurning.OpenCompositionBridge as the turning pillar alongside EpistemicSilenceBoundary."
+   }
+  },
+  {
+   "id": "unified-drawdown-overdraw-and-aliasing",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Composes UnifiedDrawdown fleet restraint/upgrades as the second spine pillar plus aliasing and depletion failure theorems."
+   }
+  },
+  {
+   "id": "dynamical-scope-and-reciprocal-stability",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Composes ScopeDynamics reciprocal gate as the third spine pillar alongside scopeLaw_cannot_entail_unrestricted."
+   }
+  },
+  {
+   "id": "lax-multi-scale-viability",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Reuses MultiScaleViability LaxSim across synchronous prodProcess spine transfer and laxity counter-models."
+   }
+  },
+  {
+   "id": "paced-stock-and-cadence-margin-sandwich",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Re-exports PacedStock pace_margin_feasibility_window and unrecoverable_cadence_impossibility in AlignmentDichotomy."
+   }
+  },
+  {
+   "id": "coupled-adaptive-loops-and-race",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Re-exports AdaptiveLoops coupled_race_theorem and unread_adaptive_collapse in AlignmentDichotomy."
+   }
+  },
+  {
+   "id": "transformative-viability-order",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Certifies TransformsViably continuation along the composed spine and in MasterSpineWitness."
+   }
+  }
+ ],
+ "related": [
+  {
+   "id": "continuous-stochastic-alignment-reals",
+   "detail": {
+    "en": "Mathlib ℝ periphery sibling proving continuous inertia, delay variance, metric contraction, and linear FA bounds excluded from L5's 0-axiom core (CE12/CE13)."
+   }
+  }
+ ],
+ "references": [
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AlignmentSpine.lean",
+   "role": "proof",
+   "declarations": [
+    "Becoming.AlignmentSpine.ComposedSpine.composeCommEquiv",
+    "Becoming.AlignmentSpine.ComposedSpine.ContractEquiv",
+    "Becoming.AlignmentSpine.ComposedSpine.composeAssocContractEquiv",
+    "Becoming.AlignmentSpine.ComposedSpine.composeCommContractEquiv",
+    "Becoming.AlignmentSpine.ComposedSpine.replace_right_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.contractRefines_compose_left",
+    "Becoming.AlignmentSpine.ComposedSpine.contractRefines_compose_right",
+    "Becoming.AlignmentSpine.ComposedSpine.spineComponent",
+    "Becoming.AlignmentSpine.ComposedSpine.spineContract",
+    "Becoming.AlignmentSpine.ComposedSpine.master_alignment_spine_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_assoc_equiv",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_turning_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_live_reconfig_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_fleet_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_scope_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.withHiddenSite",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_hide_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_multiscale_transfer",
+    "Becoming.AlignmentSpine.ComposedSpine.MasterSpineWitness.witness_viable",
+    "Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_readsOnlyDynamics",
+    "Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_admits_rival",
+    "Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_not_entails",
+    "Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_cannot_entail_unrestricted",
+    "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary",
+    "Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas",
+    "Becoming.AlignmentSpine.AlignmentDichotomy.pre_overdraw_and_aliasing_boundaries",
+    "Becoming.AlignmentSpine.AlignmentDichotomy.epistemic_scope_metaethical_boundary",
+    "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+    "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.hide_side_channel_leakage",
+    "Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.slackDist_nat_not_transitive",
+    "Becoming.AlignmentSpine.SharpnessSuite.exact_equivalence_is_class",
+    "Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.witness",
+    "Becoming.AlignmentSpine.SharpnessSuite.master_sharpness_suite_complete",
+    "Becoming.AlignmentSpine.alignment_spine_end_to_end"
+   ],
+   "sha256": "ffe254d789590c7ee41fbe97f2b9f191b68a26fce32e28a75dabf1a0bbcdac3e"
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T195223.591569Z/verification.json",
+   "role": "receipt",
+   "sha256": "1f248ecd13035434c1a91318185fa4978a302ec4ddbc8c80fc310ef62e12b52f"
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-wave2-l5-alignment-spine-2026-11-24/NOTE.md",
+   "role": "review",
+   "sha256": "72a1ae9ba947eac043a4548864c1a9aa3f856c7924ddad555a6e045130740174"
+  }
+ ],
+ "proof_bindings": [
+  {
+   "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AlignmentSpine.lean",
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T195223.591569Z/verification.json",
+   "sha256_pointer": "/source_sha256/Becoming.AlignmentSpine",
+   "success_pointer": "/status",
+   "success_value": "passed"
+  }
+ ],
+ "history": [
+  {
+   "en": "24 November 2026: added (Becoming.AlignmentSpine, L5) completing Lean Wave 2 (L0-L5) with composed master spine, boundary dichotomy, and CE01-CE15 sharpness suite. AI-written."
+  }
+ ]
+}
