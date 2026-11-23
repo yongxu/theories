@@ -62,7 +62,7 @@ Reading (AI-written): coarse oversight faces a two-sided sandwich — reading fa
 - **formal-reuse**: [a-line-on-a-stock](a-line-on-a-stock.md). Reuses LineOnAStock (step, Goes, net, step_lowers, generation) as the fine-step plant inside fineStep.
 - **formal-reuse**: [a-way-of-units-under-a-rule-set-again](a-way-of-units-under-a-rule-set-again.md). Relates rule-updating WayUnderARule steps to explicit paced rule cadences.
 
-**Used by:** [continuous-stochastic-alignment-reals](continuous-stochastic-alignment-reals.md) · [unified-drawdown-overdraw-and-aliasing](unified-drawdown-overdraw-and-aliasing.md)
+**Used by:** [continuous-stochastic-alignment-reals](continuous-stochastic-alignment-reals.md) · [master-alignment-spine-and-sharpness](master-alignment-spine-and-sharpness.md) · [unified-drawdown-overdraw-and-aliasing](unified-drawdown-overdraw-and-aliasing.md)
 
 <a id="sources--来源"></a>
 ### Sources

@@ -3693,6 +3693,18 @@
    "page": "theories/becoming/results/records/market-supported-finite-transition.md"
   },
   {
+   "id": "record:master-alignment-spine-and-sharpness",
+   "type": "result",
+   "record": "master-alignment-spine-and-sharpness",
+   "title": "Composed zero-axiom master alignment spine and hypothesis-dropping sharpness suite",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/master-alignment-spine-and-sharpness.md"
+  },
+  {
    "id": "record:material-preparation-output",
    "type": "result",
    "record": "material-preparation-output",
@@ -11934,6 +11946,17 @@
    "region": "map",
    "base": "general",
    "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.AlignmentSpine",
+   "type": "module",
+   "name": "Becoming.AlignmentSpine",
+   "level": "L2",
+   "theorems": 71,
+   "region": "map",
+   "base": "general",
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -32861,6 +32884,76 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.AlignmentSpine",
+   "to": "module:Becoming.BeyondCoupling",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AlignmentSpine",
+   "to": "module:Becoming.ClosedCapture",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AlignmentSpine",
+   "to": "module:Becoming.EndogenousTurning",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AlignmentSpine",
+   "to": "module:Becoming.Flow",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AlignmentSpine",
+   "to": "module:Becoming.Grammar",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AlignmentSpine",
+   "to": "module:Becoming.MultiScaleViability",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AlignmentSpine",
+   "to": "module:Becoming.OpenComposition",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AlignmentSpine",
+   "to": "module:Becoming.PacedStock",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AlignmentSpine",
+   "to": "module:Becoming.PremiseWitnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AlignmentSpine",
+   "to": "module:Becoming.ScopeDynamics",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AlignmentSpine",
+   "to": "module:Becoming.Selection",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AlignmentSpine",
+   "to": "module:Becoming.Significance",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AlignmentSpine",
+   "to": "module:Becoming.TransformativeViability",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AlignmentSpine",
+   "to": "module:Becoming.UnifiedDrawdown",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Alternatives",
    "to": "module:Becoming.Frame",
    "type": "imports"
@@ -50312,6 +50405,56 @@
    "to": "record:market-protected-continuation",
    "type": "formal-reuse",
    "interface": true
+  },
+  {
+   "from": "record:master-alignment-spine-and-sharpness",
+   "to": "module:Becoming.AlignmentSpine",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-alignment-spine-and-sharpness",
+   "to": "record:continuous-stochastic-alignment-reals",
+   "type": "related"
+  },
+  {
+   "from": "record:master-alignment-spine-and-sharpness",
+   "to": "record:coupled-adaptive-loops-and-race",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-alignment-spine-and-sharpness",
+   "to": "record:dynamical-scope-and-reciprocal-stability",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-alignment-spine-and-sharpness",
+   "to": "record:endogenous-turning-and-clearing-margin",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-alignment-spine-and-sharpness",
+   "to": "record:lax-multi-scale-viability",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-alignment-spine-and-sharpness",
+   "to": "record:open-interface-composition-and-replacement",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-alignment-spine-and-sharpness",
+   "to": "record:paced-stock-and-cadence-margin-sandwich",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-alignment-spine-and-sharpness",
+   "to": "record:transformative-viability-order",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-alignment-spine-and-sharpness",
+   "to": "record:unified-drawdown-overdraw-and-aliasing",
+   "type": "formal-reuse"
   },
   {
    "from": "record:material-preparation-output",

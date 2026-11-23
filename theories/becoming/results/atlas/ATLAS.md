@@ -12,7 +12,7 @@ The atlas's views: **the atlas** · [the premise ledger](PREMISES.md) · [the te
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](vocabulary.json), [entries](entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*. The lines on uses between proofs, last in an entry's section, are no part of the curated layer: they are computed at each render from what Lean printed of its proof terms and from the declarations the entries list, and typed by no one; they too create no result.
 
-203 dynamics, by family. It is a catalogue to look things up in, not to read through: each family has a page, which opens with its index, and an entry's section there holds the rest.
+204 dynamics, by family. It is a catalogue to look things up in, not to read through: each family has a page, which opens with its index, and an entry's section there holds the rest.
 
 | Family | Dynamics |
 |---|---:|
@@ -23,7 +23,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 | [E. Waiting and reciprocity](families/e.md) | 10 |
 | [F. Cycles and alternation](families/f.md) | 24 |
 | [G. Closure and stagnation](families/g.md) | 18 |
-| [H. Kept regions, renewal, generation](families/h.md) | 46 |
+| [H. Kept regions, renewal, generation](families/h.md) | 47 |
 
 <a id="family-a"></a>
 ## A. Absorption and ending
@@ -291,6 +291,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 | <a id="unified-drawdown-overdraw-and-aliasing"></a><a id="unified-drawdown-parametric-open-fleet-restraint-overdraw-separation-and-temporal-aliasing-统一下行参数化开放舰队约束超取分离与时间混叠"></a>[Unified drawdown, parametric open fleet restraint, overdraw separation, and temporal aliasing (统一下行、参数化开放舰队约束、超取分离与时间混叠)](families/h.md#unified-drawdown-overdraw-and-aliasing) | [unified-drawdown-overdraw-and-aliasing](../records/unified-drawdown-overdraw-and-aliasing.md) | any type | recorded-checked (theorem) | 1 | 1 |
 | <a id="dynamical-scope-and-reciprocal-stability"></a><a id="dynamical-scope-selection-myopic-invasion-collapse-and-reciprocal-open-interface-stability-动态视域选择近视入侵崩溃与互惠开放接口稳定"></a>[Dynamical scope selection, myopic invasion collapse, and reciprocal open-interface stability (动态视域选择、近视入侵崩溃与互惠开放接口稳定)](families/h.md#dynamical-scope-and-reciprocal-stability) | [dynamical-scope-and-reciprocal-stability](../records/dynamical-scope-and-reciprocal-stability.md) | any type | recorded-checked (theorem) | 1 | 1 |
 | <a id="continuous-stochastic-alignment-reals"></a><a id="continuous-and-stochastic-alignment-realizations-over-mathlib-reals-基于-mathlib-实数的连续与随机对齐实现"></a>[Continuous and stochastic alignment realizations over Mathlib reals (基于 Mathlib 实数的连续与随机对齐实现)](families/h.md#continuous-stochastic-alignment-reals) | [continuous-stochastic-alignment-reals](../records/continuous-stochastic-alignment-reals.md) | periphery | recorded-checked (theorem) | 1 | 1 |
+| <a id="master-alignment-spine-and-sharpness"></a><a id="composed-zero-axiom-master-alignment-spine-and-sharpness-suite-零公理组合主对齐脊柱与边界锐度反例集"></a>[Composed zero-axiom master alignment spine and sharpness suite (零公理组合主对齐脊柱与边界锐度反例集)](families/h.md#master-alignment-spine-and-sharpness) | [master-alignment-spine-and-sharpness](../records/master-alignment-spine-and-sharpness.md) | any type | recorded-checked (theorem) | 1 | 1 |
 
 [Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Atlas](ATLAS.md) · [Graph](../THEORY-GRAPH.md) · [Connections](CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
 

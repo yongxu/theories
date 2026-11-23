@@ -60,6 +60,8 @@ Reading (AI-written): formalizes selective survival of wider scopes under mutual
 - **formal-reuse**: [transformative-viability-order](transformative-viability-order.md). Reuses TransformativeViable and TransformsViably to certify non-stasis wide-scope and reciprocal continuation.
 - **formal-reuse**: [widening-as-what-every-positive-weighting-ranks](widening-as-what-every-positive-weighting-ranks.md). Reuses Weighting and Web widening characterizations for preCollapse_mixed_weighting and horizon bridges.
 
+**Used by:** [master-alignment-spine-and-sharpness](master-alignment-spine-and-sharpness.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

@@ -57,7 +57,7 @@ Reading (AI-written): preserving viability while transforming requires protectin
 - **formal-reuse**: [loss-beyond-a-region](loss-beyond-a-region.md). Reuses Web.Widens, Web.Includes, Web.Mixed, and Web.Exceeds.
 - **formal-reuse**: [classes-along-a-continuation](classes-along-a-continuation.md). Reuses Web.Linked in TransformsViablyAlong.
 
-**Used by:** [dynamical-scope-and-reciprocal-stability](dynamical-scope-and-reciprocal-stability.md)
+**Used by:** [dynamical-scope-and-reciprocal-stability](dynamical-scope-and-reciprocal-stability.md) · [master-alignment-spine-and-sharpness](master-alignment-spine-and-sharpness.md)
 
 <a id="sources--来源"></a>
 ### Sources

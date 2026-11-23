@@ -68,7 +68,7 @@ Reading (AI-written): compositional safety for coupled adaptive systems fails if
 - **formal-reuse**: [how-fast-a-rule-may-change](how-fast-a-rule-may-change.md). Reuses Pace.paced in unread_adaptive_joint_collapse.
 - **formal-reuse**: [closed-capture](closed-capture.md). Reuses ClosedCapture.unread_course for joint collapse of unread local loops.
 
-**Used by:** [continuous-stochastic-alignment-reals](continuous-stochastic-alignment-reals.md) · [endogenous-turning-and-clearing-margin](endogenous-turning-and-clearing-margin.md) · [open-interface-composition-and-replacement](open-interface-composition-and-replacement.md)
+**Used by:** [continuous-stochastic-alignment-reals](continuous-stochastic-alignment-reals.md) · [endogenous-turning-and-clearing-margin](endogenous-turning-and-clearing-margin.md) · [master-alignment-spine-and-sharpness](master-alignment-spine-and-sharpness.md) · [open-interface-composition-and-replacement](open-interface-composition-and-replacement.md)
 
 <a id="sources--来源"></a>
 ### Sources

@@ -63,6 +63,8 @@ Reading (AI-written): unifies tragedy-of-the-commons with zero prediction error,
 - **formal-reuse**: [unclamped-stock-flow-bridge](unclamped-stock-flow-bridge.md). Reuses StockFlowBridge lineWeb/wayWeb embeddings for finite-horizon pre-overdraw transfer.
 - **formal-reuse**: [free-energy-bound-in-counts](free-energy-bound-in-counts.md). Reuses FreeEnergyGuarantees RiskAndNeeds.Chooser for non-circular zero-local-error depletion proofs.
 
+**Used by:** [master-alignment-spine-and-sharpness](master-alignment-spine-and-sharpness.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

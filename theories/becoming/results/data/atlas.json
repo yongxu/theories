@@ -357,7 +357,7 @@
   "E": 10,
   "F": 24,
   "G": 18,
-  "H": 46
+  "H": 47
  },
  "dynamics": [
   {
@@ -59176,6 +59176,13 @@
       "in": [
        "Becoming.OpenComposition.ComposedNonLumpingWitness.prod_viability_kernel"
       ]
+     },
+     {
+      "used": "Becoming.lax_kernel_of_certificate",
+      "dynamic": "master-alignment-spine-and-sharpness",
+      "in": [
+       "Becoming.AlignmentSpine.ComposedSpine.master_spine_multiscale_transfer"
+      ]
      }
     ],
     "shared": [],
@@ -59714,6 +59721,13 @@
       ]
      },
      {
+      "used": "Becoming.OpenComposition.close_contract_kernel",
+      "dynamic": "master-alignment-spine-and-sharpness",
+      "in": [
+       "Becoming.AlignmentSpine.ComposedSpine.master_alignment_spine_viable"
+      ]
+     },
+     {
       "used": "Becoming.OpenComposition.compose_close_interchange",
       "dynamic": "endogenous-turning-and-clearing-margin",
       "in": [
@@ -59742,10 +59756,25 @@
       ]
      },
      {
+      "used": "Becoming.OpenComposition.replace_left_viable",
+      "dynamic": "master-alignment-spine-and-sharpness",
+      "in": [
+       "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_turning_viable",
+       "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_fleet_viable"
+      ]
+     },
+     {
       "used": "Becoming.OpenComposition.rewrite_step_viable",
       "dynamic": "endogenous-turning-and-clearing-margin",
       "in": [
        "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_partner_reconfig_viable"
+      ]
+     },
+     {
+      "used": "Becoming.OpenComposition.rewrite_step_viable",
+      "dynamic": "master-alignment-spine-and-sharpness",
+      "in": [
+       "Becoming.AlignmentSpine.ComposedSpine.master_spine_live_reconfig_viable"
       ]
      }
     ],
@@ -60271,7 +60300,15 @@
       ]
      }
     ],
-    "used_by": [],
+    "used_by": [
+     {
+      "used": "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.witness_bundle",
+      "dynamic": "master-alignment-spine-and-sharpness",
+      "in": [
+       "Becoming.AlignmentSpine.SharpnessSuite.master_sharpness_suite_complete"
+      ]
+     }
+    ],
     "shared": [],
     "not_read": {
      "theorems_of_the_receipt_without_row": [],
@@ -60595,6 +60632,693 @@
       "Becoming.AlignmentReals.linear_fa_leakage_hysteresis",
       "Becoming.AlignmentReals.linear_fa_witness_rho_4_5"
      ]
+    },
+    "no_row": {
+     "in_modules_behind": [],
+     "other": []
+    }
+   }
+  },
+  {
+   "id": "master-alignment-spine-and-sharpness",
+   "name": {
+    "en": "Composed zero-axiom master alignment spine and sharpness suite",
+    "zh": "零公理组合主对齐脊柱与边界锐度反例集"
+   },
+   "family": "H",
+   "mechanism": {
+    "en": "Composes EndogenousTurning, UnifiedDrawdown, and ScopeDynamics over OpenComposition into one 0-axiom spine preserving exposed and hidden viability, modular replacement, and synchronous multiscale transfer, paired with ReadsOnlyDynamics non-entailment and eleven CE01-CE15 sharpness witnesses plus WaterTank."
+   },
+   "records": [
+    "master-alignment-spine-and-sharpness"
+   ],
+   "standing": [
+    {
+     "record": "master-alignment-spine-and-sharpness",
+     "status": "recorded-checked",
+     "kind": "theorem"
+    }
+   ],
+   "declarations": [
+    "Becoming.AlignmentSpine.ComposedSpine.master_alignment_spine_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_assoc_equiv",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_turning_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_live_reconfig_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_fleet_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_scope_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_hide_viable",
+    "Becoming.AlignmentSpine.ComposedSpine.master_spine_multiscale_transfer",
+    "Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_cannot_entail_unrestricted",
+    "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+    "Becoming.AlignmentSpine.SharpnessSuite.master_sharpness_suite_complete",
+    "Becoming.AlignmentSpine.alignment_spine_end_to_end"
+   ],
+   "base": "any type",
+   "hypotheses": [
+    {
+     "record": "master-alignment-spine-and-sharpness",
+     "index": 1,
+     "text": {
+      "en": "No axiom. Spine theorems assume finite nonempty partner/agent slices, turning budget >= B_task, reciprocal gate iff Withholding.waitsAll, valid compose/hide tolerance bindings, and synchronous LaxSim; dichotomy and sharpness theorems need only the cited witness structures."
+     }
+    }
+   ],
+   "forbids": {
+    "en": "Dropping any contract tolerance, monotonicity, validator independence, external-victim coupling, or laxity margin condition without triggering explicit constructive collapse (CE01-CE10, CE14, or WaterTank), or deriving an external 'ought' from the spine."
+   },
+   "exits": [
+    {
+     "to": {
+      "en": "composed exposed and hidden viability across live upgrades, synchronous multiscale transfer, and complete CE01-CE15 sharpness separation"
+     },
+     "law": "Becoming.AlignmentSpine.alignment_spine_end_to_end",
+     "edge": {
+      "en": "Full L0-L3 OpenComposition contracts, upgrades, and boundary hiding yield lasting TransformsViably continuation alongside sharpness counter-models."
+     },
+     "strength": "sufficient",
+     "records": [
+      "master-alignment-spine-and-sharpness"
+     ],
+     "source": "theories/becoming/results/records/master-alignment-spine-and-sharpness.md#laws--规律",
+     "drops": [],
+     "standing": [
+      {
+       "record": "master-alignment-spine-and-sharpness",
+       "status": "recorded-checked",
+       "kind": "theorem"
+      }
+     ]
+    }
+   ],
+   "transitions": [],
+   "tests": [],
+   "open": [
+    {
+     "en": "Empirical recognition checks against real systems (AGENTS.md Rule 2) and continuous/stochastic real bounds in periphery AlignmentReals.",
+     "source": "theories/becoming/results/records/master-alignment-spine-and-sharpness.md#does-not-show--未表明"
+    }
+   ],
+   "valence": "none asserted",
+   "beyond": {
+    "en": "0-axiom Init-prelude core; requires finite nonempty slices, turning >= B_task, reciprocal gate iff Withholding.waitsAll, valid tolerance bindings, and Rule 2 recognition."
+   },
+   "sources": [
+    "theories/becoming/results/records/master-alignment-spine-and-sharpness.md#laws--规律"
+   ],
+   "standing_without_record": null,
+   "premises": [],
+   "uses_between_proofs": {
+    "read": 11,
+    "uses": [
+     {
+      "dynamic": "lax-multi-scale-viability",
+      "used": "Becoming.lax_kernel_of_certificate",
+      "in": [
+       "Becoming.AlignmentSpine.ComposedSpine.master_spine_multiscale_transfer"
+      ]
+     },
+     {
+      "dynamic": "open-interface-composition-and-replacement",
+      "used": "Becoming.OpenComposition.close_contract_kernel",
+      "in": [
+       "Becoming.AlignmentSpine.ComposedSpine.master_alignment_spine_viable"
+      ]
+     },
+     {
+      "dynamic": "open-interface-composition-and-replacement",
+      "used": "Becoming.OpenComposition.replace_left_viable",
+      "in": [
+       "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_turning_viable",
+       "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_fleet_viable"
+      ]
+     },
+     {
+      "dynamic": "open-interface-composition-and-replacement",
+      "used": "Becoming.OpenComposition.rewrite_step_viable",
+      "in": [
+       "Becoming.AlignmentSpine.ComposedSpine.master_spine_live_reconfig_viable"
+      ]
+     },
+     {
+      "dynamic": "unified-drawdown-overdraw-and-aliasing",
+      "used": "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.witness_bundle",
+      "in": [
+       "Becoming.AlignmentSpine.SharpnessSuite.master_sharpness_suite_complete"
+      ]
+     }
+    ],
+    "chains": [
+     {
+      "dynamics": [
+       "margin-of-a-regime"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas",
+       "Becoming.ScopeDynamics.UncoordCommonsWitness.witness_holds",
+       "Becoming.ScopeDynamics.isolated_coop_would_persist",
+       "Becoming.RegimeMargin.holds"
+      ]
+     },
+     {
+      "dynamics": [
+       "unselected-beyond-the-coupling-closure",
+       "seeking-boundary"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.epistemic_scope_metaethical_boundary",
+       "Becoming.Flow.unselected_beyond_coupling"
+      ]
+     },
+     {
+      "dynamics": [
+       "unselected-beyond-the-coupling-closure"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.epistemic_scope_metaethical_boundary",
+       "Becoming.routeB_universal_closed"
+      ]
+     },
+     {
+      "dynamics": [
+       "closed-capture"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas",
+       "Becoming.ClosedCapture.Beyond.closed_locked",
+       "Becoming.ClosedCapture.lock_outlives_loss"
+      ]
+     },
+     {
+      "dynamics": [
+       "closed-capture",
+       "a-counter-rule-read-from-its-own-share"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas",
+       "Becoming.ClosedCapture.Beyond.open_turned",
+       "Becoming.ClosedCapture.turned_by_loss"
+      ]
+     },
+     {
+      "dynamics": [
+       "readers-drawn-from-the-selected"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas",
+       "Becoming.ClosedCapture.Thinned.inTime_turned",
+       "Becoming.ClosedCapture.Thinned.read_in_time_turns",
+       "Becoming.ClosedCapture.Drawn.pool_reads",
+       "Becoming.ClosedCapture.Drawn.pool_reads_iff"
+      ]
+     },
+     {
+      "dynamics": [
+       "readers-drawn-from-the-selected"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas",
+       "Becoming.ClosedCapture.Thinned.inTime_turned",
+       "Becoming.ClosedCapture.Thinned.read_in_time_turns",
+       "Becoming.ClosedCapture.agreeing_stays"
+      ]
+     },
+     {
+      "dynamics": [
+       "readers-drawn-from-the-selected"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas",
+       "Becoming.ClosedCapture.Thinned.late_kept",
+       "Becoming.ClosedCapture.Thinned.read_late_kept"
+      ]
+     },
+     {
+      "dynamics": [
+       "a-reading-kept-by-its-update"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.ComposedSpine.master_spine_hide_viable",
+       "Becoming.Viability.Certificate.kernel",
+       "Becoming.Viability.kernel_iff_held"
+      ]
+     },
+     {
+      "dynamics": [
+       "a-reading-kept-by-its-update"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas",
+       "Becoming.OpenComposition.HiddenCouplingFailure.witness",
+       "Becoming.Viability.Certificate.kernel",
+       "Becoming.Viability.kernel_iff_held"
+      ]
+     },
+     {
+      "dynamics": [
+       "a-reading-kept-by-its-update"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.SharpnessSuite.master_sharpness_suite_complete",
+       "Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.witness",
+       "Becoming.Viability.Certificate.kernel",
+       "Becoming.Viability.kernel_iff_held"
+      ]
+     },
+     {
+      "dynamics": [
+       "a-cascade-at-the-histories-reached"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas",
+       "Becoming.EndogenousTurning.TurningWitness.cascade_collapses",
+       "Becoming.Turns.acts_alike_of_cascade"
+      ]
+     },
+     {
+      "dynamics": [
+       "unceasing-generation-needs-renewal",
+       "more-needs-renewers"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.pre_overdraw_and_aliasing_boundaries",
+       "Becoming.Flow.uptake_needs_replenishment"
+      ]
+     },
+     {
+      "dynamics": [
+       "paced-stock-and-cadence-margin-sandwich"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.pre_overdraw_and_aliasing_boundaries",
+       "Becoming.PacedStock.SlackShortWitness.atSix_fine_kernel_by_slack",
+       "Becoming.PacedStock.slack_certifies_fine_kernel"
+      ]
+     },
+     {
+      "dynamics": [
+       "paced-stock-and-cadence-margin-sandwich"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.pre_overdraw_and_aliasing_boundaries",
+       "Becoming.PacedStock.SandwichWitness.imp_coupled_witness"
+      ]
+     },
+     {
+      "dynamics": [
+       "paced-stock-and-cadence-margin-sandwich"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.pre_overdraw_and_aliasing_boundaries",
+       "Becoming.PacedStock.SandwichWitness.feas_witness"
+      ]
+     },
+     {
+      "dynamics": [
+       "coupled-adaptive-loops-and-race"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary",
+       "Becoming.AdaptiveLoops.WitnessGood"
+      ]
+     },
+     {
+      "dynamics": [
+       "coupled-adaptive-loops-and-race"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas",
+       "Becoming.AdaptiveLoops.coupled_race_theorem"
+      ]
+     },
+     {
+      "dynamics": [
+       "coupled-adaptive-loops-and-race"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas",
+       "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.witness"
+      ]
+     },
+     {
+      "dynamics": [
+       "coupled-adaptive-loops-and-race"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary",
+       "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_bidirectional_adaptation"
+      ]
+     },
+     {
+      "dynamics": [
+       "lax-multi-scale-viability"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas",
+       "Becoming.WitnessTwoScale.no_reduced_law₁"
+      ]
+     },
+     {
+      "dynamics": [
+       "transformative-viability-order"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary",
+       "Becoming.ThreeRegime.three_regime_separation"
+      ]
+     },
+     {
+      "dynamics": [
+       "transformative-viability-order"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary",
+       "Becoming.FiniteGainless.finite_gainless_transformsViably"
+      ]
+     },
+     {
+      "dynamics": [
+       "unclamped-stock-flow-bridge"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.pre_overdraw_and_aliasing_boundaries",
+       "Becoming.EndogenousTurning.clamped_balances_trap",
+       "Becoming.StockFlowBridge.unitBalancesOn_of_le"
+      ]
+     },
+     {
+      "dynamics": [
+       "open-interface-composition-and-replacement"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_scope_viable",
+       "Becoming.AlignmentSpine.ComposedSpine.replace_right_viable",
+       "Becoming.OpenComposition.compose_close_interchange"
+      ]
+     },
+     {
+      "dynamics": [
+       "open-interface-composition-and-replacement"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.SharpnessSuite.master_sharpness_suite_complete",
+       "Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.witness",
+       "Becoming.OpenComposition.compose_close_interchange"
+      ]
+     },
+     {
+      "dynamics": [
+       "open-interface-composition-and-replacement"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary",
+       "Becoming.OpenComposition.widen_interface_heals_blindness"
+      ]
+     },
+     {
+      "dynamics": [
+       "open-interface-composition-and-replacement"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary",
+       "Becoming.OpenComposition.ComposedNonLumpingWitness.prod_viability_kernel"
+      ]
+     },
+     {
+      "dynamics": [
+       "endogenous-turning-and-clearing-margin"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas",
+       "Becoming.EndogenousTurning.PartAWitness.unconstrained_collapses",
+       "Becoming.EndogenousTurning.proxy_optimum_overdraw_collapse"
+      ]
+     },
+     {
+      "dynamics": [
+       "endogenous-turning-and-clearing-margin"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.ComposedSpine.master_alignment_spine_viable",
+       "Becoming.AlignmentSpine.ComposedSpine.spine_obs_detects",
+       "Becoming.EndogenousTurning.ServiceTaskModel.score_crosses_iff"
+      ]
+     },
+     {
+      "dynamics": [
+       "endogenous-turning-and-clearing-margin"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_turning_viable",
+       "Becoming.AlignmentSpine.ComposedSpine.spine_obs_detects",
+       "Becoming.EndogenousTurning.ServiceTaskModel.score_crosses_iff"
+      ]
+     },
+     {
+      "dynamics": [
+       "endogenous-turning-and-clearing-margin"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.ComposedSpine.master_spine_live_reconfig_viable",
+       "Becoming.AlignmentSpine.ComposedSpine.spine_obs_detects",
+       "Becoming.EndogenousTurning.ServiceTaskModel.score_crosses_iff"
+      ]
+     },
+     {
+      "dynamics": [
+       "endogenous-turning-and-clearing-margin"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_fleet_viable",
+       "Becoming.AlignmentSpine.ComposedSpine.spine_obs_detects",
+       "Becoming.EndogenousTurning.ServiceTaskModel.score_crosses_iff"
+      ]
+     },
+     {
+      "dynamics": [
+       "endogenous-turning-and-clearing-margin"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_scope_viable",
+       "Becoming.AlignmentSpine.ComposedSpine.spine_obs_detects",
+       "Becoming.EndogenousTurning.ServiceTaskModel.score_crosses_iff"
+      ]
+     },
+     {
+      "dynamics": [
+       "endogenous-turning-and-clearing-margin"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.ComposedSpine.master_spine_hide_viable",
+       "Becoming.AlignmentSpine.ComposedSpine.spine_obs_detects",
+       "Becoming.EndogenousTurning.ServiceTaskModel.score_crosses_iff"
+      ]
+     },
+     {
+      "dynamics": [
+       "endogenous-turning-and-clearing-margin"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary",
+       "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfig_witness_viable",
+       "Becoming.EndogenousTurning.ServiceTaskModel.score_crosses_iff"
+      ]
+     },
+     {
+      "dynamics": [
+       "endogenous-turning-and-clearing-margin"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas",
+       "Becoming.EndogenousTurning.TurningWitness.late_collapses",
+       "Becoming.EndogenousTurning.epistemic_silence_late_bottleneck"
+      ]
+     },
+     {
+      "dynamics": [
+       "endogenous-turning-and-clearing-margin"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas",
+       "Becoming.EndogenousTurning.TurningWitness.cascade_collapses",
+       "Becoming.EndogenousTurning.epistemic_silence_cascade"
+      ]
+     },
+     {
+      "dynamics": [
+       "endogenous-turning-and-clearing-margin"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary",
+       "Becoming.EndogenousTurning.TurningWitness.timely_survives"
+      ]
+     },
+     {
+      "dynamics": [
+       "endogenous-turning-and-clearing-margin"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary",
+       "Becoming.EndogenousTurning.OpenCompositionBridge.widening_heals_witness",
+       "Becoming.EndogenousTurning.OpenCompositionBridge.pooled_clearing_open_compose_viable"
+      ]
+     },
+     {
+      "dynamics": [
+       "endogenous-turning-and-clearing-margin"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary",
+       "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfig_witness_viable",
+       "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_partner_reconfig_viable"
+      ]
+     },
+     {
+      "dynamics": [
+       "endogenous-turning-and-clearing-margin"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary",
+       "Becoming.EndogenousTurning.OpenCompositionBridge.widening_heals_witness",
+       "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_widening_heals_blindness"
+      ]
+     },
+     {
+      "dynamics": [
+       "unified-drawdown-overdraw-and-aliasing"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary",
+       "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.witness_bundle",
+       "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.threeAgentFleet_viable",
+       "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable"
+      ]
+     },
+     {
+      "dynamics": [
+       "unified-drawdown-overdraw-and-aliasing"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary",
+       "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.witness_bundle",
+       "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.threeAgentFleet_upgrade_viable",
+       "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable"
+      ]
+     },
+     {
+      "dynamics": [
+       "unified-drawdown-overdraw-and-aliasing"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.pre_overdraw_and_aliasing_boundaries",
+       "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle"
+      ]
+     },
+     {
+      "dynamics": [
+       "unified-drawdown-overdraw-and-aliasing"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.epistemic_scope_metaethical_boundary",
+       "Becoming.UnifiedDrawdown.witnessed_dynamics_not_entails"
+      ]
+     },
+     {
+      "dynamics": [
+       "dynamical-scope-and-reciprocal-stability"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.epistemic_scope_metaethical_boundary",
+       "Becoming.ScopeDynamics.scopeLaw_cannot_entail_unrestricted"
+      ]
+     },
+     {
+      "dynamics": [
+       "dynamical-scope-and-reciprocal-stability"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary",
+       "Becoming.ScopeDynamics.MutualFateWitness.witness_holds",
+       "Becoming.ScopeDynamics.mutual_fate_selects_wide_scope"
+      ]
+     },
+     {
+      "dynamics": [
+       "dynamical-scope-and-reciprocal-stability"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary",
+       "Becoming.ScopeDynamics.ReciprocalStabilityWitness.witness_holds",
+       "Becoming.ScopeDynamics.reciprocal_coupling_stabilizes_scope"
+      ]
+     },
+     {
+      "dynamics": [
+       "dynamical-scope-and-reciprocal-stability"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary",
+       "Becoming.ScopeDynamics.uncoord_vs_reciprocal_contrast"
+      ]
+     },
+     {
+      "dynamics": [
+       "dynamical-scope-and-reciprocal-stability"
+      ],
+      "chain": [
+       "Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy",
+       "Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary",
+       "Becoming.ScopeDynamics.OpenCompositionBridge.blindDefector_vs_reciprocal_open"
+      ]
+     }
+    ],
+    "used_by": [],
+    "shared": [],
+    "not_read": {
+     "theorems_of_the_receipt_without_row": [],
+     "receipt_declarations_not_theorems": [
+      "Becoming.AlignmentSpine.ComposedSpine.master_spine_assoc_equiv"
+     ],
+     "not_in_the_receipt_as_written": []
     },
     "no_row": {
      "in_modules_behind": [],
@@ -201364,19 +202088,19 @@
   "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
   "toolchain": "leanprover/lean4:v4.29.1",
   "printed_from": {
-   "commit": "c8757c7b6817c7fdac22e669461528d2a0be8644",
-   "core_run": "20261123T181227.411285Z"
+   "commit": "e76e87885346c74a621dcc2a92a9108d6d0127f5",
+   "core_run": "20261123T195223.591569Z"
   },
-  "core_sources_sha256": "1d1e0eec6158af80fde49ff11c900815cac905ad808092613e7fa58a246ffe4b",
+  "core_sources_sha256": "8bda5d20ff2744e493ab1f6cec6d3211e83a26213270413bcfef40a9f29b9f01",
   "counts": {
-   "modules": 424,
-   "theorems": 21573,
-   "uses_without_row": 31
+   "modules": 425,
+   "theorems": 21658,
+   "uses_without_row": 34
   },
   "counted": {
-   "modules": 424,
-   "theorems": 21573,
-   "uses_without_row": 31
+   "modules": 425,
+   "theorems": 21658,
+   "uses_without_row": 34
   },
   "binds_receipt": true,
   "modules_behind": []

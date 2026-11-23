@@ -61,6 +61,8 @@ Reading (AI-written): models Goodhart-like proxy overdraw and structural turning
 - **formal-reuse**: [coupled-adaptive-loops-and-race](coupled-adaptive-loops-and-race.md). Reuses AdaptiveLoops.assume_guarantee_joint_viable, OpenLoop, and LoopCertificate across task and pooled clearing loops.
 - **formal-reuse**: [unclamped-stock-flow-bridge](unclamped-stock-flow-bridge.md). Reuses StockFlowBridge unitWeb and unitNeverReturnsBelowWithin for finite-horizon pre-overdraw flow collapses.
 
+**Used by:** [master-alignment-spine-and-sharpness](master-alignment-spine-and-sharpness.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
