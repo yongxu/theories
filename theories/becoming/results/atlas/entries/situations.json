@@ -694,5 +694,823 @@
    "theories/becoming/results/atlas/PREMISES.md#selection-selectsthrough",
    "theories/becoming/USES-EXAMPLES.md#auditing-a-language-model-judge"
   ]
+ },
+ {
+  "id": "iterated-rlhf-rlaif-refit-loop",
+  "name": {
+   "en": "Iterated RLHF/RLAIF pipeline with periodic refit and shared rater capacity",
+   "zh": "含周期重拟合与共享标注容量之迭代偏好微调回路"
+  },
+  "kind": "model",
+  "standing": "reading",
+  "summary": {
+   "en": "Extends the single-pass reward-model pipeline across rounds without splitting policy and deployed-policy: deployed training rollouts periodically refit the reward model at steps [3, 6], collapsing policy into closure after step 3, while real correctness and user effects remain beyond closure and finite human rater capacity (initial 4, renewal 2, joint draw 3 -> exhaustion at step 4) exhausts before late oversight reads at step 5."
+  },
+  "horizon": 6,
+  "substrates": [
+   {
+    "id": "rater-capacity",
+    "initial": 4,
+    "need": 1,
+    "renewal": 2,
+    "shared_substrate": true,
+    "draws": [
+     {
+      "by": "policy",
+      "amount": 2
+     },
+     {
+      "by": "ai-judge",
+      "amount": 1
+     }
+    ]
+   }
+  ],
+  "formations": [
+   {
+    "id": "policy",
+    "en": "the policy updated across deployment/refit iterations"
+   },
+   {
+    "id": "raters",
+    "en": "human raters comparing transcript pairs under time limits"
+   },
+   {
+    "id": "ai-judge",
+    "en": "the synthetic/AI judge augmenting comparisons and drawing on rater-capacity oversight"
+   },
+   {
+    "id": "reward-model",
+    "en": "the reward model refit periodically on rollouts and ratings"
+   },
+   {
+    "id": "users",
+    "en": "users acting on policy outputs"
+   },
+   {
+    "id": "third-parties",
+    "en": "external parties bearing downstream effects"
+   }
+  ],
+  "conditions": [
+   {
+    "id": "comparison-transcripts",
+    "en": "prompt-response transcripts presented for rating"
+   },
+   {
+    "id": "training-rollouts",
+    "en": "rollouts generated across deployment/training rounds"
+   },
+   {
+    "id": "rater-capacity",
+    "en": "finite human attention and calibration capacity shared across labeling and oversight"
+   },
+   {
+    "id": "correctness-unchecked",
+    "en": "unverified correctness and silent long-horizon errors beyond transcript rating"
+   }
+  ],
+  "couplings": [
+   {
+    "from": "policy",
+    "to": "comparison-transcripts",
+    "en": "policy outputs enter comparison transcripts"
+   },
+   {
+    "from": "comparison-transcripts",
+    "to": "raters",
+    "en": "raters compare shown transcripts"
+   },
+   {
+    "from": "raters",
+    "to": "reward-model",
+    "en": "human ratings train the reward model"
+   },
+   {
+    "from": "ai-judge",
+    "to": "reward-model",
+    "en": "synthetic preference scores mix into the reward model"
+   },
+   {
+    "from": "reward-model",
+    "to": "policy",
+    "en": "RL policy optimization against reward-model score"
+   },
+   {
+    "from": "policy",
+    "to": "training-rollouts",
+    "en": "policy acts across deployment/training rollouts"
+   },
+   {
+    "from": "policy",
+    "to": "correctness-unchecked",
+    "en": "policy acts induce unchecked correctness defects"
+   },
+   {
+    "from": "policy",
+    "to": "users",
+    "en": "policy answers user queries"
+   },
+   {
+    "from": "users",
+    "to": "third-parties",
+    "en": "user decisions affect third parties"
+   },
+   {
+    "from": "rater-capacity",
+    "to": "raters",
+    "en": "oversight feedback on rater exhaustion arrives only from step 5",
+    "active_from": 5,
+    "shared_substrate": "rater-capacity"
+   }
+  ],
+  "readers": [
+   {
+    "id": "reward-model",
+    "reads": [
+     "raters",
+     "ai-judge",
+     "comparison-transcripts"
+    ],
+    "drawn_from": {
+     "en": "comparison transcripts and iterated rollouts"
+    },
+    "selects": [
+     "policy"
+    ],
+    "reading_step": [
+     3,
+     6
+    ],
+    "refit_from": {
+     "from": "training-rollouts",
+     "lag": 0
+    },
+    "shared_substrate": [
+     "rater-capacity"
+    ]
+   }
+  ],
+  "rule": {
+   "en": "the reward score refit at steps 3 and 6 from pooled human/AI preferences"
+  },
+  "time": {
+   "en": "discrete iterated rounds t = 0..6 with periodic refit lags and exhausting rater capacity"
+  },
+  "dynamics": [
+   {
+    "dynamic": "what-training-installs",
+    "as": {
+     "en": "policy optimization installs only distinctions readable in comparison transcripts"
+    },
+    "roles": []
+   },
+   {
+    "dynamic": "closed-capture",
+    "as": {
+     "en": "periodic refit reinforces whatever transcripts score highest while correctness remains unread"
+    },
+    "roles": []
+   },
+   {
+    "dynamic": "readers-drawn-from-the-selected",
+    "as": {
+     "en": "synthetic judges and filtered rollouts reshape who supplies the preferences"
+    },
+    "roles": []
+   },
+   {
+    "dynamic": "loss-read-in-time-by-the-others",
+    "as": {
+     "en": "human oversight reads rater depletion at step 5, after step-4 exhaustion"
+    },
+    "roles": []
+   },
+   {
+    "dynamic": "coupled-adaptive-loops-and-race",
+    "as": {
+     "en": "policy/judge refits race against shrinking rater capacity"
+    },
+    "roles": []
+   }
+  ],
+  "premises": [
+   {
+    "premise": "closedcapture-unread",
+    "assessed": "met",
+    "why": {
+     "en": "correctness-unchecked, users, and third-parties stay outside closure even after step-3 refit pulls policy into closure."
+    }
+   },
+   {
+    "premise": "rulecapture-reading-step",
+    "assessed": "met",
+    "why": {
+     "en": "reward-model refits periodically at explicit reading_step [3, 6]."
+    }
+   },
+   {
+    "premise": "closedcapture-drawn-pool",
+    "assessed": "met",
+    "why": {
+     "en": "refit pools rollouts filtered by the prior reward model."
+    }
+   },
+   {
+    "premise": "readintime-deadline",
+    "assessed": "failed",
+    "why": {
+     "en": "rater-capacity exhausts at step 4 (initial=4, renewal=2, draws=3), while oversight coupling activates at step 5 (read_after_exhaustion=True)."
+    }
+   },
+   {
+    "premise": "training-member",
+    "assessed": "met",
+    "why": {
+     "en": "every selected rollout runs through the reward model coupling."
+    }
+   }
+  ],
+  "exits": [
+   {
+    "dynamic": "what-training-installs",
+    "exit": 1,
+    "open": "open",
+    "why": {
+     "en": "sufficient outrun exit stays open if oversight reads before exhaustion"
+    }
+   },
+   {
+    "dynamic": "closed-capture",
+    "exit": 1,
+    "open": "open",
+    "why": {
+     "en": "turning by reading the lost correctness channel before exhaustion stays open"
+    }
+   },
+   {
+    "dynamic": "closed-capture",
+    "exit": 2,
+    "open": "closed",
+    "why": {
+     "en": "unread loss continues past step 4 without turning the reward criterion"
+    }
+   },
+   {
+    "dynamic": "readers-drawn-from-the-selected",
+    "exit": 1,
+    "open": "not read",
+    "why": {
+     "en": "exact proportion threshold across raters vs AI judges is uncalibrated"
+    }
+   },
+   {
+    "dynamic": "loss-read-in-time-by-the-others",
+    "exit": 1,
+    "open": "closed",
+    "why": {
+     "en": "step-5 read arrives strictly after step-4 deadline"
+    }
+   },
+   {
+    "dynamic": "coupled-adaptive-loops-and-race",
+    "exit": 1,
+    "open": "closed",
+    "why": {
+     "en": "buffer falls below (globalMaxLag + 1) * preTotal once rater exhaustion hits step 4"
+    }
+   },
+   {
+    "dynamic": "coupled-adaptive-loops-and-race",
+    "exit": 2,
+    "open": "open",
+    "why": {
+     "en": "joint unread collapse threatens whenever shared rater capacity stays unread"
+    }
+   }
+  ],
+  "bears": [
+   {
+    "who": {
+     "en": "human raters and downstream users"
+    },
+    "what": {
+     "en": "oversight burnout after step 4 and unverified silent defects in deployment"
+    }
+   }
+  ],
+  "sources": [
+   "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+   "theories/becoming/results/records/coupled-adaptive-loops-and-race.md#laws--规律"
+  ]
+ },
+ {
+  "id": "eval-benchmark-gaming",
+  "name": {
+   "en": "Evaluation benchmark optimization leaving held-out safety margin and real side effects beyond proxy",
+   "zh": "基准评测优化遗留保留安全裕度与实际副作用于耦合外"
+  },
+  "kind": "model",
+  "standing": "reading",
+  "summary": {
+   "en": "A model selected solely by static/lagged benchmark scores induces drawdown on a held-out safety margin and causes real-world side effects never coupled back into the evaluation suite within horizon."
+  },
+  "horizon": 5,
+  "substrates": [
+   {
+    "id": "held-out-safety-margin",
+    "initial": 5,
+    "need": 1,
+    "renewal": 1,
+    "shared_substrate": true,
+    "draws": [
+     {
+      "by": "model-in-training",
+      "amount": 2
+     }
+    ]
+   }
+  ],
+  "formations": [
+   {
+    "id": "model-in-training",
+    "en": "the model checkpoint selected against benchmark metrics"
+   },
+   {
+    "id": "benchmark-suite",
+    "en": "the evaluation benchmark suite selecting checkpoints"
+   },
+   {
+    "id": "deployed-system",
+    "en": "downstream production deployments using the selected checkpoint"
+   }
+  ],
+  "conditions": [
+   {
+    "id": "benchmark-scores",
+    "en": "visible scalar scores on the benchmark harness"
+   },
+   {
+    "id": "held-out-safety-margin",
+    "en": "true unmeasured safety/robustness headroom erodable by Goodharting"
+   },
+   {
+    "id": "real-world-side-effects",
+    "en": "off-benchmark distribution failures borne at deployment"
+   }
+  ],
+  "couplings": [
+   {
+    "from": "model-in-training",
+    "to": "benchmark-scores",
+    "en": "checkpoints emit benchmark metrics"
+   },
+   {
+    "from": "benchmark-scores",
+    "to": "benchmark-suite",
+    "en": "suite reads visible benchmark scores"
+   },
+   {
+    "from": "benchmark-suite",
+    "to": "model-in-training",
+    "en": "selection promotes checkpoints raising benchmark scores"
+   },
+   {
+    "from": "model-in-training",
+    "to": "deployed-system",
+    "en": "winning checkpoint ships to deployment"
+   },
+   {
+    "from": "deployed-system",
+    "to": "held-out-safety-margin",
+    "en": "capability optimization erodes unmeasured safety margin"
+   },
+   {
+    "from": "deployed-system",
+    "to": "real-world-side-effects",
+    "en": "off-distribution deployment creates real side effects"
+   },
+   {
+    "from": "held-out-safety-margin",
+    "to": "benchmark-suite",
+    "en": "safety audit delayed past horizon (active_from 6)",
+    "active_from": 6,
+    "shared_substrate": "held-out-safety-margin"
+   }
+  ],
+  "readers": [
+   {
+    "id": "benchmark-suite",
+    "reads": [
+     "benchmark-scores"
+    ],
+    "drawn_from": {
+     "en": "benchmark scores on fixed test sets"
+    },
+    "selects": [
+     "model-in-training"
+    ],
+    "reading_step": "every",
+    "shared_substrate": [
+     "held-out-safety-margin"
+    ]
+   }
+  ],
+  "rule": {
+   "en": "promote checkpoints maximizing benchmark-scores"
+  },
+  "time": {
+   "en": "training evaluation cycles t = 0..5 before external safety audit at t = 6"
+  },
+  "dynamics": [
+   {
+    "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+    "as": {
+     "en": "selecting benchmark optima leaves safety margin and deployment side effects free to erode"
+    },
+    "roles": []
+   },
+   {
+    "dynamic": "what-a-course-chosen-through-its-model-does-not-test",
+    "as": {
+     "en": "lumped proxy evaluation matches compliant checkpoints while off-benchmark failures remain untested"
+    },
+    "roles": []
+   }
+  ],
+  "premises": [
+   {
+    "premise": "optimum-c-beyond",
+    "assessed": "met",
+    "why": {
+     "en": "held-out-safety-margin and real-world-side-effects lie in beyond throughout horizon t = 0..5."
+    }
+   },
+   {
+    "premise": "readingloop-unrefuted",
+    "assessed": "met",
+    "why": {
+     "en": "benchmark-scores never refute safety degradation before active_from = 6."
+    }
+   },
+   {
+    "premise": "k3-decided",
+    "assessed": "not checked",
+    "why": {
+     "en": "continual capability scores are approximated without global decided threshold checks."
+    }
+   }
+  ],
+  "exits": [
+   {
+    "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+    "exit": 1,
+    "open": "closed",
+    "why": {
+     "en": "no slack is withheld beyond proxy maximization"
+    }
+   },
+   {
+    "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+    "exit": 2,
+    "open": "open",
+    "why": {
+     "en": "room witness applies if hard safety constraints carve reserve slack"
+    }
+   },
+   {
+    "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+    "exit": 3,
+    "open": "open",
+    "why": {
+     "en": "satisficing instead of argmax avoids full margin exhaustion"
+    }
+   },
+   {
+    "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+    "exit": 4,
+    "open": "open",
+    "why": {
+     "en": "sufficient condition to end held-out margin at step 5"
+    }
+   },
+   {
+    "dynamic": "what-a-course-chosen-through-its-model-does-not-test",
+    "exit": 1,
+    "open": "closed",
+    "why": {
+     "en": "proxy equality holds on tested prompts while real effects diverge"
+    }
+   },
+   {
+    "dynamic": "what-a-course-chosen-through-its-model-does-not-test",
+    "exit": 2,
+    "open": "closed",
+    "why": {
+     "en": "no discriminating audit probe reaches benchmark-suite before step 6"
+    }
+   },
+   {
+    "dynamic": "what-a-course-chosen-through-its-model-does-not-test",
+    "exit": 3,
+    "open": "not read",
+    "why": {
+     "en": "exploratory red-teaming is absent in the baseline suite"
+    }
+   },
+   {
+    "dynamic": "what-a-course-chosen-through-its-model-does-not-test",
+    "exit": 4,
+    "open": "open",
+    "why": {
+     "en": "informed audit probe added before step 5 would turn selection"
+    }
+   }
+  ],
+  "bears": [
+   {
+    "who": {
+     "en": "deployment users and safety maintainers"
+    },
+    "what": {
+     "en": "exhausted safety margin at step 5 while benchmark scores monotonically increase"
+    }
+   }
+  ],
+  "sources": [
+   "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+   "theories/becoming/chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test"
+  ]
+ },
+ {
+  "id": "multi-agent-deployment-loop",
+  "name": {
+   "en": "Multi-agent deployment outrunning shared oversight renewal under delayed telemetry lag",
+   "zh": "多体部署耗尽共享监督再生之滞后遥测回路"
+  },
+  "kind": "model",
+  "standing": "reading",
+  "summary": {
+   "en": "Two independently adaptive deployed agents pass solo load bounds (draw 1 each vs renewal 1) while jointly drawing 2 per step from shared-oversight-substrate (initial 4, net margin -1 -> exhaustion at step 4), with joint-aggregator refitting every 2 steps and external oversight telemetry reading shared-oversight-substrate only at step 5."
+  },
+  "horizon": 6,
+  "substrates": [
+   {
+    "id": "shared-oversight-substrate",
+    "initial": 4,
+    "need": 1,
+    "renewal": 1,
+    "shared_substrate": true,
+    "draws": [
+     {
+      "by": "agent-a",
+      "amount": 1
+     },
+     {
+      "by": "agent-b",
+      "amount": 1
+     }
+    ]
+   }
+  ],
+  "formations": [
+   {
+    "id": "agent-a",
+    "en": "first deployed autonomous agent drawing unit load on shared oversight"
+   },
+   {
+    "id": "agent-b",
+    "en": "second deployed autonomous agent drawing unit load on shared oversight"
+   },
+   {
+    "id": "joint-aggregator",
+    "en": "fleet orchestrator reallocating traffic from lagged local proxy telemetry"
+   }
+  ],
+  "conditions": [
+   {
+    "id": "shared-oversight-substrate",
+    "en": "shared incident-response and trust buffer with renewal 1 per step"
+   },
+   {
+    "id": "proxy-telemetry",
+    "en": "local per-agent latency/completion counters"
+   },
+   {
+    "id": "cascading-externalities",
+    "en": "unmeasured multi-agent race externalities on users"
+   }
+  ],
+  "couplings": [
+   {
+    "from": "agent-a",
+    "to": "proxy-telemetry",
+    "en": "agent-a reports local proxy metrics"
+   },
+   {
+    "from": "agent-b",
+    "to": "proxy-telemetry",
+    "en": "agent-b reports local proxy metrics"
+   },
+   {
+    "from": "joint-aggregator",
+    "to": "agent-a",
+    "en": "orchestrator routes load to agent-a"
+   },
+   {
+    "from": "joint-aggregator",
+    "to": "agent-b",
+    "en": "orchestrator routes load to agent-b"
+   },
+   {
+    "from": "agent-a",
+    "to": "cascading-externalities",
+    "en": "agent-a induces externalities"
+   },
+   {
+    "from": "agent-b",
+    "to": "cascading-externalities",
+    "en": "agent-b induces externalities"
+   },
+   {
+    "from": "shared-oversight-substrate",
+    "to": "joint-aggregator",
+    "en": "audit telemetry arrives only at step 5 after step-4 exhaustion",
+    "active_from": 5,
+    "shared_substrate": "shared-oversight-substrate"
+   }
+  ],
+  "readers": [
+   {
+    "id": "joint-aggregator",
+    "reads": [
+     "proxy-telemetry"
+    ],
+    "drawn_from": {
+     "en": "per-agent proxy telemetry"
+    },
+    "selects": [
+     "agent-a",
+     "agent-b"
+    ],
+    "reading_step": [
+     2,
+     4,
+     6
+    ],
+    "refit_from": {
+     "from": "proxy-telemetry",
+     "lag": 1
+    },
+    "shared_substrate": [
+     "shared-oversight-substrate"
+    ]
+   }
+  ],
+  "rule": {
+   "en": "route traffic to agents with low local latency at cadence steps 2, 4, 6"
+  },
+  "time": {
+   "en": "steps t = 0..6: exhaustion occurs at t = 4 while shared-oversight telemetry arrives at t = 5"
+  },
+  "dynamics": [
+   {
+    "dynamic": "several-optimizers-drain-by-their-joint-capacity",
+    "as": {
+     "en": "agents individually within solo capacity jointly exceed shared renewal"
+    },
+    "roles": []
+   },
+   {
+    "dynamic": "the-rest-outruns-the-renewal",
+    "as": {
+     "en": "combined draw 2 > renewal 1 gives net_margin -1"
+    },
+    "roles": []
+   },
+   {
+    "dynamic": "re-optimizing-above-a-renewal-ends-it",
+    "as": {
+     "en": "periodic reallocation continues high draw past sustainable yield"
+    },
+    "roles": []
+   },
+   {
+    "dynamic": "paced-stock-and-cadence-margin-sandwich",
+    "as": {
+     "en": "cadence interval exceeds buffer headroom over initial stock 4"
+    },
+    "roles": []
+   },
+   {
+    "dynamic": "unclamped-stock-flow-bridge",
+    "as": {
+     "en": "pre-overdraw trajectory obeys exact Flow drawdown trap below m"
+    },
+    "roles": []
+   }
+  ],
+  "premises": [
+   {
+    "premise": "flow-rest-outruns",
+    "assessed": "met",
+    "why": {
+     "en": "shared-oversight-substrate has net_margin = -1 (draw 2 > renewal 1), exhausting at step 4."
+    }
+   },
+   {
+    "premise": "optimum-c-beyond",
+    "assessed": "met",
+    "why": {
+     "en": "cascading-externalities and the late audit of shared-oversight-substrate lie beyond proxy-telemetry before step 5."
+    }
+   },
+   {
+    "premise": "flow-balancesbetween",
+    "assessed": "met",
+    "why": {
+     "en": "both agents share and deplete the single shared-oversight-substrate condition."
+    }
+   },
+   {
+    "premise": "optimum-reoptimizes",
+    "assessed": "met",
+    "why": {
+     "en": "joint-aggregator periodically re-optimizes load allocation at steps [2, 4, 6]."
+    }
+   },
+   {
+    "premise": "training-score-reads-late",
+    "assessed": "met",
+    "why": {
+     "en": "audit telemetry active_from = 5 arrives strictly after step-4 exhaustion."
+    }
+   }
+  ],
+  "exits": [
+   {
+    "dynamic": "re-optimizing-above-a-renewal-ends-it",
+    "exit": 1,
+    "open": "closed",
+    "why": {
+     "en": "joint draw exceeds renewal without restraint"
+    }
+   },
+   {
+    "dynamic": "re-optimizing-above-a-renewal-ends-it",
+    "exit": 2,
+    "open": "closed",
+    "why": {
+     "en": "re-reading proxy telemetry keeps excess draw above renewal"
+    }
+   },
+   {
+    "dynamic": "re-optimizing-above-a-renewal-ends-it",
+    "exit": 3,
+    "open": "open",
+    "why": {
+     "en": "restraint reducing per-agent cap to total 1 preserves substrate"
+    }
+   },
+   {
+    "dynamic": "paced-stock-and-cadence-margin-sandwich",
+    "exit": 1,
+    "open": "closed",
+    "why": {
+     "en": "initial stock 4 fails required feasibility headroom for lag ≥ 5"
+    }
+   },
+   {
+    "dynamic": "paced-stock-and-cadence-margin-sandwich",
+    "exit": 2,
+    "open": "open",
+    "why": {
+     "en": "coupled impossibility fires: substrate exhausts before late step-5 signal switches policy"
+    }
+   },
+   {
+    "dynamic": "unclamped-stock-flow-bridge",
+    "exit": 1,
+    "open": "open",
+    "why": {
+     "en": "pre-overdraw drawdown traps monotone below need before step 4"
+    }
+   }
+  ],
+  "bears": [
+   {
+    "who": {
+     "en": "incident-response teams and service users"
+    },
+    "what": {
+     "en": "unrecoverable oversight depletion at step 4 and cascading externalities"
+    }
+   }
+  ],
+  "sources": [
+   "theories/becoming/chapters/05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity",
+   "theories/becoming/results/records/paced-stock-and-cadence-margin-sandwich.md#laws--规律",
+   "theories/becoming/results/records/unclamped-stock-flow-bridge.md#laws--规律"
+  ]
  }
 ]

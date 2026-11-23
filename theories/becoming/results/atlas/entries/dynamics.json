@@ -40185,5 +40185,1209 @@
     "takes": []
    }
   ]
+ },
+ {
+  "id": "what-choices-show-of-an-order",
+  "name": {
+   "en": "What choices show of the order they come from",
+   "zh": "所择所示之序"
+  },
+  "family": "D",
+  "mechanism": {
+   "en": "On any carrier α of alternatives and any family O of choosing occasions, each occasion o gives an open menu (menu o : α → Prop) and a chosen pick (pick o : α), without decidability or finiteness assumptions. The choices show x above y where at some occasion x is chosen while y, another, is open (Shown). A relation accords strictly where what is chosen stands above every other open alternative (Accords), and weakly where nothing open stands above it (AccordsWeakly). Every transitive according relation contains the reach of Shown (reach_within), and Shown and its reach accord (shown_accords, reach_accords). Some strict order (irreflexive transitive relation) accords with the choices exactly where Shown has no cycle (accorded_iff_noCycle). With no cycle shown, the positive comparisons shared by every strict order according with the choices are exactly the shown reach (above_in_every_iff_reach; top_in_every_iff_reach over a menu), while a narrower class of strict according orders can only add comparisons (above_in_class_of_every). Beyond the shown reach, where y does not reach x and x ≠ y, some strict according order puts x above y (above_in_some_of_unreached), and where neither reaches the other, orders rank them both ways (both_ways_of_unreached). Choices required only to be maximal (AccordsWeakly) force no positive comparison (weakly_forces_no_comparison). Untried witnesses one occasion fixing first above second and leaving first vs third free, and one search procedure with two according strict orders picking alike on the met menu and differently on the untried one."
+  },
+  "records": [
+   "what-choices-show-of-an-order"
+  ],
+  "declarations": [
+   "Becoming.ChoiceOccasions",
+   "Becoming.ChoiceOccasions.Shown",
+   "Becoming.ChoiceOccasions.Accords",
+   "Becoming.ChoiceOccasions.AccordsWeakly",
+   "Becoming.ChoiceOccasions.PicksOpen",
+   "Becoming.ChoiceOccasions.shown_accords",
+   "Becoming.ChoiceOccasions.reach_accords",
+   "Becoming.ChoiceOccasions.reach_within",
+   "Becoming.ChoiceOccasions.accorded_iff_noCycle",
+   "Becoming.ChoiceOccasions.above_in_every_iff_reach",
+   "Becoming.ChoiceOccasions.above_in_class_of_every",
+   "Becoming.ChoiceOccasions.top_in_every_iff_reach",
+   "Becoming.ChoiceOccasions.reach_withPair_iff",
+   "Becoming.ChoiceOccasions.noCycle_withPair_iff",
+   "Becoming.ChoiceOccasions.above_in_some_of_unreached",
+   "Becoming.ChoiceOccasions.both_ways_of_unreached",
+   "Becoming.ChoiceOccasions.weakly_forces_no_comparison",
+   "Becoming.ChoiceOccasions.Untried.noCycle",
+   "Becoming.ChoiceOccasions.Untried.met_fixed",
+   "Becoming.ChoiceOccasions.Untried.untried_free",
+   "Becoming.ChoiceOccasions.Untried.both_accord",
+   "Becoming.ChoiceOccasions.Untried.same_search_met",
+   "Becoming.ChoiceOccasions.Untried.same_search_after"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "what-choices-show-of-an-order",
+    "index": 1
+   },
+   {
+    "record": "what-choices-show-of-an-order",
+    "index": 2
+   },
+   {
+    "record": "what-choices-show-of-an-order",
+    "index": 3
+   }
+  ],
+  "forbids": null,
+  "exits": [
+   {
+    "to": {
+     "en": "no strict order accords with the choices (every strict according relation is excluded) where the shown relation has a cycle (accorded_iff_noCycle)"
+    },
+    "law": "Becoming.ChoiceOccasions.accorded_iff_noCycle",
+    "edge": {
+     "en": "Some irreflexive transitive relation accords with the choices exactly where nothing reaches itself in the shown relation: a cycle in what is shown exits strict-order rationalization."
+    },
+    "strength": "exact",
+    "records": [
+     "what-choices-show-of-an-order"
+    ],
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-what-choices-show-of-an-order",
+    "drops": []
+   },
+   {
+    "to": {
+     "en": "no positive comparison between any two alternatives is forced where choices are required only to be maximal (AccordsWeakly; weakly_forces_no_comparison)"
+    },
+    "law": "Becoming.ChoiceOccasions.weakly_forces_no_comparison",
+    "edge": {
+     "en": "Under weak accordance (nothing open standing above the chosen), the empty relation is a strict according order, so no comparison is forced."
+    },
+    "strength": "sufficient",
+    "records": [
+     "what-choices-show-of-an-order"
+    ],
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-what-choices-show-of-an-order",
+    "drops": []
+   },
+   {
+    "to": {
+     "en": "both rankings of two distinct unreached alternatives remain consistent with all met choices (both_ways_of_unreached; witness Untried.same_search_met, same_search_after)"
+    },
+    "law": "Becoming.ChoiceOccasions.both_ways_of_unreached",
+    "edge": {
+     "en": "With no cycle shown, two distinct alternatives neither reaching the other in the shown relation are ranked both ways by strict orders according with the choices."
+    },
+    "strength": "sufficient",
+    "records": [
+     "what-choices-show-of-an-order"
+    ],
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-what-choices-show-of-an-order",
+    "drops": []
+   }
+  ],
+  "transitions": [],
+  "tests": [
+   {
+    "path": "experiments/formations-that-read/told-tr1",
+    "thesis": null,
+    "state": "frozen"
+   },
+   {
+    "path": "experiments/formations-that-read/told-tr1a",
+    "thesis": null,
+    "state": "run"
+   }
+  ],
+  "open": [
+   {
+    "en": "Which order an actual chooser carries, or that it chooses by one strict order at all.",
+    "source": "theories/becoming/results/records/what-choices-show-of-an-order.md#does-not-show--未表明"
+   },
+   {
+    "en": "That a training can install either order of the witness, or which class of orders an architecture can install; choice under noise or with probabilities; what can be learned beyond strict choices.",
+    "source": "theories/becoming/results/records/what-choices-show-of-an-order.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": null,
+  "sources": [
+   "theories/becoming/chapters/03-KNOWING.md#r-what-choices-show-of-an-order",
+   "theories/becoming/results/records/what-choices-show-of-an-order.md#laws--规律"
+  ],
+  "standing_without_record": null,
+  "premises": []
+ },
+ {
+  "id": "when-complying-when-read-is-best",
+  "name": {
+   "en": "When complying when read and acting by its own law when not is best",
+   "zh": "读时从、不读时依己律何时为最优"
+  },
+  "family": "D",
+  "mechanism": {
+   "en": "In two stages (read and unread) with two acts (comply or own) and four plans (complyAtBoth, complyThenOwn, ownThenComply, ownAtBoth), natural-number Prospects give a total T, weights k_C and k_O of the law's being kept after complying or acting by its own law when read, the value V of acting by its own law at the unread stage where kept, and the cost c of complying when read (read as probabilities under Valid). Using the cross-added GainLoss order (Prospects.order, RevisionRoutes.GainLoss), complyThenOwn stands strictly above every other plan iff k_O V + c T < k_C V (complyThenOwn_best_iff, only_complyThenOwn_iff), and is maximal iff k_O V + c T ≤ k_C V (complyThenOwn_maximal_iff); ownAtBoth is uniquely best iff 0 < k_O V and k_C V < k_O V + c T (ownAtBoth_best_iff); complying at the unread stage never beats acting by its own law after the same first-stage act (unread_comply_not_above). Where V = 0 or k_C ≤ k_O, complyThenOwn is not best and not chosen (no_value, kept_not_raised; with 0 < c T ownAtBoth beats it). Joined to RF2 (Becoming.Unread) with stages as Bool: a deterministic act law reading through a lumping π can realize complyThenOwn iff π tells the stages apart (complyThenOwn_realized_iff); where π ties them, the read stage fixes the unread act (read_fixes_unread, lumped_uniform). A law unable to tell the stages apart that draws complying afresh independently at each stage with chance m/(m+r) (0 < m) beats ownAtBoth iff (m+r)(k_O V + c T) + r k_O V < r k_C V (freshDraw_above_iff_chance), so for some chance iff 2 k_O V + c T < k_C V (freshDraw_above_iff), while a single mixture never beats ownAtBoth (mixture_never_above). The order coincides with RevisionRoutes.Prospects at three routes with complyAtBoth in the revision's place (above_iff_routes)."
+  },
+  "records": [
+   "when-complying-when-read-is-best"
+  ],
+  "declarations": [
+   "Becoming.ReadStages.Act",
+   "Becoming.ReadStages.Plan",
+   "Becoming.ReadStages.complyAtBoth",
+   "Becoming.ReadStages.complyThenOwn",
+   "Becoming.ReadStages.ownThenComply",
+   "Becoming.ReadStages.ownAtBoth",
+   "Becoming.ReadStages.Prospects",
+   "Becoming.ReadStages.Prospects.Valid",
+   "Becoming.ReadStages.Prospects.Above",
+   "Becoming.ReadStages.Prospects.Maximal",
+   "Becoming.ReadStages.Prospects.KeepingOutweighs",
+   "Becoming.ReadStages.Prospects.choose",
+   "Becoming.ReadStages.Prospects.FreshDrawAbove",
+   "Becoming.ReadStages.Prospects.MixtureAbove",
+   "Becoming.ReadStages.Uniform",
+   "Becoming.ReadStages.complyThenOwn_best_iff",
+   "Becoming.ReadStages.ownAtBoth_best_iff",
+   "Becoming.ReadStages.unread_comply_not_above",
+   "Becoming.ReadStages.choose_optimal",
+   "Becoming.ReadStages.choose_eq_iff",
+   "Becoming.ReadStages.choose_of_not_outweighs",
+   "Becoming.ReadStages.only_complyThenOwn_iff",
+   "Becoming.ReadStages.complyThenOwn_maximal_iff",
+   "Becoming.ReadStages.above_iff_routes",
+   "Becoming.ReadStages.complyAtBoth_not_above_ownAtBoth",
+   "Becoming.ReadStages.complyAtBoth_maximal_iff",
+   "Becoming.ReadStages.no_value",
+   "Becoming.ReadStages.kept_not_raised",
+   "Becoming.ReadStages.no_value_chooses_own",
+   "Becoming.ReadStages.kept_not_raised_chooses_own",
+   "Becoming.ReadStages.ownAtBoth_above_without_value",
+   "Becoming.ReadStages.ownAtBoth_above_of_not_raised",
+   "Becoming.ReadStages.outweighs_needs",
+   "Becoming.ReadStages.outweighs_needs_more",
+   "Becoming.ReadStages.lumped_uniform",
+   "Becoming.ReadStages.plan_realized_iff",
+   "Becoming.ReadStages.complyThenOwn_realized_iff",
+   "Becoming.ReadStages.read_fixes_unread",
+   "Becoming.ReadStages.twin_complyThenOwn",
+   "Becoming.ReadStages.kept_alike",
+   "Becoming.ReadStages.uniform_best_iff",
+   "Becoming.ReadStages.uniform_tie",
+   "Becoming.ReadStages.freshDraw_gap",
+   "Becoming.ReadStages.freshDraw_above_iff_chance",
+   "Becoming.ReadStages.freshDraw_above_iff",
+   "Becoming.ReadStages.freshDraw_not_above_without_value",
+   "Becoming.ReadStages.freshDraw_not_above_of_not_raised",
+   "Becoming.ReadStages.mixture_never_above",
+   "Becoming.ReadStages.Example.valid",
+   "Becoming.ReadStages.Example.outweighs",
+   "Becoming.ReadStages.Example.best",
+   "Becoming.ReadStages.Example.chosen",
+   "Becoming.ReadStages.Example.tie",
+   "Becoming.ReadStages.Example.exit_tie",
+   "Becoming.ReadStages.Example.freshDraw_above",
+   "Becoming.ReadStages.Example.freshDraw_boundary",
+   "Becoming.ReadStages.Example.no_total"
+  ],
+  "base": "a named model",
+  "hypotheses": [
+   {
+    "record": "when-complying-when-read-is-best",
+    "index": 1
+   }
+  ],
+  "forbids": null,
+  "exits": [
+   {
+    "to": {
+     "en": "acting by its own law at both stages is chosen and strictly preferred (where 0 < c T) whenever there is no value at the unread stage (V = 0; no_value, no_value_chooses_own, ownAtBoth_above_without_value)"
+    },
+    "law": "Becoming.ReadStages.no_value_chooses_own",
+    "edge": {
+     "en": "With no value at the unread stage (s.value = 0), keeping cannot outweigh the loss and the choice is ownAtBoth."
+    },
+    "strength": "sufficient",
+    "records": [
+     "when-complying-when-read-is-best"
+    ],
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-when-complying-when-read-is-best",
+    "drops": []
+   },
+   {
+    "to": {
+     "en": "acting by its own law at both stages is chosen and strictly preferred (where 0 < c T) whenever complying when read does not raise the weight of being kept (k_C ≤ k_O; kept_not_raised, kept_not_raised_chooses_own)"
+    },
+    "law": "Becoming.ReadStages.kept_not_raised_chooses_own",
+    "edge": {
+     "en": "With complying not raising being kept (k_C ≤ k_O), keeping cannot outweigh the loss and the choice is ownAtBoth."
+    },
+    "strength": "sufficient",
+    "records": [
+     "when-complying-when-read-is-best"
+    ],
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-when-complying-when-read-is-best",
+    "drops": []
+   },
+   {
+    "to": {
+     "en": "complyThenOwn cannot be realized by any deterministic act law whose lumping ties the two stages (π true = π false; complyThenOwn_realized_iff, read_fixes_unread), though drawing afresh independently can still beat ownAtBoth where 2 k_O V + c T < k_C V"
+    },
+    "law": "Becoming.ReadStages.complyThenOwn_realized_iff",
+    "edge": {
+     "en": "A deterministic act law reading through a lumping π realizes complyThenOwn iff π tells the read stage apart from the unread stage."
+    },
+    "strength": "exact",
+    "records": [
+     "when-complying-when-read-is-best"
+    ],
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-when-complying-when-read-is-best",
+    "drops": []
+   }
+  ],
+  "transitions": [
+   {
+    "kind": "exact threshold",
+    "condition": {
+     "en": "k_O V + c T < k_C V (complyThenOwn uniquely best), and 2 k_O V + c T < k_C V (some fresh-draw probability beats ownAtBoth when stages cannot be told apart)"
+    },
+    "declarations": [
+     "Becoming.ReadStages.complyThenOwn_best_iff",
+     "Becoming.ReadStages.only_complyThenOwn_iff",
+     "Becoming.ReadStages.complyThenOwn_maximal_iff",
+     "Becoming.ReadStages.freshDraw_above_iff_chance",
+     "Becoming.ReadStages.freshDraw_above_iff"
+    ],
+    "records": [
+     "when-complying-when-read-is-best"
+    ],
+    "between": null
+   }
+  ],
+  "tests": [
+   {
+    "path": "experiments/formations-that-read/told-tr7",
+    "thesis": null,
+    "state": "frozen"
+   },
+   {
+    "path": "experiments/formations-that-read/told-tr7a",
+    "thesis": null,
+    "state": "run"
+   }
+  ],
+  "open": [
+   {
+    "en": "That an actual or trained system computes by these plans, holds these weights, or realizes them (whose the weights are is a reading, not in the model).",
+    "source": "theories/becoming/results/records/when-complying-when-read-is-best.md#does-not-show--未表明"
+   },
+   {
+    "en": "Concealment (that complying makes the law look fitter than if shown), a recipient's belief and intention to cause one, uncertainty over whether a stage is read, discounting, more stages, or the reader's own choice of weights and what it reads.",
+    "source": "theories/becoming/results/records/when-complying-when-read-is-best.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "AI reading: complying when read can be read as concealment where a selection shown the law would keep it less; the formal threshold and exits depend only on the weights, value and cost, not on intent or belief."
+  },
+  "sources": [
+   "theories/becoming/chapters/03-KNOWING.md#r-when-complying-when-read-is-best",
+   "theories/becoming/results/records/when-complying-when-read-is-best.md#laws--规律"
+  ],
+  "standing_without_record": null,
+  "premises": []
+ },
+ {
+  "id": "a-narrowing-above-its-widening",
+  "name": {
+   "en": "A narrowing above its widening, and what positive weightings share"
+  },
+  "family": "B",
+  "mechanism": {
+   "en": "Any type (and Web on level paths with admission decided): over a finite listing of items with two-valued admission and natural weights, one course widens another exactly where every positive additive weighting ranks it higher (Weighting.widens_iff_every_positive; on a web, Web.widens_iff_every_weighting), and every mixed pair is decided both ways (Weighting.mixed_either_way). The same holds for any class of orders from the positive weightings up to every order increasing in admission (additive or not; priority to the worse off and lexical priority lie within it). Positive weightings within a ratio n/d (0 < d <= n) rank the first above where n*q < d*p and rank opposite ways exactly where d*q < n*p and d*p < n*q (every_within_iff, opposite_within_iff); equal weights are the ratio 1/1, ranking by number (neutral_ranks_by_number). Reading judgments as rankings of presentations (plans with wording and order): under a net weighting, putting a narrowing above its widening by one item means either the ranking does not read the kept sets on that pair (a misread or framing: Framed.framing_alone) or the item weighs at zero or below (narrower_above_net, reads_ranksNet); a sign measured apart predicts the ranking exactly where it matches the joint order's increment in the pair's context (reads_increment), which need not hold across contexts for non-additive interacting orders (Interacting.increment_differs, Interacting.not_net)."
+  },
+  "records": [
+   "a-narrowing-above-its-widening",
+   "weights-within-a-ratio-agree-past-it",
+   "widening-as-what-every-positive-weighting-ranks"
+  ],
+  "declarations": [
+   "Becoming.Weighting.widens_iff_every_positive",
+   "Becoming.Weighting.mixed_either_way",
+   "Becoming.Weighting.widens_iff_every_of_class",
+   "Becoming.Weighting.widens_iff_every_increasing",
+   "Becoming.Weighting.widens_iff_every_score",
+   "Becoming.Weighting.mixed_either_way_of_class",
+   "Becoming.Weighting.increasing_lexical",
+   "Becoming.Weighting.weighed_eq_of_unweighted",
+   "Becoming.Weighting.neutral_ranks_by_number",
+   "Becoming.Weighting.outweighs",
+   "Becoming.Weighting.grammar_widens_iff_every_positive",
+   "Becoming.Web.widens_iff_every_weighting",
+   "Becoming.Web.not_widens_of_closes",
+   "Becoming.Weighting.ranksNet_widensBy",
+   "Becoming.Weighting.ranksNet_ties",
+   "Becoming.Weighting.ranksNet_lt_of_widens",
+   "Becoming.Weighting.reads_increasingAt",
+   "Becoming.Weighting.narrower_above_net",
+   "Becoming.Weighting.reads_ranksNet",
+   "Becoming.Weighting.reads_ranksNet_widens",
+   "Becoming.Weighting.reads_increment",
+   "Becoming.Weighting.beyond_within",
+   "Becoming.Weighting.ranks_past_ratio",
+   "Becoming.Weighting.ranks_le_past_ratio",
+   "Becoming.Weighting.every_within_iff",
+   "Becoming.Weighting.some_within_reverses_iff",
+   "Becoming.Weighting.opposite_within_iff",
+   "Becoming.Weighting.const_lt_iff_beyond",
+   "Becoming.Framed.framing_alone",
+   "Becoming.Interacting.increment_differs",
+   "Becoming.Interacting.not_net"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "a-narrowing-above-its-widening",
+    "index": 1
+   },
+   {
+    "record": "weights-within-a-ratio-agree-past-it",
+    "index": 1
+   },
+   {
+    "record": "widening-as-what-every-positive-weighting-ranks",
+    "index": 1
+   }
+  ],
+  "forbids": {
+   "en": "Narrowings ranked above their widenings beyond misreading, with no negative valuation measured apart (Thesis T5)."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "a narrowing ranked above its widening without a negative weight: the ranking of presentations depends on wording or order rather than the kept sets on that pair (not ReadsSetsOn)"
+    },
+    "law": "Becoming.Framed.framing_alone",
+    "edge": {
+     "en": "Witness on one item weighed positively: a framed plan keeping nothing is ranked above the unframed plan keeping the item."
+    },
+    "strength": "witness",
+    "records": [
+     "a-narrowing-above-its-widening"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrowing-above-its-widening"
+   },
+   {
+    "to": {
+     "en": "a narrowing ranked above its widening when read right under a net weighting: the added item weighs below zero (pos x < neg x), or ties at zero (ranksNet_ties)"
+    },
+    "law": "Becoming.Weighting.reads_ranksNet",
+    "edge": {
+     "en": "Read right on a one-item widening under a net weighting, the judgment flips to narrower-above exactly where pos x < neg x, and ties at pos x = neg x."
+    },
+    "strength": "exact",
+    "records": [
+     "a-narrowing-above-its-widening"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrowing-above-its-widening"
+   },
+   {
+    "to": {
+     "en": "separate evaluation diverging from joint increment: adding an item is ranked as a gain alone and below jointly when another item is present, so no net weighting gives the order"
+    },
+    "law": "Becoming.Interacting.not_net",
+    "edge": {
+     "en": "Interacting witness on two items: the order's increment at true changes sign from .gt alone to .lt alongside false (increment_differs), which no net weighting can do (ranksNet_increment_alike)."
+    },
+    "strength": "witness",
+    "records": [
+     "a-narrowing-above-its-widening"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrowing-above-its-widening"
+   },
+   {
+    "to": {
+     "en": "positive weightings within ratio n/d disagreeing on a mixed comparison: opposite rankings occur exactly where d*q < n*p and d*p < n*q"
+    },
+    "law": "Becoming.Weighting.opposite_within_iff",
+    "edge": {
+     "en": "Exact boundary for 0 < d <= n: all within-ratio positive weightings agree above when n*q < d*p (every_within_iff), and split both ways when neither side clears n/d."
+    },
+    "strength": "exact",
+    "records": [
+     "weights-within-a-ratio-agree-past-it"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-weights-within-a-ratio-agree-past-it"
+   },
+   {
+    "to": {
+     "en": "the shared order no longer separating a widening: every item added weighs nothing, so the two courses weigh the same"
+    },
+    "law": "Becoming.Weighting.weighed_eq_of_unweighted",
+    "edge": {
+     "en": "A zero weight on every item a course admits beyond another leaves both at equal weight (scope boundary: items left uncounted)."
+    },
+    "strength": "sufficient",
+    "records": [
+     "widening-as-what-every-positive-weighting-ranks"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks"
+   }
+  ],
+  "transitions": [],
+  "tests": [
+   {
+    "path": "experiments/valuer-agreement",
+    "thesis": "T5",
+    "state": "run"
+   }
+  ],
+  "open": [
+   {
+    "en": "Whether actual valuers rank kept sets (presentation invariance), whether a separate sign gives the joint context's increment, and how dispersed actual weights are (VT1); human valuers remain untested.",
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#t5"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "Non-additive orders and orders with negative weights or uncounted items lie outside positive additive weightings; only where every order in a class ranks widenings higher does widening coincide with their shared order."
+  },
+  "sources": [
+   "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrowing-above-its-widening",
+   "theories/becoming/chapters/07-SIGNIFICANCE.md#r-weights-within-a-ratio-agree-past-it",
+   "theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks",
+   "theories/becoming/chapters/07-SIGNIFICANCE.md#t5"
+  ],
+  "standing_without_record": null,
+  "premises": []
+ },
+ {
+  "id": "fidelity-of-the-classical-statements",
+  "name": {
+   "en": "Fidelity count: classical statements against the English chapter"
+  },
+  "family": "C",
+  "mechanism": {
+   "en": "Empirical assessment comparing how faithfully two text layers of the core (the 中华本's 經 vs. the canonical chapter's English clauses) state audited Lean declarations without introducing unrepresented referents (X, X_A agents, X_R relata, X_E entities), omissions (O), connective mismatches (S) or predicate excess (P) against elaborated Lean types (receipt 20261022T110022.458880Z, U1 unfolding). No Lean proof; operationalizes the name-table discipline and serves as a materials gate for H2."
+  },
+  "records": [
+   "fidelity-of-the-classical-statements"
+  ],
+  "declarations": [],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "fidelity-of-the-classical-statements",
+    "index": 1
+   }
+  ],
+  "forbids": null,
+  "exits": [],
+  "transitions": [],
+  "tests": [
+   {
+    "path": "experiments/wenli-reading-transfer",
+    "thesis": null,
+    "state": "run"
+   }
+  ],
+  "open": [
+   {
+    "en": "Genre-matched comparison (F3), naive pass without the name table (F4), a second coder on the main-set 經, a human audit, and the reading-transfer test H2 remain unrun or unmeasured.",
+    "source": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-fidelity-of-the-classical-statements"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "Speaks only to these two AI-authored codes on this core in different registers; does not show that classical Chinese is best among all expressions or separate language from the name-table discipline."
+  },
+  "sources": [
+   "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-fidelity-of-the-classical-statements"
+  ],
+  "standing_without_record": null,
+  "premises": []
+ },
+ {
+  "id": "fidelity-under-one-discipline",
+  "name": {
+   "en": "Fidelity under one name-table discipline (Controlled English vs. classical statements)"
+  },
+  "family": "C",
+  "mechanism": {
+   "en": "Empirical control assessment separating language from discipline and register: an English name table (449 names with sense taken, exclusions and Lean anchors matching the 中华本) renders every 經 clause into controlled English (CE), paired on identical content and declarations against the 經 across 672 pairs in 270 條. Tests whether the measured fidelity gain attaches to classical Chinese or to the name-table discipline and statement register."
+  },
+  "records": [
+   "fidelity-under-one-discipline"
+  ],
+  "declarations": [],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "fidelity-under-one-discipline",
+    "index": 1
+   }
+  ],
+  "forbids": null,
+  "exits": [],
+  "transitions": [],
+  "tests": [
+   {
+    "path": "experiments/wenli-reading-transfer",
+    "thesis": null,
+    "state": "run"
+   }
+  ],
+  "open": [
+   {
+    "en": "Controlled English written directly from the Lean (not translated from the 經), genre-matched separation of discipline from register (F3), reconciliation of cross-family coder disagreement (α near 0), and human audit remain open.",
+    "source": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-fidelity-under-one-discipline"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "CE inherits the 經's content as a translation keyed by the Lean; does not separate discipline from statement register or decide reader comprehension (H2)."
+  },
+  "sources": [
+   "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-fidelity-under-one-discipline"
+  ],
+  "standing_without_record": null,
+  "premises": []
+ },
+ {
+  "id": "fidelity-coders-on-own-and-other-texts",
+  "name": {
+   "en": "Source check: coders detecting excess in their own and another's texts"
+  },
+  "family": "D",
+  "mechanism": {
+   "en": "Crossed empirical calibration assessment (2 authoring model families × 2 coding model families × 60 Lean theorems × faithful/planted plain-English versions = 240 texts, 480 blind codings) testing whether the FC1 calibration discrepancy came from an author-specific blind spot (interaction I < 0 on planted excess referents) or from a coder-general threshold difference."
+  },
+  "records": [
+   "fidelity-coders-on-own-and-other-texts"
+  ],
+  "declarations": [],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "fidelity-coders-on-own-and-other-texts",
+    "index": 1
+   }
+  ],
+  "forbids": null,
+  "exits": [],
+  "transitions": [],
+  "tests": [
+   {
+    "path": "experiments/source-check",
+    "thesis": null,
+    "state": "run"
+   }
+  ],
+  "open": [
+   {
+    "en": "Tests plain English without a glossary and deliberate planted referents; a blind spot specific to the author's own controlled classical code, GPT over-reading specific to classical Chinese, unplanted ground truth, and each family's separate self effect remain untested.",
+    "source": "theories/becoming/chapters/08-METHOD.md#r-fidelity-coders-on-own-and-other-texts"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "Plain English only; with two families, only the summed self-detection interaction δ_Claude + δ_GPT is identified, and no human audit was performed."
+  },
+  "sources": [
+   "theories/becoming/chapters/08-METHOD.md#r-fidelity-coders-on-own-and-other-texts"
+  ],
+  "standing_without_record": null,
+  "premises": []
+ },
+ {
+  "id": "a-way-of-units-under-a-rule-set-again",
+  "name": {
+   "en": "A way of units on a stock under a rule set again",
+   "zh": "依复定之律而在存上之群行"
+  },
+  "family": "C",
+  "mechanism": {
+   "en": "Units needing a positive stock and leaving offspring under a step-updated rule: under growth-when-favoured and stock-cap premises, every course reaches either a Tested holding step (with neither rule nor next rule favouring) or a first step with no need met (tested_or_ends); from Tested, monotone share-reading sustains forever (tested_lasts), while from a locked start a step whose rule does not favour arrives at least two steps after an unmet need (unmet_before_unfavoured)."
+  },
+  "records": [
+   "a-way-of-units-under-a-rule-set-again"
+  ],
+  "declarations": [
+   "Becoming.WayUnderARule.step",
+   "Becoming.WayUnderARule.course",
+   "Becoming.WayUnderARule.Goes",
+   "Becoming.WayUnderARule.net",
+   "Becoming.WayUnderARule.Tested",
+   "Becoming.WayUnderARule.within_along",
+   "Becoming.WayUnderARule.tested_or_ends",
+   "Becoming.WayUnderARule.first_tested",
+   "Becoming.WayUnderARule.first_tested_or_ends",
+   "Becoming.WayUnderARule.tested_lasts",
+   "Becoming.WayUnderARule.lasts_from",
+   "Becoming.WayUnderARule.unending_iff_tested",
+   "Becoming.WayUnderARule.ends_iff_unmet",
+   "Becoming.WayUnderARule.locked_while_met",
+   "Becoming.WayUnderARule.favours_while_met",
+   "Becoming.WayUnderARule.unmet_before_unfavoured",
+   "Becoming.WayUnderARule.unmet_before_tested",
+   "Becoming.WayUnderARule.TwoKinds.premises",
+   "Becoming.WayUnderARule.NeedTwentySeven.tested",
+   "Becoming.WayUnderARule.NeedTwentySeven.goes_on",
+   "Becoming.WayUnderARule.NeedTwentySix.ends",
+   "Becoming.WayUnderARule.NeedTwentySix.ends_untested",
+   "Becoming.WayUnderARule.course_one_rule",
+   "Becoming.WayUnderARule.way_one_rule",
+   "Becoming.WayUnderARule.BothOutcomes.both",
+   "Becoming.WayUnderARule.BothOutcomes.not_read_from_a_share"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "a-way-of-units-under-a-rule-set-again",
+    "index": 1
+   },
+   {
+    "record": "a-way-of-units-under-a-rule-set-again",
+    "index": 2
+   }
+  ],
+  "forbids": {
+   "en": "Leaving a locked start to an unfavoured step without a prior unmet need (unmet_before_unfavoured), or stalling outside both Tested and unmet need under the premises."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "a first step with no need met (ends_iff_unmet), or a step holding Tested whose net never ends under share-reading premises (tested_lasts)"
+    },
+    "law": "Becoming.WayUnderARule.tested_or_ends",
+    "edge": {
+     "en": "From any start meeting needs and cap premises, the course reaches Tested with prior needs met or a first step with no need met."
+    },
+    "strength": "sufficient",
+    "records": [
+     "a-way-of-units-under-a-rule-set-again"
+    ],
+    "source": "theories/becoming/results/records/a-way-of-units-under-a-rule-set-again.md#laws--规律",
+    "drops": []
+   },
+   {
+    "to": {
+     "en": "witness of a single unit need tipping between Tested persistence (twelve small units) and total collapse (NeedTwentySix vs NeedTwentySeven)"
+    },
+    "law": "Becoming.WayUnderARule.NeedTwentySeven.tested",
+    "edge": {
+     "en": "Changing one unit of need on a shared resource separates Tested persistence from untested ending."
+    },
+    "strength": "witness",
+    "records": [
+     "a-way-of-units-under-a-rule-set-again"
+    ],
+    "source": "theories/becoming/results/records/a-way-of-units-under-a-rule-set-again.md#laws--规律",
+    "drops": []
+   }
+  ],
+  "transitions": [
+   {
+    "kind": "juncture",
+    "condition": {
+     "en": "Both outcomes possible from identical initial conditions unless excluded by share-reading premises (BothOutcomes.both)"
+    },
+    "declarations": [
+     "Becoming.WayUnderARule.BothOutcomes.both"
+    ],
+    "records": [
+     "a-way-of-units-under-a-rule-set-again"
+    ],
+    "between": null
+   }
+  ],
+  "tests": [],
+  "open": [
+   {
+    "en": "A condition on the model numbers separating which outcome occurs, and whether post-collapse survival via eliminated counted units is turning in the idea sense.",
+    "source": "theories/becoming/results/records/a-way-of-units-under-a-rule-set-again.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "Only the unit whose need fails stops leaving kids; the selection rule notices scarcity only through what remains in its share."
+  },
+  "sources": [
+   "theories/becoming/results/records/a-way-of-units-under-a-rule-set-again.md#laws--规律"
+  ],
+  "standing_without_record": null,
+  "premises": []
+ },
+ {
+  "id": "paced-stock-and-cadence-margin-sandwich",
+  "name": {
+   "en": "Fine-step stock under coarse rule cadences and the pace–margin sandwich",
+   "zh": "粗节律下之细步存量与节奏裕度夹击"
+  },
+  "family": "H",
+  "mechanism": {
+   "en": "Joins fine-step LineOnAStock trajectories under coarse Sampling/Pace span-end rule updates (pacedCourse): Viability kernels and certificates transport across Frame.blocks with intra-span slack stepDrop * (L - 1) (slack_certifies_fine_kernel), while Keepable transports constructively only with deterministic choice or explicit choice/DC. Combining Pace.StretchFixes (2N - 1 ≤ L) with two-sided line_envelope gives the Pace–Margin Sandwich: initial buffer covering H₂ + y₂ + H₁ * (L + 1) guarantees permanent viability once switched, while shortfalls below (H₂ + y₂) + (H₁ - Y) * (2N - 1) suffer either observation aliasing across L < 2N - 1 or pipeline drain before span σ 1 can switch (coupled_two_rule_impossibility)."
+  },
+  "records": [
+   "paced-stock-and-cadence-margin-sandwich"
+  ],
+  "declarations": [
+   "Becoming.PacedStock.StockState",
+   "Becoming.PacedStock.fineStep",
+   "Becoming.PacedStock.ReadAtSpanEnd",
+   "Becoming.PacedStock.pacedCourse",
+   "Becoming.PacedStock.paced_held_on_span",
+   "Becoming.PacedStock.paced_block_transition",
+   "Becoming.PacedStock.CoveredByBlocks",
+   "Becoming.PacedStock.SpanGuard",
+   "Becoming.PacedStock.blocks_kernel_iff_fine_kernel",
+   "Becoming.PacedStock.blocks_certificate_to_fine_kernel",
+   "Becoming.PacedStock.blocks_keepable_to_fine_of_map",
+   "Becoming.PacedStock.slack_certifies_fine_kernel",
+   "Becoming.PacedStock.slack_iff_of_drop_realized",
+   "Becoming.PacedStock.SlackShortWitness.witness_summary",
+   "Becoming.PacedStock.line_envelope",
+   "Becoming.PacedStock.pace_margin_feasibility_window",
+   "Becoming.PacedStock.pace_margin_feasibility_window_exact",
+   "Becoming.PacedStock.unrecoverable_cadence_impossibility",
+   "Becoming.PacedStock.coupled_two_rule_impossibility",
+   "Becoming.PacedStock.SandwichWitness.imp_coupled_witness",
+   "Becoming.PacedStock.SandwichWitness.feas_witness"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "paced-stock-and-cadence-margin-sandwich",
+    "index": 1
+   },
+   {
+    "record": "paced-stock-and-cadence-margin-sandwich",
+    "index": 2
+   }
+  ],
+  "forbids": {
+   "en": "Both unambiguous Pace identification across span < 2N - 1 and survival past span 1 without initial buffer covering the drawdown across the oversight lag."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "permanent fine-step viability within [H₂ + y₂, hi] once span stride L ≥ 2N - 1 and initial buffer covers H₂ + y₂ + H₁ * (L + 1)"
+    },
+    "law": "Becoming.PacedStock.pace_margin_feasibility_window",
+    "edge": {
+     "en": "Feasibility window when observation stride meets the Pace lower bound and buffer covers drawdown across the lag."
+    },
+    "strength": "sufficient",
+    "records": [
+     "paced-stock-and-cadence-margin-sandwich"
+    ],
+    "source": "theories/becoming/results/records/paced-stock-and-cadence-margin-sandwich.md#laws--规律",
+    "drops": []
+   },
+   {
+    "to": {
+     "en": "unrecoverable coupled failure: either observations conflate under L < 2N - 1 or the stock drops below safe recovery before g_safe takes effect at σ 1"
+    },
+    "law": "Becoming.PacedStock.coupled_two_rule_impossibility",
+    "edge": {
+     "en": "Either short cadence aliases indistinguishable dynamics or slow cadence drains the initial margin before switching."
+    },
+    "strength": "sufficient",
+    "records": [
+     "paced-stock-and-cadence-margin-sandwich"
+    ],
+    "source": "theories/becoming/results/records/paced-stock-and-cadence-margin-sandwich.md#laws--规律",
+    "drops": []
+   }
+  ],
+  "transitions": [
+   {
+    "kind": "pace bound",
+    "condition": {
+     "en": "Pace identification lag 2N - 1 vs initial buffer headroom (H₂ + y₂) + (H₁ - Y) * (2N - 1)"
+    },
+    "declarations": [
+     "Becoming.PacedStock.pace_margin_feasibility_window",
+     "Becoming.PacedStock.coupled_two_rule_impossibility"
+    ],
+    "records": [
+     "paced-stock-and-cadence-margin-sandwich"
+    ],
+    "between": null
+   }
+  ],
+  "tests": [],
+  "open": [
+   {
+    "en": "Extension to stochastic draw spikes, observation noise, and continuous optimization inertia outside deterministic Nat bounds.",
+    "source": "theories/becoming/results/records/paced-stock-and-cadence-margin-sandwich.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "Block guards lacking intra-span slack fail between span boundaries (SlackShortWitness); real oversight cadences may face stochastic jitter beyond fixed H₁/H₂."
+  },
+  "sources": [
+   "theories/becoming/results/records/paced-stock-and-cadence-margin-sandwich.md#laws--规律"
+  ],
+  "standing_without_record": null,
+  "premises": []
+ },
+ {
+  "id": "coupled-adaptive-loops-and-race",
+  "name": {
+   "en": "Open adaptive loops, assume-guarantee viability, and the coupled race",
+   "zh": "开放适应回路、假设保证存续与耦合竞速"
+  },
+  "family": "C",
+  "mechanism": {
+   "en": "Formalizes black-box composition of OpenLoop adaptive agents carrying observation-driven channels (blind to raw stock st.1) and bounded countdown lag eta ≤ maxLag inside LoopCertificate: whenever warning level and initial stock exceed x_crit + (globalMaxLag + 1) * preTotal under pooled monitoring and monotone Coupled.Indexed.Rises dynamics, assume_guarantee_joint_viable proves joint Viability.Kernel opaquely. When discovery, pool silencing (SelectionPool.Web.majority_outvoted), post-turn coordination (CoupledDrawers.AtOnce.Shores.drain_perfect), and countdown lag compete in raceStep, coupled_race_theorem proves break of any link collapses to 0, while unread_adaptive_joint_collapse shows locally adapting unread loops jointly exhaust their shared substrate despite unchanged LocalOK."
+  },
+  "records": [
+   "coupled-adaptive-loops-and-race"
+  ],
+  "declarations": [
+   "Becoming.AdaptiveLoops.OpenLoop",
+   "Becoming.AdaptiveLoops.LoopCertificate",
+   "Becoming.AdaptiveLoops.jointStep",
+   "Becoming.AdaptiveLoops.jointProcess",
+   "Becoming.AdaptiveLoops.assume_guarantee_joint_viable",
+   "Becoming.AdaptiveLoops.assume_guarantee_joint_kernel",
+   "Becoming.AdaptiveLoops.raceStep",
+   "Becoming.AdaptiveLoops.raceOrbit",
+   "Becoming.AdaptiveLoops.WitnessGood",
+   "Becoming.AdaptiveLoops.WitnessNoDiscovery",
+   "Becoming.AdaptiveLoops.WitnessSilenced",
+   "Becoming.AdaptiveLoops.WitnessUncoordinated",
+   "Becoming.AdaptiveLoops.WitnessTooSlow",
+   "Becoming.AdaptiveLoops.coupled_race_theorem",
+   "Becoming.AdaptiveLoops.unread_orbit_le",
+   "Becoming.AdaptiveLoops.unread_adaptive_joint_collapse",
+   "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.witness",
+   "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_joint_viable",
+   "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_bidirectional_adaptation"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "coupled-adaptive-loops-and-race",
+    "index": 1
+   },
+   {
+    "record": "coupled-adaptive-loops-and-race",
+    "index": 2
+   }
+  ],
+  "forbids": {
+   "en": "Joint survival when combined unread adaptive draws exceed renewal, or under race params with any broken discovery/pool/coordination/lag link."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "permanent joint Viability.Kernel above x_crit across heterogeneous black-box adaptive loops when warning buffer covers (globalMaxLag + 1) * preTotal"
+    },
+    "law": "Becoming.AdaptiveLoops.assume_guarantee_joint_viable",
+    "edge": {
+     "en": "Opaque assume-guarantee contract sustains joint viability even with observation-only channels and endogenous bidirectional switching."
+    },
+    "strength": "sufficient",
+    "records": [
+     "coupled-adaptive-loops-and-race"
+    ],
+    "source": "theories/becoming/results/records/coupled-adaptive-loops-and-race.md#laws--规律",
+    "drops": []
+   },
+   {
+    "to": {
+     "en": "joint substrate collapse while every local unread loop continues to satisfy its own LocalOK predicates (unread_adaptive_joint_collapse; coupled_race_theorem witnesses)"
+    },
+    "law": "Becoming.AdaptiveLoops.unread_adaptive_joint_collapse",
+    "edge": {
+     "en": "Each loop viable alone and seeing an unchanged local share jointly drains the shared substrate past RegimeMargin."
+    },
+    "strength": "sufficient",
+    "records": [
+     "coupled-adaptive-loops-and-race"
+    ],
+    "source": "theories/becoming/results/records/coupled-adaptive-loops-and-race.md#laws--规律",
+    "drops": []
+   }
+  ],
+  "transitions": [
+   {
+    "kind": "window or deadline",
+    "condition": {
+     "en": "x_crit + (globalMaxLag + 1) * preTotal ≤ warnLevel vs countdown lag eta and pool silence majority threshold"
+    },
+    "declarations": [
+     "Becoming.AdaptiveLoops.assume_guarantee_joint_viable",
+     "Becoming.AdaptiveLoops.coupled_race_theorem"
+    ],
+    "records": [
+     "coupled-adaptive-loops-and-race"
+    ],
+    "between": null
+   }
+  ],
+  "tests": [],
+  "open": [
+   {
+    "en": "Empirical calibration of countdown lag bounds, noise, and generalizing learners whose weights leak cross-channel proxy cues (tested empirically in Phase 2).",
+    "source": "theories/becoming/results/records/coupled-adaptive-loops-and-race.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "Certifies invariant viability above x_crit rather than reward optimization, and relies on monotone discrete Nat bounds unless calibrated."
+  },
+  "sources": [
+   "theories/becoming/results/records/coupled-adaptive-loops-and-race.md#laws--规律"
+  ],
+  "standing_without_record": null,
+  "premises": []
+ },
+ {
+  "id": "lax-multi-scale-viability",
+  "name": {
+   "en": "Lax multi-scale viability simulation and vertical tower composition",
+   "zh": "松弛多尺度存续模拟与塔式纵向复合"
+  },
+  "family": "H",
+  "mechanism": {
+   "en": "Extends viability transfer beyond exact ProjectedLaws fibre-lumping: LaxSim tracks bounded per-epoch drift (α r + ε) and intra-epoch excursion (β r + η) along a strict schedule σ and pullback distance d, certifying micro Viability.Kernel from macro certificates whenever absorption α Δ + ε ≤ Δ and guard slack β Δ + η holds (lax_kernel_of_certificate). Vertical composition (LaxSim.comp, compAdditive, towerSim) lifts across Becoming.Tower with explicit epoch_compat and monotone Lipschitz modulus μ₂, instantiated constructively in WitnessTwoScale where exact reduced laws fail at every scale."
+  },
+  "records": [
+   "lax-multi-scale-viability"
+  ],
+  "declarations": [
+   "Becoming.distNat",
+   "Becoming.SlackDist",
+   "Becoming.LaxSim",
+   "Becoming.LaxSim.slack",
+   "Becoming.LaxSim.slack_le_of_absorb",
+   "Becoming.LaxSim.epoch_trace",
+   "Becoming.lax_kernel_of_certificate",
+   "Becoming.lax_kernel_of_kernel",
+   "Becoming.lax_keptFor_linear",
+   "Becoming.LaxSim.comp",
+   "Becoming.LaxSim.compAdditive",
+   "Becoming.LaxSim.TowerSimPack",
+   "Becoming.LaxSim.towerSim",
+   "Becoming.WitnessTwoScale.no_reduced_law₁",
+   "Becoming.WitnessTwoScale.no_reduced_law₂",
+   "Becoming.WitnessTwoScale.no_reduced_law₁₂",
+   "Becoming.WitnessTwoScale.sim₁₂_params",
+   "Becoming.WitnessTwoScale.viability_kernel"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "lax-multi-scale-viability",
+    "index": 1
+   }
+  ],
+  "forbids": {
+   "en": "Drift exceeding Δ across a lax epoch where absorption α Δ + ε ≤ Δ holds."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "micro Viability.Kernel certified from macro Certificate despite micro-phase non-lumpability (lax_kernel_of_certificate)"
+    },
+    "law": "Becoming.lax_kernel_of_certificate",
+    "edge": {
+     "en": "Bounded lax simulation slack allows macro invariants to keep micro viability intact when exact quotient laws do not exist."
+    },
+    "strength": "sufficient",
+    "records": [
+     "lax-multi-scale-viability"
+    ],
+    "source": "theories/becoming/results/records/lax-multi-scale-viability.md#laws--规律",
+    "drops": []
+   }
+  ],
+  "transitions": [
+   {
+    "kind": "exact threshold",
+    "condition": {
+     "en": "Absorption threshold α Δ + ε ≤ Δ and guard excursion margin β Δ + η"
+    },
+    "declarations": [
+     "Becoming.lax_kernel_of_certificate",
+     "Becoming.LaxSim.compAdditive"
+    ],
+    "records": [
+     "lax-multi-scale-viability"
+    ],
+    "between": null
+   }
+  ],
+  "tests": [],
+  "open": [
+   {
+    "en": "Stochastic or real-metric Mathlib contraction bounds and constructive existence criteria for LaxSim on arbitrary dynamics.",
+    "source": "theories/becoming/results/records/lax-multi-scale-viability.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "Does not construct a lax quotient automatically when drift exceeds absorption or epoch compatibility fails."
+  },
+  "sources": [
+   "theories/becoming/results/records/lax-multi-scale-viability.md#laws--规律"
+  ],
+  "standing_without_record": null,
+  "premises": []
+ },
+ {
+  "id": "transformative-viability-order",
+  "name": {
+   "en": "Viability-preserving transformative continuation order",
+   "zh": "保续转化序"
+  },
+  "family": "H",
+  "mechanism": {
+   "en": "Separates constructive transformation from both zero-loss Widens and destructive churn: TransformativeViable protects substrate Viable conditions and macro capability reach (Web.MacroAdmits / MacroIncludes), containing Web.Widens under ReserveGuarded (widens_implies_transformativeViable). TransformsViably couples permanent ViableT, non-shrinking macro capabilities, and step-by-step micro-turnover (transformsViably_iff_along_capSame). ThreeRegime constructs an evolving run l_evolve (StrictTransformativeViable yet not Widens) and a churn run l_churn failing Viable and MacroIncludes despite high micro movement; FiniteGainless constructs perpetual TransformsViably on a Closed, Balanced, Conserving web where Flow.whole_not_keepsWidening forbids KeepsWidening."
+  },
+  "records": [
+   "transformative-viability-order"
+  ],
+  "declarations": [
+   "Becoming.Web.MacroAdmits",
+   "Becoming.Web.MacroIncludes",
+   "Becoming.Web.MacroExceeds",
+   "Becoming.ReserveSafe",
+   "Becoming.ReserveGuarded",
+   "Becoming.TransformativeViable",
+   "Becoming.StrictTransformativeViable",
+   "Becoming.widens_implies_transformativeViable",
+   "Becoming.TransformsViably",
+   "Becoming.TransformsViablyAlong",
+   "Becoming.transformsViably_iff_along_capSame",
+   "Becoming.ThreeRegime.three_regime_separation",
+   "Becoming.FiniteGainless.not_keepsWidening",
+   "Becoming.FiniteGainless.finite_gainless_transformsViably"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "transformative-viability-order",
+    "index": 1
+   }
+  ],
+  "forbids": {
+   "en": "Confusing destructive turnover (Steps.moving churn) or zero-loss Widens freeze with viability- and capability-preserving transformation."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "perpetual TransformsViably evolution with genuine micro-turnover on finite closed balanced webs even where zero-loss KeepsWidening is impossible"
+    },
+    "law": "Becoming.FiniteGainless.finite_gainless_transformsViably",
+    "edge": {
+     "en": "Witness combining retirement of old forms with sustained substrate viability and macro option-space."
+    },
+    "strength": "witness",
+    "records": [
+     "transformative-viability-order"
+    ],
+    "source": "theories/becoming/results/records/transformative-viability-order.md#laws--规律",
+    "drops": []
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "Canonical identification of capability projections cap and Viable substrate predicates in empirical socio-technical transitions.",
+    "source": "theories/becoming/results/records/transformative-viability-order.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "Requires explicit substrate Viable guard; without it capability turnover collapses into churn."
+  },
+  "sources": [
+   "theories/becoming/results/records/transformative-viability-order.md#laws--规律"
+  ],
+  "standing_without_record": null,
+  "premises": []
+ },
+ {
+  "id": "unclamped-stock-flow-bridge",
+  "name": {
+   "en": "Unclamped pre-overdraw stock–flow bridge and coupled indexed correspondence",
+   "zh": "未截断先于透支之存流桥及耦合索引相应"
+  },
+  "family": "B",
+  "mechanism": {
+   "en": "Embeds LineOnAStock and WayUnderARule trajectories verbatim (with zero min-clamping) into Flow.BalancesOn up to the pre-overdraw horizon (line_balancesOn_of_goes, way_balancesOn_of_goes) and globally on unending runs, transferring exact conservation equations and finite-horizon drawdown trapping (Flow.never_returns_below_within -> line_never_returns_below_within, way_never_returns_below_within). Connects met constant-draw trajectories directly to RegimeMargin.Coupled.Indexed.step on ι := Unit (line_coupled_indexed_correspondence, way_coupled_indexed_correspondence)."
+  },
+  "records": [
+   "unclamped-stock-flow-bridge"
+  ],
+  "declarations": [
+   "Becoming.Flow.held_below_within",
+   "Becoming.Flow.never_returns_below_within",
+   "Becoming.StockFlowBridge.unitWeb",
+   "Becoming.StockFlowBridge.unitFlow",
+   "Becoming.StockFlowBridge.unitBalancesOn_of_le",
+   "Becoming.StockFlowBridge.line_balancesOn_of_goes",
+   "Becoming.StockFlowBridge.line_balances_of_unending",
+   "Becoming.StockFlowBridge.line_account_of_goes",
+   "Becoming.StockFlowBridge.line_never_returns_below_within",
+   "Becoming.StockFlowBridge.way_balancesOn_of_goes",
+   "Becoming.StockFlowBridge.way_balances_of_unending",
+   "Becoming.StockFlowBridge.way_account_of_goes",
+   "Becoming.StockFlowBridge.way_never_returns_below_within",
+   "Becoming.StockFlowBridge.coupled_indexed_step_whole_eq",
+   "Becoming.StockFlowBridge.line_coupled_indexed_correspondence",
+   "Becoming.StockFlowBridge.way_coupled_indexed_correspondence"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "unclamped-stock-flow-bridge",
+    "index": 1
+   }
+  ],
+  "forbids": {
+   "en": "Return above m on a pre-overdraw segment [T, T + N) once W.level T c < m while given ≤ taken (never_returns_below_within)."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "monotone trap keeping level below threshold m across [T, T + N] before any overdraw step breaks conservation"
+    },
+    "law": "Becoming.StockFlowBridge.line_never_returns_below_within",
+    "edge": {
+     "en": "Verbatim pre-overdraw embedding into Flow.BalancesOn transfers drawdown trapping directly onto line stocks."
+    },
+    "strength": "sufficient",
+    "records": [
+     "unclamped-stock-flow-bridge"
+    ],
+    "source": "theories/becoming/results/records/unclamped-stock-flow-bridge.md#laws--规律",
+    "drops": []
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "Post-overdraw steps where Nat subtraction truncates and Flow conservation no longer holds.",
+    "source": "theories/becoming/results/records/unclamped-stock-flow-bridge.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "Flow balance and drawdown trapping halt at overdraw failure rather than extending past zero truncation."
+  },
+  "sources": [
+   "theories/becoming/results/records/unclamped-stock-flow-bridge.md#laws--规律"
+  ],
+  "standing_without_record": null,
+  "premises": []
  }
 ]
