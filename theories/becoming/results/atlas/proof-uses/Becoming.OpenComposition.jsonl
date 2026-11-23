@@ -1,0 +1,52 @@
+{"name": "Becoming.OpenComposition.ComponentEquiv.comm_drawExt", "uses": []}
+{"name": "Becoming.OpenComposition.ComponentEquiv.comm_drawInt", "uses": []}
+{"name": "Becoming.OpenComposition.ComponentEquiv.comm_emitAlarm", "uses": []}
+{"name": "Becoming.OpenComposition.ComponentEquiv.comm_favours", "uses": []}
+{"name": "Becoming.OpenComposition.ComponentEquiv.comm_next", "uses": []}
+{"name": "Becoming.OpenComposition.ComponentEquiv.comm_silenceLoad", "uses": []}
+{"name": "Becoming.OpenComposition.ComponentEquiv.leftDist", "uses": []}
+{"name": "Becoming.OpenComposition.ComponentEquiv.leftInt", "uses": []}
+{"name": "Becoming.OpenComposition.ComponentEquiv.leftObs", "uses": []}
+{"name": "Becoming.OpenComposition.ComponentEquiv.leftS", "uses": []}
+{"name": "Becoming.OpenComposition.ComponentEquiv.rightDist", "uses": []}
+{"name": "Becoming.OpenComposition.ComponentEquiv.rightInt", "uses": []}
+{"name": "Becoming.OpenComposition.ComponentEquiv.rightObs", "uses": []}
+{"name": "Becoming.OpenComposition.ComponentEquiv.rightS", "uses": []}
+{"name": "Becoming.OpenComposition.ComposedNonLumpingWitness.div2_lt_12_of_lt_22", "uses": []}
+{"name": "Becoming.OpenComposition.ComposedNonLumpingWitness.local_margin_two_scale", "uses": ["Becoming.OpenComposition.ComposedNonLumpingWitness.div2_lt_12_of_lt_22", "Becoming.le_of_add_le_add_right", "Becoming.le_sub_add_nat"]}
+{"name": "Becoming.OpenComposition.ComposedNonLumpingWitness.no_reduced_law_prod", "uses": []}
+{"name": "Becoming.OpenComposition.ComposedNonLumpingWitness.prod_viability_kernel", "uses": ["Becoming.AdaptiveLoops.le_natMax_left", "Becoming.AdaptiveLoops.le_natMax_right", "Becoming.OpenComposition.ComposedNonLumpingWitness.local_margin_two_scale", "Becoming.Viability.Certificate.closed", "Becoming.WitnessTwoScale.kernel_cert", "Becoming.lax_kernel_of_certificate"]}
+{"name": "Becoming.OpenComposition.ContractRefines.init_eta_le", "uses": []}
+{"name": "Becoming.OpenComposition.ContractRefines.maxLag_le", "uses": []}
+{"name": "Becoming.OpenComposition.ContractRefines.maxSilence_le", "uses": []}
+{"name": "Becoming.OpenComposition.ContractRefines.postBudgetExt_le", "uses": []}
+{"name": "Becoming.OpenComposition.ContractRefines.preCapExt_le", "uses": []}
+{"name": "Becoming.OpenComposition.ContractRefines.warn_preserved", "uses": []}
+{"name": "Becoming.OpenComposition.HiddenCouplingFailure.sharedG_rises", "uses": []}
+{"name": "Becoming.OpenComposition.HiddenCouplingFailure.witness", "uses": ["Becoming.Naturals.le_sub_of_add_le", "Becoming.Viability.Certificate.kernel", "Becoming.Viability.Kernel.run", "Becoming.Viability.certificate_disturbed_iff"]}
+{"name": "Becoming.OpenComposition.InterfaceContract.cert", "uses": []}
+{"name": "Becoming.OpenComposition.InterfaceContract.emits_on_warn", "uses": []}
+{"name": "Becoming.OpenComposition.InterfaceContract.eta_alarm_step", "uses": []}
+{"name": "Becoming.OpenComposition.InterfaceContract.eta_alarm_zero", "uses": []}
+{"name": "Becoming.OpenComposition.InterfaceContract.eta_bound", "uses": []}
+{"name": "Becoming.OpenComposition.InterfaceContract.init_in", "uses": []}
+{"name": "Becoming.OpenComposition.WideningWitness.gShared_rises", "uses": []}
+{"name": "Becoming.OpenComposition.WideningWitness.narrow_blind_crashes", "uses": ["Becoming.Naturals.sub_antitone", "Becoming.OpenComposition.WideningWitness.gShared_rises", "Becoming.RegimeMargin.step_mono"]}
+{"name": "Becoming.OpenComposition.WideningWitness.widened_heals_kernel", "uses": ["Becoming.AdaptiveLoops.natBlt_true_iff", "Becoming.OpenComposition.WideningWitness.gShared_rises", "Becoming.OpenComposition.compose_close_interchange"]}
+{"name": "Becoming.OpenComposition.add_four_swap", "uses": []}
+{"name": "Becoming.OpenComposition.bool_or_assoc", "uses": []}
+{"name": "Becoming.OpenComposition.bool_or_true_right", "uses": []}
+{"name": "Becoming.OpenComposition.close_contract_kernel", "uses": ["Becoming.OpenComposition.close_contract_viable", "Becoming.Viability.Certificate.kernel"]}
+{"name": "Becoming.OpenComposition.close_contract_viable", "uses": ["Becoming.OpenComposition.InterfaceContract.cert", "Becoming.OpenComposition.InterfaceContract.emits_on_warn", "Becoming.OpenComposition.InterfaceContract.eta_alarm_step", "Becoming.OpenComposition.InterfaceContract.eta_alarm_zero", "Becoming.OpenComposition.InterfaceContract.eta_bound", "Becoming.OpenComposition.InterfaceContract.init_in", "Becoming.OpenComposition.substrate_margin_step", "Becoming.Viability.Certificate.closed", "Becoming.Viability.Certificate.within", "Becoming.Viability.certificate_disturbed_iff"]}
+{"name": "Becoming.OpenComposition.compose_close_interchange", "uses": ["Becoming.OpenComposition.close_contract_kernel"]}
+{"name": "Becoming.OpenComposition.hidden_coupling_interchange_failure", "uses": ["Becoming.OpenComposition.HiddenCouplingFailure.witness"]}
+{"name": "Becoming.OpenComposition.hideContract_keeps_hidden", "uses": []}
+{"name": "Becoming.OpenComposition.natMax_add_le", "uses": ["Becoming.AdaptiveLoops.le_natMax_left", "Becoming.AdaptiveLoops.le_natMax_right", "Becoming.AdaptiveLoops.natMax_le"]}
+{"name": "Becoming.OpenComposition.natMax_add_max_le", "uses": ["Becoming.OpenComposition.natMax_add_le"]}
+{"name": "Becoming.OpenComposition.natMax_zero_zero", "uses": []}
+{"name": "Becoming.OpenComposition.prodProcess_trace_left", "uses": ["Generative.Trace.brecOn"]}
+{"name": "Becoming.OpenComposition.prodProcess_trace_right", "uses": ["Generative.Trace.brecOn"]}
+{"name": "Becoming.OpenComposition.replace_left_viable", "uses": ["Becoming.AdaptiveLoops.le_natMax_left", "Becoming.AdaptiveLoops.le_natMax_right", "Becoming.AdaptiveLoops.natMax_le", "Becoming.OpenComposition.ContractRefines.init_eta_le", "Becoming.OpenComposition.ContractRefines.maxLag_le", "Becoming.OpenComposition.ContractRefines.maxSilence_le", "Becoming.OpenComposition.ContractRefines.postBudgetExt_le", "Becoming.OpenComposition.ContractRefines.preCapExt_le", "Becoming.OpenComposition.ContractRefines.warn_preserved", "Becoming.OpenComposition.compose_close_interchange"]}
+{"name": "Becoming.OpenComposition.rewrite_step_viable", "uses": ["Becoming.OpenComposition.close_contract_viable", "Becoming.Viability.Certificate.closed", "Becoming.Viability.Certificate.kernel", "Becoming.Viability.Certificate.within"]}
+{"name": "Becoming.OpenComposition.substrate_margin_step", "uses": ["Becoming.AdaptiveLoops.indexedStep_antitone_H", "Becoming.AdaptiveLoops.indexedStep_ge_sub", "Becoming.AdaptiveLoops.indexedStep_mono", "Becoming.Naturals.le_sub_of_add_le", "Becoming.Naturals.sub_antitone", "Becoming.add_mul_split"]}
+{"name": "Becoming.OpenComposition.widen_interface_heals_blindness", "uses": ["Becoming.OpenComposition.WideningWitness.narrow_blind_crashes", "Becoming.OpenComposition.WideningWitness.widened_heals_kernel"]}

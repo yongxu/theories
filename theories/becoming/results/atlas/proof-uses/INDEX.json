@@ -4,13 +4,13 @@
  "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
  "toolchain": "leanprover/lean4:v4.29.1",
  "printed_from": {
-  "commit": "c2cf26b575f598f29c8b24815aaf6a035f4db78b",
-  "core_run": "20261123T131636.294555Z"
+  "commit": "887735b795e57fd843fb5e927109d513ee40aee4",
+  "core_run": "20261123T170322.365233Z"
  },
- "core_sources_sha256": "aa308a6593896f85062e0a5d2eaee789837a37bc6416dee7f4d1a990a350ff9b",
+ "core_sources_sha256": "6e82ddba53e19b281b707f2df4dc3bd40287c9e7205718ffa20514aa1935830f",
  "modules": {
   "Becoming": {
-   "source_sha256": "e358ba20874b855e0f7242f5f0f99fb045d1b8153b4b5eaa374848dbf927edf2",
+   "source_sha256": "12b0a678b6bbf035f1b60265195ec9ff5663bacac5c278b5099998610afa6436",
    "theorems": 0
   },
   "Becoming.Acceptance": {
@@ -957,6 +957,10 @@
    "source_sha256": "025c021e950e028796acffa360c17499db3388147224805b88d11e0e2a4d0b21",
    "theorems": 28
   },
+  "Becoming.OpenComposition": {
+   "source_sha256": "739a9dde3d576acae4312cf95ebd4a9c2b210368605724d084b84af4aac802cd",
+   "theorems": 52
+  },
   "Becoming.OpenedCorrection": {
    "source_sha256": "b1d5b92dd61af5a0d12d3af51902c3f1c9f0f192cac2df358d0de23c299d360d",
    "theorems": 12
@@ -1691,8 +1695,8 @@
   }
  },
  "counts": {
-  "modules": 420,
-  "theorems": 21186,
+  "modules": 421,
+  "theorems": 21238,
   "uses_without_row": 22
  }
 }

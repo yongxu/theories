@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261123T131636.294555Z",
- "core_sources_sha256": "aa308a6593896f85062e0a5d2eaee789837a37bc6416dee7f4d1a990a350ff9b",
+ "core_receipt": "20261123T170322.365233Z",
+ "core_sources_sha256": "6e82ddba53e19b281b707f2df4dc3bd40287c9e7205718ffa20514aa1935830f",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,15 +58,15 @@
   ]
  },
  "counts": {
-  "laws": 4451,
+  "laws": 4456,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 1088,
+  "grammar": 1091,
   "balance, represented": 639,
   "anchor, not reached": 135,
-  "no shared law": 2189,
+  "no shared law": 2191,
   "vocabulary_only": 106,
-  "closure": 596,
+  "closure": 599,
   "balance": 910,
   "return": 255,
   "lumping": 94,
@@ -35732,6 +35732,97 @@
     "dependence": "no shared law"
    }
   ],
+  "open-interface-composition-and-replacement": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.OpenComposition.OpenComponent",
+     "Becoming.OpenComposition.OpenComponent.process",
+     "Becoming.OpenComposition.OpenComponent.ofOpenLoop",
+     "Becoming.OpenComposition.OpenComponent.toOpenLoop",
+     "Becoming.OpenComposition.InterfaceContract",
+     "Becoming.OpenComposition.InterfaceContract.ofLoopCertificate"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.OpenComposition.OpenComponent.compose",
+     "Becoming.OpenComposition.composeContract",
+     "Becoming.OpenComposition.ComponentEquiv",
+     "Becoming.OpenComposition.composeAssocEquiv",
+     "Becoming.OpenComposition.OpenComponent.hide",
+     "Becoming.OpenComposition.hideContract",
+     "Becoming.OpenComposition.hideContract_keeps_hidden"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.OpenComposition.closedStep",
+     "Becoming.OpenComposition.closedAdm",
+     "Becoming.OpenComposition.closedProcess",
+     "Becoming.OpenComposition.closedGuard",
+     "Becoming.OpenComposition.closedInv",
+     "Becoming.OpenComposition.close_contract_viable",
+     "Becoming.OpenComposition.close_contract_kernel",
+     "Becoming.OpenComposition.compose_close_interchange",
+     "Becoming.OpenComposition.HiddenCouplingFailure.witness",
+     "Becoming.OpenComposition.hidden_coupling_interchange_failure"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.OpenComposition.ContractRefines",
+     "Becoming.OpenComposition.replace_left_viable",
+     "Becoming.OpenComposition.ReconfigAct",
+     "Becoming.OpenComposition.ReconfigProcess",
+     "Becoming.OpenComposition.rewrite_step_viable",
+     "Becoming.OpenComposition.WideningWitness.narrow_blind_crashes",
+     "Becoming.OpenComposition.WideningWitness.widenedAgent",
+     "Becoming.OpenComposition.WideningWitness.widenedContract",
+     "Becoming.OpenComposition.WideningWitness.widened_heals_kernel",
+     "Becoming.OpenComposition.widen_interface_heals_blindness"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.OpenComposition.SlackDist.sum",
+     "Becoming.OpenComposition.SlackDist.max",
+     "Becoming.OpenComposition.prodProcess",
+     "Becoming.OpenComposition.prodProcess_trace_left",
+     "Becoming.OpenComposition.prodProcess_trace_right",
+     "Becoming.OpenComposition.compose_laxSim_max",
+     "Becoming.OpenComposition.compose_laxSim_sum",
+     "Becoming.OpenComposition.ComposedNonLumpingWitness.prodSim",
+     "Becoming.OpenComposition.ComposedNonLumpingWitness.no_reduced_law_prod",
+     "Becoming.OpenComposition.ComposedNonLumpingWitness.prod_viability_kernel"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "optima-rebuild-a-depleted-base": [
    {
     "law": 1,
@@ -68483,7 +68574,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "bf297a78766c7045f07b952a8b0e8676f002560590c4776a771e1a538a173c4e",
+   "modules_sha256": "871f3508811eeb52ad051cfa985d550359e7047ae0dea0ed5eafc760d6c75190",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },
