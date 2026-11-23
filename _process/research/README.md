@@ -15,7 +15,7 @@ Live counts every file outside a `history/` folder, frozen run evidence included
 | `2026-10-04-integrated-evolution/` | — | 2 | — | 0 |
 | `2026-10-05-causal-foundations/` | — | 1 | `outputs/ (1)` | 0 |
 | `2026-10-05-concern-theory/` | — | 48 | `reward-association/ (13)` | 0 |
-| `2026-10-05-generative-foundation-review/` | — | 10961 | [foundation-assessment/ (105)](2026-10-05-generative-foundation-review/foundation-assessment/README.md) · [root-foundation/ (10856)](2026-10-05-generative-foundation-review/root-foundation/INDEX.md) | 4404 |
+| `2026-10-05-generative-foundation-review/` | — | 10963 | [foundation-assessment/ (105)](2026-10-05-generative-foundation-review/foundation-assessment/README.md) · [root-foundation/ (10858)](2026-10-05-generative-foundation-review/root-foundation/INDEX.md) | 4404 |
 | `2026-10-05-generative-health/` | — | 1 | `discovery/ (1)` | 0 |
 | `2026-10-05-repository-reconciliation/` | — | 484 | `architecture/ (359)` · `r19/ (3)` · `r20/ (4)` · [whole-repo-review-2026-10-16/ (8)](2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/README.md) · `whole-repo-survey-2026-11-18/ (107)` | 0 |
 | `2026-10-05-revisable-concern/` | — | 3 | `settlement/ (3)` | 0 |
@@ -118,7 +118,8 @@ Studies retired as a whole are under [`_process/history/`](../history/):
 | `2026-11-16-instructions/` | 2 |
 | `2026-11-17-instructions/` | 1 |
 | `2026-11-18-instructions/` | 1 |
-| `workboard/` | 1 |
+| `direction/` | 1 |
+| `workboard/` | 2 |
 | `worktree-salvage-2026-10-18/` | 391 |
 
 Rerun `make research-render` after a study is added or a batch moved to history.
