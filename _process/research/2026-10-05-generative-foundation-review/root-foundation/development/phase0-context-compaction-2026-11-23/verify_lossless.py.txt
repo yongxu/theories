@@ -1,0 +1,17 @@
+import pathlib
+import subprocess
+import sys
+
+
+def verify_file(git_rev_path: str, archive_path: str, limit: int = 1_048_576) -> None:
+    orig = subprocess.check_output(['git', 'show', git_rev_path], text=True)
+    arch = pathlib.Path(archive_path).read_text()
+    assert pathlib.Path(archive_path).stat().st_size < limit, f'{archive_path} exceeds {limit} bytes'
+    missing = [line for line in orig.splitlines() if line.strip() and line not in arch]
+    assert not missing, f'{archive_path} missing {len(missing)} line(s): {missing[0][:120]!r}'
+    print(f'PASS {git_rev_path} -> {archive_path} ({len(orig):,} orig chars, {len(arch):,} arch chars, 0 lines lost)')
+
+
+if __name__ == '__main__':
+    verify_file('e2dcc5ce5:_process/DIRECTION.md', '_process/history/direction/2026-11-15_to_2026-11-23.md')
+    verify_file('e2dcc5ce5:_process/BECOMING-WORKBOARD.md', '_process/history/workboard/2026-11.md')
