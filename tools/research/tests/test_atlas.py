@@ -1036,6 +1036,105 @@ class SliceTests(AtlasCase):
         self.assertIn('([the bindings](BINDINGS.md))', pages[atlas.PAGE])
         self.assertIn('([the situations](SITUATIONS.md))', pages[atlas.PAGE])
 
+    def test_a_no_result_binding_may_have_empty_bears_on(self):
+        held = binding(id='test-la4-stage-b', test='LA4 (Stage B)', bears_on=[], binding=None)
+        self.assertEqual(self.check([held]), [])
+        empty_bridged = binding(bears_on=[])
+        empty_bridged['binding']['premises'] = []
+        self.assertOne(self.check([empty_bridged]), 'bears_on', 'nonempty list')
+        self.write_atlas(self.read())
+        (self.root / atlas.VOCABULARY).write_text(json.dumps(SLICE_VOCABULARY, ensure_ascii=False, indent=1) + '\n')
+        for kind, rows in (('premises', [premise()]), ('bindings', [held]), ('situations', [])):
+            (self.root / atlas.ENTRIES / f'{kind}.json').write_text(json.dumps(rows, ensure_ascii=False, indent=1) + '\n')
+        pages, errors = atlas.render(RECORDS)
+        self.assertEqual(errors, [])
+        self.assertIn('- **Bears on.** No atlas dynamic.', pages[atlas.BINDINGS_PAGE])
+
+    def test_a_situation_validates_timed_couplings_refits_and_substrates(self):
+        bad_lag = situation()
+        bad_lag['couplings'][0]['lag'] = -1
+        self.assertOne(self.check(situations=[bad_lag]), 'couplings 1.lag', 'integer >= 0')
+        bad_refit = situation()
+        bad_refit['readers'][0]['refit_from'] = {'from': 'nowhere', 'lag': 1}
+        self.assertOne(self.check(situations=[bad_refit]), 'readers 1.refit_from.from', 'nowhere')
+        bad_sub = situation()
+        bad_sub['couplings'][0]['shared_substrate'] = 'missing-sub'
+        self.assertOne(self.check(situations=[bad_sub]), 'couplings 1.shared_substrate', 'missing-sub')
+        good = situation(
+            horizon=4,
+            substrates=[{'id': 'users-harm', 'initial': 4, 'need': 1, 'renewal': 1, 'shared_substrate': True,
+                         'draws': [{'by': 'policy', 'amount': 2}]}])
+        good['couplings'].append({'from': 'policy', 'to': 'raters', 'en': 'delayed audit', 'lag': 1, 'active_from': 1,
+                                  'shared_substrate': 'users-harm'})
+        good['readers'][0]['reading_step'] = [2, 3]
+        good['readers'][0]['refit_from'] = {'from': 'policy', 'lag': 0}
+        good['readers'][0]['shared_substrate'] = ['users-harm']
+        self.assertEqual(self.check(situations=[good]), [])
+
+    def test_the_checker_separates_pre_refit_closure_from_post_refit_feedback(self):
+        s = situation(horizon=4)
+        s['conditions'].append({'id': 'training-rollouts', 'en': 'training rollouts'})
+        s['couplings'] = [
+            {'from': 'policy', 'to': 'training-rollouts', 'en': 'rollouts'},
+            {'from': 'raters', 'to': 'reward-model', 'en': 'ratings'},
+            {'from': 'reward-model', 'to': 'policy', 'en': 'reward'},
+            {'from': 'policy', 'to': 'users-harm', 'en': 'deployed harm'},
+        ]
+        s['readers'] = [{'id': 'reward-model', 'reads': ['raters'], 'drawn_from': {'en': 'the raters'},
+                         'selects': ['policy'], 'refit_from': {'from': 'training-rollouts', 'lag': 0}, 'reading_step': [3]}]
+        row = atlas.situation_sets(s)[0]
+        self.assertEqual(row['beyond'], ['policy', 'users-harm', 'training-rollouts'])
+        timed = row['timed']
+        for t in (0, 1, 2):
+            self.assertNotIn('policy', timed['closure_by_step'][t])
+            self.assertIn('policy', timed['beyond_by_step'][t])
+        for t in (3, 4):
+            self.assertIn('policy', timed['closure_by_step'][t])
+            self.assertNotIn('policy', timed['beyond_by_step'][t])
+            self.assertIn('users-harm', timed['beyond_by_step'][t])
+        self.assertEqual(timed['refit_reaches_at']['policy'], 3)
+
+    def test_the_checker_computes_shared_substrate_draw_and_deadline(self):
+        s = situation(
+            horizon=6,
+            substrates=[{'id': 'users-harm', 'initial': 4, 'need': 1, 'renewal': 1, 'shared_substrate': True,
+                         'draws': [{'by': 'policy', 'amount': 2}]}])
+        s['couplings'].append({'from': 'users-harm', 'to': 'reward-model', 'en': 'late report',
+                              'shared_substrate': 'users-harm', 'active_from': 5})
+        sub = atlas.situation_sets(s)[0]['substrates'][0]
+        self.assertEqual((sub['net_margin'], sub['exhaustion_step'], sub['earliest_read'], sub['read_after_exhaustion']),
+                         (-1, 4, 5, True))
+        s['couplings'][-1]['active_from'] = 2
+        sub_early = atlas.situation_sets(s)[0]['substrates'][0]
+        self.assertEqual((sub_early['earliest_read'], sub_early['read_after_exhaustion']), (2, False))
+
+    def test_the_checker_rejects_contradictory_computed_premise_assessments(self):
+        absorbed = situation(horizon=3)
+        absorbed['couplings'] = [
+            {'from': 'policy', 'to': 'raters', 'en': 'outputs'},
+            {'from': 'raters', 'to': 'reward-model', 'en': 'ratings'},
+            {'from': 'reward-model', 'to': 'policy', 'en': 'reward'},
+        ]
+        absorbed['readers'][0]['refit_from'] = {'from': 'policy', 'lag': 0}
+        absorbed['readers'][0]['reading_step'] = [1]
+        self.assertOne(self.check(situations=[absorbed]), 'premises 1.assessed', 'nothing reached lies beyond')
+        dyn = self.read()
+        dyn['premises'] = [{'law': 'Becoming.ClosedCapture.turned_by_loss',
+                            'takes': ['closedcapture-unread', 'flow-rest-outruns']}]
+        prems = [premise(id='closedcapture-unread'), premise(id='flow-rest-outruns')]
+        sub_s = situation(
+            horizon=5,
+            substrates=[{'id': 'users-harm', 'initial': 4, 'need': 1, 'renewal': 1, 'shared_substrate': True,
+                         'draws': [{'by': 'policy', 'amount': 2}]}],
+            premises=[{'premise': 'closedcapture-unread', 'assessed': 'met', 'why': {'en': 'harm unread'}},
+                      {'premise': 'flow-rest-outruns', 'assessed': 'failed', 'why': {'en': 'claimed safe'}}])
+        errors = atlas.validate({'dynamics': [dyn], 'premises': prems, 'bindings': [], 'situations': [sub_s],
+                                 'correspondences': [], 'correspondence_groups': []}, copy.deepcopy(SLICE_VOCABULARY), RECORDS)
+        self.assertOne(errors, 'premises 2.assessed', 'net_margin < 0')
+        sub_s['premises'][1]['assessed'] = 'met'
+        self.assertEqual(atlas.validate({'dynamics': [dyn], 'premises': prems, 'bindings': [], 'situations': [sub_s],
+                                         'correspondences': [], 'correspondence_groups': []}, copy.deepcopy(SLICE_VOCABULARY), RECORDS), [])
+
 
 
 class Step2bTests(unittest.TestCase):

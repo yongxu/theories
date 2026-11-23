@@ -153,6 +153,13 @@ FIELDS = {'dynamic': ('id', 'name', 'family', 'mechanism', 'records', 'declarati
           'binding': ('id', 'test', 'bears_on', 'binding'),
           'situation': ('id', 'name', 'kind', 'standing', 'summary', 'formations', 'conditions', 'couplings', 'readers', 'rule',
                         'time', 'dynamics', 'premises', 'exits', 'bears', 'sources')}
+SITUATION_OPTIONAL = ('horizon', 'substrates')
+COUPLING_OPTIONAL = ('lag', 'reading_step', 'active_from', 'shared_substrate')
+READER_OPTIONAL = ('selects', 'reading_step', 'refit_from', 'shared_substrate')
+
+
+def _nat(value, lo: int = 0) -> bool:
+    return isinstance(value, int) and not isinstance(value, bool) and value >= lo
 # A binding's bridge between a test and the map (MS §2.3): what the test is, which conclusion it reads, what plays each
 # role, how each premise of the identification fares, what was observed and came out, where the outcome marks, another
 # explanation, and the README section it is read from.
@@ -422,7 +429,7 @@ def _binding(e, at: str, closed: dict, by_id: dict, repo: Repository, context: d
         fail('test', f'{e["test"]!r} is not a row of the tests table ({TESTS})')
     elif e['id'] != binding_id(e['test']):
         fail('id', f'a binding\'s id is made from its test: {binding_id(e["test"])}')
-    if not isinstance(e['bears_on'], list) or not e['bears_on']:
+    if not isinstance(e['bears_on'], list) or (not e['bears_on'] and e.get('binding') is not None):
         fail('bears_on', 'a nonempty list: the dynamics the row bears on')
     else:
         for i, b in enumerate(e['bears_on'], 1):
@@ -520,7 +527,7 @@ def _situation(e, at: str, closed: dict, by_id: dict, repo: Repository, context:
     for field in FIELDS['situation']:
         if field not in e:
             fail(field, 'missing')
-    for field in sorted(set(e) - set(FIELDS['situation'])):
+    for field in sorted(set(e) - set(FIELDS['situation']) - set(SITUATION_OPTIONAL)):
         fail(field, 'not a field of a situation')
     if errors:
         return errors
@@ -547,21 +554,73 @@ def _situation(e, at: str, closed: dict, by_id: dict, repo: Repository, context:
             else:
                 nodes.append(n['id'])
     formations = {n['id'] for n in e['formations'] if isinstance(n, dict)} if isinstance(e['formations'], list) else set()
+    conditions = {n['id'] for n in e['conditions'] if isinstance(n, dict) and isinstance(n.get('id'), str)} if isinstance(e['conditions'], list) else set()
+    if 'horizon' in e and not _nat(e['horizon'], 1):
+        fail('horizon', 'an integer >= 1')
+    if 'substrates' in e:
+        if not isinstance(e['substrates'], list):
+            fail('substrates', 'a list of substrate specs')
+        else:
+            seen_subs = set()
+            req_sub = {'id', 'initial', 'need', 'renewal'}
+            all_sub = req_sub | {'capacity', 'shared_substrate', 'draws'}
+            for i, sub in enumerate(e['substrates'], 1):
+                if not isinstance(sub, dict) or not req_sub <= set(sub) <= all_sub:
+                    fail(f'substrates {i}', 'an object {id, initial, need, renewal} and optionally capacity, shared_substrate, draws')
+                    continue
+                if not isinstance(sub['id'], str) or sub['id'] not in conditions:
+                    fail(f'substrates {i}.id', f'{sub["id"]!r} is not a condition of the situation')
+                elif sub['id'] in seen_subs:
+                    fail(f'substrates {i}.id', f'{sub["id"]} is listed twice')
+                seen_subs.add(sub['id'])
+                for nf in ('initial', 'need', 'renewal'):
+                    if not _nat(sub[nf]):
+                        fail(f'substrates {i}.{nf}', 'an integer >= 0')
+                if 'capacity' in sub and not _nat(sub['capacity']):
+                    fail(f'substrates {i}.capacity', 'an integer >= 0')
+                if 'shared_substrate' in sub and not isinstance(sub['shared_substrate'], bool):
+                    fail(f'substrates {i}.shared_substrate', 'a boolean')
+                if 'draws' in sub:
+                    if not isinstance(sub['draws'], list):
+                        fail(f'substrates {i}.draws', 'a list of {by, amount, active_from?}')
+                    else:
+                        for j, dr in enumerate(sub['draws'], 1):
+                            if not isinstance(dr, dict) or not {'by', 'amount'} <= set(dr) <= {'by', 'amount', 'active_from'}:
+                                fail(f'substrates {i}.draws {j}', 'an object {by, amount} and optionally active_from')
+                                continue
+                            if dr['by'] not in formations:
+                                fail(f'substrates {i}.draws {j}.by', f'{dr["by"]!r} is not a formation of the situation')
+                            if not _nat(dr['amount']):
+                                fail(f'substrates {i}.draws {j}.amount', 'an integer >= 0')
+                            if 'active_from' in dr and not _nat(dr['active_from']):
+                                fail(f'substrates {i}.draws {j}.active_from', 'an integer >= 0')
     if not isinstance(e['couplings'], list):
         fail('couplings', 'a list of {from, to, en}')
     else:
         for i, c in enumerate(e['couplings'], 1):
-            if not isinstance(c, dict) or set(c) != {'from', 'to', 'en'} or not isinstance(c['en'], str) or not c['en'].strip():
+            if not isinstance(c, dict) or not {'from', 'to', 'en'} <= set(c) <= ({'from', 'to', 'en'} | set(COUPLING_OPTIONAL)) \
+                    or not isinstance(c.get('en'), str) or not c['en'].strip():
                 fail(f'couplings {i}', 'an object {from, to, en}')
-            elif c['from'] not in nodes or c['to'] not in nodes or c['from'] == c['to']:
+                continue
+            if c['from'] not in nodes or c['to'] not in nodes or c['from'] == c['to']:
                 fail(f'couplings {i}', f'{c["from"]} to {c["to"]}: both a formation or condition of the situation, and two')
+            if 'lag' in c and not _nat(c['lag']):
+                fail(f'couplings {i}.lag', 'an integer >= 0')
+            if 'active_from' in c and not _nat(c['active_from']):
+                fail(f'couplings {i}.active_from', 'an integer >= 0')
+            if 'reading_step' in c:
+                rs = c['reading_step']
+                if not (isinstance(rs, bool) or _nat(rs) or (isinstance(rs, list) and all(_nat(x) for x in rs))):
+                    fail(f'couplings {i}.reading_step', 'a bool, step integer >= 0, or list of step integers >= 0')
+            if 'shared_substrate' in c and (not isinstance(c['shared_substrate'], str) or c['shared_substrate'] not in conditions):
+                fail(f'couplings {i}.shared_substrate', f'{c["shared_substrate"]!r} is not a condition of the situation')
     readers = set()
     if not isinstance(e['readers'], list) or not e['readers']:
         fail('readers', 'a nonempty list of {id, reads, drawn_from} and optionally selects')
     else:
         for i, r in enumerate(e['readers'], 1):
-            if not isinstance(r, dict) or not {'id', 'reads', 'drawn_from'} <= set(r) <= {'id', 'reads', 'drawn_from', 'selects'}:
-                fail(f'readers {i}', 'an object {id, reads, drawn_from}, and optionally selects')
+            if not isinstance(r, dict) or not {'id', 'reads', 'drawn_from'} <= set(r) <= ({'id', 'reads', 'drawn_from'} | set(READER_OPTIONAL)):
+                fail(f'readers {i}', 'an object {id, reads, drawn_from}, and optionally selects, reading_step, refit_from, shared_substrate')
                 continue
             if r['id'] not in formations:
                 fail(f'readers {i}.id', f'{r["id"]} is not a formation of the situation')
@@ -574,6 +633,27 @@ def _situation(e, at: str, closed: dict, by_id: dict, repo: Repository, context:
                 fail(f'readers {i}.drawn_from', 'not a text {en, zh}')
             if 'selects' in r and (not _strings(r['selects']) or not r['selects'] or not set(r['selects']) <= formations):
                 fail(f'readers {i}.selects', 'a nonempty list of the situation\'s formations its reading selects among')
+            if 'reading_step' in r:
+                rs = r['reading_step']
+                if not (rs in ('every', 'never') or (isinstance(rs, list) and all(_nat(x) for x in rs))):
+                    fail(f'readers {i}.reading_step', "'every', 'never', or a list of step integers >= 0")
+            if 'refit_from' in r:
+                rf = r['refit_from']
+                if isinstance(rf, str):
+                    if rf not in nodes:
+                        fail(f'readers {i}.refit_from', f'{rf!r} is not a formation or condition of the situation')
+                elif isinstance(rf, dict) and {'from', 'lag'} <= set(rf) <= {'from', 'lag', 'at_steps'}:
+                    if not isinstance(rf['from'], str) or rf['from'] not in nodes:
+                        fail(f'readers {i}.refit_from.from', f'{rf.get("from")!r} is not a formation or condition of the situation')
+                    if not _nat(rf['lag']):
+                        fail(f'readers {i}.refit_from.lag', 'an integer >= 0')
+                    if 'at_steps' in rf and not (isinstance(rf['at_steps'], list) and all(_nat(x) for x in rf['at_steps'])):
+                        fail(f'readers {i}.refit_from.at_steps', 'a list of step integers >= 0')
+                else:
+                    fail(f'readers {i}.refit_from', 'a node id or {from, lag, at_steps?}')
+            if 'shared_substrate' in r:
+                if not _strings(r['shared_substrate']) or not set(r['shared_substrate']) <= conditions:
+                    fail(f'readers {i}.shared_substrate', 'a list of the situation\'s conditions')
     dynamics = context['dynamics']
     acting = set()
     if not isinstance(e['dynamics'], list) or not e['dynamics']:
@@ -644,6 +724,24 @@ def _situation(e, at: str, closed: dict, by_id: dict, repo: Repository, context:
             why = repo.unanchored(ref) if '#' in ref else repo.missing(ref)
             if why:
                 fail('sources', why)
+    if not errors:
+        computed = situation_sets(e)
+        for i, p in enumerate(e['premises'], 1):
+            if p['assessed'] == 'met' and p['premise'] in ('selection-part-beyond', 'closedcapture-unread'):
+                still_beyond = any((c['timed']['beyond_by_step'][c['timed']['horizon']] if 'timed' in c else c['beyond'])
+                                   for c in computed)
+                if not still_beyond:
+                    fail(f'premises {i}.assessed',
+                         f'{p["premise"]} is assessed met, but nothing reached lies beyond every reader\'s closure')
+            if p['premise'] == 'flow-rest-outruns' and e.get('substrates'):
+                subs = computed[0].get('substrates', []) if computed else []
+                any_outrun = any(sub['net_margin'] < 0 for sub in subs)
+                if p['assessed'] == 'not checked':
+                    fail(f'premises {i}.assessed', 'substrates supplies draws and renewal; assess flow-rest-outruns met or failed')
+                elif p['assessed'] == 'met' and not any_outrun:
+                    fail(f'premises {i}.assessed', 'flow-rest-outruns is assessed met, but every substrate has net_margin >= 0')
+                elif p['assessed'] == 'failed' and any_outrun:
+                    fail(f'premises {i}.assessed', 'flow-rest-outruns is assessed failed, but some substrate has net_margin < 0')
     return errors
 
 
@@ -652,7 +750,7 @@ def situation_sets(s: dict) -> list[dict]:
     with a path of couplings into it, it included), what its acts reach (those with a path of couplings from it), what
     lies beyond it (reached and not in its closure: a selection read through it cannot tell these apart, by
     `Flow.unselected_beyond_pool` and `BeyondCoupling`, under those laws' premises, which the situation assesses), and
-    what it reads among those it selects."""
+    what it reads among those it selects; plus optional time-unrolled `timed` and `substrates` summaries when given."""
     nodes = [n['id'] for n in s['formations'] + s['conditions']]
     into, out = {n: set() for n in nodes}, {n: set() for n in nodes}
     for c in s['couplings']:
@@ -676,6 +774,139 @@ def situation_sets(s: dict) -> list[dict]:
         rows.append({'reader': r['id'], 'closure': sorted(closure, key=order.get), 'reaches': sorted(reach, key=order.get),
                      'beyond': sorted(reach - closure, key=order.get),
                      'reads_among_selected': sorted(set(r['reads']) & set(r.get('selects', [])), key=order.get)})
+
+    has_time = ('horizon' in s
+                or any(k in c for c in s['couplings'] for k in ('lag', 'active_from', 'reading_step', 'shared_substrate'))
+                or any(k in r for r in s['readers'] for k in ('reading_step', 'refit_from', 'shared_substrate')))
+    has_sub = 'substrates' in s
+    if not has_time and not has_sub:
+        return rows
+
+    steps = [0]
+    for c in s['couplings']:
+        steps.extend([c.get('lag', 0), c.get('active_from', 0)])
+        rs = c.get('reading_step')
+        if _nat(rs):
+            steps.append(rs)
+        elif isinstance(rs, list):
+            steps.extend(rs)
+    for r in s['readers']:
+        if isinstance(r.get('reading_step'), list):
+            steps.extend(r['reading_step'])
+        if isinstance(r.get('refit_from'), dict):
+            steps.append(r['refit_from'].get('lag', 0))
+            steps.extend(r['refit_from'].get('at_steps') or [])
+    for sub in s.get('substrates', []):
+        for dr in sub.get('draws', []):
+            steps.append(dr.get('active_from', 0))
+    H = s['horizon'] if 'horizon' in s else (max(steps) + 2)
+
+    if has_time:
+        t_out, t_into = {}, {}
+        for u in nodes:
+            for t in range(H):
+                t_out.setdefault((u, t), set()).add((u, t + 1))
+                t_into.setdefault((u, t + 1), set()).add((u, t))
+        for c in s['couplings']:
+            lag, af, rs = c.get('lag', 0), c.get('active_from', 0), c.get('reading_step')
+            if rs is False:
+                continue
+            for t in range(af, H + 1):
+                arr = t + lag
+                if arr > H:
+                    continue
+                if rs is None or rs is True or (_nat(rs) and arr == rs) or (isinstance(rs, list) and arr in rs):
+                    t_out.setdefault((c['from'], t), set()).add((c['to'], arr))
+                    t_into.setdefault((c['to'], arr), set()).add((c['from'], t))
+        for r in s['readers']:
+            rf = r.get('refit_from')
+            if rf is None:
+                continue
+            src, lag, at_steps = (rf, 0, None) if isinstance(rf, str) else (rf['from'], rf['lag'], rf.get('at_steps'))
+            rs = r.get('reading_step', 'every')
+            if rs == 'never':
+                continue
+            for t in range(0, H + 1):
+                arr = t + lag
+                if arr > H:
+                    continue
+                if (rs == 'every' or (isinstance(rs, list) and arr in rs)) and (at_steps is None or arr in at_steps):
+                    t_out.setdefault((src, t), set()).add((r['id'], arr))
+                    t_into.setdefault((r['id'], arr), set()).add((src, t))
+
+        def t_along(start, edges, max_t):
+            seen, todo = {start}, [start]
+            while todo:
+                cur = todo.pop()
+                for y in edges.get(cur, ()):
+                    if y[1] <= max_t and y not in seen:
+                        seen.add(y)
+                        todo.append(y)
+            return seen
+
+        for row in rows:
+            rid = row['reader']
+            c_by_step, b_by_step, refit_at = [], [], {}
+            for t in range(H + 1):
+                c_nodes = {u for u, _t0 in t_along((rid, t), t_into, t)}
+                r_nodes = {v for v, _t1 in t_along((rid, 0), t_out, t)} - {rid}
+                c_sorted = sorted(c_nodes, key=order.get)
+                b_sorted = sorted(r_nodes - c_nodes, key=order.get)
+                c_by_step.append(c_sorted)
+                b_by_step.append(b_sorted)
+            for u in nodes:
+                if u not in c_by_step[0]:
+                    first = next((t for t in range(1, H + 1) if u in c_by_step[t]), None)
+                    if first is not None:
+                        refit_at[u] = first
+            row['timed'] = {'horizon': H, 'closure_by_step': c_by_step, 'beyond_by_step': b_by_step,
+                            'refit_reaches_at': refit_at}
+
+    if has_sub:
+        subs_out = []
+        never_readers = {r['id'] for r in s['readers'] if r.get('reading_step') == 'never'}
+        for sub in s['substrates']:
+            sid = sub['id']
+            draws = sub.get('draws', [])
+            total_draw = sum(d['amount'] for d in draws)
+            net_margin = sub['renewal'] - total_draw
+            sim_H = H if 'horizon' in s else max(
+                H, min(H + 1000, (sub['initial'] - sub['need']) // max(1, total_draw - sub['renewal']) + 2) if net_margin < 0 else H)
+            lvl, exhaustion_step = sub['initial'], None
+            for t in range(sim_H + 1):
+                if lvl < sub['need']:
+                    exhaustion_step = t
+                    break
+                draw_t = sum(d['amount'] for d in draws if t >= d.get('active_from', 0))
+                lvl = max(0, lvl + sub['renewal'] - draw_t)
+                if 'capacity' in sub:
+                    lvl = min(lvl, sub['capacity'])
+            read_steps = []
+            tagged = [c for c in s['couplings']
+                      if (c.get('shared_substrate') == sid or c['from'] == sid)
+                      and c.get('reading_step') is not False and c['to'] not in never_readers]
+            for c in tagged:
+                crs = c.get('reading_step')
+                if _nat(crs):
+                    read_steps.append(crs)
+                elif isinstance(crs, list) and crs:
+                    read_steps.append(min(crs))
+                else:
+                    read_steps.append(c.get('active_from', 0) + c.get('lag', 0))
+            if not tagged:
+                for r in s['readers']:
+                    rs = r.get('reading_step', 'every')
+                    if rs == 'never':
+                        continue
+                    if sid in r['reads'] or sid in r.get('shared_substrate', []):
+                        read_steps.append(min(rs) if isinstance(rs, list) and rs else 0)
+            earliest_read = min(read_steps) if read_steps else None
+            read_after = (exhaustion_step is not None) and (earliest_read is None or earliest_read > exhaustion_step)
+            subs_out.append({'id': sid, 'initial': sub['initial'], 'need': sub['need'], 'renewal': sub['renewal'],
+                             'total_draw': total_draw, 'net_margin': net_margin, 'exhaustion_step': exhaustion_step,
+                             'earliest_read': earliest_read, 'read_after_exhaustion': read_after})
+        for row in rows:
+            row['substrates'] = [dict(x) for x in subs_out]
     return rows
 
 
@@ -2778,7 +3009,7 @@ def bindings_page(atlas: dict) -> str:
         out += [f'<a id="{b["id"]}"></a>', f'## {b["test"]}: {row.get("name", "")}', '',
                 f'- **Outcome.** {row.get("outcome", "?")}' + (f': {_line({"en": row["gloss"]})}' if row.get('gloss') else '')
                 + (f' ([its README]({_href(row["folder"], at)}))' if row.get('folder') else ''),
-                '- **Bears on.**']
+                '- **Bears on.**' + ('' if b['bears_on'] else ' No atlas dynamic.')]
         for x in b['bears_on']:
             out.append(f'  - [{_cell(names[x["dynamic"]])}]({_section(x["dynamic"], homes, BINDINGS_PAGE)}), through '
                        + ', '.join(_record(r, at) for r in x['records'])
@@ -2837,6 +3068,28 @@ def situations_page(atlas: dict) -> str:
         out += [f'| {_cell(nm(c["reader"]))} | {_cell(", ".join(nm(x) for x in c["closure"]))} | '
                 f'{_cell(", ".join(nm(x) for x in c["reaches"]) or "nothing")} | {_cell(", ".join(nm(x) for x in c["beyond"]) or "nothing")} | '
                 f'{_cell(", ".join(nm(x) for x in c["reads_among_selected"]) or "—")} |' for c in s['computed']]
+        if any('timed' in c for c in s['computed']):
+            out += ['', '**Timed closure and refit feedback** (unrolled over horizon).', '',
+                    '| Reader | Horizon | Final closure (`t = H`) | Final beyond (`t = H`) | Refit reaches at |',
+                    '|---|---|---|---|---|']
+            for c in s['computed']:
+                if 'timed' not in c:
+                    continue
+                tm = c['timed']
+                h = tm['horizon']
+                refit_str = ', '.join(f'`{k}`@{v}' for k, v in tm['refit_reaches_at'].items()) or '—'
+                out.append(f'| {_cell(nm(c["reader"]))} | {h} | {_cell(", ".join(nm(x) for x in tm["closure_by_step"][h]))} | '
+                           f'{_cell(", ".join(nm(x) for x in tm["beyond_by_step"][h]) or "nothing")} | {_cell(refit_str)} |')
+        subs = next((c['substrates'] for c in s['computed'] if c.get('substrates')), None)
+        if subs:
+            out += ['', '**Shared substrate balance.**', '',
+                    '| Substrate | Initial | Need | Renewal | Total draw | Net margin | Exhaustion step | Earliest read | Read after exhaustion |',
+                    '|---|---|---|---|---|---|---|---|---|']
+            for sub in subs:
+                ex = str(sub['exhaustion_step']) if sub['exhaustion_step'] is not None else '—'
+                er = str(sub['earliest_read']) if sub['earliest_read'] is not None else 'never'
+                out.append(f'| {_cell(nm(sub["id"]))} | {sub["initial"]} | {sub["need"]} | {sub["renewal"]} | {sub["total_draw"]} | '
+                           f'{sub["net_margin"]} | {ex} | {er} | {"yes" if sub["read_after_exhaustion"] else "no"} |')
         out += ['', '**The dynamics it is read through.**', '']
         for x in s['dynamics']:
             out.append(f'- [{_cell(names[x["dynamic"]])}]({_section(x["dynamic"], homes, SITUATIONS_PAGE)}): {_line(x["as"])}'
