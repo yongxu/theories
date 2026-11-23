@@ -4,7 +4,7 @@
 
 ## The head
 
-- Main is the one head. Its tip is the landing that carries this page; before that landing the tip was `f66442411`. Nothing is pushed (about 420 commits ahead of the remote), and nothing is to be pushed, sent or licensed until Ren says so (AGENTS.md, rule 7).
+- Main is the one head; ask git for its tip. This page landed at `719b3c1eb`. One landing came after it that day, row DJ's note for the next agent on where the context's size comes from (`ee195716c`), and then the commit that brought this line up. Nothing is pushed (about 420 commits ahead of the remote), and nothing is to be pushed, sent or licensed until Ren says so (AGENTS.md, rule 7).
 - Every worktree stands at a commit of main with nothing uncommitted: the main checkout, rows DJ's two, row FM's, row GR's and the coordinator's landing worktree (`/Users/ren/tmp/rw/wm2/wt`). No gate, core run or reader is alive.
 - The whole gate last passed on main at `501407c66` (tree `739f72d25805`, 23 November 15:13 to 15:26 WIB): 48 checks, all passed. Every commit since is text, each with its own gate of 11 checks; no Lean and no tool has changed since.
 - Not merged and left as they are: ten branches of 3 to 13 November and two stashes. The session that kept the queue before tested them file by file; what it found is in [its record](../sources/15-codex-theory-conversations/2026-11-23-merge-everything-a-unified-head.md).
@@ -32,7 +32,7 @@ The board's Queue line has each landing's clause; the last entries of the shared
 
 **Candidates from the record of connections, unbuilt and unchecked.** The two largest: November's line, lock and level against October's drawdown law of a family (`Flow.family_excess_ends`), the same thing on two carriers with no proof between; and `Sampling` against the laws of time, about ten short statements.
 
-**Owed by the coordinator and not done.** He said the context has grown too large to move in and too costly. Nothing is done about it but this page. What this session would try: one short page of the picture and where each part stands, kept current, and fresh sessions that start from it; the direction page is some 136,000 characters and the board more.
+**Owed by the coordinator and not done.** He said the context has grown too large to move in and too costly. Nothing is done about it but this page and row DJ's note of the same evening, which counts what a session is told to read and names four things to try ([the note](research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/the-size-of-the-context-2026-11-23/NOTE.md)); two of the four reshape the repository and wait on his word. What this session would try: one short page of the picture and where each part stands, kept current, and fresh sessions that start from it; the direction page is some 136,000 characters and the board more.
 
 ## How landings work here, in ten lines
 
