@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261123T123041.825153Z",
- "core_sources_sha256": "b61cc2670f7c8801b656edaf38775f21a481a82e853ecd9875013a9b8cae5f9a",
+ "core_receipt": "20261123T125647.945308Z",
+ "core_sources_sha256": "01b27040a41acc5c2c48781c1a60c62e20c62b2bbc491bc6e416b5292800c680",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,17 +58,17 @@
   ]
  },
  "counts": {
-  "laws": 4439,
+  "laws": 4442,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 1081,
+  "grammar": 1083,
   "balance, represented": 638,
   "anchor, not reached": 134,
-  "no shared law": 2186,
+  "no shared law": 2187,
   "vocabulary_only": 106,
-  "closure": 592,
+  "closure": 594,
   "balance": 907,
-  "return": 254,
+  "return": 255,
   "lumping": 94,
   "order": 105
  },
@@ -36989,6 +36989,79 @@
     "dependence": "balance, represented"
    }
   ],
+  "paced-stock-and-cadence-margin-sandwich": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.PacedStock.StockState",
+     "Becoming.PacedStock.fineStep",
+     "Becoming.PacedStock.ReadAtSpanEnd",
+     "Becoming.PacedStock.pacedCourse",
+     "Becoming.PacedStock.fineStep_orbit_fst",
+     "Becoming.PacedStock.fineStep_orbit_snd",
+     "Becoming.PacedStock.paced_held_on_span_state",
+     "Becoming.PacedStock.paced_held_on_span",
+     "Becoming.PacedStock.paced_block_transition"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.PacedStock.CoveredByBlocks",
+     "Becoming.PacedStock.SpanGuard",
+     "Becoming.PacedStock.blocks_reach_to_fine",
+     "Becoming.PacedStock.blocks_kernel_iff_fine_kernel",
+     "Becoming.PacedStock.blocks_certificate_to_fine_kernel",
+     "Becoming.PacedStock.blocks_keepable_to_fine_of_map",
+     "Becoming.PacedStock.blocks_keepable_to_fine_of_singleton",
+     "Becoming.PacedStock.blocks_keepable_to_fine_of_choice",
+     "Becoming.PacedStock.blocks_keepable_to_fine_of_dc",
+     "Becoming.PacedStock.slack_certifies_fine_kernel",
+     "Becoming.PacedStock.slack_certifies_fine_kernel_global",
+     "Becoming.PacedStock.slack_iff_of_drop_realized",
+     "Becoming.PacedStock.SlackShortWitness.atFive_block_kernel",
+     "Becoming.PacedStock.SlackShortWitness.atFive_block_keepable",
+     "Becoming.PacedStock.SlackShortWitness.atFive_not_fine_kernel",
+     "Becoming.PacedStock.SlackShortWitness.atFive_not_fine_keepable",
+     "Becoming.PacedStock.SlackShortWitness.atSix_fine_kernel_by_slack",
+     "Becoming.PacedStock.SlackShortWitness.witness_summary"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.PacedStock.UpperDraw",
+     "Becoming.PacedStock.LowerDrawWhileMet",
+     "Becoming.PacedStock.line_envelope_lower",
+     "Becoming.PacedStock.line_envelope_upper",
+     "Becoming.PacedStock.line_envelope",
+     "Becoming.PacedStock.pace_margin_feasibility_window",
+     "Becoming.PacedStock.pace_margin_feasibility_window_exact",
+     "Becoming.PacedStock.unrecoverable_cadence_impossibility",
+     "Becoming.PacedStock.coupled_two_rule_impossibility",
+     "Becoming.PacedStock.SandwichWitness.UnitKind",
+     "Becoming.PacedStock.SandwichWitness.imp_trace_levels",
+     "Becoming.PacedStock.SandwichWitness.imp_coupled_witness",
+     "Becoming.PacedStock.SandwichWitness.imp_safe_counterpart_lasts",
+     "Becoming.PacedStock.SandwichWitness.feas_trace_values",
+     "Becoming.PacedStock.SandwichWitness.feas_witness"
+    ],
+    "shared_laws": [
+     "closure",
+     "return"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "pending-task-context-applicability": [
    {
     "law": 1,
@@ -68197,7 +68270,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "75fd80710878c88afb4b068a4de2c88797777bd6f335834e9fd60cbc8f09fac5",
+   "modules_sha256": "41fc419a0198875b1ee1e70f482ecd909df0af89e30295aa60e58f2396787773",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },
