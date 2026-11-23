@@ -1429,6 +1429,16 @@ def _href(ref: str, at: str = ATLAS) -> str:
     return f'<{target}>' if re.search(r'[\s()<>]', target) else target
 
 
+def _rebase_links(text: str, at: str = ATLAS) -> str:
+    """Rebase root-relative markdown links in prose to links relative to folder `at`."""
+    def _rep(m: re.Match) -> str:
+        target = m.group(2).strip('<>')
+        if not target or target.startswith(('#', '/', '.')) or re.match(r'^[a-zA-Z][a-zA-Z0-9+.-]*:', target):
+            return m.group(0)
+        return f'[{m.group(1)}]({_href(target, at)})'
+    return re.sub(r'\[([^\]]+)\]\((<[^>]+>|[^\s)]+)\)', _rep, text)
+
+
 def _source(ref: str, at: str = ATLAS) -> str:
     path, _, anchor = ref.partition('#')
     return f'[{posixpath.basename(path)}#{anchor}]({_href(ref, at)})'
@@ -3007,7 +3017,7 @@ def bindings_page(atlas: dict) -> str:
     for b in atlas['bindings']:
         row = rows.get(b['test'], {})
         out += [f'<a id="{b["id"]}"></a>', f'## {b["test"]}: {row.get("name", "")}', '',
-                f'- **Outcome.** {row.get("outcome", "?")}' + (f': {_line({"en": row["gloss"]})}' if row.get('gloss') else '')
+                f'- **Outcome.** {row.get("outcome", "?")}' + (f': {_rebase_links(_line({"en": row["gloss"]}), at)}' if row.get('gloss') else '')
                 + (f' ([its README]({_href(row["folder"], at)}))' if row.get('folder') else ''),
                 '- **Bears on.**' + ('' if b['bears_on'] else ' No atlas dynamic.')]
         for x in b['bears_on']:

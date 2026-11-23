@@ -10,7 +10,7 @@ The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*. The lines on uses between proofs, last in an entry's section, are no part of the curated layer: they are computed at each render from what Lean printed of its proof terms and from the declarations the entries list, and typed by no one; they too create no result.
 
-17 of the atlas's 186 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
+21 of the atlas's 198 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
 
 | Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
@@ -31,6 +31,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 | [A code held as counts, learned from what is heard](#a-code-held-as-counts) | [a-code-held-as-counts](../../records/a-code-held-as-counts.md) | any type | recorded-checked (theorem) | 2 | 3 |
 | [A reading against the share does not ratchet](#a-reading-against-the-share-does-not-ratchet) | [a-reading-against-the-share-does-not-ratchet](../../records/a-reading-against-the-share-does-not-ratchet.md) | any type | recorded-checked (theorem) | 0 | 1 |
 | [The lock draws its readers out](#the-lock-draws-its-readers-out) | [the-lock-draws-its-readers-out](../../records/the-lock-draws-its-readers-out.md), [a-pool-read-off-the-course](../../records/a-pool-read-off-the-course.md), [on-whom-the-loss-falls](../../records/on-whom-the-loss-falls.md) | any type | recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem) | 3 | 3 |
+| [Fidelity count: classical statements against the English chapter](#fidelity-of-the-classical-statements) | [fidelity-of-the-classical-statements](../../records/fidelity-of-the-classical-statements.md) | any type | reviewed-scoped (assessment) | 0 | 1 |
+| [Fidelity under one name-table discipline (Controlled English vs. classical statements)](#fidelity-under-one-discipline) | [fidelity-under-one-discipline](../../records/fidelity-under-one-discipline.md) | any type | reviewed-scoped (assessment) | 0 | 1 |
+| [A way of units on a stock under a rule set again (依复定之律而在存上之群行)](#a-way-of-units-under-a-rule-set-again) | [a-way-of-units-under-a-rule-set-again](../../records/a-way-of-units-under-a-rule-set-again.md) | any type | recorded-checked (theorem) | 2 | 1 |
+| [Open adaptive loops, assume-guarantee viability, and the coupled race (开放适应回路、假设保证存续与耦合竞速)](#coupled-adaptive-loops-and-race) | [coupled-adaptive-loops-and-race](../../records/coupled-adaptive-loops-and-race.md) | any type | recorded-checked (theorem) | 2 | 1 |
 
 <a id="target-capture"></a>
 ### The capture of a target
@@ -128,7 +132,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - pace bound: Where the rule read favours at every reading and every share, every course is locked from the step after its second reading step, whatever rule and reading it starts with. (`Becoming.ClosedCapture.readers_uniform_locks`). Between a course from any start, whatever rule and reading, the rule read favouring at every reading and every share and locked from the step after its second reading step. Records: [closed-capture](../../records/closed-capture.md) recorded-checked (theorem).
 - **Tests.**
   - [experiments/self-rewarding-lock](../../../../../experiments/self-rewarding-lock): T7, run
-- **Tests bound to it.** [LA2](../BINDINGS.md#test-la2) (the binding), [T7F](../BINDINGS.md#test-t7f) (no result)
+- **Tests bound to it.** [LA2](../BINDINGS.md#test-la2) (the binding), [T7F](../BINDINGS.md#test-t7f) (no result), [LCA](../BINDINGS.md#test-lca) (the binding)
 - **Open.**
   - That any actual rule, or how it is read, is formed from the share it selects: this is the premise ReadsShare, on the rule and on mind. ([closed-capture.md#does-not-show--未表明](../../records/closed-capture.md#does-not-show--未表明))
   - That the readers are minds, institutions or a culture: that is a reading (D58). ([closed-capture.md#does-not-show--未表明](../../records/closed-capture.md#does-not-show--未表明))
@@ -561,6 +565,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - To a state, in words: “in a witness of two formations from a symmetric disagreement, each of three laws brings the two to agree in one step: a centre both take and one hearing in order break the exchange symmetry and keep the renaming one, a preferred form breaks the renaming symmetry and keeps the exchange one”: witness, by `Becoming.SharedCodes.TwoFormations.three_agree`. Its edge: From a symmetric disagreement, in a witness of two formations, a formation both hear, a preferred form and an order of hearing each break one symmetry and bring agreement.. Drops [KeepsExchange](../premises/c.md#sharedcodes-keepsexchange), [KeepsRenaming](../premises/c.md#sharedcodes-keepsrenaming). Records: [a-code-formed-between-formations](../../records/a-code-formed-between-formations.md) recorded-checked (theorem). ([05-COLLECTIVES.md#r-a-code-formed-between-formations](../../../chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations))
 - **Transitions.** None.
 - **Tests.** None.
+- **Tests bound to it.** [WL (H2)](../BINDINGS.md#test-wl-h2) (no result), [ZE](../BINDINGS.md#test-ze) (no result)
 - **Open.**
   - Which orders actual exchange takes, with probabilities over orders, and how long agreement takes: the voter model's and the naming game's expectations are not stated. ([a-code-formed-between-formations.md#does-not-show--未表明](../../records/a-code-formed-between-formations.md#does-not-show--未表明))
   - That actual conventions, scripts or the theory's own terms form by hearing in this way, or whether a shared, imposed or kept code keeps or closes 生生, the continuation of life. ([a-code-formed-between-formations.md#does-not-show--未表明](../../records/a-code-formed-between-formations.md#does-not-show--未表明))
@@ -712,6 +717,119 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - *Used directly by proofs here.*
     - `Becoming.RuleShaping.favours_iff`, in `Becoming.PoolFromCourse.borne_by_shapers_favours_iff` and `Becoming.PoolFromCourse.borne_by_others_favours_iff`, listed under [The capacity to shape the rule, selected by what comes back to it](#shaping-the-rule-selected-by-what-comes-back).
     - `Becoming.RuleCapture.Alternating.before_locked`, in `Becoming.PoolFromCourse.Borne.others_locked`, listed under [A threshold reading, read one step late, from a start against it](f.md#threshold-reading-read-late-alternates).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+
+<a id="fidelity-of-the-classical-statements"></a>
+### Fidelity count: classical statements against the English chapter
+
+- **Mechanism.** Empirical assessment comparing how faithfully two text layers of the core (the 中华本's 經 vs. the canonical chapter's English clauses) state audited Lean declarations without introducing unrepresented referents (X, X_A agents, X_R relata, X_E entities), omissions (O), connective mismatches (S) or predicate excess (P) against elaborated Lean types (receipt 20261022T110022.458880Z, U1 unfolding). No Lean proof; operationalizes the name-table discipline and serves as a materials gate for H2.
+- **Base.** any type
+- **How far seen.** [fidelity-of-the-classical-statements](../../records/fidelity-of-the-classical-statements.md) reviewed-scoped (assessment)
+- **Declarations.** None.
+- **Hypotheses, quoted from the records.**
+  - [fidelity-of-the-classical-statements](../../records/fidelity-of-the-classical-statements.md), hypothesis 1: Codebook v1.1 (FIDELITY.md §3 with two logged clarifications from calibration); the Lean statements of receipt 20261022T110022.458880Z with one level of unfolding; the alignment of 經 clauses to declarations by two coders and an adjudicator; one coder, of the family of the model that wrote the 經, on both sides of the main set.
+- **Premises, by law.** None.
+- **Forbids.** Not stated.
+- **Exits.** None.
+- **Transitions.** None.
+- **Tests.**
+  - [experiments/wenli-reading-transfer](../../../../../experiments/wenli-reading-transfer): None, run
+- **Tests bound to it.** [FC1](../BINDINGS.md#test-fc1) (nothing failed), [WL (H2)](../BINDINGS.md#test-wl-h2) (no result)
+- **Open.**
+  - Genre-matched comparison (F3), naive pass without the name table (F4), a second coder on the main-set 經, a human audit, and the reading-transfer test H2 remain unrun or unmeasured. ([06-CLASSICAL-TEXTS.md#r-fidelity-of-the-classical-statements](../../../chapters/06-CLASSICAL-TEXTS.md#r-fidelity-of-the-classical-statements))
+- **Beyond its couplings.** Speaks only to these two AI-authored codes on this core in different registers; does not show that classical Chinese is best among all expressions or separate language from the name-table discipline.
+- **Sources.** [06-CLASSICAL-TEXTS.md#r-fidelity-of-the-classical-statements](../../../chapters/06-CLASSICAL-TEXTS.md#r-fidelity-of-the-classical-statements)
+- **Uses between proofs.** Not read: this entry lists no theorem of the print, so no line can be computed for it ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
+
+<a id="fidelity-under-one-discipline"></a>
+### Fidelity under one name-table discipline (Controlled English vs. classical statements)
+
+- **Mechanism.** Empirical control assessment separating language from discipline and register: an English name table (449 names with sense taken, exclusions and Lean anchors matching the 中华本) renders every 經 clause into controlled English (CE), paired on identical content and declarations against the 經 across 672 pairs in 270 條. Tests whether the measured fidelity gain attaches to classical Chinese or to the name-table discipline and statement register.
+- **Base.** any type
+- **How far seen.** [fidelity-under-one-discipline](../../records/fidelity-under-one-discipline.md) reviewed-scoped (assessment)
+- **Declarations.** None.
+- **Hypotheses, quoted from the records.**
+  - [fidelity-under-one-discipline](../../records/fidelity-under-one-discipline.md), hypothesis 1: FC1's codebook v1.1 and brief, table pass; FC1's Lean table with one level of unfolding and its final alignment of 經 clauses to declarations; the controlled English key gives each English name's sense and anchors, as the Chinese key does; CE is a translation of the 經 with the Lean as a key to the reading.
+- **Premises, by law.** None.
+- **Forbids.** Not stated.
+- **Exits.** None.
+- **Transitions.** None.
+- **Tests.**
+  - [experiments/wenli-reading-transfer](../../../../../experiments/wenli-reading-transfer): None, run
+- **Tests bound to it.** [WL (H2)](../BINDINGS.md#test-wl-h2) (no result), [ZE](../BINDINGS.md#test-ze) (no result)
+- **Open.**
+  - Controlled English written directly from the Lean (not translated from the 經), genre-matched separation of discipline from register (F3), reconciliation of cross-family coder disagreement (α near 0), and human audit remain open. ([06-CLASSICAL-TEXTS.md#r-fidelity-under-one-discipline](../../../chapters/06-CLASSICAL-TEXTS.md#r-fidelity-under-one-discipline))
+- **Beyond its couplings.** CE inherits the 經's content as a translation keyed by the Lean; does not separate discipline from statement register or decide reader comprehension (H2).
+- **Sources.** [06-CLASSICAL-TEXTS.md#r-fidelity-under-one-discipline](../../../chapters/06-CLASSICAL-TEXTS.md#r-fidelity-under-one-discipline)
+- **Uses between proofs.** Not read: this entry lists no theorem of the print, so no line can be computed for it ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
+
+<a id="a-way-of-units-under-a-rule-set-again"></a>
+### A way of units on a stock under a rule set again (依复定之律而在存上之群行)
+
+- **Mechanism.** Units needing a positive stock and leaving offspring under a step-updated rule: under growth-when-favoured and stock-cap premises, every course reaches either a Tested holding step (with neither rule nor next rule favouring) or a first step with no need met (tested_or_ends); from Tested, monotone share-reading sustains forever (tested_lasts), while from a locked start a step whose rule does not favour arrives at least two steps after an unmet need (unmet_before_unfavoured).
+- **Base.** any type
+- **How far seen.** [a-way-of-units-under-a-rule-set-again](../../records/a-way-of-units-under-a-rule-set-again.md) recorded-checked (theorem)
+- **Declarations.** `Becoming.WayUnderARule.step`, `Becoming.WayUnderARule.course`, `Becoming.WayUnderARule.Goes`, `Becoming.WayUnderARule.net`, `Becoming.WayUnderARule.Tested`, `Becoming.WayUnderARule.within_along`, `Becoming.WayUnderARule.tested_or_ends`, `Becoming.WayUnderARule.first_tested`, `Becoming.WayUnderARule.first_tested_or_ends`, `Becoming.WayUnderARule.tested_lasts`, `Becoming.WayUnderARule.lasts_from`, `Becoming.WayUnderARule.unending_iff_tested`, `Becoming.WayUnderARule.ends_iff_unmet`, `Becoming.WayUnderARule.locked_while_met`, `Becoming.WayUnderARule.favours_while_met`, `Becoming.WayUnderARule.unmet_before_unfavoured`, `Becoming.WayUnderARule.unmet_before_tested`, `Becoming.WayUnderARule.TwoKinds.premises`, `Becoming.WayUnderARule.NeedTwentySeven.tested`, `Becoming.WayUnderARule.NeedTwentySeven.goes_on`, `Becoming.WayUnderARule.NeedTwentySix.ends`, `Becoming.WayUnderARule.NeedTwentySix.ends_untested`, `Becoming.WayUnderARule.course_one_rule`, `Becoming.WayUnderARule.way_one_rule`, `Becoming.WayUnderARule.BothOutcomes.both`, `Becoming.WayUnderARule.BothOutcomes.not_read_from_a_share`
+- **Hypotheses, quoted from the records.**
+  - [a-way-of-units-under-a-rule-set-again](../../records/a-way-of-units-under-a-rule-set-again.md), hypothesis 1: No axiom. Given, not derived: the needs, uses and kids under each rule; which rules favour, and that this is decided; that kids together take more under a favouring rule, and the same under any other; that kids need no more than their parent; that every unit the course reaches needs something (it follows from every unit needing something).
+  - [a-way-of-units-under-a-rule-set-again](../../records/a-way-of-units-under-a-rule-set-again.md), hypothesis 2: The stock: nothing given from nothing, the start within the cap, and along the course the cap kept and, at steps whose rule does not favour, giving short of what the way takes T below a margin, and at least T at every level left z from the margin with z + T within the cap. For the lasting: that every unit has kids under a rule that does not favour, and a share of the way, a reading of it and two orders, with the lock's three premises read downward. For the locked start: the lock's three premises and the lock at the start.
+- **Premises, by law.** None.
+- **Forbids.** Leaving a locked start to an unfavoured step without a prior unmet need (unmet_before_unfavoured), or stalling outside both Tested and unmet need under the premises.
+- **Exits.**
+  - To a state, in words: “a first step with no need met (ends_iff_unmet), or a step holding Tested whose net never ends under share-reading premises (tested_lasts)”: sufficient, by `Becoming.WayUnderARule.tested_or_ends`. Its edge: From any start meeting needs and cap premises, the course reaches Tested with prior needs met or a first step with no need met.. Drops no premise: it leaves within them. Records: [a-way-of-units-under-a-rule-set-again](../../records/a-way-of-units-under-a-rule-set-again.md) recorded-checked (theorem). ([a-way-of-units-under-a-rule-set-again.md#laws--规律](../../records/a-way-of-units-under-a-rule-set-again.md#laws--规律))
+  - To a state, in words: “witness of a single unit need tipping between Tested persistence (twelve small units) and total collapse (NeedTwentySix vs NeedTwentySeven)”: witness, by `Becoming.WayUnderARule.NeedTwentySeven.tested`. Its edge: Changing one unit of need on a shared resource separates Tested persistence from untested ending.. Drops no premise: it leaves within them. Records: [a-way-of-units-under-a-rule-set-again](../../records/a-way-of-units-under-a-rule-set-again.md) recorded-checked (theorem). ([a-way-of-units-under-a-rule-set-again.md#laws--规律](../../records/a-way-of-units-under-a-rule-set-again.md#laws--规律))
+- **Transitions.**
+  - juncture: Both outcomes possible from identical initial conditions unless excluded by share-reading premises (BothOutcomes.both) (`Becoming.WayUnderARule.BothOutcomes.both`). Records: [a-way-of-units-under-a-rule-set-again](../../records/a-way-of-units-under-a-rule-set-again.md) recorded-checked (theorem).
+- **Tests.** None.
+- **Open.**
+  - A condition on the model numbers separating which outcome occurs, and whether post-collapse survival via eliminated counted units is turning in the idea sense. ([a-way-of-units-under-a-rule-set-again.md#does-not-show--未表明](../../records/a-way-of-units-under-a-rule-set-again.md#does-not-show--未表明))
+- **Beyond its couplings.** Only the unit whose need fails stops leaving kids; the selection rule notices scarcity only through what remains in its share.
+- **Sources.** [a-way-of-units-under-a-rule-set-again.md#laws--规律](../../records/a-way-of-units-under-a-rule-set-again.md#laws--规律)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Law.stepWhile_unending_iff`, in `Becoming.WayUnderARule.tested_lasts`, `Becoming.WayUnderARule.unending_iff_tested`, `Becoming.WayUnderARule.ends_iff_unmet` and `Becoming.WayUnderARule.BothOutcomes.not_read_from_a_share`, listed under [A line that ends where the net ends, or while the net goes on](a.md#turning-in-time).
+    - `Becoming.LineOnAStock.met_or_unmet`, in `Becoming.WayUnderARule.unmet_before_unfavoured`; `Becoming.LineOnAStock.mem_of_ne_nil`, in `Becoming.WayUnderARule.tested_lasts` and `Becoming.WayUnderARule.lasts_from`; `Becoming.LineOnAStock.after_of_met`, in `Becoming.WayUnderARule.lasts_from`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.WayUnderARule.lasts_from` → `Becoming.WayUnderARule.held_step` → `Becoming.WayUnderARule.level_held` → `Becoming.RegimeMargin.holds`, listed under [The point of no return of a regime](a.md#margin-of-a-regime).
+    - `Becoming.WayUnderARule.BothOutcomes.not_read_from_a_share` → `Becoming.WayUnderARule.TwoKinds.keeps` → `Becoming.TurningInTime.kept_within`, listed under [A line that ends where the net ends, or while the net goes on](a.md#turning-in-time).
+    - `Becoming.WayUnderARule.tested_or_ends` → `Becoming.WayUnderARule.or_all` → `Becoming.LineOnAStock.strong_below`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
+    - `Becoming.WayUnderARule.lasts_from` → `Becoming.WayUnderARule.held_step` → `Becoming.WayUnderARule.mem_after` → `Becoming.LineOnAStock.mem_after_iff`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
+    - `Becoming.WayUnderARule.tested_or_ends` → `Becoming.WayUnderARule.or_all` → `Becoming.WayUnderARule.or_from_room` → `Becoming.WayUnderARule.outcome_or_met` → `Becoming.LineOnAStock.step_zero`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
+    - `Becoming.WayUnderARule.tested_or_ends` → `Becoming.WayUnderARule.or_all` → (two more between) → `Becoming.WayUnderARule.level_lowers` → `Becoming.LineOnAStock.step_lowers`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
+    - `Becoming.WayUnderARule.tested_or_ends` → `Becoming.WayUnderARule.or_all` → (two more between) → `Becoming.WayUnderARule.below_level` → `Becoming.LineOnAStock.below_after`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
+    - `Becoming.WayUnderARule.lasts_from` → `Becoming.WayUnderARule.held_step` → `Becoming.WayUnderARule.below_kept` → `Becoming.LineOnAStock.below_keeps`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
+    - `Becoming.WayUnderARule.tested_or_ends` → `Becoming.WayUnderARule.or_all` → (two more between) → `Becoming.WayUnderARule.taken_rises` → `Becoming.LineOnAStock.allKids_rises`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
+    - `Becoming.WayUnderARule.lasts_from` → `Becoming.WayUnderARule.held_step` → `Becoming.WayUnderARule.taken_kept` → `Becoming.LineOnAStock.taken_allKids`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+
+<a id="coupled-adaptive-loops-and-race"></a>
+### Open adaptive loops, assume-guarantee viability, and the coupled race (开放适应回路、假设保证存续与耦合竞速)
+
+- **Mechanism.** Formalizes black-box composition of OpenLoop adaptive agents carrying observation-driven channels (blind to raw stock st.1) and bounded countdown lag eta ≤ maxLag inside LoopCertificate: whenever warning level and initial stock exceed x_crit + (globalMaxLag + 1) * preTotal under pooled monitoring and monotone Coupled.Indexed.Rises dynamics, assume_guarantee_joint_viable proves joint Viability.Kernel opaquely. When discovery, pool silencing (SelectionPool.Web.majority_outvoted), post-turn coordination (CoupledDrawers.AtOnce.Shores.drain_perfect), and countdown lag compete in raceStep, coupled_race_theorem proves break of any link collapses to 0, while unread_adaptive_joint_collapse shows locally adapting unread loops jointly exhaust their shared substrate despite unchanged LocalOK.
+- **Base.** any type
+- **How far seen.** [coupled-adaptive-loops-and-race](../../records/coupled-adaptive-loops-and-race.md) recorded-checked (theorem)
+- **Declarations.** `Becoming.AdaptiveLoops.OpenLoop`, `Becoming.AdaptiveLoops.LoopCertificate`, `Becoming.AdaptiveLoops.jointStep`, `Becoming.AdaptiveLoops.jointProcess`, `Becoming.AdaptiveLoops.assume_guarantee_joint_viable`, `Becoming.AdaptiveLoops.assume_guarantee_joint_kernel`, `Becoming.AdaptiveLoops.raceStep`, `Becoming.AdaptiveLoops.raceOrbit`, `Becoming.AdaptiveLoops.WitnessGood`, `Becoming.AdaptiveLoops.WitnessNoDiscovery`, `Becoming.AdaptiveLoops.WitnessSilenced`, `Becoming.AdaptiveLoops.WitnessUncoordinated`, `Becoming.AdaptiveLoops.WitnessTooSlow`, `Becoming.AdaptiveLoops.coupled_race_theorem`, `Becoming.AdaptiveLoops.unread_orbit_le`, `Becoming.AdaptiveLoops.unread_adaptive_joint_collapse`, `Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.witness`, `Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_joint_viable`, `Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_bidirectional_adaptation`
+- **Hypotheses, quoted from the records.**
+  - [coupled-adaptive-loops-and-race](../../records/coupled-adaptive-loops-and-race.md), hypothesis 1: No axiom. For assume_guarantee_joint_viable: finite lists sites and agents, full site coverage, state-independent admissibility on OpenLoop.process, blind channel firing within maxSilence, monotone Coupled.Indexed.Rises Drawn.whole dynamics, post-turn threshold viability at x_crit, and warning buffer x_crit + (globalMaxLag + 1) * preTotal ≤ warnLevel plus initial slack x_crit + maxEta init * preTotal ≤ x_0.
+  - [coupled-adaptive-loops-and-race](../../records/coupled-adaptive-loops-and-race.md), hypothesis 2: For unread_adaptive_joint_collapse: monotone substrate giving gSub, unread local shares, and joint draw floor H_joint ≤ jointDraw.
+- **Premises, by law.** None.
+- **Forbids.** Joint survival when combined unread adaptive draws exceed renewal, or under race params with any broken discovery/pool/coordination/lag link.
+- **Exits.**
+  - To a state, in words: “permanent joint Viability.Kernel above x_crit across heterogeneous black-box adaptive loops when warning buffer covers (globalMaxLag + 1) * preTotal”: sufficient, by `Becoming.AdaptiveLoops.assume_guarantee_joint_viable`. Its edge: Opaque assume-guarantee contract sustains joint viability even with observation-only channels and endogenous bidirectional switching.. Drops no premise: it leaves within them. Records: [coupled-adaptive-loops-and-race](../../records/coupled-adaptive-loops-and-race.md) recorded-checked (theorem). ([coupled-adaptive-loops-and-race.md#laws--规律](../../records/coupled-adaptive-loops-and-race.md#laws--规律))
+  - To a state, in words: “joint substrate collapse while every local unread loop continues to satisfy its own LocalOK predicates (unread_adaptive_joint_collapse; coupled_race_theorem witnesses)”: sufficient, by `Becoming.AdaptiveLoops.unread_adaptive_joint_collapse`. Its edge: Each loop viable alone and seeing an unchanged local share jointly drains the shared substrate past RegimeMargin.. Drops no premise: it leaves within them. Records: [coupled-adaptive-loops-and-race](../../records/coupled-adaptive-loops-and-race.md) recorded-checked (theorem). ([coupled-adaptive-loops-and-race.md#laws--规律](../../records/coupled-adaptive-loops-and-race.md#laws--规律))
+- **Transitions.**
+  - window or deadline: x_crit + (globalMaxLag + 1) * preTotal ≤ warnLevel vs countdown lag eta and pool silence majority threshold (`Becoming.AdaptiveLoops.assume_guarantee_joint_viable`, `Becoming.AdaptiveLoops.coupled_race_theorem`). Records: [coupled-adaptive-loops-and-race](../../records/coupled-adaptive-loops-and-race.md) recorded-checked (theorem).
+- **Tests.** None.
+- **Open.**
+  - Empirical calibration of countdown lag bounds, noise, and generalizing learners whose weights leak cross-channel proxy cues (tested empirically in Phase 2). ([coupled-adaptive-loops-and-race.md#does-not-show--未表明](../../records/coupled-adaptive-loops-and-race.md#does-not-show--未表明))
+- **Beyond its couplings.** Certifies invariant viability above x_crit rather than reward optimization, and relies on monotone discrete Nat bounds unless calibrated.
+- **Sources.** [coupled-adaptive-loops-and-race.md#laws--规律](../../records/coupled-adaptive-loops-and-race.md#laws--规律)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.RegimeMargin.ends_below`, in `Becoming.AdaptiveLoops.unread_adaptive_joint_collapse`; `Becoming.RegimeMargin.falls_within`, in `Becoming.AdaptiveLoops.unread_adaptive_joint_collapse`, listed under [The point of no return of a regime](a.md#margin-of-a-regime).
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.AdaptiveLoops.WitnessUncoordinated` → `Becoming.AdaptiveLoops.uncoordinated_drain_perfect` → `Becoming.Optimum.Coupled.AtOnce.Shores.drain_perfect`, listed under [Coupled for each step](b.md#coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it).
+    - `Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_bidirectional_adaptation` → `Becoming.Viability.Certificate.kernel` → `Becoming.Viability.kernel_iff_held`, listed under [A reading kept by its update, and the reading its own history carries](d.md#a-reading-kept-by-its-update).
   - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
 
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), [B](b.md), **C**, [D](d.md), [E](e.md), [F](f.md), [G](g.md), [H](h.md).

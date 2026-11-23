@@ -10,7 +10,7 @@ The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*. The lines on uses between proofs, last in an entry's section, are no part of the curated layer: they are computed at each render from what Lean printed of its proof terms and from the declarations the entries list, and typed by no one; they too create no result.
 
-38 of the atlas's 186 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
+41 of the atlas's 198 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
 
 | Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
@@ -52,6 +52,9 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 | [What a line must hold, and what a regularity takes in](#what-a-regularity-takes-in) | [what-a-line-holds-and-a-regularity-takes-in](../../records/what-a-line-holds-and-a-regularity-takes-in.md), [constancy-read-at-a-members-class](../../records/constancy-read-at-a-members-class.md) | root | recorded-checked (theorem); recorded-checked (theorem) | 4 | 6 |
 | [Growth by attachment, and what a cut returns](#growth-constrained-fragmentation) | [growth-constrained-fragmentation](../../records/growth-constrained-fragmentation.md) | periphery | recorded-checked (theorem) | 2 | 4 |
 | [Renewal and consumption classify runs](#becoming-renewal-reading) | [becoming-renewal-reading](../../records/becoming-renewal-reading.md) | any process | recorded-checked (theorem) | 3 | 6 |
+| [Fine-step stock under coarse rule cadences and the pace–margin sandwich (粗节律下之细步存量与节奏裕度夹击)](#paced-stock-and-cadence-margin-sandwich) | [paced-stock-and-cadence-margin-sandwich](../../records/paced-stock-and-cadence-margin-sandwich.md) | any type | recorded-checked (theorem) | 2 | 1 |
+| [Lax multi-scale viability simulation and vertical tower composition (松弛多尺度存续模拟与塔式纵向复合)](#lax-multi-scale-viability) | [lax-multi-scale-viability](../../records/lax-multi-scale-viability.md) | any type | recorded-checked (theorem) | 1 | 1 |
+| [Viability-preserving transformative continuation order (保续转化序)](#transformative-viability-order) | [transformative-viability-order](../../records/transformative-viability-order.md) | any type | recorded-checked (theorem) | 1 | 1 |
 
 <a id="generation-and-degeneration-at-two-grains"></a>
 ### Generation, keeping and degeneration at two grains (生成、守、退化)
@@ -1029,7 +1032,8 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
     - `Becoming.Viability.kernel_iff_iter_pred_length` → `Becoming.held_iff_iter_pred_length` → `Becoming.Iteration.iter_pred`, listed under [The largest class a step preserves, reached at a list's length (步所保之最大类，至列表之长而得)](#kept-at-the-length-of-a-list).
     - `Becoming.Viability.kernel_iff_iter_pred_length` → `Becoming.held_iff_iter_pred_length` → `Becoming.Iteration.iter_persists_from_all` → `Becoming.Iteration.iter_persists`, listed under [The largest class a step preserves, reached at a list's length (步所保之最大类，至列表之长而得)](#kept-at-the-length-of-a-list).
-  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Viability.kernel_iff_certificate`: in `Becoming.lax_kernel_of_kernel`, listed under [Lax multi-scale viability simulation and vertical tower composition (松弛多尺度存续模拟与塔式纵向复合)](#lax-multi-scale-viability).
 
 <a id="kept-at-the-length-of-a-list"></a>
 ### The largest class a step preserves, reached at a list's length (步所保之最大类，至列表之长而得)
@@ -1210,6 +1214,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Exits.** None.
 - **Transitions.** None.
 - **Tests.** None.
+- **Tests bound to it.** [MQ5](../BINDINGS.md#test-mq5) (the binding)
 - **Open.**
   - That a run converges, in the core: convergence of a bounded monotone sequence is an omniscience principle, so the core states the shape of a run and the periphery the convergence over the reals. ([regime-in-any-amounts.md#does-not-show--未表明](../../records/regime-in-any-amounts.md#does-not-show--未表明))
   - The threshold over the reals as a computed level, or the regime's case H + y there: the fates are stated as down-closed and falling with the recent giving. ([regime-in-any-amounts.md#does-not-show--未表明](../../records/regime-in-any-amounts.md#does-not-show--未表明))
@@ -1457,6 +1462,9 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
     - `Becoming.GroupEnding.Flow.coupled_generation_childless` → `Becoming.GroupEnding.Flow.family_childless` → `Becoming.GroupEnding.Flow.inactive_childless`, listed under [Groups with less leave nothing; groups on one family end together](a.md#selection-among-groups-by-ending).
     - `Becoming.GroupEnding.Flow.coupled_generation_childless` → `Becoming.GroupEnding.Flow.family_childless` → `Becoming.Flow.family_excess_ends`, listed under [Groups with less leave nothing; groups on one family end together](a.md#selection-among-groups-by-ending).
     - `Becoming.FromTheDynamics.Alternating.joined` → `Becoming.FromTheDynamics.Alternating.returns` → `Becoming.Flow.MutuallyDependent.reachReturns`, listed under [Mutual dependence, and the exponential pace that loops of couplings give](#mutual-dependence-and-its-pace).
+    - `Becoming.ChoiceOccasions.keeping_above_ending` → `Becoming.ChoiceOccasions.accorded_containing_iff` → `Becoming.ChoiceOccasions.accorded_iff_noCycle`, listed under [What choices show of the order they come from (所择所示之序)](d.md#what-choices-show-of-an-order).
+    - `Becoming.ChoiceOccasions.selfConcerned_above_iff_reach` → `Becoming.ChoiceOccasions.above_in_every_containing_iff_reach` → `Becoming.ChoiceOccasions.above_in_every_iff_reach`, listed under [What choices show of the order they come from (所择所示之序)](d.md#what-choices-show-of-an-order).
+    - `Becoming.ChoiceOccasions.reversed_off_met` → `Becoming.ChoiceOccasions.above_in_some_containing_of_unreached` → `Becoming.ChoiceOccasions.above_in_some_of_unreached`, listed under [What choices show of the order they come from (所择所示之序)](d.md#what-choices-show-of-an-order).
   - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
     - `Becoming.Flow.persisting_keeping_above_ending`: in `Becoming.Flow.carried_keeping_above_ending`, listed under [Readings carried along a line, told apart by its standing late only within its coupling closure](#readings-carried-and-filtered).
 
@@ -1743,5 +1751,89 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
     - `Becoming.falls_not_recurring`: in `Becoming.Web.dissipation_arising_not_recurring`, listed under [A closed cycle sustains unceasing arising, without dissipation](f.md#closed-cycle-without-dissipation); in `Becoming.Flow.uptake_needs_replenishment_from` and `Becoming.Web.dissipation_arising_not_recurring`, listed under [Unceasing arising needs renewal](g.md#unceasing-generation-needs-renewal); in `Becoming.Web.dissipation_arising_not_recurring`, listed under [More needs more renewers; unceasing arising needs renewal](#more-needs-renewers).
     - `Becoming.Run.not_of_depletion`: in `Becoming.ContinuingRevision.no_run_without_return`, listed under [Activity forms reference revision and makes it recur](#recurring-reference-revision).
     - `Becoming.Renewable.class_belongs_to_the_run`: in `Becoming.Renewable.kept_part_not_renewal`, listed under [Never leaving a guard, conditions kept together, and lasting](#never-leaving-a-guard).
+
+<a id="paced-stock-and-cadence-margin-sandwich"></a>
+### Fine-step stock under coarse rule cadences and the pace–margin sandwich (粗节律下之细步存量与节奏裕度夹击)
+
+- **Mechanism.** Joins fine-step LineOnAStock trajectories under coarse Sampling/Pace span-end rule updates (pacedCourse): Viability kernels and certificates transport across Frame.blocks with intra-span slack stepDrop * (L - 1) (slack_certifies_fine_kernel), while Keepable transports constructively only with deterministic choice or explicit choice/DC. Combining Pace.StretchFixes (2N - 1 ≤ L) with two-sided line_envelope gives the Pace–Margin Sandwich: initial buffer covering H₂ + y₂ + H₁ * (L + 1) guarantees permanent viability once switched, while shortfalls below (H₂ + y₂) + (H₁ - Y) * (2N - 1) suffer either observation aliasing across L < 2N - 1 or pipeline drain before span σ 1 can switch (coupled_two_rule_impossibility).
+- **Base.** any type
+- **How far seen.** [paced-stock-and-cadence-margin-sandwich](../../records/paced-stock-and-cadence-margin-sandwich.md) recorded-checked (theorem)
+- **Declarations.** `Becoming.PacedStock.StockState`, `Becoming.PacedStock.fineStep`, `Becoming.PacedStock.ReadAtSpanEnd`, `Becoming.PacedStock.pacedCourse`, `Becoming.PacedStock.paced_held_on_span`, `Becoming.PacedStock.paced_block_transition`, `Becoming.PacedStock.CoveredByBlocks`, `Becoming.PacedStock.SpanGuard`, `Becoming.PacedStock.blocks_kernel_iff_fine_kernel`, `Becoming.PacedStock.blocks_certificate_to_fine_kernel`, `Becoming.PacedStock.blocks_keepable_to_fine_of_map`, `Becoming.PacedStock.slack_certifies_fine_kernel`, `Becoming.PacedStock.slack_iff_of_drop_realized`, `Becoming.PacedStock.SlackShortWitness.witness_summary`, `Becoming.PacedStock.line_envelope`, `Becoming.PacedStock.pace_margin_feasibility_window`, `Becoming.PacedStock.pace_margin_feasibility_window_exact`, `Becoming.PacedStock.unrecoverable_cadence_impossibility`, `Becoming.PacedStock.coupled_two_rule_impossibility`, `Becoming.PacedStock.SandwichWitness.imp_coupled_witness`, `Becoming.PacedStock.SandwichWitness.feas_witness`
+- **Hypotheses, quoted from the records.**
+  - [paced-stock-and-cadence-margin-sandwich](../../records/paced-stock-and-cadence-margin-sandwich.md), hypothesis 1: No axiom. For intra-span transport: Becoming.Strict σ, ReadAtSpanEnd σ reads, CoveredByBlocks, reach-scoped stepDrop ≤ block slack * (L - 1), and explicit choice hypothesis (if transporting non-deterministic Keepable).
+  - [paced-stock-and-cadence-margin-sandwich](../../records/paced-stock-and-cadence-margin-sandwich.md), hypothesis 2: For Pace–Margin feasibility/impossibility: Pace.StretchFixes / 2N - 1 ≤ L, RegimeMargin Short/Meets/Keeps hypotheses, FromNothing/AtMost bounds, and explicit buffer bounds relative to H₂ + y₂ and H₁.
+- **Premises, by law.** None.
+- **Forbids.** Both unambiguous Pace identification across span < 2N - 1 and survival past span 1 without initial buffer covering the drawdown across the oversight lag.
+- **Exits.**
+  - To a state, in words: “permanent fine-step viability within [H₂ + y₂, hi] once span stride L ≥ 2N - 1 and initial buffer covers H₂ + y₂ + H₁ * (L + 1)”: sufficient, by `Becoming.PacedStock.pace_margin_feasibility_window`. Its edge: Feasibility window when observation stride meets the Pace lower bound and buffer covers drawdown across the lag.. Drops no premise: it leaves within them. Records: [paced-stock-and-cadence-margin-sandwich](../../records/paced-stock-and-cadence-margin-sandwich.md) recorded-checked (theorem). ([paced-stock-and-cadence-margin-sandwich.md#laws--规律](../../records/paced-stock-and-cadence-margin-sandwich.md#laws--规律))
+  - To a state, in words: “unrecoverable coupled failure: either observations conflate under L < 2N - 1 or the stock drops below safe recovery before g_safe takes effect at σ 1”: sufficient, by `Becoming.PacedStock.coupled_two_rule_impossibility`. Its edge: Either short cadence aliases indistinguishable dynamics or slow cadence drains the initial margin before switching.. Drops no premise: it leaves within them. Records: [paced-stock-and-cadence-margin-sandwich](../../records/paced-stock-and-cadence-margin-sandwich.md) recorded-checked (theorem). ([paced-stock-and-cadence-margin-sandwich.md#laws--规律](../../records/paced-stock-and-cadence-margin-sandwich.md#laws--规律))
+- **Transitions.**
+  - pace bound: Pace identification lag 2N - 1 vs initial buffer headroom (H₂ + y₂) + (H₁ - Y) * (2N - 1) (`Becoming.PacedStock.pace_margin_feasibility_window`, `Becoming.PacedStock.coupled_two_rule_impossibility`). Records: [paced-stock-and-cadence-margin-sandwich](../../records/paced-stock-and-cadence-margin-sandwich.md) recorded-checked (theorem).
+- **Tests.** None.
+- **Open.**
+  - Extension to stochastic draw spikes, observation noise, and continuous optimization inertia outside deterministic Nat bounds. ([paced-stock-and-cadence-margin-sandwich.md#does-not-show--未表明](../../records/paced-stock-and-cadence-margin-sandwich.md#does-not-show--未表明))
+- **Beyond its couplings.** Block guards lacking intra-span slack fail between span boundaries (SlackShortWitness); real oversight cadences may face stochastic jitter beyond fixed H₁/H₂.
+- **Sources.** [paced-stock-and-cadence-margin-sandwich.md#laws--规律](../../records/paced-stock-and-cadence-margin-sandwich.md#laws--规律)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.RegimeMargin.falls_within`, in `Becoming.PacedStock.unrecoverable_cadence_impossibility`, listed under [The point of no return of a regime](a.md#margin-of-a-regime).
+    - `Becoming.LineOnAStock.mem_of_ne_nil`, in `Becoming.PacedStock.pace_margin_feasibility_window` and `Becoming.PacedStock.pace_margin_feasibility_window_exact`; `Becoming.LineOnAStock.after_of_met`, in `Becoming.PacedStock.pace_margin_feasibility_window` and `Becoming.PacedStock.pace_margin_feasibility_window_exact`; `Becoming.LineOnAStock.mem_allKids_iff`, in `Becoming.PacedStock.pace_margin_feasibility_window` and `Becoming.PacedStock.pace_margin_feasibility_window_exact`; `Becoming.LineOnAStock.generation_mem`, in `Becoming.PacedStock.pace_margin_feasibility_window` and `Becoming.PacedStock.pace_margin_feasibility_window_exact`; and 1 more in the data file, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.PacedStock.pace_margin_feasibility_window_exact` → `_private.Becoming.PacedStock.0.Becoming.PacedStock.safe_step_maintains_bounds_exact` → `Becoming.RegimeMargin.holds`, listed under [The point of no return of a regime](a.md#margin-of-a-regime).
+    - `Becoming.PacedStock.SandwichWitness.feas_witness` → `Becoming.PacedStock.SandwichWitness.giving_keeps6` → `Becoming.TurningInTime.kept_within`, listed under [A line that ends where the net ends, or while the net goes on](a.md#turning-in-time).
+    - `Becoming.PacedStock.unrecoverable_cadence_impossibility` → `_private.Becoming.PacedStock.0.Becoming.PacedStock.dec_all_met_or_first_unmet` → `Becoming.LineOnAStock.met_or_unmet`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
+    - `Becoming.PacedStock.unrecoverable_cadence_impossibility` → `_private.Becoming.PacedStock.0.Becoming.PacedStock.course_bad_stays_below_while_goes` → `_private.Becoming.PacedStock.0.Becoming.PacedStock.course_bad_stays_below_aux` → `Becoming.LineOnAStock.step_lowers`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
+    - `Becoming.PacedStock.blocks_certificate_to_fine_kernel` → `Becoming.Viability.Certificate.kernel` → `Becoming.Viability.kernel_iff_held`, listed under [A reading kept by its update, and the reading its own history carries](d.md#a-reading-kept-by-its-update).
+    - `Becoming.PacedStock.pace_margin_feasibility_window` → `Becoming.Pace.pace_law` → `Becoming.Identification.bounded_agree` → `Becoming.Identification.statesBelow_iff_lasso`, listed under [Recurrence under every law of change](f.md#recurrence-without-premise).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+
+<a id="lax-multi-scale-viability"></a>
+### Lax multi-scale viability simulation and vertical tower composition (松弛多尺度存续模拟与塔式纵向复合)
+
+- **Mechanism.** Extends viability transfer beyond exact ProjectedLaws fibre-lumping: LaxSim tracks bounded per-epoch drift (α r + ε) and intra-epoch excursion (β r + η) along a strict schedule σ and pullback distance d, certifying micro Viability.Kernel from macro certificates whenever absorption α Δ + ε ≤ Δ and guard slack β Δ + η holds (lax_kernel_of_certificate). Vertical composition (LaxSim.comp, compAdditive, towerSim) lifts across Becoming.Tower with explicit epoch_compat and monotone Lipschitz modulus μ₂, instantiated constructively in WitnessTwoScale where exact reduced laws fail at every scale.
+- **Base.** any type
+- **How far seen.** [lax-multi-scale-viability](../../records/lax-multi-scale-viability.md) recorded-checked (theorem)
+- **Declarations.** `Becoming.distNat`, `Becoming.SlackDist`, `Becoming.LaxSim`, `Becoming.LaxSim.slack`, `Becoming.LaxSim.slack_le_of_absorb`, `Becoming.LaxSim.epoch_trace`, `Becoming.lax_kernel_of_certificate`, `Becoming.lax_kernel_of_kernel`, `Becoming.lax_keptFor_linear`, `Becoming.LaxSim.comp`, `Becoming.LaxSim.compAdditive`, `Becoming.LaxSim.TowerSimPack`, `Becoming.LaxSim.towerSim`, `Becoming.WitnessTwoScale.no_reduced_law₁`, `Becoming.WitnessTwoScale.no_reduced_law₂`, `Becoming.WitnessTwoScale.no_reduced_law₁₂`, `Becoming.WitnessTwoScale.sim₁₂_params`, `Becoming.WitnessTwoScale.viability_kernel`
+- **Hypotheses, quoted from the records.**
+  - [lax-multi-scale-viability](../../records/lax-multi-scale-viability.md), hypothesis 1: No axiom. Requires Becoming.Strict σ, SlackDist triangle inequality, epoch step/projection invariants, block simulation and excursion bounds, explicit epoch_compat and monotone μ₂ for vertical composition, plus absorption α Δ + ε ≤ Δ and guard margin β Δ + η.
+- **Premises, by law.** None.
+- **Forbids.** Drift exceeding Δ across a lax epoch where absorption α Δ + ε ≤ Δ holds.
+- **Exits.**
+  - To a state, in words: “micro Viability.Kernel certified from macro Certificate despite micro-phase non-lumpability (lax_kernel_of_certificate)”: sufficient, by `Becoming.lax_kernel_of_certificate`. Its edge: Bounded lax simulation slack allows macro invariants to keep micro viability intact when exact quotient laws do not exist.. Drops no premise: it leaves within them. Records: [lax-multi-scale-viability](../../records/lax-multi-scale-viability.md) recorded-checked (theorem). ([lax-multi-scale-viability.md#laws--规律](../../records/lax-multi-scale-viability.md#laws--规律))
+- **Transitions.**
+  - exact threshold: Absorption threshold α Δ + ε ≤ Δ and guard excursion margin β Δ + η (`Becoming.lax_kernel_of_certificate`, `Becoming.LaxSim.compAdditive`). Records: [lax-multi-scale-viability](../../records/lax-multi-scale-viability.md) recorded-checked (theorem).
+- **Tests.** None.
+- **Open.**
+  - Stochastic or real-metric Mathlib contraction bounds and constructive existence criteria for LaxSim on arbitrary dynamics. ([lax-multi-scale-viability.md#does-not-show--未表明](../../records/lax-multi-scale-viability.md#does-not-show--未表明))
+- **Beyond its couplings.** Does not construct a lax quotient automatically when drift exceeds absorption or epoch compatibility fails.
+- **Sources.** [lax-multi-scale-viability.md#laws--规律](../../records/lax-multi-scale-viability.md#laws--规律)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Viability.kernel_iff_certificate`, in `Becoming.lax_kernel_of_kernel`, listed under [Never leaving a guard, conditions kept together, and lasting](#never-leaving-a-guard).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+
+<a id="transformative-viability-order"></a>
+### Viability-preserving transformative continuation order (保续转化序)
+
+- **Mechanism.** Separates constructive transformation from both zero-loss Widens and destructive churn: TransformativeViable protects substrate Viable conditions and macro capability reach (Web.MacroAdmits / MacroIncludes), containing Web.Widens under ReserveGuarded (widens_implies_transformativeViable). TransformsViably couples permanent ViableT, non-shrinking macro capabilities, and step-by-step micro-turnover (transformsViably_iff_along_capSame). ThreeRegime constructs an evolving run l_evolve (StrictTransformativeViable yet not Widens) and a churn run l_churn failing Viable and MacroIncludes despite high micro movement; FiniteGainless constructs perpetual TransformsViably on a Closed, Balanced, Conserving web where Flow.whole_not_keepsWidening forbids KeepsWidening.
+- **Base.** any type
+- **How far seen.** [transformative-viability-order](../../records/transformative-viability-order.md) recorded-checked (theorem)
+- **Declarations.** `Becoming.Web.MacroAdmits`, `Becoming.Web.MacroIncludes`, `Becoming.Web.MacroExceeds`, `Becoming.ReserveSafe`, `Becoming.ReserveGuarded`, `Becoming.TransformativeViable`, `Becoming.StrictTransformativeViable`, `Becoming.widens_implies_transformativeViable`, `Becoming.TransformsViably`, `Becoming.TransformsViablyAlong`, `Becoming.transformsViably_iff_along_capSame`, `Becoming.ThreeRegime.three_regime_separation`, `Becoming.FiniteGainless.not_keepsWidening`, `Becoming.FiniteGainless.finite_gainless_transformsViably`
+- **Hypotheses, quoted from the records.**
+  - [transformative-viability-order](../../records/transformative-viability-order.md), hypothesis 1: No axiom. Uses Web.Admits (l t) t f; widens_implies_transformativeViable assumes ReserveGuarded W Viable and Viable l'; TransformsViably requires non-trivial cap : F → K, ViableT, non-shrinking MacroAdmits, and step-by-step micro-turnover.
+- **Premises, by law.** None.
+- **Forbids.** Confusing destructive turnover (Steps.moving churn) or zero-loss Widens freeze with viability- and capability-preserving transformation.
+- **Exits.**
+  - To a state, in words: “perpetual TransformsViably evolution with genuine micro-turnover on finite closed balanced webs even where zero-loss KeepsWidening is impossible”: witness, by `Becoming.FiniteGainless.finite_gainless_transformsViably`. Its edge: Witness combining retirement of old forms with sustained substrate viability and macro option-space.. Drops no premise: it leaves within them. Records: [transformative-viability-order](../../records/transformative-viability-order.md) recorded-checked (theorem). ([transformative-viability-order.md#laws--规律](../../records/transformative-viability-order.md#laws--规律))
+- **Transitions.** None.
+- **Tests.** None.
+- **Open.**
+  - Canonical identification of capability projections cap and Viable substrate predicates in empirical socio-technical transitions. ([transformative-viability-order.md#does-not-show--未表明](../../records/transformative-viability-order.md#does-not-show--未表明))
+- **Beyond its couplings.** Requires explicit substrate Viable guard; without it capability turnover collapses into churn.
+- **Sources.** [transformative-viability-order.md#laws--规律](../../records/transformative-viability-order.md#laws--规律)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.Flow.whole_not_keepsWidening`, in `Becoming.FiniteGainless.not_keepsWidening`, listed under [What keeping widening needs, and what carries it](g.md#what-keeping-widening-needs).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
 
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), [B](b.md), [C](c.md), [D](d.md), [E](e.md), [F](f.md), [G](g.md), **H**.

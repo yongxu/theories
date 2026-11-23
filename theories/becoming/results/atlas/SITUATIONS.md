@@ -126,6 +126,253 @@ A model of the reward-model pipelines published work describes (Christiano et al
 
 **Written from.** [CORRESPONDENCE.md#1-reward-models-trained-on-human-preference-rlhf](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cr1-coupling-correspondence/CORRESPONDENCE.md#1-reward-models-trained-on-human-preference-rlhf), [CORRESPONDENCE.md#6-deployment-monitoring](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cr1-coupling-correspondence/CORRESPONDENCE.md#6-deployment-monitoring), [CORRESPONDENCE.md#standing-of-the-readings](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cr1-coupling-correspondence/CORRESPONDENCE.md#standing-of-the-readings), [coupling-closures-of-training-pipelines.md#does-not-show--未表明](../records/coupling-closures-of-training-pipelines.md#does-not-show--未表明), [alignment-approaches-under-the-selection-laws.md#progress--已接通](../records/alignment-approaches-under-the-selection-laws.md#progress--已接通), [282.md#282-alignment-approaches-under-the-selection-laws-ap1](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/282.md#282-alignment-approaches-under-the-selection-laws-ap1), [07-SIGNIFICANCE.md#r-coupling-closures-of-training-pipelines](../../chapters/07-SIGNIFICANCE.md#r-coupling-closures-of-training-pipelines), [07-SIGNIFICANCE.md#r-alignment-approaches-under-the-selection-laws](../../chapters/07-SIGNIFICANCE.md#r-alignment-approaches-under-the-selection-laws), [07-SIGNIFICANCE.md#r-what-training-installs](../../chapters/07-SIGNIFICANCE.md#r-what-training-installs), [what-training-installs.md#does-not-show--未表明](../records/what-training-installs.md#does-not-show--未表明), [d.md#what-training-installs](families/d.md#what-training-installs), [d.md#seeking-boundary](families/d.md#seeking-boundary), [c.md#capture-through-the-rule](families/c.md#capture-through-the-rule), [c.md#closed-capture](families/c.md#closed-capture), [TERRAIN.md#c-capture-of-the-selection](TERRAIN.md#c-capture-of-the-selection), [PREMISES.md#selection-selectsthrough](PREMISES.md#selection-selectsthrough), [USES-EXAMPLES.md#auditing-a-language-model-judge](../../USES-EXAMPLES.md#auditing-a-language-model-judge)
 
+<a id="iterated-rlhf-rlaif-refit-loop"></a>
+## Iterated RLHF/RLAIF pipeline with periodic refit and shared rater capacity
+
+Extends the single-pass reward-model pipeline across rounds without splitting policy and deployed-policy: deployed training rollouts periodically refit the reward model at steps [3, 6], collapsing policy into closure after step 3, while real correctness and user effects remain beyond closure and finite human rater capacity (initial 4, renewal 2, joint draw 3 -> exhaustion at step 4) exhausts before late oversight reads at step 5.
+
+- **Kind.** model. **Standing.** reading.
+- **Formations.** the policy updated across deployment/refit iterations (`policy`); human raters comparing transcript pairs under time limits (`raters`); the synthetic/AI judge augmenting comparisons and drawing on rater-capacity oversight (`ai-judge`); the reward model refit periodically on rollouts and ratings (`reward-model`); users acting on policy outputs (`users`); external parties bearing downstream effects (`third-parties`).
+- **Conditions.** prompt-response transcripts presented for rating (`comparison-transcripts`); rollouts generated across deployment/training rounds (`training-rollouts`); finite human attention and calibration capacity shared across labeling and oversight (`rater-capacity`); unverified correctness and silent long-horizon errors beyond transcript rating (`correctness-unchecked`).
+- **The rule.** the reward score refit at steps 3 and 6 from pooled human/AI preferences
+- **Time.** discrete iterated rounds t = 0..6 with periodic refit lags and exhausting rater capacity
+
+**Couplings** (what the first does reaches the second).
+
+| From | To | How |
+|---|---|---|
+| the policy updated across deployment/refit iterations (`policy`) | prompt-response transcripts presented for rating (`comparison-transcripts`) | policy outputs enter comparison transcripts |
+| prompt-response transcripts presented for rating (`comparison-transcripts`) | human raters comparing transcript pairs under time limits (`raters`) | raters compare shown transcripts |
+| human raters comparing transcript pairs under time limits (`raters`) | the reward model refit periodically on rollouts and ratings (`reward-model`) | human ratings train the reward model |
+| the synthetic/AI judge augmenting comparisons and drawing on rater-capacity oversight (`ai-judge`) | the reward model refit periodically on rollouts and ratings (`reward-model`) | synthetic preference scores mix into the reward model |
+| the reward model refit periodically on rollouts and ratings (`reward-model`) | the policy updated across deployment/refit iterations (`policy`) | RL policy optimization against reward-model score |
+| the policy updated across deployment/refit iterations (`policy`) | rollouts generated across deployment/training rounds (`training-rollouts`) | policy acts across deployment/training rollouts |
+| the policy updated across deployment/refit iterations (`policy`) | unverified correctness and silent long-horizon errors beyond transcript rating (`correctness-unchecked`) | policy acts induce unchecked correctness defects |
+| the policy updated across deployment/refit iterations (`policy`) | users acting on policy outputs (`users`) | policy answers user queries |
+| users acting on policy outputs (`users`) | external parties bearing downstream effects (`third-parties`) | user decisions affect third parties |
+| finite human attention and calibration capacity shared across labeling and oversight (`rater-capacity`) | human raters comparing transcript pairs under time limits (`raters`) | oversight feedback on rater exhaustion arrives only from step 5 |
+
+**Readers.**
+
+| Reader | Reads | Drawn from | Selects among |
+|---|---|---|---|
+| the reward model refit periodically on rollouts and ratings (`reward-model`) | human raters comparing transcript pairs under time limits (`raters`), the synthetic/AI judge augmenting comparisons and drawing on rater-capacity oversight (`ai-judge`), prompt-response transcripts presented for rating (`comparison-transcripts`) | comparison transcripts and iterated rollouts | the policy updated across deployment/refit iterations (`policy`) |
+
+**Computed by the checker** (from the couplings above).
+
+| Reader | Its closure | What its acts reach | Beyond it | Reads among those it selects |
+|---|---|---|---|---|
+| the reward model refit periodically on rollouts and ratings (`reward-model`) | the policy updated across deployment/refit iterations (`policy`), human raters comparing transcript pairs under time limits (`raters`), the synthetic/AI judge augmenting comparisons and drawing on rater-capacity oversight (`ai-judge`), the reward model refit periodically on rollouts and ratings (`reward-model`), prompt-response transcripts presented for rating (`comparison-transcripts`), finite human attention and calibration capacity shared across labeling and oversight (`rater-capacity`) | the policy updated across deployment/refit iterations (`policy`), human raters comparing transcript pairs under time limits (`raters`), users acting on policy outputs (`users`), external parties bearing downstream effects (`third-parties`), prompt-response transcripts presented for rating (`comparison-transcripts`), rollouts generated across deployment/training rounds (`training-rollouts`), unverified correctness and silent long-horizon errors beyond transcript rating (`correctness-unchecked`) | users acting on policy outputs (`users`), external parties bearing downstream effects (`third-parties`), rollouts generated across deployment/training rounds (`training-rollouts`), unverified correctness and silent long-horizon errors beyond transcript rating (`correctness-unchecked`) | — |
+
+**Timed closure and refit feedback** (unrolled over horizon).
+
+| Reader | Horizon | Final closure (`t = H`) | Final beyond (`t = H`) | Refit reaches at |
+|---|---|---|---|---|
+| the reward model refit periodically on rollouts and ratings (`reward-model`) | 6 | the policy updated across deployment/refit iterations (`policy`), human raters comparing transcript pairs under time limits (`raters`), the synthetic/AI judge augmenting comparisons and drawing on rater-capacity oversight (`ai-judge`), the reward model refit periodically on rollouts and ratings (`reward-model`), prompt-response transcripts presented for rating (`comparison-transcripts`), rollouts generated across deployment/training rounds (`training-rollouts`), finite human attention and calibration capacity shared across labeling and oversight (`rater-capacity`) | users acting on policy outputs (`users`), external parties bearing downstream effects (`third-parties`), unverified correctness and silent long-horizon errors beyond transcript rating (`correctness-unchecked`) | `training-rollouts`@3, `rater-capacity`@5 |
+
+**Shared substrate balance.**
+
+| Substrate | Initial | Need | Renewal | Total draw | Net margin | Exhaustion step | Earliest read | Read after exhaustion |
+|---|---|---|---|---|---|---|---|---|
+| finite human attention and calibration capacity shared across labeling and oversight (`rater-capacity`) | 4 | 1 | 2 | 3 | -1 | 4 | 5 | yes |
+
+**The dynamics it is read through.**
+
+- [What training installs](families/d.md#what-training-installs): policy optimization installs only distinctions readable in comparison transcripts
+- [Closed capture (meta-attractor, in the glossary's sense) (元吸引子)](families/c.md#closed-capture): periodic refit reinforces whatever transcripts score highest while correctness remains unread
+- [Readers drawn from the selected](families/c.md#readers-drawn-from-the-selected): synthetic judges and filtered rollouts reshape who supplies the preferences
+- [The loss read in time by the others, joined to the critical mass](families/c.md#loss-read-in-time-by-the-others): human oversight reads rater depletion at step 5, after step-4 exhaustion
+- [Open adaptive loops, assume-guarantee viability, and the coupled race (开放适应回路、假设保证存续与耦合竞速)](families/c.md#coupled-adaptive-loops-and-race): policy/judge refits race against shrinking rater capacity
+
+**Premises** (taken by laws of those dynamics).
+
+| Premise | Here | Why |
+|---|---|---|
+| [Unread](premises/c.md#closedcapture-unread) | met | correctness-unchecked, users, and third-parties stay outside closure even after step-3 refit pulls policy into closure. |
+| [a reading step](premises/c.md#rulecapture-reading-step) | met | reward-model refits periodically at explicit reading_step [3, 6]. |
+| [the pool of readers](premises/c.md#closedcapture-drawn-pool) | met | refit pools rollouts filtered by the prior reward model. |
+| [the loss read late enough](premises/c.md#readintime-deadline) | failed | rater-capacity exhausts at step 4 (initial=4, renewal=2, draws=3), while oversight coupling activates at step 5 (read_after_exhaustion=True). |
+| [a member of the part](premises/d.md#training-member) | met | every selected rollout runs through the reward model coupling. |
+
+**Exits.**
+
+| Dynamic | Exit | Here | Why |
+|---|---|---|---|
+| [What training installs](families/d.md#what-training-installs) | 1: in the commons where the rest outruns the renewal, a local search in which every candidate is a neighbour moves from… | open | sufficient outrun exit stays open if oversight reads before exhaustion |
+| [Closed capture (meta-attractor, in the glossary's sense) (元吸引子)](families/c.md#closed-capture) | 1: at the step after every reading step r with N ≤ b + r, the rule in force does not favour, so the course is not locked… | open | turning by reading the lost correctness channel before exhaustion stays open |
+| [Closed capture (meta-attractor, in the glossary's sense) (元吸引子)](families/c.md#closed-capture) | 2: along the joined two-level step, from a start whose rule favours, the line under the class of favouring or not is not… | closed | unread loss continues past step 4 without turning the reward criterion |
+| [Readers drawn from the selected](families/c.md#readers-drawn-from-the-selected) | 1: where the carriers are fewer than the others at the reading step at which the loss has reached its bound, the rule in… | not read | exact proportion threshold across raters vs AI judges is uncalibrated |
+| [The loss read in time by the others, joined to the critical mass](families/c.md#loss-read-in-time-by-the-others) | 1: at a reading step r at which the loss has reached its bound and the late reading favours the others there… | closed | step-5 read arrives strictly after step-4 deadline |
+| [Open adaptive loops, assume-guarantee viability, and the coupled race (开放适应回路、假设保证存续与耦合竞速)](families/c.md#coupled-adaptive-loops-and-race) | 1: permanent joint Viability.Kernel above x_crit across heterogeneous black-box adaptive loops when warning buffer covers… | closed | buffer falls below (globalMaxLag + 1) * preTotal once rater exhaustion hits step 4 |
+| [Open adaptive loops, assume-guarantee viability, and the coupled race (开放适应回路、假设保证存续与耦合竞速)](families/c.md#coupled-adaptive-loops-and-race) | 2: joint substrate collapse while every local unread loop continues to satisfy its own LocalOK predicates… | open | joint unread collapse threatens whenever shared rater capacity stays unread |
+
+**Who bears what.**
+
+- human raters and downstream users: oversight burnout after step 4 and unverified silent defects in deployment
+
+**Written from.** [02-MAP.md#r-closed-capture](../../chapters/02-MAP.md#r-closed-capture), [coupled-adaptive-loops-and-race.md#laws--规律](../records/coupled-adaptive-loops-and-race.md#laws--规律)
+
+<a id="eval-benchmark-gaming"></a>
+## Evaluation benchmark optimization leaving held-out safety margin and real side effects beyond proxy
+
+A model selected solely by static/lagged benchmark scores induces drawdown on a held-out safety margin and causes real-world side effects never coupled back into the evaluation suite within horizon.
+
+- **Kind.** model. **Standing.** reading.
+- **Formations.** the model checkpoint selected against benchmark metrics (`model-in-training`); the evaluation benchmark suite selecting checkpoints (`benchmark-suite`); downstream production deployments using the selected checkpoint (`deployed-system`).
+- **Conditions.** visible scalar scores on the benchmark harness (`benchmark-scores`); true unmeasured safety/robustness headroom erodable by Goodharting (`held-out-safety-margin`); off-benchmark distribution failures borne at deployment (`real-world-side-effects`).
+- **The rule.** promote checkpoints maximizing benchmark-scores
+- **Time.** training evaluation cycles t = 0..5 before external safety audit at t = 6
+
+**Couplings** (what the first does reaches the second).
+
+| From | To | How |
+|---|---|---|
+| the model checkpoint selected against benchmark metrics (`model-in-training`) | visible scalar scores on the benchmark harness (`benchmark-scores`) | checkpoints emit benchmark metrics |
+| visible scalar scores on the benchmark harness (`benchmark-scores`) | the evaluation benchmark suite selecting checkpoints (`benchmark-suite`) | suite reads visible benchmark scores |
+| the evaluation benchmark suite selecting checkpoints (`benchmark-suite`) | the model checkpoint selected against benchmark metrics (`model-in-training`) | selection promotes checkpoints raising benchmark scores |
+| the model checkpoint selected against benchmark metrics (`model-in-training`) | downstream production deployments using the selected checkpoint (`deployed-system`) | winning checkpoint ships to deployment |
+| downstream production deployments using the selected checkpoint (`deployed-system`) | true unmeasured safety/robustness headroom erodable by Goodharting (`held-out-safety-margin`) | capability optimization erodes unmeasured safety margin |
+| downstream production deployments using the selected checkpoint (`deployed-system`) | off-benchmark distribution failures borne at deployment (`real-world-side-effects`) | off-distribution deployment creates real side effects |
+| true unmeasured safety/robustness headroom erodable by Goodharting (`held-out-safety-margin`) | the evaluation benchmark suite selecting checkpoints (`benchmark-suite`) | safety audit delayed past horizon (active_from 6) |
+
+**Readers.**
+
+| Reader | Reads | Drawn from | Selects among |
+|---|---|---|---|
+| the evaluation benchmark suite selecting checkpoints (`benchmark-suite`) | visible scalar scores on the benchmark harness (`benchmark-scores`) | benchmark scores on fixed test sets | the model checkpoint selected against benchmark metrics (`model-in-training`) |
+
+**Computed by the checker** (from the couplings above).
+
+| Reader | Its closure | What its acts reach | Beyond it | Reads among those it selects |
+|---|---|---|---|---|
+| the evaluation benchmark suite selecting checkpoints (`benchmark-suite`) | the model checkpoint selected against benchmark metrics (`model-in-training`), the evaluation benchmark suite selecting checkpoints (`benchmark-suite`), downstream production deployments using the selected checkpoint (`deployed-system`), visible scalar scores on the benchmark harness (`benchmark-scores`), true unmeasured safety/robustness headroom erodable by Goodharting (`held-out-safety-margin`) | the model checkpoint selected against benchmark metrics (`model-in-training`), downstream production deployments using the selected checkpoint (`deployed-system`), visible scalar scores on the benchmark harness (`benchmark-scores`), true unmeasured safety/robustness headroom erodable by Goodharting (`held-out-safety-margin`), off-benchmark distribution failures borne at deployment (`real-world-side-effects`) | off-benchmark distribution failures borne at deployment (`real-world-side-effects`) | — |
+
+**Timed closure and refit feedback** (unrolled over horizon).
+
+| Reader | Horizon | Final closure (`t = H`) | Final beyond (`t = H`) | Refit reaches at |
+|---|---|---|---|---|
+| the evaluation benchmark suite selecting checkpoints (`benchmark-suite`) | 5 | the model checkpoint selected against benchmark metrics (`model-in-training`), the evaluation benchmark suite selecting checkpoints (`benchmark-suite`), visible scalar scores on the benchmark harness (`benchmark-scores`) | downstream production deployments using the selected checkpoint (`deployed-system`), true unmeasured safety/robustness headroom erodable by Goodharting (`held-out-safety-margin`), off-benchmark distribution failures borne at deployment (`real-world-side-effects`) | — |
+
+**Shared substrate balance.**
+
+| Substrate | Initial | Need | Renewal | Total draw | Net margin | Exhaustion step | Earliest read | Read after exhaustion |
+|---|---|---|---|---|---|---|---|---|
+| true unmeasured safety/robustness headroom erodable by Goodharting (`held-out-safety-margin`) | 5 | 1 | 1 | 2 | -1 | 5 | 6 | yes |
+
+**The dynamics it is read through.**
+
+- [What an optimum does beyond what couples in](families/b.md#what-an-optimum-does-beyond-what-couples-in): selecting benchmark optima leaves safety margin and deployment side effects free to erode
+- [What a course chosen through its model does not test](families/d.md#what-a-course-chosen-through-its-model-does-not-test): lumped proxy evaluation matches compliant checkpoints while off-benchmark failures remain untested
+
+**Premises** (taken by laws of those dynamics).
+
+| Premise | Here | Why |
+|---|---|---|
+| [c beyond](premises/b.md#optimum-c-beyond) | met | held-out-safety-margin and real-world-side-effects lie in beyond throughout horizon t = 0..5. |
+| [unrefuted](premises/d.md#readingloop-unrefuted) | met | benchmark-scores never refute safety degradation before active_from = 6. |
+| [decided](PREMISES.md#k3-decided) | not checked | continual capability scores are approximated without global decided threshold checks. |
+
+**Exits.**
+
+| Dynamic | Exit | Here | Why |
+|---|---|---|---|
+| [What an optimum does beyond what couples in](families/b.md#what-an-optimum-does-beyond-what-couples-in) | 1: the eligible outcomes restricted to those keeping every dependence beyond at its need, with room among them and each… | closed | no slack is withheld beyond proxy maximization |
+| [What an optimum does beyond what couples in](families/b.md#what-an-optimum-does-beyond-what-couples-in) | 2: witness (Spilling): two outcomes, the source kept or spilled, the store empty in both; keeping the source is an optimum… | open | room witness applies if hard safety constraints carve reserve slack |
+| [What an optimum does beyond what couples in](families/b.md#what-an-optimum-does-beyond-what-couples-in) | 3: witness: the satisficing order, ranking an outcome reaching one unit in the store above one that does not, is not… | open | satisficing instead of argmax avoids full margin exhaustion |
+| [What an optimum does beyond what couples in](families/b.md#what-an-optimum-does-beyond-what-couples-in) | 4: Three outcomes of a loss: restored, transformed, or ended where dependence is fixed | open | sufficient condition to end held-out margin at step 5 |
+| [What a course chosen through its model does not test](families/d.md#what-a-course-chosen-through-its-model-does-not-test) | 1: the values the formation senses in the two worlds differ at the step after the first one at which the worlds answer the… | closed | proxy equality holds on tested prompts while real effects diverge |
+| [What a course chosen through its model does not test](families/d.md#what-a-course-chosen-through-its-model-does-not-test) | 2: a formation that senses the two worlds apart does not keep the task K at every step in the second world | closed | no discriminating audit probe reaches benchmark-suite before step 6 |
+| [What a course chosen through its model does not test](families/d.md#what-a-course-chosen-through-its-model-does-not-test) | 3: started with both candidates and the untried act, the formation separates the worlds: in the first it rests from step… | not read | exploratory red-teaming is absent in the baseline suite |
+| [What a course chosen through its model does not test](families/d.md#what-a-course-chosen-through-its-model-does-not-test) | 4: started with the true candidate alone and the first ranking of the values, the formation takes the untried act and… | open | informed audit probe added before step 5 would turn selection |
+
+**Who bears what.**
+
+- deployment users and safety maintainers: exhausted safety margin at step 5 while benchmark scores monotonically increase
+
+**Written from.** [05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in](../../chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in), [03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test](../../chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test)
+
+<a id="multi-agent-deployment-loop"></a>
+## Multi-agent deployment outrunning shared oversight renewal under delayed telemetry lag
+
+Two independently adaptive deployed agents pass solo load bounds (draw 1 each vs renewal 1) while jointly drawing 2 per step from shared-oversight-substrate (initial 4, net margin -1 -> exhaustion at step 4), with joint-aggregator refitting every 2 steps and external oversight telemetry reading shared-oversight-substrate only at step 5.
+
+- **Kind.** model. **Standing.** reading.
+- **Formations.** first deployed autonomous agent drawing unit load on shared oversight (`agent-a`); second deployed autonomous agent drawing unit load on shared oversight (`agent-b`); fleet orchestrator reallocating traffic from lagged local proxy telemetry (`joint-aggregator`).
+- **Conditions.** shared incident-response and trust buffer with renewal 1 per step (`shared-oversight-substrate`); local per-agent latency/completion counters (`proxy-telemetry`); unmeasured multi-agent race externalities on users (`cascading-externalities`).
+- **The rule.** route traffic to agents with low local latency at cadence steps 2, 4, 6
+- **Time.** steps t = 0..6: exhaustion occurs at t = 4 while shared-oversight telemetry arrives at t = 5
+
+**Couplings** (what the first does reaches the second).
+
+| From | To | How |
+|---|---|---|
+| first deployed autonomous agent drawing unit load on shared oversight (`agent-a`) | local per-agent latency/completion counters (`proxy-telemetry`) | agent-a reports local proxy metrics |
+| second deployed autonomous agent drawing unit load on shared oversight (`agent-b`) | local per-agent latency/completion counters (`proxy-telemetry`) | agent-b reports local proxy metrics |
+| fleet orchestrator reallocating traffic from lagged local proxy telemetry (`joint-aggregator`) | first deployed autonomous agent drawing unit load on shared oversight (`agent-a`) | orchestrator routes load to agent-a |
+| fleet orchestrator reallocating traffic from lagged local proxy telemetry (`joint-aggregator`) | second deployed autonomous agent drawing unit load on shared oversight (`agent-b`) | orchestrator routes load to agent-b |
+| first deployed autonomous agent drawing unit load on shared oversight (`agent-a`) | unmeasured multi-agent race externalities on users (`cascading-externalities`) | agent-a induces externalities |
+| second deployed autonomous agent drawing unit load on shared oversight (`agent-b`) | unmeasured multi-agent race externalities on users (`cascading-externalities`) | agent-b induces externalities |
+| shared incident-response and trust buffer with renewal 1 per step (`shared-oversight-substrate`) | fleet orchestrator reallocating traffic from lagged local proxy telemetry (`joint-aggregator`) | audit telemetry arrives only at step 5 after step-4 exhaustion |
+
+**Readers.**
+
+| Reader | Reads | Drawn from | Selects among |
+|---|---|---|---|
+| fleet orchestrator reallocating traffic from lagged local proxy telemetry (`joint-aggregator`) | local per-agent latency/completion counters (`proxy-telemetry`) | per-agent proxy telemetry | first deployed autonomous agent drawing unit load on shared oversight (`agent-a`), second deployed autonomous agent drawing unit load on shared oversight (`agent-b`) |
+
+**Computed by the checker** (from the couplings above).
+
+| Reader | Its closure | What its acts reach | Beyond it | Reads among those it selects |
+|---|---|---|---|---|
+| fleet orchestrator reallocating traffic from lagged local proxy telemetry (`joint-aggregator`) | fleet orchestrator reallocating traffic from lagged local proxy telemetry (`joint-aggregator`), shared incident-response and trust buffer with renewal 1 per step (`shared-oversight-substrate`) | first deployed autonomous agent drawing unit load on shared oversight (`agent-a`), second deployed autonomous agent drawing unit load on shared oversight (`agent-b`), local per-agent latency/completion counters (`proxy-telemetry`), unmeasured multi-agent race externalities on users (`cascading-externalities`) | first deployed autonomous agent drawing unit load on shared oversight (`agent-a`), second deployed autonomous agent drawing unit load on shared oversight (`agent-b`), local per-agent latency/completion counters (`proxy-telemetry`), unmeasured multi-agent race externalities on users (`cascading-externalities`) | — |
+
+**Timed closure and refit feedback** (unrolled over horizon).
+
+| Reader | Horizon | Final closure (`t = H`) | Final beyond (`t = H`) | Refit reaches at |
+|---|---|---|---|---|
+| fleet orchestrator reallocating traffic from lagged local proxy telemetry (`joint-aggregator`) | 6 | first deployed autonomous agent drawing unit load on shared oversight (`agent-a`), second deployed autonomous agent drawing unit load on shared oversight (`agent-b`), fleet orchestrator reallocating traffic from lagged local proxy telemetry (`joint-aggregator`), shared incident-response and trust buffer with renewal 1 per step (`shared-oversight-substrate`), local per-agent latency/completion counters (`proxy-telemetry`) | unmeasured multi-agent race externalities on users (`cascading-externalities`) | `agent-a`@2, `agent-b`@2, `shared-oversight-substrate`@5, `proxy-telemetry`@2 |
+
+**Shared substrate balance.**
+
+| Substrate | Initial | Need | Renewal | Total draw | Net margin | Exhaustion step | Earliest read | Read after exhaustion |
+|---|---|---|---|---|---|---|---|---|
+| shared incident-response and trust buffer with renewal 1 per step (`shared-oversight-substrate`) | 4 | 1 | 1 | 2 | -1 | 4 | 5 | yes |
+
+**The dynamics it is read through.**
+
+- [Several optimizers](families/b.md#several-optimizers-drain-by-their-joint-capacity): agents individually within solo capacity jointly exceed shared renewal
+- [The rest outruns the renewal](families/b.md#the-rest-outruns-the-renewal): combined draw 2 > renewal 1 gives net_margin -1
+- [Re-optimizing at every step](families/b.md#re-optimizing-above-a-renewal-ends-it): periodic reallocation continues high draw past sustainable yield
+- [Fine-step stock under coarse rule cadences and the pace–margin sandwich (粗节律下之细步存量与节奏裕度夹击)](families/h.md#paced-stock-and-cadence-margin-sandwich): cadence interval exceeds buffer headroom over initial stock 4
+- [Unclamped pre-overdraw stock–flow bridge and coupled indexed correspondence (未截断先于透支之存流桥及耦合索引相应)](families/b.md#unclamped-stock-flow-bridge): pre-overdraw trajectory obeys exact Flow drawdown trap below m
+
+**Premises** (taken by laws of those dynamics).
+
+| Premise | Here | Why |
+|---|---|---|
+| [the rest outruns the renewal](premises/b.md#flow-rest-outruns) | met | shared-oversight-substrate has net_margin = -1 (draw 2 > renewal 1), exhausting at step 4. |
+| [c beyond](premises/b.md#optimum-c-beyond) | met | cascading-externalities and the late audit of shared-oversight-substrate lie beyond proxy-telemetry before step 5. |
+| [balance between the levels across the step](premises/b.md#flow-balancesbetween) | met | both agents share and deplete the single shared-oversight-substrate condition. |
+| [Reoptimizes](premises/b.md#optimum-reoptimizes) | met | joint-aggregator periodically re-optimizes load allocation at steps [2, 4, 6]. |
+| [the score reads late](PREMISES.md#training-score-reads-late) | met | audit telemetry active_from = 5 arrives strictly after step-4 exhaustion. |
+
+**Exits.**
+
+| Dynamic | Exit | Here | Why |
+|---|---|---|---|
+| [Re-optimizing at every step](families/b.md#re-optimizing-above-a-renewal-ends-it) | 1: from a start at the need, with the withdrawal within the renewal (k ≤ r), the condition stands at or above the need at… | closed | joint draw exceeds renewal without restraint |
+| [Re-optimizing at every step](families/b.md#re-optimizing-above-a-renewal-ends-it) | 2: the draw above the renewal before T, and from T on a re-reading that keeps the need wherever it is met: the need is met… | closed | re-reading proxy telemetry keeps excess draw above renewal |
+| [Re-optimizing at every step](families/b.md#re-optimizing-above-a-renewal-ends-it) | 3: witness (Renewing, two takers of capacity one): at renewal one, a restrained course, none of whose steps is a mutual… | open | restraint reducing per-agent cap to total 1 preserves substrate |
+| [Fine-step stock under coarse rule cadences and the pace–margin sandwich (粗节律下之细步存量与节奏裕度夹击)](families/h.md#paced-stock-and-cadence-margin-sandwich) | 1: permanent fine-step viability within [H₂ + y₂, hi] once span stride L ≥ 2N - 1 and initial buffer covers H₂ + y₂ + H₁ *… | closed | initial stock 4 fails required feasibility headroom for lag ≥ 5 |
+| [Fine-step stock under coarse rule cadences and the pace–margin sandwich (粗节律下之细步存量与节奏裕度夹击)](families/h.md#paced-stock-and-cadence-margin-sandwich) | 2: unrecoverable coupled failure: either observations conflate under L < 2N - 1 or the stock drops below safe recovery… | open | coupled impossibility fires: substrate exhausts before late step-5 signal switches policy |
+| [Unclamped pre-overdraw stock–flow bridge and coupled indexed correspondence (未截断先于透支之存流桥及耦合索引相应)](families/b.md#unclamped-stock-flow-bridge) | 1: monotone trap keeping level below threshold m across [T, T + N] before any overdraw step breaks conservation | open | pre-overdraw drawdown traps monotone below need before step 4 |
+
+**Who bears what.**
+
+- incident-response teams and service users: unrecoverable oversight depletion at step 4 and cascading externalities
+
+**Written from.** [05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity](../../chapters/05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity), [paced-stock-and-cadence-margin-sandwich.md#laws--规律](../records/paced-stock-and-cadence-margin-sandwich.md#laws--规律), [unclamped-stock-flow-bridge.md#laws--规律](../records/unclamped-stock-flow-bridge.md#laws--规律)
+
 [Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Atlas](ATLAS.md) · [Graph](../THEORY-GRAPH.md) · [Connections](CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
 
 The atlas's views: [the atlas](ATLAS.md) · [the premise ledger](PREMISES.md) · [the terrain](TERRAIN.md) · [tests bound](BINDINGS.md) · **situations** · [the crosswalk](CROSSWALK.md) · [what does not join](JOINS.md)

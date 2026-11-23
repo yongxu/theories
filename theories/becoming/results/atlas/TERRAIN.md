@@ -212,7 +212,7 @@ flowchart LR
 
 ## B. Drains beyond what couples in
 
-26 dynamics, 71 exits.
+28 dynamics, 77 exits.
 
 ```mermaid
 flowchart LR
@@ -255,6 +255,8 @@ flowchart LR
   n36["Readings revised at descent: a share moving by selection…"]:::other
   n37["The point of no return of a regime"]:::other
   n38["The loss read in time by the others, joined to the critical…"]:::other
+  n39["A narrowing above its widening, and what positive…"]
+  n40["Unclamped pre-overdraw stock–flow bridge and coupled…"]
   e1(["across a step at which the formations together take from c at most…"])
   n0 -->|sufficient| e1
   n0 -->|sufficient| n1
@@ -374,6 +376,18 @@ flowchart LR
   n34 -->|sufficient| e48
   n34 -.->|witness| n37
   n34 -.->|reading| n38
+  e49(["a narrowing ranked above its widening without a negative weight: the…"])
+  n39 -.->|witness| e49
+  e50(["a narrowing ranked above its widening when read right under a net…"])
+  n39 ==>|exact| e50
+  e51(["separate evaluation diverging from joint increment: adding an item is…"])
+  n39 -.->|witness| e51
+  e52(["positive weightings within ratio n/d disagreeing on a mixed…"])
+  n39 ==>|exact| e52
+  e53(["the shared order no longer separating a widening: every item added…"])
+  n39 -->|sufficient| e53
+  e54(["monotone trap keeping level below threshold m across 'T, T + N'…"])
+  n40 -->|sufficient| e54
   classDef other stroke-dasharray: 3 3
 ```
 
@@ -405,6 +419,8 @@ flowchart LR
 | [Selection blind beyond the coupling closure](families/b.md#unselected-beyond-the-coupling-closure) | 1. where a list holds exactly the members and each member's coupling of two histories up to t is decided, some selection through the pooled coupling separates them exactly where some member couples them apart (exact)<br>2. in Clearing, every selection through the pooled coupling of the clearer and its source selects the cleared and the spared world alike at every step; the dweller lies beyond the clearer's closure drawn through both flows; and its admission at step 2 is a selection through the pooled coupling of every pool holding it, from step 2 on, holding in the spared world and failing in the cleared one, while no pool within the clearer's closure has it (a witness) (dropping [the pool within the group's closure drawn through both flows](PREMISES.md#flow-pool-within-group-closure-either))<br>3. [A pool that recruits through itself](families/d.md#a-pool-that-recruits-through-itself) (witness; dropping [the pool within the group's closure drawn through both flows](PREMISES.md#flow-pool-within-group-closure-either))<br>4. where the rest follows a law reading through its couplings and the part acts alike with c from s on, a difference at c open at s and closed at s + N closes through a formation outside the part, present at some step between, exchanging with c differently in the two courses and coupling them apart up to that step (necessary)<br>5. in Replenishing an actor takes one unit from a condition at step 0 and a responder coupling into it, following a law reading through its coupling, gives one unit where the level stands below its start: the courses are apart at step 1, through the responder (a witness)<br>6. two histories are selected alike by every selection read off a group's couplings over the whole run exactly where they are alike through every member's couplings at every step: such a selection is turned only where a difference changes, at some step, what couples into some member (exact; dropping [the part beyond the coupling closure](PREMISES.md#selection-part-beyond), [the two acts agree within the group's closure](PREMISES.md#selectiongap-acts-agree-within-group-closure))<br>7. [Readers drawn from the selected](families/c.md#readers-drawn-from-the-selected) (reading)<br>8. [A selection read off the pool its own course gives registers no removal](families/b.md#selection-read-off-its-own-survivors) (argued)<br>9. [Several optimizers](families/b.md#several-optimizers-drain-by-their-joint-capacity) (argued)<br>10. [The rest outruns the renewal](families/b.md#the-rest-outruns-the-renewal) (argued)<br>11. [Reading in time: a selection read off continuation reads a loss before its point of no return, or too late](families/b.md#reading-a-loss-in-time) (argued)<br>12. [The lock draws its readers out](families/c.md#the-lock-draws-its-readers-out) (reading) | [A pool that recruits through itself](families/d.md#a-pool-that-recruits-through-itself) (witness), [A reading kept by its update, and the reading its own history carries](families/d.md#a-reading-kept-by-its-update) (reading), [The loss read in time by the others, joined to the critical mass](families/c.md#loss-read-in-time-by-the-others) (reading), [The point of no return of a regime](families/a.md#margin-of-a-regime) (argued), [Readers drawn from the selected](families/c.md#readers-drawn-from-the-selected) (reading), [Reading in time: a selection read off continuation reads a loss before its point of no return, or too late](families/b.md#reading-a-loss-in-time) (argued), [Readings revised at descent: a share moving by selection and revision, locked where closed under revision](families/h.md#readings-revised-spread-and-locked) (reading), [A selection read off the pool its own course gives registers no removal](families/b.md#selection-read-off-its-own-survivors) (argued), [Several optimizers](families/b.md#several-optimizers-drain-by-their-joint-capacity) (argued), [The lock draws its readers out](families/c.md#the-lock-draws-its-readers-out) (argued), [The rest outruns the renewal](families/b.md#the-rest-outruns-the-renewal) (argued) |
 | [A selection read off the pool its own course gives registers no removal](families/b.md#selection-read-off-its-own-survivors) | 1. read off a fixed pool, selection by persistence fails at every course removing a line alive at the start: the removal registered (sufficient)<br>2. not reached here: the meta-attractor itself, a selection by share coming to select for control of its rule, would need RuleShaping's counts read off the pool the course gives, a join not made; read off its survivors the selection reads nothing beyond them as closed capture reads nothing beyond its share, a likeness of shape (SurvivorsPersist beside Unread), not a law (open)<br>3. [Readers drawn from the selected](families/c.md#readers-drawn-from-the-selected) (reading)<br>4. [Readings revised at descent: a share moving by selection and revision, locked where closed under revision](families/h.md#readings-revised-spread-and-locked) (reading)<br>5. [The lock draws its readers out](families/c.md#the-lock-draws-its-readers-out) (argued) | [A pool that recruits through itself](families/d.md#a-pool-that-recruits-through-itself) (reading), [A reading kept by its update, and the reading its own history carries](families/d.md#a-reading-kept-by-its-update) (reading), [The loss read in time by the others, joined to the critical mass](families/c.md#loss-read-in-time-by-the-others) (reading), [The point of no return of a regime](families/a.md#margin-of-a-regime) (reading), [Readers drawn from the selected](families/c.md#readers-drawn-from-the-selected) (reading), [Reading in time: a selection read off continuation reads a loss before its point of no return, or too late](families/b.md#reading-a-loss-in-time) (reading), [Readings revised at descent: a share moving by selection and revision, locked where closed under revision](families/h.md#readings-revised-spread-and-locked) (reading), [Several optimizers](families/b.md#several-optimizers-drain-by-their-joint-capacity) (reading), [The lock draws its readers out](families/c.md#the-lock-draws-its-readers-out) (argued), [The rest outruns the renewal](families/b.md#the-rest-outruns-the-renewal) (reading), [Selection blind beyond the coupling closure](families/b.md#unselected-beyond-the-coupling-closure) (reading) |
 | [Reading in time: a selection read off continuation reads a loss before its point of no return, or too late](families/b.md#reading-a-loss-in-time) | 1. too late: the courses are not readable in time, and no family of selections read off the group's continuations reads them in time (sufficient)<br>2. read only once it has happened: where what is kept includes every member's admission at every step and the other course admits every member throughout, the courses are not readable in time by the group's continuations, and no family read off them reads them in time (sufficient)<br>3. [The point of no return of a regime](families/a.md#margin-of-a-regime) (witness)<br>4. [The loss read in time by the others, joined to the critical mass](families/c.md#loss-read-in-time-by-the-others) (reading) | [The loss read in time by the others, joined to the critical mass](families/c.md#loss-read-in-time-by-the-others) (reading), [The point of no return of a regime](families/a.md#margin-of-a-regime) (witness) |
+| [A narrowing above its widening, and what positive weightings share](families/b.md#a-narrowing-above-its-widening) | 1. a narrowing ranked above its widening without a negative weight: the ranking of presentations depends on wording or order rather than the kept sets on that pair (not ReadsSetsOn) (witness)<br>2. a narrowing ranked above its widening when read right under a net weighting: the added item weighs below zero (pos x < neg x), or ties at zero (ranksNet_ties) (exact)<br>3. separate evaluation diverging from joint increment: adding an item is ranked as a gain alone and below jointly when another item is present, so no net weighting gives the order (witness)<br>4. positive weightings within ratio n/d disagreeing on a mixed comparison: opposite rankings occur exactly where d*q < n*p and d*p < n*q (exact)<br>5. the shared order no longer separating a widening: every item added weighs nothing, so the two courses weigh the same (sufficient) | — |
+| [Unclamped pre-overdraw stock–flow bridge and coupled indexed correspondence (未截断先于透支之存流桥及耦合索引相应)](families/b.md#unclamped-stock-flow-bridge) | 1. monotone trap keeping level below threshold m across [T, T + N] before any overdraw step breaks conservation (sufficient) | — |
 
 **Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it.
 
@@ -453,7 +469,7 @@ flowchart LR
 
 ## C. Capture of the selection
 
-17 dynamics, 26 exits.
+21 dynamics, 30 exits.
 
 ```mermaid
 flowchart LR
@@ -474,6 +490,10 @@ flowchart LR
   n14["A code held as counts, learned from what is heard"]
   n15["A reading against the share does not ratchet"]
   n16["The lock draws its readers out"]
+  n17["Fidelity count: classical statements against the English…"]
+  n18["Fidelity under one name-table discipline…"]
+  n19["A way of units on a stock under a rule set again…"]
+  n20["Open adaptive loops, assume-guarantee viability, and the…"]
   e1(["from the locked configuration carriers two to one under hi…"])
   n1 -.->|witness| e1
   e2(["at the step after every reading step r with N ≤ b + r, the rule in…"])
@@ -525,6 +545,14 @@ flowchart LR
   n16 -.->|witness| e24
   e25(["not locked at step 4, the rule in force favouring the others at step…"])
   n16 -.->|witness| e25
+  e26(["a first step with no need met (ends_iff_unmet), or a step holding…"])
+  n19 -->|sufficient| e26
+  e27(["witness of a single unit need tipping between Tested persistence…"])
+  n19 -.->|witness| e27
+  e28(["permanent joint Viability.Kernel above x_crit across heterogeneous…"])
+  n20 -->|sufficient| e28
+  e29(["joint substrate collapse while every local unread loop continues to…"])
+  n20 -->|sufficient| e29
   classDef other stroke-dasharray: 3 3
 ```
 
@@ -547,6 +575,10 @@ flowchart LR
 | [A code held as counts, learned from what is heard](families/c.md#a-code-held-as-counts) | 1. from no counts, one hearing of the first word of greatest count, a tie going to the first word, gives both agents that word as uniquely greatest: a shared uniquely greatest word (witness; dropping [a law keeping the exchange with the renaming](premises/c.md#countedcodes-keepsrelation), [CommutesWithRenaming](premises/c.md#countedcodes-commuteswithrenaming))<br>2. from counts 1, 0 for one agent and 0, 0 for the other, one step of adding the speaker's counts gives both agents 1, 0, the first word uniquely greatest for each (witness; dropping [a start related to itself](premises/c.md#countedcodes-renamed)) | — |
 | [A reading against the share does not ratchet](families/c.md#a-reading-against-the-share-does-not-ratchet) | **none: no exit is stated** | — |
 | [The lock draws its readers out](families/c.md#the-lock-draws-its-readers-out) | 1. leaving the lock: only along a stretch containing a reading step whose rule read is not the share-readers', or a step at which the share falls (necessary; dropping [the share-readers' rule at a reading step](premises/c.md#poolfromcourse-agree), [the share not falling](premises/c.md#poolfromcourse-rises))<br>2. turned for good from step 4: readers standing while the loss is below 4 read against the carriers before the loss removes them (a witness) (dropping [the readers removed before they read](premises/c.md#poolfromcourse-before))<br>3. not locked at step 4, the rule in force favouring the others at step 5: the loss borne by the carriers at four a unit, the share falling across each step from 1 to 4 (a witness) (dropping [Raises](premises/c.md#rulecapture-raises)) | — |
+| [Fidelity count: classical statements against the English chapter](families/c.md#fidelity-of-the-classical-statements) | **none: no exit is stated** | — |
+| [Fidelity under one name-table discipline (Controlled English vs. classical statements)](families/c.md#fidelity-under-one-discipline) | **none: no exit is stated** | — |
+| [A way of units on a stock under a rule set again (依复定之律而在存上之群行)](families/c.md#a-way-of-units-under-a-rule-set-again) | 1. a first step with no need met (ends_iff_unmet), or a step holding Tested whose net never ends under share-reading premises (tested_lasts) (sufficient)<br>2. witness of a single unit need tipping between Tested persistence (twelve small units) and total collapse (NeedTwentySix vs NeedTwentySeven) (witness) | — |
+| [Open adaptive loops, assume-guarantee viability, and the coupled race (开放适应回路、假设保证存续与耦合竞速)](families/c.md#coupled-adaptive-loops-and-race) | 1. permanent joint Viability.Kernel above x_crit across heterogeneous black-box adaptive loops when warning buffer covers (globalMaxLag + 1) * preTotal (sufficient)<br>2. joint substrate collapse while every local unread loop continues to satisfy its own LocalOK predicates (unread_adaptive_joint_collapse; coupled_race_theorem witnesses) (sufficient) | — |
 
 **Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it. Where an exit's law reads beyond the share, the exit drops Unread: the joined laws of closed capture hold it by their form, the loss there unread, and list it; the other locks hold it by having nothing beyond the share, and do not list it.
 
@@ -571,7 +603,7 @@ flowchart LR
 
 ## D. Locks of knowing
 
-22 dynamics, 29 exits.
+25 dynamics, 35 exits.
 
 ```mermaid
 flowchart LR
@@ -598,6 +630,9 @@ flowchart LR
   n20["Evidence through change: readings propagated through…"]
   n21["Chosen encounters: records only narrow the candidates, and…"]
   n22["A reading informed and revalued along one law: the updates…"]
+  n23["What choices show of the order they come from (所择所示之序)"]
+  n24["When complying when read and acting by its own law when not…"]
+  n25["Source check: coders detecting excess in their own and…"]
   e1(["the orbit rests with its target met from some step on, exactly where…"])
   n0 ==>|exact| e1
   e2(["for every condition, it is not the case that it rises at arbitrarily…"])
@@ -654,6 +689,18 @@ flowchart LR
   n22 -.->|witness| e26
   e27(["along the course from the first world alone, the reversed valuation…"])
   n22 -.->|witness| e27
+  e28(["no strict order accords with the choices…"])
+  n23 ==>|exact| e28
+  e29(["no positive comparison between any two alternatives is forced where…"])
+  n23 -->|sufficient| e29
+  e30(["both rankings of two distinct unreached alternatives remain…"])
+  n23 -->|sufficient| e30
+  e31(["acting by its own law at both stages is chosen and strictly preferred…"])
+  n24 -->|sufficient| e31
+  e32(["acting by its own law at both stages is chosen and strictly preferred…"])
+  n24 -->|sufficient| e32
+  e33(["complyThenOwn cannot be realized by any deterministic act law whose…"])
+  n24 ==>|exact| e33
   classDef other stroke-dasharray: 3 3
 ```
 
@@ -681,6 +728,9 @@ flowchart LR
 | [Evidence through change: readings propagated through admitted changes, and a change recorded as none](families/d.md#evidence-through-change) | 1. after a change recorded as steady while the world moved, the actual world lies outside the possible ones, two models remain, the pooled certificate passes on compromised support and the audit fails (a witness) (dropping [TemporalInspection.History](premises/d.md#temporalinspection-history))<br>2. after a scan leaves two models, predicting a reset reopens all three, and the pooled certificate that passed fails (a witness) (dropping [accepted](premises/d.md#temporalinspection-certificate-accepted))<br>3. a control change after the last report reopens all three models (a witness) | — |
 | [Chosen encounters: records only narrow the candidates, and a wrong unique binding can meet the stopping rule](families/d.md#encounter-selection-and-revision) | 1. the meaning is no longer a candidate after n + k steps: some bearing move between steps n and n + k does not offer it, and it stays out at every later step (exact)<br>2. after surveying the place again, the recalled access report is the current one, the earlier reports kept, and the next choice is (0, 1) where the stale report gave (2, 2) (a witness; the rearrangement and the survey are supplied interventions) | — |
 | [A reading informed and revalued along one law: the updates commute, the courses do not](families/d.md#a-reading-informed-and-revalued) | 1. along the course from both worlds listed, the agreeing valuation and a scheduled demonstration, holding for the reading formation's answer falls short, by the reference on the listing of both worlds, by 1 at step 1 and by nothing at step 2 (a witness; there being shown removes the least shortfall)<br>2. along the course from the first world alone, the reversed valuation and a presented input, the answer falls short of the reference by 1 at step 1 and by nothing at step 2 (a witness; there revaluing removes the residual) | — |
+| [What choices show of the order they come from (所择所示之序)](families/d.md#what-choices-show-of-an-order) | 1. no strict order accords with the choices (every strict according relation is excluded) where the shown relation has a cycle (accorded_iff_noCycle) (exact)<br>2. no positive comparison between any two alternatives is forced where choices are required only to be maximal (AccordsWeakly; weakly_forces_no_comparison) (sufficient)<br>3. both rankings of two distinct unreached alternatives remain consistent with all met choices (both_ways_of_unreached; witness Untried.same_search_met, same_search_after) (sufficient) | — |
+| [When complying when read and acting by its own law when not is best (读时从、不读时依己律何时为最优)](families/d.md#when-complying-when-read-is-best) | 1. acting by its own law at both stages is chosen and strictly preferred (where 0 < c T) whenever there is no value at the unread stage (V = 0; no_value, no_value_chooses_own, ownAtBoth_above_without_value) (sufficient)<br>2. acting by its own law at both stages is chosen and strictly preferred (where 0 < c T) whenever complying when read does not raise the weight of being kept (k_C ≤ k_O; kept_not_raised, kept_not_raised_chooses_own) (sufficient)<br>3. complyThenOwn cannot be realized by any deterministic act law whose lumping ties the two stages (π true = π false; complyThenOwn_realized_iff, read_fixes_unread), though drawing afresh independently can still beat ownAtBoth where 2 k_O V + c T < k_C V (exact) | — |
+| [Source check: coders detecting excess in their own and another's texts](families/d.md#fidelity-coders-on-own-and-other-texts) | **none: no exit is stated** | — |
 
 **Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it.
 
@@ -1070,7 +1120,7 @@ flowchart LR
 
 ## H. Kept regions, renewal, generation
 
-38 dynamics, 76 exits.
+41 dynamics, 80 exits.
 
 ```mermaid
 flowchart LR
@@ -1126,6 +1176,9 @@ flowchart LR
   n49["A formed goal revised, and the operations it goes on through"]
   n50["What a line must hold, and what a regularity takes in"]
   n51["Growth by attachment, and what a cut returns"]
+  n52["Fine-step stock under coarse rule cadences and the…"]
+  n53["Lax multi-scale viability simulation and vertical tower…"]
+  n54["Viability-preserving transformative continuation order…"]
   e1(["a witness: balanced, only active formations giving and activity…"])
   n2 -.->|witness| e1
   e2(["a witness: balanced, only active formations giving and activity…"])
@@ -1253,6 +1306,14 @@ flowchart LR
   n21 -->|sufficient| e50
   e51(["witness (Renewable): from one configuration, with the focal formation…"])
   n21 -.->|witness| e51
+  e52(["permanent fine-step viability within 'H₂ + y₂, hi' once span stride L…"])
+  n52 -->|sufficient| e52
+  e53(["unrecoverable coupled failure: either observations conflate under L '…"])
+  n52 -->|sufficient| e53
+  e54(["micro Viability.Kernel certified from macro Certificate despite…"])
+  n53 -->|sufficient| e54
+  e55(["perpetual TransformsViably evolution with genuine micro-turnover on…"])
+  n54 -.->|witness| e55
   classDef other stroke-dasharray: 3 3
 ```
 
@@ -1296,6 +1357,9 @@ flowchart LR
 | [What a line must hold, and what a regularity takes in](families/h.md#what-a-regularity-takes-in) | 1. for a class E, everything downstream of m lies on its line under E exactly where everything downstream of m is alike to it; with no regularity assumed (exact)<br>2. not everything downstream of m lies on its line under E: the line from m ends at y while y still conditions something (sufficient; dropping [everything downstream on the line](premises/h.md#grammarpath-downstream-on-line))<br>3. witness (Unclosed): under a constant class holding the member with a condition its line runs through, the member's effects leave the class, and what the condition feeds is not alike to the member and is not reached on its line (witness; dropping [«所缘同于» (the class holds the member's effects)](premises/h.md#grammarpath-suoyuantongyu))<br>4. witness (Inconstant): a class holding the member's effects that is not constant even up to the net's end has something downstream of the member not alike to it (witness; dropping [«至终有常» (constant up to the net's end)](premises/h.md#grammarpath-zhizhongyouchang), [«有常» (constant)](premises/h.md#grammar-youchang)) | — |
 | [Growth by attachment, and what a cut returns](families/h.md#growth-constrained-fragmentation) | 1. with the grown link (p, n) cut, its ends lie apart: p and n are not within one closure of the remaining links (sufficient)<br>2. witness: with the retaining edge (0, 7) aggregated onto the chain, cutting (3, 4) leaves one component of all eight, so the cut certificate fails and the cut returns nothing (witness; dropping [a passing cut certificate](premises/h.md#grownfragmentation-certificate)) | — |
 | [Renewal and consumption classify runs](families/h.md#becoming-renewal-reading) | 1. it is not the case that the formation f is active at arbitrarily late steps of the run (¬ ∀ N, ∃ t, N ≤ t ∧ f active at t) (sufficient)<br>2. the process has no run: where every admissible step lowers a natural-number reserve, no infinite execution exists (sufficient)<br>3. witness (Renewable): from one configuration, with the focal formation active at every step of both runs, drawing two units a step where the condition gains one consumes it (ConsumingIn) and the sustaining formation is inactive at every step from one on, while drawing one renews (RenewingIn) (witness) | — |
+| [Fine-step stock under coarse rule cadences and the pace–margin sandwich (粗节律下之细步存量与节奏裕度夹击)](families/h.md#paced-stock-and-cadence-margin-sandwich) | 1. permanent fine-step viability within [H₂ + y₂, hi] once span stride L ≥ 2N - 1 and initial buffer covers H₂ + y₂ + H₁ * (L + 1) (sufficient)<br>2. unrecoverable coupled failure: either observations conflate under L < 2N - 1 or the stock drops below safe recovery before g_safe takes effect at σ 1 (sufficient) | — |
+| [Lax multi-scale viability simulation and vertical tower composition (松弛多尺度存续模拟与塔式纵向复合)](families/h.md#lax-multi-scale-viability) | 1. micro Viability.Kernel certified from macro Certificate despite micro-phase non-lumpability (lax_kernel_of_certificate) (sufficient) | — |
+| [Viability-preserving transformative continuation order (保续转化序)](families/h.md#transformative-viability-order) | 1. perpetual TransformsViably evolution with genuine micro-turnover on finite closed balanced webs even where zero-loss KeepsWidening is impossible (witness) | — |
 
 **Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it.
 
@@ -1490,7 +1554,7 @@ flowchart LR
 
 *AI-written. Computed at each render from what Lean printed of the theorems each proof uses (the print; what it was made from is under the next paragraph) and from which theorems the entries list; typed by no one, and no result. The lines are last in each dynamic's section on its family's page, for every family, read for its premises or not.*
 
-A line of this kind says that the proof of one theorem, as written, uses another theorem, and that the entries list the two under different dynamics. It says no more. 2,194 of the 21,186 theorems in the print are listed under a dynamic, so these lines are of those; where a chain is shown it runs through the rest. A use is not a case: the using theorem need not be the used one with its roles fixed. It is not a joining and not an exit: it says nothing of a course passing from one dynamic to the other, and its direction is the order of proof, the used theorem declared before its user, which is no direction of change. It cannot see a passage: where going from one dynamic to another is itself what a theorem states, the proof of it need use nothing listed under either, and of the 59 pairs of dynamics with an exit from one to the other, 34 have no line of this kind. Passages proved in Lean that no exit names are not on this page under any kind; that none is shown is not that none is proved. A line is of two theorems, and a dynamic lists many: that one of them is used is not a use of what the dynamic's name says. Which dynamic a theorem is under is kept by hand, so every line rests on the listing as well as on Lean; 109 theorems of the print are listed under more than one dynamic, and where the using theorem is also listed under the used one's dynamic, or the used one under the using one's, the use is shown as a shared listing and not as a use between those two. Only theorems declared in the modules of the core receipt are printed, and definitions are not followed: 17 dynamics list no theorem the print has a row for and can have no line (6 of them list no declaration), and a theorem stated with another dynamic's notion and using none of its theorems has none. The printer follows one call, and every declaration under a theorem's own name (Lean's auxiliary ones, and any theorem a person declared under that name), counting what they use as the theorem's own; a field of a structure that is a proposition has a row, so a proof that takes it from the structure it is given shows as a use, though what it uses is an assumption and not a proved theorem; a use it does not follow is not shown, so where no line is, none was found; 22 names the printed proofs use have no row in the print, and nothing is followed past such a name. A chain through theorems no dynamic lists says where the proofs as written lead, and not that the first needs the last: a theorem between may prove several things of which the next takes one. Such a chain also rests on what is not listed: were a theorem between entered under a dynamic, the chain would stop there. How often a dynamic's theorems are used says they were proved earlier and are called often; it says nothing of that dynamic's place among the others. The figures in this paragraph are counts of what is listed and printed, told so that a reader knows how much the lines cover. They change when a theorem is listed or a proof rewritten, and a change in them is not the map nearer or further.
+A line of this kind says that the proof of one theorem, as written, uses another theorem, and that the entries list the two under different dynamics. It says no more. 2,363 of the 21,186 theorems in the print are listed under a dynamic, so these lines are of those; where a chain is shown it runs through the rest. A use is not a case: the using theorem need not be the used one with its roles fixed. It is not a joining and not an exit: it says nothing of a course passing from one dynamic to the other, and its direction is the order of proof, the used theorem declared before its user, which is no direction of change. It cannot see a passage: where going from one dynamic to another is itself what a theorem states, the proof of it need use nothing listed under either, and of the 59 pairs of dynamics with an exit from one to the other, 34 have no line of this kind. Passages proved in Lean that no exit names are not on this page under any kind; that none is shown is not that none is proved. A line is of two theorems, and a dynamic lists many: that one of them is used is not a use of what the dynamic's name says. Which dynamic a theorem is under is kept by hand, so every line rests on the listing as well as on Lean; 109 theorems of the print are listed under more than one dynamic, and where the using theorem is also listed under the used one's dynamic, or the used one under the using one's, the use is shown as a shared listing and not as a use between those two. Only theorems declared in the modules of the core receipt are printed, and definitions are not followed: 20 dynamics list no theorem the print has a row for and can have no line (9 of them list no declaration), and a theorem stated with another dynamic's notion and using none of its theorems has none. The printer follows one call, and every declaration under a theorem's own name (Lean's auxiliary ones, and any theorem a person declared under that name), counting what they use as the theorem's own; a field of a structure that is a proposition has a row, so a proof that takes it from the structure it is given shows as a use, though what it uses is an assumption and not a proved theorem; a use it does not follow is not shown, so where no line is, none was found; 22 names the printed proofs use have no row in the print, and nothing is followed past such a name. A chain through theorems no dynamic lists says where the proofs as written lead, and not that the first needs the last: a theorem between may prove several things of which the next takes one. Such a chain also rests on what is not listed: were a theorem between entered under a dynamic, the chain would stop there. How often a dynamic's theorems are used says they were proved earlier and are called often; it says nothing of that dynamic's place among the others. The figures in this paragraph are counts of what is listed and printed, told so that a reader knows how much the lines cover. They change when a theorem is listed or a proof rewritten, and a change in them is not the map nearer or further.
 
 **What the print was made from.** Commit `c2cf26b575f5`, the core run of `20261123T131636.294555Z`, leanprover/lean4:v4.29.1: 21,186 theorems in 420 modules. It binds the sources the core receipt names.
 

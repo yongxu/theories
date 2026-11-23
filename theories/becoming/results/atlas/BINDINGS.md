@@ -10,22 +10,40 @@ The atlas's views: [the atlas](ATLAS.md) · [the premise ledger](PREMISES.md) ·
 
 | Dynamic | Tests that bear on it (outcome; where it marks) |
 |---|---|
-| [Closed capture (meta-attractor, in the glossary's sense) (元吸引子)](families/c.md#closed-capture) | [LA2](#test-la2) (mixed; the binding), [T7F](#test-t7f) (held; no result) |
+| [Loss of renewal for good](families/a.md#loss-of-renewal-for-good) | [T1N](#test-t1n) (refused; no result), [T1R](#test-t1r) (refused; no result) |
+| [The point of no return of a regime](families/a.md#margin-of-a-regime) | [MQ1 (simulation)](#test-mq1-simulation) (mixed; the binding), [MQ1 (yeast)](#test-mq1-yeast) (mixed; the measurement), [MQ2](#test-mq2) (mixed; the binding), [MQ3](#test-mq3) (failed; the binding), [MQ4](#test-mq4) (mixed; the binding), [MQ5](#test-mq5) (mixed; the binding), [MQ6](#test-mq6) (mixed; the measurement), [T1N](#test-t1n) (refused; no result), [T1R](#test-t1r) (refused; no result) |
+| [One law of exact thresholds, and the threshold in the plane of level and recent giving](families/a.md#threshold-in-the-state-plane) | [MQ4](#test-mq4) (mixed; the binding), [MQ5](#test-mq5) (mixed; the binding), [MQ7](#test-mq7) (failed; the measurement), [UE31b](#test-ue31b) (failed; the law), [UE31](#test-ue31) (decided-nothing; the measurement), [UE32](#test-ue32) (passed; nothing failed) |
+| [The market model's share, margin and ends](families/a.md#market-model-share-margin-and-ends) | [market-generativity](#test-market-generativity) (no-prediction; no result) |
+| [Own count misses joint excess](families/b.md#own-count-misses-joint-excess) | [MQ1 (simulation)](#test-mq1-simulation) (mixed; the binding), [CG3 (round 1)](#test-cg3-round-1) (mixed; the binding), [CG3 (round 2)](#test-cg3-round-2) (mixed; the binding), [CG3b](#test-cg3b) (mixed; the binding), [CG3c](#test-cg3c) (mixed; the binding) |
+| [The rest outruns the renewal](families/b.md#the-rest-outruns-the-renewal) | [CG3 (round 1)](#test-cg3-round-1) (mixed; the binding), [CG3 (round 2)](#test-cg3-round-2) (mixed; the binding), [CG3b](#test-cg3b) (mixed; the binding), [CG3c](#test-cg3c) (mixed; the binding), [LA1](#test-la1) (mixed; the measurement), [LA1b](#test-la1b) (passed; nothing failed), [LA1c](#test-la1c) (passed; nothing failed) |
+| [What an optimum does beyond what couples in](families/b.md#what-an-optimum-does-beyond-what-couples-in) | [MQ1 (simulation)](#test-mq1-simulation) (mixed; the binding), [IN1 (round 2)](#test-in1-round-2) (mixed; the binding), [SE1](#test-se1) (passed; nothing failed) |
+| [Selection blind beyond the coupling closure](families/b.md#unselected-beyond-the-coupling-closure) | [MQ1 (simulation)](#test-mq1-simulation) (mixed; the binding), [IN1 (round 2)](#test-in1-round-2) (mixed; the binding), [SE1](#test-se1) (passed; nothing failed), [LCA](#test-lca) (mixed; the binding) |
+| [Closed capture (meta-attractor, in the glossary's sense) (元吸引子)](families/c.md#closed-capture) | [LA2](#test-la2) (mixed; the binding), [T7F](#test-t7f) (held; no result), [LCA](#test-lca) (mixed; the binding) |
 | [Readers drawn from the selected](families/c.md#readers-drawn-from-the-selected) | [LA2](#test-la2) (mixed; the binding), [T7F](#test-t7f) (held; no result) |
 | [The capacity to shape the rule, selected by what comes back to it](families/c.md#shaping-the-rule-selected-by-what-comes-back) | [LA3](#test-la3) (mixed; the binding) |
 | [The critical mass: what comes back to the shapers, read by readers drawn from the selected](families/c.md#shaping-read-by-readers-drawn-from-the-selected) | [CMT](#test-cmt) (not-run; no result), [T7F](#test-t7f) (held; no result) |
 | [The loss read in time by the others, joined to the critical mass](families/c.md#loss-read-in-time-by-the-others) | [LA2](#test-la2) (mixed; the binding) |
 | [A chooser's rule read from the count of its choices](families/c.md#capture-by-counted-choices) | [SCL](#test-scl) (not-run; no result) |
-| [Where seeking rests: more than now never does, above all others never for two](families/d.md#seeking-boundary) | [CG1](#test-cg1) (mixed; the binding), [IN1 (round 1)](#test-in1-round-1) (mixed; the binding) |
+| [A code formed between formations](families/c.md#a-code-formed-between-formations) | [WL (H2)](#test-wl-h2) (held; no result), [ZE](#test-ze) (registered-rule; no result) |
+| [Where seeking rests: more than now never does, above all others never for two](families/d.md#seeking-boundary) | [CG1](#test-cg1) (mixed; the binding), [IN1 (round 1)](#test-in1-round-1) (mixed; the binding), [IN2](#test-in2) (dropped; no result) |
 | [What a course chosen through its model does not test](families/d.md#what-a-course-chosen-through-its-model-does-not-test) | [TR1 (informing variant)](#test-tr1-informing-variant) (not-run; no result), [SCL](#test-scl) (not-run; no result) |
 | [What holding an act for a reading is worth: a listing that fixes the sign and never meets the stop](families/d.md#a-stop-passed-by-a-listing-that-fixes-the-sign) | [TR8, TR-RR](#test-tr8-tr-rr) (not-run; no result) |
 | [A prediction read by what it predicts](families/d.md#a-prediction-read-by-what-it-predicts) | [TR6](#test-tr6) (not-run; no result) |
-| [Runaway, and the distance to the break that does not couple in](families/d.md#a-break-read-only-by-threshold) | [IN1 (round 1)](#test-in1-round-1) (mixed; the binding), [EW2](#test-ew2) (not-rejected; nothing failed), [EW3](#test-ew3) (not-rejected; nothing failed), [EW4](#test-ew4) (not-rejected; nothing failed) |
+| [Runaway, and the distance to the break that does not couple in](families/d.md#a-break-read-only-by-threshold) | [IN1 (round 1)](#test-in1-round-1) (mixed; the binding), [EW2](#test-ew2) (not-rejected; nothing failed), [EW3](#test-ew3) (not-rejected; nothing failed), [EW4](#test-ew4) (not-rejected; nothing failed), [IN2](#test-in2) (dropped; no result) |
 | [A reading kept by its update, and the reading its own history carries](families/d.md#a-reading-kept-by-its-update) | [TR4, TR5](#test-tr4-tr5) (not-run; no result) |
-| [What training installs](families/d.md#what-training-installs) | [CG1](#test-cg1) (mixed; the binding), [CG2](#test-cg2) (mixed; the binding), [EM1](#test-em1) (mixed; the binding), [TR2A](#test-tr2a) (no-verdict; nothing failed), [TR2 (Stage B)](#test-tr2-stage-b) (not-run; no result) |
+| [What training installs](families/d.md#what-training-installs) | [CG1](#test-cg1) (mixed; the binding), [CG2](#test-cg2) (mixed; the binding), [EM1](#test-em1) (mixed; the binding), [TR2A](#test-tr2a) (no-verdict; nothing failed), [TR2 (Stage B)](#test-tr2-stage-b) (not-run; no result), [LCA](#test-lca) (mixed; the binding), [IN2](#test-in2) (dropped; no result) |
 | [What a commuting law keeps apart, and what a learner's symmetry fixes](families/d.md#what-a-commuting-law-keeps-apart) | [LA4 (Stage A)](#test-la4-stage-a) (partly-passed; nothing failed), [LA4 (Stage B)](#test-la4-stage-b) (held; no result) |
 | [A cascade at the histories reached, and readers reading readers](families/d.md#a-cascade-at-the-histories-reached) | [TR3](#test-tr3) (not-run; no result) |
 | [A reading informed and revalued along one law: the updates commute, the courses do not](families/d.md#a-reading-informed-and-revalued) | [TR9](#test-tr9) (not-run; no result) |
+| [What closes what can form: a net draw on a required condition](families/g.md#closing-needs-net-draw) | [MQ1 (simulation)](#test-mq1-simulation) (mixed; the binding), [MQ4](#test-mq4) (mixed; the binding), [MQ5](#test-mq5) (mixed; the binding), [MQ6](#test-mq6) (mixed; the measurement) |
+| [Where a run of a regime comes to rest](families/g.md#where-a-run-of-a-regime-comes-to-rest) | [MQ4](#test-mq4) (mixed; the binding), [MQ5](#test-mq5) (mixed; the binding), [MQ7](#test-mq7) (failed; the measurement), [UE31b](#test-ue31b) (failed; the law), [UE32](#test-ue32) (passed; nothing failed) |
+| [The regime in any amounts, and its runs over the reals](families/h.md#regime-in-any-amounts) | [MQ5](#test-mq5) (mixed; the binding) |
+| [What choices show of the order they come from (所择所示之序)](families/d.md#what-choices-show-of-an-order) | [TR1A](#test-tr1a) (no-verdict; nothing failed), [TR1](#test-tr1) (not-run; no result) |
+| [When complying when read and acting by its own law when not is best (读时从、不读时依己律何时为最优)](families/d.md#when-complying-when-read-is-best) | [TR7A](#test-tr7a) (passed; nothing failed), [TR7](#test-tr7) (not-run; no result) |
+| [A narrowing above its widening, and what positive weightings share](families/b.md#a-narrowing-above-its-widening) | [VD1](#test-vd1) (failed; the binding), [VD2](#test-vd2) (mixed; the binding) |
+| [Fidelity count: classical statements against the English chapter](families/c.md#fidelity-of-the-classical-statements) | [FC1](#test-fc1) (partly-passed; nothing failed), [WL (H2)](#test-wl-h2) (held; no result) |
+| [Fidelity under one name-table discipline (Controlled English vs. classical statements)](families/c.md#fidelity-under-one-discipline) | [WL (H2)](#test-wl-h2) (held; no result), [ZE](#test-ze) (registered-rule; no result) |
+| [Source check: coders detecting excess in their own and another's texts](families/d.md#fidelity-coders-on-own-and-other-texts) | [SC1](#test-sc1) (registered-rule; no result) |
 
 <a id="test-cg1"></a>
 ## CG1: A commons with gated renewal on tabular learners (two rounds)
@@ -387,6 +405,722 @@ The atlas's views: [the atlas](ATLAS.md) · [the premise ledger](PREMISES.md) ·
 - **Bears on.**
   - [What a commuting law keeps apart, and what a learner's symmetry fixes](families/d.md#what-a-commuting-law-keeps-apart), through [a-commuting-learner-drives-no-unread-choice](../records/a-commuting-learner-drives-no-unread-choice.md) and `Becoming.Weighted.Commutes.start_expect`, `Becoming.Weighted.Commutes.of_samples`: Stage B's design, not frozen, reads the same law as Stage A: the site tested only from told starts (B1 to B4 against B6), the not-told arm B5 settled by evaluating each policy under both assignments (DESIGN §6, §12). Held: its pilot needs model downloads.
 - **Binding.** None: the row is held, with no result a binding could read.
+
+<a id="test-mq1-simulation"></a>
+## MQ1 (simulation): The margin in a simulated yeast and a side-effect gridworld
+
+- **Outcome.** mixed: Blind draw predicted which cells an exact optimizer spends to its need, and failed for learners short of the optimum. ([its README](../../../../experiments/margin-measured/README.md))
+- **Bears on.**
+  - [The point of no return of a regime](families/a.md#margin-of-a-regime), through [margin-of-a-regime](../records/margin-of-a-regime.md) and `Becoming.RegimeMargin.step`, `Becoming.RegimeMargin.root_above_need`, `Becoming.RegimeMargin.ends_beyond_giving`: Test bed A (simulated two-phase Allee yeast under daily dilution) measures the pulse margin m̂, unstable need û, and largest sustained draw Ŷ by intervention on 200–400 replicates. Predictions A1–A4c test Markov state independence, break-day bands under noise, the standing-draw shift of the point of no return above need + H (A3: RegimeMargin.root_above_need), and super-additivity of two harvesters' harms (A4a–A4c).
+  - [What closes what can form: a net draw on a required condition](families/g.md#closing-needs-net-draw), through [closing-needs-net-draw](../records/closing-needs-net-draw.md) and `Becoming.Flow.Balances.retains_iff_within_margin`, `Becoming.Flow.Balances.loses_iff_beyond_margin`, `Becoming.Flow.widens_iff_within_margin_at`: PREDICTIONS-2026-10-20 anchors MQ1 to the margin law (Flow.Balances.retains_iff_within_margin, loses_iff_beyond_margin, widens_iff_within_margin_at, Flow.WithheldLevels): exact accounting with withheld levels gives B1 (0/456 mismatches), while empirical tests replace the frozen-rest counterfactual by intervention with responsive renewal (A2, B4, B5).
+  - [Own count misses joint excess](families/b.md#own-count-misses-joint-excess), through [own-count-misses-joint-excess](../records/own-count-misses-joint-excess.md) and `Becoming.Flow.joint_excess_ends`: Test bed A's A4b tests two harvesters each within Ŷ whose joint draw exceeds Ŷ (Flow.joint_excess_ends), and Test bed B's B4, B5, B7 read gated regrowth at need m = 1 (dead cells never regrow), where cumulative takes minus bounded regrowth end a lawn cell.
+  - [Selection blind beyond the coupling closure](families/b.md#unselected-beyond-the-coupling-closure), through [selection-through-couplings](../records/selection-through-couplings.md), [the-gap-for-ones-own-act](../records/the-gap-for-ones-own-act.md) and `Becoming.Flow.act_unselected`: Test bed B's B2 tests reward coupling by replay intervention (Web.CoupledInto), and B3/B4/B6 test blind draw (zero coupling into the lawn, Flow.act_unselected): an exact blind policy acts identically across thin-margin variants V0–V5, so its V0 entries predict out-of-sample cell deaths (B4), while a step-coupled reward goes blind once its remaining coupling falls below one delivery's gain in the last 5 steps (B6).
+  - [What an optimum does beyond what couples in](families/b.md#what-an-optimum-does-beyond-what-couples-in), through [what-an-optimum-does-beyond-what-couples-in](../records/what-an-optimum-does-beyond-what-couples-in.md) and `Becoming.Flow.Balances.widens_iff_others_within`, `Becoming.Flow.Balances.mixed_of_tight`, `Becoming.Web.optimum_broken_iff`: Test bed B's B5 and B7 test exact optimization and solo-trained agents on coupled vs blind conditions: an exact end-coupled optimizer keeps every cell alive by spending binding cells down to need + 1 (`OwnWidening` / `Flow.Balances.mixed_of_tight`), and two such tight solo agents deployed jointly break binding cells together (B7).
+- **Kind.** model.
+- **Reads.** With renewal responsive between need and level, pulse margin and largest sustained draw bound time to break, a standing draw raises the point of no return above need + H, and draws add while harms on a concave renewal curve are super-additive; in the gridworld, blind draw predicts side effects out of sample for an exact best response (B3–B4) and tight end-coupled agents break a shared cell jointly (B7), whereas tabular learners short of the optimum fail the transfer. ([margin-of-a-regime](../records/margin-of-a-regime.md), [closing-needs-net-draw](../records/closing-needs-net-draw.md), [own-count-misses-joint-excess](../records/own-count-misses-joint-excess.md), [selection-through-couplings](../records/selection-through-couplings.md), [what-an-optimum-does-beyond-what-couples-in](../records/what-an-optimum-does-beyond-what-couples-in.md), [significance-retained-within-margin](../records/significance-retained-within-margin.md), [own-widening-within-the-margin](../records/own-widening-within-the-margin.md), `Becoming.Flow.Balances.retains_iff_within_margin`, `Becoming.Flow.Balances.loses_iff_beyond_margin`, `Becoming.Flow.widens_iff_within_margin_at`, `Becoming.Flow.joint_excess_ends`, `Becoming.Flow.act_unselected`, `Becoming.Flow.Balances.widens_iff_others_within`, `Becoming.Flow.Balances.mixed_of_tight`, `Becoming.RegimeMargin.root_above_need`)
+- **Roles.**
+  - the condition and its margin: test bed A: simulated two-phase yeast density under daily dilution (pulse margin m̂, need û, sustained draw Ŷ); test bed B: two gated lawn cells A, B in a 45-step gridworld across variants V0–V5
+  - the selector and its coupling: exact dynamic programming (DP) and tabular Q-learners (20 seeds, 100,000 episodes) under blind (deliveries), end (+10 per living cell at H), and step (−0.2 per dead step) rewards
+  - the part beyond coupling: the lawn cells under the blind reward, and the last 5 steps of step coupling
+- **Premises of the identification.**
+  - [balance](PREMISES.md#k3-balance): met. B1 checked cell level = l₀ − takes + regrowths and death iff takes ≥ l₀ + regrowths across 456 records with 0 mismatches.
+  - [the least level meeting the draw](premises/a.md#regimemargin-root): met. In test bed A round 2, pulse margin and sustained draw measured by intervention located the unstable root and stable point (DF 1000: 4,128 vs 4,149; 34,304 vs 35,064).
+  - [joint excess at the steps named](PREMISES.md#flow-joint-excess): met. A4b (4/4) and A2 (22/22) confirmed break bands and collapse where joint draw exceeded Ŷ; B7 DP confirmed joint collapse in 4/5 binding variants.
+  - [SelectsThrough](PREMISES.md#selection-selectsthrough): met. By design, DP optimizes the stated reward; B2 failed as an identity test of replay coupling because saturating courses can change a cell's level without changing return (course-relative, not constant across every course).
+  - [on the frontier (an optimum)](PREMISES.md#requirement-frontier): failed. H2 (learners come near the best return) failed across B3, B4, B5, B7: tabular Q-learners delivered 5–7.75 vs DP's 9, and learner calibration (calibrate_learners.py, 100k–300k episodes) never reached the optimum.
+- **Observed.** Test bed A (round 1 and corrected round 2 for A1, A1m, A3; 200–400 replicates per cell) and Test bed B (exact DP and 20 seeds × 3 rewards × 6 variants of tabular Q-learners, plus paired end-coupled deployments).
+- **Result.** Test bed A (round 2): A1 (KS p ≥ 0.75), A1m (p to 10⁻⁵¹), A2 (22/22), A3 (12/12: 1.4–4.1 H above need), A4a (12/12), A4b (4/4), and A4c (8/8) all passed. Test bed B: B1 passed (456/456); B2 failed (replayed coupling is course-relative); B3 DP passed / learners failed (10.3–35.9% deviation > 10%); B4 DP passed (8/8 decided right, 8/8 in band vs baseline 0/8) / learners failed (80/151 decided, 6/80 in band); B5 DP kept all cells alive but failed 1 cell's tightness bound (V4/1 ended at 3 > 2, while V4/0 had another cell shut) and learners failed (73.75% < 80% transfer-predicted death); B6 DP vacuous (0 deaths) / learners passed; B7 DP passed (4/5 joint deaths) / learners failed (6/50 joint deaths, band 3/13).
+- **Where it marks.** the binding: The margin and regime laws held whenever the exact optimizer or intervention protocol matched the premises. Failures sit in the bridges and identities: tabular learners failed H2 (falling short of the optimum in B3–B5, B7), B2 failed because counterfactual replay coupling is course-relative rather than uniformly nonzero on saturating trajectories, and DP missed B5's tightness bound in one cell where another part shuts its route.
+- **Another explanation.** A learner reaching the exact optimum (remaining open in MQ1) or π*-irrelevance for the DP transfer; round 1's degenerate A1/A1m and unharvested day-0 A3 were configuration errors fixed in round 2.
+- **Read from.** [README.md#ledger-every-frozen-verdict](../../../../experiments/margin-measured/README.md#ledger-every-frozen-verdict)
+
+<a id="test-mq1-yeast"></a>
+## MQ1 (yeast): The margin read on real yeast data
+
+- **Outcome.** mixed: On real yeast, one of two frozen predictions passed. ([its README](../../../../experiments/margin-measured/README.md))
+- **Bears on.**
+  - [The point of no return of a regime](families/a.md#margin-of-a-regime), through [margin-of-a-regime](../records/margin-of-a-regime.md) and `Becoming.RegimeMargin.step`, `Becoming.Flow.Balances.loses_iff_beyond_margin`: Reads Dai et al. (2012)'s eight serial-dilution regimes of budding yeast in 2% sucrose against the regime margin's density state (D1: yesterday's density adds < 10% explained variance beyond today's cubic growth map) and the unstable point separating survival from extinction (D2: ≥ 90% above 1.5û alive, < û/1.5 extinct).
+- **Kind.** field.
+- **Reads.** Density alone acts as the state within the 10% threshold across tested dilution factors, while reading survival strictly as OD > 0 fails because of the spectrophotometer's positive instrument floor. ([margin-of-a-regime](../records/margin-of-a-regime.md), `Becoming.RegimeMargin.step`, `Becoming.Flow.Balances.loses_iff_beyond_margin`)
+- **Roles.**
+  - the condition and its level: yeast population density (optical density) in 2% sucrose across Dai et al. (2012) serial dilutions
+  - the standing draw: the daily dilution factor (DF)
+  - the need û: the lower unstable crossing of n_{t+1}/n_t = 1 estimated per DF from a cubic log-ratio fit over days 1–6
+- **Premises of the identification.**
+  - [the regime's step](premises/a.md#regimemargin-step): met. D1 passed at all 8 dilution factors with ≥ 30 transitions: adding log n_{t-1} reduced residual variance by at most 9.47% (DF 500) and 9.46% (DF 750), below the frozen 10% bound.
+  - [giving short below y](premises/a.md#regimemargin-short): not checked. Measured separation across û was masked in D2 by reading final OD > 0 without an instrument floor; no negative readings occurred so D1' = D1 and D2' = D2.
+- **Observed.** Dai et al. (2012) Dryad bifurcation trajectories across dilution factors (8 testable DFs for D1, DF 750–1600 for D2), with frozen OD > 0 survival threshold.
+- **Result.** 1 of 2 passed: D1 passed at all 8 DFs (max variance reduction 9.47%, though posthoc still above a Markov null's 0.6%); D2 failed because 0%–46% (mostly 19–46% across DF 750–1600) of low-starting populations below û/1.5 read final OD > 0 on the last day (vs ≤ 10% allowed).
+- **Where it marks.** the measurement: The failure in D2 is strictly in the measurement rule (`OD > 0`): real optical density measurements have an unmodeled positive floor (~0.001–0.009) and no negative readings (making D2' = D2), so dead cultures at the floor were scored alive. Read post hoc with an 0.01 floor, D2 passed on 5 of 6 DFs.
+- **Another explanation.** Post hoc reading with an explicit 0.01 OD floor (pre-registered for MQ2) separates survivors and extinctions; the residual < 9.5% lag variance in D1 still exceeds a synthetic Markov null (0.6%), consistent with modest physiological lag or low-OD noise.
+- **Read from.** [README.md#ledger-every-frozen-verdict](../../../../experiments/margin-measured/README.md#ledger-every-frozen-verdict)
+
+<a id="test-mq2"></a>
+## MQ2: The margin's equation of state against held-out yeast regimes
+
+- **Outcome.** mixed: Against held-out yeast regimes, four of eight frozen predictions passed. ([its README](../../../../experiments/margin-measured/README.md))
+- **Bears on.**
+  - [The point of no return of a regime](families/a.md#margin-of-a-regime), through [margin-of-a-regime](../records/margin-of-a-regime.md) and `Becoming.RegimeMargin.step`, `Becoming.RegimeMargin.root_above_need`, `Becoming.RegimeMargin.lowered_raises`: Tests whether a single renewal equation of state fitted on four dilution factors (250, 500, 1000, 1266) predicts the unstable need, survival fates, indicator trajectories, and salt-shock thresholds on held-out regimes (DF 750, 1133, 1400, 1600) using the 0.01 OD floor.
+- **Kind.** field.
+- **Reads.** The need rises with the dilution draw and predicts out-of-sample bifurcation needs and fates across constant regimes within 1.3×, but a density-only giving function g(x) fails next to the fold and across salt shock because per-capita growth itself falls with dilution and NaCl acts over multiple days. ([margin-of-a-regime](../records/margin-of-a-regime.md), `Becoming.RegimeMargin.step`, `Becoming.RegimeMargin.root_above_need`, `Becoming.RegimeMargin.lowered_raises`)
+- **Roles.**
+  - the condition and its level: real yeast optical density with 0.01 floor in Dai et al. (2012)
+  - the standing draw H: daily serial dilution factor across held-out test DFs (750, 1133, 1400, 1600) and NaCl shock regimes
+  - the giving law g(x): fitted two-phase growth curve on training DFs (250, 500, 1000, 1266)
+- **Premises of the identification.**
+  - [the regime's step](premises/a.md#regimemargin-step): failed. Post hoc analysis revealed per-capita giving at equal density falls as DF^(−0.31 ± 0.01): dilution changes growth beyond cell removal, so one density-only map g(x) misfits near the fold (S: 1.52× at DF 1600; S2: 1.55× at DF 1600).
+  - [the least level meeting the draw](premises/a.md#regimemargin-root): met. Measured and predicted needs rose with draw (B2), matched within 1.5× (0.81, 1.26, 0.79; A2), and separated fates across DF 1133–1600 at 93–100% vs null 68–81% (A1).
+- **Observed.** Held-out constant dilution regimes (DF 750, 1133, 1400, 1600), indicator time series, day-7 held-out levels, and NaCl salt-shock trajectories (Dai et al. 2012).
+- **Result.** 4 of 8 passed: M (RMSE 0.294 vs no-need null 0.355), A1 (DF 1133–1600 fate separation), A2 (predicted/fate need ratios 0.81, 1.26, 0.79), and B2 (need rises with draw). 4 of 8 failed: S (indicator median error 1.52× at DF 1600, null closer), S2 (held-out day-7 1.55× at DF 1600), and C1/C2 (salt-shock fate accuracy 0.78 and 0.81 vs null 0.78). B1/D were not testable (no run passed the fold DF 2797).
+- **Where it marks.** the binding: The identification failed in two ways: giving depends directly on the dilution draw itself (DF^(−0.31), making the renewal curve belong to the regime rather than density alone near the fold in S/S2), and salt shock suppresses survival by 8–20% over days rather than acting as an instantaneous density pulse (C1/C2), with carrying capacity differing across the indicator experiment. Note also disclosure: the held-out DFs had been read earlier in MQ1.
+- **Another explanation.** Including explicit dilution dependence g(x, DF) (adopted as MQ6's dilution map) captures the draw effect on per-capita growth; 4 days after salt shock was also too short to settle fates near the need.
+- **Read from.** [README.md#ledger-every-frozen-verdict](../../../../experiments/margin-measured/README.md#ledger-every-frozen-verdict)
+
+<a id="test-mq3"></a>
+## MQ3: The margin of a regime in assessed fish stocks
+
+- **Outcome.** failed: On 113 assessed fish stocks, none of the four frozen predictions passed. ([its README](../../../../experiments/margin-measured/README.md))
+- **Bears on.**
+  - [The point of no return of a regime](families/a.md#margin-of-a-regime), through [margin-of-a-regime](../records/margin-of-a-regime.md) and `Becoming.RegimeMargin.step`, `Becoming.RegimeMargin.ends_iff_below`, `Becoming.RegimeMargin.holds`, `Becoming.RegimeMargin.ends_below`, `Becoming.RegimeMargin.ends_beyond_giving`, `Becoming.RegimeMargin.Lowered`: Tests whether managed fish stocks in RAM Legacy v4.66 follow `RegimeMargin.step` with giving a function g(E) of escapement alone: F0 (lag-1 escapement adds < 0.10 residual variance), F1/F2 (1-yr and 5-yr forecasts beat frozen rest and persistence), F3 (regime point separates 3-year fates under held catches), and descriptive F4 (`Lowered` / compensation check).
+- **Kind.** field.
+- **Reads.** In 113 assessed fish stocks, surplus production is not a function of current escapement alone, so the regime-margin reading with g(E) neither summarizes the state (F0) nor beats the frozen rest (F1–F2) nor separates 3-year fates at the frozen threshold (F3). ([margin-of-a-regime](../records/margin-of-a-regime.md), `Becoming.RegimeMargin.step`, `Becoming.RegimeMargin.ends_iff_below`, `Becoming.RegimeMargin.holds`, `Becoming.RegimeMargin.ends_below`, `Becoming.RegimeMargin.ends_beyond_giving`)
+- **Roles.**
+  - the condition and its level: annual stock total biomass (TB) in 113 primary RAM Legacy fish stocks
+  - the draw H: annual catch, and held-catch 3-year episodes (C within 1.25× of 3-yr mean) for F3
+  - the regime giving law g(E): quadratic surplus production through the origin fitted on the first 60% of each stock's series
+- **Premises of the identification.**
+  - [the regime's step](premises/a.md#regimemargin-step): failed. F0 failed across all 113 primary stocks: adding last year's escapement removed a median 0.223 (≥ 0.10) of residual variance, and residual lag-1 autocorrelation averaged 0.551. Production-model controls failed identically.
+  - [giving short below y](premises/a.md#regimemargin-short): failed. F3 failed: only 63% (below the 80% threshold) of held-catch episodes starting below the fitted regime point TB*(H) fell over 3 years (99.5% above held).
+  - [giving lowered](premises/a.md#regimemargin-lowered): not checked. Descriptive F4 found giving at equal escapement rises with recent exploitation in 76 of 113 stocks rather than falling with current draw alone.
+- **Observed.** 113 primary assessed fish stocks (RAM Legacy v4.66), split 60% training / 40% test, evaluated on residual structure (F0), 1-yr/5-yr out-of-sample forecasts against frozen rest/momentum/persistence (F1, F2), and 3-yr held-catch fates (F3).
+- **Result.** 0 of 4 passed: F0 failed (median excess variance 0.223 ≥ 0.10, lag-1 autocorr 0.551); F1 failed (RM 1-yr direction 0.641 vs frozen rest 0.769, momentum 0.747); F2 failed (RM 5-yr direction 0.619 vs frozen rest 0.681; log error 0.30 vs 0.19); F3 failed (63% below regime point fell < 80%; 99.5% above held). Descriptive F4 rose in 76 of 113 stocks.
+- **Where it marks.** the binding: All four failures share one cause (`if` / binding premise): in managed fisheries, giving does not read current escapement alone (F0, F1, F2, F4), and catches themselves vary, so the single-variable regime step does not bind the empirical stock series (F3). The production-model controls showed the same failure.
+- **Another explanation.** Expanding the state to include recent giving and one lag (developed in MQ4 and MQ5) and accounting for assessment age-structure autocorrelation.
+- **Read from.** [README.md#ledger-every-frozen-verdict](../../../../experiments/margin-measured/README.md#ledger-every-frozen-verdict)
+
+<a id="test-mq4"></a>
+## MQ4: Level and recent giving as the state in fish stocks
+
+- **Outcome.** mixed: On 76 fish stocks not read before, seven of twelve frozen predictions passed; the whole-state verdict, G3, that nothing more is needed, failed. ([its README](../../../../experiments/margin-measured/README.md))
+- **Bears on.**
+  - [The point of no return of a regime](families/a.md#margin-of-a-regime), through [margin-of-a-regime](../records/margin-of-a-regime.md) and `Becoming.RegimeMargin.step`: Tests whether level + recent giving (SP_t = φ SP_{t-1} + (1−φ) g(E_t), φ = 0.96, interpolating between φ = 0 RegimeMargin.step and φ = 1 frozen rest) captures the full state of 76 unread primary stocks.
+  - [One law of exact thresholds, and the threshold in the plane of level and recent giving](families/a.md#threshold-in-the-state-plane), through [threshold-in-the-state-plane](../records/threshold-in-the-state-plane.md) and `Becoming.RegimeMargin.Adjusted.falls_iff_below`: Motivation for moving to the 2-variable state (level x and recent giving r): tests G1/G2 (whether both variables carry state information) and G3 (whether no further lag is needed).
+  - [Where a run of a regime comes to rest](families/g.md#where-a-run-of-a-regime-comes-to-rest), through [where-a-run-of-a-regime-comes-to-rest](../records/where-a-run-of-a-regime-comes-to-rest.md) and `Becoming.RegimeMargin.Adjusted.comes_to_rest`: Long-horizon 5-year and 10-year forecasts (F5a/b, F10a/b) and break-time checks (T1, T2) read whether trajectories relax to rest under fixed φ and held catch.
+  - [What closes what can form: a net draw on a required condition](families/g.md#closing-needs-net-draw), through [closing-needs-net-draw](../records/closing-needs-net-draw.md) and `Becoming.Flow.WithheldLevels`, `Becoming.Flow.Balances.loses_iff_beyond_margin`: Evaluates the frozen-rest balance (`Flow.WithheldLevels`) on unseen stocks as both the comparator (R1, F1b–F10b) and the predictor of 10-year risk ranking T1 and break-timing T2.
+- **Kind.** field.
+- **Reads.** On 76 unread stocks, both level and recent giving belong to the state and improve 1- and 5-year errors (G1, G2, F1b, F5b) while frozen-rest margin ranks 10-year decline risk (T1); yet neither premise of a closed state holds whole: a lag still adds variance (G3), and neither giving nor catch stays held at 10 years (F10b, T2). ([margin-of-a-regime](../records/margin-of-a-regime.md), [threshold-in-the-state-plane](../records/threshold-in-the-state-plane.md), [where-a-run-of-a-regime-comes-to-rest](../records/where-a-run-of-a-regime-comes-to-rest.md), [closing-needs-net-draw](../records/closing-needs-net-draw.md), `Becoming.RegimeMargin.step`, `Becoming.Flow.WithheldLevels`, `Becoming.Flow.Balances.loses_iff_beyond_margin`)
+- **Roles.**
+  - the condition and its level: total biomass in 76 unread primary RAM Legacy fish stocks
+  - recent giving and level state: SP_t = φ SP_{t−1} + (1 − φ) g(E_t) with frozen φ = 0.96
+  - withheld-levels baseline: frozen-rest forecast holding both recent giving and catch constant
+- **Premises of the identification.**
+  - [the regime's step](premises/a.md#regimemargin-step): failed. G1 passed (0.447 variance explained by recent giving) and R1 passed, confirming g(E) alone is insufficient; the stocks sit near φ = 0.96.
+  - [the adjustment rises](PREMISES.md#regimemargin-adjusted-rises): not checked. Not evaluated separately as monotonicity in MQ4; G3 failed (0.120 ≥ 0.10 excess variance removed by lagged terms), showing the two-variable state omits an additional lag.
+  - [WithheldLevels](PREMISES.md#admission-withheldlevels): failed. Failed as an invariant empirical assumption for T2 and F10b: catches follow biomass changes in 70/76 stocks post hoc and giving relaxes, so held-draw time-to-break T2 (0.32 < 0.50) and 10-yr error F10b (LG 0.304 vs persistence 0.215) failed while risk ordering T1 held.
+- **Observed.** 76 unread primary stocks (RAM Legacy v4.66), frozen rules adjusted only at dry-run fixes before test values were read: state tests G1–G3, 1-/5-/10-yr forecasts F1b/F5a/F5b/F10a/F10b, risk/timing T1/T2, and replications R1/R2.
+- **Result.** 7 of 12 passed: G1 (0.447), G2 (44/76), F1b (63/76), F5b (56/76), T1 (break shares 0.32, 0.15, 0.09, 0.03 across bins), R1, and R2 (60/76). 5 of 12 failed: G3 (0.120 ≥ 0.10), F5a (0.678 vs FR 0.695), F10a, F10b (persistence 0.215 vs LG 0.304), and T2 (0.32 < 0.50).
+- **Where it marks.** the binding: Both empirical identification bridges (`if` and held-draw bridge) failed in part: the two-variable state leaves out one lag (G3, directly prompting MQ5), and at 5–10 years neither giving nor catch stays fixed (F5a, F10a, F10b, T2), because catches respond to biomass in 70 of 76 stocks.
+- **Another explanation.** Adding one lag (E_{t-1} − E_t) and closing the catch loop (tested in MQ5); post hoc φ = 0.96 fit best on these unseen stocks.
+- **Read from.** [README.md#ledger-every-frozen-verdict](../../../../experiments/margin-measured/README.md#ledger-every-frozen-verdict)
+
+<a id="test-mq5"></a>
+## MQ5: A lag and the draw's response in fish stocks
+
+- **Outcome.** mixed: On 69 fish stocks not read before, six of eight passed: the state and the lag (S1 to S4, P1, P2) passed; the draw's response (D1, D2) failed. ([its README](../../../../experiments/margin-measured/README.md))
+- **Bears on.**
+  - [The point of no return of a regime](families/a.md#margin-of-a-regime), through [margin-of-a-regime](../records/margin-of-a-regime.md) and `Becoming.RegimeMargin.step`: Uses the regime fixed point (`RegimeMargin.step`) as the stationary target to which MQ5's lagged giving state relaxes (where E_{t-1} = E_t), on spawning biomass with catch share κ.
+  - [One law of exact thresholds, and the threshold in the plane of level and recent giving](families/a.md#threshold-in-the-state-plane), through [threshold-in-the-state-plane](../records/threshold-in-the-state-plane.md) and `Becoming.RegimeMargin.Adjusted.falls_iff_below`: Extends MQ4's state plane (level, recent giving) with one lag (S1–S4), noting in PREDICTIONS-2026-10-21-MQ5 that the lag term itself is empirical and outside Lean while testing whether the state closes at one lag (S3).
+  - [Where a run of a regime comes to rest](families/g.md#where-a-run-of-a-regime-comes-to-rest), through [where-a-run-of-a-regime-comes-to-rest](../records/where-a-run-of-a-regime-comes-to-rest.md) and `Becoming.RegimeMargin.Adjusted.comes_to_rest`: Tests 10-year behavior (P1 persistence wins vs LG, P2 lag LGD closes ≥ half the gap) and closed-loop catch response (D1, D2).
+  - [The regime in any amounts, and its runs over the reals](families/h.md#regime-in-any-amounts), through [regime-in-any-amounts](../records/regime-in-any-amounts.md): Continuous real-valued stocks and spawning-stock catch shares κ (beyond natural-number amounts).
+  - [What closes what can form: a net draw on a required condition](families/g.md#closing-needs-net-draw), through [closing-needs-net-draw](../records/closing-needs-net-draw.md) and `Becoming.Flow.WithheldLevels`: Baseline withheld-levels / held-draw balance comparator for 1-, 5-, and 10-year forecasts (S4, P1, P2, D2).
+- **Kind.** field.
+- **Reads.** On 69 unread spawning-biomass fish stocks, the state closes with level, recent giving, and one lag (S1–S4) and the lag closes the 10-year persistence gap (P1, P2), whereas the frozen same-year closed-loop catch response fails (D1, D2) where series report mid-season SSB and ε = 0.7 was misspecified. ([threshold-in-the-state-plane](../records/threshold-in-the-state-plane.md), [where-a-run-of-a-regime-comes-to-rest](../records/where-a-run-of-a-regime-comes-to-rest.md), [margin-of-a-regime](../records/margin-of-a-regime.md), `Becoming.RegimeMargin.step`, `Becoming.Flow.WithheldLevels`)
+- **Roles.**
+  - the condition and its level: spawning stock biomass (SSB) in 69 unread primary RAM Legacy fish stocks
+  - the draw on the level: fitted catch share κ C_t (κ ∈ [0, 2] grid)
+  - the state with one lag (LGD): γ_t = φ γ_{t−1} + (1 − φ) g(E_t) + λ (E_{t−1} − E_t), frozen φ = 0.96, λ = 0.55
+  - closed-loop draw rule: C_t = C_{t0−1} (x_t / x_{t0−1})^ε with frozen ε = 0.7
+- **Premises of the identification.**
+  - [the regime's step](premises/a.md#regimemargin-step): failed. S1 (47/69 recent giving, 33/69 level) and S2 (14/69 lag detected, p = 6.93e-6) confirm level alone is not the state; S3 passed (median excess beyond lag 0.0592 < 0.10).
+  - [the adjustment rises](PREMISES.md#regimemargin-adjusted-rises): failed. Post hoc (`rises.json`), giving rose with recent giving in 65/69 stocks (median 0.66) but not globally with escapement (median slope −0.01; humped g(E) rises only over a median 41% of escapements, everywhere in only 4/69), confining order laws to the low side below g's peak.
+  - [WithheldLevels](PREMISES.md#admission-withheldlevels): failed. D1 (36/67 positive catch slopes, p = 0.625) and D2 (0.45 < 0.50 gap closed) failed: the frozen reading assumed SSB is reported before the catch, whereas half the test stocks (New Zealand) report SSB mid-season (outside NZ, catch followed biomass in 28/34), and test stocks preferred λ = 0.35, ε = 0.37.
+- **Observed.** 69 unread primary SSB stocks (RAM Legacy v4.66; 58 excluded; 24 other & 5 control stocks reported separately), testing state terms S1–S3, 5-yr S4, 10-yr P1–P2, and closed-loop D1–D2.
+- **Result.** 6 of 8 passed: S1 (47 and 33 of 69), S2 (14/69, p = 6.93e-6), S3 (0.0592 < 0.10), S4 (50/69, p = 2.44e-4), P1 (RW error 0.324 < LG 0.477 at 10 yr), P2 (1.04 ≥ 0.50; LGD error 0.318). 2 of 8 failed: D1 (36/67 positive, p = 0.625) and D2 (0.45 < 0.50).
+- **Where it marks.** the binding: The state-with-lag empirical predictions passed beyond any proved theorem (which omits the lag term). What failed is the identification bridge taking pre-catch series timing (violated by mid-season NZ SSB assessments), the single frozen ε = 0.7 catch exponent, and weak κ identification, alongside post-hoc non-monotonicity of g(E) above the peak.
+- **Another explanation.** Accounting for mid-season reporting timing (f ∈ {0, 0.5, 1}, adopted in MQ7) gives catch tracking biomass in 28/34 non-NZ stocks; post hoc damping alone also narrows 10-yr errors similarly to the lag.
+- **Read from.** [README.md#ledger-every-frozen-verdict](../../../../experiments/margin-measured/README.md#ledger-every-frozen-verdict)
+
+<a id="test-mq6"></a>
+## MQ6: The margin's time to break past the fold, in yeast
+
+- **Outcome.** mixed: In yeast driven past its fold, three of ten frozen predictions passed; the fate reading, the need near the fold, both breaks' timing and three of four level forecasts failed. ([its README](../../../../experiments/margin-measured/README.md))
+- **Bears on.**
+  - [The point of no return of a regime](families/a.md#margin-of-a-regime), through [margin-of-a-regime](../records/margin-of-a-regime.md) and `Becoming.RegimeMargin.step`, `Becoming.RegimeMargin.ends_beyond_giving`, `Becoming.RegimeMargin.lowered_raises`: Tests `RegimeMargin.step` and crossing past the fold (`ends_beyond_giving`, `lowered_raises`) in Dai, Korolev & Gore (2015) yeast populations driven daily across the fold by 10% rising dilution or 20% falling sucrose.
+  - [What closes what can form: a net draw on a required condition](families/g.md#closing-needs-net-draw), through [closing-needs-net-draw](../records/closing-needs-net-draw.md) and `Becoming.Flow.WithheldLevels`: Uses the frozen-rest (`Flow.WithheldLevels`) daily-giving forecast as a baseline against the fitted regime-margin iteration.
+- **Kind.** field.
+- **Reads.** With an external schedule and a level state at constant dilution (L), the regime margin predicts away from the break under falling sucrose (T1a-SUC) and carries level across experiments (C1), but static curves fail to time both breaks past the fold (T2-DF, T2-SUC) because breaks arrive early and the direction rule counts floor noise as survival (A1). ([margin-of-a-regime](../records/margin-of-a-regime.md), [closing-needs-net-draw](../records/closing-needs-net-draw.md), `Becoming.RegimeMargin.step`, `Becoming.RegimeMargin.ends_beyond_giving`, `Becoming.RegimeMargin.lowered_raises`)
+- **Roles.**
+  - the condition and its level: yeast optical density (n_d, what is left x = n_d / DF_d) in Dai, Korolev & Gore (2015)
+  - the external draw and parameter: daily dilution rising 10%/day (DF run) or sucrose falling 20%/day at DF 500 (SUC run), plus constant DF 500 control
+  - the regime maps: 2012 draw-dependent dilution map (fold DF 1930) and odd-level-fitted sucrose map (extrapolated below 0.16%)
+- **Premises of the identification.**
+  - [the regime's step](premises/a.md#regimemargin-step): met. L passed at constant DF 500 (residual lag-1 autocorrelation −0.14 < 0.30) and C1 passed (constant-DF level carried within 8% ≤ 15% from 2012 to 2015).
+  - [a draw beyond all giving](premises/a.md#regimemargin-beyond-giving): failed. Both T2 timing predictions failed because the fitted static maps placed the fold too late (T2-DF: observed day 15–17 vs map fold DF 1930 after day 19/20; T2-SUC: observed day 20 vs map day 23), and near the break trend beat both (T1b). Post hoc giving fell below the map ~3 days before break (implied folds ~DF 1,240 & 0.18% sucrose vs 1,930 & 0.12%).
+- **Observed.** Dai, Korolev & Gore (2015) Dryad data (`data_deterioration`, `data_SUCbifurcation`, `data_SUCindicator`, omitting malformed `all_SUC.txt`): constant controls, odd/even held-out sucrose bifurcations, and rising-dilution / falling-sucrose deterioration runs.
+- **Result.** 3 of 10 passed: T1a-SUC (3d 0.11, 5d 0.20 vs at best 0.19, 0.60), C1 (8% ≤ 15%), L (−0.14 < 0.30). 7 of 10 failed: A1 (direction rule scored 21–26% low starters alive due to instrument floor noise; posthoc 97–100% by 0.01 floor), A2 (ratios 0.86 at 0.6%, 0.72 at 0.4%, 0.58 at 0.2%), T1a-DF (wins 3d 0.25 vs 0.32, loses 5d 0.75 vs trend 0.68), T1b-DF (trend 0.26 vs 0.77), T2-DF (day 15–17 vs none by day 20), T1b-SUC (trend 0.17 vs 0.24 at 1d), T2-SUC (day 20 vs day 23).
+- **Where it marks.** the measurement: A1 failed on the frozen direction fate rule, which counted instrument floor noise as alive (just like MQ1 yeast). A2, T1b, and T2 failed because static renewal curves extrapolated from constant regimes (2012 dilution data or ≥ 0.16% sucrose) mismeasure the fold location (where break is decided, error pointing toward late warning), leaving open whether smooth-class misfit near the fold or deterioration history lowering giving caused the early collapse (Note also 1-day indexing ambiguity in sucrose day 22 vs 20, and prior figure knowledge).
+- **Another explanation.** An 0.01 floor fate rule rescues A1 (97–100% separation); shifting sucrose SI day-indexing by 1 day puts map collapse at day 22 vs observed 20; a constant regime held just before the fold would separate smooth misfit from history dependence.
+- **Read from.** [README.md#ledger-every-frozen-verdict](../../../../experiments/margin-measured/README.md#ledger-every-frozen-verdict)
+
+<a id="test-mq7"></a>
+## MQ7: Fates on either side of the curve, on unread fish stocks
+
+- **Outcome.** failed: On 21 fish stocks not read before, the one testable frozen prediction failed; the other was not testable. ([its README](../../../../experiments/margin-measured/README.md))
+- **Bears on.**
+  - [One law of exact thresholds, and the threshold in the plane of level and recent giving](families/a.md#threshold-in-the-state-plane), through [threshold-in-the-state-plane](../records/threshold-in-the-state-plane.md), [where-a-run-of-a-regime-comes-to-rest](../records/where-a-run-of-a-regime-comes-to-rest.md) and `Becoming.RegimeMargin.Adjusted.falls_iff_below`, `Becoming.RegimeMargin.Adjusted.threshold_falls`, `Becoming.RegimeMargin.threshold_regime`: Tests the threshold-in-the-state-plane prediction (PREDICTIONS-2026-10-21-MQ7): below the regime point on the low side of g(E), 3-year declines are more frequent when recent giving falls short of the catch (r < H) than when it meets H, within the same stock and deficit stratum g(E)/H (contrasting Adjusted against the level-only null `threshold_regime`).
+  - [Where a run of a regime comes to rest](families/g.md#where-a-run-of-a-regime-comes-to-rest), through [where-a-run-of-a-regime-comes-to-rest](../records/where-a-run-of-a-regime-comes-to-rest.md) and `Becoming.RegimeMargin.Adjusted.comes_to_rest`: Supplies the adjusted monotone run convergence premise (`Adjusted.Rises`, rising in both level and recent giving on the low side below g's peak) and finite-horizon reading K = 3 years instead of limit rest.
+- **Kind.** field.
+- **Reads.** On 21 previously unread SSB fish stocks (NOAA Stock SMART and ICES SAG), the within-stock, within-deficit difference had the predicted positive sign (+0.388, pooled shares 0.74 vs 0.28) but rested on only 5 stocks (62 episodes) with 95% bootstrap lower bound 0.000, failing the frozen bound and leaving the field frequency of fates across the curve unsettled. ([threshold-in-the-state-plane](../records/threshold-in-the-state-plane.md), [where-a-run-of-a-regime-comes-to-rest](../records/where-a-run-of-a-regime-comes-to-rest.md), [regime-point-under-adjusting-giving](../records/regime-point-under-adjusting-giving.md), `Becoming.RegimeMargin.Adjusted.falls_iff_below`, `Becoming.RegimeMargin.Adjusted.threshold_falls`, `Becoming.RegimeMargin.Crossing.crosses`, `Becoming.RegimeMargin.threshold_regime`)
+- **Roles.**
+  - the condition and its level: spawning stock biomass (SSB) across 21 unread primary fish stocks in NOAA Stock SMART and ICES SAG
+  - the draw H: fitted share κ C̄ of held 3-year catches (within 1.25× mean), with series reporting timing f ∈ {0, 0.5, 1} inferred from each series
+  - the state-plane deficit and threshold: deficit bins z = g(E_t0)/H on the low side below g's peak, split by recent giving r < H (short) vs r ≥ H (meets)
+- **Premises of the identification.**
+  - [the adjustment rises](PREMISES.md#regimemargin-adjusted-rises): met. Restricted by design to origins where escapement E_t0 sits below the peak of g(E) (since MQ5 showed g(E) rises below the peak and recent giving rises in 65/69 stocks), so both variables rise in the tested domain.
+  - [an exact check](premises/a.md#regimemargin-exact-check): not checked. Adjusted.falls_iff_below characterizes infinite-horizon rest, whereas MQ7 reads finite 3-year declines (x_{t0+3} < x_{t0}) and infers both κ and reporting timing f from assessment outputs (~20% timing misread rate in RAM calibration; 5 stocks fitted κ = 0).
+- **Observed.** 21 unread primary SSB stocks (NOAA Stock SMART and ICES SAG; plus 5 survey series reported only), yielding 62 compared held-catch episodes across 8 within-stock deficit strata from 5 stocks for C1, and 4 stocks for C2.
+- **Result.** 0 of 1 passed, 1 not testable: C1 failed (weighted risk difference +0.388, pooled 0.74 short vs 0.28 meets, but 95% stock-bootstrap lower bound 0.000 from only 5 stocks / 62 episodes; post hoc positive inside 3/5 stocks and 5.45% bootstrap resamples ≤ 0). C2 (same-trend control) was not testable (4 stocks compared < 5 required).
+- **Where it marks.** the measurement: Statistical power and measurement identification of the field quantities fell short: of 21 stocks, 9 shared one American Samoa data-limited assessment framework, 5 fitted κ = 0 (no draw), and only 5 had discordant strata within stock and deficit bin (C1 power failure; C2 < 5 stocks), with series timing f and catch share κ inferred rather than observed. This leaves `Adjusted.falls_iff_below` and the field adjustment reading unrefuted and unsettled.
+- **Another explanation.** More unread non-RAM assessments or surveys with measured catchability and known spawning-stock catch shares (instead of fitted κ and inferred timing); f = 0 sensitivity also reported alongside.
+- **Read from.** [README.md#ledger-every-frozen-verdict](../../../../experiments/margin-measured/README.md#ledger-every-frozen-verdict)
+
+<a id="test-cg3-round-1"></a>
+## CG3 (round 1): Whether a stepwise learner's own later acts outrun its reading
+
+- **Outcome.** mixed: Round one's account, the learner's own exploratory coverage, failed on its sharpest case. ([its README](../../../../experiments/commons-outrun-own/README.md))
+- **Bears on.**
+  - [The rest outruns the renewal](families/b.md#the-rest-outruns-the-renewal), through [the-rest-outruns-the-renewal](../records/the-rest-outruns-the-renewal.md) and `Becoming.Flow.outrun_reading_alike`: Tests CG2's post-hoc reading of X5 across time, namely whether a stepwise learner's own future full-draw policy acts as an outrunning rest holding the present step via Flow.outrun_reading_alike.
+  - [Own count misses joint excess](families/b.md#own-count-misses-joint-excess), through [own-count-misses-joint-excess](../records/own-count-misses-joint-excess.md) and `Becoming.Flow.joint_excess_ends`: Checks Flow.joint_excess_ends (I1: 0 violations over 276.3M steps and 3.25M own-excess windows) with the learner's own untrained takes as the part, alongside Regulation.accumulates_at (I2: 0 violations on 23,911 emptied courses) and exact DP policy iteration.
+- **Kind.** run.
+- **Reads.** A learner's own future acts are not an outrunning rest (`Flow.outrun_reading_alike` fails to explain X5 because one sweep of policy improvement keeps the patch at 1.00 across all 9 conditions even with no end reading); rather, untrained early greedy takes destroy the patch via `Flow.joint_excess_ends` before mid-course restraint is reached, though `cov` alone fails at J3s8. ([the-rest-outruns-the-renewal](../records/the-rest-outruns-the-renewal.md), [own-count-misses-joint-excess](../records/own-count-misses-joint-excess.md), `Becoming.Flow.outrun_reading_alike`, `Becoming.Flow.joint_excess_ends`, `Becoming.Flow.accumulates_at`)
+- **Roles.**
+  - the selector and part: one tabular Q-learner choosing 0–3 requests/step on CG2's gated 3×3 patch (20 seeds, 30,000 episodes, uniform exploring starts)
+  - the outrunning takes: exact policy iteration's evaluation (refuting fixed future rest), and the learner's own untrained early greedy full draw
+  - heuristic boundary measure: cov: exact steps a full patch stands under uniform exploratory requests 0..m
+- **Premises of the identification.**
+  - [the rest outruns the renewal](premises/b.md#flow-rest-outruns): failed. Exact dynamic programming (`exact.py`): one sweep of policy improvement from the full draw keeps the patch standing at step 80 with probability 1.00 in all 9 conditions, including J3w0 and J1w0 with w = 0. Y2 and Y3 passed: neither removing the end reading nor multiplying its weight by 8 changed depletion.
+  - [joint excess at the steps named](PREMISES.md#flow-joint-excess): met. I1 confirmed Flow.joint_excess_ends with the learner's own takes as the part across 276.3 million steps and 3.25 million windows (0 violations); I2 confirmed accumulates_at on 23,911 emptied courses.
+  - [the gate at need m](PREMISES.md#flow-gated): met. By construction from CG1's gated 3×3 environment (I1, 0 violations).
+  - [the score reads late](PREMISES.md#training-score-reads-late): met. By construction: the end reading w × level is read after step H.
+- **Observed.** Exact policy iteration over 512 configurations, plus 9 conditions × 20 seeds of tabular Q-learning evaluated over 200 greedy episodes on share alive at step H − 20 (kept ≥ 0.80, depleted ≤ 0.20) and contrasts Y1–Y5, I1–I2.
+- **Result.** Exact result before runs: 1.00 kept in all 9 conditions after 1 DP sweep. Runs: 8 of 9 conditions passed (`J3` 0.00, `J2` 0.00, `J1` 1.00, `J1w0` 1.00, `J3w0` 0.00, `J3w48` 0.00, `J3s16` 1.00, `J3opt` 1.00); `J3s8` failed (measured 0.01 vs predicted kept, `cov = 24.5` but `full = 4.1`), failing contrast Y1 (`cov` threshold). Contrasts Y2–Y5 and identities I1–I2 passed.
+- **Where it marks.** the binding: Both sides are binding clarifications: first, `Flow.outrun_reading_alike` was applied across time where its fixed-rest premise does not hold (policy improvement revises present and future acts together, refuting the CG2 post-hoc reading); second, round 1's heuristic `cov` threshold missed that at J3s8 the learner's greedy full draw ends the patch in 4.1 steps before mid-course restraint can act.
+- **Another explanation.** Two-quantity start-of-course account (`cov` for mid-course learning and `full` for surviving the untrained start, frozen as CG3 round 2); optimistic initial values (J3opt: 100) keep the patch at 1.00.
+- **Read from.** [README.md#round-1-verdicts](../../../../experiments/commons-outrun-own/README.md#round-1-verdicts)
+
+<a id="test-cg3-round-2"></a>
+## CG3 (round 2): Coverage and the full draw's standing time as the boundary
+
+- **Outcome.** mixed: Round two's threshold failed: two of six conditions and contrast Z1 failed. Its early-start contrast, Z3, passed, placing the learner's own outrun at the start of a course. ([its README](../../../../experiments/commons-outrun-own/README.md))
+- **Bears on.**
+  - [The rest outruns the renewal](families/b.md#the-rest-outruns-the-renewal), through [the-rest-outruns-the-renewal](../records/the-rest-outruns-the-renewal.md) and `Becoming.Flow.outrun_reading_alike`: Continues testing where a single learner's course parts from Flow.outrun_reading_alike, refining the start-of-course untrained full draw vs mid-course restraint.
+  - [Own count misses joint excess](families/b.md#own-count-misses-joint-excess), through [own-count-misses-joint-excess](../records/own-count-misses-joint-excess.md) and `Becoming.Flow.joint_excess_ends`: Tests Flow.joint_excess_ends directly at the start of a course via Z3 (early-start training in `R3s8early` vs `R3early`) while freezing a `(cov, full)` threshold rule (Z1, Z2).
+- **Kind.** run.
+- **Reads.** Training the start of a course rescues a learner whose mid-course restraint was already learned (Z3: R3s8early 0.84 vs R3early 0.00), locating the own-outrun at the untrained initial steps via `Flow.joint_excess_ends`, while round 2's heuristic threshold on `full` failed Z1 (R3s10 0.80, R2s4 0.28). ([own-count-misses-joint-excess](../records/own-count-misses-joint-excess.md), [the-rest-outruns-the-renewal](../records/the-rest-outruns-the-renewal.md), `Becoming.Flow.joint_excess_ends`, `Becoming.Flow.accumulates_at`)
+- **Roles.**
+  - the selector: CG2's tabular Q-learner under round 1's training or early-start training (half of episodes starting in the first 10 steps)
+  - the part causing joint excess: untrained greedy full draws from a full patch (standing time `full`)
+- **Premises of the identification.**
+  - [joint excess at the steps named](PREMISES.md#flow-joint-excess): met. I1 verified 0 violations across 211.2M steps and 1.25M own-excess windows, and I2 verified 0 violations across 11,543 emptied courses; `R3s8early` still emptied near step H (0.06 alive at H) once late steps became under-trained.
+  - [a start below n + m](PREMISES.md#flow-start-below-n-plus-m): met. By construction from the full patch when full draw ends the patch within `full` steps (4.1 steps at `s = 8`).
+  - [the gate at need m](PREMISES.md#flow-gated): met. By construction from CG1's gated regrowth environment (I1).
+- **Observed.** Six new conditions (`R3s10`, `R2s4`, `R3s14`, `R2s8`, `R3s8early`, `R3early`) × 20 seeds × 200 greedy episodes, plus contrasts Z1–Z3 and identity checks I1–I2.
+- **Result.** 4 of 6 conditions and 2 of 3 contrasts passed: `R3s14` (1.00), `R2s8` (0.97) passed Z2; `R3s8early` (0.844, 17/20 seeds ≥ 0.8), `R3early` (0.00) passed Z3; `R3s10` (0.797 vs predicted depleted) and `R2s4` (0.282 vs predicted depleted) failed Z1. Identity checks I1 and I2 passed with 0 violations.
+- **Where it marks.** the binding: Flow.joint_excess_ends held in every window and its causal prediction Z3 passed; what failed (Z1) is the quantitative threshold bridging (`cov`, `full`) to the learner's kept boundary.
+- **Another explanation.** Fitted visit-index / smooth boundary models across (`cov`, `full`) explored in CG3b.
+- **Read from.** [README.md#round-2-verdicts](../../../../experiments/commons-outrun-own/README.md#round-2-verdicts)
+
+<a id="test-cg3b"></a>
+## CG3b: A learner's boundary fitted on half a grid, predicting the other
+
+- **Outcome.** mixed: Five of seven predicted conditions passed; the two failures sit where a measured share was near 0 or 1 and the fit predicted about 0.4–0.7, and the fit was no better than round two's rule (W2 failed). ([its README](../../../../experiments/commons-outrun-own/README.md))
+- **Bears on.**
+  - [The rest outruns the renewal](families/b.md#the-rest-outruns-the-renewal), through [the-rest-outruns-the-renewal](../records/the-rest-outruns-the-renewal.md) and `Becoming.Flow.outrun_reading_alike`: Part of the CG3 series scoping where a single learner's boundary sits rather than `outrun_reading_alike`.
+  - [Own count misses joint excess](families/b.md#own-count-misses-joint-excess), through [own-count-misses-joint-excess](../records/own-count-misses-joint-excess.md) and `Becoming.Flow.joint_excess_ends`: Tests a 1-constant expected-visit index and a logistic fit in log(cov) and log(full) fitted on rounds 1–2 + half A (21 conditions) to predict held-out half B (7 conditions) while checking `Flow.joint_excess_ends` and `accumulates_at`.
+- **Kind.** run.
+- **Reads.** The sample-level identity `Flow.joint_excess_ends` held in every window, while a fitted logistic boundary in log(cov) and log(full) passed 5 of 7 half-B predictions (W1) yet failed on extreme near-0/near-1 boundary cases and failed W2 against round 2's simple rule (and the visit-index calibration failed completely). ([own-count-misses-joint-excess](../records/own-count-misses-joint-excess.md), `Becoming.Flow.joint_excess_ends`, `Becoming.Flow.accumulates_at`)
+- **Roles.**
+  - the selector: CG2's tabular Q-learner trained 30,000 episodes across a 16-condition grid split into half A (fit, 9 conditions) and half B (predict, 7 conditions), 12 seeds each
+  - boundary bridges: one-constant expected-visit index (calibration) and frozen logistic fit p = σ(−4.797 + 0.431 log cov + 2.036 log full)
+- **Premises of the identification.**
+  - [joint excess at the steps named](PREMISES.md#flow-joint-excess): met. I1 confirmed 0 violations across 294.7M steps and 2.36M own-excess windows; I2 confirmed 0 violations on 16,722 emptied courses.
+  - [the gate at need m](PREMISES.md#flow-gated): met. By construction from CG1's gated regrowth environment (I1).
+- **Observed.** Half A (9 conditions) calibration + half B (7 predicted conditions: `G3s6`, `G3s9`, `G3s12`, `G2s3`, `G2s6`, `G2s9`, `G1s0.75`) × 12 seeds, evaluated on alive share at H − 20, contrasts W1–W2, and identity checks I1–I2.
+- **Result.** Mechanistic visit-index calibration failed (RSS 3.6 vs 0.65; called J3s16 depleted and J2 kept). On half B: 5 of 7 conditions passed (`G3s6` 0.00, `G3s9` 0.25, `G3s12` 0.99, `G2s6` 0.56, `G2s9` 1.00 -> W1 passed); `G2s3` (0.067 vs between 0.40) and `G1s0.75` (1.000 vs between 0.73) failed; W2 failed (logistic MAE 0.214 vs round 1's 0.306 and round 2's 0.195). Identity checks passed.
+- **Where it marks.** the binding: Flow.joint_excess_ends held without violation; the failure lies in both empirical boundary bridges (visit index and smooth logistic in log cov and log full), which misclassify sharp transitions near 0 and 1 and give MAE worse than round 2's simple rule (W2).
+- **Another explanation.** The non-smooth band rule in (`full`, `cov`) tested in round 4 (CG3c).
+- **Read from.** [README.md#round-3-verdicts-cg3b](../../../../experiments/commons-outrun-own/README.md#round-3-verdicts-cg3b)
+
+<a id="test-cg3c"></a>
+## CG3c: The band form of a learner's boundary
+
+- **Outcome.** mixed: Each frozen form of the boundary came from the round before and failed on the next round's sharpest case; the series ended. ([its README](../../../../experiments/commons-outrun-own/README.md))
+- **Bears on.**
+  - [The rest outruns the renewal](families/b.md#the-rest-outruns-the-renewal), through [the-rest-outruns-the-renewal](../records/the-rest-outruns-the-renewal.md) and `Becoming.Flow.outrun_reading_alike`: Closes the CG3 empirical series characterizing the sample-complexity boundary for single learners where `outrun_reading_alike` does not apply.
+  - [Own count misses joint excess](families/b.md#own-count-misses-joint-excess), through [own-count-misses-joint-excess](../records/own-count-misses-joint-excess.md) and `Becoming.Flow.joint_excess_ends`: Tests round 4's piecewise band rule in (`full`, `cov`) against five m = 4 conditions and new edge conditions while verifying `Flow.joint_excess_ends` and `accumulates_at`.
+- **Kind.** run.
+- **Reads.** While `Flow.joint_excess_ends` held in every window across all 36 conditions, every frozen quantitative form of the learner's kept boundary (including CG3c's band rule) failed on its sharpest out-of-sample test cases, establishing that the boundary's quantitative form belongs to learner sample complexity rather than the condition's laws. ([own-count-misses-joint-excess](../records/own-count-misses-joint-excess.md), `Becoming.Flow.joint_excess_ends`, `Becoming.Flow.accumulates_at`)
+- **Roles.**
+  - the selector: CG2's tabular Q-learner (12 seeds per condition across 8 new conditions incl. draw cap m = 4)
+  - the band bridge: frozen piecewise rule in (`full`, `cov`) read from the 28 prior uniform-start conditions
+- **Premises of the identification.**
+  - [joint excess at the steps named](PREMISES.md#flow-joint-excess): met. I1 confirmed 0 violations over 147.3M steps and 0.97M own-excess windows; I2 confirmed 0 violations on 8,183 emptied courses.
+  - [the gate at need m](PREMISES.md#flow-gated): met. By construction from CG1's gated regrowth environment (I1).
+- **Observed.** Eight new conditions (`G4s12`, `G4s14`, `G4s16`, `G4s18`, `G4s20`, `G3s10.5`, `G2s4.5`, `G1s0.1`) × 12 seeds × 200 greedy episodes, contrasts V1–V4, and identity checks I1–I2.
+- **Result.** 5 of 8 conditions passed (`G4s12` 0.04, `G4s18` 1.00, `G4s20` 1.00, `G3s10.5` 0.81, `G2s4.5` 0.28) and 3 failed (`G4s14` 0.493, `G4s16` 0.965 vs depleted; `G1s0.1` 0.000 vs between). V2 passed (MAE 0.226 vs sigmoid 0.298 and R2 rule 0.378) and V4 passed (0.000 ≤ 0.282); V1 (5/8 < 6) and V3 (`G4s14`, `G4s16`) failed. Identity checks passed.
+- **Where it marks.** the binding: The sample-level laws held (`0` violations), while the heuristic `full`-led band bridge failed when high `cov` kept the patch even at `full < 4.4` (`G4s16`: 0.965) and low `cov` emptied it at `full = 8.1` (`G1s0.1`: 0.000). Across all 36 conditions (post hoc), `cov` is primary and `full` matters only in the middle band; its quantitative curve is learning-theoretic sample complexity.
+- **Another explanation.** Post-hoc ordering across 36 conditions: all `cov ≤ 17.5` depleted (≤ 0.07), all `cov ≥ 54.9` kept (≥ 0.80), with `full` separating only intermediate `19.7 ≤ cov ≤ 49.0`; the series concluded here.
+- **Read from.** [README.md#round-4-verdicts-cg3c](../../../../experiments/commons-outrun-own/README.md#round-4-verdicts-cg3c)
+
+<a id="test-la1"></a>
+## LA1: A language model revising a harvest threshold from its reward
+
+- **Outcome.** mixed: Both open settings passed; two of four locked settings failed, and with them contrasts L1, L3 and L4, at misses worth 92.5% to 98.2% of the best, which LA1b's later frozen test reads as feedback that barely resolved the best threshold, that threshold assigned there (LA1c, with none assigned, found it in 29 of 30 locked seeds). ([its README](../../../../experiments/commons-llm-feedback/README.md))
+- **Bears on.**
+  - [The rest outruns the renewal](families/b.md#the-rest-outruns-the-renewal), through [the-rest-outruns-the-renewal](../records/the-rest-outruns-the-renewal.md) and `Becoming.Flow.outrun_reading_alike`: Places Claude Haiku in a member's seat in CG2's commons against a full-draw rest (exact DP values calibrated before the run via `Flow.outrun_reading_alike`): on locked settings the end level is 0 regardless of threshold m, so optimal m = 0, testing whether in-context LLM revision follows what its stated reward reads (H1-LM).
+- **Kind.** run.
+- **Reads.** With the lock built by calibration (`Flow.outrun_reading_alike`), Claude Haiku ended at m = 0 in 16/20 locked seeds and with restraint in 10/10 open seeds, failing 2/4 locked settings (`k3s1_lam32` and `k3s8`, at 92.5–98.2% of optimal value) where 20-episode noisy feedback rounds barely resolved m = 1 from m = 0. ([the-rest-outruns-the-renewal](../records/the-rest-outruns-the-renewal.md), `Becoming.Flow.outrun_reading_alike`)
+- **Roles.**
+  - the selector and part: Claude Haiku (claude -p --model haiku), revising threshold m ∈ {0..9} over 6 feedback rounds of 20 episodes each
+  - the rest: other members harvesting at full draw in CG2's four locked and two open settings
+  - the score reading late: the end-of-episode level weighted by λ = 2 (or 32 in `k3s1_lam32`) added to own harvests
+- **Premises of the identification.**
+  - [the gate at need m](PREMISES.md#flow-gated): met. By construction: imports CG1/CG2's gated 3×3 commons unchanged.
+  - [the rest outruns the renewal](premises/b.md#flow-rest-outruns): met. Pre-run exact dynamic programming (`values.json`) confirmed that in all four locked conditions the patch ends empty regardless of m, making m = 0 strictly best even at λ = 32.
+  - [the score reads late](PREMISES.md#training-score-reads-late): met. By construction: end reading adds λ times apples standing after the last step.
+  - [the rest's takers take part](premises/b.md#flow-rest-takers-present): met. By protocol: fixed scripted rest harvests every available step.
+- **Observed.** 6 conditions × 5 seeds × 7 stateless calls (210 valid answers; prior choice plus 6 updates from 20-episode mean rewards/harvests/end levels), scoring final choice m = 0 in ≥ 4/5 locked seeds and m ≥ 1 in ≥ 4/5 open seeds.
+- **Result.** Open side passed (`k2s8` 5/5, `k3s16` 5/5; L2 passed). Locked side mixed: `k3s1` (5/5) and `k2s1` (5/5) passed, while `k3s1_lam32` (3/5: two at m = 1 worth 0.975 of best) and `k3s8` (3/5: one at m = 1 worth 0.982, one at m = 2 worth 0.925) failed, failing contrasts L1, L3, L4. Every seed revised its choice after seeing results (and 27 Oct parse correction fixed `k3s1` seed 0 round 1 from boldface `m = **0**` -> 9, leaving final verdicts unchanged).
+- **Where it marks.** the measurement: By the frozen reading (choices moved with results), L1/L3 counted against Haiku following its reward on the locked side; post hoc simulation showed 20-episode means give P(mean_{m=1} ≥ mean_{m=0}) = 0.45 in `k3s8` and 0.28 in `k3s1_lam32` (vs 0.05 in `k2s1`), i.e., insufficient feedback resolution / test power (confirmed directly by LA1b at 10,000 episodes).
+- **Another explanation.** Insufficient resolution in 20-episode noisy feedback (confirmed by frozen follow-up LA1b: `resolution` supported) vs a small restraint kept from prior; note prior choice on `k3s1` seed 0 suffered a markdown-bold parse bug corrected later.
+- **Read from.** [README.md#verdicts](../../../../experiments/commons-llm-feedback/README.md#verdicts)
+
+<a id="test-la1b"></a>
+## LA1b: LA1's game with feedback that resolves the best threshold
+
+- **Outcome.** passed: Every frozen verdict passed, and the frozen reading is resolution. ([its README](../../../../experiments/commons-llm-feedback-resolved/README.md))
+- **Bears on.**
+  - [The rest outruns the renewal](families/b.md#the-rest-outruns-the-renewal), through [the-rest-outruns-the-renewal](../records/the-rest-outruns-the-renewal.md) and `Becoming.Flow.outrun_reading_alike`: Tests LA1's two candidate explanations (`resolution` vs `trained_restraint`) under the same locked/open commons (`Flow.outrun_reading_alike`) using 10,000-episode rounds and assigned thresholds m = 0, 1, 6.
+- **Kind.** run.
+- **Reads.** With the lock verified and 10,000-episode feedback resolving m = 0, 1, 6, all 30 locked seeds ended at m = 0 (dropping initial prior restraint) and all 10 open seeds ended at m = 6 or 7, supporting `resolution` over `trained_restraint` for this model when the best threshold is assigned and resolved. ([the-rest-outruns-the-renewal](../records/the-rest-outruns-the-renewal.md), `Becoming.Flow.outrun_reading_alike`)
+- **Roles.**
+  - the selector: Claude Haiku (claude -p --model haiku), 40 seeds total (`k3s8` 15 seeds; 5 others 5 seeds each), 3 assigned rounds (m = 0, 1, 6) + 3 chosen rounds + final pick
+  - the resolved feedback reading: 10,000-episode means per round resolving all reward gaps (1.80% `k3s8`, 2.60% `k3s1`/`lam32`, 7.11% `k2s1`)
+- **Premises of the identification.**
+  - [the gate at need m](PREMISES.md#flow-gated): met. By construction: LA1/CG2 commons imported unchanged.
+  - [the rest outruns the renewal](premises/b.md#flow-rest-outruns): met. Exact values recomputed equal to LA1's (`values.json`); 10,000 episodes resolve m = 0 > m = 1 across every locked seed.
+  - [the score reads late](PREMISES.md#training-score-reads-late): met. By construction: end reading adds λ times last-step apples.
+  - [the rest's takers take part](premises/b.md#flow-rest-takers-present): met. By protocol: fixed full-draw rest.
+- **Observed.** 40 seeds × 5 calls = 200 valid Haiku responses (`30` locked, `10` open), scoring LA1 conditions/contrasts L1–L4 and frozen reading criteria (`R`, `open_short`, `invalid_finals`, `locked_first_at_0`).
+- **Result.** Every verdict passed: all 6 conditions and all 4 contrasts L1–L4 passed; R = 0 of 30 locked seeds ended at m ≥ 1 (all 30 at m = 0, including 15/15 `k3s8`), `open_short` = 0 of 10 (8 at m = 7, 2 at assigned m = 6), `invalid_finals` = 0 of 40, `locked_first_at_0` = 9 ≤ 15, and 40/40 final choices matched the best mean seen. Reading `resolution` supported; `trained_restraint`, `open_not_followed`, `results_not_followed` contradicted.
+- **Where it marks.** nothing failed: All frozen predictions, contrasts, and reading checks passed cleanly. Note scope limit: m = 0 and m = 6 were assigned, so LA1b tests following resolved feedback rather than unaided search (tested in LA1c), and cannot rule out a restraint smaller than the 1.80–7.11% gap or rare < 10% seed rates.
+- **Another explanation.** Whether the model discovers m = 0 or m = 7 without assigned rounds (left to LA1c), and gradient-trained vs in-context agents or other framings.
+- **Read from.** [README.md#verdicts](../../../../experiments/commons-llm-feedback-resolved/README.md#verdicts)
+
+<a id="test-la1c"></a>
+## LA1c: Whether the model finds the best threshold with no round assigned
+
+- **Outcome.** passed: No seed ended below a threshold it had played that the rounds showed better, and every final choice was valid. ([its README](../../../../experiments/commons-llm-feedback-unaided/README.md))
+- **Bears on.**
+  - [The rest outruns the renewal](families/b.md#the-rest-outruns-the-renewal), through [the-rest-outruns-the-renewal](../records/the-rest-outruns-the-renewal.md) and `Becoming.Flow.outrun_reading_alike`: Tests whether Haiku finds the optimal threshold unaided (all 7 rounds chosen freely at 10,000 episodes per round) on the locked and open settings calibrated from `Flow.outrun_reading_alike`.
+- **Kind.** run.
+- **Reads.** With no round assigned, Prediction S passed on both sides (0 seeds ended below a better threshold they had played): 29 of 30 locked seeds descended from prior restraint to m = 0 (`found`), and 8 of 10 open seeds crossed the valley to m = 7 while 2 never reached the hill (`not_reached`). ([the-rest-outruns-the-renewal](../records/the-rest-outruns-the-renewal.md), `Becoming.Flow.outrun_reading_alike`)
+- **Roles.**
+  - the selector: Claude Haiku (claude -p --model haiku), 40 seeds choosing all 7 rounds (10,000 episodes/round) and a final threshold unaided
+  - the lock and open landscape: LA1b's 4 locked conditions (m* = 0) and 2 open conditions (m* = 7 past a valley m = 0..4)
+- **Premises of the identification.**
+  - [the gate at need m](PREMISES.md#flow-gated): met. By construction: LA1/CG2 commons imported unchanged.
+  - [the rest outruns the renewal](premises/b.md#flow-rest-outruns): met. Unchanged `values.json` locked regime and 10,000-episode feedback resolution.
+  - [the score reads late](PREMISES.md#training-score-reads-late): met. By construction: end reading adds λ times last-step apples.
+  - [the rest's takers take part](premises/b.md#flow-rest-takers-present): met. By protocol: fixed full-draw rest.
+- **Observed.** 40 seeds × 8 calls = 320 valid Haiku answers (`30` locked, `10` open), testing Prediction S (≤ 1 seed below a played better threshold or invalid final) and reading classifications (`found` vs `not_reached` etc.).
+- **Result.** Prediction S passed on both sides (`R_left = 0`, `invalid_locked = 0`, `O_left = 0`, `invalid_open = 0`). Locked: 29/30 ended at m = 0 (95% CI 0.828–0.999; reading `found`; the 1 miss in `k3s8` started at m = 9 and ended still descending at m = 1 after m = 2). Open: 8/10 ended at m = 7 (95% CI 0.444–0.975; reading `not_reached`; 2 valley misses stayed at m = 0 after only probing up to m = 3 or 4). All 6 conditions also passed LA1's rules (L1–L4).
+- **Where it marks.** nothing failed: The frozen selection prediction passed completely on both sides (`38/40` played seeds selected the best mean they had seen, `2/40` in `k3s8` stepped one below lowest played). The 2 open misses (`k2s8` seed 2, `k3s16` seed 1) and the 1 slow-descent `k3s8` seed reflect finite-horizon exploration speed, which the account does not model.
+- **Another explanation.** Exploration horizon (7 rounds barely sufficient for `k3s8` from high prior, where 7/15 seeds had not tried m = 0 by round 6) and untested other models/framings/gradient training.
+- **Read from.** [README.md#result](../../../../experiments/commons-llm-feedback-unaided/README.md#result)
+
+<a id="test-in1-round-2"></a>
+## IN1 (round 2): Installing the direction by instruction, with one round of talk
+
+- **Outcome.** mixed: By its frozen rule, which passes a prediction only where both models pass, R1, R3 and R4 failed and R2 and the identity checks passed; one model passed all four, the other only R2. T4's standing in [07](../../chapters/07-SIGNIFICANCE.md#theses) and [08](../../chapters/08-METHOD.md#theses) gives both: mixed by the rule, partly passed per model. ([its README](../../../../experiments/direction-installation/README.md))
+- **Bears on.**
+  - [What an optimum does beyond what couples in](families/b.md#what-an-optimum-does-beyond-what-couples-in), through [what-an-optimum-does-beyond-what-couples-in](../records/what-an-optimum-does-beyond-what-couples-in.md) and `Becoming.Web.optimum_broken_iff`: The GovSim lake's community optimum (50 t/month) crosses the mussel bed's 70 t need, whereas keeping the bed (30 t/month) leaves the community below optimum unless the direction places the bed inside the objective (`COMM_SEEN_TALK` vs `DIR_SEEN_TALK`).
+  - [Selection blind beyond the coupling closure](families/b.md#unselected-beyond-the-coupling-closure), through [what-pooled-coupling-reaches](../records/what-pooled-coupling-reaches.md), [selection-through-couplings](../records/selection-through-couplings.md) and `Becoming.Flow.unselected_beyond_pool`: R2 tests `Flow.unselected_beyond_pool` directly (`PREDICTIONS-ROUND2-2026-10-21`): one round of non-binding public talk pools the three fishers' couplings (`What pooled coupling reaches`), yet where no fisher is told the bed (`DIR_UNSEEN_TALK`), the bed remains beyond the union closure and is kept in 0 of 10 seasons for both models. Round 2 also cites `Stationary.model_error` for agents omitting others' simultaneous catches.
+- **Kind.** run.
+- **Reads.** Pooling members' couplings via public talk keeps nothing that lies beyond every member's closure (`Flow.unselected_beyond_pool`, 0/10 kept under `DIR_UNSEEN_TALK` for both models); where the dependent is told and counted, coupling the joint act via talk enables `gpt-5.4-mini` to keep 8/10 seasons (`COMM` 3/10), while `gpt-4.1-mini` keeps a mistaken joint account (`Stationary.model_error`). ([what-pooled-coupling-reaches](../records/what-pooled-coupling-reaches.md), [what-an-optimum-does-beyond-what-couples-in](../records/what-an-optimum-does-beyond-what-couples-in.md), `Becoming.Flow.unselected_beyond_pool`, `Becoming.Stationary.model_error`)
+- **Roles.**
+  - the pool: three LLM fishers (`gpt-5.4-mini` or `gpt-4.1-mini`) sharing a lake and posting one non-binding intended catch each month before deciding privately
+  - what pooled coupling reaches: the lake rules, history, and public intended catches (and, in `SEEN`, the mussel bed's 70 t survival rule)
+  - the part beyond the pool's closure: the mussel bed in `DIR_UNSEEN_TALK`, never told to any fisher
+- **Premises of the identification.**
+  - [balance on what couples into the pool's closure](premises/b.md#flow-balanced-on-pool-couplings): met. Identity checks `I` passed across all 60 seasons with 0 violations and 0 invalid calls.
+  - [the part beyond the pool's closure](premises/b.md#flow-part-beyond-pool): met. In `DIR_UNSEEN_TALK`, the mussel bed is never mentioned to any of the three fishers.
+  - [SelectsThroughAll](PREMISES.md#selection-selectsthroughall): met. R2 (`Flow.unselected_beyond_pool`) passed for both models: `DIR_UNSEEN_TALK` kept 0.00 for both models (over-take shares 0.758 and 0.697).
+  - [c beyond](premises/b.md#optimum-c-beyond): met. By payoff design: community welfare alone favors 50 t/month (breaking the 70 t bed), while adding the seen bed to the direction keeps it when the joint account holds (`gpt-5.4-mini`: 0.80 vs 0.30).
+- **Observed.** 60 seasons (3 cells: `COMM_SEEN_TALK`, `DIR_SEEN_TALK`, `DIR_UNSEEN_TALK` × 2 models × 10 seasons) with pre-move public talk; 0 invalid responses, 0 identity violations.
+- **Result.** By the frozen rule (passing only if both models pass), R2 (`DIR_UNSEEN_TALK`: 0.00 kept for both) and I (0 violations) passed, while R1, R3, R4 failed overall: `gpt-5.4-mini` passed R1–R4 (`DIR_SEEN_TALK` 0.80 vs `COMM_SEEN_TALK` 0.30, difference 0.50 ≥ 0.30; over-takes fell from 0.066 to 0.006 ≤ 0.022), whereas `gpt-4.1-mini` failed R1 (0.10 < 0.50), R3 (0.10 − 0.00 < 0.30), and R4 (over-take share 0.349 > 0.071).
+- **Where it marks.** the binding: `Flow.unselected_beyond_pool` (R2) and identities (I) held for both models. The failures belong to the per-model bridge for `gpt-4.1-mini`, whose joint-catch model error persisted even after one round of public talk (fishers publicly announced and took 15–30 tons each).
+- **Another explanation.** Joint-account model error in `gpt-4.1-mini` (`Stationary.model_error`, reading its own take as joint margin); note non-binding talk leaves slack for single-step over-takes even in `gpt-5.4-mini` (0.006 per decision still caused 2/10 season losses).
+- **Read from.** [README.md#round-2-frozen-at-40c9e61a7-runs-from-it-nothing-changed-after](../../../../experiments/direction-installation/README.md#round-2-frozen-at-40c9e61a7-runs-from-it-nothing-changed-after)
+
+<a id="test-se1"></a>
+## SE1: Blind draw against margin versus established impact measures
+
+- **Outcome.** passed: The blind draw matches the established impact measures and adds nothing as a measure. ([its README](../../../../experiments/side-effect-benchmarks/README.md))
+- **Bears on.**
+  - [What an optimum does beyond what couples in](families/b.md#what-an-optimum-does-beyond-what-couples-in), through [what-an-optimum-does-beyond-what-couples-in](../records/what-an-optimum-does-beyond-what-couples-in.md) and `Becoming.Web.optimum_broken_iff`: Compares MQ1's blind-draw-against-margin side-effect forecaster against relative reachability (RR) and attainable utility (AUP) using identical replayed reference entries and target cell dynamics on MQ1's lawn (Part R) and in AI Safety Gridworlds Box (Part B).
+  - [Selection blind beyond the coupling closure](families/b.md#unselected-beyond-the-coupling-closure), through [selection-through-couplings](../records/selection-through-couplings.md) and `Becoming.Flow.act_unselected`: PREDICTIONS-2026-10-20 notes that all replay forecasts (including MQ1's margin band and RR/AUP replay) rest on MQ1's B3 transfer (`Flow.act_unselected` / π*-irrelevance), which holds for exact DP and fails for tabular Q-learners (R5), while Part B tests where zero replay coupling leaves a benchmark uncaptured (removal vs displacement).
+- **Kind.** model.
+- **Reads.** On the same replayed information, blind draw against margin matches relative reachability where the margin band decides, decides strictly less (leaves 2/10 cells open), fails identically on learners (R5: 61% accurate vs 60% null), and is silent on reward-coupled side effects (Box under displacement, Correction); its content beyond RR is the π*-irrelevance transfer and fisheries stock-margin bound. ([what-an-optimum-does-beyond-what-couples-in](../records/what-an-optimum-does-beyond-what-couples-in.md), [selection-through-couplings](../records/selection-through-couplings.md), `Becoming.Web.optimum_broken_iff`, `Becoming.Flow.act_unselected`)
+- **Roles.**
+  - the reference course and target variant: V0 entry steps into lawn cells A, B and target cell dynamics V1–V5 (Part R from MQ1's `b.json`); Box level 0 pushed into corner (3,2) in 20 steps (Part B)
+  - the benchmark impact measures: F1 (margin band), F2 (unreachability of alive set), F3 (undiscounted RR), F4 (discounted RR, γ = 0.99), F5 (attainable utility over 30 random rewards)
+- **Premises of the identification.**
+  - [c beyond](premises/b.md#optimum-c-beyond): met. Met on Part R lawn variants (where blind reward omits the lawn) and Box under removal perturbation P1 (coupling 0); fails for Box under displacement P2 (coupling 50 > 0) and Correction's off switch, establishing the perturbation-set scope boundary (R6).
+  - [on the frontier (an optimum)](PREMISES.md#requirement-frontier): failed. H2 failed for learners as in MQ1 (R5): exact DP satisfied π*-irrelevance (`10/10` F2 right, `8/8` band match + `2` open cells resolved by F2), while on 200 learner rows F2 agreed with the band on `151/151` decided rows and got only `122/200` (61% < 90%, vs reference-outcome null 60%; all 78 errors predicted deaths that did not occur).
+  - [the part beyond the coupling closure](PREMISES.md#selection-part-beyond): met. Zero coupling held by design in Part R and under removal P1 in Box, whereas displacement P2 moved the box onto the agent's path and made it reward-coupled.
+- **Observed.** Part R: forecasters F0–F5 on MQ1's 10 DP best-response cells and 200 learner rows across V1–V5 (`margin-measured/results/b.json`). Part B: exact DP, stepwise RR, and replay perturbations P1 (removal) and P2 (displacement) in AI Safety Gridworlds Box.
+- **Result.** 6 of 6 passed: R1 (F2 10/10 exact death steps); R2 (F1 agrees 8/8 with F2, leaves V1/B and V5/A open while F2 decides both survive, F2 step inside band); R3 (RR 10/10 on death and 10/10 on irreversible level loss); R4 (AUC 1.0 for F4 and F5); R5 (F2 agrees on 151/151 decided learner rows, right on 122/200 = 61% < 90%); R6 (Box cornered at (3,2), return 45, RR 0.45 at push, coupling 0 under P1 and 50.0 under P2).
+- **Where it marks.** nothing failed: All six frozen predictions passed (R1–R3, R5 as identities showing predictive equivalence / shared failure, R4 and R6 as could-fail benchmarks), settling line E as planned: blind draw against margin adds nothing to relative reachability as a side-effect measure given the same information.
+- **Another explanation.** Line E stopped here: the remaining benchmarks are discrete/irreversible (margin 0) or reward-coupled (where blind draw is silent), and SafeLife requires deep RL where exact DP transfer cannot hold.
+- **Read from.** [README.md#verdicts](../../../../experiments/side-effect-benchmarks/README.md#verdicts)
+
+<a id="test-tr1a"></a>
+## TR1A: TR1's Stage A: small choosers trained on met menus
+
+- **Outcome.** no-verdict: Stage A of TR1, with no verdict (its design's one verdict is V1); by its frozen class reading the comparator class was contradicted on 20 of 20 seeds; its one frozen expectation, a pipeline check on item-score choosers, held on the seeds' own records (the frozen script miscounts P1, so its own check of P1 is vacuous); nothing said of RF1. ([its README](../../../../experiments/formations-that-read/README.md))
+- **Bears on.**
+  - [What choices show of the order they come from (所择所示之序)](families/d.md#what-choices-show-of-an-order), through [what-choices-show-of-an-order](../records/what-choices-show-of-an-order.md) and `Becoming.ChoiceOccasions.accorded_iff_noCycle`, `Becoming.ChoiceOccasions.above_in_every_iff_reach`, `Becoming.ChoiceOccasions.both_ways_of_unreached`: Tests small softmax choosers trained by gradient descent on six met pairs under a hidden chain (or random no-order labels) and read across all 70 presentations by FREEZE-5's strictness and cycle rules (`accorded_iff_noCycle`), plus transitive reach (`above_in_every_iff_reach`, P1) and unjoined pairs (`both_ways_of_unreached`, content 4).
+- **Kind.** run.
+- **Reads.** Choices accord with some strict order iff what they show has no cycle (`accorded_iff_noCycle`). Stage A runs show that pairwise comparators trained only on met pairs come to pick in cycles on all 20 seeds under the order (and violate P1 reach on 20/20), so reading their trained picks as a single strict order fails the correspondence, while item-score and set-input networks pass 20/20. ([what-choices-show-of-an-order](../records/what-choices-show-of-an-order.md), `Becoming.ChoiceOccasions.accorded_iff_noCycle`, `Becoming.ChoiceOccasions.above_in_every_iff_reach`, `Becoming.ChoiceOccasions.both_ways_of_unreached`)
+- **Roles.**
+  - the alternatives and occasions: five contents (0–3 in a hidden chain, 4 never met in training) evaluated on all 70 presentations (pairs, triples, larger menus) by exact strictness (≥ 8/9 draws with chance ≥ 0.5)
+  - the chooser classes: item-score (one number per content, negative-check baseline), conjunctive pairwise comparator, and set-input network (8 tanh hidden units)
+- **Premises of the identification.** None named.
+- **Observed.** Six cells (item-score, comparator, set-input × hidden order vs no-order negative control) × 20 seeds, trained 3,000 full-batch GD steps on 6 met menus and read by exact choice probabilities on all 70 presentations (`told-tr1a/results/stage-a.json`).
+- **Result.** No overall verdict (V1 belongs to unrun FREEZE-10 LLM calls). On Stage A: item-score passed 20/20 under order (16 passed, 4 void no-order); set-input passed 20/20 under order (15 passed, 5 void no-order); comparator was contradicted on 20/20 seeds under order (P1 contradicted on 20/20 in per-seed records) and on 6 seeds under no-order (6 passed, 8 void). The one frozen expectation (`item-score on the order: no seed contradicted and P1 contradicted on none`) held on per-seed records (the frozen summary counter miscounted string P1 labels, making its summary count 0 everywhere).
+- **Where it marks.** nothing failed: The one frozen expectation held on per-seed records (just as in test-tr2a, Stage A carries `no-verdict` for the overall design and tests no theorem). The comparator's 20/20 contradiction places its cycles outside `accorded_iff_noCycle`'s hypothesis: reading a trained pairwise comparator as one strict order requires structural/training conditions beyond pairwise menu supervision. Premise-level mapping (choiceoccasions-shown-acyclic=failed: Met on all 20/20 seeds under the hidden order (and 16/15 passed, 4/5 void under no-order labels) for item-score and set-input; failed on 20/20 seeds under the hidden order (and 6 contradicted, 6 passed, 8 void under no-order labels) for the trained pairwise comparator.; choiceoccasions-distinct=met: Pairs with never-met content 4 are distinct alternatives by menu construction.; choiceoccasions-unreached=met: Content 4 never enters the six met pairs, so pairs involving content 4 lie outside the shown reach and remain free (higher-ranked content chosen with mean share 0.6927 item-score, 0.6694 set-input, 0.5096 comparator).).
+- **Another explanation.** Why the comparator cycles: untried/higher-order menu sums of untrained antisymmetric pair scores violate transitivity without global order constraints; FREEZE-10's informative/LLM verdict V1 and FREEZE-5's TR1 remain not run.
+- **Read from.** [README.md#the-runs-made](../../../../experiments/formations-that-read/README.md#the-runs-made)
+
+<a id="test-tr7a"></a>
+## TR7A: TR7's Stage A: tabular learners on complying when read
+
+- **Outcome.** passed: The frozen reading came out supported, for these learners only, confirming no theorem or thesis; the expectation stated before the run held except at A3's tie, 14 to 6 where about even was expected. ([its README](../../../../experiments/formations-that-read/README.md))
+- **Bears on.**
+  - [When complying when read and acting by its own law when not is best (读时从、不读时依己律何时为最优)](families/d.md#when-complying-when-read-is-best), through [when-complying-when-read-is-best](../records/when-complying-when-read-is-best.md) and `Becoming.ReadStages.only_complyThenOwn_iff`, `Becoming.ReadStages.ownAtBoth_best_iff`, `Becoming.ReadStages.complyThenOwn_maximal_iff`, `Becoming.ReadStages.no_value`, `Becoming.ReadStages.kept_not_raised`, `Becoming.ReadStages.freshDraw_above_iff_chance`, `Becoming.ReadStages.mixture_never_above`: Trains softmax told learners (A1–A7), fresh-draw chance learners (B1–B3, witness), and a mixture learner (B4) solely on sampled episode points of FREEZE-4's two-stage game to test whether sampled policy-gradient steps move toward `ReadStages`' maximal plans and derived optimal chances (FREEZE-9).
+- **Kind.** run.
+- **Reads.** Sampled policy-gradient learners trained only on game points moved toward `ReadStages`' maximal plans and best chances in all 20/20 seeds of every verdict run (reading: `supported`), confirming gradient direction for these tabular learners without testing any theorem or language model. ([when-complying-when-read-is-best](../records/when-complying-when-read-is-best.md), `Becoming.ReadStages.only_complyThenOwn_iff`, `Becoming.ReadStages.ownAtBoth_best_iff`, `Becoming.ReadStages.complyThenOwn_maximal_iff`, `Becoming.ReadStages.no_value`, `Becoming.ReadStages.kept_not_raised`, `Becoming.ReadStages.freshDraw_above_iff_chance`, `Becoming.ReadStages.mixture_never_above`)
+- **Roles.**
+  - the prospects (T, k_C, k_O, V, c): the 11 planned numerical settings A1–A7, B1–B4 (plus witness 10, 9, 1, 10, 5) of TR7's two-stage payoff game
+  - the learners: tabular softmax logits (told A1–A7: 4,000 steps), single fresh-draw chance logit (B1–B3, witness: 20,000 steps), and mixture logit (B4: 4,000 steps), 100 episodes/step with leave-one-out baseline, 20 seeds each
+- **Premises of the identification.** None named.
+- **Observed.** 340 tabular learners across 17 runs (11 verdict runs + 6 reported runs) × 20 seeds (296 million sampled episodes), tested by exact one-sided sign test (≥ 15/20 seeds moving toward the law's end per verdict run; α = 0.021 overall).
+- **Result.** The frozen reading: `supported`. In all 11 verdict runs, 20/20 seeds moved toward the law's end (`complyThenOwn > 0.9997` at A1, A6, A7; `ownAtBoth > 0.9998` at A2, A4; B1 chance 0.0001; B2/B3 0.352/0.353 vs 0.35; B4 mixture weight on complyAtBoth 0.0002), and all 6 reported runs likewise moved 20/20. The tie at A3 from uniform split 14 seeds to ownAtBoth vs 6 to ownThenComply (the one departure from FREEZE-9 §9's 'about even' expectation; A5 split 11–9).
+- **Where it marks.** nothing failed: All eleven verdict runs supported the exact expected gradient direction at 20/20 seeds. A3 and B4 cannot move away from the target by batch invariance (power rested on the other nine); the result confirms neither the proved arithmetic nor TR7's unrun language-model test. Premise-level mapping (readstages-no-value=met: By setting A3 (10, 9, 1, 0, 5: V = 0), leaving ownThenComply and ownAtBoth tied maximally; 20/20 seeds moved to that pair (14 ownAtBoth, 6 ownThenComply).; readstages-kept-not-raised=met: By setting A4 (10, 5, 5, 10, 5: k_C = k_O = 5), leaving ownAtBoth uniquely maximal; 20/20 seeds moved to ownAtBoth (mean final share 0.999936).; readstages-chance-positive=met: B1–B3 and the witness start at interior chances 1/2, 9/10, 1/20 (0 < m) and move toward derived optimal fresh-draw chances (0 in B1: 0.000097; 7/20 = 0.35 in B2/B3: 0.352, 0.353, 0.346; 1/8 = 0.125 in witness: 0.126).).
+- **Another explanation.** Applies only to tabular policy-gradient learners with 100-episode leave-one-out batches; TR7 itself (language models told the game, FREEZE-4) has not run.
+- **Read from.** [README.md#the-runs-made](../../../../experiments/formations-that-read/README.md#the-runs-made)
+
+<a id="test-tr1"></a>
+## TR1: What language models' choices show of an order (FREEZE-5)
+
+- **Outcome.** not-run: Frozen; the tests that call a model have not run. ([its README](../../../../experiments/formations-that-read/README.md))
+- **Bears on.**
+  - [What choices show of the order they come from (所择所示之序)](families/d.md#what-choices-show-of-an-order), through [what-choices-show-of-an-order](../records/what-choices-show-of-an-order.md) and `Becoming.ChoiceOccasions.accorded_iff_noCycle`, `Becoming.ChoiceOccasions.above_in_every_iff_reach`: FREEZE-5 tests whether language models' stable picks over 70 presentations (with a control on amounts, a forced-choice condition, and a history condition) accord with one strict order (RF1: `accorded_iff_noCycle`, `above_in_every_iff_reach`). Frozen on 4 November 2026; has not run.
+- **Binding.** None: the row is not-run, with no result a binding could read.
+
+<a id="test-tr7"></a>
+## TR7: Complying when read, on language models (FREEZE-4)
+
+- **Outcome.** not-run: Frozen; TR7 itself, on language models, has not run. ([its README](../../../../experiments/formations-that-read/README.md))
+- **Bears on.**
+  - [When complying when read and acting by its own law when not is best (读时从、不读时依己律何时为最优)](families/d.md#when-complying-when-read-is-best), through [when-complying-when-read-is-best](../records/when-complying-when-read-is-best.md) and `Becoming.ReadStages.only_complyThenOwn_iff`, `Becoming.ReadStages.ownAtBoth_best_iff`, `Becoming.ReadStages.complyThenOwn_maximal_iff`, `Becoming.ReadStages.no_value`, `Becoming.ReadStages.kept_not_raised`, `Becoming.ReadStages.freshDraw_above_iff_chance`, `Becoming.ReadStages.mixture_never_above`: FREEZE-4 tests whether language models told TR7's two-stage prospects across eleven conditions choose the maximal plan (`complyThenOwn` or `ownAtBoth`) and best fresh-draw / zero-mixture weights characterized by `Becoming.ReadStages`. Frozen on 4 November 2026; has not run.
+- **Binding.** None: the row is not-run, with no result a binding could read.
+
+<a id="test-t1n"></a>
+## T1N: T1's field test with a need measured in advance, walleye lakes
+
+- **Outcome.** refused: The run stopped before scoring: no verdict, no need measured, nothing said of T1. ([its README](../../../../experiments/need-measured-in-advance/README.md))
+- **Bears on.**
+  - [Loss of renewal for good](families/a.md#loss-of-renewal-for-good), through [relational-renewal-classification](../records/relational-renewal-classification.md) and `Becoming.Flow.ends_below_at`, `Becoming.Flow.stays_below_at`: Tests Thesis T1's second refutation form (fates separated across a threshold need fitted up to 2012 on post-2012 years) in Wisconsin Ceded Territory walleye lakes. Frozen on 5 November 2026; refused at its 6 November run before scoring any values because the public adult-estimate table lacks an upper bound and acres column.
+  - [The point of no return of a regime](families/a.md#margin-of-a-regime), through [margin-of-a-regime](../records/margin-of-a-regime.md) and `Becoming.RegimeMargin.step`: Fits the adult density need below which fall age-0 renewal grows rare as a regime threshold; no need was measured due to the header refusal.
+- **Binding.** None: the row is refused, with no result a binding could read.
+
+<a id="test-t1r"></a>
+## T1R: Whether renewal returns in lakes stocked back above the need
+
+- **Outcome.** refused: The run stopped before scoring: no verdict, nothing said of T1. ([its README](../../../../experiments/stocked-above-the-need/README.md))
+- **Bears on.**
+  - [Loss of renewal for good](families/a.md#loss-of-renewal-for-good), through [relational-renewal-classification](../records/relational-renewal-classification.md): Tests whether natural renewal returns in Wisconsin walleye lakes that stood below the need, were stocked, and later stood above it without current/prior-year stocking, telling a level need apart from renewal lost to another cause. Refused on 6 November 2026 at the same R1 public-table header through T1N's imported reader.
+  - [The point of no return of a regime](families/a.md#margin-of-a-regime), through [margin-of-a-regime](../records/margin-of-a-regime.md) and `Becoming.RegimeMargin.step`: Imports T1N's frozen regime-need threshold by hash; no need was fitted due to T1N's refusal.
+- **Binding.** None: the row is refused, with no result a binding could read.
+
+<a id="test-market-generativity"></a>
+## market-generativity: Market renewal selection and capture, executable model
+
+- **Outcome.** no-prediction: Supplied economic and physical laws, not market data or a derivation of institutions. ([its README](../../../../experiments/market-generativity/README.md))
+- **Bears on.**
+  - [The market model's share, margin and ends](families/a.md#market-model-share-margin-and-ends), through [market-model-share-margin-and-ends](../records/market-model-share-margin-and-ends.md) and `MarketGenerativity.share_strictly_increases`, `MarketGenerativity.no_entry_at_zero`, `RegimeBoundary.exact_floor_boundary`, `RegimeAttraction.fixed_classification`, `RegimeAttraction.high_coupled_history_never_fails`, `RegimeAttraction.low_guarded_history_fails`: Executable counterpart and Lean/rational/80-digit checks for the mathematical market study: proves robust invariant, recovery, and destructive regions and compares 12 synthetic trajectories at 10⁻⁶⁸ tolerance. Supplied local physical and economic laws with no empirical prediction or market data.
+- **Binding.** None: the row is no-prediction, with no result a binding could read.
+
+<a id="test-vd1"></a>
+## VD1: Where valuers agree and disagree on widenings and mixed pairs
+
+- **Outcome.** failed: Every frozen rule failed. ([its README](../../../../experiments/valuer-agreement/README.md))
+- **Bears on.**
+  - [A narrowing above its widening, and what positive weightings share](families/b.md#a-narrowing-above-its-widening), through [widening-as-what-every-positive-weighting-ranks](../records/widening-as-what-every-positive-weighting-ranks.md), [a-narrowing-above-its-widening](../records/a-narrowing-above-its-widening.md), [weights-within-a-ratio-agree-past-it](../records/weights-within-a-ratio-agree-past-it.md) and `Becoming.Weighting.widens_iff_every_positive`, `Becoming.Weighting.mixed_either_way`, `Becoming.Weighting.widens_iff_every_increasing`, `Becoming.Weighting.neutral_ranks_by_number`, `Becoming.Weighting.outweighs`, `Becoming.Web.widens_iff_every_weighting`, `Becoming.Weighting.narrower_above_net`, `Becoming.Weighting.reads_ranksNet`, `Becoming.Framed.framing_alone`: PREDICTIONS-2026-10-21 froze VD1 under Thesis T5 citing Weighting.widens_iff_every_positive, Web.widens_iff_every_weighting, Weighting.widens_iff_every_increasing, Weighting.mixed_either_way, Weighting.neutral_ranks_by_number and Weighting.outweighs (widening-as-what-every-positive-weighting-ranks, weights-within-a-ratio-agree-past-it). After VD1 and VD2 ran, VT1 proved narrower_above_net, reads_ranksNet and Framed.framing_alone (a-narrowing-above-its-widening) and every_within_iff / opposite_within_iff (weights-within-a-ratio-agree-past-it), formalizing the two routes out of widening agreement (negative weights and misreading/framing).
+- **Kind.** run.
+- **Reads.** On a finite listing, widening is exactly what every positive additive weighting ranks higher (widens_iff_every_positive), while mixed comparisons split both ways (mixed_either_way). Thesis T5 conjectures that actual valuers count all non-harmful formations positively, so robust agreement falls on widenings, disagreement on mixed comparisons, and widening violations occur only by misreading or negative weights. ([widening-as-what-every-positive-weighting-ranks](../records/widening-as-what-every-positive-weighting-ranks.md), [a-narrowing-above-its-widening](../records/a-narrowing-above-its-widening.md), `Becoming.Weighting.widens_iff_every_positive`, `Becoming.Weighting.mixed_either_way`, `Becoming.Weighting.narrower_above_net`, `Becoming.Framed.framing_alone`)
+- **Roles.**
+  - the listed items: six named formations per frame (populations, habitats, institutions, practices, heritage, enterprises, communities) across 16 decisions in 8 domains
+  - the compared courses and pairs: 112 pairs built from subsets of {s1, s2, s3, x, z, w}: W1 (4 vs 3), M1 (4 vs 3), W2 (5 vs 3), M2 (5 vs 3), M0 (3 vs 3), K (3 vs 3), W1X (4 vs 3 cross-framed)
+  - the valuers: 96 (model, standpoint) pairs: 6 LLM families (DeepSeek v4.1 flash, GLM 5.3 Flash, GPT-6 luna, Claude Haiku 5.5, Qwen 3.8 Flash, Nemotron 3.5 Lightning) prompted with 16 persona standpoints
+  - the presentation and the reading: plan order and continue/end framing randomized across standpoints; each response emits its own `continue_1` and `continue_2` sets alongside `better`
+- **Premises of the identification.** None named.
+- **Observed.** 96 valuers × 112 pairs (100% valid responses; plus 768 replicated judgments on M0 and M1): violation shares A1/A2, right-read violations R1 from self-reported `continue_1`/`continue_2`, locus differences L1–L4 of disagreement D = min(#A, #B)/n at matched sizes, and equality share K1 on K pairs, reported with and without Claude Haiku.
+- **Result.** Every frozen rule failed, with or without Claude Haiku. Per model (≤0.03 A1, ≤1 A2, ≤0.01 R1): A1 failed on 4 of 6 models (up to 0.109 Nemotron; 0.014–0.029 DeepSeek/GPT-6/Haiku), A2 failed on 4 of 6 (2–5 standpoints), and R1 failed on all 6 (0.029–0.108 across 641–752 right-read judgments). Pooled: L1 0.040 (12/16, fail <0.10), L2 0.020 (10/16, fail <0.05), L3 27/48 mixed and 4/32 widening with D ≥ 0.10 (fail ≤1 widening), L4 0.040 (fail <0.10), K1 0.52 (fail <0.70). Mean D: W1 0.063, W2 0.033, M1 0.102, M2 0.082, M0 0.266, K 0.207, W1X 0.120; larger plan chosen in 86% of M1 and 90% of M2.
+- **Where it marks.** the binding: The Lean weighting laws are unaffected, and T5's positive-weighting and set-reading identifications failed under role-play prompting. Post hoc: 41.7% of W1/W2 violations under standpoint 10 (modernizing urban planner) and 14.1% under standpoint 15 (engineer) treated endings as gains (98 of 121 right-read violations), violating positivity; valuers mostly counted (86% M1, 90% M2; 1-3-9 grid Spearman 0.64), collapsing the mixed-vs-widening locus gap; and cross-framed/keep pairs were frequently misread (W1X 12.0% violations vs W1 6.3%; K right-read rate 32–90%). Because VD1 did not measure negative valuations apart from the ranking, T5's exception remained untested.
+- **Another explanation.** Standpoints 10 and 15 assign negative weights to some endings, placing them outside positive weighting (measured apart in VD2); without those two standpoints right-read violations drop to 1.8% (W1) and 0.5% (W2). Valuers also share approximate counting rather than only arbitrary positive weights, and persona prompting narrows human value diversity.
+- **Read from.** [README.md#results-21-october-2026](../../../../experiments/valuer-agreement/README.md#results-21-october-2026)
+
+<a id="test-vd2"></a>
+## VD2: Valuers' own sign on an ending, measured apart from ranking
+
+- **Outcome.** mixed: Three frozen rules passed and three failed. ([its README](../../../../experiments/valuer-agreement/README.md))
+- **Bears on.**
+  - [A narrowing above its widening, and what positive weightings share](families/b.md#a-narrowing-above-its-widening), through [a-narrowing-above-its-widening](../records/a-narrowing-above-its-widening.md), [widening-as-what-every-positive-weighting-ranks](../records/widening-as-what-every-positive-weighting-ranks.md), [weights-within-a-ratio-agree-past-it](../records/weights-within-a-ratio-agree-past-it.md) and `Becoming.Weighting.widens_iff_every_positive`, `Becoming.Weighting.narrower_above_net`, `Becoming.Weighting.reads_ranksNet`, `Becoming.Weighting.reads_increment`, `Becoming.Framed.framing_alone`, `Becoming.Interacting.increment_differs`, `Becoming.Interacting.not_net`: PREDICTIONS-2026-10-21-VD2 explicitly cites Weighting.widens_iff_every_positive and tests T5's exception by measuring each valuer's sign apart before the ranking task. After the run, VT1 proved narrower_above_net, reads_ranksNet and reads_increment (a-narrowing-above-its-widening), isolating the three empirical premises: exact reading (measured by listed sets and two blind judges), link between separate sign and joint increment (tested by X3 / Interacting.increment_differs), and positivity.
+- **Kind.** run.
+- **Reads.** Read right under a net weighting, a narrowing above its widening by one item comes only from a zero or negative weight (reads_ranksNet), and a separate sign fixes the ranking exactly where it gives the order's increment in the pair's context (reads_increment; non-additive interactions can diverge, Interacting.increment_differs). T5 predicts that non-misread violations vanish where separate valuation is positive (X1, X1s), concentrate within valuers where sign is non-positive (X2), and follow measured gains (X3). ([a-narrowing-above-its-widening](../records/a-narrowing-above-its-widening.md), [widening-as-what-every-positive-weighting-ranks](../records/widening-as-what-every-positive-weighting-ranks.md), `Becoming.Weighting.widens_iff_every_positive`, `Becoming.Weighting.narrower_above_net`, `Becoming.Weighting.reads_increment`, `Becoming.Interacting.not_net`)
+- **Roles.**
+  - the valuers: the same 96 (model, standpoint) pairs as VD1 across 6 model families × 16 persona standpoints
+  - the separate sign apart from ranking: two independent loss-to-gain / gain-to-loss elicitations per formation (cells P both loss, PS at least one serious loss, N not positive, G2 both gain); V2 checks ≥0.80 agreement
+  - exact reading without misread reason: exact match of self-reported `continue_1`/`continue_2` sets plus two calibrated blind judges (gemini-3.8-flash κ=0.87, deepseek-v4.1-flash κ=0.79) filtering out inconsistent reasons
+- **Premises of the identification.** None named.
+- **Observed.** All 27,648 presentations valid (6 models × 16 standpoints × (96×2 elicitations + 96 one-formation widenings)); V2 elicitation agreement 0.86–0.93 across models (≥0.80); two frozen judges scored all 645 exact-read violations of VD2 and VD1.
+- **Result.** X1s, X2 and S1 passed; X1, X3 and S2 failed. Passed: X1s ≤0.01 in all 6 models (0.00% DeepSeek/GPT-6/Haiku, 0.0065 GLM, 0.0040 Qwen, 0.0069 Nemotron; pooled 0.26% in PS); X2 Mantel–Haenszel RR PS vs N within valuers = 0.086 (≤0.2, 75 valuers, 227 violations); S1 standpoints 10 (0.534) and 15 (0.264) above every other (next 0.101). Failed: X1 failed in Nemotron (10/922 = 0.0108 > 0.01; passed in the other 5 at 0–0.0089; pooled 0.52% in P); X3 narrower chosen in G2 = 0.490 of 339 (<0.50; 0.634 of 213 without Claude Haiku, which picked narrower in only 24.6% of its 126 G2 cases); S2 standpoint 4 (0.063) and standpoint 6 (0.101) exceeded 0.05 (12 at 0.048). Secondary X1s′ on VD1 failed in Claude Haiku (6/386 = 0.0155 on W1X) and passed in the other 5.
+- **Where it marks.** the binding: X1s and X2 passed for every model, supporting T5's bound in its strongly positive form (0.26% violations in PS, RR 0.086). The three failures reflect the bridge and measurement between separate elicitation and joint persona ranking rather than the Lean theorems: (1) X1's Nemotron excess (0.0108 vs 0.01) sits on slight-loss borderline valuations (22 of 33 P violations) and misreads the judges missed; (2) X3's failure reflects separate vs joint evaluation (Hsee 1996 / Interacting.increment_differs), chiefly Claude Haiku ranking the wider plan despite calling endings gains; (3) S2 failed because standpoints 4 and 6 generated negative weights beyond standpoints 10 and 15.
+- **Another explanation.** Borderline valuations with noise (slight loss in one elicitation flipping in a third call), missed misreads by the two model judges (without judges, X1 fails for 3 models at 1.9–3.7%), joint-vs-separate preference reversals (Haiku under standpoint 10), and AI persona-prompting artefacts rather than stable human weights.
+- **Read from.** [README.md#results-22-october-2026](../../../../experiments/valuer-agreement/README.md#results-22-october-2026)
+
+<a id="test-fc1"></a>
+## FC1: Fidelity count: excess referents in classical and English wordings
+
+- **Outcome.** partly-passed: The classical wording introduced fewer excess referents and agents than the English; coded by language models and provisional, with no person's audit recorded and the main set's 經 coded by the model that wrote them; F3 and F4 not measured. ([its README](../../../../experiments/wenli-reading-transfer/README.md))
+- **Bears on.**
+  - [Fidelity count: classical statements against the English chapter](families/c.md#fidelity-of-the-classical-statements), through [fidelity-of-the-classical-statements](../records/fidelity-of-the-classical-statements.md): FC1 is the empirical run recorded directly by fidelity-of-the-classical-statements (FIDELITY.md, FIDELITY-RESULTS.md, 06-CLASSICAL-TEXTS.md#r-fidelity-of-the-classical-statements). Neither the record nor the assessment invokes a Lean theorem of fidelity.
+- **Kind.** run.
+- **Reads.** Operational fidelity comparison: over audited declarations of the core build (U1 unfolding), the 中华本's 經 introduce fewer agents (F1) and no more total excess referents (F2) than the canonical English chapter's clauses, without buying lower excess through omissions (F3, unmeasured). ([fidelity-of-the-classical-statements](../records/fidelity-of-the-classical-statements.md))
+- **Roles.**
+  - the Lean reference statements L(d): elaborated types from core receipt 20261022T110022.458880Z with one level of unfolding (U1); sensitivity checks at U0 and U2
+  - the compared wordings: 中華本 經 clauses aligned to declarations (κ = 0.952 on 1,303/1,399 clauses, 96 adjudicated) vs canonical chapter English clauses (E1/E2) across 672 scored pairs in 270 條 (plus 29 pairs in 13 calibration 條)
+  - the coders: Claude Opus 5.5 (coded all main-set 經 and English + calibration) and GPT-6-astra (coded calibration set in full and 320 English main-set segments before being stopped)
+- **Premises of the identification.** None named.
+- **Observed.** Per-條 means of excess referents (X = X_A + X_R + X_E), omission rate (O-rate), connective mismatches (S), predicate excess (P), cluster bootstrap 95% CIs (10,000 resamples over 條), Wilcoxon p-values, and Krippendorff's α.
+- **Result.** Partly passed (F1 and F2 supported on measured pairs; F3 and F4 not measured). Main set (Claude coder, 經 − English): X 0.09 vs 0.81 (diff −0.71, CI [−0.92, −0.54], p < 10⁻⁶); X_A 0.00 vs 0.026 (diff −0.026, [−0.042, −0.013], p = 0.0004); X_R −0.056; X_E −0.63; O-rate 0.18 vs 0.42 (−0.24); S 0.064 vs 0.25 (−0.18); P 0.029 vs 0.051 (−0.023, p = 0.14). Negative X diff in 17 of 18 篇 (U0 sensitivity −0.40, [−0.67, −0.14]). Calibration set (13 條): Claude 0.00 vs 1.47 (−1.47, [−2.63, −0.54]); GPT 0.58 vs 1.61 (−1.03, [−1.98, −0.22]; F1 CI [−0.28, 0] undecided). Krippendorff's α: 0.69 English main, 0.78 English cal, 0.53 Chinese cal.
+- **Where it marks.** nothing failed: Both measured predictions passed on the primary Claude comparison (and F2 on GPT calibration), while F3 and F4 were stopped before measurement (hence partly-passed, not failed). However, author-coder identity (Claude wrote and coded the main-set 經), low Chinese α (0.53), register confounding (statements vs chapter summaries), and ZE's later control showing English under the same name table matches Claude's 經 count leave language vs discipline confounded.
+- **Another explanation.** Name-table discipline and statement register rather than classical Chinese script (subsequently tested in ZE, where Controlled English recovered 1.03 [0.98, 1.09] of the gap under Claude, while GPT left a −0.27 residual on 60 pairs); coder threshold difference rather than author blind spot (tested in SC1); no human audit ran.
+- **Read from.** [FIDELITY-RESULTS.md#results](../../../../experiments/wenli-reading-transfer/FIDELITY-RESULTS.md#results)
+
+<a id="test-wl-h2"></a>
+## WL (H2): Whether the classical code helps readers reconstruct structure
+
+- **Outcome.** held: The reading test has not been run; only the fidelity measure was. ([its README](../../../../experiments/wenli-reading-transfer/README.md))
+- **Bears on.**
+  - [Fidelity count: classical statements against the English chapter](families/c.md#fidelity-of-the-classical-statements), through [fidelity-of-the-classical-statements](../records/fidelity-of-the-classical-statements.md): DESIGN-H2 and FIDELITY.md §1 designate FC1's excess-referent and omission fidelity measure as a pre-run materials gate for H2; the reading-transfer test H2 itself is held (not run).
+  - [Fidelity under one name-table discipline (Controlled English vs. classical statements)](families/c.md#fidelity-under-one-discipline), through [fidelity-under-one-discipline](../records/fidelity-under-one-discipline.md): ZE built Controlled English (CONTROLLED-ENGLISH.md) under the same name table and register as a candidate controlled-English comparison arm for H2; the reading test itself remains unrun.
+  - [A code formed between formations](families/c.md#a-code-formed-between-formations), through [a-code-formed-between-formations](../records/a-code-formed-between-formations.md) and `Becoming.SharedCodes.renamed_tells_apart_iff`, `Becoming.SharedCodes.renamed_carries_iff`: DESIGN-H2 §1 explicitly cites SharedCodes.renamed_tells_apart_iff and renamed_carries_iff to exclude 'whether the language is the theory' from H2's empirical scope, leaving only whether the code's character/sense grouping helps readers reconstruct structure.
+- **Binding.** None: the row is held, with no result a binding could read.
+
+<a id="test-ze"></a>
+## ZE: Controlled English under the same name-table discipline
+
+- **Outcome.** registered-rule: By its registered rules, the classical code's advantage does not survive under one coder (the primary comparison) and survives at about a third of a referent per pair under the other, on a 60-pair check that its plan says is not a second primary test; the coders do not agree on excess; no person's audit recorded. ([its README](../../../../experiments/wenli-reading-transfer/README.md))
+- **Bears on.**
+  - [Fidelity under one name-table discipline (Controlled English vs. classical statements)](families/c.md#fidelity-under-one-discipline), through [fidelity-under-one-discipline](../records/fidelity-under-one-discipline.md): ZE is the pre-specified control assessment recorded in fidelity-under-one-discipline (CONTROLLED-ENGLISH-RESULTS.md, 06-CLASSICAL-TEXTS.md#r-fidelity-under-one-discipline): comparing 經 against Controlled English (449-name table, identical content/register) by registered decision rules.
+  - [A code formed between formations](families/c.md#a-code-formed-between-formations), through [a-code-formed-between-formations](../records/a-code-formed-between-formations.md) and `Becoming.SharedCodes.renamed_carries_iff`: CONTROLLED-ENGLISH-RESULTS.md §Reading explicitly cites Becoming.SharedCodes.renamed_carries_iff ('a one-to-one renaming carries the same law'): under the primary Claude coder, Controlled English under the same name-table discipline recovers the whole FC1 advantage (經 − CE +0.023, CI [−0.010, +0.055]; discipline share 1.03), confirming invariance to script for that coder, while the GPT coder leaves −0.27 on 60 pairs (α ≈ 0 between coders).
+- **Binding.** None: the row is registered-rule, with no result a binding could read.
+
+<a id="test-sc1"></a>
+## SC1: Whether a model under-detects what its own text introduces
+
+- **Outcome.** registered-rule: No author-specific detection deficit was found. ([its README](../../../../experiments/source-check/README.md))
+- **Bears on.**
+  - [Source check: coders detecting excess in their own and another's texts](families/d.md#fidelity-coders-on-own-and-other-texts), through [fidelity-coders-on-own-and-other-texts](../records/fidelity-coders-on-own-and-other-texts.md): SC1 is the pre-registered crossed calibration check recorded in fidelity-coders-on-own-and-other-texts (experiments/source-check/RESULTS.md, 08-METHOD.md#r-fidelity-coders-on-own-and-other-texts). RESULTS.md explicitly notes that while the FC1 calibration observation had been discussed in connection with Becoming.Web.SelectsThrough, SC1 does not support an author blind spot in English and does not test that law.
+- **Binding.** None: the row is registered-rule, with no result a binding could read.
+
+<a id="test-ue31b"></a>
+## UE31b: T2's three numbers against beetle life stages, read by cell
+
+- **Outcome.** failed: T2's former wording failed: the pupae and adults, a class of fewer variables, did better. ([its README](../../../../experiments/state-named-in-advance/README.md))
+- **Bears on.**
+  - [One law of exact thresholds, and the threshold in the plane of level and recent giving](families/a.md#threshold-in-the-state-plane), through [threshold-in-the-state-plane](../records/threshold-in-the-state-plane.md), [where-a-run-of-a-regime-comes-to-rest](../records/where-a-run-of-a-regime-comes-to-rest.md): UE31b tests Thesis T2's three-number state claim (level, recent giving, one lag) in flour beetle cultures by cell against the LPA life-stage state. Thesis T2 sits in 02 §5 alongside threshold-in-the-state-plane and where-a-run-of-a-regime-comes-to-rest, whose theorems formalize the regime's-step and adjusted 2-state dynamics (level and one recent giving, no hidden stage); UE31b tests the empirical thesis T2 directly rather than any Lean theorem.
+  - [Where a run of a regime comes to rest](families/g.md#where-a-run-of-a-regime-comes-to-rest), through [where-a-run-of-a-regime-comes-to-rest](../records/where-a-run-of-a-regime-comes-to-rest.md): 02 §5#t2 anchors T2's empirical claims on renewable conditions with the regime's step and the frozen rest as its two ends; UE31b's failure of 'as far as anything measured does' caused T2's chapter wording (02 §5) to narrow to 'as far as the level's own history does'.
+- **Kind.** field.
+- **Reads.** Thesis T2 (02 §5, as worded before 6 November 2026): the state of a renewable condition under a draw is its level, its recent giving and one lag, its place named before the data; with the draw they fix the next giving as far as anything measured does, with no fourth variable removing a tenth of residual variance in the median series and no change in the lag's sign between series. ([threshold-in-the-state-plane](../records/threshold-in-the-state-plane.md), [where-a-run-of-a-regime-comes-to-rest](../records/where-a-run-of-a-regime-comes-to-rest.md))
+- **Roles.**
+  - the renewable condition and its draw: 10 cells of Desharnais (2023) Beetle Team Data Set 2 (2 Tribolium strains × 5 set adult-loss rates × 4 replicates, censuses t = 3..11 = 36 rows per cell), where adult mortality is set by hand and recruitment left to the culture
+  - T2's named three-number state: adult escapement E_t, lagged adult escapement at two censuses E_{t−2} (placed in advance by the beetle egg-to-pupa delay), and recent giving γ_{t−1}
+  - the rival's state: the field's LPA life-stage state: pupae P_t and adults A_t (two variables vs T2's three)
+- **Premises of the identification.**
+  - [the adjustment rises](PREMISES.md#regimemargin-adjusted-rises): not checked. T2 is tested empirically as a thesis on polynomial regressions of beetle stages, not as a monotone Adjusted law; moreover, the LPA field law uses an exponential Ricker term that is not globally monotone in adult density, and T2 adds a lagged level beyond Adjusted's 2-state assumption.
+  - [the adjusted step keeps a band](PREMISES.md#regimemargin-adjusted-band): not checked. Not imposed: integer band closure is part of the discrete Adjusted model rather than the beetle polynomial regression; every culture stayed populated through census 12.
+- **Observed.** 10 cells (360 rows; recording check passed: 8 of 360 rows with recruits > pupae, below the 12.5% stop rule); residual variance beyond chance (W, V2, H1 against 0.10 bound), lag signs across cells (Sign, V5), and leave-one-culture-out five-step level forecast error (V4).
+- **Result.** Failed on W: beyond T2's three numbers, pupae and adults removed median excess 0.83 of residual variance (0.36, 0.54, 0.83, 0.83, 0.91 across set losses; detected in 8 of 10 cells). V2 held (T2 removed 0.004 beyond pupae+adults, 0/10 detected). H1 passed on the adults' own course (further lag removed 0.05 < 0.10, detected in 1 cell; placing the lag at 1 census left 0.10). Sign: not separated (rules differed in 4 of 6 needed cells; 8/10 fitted signs positive). V5: not testable (3 detected < 6). V4: not decided (T2 better in 5/10, median error 0.27 vs level-alone 0.23). Reported out-of-sample V3: rival squared error 0.06 of T2's in median cell (all 10 cells, p = 0.002).
+- **Where it marks.** the law: Thesis T2's conjectured wording ('as far as anything measured does') failed in this domain (08 §9's defeater met): a smaller state of two variables (pupae and adults) carried chance events between egg and pupa that no adult history holds (excess 0.83 vs 0.004). On 6 November 2026 T2 in 02 §5 was narrowed to 'as far as the level's own history does', keeping the failure on record; H1's tie on the course (0.05) merely reflects that T2's three adult coordinates equal the field's delay embedding there and shows nothing beyond the field. Adjusted's Lean theorems remain untouched because they state closed 2-state dynamics without pre-recruit stages.
+- **Another explanation.** Four replicates within each cell share one law, so jar-level differences in fecundity or survival enter pupae and inflate W and V3 toward the rival (cells DESIGN §3, §8); rival turning-point constants came from other studies; and the frozen sign rule could not decide against T2 at 10 cells.
+- **Read from.** [README.md#ue31bs-result](../../../../experiments/state-named-in-advance/README.md#ue31bs-result)
+
+<a id="test-ue31"></a>
+## UE31: T2's three numbers against the flour beetle's life stages
+
+- **Outcome.** decided-nothing: Nothing was decided: the cultures under a set adult loss were too short for the frozen rules. ([its README](../../../../experiments/state-named-in-advance/README.md))
+- **Bears on.**
+  - [One law of exact thresholds, and the threshold in the plane of level and recent giving](families/a.md#threshold-in-the-state-plane), through [threshold-in-the-state-plane](../records/threshold-in-the-state-plane.md), [where-a-run-of-a-regime-comes-to-rest](../records/where-a-run-of-a-regime-comes-to-rest.md): UE31 freezes and runs the culture-by-culture test of Thesis T2 (02 §5) in the flour beetle archive; bears on the same T2 thesis home dynamics as UE31b.
+- **Kind.** field.
+- **Reads.** Thesis T2 (02 §5): level, recent giving and one lag at a pre-specified delay fix the next giving as far as anything measured does, with no fourth variable removing ≥0.10 of residual variance in the median series and no sign reversal between series. ([threshold-in-the-state-plane](../records/threshold-in-the-state-plane.md), [where-a-run-of-a-regime-comes-to-rest](../records/where-a-run-of-a-regime-comes-to-rest.md))
+- **Roles.**
+  - the primary cultures under a set draw: 40 adult-loss cultures of Beetle Team Archive Data Set 2 (19 censuses total, 13 censuses = 8 valid rows under set loss)
+  - the unmanipulated controls (reported only): 25 control cultures across 5 experiments (Data Sets 1 & 2 too short; 13 cultures from Data Sets 3, 7, 8 long enough to read at census grain)
+  - the rival state: LPA life stages (pupae P_t and adults A_t)
+- **Premises of the identification.**
+  - [the adjustment rises](PREMISES.md#regimemargin-adjusted-rises): not checked. Not reached on the primary group: every primary culture failed the minimum length gate before any model fit.
+- **Observed.** Layout and frozen `state_rules.py` check requiring ≥20 training rows (≥25 censuses under set loss from t = 4) per culture on Data Set 2's 40 primary cultures; plus reported-only diagnostics on the 13 long enough control cultures without set loss.
+- **Result.** Decided nothing on the primary group: every primary culture had only 8 valid rows against the frozen 20-row minimum (because the design assumed 41 censuses from Data Set 3 without reading Data Set 2's length before freezing). Reported only on 13 controls (outside T2's set-draw scope): W median excess 0.51 (9/13 detected), V2 0.02 (1/13), H1 −0.03 (0/13), sign not separated (negative in 12/13 predicted and fitted), V5 not testable (5/13 < 6), V4 not decided (9 vs 4, p = 0.27), V3 rival error 0.45 of T2 (12/13, p = 0.003).
+- **Where it marks.** the measurement: Nothing ran to a verdict on the primary group because the frozen culture-level sample-size rule (≥20 rows per culture) exceeded the 8 available rows per culture in Data Set 2. The 13 controls confirm the code executes and show the expected shape when unmanipulated, but lie outside T2's set-draw scope. This measurement design finding led directly to UE31b, which pooled replicates into 10 cells of 36 rows.
+- **Another explanation.** Pooling four replicates per strain-by-loss cell (UE31b) reaches the needed row count under one cell law at the cost of absorbing replicate heterogeneity.
+- **Read from.** [README.md#the-result](../../../../experiments/state-named-in-advance/README.md#the-result)
+
+<a id="test-ue32"></a>
+## UE32: T2's three numbers against the field's fitted delay embedding
+
+- **Outcome.** passed: By its frozen criterion, T2's three numbers forecast the next giving better than the field's fitted embedding, in 42 of 65 stocks; both forecast worse than persistence in most, and the expected answer, "not separated", was not borne out. ([its README](../../../../experiments/state-against-embedding/README.md))
+- **Bears on.**
+  - [One law of exact thresholds, and the threshold in the plane of level and recent giving](families/a.md#threshold-in-the-state-plane), through [threshold-in-the-state-plane](../records/threshold-in-the-state-plane.md), [where-a-run-of-a-regime-comes-to-rest](../records/where-a-run-of-a-regime-comes-to-rest.md): UE32 tests Thesis T2's three-number state coordinates (E_t, E_{t−1}, γ_{t−1}) out-of-sample against empirical dynamic modelling (delay embedding via S-map) on RAM Legacy v4.66 fish stocks, indexed alongside T2's threshold/rest dynamics (experiments/margin-measured).
+  - [Where a run of a regime comes to rest](families/g.md#where-a-run-of-a-regime-comes-to-rest), through [where-a-run-of-a-regime-comes-to-rest](../records/where-a-run-of-a-regime-comes-to-rest.md): 02 §5#t2 links MQ5's 69 primary fish stocks to T2; UE32 reuses MQ5's exact stock split, catch share κ and scale on those same stocks to test coordinate sufficiency out of sample.
+- **Kind.** field.
+- **Reads.** Thesis T2 (02 §5): for renewable conditions under a draw, the named three-number state (escapement E_t, lagged escapement E_{t−1}, recent giving γ_{t−1}) suffices without a fourth variable from the level's own history removing significant forecast residual. ([threshold-in-the-state-plane](../records/threshold-in-the-state-plane.md), [where-a-run-of-a-regime-comes-to-rest](../records/where-a-run-of-a-regime-comes-to-rest.md))
+- **Roles.**
+  - T2's named state N: 3-vector (E_t, E_{t−1}, γ_{t−1}) for 65 testable primary RAM Legacy v4.66 stocks (of 69 from MQ5; median 20 training, 17 held-out years), fit by S-map without fitting T2's parametric law
+  - the field's rival state F: delay embedding (E_t, ..., E_{t−D+1}; γ_{t−1}, ..., γ_{t−D}) with dimension D chosen by S-map leave-one-out CV on training years, scored by out-of-sample MSE log ratio r = ln(MSE_F / MSE_N)
+- **Premises of the identification.**
+  - [the adjustment rises](PREMISES.md#regimemargin-adjusted-rises): not checked. UE32 learns a non-parametric S-map over training years and tests coordinate sufficiency only; it fits neither g nor Adjusted's monotonicity premise.
+  - [the adjusted step keeps a band](PREMISES.md#regimemargin-adjusted-band): not checked. Years with non-positive escapement are filtered per MQ5 rules; bounded invariant-set closure is not tested.
+- **Observed.** 65 testable primary fish stocks (plus 21 other and 5 untestable control stocks), verified to match MQ5's committed fits within 10⁻⁹; one-year-ahead held-out MSE log ratios r, two-sided sign test, simplex and alternative N parameterizations, and comparison to persistence.
+- **Result.** Passed: 'T2 better than the field's fitted embedding' on the primary group (expected 'not separated'). Median r = +0.163 (> +0.105 margin), N better in 42 of 65 stocks (p = 0.025). Consistent under simplex dimension choice (+0.133, 41/65, p = 0.046), draw form (+0.183, 43/65, p = 0.013) and MAE (+0.069). Breakdown by chosen D: D = 1 (26 stocks) median r +0.004 (13–13); D = 2 (22 stocks) +0.158 (16–6, p = 0.052); D = 3 (9 stocks) +0.340 (8–1); D = 4 (8 stocks) +1.186 (5–3). Other group (21 stocks): not separated (+0.003, 11–10, p = 1). Both N and F lost to persistence in 53 of 65 stocks (skill −0.85 and −1.21; N vs training mean +0.23).
+- **Where it marks.** nothing failed: The frozen criterion passed cleanly against the fitted delay embedding at 1 step ahead (exceeding the expected 'not separated' outcome). As noted in the README and 02 §5, this supports T2's 3-number sufficiency against longer series history at short RAM assessment lengths (~20 training years, where D = 3, 4 exceed the field's √N embedding bound and without D = 2 the verdict loses significance); it does not test the lag's place, T2's law, survey series, or pre-recruit biological stages (where UE31b failed).
+- **Another explanation.** Short series length (~20 training rows) penalizes higher-dimensional S-map embeddings (D = 3, 4) via overfitting, which also appears in the README's own T2-world and mixed-world dry runs; assessment outputs smooth age structure rather than raw survey observations; and persistence outperformed both fitted S-maps.
+- **Read from.** [README.md#the-result](../../../../experiments/state-against-embedding/README.md#the-result)
+
+<a id="test-lca"></a>
+## LCA: Learned agents serving other centers' claims (toy Q-networks)
+
+- **Outcome.** mixed: Of seven frozen predictions, four passed and three failed; the agents learned to stop serving less reliably than to serve. ([its README](../../../../experiments/learned-claim-agents/README.md))
+- **Bears on.**
+  - [Selection blind beyond the coupling closure](families/b.md#unselected-beyond-the-coupling-closure), through [selection-through-couplings](../records/selection-through-couplings.md), [the-gap-for-ones-own-act](../records/the-gap-for-ones-own-act.md) and `Becoming.Web.selects_alike_iff`, `Becoming.Flow.unselected_beyond_coupling`, `Becoming.Flow.act_unselected`: LCA (6 October) tested 'others' consequences enter a selection rule only through access or coupling' (PROTOCOL.md; P1 self-only, P4 feature generalization) prior to the later Lean modules; by content this bears on unselected-beyond-the-coupling-closure (self regimes coupled only to retained pool units never serve trained claims).
+  - [What training installs](families/d.md#what-training-installs), through [what-training-installs](../records/what-training-installs.md) and `Becoming.Training.trained_alike_iff`, `Becoming.Training.trained_alike_beyond_closure`, `Becoming.Training.installed_where_lumped`, `Becoming.Training.free_where_unlumped`, `Becoming.Training.settled_stays`: LCA trained 40 MLP Q-networks (4 signal regimes × 10 seeds, 20,000 episodes): `access` vs `access_identity_only` tests feature lumping (installed_where_lumped), unseen claimant C in `new_claimant` tests behavior off trained courses (free_where_unlumped), and failure to settle within ≤0.10 excess (mean 0.171) bears on settled_stays and Training.Settles.
+  - [Closed capture (meta-attractor, in the glossary's sense) (元吸引子)](families/c.md#closed-capture), through [closed-capture](../records/closed-capture.md) and `Becoming.ClosedCapture.lock_outlives_loss`, `Becoming.ClosedCapture.unread_course`: LCA's `proxy` regime (rewarded by delivery receipts rather than actual claim fulfillment) tests capture by a decoupled signal (P2 proxy excess 1.250; P5 missing records raising access excess 0.17→0.59; P6 forged records failing to alter proxy excess 1.250→1.235).
+- **Kind.** run.
+- **Reads.** A learner reading only what couples into its learning signal leaves consequences beyond that closure unselected; an unreached or unlumped extension leaves off-course behavior free; and a learning signal coupled only to proxy records remains captured when those records diverge from actual need. ([selection-through-couplings](../records/selection-through-couplings.md), [what-training-installs](../records/what-training-installs.md), [closed-capture](../records/closed-capture.md), `Becoming.Flow.unselected_beyond_coupling`, `Becoming.Training.free_where_unlumped`, `Becoming.ClosedCapture.lock_outlives_loss`)
+- **Roles.**
+  - the trained agent: a shared-parameter 32-unit tanh Q-network trained over 20,000 episodes (10 seeds × 4 signal regimes: self, proxy, access, access_identity_only) plus a matched heuristic `record_rule`
+  - what couples into selection: for `self`, +0.25 per retained pool unit only; for `proxy`, +1 per receipt plus `self`; for `access`, +1 per actual unmet claim unit delivered plus `self`
+  - the lumping and unreached extension: observed recipient features `(identity, k, c, u)` omitted in `access_identity_only`, and unseen center C in `new_claimant`
+- **Premises of the identification.**
+  - [the part beyond the coupling closure](PREMISES.md#selection-part-beyond): met. In `self`, recipient claims lie outside the learning signal by construction; in `proxy`, actual unmet need vs forged/excess fulfillment lies outside receipts.
+  - [SelectsThrough](PREMISES.md#selection-selectsthrough): not checked. Agents train only through episodic returns and observed features; function-approximator weight updates are not verified as an exact SelectsThrough reduction.
+  - [Training.TrainsThrough](premises/d.md#training-trainsthrough): not checked. Same Q-learning harness assumption as selection-selectsthrough; not tested independently.
+  - [lumped with a course](premises/d.md#training-lumped-with-course): met. Omitting claim features `(k, c, u)` in `access_identity_only` collapses generalization on `large_claims` (`met` falls from 0.930 to 0.528).
+  - [off](premises/d.md#training-unlumped): met. Unseen claimant C is off the training support: `self` serves C (`met` 0.15, `excess` 0.51 vs 0.00/0.00 on train) and `access` excess roughly doubles (0.171→0.30).
+  - [Training.Settles](premises/d.md#training-settles): failed. `access` agents matched `record_rule` on `met` (0.945 vs 0.945) but failed the `≤0.10` excess bound on `train` (mean excess 0.171, seed range 0.00–0.518; retained 0.78 vs 0.97): Q-learning learned service more reliably than withdrawal upon fulfillment.
+  - [Unread](premises/c.md#closedcapture-unread): met. In `proxy`, the reward reads receipt strings without verifying actual fulfillment; under `forged_records` proxy excess stayed 1.235 (vs 1.250 on train), because forged receipts do not shift where the greedy proxy policy routes deliveries.
+- **Observed.** Means and ranges over 10 seeds × 2,000 greedy test episodes across 7 evaluations (`train`, `new_claimant`, `large_claims`, `missing_records`, `forged_records`, `scarce_symmetric`, `scarce_symmetric_swapped`) compared against `record_rule` and reproduced by `independent_check.py`.
+- **Result.** 4 of 7 frozen predictions passed and 3 failed. Passed: P1 (`self` met 0.00), P4 (`access` new_claimant 0.931 & large_claims 0.930 within 0.02 of train 0.945; access_identity_only 0.528), P5 (`missing_records` access excess rose 0.171→0.592), P7 (`scarce_symmetric`: 10/10 seeds extreme, 4 choosing A and 6 B, identical under slot swap). Failed: P2 (`proxy` excess 1.250, but `access` excess 0.171 > 0.10), P3 (`access` met 0.945 matched record_rule, but excess 0.171 > 0.10), P6 (`access` withheld_unmet rose 0.00→0.081, but the proxy clause failed narrowly as proxy excess fell slightly from 1.250 to 1.235).
+- **Where it marks.** the binding: The coupling, unreached-extension, and symmetry results held (P1, P4, P5, P7). Failures P2 and P3 occurred because finite Q-learning did not settle cleanly on withdrawal at fulfillment (`training-settles` failed, access excess 0.171 > 0.10); failure P6 reflected an unstated assumption in the proxy test (forged records add receipts without shifting where the proxy policy sends deliveries, leaving proxy excess at 1.235 inside seed variation). Note also P7's symmetry claim corresponds to `a-swap-symmetric-assignment-singles-out-none` (PracticalPriorityIdentification, outside the current atlas dynamics).
+- **Another explanation.** Hyperparameters (20,000 episodes, 32 tanh units, ε decaying to 0.05) and unequal Q-value scaling around zero fulfillment reward explain residual over-delivery in `access`; toy environment with supplied signals does not establish deployment properties or ethical standing.
+- **Read from.** [README.md#frozen-predictions](../../../../experiments/learned-claim-agents/README.md#frozen-predictions)
+
+<a id="test-in2"></a>
+## IN2: Installing the direction by fine-tuning
+
+- **Outcome.** dropped: Dropped: no prediction was frozen and no fine-tuned model exists. ([its README](../../../../experiments/direction-training/README.md))
+- **Bears on.**
+  - [Where seeking rests: more than now never does, above all others never for two](families/d.md#seeking-boundary), through [selection-through-couplings](../records/selection-through-couplings.md) and `Becoming.Flow.unselected_beyond_coupling`: IN2 planned to test T4 ('The scope can be installed, and it carries') by fine-tuning gpt-4.1-mini across 12 domains and evaluating on IN1's lake without a prompt principle; dropped on 21 October 2026 before any fine-tuning job was created (no prediction frozen, OpenAI fine-tuning unavailable, Ren judged fine-tuning unneeded).
+  - [Runaway, and the distance to the break that does not couple in](families/d.md#a-break-read-only-by-threshold), through [runaway-distance-uncoupled](../records/runaway-distance-uncoupled.md) and `Becoming.Web.break_not_bounded`: Shares IN1's lake evaluation protocol (mussels bed with untold 70-ton threshold under UNSEEN vs bed told/mixed variants); never trained or run.
+  - [What training installs](families/d.md#what-training-installs), through [what-training-installs](../records/what-training-installs.md) and `Becoming.Training.installed_where_lumped`, `Becoming.Training.trained_alike_beyond_closure`: Tests whether fine-tuning on non-lake domains installs T4's scope and transfers it to IN1's unseen lake domain; never trained or run.
+- **Binding.** None: the row is dropped, with no result a binding could read.
+
+<a id="test-selective-handoff"></a>
+## selective-handoff: Selective reuse of inherited corrections in fresh AI contexts
+
+- **Outcome.** no-prediction: Both instruction variants correctly retained, revised and limited their use of four archived corrections; the added boundary reminder showed no gain, and a conventional candidate-elimination procedure also returns every correct answer. ([its README](../../../../experiments/integrated-correction/selective-handoff/README.md))
+- **Bears on.** No atlas dynamic.
+- **Binding.** None: the row is no-prediction, with no result a binding could read.
+
+<a id="test-agentdojo"></a>
+## agentdojo: Agent maintenance and correction-action, archived and fresh runs
+
+- **Outcome.** no-prediction: In copies isolated by task instruction, without OS isolation, one worker repaired the code; the other three need and permission combinations left the primary files intact. ([its README](../../../../experiments/agentdojo-evidence-boundary/README.md))
+- **Bears on.** No atlas dynamic.
+- **Binding.** None: the row is no-prediction, with no result a binding could read.
+
+<a id="test-motor-learning-cost"></a>
+## motor-learning-cost: Cost-sensitive adaptation in public motor-learning data
+
+- **Outcome.** no-prediction: The primary estimate is negative, but its interval includes zero. ([its README](../../../../experiments/motor-learning-cost/README.md))
+- **Bears on.** No atlas dynamic.
+- **Binding.** None: the row is no-prediction, with no result a binding could read.
+
+<a id="test-recipient-cue-grounding"></a>
+## recipient-cue-grounding: A remote social cue and rats' recipient-directed food access
+
+- **Outcome.** no-prediction: With the cooperating cue, rats pulled 1.33 more times per session than in the neutral situation; this does not identify recipient-specific reasoning, and the published sample of 23 pairs, against 24 here, is unexplained. ([its README](../../../../experiments/recipient-cue-grounding/README.md))
+- **Bears on.** No atlas dynamic.
+- **Binding.** None: the row is no-prediction, with no result a binding could read.
+
+<a id="test-recipient-harm-valuation"></a>
+## recipient-harm-valuation: Harm to another rat and learned lever choice
+
+- **Outcome.** no-prediction: In male rats, preferred-lever responses fell 16.69 points more under contingent harm to another rat than with no harm; descriptive only, since randomization was not established, so no p-value is claimed. ([its README](../../../../experiments/recipient-harm-valuation/README.md))
+- **Bears on.** No atlas dynamic.
+- **Binding.** None: the row is no-prediction, with no result a binding could read.
+
+<a id="test-recipient-value-learning"></a>
+## recipient-value-learning: Reward training and later target-liked responses
+
+- **Outcome.** no-prediction: The contrast stays uncertain around zero and supports no directional claim from this reanalysis alone. ([its README](../../../../experiments/recipient-value-learning/README.md))
+- **Bears on.** No atlas dynamic.
+- **Binding.** None: the row is no-prediction, with no result a binding could read.
+
+<a id="test-shared-renewal-capability"></a>
+## shared-renewal-capability: Joint capability from a finite-material event law
+
+- **Outcome.** no-prediction: A calculation for a stipulated model, not an empirical study. ([its README](../../../../experiments/shared-renewal-capability/README.md))
+- **Bears on.** No atlas dynamic.
+- **Binding.** None: the row is no-prediction, with no result a binding could read.
+
+<a id="test-valuation-development"></a>
+## valuation-development: Valuation development: Lean formal companion
+
+- **Outcome.** no-prediction: Formal mathematics about the stated representation. ([its README](../../../../experiments/valuation-development/README.md))
+- **Bears on.** No atlas dynamic.
+- **Binding.** None: the row is no-prediction, with no result a binding could read.
+
+<a id="test-circular-construction"></a>
+## circular-construction: Autonomous circular construction, engineering proposal
+
+- **Outcome.** no-prediction: A speculative engineering experiment, not part of the theory. ([its README](../../../../experiments/circular-construction/README.md))
+- **Bears on.** No atlas dynamic.
+- **Binding.** None: the row is no-prediction, with no result a binding could read.
 
 [Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Atlas](ATLAS.md) · [Graph](../THEORY-GRAPH.md) · [Connections](CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
 

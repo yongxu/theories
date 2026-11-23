@@ -1916,6 +1916,17 @@ class UsesBetweenProofsPageTests(AtlasCase):
         whole = same()
         self.assertTrue({atlas.BINDINGS_PAGE, atlas.SITUATIONS_PAGE} <= set(whole))
 
+    def test_rebase_links_rebases_root_relative_links_and_keeps_others(self):
+        sample = (
+            'See [07](theories/becoming/chapters/07-SIGNIFICANCE.md#theses), '
+            '[local](#sec), [rel](../BINDINGS.md), and [web](https://example.com/a).'
+        )
+        got = atlas._rebase_links(sample, atlas.ATLAS)
+        self.assertIn('[07](../../chapters/07-SIGNIFICANCE.md#theses)', got)
+        self.assertIn('[local](#sec)', got)
+        self.assertIn('[rel](../BINDINGS.md)', got)
+        self.assertIn('[web](https://example.com/a)', got)
+
 
 if __name__ == '__main__':
     unittest.main()
